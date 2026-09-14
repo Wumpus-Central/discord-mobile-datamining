@@ -2,6 +2,8 @@
 import ChannelRTCStore from "../../calls/ChannelRTCStore.tsx";
 import ApplicationStreamingStore from "../../../stores/ApplicationStreamingStore.tsx";
 
+const require = globalThis.__r;
+
 const require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/video_calls/native/useSelectedActiveStream.tsx");

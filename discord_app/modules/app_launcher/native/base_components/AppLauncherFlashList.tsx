@@ -6,7 +6,6 @@ require = fn;
 const ScrollView = fn(17).ScrollView;
 const jsx = fn(21).jsx;
 const forwardRefResult = noop.forwardRef((simultaneousHandlers, ref) => {
-  let obj = simultaneousHandlers(11348);
   const items = [simultaneousHandlers.simultaneousHandlers];
   let memo = noop.useMemo(
     () =>
@@ -15,11 +14,10 @@ const forwardRefResult = noop.forwardRef((simultaneousHandlers, ref) => {
           const Gesture = simultaneousHandlers(closure_2_1[3]).Gesture;
           return Gesture.Native().simultaneousWithExternalGesture(closure_1_0);
         }, []);
-        let obj = { gesture: memo, children: null };
-        obj = { ref };
+        const obj = { gesture: memo, children: null };
         const merged = Object.assign(arg0);
         obj.children = <ScrollView ref={ref} />;
-        return jsx(simultaneousHandlers(dependencyMap[3]).GestureDetector, { ref });
+        return jsx(simultaneousHandlers(dependencyMap[3]).GestureDetector, { gesture: memo, children: null });
       }),
     items,
   );
@@ -27,7 +25,7 @@ const forwardRefResult = noop.forwardRef((simultaneousHandlers, ref) => {
     obj.useAppLauncherContext().entrypoint ===
     simultaneousHandlers.simultaneousHandlers(9539).AppLauncherEntrypoint.VOICE
   ) {
-    obj = {
+    const obj5 = {
       renderScrollComponent: memo,
       ListHeaderComponent: null,
       onScroll: null,
@@ -62,7 +60,7 @@ const forwardRefResult = noop.forwardRef((simultaneousHandlers, ref) => {
       viewabilityConfigCallbackPairs: obj2.viewabilityConfigCallbackPairs,
       animatedProps: obj2.animatedProps,
     } = simultaneousHandlers);
-    obj.ref = ref;
+    obj5.ref = ref;
     let tmp5 = jsx(tmp(9003).AnimatedFlashList, {
       renderScrollComponent: memo,
       ListHeaderComponent: null,
@@ -83,7 +81,7 @@ const forwardRefResult = noop.forwardRef((simultaneousHandlers, ref) => {
       ref: null,
     });
   } else {
-    obj = {
+    const obj6 = {
       ListHeaderComponent: null,
       onScroll: null,
       contentContainerStyle: null,
@@ -120,7 +118,7 @@ const forwardRefResult = noop.forwardRef((simultaneousHandlers, ref) => {
       onViewableItemsChanged: obj3.onViewableItemsChanged,
       viewabilityConfigCallbackPairs: obj3.viewabilityConfigCallbackPairs,
     } = simultaneousHandlers);
-    obj.ref = ref;
+    obj6.ref = ref;
     tmp5 = jsx(tmp(9003).BottomSheetFlashList, {
       ListHeaderComponent: null,
       onScroll: null,
@@ -148,6 +146,6 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/app_launcher/native/base_components/AppLauncherFlashList.tsx");
 
 export default forwardRefResult;
-export const useAppLauncherFlashListProps = function useAppLauncherFlashListProps(fn) {
-  return useAnimatedScrollLock.useAnimatedScrollLock(fn);
+export const useAppLauncherFlashListProps = function useAppLauncherFlashListProps(arg0) {
+  return useAnimatedScrollLock.useAnimatedScrollLock(arg0);
 };

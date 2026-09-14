@@ -12,9 +12,9 @@ function AnimatedEllipsisDot(disableScale) {
   const delay = disableScale.delay;
   const sequenceStartDelay = disableScale.sequenceStartDelay;
   const sequenceEndDelay = disableScale.sequenceEndDelay;
-  let obj = disableScale(sequenceStartDelay[6]);
-  const sharedValue = obj.useSharedValue(0.4);
   let tmp = closure_9();
+  const sharedValue = disableScale(sequenceStartDelay[6]).useSharedValue(0.4);
+  let obj = disableScale(sequenceStartDelay[6]);
   const sharedValue1 = disableScale(sequenceStartDelay[6]).useSharedValue(0.75);
   let items = [delay, sequenceStartDelay, sequenceEndDelay, disableScale, sharedValue, sharedValue1];
   const effect = sequenceEndDelay.useEffect(() => {
@@ -76,11 +76,11 @@ function AnimatedEllipsisDot(disableScale) {
       obj = { opacity: closure_4.get(), transform: null };
       tmp = undefined;
       if (!disableScale) {
-        obj = { scale: null };
+        obj1 = { scale: null };
         tmp2 = closure_5;
-        obj.scale = closure_5.get();
+        obj1.scale = closure_5.get();
         items = [];
-        items[0] = obj;
+        items[0] = obj1;
         tmp = items;
       }
       obj.transform = tmp;
@@ -91,9 +91,9 @@ function AnimatedEllipsisDot(disableScale) {
   S.__workletHash = 5071157079925;
   S.__initData = __initData;
   const animatedStyle = disableScale(sequenceStartDelay[6]).useAnimatedStyle(S);
-  obj = { style: null };
+  let obj4 = { style: null };
   const items1 = [tmp.typingIndicatorDot, disableScale.dotStyle, animatedStyle];
-  obj.style = items1;
+  obj4.style = items1;
   return jsx(delay(sequenceStartDelay[6]).View, { style: null });
 }
 function EllipsisDot(dotStyle) {
@@ -131,16 +131,16 @@ let result = size.fileFinishedImporting("design/void/Ellipsis/native/Ellipsis.ts
 
 export default noop.memo(function Ellipsis(style) {
   ({ dotStyle: require, disableScale: importDefault } = style);
-  let obj = initialize;
+  const tmp = closure_9();
   const items = [AccessibilityStore];
-  dependencyMap = obj.useStateFromStores(items, () => useReducedMotion.useReducedMotion)
+  dependencyMap = initialize.useStateFromStores(items, () => useReducedMotion.useReducedMotion)
     ? EllipsisDot
     : AnimatedEllipsisDot;
-  obj = { style: null, collapsable: false, children: null };
-  const items1 = [closure_9().typingIndicator, style.style];
-  obj.style = items1;
+  const obj2 = { style: null, collapsable: false, children: null };
+  const items1 = [tmp.typingIndicator, style.style];
+  obj2.style = items1;
   const items2 = [0, 1, 2];
-  obj.children = items2.map((item, index, arg2) => (
+  obj2.children = items2.map((item, index, arg2) => (
     <closure_2
       key={item}
       delay={item * c7}

@@ -2,7 +2,6 @@
 import nativeDefault from "../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../intl/index.native.tsx";
 import PremiumUtils from "../../utils/PremiumUtils.tsx";
-import BillingPlatformUtils from "../../modules/device/BillingPlatformUtils.tsx";
 import Text_Text from "../../design/components/Text/native/Text.tsx";
 import useAnalyticsLocationsDefault from "../../modules/app_analytics/useAnalyticsLocations.tsx";
 import AnalyticsLocationDefault from "../../modules/app_analytics/AnalyticsLocation.tsx";
@@ -24,20 +23,20 @@ class GoogleManagementLink {
       tmp3 = null;
       if (subscription.isPurchasedViaGoogle) {
         tmp4 = jsx;
-        obj = { style: null, variant: "text-sm/medium", color: "text-link", children: null };
+        obj1 = { style: null, variant: "text-sm/medium", color: "text-link", children: null };
         items = [];
         items[0] = global.style;
-        obj.style = items;
+        obj1.style = items;
         intl = tmp(tmp2[9]).intl;
-        obj1 = { onClick: null };
+        obj5 = { onClick: null };
         tmpResult = tmp(tmp2[10]);
         str = "SUBSCRIPTION_MANAGEMENT";
-        obj1.onClick = tmpResult.getExternalSubscriptionMethodUrl(
+        obj5.onClick = tmpResult.getExternalSubscriptionMethodUrl(
           subscription.paymentGateway,
           "SUBSCRIPTION_MANAGEMENT",
         );
-        obj.children = intl.format(tmp(tmp2[9]).t["9NPc+O"], obj1);
-        tmp3 = jsx(tmp(tmp2[8]).Text, obj);
+        obj1.children = intl.format(tmp(tmp2[9]).t["9NPc+O"], obj5);
+        tmp3 = jsx(tmp(tmp2[8]).Text, obj1);
       }
     }
     return tmp3;
@@ -48,43 +47,41 @@ const Constants = fn(1074);
 ({ SubscriptionStatusTypes: hasOwnProperty, USER_SETTINGS_CONTAINER_HORIZONTAL_PADDING } = Constants);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-fn(4636);
-let createStyles = {
+const createStyles = fn(4636);
+let obj2 = {
   title: { paddingHorizontal: USER_SETTINGS_CONTAINER_HORIZONTAL_PADDING },
   externalSubtext: { marginTop: 8, paddingHorizontal: USER_SETTINGS_CONTAINER_HORIZONTAL_PADDING },
-  billingContainer: null,
-  billingRenewalInfo: null,
-  billingManageGoogle: null,
+  billingContainer: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, padding: 16, marginTop: 8 },
+  billingRenewalInfo: { marginTop: 4 },
+  billingManageGoogle: { marginTop: 8 },
 };
-createStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, padding: 16, marginTop: 8 };
-createStyles.billingContainer = createStyles;
-createStyles.billingRenewalInfo = { marginTop: 4 };
-createStyles.billingManageGoogle = { marginTop: 8 };
-let closure_8 = createStyles.createStyles(createStyles);
+let closure_8 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("components_native/premium/PremiumBillingInfo.tsx");
 
 export default function PremiumBillingInfo(subscription) {
   subscription = subscription.subscription;
   const tmp = closure_8();
-  let obj = {
-    subscriptionId: subscription.id,
-    renewal: true,
-    applyEntitlements: true,
-    analyticsLocations: useAnalyticsLocationsDefault(),
-    analyticsLocation: AnalyticsLocationDefault.PREMIUM_BILLING_INFO,
-  };
-  const first = _slicedToArray(obj.useFetchSubscriptionInvoicePreview(obj), 1)[0];
+  const obj = PremiumSubscriptionInvoice;
+  const first = _slicedToArray(
+    obj.useFetchSubscriptionInvoicePreview({
+      subscriptionId: subscription.id,
+      renewal: true,
+      applyEntitlements: true,
+      analyticsLocations: useAnalyticsLocationsDefault(),
+      analyticsLocation: AnalyticsLocationDefault.PREMIUM_BILLING_INFO,
+    }),
+    1,
+  )[0];
   PremiumSubscriptionInvoice;
   if (null == first) {
     return null;
   } else {
-    let tmp2Result = PremiumManagementUtils;
-    const externalManagementMessage = tmp2Result.getExternalManagementMessage(subscription, {
+    const externalManagementMessage = PremiumManagementUtils.getExternalManagementMessage(subscription, {
       shouldAllowExternalManagement: true,
     });
-    obj = { style: subscription.style, children: null };
-    const obj1 = {
+    const obj3 = { style: subscription.style, children: null };
+    const obj4 = {
       style: tmp.title,
       accessibilityRole: "header",
       variant: "eyebrow",
@@ -92,29 +89,36 @@ export default function PremiumBillingInfo(subscription) {
       children: null,
     };
     const intl = util.intl;
-    obj1.children = intl.string(util.t.Sb6wI1);
-    const items = [timestampProducer(Text_Text.Text, obj1), ,];
-    const obj2 = { style: tmp.billingContainer, children: null };
-    const obj3 = { variant: "text-md/semibold", children: null };
+    obj4.children = intl.string(util.t.Sb6wI1);
+    const items = [timestampProducer(Text_Text.Text, obj4), ,];
+    const obj5 = { style: tmp.billingContainer, children: null };
+    const obj6 = { variant: "text-md/semibold", children: null };
     const intl2 = util.intl;
-    obj3.children = intl2.string(util.t.KXQjfc);
-    const items1 = [timestampProducer(Text_Text.Text, obj3), ,];
-    const obj4 = { style: tmp.billingRenewalInfo, variant: "text-sm/medium", children: null };
-    tmp2Result = BillingInformation;
-    obj4.children = tmp2Result.getBillingInformationStringNative(subscription, first, tmp6);
-    items1[1] = timestampProducer(Text_Text.Text, obj4);
-    const obj5 = { style: tmp.billingManageGoogle, subscription };
-    items1[2] = timestampProducer(GoogleManagementLink, obj5);
-    obj2.children = items1;
-    items[1] = React5(View, obj2);
+    obj6.children = intl2.string(util.t.KXQjfc);
+    const items1 = [timestampProducer(Text_Text.Text, obj6), ,];
+    const obj7 = { style: tmp.billingRenewalInfo, variant: "text-sm/medium", children: null };
+    const tmp2Result = PremiumManagementUtils;
+    obj7.children = BillingInformation.getBillingInformationStringNative(subscription, first, tmp6);
+    items1[1] = timestampProducer(Text_Text.Text, obj7);
+    const obj8 = { style: tmp.billingManageGoogle, subscription };
+    items1[2] = timestampProducer(GoogleManagementLink, obj8);
+    obj5.children = items1;
+    items[1] = React5(View, obj5);
     let tmp11Result = null;
     if (null != externalManagementMessage) {
-      const obj6 = { style: tmp.externalSubtext, variant: "text-sm/medium", children: externalManagementMessage };
-      tmp11Result = timestampProducer(Text_Text.Text, obj6);
+      const obj9 = { style: tmp.externalSubtext, variant: "text-sm/medium", children: externalManagementMessage };
+      tmp11Result = timestampProducer(Text_Text.Text, obj9);
     }
     items[2] = tmp11Result;
-    obj.children = items;
-    return React5(View, obj);
+    obj3.children = items;
+    return React5(View, obj3);
   }
+  const obj2 = {
+    subscriptionId: subscription.id,
+    renewal: true,
+    applyEntitlements: true,
+    analyticsLocations: useAnalyticsLocationsDefault(),
+    analyticsLocation: AnalyticsLocationDefault.PREMIUM_BILLING_INFO,
+  };
 }
 export { GoogleManagementLink };

@@ -1,5 +1,5 @@
 // discord_common/js/packages/protos/discord_protos/premium_marketing/v1/gift_plan_selection_card_banner.tsx
-import _mod1188 from "../../../../../../../_runtime/metro/01188__.js";
+import _mod1186 from "../../../../../../../_runtime/metro/01186__.js";
 import localized_string from "../../common/v1/localized_string.tsx";
 import gradient from "gradient.tsx";
 import theme_aware_asset from "theme_aware_asset.tsx";
@@ -14,7 +14,7 @@ const GiftPlanSelectionCardBanner_AssetVariant = {
   LARGE_TILTED: 2,
   [2]: "LARGE_TILTED",
 };
-const MessageType = fn(1188).MessageType;
+const MessageType = fn(1186).MessageType;
 class GiftPlanSelectionCardBanner$Type extends MessageType {
   constructor() {
     items = [, , , , , , , , , , , , , , ,];
@@ -109,13 +109,13 @@ class GiftPlanSelectionCardBanner$Type extends MessageType {
         return items;
       },
     };
-    tmp = new tmp("discord_protos.premium_marketing.v1.GiftPlanSelectionCardBanner", items, T);
-    return tmp;
+    tmp1 = new tmp("discord_protos.premium_marketing.v1.GiftPlanSelectionCardBanner", items, T);
+    return tmp1;
   }
 }
 const prototype = GiftPlanSelectionCardBanner$Type.prototype;
 prototype["create"] = function create(arr) {
-  let obj = {
+  const obj = {
     header: "",
     desktopBody: "",
     mobileBody: "",
@@ -125,11 +125,10 @@ prototype["create"] = function create(arr) {
     assetVariant: 0,
   };
   const _Object = Object;
-  obj = { enumerable: false, value: this };
-  _Object.defineProperty(obj, _mod1188.MESSAGE_TYPE, obj);
+  _Object.defineProperty(obj, _mod1186.MESSAGE_TYPE, { enumerable: false, value: this });
   if (undefined !== arr) {
-    const result = _mod1188.reflectionMergePartial(this, obj, arr);
-    const tmpResult = _mod1188;
+    const result = _mod1186.reflectionMergePartial(this, obj, arr);
+    const tmpResult = _mod1186;
   }
   return obj;
 };
@@ -140,170 +139,170 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, arg2, a
     obj = self.create();
   }
   if (pos.pos < pos.pos + arg1) {
-    [r10019, r10020] = _slicedToArray(pos.tag(), 2);
+    [r10019, r10020] = pos.tag();
     const tmp3 = _slicedToArray(pos.tag(), 2);
   }
   return obj;
 };
 prototype["internalBinaryWrite"] = function internalBinaryWrite(header, tag, writeUnknownFields) {
   if ("" !== header.header) {
-    tag.tag(1, _mod1188.WireType.LengthDelimited).string(header.header);
-    const tagResult = tag.tag(1, _mod1188.WireType.LengthDelimited);
+    tag.tag(1, _mod1186.WireType.LengthDelimited).string(header.header);
+    const tagResult = tag.tag(1, _mod1186.WireType.LengthDelimited);
   }
   if ("" !== header.desktopBody) {
-    tag.tag(2, _mod1188.WireType.LengthDelimited).string(header.desktopBody);
-    const tagResult1 = tag.tag(2, _mod1188.WireType.LengthDelimited);
+    tag.tag(2, _mod1186.WireType.LengthDelimited).string(header.desktopBody);
+    const tagResult1 = tag.tag(2, _mod1186.WireType.LengthDelimited);
   }
   if ("" !== header.mobileBody) {
-    tag.tag(3, _mod1188.WireType.LengthDelimited).string(header.mobileBody);
-    const tagResult2 = tag.tag(3, _mod1188.WireType.LengthDelimited);
+    tag.tag(3, _mod1186.WireType.LengthDelimited).string(header.mobileBody);
+    const tagResult2 = tag.tag(3, _mod1186.WireType.LengthDelimited);
   }
   if (header.avatarAsset) {
     const ThemeAwareAsset = theme_aware_asset.ThemeAwareAsset;
-    const tagResult3 = tag.tag(4, _mod1188.WireType.LengthDelimited);
+    const tagResult3 = tag.tag(4, _mod1186.WireType.LengthDelimited);
     const joined = ThemeAwareAsset.internalBinaryWrite(
       header.avatarAsset,
-      tag.tag(4, _mod1188.WireType.LengthDelimited).fork(),
+      tag.tag(4, _mod1186.WireType.LengthDelimited).fork(),
       writeUnknownFields,
     ).join();
     const internalBinaryWriteResult = ThemeAwareAsset.internalBinaryWrite(
       header.avatarAsset,
-      tag.tag(4, _mod1188.WireType.LengthDelimited).fork(),
+      tag.tag(4, _mod1186.WireType.LengthDelimited).fork(),
       writeUnknownFields,
     );
   }
   if ("" !== header.bannerAssetUrl) {
-    tag.tag(5, _mod1188.WireType.LengthDelimited).string(header.bannerAssetUrl);
-    const tagResult4 = tag.tag(5, _mod1188.WireType.LengthDelimited);
+    tag.tag(5, _mod1186.WireType.LengthDelimited).string(header.bannerAssetUrl);
+    const tagResult4 = tag.tag(5, _mod1186.WireType.LengthDelimited);
   }
   if ("" !== header.backgroundAssetUrl) {
-    tag.tag(6, _mod1188.WireType.LengthDelimited).string(header.backgroundAssetUrl);
-    const tagResult5 = tag.tag(6, _mod1188.WireType.LengthDelimited);
+    tag.tag(6, _mod1186.WireType.LengthDelimited).string(header.backgroundAssetUrl);
+    const tagResult5 = tag.tag(6, _mod1186.WireType.LengthDelimited);
   }
   if ("" !== header.cardAssetUrl) {
-    tag.tag(7, _mod1188.WireType.LengthDelimited).string(header.cardAssetUrl);
-    const tagResult6 = tag.tag(7, _mod1188.WireType.LengthDelimited);
+    tag.tag(7, _mod1186.WireType.LengthDelimited).string(header.cardAssetUrl);
+    const tagResult6 = tag.tag(7, _mod1186.WireType.LengthDelimited);
   }
   if (header.gradient) {
     const Gradient = gradient.Gradient;
-    const tagResult7 = tag.tag(8, _mod1188.WireType.LengthDelimited);
+    const tagResult7 = tag.tag(8, _mod1186.WireType.LengthDelimited);
     const joined1 = Gradient.internalBinaryWrite(
       header.gradient,
-      tag.tag(8, _mod1188.WireType.LengthDelimited).fork(),
+      tag.tag(8, _mod1186.WireType.LengthDelimited).fork(),
       writeUnknownFields,
     ).join();
     const internalBinaryWriteResult1 = Gradient.internalBinaryWrite(
       header.gradient,
-      tag.tag(8, _mod1188.WireType.LengthDelimited).fork(),
+      tag.tag(8, _mod1186.WireType.LengthDelimited).fork(),
       writeUnknownFields,
     );
   }
   if (header.bannerAsset) {
     const ThemeAwareAsset2 = theme_aware_asset.ThemeAwareAsset;
-    const tagResult8 = tag.tag(9, _mod1188.WireType.LengthDelimited);
+    const tagResult8 = tag.tag(9, _mod1186.WireType.LengthDelimited);
     const joined2 = ThemeAwareAsset2.internalBinaryWrite(
       header.bannerAsset,
-      tag.tag(9, _mod1188.WireType.LengthDelimited).fork(),
+      tag.tag(9, _mod1186.WireType.LengthDelimited).fork(),
       writeUnknownFields,
     ).join();
     const internalBinaryWriteResult2 = ThemeAwareAsset2.internalBinaryWrite(
       header.bannerAsset,
-      tag.tag(9, _mod1188.WireType.LengthDelimited).fork(),
+      tag.tag(9, _mod1186.WireType.LengthDelimited).fork(),
       writeUnknownFields,
     );
   }
   if (header.backgroundAsset) {
     const ThemeAwareAsset3 = theme_aware_asset.ThemeAwareAsset;
-    const tagResult9 = tag.tag(10, _mod1188.WireType.LengthDelimited);
+    const tagResult9 = tag.tag(10, _mod1186.WireType.LengthDelimited);
     const joined3 = ThemeAwareAsset3.internalBinaryWrite(
       header.backgroundAsset,
-      tag.tag(10, _mod1188.WireType.LengthDelimited).fork(),
+      tag.tag(10, _mod1186.WireType.LengthDelimited).fork(),
       writeUnknownFields,
     ).join();
     const internalBinaryWriteResult3 = ThemeAwareAsset3.internalBinaryWrite(
       header.backgroundAsset,
-      tag.tag(10, _mod1188.WireType.LengthDelimited).fork(),
+      tag.tag(10, _mod1186.WireType.LengthDelimited).fork(),
       writeUnknownFields,
     );
   }
   if (header.cardAsset) {
     const ThemeAwareAsset4 = theme_aware_asset.ThemeAwareAsset;
-    const tagResult10 = tag.tag(11, _mod1188.WireType.LengthDelimited);
+    const tagResult10 = tag.tag(11, _mod1186.WireType.LengthDelimited);
     const joined4 = ThemeAwareAsset4.internalBinaryWrite(
       header.cardAsset,
-      tag.tag(11, _mod1188.WireType.LengthDelimited).fork(),
+      tag.tag(11, _mod1186.WireType.LengthDelimited).fork(),
       writeUnknownFields,
     ).join();
     const internalBinaryWriteResult4 = ThemeAwareAsset4.internalBinaryWrite(
       header.cardAsset,
-      tag.tag(11, _mod1188.WireType.LengthDelimited).fork(),
+      tag.tag(11, _mod1186.WireType.LengthDelimited).fork(),
       writeUnknownFields,
     );
   }
   if (header.mobileBannerAsset) {
     const ThemeAwareAsset5 = theme_aware_asset.ThemeAwareAsset;
-    const tagResult11 = tag.tag(12, _mod1188.WireType.LengthDelimited);
+    const tagResult11 = tag.tag(12, _mod1186.WireType.LengthDelimited);
     const joined5 = ThemeAwareAsset5.internalBinaryWrite(
       header.mobileBannerAsset,
-      tag.tag(12, _mod1188.WireType.LengthDelimited).fork(),
+      tag.tag(12, _mod1186.WireType.LengthDelimited).fork(),
       writeUnknownFields,
     ).join();
     const internalBinaryWriteResult5 = ThemeAwareAsset5.internalBinaryWrite(
       header.mobileBannerAsset,
-      tag.tag(12, _mod1188.WireType.LengthDelimited).fork(),
+      tag.tag(12, _mod1186.WireType.LengthDelimited).fork(),
       writeUnknownFields,
     );
   }
   if (header.headerLocalized) {
     const LocalizedString = localized_string.LocalizedString;
-    const tagResult12 = tag.tag(13, _mod1188.WireType.LengthDelimited);
+    const tagResult12 = tag.tag(13, _mod1186.WireType.LengthDelimited);
     const joined6 = LocalizedString.internalBinaryWrite(
       header.headerLocalized,
-      tag.tag(13, _mod1188.WireType.LengthDelimited).fork(),
+      tag.tag(13, _mod1186.WireType.LengthDelimited).fork(),
       writeUnknownFields,
     ).join();
     const internalBinaryWriteResult6 = LocalizedString.internalBinaryWrite(
       header.headerLocalized,
-      tag.tag(13, _mod1188.WireType.LengthDelimited).fork(),
+      tag.tag(13, _mod1186.WireType.LengthDelimited).fork(),
       writeUnknownFields,
     );
   }
   if (header.desktopBodyLocalized) {
     const LocalizedString2 = localized_string.LocalizedString;
-    const tagResult13 = tag.tag(14, _mod1188.WireType.LengthDelimited);
+    const tagResult13 = tag.tag(14, _mod1186.WireType.LengthDelimited);
     const joined7 = LocalizedString2.internalBinaryWrite(
       header.desktopBodyLocalized,
-      tag.tag(14, _mod1188.WireType.LengthDelimited).fork(),
+      tag.tag(14, _mod1186.WireType.LengthDelimited).fork(),
       writeUnknownFields,
     ).join();
     const internalBinaryWriteResult7 = LocalizedString2.internalBinaryWrite(
       header.desktopBodyLocalized,
-      tag.tag(14, _mod1188.WireType.LengthDelimited).fork(),
+      tag.tag(14, _mod1186.WireType.LengthDelimited).fork(),
       writeUnknownFields,
     );
   }
   if (header.mobileBodyLocalized) {
     const LocalizedString3 = localized_string.LocalizedString;
-    const tagResult14 = tag.tag(15, _mod1188.WireType.LengthDelimited);
+    const tagResult14 = tag.tag(15, _mod1186.WireType.LengthDelimited);
     const joined8 = LocalizedString3.internalBinaryWrite(
       header.mobileBodyLocalized,
-      tag.tag(15, _mod1188.WireType.LengthDelimited).fork(),
+      tag.tag(15, _mod1186.WireType.LengthDelimited).fork(),
       writeUnknownFields,
     ).join();
     const internalBinaryWriteResult8 = LocalizedString3.internalBinaryWrite(
       header.mobileBodyLocalized,
-      tag.tag(15, _mod1188.WireType.LengthDelimited).fork(),
+      tag.tag(15, _mod1186.WireType.LengthDelimited).fork(),
       writeUnknownFields,
     );
   }
   if (0 !== header.assetVariant) {
-    tag.tag(16, _mod1188.WireType.Varint).int32(header.assetVariant);
-    const tagResult15 = tag.tag(16, _mod1188.WireType.Varint);
+    tag.tag(16, _mod1186.WireType.Varint).int32(header.assetVariant);
+    const tagResult15 = tag.tag(16, _mod1186.WireType.Varint);
   }
   let onWrite = writeUnknownFields.writeUnknownFields;
   if (false !== onWrite) {
     if (1 == onWrite) {
-      onWrite = _mod1188.UnknownFieldHandler.onWrite;
+      onWrite = _mod1186.UnknownFieldHandler.onWrite;
     }
     const self = this;
     onWrite(this.typeName, header, tag);

@@ -18,8 +18,7 @@ export const createApplicationCommandSourceSystemMessage = function createApplic
   message,
 ) {
   message = message.message;
-  let obj = ApplicationCommands;
-  const applicationCommand = obj.getApplicationCommand(message.content);
+  const applicationCommand = ApplicationCommands.getApplicationCommand(message.content);
   const application = message.application;
   if (application != null) {
     const name = application.name;
@@ -28,26 +27,26 @@ export const createApplicationCommandSourceSystemMessage = function createApplic
     if (null != name) {
       const messageAuthorWithProcessedColor = useAuthorWithProcessedColor.getMessageAuthorWithProcessedColor(message);
       const intl = util.intl;
-      obj = {
+      const obj2 = {
         username: messageAuthorWithProcessedColor.nick,
         usernameOnClick: null,
         commandName: null,
         applicationName: null,
       };
-      obj = { message, author: messageAuthorWithProcessedColor, roleStyle: message.roleStyle };
-      obj.usernameOnClick = formatUsernameOnClickDefault(obj);
+      const obj3 = { message, author: messageAuthorWithProcessedColor, roleStyle: message.roleStyle };
+      obj2.usernameOnClick = formatUsernameOnClickDefault(obj3);
       if (message.type === MessageTypes.CHAT_INPUT_COMMAND) {
         const _HermesInternal = HermesInternal;
         let name2 = "" + COMMAND_SENTINEL + applicationCommand.name;
       } else {
         name2 = applicationCommand.name;
       }
-      const obj1 = { content: null };
-      obj.commandName = name2;
-      obj.applicationName = name;
-      obj1.content = intl.formatToParts(util.t["1Zm+zw"], obj);
+      const obj4 = { content: null };
+      obj2.commandName = name2;
+      obj2.applicationName = name;
+      obj4.content = intl.formatToParts(util.t["1Zm+zw"], obj2);
       const merged = Object.assign(createCommonMessageDefault(message));
-      return obj1;
+      return obj4;
     }
   }
   return null;

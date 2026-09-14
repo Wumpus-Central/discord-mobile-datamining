@@ -4,9 +4,9 @@ import size from "../../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/user_profile/utils/getMutualFriendsLabel.tsx");
 
-export default function getMutualFriendsLabel(arg0) {
-  let str = arg0;
-  if (undefined === arg0) {
+export default function getMutualFriendsLabel(length) {
+  let str = length;
+  if (undefined === length) {
     const intl3 = util.intl;
     let stringResult = intl3.string(util.t["0mTJ3j"]);
   } else if (0 === str) {

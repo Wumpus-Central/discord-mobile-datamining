@@ -5,6 +5,8 @@ import AuthenticationStore from "../../../stores/AuthenticationStore.tsx";
 import PresenceStore from "../../../stores/PresenceStore.tsx";
 import SelfPresenceStore from "../../../stores/SelfPresenceStore.tsx";
 
+const require = globalThis.__r;
+
 const require = fn;
 let closure_7 = [];
 const size = fn(2);

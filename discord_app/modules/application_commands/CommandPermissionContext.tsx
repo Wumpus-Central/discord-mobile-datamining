@@ -11,6 +11,8 @@ import GuildStore from "../../stores/GuildStore.tsx";
 import PermissionStore from "../../stores/PermissionStore.tsx";
 import UserStore from "../../stores/UserStore.tsx";
 
+const require = globalThis.__r;
+
 require = fn;
 function computePermissions(isPrivate, arg1) {
   if (!(isPrivate instanceof ChannelRecordBase)) {
@@ -20,13 +22,12 @@ function computePermissions(isPrivate, arg1) {
       let flag = true;
       let flag2 = true;
       if (!obj5.has(permissions, constants2.ADMINISTRATOR)) {
-        let tmp13Result = BigFlagUtilsAll;
-        const hasItem = tmp13Result.has(permissions, SEND_MESSAGES_IN_THREADS.VIEW_CHANNEL);
+        const hasItem = BigFlagUtilsAll.has(permissions, SEND_MESSAGES_IN_THREADS.VIEW_CHANNEL);
         if (tmp3) {
           let hasItem1 = hasItem;
           if (hasItem) {
-            tmp13Result = BigFlagUtilsAll;
-            hasItem1 = tmp13Result.has(permissions, SEND_MESSAGES_IN_THREADS.USE_APPLICATION_COMMANDS);
+            hasItem1 = BigFlagUtilsAll.has(permissions, SEND_MESSAGES_IN_THREADS.USE_APPLICATION_COMMANDS);
+            const tmp13Result3 = BigFlagUtilsAll;
           }
           const has = BigFlagUtilsAll.has;
           if (arg1) {
@@ -35,21 +36,26 @@ function computePermissions(isPrivate, arg1) {
           } else {
             hasItem2 = has(permissions, SEND_MESSAGES_IN_THREADS.SEND_MESSAGES);
           }
-          const tmp13Result1 = BigFlagUtilsAll;
+          const tmp13Result4 = BigFlagUtilsAll;
         } else {
           flag = true;
           flag2 = hasItem;
         }
+        const tmp13Result = BigFlagUtilsAll;
         tmp3 = isPrivate instanceof tmp;
       }
-      let obj = { computedPermissions: permissions, hasBaseAccessPermissions: flag2, hasSendMessagesPermission: flag };
+      const obj = {
+        computedPermissions: permissions,
+        hasBaseAccessPermissions: flag2,
+        hasSendMessagesPermission: flag,
+      };
       return obj;
     }
   }
-  obj = { computedPermissions: null, hasBaseAccessPermissions: true, hasSendMessagesPermission: true };
+  const obj2 = { computedPermissions: null, hasBaseAccessPermissions: true, hasSendMessagesPermission: true };
   const deserializer = BigFlagUtilsAll;
-  obj.computedPermissions = deserializer.deserialize(0);
-  return obj;
+  obj2.computedPermissions = deserializer.deserialize(0);
+  return obj2;
 }
 const ChannelRecordBase = fn(1961).ChannelRecordBase;
 const isGuildNSFW = fn(1975).isGuildNSFW;
@@ -96,22 +102,17 @@ export const buildPermissionContext = function buildPermissionContext(channel, i
       isThreadResult = channel.isThread();
     }
     const isViewingRolesResult = ImpersonateStore.isViewingRoles(undefined);
-    obj = {
-      context: null,
-      userId: null,
-      roleIds: null,
-      isImpersonating: null,
-      commandTypes: null,
+    const obj4 = {
+      context: obj,
+      userId: id,
+      roleIds: items,
+      isImpersonating: isViewingRolesResult,
+      commandTypes: items,
       computedPermissions: null,
       hasBaseAccessPermissions: null,
       hasSendMessagesPermission: null,
       allowNsfw: null,
     };
-    obj.context = obj;
-    obj.userId = id;
-    obj.roleIds = items;
-    obj.isImpersonating = isViewingRolesResult;
-    obj.commandTypes = items;
     ({
       computedPermissions: obj3.computedPermissions,
       hasBaseAccessPermissions: obj3.hasBaseAccessPermissions,
@@ -129,8 +130,8 @@ export const buildPermissionContext = function buildPermissionContext(channel, i
       }
       tmp24 = tmp25;
     }
-    obj.allowNsfw = tmp24;
-    return obj;
+    obj4.allowNsfw = tmp24;
+    return obj4;
   }
 };
 export const usePermissionContext = function usePermissionContext(channel, items) {
@@ -138,14 +139,11 @@ export const usePermissionContext = function usePermissionContext(channel, items
   const commandTypes = items;
   items = [channel];
   const memo = noop.useMemo(() => {
-    let tmp = thread;
-    if (thread instanceof ChannelRecordBase) {
-      tmp = thread;
-      if (thread.isThread()) {
-        let channel = ChannelStore.getChannel(thread.parent_id);
-        if (channel == null) {
-          channel = thread;
-        }
+    let tmp = channel;
+    if (channel instanceof ChannelRecordBase) {
+      tmp = channel;
+      if (channel.isThread()) {
+        channel = ChannelStore.getChannel(channel.parent_id);
         tmp = channel;
       }
     }
@@ -211,13 +209,12 @@ export const usePermissionContext = function usePermissionContext(channel, items
     viewNsfwCommandsOrDefault = tmp17;
     const items7 = [items, memo, stateFromStores2, stateFromStoresArray, stateFromStores, tmp17, channel];
     return obj.useMemo(() => {
-      let obj = closure_0;
-      let isThreadResult = closure_0 instanceof ChannelRecordBase;
+      let isThreadResult = channel instanceof ChannelRecordBase;
       if (isThreadResult) {
-        isThreadResult = obj.isThread();
+        isThreadResult = channel.isThread();
       }
       const tmpResult = computePermissions(memo, isThreadResult);
-      obj = {
+      return {
         context: memo,
         userId: stateFromStores,
         roleIds: stateFromStoresArray,
@@ -228,7 +225,6 @@ export const usePermissionContext = function usePermissionContext(channel, items
         hasSendMessagesPermission: tmpResult.hasSendMessagesPermission,
         allowNsfw: viewNsfwCommandsOrDefault,
       };
-      return obj;
     }, items7);
   }
   obj = noop;

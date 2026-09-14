@@ -11,23 +11,14 @@ const jsx = jsxProd.jsx;
 const result = size.fileFinishedImporting("modules/safety_flows/native/LogOutDisclaimer.tsx");
 
 export default function LogOutDisclaimer() {
-  let obj = { children: null };
-  obj = { variant: "text-xs/medium", children: null };
+  const obj = { children: null };
+  const obj2 = { variant: "text-xs/medium", children: null };
   const intl = util.intl;
-  obj = {
-    handleLogOut() {
-      AuthenticationActionCreatorsDefault.logout("safety_flows_enter_email_screen");
-    },
-  };
-  obj.children = intl.format(_modDef2690["0DHxym"], obj);
-  obj.children = jsx(Text_Text.Text, {
+  obj2.children = intl.format(_modDef2690["0DHxym"], {
     handleLogOut() {
       AuthenticationActionCreatorsDefault.logout("safety_flows_enter_email_screen");
     },
   });
-  return jsx(ModalDisclaimer.ModalDisclaimer, {
-    handleLogOut() {
-      AuthenticationActionCreatorsDefault.logout("safety_flows_enter_email_screen");
-    },
-  });
+  obj.children = jsx(Text_Text.Text, { variant: "text-xs/medium", children: null });
+  return jsx(ModalDisclaimer.ModalDisclaimer, { children: null });
 }

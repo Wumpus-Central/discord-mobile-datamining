@@ -51,8 +51,7 @@ obj.overlayContainer = {
   width: "100%",
   height: "75%",
 };
-obj = { borderColor: nativeDefault.colors.BACKGROUND_BRAND };
-obj.selected = obj;
+obj.selected = { borderColor: nativeDefault.colors.BACKGROUND_BRAND };
 obj.claimed = { opacity: 0.4 };
 obj.checkmark = { position: "absolute", opacity: 1, fontWeight: "bold" };
 obj.checkmarkContainer = {
@@ -79,13 +78,10 @@ let closure_10 = noop.memo((rewardSkuId) => {
   rewardSkuId = rewardSkuId.rewardSkuId;
   ({ claimed, onSelect: importDefault, isSelected } = rewardSkuId);
   const tmp = closure_9();
-  let obj = useCurrentUser;
-  const currentUser = obj.useCurrentUser();
-  let obj1 = useA11yRolesNative;
-  const radioA11yNative = obj1.useRadioA11yNative({ selected: isSelected });
+  const currentUser = useCurrentUser.useCurrentUser();
+  const radioA11yNative = useA11yRolesNative.useRadioA11yNative({ selected: isSelected });
   ({ accessibilityRole, accessibilityState } = radioA11yNative);
-  let obj2 = useFetchCollectiblesProduct;
-  const product = obj2.useFetchCollectiblesProduct(rewardSkuId).product;
+  const product = useFetchCollectiblesProduct.useFetchCollectiblesProduct(rewardSkuId).product;
   const items = [isSelected, currentUser];
   if (null == product) {
     return null;
@@ -96,7 +92,7 @@ let closure_10 = noop.memo((rewardSkuId) => {
     if (isSelected) {
       selected = tmp.selected;
     }
-    obj = {
+    const obj4 = {
       style: null,
       onPress: null,
       activeOpacity: 0.8,
@@ -106,47 +102,47 @@ let closure_10 = noop.memo((rewardSkuId) => {
       children: null,
     };
     items1[1] = selected;
-    obj.style = items1;
-    obj.onPress = function onPress() {
+    obj4.style = items1;
+    obj4.onPress = function onPress() {
       return importDefault(rewardSkuId);
     };
-    obj.disabled = claimed;
-    obj.accessibilityRole = accessibilityRole;
-    obj.accessibilityState = accessibilityState;
+    obj4.disabled = claimed;
+    obj4.accessibilityRole = accessibilityRole;
+    obj4.accessibilityState = accessibilityState;
     const items2 = [tmp.overlayContainer];
     let claimed2 = claimed;
     if (claimed) {
       claimed2 = tmp.claimed;
     }
-    obj = { style: null, children: null };
+    const obj5 = { style: null, children: null };
     items2[1] = claimed2;
-    obj.style = items2;
+    obj5.style = items2;
     if (isNameplateRecord(first)) {
-      obj1 = { item: first, animate: isSelected };
-      let tmp7Result = React5(NameplateCardPreviewDefault, obj1);
+      const obj6 = { item: first, animate: isSelected };
+      let tmp7Result = React5(NameplateCardPreviewDefault, obj6);
     } else if (isAvatarDecorationRecord(first)) {
-      obj2 = { item: first, size: 100, animate: isSelected, avatarSource: tmp6 };
-      tmp7Result = React5(AvatarDecorationSampleV2Default, obj2);
+      const obj7 = { item: first, size: 100, animate: isSelected, avatarSource: tmp6 };
+      tmp7Result = React5(AvatarDecorationSampleV2Default, obj7);
     }
-    obj.children = tmp7Result;
-    const items3 = [React5(View, obj), ,];
-    tmp7Result = claimed;
+    obj5.children = tmp7Result;
+    const items3 = [React5(View, obj5), ,];
+    let tmp7Result2 = claimed;
     if (claimed) {
-      const obj3 = { style: tmp.checkmarkContainer, children: null };
-      const obj4 = { size: "lg", style: tmp.checkmark };
-      obj3.children = React5(CheckmarkLargeBoldIcon.CheckmarkLargeBoldIcon, obj4);
-      tmp7Result = React5(View, obj3);
+      const obj8 = { style: tmp.checkmarkContainer, children: null };
+      const obj9 = { size: "lg", style: tmp.checkmark };
+      obj8.children = React5(CheckmarkLargeBoldIcon.CheckmarkLargeBoldIcon, obj9);
+      tmp7Result2 = React5(View, obj8);
     }
-    items3[1] = tmp7Result;
-    const obj5 = { style: tmp.textContainer, children: null };
-    const obj6 = {
+    items3[1] = tmp7Result2;
+    const obj10 = { style: tmp.textContainer, children: null };
+    const obj11 = {
       variant: "heading-sm/bold",
       color: "mobile-text-heading-primary",
       lineClamp: 1,
       accessibilityRole: "header",
       children: product.name,
     };
-    const items4 = [React5(Text_Text.Text, obj6)];
+    const items4 = [React5(Text_Text.Text, obj11)];
     const intl = util.intl;
     const string = intl.string;
     const t = util.t;
@@ -155,17 +151,17 @@ let closure_10 = noop.memo((rewardSkuId) => {
     } else {
       stringResult = string(t.QQsaCc);
     }
-    const obj7 = {
+    const obj12 = {
       variant: "text-xs/semibold",
       color: "mobile-text-heading-primary",
       lineClamp: 1,
       children: stringResult,
     };
-    items4[1] = React5(Text_Text.Text, obj7);
-    obj5.children = items4;
-    items3[2] = React6(View, obj5);
-    obj.children = items3;
-    return React6(Pressables.PressableOpacity, obj);
+    items4[1] = React5(Text_Text.Text, obj12);
+    obj10.children = items4;
+    items3[2] = React6(View, obj10);
+    obj4.children = items3;
+    return React6(Pressables.PressableOpacity, obj4);
   }
 });
 createStyles = fn(4636);

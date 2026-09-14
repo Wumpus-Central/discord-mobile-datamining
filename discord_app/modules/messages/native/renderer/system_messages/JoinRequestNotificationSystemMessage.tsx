@@ -16,8 +16,7 @@ const result = size.fileFinishedImporting(
 
 export const createJoinRequestNotificationSystemMessage = function createJoinRequestNotificationSystemMessage(message) {
   message = message.message;
-  let obj = SnowflakeUtilsDefault;
-  const request = GuildJoinRequestStore.getRequest(obj.cast(message.channel_id));
+  const request = GuildJoinRequestStore.getRequest(SnowflakeUtilsDefault.cast(message.channel_id));
   let tmp4;
   if (null != request) {
     let guild = GuildStore.getGuild(request.guildId);
@@ -30,15 +29,15 @@ export const createJoinRequestNotificationSystemMessage = function createJoinReq
   if (request != null) {
     userId = request.userId;
   }
-  let user = UserStore.getUser(userId);
+  const user1 = UserStore.getUser(userId);
   let username;
-  if (user != null) {
-    username = user.username;
+  if (user1 != null) {
+    username = user1.username;
   }
   if (username == null) {
     let username1;
     if (request != null) {
-      user = request.user;
+      const user = request.user;
       if (user != null) {
         username1 = user.username;
       }
@@ -55,15 +54,15 @@ export const createJoinRequestNotificationSystemMessage = function createJoinReq
       let stringResult = intl5.string(util.t["2VLV0d"]);
     }
     const intl6 = util.intl;
-    obj = { username, guildName: name };
-    stringResult = intl6.formatToParts(util.t.EloBG4, obj);
+    const obj2 = { username, guildName: name };
+    stringResult = intl6.formatToParts(util.t.EloBG4, obj2);
   } else {
     if (MessageTypes.GUILD_JOIN_REQUEST_REJECT_NOTIFICATION === type) {
       if (null != username) {
         if (null != name) {
           const intl4 = util.intl;
-          obj = { username, guildName: name };
-          let formatToPartsResult = intl4.formatToParts(util.t["UGN/Yy"], obj);
+          const obj3 = { username, guildName: name };
+          let formatToPartsResult = intl4.formatToParts(util.t["UGN/Yy"], obj3);
         }
         let str = formatToPartsResult;
       }
@@ -75,8 +74,8 @@ export const createJoinRequestNotificationSystemMessage = function createJoinReq
         if (null != username) {
           if (null != name) {
             const intl2 = util.intl;
-            const obj1 = { username, guildName: name };
-            let formatToPartsResult1 = intl2.formatToParts(util.t.u4movT, obj1);
+            const obj4 = { username, guildName: name };
+            let formatToPartsResult1 = intl2.formatToParts(util.t.u4movT, obj4);
           }
           str = formatToPartsResult1;
         }
@@ -84,8 +83,8 @@ export const createJoinRequestNotificationSystemMessage = function createJoinReq
         formatToPartsResult1 = intl.string(util.t.BMlbE7);
       }
     }
-    const obj2 = { content: str };
+    const obj5 = { content: str };
     const merged = Object.assign(createCommonMessageDefault(message));
-    return obj2;
+    return obj5;
   }
 };

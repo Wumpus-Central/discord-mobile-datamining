@@ -3,7 +3,7 @@ import _modDef38 from "../../../../_runtime/metro/00038__.js";
 import AnalyticsTrackingStore from "AnalyticsTrackingStore.tsx";
 import StandardAnalyticsConstants from "StandardAnalyticsConstants.tsx";
 import AnalyticsTrackingActionCreators from "AnalyticsTrackingActionCreators.tsx";
-import _modDef1332 from "../../../../_runtime/metro/01332__.js";
+import _modDef1330 from "../../../../_runtime/metro/01330__.js";
 import encodeProperties from "encodeProperties.tsx";
 import AnalyticsSchema from "AnalyticsSchema.tsx";
 import getSuperProperties from "getSuperProperties.tsx";
@@ -35,9 +35,9 @@ export const isThrottled = function isThrottled(CHANNEL_OPENED) {
   }
   return tmp;
 };
-export const trackMaker = (AnalyticsUtils) => {
-  ({ addBreadcrumb: global, analyticEventConfigs: require } = AnalyticsUtils);
-  ({ dispatcher, TRACK_ACTION_NAME } = AnalyticsUtils);
+export const trackMaker = (arg0) => {
+  ({ addBreadcrumb: global, analyticEventConfigs: require } = arg0);
+  ({ dispatcher, TRACK_ACTION_NAME } = arg0);
   closure_2 = AnalyticsTrackingActionCreators.queueTrackingEventMaker(dispatcher, TRACK_ACTION_NAME);
   return function track(arg0, arg1) {
     let obj = arg2;
@@ -49,13 +49,13 @@ export const trackMaker = (AnalyticsUtils) => {
         return Promise.resolve();
       }
     }
-    obj = arg1;
+    let obj2 = arg1;
     if (arg1 == null) {
-      obj = {};
+      obj2 = {};
     }
     let obj3 = tmp;
     if (typeof require[arg0] === "function") {
-      let tmpResult = tmp(obj);
+      let tmpResult = tmp(obj2);
       if (tmpResult == null) {
         tmpResult = null;
       }
@@ -64,7 +64,7 @@ export const trackMaker = (AnalyticsUtils) => {
     if (null != obj3) {
       if ("throttlePeriod" in obj3) {
         const items = [arg0];
-        HermesBuiltin.arraySpread(obj3.throttleKeys(obj), 1);
+        HermesBuiltin.arraySpread(obj3.throttleKeys(obj2), 1);
         const joined = items.join("_");
         let tmp13 = null != dependencyMap[joined];
         if (tmp13) {
@@ -81,10 +81,10 @@ export const trackMaker = (AnalyticsUtils) => {
             }
           }
           if (obj3.deduplicate) {
-            if (_modDef1332(closure_5[joined], obj)) {
+            if (_modDef1330(closure_5[joined], obj2)) {
               return Promise.resolve();
             } else {
-              closure_5[joined] = obj;
+              closure_5[joined] = obj2;
             }
           }
           const _Date2 = Date;

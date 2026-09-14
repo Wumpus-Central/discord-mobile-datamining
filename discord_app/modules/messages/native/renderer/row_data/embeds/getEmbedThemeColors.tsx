@@ -70,8 +70,8 @@ const result8 = createStyles.experimental_createToken((theme) => {
   }
   return PRIMARY_600;
 });
-fn(4636);
-createStyles = {
+createStyles = fn(4636);
+let closure_4 = createStyles.createNativeStyleProperties({
   acceptBlurpleLabelBackgroundColor: nativeDefault.colors.BACKGROUND_BRAND,
   acceptLabelGreenBackgroundColor: nativeDefault.colors.CONTROL_CONNECTED_BACKGROUND_DEFAULT,
   acceptLabelGreenColor: nativeDefault.unsafe_rawColors.WHITE,
@@ -94,8 +94,7 @@ createStyles = {
   voiceActiveColor: nativeDefault.colors.TEXT_FEEDBACK_POSITIVE,
   voiceHeaderBackgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED,
   voiceMutedColor: nativeDefault.colors.TEXT_MUTED,
-};
-let closure_4 = createStyles.createNativeStyleProperties(createStyles);
+});
 const size = fn(2);
 const result9 = size.fileFinishedImporting("modules/messages/native/renderer/row_data/embeds/getEmbedThemeColors.tsx");
 

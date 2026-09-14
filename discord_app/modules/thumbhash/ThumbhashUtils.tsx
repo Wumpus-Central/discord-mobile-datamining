@@ -1,5 +1,5 @@
 // discord_app/modules/thumbhash/ThumbhashUtils.tsx
-import thumbHashToRGBA2 from "../../../_runtime/15274_thumbHashToRGBA.js";
+import thumbHashToRGBA2 from "../../../_runtime/15275_thumbHashToRGBA.js";
 import size from "../../../_runtime/metro/00002__.js";
 
 function thumbHashToRGBA(arg0) {
@@ -86,7 +86,7 @@ function thumbHashToRGBA(arg0) {
     if (num12 * 3 < result3) {
       do {
         let sum2 = tmp23 + 1;
-        arr = items1.push((((arg0[num6 + (tmp23 >> 1)] >> ((1 & tmp23) << 2)) & 15) / 7.5 - 1) * tmp19);
+        let arr2 = items1.push((((arg0[num6 + (tmp23 >> 1)] >> ((1 & tmp23) << 2)) & 15) / 7.5 - 1) * tmp19);
         let sum3 = num12 + 1;
         tmp23 = sum2;
         num12 = sum3;
@@ -110,7 +110,7 @@ function thumbHashToRGBA(arg0) {
     if (num14 * 3 < result5) {
       do {
         let sum4 = tmp33 + 1;
-        let arr1 = items2.push((((arg0[num6 + (tmp33 >> 1)] >> ((1 & tmp33) << 2)) & 15) / 7.5 - 1) * tmp29);
+        let arr3 = items2.push((((arg0[num6 + (tmp33 >> 1)] >> ((1 & tmp33) << 2)) & 15) / 7.5 - 1) * tmp29);
         let sum5 = num14 + 1;
         tmp33 = sum4;
         num14 = sum5;
@@ -135,7 +135,7 @@ function thumbHashToRGBA(arg0) {
       if (num16 * 5 < result7) {
         do {
           let sum6 = tmp43 + 1;
-          let arr2 = items3.push((((arg0[num6 + (tmp43 >> 1)] >> ((1 & tmp43) << 2)) & 15) / 7.5 - 1) * result);
+          let arr4 = items3.push((((arg0[num6 + (tmp43 >> 1)] >> ((1 & tmp43) << 2)) & 15) / 7.5 - 1) * result);
           let sum7 = num16 + 1;
           tmp43 = sum6;
           num16 = sum7;

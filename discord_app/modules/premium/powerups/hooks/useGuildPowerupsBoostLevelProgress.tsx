@@ -2,6 +2,7 @@
 import useGuildPowerupsBoostCount from "useGuildPowerupsBoostCount.tsx";
 import GuildStore from "../../../../stores/GuildStore.tsx";
 
+const require = globalThis.__r;
 const useGuildPowerupsBoostCountDefault = useGuildPowerupsBoostCount;
 
 require = fn;

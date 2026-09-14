@@ -4,24 +4,22 @@ import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import FamilyCenterInlineWarningNoticeDefault from "FamilyCenterInlineWarningNotice.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
+const require = globalThis.__r;
+
 require = fn;
 const jsx = fn(21).jsx;
-fn(4636);
-let createStyles = { container: null, link: null };
-createStyles = { marginTop: nativeDefault.space.PX_16 };
-createStyles.container = createStyles;
-createStyles.link = { textDecorationLine: "underline" };
-let closure_5 = createStyles.createStyles(createStyles);
+const createStyles = fn(4636);
+const obj2 = { container: { marginTop: nativeDefault.space.PX_16 }, link: { textDecorationLine: "underline" } };
+let closure_5 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/parent_tools/native/FamilyCenterParentalConsentNotice.tsx");
 
 export default function FamilyCenterParentalConsentNotice() {
   const tmp = closure_5();
   _require = tmp;
-  let obj = require("useIsParentalConsentBannerActive");
-  const isParentalConsentBannerActive = obj.useIsParentalConsentBannerActive();
-  let obj1 = require("useParentalConsentWarning");
-  const parentalConsentWarning = obj1.useParentalConsentWarning();
+  const isParentalConsentBannerActive = require("useIsParentalConsentBannerActive").useIsParentalConsentBannerActive();
+  const obj = require("useIsParentalConsentBannerActive");
+  const parentalConsentWarning = require("useParentalConsentWarning").useParentalConsentWarning();
   let daysRemaining;
   if (parentalConsentWarning != null) {
     daysRemaining = parentalConsentWarning.daysRemaining;
@@ -49,17 +47,17 @@ export default function FamilyCenterParentalConsentNotice() {
             key,
           );
         }
-        obj = { style: tmp.container, text: null };
+        const obj3 = { style: tmp.container, text: null };
         if (0 === daysRemaining) {
           const intl2 = tmp2(1114).intl;
-          obj = { learnMoreHook };
-          let formatResult = intl2.format(tmp9(2396).S5kmfO, obj);
+          const obj4 = { learnMoreHook };
+          let formatResult = intl2.format(tmp9(2396).S5kmfO, obj4);
         } else {
           const intl = tmp2(1114).intl;
-          obj1 = { count: daysRemaining, learnMoreHook };
-          formatResult = intl.format(tmp9(2396)["5jm+T3"], obj1);
+          const obj5 = { count: daysRemaining, learnMoreHook };
+          formatResult = intl.format(tmp9(2396)["5jm+T3"], obj5);
         }
-        obj.text = formatResult;
+        obj3.text = formatResult;
         return jsx(FamilyCenterInlineWarningNoticeDefault, { style: tmp.container, text: null });
       }
     }

@@ -9,11 +9,9 @@ import noop from "../../../../_runtime/metro/00019__.js";
 require = fn;
 const getIconById = fn(9453).getIconById;
 const jsx = fn(21).jsx;
-fn(4636);
-let createStyles = { icon: null };
-createStyles = { borderRadius: nativeDefault.radii.round };
-createStyles.icon = createStyles;
-let closure_5 = createStyles.createStyles(createStyles);
+const createStyles = fn(4636);
+let obj2 = { icon: { borderRadius: nativeDefault.radii.round } };
+let closure_5 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/app_icons/native/SettingsItemAppIcon.tsx");
 
@@ -22,12 +20,11 @@ export default function SettingsItemAppIcon(color) {
   if (INTERACTIVE_ICON_DEFAULT === undefined) {
     INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
   }
-  let obj = AppIconUtils;
-  const currentAppIcon = obj.useCurrentAppIcon();
   const tmp3 = closure_5();
+  const currentAppIcon = AppIconUtils.useCurrentAppIcon();
   if (currentAppIcon !== AppIconTypes.FreemiumAppIconIds.DEFAULT) {
     if (null != tmp7) {
-      obj = { style: tmp3.icon, id: currentAppIcon, size: 32 };
+      const obj2 = { style: tmp3.icon, id: currentAppIcon, size: 32 };
       let tmp11 = jsx(AppIconDefault, { style: tmp3.icon, id: currentAppIcon, size: 32 });
     }
     return tmp11;

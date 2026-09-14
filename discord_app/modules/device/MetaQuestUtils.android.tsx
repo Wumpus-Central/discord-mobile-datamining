@@ -1,7 +1,8 @@
 // discord_app/modules/device/MetaQuestUtils.android.tsx
 import ClientInfoUtilsAll from "../../utils/native/ClientInfoUtils.tsx";
-import NativeMetaQuestModule from "../../../discord_common/js/packages/rtn-codegen/js/NativeMetaQuestModule.tsx";
+import NativeMetaQuestModule_mod from "../../../discord_common/js/packages/rtn-codegen/js/NativeMetaQuestModule.tsx";
 
+let NativeMetaQuestModule = NativeMetaQuestModule_mod;
 NativeMetaQuestModule = NativeMetaQuestModule.isMetaQuest();
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/device/MetaQuestUtils.android.tsx");

@@ -14,23 +14,23 @@ import CollectiblesCategoryStore from "../../collectibles/CollectiblesCategorySt
 
 require = fn;
 function _getDefaultRewardName(rewardsConfig, stateFromStores, arg2) {
-  let rewards = rewardsConfig.rewardsConfig.rewards;
+  const rewards = rewardsConfig.rewardsConfig.rewards;
   if (rewards.some((type) => type.type === QuestRewardTypes.QuestRewardTypes.FRACTIONAL_PREMIUM)) {
     return FractionalPremiumUtils.getFractionalPremiumQuestRewardName(rewardsConfig);
   } else {
-    let rewards2 = rewardsConfig.rewardsConfig.rewards;
+    const rewards2 = rewardsConfig.rewardsConfig.rewards;
     if (rewards2.some((type) => type.type === QuestRewardTypes.QuestRewardTypes.VIRTUAL_CURRENCY)) {
-      rewards = rewardsConfig.rewardsConfig.rewards;
-      const found = rewards.find((type) => type.type === QuestRewardTypes.QuestRewardTypes.VIRTUAL_CURRENCY);
+      const rewards1 = rewardsConfig.rewardsConfig.rewards;
+      const found = rewards1.find((type) => type.type === QuestRewardTypes.QuestRewardTypes.VIRTUAL_CURRENCY);
       let num = null;
       if (null != found) {
         if (null == stateFromStores) {
           num = found.orbQuantity;
         } else {
-          const rewards1 = rewardsConfig.rewardsConfig.rewards;
+          const rewards3 = rewardsConfig.rewardsConfig.rewards;
           const questOrbMultiplierEligibilityForUser =
             QuestOrbMultiplierHooks.getQuestOrbMultiplierEligibilityForUser(stateFromStores);
-          const found1 = rewards1.find((type) => type.type === QuestRewardTypes.QuestRewardTypes.VIRTUAL_CURRENCY);
+          const found1 = rewards3.find((type) => type.type === QuestRewardTypes.QuestRewardTypes.VIRTUAL_CURRENCY);
           let premiumOrbQuantity;
           if (found1 != null) {
             premiumOrbQuantity = found1.premiumOrbQuantity;
@@ -54,30 +54,29 @@ function _getDefaultRewardName(rewardsConfig, stateFromStores, arg2) {
         }
       }
       if (num == null) {
-        rewards2 = rewardsConfig.rewardsConfig.rewards;
-        const found2 = rewards2.find((type) => type.type === QuestRewardTypes.QuestRewardTypes.VIRTUAL_CURRENCY);
-        orbQuantity = undefined;
+        const rewards4 = rewardsConfig.rewardsConfig.rewards;
+        const found2 = rewards4.find((type) => type.type === QuestRewardTypes.QuestRewardTypes.VIRTUAL_CURRENCY);
+        let orbQuantity1;
         if (found2 != null) {
-          orbQuantity = found2.orbQuantity;
+          orbQuantity1 = found2.orbQuantity;
         }
-        num = orbQuantity;
+        num = orbQuantity1;
       }
       if (num == null) {
         num = 0;
       }
       const intl = util.intl;
-      let obj = { orbAmount: num };
-      return intl.formatToPlainString(util.t["nLXlh+"], obj);
+      const obj2 = { orbAmount: num };
+      return intl.formatToPlainString(util.t["nLXlh+"], obj2);
     } else {
-      obj = QuestCopyUtils;
-      const messages = obj.getDefaultReward(rewardsConfig).messages;
+      const messages = QuestCopyUtils.getDefaultReward(rewardsConfig).messages;
       return arg2 ? messages.nameWithArticle : messages.name;
     }
   }
 }
 let items = [
-  fn(11424).QuestRewardExpirationMode.PREMIUM_EXTENSION,
-  fn(11424).QuestRewardExpirationMode.PREMIUM_PERMANENT,
+  fn(11425).QuestRewardExpirationMode.PREMIUM_EXTENSION,
+  fn(11425).QuestRewardExpirationMode.PREMIUM_PERMANENT,
 ];
 const set = new Set(items);
 const size = fn(2);
@@ -139,8 +138,7 @@ export const getCollectibleQuestRewardDuration = function getCollectibleQuestRew
         const date = new Date(config.expiresAt);
         const _Date2 = Date;
         const date1 = new Date(tmp5.expiresAt);
-        let tmp3Result = _mod3871;
-        const differenceInDaysResult = tmp3Result.differenceInDays(date1, date);
+        const differenceInDaysResult = _mod3871.differenceInDays(date1, date);
         const _Math3 = Math;
         let num = 0;
         const rounded = Math.floor(differenceInDaysResult / 30);
@@ -152,27 +150,28 @@ export const getCollectibleQuestRewardDuration = function getCollectibleQuestRew
           const _Math2 = Math;
           const rounded1 = Math.floor(sum / 12);
           const intl4 = util.intl;
-          let obj = { years: rounded1 };
-          return intl4.formatToPlainString(util.t.PClsrw, obj);
+          const obj2 = { years: rounded1 };
+          return intl4.formatToPlainString(util.t.PClsrw, obj2);
         } else if (sum > 0) {
           const intl3 = util.intl;
-          obj = { months: sum };
-          return intl3.formatToPlainString(util.t.kridzK, obj);
+          const obj3 = { months: sum };
+          return intl3.formatToPlainString(util.t.kridzK, obj3);
         } else {
-          tmp3Result = _mod3871;
-          const differenceInDaysResult1 = tmp3Result.differenceInDays(date1, date);
+          const differenceInDaysResult1 = _mod3871.differenceInDays(date1, date);
           if (differenceInDaysResult1 >= 7) {
             const _Math = Math;
             const rounded2 = Math.ceil(differenceInDaysResult1 / 7);
             const intl2 = util.intl;
-            const obj1 = { weeks: rounded2 };
-            return intl2.formatToPlainString(util.t.EmoBD2, obj1);
+            const obj4 = { weeks: rounded2 };
+            return intl2.formatToPlainString(util.t.EmoBD2, obj4);
           } else {
             const intl = util.intl;
-            obj = { days: differenceInDaysResult1 };
+            const obj = { days: differenceInDaysResult1 };
             return intl.formatToPlainString(util.t["k2UNz+"], obj);
           }
+          const tmp3Result2 = _mod3871;
         }
+        const tmp3Result = _mod3871;
       }
     }
   }
@@ -406,27 +405,26 @@ export const getQuestOrbMultiplierForUser = function getQuestOrbMultiplierForUse
     if (num == null) {
       num = 1;
     }
-    let tmp2Result = QuestOrbMultiplierHooks;
     const rewards1 = rewardsConfig.rewardsConfig.rewards;
-    const questOrbMultiplierEligibilityForUser = tmp2Result.getQuestOrbMultiplierEligibilityForUser(
+    const questOrbMultiplierEligibilityForUser = QuestOrbMultiplierHooks.getQuestOrbMultiplierEligibilityForUser(
       isFractionalPremiumWithNoStandardSub,
     );
     const found1 = rewards1.find((type) => type.type === QuestRewardTypes.QuestRewardTypes.VIRTUAL_CURRENCY);
-    premiumOrbQuantity = undefined;
+    let premiumOrbQuantity1;
     if (found1 != null) {
-      premiumOrbQuantity = found1.premiumOrbQuantity;
+      premiumOrbQuantity1 = found1.premiumOrbQuantity;
     }
-    let tmp9 = null != premiumOrbQuantity;
+    let tmp9 = null != premiumOrbQuantity1;
     if (tmp9) {
-      tmp9 = premiumOrbQuantity > 0;
+      tmp9 = premiumOrbQuantity1 > 0;
     }
     let num6 = 1;
     if (tmp9) {
-      tmp2Result = QuestOrbMultiplierUtils;
       num6 = 1;
-      if (tmp2Result.shouldReceiveQuestOrbMultiplier(questOrbMultiplierEligibilityForUser)) {
+      if (tmp2Result2.shouldReceiveQuestOrbMultiplier(questOrbMultiplierEligibilityForUser)) {
         num6 = num;
       }
+      tmp2Result2 = QuestOrbMultiplierUtils;
     }
     return num6;
   }

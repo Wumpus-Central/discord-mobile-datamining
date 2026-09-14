@@ -80,18 +80,18 @@ export { parseMessageEmbedForProps };
 export const mapCtaToNativeData = function mapCtaToNativeData(arg0, learn_more_link, classification_id) {
   if (constants2.LEARN_MORE_LINK === arg0) {
     let str2 = learn_more_link;
-    let obj = { text: null, type: null, key: null };
+    const obj2 = { text: null, type: null, key: null };
     const intl2 = util.intl;
-    obj.text = intl2.string(util.t["8/GdRB"]);
-    obj.type = constants2.LEARN_MORE_LINK;
+    obj2.text = intl2.string(util.t["8/GdRB"]);
+    obj2.type = constants2.LEARN_MORE_LINK;
     if (learn_more_link == null) {
       str2 = "";
     }
-    obj.key = str2;
-    return obj;
+    obj2.key = str2;
+    return obj2;
   } else if (constants2.POLICY_VIOLATION_DETAIL === arg0) {
     let str = classification_id;
-    obj = { text: null, type: null, key: null };
+    const obj = { text: null, type: null, key: null };
     const intl = util.intl;
     obj.text = intl.string(util.t.QsqdXC);
     obj.type = constants2.POLICY_VIOLATION_DETAIL;

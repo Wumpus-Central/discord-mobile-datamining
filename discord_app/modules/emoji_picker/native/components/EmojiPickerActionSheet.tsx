@@ -14,40 +14,39 @@ import UserStore from "../../../../stores/UserStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const EmojiPickerSource = fn(10418).EmojiPickerSource;
+const EmojiPickerSource = fn(10419).EmojiPickerSource;
 const EXPRESSION_FOOTER_HEIGHT = fn(1074).EXPRESSION_FOOTER_HEIGHT;
 let EmojiIntention = fn(1374).EmojiIntention;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
 const EmojiPickerActionSheet = "EmojiPickerActionSheet";
-fn(4636);
-let createStyles = {
+const createStyles = fn(4636);
+let obj2 = {
   header: { flexDirection: "column" },
-  searchContainer: null,
+  searchContainer: { display: "flex", flexDirection: "row", marginBottom: -nativeDefault.space.PX_16 },
   content: null,
   background: null,
   headerText: null,
   headerSpacer: null,
   burstReaction: null,
 };
-createStyles = { display: "flex", flexDirection: "row", marginBottom: -nativeDefault.space.PX_16 };
-createStyles.searchContainer = createStyles;
-createStyles.content = {
+let obj3 = { display: "flex", flexDirection: "row", marginBottom: -nativeDefault.space.PX_16 };
+obj2.content = {
   paddingHorizontal: nativeDefault.space.PX_8,
   backgroundColor: nativeDefault.colors.MOBILE_EXPRESSION_PICKER_BACKGROUND_DEFAULT,
 };
-let obj1 = {
+let obj4 = {
   paddingHorizontal: nativeDefault.space.PX_8,
   backgroundColor: nativeDefault.colors.MOBILE_EXPRESSION_PICKER_BACKGROUND_DEFAULT,
 };
-createStyles.background = { backgroundColor: nativeDefault.colors.MOBILE_EXPRESSION_PICKER_BACKGROUND_DEFAULT };
-let obj2 = { backgroundColor: nativeDefault.colors.MOBILE_EXPRESSION_PICKER_BACKGROUND_DEFAULT };
-createStyles.headerText = { flexDirection: "column", alignItems: "center", marginBottom: nativeDefault.space.PX_16 };
-let obj3 = { flexDirection: "column", alignItems: "center", marginBottom: nativeDefault.space.PX_16 };
-createStyles.headerSpacer = { marginTop: nativeDefault.space.PX_8 };
-let obj4 = { marginTop: nativeDefault.space.PX_8 };
-createStyles.burstReaction = { borderColor: nativeDefault.colors.BACKGROUND_BRAND };
-let closure_13 = createStyles.createStyles(createStyles);
+obj2.background = { backgroundColor: nativeDefault.colors.MOBILE_EXPRESSION_PICKER_BACKGROUND_DEFAULT };
+let obj5 = { backgroundColor: nativeDefault.colors.MOBILE_EXPRESSION_PICKER_BACKGROUND_DEFAULT };
+obj2.headerText = { flexDirection: "column", alignItems: "center", marginBottom: nativeDefault.space.PX_16 };
+let obj6 = { flexDirection: "column", alignItems: "center", marginBottom: nativeDefault.space.PX_16 };
+obj2.headerSpacer = { marginTop: nativeDefault.space.PX_8 };
+let obj7 = { marginTop: nativeDefault.space.PX_8 };
+obj2.burstReaction = { borderColor: nativeDefault.colors.BACKGROUND_BRAND };
+let closure_13 = createStyles.createStyles(obj2);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/emoji_picker/native/components/EmojiPickerActionSheet.tsx");
 
@@ -73,15 +72,14 @@ export default function EmojiPickerActionSheet(onClose) {
   ({ analyticsObject, messageId } = onClose);
   let tmp = closure_13();
   noop = tmp;
-  let obj = noop;
   [tmp5, c5] = source(noop.useState(onClose(pickerIntention[10]).ReactionTypes.NORMAL), 2);
   const tmp6 = tmp5 === onClose(pickerIntention[10]).ReactionTypes.BURST;
   closure_6 = tmp6;
   const ref = noop.useRef(null);
-  let obj1 = onClose(pickerIntention[11]);
-  const sharedValue = obj1.useSharedValue(0);
-  let obj2 = onClose(pickerIntention[12]);
-  const emojiCategories = obj2.useEmojiCategories(
+  const tmp4 = source(noop.useState(onClose(pickerIntention[10]).ReactionTypes.NORMAL), 2);
+  const sharedValue = onClose(pickerIntention[11]).useSharedValue(0);
+  let obj2 = onClose(pickerIntention[11]);
+  const emojiCategories = onClose(pickerIntention[12]).useEmojiCategories(
     pickerIntention,
     channel,
     guildId,
@@ -90,13 +88,13 @@ export default function EmojiPickerActionSheet(onClose) {
   );
   let bottom = onPressEmoji(pickerIntention[13])().insets.bottom;
   const bottom2 = onPressEmoji(pickerIntention[14])().bottom;
-  let obj3 = onClose(pickerIntention[15]);
-  if (obj3.isAndroid()) {
+  let obj3 = onClose(pickerIntention[12]);
+  if (obj4.isAndroid()) {
     bottom = bottom2;
   }
   const sum = bottom + handleTextChange;
   const sum1 = sum + onPressEmoji(tmp3[9]).space.PX_16;
-  let tmp10Result = onPressEmoji(tmp3[16]);
+  obj4 = onClose(pickerIntention[15]);
   const tmp14 = onPressEmoji(pickerIntention[18])(channel, sharedValue, pickerIntention, bypassPremiumEmojiEntitlement);
   handleTextChange = tmp14.handleTextChange;
   let items = [onClose];
@@ -169,15 +167,15 @@ export default function EmojiPickerActionSheet(onClose) {
   memo1 = obj.useMemo(() => {
     let tmp = null;
     if (pickerIntention === EmojiIntention.DEFAULT_REACT_EMOJI) {
-      let obj = { style: closure_4.headerText, children: null };
-      obj = { variant: "heading-lg/bold", color: "mobile-text-heading-primary", children: null };
+      const obj = { style: closure_4.headerText, children: null };
+      const obj2 = { variant: "heading-lg/bold", color: "mobile-text-heading-primary", children: null };
       const intl = util.intl;
-      obj.children = intl.string(util.t.wHTk2C);
-      const items = [closure_2_10(Text_Text.Text, obj)];
-      obj = { variant: "text-sm/medium", color: "text-muted", children: null };
+      obj2.children = intl.string(util.t.wHTk2C);
+      const items = [closure_2_10(Text_Text.Text, obj2)];
+      const obj3 = { variant: "text-sm/medium", color: "text-muted", children: null };
       const intl2 = util.intl;
-      obj.children = intl2.string(util.t.VrWSNn);
-      items[1] = closure_2_10(Text_Text.Text, obj);
+      obj3.children = intl2.string(util.t.VrWSNn);
+      items[1] = closure_2_10(Text_Text.Text, obj3);
       obj.children = items;
       tmp = closure_2_11(View, obj);
     }
@@ -192,22 +190,22 @@ export default function EmojiPickerActionSheet(onClose) {
     if (null === memo1) {
       headerSpacer = closure_4.headerSpacer;
     }
-    obj = { style: items1, children: null };
+    const obj2 = { style: items1, children: null };
     items1[1] = headerSpacer;
-    obj = {
+    const obj3 = {
       ref,
       size: "md",
       isRound: true,
       onChange: handleTextChange,
       placeholder: EmojiPickerUtils.getSearchPlaceholder(pickerIntention, currentUser),
     };
-    const items2 = [closure_2_10(SearchField.SearchField, obj)];
+    const items2 = [closure_2_10(SearchField.SearchField, obj3)];
     let tmp4Result = pickerIntention === EmojiIntention.REACTION;
     if (tmp4Result) {
       tmp4Result = source !== EmojiPickerSource.NOTIFICATION;
     }
     if (tmp4Result) {
-      const obj1 = {
+      const obj5 = {
         onPress() {
           if (obj.isPremium(currentUser.getCurrentUser())) {
             const result = onClose(pickerIntention[29]).triggerHapticFeedback(
@@ -226,11 +224,11 @@ export default function EmojiPickerActionSheet(onClose) {
         },
         isActive: currentUser,
       };
-      tmp4Result = closure_2_10(BurstReactionToggleDefault, obj1);
+      tmp4Result = closure_2_10(BurstReactionToggleDefault, obj5);
     }
     items2[1] = tmp4Result;
-    obj.children = items2;
-    items[1] = closure_2_11(View, obj);
+    obj2.children = items2;
+    items[1] = closure_2_11(View, obj2);
     obj.children = items;
     return closure_2_11(View, obj);
   }, items4);
@@ -240,18 +238,22 @@ export default function EmojiPickerActionSheet(onClose) {
   } else {
     items6 = [onPressEmoji(tmp3[9]).unsafe_rawColors.TRANSPARENT, onPressEmoji(tmp3[9]).unsafe_rawColors.TRANSPARENT];
   }
-  let tmp2Result = tmp2(tmp3[11]);
-  const sharedValue1 = tmp2Result.useSharedValue(-1);
-  const ref1 = obj.useRef(null);
-  obj = { value: tmp10Result(onPressEmoji(tmp3[17]).EMOJI_PICKER).analyticsLocations, children: null };
-  tmp2Result = tmp2(tmp3[15]);
-  let isIOSResult = tmp2Result.isIOS();
+  const tmp10Result = onPressEmoji(pickerIntention[16]);
+  const sharedValue1 = onClose(pickerIntention[11]).useSharedValue(-1);
+  const ref1 = noop.useRef(null);
+  let obj5 = { value: tmp10Result(onPressEmoji(pickerIntention[17]).EMOJI_PICKER).analyticsLocations, children: null };
+  const tmp2Result = onClose(pickerIntention[11]);
+  let isIOSResult = onClose(pickerIntention[15]).isIOS();
   if (isIOSResult) {
-    obj = { portalHostName: EmojiPickerActionSheet, animatedSheetIndex: sharedValue1, followSystemKeyboard: true };
-    isIOSResult = ref2(onPressEmoji(tmp3[31]), obj);
+    const obj6 = {
+      portalHostName: EmojiPickerActionSheet,
+      animatedSheetIndex: sharedValue1,
+      followSystemKeyboard: true,
+    };
+    isIOSResult = ref2(onPressEmoji(tmp3[31]), obj6);
   }
   const items7 = [isIOSResult];
-  obj1 = {
+  const obj7 = {
     backgroundStyles: tmp.background,
     ref: ref1,
     scrollable: true,
@@ -265,21 +267,21 @@ export default function EmojiPickerActionSheet(onClose) {
     contentStyles: null,
     children: null,
   };
-  const tmp4 = source(noop.useState(onClose(pickerIntention[10]).ReactionTypes.NORMAL), 2);
+  const tmp2Result4 = onClose(pickerIntention[15]);
   let tmp28;
-  if (tmp2Result1.isAndroid()) {
-    obj2 = { name: EmojiPickerActionSheet };
-    tmp28 = ref2(tmp2(tmp3[33]).PortalHost, obj2);
+  if (tmp2Result5.isAndroid()) {
+    const obj8 = { name: EmojiPickerActionSheet };
+    tmp28 = ref2(tmp2(tmp3[33]).PortalHost, obj8);
   }
-  obj1.footer = tmp28;
-  obj1.startExpanded = flag2;
-  obj1.onDismiss = callback;
-  obj1.animatedIndex = sharedValue1;
-  obj1.onExpand = callback2;
-  obj1.borderGradient = items6;
+  obj7.footer = tmp28;
+  obj7.startExpanded = flag2;
+  obj7.onDismiss = callback;
+  obj7.animatedIndex = sharedValue1;
+  obj7.onExpand = callback2;
+  obj7.borderGradient = items6;
   const items8 = [tmp.content, { marginBottom: sum }];
-  obj1.contentStyles = items8;
-  obj3 = {
+  obj7.contentStyles = items8;
+  const obj9 = {
     bottomSheetIndex: sharedValue1,
     onPressEmoji: callback1,
     onLongPressEmoji: null,
@@ -296,22 +298,23 @@ export default function EmojiPickerActionSheet(onClose) {
     messageId: null,
     bypassPremiumEmojiEntitlement: null,
   };
-  tmp10Result = onPressEmoji(tmp3[34]);
-  obj3.onLongPressEmoji = onClose(pickerIntention[35]).openEmojiActionSheet;
-  obj3.emojiPickerListRef = ref;
-  obj3.categories = emojiCategories;
-  obj3.categoryIndexActive = sharedValue;
-  obj3.emojis = tmp14.searchResults;
-  obj3.emojiPickerIntention = pickerIntention;
-  obj3.channel = channel;
-  obj3.guildId = guildId;
-  obj3.searchQueryRef = tmp14.searchQueryRef;
-  obj3.insetBottom = sum1;
-  obj3.analyticsObject = analyticsObject;
-  obj3.messageId = messageId;
-  obj3.bypassPremiumEmojiEntitlement = bypassPremiumEmojiEntitlement;
-  const items9 = [ref2(tmp10Result, obj3)];
-  const obj4 = {
+  tmp2Result5 = onClose(pickerIntention[15]);
+  const tmp31 = ref2;
+  obj9.onLongPressEmoji = onClose(pickerIntention[35]).openEmojiActionSheet;
+  obj9.emojiPickerListRef = ref;
+  obj9.categories = emojiCategories;
+  obj9.categoryIndexActive = sharedValue;
+  obj9.emojis = tmp14.searchResults;
+  obj9.emojiPickerIntention = pickerIntention;
+  obj9.channel = channel;
+  obj9.guildId = guildId;
+  obj9.searchQueryRef = tmp14.searchQueryRef;
+  obj9.insetBottom = sum1;
+  obj9.analyticsObject = analyticsObject;
+  obj9.messageId = messageId;
+  obj9.bypassPremiumEmojiEntitlement = bypassPremiumEmojiEntitlement;
+  const items9 = [ref2(onPressEmoji(pickerIntention[34]), obj9)];
+  const obj10 = {
     bottomSheetRef: ref1,
     bottomSheetIndex: sharedValue1,
     style: memo,
@@ -323,21 +326,20 @@ export default function EmojiPickerActionSheet(onClose) {
     isSearching: null,
     onClearSearch: null,
   };
-  tmp2Result1 = onClose(pickerIntention[15]);
-  const tmp31 = ref2;
-  const tmp10Result1 = onPressEmoji(pickerIntention[36]);
+  const tmp10Result3 = onPressEmoji(pickerIntention[34]);
+  const tmp10Result4 = onPressEmoji(pickerIntention[36]);
   let str;
-  if (tmp2Result2.isIOS()) {
+  if (tmp2Result6.isIOS()) {
     if (pickerIntention === EmojiIntention.STATUS) {
       str = "full";
     }
   }
-  obj4.renderAhead = str;
-  obj4.isSearching = null != tmp14.searchResults;
-  obj4.onClearSearch = callback3;
-  items9[1] = tmp31(tmp10Result1, obj4);
-  obj1.children = items9;
-  items7[1] = memo1(onClose(pickerIntention[32]).BottomSheet, obj1);
-  obj.children = items7;
-  return memo1(onClose(pickerIntention[16]).AnalyticsLocationProvider, obj);
+  obj10.renderAhead = str;
+  obj10.isSearching = null != tmp14.searchResults;
+  obj10.onClearSearch = callback3;
+  items9[1] = tmp31(tmp10Result4, obj10);
+  obj7.children = items9;
+  items7[1] = memo1(onClose(pickerIntention[32]).BottomSheet, obj7);
+  obj5.children = items7;
+  return memo1(onClose(pickerIntention[16]).AnalyticsLocationProvider, obj5);
 }

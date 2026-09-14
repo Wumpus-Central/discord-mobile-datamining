@@ -5,10 +5,12 @@ import MobileGameCommunitiesStore from "MobileGameCommunitiesStore.tsx";
 import Backoff from "../../../../discord_common/js/packages/backoff/Backoff.tsx";
 import Dispatcher from "../../../Dispatcher.tsx";
 
+const require = globalThis.__r;
+
 const require = fn;
 const Endpoints = fn(1074).Endpoints;
-Backoff = new Backoff(DurationsDefault.Millis.SECOND, DurationsDefault.Millis.MINUTE, true);
-const subscription = Dispatcher.subscribe("LOGOUT", () => Backoff.succeed());
+const importDefaultResult2 = new Backoff(DurationsDefault.Millis.SECOND, DurationsDefault.Millis.MINUTE, true);
+const subscription = Dispatcher.subscribe("LOGOUT", () => importDefaultResult2.succeed());
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_community_upsell/native/MobileGameCommunitiesActionCreators.tsx");
 
@@ -27,9 +29,7 @@ export const fetchMobileGameCommunities = function fetchMobileGameCommunities(ga
   value = HTTP.get(request);
   return value.then((body) => {
     pending.succeed();
-    closure_2_1(dependencyMap[4]);
-    const obj = { type: "MOBILE_GAME_COMMUNITIES_FETCH_SUCCESS", guilds: body.body.guilds, gameIds };
-    obj.dispatch(obj);
+    closure_2_1(dependencyMap[4]).dispatch({ type: "MOBILE_GAME_COMMUNITIES_FETCH_SUCCESS", guilds: body.body.guilds, gameIds });
   }, () => {
     closure_1_1(dependencyMap[4]).dispatch({ type: "MOBILE_GAME_COMMUNITIES_FETCH_FAILURE" });
     if (!pending.pending) {
@@ -45,9 +45,7 @@ export const fetchMobileGameCommunities = function fetchMobileGameCommunities(ga
         let obj2 = closure_1(dependencyMap[6]);
         value.then((body) => {
           pending.succeed();
-          closure_2_1(dependencyMap[4]);
-          const obj = { type: "MOBILE_GAME_COMMUNITIES_FETCH_SUCCESS", guilds: body.body.guilds, gameIds };
-          obj.dispatch(obj);
+          closure_2_1(dependencyMap[4]).dispatch({ type: "MOBILE_GAME_COMMUNITIES_FETCH_SUCCESS", guilds: body.body.guilds, gameIds });
         }, () => {
           closure_1_1(dependencyMap[4]).dispatch({ type: "MOBILE_GAME_COMMUNITIES_FETCH_FAILURE" });
           if (!pending.pending) {
@@ -61,7 +59,7 @@ export const fetchMobileGameCommunities = function fetchMobileGameCommunities(ga
               let request = { url: constants.MOBILE_GAME_COMMUNITIES, query: closure_1(dependencyMap[6]).stringify({ game_ids, limit: 20, ignored_guild_ids: items }), oldFormErrors: true, rejectWithError: true };
               let value = HTTP.get(request);
               let obj2 = closure_1(dependencyMap[6]);
-              value.then(() => { ... }, () => { ... }).catch(/* F124193 */ function() { ... });
+              value.then(() => { ... }, () => { ... }).catch(/* F124196 */ function() { ... });
             });
           }
           let obj = closure_1_1(dependencyMap[4]);
@@ -74,28 +72,25 @@ export const fetchMobileGameCommunities = function fetchMobileGameCommunities(ga
   });
 };
 export const fetchMobileGameCommunitiesIfStale = function fetchMobileGameCommunitiesIfStale() {
-  if (!Backoff.pending) {
+  if (!importDefaultResult2.pending) {
     const _Date = Date;
-    let obj = MobileGameCommunitiesStore;
     const timestamp = Date.now();
     if (timestamp - MobileGameCommunitiesStore.getLastFetchedAt() >= 15000) {
       const _Array = Array;
-      const game_ids = Array.from(obj.getLastFetchedGameIds());
+      const game_ids = Array.from(MobileGameCommunitiesStore.getLastFetchedGameIds());
       const _Array2 = Array;
-      let items = Array.from(obj.getDismissedGuildIds());
+      let items = Array.from(MobileGameCommunitiesStore.getDismissedGuildIds());
       if (items === undefined) {
         items = [];
       }
-      const HTTP = game_ids(1272).HTTP;
+      const HTTP = game_ids(1270).HTTP;
       const request = { url: Endpoints.MOBILE_GAME_COMMUNITIES, query: null, oldFormErrors: true, rejectWithError: true };
-      obj = { game_ids, limit: 20, ignored_guild_ids: items };
-      request.query = _modDef1471.stringify(obj);
+      const obj2 = { game_ids, limit: 20, ignored_guild_ids: items };
+      request.query = _modDef1471.stringify(obj2);
       value = HTTP.get(request);
       return value.then((body) => {
         pending.succeed();
-        closure_2_1(dependencyMap[4]);
-        const obj = { type: "MOBILE_GAME_COMMUNITIES_FETCH_SUCCESS", guilds: body.body.guilds, gameIds };
-        obj.dispatch(obj);
+        closure_2_1(dependencyMap[4]).dispatch({ type: "MOBILE_GAME_COMMUNITIES_FETCH_SUCCESS", guilds: body.body.guilds, gameIds });
       }, () => {
         closure_1_1(dependencyMap[4]).dispatch({ type: "MOBILE_GAME_COMMUNITIES_FETCH_FAILURE" });
         if (!pending.pending) {
@@ -111,9 +106,7 @@ export const fetchMobileGameCommunitiesIfStale = function fetchMobileGameCommuni
             let obj2 = closure_1(dependencyMap[6]);
             value.then((body) => {
               pending.succeed();
-              closure_2_1(dependencyMap[4]);
-              const obj = { type: "MOBILE_GAME_COMMUNITIES_FETCH_SUCCESS", guilds: body.body.guilds, gameIds };
-              obj.dispatch(obj);
+              closure_2_1(dependencyMap[4]).dispatch({ type: "MOBILE_GAME_COMMUNITIES_FETCH_SUCCESS", guilds: body.body.guilds, gameIds });
             }, () => {
               closure_1_1(dependencyMap[4]).dispatch({ type: "MOBILE_GAME_COMMUNITIES_FETCH_FAILURE" });
               if (!pending.pending) {
@@ -127,7 +120,7 @@ export const fetchMobileGameCommunitiesIfStale = function fetchMobileGameCommuni
                   let request = { url: constants.MOBILE_GAME_COMMUNITIES, query: closure_1(dependencyMap[6]).stringify({ game_ids, limit: 20, ignored_guild_ids: items }), oldFormErrors: true, rejectWithError: true };
                   let value = HTTP.get(request);
                   let obj2 = closure_1(dependencyMap[6]);
-                  value.then(() => { ... }, () => { ... }).catch(/* F124193 */ function() { ... });
+                  value.then(() => { ... }, () => { ... }).catch(/* F124196 */ function() { ... });
                 });
               }
               let obj = closure_1_1(dependencyMap[4]);
@@ -142,6 +135,5 @@ export const fetchMobileGameCommunitiesIfStale = function fetchMobileGameCommuni
   }
 };
 export const dismissGuild = function dismissGuild(guildId) {
-  const obj = { type: "MOBILE_GAME_COMMUNITIES_DISMISS_GUILD", guildId };
-  obj.dispatch(obj);
+  Dispatcher.dispatch({ type: "MOBILE_GAME_COMMUNITIES_DISMISS_GUILD", guildId });
 };

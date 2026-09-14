@@ -48,11 +48,10 @@ export const ThemeContextProvider = function ThemeContextProvider(children) {
   items[20] = disableAdaptiveTheme;
   items[21] = reduceAdaptiveTheme;
   value = secondaryColor.useMemo(() => {
-    let obj = ThemeContext;
     if (theme == null) {
       theme = context.theme;
     }
-    obj = {
+    const obj2 = {
       theme,
       primaryColor: null,
       secondaryColor: null,
@@ -68,44 +67,44 @@ export const ThemeContextProvider = function ThemeContextProvider(children) {
     if (primaryColor == null) {
       primaryColor = context.primaryColor;
     }
-    obj.primaryColor = primaryColor;
+    obj2.primaryColor = primaryColor;
     if (secondaryColor == null) {
       secondaryColor = context.secondaryColor;
     }
-    obj.secondaryColor = secondaryColor;
+    obj2.secondaryColor = secondaryColor;
     if (gradient == null) {
       gradient = context.gradient;
     }
-    obj.gradient = gradient;
+    obj2.gradient = gradient;
     if (flags == null) {
       flags = context.flags;
     }
-    obj.flags = flags;
+    obj2.flags = flags;
     if (contrast == null) {
       contrast = context.contrast;
     }
-    obj.contrast = contrast;
+    obj2.contrast = contrast;
     if (saturation == null) {
       saturation = context.saturation;
     }
-    obj.saturation = saturation;
+    obj2.saturation = saturation;
     if (enabledExperiments == null) {
       enabledExperiments = context.enabledExperiments;
     }
-    obj.enabledExperiments = enabledExperiments;
+    obj2.enabledExperiments = enabledExperiments;
     if (density == null) {
       density = context.density;
     }
-    obj.density = density;
+    obj2.density = density;
     if (disableAdaptiveTheme == null) {
       disableAdaptiveTheme = context.disableAdaptiveTheme;
     }
-    obj.disableAdaptiveTheme = disableAdaptiveTheme;
+    obj2.disableAdaptiveTheme = disableAdaptiveTheme;
     if (reduceAdaptiveTheme == null) {
       reduceAdaptiveTheme = context.reduceAdaptiveTheme;
     }
-    obj.reduceAdaptiveTheme = reduceAdaptiveTheme;
-    return obj.createThemedContext(obj);
+    obj2.reduceAdaptiveTheme = reduceAdaptiveTheme;
+    return ThemeContext.createThemedContext(obj2);
   }, items);
   return gradient(theme(primaryColor[2]).ThemeContext.Provider, { value, children: children.children });
 };

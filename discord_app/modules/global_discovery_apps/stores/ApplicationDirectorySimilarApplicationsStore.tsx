@@ -33,47 +33,47 @@ prototype["getFetchState"] = function getFetchState(arg0) {
   }
 };
 ApplicationDirectorySimilarApplicationsStore.displayName = "ApplicationDirectorySimilarApplicationsStore";
-obj = {
-  APPLICATION_DIRECTORY_FETCH_SIMILAR_APPLICATIONS: function handleFetchSimilarApplications(applicationId) {
-    obj = {};
-    const combined =
-      "applicationId:" +
-      applicationId.applicationId +
-      " guildId:" +
-      applicationId.guildId +
-      " page:" +
-      applicationId.page;
-    const merged = Object.assign(obj);
-    obj[combined] = obj.FETCHING;
-  },
-  APPLICATION_DIRECTORY_FETCH_SIMILAR_APPLICATIONS_SUCCESS: function handleFetchSimilarApplicationsSuccess(page) {
-    page = page.page;
-    ({ similarApplications, loadId, totalPages } = page);
-    const combined = "applicationId:" + page.applicationId + " guildId:" + page.guildId + " page:" + page;
-    obj = { lastFetchTimeMs: Date.now(), applications: similarApplications, loadId, page, totalPages };
-    const result = closure_1.set(combined, obj);
-    obj = {};
-    const merged = Object.assign(obj);
-    obj[combined] = obj.FETCHED;
-  },
-  APPLICATION_DIRECTORY_FETCH_SIMILAR_APPLICATIONS_FAILURE: function handleFetchSimilarApplicationsFailure(
-    applicationId,
-  ) {
-    obj = {};
-    const combined =
-      "applicationId:" +
-      applicationId.applicationId +
-      " guildId:" +
-      applicationId.guildId +
-      " page:" +
-      applicationId.page;
-    const merged = Object.assign(obj);
-    obj[combined] = obj.ERROR;
-  },
-};
 const applicationDirectorySimilarApplicationsStore = new ApplicationDirectorySimilarApplicationsStore(
   DispatcherDefault,
-  obj,
+  {
+    APPLICATION_DIRECTORY_FETCH_SIMILAR_APPLICATIONS: function handleFetchSimilarApplications(applicationId) {
+      obj = {};
+      const combined =
+        "applicationId:" +
+        applicationId.applicationId +
+        " guildId:" +
+        applicationId.guildId +
+        " page:" +
+        applicationId.page;
+      const merged = Object.assign(obj);
+      obj[combined] = obj.FETCHING;
+    },
+    APPLICATION_DIRECTORY_FETCH_SIMILAR_APPLICATIONS_SUCCESS: function handleFetchSimilarApplicationsSuccess(page) {
+      page = page.page;
+      ({ similarApplications, loadId, totalPages } = page);
+      const combined = "applicationId:" + page.applicationId + " guildId:" + page.guildId + " page:" + page;
+      obj = { lastFetchTimeMs: Date.now(), applications: similarApplications, loadId, page, totalPages };
+      const result = closure_1.set(combined, obj);
+      const obj2 = {};
+      const merged = Object.assign(obj);
+      obj2[combined] = obj.FETCHED;
+      obj = obj2;
+    },
+    APPLICATION_DIRECTORY_FETCH_SIMILAR_APPLICATIONS_FAILURE: function handleFetchSimilarApplicationsFailure(
+      applicationId,
+    ) {
+      obj = {};
+      const combined =
+        "applicationId:" +
+        applicationId.applicationId +
+        " guildId:" +
+        applicationId.guildId +
+        " page:" +
+        applicationId.page;
+      const merged = Object.assign(obj);
+      obj[combined] = obj.ERROR;
+    },
+  },
 );
 const size = fn(2);
 let result = size.fileFinishedImporting(

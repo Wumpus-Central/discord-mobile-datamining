@@ -31,12 +31,12 @@ prototype["finish"] = function finish(channelId) {
         const seenChannelIds = ChannelLatestMessageLoadingStatsManager.seenChannelIds;
         seenChannelIds.add(channelId.channelId);
       }
-      const obj = {
+      const obj2 = {
         load_duration_ms: diff,
         were_messages_cached: channelId.areMessagesCached,
         is_first_load: !hasItem,
       };
-      obj.trackClickstream(AnalyticEvents.CHANNEL_LATEST_MESSAGES_LOADED_CLICKSTREAM, obj);
+      Clickstream.trackClickstream(AnalyticEvents.CHANNEL_LATEST_MESSAGES_LOADED_CLICKSTREAM, obj2);
       tmp.latestChannelMessagesLoad = undefined;
       const tmp12 = !hasItem;
     }

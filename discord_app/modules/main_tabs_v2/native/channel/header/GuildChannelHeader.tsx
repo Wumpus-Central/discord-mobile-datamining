@@ -66,7 +66,7 @@ function GuildChannelMemberCount(channel) {
     const count = ChannelMemberCountStore.requestCount(channel.guild_id, channel.id);
   }, items1);
   if (null == total) {
-    const tmpResult = tmp(13401);
+    const tmpResult = tmp(13402);
     return tmpResult.renderMemberCountText(online, total, flag, tmp(6721).ICON_SIZE[token]);
   }
   const obj2 = channel(504);
@@ -107,7 +107,7 @@ function ChannelLinkedLobbyCoachmark(guild) {
   _slicedToArray = tmp3;
   const items1 = [channel, guild, tmp[1], tmp3];
   const memo = noop.useMemo(() => {
-    let obj = {
+    const obj = {
       title: null,
       description: null,
       visible: null,
@@ -119,8 +119,8 @@ function ChannelLinkedLobbyCoachmark(guild) {
     const intl = util.intl;
     obj.title = intl.string(util.t.YIVr4B);
     const intl2 = util.intl;
-    obj = { helpdeskArticle: HelpdeskUtilsDefault.getArticleURL(constants.LINKED_LOBBIES) };
-    obj.description = intl2.format(util.t.w8VWRT, obj);
+    const obj2 = { helpdeskArticle: HelpdeskUtilsDefault.getArticleURL(constants.LINKED_LOBBIES) };
+    obj.description = intl2.format(util.t.w8VWRT, obj2);
     let linkedLobby;
     if (channel != null) {
       linkedLobby = channel.linkedLobby;
@@ -138,7 +138,7 @@ function ChannelLinkedLobbyCoachmark(guild) {
     return obj;
   }, items1);
   let obj = guild(7491);
-  const coachmark = guild(11261).useCoachmark(guild.iconRef, memo);
+  const coachmark = guild(11262).useCoachmark(guild.iconRef, memo);
   return null;
 }
 const View = fn(17).View;
@@ -157,18 +157,19 @@ export default noop.memo(function GuildChannelHeader(channelId) {
   const guildId = channelId.guildId;
   ({ pressable, isGuildMemberCountVisible, showCreateThread } = channelId);
   let stateFromStores;
-  let obj = stateFromStores;
   const ref = stateFromStores.useRef(null);
-  let obj1 = channelId(guildId[17]);
   const items = [ChannelStore];
-  stateFromStores = obj1.useStateFromStores(items, () => ChannelStore.getChannel(channelId));
-  let obj3 = channelId(guildId[17]);
+  stateFromStores = channelId(guildId[17]).useStateFromStores(items, () => ChannelStore.getChannel(channelId));
+  const obj = stateFromStores;
+  const obj2 = channelId(guildId[17]);
   const items1 = [GatewayConnectionStore];
-  const stateFromStores1 = obj3.useStateFromStores(items1, () => GatewayConnectionStore.isConnected());
+  const stateFromStores1 = channelId(guildId[17]).useStateFromStores(items1, () =>
+    GatewayConnectionStore.isConnected(),
+  );
   let parentChannelId = screenIndex(guildId[29])(channelId);
-  let obj4 = channelId(guildId[17]);
+  const obj4 = channelId(guildId[17]);
   const items2 = [ChannelStore];
-  const stateFromStores2 = obj4.useStateFromStores(items2, () => {
+  const stateFromStores2 = channelId(guildId[17]).useStateFromStores(items2, () => {
     if (null != stateFromStores) {
       if (!showCreateThread) {
         if (null != stateFromStores) {
@@ -193,29 +194,35 @@ export default noop.memo(function GuildChannelHeader(channelId) {
   if (pressable) {
     pressable = !showCreateThread;
   }
-  let tmp2Result = tmp2(tmp3[17]);
+  const obj5 = channelId(guildId[17]);
   const items3 = [GuildStore];
-  const stateFromStores3 = tmp2Result.useStateFromStores(items3, () => GuildStore.getGuild(guildId));
+  const stateFromStores3 = channelId(guildId[17]).useStateFromStores(items3, () => GuildStore.getGuild(guildId));
   let renderChannelIconResult = null;
   if (null != stateFromStores) {
     renderChannelIconResult = null;
     if (!showCreateThread) {
-      tmp2Result = tmp2(tmp3[18]);
-      renderChannelIconResult = tmp2Result.renderChannelIcon(stateFromStores, stateFromStores3);
+      renderChannelIconResult = tmp2(tmp3[18]).renderChannelIcon(stateFromStores, stateFromStores3);
+      const tmp2Result9 = tmp2(tmp3[18]);
     }
   }
   closure_129_0 = guildId;
+  const tmp10 = !isGuildMemberCountVisible;
+  const tmp2Result = channelId(guildId[17]);
+  const tmp9 = !pressable;
   const items4 = [GatewayConnectionStore];
-  obj = {
+  const tmp2Result10 = channelId(guildId[17]);
+  const tmp12 = computeVisibleChannelName({
+    channel: stateFromStores,
+    guildId,
+    showCreateThread,
+    isConnected: channelId(guildId[17]).useStateFromStores(items4, () => GatewayConnectionStore.isConnected()),
+  });
+  const obj3 = {
     channel: stateFromStores,
     guildId,
     showCreateThread,
     isConnected: channelId(guildId[17]).useStateFromStores(items4, () => GatewayConnectionStore.isConnected()),
   };
-  const tmp12 = computeVisibleChannelName(obj);
-  const tmp10 = !isGuildMemberCountVisible;
-  const tmp2Result1 = channelId(guildId[17]);
-  const tmp9 = !pressable;
   const shouldNSFWGateGuildResult = channelId(guildId[20]).shouldNSFWGateGuild(guildId);
   let tmp14 = !shouldNSFWGateGuildResult;
   if (!shouldNSFWGateGuildResult) {
@@ -231,11 +238,11 @@ export default noop.memo(function GuildChannelHeader(channelId) {
   }
   const intl = tmp2(tmp3[21]).intl;
   const t = tmp2(tmp3[21]).t;
-  const tmp2Result2 = channelId(guildId[20]);
+  const tmp2Result11 = channelId(guildId[20]);
   if (tmp14) {
     if (null != stateFromStores2) {
       let result = tmp2(tmp3[18]).renderParentChannelSubTitle(stateFromStores2);
-      const tmp2Result3 = tmp2(tmp3[18]);
+      const tmp2Result12 = tmp2(tmp3[18]);
     }
   }
   const formatToPlainStringResult = intl.formatToPlainString(tmp14 ? t["OkzL+Q"] : t.UbNmGc, { channelName: tmp12 });
@@ -262,7 +269,7 @@ export default noop.memo(function GuildChannelHeader(channelId) {
   if (tmp19) {
     tmp19 = !showCreateThread;
   }
-  const tmp2Result4 = channelId(guildId[17]);
+  const tmp2Result13 = channelId(guildId[17]);
   let id;
   if (stateFromStores != null) {
     id = stateFromStores.id;
@@ -281,18 +288,18 @@ export default noop.memo(function GuildChannelHeader(channelId) {
   } else {
     let tmp27 = tmp19;
     if (tmp19) {
-      obj = { channel: stateFromStores, withSeparator: null != result };
-      tmp27 = closure_19(GuildChannelMemberCount, obj);
+      const obj6 = { channel: stateFromStores, withSeparator: null != result };
+      tmp27 = closure_19(GuildChannelMemberCount, obj6);
     }
     const items7 = [tmp27];
-    obj1 = { children: null };
+    const obj7 = { children: null };
     items7[1] = null != stateFromStores2 && result;
-    obj1.children = items7;
-    tmp25Result = closure_21(closure_20, obj1);
+    obj7.children = items7;
+    tmp25Result = closure_21(closure_20, obj7);
     const tmp30 = null != stateFromStores2 && result;
   }
-  const tmp2Result5 = channelId(guildId[23]);
-  const tmp2Result6 = channelId(guildId[18]);
+  const tmp2Result14 = channelId(guildId[23]);
+  const tmp2Result15 = channelId(guildId[18]);
   if (!tmp24) {
     tmp24 = tmp19;
   }
@@ -311,13 +318,13 @@ export default noop.memo(function GuildChannelHeader(channelId) {
     }
     tmp37 = null;
     if (null != linkedLobby) {
-      const obj2 = { ref, children: null };
-      obj3 = { iconRef: ref, guild: stateFromStores3, channel: stateFromStores };
-      obj2.children = closure_19(ChannelLinkedLobbyCoachmark, obj3);
-      tmp37 = closure_19(parentChannelId, obj2);
+      const obj8 = { ref, children: null };
+      const obj9 = { iconRef: ref, guild: stateFromStores3, channel: stateFromStores };
+      obj8.children = closure_19(ChannelLinkedLobbyCoachmark, obj9);
+      tmp37 = closure_19(parentChannelId, obj8);
     }
   }
-  obj4 = { children: null };
+  const obj10 = { children: null };
   const items9 = [
     tmp37,
     channelId(guildId[18]).renderChannelTitle(tmp12, {
@@ -328,24 +335,24 @@ export default noop.memo(function GuildChannelHeader(channelId) {
       icon: renderChannelIconResult,
     }),
   ];
-  obj4.children = items9;
-  const tmp35Result = closure_21(closure_20, obj4);
+  obj10.children = items9;
+  const tmp35Result = closure_21(closure_20, obj10);
   if (null != stateFromStores) {
-    const obj5 = { channel: stateFromStores, guildId, showCreateThread, isConnected: stateFromStores1 };
+    const obj11 = { channel: stateFromStores, guildId, showCreateThread, isConnected: stateFromStores1 };
     const intl2 = tmp2(tmp3[21]).intl;
     const _HermesInternal = HermesInternal;
-    const combined = "" + computeVisibleChannelName(obj5) + ", " + intl2.string(tmp2(tmp3[21]).t.x87QCk);
-    const tmp11Result = computeVisibleChannelName(obj5);
+    const combined = "" + computeVisibleChannelName(obj11) + ", " + intl2.string(tmp2(tmp3[21]).t.x87QCk);
+    const tmp11Result = computeVisibleChannelName(obj11);
   }
   if (pressable) {
     let num3 = 24;
     if (tmp24) {
       num3 = 44;
     }
-    const obj6 = { children: null };
-    const tmp2Result7 = tmp2(tmp3[18]);
-    obj6.children = tmp2Result7.renderTitleWrapper(tmp35Result, callback, combined, num3);
-    return closure_19(closure_20, obj6);
+    const obj12 = { children: null };
+    const tmp2Result16 = tmp2(tmp3[18]);
+    obj12.children = tmp2Result16.renderTitleWrapper(tmp35Result, callback, combined, num3);
+    return closure_19(closure_20, obj12);
   } else {
     return tmp35Result;
   }

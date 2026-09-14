@@ -10,10 +10,9 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/app_launcher/native/base_components/AppLauncherBackButton.tsx");
 
 export default function AppLauncherBackButton(onPress) {
-  let obj = Link;
-  const navigation = obj.useNavigation();
+  const navigation = Link.useNavigation();
   const canGoBackResult = navigation.canGoBack();
-  obj = {
+  const obj2 = {
     size: "sm",
     variant: "secondary-overlay",
     icon: importDefault(canGoBackResult ? 5710 : 5762),
@@ -23,7 +22,7 @@ export default function AppLauncherBackButton(onPress) {
   };
   const intl = util.intl;
   const t = util.t;
-  obj.accessibilityLabel = intl.string(canGoBackResult ? t["13/7kX"] : t.cpT0Cq);
+  obj2.accessibilityLabel = intl.string(canGoBackResult ? t["13/7kX"] : t.cpT0Cq);
   return jsx(IconButton.IconButton, {
     size: "sm",
     variant: "secondary-overlay",

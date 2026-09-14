@@ -3,6 +3,8 @@ import AuthenticationStore from "../../../stores/AuthenticationStore.tsx";
 import UserProfileStore from "../UserProfileStore.tsx";
 import WidgetStore from "../WidgetStore.tsx";
 
+const require = globalThis.__r;
+
 const require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/hooks/useUserProfileWidgets.tsx");

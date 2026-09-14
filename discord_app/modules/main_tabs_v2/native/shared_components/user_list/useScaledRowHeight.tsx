@@ -15,11 +15,9 @@ export default function useScaledRowHeight() {
   return token + Math.max(fontScale * token1 - token1, 0);
 }
 export const useScaledRowHeightData = function useScaledRowHeightData() {
-  let obj = useFontScale;
-  const fontScale = obj.useFontScale();
+  const fontScale = useFontScale.useFontScale();
   const token = useToken.useToken(nativeDefault.modules.mobile.TABLE_ROW_HEIGHT);
   const token1 = useToken.useToken(nativeDefault.modules.mobile.TABLE_ROW_CONTENT_HEIGHT);
   const result = fontScale * token1;
-  obj = { rowHeight: token + Math.max(result - token1, 0), rowContentHeight: result };
-  return obj;
+  return { rowHeight: token + Math.max(result - token1, 0), rowContentHeight: result };
 };

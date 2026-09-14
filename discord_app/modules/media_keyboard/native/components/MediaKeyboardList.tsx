@@ -22,9 +22,13 @@ const NativePermissionStatus = fn(4846).NativePermissionStatus;
 const jsx = fn(21).jsx;
 const nativeEventEmitter = new get_ActivityIndicator.NativeEventEmitter(NativeModules.PhotoLibraryHelper);
 const createStyles = fn(4636);
-let obj = { listContainer: null };
-obj = { backgroundColor: nativeDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND, marginTop: 8, paddingTop: 8 };
-obj.listContainer = obj;
+let obj = {
+  listContainer: {
+    backgroundColor: nativeDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND,
+    marginTop: 8,
+    paddingTop: 8,
+  },
+};
 let closure_12 = createStyles.createStyles(obj);
 let closure_13 = {
   code: "function MediaKeyboardListTsx1(){const{animatedIndex}=this.__closure;return animatedIndex.get();}",
@@ -38,6 +42,7 @@ let __initData = {
 let closure_16 = {
   code: "function MediaKeyboardListTsx4(snapPoints,previous){const{cheapWorkletArrayShallowEqual,runOnJS,setBottomSheetState,windowHeight,computedStartHeight,maxDynamicContentSize}=this.__closure;var _snapPoints$,_snapPoints;if(cheapWorkletArrayShallowEqual(snapPoints,previous!==null&&previous!==void 0?previous:undefined))return;runOnJS(setBottomSheetState)({minimum:windowHeight-((_snapPoints$=snapPoints[0])!==null&&_snapPoints$!==void 0?_snapPoints$:computedStartHeight),maximum:windowHeight-((_snapPoints=snapPoints[snapPoints.length-1])!==null&&_snapPoints!==void 0?_snapPoints:maxDynamicContentSize)});}",
 };
+let obj3 = { backgroundColor: nativeDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND, marginTop: 8, paddingTop: 8 };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/media_keyboard/native/components/MediaKeyboardList.tsx");
 
@@ -68,7 +73,6 @@ export default noop.memo(function MediaKeyboardList(channel) {
   let callback1;
   let width;
   let onHeightChange;
-  let obj = onPressItem;
   const ref = onPressItem.useRef(true);
   let items = [ref];
   const callback = onPressItem.useCallback((nativeEvent) => {
@@ -77,10 +81,10 @@ export default noop.memo(function MediaKeyboardList(channel) {
   const tmp4 = onAttachPress(onPressItem.useState(null), 2);
   const photoPermissionStatus = tmp4[0];
   __initData = tmp4[1];
-  let obj1 = draftType(onPressCamera[11]);
-  const assets = obj1.useAssets();
-  let obj2 = channel(onPressCamera[12]);
-  const mediaKeyboardItemsPerRow = obj2.useMediaKeyboardItemsPerRow();
+  const assets = draftType(onPressCamera[11]).useAssets();
+  let obj2 = draftType(onPressCamera[11]);
+  const tmp3 = onAttachPress;
+  const mediaKeyboardItemsPerRow = channel(onPressCamera[12]).useMediaKeyboardItemsPerRow();
   const itemsPerRow = mediaKeyboardItemsPerRow.itemsPerRow;
   const itemsPageSizeRef = mediaKeyboardItemsPerRow.itemsPageSizeRef;
   const effect = onPressItem.useEffect(() => {
@@ -92,16 +96,14 @@ export default noop.memo(function MediaKeyboardList(channel) {
   }, []);
   let items1 = [photoPermissionStatus, itemsPageSizeRef, extensions];
   const effect1 = onPressItem.useEffect(() => {
-    draftType(onPressCamera[11]);
-    let obj = { batchSize: itemsPageSizeRef.current, extensions };
-    obj.refreshAssets(obj);
+    draftType(onPressCamera[11]).refreshAssets({ batchSize: itemsPageSizeRef.current, extensions });
     let addListenerResult;
     if (uploadLimit != null) {
       addListenerResult = uploadLimit.addListener("photoLibraryChanged", () => {
         if (ref.current) {
-          draftType(onPressCamera[11]);
-          const obj = { batchSize: ref2.current, extensions };
-          obj.refreshAssets(obj);
+          const obj2 = { batchSize: ref2.current, extensions };
+          draftType(onPressCamera[11]).refreshAssets(obj2);
+          const obj = draftType(onPressCamera[11]);
         }
       });
     }
@@ -112,6 +114,7 @@ export default noop.memo(function MediaKeyboardList(channel) {
       }
     };
   }, items1);
+  let obj3 = channel(onPressCamera[12]);
   closure_19 = channel(onPressCamera[13]).useAppEntryKey();
   const height = draftType(onPressCamera[15])({ ignoreKeyboard: true }).height;
   let result = height * includedUploadIds;
@@ -119,7 +122,6 @@ export default noop.memo(function MediaKeyboardList(channel) {
   const diff = height - channel(onPressCamera[16]).NAV_BAR_HEIGHT_MULTILINE - draftType(onPressCamera[14])().top;
   c22 = diff;
   const obj4 = channel(onPressCamera[13]);
-  const tmp3 = onAttachPress;
   const bottomSheetInternal = channel(onPressCamera[17]).useBottomSheetInternal();
   const animatedSnapPoints = bottomSheetInternal.animatedSnapPoints;
   const animatedIndex = bottomSheetInternal.animatedIndex;
@@ -137,38 +139,45 @@ export default noop.memo(function MediaKeyboardList(channel) {
   G.__workletHash = 7279123713809;
   G.__initData = __initData;
   const fn = function $(arg0, arg1) {
-    let obj = cheapWorkletShallowEqual;
     if (!obj.cheapWorkletArrayShallowEqual(arg0, tmp)) {
       first = arg0[0];
       const tmp2Result = ReanimatedRexport;
       if (first == null) {
         first = c21;
       }
-      obj = { minimum: height - first, maximum: null };
+      const obj2 = { minimum: height - first, maximum: null };
       let tmp8 = arg0[arg0.length - 1];
       if (tmp8 == null) {
         tmp8 = c22;
       }
-      obj.maximum = height - tmp8;
-      ReanimatedRexport.runOnJS(closure_24)(obj);
+      obj2.maximum = height - tmp8;
+      ReanimatedRexport.runOnJS(closure_24)(obj2);
       const runOnJSResult = ReanimatedRexport.runOnJS(closure_24);
     }
+    obj = cheapWorkletShallowEqual;
     tmp = arg1;
   };
-  obj = {
+  const obj6 = channel(onPressCamera[10]);
+  fn.__closure = {
     cheapWorkletArrayShallowEqual: channel(onPressCamera[18]).cheapWorkletArrayShallowEqual,
     runOnJS: channel(onPressCamera[10]).runOnJS,
-    setBottomSheetState: tmp18,
+    setBottomSheetState: tmp16[1],
     windowHeight: height,
     computedStartHeight: result,
     maxDynamicContentSize: diff,
   };
-  fn.__closure = obj;
   fn.__workletHash = 4619753074319;
   fn.__initData = assets;
-  const animatedReaction = channel(onPressCamera[10]).useAnimatedReaction(G, fn);
+  const animatedReaction = obj6.useAnimatedReaction(G, fn);
   closure_129_0 = animatedIndex;
-  const obj6 = channel(onPressCamera[10]);
+  const obj7 = {
+    cheapWorkletArrayShallowEqual: channel(onPressCamera[18]).cheapWorkletArrayShallowEqual,
+    runOnJS: channel(onPressCamera[10]).runOnJS,
+    setBottomSheetState: tmp16[1],
+    windowHeight: height,
+    computedStartHeight: result,
+    maxDynamicContentSize: diff,
+  };
   [tmp21, tmp22] = onAttachPress(onPressItem.useState(false), 2);
   closure_129_1 = tmp22;
   const tmp20 = onAttachPress(onPressItem.useState(false), 2);
@@ -191,15 +200,15 @@ export default noop.memo(function MediaKeyboardList(channel) {
       ReanimatedRexport.runOnJS(draftType)(true);
     }
   };
-  obj = { latch: sharedValue, runOnJS: channel(onPressCamera[10]).runOnJS, setIsExpanded: tmp22 };
-  fn3.__closure = obj;
+  const obj9 = channel(onPressCamera[10]);
+  fn3.__closure = { latch: sharedValue, runOnJS: channel(onPressCamera[10]).runOnJS, setIsExpanded: tmp22 };
   fn3.__workletHash = 7990574449734;
   fn3.__initData = photoPermissionStatus;
-  const animatedReaction1 = channel(onPressCamera[10]).useAnimatedReaction(fn2, fn3);
-  const obj9 = channel(onPressCamera[10]);
+  const animatedReaction1 = obj9.useAnimatedReaction(fn2, fn3);
+  const obj10 = { latch: sharedValue, runOnJS: channel(onPressCamera[10]).runOnJS, setIsExpanded: tmp22 };
   if (flag) {
-    let tmp9Result = tmp9(tmp7[19]);
-    flag = tmp9Result.isImageCaptureIntentSupported();
+    flag = tmp9(tmp7[19]).isImageCaptureIntentSupported();
+    const tmp9Result = tmp9(tmp7[19]);
   }
   let num;
   if (assets != null) {
@@ -225,11 +234,8 @@ export default noop.memo(function MediaKeyboardList(channel) {
     if (null == assets) {
       const items2 = [];
       const _Array = Array;
-      let arraySpreadResult = HermesBuiltin.arraySpread(items1, 0);
-      arraySpreadResult = HermesBuiltin.arraySpread(
-        Array(3 * itemsPerRow - items1.length).fill(null),
-        arraySpreadResult,
-      );
+      const arraySpreadResult = HermesBuiltin.arraySpread(items1, 0);
+      HermesBuiltin.arraySpread(Array(3 * itemsPerRow - items1.length).fill(null), arraySpreadResult);
       const ArrayResult = Array(3 * itemsPerRow - items1.length);
       return _modDef12.chunk(items2, itemsPerRow);
     } else {
@@ -267,8 +273,7 @@ export default noop.memo(function MediaKeyboardList(channel) {
     sum,
   ];
   const callback2 = obj.useCallback(() => {
-    const obj = { batchSize: itemsPageSizeRef.current, extensions };
-    const nextAssetPage = obj.getNextAssetPage(obj);
+    const nextAssetPage = DeviceMediaDefault.getNextAssetPage({ batchSize: itemsPageSizeRef.current, extensions });
   }, items4);
   const callback3 = obj.useCallback(
     (arg0, rowIndex) =>
@@ -299,20 +304,20 @@ export default noop.memo(function MediaKeyboardList(channel) {
               const _HermesInternal4 = HermesInternal;
               let combined = "" + acc + "-camera";
             } else {
-              let tmp6Result = channel(onPressCamera[21]);
               if (tmp6Result.isAttachFilesNode(node)) {
                 const _HermesInternal3 = HermesInternal;
                 combined = "" + acc + "-attach";
               } else {
-                tmp6Result = channel(onPressCamera[21]);
-                if (tmp6Result.isViewAllPhotosNode(node)) {
+                if (tmp6Result2.isViewAllPhotosNode(node)) {
                   const _HermesInternal2 = HermesInternal;
                   combined = "" + acc + "-view-all";
                 } else {
                   const _HermesInternal = HermesInternal;
                   combined = "" + acc + "-" + node.node.image.uri;
                 }
+                tmp6Result2 = channel(onPressCamera[21]);
               }
+              tmp6Result = channel(onPressCamera[21]);
             }
             obj3 = channel(onPressCamera[21]);
           }
@@ -335,7 +340,7 @@ export default noop.memo(function MediaKeyboardList(channel) {
   const items8 = [maximum];
   const memo2 = obj.useMemo(() => ({ height: maximum }), items8);
   const tmp3Result = tmp3(
-    obj.useState(() => 32 + 36 * DimensionsStore.getState().byAppEntry[closure_19].fontScale),
+    onPressItem.useState(() => 32 + 36 * DimensionsStore.getState().byAppEntry[closure_19].fontScale),
     2,
   );
   onHeightChange = tmp3Result[1];
@@ -344,10 +349,10 @@ export default noop.memo(function MediaKeyboardList(channel) {
     () => jsx(MediaKeyboardLimitedPickerNoticeDefault, { onPress: onManageLimited, onHeightChange }),
     items9,
   );
-  tmp9Result = tmp9(tmp7[24]);
-  const modalDismissGuardRefreshControl = tmp9Result.useModalDismissGuardRefreshControl();
   const tmp25 = disableWhenReachedLimit();
-  obj1 = {
+  const modalDismissGuardRefreshControl = channel(onPressCamera[24]).useModalDismissGuardRefreshControl();
+  const tmp9Result3 = channel(onPressCamera[24]);
+  const obj11 = {
     photoPermissionStatus,
     photosEmpty: null,
     showCameraButton: null,
@@ -359,20 +364,20 @@ export default noop.memo(function MediaKeyboardList(channel) {
   if (tmp36) {
     tmp36 = 0 === assets.edges.length;
   }
-  obj1.photosEmpty = tmp36;
-  obj1.showCameraButton = flag;
-  obj1.onPressCamera = function onPressCamera() {
+  obj11.photosEmpty = tmp36;
+  obj11.showCameraButton = flag;
+  obj11.onPressCamera = function onPressCamera() {
     return onPressCamera(onManageLimited.TAKE_A_PHOTO_BUTTON);
   };
-  obj1.onManageLimited = onManageLimited;
-  obj1.onPressPrivacySettings = draftType(onPressCamera[26]);
-  let mediaEmptyStateComponentOrNull = channel(onPressCamera[25]).getMediaEmptyStateComponentOrNull(obj1);
+  obj11.onManageLimited = onManageLimited;
+  obj11.onPressPrivacySettings = draftType(onPressCamera[26]);
+  let mediaEmptyStateComponentOrNull = channel(onPressCamera[25]).getMediaEmptyStateComponentOrNull(obj11);
   if (null == mediaEmptyStateComponentOrNull) {
     let tmp38;
     if (photoPermissionStatus === extensions.LIMITED) {
       tmp38 = callback5;
     }
-    obj2 = {
+    const obj12 = {
       renderHeader: tmp38,
       headerSize: null,
       style: null,
@@ -399,27 +404,27 @@ export default noop.memo(function MediaKeyboardList(channel) {
     if (photoPermissionStatus === extensions.LIMITED) {
       num3 = tmp3Result[0];
     }
-    obj2.headerSize = num3;
+    obj12.headerSize = num3;
     const items10 = [memo2, tmp25.listContainer];
-    obj2.style = items10;
-    obj2.renderItem = callback3;
+    obj12.style = items10;
+    obj12.renderItem = callback3;
     const items11 = [memo.length];
-    obj2.sections = items11;
-    obj2.itemSize = memo1;
-    obj2.refreshControl = modalDismissGuardRefreshControl;
-    obj2.onEndReached = callback2;
-    obj2.onScroll = callback;
+    obj12.sections = items11;
+    obj12.itemSize = memo1;
+    obj12.refreshControl = modalDismissGuardRefreshControl;
+    obj12.onEndReached = callback2;
+    obj12.onScroll = callback;
     const intl = tmp9(tmp7[28]).intl;
-    obj2.accessibilityLabel = intl.string(tmp9(tmp7[28]).t.XONG6A);
-    obj2.footerSize = tmp9(tmp7[22]).FOOTER_HEIGHT;
-    obj2.renderFooter = callback4;
-    obj2.chunkBase = maximum;
+    obj12.accessibilityLabel = intl.string(tmp9(tmp7[28]).t.XONG6A);
+    obj12.footerSize = tmp9(tmp7[22]).FOOTER_HEIGHT;
+    obj12.renderFooter = callback4;
+    obj12.chunkBase = maximum;
     let prop;
     if (!tmp21) {
       prop = tmp9(tmp7[27]).MINIMUM_BATCHES_TO_RENDER;
     }
-    obj2.batchesToRender = prop;
-    mediaEmptyStateComponentOrNull = flag2(tmp6(tmp7[27]), obj2);
+    obj12.batchesToRender = prop;
+    mediaEmptyStateComponentOrNull = flag2(tmp6(tmp7[27]), obj12);
     let tmp6Result = tmp6(tmp7[27]);
   }
   return mediaEmptyStateComponentOrNull;

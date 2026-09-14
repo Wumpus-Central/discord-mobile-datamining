@@ -29,31 +29,34 @@ class TableRowGroupTitle {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
-fn(4636);
-let createStyles = {
+const createStyles = fn(4636);
+let obj2 = {
   container: { flexShrink: 0 },
-  content: null,
-  title: null,
-  description: null,
+  content: {
+    borderRadius: nativeDefault.modules.mobile.TABLE_ROW_BORDER_RADIUS,
+    overflow: "hidden",
+    flexGrow: 1,
+    flexShrink: 0,
+    padding: 0,
+  },
+  title: { marginBottom: 8 },
+  description: { marginBottom: 8 },
   hasTrailingText: null,
   helperText: null,
 };
-createStyles = {
+let obj3 = {
   borderRadius: nativeDefault.modules.mobile.TABLE_ROW_BORDER_RADIUS,
   overflow: "hidden",
   flexGrow: 1,
   flexShrink: 0,
   padding: 0,
 };
-createStyles.content = createStyles;
-createStyles.title = { marginBottom: 8 };
-createStyles.description = { marginBottom: 8 };
-createStyles.hasTrailingText = {
+obj2.hasTrailingText = {
   borderBottomLeftRadius: nativeDefault.radii.none,
   borderBottomRightRadius: nativeDefault.radii.none,
 };
-createStyles.helperText = { marginTop: 8 };
-const React6 = createStyles.createStyles(createStyles);
+obj2.helperText = { marginTop: 8 };
+const React6 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("design/components/TableRow/native/TableRowGroup.native.tsx");
 
@@ -68,54 +71,56 @@ export const TableRowGroup = function TableRowGroup(accessibilityLabel) {
     str = "none";
   }
   const tmp = closure_8();
-  let obj = useToken;
   importDefault = false;
   const Children = noop.Children;
-  const token = obj.useToken(nativeDefault.modules.mobile.TABLE_ROW_GROUP_HELPER_TEXT_STYLE);
+  const token = useToken.useToken(nativeDefault.modules.mobile.TABLE_ROW_GROUP_HELPER_TEXT_STYLE);
   const mapped = Children.map(accessibilityLabel.children, (arg0) => {
     if (null == arg0) {
       return null;
     } else if (c1) {
-      let obj = { children: null };
-      obj = { adjustSpacingForIcon };
-      const items = [hasOwnProperty(TableRowDivider.TableRowDivider, obj), arg0];
+      const obj = { children: null };
+      const obj2 = { adjustSpacingForIcon };
+      const items = [hasOwnProperty(TableRowDivider.TableRowDivider, obj2), arg0];
       obj.children = items;
       const tmp2 = React5(timestampProducer, obj);
     } else {
       c1 = true;
     }
   });
-  obj = { style: tmp.container, children: null };
+  let obj2 = { style: tmp.container, children: null };
   let tmp6Result = null != title;
   if (tmp6Result) {
-    obj = { title };
-    tmp6Result = closure_5(TableRowGroupTitle, obj);
+    const obj3 = { title };
+    tmp6Result = closure_5(TableRowGroupTitle, obj3);
   }
   let items = [tmp6Result, , ,];
-  tmp6Result = null != description;
-  if (tmp6Result) {
-    const obj1 = { variant: "text-sm/normal", color: "text-subtle", style: tmp.description, children: description };
-    tmp6Result = closure_5(Text_Text.Text, obj1);
+  let tmp6Result3 = null != description;
+  if (tmp6Result3) {
+    const obj4 = { variant: "text-sm/normal", color: "text-subtle", style: tmp.description, children: description };
+    tmp6Result3 = closure_5(Text_Text.Text, obj4);
   }
-  items[1] = tmp6Result;
+  items[1] = tmp6Result3;
   const items1 = [tmp.content];
-  hasTrailingText = null;
+  let hasTrailingText1 = null;
   if (hasTrailingText) {
-    hasTrailingText = tmp.hasTrailingText;
+    hasTrailingText1 = tmp.hasTrailingText;
   }
-  items1[1] = hasTrailingText;
+  items1[1] = hasTrailingText1;
   items[2] = closure_5(View, {
     style: items1,
     accessibilityRole: str,
     accessibilityLabel: accessibilityLabel.accessibilityLabel,
     children: mapped,
   });
-  let tmp6Result1 = null != helperText;
-  if (tmp6Result1) {
-    const obj2 = { variant: token, color: "text-muted", style: tmp.helperText, children: helperText };
-    tmp6Result1 = closure_5(Text_Text.Text, obj2);
+  let tmp6Result4 = null != helperText;
+  if (tmp6Result4) {
+    const obj5 = { variant: token, color: "text-muted", style: tmp.helperText, children: helperText };
+    tmp6Result4 = closure_5(Text_Text.Text, obj5);
   }
-  items[3] = tmp6Result1;
-  obj.children = items;
-  return closure_5(TableRowGroupContext.TableRowGroupContext.Provider, { value: true, children: closure_7(View, obj) });
+  items[3] = tmp6Result4;
+  obj2.children = items;
+  return closure_5(TableRowGroupContext.TableRowGroupContext.Provider, {
+    value: true,
+    children: closure_7(View, obj2),
+  });
 };

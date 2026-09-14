@@ -21,15 +21,21 @@ export default noop.memo(function NitroUpsellButton(shiny) {
   if (str === undefined) {
     str = "lg";
   }
-  let obj = initialize;
   const items = [AccessibilityStore];
-  const stateFromStores = obj.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
-  obj = { text, size: str, loading, onPress, icon: null, variant: "experimental_premium-primary", shiny: null };
-  obj = { color: nativeDefault.colors.WHITE, size: "sm" };
-  obj.icon = jsx(NitroWheelIcon.NitroWheelIcon, { color: nativeDefault.colors.WHITE, size: "sm" });
+  const stateFromStores = initialize.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
+  const obj2 = { text, size: str, loading, onPress, icon: null, variant: "experimental_premium-primary", shiny: null };
+  obj2.icon = jsx(NitroWheelIcon.NitroWheelIcon, { color: nativeDefault.colors.WHITE, size: "sm" });
   if (flag) {
     flag = !stateFromStores;
   }
-  obj.shiny = flag;
-  return jsx(components_Button_Button.Button, { color: nativeDefault.colors.WHITE, size: "sm" });
+  obj2.shiny = flag;
+  return jsx(components_Button_Button.Button, {
+    text,
+    size: str,
+    loading,
+    onPress,
+    icon: null,
+    variant: "experimental_premium-primary",
+    shiny: null,
+  });
 });

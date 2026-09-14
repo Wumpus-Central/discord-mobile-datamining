@@ -18,7 +18,7 @@ export const GuildIconPile = function GuildIconPile(arg0) {
   ({ size, names } = arg0);
   const countResult = Children.count(children);
   const tmp4 = GuildIcon.ImageSizes[size];
-  let obj = {
+  const obj = {
     "aria-label": ListUtils.getListSummaryLabel(names, totalCount),
     shape: ClipView.CutoutShape.RoundedRect,
     size: tmp4,
@@ -34,8 +34,8 @@ export const GuildIconPile = function GuildIconPile(arg0) {
   const items = [children];
   let tmp6 = null != totalCount && countResult < totalCount;
   if (tmp6) {
-    obj = { size: tmp4, borderRadius: tmp4 / 3, value: totalCount - countResult };
-    tmp6 = React3(PileOverflow.PileOverflow, obj);
+    const obj3 = { size: tmp4, borderRadius: tmp4 / 3, value: totalCount - countResult };
+    tmp6 = React3(PileOverflow.PileOverflow, obj3);
   }
   items[1] = tmp6;
   obj.children = items;

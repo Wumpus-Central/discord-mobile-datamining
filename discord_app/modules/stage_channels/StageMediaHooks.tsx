@@ -4,6 +4,8 @@ import GuildStore from "../../stores/GuildStore.tsx";
 import VoiceStateStore from "../../stores/VoiceStateStore.tsx";
 import StageChannelParticipantStore from "StageChannelParticipantStore.tsx";
 
+const require = globalThis.__r;
+
 require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/stage_channels/StageMediaHooks.tsx");

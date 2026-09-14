@@ -11,31 +11,31 @@ function getDurationString(seconds) {
     let formatToPlainStringResult = intl6.formatToPlainString(time.minutes, { minutes: 1 });
   } else if (seconds < 3600) {
     const intl5 = util.intl;
-    let obj = { minutes: null };
+    const obj2 = { minutes: null };
     const _Math5 = Math;
-    obj.minutes = Math.floor(seconds / 60);
-    formatToPlainStringResult = intl5.formatToPlainString(time.minutes, obj);
+    obj2.minutes = Math.floor(seconds / 60);
+    formatToPlainStringResult = intl5.formatToPlainString(time.minutes, obj2);
   } else if (seconds < 86400) {
     const intl4 = util.intl;
-    obj = { hours: null };
+    const obj3 = { hours: null };
     const _Math4 = Math;
-    obj.hours = Math.floor(seconds / 3600);
-    formatToPlainStringResult = intl4.formatToPlainString(time.hours, obj);
+    obj3.hours = Math.floor(seconds / 3600);
+    formatToPlainStringResult = intl4.formatToPlainString(time.hours, obj3);
   } else if (seconds < c3) {
     const intl3 = util.intl;
-    const obj1 = { days: null };
+    const obj4 = { days: null };
     const _Math3 = Math;
-    obj1.days = Math.floor(seconds / 86400);
-    formatToPlainStringResult = intl3.formatToPlainString(time.days, obj1);
+    obj4.days = Math.floor(seconds / 86400);
+    formatToPlainStringResult = intl3.formatToPlainString(time.days, obj4);
   } else if (seconds < c4) {
     const intl2 = util.intl;
-    const obj2 = { months: null };
+    const obj5 = { months: null };
     const _Math2 = Math;
-    obj2.months = Math.floor(seconds / tmp19);
-    formatToPlainStringResult = intl2.formatToPlainString(time.months, obj2);
+    obj5.months = Math.floor(seconds / tmp19);
+    formatToPlainStringResult = intl2.formatToPlainString(time.months, obj5);
   } else {
     const intl = util.intl;
-    obj = { years: null };
+    const obj = { years: null };
     const _Math = Math;
     obj.years = Math.floor(seconds / tmp20);
     formatToPlainStringResult = intl.formatToPlainString(time.years, obj);

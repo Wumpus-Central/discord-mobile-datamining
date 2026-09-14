@@ -33,8 +33,8 @@ let closure_10 = async function _convertViaSysimg(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      obj = { value, done: true };
-      return obj;
+      obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -47,8 +47,8 @@ let closure_10 = async function _convertViaSysimg(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c10 = 3;
-          obj = { value, done: true };
-          return obj;
+          obj3 = { value, done: true };
+          return obj3;
         } else {
           closure_6 = tmp4;
           closure_5 = tmp7;
@@ -92,8 +92,8 @@ let closure_10 = async function _convertViaSysimg(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c10 = 3;
-          const obj1 = { value, done: true };
-          return obj1;
+          const obj4 = { value, done: true };
+          return obj4;
         } else if (closure_133_2(closure_133_0)) {
           const _performance = performance;
           closure_133_6 = performance.now();
@@ -106,14 +106,14 @@ let closure_10 = async function _convertViaSysimg(arg0) {
           if (null == closure_133_9) {
             closure_134_4.verbose("sysimg not available (not Electron)");
             c10 = 3;
-            const obj2 = { value: closure_133_8(closure_134_6.NATIVE_MODULE_UNAVAILABLE), done: true };
-            return obj2;
+            const obj5 = { value: closure_133_8(closure_134_6.NATIVE_MODULE_UNAVAILABLE), done: true };
+            return obj5;
           } else {
             c8 = 1;
             c9 = 3;
             c10 = 1;
-            const obj3 = { value: closure_133_3(closure_133_9), done: false };
-            return obj3;
+            const obj6 = { value: closure_133_3(closure_133_9), done: false };
+            return obj6;
           }
         } else {
           c10 = 3;
@@ -125,8 +125,8 @@ let closure_10 = async function _convertViaSysimg(arg0) {
         const _HermesInternal3 = HermesInternal;
         closure_134_4.warn("" + closure_133_1 + " conversion failed for " + closure_133_0.name + ":", closure_133_17);
         c10 = 3;
-        const obj4 = { value: closure_133_8(closure_134_6.CONVERSION_FAILED), done: true };
-        return obj4;
+        const obj7 = { value: closure_133_8(closure_134_6.CONVERSION_FAILED), done: true };
+        return obj7;
       } else if (3 === tmp10) {
         if (arg0 === 1) {
           c10 = 3;
@@ -134,8 +134,8 @@ let closure_10 = async function _convertViaSysimg(arg0) {
         } else if (arg0 === 2) {
           c8 = 0;
           c10 = 3;
-          const obj5 = { value, done: true };
-          return obj5;
+          const obj8 = { value, done: true };
+          return obj8;
         } else if (value) {
           if (null != closure_133_5) {
             if (closure_133_0.size > closure_133_5) {
@@ -143,21 +143,21 @@ let closure_10 = async function _convertViaSysimg(arg0) {
               closure_134_4.verbose("file too large: " + closure_133_0.size + " > " + closure_133_5);
               c8 = 0;
               c10 = 3;
-              const obj6 = { value: closure_133_8(closure_134_6.SIZE_LIMIT_EXCEEDED), done: true };
-              return obj6;
+              const obj9 = { value: closure_133_8(closure_134_6.SIZE_LIMIT_EXCEEDED), done: true };
+              return obj9;
             }
           }
           c9 = 4;
           c10 = 1;
-          const obj7 = { value: closure_133_0.arrayBuffer(), done: false };
-          return obj7;
+          const obj10 = { value: closure_133_0.arrayBuffer(), done: false };
+          return obj10;
         } else {
           const _HermesInternal = HermesInternal;
           closure_134_4.verbose("platform does not support " + closure_133_1 + " conversion");
           c8 = 0;
           c10 = 3;
-          const obj8 = { value: closure_133_8(closure_134_6.PLATFORM_UNSUPPORTED), done: true };
-          return obj8;
+          const obj11 = { value: closure_133_8(closure_134_6.PLATFORM_UNSUPPORTED), done: true };
+          return obj11;
         }
       } else if (4 === tmp10) {
         if (arg0 === 1) {
@@ -166,20 +166,20 @@ let closure_10 = async function _convertViaSysimg(arg0) {
         } else if (arg0 === 2) {
           c8 = 0;
           c10 = 3;
-          const obj9 = { value, done: true };
-          return obj9;
+          const obj12 = { value, done: true };
+          return obj12;
         } else {
           closure_133_10 = value;
           const _Math = Math;
           const _Math2 = Math;
           closure_133_11 = Math.min(100, Math.max(1, closure_133_4));
           const _JSON = JSON;
-          const obj10 = { format: "jpeg", quality: closure_133_11 };
-          closure_133_12 = JSON.stringify(obj10);
+          const obj13 = { format: "jpeg", quality: closure_133_11 };
+          closure_133_12 = JSON.stringify(obj13);
           c9 = 5;
           c10 = 1;
-          const obj11 = { value: closure_133_9.convertBytes(closure_133_10, closure_133_12), done: false };
-          return obj11;
+          const obj14 = { value: closure_133_9.convertBytes(closure_133_10, closure_133_12), done: false };
+          return obj14;
         }
       } else if (5 === tmp10) {
         if (arg0 === 1) {
@@ -188,8 +188,8 @@ let closure_10 = async function _convertViaSysimg(arg0) {
         } else if (arg0 === 2) {
           c8 = 0;
           c10 = 3;
-          const obj12 = { value, done: true };
-          return obj12;
+          const obj15 = { value, done: true };
+          return obj15;
         } else {
           closure_133_13 = value;
           const _Blob = Blob;
@@ -218,14 +218,14 @@ let closure_10 = async function _convertViaSysimg(arg0) {
           }
           c9 = 7;
           c10 = 1;
-          const obj13 = { value: backendName, done: false };
-          return obj13;
+          const obj16 = { value: backendName, done: false };
+          return obj16;
         }
       } else {
         if (6 === tmp10) {
           c8 = 1;
           closure_133_16 = null;
-          const obj14 = {
+          const obj17 = {
             success: true,
             convertedBlob: closure_133_14,
             sizeBefore: closure_133_0.size,
@@ -249,7 +249,7 @@ let closure_10 = async function _convertViaSysimg(arg0) {
         }
         c8 = 0;
         c10 = 3;
-        obj = { value, done: true };
+        const obj = { value, done: true };
         return obj;
       }
     } catch (tmp72) {
@@ -270,14 +270,14 @@ function maybeConvertHeicToJpeg(arg0, arg1, arg2) {
   if (arg1 === undefined) {
     num = 85;
   }
-  return convertViaSysimg(arg0, obj, num, arg2);
+  return convertViaSysimg(arg0, obj2, num, arg2);
 }
 function maybeConvertJxrToJpeg(arg0, arg1, arg2) {
   let num = arg1;
   if (arg1 === undefined) {
     num = 85;
   }
-  return convertViaSysimg(arg0, obj, num, arg2);
+  return convertViaSysimg(arg0, obj3, num, arg2);
 }
 let closure_13 = async function _convertFileToJpeg(arg0) {
   if (c8 === 2) {
@@ -287,8 +287,8 @@ let closure_13 = async function _convertFileToJpeg(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      obj = { value, done: true };
-      return obj;
+      obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -301,8 +301,8 @@ let closure_13 = async function _convertFileToJpeg(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c8 = 3;
-          obj = { value, done: true };
-          return obj;
+          obj3 = { value, done: true };
+          return obj3;
         } else {
           closure_6 = tmp2;
           closure_5 = tmp5;
@@ -322,14 +322,14 @@ let closure_13 = async function _convertFileToJpeg(arg0) {
         throw value;
       } else if (arg0 === 2) {
         c8 = 3;
-        const obj1 = { value, done: true };
-        return obj1;
+        const obj5 = { value, done: true };
+        return obj5;
       } else {
         closure_133_2 = value;
         if (null == closure_133_2) {
           c8 = 3;
-          const obj2 = { value: null, done: true };
-          return obj2;
+          const obj6 = { value: null, done: true };
+          return obj6;
         } else {
           if (!closure_133_2.success) {
             const reason = closure_133_2.reason;
@@ -337,13 +337,13 @@ let closure_13 = async function _convertFileToJpeg(arg0) {
             if (reason == null) {
               UNKNOWN_ERROR = closure_134_6.UNKNOWN_ERROR;
             }
-            obj = { convertedFile: null, analytics: null };
-            let obj3 = {
+            let obj = { convertedFile: null, analytics: null };
+            const obj7 = {
               convertedMimeType: null,
               conversionFailureReason: UNKNOWN_ERROR,
               compressTimeMs: closure_133_2.compressTimeMs,
             };
-            obj.analytics = obj3;
+            obj.analytics = obj7;
           }
           const _HermesInternal = HermesInternal;
           closure_134_4.log(
@@ -357,21 +357,21 @@ let closure_13 = async function _convertFileToJpeg(arg0) {
               closure_133_2.sizeAfter +
               " bytes",
           );
-          const obj4 = { convertedFile: null, analytics: null };
+          const obj8 = { convertedFile: null, analytics: null };
           const _File = File;
           const items = [closure_133_2.convertedBlob];
-          obj3 = closure_134_0(closure_134_2[3]);
-          const obj5 = { type: "image/jpeg", lastModified: closure_133_0.lastModified };
-          const file = new File(items, obj3.renameToJpegExtension(closure_133_0.name), obj5);
-          obj4.convertedFile = file;
-          const obj6 = {
+          const obj9 = { type: "image/jpeg", lastModified: closure_133_0.lastModified };
+          const file = new File(items, closure_134_0(closure_134_2[3]).renameToJpegExtension(closure_133_0.name), obj9);
+          obj8.convertedFile = file;
+          const obj10 = {
             convertedMimeType: "image/jpeg",
             compressTimeMs: closure_133_2.compressTimeMs,
             imageCompressionQuality: closure_133_2.imageCompressionQuality,
             imageEncoderType: closure_133_2.imageEncoderType,
           };
-          obj4.analytics = obj6;
-          obj = obj4;
+          obj8.analytics = obj10;
+          obj = obj8;
+          const obj4 = closure_134_0(closure_134_2[3]);
         }
       }
     } catch (tmp49) {
@@ -381,21 +381,21 @@ let closure_13 = async function _convertFileToJpeg(arg0) {
   }
 };
 let closure_4 = new LoggerDefault("ImageConversion");
-let obj = {
+const ImageConversionFailureReason = {
   NATIVE_MODULE_UNAVAILABLE: "native_module_unavailable",
   PLATFORM_UNSUPPORTED: "platform_unsupported",
   SIZE_LIMIT_EXCEEDED: "size_limit_exceeded",
   CONVERSION_FAILED: "conversion_failed",
   UNKNOWN_ERROR: "unknown_error",
 };
-obj = {
+let obj2 = {
   label: "heic",
   matches: fn(5252).isHeicFile,
   canConvert(canConvertHeic) {
     return canConvertHeic.canConvertHeic();
   },
 };
-obj = {
+let obj3 = {
   label: "jxr",
   matches: fn(5252).isJxrFile,
   canConvert(canConvertJxr) {
@@ -405,7 +405,7 @@ obj = {
 const size = fn(2);
 const result = size.fileFinishedImporting("lib/uploader/imageConversion.tsx");
 
-export const ImageConversionFailureReason = obj;
+export { ImageConversionFailureReason };
 export const renameToJpegExtension = fn(5252).renameToJpegExtension;
 export { maybeConvertHeicToJpeg };
 export { maybeConvertJxrToJpeg };

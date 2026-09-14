@@ -24,8 +24,8 @@ function updateNotifSettingValue(GAMING_DEFAULT, createNew) {
     const DeclarativeSettings = notification_settings.DeclarativeSettings;
     const cloneResult1 = DeclarativeSettings.clone(settings);
     cloneResult1.values[GAMING_DEFAULT] = cloneResult;
-    const obj = { type: "DECLARATIVE_NOTIFICATION_SETTINGS_UPDATE", declarativeSettings: cloneResult1 };
-    obj.dispatch(obj);
+    const obj2 = { type: "DECLARATIVE_NOTIFICATION_SETTINGS_UPDATE", declarativeSettings: cloneResult1 };
+    DispatcherDefault.dispatch(obj2);
   }
 }
 const size = fn(2);

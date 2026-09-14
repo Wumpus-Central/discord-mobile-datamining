@@ -1,6 +1,8 @@
 // discord_app/modules/activities/useActivityShelfItemsSorting.tsx
 import noop from "../../../_runtime/metro/00019__.js";
 
+const require = globalThis.__r;
+
 const require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/activities/useActivityShelfItemsSorting.tsx");
@@ -33,9 +35,9 @@ export default function useActivityShelfItemsSorting(arg0) {
       if (-1 !== findIndexResult) {
         items.splice(findIndexResult, 1);
         items = [];
-        let arraySpreadResult = HermesBuiltin.arraySpread(items.slice(0, closure_1), 0);
+        const arraySpreadResult = HermesBuiltin.arraySpread(items.slice(0, closure_1), 0);
         items[arraySpreadResult] = items[findIndexResult];
-        arraySpreadResult = HermesBuiltin.arraySpread(items.slice(closure_1), arraySpreadResult + 1);
+        HermesBuiltin.arraySpread(items.slice(closure_1), arraySpreadResult + 1);
         closure_1 = closure_1 + 1;
       }
     });
@@ -48,7 +50,7 @@ export default function useActivityShelfItemsSorting(arg0) {
       const embeddedActivityConfig = tmp.application.embeddedActivityConfig;
       let label_type;
       if (embeddedActivityConfig != null) {
-        const obj = items(1150);
+        const obj = items(1363);
         const tmp7 = embeddedActivityConfig.client_platform_config[closure_1(9540)(undefined, obj.getOS(obj))];
         if (tmp7 != null) {
           label_type = tmp7.label_type;
@@ -78,9 +80,9 @@ export default function useActivityShelfItemsSorting(arg0) {
       if (diff < tmp2) {
         items.splice(tmp2, 1);
         items = [];
-        let arraySpreadResult = HermesBuiltin.arraySpread(items.slice(0, diff), 0);
+        const arraySpreadResult = HermesBuiltin.arraySpread(items.slice(0, diff), 0);
         items[arraySpreadResult] = items[tmp2];
-        arraySpreadResult = HermesBuiltin.arraySpread(items.slice(diff), arraySpreadResult + 1);
+        HermesBuiltin.arraySpread(items.slice(diff), arraySpreadResult + 1);
       }
     });
     return items;

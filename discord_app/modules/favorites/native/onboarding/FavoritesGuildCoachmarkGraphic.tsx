@@ -9,19 +9,20 @@ import size from "../../../../../_runtime/metro/00002__.js";
 
 const View = _mod17.View;
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-let obj = { container: null, betaTag: null };
-obj = { alignItems: "center", justifyContent: "center", gap: nativeDefault.space.PX_12 };
-obj.container = obj;
-obj.betaTag = { marginLeft: 0 };
+let obj = {
+  container: { alignItems: "center", justifyContent: "center", gap: nativeDefault.space.PX_12 },
+  betaTag: { marginLeft: 0 },
+};
 let closure_5 = createStyles.createStyles(obj);
 const result = size.fileFinishedImporting("modules/favorites/native/onboarding/FavoritesGuildCoachmarkGraphic.tsx");
 
 export default function FavoritesGuildCoachmarkGraphic() {
   const tmp = closure_5();
-  let obj = { style: tmp.container, children: null };
-  const items = [React3(native2.FavoritesSpotIllustration, { width: 160, height: 90 })];
-  obj = { style: tmp.betaTag };
-  items[1] = React3(native.BetaTag, obj);
+  const obj = { style: tmp.container, children: null };
+  const items = [
+    React3(native2.FavoritesSpotIllustration, { width: 160, height: 90 }),
+    React3(native.BetaTag, { style: tmp.betaTag }),
+  ];
   obj.children = items;
   return React4(View, obj);
 }

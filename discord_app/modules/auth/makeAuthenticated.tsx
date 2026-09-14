@@ -35,10 +35,10 @@ export const makeAuthenticated = function makeAuthenticated(displayName, arg1) {
             tmp4 = null;
             if (null != closure_1) {
               tmp8 = jsx;
-              obj = { renderRedirect: null };
+              obj1 = { renderRedirect: null };
               tmp9 = closure_1;
-              obj.renderRedirect = jsx(closure_1(tmp[5]), {});
-              tmp10Result = jsx(tmp3, obj);
+              obj1.renderRedirect = jsx(closure_1(tmp[5]), {});
+              tmp10Result = jsx(tmp3, obj1);
             } else {
               tmp5 = jsx;
               tmp6 = closure_1;
@@ -54,9 +54,9 @@ export const makeAuthenticated = function makeAuthenticated(displayName, arg1) {
       if (closure_2.passProps) {
         tmp12 = displayName;
       }
-      obj1 = {};
+      obj5 = {};
       merged = Object.assign(tmp12);
-      tmp10Result = tmp10(tmp11, obj1);
+      tmp10Result = tmp10(tmp11, obj5);
       return;
     }
   }

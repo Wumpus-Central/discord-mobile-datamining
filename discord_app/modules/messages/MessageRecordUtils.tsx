@@ -9,18 +9,18 @@ import transformMessagPollDefault from "../polls/transformMessagPoll.tsx";
 import EmbedUtils from "../../utils/EmbedUtils.tsx";
 import StickersUtils from "../stickers/StickersUtils.tsx";
 import InteractionRecord from "../../records/InteractionRecord.tsx";
-import MessageRecord from "../../records/MessageRecord.tsx";
+import MessageRecord_mod from "../../records/MessageRecord.tsx";
 import UserRecord from "../../records/UserRecord.tsx";
 import AuthenticationStore from "../../stores/AuthenticationStore.tsx";
 import RelationshipStore from "../../stores/RelationshipStore.tsx";
 import UserStore from "../../stores/UserStore.tsx";
 
+const require = globalThis.__r;
 const isMessageMentionedDefault = isMessageMentioned;
 
 require = fn;
 function createMinimalMessageRecord(timestamp) {
   const obj = {};
-  let tmp = closure_5;
   const merged = Object.assign(timestamp);
   obj.timestamp = new Date(timestamp.timestamp);
   let date1 = null;
@@ -57,16 +57,15 @@ function createMinimalMessageRecord(timestamp) {
     items1 = findCodedLinksDefault(timestamp.content);
   }
   obj.codedLinks = items1;
-  tmp = new tmp(obj);
-  return tmp;
+  const obj3 = require("InteractionComponentUtils");
+  return new closure_5(obj);
 }
-function createMessageRecord(message) {
-  let obj = message;
-  if (message === undefined) {
+function createMessageRecord(message, arg1) {
+  let obj = arg1;
+  if (arg1 === undefined) {
     obj = {};
   }
   ({ reactions, interactionData } = obj);
-  let obj1 = createMinimalMessageRecord(message);
   const mentions = message.mentions;
   let mapped;
   if (mentions != null) {
@@ -84,7 +83,7 @@ function createMessageRecord(message) {
     mention_channels = [];
   }
   if (null == message.author) {
-    let user = UserRecord;
+    let user = importDefaultResult1;
   } else if (null != message.webhook_id) {
     user = new UserRecord(message.author);
   } else {
@@ -93,9 +92,8 @@ function createMessageRecord(message) {
       user = new UserRecord(message.author);
     }
   }
-  let obj2 = useMessageAuthor;
-  obj = { channel_id: message.channel_id, author: user };
-  const messageAuthor = obj2.getMessageAuthor(obj);
+  let obj2 = createMinimalMessageRecord(message);
+  const messageAuthor = useMessageAuthor.getMessageAuthor({ channel_id: message.channel_id, author: user });
   if (message != null) {
     const gift_info = message.gift_info;
   }
@@ -134,32 +132,31 @@ function createMessageRecord(message) {
     tmp20 = content1;
     obj6 = SnowflakeUtilsDefault;
   }
-  obj = {};
-  let tmp23 = MessageRecord;
+  const obj9 = {};
   const merged = Object.assign(message);
   const merged1 = Object.assign(messageAuthor);
-  const merged2 = Object.assign(obj1.toJS());
-  obj.author = user;
-  obj.webhookId = message.webhook_id;
+  const merged2 = Object.assign(obj2.toJS());
+  obj9.author = user;
+  obj9.webhookId = message.webhook_id;
   let isBlockedForMessageResult = RelationshipStore.isBlockedForMessage(message);
   if (!isBlockedForMessageResult) {
     isBlockedForMessageResult = null != tmp15 && RelationshipStore.isBlocked(tmp15);
     const tmp28 = null != tmp15 && RelationshipStore.isBlocked(tmp15);
   }
-  obj.blocked = isBlockedForMessageResult;
+  obj9.blocked = isBlockedForMessageResult;
   let isIgnoredForMessageResult = RelationshipStore.isIgnoredForMessage(message);
   if (!isIgnoredForMessageResult) {
     isIgnoredForMessageResult = null != tmp15 && RelationshipStore.isIgnored(tmp15);
     const tmp30 = null != tmp15 && RelationshipStore.isIgnored(tmp15);
   }
-  obj.ignored = isIgnoredForMessageResult;
-  obj.mentionEveryone = message.mention_everyone;
-  obj.mentions = mapped;
-  obj.mentionRoles = mention_roles;
-  obj.mentionChannels = mention_channels;
-  obj.messageReference = message.message_reference;
-  let tmp9Result = isMessageMentioned;
-  obj1 = {
+  obj9.ignored = isIgnoredForMessageResult;
+  obj9.mentionEveryone = message.mention_everyone;
+  obj9.mentions = mapped;
+  obj9.mentionRoles = mention_roles;
+  obj9.mentionChannels = mention_channels;
+  obj9.messageReference = message.message_reference;
+  const obj4 = { channel_id: message.channel_id, author: user };
+  const obj10 = {
     userId: AuthenticationStore.getId(),
     channelId: message.channel_id,
     mentionEveryone: null,
@@ -170,12 +167,13 @@ function createMessageRecord(message) {
   if (flag == null) {
     flag = false;
   }
-  obj1.mentionEveryone = flag;
-  obj1.mentionUsers = mapped;
-  obj1.mentionRoles = mention_roles;
-  obj.mentioned = tmp9Result.isMentioned(obj1);
-  tmp9Result = GiftCodeUtils;
-  const isGiftCodeEmbedResult = tmp9Result.isGiftCodeEmbed(message);
+  obj10.mentionEveryone = flag;
+  obj10.mentionUsers = mapped;
+  obj10.mentionRoles = mention_roles;
+  obj9.mentioned = isMessageMentioned.isMentioned(obj10);
+  const tmp9Result = isMessageMentioned;
+  const tmp9Result3 = GiftCodeUtils;
+  const isGiftCodeEmbedResult = GiftCodeUtils.isGiftCodeEmbed(message);
   const findGiftCodes = GiftCodeUtils.findGiftCodes;
   if (isGiftCodeEmbedResult) {
     let url;
@@ -186,10 +184,10 @@ function createMessageRecord(message) {
   } else {
     findGiftCodesResult = findGiftCodes(message.content);
   }
-  obj.giftCodes = findGiftCodesResult;
-  obj.content = str;
-  obj.referralTrialOfferId = tmp17;
-  obj.premiumGroupInviteId = tmp20;
+  obj9.giftCodes = findGiftCodesResult;
+  obj9.content = str;
+  obj9.referralTrialOfferId = tmp17;
+  obj9.premiumGroupInviteId = tmp20;
   const call = message.call;
   let tmp36 = null;
   if (null != call) {
@@ -203,10 +201,10 @@ function createMessageRecord(message) {
     if (null != tmp39Result) {
       durationResult = _modDef4228.duration(tmp39Result.diff(tmp35));
     }
-    obj2 = { participants: call.participants, endedTimestamp: tmp39Result, duration: durationResult };
-    tmp36 = obj2;
+    const obj11 = { participants: call.participants, endedTimestamp: tmp39Result, duration: durationResult };
+    tmp36 = obj11;
   }
-  obj.call = tmp36;
+  obj9.call = tmp36;
   if (null == message.message_snapshots) {
     let items = [];
   } else {
@@ -219,25 +217,25 @@ function createMessageRecord(message) {
       });
     });
   }
-  obj.messageSnapshots = items;
+  obj9.messageSnapshots = items;
   if (reactions == null) {
     reactions = message.reactions;
   }
   const poll = message.poll;
   if (null == reactions) {
-    let results;
+    let results1;
     if (poll != null) {
-      results = poll.results;
+      results1 = poll.results;
     }
-    if (null == results) {
+    if (null == results1) {
       let items1 = [];
     }
-    obj.reactions = items1;
-    obj.interaction = fromServer;
+    obj9.reactions = items1;
+    obj9.interaction = fromServer;
     if (interactionData == null) {
       interactionData = message.interaction_data;
     }
-    obj.interactionData = interactionData;
+    obj9.interactionData = interactionData;
     ({
       interaction_metadata: obj7.interactionMetadata,
       role_subscription_data: obj7.roleSubscriptionData,
@@ -247,25 +245,25 @@ function createMessageRecord(message) {
     if (null != message.poll) {
       tmp50 = transformMessagPollDefault(message.poll);
     }
-    obj.poll = tmp50;
-    obj.sharedClientTheme = message.shared_client_theme;
+    obj9.poll = tmp50;
+    obj9.sharedClientTheme = message.shared_client_theme;
     let tmp52;
     if (null != gift_info) {
       tmp52 = gift_info;
     }
-    obj.giftInfo = tmp52;
-    obj.giftingPrompt = message.gifting_prompt;
-    obj.boostingPrompt = message.boosting_prompt;
-    tmp23 = new tmp23(obj);
-    return tmp23;
+    obj9.giftInfo = tmp52;
+    obj9.giftingPrompt = message.gifting_prompt;
+    obj9.boostingPrompt = message.boosting_prompt;
+    const tmp232 = new MessageRecord(obj9);
+    return tmp232;
   }
   let mapped1;
   if (poll != null) {
-    results = poll.results;
+    const results = poll.results;
     if (results != null) {
       const answer_counts = results.answer_counts;
       mapped1 = answer_counts.map((vote) => {
-        let obj = {
+        const obj = {
           count_details: { vote: vote.count },
           me_vote: vote.me_voted,
           emoji: null,
@@ -274,8 +272,8 @@ function createMessageRecord(message) {
           count: null,
           burst_count: 0,
         };
-        obj = { id: vote.id.toString(), name: "", animated: false };
-        obj.emoji = obj;
+        const obj2 = { id: vote.id.toString(), name: "", animated: false };
+        obj.emoji = obj2;
         obj.count = vote.count;
         return obj;
       });
@@ -312,22 +310,24 @@ function createMessageRecord(message) {
     }
     return obj;
   });
-  const tmp9Result1 = GiftCodeUtils;
+  const tmp9Result4 = GiftCodeUtils;
 }
 let MessageRecord = fn(4286);
 ({ MessageSnapshotRecord: closure_4, MinimalMessageRecord: hasOwnProperty } = MessageRecord);
+let MessageRecord = MessageRecord_mod;
 const Constants = fn(1074);
 ({ MessageFlags: closure_11, MessageTypes: closure_12, MessageTypesSets: map1 } = Constants);
-UserRecord = new UserRecord({ id: "???", username: "???" });
+const importDefaultResult1 = new UserRecord({ id: "???", username: "???" });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/messages/MessageRecordUtils.tsx");
 
 export { createMessageRecord };
 export const updateServerMessage = function updateServerMessage(message, message2) {
   if (null != message2.edited_timestamp) {
-    let obj = {};
+    const obj3 = {};
     const merged = Object.assign(message2);
     ({ reactions: obj2.reactions, interaction_data: obj2.interaction_data } = message);
+    let obj = obj3;
   } else {
     obj = {};
     const merged1 = Object.assign(message);
@@ -337,9 +337,8 @@ export const updateServerMessage = function updateServerMessage(message, message
 };
 export const updateMessageRecord = function updateMessageRecord(message, message2) {
   if (null != message2.edited_timestamp) {
-    let obj = { reactions: null, interactionData: null };
     ({ reactions: obj21.reactions, interactionData: obj21.interactionData } = message);
-    return createMessageRecord(message2, obj);
+    return createMessageRecord(message2, { reactions: null, interactionData: null });
   } else {
     let result = message;
     if (null != message2.call) {
@@ -354,11 +353,10 @@ export const updateMessageRecord = function updateMessageRecord(message, message
         }
         let durationResult = null;
         if (null != tmp) {
-          obj = _modDef4228;
-          durationResult = obj.duration(tmp.diff(tmp46));
+          durationResult = _modDef4228.duration(tmp.diff(tmp46));
         }
-        obj = { participants: call.participants, endedTimestamp: tmp, duration: durationResult };
-        tmp13 = obj;
+        const obj3 = { participants: call.participants, endedTimestamp: tmp, duration: durationResult };
+        tmp13 = obj3;
       }
       result = message.set("call", tmp13);
     }
@@ -436,8 +434,8 @@ export const updateMessageRecord = function updateMessageRecord(message, message
           }
           let result14 = result13;
           if (flag) {
-            const obj1 = { message: result13, userId: AuthenticationStore.getId() };
-            result14 = result13.set("mentioned", isMessageMentionedDefault(obj1));
+            const obj4 = { message: result13, userId: AuthenticationStore.getId() };
+            result14 = result13.set("mentioned", isMessageMentionedDefault(obj4));
           }
           return result14;
         } else {
@@ -452,8 +450,8 @@ export const updateMessageRecord = function updateMessageRecord(message, message
               reactions = [];
             }
             const items1 = [];
-            let arraySpreadResult = HermesBuiltin.arraySpread(reactions, 0);
-            arraySpreadResult = HermesBuiltin.arraySpread([], arraySpreadResult);
+            const arraySpreadResult = HermesBuiltin.arraySpread(reactions, 0);
+            HermesBuiltin.arraySpread([], arraySpreadResult);
             items = items1.map((item) => {
               const obj = {};
               const merged = Object.assign(item);

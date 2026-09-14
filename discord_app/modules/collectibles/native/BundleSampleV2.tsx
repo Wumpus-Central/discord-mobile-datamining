@@ -34,37 +34,37 @@ function BundleStaticPreviewContent(mutedBackground) {
         combined = "" + bgStatic + str2 + "width=" + rounded + "&height=" + rounded1;
       }
     }
-    let obj = {
+    const obj = {
       source: null,
       style: null,
       resizeMode: "cover",
       accessibilityElementsHidden: true,
       importantForAccessibility: "no-hide-descendants",
     };
-    obj = { uri: combined };
-    obj.source = obj;
+    const obj2 = { uri: combined };
+    obj.source = obj2;
     obj.style = closure_9.bgImage;
     tmp = timestampProducer(FastImageDefault, obj);
   }
-  obj = { style: closure_9.container, children: null };
-  let tmp21Result = !disableBackground;
+  const obj3 = { style: closure_9.container, children: null };
+  let tmp21Result2 = !disableBackground;
   if (!disableBackground) {
-    tmp21Result = null != tmp;
+    tmp21Result2 = null != tmp;
   }
-  if (tmp21Result) {
-    const obj1 = { style: closure_9.bgBleedClip, pointerEvents: "none", children: null };
-    tmp21Result = tmp;
+  if (tmp21Result2) {
+    const obj4 = { style: closure_9.bgBleedClip, pointerEvents: "none", children: null };
+    let tmp21Result = tmp;
     if (mutedBackground.mutedBackground) {
-      const obj2 = { style: closure_9.bgMutedWrap, pointerEvents: "none", children: tmp };
-      tmp21Result = timestampProducer(React4, obj2);
+      const obj5 = { style: closure_9.bgMutedWrap, pointerEvents: "none", children: tmp };
+      tmp21Result = timestampProducer(React4, obj5);
     }
-    obj1.children = tmp21Result;
-    tmp21Result = timestampProducer(React4, obj1);
+    obj4.children = tmp21Result;
+    tmp21Result2 = timestampProducer(React4, obj4);
   }
-  const items = [tmp21Result];
+  const items = [tmp21Result2];
   let tmp24Result = null != fgStatic;
   if (tmp24Result) {
-    const obj3 = { style: closure_9.fgClip, pointerEvents: "none", children: null };
+    const obj6 = { style: closure_9.fgClip, pointerEvents: "none", children: null };
     let combined1 = fgStatic;
     if (null != targetSize) {
       combined1 = fgStatic;
@@ -83,22 +83,22 @@ function BundleStaticPreviewContent(mutedBackground) {
         combined1 = "" + fgStatic + str7 + "width=" + rounded2 + "&height=" + rounded3;
       }
     }
-    const obj4 = {
+    const obj7 = {
       source: null,
       style: null,
       resizeMode: "cover",
       accessibilityElementsHidden: true,
       importantForAccessibility: "no-hide-descendants",
     };
-    const obj5 = { uri: combined1 };
-    obj4.source = obj5;
-    obj4.style = closure_9.fgImage;
-    obj3.children = timestampProducer(FastImageDefault, obj4);
-    tmp24Result = timestampProducer(React4, obj3);
+    const obj8 = { uri: combined1 };
+    obj7.source = obj8;
+    obj7.style = closure_9.fgImage;
+    obj6.children = timestampProducer(FastImageDefault, obj7);
+    tmp24Result = timestampProducer(React4, obj6);
   }
   items[1] = tmp24Result;
-  obj.children = items;
-  return React5(React4, obj);
+  obj3.children = items;
+  return React5(React4, obj3);
 }
 function BundleSampleV2Composed(arg0) {
   ({ deco, pfx, nameplate, size } = arg0);
@@ -109,47 +109,46 @@ function BundleSampleV2Composed(arg0) {
   let nameplateData;
   if (null != nameplate) {
     _modDef38(nameplate.type === CollectiblesItemType.CollectiblesItemType.NAMEPLATE, "Item must be Nameplate");
-    let obj = utils;
-    nameplateData = obj.getNameplateData(nameplate);
+    nameplateData = utils.getNameplateData(nameplate);
   }
-  obj = { style: tmp.bundle, children: null };
+  const obj2 = { style: tmp.bundle, children: null };
   let tmp12 = null != pfx;
   if (tmp12) {
-    obj = { style: tmp.pfx, children: null };
-    const obj1 = { item: pfx };
-    obj.children = timestampProducer(ProfileEffectSampleV2Default, obj1);
-    tmp12 = timestampProducer(React4, obj);
+    const obj3 = { style: tmp.pfx, children: null };
+    const obj4 = { item: pfx };
+    obj3.children = timestampProducer(ProfileEffectSampleV2Default, obj4);
+    tmp12 = timestampProducer(React4, obj3);
   }
   const items = [tmp12, ,];
   if (null == deco) {
     items[1] = tmp16;
     if (null == nameplateData) {
       items[2] = null;
-      obj.children = items;
-      return React5(React4, obj);
+      obj2.children = items;
+      return React5(React4, obj2);
     } else {
-      const obj2 = { style: tmp.nameplate, children: null };
+      const obj5 = { style: tmp.nameplate, children: null };
       let AvatarSizes = dependencyMap;
-      let obj3 = { width: tmp8.nameplatePreviewWidth, avatarSize: null, nameplate: null };
+      let obj6 = { width: tmp8.nameplatePreviewWidth, avatarSize: null, nameplate: null };
       if ("large" === size) {
         AvatarSizes = native.AvatarSizes;
         let XSMALL_20 = AvatarSizes.NORMAL;
       } else {
         XSMALL_20 = native.AvatarSizes.XSMALL_20;
       }
-      obj3.avatarSize = XSMALL_20;
-      obj3.nameplate = nameplateData;
-      obj3 = timestampProducer(NameplateDummyUserPreview.NameplateDummyUserPreview, obj3);
-      obj2.children = obj3;
-      timestampProducer(React4, obj2);
+      obj6.avatarSize = XSMALL_20;
+      obj6.nameplate = nameplateData;
+      obj6 = timestampProducer(NameplateDummyUserPreview.NameplateDummyUserPreview, obj6);
+      obj5.children = obj6;
+      timestampProducer(React4, obj5);
     }
   } else {
-    const obj4 = { style: null, children: null };
+    const obj7 = { style: null, children: null };
     const items1 = [null != nameplateData ? tmp.avatarWithNameplate : tmp.avatar];
-    obj4.style = items1;
-    const obj5 = { item: deco, size: tmp9, threeTierBundle: null != nameplateData };
-    obj4.children = timestampProducer(AvatarDecorationSampleV2Default, obj5);
-    timestampProducer(React4, obj4);
+    obj7.style = items1;
+    const obj8 = { item: deco, size: tmp9, threeTierBundle: null != nameplateData };
+    obj7.children = timestampProducer(AvatarDecorationSampleV2Default, obj8);
+    timestampProducer(React4, obj7);
   }
   tmp9 =
     null != nameplateData
@@ -162,33 +161,33 @@ const BUNDLE_PREVIEW_CONFIG = fn(8925).BUNDLE_PREVIEW_CONFIG;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 let obj = { container: null, bgBleedClip: null, bgMutedWrap: null, bgImage: null, fgClip: null, fgImage: null };
-obj = {};
-const merged = Object.assign(StyleSheet.absoluteFillObject);
-obj.overflow = "hidden";
-obj.container = obj;
-obj = {};
-const merged1 = Object.assign(StyleSheet.absoluteFillObject);
-obj.overflow = "hidden";
-obj.justifyContent = "center";
-obj.alignItems = "center";
-obj.bgBleedClip = obj;
-let obj1 = {};
-const merged2 = Object.assign(StyleSheet.absoluteFillObject);
-obj1.opacity = 0.8;
-obj.bgMutedWrap = obj1;
-obj.bgImage = { width: "100%", height: "100%" };
 let obj2 = {};
-const merged3 = Object.assign(StyleSheet.absoluteFillObject);
+const merged = Object.assign(StyleSheet.absoluteFillObject);
 obj2.overflow = "hidden";
-obj2.justifyContent = "center";
-obj2.alignItems = "center";
-obj.fgClip = obj2;
+obj.container = obj2;
+let obj3 = {};
+const merged1 = Object.assign(StyleSheet.absoluteFillObject);
+obj3.overflow = "hidden";
+obj3.justifyContent = "center";
+obj3.alignItems = "center";
+obj.bgBleedClip = obj3;
+let obj4 = {};
+const merged2 = Object.assign(StyleSheet.absoluteFillObject);
+obj4.opacity = 0.8;
+obj.bgMutedWrap = obj4;
+obj.bgImage = { width: "100%", height: "100%" };
+let obj5 = {};
+const merged3 = Object.assign(StyleSheet.absoluteFillObject);
+obj5.overflow = "hidden";
+obj5.justifyContent = "center";
+obj5.alignItems = "center";
+obj.fgClip = obj5;
 const merged4 = Object.assign(StyleSheet.absoluteFillObject);
 obj.fgImage = {};
 const styles = StyleSheet.create(obj);
 const createStyles = fn(4636);
 let closure_10 = createStyles.createStyles((arg0) => {
-  let obj = { bundle: null, pfx: null, avatar: null, avatarWithNameplate: null, nameplate: null };
+  const obj = { bundle: null, pfx: null, avatar: null, avatarWithNameplate: null, nameplate: null };
   const size = { width: tmp.bundleWidth, height: tmp.bundleHeight, borderRadius: nativeDefault.radii.xs };
   obj.bundle = size;
   const size1 = {
@@ -234,9 +233,9 @@ let closure_10 = createStyles.createStyles((arg0) => {
   const items2 = [{ rotate: "8deg" }];
   rect1.transform = items2;
   obj.avatarWithNameplate = rect1;
-  obj = {
+  obj.nameplate = {
     position: "absolute",
-    bottom: tmp.nameplateBottom,
+    bottom: BUNDLE_PREVIEW_CONFIG[arg0].nameplateBottom,
     marginHorizontal: 10,
     width: "90%",
     backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER,
@@ -247,7 +246,6 @@ let closure_10 = createStyles.createStyles((arg0) => {
     shadowOpacity: 0.5,
     shadowRadius: 4,
   };
-  obj.nameplate = obj;
   return obj;
 });
 let size = fn(2);
@@ -272,15 +270,15 @@ export default function BundleSampleV2(size) {
     fgStatic = previewAssets.fgStatic;
   }
   if (null != fgStatic) {
-    let obj = {
+    const obj2 = {
       previewAssets,
       disableBackground: disableStaticBackground,
       mutedBackground: flag,
       targetSize: size.targetSize,
     };
-    let tmp4 = timestampProducer(BundleStaticPreviewContent, obj);
+    let tmp4 = timestampProducer(BundleStaticPreviewContent, obj2);
   } else {
-    obj = { deco, pfx, nameplate, size: str };
+    const obj = { deco, pfx, nameplate, size: str };
     tmp4 = timestampProducer(BundleSampleV2Composed, obj);
   }
   return tmp4;

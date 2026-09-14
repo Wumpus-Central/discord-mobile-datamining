@@ -15,9 +15,8 @@ let closure_12 = async function _computeNativeDisplayPair(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      value = { value: null, done: true };
-      value.value = value;
-      return value;
+      const obj3 = { value, done: true };
+      return obj3;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -30,9 +29,8 @@ let closure_12 = async function _computeNativeDisplayPair(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c4 = 3;
-          value = { value: null, done: true };
-          value.value = value;
-          return value;
+          const obj4 = { value, done: true };
+          return obj4;
         } else {
           let mLSPairwiseFingerprint = tmp4;
           c1 = 0;
@@ -59,8 +57,8 @@ let closure_12 = async function _computeNativeDisplayPair(arg0) {
               });
               c3 = 1;
               c4 = 1;
-              let obj1 = { value: promise, done: false };
-              return obj1;
+              const obj5 = { value: promise, done: false };
+              return obj5;
             }
           }
           c4 = 3;
@@ -71,17 +69,17 @@ let closure_12 = async function _computeNativeDisplayPair(arg0) {
         throw value;
       } else if (arg0 === 2) {
         c4 = 3;
-        const obj2 = { value, done: true };
-        return obj2;
+        const obj6 = { value, done: true };
+        return obj6;
       } else {
         closure_129_3 = value;
-        value = { fingerprint: null, fingerprintUserKey: null };
-        obj1 = closure_130_1(closure_130_2[8]);
-        value.fingerprint = obj1.fromByteArray(closure_129_3);
-        value.fingerprintUserKey = closure_129_1;
+        value = {
+          fingerprint: closure_130_1(closure_130_2[8]).fromByteArray(closure_129_3),
+          fingerprintUserKey: closure_129_1,
+        };
         c4 = 3;
-        const obj3 = { value, done: true };
-        return obj3;
+        const obj7 = { value, done: true };
+        return obj7;
       }
     } catch (tmp16) {
       c4 = tmp;
@@ -139,8 +137,8 @@ export const useSecureFramesPairwiseFingerprint = function useSecureFramesPairwi
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
-          obj = { value, done: true };
-          return obj;
+          const obj2 = { value, done: true };
+          return obj2;
         } else {
           return { value: "HermesInternal", done: null };
         }
@@ -153,12 +151,12 @@ export const useSecureFramesPairwiseFingerprint = function useSecureFramesPairwi
               throw value;
             } else if (arg0 === 2) {
               v3 = 3;
-              obj = { value, done: true };
-              return obj;
+              const obj3 = { value, done: true };
+              return obj3;
             } else if (stateFromStores1.supports(constants.MLS_PAIRWISE_FINGERPRINTS)) {
               c1 = 2;
               v3 = 1;
-              const obj1 = {
+              const obj5 = {
                 value: (function computeNativeDisplayPair() {
                   const self = this;
                   const apply = closure_1_12.apply;
@@ -171,13 +169,12 @@ export const useSecureFramesPairwiseFingerprint = function useSecureFramesPairwi
                 })(userId),
                 done: false,
               };
-              return obj1;
+              return obj5;
             } else {
-              let obj3 = v3(stateFromStores[11]);
               c1 = 1;
               v3 = 1;
-              const obj2 = { value: obj3.computeBoundPairwiseFingerprint(userId), done: false };
-              return obj2;
+              const obj6 = { value: v3(stateFromStores[11]).computeBoundPairwiseFingerprint(userId), done: false };
+              return obj6;
             }
           } else {
             if (1 === tmp4) {
@@ -186,8 +183,8 @@ export const useSecureFramesPairwiseFingerprint = function useSecureFramesPairwi
                 throw value;
               } else if (arg0 === 2) {
                 v3 = 3;
-                obj3 = { value, done: true };
-                return obj3;
+                const obj7 = { value, done: true };
+                return obj7;
               }
             } else if (arg0 === 1) {
               v3 = 3;
@@ -198,8 +195,8 @@ export const useSecureFramesPairwiseFingerprint = function useSecureFramesPairwi
               return obj;
             }
             v3 = 3;
-            const obj4 = { value, done: true };
-            return obj4;
+            const obj8 = { value, done: true };
+            return obj8;
           }
         } catch (tmp9) {
           v3 = tmp;

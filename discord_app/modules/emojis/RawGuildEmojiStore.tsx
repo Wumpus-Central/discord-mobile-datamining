@@ -4,13 +4,13 @@ import _slicedToArray from "../../../_runtime/metro/00032__.js";
 
 require = fn;
 function fromServer(guildId, arg1) {
-  let obj = {};
+  const obj = {};
   const iter = arg1[Symbol.iterator]();
   const nextResult = iter.next();
   while (iter !== undefined) {
-    obj = {};
-    obj[TypeTag] = "RawGuildEmoji";
-    obj.guildId = guildId;
+    let obj3 = {};
+    obj3[TypeTag] = "RawGuildEmoji";
+    obj3.guildId = guildId;
     ({
       id: obj2.id,
       animated: obj2.animated,
@@ -21,8 +21,8 @@ function fromServer(guildId, arg1) {
       managed: obj2.managed,
       version: obj2.version,
     } = nextResult);
-    obj.type = EmojiTypes.EmojiTypes.GUILD;
-    obj[nextResult.id] = obj;
+    obj3.type = EmojiTypes.EmojiTypes.GUILD;
+    obj[nextResult.id] = obj3;
     continue;
   }
   return obj;

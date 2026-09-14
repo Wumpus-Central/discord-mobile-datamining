@@ -1,7 +1,7 @@
 // discord_app/lib/superagentPatch.tsx
 import LogAggregatorAll from "../modules/debug/LogAggregator.tsx";
 import SentryUtilsDefault from "../utils/SentryUtils.native.tsx";
-import _createForOfIteratorHelperDefault from "../../_runtime/01273__createForOfIteratorHelper.js";
+import _createForOfIteratorHelperDefault from "../../_runtime/01271__createForOfIteratorHelper.js";
 import getTimeZoneDefault from "getTimeZone.native.tsx";
 import trackHttpRequestDefault from "../modules/telemetry_ring/trackHttpRequest.tsx";
 import asyncGeneratorStep from "../../_runtime/00005_asyncGeneratorStep.js";
@@ -23,24 +23,24 @@ let closure_6 = [
   "https://cdn.discordapp.com/bad-domains/hashes.json",
 ];
 _createForOfIteratorHelperDefault.parse[""] = JSON.parse;
-const idGenerator = new fn(17392).IdGenerator();
+const idGenerator = new fn(17394).IdGenerator();
 const re8 = /\/api(\/v\d+)?\/science/;
-fn(1433);
-let ApexExperiment = {
+const ApexExperiment = fn(1433);
+let obj2 = {
   name: "2026-07-reject-with-error-kill-switch",
   kind: "user",
   defaultConfig: { migrationKilled: false },
   variations: null,
 };
-ApexExperiment = { 1: null };
-ApexExperiment[1] = { migrationKilled: true };
-ApexExperiment.variations = ApexExperiment;
-const config = ApexExperiment.createApexExperiment(ApexExperiment);
+let obj3 = { 1: null };
+obj3[1] = { migrationKilled: true };
+obj2.variations = obj3;
+const config = ApexExperiment.createApexExperiment(obj2);
 let closure_11 = null;
 const subscription = Dispatcher.subscribe("LOGOUT", () => {
   closure_11 = null;
 });
-let HTTPUtils = fn(1272);
+let HTTPUtils = fn(1270);
 let result = HTTPUtils.setRejectWithMigratedError(function isRejectWithMigratedErrorEnabled() {
   let tmp = closure_11;
   if (null == closure_11) {
@@ -55,16 +55,15 @@ let result = HTTPUtils.setRejectWithMigratedError(function isRejectWithMigratedE
   }
   return tmp;
 });
-HTTPUtils = fn(1272);
+HTTPUtils = fn(1270);
 HTTPUtils.setRequestPatch({
   prepareRequest(promise) {
     const _default = promise(502).default;
-    const _default2 = promise(1347).default;
+    const _default2 = promise(1345).default;
     const _default3 = promise(1371).default;
     importDefault = performance.now();
     if ("/" === promise.url[0]) {
-      let tmpResult = tmp(1272);
-      promise.url = tmpResult.getAPIBaseURL() + promise.url;
+      promise.url = tmp(1270).getAPIBaseURL() + promise.url;
       let tmp3 = "Authorization" in promise.header;
       if (!tmp3) {
         tmp3 = "authorization" in promise.header;
@@ -72,8 +71,8 @@ HTTPUtils.setRequestPatch({
       if (!tmp3) {
         const result = promise.set("Authorization", _default.getToken());
       }
-      tmpResult = tmp(17393);
-      const result1 = tmpResult.updateDynamicSuperProperties();
+      const tmpResult = tmp(1270);
+      const result1 = tmp(17395).updateDynamicSuperProperties();
       const superPropertiesBase64 = _default4.getSuperPropertiesBase64();
       if (null != superPropertiesBase64) {
         const result2 = promise.set("X-Super-Properties", superPropertiesBase64);
@@ -94,7 +93,7 @@ HTTPUtils.setRequestPatch({
       if (tmp13) {
         const result4 = promise.set("X-Installation-ID", installationForTracking);
       }
-      if (promise(1150).isPlatformEmbedded) {
+      if (promise(1363).isPlatformEmbedded) {
         let items = [];
         const _default5 = tmp(1115).default;
         if (null != _default5) {
@@ -113,7 +112,7 @@ HTTPUtils.setRequestPatch({
                 arr = arr.push(item);
               } else {
                 const _HermesInternal = HermesInternal;
-                arr = arr.push("" + item + ";q=0." + closure_0);
+                arr.push("" + item + ";q=0." + closure_0);
               }
               closure_0 = Math.max(closure_0 - 1, 1);
               return arr;
@@ -159,27 +158,28 @@ HTTPUtils.setRequestPatch({
           const uRL = new URL(promise.url);
           if (!isAnalyticsEndpoint(uRL.pathname)) {
             (function getDatadogAPMUrl(generateResult) {
-              let str = new URLSearchParams();
+              const str = new URLSearchParams();
               str.append("query", '@http.x_client_trace_id:"' + generateResult + '"');
               str.append("showAllSpans", "true");
               const str2 = closure_1(dependencyMap[5]).toURLSafe(
                 "traces?" + str.toString(),
                 "https://datadog.discord.tools/apm/",
               );
-              str = null;
+              let str1 = null;
               if (null != str2) {
-                str = str2.toString();
+                str1 = str2.toString();
               }
-              return str;
+              return str1;
             })(generateResult);
           }
         } catch (err) {}
       }
+      const tmpResult2 = tmp(17395);
     }
     importAll = (function shouldTrackHttpRequest(url) {
       return !isAnalyticsEndpoint(url);
     })(promise.url);
-    _default4 = promise(1242).default;
+    _default4 = promise(1240).default;
     LogAggregatorAll.report("Network", "Sending " + promise.method + " to " + promise.url);
     promise.on("response", (status) => {
       let text = null;
@@ -216,7 +216,6 @@ HTTPUtils.setRequestPatch({
       }
     });
     promise.on("error", (status, text) => {
-      let obj = LogAggregatorAll;
       ({ method, url } = promise);
       status = undefined;
       if (status != null) {
@@ -226,7 +225,10 @@ HTTPUtils.setRequestPatch({
       if (text != null) {
         text = text.text;
       }
-      obj.report("Network", "Failed " + method + " to " + url + " with status " + status + " and body: " + text);
+      LogAggregatorAll.report(
+        "Network",
+        "Failed " + method + " to " + url + " with status " + status + " and body: " + text,
+      );
       if (null != status) {
         if ("parse" in status) {
           if (status.parse) {
@@ -242,13 +244,13 @@ HTTPUtils.setRequestPatch({
               }
               str = substr;
             }
-            obj = { category: "superagent", message: "Failed to parse HTTP response.", data: null };
+            const obj3 = { category: "superagent", message: "Failed to parse HTTP response.", data: null };
             const request = { method: null, url: null, responseText: null, status: null };
             ({ method: obj4.method, url: obj4.url } = promise);
             request.responseText = str;
             request.status = status.status;
-            obj.data = request;
-            SentryUtilsDefault.addBreadcrumb(obj);
+            obj3.data = request;
+            SentryUtilsDefault.addBreadcrumb(obj3);
           }
         }
       }
@@ -278,7 +280,7 @@ HTTPUtils.setRequestPatch({
         captcha_key = body.captcha_key;
       }
       if (captcha_key) {
-        const items = [statusCode(1896)(17398, dependencyMap.paths), statusCode(1896)(11410, dependencyMap.paths)];
+        const items = [statusCode(1896)(17400, dependencyMap.paths), statusCode(1896)(11411, dependencyMap.paths)];
         const allPromises = Promise.all(items);
         const nextPromise = Promise.all(items).then((result) => {
           const iter = result[Symbol.iterator]();
@@ -382,14 +384,14 @@ HTTPUtils.setRequestPatch({
           mfa = body3.mfa;
         }
         if (mfa) {
-          const promise4 = statusCode(1896)(15753, dependencyMap.paths);
-          statusCode(1896)(15753, dependencyMap.paths)
+          const promise4 = statusCode(1896)(15755, dependencyMap.paths);
+          statusCode(1896)(15755, dependencyMap.paths)
             .then((openMFAModal) => {
               openMFAModal.openMFAModal(statusCode.body.mfa, closure_1, closure_2);
             })
             .catch(arg2);
           flag = true;
-          const nextPromise2 = statusCode(1896)(15753, dependencyMap.paths).then((openMFAModal) => {
+          const nextPromise2 = statusCode(1896)(15755, dependencyMap.paths).then((openMFAModal) => {
             openMFAModal.openMFAModal(statusCode.body.mfa, closure_1, closure_2);
           });
         }
@@ -413,7 +415,7 @@ HTTPUtils.setRequestPatch({
         code2 = body5.code;
       }
       if (tmp7Result.isLimitedAccessErrorCode(statusCode.statusCode, code2)) {
-        tmp7(1896)(13918, dependencyMap.paths).then((result) => {
+        tmp7(1896)(13919, dependencyMap.paths).then((result) => {
           const body = statusCode.body;
           let guild_id;
           if (body != null) {
@@ -422,7 +424,7 @@ HTTPUtils.setRequestPatch({
           result.default(guild_id);
         });
         flag = false;
-        const promise2 = tmp7(1896)(13918, dependencyMap.paths);
+        const promise2 = tmp7(1896)(13919, dependencyMap.paths);
       } else {
         flag = 403 === statusCode.statusCode;
         if (flag) {
@@ -434,19 +436,19 @@ HTTPUtils.setRequestPatch({
           flag = code3 === AbortCodes.RESTRICTED_HOURS_ACTIVE;
         }
         if (flag) {
-          tmp7(1896)(17405, dependencyMap.paths).then((openRestrictedHoursModal) => {
+          tmp7(1896)(17407, dependencyMap.paths).then((openRestrictedHoursModal) => {
             const result = openRestrictedHoursModal.openRestrictedHoursModal();
           });
           flag = false;
-          const promise = tmp7(1896)(17405, dependencyMap.paths);
+          const promise = tmp7(1896)(17407, dependencyMap.paths);
         }
       }
-      tmp7Result = tmp7(17404);
+      tmp7Result = tmp7(17406);
     }
     obj = statusCode(9174);
   },
 });
-HTTPUtils = fn(1272);
+HTTPUtils = fn(1270);
 let closure_0 = asyncGeneratorStep(async (arg0) => {
   if (c4 === 2) {
     c4 = 3;
@@ -455,8 +457,8 @@ let closure_0 = asyncGeneratorStep(async (arg0) => {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -469,8 +471,8 @@ let closure_0 = asyncGeneratorStep(async (arg0) => {
           throw value;
         } else if (arg0 === 2) {
           c4 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           closure_129_0 = closure_0;
           const _HermesInternal2 = HermesInternal;
@@ -481,8 +483,8 @@ let closure_0 = asyncGeneratorStep(async (arg0) => {
           } else {
             dependencyMap = 1;
             c4 = 1;
-            const obj1 = { value: tmp2(1461).awaitOnline(), done: false };
-            return obj1;
+            const obj4 = { value: tmp2(1461).awaitOnline(), done: false };
+            return obj4;
           }
           obj8 = tmp2(1461);
         }
@@ -490,13 +492,13 @@ let closure_0 = asyncGeneratorStep(async (arg0) => {
         c4 = 3;
         throw value;
       } else if (arg0 !== 2) {
-        obj = tmp5(7);
         const _HermesInternal = HermesInternal;
-        obj.report("Network", "Network detected online, retrying " + closure_129_0);
+        tmp5(7).report("Network", "Network detected online, retrying " + closure_129_0);
+        const obj = tmp5(7);
       }
       c4 = 3;
-      const obj2 = { value, done: true };
-      return obj2;
+      const obj5 = { value, done: true };
+      return obj5;
     } catch (tmp14) {
       c4 = tmp;
       throw tmp14;

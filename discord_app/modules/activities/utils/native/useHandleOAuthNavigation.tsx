@@ -11,15 +11,15 @@ const result = size.fileFinishedImporting("modules/activities/utils/native/useHa
 export default function useHandleOAuthNavigation() {
   const effect = noop.useEffect(() => {
     function showOAuth2Modal(arg0) {
-      let obj = closure_1_1(paths[3]);
-      obj.popWithKey(closure_1_5);
-      obj = {};
+      closure_1_1(paths[3]).popWithKey(closure_1_5);
+      const obj = closure_1_1(paths[3]);
+      const obj3 = {};
       const obj2 = closure_1_1(paths[3]);
       const merged = Object.assign(arg0);
-      obj.dismissOAuthModal = function dismissOAuthModal() {
+      obj3.dismissOAuthModal = function dismissOAuthModal() {
         closure_1_1(paths[3]).popWithKey(closure_1_5);
       };
-      obj2.pushLazy(showOAuth2Modal(paths[5])(paths[4], paths.paths), obj, closure_1_5);
+      obj2.pushLazy(showOAuth2Modal(paths[5])(paths[4], paths.paths), obj3, closure_1_5);
     }
     let ComponentDispatch = showOAuth2Modal(1109).ComponentDispatch;
     const subscription = ComponentDispatch.subscribe(SHOW_OAUTH2_MODAL.SHOW_OAUTH2_MODAL, showOAuth2Modal);

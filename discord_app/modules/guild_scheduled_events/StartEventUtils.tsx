@@ -22,8 +22,8 @@ let closure_11 = async function _createStageChannelForEvent(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -36,8 +36,8 @@ let closure_11 = async function _createStageChannelForEvent(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c6 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           closure_4 = tmp5;
           closure_3 = tmp2;
@@ -61,15 +61,15 @@ let closure_11 = async function _createStageChannelForEvent(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c6 = 3;
-          const obj1 = { value, done: true };
-          return obj1;
+          const obj4 = { value, done: true };
+          return obj4;
         } else {
           closure_131_3 = [];
           const push = closure_131_3.push;
           const items1 = [];
           HermesBuiltin.arraySpread(closure_131_2, 0);
           HermesBuiltin.apply(items1, closure_131_3);
-          const obj2 = {
+          const obj5 = {
             guildId: closure_131_0.id,
             type: closure_132_9.GUILD_STAGE_VOICE,
             name: closure_131_1.substring(0, 100),
@@ -77,22 +77,22 @@ let closure_11 = async function _createStageChannelForEvent(arg0) {
           };
           c5 = 2;
           c6 = 1;
-          const obj3 = { value: closure_132_1(closure_132_2[6]).createChannel(obj2), done: false };
-          return obj3;
+          const obj6 = { value: closure_132_1(closure_132_2[6]).createChannel(obj5), done: false };
+          return obj6;
         }
       } else if (arg0 === 1) {
         c6 = 3;
         throw value;
       } else if (arg0 === 2) {
         c6 = 3;
-        const obj4 = { value, done: true };
-        return obj4;
+        const obj8 = { value, done: true };
+        return obj8;
       } else {
         closure_131_4 = value;
         if (null != closure_131_4) {
           if (201 === closure_131_4.status) {
             c6 = 3;
-            obj = { value: closure_132_4(closure_131_4.body), done: true };
+            const obj = { value: closure_132_4(closure_131_4.body), done: true };
             return obj;
           }
         }
@@ -133,8 +133,8 @@ let closure_13 = async function _preStartEventActions(arg0, arg1) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -147,8 +147,8 @@ let closure_13 = async function _preStartEventActions(arg0, arg1) {
             throw value;
           } else if (arg0 === 2) {
             c5 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
             closure_3 = tmp5;
             closure_2 = tmp2;
@@ -156,8 +156,8 @@ let closure_13 = async function _preStartEventActions(arg0, arg1) {
             if (entity_type.entity_type === constants.STAGE_INSTANCE) {
               c4 = 1;
               c5 = 1;
-              const obj1 = { value: findOrCreateEventChannel(tmp13, tmp14), done: false };
-              return obj1;
+              const obj4 = { value: findOrCreateEventChannel(tmp13, tmp14), done: false };
+              return obj4;
             } else {
               c5 = 3;
             }
@@ -170,7 +170,7 @@ let closure_13 = async function _preStartEventActions(arg0, arg1) {
           closure_131_1(closure_131_2[7])(null != closure_130_0, "could not find or create channel");
         }
         c5 = 3;
-        obj = { value, done: true };
+        const obj = { value, done: true };
         return obj;
       } catch (tmp17) {
         c5 = tmp;
@@ -210,16 +210,13 @@ let closure_14 = async function _setEventAsActive(arg0) {
         };
       } else if (closure_131_7.VOICE === tmp53) {
         closure_131_1(closure_131_2[7])(null != channel_id, "channel_id is required");
-        let obj5 = closure_131_1(closure_131_2[9]);
         c4 = 3;
         c5 = 1;
-        let obj3 = { value: obj5.startEvent(id, guild_id), done: false };
-        return obj3;
+        return { value: closure_131_1(closure_131_2[9]).startEvent(id, guild_id), done: false };
       } else if (closure_131_7.EXTERNAL === tmp53) {
-        obj3 = closure_131_1(closure_131_2[9]);
         c4 = 4;
         c5 = 1;
-        return { value: obj3.startEvent(id, guild_id), done: false };
+        return { value: closure_131_1(closure_131_2[9]).startEvent(id, guild_id), done: false };
       }
     }
   } else if (2 === tmp5) {
@@ -228,8 +225,7 @@ let closure_14 = async function _setEventAsActive(arg0) {
       throw value;
     } else if (arg0 === 2) {
       c5 = 3;
-      obj5 = { value, done: true };
-      return obj5;
+      return { value, done: true };
     }
   } else if (3 === tmp5) {
     if (arg0 === 1) {

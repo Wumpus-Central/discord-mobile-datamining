@@ -13,7 +13,7 @@ import BotTagDefault from "../../../../../../applications/native/BotTag.tsx";
 import _modDef10273 from "../../../../../../../../_runtime/metro/10273__.js";
 import ActivityStatusDefault from "../../../../../../activity_status/native/ActivityStatus.tsx";
 import UsernameWithEffectsDefault from "../../../../../../display_name_styles/native/UsernameWithEffects.tsx";
-import _modDef11086 from "../../../../../../../../_runtime/metro/11086__.js";
+import _modDef11087 from "../../../../../../../../_runtime/metro/11087__.js";
 import useMessagePreviewsDefault from "../../../../../useMessagePreviews.tsx";
 import usePrivateChannelWaveDefault from "../../../../../../channel/usePrivateChannelWave.native.tsx";
 import MessagesItemChannelWaveDefault from "MessagesItemChannelWave.tsx";
@@ -25,27 +25,27 @@ function MessagesItemChannelContentIcon(selected) {
   ({ muted, favorite, ignored, blocked } = selected);
   const tmp = closure_11(selected.selected);
   if (blocked) {
-    let obj = { source: _modDef8034, size: native.Icon.Sizes.EXTRA_SMALL, style: null };
+    const obj2 = { source: _modDef8034, size: native.Icon.Sizes.EXTRA_SMALL, style: null };
     const items = [,];
     ({ channelIcon: arr4[0], channelMutedIcon: arr4[1] } = tmp);
-    obj.style = items;
-    let tmp2 = timestampProducer(native.Icon, obj);
+    obj2.style = items;
+    let tmp2 = timestampProducer(native.Icon, obj2);
   } else if (ignored) {
-    obj = { source: _modDef7070, size: native.Icon.Sizes.EXTRA_SMALL, style: null };
+    const obj3 = { source: _modDef7070, size: native.Icon.Sizes.EXTRA_SMALL, style: null };
     const items1 = [,];
     ({ channelIcon: arr3[0], channelIgnoredIcon: arr3[1] } = tmp);
-    obj.style = items1;
-    tmp2 = timestampProducer(native.Icon, obj);
+    obj3.style = items1;
+    tmp2 = timestampProducer(native.Icon, obj3);
   } else if (muted) {
-    const obj1 = { source: _modDef10273, size: native.Icon.Sizes.EXTRA_SMALL, style: null };
+    const obj4 = { source: _modDef10273, size: native.Icon.Sizes.EXTRA_SMALL, style: null };
     const items2 = [,];
     ({ channelIcon: arr2[0], channelMutedIcon: arr2[1] } = tmp);
-    obj1.style = items2;
-    tmp2 = timestampProducer(native.Icon, obj1);
+    obj4.style = items2;
+    tmp2 = timestampProducer(native.Icon, obj4);
   } else {
     tmp2 = null;
     if (favorite) {
-      obj = { source: _modDef11086, size: native.Icon.Sizes.EXTRA_SMALL, style: null };
+      const obj = { source: _modDef11087, size: native.Icon.Sizes.EXTRA_SMALL, style: null };
       const items3 = [,];
       ({ channelIcon: arr[0], channelFavoriteIcon: arr[1] } = tmp);
       obj.style = items3;
@@ -58,21 +58,24 @@ const View = fn(17).View;
 const UnreadSetting = fn(4818).UnreadSetting;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7, Fragment: closure_8 } = jsxProd);
-fn(4636);
+let createStyles = fn(4636);
 let obj = {
   content: { flex: 1 },
   channelIcon: { alignSelf: "center" },
   channelNameAndAccessories: { flexDirection: "row", alignItems: "center", width: "100%" },
   channelIcons: { flexDirection: "row", alignItems: "center" },
-  channelAccessoriesContainer: null,
+  channelAccessoriesContainer: {
+    flexDirection: "row",
+    justifyContent: "flex-end",
+    marginLeft: nativeDefault.space.PX_4,
+  },
   channelAccessories: null,
   channelNameAndBadge: null,
   botTag: null,
   contentPadded: null,
 };
-obj = { flexDirection: "row", justifyContent: "flex-end", marginLeft: nativeDefault.space.PX_4 };
-obj.channelAccessoriesContainer = obj;
-let createStyles = {
+let obj3 = { flexDirection: "row", justifyContent: "flex-end", marginLeft: nativeDefault.space.PX_4 };
+obj.channelAccessories = {
   flexDirection: "row",
   justifyContent: "flex-end",
   alignItems: "center",
@@ -80,7 +83,14 @@ let createStyles = {
   paddingHorizontal: nativeDefault.space.PX_4,
   paddingVertical: 1,
 };
-obj.channelAccessories = createStyles;
+let obj4 = {
+  flexDirection: "row",
+  justifyContent: "flex-end",
+  alignItems: "center",
+  borderRadius: nativeDefault.radii.xs,
+  paddingHorizontal: nativeDefault.space.PX_4,
+  paddingVertical: 1,
+};
 obj.channelNameAndBadge = {
   flexDirection: "row",
   alignItems: "center",
@@ -88,9 +98,9 @@ obj.channelNameAndBadge = {
   flex: 1,
   minWidth: 0,
 };
-let obj2 = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4, flex: 1, minWidth: 0 };
+let obj5 = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4, flex: 1, minWidth: 0 };
 obj.botTag = { marginRight: nativeDefault.space.PX_4 };
-let obj3 = { marginRight: nativeDefault.space.PX_4 };
+let obj6 = { marginRight: nativeDefault.space.PX_4 };
 obj.contentPadded = { paddingRight: nativeDefault.space.PX_40 };
 let closure_9 = createStyles.createStyles(obj);
 createStyles = fn(4636);
@@ -108,16 +118,21 @@ let closure_10 = createStyles.createStyles((arg0, arg1, arg2) => {
     MOBILE_TEXT_HEADING_PRIMARY = nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY;
     tmp5 = importDefault;
   }
-  let obj = { channelText: { color: MOBILE_TEXT_HEADING_PRIMARY }, channelName: { flexShrink: 1 }, timestamp: null };
-  obj = { color: tmp5(576).colors.TEXT_SUBTLE };
-  obj.timestamp = obj;
+  const obj = {
+    channelText: { color: MOBILE_TEXT_HEADING_PRIMARY },
+    channelName: { flexShrink: 1 },
+    timestamp: { color: tmp5(576).colors.TEXT_SUBTLE },
+  };
   return obj;
 });
 createStyles = fn(4636);
 let closure_11 = createStyles.createStyles((arg0) => {
-  let obj = { channelIcon: null, channelMutedIcon: null, channelFavoriteIcon: null, channelIgnoredIcon: null };
-  obj = { marginRight: nativeDefault.space.PX_4 };
-  obj.channelIcon = obj;
+  const obj = {
+    channelIcon: { marginRight: nativeDefault.space.PX_4 },
+    channelMutedIcon: null,
+    channelFavoriteIcon: null,
+    channelIgnoredIcon: null,
+  };
   const colors = nativeDefault.colors;
   obj.channelMutedIcon = { tintColor: arg0 ? colors.ICON_SUBTLE : colors.ICON_MUTED };
   const colors2 = nativeDefault.colors;
@@ -126,7 +141,7 @@ let closure_11 = createStyles.createStyles((arg0) => {
   obj.channelIgnoredIcon = { tintColor: arg0 ? colors3.ICON_SUBTLE : colors3.ICON_MUTED };
   return obj;
 });
-let obj4 = { paddingRight: nativeDefault.space.PX_40 };
+let obj7 = { paddingRight: nativeDefault.space.PX_40 };
 const size = fn(2);
 const result = size.fileFinishedImporting(
   "modules/main_tabs_v2/native/tabs/messages/items/channel/MessagesItemChannelContent.tsx",
@@ -136,8 +151,8 @@ export default noop.memo(function MessagesItemChannelContent(channel) {
   channel = channel.channel;
   ({ channelSelected, muted, ignored, blocked, hasUnreadMessages, hasNameplate } = channel);
   ({ favorite, hasActivity, resolvedUnreadSetting } = channel);
-  let obj = channel(4345);
   let tmp5 = hasUnreadMessages;
+  const obj = channel(4345);
   if (hasUnreadMessages) {
     tmp5 = resolvedUnreadSetting === UnreadSetting.ALL_MESSAGES;
   }
@@ -153,27 +168,27 @@ export default noop.memo(function MessagesItemChannelContent(channel) {
   }
   const tmp8 = closure_9();
   const tmp9 = closure_10(channelSelected, tmp5, tmp7);
-  let tmpResult = tmp(504);
+  const isThemeLightResult = channel(4345).isThemeLight(useThemeDefault());
   const items = [ReadStateStore];
-  const stateFromStores = tmpResult.useStateFromStores(items, () => ReadStateStore.lastMessageId(channel.id));
+  const stateFromStores = channel(504).useStateFromStores(items, () => ReadStateStore.lastMessageId(channel.id));
   const tmp11 = useMessagePreviewsDefault(channel, { unread: hasUnreadMessages });
   let tmp12 = null != tmp11;
   if (tmp12) {
-    let obj2 = _modDef4228();
-    tmp12 = obj2.diff(tmp11.timestamp, "hours") < 1 || !hasActivity || hasUnreadMessages;
-    const tmp13 = obj2.diff(tmp11.timestamp, "hours") < 1 || !hasActivity || hasUnreadMessages;
+    const obj3 = _modDef4228();
+    tmp12 = _modDef4228().diff(tmp11.timestamp, "hours") < 1 || !hasActivity || hasUnreadMessages;
+    const tmp13 = _modDef4228().diff(tmp11.timestamp, "hours") < 1 || !hasActivity || hasUnreadMessages;
   }
   if (tmp12) {
     tmp12 = !isChangelogChannelDefault(channel.id);
   }
-  tmpResult = tmp(16131);
-  let tmp3Result = SnowflakeUtilsDefault;
+  const tmpResult = channel(504);
+  const tmpResult3 = channel(16133);
   let id = stateFromStores;
   if (stateFromStores == null) {
     id = channel.id;
   }
-  obj = { timestamp: tmp3Result.extractTimestamp(id) };
-  const relativeTimestamp = tmpResult.useRelativeTimestamp(obj);
+  const tmp3Result = SnowflakeUtilsDefault;
+  const relativeTimestamp = tmpResult3.useRelativeTimestamp({ timestamp: SnowflakeUtilsDefault.extractTimestamp(id) });
   let tmp15 = channel.isPrivate() && !channel.isMultiUserDM() && null != channel.recipients;
   if (tmp15) {
     tmp15 = channel.recipients.length > 0;
@@ -181,46 +196,46 @@ export default noop.memo(function MessagesItemChannelContent(channel) {
   const tmp16 = useChannelNameDefault(channel);
   const tmp17 = usePrivateChannelWaveDefault(channel, stateFromStores);
   const waveShouldShow = tmp17.waveShouldShow;
-  obj = { variant: null, style: null, lineClamp: 1, ellipsizeMode: "tail" };
-  const isThemeLightResult = obj.isThemeLight(useThemeDefault());
-  obj.variant = channel(4338).useToken(nativeDefault.modules.mobile.MESSAGES_ITEM_CHANNEL_NAME_TEXT_STYLE);
+  let obj4 = { variant: null, style: null, lineClamp: 1, ellipsizeMode: "tail" };
+  const obj2 = { timestamp: SnowflakeUtilsDefault.extractTimestamp(id) };
+  obj4.variant = channel(4338).useToken(nativeDefault.modules.mobile.MESSAGES_ITEM_CHANNEL_NAME_TEXT_STYLE);
   const items1 = [,];
   ({ channelText: arr2[0], channelName: arr2[1] } = tmp9);
-  obj.style = items1;
-  const obj1 = { style: tmp8.content, children: null };
-  obj2 = { style: tmp8.channelNameAndAccessories, children: null };
-  const obj3 = { style: tmp8.channelNameAndBadge, children: null };
+  obj4.style = items1;
+  const obj5 = { style: tmp8.content, children: null };
+  const obj6 = { style: tmp8.channelNameAndAccessories, children: null };
+  const obj7 = { style: tmp8.channelNameAndBadge, children: null };
   if (channel.isDM()) {
     if (null != channel.recipients) {
       if (channel.recipients.length > 0) {
-        const obj4 = { userId: channel.recipients[0], userName: tmp16, effectDisplayType: null };
-        tmp3Result = UsernameWithEffectsDefault;
-        const EffectDisplayType = tmp(11028).EffectDisplayType;
-        obj4.effectDisplayType = channelSelected ? EffectDisplayType.STATIC : EffectDisplayType.PLAIN;
-        obj = Object.assign(obj);
-        closure_6(tmp3Result, obj4);
+        const obj8 = { userId: channel.recipients[0], userName: tmp16, effectDisplayType: null };
+        const EffectDisplayType = tmp(11029).EffectDisplayType;
+        obj8.effectDisplayType = channelSelected ? EffectDisplayType.STATIC : EffectDisplayType.PLAIN;
+        obj4 = Object.assign(obj4);
+        closure_6(UsernameWithEffectsDefault, obj8);
+        const tmp3Result4 = UsernameWithEffectsDefault;
       }
     }
   }
-  const obj5 = {};
-  const merged = Object.assign(obj);
-  obj5.children = tmp16;
-  const items2 = [closure_6(channel(4632).Text, obj5), ,];
+  const obj9 = {};
+  const merged = Object.assign(obj4);
+  obj9.children = tmp16;
+  const items2 = [closure_6(channel(4632).Text, obj9), ,];
   let tmp20Result = null;
   if (tmp15) {
-    const obj6 = { userId: channel.recipients[0], disabledTooltip: true };
-    tmp20Result = closure_6(GuildTagDefault, obj6);
+    const obj10 = { userId: channel.recipients[0], disabledTooltip: true };
+    tmp20Result = closure_6(GuildTagDefault, obj10);
   }
   items2[1] = tmp20Result;
-  tmp20Result = null;
+  let tmp20Result5 = null;
   if (channel.isSystemDM()) {
-    const obj7 = { style: tmp8.botTag, type: BotTagDefault.Types.SYSTEM_DM, verified: true };
-    tmp20Result = closure_6(BotTagDefault, obj7);
-    const tmp3Result1 = BotTagDefault;
+    const obj11 = { style: tmp8.botTag, type: BotTagDefault.Types.SYSTEM_DM, verified: true };
+    tmp20Result5 = closure_6(BotTagDefault, obj11);
+    const tmp3Result5 = BotTagDefault;
   }
-  items2[2] = tmp20Result;
-  obj3.children = items2;
-  const items3 = [closure_7(View, obj3)];
+  items2[2] = tmp20Result5;
+  obj7.children = items2;
+  const items3 = [closure_7(View, obj7)];
   const items4 = [tmp8.channelAccessoriesContainer];
   let num4 = 0;
   if (hasNameplate) {
@@ -229,46 +244,46 @@ export default noop.memo(function MessagesItemChannelContent(channel) {
       num4 = 40;
     }
   }
-  const obj8 = { style: items4, children: null };
+  const obj12 = { style: items4, children: null };
   items4[1] = { minWidth: num4 };
   const items5 = [tmp8.channelAccessories, ,];
-  let obj9;
+  let obj13;
   if (waveShouldShow) {
-    obj9 = { paddingVertical: 0 };
+    obj13 = { paddingVertical: 0 };
   }
-  items5[1] = obj9;
+  items5[1] = obj13;
   if (!hasNameplate) {
-    const obj10 = { style: null, children: null };
+    const obj14 = { style: null, children: null };
     items5[2] = undefined;
-    obj10.style = items5;
-    const obj11 = { style: tmp8.channelIcons, children: null };
-    const obj12 = { muted, favorite, ignored, blocked, selected: channelSelected };
-    obj11.children = closure_6(MessagesItemChannelContentIcon, obj12);
-    const items6 = [closure_6(View, obj11)];
-    let tmp20Result1 = !waveShouldShow;
+    obj14.style = items5;
+    const obj15 = { style: tmp8.channelIcons, children: null };
+    const obj16 = { muted, favorite, ignored, blocked, selected: channelSelected };
+    obj15.children = closure_6(MessagesItemChannelContentIcon, obj16);
+    const items6 = [closure_6(View, obj15)];
+    let tmp20Result6 = !waveShouldShow;
     if (!waveShouldShow) {
-      const obj13 = { style: null, variant: "text-xs/medium", lineClamp: 1, children: null };
+      const obj17 = { style: null, variant: "text-xs/medium", lineClamp: 1, children: null };
       const items7 = [,];
       ({ channelText: arr8[0], timestamp: arr8[1] } = tmp9);
-      obj13.style = items7;
-      obj13.children = relativeTimestamp;
-      tmp20Result1 = closure_6(tmp(4632).Text, obj13);
+      obj17.style = items7;
+      obj17.children = relativeTimestamp;
+      tmp20Result6 = closure_6(tmp(4632).Text, obj17);
     }
-    items6[1] = tmp20Result1;
-    obj10.children = items6;
-    obj8.children = closure_7(View, obj10);
-    items3[1] = closure_6(View, obj8);
-    obj2.children = items3;
-    const items8 = [closure_7(View, obj2)];
+    items6[1] = tmp20Result6;
+    obj14.children = items6;
+    obj12.children = closure_7(View, obj14);
+    items3[1] = closure_6(View, obj12);
+    obj6.children = items3;
+    const items8 = [closure_7(View, obj6)];
     let contentPadded;
     if (hasNameplate) {
       if (!waveShouldShow) {
         contentPadded = tmp8.contentPadded;
       }
     }
-    const obj14 = { style: contentPadded, children: null };
+    const obj18 = { style: contentPadded, children: null };
     if (tmp12) {
-      const obj15 = { message: tmp11, channel, color: null, layout: null, muted: null };
+      const obj19 = { message: tmp11, channel, color: null, layout: null, muted: null };
       let str6 = "text-muted";
       let str7 = "text-muted";
       if (!tmp7) {
@@ -277,41 +292,41 @@ export default noop.memo(function MessagesItemChannelContent(channel) {
         }
         str7 = str6;
       }
-      obj15.color = str7;
-      obj15.layout = tmp(7983).ChannelListLayoutTypes.COZY_DRAWER_SMOL;
-      obj15.muted = muted;
-      let tmp20Result2 = closure_6(tmp(10237).ChannelRowPreview, obj15);
+      obj19.color = str7;
+      obj19.layout = tmp(7983).ChannelListLayoutTypes.COZY_DRAWER_SMOL;
+      obj19.muted = muted;
+      let tmp20Result7 = closure_6(tmp(10237).ChannelRowPreview, obj19);
     } else if (channel.isDM()) {
-      const obj16 = { textStyle: tmp9.channelText, userId: channel.getRecipientId(), guildId: null };
+      const obj20 = { textStyle: tmp9.channelText, userId: channel.getRecipientId(), guildId: null };
       let guild_id;
       if (channel != null) {
         guild_id = channel.guild_id;
       }
-      obj16.guildId = guild_id;
-      tmp20Result2 = closure_6(ActivityStatusDefault, obj16);
-      const tmp3Result2 = ActivityStatusDefault;
+      obj20.guildId = guild_id;
+      tmp20Result7 = closure_6(ActivityStatusDefault, obj20);
+      const tmp3Result6 = ActivityStatusDefault;
     } else {
-      tmp20Result2 = null;
+      tmp20Result7 = null;
       if (isChangelogChannelDefault(channel.id)) {
-        const obj17 = { variant: "text-xs/medium", style: tmp9.channelText, lineClamp: 1, children: null };
+        const obj21 = { variant: "text-xs/medium", style: tmp9.channelText, lineClamp: 1, children: null };
         const intl = tmp(1114).intl;
-        obj17.children = intl.string(tmp(1114).t.FL5T01);
-        tmp20Result2 = closure_6(tmp(4632).Text, obj17);
+        obj21.children = intl.string(tmp(1114).t.FL5T01);
+        tmp20Result7 = closure_6(tmp(4632).Text, obj21);
       }
     }
-    obj14.children = tmp20Result2;
-    items8[1] = closure_6(View, obj14);
-    obj1.children = items8;
-    const items9 = [closure_7(View, obj1)];
-    let tmp20Result3 = null;
+    obj18.children = tmp20Result7;
+    items8[1] = closure_6(View, obj18);
+    obj5.children = items8;
+    const items9 = [closure_7(View, obj5)];
+    let tmp20Result8 = null;
     if (waveShouldShow) {
-      const obj18 = { wavePressed: tmp17.wavePressed, hasNameplate };
-      tmp20Result3 = closure_6(MessagesItemChannelWaveDefault, obj18);
+      const obj22 = { wavePressed: tmp17.wavePressed, hasNameplate };
+      tmp20Result8 = closure_6(MessagesItemChannelWaveDefault, obj22);
     }
-    const obj19 = { children: null };
-    items9[1] = tmp20Result3;
-    obj19.children = items9;
-    return closure_7(closure_8, obj19);
+    const obj23 = { children: null };
+    items9[1] = tmp20Result8;
+    obj23.children = items9;
+    return closure_7(closure_8, obj23);
   } else {
     if (isThemeLightResult) {
       let num6 = 0.3;
@@ -328,7 +343,7 @@ export default noop.memo(function MessagesItemChannelContent(channel) {
       const _HermesInternal = HermesInternal;
       combined = "rgba(0, 0, 0, " + num5 + ")";
     }
-    const obj20 = { backgroundColor: combined };
+    const obj24 = { backgroundColor: combined };
   }
-  const tmpResult1 = channel(4338);
+  const tmpResult4 = channel(4338);
 });

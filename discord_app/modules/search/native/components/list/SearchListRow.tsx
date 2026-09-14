@@ -11,22 +11,15 @@ const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 const createStyles = fn(4636);
 let closure_7 = createStyles.createStyles((marginLeft) => {
-  let obj = {
-    pressable: null,
+  const obj = {
+    pressable: { paddingHorizontal: 16, paddingVertical },
     body: { flexDirection: "row", alignItems: "center" },
     labels: { justifyContent: "center", flex: 1 },
-    underlayColor: null,
-    text: null,
-    iconContainer: null,
-    extrasContainer: null,
+    underlayColor: { backgroundColor: nativeDefault.colors.INTERACTIVE_BACKGROUND_ACTIVE },
+    text: { flexShrink: 1 },
+    iconContainer: { marginRight: 12 },
+    extrasContainer: { marginLeft },
   };
-  obj = { paddingHorizontal: 16, paddingVertical };
-  obj.pressable = obj;
-  obj = { backgroundColor: nativeDefault.colors.INTERACTIVE_BACKGROUND_ACTIVE };
-  obj.underlayColor = obj;
-  obj.text = { flexShrink: 1 };
-  obj.iconContainer = { marginRight: 12 };
-  obj.extrasContainer = { marginLeft };
   return obj;
 });
 const size = fn(2);
@@ -48,7 +41,7 @@ export const SearchListRow = noop.memo((accessibilityRole) => {
     iconWidth = 0;
   }
   const tmpResult = closure_7(iconWidth);
-  let obj = {
+  const obj = {
     accessible,
     accessibilityRole: str,
     accessibilityLabel,
@@ -64,40 +57,40 @@ export const SearchListRow = noop.memo((accessibilityRole) => {
   const items = [tmpResult.pressable, containerStyle];
   obj.style = items;
   const items1 = [header, ,];
-  obj = { style: null, children: null };
+  const obj2 = { style: null, children: null };
   const items2 = [tmpResult.body, bodyStyle];
-  obj.style = items2;
-  obj = { style: null, children: icon };
+  obj2.style = items2;
+  const obj3 = { style: null, children: icon };
   const items3 = [tmpResult.iconContainer, iconContainerStyle];
-  obj.style = items3;
-  const items4 = [hasOwnProperty(View, obj), ,];
-  const obj1 = { style: tmpResult.labels, children: null };
+  obj3.style = items3;
+  const items4 = [hasOwnProperty(View, obj3), ,];
+  const obj4 = { style: tmpResult.labels, children: null };
   let tmp7Result = label;
   if (typeof label === "string") {
-    const obj2 = {
+    const obj5 = {
       lineClamp: 1,
       variant: "text-md/semibold",
       color: "mobile-text-heading-primary",
       style: tmpResult.text,
       children: label,
     };
-    tmp7Result = hasOwnProperty(Text_Text.Text, obj2);
+    tmp7Result = hasOwnProperty(Text_Text.Text, obj5);
   }
   const items5 = [tmp7Result, subLabel];
-  obj1.children = items5;
-  items4[1] = timestampProducer(View, obj1);
+  obj4.children = items5;
+  items4[1] = timestampProducer(View, obj4);
   items4[2] = trailing;
-  obj.children = items4;
-  items1[1] = timestampProducer(View, obj);
-  tmp7Result = null != extras;
-  if (tmp7Result) {
-    const obj3 = { style: null, children: null };
+  obj2.children = items4;
+  items1[1] = timestampProducer(View, obj2);
+  let tmp7Result2 = null != extras;
+  if (tmp7Result2) {
+    const obj6 = { style: null, children: null };
     const items6 = [tmpResult.extrasContainer];
-    obj3.style = items6;
-    obj3.children = extras;
-    tmp7Result = hasOwnProperty(View, obj3);
+    obj6.style = items6;
+    obj6.children = extras;
+    tmp7Result2 = hasOwnProperty(View, obj6);
   }
-  items1[2] = tmp7Result;
+  items1[2] = tmp7Result2;
   obj.children = items1;
   return timestampProducer(Pressables.PressableHighlight, obj);
 });

@@ -10,7 +10,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const hasOwnProperty = { input: "", error: "add" };
+const hasOwnProperty = { input: "", error: "assign" };
 const PureComponent = noop.PureComponent;
 class UserSettingsInputAlert extends PureComponent {
   constructor() {
@@ -83,11 +83,11 @@ prototype["renderContent"] = function renderContent() {
     }
     let tmp7 = null != helpText;
     if (tmp7) {
-      let obj = { variant: "text-md/normal", children: helpText };
+      const obj = { variant: "text-md/normal", children: helpText };
       tmp7 = React3(Text_Text.Text, obj);
     }
     const items = [tmp7];
-    obj = {
+    const obj2 = {
       label: tmp3,
       placeholder: tmp,
       secureTextEntry: tmp2,
@@ -102,25 +102,22 @@ prototype["renderContent"] = function renderContent() {
     if (null != error) {
       str2 = "error";
     }
-    obj = {
-      spacing: 16,
-      children: null,
-      status: str2,
-      errorMessage: error,
-      onSubmitEditing: self.handleSubmit,
-      onChange(input) {
-        return self.setState({ input });
-      },
+    const obj3 = { spacing: 16, children: null };
+    obj2.status = str2;
+    obj2.errorMessage = error;
+    obj2.onSubmitEditing = self.handleSubmit;
+    obj2.onChange = function onChange(input) {
+      return self.setState({ input });
     };
-    items[1] = React3(TextInput.TextInput, obj);
-    obj.children = items;
-    return React4(Stack_Stack.Stack, obj);
+    items[1] = React3(TextInput.TextInput, obj2);
+    obj3.children = items;
+    return React4(Stack_Stack.Stack, obj3);
   }
   error = self.state.error;
 };
 prototype["render"] = function render() {
   ({ title, actionText, cancelText, confirmColor, useKeyboardAwareWrapper } = this.props);
-  let obj = {
+  const obj = {
     title,
     confirmText: actionText,
     confirmColor,
@@ -132,8 +129,8 @@ prototype["render"] = function render() {
   const tmp5 = React3(common_AlertDefault, obj);
   let tmpResult = tmp5;
   if (useKeyboardAwareWrapper) {
-    obj = { children: tmp5 };
-    tmpResult = React3(KeyboardAwareViewDefault, obj);
+    const obj2 = { children: tmp5 };
+    tmpResult = React3(KeyboardAwareViewDefault, obj2);
   }
   return tmpResult;
 };

@@ -6,6 +6,8 @@ import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators.
 import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
+const require = globalThis.__r;
+
 const HelpdeskArticles = Constants.HelpdeskArticles;
 let items = [AgeVerificationAnalyticsUtils.AgeVerificationModalEntryPoint.NSFW_GUILD];
 let obj = {
@@ -18,13 +20,13 @@ let obj = {
   GOOGLE_WALLET: 9,
   [9]: "GOOGLE_WALLET",
 };
-obj = {};
-obj = { title: _modDef2946["2yLvkS"], description: _modDef2946.eJmat5 };
-obj[obj.FACIAL_AGE_ESTIMATION] = obj;
+let obj2 = {};
 const set = new Set(items);
-obj[obj.ID_VERIFICATION] = { title: _modDef2946.dwkwo0, description: _modDef2946.ZdmRwW };
-const obj1 = { title: _modDef2946.dwkwo0, description: _modDef2946.ZdmRwW };
-obj[obj.GOOGLE_WALLET] = { title: _modDef2946.Y9sLpR, description: _modDef2946.dah4bF };
+obj2[obj.FACIAL_AGE_ESTIMATION] = { title: _modDef2946["2yLvkS"], description: _modDef2946.eJmat5 };
+let obj3 = { title: _modDef2946["2yLvkS"], description: _modDef2946.eJmat5 };
+obj2[obj.ID_VERIFICATION] = { title: _modDef2946.dwkwo0, description: _modDef2946.ZdmRwW };
+const obj4 = { title: _modDef2946.dwkwo0, description: _modDef2946.ZdmRwW };
+obj2[obj.GOOGLE_WALLET] = { title: _modDef2946.Y9sLpR, description: _modDef2946.dah4bF };
 let result = size.fileFinishedImporting("modules/age_assurance/AgeVerificationConstants.tsx");
 
 export const FULLSCREEN_AGE_VERIFICATION_ENTRY_POINTS = set;
@@ -36,17 +38,17 @@ export const getAgeVerificationGetStartedSteps = function getAgeVerificationGetS
   const intl2 = require("util").intl;
   obj.description = intl2.string(require("util").t["GCZC+9"]);
   const items = [obj, ,];
-  obj = { title: null, description: null };
+  let obj2 = { title: null, description: null };
   const intl3 = require("util").intl;
-  obj.title = intl3.string(require("util").t.nkO4L3);
+  obj2.title = intl3.string(require("util").t.nkO4L3);
   const intl4 = require("util").intl;
-  obj.description = intl4.string(require("util").t.rHZFsH);
-  items[1] = obj;
-  obj = { title: null, description: null };
+  obj2.description = intl4.string(require("util").t.rHZFsH);
+  items[1] = obj2;
+  const obj3 = { title: null, description: null };
   const intl5 = require("util").intl;
-  obj.title = intl5.string(require("util").t.aVwLfn);
+  obj3.title = intl5.string(require("util").t.aVwLfn);
   const intl6 = require("util").intl;
-  obj.description = intl6.format(require("util").t.n5vd1E, {
+  obj3.description = intl6.format(require("util").t.n5vd1E, {
     handleOnHelpUrlHook() {
       const obj = AgeVerificationActionCreatorsDefault;
       obj.openUrl(HelpdeskUtilsDefault.getArticleURL(HelpdeskArticles.TIGGER_PAWTECT_SYSTEM_DMS));
@@ -57,7 +59,7 @@ export const getAgeVerificationGetStartedSteps = function getAgeVerificationGetS
       );
     },
   });
-  items[2] = obj;
+  items[2] = obj3;
   return items;
 };
 export const TRUSTED_PROVIDERS_URL =
@@ -69,4 +71,4 @@ export const MANUAL_REVIEW_DECIDED_TEEN_ALERT_KEY = "MANUAL_REVIEW_DECIDED_TEEN_
 export const MANUAL_REVIEW_FALLBACK_ALERT_KEY = "MANUAL_REVIEW_FALLBACK_ALERT_KEY";
 export const VerificationVendorName = { K_ID: "K_ID", GOOGLE_WALLET: "GOOGLE_WALLET", INCODE: "INCODE" };
 export const VerificationMethod = obj;
-export const VERIFICATION_METHOD_TITLE_MAP = obj;
+export const VERIFICATION_METHOD_TITLE_MAP = obj2;

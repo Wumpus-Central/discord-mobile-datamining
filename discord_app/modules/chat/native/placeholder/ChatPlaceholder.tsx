@@ -4,16 +4,18 @@ import getChatPlaceholderRowHeightDefault from "getChatPlaceholderRowHeight.tsx"
 import ChatPlaceholderRowDefault from "ChatPlaceholderRow.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
+const require = globalThis.__r;
+
 let closure_3 = fn(9615).useChatInputContainerHeight;
 const jsx = fn(21).jsx;
 const createStyles = fn(4636);
 let obj = { placeholder: null };
-obj = {};
+const obj3 = {};
 const merged = Object.assign(fn(17).StyleSheet.absoluteFillObject);
-obj.paddingBottom = nativeDefault.space.PX_24;
-obj.flexDirection = "column-reverse";
-obj.overflow = "hidden";
-obj.placeholder = obj;
+obj3.paddingBottom = nativeDefault.space.PX_24;
+obj3.flexDirection = "column-reverse";
+obj3.overflow = "hidden";
+obj.placeholder = obj3;
 let closure_5 = createStyles.createStyles(obj);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/chat/native/placeholder/ChatPlaceholder.tsx");

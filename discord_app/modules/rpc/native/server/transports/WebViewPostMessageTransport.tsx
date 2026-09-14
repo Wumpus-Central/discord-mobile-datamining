@@ -4,7 +4,11 @@ import stripSensitiveLoggingDataDefault from "../../../helpers/stripSensitiveLog
 import WebViewWindowProxySocketFactoryDefault from "WebViewWindowProxySocketFactory.tsx";
 import PostMessageTransport from "../../../transports/PostMessageTransport.tsx";
 
-PostMessageTransport = new PostMessageTransport(
+const tmp2 = new LoggerDefault("RPCServer:PostMessage");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/rpc/native/server/transports/WebViewPostMessageTransport.tsx");
+
+export default new PostMessageTransport(
   fn(9688).validateSocketClient,
   new LoggerDefault("RPCServer:PostMessage"),
   WebViewWindowProxySocketFactoryDefault,
@@ -13,7 +17,3 @@ PostMessageTransport = new PostMessageTransport(
     info.info(combined, stripSensitiveLoggingDataDefault(arg0));
   },
 );
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/rpc/native/server/transports/WebViewPostMessageTransport.tsx");
-
-export default PostMessageTransport;

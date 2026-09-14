@@ -21,14 +21,13 @@ prototype["getSelection"] = function getSelection() {
 };
 FrecencySectionStore.displayName = "FrecencySectionStore";
 FrecencySectionStore.persistKey = "FrecencySectionStore";
-obj = {
+const frecencySectionStore = new FrecencySectionStore(DispatcherDefault, {
   FRECENCY_SECTION_SET_SELECTION: function handleSetSelection(selection) {
     obj = {};
     const merged = Object.assign(obj);
     obj.selection = selection.selection;
   },
-};
-const frecencySectionStore = new FrecencySectionStore(DispatcherDefault, obj);
+});
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/app_launcher/native/screens/home/FrecencySectionStore.tsx");
 

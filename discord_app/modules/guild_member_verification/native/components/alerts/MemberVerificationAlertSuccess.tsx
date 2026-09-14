@@ -33,10 +33,9 @@ export default function MemberVerificationAlertSuccess(guildId) {
   const handleConfirmAndAck = guildId.handleConfirmAndAck;
   const merged = Object.assign(guildId, Object.assign({ guildId: 0, handleConfirmAndAck: 0 }));
   const tmp2 = closure_8();
-  let obj = guildId(merged[6]);
   const items = [GuildStore];
   const items1 = [guildId];
-  const stateFromStores = obj.useStateFromStores(items, () => GuildStore.getGuild(guildId), items1);
+  const stateFromStores = guildId(merged[6]).useStateFromStores(items, () => GuildStore.getGuild(guildId), items1);
   guildId(merged[6]);
   [][0] = AccessibilityStore;
   if (null == stateFromStores) {
@@ -49,36 +48,37 @@ export default function MemberVerificationAlertSuccess(guildId) {
         onClose();
       }
     }
-    obj = {};
+    const obj2 = {};
     const merged1 = Object.assign(merged);
     const intl = tmp3(tmp4[8]).intl;
-    obj.confirmText = intl.string(tmp3(tmp4[8]).t.NuzmOA);
-    obj.style = tmp2.alert;
-    obj.onCancel = onConfirm;
-    obj.onConfirm = onConfirm;
-    obj = { style: tmp2.illustrationContainer, children: null };
-    const obj1 = { source: null, autoPlay: null, style: null };
+    obj2.confirmText = intl.string(tmp3(tmp4[8]).t.NuzmOA);
+    obj2.style = tmp2.alert;
+    obj2.onCancel = onConfirm;
+    obj2.onConfirm = onConfirm;
+    const obj3 = { style: tmp2.illustrationContainer, children: null };
+    const obj4 = { source: null, autoPlay: null, style: null };
     const tmp10 = handleConfirmAndAck(tmp4[7]);
-    obj1.source = tmp3(tmp4[10]);
-    obj1.autoPlay = !tmp7;
-    obj1.style = tmp2.illustration;
-    obj.children = closure_6(handleConfirmAndAck(tmp4[9]), obj1);
-    const items2 = [closure_6(View, obj), ,];
-    const obj2 = {
+    obj4.source = tmp3(tmp4[10]);
+    obj4.autoPlay = !tmp7;
+    obj4.style = tmp2.illustration;
+    obj3.children = closure_6(handleConfirmAndAck(tmp4[9]), obj4);
+    const items2 = [closure_6(View, obj3), ,];
+    const obj5 = {
       style: tmp2.header,
       variant: "heading-lg/extrabold",
       color: "mobile-text-heading-primary",
       children: null,
     };
     const intl2 = tmp3(tmp4[8]).intl;
-    const obj3 = { guildName: stateFromStores.name };
-    obj2.children = intl2.format(tmp3(tmp4[8]).t["7hhNEn"], obj3);
-    items2[1] = closure_6(tmp3(tmp4[11]).Heading, obj2);
-    const obj4 = { style: tmp2.text, variant: "text-sm/medium", color: "text-default", children: null };
+    const obj6 = { guildName: stateFromStores.name };
+    obj5.children = intl2.format(tmp3(tmp4[8]).t["7hhNEn"], obj6);
+    items2[1] = closure_6(tmp3(tmp4[11]).Heading, obj5);
+    const obj7 = { style: tmp2.text, variant: "text-sm/medium", color: "text-default", children: null };
     const intl3 = tmp3(tmp4[8]).intl;
-    obj4.children = intl3.string(tmp3(tmp4[8]).t.nwpqyc);
-    items2[2] = closure_6(tmp3(tmp4[11]).Text, obj4);
-    obj.children = items2;
-    return closure_7(tmp10, obj);
+    obj7.children = intl3.string(tmp3(tmp4[8]).t.nwpqyc);
+    items2[2] = closure_6(tmp3(tmp4[11]).Text, obj7);
+    obj2.children = items2;
+    return closure_7(tmp10, obj2);
   }
+  const obj = guildId(merged[6]);
 }

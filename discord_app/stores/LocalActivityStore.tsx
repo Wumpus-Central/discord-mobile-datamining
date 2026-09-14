@@ -2,7 +2,7 @@
 import _modDef12 from "../../_runtime/metro/00012__.js";
 import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../Dispatcher.tsx";
-import _modDef1332 from "../../_runtime/metro/01332__.js";
+import _modDef1330 from "../../_runtime/metro/01330__.js";
 import FlagUtils from "../../discord_common/js/shared/utils/FlagUtils.tsx";
 import UserSettings from "../modules/user_settings/UserSettings.tsx";
 import RobloxSubgameUtils from "../modules/roblox_subgame_detection/RobloxSubgameUtils.tsx";
@@ -43,26 +43,25 @@ function updateActivities() {
     tmp4 = tmp5;
   }
   if (tmp4) {
-    let tmpResult = userSettingToActivity;
-    items.push(tmpResult.getActivityFromCustomStatus(setting));
+    items.push(userSettingToActivity.getActivityFromCustomStatus(setting));
+    const tmpResult = userSettingToActivity;
   }
   const items1 = [...FirstPartyRichPresenceStore.getActivities()];
   items.push.apply(items1);
   const stream = ExternalStreamingStore.getStream();
   if (null != stream) {
-    let obj = { type: constants.STREAMING };
+    const obj = { type: constants.STREAMING };
     const merged = Object.assign(stream);
     items.push(obj);
   }
-  let arr2 = _modDef12;
-  const item = arr2.forEach(closure_20, (arg0) => {
+  const set = new Set();
+  const item = _modDef12.forEach(closure_20, (arg0) => {
     [, tmp] = arg0;
     if (null != tmp.application_id) {
       set.add(tmp.name);
       items.push(tmp);
     }
   });
-  const set = new Set();
   const visibleGame = RunningGameStore.getVisibleGame();
   if (tmp24) {
     const streamerActiveStreamMetadata = ApplicationStreamingStore.getStreamerActiveStreamMetadata();
@@ -81,11 +80,11 @@ function updateActivities() {
     }
     let tmp31 = null == tmp29;
     if (tmp31) {
-      id = undefined;
+      let id1;
       if (streamerActiveStreamMetadata != null) {
-        id = streamerActiveStreamMetadata.id;
+        id1 = streamerActiveStreamMetadata.id;
       }
-      tmp31 = null != id;
+      tmp31 = null != id1;
     }
     if (tmp31) {
       let found1 = visibleRunningGames.find((id) => id.id === streamerActiveStreamMetadata.id);
@@ -117,11 +116,11 @@ function updateActivities() {
   if (tmp35) {
     let hasItem = set.has(tmp26.name);
     if (!hasItem) {
-      tmpResult = PresenceActivityFiltering;
       const items2 = [];
-      let arraySpreadResult = HermesBuiltin.arraySpread(items, 0);
-      arraySpreadResult = HermesBuiltin.arraySpread(SessionsStore.getRemoteActivities(), arraySpreadResult);
-      hasItem = tmpResult.doesGameHaveRichPresence(tmp26, items2);
+      const tmpResult3 = PresenceActivityFiltering;
+      HermesBuiltin.arraySpread(SessionsStore.getRemoteActivities(), HermesBuiltin.arraySpread(items, 0));
+      hasItem = tmpResult3.doesGameHaveRichPresence(tmp26, items2);
+      const arraySpreadResult = HermesBuiltin.arraySpread(items, 0);
     }
     tmp35 = hasItem;
   }
@@ -130,34 +129,34 @@ function updateActivities() {
       if (!tmp35) {
         if (!tmp43) {
           const findGameResult = DetectableGameStore.findGame(tmp26);
-          obj = { type: constants.PLAYING, name: null, application_id: null, timestamps: null };
+          const obj2 = { type: constants.PLAYING, name: null, application_id: null, timestamps: null };
           ({ name: obj9.name, id } = tmp26);
           if (id == null) {
-            let id1;
+            let id2;
             if (findGameResult != null) {
-              id1 = findGameResult.id;
+              id2 = findGameResult.id;
             }
-            id = id1;
+            id = id2;
           }
-          obj.application_id = id;
+          obj2.application_id = id;
           let start2 = c25;
           if (c25 == null) {
             start2 = tmp26.start;
           }
-          const obj1 = { start: start2 };
-          obj.timestamps = obj1;
+          const obj3 = { start: start2 };
+          obj2.timestamps = obj3;
           const merged1 = Object.assign(RobloxSubgameUtils.maybeAddAdditionalGameMetadata(tmp26));
-          items.push(obj);
-          const tmpResult1 = RobloxSubgameUtils;
+          items.push(obj2);
+          const tmpResult4 = RobloxSubgameUtils;
         }
       }
     }
   }
   const activity = SpotifyStore.getActivity();
   if (null != activity) {
-    const obj2 = { type: constants.LISTENING };
+    const obj4 = { type: constants.LISTENING };
     const merged2 = Object.assign(activity);
-    arr2 = items.push(obj2);
+    items.push(obj4);
   }
   tmp24 = null != ApplicationStreamingStore.getCurrentUserActiveStream();
   tmp43 = null != tmp26 && tmp26.isLauncher;
@@ -287,12 +286,12 @@ const localActivityStore = new LocalActivityStore(DispatcherDefault, {
       let tmp17 = null == dependencyMap[socketId];
     } else {
       items = [pid, activity, partyPrivacy];
-      tmp17 = _modDef1332(dependencyMap[socketId], items);
+      tmp17 = _modDef1330(dependencyMap[socketId], items);
     }
     let tmp19 = null == applicationId;
     if (!tmp19) {
       const items1 = [pid, applicationId];
-      tmp19 = _modDef1332(closure_21[socketId], items1);
+      tmp19 = _modDef1330(closure_21[socketId], items1);
     }
     if (tmp17) {
       if (tmp19) {
@@ -367,10 +366,10 @@ const localActivityStore = new LocalActivityStore(DispatcherDefault, {
         );
         if (activityFlags !== tmp12) {
           items = [tmp8, ,];
-          obj = {};
+          let obj4 = {};
           let merged = Object.assign(tmp9);
-          obj.flags = tmp24;
-          items[1] = obj;
+          obj4.flags = tmp24;
+          items[1] = obj4;
           items[2] = tmp11;
           obj[first] = items;
           flag = true;

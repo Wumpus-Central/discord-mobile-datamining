@@ -29,40 +29,38 @@ function handlePressJoinActivity(arg0) {
     getEmbeddedActivityJoinability.EmbeddedActivityJoinability.ACTIVITIES_FEATURE_NOT_ENABLED_FOR_OS ===
     embeddedActivityJoinability
   ) {
-    let obj = { title: null, body: null, hideActionSheet: false };
+    const obj2 = { title: null, body: null, hideActionSheet: false };
     const intl7 = util.intl;
-    obj.title = intl7.string(util.t.PtobXW);
+    obj2.title = intl7.string(util.t.PtobXW);
     const intl8 = util.intl;
-    obj.body = intl8.string(util.t.UXoQTp);
-    AlertActionCreatorsDefault.show(obj);
+    obj2.body = intl8.string(util.t.UXoQTp);
+    AlertActionCreatorsDefault.show(obj2);
   } else if (
     getEmbeddedActivityJoinability.EmbeddedActivityJoinability.ACTIVITY_NOT_SUPPORTED_ON_OS ===
     embeddedActivityJoinability
   ) {
-    obj = { title: null, body: null, hideActionSheet: false };
+    const obj4 = { title: null, body: null, hideActionSheet: false };
     const intl5 = util.intl;
-    obj.title = intl5.string(util.t.PtobXW);
+    obj4.title = intl5.string(util.t.PtobXW);
     const intl6 = util.intl;
-    obj.body = intl6.string(util.t.uGDCcw);
-    AlertActionCreatorsDefault.show(obj);
+    obj4.body = intl6.string(util.t.uGDCcw);
+    AlertActionCreatorsDefault.show(obj4);
   } else if (
     getEmbeddedActivityJoinability.EmbeddedActivityJoinability.ACTIVITY_AGE_GATED === embeddedActivityJoinability
   ) {
-    let obj2 = AlertActionCreatorsDefault;
-    const obj1 = { title: null, body: null, hideActionSheet: false };
+    const obj6 = { title: null, body: null, hideActionSheet: false };
     const intl3 = util.intl;
-    obj1.title = intl3.string(util.t.PtobXW);
+    obj6.title = intl3.string(util.t.PtobXW);
     const intl4 = util.intl;
-    obj1.body = intl4.string(util.t["4WuFRE"]);
-    obj2.show(obj1);
+    obj6.body = intl4.string(util.t["4WuFRE"]);
+    AlertActionCreatorsDefault.show(obj6);
   } else {
-    obj = AlertActionCreatorsDefault;
-    obj2 = { title: null, body: null, hideActionSheet: false };
+    const obj8 = { title: null, body: null, hideActionSheet: false };
     const intl = util.intl;
-    obj2.title = intl.string(util.t.PtobXW);
+    obj8.title = intl.string(util.t.PtobXW);
     const intl2 = util.intl;
-    obj2.body = intl2.string(util.t.FUCQco);
-    obj.show(obj2);
+    obj8.body = intl2.string(util.t.FUCQco);
+    AlertActionCreatorsDefault.show(obj8);
   }
 }
 let closure_12 = async function _maybeJoinEmbeddedActivity(arg0) {
@@ -85,10 +83,9 @@ let closure_12 = async function _maybeJoinEmbeddedActivity(arg0) {
       });
       closure_129_9 = closure_129_3;
       if (null == closure_129_9) {
-        let obj4 = closure_130_1(closure_130_2[12]);
         c3 = 2;
         c4 = 1;
-        return { value: obj4.fetchApplication(closure_129_1), done: false };
+        return { value: closure_130_1(closure_130_2[12]).fetchApplication(closure_129_1), done: false };
       }
     }
   } else if (arg0 === 1) {
@@ -108,8 +105,8 @@ let closure_12 = async function _maybeJoinEmbeddedActivity(arg0) {
       if (currentUser != null) {
         id = currentUser.id;
       }
-      let obj3 = { embeddedActivityJoinability: null, handleCanJoin: null };
-      obj4 = {
+      const obj8 = { embeddedActivityJoinability: null, handleCanJoin: null };
+      const obj9 = {
         userId: id,
         application: closure_129_9,
         channelId: closure_129_0,
@@ -120,14 +117,15 @@ let closure_12 = async function _maybeJoinEmbeddedActivity(arg0) {
         PermissionStore: null,
         GuildStore: null,
       };
-      obj3 = closure_130_0(closure_130_2[13]);
-      obj4.isActivitiesEnabledForCurrentPlatform = obj3.getIsActivitiesEnabledForCurrentPlatform();
-      obj4.ChannelStore = closure_130_5;
-      obj4.VoiceStateStore = closure_130_9;
-      obj4.PermissionStore = closure_130_7;
-      obj4.GuildStore = closure_130_6;
-      obj3.embeddedActivityJoinability = closure_130_1(closure_130_2[8])(obj4);
-      obj3.handleCanJoin = function handleCanJoin() {
+      obj9.isActivitiesEnabledForCurrentPlatform = closure_130_0(
+        closure_130_2[13],
+      ).getIsActivitiesEnabledForCurrentPlatform();
+      obj9.ChannelStore = closure_130_5;
+      obj9.VoiceStateStore = closure_130_9;
+      obj9.PermissionStore = closure_130_7;
+      obj9.GuildStore = closure_130_6;
+      obj8.embeddedActivityJoinability = closure_130_1(closure_130_2[8])(obj9);
+      obj8.handleCanJoin = function handleCanJoin() {
         const self = this;
         const apply = closure_12.apply;
         if (typeof apply === "unknown") {
@@ -137,7 +135,8 @@ let closure_12 = async function _maybeJoinEmbeddedActivity(arg0) {
         }
         return applyArgumentsResult;
       };
-      closure_130_11(obj3);
+      closure_130_11(obj8);
+      closure_130_0(closure_130_2[13]);
       closure_130_1(closure_130_2[8]);
     }
   }
@@ -163,8 +162,8 @@ let closure_12 = async function _maybeJoinEmbeddedActivity(arg0) {
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
-          let obj = { value, done: true };
-          return obj;
+          const obj2 = { value, done: true };
+          return obj2;
         } else {
           return { value: "HermesInternal", done: null };
         }
@@ -177,10 +176,10 @@ let closure_12 = async function _maybeJoinEmbeddedActivity(arg0) {
               throw value;
             } else if (arg0 === 2) {
               c0 = 3;
-              obj = { value, done: true };
-              return obj;
+              const obj3 = { value, done: true };
+              return obj3;
             } else if (null != applicationId) {
-              const obj1 = {
+              const obj4 = {
                 applicationId: applicationId.applicationId,
                 activityChannelId,
                 locationObject: {},
@@ -191,15 +190,15 @@ let closure_12 = async function _maybeJoinEmbeddedActivity(arg0) {
               };
               v1 = 1;
               c0 = 1;
-              const obj2 = { value: v1(closure_1_2[14])(obj1), done: false };
-              return obj2;
+              const obj5 = { value: v1(closure_1_2[14])(obj4), done: false };
+              return obj5;
             }
           } else if (arg0 === 1) {
             c0 = 3;
             throw value;
           } else if (arg0 === 2) {
             c0 = 3;
-            obj = { value, done: true };
+            const obj = { value, done: true };
             return obj;
           }
           c0 = 3;

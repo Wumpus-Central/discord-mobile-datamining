@@ -11,18 +11,20 @@ get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: closure_4, ScrollView: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-fn(4636);
-let createStyles = { container: null, pendingContent: null };
-createStyles = { flex: 1, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
-createStyles.container = createStyles;
-createStyles.pendingContent = {
+const createStyles = fn(4636);
+let obj2 = {
+  container: { flex: 1, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND },
+  pendingContent: null,
+};
+let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
+obj2.pendingContent = {
   flex: 1,
   paddingVertical: nativeDefault.space.PX_24,
   alignItems: "center",
   gap: nativeDefault.space.PX_32,
   backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND,
 };
-let closure_10 = createStyles.createStyles(createStyles);
+let closure_10 = createStyles.createStyles(obj2);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conversations/components/native/ConversationFocusScreen.tsx");
 
@@ -30,27 +32,27 @@ export default function ConversationFocusScreen() {
   let container = closure_10();
   let ChatPreview = channelId;
   let tmp = startMessageId;
+  const token = channelId(startMessageId[6]).useToken(
+    conversationId(startMessageId[5]).colors.MOBILE_ACTIONSHEET_BACKGROUND,
+  );
   let obj = channelId(startMessageId[6]);
-  const token = obj.useToken(conversationId(startMessageId[5]).colors.MOBILE_ACTIONSHEET_BACKGROUND);
-  let obj1 = channelId(startMessageId[7]);
-  const params = obj1.useRoute().params;
+  const params = channelId(startMessageId[7]).useRoute().params;
   channelId = params.channelId;
   conversationId = params.conversationId;
-  let obj2 = channelId(startMessageId[8]);
+  let obj2 = channelId(startMessageId[7]);
   const items = [ConversationsStore];
   const items1 = [channelId, conversationId];
-  const stateFromStores = obj2.useStateFromStores(
+  const stateFromStores = channelId(startMessageId[8]).useStateFromStores(
     items,
     () => ConversationsStore.getHydratedMessages(channelId, conversationId),
     items1,
   );
-  let obj3 = channelId(startMessageId[8]);
+  const obj3 = channelId(startMessageId[8]);
   const items2 = [ConversationsStore];
   const items3 = [channelId, conversationId];
-  const stateFromStoresObject = obj3.useStateFromStoresObject(
+  const stateFromStoresObject = channelId(startMessageId[8]).useStateFromStoresObject(
     items2,
     () => {
-      let obj = ConversationsStore;
       const conversationMetadata = ConversationsStore.getConversationMetadata(channelId, conversationId);
       let flag;
       if (conversationMetadata != null) {
@@ -59,9 +61,9 @@ export default function ConversationFocusScreen() {
       if (flag == null) {
         flag = false;
       }
-      obj = {
+      const obj2 = {
         fullyHydrated: flag,
-        isFullFetchPending: obj.isConversationFetchPending(conversationId, true),
+        isFullFetchPending: ConversationsStore.isConversationFetchPending(conversationId, true),
         startMessageId: null,
       };
       startMessageId = undefined;
@@ -71,8 +73,8 @@ export default function ConversationFocusScreen() {
       if (startMessageId == null) {
         startMessageId = null;
       }
-      obj.startMessageId = startMessageId;
-      return obj;
+      obj2.startMessageId = startMessageId;
+      return obj2;
     },
     items3,
   );
@@ -102,16 +104,22 @@ export default function ConversationFocusScreen() {
   }, items6);
   if (!fullyHydrated) {
     if (stateFromStoresObject.isFullFetchPending) {
-      obj = { style: container.pendingContent, children: closure_8(closure_4, {}) };
-      return closure_8(closure_6, obj);
+      const obj5 = { style: container.pendingContent, children: closure_8(closure_4, {}) };
+      return closure_8(closure_6, obj5);
     }
   }
   if (fullyHydrated) {
-    obj = { horizontal: true, scrollEnabled: false, bounces: false, contentContainerStyle: null, children: null };
+    const obj6 = {
+      horizontal: true,
+      scrollEnabled: false,
+      bounces: false,
+      contentContainerStyle: null,
+      children: null,
+    };
     container = container.container;
-    obj.contentContainerStyle = container;
+    obj6.contentContainerStyle = container;
     ChatPreview = ChatPreview(tmp[14]).ChatPreview;
-    obj1 = {
+    const obj7 = {
       channelId,
       messages: stateFromStores,
       jumpToChatProps: memo,
@@ -119,25 +127,26 @@ export default function ConversationFocusScreen() {
       initialScrollToTop: true,
       allowReactions: true,
     };
-    tmp = closure_8(ChatPreview, obj1);
-    obj.children = tmp;
-    closure_8(closure_5, obj);
+    tmp = closure_8(ChatPreview, obj7);
+    obj6.children = tmp;
+    closure_8(closure_5, obj6);
   } else {
-    obj2 = { style: container.pendingContent, children: null };
-    obj3 = { variant: "text-md/normal", color: "text-muted", children: null };
+    const obj8 = { style: container.pendingContent, children: null };
+    const obj9 = { variant: "text-md/normal", color: "text-muted", children: null };
     let intl = ChatPreview(tmp[11]).intl;
-    obj3.children = intl.string(ChatPreview(tmp[11]).t.eylmYW);
-    const items7 = [closure_8(ChatPreview(tmp[12]).Text, obj3)];
+    obj9.children = intl.string(ChatPreview(tmp[11]).t.eylmYW);
+    const items7 = [closure_8(ChatPreview(tmp[12]).Text, obj9)];
     let tmp13Result = null != startMessageId;
     if (tmp13Result) {
-      const obj4 = { variant: "tertiary", text: null, onPress: null };
+      const obj10 = { variant: "tertiary", text: null, onPress: null };
       const intl2 = ChatPreview(tmp[11]).intl;
-      obj4.text = intl2.string(ChatPreview(tmp[11]).t.aBNTxl);
-      obj4.onPress = callback1;
-      tmp13Result = closure_8(ChatPreview(tmp[13]).Button, obj4);
+      obj10.text = intl2.string(ChatPreview(tmp[11]).t.aBNTxl);
+      obj10.onPress = callback1;
+      tmp13Result = closure_8(ChatPreview(tmp[13]).Button, obj10);
     }
     items7[1] = tmp13Result;
-    obj2.children = items7;
-    closure_9(closure_6, obj2);
+    obj8.children = items7;
+    closure_9(closure_6, obj8);
   }
+  const obj4 = channelId(startMessageId[8]);
 }

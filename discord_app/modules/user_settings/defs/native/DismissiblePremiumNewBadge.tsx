@@ -1,8 +1,8 @@
 // discord_app/modules/user_settings/defs/native/DismissiblePremiumNewBadge.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import ConstantsIOS from "../../../../ConstantsIOS.tsx";
-import PlatformUtils from "../../../../utils/PlatformUtils.tsx";
 import native from "../../../../design/void/native.tsx";
+import PlatformUtils from "../../../../utils/PlatformUtils.tsx";
 import LinearGradientDefault from "../../../../../_runtime/05068_LinearGradient.js";
 import SelectedDismissibleContentDefault from "../../../dismissible_content/native/SelectedDismissibleContent.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -10,11 +10,12 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 const Gradients = fn(7535).Gradients;
 const jsx = fn(21).jsx;
-fn(4636);
-let createStyles = { newTag: { backgroundColor: "transparent" }, newTagContainer: null };
-createStyles = { borderRadius: nativeDefault.radii.sm, marginLeft: nativeDefault.space.PX_4 };
-createStyles.newTagContainer = createStyles;
-let closure_5 = createStyles.createStyles(createStyles);
+const createStyles = fn(4636);
+let obj2 = {
+  newTag: { backgroundColor: "transparent" },
+  newTagContainer: { borderRadius: nativeDefault.radii.sm, marginLeft: nativeDefault.space.PX_4 },
+};
+let closure_5 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/DismissiblePremiumNewBadge.tsx");
 
@@ -36,20 +37,20 @@ export default function DismissiblePremiumNewBadge(dismissibleContent) {
       } else {
         let tmp3 = closure_1_5;
         if (null == closure_1_5) {
-          let obj = PlatformUtils;
           let str = "text-xs/bold";
           if (obj.isAndroid()) {
             str = "text-xxs/bold";
           }
           tmp3 = str;
+          obj = PlatformUtils;
         }
         if (dependencyMap) {
-          obj = { variant: tmp3, containerStyle: null };
+          const obj2 = { variant: tmp3, containerStyle: null };
           const items = [closure_6.newTagContainer, closure_1_1];
-          obj.containerStyle = items;
+          obj2.containerStyle = items;
           let tmp6Result = jsx(native.NewTag, { variant: tmp3, containerStyle: null });
         } else if (closure_1_3) {
-          obj = {
+          const obj3 = {
             variant: tmp3,
             containerStyle: closure_6.newTag,
             gradient: true,
@@ -62,7 +63,7 @@ export default function DismissiblePremiumNewBadge(dismissibleContent) {
             colors: Gradients.PREMIUM_TIER_2_TRI_COLOR,
           });
         } else {
-          const obj1 = {
+          const obj4 = {
             style: closure_6.newTagContainer,
             start: ConstantsIOS.HorizontalGradient.START,
             end: ConstantsIOS.HorizontalGradient.END,
@@ -77,9 +78,9 @@ export default function DismissiblePremiumNewBadge(dismissibleContent) {
             ];
             tmp15 = items1;
           }
-          obj1.colors = tmp15;
-          const obj2 = { containerStyle: closure_6.newTag, variant: tmp3 };
-          obj1.children = jsx(native.NewTag, { containerStyle: closure_6.newTag, variant: tmp3 });
+          obj4.colors = tmp15;
+          const obj5 = { containerStyle: closure_6.newTag, variant: tmp3 };
+          obj4.children = jsx(native.NewTag, { containerStyle: closure_6.newTag, variant: tmp3 });
           tmp6Result = jsx(LinearGradientDefault, {
             style: closure_6.newTagContainer,
             start: ConstantsIOS.HorizontalGradient.START,
@@ -102,20 +103,20 @@ export default function DismissiblePremiumNewBadge(dismissibleContent) {
       } else {
         let tmp3 = closure_1_5;
         if (null == closure_1_5) {
-          let obj = PlatformUtils;
           let str = "text-xs/bold";
           if (obj.isAndroid()) {
             str = "text-xxs/bold";
           }
           tmp3 = str;
+          obj = PlatformUtils;
         }
         if (dependencyMap) {
-          obj = { variant: tmp3, containerStyle: null };
+          const obj2 = { variant: tmp3, containerStyle: null };
           const items = [closure_6.newTagContainer, closure_1_1];
-          obj.containerStyle = items;
+          obj2.containerStyle = items;
           let tmp6Result = jsx(native.NewTag, { variant: tmp3, containerStyle: null });
         } else if (closure_1_3) {
-          obj = {
+          const obj3 = {
             variant: tmp3,
             containerStyle: closure_6.newTag,
             gradient: true,
@@ -128,7 +129,7 @@ export default function DismissiblePremiumNewBadge(dismissibleContent) {
             colors: Gradients.PREMIUM_TIER_2_TRI_COLOR,
           });
         } else {
-          const obj1 = {
+          const obj4 = {
             style: closure_6.newTagContainer,
             start: ConstantsIOS.HorizontalGradient.START,
             end: ConstantsIOS.HorizontalGradient.END,
@@ -143,9 +144,9 @@ export default function DismissiblePremiumNewBadge(dismissibleContent) {
             ];
             tmp15 = items1;
           }
-          obj1.colors = tmp15;
-          const obj2 = { containerStyle: closure_6.newTag, variant: tmp3 };
-          obj1.children = jsx(native.NewTag, { containerStyle: closure_6.newTag, variant: tmp3 });
+          obj4.colors = tmp15;
+          const obj5 = { containerStyle: closure_6.newTag, variant: tmp3 };
+          obj4.children = jsx(native.NewTag, { containerStyle: closure_6.newTag, variant: tmp3 });
           tmp6Result = jsx(LinearGradientDefault, {
             style: closure_6.newTagContainer,
             start: ConstantsIOS.HorizontalGradient.START,

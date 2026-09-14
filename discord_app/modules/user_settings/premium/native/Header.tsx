@@ -3,8 +3,8 @@ import util from "../../../../intl/index.native.tsx";
 import useThemeDefault from "../../../../hooks/useTheme.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
-import _modDef13554 from "../../../../../_runtime/metro/13554__.js";
 import _modDef13555 from "../../../../../_runtime/metro/13555__.js";
+import _modDef13556 from "../../../../../_runtime/metro/13556__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -21,25 +21,30 @@ const result = size.fileFinishedImporting("modules/user_settings/premium/native/
 
 export default function Header(style) {
   const tmp = closure_6();
-  let obj = { style: null, children: null };
+  const obj = { style: null, children: null };
   const items = [tmp.container, style.style];
   obj.style = items;
-  obj = { accessible: true, accessibilityLabel: null, accessibilityRole: "header", source: null };
+  const obj2 = { accessible: true, accessibilityLabel: null, accessibilityRole: "header", source: null };
   const tmp4 = useThemeDefault();
   const intl = util.intl;
-  obj.accessibilityLabel = intl.string(util.t.lpNrPu);
+  obj2.accessibilityLabel = intl.string(util.t.lpNrPu);
   const tmp8 = FastImageDefault;
   if (obj3.isThemeDark(tmp4)) {
-    let tmp2Result = _modDef13554;
+    let tmp2Result = _modDef13555;
   } else {
-    tmp2Result = _modDef13555;
+    tmp2Result = _modDef13556;
   }
-  obj.source = tmp2Result;
-  const items1 = [React4(tmp8, obj)];
-  obj = { style: tmp.headerText, variant: "text-md/medium", color: "mobile-text-heading-primary", children: null };
+  obj2.source = tmp2Result;
+  const items1 = [React4(tmp8, obj2)];
+  const obj4 = {
+    style: tmp.headerText,
+    variant: "text-md/medium",
+    color: "mobile-text-heading-primary",
+    children: null,
+  };
   const intl2 = util.intl;
-  obj.children = intl2.string(util.t.SD5MJW);
-  items1[1] = React4(Text_Text.Text, obj);
+  obj4.children = intl2.string(util.t.SD5MJW);
+  items1[1] = React4(Text_Text.Text, obj4);
   obj.children = items1;
   return hasOwnProperty(View, obj);
 }

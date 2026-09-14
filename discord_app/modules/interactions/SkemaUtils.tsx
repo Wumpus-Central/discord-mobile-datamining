@@ -11,9 +11,7 @@ function getFirstSkemaFieldError(errors, arg1) {
   const entries = Object.entries(errors);
   const obj = entries[Symbol.iterator]();
   while (obj !== undefined) {
-    let tmp6 = _slicedToArray(tmp4, 2);
-    let first = tmp6[0];
-    let tmp9 = tmp6[1];
+    [first, tmp9] = tmp4;
     if (first !== _errors) {
       if (null != tmp9) {
         if (typeof tmp9 === "object") {

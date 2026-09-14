@@ -2,9 +2,11 @@
 import GuildInviteUtils from "../../GuildInviteUtils.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
+const require = globalThis.__r;
+
 require = fn;
 const View = fn(17).View;
-const useGuildInviteSendStates = fn(13236).useGuildInviteSendStates;
+const useGuildInviteSendStates = fn(13237).useGuildInviteSendStates;
 const InviteSendStates = fn(7838).InviteSendStates;
 const jsx = fn(21).jsx;
 const size = fn(2);
@@ -26,20 +28,20 @@ export default noop.memo(function GuildInviteRow(arg0) {
     }
     return tmp2;
   });
-  let obj = { importantForAccessibility: "no-hide-descendants", accessibilityElementsHidden: true, children: null };
-  obj = { guild, size: null };
+  const obj = { importantForAccessibility: "no-hide-descendants", accessibilityElementsHidden: true, children: null };
+  const obj2 = { guild, size: null };
   const tmp3 = guild;
   const tmp4 = jsx(require("InviteButton"), { sendState: tmp, onPressSend: handlePress });
-  obj.size = require("GuildIcon").GuildIconSizes.SMALL;
+  obj2.size = require("GuildIcon").GuildIconSizes.SMALL;
   obj.children = jsx(require("GuildIcon"), { guild, size: null });
   const tmp5 = require("GuildIcon");
-  obj = { variant: "text-xs/medium", color: "text-default", children: null };
+  const obj3 = { variant: "text-xs/medium", color: "text-default", children: null };
   const intl = require("util").intl;
-  obj.children = intl.format(require("util").t.zRl6XR, { count: row.memberCount });
+  obj3.children = intl.format(require("util").t.zRl6XR, { count: row.memberCount });
   let tmp9 = tmp === InviteSendStates.SENDING;
-  const obj1 = { count: row.memberCount };
+  const obj4 = { count: row.memberCount };
   const tmp7 = (
-    <View variant="text-xs/medium" color="text-default">
+    <View importantForAccessibility="no-hide-descendants" accessibilityElementsHidden>
       {null}
     </View>
   );

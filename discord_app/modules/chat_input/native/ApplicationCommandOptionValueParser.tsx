@@ -102,7 +102,6 @@ const prototype = function ApplicationCommandOptionValueParser(channel) {
       return obj;
     });
     function matchUser() {
-      obj = closure_1;
       if (typeof closure_2_14 === "function") {
         let firstResult = null;
         if (arr7[0] === closure_2_12) {
@@ -122,8 +121,8 @@ const prototype = function ApplicationCommandOptionValueParser(channel) {
           id = firstResult.id;
         }
         if (null != id) {
-          obj = { type: "userMention", userId: firstResult.id };
-          let tmp7 = obj;
+          const obj2 = { type: "userMention", userId: firstResult.id };
+          let tmp7 = obj2;
         } else if (typeof tmp === "function") {
           let firstResult1 = null;
           if (arr7[0] === closure_2_12) {
@@ -143,8 +142,8 @@ const prototype = function ApplicationCommandOptionValueParser(channel) {
             id1 = firstResult1.id;
           }
           if (null != id1) {
-            obj = { type: "userMention", userId: firstResult1.id };
-            tmp7 = obj;
+            const obj3 = { type: "userMention", userId: firstResult1.id };
+            tmp7 = obj3;
           }
         } else {
           throw new TypeError("Trying to call a non-function");
@@ -153,6 +152,7 @@ const prototype = function ApplicationCommandOptionValueParser(channel) {
       } else {
         throw new TypeError("Trying to call a non-function");
       }
+      obj = closure_1;
     }
     if (type.type === channel(1894).ApplicationCommandOptionType.USER) {
       const matchUserResult = matchUser();
@@ -163,7 +163,7 @@ const prototype = function ApplicationCommandOptionValueParser(channel) {
         if (trimmed[0] === closure_2_12) {
           str = trimmed.slice(1);
         }
-        [tmp7, tmp8] = _slicedToArray(str.split("#", 2), 2);
+        [tmp7, tmp8] = str.split("#", 2);
         if (null != tmp8) {
           if ("0000" !== tmp8) {
             obj = /^[0-9]{4}$/;
@@ -172,8 +172,8 @@ const prototype = function ApplicationCommandOptionValueParser(channel) {
             }
           }
           if (null != findByTagResult) {
-            obj = { type: "userMention", userId: findByTagResult.id };
-            return obj;
+            let obj2 = { type: "userMention", userId: findByTagResult.id };
+            return obj2;
           }
         }
         findByTagResult = UserStore.findByTag(tmp7);
@@ -181,12 +181,11 @@ const prototype = function ApplicationCommandOptionValueParser(channel) {
       }
     }
     function matchRole() {
-      obj = closure_2;
       if (typeof closure_2_14 === "function") {
         let firstResult = null;
         if (arr7[0] === closure_2_12) {
           closure_1 = arr7.substr(closure_2_12.length);
-          const found = obj
+          const found = closure_2
             .sortBy((text) => -text.text.length)
             .filter((text) => {
               const formatted = closure_1.toLowerCase();
@@ -194,18 +193,19 @@ const prototype = function ApplicationCommandOptionValueParser(channel) {
             });
           const mapped = found.map((id) => ({ text: arr + id.text, id: id.id }));
           firstResult = mapped.first();
-          const sortByResult = obj.sortBy((text) => -text.text.length);
+          const sortByResult = closure_2.sortBy((text) => -text.text.length);
         }
         let id;
         if (firstResult != null) {
           id = firstResult.id;
         }
         if (null != id) {
-          obj = { type: "roleMention", roleId: firstResult.id };
+          const obj2 = { type: "roleMention", roleId: firstResult.id };
+          let obj3 = obj2;
         } else if ("@everyone" === arr7) {
-          obj = { type: "textMention", text: "@everyone" };
+          obj3 = { type: "textMention", text: "@everyone" };
         }
-        return obj;
+        return obj3;
       } else {
         throw new TypeError("Trying to call a non-function");
       }
@@ -234,8 +234,8 @@ const prototype = function ApplicationCommandOptionValueParser(channel) {
         }
         if (null != firstResult) {
           if (null != firstResult.id) {
-            obj = { type: "channelMention", channelId: firstResult.id };
-            return obj;
+            const obj4 = { type: "channelMention", channelId: firstResult.id };
+            return obj4;
           }
         }
       } else {
@@ -256,17 +256,17 @@ const prototype = function ApplicationCommandOptionValueParser(channel) {
           if (trimmed[0] === closure_2_12) {
             str4 = trimmed.slice(1);
           }
-          [tmp16, tmp17] = _slicedToArray(str4.split("#", 2), 2);
+          [tmp16, tmp17] = str4.split("#", 2);
           if (null != tmp17) {
             if ("0000" !== tmp17) {
-              let obj2 = /^[0-9]{4}$/;
-              if (obj2.test(tmp17)) {
+              if (obj3.test(tmp17)) {
                 let findByTagResult1 = UserStore.findByTag(tmp16, tmp17);
               }
+              obj3 = /^[0-9]{4}$/;
             }
             if (null != findByTagResult1) {
-              const obj1 = { type: "userMention", userId: findByTagResult1.id };
-              return obj1;
+              const obj5 = { type: "userMention", userId: findByTagResult1.id };
+              return obj5;
             }
           }
           findByTagResult1 = UserStore.findByTag(tmp16);
@@ -274,8 +274,7 @@ const prototype = function ApplicationCommandOptionValueParser(channel) {
         }
       }
     }
-    obj2 = { type: "text", text };
-    return obj2;
+    return { type: "text", text };
   };
   obj.channel = channel;
   return obj;
@@ -299,7 +298,7 @@ export const parseOptionValuesForSend = function parseOptionValuesForSend(channe
   if (null == command.options) {
     return {};
   } else {
-    let obj = {};
+    const obj3 = {};
     const options = command.options;
     const parserState = MessageParser.createParserState(channel);
     const iter = options[Symbol.iterator]();
@@ -313,20 +312,20 @@ export const parseOptionValuesForSend = function parseOptionValuesForSend(channe
           if (tmp4.type === Server.ApplicationCommandOptionType.STRING) {
             if (null == tmp4.choices) {
               if (!tmp4.autocomplete) {
-                obj = { type: "text", text: null };
+                let obj = { type: "text", text: null };
                 let obj2 = MessageParserDefault;
                 obj.text = obj2.parse(channel, tmp6[0].text, parserState).content;
                 let items = [obj];
-                obj[tmp4.name] = items;
+                obj3[tmp4.name] = items;
               }
             }
           }
         }
-        obj[tmp4.name] = tmp6;
+        obj3[tmp4.name] = tmp6;
       }
       continue;
     }
-    return obj;
+    return obj3;
   }
 };
 export const useApplicationCommandOptionValueParser = function useApplicationCommandOptionValueParser(channel) {
@@ -354,7 +353,6 @@ export const useApplicationCommandOptionValueParser = function useApplicationCom
           return obj;
         });
         function matchUser() {
-          obj = closure_1;
           if (typeof closure_2_14 === "function") {
             let firstResult = null;
             if (arr7[0] === closure_2_12) {
@@ -374,8 +372,8 @@ export const useApplicationCommandOptionValueParser = function useApplicationCom
               id = firstResult.id;
             }
             if (null != id) {
-              obj = { type: "userMention", userId: firstResult.id };
-              let tmp7 = obj;
+              const obj2 = { type: "userMention", userId: firstResult.id };
+              let tmp7 = obj2;
             } else if (typeof tmp === "function") {
               let firstResult1 = null;
               if (arr7[0] === closure_2_12) {
@@ -395,8 +393,8 @@ export const useApplicationCommandOptionValueParser = function useApplicationCom
                 id1 = firstResult1.id;
               }
               if (null != id1) {
-                obj = { type: "userMention", userId: firstResult1.id };
-                tmp7 = obj;
+                const obj3 = { type: "userMention", userId: firstResult1.id };
+                tmp7 = obj3;
               }
             } else {
               throw new TypeError("Trying to call a non-function");
@@ -405,6 +403,7 @@ export const useApplicationCommandOptionValueParser = function useApplicationCom
           } else {
             throw new TypeError("Trying to call a non-function");
           }
+          obj = closure_1;
         }
         if (type.type === channel(1894).ApplicationCommandOptionType.USER) {
           const matchUserResult = matchUser();
@@ -415,7 +414,7 @@ export const useApplicationCommandOptionValueParser = function useApplicationCom
             if (trimmed[0] === closure_2_12) {
               str = trimmed.slice(1);
             }
-            [tmp7, tmp8] = _slicedToArray(str.split("#", 2), 2);
+            [tmp7, tmp8] = str.split("#", 2);
             if (null != tmp8) {
               if ("0000" !== tmp8) {
                 obj = /^[0-9]{4}$/;
@@ -424,8 +423,8 @@ export const useApplicationCommandOptionValueParser = function useApplicationCom
                 }
               }
               if (null != findByTagResult) {
-                obj = { type: "userMention", userId: findByTagResult.id };
-                return obj;
+                let obj2 = { type: "userMention", userId: findByTagResult.id };
+                return obj2;
               }
             }
             findByTagResult = UserStore.findByTag(tmp7);
@@ -433,12 +432,11 @@ export const useApplicationCommandOptionValueParser = function useApplicationCom
           }
         }
         function matchRole() {
-          obj = closure_2;
           if (typeof closure_2_14 === "function") {
             let firstResult = null;
             if (arr7[0] === closure_2_12) {
               closure_1 = arr7.substr(closure_2_12.length);
-              const found = obj
+              const found = closure_2
                 .sortBy((text) => -text.text.length)
                 .filter((text) => {
                   const formatted = closure_1.toLowerCase();
@@ -446,18 +444,19 @@ export const useApplicationCommandOptionValueParser = function useApplicationCom
                 });
               const mapped = found.map((id) => ({ text: arr + id.text, id: id.id }));
               firstResult = mapped.first();
-              const sortByResult = obj.sortBy((text) => -text.text.length);
+              const sortByResult = closure_2.sortBy((text) => -text.text.length);
             }
             let id;
             if (firstResult != null) {
               id = firstResult.id;
             }
             if (null != id) {
-              obj = { type: "roleMention", roleId: firstResult.id };
+              const obj2 = { type: "roleMention", roleId: firstResult.id };
+              let obj3 = obj2;
             } else if ("@everyone" === arr7) {
-              obj = { type: "textMention", text: "@everyone" };
+              obj3 = { type: "textMention", text: "@everyone" };
             }
-            return obj;
+            return obj3;
           } else {
             throw new TypeError("Trying to call a non-function");
           }
@@ -486,8 +485,8 @@ export const useApplicationCommandOptionValueParser = function useApplicationCom
             }
             if (null != firstResult) {
               if (null != firstResult.id) {
-                obj = { type: "channelMention", channelId: firstResult.id };
-                return obj;
+                const obj4 = { type: "channelMention", channelId: firstResult.id };
+                return obj4;
               }
             }
           } else {
@@ -508,17 +507,17 @@ export const useApplicationCommandOptionValueParser = function useApplicationCom
               if (trimmed[0] === closure_2_12) {
                 str4 = trimmed.slice(1);
               }
-              [tmp16, tmp17] = _slicedToArray(str4.split("#", 2), 2);
+              [tmp16, tmp17] = str4.split("#", 2);
               if (null != tmp17) {
                 if ("0000" !== tmp17) {
-                  let obj2 = /^[0-9]{4}$/;
-                  if (obj2.test(tmp17)) {
+                  if (obj3.test(tmp17)) {
                     let findByTagResult1 = UserStore.findByTag(tmp16, tmp17);
                   }
+                  obj3 = /^[0-9]{4}$/;
                 }
                 if (null != findByTagResult1) {
-                  const obj1 = { type: "userMention", userId: findByTagResult1.id };
-                  return obj1;
+                  const obj5 = { type: "userMention", userId: findByTagResult1.id };
+                  return obj5;
                 }
               }
               findByTagResult1 = UserStore.findByTag(tmp16);
@@ -526,8 +525,7 @@ export const useApplicationCommandOptionValueParser = function useApplicationCom
             }
           }
         }
-        obj2 = { type: "text", text };
-        return obj2;
+        return { type: "text", text };
       };
       obj.channel = tmp;
       return obj;

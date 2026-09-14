@@ -2,6 +2,8 @@
 import noop from "../../../_runtime/metro/00019__.js";
 import DismissibleContentFrameworkStore from "DismissibleContentFrameworkStore.tsx";
 
+const require = globalThis.__r;
+
 const require = fn;
 const ContentDismissActionType = fn(1954).ContentDismissActionType;
 const size = fn(2);

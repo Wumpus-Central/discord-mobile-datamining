@@ -8,8 +8,8 @@ import FamilyCenterStore from "../../../parent_tools/FamilyCenterStore.tsx";
 
 require = fn;
 const FriendSourceFlags = fn(1074).FriendSourceFlags;
-fn(11601);
-let SettingBuilders = {
+const SettingBuilders = fn(11602);
+const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.IqlCSq);
@@ -17,7 +17,7 @@ let SettingBuilders = {
   parent: fn(8079).MobileUserSettings.FAMILY_CENTER_PARENTAL_CONTROLS_SETTINGS,
   useValue: function useFriendRequestsMutualFriendsSettingValue() {
     const selectedTeenId = controlledSetting(8770).useSelectedTeenId();
-    const ParentalControlledFriendSourceFlags = controlledSetting(14914).ParentalControlledFriendSourceFlags;
+    const ParentalControlledFriendSourceFlags = controlledSetting(14915).ParentalControlledFriendSourceFlags;
     controlledSetting = ParentalControlledFriendSourceFlags.useControlledSetting(selectedTeenId);
     const items = [controlledSetting];
     return noop.useMemo(() => UserSettingsUtils.computeFlags(controlledSetting), items).mutualFriends;
@@ -42,11 +42,10 @@ let SettingBuilders = {
     }
   },
   unsearchable: true,
-};
-SettingBuilders = SettingBuilders.createToggle(SettingBuilders);
+});
 const size = fn(2);
 let result = size.fileFinishedImporting(
   "modules/user_settings/defs/native/ParentalControlsFriendRequestsMutualFriendsSetting.tsx",
 );
 
-export default SettingBuilders;
+export default toggle;

@@ -3,6 +3,8 @@ import useGuildPowerupRollbackEnabledDefault from "useGuildPowerupRollbackEnable
 import usePowerupActiveStatusDefault from "usePowerupActiveStatus.tsx";
 import GuildStore from "../../../../stores/GuildStore.tsx";
 
+const require = globalThis.__r;
+
 const require = fn;
 const GuildPowerupsConstants = fn(4526);
 ({
@@ -17,10 +19,9 @@ const result = size.fileFinishedImporting("modules/premium/powerups/hooks/useGui
 export default function useGuildPowerupCardFooterConfig(arg0, skuId) {
   _require = arg0;
   const tmp3 = usePowerupActiveStatusDefault(arg0, skuId);
-  let obj = require("initialize");
   const items = [GuildStore];
   const items1 = [arg0];
-  const stateFromStores = obj.useStateFromStores(
+  const stateFromStores = require("initialize").useStateFromStores(
     items,
     () => {
       const guild = GuildStore.getGuild(closure_0);
@@ -45,12 +46,12 @@ export default function useGuildPowerupCardFooterConfig(arg0, skuId) {
   if (tmp8) {
     tmp8 = tmp3.type !== constants.TIER_OVERRIDE_ACTIVATED;
   }
-  obj = { showToggleButton: tmp8, showConfigureButton: null, isPowerupActive: null };
+  const obj2 = { showToggleButton: tmp8, showConfigureButton: null, isPowerupActive: null };
   let hasItem = tmp6;
   if (tmp6) {
     hasItem = set.has(skuId.skuId);
   }
-  obj.showConfigureButton = hasItem;
-  obj.isPowerupActive = tmp6;
-  return obj;
+  obj2.showConfigureButton = hasItem;
+  obj2.isPowerupActive = tmp6;
+  return obj2;
 }

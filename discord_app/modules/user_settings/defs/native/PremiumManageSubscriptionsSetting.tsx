@@ -6,14 +6,14 @@ import openBlockedPaymentsCountryActionSheetDefault from "../../../billing/nativ
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-fn(11601);
-let SettingBuilders = {
+const SettingBuilders = fn(11602);
+const route = SettingBuilders.createRoute({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t["z5YcJ+"]);
   },
   parent: null,
-  IconComponent: fn(15076).SubscriptionIcon,
+  IconComponent: fn(15077).SubscriptionIcon,
   usePreNavigationAction: function useCanNavigateToPaymentSetting() {
     return noop.useCallback(() => {
       const isPaymentsBlocked = BlockedPaymentsCountryExperiment.getIsPaymentsBlocked();
@@ -40,9 +40,8 @@ let SettingBuilders = {
       return require("PremiumManagePlanScreen").default;
     },
   },
-};
-SettingBuilders = SettingBuilders.createRoute(SettingBuilders);
+});
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/PremiumManageSubscriptionsSetting.tsx");
 
-export default SettingBuilders;
+export default route;

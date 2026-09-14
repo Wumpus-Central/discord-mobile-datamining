@@ -2,6 +2,8 @@
 import ReadStateStore from "../../stores/ReadStateStore.tsx";
 import UserGuildSettingsStore from "../../stores/UserGuildSettingsStore.tsx";
 
+const require = globalThis.__r;
+
 const require = fn;
 const UnreadSetting = fn(4818).UnreadSetting;
 const size = fn(2);

@@ -12,17 +12,23 @@ const isAvatarDecorationRecord = fn(7650).isAvatarDecorationRecord;
 const AVATAR_DECORATION_SIZE = fn(1397).AVATAR_DECORATION_SIZE;
 const jsxProd = fn(21);
 ({ jsx: closure_7, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
-fn(4636);
-let obj = { row: null, rowSpacer: null };
-obj = {
+const createStyles = fn(4636);
+let obj = {
+  row: {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
+    paddingHorizontal: fn(13301).GUTTER_SIZE,
+  },
+  rowSpacer: null,
+};
+let obj3 = {
   flexDirection: "row",
   alignItems: "center",
   justifyContent: "space-between",
-  paddingHorizontal: fn(13300).GUTTER_SIZE,
+  paddingHorizontal: fn(13301).GUTTER_SIZE,
 };
-obj.row = obj;
-const createStyles = { height: fn(13300).GUTTER_SIZE };
-obj.rowSpacer = createStyles;
+obj.rowSpacer = { height: fn(13301).GUTTER_SIZE };
 let closure_10 = createStyles.createStyles(obj);
 const memoResult = noop.memo((size) => {
   ({ items, selectedSkuId: require, setSelectedAvatarDecoration } = size);
@@ -32,32 +38,32 @@ const memoResult = noop.memo((size) => {
   }
   size = size.size;
   const tmp = closure_10();
-  items = [setSelectedAvatarDecoration];
+  const items1 = [setSelectedAvatarDecoration];
   const onPress = isTryItOut.useCallback(() => {
     setSelectedAvatarDecoration(null);
-  }, items);
+  }, items1);
   let obj = { children: null };
-  obj = { style: tmp.row, children: null };
-  const items1 = [...items, null, null];
-  const substr = items1.slice(0, useCollectibleListLayout.ROW_SIZE);
-  obj.children = substr.map((avatarDecoration, index) => {
+  let obj2 = { style: tmp.row, children: null };
+  const items2 = [...items, null, null];
+  const substr = items2.slice(0, useCollectibleListLayout.ROW_SIZE);
+  obj2.children = substr.map((avatarDecoration, index) => {
     if (avatarDecoration === useAvatarDecorationSections.NONE_ITEM) {
-      let obj = { size, onPress, isSelected: null == closure_1_0, asDefault: null != dependencyMap };
-      return React5(CollectiblesEditUserProfileListItems.EditCollectiblesListItemNone, obj, "none");
+      const obj2 = { size, onPress, isSelected: null == closure_1_0, asDefault: null != dependencyMap };
+      return React5(CollectiblesEditUserProfileListItems.EditCollectiblesListItemNone, obj2, "none");
     } else if (avatarDecoration === useAvatarDecorationSections.SHOP_ITEM) {
-      obj = { size, analyticsSource: AnalyticsLocationDefault.EDIT_AVATAR_DECORATION_SHEET };
-      return React5(CollectiblesEditUserProfileListItems.EditCollectiblesListItemShop, obj, "shop");
+      const obj3 = { size, analyticsSource: AnalyticsLocationDefault.EDIT_AVATAR_DECORATION_SHEET };
+      return React5(CollectiblesEditUserProfileListItems.EditCollectiblesListItemShop, obj3, "shop");
     } else if (isAvatarDecorationRecord(avatarDecoration)) {
-      const obj1 = {
+      const obj4 = {
         avatarDecoration,
         isSelected: closure_1_0 === avatarDecoration.skuId,
         setSelectedAvatarDecoration,
         isTryItOut,
         size,
       };
-      return React5(memoResult1, obj1, avatarDecoration.skuId);
+      return React5(memoResult1, obj4, avatarDecoration.skuId);
     } else {
-      obj = { style: null };
+      const obj = { style: null };
       size = { height: null, width: null };
       size.height = size;
       size.width = size;
@@ -65,10 +71,8 @@ const memoResult = noop.memo((size) => {
       return React5(View, obj, index);
     }
   });
-  const items2 = [closure_7(size, obj)];
-  obj = { style: tmp.rowSpacer };
-  items2[1] = closure_7(size, obj);
-  obj.children = items2;
+  const items3 = [closure_7(size, obj2), closure_7(size, { style: tmp.rowSpacer })];
+  obj.children = items3;
   return closure_9(closure_8, obj);
 });
 memoResult.displayName = "EditAvatarDecorationRow";
@@ -83,17 +87,19 @@ const memoResult1 = noop.memo((avatarDecoration) => {
   const callback = noop.useCallback(() => {
     setSelectedAvatarDecoration(avatarDecoration);
   }, items);
-  let obj = {
+  const obj = {
     skuId: avatarDecoration.skuId,
     isSelected,
     onPress: callback,
     size: avatarDecoration.size,
     isTryItOut: flag,
     accessibilityLabel: avatarDecoration.label,
-    children: null,
+    children: React5(CutoutableAvatarDecorationDefault, {
+      avatarDecoration,
+      size: AVATAR_DECORATION_SIZE,
+      animate: isSelected,
+    }),
   };
-  obj = { avatarDecoration, size: AVATAR_DECORATION_SIZE, animate: isSelected };
-  obj.children = React5(CutoutableAvatarDecorationDefault, obj);
   return React5(CollectiblesEditUserProfileListItems.EditCollectiblesListItemProduct, obj);
 });
 memoResult1.displayName = "EditAvatarDecorationItem";

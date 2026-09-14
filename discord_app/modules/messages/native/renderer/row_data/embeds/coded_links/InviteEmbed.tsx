@@ -21,14 +21,13 @@ const result = size.fileFinishedImporting(
 );
 
 export const createInviteEmbed = function createInviteEmbed(author, code, theme) {
-  let obj = InviteStore;
   const invite = InviteStore.getInvite(code);
   if (null == invite) {
     return null;
   } else {
     const currentUser = UserStore.getCurrentUser();
     if (currentUser != null) {
-      let id = currentUser.id;
+      const id = currentUser.id;
     }
     if (invite.state === constants.RESOLVING) {
       return invite_GuildInvite.createResolvingGuildInvite(theme);
@@ -36,7 +35,7 @@ export const createInviteEmbed = function createInviteEmbed(author, code, theme)
       if (invite.state !== constants.EXPIRED) {
         if (invite.state !== constants.BANNED) {
           if (invite.state === constants.ERROR) {
-            const inviteError = obj.getInviteError(code);
+            const inviteError = InviteStore.getInviteError(code);
             if (null == inviteError) {
               let erroredGuildInvite = invite_GuildInvite.createErroredGuildInvite(code, tmp28, theme);
             } else if (inviteError.code === constants2.INVITES_DISABLED) {
@@ -48,29 +47,28 @@ export const createInviteEmbed = function createInviteEmbed(author, code, theme)
           } else {
             const inviteType = InviteTypeUtils.getInviteType(invite);
             if (InviteTypes.GROUP_DM === inviteType) {
-              let tmp29Result = GroupDMInvite;
-              return tmp29Result.createGroupDMInvite(invite, tmp28, theme);
+              return GroupDMInvite.createGroupDMInvite(invite, tmp28, theme);
             } else if (tmp32.FRIEND === inviteType) {
-              tmp29Result = FriendInvite;
-              return tmp29Result.createFriendInvite(invite, tmp28, id, theme);
+              const tmp29Result10 = FriendInvite;
+              return tmp29Result10.createFriendInvite(invite, tmp28, id, theme);
             } else {
               const guildInviteExtendedType = InviteTypeUtils.getGuildInviteExtendedType(invite);
               if (InviteTypeUtils.GuildInviteExtendedType.EVENT === guildInviteExtendedType) {
                 return GuildScheduledEventEmbed.createGuildScheduledEventInviteEmbed(invite, theme);
               } else if (InviteTypeUtils.GuildInviteExtendedType.APPLICATION === guildInviteExtendedType) {
-                obj = { inviteCode: invite.code, theme };
-                return EmbeddedActivityInviteEmbed.createEmbeddedActivityInviteEmbed(obj);
+                const obj2 = { inviteCode: invite.code, theme };
+                return EmbeddedActivityInviteEmbed.createEmbeddedActivityInviteEmbed(obj2);
               } else if (InviteTypeUtils.GuildInviteExtendedType.PROFILE === guildInviteExtendedType) {
                 return GuildProfileInvite.createGuildProfileInvite(invite, theme);
               } else if (InviteTypeUtils.GuildInviteExtendedType.VOICE_CHANNEL === guildInviteExtendedType) {
                 const guild = invite.guild;
-                id = undefined;
+                let id1;
                 if (guild != null) {
-                  id = guild.id;
+                  id1 = guild.id;
                 }
-                if (null != id) {
-                  obj = { guildId: id, location: "mobile_invite_embed" };
-                  if (tmp29Result5.getVoiceChannelListInviteExperiment(obj).enabled) {
+                if (null != id1) {
+                  const obj3 = { guildId: id1, location: "mobile_invite_embed" };
+                  if (tmp29Result15.getVoiceChannelListInviteExperiment(obj3).enabled) {
                     const voiceChannelListInviteEmbed = VoiceChannelListInviteEmbed.createVoiceChannelListInviteEmbed(
                       invite,
                       theme,
@@ -78,15 +76,15 @@ export const createInviteEmbed = function createInviteEmbed(author, code, theme)
                     if (null != voiceChannelListInviteEmbed) {
                       return voiceChannelListInviteEmbed;
                     }
-                    const tmp29Result6 = VoiceChannelListInviteEmbed;
+                    const tmp29Result16 = VoiceChannelListInviteEmbed;
                   }
-                  tmp29Result5 = VoiceChannelListInviteExperiment;
+                  tmp29Result15 = VoiceChannelListInviteExperiment;
                 }
                 return invite_GuildInvite.createGuildInvite(invite, tmp28, theme);
               } else {
                 return invite_GuildInvite.createGuildInvite(invite, tmp28, theme);
               }
-              const tmp29Result1 = InviteTypeUtils;
+              const tmp29Result11 = InviteTypeUtils;
             }
           }
         }

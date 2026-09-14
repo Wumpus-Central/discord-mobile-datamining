@@ -5,36 +5,36 @@ import size from "../../../../../_runtime/metro/00002__.js";
 const NodeType = SettingRendererConstants.NodeType;
 const result = size.fileFinishedImporting("modules/settings/native/renderer/SettingBuilders.tsx");
 
-export const createToggle = function createToggle(SettingBuilders) {
-  const merged = Object.assign(SettingBuilders);
+export const createToggle = function createToggle(arg0) {
+  const merged = Object.assign(arg0);
   return { type: NodeType.TOGGLE };
 };
-export const createStatic = function createStatic(SettingBuilders) {
-  const merged = Object.assign(SettingBuilders);
+export const createStatic = function createStatic(arg0) {
+  const merged = Object.assign(arg0);
   return { type: NodeType.STATIC };
 };
-export const createRoute = function createRoute(SettingBuilders) {
-  const merged = Object.assign(SettingBuilders);
+export const createRoute = function createRoute(arg0) {
+  const merged = Object.assign(arg0);
   return { type: NodeType.ROUTE };
 };
-export const createPressable = function createPressable(SettingBuilders) {
-  const merged = Object.assign(SettingBuilders);
+export const createPressable = function createPressable(arg0) {
+  const merged = Object.assign(arg0);
   return { type: NodeType.PRESSABLE };
 };
-export const createVolumeSlider = function createVolumeSlider(SettingBuilders) {
-  const merged = Object.assign(SettingBuilders);
+export const createVolumeSlider = function createVolumeSlider(arg0) {
+  const merged = Object.assign(arg0);
   return { type: NodeType.VOLUME_SLIDER };
 };
-export const createSlider = function createSlider(SettingBuilders) {
-  const merged = Object.assign(SettingBuilders);
+export const createSlider = function createSlider(arg0) {
+  const merged = Object.assign(arg0);
   return { type: NodeType.SLIDER };
 };
-export const createGuildSelector = function createGuildSelector(SettingBuilders) {
-  const merged = Object.assign(SettingBuilders);
+export const createGuildSelector = function createGuildSelector(arg0) {
+  const merged = Object.assign(arg0);
   return { type: NodeType.GUILD_SELECTOR };
 };
-export const createRadio = function createRadio(SettingBuilders) {
-  const merged = Object.assign(SettingBuilders);
+export const createRadio = function createRadio(arg0) {
+  const merged = Object.assign(arg0);
   return { type: NodeType.RADIO };
 };
 export const createList = function createList(arg0) {

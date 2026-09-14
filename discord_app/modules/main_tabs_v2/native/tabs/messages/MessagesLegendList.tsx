@@ -34,10 +34,10 @@ export default noop.memo(
     const setAddedFriendSuggestions = data.setAddedFriendSuggestions;
     ({ accessibilityLabel, handleScrollAnimated, recycleItems } = listItemHeight);
     const ref = listLeft.useRef(null);
-    data = estimatedItemSize(listItemSuggestedFriendHeight[2])(data, { listItemHeight: estimatedItemSize });
-    const friendsHeaderIndex = data.friendsHeaderIndex;
-    const friendsHeaderOffset = data.friendsHeaderOffset;
-    const estimatedHeaderSize = data.listHeaderHeight;
+    const data2 = estimatedItemSize(listItemSuggestedFriendHeight[2])(data, { listItemHeight: estimatedItemSize });
+    const friendsHeaderIndex = data2.friendsHeaderIndex;
+    const friendsHeaderOffset = data2.friendsHeaderOffset;
+    const estimatedHeaderSize = data2.listHeaderHeight;
     let items = [estimatedHeaderSize];
     const imperativeHandle = listLeft.useImperativeHandle(
       arg1,
@@ -74,7 +74,7 @@ export default noop.memo(
           if ("separator" === kind) {
             return jsx(MessagesItemSeparatorDefault, {});
           } else if ("friendsHeader" === kind) {
-            let obj = { scrollPosition, stickyAt: friendsHeaderOffset, stickyTop: listTop, stickyLeft: listLeft };
+            const obj2 = { scrollPosition, stickyAt: friendsHeaderOffset, stickyTop: listTop, stickyLeft: listLeft };
             return jsx(MessagesItemSuggestedFriendsHeaderDefault, {
               scrollPosition,
               stickyAt: friendsHeaderOffset,
@@ -82,7 +82,7 @@ export default noop.memo(
               stickyLeft: listLeft,
             });
           } else if ("suggestedFriend" === kind) {
-            obj = {
+            const obj3 = {
               height: listItemSuggestedFriendHeight,
               suggestedFriend: friendSuggestions[item.row],
               onAddFriendSuggestions: setAddedFriendSuggestions,
@@ -93,7 +93,7 @@ export default noop.memo(
               onAddFriendSuggestions: setAddedFriendSuggestions,
             });
           } else if ("placeholder" === kind) {
-            obj = { row: item.row, height: estimatedItemSize };
+            const obj = { row: item.row, height: estimatedItemSize };
             return jsx(MessagesItemPlaceholderDefault, { row: item.row, height: estimatedItemSize });
           }
         }
@@ -187,7 +187,7 @@ export default noop.memo(
       ref,
       accessibilityLabel,
       contentContainerStyle,
-      data: data.listData,
+      data: data2.listData,
       estimatedHeaderSize,
       estimatedItemSize,
       getFixedItemSize,

@@ -3,36 +3,48 @@ import AgeVerificationMethodsV2 from "../../age_assurance/AgeVerificationMethods
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
+const require = globalThis.__r;
+
 require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/safety_hub/hooks/useAvailableAgeVerificationMethods.tsx");
 
 export const useAvailableAgeVerificationMethods = function useAvailableAgeVerificationMethods() {
-  [tmp2, require] = _slicedToArray(noop.useState({ methods: null, loading: true }), 2);
+  [tmp2, require] = noop.useState({ methods: null, loading: true });
   const effect = noop.useEffect(() => {
     c0 = false;
     const ageVerificationMethodsV2SuspendedUser = AgeVerificationMethodsV2.fetchAgeVerificationMethodsV2SuspendedUser();
     const nextPromise = ageVerificationMethodsV2SuspendedUser.then((methods) => {
-      closure_1_1(573);
-      const obj = {
+      closure_1_1(573).dispatch({
+        type: "AGE_VERIFICATION_METHODS_V2_LOAD_SUCCESS",
+        methods: methods.methods,
+        footerMessage: methods.footerMessage,
+        outageBannerMessage: methods.outageBannerMessage,
+      });
+      const obj = closure_1_1(573);
+      const obj2 = {
         type: "AGE_VERIFICATION_METHODS_V2_LOAD_SUCCESS",
         methods: methods.methods,
         footerMessage: methods.footerMessage,
         outageBannerMessage: methods.outageBannerMessage,
       };
-      obj.dispatch(obj);
       return _true(8556).getAvailableMethodsV2(methods.methods);
     });
     ageVerificationMethodsV2SuspendedUser
       .then((methods) => {
-        closure_1_1(573);
-        const obj = {
+        closure_1_1(573).dispatch({
+          type: "AGE_VERIFICATION_METHODS_V2_LOAD_SUCCESS",
+          methods: methods.methods,
+          footerMessage: methods.footerMessage,
+          outageBannerMessage: methods.outageBannerMessage,
+        });
+        const obj = closure_1_1(573);
+        const obj2 = {
           type: "AGE_VERIFICATION_METHODS_V2_LOAD_SUCCESS",
           methods: methods.methods,
           footerMessage: methods.footerMessage,
           outageBannerMessage: methods.outageBannerMessage,
         };
-        obj.dispatch(obj);
         return _true(8556).getAvailableMethodsV2(methods.methods);
       })
       .then((methods) => {

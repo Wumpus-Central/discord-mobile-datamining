@@ -21,11 +21,9 @@ export default function getActivityPlatform(session_id) {
   if (null != tmp3) {
     return tmp3;
   } else if (isListeningOnSpotifyDefault(session_id)) {
-    let tmpResult = PlatformsDefault;
-    return tmpResult.get(PlatformTypes.SPOTIFY);
+    return PlatformsDefault.get(PlatformTypes.SPOTIFY);
   } else if (isCrunchyrollActivityDefault(session_id)) {
-    tmpResult = PlatformsDefault;
-    return tmpResult.get(PlatformTypes.CRUNCHYROLL);
+    return PlatformsDefault.get(PlatformTypes.CRUNCHYROLL);
   } else if (isOnXboxDefault(session_id)) {
     return PlatformsDefault.get(PlatformTypes.XBOX);
   } else if (isOnPlayStationDefault(session_id)) {

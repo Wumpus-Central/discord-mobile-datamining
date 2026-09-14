@@ -7,7 +7,7 @@ import _slicedToArray from "../../_runtime/metro/00032__.js";
 require = fn;
 function parseEncoder(encoderImplementationName) {
   if (null == encoderImplementationName) {
-    return obj.UNKNOWN;
+    return obj2.UNKNOWN;
   } else {
     const _Object = Object;
     const keys = Object.keys(closure_13);
@@ -18,12 +18,12 @@ function parseEncoder(encoderImplementationName) {
         return closure_13[item10012];
       }
     }
-    return obj.UNCATEGORIZED;
+    return obj2.UNCATEGORIZED;
   }
 }
 function parseDecoder(decoderImplementationName) {
   if (null == decoderImplementationName) {
-    return obj.UNKNOWN;
+    return obj3.UNKNOWN;
   } else {
     const _Object = Object;
     const keys = Object.keys(closure_14);
@@ -34,7 +34,7 @@ function parseDecoder(decoderImplementationName) {
         return closure_14[item10012];
       }
     }
-    return obj.UNCATEGORIZED;
+    return obj3.UNCATEGORIZED;
   }
 }
 const React4 = [0, 500000, 1000000, 1500000, 2000000, 3000000, 4000000, 5000000, 6000000, 7000000, 8000000];
@@ -83,8 +83,8 @@ let set = new Set([
   "cryptorInvalidNonceCount",
 ]);
 let closure_9 = ["bytes", "packets", "framesNetwork", "framesCodec"];
-let obj = { H264: "H264", H265: "H265", VP8: "VP8", VP9: "VP9", AV1: "AV1", UNKNOWN: "UNKNOWN" };
-obj = {
+const CodecTypes = { H264: "H264", H265: "H265", VP8: "VP8", VP9: "VP9", AV1: "AV1", UNKNOWN: "UNKNOWN" };
+const obj2 = {
   NVIDIA_CUDA: "nvidia_cuda",
   NVIDIA_DIRECT_3D: "nvidia_direct_3d",
   NVIDIA_VULKAN: "nvidia_vulkan",
@@ -109,7 +109,7 @@ obj = {
   UNCATEGORIZED: "uncategorized",
   UNKNOWN: "unknown",
 };
-obj = {
+const obj3 = {
   VIDEOTOOLBOX: "videotoolbox",
   VP8_LIBVPX: "vp8_libvpx",
   ELECTRON: "electron",
@@ -125,49 +125,49 @@ obj = {
   UNKNOWN: "unknown",
 };
 let closure_13 = Object.freeze({
-  "mediafoundation direct3d intel": obj.WMF_DIRECT_3D_INTEL,
-  "mediafoundation direct3d nvidia": obj.WMF_DIRECT_3D_NVIDIA,
-  "mediafoundation direct3d amd": obj.WMF_DIRECT_3D_AMD,
-  mediafoundationvideoencodeaccelerator: obj.WMF_CHROME,
-  "nvidia: cuda": obj.NVIDIA_CUDA,
-  "nvidia: direct3d": obj.NVIDIA_DIRECT_3D,
-  "nvidia: vulkan": obj.NVIDIA_VULKAN,
-  "amd: direct3d": obj.AMD_DIRECT_3D,
-  "amd: vaapi": obj.AMD_VAAPI,
-  "intel: direct3d": obj.INTEL_DIRECT_3D,
-  "intel: vaapi": obj.INTEL_VAAPI,
-  intel: obj.INTEL,
-  videotoolbox: obj.VIDEOTOOLBOX,
-  openh264: obj.OPENH264,
-  libvpx: obj.VP8_LIBVPX,
-  "c2.exynos": obj.EXYNOS,
-  "omx.exynos": obj.EXYNOS,
-  "c2.qti": obj.QUALCOMM,
-  "omx.qcom": obj.QUALCOMM,
-  "c2.mtk": obj.MEDIATEK,
-  "omx.mtk": obj.MEDIATEK,
-  "mediafoundation sw": obj.WMF_SW,
-  "mediafoundation hw": obj.WMF_HW,
-  "mediafoundation direct3d": obj.WMF_DIRECT_3D,
+  "mediafoundation direct3d intel": obj2.WMF_DIRECT_3D_INTEL,
+  "mediafoundation direct3d nvidia": obj2.WMF_DIRECT_3D_NVIDIA,
+  "mediafoundation direct3d amd": obj2.WMF_DIRECT_3D_AMD,
+  mediafoundationvideoencodeaccelerator: obj2.WMF_CHROME,
+  "nvidia: cuda": obj2.NVIDIA_CUDA,
+  "nvidia: direct3d": obj2.NVIDIA_DIRECT_3D,
+  "nvidia: vulkan": obj2.NVIDIA_VULKAN,
+  "amd: direct3d": obj2.AMD_DIRECT_3D,
+  "amd: vaapi": obj2.AMD_VAAPI,
+  "intel: direct3d": obj2.INTEL_DIRECT_3D,
+  "intel: vaapi": obj2.INTEL_VAAPI,
+  intel: obj2.INTEL,
+  videotoolbox: obj2.VIDEOTOOLBOX,
+  openh264: obj2.OPENH264,
+  libvpx: obj2.VP8_LIBVPX,
+  "c2.exynos": obj2.EXYNOS,
+  "omx.exynos": obj2.EXYNOS,
+  "c2.qti": obj2.QUALCOMM,
+  "omx.qcom": obj2.QUALCOMM,
+  "c2.mtk": obj2.MEDIATEK,
+  "omx.mtk": obj2.MEDIATEK,
+  "mediafoundation sw": obj2.WMF_SW,
+  "mediafoundation hw": obj2.WMF_HW,
+  "mediafoundation direct3d": obj2.WMF_DIRECT_3D,
 });
 let closure_14 = Object.freeze({
-  videotoolbox: obj.VIDEOTOOLBOX,
-  libvpx: obj.VP8_LIBVPX,
-  electron: obj.ELECTRON,
-  ffmpeg: obj.FFMPEG,
-  dav1d: obj.DAV1D,
-  webrtc: obj.WEBRTC,
-  "c2.exynos": obj.EXYNOS,
-  "omx.exynos": obj.EXYNOS,
-  "c2.qti": obj.QUALCOMM,
-  "omx.qcom": obj.QUALCOMM,
-  "c2.mtk": obj.MEDIATEK,
-  "omx.mtk": obj.MEDIATEK,
-  d3d11videodecoder: obj.D3D11VIDEODECODER,
-  "c2.android": obj.ANDROID,
-  "omx.google": obj.ANDROID,
+  videotoolbox: obj3.VIDEOTOOLBOX,
+  libvpx: obj3.VP8_LIBVPX,
+  electron: obj3.ELECTRON,
+  ffmpeg: obj3.FFMPEG,
+  dav1d: obj3.DAV1D,
+  webrtc: obj3.WEBRTC,
+  "c2.exynos": obj3.EXYNOS,
+  "omx.exynos": obj3.EXYNOS,
+  "c2.qti": obj3.QUALCOMM,
+  "omx.qcom": obj3.QUALCOMM,
+  "c2.mtk": obj3.MEDIATEK,
+  "omx.mtk": obj3.MEDIATEK,
+  d3d11videodecoder: obj3.D3D11VIDEODECODER,
+  "c2.android": obj3.ANDROID,
+  "omx.google": obj3.ANDROID,
 });
-const obj3 = {
+const obj6 = {
   None: 0,
   [0]: "None",
   ClientSideDisableVideo: 1,
@@ -462,7 +462,7 @@ RawVideoStats["parseOutboundStats"] = function parseOutboundStats(resolution, ti
       screenshareFramesUnique: 0,
     });
     if (null != resolution) {
-      obj = {
+      const obj = {
         bytes: null,
         framesCodec: null,
         framesCodecError: null,
@@ -868,7 +868,7 @@ class InboundStats {
 const prototype = InboundStats.prototype;
 Object.defineProperty(prototype, "isVideoStopped", {
   get: function isVideoStopped() {
-    return this.videoStoppedReason !== obj3.None;
+    return this.videoStoppedReason !== obj6.None;
   },
   set: undefined,
 });
@@ -931,7 +931,7 @@ prototype["setVideoStopped"] = function setVideoStopped(arg0, SenderStopped) {
     videoStoppedWatch2.start();
   } else {
     self.videoStoppedReason = videoStoppedReason & ~SenderStopped;
-    if (self.videoStoppedReason === obj3.None) {
+    if (self.videoStoppedReason === obj6.None) {
       const statsWindow = self.statsWindow;
       statsWindow.splice(0);
       const videoStoppedWatch = self.videoStoppedWatch;
@@ -1188,10 +1188,10 @@ OutboundStats.prototype["appendTargetRates"] = function appendTargetRates(arg0, 
   }
 };
 
-export const CodecTypes = obj;
-export const Encoders = obj;
-export const Decoders = obj;
-export const VideoStoppedReasons = obj3;
+export { CodecTypes };
+export const Encoders = obj2;
+export const Decoders = obj3;
+export const VideoStoppedReasons = obj6;
 export { parseEncoder };
 export { parseDecoder };
 export const parseCodecType = function parseCodecType(name) {

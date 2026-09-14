@@ -21,12 +21,10 @@ export default noop.memo(function ChatInputGuardReturnToGameProfile(pendingGameP
   let tmp2Result;
   const tmp = closure_5();
   if (null != pendingGameProfileReturn.pendingGameProfileReturn.gameIconUrl) {
-    let obj = { style: tmp.icon, source: null };
-    let obj1 = AvatarUtils;
-    obj.source = obj1.makeSource(pendingGameProfileReturn.gameIconUrl);
-    tmp2Result = <Image style={tmp.icon} source={null} />;
+    const obj = { style: tmp.icon, source: AvatarUtils.makeSource(pendingGameProfileReturn.gameIconUrl) };
+    tmp2Result = <Image style={tmp.icon} source={AvatarUtils.makeSource(pendingGameProfileReturn.gameIconUrl)} />;
   }
-  obj = {
+  const obj3 = {
     type: "simple-action",
     icon: tmp2Result,
     message: null,
@@ -35,12 +33,22 @@ export default noop.memo(function ChatInputGuardReturnToGameProfile(pendingGameP
     actionOnPress: null,
   };
   const intl = util.intl;
-  obj = { gameName: pendingGameProfileReturn.gameName };
-  obj.message = intl.format(util.t.HRHaSF, obj);
+  obj3.message = intl.format(util.t.HRHaSF, {
+    gameName: pendingGameProfileReturn.pendingGameProfileReturn.pendingGameProfileReturn.gameName,
+  });
   const intl2 = util.intl;
-  obj.actionLabel = intl2.string(util.t.DjifDP);
-  obj1 = { color: nativeDefault.colors.WHITE };
-  obj.actionIcon = jsx(ArrowSmallLeftIcon.ArrowSmallLeftIcon, { color: nativeDefault.colors.WHITE });
-  obj.actionOnPress = pendingGameProfileReturn.pendingGameProfileReturn.onReturnToGameProfile;
-  return jsx(ChatInputGuardDefault, { gameName: pendingGameProfileReturn.gameName });
+  obj3.actionLabel = intl2.string(util.t.DjifDP);
+  const obj4 = { gameName: pendingGameProfileReturn.pendingGameProfileReturn.gameName };
+  obj3.actionIcon = jsx(ArrowSmallLeftIcon.ArrowSmallLeftIcon, { color: nativeDefault.colors.WHITE });
+  obj3.actionOnPress = pendingGameProfileReturn.pendingGameProfileReturn.onReturnToGameProfile;
+  return (
+    <tmp5
+      type="simple-action"
+      icon={tmp2Result}
+      message={null}
+      actionLabel={null}
+      actionIcon={null}
+      actionOnPress={null}
+    />
+  );
 });

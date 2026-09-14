@@ -19,20 +19,31 @@ function MutualFriendRow(mutualFriend) {
   const user = mutualFriend.mutualFriend.user;
   const guildId = mutualFriend.guildId;
   ({ onPress, start, end } = mutualFriend);
-  let obj = user(8333);
-  const avatarDecoration = obj.useAvatarDecoration(user);
-  let obj1 = user(504);
+  const tmp = closure_11();
+  const avatarDecoration = user(8333).useAvatarDecoration(user);
+  const obj = user(8333);
   const items = [PresenceStore];
-  const stateFromStoresObject = obj1.useStateFromStoresObject(items, () => ({
+  const stateFromStoresObject = user(504).useStateFromStoresObject(items, () => ({
     status: PresenceStore.getStatus(user.id),
     isMobileOnline: PresenceStore.isMobileOnline(user.id),
     isVROnline: PresenceStore.isVROnline(user.id),
   }));
   ({ status, isMobileOnline, isVROnline } = stateFromStoresObject);
-  obj = { onPress, icon: null, label: null, subLabel: null, start: null, end: null };
-  obj = {
+  const obj3 = { onPress, icon: null, label: null, subLabel: null, start: null, end: null };
+  const obj2 = user(504);
+  obj3.icon = closure_9(user(1176).Avatar, {
     user,
-    size: user(1178).AvatarSizes.REFRESH_MEDIUM_32,
+    size: user(1176).AvatarSizes.REFRESH_MEDIUM_32,
+    avatarDecoration,
+    status,
+    guildId,
+    isMobileOnline,
+    isVROnline,
+    autoStatusCutout: true,
+  });
+  const obj4 = {
+    user,
+    size: user(1176).AvatarSizes.REFRESH_MEDIUM_32,
     avatarDecoration,
     status,
     guildId,
@@ -40,14 +51,11 @@ function MutualFriendRow(mutualFriend) {
     isVROnline,
     autoStatusCutout: true,
   };
-  obj.icon = closure_9(user(1178).Avatar, obj);
-  const tmp = closure_11();
-  obj.label = NicknameUtilsDefault.getName(guildId, undefined, user);
-  obj1 = { userId: user.id, guildId, textStyle: tmp.activityStatusText };
-  obj.subLabel = closure_9(ActivityStatusDefault, obj1);
-  obj.start = start;
-  obj.end = end;
-  return closure_9(user(5686).TableRow, obj, user.id);
+  obj3.label = NicknameUtilsDefault.getName(guildId, undefined, user);
+  obj3.subLabel = closure_9(ActivityStatusDefault, { userId: user.id, guildId, textStyle: tmp.activityStatusText });
+  obj3.start = start;
+  obj3.end = end;
+  return closure_9(user(5686).TableRow, obj3, user.id);
 }
 class MutualGuildRow {
   constructor(arg0) {
@@ -60,40 +68,40 @@ class MutualGuildRow {
     tmp4 = closure_0;
     tmp5 = closure_2;
     obj = { onPress, icon: null, label: null, subLabel: null, start: null, end: null };
-    obj = { guild, size: null };
+    obj1 = { guild, size: null };
     tmp6 = closure_1(closure_2[14]);
-    obj.size = closure_0(closure_2[14]).GuildIconSizes.SMALL_32;
-    obj.icon = jsx(tmp6, obj);
+    obj1.size = closure_0(closure_2[14]).GuildIconSizes.SMALL_32;
+    obj.icon = jsx(tmp6, obj1);
     obj.label = guild.name;
-    obj1 = { style: tmp.mutualGuildSubLabel, children: null };
+    obj7 = { style: tmp.mutualGuildSubLabel, children: null };
     tmp3Result = hasAvatarForGuildResult;
     tmp7 = jsxs;
     tmp8 = View;
     if (hasAvatarForGuildResult) {
-      obj2 = { size: null, user: null, guildId: null };
-      obj2.size = tmp4(tmp5[11]).AvatarSizes.SIZE_16;
-      obj2.user = user;
-      obj2.guildId = guild.id;
-      tmp3Result = tmp3(tmp4(tmp5[11]).Avatar, obj2);
+      obj8 = { size: null, user: null, guildId: null };
+      obj8.size = tmp4(tmp5[11]).AvatarSizes.SIZE_16;
+      obj8.user = user;
+      obj8.guildId = guild.id;
+      tmp3Result = tmp3(tmp4(tmp5[11]).Avatar, obj8);
     }
     items = [, ,];
     items[0] = tmp3Result;
     tmp3Result1 = null != nick;
     if (tmp3Result1) {
-      obj3 = { variant: "text-xs/medium", color: "text-subtle", children: null };
-      obj3.children = nick;
-      tmp3Result1 = tmp3(tmp4(tmp5[15]).Text, obj3);
+      obj9 = { variant: "text-xs/medium", color: "text-subtle", children: null };
+      obj9.children = nick;
+      tmp3Result1 = tmp3(tmp4(tmp5[15]).Text, obj9);
     }
     items[1] = tmp3Result1;
     tmp3Result2 = null == nick && hasAvatarForGuildResult;
     if (tmp3Result2) {
-      obj4 = { variant: "text-xs/medium", color: "text-subtle", children: null };
-      obj4.children = user.username;
-      tmp3Result2 = tmp3(tmp4(tmp5[15]).Text, obj4);
+      obj10 = { variant: "text-xs/medium", color: "text-subtle", children: null };
+      obj10.children = user.username;
+      tmp3Result2 = tmp3(tmp4(tmp5[15]).Text, obj10);
     }
     items[2] = tmp3Result2;
-    obj1.children = items;
-    obj.subLabel = tmp7(tmp8, obj1);
+    obj7.children = items;
+    obj.subLabel = tmp7(tmp8, obj7);
     obj.start = start;
     obj.end = end;
     return tmp3(closure_0(closure_2[10]).TableRow, obj, guild.id);
@@ -104,23 +112,22 @@ get_ActivityIndicator = fn(17);
 const UserProfileSections = fn(8300).UserProfileSections;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-fn(4636);
-let createStyles = {
-  container: null,
+const createStyles = fn(4636);
+let obj2 = {
+  container: { flex: 1, gap: 20, paddingTop: nativeDefault.space.PX_8 },
   loadingState: null,
   emptyState: null,
   activityStatusText: null,
   mutualGuildSubLabel: null,
 };
-createStyles = { flex: 1, gap: 20, paddingTop: nativeDefault.space.PX_8 };
-createStyles.container = createStyles;
-createStyles.loadingState = { paddingTop: nativeDefault.space.PX_8, alignItems: "center" };
-createStyles.emptyState = { alignItems: "center" };
-let obj1 = { paddingTop: nativeDefault.space.PX_8, alignItems: "center" };
-createStyles.activityStatusText = { color: nativeDefault.colors.TEXT_SUBTLE };
-let obj2 = { color: nativeDefault.colors.TEXT_SUBTLE };
-createStyles.mutualGuildSubLabel = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4 };
-let closure_11 = createStyles.createStyles(createStyles);
+let obj3 = { flex: 1, gap: 20, paddingTop: nativeDefault.space.PX_8 };
+obj2.loadingState = { paddingTop: nativeDefault.space.PX_8, alignItems: "center" };
+obj2.emptyState = { alignItems: "center" };
+let obj4 = { paddingTop: nativeDefault.space.PX_8, alignItems: "center" };
+obj2.activityStatusText = { color: nativeDefault.colors.TEXT_SUBTLE };
+let obj5 = { color: nativeDefault.colors.TEXT_SUBTLE };
+obj2.mutualGuildSubLabel = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4 };
+let closure_11 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/native/UserProfileMutualsActionSheet.tsx");
 
@@ -132,30 +139,31 @@ export default function UserProfileMutualsActionSheet(user) {
   const tmp2 = _slicedToArray(noop.useState(0), 2);
   noop = tmp2[1];
   ({ mutualFriends, mutualGuilds } = useUserProfileMutualsDefault(user));
-  let obj1 = user(9922);
-  let obj = { pageWidth: tmp2[0], defaultIndex: null, items: null };
+  const obj = noop;
+  const tmp5 = useUserProfileMutualsDefault(user);
+  const obj3 = { pageWidth: tmp2[0], defaultIndex: null, items: null };
   let num = 0;
   if (user.section === UserProfileSections.MUTUAL_GUILDS) {
     num = 1;
   }
-  obj.defaultIndex = num;
+  obj3.defaultIndex = num;
   let length;
-  let tmp3Result = getMutualFriendsLabelDefault;
+  const obj2 = user(9922);
   if (mutualFriends != null) {
     length = mutualFriends.length;
   }
-  obj = { id: "mutual-friends", label: tmp3Result(length), page: null };
+  const obj4 = { id: "mutual-friends", label: getMutualFriendsLabelDefault(length), page: null };
   if (null == mutualFriends) {
-    obj1 = { style: tmp.loadingState, children: closure_9(closure_6, {}) };
-    let tmp10 = closure_9(closure_5, obj1);
+    const obj5 = { style: tmp.loadingState, children: closure_9(closure_6, {}) };
+    let tmp10 = closure_9(closure_5, obj5);
     let tmp9 = closure_9;
   } else if (0 === mutualFriends.length) {
-    const obj2 = { style: tmp.emptyState, children: closure_9(tmp6(12739).NoMutualFriends, {}) };
-    tmp10 = closure_9(closure_5, obj2);
+    const obj6 = { style: tmp.emptyState, children: closure_9(tmp6(12740).NoMutualFriends, {}) };
+    tmp10 = closure_9(closure_5, obj6);
     tmp9 = closure_9;
   } else {
     tmp9 = closure_9;
-    const obj3 = {
+    const obj7 = {
       data: mutualFriends,
       keyExtractor(user) {
         return user.user.id;
@@ -173,24 +181,24 @@ export default function UserProfileMutualsActionSheet(user) {
         });
       },
     };
-    tmp10 = closure_9(tmp6(11285).UserProfileStackedActionSheetList, obj3);
+    tmp10 = closure_9(tmp6(11286).UserProfileStackedActionSheetList, obj7);
   }
-  obj.page = tmp10;
-  const items = [obj];
+  obj4.page = tmp10;
+  const items = [obj4];
   let length1;
-  tmp3Result = getMutualGuildsLabelDefault;
+  const tmp3Result = getMutualFriendsLabelDefault;
   if (mutualGuilds != null) {
     length1 = mutualGuilds.length;
   }
-  const obj4 = { id: "mutual-guilds", label: tmp3Result(length1), page: null };
+  const obj8 = { id: "mutual-guilds", label: getMutualGuildsLabelDefault(length1), page: null };
   if (null == mutualGuilds) {
-    const obj5 = { style: tmp.loadingState, children: tmp9(closure_6, {}) };
-    let tmp9Result = tmp9(closure_5, obj5);
+    const obj9 = { style: tmp.loadingState, children: tmp9(closure_6, {}) };
+    let tmp9Result = tmp9(closure_5, obj9);
   } else if (0 === mutualGuilds.length) {
-    const obj6 = { style: tmp.emptyState, children: tmp9(tmp6(12733).NoMutualServers, {}) };
-    tmp9Result = tmp9(closure_5, obj6);
+    const obj10 = { style: tmp.emptyState, children: tmp9(tmp6(12734).NoMutualServers, {}) };
+    tmp9Result = tmp9(closure_5, obj10);
   } else {
-    const obj7 = {
+    const obj11 = {
       data: mutualGuilds,
       keyExtractor(guild) {
         return guild.guild.id;
@@ -208,27 +216,27 @@ export default function UserProfileMutualsActionSheet(user) {
         });
       },
     };
-    tmp9Result = tmp9(tmp6(11285).UserProfileStackedActionSheetList, obj7);
+    tmp9Result = tmp9(tmp6(11286).UserProfileStackedActionSheetList, obj11);
   }
-  obj4.page = tmp9Result;
-  items[1] = obj4;
-  obj.items = items;
-  const segmentedControlState = obj1.useSegmentedControlState(obj);
+  obj8.page = tmp9Result;
+  items[1] = obj8;
+  obj3.items = items;
+  const segmentedControlState = obj2.useSegmentedControlState(obj3);
   const callback = obj.useCallback((nativeEvent) => {
     closure_4(nativeEvent.nativeEvent.layout.width);
   }, []);
-  const obj8 = { scrollable: true, title: null, children: null };
-  const tmp5 = useUserProfileMutualsDefault(user);
+  const obj12 = { scrollable: true, title: null, children: null };
+  const tmp3Result3 = getMutualGuildsLabelDefault;
   const intl = tmp6(1114).intl;
-  obj8.title = intl.string(user(1114).t["l2/aLi"]);
-  const obj9 = { style: tmp.container, onLayout: callback, children: null };
-  const tmp3Result1 = UserProfileStackedActionSheetDefault;
+  obj12.title = intl.string(user(1114).t["l2/aLi"]);
+  const obj13 = { style: tmp.container, onLayout: callback, children: null };
+  const tmp3Result4 = UserProfileStackedActionSheetDefault;
   const items1 = [
-    tmp9(closure_5, { children: tmp9(user(12743).Tabs, { state: segmentedControlState }) }),
-    tmp9(user(12745).SegmentedControlPages, { state: segmentedControlState }),
+    tmp9(closure_5, { children: tmp9(user(12744).Tabs, { state: segmentedControlState }) }),
+    tmp9(user(12746).SegmentedControlPages, { state: segmentedControlState }),
   ];
-  obj9.children = items1;
-  obj8.children = closure_10(closure_5, obj9);
-  return tmp9(tmp3Result1, obj8);
+  obj13.children = items1;
+  obj12.children = closure_10(closure_5, obj13);
+  return tmp9(tmp3Result4, obj12);
 }
 export { MutualGuildRow };

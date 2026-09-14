@@ -1,11 +1,11 @@
 // discord_common/js/packages/protos/discord_protos/premium_marketing/v1/cta_button.tsx
-import _mod1188 from "../../../../../../../_runtime/metro/01188__.js";
+import _mod1186 from "../../../../../../../_runtime/metro/01186__.js";
 import wrappers from "../../../google/protobuf/wrappers.tsx";
 import localized_string from "../../common/v1/localized_string.tsx";
 import _slicedToArray from "../../../../../../../_runtime/metro/00032__.js";
 
 require = fn;
-let ButtonAction = {
+const ButtonAction = {
   UNSPECIFIED: 0,
   [0]: "UNSPECIFIED",
   OPEN_MARKETING_PAGE: 1,
@@ -25,7 +25,7 @@ let ButtonAction = {
   OPEN_GUILD_BOOST_CHECKOUT: 8,
   [8]: "OPEN_GUILD_BOOST_CHECKOUT",
 };
-const MessageType = fn(1188).MessageType;
+const MessageType = fn(1186).MessageType;
 class CTAButton$Type extends MessageType {
   constructor() {
     items = [, , , ,];
@@ -56,19 +56,18 @@ class CTAButton$Type extends MessageType {
         return require("wrappers").UInt64Value;
       },
     };
-    tmp = new tmp("discord_protos.premium_marketing.v1.CTAButton", items, T);
-    return tmp;
+    tmp1 = new tmp("discord_protos.premium_marketing.v1.CTAButton", items, T);
+    return tmp1;
   }
 }
-let prototype = CTAButton$Type.prototype;
+const prototype = CTAButton$Type.prototype;
 prototype["create"] = function create(arr) {
-  let obj = { copy: "", buttonAction: 0, deeplinkSection: "" };
+  const obj = { copy: "", buttonAction: 0, deeplinkSection: "" };
   const _Object = Object;
-  obj = { enumerable: false, value: this };
-  _Object.defineProperty(obj, _mod1188.MESSAGE_TYPE, obj);
+  _Object.defineProperty(obj, _mod1186.MESSAGE_TYPE, { enumerable: false, value: this });
   if (undefined !== arr) {
-    const result = _mod1188.reflectionMergePartial(this, obj, arr);
-    const tmpResult = _mod1188;
+    const result = _mod1186.reflectionMergePartial(this, obj, arr);
+    const tmpResult = _mod1186;
   }
   return obj;
 };
@@ -117,7 +116,7 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnk
           let skipResult = pos.skip(tmp6);
           if (false !== onRead) {
             if (true === onRead) {
-              onRead = _mod1188.UnknownFieldHandler.onRead;
+              onRead = _mod1186.UnknownFieldHandler.onRead;
             }
             let onReadResult = onRead(self.typeName, obj, tmp5, tmp6, skipResult);
           }
@@ -129,49 +128,49 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnk
 };
 prototype["internalBinaryWrite"] = function internalBinaryWrite(copy, tag, writeUnknownFields) {
   if ("" !== copy.copy) {
-    tag.tag(1, _mod1188.WireType.LengthDelimited).string(copy.copy);
-    const tagResult = tag.tag(1, _mod1188.WireType.LengthDelimited);
+    tag.tag(1, _mod1186.WireType.LengthDelimited).string(copy.copy);
+    const tagResult = tag.tag(1, _mod1186.WireType.LengthDelimited);
   }
   if (0 !== copy.buttonAction) {
-    tag.tag(2, _mod1188.WireType.Varint).int32(copy.buttonAction);
-    const tagResult1 = tag.tag(2, _mod1188.WireType.Varint);
+    tag.tag(2, _mod1186.WireType.Varint).int32(copy.buttonAction);
+    const tagResult1 = tag.tag(2, _mod1186.WireType.Varint);
   }
   if ("" !== copy.deeplinkSection) {
-    tag.tag(3, _mod1188.WireType.LengthDelimited).string(copy.deeplinkSection);
-    const tagResult2 = tag.tag(3, _mod1188.WireType.LengthDelimited);
+    tag.tag(3, _mod1186.WireType.LengthDelimited).string(copy.deeplinkSection);
+    const tagResult2 = tag.tag(3, _mod1186.WireType.LengthDelimited);
   }
   if (copy.copyLocalized) {
     const LocalizedString = localized_string.LocalizedString;
-    const tagResult3 = tag.tag(4, _mod1188.WireType.LengthDelimited);
+    const tagResult3 = tag.tag(4, _mod1186.WireType.LengthDelimited);
     const joined = LocalizedString.internalBinaryWrite(
       copy.copyLocalized,
-      tag.tag(4, _mod1188.WireType.LengthDelimited).fork(),
+      tag.tag(4, _mod1186.WireType.LengthDelimited).fork(),
       writeUnknownFields,
     ).join();
     const internalBinaryWriteResult = LocalizedString.internalBinaryWrite(
       copy.copyLocalized,
-      tag.tag(4, _mod1188.WireType.LengthDelimited).fork(),
+      tag.tag(4, _mod1186.WireType.LengthDelimited).fork(),
       writeUnknownFields,
     );
   }
   if (copy.navigableStorefrontApplicationId) {
     const UInt64Value = wrappers.UInt64Value;
-    const tagResult4 = tag.tag(5, _mod1188.WireType.LengthDelimited);
+    const tagResult4 = tag.tag(5, _mod1186.WireType.LengthDelimited);
     const joined1 = UInt64Value.internalBinaryWrite(
       copy.navigableStorefrontApplicationId,
-      tag.tag(5, _mod1188.WireType.LengthDelimited).fork(),
+      tag.tag(5, _mod1186.WireType.LengthDelimited).fork(),
       writeUnknownFields,
     ).join();
     const internalBinaryWriteResult1 = UInt64Value.internalBinaryWrite(
       copy.navigableStorefrontApplicationId,
-      tag.tag(5, _mod1188.WireType.LengthDelimited).fork(),
+      tag.tag(5, _mod1186.WireType.LengthDelimited).fork(),
       writeUnknownFields,
     );
   }
   let onWrite = writeUnknownFields.writeUnknownFields;
   if (false !== onWrite) {
     if (1 == onWrite) {
-      onWrite = _mod1188.UnknownFieldHandler.onWrite;
+      onWrite = _mod1186.UnknownFieldHandler.onWrite;
     }
     const self = this;
     onWrite(this.typeName, copy, tag);
@@ -192,14 +191,14 @@ let items = [
   { no: 3, name: "deeplink_section", kind: "scalar", T: 9 },
   ,
 ];
-ButtonAction = { no: 4, name: "copy_localized", kind: "message", T: null };
+const obj2 = { no: 4, name: "copy_localized", kind: "message", T: null };
 class T {
   constructor() {
     return closure_1_0(closure_1_1[2]).LocalizedString;
   }
 }
-ButtonAction.T = T;
-items[3] = ButtonAction;
+obj2.T = T;
+items[3] = obj2;
 items[4] = {
   no: 5,
   name: "navigable_storefront_application_id",
@@ -208,7 +207,7 @@ items[4] = {
     return require("wrappers").UInt64Value;
   },
 };
-prototype = new prototype(
+const prototype1 = new prototype(
   "discord_protos.premium_marketing.v1.CTAButton",
   items,
   tmp,
@@ -225,4 +224,4 @@ let result = size.fileFinishedImporting(
 );
 
 export { ButtonAction };
-export const CTAButton = prototype;
+export const CTAButton = prototype1;

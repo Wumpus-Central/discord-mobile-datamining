@@ -4,10 +4,12 @@ import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import GuildDirectoryStore from "../../GuildDirectoryStore.tsx";
 
+const require = globalThis.__r;
+
 const require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, Keyboard: closure_7 } = get_ActivityIndicator);
-const GuildDirectoryConstants = fn(12434);
+const GuildDirectoryConstants = fn(12435);
 ({ DirectoryEntryCategories: closure_9, getHubCategories: c10 } = GuildDirectoryConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
@@ -33,8 +35,8 @@ export default function GuildDirectoryEditDescriptionTemplate(buttonLabel) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -47,16 +49,16 @@ export default function GuildDirectoryEditDescriptionTemplate(buttonLabel) {
             throw value;
           } else if (arg0 === 2) {
             c5 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
             closure_0 = tmp8;
             noop(true);
             c3 = 2;
             c4 = 3;
             c5 = 1;
-            const obj1 = { value: _require(first1, defaultValue), done: false };
-            return obj1;
+            const obj4 = { value: _require(first1, defaultValue), done: false };
+            return obj4;
           }
         } else if (1 === tmp8) {
           c3 = 0;
@@ -80,7 +82,7 @@ export default function GuildDirectoryEditDescriptionTemplate(buttonLabel) {
           c3 = 0;
           closure_129_5(false);
           c5 = 3;
-          obj = { value, done: true };
+          const obj = { value, done: true };
           return obj;
         }
       } catch (tmp38) {
@@ -96,11 +98,10 @@ export default function GuildDirectoryEditDescriptionTemplate(buttonLabel) {
     }
   };
   const tmp = closure_13();
-  let obj = require("initialize");
+  const arr = closure_10(directoryChannelId);
   const items = [GuildDirectoryStore];
-  let obj1 = noop;
   let primaryCategoryId;
-  const stateFromStores = obj.useStateFromStores(items, () =>
+  const stateFromStores = require("initialize").useStateFromStores(items, () =>
     GuildDirectoryStore.getCurrentCategoryId(directoryChannelId),
   );
   if (entry != null) {
@@ -119,14 +120,14 @@ export default function GuildDirectoryEditDescriptionTemplate(buttonLabel) {
   if (str == null) {
     str = "";
   }
-  let tmp6Result = tmp6(obj1.useState(str), 2);
+  const tmp6Result = first1(noop.useState(str), 2);
   first1 = tmp6Result[0];
-  tmp6Result = tmp6(obj1.useState(false), 2);
-  [tmp11, c5] = tmp6Result;
-  const arr = closure_10(directoryChannelId);
-  [obj3, c6] = first1(obj1.useState(null), 2);
-  obj = { style: tmp.container, children: null };
-  obj = {
+  let obj = require("initialize");
+  [tmp11, c5] = first1(noop.useState(false), 2);
+  const tmp6Result3 = first1(noop.useState(false), 2);
+  [obj3, c6] = first1(noop.useState(null), 2);
+  let obj4 = { style: tmp.container, children: null };
+  const obj5 = {
     label: null,
     description: null,
     value: null,
@@ -139,41 +140,41 @@ export default function GuildDirectoryEditDescriptionTemplate(buttonLabel) {
     returnKeyType: "done",
   };
   const intl = require("util").intl;
-  obj.label = intl.string(require("util").t.FFFAGt);
+  obj5.label = intl.string(require("util").t.FFFAGt);
   const intl2 = require("util").intl;
-  obj.description = intl2.string(require("util").t["/zbXqm"]);
-  obj.value = first1;
-  obj.onChange = tmp6Result[1];
+  obj5.description = intl2.string(require("util").t["/zbXqm"]);
+  obj5.value = first1;
+  obj5.onChange = tmp6Result[1];
   const intl3 = require("util").intl;
-  obj.placeholder = intl3.string(require("util").t.VzuITC);
+  obj5.placeholder = intl3.string(require("util").t.VzuITC);
   let str2 = "default";
-  if (null != obj2) {
+  if (null != obj3) {
     str2 = "error";
   }
-  obj.status = str2;
+  obj5.status = str2;
   let anyErrorMessage;
-  if (obj2 != null) {
-    anyErrorMessage = obj2.getAnyErrorMessage();
+  if (obj3 != null) {
+    anyErrorMessage = obj3.getAnyErrorMessage();
   }
-  obj.errorMessage = anyErrorMessage;
-  const items1 = [closure_11(require("TextArea").TextArea, obj), ,];
-  obj1 = { title: null, defaultValue: null, onChange: null, hasIcons: false, children: null };
+  obj5.errorMessage = anyErrorMessage;
+  const items1 = [closure_11(require("TextArea").TextArea, obj5), ,];
+  const obj6 = { title: null, defaultValue: null, onChange: null, hasIcons: false, children: null };
   const intl4 = require("util").intl;
-  obj1.title = intl4.string(require("util").t.Olo8FB);
-  obj1.defaultValue = defaultValue;
-  obj1.onChange = function onChange(arg0) {
+  obj6.title = intl4.string(require("util").t.Olo8FB);
+  obj6.defaultValue = defaultValue;
+  obj6.onChange = function onChange(arg0) {
     React5.dismiss();
     closure_3(arg0);
   };
-  obj1.children = arr.map((label) =>
+  obj6.children = arr.map((label) =>
     closure_1_11(require("TableRadioRow").TableRadioRow, { label: label.label, value: label.value }, label.value),
   );
-  items1[1] = closure_11(require("TableRadioGroup").TableRadioGroup, obj1);
+  items1[1] = closure_11(require("TableRadioGroup").TableRadioGroup, obj6);
   let tmp17 = 0 === first1.length;
   if (!tmp17) {
     tmp17 = defaultValue === constants.ALL;
   }
-  obj2 = {
+  items1[2] = closure_11(require("components/Button/Button").Button, {
     disabled: tmp17,
     onPress: function handleSubmit() {
       const self = this;
@@ -188,8 +189,7 @@ export default function GuildDirectoryEditDescriptionTemplate(buttonLabel) {
     loading: tmp11,
     text: buttonLabel.buttonLabel,
     size: "lg",
-  };
-  items1[2] = closure_11(require("components/Button/Button").Button, obj2);
-  obj.children = items1;
-  return closure_12(c6, obj);
+  });
+  obj4.children = items1;
+  return closure_12(c6, obj4);
 }

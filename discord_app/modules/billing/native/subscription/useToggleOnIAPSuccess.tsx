@@ -3,6 +3,8 @@ import DispatcherDefault from "../../../../Dispatcher.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
+const require = globalThis.__r;
+
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/billing/native/subscription/useToggleOnIAPSuccess.tsx");
 
@@ -10,7 +12,7 @@ export default function useToggleOnIAPSuccess() {
   function toggleFlip() {
     importDefault((arg0) => !arg0);
   }
-  [tmp2, importDefault] = _slicedToArray(noop.useState(false), 2);
+  [tmp2, importDefault] = noop.useState(false);
   const effect = noop.useEffect(() => {
     const subscription = DispatcherDefault.subscribe("IAP_PURCHASE_PRODUCT_SUCCESS", toggleFlip);
     return () => {

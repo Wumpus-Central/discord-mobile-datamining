@@ -12,9 +12,8 @@ export const setLastSeenTimeMs = function setLastSeenTimeMs() {
 export const setTriggeredOnboardingContentMetadata = function setTriggeredOnboardingContentMetadata(
   triggeredOnboardingContentMetadata,
 ) {
-  const obj = {
+  DispatcherDefault.dispatch({
     type: "APP_LAUNCHER_ONBOARDING_SET_TRIGGERED_ONBOARDING_CONTENT_METADATA",
     triggeredOnboardingContentMetadata,
-  };
-  obj.dispatch(obj);
+  });
 };

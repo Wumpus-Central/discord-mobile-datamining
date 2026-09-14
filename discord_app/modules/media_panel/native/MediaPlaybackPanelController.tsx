@@ -7,9 +7,9 @@ import EmbeddedActivitiesStore from "../../activities/EmbeddedActivitiesStore.ts
 import VoicePanelStore from "../../voice_panel/VoicePanelStore.tsx";
 
 const require = fn;
-const MediaPlaybackPanelModes = fn(14625).MediaPlaybackPanelModes;
+const MediaPlaybackPanelModes = fn(14626).MediaPlaybackPanelModes;
 const ActivityPanelModes = fn(9635).ActivityPanelModes;
-let MorphablePanelModes = fn(12403).MorphablePanelModes;
+let MorphablePanelModes = fn(12404).MorphablePanelModes;
 const jsx = fn(21).jsx;
 let __initData = {
   code: "function MediaPlaybackPanelControllerTsx1(){const{mode,MediaPlaybackPanelModes,MorphablePanelModes}=this.__closure;switch(mode.get()){case MediaPlaybackPanelModes.PIP:{return MorphablePanelModes.PIP;}default:{return MorphablePanelModes.UNDEFINED;}}}",
@@ -24,9 +24,9 @@ export default function MediaPlaybackPanelController(children) {
   let sharedValue6;
   MorphablePanelModes = undefined;
   __initData = undefined;
-  let obj = sharedValue(sharedValue1[9]);
-  sharedValue = obj.useSharedValue(sharedValue6.PIP);
+  sharedValue = sharedValue(sharedValue1[9]).useSharedValue(sharedValue6.PIP);
   closure_129_0 = sharedValue;
+  let obj = sharedValue(sharedValue1[9]);
   sharedValue1 = sharedValue(sharedValue1[9]).useSharedValue({ height: 0, width: 0 });
   const obj3 = sharedValue(sharedValue1[9]);
   const sharedValue2 = sharedValue(sharedValue1[9]).useSharedValue({ x: -1, y: -1 });
@@ -59,11 +59,11 @@ export default function MediaPlaybackPanelController(children) {
     }
     return UNDEFINED;
   };
-  obj = { mode: sharedValue, MediaPlaybackPanelModes: sharedValue6, MorphablePanelModes };
-  fn.__closure = obj;
+  fn.__closure = { mode: sharedValue, MediaPlaybackPanelModes: sharedValue6, MorphablePanelModes };
   fn.__workletHash = 10375114450450;
   fn.__initData = __initData;
   const derivedValue = sharedValue(sharedValue1[9]).useDerivedValue(fn);
+  const obj2 = { mode: sharedValue, MediaPlaybackPanelModes: sharedValue6, MorphablePanelModes };
   const obj8 = sharedValue(sharedValue1[9]);
   const tmp8 = derivedValue(sharedValue1[10])();
   const tmp9 = derivedValue(sharedValue1[11])(derivedValue(sharedValue1[10])());

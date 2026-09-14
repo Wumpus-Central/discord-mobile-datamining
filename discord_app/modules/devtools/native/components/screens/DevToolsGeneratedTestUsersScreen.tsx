@@ -23,7 +23,7 @@ function PoolIdInput(onSubmit) {
   const first1 = tmp4[0];
   closure_4 = tmp5;
   const tmp = closure_14();
-  [tmp7, c5] = _slicedToArray(noop.useState(false), 2);
+  [tmp7, c5] = noop.useState(false);
   items = [first, first1, onSubmit];
   const callback = noop.useCallback(
     asyncGeneratorStep(async () => {
@@ -34,8 +34,8 @@ function PoolIdInput(onSubmit) {
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
-          let obj = { value, done: true };
-          return obj;
+          const obj2 = { value, done: true };
+          return obj2;
         } else {
           return { value: "HermesInternal", done: null };
         }
@@ -48,8 +48,8 @@ function PoolIdInput(onSubmit) {
               throw value;
             } else if (arg0 === 2) {
               c4 = 3;
-              obj = { value, done: true };
-              return obj;
+              const obj3 = { value, done: true };
+              return obj3;
             } else {
               closure_0 = tmp3;
               if (0 !== first.length) {
@@ -57,8 +57,8 @@ function PoolIdInput(onSubmit) {
                 c3 = 1;
                 c1 = 2;
                 c4 = 1;
-                const obj1 = { value: onSubmit(tmp24, first1), done: false };
-                return obj1;
+                const obj4 = { value: onSubmit(tmp24, first1), done: false };
+                return obj4;
               } else {
                 c4 = 3;
               }
@@ -79,7 +79,7 @@ function PoolIdInput(onSubmit) {
           c3 = 0;
           closure_128_5(false);
           c4 = 3;
-          obj = { value, done: true };
+          const obj = { value, done: true };
           return obj;
         } catch (tmp29) {
           closure_2 = tmp29;
@@ -143,17 +143,23 @@ function UserActionSheet(pool) {
     ActionSheetActionCreatorsDefault.hideActionSheet("generated-test-users");
     GeneratedTestUserActionCreators.loginAsGeneratedUser(pool.id, arg0);
   }, items);
-  let obj = { header: null, children: null };
-  obj = { title: pool.summary, subtitle: "" + usersForPool.length + " users" };
-  obj.header = closure_10(pool(7252).BottomSheetTitleHeader, obj);
-  obj = { style: { paddingHorizontal: usersForPool(576).space.PX_12 }, children: null };
-  const obj1 = { paddingHorizontal: usersForPool(576).space.PX_12 };
-  obj.children = closure_10(pool(5768).TableRowGroup, {
+  let obj = {
+    header: closure_10(pool(7252).BottomSheetTitleHeader, {
+      title: pool.summary,
+      subtitle: "" + usersForPool.length + " users",
+    }),
+    children: null,
+  };
+  const obj3 = { style: null, children: null };
+  const obj2 = { title: pool.summary, subtitle: "" + usersForPool.length + " users" };
+  obj3.style = { paddingHorizontal: usersForPool(576).space.PX_12 };
+  const obj4 = { paddingHorizontal: usersForPool(576).space.PX_12 };
+  obj3.children = closure_10(pool(5768).TableRowGroup, {
     title: "Select User to Login As",
     hasIcons: true,
     children: usersForPool.map((id, index) => {
       const obj = {
-        icon: closure_1_10(pool(11955).UserIcon, { size: "md" }),
+        icon: closure_1_10(pool(11956).UserIcon, { size: "md" }),
         label: null,
         subLabel: null,
         onPress() {
@@ -175,7 +181,7 @@ function UserActionSheet(pool) {
       return closure_1_10(pool(5686).TableRow, obj, id.id);
     }),
   });
-  obj.children = closure_10(closure_6, obj);
+  obj.children = closure_10(closure_6, obj3);
   return closure_10(pool(7253).BottomSheet, obj);
 }
 function PoolUsers(pool) {
@@ -185,9 +191,9 @@ function PoolUsers(pool) {
   const usersForPool = GeneratedTestUsersStore.getUsersForPool(id);
   items = [pool];
   const callback = noop.useCallback(() => {
-    let obj = { default: UserActionSheet };
-    obj = { pool };
-    obj.openLazy(Promise.resolve(obj), "generated-test-users", obj);
+    ActionSheetActionCreatorsDefault.openLazy(Promise.resolve({ default: UserActionSheet }), "generated-test-users", {
+      pool,
+    });
   }, items);
   return closure_10(pool(5686).TableRow, {
     icon: closure_10(items[Number(undefined, id) % items.length], {
@@ -207,34 +213,37 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
 let items = [
-  fn(11955).UserIcon,
+  fn(11956).UserIcon,
   fn(9532).ShieldIcon,
-  fn(11164).GiftIcon,
-  fn(15676).AchievementsIcon,
-  fn(12054).PiggyBankIcon,
-  fn(15678).TreehouseIcon,
+  fn(11165).GiftIcon,
+  fn(15678).AchievementsIcon,
+  fn(12055).PiggyBankIcon,
+  fn(15680).TreehouseIcon,
   fn(10089).SpeedometerIcon,
-  fn(15680).CompassIcon,
-  fn(13929).SignPostIcon,
-  fn(15682).CarIcon,
-  fn(15684).TrainIcon,
-  fn(15686).TeacupIcon,
-  fn(15688).InventoryIcon,
-  fn(10480).FoodIcon,
-  fn(15690).BurgerIcon,
-  fn(15692).MagicDoorIcon,
-  fn(15694).PawPrintIcon,
-  fn(15696).RecordPlayerIcon,
+  fn(15682).CompassIcon,
+  fn(13930).SignPostIcon,
+  fn(15684).CarIcon,
+  fn(15686).TrainIcon,
+  fn(15688).TeacupIcon,
+  fn(15690).InventoryIcon,
+  fn(10481).FoodIcon,
+  fn(15692).BurgerIcon,
+  fn(15694).MagicDoorIcon,
+  fn(15696).PawPrintIcon,
+  fn(15698).RecordPlayerIcon,
   fn(7483).SettingsIcon,
 ];
-fn(4636);
-let createStyles = { container: null, contentContainer: null, inputContainer: null };
-createStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 };
-createStyles.container = createStyles;
-createStyles.contentContainer = { padding: nativeDefault.space.PX_16 };
-let obj1 = { padding: nativeDefault.space.PX_16 };
-createStyles.inputContainer = { marginBottom: nativeDefault.space.PX_16 };
-let closure_14 = createStyles.createStyles(createStyles);
+const createStyles = fn(4636);
+let obj2 = {
+  container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 },
+  contentContainer: null,
+  inputContainer: null,
+};
+let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 };
+obj2.contentContainer = { padding: nativeDefault.space.PX_16 };
+let obj4 = { padding: nativeDefault.space.PX_16 };
+obj2.inputContainer = { marginBottom: nativeDefault.space.PX_16 };
+let closure_14 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting(
   "modules/devtools/native/components/screens/DevToolsGeneratedTestUsersScreen.tsx",
@@ -242,9 +251,8 @@ const result = size.fileFinishedImporting(
 
 export default function DevToolsGeneratedTestUsersScreen() {
   const tmp = closure_14();
-  let obj = stateFromStoresArray(504);
   items = [GeneratedTestUsersStore];
-  stateFromStoresArray = obj.useStateFromStoresArray(items, () => {
+  stateFromStoresArray = stateFromStoresArray(504).useStateFromStoresArray(items, () => {
     pools = pools.getPools();
     if (pools == null) {
       pools = [];
@@ -259,8 +267,8 @@ export default function DevToolsGeneratedTestUsersScreen() {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj3 = { value, done: true };
+        return obj3;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -273,22 +281,23 @@ export default function DevToolsGeneratedTestUsersScreen() {
             throw value;
           } else if (arg0 === 2) {
             c2 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj4 = { value, done: true };
+            return obj4;
           } else {
-            let obj1 = stateFromStoresArray(c2[32]);
             c3 = 1;
             c2 = 1;
-            obj1 = { value: null, done: false };
-            obj1.value = obj1.getGeneratedPoolById(stateFromStoresArray, closure_1);
-            return obj1;
+            const obj5 = {
+              value: stateFromStoresArray(c2[32]).getGeneratedPoolById(stateFromStoresArray, closure_1),
+              done: false,
+            };
+            return obj5;
           }
         } else if (arg0 === 1) {
           c2 = 3;
           throw value;
         } else if (arg0 === 2) {
           c2 = 3;
-          obj = { value, done: true };
+          const obj = { value, done: true };
           return obj;
         } else {
           c2 = 3;
@@ -300,10 +309,10 @@ export default function DevToolsGeneratedTestUsersScreen() {
       }
     }
   });
-  obj = { style: tmp.container, children: null };
-  obj = { contentContainerStyle: null, children: null };
+  const obj2 = { style: tmp.container, children: null };
+  let obj3 = { contentContainerStyle: null, children: null };
   const items1 = [tmp.contentContainer];
-  let obj1 = { paddingBottom: null };
+  let obj4 = { paddingBottom: null };
   const callback = noop.useCallback(function () {
     const self = this;
     const apply = stateFromStoresArray.apply;
@@ -314,27 +323,27 @@ export default function DevToolsGeneratedTestUsersScreen() {
     }
     return applyArgumentsResult;
   }, []);
-  obj1.paddingBottom =
+  obj4.paddingBottom =
     nativeDefault.space.PX_16 + useSafeAreaInsetsKeyboardAwareDefault({ includeKeyboardHeight: true }).insets.bottom;
-  items1[1] = obj1;
-  obj.contentContainerStyle = items1;
+  items1[1] = obj4;
+  obj3.contentContainerStyle = items1;
   const items2 = [closure_10(PoolIdInput, { onSubmit: callback })];
   let tmp5Result = 0 === stateFromStoresArray.length;
   if (tmp5Result) {
     tmp5Result = closure_10(stateFromStoresArray(5686).TableRow, { label: "No pools available." });
   }
-  const obj2 = { spacing: 16, children: null };
-  const obj3 = { title: "Generated Test User Pools", hasIcons: true, children: null };
+  let obj5 = { spacing: 16, children: null };
+  const obj6 = { title: "Generated Test User Pools", hasIcons: true, children: null };
   const items3 = [
     tmp5Result,
     stateFromStoresArray.map((pool, index) =>
       closure_2_10(PoolUsers, { pool, start: 0 === index, end: index === stateFromStoresArray.length - 1 }, pool.id),
     ),
   ];
-  obj3.children = items3;
-  items2[1] = closure_11(stateFromStoresArray(5768).TableRowGroup, obj3);
-  obj2.children = items2;
-  obj.children = closure_11(stateFromStoresArray(5054).Stack, obj2);
-  obj.children = closure_10(closure_7, obj);
-  return closure_10(closure_6, obj);
+  obj6.children = items3;
+  items2[1] = closure_11(stateFromStoresArray(5768).TableRowGroup, obj6);
+  obj5.children = items2;
+  obj3.children = closure_11(stateFromStoresArray(5054).Stack, obj5);
+  obj2.children = closure_10(closure_7, obj3);
+  return closure_10(closure_6, obj2);
 }

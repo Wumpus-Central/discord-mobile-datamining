@@ -56,9 +56,9 @@ function handleInitialLoad(arg0) {
     snapshot = totals;
   }
   closure_32 = guilds.reduce((acc, approximate_member_count) => {
-    let obj = {};
+    const obj = {};
     const merged = Object.assign(acc);
-    obj = {};
+    const obj2 = {};
     const merged1 = Object.assign(
       closure_0(1971).dangerouslyConstructGuildRecordFromUntypedObject(approximate_member_count),
     );
@@ -66,8 +66,8 @@ function handleInitialLoad(arg0) {
     if (num == null) {
       num = 0;
     }
-    obj.approximateMemberCount = num;
-    obj[approximate_member_count.id] = obj;
+    obj2.approximateMemberCount = num;
+    obj[approximate_member_count.id] = obj2;
     return obj;
   }, closure_32);
   if (linkedUsers === undefined) {
@@ -190,9 +190,9 @@ function handleTeenActivityFetch(familyCenterTeenActivity) {
       snapshot = totals;
     }
     closure_32 = guilds.reduce((acc, approximate_member_count) => {
-      let obj = {};
+      const obj = {};
       const merged = Object.assign(acc);
-      obj = {};
+      const obj2 = {};
       const merged1 = Object.assign(
         closure_0(1971).dangerouslyConstructGuildRecordFromUntypedObject(approximate_member_count),
       );
@@ -200,8 +200,8 @@ function handleTeenActivityFetch(familyCenterTeenActivity) {
       if (num == null) {
         num = 0;
       }
-      obj.approximateMemberCount = num;
-      obj[approximate_member_count.id] = obj;
+      obj2.approximateMemberCount = num;
+      obj[approximate_member_count.id] = obj2;
       return obj;
     }, closure_32);
     if (null != invoices) {
@@ -253,9 +253,9 @@ function handleTeenActivityMoreFetch(familyCenterTeenActivity) {
     }
   });
   closure_32 = guilds.reduce((acc, approximate_member_count) => {
-    let obj = {};
+    const obj = {};
     const merged = Object.assign(acc);
-    obj = {};
+    const obj2 = {};
     const merged1 = Object.assign(
       closure_0(1971).dangerouslyConstructGuildRecordFromUntypedObject(approximate_member_count),
     );
@@ -263,8 +263,8 @@ function handleTeenActivityMoreFetch(familyCenterTeenActivity) {
     if (num == null) {
       num = 0;
     }
-    obj.approximateMemberCount = num;
-    obj[approximate_member_count.id] = obj;
+    obj2.approximateMemberCount = num;
+    obj[approximate_member_count.id] = obj2;
     return obj;
   }, closure_32);
 }
@@ -315,19 +315,19 @@ function handleCurrentUserUpdate(user) {
     return false;
   } else {
     users = UserStore.getUsers();
-    let linked_users = user.linked_users;
+    const linked_users = user.linked_users;
     if (linked_users.some((item) => undefined === closure_0[item.user_id])) {
       const _Object = Object;
       if (user.linked_users.length > Object.keys(reduced).length) {
         const linkedUsers = FamilyCenterActionCreatorsDefault.fetchLinkedUsers();
       }
     }
-    linked_users = user.linked_users;
-    if (linked_users === undefined) {
-      linked_users = [];
+    let linked_users1 = user.linked_users;
+    if (linked_users1 === undefined) {
+      linked_users1 = [];
     }
-    if (linked_users.length > 0) {
-      reduced = linked_users.reduce((acc, user_id) => {
+    if (linked_users1.length > 0) {
+      reduced = linked_users1.reduce((acc, user_id) => {
         const obj = {};
         const merged = Object.assign(acc);
         obj[user_id.user_id] = user_id;
@@ -510,12 +510,12 @@ class FamilyCenterStore extends tmp4 {
       SET_LOCATION_METADATA: handleSetLocationMetadata,
       LOGOUT: reset,
     };
-    tmp = new tmp(obj, handleSetLocationMetadata, new.target, tmp);
-    closure_0 = tmp;
-    return tmp;
+    tmp1 = new tmp(obj, handleSetLocationMetadata, new.target, tmp);
+    closure_0 = tmp1;
+    return tmp1;
   }
 }
-let prototype = FamilyCenterStore.prototype;
+const prototype = FamilyCenterStore.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(UserStore);
 };
@@ -539,9 +539,9 @@ prototype["loadCache"] = function loadCache() {
     c13 = true;
     const guilds = snapshot.guilds;
     closure_32 = guilds.reduce((acc, approximate_member_count) => {
-      let obj = {};
+      const obj = {};
       const merged = Object.assign(acc);
-      obj = {};
+      const obj2 = {};
       const merged1 = Object.assign(
         closure_0(1971).dangerouslyConstructGuildRecordFromUntypedObject(approximate_member_count),
       );
@@ -549,8 +549,8 @@ prototype["loadCache"] = function loadCache() {
       if (num == null) {
         num = 0;
       }
-      obj.approximateMemberCount = num;
-      obj[approximate_member_count.id] = obj;
+      obj2.approximateMemberCount = num;
+      obj[approximate_member_count.id] = obj2;
       return obj;
     }, closure_32);
     const teenActivity = snapshot.teenActivity;
@@ -574,26 +574,26 @@ prototype["loadCache"] = function loadCache() {
     obj[TeenActionDisplayType.PURCHASES] = 0;
     obj[TeenActionDisplayType.GIFTS] = 0;
     snapshot = teenActivityTotals.reduce((acc, item) => {
-      [tmp2, tmp3] = _slicedToArray(item.split(":"), 2);
-      let obj = closure_0(7695);
-      const result = obj.displayTypeFromString(tmp2);
+      [tmp2, tmp3] = item.split(":");
+      const tmp = _slicedToArray(item.split(":"), 2);
+      const result = closure_0(7695).displayTypeFromString(tmp2);
       let tmp5 = acc;
       if (undefined !== result) {
-        obj = {};
+        const obj2 = {};
         const merged = Object.assign(acc);
         const _parseInt = parseInt;
-        obj[result] = parseInt(tmp3, 10);
-        tmp5 = obj;
+        obj2[result] = parseInt(tmp3, 10);
+        tmp5 = obj2;
       }
       return tmp5;
     }, obj);
   }
 };
 prototype["takeSnapshot"] = function takeSnapshot() {
-  let obj = { version: FamilyCenterStore.LATEST_SNAPSHOT_VERSION, data: null };
-  obj = { linkedUsers: Object.values(reduced), teenActivityTotals: null, teenActivity: null, guilds: null };
+  const obj = { version: FamilyCenterStore.LATEST_SNAPSHOT_VERSION, data: null };
+  const obj2 = { linkedUsers: Object.values(reduced), teenActivityTotals: null, teenActivity: null, guilds: null };
   const entries = Object.entries(snapshot);
-  obj.teenActivityTotals = entries.map((item) => {
+  obj2.teenActivityTotals = entries.map((item) => {
     [tmp, tmp2] = item;
     return "" + tmp + ":" + tmp2;
   });
@@ -602,9 +602,9 @@ prototype["takeSnapshot"] = function takeSnapshot() {
     items = [...Array.from(arr.values())];
     items.push.apply(items);
   });
-  obj.teenActivity = items;
-  obj.guilds = Object.values(closure_32);
-  obj.data = obj;
+  obj2.teenActivity = items;
+  obj2.guilds = Object.values(closure_32);
+  obj.data = obj2;
   return obj;
 };
 prototype["getSelectedTeenId"] = function getSelectedTeenId() {
@@ -706,8 +706,8 @@ prototype["getTotalGiftValue"] = function getTotalGiftValue() {
   if (flag) {
     tmp10 = null;
     if (null != currency) {
-      const obj = { amount: num, currency };
-      tmp10 = obj;
+      const obj2 = { amount: num, currency };
+      tmp10 = obj2;
     }
   }
   return tmp10;
@@ -791,7 +791,7 @@ obj.FAMILY_CENTER_LINK_CODE_FETCH_SUCCESS = handleLinkCodeFetch;
 obj.FAMILY_CENTER_HANDLE_TAB_SELECT = handleTabSelect;
 obj.SET_LOCATION_METADATA = handleSetLocationMetadata;
 obj.LOGOUT = reset;
-prototype = new prototype(
+const prototype1 = new prototype(
   obj,
   tmp2,
   tmp,
@@ -805,8 +805,8 @@ prototype = new prototype(
   handleLinkedUserFetch,
   handleTeenActivityFetch,
 );
-closure_129_0 = prototype;
+closure_129_0 = prototype1;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/parent_tools/FamilyCenterStore.tsx");
 
-export default prototype;
+export default prototype1;

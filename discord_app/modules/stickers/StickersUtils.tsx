@@ -146,17 +146,17 @@ export const getStickerAssetUrl = (format_type, arg1) => {
           if (format_type.format_type === StickersTypes.StickerFormat.APNG) {
             str6 = "";
             if (flag) {
-              let tmp23Result = PlatformUtils;
               str6 = "";
               if (!tmp23Result.isAndroid()) {
                 str6 = "&passthrough=false";
               }
+              tmp23Result = PlatformUtils;
             }
           }
           const _Math = Math;
-          tmp23Result = ImageLoaderUtils;
           const _location2 = location;
-          const bound = Math.min(2, tmp23Result.getDevicePixelRatio());
+          const bound = Math.min(2, ImageLoaderUtils.getDevicePixelRatio());
+          const tmp23Result4 = ImageLoaderUtils;
           const _HermesInternal3 = HermesInternal;
           return (
             "" +
@@ -172,10 +172,10 @@ export const getStickerAssetUrl = (format_type, arg1) => {
         }
       } else {
         if (format_type.format_type === StickersTypes.StickerFormat.LOTTIE) {
-          if (tmp23Result2.isWeb()) {
+          if (tmp23Result6.isWeb()) {
             return STICKER_ASSETResult;
           }
-          tmp23Result2 = PlatformUtils;
+          tmp23Result6 = PlatformUtils;
         }
         const _location = location;
         const _HermesInternal = HermesInternal;

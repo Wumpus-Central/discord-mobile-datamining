@@ -1,11 +1,10 @@
 // discord_app/modules/action_sheet/native/ShowShareActionSheetUtils.tsx
 import Constants from "../../../Constants.tsx";
-import PlatformUtils from "../../../utils/PlatformUtils.tsx";
 import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
+import PlatformUtils from "../../../utils/PlatformUtils.tsx";
 import URLUtilsDefault from "../../../utils/URLUtils.tsx";
 import FileExtensionUtils from "../../media/FileExtensionUtils.tsx";
 import SharePreparingModalConstants from "../../share/native/SharePreparingModalConstants.tsx";
-import MobileMediaViewerShareExperiment from "../../media_viewer/native/MobileMediaViewerShareExperiment.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
 const AnalyticEvents = Constants.AnalyticEvents;
@@ -14,51 +13,50 @@ const result = size.fileFinishedImporting("modules/action_sheet/native/ShowShare
 
 export const trackAppClickInNativeShareSheet = function trackAppClickInNativeShareSheet(app, _location) {
   let str = app;
-  let obj = AnalyticsUtilsDefault;
   if (app == null) {
     str = "";
   }
-  obj = { package_name: str, location: _location };
-  obj.track(AnalyticEvents.NATIVE_SHARE_SHEET_APP_CLICKED, obj);
+  AnalyticsUtilsDefault.track(AnalyticEvents.NATIVE_SHARE_SHEET_APP_CLICKED, {
+    package_name: str,
+    location: _location,
+  });
 };
 export const getMediaShareParams = function getMediaShareParams(source) {
-  let obj = MobileMediaViewerShareExperiment;
   if (obj.getMobileMediaViewerShareExperimentEnabled("shareMediaSource")) {
     if (true !== source.disableDownload) {
       if (null != source.shareURI) {
         if (obj11.isDiscordDirectAssetUrl(source.shareURI)) {
-          let tmpResult = PlatformUtils;
           if (tmpResult.isAndroid()) {
-            obj = { presentDelayMs };
+            const obj2 = { presentDelayMs };
           }
           ({ videoURI, contentType } = source);
           if (null != videoURI) {
-            tmpResult = FileExtensionUtils;
-            const decideFileExtensionResult = tmpResult.decideFileExtension(videoURI, contentType, true);
-            obj = { mediaFallbackUrl: videoURI, mediaStagingOptions: null };
+            const decideFileExtensionResult = FileExtensionUtils.decideFileExtension(videoURI, contentType, true);
+            const obj3 = { mediaFallbackUrl: videoURI, mediaStagingOptions: null };
             let tmp11;
             if (null != decideFileExtensionResult) {
-              const obj1 = { url: videoURI, fileExtension: decideFileExtensionResult, mediaType: "video" };
+              const obj4 = { url: videoURI, fileExtension: decideFileExtensionResult, mediaType: "video" };
               const merged = Object.assign(tmp3);
-              tmp11 = obj1;
+              tmp11 = obj4;
             }
-            obj.mediaStagingOptions = tmp11;
-            return obj;
+            obj3.mediaStagingOptions = tmp11;
+            return obj3;
           } else {
             const decideFileExtensionResult1 = FileExtensionUtils.decideFileExtension(source.uri, contentType, true);
-            const obj2 = { mediaFallbackUrl: source.shareURI, mediaStagingOptions: null };
+            const obj5 = { mediaFallbackUrl: source.shareURI, mediaStagingOptions: null };
             let tmp6;
             if (null != decideFileExtensionResult1) {
-              const obj3 = { url: source.uri, fileExtension: decideFileExtensionResult1, mediaType: "image" };
+              const obj6 = { url: source.uri, fileExtension: decideFileExtensionResult1, mediaType: "image" };
               const merged1 = Object.assign(tmp3);
-              tmp6 = obj3;
+              tmp6 = obj6;
             }
-            obj2.mediaStagingOptions = tmp6;
-            return obj2;
+            obj5.mediaStagingOptions = tmp6;
+            return obj5;
           }
+          tmpResult = PlatformUtils;
         } else {
-          const obj4 = { mediaFallbackUrl: source.shareURI };
-          return obj4;
+          const obj7 = { mediaFallbackUrl: source.shareURI };
+          return obj7;
         }
         obj11 = URLUtilsDefault;
       }

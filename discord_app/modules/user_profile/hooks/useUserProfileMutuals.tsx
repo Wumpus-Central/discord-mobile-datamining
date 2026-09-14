@@ -6,6 +6,8 @@ import UserAffinitiesV2Store from "../../user_affinities/UserAffinitiesV2Store.t
 import SortedGuildStore from "../../../stores/SortedGuildStore.tsx";
 import UserProfileStore from "../UserProfileStore.tsx";
 
+const require = globalThis.__r;
+
 require = fn;
 const useMemo = fn(19).useMemo;
 const size = fn(2);
@@ -13,10 +15,9 @@ const result = size.fileFinishedImporting("modules/user_profile/hooks/useUserPro
 
 export default function useUserProfileMutuals(arg0) {
   _require = arg0;
-  let obj = require("initialize");
   let items = [UserProfileStore];
   const tmp = stateFromStores(
-    obj.useStateFromStoresArray(items, () => {
+    require("initialize").useStateFromStoresArray(items, () => {
       const items = [
         UserProfileStore.getMutualFriendsCount(closure_0.id),
         UserProfileStore.getMutualFriends(closure_0.id),
@@ -31,6 +32,7 @@ export default function useUserProfileMutuals(arg0) {
   [tmp2, tmp3] = tmp;
   importDefault = tmp3;
   dependencyMap = tmp4;
+  let obj = require("initialize");
   const items1 = [UserAffinitiesV2Store];
   stateFromStores = require("initialize").useStateFromStores(items1, () => userAffinitiesMap.getUserAffinitiesMap());
   const obj2 = require("initialize");
@@ -84,7 +86,7 @@ export default function useUserProfileMutuals(arg0) {
   const obj3 = require("initialize");
   const tmp9 = usePrevValueDefault(tmp2);
   const tmp10 = usePrevValueDefault(tmp7);
-  obj = {
+  const obj4 = {
     mutualFriendsCount: tmp2,
     mutualFriends: null,
     mutualGuilds: null,
@@ -94,12 +96,12 @@ export default function useUserProfileMutuals(arg0) {
   if (tmp7 == null) {
     tmp7 = tmp10;
   }
-  obj.mutualFriends = tmp7;
+  obj4.mutualFriends = tmp7;
   if (tmp8 == null) {
     tmp8 = tmp11;
   }
-  obj.mutualGuilds = tmp8;
-  obj.isFetching = tmp[3];
-  obj.isFetchingFriends = tmp[4];
-  return obj;
+  obj4.mutualGuilds = tmp8;
+  obj4.isFetching = tmp[3];
+  obj4.isFetchingFriends = tmp[4];
+  return obj4;
 }

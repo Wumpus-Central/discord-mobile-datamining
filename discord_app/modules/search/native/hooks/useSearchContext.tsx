@@ -3,6 +3,8 @@ import _modDef38 from "../../../../../_runtime/metro/00038__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import ChannelStore from "../../../../stores/ChannelStore.tsx";
 
+const require = globalThis.__r;
+
 const require = fn;
 const SearchTypes = fn(1074).SearchTypes;
 const size = fn(2);
@@ -23,9 +25,11 @@ export const getChannelDetailsSearchContext = function getChannelDetailsSearchCo
 ) {
   if (isThreadResult) {
     _modDef38(null != guildId, "[useChannelDetailsSearchContext] Thread must have a guild id");
-    let obj = { type: SearchTypes.THREAD, guildId, channelId };
+    const obj2 = { type: SearchTypes.THREAD, guildId, channelId };
+    let obj = obj2;
   } else if (null == guildId) {
-    obj = { type: SearchTypes.CHANNEL, channelId };
+    const obj3 = { type: SearchTypes.CHANNEL, channelId };
+    obj = obj3;
   } else {
     obj = { type: SearchTypes.GUILD_CHANNEL, guildId, channelId };
   }
@@ -49,9 +53,11 @@ export const useChannelDetailsSearchContext = function useChannelDetailsSearchCo
   return noop.useMemo(() => {
     if (stateFromStores) {
       _modDef38(null != guildId, "[useChannelDetailsSearchContext] Thread must have a guild id");
-      let obj = { type: SearchTypes.THREAD, guildId, channelId };
+      const obj2 = { type: SearchTypes.THREAD, guildId, channelId };
+      let obj = obj2;
     } else if (null == guildId) {
-      obj = { type: SearchTypes.CHANNEL, channelId };
+      const obj3 = { type: SearchTypes.CHANNEL, channelId };
+      obj = obj3;
     } else {
       obj = { type: SearchTypes.GUILD_CHANNEL, guildId, channelId };
     }

@@ -61,13 +61,14 @@ prototype["handleConnect"] = function handleConnect(v) {
   const sockets = this.sockets;
   sockets.add(v);
   this.onConnect(v);
-  let obj = { v: v.version, config: null };
-  obj = {
-    cdn_host: window.GLOBAL_ENV.CDN_HOST,
-    api_endpoint: window.GLOBAL_ENV.API_ENDPOINT,
-    environment: "production",
+  const obj = {
+    v: v.version,
+    config: {
+      cdn_host: window.GLOBAL_ENV.CDN_HOST,
+      api_endpoint: window.GLOBAL_ENV.API_ENDPOINT,
+      environment: "production",
+    },
   };
-  obj.config = obj;
   if (v.transport === TransportTypes.IPC) {
     const currentUser = self.getCurrentUser();
     if (null == currentUser) {
@@ -77,6 +78,11 @@ prototype["handleConnect"] = function handleConnect(v) {
     }
   }
   self.dispatch(v, null, constants3.DISPATCH, constants5.READY, obj);
+  const obj2 = {
+    cdn_host: window.GLOBAL_ENV.CDN_HOST,
+    api_endpoint: window.GLOBAL_ENV.API_ENDPOINT,
+    environment: "production",
+  };
 };
 prototype["handleDisconnect"] = function handleDisconnect(abortController, arg1) {
   abortController = abortController.abortController;
@@ -94,27 +100,26 @@ prototype["handleRequest"] = function handleRequest(socket, arg1) {
       if ("" !== closure_2.nonce) {
         const cmd = closure_2.cmd;
         if (null == self.commands[cmd]) {
-          let obj = { errorCode: constants4.INVALID_COMMAND };
+          const obj2 = { errorCode: constants4.INVALID_COMMAND };
           const _HermesInternal = HermesInternal;
-          let tmp15 = RPCErrorDefault;
-          tmp15 = new tmp15(obj, "Invalid command: " + closure_2.cmd);
-          throw tmp15;
+          const tmp152 = new RPCErrorDefault(obj2, "Invalid command: " + closure_2.cmd);
+          throw tmp152;
         } else if (validateScopeDefault(socket.authorization.scopes, tmp25.scope)) {
-          obj = { command: cmd, scope: null, application_id: null, socket_scope: null };
+          const obj3 = { command: cmd, scope: null, application_id: null, socket_scope: null };
           if (typeof tmp25.scope === "object") {
             const _JSON = JSON;
             let scope = JSON.stringify(tmp25.scope);
           } else {
             scope = tmp25.scope;
           }
-          obj.scope = scope;
-          obj.application_id = socket.application.id;
-          obj.socket_scope = socket.authorization.scopes.toString();
-          AnalyticsUtilsDefault.track(constants.RPC_COMMAND_SENT, obj);
+          obj3.scope = scope;
+          obj3.application_id = socket.application.id;
+          obj3.socket_scope = socket.authorization.scopes.toString();
+          AnalyticsUtilsDefault.track(constants.RPC_COMMAND_SENT, obj3);
           fn(tmp25);
           const tmp29Result = AnalyticsUtilsDefault;
         } else {
-          obj = { errorCode: constants4.INVALID_PERMISSIONS };
+          const obj = { errorCode: constants4.INVALID_PERMISSIONS };
           const tmp6 = new RPCErrorDefault(obj, "Not authenticated or invalid scope");
           throw tmp6;
         }
@@ -127,27 +132,26 @@ prototype["handleRequest"] = function handleRequest(socket, arg1) {
       if ("" !== closure_2.nonce) {
         const cmd = closure_2.cmd;
         if (null == self.commands[cmd]) {
-          let obj = { errorCode: constants4.INVALID_COMMAND };
+          const obj2 = { errorCode: constants4.INVALID_COMMAND };
           const _HermesInternal = HermesInternal;
-          let tmp15 = RPCErrorDefault;
-          tmp15 = new tmp15(obj, "Invalid command: " + closure_2.cmd);
-          throw tmp15;
+          const tmp152 = new RPCErrorDefault(obj2, "Invalid command: " + closure_2.cmd);
+          throw tmp152;
         } else if (validateScopeDefault(socket.authorization.scopes, tmp25.scope)) {
-          obj = { command: cmd, scope: null, application_id: null, socket_scope: null };
+          const obj3 = { command: cmd, scope: null, application_id: null, socket_scope: null };
           if (typeof tmp25.scope === "object") {
             const _JSON = JSON;
             let scope = JSON.stringify(tmp25.scope);
           } else {
             scope = tmp25.scope;
           }
-          obj.scope = scope;
-          obj.application_id = socket.application.id;
-          obj.socket_scope = socket.authorization.scopes.toString();
-          AnalyticsUtilsDefault.track(constants.RPC_COMMAND_SENT, obj);
+          obj3.scope = scope;
+          obj3.application_id = socket.application.id;
+          obj3.socket_scope = socket.authorization.scopes.toString();
+          AnalyticsUtilsDefault.track(constants.RPC_COMMAND_SENT, obj3);
           fn(tmp25);
           const tmp29Result = AnalyticsUtilsDefault;
         } else {
-          obj = { errorCode: constants4.INVALID_PERMISSIONS };
+          const obj = { errorCode: constants4.INVALID_PERMISSIONS };
           const tmp6 = new RPCErrorDefault(obj, "Not authenticated or invalid scope");
           throw tmp6;
         }
@@ -163,8 +167,8 @@ prototype["handleRequest"] = function handleRequest(socket, arg1) {
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
-          let obj = { value, done: true };
-          return obj;
+          const obj2 = { value, done: true };
+          return obj2;
         } else {
           return { value: "HermesInternal", done: null };
         }
@@ -177,8 +181,8 @@ prototype["handleRequest"] = function handleRequest(socket, arg1) {
               throw value;
             } else if (arg0 === 2) {
               c5 = 3;
-              obj = { value, done: true };
-              return obj;
+              const obj3 = { value, done: true };
+              return obj3;
             } else {
               closure_3 = tmp5;
               closure_130_0 = closure_0;
@@ -187,8 +191,8 @@ prototype["handleRequest"] = function handleRequest(socket, arg1) {
               if (null != closure_0.validation) {
                 c4 = 1;
                 c5 = 1;
-                const obj1 = { value: closure_0.getJoi(), done: false };
-                return obj1;
+                const obj4 = { value: closure_0.getJoi(), done: false };
+                return obj4;
               } else {
                 tmp28(closure_0);
                 c5 = 3;
@@ -212,7 +216,7 @@ prototype["handleRequest"] = function handleRequest(socket, arg1) {
             });
           }
           c5 = 3;
-          obj = { value, done: true };
+          let obj = { value, done: true };
           return obj;
         } catch (tmp9) {
           c5 = tmp;
@@ -236,27 +240,26 @@ prototype["handleRequest"] = function handleRequest(socket, arg1) {
       if ("" !== closure_2.nonce) {
         const cmd = closure_2.cmd;
         if (null == self.commands[cmd]) {
-          let obj = { errorCode: constants4.INVALID_COMMAND };
+          const obj2 = { errorCode: constants4.INVALID_COMMAND };
           const _HermesInternal = HermesInternal;
-          let tmp15 = RPCErrorDefault;
-          tmp15 = new tmp15(obj, "Invalid command: " + closure_2.cmd);
-          throw tmp15;
+          const tmp152 = new RPCErrorDefault(obj2, "Invalid command: " + closure_2.cmd);
+          throw tmp152;
         } else if (validateScopeDefault(socket.authorization.scopes, tmp25.scope)) {
-          obj = { command: cmd, scope: null, application_id: null, socket_scope: null };
+          const obj3 = { command: cmd, scope: null, application_id: null, socket_scope: null };
           if (typeof tmp25.scope === "object") {
             const _JSON = JSON;
             let scope = JSON.stringify(tmp25.scope);
           } else {
             scope = tmp25.scope;
           }
-          obj.scope = scope;
-          obj.application_id = socket.application.id;
-          obj.socket_scope = socket.authorization.scopes.toString();
-          AnalyticsUtilsDefault.track(constants.RPC_COMMAND_SENT, obj);
+          obj3.scope = scope;
+          obj3.application_id = socket.application.id;
+          obj3.socket_scope = socket.authorization.scopes.toString();
+          AnalyticsUtilsDefault.track(constants.RPC_COMMAND_SENT, obj3);
           fn(tmp25);
           const tmp29Result = AnalyticsUtilsDefault;
         } else {
-          obj = { errorCode: constants4.INVALID_PERMISSIONS };
+          const obj = { errorCode: constants4.INVALID_PERMISSIONS };
           const tmp6 = new RPCErrorDefault(obj, "Not authenticated or invalid scope");
           throw tmp6;
         }
@@ -273,8 +276,8 @@ prototype["handleRequest"] = function handleRequest(socket, arg1) {
           if (arg0 === 1) {
             throw value;
           } else if (arg0 === 2) {
-            let obj = { value, done: true };
-            return obj;
+            const obj2 = { value, done: true };
+            return obj2;
           } else {
             return { value: "HermesInternal", done: null };
           }
@@ -287,8 +290,8 @@ prototype["handleRequest"] = function handleRequest(socket, arg1) {
                 throw value;
               } else if (arg0 === 2) {
                 c5 = 3;
-                obj = { value, done: true };
-                return obj;
+                const obj3 = { value, done: true };
+                return obj3;
               } else {
                 closure_3 = tmp5;
                 closure_130_0 = closure_0;
@@ -297,8 +300,8 @@ prototype["handleRequest"] = function handleRequest(socket, arg1) {
                 if (null != closure_0.validation) {
                   c4 = 1;
                   c5 = 1;
-                  const obj1 = { value: closure_0.getJoi(), done: false };
-                  return obj1;
+                  const obj4 = { value: closure_0.getJoi(), done: false };
+                  return obj4;
                 } else {
                   tmp28(closure_0);
                   c5 = 3;
@@ -322,7 +325,7 @@ prototype["handleRequest"] = function handleRequest(socket, arg1) {
               });
             }
             c5 = 3;
-            obj = { value, done: true };
+            let obj = { value, done: true };
             return obj;
           } catch (tmp9) {
             c5 = tmp;
@@ -343,18 +346,18 @@ prototype["handleRequest"] = function handleRequest(socket, arg1) {
     })
     .then((handler) => {
       if (socket.source.type === TransportTypes.POST_MESSAGE) {
-        let obj = { cmd: closure_2.cmd, iframeId: socket.source.iframeId, args: null };
+        const obj2 = { cmd: closure_2.cmd, iframeId: socket.source.iframeId, args: null };
         let args = closure_2.args;
         if (args == null) {
           args = {};
         }
-        obj.args = args;
-        const interceptRpcCommandResult = obj.interceptRpcCommand(obj);
+        obj2.args = args;
+        const interceptRpcCommandResult = RpcCommandInterception.interceptRpcCommand(obj2);
         if (null != interceptRpcCommandResult) {
           return interceptRpcCommandResult.result;
         }
       }
-      obj = {
+      const obj3 = {
         socket,
         server: self,
         cmd: closure_2.cmd,
@@ -368,40 +371,39 @@ prototype["handleRequest"] = function handleRequest(socket, arg1) {
       if (args1 == null) {
         args1 = {};
       }
-      obj.args = args1;
-      obj.isSocketConnected = function isSocketConnected() {
+      obj3.args = args1;
+      obj3.isSocketConnected = function isSocketConnected() {
         sockets = sockets.sockets;
         return sockets.has(socket);
       };
-      obj.signal = socket.abortController.signal;
-      return handler.handler(obj);
+      obj3.signal = socket.abortController.signal;
+      return handler.handler(obj3);
     });
   new Promise((fn) => {
     if (null != closure_2.nonce) {
       if ("" !== closure_2.nonce) {
         const cmd = closure_2.cmd;
         if (null == self.commands[cmd]) {
-          let obj = { errorCode: constants4.INVALID_COMMAND };
+          const obj2 = { errorCode: constants4.INVALID_COMMAND };
           const _HermesInternal = HermesInternal;
-          let tmp15 = RPCErrorDefault;
-          tmp15 = new tmp15(obj, "Invalid command: " + closure_2.cmd);
-          throw tmp15;
+          const tmp152 = new RPCErrorDefault(obj2, "Invalid command: " + closure_2.cmd);
+          throw tmp152;
         } else if (validateScopeDefault(socket.authorization.scopes, tmp25.scope)) {
-          obj = { command: cmd, scope: null, application_id: null, socket_scope: null };
+          const obj3 = { command: cmd, scope: null, application_id: null, socket_scope: null };
           if (typeof tmp25.scope === "object") {
             const _JSON = JSON;
             let scope = JSON.stringify(tmp25.scope);
           } else {
             scope = tmp25.scope;
           }
-          obj.scope = scope;
-          obj.application_id = socket.application.id;
-          obj.socket_scope = socket.authorization.scopes.toString();
-          AnalyticsUtilsDefault.track(constants.RPC_COMMAND_SENT, obj);
+          obj3.scope = scope;
+          obj3.application_id = socket.application.id;
+          obj3.socket_scope = socket.authorization.scopes.toString();
+          AnalyticsUtilsDefault.track(constants.RPC_COMMAND_SENT, obj3);
           fn(tmp25);
           const tmp29Result = AnalyticsUtilsDefault;
         } else {
-          obj = { errorCode: constants4.INVALID_PERMISSIONS };
+          const obj = { errorCode: constants4.INVALID_PERMISSIONS };
           const tmp6 = new RPCErrorDefault(obj, "Not authenticated or invalid scope");
           throw tmp6;
         }
@@ -418,8 +420,8 @@ prototype["handleRequest"] = function handleRequest(socket, arg1) {
           if (arg0 === 1) {
             throw value;
           } else if (arg0 === 2) {
-            let obj = { value, done: true };
-            return obj;
+            const obj2 = { value, done: true };
+            return obj2;
           } else {
             return { value: "HermesInternal", done: null };
           }
@@ -432,8 +434,8 @@ prototype["handleRequest"] = function handleRequest(socket, arg1) {
                 throw value;
               } else if (arg0 === 2) {
                 c5 = 3;
-                obj = { value, done: true };
-                return obj;
+                const obj3 = { value, done: true };
+                return obj3;
               } else {
                 closure_3 = tmp5;
                 closure_130_0 = closure_0;
@@ -442,8 +444,8 @@ prototype["handleRequest"] = function handleRequest(socket, arg1) {
                 if (null != closure_0.validation) {
                   c4 = 1;
                   c5 = 1;
-                  const obj1 = { value: closure_0.getJoi(), done: false };
-                  return obj1;
+                  const obj4 = { value: closure_0.getJoi(), done: false };
+                  return obj4;
                 } else {
                   tmp28(closure_0);
                   c5 = 3;
@@ -467,7 +469,7 @@ prototype["handleRequest"] = function handleRequest(socket, arg1) {
               });
             }
             c5 = 3;
-            obj = { value, done: true };
+            let obj = { value, done: true };
             return obj;
           } catch (tmp9) {
             c5 = tmp;
@@ -488,18 +490,18 @@ prototype["handleRequest"] = function handleRequest(socket, arg1) {
     })
     .then((handler) => {
       if (socket.source.type === TransportTypes.POST_MESSAGE) {
-        let obj = { cmd: closure_2.cmd, iframeId: socket.source.iframeId, args: null };
+        const obj2 = { cmd: closure_2.cmd, iframeId: socket.source.iframeId, args: null };
         let args = closure_2.args;
         if (args == null) {
           args = {};
         }
-        obj.args = args;
-        const interceptRpcCommandResult = obj.interceptRpcCommand(obj);
+        obj2.args = args;
+        const interceptRpcCommandResult = RpcCommandInterception.interceptRpcCommand(obj2);
         if (null != interceptRpcCommandResult) {
           return interceptRpcCommandResult.result;
         }
       }
-      obj = {
+      const obj3 = {
         socket,
         server: self,
         cmd: closure_2.cmd,
@@ -513,13 +515,13 @@ prototype["handleRequest"] = function handleRequest(socket, arg1) {
       if (args1 == null) {
         args1 = {};
       }
-      obj.args = args1;
-      obj.isSocketConnected = function isSocketConnected() {
+      obj3.args = args1;
+      obj3.isSocketConnected = function isSocketConnected() {
         sockets = sockets.sockets;
         return sockets.has(socket);
       };
-      obj.signal = socket.abortController.signal;
-      return handler.handler(obj);
+      obj3.signal = socket.abortController.signal;
+      return handler.handler(obj3);
     })
     .then((result) => self.dispatch(closure_1, closure_2.nonce, closure_2.cmd, null, result))
     .catch((error) => self.error(closure_1, closure_2.nonce, closure_2.cmd, error.code, error.message));
@@ -566,10 +568,13 @@ prototype["error"] = function error(arg0) {
   if (arg4 === undefined) {
     str = "Unknown Error";
   }
-  let obj = AnalyticsUtilsDefault;
-  obj.track(constants.RPC_SERVER_ERROR_CAUGHT, { command: DISPATCH, code: UNKNOWN_ERROR, message: str });
-  obj = { code: UNKNOWN_ERROR, message: str };
-  this.dispatch(arg0, tmp, DISPATCH, constants5.ERROR, obj);
+  AnalyticsUtilsDefault.track(constants.RPC_SERVER_ERROR_CAUGHT, {
+    command: DISPATCH,
+    code: UNKNOWN_ERROR,
+    message: str,
+  });
+  this.dispatch(arg0, tmp, DISPATCH, constants5.ERROR, { code: UNKNOWN_ERROR, message: str });
+  const obj2 = { code: UNKNOWN_ERROR, message: str };
 };
 prototype["listenIsSubscribed"] = function listenIsSubscribed(arg0) {
   const self = this;
@@ -645,11 +650,11 @@ prototype["addSubscription"] = function addSubscription(socket, evt, args, arg3)
   const bindResult = dispatch.bind(this, socket, null, constants3.DISPATCH, evt);
   if (null == this.getSubscription(socket, evt, args)) {
     const subscriptions = self.subscriptions;
-    let obj = { update: tmp, dispatch: bindResult, prevState: null, socket: null, evt: null, args: null };
+    const obj = { update: tmp, dispatch: bindResult, prevState: null, socket: null, evt: null, args: null };
     let tmpResult = null;
     if (tmp) {
-      obj = { prevState: null, dispatch: bindResult };
-      tmpResult = tmp(obj);
+      const obj2 = { prevState: null, dispatch: bindResult };
+      tmpResult = tmp(obj2);
     }
     obj.prevState = tmpResult;
     obj.socket = socket;
@@ -695,11 +700,10 @@ prototype["dispatchToSubscriptions"] = function dispatchToSubscriptions(
     tmp = "" !== combined;
   }
   if (tmp) {
-    let arr = closure_11;
     let flag = closure_11.includes(combined);
     if (!flag) {
-      arr = arr.unshift(combined);
-      arr.splice(50);
+      closure_11.unshift(combined);
+      closure_11.splice(50);
       flag = false;
     }
     tmp = flag;

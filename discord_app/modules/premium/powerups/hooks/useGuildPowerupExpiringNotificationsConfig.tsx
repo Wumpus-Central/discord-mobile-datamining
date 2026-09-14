@@ -12,7 +12,7 @@ const result = size.fileFinishedImporting(
 );
 
 export default function useGuildPowerupExpiringNotificationsConfig(arg0) {
-  let arr = useGetExpiringGuildPowerupsDefault(arg0);
+  const arr = useGetExpiringGuildPowerupsDefault(arg0);
   const arr2 = useGameServerGetExpiringEntitlementsDefault(arg0);
   if (arr.length > 0 || arr2.length > 0) {
     let stringResult;
@@ -21,7 +21,7 @@ export default function useGuildPowerupExpiringNotificationsConfig(arg0) {
       stringResult = intl.string(_modDef2850["B3OfL/"]);
     }
     const items = [];
-    let arraySpreadResult = HermesBuiltin.arraySpread(
+    const arraySpreadResult = HermesBuiltin.arraySpread(
       arr.map((title) => title.title),
       0,
     );
@@ -31,20 +31,20 @@ export default function useGuildPowerupExpiringNotificationsConfig(arg0) {
     } else {
       items2 = [];
     }
-    arraySpreadResult = HermesBuiltin.arraySpread(items2, arraySpreadResult);
+    HermesBuiltin.arraySpread(items2, arraySpreadResult);
     const items3 = [];
     if (arr.some((skuId) => skuId.skuId === Powerups.VANITY_URL_POWERUP_SKU_ID)) {
       const intl2 = util.intl;
-      arr = items3.push(intl2.string(_modDef2428.Sfr0Jw));
+      items3.push(intl2.string(_modDef2428.Sfr0Jw));
     }
     if (arr2.length > 0) {
       const intl3 = util.intl;
-      arr = items3.push(intl3.string(_modDef2850.wiungr));
+      items3.push(intl3.string(_modDef2850.wiungr));
     }
-    let obj = { shouldShow: tmp3, expiringPowerups: arr, expiringPowerupNames: items, warnings: items3 };
-    return obj;
+    const obj2 = { shouldShow: tmp3, expiringPowerups: arr, expiringPowerupNames: items, warnings: items3 };
+    return obj2;
   } else {
-    obj = { shouldShow: false, expiringPowerups: [], expiringPowerupNames: [], warnings: [] };
+    const obj = { shouldShow: false, expiringPowerups: [], expiringPowerupNames: [], warnings: [] };
     return obj;
   }
 }

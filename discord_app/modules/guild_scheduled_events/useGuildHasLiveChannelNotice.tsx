@@ -35,20 +35,19 @@ export const useGuildHasLiveChannelNotice = function useGuildHasLiveChannelNotic
     },
     items1,
   );
-  let obj = channel(guildActiveEvent[11]);
+  const obj = channel(guildActiveEvent[11]);
   guildActiveEvent = channel(guildActiveEvent[12]).useGuildActiveEvent(id);
-  const obj2 = channel(guildActiveEvent[12]);
+  let obj2 = channel(guildActiveEvent[12]);
   const items2 = [LiveChannelNoticesStore];
   const items3 = [stateFromStores, guildActiveEvent];
   const stateFromStoresObject = channel(guildActiveEvent[11]).useStateFromStoresObject(
     items2,
     () => {
-      let obj = LiveChannelNoticesStore;
       let id;
       if (stateFromStores != null) {
         id = stateFromStores.id;
       }
-      obj = {
+      const obj2 = {
         isStageNoticeHidden: LiveChannelNoticesStore.isLiveChannelNoticeHidden({ stageId: id }),
         isEventNoticeHidden: null,
       };
@@ -56,8 +55,8 @@ export const useGuildHasLiveChannelNotice = function useGuildHasLiveChannelNotic
       if (guildActiveEvent != null) {
         id1 = guildActiveEvent.id;
       }
-      obj.isEventNoticeHidden = obj.isLiveChannelNoticeHidden({ eventId: id1 });
-      return obj;
+      obj2.isEventNoticeHidden = LiveChannelNoticesStore.isLiveChannelNoticeHidden({ eventId: id1 });
+      return obj2;
     },
     items3,
   );
@@ -102,9 +101,9 @@ export const useGuildLiveChannelNoticeInfo = function useGuildLiveChannelNoticeI
     id = activeEventOrStageInstanceChannel.id;
   }
   const tmp8 = activeEventOrStageInstanceChannel(stateFromStores2[14]).useActualStageSpeakerCount(id) > 0;
-  let tmpResult = tmp(tmp2[11]);
+  const obj5 = activeEventOrStageInstanceChannel(stateFromStores2[14]);
   const items3 = [SortedVoiceStateStore];
-  tmpResult.useStateFromStores(items3, () => {
+  activeEventOrStageInstanceChannel(stateFromStores2[11]).useStateFromStores(items3, () => {
     let tmp2 = null != activeEventOrStageInstanceChannel;
     if (tmp2) {
       tmp2 = SortedVoiceStateStore.getVoiceStatesForChannel(tmp).length > 0;
@@ -117,10 +116,9 @@ export const useGuildLiveChannelNoticeInfo = function useGuildLiveChannelNoticeI
       stateFromStores2 = tmp8;
       let flag = tmp8;
     }
-    tmpResult = tmp(tmp2[11]);
     const items4 = [stateFromStores4];
     const items5 = [activeEventOrStageInstanceChannel];
-    const stateFromStores3 = tmpResult.useStateFromStores(
+    const stateFromStores3 = tmp(tmp2[11]).useStateFromStores(
       items4,
       () => {
         let tmp2 = null != activeEventOrStageInstanceChannel;
@@ -135,6 +133,7 @@ export const useGuildLiveChannelNoticeInfo = function useGuildLiveChannelNoticeI
       },
       items5,
     );
+    const tmpResult3 = tmp(tmp2[11]);
     const items6 = [ApplicationStreamingStore];
     stateFromStores4 = tmp(tmp2[11]).useStateFromStores(items6, () => {
       let tmp2 = null != activeEventOrStageInstanceChannel;
@@ -162,6 +161,6 @@ export const useGuildLiveChannelNoticeInfo = function useGuildLiveChannelNoticeI
   if (tmp10) {
     flag = stateFromStores2;
   }
-  const obj5 = activeEventOrStageInstanceChannel(stateFromStores2[14]);
   tmp10 = null != activeEventOrStageInstanceChannel && null != guildActiveEvent;
+  const tmpResult = activeEventOrStageInstanceChannel(stateFromStores2[11]);
 };

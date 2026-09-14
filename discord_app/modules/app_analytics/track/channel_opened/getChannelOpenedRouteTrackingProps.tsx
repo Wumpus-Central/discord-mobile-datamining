@@ -10,8 +10,7 @@ let result = size.fileFinishedImporting(
 );
 
 export const getChannelOpenedRouteTrackingProps = function getChannelOpenedRouteTrackingProps(selectedChannelId) {
-  let obj = ThreadAnalyticsUtils;
-  const result = obj.collectThreadMetadata(ChannelStore.getChannel(selectedChannelId), true);
+  const result = ThreadAnalyticsUtils.collectThreadMetadata(ChannelStore.getChannel(selectedChannelId), true);
   let _location;
   if (result != null) {
     _location = result.location;
@@ -20,18 +19,17 @@ export const getChannelOpenedRouteTrackingProps = function getChannelOpenedRoute
     _location = router_utils.getLastRouteChangeSource();
     const tmpResult = router_utils;
   }
-  obj = result;
+  let obj2 = result;
   if (result == null) {
-    obj = {};
-  }
-  obj = {};
-  const merged = Object.assign(obj);
-  if (null != _location) {
-    const obj1 = { location: _location };
-    let obj2 = obj1;
-  } else {
     obj2 = {};
   }
-  const merged1 = Object.assign(obj2);
-  return obj;
+  const merged = Object.assign(obj2);
+  if (null != _location) {
+    const obj4 = { location: _location };
+    let obj5 = obj4;
+  } else {
+    obj5 = {};
+  }
+  const merged1 = Object.assign(obj5);
+  return {};
 };

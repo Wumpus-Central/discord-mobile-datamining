@@ -12,9 +12,9 @@ const result = size.fileFinishedImporting("modules/settings/native/search/hooks/
 
 export const useSettingSearchResults = function useSettingSearchResults() {
   const memo = memo1.useMemo(() => {
-    let tmp = closure_1(14785);
-    tmp = new tmp(memo(14779).getSettingSearchableTitles());
-    return tmp;
+    const tmp = closure_1(14786);
+    const obj = memo(14780);
+    return new tmp(memo(14780).getSettingSearchableTitles());
   }, []);
   const settings = _slicedToArray(memo1.useState(closure_7), 2);
   closure_1 = settings[1];
@@ -30,10 +30,10 @@ export const useSettingSearchResults = function useSettingSearchResults() {
         scoredSearchResults = scoredSearchResults.getScoredSearchResults(arg0);
         const found = scoredSearchResults.filter((setting) => {
           setting = setting.setting;
-          const isBlockedResult = closure_2_1(14780).isBlocked(setting, closure_0);
+          const isBlockedResult = closure_2_1(14781).isBlocked(setting, closure_0);
           let tmp3 = !isBlockedResult;
           if (!isBlockedResult) {
-            tmp3 = !scoredSearchResults(14671).SETTING_RENDERER_CONFIG[setting].unsearchable;
+            tmp3 = !scoredSearchResults(14672).SETTING_RENDERER_CONFIG[setting].unsearchable;
           }
           return tmp3;
         });

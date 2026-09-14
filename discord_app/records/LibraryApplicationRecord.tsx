@@ -26,7 +26,7 @@ class LibraryApplicationRecord extends tmp2 {
 }
 const prototype = LibraryApplicationRecord.prototype;
 LibraryApplicationRecord["createFromServer"] = function createFromServer(id) {
-  let obj = {
+  const obj = {
     id: id.application.id,
     branchId: id.branch_id,
     entitlements: null,
@@ -43,7 +43,7 @@ LibraryApplicationRecord["createFromServer"] = function createFromServer(id) {
   }
   obj.entitlements = mapped;
   ({ branch: obj.branch, flags: obj.flags, created_at: obj.createdAt } = id);
-  obj = {
+  const obj2 = {
     id: id.sku.id,
     type: id.sku.type,
     premium: id.sku.premium,
@@ -55,13 +55,13 @@ LibraryApplicationRecord["createFromServer"] = function createFromServer(id) {
     entitlements = _modDef4228;
     entitlementsResult = entitlements(id.sku.preorder_release_at);
   }
-  obj.preorderReleaseAt = entitlementsResult;
+  obj2.preorderReleaseAt = entitlementsResult;
   let prop = null;
   if (null != id.sku.preorder_approximate_release_date) {
     prop = id.sku.preorder_approximate_release_date;
   }
-  obj.preorderApproximateReleaseDate = prop;
-  obj.sku = obj;
+  obj2.preorderApproximateReleaseDate = prop;
+  obj.sku = obj2;
   if (typeof LibraryApplicationRecord === "function") {
     const tmp11 = new LibraryApplicationRecord(tmp, entitlements, tmp3);
     ({

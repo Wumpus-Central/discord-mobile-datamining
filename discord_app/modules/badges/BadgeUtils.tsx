@@ -20,16 +20,16 @@ let result = size.fileFinishedImporting("modules/badges/BadgeUtils.tsx");
 export const MAX_DISPLAYED_PROFILE_BADGES = 6;
 export { isPinnedBadge };
 export const getUnhideableBadgeIds = function getUnhideableBadgeIds(tenureBadgeHideable) {
-  let _Set = Set;
+  const _Set = Set;
   const STAFF = BadgeId.BadgeId.STAFF;
   if (tenureBadgeHideable.tenureBadgeHideable) {
     const items = [STAFF];
-    _Set = new _Set(items);
+    let _Set1 = new _Set(items);
   } else {
     const items1 = [STAFF, BadgeId.BadgeId.PREMIUM_TENURE];
-    _Set = new _Set(items1);
+    _Set1 = new _Set(items1);
   }
-  return _Set;
+  return _Set1;
 };
 export const groupCustomizableBadges = function groupCustomizableBadges(memo) {
   const fixedBadges = [];
@@ -43,9 +43,9 @@ export const groupCustomizableBadges = function groupCustomizableBadges(memo) {
       if (isPinnedBadge(tmp2.badge_id)) {
         let arr = fixedBadges.push(tmp2);
       } else if (tmp2.hidden) {
-        arr = hiddenBadges.push(tmp2);
+        let arr2 = hiddenBadges.push(tmp2);
       } else {
-        let arr1 = reorderableBadges.push(tmp2);
+        let arr3 = reorderableBadges.push(tmp2);
       }
     }
     continue;

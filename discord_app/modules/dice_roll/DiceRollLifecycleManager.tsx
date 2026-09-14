@@ -8,7 +8,7 @@ import DiceRollStore from "DiceRollStore.tsx";
 import AutomaticLifecycleManager from "../../lib/AutomaticLifecycleManager.tsx";
 
 require = fn;
-const INITIAL_STATE = fn(12088).INITIAL_STATE;
+const INITIAL_STATE = fn(12089).INITIAL_STATE;
 const DiceRollConstants = fn(9430);
 ({
   AFTER_ROLL_DELAY_MS: closure_7,
@@ -104,7 +104,7 @@ prototype["sendMessage"] = function sendMessage(arg0, count, sides, arr) {
     if (str == null) {
       str = "@me";
     }
-    let obj1 = globalThis;
+    let obj2 = globalThis;
     const _location = location;
     const _window = window;
     const _HermesInternal = HermesInternal;
@@ -121,13 +121,13 @@ prototype["sendMessage"] = function sendMessage(arg0, count, sides, arr) {
       "d" +
       sides;
     const intl = util.intl;
-    let obj = { count, sides };
+    const obj = { count, sides };
     const _HermesInternal2 = HermesInternal;
     const combined1 = "[`" + intl.formatToPlainString(util.t.uV5JaG, obj) + "`](" + combined + ")";
     const reduced = arr.reduce((acc, item) => acc + item, 0);
     const intl2 = util.intl;
-    obj = { total: reduced, count, sides };
-    const result = intl2.formatToMarkdownString(util.t.tmSbYW, obj);
+    const obj3 = { total: reduced, count, sides };
+    const result = intl2.formatToMarkdownString(util.t.tmSbYW, obj3);
     const mapped = arr.map((item) => ":game_die: " + item.toString());
     let str10 = " ";
     const _HermesInternal3 = HermesInternal;
@@ -139,8 +139,9 @@ prototype["sendMessage"] = function sendMessage(arg0, count, sides, arr) {
       combined3 = "### " + result + ` ` + combined1 + "\n" + combined2;
     }
     str10 = MessageActionCreatorsDefault;
-    obj1 = { location: MessageSendLocation.CHAT_INPUT };
-    str10.sendMessage(arg0, obj1.parse(channel, combined3), true, obj1);
+    obj2 = MessageParserDefault;
+    const obj4 = { location: MessageSendLocation.CHAT_INPUT };
+    str10.sendMessage(arg0, obj2.parse(channel, combined3), true, obj4);
   }
 };
 prototype["dismiss"] = function dismiss() {

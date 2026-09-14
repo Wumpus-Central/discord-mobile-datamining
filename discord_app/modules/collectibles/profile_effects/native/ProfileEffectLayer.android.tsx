@@ -15,8 +15,7 @@ export default noop.memo((paused) => {
   const width = paused.width;
   ({ accessibilityLabel, onLoad } = paused);
   const ref = noop.useRef(null);
-  let obj = APNGPlayer;
-  const aPNGPlayerControls = obj.useAPNGPlayerControls(ref);
+  const aPNGPlayerControls = APNGPlayer.useAPNGPlayerControls(ref);
   const items = [animate, paused, aPNGPlayerControls];
   const effect = noop.useEffect(() => {
     if (animate) {
@@ -26,23 +25,19 @@ export default noop.memo((paused) => {
     }
     aPNGPlayerControls.pause();
   }, items);
-  obj = { ref, url: layerConfig.src, autoplay: false, style: null, ariaLabel: null, onLoad: null };
+  const obj2 = { ref, url: layerConfig.src, autoplay: false, style: null, ariaLabel: null, onLoad: null };
   const items1 = [StyleSheet.absoluteFill];
-  const size = {
-    position: "absolute",
-    width,
-    height: ProfileEffectUtils.calculateProfileEffectHeight(layerConfig, width),
-    opacity: null,
-  };
+  const size = { position: "absolute", width, height: null, opacity: null };
+  size.height = ProfileEffectUtils.calculateProfileEffectHeight(layerConfig, width);
   let num = 0;
   if (animate) {
     num = 1;
   }
   size.opacity = num;
   items1[1] = size;
-  obj.style = items1;
-  obj.ariaLabel = accessibilityLabel;
-  obj.onLoad = onLoad;
+  obj2.style = items1;
+  obj2.ariaLabel = accessibilityLabel;
+  obj2.onLoad = onLoad;
   return jsx(APNGPlayer.APNGPlayer, {
     ref,
     url: layerConfig.src,

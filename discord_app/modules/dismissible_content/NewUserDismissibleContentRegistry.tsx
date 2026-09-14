@@ -4,6 +4,8 @@ import DcfNewUserCooldownExperiment from "DcfNewUserCooldownExperiment.tsx";
 import AuthenticationStore from "../../stores/AuthenticationStore.tsx";
 import DismissibleContentFrameworkStore from "DismissibleContentFrameworkStore.tsx";
 
+const require = globalThis.__r;
+
 require = fn;
 const dependencyMap = {
   [fn(1943).DismissibleContent.MJ_NEW_USER_CHAT_BAR]: 0,

@@ -2,7 +2,7 @@
 import ThemeStore from "ThemeStore.tsx";
 import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore.tsx";
 
-const SystemThemeState = fn(1186).SystemThemeState;
+const SystemThemeState = fn(1184).SystemThemeState;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_settings/isPerModeThemingActive.tsx");
 

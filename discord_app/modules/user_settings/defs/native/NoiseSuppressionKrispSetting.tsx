@@ -6,8 +6,8 @@ import NoiseCancellationUtils from "../../../noise_cancellation/NoiseCancellatio
 import MediaEngineStore from "../../../../stores/MediaEngineStore.tsx";
 
 require = fn;
-fn(11601);
-let SettingBuilders = {
+const SettingBuilders = fn(11602);
+const radio = SettingBuilders.createRadio({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.t8Qhib);
@@ -20,29 +20,28 @@ let SettingBuilders = {
     const result = UserSettingsVoiceUtils.handleNoiseSuppressionChange(arg0);
   },
   useOptions: function useNoiseSuppressionKrispSettingOptions() {
-    let obj = NoiseCancellationUtils;
-    const noiseCancellationDeferredToSystem = obj.useNoiseCancellationDeferredToSystem();
-    obj = { value: UserSettingsVoiceUtils.NoiseSuppressionOpt.KRISP, label: null, disabled: null };
+    const noiseCancellationDeferredToSystem = NoiseCancellationUtils.useNoiseCancellationDeferredToSystem();
+    const obj2 = { value: UserSettingsVoiceUtils.NoiseSuppressionOpt.KRISP, label: null, disabled: null };
     const intl = util.intl;
-    obj.label = intl.string(util.t.rdoNzt);
-    obj.disabled = noiseCancellationDeferredToSystem;
-    const items = [obj, ,];
-    obj = {
+    obj2.label = intl.string(util.t.rdoNzt);
+    obj2.disabled = noiseCancellationDeferredToSystem;
+    const items = [obj2, ,];
+    const obj3 = {
       value: UserSettingsVoiceUtils.NoiseSuppressionOpt.STANDARD,
       disabled: noiseCancellationDeferredToSystem,
       label: null,
     };
     const intl2 = util.intl;
-    obj.label = intl2.string(util.t.qXeYHw);
-    items[1] = obj;
-    const obj1 = {
+    obj3.label = intl2.string(util.t.qXeYHw);
+    items[1] = obj3;
+    const obj4 = {
       value: UserSettingsVoiceUtils.NoiseSuppressionOpt.NONE,
       disabled: noiseCancellationDeferredToSystem,
       label: null,
     };
     const intl3 = util.intl;
-    obj1.label = intl3.string(util.t.wkYAlz);
-    items[2] = obj1;
+    obj4.label = intl3.string(util.t.wkYAlz);
+    items[2] = obj4;
     return items;
   },
   usePredicate: function useHasNoiseSuppressionKrispSetting() {
@@ -54,9 +53,8 @@ let SettingBuilders = {
     const items = [intl.string(util.t.hmfkCi)];
     return items;
   },
-};
-SettingBuilders = SettingBuilders.createRadio(SettingBuilders);
+});
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_settings/defs/native/NoiseSuppressionKrispSetting.tsx");
 
-export default SettingBuilders;
+export default radio;

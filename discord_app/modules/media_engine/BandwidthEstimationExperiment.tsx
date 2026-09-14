@@ -2,7 +2,7 @@
 import createExperiment from "../experiments/index.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
-let obj = {
+const obj = {
   kind: "user",
   id: "2024-06_rtc_pacer__simulcast",
   label: "RTC Pacer & Golive Simulcast",
@@ -73,7 +73,9 @@ const items = [
 ];
 obj.treatments = items;
 let currentConfig = createExperiment.createExperiment(obj);
-obj = {
+const result = size.fileFinishedImporting("modules/media_engine/BandwidthEstimationExperiment.tsx");
+
+export default {
   getConfig(autoTrackExposure, arr) {
     currentConfig = currentConfig.getCurrentConfig({ location: "e1c55b_1" }, { autoTrackExposure });
     if (!this.supportsBandwidthEstimationExperimentFullname(currentConfig.fullname, arr)) {
@@ -111,6 +113,3 @@ obj = {
     return found;
   },
 };
-const result = size.fileFinishedImporting("modules/media_engine/BandwidthEstimationExperiment.tsx");
-
-export default obj;

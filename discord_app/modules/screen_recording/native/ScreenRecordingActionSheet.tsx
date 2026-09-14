@@ -4,14 +4,29 @@ import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSh
 import MarkupUtilsDefault from "../../markup/MarkupUtils.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
+const require = globalThis.__r;
+
 const require = fn;
 const View = fn(17).View;
-const useScreenRecordingStore = fn(16027).useScreenRecordingStore;
+const useScreenRecordingStore = fn(16029).useScreenRecordingStore;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-fn(4636);
-let createStyles = { container: null, closeButton: null, buttonContainer: null };
-createStyles = {
+const createStyles = fn(4636);
+let obj2 = {
+  container: {
+    justifyContent: "center",
+    alignItems: "center",
+    gap: nativeDefault.space.PX_16,
+    paddingVertical: nativeDefault.space.PX_16,
+    paddingHorizontal: nativeDefault.space.PX_8,
+    borderRadius: nativeDefault.radii.xl,
+  },
+  closeButton: null,
+  buttonContainer: null,
+};
+const rect = { position: "absolute", top: nativeDefault.space.PX_8, right: nativeDefault.space.PX_8 };
+obj2.closeButton = rect;
+let obj3 = {
   justifyContent: "center",
   alignItems: "center",
   gap: nativeDefault.space.PX_16,
@@ -19,11 +34,8 @@ createStyles = {
   paddingHorizontal: nativeDefault.space.PX_8,
   borderRadius: nativeDefault.radii.xl,
 };
-createStyles.container = createStyles;
-const rect = { position: "absolute", top: nativeDefault.space.PX_8, right: nativeDefault.space.PX_8 };
-createStyles.closeButton = rect;
-createStyles.buttonContainer = { display: "flex", flexDirection: "row", gap: nativeDefault.space.PX_8 };
-let closure_7 = createStyles.createStyles(createStyles);
+obj2.buttonContainer = { display: "flex", flexDirection: "row", gap: nativeDefault.space.PX_8 };
+let closure_7 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/screen_recording/native/ScreenRecordingActionSheet.tsx");
 
@@ -32,7 +44,7 @@ export default function ScreenRecordingActionSheet() {
   const tmp2 = useScreenRecordingStore((isUploading) => isUploading.isUploading);
   const tmp3 = useScreenRecordingStore((isCompleted) => isCompleted.isCompleted);
   const tmp4 = useScreenRecordingStore((currentStep) => currentStep.currentStep);
-  let obj = useScreenRecordingStore((currentSurveyConfig) => currentSurveyConfig.currentSurveyConfig);
+  const obj = useScreenRecordingStore((currentSurveyConfig) => currentSurveyConfig.currentSurveyConfig);
   _require = useScreenRecordingStore((nextStep) => nextStep.nextStep);
   importDefault = useScreenRecordingStore((completeActionSheet) => completeActionSheet.completeActionSheet);
   let steps;
@@ -72,12 +84,23 @@ export default function ScreenRecordingActionSheet() {
       return null;
     }
   }
-  obj = { style: tmp.container, children: null };
+  const obj2 = { style: tmp.container, children: null };
   const items = [
     closure_5(require("Text/Text").Text, { variant: "heading-xl/bold", children: str }),
     closure_5(require("Text/Text").Text, { variant: "text-md/normal", children: str2 }),
+    closure_5(require("components/Button/Button").Button, {
+      disabled: tmp2,
+      text: "Done",
+      loading: tmp2,
+      onPress() {
+        closure_1();
+        ActionSheetActionCreatorsDefault.hideActionSheet();
+      },
+    }),
   ];
-  obj = {
+  obj2.children = items;
+  const obj4 = { style: tmp.container, children: null };
+  const obj3 = {
     disabled: tmp2,
     text: "Done",
     loading: tmp2,
@@ -86,10 +109,7 @@ export default function ScreenRecordingActionSheet() {
       ActionSheetActionCreatorsDefault.hideActionSheet();
     },
   };
-  items[2] = closure_5(require("components/Button/Button").Button, obj);
-  obj.children = items;
-  const obj1 = { style: tmp.container, children: null };
-  const tmp11 = closure_6(View, obj);
+  const tmp11 = closure_6(View, obj2);
   const tmp9 = _require;
   const items1 = [
     closure_5(require("Pressables").PressableOpacity, {
@@ -103,8 +123,8 @@ export default function ScreenRecordingActionSheet() {
     closure_5(require("Text/Text").Text, { variant: "heading-xl/bold", children: tmp5.title }),
     ,
   ];
-  const obj4 = { variant: "text-md/normal", children: null };
-  const obj2 = {
+  const obj7 = { variant: "text-md/normal", children: null };
+  const obj5 = {
     style: tmp.closeButton,
     onPress() {
       return closure_1(dependencyMap[8]).hideActionSheet();
@@ -112,15 +132,15 @@ export default function ScreenRecordingActionSheet() {
     accessibilityLabel: "close",
     children: closure_5(require("XSmallIcon").XSmallIcon, { size: "md", color: "text-default" }),
   };
-  const obj3 = { variant: "heading-xl/bold", children: tmp5.title };
-  obj4.children = MarkupUtilsDefault.parse(tmp5.instructions);
-  items1[2] = closure_5(require("Text/Text").Text, obj4);
-  const obj5 = { style: tmp.buttonContainer, children: null };
+  const obj6 = { variant: "heading-xl/bold", children: tmp5.title };
+  obj7.children = MarkupUtilsDefault.parse(tmp5.instructions);
+  items1[2] = closure_5(require("Text/Text").Text, obj7);
+  const obj9 = { style: tmp.buttonContainer, children: null };
   let tmp12 = !flag;
   if (flag) {
     tmp12 = tmp2;
   }
-  obj5.children = closure_5(require("components/Button/Button").Button, {
+  obj9.children = closure_5(require("components/Button/Button").Button, {
     disabled: tmp12,
     text: "Next",
     loading: tmp2,
@@ -128,9 +148,9 @@ export default function ScreenRecordingActionSheet() {
       closure_0();
     },
   });
-  items1[3] = closure_5(View, obj5);
-  obj1.children = items1;
-  let children = closure_6(View, obj1);
+  items1[3] = closure_5(View, obj9);
+  obj4.children = items1;
+  let children = closure_6(View, obj4);
   if (tmp3) {
     children = tmp11;
   }

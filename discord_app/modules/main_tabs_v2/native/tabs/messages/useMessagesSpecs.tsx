@@ -17,10 +17,9 @@ export default function useMessagesSpecs() {
   top = top(1611)().top;
   const items = [fontScale, top];
   return noop.useMemo(() => {
-    let obj = MessagesHeader;
-    const messagesHeaderHeight = obj.getMessagesHeaderHeight(fontScale);
+    const messagesHeaderHeight = MessagesHeader.getMessagesHeaderHeight(fontScale);
     const messagesItemChannelSizes = MessagesItemChannel.getMessagesItemChannelSizes(fontScale);
-    obj = {
+    const obj3 = {
       headerSize: messagesHeaderHeight,
       listTop: top + messagesHeaderHeight,
       listLeft: DM_WIDTH,
@@ -29,8 +28,8 @@ export default function useMessagesSpecs() {
       listItemSuggestedFriendHeight: null,
       scrollIndicatorInsetEnd: null,
     };
-    obj.listItemSuggestedFriendHeight = MessagesItemSuggestedFriend.getMessagesItemSuggestedFriendHeight(fontScale);
-    obj.scrollIndicatorInsetEnd = nativeDefault.space.PX_4;
-    return obj;
+    obj3.listItemSuggestedFriendHeight = MessagesItemSuggestedFriend.getMessagesItemSuggestedFriendHeight(fontScale);
+    obj3.scrollIndicatorInsetEnd = nativeDefault.space.PX_4;
+    return obj3;
   }, items);
 }

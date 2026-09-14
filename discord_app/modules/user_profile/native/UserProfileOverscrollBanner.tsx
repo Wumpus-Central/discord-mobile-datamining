@@ -25,20 +25,20 @@ export default function UserProfileOverscrollBanner(arg0) {
       privateBanner: 0,
     }),
   );
-  let obj = { style: bannerAnimatedStyle, children: null };
+  const obj = { style: bannerAnimatedStyle, children: null };
   const items = [privateBanner];
-  obj = { style: bannerImageAnimatedStyle, children: null };
-  obj = {};
+  const obj2 = { style: bannerImageAnimatedStyle, children: null };
   const merged1 = Object.assign(merged);
-  const items1 = [React4(UserProfileBannerDefault, obj)];
+  const items1 = [React4(UserProfileBannerDefault, {})];
+  const obj3 = {};
   let tmp3Result = PlatformUtils.isIOS() && showBlur;
   if (tmp3Result) {
-    const obj1 = { animatedProps: blurAnimatedProps, style: StyleSheet.absoluteFillObject };
-    tmp3Result = React4(VisualEffectViewThemed, obj1);
+    const obj5 = { animatedProps: blurAnimatedProps, style: StyleSheet.absoluteFillObject };
+    tmp3Result = React4(VisualEffectViewThemed, obj5);
   }
   items1[1] = tmp3Result;
-  obj.children = items1;
-  items[1] = hasOwnProperty(ReanimatedRexport.View, obj);
+  obj2.children = items1;
+  items[1] = hasOwnProperty(ReanimatedRexport.View, obj2);
   obj.children = items;
   return hasOwnProperty(ReanimatedRexport.View, obj);
 }

@@ -19,48 +19,52 @@ const Constants = fn(1074);
 ({ AnalyticEvents: closure_9, AnalyticsSections: c10, HelpdeskArticles: closure_11 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-fn(4636);
-let createStyles = { screen: { flex: 1 }, container: null, previewContainer: null, section: null, description: null };
-createStyles = { padding: nativeDefault.space.PX_16, rowGap: nativeDefault.space.PX_24 };
-createStyles.container = createStyles;
-createStyles.previewContainer = {
+const createStyles = fn(4636);
+let obj2 = {
+  screen: { flex: 1 },
+  container: { padding: nativeDefault.space.PX_16, rowGap: nativeDefault.space.PX_24 },
+  previewContainer: null,
+  section: null,
+  description: null,
+};
+let obj3 = { padding: nativeDefault.space.PX_16, rowGap: nativeDefault.space.PX_24 };
+obj2.previewContainer = {
   height: 140,
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
   paddingHorizontal: nativeDefault.space.PX_8,
 };
-let obj1 = {
+let obj4 = {
   height: 140,
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
   paddingHorizontal: nativeDefault.space.PX_8,
 };
-createStyles.section = { rowGap: nativeDefault.space.PX_8 };
-let obj2 = { rowGap: nativeDefault.space.PX_8 };
-createStyles.description = { marginTop: nativeDefault.space.PX_4 };
-let closure_14 = createStyles.createStyles(createStyles);
+obj2.section = { rowGap: nativeDefault.space.PX_8 };
+let obj5 = { rowGap: nativeDefault.space.PX_8 };
+obj2.description = { marginTop: nativeDefault.space.PX_4 };
+let closure_14 = createStyles.createStyles(obj2);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/custom_typing_indicator/native/CustomTypingIndicatorEditScreen.tsx");
 
 export default function CustomTypingIndicatorEditScreen() {
   let tmp = closure_14();
   const tmp3 = source;
+  nativeStackNavigation = nativeStackNavigation(source[12]).useNativeStackNavigation();
   let obj = nativeStackNavigation(source[12]);
-  nativeStackNavigation = obj.useNativeStackNavigation();
-  let obj1 = nativeStackNavigation(source[13]);
-  let params = obj1.useRoute().params;
+  let params = nativeStackNavigation(source[13]).useRoute().params;
   if (params == null) {
     params = {};
   }
   const mode = params.mode;
   source = params.source;
-  let tmp2Result = tmp2(tmp3[14]);
+  let obj2 = nativeStackNavigation(source[13]);
   const items = [onChange];
-  const stateFromStores = tmp2Result.useStateFromStores(items, () => onChange.getCurrentUser());
-  let obj4 = mode(tmp3[15]);
-  let result = obj4.canUsePremiumProfileCustomization(stateFromStores);
+  const stateFromStores = nativeStackNavigation(tmp3[14]).useStateFromStores(items, () => onChange.getCurrentUser());
+  const tmp2Result = nativeStackNavigation(tmp3[14]);
+  let result = mode(tmp3[15]).canUsePremiumProfileCustomization(stateFromStores);
   const analyticsLocations = mode(tmp3[16])().analyticsLocations;
   let tmp9 = !result;
   if (!result) {
@@ -74,8 +78,8 @@ export default function CustomTypingIndicatorEditScreen() {
     }
     AnalyticsUtilsDefault.track(constants.TYPING_INDICATOR_EDIT_SCREEN_OPENED, { source: str });
   }, items1);
-  tmp2Result = tmp2(tmp3[18]);
-  first = first(first1.useState(tmp2Result.useCurrentCustomTypingIndicatorConfig(tmp5)), 1)[0];
+  let obj5 = mode(tmp3[15]);
+  first = first(first1.useState(nativeStackNavigation(tmp3[18]).useCurrentCustomTypingIndicatorConfig(tmp5)), 1)[0];
   const tmp12 = first(
     first1.useState(() => {
       if (obj.hasCustomTypingIndicatorEmojis(first.emojis)) {
@@ -125,12 +129,18 @@ export default function CustomTypingIndicatorEditScreen() {
   }, []);
   const items5 = [memo, first3];
   const callback1 = first1.useCallback(() => {
-    const obj = { initialValue: first2, onChange };
-    obj.openLazy(asyncRequireImpl(15443, dependencyMap.paths), "CustomTypingIndicatorTypingSuggestionPickerSheet", obj);
+    ActionSheetActionCreatorsDefault.openLazy(
+      asyncRequireImpl(15444, dependencyMap.paths),
+      "CustomTypingIndicatorTypingSuggestionPickerSheet",
+      { initialValue: first2, onChange },
+    );
   }, items4);
   const callback2 = first1.useCallback(() => {
-    const obj = { emojis: memo, initialAnimation: first3, onChange: onChange2 };
-    obj.openLazy(asyncRequireImpl(15444, dependencyMap.paths), "CustomTypingIndicatorAnimationPickerSheet", obj);
+    ActionSheetActionCreatorsDefault.openLazy(
+      asyncRequireImpl(15445, dependencyMap.paths),
+      "CustomTypingIndicatorAnimationPickerSheet",
+      { emojis: memo, initialAnimation: first3, onChange: onChange2 },
+    );
   }, items5);
   first1.useRef(null);
   const callback3 = first1.useCallback(() => {
@@ -149,6 +159,7 @@ export default function CustomTypingIndicatorEditScreen() {
     const ArrayResult = Array(CustomTypingIndicatorTypes.CUSTOM_TYPING_INDICATOR_EMOJI_COUNT);
     AnalyticsUtilsDefault.track(constants.TYPING_INDICATOR_STYLE_REMOVED);
   }, []);
+  const tmp2Result3 = nativeStackNavigation(tmp3[18]);
   [tmp28, closure_16] = first(first1.useState(false), 2);
   closure_17 = first1.useRef(false);
   const items6 = [!tmp20, memo1, mode, nativeStackNavigation, memo, first3, first2];
@@ -161,7 +172,7 @@ export default function CustomTypingIndicatorEditScreen() {
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
-          let obj = { value, done: true };
+          const obj = { value, done: true };
           return obj;
         } else {
           return { value: "HermesInternal", done: null };
@@ -175,8 +186,8 @@ export default function CustomTypingIndicatorEditScreen() {
               throw value;
             } else if (arg0 === 2) {
               c4 = 3;
-              obj = { value, done: true };
-              return obj;
+              const obj3 = { value, done: true };
+              return obj3;
             } else {
               const v0 = 0;
               closure_129_0 = undefined;
@@ -191,18 +202,20 @@ export default function CustomTypingIndicatorEditScreen() {
                     const result = nativeStackNavigation(tmp2[25]).setTryItOutCustomTypingIndicatorStyle(tmp34);
                     const obj10 = nativeStackNavigation(tmp2[25]);
                   } else if ("profile_pending" === tmp37) {
-                    let obj1 = { customTypingIndicatorStyle: tmp34 };
-                    nativeStackNavigation(tmp2[26]).setPendingChanges(obj1);
+                    const obj4 = { customTypingIndicatorStyle: tmp34 };
+                    nativeStackNavigation(tmp2[26]).setPendingChanges(obj4);
                     const obj8 = nativeStackNavigation(tmp2[26]);
                   } else {
                     ref.current = true;
                     value2(true);
-                    let obj4 = nativeStackNavigation(tmp2[27]);
-                    const obj2 = { typingIndicatorStyle: tmp34 };
+                    const obj6 = { typingIndicatorStyle: tmp34 };
                     c3 = 1;
                     c4 = 1;
-                    const obj3 = { value: obj4.saveProfileAndAccountChanges(obj2), done: false };
-                    return obj3;
+                    const obj7 = {
+                      value: nativeStackNavigation(tmp2[27]).saveProfileAndAccountChanges(obj6),
+                      done: false,
+                    };
+                    return obj7;
                   }
                   tmp33 = v0(tmp2[20]);
                 }
@@ -215,8 +228,8 @@ export default function CustomTypingIndicatorEditScreen() {
             throw value;
           } else if (arg0 === 2) {
             c4 = 3;
-            obj4 = { value, done: true };
-            return obj4;
+            const obj9 = { value, done: true };
+            return obj9;
           } else {
             closure_129_0 = value;
             closure_130_17.current = false;
@@ -232,25 +245,26 @@ export default function CustomTypingIndicatorEditScreen() {
                 firstFieldErrorMessage = aPIError.getFirstFieldErrorMessage("typing_indicator_style");
               }
               closure_129_1 = firstFieldErrorMessage;
-              obj1 = nativeStackNavigation(tmp2[29]);
               nativeStackNavigation = closure_129_1;
               if (closure_129_1 == null) {
                 const intl = nativeStackNavigation(tmp2[10]).intl;
                 nativeStackNavigation = intl.string(nativeStackNavigation(tmp2[10]).t["84MExs"]);
               }
-              const result1 = obj1.showGenericProfileUpdateFailureToast(nativeStackNavigation);
+              const result1 = nativeStackNavigation(tmp2[29]).showGenericProfileUpdateFailureToast(
+                nativeStackNavigation,
+              );
               c4 = 3;
-              const obj5 = { value: undefined, done: true };
-              return obj5;
+              const obj12 = { value: undefined, done: true };
+              return obj12;
             }
           }
-          const obj6 = {
+          const obj13 = {
             emoji_names: closure_130_11.map((name) => name.name),
             animation_name: nativeStackNavigation(tmp2[9]).TypingIndicatorAnimation[closure_130_9],
             typing_suggestion: nativeStackNavigation(tmp2[9]).TypingSuggestion[closure_130_7],
             custom_emoji_count: closure_130_11.filter((id) => null != id.id).length,
           };
-          v0(tmp2[17]).track(constants.TYPING_INDICATOR_STYLE_APPLIED, obj6);
+          v0(tmp2[17]).track(constants.TYPING_INDICATOR_STYLE_APPLIED, obj13);
           if (closure_130_0.isFocused()) {
             closure_130_0.goBack();
           }
@@ -264,46 +278,44 @@ export default function CustomTypingIndicatorEditScreen() {
     items6,
   );
   const items7 = [analyticsLocations];
-  obj = { style: tmp.screen, children: null };
+  let obj3 = { style: tmp.screen, children: null };
   const container = tmp.container;
   const callback6 = first1.useCallback(() => {
-    let obj = { analyticsLocation: null, analyticsLocations };
-    obj = { section: constants2.SETTINGS_TYPING_INDICATOR };
-    obj.analyticsLocation = obj;
+    const obj = { analyticsLocation: { section: constants2.SETTINGS_TYPING_INDICATOR }, analyticsLocations };
     openPremiumModalDefault(obj);
   }, items7);
   if (tmp20) {
-    obj = container;
+    let obj4 = container;
   } else {
-    obj = {};
+    obj4 = {};
     const merged = Object.assign(container);
-    obj.paddingBottom = 90;
+    obj4.paddingBottom = 90;
   }
-  obj1 = { contentContainerStyle: obj, children: null };
-  let obj2 = { style: tmp.previewContainer, children: null };
+  let obj6 = { contentContainerStyle: obj4, children: null };
+  let obj7 = { style: tmp.previewContainer, children: null };
   let tmp37Result = null != stateFromStores;
   if (tmp37Result) {
-    let obj3 = { username: null, config: null, justifyCenter: true };
-    tmp7(tmp3[31]);
-    const tmp7Result = tmp7(tmp3[32]);
-    obj3.username = tmp7Result.getName(null, null, stateFromStores);
-    obj3.config = memo1;
-    tmp37Result = tmp37(tmp7Result, obj3);
+    let obj8 = { username: null, config: null, justifyCenter: true };
+    const tmp7Result = tmp7(tmp3[31]);
+    obj8.username = tmp7(tmp3[32]).getName(null, null, stateFromStores);
+    obj8.config = memo1;
+    tmp37Result = tmp37(tmp7Result, obj8);
+    const tmp7Result4 = tmp7(tmp3[32]);
   }
-  obj2.children = tmp37Result;
-  const items8 = [closure_12(first2, obj2), , ,];
-  obj4 = { style: tmp.section, children: null };
-  let obj5 = { accessibilityRole: "header", variant: "text-sm/semibold", color: "text-default", children: null };
+  obj7.children = tmp37Result;
+  const items8 = [closure_12(first2, obj7), , ,];
+  let obj9 = { style: tmp.section, children: null };
+  let obj10 = { accessibilityRole: "header", variant: "text-sm/semibold", color: "text-default", children: null };
   let intl = tmp2(tmp3[10]).intl;
-  obj5.children = intl.string(mode(tmp3[11])["l8CZ7+"]);
+  obj10.children = intl.string(mode(tmp3[11])["l8CZ7+"]);
   const items9 = [
-    closure_12(nativeStackNavigation(tmp3[33]).Text, obj5),
+    closure_12(nativeStackNavigation(tmp3[33]).Text, obj10),
     closure_12(mode(tmp3[34]), { emojis: first1, onChange: callback }),
   ];
-  let obj6 = { label: null, arrow: true, disabled: null, trailing: null, onPress: null };
+  let obj11 = { label: null, arrow: true, disabled: null, trailing: null, onPress: null };
   const intl2 = tmp2(tmp3[10]).intl;
-  obj6.label = intl2.string(mode(tmp3[11]).iVKTbA);
-  obj6.disabled = !tmp18;
+  obj11.label = intl2.string(mode(tmp3[11]).iVKTbA);
+  obj11.disabled = !tmp18;
   if (nativeStackNavigation(tmp3[9]).TypingIndicatorAnimation.PULSE === first3) {
     const intl5 = tmp2(tmp3[10]).intl;
     let stringResult = intl5.string(tmp7(tmp3[11])["gyL/ce"]);
@@ -317,32 +329,32 @@ export default function CustomTypingIndicatorEditScreen() {
     const intl13 = tmp2(tmp3[10]).intl;
     stringResult = intl13.string(tmp2(tmp3[10]).t.PoWNfe);
   }
-  const obj7 = { hasIcons: false, children: null };
-  obj6.trailing = closure_12(nativeStackNavigation(tmp3[36]).TableRow.TrailingText, { text: stringResult });
-  obj6.onPress = callback2;
-  obj7.children = closure_12(nativeStackNavigation(tmp3[36]).TableRow, obj6);
-  items9[2] = closure_12(nativeStackNavigation(tmp3[35]).TableRowGroup, obj7);
-  obj4.children = items9;
-  items8[1] = memo1(first2, obj4);
-  let obj8 = { style: tmp.section, children: null };
-  const obj9 = { accessibilityRole: "header", variant: "text-sm/semibold", color: "text-default", children: null };
+  let obj12 = { hasIcons: false, children: null };
+  obj11.trailing = closure_12(nativeStackNavigation(tmp3[36]).TableRow.TrailingText, { text: stringResult });
+  obj11.onPress = callback2;
+  obj12.children = closure_12(nativeStackNavigation(tmp3[36]).TableRow, obj11);
+  items9[2] = closure_12(nativeStackNavigation(tmp3[35]).TableRowGroup, obj12);
+  obj9.children = items9;
+  items8[1] = memo1(first2, obj9);
+  let obj13 = { style: tmp.section, children: null };
+  const obj14 = { accessibilityRole: "header", variant: "text-sm/semibold", color: "text-default", children: null };
   const intl6 = tmp2(tmp3[10]).intl;
-  obj9.children = intl6.string(mode(tmp3[11]).BGCQqw);
-  const items10 = [closure_12(nativeStackNavigation(tmp3[33]).Text, obj9), ,];
-  let obj10 = { hasIcons: false, children: null };
-  let obj11 = { label: null, arrow: true, trailing: null, onPress: null };
+  obj14.children = intl6.string(mode(tmp3[11]).BGCQqw);
+  const items10 = [closure_12(nativeStackNavigation(tmp3[33]).Text, obj14), ,];
+  const obj15 = { hasIcons: false, children: null };
+  const obj16 = { label: null, arrow: true, trailing: null, onPress: null };
   const intl7 = tmp2(tmp3[10]).intl;
-  obj11.label = intl7.string(mode(tmp3[11])["X+ijyw"]);
-  const obj12 = { text: null };
+  obj16.label = intl7.string(mode(tmp3[11])["X+ijyw"]);
+  const obj17 = { text: null };
   const intl8 = tmp2(tmp3[10]).intl;
   const tmp27 = first(first1.useState(false), 2);
   let tmp33 = closure_6;
-  obj12.text = intl8.string(nativeStackNavigation(tmp3[18]).getCustomTypingIndicatorSuggestionMessage(first2));
-  obj11.trailing = closure_12(nativeStackNavigation(tmp3[36]).TableRow.TrailingText, obj12);
-  obj11.onPress = callback1;
-  obj10.children = closure_12(nativeStackNavigation(tmp3[36]).TableRow, obj11);
-  items10[1] = closure_12(nativeStackNavigation(tmp3[35]).TableRowGroup, obj10);
-  const obj13 = {
+  obj17.text = intl8.string(nativeStackNavigation(tmp3[18]).getCustomTypingIndicatorSuggestionMessage(first2));
+  obj16.trailing = closure_12(nativeStackNavigation(tmp3[36]).TableRow.TrailingText, obj17);
+  obj16.onPress = callback1;
+  obj15.children = closure_12(nativeStackNavigation(tmp3[36]).TableRow, obj16);
+  items10[1] = closure_12(nativeStackNavigation(tmp3[35]).TableRowGroup, obj15);
+  const obj18 = {
     style: tmp.description,
     variant: "text-xs/normal",
     color: "text-muted",
@@ -350,15 +362,15 @@ export default function CustomTypingIndicatorEditScreen() {
     children: null,
   };
   const intl9 = tmp2(tmp3[10]).intl;
-  const obj14 = { helpCenterUrl: null };
-  const tmp2Result1 = nativeStackNavigation(tmp3[18]);
-  obj14.helpCenterUrl = mode(tmp3[37]).getArticleURL(memo.CUSTOM_TYPING_INDICATOR);
-  obj13.children = intl9.format(mode(tmp3[11]).k6c2yP, obj14);
-  items10[2] = closure_12(nativeStackNavigation(tmp3[33]).Text, obj13);
-  obj8.children = items10;
-  items8[2] = memo1(first2, obj8);
-  const obj15 = { spacing: 8, children: null };
-  const obj16 = {
+  const obj19 = { helpCenterUrl: null };
+  const tmp2Result4 = nativeStackNavigation(tmp3[18]);
+  obj19.helpCenterUrl = mode(tmp3[37]).getArticleURL(memo.CUSTOM_TYPING_INDICATOR);
+  obj18.children = intl9.format(mode(tmp3[11]).k6c2yP, obj19);
+  items10[2] = closure_12(nativeStackNavigation(tmp3[33]).Text, obj18);
+  obj13.children = items10;
+  items8[2] = memo1(first2, obj13);
+  const obj20 = { spacing: 8, children: null };
+  const obj21 = {
     variant: "secondary",
     size: "lg",
     icon: closure_12(nativeStackNavigation(tmp3[40]).DiceIcon, {}),
@@ -366,10 +378,10 @@ export default function CustomTypingIndicatorEditScreen() {
     onPress: null,
   };
   const intl10 = tmp2(tmp3[10]).intl;
-  obj16.text = intl10.string(mode(tmp3[11]).q4045h);
-  obj16.onPress = callback3;
-  const items11 = [closure_12(nativeStackNavigation(tmp3[39]).Button, obj16)];
-  const obj17 = {
+  obj21.text = intl10.string(mode(tmp3[11]).q4045h);
+  obj21.onPress = callback3;
+  const items11 = [closure_12(nativeStackNavigation(tmp3[39]).Button, obj21)];
+  const obj22 = {
     variant: "secondary",
     size: "lg",
     icon: closure_12(nativeStackNavigation(tmp3[41]).DenyIcon, {}),
@@ -377,15 +389,15 @@ export default function CustomTypingIndicatorEditScreen() {
     onPress: null,
   };
   const intl11 = tmp2(tmp3[10]).intl;
-  obj17.text = intl11.string(mode(tmp3[11])["UnIf+S"]);
-  obj17.onPress = callback4;
-  items11[1] = closure_12(nativeStackNavigation(tmp3[39]).Button, obj17);
-  obj15.children = items11;
-  items8[3] = memo1(nativeStackNavigation(tmp3[38]).Stack, obj15);
-  obj1.children = items8;
-  const items12 = [memo1(tmp33, obj1)];
-  const obj18 = { visible: !tmp20, disabled: tmp28, loading: tmp28, text: null, onPress: null, renderButton: null };
-  const tmp7Result1 = mode(tmp3[37]);
+  obj22.text = intl11.string(mode(tmp3[11])["UnIf+S"]);
+  obj22.onPress = callback4;
+  items11[1] = closure_12(nativeStackNavigation(tmp3[39]).Button, obj22);
+  obj20.children = items11;
+  items8[3] = memo1(nativeStackNavigation(tmp3[38]).Stack, obj20);
+  obj6.children = items8;
+  const items12 = [memo1(tmp33, obj6)];
+  const obj23 = { visible: !tmp20, disabled: tmp28, loading: tmp28, text: null, onPress: null, renderButton: null };
+  const tmp7Result5 = mode(tmp3[37]);
   const intl12 = tmp2(tmp3[10]).intl;
   const string = intl12.string;
   if (tmp9) {
@@ -393,11 +405,11 @@ export default function CustomTypingIndicatorEditScreen() {
   } else {
     stringResult1 = string(tmp7(tmp3[11])["6ZxPAQ"]);
   }
-  obj18.text = stringResult1;
+  obj23.text = stringResult1;
   if (tmp9) {
     callback5 = callback6;
   }
-  obj18.onPress = callback5;
+  obj23.onPress = callback5;
   let fn;
   if (tmp9) {
     fn = (arg0) => {
@@ -405,8 +417,8 @@ export default function CustomTypingIndicatorEditScreen() {
       return closure_12(mode(source[43]), { text, onPress });
     };
   }
-  obj18.renderButton = fn;
-  items12[1] = closure_12(mode(tmp3[42]), obj18);
-  obj.children = items12;
-  return memo1(first2, obj);
+  obj23.renderButton = fn;
+  items12[1] = closure_12(mode(tmp3[42]), obj23);
+  obj3.children = items12;
+  return memo1(first2, obj3);
 }

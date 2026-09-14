@@ -5,7 +5,7 @@ import HelpdeskUtilsDefault from "../../../../../../utils/HelpdeskUtils.tsx";
 import FastImageDefault from "../../../../../../components_native/common/FastImage.tsx";
 import PlayStationLinkModalActionCreatorsDefault from "PlayStationLinkModalActionCreators.tsx";
 import OneWayToTwoWayLinkUpsell from "../OneWayToTwoWayLinkUpsell.tsx";
-import _modDef15058 from "../../../../../../../_runtime/metro/15058__.js";
+import _modDef15059 from "../../../../../../../_runtime/metro/15059__.js";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -20,25 +20,26 @@ const result = size.fileFinishedImporting(
 );
 
 export const PlayStationTwoWayLinkUpsell = function PlayStationTwoWayLinkUpsell() {
-  let obj = HelpdeskUtilsDefault;
-  const articleURL = obj.getArticleURL(constants.PS_CONNECTION);
-  obj = { title: null, body: null, img: null, newIndicatorDismissibleContent: null, onPress: null };
-  const intl = util.intl;
-  obj.title = intl.string(util.t.v20wwm);
-  const intl2 = util.intl;
-  obj.body = intl2.format(util.t.lTZBit, { help_article: articleURL });
-  obj = { style: closure_7().upsellImage, source: null, resizeMode: "contain" };
   const tmp = closure_7();
-  obj.source = _modDef15058;
-  obj.img = jsx(FastImageDefault, { style: closure_7().upsellImage, source: null, resizeMode: "contain" });
-  obj.newIndicatorDismissibleContent = dismissible_content.DismissibleContent.PS_ONE_WAY_RECONNECT;
-  obj.onPress = function onPress() {
+  const articleURL = HelpdeskUtilsDefault.getArticleURL(constants.PS_CONNECTION);
+  const obj2 = { title: null, body: null, img: null, newIndicatorDismissibleContent: null, onPress: null };
+  const intl = util.intl;
+  obj2.title = intl.string(util.t.v20wwm);
+  const intl2 = util.intl;
+  obj2.body = intl2.format(util.t.lTZBit, { help_article: articleURL });
+  const obj3 = { style: tmp.upsellImage, source: null, resizeMode: "contain" };
+  obj3.source = _modDef15059;
+  obj2.img = jsx(FastImageDefault, { style: tmp.upsellImage, source: null, resizeMode: "contain" });
+  obj2.newIndicatorDismissibleContent = dismissible_content.DismissibleContent.PS_ONE_WAY_RECONNECT;
+  obj2.onPress = function onPress() {
     const items = [constants.RELINK_UPSELL];
     return PlayStationLinkModalActionCreatorsDefault.showModal(items, constants2.PLAYSTATION);
   };
   return jsx(OneWayToTwoWayLinkUpsell.OneWayToTwoWayLinkUpsell, {
-    style: closure_7().upsellImage,
-    source: null,
-    resizeMode: "contain",
+    title: null,
+    body: null,
+    img: null,
+    newIndicatorDismissibleContent: null,
+    onPress: null,
   });
 };

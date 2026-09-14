@@ -112,10 +112,10 @@ prototype["executeModules"] = function executeModules(type, databaseResult) {
 };
 AppDatabaseManager["handleException"] = function handleException(arg0, type, error) {
   closure_5.info("disabling database \u00B7 error encountered during dispatch", error, error.stack);
-  let obj = { type: "RESET_SOCKET", args: null };
-  obj = { error, action: "AppDatabaseManager(" + type.type + ")" };
-  obj.args = obj;
-  obj.dispatch(obj);
+  const obj2 = { type: "RESET_SOCKET", args: null };
+  const obj = DispatcherDefault;
+  obj2.args = { error, action: "AppDatabaseManager(" + type.type + ")" };
+  obj.dispatch(obj2);
 };
 AppDatabaseManager["computeEntries"] = function computeEntries(MobileAppDatabaseManager, arr) {
   closure_0 = MobileAppDatabaseManager;

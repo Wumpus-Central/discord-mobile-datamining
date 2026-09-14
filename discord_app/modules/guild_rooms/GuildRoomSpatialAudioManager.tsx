@@ -76,7 +76,6 @@ prototype["isLivingRoomAvailable"] = function isLivingRoomAvailable() {
   }
 };
 prototype["apply"] = function apply() {
-  let obj = MediaEngineStore;
   if (MediaEngineStore.getAudioMixerSettings().enabled) {
     const channelId = RTCConnectionStore.getChannelId();
     if (null != channelId) {
@@ -88,13 +87,13 @@ prototype["apply"] = function apply() {
           isGuildStageVoiceResult = channel.isGuildStageVoice();
         }
         if (!isGuildStageVoiceResult) {
-          obj = {
+          const obj2 = {
             users: GuildRoomStore.getRoomUsers(channelId),
             currentUserId: AuthenticationStore.getId(),
             channelId,
           };
-          _require = require("GuildRoomSpatialAudio").computeLivingRoomWorldPoints(obj);
-          const mediaEngine = obj.getMediaEngine();
+          _require = require("GuildRoomSpatialAudio").computeLivingRoomWorldPoints(obj2);
+          const mediaEngine = MediaEngineStore.getMediaEngine();
           mediaEngine.eachConnection((setUserPosition) => {
             const entries = Object.entries(closure_0);
             while (tmp2 !== undefined) {

@@ -3,6 +3,8 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 import GuildMemberRequesterStore from "../../../../../stores/GuildMemberRequesterStore.tsx";
 import UserStore from "../../../../../stores/UserStore.tsx";
 
+const require = globalThis.__r;
+
 const require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting(

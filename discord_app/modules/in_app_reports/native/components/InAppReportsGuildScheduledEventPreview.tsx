@@ -8,24 +8,22 @@ const require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-fn(4636);
-let createStyles = {
+const createStyles = fn(4636);
+let obj2 = {
   container: { alignSelf: "stretch", marginHorizontal: 16, marginBottom: 16 },
-  borderColor: null,
-  title: null,
+  borderColor: { color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY },
+  title: { lineHeight: 16, marginBottom: 8 },
   itemContainer: null,
   guildInfo: null,
   guildName: null,
   eventName: null,
 };
-createStyles = { color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
-createStyles.borderColor = createStyles;
-createStyles.title = { lineHeight: 16, marginBottom: 8 };
-createStyles.itemContainer = { minHeight: 40, borderRadius: nativeDefault.radii.sm, borderWidth: 1, padding: 8 };
-createStyles.guildInfo = { display: "flex", flexDirection: "row", alignItems: "center" };
-createStyles.guildName = { lineHeight: 18, marginStart: 8 };
-createStyles.eventName = { lineHeight: 20, marginTop: 8 };
-let closure_7 = createStyles.createStyles(createStyles);
+let obj3 = { color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
+obj2.itemContainer = { minHeight: 40, borderRadius: nativeDefault.radii.sm, borderWidth: 1, padding: 8 };
+obj2.guildInfo = { display: "flex", flexDirection: "row", alignItems: "center" };
+obj2.guildName = { lineHeight: 18, marginStart: 8 };
+obj2.eventName = { lineHeight: 20, marginTop: 8 };
+let closure_7 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting(
   "modules/in_app_reports/native/components/InAppReportsGuildScheduledEventPreview.tsx",
@@ -34,47 +32,47 @@ const result = size.fileFinishedImporting(
 export default function GuildScheduledEventPreview(event) {
   event = event.event;
   const tmp = closure_7();
-  let obj = event(504);
   const items = [GuildStore];
-  const stateFromStores = obj.useStateFromStores(items, () => GuildStore.getGuild(event.guild_id));
+  const stateFromStores = event(504).useStateFromStores(items, () => GuildStore.getGuild(event.guild_id));
   if (null == stateFromStores) {
     return null;
   } else {
-    obj = { style: tmp.container, children: null };
+    const obj2 = { style: tmp.container, children: null };
     const tmp2Result = tmp2(4486);
-    obj = { style: tmp.title, accessibilityRole: "header", variant: "text-xs/bold", children: null };
+    const obj3 = { style: tmp.title, accessibilityRole: "header", variant: "text-xs/bold", children: null };
     const intl = tmp2(1114).intl;
-    obj.children = intl.string(tmp2(1114).t.SDTOL7);
-    const items1 = [closure_5(tmp2(4632).Text, obj)];
-    const obj1 = { style: null, children: null };
+    obj3.children = intl.string(tmp2(1114).t.SDTOL7);
+    const items1 = [closure_5(tmp2(4632).Text, obj3)];
+    const obj4 = { style: null, children: null };
     const items2 = [tmp.itemContainer];
-    const obj2 = { borderColor: tmp2(4486).hexWithOpacity(tmp.borderColor.color, 0.08) };
-    items2[1] = obj2;
-    obj1.style = items2;
-    const obj3 = { style: tmp.guildInfo, children: null };
-    const obj4 = { guild: stateFromStores, size: null, selected: false };
+    const obj5 = { borderColor: tmp2(4486).hexWithOpacity(tmp.borderColor.color, 0.08) };
+    items2[1] = obj5;
+    obj4.style = items2;
+    const obj6 = { style: tmp.guildInfo, children: null };
+    const obj7 = { guild: stateFromStores, size: null, selected: false };
     const hexWithOpacityResult = tmp2(4486).hexWithOpacity(tmp.borderColor.color, 0.08);
-    obj4.size = tmp2(5665).GuildIconSizes.XXSMALL;
-    const items3 = [closure_5(GuildIconDefault, obj4)];
-    const obj5 = {
+    obj7.size = tmp2(5665).GuildIconSizes.XXSMALL;
+    const items3 = [closure_5(GuildIconDefault, obj7)];
+    const obj8 = {
       style: tmp.guildName,
       variant: "text-sm/medium",
       color: "text-default",
       children: stateFromStores.name,
     };
-    items3[1] = closure_5(tmp2(4632).Text, obj5);
-    obj3.children = items3;
-    const items4 = [closure_6(View, obj3)];
-    const obj6 = {
+    items3[1] = closure_5(tmp2(4632).Text, obj8);
+    obj6.children = items3;
+    const items4 = [closure_6(View, obj6)];
+    const obj9 = {
       style: tmp.eventName,
       variant: "text-md/bold",
       color: "mobile-text-heading-primary",
       children: event.name,
     };
-    items4[1] = closure_5(tmp2(4632).Text, obj6);
-    obj1.children = items4;
-    items1[1] = closure_6(View, obj1);
-    obj.children = items1;
-    return closure_6(View, obj);
+    items4[1] = closure_5(tmp2(4632).Text, obj9);
+    obj4.children = items4;
+    items1[1] = closure_6(View, obj4);
+    obj2.children = items1;
+    return closure_6(View, obj2);
   }
+  const obj = event(504);
 }

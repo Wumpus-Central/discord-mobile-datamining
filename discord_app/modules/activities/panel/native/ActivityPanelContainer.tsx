@@ -1,5 +1,4 @@
 // discord_app/modules/activities/panel/native/ActivityPanelContainer.tsx
-import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
 import ChannelTypes from "../../../../../discord_common/js/shared/shared-constants/ChannelTypes.tsx";
 import embeddedActivityLocationUtils from "../../utils/embeddedActivityLocationUtils.tsx";
 import ActivityPanelControllerDefault from "ActivityPanelController.tsx";
@@ -15,7 +14,6 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/activities/panel/native/ActivityPanelContainer.tsx");
 
 export default noop.memo(function ActivityPanelContainer() {
-  let obj = initialize;
   const items = [EmbeddedActivitiesStore, ChannelStore, SelectedChannelStore];
   let tmp2 = null;
   if (
@@ -51,7 +49,7 @@ export default noop.memo(function ActivityPanelContainer() {
       }
     }, [])
   ) {
-    obj = { children: jsx(ActivityPanelUIDefault, {}) };
+    let obj2 = { children: jsx(ActivityPanelUIDefault, {}) };
     tmp2 = jsx(ActivityPanelControllerDefault, { children: jsx(ActivityPanelUIDefault, {}) });
   }
   return tmp2;

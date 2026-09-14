@@ -59,10 +59,12 @@ export const OneColumnGuildUpsellList = function OneColumnGuildUpsellList(cardAc
       return () => clearTimeout(closure_0);
     }
   }, items1);
-  let obj = cardAction(ref[8]);
-  const items2 = [stateFromStoresObject];
-  stateFromStoresObject = obj.useStateFromStoresObject(items2, () => stateFromStoresObject.getGuildGameIds());
   let tmp = closure_9();
+  const items2 = [stateFromStoresObject];
+  stateFromStoresObject = cardAction(ref[8]).useStateFromStoresObject(items2, () =>
+    stateFromStoresObject.getGuildGameIds(),
+  );
+  let obj = cardAction(ref[8]);
   const analyticsLocations = onDismiss(ref[9])(
     onDismiss(ref[10]).GAME_COMMUNITY_MULTI_GUILD_UPSELL_GUILDS_BAR_ENTRYPOINT,
   ).analyticsLocations;
@@ -106,20 +108,20 @@ export const OneColumnGuildUpsellList = function OneColumnGuildUpsellList(cardAc
         if (!hasItem) {
           const current2 = ref.current;
           current2.add(item.id);
-          cardAction(ref[5]);
-          let obj = {
+          const obj2 = {
             type: cardAction(ref[6]).ImpressionTypes.PANE,
             name: cardAction(ref[6]).ImpressionNames.GAME_COMMUNITY_MULTI_GUILD_UPSELL_CARD,
             properties: null,
           };
-          obj = { game_id: closure_1_0[item.id], guild_id: item.id, location_stack };
-          obj.properties = obj;
-          obj.trackImpression(obj);
+          const obj3 = { game_id: closure_1_0[item.id], guild_id: item.id, location_stack };
+          obj2.properties = obj3;
+          cardAction(ref[5]).trackImpression(obj2);
+          const obj = cardAction(ref[5]);
         }
       }
     });
   }, items4);
-  obj = {
+  let obj3 = {
     ref,
     style: null,
     onViewableItemsChanged: null,
@@ -138,16 +140,16 @@ export const OneColumnGuildUpsellList = function OneColumnGuildUpsellList(cardAc
   if (first) {
     hidden = tmp.hidden;
   }
-  obj.style = hidden;
-  obj.onViewableItemsChanged = callback4;
-  obj.viewabilityConfig = viewabilityConfig;
-  obj.contentContainerStyle = contentContainerStyle;
-  obj.keyExtractor = callback;
-  obj.data = suggestedGuilds;
-  obj.ListHeaderComponent = subheader;
-  obj.renderItem = callback3;
-  obj.onScroll = callback1;
-  obj.onLoad = callback2;
+  obj3.style = hidden;
+  obj3.onViewableItemsChanged = callback4;
+  obj3.viewabilityConfig = viewabilityConfig;
+  obj3.contentContainerStyle = contentContainerStyle;
+  obj3.keyExtractor = callback;
+  obj3.data = suggestedGuilds;
+  obj3.ListHeaderComponent = subheader;
+  obj3.renderItem = callback3;
+  obj3.onScroll = callback1;
+  obj3.onLoad = callback2;
   return jsx(cardAction(ref[12]).FlashList, {
     ref,
     style: null,

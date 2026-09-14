@@ -13,16 +13,16 @@ export default noop.memo(
     let str = overrideVariant.overrideVariant;
     ({ style, layout } = overrideVariant);
     const merged = Object.assign(overrideVariant, Object.assign({ style: 0, overrideVariant: 0, layout: 0 }));
-    let obj = { ref, style, layout, children: null };
-    obj = {};
+    const obj = { ref, style, layout, children: null };
+    const obj2 = {};
     const merged1 = Object.assign(merged);
-    obj.size = "sm";
+    obj2.size = "sm";
     if (str == null) {
       str = "secondary-overlay";
     }
-    obj.variant = str;
-    obj.maxFontSizeMultiplier = 2;
+    obj2.variant = str;
+    obj2.maxFontSizeMultiplier = 2;
     obj.children = jsx(IconButton.IconButton, {});
-    return jsx(ReanimatedNativeViewDefault, {});
+    return jsx(ReanimatedNativeViewDefault, { ref, style, layout, children: null });
   }),
 );

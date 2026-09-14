@@ -16,8 +16,7 @@ const result = size.fileFinishedImporting("modules/home_drawer/native/subtitles/
 export default function MentionSubtitle(channel) {
   channel = channel.channel;
   ({ guild, channelName, count } = channel);
-  let obj = useSubtitleStyles;
-  const subtitleStyles = obj.useSubtitleStyles();
+  const subtitleStyles = useSubtitleStyles.useSubtitleStyles();
   let channelIconComponentWithGuild;
   if (null != channel) {
     channelIconComponentWithGuild = utils_ChannelUtils.getChannelIconComponentWithGuild(channel, guild);
@@ -26,10 +25,11 @@ export default function MentionSubtitle(channel) {
   if (channelIconComponentWithGuild == null) {
     channelIconComponentWithGuild = TextIcon.TextIcon;
   }
-  obj = { style: subtitleStyles.subtitleRow, children: null };
-  obj = { size: "xxs", color: "icon-muted", style: subtitleStyles.channelIcon };
-  const items = [React3(channelIconComponentWithGuild, obj)];
-  const obj1 = {
+  const obj2 = { style: subtitleStyles.subtitleRow, children: null };
+  const items = [
+    React3(channelIconComponentWithGuild, { size: "xxs", color: "icon-muted", style: subtitleStyles.channelIcon }),
+  ];
+  const obj4 = {
     variant: "text-xs/medium",
     color: "text-muted",
     lineClamp: 1,
@@ -37,14 +37,14 @@ export default function MentionSubtitle(channel) {
     children: null,
   };
   const intl = util.intl;
-  obj1.children = intl.format(util.t.L9YdGH, {
+  obj4.children = intl.format(util.t.L9YdGH, {
     channelName,
     count: count - 1,
     channelHook(children, arg1) {
       return closure_1_3(Text_Text.Text, { variant: "text-xs/medium", children }, arg1);
     },
   });
-  items[1] = React3(Text_Text.Text, obj1);
-  obj.children = items;
-  return React4(View, obj);
+  items[1] = React3(Text_Text.Text, obj4);
+  obj2.children = items;
+  return React4(View, obj2);
 }

@@ -14,11 +14,10 @@ const result = size.fileFinishedImporting(
 );
 
 export default function GuildBoostingMarketingWave(arg0) {
-  let obj = useToken;
-  const token = obj.useToken(nativeDefault.colors.BACKGROUND_BASE_LOW);
-  obj = { fill: "none", viewBox: "0 0 1512 510", preserveAspectRatio: "none" };
+  const token = useToken.useToken(nativeDefault.colors.BACKGROUND_BASE_LOW);
+  const obj2 = { fill: "none", viewBox: "0 0 1512 510", preserveAspectRatio: "none" };
   const merged = Object.assign(arg0);
-  obj.children = jsx(inlineStyles.Path, {
+  obj2.children = jsx(inlineStyles.Path, {
     d: "M1512,25.1c-294.3-135.3-565.2,319.2-855,322.2c-232,2.4-279-101.8-415.5-100.5C149.9,247.7,49.8,311.3,0,355.4 v154.4h1512V25.1z",
     fill: token,
   });

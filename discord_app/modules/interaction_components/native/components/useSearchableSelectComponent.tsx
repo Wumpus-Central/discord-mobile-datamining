@@ -18,8 +18,11 @@ export default function useSearchableSelectComponent(selectActionComponent) {
   ({ containerId, guildId } = selectActionComponent);
   const tmp = first(noop.useState(""), 2);
   first = tmp[0];
-  let obj = selectActionComponent(onSubmit[2]);
-  noop = obj.getInitialSnowflakeSelectOptions(selectActionComponent, containerId, guildId);
+  noop = selectActionComponent(onSubmit[2]).getInitialSnowflakeSelectOptions(
+    selectActionComponent,
+    containerId,
+    guildId,
+  );
   const tmp3 = first(
     noop.useState(
       () =>
@@ -36,7 +39,7 @@ export default function useSearchableSelectComponent(selectActionComponent) {
   closure_6 = tmp3[1];
   let items = [first, queryOptions];
   closure_7 = selectActionComponent.maxValues > 1;
-  obj = {
+  const obj2 = {
     options: noop.useMemo(() => queryOptions(first), items),
     selectedOptions: null,
     isSelected(value) {
@@ -61,17 +64,17 @@ export default function useSearchableSelectComponent(selectActionComponent) {
           });
         }
       } else {
-        let _Map = Map;
+        const _Map = Map;
         if (hasItem) {
-          _Map = new _Map();
+          let _Map1 = new _Map();
         } else {
           const items = [value.value, value];
           const items1 = [items];
-          _Map = new _Map(items1);
+          _Map1 = new _Map(items1);
         }
         const obj = { type: selectActionComponent.type, selectedOptions: null };
         const items2 = [];
-        HermesBuiltin.arraySpread(_Map.values(), 0);
+        HermesBuiltin.arraySpread(_Map1.values(), 0);
         obj.selectedOptions = items2;
         onSubmit(obj);
         ActionSheetActionCreatorsDefault.hideActionSheet();
@@ -87,6 +90,6 @@ export default function useSearchableSelectComponent(selectActionComponent) {
     setQuery: tmp[1],
   };
   let items1 = [...first1.values()];
-  obj.selectedOptions = items1;
-  return obj;
+  obj2.selectedOptions = items1;
+  return obj2;
 }

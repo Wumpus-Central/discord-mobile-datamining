@@ -43,19 +43,19 @@ prototype["handleAppStateUpdate"] = function handleAppStateUpdate(state) {
 prototype["deliverPendingSessions"] = function deliverPendingSessions() {
   const self = this;
   if (!this._isDelivering) {
-    let properties = self(17523);
-    if (null != properties) {
+    let obj = self(17524);
+    if (null != obj) {
       tmp._isDelivering = true;
-      const pendingReports = properties.getPendingReports();
+      const pendingReports = obj.getPendingReports();
       const nextPromise = pendingReports.then((arr) => {
         closure_0 = arr;
         if (0 !== arr.length) {
           const result = AnalyticsTrackingStore.submitEventsImmediately(
             arr.map((item) => {
-              properties = { type: constants.ANDROID_JANK_SESSION, properties: null };
-              properties = {};
+              obj = { type: constants.ANDROID_JANK_SESSION, properties: null };
+              const obj4 = {};
               const merged = Object.assign(closure_0(closure_1_2[6]).getDeviceMetadata());
-              properties.schema_version = 1;
+              obj4.schema_version = 1;
               ({
                 sessionId: obj2.jank_session_id,
                 appVersionCode: obj2.captured_app_version_code,
@@ -64,8 +64,8 @@ prototype["deliverPendingSessions"] = function deliverPendingSessions() {
                 totalFrameCount: obj2.total_frame_count,
                 jankFrameCount: obj2.jank_frame_count,
               } = item);
-              properties.properties = properties;
-              return properties;
+              obj.properties = obj4;
+              return obj;
             }),
           );
           return result.then(() => {
@@ -79,10 +79,10 @@ prototype["deliverPendingSessions"] = function deliverPendingSessions() {
           if (0 !== arr.length) {
             const result = AnalyticsTrackingStore.submitEventsImmediately(
               arr.map((item) => {
-                properties = { type: constants.ANDROID_JANK_SESSION, properties: null };
-                properties = {};
+                obj = { type: constants.ANDROID_JANK_SESSION, properties: null };
+                const obj4 = {};
                 const merged = Object.assign(closure_0(closure_1_2[6]).getDeviceMetadata());
-                properties.schema_version = 1;
+                obj4.schema_version = 1;
                 ({
                   sessionId: obj2.jank_session_id,
                   appVersionCode: obj2.captured_app_version_code,
@@ -91,8 +91,8 @@ prototype["deliverPendingSessions"] = function deliverPendingSessions() {
                   totalFrameCount: obj2.total_frame_count,
                   jankFrameCount: obj2.jank_frame_count,
                 } = item);
-                properties.properties = properties;
-                return properties;
+                obj.properties = obj4;
+                return obj;
               }),
             );
             return result.then(() => {
@@ -112,10 +112,10 @@ prototype["deliverPendingSessions"] = function deliverPendingSessions() {
           if (0 !== arr.length) {
             const result = AnalyticsTrackingStore.submitEventsImmediately(
               arr.map((item) => {
-                properties = { type: constants.ANDROID_JANK_SESSION, properties: null };
-                properties = {};
+                obj = { type: constants.ANDROID_JANK_SESSION, properties: null };
+                const obj4 = {};
                 const merged = Object.assign(closure_0(closure_1_2[6]).getDeviceMetadata());
-                properties.schema_version = 1;
+                obj4.schema_version = 1;
                 ({
                   sessionId: obj2.jank_session_id,
                   appVersionCode: obj2.captured_app_version_code,
@@ -124,8 +124,8 @@ prototype["deliverPendingSessions"] = function deliverPendingSessions() {
                   totalFrameCount: obj2.total_frame_count,
                   jankFrameCount: obj2.jank_frame_count,
                 } = item);
-                properties.properties = properties;
-                return properties;
+                obj.properties = obj4;
+                return obj;
               }),
             );
             return result.then(() => {

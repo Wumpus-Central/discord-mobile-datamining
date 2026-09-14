@@ -234,7 +234,7 @@ class UserRecord extends tmp2 {
       storeCountry = global.storeCountry;
     }
     tmp6.storeCountry = tmp12Result5.parseStoreCountry(storeCountry);
-    obj = {
+    obj1 = {
       hasFlag: {
         writable: false,
         configurable: false,
@@ -291,11 +291,11 @@ class UserRecord extends tmp2 {
         },
       },
     };
-    definePropertiesResult = Object.defineProperties(tmp6, obj);
-    globalName = tmp6.globalName;
+    definePropertiesResult = Object.defineProperties(tmp6, obj1);
+    globalName1 = tmp6.globalName;
     length = undefined;
-    if (globalName != null) {
-      length = globalName.length;
+    if (globalName1 != null) {
+      length = globalName1.length;
     }
     if (0 === length) {
       tmp6.globalName = null;
@@ -332,25 +332,23 @@ prototype["getAvatarURL"] = function getAvatarURL(guildId, size) {
   }
   if (null != tmp3) {
     if (null != guildId) {
-      let obj = { guildId, avatar: tmp3, userId: self.id, canAnimate: flag, size, canWebP: SUPPORTS_WEBP };
-      let guildMemberAvatarURLSimple = AvatarUtilsDefault.getGuildMemberAvatarURLSimple(obj);
+      const obj3 = { guildId, avatar: tmp3, userId: self.id, canAnimate: flag, size, canWebP: SUPPORTS_WEBP };
+      let guildMemberAvatarURLSimple = AvatarUtilsDefault.getGuildMemberAvatarURLSimple(obj3);
     }
     return guildMemberAvatarURLSimple;
   }
-  obj = AvatarUtilsDefault;
-  guildMemberAvatarURLSimple = obj.getUserAvatarURL(self, flag, size, null, SUPPORTS_WEBP);
+  guildMemberAvatarURLSimple = AvatarUtilsDefault.getUserAvatarURL(self, flag, size, null, SUPPORTS_WEBP);
 };
 prototype["addGuildAvatarHash"] = function addGuildAvatarHash(guildId, avatar) {
   const self = this;
   if (this.guildMemberAvatars[guildId] === avatar) {
     return self;
   } else {
-    let obj = {};
+    const obj = {};
     const merged = Object.assign(self.guildMemberAvatars);
     obj[guildId] = avatar;
-    obj = { guildMemberAvatars: null };
-    obj.guildMemberAvatars = obj;
-    return self.merge(obj);
+    const obj2 = { guildMemberAvatars: obj };
+    return self.merge(obj2);
   }
 };
 prototype["removeGuildAvatarHash"] = function removeGuildAvatarHash(guildId) {
@@ -358,12 +356,11 @@ prototype["removeGuildAvatarHash"] = function removeGuildAvatarHash(guildId) {
   if (undefined === this.guildMemberAvatars[guildId]) {
     return self;
   } else {
-    let obj = {};
+    const obj = {};
     const merged = Object.assign(self.guildMemberAvatars);
     obj[guildId] = undefined;
-    obj = { guildMemberAvatars: null };
-    obj.guildMemberAvatars = obj;
-    return self.merge(obj);
+    const obj2 = { guildMemberAvatars: obj };
+    return self.merge(obj2);
   }
 };
 prototype["getAvatarSource"] = function getAvatarSource(guildId) {
@@ -377,8 +374,10 @@ prototype["getAvatarSource"] = function getAvatarSource(guildId) {
     avatar = tmp;
     if (null != this.guildMemberAvatars[guildId]) {
       return require("AvatarUtils").getAnimatableSourceWithFallback(flag, (canAnimate) => {
-        const obj = { guildId, avatar, userId: self.id, canAnimate, size };
-        return obj.makeSource(AvatarUtilsDefault.getGuildMemberAvatarURLSimple(obj));
+        const obj = AvatarUtilsDefault;
+        return obj.makeSource(
+          AvatarUtilsDefault.getGuildMemberAvatarURLSimple({ guildId, avatar, userId: self.id, canAnimate, size }),
+        );
       });
     }
   }

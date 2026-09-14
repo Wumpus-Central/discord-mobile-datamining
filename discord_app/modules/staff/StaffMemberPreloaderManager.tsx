@@ -2,7 +2,7 @@
 import AutomaticLifecycleManager from "../../lib/AutomaticLifecycleManager.tsx";
 
 let require = fn;
-let prototype = function StaffMemberPreloaderManager() {
+const prototype = function StaffMemberPreloaderManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
   require = applyArgumentsResult;
   applyArgumentsResult.actions = {
@@ -16,8 +16,8 @@ let prototype = function StaffMemberPreloaderManager() {
   return applyArgumentsResult;
 }.prototype;
 class prototype extends tmp2 {}
-prototype = new prototype();
+const prototype1 = new prototype();
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/staff/StaffMemberPreloaderManager.tsx");
 
-export default prototype;
+export default prototype1;

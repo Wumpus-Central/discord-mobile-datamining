@@ -38,31 +38,30 @@ export default function useUserProfileOverscrollStyles(arg0) {
   let derivedValue;
   __initData = undefined;
   const height = stateFromStores(scrollPosition[3])().height;
-  let obj = height(scrollPosition[4]);
   let items = [derivedValue];
-  stateFromStores = obj.useStateFromStores(items, () => {
+  stateFromStores = height(scrollPosition[4]).useStateFromStores(items, () => {
     let num = 1.5;
     if (derivedValue.useReducedMotion) {
       num = 1;
     }
     return num;
   }, []);
-  let obj1 = height(scrollPosition[5]);
+  let obj = height(scrollPosition[4]);
   if (scrollPosition == null) {
-    scrollPosition = obj1.useSharedValue(0);
+    scrollPosition = obj2.useSharedValue(0);
   }
   _slicedToArray = tmp4;
   const result = 0.125 * bannerHeight;
   noop = result;
-  let tmp2Result = tmp2(tmp[5]);
+  obj2 = height(scrollPosition[5]);
   const fn = function v() {
     return scrollPosition.get() <= 0;
   };
   fn.__closure = { position: scrollPosition };
   fn.__workletHash = 11756661427383;
   fn.__initData = __initData;
-  derivedValue = tmp2Result.useDerivedValue(fn);
-  tmp2Result = tmp2(tmp[5]);
+  derivedValue = height(scrollPosition[5]).useDerivedValue(fn);
+  const tmp2Result = height(scrollPosition[5]);
   class P {
     constructor() {
       if (closure_5.get()) {
@@ -81,7 +80,8 @@ export default function useUserProfileOverscrollStyles(arg0) {
   P.__closure = { isNegativeScrollPosition: derivedValue, position: scrollPosition };
   P.__workletHash = 2642279626533;
   P.__initData = __initData2;
-  const bannerAnimatedStyle = tmp2Result.useAnimatedStyle(P);
+  const bannerAnimatedStyle = height(scrollPosition[5]).useAnimatedStyle(P);
+  const tmp2Result6 = height(scrollPosition[5]);
   class O {
     constructor() {
       obj = closure_0(closure_2[5]);
@@ -98,13 +98,13 @@ export default function useUserProfileOverscrollStyles(arg0) {
       items2[1] = 0;
       interpolateResult1 = obj2.interpolate(closure_2.get(), items1, items2);
       if (closure_5.get()) {
-        obj = { scale: null };
-        obj.scale = interpolateResult;
+        obj1 = { scale: null };
+        obj1.scale = interpolateResult;
         items3 = [,];
-        items3[0] = obj;
-        obj1 = { translateY: null };
-        obj1.translateY = interpolateResult1;
-        items3[1] = obj1;
+        items3[0] = obj1;
+        obj5 = { translateY: null };
+        obj5.translateY = interpolateResult1;
+        items3[1] = obj5;
         items4 = items3;
       } else {
         items4 = [];
@@ -112,19 +112,26 @@ export default function useUserProfileOverscrollStyles(arg0) {
       return { transform: items4 };
     }
   }
-  obj = {
-    interpolate: tmp2(tmp[5]).interpolate,
+  const tmp2Result7 = height(scrollPosition[5]);
+  O.__closure = {
+    interpolate: height(scrollPosition[5]).interpolate,
     position: scrollPosition,
-    minScrollPosition: tmp4,
+    minScrollPosition: -bannerHeight,
     SCALE_FACTOR: 1.5,
     translateOnScale: result,
     isNegativeScrollPosition: derivedValue,
   };
-  O.__closure = obj;
   O.__workletHash = 5375176079092;
   O.__initData = __initData3;
-  const bannerImageAnimatedStyle = height(scrollPosition[5]).useAnimatedStyle(O);
-  const tmp2Result1 = height(scrollPosition[5]);
+  const bannerImageAnimatedStyle = tmp2Result7.useAnimatedStyle(O);
+  let obj3 = {
+    interpolate: height(scrollPosition[5]).interpolate,
+    position: scrollPosition,
+    minScrollPosition: -bannerHeight,
+    SCALE_FACTOR: 1.5,
+    translateOnScale: result,
+    isNegativeScrollPosition: derivedValue,
+  };
   const fn2 = function w() {
     if (derivedValue.get()) {
       const obj = { translateY: scrollPosition.get() * (1 / stateFromStores) };
@@ -139,7 +146,7 @@ export default function useUserProfileOverscrollStyles(arg0) {
   fn2.__workletHash = 16539417859130;
   fn2.__initData = __initData4;
   const contentAnimatedStyle = height(scrollPosition[5]).useAnimatedStyle(fn2);
-  const tmp2Result2 = height(scrollPosition[5]);
+  const tmp2Result8 = height(scrollPosition[5]);
   class A {
     constructor() {
       obj = { blurAmount: null };
@@ -151,20 +158,26 @@ export default function useUserProfileOverscrollStyles(arg0) {
       return obj;
     }
   }
-  obj = {
-    clamp: tmp2(tmp[5]).clamp,
-    interpolate: tmp2(tmp[5]).interpolate,
+  const tmp2Result9 = height(scrollPosition[5]);
+  A.__closure = {
+    clamp: height(scrollPosition[5]).clamp,
+    interpolate: height(scrollPosition[5]).interpolate,
     position: scrollPosition,
     windowHeight: height,
     coefficient: stateFromStores,
   };
-  A.__closure = obj;
   A.__workletHash = 849678936428;
   A.__initData = __initData5;
-  const blurAnimatedProps = height(scrollPosition[5]).useAnimatedProps(A);
+  const blurAnimatedProps = tmp2Result9.useAnimatedProps(A);
   const showBlur = _slicedToArray(noop.useState(scrollPosition.get() < 0), 2);
   __initData = tmp12;
-  const tmp2Result3 = height(scrollPosition[5]);
+  let obj4 = {
+    clamp: height(scrollPosition[5]).clamp,
+    interpolate: height(scrollPosition[5]).interpolate,
+    position: scrollPosition,
+    windowHeight: height,
+    coefficient: stateFromStores,
+  };
   class H {
     constructor() {
       return closure_2.get() < 0;
@@ -180,11 +193,11 @@ export default function useUserProfileOverscrollStyles(arg0) {
     }
     return tmp;
   };
-  obj1 = { runOnJS: tmp2(tmp[5]).runOnJS, setShowBlur: tmp12 };
-  fn3.__closure = obj1;
+  const tmp2Result10 = height(scrollPosition[5]);
+  fn3.__closure = { runOnJS: height(scrollPosition[5]).runOnJS, setShowBlur: showBlur[1] };
   fn3.__workletHash = 6548835412849;
   fn3.__initData = __initData7;
-  const animatedReaction = height(scrollPosition[5]).useAnimatedReaction(H, fn3);
+  const animatedReaction = tmp2Result10.useAnimatedReaction(H, fn3);
   return {
     bannerAnimatedStyle,
     bannerImageAnimatedStyle,

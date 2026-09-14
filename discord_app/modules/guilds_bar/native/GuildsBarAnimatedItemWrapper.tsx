@@ -46,23 +46,24 @@ class UnreadIndicator {
     items[2] = tmp7.unreadIndicator;
     fn = function h(targetOriginY) {
       if (closure_6) {
-        let obj = { animations: {}, initialValues: {} };
+        const obj2 = { animations: {}, initialValues: {} };
+        let obj3 = obj2;
       } else {
-        obj = { animations: null, initialValues: null };
-        const obj1 = {
+        obj3 = { animations: null, initialValues: null };
+        const obj7 = {
           originY: spring.withSpring(targetOriginY.targetOriginY, closure_11, "animate-always"),
           originX: null,
           height: null,
         };
-        obj1.originX = spring.withSpring(targetOriginY.targetOriginX, closure_11, "animate-always");
-        obj1.height = spring.withSpring(targetOriginY.targetHeight, closure_11, "animate-always");
-        obj.animations = obj1;
-        const obj2 = { height: 8, originY: token / 2, originX: -12 };
-        obj.initialValues = obj2;
+        obj7.originX = spring.withSpring(targetOriginY.targetOriginX, closure_11, "animate-always");
+        obj7.height = spring.withSpring(targetOriginY.targetHeight, closure_11, "animate-always");
+        obj3.animations = obj7;
+        const obj8 = { height: 8, originY: token / 2, originX: -12 };
+        obj3.initialValues = obj8;
       }
-      return obj;
+      return obj3;
     };
-    obj = { disableEntering: tmp8, sharedId, id, withSpring: null, BAR_SPRING_PHYSICS: null, guildItemSize: null };
+    obj1 = { disableEntering: tmp8, sharedId, id, withSpring: null, BAR_SPRING_PHYSICS: null, guildItemSize: null };
     memo = cleanUp.useMemo(() => {
       const items = [unreadIndicator.unreadIndicator];
       const obj = { height: num, marginTop: (num / 2) * -1, marginLeft: null };
@@ -74,10 +75,10 @@ class UnreadIndicator {
       items[1] = obj;
       return items;
     }, items);
-    obj.withSpring = tmp3(tmp4[8]).withSpring;
-    obj.BAR_SPRING_PHYSICS = closure_11;
-    obj.guildItemSize = token;
-    fn.__closure = obj;
+    obj1.withSpring = tmp3(tmp4[8]).withSpring;
+    obj1.BAR_SPRING_PHYSICS = closure_11;
+    obj1.guildItemSize = token;
+    fn.__closure = obj1;
     fn.__workletHash = 404454683979;
     fn.__initData = closure_14;
     items1 = [, , ,];
@@ -86,15 +87,15 @@ class UnreadIndicator {
     items1[2] = id;
     items1[3] = token;
     fn2 = function p(height) {
-      let obj = { animations: null, initialValues: null, callback: null };
-      obj = {
+      const obj = { animations: null, initialValues: null, callback: null };
+      const obj2 = {
         originY: spring.withSpring(height.targetOriginY, closure_11, "animate-always"),
         originX: null,
         height: null,
       };
-      obj.originX = spring.withSpring(height.targetOriginX, closure_11, "animate-always");
-      obj.height = spring.withSpring(height.targetHeight, closure_11, "animate-always");
-      obj.animations = obj;
+      obj2.originX = spring.withSpring(height.targetOriginX, closure_11, "animate-always");
+      obj2.height = spring.withSpring(height.targetHeight, closure_11, "animate-always");
+      obj.animations = obj2;
       obj.initialValues = {
         height: height.currentHeight,
         originY: height.currentOriginY,
@@ -112,7 +113,7 @@ class UnreadIndicator {
       };
       return obj;
     };
-    obj1 = {
+    obj4 = {
       withSpring: null,
       BAR_SPRING_PHYSICS: null,
       transitionState: null,
@@ -121,13 +122,13 @@ class UnreadIndicator {
       runOnJS: null,
     };
     callback = cleanUp.useCallback(fn, items1);
-    obj1.withSpring = tmp3(tmp4[8]).withSpring;
-    obj1.BAR_SPRING_PHYSICS = closure_11;
-    obj1.transitionState = MOUNTED;
-    obj1.TransitionStates = tmp3(tmp4[7]).TransitionStates;
-    obj1.cleanUp = cleanUp;
-    obj1.runOnJS = tmp3(tmp4[9]).runOnJS;
-    fn2.__closure = obj1;
+    obj4.withSpring = tmp3(tmp4[8]).withSpring;
+    obj4.BAR_SPRING_PHYSICS = closure_11;
+    obj4.transitionState = MOUNTED;
+    obj4.TransitionStates = tmp3(tmp4[7]).TransitionStates;
+    obj4.cleanUp = cleanUp;
+    obj4.runOnJS = tmp3(tmp4[9]).runOnJS;
+    fn2.__closure = obj4;
     fn2.__workletHash = 10632665703864;
     fn2.__initData = closure_15;
     items2 = [,];
@@ -151,7 +152,7 @@ function renderUnreadIndicator(arg0, sharedId, transitionState, cleanUp) {
   );
 }
 const IOS_POINTER_STYLE = fn(5065).IOS_POINTER_STYLE;
-const GuildsBarConstants = fn(16377);
+const GuildsBarConstants = fn(16379);
 ({
   GUILD_ITEM_HIT_SLOP: hasOwnProperty,
   GUILD_ITEM_INSET_LEFT: metroRequire,
@@ -286,14 +287,13 @@ export default function GuildsBarAnimatedItemWrapper(id) {
   closure_22 = undefined;
   let tmp = num();
   closure_15 = tmp;
-  let obj = id(circle[6]);
-  const token = obj.useToken(selected(circle[5]).modules.mobile.GUILD_BAR_ITEM_SIZE);
+  const token = id(circle[6]).useToken(selected(circle[5]).modules.mobile.GUILD_BAR_ITEM_SIZE);
   const tmp6 = expanded(tmp);
   renderItem = tmp6;
   const tmp7 = selected(circle[11])(config);
-  let obj1 = id(circle[6]);
-  const token1 = obj1.useToken(selected(circle[5]).modules.mobile.GUILD_ITEM_SELECTED_BORDER_RADIUS);
-  let obj2 = id(circle[9]);
+  let obj = id(circle[6]);
+  const token1 = id(circle[6]).useToken(selected(circle[5]).modules.mobile.GUILD_ITEM_SELECTED_BORDER_RADIUS);
+  let obj2 = id(circle[6]);
   class X {
     constructor() {
       obj = closure_0(closure_2[8]);
@@ -304,25 +304,30 @@ export default function GuildsBarAnimatedItemWrapper(id) {
       } else {
         result = closure_18;
       }
-      obj = { borderRadius: obj.withSpring(result, closure_10, "animate-always") };
-      return obj;
+      obj1 = { borderRadius: obj.withSpring(result, closure_10, "animate-always") };
+      return obj1;
     }
   }
-  obj = {
+  const obj3 = id(circle[9]);
+  X.__closure = {
     withSpring: id(circle[8]).withSpring,
     circle,
     guildItemSelectedBorderRadius: token1,
     guildItemSize: token,
     CORNER_SPRING_PHYSICS: accessibilityActions,
   };
-  X.__closure = obj;
   X.__workletHash = 15930523896348;
   X.__initData = token1;
-  let obj4 = hint;
-  const animatedStyle = obj2.useAnimatedStyle(X);
+  const animatedStyle = obj3.useAnimatedStyle(X);
   const enableHome = hint.useContext(id(circle[12]).HomeDrawerStateContext).enableHome;
-  let obj5 = id(circle[13]);
-  const drawerOpen = obj5.useDrawerOpen(enableHome);
+  const obj4 = {
+    withSpring: id(circle[8]).withSpring,
+    circle,
+    guildItemSelectedBorderRadius: token1,
+    guildItemSize: token,
+    CORNER_SPRING_PHYSICS: accessibilityActions,
+  };
+  const drawerOpen = id(circle[13]).useDrawerOpen(enableHome);
   let items = [isDragTarget, dragState, num, overState, zIndex, tmp];
   const memo = hint.useMemo(() => {
     if (isDragTarget) {
@@ -338,7 +343,7 @@ export default function GuildsBarAnimatedItemWrapper(id) {
           num = height;
         }
       }
-      let obj = { height: num, top: null, zIndex: null };
+      const obj = { height: num, top: null, zIndex: null };
       let num2 = 0;
       if ("drag-target" === str2) {
         if ("before" === tmp2) {
@@ -347,11 +352,13 @@ export default function GuildsBarAnimatedItemWrapper(id) {
           num2 = 0;
         }
       }
-      obj = { style: null, unreadStyle: null, top: num2, zIndex };
-      obj.style = obj;
+      const obj2 = { style: null, unreadStyle: null };
+      obj.top = num2;
+      obj.zIndex = zIndex;
+      obj2.style = obj;
       const size = { position: "absolute", width: height, height };
-      obj.unreadStyle = size;
-      return obj;
+      obj2.unreadStyle = size;
+      return obj2;
     }
     if (null != overState) {
       if ("self" !== overState) {
@@ -386,15 +393,15 @@ export default function GuildsBarAnimatedItemWrapper(id) {
   }
   flag2 = tmp13;
   const items2 = [tmp13, selected, sharedId, id];
-  const memo2 = obj4.useMemo(() => {
+  const memo2 = obj5.useMemo(() => {
     if (!flag2) {
       const obj = { selected, sharedId, id };
       return obj;
     }
   }, items2);
-  obj4.useRef(undefined);
+  hint.useRef(undefined);
   const items3 = [expanded];
-  const effect = obj4.useEffect(() => {
+  const effect = obj5.useEffect(() => {
     if (undefined !== ref.current) {
       if (ref.current !== expanded) {
         let AccessibilityAnnouncer = require;
@@ -412,7 +419,7 @@ export default function GuildsBarAnimatedItemWrapper(id) {
   const tmp16 = selected(circle[16])(enableHome, drawerOpen);
   closure_21 = tmp16;
   const items4 = [accessibilityActions, tmp16];
-  const memo3 = obj4.useMemo(() => {
+  const memo3 = obj5.useMemo(() => {
     if (null == closure_21) {
       let items1 = accessibilityActions;
     } else {
@@ -429,7 +436,7 @@ export default function GuildsBarAnimatedItemWrapper(id) {
   }, items4);
   const items5 = [tmp16, onAccessibilityAction];
   let tmp18 = null != memo3;
-  const callback = obj4.useCallback((nativeEvent) => {
+  const callback = obj5.useCallback((nativeEvent) => {
     if (null != closure_21) {
       if (nativeEvent.nativeEvent.actionName === closure_21.name) {
         closure_21.action();
@@ -444,19 +451,18 @@ export default function GuildsBarAnimatedItemWrapper(id) {
   }
   closure_22 = tmp18;
   const items6 = [hint, flag, tmp18];
-  const memo4 = obj4.useMemo(() => {
-    let arr = hint;
+  const memo4 = obj5.useMemo(() => {
     let tmp = null != hint;
     if (tmp) {
-      tmp = arr.length > 0;
+      tmp = hint.length > 0;
     }
     const items = [];
     if (tmp) {
-      arr = items.push(arr);
+      items.push(hint);
     }
     if (flag) {
       const intl = util.intl;
-      arr = items.push(intl.string(util.t.BGMUFB));
+      items.push(intl.string(util.t.BGMUFB));
     }
     if (closure_22) {
       const intl2 = util.intl;
@@ -464,35 +470,36 @@ export default function GuildsBarAnimatedItemWrapper(id) {
     }
     return items.join(". ");
   }, items6);
-  obj = {};
-  let tmp4Result = tmp4(tmp3[17]);
+  const obj7 = {};
+  const obj6 = id(circle[13]);
   const merged = Object.assign(tmp7);
-  obj.style = memo1;
-  obj.accessibilityLabel = label;
-  obj.accessible = true;
-  obj.focusable = true;
-  obj.accessibilityRole = "button";
-  obj.accessibilityState = { selected, expanded };
-  obj.hitSlop = isDragTarget;
+  obj7.style = memo1;
+  obj7.accessibilityLabel = label;
+  obj7.accessible = true;
+  obj7.focusable = true;
+  obj7.accessibilityRole = "button";
+  obj7.accessibilityState = { selected, expanded };
+  obj7.hitSlop = isDragTarget;
   let tmp22;
   if (memo4.length > 0) {
     tmp22 = memo4;
   }
-  obj.accessibilityHint = tmp22;
-  obj.collapsable = false;
-  obj.accessibilityActions = memo3;
-  obj.onAccessibilityAction = callback;
+  obj7.accessibilityHint = tmp22;
+  obj7.collapsable = false;
+  obj7.accessibilityActions = memo3;
+  obj7.onAccessibilityAction = callback;
   const items7 = [externalChildren, ,];
-  obj1 = { pointerEvents: "none", style: unreadStyle, collapsable: false, children: null };
-  tmp4Result = tmp4(tmp3[17]);
-  obj2 = { item: memo2, renderItem };
-  obj1.children = overState(id(circle[7]).TransitionItem, obj2);
-  items7[1] = overState(tmp4Result, obj1);
-  const obj3 = { style: null, cutouts, children: null };
+  const obj8 = { pointerEvents: "none", style: unreadStyle, collapsable: false, children: null };
+  const tmp4Result = selected(circle[17]);
+  obj8.children = overState(id(circle[7]).TransitionItem, { item: memo2, renderItem });
+  items7[1] = overState(selected(circle[17]), obj8);
+  const obj10 = { style: null, cutouts, children: null };
   const items8 = [styles.itemShape, animatedStyle];
-  obj3.style = items8;
+  obj10.style = items8;
   const items9 = [tmp6.selectedBackgroundOverlay];
   let itemShapeSelected = null;
+  const obj9 = { item: memo2, renderItem };
+  const tmp4Result5 = selected(circle[17]);
   if (selected) {
     itemShapeSelected = styles.itemShapeSelected;
   }
@@ -503,42 +510,42 @@ export default function GuildsBarAnimatedItemWrapper(id) {
     tmp27 = children;
   }
   items10[1] = tmp27;
-  obj3.children = items10;
-  items7[2] = styles(id(circle[18]).ClipViewAnimated, obj3);
-  obj.children = items7;
-  const tmp4Result1 = selected(circle[17]);
+  obj10.children = items10;
+  items7[2] = styles(id(circle[18]).ClipViewAnimated, obj10);
+  obj7.children = items7;
+  const tmp4Result6 = selected(circle[17]);
   let container = null;
-  const tmp19Result = styles(tmp4Result, obj);
+  const tmp19Result = styles(tmp4Result, obj7);
   if (enableHome) {
     container = tmp6.container;
   }
-  obj4 = { style: null, layout, entering, exiting, collapsable: false, children: null };
+  const obj11 = { style: null, layout, entering, exiting, collapsable: false, children: null };
   const items11 = [container, style];
-  obj4.style = items11;
+  obj11.style = items11;
   const items12 = [tmp19Result];
   let tmp23Result = null;
   if (enableHome) {
-    obj5 = {};
+    const obj12 = {};
     const merged1 = Object.assign(tmp7);
-    obj5.style = tmp6.expandedChildrenWrapper;
-    obj5.collapsable = false;
-    obj5.accessibilityElementsHidden = !drawerOpen;
+    obj12.style = tmp6.expandedChildrenWrapper;
+    obj12.collapsable = false;
+    obj12.accessibilityElementsHidden = !drawerOpen;
     let str = "no-hide-descendants";
     if (drawerOpen) {
       str = "auto";
     }
-    obj5.importantForAccessibility = str;
+    obj12.importantForAccessibility = str;
     let tmp36 = !isDragTarget;
     if (!isDragTarget) {
       tmp36 = expandedChildren;
     }
-    obj5.children = tmp36;
-    tmp23Result = tmp23(tmp4(tmp3[17]), obj5);
-    const tmp4Result3 = tmp4(tmp3[17]);
+    obj12.children = tmp36;
+    tmp23Result = tmp23(tmp4(tmp3[17]), obj12);
+    const tmp4Result8 = tmp4(tmp3[17]);
   }
   items12[1] = tmp23Result;
-  obj4.children = items12;
-  return styles(selected(circle[10]), obj4);
+  obj11.children = items12;
+  return styles(selected(circle[10]), obj11);
 }
 export const useGuildsBarAnimatedWrapperStyles = function useGuildsBarAnimatedWrapperStyles(arg0) {
   let obj = arg0;

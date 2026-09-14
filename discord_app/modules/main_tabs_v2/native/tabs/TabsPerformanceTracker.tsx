@@ -33,7 +33,7 @@ export const useTrackTabPerformance = function useTrackTabPerformance(GUILDS) {
         const _performance = performance;
         tab.layoutUITime = performance.now();
         if (tmp5) {
-          let obj = {
+          const obj3 = {
             tab,
             start_time: null,
             layout_effect_time: null,
@@ -48,14 +48,14 @@ export const useTrackTabPerformance = function useTrackTabPerformance(GUILDS) {
             effectTime: obj2.effect_time,
             uiTime: obj2.ui_thread_time,
           } = tab);
-          obj.track(AnalyticEvents.REDESIGN_NAV_BAR_RENDERED, obj);
-          obj = {
+          AnalyticsUtilsDefault.track(AnalyticEvents.REDESIGN_NAV_BAR_RENDERED, obj3);
+          const obj5 = {
             layoutEffectDuration: tab.layoutEffectTime - tab.startTime,
             effectDuration: tab.effectTime - tab.startTime,
             layoutUIDuration: tab.layoutUITime - tab.startTime,
             uiDuration: tab.uiTime - tab.startTime,
           };
-          logger.info("First navigation to", tab, "took", obj);
+          logger.info("First navigation to", tab, "took", obj5);
         }
         tmp5 = null != tab.uiTime && null != tab.layoutUITime;
       }
@@ -69,15 +69,15 @@ export const useTrackTabPerformance = function useTrackTabPerformance(GUILDS) {
         const fn = function t() {
           return ReanimatedRexport.runOnJS(log)();
         };
-        let obj = { runOnJS: GUILDS(4373).runOnJS, log };
-        fn.__closure = obj;
+        let obj3 = { runOnJS: GUILDS(4373).runOnJS, log };
+        fn.__closure = obj3;
         fn.__workletHash = 7114578957129;
         fn.__initData = __initData;
         GUILDS(4373).runOnUI(fn)();
         const obj2 = GUILDS(4373);
       }
     }
-    obj = dependencyMap2[tmp2];
+    let obj = dependencyMap2[tmp2];
     if (obj == null) {
       obj = {};
     }
@@ -90,7 +90,7 @@ export const useTrackTabPerformance = function useTrackTabPerformance(GUILDS) {
         const _performance = performance;
         tab.uiTime = performance.now();
         if (tmp5) {
-          let obj = {
+          const obj3 = {
             tab,
             start_time: null,
             layout_effect_time: null,
@@ -105,14 +105,14 @@ export const useTrackTabPerformance = function useTrackTabPerformance(GUILDS) {
             effectTime: obj2.effect_time,
             uiTime: obj2.ui_thread_time,
           } = tab);
-          obj.track(AnalyticEvents.REDESIGN_NAV_BAR_RENDERED, obj);
-          obj = {
+          AnalyticsUtilsDefault.track(AnalyticEvents.REDESIGN_NAV_BAR_RENDERED, obj3);
+          const obj5 = {
             layoutEffectDuration: tab.layoutEffectTime - tab.startTime,
             effectDuration: tab.effectTime - tab.startTime,
             layoutUIDuration: tab.layoutUITime - tab.startTime,
             uiDuration: tab.uiTime - tab.startTime,
           };
-          logger.info("First navigation to", tab, "took", obj);
+          logger.info("First navigation to", tab, "took", obj5);
         }
         tmp5 = null != tab.uiTime && null != tab.layoutUITime;
       }
@@ -126,15 +126,15 @@ export const useTrackTabPerformance = function useTrackTabPerformance(GUILDS) {
         const fn = function t() {
           return ReanimatedRexport.runOnJS(log)();
         };
-        let obj = { runOnJS: GUILDS(4373).runOnJS, log };
-        fn.__closure = obj;
+        let obj3 = { runOnJS: GUILDS(4373).runOnJS, log };
+        fn.__closure = obj3;
         fn.__workletHash = 331508196106;
         fn.__initData = __initData2;
         GUILDS(4373).runOnUI(fn)();
         const obj2 = GUILDS(4373);
       }
     }
-    obj = dependencyMap2[tmp2];
+    let obj = dependencyMap2[tmp2];
     if (obj == null) {
       obj = {};
     }

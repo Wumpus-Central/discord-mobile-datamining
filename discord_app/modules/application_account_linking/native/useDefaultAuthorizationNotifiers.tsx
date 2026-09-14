@@ -5,6 +5,8 @@ import ToastActionCreatorsDefault from "../../toast/native/ToastActionCreators.t
 import noop from "../../../../_runtime/metro/00019__.js";
 import AppStateStore from "../../../stores/native/AppStateStore.tsx";
 
+const require = globalThis.__r;
+
 require = fn;
 const AppStates = fn(1074).AppStates;
 const size = fn(2);
@@ -18,8 +20,8 @@ export const useDefaultAuthorizationNotifiers = function useDefaultAuthorization
 ) {
   _require = startAuthorization;
   closure_1 = hasAlreadyLinked;
-  let obj = value;
-  if (value === undefined) {
+  let obj = arg2;
+  if (arg2 === undefined) {
     obj = {};
   }
   let flag = obj.showToastOnSuccess;
@@ -35,7 +37,7 @@ export const useDefaultAuthorizationNotifiers = function useDefaultAuthorization
     items,
     () => stateFromStores.getState() === previousWhen.ACTIVE,
   );
-  const obj2 = noop;
+  let obj2 = noop;
   const obj3 = require("initialize");
   const tmp = _require;
   const tmp2 = flag;
@@ -49,8 +51,7 @@ export const useDefaultAuthorizationNotifiers = function useDefaultAuthorization
     stateFromStores = !isInAppBrowserOpen;
   }
   const obj4 = require("BrowserManager");
-  obj = { value: hasAlreadyLinked, shouldUpdate: stateFromStores };
-  previousWhen = tmp(tmp2[5]).usePreviousWhen(obj);
+  previousWhen = tmp(tmp2[5]).usePreviousWhen({ value: hasAlreadyLinked, shouldUpdate: stateFromStores });
   const items2 = [hasAlreadyLinked, previousWhen, flag, stateFromStores];
   const effect = obj2.useEffect(() => {
     if (ref.current) {
@@ -59,10 +60,10 @@ export const useDefaultAuthorizationNotifiers = function useDefaultAuthorization
           if (stateFromStores) {
             tmp.current = false;
             if (flag) {
-              const obj = { content: null, key: "account-linked-toast" };
+              const obj2 = { content: null, key: "account-linked-toast" };
               const intl = util.intl;
-              obj.content = intl.string(_modDef3106.uG6teD);
-              obj.open(obj);
+              obj2.content = intl.string(_modDef3106.uG6teD);
+              ToastActionCreatorsDefault.open(obj2);
             }
           }
         }

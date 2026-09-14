@@ -5,8 +5,8 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const StickerAnimationSettings = fn(1938).StickerAnimationSettings;
-fn(11601);
-let SettingBuilders = {
+const SettingBuilders = fn(11602);
+const radio = SettingBuilders.createRadio({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.R5nQkS);
@@ -19,27 +19,26 @@ let SettingBuilders = {
   },
   useOptions: function useAnimateStickerSettingOptions() {
     return noop.useMemo(() => {
-      let obj = { label: null, value: null };
+      const obj = { label: null, value: null };
       const intl = util.intl;
       obj.label = intl.string(util.t["Xp+X2U"]);
       obj.value = constants.ALWAYS_ANIMATE;
       const items = [obj, ,];
-      obj = { label: null, value: null };
+      const obj2 = { label: null, value: null };
       const intl2 = util.intl;
-      obj.label = intl2.string(util.t.IlLT7e);
-      obj.value = constants.ANIMATE_ON_INTERACTION;
-      items[1] = obj;
-      obj = { label: null, value: null };
+      obj2.label = intl2.string(util.t.IlLT7e);
+      obj2.value = constants.ANIMATE_ON_INTERACTION;
+      items[1] = obj2;
+      const obj3 = { label: null, value: null };
       const intl3 = util.intl;
-      obj.label = intl3.string(util.t.IGu8x3);
-      obj.value = constants.NEVER_ANIMATE;
-      items[2] = obj;
+      obj3.label = intl3.string(util.t.IGu8x3);
+      obj3.value = constants.NEVER_ANIMATE;
+      items[2] = obj3;
       return items;
     }, []);
   },
-};
-SettingBuilders = SettingBuilders.createRadio(SettingBuilders);
+});
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/AnimateStickersSetting.tsx");
 
-export default SettingBuilders;
+export default radio;

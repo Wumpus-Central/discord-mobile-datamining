@@ -4,6 +4,8 @@ import noop from "../../../../_runtime/metro/00019__.js";
 import UserStore from "../../../stores/UserStore.tsx";
 import InitialMemberVerificationStore from "InitialMemberVerificationStore.tsx";
 
+const require = globalThis.__r;
+
 require = fn;
 const setInitialVerification = fn(5656).setInitialVerification;
 const size = fn(2);

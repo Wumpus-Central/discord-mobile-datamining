@@ -37,8 +37,7 @@ export default function AlertNotification(notification) {
   const channel = notification.channel;
   const guild = notification.guild;
   const tmp = closure_9();
-  let obj = channel(10226);
-  const incidentData = obj.useGuildIncidentsState(notification.key).incidentData;
+  const incidentData = channel(10226).useGuildIncidentsState(notification.key).incidentData;
   let raidDetectedAt;
   if (incidentData != null) {
     raidDetectedAt = incidentData.raidDetectedAt;
@@ -66,24 +65,26 @@ export default function AlertNotification(notification) {
   const callback = noop.useCallback(() => {
     transitionToChannel.transitionToChannel(channel.id, { navigationReplace: true });
   }, items1);
-  obj = { icon: null, header: null, children: null, onPress: null, notification: null };
-  obj = { children: null };
-  const obj1 = { cutouts: null, children: closure_5(guild(5665), { guild, selected: false }) };
+  const obj2 = { icon: null, header: null, children: null, onPress: null, notification: null };
+  const obj3 = { children: null };
+  const obj4 = { cutouts: null, children: null };
   const items2 = [size];
-  obj1.cutouts = items2;
-  const items3 = [closure_5(guild(8940), obj1)];
-  const obj2 = { style: tmp.warningBadge, children: null };
+  obj4.cutouts = items2;
+  let obj = channel(10226);
+  obj4.children = closure_5(guild(5665), { guild, selected: false });
+  const items3 = [closure_5(guild(8940), obj4)];
+  const obj5 = { style: tmp.warningBadge, children: null };
   const tmp8 = guild(8940);
-  obj2.children = closure_5(channel(8711).WarningIcon, {
+  obj5.children = closure_5(channel(8711).WarningIcon, {
     style: tmp.warningIcon,
     color: guild(576).colors.ICON_FEEDBACK_WARNING,
   });
-  items3[1] = closure_5(View, obj2);
-  obj.children = items3;
-  obj.icon = closure_7(closure_6, obj);
-  obj.header = memo;
-  obj.children = closure_5(channel(10235).SystemMessageText, { text: stringResult });
-  obj.onPress = callback;
-  obj.notification = notification;
-  return closure_5(channel(10298).NotificationPressable, obj);
+  items3[1] = closure_5(View, obj5);
+  obj3.children = items3;
+  obj2.icon = closure_7(closure_6, obj3);
+  obj2.header = memo;
+  obj2.children = closure_5(channel(10235).SystemMessageText, { text: stringResult });
+  obj2.onPress = callback;
+  obj2.notification = notification;
+  return closure_5(channel(10298).NotificationPressable, obj2);
 }

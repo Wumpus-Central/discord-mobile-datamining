@@ -28,9 +28,8 @@ export default function PremiumGiftBackgroundAnimation(giftStyle) {
   let first1;
   closure_9 = undefined;
   const tmp = closure_9();
-  let obj = giftStyle(ref[6]);
   const items = [first1];
-  const stateFromStores = obj.useStateFromStores(items, () => first1.useReducedMotion);
+  const stateFromStores = giftStyle(ref[6]).useStateFromStores(items, () => first1.useReducedMotion);
   ref = first.useRef(null);
   const ref1 = first.useRef(null);
   const tmp7 = ref1(first.useState(giftStyle(ref[7]).AnimationState.ACTION), 2);
@@ -55,8 +54,8 @@ export default function PremiumGiftBackgroundAnimation(giftStyle) {
     () => GiftAnimationData.getGiftAnimationData(giftStyle, PremiumGiftingUtils.AnimationState.LOOP),
     items2,
   );
-  let obj1 = giftStyle(ref[8]);
-  const lottieType = obj1.getLottieType(giftStyle);
+  const obj = giftStyle(ref[6]);
+  const lottieType = giftStyle(ref[8]).getLottieType(giftStyle);
   const items3 = [first2, first1, giftStyle, first];
   const memo2 = first.useMemo(() => {
     if (first1 !== giftStyle) {
@@ -108,10 +107,11 @@ export default function PremiumGiftBackgroundAnimation(giftStyle) {
   if (consistentHeight) {
     consistentHeight = tmp.consistentHeight;
   }
-  obj = { style: items7, children: null };
+  const obj3 = { style: items7, children: null };
   items7[1] = consistentHeight;
   const items8 = [, , ,];
   ({ baseAnimation: arr9[0], animation: arr9[1] } = tmp);
+  const obj2 = giftStyle(ref[8]);
   const tmp22 = first2;
   const tmp23 = closure_5;
   const tmp25 = stateFromStores;
@@ -124,19 +124,29 @@ export default function PremiumGiftBackgroundAnimation(giftStyle) {
       num = 1;
     }
   }
-  obj = {
+  const tmp27 = lottieType === giftStyle(ref[8]).LottieType.LOTTIE && tmp.lottie;
+  items8[3] = { opacity: num };
+  const items9 = [
+    closure_7(tmp26, {
+      style: items8,
+      hardwareAccelerationAndroid: lottieType === giftStyle(ref[8]).LottieType.LOTTIE,
+      ref,
+      source: memo,
+      autoPlay: !stateFromStores,
+      onAnimationFinish: callback,
+      loop: false,
+    }),
+  ];
+  const items10 = [tmp.animation, ,];
+  const obj4 = {
     style: items8,
-    hardwareAccelerationAndroid: lottieType === tmp2(tmp3[8]).LottieType.LOTTIE,
+    hardwareAccelerationAndroid: lottieType === giftStyle(ref[8]).LottieType.LOTTIE,
     ref,
     source: memo,
     autoPlay: !stateFromStores,
     onAnimationFinish: callback,
     loop: false,
   };
-  items8[3] = { opacity: num };
-  const items9 = [closure_7(tmp26, obj)];
-  const items10 = [tmp.animation, ,];
-  const tmp27 = lottieType === giftStyle(ref[8]).LottieType.LOTTIE && tmp.lottie;
   const tmp25Result = tmp25(ref[9]);
   items10[1] = lottieType === giftStyle(ref[8]).LottieType.LOTTIE && tmp.lottie;
   let num2 = 0;
@@ -146,9 +156,9 @@ export default function PremiumGiftBackgroundAnimation(giftStyle) {
       num2 = 1;
     }
   }
-  obj1 = {
+  const obj5 = {
     style: items10,
-    hardwareAccelerationAndroid: lottieType === tmp2(tmp3[8]).LottieType.LOTTIE,
+    hardwareAccelerationAndroid: lottieType === giftStyle(ref[8]).LottieType.LOTTIE,
     ref: ref1,
     source: memo1,
     autoPlay: null,
@@ -159,8 +169,8 @@ export default function PremiumGiftBackgroundAnimation(giftStyle) {
   if (!stateFromStores) {
     tmp31 = first === tmp2(tmp3[7]).AnimationState.LOOP;
   }
-  obj1.autoPlay = tmp31;
-  items9[1] = closure_7(tmp25Result, obj1);
-  obj.children = items9;
-  return tmp22(tmp23, obj);
+  obj5.autoPlay = tmp31;
+  items9[1] = closure_7(tmp25Result, obj5);
+  obj3.children = items9;
+  return tmp22(tmp23, obj3);
 }

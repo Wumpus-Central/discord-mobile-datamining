@@ -2,6 +2,7 @@
 import discord_common_resolvedValuesFromUserApplicationIdentityProfile from "resolvedValuesFromUserApplicationIdentityProfile.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
 
+const require = globalThis.__r;
 const discord_common_resolvedValuesFromUserApplicationIdentityProfileDefault =
   discord_common_resolvedValuesFromUserApplicationIdentityProfile;
 

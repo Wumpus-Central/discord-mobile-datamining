@@ -12,8 +12,8 @@ const View = fn(17).View;
 const MOBILE_GUILD_UPSELL_LIST = fn(1074).MOBILE_GUILD_UPSELL_LIST;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-fn(4636);
-const createStyles = { row: null };
+const createStyles = fn(4636);
+let obj2 = { row: null };
 const rect = {
   position: "absolute",
   top: nativeDefault.space.PX_16,
@@ -22,17 +22,17 @@ const rect = {
   alignItems: "center",
   gap: nativeDefault.space.PX_8,
 };
-createStyles.row = rect;
-let closure_8 = createStyles.createStyles(createStyles);
+obj2.row = rect;
+let closure_8 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/lurker_mode/native/ServerPreviewBannerControls.tsx");
 
 export default function ServerPreviewBannerControls() {
-  let obj = { style: closure_8().row, children: null };
+  const obj = { style: closure_8().row, children: null };
   const callback = noop.useCallback(() => {
     transitionToGuild.transitionToGuild(MOBILE_GUILD_UPSELL_LIST);
   }, []);
-  obj = {
+  const obj2 = {
     size: "md",
     variant: "secondary-overlay",
     icon: _modDef5710,
@@ -41,8 +41,8 @@ export default function ServerPreviewBannerControls() {
     maxFontSizeMultiplier: 1.5,
   };
   const intl = util.intl;
-  obj.accessibilityLabel = intl.string(util.t["13/7kX"]);
-  const items = [timestampProducer(IconButton.IconButton, obj), timestampProducer(ServerPreviewPillDefault, {})];
+  obj2.accessibilityLabel = intl.string(util.t["13/7kX"]);
+  const items = [timestampProducer(IconButton.IconButton, obj2), timestampProducer(ServerPreviewPillDefault, {})];
   obj.children = items;
   return React5(View, obj);
 }

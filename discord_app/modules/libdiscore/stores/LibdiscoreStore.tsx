@@ -368,12 +368,12 @@ prototype3["removePartition"] = function removePartition(id, nextVersionResult) 
     const result = self.updateSecondaryIndexes(undefined, Object.values(tmp4.root), nextVersionResult);
     const root = self.state.root;
     delete tmp[tmp2];
-    let derived = self.state.derived;
+    const derived = self.state.derived;
     derived.numPartitions = derived.numPartitions - 1;
     self.state.version = nextVersionResult;
     self.state.derived.memoized = {};
-    derived = self.state.derived;
-    derived.length = derived.length - tmp4.derived.length;
+    const derived1 = self.state.derived;
+    derived1.length = derived1.length - tmp4.derived.length;
     flag = true;
   }
   return flag;
@@ -392,18 +392,18 @@ prototype3["removeRecord"] = function removeRecord(guildId, clusteringKey, nextV
     const result = obj.updateSecondaryIndexes(undefined, items, nextVersionResult);
     const root = tmp6.root;
     delete tmp3[tmp4];
-    let derived = tmp6.derived;
-    derived.length = derived.length - 1;
+    const derived1 = tmp6.derived;
+    derived1.length = derived1.length - 1;
     if (0 === tmp6.derived.length) {
       const root2 = obj.state.root;
       delete tmp[tmp2];
-      derived = obj.state.derived;
+      const derived = obj.state.derived;
       derived.numPartitions = derived.numPartitions - 1;
     } else {
       tmp6.derived.memoized = {};
     }
-    const derived1 = obj.state.derived;
-    derived1.length = derived1.length - 1;
+    const derived2 = obj.state.derived;
+    derived2.length = derived2.length - 1;
     obj.state.version = nextVersionResult;
     obj = {};
     obj.state.derived.memoized = obj;
@@ -566,27 +566,27 @@ class LibdiscoreStore extends Store {
     } else {
       str2 = "typescript-libdiscore-dual-read";
     }
-    tmp3 = new tmp3(closure_1(closure_2[2]), obj, tmp12, tmp4, fn, obj, new.target);
-    tmp3._nextVersion = 0;
+    tmp31 = new tmp3(closure_1(closure_2[2]), obj, tmp12, tmp4, fn, obj, new.target);
+    tmp31._nextVersion = 0;
     map = new Map();
-    tmp3.recordCreators = map;
-    tmp3.wrappedState = null;
-    tmp3.shadowDatabases = null;
-    tmp3.shadowRecordCreators = null;
-    tmp3.dualReadValidationDisabled = false;
-    closure_0 = tmp3;
-    tmp3.mode = str;
-    tmp3.state = { databases: {} };
+    tmp31.recordCreators = map;
+    tmp31.wrappedState = null;
+    tmp31.shadowDatabases = null;
+    tmp31.shadowRecordCreators = null;
+    tmp31.dualReadValidationDisabled = false;
+    closure_0 = tmp31;
+    tmp31.mode = str;
+    tmp31.state = { databases: {} };
     if ("typescript-libdiscore-dual-read" === str) {
-      tmp3.shadowDatabases = {};
+      tmp31.shadowDatabases = {};
       _Map = Map;
       tmp7 = new.target;
       tmp8 = new.target;
       map1 = new Map();
       tmp10 = map1;
-      tmp3.shadowRecordCreators = map1;
+      tmp31.shadowRecordCreators = map1;
     }
-    return tmp3;
+    return tmp31;
   }
 }
 const prototype4 = LibdiscoreStore.prototype;

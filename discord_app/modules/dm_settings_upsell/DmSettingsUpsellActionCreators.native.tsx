@@ -22,7 +22,7 @@ export default {
       }
     }
     ActionSheetActionCreatorsDefault.openLazy(
-      asyncRequireImpl(17456, dependencyMap.paths),
+      asyncRequireImpl(17458, dependencyMap.paths),
       "dm_settings_upsell_modal",
       { guildId },
     );

@@ -7,7 +7,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const Pressable = fn(17).Pressable;
-const LaunchPadConstants = fn(11597);
+const LaunchPadConstants = fn(11598);
 ({ LAUNCH_PAD_MARGIN: closure_4, LAUNCH_PAD_PULL_TAB_BORDER_RADIUS } = LaunchPadConstants);
 const LAUNCH_PAD_PULL_TAB_HEIGHT = LaunchPadConstants.LAUNCH_PAD_PULL_TAB_HEIGHT;
 ({
@@ -18,9 +18,9 @@ const LAUNCH_PAD_PULL_TAB_HEIGHT = LaunchPadConstants.LAUNCH_PAD_PULL_TAB_HEIGHT
   LAUNCH_PAD_PULL_TAB_WIDTH,
   LAUNCH_PAD_SPRING_CONFIG: closure_11,
 } = LaunchPadConstants);
-const CHAT_INPUT_HEIGHT = fn(12091).CHAT_INPUT_HEIGHT;
+const CHAT_INPUT_HEIGHT = fn(12092).CHAT_INPUT_HEIGHT;
 const jsx = fn(21).jsx;
-fn(4636);
+const createStyles = fn(4636);
 let obj = { pullTab: null, pullTabButton: null, pullTabOpened: null, pullTabClosed: null };
 let size = {
   position: "absolute",
@@ -41,10 +41,9 @@ obj.pullTabButton = {
   justifyContent: "center",
   alignItems: "center",
 };
-obj = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
-obj.pullTabOpened = obj;
-const createStyles = { backgroundColor: nativeDefault.colors.MOBILE_FLOATINGBAR_BACKGROUND };
-obj.pullTabClosed = createStyles;
+obj.pullTabOpened = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
+let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
+obj.pullTabClosed = { backgroundColor: nativeDefault.colors.MOBILE_FLOATINGBAR_BACKGROUND };
 let closure_14 = createStyles.createStyles(obj);
 const __initData = {
   code: "function LaunchPadPullTabTsx1(){const{keyboardHeight}=this.__closure;return keyboardHeight.get();}",
@@ -55,6 +54,7 @@ const __initData2 = {
 const __initData3 = {
   code: "function LaunchPadPullTabTsx3(){const{isMinimized,gestureState,LAUNCH_PAD_PULL_TAB_MINIMIZED_OFFSET,interpolate,launchPadSharedState,windowDimensions,launchPadPullTabState,LAUNCH_PAD_PULL_TAB_BORDER_RADIUS,interpolateColor,LAUNCH_PAD_MARGIN,backgroundColorStart,backgroundColorEnd,withSpring,LAUNCH_PAD_SPRING_CONFIG}=this.__closure;let translateX=isMinimized.get()&&!gestureState.get().active?LAUNCH_PAD_PULL_TAB_MINIMIZED_OFFSET:interpolate(launchPadSharedState.get(),[0,1],[0,-(windowDimensions.get().width-16)]);if(launchPadSharedState.get()>0.9){translateX=-windowDimensions.get().width;}else if(gestureState.get().active){if(gestureState.get().requiresPop){translateX+=gestureState.get().positionOffsetX*0.3;}else{translateX-=4;}}const translateY=launchPadPullTabState.get().position;const borderRadius=launchPadSharedState.get()<=0&&!gestureState.get().active?0:LAUNCH_PAD_PULL_TAB_BORDER_RADIUS;const backgroundColor=interpolateColor(launchPadSharedState.get()*windowDimensions.get().width,[0,LAUNCH_PAD_MARGIN],[backgroundColorStart,backgroundColorEnd]);return{transform:[{translateX:withSpring(translateX,LAUNCH_PAD_SPRING_CONFIG)},{translateY:withSpring(translateY,LAUNCH_PAD_SPRING_CONFIG)},{scale:withSpring(launchPadPullTabState.get().scale,LAUNCH_PAD_SPRING_CONFIG)}],borderTopRightRadius:withSpring(borderRadius,LAUNCH_PAD_SPRING_CONFIG),borderBottomRightRadius:withSpring(borderRadius,LAUNCH_PAD_SPRING_CONFIG),backgroundColor:backgroundColor};}",
 };
+let obj4 = { backgroundColor: nativeDefault.colors.MOBILE_FLOATINGBAR_BACKGROUND };
 size = fn(2);
 let result = size.fileFinishedImporting("modules/launchpad/native/LaunchPadPullTab.tsx");
 
@@ -70,7 +70,6 @@ export default noop.memo(function LaunchPadPullTab(launchPadSharedState) {
   const backgroundColor2 = tmp.pullTabOpened.backgroundColor;
   const tmp3 = launchPadPullTabState(gestureState[10])({ launchPadSharedState, launchPadPullTabState });
   hitSlop = tmp3;
-  let obj = launchPadSharedState(gestureState[8]);
   class U {
     constructor() {
       if (closure_7.get()) {
@@ -118,39 +117,39 @@ export default noop.memo(function LaunchPadPullTab(launchPadSharedState) {
         items1[0] = backgroundColor;
         tmp14 = backgroundColor;
         items1[1] = backgroundColor;
-        obj = { transform: null, borderTopRightRadius: null, borderBottomRightRadius: null, backgroundColor: null };
-        obj1 = { translateX: null };
+        obj1 = { transform: null, borderTopRightRadius: null, borderBottomRightRadius: null, backgroundColor: null };
+        obj15 = { translateX: null };
         tmp16 = closure_0;
         tmp17 = closure_2;
         interpolateColorResult = obj5.interpolateColor(value * closure_4.get().width, items, items1);
         obj8 = closure_0(closure_2[11]);
         tmp18 = LAUNCH_PAD_SPRING_CONFIG;
-        obj1.translateX = obj8.withSpring(tmp4, LAUNCH_PAD_SPRING_CONFIG);
+        obj15.translateX = obj8.withSpring(tmp4, LAUNCH_PAD_SPRING_CONFIG);
         items2 = [, ,];
-        items2[0] = obj1;
-        obj2 = { translateY: null };
+        items2[0] = obj15;
+        obj16 = { translateY: null };
         tmp19 = closure_0;
         tmp20 = closure_2;
         obj10 = closure_0(closure_2[11]);
-        obj2.translateY = obj10.withSpring(launchPadPullTabState.get().position, LAUNCH_PAD_SPRING_CONFIG);
-        items2[1] = obj2;
-        obj3 = { scale: null };
+        obj16.translateY = obj10.withSpring(launchPadPullTabState.get().position, LAUNCH_PAD_SPRING_CONFIG);
+        items2[1] = obj16;
+        obj17 = { scale: null };
         tmp21 = closure_0;
         tmp22 = closure_2;
         obj12 = closure_0(closure_2[11]);
-        obj3.scale = obj12.withSpring(obj4.get().scale, LAUNCH_PAD_SPRING_CONFIG);
-        items2[2] = obj3;
-        obj.transform = items2;
+        obj17.scale = obj12.withSpring(obj4.get().scale, LAUNCH_PAD_SPRING_CONFIG);
+        items2[2] = obj17;
+        obj1.transform = items2;
         tmp23 = closure_0;
         tmp24 = closure_2;
         obj13 = closure_0(closure_2[11]);
-        obj.borderTopRightRadius = obj13.withSpring(num5, LAUNCH_PAD_SPRING_CONFIG);
+        obj1.borderTopRightRadius = obj13.withSpring(num5, LAUNCH_PAD_SPRING_CONFIG);
         tmp25 = closure_0;
         tmp26 = closure_2;
         obj14 = closure_0(closure_2[11]);
-        obj.borderBottomRightRadius = obj14.withSpring(num5, LAUNCH_PAD_SPRING_CONFIG);
-        obj.backgroundColor = interpolateColorResult;
-        return obj;
+        obj1.borderBottomRightRadius = obj14.withSpring(num5, LAUNCH_PAD_SPRING_CONFIG);
+        obj1.backgroundColor = interpolateColorResult;
+        return obj1;
       }
       obj = closure_0(closure_2[8]);
       value1 = launchPadSharedState.get();
@@ -160,7 +159,8 @@ export default noop.memo(function LaunchPadPullTab(launchPadSharedState) {
       return;
     }
   }
-  obj = {
+  let obj = launchPadSharedState(gestureState[8]);
+  U.__closure = {
     isMinimized: tmp3,
     gestureState,
     LAUNCH_PAD_PULL_TAB_MINIMIZED_OFFSET,
@@ -176,7 +176,6 @@ export default noop.memo(function LaunchPadPullTab(launchPadSharedState) {
     withSpring: launchPadSharedState(gestureState[11]).withSpring,
     LAUNCH_PAD_SPRING_CONFIG,
   };
-  U.__closure = obj;
   U.__workletHash = 3768918311497;
   U.__initData = __initData3;
   closure_129_0 = launchPadSharedState;
@@ -185,9 +184,25 @@ export default noop.memo(function LaunchPadPullTab(launchPadSharedState) {
   const animatedStyle = obj.useAnimatedStyle(U);
   const tmp5 = launchPadPullTabState(gestureState[7])();
   closure_129_3 = tmp5;
-  let obj2 = launchPadSharedState(gestureState[8]);
-  const sharedValue = obj2.useSharedValue(undefined);
+  const obj2 = {
+    isMinimized: tmp3,
+    gestureState,
+    LAUNCH_PAD_PULL_TAB_MINIMIZED_OFFSET,
+    interpolate: launchPadSharedState(gestureState[8]).interpolate,
+    launchPadSharedState,
+    windowDimensions: tmp2,
+    launchPadPullTabState,
+    LAUNCH_PAD_PULL_TAB_BORDER_RADIUS: backgroundColor,
+    interpolateColor: launchPadSharedState(gestureState[8]).interpolateColor,
+    LAUNCH_PAD_MARGIN,
+    backgroundColorStart: backgroundColor,
+    backgroundColorEnd: backgroundColor2,
+    withSpring: launchPadSharedState(gestureState[11]).withSpring,
+    LAUNCH_PAD_SPRING_CONFIG,
+  };
+  const sharedValue = launchPadSharedState(gestureState[8]).useSharedValue(undefined);
   closure_129_4 = sharedValue;
+  const obj3 = launchPadSharedState(gestureState[8]);
   const fn = function _() {
     return updaters.get();
   };
@@ -240,7 +255,8 @@ export default noop.memo(function LaunchPadPullTab(launchPadSharedState) {
       const result7 = gestureState.setLaunchPadPullTabMinimized(false);
     }
   };
-  obj = {
+  const obj4 = launchPadSharedState(gestureState[8]);
+  fn2.__closure = {
     launchPadSharedState,
     updaters,
     keyboardHeightOpened: sharedValue,
@@ -251,14 +267,13 @@ export default noop.memo(function LaunchPadPullTab(launchPadSharedState) {
     LAUNCH_PAD_PULL_TAB_HEIGHT: backgroundColor2,
     LAUNCH_PAD_PULL_TAB_SCALE_OFFSET,
   };
-  fn2.__closure = obj;
   fn2.__workletHash = 8060927175361;
   fn2.__initData = __initData2;
-  const animatedReaction = launchPadSharedState(gestureState[8]).useAnimatedReaction(fn, fn2);
-  let obj1 = { style: null, children: null };
+  const animatedReaction = obj4.useAnimatedReaction(fn, fn2);
+  let obj6 = { style: null, children: null };
   let items = [tmp.pullTab, animatedStyle];
-  obj1.style = items;
-  obj2 = {
+  obj6.style = items;
+  let obj7 = {
     accessibilityRole: "button",
     accessibilityLabel: null,
     hitSlop: null,
@@ -268,15 +283,15 @@ export default noop.memo(function LaunchPadPullTab(launchPadSharedState) {
     children: null,
   };
   const intl = launchPadSharedState(gestureState[12]).intl;
-  obj2.accessibilityLabel = intl.string(launchPadSharedState(gestureState[12]).t.yTnIfb);
-  obj2.hitSlop = hitSlop;
-  obj2.style = tmp.pullTabButton;
-  obj2.onTouchStart = function onTouchStart() {
+  obj7.accessibilityLabel = intl.string(launchPadSharedState(gestureState[12]).t.yTnIfb);
+  obj7.hitSlop = hitSlop;
+  obj7.style = tmp.pullTabButton;
+  obj7.onTouchStart = function onTouchStart() {
     const result = updaters.setLaunchPadPullTabScale(React7);
   };
-  obj2.onPress = launchPadPullTabState(gestureState[13]);
-  obj2.children = jsx(launchPadSharedState(gestureState[14]).ChannelListMagnifyingGlassIcon, { size: "xs" });
-  obj1.children = (
+  obj7.onPress = launchPadPullTabState(gestureState[13]);
+  obj7.children = jsx(launchPadSharedState(gestureState[14]).ChannelListMagnifyingGlassIcon, { size: "xs" });
+  obj6.children = (
     <updaters
       accessibilityRole="button"
       accessibilityLabel={null}

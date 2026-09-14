@@ -8,22 +8,21 @@ let result = size.fileFinishedImporting("modules/collectibles/avatar_decorations
 export const parseAvatarDecorationData = function parseAvatarDecorationData(avatar_decoration_data) {
   if (typeof avatar_decoration_data === "object") {
     if (null != avatar_decoration_data) {
-      let obj = mappers;
-      const result = obj.parseSkuIdFromServerData(avatar_decoration_data);
+      const result = mappers.parseSkuIdFromServerData(avatar_decoration_data);
       if (null == result) {
         return null;
       } else {
-        obj = { skuId: result };
+        const obj2 = { skuId: result };
         if (tmp) {
-          obj.asset = avatar_decoration_data.asset;
+          obj2.asset = avatar_decoration_data.asset;
         }
         if (tmp2) {
-          obj.expiresAt = avatar_decoration_data.expires_at;
+          obj2.expiresAt = avatar_decoration_data.expires_at;
         }
         if (tmp3) {
-          obj.expiresAt = avatar_decoration_data.expiresAt;
+          obj2.expiresAt = avatar_decoration_data.expiresAt;
         }
-        return obj;
+        return obj2;
       }
     }
   }
@@ -49,11 +48,10 @@ export const isEqualAvatarDecoration = function isEqualAvatarDecoration(avatarDe
       if (typeof avatarDecoration === "object") {
         tmp2 = null;
         if (null != avatarDecoration) {
-          let tmp12Result = mappers;
-          const result = tmp12Result.parseSkuIdFromServerData(avatarDecoration);
+          const result = mappers.parseSkuIdFromServerData(avatarDecoration);
           tmp2 = null;
           if (null != result) {
-            let obj = { skuId: result };
+            const obj = { skuId: result };
             if (tmp3) {
               obj.asset = avatarDecoration.asset;
             }
@@ -69,32 +67,33 @@ export const isEqualAvatarDecoration = function isEqualAvatarDecoration(avatarDe
             tmp4 = "expires_at" in avatarDecoration && typeof avatarDecoration.expires_at === "number";
             tmp5 = "expiresAt" in avatarDecoration && typeof avatarDecoration.expiresAt === "number";
           }
+          const tmp12Result = mappers;
         }
       }
       let tmp6 = null;
       if (typeof asset2 === "object") {
         tmp6 = null;
         if (null != asset2) {
-          tmp12Result = mappers;
-          const result1 = tmp12Result.parseSkuIdFromServerData(asset2);
+          const result1 = mappers.parseSkuIdFromServerData(asset2);
           tmp6 = null;
           if (null != result1) {
-            obj = { skuId: result1 };
+            const obj2 = { skuId: result1 };
             if (tmp8) {
-              obj.asset = asset2.asset;
+              obj2.asset = asset2.asset;
             }
             if (tmp9) {
-              obj.expiresAt = asset2.expires_at;
+              obj2.expiresAt = asset2.expires_at;
             }
-            tmp6 = obj;
+            tmp6 = obj2;
             if (tmp10) {
-              obj.expiresAt = asset2.expiresAt;
-              tmp6 = obj;
+              obj2.expiresAt = asset2.expiresAt;
+              tmp6 = obj2;
             }
             tmp10 = "expiresAt" in asset2 && typeof asset2.expiresAt === "number";
             tmp8 = "asset" in asset2 && typeof asset2.asset === "string";
             tmp9 = "expires_at" in asset2 && typeof asset2.expires_at === "number";
           }
+          const tmp12Result2 = mappers;
         }
       }
       let isEqualResult = _mod12.isEqual(tmp2, tmp6);
@@ -106,18 +105,18 @@ export const isEqualAvatarDecoration = function isEqualAvatarDecoration(avatarDe
 export const hasGlobalDefaultAvatarDecoration = function hasGlobalDefaultAvatarDecoration(avatarDecoration, arg1) {
   let tmp = null != arg1;
   if (tmp) {
-    avatarDecoration = undefined;
+    let avatarDecoration1;
     if (avatarDecoration != null) {
-      avatarDecoration = avatarDecoration.avatarDecoration;
+      avatarDecoration1 = avatarDecoration.avatarDecoration;
     }
     let expiresAt;
-    if (avatarDecoration != null) {
-      expiresAt = avatarDecoration.expiresAt;
+    if (avatarDecoration1 != null) {
+      expiresAt = avatarDecoration1.expiresAt;
     }
     let tmp4 = null != expiresAt;
     if (tmp4) {
       const _Date = Date;
-      const result = 1000 * avatarDecoration.expiresAt;
+      const result = 1000 * avatarDecoration1.expiresAt;
       tmp4 = result < Date.now();
     }
     tmp = !tmp4;

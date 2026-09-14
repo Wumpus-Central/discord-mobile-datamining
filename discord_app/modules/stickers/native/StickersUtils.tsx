@@ -4,11 +4,13 @@ import noop from "../../../../_runtime/metro/00019__.js";
 import GuildStore from "../../../stores/GuildStore.tsx";
 import UserStore from "../../../stores/UserStore.tsx";
 
+const require = globalThis.__r;
+
 require = fn;
 const NativeModules = fn(17).NativeModules;
-const useStickerPickerStore = fn(10518).useStickerPickerStore;
+const useStickerPickerStore = fn(10519).useStickerPickerStore;
 const GuildNSFWContentLevel = fn(1074).GuildNSFWContentLevel;
-const ExpressionPickerViewType = fn(1219).ExpressionPickerViewType;
+const ExpressionPickerViewType = fn(1217).ExpressionPickerViewType;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/stickers/native/StickersUtils.tsx");
 
@@ -19,7 +21,7 @@ export const useStickerCategories = function useStickerCategories(channel) {
   const items = [UserStore];
   stateFromStores = require("initialize").useStateFromStores(items, () => currentUser.getCurrentUser());
   const guilds = GuildStore.getGuilds();
-  const obj2 = require("initialize");
+  let obj2 = require("initialize");
   const mobileStickerPickerUpsellRestyleEnabled =
     require("MobileStickerPickerUpsellRestyleExperiment").useMobileStickerPickerUpsellRestyleEnabled(
       "native.StickerPicker",
@@ -67,7 +69,7 @@ export const useStickerCategories = function useStickerCategories(channel) {
         if (type.type !== closure_0(stateFromStores[7]).StickerCategoryTypes.RECENT) {
           let tmp9 = type;
           if (tmp) {
-            let obj = {};
+            const obj = {};
             const merged = Object.assign(type);
             obj.isNitroLocked = tmp;
             tmp9 = obj;
@@ -80,14 +82,14 @@ export const useStickerCategories = function useStickerCategories(channel) {
       } else {
         tmp15 = stickerPackCategories(stateFromStores[13]);
       }
-      obj = {};
+      const obj2 = {};
       const merged1 = Object.assign(type);
-      obj.icon = tmp15;
+      obj2.icon = tmp15;
       if (tmp) {
-        obj.isNitroLocked = tmp;
-        let tmp19 = obj;
+        obj2.isNitroLocked = tmp;
+        let tmp19 = obj2;
       } else {
-        tmp19 = obj;
+        tmp19 = obj2;
       }
       return tmp19;
     });

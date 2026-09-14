@@ -20,11 +20,9 @@ require = fn;
 const View = fn(17).View;
 const DraftType = fn(4977).DraftType;
 const jsx = fn(21).jsx;
-fn(4636);
-let createStyles = { container: null };
-createStyles = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
-createStyles.container = createStyles;
-let closure_12 = createStyles.createStyles(createStyles);
+const createStyles = fn(4636);
+let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW } };
+let closure_12 = createStyles.createStyles(obj2);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/forums/native/composer/ForumComposerModal.tsx");
 
@@ -38,15 +36,14 @@ export default function ForumComposerModal(parentChannelId) {
   function handleClose(arg0) {
     if (null != stateFromStores) {
       if (arg0) {
-        let tmp52Result = ForumComposerModalActionCreators;
-        let result = tmp52Result.closeCreateForumPostModal();
+        let result = ForumComposerModalActionCreators.closeCreateForumPostModal();
+        const tmp52Result = ForumComposerModalActionCreators;
         DraftActionCreatorsDefault.clearDraft(parentChannelId, DraftType.ThreadSettings);
         DraftActionCreatorsDefault.clearDraft(parentChannelId, DraftType.ChannelMessage);
         UploadAttachmentActionCreatorsDefault.clearAll(parentChannelId, DraftType.ChannelMessage);
       } else {
-        tmp52Result = KeyboardUIStore;
         let obj = { type: KeyboardTypes.KeyboardTypes.SYSTEM };
-        tmp52Result.setKeyboardType(obj);
+        KeyboardUIStore.setKeyboardType(obj);
         const draft = DraftStore.getDraft(parentChannelId, DraftType.ChannelMessage);
         let threadSettings = DraftStore.getThreadSettings(parentChannelId);
         if (threadSettings == null) {
@@ -72,7 +69,7 @@ export default function ForumComposerModal(parentChannelId) {
             }
           }
           const result2 = KeyboardManagerUtilsAll.dismissGlobalKeyboard();
-          obj = {
+          let obj2 = {
             title: null,
             body: null,
             confirmText: null,
@@ -83,20 +80,23 @@ export default function ForumComposerModal(parentChannelId) {
             isDismissable: true,
           };
           const intl = util.intl;
-          obj.title = intl.string(util.t.Fz1512);
+          obj2.title = intl.string(util.t.Fz1512);
           const intl2 = util.intl;
-          obj.body = intl2.string(util.t.YBgepz);
+          obj2.body = intl2.string(util.t.YBgepz);
           const intl3 = util.intl;
-          obj.confirmText = intl3.string(util.t.Rnli6C);
+          obj2.confirmText = intl3.string(util.t.Rnli6C);
           const intl4 = util.intl;
-          obj.cancelText = intl4.string(util.t["3NnH6V"]);
-          obj.onConfirm = function onConfirm() {
-            parentChannelId(isEdit[22]);
-            const obj = { guildId: stateFromStores.guild_id, channelId: stateFromStores.id };
-            const result = obj.maybeTrackForumNewPostDraftCreated(obj);
+          obj2.cancelText = intl4.string(util.t["3NnH6V"]);
+          obj2.onConfirm = function onConfirm() {
+            const result = parentChannelId(isEdit[22]).maybeTrackForumNewPostDraftCreated({
+              guildId: stateFromStores.guild_id,
+              channelId: stateFromStores.id,
+            });
+            const obj = parentChannelId(isEdit[22]);
+            const obj2 = { guildId: stateFromStores.guild_id, channelId: stateFromStores.id };
             const result1 = parentChannelId(isEdit[18]).closeCreateForumPostModal();
           };
-          obj.onCancel = function onCancel() {
+          obj2.onCancel = function onCancel() {
             const result = parentChannelId(isEdit[18]).closeCreateForumPostModal();
             const obj = parentChannelId(isEdit[18]);
             threadId(isEdit[13]).clearDraft(closure_1_0, DraftType.ThreadSettings);
@@ -105,18 +105,23 @@ export default function ForumComposerModal(parentChannelId) {
             const obj3 = threadId(isEdit[13]);
             threadId(isEdit[14]).clearAll(closure_1_0, DraftType.ChannelMessage);
           };
-          actions_AlertActionCreatorsDefault.show(obj);
+          actions_AlertActionCreatorsDefault.show(obj2);
         }
+        const tmp52Result2 = KeyboardUIStore;
       }
     }
   }
-  let obj = parentChannelId(isEdit[16]);
-  const items = [ChannelStore];
-  const items1 = [parentChannelId];
-  const stateFromStores = obj.useStateFromStores(items, () => ChannelStore.getChannel(parentChannelId), items1);
   const tmp = closure_12();
   const tmp2 = threadId;
   const tmp4 = parentChannelId;
+  const items = [ChannelStore];
+  const items1 = [parentChannelId];
+  const stateFromStores = parentChannelId(isEdit[16]).useStateFromStores(
+    items,
+    () => ChannelStore.getChannel(parentChannelId),
+    items1,
+  );
+  let obj = parentChannelId(isEdit[16]);
   const items2 = [ChannelStore];
   const items3 = [threadId];
   const stateFromStores1 = parentChannelId(isEdit[16]).useStateFromStores(
@@ -151,14 +156,17 @@ export default function ForumComposerModal(parentChannelId) {
     if (stateFromStores.isForumLikeChannel()) {
       if (isEdit) {
         if (!isEdit) {
-          obj = { value: threadId(isEdit[15])(parentChannelId.analyticsLocations).analyticsLocations, children: null };
-          obj = { style: tmp.container, importantForAccessibility: null, children: null };
+          let obj2 = {
+            value: threadId(isEdit[15])(parentChannelId.analyticsLocations).analyticsLocations,
+            children: null,
+          };
+          const obj7 = { style: tmp.container, importantForAccessibility: null, children: null };
           let str;
           if (stateFromStores3) {
             str = "no-hide-descendants";
           }
-          obj.importantForAccessibility = str;
-          const obj1 = {
+          obj7.importantForAccessibility = str;
+          let obj8 = {
             parentChannel: stateFromStores,
             thread: stateFromStores1,
             message: stateFromStores2,
@@ -166,7 +174,7 @@ export default function ForumComposerModal(parentChannelId) {
             onClose: handleClose,
             isEdit,
           };
-          obj.children = jsx(tmp2(tmp3[24]), {
+          obj7.children = jsx(tmp2(tmp3[24]), {
             parentChannel: stateFromStores,
             thread: stateFromStores1,
             message: stateFromStores2,
@@ -174,14 +182,13 @@ export default function ForumComposerModal(parentChannelId) {
             onClose: handleClose,
             isEdit,
           });
-          obj.children = (
+          obj2.children = (
             <stateFromStores style={tmp.container} importantForAccessibility={null}>
               {null}
             </stateFromStores>
           );
           tmp11Result = jsx(tmp4(tmp3[15]).AnalyticsLocationProvider, {
-            style: tmp.container,
-            importantForAccessibility: null,
+            value: threadId(isEdit[15])(parentChannelId.analyticsLocations).analyticsLocations,
             children: null,
           });
         } else {

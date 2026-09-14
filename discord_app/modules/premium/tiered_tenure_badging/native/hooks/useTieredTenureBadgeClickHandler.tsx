@@ -7,6 +7,8 @@ import TieredTenureBadgeActionSheet from "../TieredTenureBadgeActionSheet.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 import UserStore from "../../../../../stores/UserStore.tsx";
 
+const require = globalThis.__r;
+
 require = fn;
 const PremiumTypes = fn(1373).PremiumTypes;
 const DEFAULT_PREMIUM_BADGE_ID = fn(8311).DEFAULT_PREMIUM_BADGE_ID;
@@ -24,12 +26,12 @@ export const useTieredTenureBadgeClickHandler = function useTieredTenureBadgeCli
   let isPremiumSubscriber = require("useIsPremiumSubscriber").useIsPremiumSubscriber(PremiumTypes.TIER_2);
   let tmp4 = typeof id === "string";
   if (typeof id === "string") {
-    let tmpResult = tmp(7736);
-    tmp4 = null != tmpResult.getTieredTenureBadge(id);
+    tmp4 = null != tmp(7736).getTieredTenureBadge(id);
+    const tmpResult = tmp(7736);
   }
-  tmpResult = tmp(504);
+  let obj = require("useIsPremiumSubscriber");
   const items = [isPremiumSubscriber];
-  const stateFromStores = tmpResult.useStateFromStores(items, () => isPremiumSubscriber.getCurrentUser());
+  const stateFromStores = require("initialize").useStateFromStores(items, () => isPremiumSubscriber.getCurrentUser());
   if (!tmp4) {
     let tmp7 = id === DEFAULT_PREMIUM_BADGE_ID;
     if (tmp7) {
@@ -50,16 +52,17 @@ export const useTieredTenureBadgeClickHandler = function useTieredTenureBadgeCli
   if (tmp4) {
     callback = isPremiumSubscriber.useCallback(() => {
       if (closure_2 === UserProfileThemeTypes.YOU_SCREEN) {
-        let obj = { screen: constants2.PREMIUM };
-        openUserSettings.openUserSettings(obj);
+        const obj2 = { screen: constants2.PREMIUM };
+        openUserSettings.openUserSettings(obj2);
       } else {
-        const tmp4 = asyncRequireImpl(11291, dependencyMap.paths);
-        obj = { userId };
-        obj.openLazy(tmp4, TieredTenureBadgeActionSheet.TIERED_TENURE_BADGE_ACTION_SHEET_KEY, obj, "stack");
+        const obj = ActionSheetActionCreatorsDefault;
+        const tmp4 = asyncRequireImpl(11292, dependencyMap.paths);
+        const obj4 = { userId };
+        obj.openLazy(tmp4, TieredTenureBadgeActionSheet.TIERED_TENURE_BADGE_ACTION_SHEET_KEY, obj4, "stack");
       }
       if (isPremiumSubscriber) {
-        const obj1 = { badge, viewed_user_id: userId, premium_type: isPremiumSubscriber };
-        AnalyticsUtilsDefault.track(constants.TIERED_TENURE_BADGE_CLICKED, obj1);
+        const obj6 = { badge, viewed_user_id: userId, premium_type: isPremiumSubscriber };
+        AnalyticsUtilsDefault.track(constants.TIERED_TENURE_BADGE_CLICKED, obj6);
       }
     }, items1);
   }

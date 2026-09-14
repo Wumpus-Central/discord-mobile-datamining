@@ -11,9 +11,23 @@ const View = fn(17).View;
 const EmojiIntention = fn(1374).EmojiIntention;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-fn(4636);
-let createStyles = { container: null, hasError: null, stringOptionInput: null, expressionButton: null };
-createStyles = {
+const createStyles = fn(4636);
+const obj2 = {
+  container: {
+    width: "100%",
+    backgroundColor: nativeDefault.colors.INPUT_BACKGROUND_DEFAULT,
+    borderRadius: nativeDefault.radii.lg,
+    padding: 14,
+    borderWidth: 2,
+    borderColor: "transparent",
+    flexDirection: "row",
+    alignItems: "center",
+  },
+  hasError: null,
+  stringOptionInput: null,
+  expressionButton: null,
+};
+let obj3 = {
   width: "100%",
   backgroundColor: nativeDefault.colors.INPUT_BACKGROUND_DEFAULT,
   borderRadius: nativeDefault.radii.lg,
@@ -23,11 +37,10 @@ createStyles = {
   flexDirection: "row",
   alignItems: "center",
 };
-createStyles.container = createStyles;
-createStyles.hasError = { borderColor: nativeDefault.colors.BORDER_FEEDBACK_CRITICAL };
-createStyles.stringOptionInput = { maxHeight: 100, flex: 1, padding: 0, paddingTop: 0 };
-createStyles.expressionButton = { marginVertical: -8, marginRight: -8 };
-let closure_9 = createStyles.createStyles(createStyles);
+obj2.hasError = { borderColor: nativeDefault.colors.BORDER_FEEDBACK_CRITICAL };
+obj2.stringOptionInput = { maxHeight: 100, flex: 1, padding: 0, paddingTop: 0 };
+obj2.expressionButton = { marginVertical: -8, marginRight: -8 };
+let closure_9 = createStyles.createStyles(obj2);
 const size = fn(2);
 let result = size.fileFinishedImporting(
   "modules/app_launcher/native/options/text_input/AppLauncherTextInputOption.tsx",
@@ -58,7 +71,6 @@ export default function AppLauncherTextInputOption(guildId) {
   );
   value = tmp2[0];
   noop = tmp2[1];
-  let obj = onChangeText(11348);
   noop.useRef({ start: 0, end: 0 });
   const ref = noop.useRef(null);
   let tmp14Result = option.type === onChangeText(1894).ApplicationCommandOptionType.STRING;
@@ -111,26 +123,26 @@ export default function AppLauncherTextInputOption(guildId) {
       const result = TopEmojisUtils.maybeFetchTopEmojisByGuild(guildId);
     }
   }, items2);
-  let obj1 = onChangeText(12298);
-  const animationDelayedAutoFocus = obj1.useAnimationDelayedAutoFocus(autoFocus, () => {
+  let obj = onChangeText(11349);
+  const animationDelayedAutoFocus = onChangeText(12299).useAnimationDelayedAutoFocus(autoFocus, () => {
     const current = ref.current;
     if (current != null) {
       current.focus();
     }
   });
   if (obj.useAppLauncherContext().entrypoint === onChangeText(9539).AppLauncherEntrypoint.VOICE) {
-    let TextInput = tmp4(1178).TextInput;
+    let TextInput = tmp4(1176).TextInput;
   } else {
-    TextInput = guildId(12302);
+    TextInput = guildId(12303);
   }
   const items3 = [tmp.container, ,];
   if (hasError) {
     hasError = tmp.hasError;
   }
-  obj = { style: items3, children: null };
+  const obj3 = { style: items3, children: null };
   items3[1] = hasError;
   items3[2] = style;
-  obj = {
+  const obj4 = {
     ref,
     autoFocus: false,
     value,
@@ -151,46 +163,44 @@ export default function AppLauncherTextInputOption(guildId) {
   if (option.type === onChangeText(1894).ApplicationCommandOptionType.STRING) {
     maxLength = option.maxLength;
   }
-  obj.maxLength = maxLength;
-  obj.onChangeText = onChangeText;
-  obj.onSelectionChange = function onSelectionChange(nativeEvent) {
+  obj4.maxLength = maxLength;
+  obj4.onChangeText = onChangeText;
+  obj4.onSelectionChange = function onSelectionChange(nativeEvent) {
     closure_5.current = nativeEvent.nativeEvent.selection;
   };
-  obj.onFocus = onFocus;
-  obj.onEndEditing = onEndEditing;
+  obj4.onFocus = onFocus;
+  obj4.onEndEditing = onEndEditing;
   if (option.type === onChangeText(1894).ApplicationCommandOptionType.INTEGER) {
     let str2 = "numbers-and-punctuation";
     if (tmp4Result.isAndroid()) {
       str2 = "numeric";
     }
     let str = str2;
-    tmp4Result = tmp4(1150);
+    tmp4Result = tmp4(1363);
   } else {
     str = "default";
   }
-  obj.keyboardType = str;
-  obj.onPressIn = onPressIn;
-  const items4 = [closure_7(TextInput, obj)];
+  obj4.keyboardType = str;
+  obj4.onPressIn = onPressIn;
+  const items4 = [closure_7(TextInput, obj4)];
   if (tmp14Result) {
-    obj1 = {
+    const obj5 = {
       style: tmp.expressionButton,
       onPress() {
-        let obj = KeyboardManagerUtils;
-        const result = obj.dismissGlobalKeyboard();
-        obj = {
+        const result = KeyboardManagerUtils.dismissGlobalKeyboard();
+        const result1 = openEmojiPickerActionSheet.openEmojiPickerActionSheet({
           pickerIntention: EmojiIntention.CHAT,
           autoFocus: false,
           startExpanded: false,
           onPressEmoji,
           guildId,
           onClose,
-        };
-        const result1 = openEmojiPickerActionSheet.openEmojiPickerActionSheet(obj);
+        });
       },
     };
-    tmp14Result = tmp14(guildId(12303), obj1);
+    tmp14Result = tmp14(guildId(12304), obj5);
   }
   items4[1] = tmp14Result;
-  obj.children = items4;
-  return onChangeText(ref, obj);
+  obj3.children = items4;
+  return onChangeText(ref, obj3);
 }

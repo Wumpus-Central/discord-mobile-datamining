@@ -1,5 +1,4 @@
 // discord_app/modules/main_tabs_v2/native/shared_components/happening_now/HappeningNowAnalytics.tsx
-import SnowflakeUtilsDefault from "../../../../../utils/SnowflakeUtils.tsx";
 import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
 import AuthenticationStore from "../../../../../stores/AuthenticationStore.tsx";
 
@@ -12,8 +11,8 @@ function convertNullableArrayToItemAndItemIndex(arg0) {
     if (null === nextResult) {
       let arr = items1.push(-1);
     } else {
-      arr = items.push(tmp2);
-      let arr1 = items1.push(items.length - 1);
+      let arr2 = items.push(tmp2);
+      let arr3 = items1.push(items.length - 1);
     }
     continue;
   }
@@ -73,26 +72,23 @@ const result = size.fileFinishedImporting(
 
 export const getAffinityProperties = function getAffinityProperties(data) {
   const id = AuthenticationStore.getId();
-  let obj = SnowflakeUtilsDefault;
   if (obj.extractTimestamp(id) % 25 === 0) {
-    obj = {};
-    obj = { destination_channel_ids: null, destination_channel_ids_index: null };
-    [obj4.destination_channel_ids, obj4.destination_channel_ids_index] = _slicedToArray(
-      convertNullableArrayToItemAndItemIndex(data.map(getItemChannelId)),
-      2,
+    const obj2 = {};
+    const obj3 = { destination_channel_ids: null, destination_channel_ids_index: null };
+    [obj4.destination_channel_ids, obj4.destination_channel_ids_index] = convertNullableArrayToItemAndItemIndex(
+      data.map(getItemChannelId),
     );
-    const merged = Object.assign(obj);
+    const merged = Object.assign(obj3);
     const tmp6 = _slicedToArray(convertNullableArrayToItemAndItemIndex(data.map(getItemChannelId)), 2);
-    const obj1 = { highlighted_user_ids: null, highlighted_user_ids_index: null };
-    [obj5.highlighted_user_ids, obj5.highlighted_user_ids_index] = _slicedToArray(
-      convertNullableArrayToItemAndItemIndex(data.map(getItemUserId)),
-      2,
+    const obj9 = { highlighted_user_ids: null, highlighted_user_ids_index: null };
+    [obj5.highlighted_user_ids, obj5.highlighted_user_ids_index] = convertNullableArrayToItemAndItemIndex(
+      data.map(getItemUserId),
     );
-    const merged1 = Object.assign(obj1);
-    let obj2 = obj;
+    const merged1 = Object.assign(obj9);
+    let obj10 = obj2;
     const tmp11 = _slicedToArray(convertNullableArrayToItemAndItemIndex(data.map(getItemUserId)), 2);
   } else {
-    obj2 = {};
+    obj10 = {};
   }
-  return obj2;
+  return obj10;
 };

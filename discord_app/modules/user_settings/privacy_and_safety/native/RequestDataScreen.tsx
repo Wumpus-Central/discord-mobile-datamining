@@ -7,11 +7,11 @@ get_ActivityIndicator = fn(17);
 ({ View: c2, StyleSheet } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
 const createStyles = fn(4636);
-let obj = { container: null };
-obj = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
+const obj = { container: null };
 const merged = Object.assign(StyleSheet.absoluteFillObject);
-obj.container = obj;
+obj.container = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 let closure_4 = createStyles.createStyles(obj);
+const obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/privacy_and_safety/native/RequestDataScreen.tsx");
 

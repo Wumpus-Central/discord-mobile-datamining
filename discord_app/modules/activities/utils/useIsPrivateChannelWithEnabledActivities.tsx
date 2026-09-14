@@ -1,6 +1,8 @@
 // discord_app/modules/activities/utils/useIsPrivateChannelWithEnabledActivities.tsx
 import ChannelStore from "../../../stores/ChannelStore.tsx";
 
+const require = globalThis.__r;
+
 const require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/activities/utils/useIsPrivateChannelWithEnabledActivities.tsx");

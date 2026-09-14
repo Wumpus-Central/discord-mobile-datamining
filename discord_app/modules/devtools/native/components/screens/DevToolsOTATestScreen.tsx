@@ -12,11 +12,11 @@ function OtaVerificationActionSheet(result) {
   result = result.result;
   const tmp = closure_10();
   _require = tmp;
-  let obj = {
+  const obj = {
     header: closure_8(require("BottomSheetTitleHeader").BottomSheetTitleHeader, { title: "OTA Verification Result" }),
     children: null,
   };
-  obj = { style: tmp.verificationLine, children: null };
+  const obj2 = { style: tmp.verificationLine, children: null };
   const items = [closure_8(require("Text/Text").Text, { variant: "heading-md/bold", children: "Has OTA Applied" })];
   let str = "No";
   let str2 = "No";
@@ -24,9 +24,9 @@ function OtaVerificationActionSheet(result) {
     str2 = "Yes";
   }
   items[1] = closure_8(require("Text/Text").Text, { variant: "text-md/normal", children: str2 });
-  obj.children = items;
-  const items1 = [closure_9(closure_7, obj), , , ,];
-  obj = { style: tmp.verificationLine, children: null };
+  obj2.children = items;
+  const items1 = [closure_9(closure_7, obj2), , , ,];
+  const obj3 = { style: tmp.verificationLine, children: null };
   const items2 = [closure_8(require("Text/Text").Text, { variant: "heading-md/bold", children: "Has Local Copy" })];
   let str3 = "--";
   if (null != result.hasLocalCopy) {
@@ -37,19 +37,19 @@ function OtaVerificationActionSheet(result) {
     str3 = str4;
   }
   items2[1] = closure_8(require("Text/Text").Text, { variant: "text-md/normal", children: str3 });
-  obj.children = items2;
-  items1[1] = closure_9(closure_7, obj);
-  const obj1 = { style: tmp.verificationLine, children: null };
+  obj3.children = items2;
+  items1[1] = closure_9(closure_7, obj3);
+  const obj4 = { style: tmp.verificationLine, children: null };
   const items3 = [closure_8(require("Text/Text").Text, { variant: "heading-md/bold", children: "OTA is Valid" })];
   if (result.isValid) {
     str = "Yes";
   }
   items3[1] = closure_8(require("Text/Text").Text, { variant: "text-md/normal", children: str });
-  obj1.children = items3;
-  items1[2] = closure_9(closure_7, obj1);
+  obj4.children = items3;
+  items1[2] = closure_9(closure_7, obj4);
   let tmp2Result = null;
   if (null !== result.totalFileCount) {
-    const obj2 = { style: tmp.verificationLine, children: null };
+    const obj5 = { style: tmp.verificationLine, children: null };
     const items4 = [closure_8(tmp3(4632).Text, { variant: "heading-md/bold", children: "File Counts" })];
     const items5 = [result.totalFileCount, " files. ", , , ,];
     const successes = result.successes;
@@ -64,18 +64,18 @@ function OtaVerificationActionSheet(result) {
     if (failures != null) {
       length1 = failures.length;
     }
-    const obj3 = { variant: "text-md/normal", children: null };
+    const obj6 = { variant: "text-md/normal", children: null };
     items5[4] = length1;
     items5[5] = " failures.";
-    obj3.children = items5;
-    items4[1] = closure_9(tmp3(4632).Text, obj3);
-    obj2.children = items4;
-    tmp2Result = closure_9(closure_7, obj2);
+    obj6.children = items5;
+    items4[1] = closure_9(tmp3(4632).Text, obj6);
+    obj5.children = items4;
+    tmp2Result = closure_9(closure_7, obj5);
   }
   items1[3] = tmp2Result;
-  tmp2Result = null;
+  let tmp2Result2 = null;
   if (result.failures.length > 0) {
-    const obj4 = { style: tmp.verificationLine, children: null };
+    const obj7 = { style: tmp.verificationLine, children: null };
     const items6 = [closure_8(tmp3(4632).Text, { variant: "heading-md/bold", children: "Failures" })];
     const failures1 = result.failures;
     items6[1] = failures1.map((children) =>
@@ -85,10 +85,10 @@ function OtaVerificationActionSheet(result) {
         children,
       ),
     );
-    obj4.children = items6;
-    tmp2Result = closure_9(closure_7, obj4);
+    obj7.children = items6;
+    tmp2Result2 = closure_9(closure_7, obj7);
   }
-  items1[4] = tmp2Result;
+  items1[4] = tmp2Result2;
   obj.children = items1;
   return closure_9(require("Sheet/BottomSheet").BottomSheet, obj);
 }
@@ -96,18 +96,19 @@ get_ActivityIndicator = fn(17);
 ({ ScrollView: metroRequire, View: closure_7 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-fn(4636);
-let createStyles = { wrap: null, contentContainer: null, verificationLine: null, verificationFailure: null };
-createStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 };
-createStyles.wrap = createStyles;
-createStyles.contentContainer = { padding: nativeDefault.space.PX_16 };
-let obj1 = { padding: nativeDefault.space.PX_16 };
-createStyles.verificationLine = {
-  paddingHorizontal: nativeDefault.space.PX_16,
-  paddingVertical: nativeDefault.space.PX_8,
+const createStyles = fn(4636);
+let obj2 = {
+  wrap: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 },
+  contentContainer: null,
+  verificationLine: null,
+  verificationFailure: null,
 };
-createStyles.verificationFailure = { fontFamily: fn(1085).Fonts.CODE_NORMAL };
-let closure_10 = createStyles.createStyles(createStyles);
+let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 };
+obj2.contentContainer = { padding: nativeDefault.space.PX_16 };
+let obj4 = { padding: nativeDefault.space.PX_16 };
+obj2.verificationLine = { paddingHorizontal: nativeDefault.space.PX_16, paddingVertical: nativeDefault.space.PX_8 };
+obj2.verificationFailure = { fontFamily: fn(1085).Fonts.CODE_NORMAL };
+let closure_10 = createStyles.createStyles(obj2);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/devtools/native/components/screens/DevToolsOTATestScreen.tsx");
 
@@ -120,8 +121,8 @@ export default function DevToolsOTATestScreen() {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj3 = { value, done: true };
+        return obj3;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -134,32 +135,30 @@ export default function DevToolsOTATestScreen() {
             throw value;
           } else if (arg0 === 2) {
             c3 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj4 = { value, done: true };
+            return obj4;
           } else {
             closure_0 = tmp2;
             closure_128_0 = undefined;
             noop(true);
-            let obj1 = tmp5(11921);
             dependencyMap = 1;
             c3 = 1;
-            obj1 = { value: null, done: false };
-            obj1.value = obj1.verifyOtaFiles();
-            return obj1;
+            const obj5 = { value: tmp5(11922).verifyOtaFiles(), done: false };
+            return obj5;
           }
         } else if (arg0 === 1) {
           c3 = 3;
           throw value;
         } else if (arg0 === 2) {
           c3 = 3;
-          obj = { value, done: true };
+          const obj = { value, done: true };
           return obj;
         } else {
           closure_128_0 = value;
           closure_129_5(false);
-          const obj2 = { default: OtaVerificationActionSheet };
-          const obj3 = { result: closure_128_0 };
-          tmp5(4603).openLazy(Promise.resolve(obj2), "OtaVerificationActionSheet", obj3);
+          const obj7 = { default: OtaVerificationActionSheet };
+          const obj8 = { result: closure_128_0 };
+          tmp5(4603).openLazy(Promise.resolve(obj7), "OtaVerificationActionSheet", obj8);
           c3 = 3;
           return { value: "HermesInternal", done: null };
         }
@@ -170,16 +169,14 @@ export default function DevToolsOTATestScreen() {
     }
   };
   const tmp = closure_10();
-  const tmp2 = _slicedToArray(noop.useState(""), 2);
-  const subLabel = tmp2[0];
-  importDefault = tmp2[1];
-  [tmp5, dependencyMap] = _slicedToArray(noop.useState(null), 2);
+  [subLabel, importDefault] = noop.useState("");
+  [tmp5, dependencyMap] = noop.useState(null);
   const tmp4 = _slicedToArray(noop.useState(null), 2);
-  [tmp7, asyncGeneratorStep] = _slicedToArray(noop.useState(null), 2);
+  [tmp7, asyncGeneratorStep] = noop.useState(null);
   const tmp8 = _slicedToArray(noop.useState(""), 2);
   _slicedToArray = tmp8[1];
   const tmp6 = _slicedToArray(noop.useState(null), 2);
-  [tmp10, noop] = _slicedToArray(noop.useState(false), 2);
+  [tmp10, noop] = noop.useState(false);
   const effect = noop.useEffect(() => {
     const otaRootPath = BundleUpdaterDefault.getOtaRootPath();
     otaRootPath.then(closure_1);
@@ -191,10 +188,15 @@ export default function DevToolsOTATestScreen() {
     otaStatus.then(closure_4);
   }, []);
   let obj = { style: tmp.wrap, contentContainerStyle: tmp.contentContainer, children: null };
-  obj = { title: "OTA Status", hasIcons: true, children: null };
-  obj = { label: "Status", subLabel: tmp8[0], icon: closure_8(subLabel(15649).WrenchIcon, {}) };
+  let obj2 = { title: "OTA Status", hasIcons: true, children: null };
+  const tmp13 = closure_6;
+  const tmp9 = _slicedToArray(noop.useState(false), 2);
   const items = [
-    closure_8(subLabel(5686).TableRow, obj),
+    closure_8(subLabel(5686).TableRow, {
+      label: "Status",
+      subLabel: tmp8[0],
+      icon: closure_8(subLabel(15650).WrenchIcon, {}),
+    }),
     closure_8(subLabel(5686).TableRow, {
       label: "Root Path (tap to copy)",
       subLabel,
@@ -203,8 +205,8 @@ export default function DevToolsOTATestScreen() {
       },
     }),
   ];
-  obj.children = items;
-  const items1 = [closure_9(subLabel(5768).TableRowGroup, obj), , ,];
+  obj2.children = items;
+  const items1 = [closure_9(subLabel(5768).TableRowGroup, obj2), , ,];
   let str;
   if (tmp5 != null) {
     str = tmp5.source;
@@ -212,23 +214,22 @@ export default function DevToolsOTATestScreen() {
   if (str == null) {
     str = "Unknown";
   }
-  let obj1 = {
+  let obj3 = { label: "Status", subLabel: tmp8[0], icon: closure_8(subLabel(15650).WrenchIcon, {}) };
+  let obj4 = {
     label: "Root Path (tap to copy)",
     subLabel,
     onPress: function copyRootPath() {
       ClipboardUtils.copy(first);
     },
   };
-  const tmp13 = closure_6;
-  const tmp9 = _slicedToArray(noop.useState(false), 2);
   const items2 = [
     closure_8(subLabel(5686).TableRow, {
       label: "Manifest Source",
       subLabel: str,
-      icon: closure_8(subLabel(15649).WrenchIcon, {}),
+      icon: closure_8(subLabel(15650).WrenchIcon, {}),
     }),
   ];
-  let obj3 = { icon: closure_8(subLabel(8014).PaperIcon, {}), label: null };
+  const obj6 = { icon: closure_8(subLabel(8014).PaperIcon, {}), label: null };
   let str2 = "{}";
   if (null != tmp5) {
     let metadata = tmp5.metadata;
@@ -237,24 +238,24 @@ export default function DevToolsOTATestScreen() {
     }
     str2 = JSON.stringify(metadata, null, 2);
   }
-  const obj4 = { title: "Manifest", hasIcons: true, children: null };
-  obj3.label = str2;
-  items2[1] = closure_8(subLabel(5686).TableRow, obj3);
-  obj4.children = items2;
-  items1[1] = closure_9(subLabel(5768).TableRowGroup, obj4);
-  const obj5 = { icon: closure_8(subLabel(15649).WrenchIcon, {}), label: "Is cookie set?", subLabel: null };
+  let obj7 = { title: "Manifest", hasIcons: true, children: null };
+  obj6.label = str2;
+  items2[1] = closure_8(subLabel(5686).TableRow, obj6);
+  obj7.children = items2;
+  items1[1] = closure_9(subLabel(5768).TableRowGroup, obj7);
+  let obj8 = { icon: closure_8(subLabel(15650).WrenchIcon, {}), label: "Is cookie set?", subLabel: null };
   let str3 = "Yes";
   if (null == tmp7) {
     str3 = "No";
   }
-  obj5.subLabel = str3;
-  const items3 = [closure_8(subLabel(5686).TableRow, obj5)];
+  obj8.subLabel = str3;
+  const items3 = [closure_8(subLabel(5686).TableRow, obj8)];
   let tmp12Result = null != tmp7;
   if (tmp12Result) {
-    const obj6 = { icon: closure_8(tmp15(15649).WrenchIcon, {}), label: null };
+    const obj9 = { icon: closure_8(tmp15(15650).WrenchIcon, {}), label: null };
     const _JSON = JSON;
-    obj6.label = JSON.stringify(tmp7, null, 2);
-    tmp12Result = closure_8(tmp15(5686).TableRow, obj6);
+    obj9.label = JSON.stringify(tmp7, null, 2);
+    tmp12Result = closure_8(tmp15(5686).TableRow, obj9);
   }
   items3[1] = tmp12Result;
   items1[2] = closure_9(subLabel(5768).TableRowGroup, {
@@ -262,7 +263,7 @@ export default function DevToolsOTATestScreen() {
     hasIcons: true,
     children: items3,
   });
-  let obj2 = { label: "Manifest Source", subLabel: str, icon: closure_8(subLabel(15649).WrenchIcon, {}) };
+  let obj5 = { label: "Manifest Source", subLabel: str, icon: closure_8(subLabel(15650).WrenchIcon, {}) };
   const items4 = [
     closure_8(subLabel(5686).TableRow, {
       label: "Check for Update & Reload",
@@ -274,9 +275,9 @@ export default function DevToolsOTATestScreen() {
   if (tmp10) {
     str4 = "Verification in progress";
   }
-  const obj8 = { spacing: 16, children: null };
-  const obj9 = { title: "Actions", hasIcons: true, children: null };
-  const obj7 = {
+  const obj11 = { spacing: 16, children: null };
+  const obj12 = { title: "Actions", hasIcons: true, children: null };
+  const obj10 = {
     label: "Check for Update & Reload",
     icon: closure_8(subLabel(4585).DownloadIcon, {}),
     onPress: BundleUpdaterDefault.checkForUpdateAndReload,
@@ -284,7 +285,7 @@ export default function DevToolsOTATestScreen() {
   items4[1] = closure_8(subLabel(5686).TableRow, {
     label: "Verify OTA Files",
     subLabel: str4,
-    icon: closure_8(subLabel(15745).ClipboardCheckIcon, {}),
+    icon: closure_8(subLabel(15747).ClipboardCheckIcon, {}),
     onPress: function verifyFiles() {
       const self = this;
       const apply = closure_6.apply;
@@ -297,9 +298,9 @@ export default function DevToolsOTATestScreen() {
     },
     disabled: tmp10,
   });
-  obj9.children = items4;
-  items1[3] = closure_9(subLabel(5768).TableRowGroup, obj9);
-  obj8.children = items1;
-  obj.children = closure_9(subLabel(5054).Stack, obj8);
+  obj12.children = items4;
+  items1[3] = closure_9(subLabel(5768).TableRowGroup, obj12);
+  obj11.children = items1;
+  obj.children = closure_9(subLabel(5054).Stack, obj11);
   return closure_8(tmp13, obj);
 }

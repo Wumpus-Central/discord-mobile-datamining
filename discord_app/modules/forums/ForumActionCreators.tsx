@@ -26,8 +26,8 @@ let closure_7 = async function _withErrorHandling(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -40,8 +40,8 @@ let closure_7 = async function _withErrorHandling(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c8 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj4 = { value, done: true };
+          return obj4;
         } else {
           closure_4 = tmp3;
           closure_3 = tmp5;
@@ -50,8 +50,8 @@ let closure_7 = async function _withErrorHandling(arg0) {
           c6 = 1;
           c7 = 2;
           c8 = 1;
-          const obj1 = { value: _require(), done: false };
-          return obj1;
+          const obj6 = { value: _require(), done: false };
+          return obj6;
         }
       } else if (1 === tmp8) {
         c6 = 0;
@@ -62,9 +62,9 @@ let closure_7 = async function _withErrorHandling(arg0) {
           code = body.code;
         }
         if (code === closure_132_4.NON_MODERATED_TAG_REQUIRED) {
-          let obj4 = closure_132_1(closure_132_2[2]);
-          let obj2 = { title: closure_131_0, body: closure_131_1 };
-          obj4.show(obj2);
+          const obj7 = { title: closure_131_0, body: closure_131_1 };
+          closure_132_1(closure_132_2[2]).show(obj7);
+          const obj5 = closure_132_1(closure_132_2[2]);
         } else {
           const body3 = closure_131_2.body;
           let code1;
@@ -81,13 +81,13 @@ let closure_7 = async function _withErrorHandling(arg0) {
             tmp19 = emoji;
           }
           if (tmp19) {
-            obj2 = closure_132_1(closure_132_2[2]);
-            const obj3 = { title: null, body: null };
+            const obj8 = { title: null, body: null };
             const intl = closure_132_0(closure_132_2[3]).intl;
-            obj3.title = intl.string(closure_132_0(closure_132_2[3]).t.T8sBLJ);
+            obj8.title = intl.string(closure_132_0(closure_132_2[3]).t.T8sBLJ);
             const intl2 = closure_132_0(closure_132_2[3]).intl;
-            obj3.body = intl2.string(closure_132_0(closure_132_2[3]).t.aHt1Bd);
-            obj2.show(obj3);
+            obj8.body = intl2.string(closure_132_0(closure_132_2[3]).t.aHt1Bd);
+            closure_132_1(closure_132_2[2]).show(obj8);
+            const obj3 = closure_132_1(closure_132_2[2]);
           }
         }
         c8 = 3;
@@ -97,12 +97,12 @@ let closure_7 = async function _withErrorHandling(arg0) {
       } else if (arg0 === 2) {
         c6 = 0;
         c8 = 3;
-        obj4 = { value, done: true };
-        return obj4;
+        const obj9 = { value, done: true };
+        return obj9;
       } else {
         c6 = 0;
         c8 = 3;
-        obj = { value, done: true };
+        const obj = { value, done: true };
         return obj;
       }
     } catch (tmp42) {
@@ -123,8 +123,7 @@ let result = size.fileFinishedImporting("modules/forums/ForumActionCreators.tsx"
 
 export default {
   resort(id) {
-    const obj = { type: "RESORT_THREADS", channelId: id };
-    obj.dispatch(obj);
+    DispatcherDefault.dispatch({ type: "RESORT_THREADS", channelId: id });
   },
   createForumTag(name, channelId) {
     const HTTP = HTTPUtils.HTTP;
@@ -172,18 +171,17 @@ export default {
     closure_1 = arg1;
     return (async () => {
       await v1(7867).unarchiveThreadIfNecessary(tmp4);
-      const HTTP = tmp4(1272).HTTP;
+      const HTTP = tmp4(1270).HTTP;
       const request = {
         url: closure_1_5.CHANNEL(closure_128_0),
         body: { applied_tags: closure_128_1 },
-        rejectWithError: tmp4(1272).rejectWithMigratedError(),
+        rejectWithError: tmp4(1270).rejectWithMigratedError(),
       };
       return HTTP.patch(request);
     })();
   },
   hideAdminOnboarding(channelId, hide) {
-    const obj = { type: "ADMIN_ONBOARDING_GUIDE_HIDE", channelId, hide };
-    obj.dispatch(obj);
+    DispatcherDefault.dispatch({ type: "ADMIN_ONBOARDING_GUIDE_HIDE", channelId, hide });
   },
   markPostAsSeen(arg0, feedItemId, timestampMillis) {
     const obj = AnalyticsFeedItemSeenActionCreators;
@@ -218,14 +216,13 @@ export default {
     closure_4 = c2;
     return (async () => {
       const channelId = tmp3;
-      let obj1 = { type: "FORUM_SEARCH_START", channelId };
-      channelId(573).dispatch(obj1);
+      channelId(573).dispatch({ type: "FORUM_SEARCH_START", channelId });
       await channelId(7867).searchThreads(closure_0, channelId, closure_2, closure_3, closure_4);
       if (1 === tmp7) {
         dependencyMap = 0;
-        obj1 = channelId(573);
-        obj1.dispatch({ type: "FORUM_SEARCH_FAILURE", channelId: closure_129_1 });
+        channelId(573).dispatch({ type: "FORUM_SEARCH_FAILURE", channelId: closure_129_1 });
         c4 = 3;
+        channelId(573);
       } else if (arg0 === 1) {
         c4 = 3;
         throw value;
@@ -245,11 +242,9 @@ export default {
     })();
   },
   updateForumSearchQuery(id, query) {
-    const obj = { type: "FORUM_SEARCH_QUERY_UPDATED", channelId: id, query };
-    obj.dispatch(obj);
+    DispatcherDefault.dispatch({ type: "FORUM_SEARCH_QUERY_UPDATED", channelId: id, query });
   },
   clearForumSearch(id) {
-    const obj = { type: "FORUM_SEARCH_CLEAR", channelId: id };
-    obj.dispatch(obj);
+    DispatcherDefault.dispatch({ type: "FORUM_SEARCH_CLEAR", channelId: id });
   },
 };

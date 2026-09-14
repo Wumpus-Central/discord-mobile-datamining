@@ -1,6 +1,7 @@
 // discord_app/modules/native_permissions/NativePermissionUtils.tsx
-import NativePermissionManager from "NativePermissionManager.tsx";
+import NativePermissionManager_mod from "NativePermissionManager.tsx";
 
+let NativePermissionManager = NativePermissionManager_mod;
 NativePermissionManager = NativePermissionManager.initialize();
 const ProcessArgs = fn(5222).ProcessArgs;
 if (ProcessArgs.isDiscordTestSet()) {

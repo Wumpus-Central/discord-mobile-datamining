@@ -33,9 +33,9 @@ class ReferralMessageManager extends tmp6 {
     return tmp3;
   }
 }
-tmp = new tmp(tmp4, tmp3, tmp2, Object, defineProperty, ReferralMessageManager, importDefault);
-setupLoadFromMessageManagerHandlersDefault(tmp, handleReferralMessages);
+const tmp5 = new tmp(tmp4, tmp3, tmp2, Object, defineProperty, ReferralMessageManager, importDefault);
+setupLoadFromMessageManagerHandlersDefault(tmp5, handleReferralMessages);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/native/referrals/ReferralMessageManager.tsx");
 
-export default tmp;
+export default tmp5;

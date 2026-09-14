@@ -34,8 +34,8 @@ let closure_12 = async function _maybeFetchStorefrontPromotions(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -48,15 +48,15 @@ let closure_12 = async function _maybeFetchStorefrontPromotions(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c1 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           const found = _require.filter(shouldFetchStorefrontPromotions);
           if (0 !== found.length) {
             c2 = 1;
             c1 = 1;
-            const obj1 = { value: fetchStorefrontPromotions(found), done: false };
-            return obj1;
+            const obj4 = { value: fetchStorefrontPromotions(found), done: false };
+            return obj4;
           }
         }
       } else if (arg0 === 1) {
@@ -64,7 +64,7 @@ let closure_12 = async function _maybeFetchStorefrontPromotions(arg0) {
         throw value;
       } else if (arg0 === 2) {
         c1 = 3;
-        obj = { value, done: true };
+        const obj = { value, done: true };
         return obj;
       }
       c1 = 3;
@@ -93,8 +93,8 @@ let closure_14 = async function _fetchStorefrontPromotions(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -107,8 +107,8 @@ let closure_14 = async function _fetchStorefrontPromotions(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c5 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           closure_2 = tmp3;
           closure_1 = tmp7;
@@ -116,22 +116,21 @@ let closure_14 = async function _fetchStorefrontPromotions(arg0) {
           closure_129_1 = undefined;
           if (0 !== length.length) {
             c3 = 1;
-            let obj5 = DispatcherDefault;
-            const obj1 = { type: "STOREFRONT_PROMOTIONS_FETCH_START", applicationIds: length };
-            obj5.dispatch(obj1);
+            const obj5 = { type: "STOREFRONT_PROMOTIONS_FETCH_START", applicationIds: length };
+            DispatcherDefault.dispatch(obj5);
             promotionIdOverride = promotionIdOverride.getPromotionIdOverride();
             const HTTP = HTTPUtils.HTTP;
             let get = HTTP.get;
             const request = { url: constants.STOREFRONT_PROMOTIONS, query: null, rejectWithError: true };
-            const obj2 = { application_ids: length };
+            const obj7 = { application_ids: length };
             if (null != promotionIdOverride) {
-              let obj3 = { promotion_id_override: promotionIdOverride };
-              let obj4 = obj3;
+              const obj8 = { promotion_id_override: promotionIdOverride };
+              let obj9 = obj8;
             } else {
-              obj4 = {};
+              obj9 = {};
             }
-            const merged = Object.assign(obj4);
-            request.query = obj2;
+            const merged = Object.assign(obj9);
+            request.query = obj7;
             get = get(request);
             c4 = 2;
             c5 = 1;
@@ -140,28 +139,28 @@ let closure_14 = async function _fetchStorefrontPromotions(arg0) {
       } else {
         if (1 === tmp7) {
           c3 = 0;
-          obj3 = closure_130_1(closure_130_2[8]);
-          obj5 = { type: "STOREFRONT_PROMOTIONS_FETCH_FAIL", applicationIds: closure_129_0 };
-          obj3.dispatch(obj5);
+          const obj10 = { type: "STOREFRONT_PROMOTIONS_FETCH_FAIL", applicationIds: closure_129_0 };
+          closure_130_1(closure_130_2[8]).dispatch(obj10);
+          const obj4 = closure_130_1(closure_130_2[8]);
         } else if (arg0 === 1) {
           c5 = 3;
           throw value;
         } else if (arg0 !== 2) {
           const promotions = value.body.promotions;
           closure_129_1 = promotions.map((item) => closure_1_7.createFromServer(item));
-          obj = closure_130_1(closure_130_2[8]);
-          const obj6 = {
+          const obj11 = {
             type: "STOREFRONT_PROMOTIONS_FETCH_SUCCESS",
             applicationIds: closure_129_0,
             promotions: closure_129_1,
           };
-          obj.dispatch(obj6);
+          closure_130_1(closure_130_2[8]).dispatch(obj11);
           c3 = 0;
+          const obj = closure_130_1(closure_130_2[8]);
         }
         c3 = 0;
         c5 = 3;
-        const obj7 = { value, done: true };
-        return obj7;
+        const obj12 = { value, done: true };
+        return obj12;
       }
       c5 = 3;
     } catch (tmp32) {
@@ -220,8 +219,8 @@ let closure_18 = async function _fetchStorefrontPrices(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -234,8 +233,8 @@ let closure_18 = async function _fetchStorefrontPrices(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c4 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj4 = { value, done: true };
+          return obj4;
         } else {
           closure_1 = tmp3;
           closure_0 = tmp7;
@@ -245,25 +244,25 @@ let closure_18 = async function _fetchStorefrontPrices(arg0) {
       } else {
         if (1 === tmp7) {
           c2 = 0;
-          const obj1 = { type: "SKUS_PRICING_FETCH_FAIL", priceId: closure_128_0 };
-          closure_129_1(closure_129_2[8]).dispatch(obj1);
+          const obj6 = { type: "SKUS_PRICING_FETCH_FAIL", priceId: closure_128_0 };
+          closure_129_1(closure_129_2[8]).dispatch(obj6);
           const obj5 = closure_129_1(closure_129_2[8]);
         } else if (arg0 === 1) {
           c4 = 3;
           throw value;
         } else if (arg0 !== 2) {
           body = value.body;
-          obj = closure_129_1(closure_129_2[8]);
-          let obj2 = { type: "SKUS_PRICING_FETCH_SUCCESS", priceId: closure_128_0, data: null };
-          obj2 = closure_129_0(closure_129_2[10]);
-          obj2.data = obj2.transformStorefrontPricesServer(body);
-          obj.dispatch(obj2);
+          const obj7 = { type: "SKUS_PRICING_FETCH_SUCCESS", priceId: closure_128_0, data: null };
+          const obj = closure_129_1(closure_129_2[8]);
+          obj7.data = closure_129_0(closure_129_2[10]).transformStorefrontPricesServer(body);
+          obj.dispatch(obj7);
           c2 = 0;
+          const obj3 = closure_129_0(closure_129_2[10]);
         }
         c2 = 0;
         c4 = 3;
-        const obj3 = { value, done: true };
-        return obj3;
+        const obj8 = { value, done: true };
+        return obj8;
       }
       c4 = 3;
     } catch (tmp23) {
@@ -314,6 +313,5 @@ export const fetchStorefrontPricesForSkuIds = function fetchStorefrontPricesForS
   return applyArgumentsResult;
 };
 export const setStorefrontPromotionIdOverride = function setStorefrontPromotionIdOverride(promotionIdOverride) {
-  const obj = { type: "STOREFRONT_PROMOTION_ID_OVERRIDE_SET", promotionIdOverride };
-  obj.dispatch(obj);
+  DispatcherDefault.dispatch({ type: "STOREFRONT_PROMOTION_ID_OVERRIDE_SET", promotionIdOverride });
 };

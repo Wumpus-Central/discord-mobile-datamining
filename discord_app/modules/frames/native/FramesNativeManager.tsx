@@ -2,7 +2,7 @@
 import DispatcherDefault from "../../../Dispatcher.tsx";
 import ComponentDispatchUtils from "../../../utils/ComponentDispatchUtils.tsx";
 import util from "../../../intl/index.native.tsx";
-import v1 from "../../../../_runtime/01256_v1.js";
+import v1 from "../../../../_runtime/01254_v1.js";
 import GlobalUtils from "../../../utils/GlobalUtils.tsx";
 import actions_AlertActionCreatorsDefault from "../../../actions/native/AlertActionCreators.tsx";
 import NativeAppLifecycleModuleDefault from "../../../../discord_common/js/packages/rtn-codegen/js/NativeAppLifecycleModule.tsx";
@@ -46,7 +46,7 @@ let closure_7 = fn(1920).DISALLOWED_NAVIGATION_ERROR_CLOSE_ACTIVITY;
 const TransportTypes = fn(4541).TransportTypes;
 const WebView = fn(8416);
 const React7 = WebView.getWebViewProxy("FRAME_WEB_VIEW_KEY");
-const PlatformUtils = fn(1151);
+const PlatformUtils = fn(1364);
 let nativeEventEmitter = null;
 if (PlatformUtils.isAndroid()) {
   nativeEventEmitter = new fn(17).NativeEventEmitter(NativeAppLifecycleModuleDefault);
@@ -89,13 +89,12 @@ class FramesNativeManager extends tmp5 {
           tmp9 = null != managedFrame.data.iframeId;
         }
         if (tmp9) {
-          let obj = WebViewPostMessageTransportDefault;
-          obj = {
+          const obj2 = {
             type: TransportTypes.POST_MESSAGE,
             origin: managedFrame.data.url,
             iframeId: managedFrame.data.iframeId,
           };
-          obj.handleMessage(tmp5, obj, postMessageToWebView);
+          WebViewPostMessageTransportDefault.handleMessage(tmp5, obj2, postMessageToWebView);
         }
         tmp5 = parsed;
       } catch (tmp18) {
@@ -105,12 +104,12 @@ class FramesNativeManager extends tmp5 {
             const managedFrame1 = self.getManagedFrame();
             if (null != managedFrame1) {
               self.leaveFrame(managedFrame1.id);
-              obj = { body: null, confirmText: null };
+              const obj5 = { body: null, confirmText: null };
               const intl = util.intl;
-              obj.body = intl.string(util.t.tYBBWz);
+              obj5.body = intl.string(util.t.tYBBWz);
               const intl2 = util.intl;
-              obj.confirmText = intl2.string(util.t.BddRzS);
-              actions_AlertActionCreatorsDefault.show(obj);
+              obj5.confirmText = intl2.string(util.t.BddRzS);
+              actions_AlertActionCreatorsDefault.show(obj5);
             }
           }
         } else {
@@ -139,14 +138,14 @@ class FramesNativeManager extends tmp5 {
     if (obj.isNotNullish(global)) {
       tmp3 = closure_1;
       obj2 = closure_1(tmp2[17]);
-      obj = {
+      obj1 = {
         type: "FRAME_SET_ORIENTATION_LOCK_STATE",
         frameId: null,
         lockState: null,
         pictureInPictureLockState: null,
       };
-      obj.frameId = global;
-      dispatchResult = obj2.dispatch(obj);
+      obj1.frameId = global;
+      dispatchResult = obj2.dispatch(obj1);
     }
     leaveFrameResult = super.leaveFrame(global);
     return;
@@ -155,11 +154,11 @@ class FramesNativeManager extends tmp5 {
 const prototype = FramesNativeManager.prototype;
 prototype["showRPCDisconnectErrorUI"] = function showRPCDisconnectErrorUI(reason) {
   ({ code, message } = reason);
-  const obj = { title: null, body: null };
+  const obj2 = { title: null, body: null };
   const intl = util.intl;
-  obj.title = intl.formatToPlainString(util.t.hbiAO6, { code });
-  obj.body = message;
-  obj.show(obj);
+  obj2.title = intl.formatToPlainString(util.t.hbiAO6, { code });
+  obj2.body = message;
+  actions_AlertActionCreatorsDefault.show(obj2);
 };
 prototype["getManagedFrame"] = function getManagedFrame() {
   let frameByIframeId;

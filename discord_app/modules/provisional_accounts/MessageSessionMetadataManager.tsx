@@ -36,16 +36,16 @@ prototype["_getAuthorizedApplicationIds"] = function _getAuthorizedApplicationId
 };
 prototype["_trackIfSessionMetadataExists"] = function _trackIfSessionMetadataExists(message) {
   if (null != message.session_metadata) {
-    const obj = { message_id: null, channel_id: null, author_id: null, authorized_application_ids: null };
+    const obj3 = { message_id: null, channel_id: null, author_id: null, authorized_application_ids: null };
     ({ id: obj2.message_id, channel_id: obj2.channel_id, author } = message);
     let id;
     if (author != null) {
       id = author.id;
     }
     const self = this;
-    obj.author_id = id;
-    obj.authorized_application_ids = this._getAuthorizedApplicationIds(message.session_metadata);
-    obj.track(AnalyticEvents.MESSAGE_DISPATCH_SESSION_METADATA_FOUND, obj);
+    obj3.author_id = id;
+    obj3.authorized_application_ids = this._getAuthorizedApplicationIds(message.session_metadata);
+    AnalyticsUtilsDefault.track(AnalyticEvents.MESSAGE_DISPATCH_SESSION_METADATA_FOUND, obj3);
   }
 };
 const messageSessionMetadataManager = new MessageSessionMetadataManager();

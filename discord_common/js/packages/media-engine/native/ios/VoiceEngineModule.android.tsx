@@ -1,6 +1,7 @@
 // discord_common/js/packages/media-engine/native/ios/VoiceEngineModule.android.tsx
-import NativeMediaEngineModule from "../../../rtn-codegen/js/NativeMediaEngineModule.tsx";
+import NativeMediaEngineModule_mod from "../../../rtn-codegen/js/NativeMediaEngineModule.tsx";
 
+let NativeMediaEngineModule = NativeMediaEngineModule_mod;
 NativeMediaEngineModule = NativeMediaEngineModule.getConstants();
 let closure_3 = [
   "getConstants",

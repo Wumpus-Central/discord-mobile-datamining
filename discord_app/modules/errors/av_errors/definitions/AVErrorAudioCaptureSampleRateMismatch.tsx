@@ -15,7 +15,6 @@ const result = size.fileFinishedImporting(
 
 export const AVErrorAudioCaptureSampleRateMismatchDefinition = {
   getActiveErrors() {
-    let obj = RTCConnectionStore;
     const rTCConnection = RTCConnectionStore.getRTCConnection();
     let num;
     if (rTCConnection != null) {
@@ -27,7 +26,7 @@ export const AVErrorAudioCaptureSampleRateMismatchDefinition = {
     if (num >= 30) {
       const _performance = performance;
       if (nowResult - MediaEngineStore.getLastAudioInputDeviceChangeTimestamp() >= closure_5) {
-        const rTCConnection1 = obj.getRTCConnection();
+        const rTCConnection1 = RTCConnectionStore.getRTCConnection();
         let mediaEngineConnectionId;
         if (rTCConnection1 != null) {
           mediaEngineConnectionId = rTCConnection1.getMediaEngineConnectionId();
@@ -47,12 +46,12 @@ export const AVErrorAudioCaptureSampleRateMismatchDefinition = {
         const _Math = Math;
         let tmp5;
         if (Math.abs(num2) > 30) {
-          obj = {
+          const obj2 = {
             type: AVError.AVError.AUDIO_CAPTURE_SAMPLE_RATE_MISMATCH,
             audioCaptureSampleRateMismatchPercent: num2,
           };
           const merged = Object.assign(AVErrorContext.getVoiceChannelErrorContext());
-          const items = [obj];
+          const items = [obj2];
           tmp5 = items;
         }
         return tmp5;

@@ -8,17 +8,18 @@ function handleStageInstanceCreateOrUpdate(instance) {
   instance = instance.instance;
   const guild_id = instance.guild_id;
   const items = [instance];
+  let obj2;
   let obj = dependencyMap[guild_id];
   if (obj == null) {
     obj = {};
   }
-  obj = {};
+  obj2 = {};
   const merged = Object.assign(obj);
   const item = items.forEach((channel_id) => {
     closure_2_2[channel_id.channel_id] = channel_id;
-    obj[channel_id.channel_id] = channel_id;
+    obj2[channel_id.channel_id] = channel_id;
   });
-  dependencyMap[guild_id] = obj;
+  dependencyMap[guild_id] = obj2;
 }
 const constants = GuildScheduledEventsConstants.GuildScheduledEventPrivacyLevel;
 const dependencyMap = {};
@@ -64,36 +65,38 @@ const stageInstanceStore = new StageInstanceStore(DispatcherDefault, {
     closure_2 = {};
     let item = guilds.forEach((item) => {
       ({ id, stage_instances } = item);
+      let obj2;
       let obj = closure_1[id];
       if (obj == null) {
         obj = {};
       }
-      obj = {};
+      obj2 = {};
       const merged = Object.assign(obj);
       if (stage_instances != null) {
         item = stage_instances.forEach((channel_id) => {
           closure_2_2[channel_id.channel_id] = channel_id;
-          obj[channel_id.channel_id] = channel_id;
+          obj2[channel_id.channel_id] = channel_id;
         });
       }
-      closure_1[id] = obj;
+      closure_1[id] = obj2;
     });
   },
   GUILD_CREATE: function handleGuildCreate(guild) {
     ({ id, stage_instances } = guild.guild);
+    let obj2;
     let obj = dependencyMap[id];
     if (obj == null) {
       obj = {};
     }
-    obj = {};
+    obj2 = {};
     const merged = Object.assign(obj);
     if (stage_instances != null) {
       const item = stage_instances.forEach((channel_id) => {
         closure_2_2[channel_id.channel_id] = channel_id;
-        obj[channel_id.channel_id] = channel_id;
+        obj2[channel_id.channel_id] = channel_id;
       });
     }
-    dependencyMap[id] = obj;
+    dependencyMap[id] = obj2;
   },
   GUILD_DELETE: function handleGuildDelete(arg0) {
     let obj = dependencyMap[arg0.guild.id];
@@ -116,10 +119,10 @@ const stageInstanceStore = new StageInstanceStore(DispatcherDefault, {
       if (obj == null) {
         obj = {};
       }
-      obj = {};
+      const obj2 = {};
       const merged = Object.assign(obj);
       delete tmp[tmp2];
-      dependencyMap[guild_id] = obj;
+      dependencyMap[guild_id] = obj2;
     }
   },
   CHANNEL_DELETE: function handleChannelDelete(channel) {
@@ -130,10 +133,10 @@ const stageInstanceStore = new StageInstanceStore(DispatcherDefault, {
       if (obj == null) {
         obj = {};
       }
-      obj = {};
+      const obj2 = {};
       const merged = Object.assign(obj);
       delete tmp[tmp2];
-      dependencyMap[guild_id] = obj;
+      dependencyMap[guild_id] = obj2;
     }
   },
   LOGOUT: function handleLogout() {

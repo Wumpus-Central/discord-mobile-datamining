@@ -9,12 +9,12 @@ export default function isOrientationLockSupported() {
   const isIpadOSResult = DeviceUtils.isIpadOS();
   let result = !isIpadOSResult;
   if (!isIpadOSResult) {
-    let tmpResult = MetaQuestUtils;
-    result = !tmpResult.isMetaQuest();
+    result = !MetaQuestUtils.isMetaQuest();
+    const tmpResult = MetaQuestUtils;
   }
   if (result) {
-    tmpResult = DeviceUtils;
-    result = tmpResult.isOrientationLockSupported();
+    result = DeviceUtils.isOrientationLockSupported();
+    const tmpResult2 = DeviceUtils;
   }
   return result;
 }

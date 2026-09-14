@@ -61,13 +61,13 @@ function ExistingJoinRequestHandler(guildId) {
     }
     if (MemberVerificationTypes.GuildJoinRequestApplicationStatuses.SUBMITTED === applicationStatus) {
       onClose();
-      let tmp2Result = MemberVerificationAlertActionCreators;
-      const result = tmp2Result.openMemberVerificationPendingAlert(guildId);
+      const result = MemberVerificationAlertActionCreators.openMemberVerificationPendingAlert(guildId);
+      const tmp2Result = MemberVerificationAlertActionCreators;
     } else if (MemberVerificationTypes.GuildJoinRequestApplicationStatuses.REJECTED === applicationStatus) {
       onClose();
-      tmp2Result = MemberVerificationAlertActionCreators;
       const obj = { guildId, canWithdraw: true };
-      const result1 = tmp2Result.openMemberVerificationRejectedAlert(obj);
+      const result1 = MemberVerificationAlertActionCreators.openMemberVerificationRejectedAlert(obj);
+      const tmp2Result2 = MemberVerificationAlertActionCreators;
     }
   }, items4);
   const items5 = [stateFromStores, guildId, onClose, stateFromStores1];
@@ -100,23 +100,23 @@ const View = fn(17).View;
 const Constants = fn(1074);
 ({ ME: closure_9, Routes: c10 } = Constants);
 const jsx = fn(21).jsx;
-fn(4636);
-let createStyles = { flex: { flex: 1 }, flexLoading: null };
-createStyles = {
-  flex: 1,
-  alignItems: "center",
-  justifyContent: "center",
-  backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
+const createStyles = fn(4636);
+let obj2 = {
+  flex: { flex: 1 },
+  flexLoading: {
+    flex: 1,
+    alignItems: "center",
+    justifyContent: "center",
+    backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
+  },
 };
-createStyles.flexLoading = createStyles;
-let closure_12 = createStyles.createStyles(createStyles);
-const makeAuthenticated = fn(16856);
+let closure_12 = createStyles.createStyles(obj2);
+const makeAuthenticated = fn(16858);
 const authenticated = makeAuthenticated.makeAuthenticated(function MemberVerificationRouteContainer(navigation) {
   navigation = navigation.navigation;
   guildId = navigation.route.params.guildId;
   const items = [navigation];
   const callback = noop.useCallback(() => {
-    let obj = navigation;
     const state = navigation.getState();
     ({ routes, index } = state);
     if (routes.length > 1) {
@@ -125,7 +125,7 @@ const authenticated = makeAuthenticated.makeAuthenticated(function MemberVerific
         name = tmp6.name;
       }
       if ("member-verification" !== name) {
-        obj.goBack();
+        navigation.goBack();
       } else {
         let diff = index;
         if (index >= 0) {
@@ -148,24 +148,28 @@ const authenticated = makeAuthenticated.makeAuthenticated(function MemberVerific
         }
       }
     } else {
-      obj = { screen: "guilds", guildId };
-      NavigationRouteUtils.navigateToRootTab(obj);
+      const obj3 = { screen: "guilds", guildId };
+      NavigationRouteUtils.navigateToRootTab(obj3);
     }
   }, items);
   useSafeAreaInsetsDefault();
   if (null == guildId) {
     let tmp10 = <Loading />;
   } else {
-    let obj = { guildId, onClose: callback, children: null };
-    obj = { style: null, children: null };
+    const obj = { guildId, onClose: callback, children: null };
+    let obj2 = { style: null, children: null };
     const items1 = [tmp.flex];
-    obj = { marginLeft: tmp6, marginRight: tmp7 };
-    items1[1] = obj;
-    obj.style = items1;
-    const obj1 = { guildId, onClose: callback };
-    obj.children = <MemberVerificationRouteView guildId={guildId} onClose={callback} />;
-    obj.children = jsx(KeyboardAwareViewDefault, { marginLeft: tmp6, marginRight: tmp7 });
-    tmp10 = <ExistingJoinRequestHandler marginLeft={tmp6} marginRight={tmp7} />;
+    let obj3 = { marginLeft: tmp6, marginRight: tmp7 };
+    items1[1] = obj3;
+    obj2.style = items1;
+    let obj4 = { guildId, onClose: callback };
+    obj2.children = <MemberVerificationRouteView guildId={guildId} onClose={callback} />;
+    obj.children = jsx(KeyboardAwareViewDefault, { style: null, children: null });
+    tmp10 = (
+      <ExistingJoinRequestHandler guildId={guildId} onClose={callback}>
+        {null}
+      </ExistingJoinRequestHandler>
+    );
     const tmp3Result = KeyboardAwareViewDefault;
   }
   return tmp10;

@@ -81,7 +81,7 @@ export const renderMessagePreviewMarkup = function renderMessagePreviewMarkup(fo
   if ("" === content) {
     return null;
   } else {
-    let obj = {
+    const obj4 = {
       allowLinks: true,
       allowDevLinks: false,
       allowEmojiLinks: false,
@@ -103,20 +103,16 @@ export const renderMessagePreviewMarkup = function renderMessagePreviewMarkup(fo
     if (muted == null) {
       muted = false;
     }
-    obj.muted = muted;
-    obj = {
+    obj4.muted = muted;
+    const obj = {
       content,
       layout,
       color,
-      initialParserState: null,
-      fontScale: null,
-      maxFontSizeMultiplier: null,
-      postProcessor: null,
+      initialParserState: obj4,
+      fontScale: num,
+      maxFontSizeMultiplier,
+      postProcessor,
     };
-    obj.initialParserState = obj;
-    obj.fontScale = num;
-    obj.maxFontSizeMultiplier = maxFontSizeMultiplier;
-    obj.postProcessor = postProcessor;
     const tmp4 = getOrParseMessagePreviewMarkupAST(obj);
     const items = [
       MarkupRulesDefault.RULES,
@@ -124,7 +120,7 @@ export const renderMessagePreviewMarkup = function renderMessagePreviewMarkup(fo
     ];
     const tmp7Result = combineMarkupRulesDefault(items);
     const obj2 = _modDef4333;
-    return obj2.reactFor(_modDef4333.ruleOutput(tmp7Result, "react"))(tmp4, obj);
+    return obj2.reactFor(_modDef4333.ruleOutput(tmp7Result, "react"))(tmp4, obj4);
   }
 };
 export const messagePreviewASTCache = tmp2;

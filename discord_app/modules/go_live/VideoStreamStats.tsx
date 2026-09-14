@@ -69,7 +69,7 @@ prototype["getLayout"] = function getLayout() {
 };
 prototype["getStats"] = function getStats() {
   const self = this;
-  let obj = {
+  const obj = {
     num_layout_changes: this._layoutChanges,
     duration_layout_fullscreen: null,
     duration_layout_theatre: null,
@@ -123,7 +123,7 @@ prototype["getStats"] = function getStats() {
   obj.duration_layout_minimized = num7;
   let tmp16 = obj;
   if (self._isSender) {
-    obj = {};
+    const obj3 = {};
     const merged = Object.assign(obj);
     ({
       _targetFPS: obj2.target_fps,
@@ -131,7 +131,7 @@ prototype["getStats"] = function getStats() {
       _streamSettingsChanged: obj2.stream_settings_changed,
       _automaticQualityChanges: obj2.num_auto_quality_changes,
     } = self);
-    tmp16 = obj;
+    tmp16 = obj3;
   }
   return tmp16;
 };

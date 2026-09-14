@@ -6,10 +6,10 @@ import size from "../../../_runtime/metro/00002__.js";
 const result = size.fileFinishedImporting("modules/voice_calls/showActivitiesInvalidPermissionsAlert.tsx");
 
 export const showActivitiesInvalidPermissionsAlert = function showActivitiesInvalidPermissionsAlert() {
-  const obj = { title: null, body: null, hideActionSheet: false };
+  const obj2 = { title: null, body: null, hideActionSheet: false };
   const intl = util.intl;
-  obj.title = intl.string(util.t.otsg2R);
+  obj2.title = intl.string(util.t.otsg2R);
   const intl2 = util.intl;
-  obj.body = intl2.string(util.t["/Yx5qX"]);
-  obj.show(obj);
+  obj2.body = intl2.string(util.t["/Yx5qX"]);
+  AlertActionCreatorsDefault.show(obj2);
 };

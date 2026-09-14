@@ -5,9 +5,9 @@ import UserStore from "../../../../stores/UserStore.tsx";
 const Constants = fn(4541);
 ({ RPC_EMBEDDED_APP_SCOPE, RPC_LOCAL_SCOPE, RPC_SCOPE_CONFIG } = Constants);
 const RPCCommands = fn(1074).RPCCommands;
-let obj = {};
-const CONTEXT_MENU_ICON_NAMES = fn(14564);
-obj = {
+const obj = {};
+const CONTEXT_MENU_ICON_NAMES = fn(14565);
+const obj3 = {
   scope: null,
   handler(args) {
     const user = UserStore.getUser(args.args.id);
@@ -19,8 +19,8 @@ obj = {
   },
 };
 const items = [RPC_EMBEDDED_APP_SCOPE, RPC_LOCAL_SCOPE];
-obj.scope = { [RPC_SCOPE_CONFIG.ANY]: items };
-obj[RPCCommands.GET_USER] = CONTEXT_MENU_ICON_NAMES.createRPCCommand(RPCCommands.GET_USER, obj);
+obj3.scope = { [RPC_SCOPE_CONFIG.ANY]: items };
+obj[RPCCommands.GET_USER] = CONTEXT_MENU_ICON_NAMES.createRPCCommand(RPCCommands.GET_USER, obj3);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/rpc/server/commands/users.tsx");
 

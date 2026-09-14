@@ -3,7 +3,7 @@ import Platforms from "../../lib/Platforms.tsx";
 
 const spotify = "spotify";
 let c1 = "spotify:";
-let SpotifyResourceTypes = {
+const SpotifyResourceTypes = {
   TRACK: "track",
   ARTIST: "artist",
   ALBUM: "album",
@@ -11,7 +11,7 @@ let SpotifyResourceTypes = {
   EPISODE: "episode",
   SHOW: "show",
 };
-SpotifyResourceTypes = {
+const obj2 = {
   PROFILE: "" + "https://api.spotify.com/v1" + "/me",
   NOTIFICATIONS_PLAYER: "" + "https://api.spotify.com/v1" + "/me/notifications/player",
   PLAYER: "" + "https://api.spotify.com/v1" + "/me/player",
@@ -65,13 +65,13 @@ SpotifyResourceTypes = {
   APP_STORE: null,
   IOS_APP_STORE: "https://itunes.apple.com/us/app/spotify-music/id324684580?mt=8",
 };
-const PlatformUtils = fn(1150);
+const PlatformUtils = fn(1363);
 let str = "https://itunes.apple.com/us/app/spotify-music/id324684580?mt=8";
 if (PlatformUtils.isAndroid()) {
   str = "https://play.google.com/store/apps/details?id=com.spotify.music&hl=en_US&gl=US";
 }
-SpotifyResourceTypes.APP_STORE = str;
-const frozen = Object.freeze(SpotifyResourceTypes);
+obj2.APP_STORE = str;
+const frozen = Object.freeze(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/spotify/SpotifyConstants.tsx");
 

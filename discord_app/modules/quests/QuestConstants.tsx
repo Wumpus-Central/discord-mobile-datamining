@@ -6,7 +6,7 @@ import QuestTypes from "QuestTypes.tsx";
 import AdCreativeType from "../../../discord_common/js/shared/shared-constants/AdCreativeType.tsx";
 import FirstPartyQuestTaskTypes from "../../../discord_common/js/shared/shared-constants/FirstPartyQuestTaskTypes.tsx";
 import DismissibleQuestContentFlags from "../../../discord_common/js/shared/shared-constants/DismissibleQuestContentFlags.tsx";
-import HTTPUtils from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import HTTPUtils_mod from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import apply from "../../../_runtime/metro/00012__.js";
 import size from "../../../_runtime/metro/00002__.js";
 
@@ -16,6 +16,7 @@ const items = [
   QuestVariants.QuestVariants.XBOX_GAME_PASS_QUEST,
 ];
 const result = DurationsDefault.Millis.MINUTE * Quests.Quests.ConsecutiveHeartbeatPeriodMinutes;
+let HTTPUtils = HTTPUtils_mod;
 HTTPUtils = HTTPUtils.getAPIBaseURL();
 if (-1 !== HTTPUtils.indexOf("localhost")) {
   const _HermesInternal = HermesInternal;
@@ -57,14 +58,18 @@ const items5 = [
   FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypes.PLAY_ACTIVITY,
 ];
 const set4 = new Set(items4);
-let obj = { VIDEO: "task_video", PLAY: "task_play" };
-obj = { VIRTUAL_CURRENCY: "reward_virtual_currency", COLLECTIBLE: "reward_collectible", IN_GAME: "reward_in_game" };
+const TaskFilterTypes = { VIDEO: "task_video", PLAY: "task_play" };
+let obj2 = {
+  VIRTUAL_CURRENCY: "reward_virtual_currency",
+  COLLECTIBLE: "reward_collectible",
+  IN_GAME: "reward_in_game",
+};
 const items6 = [
-  { group: "task", filter: obj.PLAY },
-  { group: "task", filter: obj.VIDEO },
-  { group: "reward", filter: obj.VIRTUAL_CURRENCY },
-  { group: "reward", filter: obj.COLLECTIBLE },
-  { group: "reward", filter: obj.IN_GAME },
+  { group: "task", filter: TaskFilterTypes.PLAY },
+  { group: "task", filter: TaskFilterTypes.VIDEO },
+  { group: "reward", filter: obj2.VIRTUAL_CURRENCY },
+  { group: "reward", filter: obj2.COLLECTIBLE },
+  { group: "reward", filter: obj2.IN_GAME },
 ];
 let closure_2 = ["reward", "task"];
 const entries = Object.entries(apply.groupBy(items6, "group"));
@@ -201,20 +206,20 @@ export const QuestHomeSortMethods = {
   EXPIRING_SOON: "expiring_soon",
   RECENTLY_ENROLLED: "recently_enrolled",
 };
-export const TaskFilterTypes = obj;
-export const RewardFilterTypes = obj;
+export { TaskFilterTypes };
+export const RewardFilterTypes = obj2;
 export const getQuestHomeFilterOptionItem = function getQuestHomeFilterOptionItem(filter) {
-  let values = Object.values(obj);
+  const values = Object.values(obj);
   if (values.includes(filter)) {
     obj = { group: "task", filter };
     let tmp2 = obj;
   } else {
     const _Object = Object;
-    values = Object.values(obj);
+    const values2 = Object.values(obj2);
     tmp2 = null;
-    if (values.includes(filter)) {
-      obj = { group: "reward", filter };
-      tmp2 = obj;
+    if (values2.includes(filter)) {
+      obj2 = { group: "reward", filter };
+      tmp2 = obj2;
     }
   }
   return tmp2;

@@ -13,26 +13,31 @@ get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Image: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-fn(4636);
-let createStyles = {
+const createStyles = fn(4636);
+let obj2 = {
   wrapper: { alignItems: "center", paddingTop: 26, paddingBottom: 16 },
-  error: null,
+  error: {
+    fontSize: 12,
+    textAlign: "center",
+    alignSelf: "center",
+    marginBottom: 10,
+    color: nativeDefault.unsafe_rawColors.RED_400,
+  },
   label: null,
   iconUploaderWrapper: null,
   text: null,
 };
-createStyles = {
+let obj3 = {
   fontSize: 12,
   textAlign: "center",
   alignSelf: "center",
   marginBottom: 10,
   color: nativeDefault.unsafe_rawColors.RED_400,
 };
-createStyles.error = createStyles;
-createStyles.label = { fontSize: 12, marginTop: 20, color: nativeDefault.colors.TEXT_SUBTLE };
-createStyles.iconUploaderWrapper = { alignSelf: "stretch", alignItems: "center" };
-createStyles.text = { marginTop: 9 };
-let closure_9 = createStyles.createLegacyClassComponentStyles(createStyles);
+obj2.label = { fontSize: 12, marginTop: 20, color: nativeDefault.colors.TEXT_SUBTLE };
+obj2.iconUploaderWrapper = { alignSelf: "stretch", alignItems: "center" };
+obj2.text = { marginTop: 9 };
+let closure_9 = createStyles.createLegacyClassComponentStyles(obj2);
 const PureComponent = noop.PureComponent;
 class IconLabelBlock extends PureComponent {}
 const prototype = IconLabelBlock.prototype;
@@ -72,33 +77,33 @@ prototype["renderIcon"] = function renderIcon() {
   ({ iconProps, source, darkSource, errorProps } = this.props);
   if (null != iconProps) {
     const error = iconProps.error;
-    let obj = { style: tmp.iconUploaderWrapper, children: null };
-    obj = {};
+    const obj2 = { style: tmp.iconUploaderWrapper, children: null };
+    const obj3 = {};
     const tmp11 = _objectWithoutProperties(iconProps, closure_3);
     const merged = Object.assign(tmp11);
-    const items = [React5(IconUploaderDefault, obj)];
+    const items = [React5(IconUploaderDefault, obj3)];
     let tmp14Result = null;
     if (null != error) {
-      const obj1 = { style: null };
+      const obj4 = { style: null };
       const items1 = [tmp.error, tmp4];
-      obj1.style = items1;
+      obj4.style = items1;
       const merged1 = Object.assign(errorProps);
-      obj1.children = error;
-      tmp14Result = React5(native.LegacyText, obj1);
+      obj4.children = error;
+      tmp14Result = React5(native.LegacyText, obj4);
     }
     items[1] = tmp14Result;
-    obj.children = items;
-    return React6(hasOwnProperty, obj);
+    obj2.children = items;
+    return React6(hasOwnProperty, obj2);
   } else {
     if (null == source) {
-      obj = shared;
       if (obj.isThemeLight(this.context.theme)) {
         darkSource = tmp2;
       }
       source = darkSource;
+      obj = shared;
     }
-    const obj2 = { source, style: tmp3, resizeMode: "contain" };
-    return React5(timestampProducer, obj2);
+    const obj5 = { source, style: tmp3, resizeMode: "contain" };
+    return React5(timestampProducer, obj5);
   }
 };
 prototype["render"] = function render() {

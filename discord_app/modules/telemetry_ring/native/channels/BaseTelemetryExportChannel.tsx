@@ -75,8 +75,8 @@ prototype["flushNow"] = function flushNow() {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj3 = { value, done: true };
+        return obj3;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -89,24 +89,20 @@ prototype["flushNow"] = function flushNow() {
             throw value;
           } else if (arg0 === 2) {
             c0 = 3;
-            obj = { value, done: true };
-            return obj;
-          } else {
-            let obj1 = self;
-            if (self.shouldRun()) {
-              c1 = 1;
-              c0 = 1;
-              obj1 = { value: null, done: false };
-              obj1.value = obj1._kick({ mode: "stream", flush: true });
-              return obj1;
-            }
+            const obj4 = { value, done: true };
+            return obj4;
+          } else if (self.shouldRun()) {
+            c1 = 1;
+            c0 = 1;
+            const obj5 = { value: self._kick({ mode: "stream", flush: true }), done: false };
+            return obj5;
           }
         } else if (arg0 === 1) {
           c0 = 3;
           throw value;
         } else if (arg0 === 2) {
           c0 = 3;
-          obj = { value, done: true };
+          const obj = { value, done: true };
           return obj;
         }
         c0 = 3;
@@ -226,8 +222,8 @@ prototype["_collectPages"] = function _collectPages(budget, arg1) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -240,8 +236,8 @@ prototype["_collectPages"] = function _collectPages(budget, arg1) {
             throw value;
           } else if (arg0 === 2) {
             c3 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
             c1 = 1;
             c0 = 0;
@@ -254,35 +250,35 @@ prototype["_collectPages"] = function _collectPages(budget, arg1) {
           throw value;
         } else if (arg0 === 2) {
           c3 = 3;
-          const obj1 = { value, done: true };
-          return obj1;
+          const obj4 = { value, done: true };
+          return obj4;
         } else {
           closure_128_0 = value;
           const _Array = Array;
           if (Array.isArray(closure_128_0.entries)) {
             if (0 !== closure_128_0.entries.length) {
-              const obj2 = {
+              const obj5 = {
                 entries: closure_128_0.entries,
                 maxReturnedEndOffset: closure_128_0.maxReturnedEndOffset,
                 nextBeforeOffset: closure_128_0.nextBeforeOffset,
               };
-              closure_128_1.push(obj2);
+              closure_128_1.push(obj5);
               nextBeforeOffset = closure_128_0.nextBeforeOffset;
               if (!closure_128_0.hasMore) {
                 c3 = 3;
-                obj = { value: closure_128_1, done: true };
+                const obj = { value: closure_128_1, done: true };
                 return obj;
               }
             }
           }
           c3 = 3;
-          const obj3 = { value: closure_128_1, done: true };
-          return obj3;
+          const obj6 = { value: closure_128_1, done: true };
+          return obj6;
         }
         c2 = 1;
         c3 = 1;
-        const obj4 = { value: closure_129_2.snapshot(nextBeforeOffset, closure_129_0, closure_129_1), done: false };
-        return obj4;
+        const obj7 = { value: closure_129_2.snapshot(nextBeforeOffset, closure_129_0, closure_129_1), done: false };
+        return obj7;
       } catch (tmp15) {
         c3 = tmp;
         throw tmp15;
@@ -302,8 +298,8 @@ prototype["_exportPages"] = function _exportPages(arg0, flush) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -316,8 +312,8 @@ prototype["_exportPages"] = function _exportPages(arg0, flush) {
             throw value;
           } else if (arg0 === 2) {
             c3 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
             closure_1 = tmp2;
             let exportBatchSize;
@@ -352,7 +348,7 @@ prototype["_exportPages"] = function _exportPages(arg0, flush) {
           throw value;
         } else if (arg0 === 2) {
           c3 = 3;
-          obj = { value, done: true };
+          const obj = { value, done: true };
           return obj;
         } else if (value) {
           closure_128_4 = closure_128_4 + closure_128_3;
@@ -375,8 +371,8 @@ prototype["_exportPages"] = function _exportPages(arg0, flush) {
         }
         c2 = 1;
         c3 = 1;
-        const obj1 = { value: closure_129_2.exportEntries(closure_128_6, tmp46), done: false };
-        return obj1;
+        const obj4 = { value: closure_129_2.exportEntries(closure_128_6, tmp46), done: false };
+        return obj4;
       } catch (tmp48) {
         c3 = tmp;
         throw tmp48;

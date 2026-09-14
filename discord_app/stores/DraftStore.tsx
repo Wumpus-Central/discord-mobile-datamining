@@ -21,74 +21,73 @@ function handleChanged(type) {
   if (draft === template) {
     draft = "";
   }
-  let obj = AuthenticationStore;
   const id = AuthenticationStore.getId();
   if (null != id) {
     if (null != draft) {
       if ("" !== draft) {
         let tmp13 = dependencyMap[id];
         if (null == tmp13) {
-          obj = {};
-          dependencyMap[id] = obj;
-          tmp13 = obj;
+          const obj2 = {};
+          dependencyMap[id] = obj2;
+          tmp13 = obj2;
         }
         let tmp15 = tmp13[channelId];
         if (null == tmp15) {
-          obj = {};
-          tmp13[channelId] = obj;
-          tmp15 = obj;
+          const obj3 = {};
+          tmp13[channelId] = obj3;
+          tmp15 = obj3;
         }
         let substr = draft;
         if (draft.length > closure_7) {
           substr = draft.substr(0, tmp16);
         }
         if (command == null) {
-          command = undefined;
+          let command1;
           if (tmp18 != null) {
-            command = tmp18.command;
+            command1 = tmp18.command;
           }
           let tmp22;
-          if (obj5.isDraftCommandValidForText(command, substr)) {
-            let command1;
+          if (obj5.isDraftCommandValidForText(command1, substr)) {
+            let command2;
             if (tmp18 != null) {
-              command1 = tmp18.command;
+              command2 = tmp18.command;
             }
-            tmp22 = command1;
+            tmp22 = command2;
           }
           command = tmp22;
           obj5 = DraftCommand;
         }
-        draft = undefined;
+        let draft1;
         if (tmp15[draftType] != null) {
-          draft = tmp18.draft;
+          draft1 = tmp18.draft;
         }
-        let isEqualResult = substr === draft;
+        let isEqualResult = substr === draft1;
         if (isEqualResult) {
-          let command2;
+          let command3;
           if (tmp18 != null) {
-            command2 = tmp18.command;
+            command3 = tmp18.command;
           }
-          isEqualResult = _modDef12.isEqual(command, command2);
+          isEqualResult = _modDef12.isEqual(command, command3);
         }
         if (!isEqualResult) {
-          const obj1 = { timestamp: null, draft: null, command: null };
+          const obj4 = { timestamp: null, draft: null, command: null };
           const _Date = Date;
-          obj1.timestamp = Date.now();
-          obj1.draft = substr;
-          obj1.command = command;
-          tmp15[draftType] = obj1;
+          obj4.timestamp = Date.now();
+          obj4.draft = substr;
+          obj4.command = command;
+          tmp15[draftType] = obj4;
         }
       }
       return "DRAFT_SAVE" === type.type;
     }
   }
-  const id1 = obj.getId();
+  const id1 = AuthenticationStore.getId();
   if (null != id1) {
     let tmp10 = dependencyMap[id1];
     if (null == tmp10) {
-      const obj2 = {};
-      dependencyMap[id1] = obj2;
-      tmp10 = obj2;
+      const obj7 = {};
+      dependencyMap[id1] = obj7;
+      tmp10 = obj7;
     }
     if (null != tmp10[channelId]) {
       delete tmp4[tmp2];
@@ -136,7 +135,7 @@ function handleChannelDelete(arg0) {
   return false;
 }
 let closure_7 = fn(1074).MAX_MESSAGE_LENGTH_PREMIUM + 500;
-let DraftType = {
+const DraftType = {
   ChannelMessage: 0,
   [0]: "ChannelMessage",
   ThreadSettings: 1,
@@ -379,10 +378,10 @@ const items = [
     if (null != obj) {
       if (null != id) {
         obj = {};
-        obj = {};
-        obj[id] = obj;
+        const obj2 = {};
+        obj[id] = obj2;
         for (const key10009 in arg0) {
-          obj[key10009] = arg0[key10009];
+          obj2[key10009] = arg0[key10009];
           continue;
         }
         return obj;
@@ -392,21 +391,20 @@ const items = [
   },
 ];
 DraftStore.migrations = items;
-DraftType = {
+const draftStore = new DraftStore(DispatcherDefault, {
   CONNECTION_OPEN: function handleConnectionOpen() {
-    let obj = AuthenticationStore;
     const id = AuthenticationStore.getId();
     if (!(id in dependencyMap)) {
       dependencyMap[id] = {};
     }
-    const id1 = obj.getId();
+    const id1 = AuthenticationStore.getId();
     if (null != id1) {
       if (GuildAvailabilityStore.totalUnavailableGuilds <= 0) {
         let tmp8 = dependencyMap[id1];
         if (null == tmp8) {
-          obj = {};
-          dependencyMap[id1] = obj;
-          tmp8 = obj;
+          const obj2 = {};
+          dependencyMap[id1] = obj2;
+          tmp8 = obj2;
         }
         for (const key10019 in tmp8) {
           if (null != ChannelStore.getChannel(key10019)) {
@@ -459,19 +457,18 @@ DraftType = {
   THREAD_DELETE: handleChannelDelete,
   THREAD_CREATE: function handleThreadCreate(channel) {
     channel = channel.channel;
-    let obj = AuthenticationStore;
     const id = AuthenticationStore.getId();
     if (null != id) {
       if (channel.ownerId !== id) {
         let tmp10 = dependencyMap[id];
         if (null == tmp10) {
-          obj = {};
-          dependencyMap[id] = obj;
-          tmp10 = obj;
+          const obj2 = {};
+          dependencyMap[id] = obj2;
+          tmp10 = obj2;
         }
         if (null == tmp10[channel.parent_id]) {
           return false;
-        } else if (null == tmp11[obj.ThreadSettings]) {
+        } else if (null == tmp11[AuthenticationStore.ThreadSettings]) {
           return false;
         } else {
           if (tmp25.parentMessageId !== obj9.castChannelIdAsMessageId(channel.id)) {
@@ -480,53 +477,53 @@ DraftType = {
             return false;
           } else {
             let str;
-            if (tmp28[tmp24.FirstThreadMessage] != null) {
+            if (tmp28[AuthenticationStore.FirstThreadMessage] != null) {
               str = tmp29.draft;
             }
             if (str == null) {
               str = "";
             }
             if ("" !== str) {
-              obj = {};
-              const obj1 = { timestamp: null, draft: null };
+              const obj3 = {};
+              const obj4 = { timestamp: null, draft: null };
               const _Date = Date;
-              obj1.timestamp = Date.now();
-              obj1.draft = str;
-              obj[tmp24.ChannelMessage] = obj1;
-              tmp10[channel.id] = obj;
+              obj4.timestamp = Date.now();
+              obj4.draft = str;
+              obj3[AuthenticationStore.ChannelMessage] = obj4;
+              tmp10[channel.id] = obj3;
             }
-            const ThreadSettings = tmp24.ThreadSettings;
-            const id1 = obj.getId();
+            const ThreadSettings = AuthenticationStore.ThreadSettings;
+            const id1 = AuthenticationStore.getId();
             if (null != id1) {
               let tmp15 = dependencyMap[id1];
               if (null == tmp15) {
-                const obj2 = {};
-                dependencyMap[id1] = obj2;
-                tmp15 = obj2;
+                const obj5 = {};
+                dependencyMap[id1] = obj5;
+                tmp15 = obj5;
               }
               if (null != tmp15[channel.parent_id]) {
                 delete tmp7[tmp6];
-                let tmp26Result = _modDef12;
                 if (tmp26Result.isEmpty(tmp17)) {
                   delete tmp4[tmp5];
                 }
+                tmp26Result = _modDef12;
               }
             }
-            const FirstThreadMessage = tmp24.FirstThreadMessage;
-            const id2 = obj.getId();
+            const FirstThreadMessage = AuthenticationStore.FirstThreadMessage;
+            const id2 = AuthenticationStore.getId();
             if (null != id2) {
               let tmp20 = dependencyMap[id2];
               if (null == tmp20) {
-                const obj3 = {};
-                dependencyMap[id2] = obj3;
-                tmp20 = obj3;
+                const obj6 = {};
+                dependencyMap[id2] = obj6;
+                tmp20 = obj6;
               }
               if (null != tmp20[channel.parent_id]) {
                 delete tmp3[tmp4];
-                tmp26Result = _modDef12;
-                if (tmp26Result.isEmpty(tmp22)) {
+                if (tmp26Result2.isEmpty(tmp22)) {
                   delete tmp[tmp2];
                 }
+                tmp26Result2 = _modDef12;
               }
             }
           }
@@ -591,23 +588,23 @@ DraftType = {
     if (null != id) {
       let tmp3 = dependencyMap[id];
       if (null == tmp3) {
-        let obj = {};
+        const obj = {};
         dependencyMap[id] = obj;
         tmp3 = obj;
       }
       let tmp5 = tmp3[channelId];
       if (null == tmp5) {
-        obj = {};
-        tmp3[channelId] = obj;
-        tmp5 = obj;
+        const obj2 = {};
+        tmp3[channelId] = obj2;
+        tmp5 = obj2;
       }
-      obj = { timestamp: null };
+      const obj3 = { timestamp: null };
       const _Date = Date;
-      obj.timestamp = Date.now();
+      obj3.timestamp = Date.now();
       const merged = Object.assign(tmp5[obj.ThreadSettings]);
       const merged1 = Object.assign(draft);
-      obj.parentChannelId = channelId;
-      tmp5[obj.ThreadSettings] = obj;
+      obj3.parentChannelId = channelId;
+      tmp5[obj.ThreadSettings] = obj3;
     }
   },
   SCHEDULED_MESSAGE_DRAFT_CHANGE: function handleScheduledMessageDraftChanged(arg0) {
@@ -616,22 +613,22 @@ DraftType = {
     if (null != id) {
       let tmp3 = dependencyMap[id];
       if (null == tmp3) {
-        let obj = {};
+        const obj = {};
         dependencyMap[id] = obj;
         tmp3 = obj;
       }
       let tmp5 = tmp3[channelId];
       if (null == tmp5) {
-        obj = {};
-        tmp3[channelId] = obj;
-        tmp5 = obj;
+        const obj2 = {};
+        tmp3[channelId] = obj2;
+        tmp5 = obj2;
       }
-      obj = {};
+      const obj3 = {};
       const merged = Object.assign(tmp5[obj.ScheduledMessage]);
       const merged1 = Object.assign(draft);
       const _Date = Date;
-      obj.timestamp = Date.now();
-      tmp5[obj.ScheduledMessage] = obj;
+      obj3.timestamp = Date.now();
+      tmp5[obj.ScheduledMessage] = obj3;
     }
   },
   SCHEDULED_MESSAGES_CREATE_SUCCESS: function handleScheduledMessageCreateSuccess(arg0) {
@@ -655,8 +652,7 @@ DraftType = {
     }
     return flag;
   },
-};
-const draftStore = new DraftStore(DispatcherDefault, DraftType);
+});
 const size = fn(2);
 const result = size.fileFinishedImporting("stores/DraftStore.tsx");
 

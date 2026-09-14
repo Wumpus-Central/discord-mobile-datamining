@@ -4,6 +4,8 @@ import util from "../intl/index.native.tsx";
 import MessageActionCreatorsDefault from "MessageActionCreators.tsx";
 import size from "../../_runtime/metro/00002__.js";
 
+const require = globalThis.__r;
+
 const Endpoints = Constants.Endpoints;
 let result = size.fileFinishedImporting("actions/ChangeNicknameActionCreators.tsx");
 

@@ -6,14 +6,11 @@ const result = size.fileFinishedImporting("actions/NoticeActionCreators.tsx");
 
 export default {
   show(type, message, buttonText, callback, id) {
-    let obj = { type: "NOTICE_SHOW", notice: null };
-    obj = { id, type, message, buttonText, callback };
-    obj.notice = obj;
-    obj.dispatch(obj);
+    const obj2 = { type: "NOTICE_SHOW", notice: { id, type, message, buttonText, callback } };
+    DispatcherDefault.dispatch(obj2);
   },
   dismiss(arg0) {
-    const obj = { type: "NOTICE_DISMISS" };
     const merged = Object.assign(arg0);
-    obj.dispatch(obj);
+    DispatcherDefault.dispatch({ type: "NOTICE_DISMISS" });
   },
 };

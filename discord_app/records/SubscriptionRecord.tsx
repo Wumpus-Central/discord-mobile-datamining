@@ -106,7 +106,7 @@ class SubscriptionRecord extends tmp2 {
 }
 const prototype = SubscriptionRecord.prototype;
 SubscriptionRecord["createFromServer"] = function createFromServer(id) {
-  let obj = {
+  const obj = {
     id: id.id,
     type: id.type,
     createdAt: new Date(id.created_at),
@@ -159,11 +159,11 @@ SubscriptionRecord["createFromServer"] = function createFromServer(id) {
   obj.items = items.map(createSubscriptionItemFromServer);
   let tmp12 = null;
   if (null != id.renewal_mutations) {
-    obj = { items: null, paymentGatewayPlanId: null };
+    const obj2 = { items: null, paymentGatewayPlanId: null };
     const items1 = id.renewal_mutations.items;
-    obj.items = items1.map(createSubscriptionItemFromServer);
-    obj.paymentGatewayPlanId = id.renewal_mutations.payment_gateway_plan_id;
-    tmp12 = obj;
+    obj2.items = items1.map(createSubscriptionItemFromServer);
+    obj2.paymentGatewayPlanId = id.renewal_mutations.payment_gateway_plan_id;
+    tmp12 = obj2;
   }
   obj.renewalMutations = tmp12;
   let date5 = null;
@@ -187,12 +187,12 @@ SubscriptionRecord["createFromServer"] = function createFromServer(id) {
     user_id: obj.userId,
   } = id);
   if (null != id.latest_invoice) {
-    obj = { latestInvoice: InvoiceRecord.createInvoiceFromServer(id.latest_invoice) };
-    let obj1 = obj;
+    const obj3 = { latestInvoice: InvoiceRecord.createInvoiceFromServer(id.latest_invoice) };
+    let obj4 = obj3;
   } else {
-    obj1 = {};
+    obj4 = {};
   }
-  const merged = Object.assign(obj1);
+  const merged = Object.assign(obj4);
   let prop = id.eligible_payment_gateways;
   if (prop == null) {
     prop = null;

@@ -79,37 +79,37 @@ export default noop.memo(function GuildsBar(enableHome) {
   }, items1);
   let obj = { profile: null, children: null };
   const tmp5 = useGuildsBarPropsDefault(fastListRef);
-  obj.profile = fastListRef(11662).Profiles.Guilds;
-  obj = { gesture, children: null };
-  obj = { style: tmp.wrapper, collapsable: false, nativeID: "guilds-bar-view", children: null };
+  obj.profile = fastListRef(11663).Profiles.Guilds;
+  const obj2 = { gesture, children: null };
+  const obj3 = { style: tmp.wrapper, collapsable: false, nativeID: "guilds-bar-view", children: null };
   const tmp10 = StartupProfilerDefault;
-  const obj1 = {};
+  const obj4 = {};
   const tmp12 = NativeViewDefault;
   const merged = Object.assign(listProps);
   const merged1 = Object.assign(listDataProps);
-  obj1.ref = fastListRef;
-  obj1.manualRef = scrollerRef;
-  obj1.disableContentWrappers = true;
-  obj1.onScroll = onFastListScroll;
-  obj1.onScrollWorklet = onFastListScrollWorklet;
-  obj1.scrollPosValue = scrollPosition;
-  obj1.stickySectionsVariant = "sticky-mount";
-  obj1.optimizeListItemRender = true;
-  obj1.persistantKeys = persistantKeys;
-  obj1.disableRecyclingOnFullCompute = true;
-  let obj2;
+  obj4.ref = fastListRef;
+  obj4.manualRef = scrollerRef;
+  obj4.disableContentWrappers = true;
+  obj4.onScroll = onFastListScroll;
+  obj4.onScrollWorklet = onFastListScrollWorklet;
+  obj4.scrollPosValue = scrollPosition;
+  obj4.stickySectionsVariant = "sticky-mount";
+  obj4.optimizeListItemRender = true;
+  obj4.persistantKeys = persistantKeys;
+  obj4.disableRecyclingOnFullCompute = true;
+  let obj5;
   if (flag) {
-    obj2 = { overflow: "visible" };
+    obj5 = { overflow: "visible" };
   }
-  obj1.style = obj2;
-  obj1.nativeID = "guilds-bar-fast-list";
+  obj4.style = obj5;
+  obj4.nativeID = "guilds-bar-fast-list";
   const items2 = [
-    closure_4(FastListDefault, obj1),
+    closure_4(FastListDefault, obj4),
     closure_4(GuildsBarDragPreviewDefault, {}),
     closure_4(FavoritesGuildIntroPopoverDefault, {}),
   ];
-  obj.children = items2;
-  obj.children = closure_5(tmp12, obj);
-  obj.children = closure_4(fastListRef(6756).GestureDetector, obj);
+  obj3.children = items2;
+  obj2.children = closure_5(tmp12, obj3);
+  obj.children = closure_4(fastListRef(6756).GestureDetector, obj2);
   return closure_4(tmp10, obj);
 });

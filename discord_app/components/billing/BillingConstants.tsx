@@ -1,7 +1,7 @@
 // discord_app/components/billing/BillingConstants.tsx
 import size from "../../../_runtime/metro/00002__.js";
 
-let obj = {
+const obj = {
   UNKNOWN: 0,
   [0]: "UNKNOWN",
   ADMIN: 1,
@@ -15,10 +15,10 @@ let obj = {
   USER_TEMPORARY_BAN: 5,
   [5]: "USER_TEMPORARY_BAN",
 };
-obj = { CAN_MAKE_SUBSCRIPTION_UPDATES: null };
+const obj2 = { CAN_MAKE_SUBSCRIPTION_UPDATES: null };
 const items = [,];
 ({ FRACTIONAL_PREMIUM: arr[0], DEFERRED_START: arr[1] } = obj);
-obj.CAN_MAKE_SUBSCRIPTION_UPDATES = new Set(items);
+obj2.CAN_MAKE_SUBSCRIPTION_UPDATES = new Set(items);
 const result = size.fileFinishedImporting("components/billing/BillingConstants.tsx");
 
 export const RefundReason = {
@@ -59,7 +59,7 @@ export const PremiumRefundDisqualificationReason = {
 };
 export const AdyenResultCodes = { Authorised: "Authorised", Error: "Error" };
 export const SubscriptionPauseReason = obj;
-export const SubscriptionPauseReasonSets = obj;
+export const SubscriptionPauseReasonSets = obj2;
 export const UserLazyPerkSyncLevels = {
   NONE: 0,
   [0]: "NONE",

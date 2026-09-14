@@ -32,8 +32,8 @@ let closure_10 = async function _savePersistentCodesEnabled() {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj4 = { value, done: true };
+        return obj4;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -46,21 +46,21 @@ let closure_10 = async function _savePersistentCodesEnabled() {
             throw value;
           } else if (arg0 === 2) {
             c8 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj6 = { value, done: true };
+            return obj6;
           } else {
             closure_4 = tmp3;
             closure_3 = tmp5;
             closure_131_0 = closure_1;
             closure_131_1 = undefined;
-            let obj1 = { type: "SECURE_FRAMES_SETTINGS_UPDATE", persistentCodesEnabled };
-            DispatcherDefault.dispatch(obj1);
+            const obj7 = { type: "SECURE_FRAMES_SETTINGS_UPDATE", persistentCodesEnabled };
+            DispatcherDefault.dispatch(obj7);
             if (persistentCodesEnabled) {
               c6 = 1;
               c7 = 2;
               c8 = 1;
-              let obj2 = { value: SecureFramesUtils.ensureCurrentUserPublicKey(closure_2_7), done: false };
-              return obj2;
+              const obj8 = { value: SecureFramesUtils.ensureCurrentUserPublicKey(closure_2_7), done: false };
+              return obj8;
             } else if (closure_1 != null) {
               closure_1();
             }
@@ -71,20 +71,23 @@ let closure_10 = async function _savePersistentCodesEnabled() {
             closure_131_2 = closure_5;
             const aPIError = new closure_132_0(closure_132_2[8]).APIError(closure_131_2);
             closure_131_1 = aPIError;
-            obj1 = closure_132_1(closure_132_2[6]);
-            obj1.dispatch({ type: "SECURE_FRAMES_SETTINGS_UPDATE", persistentCodesEnabled: false });
-            obj2 = closure_132_1(closure_132_2[9]);
-            const obj3 = { title: null, body: null };
+            closure_132_1(closure_132_2[6]).dispatch({
+              type: "SECURE_FRAMES_SETTINGS_UPDATE",
+              persistentCodesEnabled: false,
+            });
+            const obj2 = closure_132_1(closure_132_2[6]);
+            const obj10 = { title: null, body: null };
             const intl = closure_132_0(closure_132_2[10]).intl;
-            obj3.title = intl.string(closure_132_0(closure_132_2[10]).t.R0RpRX);
+            obj10.title = intl.string(closure_132_0(closure_132_2[10]).t.R0RpRX);
             const anyErrorMessage = closure_131_1.getAnyErrorMessage();
             body = anyErrorMessage;
             if (anyErrorMessage == null) {
               const intl2 = closure_132_0(closure_132_2[10]).intl;
               body = intl2.string(closure_132_0(closure_132_2[10]).t.eAn6z2);
             }
-            obj3.body = body;
-            obj2.show(obj3);
+            obj10.body = body;
+            closure_132_1(closure_132_2[9]).show(obj10);
+            const obj3 = closure_132_1(closure_132_2[9]);
           } else if (arg0 === 1) {
             c8 = 3;
             throw value;
@@ -96,7 +99,7 @@ let closure_10 = async function _savePersistentCodesEnabled() {
           }
           c6 = 0;
           c8 = 3;
-          obj = { value, done: true };
+          const obj = { value, done: true };
           return obj;
         }
         c8 = 3;
@@ -120,8 +123,8 @@ let closure_11 = async function _updatePersistentCodesEnabled(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      let obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -134,8 +137,8 @@ let closure_11 = async function _updatePersistentCodesEnabled(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c1 = 3;
-          obj = { value, done: true };
-          return obj;
+          let obj4 = { value, done: true };
+          return obj4;
         } else {
           const tmp18 = (function getCurrentUserSelectedVoiceChannelId() {
             voiceStateForUser = voiceStateForUser.getVoiceStateForUser(id.getId());
@@ -163,7 +166,6 @@ let closure_11 = async function _updatePersistentCodesEnabled(arg0) {
           })();
           closure_2 = tmp18;
           if (null != tmp18) {
-            let obj2 = SecureFramesPlatformUtilsDefault;
             const intl = util.intl;
             const string = intl.string;
             const t = util.t;
@@ -174,7 +176,7 @@ let closure_11 = async function _updatePersistentCodesEnabled(arg0) {
               stringResult = string(t.q29xJz);
               tmp10 = require;
             }
-            let obj1 = { title: stringResult, subtitle: null, confirmText: null, onConfirm: null };
+            let obj5 = { title: stringResult, subtitle: null, confirmText: null, onConfirm: null };
             const intl2 = tmp10(1114).intl;
             const string2 = intl2.string;
             let intl3 = tmp10(1114).t;
@@ -183,9 +185,9 @@ let closure_11 = async function _updatePersistentCodesEnabled(arg0) {
             } else {
               string2Result = string2(intl3.E66FQn);
             }
-            obj1.subtitle = string2Result;
+            obj5.subtitle = string2Result;
             intl3 = tmp10(1114).intl;
-            obj1.confirmText = intl3.string(tmp10(1114).t.aTuFYT);
+            obj5.confirmText = intl3.string(tmp10(1114).t.aTuFYT);
             closure_1 = asyncGeneratorStep(async () => {
               if (c0 === 2) {
                 c0 = 3;
@@ -194,8 +196,8 @@ let closure_11 = async function _updatePersistentCodesEnabled(arg0) {
                 if (arg0 === 1) {
                   throw value;
                 } else if (arg0 === 2) {
-                  let obj = { value, done: true };
-                  return obj;
+                  const obj2 = { value, done: true };
+                  return obj2;
                 } else {
                   return { value: "HermesInternal", done: null };
                 }
@@ -208,12 +210,12 @@ let closure_11 = async function _updatePersistentCodesEnabled(arg0) {
                       throw value;
                     } else if (arg0 === 2) {
                       c0 = 3;
-                      obj = { value, done: true };
-                      return obj;
+                      const obj3 = { value, done: true };
+                      return obj3;
                     } else {
                       c1 = 1;
                       c0 = 1;
-                      const obj1 = {
+                      const obj4 = {
                         value: closure_1_9(closure_0, () => {
                           c1(5492).disconnect();
                           const obj = c1(5492);
@@ -221,14 +223,14 @@ let closure_11 = async function _updatePersistentCodesEnabled(arg0) {
                         }),
                         done: false,
                       };
-                      return obj1;
+                      return obj4;
                     }
                   } else if (arg0 === 1) {
                     c0 = 3;
                     throw value;
                   } else if (arg0 === 2) {
                     c0 = 3;
-                    obj = { value, done: true };
+                    let obj = { value, done: true };
                     return obj;
                   } else {
                     c0 = 3;
@@ -240,7 +242,7 @@ let closure_11 = async function _updatePersistentCodesEnabled(arg0) {
                 }
               }
             });
-            obj1.onConfirm = function () {
+            obj5.onConfirm = function () {
               const self = this;
               const apply = closure_1.apply;
               if (typeof apply === "unknown") {
@@ -250,12 +252,12 @@ let closure_11 = async function _updatePersistentCodesEnabled(arg0) {
               }
               return applyArgumentsResult;
             };
-            obj1 = obj2.openSecureFramesUpdateConfirmation(obj1);
+            obj5 = SecureFramesPlatformUtilsDefault.openSecureFramesUpdateConfirmation(obj5);
           } else {
             c2 = 1;
             c1 = 1;
-            obj2 = { value: savePersistentCodesEnabled(closure_0), done: false };
-            return obj2;
+            const obj6 = { value: savePersistentCodesEnabled(closure_0), done: false };
+            return obj6;
           }
         }
       } else if (arg0 === 1) {
@@ -266,7 +268,7 @@ let closure_11 = async function _updatePersistentCodesEnabled(arg0) {
         return { value: "HermesInternal", done: null };
       } else {
         c1 = 3;
-        obj = { value, done: true };
+        let obj = { value, done: true };
         return obj;
       }
     } catch (tmp12) {
@@ -295,27 +297,25 @@ export default {
     return applyArgumentsResult;
   },
   addUploadedKeyVersion(keyVersion) {
-    const obj = { type: "SECURE_FRAMES_UPLOADED_KEY_VERSION_ADD", keyVersion };
-    obj.dispatch(obj);
+    DispatcherDefault.dispatch({ type: "SECURE_FRAMES_UPLOADED_KEY_VERSION_ADD", keyVersion });
   },
   createSecureFramesVerifiedKey(userId, key) {
-    const obj = { type: "SECURE_FRAMES_VERIFIED_KEY_CREATE", userId, key };
-    obj.dispatch(obj);
+    DispatcherDefault.dispatch({ type: "SECURE_FRAMES_VERIFIED_KEY_CREATE", userId, key });
   },
   deleteSecureFramesVerifiedKey(userId, serializeKeyResult) {
-    const obj = { type: "SECURE_FRAMES_VERIFIED_KEY_DELETE", userId, serializedKey: serializeKeyResult };
-    obj.dispatch(obj);
+    DispatcherDefault.dispatch({
+      type: "SECURE_FRAMES_VERIFIED_KEY_DELETE",
+      userId,
+      serializedKey: serializeKeyResult,
+    });
   },
   deleteSecureFramesUserVerifiedKeys(userId) {
-    const obj = { type: "SECURE_FRAMES_USER_VERIFIED_KEYS_DELETE", userId };
-    obj.dispatch(obj);
+    DispatcherDefault.dispatch({ type: "SECURE_FRAMES_USER_VERIFIED_KEYS_DELETE", userId });
   },
   createSecureFramesTransientKey(userId, key) {
-    const obj = { type: "SECURE_FRAMES_TRANSIENT_KEY_CREATE", userId, key };
-    obj.dispatch(obj);
+    DispatcherDefault.dispatch({ type: "SECURE_FRAMES_TRANSIENT_KEY_CREATE", userId, key });
   },
   deleteSecureFramesTransientKey(userId) {
-    const obj = { type: "SECURE_FRAMES_TRANSIENT_KEY_DELETE", userId };
-    obj.dispatch(obj);
+    DispatcherDefault.dispatch({ type: "SECURE_FRAMES_TRANSIENT_KEY_DELETE", userId });
   },
 };

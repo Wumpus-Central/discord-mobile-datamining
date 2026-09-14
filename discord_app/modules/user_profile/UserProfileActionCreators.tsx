@@ -21,8 +21,8 @@ let closure_11 = async function _saveProfileChanges(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -35,8 +35,8 @@ let closure_11 = async function _saveProfileChanges(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c9 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           closure_5 = tmp3;
           closure_4 = tmp7;
@@ -54,43 +54,41 @@ let closure_11 = async function _saveProfileChanges(arg0) {
           }
           closure_132_1 = id;
           if (null != id) {
-            let obj7 = useShouldConvertBioEmoji;
             let shouldConvertBioEmoji = null != headersForMd5.bio;
             if (shouldConvertBioEmoji) {
-              shouldConvertBioEmoji = obj7.getShouldConvertBioEmoji();
+              shouldConvertBioEmoji = obj8.getShouldConvertBioEmoji();
             }
             if (shouldConvertBioEmoji) {
-              let obj8 = MessageParserDefault;
-              headersForMd5.bio = obj8.parse(undefined, headersForMd5.bio).content;
+              headersForMd5.bio = MessageParserDefault.parse(undefined, headersForMd5.bio).content;
             }
             c7 = 1;
-            let obj9 = DispatcherDefault;
-            const obj1 = { type: "USER_PROFILE_UPDATE_START", userId: id, guildId: bannerSurface };
-            obj9.dispatch(obj1);
+            obj8 = useShouldConvertBioEmoji;
+            const obj4 = { type: "USER_PROFILE_UPDATE_START", userId: id, guildId: bannerSurface };
+            DispatcherDefault.dispatch(obj4);
             if (null != bannerSurface) {
-              const obj2 = {
+              const obj6 = {
                 url: React5.USER_GUILD_PROFILE(bannerSurface, React6),
                 bannerSurface: safetyScannedUploadSurfaces.SafetyScannedUploadSurface.USER_GUILD_PROFILE_BANNER,
               };
-              let obj3 = obj2;
+              let obj7 = obj6;
             } else {
-              obj3 = {
+              obj7 = {
                 url: React5.USER_PROFILE(React6),
                 bannerSurface: safetyScannedUploadSurfaces.SafetyScannedUploadSurface.USER_DEFAULT_PROFILE_BANNER,
               };
             }
-            bannerSurface = obj3.bannerSurface;
+            bannerSurface = obj7.bannerSurface;
             const HTTP = HTTPUtils.HTTP;
             const request = {
-              url: obj3.url,
+              url: obj7.url,
               body: headersForMd5,
               headers: null,
               oldFormErrors: true,
               rejectWithError: false,
             };
-            let obj4 = {};
-            obj4[bannerSurface] = closure_2;
-            headersForMd5 = InlineUploaderDefault.buildHeadersForMd5(obj4);
+            const obj11 = {};
+            obj11[bannerSurface] = closure_2;
+            headersForMd5 = InlineUploaderDefault.buildHeadersForMd5(obj11);
             request.headers = headersForMd5;
             HTTP.patch(request);
             c8 = 2;
@@ -114,35 +112,33 @@ let closure_11 = async function _saveProfileChanges(arg0) {
           closure_3 = {};
         }
         closure_132_4 = closure_3;
-        obj4 = closure_133_1(closure_133_2[10]);
-        const obj5 = {
+        const obj12 = {
           type: "USER_PROFILE_UPDATE_FAILURE",
           guildId: closure_132_0,
           errors: closure_132_4,
           apiError: closure_132_3,
         };
-        obj4.dispatch(obj5);
+        closure_133_1(closure_133_2[10]).dispatch(obj12);
         c9 = 3;
-        const obj6 = { value: closure_132_5, done: true };
-        return obj6;
+        const obj13 = { value: closure_132_5, done: true };
+        return obj13;
       } else if (arg0 === 1) {
         c9 = 3;
         throw value;
       } else if (arg0 === 2) {
         c7 = 0;
         c9 = 3;
-        obj7 = { value, done: true };
-        return obj7;
+        const obj14 = { value, done: true };
+        return obj14;
       } else {
         closure_132_2 = value;
-        obj = closure_133_1(closure_133_2[10]);
-        obj8 = { type: "USER_PROFILE_UPDATE_SUCCESS", userId: closure_132_1, guildId: closure_132_0 };
+        const obj16 = { type: "USER_PROFILE_UPDATE_SUCCESS", userId: closure_132_1, guildId: closure_132_0 };
         const merged = Object.assign(closure_132_2.body);
-        obj.dispatch(obj8);
+        closure_133_1(closure_133_2[10]).dispatch(obj16);
         c7 = 0;
         c9 = 3;
-        obj9 = { value: closure_132_2, done: true };
-        return obj9;
+        const obj17 = { value: closure_132_2, done: true };
+        return obj17;
       }
     } catch (tmp62) {
       closure_6 = tmp62;
@@ -189,8 +185,8 @@ export const pinUserProfileBadgesOnClient = function pinUserProfileBadgesOnClien
     id = currentUser.id;
   }
   if (null != id) {
-    const obj = { type: "USER_PROFILE_PIN_BADGES_ON_CLIENT", badges: items, ttlInSeconds, userId: id };
-    obj.dispatch(obj);
+    const obj2 = { type: "USER_PROFILE_PIN_BADGES_ON_CLIENT", badges: items, ttlInSeconds, userId: id };
+    DispatcherDefault.dispatch(obj2);
   }
 };
 export const resetPendingProfileChanges = function resetPendingProfileChanges() {
@@ -203,53 +199,78 @@ export const resetAllTryItOutChanges = function resetAllTryItOutChanges() {
   DispatcherDefault.dispatch({ type: "USER_PROFILE_SETTINGS_RESET_TRY_IT_OUT_CHANGES" });
 };
 export const setTryItOutAvatar = function setTryItOutAvatar(avatar) {
-  let obj = { type: "USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_AVATAR", avatar };
-  obj.dispatch(obj);
-  obj = { feature_name: constants4.ANIMATED_AVATAR, feature_tier: constants3.PREMIUM_STANDARD };
-  AnalyticsUtilsDefault.track(constants2.PREMIUM_FEATURE_TRY_OUT, obj);
+  DispatcherDefault.dispatch({ type: "USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_AVATAR", avatar });
+  const obj2 = { type: "USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_AVATAR", avatar };
+  AnalyticsUtilsDefault.track(constants2.PREMIUM_FEATURE_TRY_OUT, {
+    feature_name: constants4.ANIMATED_AVATAR,
+    feature_tier: constants3.PREMIUM_STANDARD,
+  });
 };
 export const setTryItOutAvatarDecoration = function setTryItOutAvatarDecoration(avatarDecoration) {
-  let obj = { type: "USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_AVATAR_DECORATION", avatarDecoration };
-  obj.dispatch(obj);
-  obj = { feature_name: constants4.AVATAR_DECORATION, feature_tier: constants3.PREMIUM_STANDARD };
-  AnalyticsUtilsDefault.track(constants2.PREMIUM_FEATURE_TRY_OUT, obj);
+  DispatcherDefault.dispatch({ type: "USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_AVATAR_DECORATION", avatarDecoration });
+  const obj2 = { type: "USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_AVATAR_DECORATION", avatarDecoration };
+  AnalyticsUtilsDefault.track(constants2.PREMIUM_FEATURE_TRY_OUT, {
+    feature_name: constants4.AVATAR_DECORATION,
+    feature_tier: constants3.PREMIUM_STANDARD,
+  });
 };
 export const setTryItOutProfileEffect = function setTryItOutProfileEffect(purchasedItem) {
-  let obj = { type: "USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_PROFILE_EFFECT", profileEffect: purchasedItem };
-  obj.dispatch(obj);
-  obj = { feature_name: constants4.PROFILE_EFFECT, feature_tier: constants3.PREMIUM_STANDARD };
-  AnalyticsUtilsDefault.track(constants2.PREMIUM_FEATURE_TRY_OUT, obj);
+  DispatcherDefault.dispatch({
+    type: "USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_PROFILE_EFFECT",
+    profileEffect: purchasedItem,
+  });
+  const obj2 = { type: "USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_PROFILE_EFFECT", profileEffect: purchasedItem };
+  AnalyticsUtilsDefault.track(constants2.PREMIUM_FEATURE_TRY_OUT, {
+    feature_name: constants4.PROFILE_EFFECT,
+    feature_tier: constants3.PREMIUM_STANDARD,
+  });
 };
 export const setTryItOutBanner = function setTryItOutBanner(banner) {
-  let obj = { type: "USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_BANNER", banner };
-  obj.dispatch(obj);
-  obj = { feature_name: constants4.PROFILE_BANNER, feature_tier: constants3.PREMIUM_STANDARD };
-  AnalyticsUtilsDefault.track(constants2.PREMIUM_FEATURE_TRY_OUT, obj);
+  DispatcherDefault.dispatch({ type: "USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_BANNER", banner });
+  const obj2 = { type: "USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_BANNER", banner };
+  AnalyticsUtilsDefault.track(constants2.PREMIUM_FEATURE_TRY_OUT, {
+    feature_name: constants4.PROFILE_BANNER,
+    feature_tier: constants3.PREMIUM_STANDARD,
+  });
 };
 export const setTryItOutThemeColors = function setTryItOutThemeColors(themeColors) {
-  let obj = { type: "USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_THEME_COLORS", themeColors };
-  obj.dispatch(obj);
-  obj = { feature_name: constants4.PROFILE_THEME_COLOR, feature_tier: constants3.PREMIUM_STANDARD };
-  AnalyticsUtilsDefault.track(constants2.PREMIUM_FEATURE_TRY_OUT, obj);
+  DispatcherDefault.dispatch({ type: "USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_THEME_COLORS", themeColors });
+  const obj2 = { type: "USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_THEME_COLORS", themeColors };
+  AnalyticsUtilsDefault.track(constants2.PREMIUM_FEATURE_TRY_OUT, {
+    feature_name: constants4.PROFILE_THEME_COLOR,
+    feature_tier: constants3.PREMIUM_STANDARD,
+  });
 };
 export const setTryItOutDisplayNameStyles = function setTryItOutDisplayNameStyles(displayNameStyles) {
-  let obj = { type: "USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_DISPLAY_NAME_STYLES", displayNameStyles };
-  obj.dispatch(obj);
-  obj = { feature_name: constants4.DISPLAY_NAME_STYLES, feature_tier: constants3.PREMIUM_STANDARD };
-  AnalyticsUtilsDefault.track(constants2.PREMIUM_FEATURE_TRY_OUT, obj);
+  DispatcherDefault.dispatch({ type: "USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_DISPLAY_NAME_STYLES", displayNameStyles });
+  const obj2 = { type: "USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_DISPLAY_NAME_STYLES", displayNameStyles };
+  AnalyticsUtilsDefault.track(constants2.PREMIUM_FEATURE_TRY_OUT, {
+    feature_name: constants4.DISPLAY_NAME_STYLES,
+    feature_tier: constants3.PREMIUM_STANDARD,
+  });
 };
 export const setTryItOutCustomTypingIndicatorStyle = function setTryItOutCustomTypingIndicatorStyle(
   customTypingIndicatorStyle,
 ) {
-  let obj = { type: "USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_CUSTOM_TYPING_INDICATOR_STYLE", customTypingIndicatorStyle };
-  obj.dispatch(obj);
-  obj = { feature_name: constants4.TYPING_INDICATOR, feature_tier: constants3.PREMIUM_STANDARD };
-  AnalyticsUtilsDefault.track(constants2.PREMIUM_FEATURE_TRY_OUT, obj);
+  DispatcherDefault.dispatch({
+    type: "USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_CUSTOM_TYPING_INDICATOR_STYLE",
+    customTypingIndicatorStyle,
+  });
+  const obj2 = {
+    type: "USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_CUSTOM_TYPING_INDICATOR_STYLE",
+    customTypingIndicatorStyle,
+  };
+  AnalyticsUtilsDefault.track(constants2.PREMIUM_FEATURE_TRY_OUT, {
+    feature_name: constants4.TYPING_INDICATOR,
+    feature_tier: constants3.PREMIUM_STANDARD,
+  });
 };
 export const setTryItOutPreset = function setTryItOutPreset(arg0) {
-  let obj = { type: "USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_PRESET" };
   const merged = Object.assign(arg0);
-  obj.dispatch(obj);
-  obj = { feature_name: constants4.PRESET, feature_tier: constants3.PREMIUM_STANDARD };
-  AnalyticsUtilsDefault.track(constants2.PREMIUM_FEATURE_TRY_OUT, obj);
+  DispatcherDefault.dispatch({ type: "USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_PRESET" });
+  const obj2 = { type: "USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_PRESET" };
+  AnalyticsUtilsDefault.track(constants2.PREMIUM_FEATURE_TRY_OUT, {
+    feature_name: constants4.PRESET,
+    feature_tier: constants3.PREMIUM_STANDARD,
+  });
 };

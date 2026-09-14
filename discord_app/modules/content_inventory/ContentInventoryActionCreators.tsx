@@ -14,14 +14,13 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/content_inventory/ContentInventoryActionCreators.tsx");
 
 export const toggleMemberListContentFeedHidden = function toggleMemberListContentFeedHidden() {
-  let obj = DispatcherDefault;
-  obj.dispatch({ type: "CONTENT_INVENTORY_TOGGLE_FEED_HIDDEN" });
-  obj = {
+  DispatcherDefault.dispatch({ type: "CONTENT_INVENTORY_TOGGLE_FEED_HIDDEN" });
+  const obj2 = AnalyticsUtilsDefault;
+  obj2.track(AnalyticEvents.MEMBERLIST_CONTENT_FEED_HIDDEN, {
     channel_id: SelectedChannelStore.getChannelId(),
     guild_id: SelectedGuildStore.getGuildId(),
     hidden: ContentInventoryPersistedStore.hidden,
-  };
-  AnalyticsUtilsDefault.track(AnalyticEvents.MEMBERLIST_CONTENT_FEED_HIDDEN, obj);
+  });
 };
 export const onGameProfileOpen = function onGameProfileOpen() {
   DispatcherDefault.dispatch({ type: "GAME_PROFILE_OPEN" });

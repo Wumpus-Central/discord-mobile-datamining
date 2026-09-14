@@ -8,6 +8,8 @@ import CollectiblesCategoryStore from "../CollectiblesCategoryStore.tsx";
 import PremiumConstants from "../../premium/PremiumConstants.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
+const require = globalThis.__r;
+
 _mod19.useCallback;
 const AnalyticEvents = Constants.AnalyticEvents;
 ({ AnalyticsPremiumFeatureNames, AnalyticsPremiumFeatureTiers: metroRequire } = PremiumConstants);
@@ -31,7 +33,7 @@ export default function useTrackCollectiblesItemTryOut(location_stack) {
   return useCallback((skuId) => {
     value = stateFromStores.get(skuId.skuId);
     obj = AnalyticsUtilsDefault;
-    obj = {
+    const obj2 = {
       feature_name: obj[skuId.type],
       feature_tier: CollectiblesUtils.isPremiumCollectiblesProduct(value)
         ? timestampProducer.FREE
@@ -43,8 +45,8 @@ export default function useTrackCollectiblesItemTryOut(location_stack) {
     if (value != null) {
       name = value.name;
     }
-    obj.feature_selection = name;
-    obj.location_stack = location_stack;
-    obj.track(AnalyticEvents.PREMIUM_FEATURE_TRY_OUT, obj);
+    obj2.feature_selection = name;
+    obj2.location_stack = location_stack;
+    obj.track(AnalyticEvents.PREMIUM_FEATURE_TRY_OUT, obj2);
   }, items1);
 }

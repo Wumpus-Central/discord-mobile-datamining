@@ -26,16 +26,17 @@ export default function openChannelPicker(onClose) {
   if (items == null) {
     items = [];
   }
-  let obj = { header: null, guild: null, channels: null, selectedChannel: null };
-  obj = { title: null, onClose: null };
+  const obj2 = { header: null, guild: null, channels: null, selectedChannel: null };
+  const obj3 = { title: null, onClose: null };
+  const obj = ActionSheetActionCreatorsDefault;
   const intl = util.intl;
-  obj.title = intl.string(util.t.r2ptsz);
-  obj.onClose = onClose.onClose;
-  obj.header = obj;
-  obj.guild = guild;
+  obj3.title = intl.string(util.t.r2ptsz);
+  obj3.onClose = onClose.onClose;
+  obj2.header = obj3;
+  obj2.guild = guild;
   const found = items.filter(filterFn);
-  obj.channels = found.map((channel) => channel.channel);
-  obj.selectedChannel = selectedChannel;
+  obj2.channels = found.map((channel) => channel.channel);
+  obj2.selectedChannel = selectedChannel;
   const merged1 = Object.assign(merged);
-  obj.openLazy(asyncRequireImpl(11463, dependencyMap.paths), "ChannelPicker", obj);
+  obj.openLazy(asyncRequireImpl(11464, dependencyMap.paths), "ChannelPicker", obj2);
 }

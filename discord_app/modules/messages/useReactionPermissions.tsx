@@ -5,6 +5,8 @@ import GuildMemberStore from "../../stores/GuildMemberStore.tsx";
 import GuildVerificationStore from "../../stores/GuildVerificationStore.tsx";
 import PermissionStore from "../../stores/PermissionStore.tsx";
 
+const require = globalThis.__r;
+
 const require = fn;
 const Permissions = fn(1074).Permissions;
 const size = fn(2);
@@ -16,10 +18,9 @@ export default function useReactionPermissions(guild_id) {
   if (guild_id != null) {
     guild_id = guild_id.guild_id;
   }
-  let obj = require("initialize");
   const items = [GuildVerificationStore];
   const items1 = [guild_id];
-  stateFromStores = obj.useStateFromStores(
+  stateFromStores = require("initialize").useStateFromStores(
     items,
     () => {
       let canChatInGuildResult = null == guild_id;
@@ -30,6 +31,8 @@ export default function useReactionPermissions(guild_id) {
     },
     items1,
   );
+  const obj = require("initialize");
+  const tmp2 = stateFromStores;
   const items2 = [LurkingStore];
   const items3 = [guild_id];
   const stateFromStores1 = require("initialize").useStateFromStores(
@@ -44,7 +47,6 @@ export default function useReactionPermissions(guild_id) {
     items3,
   );
   const obj2 = require("initialize");
-  const tmp2 = stateFromStores;
   const items4 = [GuildMemberStore];
   const items5 = [guild_id];
   const stateFromStores2 = require("initialize").useStateFromStores(
@@ -78,7 +80,7 @@ export default function useReactionPermissions(guild_id) {
   const obj5 = require("AutomodPermissionUtils");
   require("ThreadHooks");
   if (null == guild_id) {
-    obj = {
+    let obj7 = {
       disableReactionReads: true,
       disableReactionCreates: true,
       disableReactionUpdates: true,
@@ -87,8 +89,8 @@ export default function useReactionPermissions(guild_id) {
       isPendingMember: false,
     };
   } else {
-    obj = {};
-    obj = {
+    obj7 = {};
+    const obj8 = {
       channel: guild_id,
       canChat: stateFromStores,
       renderReactions: true,
@@ -98,10 +100,10 @@ export default function useReactionPermissions(guild_id) {
       isActiveChannelOrUnarchivableThread: tmp9,
       isAutomodQuarantined: currentUserAutomodQuaratinedProfile,
     };
-    const merged = Object.assign(guild_id(tmp2[10])(obj));
-    obj.isLurking = stateFromStores1;
-    obj.isGuest = stateFromStores2;
-    obj.isPendingMember = false;
+    const merged = Object.assign(guild_id(tmp2[10])(obj8));
+    obj7.isLurking = stateFromStores1;
+    obj7.isGuest = stateFromStores2;
+    obj7.isPendingMember = false;
   }
-  return obj;
+  return obj7;
 }

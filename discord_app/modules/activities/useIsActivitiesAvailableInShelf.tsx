@@ -2,6 +2,8 @@
 import EmbeddedActivitiesActionCreators from "EmbeddedActivitiesActionCreators.tsx";
 import noop from "../../../_runtime/metro/00019__.js";
 
+const require = globalThis.__r;
+
 require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/activities/useIsActivitiesAvailableInShelf.tsx");
@@ -26,8 +28,8 @@ export default function useIsActivitiesAvailableInShelf(guildId, arg1) {
       tmp = isActivitiesEnabledForCurrentPlatform;
     }
     if (tmp) {
-      const obj = { guildId };
-      const shelf = obj.fetchShelf(obj);
+      const obj2 = { guildId };
+      const shelf = EmbeddedActivitiesActionCreators.fetchShelf(obj2);
     }
   }, items);
   if (tmp3) {

@@ -1,6 +1,8 @@
 // discord_app/modules/messages/useIsRelationshipTypeSpamReportable.tsx
 import RelationshipStore from "../../stores/RelationshipStore.tsx";
 
+const require = globalThis.__r;
+
 const require = fn;
 const RelationshipTypes = fn(1074).RelationshipTypes;
 const size = fn(2);

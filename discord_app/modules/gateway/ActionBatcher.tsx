@@ -15,7 +15,7 @@ class ActionBatcher {
       obj.action = closure_0(obj.action, arg0);
     };
     batchers = ActionBatcher.batchers;
-    arr = batchers.push(obj);
+    arr1 = batchers.push(obj);
     return obj;
   }
 }

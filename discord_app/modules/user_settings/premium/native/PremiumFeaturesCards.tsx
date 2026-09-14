@@ -5,9 +5,9 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 const View = fn(17).View;
 const PremiumTypes = fn(1373).PremiumTypes;
 const jsx = fn(21).jsx;
-let createStyles = fn(4636);
+const createStyles = fn(4636);
 let closure_5 = createStyles.createStyles({ container: { width: "100%", gap: 12 } });
-createStyles = { TIER_0_LEADING: 0, [0]: "TIER_0_LEADING", TIER_2_LEADING: 1, [1]: "TIER_2_LEADING" };
+const obj2 = { TIER_0_LEADING: 0, [0]: "TIER_0_LEADING", TIER_2_LEADING: 1, [1]: "TIER_2_LEADING" };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/premium/native/PremiumFeaturesCards.tsx");
 
@@ -19,10 +19,10 @@ export default function PremiumFeaturesCards(onFirstCardLayout) {
     order,
   } = onFirstCardLayout);
   if (order === undefined) {
-    order = createStyles.TIER_0_LEADING;
+    order = obj2.TIER_0_LEADING;
   }
   onFirstCardLayout = onFirstCardLayout.onFirstCardLayout;
-  if (createStyles.TIER_2_LEADING === order) {
+  if (obj2.TIER_2_LEADING === order) {
     const items = [,];
     ({ TIER_2: arr2[0], TIER_0: arr2[1] } = onFirstCardLayout);
     let items1 = items;
@@ -64,4 +64,4 @@ export default function PremiumFeaturesCards(onFirstCardLayout) {
     </View>
   );
 }
-export const PremiumFeatureCardOrder = createStyles;
+export const PremiumFeatureCardOrder = obj2;

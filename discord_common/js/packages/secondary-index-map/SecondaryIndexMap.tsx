@@ -119,10 +119,10 @@ prototype["set"] = function set(arg0, value) {
     let flag = null == value || null == value || !self.isEqual(value, value);
     if (flag) {
       if (null != value) {
-        let valueMap = self.valueMap;
-        const result = valueMap.set(arg0, value);
+        const valueMap2 = self.valueMap;
+        const result = valueMap2.set(arg0, value);
       } else {
-        valueMap = self.valueMap;
+        const valueMap = self.valueMap;
         valueMap.delete(arg0);
       }
       ({ valueArray, sortBy } = self);

@@ -1,7 +1,7 @@
 // discord_app/modules/quests/managers/QuestFetchManager.tsx
 import DurationsDefault from "../../../utils/Durations.tsx";
-import PlatformUtils from "../../../utils/PlatformUtils.tsx";
 import SentryUtilsDefault from "../../../utils/SentryUtils.native.tsx";
+import PlatformUtils from "../../../utils/PlatformUtils.tsx";
 import QuestActionCreators from "../QuestActionCreators.tsx";
 import DiscordAppStateDefault from "../../app_state/DiscordAppState.native.tsx";
 import QuestsEligibility from "../lib/QuestsEligibility.tsx";
@@ -116,14 +116,13 @@ class QuestFetchManager extends tmp2 {
   }
 }
 QuestFetchManager.prototype["_fetch"] = function _fetch(callerSource) {
-  let obj = QuestsEligibility;
-  let isEligibleForQuests = obj.getIsEligibleForQuests();
+  let isEligibleForQuests = QuestsEligibility.getIsEligibleForQuests();
   if (isEligibleForQuests) {
     isEligibleForQuests = !QuestStore.isFetchingCurrentQuests;
   }
   if (isEligibleForQuests) {
-    obj = { category: "quests.fetch", message: "QuestFetchManager._fetch triggered", data: null };
-    obj = {
+    const obj3 = { category: "quests.fetch", message: "QuestFetchManager._fetch triggered", data: null };
+    const obj4 = {
       callerSource,
       storeSize: QuestStore.quests.size,
       lastFetchedCurrentQuests: QuestStore.lastFetchedCurrentQuests,
@@ -131,17 +130,17 @@ QuestFetchManager.prototype["_fetch"] = function _fetch(callerSource) {
       isFetchingCurrentQuests: null,
     };
     const _Date = Date;
-    obj.msSinceLastFetch = Date.now() - QuestStore.lastFetchedCurrentQuests;
-    obj.isFetchingCurrentQuests = QuestStore.isFetchingCurrentQuests;
-    obj.data = obj;
-    SentryUtilsDefault.addBreadcrumb(obj);
-    let tmpResult = QuestActionCreators;
-    const currentQuests = tmpResult.fetchCurrentQuests();
-    tmpResult = PlatformUtils;
-    if (tmpResult.isMac()) {
+    obj4.msSinceLastFetch = Date.now() - QuestStore.lastFetchedCurrentQuests;
+    obj4.isFetchingCurrentQuests = QuestStore.isFetchingCurrentQuests;
+    obj3.data = obj4;
+    SentryUtilsDefault.addBreadcrumb(obj3);
+    const currentQuests = QuestActionCreators.fetchCurrentQuests();
+    const tmpResult = QuestActionCreators;
+    if (tmpResult2.isMac()) {
       const state = DiscordAppStateDefault.getState();
       const tmp6Result = DiscordAppStateDefault;
     }
+    tmpResult2 = PlatformUtils;
   }
 };
 const questFetchManager = new QuestFetchManager();

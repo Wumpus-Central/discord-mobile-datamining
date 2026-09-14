@@ -1,6 +1,8 @@
 // discord_app/modules/applications/getApplicationFromBotUserId.tsx
 import UserProfileStore from "../user_profile/UserProfileStore.tsx";
 
+const require = globalThis.__r;
+
 const require = fn;
 const EMPTY_STRING_SNOWFLAKE_ID = fn(1074).EMPTY_STRING_SNOWFLAKE_ID;
 const size = fn(2);

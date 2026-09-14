@@ -27,6 +27,8 @@ import SelectedChannelStore from "../stores/SelectedChannelStore.tsx";
 import SelectedGuildStore from "../stores/SelectedGuildStore.tsx";
 import SortedGuildStore from "../stores/SortedGuildStore.tsx";
 
+const require = globalThis.__r;
+
 require = fn;
 function openInviteModal() {
   const self = this;
@@ -49,8 +51,8 @@ let closure_18 = async function _openInviteModal() {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        obj = { value, done: true };
-        return obj;
+        const obj3 = { value, done: true };
+        return obj3;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -63,11 +65,10 @@ let closure_18 = async function _openInviteModal() {
             throw value;
           } else if (arg0 === 2) {
             c2 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj4 = { value, done: true };
+            return obj4;
           } else {
-            let obj1 = DispatcherDefault;
-            obj1 = {
+            const obj5 = {
               type: "DISPLAYED_INVITE_SHOW",
               code,
               username: "Array",
@@ -76,8 +77,8 @@ let closure_18 = async function _openInviteModal() {
             };
             c3 = 1;
             c2 = 1;
-            const obj2 = { value: obj1.dispatch(obj1), done: false };
-            return obj2;
+            const obj6 = { value: DispatcherDefault.dispatch(obj5), done: false };
+            return obj6;
           }
         } else if (arg0 === 1) {
           c2 = 3;
@@ -110,8 +111,8 @@ let closure_19 = async function _handleInviteCodedLink(arg0, arg1) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        obj = { value, done: true };
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -124,8 +125,8 @@ let closure_19 = async function _handleInviteCodedLink(arg0, arg1) {
             throw value;
           } else if (arg0 === 2) {
             c7 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
             closure_5 = tmp2;
             closure_4 = tmp3;
@@ -173,17 +174,17 @@ let closure_19 = async function _handleInviteCodedLink(arg0, arg1) {
                           if (invite2.roles.length > 0) {
                             id2 = closure_133_6.getId();
                             member = closure_133_7.getMember(closure_132_4, id2);
-                            let roles;
+                            let roles1;
                             if (member != null) {
-                              roles = member.roles;
+                              roles1 = member.roles;
                             }
-                            closure_3 = roles;
-                            if (roles == null) {
+                            closure_3 = roles1;
+                            if (roles1 == null) {
                               closure_3 = [];
                             }
                             const set = new Set(closure_3);
                             closure_132_9 = set;
-                            roles = invite2.roles;
+                            const roles = invite2.roles;
                             closure_132_6 = roles.some((id) => !set.has(id.id));
                           }
                         }
@@ -196,23 +197,25 @@ let closure_19 = async function _handleInviteCodedLink(arg0, arg1) {
                       }
                       c6 = 3;
                       c7 = 1;
-                      const obj1 = { value: closure_133_17(invite2, closure_132_0, closure_132_1), done: false };
-                      return obj1;
+                      const obj5 = { value: closure_133_17(invite2, closure_132_0, closure_132_1), done: false };
+                      return obj5;
                     }
                   }
                 }
                 c6 = 2;
                 c7 = 1;
-                const obj2 = { value: closure_133_17(invite2, closure_132_0, closure_132_1), done: false };
-                return obj2;
+                const obj6 = { value: closure_133_17(invite2, closure_132_0, closure_132_1), done: false };
+                return obj6;
               }
             } else {
-              let obj3 = InstantInviteActionCreatorsDefault;
-              obj3 = { inviteInstanceId };
+              const obj7 = { inviteInstanceId };
               c6 = 1;
               c7 = 1;
-              const obj4 = { value: obj3.resolveInvite(code, "Markdown Link", obj3), done: false };
-              return obj4;
+              const obj9 = {
+                value: InstantInviteActionCreatorsDefault.resolveInvite(code, "Markdown Link", obj7),
+                done: false,
+              };
+              return obj9;
             }
             const obj12 = require("InviteCodeUtils");
           }
@@ -222,8 +225,8 @@ let closure_19 = async function _handleInviteCodedLink(arg0, arg1) {
             throw value;
           } else if (arg0 === 2) {
             c7 = 3;
-            const obj5 = { value, done: true };
-            return obj5;
+            const obj10 = { value, done: true };
+            return obj10;
           } else {
             invite = value.invite;
             c2 = invite;
@@ -238,8 +241,8 @@ let closure_19 = async function _handleInviteCodedLink(arg0, arg1) {
             throw value;
           } else if (arg0 === 2) {
             c7 = 3;
-            const obj6 = { value, done: true };
-            return obj6;
+            const obj11 = { value, done: true };
+            return obj11;
           }
         } else if (arg0 === 1) {
           c7 = 3;
@@ -275,6 +278,7 @@ export default function getOnClick(url) {
   }
   ({ analyticsLocations: importDefault, messageId: dependencyMap, channelId } = tmp);
   pathname = undefined;
+  let obj2;
   obj = require("findCodedLinks");
   const findCodedLinkResult = obj.findCodedLink(url);
   c3 = findCodedLinkResult;
@@ -335,16 +339,15 @@ export default function getOnClick(url) {
         }
         const code = _undefined.code;
         url = code;
-        const application = obj.getApplication(code);
+        const application = obj2.getApplication(code);
         const uRL = new URL(_undefined.url);
         let searchParams = uRL.searchParams;
         value = searchParams.get("referrer_id");
         closure_2 = value;
         _undefined = analyticsLocations(paths[29])();
-        obj = url(paths[30]);
-        const playInContext = obj.getPlayInContext(code);
+        const playInContext = url(paths[30]).getPlayInContext(code);
         const currentChannelId = playInContext.currentChannelId;
-        ({ instanceId: obj, isCurrentlyInInstance } = playInContext);
+        ({ instanceId: obj2, isCurrentlyInInstance } = playInContext);
         if (playInContext.canLaunchInChannel) {
           let flag2 = !isCurrentlyInInstance;
           if (!isCurrentlyInInstance) {
@@ -353,10 +356,10 @@ export default function getOnClick(url) {
           if (flag2) {
             let searchParams2 = uRL.searchParams;
             const searchParams3 = uRL.searchParams;
-            value = searchParams2.get("link_id");
+            value2 = searchParams2.get("link_id");
             const customActivityLinkParams = tmp7(paths[31]).getCustomActivityLinkParams(
               code,
-              value,
+              value2,
               searchParams3.get("custom_id"),
             );
             url = pathname(function* (applicationId) {
@@ -410,7 +413,7 @@ export default function getOnClick(url) {
           }
           let flag = null != id;
           if (flag) {
-            obj = { recipientIds: id };
+            obj2 = { recipientIds: id };
             const tmp5Result = analyticsLocations(paths[33]);
             url = pathname((targetApplicationId) => {
               c3 = 0;
@@ -423,8 +426,8 @@ export default function getOnClick(url) {
                   if (arg0 === 1) {
                     throw value;
                   } else if (arg0 === 2) {
-                    obj = { value, done: true };
-                    return obj;
+                    obj2 = { value, done: true };
+                    return obj2;
                   } else {
                     return { value: "HermesInternal", done: null };
                   }
@@ -437,8 +440,8 @@ export default function getOnClick(url) {
                         throw value;
                       } else if (arg0 === 2) {
                         c4 = 3;
-                        obj = { value, done: true };
-                        return obj;
+                        const obj3 = { value, done: true };
+                        return obj3;
                       } else {
                         referrerId = tmp5;
                         closure_129_0 = targetApplicationId;
@@ -448,7 +451,7 @@ export default function getOnClick(url) {
                         value = searchParams.get("link_id");
                         c3 = 1;
                         c4 = 1;
-                        const obj1 = {
+                        const obj4 = {
                           value: targetApplicationId(paths[31]).getCustomActivityLinkParams(
                             targetApplicationId,
                             value,
@@ -456,7 +459,7 @@ export default function getOnClick(url) {
                           ),
                           done: false,
                         };
-                        return obj1;
+                        return obj4;
                       }
                     } else if (arg0 === 1) {
                       c4 = 3;
@@ -467,14 +470,14 @@ export default function getOnClick(url) {
                       return obj;
                     } else {
                       customId = value.customId;
-                      const obj2 = {
+                      const obj5 = {
                         targetApplicationId,
                         channelId: closure_129_0,
                         analyticsLocations: uRL,
                         customId,
                         referrerId,
                       };
-                      analyticsLocations(paths[34])(obj2);
+                      analyticsLocations(paths[34])(obj5);
                       c4 = 3;
                       return { value: "HermesInternal", done: null };
                     }
@@ -485,9 +488,9 @@ export default function getOnClick(url) {
                 }
               })();
             });
-            const openPrivateChannelResult = analyticsLocations(paths[33]).openPrivateChannel(obj);
+            const openPrivateChannelResult = analyticsLocations(paths[33]).openPrivateChannel(obj2);
             analyticsLocations(paths[33])
-              .openPrivateChannel(obj)
+              .openPrivateChannel(obj2)
               .then(function () {
                 const self = this;
                 const apply = closure_0.apply;
@@ -501,7 +504,7 @@ export default function getOnClick(url) {
               .catch(() => {});
             flag = true;
             const nextPromise1 = analyticsLocations(paths[33])
-              .openPrivateChannel(obj)
+              .openPrivateChannel(obj2)
               .then(function () {
                 const self = this;
                 const apply = closure_0.apply;
@@ -515,6 +518,7 @@ export default function getOnClick(url) {
           }
           return flag;
         }
+        obj = url(paths[30]);
         tmp7 = url;
       };
     }
@@ -525,9 +529,9 @@ export default function getOnClick(url) {
         if (preventDefault != null) {
           preventDefault.preventDefault();
         }
-        [closure_0, closure_1] = _slicedToArray(_undefined.code.split("-"), 2);
+        [closure_0, closure_1] = _undefined.code.split("-");
         const tmp2 = _slicedToArray(_undefined.code.split("-"), 2);
-        asyncRequireImpl(13074, dependencyMap.paths).then((openGuildProductLink) => {
+        asyncRequireImpl(13075, dependencyMap.paths).then((openGuildProductLink) => {
           openGuildProductLink.openGuildProductLink(url, analyticsLocations);
         });
         return true;
@@ -566,14 +570,12 @@ export default function getOnClick(url) {
   }
   if (null != findCodedLinkResult) {
     if (findCodedLinkResult.type === tmp2(4624).CodedLinkType.QUESTS_EMBED) {
-      let tmp2Result = tmp2(11617);
       if (tmp2Result.getIsEligibleForQuests()) {
         return (preventDefault) => {
           if (preventDefault != null) {
             preventDefault.preventDefault();
           }
-          obj = URLUtilsDefault;
-          let toURLSafeResult = obj.toURLSafe(_undefined.url);
+          let toURLSafeResult = URLUtilsDefault.toURLSafe(_undefined.url);
           if (toURLSafeResult == null) {
             toURLSafeResult = {};
           }
@@ -583,25 +585,26 @@ export default function getOnClick(url) {
           if (null != search) {
             const _URLSearchParams = URLSearchParams;
             const uRLSearchParams = new URLSearchParams(search);
-            uRLSearchParams.get("sort");
-            value = uRLSearchParams.get("filter");
-            tmp4 = value;
+            value = uRLSearchParams.get("sort");
+            value2 = uRLSearchParams.get("filter");
+            tmp4 = value2;
             tmp5 = value;
           }
-          obj = { scrollToQuestId: _undefined.code, sort: null, filter: null, fromContent: null };
+          obj2 = { scrollToQuestId: _undefined.code, sort: null, filter: null, fromContent: null };
           if (tmp5 == null) {
             tmp5 = null;
           }
-          obj.sort = tmp5;
+          obj2.sort = tmp5;
           if (tmp4 == null) {
             tmp4 = null;
           }
-          obj.filter = tmp4;
-          obj.fromContent = QuestContent.QuestContent.QUEST_SHARE_LINK;
-          QuestUtils.openQuestHome(obj);
+          obj2.filter = tmp4;
+          obj2.fromContent = QuestContent.QuestContent.QUEST_SHARE_LINK;
+          QuestUtils.openQuestHome(obj2);
           return true;
         };
       }
+      tmp2Result = tmp2(11618);
     }
   }
   if (null != findCodedLinkResult) {
@@ -644,21 +647,20 @@ export default function getOnClick(url) {
   }
   ({ host, hostname, pathname } = toURLSafeResult);
   ({ search, hash } = toURLSafeResult);
-  let tmp5Result = URLUtilsDefault;
   let tmp6 = hostname;
   if (hostname == null) {
     tmp6 = null;
   }
-  let isDiscordHostnameResult = tmp5Result.isDiscordHostname(tmp6);
+  let isDiscordHostnameResult = URLUtilsDefault.isDiscordHostname(tmp6);
   if (!isDiscordHostnameResult) {
-    tmp5Result = URLUtilsDefault;
     if (host == null) {
       host = null;
     }
     if (hostname == null) {
       hostname = null;
     }
-    isDiscordHostnameResult = tmp5Result.isDiscordLocalhost(host, hostname);
+    isDiscordHostnameResult = URLUtilsDefault.isDiscordLocalhost(host, hostname);
+    const tmp5Result3 = URLUtilsDefault;
   }
   if (isDiscordHostnameResult) {
     if (null != pathname) {
@@ -675,23 +677,23 @@ export default function getOnClick(url) {
   }
   if (null != pathname) {
     if (isDiscordHostnameResult) {
-      if (tmp5Result1.isAppRoute(pathname)) {
-        obj = { navigationReplace: false, openChannel: true };
+      if (tmp5Result4.isAppRoute(pathname)) {
+        obj2 = { navigationReplace: false, openChannel: true };
         if (null != search) {
-          obj.search = search;
+          obj2.search = search;
         }
         if (null != hash) {
-          obj.hash = hash;
+          obj2.hash = hash;
         }
         return (preventDefault) => {
           if (preventDefault != null) {
             preventDefault.preventDefault();
           }
-          safeTransitionToDefault(pathname, obj);
+          safeTransitionToDefault(pathname, obj2);
           return true;
         };
       }
-      tmp5Result1 = URLUtilsDefault;
+      tmp5Result4 = URLUtilsDefault;
     }
   }
   if (null != findCodedLinkResult) {
@@ -700,18 +702,19 @@ export default function getOnClick(url) {
         if (preventDefault != null) {
           preventDefault.preventDefault();
         }
-        obj = { application_id: _undefined.code };
-        obj.trackWithMetadata(closure_2_12.APP_OAUTH2_LINK_EMBED_URL_CLICKED, obj);
+        AppAnalyticsUtilsDefault.trackWithMetadata(closure_2_12.APP_OAUTH2_LINK_EMBED_URL_CLICKED, {
+          application_id: _undefined.code,
+        });
         openURLDefault(closure_0);
         return true;
       };
     }
     return fn;
   }
-  tmp2Result = tmp2(4790);
-  let result = tmp2Result.tryParseEventDetailsPath(pathname);
+  let tmp5Result = URLUtilsDefault;
+  let result = require("LinkUtils").tryParseEventDetailsPath(pathname);
   if (!tmp.skipExtensionCheck) {
-    if (null != tmp2Result1.isSuspiciousDownload(url)) {
+    if (null != tmp2Result4.isSuspiciousDownload(url)) {
       fn = (preventDefault) => {
         if (preventDefault != null) {
           preventDefault.preventDefault();
@@ -720,6 +723,7 @@ export default function getOnClick(url) {
         return true;
       };
     }
-    tmp2Result1 = tmp2(8244);
+    tmp2Result4 = tmp2(8244);
   }
+  const tmp2Result3 = require("LinkUtils");
 }

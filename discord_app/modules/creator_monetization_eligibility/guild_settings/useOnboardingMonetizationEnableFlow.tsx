@@ -2,6 +2,8 @@
 import noop from "../../../../_runtime/metro/00019__.js";
 import UserStore from "../../../stores/UserStore.tsx";
 
+const require = globalThis.__r;
+
 const require = fn;
 const isGuildOwner = fn(1975).isGuildOwner;
 const Constants = fn(1074);
@@ -13,8 +15,8 @@ const result = size.fileFinishedImporting(
 
 export default function useOnboardingMonetizationEnableFlow(features) {
   _require = features;
-  let obj = require("CreatorMonetizationEligibilityExperimentUtils");
-  let isExpeditedOnboardingGuild = obj.useIsExpeditedOnboardingGuild(features);
+  let isExpeditedOnboardingGuild =
+    require("CreatorMonetizationEligibilityExperimentUtils").useIsExpeditedOnboardingGuild(features);
   if (features != null) {
     features = features.features;
     const hasItem = features.has(constants.CREATOR_MONETIZABLE_PROVISIONAL);
@@ -23,9 +25,9 @@ export default function useOnboardingMonetizationEnableFlow(features) {
     const features2 = features.features;
     const hasItem1 = features2.has(constants.CREATOR_MONETIZABLE);
   }
-  let tmpResult = tmp(563);
+  const obj = require("CreatorMonetizationEligibilityExperimentUtils");
   const items = [UserStore];
-  const stateFromStores = tmpResult.useStateFromStores(items, () => {
+  const stateFromStores = require("useStateFromStores").useStateFromStores(items, () => {
     let tmp3 = null != closure_0;
     if (tmp3) {
       tmp3 = isGuildOwner(tmp2, tmp);
@@ -33,21 +35,22 @@ export default function useOnboardingMonetizationEnableFlow(features) {
     return tmp3;
   });
   let id;
+  const tmpResult = require("useStateFromStores");
   if (features != null) {
     id = features.id;
   }
-  const tmp10 = refresh(17827);
-  ({ submittedRequest, error, loading, createEnableRequest } = refresh(17827)(id));
+  const tmp10 = refresh(17828);
+  ({ submittedRequest, error, loading, createEnableRequest } = refresh(17828)(id));
   let id1;
-  let tmp9Result = tmp9(17828);
+  const tmp10Result = refresh(17828)(id);
   if (features != null) {
     id1 = features.id;
   }
-  const tmp9ResultResult = tmp9Result(id1);
+  const tmp9ResultResult = refresh(17829)(id1);
   refresh = tmp9ResultResult.refresh;
   ({ eligibility, loading: loading2, error: error2 } = tmp9ResultResult);
-  const tmp10Result = refresh(17827)(id);
-  ({ isApplicationRejected, requestCooldownDuration } = refresh(17829)(eligibility));
+  const tmp9Result = refresh(17829);
+  ({ isApplicationRejected, requestCooldownDuration } = refresh(17830)(eligibility));
   let hasItem2;
   if (features != null) {
     const features3 = features.features;
@@ -62,7 +65,7 @@ export default function useOnboardingMonetizationEnableFlow(features) {
     }
     tmp19 = true === hasItem3;
   }
-  tmpResult = tmp(7356);
+  const tmp16 = refresh(17830)(eligibility);
   let id2;
   if (features != null) {
     id2 = features.id;
@@ -80,20 +83,20 @@ export default function useOnboardingMonetizationEnableFlow(features) {
     canApply = eligibility.canApply;
   }
   const intl = tmp(1114).intl;
-  obj = { faqUrl: null };
-  tmp9Result = tmp9(2024);
-  obj.faqUrl = tmp9Result.getArticleURL(constants2.CREATOR_FAQ);
-  const tmp16 = refresh(17829)(eligibility);
+  const obj2 = { faqUrl: null };
+  const tmpResult3 = require("CreatorMonetizationRestrictionsHooks");
+  obj2.faqUrl = refresh(2024).getArticleURL(constants2.CREATOR_FAQ);
+  const tmp9Result3 = refresh(2024);
   if (isApplicationRejected) {
-    if (tmpResult.useIsMonetizationReapplicationDisabled(id2).isMonetizationReapplicationDisabled) {
+    if (tmpResult3.useIsMonetizationReapplicationDisabled(id2).isMonetizationReapplicationDisabled) {
       if (true === hasItem) {
         const intl4 = tmp(1114).intl;
-        obj = { communityGuidelineUrl: constants3.GUIDELINES };
-        let formatResult1 = intl4.format(tmp(1114).t["0o1Q+t"], obj);
+        const obj3 = { communityGuidelineUrl: constants3.GUIDELINES };
+        let formatResult1 = intl4.format(tmp(1114).t["0o1Q+t"], obj3);
       } else {
         const intl3 = tmp(1114).intl;
-        const obj1 = { communityGuidelineUrl: constants3.GUIDELINES };
-        formatResult1 = intl3.format(tmp(1114).t.b6h59n, obj1);
+        const obj4 = { communityGuidelineUrl: constants3.GUIDELINES };
+        formatResult1 = intl3.format(tmp(1114).t.b6h59n, obj4);
       }
     }
   }
@@ -104,12 +107,12 @@ export default function useOnboardingMonetizationEnableFlow(features) {
   let formatResult2;
   if (tmp28) {
     const intl2 = tmp(1114).intl;
-    const obj2 = {
+    const obj5 = {
       requestCooldownDuration,
       creatorRevenuePolicyUrl: tmp9(2024).getArticleURL(constants2.CREATOR_POLICY),
     };
-    formatResult2 = intl2.format(tmp(1114).t.TvX207, obj2);
-    const tmp9Result1 = tmp9(2024);
+    formatResult2 = intl2.format(tmp(1114).t.TvX207, obj5);
+    const tmp9Result4 = tmp9(2024);
   }
   let tmp34 = isExpeditedOnboardingGuild;
   if (isExpeditedOnboardingGuild) {
@@ -122,7 +125,7 @@ export default function useOnboardingMonetizationEnableFlow(features) {
   if (isExpeditedOnboardingGuild) {
     isExpeditedOnboardingGuild = false === hasItem;
   }
-  const formatResult = intl.format(require("util").t.aJUdOi, obj);
+  const formatResult = intl.format(require("util").t.aJUdOi, obj2);
   let formatResult3;
   const creatorMonetizationAcceptTermsCheckboxText =
     require("CreatorMonetizationAcceptTermCheckboxText").getCreatorMonetizationAcceptTermsCheckboxText();
@@ -140,7 +143,7 @@ export default function useOnboardingMonetizationEnableFlow(features) {
       refresh();
     }
   }, items1);
-  const obj3 = {
+  const obj6 = {
     resubmittingEnableRequest: loading,
     resubmissionError: error,
     isGuildOwner: stateFromStores,
@@ -166,8 +169,8 @@ export default function useOnboardingMonetizationEnableFlow(features) {
     }
     isExpeditedOnboardingGuild = tmp19;
   }
-  obj3.wasRejectedInV1 = isExpeditedOnboardingGuild;
-  obj3.requirementsFinePrintText = formatResult;
-  obj3.acceptTermsCheckboxText = creatorMonetizationAcceptTermsCheckboxText;
-  return obj3;
+  obj6.wasRejectedInV1 = isExpeditedOnboardingGuild;
+  obj6.requirementsFinePrintText = formatResult;
+  obj6.acceptTermsCheckboxText = creatorMonetizationAcceptTermsCheckboxText;
+  return obj6;
 }

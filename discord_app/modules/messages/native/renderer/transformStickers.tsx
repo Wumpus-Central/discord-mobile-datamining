@@ -12,28 +12,26 @@ export default function transformStickers(message) {
   const messageStickers = StickersUtils.getMessageStickers(message.message);
   return messageStickers.map((id) => {
     const name = id;
-    let obj = StickersUtils;
-    const shouldAnimateStickerResult = obj.shouldAnimateSticker(closure_1_0, dependencyMap);
-    obj = {};
+    const shouldAnimateStickerResult = StickersUtils.shouldAnimateSticker(closure_1_0, dependencyMap);
+    const obj2 = {};
     const merged = Object.assign(id);
     let str = id.id;
     if (str == null) {
       str = "";
     }
-    obj.asset = str;
-    let tmpResult = StickersUtils;
-    obj = { isPreview: !shouldAnimateStickerResult };
-    let str2 = tmpResult.getStickerAssetUrl(id, obj);
+    obj2.asset = str;
+    let str2 = StickersUtils.getStickerAssetUrl(id, { isPreview: !shouldAnimateStickerResult });
     if (str2 == null) {
       str2 = "";
     }
-    obj.url = str2;
-    obj.width = 160;
-    obj.height = 160;
+    obj2.url = str2;
+    obj2.width = 160;
+    obj2.height = 160;
     const NativeLottieRenderMode = NativeLottieView.NativeLottieRenderMode;
-    obj.renderMode = shouldAnimateStickerResult ? NativeLottieRenderMode.LOOP : NativeLottieRenderMode.STILL;
-    tmpResult = getAccessibilityLabelOrCheapFallbackUnsafe;
-    const obj1 = {
+    obj2.renderMode = shouldAnimateStickerResult ? NativeLottieRenderMode.LOOP : NativeLottieRenderMode.STILL;
+    const obj3 = { isPreview: !shouldAnimateStickerResult };
+    const tmpResult = StickersUtils;
+    const obj4 = {
       expensive() {
         const intl = util.intl;
         return intl.formatToPlainString(util.t.rk6pOw, { stickerName: name.name });
@@ -41,10 +39,11 @@ export default function transformStickers(message) {
       cheap: null,
     };
     let intl = util.intl;
-    obj1.cheap = intl.string(util.t["fT+Yjp"]);
-    obj.accessibilityLabel = tmpResult.getAccessibilityLabelOrCheapFallbackUnsafe(obj1);
+    obj4.cheap = intl.string(util.t["fT+Yjp"]);
+    obj2.accessibilityLabel =
+      getAccessibilityLabelOrCheapFallbackUnsafe.getAccessibilityLabelOrCheapFallbackUnsafe(obj4);
     const intl2 = util.intl;
-    obj.accessibilityHint = intl2.string(util.t.GCEruV);
-    return obj;
+    obj2.accessibilityHint = intl2.string(util.t.GCEruV);
+    return obj2;
   });
 }

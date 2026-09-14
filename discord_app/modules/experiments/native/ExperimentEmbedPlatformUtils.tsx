@@ -19,8 +19,7 @@ export const handleCodedLinkExperimentEmbedTap = function handleCodedLinkExperim
   if (null != experimentTreatmentFromEmbedURL) {
     const _Number = Number;
     if (!Number.isNaN(experimentTreatmentFromEmbedURL)) {
-      let obj = useLegacyExperiments;
-      const legacyExperiments = obj.getLegacyExperiments();
+      const legacyExperiments = useLegacyExperiments.getLegacyExperiments();
       ({ experiments, overridesInfo } = legacyExperiments);
       const apexExperiments = useApexExperiments.getApexExperiments();
       let tmp5 = experiments[experimentFromEmbedURL];
@@ -35,26 +34,24 @@ export const handleCodedLinkExperimentEmbedTap = function handleCodedLinkExperim
         if (tmp6 == null) {
           tmp6 = null;
         }
-        let tmpResult = ExperimentEmbedUtils;
-        const experimentBuckets = tmpResult.getExperimentBuckets(tmp5);
+        const experimentBuckets = ExperimentEmbedUtils.getExperimentBuckets(tmp5);
         const iter = experimentBuckets.find((value) => value.value === closure_0);
         if (null != iter) {
           if (null != tmp6) {
             if (tmp6.variantId === iter.value) {
-              tmpResult = ExperimentManager;
-              tmpResult.overrideBucket(tmp5.system, experimentFromEmbedURL, null);
+              ExperimentManager.overrideBucket(tmp5.system, experimentFromEmbedURL, null);
+              const tmpResult3 = ExperimentManager;
             }
           }
           ExperimentManager.overrideBucket(tmp5.system, experimentFromEmbedURL, iter.value);
-          const tmpResult1 = ExperimentManager;
+          const tmpResult4 = ExperimentManager;
         }
+        const tmpResult = ExperimentEmbedUtils;
       }
     }
   }
-  obj = { id: experimentFromEmbedURL };
-  ActionSheetActionCreatorsDefault.openLazy(
-    asyncRequireImpl(11937, dependencyMap.paths),
-    "ExperimentOverrideSheet",
-    obj,
-  );
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(11938, dependencyMap.paths), "ExperimentOverrideSheet", {
+    id: experimentFromEmbedURL,
+  });
+  const obj3 = { id: experimentFromEmbedURL };
 };

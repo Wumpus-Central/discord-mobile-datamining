@@ -11,8 +11,8 @@ let closure_8 = async function _navigateToGameAnnouncement(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -25,8 +25,8 @@ let closure_8 = async function _navigateToGameAnnouncement(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c4 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           closure_2 = tmp5;
           closure_1 = tmp2;
@@ -56,8 +56,8 @@ let closure_8 = async function _navigateToGameAnnouncement(arg0) {
             throw value;
           } else if (arg0 === 2) {
             c4 = 3;
-            const obj1 = { value, done: true };
-            return obj1;
+            const obj5 = { value, done: true };
+            return obj5;
           } else {
             closure_130_1(closure_130_2[3])(
               closure_129_4.length > 0,
@@ -90,19 +90,18 @@ let closure_8 = async function _navigateToGameAnnouncement(arg0) {
                 if (null != closure_129_6) {
                   if (!closure_129_6.has(closure_130_5.PREVIEW_ENABLED)) {
                     if (null != closure_129_0) {
-                      let obj5 = closure_130_1(closure_130_2[5]);
-                      const obj2 = { inviteKey: closure_129_0.code, context: null, skipOnboarding: true };
-                      let obj3 = { location: closure_129_5 };
-                      obj2.context = obj3;
+                      const obj7 = { inviteKey: closure_129_0.code, context: null, skipOnboarding: true };
+                      const obj8 = { location: closure_129_5 };
+                      obj7.context = obj8;
                       c3 = 3;
                       c4 = 1;
-                      const obj4 = { value: obj5.acceptInvite(obj2), done: false };
-                      return obj4;
+                      const obj9 = { value: closure_130_1(closure_130_2[5]).acceptInvite(obj7), done: false };
+                      return obj9;
                     }
                   }
                 }
-                let obj9 = closure_130_0(closure_130_2[4]);
-                obj5 = {
+                const obj10 = closure_130_0(closure_130_2[4]);
+                const obj11 = {
                   shouldNavigate: true,
                   channelId: closure_129_2,
                   messageId: closure_129_3,
@@ -110,8 +109,8 @@ let closure_8 = async function _navigateToGameAnnouncement(arg0) {
                 };
                 c3 = 2;
                 c4 = 1;
-                const obj6 = { value: obj9.startLurking(closure_129_1, {}, obj5, closure_129_4), done: false };
-                return obj6;
+                const obj12 = { value: obj10.startLurking(closure_129_1, {}, obj11, closure_129_4), done: false };
+                return obj12;
               }
             }
             c4 = 3;
@@ -123,24 +122,27 @@ let closure_8 = async function _navigateToGameAnnouncement(arg0) {
             throw value;
           } else if (arg0 === 2) {
             c4 = 3;
-            const obj7 = { value, done: true };
-            return obj7;
+            const obj13 = { value, done: true };
+            return obj13;
           } else {
             c4 = 3;
-            const obj8 = { value: undefined, done: true };
-            return obj8;
+            const obj14 = { value: undefined, done: true };
+            return obj14;
           }
         } else if (arg0 === 1) {
           c4 = 3;
           throw value;
         } else if (arg0 === 2) {
           c4 = 3;
-          obj = { value, done: true };
+          const obj = { value, done: true };
           return obj;
         }
-        obj3 = closure_130_0(closure_130_2[6]);
-        obj9 = { sourceLocationStack: closure_129_4 };
-        obj3.transitionTo(closure_130_7.CHANNEL(closure_129_1, closure_129_2, closure_129_3), obj9);
+        const obj15 = { sourceLocationStack: closure_129_4 };
+        closure_130_0(closure_130_2[6]).transitionTo(
+          closure_130_7.CHANNEL(closure_129_1, closure_129_2, closure_129_3),
+          obj15,
+        );
+        const obj4 = closure_130_0(closure_130_2[6]);
       }
     } catch (tmp53) {
       c4 = tmp;

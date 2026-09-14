@@ -5,7 +5,7 @@ import components_Button_Button from "../../../../design/components/Button/nativ
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
 import Sheet_BottomSheet from "../../../../design/components/Sheet/native/BottomSheet.native.tsx";
 import GuildSettingsActionCreatorsDefault from "../../../guild_settings/GuildSettingsActionCreators.tsx";
-import _modDef16343 from "../../../../../_runtime/metro/16343__.js";
+import _modDef16345 from "../../../../../_runtime/metro/16345__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -30,15 +30,15 @@ const result = size.fileFinishedImporting(
 export default function CreatorMonetizationOnboardingV2UpsellActionSheet(arg0) {
   ({ guildId: require, markAsDismissed: importDefault } = arg0);
   const tmp = closure_8();
-  let obj = {
+  const obj = {
     startExpanded: true,
     onDismiss() {
       return importDefault(ContentDismissActionType.UNKNOWN);
     },
     children: null,
   };
-  obj = { style: tmp.container, children: null };
-  obj = {
+  const obj2 = { style: tmp.container, children: null };
+  const obj3 = {
     style: tmp.title,
     accessibilityRole: "header",
     variant: "heading-lg/extrabold",
@@ -46,9 +46,9 @@ export default function CreatorMonetizationOnboardingV2UpsellActionSheet(arg0) {
     children: null,
   };
   const intl = util.intl;
-  obj.children = intl.string(util.t["v+Jm6X"]);
-  const items = [closure_6(Text_Text.Text, obj), , , ,];
-  const obj1 = {
+  obj3.children = intl.string(util.t["v+Jm6X"]);
+  const items = [closure_6(Text_Text.Text, obj3), , , ,];
+  const obj4 = {
     style: tmp.description,
     accessibilityRole: "text",
     variant: "text-sm/medium",
@@ -56,11 +56,11 @@ export default function CreatorMonetizationOnboardingV2UpsellActionSheet(arg0) {
     children: null,
   };
   const intl2 = util.intl;
-  obj1.children = intl2.string(util.t.kUUFbG);
-  items[1] = closure_6(Text_Text.Text, obj1);
-  const obj2 = { style: tmp.image, resizeMode: "contain", source: _modDef16343 };
-  items[2] = closure_6(FastImageDefault, obj2);
-  const obj3 = {
+  obj4.children = intl2.string(util.t.kUUFbG);
+  items[1] = closure_6(Text_Text.Text, obj4);
+  const obj5 = { style: tmp.image, resizeMode: "contain", source: _modDef16345 };
+  items[2] = closure_6(FastImageDefault, obj5);
+  const obj6 = {
     onPress() {
       closure_1_1(ContentDismissActionType.UNKNOWN);
       GuildSettingsActionCreatorsDefault.open(require, GuildSettingsSections.ROLE_SUBSCRIPTIONS);
@@ -68,10 +68,10 @@ export default function CreatorMonetizationOnboardingV2UpsellActionSheet(arg0) {
     text: null,
   };
   const intl3 = util.intl;
-  obj3.text = intl3.string(util.t.OgQQbG);
-  items[3] = closure_6(components_Button_Button.Button, obj3);
-  const obj4 = { style: tmp.dismissButton, children: null };
-  const obj5 = {
+  obj6.text = intl3.string(util.t.OgQQbG);
+  items[3] = closure_6(components_Button_Button.Button, obj6);
+  const obj7 = { style: tmp.dismissButton, children: null };
+  const obj8 = {
     onPress() {
       return importDefault(ContentDismissActionType.UNKNOWN);
     },
@@ -79,10 +79,10 @@ export default function CreatorMonetizationOnboardingV2UpsellActionSheet(arg0) {
     variant: "secondary",
   };
   const intl4 = util.intl;
-  obj5.text = intl4.string(util.t.WAI6xu);
-  obj4.children = closure_6(components_Button_Button.Button, obj5);
-  items[4] = closure_6(View, obj4);
-  obj.children = items;
-  obj.children = closure_7(View, obj);
+  obj8.text = intl4.string(util.t.WAI6xu);
+  obj7.children = closure_6(components_Button_Button.Button, obj8);
+  items[4] = closure_6(View, obj7);
+  obj2.children = items;
+  obj.children = closure_7(View, obj2);
   return closure_6(Sheet_BottomSheet.BottomSheet, obj);
 }

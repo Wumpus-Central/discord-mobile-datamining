@@ -13,33 +13,33 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 function UserSettingsDebugLogsFiltersActionSheet(arg0) {
   ({ sortOrder, onSortOrderChanged, onRefresh } = arg0);
-  let obj = { header: null, children: null };
-  obj = { title: null };
+  const obj = { header: null, children: null };
+  const obj2 = { title: null };
   const intl = util.intl;
-  obj.title = intl.string(util.t["+B9e11"]);
-  obj.header = React3(BottomSheetTitleHeader.BottomSheetTitleHeader, obj);
-  obj = { hasIcons: false, children: null };
-  const obj1 = { label: null, onPress: null };
+  obj2.title = intl.string(util.t["+B9e11"]);
+  obj.header = React3(BottomSheetTitleHeader.BottomSheetTitleHeader, obj2);
+  const obj3 = { hasIcons: false, children: null };
+  const obj4 = { label: null, onPress: null };
   const intl2 = util.intl;
-  obj1.label = intl2.string(util.t.wzzjk9);
-  obj1.onPress = onRefresh;
-  obj.children = React3(TableRow.TableRow, obj1);
-  const items = [React3(TableRowGroup.TableRowGroup, obj), ,];
-  const obj2 = { title: null, defaultValue: null, onChange: null, hasIcons: false, children: null };
+  obj4.label = intl2.string(util.t.wzzjk9);
+  obj4.onPress = onRefresh;
+  obj3.children = React3(TableRow.TableRow, obj4);
+  const items = [React3(TableRowGroup.TableRowGroup, obj3), ,];
+  const obj5 = { title: null, defaultValue: null, onChange: null, hasIcons: false, children: null };
   const intl3 = util.intl;
-  obj2.title = intl3.string(util.t.gePre2);
-  obj2.defaultValue = sortOrder;
-  obj2.onChange = onSortOrderChanged;
-  const obj3 = { label: null, value: "newest" };
+  obj5.title = intl3.string(util.t.gePre2);
+  obj5.defaultValue = sortOrder;
+  obj5.onChange = onSortOrderChanged;
+  const obj6 = { label: null, value: "newest" };
   const intl4 = util.intl;
-  obj3.label = intl4.string(util.t.eoXe0r);
-  const items1 = [React3(TableRadioRow.TableRadioRow, obj3)];
-  const obj4 = { label: null, value: "oldest" };
+  obj6.label = intl4.string(util.t.eoXe0r);
+  const items1 = [React3(TableRadioRow.TableRadioRow, obj6)];
+  const obj7 = { label: null, value: "oldest" };
   const intl5 = util.intl;
-  obj4.label = intl5.string(util.t.mmeWUF);
-  items1[1] = React3(TableRadioRow.TableRadioRow, obj4);
-  obj2.children = items1;
-  items[1] = React4(TableRadioGroup.TableRadioGroup, obj2);
+  obj7.label = intl5.string(util.t.mmeWUF);
+  items1[1] = React3(TableRadioRow.TableRadioRow, obj7);
+  obj5.children = items1;
+  items[1] = React4(TableRadioGroup.TableRadioGroup, obj5);
   items[2] = React3(native.Spacer, { size: 0 });
   obj.children = items;
   return React4(ActionSheet.ActionSheet, obj);
@@ -52,6 +52,9 @@ const result = size.fileFinishedImporting(
 );
 
 export const openUserSettingsDebugLogsFiltersActionSheet = function openUserSettingsDebugLogsFiltersActionSheet(arg0) {
-  const obj = { default: UserSettingsDebugLogsFiltersActionSheet };
-  obj.openLazy(Promise.resolve(obj), "UserSettingsDebugLogsFiltersActionSheet", arg0);
+  ActionSheetActionCreatorsDefault.openLazy(
+    Promise.resolve({ default: UserSettingsDebugLogsFiltersActionSheet }),
+    "UserSettingsDebugLogsFiltersActionSheet",
+    arg0,
+  );
 };

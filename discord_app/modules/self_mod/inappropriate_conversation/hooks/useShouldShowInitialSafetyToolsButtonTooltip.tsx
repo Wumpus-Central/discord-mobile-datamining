@@ -1,6 +1,8 @@
 // discord_app/modules/self_mod/inappropriate_conversation/hooks/useShouldShowInitialSafetyToolsButtonTooltip.tsx
 import ChannelSafetyWarningsStore from "../../ChannelSafetyWarningsStore.tsx";
 
+const require = globalThis.__r;
+
 const require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting(

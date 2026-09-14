@@ -6,6 +6,8 @@ import _slicedToArray from "../../../_runtime/metro/00032__.js";
 import PermissionStore from "../../stores/PermissionStore.tsx";
 import UserStore from "../../stores/UserStore.tsx";
 
+const require = globalThis.__r;
+
 require = fn;
 const Constants = fn(1074);
 ({ MessageFlags: hasOwnProperty, MessageStates: metroRequire } = Constants);

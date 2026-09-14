@@ -9,10 +9,7 @@ function Tab(index) {
   ({ isSelected, onSelect } = index);
   ({ children, tabStyle, tabStyleActive, tabStyleSelected } = index);
   const tmp = closure_9();
-  [tmp3, tmp4] = _slicedToArray(
-    noop.useState(() => false),
-    2,
-  );
+  [tmp3, tmp4] = noop.useState(() => false);
   c2 = tmp4;
   const items = [tmp4];
   const items1 = [tmp4];
@@ -63,8 +60,8 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_4, TouchableWithoutFeedback: hasOwnProperty, FlatList: metroRequire } = get_ActivityIndicator);
 const NOOP = fn(1074).NOOP;
 const jsx = fn(21).jsx;
-fn(4636);
-let createStyles = {
+const createStyles = fn(4636);
+let obj2 = {
   innerContainer: { flexDirection: "row", alignItems: "stretch" },
   tab: {
     flexGrow: 1,
@@ -79,13 +76,10 @@ let createStyles = {
     borderBottomColor: "transparent",
   },
   tabActive: { backgroundColor: "rgba(0,0,0,0.1)" },
-  tabSelected: null,
-  container: null,
+  tabSelected: { borderBottomColor: nativeDefault.unsafe_rawColors.BRAND_600 },
+  container: { flex: 0 },
 };
-createStyles = { borderBottomColor: nativeDefault.unsafe_rawColors.BRAND_600 };
-createStyles.tabSelected = createStyles;
-createStyles.container = { flex: 0 };
-let closure_9 = createStyles.createStyles(createStyles);
+let closure_9 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("components_native/common/TabBar.tsx");
 
@@ -163,8 +157,8 @@ export default function TabBar(tabIndexSelected) {
   }, []);
   const intl = tabIndexSelected(tabStyle[8]).intl;
   obj.accessibilityLabel = intl.string(tabIndexSelected(tabStyle[8]).t.t1qXlK);
-  obj = { gesture: memo, children: callback(tabIndexSelected(tabStyle[7]).GestureDetector, obj) };
-  obj = {
+  const obj2 = { gesture: memo, children: null };
+  const obj3 = {
     ref,
     contentContainerStyle: null,
     horizontal: true,
@@ -176,7 +170,8 @@ export default function TabBar(tabIndexSelected) {
     showsHorizontalScrollIndicator: !flag,
   };
   const items4 = [containerStyle, tmp.innerContainer];
-  obj.contentContainerStyle = items4;
-  obj.children = callback(ref, obj);
+  obj3.contentContainerStyle = items4;
+  obj2.children = callback(ref, obj3);
+  obj.children = callback(tabIndexSelected(tabStyle[7]).GestureDetector, obj2);
   return callback(onSelect, obj);
 }

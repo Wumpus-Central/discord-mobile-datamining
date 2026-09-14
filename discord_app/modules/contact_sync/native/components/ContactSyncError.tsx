@@ -3,6 +3,8 @@ import ReanimatedRexportDefault from "../../../reanimated/ReanimatedRexport.tsx"
 import timing from "../../../../design/animation/reanimated/timing/timing.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
+const require = globalThis.__r;
+
 require = fn;
 const jsx = fn(21).jsx;
 const createStyles = fn(4636);
@@ -25,22 +27,19 @@ export default function ContactSyncError(error) {
     tmp2 = "" !== error;
   }
   _require = tmp2;
-  require("ReanimatedRexport");
   const fn = function l() {
-    let obj = timing;
     let num = 0;
     if (closure_0) {
       num = 44;
     }
-    obj = { height: obj.withTiming(num) };
-    return obj;
+    return { height: timing.withTiming(num) };
   };
-  let obj = { withTiming: require("timing").withTiming, hasError: tmp2, ERROR_HEIGHT: 44 };
-  fn.__closure = obj;
+  let obj = require("ReanimatedRexport");
+  fn.__closure = { withTiming: require("timing").withTiming, hasError: tmp2, ERROR_HEIGHT: 44 };
   fn.__workletHash = 14558247431913;
   fn.__initData = __initData;
   const animatedStyle = obj.useAnimatedStyle(fn);
-  obj = {
+  const obj3 = {
     style: null,
     children: jsx(require("Text/Text").Text, {
       variant: "text-sm/medium",
@@ -50,7 +49,7 @@ export default function ContactSyncError(error) {
     }),
   };
   const items = [tmp.container, error.style, animatedStyle];
-  obj.style = items;
+  obj3.style = items;
   return jsx(ReanimatedRexportDefault.View, {
     style: null,
     children: jsx(require("Text/Text").Text, {

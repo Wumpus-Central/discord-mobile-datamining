@@ -41,10 +41,10 @@ _instance_members_initializer_DispatcherBridge_ = function () {
 };
 class DispatcherBridge {
   constructor(arg0) {
-    obj = Object.create(new.target.prototype);
-    closure_4 = obj;
+    obj1 = Object.create(new.target.prototype);
+    closure_4 = obj1;
     tmp2 = _instance_members_initializer_DispatcherBridge_();
-    closure_0 = obj;
+    closure_0 = obj1;
     if (0 !== global.length) {
       tmp32 = closure_0;
       tmp33 = actionHandler;
@@ -66,7 +66,7 @@ class DispatcherBridge {
           while (iter !== undefined) {
             name = nextResult.getName();
             result = nextResult.connectWithLibdiscore(FLUX_API);
-            tokenToStore = obj.tokenToStore;
+            tokenToStore = obj1.tokenToStore;
             result1 = tokenToStore.set(result, nextResult);
             tmp12 = items;
             _HermesInternal = HermesInternal;
@@ -76,7 +76,7 @@ class DispatcherBridge {
             tmp14 = result;
             str8 = ", mode: ";
             str9 = "]";
-            arr = items.push("" + name + " => [token: " + result + ", mode: " + nextResult.getMode() + "]");
+            arr1 = items.push("" + name + " => [token: " + result + ", mode: " + nextResult.getMode() + "]");
             continue;
           }
           tmp16 = closure_6;
@@ -105,16 +105,16 @@ class DispatcherBridge {
               const nowResult = performance.now();
               if (null != closure_1_7[type.type]) {
                 const _JSON2 = JSON;
-                obj = { type: type.type };
+                const obj2 = { type: type.type };
                 const merged = Object.assign(tmp3(type));
-                let json = JSON.stringify(obj);
+                let json = JSON.stringify(obj2);
               } else {
                 const _JSON = JSON;
                 json = JSON.stringify(type);
               }
-              obj = { kind: "json_stringify_action", durationMillis: null };
+              const obj3 = { kind: "json_stringify_action", durationMillis: null };
               const _performance2 = performance;
-              obj.durationMillis = performance.now() - nowResult;
+              obj3.durationMillis = performance.now() - nowResult;
               const TelemetryExperiment = obj(actionHandler[10]).TelemetryExperiment;
               const shouldCollectMetricsResult = TelemetryExperiment.shouldCollectMetrics();
               const iter = FLUX_API.dispatchAction(json, shouldCollectMetricsResult);
@@ -150,7 +150,7 @@ class DispatcherBridge {
                 }
                 if (null != metrics) {
                   if (shouldCollectMetricsResult) {
-                    const items1 = [obj];
+                    const items1 = [obj3];
                     HermesBuiltin.arraySpread(metrics.timings, 1);
                     if (_default.get("libdiscore_verbose_telemetry_logging")) {
                       let mapped = items1.map((kind) => " - " + kind.kind + ": " + kind.durationMillis + "ms");
@@ -193,7 +193,7 @@ class DispatcherBridge {
                       const _HermesInternal = HermesInternal;
                       logger.info("Handling action " + type.type + " took " + diff + "ms\n" + mapped3.join("\n\n"));
                     }
-                    const obj1 = {
+                    const obj4 = {
                       action_type: type.type,
                       total_duration_millis: diff,
                       timings: null,
@@ -201,12 +201,12 @@ class DispatcherBridge {
                       memory_usage: null,
                     };
                     const _JSON3 = JSON;
-                    obj1.timings = JSON.stringify(items1);
+                    obj4.timings = JSON.stringify(items1);
                     const _JSON4 = JSON;
-                    obj1.mutations = JSON.stringify(metrics.mutations);
+                    obj4.mutations = JSON.stringify(metrics.mutations);
                     const _JSON5 = JSON;
-                    obj1.memory_usage = JSON.stringify(metrics.memory);
-                    FLUX_API(actionHandler[11]).track(constants.LIBDISCORE_DISPATCH_BRIDGE_TELEMETRY, obj1);
+                    obj4.memory_usage = JSON.stringify(metrics.memory);
+                    FLUX_API(actionHandler[11]).track(constants.LIBDISCORE_DISPATCH_BRIDGE_TELEMETRY, obj4);
                     const TelemetryExperiment2 = obj(actionHandler[10]).TelemetryExperiment;
                     TelemetryExperiment2.didEmit();
                     const obj8 = FLUX_API(actionHandler[11]);
@@ -265,7 +265,7 @@ class DispatcherBridge {
         infoResult2 = closure_6.info("Not initializing DispatcherBridge, because kvStoreApi is unavailable.");
       }
     }
-    return obj;
+    return obj1;
   }
 }
 const prototype = DispatcherBridge.prototype;
@@ -274,16 +274,15 @@ prototype["handleFatalError"] = function handleFatalError(error, type) {
   error = new Error(error);
   const result = this.hasAnyAuthoritativeStore();
   logger.error("Fatal dispatch error for action", type, "hasAuthoritativeStore:", result, error);
-  const obj = {
+  SentryUtilsDefault.captureException(error, {
     extra: { actionType: type, hasAuthoritativeStore: result },
     tags: { source: "libdiscore", errorKind: "fatal_dispatch" },
-  };
-  SentryUtilsDefault.captureException(error, obj);
+  });
   if (result) {
     const result1 = libdiscoreExperiments.clearLibdiscoreExperimentCache();
     throw error;
   } else {
-    obj.warn("Disabling DispatcherBridge until restart");
+    logger.warn("Disabling DispatcherBridge until restart");
     self.disabledFromFatalError = true;
     const tokenToStore = self.tokenToStore;
     const values = tokenToStore.values();
@@ -292,6 +291,10 @@ prototype["handleFatalError"] = function handleFatalError(error, type) {
       continue;
     }
   }
+  const obj3 = {
+    extra: { actionType: type, hasAuthoritativeStore: result },
+    tags: { source: "libdiscore", errorKind: "fatal_dispatch" },
+  };
 };
 prototype["handleStoreError"] = function handleStoreError(storeToken, type) {
   const tokenToStore = this.tokenToStore;

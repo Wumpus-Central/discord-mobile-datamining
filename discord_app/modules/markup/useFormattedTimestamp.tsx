@@ -3,6 +3,8 @@ import DurationsDefault from "../../utils/Durations.tsx";
 import _slicedToArray from "../../../_runtime/metro/00032__.js";
 import noop from "../../../_runtime/metro/00019__.js";
 
+const require = globalThis.__r;
+
 const require = fn;
 let items = [2 * DurationsDefault.Seconds.MINUTE, DurationsDefault.Seconds.SECOND];
 const items1 = [items, , ,];

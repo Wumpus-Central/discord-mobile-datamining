@@ -21,8 +21,8 @@ let closure_8 = async function _trySpeculativelyOpenDatabaseAsync(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -35,8 +35,8 @@ let closure_8 = async function _trySpeculativelyOpenDatabaseAsync(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c6 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           closure_2 = tmp3;
           closure_1 = tmp7;
@@ -47,8 +47,8 @@ let closure_8 = async function _trySpeculativelyOpenDatabaseAsync(arg0) {
           const Database = require("../../../../discord_common/js/packages/kv-storage/js/index.tsx").Database;
           c5 = 2;
           c6 = 1;
-          const obj1 = { value: Database.open(tmp25), done: false };
-          return obj1;
+          const obj4 = { value: Database.open(tmp25), done: false };
+          return obj4;
         }
       } else if (1 === tmp7) {
         c4 = 0;
@@ -62,12 +62,12 @@ let closure_8 = async function _trySpeculativelyOpenDatabaseAsync(arg0) {
       } else if (arg0 === 2) {
         c4 = 0;
         c6 = 3;
-        const obj2 = { value, done: true };
-        return obj2;
+        const obj5 = { value, done: true };
+        return obj5;
       } else {
         c4 = 0;
         c6 = 3;
-        obj = { value, done: true };
+        const obj = { value, done: true };
         return obj;
       }
     } catch (tmp15) {
@@ -105,13 +105,13 @@ class DatabaseManager extends Store {
       }
     }
     obj.LOGOUT = LOGOUT;
-    tmp = new tmp(tmp2, obj, closure_0(closure_3[4]).DispatchBand.Early, LOGOUT, new.target, tmp, tmp2);
-    closure_0 = tmp;
+    tmp1 = new tmp(tmp2, obj, closure_0(closure_3[4]).DispatchBand.Early, LOGOUT, new.target, tmp, tmp2);
+    closure_0 = tmp1;
     map = new Map();
-    tmp.databases = map;
-    tmp.activeUserId = null;
-    tmp.preventWritingCachesAgainThisSession = false;
-    return tmp;
+    tmp1.databases = map;
+    tmp1.activeUserId = null;
+    tmp1.preventWritingCachesAgainThisSession = false;
+    return tmp1;
   }
 }
 const prototype = DatabaseManager.prototype;
@@ -267,8 +267,8 @@ function carefullySpeculativelyOpen(userId) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -282,8 +282,8 @@ function carefullySpeculativelyOpen(userId) {
             throw value;
           } else if (arg0 === 2) {
             c3 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
             closure_1 = tmp2;
             closure_0 = tmp3;
@@ -293,7 +293,7 @@ function carefullySpeculativelyOpen(userId) {
             } else if (null != closure_0) {
               c2 = 1;
               c3 = 1;
-              const obj1 = {
+              const obj4 = {
                 value: (function trySpeculativelyOpenDatabaseAsync() {
                   self = this;
                   const apply = closure_1_8.apply;
@@ -306,7 +306,7 @@ function carefullySpeculativelyOpen(userId) {
                 })(closure_0),
                 done: false,
               };
-              return obj1;
+              return obj4;
             }
             c3 = 3;
           }
@@ -315,8 +315,8 @@ function carefullySpeculativelyOpen(userId) {
           throw value;
         } else if (arg0 === 2) {
           c3 = 3;
-          const obj2 = { value, done: true };
-          return obj2;
+          const obj5 = { value, done: true };
+          return obj5;
         } else {
           closure_128_0 = value;
           verboseResult = null;
@@ -333,10 +333,10 @@ function carefullySpeculativelyOpen(userId) {
         }
         const _HermesInternal2 = HermesInternal;
         closure_1_6.verbose("discarding speculative database (" + closure_129_0 + " \u2192 " + closure_128_0 + ")");
-        obj = closure_128_0;
         if (closure_128_0 != verboseResult) {
           verboseResult = obj.close();
         }
+        obj = closure_128_0;
       } catch (tmp32) {
         c3 = tmp;
         throw tmp32;
@@ -359,7 +359,7 @@ let obj = {
     return closure_0.handleAuthenticationStoreChanged();
   },
 };
-tmp = new tmp(
+let tmp2 = new tmp(
   Dispatcher,
   obj,
   fn(573).DispatchBand.Early,
@@ -373,12 +373,12 @@ tmp = new tmp(
   globalThis,
   fn,
 );
-let closure_129_0 = tmp;
+let closure_129_0 = tmp2;
 let tmp3 = new LoggerDefault("DatabaseManager");
-tmp.databases = new Map();
-tmp.activeUserId = null;
-tmp.preventWritingCachesAgainThisSession = false;
+tmp2.databases = new Map();
+tmp2.activeUserId = null;
+tmp2.preventWritingCachesAgainThisSession = false;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/app_database/system/DatabaseManager.tsx");
 
-export default tmp;
+export default tmp2;

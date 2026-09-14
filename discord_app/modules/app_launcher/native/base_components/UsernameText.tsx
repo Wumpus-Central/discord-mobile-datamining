@@ -18,38 +18,37 @@ export default function UsernameText(color) {
   if (str === undefined) {
     str = "text-default";
   }
-  let obj = { variant, color: str };
-  let obj1 = NicknameUtils;
-  const name = obj1.getName(color.guildId, null, user);
+  const obj = { variant, color: str };
+  const name = NicknameUtils.getName(color.guildId, null, user);
   if (user.hasUniqueUsername()) {
-    str = user.toString();
+    let str1 = user.toString();
   } else {
-    obj = { children: null };
+    const obj3 = { children: null };
     const items = [user.toString()];
-    obj = {};
+    const obj4 = {};
     const merged = Object.assign(obj);
-    obj.color = "text-muted";
+    obj4.color = "text-muted";
     const items1 = ["#", user.discriminator];
-    obj.children = items1;
-    items[1] = React2(Text_Text.Text, obj);
-    obj.children = items;
-    str = React2(React3, obj);
+    obj4.children = items1;
+    items[1] = React2(Text_Text.Text, obj4);
+    obj3.children = items;
+    str1 = React2(React3, obj3);
   }
-  obj1 = {};
+  const obj5 = {};
   const merged1 = Object.assign(obj);
-  let tmp13 = str;
+  let tmp13 = str1;
   if (tmp4) {
-    const obj2 = { children: null };
+    const obj6 = { children: null };
     const items2 = [name, " "];
-    const obj3 = {};
+    const obj7 = {};
     const merged2 = Object.assign(obj);
-    obj3.color = "text-muted";
-    const items3 = ["(", str, ")"];
-    obj3.children = items3;
-    items2[2] = React2(Text_Text.Text, obj3);
-    obj2.children = items2;
-    tmp13 = React2(React3, obj2);
+    obj7.color = "text-muted";
+    const items3 = ["(", str1, ")"];
+    obj7.children = items3;
+    items2[2] = React2(Text_Text.Text, obj7);
+    obj6.children = items2;
+    tmp13 = React2(React3, obj6);
   }
-  obj1.children = tmp13;
-  return React4(Text_Text.Text, obj1);
+  obj5.children = tmp13;
+  return React4(Text_Text.Text, obj5);
 }

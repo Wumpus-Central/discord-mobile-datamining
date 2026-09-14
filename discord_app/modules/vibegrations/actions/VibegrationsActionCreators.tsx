@@ -50,8 +50,8 @@ let closure_12 = async function _listProjects() {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -65,8 +65,8 @@ let closure_12 = async function _listProjects() {
             throw value;
           } else if (arg0 === 2) {
             c6 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
             closure_3 = tmp3;
             closure_2 = tmp7;
@@ -85,22 +85,21 @@ let closure_12 = async function _listProjects() {
             }
             if ("loading" !== type) {
               closure_9 = tmp32;
-              let obj5 = DispatcherDefault;
-              const obj1 = { type: "VIBEGRATIONS_PROJECTS_FETCH_START", guildId: tmp32 };
-              obj5.dispatch(obj1);
+              const obj5 = { type: "VIBEGRATIONS_PROJECTS_FETCH_START", guildId: tmp32 };
+              DispatcherDefault.dispatch(obj5);
               c4 = 1;
               const HTTP = HTTPUtils.HTTP;
               const request = { url: constants.VIBEGRATIONS_PROJECTS, query: null, rejectWithError: true };
               let tmp43;
               if (null != guild_id) {
-                const obj2 = { guild_id };
-                tmp43 = obj2;
+                const obj7 = { guild_id };
+                tmp43 = obj7;
               }
               request.query = tmp43;
               c5 = 2;
               c6 = 1;
-              let obj3 = { value: HTTP.get(request), done: false };
-              return obj3;
+              const obj8 = { value: HTTP.get(request), done: false };
+              return obj8;
             } else {
               tmp7 = null != tmp32;
               if (tmp7) {
@@ -114,23 +113,23 @@ let closure_12 = async function _listProjects() {
         } else {
           if (1 === tmp7) {
             c4 = 0;
-            obj3 = closure_131_1(closure_131_2[5]);
-            const obj4 = { type: "VIBEGRATIONS_PROJECTS_FETCH_FAIL", guildId: closure_130_0 };
-            obj3.dispatch(obj4);
+            const obj9 = { type: "VIBEGRATIONS_PROJECTS_FETCH_FAIL", guildId: closure_130_0 };
+            closure_131_1(closure_131_2[5]).dispatch(obj9);
+            const obj4 = closure_131_1(closure_131_2[5]);
           } else if (arg0 === 1) {
             c6 = 3;
             throw value;
           } else if (arg0 === 2) {
             c4 = 0;
             c6 = 3;
-            obj5 = { value, done: true };
-            return obj5;
+            const obj10 = { value, done: true };
+            return obj10;
           } else {
             body = value.body;
-            obj = closure_131_1(closure_131_2[5]);
-            const obj6 = { type: "VIBEGRATIONS_PROJECTS_FETCH_SUCCESS", projects: body, guildId: closure_130_0 };
-            obj.dispatch(obj6);
+            const obj11 = { type: "VIBEGRATIONS_PROJECTS_FETCH_SUCCESS", projects: body, guildId: closure_130_0 };
+            closure_131_1(closure_131_2[5]).dispatch(obj11);
             c4 = 0;
+            const obj = closure_131_1(closure_131_2[5]);
           }
           closure_130_2 = closure_131_10;
           closure_131_10 = null;
@@ -184,12 +183,23 @@ let closure_14 = async function _getProject(arg0) {
       ok = closure_130_2.ok;
     }
     if (ok) {
-      closure_131_1(closure_131_2[5]).dispatch({ type: "VIBEGRATIONS_PROJECT_UPDATE_SUCCESS", project: closure_130_2.body.project });
+      closure_131_1(closure_131_2[5]).dispatch({
+        type: "VIBEGRATIONS_PROJECT_UPDATE_SUCCESS",
+        project: closure_130_2.body.project,
+      });
       (function updateIntegrationStatus(projectId, integrationStatus) {
-        signal(closure_1_2[5]);
-        const obj = { type: "VIBEGRATIONS_PROJECT_INTEGRATION_STATUS_UPDATE", projectId, integrationStatus };
-        obj.dispatch(obj);
-      })(closure_130_0, { bot_permissions_changed: closure_130_2.body.bot_permissions_changed, integration_installed: closure_130_2.body.integration_installed, preview_ready: closure_130_2.body.preview_ready, has_activity: closure_130_2.body.has_activity, owner_authorization_revoked: closure_130_2.body.owner_authorization_revoked });
+        signal(closure_1_2[5]).dispatch({
+          type: "VIBEGRATIONS_PROJECT_INTEGRATION_STATUS_UPDATE",
+          projectId,
+          integrationStatus,
+        });
+      })(closure_130_0, {
+        bot_permissions_changed: closure_130_2.body.bot_permissions_changed,
+        integration_installed: closure_130_2.body.integration_installed,
+        preview_ready: closure_130_2.body.preview_ready,
+        has_activity: closure_130_2.body.has_activity,
+        owner_authorization_revoked: closure_130_2.body.owner_authorization_revoked,
+      });
       closure_131_1(closure_131_2[5]);
     }
     return closure_130_2;
@@ -203,8 +213,8 @@ let closure_15 = async function _createProject(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -217,8 +227,8 @@ let closure_15 = async function _createProject(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c6 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           closure_2 = tmp3;
           closure_1 = tmp7;
@@ -226,21 +236,23 @@ let closure_15 = async function _createProject(arg0) {
           c4 = 1;
           const HTTP = HTTPUtils.HTTP;
           const request = { url: constants.VIBEGRATIONS_PROJECTS, body: null, rejectWithError: false };
-          const obj1 = { flags: VibegrationsTypes.VibegrationsProjectFlags.PUBLIC };
+          const obj4 = { flags: VibegrationsTypes.VibegrationsProjectFlags.PUBLIC };
           const merged = Object.assign(closure_0);
-          request.body = obj1;
+          request.body = obj4;
           c5 = 2;
           c6 = 1;
-          const obj2 = { value: HTTP.post(request), done: false };
-          return obj2;
+          const obj7 = { value: HTTP.post(request), done: false };
+          return obj7;
         }
       } else if (1 === tmp7) {
         c4 = 0;
         closure_129_1 = closure_3;
-        let obj4 = closure_130_0(closure_130_2[10]);
-        const result = obj4.classifyCreateFailure(closure_129_1);
-        let obj5 = closure_130_0(closure_130_2[10]);
-        const vibegrationsCreateError = new closure_130_0(closure_130_2[10]).VibegrationsCreateError(result, obj5.createFailureStatus(closure_129_1));
+        const result = closure_130_0(closure_130_2[10]).classifyCreateFailure(closure_129_1);
+        const obj5 = closure_130_0(closure_130_2[10]);
+        const vibegrationsCreateError = new closure_130_0(closure_130_2[10]).VibegrationsCreateError(
+          result,
+          closure_130_0(closure_130_2[10]).createFailureStatus(closure_129_1),
+        );
         throw vibegrationsCreateError;
       } else if (arg0 === 1) {
         c6 = 3;
@@ -248,17 +260,16 @@ let closure_15 = async function _createProject(arg0) {
       } else if (arg0 === 2) {
         c4 = 0;
         c6 = 3;
-        const obj3 = { value, done: true };
-        return obj3;
+        const obj8 = { value, done: true };
+        return obj8;
       } else {
         body = value.body;
         c4 = 0;
-        obj = closure_130_1(closure_130_2[5]);
-        obj4 = { type: "VIBEGRATIONS_PROJECT_CREATE_SUCCESS", project: body };
-        obj.dispatch(obj4);
+        const obj9 = { type: "VIBEGRATIONS_PROJECT_CREATE_SUCCESS", project: body };
+        closure_130_1(closure_130_2[5]).dispatch(obj9);
         c6 = 3;
-        obj5 = { value: body.id, done: true };
-        return obj5;
+        const obj10 = { value: body.id, done: true };
+        return obj10;
       }
     } catch (tmp34) {
       closure_3 = tmp34;
@@ -293,7 +304,10 @@ let closure_17 = async function _patchProject(arg0) {
     await HTTP.patch(request);
     closure_130_0 = value;
     if (closure_130_0.ok) {
-      closure_131_1(closure_131_2[5]).dispatch({ type: "VIBEGRATIONS_PROJECT_UPDATE_SUCCESS", project: closure_130_0.body });
+      closure_131_1(closure_131_2[5]).dispatch({
+        type: "VIBEGRATIONS_PROJECT_UPDATE_SUCCESS",
+        project: closure_130_0.body,
+      });
       closure_131_1(closure_131_2[5]);
     }
     return closure_130_0;
@@ -312,8 +326,8 @@ let closure_18 = async function _setProjectIcon(arg0) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj3 = { value, done: true };
+        return obj3;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -326,18 +340,18 @@ let closure_18 = async function _setProjectIcon(arg0) {
             throw value;
           } else if (arg0 === 2) {
             c6 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj4 = { value, done: true };
+            return obj4;
           } else {
             closure_3 = tmp3;
             closure_2 = tmp7;
             closure_130_0 = undefined;
             closure_130_1 = undefined;
-            let obj1 = { icon };
+            const obj5 = { icon };
             c5 = 1;
             c6 = 1;
-            const obj2 = { value: patchProject(closure_0, obj1), done: false };
-            return obj2;
+            const obj6 = { value: patchProject(closure_0, obj5), done: false };
+            return obj6;
           }
         } else {
           if (1 === tmp7) {
@@ -346,19 +360,18 @@ let closure_18 = async function _setProjectIcon(arg0) {
               throw value;
             } else if (arg0 === 2) {
               c6 = 3;
-              const obj3 = { value, done: true };
-              return obj3;
+              const obj7 = { value, done: true };
+              return obj7;
             } else {
               closure_130_0 = value;
               if (closure_130_0.ok) {
                 closure_130_1 = closure_130_0.body.preview_application_id;
                 if (null != closure_130_1) {
                   c4 = 1;
-                  obj1 = closure_131_0(closure_131_2[11]);
                   c5 = 3;
                   c6 = 1;
-                  const obj4 = { value: obj1.fetchApplication(closure_130_1), done: false };
-                  return obj4;
+                  const obj8 = { value: closure_131_0(closure_131_2[11]).fetchApplication(closure_130_1), done: false };
+                  return obj8;
                 }
               }
             }
@@ -373,7 +386,7 @@ let closure_18 = async function _setProjectIcon(arg0) {
             }
             c4 = 0;
             c6 = 3;
-            obj = { value, done: true };
+            const obj = { value, done: true };
             return obj;
           }
           c6 = 3;
@@ -396,7 +409,6 @@ let closure_19 = async function _deleteProject() {
   const HTTP = HTTPUtils.HTTP;
   await HTTP.del({ url: Endpoints.VIBEGRATIONS_PROJECT(closure_0), rejectWithError: false });
   closure_129_1 = value;
-  { url: Endpoints.VIBEGRATIONS_PROJECT(closure_0), rejectWithError: false };
   closure_130_1(closure_130_2[5]).dispatch({ type: "VIBEGRATIONS_PROJECT_DELETE_SUCCESS", projectId: closure_129_0 });
   return closure_129_1;
 };
@@ -413,8 +425,8 @@ let closure_20 = async function _refreshPublishedProject(arg0, arg1) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj3 = { value, done: true };
+        return obj3;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -427,8 +439,8 @@ let closure_20 = async function _refreshPublishedProject(arg0, arg1) {
             throw value;
           } else if (arg0 === 2) {
             c5 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj4 = { value, done: true };
+            return obj4;
           } else {
             closure_3 = tmp5;
             closure_2 = tmp2;
@@ -450,13 +462,13 @@ let closure_20 = async function _refreshPublishedProject(arg0, arg1) {
             throw value;
           } else if (arg0 === 2) {
             c5 = 3;
-            let obj1 = { value, done: true };
-            return obj1;
+            const obj6 = { value, done: true };
+            return obj6;
           } else {
             c4 = 2;
             c5 = 1;
-            const obj2 = { value: closure_131_13(closure_130_0), done: false };
-            return obj2;
+            const obj8 = { value: closure_131_13(closure_130_0), done: false };
+            return obj8;
           }
         } else {
           if (2 === tmp5) {
@@ -465,8 +477,8 @@ let closure_20 = async function _refreshPublishedProject(arg0, arg1) {
               throw value;
             } else if (arg0 === 2) {
               c5 = 3;
-              const obj3 = { value, done: true };
-              return obj3;
+              const obj9 = { value, done: true };
+              return obj9;
             } else {
               body = value.body;
               closure_130_3 = body.bot_permissions_changed;
@@ -479,16 +491,15 @@ let closure_20 = async function _refreshPublishedProject(arg0, arg1) {
               }
               closure_130_6 = application_id;
               if (null != closure_130_6) {
-                let obj6 = closure_131_0(closure_131_2[11]);
                 c4 = 3;
                 c5 = 1;
-                let obj4 = { value: obj6.fetchApplication(closure_130_6), done: false };
-                return obj4;
+                const obj10 = { value: closure_131_0(closure_131_2[11]).fetchApplication(closure_130_6), done: false };
+                return obj10;
               } else {
-                obj4 = closure_131_0(closure_131_2[6]);
-                const obj5 = { isPreview: isPreview2 };
-                const result = obj4.trackVibegrationDeployed(closure_130_0, obj5);
+                const obj11 = { isPreview: isPreview2 };
+                const result = closure_131_0(closure_131_2[6]).trackVibegrationDeployed(closure_130_0, obj11);
                 c5 = 3;
+                const obj5 = closure_131_0(closure_131_2[6]);
               }
             }
           } else if (3 === tmp5) {
@@ -497,20 +508,17 @@ let closure_20 = async function _refreshPublishedProject(arg0, arg1) {
               throw value;
             } else if (arg0 === 2) {
               c5 = 3;
-              obj6 = { value, done: true };
-              return obj6;
+              const obj12 = { value, done: true };
+              return obj12;
             } else {
-              obj1 = closure_131_0(closure_131_2[12]);
-              const widgetConfigs = obj1.fetchWidgetConfigs(closure_130_6, { force: true });
+              const widgetConfigs = closure_131_0(closure_131_2[12]).fetchWidgetConfigs(closure_130_6, { force: true });
               c4 = 4;
               c5 = 1;
-              const obj7 = {
-                value: widgetConfigs.catch(() => {
-
-                          }),
-                done: false
+              const obj13 = {
+                value: widgetConfigs.catch(() => {}),
+                done: false,
               };
-              return obj7;
+              return obj13;
             }
           } else if (arg0 === 1) {
             c5 = 3;
@@ -529,7 +537,7 @@ let closure_20 = async function _refreshPublishedProject(arg0, arg1) {
             }
           }
           c5 = 3;
-          obj = { value, done: true };
+          const obj = { value, done: true };
           return obj;
         }
       } catch (tmp43) {
@@ -549,15 +557,21 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/vibegrations/actions/VibegrationsActionCreators.tsx");
 
 export const trackPublishFailed = function trackPublishFailed(projectId, message, isPreview) {
-  const obj = { location: "publish", code: VibegrationsAnalytics.VibegrationErrorCodes.PUBLISH_FAILED, message: null, details: null, isPreview: null };
+  const obj2 = {
+    location: "publish",
+    code: VibegrationsAnalytics.VibegrationErrorCodes.PUBLISH_FAILED,
+    message: null,
+    details: null,
+    isPreview: null,
+  };
   let str = "";
   if (isPreview) {
     str = "-preview";
   }
-  obj.message = "publish" + str + " failed";
-  obj.details = message;
-  obj.isPreview = isPreview;
-  const result = obj.trackVibegrationErrored(projectId, obj);
+  obj2.message = "publish" + str + " failed";
+  obj2.details = message;
+  obj2.isPreview = isPreview;
+  const result = VibegrationsAnalytics.trackVibegrationErrored(projectId, obj2);
 };
 export { reloadVibegrationsAppFrames };
 export const reloadVibegrationsProjectFrames = function reloadVibegrationsProjectFrames(arg0) {
@@ -613,8 +627,7 @@ export const deleteProject = function deleteProject() {
   return applyArgumentsResult;
 };
 export const setSelectedProjectForGuild = function setSelectedProjectForGuild(guildId, projectId) {
-  const obj = { type: "VIBEGRATIONS_PROJECT_SELECT", guildId, projectId };
-  obj.dispatch(obj);
+  DispatcherDefault.dispatch({ type: "VIBEGRATIONS_PROJECT_SELECT", guildId, projectId });
 };
 export const refreshPublishedProject = function refreshPublishedProject() {
   const self = this;
@@ -627,22 +640,17 @@ export const refreshPublishedProject = function refreshPublishedProject() {
   return applyArgumentsResult;
 };
 export const setComposerDraft = function setComposerDraft(projectId, draft) {
-  const obj = { type: "VIBEGRATIONS_COMPOSER_DRAFT_SET", projectId, draft };
-  obj.dispatch(obj);
+  DispatcherDefault.dispatch({ type: "VIBEGRATIONS_COMPOSER_DRAFT_SET", projectId, draft });
 };
 export const setChatSidebarWidth = function setChatSidebarWidth(width) {
-  const obj = { type: "VIBEGRATIONS_CHAT_SIDEBAR_WIDTH_SET", width };
-  obj.dispatch(obj);
+  DispatcherDefault.dispatch({ type: "VIBEGRATIONS_CHAT_SIDEBAR_WIDTH_SET", width });
 };
 export const setBuilderPreviewApplicationId = function setBuilderPreviewApplicationId(applicationId) {
-  const obj = { type: "VIBEGRATIONS_BUILDER_PREVIEW_APPLICATION_SET", applicationId };
-  obj.dispatch(obj);
+  DispatcherDefault.dispatch({ type: "VIBEGRATIONS_BUILDER_PREVIEW_APPLICATION_SET", applicationId });
 };
 export const setBuilderPreviewMobile = function setBuilderPreviewMobile(enabled) {
-  const obj = { type: "VIBEGRATIONS_BUILDER_PREVIEW_MOBILE_SET", enabled };
-  obj.dispatch(obj);
+  DispatcherDefault.dispatch({ type: "VIBEGRATIONS_BUILDER_PREVIEW_MOBILE_SET", enabled });
 };
 export const markLogsSeen = function markLogsSeen(projectId) {
-  const obj = { type: "VIBEGRATIONS_LOGS_SEEN", projectId };
-  obj.dispatch(obj);
+  DispatcherDefault.dispatch({ type: "VIBEGRATIONS_LOGS_SEEN", projectId });
 };

@@ -21,19 +21,18 @@ export default function useGroupDMNitroUpsellAction(audience) {
   }
   const items = [acquisitionStrategy, audience, _location, onCheckout];
   return onCheckout.useCallback(() => {
-    let obj = GroupDMNitroUpsellModel;
-    const groupDMNitroUpsellRoute = obj.getGroupDMNitroUpsellRoute(audience, acquisitionStrategy);
+    const groupDMNitroUpsellRoute = GroupDMNitroUpsellModel.getGroupDMNitroUpsellRoute(audience, acquisitionStrategy);
     if (GroupDMNitroUpsellModel.GroupDMNitroUpsellRoute.MANAGE === groupDMNitroUpsellRoute) {
-      obj = { location: _location };
-      AnalyticsUtilsDefault.track(constants.PREMIUM_PROMOTION_OPENED, obj);
-      let tmpResult = openUserSettings;
-      obj = { screen: constants2.PREMIUM_MANAGE_PLAN };
-      tmpResult.openUserSettings(obj);
+      const obj3 = { location: _location };
+      AnalyticsUtilsDefault.track(constants.PREMIUM_PROMOTION_OPENED, obj3);
+      const obj4 = { screen: constants2.PREMIUM_MANAGE_PLAN };
+      openUserSettings.openUserSettings(obj4);
+      const tmpResult = openUserSettings;
     } else if (GroupDMNitroUpsellModel.GroupDMNitroUpsellRoute.MARKETING === groupDMNitroUpsellRoute) {
-      const obj1 = { location: _location };
-      obj1.track(constants.PREMIUM_PROMOTION_OPENED, obj1);
-      tmpResult = PremiumMarketingUtil;
-      const result = tmpResult.navigateToPremiumHomePage();
+      const obj6 = { location: _location };
+      AnalyticsUtilsDefault.track(constants.PREMIUM_PROMOTION_OPENED, obj6);
+      const result = PremiumMarketingUtil.navigateToPremiumHomePage();
+      const tmpResult2 = PremiumMarketingUtil;
     } else if (GroupDMNitroUpsellModel.GroupDMNitroUpsellRoute.CHECKOUT === groupDMNitroUpsellRoute) {
       if (onCheckout != null) {
         onCheckout();

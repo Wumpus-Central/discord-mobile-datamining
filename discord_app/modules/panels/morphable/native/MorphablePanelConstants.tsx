@@ -1,7 +1,8 @@
 // discord_app/modules/panels/morphable/native/MorphablePanelConstants.tsx
-import PlatformUtils from "../../../../utils/PlatformUtils.tsx";
+import PlatformUtils_mod from "../../../../utils/PlatformUtils.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
 
+let PlatformUtils = PlatformUtils_mod;
 PlatformUtils = PlatformUtils.isIOS();
 const result = size.fileFinishedImporting("modules/panels/morphable/native/MorphablePanelConstants.tsx");
 

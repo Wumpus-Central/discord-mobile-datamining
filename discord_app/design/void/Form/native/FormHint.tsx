@@ -8,13 +8,13 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 const Platform = fn(17).Platform;
 const jsx = fn(21).jsx;
-fn(4636);
-let createStyles = { formHintText: null, redesignHorizontalPadding: null, horizonatalPadding: null };
-createStyles = { fontSize: 14, marginBottom: 0, color: nativeDefault.colors.TEXT_MUTED };
-createStyles.formHintText = createStyles;
-createStyles.redesignHorizontalPadding = { paddingHorizontal: 12 };
-createStyles.horizonatalPadding = { paddingHorizontal: 16 };
-let closure_4 = createStyles.createStyles(createStyles);
+const createStyles = fn(4636);
+let obj2 = {
+  formHintText: { fontSize: 14, marginBottom: 0, color: nativeDefault.colors.TEXT_MUTED },
+  redesignHorizontalPadding: { paddingHorizontal: 12 },
+  horizonatalPadding: { paddingHorizontal: 16 },
+};
+let closure_4 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("design/void/Form/native/FormHint.tsx");
 
@@ -30,10 +30,10 @@ export default function FormHint(inset) {
     if (!flag) {
       redesignHorizontalPadding = tmp.redesignHorizontalPadding;
     }
-    let obj = { variant: "text-sm/medium", color: "text-muted", style: null, children: null };
+    const obj2 = { variant: "text-sm/medium", color: "text-muted", style: null, children: null };
     const items = [redesignHorizontalPadding, style];
-    obj.style = items;
-    obj.children = children;
+    obj2.style = items;
+    obj2.children = children;
     let tmp4Result = jsx(Text_Text.Text, {
       variant: "text-sm/medium",
       color: "text-muted",
@@ -46,7 +46,7 @@ export default function FormHint(inset) {
     if (!flag) {
       horizonatalPadding = tmp.horizonatalPadding;
     }
-    obj = { style: null, children: null };
+    const obj = { style: null, children: null };
     items1[1] = horizonatalPadding;
     items1[2] = style;
     obj.style = items1;

@@ -8,9 +8,13 @@ const result = size.fileFinishedImporting("modules/app_dms/useShowTryItOutButton
 
 export default function useShowTryItOutButtonInAppLauncher(arg0) {
   ({ context, application, botUserId } = arg0);
-  const obj = { context, applicationId: application.id, botUserId };
-  let isPrimaryAppCommandUsableInAppDM = obj.useIsPrimaryAppCommandUsableInAppDM(obj);
+  let isPrimaryAppCommandUsableInAppDM = getPrimaryAppCommand.useIsPrimaryAppCommandUsableInAppDM({
+    context,
+    applicationId: application.id,
+    botUserId,
+  });
   let channel;
+  const obj2 = { context, applicationId: application.id, botUserId };
   if ("channel" === context.type) {
     channel = context.channel;
   }

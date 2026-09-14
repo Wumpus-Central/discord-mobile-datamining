@@ -2,6 +2,7 @@
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import useToken from "../../../../../design/tokens/native/useToken.tsx";
 import FastImageDefault from "../../../../../components_native/common/FastImage.tsx";
+import _modDef5745 from "../../../../../../_runtime/metro/05745__.js";
 import ProfileFrameLayerOrder from "../../../../../../discord_common/js/shared/shared-constants/ProfileFrameLayerOrder.tsx";
 import ProfileFrameDefault from "../ProfileFrame.tsx";
 import scaleProfileFrameDefault from "../../scaleProfileFrame.tsx";
@@ -17,18 +18,19 @@ get_ActivityIndicator = fn(17);
 const UserProfileThemeTypes = fn(7311).UserProfileThemeTypes;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-fn(4636);
-let createStyles = { profileFrameContainer: { flex: 1 }, profileContainer: null, sampleProfile: null };
-createStyles = {
-  flex: 1,
-  overflow: "hidden",
-  borderWidth: 1,
-  borderColor: nativeDefault.colors.BORDER_NORMAL,
-  borderRadius: nativeDefault.radii.xs,
+const createStyles = fn(4636);
+let obj2 = {
+  profileFrameContainer: { flex: 1 },
+  profileContainer: {
+    flex: 1,
+    overflow: "hidden",
+    borderWidth: 1,
+    borderColor: nativeDefault.colors.BORDER_NORMAL,
+    borderRadius: nativeDefault.radii.xs,
+  },
+  sampleProfile: { width: "100%", aspectRatio: fn(8925).SAMPLE_PROFILE_ASPECT_RATIO },
 };
-createStyles.profileContainer = createStyles;
-createStyles.sampleProfile = { width: "100%", aspectRatio: fn(8925).SAMPLE_PROFILE_ASPECT_RATIO };
-let closure_9 = createStyles.createStyles(createStyles);
+let closure_9 = createStyles.createStyles(obj2);
 const size = fn(2);
 let result = size.fileFinishedImporting(
   "modules/collectibles/profile_frames/native/previews/ProfileFrameSamplePreview.tsx",
@@ -40,9 +42,9 @@ export default function ProfileFrameSamplePreview(previewWidth) {
   const innerWidth = profileFrame.innerWidth;
   const result = (previewWidth.previewWidth * innerWidth) / (innerWidth + 2 * profileFrame.overflowHorizontal);
   ({ overflowTop, overflowBottom, overflowHorizontal } = scaleProfileFrameDefault(profileFrame, result));
-  let obj = useToken;
-  const token = obj.useToken(profileBackgroundColor);
-  obj = {
+  const tmp5 = scaleProfileFrameDefault(profileFrame, result);
+  const token = useToken.useToken(profileBackgroundColor);
+  const obj2 = {
     frame: profileFrame,
     filterLayer,
     profileThemeType: UserProfileThemeTypes.PREVIEW,
@@ -50,13 +52,12 @@ export default function ProfileFrameSamplePreview(previewWidth) {
     containerWidth: null,
     containerHeight: null,
   };
-  const tmp5 = scaleProfileFrameDefault(profileFrame, result);
-  obj.frameOrder = ProfileFrameLayerOrder.ProfileFrameLayerOrder.BACK;
-  obj.containerWidth = result;
-  obj.containerHeight = previewHeight;
-  let tmp12 = timestampProducer(ProfileFrameDefault, obj);
+  obj2.frameOrder = ProfileFrameLayerOrder.ProfileFrameLayerOrder.BACK;
+  obj2.containerWidth = result;
+  obj2.containerHeight = previewHeight;
+  let tmp12 = timestampProducer(ProfileFrameDefault, obj2);
   const xs = nativeDefault.radii.xs;
-  obj = {
+  const obj3 = {
     style: {
       position: "absolute",
       top: -overflowTop,
@@ -67,12 +68,12 @@ export default function ProfileFrameSamplePreview(previewWidth) {
     maskElement: null,
     children: null,
   };
-  const obj1 = { style: absoluteFill.absoluteFill, children: null };
-  const obj2 = {
+  const obj4 = { style: absoluteFill.absoluteFill, children: null };
+  const obj5 = {
     style: { position: "absolute", top: 0, left: 0, right: 0, height: overflowTop, backgroundColor: "black" },
   };
   const items = [
-    timestampProducer(React4, obj2),
+    timestampProducer(React4, obj5),
     timestampProducer(React4, {
       style: { position: "absolute", bottom: 0, left: 0, right: 0, height: overflowBottom, backgroundColor: "black" },
     }),
@@ -141,39 +142,110 @@ export default function ProfileFrameSamplePreview(previewWidth) {
       },
     }),
   ];
-  obj1.children = items;
-  obj.maskElement = React5(React4, obj1);
-  obj.children = timestampProducer(React4, {
+  obj4.children = items;
+  obj3.maskElement = React5(React4, obj4);
+  obj3.children = timestampProducer(React4, {
     style: { marginTop: overflowTop, marginBottom: overflowBottom, marginHorizontal: overflowHorizontal, flex: 1 },
     children: tmp12,
   });
-  const obj11 = { style: null, children: null };
+  const obj14 = { style: null, children: null };
   const items1 = [
     tmp.profileFrameContainer,
     { width: result, marginTop: overflowTop, marginBottom: overflowBottom, marginHorizontal: overflowHorizontal },
   ];
-  obj11.style = items1;
+  obj14.style = items1;
   if (null == profileBackgroundColor) {
-    tmp12 = timestampProducer(tmp13, obj);
+    tmp12 = timestampProducer(tmp13, obj3);
   }
   const items2 = [tmp12, ,];
   const items3 = [tmp.profileContainer];
   let tmp16 = null != token;
   if (tmp16) {
-    const obj12 = { backgroundColor: token };
-    tmp16 = obj12;
+    const obj15 = { backgroundColor: token };
+    tmp16 = obj15;
   }
-  const obj13 = { style: items3, children: null };
+  const obj16 = { style: items3, children: null };
   items3[1] = tmp16;
-  const obj14 = { source: null, style: null, resizeMode: "cover" };
-  const obj15 = { uri: null };
-  let tmp3Result = FastImageDefault;
-  obj15.uri = _modDef8950;
-  obj14.source = obj15;
-  obj14.style = tmp.sampleProfile;
-  obj13.children = timestampProducer(tmp3Result, obj14);
-  items2[1] = timestampProducer(React4, obj13);
-  const obj16 = {
+  const obj17 = { source: null, style: null, resizeMode: "cover" };
+  const obj18 = { uri: null };
+  const obj10 = {
+    style: {
+      position: "absolute",
+      top: overflowTop - xs,
+      right: overflowHorizontal - xs,
+      width: 2 * xs,
+      height: 2 * xs,
+      borderRadius: xs,
+      backgroundColor: "black",
+    },
+  };
+  const obj11 = {
+    style: {
+      position: "absolute",
+      bottom: overflowBottom - xs,
+      left: overflowHorizontal - xs,
+      width: 2 * xs,
+      height: 2 * xs,
+      borderRadius: xs,
+      backgroundColor: "black",
+    },
+  };
+  const obj12 = {
+    style: {
+      position: "absolute",
+      bottom: overflowBottom - xs,
+      right: overflowHorizontal - xs,
+      width: 2 * xs,
+      height: 2 * xs,
+      borderRadius: xs,
+      backgroundColor: "black",
+    },
+  };
+  const obj13 = {
+    style: { marginTop: overflowTop, marginBottom: overflowBottom, marginHorizontal: overflowHorizontal, flex: 1 },
+    children: tmp12,
+  };
+  const obj6 = {
+    style: { position: "absolute", bottom: 0, left: 0, right: 0, height: overflowBottom, backgroundColor: "black" },
+  };
+  const obj7 = {
+    style: {
+      position: "absolute",
+      top: overflowTop,
+      bottom: overflowBottom,
+      left: 0,
+      width: overflowHorizontal,
+      backgroundColor: "black",
+    },
+  };
+  const obj8 = {
+    style: {
+      position: "absolute",
+      top: overflowTop,
+      bottom: overflowBottom,
+      right: 0,
+      width: overflowHorizontal,
+      backgroundColor: "black",
+    },
+  };
+  const obj9 = {
+    style: {
+      position: "absolute",
+      top: overflowTop - xs,
+      left: overflowHorizontal - xs,
+      width: 2 * xs,
+      height: 2 * xs,
+      borderRadius: xs,
+      backgroundColor: "black",
+    },
+  };
+  tmp13 = _modDef5745;
+  obj18.uri = _modDef8950;
+  obj17.source = obj18;
+  obj17.style = tmp.sampleProfile;
+  obj16.children = timestampProducer(FastImageDefault, obj17);
+  items2[1] = timestampProducer(React4, obj16);
+  const obj19 = {
     frame: profileFrame,
     filterLayer,
     profileThemeType: UserProfileThemeTypes.PREVIEW,
@@ -181,11 +253,11 @@ export default function ProfileFrameSamplePreview(previewWidth) {
     containerWidth: null,
     containerHeight: null,
   };
-  tmp3Result = ProfileFrameDefault;
-  obj16.frameOrder = ProfileFrameLayerOrder.ProfileFrameLayerOrder.FRONT;
-  obj16.containerWidth = result;
-  obj16.containerHeight = previewHeight - overflowTop - overflowBottom;
-  items2[2] = timestampProducer(tmp3Result, obj16);
-  obj11.children = items2;
-  return React5(React4, obj11);
+  const tmp3Result = FastImageDefault;
+  obj19.frameOrder = ProfileFrameLayerOrder.ProfileFrameLayerOrder.FRONT;
+  obj19.containerWidth = result;
+  obj19.containerHeight = previewHeight - overflowTop - overflowBottom;
+  items2[2] = timestampProducer(ProfileFrameDefault, obj19);
+  obj14.children = items2;
+  return React5(React4, obj14);
 }

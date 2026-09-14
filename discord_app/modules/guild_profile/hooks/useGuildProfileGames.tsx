@@ -5,6 +5,8 @@ import GameRecord from "../../games/GameRecord.tsx";
 import GameStore from "../../games/GameStore.tsx";
 import AuthenticationStore from "../../../stores/AuthenticationStore.tsx";
 
+const require = globalThis.__r;
+
 require = fn;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_profile/hooks/useGuildProfileGames.tsx");
@@ -13,9 +15,8 @@ export default function useGuildProfileGames(games) {
   _require = games;
   let stateFromStoresArray;
   games = games.games;
-  let obj = require("initialize");
   let items = [AuthenticationStore];
-  const stateFromStores = obj.useStateFromStores(items, () => authenticated.isAuthenticated());
+  const stateFromStores = require("initialize").useStateFromStores(items, () => authenticated.isAuthenticated());
   require("useGame");
   if (null != games) {
     if (!stateFromStores) {
@@ -76,11 +77,11 @@ export default function useGuildProfileGames(games) {
         return num3;
       });
     }, items4);
-    obj = { gamesToDisplay: null, lastGameToDisplay: null, remainingGames: null };
+    const obj2 = { gamesToDisplay: null, lastGameToDisplay: null, remainingGames: null };
     const items5 = [memo];
-    obj.gamesToDisplay = memo.useMemo(() => memo.slice(0, 5), items5);
+    obj2.gamesToDisplay = memo.useMemo(() => memo.slice(0, 5), items5);
     const items6 = [memo];
-    obj.lastGameToDisplay = memo.useMemo(() => {
+    obj2.lastGameToDisplay = memo.useMemo(() => {
       let tmp = memo[5];
       if (tmp == null) {
         tmp = null;
@@ -88,10 +89,11 @@ export default function useGuildProfileGames(games) {
       return tmp;
     }, items6);
     const items7 = [memo];
-    obj.remainingGames = memo.useMemo(() => memo.slice(5), items7);
-    return obj;
+    obj2.remainingGames = memo.useMemo(() => memo.slice(5), items7);
+    return obj2;
   }
   items1 = games.gameApplicationIds;
+  const obj = require("initialize");
   tmp = _require;
   tmp2 = stateFromStoresArray;
 }

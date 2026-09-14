@@ -6,6 +6,8 @@ import GuildStore from "../../stores/GuildStore.tsx";
 import SelectedChannelStore from "../../stores/SelectedChannelStore.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
+const require = globalThis.__r;
+
 const isGuildTextChannelType = ChannelRecord.isGuildTextChannelType;
 const GuildFeatures = Constants.GuildFeatures;
 const result = size.fileFinishedImporting("modules/welcome_screen/useWelcomeScreenEnabled.tsx");

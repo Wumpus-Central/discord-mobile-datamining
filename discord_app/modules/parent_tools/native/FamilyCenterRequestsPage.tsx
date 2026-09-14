@@ -16,9 +16,8 @@ import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 function FamilyCenterMaxConnectionsBlurb() {
-  let obj = useUserLinks;
-  const hasMaxConnections = obj.useHasMaxConnections();
   const tmp = closure_10();
+  const hasMaxConnections = useUserLinks.useHasMaxConnections();
   useAgeSpecificText;
   const intl = util.intl;
   intl.formatToPlainString(_modDef2396["1/PzIj"], {
@@ -27,17 +26,16 @@ function FamilyCenterMaxConnectionsBlurb() {
   const intl2 = util.intl;
   let tmp10 = null;
   if (hasMaxConnections) {
-    obj = { style: tmp.container, children: null };
-    obj = { variant: "text-xxs/medium", color: "text-muted", children: tmp9 };
-    obj.children = React6(Text_Text.Text, obj);
-    tmp10 = React6(React3, obj);
+    const obj2 = { style: tmp.container, children: null };
+    const obj3 = { variant: "text-xxs/medium", color: "text-muted", children: tmp9 };
+    obj2.children = React6(Text_Text.Text, obj3);
+    tmp10 = React6(React3, obj2);
   }
   return tmp10;
 }
 function FamilyCenterHelpLineInfo() {
   const tmp = closure_12();
-  let obj = useHelpLineVisibility;
-  const shouldShowHelplineLink = obj.useShouldShowHelplineLink();
+  const shouldShowHelplineLink = useHelpLineVisibility.useShouldShowHelplineLink();
   useHelpLineVisibility;
   if (shouldShowHelplineLink) {
     const intl2 = util.intl;
@@ -48,21 +46,21 @@ function FamilyCenterHelpLineInfo() {
     formatResult = null;
     if (tmp6) {
       const intl = util.intl;
-      obj = { helpLink: THROUGHLINE_URL };
-      formatResult = intl.format(_modDef2396["6tsC8u"], obj);
+      const obj2 = { helpLink: THROUGHLINE_URL };
+      formatResult = intl.format(_modDef2396["6tsC8u"], obj2);
     }
   }
   let tmp11 = null;
   if (null != formatResult) {
-    obj = { style: tmp.container, children: null };
-    const obj1 = { style: tmp.supportHeader, variant: "heading-sm/semibold", children: null };
+    const obj3 = { style: tmp.container, children: null };
+    const obj4 = { style: tmp.supportHeader, variant: "heading-sm/semibold", children: null };
     const intl3 = util.intl;
-    obj1.children = intl3.string(_modDef2396["7/tVhv"]);
-    const items = [React6(Text_Text.Text, obj1)];
-    const obj2 = { variant: "text-xs/medium", color: "text-muted", children: formatResult };
-    items[1] = React6(Text_Text.Text, obj2);
-    obj.children = items;
-    tmp11 = React7(React3, obj);
+    obj4.children = intl3.string(_modDef2396["7/tVhv"]);
+    const items = [React6(Text_Text.Text, obj4)];
+    const obj5 = { variant: "text-xs/medium", color: "text-muted", children: formatResult };
+    items[1] = React6(Text_Text.Text, obj5);
+    obj3.children = items;
+    tmp11 = React7(React3, obj3);
   }
   return tmp11;
 }
@@ -71,38 +69,46 @@ get_ActivityIndicator = fn(17);
 const FamilyCenterConstants = fn(7641);
 ({ MAX_PARENT_TO_TEEN_ACTIVE_CONNECTIONS: hasOwnProperty, MAX_TEEN_TO_PARENT_ACTIVE_CONNECTIONS: metroRequire } =
   FamilyCenterConstants);
-const THROUGHLINE_URL = fn(11496).THROUGHLINE_URL;
+const THROUGHLINE_URL = fn(11497).THROUGHLINE_URL;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-fn(4636);
-let createStyles = { container: null };
-createStyles = {
+let createStyles = fn(4636);
+let obj2 = {
+  container: {
+    display: "flex",
+    paddingTop: nativeDefault.space.PX_12,
+    marginTop: nativeDefault.space.PX_12,
+    borderTopColor: nativeDefault.colors.BORDER_SUBTLE,
+    borderTopWidth: 1,
+  },
+};
+let closure_10 = createStyles.createStyles(obj2);
+createStyles = fn(4636);
+let obj5 = { container: null, supportHeader: null };
+let obj3 = {
   display: "flex",
   paddingTop: nativeDefault.space.PX_12,
   marginTop: nativeDefault.space.PX_12,
   borderTopColor: nativeDefault.colors.BORDER_SUBTLE,
   borderTopWidth: 1,
 };
-createStyles.container = createStyles;
-let closure_10 = createStyles.createStyles(createStyles);
-fn(4636);
-let obj1 = { container: { display: "flex", marginTop: nativeDefault.space.PX_16 }, supportHeader: null };
-createStyles = { marginBottom: nativeDefault.space.PX_4 };
-obj1.supportHeader = createStyles;
-let closure_12 = createStyles.createStyles(obj1);
+obj5.container = { display: "flex", marginTop: nativeDefault.space.PX_16 };
+const obj6 = { display: "flex", marginTop: nativeDefault.space.PX_16 };
+obj5.supportHeader = { marginBottom: nativeDefault.space.PX_4 };
+let closure_12 = createStyles.createStyles(obj5);
 createStyles = fn(4636);
-const obj4 = { scrollView: { flex: 1 }, container: null };
-let obj2 = { display: "flex", marginTop: nativeDefault.space.PX_16 };
-obj4.container = { paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16 };
-let closure_14 = createStyles.createStyles(obj4);
+const obj9 = { scrollView: { flex: 1 }, container: null };
+const obj7 = { marginBottom: nativeDefault.space.PX_4 };
+obj9.container = { paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16 };
+let closure_14 = createStyles.createStyles(obj9);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/parent_tools/native/FamilyCenterRequestsPage.tsx");
 
 export default function FamilyCenterRequestsPage() {
   const tmp = closure_14();
-  let obj = { style: tmp.scrollView, children: null };
-  obj = { bottom: true, children: null };
-  obj = { style: tmp.container, children: null };
+  const obj = { style: tmp.scrollView, children: null };
+  const obj2 = { bottom: true, children: null };
+  const obj3 = { style: tmp.container, children: null };
   const items = [
     React6(FamilyCenterParentalConsentNoticeDefault, {}),
     React6(FamilyCenterLinkingBannerDefault, {}),
@@ -111,8 +117,8 @@ export default function FamilyCenterRequestsPage() {
     React6(FamilyCenterMaxConnectionsBlurb, {}),
     React6(FamilyCenterHelpLineInfo, {}),
   ];
-  obj.children = items;
-  obj.children = React7(React3, obj);
-  obj.children = React6(common_SafeAreaView.SafeAreaPaddingView, obj);
+  obj3.children = items;
+  obj2.children = React7(React3, obj3);
+  obj.children = React6(common_SafeAreaView.SafeAreaPaddingView, obj2);
   return React6(React4, obj);
 }

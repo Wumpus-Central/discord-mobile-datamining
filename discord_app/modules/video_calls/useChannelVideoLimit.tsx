@@ -2,6 +2,8 @@
 import GuildStore from "../../stores/GuildStore.tsx";
 import SortedVoiceStateStore from "../../stores/views/SortedVoiceStateStore.tsx";
 
+const require = globalThis.__r;
+
 const require = fn;
 const ChannelTypes = fn(1074).ChannelTypes;
 const size = fn(2);
@@ -19,7 +21,8 @@ export default function useChannelVideoLimit(arg0) {
       if (null == guild) {
         let obj = { reachedLimit: false, limit: -1 };
       } else if (guildId.type === ChannelTypes.GUILD_STAGE_VOICE) {
-        obj = { reachedLimit: result > guild.maxStageVideoChannelUsers, limit: guild.maxStageVideoChannelUsers };
+        const obj2 = { reachedLimit: result > guild.maxStageVideoChannelUsers, limit: guild.maxStageVideoChannelUsers };
+        obj = obj2;
       } else {
         obj = {
           reachedLimit: guild.maxVideoChannelUsers > 0 && result > guild.maxVideoChannelUsers,
@@ -38,7 +41,8 @@ export const getChannelVideoLimit = function getChannelVideoLimit(channel) {
   if (null == guild) {
     let obj = { reachedLimit: false, limit: -1 };
   } else if (channel.type === ChannelTypes.GUILD_STAGE_VOICE) {
-    obj = { reachedLimit: result > guild.maxStageVideoChannelUsers, limit: guild.maxStageVideoChannelUsers };
+    const obj2 = { reachedLimit: result > guild.maxStageVideoChannelUsers, limit: guild.maxStageVideoChannelUsers };
+    obj = obj2;
   } else {
     obj = {
       reachedLimit: guild.maxVideoChannelUsers > 0 && result > guild.maxVideoChannelUsers,

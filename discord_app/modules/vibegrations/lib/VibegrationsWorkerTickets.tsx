@@ -22,14 +22,14 @@ let closure_5 = async function _mintTicket() {
     const HTTP = HTTPUtils.HTTP;
     await HTTP.post({ url, rejectWithError: true });
     const body = value.body;
-    const obj4 = { ticket: body.ticket, baseUrl: null };
+    const obj7 = { ticket: body.ticket, baseUrl: null };
     const vibegrationsTunnelWorkerOrigin = closure_131_0(closure_131_1[3]).getVibegrationsTunnelWorkerOrigin();
     url = vibegrationsTunnelWorkerOrigin;
     if (vibegrationsTunnelWorkerOrigin == null) {
       url = body.url;
     }
-    obj4.baseUrl = url;
-    return obj4;
+    obj7.baseUrl = url;
+    return obj7;
   })();
 };
 const Endpoints = fn(1074).Endpoints;

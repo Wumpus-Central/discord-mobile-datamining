@@ -17,9 +17,9 @@ import size from "../../../../../_runtime/metro/00002__.js";
 class GuildPowerupCardFooterActive {
   constructor(arg0) {
     obj = { style: closure_6().inline, children: null };
-    obj = { size: "xs", color: closure_1(closure_2[4]).colors.STATUS_POSITIVE };
+    obj1 = { size: "xs", color: closure_1(closure_2[4]).colors.STATUS_POSITIVE };
     items = [,];
-    items[0] = jsx(closure_0(closure_2[3]).CircleCheckIcon, obj);
+    items[0] = jsx(closure_0(closure_2[3]).CircleCheckIcon, obj1);
     items[1] = jsx(closure_0(closure_2[5]).Text, {
       color: "status-positive",
       variant: "text-sm/bold",
@@ -32,14 +32,14 @@ class GuildPowerupCardFooterActive {
 class GuildPowerupCardFooterExpiring {
   constructor(arg0) {
     obj = { style: closure_6().inline, children: null };
-    obj = { size: "xs", color: closure_1(closure_2[4]).colors.STATUS_WARNING };
+    obj1 = { size: "xs", color: closure_1(closure_2[4]).colors.STATUS_WARNING };
     items = [,];
-    items[0] = jsx(closure_0(closure_2[6]).CircleErrorIcon, obj);
-    obj1 = { color: "text-feedback-warning", variant: "text-sm/bold", children: null };
+    items[0] = jsx(closure_0(closure_2[6]).CircleErrorIcon, obj1);
+    obj5 = { color: "text-feedback-warning", variant: "text-sm/bold", children: null };
     intl = closure_0(closure_2[7]).intl;
-    obj2 = { dateString: closure_1(closure_2[9])(global.dateString) };
-    obj1.children = intl.formatToMarkdownString(closure_1(closure_2[8])["ol/ao/"], obj2);
-    items[1] = jsx(closure_0(closure_2[5]).Text, obj1);
+    obj6 = { dateString: closure_1(closure_2[9])(global.dateString) };
+    obj5.children = intl.formatToMarkdownString(closure_1(closure_2[8])["ol/ao/"], obj6);
+    items[1] = jsx(closure_0(closure_2[5]).Text, obj5);
     obj.children = items;
     return jsxs(View, obj);
   }
@@ -47,14 +47,14 @@ class GuildPowerupCardFooterExpiring {
 class GuildPowerupCardFooterRemoving {
   constructor(arg0) {
     obj = { style: closure_6().inline, children: null };
-    obj = { size: "xs", color: closure_1(closure_2[4]).colors.STATUS_WARNING };
+    obj1 = { size: "xs", color: closure_1(closure_2[4]).colors.STATUS_WARNING };
     items = [,];
-    items[0] = jsx(closure_0(closure_2[6]).CircleErrorIcon, obj);
-    obj1 = { color: "text-feedback-warning", variant: "text-sm/bold", children: null };
+    items[0] = jsx(closure_0(closure_2[6]).CircleErrorIcon, obj1);
+    obj5 = { color: "text-feedback-warning", variant: "text-sm/bold", children: null };
     intl = closure_0(closure_2[7]).intl;
-    obj2 = { dateString: closure_1(closure_2[10])(global.removingAt) };
-    obj1.children = intl.formatToPlainString(closure_1(closure_2[8])["6e2ry1"], obj2);
-    items[1] = jsx(closure_0(closure_2[5]).Text, obj1);
+    obj6 = { dateString: closure_1(closure_2[10])(global.removingAt) };
+    obj5.children = intl.formatToPlainString(closure_1(closure_2[8])["6e2ry1"], obj6);
+    items[1] = jsx(closure_0(closure_2[5]).Text, obj5);
     obj.children = items;
     return jsxs(View, obj);
   }
@@ -70,17 +70,17 @@ class GuildPowerupCardFooterStatus {
       if ("expiring" === type) {
         tmp5 = jsx;
         tmp6 = GuildPowerupCardFooterExpiring;
-        obj = { dateString: null };
-        obj.dateString = status.expiringAt;
-        return jsx(GuildPowerupCardFooterExpiring, obj);
+        obj1 = { dateString: null };
+        obj1.dateString = status.expiringAt;
+        return jsx(GuildPowerupCardFooterExpiring, obj1);
       } else {
         str = "removing";
         if ("removing" === type) {
           tmp3 = jsx;
           tmp4 = GuildPowerupCardFooterRemoving;
-          obj1 = { removingAt: null };
-          obj1.removingAt = status.removingAt;
-          return jsx(GuildPowerupCardFooterRemoving, obj1);
+          obj4 = { removingAt: null };
+          obj4.removingAt = status.removingAt;
+          return jsx(GuildPowerupCardFooterRemoving, obj4);
         } else {
           str2 = "active";
           if ("active" === type) {
@@ -111,26 +111,26 @@ class GuildPowerupCardFooterCost {
       tmp7 = jsxs;
       tmp8 = View;
       tmp9 = jsx;
-      obj = { size: "sm", color: null };
+      obj1 = { size: "sm", color: null };
       tmp10 = closure_1;
-      obj.color = closure_1(tmp3[4]).unsafe_rawColors.GUILD_BOOSTING_PINK;
+      obj1.color = closure_1(tmp3[4]).unsafe_rawColors.GUILD_BOOSTING_PINK;
       items = [,];
-      items[0] = jsx(tmp2(tmp3[12]).BoostGemIcon, obj);
+      items[0] = jsx(tmp2(tmp3[12]).BoostGemIcon, obj1);
       str = "heading-sm/semibold";
       if (tmp5) {
         str = "experimental/body-sm/semibold";
       }
-      obj1 = { variant: null, color: "text-subtle", children: null };
-      obj1.variant = str;
+      obj5 = { variant: null, color: "text-subtle", children: null };
+      obj5.variant = str;
       intl = tmp2(tmp3[7]).intl;
-      obj2 = { required: null, decorator: null };
-      obj2.required = cost;
+      obj6 = { required: null, decorator: null };
+      obj6.required = cost;
       if (costDecorator == null) {
         costDecorator = "";
       }
-      obj2.decorator = costDecorator;
-      obj1.children = intl.formatToPlainString(tmp2(tmp3[7]).t.t2Wbo1, obj2);
-      items[1] = tmp9(tmp2(tmp3[5]).Text, obj1);
+      obj6.decorator = costDecorator;
+      obj5.children = intl.formatToPlainString(tmp2(tmp3[7]).t.t2Wbo1, obj6);
+      items[1] = tmp9(tmp2(tmp3[5]).Text, obj5);
       obj.children = items;
       tmp7Result = tmp7(tmp8, obj);
     }
@@ -151,14 +151,13 @@ export { GuildPowerupCardFooterRemoving };
 export { GuildPowerupCardFooterStatus };
 export { GuildPowerupCardFooterCost };
 export const GuildPowerupsCardFooter = function GuildPowerupsCardFooter(status) {
-  let obj = { style: null, children: null };
+  const obj = { style: null, children: null };
   const items = [, ,];
   ({ inline: arr[0], container: arr[1] } = closure_6());
   items[2] = status.style;
   obj.style = items;
-  obj = { cost: status.cost, costDecorator: status.costDecorator };
   const items1 = [
-    React4(GuildPowerupCardFooterCost, obj),
+    React4(GuildPowerupCardFooterCost, { cost: status.cost, costDecorator: status.costDecorator }),
     React4(GuildPowerupCardFooterStatus, { status: status.status }),
   ];
   obj.children = items1;

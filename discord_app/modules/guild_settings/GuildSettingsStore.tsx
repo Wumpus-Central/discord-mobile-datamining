@@ -47,7 +47,6 @@ function handleFormInit(location) {
     c11 = undefined;
   } else {
     profile = GuildProfileStore.getProfile(guildId);
-    obj = profile;
     c41 = enabled;
     c43 = channelId;
     CLOSED = FormStates.OPEN;
@@ -55,6 +54,7 @@ function handleFormInit(location) {
     c38 = null;
     c10 = SnowflakeUtilsDefault.castGuildIdAsEveryoneGuildRoleId(guildId);
     NONE = guild.mfaLevel;
+    obj = obj2;
     c12 = null;
     closure_44 = {};
     location = location.location;
@@ -65,17 +65,17 @@ function handleFormInit(location) {
       }
     }
     if (null != section) {
-      obj = { key: "landing", name: constants.LANDING };
-      const items = [obj];
+      const obj3 = { key: "landing", name: constants.LANDING };
+      const items = [obj3];
       if (section === constants.TAG_CUSTOMIZE) {
-        obj = { key: null, name: null };
         ({ TAG: obj2.key, TAG: obj2.name } = constants);
-        items.push(obj);
+        items.push({ key: null, name: null });
+        const obj4 = { key: null, name: null };
       }
-      const obj1 = { key: section, name: section };
-      items.push(obj1);
-      const obj2 = { type: "stack", routes: items };
-      c11 = obj2;
+      const obj6 = { key: section, name: section };
+      items.push(obj6);
+      const obj10 = { type: "stack", routes: items };
+      c11 = obj10;
     }
   }
 }
@@ -95,7 +95,6 @@ function _createInvite(code) {
     roles: null,
   };
   let tmp2 = null;
-  let tmp = InviteRecord;
   if (null != code.inviter) {
     tmp2 = new UserRecord(code.inviter);
   }
@@ -110,8 +109,7 @@ function _createInvite(code) {
   const created_at = code.created_at;
   obj.createdAt = _modDef4228(created_at);
   ({ flags: obj.flags, roles: obj.roles } = code);
-  tmp = new tmp(obj);
-  return tmp;
+  return new InviteRecord(obj);
 }
 function handleIntegrationsUpdate(type) {
   let tmp = null != guild;
@@ -234,6 +232,7 @@ let obj = {
   about: "",
 };
 let c50 = false;
+let obj2 = obj;
 let c53 = null;
 const bansVersion = 0;
 let guildId = null;
@@ -264,12 +263,12 @@ prototype["hasChanges"] = function hasChanges() {
   const isEqualResult = obj.isEqual(closure_7, guild);
   let widgetHasChangesResult = !isEqualResult;
   if (isEqualResult) {
-    let tmpResult = _modDef12;
-    widgetHasChangesResult = !tmpResult.isEqual(obj, obj);
+    widgetHasChangesResult = !_modDef12.isEqual(obj, obj2);
+    const tmpResult = _modDef12;
   }
   if (!widgetHasChangesResult) {
-    tmpResult = _modDef12;
-    widgetHasChangesResult = !tmpResult.isEqual(obj, profile);
+    widgetHasChangesResult = !_modDef12.isEqual(obj, profile);
+    const tmpResult2 = _modDef12;
   }
   if (!widgetHasChangesResult) {
     const self = this;
@@ -371,7 +370,7 @@ prototype["getProps"] = function getProps() {
   return obj;
 };
 GuildSettingsStore.displayName = "GuildSettingsStore";
-obj = {
+obj2 = {
   GUILD_SETTINGS_INIT: handleFormInit,
   GUILD_SETTINGS_OPEN: function handleFormOpen(arg0) {
     c35 = true;
@@ -548,11 +547,10 @@ obj = {
         }
       }
       const HTTP = HTTPUtils.HTTP;
-      obj = { url: closure_1_25.GUILD_INSTANT_INVITES(guild.id), oldFormErrors: true, rejectWithError: true };
-      value = HTTP.get(obj);
+      const obj4 = { url: closure_1_25.GUILD_INSTANT_INVITES(guild.id), oldFormErrors: true, rejectWithError: true };
+      value = HTTP.get(obj4);
       value.then((body) => {
-        obj = { type: "GUILD_SETTINGS_LOADED_INVITES", invites: body.body };
-        obj.dispatch(obj);
+        DispatcherDefault.dispatch({ type: "GUILD_SETTINGS_LOADED_INVITES", invites: body.body });
       });
     }
   },
@@ -764,15 +762,15 @@ obj = {
             result = c3 === constants.TAG;
           }
           if (!result) {
-            obj = guild(obj[12]);
-            result = obj.isServerTagDraftDirty(closure_9, profile);
+            result = guild(obj2[12]).isServerTagDraftDirty(closure_9, profile);
+            obj = guild(obj2[12]);
           }
           if (!result) {
             closure_9 = profile;
           }
           if (c3 !== constants.PROFILE) {
             closure_1 = guild;
-            obj = {};
+            obj2 = {};
             const merged = Object.assign(guild);
             const item = closure_31.forEach((item) => {
               if (!set.has(item)) {
@@ -781,14 +779,14 @@ obj = {
                   tmp = "publicUpdatesChannelId" !== item;
                 }
                 if (!tmp) {
-                  tmp = obj[item] !== __initData7;
+                  tmp = obj2[item] !== __initData7;
                 }
                 if (tmp) {
                   tmp = "features" !== item;
                 }
                 if (tmp) {
                   if ("ownerConfiguredContentLevel" !== item) {
-                    let tmp7 = obj[item];
+                    let tmp7 = obj2[item];
                   } else {
                     tmp7 = guild[item];
                   }
@@ -847,13 +845,13 @@ obj = {
   GUILD_PROFILE_UPDATE: handleProfileUpdateStart,
   GUILD_PROFILE_UPDATE_SUCCESS: function handleProfileApiUpdate(profile) {
     profile = profile.profile;
-    let id;
+    let id1;
     if (obj != null) {
-      id = obj.id;
+      id1 = obj.id;
     }
-    let tmp2 = null != id;
+    let tmp2 = null != id1;
     if (tmp2) {
-      id = obj.id;
+      const id = obj.id;
       let flag = false;
       if (null != guild) {
         flag = false;
@@ -872,11 +870,11 @@ obj = {
         }
       }
       if (flag) {
-        let id1;
+        let id2;
         if (guild != null) {
-          id1 = guild.id;
+          id2 = guild.id;
         }
-        if (profile.id === id1) {
+        if (profile.id === id2) {
           c38 = null;
         }
       }
@@ -888,13 +886,13 @@ obj = {
   GUILD_PROFILE_UPDATE_VISIBILITY: handleProfileUpdateStart,
   GUILD_PROFILE_UPDATE_VISIBILITY_SUCCESS: function handleProfileApiUpdateVisibility(guildId) {
     guildId = guildId.guildId;
-    let id;
+    let id1;
     if (obj != null) {
-      id = obj.id;
+      id1 = obj.id;
     }
-    let tmp2 = null != id;
+    let tmp2 = null != id1;
     if (tmp2) {
-      id = obj.id;
+      const id = obj.id;
       let flag = false;
       if (null != guild) {
         flag = false;
@@ -913,11 +911,11 @@ obj = {
         }
       }
       if (flag) {
-        let id1;
+        let id2;
         if (guild != null) {
-          id1 = guild.id;
+          id2 = guild.id;
         }
-        if (guildId === id1) {
+        if (guildId === id2) {
           profile = GuildProfileStore.getProfile(guildId);
           c38 = null;
         }
@@ -1026,11 +1024,11 @@ obj = {
       const items = [];
       items[HermesBuiltin.arraySpread(obj.secondaryCategoryIds, 0)] = categoryId;
       obj.secondaryCategoryIds = items;
-      obj = {};
-      const merged1 = Object.assign(obj);
+      obj2 = {};
+      const merged1 = Object.assign(obj2);
       const items1 = [];
-      items1[HermesBuiltin.arraySpread(obj.secondaryCategoryIds, 0)] = categoryId;
-      obj.secondaryCategoryIds = items1;
+      items1[HermesBuiltin.arraySpread(obj2.secondaryCategoryIds, 0)] = categoryId;
+      obj2.secondaryCategoryIds = items1;
     }
   },
   GUILD_DISCOVERY_CATEGORY_DELETE: function handleGuildCategoryDelete(categoryId) {
@@ -1047,15 +1045,15 @@ obj = {
           const merged = Object.assign(obj);
           obj.secondaryCategoryIds = items;
         }
-        const secondaryCategoryIds1 = obj.secondaryCategoryIds;
+        const secondaryCategoryIds1 = obj2.secondaryCategoryIds;
         const index1 = secondaryCategoryIds1.indexOf(categoryId);
         if (-1 !== index1) {
           const items1 = [];
-          HermesBuiltin.arraySpread(obj.secondaryCategoryIds, 0);
+          HermesBuiltin.arraySpread(obj2.secondaryCategoryIds, 0);
           items1.splice(index1, 1);
-          obj = {};
-          const merged1 = Object.assign(obj);
-          obj.secondaryCategoryIds = items1;
+          obj2 = {};
+          const merged1 = Object.assign(obj2);
+          obj2.secondaryCategoryIds = items1;
         }
       }
     }
@@ -1144,7 +1142,7 @@ obj = {
     return false;
   },
 };
-const guildSettingsStore = new GuildSettingsStore(DispatcherDefault, obj);
+const guildSettingsStore = new GuildSettingsStore(DispatcherDefault, obj2);
 let result = size.fileFinishedImporting("modules/guild_settings/GuildSettingsStore.tsx");
 
 export default guildSettingsStore;

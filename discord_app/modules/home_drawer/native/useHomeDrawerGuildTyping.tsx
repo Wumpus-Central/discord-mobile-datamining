@@ -5,6 +5,8 @@ import JoinedThreadsStore from "../../threads/JoinedThreadsStore.tsx";
 import ChannelStore from "../../../stores/ChannelStore.tsx";
 import TypingStore from "../../../stores/TypingStore.tsx";
 
+const require = globalThis.__r;
+
 require = fn;
 function areHomeDrawerGuildTypingStatesEqual(typingChannelId, typingChannelId2) {
   let result =
@@ -26,17 +28,16 @@ let result = size.fileFinishedImporting("modules/home_drawer/native/useHomeDrawe
 export const useHomeDrawerGuildTyping = function useHomeDrawerGuildTyping(id) {
   _require = id;
   const isHomeDrawerChannelMuted = require("isHomeDrawerChannelMuted").useIsHomeDrawerChannelMuted();
-  let obj = require("isHomeDrawerChannelMuted");
+  const obj = require("isHomeDrawerChannelMuted");
   isHomeDrawerChannelInChannelList = require("isHomeDrawerChannelInChannelList").useIsHomeDrawerChannelInChannelList();
-  const obj2 = require("isHomeDrawerChannelInChannelList");
+  let obj2 = require("isHomeDrawerChannelInChannelList");
   const items = [TypingStore, ChannelStore, JoinedThreadsStore];
   const items1 = [id, isHomeDrawerChannelMuted, isHomeDrawerChannelInChannelList];
   return require("initialize").useStateFromStores(
     items,
     () => {
       const typingUsersByGuild = TypingStore.getTypingUsersByGuild(closure_0);
-      let obj = SnowflakeUtilsDefault;
-      const keys = obj.keys(typingUsersByGuild);
+      const keys = SnowflakeUtilsDefault.keys(typingUsersByGuild);
       const found = keys.find((item) => {
         basicChannel = basicChannel.getBasicChannel(item);
         let tmp2 = null != basicChannel;
@@ -57,19 +58,19 @@ export const useHomeDrawerGuildTyping = function useHomeDrawerGuildTyping(id) {
         return tmp2;
       });
       if (null == found) {
-        obj = closure_7;
+        let obj2 = closure_7;
       } else {
-        obj = { typingChannelId: found, typingChannelName: null, typingUserIds: null };
+        obj2 = { typingChannelId: found, typingChannelName: null, typingUserIds: null };
         const channel = ChannelStore.getChannel(found);
         let name;
         if (channel != null) {
           name = channel.name;
         }
-        obj.typingChannelName = name;
+        obj2.typingChannelName = name;
         const _Object = Object;
-        obj.typingUserIds = Object.keys(typingUsersByGuild[found]);
+        obj2.typingUserIds = Object.keys(typingUsersByGuild[found]);
       }
-      return obj;
+      return obj2;
     },
     items1,
     areHomeDrawerGuildTypingStatesEqual,

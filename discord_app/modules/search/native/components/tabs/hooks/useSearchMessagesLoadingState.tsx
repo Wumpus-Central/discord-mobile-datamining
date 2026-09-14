@@ -18,24 +18,20 @@ export const useSearchMessagesLoadingState = function useSearchMessagesLoadingSt
   closure_2 = usePlaceholderStyles.useFullscreenPlaceholderCount({ placeholderHeight, numColumns });
   const items = [SearchQueryStore, closure_2];
   return initialize.useStateFromStoresObject(items, () => {
-    let obj = SearchUtils;
-    const searchTabFetchId = obj.getSearchTabFetchId(
-      closure_1_0,
-      dependencyMap,
-      SearchQueryStore.getSearchResultsQuery(closure_1_0),
-    );
+    const searchResultsQuery = SearchQueryStore.getSearchResultsQuery(closure_1_0);
+    const searchTabFetchId = SearchUtils.getSearchTabFetchId(closure_1_0, dependencyMap, searchResultsQuery);
     const isInitialFetchComplete = SearchMessageStore.getIsInitialFetchComplete(searchTabFetchId);
     let isFetching = !tmp5;
     if (isInitialFetchComplete) {
       isFetching = SearchMessageStore.getIsFetching(searchTabFetchId);
     }
-    obj = { isFirstPageLoading: tmp5, isNextPageLoading: isFetching, placeholderCount: null };
+    const obj2 = { isFirstPageLoading: !isInitialFetchComplete, isNextPageLoading: isFetching, placeholderCount: null };
     if (!isInitialFetchComplete) {
       let num = Math.max(closure_2, closure_4[dependencyMap]);
     } else {
       num = 0;
     }
-    obj.placeholderCount = num;
-    return obj;
+    obj2.placeholderCount = num;
+    return obj2;
   });
 };

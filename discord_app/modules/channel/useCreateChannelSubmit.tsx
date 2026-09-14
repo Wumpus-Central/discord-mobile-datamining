@@ -12,7 +12,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/channel/useCreateChannelSubmit.tsx");
 
 export default function useCreateChannelSubmit(arg0) {
-  [tmp2, importDefault] = _slicedToArray(noop.useState(false), 2);
+  [tmp2, importDefault] = noop.useState(false);
   const tmp3 = _slicedToArray(noop.useState({}), 2);
   closure_2 = tmp3[1];
   closure_0 = asyncGeneratorStep(async (arg0) => {
@@ -23,8 +23,8 @@ export default function useCreateChannelSubmit(arg0) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj3 = { value, done: true };
+        return obj3;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -37,8 +37,8 @@ export default function useCreateChannelSubmit(arg0) {
             throw value;
           } else if (arg0 === 2) {
             c8 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj4 = { value, done: true };
+            return obj4;
           } else {
             closure_4 = tmp4;
             closure_3 = tmp8;
@@ -76,23 +76,22 @@ export default function useCreateChannelSubmit(arg0) {
             throw value;
           } else if (arg0 === 2) {
             c8 = 3;
-            let obj1 = { value, done: true };
-            return obj1;
+            const obj5 = { value, done: true };
+            return obj5;
           } else {
             if (closure_131_3 === constants3.PREMIUM_CHANNEL) {
-              const obj2 = {
+              const obj6 = {
                 id: closure_131_4,
                 type: closure_0(1894).PermissionOverwriteType.ROLE,
                 deny: constants2.VIEW_CHANNEL,
                 allow: closure_2(1086).getFlag(0),
               };
-              closure_131_0.push(obj2);
+              closure_131_0.push(obj6);
               const obj10 = closure_2(1086);
             }
             closure_1(true);
             c6 = 2;
-            obj1 = CreateChannelActionCreatorsDefault;
-            const obj3 = {
+            const obj7 = {
               guildId: closure_131_4,
               type: closure_131_6,
               name: closure_131_5,
@@ -106,12 +105,12 @@ export default function useCreateChannelSubmit(arg0) {
             if (closure_131_6 !== constants.GUILD_CATEGORY) {
               tmp60 = closure_131_7;
             }
-            obj3.parentId = tmp60;
-            obj3.applicationId = closure_131_8;
+            obj7.parentId = tmp60;
+            obj7.applicationId = closure_131_8;
             c7 = 4;
             c8 = 1;
-            const obj4 = { value: obj1.createChannel(obj3), done: false };
-            return obj4;
+            const obj8 = { value: CreateChannelActionCreatorsDefault.createChannel(obj7), done: false };
+            return obj8;
           }
         } else if (2 === tmp8) {
           c6 = 0;
@@ -154,8 +153,8 @@ export default function useCreateChannelSubmit(arg0) {
               if (null != id) {
                 const AccessibilityAnnouncer2 = closure_0(4488).AccessibilityAnnouncer;
                 const intl2 = closure_0(1114).intl;
-                const obj5 = { name: closure_131_5 };
-                AccessibilityAnnouncer2.announce(intl2.formatToPlainString(closure_0(1114).t.Wke70b, obj5));
+                const obj9 = { name: closure_131_5 };
+                AccessibilityAnnouncer2.announce(intl2.formatToPlainString(closure_0(1114).t.Wke70b, obj9));
                 if (closure_0 != null) {
                   tmp86(id, guild_id);
                 }
@@ -166,7 +165,7 @@ export default function useCreateChannelSubmit(arg0) {
           c6 = 0;
           closure_1(false);
           c8 = 3;
-          obj = { value, done: true };
+          const obj = { value, done: true };
           return obj;
         }
       } catch (tmp64) {

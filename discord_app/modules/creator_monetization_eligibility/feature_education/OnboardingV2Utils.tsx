@@ -6,6 +6,8 @@ import GuildStore from "../../../stores/GuildStore.tsx";
 import UserStore from "../../../stores/UserStore.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
+const require = globalThis.__r;
+
 const isGuildOwner = GuildRecord.isGuildOwner;
 let items = [, , , ,];
 ({

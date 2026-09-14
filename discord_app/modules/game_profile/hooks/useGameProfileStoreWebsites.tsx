@@ -3,6 +3,8 @@ import ThirdPartyGameApplicationWebsiteCategory from "../../../../discord_common
 import SteamReleaseStatus from "../../../../discord_common/js/shared/shared-constants/SteamReleaseStatus.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
+const require = globalThis.__r;
+
 require = fn;
 const set = new Set(["1402418703554842694", "356877880938070016"]);
 let items = [
@@ -38,12 +40,11 @@ export const useGameProfileStoreWebsites = function useGameProfileStoreWebsites(
   }
   items = [steamWebsiteUrl, websites, id1, steamReleaseStatus, tmp4];
   return websites.useMemo(() => {
-    let arr = websites;
     if (null != websites) {
       if (null != id1) {
         let found;
-        if (arr != null) {
-          found = arr.filter((category) => {
+        if (websites != null) {
+          found = websites.filter((category) => {
             let tmp3 = category.category === steamWebsiteUrl(id1[1]).ThirdPartyGameApplicationWebsiteCategory.EPICGAMES;
             if (tmp3) {
               tmp3 = !steamReleaseStatus.has(dependencyMap);
@@ -76,11 +77,11 @@ export const useGameProfileStoreWebsites = function useGameProfileStoreWebsites(
           );
         }
         if (!someResult) {
-          let obj = {
+          const obj = {
             category: ThirdPartyGameApplicationWebsiteCategory.ThirdPartyGameApplicationWebsiteCategory.STEAM,
             url: steamWebsiteUrl,
           };
-          arr = found.push(obj);
+          found.push(obj);
         }
         const sorted = found.sort((category, category2) => {
           let num = -1;
@@ -94,8 +95,8 @@ export const useGameProfileStoreWebsites = function useGameProfileStoreWebsites(
           return num;
         });
         if (null != closure_1) {
-          obj = { category: "XBOX_GAME_PASS", url: tmp11 };
-          arr = sorted.unshift(obj);
+          const obj2 = { category: "XBOX_GAME_PASS", url: tmp11 };
+          sorted.unshift(obj2);
         }
         return sorted;
       }

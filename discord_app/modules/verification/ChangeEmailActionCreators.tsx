@@ -29,13 +29,13 @@ export const sendConfirmationCode = function sendConfirmationCode() {
   if (arg0 === undefined) {
     flag = false;
   }
-  let obj = { url: Endpoints.USER_EMAIL, trackedActionData: null, rejectWithError: false };
-  obj = {
+  const obj2 = { url: Endpoints.USER_EMAIL, trackedActionData: null, rejectWithError: false };
+  const obj = TrackedHTTPUtilsDefault;
+  obj2.trackedActionData = {
     event: discord_common_AnalyticsUtils.NetworkActionNames.USER_ACCOUNT_EMAIL_CHANGE_SEND_CODE,
     properties: { is_resend: flag },
   };
-  obj.trackedActionData = obj;
-  return obj.put(obj);
+  return obj.put(obj2);
 };
 export const confirmEmailChange = function confirmEmailChange() {
   const self = this;

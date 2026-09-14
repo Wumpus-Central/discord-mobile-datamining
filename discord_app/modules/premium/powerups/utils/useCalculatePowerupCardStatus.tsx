@@ -19,13 +19,13 @@ export const useCalculatePowerupCardStatus = function useCalculatePowerupCardSta
       ends_at = sourceEntitlement.ends_at;
     }
     if (null != ends_at) {
-      let obj = { type: "expiring", expiringAt: tmp.sourceEntitlement.ends_at };
-      let tmp5 = obj;
+      const obj2 = { type: "expiring", expiringAt: tmp.sourceEntitlement.ends_at };
+      let tmp5 = obj2;
     } else {
       if (closure_2) {
         if (null != powerup.storeRemovalDate) {
-          obj = { type: "removing", removingAt: tmp3.storeRemovalDate };
-          tmp5 = obj;
+          const obj3 = { type: "removing", removingAt: tmp3.storeRemovalDate };
+          tmp5 = obj3;
         }
       }
       if (tmp.type === PowerupActiveStatusType.LEVEL_ACTIVATED) {
@@ -39,12 +39,12 @@ export const useCalculatePowerupCardStatus = function useCalculatePowerupCardSta
           const intl3 = util.intl;
           title = intl3.string(util.t.BfF6ED);
         }
-        const obj1 = { type: "active", statusText: null };
-        const obj2 = { perkName: title };
-        obj1.statusText = intl2.formatToPlainString(_modDef2428.WRRYUT, obj2);
-        tmp5 = obj1;
+        const obj4 = { type: "active", statusText: null };
+        const obj5 = { perkName: title };
+        obj4.statusText = intl2.formatToPlainString(_modDef2428.WRRYUT, obj5);
+        tmp5 = obj4;
       } else if (tmp.type !== tmp4.INACTIVE) {
-        obj = { type: "active", statusText: null };
+        const obj = { type: "active", statusText: null };
         const intl = util.intl;
         obj.statusText = intl.string(_modDef2428.FFLkmx);
         tmp5 = obj;

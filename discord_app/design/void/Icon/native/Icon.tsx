@@ -17,10 +17,8 @@ const IconSizes = {
 };
 const createStyles = fn(4636);
 let closure_5 = createStyles.createStyles(() => {
-  let iconColor = { iconColor: null };
-  iconColor = { tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
-  iconColor.iconColor = iconColor;
-  return iconColor;
+  obj = { iconColor: { tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT } };
+  return obj;
 });
 const memoResult = noop.memo(
   noop.forwardRef((size, ref) => {
@@ -38,7 +36,7 @@ const memoResult = noop.memo(
     }
     ({ accessible, accessibilityLabel } = size);
     if (disableColor) {
-      obj = {
+      const obj2 = {
         resizeMode,
         source: size.source,
         style: null,
@@ -74,10 +72,10 @@ const memoResult = noop.memo(
       }
       size = { width: num, height: num };
       const items = [size, undefined, style];
-      obj.style = items;
-      obj.accessible = accessible;
-      obj.accessibilityLabel = accessibilityLabel;
-      obj.ref = ref;
+      obj2.style = items;
+      obj2.accessible = accessible;
+      obj2.accessibilityLabel = accessibilityLabel;
+      obj2.ref = ref;
       return (
         <Image
           resizeMode={resizeMode}

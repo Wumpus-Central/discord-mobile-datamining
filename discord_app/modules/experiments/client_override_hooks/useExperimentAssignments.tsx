@@ -4,6 +4,8 @@ import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import ExperimentStore from "../ExperimentStore.tsx";
 import ApexExperimentStore from "../apex/ApexExperimentStore.tsx";
 
+const require = globalThis.__r;
+
 require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/experiments/client_override_hooks/useExperimentAssignments.tsx");
@@ -35,7 +37,7 @@ export const getExperimentServerAssignment = function getExperimentServerAssignm
     const items = [ExperimentStore, ApexExperimentStore];
     tmp = items;
   }
-  [obj, obj2] = _slicedToArray(tmp, 2);
+  [obj, obj2] = tmp;
   if (null == name) {
     return null;
   } else if (name.system === ExperimentManager.ExperimentSystem.LEGACY) {
@@ -53,7 +55,7 @@ export const useExperimentServerAssignment = function useExperimentServerAssignm
   return require("initialize").useStateFromStores(items, () => {
     let name = closure_0;
     const items = [ExperimentStore, ApexExperimentStore];
-    [obj, obj2] = _slicedToArray(items, 2);
+    [obj, obj2] = items;
     if (null == closure_0) {
       return null;
     } else if (name.system === ExperimentManager.ExperimentSystem.LEGACY) {

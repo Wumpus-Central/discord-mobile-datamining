@@ -4,10 +4,10 @@ import util from "../../../intl/index.native.tsx";
 import shared from "../../../design/shared.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import Pressables from "../../../design/void/Pressables/native/Pressables.tsx";
-import _modDef11929 from "../../../../_runtime/metro/11929__.js";
 import _modDef11930 from "../../../../_runtime/metro/11930__.js";
 import _modDef11931 from "../../../../_runtime/metro/11931__.js";
 import _modDef11932 from "../../../../_runtime/metro/11932__.js";
+import _modDef11933 from "../../../../_runtime/metro/11933__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import ThemeStore from "../../user_settings/ThemeStore.tsx";
 
@@ -16,30 +16,26 @@ get_ActivityIndicator = fn(17);
 ({ View: c3, Image: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-fn(4636);
-let createStyles = {
+const createStyles = fn(4636);
+let obj2 = {
   container: { width: 82, height: 82, marginTop: 4 },
-  guildPlaceholder: null,
-  guildIcon: null,
-  iconWrapperBorder: null,
+  guildPlaceholder: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH },
+  guildIcon: { width: 82, height: 82, borderRadius: 41 },
+  iconWrapperBorder: {
+    position: "absolute",
+    top: -8,
+    right: -8,
+    width: 40,
+    height: 40,
+    borderRadius: 20,
+    justifyContent: "center",
+    alignItems: "center",
+  },
   filledIconWrapper: null,
   emptyIconWrapper: null,
   emptyGuildIcon: null,
   emptyGuildIconText: null,
   uploadIcon: null,
-};
-createStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
-createStyles.guildPlaceholder = createStyles;
-createStyles.guildIcon = { width: 82, height: 82, borderRadius: 41 };
-createStyles.iconWrapperBorder = {
-  position: "absolute",
-  top: -8,
-  right: -8,
-  width: 40,
-  height: 40,
-  borderRadius: 20,
-  justifyContent: "center",
-  alignItems: "center",
 };
 let size = {
   width: 32,
@@ -49,7 +45,7 @@ let size = {
   alignItems: "center",
   backgroundColor: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE,
 };
-createStyles.filledIconWrapper = size;
+obj2.filledIconWrapper = size;
 const size1 = {
   position: "absolute",
   top: -4,
@@ -61,17 +57,18 @@ const size1 = {
   justifyContent: "center",
   alignItems: "center",
 };
-createStyles.emptyIconWrapper = size1;
-createStyles.emptyGuildIcon = {
+obj2.emptyIconWrapper = size1;
+let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
+obj2.emptyGuildIcon = {
   borderWidth: 2,
   borderStyle: "dashed",
   justifyContent: "center",
   alignItems: "center",
   borderColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT,
 };
-createStyles.emptyGuildIconText = { textAlign: "center", lineHeight: 16, paddingTop: 4 };
-createStyles.uploadIcon = { height: 16, width: 16 };
-let closure_8 = createStyles.createLegacyClassComponentStyles(createStyles);
+obj2.emptyGuildIconText = { textAlign: "center", lineHeight: 16, paddingTop: 4 };
+obj2.uploadIcon = { height: 16, width: 16 };
+let closure_8 = createStyles.createLegacyClassComponentStyles(obj2);
 const PureComponent = noop.PureComponent;
 class GuildIconUploader extends PureComponent {}
 const prototype = GuildIconUploader.prototype;
@@ -79,32 +76,32 @@ prototype["renderIcon"] = function renderIcon() {
   const tmp = closure_8(this.context);
   const icon = this.props.icon;
   if (null != icon) {
-    let obj = { style: null, source: null };
+    const obj2 = { style: null, source: null };
     const items = [,];
     ({ guildIcon: arr2[0], guildPlaceholder: arr2[1] } = tmp);
-    obj.style = items;
-    obj = { uri: icon };
-    obj.source = obj;
-    let tmp6Result = timestampProducer(React4, obj);
+    obj2.style = items;
+    const obj3 = { uri: icon };
+    obj2.source = obj3;
+    let tmp6Result = timestampProducer(React4, obj2);
   } else {
-    const obj1 = { style: null, children: null };
+    const obj4 = { style: null, children: null };
     const items1 = [,];
     ({ guildIcon: arr3[0], emptyGuildIcon: arr3[1] } = tmp);
-    obj1.style = items1;
+    obj4.style = items1;
     if (obj6.isThemeDark(ThemeStore.theme)) {
-      let tmp13Result = _modDef11929;
+      let tmp13Result = _modDef11930;
     } else {
-      tmp13Result = _modDef11930;
+      tmp13Result = _modDef11931;
     }
-    obj = { source: tmp13Result };
+    const obj = { source: tmp13Result };
     const items2 = [timestampProducer(React4, obj)];
-    const obj2 = { style: tmp.emptyGuildIconText, variant: "text-xs/bold", color: "text-default", children: null };
+    const obj5 = { style: tmp.emptyGuildIconText, variant: "text-xs/bold", color: "text-default", children: null };
     const intl = util.intl;
     obj6 = shared;
-    obj2.children = intl.string(util.t["3UB9ad"]).toUpperCase();
-    items2[1] = timestampProducer(Text_Text.Text, obj2);
-    obj1.children = items2;
-    tmp6Result = React5(React3, obj1);
+    obj5.children = intl.string(util.t["3UB9ad"]).toUpperCase();
+    items2[1] = timestampProducer(Text_Text.Text, obj5);
+    obj4.children = items2;
+    tmp6Result = React5(React3, obj4);
     const str = intl.string(util.t["3UB9ad"]);
   }
   return tmp6Result;
@@ -114,24 +111,25 @@ prototype["renderUpload"] = function renderUpload() {
   const props = this.props;
   const iconBackgroundColor = props.iconBackgroundColor;
   if (null != props.icon) {
-    let obj = { style: null, children: null };
+    const obj2 = { style: null, children: null };
     const items = [tmp.iconWrapperBorder];
-    obj = { backgroundColor: iconBackgroundColor };
-    items[1] = obj;
-    obj.style = items;
-    const obj1 = { style: tmp.filledIconWrapper, children: null };
-    const obj2 = { style: null, source: null };
+    const obj3 = { backgroundColor: iconBackgroundColor };
+    items[1] = obj3;
+    obj2.style = items;
+    const obj4 = { style: tmp.filledIconWrapper, children: null };
+    const obj5 = { style: null, source: null };
     const items1 = [tmp.uploadIcon];
-    const obj3 = { tintColor: iconBackgroundColor };
-    items1[1] = obj3;
-    obj2.style = items1;
-    obj2.source = _modDef11931;
-    obj1.children = timestampProducer(React4, obj2);
-    obj.children = timestampProducer(React3, obj1);
+    const obj6 = { tintColor: iconBackgroundColor };
+    items1[1] = obj6;
+    obj5.style = items1;
+    obj5.source = _modDef11932;
+    obj4.children = timestampProducer(React4, obj5);
+    obj2.children = timestampProducer(React3, obj4);
+    let obj = obj2;
   } else {
     obj = { style: tmp.emptyIconWrapper, children: null };
-    const obj4 = { source: _modDef11932 };
-    obj.children = timestampProducer(React4, obj4);
+    const obj7 = { source: _modDef11933 };
+    obj.children = timestampProducer(React4, obj7);
   }
   return timestampProducer(React3, obj);
 };
@@ -146,14 +144,16 @@ prototype["render"] = function render() {
     const intl = util.intl;
     stringResult = intl.string(util.t["MsUY/S"]);
   }
-  let obj = { accessibilityRole: "button", accessibilityLabel: stringResult, onPress, children: null };
-  obj = { style: null, children: null };
+  const obj = { accessibilityRole: "button", accessibilityLabel: stringResult, onPress, children: null };
+  const obj2 = { style: null, children: null };
   const items = [tmp.container, style];
-  obj.style = items;
-  obj = { style: tmp.guildIcon, children: self.renderIcon() };
-  const items1 = [timestampProducer(React3, obj), self.renderUpload()];
-  obj.children = items1;
-  obj.children = React5(React3, obj);
+  obj2.style = items;
+  const items1 = [
+    timestampProducer(React3, { style: tmp.guildIcon, children: self.renderIcon() }),
+    self.renderUpload(),
+  ];
+  obj2.children = items1;
+  obj.children = React5(React3, obj2);
   return timestampProducer(Pressables.PressableOpacity, obj);
 };
 GuildIconUploader.contextType = fn(4347).ThemeContext;

@@ -3,7 +3,7 @@ import AppStartPerformanceDefault from "../../../discord_common/js/packages/app-
 import noop from "../../../_runtime/metro/00019__.js";
 
 const jsx = fn(21).jsx;
-let Profiles = {
+const obj = {
   App: "App",
   AppContainer: "AppContainer",
   MainNavigator: "MainNavigator",
@@ -21,24 +21,24 @@ let Profiles = {
   ChatView: "ChatView",
   Messages: "Messages",
 };
-Profiles = {};
+let obj2 = {};
 function setLevels(obj, arg1) {
   for (const key10006 in arg0) {
-    obj[key10006] = arg1;
+    obj2[key10006] = arg1;
     let tmp4 = setLevels(arg0[key10006], arg1 + " ");
     continue;
   }
 }
-Profiles = {
-  [Profiles.App]: {
-    [Profiles.AppContainer]: {
-      [Profiles.MainNavigator]: {
-        [Profiles.StackNavigator]: {
-          [Profiles.MainTabs]: {
-            [Profiles.MainDrawers]: {
-              [Profiles.LeftPanel]: { [Profiles.Guilds]: {}, [Profiles.Channels]: {} },
-              [Profiles.RightPanel]: { [Profiles.Members]: {} },
-              [Profiles.CenterPanel]: { [Profiles.Channel]: { [Profiles.ChatView]: { [Profiles.Messages]: {} } } },
+const obj3 = {
+  [obj.App]: {
+    [obj.AppContainer]: {
+      [obj.MainNavigator]: {
+        [obj.StackNavigator]: {
+          [obj.MainTabs]: {
+            [obj.MainDrawers]: {
+              [obj.LeftPanel]: { [obj.Guilds]: {}, [obj.Channels]: {} },
+              [obj.RightPanel]: { [obj.Members]: {} },
+              [obj.CenterPanel]: { [obj.Channel]: { [obj.ChatView]: { [obj.Messages]: {} } } },
             },
           },
         },
@@ -46,16 +46,16 @@ Profiles = {
     },
   },
 };
-for (const key10073 in obj) {
-  Profiles[key10073] = "";
-  let tmp6 = Profiles[key10073];
+for (const key10073 in obj3) {
+  obj2[key10073] = "";
+  let tmp6 = obj3[key10073];
   let keys = Object.keys();
   if (keys === undefined) {
     continue;
   } else {
     let tmp3 = keys[tmp];
     while (tmp3 !== undefined) {
-      Profiles[tmp3] = " ";
+      obj2[tmp3] = " ";
       let setLevelsResult = setLevels(tmp6[tmp3], "  ");
       continue;
     }
@@ -67,13 +67,11 @@ const result = size.fileFinishedImporting("modules/app_startup/StartupProfiler.t
 
 export default function StartupProfiler(children) {
   const profile = children.profile;
-  let obj = profile(10);
-  obj.mark("\u{1F3A8}", "" + obj[profile] + profile + " render");
-  obj = {
+  profile(10).mark("\u{1F3A8}", "" + obj2[profile] + profile + " render");
+  obj2 = {
     id: profile,
     onRender(arg0, arg1, arg2) {
-      const obj = AppStartPerformanceDefault;
-      obj.mark("\u{1F3A8}", "" + obj[profile] + profile + " " + arg1, arg2);
+      AppStartPerformanceDefault.mark("\u{1F3A8}", "" + obj2[profile] + profile + " " + arg1, arg2);
     },
     children: children.children,
   };
@@ -81,12 +79,11 @@ export default function StartupProfiler(children) {
     <noop.Profiler
       id={profile}
       onRender={function onRender(arg0, arg1, arg2) {
-        const obj = AppStartPerformanceDefault;
-        obj.mark("\u{1F3A8}", "" + obj[profile] + profile + " " + arg1, arg2);
+        AppStartPerformanceDefault.mark("\u{1F3A8}", "" + obj2[profile] + profile + " " + arg1, arg2);
       }}
     >
       {children.children}
     </noop.Profiler>
   );
 }
-export { Profiles };
+export const Profiles = obj;

@@ -13,8 +13,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/shop/native/CollectiblesShopScreen.tsx");
 
 export default function CollectiblesShopScreen() {
-  let obj = useSettingNavigationRoute;
-  const settingNavigationRoute = obj.useSettingNavigationRoute();
+  const settingNavigationRoute = useSettingNavigationRoute.useSettingNavigationRoute();
   const shopOrientationLock = useShopOrientationLock.useShopOrientationLock();
   const giftCardMobileConsumptionHalfsheet =
     useGiftCardMobileConsumptionHalfsheet.useGiftCardMobileConsumptionHalfsheet();
@@ -34,12 +33,12 @@ export default function CollectiblesShopScreen() {
   if (analyticsSource == null) {
     analyticsSource = AnalyticsLocationDefault.COLLECTIBLES_SHOP;
   }
-  obj = { analyticsSource, screen, onNavigateAway: null };
+  const obj4 = { analyticsSource, screen, onNavigateAway: null };
   const params3 = settingNavigationRoute.params;
   let onNavigateAway;
   if (params3 != null) {
     onNavigateAway = params3.onNavigateAway;
   }
-  obj.onNavigateAway = onNavigateAway;
+  obj4.onNavigateAway = onNavigateAway;
   return jsx(CollectiblesShopV2.CollectiblesShopV2, { analyticsSource, screen, onNavigateAway: null });
 }

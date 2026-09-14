@@ -1,6 +1,8 @@
 // discord_app/modules/slayer_storefront/native/hooks/useSocialLayerStorefrontMobileAccountLinkingDisabled.tsx
 import SocialLayerStorefrontStore from "../../SocialLayerStorefrontStore.tsx";
 
+const require = globalThis.__r;
+
 const require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting(

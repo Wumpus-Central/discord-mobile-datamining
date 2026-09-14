@@ -44,7 +44,7 @@ function handleConnectionOpen() {
   });
 }
 let closure_1 = 5 * DurationsDefault.Millis.SECOND;
-let SafetyWarningTypes = {
+const SafetyWarningTypes = {
   STRANGER_DANGER: 1,
   [1]: "STRANGER_DANGER",
   INAPPROPRIATE_CONVERSATION_TIER_1: 2,
@@ -81,7 +81,7 @@ prototype["getChannelSafetyWarnings"] = function getChannelSafetyWarnings(channe
 prototype["hasShownInitialTooltipForChannel"] = function hasShownInitialTooltipForChannel(arg0) {
   return set.has(arg0);
 };
-SafetyWarningTypes = {
+const channelSafetyWarningsStore = new ChannelSafetyWarningsStore(DispatcherDefault, {
   CHANNEL_CREATE: function handleChannelCreate(channel) {
     channel = channel.channel;
     const safetyWarnings = channel.safetyWarnings;
@@ -215,8 +215,7 @@ SafetyWarningTypes = {
   ACKNOWLEDGE_CHANNEL_SAFETY_WARNING_TOOLTIP: function handleAcknowledgeChannelSafetyWarningTooltip(channelId) {
     set.add(channelId.channelId);
   },
-};
-const channelSafetyWarningsStore = new ChannelSafetyWarningsStore(DispatcherDefault, SafetyWarningTypes);
+});
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/self_mod/ChannelSafetyWarningsStore.tsx");
 

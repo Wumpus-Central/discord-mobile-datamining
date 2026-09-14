@@ -24,8 +24,8 @@ export default function UserProfileLegacyUsernameSwitch(pendingLegacyUsernameDis
   if (tmp4) {
     let stringResult = intl2.string(tmp(1114).t.eD6Yq0);
   } else {
-    obj = { username: pendingLegacyUsernameDisabled.legacyUsername };
-    stringResult = intl2.formatToPlainString(tmp(1114).t.aYhclf, obj);
+    let obj2 = { username: pendingLegacyUsernameDisabled.legacyUsername };
+    stringResult = intl2.formatToPlainString(tmp(1114).t.aYhclf, obj2);
   }
   obj.subLabel = stringResult;
   const intl3 = tmp(1114).intl;
@@ -34,11 +34,11 @@ export default function UserProfileLegacyUsernameSwitch(pendingLegacyUsernameDis
     if (!arg0 === setting) {
       const result = UserSettingsAccountActionCreators.resetPendingLegacyUsernameDisabled();
     } else {
-      const obj = { legacyUsernameDisabled: !arg0 };
-      obj.setPendingChanges(obj);
+      const obj2 = { legacyUsernameDisabled: !arg0 };
+      UserProfileSettingsActionCreators.setPendingChanges(obj2);
     }
   };
-  return jsx(setting(14705).UserProfileEditFormSwitch, {
+  return jsx(setting(14706).UserProfileEditFormSwitch, {
     value: !tmp4,
     label: null,
     subLabel: null,

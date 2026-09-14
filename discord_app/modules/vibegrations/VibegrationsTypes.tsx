@@ -24,7 +24,6 @@ const items1 = [
   { id: "xai/grok-4.6", label: "Grok 4.6", provider: "xai" },
   { id: "workers-ai/@cf/zai-org/glm-4.7-flash", label: "GLM 4.7 Flash", provider: "workers-ai" },
 ];
-obj = { main: items1, subagent: items1, thinking: obj.thinking };
 const result = size.fileFinishedImporting("modules/vibegrations/VibegrationsTypes.tsx");
 
 export const UNNAMED_PROJECT_NAME = "Untitled App";
@@ -102,4 +101,4 @@ export const formatVibegrationsAttachmentLimit = function formatVibegrationsAtta
   return "" + Math.round(arg0 / 1048576) + " MB";
 };
 export const VIBEGRATIONS_FALLBACK_MODEL_CHOICES = obj;
-export const VIBEGRATIONS_DEV_FALLBACK_MODEL_CHOICES = obj;
+export const VIBEGRATIONS_DEV_FALLBACK_MODEL_CHOICES = { main: items1, subagent: items1, thinking: obj.thinking };

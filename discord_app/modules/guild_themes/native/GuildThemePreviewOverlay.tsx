@@ -11,14 +11,14 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_themes/native/GuildThemePreviewOverlay.tsx");
 
 export default function GuildThemePreviewOverlay(arg0) {
-  let obj = {};
+  const obj = {};
   const merged = Object.assign(arg0);
   obj.preserveAspectRatio = "none";
   obj.width = "100%";
   obj.height = "100%";
   obj.viewBox = "0 0 259.862 154.514";
   obj.fill = "none";
-  obj = { children: null };
+  const obj2 = { children: null };
   const items = [
     React3(inlineStyles.Path, {
       d: "M20.8821 7.1867C20.8821 3.21759 24.0659 0 27.9932 0H84.8821V154.514H20.8821V7.1867Z",
@@ -43,7 +43,7 @@ export default function GuildThemePreviewOverlay(arg0) {
     ,
     ,
   ];
-  obj = { opacity: "0.2", children: null };
+  const obj3 = { opacity: "0.2", children: null };
   const items1 = [
     React3(inlineStyles.Path, {
       d: "M99.2224 43.2126C103.136 43.2126 106.31 40.0048 106.31 36.0479C106.31 32.091 103.136 28.8832 99.2224 28.8832C95.3082 28.8832 92.1351 32.091 92.1351 36.0479C92.1351 40.0048 95.3082 43.2126 99.2224 43.2126Z",
@@ -82,8 +82,8 @@ export default function GuildThemePreviewOverlay(arg0) {
       fill: "white",
     }),
   ];
-  obj.children = items1;
-  items[2] = React4(inlineStyles.G, obj);
+  obj3.children = items1;
+  items[2] = React4(inlineStyles.G, obj3);
   items[3] = React3(inlineStyles.Path, {
     opacity: "0.2",
     d: "M76.1873 8.28431H28.9391C28.4497 8.28431 28.0532 8.68527 28.0532 9.1799C28.0532 9.67453 28.4497 10.0755 28.9391 10.0755H76.1873C76.6765 10.0755 77.0733 9.67453 77.0733 9.1799C77.0733 8.68527 76.6765 8.28431 76.1873 8.28431Z",
@@ -120,7 +120,7 @@ export default function GuildThemePreviewOverlay(arg0) {
     d: "M259.862 18.1359H21.2575V19.3299H259.862V18.1359Z",
     fill: "white",
   });
-  const obj1 = { opacity: "0.2", children: null };
+  const obj4 = { opacity: "0.2", children: null };
   const items2 = [
     React3(inlineStyles.Path, {
       d: "M44.2994 29.7789H30.1249C29.6356 29.7789 29.239 30.18 29.239 30.6745C29.239 31.1692 29.6356 31.5701 30.1249 31.5701H44.2994C44.7885 31.5701 45.1853 31.1692 45.1853 30.6745C45.1853 30.18 44.7885 29.7789 44.2994 29.7789Z",
@@ -159,8 +159,8 @@ export default function GuildThemePreviewOverlay(arg0) {
       strokeWidth: "0.723776",
     }),
   ];
-  obj1.children = items2;
-  items[10] = React4(inlineStyles.G, obj1);
+  obj4.children = items2;
+  items[10] = React4(inlineStyles.G, obj4);
   items[11] = React3(inlineStyles.Path, {
     d: "M73.2348 124.413H4.72483C2.11537 124.413 0 126.551 0 129.189V143.519C0 146.157 2.11537 148.295 4.72483 148.295H73.2348C75.8444 148.295 77.9597 146.157 77.9597 143.519V129.189C77.9597 126.551 75.8444 124.413 73.2348 124.413Z",
     fill: "white",
@@ -171,7 +171,7 @@ export default function GuildThemePreviewOverlay(arg0) {
     d: "M11.8111 143.518C15.7253 143.518 18.8983 140.31 18.8983 136.353C18.8983 132.396 15.7253 129.188 11.8111 129.188C7.89693 129.188 4.72387 132.396 4.72387 136.353C4.72387 140.31 7.89693 143.518 11.8111 143.518Z",
     fill: "white",
   });
-  const obj2 = { opacity: "0.3", children: null };
+  const obj5 = { opacity: "0.3", children: null };
   const items3 = [
     React3(inlineStyles.Path, {
       d: "M56.1027 131.209H25.3914C24.4127 131.209 23.6196 132.011 23.6196 133C23.6196 133.989 24.4127 134.791 25.3914 134.791H56.1027C57.0811 134.791 57.8745 133.989 57.8745 133C57.8745 132.011 57.0811 131.209 56.1027 131.209Z",
@@ -182,8 +182,8 @@ export default function GuildThemePreviewOverlay(arg0) {
       fill: "white",
     }),
   ];
-  obj2.children = items3;
-  items[13] = React4(inlineStyles.G, obj2);
+  obj5.children = items3;
+  items[13] = React4(inlineStyles.G, obj5);
   const tmp = inlineStylesDefault;
   items[14] = React3(inlineStyles.G, {
     opacity: "0.5",
@@ -193,7 +193,7 @@ export default function GuildThemePreviewOverlay(arg0) {
       fillOpacity: "0.08",
     }),
   });
-  obj.children = items;
-  obj.children = React4(inlineStyles.G, obj);
+  obj2.children = items;
+  obj.children = React4(inlineStyles.G, obj2);
   return React3(tmp, obj);
 }

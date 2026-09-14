@@ -15,14 +15,14 @@ export const useGuildShopVisibleInGuild = function useGuildShopVisibleInGuild(id
     id = id.id;
   }
   const guildEligibleForGuildProducts = GuildProductsEligibility.useGuildEligibleForGuildProducts(id);
-  let tmpResult = useRoleSubscriptionsVisibleInGuild;
   let id1;
   if (id != null) {
     id1 = id.id;
   }
-  const roleSubscriptionsVisibleInGuild = tmpResult.useRoleSubscriptionsVisibleInGuild(id1);
-  tmpResult = useGuildShopPreviewVisible;
-  const guildShopPreviewVisible = tmpResult.useGuildShopPreviewVisible(id);
+  const roleSubscriptionsVisibleInGuild = useRoleSubscriptionsVisibleInGuild.useRoleSubscriptionsVisibleInGuild(id1);
+  const tmpResult = useRoleSubscriptionsVisibleInGuild;
+  const guildShopPreviewVisible = useGuildShopPreviewVisible.useGuildShopPreviewVisible(id);
+  const tmpResult3 = useGuildShopPreviewVisible;
   let id2;
   if (id != null) {
     id2 = id.id;

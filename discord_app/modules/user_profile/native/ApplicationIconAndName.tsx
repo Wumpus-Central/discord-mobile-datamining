@@ -20,20 +20,21 @@ export default function ApplicationIconAndName(textVariant) {
   if (useComma === undefined) {
     useComma = false;
   }
-  let obj = { style: closure_6(iconSize).gameIcon, resizeMode: "contain", source: null, disableColor: true };
+  const obj = { style: closure_6(iconSize).gameIcon, resizeMode: "contain", source: null, disableColor: true };
   let str = application.getIconURL(iconSize);
   if (str == null) {
     str = "";
   }
   obj.source = { uri: str };
   const items = [React3(native.Icon, obj, application.id)];
-  obj = { variant: textVariant.textVariant, children: null };
+  const obj2 = { variant: textVariant.textVariant, children: null };
   let str2 = "";
   if (useComma) {
     str2 = ", ";
   }
-  obj = { children: "" + application.name + str2 };
-  items[1] = React3(Text_Text.Text, obj);
-  obj.children = items;
-  return hasOwnProperty(React4, obj);
+  const obj3 = { children: null };
+  obj2.children = "" + application.name + str2;
+  items[1] = React3(Text_Text.Text, obj2);
+  obj3.children = items;
+  return hasOwnProperty(React4, obj3);
 }

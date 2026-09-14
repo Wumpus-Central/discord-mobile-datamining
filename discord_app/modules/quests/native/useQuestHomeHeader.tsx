@@ -12,9 +12,9 @@ import noop from "../../../../_runtime/metro/00019__.js";
 require = fn;
 function QuestHomeHeaderTitle() {
   const tmp = closure_10();
-  let obj = { style: tmp.headerTitleContainer, children: null };
+  const obj = { style: tmp.headerTitleContainer, children: null };
   const items = [React6(QuestsIcon.QuestsIcon, { size: "md", color: "icon-strong" })];
-  obj = {
+  const obj2 = {
     variant: "redesign/heading-18/bold",
     color: "mobile-text-heading-primary",
     maxFontSizeMultiplier: 2,
@@ -23,8 +23,8 @@ function QuestHomeHeaderTitle() {
     children: null,
   };
   const intl = util.intl;
-  obj.children = intl.string(util.t.JALI2K);
-  items[1] = React6(Text_Text.Heading, obj);
+  obj2.children = intl.string(util.t.JALI2K);
+  items[1] = React6(Text_Text.Heading, obj2);
   obj.children = items;
   return React7(View, obj);
 }
@@ -32,19 +32,20 @@ function QuestHomeHeaderRight(isVirtualCurrencyEnabled) {
   isVirtualCurrencyEnabled = isVirtualCurrencyEnabled.isVirtualCurrencyEnabled;
   const merged = Object.assign(isVirtualCurrencyEnabled, Object.assign({ isVirtualCurrencyEnabled: 0 }));
   let balance;
-  let obj = balance(8976);
-  balance = obj.useFetchVirtualCurrencyBalance().balance;
+  const tmp2 = closure_10();
+  const tmp3 = balance;
+  balance = balance(8976).useFetchVirtualCurrencyBalance().balance;
   [][0] = balance;
-  obj = { style: closure_10().headerRightContainer, children: null };
+  let obj2 = { style: tmp2.headerRightContainer, children: null };
   if (isVirtualCurrencyEnabled) {
-    obj = { balance, onPress: tmp5 };
-    isVirtualCurrencyEnabled = closure_8(balance(11224).BalanceWidgetPillButton, obj);
+    let obj3 = { balance, onPress: tmp5 };
+    isVirtualCurrencyEnabled = closure_8(tmp3(11225).BalanceWidgetPillButton, obj3);
   }
   let items = [isVirtualCurrencyEnabled];
   const merged1 = Object.assign(merged);
   items[1] = closure_8(FiltersButton, {});
-  obj.children = items;
-  return closure_9(View, obj);
+  obj2.children = items;
+  return closure_9(View, obj2);
 }
 function FiltersButton(setSelectedSortMethod) {
   setSelectedSortMethod = setSelectedSortMethod.setSelectedSortMethod;
@@ -69,15 +70,18 @@ function FiltersButton(setSelectedSortMethod) {
   }
   const items = [setSelectedSortMethod, setSelectedFilters, selectedFilters, selectedSortMethod];
   const callback = selectedSortMethod.useCallback(() => {
-    const obj = {
-      onSortMethodChange: setSelectedSortMethod,
-      onFiltersChange: setSelectedFilters,
-      initialSortMethod: selectedSortMethod,
-      initialFilters: selectedFilters,
-    };
-    obj.openLazy(asyncRequireImpl(15087, dependencyMap.paths), "QuestHomeSortingFilteringBottomSheet", obj);
+    ActionSheetActionCreatorsDefault.openLazy(
+      asyncRequireImpl(15088, dependencyMap.paths),
+      "QuestHomeSortingFilteringBottomSheet",
+      {
+        onSortMethodChange: setSelectedSortMethod,
+        onFiltersChange: setSelectedFilters,
+        initialSortMethod: selectedSortMethod,
+        initialFilters: selectedFilters,
+      },
+    );
   }, items);
-  let obj = {
+  const obj = {
     icon: closure_8(setSelectedSortMethod(tmp3[21]).FiltersHorizontalIcon, {
       size: "sm",
       color: INTERACTIVE_TEXT_DEFAULT,
@@ -98,9 +102,20 @@ const AnalyticEvents = fn(1074).AnalyticEvents;
 let closure_7 = fn(1076).CollectiblesMobileShopScreen;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-fn(4636);
-let createStyles = { headerTitleContainer: null, headerTitle: null, headerRightContainer: null };
-createStyles = {
+const createStyles = fn(4636);
+let obj2 = {
+  headerTitleContainer: {
+    width: "100%",
+    flexDirection: "row",
+    alignItems: "center",
+    marginTop: nativeDefault.space.PX_8,
+    paddingLeft: nativeDefault.space.PX_8,
+    gap: nativeDefault.space.PX_8,
+  },
+  headerTitle: { flexShrink: 1 },
+  headerRightContainer: null,
+};
+let obj3 = {
   width: "100%",
   flexDirection: "row",
   alignItems: "center",
@@ -108,16 +123,14 @@ createStyles = {
   paddingLeft: nativeDefault.space.PX_8,
   gap: nativeDefault.space.PX_8,
 };
-createStyles.headerTitleContainer = createStyles;
-createStyles.headerTitle = { flexShrink: 1 };
-createStyles.headerRightContainer = {
+obj2.headerRightContainer = {
   flexDirection: "row",
   justifyContent: "flex-end",
   alignItems: "center",
   gap: nativeDefault.space.PX_8,
   marginTop: nativeDefault.space.PX_8,
 };
-let closure_10 = createStyles.createStyles(createStyles);
+let closure_10 = createStyles.createStyles(obj2);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/quests/native/useQuestHomeHeader.tsx");
 

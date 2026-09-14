@@ -31,18 +31,16 @@ const radio = SettingBuilders.createRadio({
   useValue: useSwipeToReplySettingValue,
   onValueChange: function onSwipeToReplyValueChange(arg0) {
     const NumberResult = Number(arg0);
-    let obj = {
+    const obj2 = {
       enabled: NumberResult === preloaded_user_settings.SwipeRightToLeftMode.SWIPE_RIGHT_TO_LEFT_REPLY,
-      location: null,
+      location: { section: constants2.SETTINGS_TEXT_AND_IMAGES },
     };
-    obj = { section: constants2.SETTINGS_TEXT_AND_IMAGES };
-    obj.location = obj;
-    obj.track(constants.USER_SETTINGS_SWIPE_TO_REPLY_TOGGLE, obj);
+    AnalyticsUtilsDefault.track(constants.USER_SETTINGS_SWIPE_TO_REPLY_TOGGLE, obj2);
     const SwipeRightToLeftModeSetting = UserSettings.SwipeRightToLeftModeSetting;
     SwipeRightToLeftModeSetting.updateSetting(NumberResult);
   },
   useOptions: function useHasSwipeToReplySettingOptions() {
-    let obj = {
+    const obj = {
       value: preloaded_user_settings.SwipeRightToLeftMode.SWIPE_RIGHT_TO_LEFT_CHANNEL_DETAILS,
       label: null,
       subLabel: null,
@@ -52,10 +50,10 @@ const radio = SettingBuilders.createRadio({
     const intl2 = util.intl;
     obj.subLabel = intl2.string(util.t.ohhhDK);
     const items = [obj];
-    obj = { value: preloaded_user_settings.SwipeRightToLeftMode.SWIPE_RIGHT_TO_LEFT_REPLY, label: null };
+    const obj2 = { value: preloaded_user_settings.SwipeRightToLeftMode.SWIPE_RIGHT_TO_LEFT_REPLY, label: null };
     const intl3 = util.intl;
-    obj.label = intl3.string(util.t["3tYNDS"]);
-    items[1] = obj;
+    obj2.label = intl3.string(util.t["3tYNDS"]);
+    items[1] = obj2;
     return items;
   },
 });

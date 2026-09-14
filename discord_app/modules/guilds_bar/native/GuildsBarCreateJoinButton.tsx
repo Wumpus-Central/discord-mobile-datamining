@@ -15,8 +15,8 @@ let closure_14 = async function _handleCreateJoinGuildPress() {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -29,8 +29,8 @@ let closure_14 = async function _handleCreateJoinGuildPress() {
           throw value;
         } else if (arg0 === 2) {
           c3 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           closure_1 = tmp5;
           closure_0 = tmp2;
@@ -38,8 +38,8 @@ let closure_14 = async function _handleCreateJoinGuildPress() {
           closure_128_1 = undefined;
           c2 = 1;
           c3 = 1;
-          const obj1 = { value: require("asyncRequireImpl")(paths[8], paths.paths), done: false };
-          return obj1;
+          const obj4 = { value: require("asyncRequireImpl")(paths[8], paths.paths), done: false };
+          return obj4;
         }
       } else if (1 === tmp5) {
         if (arg0 === 1) {
@@ -47,40 +47,40 @@ let closure_14 = async function _handleCreateJoinGuildPress() {
           throw value;
         } else if (arg0 === 2) {
           c3 = 3;
-          const obj2 = { value, done: true };
-          return obj2;
+          const obj5 = { value, done: true };
+          return obj5;
         } else {
           closure_128_0 = value.default;
           c2 = 2;
           c3 = 1;
-          const obj3 = { value: closure_129_0(closure_129_2[9])(closure_129_2[10], closure_129_2.paths), done: false };
-          return obj3;
+          const obj6 = { value: closure_129_0(closure_129_2[9])(closure_129_2[10], closure_129_2.paths), done: false };
+          return obj6;
         }
       } else if (arg0 === 1) {
         c3 = 3;
         throw value;
       } else if (arg0 === 2) {
         c3 = 3;
-        const obj4 = { value, done: true };
-        return obj4;
+        const obj7 = { value, done: true };
+        return obj7;
       } else {
         closure_128_1 = value.default;
         closure_128_0.acknowledgeTooltip(closure_129_9.GUILD_TOOLTIP);
         if (obj11.isAtGuildCapAndNonPremium()) {
-          obj = closure_129_1(closure_129_2[12]);
-          const obj5 = {
+          const obj8 = {
             initialUpsellKey: closure_129_10.GUILD_CAP,
             analyticsLocation: null,
             analyticsLocations: null,
             analyticsProperties: null,
           };
-          const obj6 = { page: closure_129_7.CREATE_JOIN_GUILD_MODAL };
-          obj5.analyticsLocation = obj6;
+          const obj9 = { page: closure_129_7.CREATE_JOIN_GUILD_MODAL };
+          obj8.analyticsLocation = obj9;
           const items = [closure_129_1(closure_129_2[13]).NEW_GUILD_BUTTON];
-          obj5.analyticsLocations = items;
-          const obj7 = { type: closure_129_11.GUILD_CAP_MODAL_UPSELL };
-          obj5.analyticsProperties = obj7;
-          const result = obj.handleShowUpsellAlert(obj5);
+          obj8.analyticsLocations = items;
+          const obj10 = { type: closure_129_11.GUILD_CAP_MODAL_UPSELL };
+          obj8.analyticsProperties = obj10;
+          const result = closure_129_1(closure_129_2[12]).handleShowUpsellAlert(obj8);
+          const obj = closure_129_1(closure_129_2[12]);
         } else {
           closure_128_1.openCreateGuildModal();
         }
@@ -109,18 +109,18 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/guilds_bar/native/GuildsBarCreateJoinButton.tsx");
 
 export default noop.memo(function GuildsBarCreateJoinButton() {
-  let obj = enabled(16389);
   const tmp = closure_13();
-  const GameCommunityAddServerEntryExperiment = enabled(13803).GameCommunityAddServerEntryExperiment;
+  let obj = enabled(16391);
+  const GameCommunityAddServerEntryExperiment = enabled(13804).GameCommunityAddServerEntryExperiment;
   enabled = GameCommunityAddServerEntryExperiment.useConfig({ location: "GuildsBarCreateJoinButton" }).enabled;
-  let obj1 = enabled(504);
+  const guildsBarAnimatedWrapperStyles = enabled(16391).useGuildsBarAnimatedWrapperStyles();
   const items = [SelectedGuildStore];
   let stateFromStores = enabled;
   if (enabled) {
-    stateFromStores = obj1.useStateFromStores(items, () => guildId.getGuildId() === closure_1_8);
+    stateFromStores = obj2.useStateFromStores(items, () => guildId.getGuildId() === closure_1_8);
   }
   const items1 = [enabled];
-  obj = { style: tmp.stretch, children: null };
+  const obj3 = { style: tmp.stretch, children: null };
   const memo = noop.useMemo(
     () => ({
       onPress() {
@@ -144,50 +144,36 @@ export default noop.memo(function GuildsBarCreateJoinButton() {
     }),
     items1,
   );
-  obj = {
+  const obj4 = {
     selected: stateFromStores,
     circle: false,
     unread: false,
-    styles: obj.useGuildsBarAnimatedWrapperStyles(),
+    styles: guildsBarAnimatedWrapperStyles,
     overState: "y",
     config: memo,
-    label: null,
-    expandedChildren: "guilds-bar-drag-preview",
+    label: "text-subtle",
+    expandedChildren: 1,
     children: null,
   };
-  const guildsBarAnimatedWrapperStyles = obj.useGuildsBarAnimatedWrapperStyles();
+  obj2 = enabled(504);
   const intl = tmp2(1114).intl;
-  obj.label = intl.string(enabled(1114).t.l5WIbf);
-  obj.expandedChildren = jsx(enabled(16449).HomeDrawerAddServerRowExpandedChildren, {});
+  obj4.label = intl.string(enabled(1114).t.l5WIbf);
+  obj4.expandedChildren = jsx(enabled(16451).HomeDrawerAddServerRowExpandedChildren, {});
   const colors = nativeDefault.colors;
-  obj1 = { size: "md", color: stateFromStores ? colors.WHITE : colors.MOBILE_GUILDBAR_ICON_DEFAULT };
-  obj.children = jsx(enabled(11337).CirclePlusIcon, {
+  obj4.children = jsx(enabled(11338).CirclePlusIcon, {
     size: "md",
     color: stateFromStores ? colors.WHITE : colors.MOBILE_GUILDBAR_ICON_DEFAULT,
   });
-  obj.children = jsx(GuildsBarAnimatedItemWrapperDefault, {
+  obj3.children = jsx(GuildsBarAnimatedItemWrapperDefault, {
     selected: stateFromStores,
     circle: false,
     unread: false,
-    styles: obj.useGuildsBarAnimatedWrapperStyles(),
+    styles: guildsBarAnimatedWrapperStyles,
     overState: "y",
     config: memo,
-    label: null,
-    expandedChildren: "guilds-bar-drag-preview",
+    label: "text-subtle",
+    expandedChildren: 1,
     children: null,
   });
-  return (
-    <View
-      selected={stateFromStores}
-      circle={false}
-      unread={false}
-      styles={obj.useGuildsBarAnimatedWrapperStyles()}
-      overState="y"
-      config={memo}
-      label={null}
-      expandedChildren="guilds-bar-drag-preview"
-    >
-      {null}
-    </View>
-  );
+  return <View style={tmp.stretch}>{null}</View>;
 });

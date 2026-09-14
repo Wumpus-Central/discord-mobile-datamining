@@ -29,7 +29,7 @@ export const buildMediaEntries = function buildMediaEntries(game) {
       trailers = [];
     }
     items = [];
-    let arraySpreadResult = HermesBuiltin.arraySpread(
+    const arraySpreadResult = HermesBuiltin.arraySpread(
       trailers.map((application_id) => {
         const obj = {
           type: "trailer",
@@ -45,11 +45,13 @@ export const buildMediaEntries = function buildMediaEntries(game) {
     if (screenshotUrls == null) {
       screenshotUrls = [];
     }
-    arraySpreadResult = HermesBuiltin.arraySpread(
+    HermesBuiltin.arraySpread(
       screenshotUrls.map((originalUrl) => {
-        let obj = { type: "image", originalUrl, previewUrl: null };
-        obj = { size, keepAspectRatio: true };
-        obj.previewUrl = ImageProxyUtils.getSizedImageAssetURL(originalUrl, obj);
+        const obj = {
+          type: "image",
+          originalUrl,
+          previewUrl: ImageProxyUtils.getSizedImageAssetURL(originalUrl, { size, keepAspectRatio: true }),
+        };
         return obj;
       }),
       arraySpreadResult,
@@ -60,7 +62,7 @@ export const buildMediaEntries = function buildMediaEntries(game) {
 export const buildMediaViewerSources = function buildMediaViewerSources(memo1, memo) {
   closure_0 = memo;
   return memo1.map((originalUrl, mediaIndex) => {
-    let obj = { uri: originalUrl.originalUrl, videoURI: null, mediaIndex: null };
+    const obj = { uri: originalUrl.originalUrl, videoURI: null, mediaIndex: null };
     originalUrl = undefined;
     if ("trailer" === originalUrl.type) {
       originalUrl = originalUrl.originalUrl;
@@ -68,10 +70,10 @@ export const buildMediaViewerSources = function buildMediaViewerSources(memo1, m
     obj.videoURI = originalUrl;
     obj.mediaIndex = mediaIndex;
     const merged = Object.assign(closure_3);
-    obj = {};
+    const obj2 = {};
     const merged1 = Object.assign(closure_0);
-    obj.uri = originalUrl.previewUrl;
-    obj.thumbnail = obj;
+    obj2.uri = originalUrl.previewUrl;
+    obj.thumbnail = obj2;
     obj.accessoryType = "embed";
     obj.disableDownload = true;
     return obj;

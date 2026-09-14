@@ -1,9 +1,8 @@
 // discord_app/modules/voice_panel/native/VoicePanelAccessibilityView.tsx
-import VoicePanelPIPStateContext from "pip/VoicePanelPIPStateContext.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
-require = fn;
-const VoicePanelPIPModes = fn(17197).VoicePanelPIPModes;
+const require = fn;
+const VoicePanelPIPModes = fn(17199).VoicePanelPIPModes;
 const jsx = fn(21).jsx;
 let closure_4 = noop.memo(fn(5040).AccessibilityViewAnimated);
 const size = fn(2);
@@ -20,7 +19,7 @@ export default function VoicePanelAccessibilityView(pointerEvents) {
     pointerEvents,
     Object.assign({ style: 0, pointerEvents: 0, nativeID: 0, accessibilityViewIsModal: 0, onAccessibilityEscape: 0 }),
   );
-  const obj = {
+  const obj2 = {
     style: pointerEvents.style,
     pointerEvents: str,
     nativeID,
@@ -30,8 +29,8 @@ export default function VoicePanelAccessibilityView(pointerEvents) {
   if (accessibilityViewIsModal) {
     accessibilityViewIsModal = obj.usePIPState().mode !== VoicePanelPIPModes.IN_APP;
   }
-  obj.accessibilityViewIsModal = accessibilityViewIsModal;
-  obj.onAccessibilityEscape = onAccessibilityEscape;
+  obj2.accessibilityViewIsModal = accessibilityViewIsModal;
+  obj2.onAccessibilityEscape = onAccessibilityEscape;
   const merged1 = Object.assign(merged);
   return (
     <closure_4

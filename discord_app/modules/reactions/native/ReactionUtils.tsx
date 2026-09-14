@@ -1,19 +1,20 @@
 // discord_app/modules/reactions/native/ReactionUtils.tsx
 import asyncRequireImpl from "../../../../_runtime/01896_asyncRequireImpl.js";
 import ReactionUtils from "../ReactionUtils.tsx";
-import PremiumUtils from "../../../utils/PremiumUtils.tsx";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import HapticUtils from "../../haptics/HapticUtils.native.tsx";
 import haptics_HapticFeedbackTypesDefault from "../../haptics/HapticFeedbackTypes.tsx";
 import AppAnalyticsUtilsDefault from "../../app_analytics/AppAnalyticsUtils.tsx";
 import AlertActionCreatorsDefault from "../../../actions/AlertActionCreators.tsx";
 import ReactionActionCreators from "../ReactionActionCreators.tsx";
-import _modDef11401 from "../../../../_runtime/metro/11401__.js";
 import _modDef11402 from "../../../../_runtime/metro/11402__.js";
+import _modDef11403 from "../../../../_runtime/metro/11403__.js";
 import ChannelStore from "../../../stores/ChannelStore.tsx";
 import MessageStore from "../../../stores/MessageStore.tsx";
 import SelectedGuildStore from "../../../stores/SelectedGuildStore.tsx";
 import UserStore from "../../../stores/UserStore.tsx";
+
+const require = globalThis.__r;
 
 require = fn;
 const Constants = fn(1074);
@@ -21,25 +22,24 @@ const Constants = fn(1074);
 const EmojiIntention = fn(1374).EmojiIntention;
 const jsx = fn(21).jsx;
 let obj = {};
-obj[fn(7865).ReactionTypes.NORMAL] = _modDef11401;
-obj[fn(7865).ReactionTypes.BURST] = _modDef11402;
-obj = {};
-obj[fn(7865).ReactionTypes.NORMAL] = fn(8883).ReactionIcon;
-obj[fn(7865).ReactionTypes.BURST] = fn(9503).SuperReactionIcon;
+obj[fn(7865).ReactionTypes.NORMAL] = _modDef11402;
+obj[fn(7865).ReactionTypes.BURST] = _modDef11403;
+let obj2 = {};
+obj2[fn(7865).ReactionTypes.NORMAL] = fn(8883).ReactionIcon;
+obj2[fn(7865).ReactionTypes.BURST] = fn(9503).SuperReactionIcon;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/reactions/native/ReactionUtils.tsx");
 
 export const handleOutOfSuperReactions = function handleOutOfSuperReactions(onDismiss) {
   const currentUser = UserStore.getCurrentUser();
   if (null != currentUser) {
-    let obj = PremiumUtils;
     let openLazyResult;
     if (!obj.isPremium(currentUser)) {
-      obj = { onDismiss };
+      const obj3 = { onDismiss };
       openLazyResult = ActionSheetActionCreatorsDefault.openLazy(
-        asyncRequireImpl(11270, dependencyMap.paths),
+        asyncRequireImpl(11271, dependencyMap.paths),
         "SuperReactionUpsellActionSheet",
-        obj,
+        obj3,
       );
     }
     return openLazyResult;
@@ -54,7 +54,6 @@ export const handleAddNewReactions = function handleAddNewReactions(channel, id)
   if (burst != null) {
     burst = burst.burst;
   }
-  let tmp10Result = UserStore;
   const currentUser = UserStore.getCurrentUser();
   if (null != currentUser) {
     let ReactionTypes = MESSAGE;
@@ -64,9 +63,8 @@ export const handleAddNewReactions = function handleAddNewReactions(channel, id)
       tmp4 = !isPremiumResult;
     }
     if (tmp4) {
-      const currentUser1 = tmp10Result.getCurrentUser();
+      const currentUser1 = UserStore.getCurrentUser();
       if (null != currentUser1) {
-        let tmp13Result = tmp13(ReactionTypes[11]);
         if (!tmp13Result.isPremium(currentUser1)) {
           require("ActionSheetActionCreators").openLazy(
             tmp13(ReactionTypes[14])(ReactionTypes[13], ReactionTypes.paths),
@@ -75,26 +73,27 @@ export const handleAddNewReactions = function handleAddNewReactions(channel, id)
           );
           const obj3 = require("ActionSheetActionCreators");
         }
+        tmp13Result = tmp13(ReactionTypes[11]);
       }
     }
-    tmp13Result = tmp13(ReactionTypes[15]);
-    const bestActiveInputForChannelId = tmp13Result.getBestActiveInputForChannelId(channel.id);
+    isPremiumResult = require("PremiumUtils").isPremium(currentUser);
+    const bestActiveInputForChannelId = require("ChatInputUtils").getBestActiveInputForChannelId(channel.id);
     if (bestActiveInputForChannelId != null) {
       bestActiveInputForChannelId.closeCustomKeyboard();
     }
     require("openEmojiPickerActionSheet");
-    tmp10Result = {
+    let obj2 = {
       onPressEmoji(byName, burst) {
         id = id.id;
         const obj = { burst };
         if (null != byName) {
           const toReactionEmojiResult = ReactionUtils.toReactionEmoji(byName);
           if (!obj.burst) {
-            let tmp3Result = HapticUtils;
-            const result = tmp3Result.triggerHapticFeedback(haptics_HapticFeedbackTypesDefault.IMPACT_LIGHT);
+            const result = HapticUtils.triggerHapticFeedback(haptics_HapticFeedbackTypesDefault.IMPACT_LIGHT);
+            const tmp3Result = HapticUtils;
           }
-          tmp3Result = ReactionActionCreators;
-          tmp3Result.addReaction(id, closure_1, toReactionEmojiResult, MESSAGE, obj);
+          const tmp3Result2 = ReactionActionCreators;
+          tmp3Result2.addReaction(id, closure_1, toReactionEmojiResult, MESSAGE, obj);
         }
       },
       channel,
@@ -104,14 +103,14 @@ export const handleAddNewReactions = function handleAddNewReactions(channel, id)
       messageId: null,
     };
     if (true !== burst) {
-      tmp10Result.reactionType = tmp13(ReactionTypes[17]).ReactionTypes.NORMAL;
-      tmp10Result.analyticsObject = MESSAGE;
-      tmp10Result.messageId = id;
-      tmp10Result = tmp10(tmp10Result);
+      obj2.reactionType = tmp13(ReactionTypes[17]).ReactionTypes.NORMAL;
+      obj2.analyticsObject = MESSAGE;
+      obj2.messageId = id;
+      obj2 = tmp10(obj2);
     }
     ReactionTypes = tmp13(ReactionTypes[17]).ReactionTypes;
     const BURST = ReactionTypes.BURST;
-    isPremiumResult = require("PremiumUtils").isPremium(currentUser);
+    const tmp13Result3 = require("ChatInputUtils");
   }
 };
 export const handleViewReactions = function handleViewReactions(isPoll) {
@@ -146,48 +145,51 @@ export const handleViewReactions = function handleViewReactions(isPoll) {
       }
       isPoll = true === isPollResult;
     }
-    let obj = {
+    const obj = {
       guild_id: SelectedGuildStore.getGuildId(),
       channel_id: channelId,
       location_message_id: messageId,
       location_message_is_poll: isPoll,
       location: null,
     };
-    obj = { page: tmp4, section: FORUM_CHANNEL_POST };
+    const obj2 = { page: tmp4, section: FORUM_CHANNEL_POST };
     const merged1 = Object.assign(_location);
-    obj.location = obj;
+    obj.location = obj2;
     AppAnalyticsUtilsDefault.trackWithMetadata(constants.REACTION_ACTION_SHEET_OPENED, obj);
-    const obj1 = { messageId, channelId, emoji: isPoll.emoji };
+    const obj4 = { messageId, channelId, emoji: isPoll.emoji };
     const obj6 = ActionSheetActionCreatorsDefault;
     const merged2 = Object.assign(merged);
-    obj6.openLazy(asyncRequireImpl(11388, dependencyMap.paths), "MessageReactions", obj1);
-    const tmp19 = asyncRequireImpl(11388, dependencyMap.paths);
+    obj6.openLazy(asyncRequireImpl(11389, dependencyMap.paths), "MessageReactions", obj4);
+    const tmp19 = asyncRequireImpl(11389, dependencyMap.paths);
   }
   FORUM_CHANNEL_POST = constants2.FORUM_CHANNEL_POST;
   tmp4 = isPrivateResult ? React6.DM_CHANNEL : React6.GUILD_CHANNEL;
 };
 export const handleViewPreviewReactions = function handleViewPreviewReactions(id2, id, emoji) {
-  const obj = { messageId: id2, channelId: id, emoji };
-  obj.openLazy(asyncRequireImpl(11400, dependencyMap.paths), "MessagePreviewReactions", obj);
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(11401, dependencyMap.paths), "MessagePreviewReactions", {
+    messageId: id2,
+    channelId: id,
+    emoji,
+  });
 };
 export const ADD_REACTION_ICONS = obj;
-export const ADD_REACTION_ICON_COMPONENTS = obj;
+export const ADD_REACTION_ICON_COMPONENTS = obj2;
 export const handleRemoveAllReactions = function handleRemoveAllReactions(arg0, arg1) {
   _require = arg0;
   importDefault = arg1;
-  let obj = { title: null, children: null, cancelText: null, confirmText: null, onConfirm: null };
+  const obj2 = { title: null, children: null, cancelText: null, confirmText: null, onConfirm: null };
   const intl = require("util").intl;
-  obj.title = intl.string(require("util").t.ZbtGBm);
-  obj = { variant: "text-md/normal", children: null };
+  obj2.title = intl.string(require("util").t.ZbtGBm);
+  const obj3 = { variant: "text-md/normal", children: null };
   const intl2 = require("util").intl;
-  obj.children = intl2.string(require("util").t.VpjOCo);
-  obj.children = jsx(require("Text/Text").Text, { variant: "text-md/normal", children: null });
+  obj3.children = intl2.string(require("util").t.VpjOCo);
+  obj2.children = jsx(require("Text/Text").Text, { variant: "text-md/normal", children: null });
   const intl3 = require("util").intl;
-  obj.cancelText = intl3.string(require("util").t["ETE/oC"]);
+  obj2.cancelText = intl3.string(require("util").t["ETE/oC"]);
   const intl4 = require("util").intl;
-  obj.confirmText = intl4.string(require("util").t.oyYWHE);
-  obj.onConfirm = function onConfirm() {
+  obj2.confirmText = intl4.string(require("util").t.oyYWHE);
+  obj2.onConfirm = function onConfirm() {
     return ReactionActionCreators.removeAllReactions(closure_0, closure_1);
   };
-  obj.show(obj);
+  AlertActionCreatorsDefault.show(obj2);
 };

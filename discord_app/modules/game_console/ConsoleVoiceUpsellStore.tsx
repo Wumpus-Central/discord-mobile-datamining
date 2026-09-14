@@ -2,6 +2,8 @@
 import 00560__ from "../../../_runtime/metro/00560__.js";
 import size from "../../../_runtime/metro/00002__.js";
 
+const require = globalThis.__r;
+
 let closure_2 = Object.freeze({ voiceUpsellDismissed: false, showSparkles: false });
 const useConsoleVoiceUpsellStore = module_560.create(() => closure_2);
 const result = size.fileFinishedImporting("modules/game_console/ConsoleVoiceUpsellStore.tsx");

@@ -17,9 +17,9 @@ function compareRowsByMatchScore(score, score2) {
   if (null != score.score) {
     num = 0;
     if (null != score2.score) {
-      let obj = { score: score.score };
-      obj = { score: score2.score };
-      num = autocompleter_sortByMatchScoreDefault(obj, obj);
+      const obj = { score: score.score };
+      const obj2 = { score: score2.score };
+      num = autocompleter_sortByMatchScoreDefault(obj, obj2);
     }
   }
   return num;
@@ -92,8 +92,7 @@ const inviteSuggestionsStore = new InviteSuggestionsStore(DispatcherDefault, {
     ({ inviteTargetType, guild: closure_1_5, channel: closure_1_6, applicationId: closure_1_7 } = arg0);
     query = "";
     const blockedOrIgnoredIDs = RelationshipStore.getBlockedOrIgnoredIDs();
-    const obj = { channel, applicationId, inviteTargetType };
-    const usersAlreadyJoined = obj.getUsersAlreadyJoined(obj);
+    const usersAlreadyJoined = InstantInviteUtils.getUsersAlreadyJoined({ channel, applicationId, inviteTargetType });
     const items = [...usersAlreadyJoined];
     new Set(items);
     closure_4 = "" !== query;
@@ -161,6 +160,7 @@ const inviteSuggestionsStore = new InviteSuggestionsStore(DispatcherDefault, {
       }
     })(rows);
     counts = tmp4.counts;
+    const obj2 = { channel, applicationId, inviteTargetType };
   },
   INVITE_SUGGESTIONS_SEARCH: function handleSearch(query) {
     query = query.query;

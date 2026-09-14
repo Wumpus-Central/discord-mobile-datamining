@@ -58,9 +58,9 @@ EntitlementRecord["createFromServer"] = function createFromServer(user) {
     date1 = new Date(user.ends_at);
   }
   const subscription_id = user.subscription_id;
-  id = null;
+  let id1 = null;
   if (null != user.subscription_plan) {
-    id = user.subscription_plan.id;
+    id1 = user.subscription_plan.id;
   }
   let parent_id = null;
   if (null != user.parent_id) {
@@ -103,7 +103,7 @@ EntitlementRecord["createFromServer"] = function createFromServer(user) {
       date,
       date1,
       subscription_id,
-      id,
+      id1,
       parent_id,
       consumed,
       gift_code_batch_id,
@@ -123,7 +123,7 @@ EntitlementRecord["createFromServer"] = function createFromServer(user) {
     tmp26.startsAt = date;
     tmp26.endsAt = date1;
     tmp26.subscriptionId = subscription_id;
-    tmp26.subscriptionPlanId = id;
+    tmp26.subscriptionPlanId = id1;
     tmp26.parentId = parent_id;
     tmp26.consumed = consumed;
     tmp26.giftCodeBatchId = gift_code_batch_id;

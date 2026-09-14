@@ -1,7 +1,7 @@
 // discord_app/modules/guild_profile/GuildProfileConstants.tsx
 import size from "../../../_runtime/metro/00002__.js";
 
-let obj = {
+const obj = {
   BOULDER: "Boulder",
   CASCADE: "Cascade",
   THUNDER: "Thunder",
@@ -12,9 +12,8 @@ let obj = {
   ZEPHYR: "Zephyr",
   RISING: "Rising",
 };
-obj = { name: obj.SOUL, color: "#ff1c90" };
 let items = [
-  obj,
+  { name: obj.SOUL, color: "#ff1c90" },
   { name: obj.VOLCANO, color: "#e81d1e" },
   { name: obj.MARSH, color: "#e86e1d" },
   { name: obj.THUNDER, color: "#e8c02f" },

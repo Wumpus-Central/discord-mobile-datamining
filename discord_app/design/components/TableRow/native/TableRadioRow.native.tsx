@@ -1,4 +1,5 @@
 // discord_app/design/components/TableRow/native/TableRadioRow.native.tsx
+import native from "../../../utils/native.tsx";
 import useA11yRolesNative from "../../../../../discord_common/js/packages/design/hooks/useA11yRolesNative.tsx";
 import TableRow from "TableRow.native.tsx";
 import TableRadioGroup from "TableRadioGroup.native.tsx";
@@ -35,10 +36,10 @@ export const TableRadioRow = function TableRadioRow(value) {
   if (legacyCompat_selected == null) {
     legacyCompat_selected = context.selectedValue === value;
   }
-  let tmp2Result = tmp2(4340);
-  const nodeText = tmp2Result.getNodeText(label);
-  tmp2Result = tmp2(4340);
-  const nodeText1 = tmp2Result.getNodeText(subLabel);
+  const nodeText = native.getNodeText(label);
+  const tmp2Result = native;
+  const nodeText1 = native.getNodeText(subLabel);
+  const tmp2Result3 = native;
   const radioA11yNative = useA11yRolesNative.useRadioA11yNative({ selected: legacyCompat_selected, disabled });
   ({ accessibilityRole, accessibilityState } = radioA11yNative);
   const obj = {};

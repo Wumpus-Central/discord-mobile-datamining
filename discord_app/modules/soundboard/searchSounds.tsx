@@ -7,18 +7,20 @@ import EmojiStore from "../emojis/EmojiStore.tsx";
 
 require = fn;
 function trackSearchStart(location_stack, channel_id) {
-  const obj = { channel_id, search_type: constants2.SOUNDBOARD, location_stack };
-  obj.track(constants.SEARCH_STARTED, obj);
+  AnalyticsUtilsDefault.track(constants.SEARCH_STARTED, {
+    channel_id,
+    search_type: constants2.SOUNDBOARD,
+    location_stack,
+  });
 }
 function trackSearchResultViewed(total_results, location_stack, channel_id, query) {
-  const obj = {
+  AnalyticsUtilsDefault.track(constants.SEARCH_RESULT_VIEWED, {
     search_type: constants2.SOUNDBOARD,
     channel_id,
     query,
     total_results: total_results.length,
     location_stack,
-  };
-  obj.track(constants.SEARCH_RESULT_VIEWED, obj);
+  });
 }
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_4, SearchTypes: hasOwnProperty } = Constants);

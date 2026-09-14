@@ -23,9 +23,9 @@ export const coalesceInvoiceItems = function coalesceInvoiceItems(arr) {
       }
       continue;
     }
-    const obj = {};
     const merged = Object.assign(subscriptionPlanId);
-    items.push(obj);
+    items.push({});
+    const obj3 = {};
   });
   return items.map((subscriptionPlanId) => {
     let obj = {};

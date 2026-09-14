@@ -76,13 +76,13 @@ export default function useVideoSegmentAnalytics(getCurrentVideoTime) {
           tmp3 = tmp - first.segmentStartSec < minSegmentDurationMs / 1000;
         }
         if (!tmp3) {
-          let obj = {};
+          const obj = {};
           const merged = Object.assign(first);
           obj.endTimeMs = timestamp;
           obj.segmentEndSec = tmp;
           closure_15(obj);
-          obj = { startTimeMs: timestamp, endTimeMs: timestamp, segmentStartSec: tmp, segmentEndSec: tmp };
-          closure_5(obj);
+          const obj2 = { startTimeMs: timestamp, endTimeMs: timestamp, segmentStartSec: tmp, segmentEndSec: tmp };
+          closure_5(obj2);
           ref2.current = timestamp;
         }
       }

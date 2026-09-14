@@ -14,8 +14,7 @@ const result = size.fileFinishedImporting(
 
 export default function FileOrLinkGridPlaceholderItem(imageStyle) {
   imageStyle = imageStyle.imageStyle;
-  let obj = usePlaceholderStyles;
-  const placeholderAnimatedStyle = obj.usePlaceholderAnimatedStyle(true);
+  const placeholderAnimatedStyle = usePlaceholderStyles.usePlaceholderAnimatedStyle(true);
   const width = imageStyle.width;
   const sum = imageStyle.height + 108 * useFontScale.useFontScale();
   c1 = sum;
@@ -24,13 +23,13 @@ export default function FileOrLinkGridPlaceholderItem(imageStyle) {
     const size = { width, height };
     return size;
   }, items);
-  obj = {
+  const obj3 = {
     style: null,
     pointerEvents: "none",
     children: jsx(SearchListCard.SearchListCardContainer, { containerStyle: memo }),
   };
   const items1 = [imageStyle.containerStyle, placeholderAnimatedStyle];
-  obj.style = items1;
+  obj3.style = items1;
   return jsx(ReanimatedRexportDefault.View, {
     style: null,
     pointerEvents: "none",

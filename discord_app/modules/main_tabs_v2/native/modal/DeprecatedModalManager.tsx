@@ -13,11 +13,10 @@ import AutomaticLifecycleManager from "../../../../lib/AutomaticLifecycleManager
 
 require = fn;
 function handlePushedModal(modal) {
-  let obj = RootNavigationRef;
-  const rootNavigationRef = obj.getRootNavigationRef();
+  const rootNavigationRef = RootNavigationRef.getRootNavigationRef();
   if (null != rootNavigationRef) {
-    obj = { modal };
-    rootNavigationRef.navigate("modal", obj);
+    const obj2 = { modal };
+    rootNavigationRef.navigate("modal", obj2);
   }
 }
 function handlePoppedModal() {
@@ -101,7 +100,7 @@ let closure_17 = {
     return require("NewTermsModal").default;
   },
 };
-let prototype = function DeprecatedModalManager() {
+const prototype = function DeprecatedModalManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
   let obj = {
     CONNECTION_OPEN_SUPPLEMENTAL: createPushModalHandler(closure_17, closure_15),
@@ -109,23 +108,44 @@ let prototype = function DeprecatedModalManager() {
     USER_REQUIRED_ACTION_UPDATE(requiredAction) {
       if (null == requiredAction.requiredAction) {
         if (obj.isModalOpen(USER_REQUIRED_ACTION_UPDATE)) {
-          let tmp5Result = NavigationRouteUtils;
-          tmp5Result.popModal(USER_REQUIRED_ACTION_UPDATE);
-        }
-        tmp5Result = NavigationRouteUtils;
-        if (tmp5Result.isModalOpen(EMAIL_VERIFICATION_MODAL_OPEN)) {
-          NavigationRouteUtils.popModal(EMAIL_VERIFICATION_MODAL_OPEN);
-          const tmp5Result1 = NavigationRouteUtils;
+          NavigationRouteUtils.popModal(USER_REQUIRED_ACTION_UPDATE);
+          const tmp5Result = NavigationRouteUtils;
         }
         obj = NavigationRouteUtils;
+        if (tmp5Result3.isModalOpen(EMAIL_VERIFICATION_MODAL_OPEN)) {
+          NavigationRouteUtils.popModal(EMAIL_VERIFICATION_MODAL_OPEN);
+          const tmp5Result4 = NavigationRouteUtils;
+        }
+        tmp5Result3 = NavigationRouteUtils;
       } else {
         const items = [closure_1_17, closure_1_15];
         pushFirstOpenModal(items, requiredAction.requiredAction);
       }
     },
-    GUILD_SETTINGS_OPEN: null,
-    NOTIFICATION_SETTINGS_MODAL_OPEN: null,
-    CREATE_INVITE_MODAL_OPEN: null,
+    GUILD_SETTINGS_OPEN: createPushModalHandler({
+      key: "GUILD_SETTINGS_OPEN",
+      store: GuildSettingsStore,
+      closable: false,
+      getComponent() {
+        return require("GuildSettingsModal").default;
+      },
+    }),
+    NOTIFICATION_SETTINGS_MODAL_OPEN: createPushModalHandler({
+      key: "NOTIFICATION_SETTINGS_MODAL_OPEN",
+      store: NotificationSettingsModalStore,
+      closable: false,
+      getComponent() {
+        return require("NotificationSettingsModal").default;
+      },
+    }),
+    CREATE_INVITE_MODAL_OPEN: createPushModalHandler({
+      key: "CREATE_INVITE_MODAL_OPEN",
+      store: CreateInviteModalStore,
+      closable: false,
+      getComponent() {
+        return require("InviteSettingsModal").default;
+      },
+    }),
     GUILD_SETTINGS_CLOSE: handlePoppedModal,
     NOTIFICATION_SETTINGS_MODAL_CLOSE: handlePoppedModal,
     PREMIUM_PAYMENT_MODAL_CLOSE: handlePoppedModal,
@@ -134,38 +154,12 @@ let prototype = function DeprecatedModalManager() {
     QUICKSWITCHER_HIDE: handlePoppedModal,
     IFE_EXPERIMENT_SEARCH_MODAL_CLOSE: handlePoppedModal,
   };
-  obj = {
-    key: "GUILD_SETTINGS_OPEN",
-    store: GuildSettingsStore,
-    closable: false,
-    getComponent() {
-      return require("GuildSettingsModal").default;
-    },
-  };
-  obj.GUILD_SETTINGS_OPEN = createPushModalHandler(obj);
-  obj = {
-    key: "NOTIFICATION_SETTINGS_MODAL_OPEN",
-    store: NotificationSettingsModalStore,
-    closable: false,
-    getComponent() {
-      return require("NotificationSettingsModal").default;
-    },
-  };
-  obj.NOTIFICATION_SETTINGS_MODAL_OPEN = createPushModalHandler(obj);
-  obj.CREATE_INVITE_MODAL_OPEN = createPushModalHandler({
-    key: "CREATE_INVITE_MODAL_OPEN",
-    store: CreateInviteModalStore,
-    closable: false,
-    getComponent() {
-      return require("InviteSettingsModal").default;
-    },
-  });
   applyArgumentsResult.actions = obj;
   return applyArgumentsResult;
 }.prototype;
 class prototype extends tmp4 {}
-prototype = new prototype();
+const prototype1 = new prototype();
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/main_tabs_v2/native/modal/DeprecatedModalManager.tsx");
 
-export default prototype;
+export default prototype1;

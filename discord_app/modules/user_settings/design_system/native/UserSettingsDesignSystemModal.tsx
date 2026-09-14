@@ -17,46 +17,46 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 function DemoModal() {
-  let obj = Navigator;
-  const navigatorScreens = obj.useNavigatorScreens(() => {
+  const navigatorScreens = Navigator.useNavigatorScreens(() => {
     let obj = {};
-    obj = { headerLeft: null, headerRight: null, headerTitle: null, render: null };
-    let obj2 = NavigatorHeader;
-    obj.headerLeft = obj2.getHeaderCloseButton(ModalActionCreatorsDefault.pop);
-    obj.headerRight = function headerRight() {
-      const obj = { text: null, onPress: null };
-      const intl = closure_1_0(1114).intl;
-      obj.text = intl.string(closure_1_0(1114).t["5Wxrcd"]);
-      obj.onPress = closure_1_1(4839).pop;
-      return closure_1_7(closure_1_0(7480).HeaderActionButton, obj);
+    const obj2 = {
+      headerLeft: NavigatorHeader.getHeaderCloseButton(ModalActionCreatorsDefault.pop),
+      headerRight() {
+        const obj = { text: null, onPress: null };
+        const intl = closure_1_0(1114).intl;
+        obj.text = intl.string(closure_1_0(1114).t["5Wxrcd"]);
+        obj.onPress = closure_1_1(4839).pop;
+        return closure_1_7(closure_1_0(7480).HeaderActionButton, obj);
+      },
+      headerTitle() {
+        return closure_1_7(closure_1_0(5705).NavigatorHeader, {
+          title: constants.START,
+          subtitle: "I said come on fhqwhgads",
+        });
+      },
+      render(arg0, arg1) {
+        closure_0 = arg1;
+        return closure_7(closure_13, {
+          title: "Come on fhqwhgads.",
+          emoji: "\u{1F60E}",
+          action: "Everybody to the limit",
+          onAction() {
+            return closure_0.push(constants.WHO_DAT);
+          },
+          secondaryAction: "Maybe later",
+          onSecondaryAction: closure_1(4839).pop,
+          disclaimer: "I said come on fhqwhgads.",
+        });
+      },
     };
-    obj.headerTitle = function headerTitle() {
-      return closure_1_7(closure_1_0(5705).NavigatorHeader, {
-        title: constants.START,
-        subtitle: "I said come on fhqwhgads",
-      });
-    };
-    obj.render = function render(arg0, arg1) {
-      closure_0 = arg1;
-      return closure_7(closure_13, {
-        title: "Come on fhqwhgads.",
-        emoji: "\u{1F60E}",
-        action: "Everybody to the limit",
-        onAction() {
-          return closure_0.push(constants.WHO_DAT);
-        },
-        secondaryAction: "Maybe later",
-        onSecondaryAction: closure_1(4839).pop,
-        disclaimer: "I said come on fhqwhgads.",
-      });
-    };
-    obj[constants.START] = obj;
-    obj = { headerLeft: NavigatorHeader.getHeaderBackButton(), headerRight: null, headerTitle: null, render: null };
-    obj.headerRight = NavigatorHeader.getHeaderCloseButton(ModalActionCreatorsDefault.pop);
-    obj.headerTitle = function headerTitle() {
+    obj[constants.START] = obj2;
+    const obj4 = { headerLeft: null, headerRight: null, headerTitle: null, render: null };
+    obj4.headerLeft = NavigatorHeader.getHeaderBackButton();
+    obj4.headerRight = NavigatorHeader.getHeaderCloseButton(ModalActionCreatorsDefault.pop);
+    obj4.headerTitle = function headerTitle() {
       return closure_1_7(closure_1_0(5705).NavigatorHeader, { title: constants.WHO_DAT });
     };
-    obj.render = function render(arg0, arg1) {
+    obj4.render = function render(arg0, arg1) {
       closure_0 = arg1;
       return closure_7(closure_13, {
         title: "Who's that?",
@@ -68,14 +68,14 @@ function DemoModal() {
         children: closure_7(closure_0(6707).TextInput, { placeholder: "My friend Jake" }),
       });
     };
-    obj[constants.WHO_DAT] = obj;
-    const obj1 = { headerLeft: null, headerRight: null, headerTitle: null, render: null };
-    obj1.headerLeft = NavigatorHeader.getHeaderBackButton();
-    obj1.headerRight = NavigatorHeader.getHeaderCloseButton(ModalActionCreatorsDefault.pop);
-    obj1.headerTitle = function headerTitle() {
+    obj[constants.WHO_DAT] = obj4;
+    const obj7 = { headerLeft: null, headerRight: null, headerTitle: null, render: null };
+    obj7.headerLeft = NavigatorHeader.getHeaderBackButton();
+    obj7.headerRight = NavigatorHeader.getHeaderCloseButton(ModalActionCreatorsDefault.pop);
+    obj7.headerTitle = function headerTitle() {
       return closure_1_7(closure_1_0(5705).NavigatorHeader, { title: constants.EVERYBODY });
     };
-    obj1.render = function render(arg0, arg1) {
+    obj7.render = function render(arg0, arg1) {
       closure_0 = arg1;
       return closure_7(closure_14, {
         onAction() {
@@ -83,17 +83,17 @@ function DemoModal() {
         },
       });
     };
-    obj[constants.EVERYBODY] = obj1;
-    obj2 = { headerLeft: null, headerRight: null, headerTitle: null, render: null };
-    obj2.headerLeft = NavigatorHeader.getHeaderBackButton();
-    obj2.headerRight = NavigatorHeader.getHeaderCloseButton(ModalActionCreatorsDefault.pop);
-    obj2.headerTitle = function headerTitle() {
+    obj[constants.EVERYBODY] = obj7;
+    const obj10 = { headerLeft: null, headerRight: null, headerTitle: null, render: null };
+    obj10.headerLeft = NavigatorHeader.getHeaderBackButton();
+    obj10.headerRight = NavigatorHeader.getHeaderCloseButton(ModalActionCreatorsDefault.pop);
+    obj10.headerTitle = function headerTitle() {
       return closure_1_7(closure_1_0(5705).NavigatorHeader, {
         title: constants.JOCKIN,
         subtitle: "Tryin' to play like, you know me",
       });
     };
-    obj2.render = function render(arg0, arg1) {
+    obj10.render = function render(arg0, arg1) {
       closure_0 = arg1;
       return closure_7(closure_13, {
         title: "I see you jockin' me.",
@@ -105,16 +105,16 @@ function DemoModal() {
         disclaimer: "Tryin' to play like, you know me.",
       });
     };
-    obj[constants.JOCKIN] = obj2;
-    const obj3 = { headerLeft: null, headerRight: null, headerTitle: null, render: null };
-    obj3.headerLeft = NavigatorHeader.getHeaderBackButton();
-    obj3.headerRight = function headerRight() {
+    obj[constants.JOCKIN] = obj10;
+    const obj13 = { headerLeft: null, headerRight: null, headerTitle: null, render: null };
+    obj13.headerLeft = NavigatorHeader.getHeaderBackButton();
+    obj13.headerRight = function headerRight() {
       return closure_1_7(closure_1_0(5705).HeaderSubmittingIndicator, {});
     };
-    obj3.headerTitle = function headerTitle() {
+    obj13.headerTitle = function headerTitle() {
       return closure_1_7(closure_1_0(5705).NavigatorHeader, { title: constants.LIMIT });
     };
-    obj3.render = function render() {
+    obj13.render = function render() {
       return closure_1_7(closure_1_13, {
         title: "Everybody to the limit.",
         emoji: "\u{1F44F}",
@@ -127,53 +127,52 @@ function DemoModal() {
         disclaimer: "The cheat is to the limit.",
       });
     };
-    obj[constants.LIMIT] = obj3;
+    obj[constants.LIMIT] = obj13;
     return obj;
   }, []);
-  obj = { screens: navigatorScreens, initialRouteName: constants.START };
-  return React5(Modal.Modal, obj);
+  return React5(Modal.Modal, { screens: navigatorScreens, initialRouteName: constants.START });
 }
 function DemoStepModal() {
-  let obj = Navigator;
-  const navigatorScreens = obj.useNavigatorScreens(() => {
+  const navigatorScreens = Navigator.useNavigatorScreens(() => {
     let obj = {};
-    obj = { headerLeft: null, headerRight: null, headerTitle: null, render: null };
-    let obj2 = NavigatorHeader;
-    obj.headerLeft = obj2.getHeaderCloseButton(ModalActionCreatorsDefault.pop);
-    obj.headerRight = function headerRight() {
-      const obj = { text: null, onPress: null };
-      const intl = closure_1_0(1114).intl;
-      obj.text = intl.string(closure_1_0(1114).t["5Wxrcd"]);
-      obj.onPress = closure_1_1(4839).pop;
-      return closure_1_7(closure_1_0(7480).HeaderActionButton, obj);
+    const obj2 = {
+      headerLeft: NavigatorHeader.getHeaderCloseButton(ModalActionCreatorsDefault.pop),
+      headerRight() {
+        const obj = { text: null, onPress: null };
+        const intl = closure_1_0(1114).intl;
+        obj.text = intl.string(closure_1_0(1114).t["5Wxrcd"]);
+        obj.onPress = closure_1_1(4839).pop;
+        return closure_1_7(closure_1_0(7480).HeaderActionButton, obj);
+      },
+      headerTitle() {
+        return closure_1_7(closure_1_0(5705).NavigatorHeader, {
+          title: constants.START,
+          subtitle: "I said come on fhqwhgads",
+        });
+      },
+      render(arg0, arg1) {
+        closure_0 = arg1;
+        return closure_7(closure_13, {
+          title: "Come on fhqwhgads.",
+          emoji: "\u{1F60E}",
+          action: "Everybody to the limit",
+          onAction() {
+            return closure_0.push(constants.WHO_DAT);
+          },
+          secondaryAction: "Maybe later",
+          onSecondaryAction: closure_1(4839).pop,
+          disclaimer: "I said come on fhqwhgads.",
+        });
+      },
     };
-    obj.headerTitle = function headerTitle() {
-      return closure_1_7(closure_1_0(5705).NavigatorHeader, {
-        title: constants.START,
-        subtitle: "I said come on fhqwhgads",
-      });
-    };
-    obj.render = function render(arg0, arg1) {
-      closure_0 = arg1;
-      return closure_7(closure_13, {
-        title: "Come on fhqwhgads.",
-        emoji: "\u{1F60E}",
-        action: "Everybody to the limit",
-        onAction() {
-          return closure_0.push(constants.WHO_DAT);
-        },
-        secondaryAction: "Maybe later",
-        onSecondaryAction: closure_1(4839).pop,
-        disclaimer: "I said come on fhqwhgads.",
-      });
-    };
-    obj[constants.START] = obj;
-    obj = { headerLeft: NavigatorHeader.getHeaderBackButton(), headerRight: null, headerTitle: null, render: null };
-    obj.headerRight = NavigatorHeader.getHeaderCloseButton(ModalActionCreatorsDefault.pop);
-    obj.headerTitle = function headerTitle() {
+    obj[constants.START] = obj2;
+    const obj4 = { headerLeft: null, headerRight: null, headerTitle: null, render: null };
+    obj4.headerLeft = NavigatorHeader.getHeaderBackButton();
+    obj4.headerRight = NavigatorHeader.getHeaderCloseButton(ModalActionCreatorsDefault.pop);
+    obj4.headerTitle = function headerTitle() {
       return closure_1_7(closure_1_0(5705).NavigatorHeader, { title: constants.WHO_DAT });
     };
-    obj.render = function render(arg0, arg1) {
+    obj4.render = function render(arg0, arg1) {
       closure_0 = arg1;
       return closure_7(closure_13, {
         title: "Who's that?",
@@ -185,14 +184,14 @@ function DemoStepModal() {
         children: closure_7(closure_0(6707).TextInput, { placeholder: "My friend Jake" }),
       });
     };
-    obj[constants.WHO_DAT] = obj;
-    const obj1 = { headerLeft: null, headerRight: null, headerTitle: null, render: null };
-    obj1.headerLeft = NavigatorHeader.getHeaderBackButton();
-    obj1.headerRight = NavigatorHeader.getHeaderCloseButton(ModalActionCreatorsDefault.pop);
-    obj1.headerTitle = function headerTitle() {
+    obj[constants.WHO_DAT] = obj4;
+    const obj7 = { headerLeft: null, headerRight: null, headerTitle: null, render: null };
+    obj7.headerLeft = NavigatorHeader.getHeaderBackButton();
+    obj7.headerRight = NavigatorHeader.getHeaderCloseButton(ModalActionCreatorsDefault.pop);
+    obj7.headerTitle = function headerTitle() {
       return closure_1_7(closure_1_0(5705).NavigatorHeader, { title: constants.EVERYBODY });
     };
-    obj1.render = function render(arg0, arg1) {
+    obj7.render = function render(arg0, arg1) {
       closure_0 = arg1;
       return closure_7(closure_14, {
         onAction() {
@@ -200,17 +199,17 @@ function DemoStepModal() {
         },
       });
     };
-    obj[constants.EVERYBODY] = obj1;
-    obj2 = { headerLeft: null, headerRight: null, headerTitle: null, render: null };
-    obj2.headerLeft = NavigatorHeader.getHeaderBackButton();
-    obj2.headerRight = NavigatorHeader.getHeaderCloseButton(ModalActionCreatorsDefault.pop);
-    obj2.headerTitle = function headerTitle() {
+    obj[constants.EVERYBODY] = obj7;
+    const obj10 = { headerLeft: null, headerRight: null, headerTitle: null, render: null };
+    obj10.headerLeft = NavigatorHeader.getHeaderBackButton();
+    obj10.headerRight = NavigatorHeader.getHeaderCloseButton(ModalActionCreatorsDefault.pop);
+    obj10.headerTitle = function headerTitle() {
       return closure_1_7(closure_1_0(5705).NavigatorHeader, {
         title: constants.JOCKIN,
         subtitle: "Tryin' to play like, you know me",
       });
     };
-    obj2.render = function render(arg0, arg1) {
+    obj10.render = function render(arg0, arg1) {
       closure_0 = arg1;
       return closure_7(closure_13, {
         title: "I see you jockin' me.",
@@ -222,16 +221,16 @@ function DemoStepModal() {
         disclaimer: "Tryin' to play like, you know me.",
       });
     };
-    obj[constants.JOCKIN] = obj2;
-    const obj3 = { headerLeft: null, headerRight: null, headerTitle: null, render: null };
-    obj3.headerLeft = NavigatorHeader.getHeaderBackButton();
-    obj3.headerRight = function headerRight() {
+    obj[constants.JOCKIN] = obj10;
+    const obj13 = { headerLeft: null, headerRight: null, headerTitle: null, render: null };
+    obj13.headerLeft = NavigatorHeader.getHeaderBackButton();
+    obj13.headerRight = function headerRight() {
       return closure_1_7(closure_1_0(5705).HeaderSubmittingIndicator, {});
     };
-    obj3.headerTitle = function headerTitle() {
+    obj13.headerTitle = function headerTitle() {
       return closure_1_7(closure_1_0(5705).NavigatorHeader, { title: constants.LIMIT });
     };
-    obj3.render = function render() {
+    obj13.render = function render() {
       return closure_1_7(closure_1_13, {
         title: "Everybody to the limit.",
         emoji: "\u{1F44F}",
@@ -244,7 +243,7 @@ function DemoStepModal() {
         disclaimer: "The cheat is to the limit.",
       });
     };
-    obj[constants.LIMIT] = obj3;
+    obj[constants.LIMIT] = obj13;
     return obj;
   }, []);
   const memo = noop.useMemo(() => {
@@ -252,8 +251,7 @@ function DemoStepModal() {
     ({ START: arr[0], WHO_DAT: arr[1], EVERYBODY: arr[2], JOCKIN: arr[3], LIMIT: arr[4] } = constants);
     return items;
   }, []);
-  obj = { screens: navigatorScreens, steps: memo, initialRouteName: constants.START };
-  return React5(StepModal.StepModal, obj);
+  return React5(StepModal.StepModal, { screens: navigatorScreens, steps: memo, initialRouteName: constants.START });
 }
 function DemoScreen(arg0) {
   ({ emoji, action, secondaryAction, disclaimer, footer } = arg0);
@@ -261,12 +259,12 @@ function DemoScreen(arg0) {
   const tmp = closure_9();
   let tmp5 = null != emoji;
   if (tmp5) {
-    let obj = { style: tmp.emojiContainer, children: null };
-    obj = { maxFontSizeMultiplier: 1, variant: "heading-xxl/medium", style: tmp.emoji, children: emoji };
-    obj.children = React5(Text_Text.Text, obj);
+    const obj = { style: tmp.emojiContainer, children: null };
+    const obj2 = { maxFontSizeMultiplier: 1, variant: "heading-xxl/medium", style: tmp.emoji, children: emoji };
+    obj.children = React5(Text_Text.Text, obj2);
     tmp5 = React5(hasOwnProperty, obj);
   }
-  obj = { children: null };
+  const obj3 = { children: null };
   const items = [
     tmp5,
     React5(Text_Text.Text, {
@@ -278,50 +276,55 @@ function DemoScreen(arg0) {
     }),
     children,
   ];
-  obj.children = items;
-  children = [React6(ModalContent.ModalContent, obj)];
+  obj3.children = items;
+  const children1 = [React6(ModalContent.ModalContent, obj3)];
   if (footer == null) {
     let tmp8Result = null != disclaimer;
     if (tmp8Result) {
-      const obj2 = { children: disclaimer };
-      tmp8Result = React5(ModalDisclaimer.ModalDisclaimer, obj2);
+      const obj5 = { children: disclaimer };
+      tmp8Result = React5(ModalDisclaimer.ModalDisclaimer, obj5);
     }
     const items2 = [tmp8Result, ,];
-    tmp8Result = null != action;
-    if (tmp8Result) {
-      const obj3 = { variant: "primary", text: action, onPress: onAction };
-      tmp8Result = React5(ModalActionButton.ModalActionButton, obj3);
+    let tmp8Result3 = null != action;
+    if (tmp8Result3) {
+      const obj6 = { variant: "primary", text: action, onPress: onAction };
+      tmp8Result3 = React5(ModalActionButton.ModalActionButton, obj6);
     }
-    items2[1] = tmp8Result;
-    let tmp8Result1 = null != secondaryAction;
-    if (tmp8Result1) {
-      const obj4 = { variant: "secondary", text: secondaryAction, onPress: onSecondaryAction };
-      tmp8Result1 = React5(ModalActionButton.ModalActionButton, obj4);
+    items2[1] = tmp8Result3;
+    let tmp8Result4 = null != secondaryAction;
+    if (tmp8Result4) {
+      const obj7 = { variant: "secondary", text: secondaryAction, onPress: onSecondaryAction };
+      tmp8Result4 = React5(ModalActionButton.ModalActionButton, obj7);
     }
-    const obj5 = { children: null };
-    items2[2] = tmp8Result1;
-    obj5.children = items2;
-    footer = React6(ModalFooter.ModalFooter, obj5);
+    const obj8 = { children: null };
+    items2[2] = tmp8Result4;
+    obj8.children = items2;
+    footer = React6(ModalFooter.ModalFooter, obj8);
   }
-  children[1] = footer;
-  return React6(ModalScreen.ModalScreen, { children });
+  children1[1] = footer;
+  return React6(ModalScreen.ModalScreen, { children: children1 });
 }
 function SwitchesScreen(onAction) {
   c1 = undefined;
   let tmp = closure_9();
   let parts = "I said ooh ah fhqwhgads, I said ooh ah fhqhgads!".split(" ");
-  [arr2, c1] = _slicedToArray(noop.useState(parts.map(() => false)), 2);
-  let obj = { title: "Everybody come on fhqwhgads.", emoji: "\u{1F44F}", footer: null, children: null };
-  obj = {
+  [arr2, c1] = noop.useState(parts.map(() => false));
+  const obj = { title: "Everybody come on fhqwhgads.", emoji: "\u{1F44F}", footer: null, children: null };
+  const tmp2 = _slicedToArray(noop.useState(parts.map(() => false)), 2);
+  obj.footer = closure_7(parts(11128).ModalFloatingAction, {
+    isVisible: arr2.some((item) => item),
+    floatingBackgroundColor: tmp.screen.backgroundColor,
+    text: "Come on fhqwhgads",
+    onPress: onAction.onAction,
+  });
+  const obj3 = { style: tmp.tableRows, children: null };
+  const obj2 = {
     isVisible: arr2.some((item) => item),
     floatingBackgroundColor: tmp.screen.backgroundColor,
     text: "Come on fhqwhgads",
     onPress: onAction.onAction,
   };
-  obj.footer = closure_7(parts(11127).ModalFloatingAction, obj);
-  obj = { style: tmp.tableRows, children: null };
-  const tmp2 = _slicedToArray(noop.useState(parts.map(() => false)), 2);
-  obj.children = closure_7(parts(5768).TableRowGroup, {
+  obj3.children = closure_7(parts(5768).TableRowGroup, {
     hasIcons: false,
     children: arr2.map((value, index) => {
       parts = index;
@@ -347,33 +350,29 @@ function SwitchesScreen(onAction) {
       );
     }),
   });
-  const items = [closure_7(closure_5, obj), closure_7(parts(11127).ModalFloatingActionSpacer, {})];
+  const items = [closure_7(closure_5, obj3), closure_7(parts(11128).ModalFloatingActionSpacer, {})];
   obj.children = items;
   return closure_8(DemoScreen, obj);
 }
 function openDemoModal() {
-  let arr = ModalActionCreatorsDefault;
-  arr = arr.push(DemoModal);
+  ModalActionCreatorsDefault.push(DemoModal);
 }
 function openDemoStepModal() {
-  let arr = ModalActionCreatorsDefault;
-  arr = arr.push(DemoStepModal);
+  ModalActionCreatorsDefault.push(DemoStepModal);
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-fn(4636);
-let createStyles = {
+const createStyles = fn(4636);
+let obj2 = {
   container: { flex: 1, alignItems: "center", padding: 16, gap: 16 },
-  screen: null,
+  screen: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },
   emojiContainer: null,
   emoji: null,
   title: null,
   tableRows: null,
 };
-createStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
-createStyles.screen = createStyles;
 let size = {
   alignItems: "center",
   justifyContent: "center",
@@ -383,11 +382,11 @@ let size = {
   backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
   marginBottom: 16,
 };
-createStyles.emojiContainer = size;
-createStyles.emoji = { fontSize: 48, lineHeight: 80 };
-createStyles.title = { marginBottom: 16 };
-createStyles.tableRows = { width: "100%" };
-let closure_9 = createStyles.createStyles(createStyles);
+obj2.emojiContainer = size;
+obj2.emoji = { fontSize: 48, lineHeight: 80 };
+obj2.title = { marginBottom: 16 };
+obj2.tableRows = { width: "100%" };
+let closure_9 = createStyles.createStyles(obj2);
 const constants = {
   START: "Come on fhqwhgads",
   WHO_DAT: "Who's that?",
@@ -401,14 +400,13 @@ const result = size.fileFinishedImporting(
 );
 
 export default function UserSettingsDesignSystemModal() {
-  let obj = { children: null };
-  obj = { style: closure_9().container, children: null };
-  obj = { onPress: openDemoModal, text: "Show Modal" };
+  const obj = { children: null };
+  const obj2 = { style: closure_9().container, children: null };
   const items = [
-    React5(components_Button_Button.Button, obj),
+    React5(components_Button_Button.Button, { onPress: openDemoModal, text: "Show Modal" }),
     React5(components_Button_Button.Button, { onPress: openDemoStepModal, text: "Show Stepped Modal" }),
   ];
-  obj.children = items;
-  obj.children = React6(hasOwnProperty, obj);
+  obj2.children = items;
+  obj.children = React6(hasOwnProperty, obj2);
   return React5(timestampProducer, obj);
 }

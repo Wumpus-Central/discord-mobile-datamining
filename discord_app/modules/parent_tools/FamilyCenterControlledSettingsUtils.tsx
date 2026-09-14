@@ -13,16 +13,21 @@ function getGoreContentSettingOrDefault(arg0) {
   }
   ({ goreContentNonFriendDm, goreContentFriendDm } = controlledSetting);
   if (!tmp3) {
-    let tmpResult = SensitiveMediaGoreRedactionSettingsUtils;
-    goreContentNonFriendDm = tmpResult.resolveGoreSettingWithDefaultsForTeen({ isDm: true });
+    goreContentNonFriendDm = SensitiveMediaGoreRedactionSettingsUtils.resolveGoreSettingWithDefaultsForTeen({
+      isDm: true,
+    });
+    const tmpResult = SensitiveMediaGoreRedactionSettingsUtils;
   }
   const obj = { goreContentNonFriendDm, goreContentFriendDm: null, goreContentGuilds: null };
   tmp3 =
     null != goreContentNonFriendDm &&
     goreContentNonFriendDm !== preloaded_user_settings.ExplicitContentRedaction.UNSET_EXPLICIT_CONTENT_REDACTION;
   if (!tmp4) {
-    tmpResult = SensitiveMediaGoreRedactionSettingsUtils;
-    goreContentFriendDm = tmpResult.resolveGoreSettingWithDefaultsForTeen({ isDm: true, isFriend: true });
+    goreContentFriendDm = SensitiveMediaGoreRedactionSettingsUtils.resolveGoreSettingWithDefaultsForTeen({
+      isDm: true,
+      isFriend: true,
+    });
+    const tmpResult2 = SensitiveMediaGoreRedactionSettingsUtils;
   }
   obj.goreContentFriendDm = goreContentFriendDm;
   obj.goreContentGuilds = preloaded_user_settings.ExplicitContentRedaction.BLUR;
@@ -31,7 +36,7 @@ function getGoreContentSettingOrDefault(arg0) {
 function getExplicitContentSettingOrDefault(teenId) {
   const ParentalControlledExplicitContent = ParentalControlledUserSettings.ParentalControlledExplicitContent;
   const controlledSetting = ParentalControlledExplicitContent.getControlledSetting(teenId);
-  let obj = { teenId, setting: null };
+  const obj = { teenId, setting: null };
   let prop;
   if (controlledSetting != null) {
     prop = controlledSetting.explicitContentNonFriendDm;
@@ -42,7 +47,7 @@ function getExplicitContentSettingOrDefault(teenId) {
     isFriend = false;
   }
   if (tmp5) {
-    obj = { explicitContentNonFriendDm: setting, explicitContentFriendDm: null, explicitContentGuilds: null };
+    const obj2 = { explicitContentNonFriendDm: setting, explicitContentFriendDm: null, explicitContentGuilds: null };
     let prop1;
     if (controlledSetting != null) {
       prop1 = controlledSetting.explicitContentFriendDm;
@@ -55,9 +60,9 @@ function getExplicitContentSettingOrDefault(teenId) {
         SensitiveMediaExplicitRedactionSettingsUtils
           .TEEN_EXPLICIT_CONTENT_FILTER_TO_EXPLICIT_CONTENT_REDACTION_FRIEND_DM[controlledSetting1];
     }
-    obj.explicitContentFriendDm = prop1;
-    obj.explicitContentGuilds = preloaded_user_settings.ExplicitContentRedaction.BLUR;
-    return obj;
+    obj2.explicitContentFriendDm = prop1;
+    obj2.explicitContentGuilds = preloaded_user_settings.ExplicitContentRedaction.BLUR;
+    return obj2;
   } else {
     const ParentalControlledLegacyExplicitContent =
       ParentalControlledUserSettings.ParentalControlledLegacyExplicitContent;

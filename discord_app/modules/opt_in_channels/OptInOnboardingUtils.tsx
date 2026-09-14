@@ -5,7 +5,7 @@ import GuildOnboardingActionCreatorsDefault from "../guild_onboarding/GuildOnboa
 import OptInChannelsActionCreators from "OptInChannelsActionCreators.tsx";
 import isOptInEnabled from "isOptInEnabled.tsx";
 import UserSettingsProtoStore from "../user_settings/UserSettingsProtoStore.tsx";
-import GuildChannelStore from "../../stores/GuildChannelStore.tsx";
+import GuildChannelStore_mod from "../../stores/GuildChannelStore.tsx";
 import GuildMemberStore from "../../stores/GuildMemberStore.tsx";
 import UserGuildSettingsStore from "../../stores/UserGuildSettingsStore.tsx";
 
@@ -43,6 +43,7 @@ function optIntoAllChannelsForExistingMember(id, arg1) {
 }
 let GuildChannelStore = fn(2012);
 ({ GUILD_SELECTABLE_CHANNELS_KEY: closure_4, GUILD_VOCAL_CHANNELS_KEY: hasOwnProperty } = GuildChannelStore);
+let GuildChannelStore = GuildChannelStore_mod;
 const GuildMemberFlags = fn(4262).GuildMemberFlags;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/opt_in_channels/OptInOnboardingUtils.tsx");
@@ -78,9 +79,9 @@ export const toggleShowAllChannels = function toggleShowAllChannels(id) {
   if (num == null) {
     num = 0;
   }
-  let tmpResult = FlagUtils;
+  const tmpResult = FlagUtils;
   let tmp7 = !result;
-  const hasFlagResult = tmpResult.hasFlag(num, GuildMemberFlags.COMPLETED_ONBOARDING);
+  const hasFlagResult = FlagUtils.hasFlag(num, GuildMemberFlags.COMPLETED_ONBOARDING);
   if (!result) {
     tmp7 = !hasFlagResult;
   }
@@ -90,10 +91,10 @@ export const toggleShowAllChannels = function toggleShowAllChannels(id) {
   if (tmp7) {
     optIntoAllChannelsForExistingMember(id);
   } else {
-    tmpResult = isOptInEnabled;
-    const result1 = tmpResult.isOptInEnabledForGuild(id);
+    const result1 = isOptInEnabled.isOptInEnabledForGuild(id);
+    const tmpResult3 = isOptInEnabled;
     OptInChannelsActionCreators.setGuildOptIn(id, !result1);
-    const tmpResult1 = OptInChannelsActionCreators;
+    const tmpResult4 = OptInChannelsActionCreators;
   }
   tmp6 = UserGuildSettingsStore.getOptedInChannels(id).size > 0;
 };

@@ -2,6 +2,8 @@
 import 00560__ from "../../../_runtime/metro/00560__.js";
 import size from "../../../_runtime/metro/00002__.js";
 
+const require = globalThis.__r;
+
 const usePromoEmailConsentStore = module_560.create(() => ({ required: false, checked: false, preChecked: false }));
 const result = size.fileFinishedImporting("modules/auth/PromoEmailConsentStore.tsx");
 

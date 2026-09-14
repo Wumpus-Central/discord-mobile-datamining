@@ -34,20 +34,20 @@ function parseThemedStyles(obj, enabledExperiments) {
       hasOwnPropertyResult1 = obj2.hasOwnProperty("resolve");
     }
     if (hasOwnPropertyResult1) {
-      obj = { theme, isAndroid: null, enabledExperiments: null, density: null };
+      let obj4 = { theme, isAndroid: null, enabledExperiments: null, density: null };
       let obj5 = PlatformUtils;
-      obj.isAndroid = obj5.isAndroid();
+      obj4.isAndroid = obj5.isAndroid();
       enabledExperiments = arg1.enabledExperiments;
       if (enabledExperiments == null) {
         enabledExperiments = [];
       }
-      obj.enabledExperiments = enabledExperiments;
+      obj4.enabledExperiments = enabledExperiments;
       let str4 = arg1.density;
       if (str4 == null) {
         str4 = "compact";
       }
-      obj.density = str4;
-      obj[key10022] = obj2.resolve(obj);
+      obj4.density = str4;
+      obj[key10022] = obj2.resolve(obj4);
       continue;
     } else {
       let internal = nativeDefault.internal;
@@ -133,13 +133,14 @@ export const experimental_createToken = function experimental_createToken(arg0) 
   closure_0 = arg0;
   return { [closure_1_8]: (arg0) => closure_0(arg0) };
 };
-export const createStyles = function createStyles(createStyles) {
+export const createStyles = function createStyles(rect) {
+  closure_0 = rect;
   const map = new Map();
-  closure_2 = typeof createStyles === "function";
+  dependencyMap = typeof rect === "function";
   return () => {
     items = [...arguments];
-    let obj = createStyles(closure_2[4]);
-    const themeContext = obj.useThemeContext();
+    let obj3;
+    const themeContext = closure_0(dependencyMap[4]).useThemeContext();
     const items1 = [];
     items1[HermesBuiltin.arraySpread(items, 0)] = themeContext.key;
     const tmp2 = createCacheKey();
@@ -147,21 +148,21 @@ export const createStyles = function createStyles(createStyles) {
     if (null != value) {
       return value;
     } else {
-      obj = {};
+      obj3 = {};
       const _Object3 = Object;
-      if (obj) {
+      if (obj3) {
         const items2 = [];
         HermesBuiltin.arraySpread(items, 0);
-        keys = keys(HermesBuiltin.apply(items2, undefined));
+        let keys1 = keys(HermesBuiltin.apply(items2, undefined));
       } else {
-        keys = keys(tmp13);
+        keys1 = keys(tmp13);
       }
       const _Object = Object;
       const _Object2 = Object;
       Object.defineProperties(
-        obj,
+        obj3,
         Object.fromEntries(
-          keys.map((item) => {
+          keys1.map((item) => {
             closure_0 = item;
             items = [
               item,
@@ -177,7 +178,7 @@ export const createStyles = function createStyles(createStyles) {
                     applyResult = closure_0;
                   }
                   const tmpResult = parseThemedStyles(applyResult[closure_0], themeContext);
-                  Object.defineProperty(obj, closure_0, { value: tmpResult, enumerable: true });
+                  Object.defineProperty(obj3, closure_0, { value: tmpResult, enumerable: true });
                   return tmpResult;
                 },
               },
@@ -186,28 +187,30 @@ export const createStyles = function createStyles(createStyles) {
           }),
         ),
       );
-      const result = obj2.set(tmp2, obj);
-      return obj;
+      const result = obj2.set(tmp2, obj3);
+      return obj3;
     }
+    const obj = closure_0(dependencyMap[4]);
     obj2 = themeContext;
   };
 };
-export const createLegacyClassComponentStyles = function createLegacyClassComponentStyles(createStyles) {
+export const createLegacyClassComponentStyles = function createLegacyClassComponentStyles(arg0) {
+  closure_0 = arg0;
   const map = new Map();
   return (key) => {
-    createStyles = key;
-    const FALLBACK_THEME_CONTEXT_VALUE = createStyles(dependencyMap[4]).FALLBACK_THEME_CONTEXT_VALUE;
-    value = obj.get(key.key);
+    closure_0 = key;
+    const FALLBACK_THEME_CONTEXT_VALUE = closure_0(dependencyMap[4]).FALLBACK_THEME_CONTEXT_VALUE;
+    value = obj2.get(key.key);
     if (null != value) {
       return value;
     } else {
-      obj = {};
+      obj2 = {};
       const _Object = Object;
-      const keys = Object.keys(createStyles);
+      const keys = Object.keys(closure_0);
       const _Object2 = Object;
       const _Object3 = Object;
       Object.defineProperties(
-        obj,
+        obj2,
         Object.fromEntries(
           keys.map((item) => {
             items = [
@@ -217,7 +220,7 @@ export const createLegacyClassComponentStyles = function createLegacyClassCompon
                 enumerable: true,
                 get() {
                   const tmp = parseThemedStyles(item[item], item);
-                  Object.defineProperty(obj, item, { value: tmp, enumerable: true });
+                  Object.defineProperty(obj2, item, { value: tmp, enumerable: true });
                   return tmp;
                 },
               },
@@ -226,16 +229,17 @@ export const createLegacyClassComponentStyles = function createLegacyClassCompon
           }),
         ),
       );
-      const result = obj.set(key.key, obj);
-      return obj;
+      const result = obj.set(key.key, obj2);
+      return obj2;
     }
+    obj = obj2;
   };
 };
-export const useLegacyClassComponentStyles = function useLegacyClassComponentStyles(createStyles) {
-  return createStyles(native.useThemeContext());
+export const useLegacyClassComponentStyles = function useLegacyClassComponentStyles(legacyClassComponentStyles) {
+  return legacyClassComponentStyles(native.useThemeContext());
 };
-export const createStyleProperties = function createStyleProperties(createStyles) {
-  closure_0 = createStyles;
+export const createStyleProperties = function createStyleProperties(getButtonColorTokens) {
+  closure_0 = getButtonColorTokens;
   const map = new Map();
   return () => {
     items = [...arguments];
@@ -270,13 +274,12 @@ export const processColorOrThrow = function processColorOrThrow(arg0) {
     return tmp;
   }
 };
-export const createNativeStyleProperties = function createNativeStyleProperties(createStyles) {
-  closure_0 = createStyles;
+export const createNativeStyleProperties = function createNativeStyleProperties(arg0) {
+  closure_0 = arg0;
   const map = new Map();
   return (theme) => {
     const substr = [...arguments].slice();
-    let obj = MobileThemesUtils;
-    let customBackgroundGradient = obj.getCustomBackgroundGradient();
+    let customBackgroundGradient = MobileThemesUtils.getCustomBackgroundGradient();
     if (customBackgroundGradient == null) {
       customBackgroundGradient = ClientThemesBackgroundStore.gradientPreset;
     }
@@ -284,21 +287,21 @@ export const createNativeStyleProperties = function createNativeStyleProperties(
       customBackgroundGradient = null;
     }
     if (null == customBackgroundGradient) {
-      obj = {};
+      const obj2 = {};
       const merged = Object.assign(native.FALLBACK_THEME_CONTEXT_VALUE);
-      obj.flags = 0;
-      obj.saturation = AccessibilityStore.saturation;
-      obj.theme = theme;
-      obj.enabledExperiments = ["mobile-visual-refresh"];
-      obj.gradient = customBackgroundGradient;
+      obj2.flags = 0;
+      obj2.saturation = AccessibilityStore.saturation;
+      obj2.theme = theme;
+      obj2.enabledExperiments = ["mobile-visual-refresh"];
+      obj2.gradient = customBackgroundGradient;
       const _JSON = JSON;
-      obj = {};
-      const json = JSON.stringify(obj);
-      const merged1 = Object.assign(obj);
-      obj.key = json;
+      const obj3 = {};
+      const json = JSON.stringify(obj2);
+      const merged1 = Object.assign(obj2);
+      obj3.key = json;
       items = [];
       let arraySpreadResult = HermesBuiltin.arraySpread(substr, 0);
-      items[arraySpreadResult] = obj.key;
+      items[arraySpreadResult] = obj3.key;
       const applyResult = HermesBuiltin.apply(items, undefined);
       value = map.get(applyResult);
       if (null != value) {
@@ -310,7 +313,7 @@ export const createNativeStyleProperties = function createNativeStyleProperties(
           arraySpreadResult = HermesBuiltin.arraySpread(substr, 0);
           applyResult1 = HermesBuiltin.apply(items1, undefined);
         }
-        const tmp32Result = parseThemedStyles(applyResult1, obj);
+        const tmp32Result = parseThemedStyles(applyResult1, obj3);
         for (const key10062 in tmp32Result) {
           let tmp40 = tmp32Result[key10062];
           let tmp42 = processColor(tmp40);
@@ -342,20 +345,20 @@ export const createNativeStyleProperties = function createNativeStyleProperties(
     }
   };
 };
-export const createAnimatedThemedStyles = function createAnimatedThemedStyles(createStyles) {
+export const createAnimatedThemedStyles = function createAnimatedThemedStyles(obj) {
   let arr = items;
   if (items === undefined) {
     arr = items;
   }
   let stops;
   items = [];
-  let obj = {};
+  obj = {};
   for (const key10007 in arg0) {
     let tmp4 = arg0[key10007];
     let internal = items(obj[6]).internal;
     if (internal.isSemanticColor(tmp4)) {
       let items1 = [key10007, tmp4];
-      arr = items.push(items1);
+      let arr2 = items.push(items1);
       continue;
     } else {
       obj[key10007] = tmp4;
@@ -368,7 +371,7 @@ export const createAnimatedThemedStyles = function createAnimatedThemedStyles(cr
   return (themeIndex) => {
     obj = arr(obj[4]);
     const themeContext = obj.useThemeContext();
-    value = obj.get(themeContext.key);
+    value = obj3.get(themeContext.key);
     items = value;
     let tmp3 = value;
     if (null == value) {
@@ -376,7 +379,7 @@ export const createAnimatedThemedStyles = function createAnimatedThemedStyles(cr
       if (enabledExperiments == null) {
         enabledExperiments = [];
       }
-      obj = { enabledExperiments, saturation: null, contrast: null };
+      let obj2 = { enabledExperiments, saturation: null, contrast: null };
       let num2 = 1;
       if (null == themeContext.primaryColor) {
         let num3 = themeContext.saturation;
@@ -385,7 +388,7 @@ export const createAnimatedThemedStyles = function createAnimatedThemedStyles(cr
         }
         num2 = num3;
       }
-      obj.saturation = num2;
+      obj2.saturation = num2;
       let num4 = 1;
       if (null == themeContext.primaryColor) {
         let num5 = themeContext.contrast;
@@ -394,9 +397,9 @@ export const createAnimatedThemedStyles = function createAnimatedThemedStyles(cr
         }
         num4 = num5;
       }
-      obj.contrast = num4;
-      obj = {};
-      const merged = Object.assign(obj);
+      obj2.contrast = num4;
+      obj3 = {};
+      const merged = Object.assign(obj2);
       class S {
         constructor() {
           obj = {};
@@ -428,7 +431,7 @@ export const createAnimatedThemedStyles = function createAnimatedThemedStyles(cr
         themeIndex = arg0;
         closure_1[closure_3] = themeIndex.map((item) => {
           const internal = nativeDefault.internal;
-          return internal.resolveSemanticColor(item, closure_0, obj);
+          return internal.resolveSemanticColor(item, closure_0, obj2);
         });
       }
       const tmp9 = items[Symbol.iterator]();
@@ -438,10 +441,10 @@ export const createAnimatedThemedStyles = function createAnimatedThemedStyles(cr
         let _loopResult = _loop(tmp14[1]);
         continue;
       }
-      const result = obj.set(themeContext.key, obj);
-      tmp3 = obj;
+      const result = obj3.set(themeContext.key, obj3);
+      tmp3 = obj3;
     }
-    obj = tmp3;
+    obj3 = tmp3;
     class S {
       constructor() {
         obj = {};

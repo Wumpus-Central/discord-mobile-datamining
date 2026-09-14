@@ -21,21 +21,21 @@ const radio = SettingBuilders.createRadio({
   useValue: UserSettings.ReactionNotifications.useSetting,
   onValueChange: onChange,
   useOptions() {
-    let obj = { label: null, value: null };
+    const obj = { label: null, value: null };
     const intl = util.intl;
     obj.label = intl.string(util.t["9x/RtT"]);
     obj.value = preloaded_user_settings.ReactionNotificationType.NOTIFICATIONS_ENABLED;
     const items = [obj, ,];
-    obj = { label: null, value: null };
+    const obj2 = { label: null, value: null };
     const intl2 = util.intl;
-    obj.label = intl2.string(util.t.fJAbQd);
-    obj.value = preloaded_user_settings.ReactionNotificationType.ONLY_DMS;
-    items[1] = obj;
-    obj = { label: null, value: null };
+    obj2.label = intl2.string(util.t.fJAbQd);
+    obj2.value = preloaded_user_settings.ReactionNotificationType.ONLY_DMS;
+    items[1] = obj2;
+    const obj3 = { label: null, value: null };
     const intl3 = util.intl;
-    obj.label = intl3.string(util.t["xu+UDU"]);
-    obj.value = preloaded_user_settings.ReactionNotificationType.NOTIFICATIONS_DISABLED;
-    items[2] = obj;
+    obj3.label = intl3.string(util.t["xu+UDU"]);
+    obj3.value = preloaded_user_settings.ReactionNotificationType.NOTIFICATIONS_DISABLED;
+    items[2] = obj3;
     return items;
   },
 });

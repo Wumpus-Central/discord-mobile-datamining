@@ -1,6 +1,8 @@
 // discord_app/modules/user_application_identity/hooks/useConnectionFilteredAppIdentities.tsx
 import noop from "../../../../_runtime/metro/00019__.js";
 
+const require = globalThis.__r;
+
 const require = fn;
 let closure_3 = fn(1921).APPLICATION_IDENTITY_CONNECTIONS_ALLOWED_APPLICATIONS;
 const size = fn(2);
@@ -18,9 +20,9 @@ export default function useConnectionFilteredAppIdentities(id, arg1) {
   _require = tmp;
   const userApplicationIdentities = require("UserApplicationIdentityActionCreators").useUserApplicationIdentities(id);
   data = userApplicationIdentities.data;
-  obj = { isLoading: userApplicationIdentities.isLoading, filteredAppIdentities: null };
+  const obj3 = { isLoading: userApplicationIdentities.isLoading, filteredAppIdentities: null };
   let items = [data, undefined !== includeHidden && includeHidden];
-  obj.filteredAppIdentities = noop.useMemo(() => {
+  obj3.filteredAppIdentities = noop.useMemo(() => {
     let items = data;
     if (data == null) {
       items = [];
@@ -48,5 +50,5 @@ export default function useConnectionFilteredAppIdentities(id, arg1) {
       return someResult;
     });
   }, items);
-  return obj;
+  return obj3;
 }

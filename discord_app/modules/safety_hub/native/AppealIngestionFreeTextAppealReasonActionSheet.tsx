@@ -8,17 +8,14 @@ const require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-fn(4636);
-let createStyles = {
+const createStyles = fn(4636);
+let obj2 = {
   footerText: { textAlign: "center" },
   textArea: { marginTop: -16, marginBottom: 36 },
-  separator: null,
-  closeIcon: null,
+  separator: { height: 1, backgroundColor: nativeDefault.colors.BORDER_SUBTLE, marginHorizontal: -16 },
+  closeIcon: { alignSelf: "flex-end", flexDirection: "row", marginBottom: -26 },
 };
-createStyles = { height: 1, backgroundColor: nativeDefault.colors.BORDER_SUBTLE, marginHorizontal: -16 };
-createStyles.separator = createStyles;
-createStyles.closeIcon = { alignSelf: "flex-end", flexDirection: "row", marginBottom: -26 };
-let closure_8 = createStyles.createStyles(createStyles);
+let closure_8 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting(
   "modules/safety_hub/native/AppealIngestionFreeTextAppealReasonActionSheet.tsx",
@@ -28,11 +25,11 @@ export default function AppealIngestionFreeTextAppealReasonActionSheet(onPress) 
   const onSave = onPress.onSave;
   value = undefined;
   const tmp = closure_8();
-  let obj = onSave(value[7]);
   const items = [SafetyHubStore];
-  const stateFromStores = obj.useStateFromStores(items, () => freeTextAppealReason.getFreeTextAppealReason());
-  const tmp5 = _slicedToArray(noop.useState(stateFromStores), 2);
-  value = tmp5[0];
+  const stateFromStores = onSave(value[7]).useStateFromStores(items, () =>
+    freeTextAppealReason.getFreeTextAppealReason(),
+  );
+  [value, obj5.onChange] = noop.useState(stateFromStores);
   if ("" === stateFromStores) {
     const intl2 = tmp2(tmp3[8]).intl;
     let stringResult = intl2.string(tmp2(tmp3[8]).t.uoQFIp);
@@ -41,8 +38,9 @@ export default function AppealIngestionFreeTextAppealReasonActionSheet(onPress) 
     stringResult = intl.string(tmp2(tmp3[8]).t.tnE3bZ);
   }
   const intl3 = tmp2(tmp3[8]).intl;
-  obj = { startExpanded: true, children: null };
-  obj = { spacing: 16, children: null };
+  const obj = onSave(value[7]);
+  const obj2 = { startExpanded: true, children: null };
+  const obj3 = { spacing: 16, children: null };
   const stringResult1 = intl3.string(onSave(value[8]).t["Rk+uJx"]);
   const items1 = [
     closure_6(onSave(value[11]).PressableOpacity, {
@@ -55,28 +53,27 @@ export default function AppealIngestionFreeTextAppealReasonActionSheet(onPress) 
     ,
     ,
   ];
-  const obj2 = { maxLength: 1024, placeholder: null, containerStyle: null, value: null, onChange: null };
+  const obj5 = { maxLength: 1024, placeholder: null, containerStyle: null, value: null, onChange: null };
   const intl4 = tmp2(tmp3[8]).intl;
-  obj2.placeholder = intl4.string(onSave(value[8]).t.bQrZIN);
-  obj2.containerStyle = tmp.textArea;
-  obj2.value = value;
-  obj2.onChange = tmp5[1];
-  items1[2] = closure_6(onSave(value[14]).TextArea, obj2);
+  obj5.placeholder = intl4.string(onSave(value[8]).t.bQrZIN);
+  obj5.containerStyle = tmp.textArea;
+  obj5.value = value;
+  items1[2] = closure_6(onSave(value[14]).TextArea, obj5);
   items1[3] = closure_6(View, { style: tmp.separator });
-  const obj4 = { variant: "text-xs/medium", color: "text-default", style: tmp.footerText, children: null };
+  const obj7 = { variant: "text-xs/medium", color: "text-default", style: tmp.footerText, children: null };
   const intl5 = tmp2(tmp3[8]).intl;
-  obj4.children = intl5.string(onSave(value[8]).t.xfNY3L);
-  items1[4] = closure_6(onSave(value[15]).Text, obj4);
-  const obj5 = {
+  obj7.children = intl5.string(onSave(value[8]).t.xfNY3L);
+  items1[4] = closure_6(onSave(value[15]).Text, obj7);
+  const obj8 = {
     onPress() {
       return onSave(first);
     },
     text: null,
   };
   const intl6 = tmp2(tmp3[8]).intl;
-  obj5.text = intl6.string(onSave(value[8]).t["R3BPH+"]);
-  items1[5] = closure_6(onSave(value[16]).Button, obj5);
-  obj.children = items1;
-  obj.children = closure_7(onSave(value[10]).Stack, obj);
-  return closure_6(onSave(value[9]).BottomSheet, obj);
+  obj8.text = intl6.string(onSave(value[8]).t["R3BPH+"]);
+  items1[5] = closure_6(onSave(value[16]).Button, obj8);
+  obj3.children = items1;
+  obj2.children = closure_7(onSave(value[10]).Stack, obj3);
+  return closure_6(onSave(value[9]).BottomSheet, obj2);
 }

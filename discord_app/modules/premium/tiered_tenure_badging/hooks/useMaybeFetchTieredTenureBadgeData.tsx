@@ -3,6 +3,8 @@ import useMountEffectDefault from "../../../../hooks/useMountEffect.tsx";
 import maybeFetchUserProfileDefault from "../../../user_profile/maybeFetchUserProfile.tsx";
 import UserStore from "../../../../stores/UserStore.tsx";
 
+const require = globalThis.__r;
+
 const require = fn;
 const PremiumTypes = fn(1373).PremiumTypes;
 const size = fn(2);

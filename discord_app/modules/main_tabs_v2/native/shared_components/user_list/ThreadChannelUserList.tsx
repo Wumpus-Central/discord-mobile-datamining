@@ -22,11 +22,11 @@ export default noop.memo(function ThreadChannelUserList(channelId) {
   closure_6 = undefined;
   ({ disableStickySections, listStyleOverride, disableBottomSafeZone, insetEnd } = channelId);
   const analyticsLocations = guildId(onUserPress[7])().analyticsLocations;
-  let obj = channelId(onUserPress[8]);
   const items = [closure_6];
-  const stateFromStores = obj.useStateFromStores(items, () => GuildStore.getGuild(guildId));
+  const stateFromStores = channelId(onUserPress[8]).useStateFromStores(items, () => GuildStore.getGuild(guildId));
+  let obj = channelId(onUserPress[8]);
   const threadMemberListSections = channelId(onUserPress[9]).useThreadMemberListSections(channelId, stateFromStores);
-  const obj2 = channelId(onUserPress[9]);
+  let obj2 = channelId(onUserPress[9]);
   const items1 = [threadMemberListSections];
   const stateFromStores1 = channelId(onUserPress[8]).useStateFromStores(items1, () =>
     ChannelStore.getChannel(channelId),
@@ -40,9 +40,9 @@ export default noop.memo(function ThreadChannelUserList(channelId) {
     () =>
       throttleDefault(() => {
         if (null != threadMemberListSections.getChannel(channelId)) {
-          channelId(onUserPress[12]);
-          const obj = { guildId, channelId, y: ref2.current, height: ref.current, rowHeight };
-          const result = obj.subscribeChannelDimensions(obj);
+          const obj2 = { guildId, channelId, y: ref2.current, height: ref.current, rowHeight };
+          const result = channelId(onUserPress[12]).subscribeChannelDimensions(obj2);
+          const obj = channelId(onUserPress[12]);
         }
       }, 50),
     items2,
@@ -87,7 +87,7 @@ export default noop.memo(function ThreadChannelUserList(channelId) {
       const member = GuildMemberStore.getMember(guildId, user.id);
     }
     if (null != user) {
-      let obj = {
+      const obj = {
         type: RelationshipTypes.NONE,
         user,
         guildId,
@@ -131,12 +131,13 @@ export default noop.memo(function ThreadChannelUserList(channelId) {
       let element1 = element;
     } else {
       element1 = { type: "placeholder", props: null };
-      obj = { start: tmp5, end: tmp6 };
-      element1.props = obj;
+      const obj2 = { start: tmp5, end: tmp6 };
+      element1.props = obj2;
     }
     return element1;
   }, items7);
-  obj = {
+  const obj3 = channelId(onUserPress[8]);
+  return memo(channelId(onUserPress[15]).UsersFastList, {
     sections: threadMemberListSections.map((userIds) => userIds.userIds.length),
     getItemProps: callback3,
     getSectionProps: callback2,
@@ -147,6 +148,5 @@ export default noop.memo(function ThreadChannelUserList(channelId) {
     listStyleOverride,
     disableBottomSafeZone,
     insetEnd,
-  };
-  return memo(channelId(onUserPress[15]).UsersFastList, obj);
+  });
 });

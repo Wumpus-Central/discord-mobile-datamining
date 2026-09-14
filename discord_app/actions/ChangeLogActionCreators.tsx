@@ -16,22 +16,18 @@ const result = size.fileFinishedImporting("actions/ChangeLogActionCreators.tsx")
 
 export default {
   lockChangeLog(key) {
-    const obj = { type: "CHANGE_LOG_LOCK", key };
-    obj.dispatch(obj);
+    DispatcherDefault.dispatch({ type: "CHANGE_LOG_LOCK", key });
   },
   unlockChangeLog(key) {
-    const obj = { type: "CHANGE_LOG_UNLOCK", key };
-    obj.dispatch(obj);
+    DispatcherDefault.dispatch({ type: "CHANGE_LOG_UNLOCK", key });
   },
   markChangelogAsSeen(id, date) {
-    const obj = { type: "CHANGE_LOG_MARK_SEEN", changelogId: id, changelogDate: date };
-    obj.dispatch(obj);
+    DispatcherDefault.dispatch({ type: "CHANGE_LOG_MARK_SEEN", changelogId: id, changelogDate: date });
     const LastReceivedChangelogId = UserSettings.LastReceivedChangelogId;
     LastReceivedChangelogId.updateSetting(id);
   },
   setChangelogOverride(id) {
-    const obj = { type: "CHANGE_LOG_SET_OVERRIDE", id };
-    obj.dispatch(obj);
+    DispatcherDefault.dispatch({ type: "CHANGE_LOG_SET_OVERRIDE", id });
     if (null != id) {
       const self = this;
       this.sendChangelogMessage(id);
@@ -81,23 +77,22 @@ export default {
         const _HermesInternal = HermesInternal;
         str = "?" + cacheBustParam();
       }
-      const HTTP = closure_0(1272).HTTP;
-      let obj1 = {
+      const HTTP = closure_0(1270).HTTP;
+      const _HermesInternal2 = HermesInternal;
+      yield HTTP.get({
         url: "https://cdn.discordapp.com/changelogs/" + MOBILE + "/" + closure_0 + "/" + tmp3 + ".json" + str,
         rejectWithError: true,
-      };
-      const _HermesInternal2 = HermesInternal;
-      yield HTTP.get(obj1);
+      });
       if (1 === tmp7) {
         dependencyMap = 0;
-        let obj5 = tmp3(573);
-        obj5.dispatch({ type: "CHANGE_LOG_FETCH_FAILED", id: closure_129_0, locale: closure_129_1 });
+        tmp3(573).dispatch({ type: "CHANGE_LOG_FETCH_FAILED", id: closure_129_0, locale: closure_129_1 });
         let tmp8 = null;
         if ("en-US" !== closure_129_1) {
           c3 = 3;
           changelog = 1;
           return { value: closure_129_4.fetchChangelog(closure_129_0, "en-US"), done: false };
         }
+        tmp3(573);
       } else if (2 === tmp7) {
         if (arg0 === 1) {
           changelog = 3;
@@ -105,12 +100,10 @@ export default {
         } else if (arg0 === 2) {
           dependencyMap = 0;
           changelog = 3;
-          obj5 = { value, done: true };
-          return obj5;
+          return { value, done: true };
         } else {
           closure_128_0 = value;
-          obj1 = tmp3(573);
-          obj1.dispatch({ type: "CHANGE_LOG_FETCH_SUCCESS", id: closure_129_0, changelog: closure_128_0.body });
+          tmp3(573).dispatch({ type: "CHANGE_LOG_FETCH_SUCCESS", id: closure_129_0, changelog: closure_128_0.body });
           dependencyMap = 0;
           changelog = 3;
           return { value: closure_128_0.body, done: true };

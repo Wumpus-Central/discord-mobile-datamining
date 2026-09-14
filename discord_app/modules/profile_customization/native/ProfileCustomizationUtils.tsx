@@ -21,10 +21,10 @@ export const useUserProfileBannerBackgroundColor = function useUserProfileBanner
   } else if (null == pendingAvatarSrc) {
     pendingAvatarSrc = user.getAvatarURL(tmp, 80);
   } else if (pendingAvatarSrc == null) {
-    const obj = {};
+    const obj2 = {};
     const merged = Object.assign(user);
-    obj.avatar = null;
-    pendingAvatarSrc = obj.getUserAvatarURL(obj);
+    obj2.avatar = null;
+    pendingAvatarSrc = AvatarUtils.getUserAvatarURL(obj2);
   }
 };
 export const getAvatarSource = function getAvatarSource(getAvatarURL, guild_id, arg2, acked) {
@@ -38,15 +38,14 @@ export const getAvatarSource = function getAvatarSource(getAvatarURL, guild_id, 
       );
       const tmp2 = !acked;
     } else {
-      let obj = VideoBackground;
       if (userAvatarURL == null) {
-        obj = {};
+        const obj2 = {};
         const merged = Object.assign(getAvatarURL);
-        obj.avatar = null;
-        userAvatarURL = AvatarUtils.getUserAvatarURL(obj);
+        obj2.avatar = null;
+        userAvatarURL = AvatarUtils.getUserAvatarURL(obj2);
         const tmp3Result = AvatarUtils;
       }
-      memoizedImageSourceResult = obj.memoizedImageSource(userAvatarURL);
+      memoizedImageSourceResult = VideoBackground.memoizedImageSource(userAvatarURL);
     }
   }
 };

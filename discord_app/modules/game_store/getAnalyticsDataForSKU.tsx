@@ -17,7 +17,7 @@ export default function getAnalyticsDataForSKU(applicationId) {
   const application = ApplicationStore.getApplication(applicationId.applicationId);
   const price = applicationId.getPrice();
   const price1 = applicationId.getPrice(null, false);
-  let obj = {
+  const obj = {
     sku_id: applicationId.id,
     sku_type: applicationId.type,
     application_id: applicationId.applicationId,
@@ -42,22 +42,22 @@ export default function getAnalyticsDataForSKU(applicationId) {
     if (null != price) {
       amount = price.amount;
     }
-    obj = { price: amount, regular_price: null, currency: null };
+    const obj2 = { price: amount, regular_price: null, currency: null };
     let amount1 = null;
     if (null != price1) {
       amount1 = price1.amount;
     }
-    obj.regular_price = amount1;
+    obj2.regular_price = amount1;
     let currency = null;
     if (null != price) {
       currency = price.currency;
     }
-    obj.currency = currency;
-    tmp5 = obj;
+    obj2.currency = currency;
+    tmp5 = obj2;
   }
   let tmp9 = null;
   if (flag) {
-    obj = {
+    const obj3 = {
       has_single_player: applicationId.hasFeature(SKUFeatureTypes.SINGLE_PLAYER),
       has_online_multiplayer: applicationId.hasFeature(SKUFeatureTypes.ONLINE_MULTIPLAYER),
       has_local_multiplayer: applicationId.hasFeature(SKUFeatureTypes.LOCAL_MULTIPLAYER),
@@ -72,7 +72,7 @@ export default function getAnalyticsDataForSKU(applicationId) {
       has_cloud_saves: applicationId.hasFeature(SKUFeatureTypes.CLOUD_SAVES),
       has_secure_networking: applicationId.hasFeature(SKUFeatureTypes.SECURE_NETWORKING),
     };
-    tmp9 = obj;
+    tmp9 = obj3;
   }
   const merged = Object.assign(obj);
   const merged1 = Object.assign(tmp5);

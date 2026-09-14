@@ -4,6 +4,8 @@ import GuildMemberStore from "../../stores/GuildMemberStore.tsx";
 import GuildRoleStore from "../../stores/GuildRoleStore.tsx";
 import GuildStore from "../../stores/GuildStore.tsx";
 
+const require = globalThis.__r;
+
 const require = fn;
 function computeHasRoleSubscriptionsInGuild(id1, rolesSnapshot) {
   let tmp = stateFromStores;

@@ -3,6 +3,8 @@ import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import GuildPowerupsStore from "../GuildPowerupsStore.tsx";
 
+const require = globalThis.__r;
+
 const require = fn;
 function orderPowerupListings(items) {
   const findIndexResult = items.findIndex((type) => {
@@ -73,16 +75,15 @@ function buildPowerupListings(type, arr, gameServerEnabled) {
         if (acc[tmp2] == null) {
           acc[tmp2] = [];
         }
-        let arr = acc[tmp2];
-        arr = arr.push(type);
+        acc[tmp2].push(type);
       }
       return acc;
     }
   }, {});
   function _loop() {
     if (type.type === GuildPowerupType.LEVEL) {
-      let obj = { type: "singleLevel", powerup: type };
-      items.push(obj);
+      const obj3 = { type: "singleLevel", powerup: type };
+      items.push(obj3);
       return 0;
     } else if (null != dependencyMap[type.skuId]) {
       if (undefined !== closure_1[tmp13]) {
@@ -91,8 +92,8 @@ function buildPowerupListings(type, arr, gameServerEnabled) {
           const index = closure_0.indexOf(skuId.skuId);
           return index - closure_0.indexOf(skuId2.skuId);
         });
-        obj = { type: "multiPerk", group: tmp13, powerups: obj2 };
-        items.push(obj);
+        const obj4 = { type: "multiPerk", group: tmp13, powerups: obj2 };
+        items.push(obj4);
         tmp5[tmp13] = undefined;
       }
       return 0;

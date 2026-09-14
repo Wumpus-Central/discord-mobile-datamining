@@ -5,6 +5,8 @@ import noop from "../../../../_runtime/metro/00019__.js";
 import UserStore from "../../../stores/UserStore.tsx";
 import UserProfileStore from "../UserProfileStore.tsx";
 
+const require = globalThis.__r;
+
 const require = fn;
 const FunctionUtils = fn(1933);
 let closure_6 = FunctionUtils.cachedFunction((arg0, arg1) => new DisplayProfileDefault(arg0, arg1));
@@ -70,18 +72,18 @@ export const useDisplayProfileWithFetchEffect = function useDisplayProfileWithFe
     return tmp2;
   });
 };
-export const getDisplayProfile = function getDisplayProfile(id, guildId) {
+export const getDisplayProfile = function getDisplayProfile(id1, guildId) {
   let tmp = arg2;
   if (arg2 === undefined) {
     const items = [UserStore, UserProfileStore];
     tmp = items;
   }
   [obj, obj2] = tmp;
-  if (null === id) {
+  if (null === id1) {
     return null;
   } else {
-    const user = obj.getUser(id);
-    const userProfile = obj2.getUserProfile(id);
+    const user = obj.getUser(id1);
+    const userProfile = obj2.getUserProfile(id1);
     let tmp8 = null;
     if (null != user) {
       tmp8 = null;

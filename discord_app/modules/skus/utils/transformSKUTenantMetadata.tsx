@@ -57,7 +57,7 @@ export default function transformSKUTenantMetadata(social_layer) {
       if (mapped == null) {
         mapped = [];
       }
-      let obj = { carouselItems: mapped, expiresAt: null, cardImageAssetId: null, cardBackgroundImageAssetId: null };
+      const obj = { carouselItems: mapped, expiresAt: null, cardImageAssetId: null, cardBackgroundImageAssetId: null };
       let date;
       if (null != social_layer.expires_at) {
         const _Date = Date;
@@ -68,11 +68,11 @@ export default function transformSKUTenantMetadata(social_layer) {
         social_layer);
       tmp = obj;
     }
-    obj = { socialLayer: tmp, collectibles: null, gameServerPlanFeatures: null };
+    const obj2 = { socialLayer: tmp, collectibles: null, gameServerPlanFeatures: null };
     const collectibles = social_layer.collectibles;
     let tmp6;
     if (null != collectibles) {
-      obj = {
+      const obj19 = {
         type: null,
         item: null,
         categorySkuId: null,
@@ -89,7 +89,7 @@ export default function transformSKUTenantMetadata(social_layer) {
       if (null != item) {
         const type = item.type;
         if (CollectiblesItemType.CollectiblesItemType.AVATAR_DECORATION === type) {
-          const obj1 = { id: null, type: null, asset: null, assets: null, label: null };
+          const obj20 = { id: null, type: null, asset: null, assets: null, label: null };
           ({ id: obj7.id, type: obj7.type, asset: obj7.asset, assets: assets2 } = item);
           let tmp13;
           if (null != assets2) {
@@ -99,29 +99,29 @@ export default function transformSKUTenantMetadata(social_layer) {
               video_path: obj8.videoPath,
             } = assets2);
             tmp13 = { staticImagePath: null, animatedImagePath: null, videoPath: null };
-            const obj2 = { staticImagePath: null, animatedImagePath: null, videoPath: null };
+            const obj21 = { staticImagePath: null, animatedImagePath: null, videoPath: null };
           }
-          obj1.assets = tmp13;
-          obj1.label = item.label;
-          tmp7 = obj1;
+          obj20.assets = tmp13;
+          obj20.label = item.label;
+          tmp7 = obj20;
         } else if (CollectiblesItemType.CollectiblesItemType.NAMEPLATE === type) {
-          const obj3 = { id: null, type: null, asset: null, assets: null, label: null, palette: null };
+          const obj22 = { id: null, type: null, asset: null, assets: null, label: null, palette: null };
           ({ id: obj5.id, type: obj5.type, asset: obj5.asset, assets } = item);
           let tmp12;
           if (null != assets) {
-            const obj4 = { staticImagePath: null, animatedImagePath: null, videoPath: null };
             ({
               static_image_path: obj6.staticImagePath,
               animated_image_path: obj6.animatedImagePath,
               video_path: obj6.videoPath,
             } = assets);
-            tmp12 = obj4;
+            tmp12 = { staticImagePath: null, animatedImagePath: null, videoPath: null };
+            const obj23 = { staticImagePath: null, animatedImagePath: null, videoPath: null };
           }
-          obj3.assets = tmp12;
+          obj22.assets = tmp12;
           ({ label: obj5.label, palette: obj5.palette } = item);
-          tmp7 = obj3;
+          tmp7 = obj22;
         } else if (CollectiblesItemType.CollectiblesItemType.PROFILE_EFFECT === type) {
-          const obj5 = {
+          const obj24 = {
             id: null,
             type: null,
             title: null,
@@ -149,19 +149,9 @@ export default function transformSKUTenantMetadata(social_layer) {
           if (effects != null) {
             mapped1 = effects.map(transformProfileEffectKeyFrameFromServer);
           }
-          obj5.effects = mapped1;
-          tmp7 = obj5;
+          obj24.effects = mapped1;
+          tmp7 = obj24;
         } else if (CollectiblesItemType.CollectiblesItemType.PROFILE_FRAME === type) {
-          const obj6 = {
-            id: null,
-            type: null,
-            label: null,
-            layers: null,
-            innerWidth: null,
-            overflowTop: null,
-            overflowBottom: null,
-            overflowHorizontal: null,
-          };
           ({
             id: obj10.id,
             type: obj10.type,
@@ -172,10 +162,29 @@ export default function transformSKUTenantMetadata(social_layer) {
             overflow_bottom: obj10.overflowBottom,
             overflow_horizontal: obj10.overflowHorizontal,
           } = item);
-          tmp7 = obj6;
+          tmp7 = {
+            id: null,
+            type: null,
+            label: null,
+            layers: null,
+            innerWidth: null,
+            overflowTop: null,
+            overflowBottom: null,
+            overflowHorizontal: null,
+          };
+          const obj25 = {
+            id: null,
+            type: null,
+            label: null,
+            layers: null,
+            innerWidth: null,
+            overflowTop: null,
+            overflowBottom: null,
+            overflowHorizontal: null,
+          };
         }
       }
-      obj.item = tmp7;
+      obj19.item = tmp7;
       ({
         category_sku_id: obj3.categorySkuId,
         premium_type: obj3.premiumType,
@@ -186,18 +195,10 @@ export default function transformSKUTenantMetadata(social_layer) {
         const _Date2 = Date;
         date1 = new Date(1000 * collectibles.expires_at);
       }
-      obj.expiresAt = date1;
+      obj19.expiresAt = date1;
       const variant = collectibles.variant;
       let tmp18;
       if (null != variant) {
-        const obj7 = {
-          role: null,
-          baseVariantSkuId: null,
-          baseVariantName: null,
-          value: null,
-          label: null,
-          collapseUnder: null,
-        };
         ({
           role: obj9.role,
           base_variant_sku_id: obj9.baseVariantSkuId,
@@ -206,23 +207,38 @@ export default function transformSKUTenantMetadata(social_layer) {
           label: obj9.label,
           collapse_under: obj9.collapseUnder,
         } = variant);
-        tmp18 = obj7;
+        tmp18 = {
+          role: null,
+          baseVariantSkuId: null,
+          baseVariantName: null,
+          value: null,
+          label: null,
+          collapseUnder: null,
+        };
+        const obj26 = {
+          role: null,
+          baseVariantSkuId: null,
+          baseVariantName: null,
+          value: null,
+          label: null,
+          collapseUnder: null,
+        };
       }
-      obj.variant = tmp18;
+      obj19.variant = tmp18;
       ({
         option_selector_display_value: obj3.optionSelectorDisplayValue,
         source_type: obj3.sourceType,
         is_first_party: obj3.isFirstParty,
       } = collectibles);
-      tmp6 = obj;
+      tmp6 = obj19;
     }
-    obj.collectibles = tmp6;
+    obj2.collectibles = tmp6;
     const plan_features = social_layer.plan_features;
     let mapped2;
     if (plan_features != null) {
       mapped2 = plan_features.map((title) => ({ title: title.title, description: title.description }));
     }
-    obj.gameServerPlanFeatures = mapped2;
-    return obj;
+    obj2.gameServerPlanFeatures = mapped2;
+    return obj2;
   }
 }

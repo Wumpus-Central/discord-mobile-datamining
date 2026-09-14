@@ -5,6 +5,8 @@ import PremiumBundledPlansUtils from "../PremiumBundledPlansUtils.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import IAPStore from "../../../../stores/native/IAPStore.android.tsx";
 
+const require = globalThis.__r;
+
 require = fn;
 function getViewerProductId(subscription) {
   if (null == subscription) {
@@ -53,16 +55,16 @@ export const usePremiumTier2DeltaPriceString = function usePremiumTier2DeltaPric
   const checkoutContext = tmp.checkoutContext;
   const tmp3 = getViewerProductId(subscription);
   _require = tmp3;
-  let obj = require("initialize");
   const items = [IAPStore];
-  const stateFromStores = obj.useStateFromStores(items, () => {
+  const stateFromStores = require("initialize").useStateFromStores(items, () => {
     let product = null;
     if (null != closure_0) {
       product = IAPStore.getProduct(tmp);
     }
     return product;
   });
-  let obj1 = require("PlatformUtils");
+  let obj = require("initialize");
+  let obj2 = require("PlatformUtils");
   let flag = false;
   if (flag4) {
     flag = false;
@@ -84,49 +86,47 @@ export const usePremiumTier2DeltaPriceString = function usePremiumTier2DeltaPric
     if (!tmp7) {
       if (null != currencyCode) {
         if (null != stateFromStores) {
-          let tmp4Result = tmp4(1150);
-          const platformName = tmp4Result.getPlatformName();
+          const platformName = tmp4(1363).getPlatformName();
           if (currencyCode.currencyCode !== stateFromStores.currencyCode) {
-            obj = { priceString: null, failure: null };
-            obj = {
+            let obj3 = { priceString: null, failure: null };
+            const obj4 = {
               kind: "currency_mismatch",
               platform: platformName,
               productId: plan.productId,
               currencyCode: currencyCode.currencyCode,
             };
-            obj.failure = obj;
-            let obj2 = obj;
+            obj3.failure = obj4;
+            let obj6 = obj3;
           } else {
             const diff = currencyCode.price - stateFromStores.price;
             if (diff > 0) {
               if (diff < currencyCode.price) {
-                tmp4Result = tmp4(1150);
                 let result = diff;
-                if (tmp4Result.isAndroid()) {
+                if (tmp4Result7.isAndroid()) {
                   result = diff / 100;
                 }
-                obj1 = {
-                  priceString: tmp4(7337).formatPrice(result, currencyCode.currencyCode, {
-                    convertToMajorUnits: false,
-                  }),
-                  failure: null,
-                };
-                obj2 = obj1;
-                const tmp4Result1 = tmp4(7337);
+                const obj5 = { priceString: null, failure: null };
+                tmp4Result7 = tmp4(1363);
+                obj5.priceString = tmp4(7337).formatPrice(result, currencyCode.currencyCode, {
+                  convertToMajorUnits: false,
+                });
+                obj6 = obj5;
+                const tmp4Result8 = tmp4(7337);
               }
             }
-            obj2 = { priceString: null, failure: null };
-            const obj3 = {
+            obj6 = { priceString: null, failure: null };
+            const obj7 = {
               kind: "delta_out_of_range",
               platform: platformName,
               productId: plan.productId,
               currencyCode: currencyCode.currencyCode,
             };
-            obj2.failure = obj3;
+            obj6.failure = obj7;
           }
+          const tmp4Result = tmp4(1363);
         }
       }
-      obj2 = closure_6;
+      obj6 = closure_6;
     }
     if (null == checkoutContext) {
     } else {
@@ -155,28 +155,28 @@ export const usePremiumTier2DeltaPriceString = function usePremiumTier2DeltaPric
                   if (null != addOnPrice1) {
                     const diff1 = addOnPrice.majorUnits - addOnPrice1.majorUnits;
                     if (diff1 > 0) {
-                      const obj4 = {
+                      const obj8 = {
                         priceString: tmp4(7337).formatPrice(diff1, addOnPrice.currency, { convertToMajorUnits: false }),
                         failure: null,
                       };
-                      const tmp4Result4 = tmp4(7337);
+                      const tmp4Result11 = tmp4(7337);
                     }
                   }
-                  const tmp4Result3 = tmp4(7512);
+                  const tmp4Result10 = tmp4(7512);
                 }
               }
             }
-            const obj5 = {
+            const obj9 = {
               priceString: tmp4(7337).formatPrice(addOnPrice.majorUnits, addOnPrice.currency, {
                 convertToMajorUnits: false,
               }),
               failure: null,
             };
-            const tmp4Result5 = tmp4(7337);
+            const tmp4Result12 = tmp4(7337);
           }
         }
       }
-      const tmp4Result2 = tmp4(7512);
+      const tmp4Result9 = tmp4(7512);
     }
   } else {
     const failure = closure_6.failure;
@@ -222,7 +222,7 @@ export const usePremiumTier2DeltaPriceString = function usePremiumTier2DeltaPric
         const _Error = Error;
         const _HermesInternal = HermesInternal;
         const error = new Error("delta_price_integrity_" + delta_failure_kind);
-        let obj = {
+        const obj3 = {
           source: "usePremiumTier2DeltaPriceString",
           delta_failure_kind,
           delta_platform: null,
@@ -233,22 +233,23 @@ export const usePremiumTier2DeltaPriceString = function usePremiumTier2DeltaPric
         if (dependencyMap == null) {
           str = "unknown";
         }
-        obj.delta_platform = str;
+        obj3.delta_platform = str;
         let str2 = noop;
         if (noop == null) {
           str2 = "unknown";
         }
-        obj.delta_currency_code = str2;
+        obj3.delta_currency_code = str2;
         let str3 = useNativeCheckoutStore;
         if (useNativeCheckoutStore == null) {
           str3 = "unknown";
         }
-        obj = { tags: null, delta_product_id: str3 };
-        obj.tags = obj;
+        const obj = { tags: null };
+        obj3.delta_product_id = str3;
+        obj.tags = obj3;
         const result = BillingUtils.captureBillingException(error, obj);
       }
     }, items1);
     return closure_6.priceString;
   }
-  tmp7 = obj1.isIOS() && tmp.orderRequired;
+  tmp7 = require("PlatformUtils").isIOS() && tmp.orderRequired;
 };

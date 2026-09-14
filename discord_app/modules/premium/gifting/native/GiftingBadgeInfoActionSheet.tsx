@@ -9,15 +9,21 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
 import BadgeDirectoryStore from "../../../badges/BadgeDirectoryStore.tsx";
 
+const require = globalThis.__r;
+
 require = fn;
 const View = fn(17).View;
 let closure_7 = fn(8309).getSingleRequirementThreshold;
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-fn(4636);
-let createStyles = {
-  container: null,
+const createStyles = fn(4636);
+let obj2 = {
+  container: {
+    alignItems: "center",
+    paddingTop: nativeDefault.space.PX_16,
+    paddingHorizontal: nativeDefault.space.PX_16,
+  },
   headerContainer: null,
   title: null,
   description: null,
@@ -25,46 +31,46 @@ let createStyles = {
   tierCard: null,
   iconWrapper: null,
 };
-createStyles = {
+let obj3 = {
   alignItems: "center",
   paddingTop: nativeDefault.space.PX_16,
   paddingHorizontal: nativeDefault.space.PX_16,
 };
-createStyles.container = createStyles;
-createStyles.headerContainer = { paddingHorizontal: nativeDefault.space.PX_8 };
-let obj1 = { paddingHorizontal: nativeDefault.space.PX_8 };
-createStyles.title = { textAlign: "center", marginBottom: nativeDefault.space.PX_8 };
-let obj2 = { textAlign: "center", marginBottom: nativeDefault.space.PX_8 };
-createStyles.description = { textAlign: "center", marginBottom: nativeDefault.space.PX_16 };
-let obj3 = { textAlign: "center", marginBottom: nativeDefault.space.PX_16 };
-createStyles.tierCards = { flexDirection: "row", flexWrap: "wrap", rowGap: nativeDefault.space.PX_8 };
-let obj4 = { flexDirection: "row", flexWrap: "wrap", rowGap: nativeDefault.space.PX_8 };
-createStyles.tierCard = { width: "33.33%", alignItems: "center", padding: nativeDefault.space.PX_8 };
-let obj5 = { width: "33.33%", alignItems: "center", padding: nativeDefault.space.PX_8 };
-createStyles.iconWrapper = { paddingVertical: nativeDefault.space.PX_8 };
-let closure_11 = createStyles.createStyles(createStyles);
+obj2.headerContainer = { paddingHorizontal: nativeDefault.space.PX_8 };
+const obj4 = { paddingHorizontal: nativeDefault.space.PX_8 };
+obj2.title = { textAlign: "center", marginBottom: nativeDefault.space.PX_8 };
+let obj5 = { textAlign: "center", marginBottom: nativeDefault.space.PX_8 };
+obj2.description = { textAlign: "center", marginBottom: nativeDefault.space.PX_16 };
+let obj6 = { textAlign: "center", marginBottom: nativeDefault.space.PX_16 };
+obj2.tierCards = { flexDirection: "row", flexWrap: "wrap", rowGap: nativeDefault.space.PX_8 };
+let obj7 = { flexDirection: "row", flexWrap: "wrap", rowGap: nativeDefault.space.PX_8 };
+obj2.tierCard = { width: "33.33%", alignItems: "center", padding: nativeDefault.space.PX_8 };
+let obj8 = { width: "33.33%", alignItems: "center", padding: nativeDefault.space.PX_8 };
+obj2.iconWrapper = { paddingVertical: nativeDefault.space.PX_8 };
+let closure_11 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/gifting/native/GiftingBadgeInfoActionSheet.tsx");
 
 export default function GiftingBadgeInfoActionSheet() {
   const tmp = closure_11();
   _require = tmp;
-  let obj = require("initialize");
   let items = [BadgeDirectoryStore];
-  const stateFromStores = obj.useStateFromStores(items, () => badgeById.getBadgeById(closure_0(8301).BadgeId.GIFTING));
-  let obj1 = require("initialize");
+  const stateFromStores = require("initialize").useStateFromStores(items, () =>
+    badgeById.getBadgeById(closure_0(8301).BadgeId.GIFTING),
+  );
+  let obj = require("initialize");
   const items1 = [AccessibilityStore];
-  importDefault = obj1.useStateFromStores(items1, () => useReducedMotion.useReducedMotion);
+  importDefault = require("initialize").useStateFromStores(items1, () => useReducedMotion.useReducedMotion);
   const effect = noop.useEffect(() => {
-    closure_1(1242).track(constants.GIFTING_BADGE_INFO_ACTION_SHEET_OPENED);
+    closure_1(1240).track(constants.GIFTING_BADGE_INFO_ACTION_SHEET_OPENED);
   }, []);
-  obj = { style: null, children: null };
+  let obj3 = { style: null, children: null };
   const items2 = [tmp.container];
-  obj = { paddingBottom: useSafeAreaInsetsDefault().bottom + nativeDefault.space.PX_16 };
-  items2[1] = obj;
-  obj.style = items2;
-  obj1 = { style: tmp.headerContainer, children: null };
-  let obj2 = {
+  let obj2 = require("initialize");
+  items2[1] = { paddingBottom: useSafeAreaInsetsDefault().bottom + nativeDefault.space.PX_16 };
+  obj3.style = items2;
+  let obj5 = { style: tmp.headerContainer, children: null };
+  let obj6 = {
     style: tmp.title,
     variant: "heading-xl/semibold",
     color: "text-strong",
@@ -72,15 +78,15 @@ export default function GiftingBadgeInfoActionSheet() {
     children: null,
   };
   let intl = require("util").intl;
-  obj2.children = intl.string(_modDef2492["0MB2C6"]);
-  const items3 = [closure_9(require("Text/Text").Text, obj2)];
-  let obj3 = { style: tmp.description, variant: "text-md/medium", color: "text-default", children: null };
+  obj6.children = intl.string(_modDef2492["0MB2C6"]);
+  const items3 = [closure_9(require("Text/Text").Text, obj6)];
+  const obj7 = { style: tmp.description, variant: "text-md/medium", color: "text-default", children: null };
   const intl2 = require("util").intl;
-  obj3.children = intl2.string(_modDef2492.k9sNVH);
-  items3[1] = closure_9(require("Text/Text").Text, obj3);
-  obj1.children = items3;
-  const items4 = [closure_10(View, obj1)];
-  const obj4 = { style: tmp.tierCards, children: null };
+  obj7.children = intl2.string(_modDef2492.k9sNVH);
+  items3[1] = closure_9(require("Text/Text").Text, obj7);
+  obj5.children = items3;
+  const items4 = [closure_10(View, obj5)];
+  const obj8 = { style: tmp.tierCards, children: null };
   let mapped;
   if (stateFromStores != null) {
     const tiers = stateFromStores.tiers;
@@ -102,13 +108,13 @@ export default function GiftingBadgeInfoActionSheet() {
           }
         }
         const tmp3 = closure_7(children);
-        let obj = { style: closure_0.tierCard, children: null };
+        const obj = { style: closure_0.tierCard, children: null };
         let tmp7 = null != simple_icon_url;
         if (tmp7) {
-          obj = { style: tmp6.iconWrapper, children: null };
-          obj = { icon: simple_icon_url, size: 58 };
-          obj.children = React7(GiftingBadgeIconDefault, obj);
-          tmp7 = React7(View, obj);
+          const obj2 = { style: tmp6.iconWrapper, children: null };
+          const obj3 = { icon: simple_icon_url, size: 58 };
+          obj2.children = React7(GiftingBadgeIconDefault, obj3);
+          tmp7 = React7(View, obj2);
         }
         const items = [
           tmp7,
@@ -116,11 +122,11 @@ export default function GiftingBadgeInfoActionSheet() {
         ];
         let tmp11Result = null != tmp3;
         if (tmp11Result) {
-          const obj2 = { variant: "text-md/normal", color: "text-subtle", children: null };
+          const obj5 = { variant: "text-md/normal", color: "text-subtle", children: null };
           const intl = util.intl;
-          const obj3 = { count: tmp3 };
-          obj2.children = intl.formatToPlainString(_modDef2492.qvx9E4, obj3);
-          tmp11Result = React7(Text_Text.Text, obj2);
+          const obj6 = { count: tmp3 };
+          obj5.children = intl.formatToPlainString(_modDef2492.qvx9E4, obj6);
+          tmp11Result = React7(Text_Text.Text, obj5);
         }
         items[2] = tmp11Result;
         obj.children = items;
@@ -128,10 +134,10 @@ export default function GiftingBadgeInfoActionSheet() {
       });
     }
   }
-  const obj5 = { scrollable: false, startExpanded: true, children: null };
-  obj4.children = mapped;
-  items4[1] = closure_9(View, obj4);
-  obj.children = items4;
-  obj5.children = closure_10(View, obj);
-  return closure_9(require("Sheet/BottomSheet").BottomSheet, obj5);
+  const obj9 = { scrollable: false, startExpanded: true, children: null };
+  obj8.children = mapped;
+  items4[1] = closure_9(View, obj8);
+  obj3.children = items4;
+  obj9.children = closure_10(View, obj3);
+  return closure_9(require("Sheet/BottomSheet").BottomSheet, obj9);
 }

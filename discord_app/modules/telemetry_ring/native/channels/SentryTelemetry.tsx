@@ -11,8 +11,8 @@ class SentryTelemetryImpl extends tmp3 {
     tmp2 = closure_1(closure_2[1]);
     items = [];
     items[0] = closure_0(closure_2[1]).TelemetryChannel.SENTRY;
-    tmp = new tmp(tmp2, items, closure_1, new.target);
-    return tmp;
+    tmp1 = new tmp(tmp2, items, closure_1, new.target);
+    return tmp1;
   }
 }
 const prototype = SentryTelemetryImpl.prototype;

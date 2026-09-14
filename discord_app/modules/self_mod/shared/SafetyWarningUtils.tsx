@@ -9,16 +9,16 @@ const result = size.fileFinishedImporting("modules/self_mod/shared/SafetyWarning
 export const trackViewedEvent = function trackViewedEvent(SAFETY_WARNING_VIEWED, warningId) {
   warningId = warningId.warningId;
   ({ channelId, senderId, warningType } = warningId);
-  const obj = { channel_id: channelId, warning_id: null, warning_type: null, other_user_id: null };
+  const obj2 = { channel_id: channelId, warning_id: null, warning_type: null, other_user_id: null };
   let parsed;
   if (null != warningId) {
     const _parseInt = parseInt;
     parsed = parseInt(warningId);
   }
-  obj.warning_id = parsed;
-  obj.warning_type = warningType;
-  obj.other_user_id = senderId;
-  obj.track(SAFETY_WARNING_VIEWED, obj);
+  obj2.warning_id = parsed;
+  obj2.warning_type = warningType;
+  obj2.other_user_id = senderId;
+  AnalyticsUtilsDefault.track(SAFETY_WARNING_VIEWED, obj2);
 };
 export const ViewNameTypes = {
   SAFETY_WARNING_BANNER: "safety_warning_banner",
@@ -29,7 +29,7 @@ export const ViewNameTypes = {
 export const trackNamedViewEvent = function trackNamedViewEvent(warningId) {
   warningId = warningId.warningId;
   ({ channelId, senderId, warningType, viewName, isNudgeWarning } = warningId);
-  const obj = {
+  const obj2 = {
     channel_id: channelId,
     warning_id: null,
     warning_type: null,
@@ -42,12 +42,12 @@ export const trackNamedViewEvent = function trackNamedViewEvent(warningId) {
     const _parseInt = parseInt;
     parsed = parseInt(warningId);
   }
-  obj.warning_id = parsed;
-  obj.warning_type = warningType;
-  obj.other_user_id = senderId;
-  obj.view_name = viewName;
-  obj.is_nudge_warning = isNudgeWarning;
-  obj.track(AnalyticEvents.SAFETY_WARNING_VIEWED, obj);
+  obj2.warning_id = parsed;
+  obj2.warning_type = warningType;
+  obj2.other_user_id = senderId;
+  obj2.view_name = viewName;
+  obj2.is_nudge_warning = isNudgeWarning;
+  AnalyticsUtilsDefault.track(AnalyticEvents.SAFETY_WARNING_VIEWED, obj2);
 };
 export const CtaEventTypes = {
   OPEN_MORE_TIPS: "open_more_tips",
@@ -100,7 +100,7 @@ export const CtaEventTypes = {
 export const trackCtaEvent = function trackCtaEvent(warningId) {
   warningId = warningId.warningId;
   ({ channelId, senderId, warningType, cta, isNudgeWarning } = warningId);
-  const obj = {
+  const obj2 = {
     channel_id: channelId,
     warning_id: null,
     warning_type: null,
@@ -113,12 +113,12 @@ export const trackCtaEvent = function trackCtaEvent(warningId) {
     const _parseInt = parseInt;
     parsed = parseInt(warningId);
   }
-  obj.warning_id = parsed;
-  obj.warning_type = warningType;
-  obj.other_user_id = senderId;
-  obj.cta = cta;
-  obj.is_nudge_warning = isNudgeWarning;
-  obj.track(AnalyticEvents.SAFETY_WARNING_CTA_CLICKED, obj);
+  obj2.warning_id = parsed;
+  obj2.warning_type = warningType;
+  obj2.other_user_id = senderId;
+  obj2.cta = cta;
+  obj2.is_nudge_warning = isNudgeWarning;
+  AnalyticsUtilsDefault.track(AnalyticEvents.SAFETY_WARNING_CTA_CLICKED, obj2);
 };
 export const getUserIsTeen = function getUserIsTeen() {
   const currentUser = UserStore.getCurrentUser();

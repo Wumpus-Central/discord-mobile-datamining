@@ -8,12 +8,11 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-fn(4636);
-let createStyles = { inputField: null, form: null };
-createStyles = { marginBottom: nativeDefault.space.PX_16 };
-createStyles.inputField = createStyles;
-createStyles.form = { paddingHorizontal: nativeDefault.space.PX_16 };
-let closure_7 = createStyles.createStyles(createStyles);
+const createStyles = fn(4636);
+let obj2 = { inputField: { marginBottom: nativeDefault.space.PX_16 }, form: null };
+let obj3 = { marginBottom: nativeDefault.space.PX_16 };
+obj2.form = { paddingHorizontal: nativeDefault.space.PX_16 };
+let closure_7 = createStyles.createStyles(obj2);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/webauthn/native/nav_steps/WebAuthnEditStep.tsx");
 
@@ -23,8 +22,8 @@ export default function EditCredentialModal(credential) {
   value = undefined;
   noop = undefined;
   const tmp = closure_7();
+  const navigation = credential(1483).useNavigation();
   let obj = credential(1483);
-  const navigation = obj.useNavigation();
   [tmp6, c2] = value(noop.useState(false), 2);
   const tmp7 = value(noop.useState(""), 2);
   value = tmp7[0];
@@ -39,8 +38,8 @@ export default function EditCredentialModal(credential) {
     };
     navigation.setOptions(obj);
   }, items);
-  obj = { style: tmp.form, children: null };
-  obj = {
+  let obj2 = { style: tmp.form, children: null };
+  const obj3 = {
     showTopContainer: false,
     value,
     onChange: tmp7[1],
@@ -56,19 +55,18 @@ export default function EditCredentialModal(credential) {
     large: true,
   };
   let intl = credential(1114).intl;
-  obj.title = intl.string(credential(1114).t["Jzd+z/"]);
-  obj.placeholder = credential.name;
-  obj.disabled = tmp6;
-  obj.clearButtonVisibility = credential(1178).ClearButtonVisibility.WITH_CONTENT;
-  const items1 = [closure_5(credential(8716).FormInput, obj), closure_5(credential(8716).FormDivider, {})];
-  const obj1 = {
+  obj3.title = intl.string(credential(1114).t["Jzd+z/"]);
+  obj3.placeholder = credential.name;
+  obj3.disabled = tmp6;
+  obj3.clearButtonVisibility = credential(1176).ClearButtonVisibility.WITH_CONTENT;
+  const items1 = [closure_5(credential(8716).FormInput, obj3), closure_5(credential(8716).FormDivider, {})];
+  const obj4 = {
     onPress() {
       _undefined(true);
       closure_4(null);
       const result = WebAuthnActionCreators.editWebAuthnCredential(credential.id, first);
       const nextPromise = result.then(() => {
-        navigation(4335);
-        const obj = {
+        const obj2 = {
           key: "WEBAUTHN_CREDENTIAL_EDIT_SUCCESS_TOAST_KEY",
           content: null,
           icon: null,
@@ -76,16 +74,15 @@ export default function EditCredentialModal(credential) {
           iconColor: "status-positive",
         };
         const intl = credential(1114).intl;
-        obj.content = intl.string(credential(1114).t.IV13mH);
-        obj.icon = navigation(10780);
-        obj.IconComponent = credential(4596).CircleCheckIcon;
-        obj.open(obj);
+        obj2.content = intl.string(credential(1114).t.IV13mH);
+        obj2.icon = navigation(10781);
+        obj2.IconComponent = credential(4596).CircleCheckIcon;
+        navigation(4335).open(obj2);
         closure_1_1.popToTop();
       });
       result
         .then(() => {
-          navigation(4335);
-          const obj = {
+          const obj2 = {
             key: "WEBAUTHN_CREDENTIAL_EDIT_SUCCESS_TOAST_KEY",
             content: null,
             icon: null,
@@ -93,10 +90,10 @@ export default function EditCredentialModal(credential) {
             iconColor: "status-positive",
           };
           const intl = credential(1114).intl;
-          obj.content = intl.string(credential(1114).t.IV13mH);
-          obj.icon = navigation(10780);
-          obj.IconComponent = credential(4596).CircleCheckIcon;
-          obj.open(obj);
+          obj2.content = intl.string(credential(1114).t.IV13mH);
+          obj2.icon = navigation(10781);
+          obj2.IconComponent = credential(4596).CircleCheckIcon;
+          navigation(4335).open(obj2);
           closure_1_1.popToTop();
         })
         .catch((error) => {
@@ -116,11 +113,11 @@ export default function EditCredentialModal(credential) {
   if (!tmp6) {
     tmp13 = "" === value;
   }
-  obj1.disabled = tmp13;
-  obj1.loading = tmp6;
+  obj4.disabled = tmp13;
+  obj4.loading = tmp6;
   const intl2 = tmp2(1114).intl;
-  obj1.text = intl2.string(credential(1114).t["7asiR3"]);
-  items1[2] = closure_5(credential(5056).Button, obj1);
-  obj.children = items1;
-  return closure_6(credential(8716).Form, obj);
+  obj4.text = intl2.string(credential(1114).t["7asiR3"]);
+  items1[2] = closure_5(credential(5056).Button, obj4);
+  obj2.children = items1;
+  return closure_6(credential(8716).Form, obj2);
 }

@@ -1,6 +1,8 @@
 // discord_app/modules/labs/useLabFeature.tsx
 import LabFeatureStore from "LabFeatureStore.tsx";
 
+const require = globalThis.__r;
+
 const require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/labs/useLabFeature.tsx");

@@ -33,7 +33,6 @@ export default function FavoritesGuildCoachmarkIntro(markAsDismissed) {
   );
   const visible = tmp[0];
   _slicedToArray = tmp3;
-  markAsDismissed(visible[6]);
   const fn = function v() {
     return scrollPosition.get() <= 0;
   };
@@ -45,8 +44,8 @@ export default function FavoritesGuildCoachmarkIntro(markAsDismissed) {
       ReanimatedRexport.runOnJS(closure_3)(arg0);
     }
   };
-  let obj = { runOnJS: markAsDismissed(visible[6]).runOnJS, setScrolledToTop: tmp3 };
-  fn2.__closure = obj;
+  let obj = markAsDismissed(visible[6]);
+  fn2.__closure = { runOnJS: markAsDismissed(visible[6]).runOnJS, setScrolledToTop: tmp[1] };
   fn2.__workletHash = 13648062364539;
   fn2.__initData = __initData2;
   const animatedReaction = obj.useAnimatedReaction(fn, fn2);
@@ -85,6 +84,7 @@ export default function FavoritesGuildCoachmarkIntro(markAsDismissed) {
     obj.onButtonPress = callback1;
     return obj;
   }, items2);
+  const obj2 = { runOnJS: markAsDismissed(visible[6]).runOnJS, setScrolledToTop: tmp[1] };
   const coachmark = markAsDismissed(visible[12]).useCoachmark(markAsDismissed.targetRef, memo);
   return null;
 }

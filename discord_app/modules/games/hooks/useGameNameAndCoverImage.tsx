@@ -6,14 +6,13 @@ import size from "../../../../_runtime/metro/00002__.js";
 const result = size.fileFinishedImporting("modules/games/hooks/useGameNameAndCoverImage.tsx");
 
 export default function useGameNameAndCoverImage(arg0, intl, size) {
-  let obj = useGame;
-  const game = obj.useGame(arg0);
+  const game = useGame.useGame(arg0);
   const data = game.data;
   let coverURL;
   if (data != null) {
     coverURL = data.getCoverURL(size);
   }
-  obj = { coverImageUrl: coverURL, gameName: null, isLoading: null };
+  const obj2 = { coverImageUrl: coverURL, gameName: null, isLoading: null };
   let name;
   if (data != null) {
     name = data.name;
@@ -25,7 +24,7 @@ export default function useGameNameAndCoverImage(arg0, intl, size) {
     intl = util.intl;
     name = intl.string(util.t.GIWFlF);
   }
-  obj.gameName = name;
-  obj.isLoading = game.isLoading;
-  return obj;
+  obj2.gameName = name;
+  obj2.isLoading = game.isLoading;
+  return obj2;
 }

@@ -12,8 +12,8 @@ let result = size.fileFinishedImporting("modules/game_profile/AnnouncementMessag
 
 export const toAnnouncementMessages = function toAnnouncementMessages(messages) {
   return messages.map((reactions) => {
-    let obj = found4(found6[5]);
-    const tmp2Result = found5(found6[4])(obj.createMessageRecord(reactions));
+    const tmp2 = found5(found6[4]);
+    const tmp2Result = tmp2(found4(found6[5]).createMessageRecord(reactions));
     if (closure_3(tmp2Result)) {
       const components = tmp2Result.components;
       const found = components.filter((type) => type.type === found4(found6[1]).ComponentType.TEXT_DISPLAY);
@@ -58,15 +58,14 @@ export const toAnnouncementMessages = function toAnnouncementMessages(messages) 
         }
       }
       if (null != media) {
-        let tmp3Result = tmp3(tmp[2]);
-        const unfurledMediaItemType = tmp3Result.getUnfurledMediaItemType(media);
+        const unfurledMediaItemType = tmp3(tmp[2]).getUnfurledMediaItemType(media);
         if ("INVALID" !== unfurledMediaItemType) {
-          obj = {};
+          const obj2 = {};
           const merged = Object.assign(media);
-          obj.type = unfurledMediaItemType;
-          obj = { message: tmp2Result };
-          obj.sourceMetadata = obj;
-          let result = obj;
+          obj2.type = unfurledMediaItemType;
+          const obj3 = { message: tmp2Result };
+          obj2.sourceMetadata = obj3;
+          let result = obj2;
         }
         const index = joined.indexOf("\n");
         let str9 = joined;
@@ -75,20 +74,20 @@ export const toAnnouncementMessages = function toAnnouncementMessages(messages) 
         }
         const match = str9.match(closure_4);
         if (null != match) {
-          const obj1 = { title: match[1].trim(), body: null };
+          const obj4 = { title: match[1].trim(), body: null };
           let str11 = "";
           if (!tmp28) {
             const substr = joined.slice(index + 1);
             str11 = substr.trimStart();
           }
-          obj1.body = str11;
-          let obj2 = obj1;
+          obj4.body = str11;
+          let obj5 = obj4;
         } else {
-          obj2 = { body: joined };
+          obj5 = { body: joined };
         }
         reactions = reactions.reactions;
         let num5;
-        ({ title, body } = obj2);
+        ({ title, body } = obj5);
         if (reactions != null) {
           num5 = reactions.reduce((acc, count) => acc + count.count, 0);
         }
@@ -146,7 +145,7 @@ export const toAnnouncementMessages = function toAnnouncementMessages(messages) 
                 iconProxyURL1 = iconURL1;
               }
               ({ url, color } = first2);
-              const obj3 = {
+              const obj6 = {
                 authorName: name,
                 authorIconUrl: iconProxyURL,
                 providerName: text,
@@ -154,12 +153,12 @@ export const toAnnouncementMessages = function toAnnouncementMessages(messages) 
                 url,
                 color,
               };
-              tmp34 = obj3;
+              tmp34 = obj6;
             }
             tmp32 = tmp34;
           }
         }
-        const obj4 = {
+        const obj7 = {
           id: tmp2Result.id,
           media: result,
           title,
@@ -170,14 +169,14 @@ export const toAnnouncementMessages = function toAnnouncementMessages(messages) 
           embedSource: tmp32,
           poll: tmp2Result.poll,
         };
-        return obj4;
+        return obj7;
       }
     }
     const attachments = tmp2Result.attachments;
     const found2 = attachments.find((content_type) => found4(found6[3]).isImageContentType(content_type.content_type));
     if (null != found2) {
-      tmp3Result = tmp3(tmp[2]);
-      result = tmp3Result.messageAttachmentToMediaItem(found2, tmp2Result);
+      result = tmp3(tmp[2]).messageAttachmentToMediaItem(found2, tmp2Result);
+      const tmp3Result6 = tmp3(tmp[2]);
     } else {
       const attachments1 = tmp2Result.attachments;
       const found3 = attachments1.find((content_type) =>
@@ -185,58 +184,58 @@ export const toAnnouncementMessages = function toAnnouncementMessages(messages) 
       );
       if (null != found3) {
         result = tmp3(tmp[2]).messageAttachmentToMediaItem(found3, tmp2Result);
-        const tmp3Result1 = tmp3(tmp[2]);
+        const tmp3Result7 = tmp3(tmp[2]);
       } else {
-        let embeds = tmp2Result.embeds;
-        found4 = embeds.find((video) => null != video.video && null != video.thumbnail);
+        const embeds1 = tmp2Result.embeds;
+        found4 = embeds1.find((video) => null != video.video && null != video.thumbnail);
         let thumbnail;
         if (found4 != null) {
           thumbnail = found4.thumbnail;
         }
         if (null != thumbnail) {
-          const obj5 = { message: tmp2Result, identifier: null };
-          const obj6 = { type: "embed", embedIndex: null };
+          const obj8 = { message: tmp2Result, identifier: null };
+          const obj9 = { type: "embed", embedIndex: null };
           const embeds3 = tmp2Result.embeds;
-          obj6.embedIndex = embeds3.findIndex((item) => item === found4);
-          obj5.identifier = obj6;
-          result = tmp3(tmp[2]).embedMediaToMediaItem(found4.thumbnail, obj5, "IMAGE");
-          const tmp3Result2 = tmp3(tmp[2]);
+          obj9.embedIndex = embeds3.findIndex((item) => item === found4);
+          obj8.identifier = obj9;
+          result = tmp3(tmp[2]).embedMediaToMediaItem(found4.thumbnail, obj8, "IMAGE");
+          const tmp3Result8 = tmp3(tmp[2]);
         } else {
-          const embeds1 = tmp2Result.embeds;
-          found5 = embeds1.find((image) => null != image.image);
+          const embeds4 = tmp2Result.embeds;
+          found5 = embeds4.find((image) => null != image.image);
           let image;
           if (found5 != null) {
             image = found5.image;
           }
           if (null != image) {
-            const obj7 = { message: tmp2Result, identifier: null };
-            const obj8 = { type: "embed", embedIndex: null };
-            let embeds2 = tmp2Result.embeds;
-            obj8.embedIndex = embeds2.findIndex((item) => item === found5);
-            obj7.identifier = obj8;
-            result = tmp3(tmp[2]).embedMediaToMediaItem(found5.image, obj7, "IMAGE");
-            const tmp3Result3 = tmp3(tmp[2]);
+            const obj10 = { message: tmp2Result, identifier: null };
+            const obj11 = { type: "embed", embedIndex: null };
+            const embeds2 = tmp2Result.embeds;
+            obj11.embedIndex = embeds2.findIndex((item) => item === found5);
+            obj10.identifier = obj11;
+            result = tmp3(tmp[2]).embedMediaToMediaItem(found5.image, obj10, "IMAGE");
+            const tmp3Result9 = tmp3(tmp[2]);
           } else {
-            embeds2 = tmp2Result.embeds;
-            found6 = embeds2.find((thumbnail) => null != thumbnail.thumbnail);
+            const embeds5 = tmp2Result.embeds;
+            found6 = embeds5.find((thumbnail) => null != thumbnail.thumbnail);
             let thumbnail1;
             if (found6 != null) {
               thumbnail1 = found6.thumbnail;
             }
             if (null != thumbnail1) {
-              const obj9 = { message: tmp2Result, identifier: null };
-              const obj10 = { type: "embed", embedIndex: null };
-              embeds = tmp2Result.embeds;
-              obj10.embedIndex = embeds.findIndex((item) => item === found6);
-              obj9.identifier = obj10;
-              result = tmp3(tmp[2]).embedMediaToMediaItem(found6.thumbnail, obj9, "IMAGE");
-              const tmp3Result4 = tmp3(tmp[2]);
+              const obj12 = { message: tmp2Result, identifier: null };
+              const obj13 = { type: "embed", embedIndex: null };
+              const embeds = tmp2Result.embeds;
+              obj13.embedIndex = embeds.findIndex((item) => item === found6);
+              obj12.identifier = obj13;
+              result = tmp3(tmp[2]).embedMediaToMediaItem(found6.thumbnail, obj12, "IMAGE");
+              const tmp3Result10 = tmp3(tmp[2]);
             }
           }
         }
       }
     }
-    const tmp2 = found5(found6[4]);
+    const obj = found4(found6[5]);
   });
 };
 export const getPollExpiryLabel = function getPollExpiryLabel(poll) {
@@ -248,8 +247,8 @@ export const getPollExpiryLabel = function getPollExpiryLabel(poll) {
   return result;
 };
 export const getPosterUrl = function getPosterUrl(proxyUrl, arg1, arg2) {
-  URLUtilsDefault.toURLSafe(proxyUrl);
-  let str = null;
+  const str = URLUtilsDefault.toURLSafe(proxyUrl);
+  let str1 = null;
   if (null != str) {
     const searchParams = str.searchParams;
     searchParams.append("format", "webp");
@@ -261,7 +260,7 @@ export const getPosterUrl = function getPosterUrl(proxyUrl, arg1, arg2) {
       const searchParams3 = str.searchParams;
       searchParams3.append("height", arg2.toString());
     }
-    str = str.toString();
+    str1 = str.toString();
   }
-  return str;
+  return str1;
 };

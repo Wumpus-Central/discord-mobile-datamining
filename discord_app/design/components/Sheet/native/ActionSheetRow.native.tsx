@@ -15,9 +15,9 @@ class ActionSheetRow {
     ({ arrow, icon } = global);
     obj = { value: str, children: null };
     merged = Object.assign(global, Object.assign({ label: 0, variant: 0, arrow: 0, icon: 0 }));
-    obj = { variant: str, label: global.label, arrow, icon };
+    obj1 = { variant: str, label: global.label, arrow, icon };
     merged1 = Object.assign(merged);
-    obj.children = jsx(closure_0(closure_1[3]).TableRow, obj);
+    obj.children = jsx(closure_0(closure_1[3]).TableRow, obj1);
     return jsx(closure_5.Provider, obj);
   }
 }

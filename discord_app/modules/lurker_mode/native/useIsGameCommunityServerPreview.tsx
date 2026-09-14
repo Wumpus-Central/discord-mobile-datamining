@@ -1,6 +1,8 @@
 // discord_app/modules/lurker_mode/native/useIsGameCommunityServerPreview.tsx
 import LurkingStore from "../LurkingStore.tsx";
 
+const require = globalThis.__r;
+
 const require = fn;
 const JoinGuildSources = fn(1074).JoinGuildSources;
 const size = fn(2);

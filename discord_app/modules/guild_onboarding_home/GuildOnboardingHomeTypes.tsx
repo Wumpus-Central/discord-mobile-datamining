@@ -5,7 +5,7 @@ import ChannelStore from "../../stores/ChannelStore.tsx";
 
 require = fn;
 function newMemberActionFromServer(channelId) {
-  let obj = {
+  const obj = {
     channelId: channelId.channel_id,
     actionType: channelId.action_type,
     title: channelId.title,
@@ -15,8 +15,8 @@ function newMemberActionFromServer(channelId) {
   };
   let tmp = null;
   if (null != channelId.emoji) {
-    obj = { id: channelId.emoji.id, name: channelId.emoji.name, animated: channelId.emoji.animated };
-    tmp = obj;
+    const obj2 = { id: channelId.emoji.id, name: channelId.emoji.name, animated: channelId.emoji.animated };
+    tmp = obj2;
   }
   obj.emoji = tmp;
   let icon = channelId.icon;
@@ -27,7 +27,7 @@ function newMemberActionFromServer(channelId) {
   return obj;
 }
 function resourceChannelFromServer(channelId) {
-  let obj = { channelId: channelId.channel_id, title: channelId.title, description: null, emoji: null, icon: null };
+  const obj = { channelId: channelId.channel_id, title: channelId.title, description: null, emoji: null, icon: null };
   let str = channelId.description;
   if (str == null) {
     str = "";
@@ -35,8 +35,8 @@ function resourceChannelFromServer(channelId) {
   obj.description = str;
   let tmp = null;
   if (null != channelId.emoji) {
-    obj = { id: channelId.emoji.id, name: channelId.emoji.name, animated: channelId.emoji.animated };
-    tmp = obj;
+    const obj2 = { id: channelId.emoji.id, name: channelId.emoji.name, animated: channelId.emoji.animated };
+    tmp = obj2;
   }
   obj.emoji = tmp;
   let icon = channelId.icon;
@@ -111,10 +111,9 @@ export const settingsFromServer = function settingsFromServer(body) {
     return null;
   } else {
     ({ welcome_message, new_member_actions, resource_channels } = body);
-    let obj = { welcomeMessage: null, newMemberActions: null, resourceChannels: null, enabled: null };
-    obj = { authorIds: null, message: null };
+    const obj = { welcomeMessage: null, newMemberActions: null, resourceChannels: null, enabled: null };
     ({ author_ids: obj2.authorIds, message: obj2.message } = welcome_message);
-    obj.welcomeMessage = obj;
+    obj.welcomeMessage = { authorIds: null, message: null };
     const found = new_member_actions.filter((channel_id) =>
       GlobalUtils.isNotNullish(ChannelStore.getChannel(channel_id.channel_id)),
     );
@@ -132,7 +131,7 @@ export const settingsToServer = function settingsToServer(guild_id, enabled) {
     return null;
   } else {
     ({ welcomeMessage, newMemberActions, resourceChannels } = enabled);
-    let obj = { guild_id, welcome_message: null, new_member_actions: null, resource_channels: null, enabled: null };
+    let obj2 = { guild_id, welcome_message: null, new_member_actions: null, resource_channels: null, enabled: null };
     let authorIds;
     if (welcomeMessage != null) {
       authorIds = welcomeMessage.authorIds;
@@ -140,7 +139,7 @@ export const settingsToServer = function settingsToServer(guild_id, enabled) {
     if (authorIds == null) {
       authorIds = [];
     }
-    obj = { author_ids: authorIds, message: null };
+    let obj = { author_ids: authorIds, message: null };
     let str;
     if (welcomeMessage != null) {
       str = welcomeMessage.message;
@@ -149,15 +148,15 @@ export const settingsToServer = function settingsToServer(guild_id, enabled) {
       str = "";
     }
     obj.message = str;
-    obj.welcome_message = obj;
+    obj2.welcome_message = obj;
     if (newMemberActions == null) {
       newMemberActions = [];
     }
     const found = newMemberActions.filter((channelId) =>
       GlobalUtils.isNotNullish(ChannelStore.getChannel(channelId.channelId)),
     );
-    obj.new_member_actions = found.map((channelId) => {
-      let obj = {
+    obj2.new_member_actions = found.map((channelId) => {
+      const obj = {
         channel_id: channelId.channelId,
         action_type: channelId.actionType,
         title: channelId.title,
@@ -170,20 +169,20 @@ export const settingsToServer = function settingsToServer(guild_id, enabled) {
       if (emoji != null) {
         id = emoji.id;
       }
-      obj = { id, name: null, animated: null };
+      const obj2 = { id, name: null, animated: null };
       const emoji2 = channelId.emoji;
       let name;
       if (emoji2 != null) {
         name = emoji2.name;
       }
-      obj.name = name;
+      obj2.name = name;
       const emoji3 = channelId.emoji;
       let animated;
       if (emoji3 != null) {
         animated = emoji3.animated;
       }
-      obj.animated = animated;
-      obj.emoji = obj;
+      obj2.animated = animated;
+      obj.emoji = obj2;
       const icon = channelId.icon;
       obj.icon = icon;
       return obj;
@@ -194,8 +193,8 @@ export const settingsToServer = function settingsToServer(guild_id, enabled) {
     const found1 = resourceChannels.filter((channelId) =>
       GlobalUtils.isNotNullish(ChannelStore.getChannel(channelId.channelId)),
     );
-    obj.resource_channels = found1.map((channelId) => {
-      let obj = {
+    obj2.resource_channels = found1.map((channelId) => {
+      const obj = {
         channel_id: channelId.channelId,
         title: channelId.title,
         description: channelId.description,
@@ -207,26 +206,26 @@ export const settingsToServer = function settingsToServer(guild_id, enabled) {
       if (emoji != null) {
         id = emoji.id;
       }
-      obj = { id, name: null, animated: null };
+      const obj2 = { id, name: null, animated: null };
       const emoji2 = channelId.emoji;
       let name;
       if (emoji2 != null) {
         name = emoji2.name;
       }
-      obj.name = name;
+      obj2.name = name;
       const emoji3 = channelId.emoji;
       let animated;
       if (emoji3 != null) {
         animated = emoji3.animated;
       }
-      obj.animated = animated;
-      obj.emoji = obj;
+      obj2.animated = animated;
+      obj.emoji = obj2;
       const icon = channelId.icon;
       obj.icon = icon;
       return obj;
     });
-    obj.enabled = enabled.enabled;
-    return obj;
+    obj2.enabled = enabled.enabled;
+    return obj2;
   }
 };
 export const actionsFromServer = function actionsFromServer(body) {

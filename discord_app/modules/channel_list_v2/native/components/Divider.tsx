@@ -6,15 +6,15 @@ const View = fn(17).View;
 const jsx = fn(21).jsx;
 const createStyles = fn(4636);
 let closure_4 = createStyles.createStyles(() => {
-  let obj = { divider: null };
-  obj = {
-    height: 1,
-    backgroundColor: nativeDefault.colors.BORDER_SUBTLE,
-    marginTop: 8,
-    marginBottom: 8,
-    marginHorizontal: 16,
+  const obj = {
+    divider: {
+      height: 1,
+      backgroundColor: nativeDefault.colors.BORDER_SUBTLE,
+      marginTop: 8,
+      marginBottom: 8,
+      marginHorizontal: 16,
+    },
   };
-  obj.divider = obj;
   return obj;
 });
 const size = fn(2);

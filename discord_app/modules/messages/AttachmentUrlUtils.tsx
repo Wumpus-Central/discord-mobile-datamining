@@ -221,10 +221,10 @@ let closure_13 = async function _refreshAttachmentUrl() {
     body: null,
     rejectWithError: HTTPUtils.rejectWithMigratedError(),
   };
-  const obj1 = { attachment_urls: null };
+  const obj4 = { attachment_urls: null };
   const items = [closure_0];
-  obj1.attachment_urls = items;
-  request.body = obj1;
+  obj4.attachment_urls = items;
+  request.body = obj4;
   await HTTP.post(request);
   return value.body.refreshed_urls[0].refreshed;
 };
@@ -239,8 +239,8 @@ let closure_14 = async function _maybeRefreshAttachmentUrl() {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -253,8 +253,8 @@ let closure_14 = async function _maybeRefreshAttachmentUrl() {
             throw value;
           } else if (arg0 === 2) {
             c4 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
             closure_2 = tmp2;
             closure_130_0 = value;
@@ -262,12 +262,12 @@ let closure_14 = async function _maybeRefreshAttachmentUrl() {
             const toURLSafeResult = URLUtilsDefault.toURLSafe(value);
             if (null == toURLSafeResult) {
               c4 = 3;
-              const obj1 = { value, done: true };
-              return obj1;
+              const obj4 = { value, done: true };
+              return obj4;
             } else if (shouldRefreshAttachmentUrl(toURLSafeResult)) {
               c3 = 1;
               c4 = 1;
-              const obj2 = {
+              const obj5 = {
                 value: (function refreshAttachmentUrl() {
                   const self = this;
                   const apply = closure_1_13.apply;
@@ -280,11 +280,11 @@ let closure_14 = async function _maybeRefreshAttachmentUrl() {
                 })(value),
                 done: false,
               };
-              return obj2;
+              return obj5;
             } else {
               c4 = 3;
-              const obj3 = { value, done: true };
-              return obj3;
+              const obj6 = { value, done: true };
+              return obj6;
             }
           }
         } else if (arg0 === 1) {
@@ -292,8 +292,8 @@ let closure_14 = async function _maybeRefreshAttachmentUrl() {
           throw value;
         } else if (arg0 === 2) {
           c4 = 3;
-          const obj4 = { value, done: true };
-          return obj4;
+          const obj7 = { value, done: true };
+          return obj7;
         } else {
           closure_130_1 = value;
           value = closure_130_1;
@@ -301,7 +301,7 @@ let closure_14 = async function _maybeRefreshAttachmentUrl() {
             value = closure_130_0;
           }
           c4 = 3;
-          obj = { value, done: true };
+          const obj = { value, done: true };
           return obj;
         }
       } catch (tmp12) {

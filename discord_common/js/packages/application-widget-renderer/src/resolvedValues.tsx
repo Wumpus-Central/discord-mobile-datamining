@@ -18,15 +18,16 @@ function resolveFieldValue(image, items, applicationAssets) {
       if (hasItem) {
         if (items.includes(iter.type)) {
           if ("playtime_hours" === image.value) {
-            let obj = { type: iter.type, value: null, presentationType: null };
+            const obj2 = { type: iter.type, value: null, presentationType: null };
             const _Math = Math;
             iter = iter.value;
-            obj.value = Math.floor(60 * iter * 60 * 1000);
-            obj.presentationType = presentation_type;
+            obj2.value = Math.floor(60 * iter * 60 * 1000);
+            obj2.presentationType = presentation_type;
+            let obj3 = obj2;
           }
-          obj = {};
+          obj3 = {};
           const merged = Object.assign(iter);
-          obj.presentationType = presentation_type;
+          obj3.presentationType = presentation_type;
         }
       }
     }
@@ -45,12 +46,12 @@ function resolveFieldValue(image, items, applicationAssets) {
     ) {
       tmp6 = null;
       if (items.includes(obj.STRING)) {
-        const obj1 = {
+        const obj5 = {
           type: tmp7.STRING,
           value: image.value,
           presentationType: ApplicationWidgetFieldPresentationType.ApplicationWidgetFieldPresentationType.TEXT,
         };
-        tmp6 = obj1;
+        tmp6 = obj5;
       }
       tmp7 = obj;
     }

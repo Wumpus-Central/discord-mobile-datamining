@@ -2,6 +2,8 @@
 import AnalyticsUtilsDefault from "../../utils/AnalyticsUtils.tsx";
 import noop from "../../../_runtime/metro/00019__.js";
 
+const require = globalThis.__r;
+
 const require = fn;
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const size = fn(2);
@@ -22,13 +24,12 @@ export default function useCaptchaModalEffects(arg0) {
   });
   const items = [analyticsType];
   const effect = noop.useEffect(() => {
-    let obj = { type: analyticsType };
-    obj.track(AnalyticEvents.OPEN_MODAL, obj);
+    AnalyticsUtilsDefault.track(AnalyticEvents.OPEN_MODAL, { type: analyticsType });
     return () => {
       if (ref.current) {
-        analyticsType(ref[4]);
-        const obj = { type };
-        obj.track(constants.MODAL_DISMISSED, obj);
+        const obj2 = { type };
+        analyticsType(ref[4]).track(constants.MODAL_DISMISSED, obj2);
+        const obj = analyticsType(ref[4]);
       }
     };
   }, items);

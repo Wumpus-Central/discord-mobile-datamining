@@ -9,27 +9,24 @@ const Endpoints = Constants.Endpoints;
 const result = size.fileFinishedImporting("modules/harvester/DataHarvestActionCreators.tsx");
 
 export const getDataHarvestStatus = function getDataHarvestStatus() {
-  let obj = DispatcherDefault;
-  obj.dispatch({ type: "LOAD_DATA_HARVEST_TYPE_START" });
+  DispatcherDefault.dispatch({ type: "LOAD_DATA_HARVEST_TYPE_START" });
   const HTTP = HTTPUtils.HTTP;
-  obj = { url: Endpoints.USER_HARVEST, oldFormErrors: true, rejectWithError: false };
-  value = HTTP.get(obj);
+  value = HTTP.get({ url: Endpoints.USER_HARVEST, oldFormErrors: true, rejectWithError: false });
+  const obj2 = { url: Endpoints.USER_HARVEST, oldFormErrors: true, rejectWithError: false };
   return value
     .then((body) => {
-      const obj = { type: "UPDATE_DATA_HARVEST_TYPE", harvestType: body.body };
-      obj.dispatch(obj);
+      DispatcherDefault.dispatch({ type: "UPDATE_DATA_HARVEST_TYPE", harvestType: body.body });
     })
     .catch((error) => {
-      const obj = { type: "LOAD_DATA_HARVEST_TYPE_FAILURE", error };
-      obj.dispatch(obj);
+      DispatcherDefault.dispatch({ type: "LOAD_DATA_HARVEST_TYPE_FAILURE", error });
     });
 };
 export const requestDataHarvest = function requestDataHarvest(mapped) {
   const harvest = UserSettingsAccountActionCreators.requestHarvest(mapped);
   return harvest.then((body) => {
     if (tmp) {
-      const obj = { type: "UPDATE_DATA_HARVEST_TYPE", harvestType: body.body };
-      obj.dispatch(obj);
+      const obj2 = { type: "UPDATE_DATA_HARVEST_TYPE", harvestType: body.body };
+      DispatcherDefault.dispatch(obj2);
     }
     return body;
   });

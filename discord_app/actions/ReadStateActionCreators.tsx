@@ -15,7 +15,7 @@ function ack(channelId, location, arg2, arg3) {
   if (arg3 === undefined) {
     flag2 = false;
   }
-  const obj = {
+  DispatcherDefault.dispatch({
     type: "CHANNEL_ACK",
     channelId,
     messageId,
@@ -23,8 +23,7 @@ function ack(channelId, location, arg2, arg3) {
     force: flag2,
     context: CURRENT_APP_CONTEXT,
     location,
-  };
-  obj.dispatch(obj);
+  });
 }
 function ackCategory(id, location, arg2, arg3) {
   let flag = arg2;
@@ -80,20 +79,21 @@ export const ackChannel = function ackChannel(channel, location) {
     const id = channel.id;
     if (channel.isForumLikeChannel()) {
       const _Date = Date;
-      const tmpResult = DispatcherDefault;
-      let obj = {
+      const tmpResult = SnowflakeUtilsDefault;
+      const fromTimestampResult = SnowflakeUtilsDefault.fromTimestamp(Date.now());
+      const obj = {
         type: "CHANNEL_ACK",
         channelId: id,
-        messageId: tmpResult.fromTimestamp(Date.now()),
+        messageId: fromTimestampResult,
         immediate: true,
         force: true,
         context: CURRENT_APP_CONTEXT,
         location,
       };
-      tmpResult.dispatch(obj);
-      const fromTimestampResult = tmpResult.fromTimestamp(Date.now());
+      DispatcherDefault.dispatch(obj);
+      const tmpResult3 = DispatcherDefault;
     } else {
-      obj = {
+      const obj2 = {
         type: "CHANNEL_ACK",
         channelId: id,
         messageId: "y",
@@ -102,38 +102,37 @@ export const ackChannel = function ackChannel(channel, location) {
         context: CURRENT_APP_CONTEXT,
         location,
       };
-      DispatcherDefault.dispatch(obj);
-      const tmpResult1 = DispatcherDefault;
+      DispatcherDefault.dispatch(obj2);
+      const tmpResult4 = DispatcherDefault;
     }
   }
 };
 export const bulkAck = function bulkAck(mapped, onFinished) {
-  const obj = { type: "BULK_ACK", channels: mapped, context: CURRENT_APP_CONTEXT, onFinished };
-  obj.dispatch(obj);
+  DispatcherDefault.dispatch({ type: "BULK_ACK", channels: mapped, context: CURRENT_APP_CONTEXT, onFinished });
 };
 export const localAck = function localAck(channelId) {
-  const obj = { type: "CHANNEL_LOCAL_ACK", channelId };
-  obj.dispatch(obj);
+  DispatcherDefault.dispatch({ type: "CHANNEL_LOCAL_ACK", channelId });
 };
 export const enableAutomaticAck = function enableAutomaticAck(channelId, windowId) {
-  const obj = { type: "ENABLE_AUTOMATIC_ACK", channelId, windowId };
-  obj.dispatch(obj);
+  DispatcherDefault.dispatch({ type: "ENABLE_AUTOMATIC_ACK", channelId, windowId });
 };
 export const registerVisibleInlineChannel = function registerVisibleInlineChannel(channelId, windowId) {
-  const obj = { type: "REGISTER_VISIBLE_INLINE_CHANNEL", channelId, windowId };
-  obj.dispatch(obj);
+  DispatcherDefault.dispatch({ type: "REGISTER_VISIBLE_INLINE_CHANNEL", channelId, windowId });
 };
 export const unregisterVisibleInlineChannel = function unregisterVisibleInlineChannel(channelId, windowId) {
-  const obj = { type: "UNREGISTER_VISIBLE_INLINE_CHANNEL", channelId, windowId };
-  obj.dispatch(obj);
+  DispatcherDefault.dispatch({ type: "UNREGISTER_VISIBLE_INLINE_CHANNEL", channelId, windowId });
 };
 export const disableAutomaticAck = function disableAutomaticAck(channelId, windowId) {
-  const obj = { type: "DISABLE_AUTOMATIC_ACK", channelId, windowId };
-  obj.dispatch(obj);
+  DispatcherDefault.dispatch({ type: "DISABLE_AUTOMATIC_ACK", channelId, windowId });
 };
 export const ackGuildFeature = function ackGuildFeature(guildId, GUILD_EVENT, tmp12Result) {
-  const obj = { type: "GUILD_FEATURE_ACK", id: guildId, ackType: GUILD_EVENT, ackedId: tmp12Result, local: false };
-  obj.dispatch(obj);
+  DispatcherDefault.dispatch({
+    type: "GUILD_FEATURE_ACK",
+    id: guildId,
+    ackType: GUILD_EVENT,
+    ackedId: tmp12Result,
+    local: false,
+  });
 };
 export const ackUserFeature = function ackUserFeature(NOTIFICATION_CENTER, ackedId) {
   const currentUser = UserStore.getCurrentUser();
@@ -142,11 +141,10 @@ export const ackUserFeature = function ackUserFeature(NOTIFICATION_CENTER, acked
     id = currentUser.id;
   }
   if (null != id) {
-    const obj = { type: "USER_NON_CHANNEL_ACK", ackType: NOTIFICATION_CENTER, ackedId, local: false };
-    obj.dispatch(obj);
+    const obj2 = { type: "USER_NON_CHANNEL_ACK", ackType: NOTIFICATION_CENTER, ackedId, local: false };
+    DispatcherDefault.dispatch(obj2);
   }
 };
 export const clearOldestUnreadMessageId = function clearOldestUnreadMessageId(current) {
-  const obj = { type: "CLEAR_OLDEST_UNREAD_MESSAGE", channelId: current };
-  obj.dispatch(obj);
+  DispatcherDefault.dispatch({ type: "CLEAR_OLDEST_UNREAD_MESSAGE", channelId: current });
 };

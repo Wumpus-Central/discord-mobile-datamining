@@ -62,9 +62,9 @@ function updateFriendAnniversaries() {
                   let obj = FriendAnniversaryUtils;
                   if (obj.isFriendAnniversary(date)) {
                     let arr = closure_11.push(tmp17);
-                    obj = { friendsSince: null };
-                    obj.friendsSince = tmp30;
-                    closure_14[tmp17] = obj;
+                    let obj2 = { friendsSince: null };
+                    obj2.friendsSince = tmp30;
+                    closure_14[tmp17] = obj2;
                   }
                 }
               }

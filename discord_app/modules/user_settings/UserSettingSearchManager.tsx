@@ -34,6 +34,7 @@ class SettingSearchManager {
       });
       const preprocessed = obj.preprocessed;
       const items2 = [tmp, { normalizedSearchTerms: items, normalizedTokens: items1 }];
+      preprocessed.push(items2);
     });
     return obj;
   }
@@ -106,8 +107,8 @@ prototype["getScoredSearchResults"] = function getScoredSearchResults(str) {
           });
         }
         if (score > 0) {
-          obj = { setting: tmp, score };
-          arr = items.push(obj);
+          const obj2 = { setting: tmp, score };
+          items.push(obj2);
         }
       });
       const cacheScored2 = self.cacheScored;

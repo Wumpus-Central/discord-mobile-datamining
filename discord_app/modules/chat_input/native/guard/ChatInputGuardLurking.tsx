@@ -10,7 +10,7 @@ import LurkingStore from "../../../lurker_mode/LurkingStore.tsx";
 import ChannelStore from "../../../../stores/ChannelStore.tsx";
 
 require = fn;
-const TextAreaCta = fn(12091).TextAreaCta;
+const TextAreaCta = fn(12092).TextAreaCta;
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_8, JoinGuildSources: closure_9 } = Constants);
 const jsx = fn(21).jsx;
@@ -20,10 +20,9 @@ let result = size.fileFinishedImporting("modules/chat_input/native/guard/ChatInp
 export default noop.memo(function ChatInputGuardLurking(channel) {
   channel = channel.channel;
   let guildId = channel.getGuildId();
-  let obj = channel(504);
   const items = [LurkingStore];
   const items1 = [guildId];
-  const stateFromStoresObject = obj.useStateFromStoresObject(
+  const stateFromStoresObject = channel(504).useStateFromStoresObject(
     items,
     () => {
       let isLurkingResult = null != guildId;
@@ -43,8 +42,8 @@ export default noop.memo(function ChatInputGuardLurking(channel) {
   const items3 = [guildId];
   const callback1 = noop.useCallback(() => {
     if (null != guildId) {
-      const obj = { cta_type: TextAreaCta.FOLLOW_ANNOUNCEMENT };
-      obj.trackWithMetadata(constants.TEXT_AREA_CTA_CLICKED, obj);
+      const obj2 = { cta_type: TextAreaCta.FOLLOW_ANNOUNCEMENT };
+      AppAnalyticsUtilsDefault.trackWithMetadata(constants.TEXT_AREA_CTA_CLICKED, obj2);
       const result = showChannelFollowingActionSheet.showChannelFollowingActionSheet(channel.id, tmp);
     }
   }, items2);
@@ -66,10 +65,10 @@ export default noop.memo(function ChatInputGuardLurking(channel) {
         }
       }
       const result1 = GuildDiscoveryUtilsAll.trackGuildJoinClicked(tmp);
-      let obj = { cta_type: TextAreaCta.JOIN_GUILD };
+      const obj = { cta_type: TextAreaCta.JOIN_GUILD };
       AppAnalyticsUtilsDefault.trackWithMetadata(constants.TEXT_AREA_CTA_CLICKED, obj);
-      obj = { source: constants2.CHAT_INPUT_BLOCKER };
-      GuildActionCreatorsDefault.joinGuild(tmp, obj);
+      const obj5 = { source: constants2.CHAT_INPUT_BLOCKER };
+      GuildActionCreatorsDefault.joinGuild(tmp, obj5);
     }
   }, items3);
   let type;
@@ -77,7 +76,7 @@ export default noop.memo(function ChatInputGuardLurking(channel) {
     type = lurkingSource.type;
   }
   if (type === constants2.DIRECTORY_ENTRY) {
-    obj = {
+    let obj2 = {
       type: "button-action",
       message: null,
       buttonSecondaryText: null,
@@ -86,14 +85,14 @@ export default noop.memo(function ChatInputGuardLurking(channel) {
       buttonPrimaryOnPress: null,
     };
     const intl6 = tmp2(1114).intl;
-    obj.message = intl6.string(tmp2(1114).t.G42YmG);
+    obj2.message = intl6.string(tmp2(1114).t.G42YmG);
     const intl7 = tmp2(1114).intl;
-    obj.buttonSecondaryText = intl7.string(tmp2(1114).t.GlKb5i);
-    obj.buttonSecondaryOnPress = callback;
+    obj2.buttonSecondaryText = intl7.string(tmp2(1114).t.GlKb5i);
+    obj2.buttonSecondaryOnPress = callback;
     const intl8 = tmp2(1114).intl;
-    obj.buttonPrimaryText = intl8.string(tmp2(1114).t.RLch70);
-    obj.buttonPrimaryOnPress = callback2;
-    let tmp15Result = jsx(guildId(12577), {
+    obj2.buttonPrimaryText = intl8.string(tmp2(1114).t.RLch70);
+    obj2.buttonPrimaryOnPress = callback2;
+    let tmp15Result = jsx(guildId(12578), {
       type: "button-action",
       message: null,
       buttonSecondaryText: null,
@@ -101,10 +100,10 @@ export default noop.memo(function ChatInputGuardLurking(channel) {
       buttonPrimaryText: null,
       buttonPrimaryOnPress: null,
     });
-    const tmp14 = guildId(12577);
+    const tmp14 = guildId(12578);
   } else {
     if (channel.isReadonlyAnnouncementsChannel) {
-      obj = {
+      let obj3 = {
         type: "button-action",
         message: null,
         buttonSecondaryText: null,
@@ -113,32 +112,32 @@ export default noop.memo(function ChatInputGuardLurking(channel) {
         buttonPrimaryOnPress: null,
       };
       const intl3 = tmp2(1114).intl;
-      obj.message = intl3.string(tmp2(1114).t.Hl0Mqh);
+      obj3.message = intl3.string(tmp2(1114).t.Hl0Mqh);
       let stringResult;
       if (isLurking) {
         const intl4 = tmp2(1114).intl;
         stringResult = intl4.string(tmp2(1114).t.VJlc0S);
       }
-      obj.buttonSecondaryText = stringResult;
+      obj3.buttonSecondaryText = stringResult;
       let tmp10;
       if (isLurking) {
         tmp10 = callback2;
       }
-      obj.buttonSecondaryOnPress = tmp10;
+      obj3.buttonSecondaryOnPress = tmp10;
       const intl5 = tmp2(1114).intl;
-      obj.buttonPrimaryText = intl5.string(tmp2(1114).t["3aOv+h"]);
-      obj.buttonPrimaryOnPress = callback1;
-      let obj1 = obj;
+      obj3.buttonPrimaryText = intl5.string(tmp2(1114).t["3aOv+h"]);
+      obj3.buttonPrimaryOnPress = callback1;
+      let obj4 = obj3;
     } else {
-      obj1 = { type: "button-action", message: null, buttonPrimaryText: null, buttonPrimaryOnPress: null };
+      obj4 = { type: "button-action", message: null, buttonPrimaryText: null, buttonPrimaryOnPress: null };
       const intl = tmp2(1114).intl;
-      obj1.message = intl.string(tmp2(1114).t.G42YmG);
+      obj4.message = intl.string(tmp2(1114).t.G42YmG);
       const intl2 = tmp2(1114).intl;
-      obj1.buttonPrimaryText = intl2.string(tmp2(1114).t.RLch70);
-      obj1.buttonPrimaryOnPress = callback2;
+      obj4.buttonPrimaryText = intl2.string(tmp2(1114).t.RLch70);
+      obj4.buttonPrimaryOnPress = callback2;
     }
-    tmp15Result = jsx(guildId(12577), obj1);
-    const tmp17 = guildId(12577);
+    tmp15Result = jsx(guildId(12578), obj4);
+    const tmp17 = guildId(12578);
   }
   return tmp15Result;
 });

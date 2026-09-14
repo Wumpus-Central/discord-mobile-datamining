@@ -11,29 +11,30 @@ import size from "../../../../../../_runtime/metro/00002__.js";
 const SeparatorAction = RowGeneratorConstants.SeparatorAction;
 const UNSAFE_Colors = Constants.UNSAFE_Colors;
 let closure_5 = apply.memoize((arg0) => {
-  let obj = shared;
   let str = "#DBE0E4";
   if (obj.isThemeDark(arg0)) {
     str = nativeDefault.unsafe_rawColors.PRIMARY_700;
   }
-  let tmpResult = shared;
+  obj = shared;
   let str2 = "#FAFAFA";
   if (tmpResult.isThemeDark(arg0)) {
     str2 = nativeDefault.unsafe_rawColors.PRIMARY_630;
   }
   tmpResult = shared;
-  if (tmpResult.isThemeDark(arg0)) {
+  if (tmpResult6.isThemeDark(arg0)) {
     let GREY1 = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.PRIMARY_300, 0.6);
-    const tmpResult1 = ColorUtils;
+    const tmpResult7 = ColorUtils;
   } else {
     GREY1 = UNSAFE_Colors.GREY1;
   }
-  obj = { borderColor: RowGeneratorStyleSheet.processColorOrThrow(str), backgroundColor: null, color: null };
-  const tmpResult2 = RowGeneratorStyleSheet;
-  obj.backgroundColor = RowGeneratorStyleSheet.processColorOrThrow(str2);
-  const tmpResult3 = RowGeneratorStyleSheet;
-  obj.color = RowGeneratorStyleSheet.processColorOrThrow(GREY1);
-  return obj;
+  const obj2 = { borderColor: null, backgroundColor: null, color: null };
+  tmpResult6 = shared;
+  obj2.borderColor = RowGeneratorStyleSheet.processColorOrThrow(str);
+  const tmpResult8 = RowGeneratorStyleSheet;
+  obj2.backgroundColor = RowGeneratorStyleSheet.processColorOrThrow(str2);
+  const tmpResult9 = RowGeneratorStyleSheet;
+  obj2.color = RowGeneratorStyleSheet.processColorOrThrow(GREY1);
+  return obj2;
 });
 const result = size.fileFinishedImporting("modules/messages/native/renderer/rows/BlockedGroup.tsx");
 
@@ -45,16 +46,16 @@ export const generateBlockedGroupRowData = function generateBlockedGroupRowData(
   if (!canUncollapse) {
     canUncollapse = canUncollapse.canUncollapse;
   }
-  let obj = {};
+  const obj = {};
   const merged = Object.assign(closure_5(theme));
   obj.type = rowType;
   obj.content = content.map((item) => _self.generate(item));
-  obj = { type: SeparatorAction.TOGGLE_BLOCKED_MESSAGES, context: null };
+  const obj2 = { type: SeparatorAction.TOGGLE_BLOCKED_MESSAGES, context: null };
   if (context == null) {
     context = message.id;
   }
-  obj.context = context;
-  obj.button = { action: obj };
+  obj2.context = context;
+  obj.button = { action: obj2 };
   obj.changeType = changeType;
   obj.text = text;
   obj.revealed = revealed;

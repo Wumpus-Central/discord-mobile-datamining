@@ -2,7 +2,7 @@
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../Dispatcher.tsx";
 import FingerprintUtils from "../../../discord_common/js/packages/fingerprint-utils/FingerprintUtils.tsx";
-import v1 from "../../../_runtime/01256_v1.js";
+import v1 from "../../../_runtime/01254_v1.js";
 import AuthenticationStore from "../../stores/AuthenticationStore.tsx";
 import DeveloperExperimentStore from "../../stores/DeveloperExperimentStore.tsx";
 

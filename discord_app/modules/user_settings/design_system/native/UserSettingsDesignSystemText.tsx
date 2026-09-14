@@ -17,30 +17,26 @@ const result = size.fileFinishedImporting(
 );
 
 export default function UserSettingsDesignSystemText() {
-  let obj = { children: null };
-  const token = obj.useToken(nativeDefault.modules.mobile.TABLE_ROW_PADDING);
-  obj = { spacing: nativeDefault.space.PX_24, style: { paddingHorizontal: token }, children: null };
-  const obj1 = { title: "Text Variants", hasIcons: false, children: null };
+  let obj2 = { children: null };
+  const token = useToken.useToken(nativeDefault.modules.mobile.TABLE_ROW_PADDING);
+  const obj3 = { spacing: nativeDefault.space.PX_24, style: { paddingHorizontal: token }, children: null };
+  const obj4 = { title: "Text Variants", hasIcons: false, children: null };
   const TEXT_VARIANT = TextVariants.TEXT_VARIANT;
-  obj1.children = TEXT_VARIANT.map((variant) => {
+  obj4.children = TEXT_VARIANT.map((variant) => {
     let tmp = null;
     if ("code" !== variant) {
-      let obj = { label: null };
-      obj = { variant, children: variant };
+      const obj = { label: null };
+      const obj2 = { variant, children: variant };
       obj.label = jsx(Text_Text.Text, { variant, children: variant }, variant);
-      tmp = jsx(TableRow.TableRow, { variant, children: variant }, variant);
+      tmp = jsx(TableRow.TableRow, { label: null }, variant);
     }
     return tmp;
   });
-  obj.children = jsx(TableRowGroup.TableRowGroup, { title: "Text Variants", hasIcons: false, children: null });
-  obj.children = jsx(Stack_Stack.Stack, {
+  obj3.children = jsx(TableRowGroup.TableRowGroup, { title: "Text Variants", hasIcons: false, children: null });
+  obj2.children = jsx(Stack_Stack.Stack, {
     spacing: nativeDefault.space.PX_24,
     style: { paddingHorizontal: token },
     children: null,
   });
-  return (
-    <ScrollView spacing={nativeDefault.space.PX_24} style={{ paddingHorizontal: token }}>
-      {null}
-    </ScrollView>
-  );
+  return <ScrollView>{null}</ScrollView>;
 }

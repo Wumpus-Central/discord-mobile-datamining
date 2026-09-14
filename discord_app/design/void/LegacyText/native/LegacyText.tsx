@@ -9,18 +9,19 @@ const createStyles = fn(4636);
 let closure_4 = createStyles.createStyles({
   text: { fontFamily: fn(1074).Fonts.PRIMARY_MEDIUM, includeFontPadding: false },
 });
-let obj = { text: { fontFamily: fn(1074).Fonts.PRIMARY_MEDIUM, includeFontPadding: false } };
+const obj = { text: { fontFamily: fn(1074).Fonts.PRIMARY_MEDIUM, includeFontPadding: false } };
 const size = fn(2);
 const result = size.fileFinishedImporting("design/void/LegacyText/native/LegacyText.tsx");
 
 export default noop.forwardRef((arg0, ref) => {
   ({ style, children } = arg0);
   const merged = Object.assign(arg0, Object.assign({ style: 0, children: 0 }));
-  const obj = { ref };
-  const legacyTextMigrationHighlight = obj.useLegacyTextMigrationHighlight();
+  const tmp2 = closure_4();
+  const obj2 = { ref };
+  const legacyTextMigrationHighlight = useLegacyTextMigrationHighlight.useLegacyTextMigrationHighlight();
   const merged1 = Object.assign(merged);
-  const items = [closure_4().text, style, legacyTextMigrationHighlight];
-  obj.style = items;
-  obj.children = children;
+  const items = [tmp2.text, style, legacyTextMigrationHighlight];
+  obj2.style = items;
+  obj2.children = children;
   return <Text ref={ref} />;
 });

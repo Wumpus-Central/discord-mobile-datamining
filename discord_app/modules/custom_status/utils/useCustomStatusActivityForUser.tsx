@@ -2,6 +2,8 @@
 import AuthenticationStore from "../../../stores/AuthenticationStore.tsx";
 import PresenceStore from "../../../stores/PresenceStore.tsx";
 
+const require = globalThis.__r;
+
 const require = fn;
 const ActivityTypes = fn(1074).ActivityTypes;
 const size = fn(2);

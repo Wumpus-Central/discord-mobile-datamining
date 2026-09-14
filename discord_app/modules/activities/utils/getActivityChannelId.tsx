@@ -22,11 +22,11 @@ export default function getActivityChannelId(userId) {
         session_id1 = activity.session_id;
       }
       const voiceStateForSession = VoiceStateStore.getVoiceStateForSession(userId.userId, session_id1);
-      channelId = undefined;
+      let channelId1;
       if (voiceStateForSession != null) {
-        channelId = voiceStateForSession.channelId;
+        channelId1 = voiceStateForSession.channelId;
       }
-      tmp3 = channelId;
+      tmp3 = channelId1;
     } else {
       tmp3 = channelId;
     }

@@ -4,7 +4,7 @@ import discord_common_AnalyticsUtils from "../../../discord_common/js/packages/a
 import size from "../../../_runtime/metro/00002__.js";
 
 const AnalyticsSections = Constants.AnalyticsSections;
-let obj = {
+const obj = {
   SETTINGS: "SETTINGS",
   ACCOUNT_STANDING: "ACCOUNT_STANDING",
   GUILD_SETTINGS: "GUILD_SETTINGS",
@@ -14,15 +14,7 @@ let obj = {
 };
 const items = [, ,];
 ({ SETTINGS: arr[0], ACCOUNT_STANDING: arr[1], ENCRYPTION: arr[2] } = obj);
-obj = {
-  SPEED_BUMP: AnalyticsSections.APPEAL_INGESTION_SPEED_BUMP,
-  COLLECT_SIGNAL: AnalyticsSections.APPEAL_INGESTION_COLLECT_SIGNAL,
-  CONFIRM_SUBMISSION: AnalyticsSections.APPEAL_INGESTION_CONFIRM_SUBMISSION,
-  REQUEST_SENT: AnalyticsSections.APPEAL_INGESTION_REQUEST_SENT,
-  THANKS: AnalyticsSections.APPEAL_INGESTION_THANKS,
-  SPAM: AnalyticsSections.APPEAL_INGESTION_SPAM,
-};
-obj = {
+const obj3 = {
   DIDNT_VIOLATE_POLICY: 0,
   [0]: "DIDNT_VIOLATE_POLICY",
   TOO_STRICT_UNFAIR: 1,
@@ -38,11 +30,18 @@ const items1 = [, , ,];
   TOO_STRICT_UNFAIR: arr2[1],
   DONT_AGREE_PENALTY: arr2[2],
   SOMETHING_ELSE: arr2[3],
-} = obj);
-const obj1 = { impression_group: null };
-const frozen = Object.freeze(obj);
-obj1.impression_group = discord_common_AnalyticsUtils.ImpressionGroups.APPEAL_INGESTION;
-const obj2 = {
+} = obj3);
+const obj4 = { impression_group: null };
+const frozen = Object.freeze({
+  SPEED_BUMP: AnalyticsSections.APPEAL_INGESTION_SPEED_BUMP,
+  COLLECT_SIGNAL: AnalyticsSections.APPEAL_INGESTION_COLLECT_SIGNAL,
+  CONFIRM_SUBMISSION: AnalyticsSections.APPEAL_INGESTION_CONFIRM_SUBMISSION,
+  REQUEST_SENT: AnalyticsSections.APPEAL_INGESTION_REQUEST_SENT,
+  THANKS: AnalyticsSections.APPEAL_INGESTION_THANKS,
+  SPAM: AnalyticsSections.APPEAL_INGESTION_SPAM,
+});
+obj4.impression_group = discord_common_AnalyticsUtils.ImpressionGroups.APPEAL_INGESTION;
+const obj5 = {
   SPEED_BUMP: "speed-bump",
   COLLECT_SIGNAL: "collect-signal",
   CONFIRM_SUBMISSION: "confirm-submission",
@@ -117,20 +116,20 @@ export const SafetyHubAnalyticsActionSource = {
   [2]: "AppealIngestion",
 };
 export const AppealIngestionSections = frozen;
-export const AppealIngestionSignal = obj;
+export const AppealIngestionSignal = obj3;
 export const AppealIngestionSignalOrder = items1;
 export const DEFAULT_MEDIA_MAX_WIDTH = 372;
 export const DEFAULT_MEDIA_MAX_HEIGHT = 279;
 export const VIDEO_PLACEHOLDER_WIDTH = 250;
 export const VIDEO_PLACEHOLDER_HEIGHT = 250;
 export const VIDEO_PLACEHOLDER_FILENAME = "video.png";
-export const APPEAL_INGESTION_IMPRESSION_PROPERTIES = obj1;
-export const AppealIngestionSlideTypes = obj2;
+export const APPEAL_INGESTION_IMPRESSION_PROPERTIES = obj4;
+export const AppealIngestionSlideTypes = obj5;
 export const AppealIngestionSlidesOrder = {
-  [obj2.SPEED_BUMP]: { next: obj2.COLLECT_SIGNAL, prev: null },
-  [obj2.COLLECT_SIGNAL]: { next: obj2.CONFIRM_SUBMISSION, prev: obj2.SPEED_BUMP },
-  [obj2.CONFIRM_SUBMISSION]: { next: obj2.REQUEST_SENT, prev: obj2.COLLECT_SIGNAL },
-  [obj2.REQUEST_SENT]: { next: null, prev: null },
+  [obj5.SPEED_BUMP]: { next: obj5.COLLECT_SIGNAL, prev: null },
+  [obj5.COLLECT_SIGNAL]: { next: obj5.CONFIRM_SUBMISSION, prev: obj5.SPEED_BUMP },
+  [obj5.CONFIRM_SUBMISSION]: { next: obj5.REQUEST_SENT, prev: obj5.COLLECT_SIGNAL },
+  [obj5.REQUEST_SENT]: { next: null, prev: null },
 };
 export const ViolationType = {
   USER: 1,

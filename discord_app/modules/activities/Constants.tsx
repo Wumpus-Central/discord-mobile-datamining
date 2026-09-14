@@ -18,16 +18,16 @@ const items = [
   "1227719606223765687",
 ];
 const items1 = ["1247266306231898122", "1257458870390099989", "1276239071764680926"];
-let obj = { UNLOCKED: 1, [1]: "UNLOCKED", PORTRAIT: 2, [2]: "PORTRAIT", LANDSCAPE: 3, [3]: "LANDSCAPE" };
+const obj = { UNLOCKED: 1, [1]: "UNLOCKED", PORTRAIT: 2, [2]: "PORTRAIT", LANDSCAPE: 3, [3]: "LANDSCAPE" };
 const items2 = ["755600276941176913", "880218832743055411", "1050941315912835122", "880218394199220334"];
-obj = {
+const obj2 = {
   label_type: Server.EmbeddedActivityLabelTypes.NONE,
   release_phase: "",
   label_from: null,
   label_until: null,
   omit_badge_from_surfaces: [],
 };
-obj = {
+const obj3 = {
   application_id: "",
   requires_age_gate: false,
   legacy_responsive_aspect_ratio: false,
@@ -41,14 +41,14 @@ obj = {
   supported_locales: null,
 };
 const items3 = [Server.EmbeddedActivitySupportedPlatforms.WEB];
-obj.supported_platforms = items3;
-obj.client_platform_config = {
-  [Server.EmbeddedActivitySupportedPlatforms.WEB]: obj,
-  [Server.EmbeddedActivitySupportedPlatforms.IOS]: obj,
-  [Server.EmbeddedActivitySupportedPlatforms.ANDROID]: obj,
+obj3.supported_platforms = items3;
+obj3.client_platform_config = {
+  [Server.EmbeddedActivitySupportedPlatforms.WEB]: obj2,
+  [Server.EmbeddedActivitySupportedPlatforms.IOS]: obj2,
+  [Server.EmbeddedActivitySupportedPlatforms.ANDROID]: obj2,
 };
-obj.blocked_locales = [];
-obj.supported_locales = [];
+obj3.blocked_locales = [];
+obj3.supported_locales = [];
 const items4 = [, , ,];
 ({ GUILD_TEXT: arr5[0], DM: arr5[1], GROUP_DM: arr5[2], GUILD_SPACE: arr5[3] } = ChannelTypes);
 const items5 = [];
@@ -128,7 +128,7 @@ export const OrientationLockState = obj;
 export const APPLICATIONS_WITH_ALLOWED_POPUPS = new Set(items2);
 export const ActivityScreenOrientation = { PORTRAIT: 0, [0]: "PORTRAIT", LANDSCAPE: 1, [1]: "LANDSCAPE" };
 export const ActivityLayoutMode = { FOCUSED: 0, [0]: "FOCUSED", PIP: 1, [1]: "PIP", GRID: 2, [2]: "GRID" };
-export const DEFAULT_EMBEDDED_ACTIVITY_CONFIG = obj;
+export const DEFAULT_EMBEDDED_ACTIVITY_CONFIG = obj3;
 export const SUPPORTED_ACTIVITY_IN_TEXT_CHANNEL_TYPES = items4;
 export const SUPPORTED_ACTIVITIES_CHANNEL_TYPES = items5;
 export function getAppIntentScheme(arg0) {

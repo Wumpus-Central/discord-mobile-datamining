@@ -90,8 +90,8 @@ function handlePresenceUpdates() {
       let tmp8 = nextResult;
       let tmp9 = detectMatchingActivityForEntries;
       if (set.size > 0) {
-        let entries = tmp8.entries;
-        entries = entries.filter((content) => {
+        let entries1 = tmp8.entries;
+        let entries = entries1.filter((content) => {
           content = content.content;
           return !set.has("" + content.author_id + ":" + content.id);
         });

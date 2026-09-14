@@ -20,7 +20,7 @@ export default function useEmbeddedActivityBackground(applicationId) {
   _slicedToArray = undefined;
   noop = undefined;
   ref = undefined;
-  [tmp2, c2] = _slicedToArray(noop.useState(null), 2);
+  [tmp2, c2] = noop.useState(null);
   const tmp3 = _slicedToArray(noop.useState(true), 2);
   noop = tmp3[1];
   const tmp = _slicedToArray(noop.useState(null), 2);

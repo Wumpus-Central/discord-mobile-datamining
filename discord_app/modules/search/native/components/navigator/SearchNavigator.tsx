@@ -8,24 +8,22 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 const require = fn;
 const View = fn(17).View;
 let closure_5 = fn(7981).SearchEntrypointAnalyticsLocations;
-const SearchNavigatorScreens = fn(16750).SearchNavigatorScreens;
+const SearchNavigatorScreens = fn(16752).SearchNavigatorScreens;
 const SearchTypes = fn(1074).SearchTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const createStyles = fn(4636);
-let obj = { container: null };
-obj = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
-obj.container = obj;
+let obj = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST } };
 let closure_10 = createStyles.createStyles(obj);
 const NativeStackNavigator = fn(8017);
 let closure_11 = NativeStackNavigator.createNativeStackNavigator();
+let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/search/native/components/navigator/SearchNavigator.tsx");
 
 export default noop.memo((route) => {
   const searchContext = route.route.params.searchContext;
-  let obj = searchContext(7103);
-  const accessibilityNativeStackOptions = obj.useAccessibilityNativeStackOptions();
+  const accessibilityNativeStackOptions = searchContext(7103).useAccessibilityNativeStackOptions();
   const items = [searchContext];
   const effect = noop.useEffect(() => {
     if (searchContext.type === SearchTypes.GUILD) {
@@ -35,24 +33,24 @@ export default noop.memo((route) => {
     }
     search_tracking_TrackingDefault.trackSearchOpened({ searchContext, searchLocation: DM_LIST });
     return () => {
-      const obj = { searchContext };
-      obj.trackSearchClosed(obj);
+      search_tracking_TrackingDefault.trackSearchClosed({ searchContext });
     };
   }, items);
+  let obj = searchContext(7103);
   const rect = useSafeAreaInsetsDefault();
-  obj = { style: null, children: null };
+  const obj2 = { style: null, children: null };
   const items1 = [closure_10().container, { paddingLeft: rect.left, paddingRight: rect.right }];
-  obj.style = items1;
-  obj = { id: "search-navigator", screenOptions: null, children: null };
+  obj2.style = items1;
+  const obj3 = { id: "search-navigator", screenOptions: null, children: null };
   const merged = Object.assign(accessibilityNativeStackOptions);
-  obj.screenOptions = {};
+  obj3.screenOptions = {};
   const items2 = [
     closure_8(closure_11.Screen, {
       initialParams: { searchContext },
       name: SearchNavigatorScreens.SEARCH_TABS,
       options: { headerShown: false, fullScreenGestureEnabled: true },
       getComponent() {
-        return searchContext(16978).default;
+        return searchContext(16980).default;
       },
     }),
     closure_8(closure_11.Screen, {
@@ -71,11 +69,11 @@ export default noop.memo((route) => {
         return obj;
       },
       getComponent() {
-        return searchContext(16974).default;
+        return searchContext(16976).default;
       },
     }),
   ];
-  obj.children = items2;
-  obj.children = closure_9(closure_11.Navigator, obj);
-  return closure_8(View, obj);
+  obj3.children = items2;
+  obj2.children = closure_9(closure_11.Navigator, obj3);
+  return closure_8(View, obj2);
 });

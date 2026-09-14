@@ -24,12 +24,12 @@ const Constants = fn(1074);
 ({ AnalyticEvents: closure_12, HelpdeskArticles: map1 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-fn(4636);
-let createStyles = {
-  container: null,
-  content: null,
-  infoText: null,
-  verifiedRoles: null,
+const createStyles = fn(4636);
+let obj2 = {
+  container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, flex: 1 },
+  content: { flexDirection: "column", alignItems: "center", padding: 16 },
+  infoText: { marginTop: 24 },
+  verifiedRoles: { marginTop: 24, flexDirection: "column", width: "100%" },
   verifiedRole: null,
   verifiedRoleHasRole: null,
   verifiedRolePressed: null,
@@ -39,12 +39,8 @@ let createStyles = {
   platformIconContainer: null,
   cutout: null,
 };
-createStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, flex: 1 };
-createStyles.container = createStyles;
-createStyles.content = { flexDirection: "column", alignItems: "center", padding: 16 };
-createStyles.infoText = { marginTop: 24 };
-createStyles.verifiedRoles = { marginTop: 24, flexDirection: "column", width: "100%" };
-createStyles.verifiedRole = {
+let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, flex: 1 };
+obj2.verifiedRole = {
   flexDirection: "row",
   borderColor: nativeDefault.colors.BORDER_SUBTLE,
   borderWidth: 2,
@@ -56,7 +52,7 @@ createStyles.verifiedRole = {
   alignItems: "center",
   position: "relative",
 };
-let obj1 = {
+let obj4 = {
   flexDirection: "row",
   borderColor: nativeDefault.colors.BORDER_SUBTLE,
   borderWidth: 2,
@@ -68,16 +64,16 @@ let obj1 = {
   alignItems: "center",
   position: "relative",
 };
-createStyles.verifiedRoleHasRole = {
+obj2.verifiedRoleHasRole = {
   borderColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST,
   backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST,
 };
-let obj2 = {
+let obj5 = {
   borderColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST,
   backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST,
 };
-createStyles.verifiedRolePressed = { borderColor: nativeDefault.colors.BORDER_MUTED };
-createStyles.verifiedRoleIcon = { marginRight: 12 };
+obj2.verifiedRolePressed = { borderColor: nativeDefault.colors.BORDER_MUTED };
+obj2.verifiedRoleIcon = { marginRight: 12 };
 let size = {
   width: 20,
   height: 20,
@@ -87,39 +83,42 @@ let size = {
   right: -8,
   top: -8,
 };
-createStyles.roleCheckmark = size;
-createStyles.verifiedRoleName = { flex: 1, overflow: "hidden", marginRight: 32 };
-createStyles.platformIconContainer = { flexDirection: "row" };
-createStyles.cutout = { marginRight: -6 };
-let closure_16 = createStyles.createStyles(createStyles);
-let obj4 = { direction: fn(1178).CutoutDirection.RIGHT, radius: 8 };
+obj2.roleCheckmark = size;
+obj2.verifiedRoleName = { flex: 1, overflow: "hidden", marginRight: 32 };
+obj2.platformIconContainer = { flexDirection: "row" };
+obj2.cutout = { marginRight: -6 };
+let closure_16 = createStyles.createStyles(obj2);
+let obj7 = { direction: fn(1176).CutoutDirection.RIGHT, radius: 8 };
 size = fn(2);
 let result = size.fileFinishedImporting("modules/connections/native/GuildRoleConnectionsScreen.tsx");
 
 export default function GuildRoleConnectionsScreen(guildId) {
   guildId = guildId.guildId;
   const onCloseModal = guildId.onCloseModal;
+  first = undefined;
+  closure_7 = undefined;
   let tmp = closure_16();
   dependencyMap = tmp;
   _slicedToArray = onCloseModal(4571)();
-  let obj = guildId(504);
   let items = [GuildRoleStore];
-  const stateFromStores = obj.useStateFromStores(items, () => GuildRoleStore.getSortedRoles(guildId));
-  let obj1 = guildId(504);
+  const stateFromStores = guildId(504).useStateFromStores(items, () => GuildRoleStore.getSortedRoles(guildId));
+  let obj = guildId(504);
+  const tmp2 = onCloseModal;
   let items1 = [AuthenticationStore];
-  noop = obj1.useStateFromStores(items1, () => id.getId());
+  noop = guildId(504).useStateFromStores(items1, () => id.getId());
   let obj2 = guildId(504);
   const items2 = [GuildMemberStore];
-  const stateFromStores1 = obj2.useStateFromStores(items2, () => GuildMemberStore.getMember(guildId, closure_4));
-  const tmp6 = _slicedToArray(noop.useState([]), 2);
-  const first = tmp6[0];
-  closure_7 = tmp6[1];
+  const stateFromStores1 = guildId(504).useStateFromStores(items2, () =>
+    GuildMemberStore.getMember(guildId, closure_4),
+  );
+  [first, closure_7] = noop.useState([]);
   const items3 = [guildId, first];
   const effect = noop.useEffect(() => {
     if (0 !== first.length) {
-      const obj = { role_ids: first.map((role_id) => role_id.role_id) };
+      const obj2 = { role_ids: first.map((role_id) => role_id.role_id) };
+      const obj = AnalyticsUtilsDefault;
       const merged = Object.assign(AppAnalyticsUtils.collectGuildAnalyticsMetadata(guildId));
-      obj.track(constants.PASSPORT_ENTRY_VIEWED, obj);
+      obj.track(constants.PASSPORT_ENTRY_VIEWED, obj2);
     }
   }, items3);
   const items4 = [guildId];
@@ -132,19 +131,19 @@ export default function GuildRoleConnectionsScreen(guildId) {
     return null;
   } else {
     let found = stateFromStores.filter((tags) => null === tags.tags.guild_connections);
-    obj = { style: tmp.container, children: null };
-    obj = { contentContainerStyle: tmp.content, children: null };
-    obj1 = {
+    let obj4 = { style: tmp.container, children: null };
+    let obj5 = { contentContainerStyle: tmp.content, children: null };
+    let obj6 = {
       style: tmp.infoText,
       variant: "heading-md/semibold",
       color: "mobile-text-heading-primary",
       children: null,
     };
     const intl = tmp4(1114).intl;
-    obj2 = { helpdeskArticleUrl: tmp2(2024).getArticleURL(constants2.CONNECTION_DETAILS) };
-    obj1.children = intl.format(tmp4(1114).t["Y+TsEV"], obj2);
-    const items5 = [closure_14(tmp4(4632).Text, obj1)];
-    let obj3 = {
+    obj7 = { helpdeskArticleUrl: tmp2(2024).getArticleURL(constants2.CONNECTION_DETAILS) };
+    obj6.children = intl.format(tmp4(1114).t["Y+TsEV"], obj7);
+    const items5 = [closure_14(tmp4(4632).Text, obj6)];
+    const obj8 = {
       style: tmp.verifiedRoles,
       children: found.map((children) => {
         guildId = children;
@@ -173,11 +172,10 @@ export default function GuildRoleConnectionsScreen(guildId) {
           const item1 = Array.from(set).forEach((item, index) => {
             let tmp = null;
             if (index !== set.size - 1) {
-              tmp = obj4;
+              tmp = obj7;
             }
             if (isNaN(parseInt(item))) {
-              let obj = PlatformsDefault;
-              let source = obj.get(item);
+              let source = PlatformsDefault.get(item);
               let CutoutableAvatarImage = AvatarUtilsDefault;
               let makeSource = CutoutableAvatarImage.makeSource;
               if (obj2.isThemeDark(closure_3)) {
@@ -192,8 +190,8 @@ export default function GuildRoleConnectionsScreen(guildId) {
               source = makeSource(lightPNG);
               makeSource = hasItem;
               CutoutableAvatarImage = native.CutoutableAvatarImage;
-              obj = { size: native.AvatarSizes.XSMALL, source, style: closure_2.cutout, cutout: tmp };
-              hasItem.push(closure_3_14(CutoutableAvatarImage, obj, item));
+              const obj3 = { size: native.AvatarSizes.XSMALL, source, style: closure_2.cutout, cutout: tmp };
+              hasItem.push(closure_3_14(CutoutableAvatarImage, obj3, item));
               obj2 = shared;
             } else {
               let bot;
@@ -201,13 +199,13 @@ export default function GuildRoleConnectionsScreen(guildId) {
                 bot = tmp3.bot;
               }
               if (undefined !== bot) {
-                obj = { size: native.AvatarSizes.XSMALL, user: null, guildId: null, style: null, cutout: null };
+                const obj4 = { size: native.AvatarSizes.XSMALL, user: null, guildId: null, style: null, cutout: null };
                 const tmp31 = new UserRecord(bot);
-                obj.user = tmp31;
-                obj.guildId = guildId;
-                obj.style = closure_2.cutout;
-                obj.cutout = tmp;
-                hasItem.push(closure_3_14(native.CutoutableAvatarImage, obj, item));
+                obj4.user = tmp31;
+                obj4.guildId = guildId;
+                obj4.style = closure_2.cutout;
+                obj4.cutout = tmp;
+                hasItem.push(closure_3_14(native.CutoutableAvatarImage, obj4, item));
               }
             }
           });
@@ -234,8 +232,8 @@ export default function GuildRoleConnectionsScreen(guildId) {
               id = tmp;
               closure_1 = guildId;
               const _HermesInternal = HermesInternal;
-              obj4 = ActionSheetActionCreatorsDefault;
-              let obj = {
+              const obj4 = ActionSheetActionCreatorsDefault;
+              const obj3 = {
                 onLeaveRolePressed() {
                   hasItem(closure_2_2[17]).hideActionSheet();
                   const obj = hasItem(closure_2_2[17]);
@@ -243,18 +241,19 @@ export default function GuildRoleConnectionsScreen(guildId) {
                 },
               };
               obj4.openLazy(
-                asyncRequireImpl(11701, dependencyMap.paths),
+                asyncRequireImpl(11702, dependencyMap.paths),
                 "LeaveConnectionRoleActionSheet-" + tmp.id,
-                obj,
+                obj3,
               );
-              const tmp20 = asyncRequireImpl(11701, dependencyMap.paths);
+              const tmp20 = asyncRequireImpl(11702, dependencyMap.paths);
             } else {
-              const tmp9 = asyncRequireImpl(11691, dependencyMap.paths);
-              obj = { role: tmp, guildId, onCloseModal };
+              let obj = ActionSheetActionCreatorsDefault;
+              const tmp9 = asyncRequireImpl(11692, dependencyMap.paths);
+              const obj5 = { role: tmp, guildId, onCloseModal };
               obj.openLazy(
                 tmp9,
                 GuildRoleConnectionsModalActionCreators.makeGuildRoleConnectionsConnectAccountsActionSheetKey(tmp.id),
-                obj,
+                obj5,
               );
             }
           },
@@ -262,14 +261,14 @@ export default function GuildRoleConnectionsScreen(guildId) {
         };
         let tmp12 = null;
         if (hasItem) {
-          obj = { style: closure_2.roleCheckmark, children: null };
-          obj = {
+          let obj2 = { style: closure_2.roleCheckmark, children: null };
+          let obj3 = {
             size: guildId(closure_2[11]).Icon.Sizes.SMALL_20,
             source: onCloseModal(closure_2[28]),
             color: onCloseModal(closure_2[10]).unsafe_rawColors.WHITE,
           };
-          obj.children = closure_1_14(guildId(closure_2[11]).Icon, obj);
-          tmp12 = closure_1_14(stateFromStores1, obj);
+          obj2.children = closure_1_14(guildId(closure_2[11]).Icon, obj3);
+          tmp12 = closure_1_14(stateFromStores1, obj2);
         }
         const items1 = [
           tmp12,
@@ -287,7 +286,7 @@ export default function GuildRoleConnectionsScreen(guildId) {
             children: children.name,
           }),
         ];
-        const obj3 = {
+        const obj6 = {
           style: closure_2.platformIconContainer,
           users: [],
           renderedUsers: items,
@@ -296,15 +295,15 @@ export default function GuildRoleConnectionsScreen(guildId) {
           avatarSize: guildId(closure_2[11]).AvatarSizes.XSMALL,
           withPlusCount: true,
         };
-        items1[3] = closure_1_14(onCloseModal(closure_2[30]), obj3);
+        items1[3] = closure_1_14(onCloseModal(closure_2[30]), obj6);
         obj.children = items1;
         return closure_1_15(first, obj, children.id);
       }),
     };
-    items5[1] = closure_14(stateFromStores1, obj3);
-    obj.children = items5;
-    obj.children = closure_15(closure_7, obj);
-    return closure_14(stateFromStores1, obj);
+    items5[1] = closure_14(stateFromStores1, obj8);
+    obj5.children = items5;
+    obj4.children = closure_15(closure_7, obj5);
+    return closure_14(stateFromStores1, obj4);
   }
-  tmp2 = onCloseModal;
+  let obj3 = guildId(504);
 }

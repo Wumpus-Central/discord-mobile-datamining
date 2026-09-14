@@ -28,8 +28,7 @@ export default function DirectVideo(streamId, onContainerResized) {
   onResize.useRef(null);
   const ref = onResize.useRef(null);
   closure_7 = onResize.useRef({ width: 0, height: 0 });
-  let obj = { streamId, paused: flag, onReady, onResize, onContainerResized };
-  closure_8 = onResize.useRef(obj);
+  closure_8 = onResize.useRef({ streamId, paused: flag, onReady, onResize, onContainerResized });
   const items = [flag2];
   const layoutEffect = onResize.useLayoutEffect(() => {
     let current = ref.current;
@@ -147,7 +146,6 @@ export default function DirectVideo(streamId, onContainerResized) {
       }
     }
   }, items1);
-  obj = { className: flag(onReady[4])("media-engine-video", streamId.className), ref };
   const merged1 = Object.assign(merged);
-  return flag2("div", obj);
+  return flag2("div", { className: flag(onReady[4])("media-engine-video", streamId.className), ref });
 }

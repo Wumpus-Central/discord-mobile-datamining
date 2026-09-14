@@ -2,6 +2,8 @@
 import AnalyticsUtilsDefault from "../../../../utils/AnalyticsUtils.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
+const require = globalThis.__r;
+
 const require = fn;
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const size = fn(2);
@@ -63,7 +65,7 @@ export const useTrackAppEmbedViewed = function useTrackAppEmbedViewed(id) {
         onView();
       }
       ({ id, linkType, referrerId, activityCustomId, guildId, channelId, messageId, appEmbedState } = onView);
-      const obj = {
+      const obj2 = {
         application_id: id,
         link_type: linkType,
         referrer_id: referrerId,
@@ -73,11 +75,15 @@ export const useTrackAppEmbedViewed = function useTrackAppEmbedViewed(id) {
         message_id: messageId,
         app_embed_state: appEmbedState,
       };
-      obj.track(AnalyticEvents.APP_EMBED_VIEWED, obj);
+      AnalyticsUtilsDefault.track(AnalyticEvents.APP_EMBED_VIEWED, obj2);
     }
   }, undefined);
 };
 export const trackAppEmbedLinkSent = function trackAppEmbedLinkSent(applicationId, ACTIVITY_INVITE, id, customId) {
-  const obj = { application_id: applicationId, link_type: ACTIVITY_INVITE, referrer_id: id, custom_id: customId };
-  obj.track(AnalyticEvents.APP_EMBED_LINK_SENT, obj);
+  AnalyticsUtilsDefault.track(AnalyticEvents.APP_EMBED_LINK_SENT, {
+    application_id: applicationId,
+    link_type: ACTIVITY_INVITE,
+    referrer_id: id,
+    custom_id: customId,
+  });
 };

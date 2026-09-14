@@ -22,28 +22,28 @@ import ChannelStore from "../../stores/ChannelStore.tsx";
 import GuildRoleStore from "../../stores/GuildRoleStore.tsx";
 import GuildStore from "../../stores/GuildStore.tsx";
 import UserStore from "../../stores/UserStore.tsx";
-import t from "../../../_runtime/metro/04333__.js";
-import combineMarkupRules from "combineMarkupRules.tsx";
+import t_mod from "../../../_runtime/metro/04333__.js";
+import combineMarkupRules_mod from "combineMarkupRules.tsx";
 import "module_12";
-import apply from "../../../_runtime/metro/00012__.js";
+import apply_mod from "../../../_runtime/metro/00012__.js";
 
 const MarkupLinkRuleDefault = MarkupLinkRule;
 const getSoundmojiASTFromStringDefault = getSoundmojiASTFromString;
 
 require = fn;
 function parseLink(arg0) {
-  let obj = MarkupLinkRule;
-  const punycodeLinkResult = obj.punycodeLink(arg0[1]);
+  const punycodeLinkResult = MarkupLinkRule.punycodeLink(arg0[1]);
   if (null == punycodeLinkResult) {
-    obj = { type: "text", content: arg0[1] };
+    const obj2 = { type: "text", content: arg0[1] };
+    let obj3 = obj2;
   } else {
-    obj = { type: "link", content: null, target: null, title: "call" };
-    const obj1 = { type: "text", content: punycodeLinkResult.displayTarget };
-    const items = [obj1];
-    obj.content = items;
-    obj.target = punycodeLinkResult.target;
+    obj3 = { type: "link", content: null, target: null, title: "call" };
+    const obj4 = { type: "text", content: punycodeLinkResult.displayTarget };
+    const items = [obj4];
+    obj3.content = items;
+    obj3.target = punycodeLinkResult.target;
   }
-  return obj;
+  return obj3;
 }
 function hydrateRoleMention(roleId, guildId) {
   if (null != guildId.guildId) {
@@ -64,7 +64,7 @@ function hydrateRoleMention(roleId, guildId) {
     role = GuildRoleStore.getRole(guild.id, roleId);
   }
   if (null == role) {
-    let obj = { type: "text", content: null };
+    const obj = { type: "text", content: null };
     const intl = util.intl;
     const _HermesInternal3 = HermesInternal;
     obj.content = "@" + intl.string(util.t["YV4F/n"]);
@@ -79,7 +79,7 @@ function hydrateRoleMention(roleId, guildId) {
       hasEnhancedRoleColorsForRole = !EnhancedRoleColorUtils.getIsDefaultErc(role);
       const tmp19Result = EnhancedRoleColorUtils;
     }
-    obj = {
+    const obj2 = {
       type: "mention",
       channelId: guildId.channelId,
       guildId: null,
@@ -95,9 +95,9 @@ function hydrateRoleMention(roleId, guildId) {
     if (null != guild) {
       id1 = guild.id;
     }
-    obj.guildId = id1;
-    obj.roleId = roleId;
-    obj.roleColor = role.color;
+    obj2.guildId = id1;
+    obj2.roleId = roleId;
+    obj2.roleColor = role.color;
     let tmp11 = null;
     if (hasEnhancedRoleColorsForRole) {
       const colors = role.colors;
@@ -105,51 +105,51 @@ function hydrateRoleMention(roleId, guildId) {
       if (colors != null) {
         primary_color = colors.primary_color;
       }
-      const obj1 = { primaryColor: primary_color, secondaryColor: null, tertiaryColor: null };
+      const obj4 = { primaryColor: primary_color, secondaryColor: null, tertiaryColor: null };
       const colors2 = role.colors;
       let secondary_color;
       if (colors2 != null) {
         secondary_color = colors2.secondary_color;
       }
-      obj1.secondaryColor = secondary_color;
+      obj4.secondaryColor = secondary_color;
       const colors3 = role.colors;
       let tertiary_color;
       if (colors3 != null) {
         tertiary_color = colors3.tertiary_color;
       }
-      obj1.tertiaryColor = tertiary_color;
-      tmp11 = obj1;
+      obj4.tertiaryColor = tertiary_color;
+      tmp11 = obj4;
     }
-    obj.roleColors = tmp11;
+    obj2.roleColors = tmp11;
     const _HermesInternal = HermesInternal;
-    obj.roleName = "@" + role.name;
+    obj2.roleName = "@" + role.name;
     ({ color: obj3.color, colorString: obj3.colorString } = role);
-    const obj2 = { type: "text", content: null };
+    const obj5 = { type: "text", content: null };
     const _HermesInternal2 = HermesInternal;
-    obj2.content = "@" + role.name;
-    const items = [obj2];
-    obj.content = items;
-    return obj;
+    obj5.content = "@" + role.name;
+    const items = [obj5];
+    obj2.content = items;
+    return obj2;
   }
 }
 function hydrateUserMention(everyoneOrHere, channelId) {
   ({ fullMatch, id } = everyoneOrHere);
-  let str = UserStore.getUser(id);
+  const str = UserStore.getUser(id);
   const channel = ChannelStore.getChannel(channelId.channelId);
-  id = undefined;
+  let id1;
   let tmp2;
   if (null != str) {
-    str = str.toString();
+    let str1 = str.toString();
     if (null != channel) {
       let nickname = NicknameUtilsDefault.getNickname(channel.getGuildId(), channelId.channelId, str);
       if (nickname == null) {
         nickname = UserUtilsDefault.getName(str);
         const tmp4Result = UserUtilsDefault;
       }
-      str = nickname;
+      str1 = nickname;
     }
-    tmp2 = str;
-    id = str.id;
+    tmp2 = str1;
+    id1 = str.id;
   }
   let isMatch = null != id;
   if (isMatch) {
@@ -166,7 +166,7 @@ function hydrateUserMention(everyoneOrHere, channelId) {
   }
   const obj = {
     type: "mention",
-    userId: id,
+    userId: id1,
     channelId: channelId.channelId,
     viewingChannelId: channelId.viewingChannelId,
     guildId: null,
@@ -241,20 +241,20 @@ let obj = {
   list: null,
   subtext: null,
 };
-obj = {};
+let obj2 = {};
 let merged = Object.assign(t.defaultRules.escape);
-obj.match = function match(arg0, allowEscape, arg2) {
+obj2.match = function match(arg0, allowEscape, arg2) {
   let match = null;
   if (false !== allowEscape.allowEscape) {
     match = t.defaultRules.escape.match(arg0, allowEscape, arg2);
   }
   return match;
 };
-obj.escape = obj;
-obj = {};
+obj.escape = obj2;
+let obj3 = {};
 const merged1 = Object.assign(t.defaultRules.blockQuote);
-obj.requiredFirstCharacters = [" ", ">"];
-obj.match = function match(arg0, prevCapture) {
+obj3.requiredFirstCharacters = [" ", ">"];
+obj3.match = function match(arg0, prevCapture) {
   prevCapture = prevCapture.prevCapture;
   if (!prevCapture.inQuote) {
     if (!prevCapture.nested) {
@@ -271,7 +271,7 @@ obj.match = function match(arg0, prevCapture) {
   }
   return null;
 };
-obj.parse = function parse(arg0, fn, inQuote) {
+obj3.parse = function parse(arg0, fn, inQuote) {
   const BooleanResult = Boolean(re16.exec(arg0[0]));
   let tmp2 = re16;
   if (!BooleanResult) {
@@ -294,35 +294,35 @@ obj.parse = function parse(arg0, fn, inQuote) {
   }
   return { content, type: "blockQuote" };
 };
-obj.blockQuote = obj;
+obj.blockQuote = obj3;
 obj.link = MarkupLinkRuleDefault;
-let obj1 = {};
+let obj4 = {};
 const merged2 = Object.assign(t.defaultRules.autolink);
-obj1.parse = parseLink;
-obj.autolink = obj1;
-let obj2 = {};
+obj4.parse = parseLink;
+obj.autolink = obj4;
+let obj5 = {};
 const merged3 = Object.assign(t.defaultRules.mailto);
-obj2.match = t.inlineRegex(/^<([^\s<>@]+@[^\s<>@]+\.[^\s<>@]+)>/);
-obj2.requiredFirstCharacters = ["<"];
-obj2.parse = function parse(content) {
-  let obj = content[1];
+let t = t_mod;
+obj5.match = t.inlineRegex(/^<([^\s<>@]+@[^\s<>@]+\.[^\s<>@]+)>/);
+obj5.requiredFirstCharacters = ["<"];
+obj5.parse = function parse(content) {
   let text = obj;
-  if (!obj.startsWith("mailto:")) {
+  if (!content[1].startsWith("mailto:")) {
     text = `mailto:${obj}`;
   }
-  obj = { type: "link", content: null, target: text };
+  const obj2 = { type: "link", content: null, target: text };
   const items = [{ type: "text", content: content[1] }];
-  obj.content = items;
-  return obj;
+  obj2.content = items;
+  return obj2;
 };
-obj.mailto = obj2;
-const obj3 = {};
+obj.mailto = obj5;
+let obj6 = {};
 const merged4 = Object.assign(t.defaultRules.mailto);
-obj3.requiredFirstCharacters = ["<"];
-obj3.match = t.inlineRegex(/^<((?:(?:tel|sms):\+?|\+)(?:(?:[0-9]|\([0-9]+\)))(?:[- .\/]?(?:[0-9]|\([0-9]+\)))+)>/);
-obj3.parse = function parse(content) {
-  let obj = content[1];
-  const replaced = obj.replaceAll(/[ \/]+/g, "-");
+obj6.requiredFirstCharacters = ["<"];
+let t = t_mod;
+obj6.match = t.inlineRegex(/^<((?:(?:tel|sms):\+?|\+)(?:(?:[0-9]|\([0-9]+\)))(?:[- .\/]?(?:[0-9]|\([0-9]+\)))+)>/);
+obj6.parse = function parse(content) {
+  const replaced = content[1].replaceAll(/[ \/]+/g, "-");
   let startsWithResult = replaced.startsWith("tel:");
   if (!startsWithResult) {
     startsWithResult = replaced.startsWith("sms:");
@@ -331,16 +331,16 @@ obj3.parse = function parse(content) {
   if (!startsWithResult) {
     text = `tel:${obj2}`;
   }
-  obj = { type: "link", content: null, target: text };
+  const obj3 = { type: "link", content: null, target: text };
   const items = [{ type: "text", content: content[1] }];
-  obj.content = items;
-  return obj;
+  obj3.content = items;
+  return obj3;
 };
-obj.tel = obj3;
-const obj4 = {};
+obj.tel = obj6;
+const obj7 = {};
 const merged5 = Object.assign(t.defaultRules.url);
-obj4.requiredFirstCharacters = ["h", "s"];
-obj4.match = function match(arg0, inline) {
+obj7.requiredFirstCharacters = ["h", "s"];
+obj7.match = function match(arg0, inline) {
   if (inline.inline) {
     const match = re18.exec(arg0);
     if (null == match) {
@@ -374,16 +374,16 @@ obj4.match = function match(arg0, inline) {
     return null;
   }
 };
-obj4.parse = parseLink;
-obj.url = obj4;
+obj7.parse = parseLink;
+obj.url = obj7;
 obj.strong = t.defaultRules.strong;
 obj.em = t.defaultRules.em;
 obj.u = t.defaultRules.u;
 obj.br = t.defaultRules.br;
 obj.text = MarkupTextRuleDefault;
-const obj5 = {};
+const obj8 = {};
 const merged6 = Object.assign(t.defaultRules.inlineCode);
-obj5.parse = function parse(arg0, fn, parseInlineCodeChildContent) {
+obj8.parse = function parse(arg0, fn, parseInlineCodeChildContent) {
   const inlineCode = t.defaultRules.inlineCode;
   const parsed = inlineCode.parse(arg0, fn, parseInlineCodeChildContent);
   let tmp2 = parsed;
@@ -395,7 +395,7 @@ obj5.parse = function parse(arg0, fn, parseInlineCodeChildContent) {
   }
   return tmp2;
 };
-obj.inlineCode = obj5;
+obj.inlineCode = obj8;
 obj.emoticon = {
   order: MarkupTextRuleDefault.order,
   requiredFirstCharacters: ["\u00AF"],
@@ -406,7 +406,7 @@ obj.emoticon = {
     return { type: "text", content: content[1] };
   },
 };
-const obj6 = {
+const obj9 = {
   order: MarkupTextRuleDefault.order,
   requiredFirstCharacters: ["\u00AF"],
   match(arg0) {
@@ -437,7 +437,7 @@ obj.codeBlock = {
     return obj;
   },
 };
-const obj7 = {
+const obj10 = {
   order: t.defaultRules.codeBlock.order,
   requiredFirstCharacters: ["`"],
   match(arg0) {
@@ -475,7 +475,7 @@ obj.roleMention = {
     return tmp3;
   },
 };
-const obj8 = {
+const obj11 = {
   order: MarkupTextRuleDefault.order,
   requiredFirstCharacters: ["<"],
   match(arg0) {
@@ -507,20 +507,20 @@ obj.mention = {
     let first = arg0;
     if (returnMentionIds.returnMentionIds) {
       if (null == first[1]) {
-        let obj = { type: "mention", text: null };
+        const obj2 = { type: "mention", text: null };
         first = first[0];
-        obj.text = first;
+        obj2.text = first;
       } else {
-        obj = { type: "mention", id: first[1] };
+        const obj3 = { type: "mention", id: first[1] };
       }
     } else {
-      obj = { fullMatch: null, id: null, everyoneOrHere: null };
+      const obj = { fullMatch: null, id: null, everyoneOrHere: null };
       [obj.fullMatch, obj.id, obj.everyoneOrHere] = first;
       return hydrateUserMention(obj, returnMentionIds);
     }
   },
 };
-const obj9 = {
+const obj12 = {
   order: MarkupTextRuleDefault.order,
   requiredFirstCharacters: ["<", "@"],
   match(arg0) {
@@ -535,14 +535,14 @@ const obj9 = {
     let first = arg0;
     if (returnMentionIds.returnMentionIds) {
       if (null == first[1]) {
-        let obj = { type: "mention", text: null };
+        const obj2 = { type: "mention", text: null };
         first = first[0];
-        obj.text = first;
+        obj2.text = first;
       } else {
-        obj = { type: "mention", id: first[1] };
+        const obj3 = { type: "mention", id: first[1] };
       }
     } else {
-      obj = { fullMatch: null, id: null, everyoneOrHere: null };
+      const obj = { fullMatch: null, id: null, everyoneOrHere: null };
       [obj.fullMatch, obj.id, obj.everyoneOrHere] = first;
       return hydrateUserMention(obj, returnMentionIds);
     }
@@ -568,7 +568,7 @@ obj.channelMention = MarkupChannelMentionRuleDefault.channelMention;
 obj.channelOrMessageUrl = MarkupChannelMentionRuleDefault.channelOrMessageUrl;
 obj.mediaPostLink = MarkupChannelMentionRuleDefault.mediaPostLink;
 obj.attachmentLink = MarkupAttachmentLinkRuleDefault.attachmentLink;
-const obj10 = {
+const obj13 = {
   order: MarkupTextRuleDefault.order,
   requiredFirstCharacters: ["@"],
   match(arg0, arg1, arg2) {
@@ -594,13 +594,14 @@ obj.commandMention = {
   },
   parse(arg0, arg1, returnMentionIds) {
     if (returnMentionIds.returnMentionIds) {
-      let obj = { type: "commandMention", id: arg0[2] };
+      const obj = { type: "commandMention", id: arg0[2] };
+      let obj2 = obj;
     } else {
       const items = [];
       HermesBuiltin.arraySpread(_toArray(arg0[1].split(" ")).slice(1), 0);
       const mapped = items.map((item) => "" + SUB_COMMAND_KEY_SEPARATOR + item);
       const _HermesInternal = HermesInternal;
-      obj = {
+      obj2 = {
         type: "commandMention",
         channelId: returnMentionIds.channelId,
         commandId: arg0[2],
@@ -608,17 +609,17 @@ obj.commandMention = {
         commandKey: "" + arg0[2] + mapped.join(""),
         content: null,
       };
-      const obj1 = { type: "text", content: null };
+      const obj3 = { type: "text", content: null };
       const _HermesInternal2 = HermesInternal;
-      obj1.content = "" + arg0[1];
-      const items1 = [obj1];
-      obj.content = items1;
+      obj3.content = "" + arg0[1];
+      const items1 = [obj3];
+      obj2.content = items1;
       const arr = _toArray(arg0[1].split(" "));
     }
-    return obj;
+    return obj2;
   },
 };
-const obj11 = {
+const obj14 = {
   order: t.defaultRules.text.order,
   requiredFirstCharacters: ["<"],
   match(arg0) {
@@ -628,13 +629,14 @@ const obj11 = {
   },
   parse(arg0, arg1, returnMentionIds) {
     if (returnMentionIds.returnMentionIds) {
-      let obj = { type: "commandMention", id: arg0[2] };
+      const obj = { type: "commandMention", id: arg0[2] };
+      let obj2 = obj;
     } else {
       const items = [];
       HermesBuiltin.arraySpread(_toArray(arg0[1].split(" ")).slice(1), 0);
       const mapped = items.map((item) => "" + SUB_COMMAND_KEY_SEPARATOR + item);
       const _HermesInternal = HermesInternal;
-      obj = {
+      obj2 = {
         type: "commandMention",
         channelId: returnMentionIds.channelId,
         commandId: arg0[2],
@@ -642,14 +644,14 @@ const obj11 = {
         commandKey: "" + arg0[2] + mapped.join(""),
         content: null,
       };
-      const obj1 = { type: "text", content: null };
+      const obj3 = { type: "text", content: null };
       const _HermesInternal2 = HermesInternal;
-      obj1.content = "" + arg0[1];
-      const items1 = [obj1];
-      obj.content = items1;
+      obj3.content = "" + arg0[1];
+      const items1 = [obj3];
+      obj2.content = items1;
       const arr = _toArray(arg0[1].split(" "));
     }
-    return obj;
+    return obj2;
   },
 };
 obj.timestampMentionInput = {
@@ -667,7 +669,7 @@ obj.timestampMentionInput = {
     return { type: "timestampMentionInput", content: content[1] };
   },
 };
-const obj12 = {
+const obj15 = {
   order: t.defaultRules.text.order,
   requiredFirstCharacters: ["<"],
   match(arg0, allowTimeMentionInput) {
@@ -696,7 +698,7 @@ obj.gameMention = {
     return { type: "gameMention", gameId: gameId[1] };
   },
 };
-const obj13 = {
+const obj16 = {
   order: t.defaultRules.text.order,
   requiredFirstCharacters: ["<"],
   match(arg0, allowGameMentions) {
@@ -735,7 +737,7 @@ obj.emoji = {
     return { type: "text", content };
   },
 };
-const obj14 = {
+const obj17 = {
   order: MarkupTextRuleDefault.order,
   requiredFirstCharacters: [":"],
   match(arg0) {
@@ -771,7 +773,7 @@ obj.soundboard = {
     return getSoundmojiASTFromStringDefault(arg0, arg2);
   },
 };
-const obj15 = {
+const obj18 = {
   order: MarkupTextRuleDefault.order,
   requiredFirstCharacters: ["<"],
   match(arg0) {
@@ -792,7 +794,7 @@ obj.customEmoji = {
     return { type: "text", content: ":" + arg0[1] + ":" };
   },
 };
-const obj16 = {
+const obj19 = {
   order: MarkupTextRuleDefault.order,
   requiredFirstCharacters: ["<"],
   match(arg0) {
@@ -811,22 +813,22 @@ obj.timestamp = {
   },
   parse(arg0) {
     [tmp, tmp2, tmp3] = arg0;
-    let obj = TimestampUtils;
-    let parseTimestampResult = obj.parseTimestamp(tmp2, tmp3);
+    let parseTimestampResult = TimestampUtils.parseTimestamp(tmp2, tmp3);
     if (null == parseTimestampResult) {
-      obj = { type: "text", content: tmp };
-      parseTimestampResult = obj;
+      const obj2 = { type: "text", content: tmp };
+      parseTimestampResult = obj2;
     } else {
       parseTimestampResult.type = "timestamp";
     }
     return parseTimestampResult;
   },
 };
-const obj18 = { order: t.defaultRules.u.order, requiredFirstCharacters: ["~"], match: null, parse: null };
-obj18.match = t.inlineRegex(/^~~([\s\S]+?)~~(?!_)/);
-obj18.parse = t.defaultRules.u.parse;
-obj.s = obj18;
-const obj17 = {
+const obj21 = { order: t.defaultRules.u.order, requiredFirstCharacters: ["~"], match: null, parse: null };
+let t = t_mod;
+obj21.match = t.inlineRegex(/^~~([\s\S]+?)~~(?!_)/);
+obj21.parse = t.defaultRules.u.parse;
+obj.s = obj21;
+const obj20 = {
   order: MarkupTextRuleDefault.order - 1,
   requiredFirstCharacters: ["<"],
   match(arg0) {
@@ -835,11 +837,10 @@ const obj17 = {
   },
   parse(arg0) {
     [tmp, tmp2, tmp3] = arg0;
-    let obj = TimestampUtils;
-    let parseTimestampResult = obj.parseTimestamp(tmp2, tmp3);
+    let parseTimestampResult = TimestampUtils.parseTimestamp(tmp2, tmp3);
     if (null == parseTimestampResult) {
-      obj = { type: "text", content: tmp };
-      parseTimestampResult = obj;
+      const obj2 = { type: "text", content: tmp };
+      parseTimestampResult = obj2;
     } else {
       parseTimestampResult.type = "timestamp";
     }
@@ -856,7 +857,7 @@ obj.spoiler = {
     return { content: fn(arg0[1], channelId), channelId: channelId.channelId };
   },
 };
-const obj19 = {
+const obj22 = {
   order: MarkupTextRuleDefault.order,
   requiredFirstCharacters: ["|"],
   match(arg0) {
@@ -874,9 +875,7 @@ obj.staticRouteLink = {
   },
   parse(arg0, arg1, guildId) {
     const tmp = _slicedToArray(arg0, 3);
-    let obj = StaticRouteRendering;
-    const result = obj.staticRouteToTranslation(tmp2);
-    let obj1 = StaticRouteRendering;
+    const result = StaticRouteRendering.staticRouteToTranslation(tmp2);
     if (null != guildId.guildId) {
       let guild = GuildStore.getGuild(guildId.guildId);
     } else {
@@ -894,13 +893,13 @@ obj.staticRouteLink = {
     if (guild != null) {
       id = guild.id;
     }
-    const result1 = obj1.staticRouteToItemString(tmp2, tmp3, id);
+    const result1 = StaticRouteRendering.staticRouteToItemString(tmp2, tmp3, id);
     let str = "";
     if (null != result1) {
       const _HermesInternal = HermesInternal;
       str = " \u203A " + result1;
     }
-    obj = {
+    const obj3 = {
       content: null,
       mainContent: null,
       itemContent: null,
@@ -909,42 +908,42 @@ obj.staticRouteLink = {
       guildId: null,
       channelId: null,
     };
-    obj = { type: "text", content: result + str };
-    const items = [obj];
-    obj.content = items;
+    const items = [{ type: "text", content: result + str }];
+    obj3.content = items;
     let tmp13 = null;
     if (null != result) {
-      obj1 = { type: "text", content: result };
-      const items1 = [obj1];
+      const obj5 = { type: "text", content: result };
+      const items1 = [obj5];
       tmp13 = items1;
     }
-    obj.mainContent = tmp13;
+    obj3.mainContent = tmp13;
     let tmp14 = null;
     if (null != result1) {
-      const obj2 = { type: "text", content: result1 };
-      const items2 = [obj2];
+      const obj6 = { type: "text", content: result1 };
+      const items2 = [obj6];
       tmp14 = items2;
     }
-    obj.itemContent = tmp14;
-    obj.itemId = tmp[2];
-    obj.id = tmp[1];
+    obj3.itemContent = tmp14;
+    obj3.itemId = tmp[2];
+    obj3.id = tmp[1];
     const channel1 = ChannelStore.getChannel(guildId.channelId);
     let guildId1;
     if (channel1 != null) {
       guildId1 = channel1.getGuildId();
     }
-    obj.guildId = guildId1;
-    obj.channelId = tmp[1];
-    return obj;
+    obj3.guildId = guildId1;
+    obj3.channelId = tmp[1];
+    return obj3;
   },
 };
 obj.heading = MarkupHeadingRuleDefault;
 obj.list = MarkupListRuleDefault;
 obj.subtext = MarkupSubtextRuleDefault;
 let items = [obj];
+let combineMarkupRules = combineMarkupRules_mod;
 items[1] = PlatformMarkupRulesDefault;
 const importDefaultResult3Result = combineMarkupRules(items);
-const obj20 = {
+const obj23 = {
   order: MarkupTextRuleDefault.order,
   requiredFirstCharacters: ["<"],
   match(arg0) {
@@ -952,9 +951,7 @@ const obj20 = {
   },
   parse(arg0, arg1, guildId) {
     const tmp = _slicedToArray(arg0, 3);
-    let obj = StaticRouteRendering;
-    const result = obj.staticRouteToTranslation(tmp2);
-    let obj1 = StaticRouteRendering;
+    const result = StaticRouteRendering.staticRouteToTranslation(tmp2);
     if (null != guildId.guildId) {
       let guild = GuildStore.getGuild(guildId.guildId);
     } else {
@@ -972,13 +969,13 @@ const obj20 = {
     if (guild != null) {
       id = guild.id;
     }
-    const result1 = obj1.staticRouteToItemString(tmp2, tmp3, id);
+    const result1 = StaticRouteRendering.staticRouteToItemString(tmp2, tmp3, id);
     let str = "";
     if (null != result1) {
       const _HermesInternal = HermesInternal;
       str = " \u203A " + result1;
     }
-    obj = {
+    const obj3 = {
       content: null,
       mainContent: null,
       itemContent: null,
@@ -987,35 +984,35 @@ const obj20 = {
       guildId: null,
       channelId: null,
     };
-    obj = { type: "text", content: result + str };
-    const items = [obj];
-    obj.content = items;
+    const items = [{ type: "text", content: result + str }];
+    obj3.content = items;
     let tmp13 = null;
     if (null != result) {
-      obj1 = { type: "text", content: result };
-      const items1 = [obj1];
+      const obj5 = { type: "text", content: result };
+      const items1 = [obj5];
       tmp13 = items1;
     }
-    obj.mainContent = tmp13;
+    obj3.mainContent = tmp13;
     let tmp14 = null;
     if (null != result1) {
-      const obj2 = { type: "text", content: result1 };
-      const items2 = [obj2];
+      const obj6 = { type: "text", content: result1 };
+      const items2 = [obj6];
       tmp14 = items2;
     }
-    obj.itemContent = tmp14;
-    obj.itemId = tmp[2];
-    obj.id = tmp[1];
+    obj3.itemContent = tmp14;
+    obj3.itemId = tmp[2];
+    obj3.id = tmp[1];
     const channel1 = ChannelStore.getChannel(guildId.channelId);
     let guildId1;
     if (channel1 != null) {
       guildId1 = channel1.getGuildId();
     }
-    obj.guildId = guildId1;
-    obj.channelId = tmp[1];
-    return obj;
+    obj3.guildId = guildId1;
+    obj3.channelId = tmp[1];
+    return obj3;
   },
 };
+let apply = apply_mod;
 const omitResult = apply.omit(importDefaultResult3Result, [
   "inlineCode",
   "codeBlock",
@@ -1024,6 +1021,7 @@ const omitResult = apply.omit(importDefaultResult3Result, [
   "subtext",
   "soundboard",
 ]);
+let apply = apply_mod;
 const omitResult1 = apply.omit(importDefaultResult3Result, [
   "inlineCode",
   "codeBlock",
@@ -1041,6 +1039,7 @@ const omitResult1 = apply.omit(importDefaultResult3Result, [
   "soundboard",
   "gameMention",
 ]);
+let apply = apply_mod;
 let items1 = [
   importDefaultResult3Result,
   {
@@ -1061,7 +1060,7 @@ let items1 = [
     },
   },
 ];
-const obj21 = {
+const obj24 = {
   inlineCode: {
     match(arg0, arg1, arg2) {
       const match = importDefaultResult3Result.codeBlock.match(arg0, arg1, arg2);
@@ -1089,8 +1088,11 @@ const omitResult2 = apply.omit(importDefaultResult3Result, [
   "soundboard",
   "gameMention",
 ]);
+let apply = apply_mod;
 const omitResult3 = apply.omit(combineMarkupRules(items1), ["blockQuote", "codeBlock", "br"]);
+let apply = apply_mod;
 const omitResult4 = apply.omit(importDefaultResult3Result, ["codeBlock", "br", "blockQuote"]);
+let apply = apply_mod;
 const omitResult5 = apply.omit(importDefaultResult3Result, [
   "codeBlock",
   "br",
@@ -1102,6 +1104,7 @@ const omitResult5 = apply.omit(importDefaultResult3Result, [
   "newline",
   "soundboard",
 ]);
+let apply = apply_mod;
 const omitResult6 = apply.omit(importDefaultResult3Result, ["codeBlock", "blockQuote", "br"]);
 let items2 = [
   {
@@ -1196,20 +1199,21 @@ let items2 = [
         if (num == null) {
           num = 0;
         }
-        let obj = {};
+        const obj = {};
         const merged = Object.assign(module);
         obj.parseDepth = num + 1;
         const _module = require("ChannelStore");
         const _module1 = require("GuildRoleStore");
-        const items = [..._module, obj, ..._module1];
-        obj = { type: "highlight", content: global[1] };
+        const items = [..._module, obj2, ..._module1];
         return items;
       },
     },
   },
 ];
+let combineMarkupRules = combineMarkupRules_mod;
+let apply = apply_mod;
 items2[1] = apply.omit(importDefaultResult3Result, ["url"]);
-const obj22 = {
+const obj25 = {
   highlightWord: {
     order: -1,
     match(arr, parseDepth) {
@@ -1301,13 +1305,12 @@ const obj22 = {
       if (num == null) {
         num = 0;
       }
-      let obj = {};
+      const obj = {};
       const merged = Object.assign(module);
       obj.parseDepth = num + 1;
       const _module = require("ChannelStore");
       const _module1 = require("GuildRoleStore");
-      const items = [..._module, obj, ..._module1];
-      obj = { type: "highlight", content: global[1] };
+      const items = [..._module, obj2, ..._module1];
       return items;
     },
   },
@@ -1333,7 +1336,7 @@ export { hydrateUserMention };
 export const hydrateCommandMention = function hydrateCommandMention(name, commandId, channelId) {
   const items = [..._toArray(name.split(" ")).slice(1)];
   const mapped = items.map((item) => "" + SUB_COMMAND_KEY_SEPARATOR + item);
-  let obj = {
+  const obj = {
     type: "commandMention",
     channelId: channelId.channelId,
     commandId,
@@ -1341,8 +1344,8 @@ export const hydrateCommandMention = function hydrateCommandMention(name, comman
     commandKey: "" + commandId + mapped.join(""),
     content: null,
   };
-  obj = { type: "text", content: "" + name };
-  const items1 = [obj];
+  const arr = _toArray(name.split(" "));
+  const items1 = [{ type: "text", content: "" + name }];
   obj.content = items1;
   return obj;
 };

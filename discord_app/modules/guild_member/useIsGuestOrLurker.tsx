@@ -2,6 +2,8 @@
 import GuildMemberStore from "../../stores/GuildMemberStore.tsx";
 import GuildStore from "../../stores/GuildStore.tsx";
 
+const require = globalThis.__r;
+
 const require = fn;
 const GuildFeatures = fn(1074).GuildFeatures;
 const size = fn(2);

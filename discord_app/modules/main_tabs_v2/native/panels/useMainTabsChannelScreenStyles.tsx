@@ -4,13 +4,12 @@ import ReanimatedRexport from "../../../reanimated/ReanimatedRexport.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-fn(4636);
-let createStyles = { elevation: null };
-createStyles = {};
+const createStyles = fn(4636);
+const obj2 = { elevation: null };
 const merged = Object.assign(fn(17).StyleSheet.absoluteFillObject);
 const merged1 = Object.assign(nativeDefault.shadows.SHADOW_LOW);
-createStyles.elevation = createStyles;
-let closure_3 = createStyles.createStyles(createStyles);
+obj2.elevation = {};
+let closure_3 = createStyles.createStyles(obj2);
 let __initData = {
   code: "function useMainTabsChannelScreenStylesTsx1(){const{freezeValue,isDragging,translateX,maxWidth,elevationStyle,isCompletelyCovered}=this.__closure;var _freezeValue,_isCompletelyCovered;(_freezeValue=freezeValue)===null||_freezeValue===void 0||_freezeValue.get();const showBorder=isDragging.get()||translateX.get()!==0&&translateX.get()!==maxWidth;return{transform:[{translateX:translateX.get()}],shadowOpacity:showBorder?elevationStyle.shadowOpacity:0,elevation:showBorder?elevationStyle.elevation:0,opacity:(_isCompletelyCovered=isCompletelyCovered)!==null&&_isCompletelyCovered!==void 0&&_isCompletelyCovered.get()?0:1};}",
 };
@@ -29,42 +28,40 @@ export const useMainTabsChannelScreenStyles = function useMainTabsChannelScreenS
   const tmp = derivedValue();
   const elevation = tmp.elevation;
   const fn = function c() {
-    let obj = closure_4;
-    if (closure_4 != null) {
-      value = obj.get();
+    if (parentFreezeValue != null) {
+      value = parentFreezeValue.get();
     }
-    value = isDragging.get();
-    if (!value) {
+    let value3 = isDragging.get();
+    if (!value3) {
       let tmp3 = 0 !== translateX.get();
       if (tmp3) {
         tmp3 = translateX.get() !== closure_2;
       }
-      value = tmp3;
+      value3 = tmp3;
     }
-    obj = { transform: null, shadowOpacity: null, elevation: null, opacity: null };
-    obj = { translateX: translateX.get() };
-    const items = [obj];
-    obj.transform = items;
+    const obj3 = { transform: null, shadowOpacity: null, elevation: null, opacity: null };
+    const items = [{ translateX: translateX.get() }];
+    obj3.transform = items;
     let num2 = 0;
-    if (value) {
+    if (value3) {
       num2 = elevation.shadowOpacity;
     }
-    obj.shadowOpacity = num2;
+    obj3.shadowOpacity = num2;
     let num3 = 0;
-    if (value) {
+    if (value3) {
       num3 = elevation.elevation;
     }
-    obj.elevation = num3;
-    let value1;
+    obj3.elevation = num3;
+    let value4;
     if (derivedValue != null) {
-      value1 = derivedValue.get();
+      value4 = derivedValue.get();
     }
     let num4 = 1;
-    if (value1) {
+    if (value4) {
       num4 = 0;
     }
-    obj.opacity = num4;
-    return obj;
+    obj3.opacity = num4;
+    return obj3;
   };
   fn.__closure = {
     freezeValue: parentFreezeValue,

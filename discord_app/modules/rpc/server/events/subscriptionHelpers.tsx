@@ -29,8 +29,8 @@ export const getInitialSubscriptionPayload = function getInitialSubscriptionPayl
     }
     let tmp39 = null;
     if (null != layoutModeForApp) {
-      let obj = { is_pip_mode: layoutModeForApp !== constants.FOCUSED };
-      tmp39 = obj;
+      const obj2 = { is_pip_mode: layoutModeForApp !== constants.FOCUSED };
+      tmp39 = obj2;
     }
     return tmp39;
   } else if (RPCEvents.ACTIVITY_LAYOUT_MODE_UPDATE === arg1) {
@@ -45,8 +45,8 @@ export const getInitialSubscriptionPayload = function getInitialSubscriptionPayl
     }
     let tmp34 = null;
     if (null != layoutModeForApp1) {
-      obj = { layout_mode: layoutModeForApp1 };
-      tmp34 = obj;
+      const obj5 = { layout_mode: layoutModeForApp1 };
+      tmp34 = obj5;
     }
     return tmp34;
   } else if (RPCEvents.FRAME_LAYOUT_MODE_UPDATE === arg1) {
@@ -56,8 +56,8 @@ export const getInitialSubscriptionPayload = function getInitialSubscriptionPayl
       const tmp27 = asLaunched(FramesStore.getFrameByIframeId(application.source.iframeId));
       let tmp28 = null;
       if (null != tmp27) {
-        const obj1 = { layout_mode: tmp27.data.layoutMode };
-        tmp28 = obj1;
+        const obj7 = { layout_mode: tmp27.data.layoutMode };
+        tmp28 = obj7;
       }
       return tmp28;
     }
@@ -65,23 +65,22 @@ export const getInitialSubscriptionPayload = function getInitialSubscriptionPayl
     const thermalState = useThermalState.getThermalState();
     let tmp23 = null;
     if (thermalState !== useThermalState.ThermalStates.UNHANDLED) {
-      let obj2 = { thermal_state: thermalState };
-      tmp23 = obj2;
+      const obj8 = { thermal_state: thermalState };
+      tmp23 = obj8;
     }
     return tmp23;
   } else if (RPCEvents.ORIENTATION_UPDATE === arg1) {
-    const obj3 = { screen_orientation: null };
-    obj3.screen_orientation = obj3.getIsScreenLandscape() ? React6.LANDSCAPE : React6.PORTRAIT;
-    return obj3;
+    const obj9 = {
+      screen_orientation: useIsScreenLandscape.getIsScreenLandscape() ? React6.LANDSCAPE : React6.PORTRAIT,
+    };
+    return obj9;
   } else if (RPCEvents.ACTIVITY_INSTANCE_PARTICIPANTS_UPDATE === arg1) {
-    obj2 = activityInstanceConnectedParticipants;
-    return obj2.activityInstanceConnectedParticipants();
+    return activityInstanceConnectedParticipants.activityInstanceConnectedParticipants();
   } else if (RPCEvents.QUEST_ENROLLMENT_STATUS_UPDATE === arg1) {
     quest_id = quest_id.quest_id;
     if (quest_id) {
       const quest = QuestStore.getQuest(quest_id);
-      obj = QuestTaskUtils;
-      const activityApplicationId = obj.getActivityApplicationId(quest);
+      const activityApplicationId = QuestTaskUtils.getActivityApplicationId(quest);
       let tmp11 = null;
       if (null != quest) {
         tmp11 = null;
@@ -93,13 +92,13 @@ export const getInitialSubscriptionPayload = function getInitialSubscriptionPayl
           }
           tmp11 = null;
           if (activityApplicationId === id2) {
-            const obj4 = { quest_id, is_enrolled: null, enrolled_at: null };
+            const obj10 = { quest_id, is_enrolled: null, enrolled_at: null };
             const userStatus = quest.userStatus;
             let enrolledAt;
             if (userStatus != null) {
               enrolledAt = userStatus.enrolledAt;
             }
-            obj4.is_enrolled = null != enrolledAt;
+            obj10.is_enrolled = null != enrolledAt;
             const userStatus2 = quest.userStatus;
             let enrolledAt1;
             if (userStatus2 != null) {
@@ -108,8 +107,8 @@ export const getInitialSubscriptionPayload = function getInitialSubscriptionPayl
             if (enrolledAt1 == null) {
               enrolledAt1 = null;
             }
-            obj4.enrolled_at = enrolledAt1;
-            tmp11 = obj4;
+            obj10.enrolled_at = enrolledAt1;
+            tmp11 = obj10;
           }
         }
       }

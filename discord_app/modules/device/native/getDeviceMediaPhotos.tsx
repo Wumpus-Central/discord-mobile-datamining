@@ -1,8 +1,8 @@
 // discord_app/modules/device/native/getDeviceMediaPhotos.tsx
 import LoggerDefault from "../../debug/Logger.tsx";
 import _mod17 from "../../../../_runtime/metro/00017__.js";
-import PlatformUtils from "../../../utils/PlatformUtils.tsx";
 import SentryUtilsDefault from "../../../utils/SentryUtils.native.tsx";
+import PlatformUtils from "../../../utils/PlatformUtils.tsx";
 import DCDPhotosDefault from "DCDPhotos.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
@@ -19,20 +19,20 @@ export default function getDeviceMediaPhotos(arg0) {
       SentryUtilsDefault.captureException(error, { tags: { source: "DEVICE_MEDIA" } });
     };
   }
-  let obj = PlatformUtils;
   if (obj.isIOS()) {
     const obj3 = DCDPhotosDefault;
     if (obj3 != null) {
-      obj = { first: batchSize, groupTypes: "Recents", assetType: "All", after: endCursor, extensions };
-      const photos = obj3.getPhotos(obj);
+      const obj2 = { first: batchSize, groupTypes: "Recents", assetType: "All", after: endCursor, extensions };
+      const photos = obj3.getPhotos(obj2);
       photos.then(onFetched).catch(onError);
       const nextPromise = photos.then(onFetched);
     }
   } else {
     const CameraRollUtils = NativeModules.CameraRollUtils;
-    obj = { first: batchSize, assetType: "All", after: lastNodeImageUri, offset: lastAssetIndex, extensions };
-    const photos1 = CameraRollUtils.getPhotos(obj);
+    const obj4 = { first: batchSize, assetType: "All", after: lastNodeImageUri, offset: lastAssetIndex, extensions };
+    const photos1 = CameraRollUtils.getPhotos(obj4);
     photos1.then(onFetched).catch(onError);
     const nextPromise1 = photos1.then(onFetched);
   }
+  obj = PlatformUtils;
 }

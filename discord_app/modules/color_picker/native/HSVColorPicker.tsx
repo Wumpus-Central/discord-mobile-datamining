@@ -24,17 +24,16 @@ export default function HSVColorPicker(arg0) {
     hueColorBarInnerStyle,
     hueSliderStyle,
   } = arg0);
-  let obj = ReanimatedRexport;
-  const sharedValue = obj.useSharedValue(0);
   const tmp = closure_6();
+  const sharedValue = ReanimatedRexport.useSharedValue(0);
   const sharedValue1 = ReanimatedRexport.useSharedValue(1);
-  obj = { style: tmp.hsvColorPicker, children: null };
+  const obj4 = { style: tmp.hsvColorPicker, children: null };
   const sharedValue2 = ReanimatedRexport.useSharedValue(1);
   let tmp11 = hue;
   if (hue == null) {
     tmp11 = sharedValue;
   }
-  obj = {
+  const obj5 = {
     hue: tmp11,
     saturation: null,
     value: null,
@@ -48,18 +47,18 @@ export default function HSVColorPicker(arg0) {
   if (saturation == null) {
     saturation = sharedValue1;
   }
-  obj.saturation = saturation;
+  obj5.saturation = saturation;
   if (value == null) {
     value = sharedValue2;
   }
-  obj.value = value;
-  obj.style = saturationValuePickerStyle;
-  obj.colorBoxStyle = saturationValueColorBoxStyle;
-  obj.colorBoxInnerStyle = saturationValueColorBoxInnerStyle;
-  obj.selectorStyle = saturationValueSelectorStyle;
-  obj.onPanUpdate = onPanUpdate;
-  obj.onPanFinalize = onPanFinalize;
-  const items = [React4(SaturationValueColorPickerDefault, obj)];
+  obj5.value = value;
+  obj5.style = saturationValuePickerStyle;
+  obj5.colorBoxStyle = saturationValueColorBoxStyle;
+  obj5.colorBoxInnerStyle = saturationValueColorBoxInnerStyle;
+  obj5.selectorStyle = saturationValueSelectorStyle;
+  obj5.onPanUpdate = onPanUpdate;
+  obj5.onPanFinalize = onPanFinalize;
+  const items = [React4(SaturationValueColorPickerDefault, obj5)];
   if (hue == null) {
     hue = sharedValue;
   }
@@ -71,6 +70,6 @@ export default function HSVColorPicker(arg0) {
     onPanUpdate,
     onPanFinalize,
   });
-  obj.children = items;
-  return hasOwnProperty(View, obj);
+  obj4.children = items;
+  return hasOwnProperty(View, obj4);
 }

@@ -37,16 +37,15 @@ class AppliedForumTag {
       str = "text-default";
     }
     c6 = str;
-    obj = {
+    obj1 = {
       tagId: tag.id,
       children(ref) {
         const merged = Object.assign(ref, Object.assign({ ref: 0 }));
-        let obj = { style: null, accessible: true, accessibilityLabel: null, ref: null };
+        const obj = { style: null, accessible: true, accessibilityLabel: null, ref: null };
         const items = [container.container, closure_1_0];
         obj.style = items;
         const intl = util.intl;
-        obj = { tagName };
-        obj.accessibilityLabel = intl.formatToPlainString(util.t.tXXD6v, obj);
+        obj.accessibilityLabel = intl.formatToPlainString(util.t.tXXD6v, { tagName });
         obj.ref = ref.ref;
         const merged1 = Object.assign(merged);
         str = c4;
@@ -55,22 +54,22 @@ class AppliedForumTag {
           tmp11Result = null != c3;
         }
         if (tmp11Result) {
-          obj = { textEmojiStyle: null, fastImageStyle: null, src: null, name: null };
+          const obj4 = { textEmojiStyle: null, fastImageStyle: null, src: null, name: null };
           ({ textEmoji: obj3.textEmojiStyle, emoji: obj3.fastImageStyle } = container);
           let emojiURL;
           if (null != closure_5) {
-            const obj1 = { id: null, animated: null, size: null };
+            const obj6 = { id: null, animated: null, size: null };
             ({ id: obj5.id, animated: obj5.animated } = closure_5);
-            obj1.size = EMOJI_URL_BASE_SIZE;
-            emojiURL = AvatarUtilsDefault.getEmojiURL(obj1);
+            obj6.size = EMOJI_URL_BASE_SIZE;
+            emojiURL = AvatarUtilsDefault.getEmojiURL(obj6);
             const tmp12Result = AvatarUtilsDefault;
           }
-          obj.src = emojiURL;
+          obj4.src = emojiURL;
           if (str == null) {
             str = "";
           }
-          obj.name = str;
-          tmp11Result = timestampProducer(EmojiDefault, obj);
+          obj4.name = str;
+          tmp11Result = timestampProducer(EmojiDefault, obj4);
         }
         const items1 = [
           tmp11Result,
@@ -86,32 +85,32 @@ class AppliedForumTag {
         return React5(View, obj);
       },
     };
-    return c6(closure_1(tmp[8]), obj);
+    return c6(closure_1(tmp[8]), obj1);
   }
 }
 const View = fn(17).View;
 const EMOJI_URL_BASE_SIZE = fn(1374).EMOJI_URL_BASE_SIZE;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-fn(4636);
-let createStyles = { pill: null, disableEndMargin: null, emoji: null, textEmoji: null, tagName: null, container: null };
-createStyles = {
-  height: 24,
-  paddingHorizontal: 8,
-  borderRadius: 20,
-  backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL,
-  borderWidth: 1,
-  borderColor: nativeDefault.colors.BORDER_SUBTLE,
-  marginRight: 4,
-  flexShrink: 1,
+const createStyles = fn(4636);
+const obj2 = {
+  pill: {
+    height: 24,
+    paddingHorizontal: 8,
+    borderRadius: 20,
+    backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL,
+    borderWidth: 1,
+    borderColor: nativeDefault.colors.BORDER_SUBTLE,
+    marginRight: 4,
+    flexShrink: 1,
+  },
+  disableEndMargin: { marginRight: 0 },
+  emoji: { height: 12, width: 12, marginRight: 4, flexShrink: 0 },
+  textEmoji: { fontSize: 10, marginRight: 4 },
+  tagName: { flexShrink: 1 },
+  container: { display: "flex", flexDirection: "row", alignItems: "center" },
 };
-createStyles.pill = createStyles;
-createStyles.disableEndMargin = { marginRight: 0 };
-createStyles.emoji = { height: 12, width: 12, marginRight: 4, flexShrink: 0 };
-createStyles.textEmoji = { fontSize: 10, marginRight: 4 };
-createStyles.tagName = { flexShrink: 1 };
-createStyles.container = { display: "flex", flexDirection: "row", alignItems: "center" };
-const React6 = createStyles.createStyles(createStyles);
+const React6 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/forums/native/AppliedForumTag.tsx");
 

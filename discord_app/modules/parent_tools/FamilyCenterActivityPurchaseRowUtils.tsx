@@ -43,10 +43,10 @@ export const getAvatarDecorationPreviewUrl = function getAvatarDecorationPreview
     const first = product.items[0];
     let avatarDecorationURL = null;
     if (isAvatarDecorationRecord(first)) {
-      let obj = { avatarDecoration: null, size: 40, canAnimate: true };
-      obj = { asset: first.asset };
-      obj.avatarDecoration = obj;
-      avatarDecorationURL = obj.getAvatarDecorationURL(obj);
+      const obj2 = { avatarDecoration: null, size: 40, canAnimate: true };
+      const obj3 = { asset: first.asset };
+      obj2.avatarDecoration = obj3;
+      avatarDecorationURL = AvatarUtils.getAvatarDecorationURL(obj2);
     }
     return avatarDecorationURL;
   }
@@ -81,11 +81,11 @@ export const getPurchaseDisplayInfo = function getPurchaseDisplayInfo(name, subs
     const typeName = getCollectibleTypeName(name.type);
   } else if (isSubscription) {
     if (null != subscriptionPlanId) {
-      name = undefined;
+      let name1;
       if (dependencyMap[subscriptionPlanId] != null) {
-        name = tmp4.name;
+        name1 = tmp4.name;
       }
-      displayName = name;
+      displayName = name1;
     }
   }
   return { displayName, typeName, isSubscription };

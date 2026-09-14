@@ -3,6 +3,8 @@ import GameServerActionCreators from "../../../game_server/GameServerActionCreat
 import GuildPowerupsActionCreators from "../GuildPowerupsActionCreators.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
+const require = globalThis.__r;
+
 require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/powerups/hooks/useLoadGuildPowerups.tsx");

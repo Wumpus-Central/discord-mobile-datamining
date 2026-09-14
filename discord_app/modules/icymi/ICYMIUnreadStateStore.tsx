@@ -23,6 +23,7 @@ prototype["initialize"] = function initialize(arg0) {
     tmp = found[Symbol.iterator]();
   }
   obj = { readIdToTimestampMap: tmp.readIdToTimestampMap };
+  const obj2 = { readIdToTimestampMap: tmp.readIdToTimestampMap };
 };
 prototype["getReadTimestamp"] = function getReadTimestamp(id) {
   return closure_3.readIdToTimestampMap[id];

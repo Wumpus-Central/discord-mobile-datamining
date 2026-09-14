@@ -5,7 +5,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 import PhoneStore from "../../../phone/PhoneStore.tsx";
 
 require = fn;
-const RegistrationUIStore = fn(16041);
+const RegistrationUIStore = fn(16043);
 ({ setRegistrationErrors: hasOwnProperty, useRegistrationUIStore: metroRequire } = RegistrationUIStore);
 const jsx = fn(21).jsx;
 const size = fn(2);
@@ -21,16 +21,16 @@ export const RegisterPhoneOrEmailInput = function RegisterPhoneOrEmailInput(logi
   closure_7 = undefined;
   let callback;
   ({ onSubmit, submitBehavior } = loginPhone);
-  let obj = loginPhone(setLoginPhone[4]);
-  const navigation = obj.useNavigation();
+  const navigation = loginPhone(setLoginPhone[4]).useNavigation();
   let ref = setLoginEmail.useRef(null);
-  obj = { inputRef: ref, enabled: null };
+  const obj3 = { inputRef: ref, enabled: null };
+  let obj = loginPhone(setLoginPhone[4]);
+  const tmp5 = loginEmail;
   if (autoFocus == null) {
     autoFocus = false;
   }
-  obj.enabled = autoFocus;
-  loginEmail(setLoginPhone[5])(obj);
-  const tmp5 = loginEmail;
+  obj3.enabled = autoFocus;
+  loginEmail(setLoginPhone[5])(obj3);
   const tmp6 = loginEmail(setLoginPhone[5]);
   const items = [inputMode];
   const stateFromStores = loginPhone(setLoginPhone[6]).useStateFromStores(items, () => inputMode.getCountryCode());
@@ -91,7 +91,7 @@ export const RegisterPhoneOrEmailInput = function RegisterPhoneOrEmailInput(logi
     const intl3 = tmp(tmp2[9]).intl;
     stringResult1 = intl3.string(tmp(tmp2[9]).t.a17rBk);
   }
-  obj = {
+  const obj4 = {
     ref,
     alpha2: stateFromStores.alpha2,
     countryCode: stateFromStores.code,
@@ -117,16 +117,16 @@ export const RegisterPhoneOrEmailInput = function RegisterPhoneOrEmailInput(logi
   if (inputMode === loginPhone(setLoginPhone[7]).PhoneOrEmailSelectorForceMode.PHONE) {
     str = "tel";
   }
-  obj.autoComplete = str;
+  obj4.autoComplete = str;
   let str2 = "email-address";
   if (inputMode === loginPhone(setLoginPhone[7]).PhoneOrEmailSelectorForceMode.PHONE) {
     str2 = "number-pad";
   }
-  obj.keyboardType = str2;
+  obj4.keyboardType = str2;
   let str3;
   if (null != inputError) {
     str3 = "error";
   }
-  obj.status = str3;
-  return tmp16(tmp5(setLoginPhone[10]), obj);
+  obj4.status = str3;
+  return tmp16(tmp5(setLoginPhone[10]), obj4);
 };

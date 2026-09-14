@@ -2,14 +2,16 @@
 import StageChannelParticipants from "StageChannelParticipants.tsx";
 import StageChannelParticipantStore from "StageChannelParticipantStore.tsx";
 
+const require = globalThis.__r;
+
 require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/stage_channels/useStageBlockedUsersCount.tsx");
 
-export const useStageBlockedUsersCount = function useStageBlockedUsersCount(id) {
-  _require = id;
+export const useStageBlockedUsersCount = function useStageBlockedUsersCount(id1) {
+  _require = id1;
   const items = [StageChannelParticipantStore];
-  const items1 = [id];
+  const items1 = [id1];
   return require("initialize").useStateFromStores(
     items,
     () => {
@@ -25,10 +27,10 @@ export const useStageBlockedUsersCount = function useStageBlockedUsersCount(id) 
     items1,
   );
 };
-export const useStageIgnoredUsersCount = function useStageIgnoredUsersCount(id1) {
-  _require = id1;
+export const useStageIgnoredUsersCount = function useStageIgnoredUsersCount(id2) {
+  _require = id2;
   const items = [StageChannelParticipantStore];
-  const items1 = [id1];
+  const items1 = [id2];
   return require("initialize").useStateFromStores(
     items,
     () => {

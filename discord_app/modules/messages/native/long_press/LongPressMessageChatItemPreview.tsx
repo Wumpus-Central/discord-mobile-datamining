@@ -7,10 +7,9 @@ import createStyles from "../../../../design/components/Styles/native/createStyl
 import size from "../../../../../_runtime/metro/00002__.js";
 
 const jsx = jsxProd.jsx;
-let obj = { chatItem: null };
-obj = { maxHeight: 2 * nativeDefault.space.PX_80 };
-obj.chatItem = obj;
+let obj = { chatItem: { maxHeight: 2 * nativeDefault.space.PX_80 } };
 let closure_3 = createStyles.createStyles(obj);
+const obj2 = { maxHeight: 2 * nativeDefault.space.PX_80 };
 const rowGenerator = new RowGeneratorDefault();
 const result = size.fileFinishedImporting("modules/messages/native/long_press/LongPressMessageChatItemPreview.tsx");
 

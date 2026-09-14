@@ -89,27 +89,27 @@ export const getComboPercentage = function getComboPercentage(value) {
 };
 export const getComboStyles = function getComboStyles(arg0) {
   if (1 === arg0) {
-    let obj = { color: shims.unsafe_getRawColor("BRAND_500") };
+    const obj3 = { color: shims.unsafe_getRawColor("BRAND_500") };
+    let obj = obj3;
   } else {
     if (2 !== arg0) {
       if (3 !== arg0) {
         if (4 !== arg0) {
           if (5 !== arg0) {
             if (6 === arg0) {
-              obj = { color: shims.unsafe_getRawColor("RED_400"), square: true };
+              const obj5 = { color: shims.unsafe_getRawColor("RED_400"), square: true };
+              obj = obj5;
             } else {
-              obj = { color: null, flair: true };
-              let obj1 = shims;
-              obj.color = obj1.unsafe_getRawColor("ORANGE_345");
+              obj = { color: shims.unsafe_getRawColor("ORANGE_345"), flair: true };
             }
           }
         }
-        obj1 = { color: shims.unsafe_getRawColor("YELLOW_300"), square: true };
-        obj = obj1;
+        const obj7 = { color: shims.unsafe_getRawColor("YELLOW_300"), square: true };
+        obj = obj7;
       }
     }
-    const obj2 = { color: shims.unsafe_getRawColor("GREEN_360") };
-    obj = obj2;
+    const obj9 = { color: shims.unsafe_getRawColor("GREEN_360") };
+    obj = obj9;
   }
   return obj;
 };

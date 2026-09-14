@@ -2,7 +2,7 @@
 import _mod17 from "../../../../_runtime/metro/00017__.js";
 import DeviceUtils from "../../../utils/native/DeviceUtils.tsx";
 import PlatformUtils from "../../../utils/PlatformUtils.tsx";
-import size from "../../../../_runtime/metro/00002__.js";
+import size_mod from "../../../../_runtime/metro/00002__.js";
 
 const Dimensions = _mod17.Dimensions;
 let size = Dimensions.get("screen");
@@ -16,6 +16,7 @@ if (!PlatformUtils.isAndroid()) {
   }
   num = num2;
 }
+let size = size_mod;
 const result = size.fileFinishedImporting("modules/launchpad/native/LaunchPadConstants.tsx");
 
 export const LAUNCH_PAD_SPRING_CONFIG = {

@@ -9,11 +9,9 @@ import UserSettingSearchStore from "../../../user_settings/UserSettingSearchStor
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-fn(4636);
-let createStyles = { container: null };
-createStyles = { marginTop: nativeDefault.modules.mobile.SETTINGS_PADDING_TOP };
-createStyles.container = createStyles;
-let closure_6 = createStyles.createStyles(createStyles);
+const createStyles = fn(4636);
+const obj2 = { container: { marginTop: nativeDefault.modules.mobile.SETTINGS_PADDING_TOP } };
+let closure_6 = createStyles.createStyles(obj2);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/settings/native/search/SettingSearchBar.tsx");
 
@@ -30,19 +28,11 @@ export default function SettingSearchBar() {
   const callback2 = noop.useCallback(() => {
     UserSettingSearchStore.setState({ isFocused: false });
   }, []);
-  let obj = { style: tmp.container, children: null };
+  const obj = { style: tmp.container, children: null };
   const callback3 = noop.useCallback((query) => {
     UserSettingSearchStore.setState({ query });
   }, []);
-  obj = {
-    ref: noop.useRef(null),
-    size: "md",
-    onFocus: callback1,
-    onBlur: callback2,
-    onClear: callback,
-    defaultValue: UserSettingSearchStore.getField("query"),
-    onChange: callback3,
-  };
+  const ref = noop.useRef(null);
   obj.children = jsx(SearchField.SearchField, {
     ref: noop.useRef(null),
     size: "md",
@@ -52,15 +42,5 @@ export default function SettingSearchBar() {
     defaultValue: UserSettingSearchStore.getField("query"),
     onChange: callback3,
   });
-  return (
-    <View
-      ref={noop.useRef(null)}
-      size="md"
-      onFocus={callback1}
-      onBlur={callback2}
-      onClear={callback}
-      defaultValue={UserSettingSearchStore.getField("query")}
-      onChange={callback3}
-    />
-  );
+  return <View style={tmp.container}>{null}</View>;
 }

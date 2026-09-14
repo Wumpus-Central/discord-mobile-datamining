@@ -8,7 +8,7 @@ import noop from "../../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const HappeningNowConstants = fn(15379);
+const HappeningNowConstants = fn(15380);
 ({ HAPPENING_NOW_CARD_HEIGHT: closure_4, HappeningNowItem } = HappeningNowConstants);
 const jsx = fn(21).jsx;
 const items = [, , , , , ,];
@@ -24,9 +24,7 @@ const items = [, , , , , ,];
 const set = new Set(items);
 const createStyles = fn(4636);
 let closure_7 = createStyles.createStyles((height) => {
-  let obj = { container: null };
-  obj = { height, paddingStart: nativeDefault.space.PX_8, overflow: "hidden" };
-  obj.container = obj;
+  const obj = { container: { height, paddingStart: nativeDefault.space.PX_8, overflow: "hidden" } };
   return obj;
 });
 const size = fn(2);
@@ -35,17 +33,18 @@ const result = size.fileFinishedImporting(
 );
 
 export default noop.memo(function MessagesItemHappeningNow(listRef) {
-  let obj = { backgroundColor: null, children: null };
-  obj = {
-    style: closure_7(React4 + obj.useToken(nativeDefault.modules.mobile.MESSAGES_ITEM_HAPPENING_NOW_PADDING_BOTTOM))
-      .container,
+  const obj2 = { backgroundColor: null, children: null };
+  const obj3 = {
+    style: closure_7(
+      React4 + useToken.useToken(nativeDefault.modules.mobile.MESSAGES_ITEM_HAPPENING_NOW_PADDING_BOTTOM),
+    ).container,
     collapsable: false,
     children: jsx(HappeningNowDefault, { cards: set, listRef: listRef.listRef }),
   };
-  obj.children = (
+  obj2.children = (
     <View
       style={
-        closure_7(React4 + obj.useToken(nativeDefault.modules.mobile.MESSAGES_ITEM_HAPPENING_NOW_PADDING_BOTTOM))
+        closure_7(React4 + useToken.useToken(nativeDefault.modules.mobile.MESSAGES_ITEM_HAPPENING_NOW_PADDING_BOTTOM))
           .container
       }
       collapsable={false}
@@ -53,12 +52,7 @@ export default noop.memo(function MessagesItemHappeningNow(listRef) {
       {jsx(HappeningNowDefault, { cards: set, listRef: listRef.listRef })}
     </View>
   );
-  return jsx(CutoutBackgroundContext.CutoutBackgroundProvider, {
-    style: closure_7(React4 + obj.useToken(nativeDefault.modules.mobile.MESSAGES_ITEM_HAPPENING_NOW_PADDING_BOTTOM))
-      .container,
-    collapsable: false,
-    children: jsx(HappeningNowDefault, { cards: set, listRef: listRef.listRef }),
-  });
+  return jsx(CutoutBackgroundContext.CutoutBackgroundProvider, { backgroundColor: null, children: null });
 });
 export const getMessagesItemHappeningNowHeight = function getMessagesItemHappeningNowHeight() {
   return (

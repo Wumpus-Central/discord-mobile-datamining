@@ -61,12 +61,12 @@ function handleUserSettingsProtoStoreUpdate() {
     result = null == backgroundGradientPresetId;
   }
   if (!result) {
-    let tmpResult = require("isPerModeThemingActive");
-    result = tmpResult.isPerModeThemingActive();
+    result = require("isPerModeThemingActive").isPerModeThemingActive();
+    const tmpResult = require("isPerModeThemingActive");
   }
   if (!result) {
-    tmpResult = ThemeActionCreators;
-    tmpResult.setUseSystemTheme(SystemThemeState.OFF);
+    ThemeActionCreators.setUseSystemTheme(SystemThemeState.OFF);
+    const tmpResult2 = ThemeActionCreators;
   }
   if (null != backgroundGradientPresetId) {
     let tmp10 = null == tmp9;
@@ -89,8 +89,8 @@ function handleUserSettingsProtoStoreUpdate() {
   }
 }
 const isGuildTextChannelType = fn(1961).isGuildTextChannelType;
-const dependencyMap = fn(1230).BACKGROUND_GRADIENT_PRESETS_MAP;
-const SystemThemeState = fn(1186).SystemThemeState;
+const dependencyMap = fn(1228).BACKGROUND_GRADIENT_PRESETS_MAP;
+const SystemThemeState = fn(1184).SystemThemeState;
 let closure_14 = true;
 let c15 = false;
 let c16 = false;

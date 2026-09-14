@@ -3,7 +3,7 @@ import PlatformUtils from "../../utils/PlatformUtils.tsx";
 import ThermalUtilsDefault from "ThermalUtils.native.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
-let obj = {
+const ThermalStates = {
   UNHANDLED: -1,
   [-1]: "UNHANDLED",
   NOMINAL: 0,
@@ -15,7 +15,7 @@ let obj = {
   CRITICAL: 3,
   [3]: "CRITICAL",
 };
-obj = {
+const obj2 = {
   NONE: 0,
   [0]: "NONE",
   LIGHT: 1,
@@ -34,7 +34,7 @@ obj = {
 const result = size.fileFinishedImporting("modules/device/useThermalState.tsx");
 
 export default function useThermalState() {
-  obj = ThermalUtilsDefault;
+  const obj = ThermalUtilsDefault;
   const rawThermalState = obj.useRawThermalState();
   if (null == rawThermalState) {
     let UNHANDLED = obj.UNHANDLED;
@@ -42,17 +42,17 @@ export default function useThermalState() {
     UNHANDLED = rawThermalState;
     if (!obj3.isIOS()) {
       if (tmp11Result.isAndroid()) {
-        if (obj.NONE === rawThermalState) {
+        if (obj2.NONE === rawThermalState) {
           UNHANDLED = obj.NOMINAL;
         } else {
-          if (tmp4.LIGHT !== rawThermalState) {
-            if (tmp4.MODERATE !== rawThermalState) {
-              if (tmp4.SEVERE === rawThermalState) {
+          if (obj2.LIGHT !== rawThermalState) {
+            if (obj2.MODERATE !== rawThermalState) {
+              if (obj2.SEVERE === rawThermalState) {
                 UNHANDLED = obj.SERIOUS;
               } else {
-                if (tmp4.CRITICAL !== rawThermalState) {
-                  if (tmp4.EMERGENCY !== rawThermalState) {
-                    if (tmp4.SHUTDOWN !== rawThermalState) {
+                if (obj2.CRITICAL !== rawThermalState) {
+                  if (obj2.EMERGENCY !== rawThermalState) {
+                    if (obj2.SHUTDOWN !== rawThermalState) {
                       UNHANDLED = obj.UNHANDLED;
                     }
                   }
@@ -72,10 +72,10 @@ export default function useThermalState() {
   }
   return UNHANDLED;
 }
-export const ThermalStates = obj;
-export const AndroidThermalStates = obj;
+export { ThermalStates };
+export const AndroidThermalStates = obj2;
 export const getThermalState = function getThermalState() {
-  obj = ThermalUtilsDefault;
+  const obj = ThermalUtilsDefault;
   const rawThermalState = obj.getRawThermalState();
   if (null == rawThermalState) {
     let UNHANDLED = obj.UNHANDLED;
@@ -83,17 +83,17 @@ export const getThermalState = function getThermalState() {
     UNHANDLED = rawThermalState;
     if (!obj3.isIOS()) {
       if (tmp11Result.isAndroid()) {
-        if (obj.NONE === rawThermalState) {
+        if (obj2.NONE === rawThermalState) {
           UNHANDLED = obj.NOMINAL;
         } else {
-          if (tmp4.LIGHT !== rawThermalState) {
-            if (tmp4.MODERATE !== rawThermalState) {
-              if (tmp4.SEVERE === rawThermalState) {
+          if (obj2.LIGHT !== rawThermalState) {
+            if (obj2.MODERATE !== rawThermalState) {
+              if (obj2.SEVERE === rawThermalState) {
                 UNHANDLED = obj.SERIOUS;
               } else {
-                if (tmp4.CRITICAL !== rawThermalState) {
-                  if (tmp4.EMERGENCY !== rawThermalState) {
-                    if (tmp4.SHUTDOWN !== rawThermalState) {
+                if (obj2.CRITICAL !== rawThermalState) {
+                  if (obj2.EMERGENCY !== rawThermalState) {
+                    if (obj2.SHUTDOWN !== rawThermalState) {
                       UNHANDLED = obj.UNHANDLED;
                     }
                   }

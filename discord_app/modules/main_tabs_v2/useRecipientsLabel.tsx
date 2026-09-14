@@ -4,6 +4,8 @@ import GlobalUtils from "../../utils/GlobalUtils.tsx";
 import noop from "../../../_runtime/metro/00019__.js";
 import UserStore from "../../stores/UserStore.tsx";
 
+const require = globalThis.__r;
+
 require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/useRecipientsLabel.tsx");
@@ -27,20 +29,20 @@ export const useRecipientsLabel = function useRecipientsLabel(channel) {
       if (0 !== stateFromStoresArray.length) {
         if (1 === first.length) {
           const intl4 = util.intl;
-          let obj = { first: null };
+          const obj4 = { first: null };
           first = first[0];
-          obj.first = first;
-          formatToPlainStringResult = intl4.formatToPlainString(util.t["J+Wpst"], obj);
+          obj4.first = first;
+          formatToPlainStringResult = intl4.formatToPlainString(util.t["J+Wpst"], obj4);
         } else {
           if (2 === first.length) {
             const intl3 = util.intl;
-            obj = { first: null, second: null };
             [obj3.first, obj3.second] = first;
-            formatToPlainStringResult = intl3.formatToPlainString(util.t.gwRP0Y, obj);
+            formatToPlainStringResult = intl3.formatToPlainString(util.t.gwRP0Y, { first: null, second: null });
+            const obj7 = { first: null, second: null };
           } else if (3 !== first.length) {
             const diff = first.length - 3;
             const intl = util.intl;
-            obj = { first: null, second: null, third: null, count: null };
+            const obj = { first: null, second: null, third: null, count: null };
             [obj.first, obj.second, obj.third] = first;
             obj.count = diff;
             formatToPlainStringResult = intl.formatToPlainString(util.t.VYfueb, obj);
@@ -52,7 +54,7 @@ export const useRecipientsLabel = function useRecipientsLabel(channel) {
             second: null,
             third: null,
           });
-          const obj1 = { first: null, second: null, third: null };
+          const obj8 = { first: null, second: null, third: null };
         }
       }
     }

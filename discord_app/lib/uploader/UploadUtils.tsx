@@ -53,9 +53,9 @@ LibdiscoreHttpClient.prototype["doUpload"] = function doUpload(body, arg1) {
     throw error;
   } else {
     body = body.body;
-    let uri;
+    let uri1;
     if (body != null) {
-      uri = body.uri;
+      uri1 = body.uri;
     }
     if (!tmp3) {
       // // eliminated: always false
@@ -63,15 +63,15 @@ LibdiscoreHttpClient.prototype["doUpload"] = function doUpload(body, arg1) {
       let error1 = new Error("No file path found in request body");
       throw error1;
     } else {
-      uri = body.body.uri;
-      const uri1 = body.body.uri;
+      const uri = body.body.uri;
+      const uri2 = body.body.uri;
       if (uri.startsWith("file://")) {
-        let substr = uri1.slice(7);
+        let substr = uri2.slice(7);
       } else {
-        substr = uri1;
+        substr = uri2;
       }
     }
-    tmp3 = undefined !== uri && typeof body.body.uri === "string";
+    tmp3 = undefined !== uri1 && typeof body.body.uri === "string";
   }
 };
 
@@ -116,12 +116,12 @@ export const canUploadNatively = function canUploadNatively(platform) {
     fileIsInAppDirResult = null != platform.uri;
   }
   if (fileIsInAppDirResult) {
-    let tmpResult = AttachmentFile;
-    fileIsInAppDirResult = tmpResult.fileIsInAppDir(platform.uri);
+    fileIsInAppDirResult = AttachmentFile.fileIsInAppDir(platform.uri);
+    const tmpResult = AttachmentFile;
   }
   if (fileIsInAppDirResult) {
-    tmpResult = js_shim_shim;
-    fileIsInAppDirResult = tmpResult.isLibdiscoreInitialized();
+    fileIsInAppDirResult = js_shim_shim.isLibdiscoreInitialized();
+    const tmpResult2 = js_shim_shim;
   }
   return fileIsInAppDirResult;
 };

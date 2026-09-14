@@ -10,25 +10,25 @@ const View = fn(17).View;
 const GuildProfileFetchStatus = fn(9194).GuildProfileFetchStatus;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-fn(4636);
-let createStyles = { error: null };
-createStyles = { paddingVertical: nativeDefault.space.PX_24, alignItems: "center", rowGap: nativeDefault.space.PX_12 };
-createStyles.error = createStyles;
-let closure_8 = createStyles.createStyles(createStyles);
+const createStyles = fn(4636);
+let obj2 = {
+  error: { paddingVertical: nativeDefault.space.PX_24, alignItems: "center", rowGap: nativeDefault.space.PX_12 },
+};
+let closure_8 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_settings/native/ServerTagPreviewActionSheet.tsx");
 
 export default function ServerTagPreviewActionSheet(guildId) {
   guildId = guildId.guildId;
-  let obj = guildId(9316);
-  let guildProfile = obj.useGuildProfile(guildId);
-  guildProfile = guildProfile.guildProfile;
+  const tmp = closure_8();
+  const guildProfile1 = guildId(9316).useGuildProfile(guildId);
+  let guildProfile = guildProfile1.guildProfile;
   const items = [guildId];
   const effect = noop.useEffect(() => {
     const guildProfile = GuildProfileActionCreators.getGuildProfile(guildId, false, { respectBackoff: true });
   }, items);
   if (null != guildProfile) {
-    obj = {
+    const obj2 = {
       guildId,
       tag: null,
       badge: null,
@@ -44,36 +44,36 @@ export default function ServerTagPreviewActionSheet(guildId) {
       badgeColorPrimary: obj5.primaryColor,
       badgeColorSecondary: obj5.secondaryColor,
     } = guildProfile);
-    obj.onAdopted = function onAdopted() {
+    obj2.onAdopted = function onAdopted() {
       return ActionSheetActionCreatorsDefault.hideActionSheet();
     };
-    let tmp7 = closure_6(GuildSettingsServerTagPreviewDefault, obj);
+    let tmp7 = closure_6(GuildSettingsServerTagPreviewDefault, obj2);
     let tmp8 = closure_6;
-  } else if (guildProfile.fetchStatus === GuildProfileFetchStatus.FETCHED) {
-    obj = { style: tmp.error, children: null };
-    const obj1 = { variant: "text-md/medium", color: "text-muted", children: null };
+  } else if (guildProfile1.fetchStatus === GuildProfileFetchStatus.FETCHED) {
+    const obj3 = { style: tmp.error, children: null };
+    const obj4 = { variant: "text-md/medium", color: "text-muted", children: null };
     const intl = tmp2(1114).intl;
-    obj1.children = intl.string(tmp2(1114).t.tmGHjc);
-    const items1 = [closure_6(tmp2(4632).Text, obj1)];
-    const obj2 = { variant: "secondary", text: null, onPress: null };
+    obj4.children = intl.string(tmp2(1114).t.tmGHjc);
+    const items1 = [closure_6(tmp2(4632).Text, obj4)];
+    const obj6 = { variant: "secondary", text: null, onPress: null };
     const intl2 = tmp2(1114).intl;
-    obj2.text = intl2.string(tmp2(1114).t["5911Lb"]);
-    obj2.onPress = function onPress() {
+    obj6.text = intl2.string(tmp2(1114).t["5911Lb"]);
+    obj6.onPress = function onPress() {
       return GuildProfileActionCreators.getGuildProfile(guildId, true);
     };
-    items1[1] = closure_6(tmp2(5056).Button, obj2);
-    obj.children = items1;
-    tmp7 = closure_7(View, obj);
+    items1[1] = closure_6(tmp2(5056).Button, obj6);
+    obj3.children = items1;
+    tmp7 = closure_7(View, obj3);
     tmp8 = closure_6;
   } else {
     tmp7 = closure_6(tmp2(7142).SceneLoadingIndicator, {});
     tmp8 = closure_6;
   }
-  const obj3 = { children: null };
-  const obj4 = { title: null };
+  const obj7 = { children: null };
+  const obj13 = { title: null };
   const intl3 = tmp2(1114).intl;
-  obj4.title = intl3.string(guildId(1114).t["2QmKZ2"]);
-  const items2 = [tmp8(guildId(7252).BottomSheetTitleHeader, obj4), tmp7];
-  obj3.children = items2;
-  return closure_7(guildId(7300).ActionSheet, obj3);
+  obj13.title = intl3.string(guildId(1114).t["2QmKZ2"]);
+  const items2 = [tmp8(guildId(7252).BottomSheetTitleHeader, obj13), tmp7];
+  obj7.children = items2;
+  return closure_7(guildId(7300).ActionSheet, obj7);
 }

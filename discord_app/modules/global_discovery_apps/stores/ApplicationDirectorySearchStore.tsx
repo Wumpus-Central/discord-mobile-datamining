@@ -96,7 +96,7 @@ prototype["getFetchState"] = function getFetchState(arg0) {
   ];
 };
 ApplicationDirectorySearchStore.displayName = "ApplicationDirectorySearchStore";
-obj = {
+const applicationDirectorySearchStore = new ApplicationDirectorySearchStore(DispatcherDefault, {
   APPLICATION_DIRECTORY_FETCH_SEARCH: function handleSearchFetch(arg0) {
     ({
       query,
@@ -184,10 +184,11 @@ obj = {
       source;
     obj = { lastFetchTimeMs: Date.now() };
     const merged = Object.assign(result);
-    result = closure_3.set(combined, obj);
-    obj = {};
+    const result1 = closure_3.set(combined, obj);
+    const obj2 = {};
     const merged1 = Object.assign(obj);
-    obj[combined] = obj.FETCHED;
+    obj2[combined] = obj.FETCHED;
+    obj = obj2;
   },
   APPLICATION_DIRECTORY_FETCH_SEARCH_FAILURE: function handleSearchFetchFailure(arg0) {
     ({
@@ -233,8 +234,7 @@ obj = {
     const merged = Object.assign(obj);
     obj[combined] = obj.ERROR;
   },
-};
-const applicationDirectorySearchStore = new ApplicationDirectorySearchStore(DispatcherDefault, obj);
+});
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/global_discovery_apps/stores/ApplicationDirectorySearchStore.tsx");
 

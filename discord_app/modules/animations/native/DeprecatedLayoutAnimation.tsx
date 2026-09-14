@@ -5,12 +5,11 @@ import AccessibilityStore from "../../a11y/AccessibilityStore.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
 ({ Keyboard: c2, LayoutAnimation } = get_ActivityIndicator);
-LayoutAnimation.create(150, "easeInEaseOut", "opacity");
-let obj = LayoutAnimation.create(150, "easeInEaseOut", "scaleXY");
+let obj = LayoutAnimation.create(150, "easeInEaseOut", "opacity");
 const result = size.fileFinishedImporting("modules/animations/native/DeprecatedLayoutAnimation.tsx");
 
 export const CONFIG_GUILD_FOLDER_OPACITY = obj;
-export const CONFIG_GUILD_FOLDER_SCALEXY = obj;
+export const CONFIG_GUILD_FOLDER_SCALEXY = LayoutAnimation.create(150, "easeInEaseOut", "scaleXY");
 export const DeprecatedLayoutAnimation = function DeprecatedLayoutAnimation(duration) {
   let useReducedMotion = AccessibilityStore.useReducedMotion;
   if (!useReducedMotion) {
@@ -30,19 +29,22 @@ export const DeprecatedLayoutAnimationKeyboard = function DeprecatedLayoutAnimat
     flag = false;
   }
   if (flag) {
-    let obj = PlatformUtils;
     if (!obj.isAndroid()) {
-      obj = { duration: keyboardDuration };
-      return React2.scheduleLayoutAnimation(obj);
+      const obj2 = { duration: keyboardDuration };
+      return React2.scheduleLayoutAnimation(obj2);
     }
+    obj = PlatformUtils;
   }
-  obj = { duration: keyboardDuration, update: { duration: keyboardDuration, type: LayoutAnimation.Types.keyboard } };
+  const obj3 = {
+    duration: keyboardDuration,
+    update: { duration: keyboardDuration, type: LayoutAnimation.Types.keyboard },
+  };
   let useReducedMotion = AccessibilityStore.useReducedMotion;
   if (!useReducedMotion) {
     useReducedMotion = PlatformUtils.isAndroid();
   }
   if (!useReducedMotion) {
-    LayoutAnimation.configureNext(obj);
+    LayoutAnimation.configureNext(obj3);
   }
-  const obj1 = { duration: keyboardDuration, type: LayoutAnimation.Types.keyboard };
+  const obj4 = { duration: keyboardDuration, type: LayoutAnimation.Types.keyboard };
 };

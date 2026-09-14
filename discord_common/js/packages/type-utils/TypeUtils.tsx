@@ -9,8 +9,8 @@ export function exact(arg0) {
 export const hasOwnProperty = function hasOwnProperty(key10009, Shape) {
   return key10009.hasOwnProperty(Shape);
 };
-export const dangerouslyCast = function dangerouslyCast(reduced, UnknownChannelRecord) {
-  return Object.setPrototypeOf(reduced, UnknownChannelRecord.prototype);
+export const dangerouslyCast = function dangerouslyCast(type, UnknownChannelRecord) {
+  return Object.setPrototypeOf(type, UnknownChannelRecord.prototype);
 };
 export const assertUnreachable = function assertUnreachable(id, arg1) {
   let obj = arg1;

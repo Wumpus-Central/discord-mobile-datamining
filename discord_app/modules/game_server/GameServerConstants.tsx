@@ -3,12 +3,12 @@ import UserStoreConstants from "../user/UserStoreConstants.tsx";
 import GameServerProviderType from "../../../discord_common/js/shared/shared-constants/GameServerProviderType.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
-let obj = { SELECT_GAME: "select-game", SERVER_SETTINGS: "server-settings" };
-obj = { steps: null };
-obj = { onBack: { type: "close" }, onNext: { type: "go-to-step", step: obj.SERVER_SETTINGS } };
-obj.steps = {
-  [obj.SELECT_GAME]: obj,
-  [obj.SERVER_SETTINGS]: { onBack: { type: "go-to-step", step: obj.SELECT_GAME }, onNext: { type: "save" } },
+const obj = { SELECT_GAME: "select-game", SERVER_SETTINGS: "server-settings" };
+const obj2 = {
+  steps: {
+    [obj.SELECT_GAME]: { onBack: { type: "close" }, onNext: { type: "go-to-step", step: obj.SERVER_SETTINGS } },
+    [obj.SERVER_SETTINGS]: { onBack: { type: "go-to-step", step: obj.SELECT_GAME }, onNext: { type: "save" } },
+  },
 };
 let str = "1425215263548117002";
 if ("production" !== window.GLOBAL_ENV.PROJECT_ENV) {
@@ -59,12 +59,12 @@ let str13 = "https://discord.shockbyte.com/support";
 if (window.GLOBAL_ENV.RELEASE_CHANNEL === UserStoreConstants.Environments.STAGING) {
   str13 = "https://purple-prod.shockbyte.dev/support";
 }
-const obj2 = {};
-obj2[GameServerProviderType.GameServerProviderType.SHOCKBYTE] = str13;
+const obj5 = {};
+obj5[GameServerProviderType.GameServerProviderType.SHOCKBYTE] = str13;
 const result = size.fileFinishedImporting("modules/game_server/GameServerConstants.tsx");
 
 export const GameServerSetupStep = obj;
-export const GAME_SERVER_DEFAULT_STEP_CONFIG = obj;
+export const GAME_SERVER_DEFAULT_STEP_CONFIG = obj2;
 export const GAME_SERVER_SLIDE_PADDING = 24;
 export const GAME_SERVER_SLIDE_WIDTH = 680;
 export const GAME_SERVER_SLIDE_CONTENT_WIDTH = 632;
@@ -78,7 +78,7 @@ export const MINECRAFT_GAME_ID = str5;
 export const HYTALE_GAME_ID = str8;
 export { NewGamesCoachmarkContent };
 export const GameServerGameProvider = { SHOCKBYTE: 0, [0]: "SHOCKBYTE" };
-export const GAME_SERVER_SUPPORT_URLS = obj2;
+export const GAME_SERVER_SUPPORT_URLS = obj5;
 export const GAME_SERVER_TOS = {
   [GameServerProviderType.GameServerProviderType.SHOCKBYTE]: "https://shockbyte.com/legal/acceptable-use-policy",
 };

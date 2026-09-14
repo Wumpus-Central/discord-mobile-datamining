@@ -9,10 +9,10 @@ const result = size.fileFinishedImporting("modules/safety_hub/native/AppealInges
 
 export default {
   open(classificationId) {
-    const obj = { type: "SAFETY_HUB_APPEAL_OPEN", classificationId: classificationId.classificationId };
-    obj.dispatch(obj);
+    DispatcherDefault.dispatch({ type: "SAFETY_HUB_APPEAL_OPEN", classificationId: classificationId.classificationId });
+    const obj2 = { type: "SAFETY_HUB_APPEAL_OPEN", classificationId: classificationId.classificationId };
     ModalActionCreatorsDefault.pushLazy(
-      asyncRequireImpl(12016, dependencyMap.paths),
+      asyncRequireImpl(12017, dependencyMap.paths),
       classificationId,
       APPEAL_INGESTION_MODAL_KEY,
     );

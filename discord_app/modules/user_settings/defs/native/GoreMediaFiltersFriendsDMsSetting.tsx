@@ -22,17 +22,17 @@ const pressable = SettingBuilders.createPressable({
     )();
   },
   onPress: function onGoreContentFriendsDmOnPress() {
-    let obj = { title: null, subtitle: null, handlePress: null, currentValue: null };
+    const obj = SensitiveMediaGoreRedactionSettingsUtils;
+    const obj3 = { title: null, subtitle: null, handlePress: null, currentValue: null };
     const intl = util.intl;
-    obj.title = intl.string(util.t["16/3Bi"]);
+    obj3.title = intl.string(util.t["16/3Bi"]);
     const intl2 = util.intl;
-    obj.subtitle = intl2.string(util.t["+uI23H"]);
-    obj.handlePress = function handlePress(goreContentFriendDm) {
-      const obj = { goreContentFriendDm };
-      return obj.updateGoreContentSetting(obj);
+    obj3.subtitle = intl2.string(util.t["+uI23H"]);
+    obj3.handlePress = function handlePress(goreContentFriendDm) {
+      return SensitiveMediaGoreRedactionSettingsUtils.updateGoreContentSetting({ goreContentFriendDm });
     };
-    obj.currentValue = obj.getGoreContentSettingOrDefault().goreContentFriendDm;
-    const result = ExplicitMediaRedactionNativeUtils.handleSensitiveMediaFilterPress(obj);
+    obj3.currentValue = obj.getGoreContentSettingOrDefault().goreContentFriendDm;
+    const result = ExplicitMediaRedactionNativeUtils.handleSensitiveMediaFilterPress(obj3);
   },
   useSearchTerms() {
     const intl = util.intl;

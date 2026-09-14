@@ -15,33 +15,36 @@ export default function openGuildActionSheet(id) {
   if (arg1 === undefined) {
     flag = true;
   }
-  let obj = FavoritesUtils;
   if (!obj.isFavoritesGuildId(id.id)) {
-    let obj1 = AnalyticsUtilsDefault;
-    obj = { type: "Guild Profile", guild_id: id.id };
-    obj1.track(constants.OPEN_POPOUT, obj);
-    let tmpResult = age_gate_AgeGateUtils;
+    const obj3 = { type: "Guild Profile", guild_id: id.id };
+    AnalyticsUtilsDefault.track(constants.OPEN_POPOUT, obj3);
     if (tmpResult.shouldNSFWGateGuild(id.id)) {
-      let tmp3Result = ActionSheetActionCreatorsDefault;
-      obj = { guild: id };
-      tmp3Result.openLazy(asyncRequireImpl(13995, dependencyMap.paths), "NsfwGateGuildSettingsActionSheet", obj);
+      const obj4 = { guild: id };
+      ActionSheetActionCreatorsDefault.openLazy(
+        asyncRequireImpl(13996, dependencyMap.paths),
+        "NsfwGateGuildSettingsActionSheet",
+        obj4,
+      );
+      const tmp3Result = ActionSheetActionCreatorsDefault;
     } else {
       const features = id.features;
       const hasItem = features.has(constants2.HUB);
-      tmp3Result = ActionSheetActionCreatorsDefault;
-      const openLazy = tmp3Result.openLazy;
-      tmpResult = asyncRequireImpl;
+      const openLazy = ActionSheetActionCreatorsDefault.openLazy;
+      const tmpResult2 = asyncRequireImpl;
       if (hasItem) {
         const _HermesInternal2 = HermesInternal;
-        obj1 = { guild: id, expanded: flag };
-        openLazy(tmpResult(14053, dependencyMap.paths), "GuildActionSheet:" + id.id, obj1);
-        const tmpResult1Result = tmpResult(14053, dependencyMap.paths);
+        const obj5 = { guild: id, expanded: flag };
+        openLazy(tmpResult2(14054, dependencyMap.paths), "GuildActionSheet:" + id.id, obj5);
+        const tmpResult1Result = tmpResult2(14054, dependencyMap.paths);
       } else {
         const _HermesInternal = HermesInternal;
-        const obj2 = { guild: id, expanded: flag };
-        openLazy(tmpResult(14059, dependencyMap.paths), "GuildActionSheet:" + id.id, obj2);
-        const tmpResult1Result1 = tmpResult(14059, dependencyMap.paths);
+        const obj6 = { guild: id, expanded: flag };
+        openLazy(tmpResult2(14060, dependencyMap.paths), "GuildActionSheet:" + id.id, obj6);
+        const tmpResult1Result1 = tmpResult2(14060, dependencyMap.paths);
       }
+      const tmp3Result2 = ActionSheetActionCreatorsDefault;
     }
+    tmpResult = age_gate_AgeGateUtils;
   }
+  obj = FavoritesUtils;
 }

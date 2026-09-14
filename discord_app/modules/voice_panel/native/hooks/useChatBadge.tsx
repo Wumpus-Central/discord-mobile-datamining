@@ -1,6 +1,8 @@
 // discord_app/modules/voice_panel/native/hooks/useChatBadge.tsx
 import ReadStateStore from "../../../../stores/ReadStateStore.tsx";
 
+const require = globalThis.__r;
+
 const require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_panel/native/hooks/useChatBadge.tsx");

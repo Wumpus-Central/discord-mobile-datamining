@@ -11,8 +11,8 @@ let closure_6 = async function _uploadMessageAttachments(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      let obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -25,8 +25,8 @@ let closure_6 = async function _uploadMessageAttachments(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c5 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj4 = { value, done: true };
+          return obj4;
         } else {
           closure_3 = tmp5;
           dependencyMap = tmp2;
@@ -55,8 +55,8 @@ let closure_6 = async function _uploadMessageAttachments(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c5 = 3;
-          const obj1 = { value, done: true };
-          return obj1;
+          const obj5 = { value, done: true };
+          return obj5;
         } else if (closure_131_5.has(closure_130_2)) {
           c5 = 3;
           return { value: "HermesInternal", done: null };
@@ -65,33 +65,30 @@ let closure_6 = async function _uploadMessageAttachments(arg0) {
           closure_130_5 = tmp16;
           const _HermesInternal = HermesInternal;
           closure_130_6 = "pending-upload-" + closure_130_5._file.id;
-          let obj2 = closure_131_0(closure_131_2[3]);
-          obj2 = {};
+          const obj6 = {};
           const merged = Object.assign(closure_130_1);
-          obj2.key = closure_130_6;
-          closure_130_7 = obj2.createMessageRecord(obj2);
+          obj6.key = closure_130_6;
+          closure_130_7 = closure_131_0(closure_131_2[3]).createMessageRecord(obj6);
           closure_130_5.on("start", (file) => {
             uploader.add(dependencyMap);
-            closure_1(573);
-            const obj = { type: "UPLOAD_START", channelId, file, uploader, message };
-            obj.dispatch(obj);
+            closure_1(573).dispatch({ type: "UPLOAD_START", channelId, file, uploader, message });
           });
           closure_130_5.on("compression-progress", (file) => {
-            closure_1(573);
-            const obj = { type: "UPLOAD_COMPRESSION_PROGRESS", channelId, file };
-            obj.dispatch(obj);
+            closure_1(573).dispatch({ type: "UPLOAD_COMPRESSION_PROGRESS", channelId, file });
           });
           closure_130_5.on("progress", (file) => {
-            closure_1(573);
-            const obj = { type: "UPLOAD_PROGRESS", channelId, file };
-            obj.dispatch(obj);
+            closure_1(573).dispatch({ type: "UPLOAD_PROGRESS", channelId, file });
           });
           closure_130_5.on("error", (file) => {
             uploader.delete(dependencyMap);
             uploader.cancel();
-            closure_1(573);
-            const obj = { type: "UPLOAD_FAIL", channelId, file, messageId: message.id, shouldSendNotification };
-            obj.dispatch(obj);
+            closure_1(573).dispatch({
+              type: "UPLOAD_FAIL",
+              channelId,
+              file,
+              messageId: message.id,
+              shouldSendNotification,
+            });
           });
           closure_130_5.on("complete", (id) => {
             const file = id;
@@ -105,46 +102,42 @@ let closure_6 = async function _uploadMessageAttachments(arg0) {
               _aborted = uploader._aborted;
             }
             if (_aborted) {
-              let obj = closure_1_1(573);
               id = messageForFile.nonce;
               if (id == null) {
                 id = messageForFile.id;
               }
-              obj = { type: "MESSAGE_DELETE", id, channelId: messageForFile.channel_id };
-              obj.dispatch(obj);
+              const obj2 = { type: "MESSAGE_DELETE", id, channelId: messageForFile.channel_id };
+              closure_1_1(573).dispatch(obj2);
+              const obj = closure_1_1(573);
             }
             if (uploader._aborted) {
               const _setTimeout = setTimeout;
               const timerId = setTimeout(() => {
-                closure_1(closure_2[4]);
-                const obj = { type: "UPLOAD_COMPLETE", channelId, file, aborted: true };
-                obj.dispatch(obj);
+                closure_1(closure_2[4]).dispatch({ type: "UPLOAD_COMPLETE", channelId, file, aborted: true });
               }, 0);
             }
           });
           closure_130_5.on("cancel-upload-item", (file) => {
-            closure_1(573);
-            const obj = { type: "UPLOAD_FILE_UPDATE", file, channelId };
-            obj.dispatch(obj);
+            closure_1(573).dispatch({ type: "UPLOAD_FILE_UPDATE", file, channelId });
           });
           value = {};
           c4 = 2;
           c5 = 1;
-          const obj3 = { value: closure_130_5.uploadFiles(closure_130_3), done: false };
-          return obj3;
+          const obj7 = { value: closure_130_5.uploadFiles(closure_130_3), done: false };
+          return obj7;
         }
       } else if (arg0 === 1) {
         c5 = 3;
         throw value;
       } else if (arg0 === 2) {
         c5 = 3;
-        const obj4 = { value, done: true };
-        return obj4;
+        const obj8 = { value, done: true };
+        return obj8;
       } else {
         value.attachments = value;
         value.uploader = closure_130_5;
         c5 = 3;
-        obj = { value, done: true };
+        let obj = { value, done: true };
         return obj;
       }
     } catch (tmp39) {

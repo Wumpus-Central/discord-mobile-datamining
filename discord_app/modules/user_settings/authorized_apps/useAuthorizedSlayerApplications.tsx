@@ -3,6 +3,8 @@ import AuthorizedAppsActionCreatorsDefault from "../../oauth2/AuthorizedAppsActi
 import noop from "../../../../_runtime/metro/00019__.js";
 import AuthorizedAppsStore from "../../oauth2/AuthorizedAppsStore.tsx";
 
+const require = globalThis.__r;
+
 const require = fn;
 const FetchState = fn(7210).FetchState;
 const size = fn(2);

@@ -1,7 +1,7 @@
 // discord_app/modules/forums/tracking/ForumChannelAnalyticsManager.tsx
 import "ChannelStore";
 
-let size = Object.create(
+const obj2 = Object.create(
   function ForumChannelAnalyticsManager() {
     const obj = Object.create(new.target.prototype);
     obj.setFilterTagIds = function setFilterTagIds(filterTagIds) {
@@ -64,20 +64,20 @@ let size = Object.create(
     return obj;
   }.prototype.prototype,
 );
-const ChannelStore = size;
-size.setFilterTagIds = function setFilterTagIds(filterTagIds) {
+const ChannelStore = obj2;
+obj2.setFilterTagIds = function setFilterTagIds(filterTagIds) {
   obj.filterTagIds = filterTagIds;
 };
-size.setSortOrder = function setSortOrder(sortOrder) {
+obj2.setSortOrder = function setSortOrder(sortOrder) {
   obj.sortOrder = sortOrder;
 };
-size.setLayout = function setLayout(layout) {
+obj2.setLayout = function setLayout(layout) {
   obj.layout = layout;
 };
-size.setTagSetting = function setTagSetting(tagSetting) {
+obj2.setTagSetting = function setTagSetting(tagSetting) {
   obj.tagSetting = tagSetting;
 };
-size.getFilterTagIdsAnalytics = function getFilterTagIdsAnalytics() {
+obj2.getFilterTagIdsAnalytics = function getFilterTagIdsAnalytics() {
   if (null != obj.filterTagIds) {
     const _Array = Array;
     let items = Array.from(tmp.filterTagIds);
@@ -86,7 +86,7 @@ size.getFilterTagIdsAnalytics = function getFilterTagIdsAnalytics() {
   }
   return items;
 };
-size.getSortOrderAnalytics = function getSortOrderAnalytics(id) {
+obj2.getSortOrderAnalytics = function getSortOrderAnalytics(id) {
   let sortOrder = obj.sortOrder;
   if (sortOrder == null) {
     const channel = ChannelStore.getChannel(id);
@@ -98,7 +98,7 @@ size.getSortOrderAnalytics = function getSortOrderAnalytics(id) {
   }
   return sortOrder;
 };
-size.getLayoutAnalytics = function getLayoutAnalytics(id) {
+obj2.getLayoutAnalytics = function getLayoutAnalytics(id) {
   let layout = obj.layout;
   if (layout == null) {
     const channel = ChannelStore.getChannel(id);
@@ -110,7 +110,7 @@ size.getLayoutAnalytics = function getLayoutAnalytics(id) {
   }
   return layout;
 };
-size.getTagSettingAnalytics = function getTagSettingAnalytics(id) {
+obj2.getTagSettingAnalytics = function getTagSettingAnalytics(id) {
   let tagSetting = obj.tagSetting;
   if (tagSetting == null) {
     const channel = ChannelStore.getChannel(id);
@@ -122,7 +122,7 @@ size.getTagSettingAnalytics = function getTagSettingAnalytics(id) {
   }
   return tagSetting;
 };
-size = fn(2);
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/forums/tracking/ForumChannelAnalyticsManager.tsx");
 
-export default size;
+export default obj2;

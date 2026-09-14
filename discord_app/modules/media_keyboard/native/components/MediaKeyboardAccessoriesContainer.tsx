@@ -5,14 +5,13 @@ import NativeMenuStore from "../../../native_menu/native/NativeMenuStore.tsx";
 
 require = fn;
 const jsx = fn(21).jsx;
-let PlatformUtils = fn(1150);
+const PlatformUtils = fn(1363);
 let closure_6 = PlatformUtils.isAndroid();
 const createStyles = fn(4636);
-PlatformUtils = { androidContainer: { flex: 1 }, iosContainer: null };
-PlatformUtils = {};
+let obj3 = { androidContainer: { flex: 1 }, iosContainer: null };
 let merged = Object.assign(fn(17).StyleSheet.absoluteFillObject);
-PlatformUtils.iosContainer = PlatformUtils;
-let closure_7 = createStyles.createStyles(PlatformUtils);
+obj3.iosContainer = {};
+let closure_7 = createStyles.createStyles(obj3);
 const __initData = {
   code: "function MediaKeyboardAccessoriesContainerTsx1(){const{animateOnMount,initialLayout,animatedIndex,initialPosition,animatedPosition,interpolate,IS_ANDROID}=this.__closure;const animatedMountDisabledAndNotInitialLayout=!animateOnMount&&!initialLayout.get();const animatedSheetIndexOrDefault=animatedMountDisabledAndNotInitialLayout?0:Math.min(animatedIndex.get(),0);const animatedSheetPositionOrDefault=animatedMountDisabledAndNotInitialLayout?initialPosition:animatedPosition.get();const transform=[{translateY:interpolate(animatedSheetIndexOrDefault,[-1,0],[100,0])}];if(IS_ANDROID){return{marginTop:animatedSheetPositionOrDefault,transform:transform};}return{top:animatedSheetPositionOrDefault,transform:transform};}",
 };
@@ -36,8 +35,7 @@ export default function MediaKeyboardAccessoriesContainer(animatedIndex) {
     return obj;
   }, items);
   const ref = initialPosition.useRef(false);
-  let obj = animatedIndex(animateOnMount[6]);
-  const sharedValue = obj.useSharedValue(false);
+  const sharedValue = animatedIndex(animateOnMount[6]).useSharedValue(false);
   const items1 = [sharedValue];
   const callback = initialPosition.useCallback(() => {
     if (!ref.current) {
@@ -45,6 +43,7 @@ export default function MediaKeyboardAccessoriesContainer(animatedIndex) {
       const result = sharedValue.set(true);
     }
   }, items1);
+  let obj = animatedIndex(animateOnMount[6]);
   const fn = function _() {
     let tmp = !animateOnMount;
     if (!animateOnMount) {
@@ -60,16 +59,18 @@ export default function MediaKeyboardAccessoriesContainer(animatedIndex) {
     } else {
       value = animatedPosition.get();
     }
-    let obj = { translateY: ReanimatedRexport.interpolate(num, [-1, 0], [100, 0]) };
+    const obj = { translateY: ReanimatedRexport.interpolate(num, [-1, 0], [100, 0]) };
     const items = [obj];
     if (closure_6) {
-      obj = { marginTop: value, transform: items };
+      const obj3 = { marginTop: value, transform: items };
+      let obj4 = obj3;
     } else {
-      obj = { top: value, transform: items };
+      obj4 = { top: value, transform: items };
     }
-    return obj;
+    return obj4;
   };
-  obj = {
+  const obj2 = animatedIndex(animateOnMount[6]);
+  fn.__closure = {
     animateOnMount,
     initialLayout: sharedValue,
     animatedIndex,
@@ -78,18 +79,25 @@ export default function MediaKeyboardAccessoriesContainer(animatedIndex) {
     interpolate: animatedIndex(animateOnMount[6]).interpolate,
     IS_ANDROID: sharedValue,
   };
-  fn.__closure = obj;
   fn.__workletHash = 10575537164844;
   fn.__initData = __initData;
-  const animatedStyle = animatedIndex(animateOnMount[6]).useAnimatedStyle(fn);
-  const obj2 = animatedIndex(animateOnMount[6]);
+  const animatedStyle = obj2.useAnimatedStyle(fn);
+  let obj3 = {
+    animateOnMount,
+    initialLayout: sharedValue,
+    animatedIndex,
+    initialPosition,
+    animatedPosition,
+    interpolate: animatedIndex(animateOnMount[6]).interpolate,
+    IS_ANDROID: sharedValue,
+  };
   const items2 = [open];
   const stateFromStores = animatedIndex(animateOnMount[7]).useStateFromStores(items2, () => open.isOpen());
   let str;
   if (stateFromStores) {
     str = "no-hide-descendants";
   }
-  obj = {
+  const obj5 = {
     importantForAccessibility: str,
     style: null,
     onLayout: callback,
@@ -97,6 +105,6 @@ export default function MediaKeyboardAccessoriesContainer(animatedIndex) {
     children: animatedIndex.children,
   };
   const items3 = [memo, animatedStyle];
-  obj.style = items3;
-  return ref(animatedPosition(animateOnMount[6]).View, obj);
+  obj5.style = items3;
+  return ref(animatedPosition(animateOnMount[6]).View, obj5);
 }

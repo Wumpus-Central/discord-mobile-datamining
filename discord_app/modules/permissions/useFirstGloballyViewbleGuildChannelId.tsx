@@ -2,6 +2,8 @@
 import PermissionUtilsAll from "../../utils/PermissionUtils.tsx";
 import GuildChannelStore from "../../stores/GuildChannelStore.tsx";
 
+const require = globalThis.__r;
+
 const require = fn;
 const Permissions = fn(1085).Permissions;
 const size = fn(2);

@@ -36,7 +36,7 @@ export default function ExternalPipView() {
   externalPipEnabled = tmp(obj).externalPipEnabled;
   closure_129_0 = undefined;
   const obj2 = externalPipEnabled(callback[5]);
-  [tmp3, closure_129_0] = _slicedToArray(noop.useState(false), 2);
+  [tmp3, closure_129_0] = noop.useState(false);
   callback = noop.useCallback((arg0) => {
     externalPipEnabled(arg0);
     if (!arg0) {

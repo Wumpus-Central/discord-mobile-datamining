@@ -10,6 +10,8 @@ import PermissionStore from "../../stores/PermissionStore.tsx";
 import RelationshipStore from "../../stores/RelationshipStore.tsx";
 import UserStore from "../../stores/UserStore.tsx";
 
+const require = globalThis.__r;
+
 require = fn;
 const ChannelRecord = fn(1961);
 ({
@@ -23,7 +25,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/forwarding/ForwardDestinationUtils.tsx");
 
 export const useSelectedDestinationChannel = function useSelectedDestinationChannel(selectedDestinations) {
-  const mapped = selectedDestinations.map(found(11113).getChannelIdFromDestinationId);
+  const mapped = selectedDestinations.map(found(11114).getChannelIdFromDestinationId);
   found = mapped.find(found(1369).isNotNullish);
   const items = [ChannelStore];
   const items1 = [found];
@@ -61,57 +63,56 @@ export const getDestinationIsUnavailable = function getDestinationIsUnavailable(
       tmp6 = tmp7;
     }
     if (null != channel) {
-      let obj = require("AgeGateUtils");
       if (obj.isChannelOrGuildNSFW(channel)) {
         if (tmp) {
-          let tmp11Result = tmp11(4847);
+          tmp11(4847);
         }
-        obj = { label: null, lineClamp: 2 };
+        const obj2 = { label: null, lineClamp: 2 };
         const intl = tmp11(1114).intl;
-        obj.label = intl.string(tmp11(1114).t.KgPx1D);
-        return obj;
+        obj2.label = intl.string(tmp11(1114).t.KgPx1D);
+        return obj2;
       }
       if (tmp) {
         if (closure_6(type.type)) {
           if (components.attachments.length > 0) {
             if (!PermissionStore.can(constants2.ATTACH_FILES, type)) {
-              obj = { label: null };
+              const obj3 = { label: null };
               const intl2 = tmp11(1114).intl;
-              obj.label = intl2.string(tmp11(1114).t.P7yvbm);
-              return obj;
+              obj3.label = intl2.string(tmp11(1114).t.P7yvbm);
+              return obj3;
             }
           } else {
             const messageSnapshots = components.messageSnapshots;
           }
           if (components.embeds.length > 0) {
-            tmp11Result = tmp11(4973);
-            if (!tmp11Result.canEmbedLinks(type, PermissionStore)) {
-              if (!tmp11Result1.shouldStripEmbeds(components)) {
-                const obj1 = { label: null };
+            if (!tmp11Result5.canEmbedLinks(type, PermissionStore)) {
+              if (!tmp11Result6.shouldStripEmbeds(components)) {
+                const obj4 = { label: null };
                 const intl3 = tmp11(1114).intl;
-                obj1.label = intl3.string(tmp11(1114).t.Wr4RIX);
-                return obj1;
+                obj4.label = intl3.string(tmp11(1114).t.Wr4RIX);
+                return obj4;
               }
-              tmp11Result1 = tmp11(4973);
+              tmp11Result6 = tmp11(4973);
             }
+            tmp11Result5 = tmp11(4973);
           } else {
             const messageSnapshots2 = components.messageSnapshots;
           }
           if (tmp5) {
-            if (!tmp11Result2.canEmbedLinks(type, PermissionStore)) {
-              const obj2 = { label: null };
+            if (!tmp11Result7.canEmbedLinks(type, PermissionStore)) {
+              const obj5 = { label: null };
               const intl4 = tmp11(1114).intl;
-              obj2.label = intl4.string(tmp11(1114).t.Wr4RIX);
-              return obj2;
+              obj5.label = intl4.string(tmp11(1114).t.Wr4RIX);
+              return obj5;
             }
-            tmp11Result2 = tmp11(4973);
+            tmp11Result7 = tmp11(4973);
           }
           const items = [];
           const messageSnapshots3 = components.messageSnapshots;
-          let arraySpreadResult = HermesBuiltin.arraySpread(tmp11(4975).getMessageStickers(components), 0);
-          arraySpreadResult = HermesBuiltin.arraySpread(
+          const tmp11Result8 = tmp11(4975);
+          HermesBuiltin.arraySpread(
             messageSnapshots3.flatMap((message) => type(dependencyMap[12]).getMessageStickers(message.message)),
-            arraySpreadResult,
+            HermesBuiltin.arraySpread(tmp11(4975).getMessageStickers(components), 0),
           );
           if (items.length > 0) {
             if (!PermissionStore.can(constants2.USE_EXTERNAL_STICKERS, type)) {
@@ -129,26 +130,27 @@ export const getDestinationIsUnavailable = function getDestinationIsUnavailable(
                   return isGuildStickerResult;
                 })
               ) {
-                const obj3 = { label: null };
+                const obj6 = { label: null };
                 const intl5 = tmp11(1114).intl;
-                obj3.label = intl5.string(tmp11(1114).t["0Yyrua"]);
-                return obj3;
+                obj6.label = intl5.string(tmp11(1114).t["0Yyrua"]);
+                return obj6;
               }
             }
           }
           if (components.hasFlag(constants.IS_VOICE_MESSAGE)) {
             if (!PermissionStore.can(constants2.SEND_VOICE_MESSAGES, type)) {
-              const obj4 = { label: null };
+              const obj7 = { label: null };
               const intl6 = tmp11(1114).intl;
-              obj4.label = intl6.string(tmp11(1114).t.quj4DY);
-              return obj4;
+              obj7.label = intl6.string(tmp11(1114).t.quj4DY);
+              return obj7;
             }
           } else {
             const messageSnapshots4 = components.messageSnapshots;
           }
-          const tmp11Result3 = tmp11(4975);
+          const arraySpreadResult = HermesBuiltin.arraySpread(tmp11(4975).getMessageStickers(components), 0);
         }
       }
+      obj = require("AgeGateUtils");
     }
   }
 };

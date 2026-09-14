@@ -79,15 +79,14 @@ export const shouldInstallApplicationOnDemand = function shouldInstallApplicatio
   if (!tmp) {
     let tmp6 = applicationId !== BuiltInSectionId.BUILT_IN;
     if (tmp6) {
-      let obj = ApplicationCommandIndexStore;
       const result = ApplicationCommandIndexStore.hasUserStateApplication(applicationId);
       let tmp8 = !result;
       if (!result) {
         let tmp9 = null == channel;
         if (!tmp9) {
-          obj = { applicationId, channelId: null, guildId: null };
+          const obj3 = { applicationId, channelId: null, guildId: null };
           ({ id: obj2.channelId, guild_id: obj2.guildId } = channel);
-          tmp9 = !obj.hasContextStateApplication(obj);
+          tmp9 = !ApplicationCommandIndexStore.hasContextStateApplication(obj3);
         }
         tmp8 = tmp9;
       }

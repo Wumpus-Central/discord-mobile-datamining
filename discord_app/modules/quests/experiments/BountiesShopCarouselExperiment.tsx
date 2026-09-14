@@ -2,13 +2,13 @@
 import ApexExperiment from "../../experiments/apex/index.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
-let obj = {
+const obj = {
   name: "2026-06-bounties-shop-carousel",
   kind: "user",
   defaultConfig: { placement: "none", sortType: "popularity", buttonVariant: "default", clickable: false },
   variations: null,
 };
-obj = {
+const obj2 = {
   1: null,
   2: { placement: "outside", sortType: "popularity", buttonVariant: "default", clickable: false },
   3: { placement: "inside", sortType: "popularity", buttonVariant: "default", clickable: false },
@@ -16,8 +16,8 @@ obj = {
   5: { placement: "replace_media", sortType: "popularity", buttonVariant: "default", clickable: false },
   6: { placement: "none", sortType: "popularity", buttonVariant: "blurple", clickable: false },
 };
-obj[6] = { placement: "outside", sortType: "popularity", buttonVariant: "default", clickable: true };
-obj.variations = obj;
+obj2[6] = { placement: "outside", sortType: "popularity", buttonVariant: "default", clickable: true };
+obj.variations = obj2;
 const apexExperiment = ApexExperiment.createApexExperiment(obj);
 const result = size.fileFinishedImporting("modules/quests/experiments/BountiesShopCarouselExperiment.tsx");
 

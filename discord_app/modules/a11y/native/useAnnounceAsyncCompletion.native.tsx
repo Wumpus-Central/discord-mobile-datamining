@@ -59,6 +59,6 @@ export default function useAnnounceAsyncCompletion() {
       return resolved;
     }
     resolved = Promise.resolve();
-    obj = intl(1150);
+    obj = intl(1363);
   }, []);
 }

@@ -5,6 +5,8 @@ import AppealIngestionExternalLinkDefault from "AppealIngestionExternalLink.tsx"
 import noop from "../../../../_runtime/metro/00019__.js";
 import SafetyHubStore from "../SafetyHubStore.tsx";
 
+const require = globalThis.__r;
+
 const require = fn;
 const View = fn(17).View;
 const SafetyHubConstants = fn(8537);
@@ -20,15 +22,17 @@ const result = size.fileFinishedImporting("modules/safety_hub/native/AppealInges
 export default function AppealIngestionSpeedBump(arg0) {
   ({ isCoppa, isSpam, isDeveloperClassification } = arg0);
   _require = undefined;
-  let obj = require("initialize");
+  const tmp = closure_10();
   const items = [SafetyHubStore];
-  let stateFromStores = obj.useStateFromStores(items, () => appealClassificationId.getAppealClassificationId());
-  let obj1 = require("useSafetyHubClassifications");
+  let stateFromStores = require("initialize").useStateFromStores(items, () =>
+    appealClassificationId.getAppealClassificationId(),
+  );
+  const obj = require("initialize");
   if (stateFromStores == null) {
     stateFromStores = EMPTY_STRING_SNOWFLAKE_ID;
   }
-  const safetyHubClassification = obj1.useSafetyHubClassification(stateFromStores);
-  const tmp = closure_10();
+  const safetyHubClassification = require("useSafetyHubClassifications").useSafetyHubClassification(stateFromStores);
+  const obj2 = require("useSafetyHubClassifications");
   _require = require("useEmitAppealIngestionEvent").useEmitAppealIngestionEvent();
   ({ isDsaEligible, classification } = safetyHubClassification);
   let str;
@@ -56,78 +60,83 @@ export default function AppealIngestionSpeedBump(arg0) {
       subHeaderText: intl2.string(require("util").t.URt7VI),
     }),
   ];
-  obj = { style: tmp.container, children: null };
+  const obj3 = { style: tmp.container, children: null };
   let tmp9Result = flagged_content.length > 0;
   if (tmp9Result) {
-    obj = { flaggedContent: flagged_content };
-    tmp9Result = closure_8(AppealIngestionActivitySummaryDefault, obj);
+    const obj4 = { flaggedContent: flagged_content };
+    tmp9Result = closure_8(AppealIngestionActivitySummaryDefault, obj4);
   }
-  const items2 = [tmp9Result, , , , , ,];
-  obj1 = { classification: safetyHubClassification.classification };
-  items2[1] = closure_8(AppealIngestionPolicySummaryDefault, obj1);
-  tmp9Result = isCoppa;
+  const items2 = [
+    tmp9Result,
+    closure_8(AppealIngestionPolicySummaryDefault, { classification: safetyHubClassification.classification }),
+    ,
+    ,
+    ,
+    ,
+  ];
+  let tmp9Result3 = isCoppa;
   if (isCoppa) {
-    const obj2 = { text: null, url: null, onPress: null };
-    let tmp13Result = AppealIngestionExternalLinkDefault;
+    const obj6 = { text: null, url: null, onPress: null };
     const intl3 = tmp2(1114).intl;
-    obj2.text = intl3.string(tmp2(1114).t["gJs+kf"]);
-    obj2.url = constants.AGE_VERIFICATION_LINK;
-    obj2.onPress = function onPress() {
+    obj6.text = intl3.string(tmp2(1114).t["gJs+kf"]);
+    obj6.url = constants.AGE_VERIFICATION_LINK;
+    obj6.onPress = function onPress() {
       return closure_0(hasOwnProperty.ClickAgeVerificationLink);
     };
-    tmp9Result = closure_8(tmp13Result, obj2);
+    tmp9Result3 = closure_8(AppealIngestionExternalLinkDefault, obj6);
+    const tmp13Result = AppealIngestionExternalLinkDefault;
   }
-  items2[2] = tmp9Result;
+  items2[2] = tmp9Result3;
   if (isSpam) {
     isSpam = !isCoppa;
   }
   if (isSpam) {
-    const obj3 = { text: null, url: null, onPress: null };
-    tmp13Result = AppealIngestionExternalLinkDefault;
+    const obj7 = { text: null, url: null, onPress: null };
     const intl4 = tmp2(1114).intl;
-    obj3.text = intl4.string(tmp2(1114).t.NBsJvm);
-    obj3.url = constants.SPAM_LINK;
-    obj3.onPress = function onPress() {
+    obj7.text = intl4.string(tmp2(1114).t.NBsJvm);
+    obj7.url = constants.SPAM_LINK;
+    obj7.onPress = function onPress() {
       return closure_0(hasOwnProperty.ClickSpamWebformLink);
     };
-    isSpam = closure_8(tmp13Result, obj3);
+    isSpam = closure_8(AppealIngestionExternalLinkDefault, obj7);
+    const tmp13Result4 = AppealIngestionExternalLinkDefault;
   }
   items2[3] = isSpam;
   if (isDeveloperClassification) {
-    const obj4 = { text: null, url: null, onPress: null };
+    const obj8 = { text: null, url: null, onPress: null };
     const intl5 = tmp2(1114).intl;
-    obj4.text = intl5.string(tmp2(1114).t.n9cZTH);
-    obj4.url = constants.APP_APPEAL_LINK;
-    obj4.onPress = function onPress() {
+    obj8.text = intl5.string(tmp2(1114).t.n9cZTH);
+    obj8.url = constants.APP_APPEAL_LINK;
+    obj8.onPress = function onPress() {
       return closure_0(hasOwnProperty.ClickAppAppealLink);
     };
-    isDeveloperClassification = closure_8(AppealIngestionExternalLinkDefault, obj4);
-    const tmp13Result1 = AppealIngestionExternalLinkDefault;
+    isDeveloperClassification = closure_8(AppealIngestionExternalLinkDefault, obj8);
+    const tmp13Result5 = AppealIngestionExternalLinkDefault;
   }
   items2[4] = isDeveloperClassification;
-  let tmp9Result1 = !isCoppa;
+  let tmp9Result4 = !isCoppa;
   if (!isCoppa) {
-    const obj5 = { text: null, url: null, onPress: null };
+    const obj9 = { text: null, url: null, onPress: null };
     const intl6 = tmp2(1114).intl;
-    obj5.text = intl6.string(tmp2(1114).t["Vtyn/7"]);
-    obj5.url = str;
-    obj5.onPress = function onPress() {
+    obj9.text = intl6.string(tmp2(1114).t["Vtyn/7"]);
+    obj9.url = str;
+    obj9.onPress = function onPress() {
       return closure_0(hasOwnProperty.ClickLearnMoreLink);
     };
-    tmp9Result1 = closure_8(AppealIngestionExternalLinkDefault, obj5);
-    const tmp13Result2 = AppealIngestionExternalLinkDefault;
+    tmp9Result4 = closure_8(AppealIngestionExternalLinkDefault, obj9);
+    const tmp13Result6 = AppealIngestionExternalLinkDefault;
   }
-  items2[5] = tmp9Result1;
+  items2[5] = tmp9Result4;
   if (isDsaEligible) {
-    const obj6 = { variant: "text-xs/normal", children: null };
+    const obj10 = { variant: "text-xs/normal", children: null };
     const intl7 = tmp2(1114).intl;
-    obj6.children = intl7.format(tmp2(1114).t.WMUgCX, {});
-    isDsaEligible = closure_8(tmp2(4632).Text, obj6);
+    obj10.children = intl7.format(tmp2(1114).t.WMUgCX, {});
+    isDsaEligible = closure_8(tmp2(4632).Text, obj10);
   }
-  const obj7 = { children: null };
+  const obj11 = { children: null };
   items2[6] = isDsaEligible;
-  obj.children = items2;
-  items1[1] = closure_9(View, obj);
-  obj7.children = items1;
-  return closure_9(require("AppealIngestionModal").AppealIngestionModalScreen, obj7);
+  obj3.children = items2;
+  items1[1] = closure_9(View, obj3);
+  obj11.children = items1;
+  return closure_9(require("AppealIngestionModal").AppealIngestionModalScreen, obj11);
 }

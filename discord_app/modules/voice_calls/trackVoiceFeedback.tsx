@@ -29,7 +29,7 @@ let closure_6 = async function _trackVoiceFeedback() {
   if (closure_132_1 == null) {
     rating = "no response";
   }
-  const obj4 = {
+  const obj7 = {
     rating,
     category: closure_132_2,
     reason_code: closure_132_3,
@@ -57,22 +57,22 @@ let closure_6 = async function _trackVoiceFeedback() {
   if (closure_132_10 != null) {
     const name = closure_132_10.name;
   }
-  obj4.input_device_name = name;
+  obj7.input_device_name = name;
   if (closure_132_12 != null) {
     const name1 = closure_132_12.name;
   }
-  obj4.output_device_name = name1;
+  obj7.output_device_name = name1;
   if (closure_132_14 != null) {
     const name2 = closure_132_14.name;
   }
-  obj4.video_device_name = name2;
-  obj4.audio_subsystem = audioSubsystem;
-  obj4.audio_layer = audioLayer;
-  obj4.automatic_audio_subsystem = settings.automaticAudioSubsystem;
-  obj4.krisp_nc_model = closure_132_18;
-  obj4.audio_output_mode = closure_132_20;
+  obj7.video_device_name = name2;
+  obj7.audio_subsystem = audioSubsystem;
+  obj7.audio_layer = audioLayer;
+  obj7.automatic_audio_subsystem = settings.automaticAudioSubsystem;
+  obj7.krisp_nc_model = closure_132_18;
+  obj7.audio_output_mode = closure_132_20;
   const merged = Object.assign(closure_132_21);
-  closure_133_0(closure_133_1[4]).track(closure_132_0, obj4);
+  closure_133_0(closure_133_1[4]).track(closure_132_0, obj7);
   await "HermesInternal";
   closure_4 = tmp2;
   closure_132_0 = closure_0;

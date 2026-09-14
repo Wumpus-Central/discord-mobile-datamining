@@ -3,6 +3,8 @@ import BigFlagUtilsAll from "../../../discord_common/js/shared/utils/BigFlagUtil
 import GuildChannelStore from "../../stores/GuildChannelStore.tsx";
 import PermissionStore from "../../stores/PermissionStore.tsx";
 
+const require = globalThis.__r;
+
 const require = fn;
 let closure_4 = fn(2012).GUILD_SELECTABLE_CHANNELS_KEY;
 const Permissions = fn(1074).Permissions;

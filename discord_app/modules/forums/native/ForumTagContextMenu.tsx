@@ -14,7 +14,7 @@ export default function ForumTagContextMenu(children) {
   const enabled = DeveloperMode.useSetting();
   const intl = tagId(1114).intl;
   obj.label = intl.string(tagId(1114).t["8VG6IY"]);
-  obj.IconComponent = tagId(10757).IdIcon;
+  obj.IconComponent = tagId(10758).IdIcon;
   obj.action = function action() {
     ClipboardUtils.copy(tagId);
     ToastUtils.presentIdCopied();

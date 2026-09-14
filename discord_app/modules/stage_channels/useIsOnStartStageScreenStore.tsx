@@ -5,13 +5,15 @@ import noop from "../../../_runtime/metro/00019__.js";
 import PermissionStore from "../../stores/PermissionStore.tsx";
 import SelectedChannelStore from "../../stores/SelectedChannelStore.tsx";
 
+const require = globalThis.__r;
+
 require = fn;
-let module_560 = fn(560);
-module_560 = module_560.create(() => ({ isOnStartStageScreen: true }));
+const module_560 = fn(560);
+const obj3 = module_560.create(() => ({ isOnStartStageScreen: true }));
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/stage_channels/useIsOnStartStageScreenStore.tsx");
 
-export default module_560;
+export default obj3;
 export const setIsOnStartStageScreen = function setIsOnStartStageScreen(arg0) {
   _require = arg0;
   require("ReactBatchUpdates").batchUpdates(() => state.setState({ isOnStartStageScreen }));

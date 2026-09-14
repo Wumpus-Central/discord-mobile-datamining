@@ -16,20 +16,20 @@ let closure_7 = async function _openAppStoreOverlayMediaModal() {
   closure_129_10 = closure_129_9[0].setMediaViewerSources;
   const MediaViewerAnalytics = closure_129_9[1].MediaViewerAnalytics;
   const initVideoStateStore = closure_129_9[2].initVideoStateStore;
-  const obj4 = { text: null, onPress: null };
+  const obj8 = { text: null, onPress: null };
   const intl = closure_130_0(closure_130_2[10]).intl;
-  obj4.text = intl.string(closure_130_0(closure_130_2[10]).t.lwQdjB);
-  obj4.onPress = function onPress() {
+  obj8.text = intl.string(closure_130_0(closure_130_2[10]).t.lwQdjB);
+  obj8.onPress = function onPress() {
     if (closure_2_5.isOpen()) {
-      let tmpResult = initialIndex(sources[11]);
-      tmpResult.hideActionSheet(closure_2_6);
+      initialIndex(sources[11]).hideActionSheet(closure_2_6);
+      const tmpResult = initialIndex(sources[11]);
     } else {
-      tmpResult = initialIndex(sources[12]);
-      tmpResult.popWithKey(closure_2_6);
+      initialIndex(sources[12]).popWithKey(closure_2_6);
+      const tmpResult2 = initialIndex(sources[12]);
     }
     closure_1_5();
   };
-  const result = closure_130_0(closure_130_2[9]).setMediaModalFooterAction(obj4);
+  const result = closure_130_0(closure_130_2[9]).setMediaModalFooterAction(obj8);
   (function getMeasureInWindowFunction(measureInWindow) {
     closure_0 = measureInWindow;
     if (null != measureInWindow) {
@@ -42,16 +42,17 @@ let closure_7 = async function _openAppStoreOverlayMediaModal() {
     fn = (fn) => {
       let size = closure_0;
       if (closure_0 == null) {
-        size = { x: 0, y: 0, width: closure_2_0(sources[4]).getWindowDimensions().width, height: null };
+        const size1 = { x: 0, y: 0, width: closure_2_0(sources[4]).getWindowDimensions().width, height: null };
         const obj2 = closure_2_0(sources[4]);
-        size.height = closure_2_0(sources[4]).getWindowDimensions().height;
+        size1.height = closure_2_0(sources[4]).getWindowDimensions().height;
+        size = size1;
         const obj3 = closure_2_0(sources[4]);
       }
       fn(size.x, size.y, size.width, size.height, size.resizeMode);
     };
   })(closure_129_0)((x, y, width, height, arg4) => {
     let str = arg4;
-    let obj = {};
+    const obj = {};
     const merged = Object.assign(closure_1_7);
     obj.initialIndex = initialIndex;
     const size = { x, y, width, height, resizeMode: null };
@@ -66,17 +67,17 @@ let closure_7 = async function _openAppStoreOverlayMediaModal() {
     obj.disableMediaOverlayButton = true;
     obj.shareable = false;
     if (closure_2_5.isOpen()) {
-      let tmp3Result = initialIndex(sources[11]);
+      const tmp3Result = initialIndex(sources[11]);
       tmp3Result.openLazy(closure_0(sources[6])(sources[13], sources.paths), closure_2_6, obj, "stack");
     } else {
-      tmp3Result = initialIndex(sources[12]);
-      tmp3Result.pushLazy(closure_0(sources[6])(sources[13], sources.paths), obj, closure_2_6, { animation: "none" });
+      const tmp3Result2 = initialIndex(sources[12]);
+      tmp3Result2.pushLazy(closure_0(sources[6])(sources[13], sources.paths), obj, closure_2_6, { animation: "none" });
     }
-    obj = { sources, initialIndex };
-    closure_1_10(obj);
-    obj = { channelId, numMediaItems: sources.length, source };
-    closure_1_11.markSessionStarted(obj);
+    closure_1_10({ sources, initialIndex });
+    closure_1_11.markSessionStarted({ channelId, numMediaItems: sources.length, source });
     closure_1_12();
+    const obj2 = { sources, initialIndex };
+    const obj3 = { channelId, numMediaItems: sources.length, source };
   });
   await "HermesInternal";
   initialIndex = tmp2;

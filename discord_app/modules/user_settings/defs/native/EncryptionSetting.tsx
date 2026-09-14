@@ -5,18 +5,16 @@ import useSecureFramesVerifiedUsers from "../../../rtc/hooks/useSecureFramesVeri
 import SecureFramesPersistedStore from "../../../rtc/SecureFramesPersistedStore.tsx";
 
 require = fn;
-fn(11601);
-let SettingBuilders = {
+const SettingBuilders = fn(11602);
+const route = SettingBuilders.createRoute({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.x8U2eC);
   },
   useDescription: function useSecureFramesEncryptionDescription() {
-    let obj = useSecureFramesVerifiedUsers;
-    const secureFramesVerifiedUserIds = obj.useSecureFramesVerifiedUserIds();
+    const secureFramesVerifiedUserIds = useSecureFramesVerifiedUsers.useSecureFramesVerifiedUserIds();
     const intl = util.intl;
-    obj = { count: secureFramesVerifiedUserIds.length };
-    return intl.formatToPlainString(util.t["6vrePS"], obj);
+    return intl.formatToPlainString(util.t["6vrePS"], { count: secureFramesVerifiedUserIds.length });
   },
   parent: fn(8079).MobileUserSettings.DATA_AND_PRIVACY,
   usePredicate: function useSecureFramesPersistentCodesValue() {
@@ -29,10 +27,9 @@ let SettingBuilders = {
       return require("SettingsSecureFramesScreen").default;
     },
   },
-};
-SettingBuilders = SettingBuilders.createRoute(SettingBuilders);
+});
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/EncryptionSetting.tsx");
 
-export default SettingBuilders;
-export const SecureFramesEncryptionSetting = SettingBuilders;
+export default route;
+export const SecureFramesEncryptionSetting = route;

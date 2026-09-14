@@ -12,7 +12,7 @@ export default function useAccessibilityPress(current, label) {
   }, items);
   const items1 = [label];
   return noop.useMemo(() => {
-    let obj = {
+    const obj = {
       onAccessibilityAction(nativeEvent) {
         if ("activate" === nativeEvent.nativeEvent.actionName) {
           ref.current();
@@ -20,8 +20,7 @@ export default function useAccessibilityPress(current, label) {
       },
       accessibilityActions: null,
     };
-    obj = { name: "activate", label };
-    const items = [obj];
+    const items = [{ name: "activate", label }];
     obj.accessibilityActions = items;
     return obj;
   }, items1);

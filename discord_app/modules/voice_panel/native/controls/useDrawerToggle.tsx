@@ -2,8 +2,10 @@
 import trackVoicePanelTabOpened from "trackVoicePanelTabOpened.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
+const require = globalThis.__r;
+
 require = fn;
-const VoicePanelControlsModes = fn(12400).VoicePanelControlsModes;
+const VoicePanelControlsModes = fn(12401).VoicePanelControlsModes;
 const __initData = {
   code: "function useDrawerToggleTsx1(){const{controlsSpecs,VoicePanelControlsModes}=this.__closure;return controlsSpecs.get().mode===VoicePanelControlsModes.DRAWER;}",
 };
@@ -16,15 +18,13 @@ export default function useDrawerToggle(arg0) {
   controlsSpecs = context.controlsSpecs;
   connected = context.connected;
   dismissPanel = context.dismissPanel;
-  require("ReanimatedRexport");
   const fn = function l() {
     return controlsSpecs.get().mode === VoicePanelControlsModes.DRAWER;
   };
-  let obj = { controlsSpecs, VoicePanelControlsModes };
-  fn.__closure = obj;
+  fn.__closure = { controlsSpecs, VoicePanelControlsModes };
   fn.__workletHash = 900483810235;
   fn.__initData = __initData;
-  const derivedValue = obj.useDerivedValue(fn);
+  const derivedValue = require("ReanimatedRexport").useDerivedValue(fn);
   const tmp3 = controlsSpecs(connected[4])(derivedValue);
   const items = [arg0, dismissPanel, connected, controlsSpecs];
   const callback = dismissPanel.useCallback(() => {
@@ -40,7 +40,9 @@ export default function useDrawerToggle(arg0) {
       closure_0(obj);
     }
   }, items);
-  obj = { isDrawerOpen: tmp3, handlePress: callback, accessibilityLabel: null, ariaHidden: null };
+  const obj3 = { isDrawerOpen: tmp3, handlePress: callback, accessibilityLabel: null, ariaHidden: null };
+  let obj = require("ReanimatedRexport");
+  const obj2 = { controlsSpecs, VoicePanelControlsModes };
   const intl = require("util").intl;
   const string = intl.string;
   const t = require("util").t;
@@ -49,7 +51,7 @@ export default function useDrawerToggle(arg0) {
   } else {
     stringResult = string(t.OXW7dL);
   }
-  obj.accessibilityLabel = stringResult;
-  obj.ariaHidden = !controlsSpecs(connected[4])(connected);
-  return obj;
+  obj3.accessibilityLabel = stringResult;
+  obj3.ariaHidden = !controlsSpecs(connected[4])(connected);
+  return obj3;
 }

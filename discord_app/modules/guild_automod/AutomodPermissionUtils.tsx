@@ -1,6 +1,8 @@
 // discord_app/modules/guild_automod/AutomodPermissionUtils.tsx
 import GuildMemberStore from "../../stores/GuildMemberStore.tsx";
 
+const require = globalThis.__r;
+
 const require = fn;
 const GuildMemberFlags = fn(4262).GuildMemberFlags;
 let items = [, ,];

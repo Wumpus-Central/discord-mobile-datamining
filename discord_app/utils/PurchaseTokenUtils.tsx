@@ -1,7 +1,7 @@
 // discord_app/utils/PurchaseTokenUtils.tsx
 import Storage3 from "../../discord_common/js/packages/storage/Storage.tsx";
 import DurationsDefault from "Durations.tsx";
-import v1 from "../../_runtime/01256_v1.js";
+import v1 from "../../_runtime/01254_v1.js";
 import asyncGeneratorStep from "../../_runtime/00005_asyncGeneratorStep.js";
 
 require = fn;

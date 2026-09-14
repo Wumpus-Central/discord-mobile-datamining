@@ -4,6 +4,8 @@ import _modDef2428 from "../GuildPowerups.messages.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import AppliedGuildBoostStore from "../../../../stores/AppliedGuildBoostStore.tsx";
 
+const require = globalThis.__r;
+
 require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/powerups/hooks/useGuildPowerupsWarningConfig.tsx");
@@ -54,8 +56,8 @@ export default function useGuildPowerupsWarningConfig(arg0, arg1) {
       const intl = util.intl;
       obj.title = intl.string(_modDef2428.n5hQhc);
       const intl2 = util.intl;
-      obj = { boostCount: diff, perksString: closure_1.join(", ") };
-      obj.description = intl2.formatToPlainString(_modDef2428.iAaAiG, obj);
+      const obj2 = { boostCount: diff, perksString: closure_1.join(", ") };
+      obj.description = intl2.formatToPlainString(_modDef2428.iAaAiG, obj2);
       obj.requiredBoostCount = diff;
     }
     return obj;

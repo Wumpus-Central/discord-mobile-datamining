@@ -4,6 +4,8 @@ import _modDef4228 from "../../../../../_runtime/metro/04228__.js";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
+const require = globalThis.__r;
+
 require = fn;
 const Keyboard = fn(17).Keyboard;
 const jsx = fn(21).jsx;
@@ -23,7 +25,7 @@ export default noop.forwardRef((date, arg1) => {
   }
   function openDatePicker() {
     Keyboard.dismiss();
-    const obj = {
+    const obj2 = {
       onSubmit: updateDate,
       title: label,
       startDate: null,
@@ -32,6 +34,7 @@ export default noop.forwardRef((date, arg1) => {
       requireDateChanged: true,
     };
     let toDateResult;
+    const obj = ActionSheetActionCreatorsDefault;
     if (date != null) {
       toDateResult = date.toDate();
     }
@@ -40,14 +43,14 @@ export default noop.forwardRef((date, arg1) => {
       const result = obj4.set("year", obj4.year() - 10);
       toDateResult = obj4.toDate();
     }
-    obj.startDate = toDateResult;
+    obj2.startDate = toDateResult;
     const obj5 = _modDef4228();
     const result1 = obj5.set("year", obj5.year() - 3);
-    obj.maximumDate = obj5.toDate();
+    obj2.maximumDate = obj5.toDate();
     const obj6 = _modDef4228();
     const result2 = obj6.set("year", obj6.year() - 100);
-    obj.minimumDate = obj6.toDate();
-    obj.openLazy(asyncRequireImpl(9847, dependencyMap.paths), "DatePicker", obj);
+    obj2.minimumDate = obj6.toDate();
+    obj.openLazy(asyncRequireImpl(9847, dependencyMap.paths), "DatePicker", obj2);
     const tmp4 = asyncRequireImpl(9847, dependencyMap.paths);
   }
   ({ style, error } = date);
@@ -66,7 +69,7 @@ export default noop.forwardRef((date, arg1) => {
   let tmp4 = label;
   const tmp5 = require("../../../../../_runtime/metro/04228__.js");
   const formatResult1 = require("../../../../../_runtime/metro/04228__.js")(obj.toDate()).format("L");
-  obj = {
+  let obj2 = {
     style,
     ref,
     value: null,
@@ -88,16 +91,16 @@ export default noop.forwardRef((date, arg1) => {
   if (formatResult == null) {
     str2 = "";
   }
-  obj.value = str2;
-  obj.placeholder = formatResult1;
-  obj.clearButtonVisibility = date(tmp4[8]).ClearButtonVisibility.NEVER;
+  obj2.value = str2;
+  obj2.placeholder = formatResult1;
+  obj2.clearButtonVisibility = date(tmp4[8]).ClearButtonVisibility.NEVER;
   let tmp10 = formatResult1;
   if (null != formatResult) {
     tmp10 = formatResult;
   }
-  obj.accessibilityLabel = "" + label + ", " + tmp10;
-  obj.onPress = openDatePicker;
-  obj.label = label;
-  obj.error = error;
-  return tmp8(require("FreeFormInputGroup"), obj);
+  obj2.accessibilityLabel = "" + label + ", " + tmp10;
+  obj2.onPress = openDatePicker;
+  obj2.label = label;
+  obj2.error = error;
+  return tmp8(require("FreeFormInputGroup"), obj2);
 });

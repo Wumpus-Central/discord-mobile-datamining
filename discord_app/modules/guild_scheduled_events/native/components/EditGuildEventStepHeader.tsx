@@ -20,21 +20,22 @@ const result = size.fileFinishedImporting(
 export default function EditGuildEventStepHeader(children) {
   const subtitle = children.subtitle;
   const tmp = closure_5();
-  let obj = { style: tmp.header, children: null };
-  obj = {
-    style: tmp.headerTitle,
-    accessibilityRole: "header",
-    variant: "heading-xl/semibold",
-    color: "mobile-text-heading-primary",
-    children: children.title,
-  };
-  const items = [React3(Text_Text.Text, obj)];
+  const obj = { style: tmp.header, children: null };
+  const items = [
+    React3(Text_Text.Text, {
+      style: tmp.headerTitle,
+      accessibilityRole: "header",
+      variant: "heading-xl/semibold",
+      color: "mobile-text-heading-primary",
+      children: children.title,
+    }),
+  ];
   let tmp4Result = null;
   if (null != subtitle) {
     tmp4Result = null;
     if ("" !== subtitle) {
-      obj = { style: tmp.headerSubtitle, variant: "text-sm/medium", color: "text-default", children: subtitle };
-      tmp4Result = React3(Text_Text.Text, obj);
+      const obj3 = { style: tmp.headerSubtitle, variant: "text-sm/medium", color: "text-default", children: subtitle };
+      tmp4Result = React3(Text_Text.Text, obj3);
     }
   }
   items[1] = tmp4Result;

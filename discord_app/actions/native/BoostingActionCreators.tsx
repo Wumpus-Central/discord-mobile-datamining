@@ -7,8 +7,11 @@ const PREMIUM_GUILD_SUBSCRIBE_MODAL_KEY = "PREMIUM_GUILD_SUBSCRIBE_MODAL_KEY";
 const result = size.fileFinishedImporting("actions/native/BoostingActionCreators.tsx");
 
 export const openApplyBoostModal = function openApplyBoostModal(guildId) {
-  const obj = { guildId };
-  obj.pushLazy(asyncRequireImpl(5516, dependencyMap.paths), obj, PREMIUM_GUILD_SUBSCRIBE_MODAL_KEY);
+  ModalActionCreatorsDefault.pushLazy(
+    asyncRequireImpl(5516, dependencyMap.paths),
+    { guildId },
+    PREMIUM_GUILD_SUBSCRIBE_MODAL_KEY,
+  );
 };
 export const openTransferModal = function openTransferModal(arg0) {
   ({ guildBoostSlots, guildId, intent, onResult } = arg0);

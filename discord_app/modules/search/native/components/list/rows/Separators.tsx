@@ -5,13 +5,12 @@ const View = fn(17).View;
 const SearchConstants = fn(7982);
 ({ MEDIA_ITEM_GAP_WIDTH, FILES_OR_LINKS_GAP_WIDTH } = SearchConstants);
 const jsx = fn(21).jsx;
-fn(4636);
-const createStyles = {
+const createStyles = fn(4636);
+let closure_2 = createStyles.createStyles({
   filesOrLinksSeparator: { height: FILES_OR_LINKS_GAP_WIDTH },
   mediaSeparator: { height: MEDIA_ITEM_GAP_WIDTH },
   messageSeparator: { height: 4 },
-};
-let closure_2 = createStyles.createStyles(createStyles);
+});
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/search/native/components/list/rows/Separators.tsx");
 

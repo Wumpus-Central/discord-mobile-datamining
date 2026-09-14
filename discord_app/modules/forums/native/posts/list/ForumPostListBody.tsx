@@ -28,16 +28,15 @@ export default function ForumPostListBody(arg0) {
   ({ thread, firstMessage, hasUnreads, isNew, media } = arg0);
   ({ containerStyle, firstMessageLoaded, messageContent, isEmbed, isLocalDeviceMedia, senderModifier } = arg0);
   const tmp = closure_7();
-  let obj = GameInvitesChannelUtils;
-  const isGameInvitesPost = obj.useIsGameInvitesPost(thread);
-  obj = { style: null, children: null };
+  const isGameInvitesPost = GameInvitesChannelUtils.useIsGameInvitesPost(thread);
+  const obj2 = { style: null, children: null };
   const items = [tmp.body, containerStyle];
-  obj.style = items;
-  obj = { style: tmp.contentContainer, children: null };
-  const obj1 = { style: tmp.details, children: null };
+  obj2.style = items;
+  const obj3 = { style: tmp.contentContainer, children: null };
+  const obj4 = { style: tmp.details, children: null };
   if (isNew) {
-    const obj2 = { containerStyle: tmp.newTagContainer };
-    isNew = hasOwnProperty(ForumPostNewTagDefault, obj2);
+    const obj5 = { containerStyle: tmp.newTagContainer };
+    isNew = hasOwnProperty(ForumPostNewTagDefault, obj5);
   }
   const items1 = [
     isNew,
@@ -48,12 +47,12 @@ export default function ForumPostListBody(arg0) {
       format: ForumTimestampFormats.POSTED_DURATION_AGO,
     }),
   ];
-  obj1.children = items1;
-  const items2 = [timestampProducer(View, obj1), ,];
+  obj4.children = items1;
+  const items2 = [timestampProducer(View, obj4), ,];
   let tmp9Result = !isGameInvitesPost;
   if (!isGameInvitesPost) {
-    const obj4 = { title: thread.name, lineClamp: 2, ellipsizeMode: "tail", hasUnreads };
-    tmp9Result = hasOwnProperty(ForumPostTitleDefault, obj4);
+    const obj7 = { title: thread.name, lineClamp: 2, ellipsizeMode: "tail", hasUnreads };
+    tmp9Result = hasOwnProperty(ForumPostTitleDefault, obj7);
   }
   items2[1] = tmp9Result;
   items2[2] = hasOwnProperty(ForumPostMessageContentDefault, {
@@ -64,27 +63,27 @@ export default function ForumPostListBody(arg0) {
     hasUnreads,
     senderModifier,
   });
-  obj.children = items2;
-  const items3 = [timestampProducer(View, obj)];
+  obj3.children = items2;
+  const items3 = [timestampProducer(View, obj3)];
   let blocked;
   if (firstMessage != null) {
     blocked = firstMessage.blocked;
   }
-  tmp9Result = null;
+  let tmp9Result2 = null;
   if (!blocked) {
-    tmp9Result = null;
+    tmp9Result2 = null;
     if (null != media) {
-      const obj5 = { channel: thread, media, isEmbed, isLocalDeviceMedia, firstMessageId: null, containerStyle: null };
+      const obj8 = { channel: thread, media, isEmbed, isLocalDeviceMedia, firstMessageId: null, containerStyle: null };
       let id;
       if (firstMessage != null) {
         id = firstMessage.id;
       }
-      obj5.firstMessageId = id;
-      obj5.containerStyle = tmp.thumbnailContainer;
-      tmp9Result = hasOwnProperty(ForumPostMedia.ForumPostMediaThumbnail, obj5);
+      obj8.firstMessageId = id;
+      obj8.containerStyle = tmp.thumbnailContainer;
+      tmp9Result2 = hasOwnProperty(ForumPostMedia.ForumPostMediaThumbnail, obj8);
     }
   }
-  items3[1] = tmp9Result;
-  obj.children = items3;
-  return timestampProducer(View, obj);
+  items3[1] = tmp9Result2;
+  obj2.children = items3;
+  return timestampProducer(View, obj2);
 }

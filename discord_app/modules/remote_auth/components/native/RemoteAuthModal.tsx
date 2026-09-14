@@ -11,19 +11,19 @@ import components_Button_Button from "../../../../design/components/Button/nativ
 import ButtonGroup from "../../../../design/components/ButtonGroup/native/ButtonGroup.native.tsx";
 import ActivityIndicator_ActivityIndicator from "../../../../design/components/ActivityIndicator/native/ActivityIndicator.native.tsx";
 import DeprecatedLayoutAnimation from "../../../animations/native/DeprecatedLayoutAnimation.tsx";
-import _modDef13950 from "../../../../../_runtime/metro/13950__.js";
-import _modDef13952 from "../../../../../_runtime/metro/13952__.js";
+import _modDef13951 from "../../../../../_runtime/metro/13951__.js";
 import _modDef13953 from "../../../../../_runtime/metro/13953__.js";
 import _modDef13954 from "../../../../../_runtime/metro/13954__.js";
+import _modDef13955 from "../../../../../_runtime/metro/13955__.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 function RemoteAuthBody(remoteAuthFingerprint) {
   remoteAuthFingerprint = remoteAuthFingerprint.remoteAuthFingerprint;
-  [tmp3, importDefault] = _slicedToArray(noop.useState(constants.LOADING), 2);
+  [tmp3, importDefault] = noop.useState(constants.LOADING);
   const tmp2 = _slicedToArray(noop.useState(constants.LOADING), 2);
-  [tmp5, dependencyMap] = _slicedToArray(noop.useState(null), 2);
+  [tmp5, dependencyMap] = noop.useState(null);
   const items = [remoteAuthFingerprint];
   const effect = noop.useEffect(() => {
     const HTTP = HTTPUtils.HTTP;
@@ -75,37 +75,22 @@ function RemoteAuthLogin(arg0) {
   dependencyMap = undefined;
   _slicedToArray = undefined;
   const tmp = closure_12();
-  [tmp3, c2] = _slicedToArray(noop.useState(false), 2);
+  [tmp3, c2] = noop.useState(false);
   const tmp2 = _slicedToArray(noop.useState(false), 2);
-  [tmp5, c3] = _slicedToArray(noop.useState(false), 2);
+  [tmp5, c3] = noop.useState(false);
   const effect = noop.useEffect(() => {
     const timeout = setTimeout(() => {
       closure_1_2(true);
     }, 1000);
     return () => clearTimeout(closure_0);
   }, []);
-  let obj = _modDef12;
-  let tmp10 = !tmp3;
   const tmp4 = _slicedToArray(noop.useState(false), 2);
+  let tmp10 = !tmp3;
   if (!tmp3) {
     tmp10 = !tmp5;
   }
-  obj = { children: null };
-  obj = { source: _modDef13953, style: tmp.mainImage };
-  const items = [closure_9(closure_6, obj), , ,];
-  const obj1 = { variant: "heading-md/extrabold", children: null };
-  const intl = util.intl;
-  obj1.children = intl.string(util.t.jD2pqF);
-  items[1] = closure_9(Text_Text.Heading, obj1);
-  const obj2 = { style: tmp.warningCaption, children: null };
-  const intl2 = util.intl;
-  obj2.children = intl2.string(util.t["hcd/kh"]);
-  items[2] = closure_9(native.LegacyText, obj2);
-  const obj3 = { style: tmp.buttonGroup, children: null };
-  const obj4 = { text: null, onPress: null, disabled: null };
-  const intl3 = util.intl;
-  obj4.text = intl3.string(util.t.N3qV8e);
-  obj4.onPress = obj.throttle(
+  const obj2 = { children: null };
+  const throttleResult = _modDef12.throttle(
     () => {
       _undefined(true);
       const HTTP = HTTPUtils.HTTP;
@@ -128,12 +113,26 @@ function RemoteAuthLogin(arg0) {
     1000,
     { leading: true, trailing: false },
   );
-  obj4.disabled = tmp10;
-  const items1 = [closure_9(components_Button_Button.Button, obj4, "" + tmp10)];
-  const obj5 = { variant: "secondary", text: null, onPress: null };
+  const items = [closure_9(closure_6, { source: _modDef13954, style: tmp.mainImage }), , ,];
+  const obj4 = { variant: "heading-md/extrabold", children: null };
+  const intl = util.intl;
+  obj4.children = intl.string(util.t.jD2pqF);
+  items[1] = closure_9(Text_Text.Heading, obj4);
+  const obj5 = { style: tmp.warningCaption, children: null };
+  const intl2 = util.intl;
+  obj5.children = intl2.string(util.t["hcd/kh"]);
+  items[2] = closure_9(native.LegacyText, obj5);
+  const obj6 = { style: tmp.buttonGroup, children: null };
+  const obj7 = { text: null, onPress: null, disabled: null };
+  const intl3 = util.intl;
+  obj7.text = intl3.string(util.t.N3qV8e);
+  obj7.onPress = throttleResult;
+  obj7.disabled = tmp10;
+  const items1 = [closure_9(components_Button_Button.Button, obj7, "" + tmp10)];
+  const obj8 = { variant: "secondary", text: null, onPress: null };
   const intl4 = util.intl;
-  obj5.text = intl4.string(util.t["ETE/oC"]);
-  obj5.onPress = function onPress() {
+  obj8.text = intl4.string(util.t["ETE/oC"]);
+  obj8.onPress = function onPress() {
     const HTTP = HTTPUtils.HTTP;
     const request = {
       url: Endpoints.REMOTE_AUTH_CANCEL,
@@ -142,56 +141,54 @@ function RemoteAuthLogin(arg0) {
       rejectWithError: true,
     };
     HTTP.post(request);
-    let arr = ModalActionCreatorsDefault;
-    arr = arr.pop();
+    ModalActionCreatorsDefault.pop();
   };
-  items1[1] = closure_9(components_Button_Button.Button, obj5);
-  obj3.children = items1;
-  items[3] = closure_10(ButtonGroup.ButtonGroup, obj3);
-  obj.children = items;
-  return closure_10(closure_11, obj);
+  items1[1] = closure_9(components_Button_Button.Button, obj8);
+  obj6.children = items1;
+  items[3] = closure_10(ButtonGroup.ButtonGroup, obj6);
+  obj2.children = items;
+  return closure_10(closure_11, obj2);
 }
 function RemoteAuthLoginSucceeded() {
   const tmp = closure_12();
-  let obj = { children: null };
-  obj = { source: _modDef13954, style: tmp.mainImage };
-  const items = [React7(timestampProducer, obj), , ,];
-  obj = { variant: "heading-xl/extrabold", children: null };
+  const obj = { children: null };
+  const items = [React7(timestampProducer, { source: _modDef13955, style: tmp.mainImage }), , ,];
+  const obj3 = { variant: "heading-xl/extrabold", children: null };
   const intl = util.intl;
-  obj.children = intl.string(util.t.HbwTOZ);
-  items[1] = React7(Text_Text.Heading, obj);
-  const obj1 = { style: tmp.caption, variant: "text-md/medium", color: "text-muted", children: null };
+  obj3.children = intl.string(util.t.HbwTOZ);
+  items[1] = React7(Text_Text.Heading, obj3);
+  const obj4 = { style: tmp.caption, variant: "text-md/medium", color: "text-muted", children: null };
   const intl2 = util.intl;
-  obj1.children = intl2.string(util.t.wKknJ0);
-  items[2] = React7(Text_Text.Text, obj1);
-  const obj2 = { style: tmp.buttonGroup, children: null };
-  const obj3 = { text: null, onPress: null };
+  obj4.children = intl2.string(util.t.wKknJ0);
+  items[2] = React7(Text_Text.Text, obj4);
+  const obj5 = { style: tmp.buttonGroup, children: null };
+  const obj6 = { text: null, onPress: null };
   const intl3 = util.intl;
-  obj3.text = intl3.string(util.t.pYWLA0);
-  obj3.onPress = ModalActionCreatorsDefault.pop;
-  obj2.children = React7(components_Button_Button.Button, obj3);
-  items[3] = React7(ButtonGroup.ButtonGroup, obj2);
+  obj6.text = intl3.string(util.t.pYWLA0);
+  obj6.onPress = ModalActionCreatorsDefault.pop;
+  obj5.children = React7(components_Button_Button.Button, obj6);
+  items[3] = React7(ButtonGroup.ButtonGroup, obj5);
   obj.children = items;
   return closure_1_10(closure_1_11, obj);
 }
 function RemoteAuthNotFound() {
   const tmp = closure_12();
-  let obj = { children: null };
-  obj = { variant: "heading-xl/extrabold", children: null };
+  const obj = { children: null };
+  const obj2 = { variant: "heading-xl/extrabold", children: null };
   const intl = util.intl;
-  obj.children = intl.string(util.t.NShI3Q);
-  const items = [React7(Text_Text.Heading, obj), ,];
-  obj = { style: tmp.caption, variant: "text-md/medium", color: "text-muted", children: null };
+  obj2.children = intl.string(util.t.NShI3Q);
+  const items = [React7(Text_Text.Heading, obj2), ,];
+  const obj3 = { style: tmp.caption, variant: "text-md/medium", color: "text-muted", children: null };
   const intl2 = util.intl;
-  obj.children = intl2.string(util.t.Ygezov);
-  items[1] = React7(Text_Text.Text, obj);
-  const obj1 = { style: tmp.buttonGroup, children: null };
-  const obj2 = { text: null, onPress: null };
+  obj3.children = intl2.string(util.t.Ygezov);
+  items[1] = React7(Text_Text.Text, obj3);
+  const obj4 = { style: tmp.buttonGroup, children: null };
+  const obj5 = { text: null, onPress: null };
   const intl3 = util.intl;
-  obj2.text = intl3.string(util.t["ETE/oC"]);
-  obj2.onPress = ModalActionCreatorsDefault.pop;
-  obj1.children = React7(components_Button_Button.Button, obj2);
-  items[2] = React7(ButtonGroup.ButtonGroup, obj1);
+  obj5.text = intl3.string(util.t["ETE/oC"]);
+  obj5.onPress = ModalActionCreatorsDefault.pop;
+  obj4.children = React7(components_Button_Button.Button, obj5);
+  items[2] = React7(ButtonGroup.ButtonGroup, obj4);
   obj.children = items;
   return closure_1_10(closure_1_11, obj);
 }
@@ -206,20 +203,27 @@ get_ActivityIndicator = fn(17);
 const Endpoints = fn(1074).Endpoints;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10, Fragment: closure_11 } = jsxProd);
-fn(4636);
-let createStyles = {
+const createStyles = fn(4636);
+let obj2 = {
   background: { width: "100%", height: "100%" },
   container: { flex: 1, alignItems: "stretch", alignContent: "center" },
   imageStyle: { resizeMode: "cover" },
   logo: { position: "absolute", top: 16, alignSelf: "center", width: 32, height: 32 },
   mainImage: { marginTop: 16, marginBottom: 32 },
-  warningCaption: null,
-  caption: null,
+  warningCaption: {
+    fontSize: 16,
+    lineHeight: 20,
+    color: nativeDefault.unsafe_rawColors.RED_400,
+    textAlign: "center",
+    marginTop: 8,
+    marginBottom: 32,
+  },
+  caption: { lineHeight: 20, textAlign: "center", marginTop: 8, marginBottom: 32 },
   mainCard: null,
   buttonGroup: null,
   loadingContainer: null,
 };
-createStyles = {
+let obj3 = {
   fontSize: 16,
   lineHeight: 20,
   color: nativeDefault.unsafe_rawColors.RED_400,
@@ -227,9 +231,7 @@ createStyles = {
   marginTop: 8,
   marginBottom: 32,
 };
-createStyles.warningCaption = createStyles;
-createStyles.caption = { lineHeight: 20, textAlign: "center", marginTop: 8, marginBottom: 32 };
-createStyles.mainCard = {
+obj2.mainCard = {
   display: "flex",
   flexDirection: "column",
   alignItems: "center",
@@ -245,9 +247,9 @@ createStyles.mainCard = {
   shadowRadius: 2,
   shadowOffset: { height: 2, width: 0 },
 };
-createStyles.buttonGroup = { paddingVertical: 0 };
-createStyles.loadingContainer = { height: 300, justifyContent: "center" };
-let closure_12 = createStyles.createStyles(createStyles);
+obj2.buttonGroup = { paddingVertical: 0 };
+obj2.loadingContainer = { height: 300, justifyContent: "center" };
+let closure_12 = createStyles.createStyles(obj2);
 const constants = {
   LOADING: 0,
   [0]: "LOADING",
@@ -263,18 +265,18 @@ let result = size.fileFinishedImporting("modules/remote_auth/components/native/R
 
 export default function RemoteAuth(arg0) {
   const tmp = closure_12();
-  let obj = { source: _modDef13952, imageStyle: null, style: null, children: null };
+  const obj = { source: _modDef13953, imageStyle: null, style: null, children: null };
   ({ imageStyle: obj.imageStyle, background: obj.style } = tmp);
-  obj = { style: null, source: _modDef13950 };
+  const obj2 = { style: null, source: _modDef13951 };
   const items = [tmp.logo, { marginTop: useSafeAreaInsetsDefault().top }];
-  obj.style = items;
-  const items1 = [React7(timestampProducer, obj)];
-  obj = { style: tmp.container, children: null };
-  const obj1 = { style: tmp.mainCard, children: null };
+  obj2.style = items;
+  const items1 = [React7(timestampProducer, obj2)];
+  const obj3 = { style: tmp.container, children: null };
+  const obj4 = { style: tmp.mainCard, children: null };
   const merged = Object.assign(arg0);
-  obj1.children = React7(RemoteAuthBody, {});
-  obj.children = React7(React5, obj1);
-  items1[1] = React7(React5, obj);
+  obj4.children = React7(RemoteAuthBody, {});
+  obj3.children = React7(React5, obj4);
+  items1[1] = React7(React5, obj3);
   obj.children = items1;
   return closure_1_10(hasOwnProperty, obj);
 }

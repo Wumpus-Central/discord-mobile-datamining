@@ -35,7 +35,7 @@ export const GuildBadgeSnail = function GuildBadgeSnail(width) {
     width,
     Object.assign({ width: 0, height: 0, primaryTintColor: 0, secondaryTintColor: 0 }),
   );
-  let obj = {
+  const transformedBadgeColors = GuildBadgeUtils.getTransformedBadgeColors({
     primaryBaseColors,
     primaryTintColor,
     primaryTintLuminances,
@@ -44,15 +44,14 @@ export const GuildBadgeSnail = function GuildBadgeSnail(width) {
     secondaryTintColor,
     secondaryTintLuminances,
     secondaryLuminanceWeights: items1,
-  };
-  const transformedBadgeColors = obj.getTransformedBadgeColors(obj);
+  });
   ({ primaryColorsTransformed, secondaryColorsTransformed } = transformedBadgeColors);
-  obj = {};
+  const obj3 = {};
   const merged1 = Object.assign(merged);
-  obj.width = num;
-  obj.height = num2;
-  obj.viewBox = "0 0 16 16";
-  obj.fill = "none";
+  obj3.width = num;
+  obj3.height = num2;
+  obj3.viewBox = "0 0 16 16";
+  obj3.fill = "none";
   items = [
     React2(inlineStyles.Path, {
       d: "M9 13h-1v-1h1v1ZM8 12h-1v-1h1v1ZM7 11h-1v-2h1v2ZM12 10h-1v-1h1v1ZM11 9h-1v-1h1v1ZM13 9h-1v-1h1v1ZM12 8h-1v-1h1v1ZM2 6H1v-1h1v1ZM8 5h-2v-1h2v1ZM4 2h-1V1h1v1Z",
@@ -100,6 +99,6 @@ export const GuildBadgeSnail = function GuildBadgeSnail(width) {
     d: "M13 15h2v-1h1v2H4v-1h3v-1h6v1ZM4 15h-1v-1h1v1ZM3 14H2v-1h1v1ZM7 14h-1v-1h1v1ZM15 14h-2v-1h1v-1h1v2ZM2 13H1v-1h1v1ZM6 13h-1v-1h1v1ZM1 12H0V5h1v7ZM16 12h-1V6h1v6ZM6 9h-1v1h-1v-1h-1v-1h3v1ZM5 1h1V0h2v2h-1V1h-1v1h-1v1h-1v1h1v-1h1V2h1v1h6v1H6v1h1v3h-1v-2h-1v-1h-2V2h1V1h-1V0h2v1ZM15 6h-1v-1h1v1ZM2 5H1V2h1v3ZM14 5h-1v-1h1v1ZM3 2H2V1h1v1Z",
     fill: "black",
   });
-  obj.children = items;
-  return React3(inlineStyles.Svg, obj);
+  obj3.children = items;
+  return React3(inlineStyles.Svg, obj3);
 };

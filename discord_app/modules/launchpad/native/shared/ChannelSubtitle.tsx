@@ -9,14 +9,13 @@ require = fn;
 function ChannelSubtitle(arg0) {
   ({ muted, textProps } = arg0);
   ({ connected, channelId, guildId, subtitle } = arg0);
-  let obj = getChannelSubtitleData;
-  const channelSubtitleData = obj.getChannelSubtitleData(subtitle);
+  const channelSubtitleData = getChannelSubtitleData.getChannelSubtitleData(subtitle);
   if (null == channelSubtitleData) {
     return null;
   } else {
-    obj = {};
+    const obj2 = {};
     const merged = Object.assign(textProps);
-    obj = {
+    const obj3 = {
       content: channelSubtitleData.subtitle,
       muted: null,
       channelId: null,
@@ -28,24 +27,17 @@ function ChannelSubtitle(arg0) {
     if (muted == null) {
       flag = false;
     }
-    obj.muted = flag;
-    obj.channelId = channelId;
-    obj.guildId = guildId;
-    obj.disableAnimatedEmoji = !("voice" === channelSubtitleData.type && connected);
+    obj3.muted = flag;
+    obj3.channelId = channelId;
+    obj3.guildId = guildId;
+    obj3.disableAnimatedEmoji = !("voice" === channelSubtitleData.type && connected);
     let str = "text-subtle";
     if (muted) {
       str = "text-muted";
     }
-    obj.color = str;
-    obj.children = MessagePreviewMarkup.renderMessagePreviewMarkup(obj);
-    return jsx(Text_Text.Text, {
-      content: channelSubtitleData.subtitle,
-      muted: null,
-      channelId: null,
-      guildId: null,
-      disableAnimatedEmoji: null,
-      color: null,
-    });
+    obj3.color = str;
+    obj2.children = MessagePreviewMarkup.renderMessagePreviewMarkup(obj3);
+    return jsx(Text_Text.Text, {});
   }
 }
 const SUBTITLE_OPACITY_NORMAL = fn(10246).SUBTITLE_OPACITY_NORMAL;
@@ -58,7 +50,7 @@ export const renderChannelSubtitle = function renderChannelSubtitle(arg0) {
   if (null == subtitle) {
     return null;
   } else {
-    let obj = {
+    const obj2 = {
       variant: getLayoutStylesDefault().messagePreview.text.variant,
       color: "text-muted",
       lineClamp: 1,
@@ -69,15 +61,15 @@ export const renderChannelSubtitle = function renderChannelSubtitle(arg0) {
     if (!muted) {
       num = SUBTITLE_OPACITY_NORMAL;
     }
-    obj = { opacity: num };
-    obj.style = obj;
+    const obj = { opacity: num };
+    obj2.style = obj;
     if (typeof subtitle === "string") {
-      obj = {};
-      const merged = Object.assign(obj);
-      obj.children = subtitle;
+      const obj3 = {};
+      const merged = Object.assign(obj2);
+      obj3.children = subtitle;
       let tmp9 = jsx(Text_Text.Text, {});
     } else {
-      const obj1 = { channelId: tmp, guildId: tmp2, subtitle, muted, connected: tmp3, textProps: obj };
+      const obj4 = { channelId: tmp, guildId: tmp2, subtitle, muted, connected: tmp3, textProps: obj2 };
       tmp9 = (
         <ChannelSubtitle
           channelId={tmp}
@@ -85,7 +77,7 @@ export const renderChannelSubtitle = function renderChannelSubtitle(arg0) {
           subtitle={subtitle}
           muted={muted}
           connected={tmp3}
-          textProps={obj}
+          textProps={obj2}
         />
       );
     }

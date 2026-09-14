@@ -200,8 +200,8 @@ class BaseActivityPanelController {
         ReanimatedRexport.runOnJS(sharedValue)(arg0);
       }
     };
-    obj = { runOnJS: tmp5(tmp2[12]).runOnJS, setWrapperGestureInProgress: tmp28 };
-    fn2.__closure = obj;
+    obj1 = { runOnJS: tmp5(tmp2[12]).runOnJS, setWrapperGestureInProgress: tmp28 };
+    fn2.__closure = obj1;
     fn2.__workletHash = 5831467313798;
     fn2.__initData = closure_19;
     animatedReaction = tmp5Result4.useAnimatedReaction(fn, fn2);
@@ -229,7 +229,7 @@ class BaseActivityPanelController {
     items5[4] = tmp9;
     items5[5] = tmp12;
     items5[6] = sharedValue1;
-    obj1 = {
+    obj11 = {
       value: obj3.useMemo(
         () => ({
           mode,
@@ -244,7 +244,7 @@ class BaseActivityPanelController {
       ),
       children,
     };
-    return jsx(context.Provider, obj1);
+    return jsx(context.Provider, obj11);
   }
 }
 const Constants = fn(1920);
@@ -309,10 +309,8 @@ let result = size.fileFinishedImporting("modules/activities/panel/native/Activit
 
 export default function ActivityPanelController(children) {
   let mode;
-  let obj = mode(504);
   const items = [EmbeddedActivitiesStore, ApplicationStore];
-  const stateFromStoresObject = obj.useStateFromStoresObject(items, () => {
-    let obj = EmbeddedActivitiesStore;
+  const stateFromStoresObject = mode(504).useStateFromStoresObject(items, () => {
     const activityPanelMode = EmbeddedActivitiesStore.getActivityPanelMode();
     const connectedActivityLocation = EmbeddedActivitiesStore.getConnectedActivityLocation();
     const selfEmbeddedActivityForLocation =
@@ -328,7 +326,7 @@ export default function ActivityPanelController(children) {
     const embeddedActivityLocationChannelId = mode(dependencyMap[27]).getEmbeddedActivityLocationChannelId(
       connectedActivityLocation,
     );
-    obj = {
+    const obj3 = {
       mode: activityPanelMode,
       connectedActivityInTextChannelId: null,
       hasConnectedActivity: null,
@@ -342,16 +340,16 @@ export default function ActivityPanelController(children) {
         tmp9 = embeddedActivityLocationChannelId;
       }
     }
-    obj.connectedActivityInTextChannelId = tmp9;
-    obj.hasConnectedActivity = null != selfEmbeddedActivityForLocation;
-    obj.connectedActivityAppId = applicationId;
-    obj.currentApp = application;
+    obj3.connectedActivityInTextChannelId = tmp9;
+    obj3.hasConnectedActivity = null != selfEmbeddedActivityForLocation;
+    obj3.connectedActivityAppId = applicationId;
+    obj3.currentApp = application;
     let orientationLockStateForApp;
     if (null != applicationId) {
-      orientationLockStateForApp = obj.getOrientationLockStateForApp(applicationId);
+      orientationLockStateForApp = EmbeddedActivitiesStore.getOrientationLockStateForApp(applicationId);
     }
-    obj.orientationLockStateForApp = orientationLockStateForApp;
-    return obj;
+    obj3.orientationLockStateForApp = orientationLockStateForApp;
+    return obj3;
   }, []);
   mode = stateFromStoresObject.mode;
   const connectedActivityInTextChannelId = stateFromStoresObject.connectedActivityInTextChannelId;
@@ -361,26 +359,17 @@ export default function ActivityPanelController(children) {
     if (mode === ActivityPanelModes.PANEL) {
       const channel = ChannelStore.getChannel(connectedActivityInTextChannelId);
       if (undefined !== channel) {
-        const obj = { guildId: null, channelId: null };
         ({ guild_id: obj2.guildId, id: obj2.channelId } = channel);
-        const channel1 = obj.selectChannel(obj);
+        const channel1 = SelectedChannelActionCreatorsDefault.selectChannel({ guildId: null, channelId: null });
+        const obj4 = { guildId: null, channelId: null };
         transitionToChannel.transitionToChannel(channel.id);
       }
     }
   }, items1);
-  obj = {
-    context: connectedActivityInTextChannelId(17124),
-    orientationLockStateForApp,
-    mode,
-    hasConnectedActivity,
-    connectedActivityAppId,
-    currentApp,
-    updateActivityPanelMode: EmbeddedActivitiesActionCreatorsAll.updateActivityPanelMode,
-    children: children.children,
-  };
+  let obj = mode(504);
   return (
     <BaseActivityPanelController
-      context={connectedActivityInTextChannelId(17124)}
+      context={connectedActivityInTextChannelId(17126)}
       orientationLockStateForApp={orientationLockStateForApp}
       mode={mode}
       hasConnectedActivity={hasConnectedActivity}

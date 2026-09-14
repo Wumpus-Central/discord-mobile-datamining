@@ -3,6 +3,8 @@ import ReactBatchUpdates from "../../../discord_common/js/shared/utils/ReactBatc
 import 00560__ from "../../../_runtime/metro/00560__.js";
 import size from "../../../_runtime/metro/00002__.js";
 
+const require = globalThis.__r;
+
 let closure_2 = { errors: null, emailToken: null };
 const useChangeEmailStore = module_560.create(() => closure_2);
 const result = size.fileFinishedImporting("modules/verification/ChangeEmailStore.tsx");
@@ -13,12 +15,12 @@ export const setChangeEmailError = function setChangeEmailError(arg0, arg1) {
   _require = arg0;
   dependencyMap = arg1;
   require("ReactBatchUpdates").batchUpdates(() => state.setState((errors) => {
-    errors = { errors: null };
-    errors = {};
+    const obj = { errors: null };
+    const obj2 = {};
     const merged = Object.assign(errors.errors);
-    errors[closure_1_0] = closure_1_1;
-    errors.errors = errors;
-    return errors;
+    obj2[closure_1_0] = closure_1_1;
+    obj.errors = obj2;
+    return obj;
   }));
 };
 export const useChangeEmailError = function useChangeEmailError(arg0) {
@@ -35,12 +37,12 @@ export const useChangeEmailError = function useChangeEmailError(arg0) {
     (arg0) => {
       closure_1 = arg0;
       ReactBatchUpdates.batchUpdates(() => state.setState((errors) => {
-        errors = { errors: null };
-        errors = {};
+        const obj = { errors: null };
+        const obj2 = {};
         const merged = Object.assign(errors.errors);
-        errors[closure_1_0] = closure_1_1;
-        errors.errors = errors;
-        return errors;
+        obj2[closure_1_0] = closure_1_1;
+        obj.errors = obj2;
+        return obj;
       }));
     }
   ];
@@ -49,7 +51,7 @@ export const useChangeEmailError = function useChangeEmailError(arg0) {
 export const setEmailToken = function setEmailToken(emailToken) {
   _require = emailToken;
   require("ReactBatchUpdates").batchUpdates(() => {
-    obj = { emailToken };
+    const obj = { emailToken };
     return obj.setState(obj);
   });
 };

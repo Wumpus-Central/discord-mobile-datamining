@@ -3,6 +3,8 @@ import RelationshipStore from "../../stores/RelationshipStore.tsx";
 import TypingStore from "../../stores/TypingStore.tsx";
 import UserStore from "../../stores/UserStore.tsx";
 
+const require = globalThis.__r;
+
 const require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/chat/useTypingUsersIds.tsx");

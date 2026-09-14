@@ -1,12 +1,12 @@
 // discord_common/js/packages/i18n/parse.tsx
 import _modDef4333 from "../../../../_runtime/metro/04333__.js";
-import _modDef17344 from "../../../../_runtime/metro/17344__.js";
+import _modDef17346 from "../../../../_runtime/metro/17346__.js";
 import markdownRules from "markdownRules.tsx";
 import i18n_updateRules from "updateRules.web.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 
 require = fn;
-const Constants = fn(17387);
+const Constants = fn(17389);
 ({ FORMAT_RE: metroRequire, MARKDOWN_RE: closure_7, UNSAFE_RE: closure_8, UNSAFE_RE_ALL: closure_9 } = Constants);
 class FormattedMessage {
   constructor(arg0, arg1, arg2) {
@@ -32,7 +32,7 @@ prototype["format"] = function format(arg0) {
     const first = tmp2[0];
     const intlMessage2 = self.intlMessage;
     const formatResult = intlMessage2.format(first);
-    if (typeof f119798 === "function") {
+    if (typeof f119801 === "function") {
       const hasItem = formatResult.includes("\n\n");
       let text = formatResult;
       if (hasItem) {
@@ -40,8 +40,8 @@ prototype["format"] = function format(arg0) {
 
   `;
       }
-      obj = { inline: !hasItem, context: first, unsafeContext: tmp2[1] };
-      return closure_131_1(closure_131_0(text, obj));
+      const obj2 = { inline: !hasItem, context: first, unsafeContext: tmp2[1] };
+      return closure_131_1(closure_131_0(text, obj2));
     } else {
       throw new TypeError("Trying to call a non-function");
     }
@@ -52,7 +52,7 @@ prototype["format"] = function format(arg0) {
 };
 prototype["astFormat"] = function astFormat(arg0) {
   const tmp = _slicedToArray(this.getContext(arg0), 2);
-  if (typeof f119799 === "function") {
+  if (typeof f119802 === "function") {
     const obj = { inline: false, context: tmp[0], unsafeContext: tmp[1] };
     return closure_132_0(tmp2 + "\n\n", obj);
   } else {
@@ -96,7 +96,7 @@ export const setUpdateRules = function setUpdateRules(fn) {
   _modDef4333.parserFor(fn(rules));
   const obj2 = _modDef4333;
   closure_1 = obj2.reactFor(_modDef4333.ruleOutput(rules, "react"));
-  f119798 = (arr, context, unsafeContext) => {
+  f119801 = (arr, context, unsafeContext) => {
     const hasItem = arr.includes("\n\n");
     let text = arr;
     if (hasItem) {
@@ -107,19 +107,18 @@ export const setUpdateRules = function setUpdateRules(fn) {
     return closure_1(closure_0(text, { inline: !hasItem, context, unsafeContext }));
   };
   closure_0 = _modDef4333.parserFor(markdownRules.rules);
-  f119799 = (arg0, context, unsafeContext) => closure_0(arg0 + "\n\n", { inline: false, context, unsafeContext });
+  f119802 = (arg0, context, unsafeContext) => closure_0(arg0 + "\n\n", { inline: false, context, unsafeContext });
 };
 export const getMessage = function getMessage(str, arg1) {
   if (null == str) {
     return "";
   } else {
-    if (null == f119798) {
+    if (null == f119801) {
       const rules = markdownRules.rules;
-      let obj = _modDef4333;
-      obj.parserFor(i18n_updateRules.default(rules));
+      _modDef4333.parserFor(i18n_updateRules.default(rules));
       const obj2 = _modDef4333;
       closure_1 = obj2.reactFor(_modDef4333.ruleOutput(rules, "react"));
-      f119798 = (arr, context, unsafeContext) => {
+      f119801 = (arr, context, unsafeContext) => {
         const hasItem = arr.includes("\n\n");
         let text = arr;
         if (hasItem) {
@@ -130,7 +129,7 @@ export const getMessage = function getMessage(str, arg1) {
         return closure_1(closure_0(text, { inline: !hasItem, context, unsafeContext }));
       };
       closure_0 = _modDef4333.parserFor(markdownRules.rules);
-      f119799 = (arg0, context, unsafeContext) => closure_0(arg0 + "\n\n", { inline: false, context, unsafeContext });
+      f119802 = (arg0, context, unsafeContext) => closure_0(arg0 + "\n\n", { inline: false, context, unsafeContext });
     }
     const str2 = "".replace(/^\n+|\n+$/g, "");
     const isMatch = regex.test(str2);
@@ -141,12 +140,12 @@ export const getMessage = function getMessage(str, arg1) {
         if (!isMatch1) {
           replaced = str2.replace(React7, "");
         }
-        obj = Object.create(FormattedMessage.prototype);
-        obj.message = replaced;
-        obj.hasMarkdown = isMatch1;
-        const tmp15 = new _modDef17344(obj.message, arg1);
-        obj.intlMessage = tmp15;
-        let tmp5 = obj;
+        const obj5 = Object.create(FormattedMessage.prototype);
+        obj5.message = replaced;
+        obj5.hasMarkdown = isMatch1;
+        const tmp15 = new _modDef17346(obj5.message, arg1);
+        obj5.intlMessage = tmp15;
+        let tmp5 = obj5;
       } else {
         throw new TypeError("Trying to call a non-function");
       }

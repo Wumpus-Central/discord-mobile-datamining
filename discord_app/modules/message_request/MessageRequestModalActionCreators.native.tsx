@@ -15,9 +15,9 @@ const result = size.fileFinishedImporting("modules/message_request/MessageReques
 
 export const openAcceptMessageRequestConfirmModal = function openAcceptMessageRequestConfirmModal(arg0) {
   ({ channelId, onConfirm, onCancel } = arg0);
-  let obj = { type, channel_id: channelId };
-  obj.track(AnalyticEvents.OPEN_MODAL, obj);
-  obj = {
+  AnalyticsUtilsDefault.track(AnalyticEvents.OPEN_MODAL, { type, channel_id: channelId });
+  const obj2 = { type, channel_id: channelId };
+  const obj4 = {
     title: null,
     body: null,
     cancelText: null,
@@ -27,21 +27,21 @@ export const openAcceptMessageRequestConfirmModal = function openAcceptMessageRe
     confirmColor: null,
   };
   const intl = util.intl;
-  obj.title = intl.string(util.t["66tnno"]);
+  obj4.title = intl.string(util.t["66tnno"]);
   const intl2 = util.intl;
-  obj.body = intl2.string(util.t["c/k4SW"]);
+  obj4.body = intl2.string(util.t["c/k4SW"]);
   const intl3 = util.intl;
-  obj.cancelText = intl3.string(util.t["ETE/oC"]);
+  obj4.cancelText = intl3.string(util.t["ETE/oC"]);
   const intl4 = util.intl;
-  obj.confirmText = intl4.string(util.t["cY+Oob"]);
-  obj.onConfirm = onConfirm;
-  obj.onCancel = onCancel;
-  obj.confirmColor = common_AlertDefault.Colors.BRAND;
-  actions_AlertActionCreatorsDefault.show(obj);
+  obj4.confirmText = intl4.string(util.t["cY+Oob"]);
+  obj4.onConfirm = onConfirm;
+  obj4.onCancel = onCancel;
+  obj4.confirmColor = common_AlertDefault.Colors.BRAND;
+  actions_AlertActionCreatorsDefault.show(obj4);
 };
 export const onMarkAsNotSpamConfirmationModal = function onMarkAsNotSpamConfirmationModal(arg0) {
   ({ onConfirm, onCancel, channel } = arg0);
-  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(12576, dependencyMap.paths), "SpamMessageHamActionSheet", {
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(12577, dependencyMap.paths), "SpamMessageHamActionSheet", {
     channel,
     onConfirm,
     onCancel,

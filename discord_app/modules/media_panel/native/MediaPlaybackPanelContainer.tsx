@@ -10,7 +10,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/media_panel/native/MediaPlaybackPanelContainer.tsx");
 
 export default noop.memo(function MediaPlaybackPanelContainer() {
-  let obj = MediaPlayerManager;
+  const obj = MediaPlayerManager;
   let tmp2 = null;
   if (
     obj.useMediaPlayerManagerStore(
@@ -59,7 +59,7 @@ export default noop.memo(function MediaPlaybackPanelContainer() {
       }),
     )
   ) {
-    obj = { children: jsx(MediaPlaybackPanelUIDefault, {}) };
+    const obj3 = { children: jsx(MediaPlaybackPanelUIDefault, {}) };
     tmp2 = jsx(MediaPlaybackPanelControllerDefault, { children: jsx(MediaPlaybackPanelUIDefault, {}) });
   }
   return tmp2;

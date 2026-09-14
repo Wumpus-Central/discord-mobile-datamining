@@ -1,13 +1,15 @@
 // discord_app/modules/messages/native/renderer/resolveMessageContentColors.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import shared from "../../../../design/shared.tsx";
-import createStyles from "../../../../design/components/Styles/native/createStyles.tsx";
+import createStyles_mod from "../../../../design/components/Styles/native/createStyles.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
 
+let createStyles = createStyles_mod;
 const result = createStyles.experimental_createToken((theme) => {
   const unsafe_rawColors = nativeDefault.unsafe_rawColors;
   return shared.isThemeDark(theme.theme) ? unsafe_rawColors.PRIMARY_300 : unsafe_rawColors.PRIMARY_630;
 });
+let createStyles = createStyles_mod;
 let obj = {
   textColor: null,
   linkColor: null,
@@ -60,6 +62,7 @@ obj.retryTextColor = nativeDefault.colors.WHITE;
 obj.retryBackgroundColor = nativeDefault.colors.BACKGROUND_BRAND;
 obj.clipTagBackgroundColor = nativeDefault.colors.BACKGROUND_BRAND;
 obj.clipTagTextColor = nativeDefault.unsafe_rawColors.WHITE;
+let createStyles = createStyles_mod;
 let closure_4 = createStyles.createNativeStyleProperties((arg0) => {
   const colors = nativeDefault.colors;
   obj = { embedBackgroundColor: arg0 ? colors.EMBED_BACKGROUND_ALTERNATE : colors.EMBED_BACKGROUND };

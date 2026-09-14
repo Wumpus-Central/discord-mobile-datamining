@@ -7,14 +7,14 @@ import Navigator from "../../../../design/components/Navigator/native/Navigator.
 import common_SafeAreaView from "../../../../components_native/common/SafeAreaView.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
+const require = globalThis.__r;
+
 require = fn;
-const HubEmailConnectionSteps = fn(12848).HubEmailConnectionSteps;
+const HubEmailConnectionSteps = fn(12849).HubEmailConnectionSteps;
 let jsx = fn(21).jsx;
-fn(4636);
-let createStyles = { safeArea: null };
-createStyles = { marginTop: fn(5763).NAV_BAR_HEIGHT, flex: 1 };
-createStyles.safeArea = createStyles;
-let closure_5 = createStyles.createStyles(createStyles);
+const createStyles = fn(4636);
+let obj2 = { safeArea: { marginTop: fn(5763).NAV_BAR_HEIGHT, flex: 1 } };
+let closure_5 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/hub/native/components/HubEmailConnectionModal.tsx");
 
@@ -25,8 +25,7 @@ export default function HubEmailConnectionModal(arg0) {
     invite: dependencyMap,
     displayStudentPrompt: HubEmailConnectionSteps,
   } = arg0);
-  let obj = useNavigation;
-  jsx = obj.useNavigation();
+  jsx = useNavigation.useNavigation();
   ({ screens, initialRouteStack } = useInitialValueDefault(() => {
     function handleClose() {
       let flag = arg0;
@@ -48,38 +47,27 @@ export default function HubEmailConnectionModal(arg0) {
     let obj = { name: null, params: null };
     if (closure_1_3) {
       obj.name = HubEmailConnectionSteps.STUDENT_PROMPT;
-      obj = { onClose: handleClose };
-      obj.params = obj;
+      const obj2 = { onClose: handleClose };
+      obj.params = obj2;
       push(obj);
     } else {
       obj.name = HubEmailConnectionSteps.VERIFY_EMAIL;
-      obj = { invite, onClose: handleClose };
-      obj.params = obj;
+      const obj3 = { invite, onClose: handleClose };
+      obj.params = obj3;
       push(obj);
     }
-    let obj3 = NavigatorHeader;
+    const obj4 = NavigatorHeader;
     if (closure_1_0) {
-      let headerBackButton = obj3.getHeaderBackButton(handleClose);
+      let headerBackButton = obj4.getHeaderBackButton(handleClose);
       let tmp9 = require;
     } else {
-      headerBackButton = obj3.getHeaderCloseButton(handleClose);
+      headerBackButton = obj4.getHeaderCloseButton(handleClose);
       tmp9 = require;
     }
-    const obj1 = { screens: null, initialRouteStack: null };
-    const obj2 = { [closure_2_3.STUDENT_PROMPT]: obj3 };
-    obj3 = {
-      fullscreen: true,
-      headerLeft: headerBackButton,
-      headerTitle() {
-        return null;
-      },
-      render(arg0) {
-        const merged = Object.assign(arg0);
-        return navigation(closure_1_1(12857), {});
-      },
-    };
-    obj2[HubEmailConnectionSteps.VERIFY_EMAIL] = {
-      impressionName: tmp9(1250).ImpressionNames.HUB_EMAIL_SIGNUP,
+    const obj5 = { screens: null, initialRouteStack: null };
+    const obj6 = { [closure_2_3.STUDENT_PROMPT]: obj7 };
+    obj6[HubEmailConnectionSteps.VERIFY_EMAIL] = {
+      impressionName: tmp9(1248).ImpressionNames.HUB_EMAIL_SIGNUP,
       impressionProperties(invite) {
         return { has_invite: null != invite.invite };
       },
@@ -90,30 +78,20 @@ export default function HubEmailConnectionModal(arg0) {
       },
       render(arg0) {
         const merged = Object.assign(arg0);
-        return navigation(closure_1_1(12860), {});
+        return navigation(closure_1_1(12861), {});
       },
     };
-    obj2[HubEmailConnectionSteps.EMAIL_WAITLIST] = {
+    obj6[HubEmailConnectionSteps.EMAIL_WAITLIST] = {
       fullscreen: true,
       headerTitle() {
         return null;
       },
       render(arg0) {
         const merged = Object.assign(arg0);
-        return navigation(closure_1_1(12863), {});
+        return navigation(closure_1_1(12864), {});
       },
     };
-    obj2[HubEmailConnectionSteps.SUBMIT_SCHOOL] = {
-      fullscreen: true,
-      headerTitle() {
-        return null;
-      },
-      render(arg0) {
-        const merged = Object.assign(arg0);
-        return navigation(closure_1_1(12865), {});
-      },
-    };
-    obj2[HubEmailConnectionSteps.SELECT_SCHOOL] = {
+    obj6[HubEmailConnectionSteps.SUBMIT_SCHOOL] = {
       fullscreen: true,
       headerTitle() {
         return null;
@@ -123,7 +101,7 @@ export default function HubEmailConnectionModal(arg0) {
         return navigation(closure_1_1(12866), {});
       },
     };
-    obj2[HubEmailConnectionSteps.VERIFY_PIN] = {
+    obj6[HubEmailConnectionSteps.SELECT_SCHOOL] = {
       fullscreen: true,
       headerTitle() {
         return null;
@@ -133,21 +111,31 @@ export default function HubEmailConnectionModal(arg0) {
         return navigation(closure_1_1(12867), {});
       },
     };
-    obj2[HubEmailConnectionSteps.SELECT_SCHOOL_SEARCH] = {
+    obj6[HubEmailConnectionSteps.VERIFY_PIN] = {
+      fullscreen: true,
+      headerTitle() {
+        return null;
+      },
+      render(arg0) {
+        const merged = Object.assign(arg0);
+        return navigation(closure_1_1(12868), {});
+      },
+    };
+    obj6[HubEmailConnectionSteps.SELECT_SCHOOL_SEARCH] = {
       fullscreen: true,
       headerShown: false,
       render(arg0) {
         const merged = Object.assign(arg0);
-        return navigation(closure_1_1(12870), {});
+        return navigation(closure_1_1(12871), {});
       },
     };
-    obj1.screens = obj2;
-    obj1.initialRouteStack = items;
-    return obj1;
+    obj5.screens = obj6;
+    obj5.initialRouteStack = items;
+    return obj5;
   }));
-  obj = { screens, initialRouteStack, headerBackTitle: null };
+  let obj2 = { screens, initialRouteStack, headerBackTitle: null };
   const intl = util.intl;
-  obj.headerBackTitle = intl.string(util.t["13/7kX"]);
+  obj2.headerBackTitle = intl.string(util.t["13/7kX"]);
   return jsx(Navigator.Navigator, { screens, initialRouteStack, headerBackTitle: null });
 }
 export const HubEmailConnectionScreen = function HubEmailConnectionScreen(children) {

@@ -15,16 +15,18 @@ export default {
       await HTTP.get({ url: constants.FRIEND_SUGGESTIONS, rejectWithError: true });
       if (1 === tmp7) {
         c3 = 0;
-        let obj3 = closure_129_1(closure_129_2[3]);
-        obj3.dispatch({ type: "LOAD_FRIEND_SUGGESTIONS_FAILURE" });
+        closure_129_1(closure_129_2[3]).dispatch({ type: "LOAD_FRIEND_SUGGESTIONS_FAILURE" });
         c5 = 3;
+        closure_129_1(closure_129_2[3]);
       } else if (arg0 === 1) {
         c5 = 3;
         throw value;
       } else if (arg0 !== 2) {
         closure_128_0 = value;
-        obj3 = { type: "LOAD_FRIEND_SUGGESTIONS_SUCCESS", suggestions: closure_128_0.body };
-        closure_129_1(closure_129_2[3]).dispatch(obj3);
+        closure_129_1(closure_129_2[3]).dispatch({
+          type: "LOAD_FRIEND_SUGGESTIONS_SUCCESS",
+          suggestions: closure_128_0.body,
+        });
         c3 = 0;
         closure_129_1(closure_129_2[3]);
       }

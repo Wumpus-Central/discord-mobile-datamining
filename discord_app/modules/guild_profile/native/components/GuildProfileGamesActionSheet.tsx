@@ -10,28 +10,28 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 function GuildProfileGameRow(activityLevel) {
   const game = activityLevel.game;
-  let obj = {
+  const obj = {
     gameId: game.id,
     source: GameProfileAnalyticUtils.GameProfileSources.GuildProfileGames,
     trackEntryPointImpression: true,
   };
   const tmpResult = useOpenGameProfileModalDefault(obj);
   closure_0 = tmpResult;
-  obj = {
+  const obj2 = {
     icon: jsx(components_GameIconDefault, { game, activityLevel: activityLevel.activityLevel }),
     label: game.name,
-    arrow: tmp3,
+    arrow: null != tmpResult,
     onPress: null,
   };
   let fn;
   if (null != tmpResult) {
     fn = () => closure_0();
   }
-  obj.onPress = fn;
+  obj2.onPress = fn;
   return jsx(TableRow.TableRow, {
     icon: jsx(components_GameIconDefault, { game, activityLevel: activityLevel.activityLevel }),
     label: game.name,
-    arrow: tmp3,
+    arrow: null != tmpResult,
     onPress: null,
   });
 }
@@ -46,35 +46,41 @@ export default function GuildProfileGamesActionSheet(profile) {
   profile = profile.profile;
   const id = profile.id;
   const gameActivity = profile.gameActivity;
+  const tmp = closure_7();
+  const allGuildProfileGames = id(9329).useAllGuildProfileGames(profile);
   let obj = id(9329);
-  const allGuildProfileGames = obj.useAllGuildProfileGames(profile);
-  let obj1 = id(8287);
   const intl = id(1114).intl;
-  let str = intl.format(id(1114).t.vuAVo7, { serverName: profile.name });
+  const obj2 = id(8287);
   const items = [id];
-  str = str.toString();
+  const str = intl.format(id(1114).t.vuAVo7, { serverName: profile.name });
   const callback = noop.useCallback(() => {
-    const obj = { guildId: id };
-    obj.openLazy(asyncRequireImpl(9314, dependencyMap.paths), "GuildProfileActionSheet:" + id, obj);
+    const obj = ActionSheetActionCreatorsDefault;
+    obj.openLazy(asyncRequireImpl(9314, dependencyMap.paths), "GuildProfileActionSheet:" + id, { guildId: id });
   }, items);
-  obj = {
-    ref: obj1.useBottomSheetRef().bottomSheetRef,
+  const obj3 = {
+    ref: obj2.useBottomSheetRef().bottomSheetRef,
     scrollable: true,
     onDismiss: callback,
     startHeight: 300,
     children: null,
   };
-  obj = { children: null };
-  obj1 = { style: closure_7().container, children: null };
-  const tmp = closure_7();
-  obj1.children = jsx(id(5768).TableRowGroup, {
-    title: str,
+  const obj4 = { children: null };
+  const obj5 = { style: tmp.container, children: null };
+  const str1 = intl.format(id(1114).t.vuAVo7, { serverName: profile.name }).toString();
+  obj5.children = jsx(id(5768).TableRowGroup, {
+    title: intl.format(id(1114).t.vuAVo7, { serverName: profile.name }).toString(),
     hasIcons: true,
     children: allGuildProfileGames.map((game) => (
       <GuildProfileGameRow key={game.id} game={game} activityLevel={gameActivity[game.id]} />
     )),
   });
-  obj.children = <View style={closure_7().container}>{null}</View>;
-  obj.children = jsx(id(6728).BottomSheetScrollView, { children: null });
-  return jsx(id(7253).BottomSheet, { children: null });
+  obj4.children = <View style={tmp.container}>{null}</View>;
+  obj3.children = jsx(id(6728).BottomSheetScrollView, { children: null });
+  return jsx(id(7253).BottomSheet, {
+    ref: obj2.useBottomSheetRef().bottomSheetRef,
+    scrollable: true,
+    onDismiss: callback,
+    startHeight: 300,
+    children: null,
+  });
 }

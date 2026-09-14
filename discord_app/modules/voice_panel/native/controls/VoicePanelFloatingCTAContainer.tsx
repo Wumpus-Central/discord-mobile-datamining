@@ -16,11 +16,10 @@ require = fn;
 function FloatingCTA(trailing) {
   trailing = trailing.trailing;
   const merged = Object.assign(trailing, Object.assign({ trailing: 0 }));
-  let obj = { children: null };
-  obj = { experimental_withBlurBackground: true, arrow: null == trailing, trailing };
+  const obj = { children: null };
   const merged1 = Object.assign(merged);
   obj.children = jsx(RowButton.RowButton, { experimental_withBlurBackground: true, arrow: null == trailing, trailing });
-  return jsx(Stack_Stack.Stack, { experimental_withBlurBackground: true, arrow: null == trailing, trailing });
+  return jsx(Stack_Stack.Stack, { children: null });
 }
 class VoicePanelFloatingCTAContainer {
   constructor(arg0) {
@@ -54,10 +53,10 @@ class VoicePanelFloatingCTAContainer {
     items1 = [,];
     items1[0] = first;
     items1[1] = stateFromStores;
-    memo = windowDimensions.useMemo(() => {
-      const obj = { dismissableContent, channel: stateFromStores };
-      return obj.getDismissableCTAProps(obj);
-    }, items1);
+    memo = windowDimensions.useMemo(
+      () => VoicePanelFloatingCTAUtils.getDismissableCTAProps({ dismissableContent, channel: stateFromStores }),
+      items1,
+    );
     closure_9 = memo;
     obj3 = wrapperSpecs(controlsSpecs[17]);
     floatingCTAProps = obj3.useFloatingCTAProps(stateFromStores);
@@ -65,20 +64,20 @@ class VoicePanelFloatingCTAContainer {
     ({ hiddenProps, hiddenStyles } = tmp10);
     obj4 = wrapperSpecs(controlsSpecs[19]);
     fn = function f() {
-      let obj = VoicePanelControlsUtils;
-      const controlsDefaultWidth = obj.getControlsDefaultWidth(
+      const controlsDefaultWidth = VoicePanelControlsUtils.getControlsDefaultWidth(
         windowDimensions.get().width,
         safeArea.get().left,
         safeArea.get().right,
       );
-      obj = {
+      const obj2 = {
         bottom: controlsSpecs.get().height + 16,
         width: controlsDefaultWidth,
         marginLeft: -1 * roundToNearestPixelDefault(controlsDefaultWidth / 2),
         transform: null,
       };
-      obj = { translateX: spring.withSpring(wrapperSpecs.get().x, UI_SHOW_HIDE_PHYSICS) };
-      const items = [obj];
+      const obj3 = { translateX: null };
+      obj3.translateX = spring.withSpring(wrapperSpecs.get().x, UI_SHOW_HIDE_PHYSICS);
+      const items = [obj3];
       if (wrapperSpecs.get().hidden) {
         const sum = wrapperSpecs.get().height + CALL_TILE_GUTTER;
         let y = sum + accessoryHeights.get();
@@ -86,10 +85,10 @@ class VoicePanelFloatingCTAContainer {
         y = wrapperSpecs.get().y;
       }
       items[1] = { translateY: spring.withSpring(y, UI_SHOW_HIDE_PHYSICS) };
-      obj.transform = items;
-      return obj;
+      obj2.transform = items;
+      return obj2;
     };
-    obj = {
+    obj1 = {
       getControlsDefaultWidth: wrapperSpecs(controlsSpecs[20]).getControlsDefaultWidth,
       windowDimensions,
       safeArea,
@@ -102,47 +101,47 @@ class VoicePanelFloatingCTAContainer {
       CALL_TILE_GUTTER: closure_7,
       accessoryHeights,
     };
-    fn.__closure = obj;
+    fn.__closure = obj1;
     fn.__workletHash = 10861017326398;
     fn.__initData = closure_12;
     tmp12 = closure_9;
     animatedStyle = obj4.useAnimatedStyle(fn);
-    obj1 = { style: null, animatedProps: hiddenProps, children: null };
+    obj9 = { style: null, animatedProps: hiddenProps, children: null };
     items2 = [, ,];
     items2[0] = tmp.container;
     items2[1] = animatedStyle;
     items2[2] = hiddenStyles;
-    obj1.style = items2;
+    obj9.style = items2;
     tmp13 = accessoryHeights(controlsSpecs[23]);
     if (null != memo) {
-      obj2 = { contentTypes: null, children: null };
-      obj2.contentTypes = tmp5;
-      obj2.children = function children() {
+      obj10 = { contentTypes: null, children: null };
+      obj10.contentTypes = tmp5;
+      obj10.children = function children() {
         const merged = Object.assign(memo);
         return <FloatingCTA />;
       };
-      tmp12Result = tmp12(tmp2(tmp3[24]), obj2);
+      tmp12Result = tmp12(tmp2(tmp3[24]), obj10);
     } else {
       tmp12Result = null;
       if (null != floatingCTAProps) {
         tmp15 = FloatingCTA;
-        obj3 = {};
-        tmp16 = obj3;
+        obj11 = {};
+        tmp16 = obj11;
         tmp17 = floatingCTAProps;
         merged = Object.assign(floatingCTAProps);
-        tmp12Result = tmp12(FloatingCTA, obj3);
+        tmp12Result = tmp12(FloatingCTA, obj11);
       }
     }
-    obj1.children = tmp12Result;
-    return tmp12(tmp13, obj1);
+    obj9.children = tmp12Result;
+    return tmp12(tmp13, obj9);
   }
 }
-const UI_SHOW_HIDE_PHYSICS = fn(12402).UI_SHOW_HIDE_PHYSICS;
-let CALL_TILE_GUTTER = fn(12405).CALL_TILE_GUTTER;
+const UI_SHOW_HIDE_PHYSICS = fn(12403).UI_SHOW_HIDE_PHYSICS;
+let CALL_TILE_GUTTER = fn(12406).CALL_TILE_GUTTER;
 const ThemeTypes = fn(1085).ThemeTypes;
 const jsx = fn(21).jsx;
-fn(4636);
-const createStyles = { container: null };
+const createStyles = fn(4636);
+let obj2 = { container: null };
 const rect = {
   zIndex: 1,
   position: "absolute",
@@ -152,8 +151,8 @@ const rect = {
   alignItems: "center",
   borderRadius: nativeDefault.radii.lg,
 };
-createStyles.container = rect;
-let closure_10 = createStyles.createStyles(createStyles);
+obj2.container = rect;
+let closure_10 = createStyles.createStyles(obj2);
 const __initData = {
   code: "function VoicePanelFloatingCTAContainerTsx1(){const{getControlsDefaultWidth,windowDimensions,safeArea,controlsSpecs,roundToNearestPixel,withSpring,wrapperSpecs,UI_SHOW_HIDE_PHYSICS,gestureState,CALL_TILE_GUTTER,accessoryHeights}=this.__closure;const width=getControlsDefaultWidth(windowDimensions.get().width,safeArea.get().left,safeArea.get().right);return{bottom:controlsSpecs.get().height+16,width:width,marginLeft:roundToNearestPixel(width/2)*-1,transform:[{translateX:withSpring(wrapperSpecs.get().x,UI_SHOW_HIDE_PHYSICS)},{translateY:withSpring(wrapperSpecs.get().hidden||gestureState.get().active&&!gestureState.get().requiresPop?wrapperSpecs.get().height+CALL_TILE_GUTTER+accessoryHeights.get():wrapperSpecs.get().y,UI_SHOW_HIDE_PHYSICS)}]};}",
 };
@@ -165,11 +164,11 @@ export const getFloatingCTATotalViewHeight = function getFloatingCTATotalViewHei
   return MobileVisualRefreshExperiment.resolveRefreshToken(nativeDefault.modules.mobile.TABLE_ROW_HEIGHT) + 16;
 };
 export const renderVoicePanelFloatingCTA = function renderVoicePanelFloatingCTA(key, arg1, state, cleanUp) {
-  let obj = { theme: ThemeTypes.DARK, children: null };
-  obj = {};
+  const obj = { theme: ThemeTypes.DARK, children: null };
+  const obj2 = {};
   const merged = Object.assign(arg1);
-  obj.state = state;
-  obj.cleanUp = cleanUp;
+  obj2.state = state;
+  obj2.cleanUp = cleanUp;
   obj.children = <VoicePanelFloatingCTAContainer />;
-  return jsx(native.ThemeContextProvider, {}, key);
+  return jsx(native.ThemeContextProvider, { theme: ThemeTypes.DARK, children: null }, key);
 };

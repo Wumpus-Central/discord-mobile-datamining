@@ -8,11 +8,9 @@ import initialize from "../../../discord_common/js/packages/flux/index.tsx";
 
 require = fn;
 const jsx = fn(21).jsx;
-fn(4636);
-let createStyles = { warning: null };
-createStyles = { color: nativeDefault.unsafe_rawColors.RED_400, fontSize: 12, marginTop: 10 };
-createStyles.warning = createStyles;
-let closure_4 = createStyles.createLegacyClassComponentStyles(createStyles);
+const createStyles = fn(4636);
+const obj2 = { warning: { color: nativeDefault.unsafe_rawColors.RED_400, fontSize: 12, marginTop: 10 } };
+let closure_4 = createStyles.createLegacyClassComponentStyles(obj2);
 const PureComponent = noop.PureComponent;
 class PremiumUnverifiedWarning extends PureComponent {}
 PremiumUnverifiedWarning.prototype["render"] = function render() {
@@ -29,6 +27,7 @@ PremiumUnverifiedWarning.prototype["render"] = function render() {
 };
 PremiumUnverifiedWarning.contextType = fn(4347).ThemeContext;
 let items = [UserStore];
+const obj3 = { color: nativeDefault.unsafe_rawColors.RED_400, fontSize: 12, marginTop: 10 };
 const size = fn(2);
 const result = size.fileFinishedImporting("components_native/premium/PremiumUnverifiedWarning.tsx");
 

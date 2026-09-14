@@ -23,15 +23,15 @@ const prototype = DeveloperExperimentStore.prototype;
 prototype["initialize"] = function initialize() {
   const self = this;
   this.waitFor(UserStore, GuildStore);
-  let obj = { isDeveloper: null };
-  obj = {
-    configurable: false,
-    get() {
-      return closure_5;
+  const obj = {
+    isDeveloper: {
+      configurable: false,
+      get() {
+        return closure_5;
+      },
+      set() {},
     },
-    set() {},
   };
-  obj.isDeveloper = obj;
   Object.defineProperties(this, obj);
   closure_5 = self(1382).isStaffEnv(UserStore.getCurrentUser());
   const timerId = setTimeout(() => Object.freeze(self));

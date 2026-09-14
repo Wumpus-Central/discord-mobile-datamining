@@ -2,6 +2,8 @@
 import _modDef38 from "../../../../_runtime/metro/00038__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
+const require = globalThis.__r;
+
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/profile_effects/useClock.tsx");
 

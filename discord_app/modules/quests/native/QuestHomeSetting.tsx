@@ -11,30 +11,25 @@ require = fn;
 const QuestConstants = fn(5525);
 ({ QuestHomeSortMethods: metroRequire, getQuestHomeFilterOptionItem: closure_7 } = QuestConstants);
 const jsx = fn(21).jsx;
-fn(4636);
-let createStyles = { container: null };
-createStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
-createStyles.container = createStyles;
-let closure_9 = createStyles.createStyles(createStyles);
+const createStyles = fn(4636);
+const obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST } };
+let closure_9 = createStyles.createStyles(obj2);
 let closure_10 = [];
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/quests/native/QuestHomeSetting.tsx");
 
 export default function QuestHomeSetting() {
   const tmp = closure_9();
-  [tmp3, tmp4] = _slicedToArray(
-    noop.useState(() => {
-      let SUGGESTED = QuestHomeNavigationStore.getField("sort");
-      if (null == SUGGESTED) {
-        SUGGESTED = constants.SUGGESTED;
-      } else {
-        const _Object = Object;
-        const values = Object.values(constants);
-      }
-      return SUGGESTED;
-    }),
-    2,
-  );
+  [tmp3, tmp4] = noop.useState(() => {
+    let SUGGESTED = QuestHomeNavigationStore.getField("sort");
+    if (null == SUGGESTED) {
+      SUGGESTED = constants.SUGGESTED;
+    } else {
+      const _Object = Object;
+      const values = Object.values(constants);
+    }
+    return SUGGESTED;
+  });
   const tmp2 = _slicedToArray(
     noop.useState(() => {
       let SUGGESTED = QuestHomeNavigationStore.getField("sort");
@@ -48,23 +43,20 @@ export default function QuestHomeSetting() {
     }),
     2,
   );
-  [tmp6, tmp7] = _slicedToArray(
-    noop.useState(() => {
-      const str = QuestHomeNavigationStore.getField("filter");
-      if (null == str) {
-        let found = closure_1_10;
-      } else {
-        const parts = str.split(",");
-        const mapped = parts.map((item) => closure_1_7(item));
-        found = mapped.filter((item) => null != item);
-        if (found.length <= 0) {
-          found = closure_1_10;
-        }
+  [tmp6, tmp7] = noop.useState(() => {
+    const str = QuestHomeNavigationStore.getField("filter");
+    if (null == str) {
+      let found = closure_1_10;
+    } else {
+      const parts = str.split(",");
+      const mapped = parts.map((item) => closure_1_7(item));
+      found = mapped.filter((item) => null != item);
+      if (found.length <= 0) {
+        found = closure_1_10;
       }
-      return found;
-    }),
-    2,
-  );
+    }
+    return found;
+  });
   const effect = noop.useEffect(
     () =>
       QuestHomeNavigationStore.subscribe(
@@ -99,8 +91,24 @@ export default function QuestHomeSetting() {
     [],
   );
   let navigation;
-  let obj = navigation(1483);
-  navigation = obj.useNavigation();
+  const tmp5 = _slicedToArray(
+    noop.useState(() => {
+      const str = QuestHomeNavigationStore.getField("filter");
+      if (null == str) {
+        let found = closure_1_10;
+      } else {
+        const parts = str.split(",");
+        const mapped = parts.map((item) => closure_1_7(item));
+        found = mapped.filter((item) => null != item);
+        if (found.length <= 0) {
+          found = closure_1_10;
+        }
+      }
+      return found;
+    }),
+    2,
+  );
+  navigation = navigation(1483).useNavigation();
   const tmp10 = _slicedToArray(noop.useState(false), 2);
   importDefault = tmp10[1];
   const items = [navigation];
@@ -122,14 +130,6 @@ export default function QuestHomeSetting() {
     selectedFilters: tmp6,
     selectedSortMethod: tmp3,
   });
-  obj = {
-    containerStyle: tmp.container,
-    isNavigationComplete: tmp10[0],
-    scrollToQuestId: field,
-    sortMethod: tmp3,
-    filters: tmp6,
-    onClearFilters: callback,
-  };
   return jsx(QuestHomeDefault, {
     containerStyle: tmp.container,
     isNavigationComplete: tmp10[0],

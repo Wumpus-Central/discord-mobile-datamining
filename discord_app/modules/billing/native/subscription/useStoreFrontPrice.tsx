@@ -34,8 +34,8 @@ export default function useStoreFrontPrice(arg0, arg1) {
       } else {
         obj = PremiumUtils;
         const countryPrices = obj.getCountryPrices(user.id, constants.MOBILE);
-        obj = { purchaseType: constants.MOBILE, currency: closure_1.currency };
-        const experimentalGetPriceResult = PremiumUtils.experimentalGetPrice(user.id, obj);
+        const obj3 = { purchaseType: constants.MOBILE, currency: closure_1.currency };
+        const experimentalGetPriceResult = PremiumUtils.experimentalGetPrice(user.id, obj3);
         if (countryPrices.countryCode !== closure_1.country) {
           priceState = obj.MISMATCHING_COUNTRIES;
         } else if (null == experimentalGetPriceResult) {

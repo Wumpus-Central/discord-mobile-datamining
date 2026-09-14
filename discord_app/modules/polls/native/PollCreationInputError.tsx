@@ -7,11 +7,12 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-fn(4636);
-let createStyles = { container: { flexDirection: "row", alignItems: "center", marginTop: -10 }, icon: null };
-createStyles = { alignSelf: "center", marginRight: 5, color: nativeDefault.colors.TEXT_FEEDBACK_CRITICAL };
-createStyles.icon = createStyles;
-let closure_6 = createStyles.createStyles(createStyles);
+const createStyles = fn(4636);
+const obj2 = {
+  container: { flexDirection: "row", alignItems: "center", marginTop: -10 },
+  icon: { alignSelf: "center", marginRight: 5, color: nativeDefault.colors.TEXT_FEEDBACK_CRITICAL },
+};
+let closure_6 = createStyles.createStyles(obj2);
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/polls/native/PollCreationInputError.tsx");
 
@@ -32,7 +33,7 @@ export default function PollCreationInputError(message) {
   const obj = { style: tmp.container, children: null };
   const size = { width: 16, height: 16, style: tmp.icon };
   const items1 = [
-    closure_4(message(1178).WarningCircle, size),
+    closure_4(message(1176).WarningCircle, size),
     closure_4(message(4632).Text, { variant: "text-xs/medium", color: "text-feedback-critical", children: message }),
   ];
   obj.children = items1;

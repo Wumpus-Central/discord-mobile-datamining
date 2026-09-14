@@ -18,17 +18,24 @@ export const generateSeparatorRowData = function generateSeparatorRowData(text, 
   ({ rowType, changeType } = text);
   const tmp = closure_4(theme);
   if (constants2.DAY === rowType) {
-    let obj = { type: constants.SEPARATOR, id: rowType, color: tmp.dayColor, text: text.text, changeType };
-    return obj;
+    const obj2 = { type: constants.SEPARATOR, id: rowType, color: tmp.dayColor, text: text.text, changeType };
+    return obj2;
   } else if (constants2.UNREAD === rowType) {
-    obj = { type: constants.SEPARATOR, id: rowType, color: null, borderColor: null, changeType: null, text: null };
+    const obj4 = {
+      type: constants.SEPARATOR,
+      id: rowType,
+      color: null,
+      borderColor: null,
+      changeType: null,
+      text: null,
+    };
     ({ unreadTextColor: obj3.color, unreadBorderColor: obj3.borderColor } = tmp);
-    obj.changeType = changeType;
-    obj.text = text.text;
-    return obj;
+    obj4.changeType = changeType;
+    obj4.text = text.text;
+    return obj4;
   } else if (constants2.SUMMARY === rowType) {
     const summary = text.summary;
-    const obj1 = {
+    const obj7 = {
       type: constants.SEPARATOR,
       id: rowType,
       color: tmp.summaryColor,
@@ -37,9 +44,8 @@ export const generateSeparatorRowData = function generateSeparatorRowData(text, 
       isBeforeContent: text.isBeforeContent,
       changeType,
     };
-    return obj1;
+    return obj7;
   } else {
-    obj = GlobalUtils;
-    obj.assertNever(rowType);
+    GlobalUtils.assertNever(rowType);
   }
 };

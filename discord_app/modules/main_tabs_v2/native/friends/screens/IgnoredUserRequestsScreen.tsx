@@ -5,7 +5,7 @@ import RelationshipStore from "../../../../../stores/RelationshipStore.tsx";
 import UserStore from "../../../../../stores/UserStore.tsx";
 
 const require = fn;
-const UserRowModes = fn(10988).UserRowModes;
+const UserRowModes = fn(10989).UserRowModes;
 const RelationshipTypes = fn(1074).RelationshipTypes;
 const jsx = fn(21).jsx;
 const size = fn(2);
@@ -19,17 +19,17 @@ export default function IgnoredUserRequestsScreen(navigation) {
   const analyticsLocations = stateFromStoresArray(stateFromStores[6])(
     stateFromStoresArray(stateFromStores[7]).FRIEND_REQUESTS,
   ).analyticsLocations;
-  let obj = analyticsLocations(stateFromStores[8]);
+  const tmp = stateFromStores;
+  const tmp2 = stateFromStoresArray(stateFromStores[6]);
+  const tmp3 = analyticsLocations;
   const items = [RelationshipStore];
-  stateFromStoresArray = obj.useStateFromStoresArray(
+  stateFromStoresArray = analyticsLocations(stateFromStores[8]).useStateFromStoresArray(
     items,
     () =>
       analyticsLocations(stateFromStores[9]).getPendingRelationshipIds(mutableRelationships.getMutableRelationships())
         .ignoredUserIds,
   );
-  const tmp = stateFromStores;
-  const tmp2 = stateFromStoresArray(stateFromStores[6]);
-  const tmp3 = analyticsLocations;
+  const obj = analyticsLocations(stateFromStores[8]);
   const items1 = [UserStore];
   const items2 = [stateFromStoresArray];
   stateFromStores = analyticsLocations(stateFromStores[8]).useStateFromStores(
@@ -47,9 +47,9 @@ export default function IgnoredUserRequestsScreen(navigation) {
   const items4 = [onPress, stateFromStores];
   const callback1 = onPress.useCallback(() => {}, []);
   if (0 !== stateFromStores.length) {
-    obj = { getItemProps: tmp7, getSectionProps: callback1, sections: null };
+    const obj3 = { getItemProps: tmp7, getSectionProps: callback1, sections: null };
     const items5 = [stateFromStores.length];
-    obj.sections = items5;
+    obj3.sections = items5;
     return jsx(tmp3(tmp[11]).UsersFastList, { getItemProps: tmp7, getSectionProps: callback1, sections: null });
   } else {
     navigation.goBack();

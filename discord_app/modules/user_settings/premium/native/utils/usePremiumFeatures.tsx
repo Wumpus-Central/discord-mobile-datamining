@@ -13,6 +13,8 @@ import BoostGemIcon from "../../../../../design/components/Icon/native/redesign/
 import UserSquareIcon from "../../../../../design/components/Icon/native/redesign/generated/UserSquareIcon.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
+const require = globalThis.__r;
+
 require = fn;
 const PremiumConstants = fn(1373);
 ({ NUM_FREE_GUILD_BOOSTS_WITH_PREMIUM: closure_4, PremiumTypes: hasOwnProperty } = PremiumConstants);
@@ -40,14 +42,13 @@ export default function usePremiumFeatures(arg0) {
       availableOnFractional: false,
     };
     const intl = util.intl;
-    obj = { totalSeats: TOTAL_PREMIUM_GROUP_USERS };
-    obj.label = intl.formatToPlainString(_modDef3074.gsE005, obj);
+    obj.label = intl.formatToPlainString(_modDef3074.gsE005, { totalSeats: TOTAL_PREMIUM_GROUP_USERS });
     const items = [hasOwnProperty.TIER_2];
     obj.premiumTypes = new Set(items);
     const items1 = [user.PremiumSubscriptionGroupRole.PRIMARY];
     obj.premiumGroupRoles = items1;
     const items2 = [obj, , , , , , , , ,];
-    obj = {
+    const obj3 = {
       IconComponent: FriendsIcon.FriendsIcon,
       label: null,
       premiumTypes: null,
@@ -55,14 +56,15 @@ export default function usePremiumFeatures(arg0) {
       availableOnFractional: false,
     };
     const intl2 = util.intl;
-    obj.label = intl2.string(_modDef3074["G6K/+s"]);
+    obj3.label = intl2.string(_modDef3074["G6K/+s"]);
     const items3 = [hasOwnProperty.TIER_2];
+    const obj2 = { totalSeats: TOTAL_PREMIUM_GROUP_USERS };
     const set = new Set(items);
-    obj.premiumTypes = new Set(items3);
+    obj3.premiumTypes = new Set(items3);
     const items4 = [user.PremiumSubscriptionGroupRole.MEMBER];
-    obj.premiumGroupRoles = items4;
-    items2[1] = obj;
-    const obj1 = {
+    obj3.premiumGroupRoles = items4;
+    items2[1] = obj3;
+    const obj4 = {
       IconComponent: UploadIcon.UploadIcon,
       label: null,
       premiumTypes: null,
@@ -70,18 +72,17 @@ export default function usePremiumFeatures(arg0) {
       availableOnFractional: true,
     };
     const intl3 = util.intl;
-    const obj2 = { uploadSize: null };
-    let obj5 = PremiumUtils;
-    obj2.uploadSize = obj5.getMaxFileSizeForPremiumType(closure_0, { useSpace: false });
-    obj1.label = intl3.formatToPlainString(util.t.oEudy7, obj2);
+    const obj5 = { uploadSize: null };
+    const set1 = new Set(items3);
+    obj5.uploadSize = PremiumUtils.getMaxFileSizeForPremiumType(closure_0, { useSpace: false });
+    obj4.label = intl3.formatToPlainString(util.t.oEudy7, obj5);
     const items5 = [,];
     ({ TIER_0: arr6[0], TIER_2: arr6[1] } = hasOwnProperty);
-    const set1 = new Set(items3);
-    obj1.premiumTypes = new Set(items5);
+    obj4.premiumTypes = new Set(items5);
     const items6 = [user.PremiumSubscriptionGroupRole.UNSPECIFIED, user.PremiumSubscriptionGroupRole.PRIMARY];
-    obj1.premiumGroupRoles = items6;
-    items2[2] = obj1;
-    const obj3 = {
+    obj4.premiumGroupRoles = items6;
+    items2[2] = obj4;
+    const obj7 = {
       IconComponent: ReactionIcon.ReactionIcon,
       label: null,
       premiumTypes: null,
@@ -89,19 +90,19 @@ export default function usePremiumFeatures(arg0) {
       availableOnFractional: true,
     };
     const intl4 = util.intl;
-    obj3.label = intl4.string(util.t.E1NP2x);
+    obj7.label = intl4.string(util.t.E1NP2x);
     const items7 = [,];
     ({ TIER_0: arr8[0], TIER_2: arr8[1] } = hasOwnProperty);
     const set2 = new Set(items5);
-    obj3.premiumTypes = new Set(items7);
+    obj7.premiumTypes = new Set(items7);
     const items8 = [
       user.PremiumSubscriptionGroupRole.UNSPECIFIED,
       user.PremiumSubscriptionGroupRole.PRIMARY,
       user.PremiumSubscriptionGroupRole.MEMBER,
     ];
-    obj3.premiumGroupRoles = items8;
-    items2[3] = obj3;
-    const obj4 = {
+    obj7.premiumGroupRoles = items8;
+    items2[3] = obj7;
+    const obj8 = {
       IconComponent: SuperReactionIcon.SuperReactionIcon,
       label: null,
       premiumTypes: null,
@@ -109,18 +110,18 @@ export default function usePremiumFeatures(arg0) {
       availableOnFractional: true,
     };
     const intl5 = util.intl;
-    obj4.label = intl5.string(util.t["taMwg/"]);
+    obj8.label = intl5.string(util.t["taMwg/"]);
     const items9 = [hasOwnProperty.TIER_2];
     const set3 = new Set(items7);
-    obj4.premiumTypes = new Set(items9);
+    obj8.premiumTypes = new Set(items9);
     const items10 = [
       user.PremiumSubscriptionGroupRole.UNSPECIFIED,
       user.PremiumSubscriptionGroupRole.PRIMARY,
       user.PremiumSubscriptionGroupRole.MEMBER,
     ];
-    obj4.premiumGroupRoles = items10;
-    items2[4] = obj4;
-    obj5 = {
+    obj8.premiumGroupRoles = items10;
+    items2[4] = obj8;
+    const obj9 = {
       IconComponent: NitroWheelIcon.NitroWheelIcon,
       label: null,
       premiumTypes: null,
@@ -128,14 +129,14 @@ export default function usePremiumFeatures(arg0) {
       availableOnFractional: true,
     };
     const intl6 = util.intl;
-    obj5.label = intl6.string(util.t.oyfAMZ);
+    obj9.label = intl6.string(util.t.oyfAMZ);
     const items11 = [hasOwnProperty.TIER_0];
     const set4 = new Set(items9);
-    obj5.premiumTypes = new Set(items11);
+    obj9.premiumTypes = new Set(items11);
     const items12 = [user.PremiumSubscriptionGroupRole.UNSPECIFIED];
-    obj5.premiumGroupRoles = items12;
-    items2[5] = obj5;
-    const obj6 = {
+    obj9.premiumGroupRoles = items12;
+    items2[5] = obj9;
+    const obj10 = {
       IconComponent: ScreenStreamIcon.ScreenStreamIcon,
       label: null,
       premiumTypes: null,
@@ -143,18 +144,18 @@ export default function usePremiumFeatures(arg0) {
       availableOnFractional: true,
     };
     const intl7 = util.intl;
-    obj6.label = intl7.string(util.t.myyAEr);
+    obj10.label = intl7.string(util.t.myyAEr);
     const items13 = [hasOwnProperty.TIER_2];
     const set5 = new Set(items11);
-    obj6.premiumTypes = new Set(items13);
+    obj10.premiumTypes = new Set(items13);
     const items14 = [
       user.PremiumSubscriptionGroupRole.UNSPECIFIED,
       user.PremiumSubscriptionGroupRole.PRIMARY,
       user.PremiumSubscriptionGroupRole.MEMBER,
     ];
-    obj6.premiumGroupRoles = items14;
-    items2[6] = obj6;
-    const obj7 = {
+    obj10.premiumGroupRoles = items14;
+    items2[6] = obj10;
+    const obj11 = {
       IconComponent: BoostGemIcon.BoostGemIcon,
       label: null,
       premiumTypes: null,
@@ -162,15 +163,15 @@ export default function usePremiumFeatures(arg0) {
       availableOnFractional: false,
     };
     const intl8 = util.intl;
-    obj7.label = intl8.formatToPlainString(_modDef3074.HVCRVf, { numBoosts });
+    obj11.label = intl8.formatToPlainString(_modDef3074.HVCRVf, { numBoosts });
     const items15 = [hasOwnProperty.TIER_2];
-    const obj8 = { numBoosts };
+    const obj12 = { numBoosts };
     const set6 = new Set(items13);
-    obj7.premiumTypes = new Set(items15);
+    obj11.premiumTypes = new Set(items15);
     const items16 = [user.PremiumSubscriptionGroupRole.PRIMARY];
-    obj7.premiumGroupRoles = items16;
-    items2[7] = obj7;
-    const obj9 = {
+    obj11.premiumGroupRoles = items16;
+    items2[7] = obj11;
+    const obj13 = {
       IconComponent: BoostGemIcon.BoostGemIcon,
       label: null,
       premiumTypes: null,
@@ -178,15 +179,15 @@ export default function usePremiumFeatures(arg0) {
       availableOnFractional: false,
     };
     const intl9 = util.intl;
-    obj9.label = intl9.formatToPlainString(util.t.DbkNFj, { numBoosts });
+    obj13.label = intl9.formatToPlainString(util.t.DbkNFj, { numBoosts });
     const items17 = [hasOwnProperty.TIER_2];
-    const obj10 = { numBoosts };
+    const obj14 = { numBoosts };
     const set7 = new Set(items15);
-    obj9.premiumTypes = new Set(items17);
+    obj13.premiumTypes = new Set(items17);
     const items18 = [user.PremiumSubscriptionGroupRole.UNSPECIFIED];
-    obj9.premiumGroupRoles = items18;
-    items2[8] = obj9;
-    const obj11 = {
+    obj13.premiumGroupRoles = items18;
+    items2[8] = obj13;
+    const obj15 = {
       IconComponent: UserSquareIcon.UserSquareIcon,
       label: null,
       premiumTypes: null,
@@ -194,17 +195,17 @@ export default function usePremiumFeatures(arg0) {
       availableOnFractional: true,
     };
     const intl10 = util.intl;
-    obj11.label = intl10.string(util.t.vlHicE);
+    obj15.label = intl10.string(util.t.vlHicE);
     const items19 = [hasOwnProperty.TIER_2];
     const set8 = new Set(items17);
-    obj11.premiumTypes = new Set(items19);
+    obj15.premiumTypes = new Set(items19);
     const items20 = [
       user.PremiumSubscriptionGroupRole.UNSPECIFIED,
       user.PremiumSubscriptionGroupRole.PRIMARY,
       user.PremiumSubscriptionGroupRole.MEMBER,
     ];
-    obj11.premiumGroupRoles = items20;
-    items2[9] = obj11;
+    obj15.premiumGroupRoles = items20;
+    items2[9] = obj15;
     const found = items2.filter((premiumTypes) => {
       premiumTypes = premiumTypes.premiumTypes;
       let hasItem = premiumTypes.has(closure_1_0);

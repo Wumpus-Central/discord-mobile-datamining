@@ -34,7 +34,7 @@ prototype["requestAuthorization"] = function requestAuthorization(arg0, hasPermi
       const error = new Error("requestAuthorization: Was provided with not a function for " + type + ".");
       throw error;
     }
-    tmp5(1242).track(constants2.PERMISSIONS_REQUESTED, { type });
+    tmp5(1240).track(constants2.PERMISSIONS_REQUESTED, { type });
     yield tmp45();
     closure_128_0 = value;
     let tmp10 = closure_128_0 === constants.AUTHORIZED;
@@ -71,7 +71,7 @@ prototype["showAlert"] = function showAlert(arg0) {
   const intl = util.intl;
   const intl2 = util.intl;
   const combined = "" + intl.string(util.t["68G7fD"]) + ". " + intl2.string(util.t["5Jvu1R"]);
-  let obj = { [closure_1_5.CAMERA]: combined, [closure_1_5.HEADSET_CAMERA]: combined };
+  const obj = { [closure_1_5.CAMERA]: combined, [closure_1_5.HEADSET_CAMERA]: combined };
   const intl3 = util.intl;
   const stringResult = intl.string(util.t["68G7fD"]);
   const intl4 = util.intl;
@@ -89,31 +89,31 @@ prototype["showAlert"] = function showAlert(arg0) {
   const intl10 = util.intl;
   obj[constants.CONTACTS] = "" + intl9.string(util.t.kTtf7o) + ". " + intl10.string(util.t["5Jvu1R"]);
   if (null != obj[arg0]) {
-    obj = { title: null, body: null, onConfirm: null, cancelText: null, confirmText: null };
+    const obj2 = { title: null, body: null, onConfirm: null, cancelText: null, confirmText: null };
     const intl11 = util.intl;
-    obj.title = intl11.string(util.t.u1Gxpu);
-    obj.body = tmp9;
-    obj.onConfirm = function onConfirm() {
+    obj2.title = intl11.string(util.t.u1Gxpu);
+    obj2.body = tmp9;
+    obj2.onConfirm = function onConfirm() {
       return self.openSettings(closure_0);
     };
     const intl12 = util.intl;
-    obj.cancelText = intl12.string(util.t["ETE/oC"]);
+    obj2.cancelText = intl12.string(util.t["ETE/oC"]);
     const intl13 = util.intl;
-    obj.confirmText = intl13.string(util.t["XgZk+u"]);
-    self.openAlertModal(obj);
+    obj2.confirmText = intl13.string(util.t["XgZk+u"]);
+    self.openAlertModal(obj2);
   }
   const stringResult4 = intl9.string(util.t.kTtf7o);
 };
 NativePermissionBaseUtils["defaultNativePermissionsRequestOptions"] = function defaultNativePermissionsRequestOptions(
   arg0,
 ) {
-  let obj = { showAuthorizationError: true };
+  const obj = { showAuthorizationError: true };
   let tmp = obj;
   if (null != arg0) {
-    obj = {};
+    const obj2 = {};
     const merged = Object.assign(obj);
     const merged1 = Object.assign(arg0);
-    tmp = obj;
+    tmp = obj2;
   }
   return tmp;
 };

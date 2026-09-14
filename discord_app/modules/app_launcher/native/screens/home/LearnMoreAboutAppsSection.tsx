@@ -14,21 +14,30 @@ const View = fn(17).View;
 const HelpdeskArticles = fn(1074).HelpdeskArticles;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-fn(4636);
-let createStyles = { container: null, body: null, divider: null, linkButton: null };
-createStyles = {
+const createStyles = fn(4636);
+let obj2 = {
+  container: {
+    marginTop: nativeDefault.space.PX_32,
+    borderRadius: nativeDefault.radii.lg,
+    alignItems: "center",
+    backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED,
+    paddingHorizontal: nativeDefault.space.PX_64,
+  },
+  body: { textAlign: "center" },
+  divider: null,
+  linkButton: null,
+};
+const obj3 = {
   marginTop: nativeDefault.space.PX_32,
   borderRadius: nativeDefault.radii.lg,
   alignItems: "center",
   backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED,
   paddingHorizontal: nativeDefault.space.PX_64,
 };
-createStyles.container = createStyles;
-createStyles.body = { textAlign: "center" };
-createStyles.divider = { height: nativeDefault.space.PX_16 };
-const obj1 = { height: nativeDefault.space.PX_16 };
+obj2.divider = { height: nativeDefault.space.PX_16 };
+const obj4 = { height: nativeDefault.space.PX_16 };
 const merged = Object.assign(nativeDefault.shadows.SHADOW_LOW);
-createStyles.linkButton = {
+obj2.linkButton = {
   borderRadius: nativeDefault.radii.round,
   backgroundColor: nativeDefault.colors.CONTROL_SECONDARY_BACKGROUND_DEFAULT,
   paddingVertical: 12,
@@ -37,7 +46,7 @@ createStyles.linkButton = {
   justifyContent: "center",
   alignItems: "center",
 };
-let closure_8 = createStyles.createStyles(createStyles);
+let closure_8 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/app_launcher/native/screens/home/LearnMoreAboutAppsSection.tsx");
 
@@ -59,10 +68,9 @@ export default function LearnMoreAboutAppsSection(visible) {
   });
   obj.sectionName = AppLauncherTypes.AppLauncherSectionName.NEW_TO_APPS;
   obj.viewed = visible.visible;
-  obj = { style: tmp.container, children: null };
-  obj = { style: tmp.divider };
+  const obj2 = { style: tmp.container, children: null };
   const items = [
-    timestampProducer(View, obj),
+    timestampProducer(View, { style: tmp.divider }),
     timestampProducer(Text_Text.Text, {
       accessibilityRole: "header",
       variant: "heading-lg/bold",
@@ -78,20 +86,20 @@ export default function LearnMoreAboutAppsSection(visible) {
     timestampProducer(View, { style: tmp.divider }),
     ,
   ];
-  const obj3 = {
+  const obj6 = {
     style: tmp.linkButton,
     onPress: callback,
     accessibilityRole: "link",
     accessibilityLabel: formatToPlainStringResult,
     children: null,
   };
-  const obj4 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
+  const obj7 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
   const intl4 = util.intl;
-  obj4.children = intl4.string(util.t.Ye51oT);
-  obj3.children = timestampProducer(Text_Text.Text, obj4);
-  items[4] = timestampProducer(Pressables.PressableHighlight, obj3);
+  obj7.children = intl4.string(util.t.Ye51oT);
+  obj6.children = timestampProducer(Text_Text.Text, obj7);
+  items[4] = timestampProducer(Pressables.PressableHighlight, obj6);
   items[5] = timestampProducer(View, { style: tmp.divider });
-  obj.children = items;
-  obj.children = React5(View, obj);
+  obj2.children = items;
+  obj.children = React5(View, obj2);
   return timestampProducer(TrackSectionHeaderDefault, obj);
 }

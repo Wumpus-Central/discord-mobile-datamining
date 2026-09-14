@@ -5,7 +5,6 @@ import shared from "../../../../../design/shared.tsx";
 import useThemeDefault from "../../../../../hooks/useTheme.tsx";
 import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
 import FastImageDefault from "../../../../../components_native/common/FastImage.tsx";
-import _modDef17815 from "../../../../../../_runtime/metro/17815__.js";
 import _modDef17816 from "../../../../../../_runtime/metro/17816__.js";
 import _modDef17817 from "../../../../../../_runtime/metro/17817__.js";
 import _modDef17818 from "../../../../../../_runtime/metro/17818__.js";
@@ -13,6 +12,7 @@ import _modDef17819 from "../../../../../../_runtime/metro/17819__.js";
 import _modDef17820 from "../../../../../../_runtime/metro/17820__.js";
 import _modDef17821 from "../../../../../../_runtime/metro/17821__.js";
 import _modDef17822 from "../../../../../../_runtime/metro/17822__.js";
+import _modDef17823 from "../../../../../../_runtime/metro/17823__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -20,119 +20,129 @@ function EarningPreview() {
   const tmp3 = useThemeDefault();
   const tmp4 = closure_7();
   const items = [tmp4.earningMetricsShadowContainer];
-  let obj = { style: items, children: null };
-  items[1] = obj.isThemeDark(tmp3) && tmp4.earningMetricsShadowContainerDarkMode;
+  const obj2 = { style: items, children: null };
+  items[1] = shared.isThemeDark(tmp3) && tmp4.earningMetricsShadowContainerDarkMode;
   const items1 = [, ,];
   ({ earningMetrics: arr2[0], horizontalContainer: arr2[1] } = tmp4);
-  let tmp7Result = shared;
-  obj = { style: null, children: null };
-  items1[2] = tmp7Result.isThemeDark(tmp3) ? tmp4.earningMetricsDarkMode : tmp4.earningMetricsLightMode;
-  obj.style = items1;
-  const obj1 = { variant: "text-sm/normal", color: "mobile-text-heading-primary", children: null };
+  const tmp8 = shared.isThemeDark(tmp3) && tmp4.earningMetricsShadowContainerDarkMode;
+  const obj3 = { style: null, children: null };
+  items1[2] = shared.isThemeDark(tmp3) ? tmp4.earningMetricsDarkMode : tmp4.earningMetricsLightMode;
+  obj3.style = items1;
+  const obj4 = { variant: "text-sm/normal", color: "mobile-text-heading-primary", children: null };
   const intl = util.intl;
-  obj1.children = intl.string(util.t.TXPK7B);
-  const items2 = [hasOwnProperty(Text_Text.Text, obj1)];
-  tmp7Result = shared;
-  const obj2 = { children: null };
-  const obj3 = {
-    style: tmp7Result.isThemeDark(tmp3) ? tmp4.greenTextDarkMode : tmp4.greenTextLightMode,
+  obj4.children = intl.string(util.t.TXPK7B);
+  const items2 = [hasOwnProperty(Text_Text.Text, obj4)];
+  const tmp7Result = shared;
+  const obj5 = { children: null };
+  const obj6 = {
+    style: shared.isThemeDark(tmp3) ? tmp4.greenTextDarkMode : tmp4.greenTextLightMode,
     variant: "heading-lg/extrabold",
     children: null,
   };
   const intl2 = util.intl;
-  obj3.children = intl2.string(util.t.LdjJG5);
-  items2[1] = hasOwnProperty(Text_Text.Text, obj3);
-  obj2.children = items2;
-  const items3 = [timestampProducer(View, obj2)];
-  const obj4 = { style: tmp4.earningMetricsAvatar, source: null };
-  const tmp8 = obj.isThemeDark(tmp3) && tmp4.earningMetricsShadowContainerDarkMode;
-  obj4.source = _modDef17815;
-  items3[1] = hasOwnProperty(FastImageDefault, obj4);
-  obj.children = items3;
-  obj.children = timestampProducer(View, obj);
-  return hasOwnProperty(View, obj);
+  obj6.children = intl2.string(util.t.LdjJG5);
+  items2[1] = hasOwnProperty(Text_Text.Text, obj6);
+  obj5.children = items2;
+  const items3 = [timestampProducer(View, obj5)];
+  const obj7 = { style: tmp4.earningMetricsAvatar, source: null };
+  const tmp7Result2 = shared;
+  obj7.source = _modDef17816;
+  items3[1] = hasOwnProperty(FastImageDefault, obj7);
+  obj3.children = items3;
+  obj2.children = timestampProducer(View, obj3);
+  return hasOwnProperty(View, obj2);
 }
 function ConsistentEarningBenefit() {
   const tmp4 = closure_7();
-  let obj = { style: tmp4.benefitCard, children: null };
-  obj = { style: tmp4.benefitCardTitle, variant: "heading-md/medium", color: "text-default", children: null };
+  const obj = { style: tmp4.benefitCard, children: null };
+  const obj2 = { style: tmp4.benefitCardTitle, variant: "heading-md/medium", color: "text-default", children: null };
   const intl = util.intl;
-  obj.children = intl.string(util.t["9CdmS8"]);
-  const items = [hasOwnProperty(Text_Text.Text, obj), hasOwnProperty(EarningPreview, {})];
-  obj = { style: null, children: null };
+  obj2.children = intl.string(util.t["9CdmS8"]);
+  const items = [hasOwnProperty(Text_Text.Text, obj2), hasOwnProperty(EarningPreview, {})];
+  const obj3 = { style: null, children: null };
   const items1 = [,];
   ({ horizontalContainer: arr2[0], benefitAvatars: arr2[1] } = tmp4);
-  obj.style = items1;
+  obj3.style = items1;
   const tmp3 = useThemeDefault();
   if (obj4.isThemeDark(tmp3)) {
-    let tmpResult = _modDef17816;
+    let tmpResult = _modDef17817;
   } else {
-    tmpResult = _modDef17817;
+    tmpResult = _modDef17818;
   }
   const items2 = [hasOwnProperty(BenefitAvatar, { avatarSource: tmpResult }), ,];
   obj4 = shared;
-  items2[1] = hasOwnProperty(BenefitAvatar, { avatarSource: _modDef17818 });
-  const obj1 = { avatarSource: _modDef17818 };
-  items2[2] = hasOwnProperty(BenefitAvatar, { avatarSource: _modDef17819 });
-  obj.children = items2;
-  items[2] = timestampProducer(View, obj);
+  items2[1] = hasOwnProperty(BenefitAvatar, { avatarSource: _modDef17819 });
+  const obj5 = { avatarSource: _modDef17819 };
+  items2[2] = hasOwnProperty(BenefitAvatar, { avatarSource: _modDef17820 });
+  obj3.children = items2;
+  items[2] = timestampProducer(View, obj3);
   obj.children = items;
   return timestampProducer(View, obj);
 }
 function FollowerAwardBenefit() {
   const tmp = closure_7();
-  let obj = { style: tmp.benefitCard, children: null };
-  obj = { style: tmp.benefitCardTitle, variant: "heading-md/medium", color: "text-default", children: null };
+  const obj = { style: tmp.benefitCard, children: null };
+  const obj2 = { style: tmp.benefitCardTitle, variant: "heading-md/medium", color: "text-default", children: null };
   const intl = util.intl;
-  obj.children = intl.string(util.t.qsKRUQ);
-  const items = [hasOwnProperty(Text_Text.Text, obj), ,];
-  obj = { style: tmp.socialIllo, source: _modDef17820 };
-  items[1] = hasOwnProperty(FastImageDefault, obj);
-  const obj1 = { style: tmp.lanyardIllo, source: null };
-  obj1.source = _modDef17821;
-  items[2] = hasOwnProperty(FastImageDefault, obj1);
+  obj2.children = intl.string(util.t.qsKRUQ);
+  const items = [hasOwnProperty(Text_Text.Text, obj2), ,];
+  const obj3 = { style: tmp.socialIllo, source: _modDef17821 };
+  items[1] = hasOwnProperty(FastImageDefault, obj3);
+  const obj4 = { style: tmp.lanyardIllo, source: null };
+  obj4.source = _modDef17822;
+  items[2] = hasOwnProperty(FastImageDefault, obj4);
   obj.children = items;
   return timestampProducer(View, obj);
 }
 function RevenueShareBenefit() {
   const tmp4 = closure_7();
-  let obj = { style: null, children: null };
+  const obj = { style: null, children: null };
   const items = [,];
   ({ benefitCard: arr[0], revenueShareContainer: arr[1] } = tmp4);
   obj.style = items;
   const items1 = [tmp4.revenueShare];
-  let obj1 = shared;
-  obj = { style: null, variant: "heading-xxl/extrabold", color: "status-positive", children: null };
-  items1[1] = obj1.isThemeDark(useThemeDefault()) ? tmp4.greenTextDarkMode : tmp4.greenTextLightMode;
-  obj.style = items1;
-  obj.children = `${closure_4}%`;
-  const items2 = [hasOwnProperty(Text_Text.Text, obj), ,];
-  obj = { style: tmp4.revenueShareDescription, variant: "heading-md/medium", color: "text-default", children: null };
-  const intl = util.intl;
-  obj.children = intl.string(util.t.AewsXD);
-  items2[1] = hasOwnProperty(Text_Text.Text, obj);
-  obj1 = { style: tmp4.revenueShareIllo, source: null };
   const tmp3 = useThemeDefault();
-  obj1.source = _modDef17822;
-  items2[2] = hasOwnProperty(FastImageDefault, obj1);
+  const obj3 = { style: null, variant: "heading-xxl/extrabold", color: "status-positive", children: null };
+  items1[1] = shared.isThemeDark(tmp3) ? tmp4.greenTextDarkMode : tmp4.greenTextLightMode;
+  obj3.style = items1;
+  obj3.children = `${closure_4}%`;
+  const items2 = [hasOwnProperty(Text_Text.Text, obj3), ,];
+  const obj4 = {
+    style: tmp4.revenueShareDescription,
+    variant: "heading-md/medium",
+    color: "text-default",
+    children: null,
+  };
+  const intl = util.intl;
+  obj4.children = intl.string(util.t.AewsXD);
+  items2[1] = hasOwnProperty(Text_Text.Text, obj4);
+  const obj5 = { style: tmp4.revenueShareIllo, source: null };
+  obj5.source = _modDef17823;
+  items2[2] = hasOwnProperty(FastImageDefault, obj5);
   obj.children = items2;
   return timestampProducer(View, obj);
 }
 function BenefitAvatar(avatarSource) {
   const tmp = closure_7();
-  let obj = { style: tmp.benefitAvatarContainer, children: null };
-  obj = { source: avatarSource.avatarSource, style: tmp.benefitAvatar };
-  obj.children = hasOwnProperty(FastImageDefault, obj);
+  const obj = {
+    style: tmp.benefitAvatarContainer,
+    children: hasOwnProperty(FastImageDefault, { source: avatarSource.avatarSource, style: tmp.benefitAvatar }),
+  };
   return hasOwnProperty(View, obj);
 }
 const View = fn(17).View;
-let closure_4 = fn(15288).CREATOR_REVENUE_SHARE_PERCENTAGE;
+let closure_4 = fn(15289).CREATOR_REVENUE_SHARE_PERCENTAGE;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-fn(4636);
-let createStyles = {
+const createStyles = fn(4636);
+let obj2 = {
   horizontalContainer: { flex: 1, flexDirection: "row" },
-  benefitAvatarContainer: null,
+  benefitAvatarContainer: {
+    padding: 20,
+    backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
+    borderRadius: nativeDefault.radii.sm,
+    overflow: "hidden",
+  },
   benefitCard: null,
   benefitAvatar: null,
   benefitAvatars: null,
@@ -152,42 +162,41 @@ let createStyles = {
   revenueShareIllo: null,
   revenueShareDescription: null,
 };
-createStyles = {
+let obj3 = {
   padding: 20,
   backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
   borderRadius: nativeDefault.radii.sm,
   overflow: "hidden",
 };
-createStyles.benefitAvatarContainer = createStyles;
-createStyles.benefitCard = {
+obj2.benefitCard = {
   marginVertical: 6,
   backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
   borderRadius: nativeDefault.radii.sm,
 };
-createStyles.benefitAvatar = { width: 40, height: 40, marginHorizontal: 8, borderRadius: 20, overflow: "hidden" };
-createStyles.benefitAvatars = { marginHorizontal: 24, marginBottom: 24, justifyContent: "space-between" };
-createStyles.benefitCardTitle = { marginStart: 24, marginEnd: 35, marginVertical: 24 };
-let obj1 = {
+obj2.benefitAvatar = { width: 40, height: 40, marginHorizontal: 8, borderRadius: 20, overflow: "hidden" };
+obj2.benefitAvatars = { marginHorizontal: 24, marginBottom: 24, justifyContent: "space-between" };
+obj2.benefitCardTitle = { marginStart: 24, marginEnd: 35, marginVertical: 24 };
+let obj4 = {
   marginVertical: 6,
   backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
   borderRadius: nativeDefault.radii.sm,
 };
-createStyles.earningMetricsShadowContainer = {
+obj2.earningMetricsShadowContainer = {
   shadowColor: nativeDefault.colors.BLACK,
   shadowOffset: { width: 0, height: 8 },
   shadowOpacity: 0.16,
   shadowRadius: 16,
   elevation: 4,
 };
-createStyles.earningMetricsShadowContainerDarkMode = { shadowOpacity: 0.24 };
-let obj2 = {
+obj2.earningMetricsShadowContainerDarkMode = { shadowOpacity: 0.24 };
+let obj5 = {
   shadowColor: nativeDefault.colors.BLACK,
   shadowOffset: { width: 0, height: 8 },
   shadowOpacity: 0.16,
   shadowRadius: 16,
   elevation: 4,
 };
-createStyles.earningMetrics = {
+obj2.earningMetrics = {
   marginHorizontal: 24,
   marginBottom: 24,
   padding: 16,
@@ -196,8 +205,8 @@ createStyles.earningMetrics = {
   borderRadius: nativeDefault.radii.sm,
   overflow: "hidden",
 };
-createStyles.earningMetricsDarkMode = { backgroundColor: "#2E3638" };
-let obj3 = {
+obj2.earningMetricsDarkMode = { backgroundColor: "#2E3638" };
+let obj6 = {
   marginHorizontal: 24,
   marginBottom: 24,
   padding: 16,
@@ -206,19 +215,19 @@ let obj3 = {
   borderRadius: nativeDefault.radii.sm,
   overflow: "hidden",
 };
-createStyles.earningMetricsLightMode = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
-let obj4 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
-createStyles.greenTextDarkMode = { color: nativeDefault.unsafe_rawColors.GREEN_230 };
-const obj5 = { color: nativeDefault.unsafe_rawColors.GREEN_230 };
-createStyles.greenTextLightMode = { color: nativeDefault.unsafe_rawColors.GREEN_400 };
-createStyles.earningMetricsAvatar = { width: 54, height: 54, borderRadius: 27, overflow: "hidden" };
-createStyles.socialIllo = { marginTop: 50, marginStart: 16 };
-createStyles.lanyardIllo = { position: "absolute", bottom: 25, end: 0 };
-createStyles.revenueShare = { fontSize: 50, lineHeight: 52 };
-createStyles.revenueShareContainer = { padding: 24 };
-createStyles.revenueShareIllo = { marginTop: 15, alignSelf: "flex-end" };
-createStyles.revenueShareDescription = { marginEnd: 120 };
-let closure_7 = createStyles.createStyles(createStyles);
+obj2.earningMetricsLightMode = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
+let obj7 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
+obj2.greenTextDarkMode = { color: nativeDefault.unsafe_rawColors.GREEN_230 };
+const obj8 = { color: nativeDefault.unsafe_rawColors.GREEN_230 };
+obj2.greenTextLightMode = { color: nativeDefault.unsafe_rawColors.GREEN_400 };
+obj2.earningMetricsAvatar = { width: 54, height: 54, borderRadius: 27, overflow: "hidden" };
+obj2.socialIllo = { marginTop: 50, marginStart: 16 };
+obj2.lanyardIllo = { position: "absolute", bottom: 25, end: 0 };
+obj2.revenueShare = { fontSize: 50, lineHeight: 52 };
+obj2.revenueShareContainer = { padding: 24 };
+obj2.revenueShareIllo = { marginTop: 15, alignSelf: "flex-end" };
+obj2.revenueShareDescription = { marginEnd: 120 };
+let closure_7 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting(
   "modules/guild_role_subscriptions/native/guild_settings/welcome/CreatorBenefitsSection.tsx",

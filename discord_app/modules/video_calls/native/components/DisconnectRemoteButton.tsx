@@ -12,23 +12,22 @@ const result = size.fileFinishedImporting("modules/video_calls/native/components
 
 export const DisconnectRemoteButton = function DisconnectRemoteButton(channel) {
   channel = channel.channel;
-  let obj = channel(504);
   const items = [GameConsoleStore];
-  const stateFromStoresObject = obj.useStateFromStoresObject(items, () => ({
+  const stateFromStoresObject = channel(504).useStateFromStoresObject(items, () => ({
     awaitingRemote: null != GameConsoleStore.getAwaitingRemoteSessionInfo(),
     remoteSessionId: GameConsoleStore.getRemoteSessionId(),
   }));
   const remoteSessionId = stateFromStoresObject.remoteSessionId;
-  obj = {
+  let obj2 = {
     source: remoteSessionId(stateFromStoresObject.awaitingRemote ? 7095 : 10104),
     accessibilityLabel: null,
     isSmallSize: null,
     onPress: null,
   };
   const intl = tmp(1114).intl;
-  obj.accessibilityLabel = intl.string(channel(1114).t["6vrfgt"]);
-  obj.isSmallSize = channel.isSmallSize;
-  obj.onPress = function onPress() {
+  obj2.accessibilityLabel = intl.string(channel(1114).t["6vrfgt"]);
+  obj2.isSmallSize = channel.isSmallSize;
+  obj2.onPress = function onPress() {
     if (null != remoteSessionId) {
       GameConsoleActionCreators.remoteDisconnect(tmp);
       CallsUtils.handleDisconnect(channel);

@@ -4,7 +4,7 @@ import HTTPUtils from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx
 import V6OrEarlierAPIError from "V6OrEarlierAPIError.tsx";
 
 require = fn;
-let ErrorCodes = {
+const ErrorCodes = {
   UNKNOWN: 0,
   [0]: "UNKNOWN",
   UNKNOWN_BILLING_PROFILE: 100001,
@@ -92,7 +92,7 @@ let ErrorCodes = {
   VIRTUAL_CURRENCY_INSUFFICIENT_BALANCE: 590001,
   [590001]: "VIRTUAL_CURRENCY_INSUFFICIENT_BALANCE",
 };
-ErrorCodes = {
+const obj2 = {
   CARD_NUMBER: "cardNumber",
   CARD_CVC: "cvc",
   CARD_EXPIRATION_DATE: "expirationDate",
@@ -105,7 +105,7 @@ ErrorCodes = {
   ADDRESS_POSTAL_CODE: "postalCode",
   ADDRESS_COUNTRY: "country",
 };
-ErrorCodes = {
+const obj3 = {
   ADDRESS_LINE_1: "address_line1",
   ADDRESS_LINE_2: "address_line2",
   ADDRESS_CITY: "address_city",
@@ -118,24 +118,24 @@ ErrorCodes = {
   CARD_EXPIRATION_YEAR: "exp_year",
 };
 const React3 = Object.freeze({
-  [ErrorCodes.ADDRESS_LINE_1]: ErrorCodes.ADDRESS_LINE_1,
-  [ErrorCodes.ADDRESS_LINE_2]: ErrorCodes.ADDRESS_LINE_2,
-  [ErrorCodes.ADDRESS_CITY]: ErrorCodes.ADDRESS_CITY,
-  [ErrorCodes.ADDRESS_STATE]: ErrorCodes.ADDRESS_STATE,
-  [ErrorCodes.ADDRESS_ZIP]: ErrorCodes.ADDRESS_POSTAL_CODE,
-  [ErrorCodes.ADDRESS_COUNTRY]: ErrorCodes.ADDRESS_COUNTRY,
-  [ErrorCodes.CARD_NUMBER]: ErrorCodes.CARD_NUMBER,
-  [ErrorCodes.CARD_EXPIRATION_DATE]: ErrorCodes.CARD_EXPIRATION_DATE,
-  [ErrorCodes.CARD_EXPIRATION_MONTH]: ErrorCodes.CARD_EXPIRATION_DATE,
-  [ErrorCodes.CARD_EXPIRATION_YEAR]: ErrorCodes.CARD_EXPIRATION_DATE,
+  [obj3.ADDRESS_LINE_1]: obj2.ADDRESS_LINE_1,
+  [obj3.ADDRESS_LINE_2]: obj2.ADDRESS_LINE_2,
+  [obj3.ADDRESS_CITY]: obj2.ADDRESS_CITY,
+  [obj3.ADDRESS_STATE]: obj2.ADDRESS_STATE,
+  [obj3.ADDRESS_ZIP]: obj2.ADDRESS_POSTAL_CODE,
+  [obj3.ADDRESS_COUNTRY]: obj2.ADDRESS_COUNTRY,
+  [obj3.CARD_NUMBER]: obj2.CARD_NUMBER,
+  [obj3.CARD_EXPIRATION_DATE]: obj2.CARD_EXPIRATION_DATE,
+  [obj3.CARD_EXPIRATION_MONTH]: obj2.CARD_EXPIRATION_DATE,
+  [obj3.CARD_EXPIRATION_YEAR]: obj2.CARD_EXPIRATION_DATE,
 });
 const React4 = Object.freeze({
-  line_1: ErrorCodes.ADDRESS_LINE_1,
-  line_2: ErrorCodes.ADDRESS_LINE_2,
-  postal_code: ErrorCodes.ADDRESS_POSTAL_CODE,
+  line_1: obj2.ADDRESS_LINE_1,
+  line_2: obj2.ADDRESS_LINE_2,
+  postal_code: obj2.ADDRESS_POSTAL_CODE,
 });
 const items = [, , ,];
-({ CARD_NUMBER: arr[0], CARD_CVC: arr[1], CARD_EXPIRATION_DATE: arr[2], CARD_NAME: arr[3] } = ErrorCodes);
+({ CARD_NUMBER: arr[0], CARD_CVC: arr[1], CARD_EXPIRATION_DATE: arr[2], CARD_NAME: arr[3] } = obj2);
 const set = new Set(items);
 const items1 = [, , , , , ,];
 ({
@@ -146,102 +146,102 @@ const items1 = [, , , , , ,];
   ADDRESS_STATE: arr2[4],
   ADDRESS_POSTAL_CODE: arr2[5],
   ADDRESS_COUNTRY: arr2[6],
-} = ErrorCodes);
+} = obj2);
 const set1 = new Set(items1);
 class BillingError extends tmp4 {
   constructor(arg0, arg1) {
-    tmp = new tmp(global, fn, tmp6, tmp5, tmp4, tmp3, tmp2, new.target);
-    tmp.paymentId = null;
+    tmp1 = new tmp(global, fn, tmp6, tmp5, tmp4, tmp3, tmp2, new.target);
+    tmp1.paymentId = null;
     tmp8 = closure_2;
-    if (tmp.code === closure_2.NEGATIVE_INVOICE_AMOUNT) {
+    if (tmp1.code === closure_2.NEGATIVE_INVOICE_AMOUNT) {
       tmp40 = closure_0;
       tmp41 = closure_1;
       intl16 = closure_0(closure_1[2]).intl;
-      tmp.message = intl16.string(closure_0(closure_1[2]).t["+4Empk"]);
-    } else if (tmp.code === tmp8.INVALID_PAYMENT_SOURCE) {
+      tmp1.message = intl16.string(closure_0(closure_1[2]).t["+4Empk"]);
+    } else if (tmp1.code === tmp8.INVALID_PAYMENT_SOURCE) {
       tmp38 = closure_0;
       tmp39 = closure_1;
       intl15 = closure_0(closure_1[2]).intl;
-      tmp.message = intl15.string(closure_0(closure_1[2]).t.DtFqEI);
-    } else if (tmp.code === tmp8.UNKNOWN_PAYMENT_SOURCE) {
+      tmp1.message = intl15.string(closure_0(closure_1[2]).t.DtFqEI);
+    } else if (tmp1.code === tmp8.UNKNOWN_PAYMENT_SOURCE) {
       tmp36 = closure_0;
       tmp37 = closure_1;
       intl14 = closure_0(closure_1[2]).intl;
-      tmp.message = intl14.string(closure_0(closure_1[2]).t.yNYvK1);
-    } else if (tmp.code === tmp8.SUBSCRIPTION_RENEWAL_IN_PROGRESS) {
+      tmp1.message = intl14.string(closure_0(closure_1[2]).t.yNYvK1);
+    } else if (tmp1.code === tmp8.SUBSCRIPTION_RENEWAL_IN_PROGRESS) {
       tmp34 = closure_0;
       tmp35 = closure_1;
       intl13 = closure_0(closure_1[2]).intl;
-      tmp.message = intl13.string(closure_0(closure_1[2]).t["3jprCb"]);
-    } else if (tmp.code === tmp8.BILLING_TRIAL_REDEMPTION_DISABLED) {
+      tmp1.message = intl13.string(closure_0(closure_1[2]).t["3jprCb"]);
+    } else if (tmp1.code === tmp8.BILLING_TRIAL_REDEMPTION_DISABLED) {
       tmp32 = closure_0;
       tmp33 = closure_1;
       intl12 = closure_0(closure_1[2]).intl;
-      tmp.message = intl12.string(closure_0(closure_1[2]).t.MHlpoJ);
-    } else if (tmp.code === tmp8.BILLING_BUNDLE_ALREADY_PURCHASED) {
+      tmp1.message = intl12.string(closure_0(closure_1[2]).t.MHlpoJ);
+    } else if (tmp1.code === tmp8.BILLING_BUNDLE_ALREADY_PURCHASED) {
       tmp30 = closure_0;
       tmp31 = closure_1;
       intl11 = closure_0(closure_1[2]).intl;
-      tmp.message = intl11.string(closure_0(closure_1[2]).t.Hiwqua);
-    } else if (tmp.code === tmp8.BILLING_BUNDLE_PARTIALLY_OWNED) {
+      tmp1.message = intl11.string(closure_0(closure_1[2]).t.Hiwqua);
+    } else if (tmp1.code === tmp8.BILLING_BUNDLE_PARTIALLY_OWNED) {
       tmp28 = closure_0;
       tmp29 = closure_1;
       intl10 = closure_0(closure_1[2]).intl;
-      tmp.message = intl10.string(closure_0(closure_1[2]).t.c5zDr3);
-    } else if (tmp.code === tmp8.BILLING_INSUFFICIENT_FUNDS) {
+      tmp1.message = intl10.string(closure_0(closure_1[2]).t.c5zDr3);
+    } else if (tmp1.code === tmp8.BILLING_INSUFFICIENT_FUNDS) {
       tmp26 = closure_0;
       tmp27 = closure_1;
       intl9 = closure_0(closure_1[2]).intl;
-      tmp.message = intl9.string(closure_0(closure_1[2]).t.yX8s2v);
-    } else if (tmp.code === tmp8.CARD_DECLINED) {
+      tmp1.message = intl9.string(closure_0(closure_1[2]).t.yX8s2v);
+    } else if (tmp1.code === tmp8.CARD_DECLINED) {
       tmp24 = closure_0;
       tmp25 = closure_1;
       intl8 = closure_0(closure_1[2]).intl;
-      tmp.message = intl8.string(closure_0(closure_1[2]).t.p0UBvU);
-    } else if (tmp.code === tmp8.BILLING_OUTDATED_REQUEST_PARAMETERS) {
+      tmp1.message = intl8.string(closure_0(closure_1[2]).t.p0UBvU);
+    } else if (tmp1.code === tmp8.BILLING_OUTDATED_REQUEST_PARAMETERS) {
       tmp22 = closure_0;
       tmp23 = closure_1;
       intl7 = closure_0(closure_1[2]).intl;
-      tmp.message = intl7.string(closure_0(closure_1[2]).t.uhPY5p);
-    } else if (tmp.code === tmp8.BILLING_CURRENCY_NOT_ALLOWED_FOR_COUNTRY) {
+      tmp1.message = intl7.string(closure_0(closure_1[2]).t.uhPY5p);
+    } else if (tmp1.code === tmp8.BILLING_CURRENCY_NOT_ALLOWED_FOR_COUNTRY) {
       tmp20 = closure_0;
       tmp21 = closure_1;
       intl6 = closure_0(closure_1[2]).intl;
-      tmp.message = intl6.string(closure_0(closure_1[2]).t.ckFebQ);
-    } else if (tmp.code === tmp8.ALREADY_PURCHASED) {
+      tmp1.message = intl6.string(closure_0(closure_1[2]).t.ckFebQ);
+    } else if (tmp1.code === tmp8.ALREADY_PURCHASED) {
       tmp18 = closure_0;
       tmp19 = closure_1;
       intl5 = closure_0(closure_1[2]).intl;
-      tmp.message = intl5.string(closure_0(closure_1[2]).t["3RT0Iu"]);
-    } else if (tmp.code === tmp8.BILLING_CLAIM_IN_GAME_BEFORE_REPURCHASE) {
+      tmp1.message = intl5.string(closure_0(closure_1[2]).t["3RT0Iu"]);
+    } else if (tmp1.code === tmp8.BILLING_CLAIM_IN_GAME_BEFORE_REPURCHASE) {
       tmp16 = closure_0;
       tmp17 = closure_1;
       intl4 = closure_0(closure_1[2]).intl;
-      tmp.message = intl4.string(closure_0(closure_1[2]).t.Zr0Z4K);
+      tmp1.message = intl4.string(closure_0(closure_1[2]).t.Zr0Z4K);
     } else {
       num2 = 429;
-      if (429 === tmp.status) {
+      if (429 === tmp1.status) {
         tmp14 = closure_0;
         tmp15 = closure_1;
         intl3 = closure_0(closure_1[2]).intl;
-        tmp.message = intl3.string(closure_0(closure_1[2]).t.sUWxgR);
-      } else if (tmp.code === tmp8.UNKNOWN) {
+        tmp1.message = intl3.string(closure_0(closure_1[2]).t.sUWxgR);
+      } else if (tmp1.code === tmp8.UNKNOWN) {
         tmp12 = closure_0;
         tmp13 = closure_1;
         intl2 = closure_0(closure_1[2]).intl;
-        tmp.message = intl2.string(closure_0(closure_1[2]).t["5mlOCW"]);
+        tmp1.message = intl2.string(closure_0(closure_1[2]).t["5mlOCW"]);
       } else {
         num = 400;
-        tmp9 = 400 === tmp.status && null != tmp.fields.captcha_key;
+        tmp9 = 400 === tmp1.status && null != tmp1.fields.captcha_key;
         if (tmp9) {
           tmp10 = closure_0;
           tmp11 = closure_1;
           intl = closure_0(closure_1[2]).intl;
-          tmp.message = intl.string(closure_0(closure_1[2]).t["3s/vDN"]);
+          tmp1.message = intl.string(closure_0(closure_1[2]).t["3s/vDN"]);
         }
       }
     }
-    for (const key10213 in tmp.fields) {
+    for (const key10213 in tmp1.fields) {
       tmp45 = key10213;
       tmp46 = closure_3;
       tmp43 = closure_3[key10213];
@@ -253,18 +253,18 @@ class BillingError extends tmp4 {
       if (null == tmp43) {
         continue;
       } else {
-        fields = tmp.fields;
+        fields = tmp1.fields;
         delete tmp3[tmp6];
-        tmp.fields[tmp43] = tmp.fields[key10213];
+        tmp1.fields[tmp43] = tmp1.fields[key10213];
         continue;
       }
       continue;
     }
     tmp44 = null != global.body && typeof global.body.payment_id === "string";
     if (tmp44) {
-      tmp.paymentId = global.body.payment_id;
+      tmp1.paymentId = global.body.payment_id;
     }
-    return tmp;
+    return tmp1;
   }
 }
 const prototype = BillingError.prototype;
@@ -285,7 +285,7 @@ prototype["hasAddressError"] = function hasAddressError() {
   return this._isInFieldSet(set1);
 };
 BillingError.ErrorCodes = ErrorCodes;
-BillingError.Fields = ErrorCodes;
+BillingError.Fields = obj2;
 BillingError.Sections = { CARD: "card", ADDRESS: "address" };
 BillingError.CARD_ERRORS = set;
 BillingError.ADDRESS_ERRORS = set1;
@@ -306,27 +306,27 @@ export const parseV8BillingAddressSkemaErrorToBillingError = function parseV8Bil
       }
     }
     if (code === HTTPUtils.INVALID_FORM_BODY_ERROR_CODE) {
-      let errors;
+      let errors1;
       if (body != null) {
         const body2 = body.body;
         if (body2 != null) {
-          errors = body2.errors;
+          errors1 = body2.errors;
         }
       }
-      if (!Array.isArray(errors)) {
-        let billing_address;
+      if (!Array.isArray(errors1)) {
+        let billing_address1;
         if (body != null) {
           const body3 = body.body;
           if (body3 != null) {
-            errors = body3.errors;
+            const errors = body3.errors;
             if (errors != null) {
-              billing_address = errors.billing_address;
+              billing_address1 = errors.billing_address;
             }
           }
         }
-        if (null != billing_address) {
+        if (null != billing_address1) {
           for (const key10023 in arg0.body.errors.billing_address) {
-            billing_address = arg0.body.errors.billing_address;
+            let billing_address = arg0.body.errors.billing_address;
             delete tmp3[tmp4];
             arg0.body.errors[key10023] = arg0.body.errors.billing_address[key10023];
             continue;
@@ -336,11 +336,11 @@ export const parseV8BillingAddressSkemaErrorToBillingError = function parseV8Bil
         }
       }
       const body4 = body.body;
-      let errors1;
+      let errors3;
       if (body4 != null) {
-        errors1 = body4.errors;
+        errors3 = body4.errors;
       }
-      if (null != errors1) {
+      if (null != errors3) {
         body.body = HTTPUtils.convertSkemaError(body.body.errors);
       }
     }

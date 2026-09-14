@@ -3,12 +3,14 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
+const require = globalThis.__r;
+
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-fn(4636);
-const createStyles = {
+const createStyles = fn(4636);
+let obj2 = {
   container: { flex: 0, alignSelf: "stretch", marginBottom: 8 },
   title: { lineHeight: 16, marginBottom: 8 },
   breadCrumbItemContainer: {
@@ -30,7 +32,7 @@ let size = {
   borderRadius: 2,
   backgroundColor: nativeDefault.colors.BACKGROUND_BRAND,
 };
-createStyles.breadCrumbDot = size;
+obj2.breadCrumbDot = size;
 const rect = {
   position: "absolute",
   width: 2,
@@ -39,9 +41,9 @@ const rect = {
   left: 3,
   backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST,
 };
-createStyles.breadCrumbBar = rect;
-createStyles.breadCrumbText = { marginStart: 8, lineHeight: 20 };
-let closure_5 = createStyles.createStyles(createStyles);
+obj2.breadCrumbBar = rect;
+obj2.breadCrumbText = { marginStart: 8, lineHeight: 20 };
+let closure_5 = createStyles.createStyles(obj2);
 size = fn(2);
 const result = size.fileFinishedImporting("modules/safety_hub/native/AppealIngestionBreadcrumbs.tsx");
 
@@ -52,24 +54,24 @@ export default function AppealIngestionBreadcrumbs(reasons) {
   let tmp2 = null;
   if (0 !== reasons.length) {
     let obj = { style: tmp.container, children: null };
-    obj = { style: tmp.title, accessibilityRole: "header", variant: "text-xs/bold", children: null };
+    const obj2 = { style: tmp.title, accessibilityRole: "header", variant: "text-xs/bold", children: null };
     const intl = require("util").intl;
-    obj.children = intl.string(require("util").t.eQg0Ck);
+    obj2.children = intl.string(require("util").t.eQg0Ck);
     let items = [
-      closure_3(require("Text/Text").Text, obj),
+      closure_3(require("Text/Text").Text, obj2),
       reasons.map((children, index) => {
-        let obj = { style: closure_0.breadCrumbItemContainer, children: null };
-        obj = { style: closure_0.breadCrumbBar };
-        const items = [React3(View, obj), ,];
-        obj = { style: closure_0.breadCrumbDot };
-        items[1] = React3(View, obj);
-        items[2] = React3(Text_Text.Text, {
-          lineClamp: 2,
-          ellipsizeMode: "tail",
-          style: closure_0.breadCrumbText,
-          variant: "text-md/medium",
-          children,
-        });
+        const obj = { style: closure_0.breadCrumbItemContainer, children: null };
+        const items = [
+          React3(View, { style: closure_0.breadCrumbBar }),
+          React3(View, { style: closure_0.breadCrumbDot }),
+          React3(Text_Text.Text, {
+            lineClamp: 2,
+            ellipsizeMode: "tail",
+            style: closure_0.breadCrumbText,
+            variant: "text-md/medium",
+            children,
+          }),
+        ];
         obj.children = items;
         return React4(View, obj, "" + children + "+" + index);
       }),

@@ -13,8 +13,8 @@ import UserGuildSettingsStore from "../../../../../stores/UserGuildSettingsStore
 import PushNotificationPermissionStore from "../../../../../stores/native/PushNotificationPermissionStore.tsx";
 
 require = fn;
-const PermissionPromptType = fn(12538).PermissionPromptType;
-const NotificationPermissionConstants = fn(12539);
+const PermissionPromptType = fn(12539).PermissionPromptType;
+const NotificationPermissionConstants = fn(12540);
 ({ EventActionLocation: closure_11, NotificationNudgeSurface: closure_12 } = NotificationPermissionConstants);
 const Constants = fn(1074);
 ({ UserNotificationSettings: map1, ZERO_STRING_GUILD_ID: closure_14 } = Constants);
@@ -27,9 +27,8 @@ let result = size.fileFinishedImporting("modules/nuf/native/components/notificat
 export default function GuildOpenNotificationNudge(guildId) {
   guildId = guildId.guildId;
   ({ markAsDismissed, onHide } = guildId);
-  let obj = guildId(504);
   const items = [GuildStore];
-  const stateFromStores = obj.useStateFromStores(items, () => {
+  const stateFromStores = guildId(504).useStateFromStores(items, () => {
     const guild = GuildStore.getGuild(guildId);
     let str;
     if (guild != null) {
@@ -40,15 +39,16 @@ export default function GuildOpenNotificationNudge(guildId) {
     }
     return str;
   });
-  obj = { title: null, body: null, actionLocation: null, surface: null, markAsDismissed: null, onHide: null };
+  const obj2 = { title: null, body: null, actionLocation: null, surface: null, markAsDismissed: null, onHide: null };
+  const obj = guildId(504);
   const intl = guildId(1114).intl;
-  obj.title = intl.formatToPlainString(guildId(1114).t.tyWHMY, { guildName: stateFromStores });
+  obj2.title = intl.formatToPlainString(guildId(1114).t.tyWHMY, { guildName: stateFromStores });
   const intl2 = guildId(1114).intl;
-  obj.body = intl2.string(guildId(1114).t["ehJH+P"]);
-  obj.actionLocation = constants.GUILD_OPEN;
-  obj.surface = constants2.GUILD_OPEN_BOTTOM_SHEET;
-  obj.markAsDismissed = markAsDismissed;
-  obj.onHide = onHide;
+  obj2.body = intl2.string(guildId(1114).t["ehJH+P"]);
+  obj2.actionLocation = constants.GUILD_OPEN;
+  obj2.surface = constants2.GUILD_OPEN_BOTTOM_SHEET;
+  obj2.markAsDismissed = markAsDismissed;
+  obj2.onHide = onHide;
   return jsx(NotificationNudgeBottomSheetDefault, {
     title: null,
     body: null,
@@ -69,9 +69,9 @@ export const useGuildOpenNudge = function useGuildOpenNudge() {
     return guildId;
   });
   let obj = stateFromStores(504);
-  let obj2 = stateFromStores3(15567);
-  const canSeePushNotificationNudge = stateFromStores(12540).useCanSeePushNotificationNudge();
-  const obj3 = stateFromStores(12540);
+  let obj2 = stateFromStores3(15568);
+  const canSeePushNotificationNudge = stateFromStores(12541).useCanSeePushNotificationNudge();
+  let obj3 = stateFromStores(12541);
   const items1 = [UserGuildSettingsStore];
   const stateFromStores1 = stateFromStores(504).useStateFromStores(items1, () => {
     let isMutedResult = null == stateFromStores;
@@ -130,8 +130,8 @@ export const useGuildOpenNudge = function useGuildOpenNudge() {
     return tmp2;
   });
   if (tmp12) {
-    let tmpResult = tmp(4476);
-    tmp12 = !tmpResult.isPseudoGuildId(stateFromStores);
+    tmp12 = !tmp(4476).isPseudoGuildId(stateFromStores);
+    const tmpResult = tmp(4476);
   }
   if (tmp12) {
     tmp12 = !obj2.useConfig({ location: "useGuildOpenNudge" }).inHoldout;
@@ -151,7 +151,7 @@ export const useGuildOpenNudge = function useGuildOpenNudge() {
   if (tmp12) {
     tmp12 = stateFromStores4;
   }
-  tmpResult = tmp(7491);
+  const obj8 = stateFromStores(504);
   let prop = null;
   if (tmp12) {
     prop = tmp(1943).DismissibleContent.NOTIFICATION_NUDGE_GUILD_OPEN_PER_GUILD;
@@ -160,7 +160,10 @@ export const useGuildOpenNudge = function useGuildOpenNudge() {
   if (stateFromStores == null) {
     tmp15 = closure_14;
   }
-  const tmp8Result = tmp8(tmpResult.useSelectedTimeRecurringGuildDismissibleContent(prop, tmp15, closure_17), 2);
+  const tmp8Result = tmp8(
+    stateFromStores(7491).useSelectedTimeRecurringGuildDismissibleContent(prop, tmp15, closure_17),
+    2,
+  );
   first = tmp8Result[0];
   markAsDismissed = tmp18;
   const items6 = [stateFromStores, tmp8Result[1], first];
@@ -170,11 +173,12 @@ export const useGuildOpenNudge = function useGuildOpenNudge() {
       tmp2 = null != first;
     }
     if (tmp2) {
-      let obj = PushNotificationActionCreators;
-      const result = obj.setPushPermissionReactivationSeen(PermissionPromptType.GUILD_OPEN_BOTTOM_SHEET);
-      obj = { guildId: stateFromStores, markAsDismissed };
-      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(16619, dependencyMap.paths), c16, obj);
+      const result = PushNotificationActionCreators.setPushPermissionReactivationSeen(
+        PermissionPromptType.GUILD_OPEN_BOTTOM_SHEET,
+      );
+      const obj3 = { guildId: stateFromStores, markAsDismissed };
+      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(16621, dependencyMap.paths), c16, obj3);
     }
   }, items6);
-  const obj8 = stateFromStores(504);
+  const tmpResult2 = stateFromStores(7491);
 };

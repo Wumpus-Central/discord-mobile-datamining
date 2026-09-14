@@ -13,8 +13,8 @@ let closure_4 = async function _saveGuildThemeNuxPreference(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj3 = { value, done: true };
+      return obj3;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -27,8 +27,8 @@ let closure_4 = async function _saveGuildThemeNuxPreference(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c5 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj4 = { value, done: true };
+          return obj4;
         } else {
           closure_3 = tmp5;
           closure_2 = tmp2;
@@ -50,21 +50,23 @@ let closure_4 = async function _saveGuildThemeNuxPreference(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c5 = 3;
-          let obj1 = { value, done: true };
-          return obj1;
+          const obj5 = { value, done: true };
+          return obj5;
         } else {
-          obj1 = closure_131_0(closure_131_1[3]);
           c4 = 2;
           c5 = 1;
-          const obj2 = { value: obj1.clearGuildThemeSourcePreferenceOverride(closure_130_0), done: false };
-          return obj2;
+          const obj6 = {
+            value: closure_131_0(closure_131_1[3]).clearGuildThemeSourcePreferenceOverride(closure_130_0),
+            done: false,
+          };
+          return obj6;
         }
       } else if (arg0 === 1) {
         c5 = 3;
         throw value;
       } else if (arg0 === 2) {
         c5 = 3;
-        obj = { value, done: true };
+        const obj = { value, done: true };
         return obj;
       } else {
         c5 = 3;

@@ -18,31 +18,35 @@ function SwitchTiersButton(activeSubscription) {
   activeSubscription = activeSubscription.activeSubscription;
   const activeListingId = activeSubscription.activeListingId;
   const changeToListingId = activeSubscription.changeToListingId;
-  changeToListingId(15310);
-  let obj1 = activeListingId(4228)(activeSubscription.currentPeriodEnd);
-  let obj = { children: null };
-  obj = { variant: "text-xs/normal", color: "text-muted", children: null };
+  let obj = changeToListingId(15311);
+  const obj3 = { children: null };
+  const obj2 = activeListingId(4228)(activeSubscription.currentPeriodEnd);
+  const obj4 = { variant: "text-xs/normal", color: "text-muted", children: null };
   const intl = activeSubscription(1114).intl;
-  obj1 = {
+  const formatResult = activeListingId(4228)(activeSubscription.currentPeriodEnd).format("MMMM Do");
+  obj4.children = intl.format(activeSubscription(1114).t.lA7ztO, {
     activeListingName: _slicedToArray(obj.useName(activeListingId), 1)[0],
-    billingEndDate: obj1.format("MMMM Do"),
+    billingEndDate: activeListingId(4228)(activeSubscription.currentPeriodEnd).format("MMMM Do"),
     emphasisHook,
-  };
-  obj.children = intl.format(activeSubscription(1114).t.lA7ztO, obj1);
+  });
   const items = [
-    closure_12(activeSubscription(4632).Text, obj),
-    closure_12(activeSubscription(1178).Spacer, { size: 16 }),
+    closure_12(activeSubscription(4632).Text, obj4),
+    closure_12(activeSubscription(1176).Spacer, { size: 16 }),
   ];
-  const obj2 = { text: null, onPress: null };
+  const obj6 = { text: null, onPress: null };
   const intl2 = activeSubscription(1114).intl;
-  obj2.text = intl2.string(activeSubscription(1114).t.SACegK);
-  obj2.onPress = function onPress() {
-    const obj = { activeSubscription, activeListingId, changeToListingId };
-    obj.openLazy(asyncRequireImpl(16649, dependencyMap.paths), "ChangeSubscriptionCard:" + changeToListingId, obj);
+  obj6.text = intl2.string(activeSubscription(1114).t.SACegK);
+  obj6.onPress = function onPress() {
+    const obj = ActionSheetActionCreatorsDefault;
+    obj.openLazy(asyncRequireImpl(16651, dependencyMap.paths), "ChangeSubscriptionCard:" + changeToListingId, {
+      activeSubscription,
+      activeListingId,
+      changeToListingId,
+    });
   };
-  items[2] = closure_12(activeSubscription(16642).ArrowButton, obj2);
-  obj.children = items;
-  return closure_13(View, obj);
+  items[2] = closure_12(activeSubscription(16644).ArrowButton, obj6);
+  obj3.children = items;
+  return closure_13(View, obj3);
 }
 const View = fn(17).View;
 const AnalyticsLocations = fn(1074).AnalyticsLocations;
@@ -57,15 +61,15 @@ export default function SubscribeButton(listingId) {
   let callback;
   let guild_id;
   let showMemberVerificationGate;
-  let obj = listingId(showMemberVerificationGate[10]);
   const items = [GuildRoleSubscriptionsStore];
   const items1 = [listingId];
-  const stateFromStores = obj.useStateFromStores(
+  const stateFromStores = listingId(showMemberVerificationGate[10]).useStateFromStores(
     items,
     () => GuildRoleSubscriptionsStore.getSubscriptionGroupListingForSubscriptionListing(listingId),
     items1,
   );
   let id;
+  let obj = listingId(showMemberVerificationGate[10]);
   if (stateFromStores != null) {
     id = stateFromStores.id;
   }
@@ -75,10 +79,10 @@ export default function SubscribeButton(listingId) {
   if (activeSubscriptionListing != null) {
     id1 = activeSubscriptionListing.id;
   }
-  let obj1 = guild_id(tmp2[9]);
-  let obj2 = guild_id(tmp2[9]);
-  const applicationId = obj2.useApplicationId(listingId);
-  let tmpResult = tmp(tmp2[10]);
+  const tmp5Result = callback(showMemberVerificationGate[22])(id);
+  let obj2 = guild_id(showMemberVerificationGate[9]);
+  const applicationId = guild_id(showMemberVerificationGate[9]).useApplicationId(listingId);
+  let obj3 = guild_id(showMemberVerificationGate[9]);
   const items2 = [SelectedChannelStore];
   if (
     tmpResult.useStateFromStores(items2, () => currentlySelectedChannelId.getCurrentlySelectedChannelId()) ===
@@ -88,17 +92,17 @@ export default function SubscribeButton(listingId) {
   } else {
     ROLE_SUBSCRIPTIONS_TAB = AnalyticsLocations.ROLE_SUBSCRIPTIONS_TAB;
   }
-  let tmp4Result = tmp4(tmp2[11]);
-  obj = {
-    planId: _slicedToArray(obj1.useSubscriptionPlan(listingId), 1)[0].id,
+  tmpResult = listingId(showMemberVerificationGate[10]);
+  const tmp4Result = callback(showMemberVerificationGate[11]);
+  const createSubscription1 = tmp4Result.useCreateSubscription({
+    planId: _slicedToArray(obj2.useSubscriptionPlan(listingId), 1)[0].id,
     analyticsLocation: ROLE_SUBSCRIPTIONS_TAB,
     skuId: listingId,
     applicationId,
-  };
-  let createSubscription = tmp4Result.useCreateSubscription(obj);
-  createSubscription = createSubscription.createSubscription;
+  });
+  const createSubscription = createSubscription1.createSubscription;
   closure_129_0 = createSubscription;
-  const nativePaymentsConnected = createSubscription.nativePaymentsConnected;
+  const nativePaymentsConnected = createSubscription1.nativePaymentsConnected;
   const tmp9Result = _slicedToArray(noop.useState(false), 2);
   closure_129_1 = tmp9Result[1];
   const items3 = [createSubscription];
@@ -111,8 +115,8 @@ export default function SubscribeButton(listingId) {
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
-          let obj = { value, done: true };
-          return obj;
+          const obj2 = { value, done: true };
+          return obj2;
         } else {
           return { value: "HermesInternal", done: null };
         }
@@ -125,16 +129,16 @@ export default function SubscribeButton(listingId) {
               throw value;
             } else if (arg0 === 2) {
               c4 = 3;
-              obj = { value, done: true };
-              return obj;
+              const obj3 = { value, done: true };
+              return obj3;
             } else {
               closure_0 = tmp3;
               c3 = 1;
               callback(true);
               c1 = 2;
               c4 = 1;
-              const obj1 = { value: listingId(), done: false };
-              return obj1;
+              const obj4 = { value: listingId(), done: false };
+              return obj4;
             }
           } else if (1 === tmp7) {
             c3 = 0;
@@ -147,7 +151,7 @@ export default function SubscribeButton(listingId) {
             c3 = 0;
             closure_128_1(false);
             c4 = 3;
-            obj = { value, done: true };
+            const obj = { value, done: true };
             return obj;
           } else {
             c3 = 0;
@@ -176,29 +180,38 @@ export default function SubscribeButton(listingId) {
   if (stateFromStores != null) {
     guild_id = stateFromStores.guild_id;
   }
-  tmpResult = tmp(tmp2[23]);
-  showMemberVerificationGate = tmpResult.useShowMemberVerificationGate(guild_id);
+  let obj4 = {
+    planId: _slicedToArray(obj2.useSubscriptionPlan(listingId), 1)[0].id,
+    analyticsLocation: ROLE_SUBSCRIPTIONS_TAB,
+    skuId: listingId,
+    applicationId,
+  };
+  showMemberVerificationGate = listingId(showMemberVerificationGate[23]).useShowMemberVerificationGate(guild_id);
   const items4 = [callback, guild_id, showMemberVerificationGate];
   if (id1 === listingId) {
-    obj = { text: null, variant: "secondary", disabled: true, onPress: null };
+    const obj5 = { text: null, variant: "secondary", disabled: true, onPress: null };
     let intl2 = tmp(tmp2[14]).intl;
-    obj.text = intl2.string(tmp(tmp2[14]).t.XvAuMo);
-    obj.onPress = function onPress() {};
-    let tmp22 = closure_12(tmp(tmp2[24]).Button, obj);
+    obj5.text = intl2.string(tmp(tmp2[14]).t.XvAuMo);
+    obj5.onPress = function onPress() {};
+    let tmp22 = closure_12(tmp(tmp2[24]).Button, obj5);
   } else {
     if (null != activeSubscriptionListing) {
       if (null != activeSubscription) {
-        obj1 = { changeToListingId: listingId, activeListingId: activeSubscriptionListing.id, activeSubscription };
-        tmp22 = closure_12(SwitchTiersButton, obj1);
+        const obj6 = {
+          changeToListingId: listingId,
+          activeListingId: activeSubscriptionListing.id,
+          activeSubscription,
+        };
+        tmp22 = closure_12(SwitchTiersButton, obj6);
       }
     }
-    obj2 = { text: null, onPress: null, loading: null };
-    tmp4Result = tmp4(tmp2[25]);
+    const obj7 = { text: null, onPress: null, loading: null };
     let intl = tmp(tmp2[14]).intl;
-    obj2.text = intl.string(tmp(tmp2[14]).t.BEeXib);
-    obj2.onPress = tmp19;
-    obj2.loading = first;
-    tmp22 = closure_12(tmp4Result, obj2);
+    obj7.text = intl.string(tmp(tmp2[14]).t.BEeXib);
+    obj7.onPress = tmp19;
+    obj7.loading = first;
+    tmp22 = closure_12(tmp4(tmp2[25]), obj7);
+    const tmp4Result2 = tmp4(tmp2[25]);
   }
   return tmp22;
 }

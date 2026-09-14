@@ -101,8 +101,8 @@ class MobileQuestPreviewControlBar {
           if (arg0 === 1) {
             throw value;
           } else if (arg0 === 2) {
-            let obj = { value, done: true };
-            return obj;
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
             return { value: "HermesInternal", done: null };
           }
@@ -115,17 +115,15 @@ class MobileQuestPreviewControlBar {
                 throw value;
               } else if (arg0 === 2) {
                 c4 = 3;
-                obj = { value, done: true };
-                return obj;
+                const obj4 = { value, done: true };
+                return obj4;
               } else if (null != questId) {
                 v0(true);
                 v0 = 1;
-                let obj1 = tmp3(tmp27[11]);
                 c1 = 2;
                 c4 = 1;
-                obj1 = { value: null, done: false };
-                obj1.value = obj1.completeQuestPreview(tmp22, 1);
-                return obj1;
+                const obj5 = { value: tmp3(tmp27[11]).completeQuestPreview(tmp22, 1), done: false };
+                return obj5;
               } else {
                 c4 = 3;
               }
@@ -144,7 +142,7 @@ class MobileQuestPreviewControlBar {
             v0 = 0;
             closure_128_3(false);
             c4 = 3;
-            obj = { value, done: true };
+            const obj = { value, done: true };
             return obj;
           } catch (tmp27) {
             if (tmp4 === v0) {
@@ -171,8 +169,8 @@ class MobileQuestPreviewControlBar {
           if (arg0 === 1) {
             throw value;
           } else if (arg0 === 2) {
-            let obj = { value, done: true };
-            return obj;
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
             return { value: "HermesInternal", done: null };
           }
@@ -185,17 +183,15 @@ class MobileQuestPreviewControlBar {
                 throw value;
               } else if (arg0 === 2) {
                 c4 = 3;
-                obj = { value, done: true };
-                return obj;
+                const obj4 = { value, done: true };
+                return obj4;
               } else if (null != questId) {
                 v0(true);
                 v0 = 1;
-                let obj1 = tmp3(tmp27[11]);
                 c1 = 2;
                 c4 = 1;
-                obj1 = { value: null, done: false };
-                obj1.value = obj1.resetQuestPreviewStatus(tmp22);
-                return obj1;
+                const obj5 = { value: tmp3(tmp27[11]).resetQuestPreviewStatus(tmp22), done: false };
+                return obj5;
               } else {
                 c4 = 3;
               }
@@ -214,7 +210,7 @@ class MobileQuestPreviewControlBar {
             v0 = 0;
             closure_128_3(false);
             c4 = 3;
-            obj = { value, done: true };
+            const obj = { value, done: true };
             return obj;
           } catch (tmp27) {
             if (tmp4 === v0) {
@@ -241,8 +237,8 @@ class MobileQuestPreviewControlBar {
           if (arg0 === 1) {
             throw value;
           } else if (arg0 === 2) {
-            let obj = { value, done: true };
-            return obj;
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
             return { value: "HermesInternal", done: null };
           }
@@ -255,19 +251,17 @@ class MobileQuestPreviewControlBar {
                 throw value;
               } else if (arg0 === 2) {
                 c4 = 3;
-                obj = { value, done: true };
-                return obj;
+                const obj4 = { value, done: true };
+                return obj4;
               } else if (null != questId) {
                 v0(true);
                 v0 = 1;
                 const _Math = Math;
                 const random = Math.random();
-                let obj1 = tmp3(tmp28[11]);
                 c1 = 2;
                 c4 = 1;
-                obj1 = { value: null, done: false };
-                obj1.value = obj1.completeQuestPreview(tmp22, random);
-                return obj1;
+                const obj5 = { value: tmp3(tmp28[11]).completeQuestPreview(tmp22, random), done: false };
+                return obj5;
               } else {
                 c4 = 3;
               }
@@ -286,7 +280,7 @@ class MobileQuestPreviewControlBar {
             v0 = 0;
             closure_128_3(false);
             c4 = 3;
-            obj = { value, done: true };
+            const obj = { value, done: true };
             return obj;
           } catch (tmp28) {
             if (tmp4 === v0) {
@@ -308,43 +302,43 @@ class MobileQuestPreviewControlBar {
     items9[3] = callback3;
     tmp15 = jsxs;
     tmp16 = closure_6;
-    obj = { style: tmp.container, children: null };
+    obj1 = { style: tmp.container, children: null };
     tmp17 = jsx;
     callback4 = closure_5.useCallback(() => {
-      let obj = { key: "quest-preview-menu", options: null, hasIcons: false };
-      obj = { label: null, onPress: null };
-      const intl = util.intl;
-      obj.label = intl.string(util.t.jQEfRT);
-      obj.onPress = callback1;
-      const items = [obj, , ,];
-      const obj1 = { label: null, onPress: null };
-      const intl2 = util.intl;
-      obj1.label = intl2.string(util.t.taqkwK);
-      obj1.onPress = callback2;
-      items[1] = obj1;
-      const obj2 = { label: null, onPress: null };
-      const intl3 = util.intl;
-      obj2.label = intl3.string(util.t.cKSLr4);
-      obj2.onPress = callback3;
-      items[2] = obj2;
+      const obj2 = { key: "quest-preview-menu", options: null, hasIcons: false };
       const obj3 = { label: null, onPress: null };
+      const intl = util.intl;
+      obj3.label = intl.string(util.t.jQEfRT);
+      obj3.onPress = callback1;
+      const items = [obj3, , ,];
+      const obj4 = { label: null, onPress: null };
+      const intl2 = util.intl;
+      obj4.label = intl2.string(util.t.taqkwK);
+      obj4.onPress = callback2;
+      items[1] = obj4;
+      const obj5 = { label: null, onPress: null };
+      const intl3 = util.intl;
+      obj5.label = intl3.string(util.t.cKSLr4);
+      obj5.onPress = callback3;
+      items[2] = obj5;
+      const obj6 = { label: null, onPress: null };
       const intl4 = util.intl;
-      obj3.label = intl4.string(util.t.rNGQfD);
-      obj3.onPress = function onPress() {
+      obj6.label = intl4.string(util.t.rNGQfD);
+      obj6.onPress = function onPress() {
         if (null != closure_1_0) {
           questId(refreshQuest[14]).copy(AppRoutes.QUEST_PREVIEW_TOOL_2(tmp));
           const obj = questId(refreshQuest[14]);
         }
       };
-      items[3] = obj3;
-      obj.options = items;
-      const result = obj.showSimpleActionSheet(obj);
+      items[3] = obj6;
+      obj2.options = items;
+      const result = Sheet_showSimpleActionSheet.showSimpleActionSheet(obj2);
     }, items9);
     items10 = [, ,];
     items10[0] = jsx(setQuestId(refreshQuest[15]), {});
-    obj1 = { style: tmp.questInputContainer, children: null };
-    obj2 = { style: tmp.searchField, children: null };
-    obj3 = {
+    obj12 = { style: tmp.questInputContainer, children: null };
+    obj13 = { style: tmp.searchField, children: null };
+    obj14 = {
       options: memo,
       value: questId,
       onChange: callback,
@@ -353,17 +347,17 @@ class MobileQuestPreviewControlBar {
       isDisabled: null,
     };
     intl = questId(refreshQuest[13]).intl;
-    obj3.placeholder = intl.string(questId(refreshQuest[13]).t.Zw8jxn);
+    obj14.placeholder = intl.string(questId(refreshQuest[13]).t.Zw8jxn);
     tmp18 = stateFromStores1;
     if (!stateFromStores1) {
       tmp18 = tmp3;
     }
-    obj3.isDisabled = tmp18;
-    obj2.children = tmp17(questId(refreshQuest[16]).MobileSearchableSelect, obj3);
+    obj14.isDisabled = tmp18;
+    obj13.children = tmp17(questId(refreshQuest[16]).MobileSearchableSelect, obj14);
     items11 = [,];
-    items11[0] = tmp17(tmp16, obj2);
-    obj4 = { style: tmp.iconsColumn, children: null };
-    obj5 = {
+    items11[0] = tmp17(tmp16, obj13);
+    obj15 = { style: tmp.iconsColumn, children: null };
+    obj16 = {
       icon: tmp17(tmp4(tmp5[18]).RefreshIcon, {}),
       accessibilityLabel: null,
       onPress: null,
@@ -373,60 +367,67 @@ class MobileQuestPreviewControlBar {
       variant: "secondary",
     };
     intl2 = tmp4(tmp5[13]).intl;
-    obj5.accessibilityLabel = intl2.string(tmp4(tmp5[13]).t.wzzjk9);
-    obj5.onPress = refreshQuest;
+    obj16.accessibilityLabel = intl2.string(tmp4(tmp5[13]).t.wzzjk9);
+    obj16.onPress = refreshQuest;
     tmp19 = stateFromStores1;
     if (!stateFromStores1) {
       tmp20 = null;
       tmp19 = null == questId;
     }
-    obj5.disabled = tmp19;
-    obj5.loading = stateFromStores1;
+    obj16.disabled = tmp19;
+    obj16.loading = stateFromStores1;
     items12 = [,];
-    items12[0] = tmp17(tmp4(tmp5[17]).IconButton, obj5);
+    items12[0] = tmp17(tmp4(tmp5[17]).IconButton, obj16);
     tmp17Result = null != questId;
     if (tmp17Result) {
-      obj6 = { icon: null, size: "sm", variant: "secondary", accessibilityLabel: null, disabled: null, onPress: null };
-      obj6.icon = tmp17(tmp4(tmp5[19]).MoreVerticalIcon, {});
+      obj17 = { icon: null, size: "sm", variant: "secondary", accessibilityLabel: null, disabled: null, onPress: null };
+      obj17.icon = tmp17(tmp4(tmp5[19]).MoreVerticalIcon, {});
       intl3 = tmp4(tmp5[13]).intl;
-      obj6.accessibilityLabel = intl3.string(tmp4(tmp5[13]).t["+1H47t"]);
+      obj17.accessibilityLabel = intl3.string(tmp4(tmp5[13]).t["+1H47t"]);
       if (!stateFromStores1) {
         stateFromStores1 = tmp3;
       }
-      obj6.disabled = stateFromStores1;
-      obj6.onPress = callback4;
-      tmp17Result = tmp17(tmp4(tmp5[17]).IconButton, obj6);
+      obj17.disabled = stateFromStores1;
+      obj17.onPress = callback4;
+      tmp17Result = tmp17(tmp4(tmp5[17]).IconButton, obj17);
     }
     items12[1] = tmp17Result;
-    obj4.children = items12;
-    items11[1] = tmp15(tmp16, obj4);
-    obj1.children = items11;
-    items10[1] = tmp15(tmp16, obj1);
+    obj15.children = items12;
+    items11[1] = tmp15(tmp16, obj15);
+    obj12.children = items11;
+    items10[1] = tmp15(tmp16, obj12);
     tmp17Result1 = null != stateFromStores;
     if (tmp17Result1) {
-      obj7 = { variant: "text-sm/medium", color: "text-feedback-critical", style: null, children: null };
-      obj7.style = tmp.errorText;
-      obj7.children = stateFromStores.message;
-      tmp17Result1 = tmp17(tmp4(tmp5[20]).Text, obj7);
+      obj18 = { variant: "text-sm/medium", color: "text-feedback-critical", style: null, children: null };
+      obj18.style = tmp.errorText;
+      obj18.children = stateFromStores.message;
+      tmp17Result1 = tmp17(tmp4(tmp5[20]).Text, obj18);
     }
     items10[2] = tmp17Result1;
-    obj.children = items10;
-    return tmp15(tmp16, obj);
+    obj1.children = items10;
+    return tmp15(tmp16, obj1);
   }
 }
 const View = fn(17).View;
 const AppRoutes = fn(1085).AppRoutes;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-fn(4636);
-let createStyles = {
+const createStyles = fn(4636);
+let obj2 = {
   container: { overflow: "visible", zIndex: 1 },
-  questInputContainer: null,
-  searchField: null,
+  questInputContainer: {
+    flexDirection: "row",
+    alignItems: "flex-start",
+    justifyContent: "flex-start",
+    gap: nativeDefault.space.PX_8,
+    zIndex: 2,
+    overflow: "visible",
+  },
+  searchField: { flex: 1, zIndex: 3, overflow: "visible" },
   iconsColumn: null,
   errorText: null,
 };
-createStyles = {
+let obj3 = {
   flexDirection: "row",
   alignItems: "flex-start",
   justifyContent: "flex-start",
@@ -434,16 +435,10 @@ createStyles = {
   zIndex: 2,
   overflow: "visible",
 };
-createStyles.questInputContainer = createStyles;
-createStyles.searchField = { flex: 1, zIndex: 3, overflow: "visible" };
-createStyles.iconsColumn = {
-  flexDirection: "row",
-  gap: nativeDefault.space.PX_8,
-  paddingTop: nativeDefault.space.PX_4,
-};
-let obj1 = { flexDirection: "row", gap: nativeDefault.space.PX_8, paddingTop: nativeDefault.space.PX_4 };
-createStyles.errorText = { marginTop: nativeDefault.space.PX_4, zIndex: 1 };
-let closure_11 = createStyles.createStyles(createStyles);
+obj2.iconsColumn = { flexDirection: "row", gap: nativeDefault.space.PX_8, paddingTop: nativeDefault.space.PX_4 };
+let obj4 = { flexDirection: "row", gap: nativeDefault.space.PX_8, paddingTop: nativeDefault.space.PX_4 };
+obj2.errorText = { marginTop: nativeDefault.space.PX_4, zIndex: 1 };
+let closure_11 = createStyles.createStyles(obj2);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_settings/quests/native/MobileQuestPreviewControlBar.tsx");
 

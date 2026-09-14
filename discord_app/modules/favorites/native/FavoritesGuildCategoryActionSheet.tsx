@@ -9,7 +9,7 @@ require = fn;
 function FavoritesGuildCategoryActionSheetConnected(category) {
   category = category.category;
   const onClose = category.onClose;
-  const tmp3 = onClose(11107)(category);
+  const tmp3 = onClose(11108)(category);
   dependencyMap = tmp3;
   const DeveloperMode = category(1935).DeveloperMode;
   const setting = DeveloperMode.useSetting();
@@ -19,47 +19,47 @@ function FavoritesGuildCategoryActionSheetConnected(category) {
   };
   let tmp7Result = null;
   if (null != tmp3) {
-    obj = { hasIcons: true, children: null };
-    obj = { label: tmp3.label, icon: null, onPress: null };
-    const obj1 = { IconComponent: tmp4(11082).PlusLargeIcon };
-    obj.icon = closure_5(tmp4(7302).ActionSheetRow.Icon, obj1);
-    obj.onPress = function onPress() {
+    const obj2 = { hasIcons: true, children: null };
+    const obj3 = { label: tmp3.label, icon: null, onPress: null };
+    const obj4 = { IconComponent: tmp4(11083).PlusLargeIcon };
+    obj3.icon = closure_5(tmp4(7302).ActionSheetRow.Icon, obj4);
+    obj3.onPress = function onPress() {
       closure_2.perform();
       onClose();
     };
-    obj.children = closure_5(tmp4(7302).ActionSheetRow, obj);
-    tmp7Result = closure_5(tmp4(7302).ActionSheetRow.Group, obj);
+    obj2.children = closure_5(tmp4(7302).ActionSheetRow, obj3);
+    tmp7Result = closure_5(tmp4(7302).ActionSheetRow.Group, obj2);
   }
   const items = [tmp7Result, ,];
-  const obj2 = { hasIcons: true, children: null };
-  const obj3 = { label: null, icon: null, onPress: null };
+  const obj5 = { hasIcons: true, children: null };
+  const obj6 = { label: null, icon: null, onPress: null };
   const intl = tmp4(1114).intl;
-  obj3.label = intl.string(category(1114).t.zdPFs9);
+  obj6.label = intl.string(category(1114).t.zdPFs9);
   const tmp2 = onClose(4789)(category, true);
-  obj3.icon = closure_5(category(7302).ActionSheetRow.Icon, { IconComponent: category(7483).SettingsIcon });
-  obj3.onPress = function onPress() {
+  obj6.icon = closure_5(category(7302).ActionSheetRow.Icon, { IconComponent: category(7483).SettingsIcon });
+  obj6.onPress = function onPress() {
     openFavoritesGuildCategorySettingsModalDefault(category.id);
     onClose();
   };
-  obj2.children = closure_5(category(7302).ActionSheetRow, obj3);
-  items[1] = closure_5(category(7302).ActionSheetRow.Group, obj2);
-  tmp7Result = null;
+  obj5.children = closure_5(category(7302).ActionSheetRow, obj6);
+  items[1] = closure_5(category(7302).ActionSheetRow.Group, obj5);
+  let tmp7Result2 = null;
   if (setting) {
-    const obj5 = { hasIcons: true, children: null };
-    const obj6 = { label: null, icon: null, onPress: null };
+    const obj8 = { hasIcons: true, children: null };
+    const obj9 = { label: null, icon: null, onPress: null };
     const intl2 = tmp4(1114).intl;
-    obj6.label = intl2.string(tmp4(1114).t["2visC6"]);
-    const obj7 = { IconComponent: tmp4(10757).IdIcon };
-    obj6.icon = closure_5(tmp4(7302).ActionSheetRow.Icon, obj7);
-    obj6.onPress = function onPress() {
+    obj9.label = intl2.string(tmp4(1114).t["2visC6"]);
+    const obj10 = { IconComponent: tmp4(10758).IdIcon };
+    obj9.icon = closure_5(tmp4(7302).ActionSheetRow.Icon, obj10);
+    obj9.onPress = function onPress() {
       ClipboardUtils.copy(category.id);
       ToastUtils.presentIdCopied();
       onClose();
     };
-    obj5.children = closure_5(tmp4(7302).ActionSheetRow, obj6);
-    tmp7Result = closure_5(tmp4(7302).ActionSheetRow.Group, obj5);
+    obj8.children = closure_5(tmp4(7302).ActionSheetRow, obj9);
+    tmp7Result2 = closure_5(tmp4(7302).ActionSheetRow.Group, obj8);
   }
-  items[2] = tmp7Result;
+  items[2] = tmp7Result2;
   obj.children = items;
   return closure_6(category(7300).ActionSheet, obj);
 }
@@ -73,9 +73,10 @@ export default function FavoritesGuildCategoryActionSheet(categoryId) {
   const onClose = categoryId.onClose;
   let stateFromStores;
   let memo;
-  let obj = categoryId(stateFromStores[16]);
   const items = [FavoriteStore];
-  stateFromStores = obj.useStateFromStores(items, () => FavoriteStore.getFavorite(categoryId));
+  stateFromStores = categoryId(stateFromStores[16]).useStateFromStores(items, () =>
+    FavoriteStore.getFavorite(categoryId),
+  );
   const items1 = [categoryId, stateFromStores];
   memo = memo.useMemo(() => {
     let categoryRecord = null;
@@ -92,8 +93,8 @@ export default function FavoritesGuildCategoryActionSheet(categoryId) {
   }, items2);
   let tmp4 = null;
   if (null != memo) {
-    obj = { category: memo, onClose };
-    tmp4 = closure_5(FavoritesGuildCategoryActionSheetConnected, obj);
+    const obj2 = { category: memo, onClose };
+    tmp4 = closure_5(FavoritesGuildCategoryActionSheetConnected, obj2);
   }
   return tmp4;
 }

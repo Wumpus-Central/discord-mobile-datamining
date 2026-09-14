@@ -12,13 +12,13 @@ const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 const createStyles = fn(4636);
 let closure_9 = createStyles.createStyles(() => {
-  let obj = { progressContainer: { height: 4 }, progressTrack: null, progressBar: null, progressBarGlowLayer: null };
-  obj = {};
+  const obj = { progressContainer: { height: 4 }, progressTrack: null, progressBar: null, progressBarGlowLayer: null };
+  const obj2 = {};
   const merged = Object.assign(absoluteFillObject.absoluteFillObject);
-  obj.borderRadius = nativeDefault.radii.round;
-  obj.backgroundColor = nativeDefault.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT;
-  obj.opacity = 0.54;
-  obj.progressTrack = obj;
+  obj2.borderRadius = nativeDefault.radii.round;
+  obj2.backgroundColor = nativeDefault.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT;
+  obj2.opacity = 0.54;
+  obj.progressTrack = obj2;
   const rect = {
     position: "absolute",
     height: "100%",
@@ -70,7 +70,6 @@ export default function BountiesModalProgress(progress) {
     tmp4[1](progress);
     tmp2[1](progress < first1);
   }
-  let obj = progress(shouldSkipAnimation[6]);
   class O {
     constructor() {
       tmp = closure_0;
@@ -80,54 +79,57 @@ export default function BountiesModalProgress(progress) {
       if (visible) {
         num = 1;
       }
-      obj = { opacity: obj.withTiming(num, tmp(tmp2[8]).timingFast) };
-      return obj;
+      obj1 = { opacity: obj.withTiming(num, tmp(tmp2[8]).timingFast) };
+      return obj1;
     }
   }
-  obj = {
+  let obj = progress(shouldSkipAnimation[6]);
+  O.__closure = {
     withTiming: progress(shouldSkipAnimation[7]).withTiming,
     visible,
     timingFast: progress(shouldSkipAnimation[8]).timingFast,
   };
-  O.__closure = obj;
   O.__workletHash = 5158131592262;
   O.__initData = __initData;
   const animatedStyle = obj.useAnimatedStyle(O);
-  let obj2 = progress(shouldSkipAnimation[6]);
+  const obj2 = {
+    withTiming: progress(shouldSkipAnimation[7]).withTiming,
+    visible,
+    timingFast: progress(shouldSkipAnimation[8]).timingFast,
+  };
   class B {
     constructor() {
       obj = closure_0(closure_2[7]);
       result = 100 * progress;
       tmp2 = closure_0(closure_2[8]);
-      obj = { width: obj.withTiming(`${tmp}%`, closure_2 ? tmp2.timingNone : tmp2.timingFast, "animate-always") };
-      return obj;
+      obj1 = { width: obj.withTiming(`${tmp}%`, closure_2 ? tmp2.timingNone : tmp2.timingFast, "animate-always") };
+      return obj1;
     }
   }
-  obj = {
+  const obj3 = progress(shouldSkipAnimation[6]);
+  B.__closure = {
     withTiming: progress(shouldSkipAnimation[7]).withTiming,
     progress,
     shouldSkipAnimation,
     timingNone: progress(shouldSkipAnimation[8]).timingNone,
     timingFast: progress(shouldSkipAnimation[8]).timingFast,
   };
-  B.__closure = obj;
   B.__workletHash = 15586067343237;
   B.__initData = __initData2;
-  const animatedStyle1 = obj2.useAnimatedStyle(B);
-  const obj1 = { style: null, children: null };
+  const animatedStyle1 = obj3.useAnimatedStyle(B);
+  const obj5 = { style: null, children: null };
   const items = [tmp.progressContainer, progress.style, animatedStyle];
-  obj1.style = items;
-  obj2 = { style: tmp.progressTrack };
-  const items1 = [closure_7(closure_6, obj2), ,];
-  const obj3 = { style: null };
+  obj5.style = items;
+  const items1 = [closure_7(closure_6, { style: tmp.progressTrack }), ,];
+  const obj7 = { style: null };
   const items2 = [tmp.progressBarGlowLayer, animatedStyle1];
-  obj3.style = items2;
-  items1[1] = closure_7(visible(shouldSkipAnimation[6]).View, obj3);
-  const obj4 = { style: null };
+  obj7.style = items2;
+  items1[1] = closure_7(visible(shouldSkipAnimation[6]).View, obj7);
+  const obj8 = { style: null };
   const items3 = [tmp.progressBar, animatedStyle1];
-  obj4.style = items3;
-  items1[2] = closure_7(visible(shouldSkipAnimation[6]).View, obj4);
-  obj1.children = items1;
-  return closure_8(visible(shouldSkipAnimation[6]).View, obj1);
+  obj8.style = items3;
+  items1[2] = closure_7(visible(shouldSkipAnimation[6]).View, obj8);
+  obj5.children = items1;
+  return closure_8(visible(shouldSkipAnimation[6]).View, obj5);
 }
 export const PROGRESS_BAR_HEIGHT = 4;

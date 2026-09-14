@@ -22,8 +22,8 @@ let closure_8 = async function _getOrders(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -36,8 +36,8 @@ let closure_8 = async function _getOrders(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c6 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           closure_2 = tmp3;
           closure_1 = tmp5;
@@ -47,56 +47,55 @@ let closure_8 = async function _getOrders(arg0) {
           if (_require != null) {
             status = _require.status;
           }
-          const obj1 = {};
+          const obj5 = {};
           if (null != status) {
             const items = [_require.status];
-            obj1.statuses = items;
+            obj5.statuses = items;
           }
           let skuId;
           if (_require != null) {
             skuId = _require.skuId;
           }
           if (null != skuId) {
-            obj1.sku_id = _require.skuId;
+            obj5.sku_id = _require.skuId;
           }
           let createdAfter;
           if (_require != null) {
             createdAfter = _require.createdAfter;
           }
           if (null != createdAfter) {
-            obj1.created_after = _require.createdAfter;
+            obj5.created_after = _require.createdAfter;
           }
           let isGift;
           if (_require != null) {
             isGift = _require.isGift;
           }
           if (null != isGift) {
-            obj1.is_gift = _require.isGift;
+            obj5.is_gift = _require.isGift;
           }
           let paymentGateway;
           if (_require != null) {
             paymentGateway = _require.paymentGateway;
           }
           if (null != paymentGateway) {
-            obj1.payment_gateway = _require.paymentGateway;
+            obj5.payment_gateway = _require.paymentGateway;
           }
           const HTTP = HTTPUtils.HTTP;
-          const request = { url: constants.ORDER_LIST, query: obj1, rejectWithError: true };
+          const request = { url: constants.ORDER_LIST, query: obj5, rejectWithError: true };
           c5 = 2;
           c6 = 1;
-          const obj2 = { value: HTTP.get(request), done: false };
-          return obj2;
+          const obj6 = { value: HTTP.get(request), done: false };
+          return obj6;
         }
       } else if (1 === tmp8) {
         c4 = 0;
         closure_129_1 = closure_3;
-        let obj3 = { error: closure_129_1, options: closure_129_0 };
-        closure_130_6.error("failed to fetch orders", obj3);
-        obj3 = closure_130_0(closure_130_2[5]);
-        const obj4 = { tags: { source: "OrderActionCreators_getOrders" }, extra: null };
-        const obj5 = { options: closure_129_0 };
-        obj4.extra = obj5;
-        const result = obj3.captureBillingException(closure_129_1, obj4);
+        const obj7 = { error: closure_129_1, options: closure_129_0 };
+        closure_130_6.error("failed to fetch orders", obj7);
+        const obj8 = { tags: { source: "OrderActionCreators_getOrders" }, extra: null };
+        const obj9 = { options: closure_129_0 };
+        obj8.extra = obj9;
+        const result = closure_130_0(closure_130_2[5]).captureBillingException(closure_129_1, obj8);
         throw closure_129_1;
       } else if (arg0 === 1) {
         c6 = 3;
@@ -104,8 +103,8 @@ let closure_8 = async function _getOrders(arg0) {
       } else if (arg0 === 2) {
         c4 = 0;
         c6 = 3;
-        const obj6 = { value, done: true };
-        return obj6;
+        const obj10 = { value, done: true };
+        return obj10;
       } else {
         let body = value.body;
         if (!body) {
@@ -113,7 +112,7 @@ let closure_8 = async function _getOrders(arg0) {
         }
         c4 = 0;
         c6 = 3;
-        obj = { value: body, done: true };
+        const obj = { value: body, done: true };
         return obj;
       }
     } catch (tmp31) {
@@ -145,8 +144,8 @@ let closure_10 = async function _createOrder(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -159,8 +158,8 @@ let closure_10 = async function _createOrder(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c6 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           closure_2 = tmp3;
           closure_1 = tmp7;
@@ -195,14 +194,14 @@ let closure_10 = async function _createOrder(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c6 = 3;
-          const obj1 = { value, done: true };
-          return obj1;
+          const obj4 = { value, done: true };
+          return obj4;
         } else {
           closure_130_1(closure_130_2[6]).dispatch({ type: "ORDER_CREATE_START" });
           c4 = 1;
           if (closure_129_3) {
-            const obj2 = { recipient_id: closure_129_2 };
-            closure_129_8 = obj2;
+            const obj5 = { recipient_id: closure_129_2 };
+            closure_129_8 = obj5;
             let gift_style;
             if (closure_129_4 != null) {
               gift_style = closure_129_4.gift_style;
@@ -246,18 +245,18 @@ let closure_10 = async function _createOrder(arg0) {
               closure_129_8.custom_message_contents = closure_129_4.custom_message_contents;
             }
           }
-          const obj3 = { order_line_items: closure_129_0, billing_facet: null, subscription_facet: null };
-          const obj4 = { payment_gateway: closure_129_1 };
-          obj3.billing_facet = obj4;
-          obj3.subscription_facet = closure_129_5;
-          closure_129_9 = obj3;
+          const obj6 = { order_line_items: closure_129_0, billing_facet: null, subscription_facet: null };
+          const obj8 = { payment_gateway: closure_129_1 };
+          obj6.billing_facet = obj8;
+          obj6.subscription_facet = closure_129_5;
+          closure_129_9 = obj6;
           if (null != closure_129_7) {
-            const obj5 = { request_gateway_country_code: closure_129_7 };
-            closure_129_9.location_facet = obj5;
+            const obj9 = { request_gateway_country_code: closure_129_7 };
+            closure_129_9.location_facet = obj9;
           }
           if (closure_129_3) {
-            let obj6 = { is_gift: closure_129_3, gift_customization: closure_129_8 };
-            closure_129_9.gifting_facet = obj6;
+            const obj10 = { is_gift: closure_129_3, gift_customization: closure_129_8 };
+            closure_129_9.gifting_facet = obj10;
           }
           if (null != closure_129_6) {
             closure_129_9.external_gateway_facet = closure_129_6;
@@ -266,27 +265,26 @@ let closure_10 = async function _createOrder(arg0) {
           const request = { url: closure_130_5.ORDER_CREATE, body: closure_129_9, rejectWithError: true, retries: 3 };
           c5 = 4;
           c6 = 1;
-          const obj7 = { value: HTTP.post(request), done: false };
-          return obj7;
+          const obj11 = { value: HTTP.post(request), done: false };
+          return obj11;
         }
       } else if (2 === tmp7) {
         c4 = 0;
         closure_129_11 = closure_3;
-        const obj8 = { response: closure_129_11 };
-        closure_130_6.error("failed to create order", obj8);
-        obj6 = closure_130_1(closure_130_2[6]);
+        const obj12 = { response: closure_129_11 };
+        closure_130_6.error("failed to create order", obj12);
         c5 = 3;
         c6 = 1;
-        const obj9 = { value: obj6.dispatch({ type: "ORDER_CREATE_FAIL" }), done: false };
-        return obj9;
+        const obj13 = { value: closure_130_1(closure_130_2[6]).dispatch({ type: "ORDER_CREATE_FAIL" }), done: false };
+        return obj13;
       } else if (3 === tmp7) {
         if (arg0 === 1) {
           c6 = 3;
           throw value;
         } else if (arg0 === 2) {
           c6 = 3;
-          const obj10 = { value, done: true };
-          return obj10;
+          const obj14 = { value, done: true };
+          return obj14;
         } else {
           const _Error = Error;
           const _HermesInternal = HermesInternal;
@@ -300,17 +298,17 @@ let closure_10 = async function _createOrder(arg0) {
         } else if (arg0 === 2) {
           c4 = 0;
           c6 = 3;
-          const obj11 = { value, done: true };
-          return obj11;
+          const obj15 = { value, done: true };
+          return obj15;
         } else {
           body = value.body;
-          const obj12 = { orderId: body.id, paymentGateway: closure_129_1, body: closure_129_9 };
-          closure_130_6.info("created order", obj12);
-          const obj13 = { type: "ORDER_CREATE_SUCCESS", orderId: body.id, order: body };
+          const obj16 = { orderId: body.id, paymentGateway: closure_129_1, body: closure_129_9 };
+          closure_130_6.info("created order", obj16);
+          const obj17 = { type: "ORDER_CREATE_SUCCESS", orderId: body.id, order: body };
           c5 = 5;
           c6 = 1;
-          const obj14 = { value: closure_130_1(closure_130_2[6]).dispatch(obj13), done: false };
-          return obj14;
+          const obj18 = { value: closure_130_1(closure_130_2[6]).dispatch(obj17), done: false };
+          return obj18;
         }
       } else if (arg0 === 1) {
         c6 = 3;
@@ -318,12 +316,12 @@ let closure_10 = async function _createOrder(arg0) {
       } else if (arg0 === 2) {
         c4 = 0;
         c6 = 3;
-        const obj15 = { value, done: true };
-        return obj15;
+        const obj19 = { value, done: true };
+        return obj19;
       } else {
         c4 = 0;
         c6 = 3;
-        obj = { value: body, done: true };
+        const obj = { value: body, done: true };
         return obj;
       }
     } catch (tmp78) {
@@ -345,8 +343,8 @@ let closure_12 = async function _getOrCreateOrder(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -359,8 +357,8 @@ let closure_12 = async function _getOrCreateOrder(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c4 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           closure_2 = tmp4;
           c1 = 0;
@@ -396,10 +394,10 @@ let closure_12 = async function _getOrCreateOrder(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c4 = 3;
-          const obj1 = { value, done: true };
-          return obj1;
+          const obj4 = { value, done: true };
+          return obj4;
         } else {
-          const obj2 = {
+          const obj5 = {
             isGift: closure_129_4,
             status: closure_130_4.DRAFT,
             skuId: closure_129_0,
@@ -407,8 +405,8 @@ let closure_12 = async function _getOrCreateOrder(arg0) {
           };
           c3 = 2;
           c4 = 1;
-          const obj3 = { value: closure_130_7(obj2), done: false };
-          return obj3;
+          const obj6 = { value: closure_130_7(obj5), done: false };
+          return obj6;
         }
       } else if (2 === tmp4) {
         if (arg0 === 1) {
@@ -416,19 +414,19 @@ let closure_12 = async function _getOrCreateOrder(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c4 = 3;
-          const obj4 = { value, done: true };
-          return obj4;
+          const obj7 = { value, done: true };
+          return obj7;
         } else {
           closure_129_9 = value;
           if (closure_129_9.length > 0) {
             closure_129_10 = closure_129_9[0];
-            const obj5 = { orderId: closure_129_10.id, skuId: closure_129_0, isGift: closure_129_4 };
-            closure_130_6.info("reusing existing draft order", obj5);
+            const obj8 = { orderId: closure_129_10.id, skuId: closure_129_0, isGift: closure_129_4 };
+            closure_130_6.info("reusing existing draft order", obj8);
             c4 = 3;
-            const obj6 = { value: closure_129_10, done: true };
-            return obj6;
+            const obj9 = { value: closure_129_10, done: true };
+            return obj9;
           } else {
-            const obj7 = {
+            const obj10 = {
               paymentGateway: closure_129_1,
               recipientUserId: closure_129_2,
               isGift: closure_129_4,
@@ -436,19 +434,19 @@ let closure_12 = async function _getOrCreateOrder(arg0) {
               orderLineItems: null,
               externalGatewayFacet: null,
             };
-            const obj8 = {
+            const obj11 = {
               sku_id: closure_129_0,
               quantity: 1,
               purchase_type: closure_129_3,
               subscription_plan_id: closure_129_7,
             };
-            const items = [obj8];
-            obj7.orderLineItems = items;
-            obj7.externalGatewayFacet = closure_129_8;
+            const items = [obj11];
+            obj10.orderLineItems = items;
+            obj10.externalGatewayFacet = closure_129_8;
             c3 = 3;
             c4 = 1;
-            const obj9 = { value: closure_130_9(obj7), done: false };
-            return obj9;
+            const obj12 = { value: closure_130_9(obj10), done: false };
+            return obj12;
           }
         }
       } else if (arg0 === 1) {
@@ -456,11 +454,11 @@ let closure_12 = async function _getOrCreateOrder(arg0) {
         throw value;
       } else if (arg0 === 2) {
         c4 = 3;
-        const obj10 = { value, done: true };
-        return obj10;
+        const obj13 = { value, done: true };
+        return obj13;
       } else {
         c4 = 3;
-        obj = { value, done: true };
+        const obj = { value, done: true };
         return obj;
       }
     } catch (tmp20) {
@@ -477,8 +475,8 @@ let closure_13 = async function _patchOrderLineItem(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -491,8 +489,8 @@ let closure_13 = async function _patchOrderLineItem(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c6 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           closure_2 = tmp3;
           closure_1 = tmp7;
@@ -518,13 +516,13 @@ let closure_13 = async function _patchOrderLineItem(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c6 = 3;
-          const obj1 = { value, done: true };
-          return obj1;
+          const obj4 = { value, done: true };
+          return obj4;
         } else {
           closure_130_1(closure_130_2[6]).dispatch({ type: "ORDER_UPDATE_START" });
           c4 = 1;
-          const obj2 = { expected_revision: closure_129_3, subscription_plan_id: closure_129_2 };
-          closure_129_4 = obj2;
+          const obj5 = { expected_revision: closure_129_3, subscription_plan_id: closure_129_2 };
+          closure_129_4 = obj5;
           const HTTP = closure_130_0(closure_130_2[4]).HTTP;
           const request = {
             url: closure_130_5.ORDER_PATCH_LINE_ITEM(closure_129_0, closure_129_1),
@@ -533,32 +531,31 @@ let closure_13 = async function _patchOrderLineItem(arg0) {
           };
           c5 = 4;
           c6 = 1;
-          const obj3 = { value: HTTP.patch(request), done: false };
-          return obj3;
+          const obj7 = { value: HTTP.patch(request), done: false };
+          return obj7;
         }
       } else if (2 === tmp7) {
         c4 = 0;
         closure_129_6 = closure_3;
-        let obj5 = closure_130_0(closure_130_2[5]);
-        const obj4 = { tags: { source: "OrderActionCreators_patchOrderLineItem" }, extra: null };
-        obj5 = { orderId: closure_129_0, orderLineItemId: closure_129_1, subscriptionPlanId: closure_129_2 };
-        obj4.extra = obj5;
-        const result = obj5.captureBillingException(closure_129_6, obj4);
-        const obj6 = { error: closure_129_6, orderId: closure_129_0, orderLineItemId: closure_129_1 };
-        closure_130_6.error("failed to update order line item id", obj6);
-        let obj9 = closure_130_1(closure_130_2[6]);
+        const obj8 = { tags: { source: "OrderActionCreators_patchOrderLineItem" }, extra: null };
+        const obj9 = { orderId: closure_129_0, orderLineItemId: closure_129_1, subscriptionPlanId: closure_129_2 };
+        obj8.extra = obj9;
+        const result = closure_130_0(closure_130_2[5]).captureBillingException(closure_129_6, obj8);
+        const obj11 = { error: closure_129_6, orderId: closure_129_0, orderLineItemId: closure_129_1 };
+        closure_130_6.error("failed to update order line item id", obj11);
+        const obj6 = closure_130_0(closure_130_2[5]);
         c5 = 3;
         c6 = 1;
-        const obj7 = { value: obj9.dispatch({ type: "ORDER_UPDATE_FAIL" }), done: false };
-        return obj7;
+        const obj12 = { value: closure_130_1(closure_130_2[6]).dispatch({ type: "ORDER_UPDATE_FAIL" }), done: false };
+        return obj12;
       } else if (3 === tmp7) {
         if (arg0 === 1) {
           c6 = 3;
           throw value;
         } else if (arg0 === 2) {
           c6 = 3;
-          const obj8 = { value, done: true };
-          return obj8;
+          const obj13 = { value, done: true };
+          return obj13;
         } else {
           throw closure_129_6;
         }
@@ -569,17 +566,17 @@ let closure_13 = async function _patchOrderLineItem(arg0) {
         } else if (arg0 === 2) {
           c4 = 0;
           c6 = 3;
-          obj9 = { value, done: true };
-          return obj9;
+          const obj14 = { value, done: true };
+          return obj14;
         } else {
           closure_129_5 = value;
-          const obj10 = { orderId: closure_129_0, orderLineItemId: closure_129_1, body: closure_129_4 };
-          closure_130_6.info("updated order line item", obj10);
-          const obj11 = { type: "ORDER_UPDATE_SUCCESS", orderId: closure_129_0 };
+          const obj15 = { orderId: closure_129_0, orderLineItemId: closure_129_1, body: closure_129_4 };
+          closure_130_6.info("updated order line item", obj15);
+          const obj16 = { type: "ORDER_UPDATE_SUCCESS", orderId: closure_129_0 };
           c5 = 5;
           c6 = 1;
-          const obj12 = { value: closure_130_1(closure_130_2[6]).dispatch(obj11), done: false };
-          return obj12;
+          const obj18 = { value: closure_130_1(closure_130_2[6]).dispatch(obj16), done: false };
+          return obj18;
         }
       } else if (arg0 === 1) {
         c6 = 3;
@@ -587,12 +584,12 @@ let closure_13 = async function _patchOrderLineItem(arg0) {
       } else if (arg0 === 2) {
         c4 = 0;
         c6 = 3;
-        const obj13 = { value, done: true };
-        return obj13;
+        const obj20 = { value, done: true };
+        return obj20;
       } else {
         c4 = 0;
         c6 = 3;
-        obj = { value: closure_129_5.body.revision, done: true };
+        const obj = { value: closure_129_5.body.revision, done: true };
         return obj;
       }
     } catch (tmp31) {
@@ -614,8 +611,8 @@ let closure_14 = async function _patchOrder(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -628,8 +625,8 @@ let closure_14 = async function _patchOrder(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c6 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           closure_2 = tmp3;
           closure_1 = tmp7;
@@ -657,13 +654,13 @@ let closure_14 = async function _patchOrder(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c6 = 3;
-          const obj1 = { value, done: true };
-          return obj1;
+          const obj4 = { value, done: true };
+          return obj4;
         } else {
           closure_130_1(closure_130_2[6]).dispatch({ type: "ORDER_UPDATE_START" });
           c4 = 1;
-          const obj2 = { expected_revision: closure_129_1 };
-          closure_129_5 = obj2;
+          const obj5 = { expected_revision: closure_129_1 };
+          closure_129_5 = obj5;
           if (null != closure_129_2) {
             closure_129_5.order_line_items = closure_129_2;
           }
@@ -681,32 +678,31 @@ let closure_14 = async function _patchOrder(arg0) {
           };
           c5 = 4;
           c6 = 1;
-          const obj3 = { value: HTTP.patch(request), done: false };
-          return obj3;
+          const obj7 = { value: HTTP.patch(request), done: false };
+          return obj7;
         }
       } else if (2 === tmp7) {
         c4 = 0;
         closure_129_7 = closure_3;
-        let obj5 = closure_130_0(closure_130_2[5]);
-        const obj4 = { tags: { source: "OrderActionCreators_patchOrder" }, extra: null };
-        obj5 = { orderId: closure_129_0, orderLineItems: closure_129_2 };
-        obj4.extra = obj5;
-        const result = obj5.captureBillingException(closure_129_7, obj4);
-        const obj6 = { error: closure_129_7, orderId: closure_129_0 };
-        closure_130_6.error("failed to patch order", obj6);
-        let obj9 = closure_130_1(closure_130_2[6]);
+        const obj8 = { tags: { source: "OrderActionCreators_patchOrder" }, extra: null };
+        const obj9 = { orderId: closure_129_0, orderLineItems: closure_129_2 };
+        obj8.extra = obj9;
+        const result = closure_130_0(closure_130_2[5]).captureBillingException(closure_129_7, obj8);
+        const obj11 = { error: closure_129_7, orderId: closure_129_0 };
+        closure_130_6.error("failed to patch order", obj11);
+        const obj6 = closure_130_0(closure_130_2[5]);
         c5 = 3;
         c6 = 1;
-        const obj7 = { value: obj9.dispatch({ type: "ORDER_UPDATE_FAIL" }), done: false };
-        return obj7;
+        const obj12 = { value: closure_130_1(closure_130_2[6]).dispatch({ type: "ORDER_UPDATE_FAIL" }), done: false };
+        return obj12;
       } else if (3 === tmp7) {
         if (arg0 === 1) {
           c6 = 3;
           throw value;
         } else if (arg0 === 2) {
           c6 = 3;
-          const obj8 = { value, done: true };
-          return obj8;
+          const obj13 = { value, done: true };
+          return obj13;
         } else {
           throw closure_129_7;
         }
@@ -717,17 +713,17 @@ let closure_14 = async function _patchOrder(arg0) {
         } else if (arg0 === 2) {
           c4 = 0;
           c6 = 3;
-          obj9 = { value, done: true };
-          return obj9;
+          const obj14 = { value, done: true };
+          return obj14;
         } else {
           body = value.body;
-          const obj10 = { orderId: closure_129_0, body: closure_129_5 };
-          closure_130_6.info("patched order", obj10);
-          const obj11 = { type: "ORDER_UPDATE_SUCCESS", orderId: closure_129_0 };
+          const obj15 = { orderId: closure_129_0, body: closure_129_5 };
+          closure_130_6.info("patched order", obj15);
+          const obj16 = { type: "ORDER_UPDATE_SUCCESS", orderId: closure_129_0 };
           c5 = 5;
           c6 = 1;
-          const obj12 = { value: closure_130_1(closure_130_2[6]).dispatch(obj11), done: false };
-          return obj12;
+          const obj17 = { value: closure_130_1(closure_130_2[6]).dispatch(obj16), done: false };
+          return obj17;
         }
       } else if (arg0 === 1) {
         c6 = 3;
@@ -735,12 +731,12 @@ let closure_14 = async function _patchOrder(arg0) {
       } else if (arg0 === 2) {
         c4 = 0;
         c6 = 3;
-        const obj13 = { value, done: true };
-        return obj13;
+        const obj19 = { value, done: true };
+        return obj19;
       } else {
         c4 = 0;
         c6 = 3;
-        obj = { value: body, done: true };
+        const obj = { value: body, done: true };
         return obj;
       }
     } catch (tmp48) {
@@ -762,8 +758,8 @@ let closure_15 = async function _updateOrder(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -776,8 +772,8 @@ let closure_15 = async function _updateOrder(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c6 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           closure_2 = tmp3;
           closure_1 = tmp7;
@@ -798,13 +794,13 @@ let closure_15 = async function _updateOrder(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c6 = 3;
-          const obj1 = { value, done: true };
-          return obj1;
+          const obj4 = { value, done: true };
+          return obj4;
         } else {
           closure_130_1(closure_130_2[6]).dispatch({ type: "ORDER_UPDATE_START" });
           c4 = 1;
-          const obj2 = { expected_revision: closure_129_2 };
-          closure_129_3 = obj2;
+          const obj5 = { expected_revision: closure_129_2 };
+          closure_129_3 = obj5;
           if (null != closure_129_1) {
             closure_129_4 = {};
             if (null != closure_129_1.recipient_id) {
@@ -828,8 +824,8 @@ let closure_15 = async function _updateOrder(arg0) {
             if (null != closure_129_1.custom_message_contents) {
               closure_129_4.custom_message_contents = closure_129_1.custom_message_contents;
             }
-            const obj3 = { is_gift: true, gift_customization: closure_129_4 };
-            closure_129_3.gifting_facet = obj3;
+            const obj7 = { is_gift: true, gift_customization: closure_129_4 };
+            closure_129_3.gifting_facet = obj7;
           }
           const HTTP = closure_130_0(closure_130_2[4]).HTTP;
           const request = {
@@ -839,32 +835,31 @@ let closure_15 = async function _updateOrder(arg0) {
           };
           c5 = 4;
           c6 = 1;
-          const obj4 = { value: HTTP.patch(request), done: false };
-          return obj4;
+          const obj8 = { value: HTTP.patch(request), done: false };
+          return obj8;
         }
       } else if (2 === tmp7) {
         c4 = 0;
         closure_129_6 = closure_3;
-        let obj5 = closure_130_0(closure_130_2[5]);
-        obj5 = { tags: { source: "OrderActionCreators_updateOrder" }, extra: null };
-        const obj6 = { orderId: closure_129_0, giftInfo: closure_129_1 };
-        obj5.extra = obj6;
-        const result = obj5.captureBillingException(closure_129_6, obj5);
-        const obj7 = { error: closure_129_6, orderId: closure_129_0 };
-        closure_130_6.error("failed to update order", obj7);
-        let obj9 = closure_130_1(closure_130_2[6]);
+        const obj9 = { tags: { source: "OrderActionCreators_updateOrder" }, extra: null };
+        const obj11 = { orderId: closure_129_0, giftInfo: closure_129_1 };
+        obj9.extra = obj11;
+        const result = closure_130_0(closure_130_2[5]).captureBillingException(closure_129_6, obj9);
+        const obj12 = { error: closure_129_6, orderId: closure_129_0 };
+        closure_130_6.error("failed to update order", obj12);
+        const obj6 = closure_130_0(closure_130_2[5]);
         c5 = 3;
         c6 = 1;
-        const obj8 = { value: obj9.dispatch({ type: "ORDER_UPDATE_FAIL" }), done: false };
-        return obj8;
+        const obj13 = { value: closure_130_1(closure_130_2[6]).dispatch({ type: "ORDER_UPDATE_FAIL" }), done: false };
+        return obj13;
       } else if (3 === tmp7) {
         if (arg0 === 1) {
           c6 = 3;
           throw value;
         } else if (arg0 === 2) {
           c6 = 3;
-          obj9 = { value, done: true };
-          return obj9;
+          const obj14 = { value, done: true };
+          return obj14;
         } else {
           throw closure_129_6;
         }
@@ -875,17 +870,17 @@ let closure_15 = async function _updateOrder(arg0) {
         } else if (arg0 === 2) {
           c4 = 0;
           c6 = 3;
-          const obj10 = { value, done: true };
-          return obj10;
+          const obj15 = { value, done: true };
+          return obj15;
         } else {
           closure_129_5 = value;
-          const obj11 = { orderId: closure_129_0, body: closure_129_3 };
-          closure_130_6.info("updated order with gift customization", obj11);
-          const obj12 = { type: "ORDER_UPDATE_SUCCESS", orderId: closure_129_0 };
+          const obj16 = { orderId: closure_129_0, body: closure_129_3 };
+          closure_130_6.info("updated order with gift customization", obj16);
+          const obj17 = { type: "ORDER_UPDATE_SUCCESS", orderId: closure_129_0 };
           c5 = 5;
           c6 = 1;
-          const obj13 = { value: closure_130_1(closure_130_2[6]).dispatch(obj12), done: false };
-          return obj13;
+          const obj18 = { value: closure_130_1(closure_130_2[6]).dispatch(obj17), done: false };
+          return obj18;
         }
       } else if (arg0 === 1) {
         c6 = 3;
@@ -893,12 +888,12 @@ let closure_15 = async function _updateOrder(arg0) {
       } else if (arg0 === 2) {
         c4 = 0;
         c6 = 3;
-        const obj14 = { value, done: true };
-        return obj14;
+        const obj20 = { value, done: true };
+        return obj20;
       } else {
         c4 = 0;
         c6 = 3;
-        obj = { value: closure_129_5.body.revision, done: true };
+        const obj = { value: closure_129_5.body.revision, done: true };
         return obj;
       }
     } catch (tmp72) {
@@ -941,12 +936,11 @@ let closure_18 = async function _cancelSigningAndDiscardOrder(arg0) {
   if (1 === tmp7) {
     c4 = 0;
     closure_129_1 = closure_3;
-    closure_130_0(closure_130_2[5]);
-    const obj2 = { tags: { source: "OrderActionCreators_cancelSigningAndDiscardOrder" }, extra: null };
-    const obj3 = { orderId: closure_129_0 };
-    obj2.extra = obj3;
-    const result = obj3.captureBillingException(closure_129_1, obj2);
+    const obj6 = { tags: { source: "OrderActionCreators_cancelSigningAndDiscardOrder" }, extra: null };
+    obj6.extra = { orderId: closure_129_0 };
+    const result = closure_130_0(closure_130_2[5]).captureBillingException(closure_129_1, obj6);
     c6 = 3;
+    closure_130_0(closure_130_2[5]);
   } else if (2 === tmp7) {
     if (arg0 === 1) {
       c6 = 3;
@@ -976,8 +970,8 @@ let closure_19 = async function _markOrderAsSigningInProgress(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      let obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -990,15 +984,15 @@ let closure_19 = async function _markOrderAsSigningInProgress(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c1 = 3;
-          obj = { value, done: true };
-          return obj;
+          let obj3 = { value, done: true };
+          return obj3;
         } else if (null != value) {
-          let obj1 = { orderId: tmp14 };
-          logger.info("signing already in progress, awaiting existing promise", obj1);
+          let obj4 = { orderId: tmp14 };
+          logger.info("signing already in progress, awaiting existing promise", obj4);
           c2 = 1;
           c1 = 1;
-          let obj2 = { value, done: false };
-          return obj2;
+          let obj5 = { value, done: false };
+          return obj5;
         } else {
           const tmp6 = asyncGeneratorStep(async () => {
             if (c5 === 2) {
@@ -1008,8 +1002,8 @@ let closure_19 = async function _markOrderAsSigningInProgress(arg0) {
               if (arg0 === 1) {
                 throw value;
               } else if (arg0 === 2) {
-                let obj = { value, done: true };
-                return obj;
+                const obj2 = { value, done: true };
+                return obj2;
               } else {
                 return { value: "HermesInternal", done: null };
               }
@@ -1022,19 +1016,19 @@ let closure_19 = async function _markOrderAsSigningInProgress(arg0) {
                     throw value;
                   } else if (arg0 === 2) {
                     c5 = 3;
-                    obj = { value, done: true };
-                    return obj;
+                    const obj3 = { value, done: true };
+                    return obj3;
                   } else {
                     const orderId = tmp8;
                     closure_128_0 = undefined;
-                    const obj1 = { type: "ORDER_MARK_SIGNING_START", orderId };
-                    tmp4(tmp45[6]).dispatch(obj1);
+                    const obj4 = { type: "ORDER_MARK_SIGNING_START", orderId };
+                    tmp4(tmp45[6]).dispatch(obj4);
                     c3 = 2;
                     const obj22 = tmp4(tmp45[6]);
                     c4 = 4;
                     c5 = 1;
-                    const obj2 = { value: orderId(tmp45[7]).getOrder(orderId), done: false };
-                    return obj2;
+                    const obj5 = { value: orderId(tmp45[7]).getOrder(orderId), done: false };
+                    return obj5;
                   }
                 } else if (1 === tmp8) {
                   c3 = 0;
@@ -1043,21 +1037,20 @@ let closure_19 = async function _markOrderAsSigningInProgress(arg0) {
                 } else if (2 === tmp8) {
                   c3 = 1;
                   closure_128_1 = tmp45;
-                  let obj6 = orderId(tmp45[5]);
                   const _Error2 = Error;
                   const error = new Error("failed to mark order as signing in progress");
-                  const obj3 = { tags: { source: "OrderActionCreators_markOrderAsSigningInProgress" }, extra: null };
-                  const obj4 = { orderId: closure_129_0, response: closure_128_1 };
-                  obj3.extra = obj4;
-                  const result = obj6.captureBillingException(error, obj3);
-                  const obj5 = { response: closure_128_1, orderId: closure_129_0 };
-                  logger.error("failed to mark order as signing in progress", obj5);
-                  let obj10 = tmp4(tmp45[6]);
-                  obj6 = { type: "ORDER_MARK_SIGNING_FAIL", orderId: closure_129_0 };
+                  const obj6 = { tags: { source: "OrderActionCreators_markOrderAsSigningInProgress" }, extra: null };
+                  const obj8 = { orderId: closure_129_0, response: closure_128_1 };
+                  obj6.extra = obj8;
+                  const result = orderId(tmp45[5]).captureBillingException(error, obj6);
+                  const obj9 = { response: closure_128_1, orderId: closure_129_0 };
+                  logger.error("failed to mark order as signing in progress", obj9);
+                  const obj7 = orderId(tmp45[5]);
+                  const obj10 = { type: "ORDER_MARK_SIGNING_FAIL", orderId: closure_129_0 };
                   c4 = 3;
                   c5 = 1;
-                  const obj7 = { value: obj10.dispatch(obj6), done: false };
-                  return obj7;
+                  const obj12 = { value: tmp4(tmp45[6]).dispatch(obj10), done: false };
+                  return obj12;
                 } else if (3 === tmp8) {
                   if (arg0 === 1) {
                     c5 = 3;
@@ -1066,8 +1059,8 @@ let closure_19 = async function _markOrderAsSigningInProgress(arg0) {
                     c3 = 0;
                     c11 = null;
                     c5 = 3;
-                    const obj8 = { value, done: true };
-                    return obj8;
+                    const obj13 = { value, done: true };
+                    return obj13;
                   } else {
                     throw closure_128_1;
                   }
@@ -1079,8 +1072,8 @@ let closure_19 = async function _markOrderAsSigningInProgress(arg0) {
                     c3 = 0;
                     c11 = null;
                     c5 = 3;
-                    const obj9 = { value, done: true };
-                    return obj9;
+                    const obj14 = { value, done: true };
+                    return obj14;
                   } else {
                     closure_128_0 = value;
                     if (null == closure_128_0) {
@@ -1091,12 +1084,12 @@ let closure_19 = async function _markOrderAsSigningInProgress(arg0) {
                     } else {
                       const HTTP = orderId(tmp45[4]).HTTP;
                       const request = { url: c5.ORDER_SIGN(closure_129_0), body: null, rejectWithError: true };
-                      obj10 = { expected_revision: closure_128_0.revision };
-                      request.body = obj10;
+                      const obj15 = { expected_revision: closure_128_0.revision };
+                      request.body = obj15;
                       c4 = 5;
                       c5 = 1;
-                      const obj11 = { value: HTTP.post(request), done: false };
-                      return obj11;
+                      const obj16 = { value: HTTP.post(request), done: false };
+                      return obj16;
                     }
                   }
                 } else if (5 === tmp8) {
@@ -1107,16 +1100,16 @@ let closure_19 = async function _markOrderAsSigningInProgress(arg0) {
                     c3 = 0;
                     c11 = null;
                     c5 = 3;
-                    const obj12 = { value, done: true };
-                    return obj12;
+                    const obj17 = { value, done: true };
+                    return obj17;
                   } else {
-                    const obj13 = { orderId: closure_129_0, revision: closure_128_0.revision };
-                    logger.info("marked order as signing in progress", obj13);
-                    const obj14 = { type: "ORDER_MARK_SIGNING_SUCCESS", orderId: closure_129_0 };
+                    const obj19 = { orderId: closure_129_0, revision: closure_128_0.revision };
+                    logger.info("marked order as signing in progress", obj19);
+                    const obj20 = { type: "ORDER_MARK_SIGNING_SUCCESS", orderId: closure_129_0 };
                     c4 = 6;
                     c5 = 1;
-                    const obj15 = { value: tmp4(tmp45[6]).dispatch(obj14), done: false };
-                    return obj15;
+                    const obj21 = { value: tmp4(tmp45[6]).dispatch(obj20), done: false };
+                    return obj21;
                   }
                 } else if (arg0 === 1) {
                   c5 = 3;
@@ -1125,7 +1118,7 @@ let closure_19 = async function _markOrderAsSigningInProgress(arg0) {
                   c3 = 0;
                   c11 = null;
                   c5 = 3;
-                  obj = { value, done: true };
+                  const obj = { value, done: true };
                   return obj;
                 } else {
                   c3 = 0;
@@ -1148,8 +1141,8 @@ let closure_19 = async function _markOrderAsSigningInProgress(arg0) {
           value = tmp6;
           c2 = 2;
           c1 = 1;
-          let obj3 = { value: tmp6, done: false };
-          return obj3;
+          let obj6 = { value: tmp6, done: false };
+          return obj6;
         }
       } else if (1 === tmp4) {
         if (arg0 === 1) {
@@ -1157,19 +1150,19 @@ let closure_19 = async function _markOrderAsSigningInProgress(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c1 = 3;
-          let obj4 = { value, done: true };
-          return obj4;
+          let obj7 = { value, done: true };
+          return obj7;
         } else {
           c1 = 3;
-          let obj5 = { value: undefined, done: true };
-          return obj5;
+          let obj8 = { value: undefined, done: true };
+          return obj8;
         }
       } else if (arg0 === 1) {
         c1 = 3;
         throw value;
       } else if (arg0 === 2) {
         c1 = 3;
-        obj = { value, done: true };
+        let obj = { value, done: true };
         return obj;
       } else {
         c1 = 3;
@@ -1202,8 +1195,8 @@ let closure_22 = async function _cancelOrderSigning() {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        let obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -1216,17 +1209,17 @@ let closure_22 = async function _cancelOrderSigning() {
             throw value;
           } else if (arg0 === 2) {
             c1 = 3;
-            obj = { value, done: true };
-            return obj;
+            let obj3 = { value, done: true };
+            return obj3;
           } else {
             value = map.get(orderId);
             if (null != value) {
-              let obj1 = { orderId };
-              logger.info("cancel signing already in progress for order, awaiting existing promise", obj1);
+              const obj4 = { orderId };
+              logger.info("cancel signing already in progress for order, awaiting existing promise", obj4);
               c2 = 1;
               c1 = 1;
-              let obj2 = { value, done: false };
-              return obj2;
+              let obj5 = { value, done: false };
+              return obj5;
             } else {
               const tmp6 = asyncGeneratorStep(async () => {
                 if (c5 === 2) {
@@ -1236,8 +1229,8 @@ let closure_22 = async function _cancelOrderSigning() {
                   if (arg0 === 1) {
                     throw value;
                   } else if (arg0 === 2) {
-                    let obj = { value, done: true };
-                    return obj;
+                    const obj2 = { value, done: true };
+                    return obj2;
                   } else {
                     return { value: "HermesInternal", done: null };
                   }
@@ -1250,20 +1243,20 @@ let closure_22 = async function _cancelOrderSigning() {
                         throw value;
                       } else if (arg0 === 2) {
                         c5 = 3;
-                        obj = { value, done: true };
-                        return obj;
+                        const obj3 = { value, done: true };
+                        return obj3;
                       } else {
                         orderId = tmp8;
                         closure_128_0 = undefined;
-                        const obj1 = { type: "ORDER_CANCEL_SIGNING_START", orderId };
-                        tmp4(tmp66[6]).dispatch(obj1);
+                        const obj5 = { type: "ORDER_CANCEL_SIGNING_START", orderId };
+                        tmp4(tmp66[6]).dispatch(obj5);
                         c3 = 2;
                         const HTTP = orderId(tmp66[4]).HTTP;
-                        const obj2 = { url: c5.ORDER_CANCEL_SIGNING(orderId), rejectWithError: true };
+                        const obj6 = { url: c5.ORDER_CANCEL_SIGNING(orderId), rejectWithError: true };
                         c4 = 4;
                         c5 = 1;
-                        let obj3 = { value: HTTP.post(obj2), done: false };
-                        return obj3;
+                        const obj7 = { value: HTTP.post(obj6), done: false };
+                        return obj7;
                       }
                     } else if (1 === tmp8) {
                       c3 = 0;
@@ -1272,21 +1265,20 @@ let closure_22 = async function _cancelOrderSigning() {
                     } else if (2 === tmp8) {
                       c3 = 1;
                       closure_128_1 = tmp66;
-                      let obj8 = orderId(tmp66[5]);
                       const _Error2 = Error;
                       const error = new Error("failed to cancel order signing");
-                      const obj4 = { tags: { source: "OrderActionCreators_cancelOrderSigning" }, extra: null };
-                      const obj5 = { orderId: closure_129_0, response: closure_128_1 };
-                      obj4.extra = obj5;
-                      const result = obj8.captureBillingException(error, obj4);
-                      const obj6 = { response: closure_128_1, orderId: closure_129_0 };
-                      logger.error("failed to cancel order signing", obj6);
-                      let obj12 = tmp4(tmp66[6]);
-                      const obj7 = { type: "ORDER_CANCEL_SIGNING_FAIL", orderId: closure_129_0 };
+                      const obj8 = { tags: { source: "OrderActionCreators_cancelOrderSigning" }, extra: null };
+                      const obj10 = { orderId: closure_129_0, response: closure_128_1 };
+                      obj8.extra = obj10;
+                      const result = orderId(tmp66[5]).captureBillingException(error, obj8);
+                      const obj11 = { response: closure_128_1, orderId: closure_129_0 };
+                      logger.error("failed to cancel order signing", obj11);
+                      const obj9 = orderId(tmp66[5]);
+                      const obj12 = { type: "ORDER_CANCEL_SIGNING_FAIL", orderId: closure_129_0 };
                       c4 = 3;
                       c5 = 1;
-                      obj8 = { value: obj12.dispatch(obj7), done: false };
-                      return obj8;
+                      const obj14 = { value: tmp4(tmp66[6]).dispatch(obj12), done: false };
+                      return obj14;
                     } else if (3 === tmp8) {
                       if (arg0 === 1) {
                         c5 = 3;
@@ -1295,8 +1287,8 @@ let closure_22 = async function _cancelOrderSigning() {
                         c3 = 0;
                         set.delete(closure_129_0);
                         c5 = 3;
-                        const obj9 = { value, done: true };
-                        return obj9;
+                        const obj15 = { value, done: true };
+                        return obj15;
                       } else {
                         throw closure_128_1;
                       }
@@ -1308,8 +1300,8 @@ let closure_22 = async function _cancelOrderSigning() {
                         c3 = 0;
                         set.delete(closure_129_0);
                         c5 = 3;
-                        const obj10 = { value, done: true };
-                        return obj10;
+                        const obj16 = { value, done: true };
+                        return obj16;
                       } else {
                         closure_128_0 = value;
                         if (null == closure_128_0.body) {
@@ -1317,14 +1309,13 @@ let closure_22 = async function _cancelOrderSigning() {
                           const error1 = new Error("Invalid cancel signing response");
                           throw error1;
                         } else {
-                          const obj11 = { orderId: closure_129_0 };
-                          logger.info("cancel order signing, transitioned back to DRAFT", obj11);
-                          obj3 = tmp4(tmp66[6]);
-                          obj12 = { type: "ORDER_CANCEL_SIGNING_SUCCESS", orderId: closure_129_0 };
+                          const obj17 = { orderId: closure_129_0 };
+                          logger.info("cancel order signing, transitioned back to DRAFT", obj17);
+                          const obj18 = { type: "ORDER_CANCEL_SIGNING_SUCCESS", orderId: closure_129_0 };
                           c4 = 5;
                           c5 = 1;
-                          const obj13 = { value: obj3.dispatch(obj12), done: false };
-                          return obj13;
+                          const obj20 = { value: tmp4(tmp66[6]).dispatch(obj18), done: false };
+                          return obj20;
                         }
                       }
                     } else if (arg0 === 1) {
@@ -1334,13 +1325,13 @@ let closure_22 = async function _cancelOrderSigning() {
                       c3 = 0;
                       set.delete(closure_129_0);
                       c5 = 3;
-                      const obj14 = { value, done: true };
-                      return obj14;
+                      const obj21 = { value, done: true };
+                      return obj21;
                     } else {
                       c3 = 0;
                       set.delete(closure_129_0);
                       c5 = 3;
-                      obj = { value: closure_128_0.body, done: true };
+                      const obj = { value: closure_128_0.body, done: true };
                       return obj;
                     }
                   } catch (tmp66) {
@@ -1358,8 +1349,8 @@ let closure_22 = async function _cancelOrderSigning() {
               let result = map.set(orderId, tmp6);
               c2 = 2;
               c1 = 1;
-              let obj3 = { value: tmp6, done: false };
-              return obj3;
+              let obj6 = { value: tmp6, done: false };
+              return obj6;
             }
           }
         } else if (1 === tmp4) {
@@ -1368,23 +1359,23 @@ let closure_22 = async function _cancelOrderSigning() {
             throw value;
           } else if (arg0 === 2) {
             c1 = 3;
-            let obj4 = { value, done: true };
-            return obj4;
+            let obj7 = { value, done: true };
+            return obj7;
           } else {
             c1 = 3;
-            let obj5 = { value, done: true };
-            return obj5;
+            let obj8 = { value, done: true };
+            return obj8;
           }
         } else if (arg0 === 1) {
           c1 = 3;
           throw value;
         } else if (arg0 === 2) {
           c1 = 3;
-          let obj6 = { value, done: true };
-          return obj6;
+          let obj9 = { value, done: true };
+          return obj9;
         } else {
           c1 = 3;
-          obj = { value, done: true };
+          let obj = { value, done: true };
           return obj;
         }
       } catch (tmp10) {

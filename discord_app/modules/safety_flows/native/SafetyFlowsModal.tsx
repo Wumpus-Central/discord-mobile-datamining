@@ -8,58 +8,26 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/safety_flows/native/SafetyFlowsModal.tsx");
 
 export default function SafetyFlowsModal(initialRouteName) {
-  const tmp = _slicedToArray(noop.useState(initialRouteName.task), 2);
-  const task = tmp[0];
-  const setTask = tmp[1];
-  let obj = task(7103);
+  task = undefined;
+  setTask = undefined;
+  [task, setTask] = noop.useState(initialRouteName.task);
   const items = [task];
-  const navigatorScreens = obj.useNavigatorScreens(() => {
-    obj = {
-      [closure_1_0(closure_1_2[4]).SafetyFlowScreens.OVERVIEW]: obj,
-      [closure_1_0(closure_1_2[4]).SafetyFlowScreens.ENTER_EMAIL]: obj,
+  const navigatorScreens = task(7103).useNavigatorScreens(() => {
+    const obj = {
+      [closure_1_0(closure_1_2[4]).SafetyFlowScreens.OVERVIEW]: obj2,
+      [closure_1_0(closure_1_2[4]).SafetyFlowScreens.ENTER_EMAIL]: obj3,
     };
-    obj = {
-      headerLeft() {
-        return null;
-      },
-      headerShown: false,
-      render() {
-        return closure_1_5(setTask(17983), {});
-      },
-    };
-    obj = {
-      headerLeft() {
-        return null;
-      },
-      headerTitle() {
-        return null;
-      },
-      render() {
-        return closure_1_5(setTask(17987), {});
-      },
-    };
-    const obj1 = {
+    const obj4 = {
       headerLeft: first(5705).getHeaderBackButton(),
       headerTitle() {
         return null;
       },
       render() {
-        return closure_1_5(setTask(17989), {});
+        return closure_1_5(setTask(17990), {});
       },
     };
-    obj[first(17979).SafetyFlowScreens.VERIFY_EMAIL] = obj1;
-    obj[first(17979).SafetyFlowScreens.UPDATE_APP] = {
-      headerLeft() {
-        return null;
-      },
-      headerTitle() {
-        return null;
-      },
-      render() {
-        return closure_1_5(setTask(17991), {});
-      },
-    };
-    obj[first(17979).SafetyFlowScreens.AGE_VERIFICATION] = {
+    obj[first(17980).SafetyFlowScreens.VERIFY_EMAIL] = obj4;
+    obj[first(17980).SafetyFlowScreens.UPDATE_APP] = {
       headerLeft() {
         return null;
       },
@@ -70,22 +38,7 @@ export default function SafetyFlowsModal(initialRouteName) {
         return closure_1_5(setTask(17992), {});
       },
     };
-    obj[first(17979).SafetyFlowScreens.PARENTAL_CONSENT_CONNECTION] = {
-      headerShown: false,
-      customNavbar() {
-        return closure_1_5(task(17993).ParentalConsentConnectionNavbar, {});
-      },
-      render() {
-        return closure_1_5(setTask(17994), {});
-      },
-    };
-    obj[first(17979).SafetyFlowScreens.APP_STORE_PARENTAL_REVOCATION] = {
-      headerShown: false,
-      render() {
-        return closure_1_5(setTask(17999), {});
-      },
-    };
-    obj[first(17979).SafetyFlowScreens.ERROR] = {
+    obj[first(17980).SafetyFlowScreens.AGE_VERIFICATION] = {
       headerLeft() {
         return null;
       },
@@ -93,7 +46,33 @@ export default function SafetyFlowsModal(initialRouteName) {
         return null;
       },
       render() {
+        return closure_1_5(setTask(17993), {});
+      },
+    };
+    obj[first(17980).SafetyFlowScreens.PARENTAL_CONSENT_CONNECTION] = {
+      headerShown: false,
+      customNavbar() {
+        return closure_1_5(task(17994).ParentalConsentConnectionNavbar, {});
+      },
+      render() {
+        return closure_1_5(setTask(17995), {});
+      },
+    };
+    obj[first(17980).SafetyFlowScreens.APP_STORE_PARENTAL_REVOCATION] = {
+      headerShown: false,
+      render() {
         return closure_1_5(setTask(18000), {});
+      },
+    };
+    obj[first(17980).SafetyFlowScreens.ERROR] = {
+      headerLeft() {
+        return null;
+      },
+      headerTitle() {
+        return null;
+      },
+      render() {
+        return closure_1_5(setTask(18001), {});
       },
     };
     return obj;
@@ -120,17 +99,10 @@ export default function SafetyFlowsModal(initialRouteName) {
     }
   }, items);
   const memo1 = noop.useMemo(() => ({ task, setTask }), items1);
-  obj = {
+  let obj = task(7103);
+  return jsx(task(17985).SafetyFlowTaskContext.Provider, {
     value: memo1,
-    children: jsx(task(14262).StepModal, {
-      initialRouteName: initialRouteName.initialScreen,
-      screens: navigatorScreens,
-      steps: memo,
-    }),
-  };
-  return jsx(task(17984).SafetyFlowTaskContext.Provider, {
-    value: memo1,
-    children: jsx(task(14262).StepModal, {
+    children: jsx(task(14263).StepModal, {
       initialRouteName: initialRouteName.initialScreen,
       screens: navigatorScreens,
       steps: memo,

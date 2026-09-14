@@ -21,10 +21,10 @@ export default function GummyStripes(colors) {
       if (stripeOverlap) {
         stripeOverlap = closure_0.stripeOverlap;
       }
-      let obj = { style: null };
+      const obj = { style: null };
       items[1] = stripeOverlap;
-      obj = { backgroundColor: utils_ColorUtils.int2hex(item) };
-      items[2] = obj;
+      const obj2 = { backgroundColor: utils_ColorUtils.int2hex(item) };
+      items[2] = obj2;
       obj.style = items;
       return React3(View, obj, index);
     }),

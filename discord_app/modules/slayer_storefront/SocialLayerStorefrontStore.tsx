@@ -18,7 +18,6 @@ obj = {};
 obj = {};
 obj = {};
 obj = {};
-obj = {};
 const dependencyMap = {};
 new Set();
 obj = { state: "idle" };
@@ -40,13 +39,13 @@ prototype["initialize"] = function initialize() {
   locale = LocaleStore.locale;
 };
 prototype["getStorefrontData"] = function getStorefrontData(arg0) {
-  return obj8[arg0];
+  return obj11[arg0];
 };
 prototype["getStorefrontDataForApplicationId"] = function getStorefrontDataForApplicationId(arg0) {
-  return obj9[arg0];
+  return obj12[arg0];
 };
 prototype["getLoadedStorefrontApplicationIds"] = function getLoadedStorefrontApplicationIds() {
-  return Object.keys(obj9);
+  return Object.keys(obj12);
 };
 prototype["getStorefrontFetchState"] = function getStorefrontFetchState(type) {
   if ("guild" === type.type) {
@@ -60,14 +59,14 @@ prototype["getStorefrontFetchState"] = function getStorefrontFetchState(type) {
     applicationId = type.applicationId;
   }
   if (null != guildId) {
-    let tmp3 = obj8[guildId];
+    let tmp3 = obj11[guildId];
   } else if (null != applicationId) {
-    tmp3 = obj9[applicationId];
+    tmp3 = obj12[applicationId];
   }
   return tmp3;
 };
 prototype["getSkuAssets"] = function getSkuAssets() {
-  return obj;
+  return obj3;
 };
 prototype["getStorefrontMetadata"] = function getStorefrontMetadata(arg0) {
   return obj[arg0];
@@ -121,7 +120,7 @@ prototype["getApplicationIdFromGuildId"] = function getApplicationIdFromGuildId(
     let tmp2 = dependencyMap2[id];
     if (tmp2 == null) {
       let applicationId;
-      if (obj8[id] != null) {
+      if (obj11[id] != null) {
         const storefront = tmp4.storefront;
         if (storefront != null) {
           applicationId = storefront.applicationId;
@@ -241,23 +240,23 @@ obj = {
     }
     obj = { state: "loading" };
     if (null != guildId) {
-      obj = {};
-      const merged = Object.assign(obj8[guildId]);
+      const obj2 = {};
+      const merged = Object.assign(obj11[guildId]);
       const merged1 = Object.assign(obj);
-      obj8[guildId] = obj;
+      obj11[guildId] = obj2;
     }
     if (null != applicationId) {
-      obj = {};
-      const merged2 = Object.assign(obj9[applicationId]);
+      obj3 = {};
+      const merged2 = Object.assign(obj12[applicationId]);
       const merged3 = Object.assign(obj);
-      obj9[applicationId] = obj;
+      obj12[applicationId] = obj3;
     }
-    const merged4 = Object.assign(obj8);
-    obj8 = {};
-    const merged5 = Object.assign(obj9);
-    obj9 = {};
-    const obj1 = {};
-    const obj2 = {};
+    const merged4 = Object.assign(obj11);
+    obj11 = {};
+    const merged5 = Object.assign(obj12);
+    obj12 = {};
+    const obj4 = {};
+    const obj5 = {};
   },
   SOCIAL_LAYER_STOREFRONT_LOAD_SUCCESS: function handleSocialLayerStorefrontLoadSuccess(arg0) {
     ({ guildOrApplicationId, storefront } = arg0);
@@ -292,38 +291,37 @@ obj = {
     }
     if (tmp10) {
       dependencyMap3[storefront.applicationId] = guildId2;
-      obj = {};
+      const obj2 = {};
       const merged1 = Object.assign(dependencyMap3);
-      dependencyMap3 = obj;
+      dependencyMap3 = obj2;
     }
     const applicationId2 = storefront.applicationId;
-    obj = { state: "fetched", fetchedAt: Date.now(), storefront };
+    obj3 = { state: "fetched", fetchedAt: Date.now(), storefront };
     if (null != guildId2) {
-      const obj1 = {};
-      const merged2 = Object.assign(obj8[guildId2]);
-      const merged3 = Object.assign(obj);
-      obj8[guildId2] = obj1;
+      const obj4 = {};
+      const merged2 = Object.assign(obj11[guildId2]);
+      const merged3 = Object.assign(obj3);
+      obj11[guildId2] = obj4;
     }
     if (null != applicationId2) {
-      const obj2 = {};
-      const merged4 = Object.assign(obj9[applicationId2]);
-      const merged5 = Object.assign(obj);
-      obj9[applicationId2] = obj2;
-    }
-    const merged6 = Object.assign(obj8);
-    obj8 = {};
-    const merged7 = Object.assign(obj9);
-    obj9 = {};
-    if (null != storefront.assets) {
       const obj5 = {};
-      const merged8 = Object.assign(obj);
+      const merged4 = Object.assign(obj12[applicationId2]);
+      const merged5 = Object.assign(obj3);
+      obj12[applicationId2] = obj5;
+    }
+    const merged6 = Object.assign(obj11);
+    obj11 = {};
+    const merged7 = Object.assign(obj12);
+    obj12 = {};
+    if (null != storefront.assets) {
+      const obj8 = {};
+      const merged8 = Object.assign(obj3);
       const merged9 = Object.assign(storefront.assets);
-      obj = obj5;
+      obj3 = obj8;
     }
   },
   SOCIAL_LAYER_STOREFRONT_PARTIAL_LOAD_SUCCESS: function handleSocialLayerStorefrontPartialLoadSuccess(assets) {
-    obj = {};
-    const merged = Object.assign(obj);
+    const merged = Object.assign(obj3);
     const merged1 = Object.assign(assets.assets);
   },
   SOCIAL_LAYER_STOREFRONT_METADATA_LOAD_SUCCESS: function handleSocialLayerStorefrontMetadataLoadSuccess(arg0) {
@@ -345,34 +343,34 @@ obj = {
       applicationId = guildOrApplicationId.applicationId;
     }
     if (null != guildId) {
-      let tmp6 = obj8[guildId];
+      let tmp6 = obj11[guildId];
     } else if (null != applicationId) {
-      tmp6 = obj9[applicationId];
+      tmp6 = obj12[applicationId];
     }
     if (null == tmp6) {
       return false;
     } else if (guildOrApplicationId.eager) {
       if ("loading" === tmp6.state) {
         if (null != tmp6.storefront) {
-          obj = { state: "fetched" };
+          const obj2 = { state: "fetched" };
           if (null != guildId) {
-            obj = {};
-            const merged = Object.assign(obj8[guildId]);
-            const merged1 = Object.assign(obj);
-            obj8[guildId] = obj;
+            obj3 = {};
+            const merged = Object.assign(obj11[guildId]);
+            const merged1 = Object.assign(obj2);
+            obj11[guildId] = obj3;
           }
           if (null != applicationId) {
-            const obj1 = {};
-            const merged2 = Object.assign(obj9[applicationId]);
-            const merged3 = Object.assign(obj);
-            obj9[applicationId] = obj1;
+            const obj4 = {};
+            const merged2 = Object.assign(obj12[applicationId]);
+            const merged3 = Object.assign(obj2);
+            obj12[applicationId] = obj4;
           }
-          const obj2 = {};
-          const merged4 = Object.assign(obj8);
-          obj8 = obj2;
-          const obj3 = {};
-          const merged5 = Object.assign(obj9);
-          obj9 = obj3;
+          const obj5 = {};
+          const merged4 = Object.assign(obj11);
+          obj11 = obj5;
+          const obj6 = {};
+          const merged5 = Object.assign(obj12);
+          obj12 = obj6;
         }
       }
       if (null != guildId) {
@@ -381,32 +379,32 @@ obj = {
       if (null != applicationId) {
         delete tmp[tmp2];
       }
-      const obj4 = {};
-      const merged6 = Object.assign(obj8);
-      obj8 = obj4;
-      const obj5 = {};
-      const merged7 = Object.assign(obj9);
-      obj9 = obj5;
+      const obj7 = {};
+      const merged6 = Object.assign(obj11);
+      obj11 = obj7;
+      const obj8 = {};
+      const merged7 = Object.assign(obj12);
+      obj12 = obj8;
     } else {
       obj = { state: "error", fetchedAt: null, storefront: "r" };
       const _Date = Date;
       obj.fetchedAt = Date.now();
       if (null != guildId) {
-        const obj6 = {};
-        const merged8 = Object.assign(obj8[guildId]);
+        const obj9 = {};
+        const merged8 = Object.assign(obj11[guildId]);
         const merged9 = Object.assign(obj);
-        obj8[guildId] = obj6;
+        obj11[guildId] = obj9;
       }
       if (null != applicationId) {
-        const obj7 = {};
-        const merged10 = Object.assign(obj9[applicationId]);
+        const obj10 = {};
+        const merged10 = Object.assign(obj12[applicationId]);
         const merged11 = Object.assign(obj);
-        obj9[applicationId] = obj7;
+        obj12[applicationId] = obj10;
       }
-      obj8 = {};
-      const merged12 = Object.assign(obj8);
-      obj9 = {};
-      const merged13 = Object.assign(obj9);
+      obj11 = {};
+      const merged12 = Object.assign(obj11);
+      obj12 = {};
+      const merged13 = Object.assign(obj12);
     }
   },
   SET_SOCIAL_LAYER_STOREFRONT_STATE: function handleSetSocialLayerStorefrontState(activePage) {
@@ -521,11 +519,11 @@ obj = {
       obj = {};
       const merged = Object.assign(obj);
       if (eligible) {
-        obj = { state: "eligible" };
+        let obj2 = { state: "eligible" };
       } else {
-        obj = { state: "ineligible", ineligibleReason };
+        obj2 = { state: "ineligible", ineligibleReason };
       }
-      obj[skuId] = obj;
+      obj[skuId] = obj2;
     }
   },
   SOCIAL_LAYER_STOREFRONT_ENTRIES_LOAD: function handleSocialLayerStorefrontEntriesLoad(applicationId) {
@@ -537,43 +535,39 @@ obj = {
     obj = {};
     ({ applicationId, entries } = arg0);
     const merged = Object.assign(obj);
-    obj = { state: "fetched", entries, fetchedAt: Date.now() };
-    obj[applicationId] = obj;
+    obj[applicationId] = { state: "fetched", entries, fetchedAt: Date.now() };
   },
   SOCIAL_LAYER_STOREFRONT_ENTRIES_LOAD_FAILURE: function handleSocialLayerStorefrontEntriesLoadFailure(applicationId) {
     obj = {};
     const merged = Object.assign(obj);
-    obj = { state: "error", fetchedAt: Date.now() };
-    obj[applicationId.applicationId] = obj;
+    obj[applicationId.applicationId] = { state: "error", fetchedAt: Date.now() };
   },
   SOCIAL_LAYER_STOREFRONT_BY_ID_LOAD: function handleSocialLayerStorefrontByIdLoad(storefrontId) {
     storefrontId = storefrontId.storefrontId;
     obj = {};
     const merged = Object.assign(obj);
-    obj = {};
+    const obj2 = {};
     const merged1 = Object.assign(obj[storefrontId]);
-    obj.storefront = null;
-    obj.state = "loading";
-    obj.fetchedAt = null;
-    obj[storefrontId] = obj;
+    obj2.storefront = null;
+    obj2.state = "loading";
+    obj2.fetchedAt = null;
+    obj[storefrontId] = obj2;
   },
   SOCIAL_LAYER_STOREFRONT_BY_ID_LOAD_SUCCESS: function handleSocialLayerStorefrontByIdLoadSuccess(storefront) {
     storefront = storefront.storefront;
     obj = {};
     const merged = Object.assign(obj);
-    obj = { storefront, state: "fetched", fetchedAt: Date.now() };
-    obj[storefront.storefrontId] = obj;
+    obj[storefront.storefrontId] = { storefront, state: "fetched", fetchedAt: Date.now() };
     if (null != storefront.assets) {
-      obj = {};
-      const merged1 = Object.assign(obj);
+      obj3 = {};
+      const merged1 = Object.assign(obj3);
       const merged2 = Object.assign(storefront.assets);
     }
   },
   SOCIAL_LAYER_STOREFRONT_BY_ID_LOAD_FAILURE: function handleSocialLayerStorefrontByIdLoadFailure(storefrontId) {
     obj = {};
     const merged = Object.assign(obj);
-    obj = { storefront: null, state: "error", fetchedAt: Date.now() };
-    obj[storefrontId.storefrontId] = obj;
+    obj[storefrontId.storefrontId] = { storefront: null, state: "error", fetchedAt: Date.now() };
   },
   SOCIAL_LAYER_STOREFRONT_SET_PREVIEW: function handleSocialLayerStorefrontSetPreview(storefrontId) {
     storefrontId = storefrontId.storefrontId;

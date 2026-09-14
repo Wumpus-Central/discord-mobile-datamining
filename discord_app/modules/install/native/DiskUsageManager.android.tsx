@@ -12,6 +12,7 @@ class DiskUsageManager extends tmp2 {
   }
 }
 const prototype = DiskUsageManager.prototype;
+prototype["clearCaches"] = function clearCaches() {};
 prototype["_initialize"] = function _initialize() {};
 prototype["_terminate"] = function _terminate() {};
 const diskUsageManager = new DiskUsageManager();

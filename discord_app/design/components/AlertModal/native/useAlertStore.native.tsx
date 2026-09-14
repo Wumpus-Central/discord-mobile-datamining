@@ -2,15 +2,17 @@
 import markAccessibilityFocusDefault from "../../../../modules/a11y/native/markAccessibilityFocus.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 
+const require = globalThis.__r;
+
 const require = fn;
-let module_560 = fn(560);
-module_560 = module_560.create(() => ({ alerts: [] }));
+const module_560 = fn(560);
+const obj3 = module_560.create(() => ({ alerts: [] }));
 const size = fn(2);
 const result = size.fileFinishedImporting("design/components/AlertModal/native/useAlertStore.native.tsx");
 
-export const useAlertStore = module_560;
+export const useAlertStore = obj3;
 export const dismissAlerts = function dismissAlerts() {
-  const alerts = module_560.getState().alerts;
+  const alerts = obj3.getState().alerts;
   const items = [[], []];
   const tmp = _slicedToArray(
     alerts.reduce((acc, dismissable) => {
@@ -18,15 +20,14 @@ export const dismissAlerts = function dismissAlerts() {
       if (false === dismissable.dismissable) {
         num = 1;
       }
-      let arr = acc[num];
-      arr = arr.push(dismissable);
+      acc[num].push(dismissable);
       return acc;
     }, items),
     2,
   );
   const first = tmp[0];
-  first(1249).batchUpdates(() => {
-    module_560.setState({ alerts: arr4 });
+  first(1247).batchUpdates(() => {
+    obj3.setState({ alerts: arr4 });
     const item = first.forEach((onDismiss) => {
       onDismiss = onDismiss.onDismiss;
       let onDismissResult;
@@ -39,12 +40,12 @@ export const dismissAlerts = function dismissAlerts() {
   if (tmp4) {
     arr4(4983)();
   }
-  const obj = first(1249);
+  const obj = first(1247);
   tmp4 = 0 === tmp[1].length && first.length > 0;
 };
 export const dismissAlert = function dismissAlert(c6) {
   _require = c6;
-  let alerts = module_560.getState().alerts;
+  let alerts = obj3.getState().alerts;
   const found = alerts.find((key) => key.key === closure_0);
   if (null != found) {
     let tmp2 = 1 === alerts.length;
@@ -57,7 +58,7 @@ export const dismissAlert = function dismissAlert(c6) {
       tmp2 = key === c6;
     }
     require("ReactBatchUpdates").batchUpdates(() => {
-      module_560.setState((alerts) => {
+      obj3.setState((alerts) => {
         const obj = { alerts: null };
         alerts = alerts.alerts;
         obj.alerts = alerts.filter((key) => key.key !== closure_1_0);
@@ -79,11 +80,11 @@ export const openAlert = function openAlert(DeleteEventAlert, arg1, onCloseCallb
   importDefault = arg1;
   dependencyMap = onCloseCallback;
   closure_3 = arg3;
-  if (0 === module_560.getState().alerts.length) {
+  if (0 === obj3.getState().alerts.length) {
     markAccessibilityFocusDefault();
   }
   require("ReactBatchUpdates").batchUpdates(() => {
-    module_560.setState((alerts) => {
+    obj3.setState((alerts) => {
       alerts = [...alerts.alerts];
       const obj = { key, node, onDismiss, dismissable: null };
       dismissable = undefined;

@@ -83,12 +83,12 @@ prototype["hasUnsavedChanges"] = function hasUnsavedChanges() {
 };
 prototype["showNotice"] = function showNotice() {
   const self = this;
-  let values = Object.values(this.getPendingChanges(React3));
+  const values = Object.values(this.getPendingChanges(React3));
   let someResult = values.some((item) => undefined !== item);
   if (!someResult) {
     const _Object = Object;
-    values = Object.values(self.getPendingChanges(guildId));
-    someResult = values.some((item) => undefined !== item);
+    const values2 = Object.values(self.getPendingChanges(guildId));
+    someResult = values2.some((item) => undefined !== item);
   }
   return someResult;
 };
@@ -110,7 +110,7 @@ prototype["canSubmit"] = function canSubmit() {
   return true;
 };
 UserProfileSettingsStore.displayName = "UserProfileSettingsStore";
-obj = {
+const userProfileSettingsStore = new UserProfileSettingsStore(DispatcherDefault, {
   USER_SETTINGS_MODAL_INIT: handleFormOpen,
   USER_SETTINGS_MODAL_OPEN: handleFormOpen,
   USER_SETTINGS_MODAL_SET_SECTION: function handleSectionChange(section) {
@@ -306,10 +306,10 @@ obj = {
     if (undefined === prop) {
       return false;
     } else {
-      obj = {};
+      const obj2 = {};
       const merged = Object.assign(dependencyMap[React3]);
-      obj.pendingLegacyUsernameDisabled = undefined;
-      dependencyMap[React3] = obj;
+      obj2.pendingLegacyUsernameDisabled = undefined;
+      dependencyMap[React3] = obj2;
     }
   },
   USER_PROFILE_SETTINGS_RESET_PENDING_PRIMARY_GUILD_CHANGES: function handleResetPendingPrimaryGuildChanges() {
@@ -324,10 +324,10 @@ obj = {
     if (undefined === prop) {
       return false;
     } else {
-      obj = {};
+      const obj2 = {};
       const merged = Object.assign(dependencyMap[React3]);
-      obj.pendingPrimaryGuildId = undefined;
-      dependencyMap[React3] = obj;
+      obj2.pendingPrimaryGuildId = undefined;
+      dependencyMap[React3] = obj2;
     }
   },
   USER_PROFILE_UPDATE_FAILURE: function handleProfileUpdateFailure(arg0) {
@@ -342,8 +342,7 @@ obj = {
     closure_13[guildId] = errors;
   },
   LOGOUT: handleReset,
-};
-const userProfileSettingsStore = new UserProfileSettingsStore(DispatcherDefault, obj);
+});
 const result = size.fileFinishedImporting("modules/user_profile/UserProfileSettingsStore.tsx");
 
 export default userProfileSettingsStore;

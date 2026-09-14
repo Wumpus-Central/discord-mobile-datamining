@@ -10,8 +10,8 @@ let closure_5 = async function _updateBadgeSettings(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj3 = { value, done: true };
+      return obj3;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -24,8 +24,8 @@ let closure_5 = async function _updateBadgeSettings(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c6 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj4 = { value, done: true };
+          return obj4;
         } else {
           closure_2 = tmp3;
           closure_1 = tmp7;
@@ -43,25 +43,25 @@ let closure_5 = async function _updateBadgeSettings(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c6 = 3;
-          let obj1 = { value, done: true };
-          return obj1;
+          const obj5 = { value, done: true };
+          return obj5;
         } else {
           if (null != closure_129_0) {
-            const obj2 = { display_order: closure_129_0 };
-            let obj3 = obj2;
+            const obj6 = { display_order: closure_129_0 };
+            let obj7 = obj6;
           } else {
-            obj3 = {};
+            obj7 = {};
           }
-          const obj4 = {};
-          const merged = Object.assign(obj3);
+          const obj8 = {};
+          const merged = Object.assign(obj7);
           if (null != closure_129_1) {
-            const obj5 = { hidden_badges: closure_129_1 };
-            let obj6 = obj5;
+            const obj9 = { hidden_badges: closure_129_1 };
+            let obj10 = obj9;
           } else {
-            obj6 = {};
+            obj10 = {};
           }
-          const merged1 = Object.assign(obj6);
-          closure_129_2 = obj4;
+          const merged1 = Object.assign(obj10);
+          closure_129_2 = obj8;
           const _Object = Object;
           if (0 === Object.keys(closure_129_2).length) {
             c6 = 3;
@@ -72,15 +72,14 @@ let closure_5 = async function _updateBadgeSettings(arg0) {
             const request = { url: closure_130_4.USER_BADGE_SETTINGS, body: closure_129_2, rejectWithError: true };
             c5 = 3;
             c6 = 1;
-            const obj7 = { value: HTTP.patch(request), done: false };
-            return obj7;
+            const obj11 = { value: HTTP.patch(request), done: false };
+            return obj11;
           }
         }
       } else if (2 === tmp7) {
         c4 = 0;
         closure_129_3 = closure_3;
-        obj1 = closure_130_1(closure_130_2[3]);
-        obj1.captureException(closure_129_3);
+        closure_130_1(closure_130_2[3]).captureException(closure_129_3);
         c6 = 3;
         return { value: false, done: true };
       } else if (arg0 === 1) {
@@ -89,7 +88,7 @@ let closure_5 = async function _updateBadgeSettings(arg0) {
       } else if (arg0 === 2) {
         c4 = 0;
         c6 = 3;
-        obj = { value, done: true };
+        const obj = { value, done: true };
         return obj;
       } else {
         c4 = 0;

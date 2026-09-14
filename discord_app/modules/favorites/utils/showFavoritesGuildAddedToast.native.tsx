@@ -7,9 +7,9 @@ import size from "../../../../_runtime/metro/00002__.js";
 const result = size.fileFinishedImporting("modules/favorites/utils/showFavoritesGuildAddedToast.native.tsx");
 
 export default function showFavoritesGuildAddedToast() {
-  const obj = { key: "FAVORITE_ADDED", content: null, IconComponent: null };
+  const obj2 = { key: "FAVORITE_ADDED", content: null, IconComponent: null };
   const intl = util.intl;
-  obj.content = intl.string(util.t["4tSWQg"]);
-  obj.IconComponent = StarIcon.StarIcon;
-  obj.open(obj);
+  obj2.content = intl.string(util.t["4tSWQg"]);
+  obj2.IconComponent = StarIcon.StarIcon;
+  ToastActionCreatorsDefault.open(obj2);
 }

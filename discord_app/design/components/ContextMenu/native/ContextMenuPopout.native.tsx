@@ -17,27 +17,35 @@ function ContextMenuDivider() {
 }
 function ContextMenuBackdrop(onDismiss) {
   const visible = onDismiss.visible;
-  visible(4373);
+  const tmp = closure_15();
   const fn = function n() {
     const obj = { opacity: null };
     value = visible.get();
     obj.opacity = spring.withSpring(value, ContextMenuConstants.CONTEXT_MENU_SPRING);
     return obj;
   };
-  let obj = { withSpring: visible(5055).withSpring, visible, CONTEXT_MENU_SPRING: visible(8791).CONTEXT_MENU_SPRING };
-  fn.__closure = obj;
+  let obj = visible(4373);
+  fn.__closure = {
+    withSpring: visible(5055).withSpring,
+    visible,
+    CONTEXT_MENU_SPRING: visible(8791).CONTEXT_MENU_SPRING,
+  };
   fn.__workletHash = 6862317967896;
   fn.__initData = __initData2;
   const animatedStyle = obj.useAnimatedStyle(fn);
-  obj = {
+  const obj3 = {
     blur: "none",
     style: animatedStyle,
-    accessibleDismissStyle: closure_15().accessibleDismiss,
+    accessibleDismissStyle: tmp.accessibleDismiss,
     onDismiss: onDismiss.onPress,
     accessibilityLabel: null,
   };
-  const tmp = closure_15();
-  const obj4 = visible(1150);
+  const obj2 = {
+    withSpring: visible(5055).withSpring,
+    visible,
+    CONTEXT_MENU_SPRING: visible(8791).CONTEXT_MENU_SPRING,
+  };
+  const obj4 = visible(1363);
   const intl = visible(1114).intl;
   const string = intl.string;
   const t = visible(1114).t;
@@ -46,16 +54,17 @@ function ContextMenuBackdrop(onDismiss) {
   } else {
     stringResult = string(t.xs0juG);
   }
-  obj.accessibilityLabel = stringResult;
-  return closure_6(visible(5044).Backdrop, obj);
+  obj3.accessibilityLabel = stringResult;
+  return closure_6(visible(5044).Backdrop, obj3);
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, Fragment: closure_7, jsxs: closure_8 } = jsxProd);
-fn(4636);
-let createStyles = { container: null, titleContainer: null, divider: null };
-createStyles = {
+let createStyles = fn(4636);
+let obj2 = { container: null, titleContainer: null, divider: null };
+const merged = Object.assign(nativeDefault.shadows.SHADOW_HIGH);
+obj2.container = {
   position: "absolute",
   backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGHEST,
   borderWidth: 1,
@@ -63,15 +72,21 @@ createStyles = {
   borderRadius: nativeDefault.radii.lg,
   minWidth: fn(8791).CONTEXT_MENU_MIN_WIDTH,
 };
-const merged = Object.assign(nativeDefault.shadows.SHADOW_HIGH);
-createStyles.container = createStyles;
-createStyles.titleContainer = { padding: fn(8791).CONTEXT_MENU_ITEM_PADDING };
-let obj1 = { padding: fn(8791).CONTEXT_MENU_ITEM_PADDING };
-createStyles.divider = {
+let obj3 = {
+  position: "absolute",
+  backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGHEST,
+  borderWidth: 1,
+  borderColor: nativeDefault.colors.BORDER_SUBTLE,
+  borderRadius: nativeDefault.radii.lg,
+  minWidth: fn(8791).CONTEXT_MENU_MIN_WIDTH,
+};
+obj2.titleContainer = { padding: fn(8791).CONTEXT_MENU_ITEM_PADDING };
+let obj4 = { padding: fn(8791).CONTEXT_MENU_ITEM_PADDING };
+obj2.divider = {
   borderBottomWidth: fn(8791).CONTEXT_MENU_DIVIDER_HEIGHT,
   borderBottomColor: nativeDefault.colors.BORDER_SUBTLE,
 };
-let closure_9 = createStyles.createStyles(createStyles);
+let closure_9 = createStyles.createStyles(obj2);
 let closure_10 = {
   code: "function ContextMenuPopoutNativeTsx1(){const{maxHeight,height,CONTEXT_MENU_MIN_WIDTH,positionY,positionX,CONTEXT_MENU_MIN_SCALE,withSpring,interpolate,visible,CONTEXT_MENU_SPRING,transitionState,TransitionStates,runOnJS,cleanUp,onClose}=this.__closure;const visibleHeight=Math.min(maxHeight,height);const halfHeight=visibleHeight/2;const halfWidth=CONTEXT_MENU_MIN_WIDTH/2;const translateYDirection=positionY==='below'?-1:1;const translateXDirection=positionX==='left'?-1:1;const translateY=translateYDirection*halfHeight+CONTEXT_MENU_MIN_SCALE*-translateYDirection*halfHeight;const translateX=translateXDirection*halfWidth+CONTEXT_MENU_MIN_SCALE*-translateXDirection*halfWidth;return{opacity:withSpring(interpolate(visible.get(),[0,1],[0,1]),CONTEXT_MENU_SPRING,'respect-motion-settings',function(finished){if(finished&&transitionState===TransitionStates.YEETED){runOnJS(cleanUp)();runOnJS(onClose)();}}),transform:[{translateX:withSpring(interpolate(visible.get(),[0,1],[translateX,0]),CONTEXT_MENU_SPRING)},{translateY:withSpring(interpolate(visible.get(),[0,1],[translateY,0]),CONTEXT_MENU_SPRING)},{scale:withSpring(interpolate(visible.get(),[0,1],[CONTEXT_MENU_MIN_SCALE,1]),CONTEXT_MENU_SPRING)}]};}",
 };
@@ -85,12 +100,12 @@ let closure_13 = {
   code: "function ContextMenuPopoutNativeTsx4(){const{state,runOnJS,requestClose}=this.__closure;const{activeIndex:activeIndex}=state;const isDismiss=activeIndex.get()===-1;runOnJS(requestClose)(isDismiss);}",
 };
 createStyles = fn(4636);
-let obj3 = { accessibleDismiss: null };
-let obj4 = {};
+let obj7 = { accessibleDismiss: null };
+let obj8 = {};
 const merged1 = Object.assign(StyleSheet.absoluteFillObject);
-obj4.height = "auto";
-obj3.accessibleDismiss = obj4;
-let closure_15 = createStyles.createStyles(obj3);
+obj8.height = "auto";
+obj7.accessibleDismiss = obj8;
+let closure_15 = createStyles.createStyles(obj7);
 const __initData2 = {
   code: "function ContextMenuPopoutNativeTsx5(){const{withSpring,visible,CONTEXT_MENU_SPRING}=this.__closure;return{opacity:withSpring(visible.get(),CONTEXT_MENU_SPRING)};}",
 };
@@ -117,27 +132,27 @@ export const ContextMenuPopout = function ContextMenuPopout(cleanUp) {
     str = keyboardShouldPersistTaps;
   }
   const y = menu.y;
-  let obj = transitionState(positionX[7]);
   let num = 0;
   if (transitionState === transitionState(positionX[8]).TransitionStates.MOUNTED) {
     num = 1;
   }
-  sharedValue = obj.useSharedValue(num);
-  let obj1 = height;
-  items = [transitionState, sharedValue];
+  sharedValue = transitionState(positionX[7]).useSharedValue(num);
+  let items1 = [transitionState, sharedValue];
   const effect = height.useEffect(() => {
     if (transitionState === native.TransitionStates.YEETED) {
       const result = sharedValue.set(0);
     } else {
       const result1 = sharedValue.set(1);
     }
-  }, items);
+  }, items1);
   const tmp5 = diff2();
   ({ top, bottom } = cleanUp(positionX[9])({ includeKeyboardHeight: true }).insets);
-  obj = { ignoreKeyboard: null };
-  let tmpResult = transitionState(tmp2[11]);
-  obj.ignoreKeyboard = tmpResult.isAndroid();
-  const size = cleanUp(positionX[10])(obj);
+  let obj3 = { ignoreKeyboard: null };
+  let obj = transitionState(positionX[7]);
+  const tmp6 = cleanUp;
+  let tmp7 = cleanUp(positionX[10]);
+  obj3.ignoreKeyboard = transitionState(positionX[11]).isAndroid();
+  const size = tmp7(obj3);
   let diff = size.height - y;
   if ("below" === positionY) {
     const diff1 = diff - bottom;
@@ -146,19 +161,19 @@ export const ContextMenuPopout = function ContextMenuPopout(cleanUp) {
     const diff3 = diff - top;
     diff2 = diff3 - transitionState(tmp2[6]).CONTEXT_MENU_EDGE_OFFSET;
   }
-  const tmp13 = positionY(obj1.useState(height >= diff2), 2);
+  const tmp13 = positionY(height.useState(height >= diff2), 2);
   __initData = tmp13[1];
   let str2 = "bottom";
   if ("below" === positionY) {
     str2 = "top";
   }
-  obj = {
+  let obj4 = {
     [str2]: y,
     [positionX]: x,
     maxHeight: diff2,
     maxWidth: size.width - transitionState(positionX[6]).CONTEXT_MENU_EDGE_OFFSET - x,
   };
-  tmpResult = transitionState(tmp2[7]);
+  let tmpResult = transitionState(positionX[11]);
   class R {
     constructor() {
       result = Math.min(closure_9, height) / 2;
@@ -189,14 +204,14 @@ export const ContextMenuPopout = function ContextMenuPopout(cleanUp) {
           const obj2 = transitionState(positionX[7]);
         }
       };
-      obj = {
+      obj1 = {
         transitionState,
         TransitionStates: tmp2(tmp3[8]).TransitionStates,
         runOnJS: tmp2(tmp3[7]).runOnJS,
         cleanUp,
         onClose,
       };
-      fn.__closure = obj;
+      fn.__closure = obj1;
       fn.__workletHash = 4025068986009;
       fn.__initData = closure_11;
       obj.opacity = tmp2Result.withSpring(
@@ -205,7 +220,7 @@ export const ContextMenuPopout = function ContextMenuPopout(cleanUp) {
         "respect-motion-settings",
         fn,
       );
-      obj1 = { translateX: null };
+      obj14 = { translateX: null };
       tmp2Result2 = tmp2(tmp3[12]);
       tmp2Result3 = tmp2(tmp3[7]);
       value = closure_8.get();
@@ -213,10 +228,10 @@ export const ContextMenuPopout = function ContextMenuPopout(cleanUp) {
       items[0] = num2 * result1 + tmp2(tmp3[6]).CONTEXT_MENU_MIN_SCALE * -num2 * result1;
       items[1] = 0;
       interpolateResult1 = tmp2Result3.interpolate(value, [0, 1], items);
-      obj1.translateX = tmp2Result2.withSpring(interpolateResult1, tmp2(tmp3[6]).CONTEXT_MENU_SPRING);
+      obj14.translateX = tmp2Result2.withSpring(interpolateResult1, tmp2(tmp3[6]).CONTEXT_MENU_SPRING);
       items1 = [, ,];
-      items1[0] = obj1;
-      obj2 = { translateY: null };
+      items1[0] = obj14;
+      obj15 = { translateY: null };
       tmp2Result4 = tmp2(tmp3[12]);
       tmp2Result5 = tmp2(tmp3[7]);
       value1 = closure_8.get();
@@ -224,9 +239,9 @@ export const ContextMenuPopout = function ContextMenuPopout(cleanUp) {
       items2[0] = num * result + tmp2(tmp3[6]).CONTEXT_MENU_MIN_SCALE * -num * result;
       items2[1] = 0;
       interpolateResult2 = tmp2Result5.interpolate(value1, [0, 1], items2);
-      obj2.translateY = tmp2Result4.withSpring(interpolateResult2, tmp2(tmp3[6]).CONTEXT_MENU_SPRING);
-      items1[1] = obj2;
-      obj3 = { scale: null };
+      obj15.translateY = tmp2Result4.withSpring(interpolateResult2, tmp2(tmp3[6]).CONTEXT_MENU_SPRING);
+      items1[1] = obj15;
+      obj16 = { scale: null };
       tmp2Result6 = tmp2(tmp3[12]);
       tmp2Result7 = tmp2(tmp3[7]);
       value2 = closure_8.get();
@@ -234,36 +249,36 @@ export const ContextMenuPopout = function ContextMenuPopout(cleanUp) {
       items3[0] = tmp2(tmp3[6]).CONTEXT_MENU_MIN_SCALE;
       items3[1] = 1;
       interpolateResult3 = tmp2Result7.interpolate(value2, [0, 1], items3);
-      obj3.scale = tmp2Result6.withSpring(interpolateResult3, tmp2(tmp3[6]).CONTEXT_MENU_SPRING);
-      items1[2] = obj3;
+      obj16.scale = tmp2Result6.withSpring(interpolateResult3, tmp2(tmp3[6]).CONTEXT_MENU_SPRING);
+      items1[2] = obj16;
       obj.transform = items1;
       return obj;
     }
   }
-  obj1 = {
+  const tmpResult2 = transitionState(positionX[7]);
+  R.__closure = {
     maxHeight: diff2,
     height,
-    CONTEXT_MENU_MIN_WIDTH: transitionState(tmp2[6]).CONTEXT_MENU_MIN_WIDTH,
+    CONTEXT_MENU_MIN_WIDTH: transitionState(positionX[6]).CONTEXT_MENU_MIN_WIDTH,
     positionY,
     positionX,
-    CONTEXT_MENU_MIN_SCALE: transitionState(tmp2[6]).CONTEXT_MENU_MIN_SCALE,
-    withSpring: transitionState(tmp2[12]).withSpring,
-    interpolate: transitionState(tmp2[7]).interpolate,
+    CONTEXT_MENU_MIN_SCALE: transitionState(positionX[6]).CONTEXT_MENU_MIN_SCALE,
+    withSpring: transitionState(positionX[12]).withSpring,
+    interpolate: transitionState(positionX[7]).interpolate,
     visible: sharedValue,
-    CONTEXT_MENU_SPRING: transitionState(tmp2[6]).CONTEXT_MENU_SPRING,
+    CONTEXT_MENU_SPRING: transitionState(positionX[6]).CONTEXT_MENU_SPRING,
     transitionState,
-    TransitionStates: transitionState(tmp2[8]).TransitionStates,
-    runOnJS: transitionState(tmp2[7]).runOnJS,
+    TransitionStates: transitionState(positionX[8]).TransitionStates,
+    runOnJS: transitionState(positionX[7]).runOnJS,
     cleanUp,
     onClose,
   };
-  R.__closure = obj1;
   R.__workletHash = 16778623591634;
   R.__initData = __initData;
-  let items1 = [state, requestClose, __initData];
-  const animatedStyle = tmpResult.useAnimatedStyle(R);
-  let items2 = [diff2];
-  const memo = obj1.useMemo(() => {
+  let items2 = [state, requestClose, __initData];
+  const animatedStyle = tmpResult2.useAnimatedStyle(R);
+  let items3 = [diff2];
+  const memo = obj2.useMemo(() => {
     function update(absoluteX) {
       const result = transitionState(positionX[13]).updateContextMenuState(
         absoluteX.absoluteX,
@@ -271,11 +286,11 @@ export const ContextMenuPopout = function ContextMenuPopout(cleanUp) {
         activeIndex,
       );
     }
-    let obj = { updateContextMenuState: ContextMenuState.updateContextMenuState, state };
-    update.__closure = obj;
+    update.__closure = { updateContextMenuState: ContextMenuState.updateContextMenuState, state };
     update.__workletHash = 4218299258082;
     update.__initData = __initData2;
     const Gesture = LegacyBaseButton.Gesture;
+    const obj = { updateContextMenuState: ContextMenuState.updateContextMenuState, state };
     const PanResult = Gesture.Pan();
     const enabledResult = Gesture.Pan().enabled(!first);
     const onStartResult = Gesture.Pan().enabled(!first).onStart(update);
@@ -284,27 +299,27 @@ export const ContextMenuPopout = function ContextMenuPopout(cleanUp) {
       value = activeIndex.get();
       transitionState(positionX[7]).runOnJS(requestClose)(-1 === value);
     };
-    obj = { state, runOnJS: ReanimatedRexport.runOnJS, requestClose };
-    fn.__closure = obj;
+    const onUpdateResult = Gesture.Pan().enabled(!first).onStart(update).onUpdate(update);
+    fn.__closure = { state, runOnJS: ReanimatedRexport.runOnJS, requestClose };
     fn.__workletHash = 14495067009140;
     fn.__initData = __initData3;
-    return Gesture.Pan().enabled(!first).onStart(update).onUpdate(update).onEnd(fn);
-  }, items1);
-  let items3 = [requestClose];
-  const callback = obj1.useCallback((nativeEvent) => {
-    const rounded = Math.round(nativeEvent.nativeEvent.layout.height);
-    __initData(rounded >= Math.round(diff2));
+    return onUpdateResult.onEnd(fn);
   }, items2);
   const items4 = [requestClose];
-  const callback1 = obj1.useCallback(() => {
-    requestClose(true);
+  const callback = obj2.useCallback((nativeEvent) => {
+    const rounded = Math.round(nativeEvent.nativeEvent.layout.height);
+    __initData(rounded >= Math.round(diff2));
   }, items3);
-  const callback2 = obj1.useCallback(() => {
-    requestClose(false);
+  const items5 = [requestClose];
+  const callback1 = obj2.useCallback(() => {
+    requestClose(true);
   }, items4);
-  const items5 = [requestClose(ContextMenuBackdrop, { onPress: callback1, visible: sharedValue })];
-  let obj2 = { gesture: memo, children: null };
-  const obj3 = {
+  const callback2 = obj2.useCallback(() => {
+    requestClose(false);
+  }, items5);
+  const items6 = [requestClose(ContextMenuBackdrop, { onPress: callback1, visible: sharedValue })];
+  const obj6 = { gesture: memo, children: null };
+  const obj7 = {
     onLayout: callback,
     bounces: false,
     style: null,
@@ -312,31 +327,31 @@ export const ContextMenuPopout = function ContextMenuPopout(cleanUp) {
     accessibilityRole: "list",
     children: null,
   };
-  const items6 = [tmp5.container, obj, animatedStyle];
-  obj3.style = items6;
+  const items7 = [tmp5.container, obj4, animatedStyle];
+  obj7.style = items7;
   let tmp20Result = null;
   if (null != title) {
-    const obj4 = { children: null };
-    const obj5 = { style: tmp5.titleContainer, children: null };
-    const obj6 = {
+    const obj8 = { children: null };
+    const obj9 = { style: tmp5.titleContainer, children: null };
+    const obj10 = {
       variant: "text-md/bold",
       color: "mobile-text-heading-primary",
       accessibilityRole: "header",
       children: title,
     };
-    obj5.children = tmp22(transitionState(tmp2[15]).Text, obj6);
-    const items7 = [tmp22(state, obj5), tmp22(ContextMenuDivider, {})];
-    obj4.children = items7;
-    tmp20Result = tmp20(tmp21, obj4);
+    obj9.children = tmp22(transitionState(tmp2[15]).Text, obj10);
+    const items8 = [tmp22(state, obj9), tmp22(ContextMenuDivider, {})];
+    obj8.children = items8;
+    tmp20Result = tmp20(tmp21, obj8);
   }
-  const obj7 = { children: null };
-  const items8 = [tmp20Result];
+  const obj11 = { children: null };
+  const items9 = [tmp20Result];
   closure_129_0 = items;
   closure_129_1 = title;
   closure_129_2 = state;
   closure_129_3 = callback2;
   const dividerIndexes = menu.dividerIndexes;
-  items8[1] = items.map((item, index) => {
+  items9[1] = items.map((item, index) => {
     ({ label, action: transitionState } = item);
     ({ iconSource, IconComponent, trailingIndicator, variant, accessibilityRole } = item);
     const diff = transitionState.length - 1;
@@ -383,17 +398,17 @@ export const ContextMenuPopout = function ContextMenuPopout(cleanUp) {
     const tmp2Result = requestClose(transitionState(positionX[16]).ContextMenuItem, obj, "" + label + "-" + index);
     let tmp7 = tmp2Result;
     if (height.includes(index)) {
-      obj = { children: null };
+      const obj2 = { children: null };
       const _HermesInternal = HermesInternal;
       const items = [requestClose(ContextMenuDivider, {}, "divider-" + index), tmp2Result];
-      obj.children = items;
-      tmp7 = sharedValue(onClose, obj);
+      obj2.children = items;
+      tmp7 = sharedValue(onClose, obj2);
     }
     return tmp7;
   });
-  obj3.children = items8;
-  obj2.children = sharedValue(cleanUp(positionX[7]).ScrollView, obj3);
-  items5[1] = requestClose(transitionState(positionX[14]).GestureDetector, obj2);
-  obj7.children = items5;
-  return sharedValue(onClose, obj7);
+  obj7.children = items9;
+  obj6.children = sharedValue(tmp6(positionX[7]).ScrollView, obj7);
+  items6[1] = requestClose(transitionState(positionX[14]).GestureDetector, obj6);
+  obj11.children = items6;
+  return sharedValue(onClose, obj11);
 };

@@ -3,6 +3,8 @@ import user_settings_UserSettingsUtils from "../../user_settings/UserSettingsUti
 import notification_settings from "../../../../discord_common/js/packages/protos/discord_protos/discord_notifications/v1/notification_settings.tsx";
 import NotifSettingsProtoStore from "NotifSettingsProtoStore.tsx";
 
+const require = globalThis.__r;
+
 require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/notifications/settings/NotifSettingsUtils.tsx");

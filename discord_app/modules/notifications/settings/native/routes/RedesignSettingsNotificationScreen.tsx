@@ -10,7 +10,7 @@ import MobileNotifSettingsRouteBuilders from "../MobileNotifSettingsRouteBuilder
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-let closure_4 = fn(15566).initializeAndroidNotificationSettingsStore;
+let closure_4 = fn(15567).initializeAndroidNotificationSettingsStore;
 const MobileUserSettings = fn(8079).MobileUserSettings;
 const jsx = fn(21).jsx;
 const size = fn(2);
@@ -24,11 +24,12 @@ export default noop.memo(() => {
   closure_0 = tmp;
   let items = [tmp];
   const node = noop.useMemo(() => {
-    let obj = { sections: null, ListHeaderComponent: null };
+    const obj2 = { sections: null, ListHeaderComponent: null };
+    const obj = SettingBuilders;
     const items = [MobileNotifSettingsRouteBuilders.buildOverviewCategoriesSection()];
-    obj = { label: null, settings: null };
+    const obj4 = { label: null, settings: null };
     const intl = util.intl;
-    obj.label = intl.string(_modDef2722.nvBHcD);
+    obj4.label = intl.string(_modDef2722.nvBHcD);
     const items1 = [, , , , , ,];
     ({
       REDESIGN_IN_APP_NOTIFICATIONS: arr2[0],
@@ -39,15 +40,15 @@ export default noop.memo(() => {
       REDESIGN_ANDROID_NOTIFICATION_VIBRATIONS: arr2[5],
       REDESIGN_ANDROID_NOTIFICATION_SOUNDS: arr2[6],
     } = MobileUserSettings);
-    obj.settings = items1;
-    items[1] = obj;
-    obj.sections = items;
+    obj4.settings = items1;
+    items[1] = obj4;
+    obj2.sections = items;
     let tmp2Result;
     if (closure_0) {
       tmp2Result = NotificationPermissionSettingsHeaderDefault;
     }
-    obj.ListHeaderComponent = tmp2Result;
-    return obj.createList(obj);
+    obj2.ListHeaderComponent = tmp2Result;
+    return obj.createList(obj2);
   }, items);
   useMountEffectDefault(() => {
     const result = closure_0(dependencyMap[11]).refreshSystemNotifPermissionsAsync("notification_settings_screen");

@@ -2,6 +2,8 @@
 import noop from "../../../../_runtime/metro/00019__.js";
 import FamilyCenterStore from "../FamilyCenterStore.tsx";
 
+const require = globalThis.__r;
+
 const require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/parent_tools/hooks/useOnNewPendingRequest.tsx");

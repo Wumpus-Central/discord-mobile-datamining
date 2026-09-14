@@ -9,8 +9,8 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const jsx = fn(21).jsx;
-fn(11601);
-let SettingBuilders = {
+const SettingBuilders = fn(11602);
+const route = SettingBuilders.createRoute({
   useTitle() {
     const intl = util.intl;
     return intl.string(_modDef2396.RZqaJn);
@@ -18,8 +18,7 @@ let SettingBuilders = {
   parent: null,
   IconComponent: fn(5170).GroupIcon,
   useTrailing: function useFamilyCenterTrailing() {
-    let obj = useIsParentalConsentBannerActive;
-    const isParentalConsentBannerActive = obj.useIsParentalConsentBannerActive();
+    const isParentalConsentBannerActive = useIsParentalConsentBannerActive.useIsParentalConsentBannerActive();
     const parentalConsentWarning = useParentalConsentWarning.useParentalConsentWarning();
     let daysRemaining;
     if (parentalConsentWarning != null) {
@@ -34,14 +33,14 @@ let SettingBuilders = {
       if (null != daysRemaining) {
         tmp6 = null;
         if (daysRemaining >= 0) {
-          obj = {
+          const obj3 = {
             size: "sm",
             color: nativeDefault.colors.ICON_FEEDBACK_WARNING,
             accessible: true,
             accessibilityLabel: null,
           };
           const intl = util.intl;
-          obj.accessibilityLabel = intl.string(_modDef2396.wucWfE);
+          obj3.accessibilityLabel = intl.string(_modDef2396.wucWfE);
           tmp6 = jsx(WarningIcon.WarningIcon, {
             size: "sm",
             color: nativeDefault.colors.ICON_FEEDBACK_WARNING,
@@ -59,9 +58,8 @@ let SettingBuilders = {
       return require("UserSettingsFamilyCenter").default;
     },
   },
-};
-SettingBuilders = SettingBuilders.createRoute(SettingBuilders);
+});
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/FamilyCenterSetting.tsx");
 
-export default SettingBuilders;
+export default route;

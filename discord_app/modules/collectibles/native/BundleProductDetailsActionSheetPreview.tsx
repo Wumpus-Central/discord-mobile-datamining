@@ -15,21 +15,19 @@ get_ActivityIndicator = fn(17);
 const ShopCtaEnum = fn(1076).ShopCtaEnum;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-fn(4636);
-let createStyles = {
-  previewContainer: null,
+const createStyles = fn(4636);
+let obj2 = {
+  previewContainer: {
+    paddingTop: nativeDefault.space.PX_16,
+    paddingBottom: nativeDefault.space.PX_16,
+    gap: nativeDefault.space.PX_16,
+  },
   bundleThumbnail: null,
   selectedRing: null,
   bundleThumbnailRow: null,
   bundleContainer: null,
   bundleInfoContainer: null,
 };
-createStyles = {
-  paddingTop: nativeDefault.space.PX_16,
-  paddingBottom: nativeDefault.space.PX_16,
-  gap: nativeDefault.space.PX_16,
-};
-createStyles.previewContainer = createStyles;
 let size = {
   width: 56,
   height: 56,
@@ -37,7 +35,7 @@ let size = {
   backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE,
   overflow: "hidden",
 };
-createStyles.bundleThumbnail = size;
+obj2.bundleThumbnail = size;
 const rect = {
   position: "absolute",
   top: -2,
@@ -48,23 +46,28 @@ const rect = {
   borderWidth: 2,
   borderColor: nativeDefault.colors.BORDER_STRONG,
 };
-createStyles.selectedRing = rect;
-createStyles.bundleThumbnailRow = {
+obj2.selectedRing = rect;
+let obj3 = {
+  paddingTop: nativeDefault.space.PX_16,
+  paddingBottom: nativeDefault.space.PX_16,
+  gap: nativeDefault.space.PX_16,
+};
+obj2.bundleThumbnailRow = {
   flexDirection: "row",
   gap: nativeDefault.space.PX_12,
   paddingVertical: nativeDefault.space.PX_4,
   paddingHorizontal: 2,
 };
-let obj1 = {
+let obj4 = {
   flexDirection: "row",
   gap: nativeDefault.space.PX_12,
   paddingVertical: nativeDefault.space.PX_4,
   paddingHorizontal: 2,
 };
-createStyles.bundleContainer = { paddingHorizontal: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_16 };
-const obj2 = { paddingHorizontal: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_16 };
-createStyles.bundleInfoContainer = { gap: nativeDefault.space.PX_8 };
-let closure_14 = createStyles.createStyles(createStyles);
+obj2.bundleContainer = { paddingHorizontal: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_16 };
+const obj5 = { paddingHorizontal: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_16 };
+obj2.bundleInfoContainer = { gap: nativeDefault.space.PX_8 };
+let closure_14 = createStyles.createStyles(obj2);
 let closure_15 = memo((index) => {
   index = index.index;
   ({ isSelected, setSelected } = index);
@@ -73,7 +76,7 @@ let closure_15 = memo((index) => {
   const items = [setSelected, index, onTrackPress, trackedSkuId];
   ({ item, label } = index);
   const tmp2 = closure_14();
-  let obj = {
+  const obj = {
     role: "radio",
     "aria-checked": isSelected,
     onPress: closure_4(() => {
@@ -85,11 +88,21 @@ let closure_15 = memo((index) => {
     "aria-label": label,
     children: null,
   };
-  obj = { style: tmp2.bundleThumbnail, children: closure_12(setSelected(trackedSkuId[7]), { item, size: 56 }) };
-  const items1 = [closure_12(closure_10, obj)];
+  const tmp = closure_4(() => {
+    if (onTrackPress != null) {
+      tmp(ShopCtaEnum.BUNDLE_VIEW_PRODUCT, trackedSkuId);
+    }
+    setSelected(index);
+  }, items);
+  const items1 = [
+    closure_12(closure_10, {
+      style: tmp2.bundleThumbnail,
+      children: closure_12(setSelected(trackedSkuId[7]), { item, size: 56 }),
+    }),
+  ];
   if (isSelected) {
-    obj = { style: tmp2.selectedRing, pointerEvents: "none" };
-    isSelected = closure_12(closure_10, obj);
+    const obj3 = { style: tmp2.selectedRing, pointerEvents: "none" };
+    isSelected = closure_12(closure_10, obj3);
   }
   items1[1] = isSelected;
   obj.children = items1;
@@ -103,20 +116,20 @@ let closure_16 = memo((arg0) => {
     onSelect: dependencyMap,
     onTrackPress: _slicedToArray,
   } = arg0);
-  let obj = LegacyBaseButton;
-  const nativeGesture = obj.useNativeGesture({ disallowInterruption: true });
-  obj = { gesture: nativeGesture, children: null };
-  obj = {
+  const tmp = closure_14();
+  const nativeGesture = LegacyBaseButton.useNativeGesture({ disallowInterruption: true });
+  const obj2 = { gesture: nativeGesture, children: null };
+  const obj3 = {
     horizontal: true,
     showsHorizontalScrollIndicator: false,
-    contentContainerStyle: closure_14().bundleThumbnailRow,
+    contentContainerStyle: tmp.bundleThumbnailRow,
     role: "radiogroup",
     "aria-label": null,
     children: null,
   };
   const intl = util.intl;
-  obj["aria-label"] = intl.string(util.t.cTbdgu);
-  obj.children = items.map((item, index) => {
+  obj3["aria-label"] = intl.string(util.t.cTbdgu);
+  obj3.children = items.map((item, index) => {
     const obj = {
       item,
       index,
@@ -149,8 +162,8 @@ let closure_16 = memo((arg0) => {
     obj.onTrackPress = onTrackPress;
     return closure_2_12(closure_15, obj, item.skuId);
   });
-  obj.children = closure_12(closure_9, obj);
-  return closure_12(LegacyBaseButton.GestureDetector, obj);
+  obj2.children = closure_12(closure_9, obj3);
+  return closure_12(LegacyBaseButton.GestureDetector, obj2);
 });
 size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/native/BundleProductDetailsActionSheetPreview.tsx");
@@ -160,7 +173,7 @@ export default function BundleProductDetailsActionSheetPreview(arg0) {
   closure_1 = undefined;
   ({ width, handlePreviewPress } = arg0);
   const tmp = closure_14();
-  [num, tmp3] = _slicedToArray(React5(0), 2);
+  [num, tmp3] = React5(0);
   const tmp2 = _slicedToArray(React5(0), 2);
   ({ items, bundledProducts } = product);
   if (product.skuId !== tmp4[0]) {
@@ -168,14 +181,12 @@ export default function BundleProductDetailsActionSheetPreview(arg0) {
     tmp3(0);
   }
   closure_1 = tmp8;
-  items = [,];
-  items[0] = items[num];
-  items[1] = onActiveItemChange;
+  const items1 = [items[num], onActiveItemChange];
   hasOwnProperty(() => {
     if (onActiveItemChange != null) {
       tmp(closure_1);
     }
-  }, items);
+  }, items1);
   let tmp10;
   if (bundledProducts != null) {
     tmp10 = bundledProducts[num];
@@ -187,49 +198,48 @@ export default function BundleProductDetailsActionSheetPreview(arg0) {
   if (name == null) {
     name = tmp8.skuId;
   }
-  let obj = CollectiblesUtils;
-  const collectibleTypeLabel = obj.getCollectibleTypeLabel(tmp8.type);
-  const items1 = [items[num]];
-  obj = { style: tmp.previewContainer, children: null };
   tmp4 = _slicedToArray(React5(product.skuId), 2);
-  const items2 = [
+  const collectibleTypeLabel = CollectiblesUtils.getCollectibleTypeLabel(tmp8.type);
+  const items2 = [items[num]];
+  const obj2 = { style: tmp.previewContainer, children: null };
+  const items3 = [
     closure_1_12(IndividualProductPreview.IndividualProductPreview, {
       product: timestampProducer(() => {
         const obj = { skuId: closure_1.skuId, type: closure_1.type, items: null };
         const items = [closure_1];
         obj.items = items;
         return obj;
-      }, items1),
+      }, items2),
       width,
       handlePreviewPress,
       onTrackPress,
     }),
   ];
-  obj = { style: tmp.bundleContainer, children: null };
-  const obj1 = { style: tmp.bundleInfoContainer, children: null };
-  const items3 = [closure_1_12(Text_Text.Text, { variant: "heading-xl/bold", children: product.name })];
-  const obj3 = { variant: "text-sm/medium", color: "text-default", children: null };
+  const obj3 = { style: tmp.bundleContainer, children: null };
+  const obj4 = { style: tmp.bundleInfoContainer, children: null };
+  const items4 = [closure_1_12(Text_Text.Text, { variant: "heading-xl/bold", children: product.name })];
+  const obj6 = { variant: "text-sm/medium", color: "text-default", children: null };
   const intl = util.intl;
-  obj3.children = intl.formatToPlainString(util.t["/0Yndu"], { num: items.length });
-  items3[1] = closure_1_12(Text_Text.Text, obj3);
-  obj1.children = items3;
-  const items4 = [map1(closure_1_10, obj1)];
-  const obj5 = { style: tmp.bundleInfoContainer, children: null };
-  const items5 = [closure_1_12(closure_16, { items, bundledProducts, activeIndex: num, onSelect: tmp3, onTrackPress })];
-  const items6 = [name];
+  obj6.children = intl.formatToPlainString(util.t["/0Yndu"], { num: items.length });
+  items4[1] = closure_1_12(Text_Text.Text, obj6);
+  obj4.children = items4;
+  const items5 = [map1(closure_1_10, obj4)];
+  const obj8 = { style: tmp.bundleInfoContainer, children: null };
+  const items6 = [closure_1_12(closure_16, { items, bundledProducts, activeIndex: num, onSelect: tmp3, onTrackPress })];
+  const items7 = [name];
   let tmp18Result = null != collectibleTypeLabel;
   if (tmp18Result) {
-    const obj6 = { variant: "text-sm/medium", color: "text-muted", children: null };
+    const obj9 = { variant: "text-sm/medium", color: "text-muted", children: null };
     const _HermesInternal = HermesInternal;
-    obj6.children = " - " + collectibleTypeLabel;
-    tmp18Result = closure_1_12(Text_Text.Text, obj6);
+    obj9.children = " - " + collectibleTypeLabel;
+    tmp18Result = closure_1_12(Text_Text.Text, obj9);
   }
-  items6[1] = tmp18Result;
-  items5[1] = map1(Text_Text.Text, { variant: "text-sm/medium", color: "text-default", children: items6 });
-  obj5.children = items5;
-  items4[1] = map1(closure_1_10, obj5);
-  obj.children = items4;
-  items2[1] = map1(closure_1_10, obj);
-  obj.children = items2;
-  return map1(closure_1_10, obj);
+  items7[1] = tmp18Result;
+  items6[1] = map1(Text_Text.Text, { variant: "text-sm/medium", color: "text-default", children: items7 });
+  obj8.children = items6;
+  items5[1] = map1(closure_1_10, obj8);
+  obj3.children = items5;
+  items3[1] = map1(closure_1_10, obj3);
+  obj2.children = items3;
+  return map1(closure_1_10, obj2);
 }

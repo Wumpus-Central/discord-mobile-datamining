@@ -1,6 +1,6 @@
 // discord_app/design/void/Status/native/getStatusContainerStyle.tsx
 import StatusConstants from "StatusConstants.tsx";
-import size from "../../../../../_runtime/metro/00002__.js";
+import size_mod from "../../../../../_runtime/metro/00002__.js";
 
 const STATUS_PADDING = StatusConstants.STATUS_PADDING;
 const StatusSizes = StatusConstants.StatusSizes;
@@ -218,6 +218,7 @@ obj.containerVRXLarge = {
   paddingTop: STATUS_PADDING,
   paddingBottom: STATUS_PADDING,
 };
+let size = size_mod;
 const result5 = size.fileFinishedImporting("design/void/Status/native/getStatusContainerStyle.tsx");
 
 export default function getStatusContainerStyle(items, flag) {

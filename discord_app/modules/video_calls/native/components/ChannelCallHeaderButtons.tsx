@@ -16,9 +16,8 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/video_calls/native/components/ChannelCallHeaderButtons.tsx");
 
 export const CameraButton = function CameraButton() {
-  let obj = initialize;
   const items = [MediaEngineStore];
-  const stateFromStoresObject = obj.useStateFromStoresObject(items, () => ({
+  const stateFromStoresObject = initialize.useStateFromStoresObject(items, () => ({
     isVideoEnabled: MediaEngineStore.isVideoEnabled(),
     videoDeviceId: MediaEngineStore.getVideoDeviceId(),
     videoDevices: MediaEngineStore.getVideoDevices(),
@@ -26,11 +25,11 @@ export const CameraButton = function CameraButton() {
   ({ videoDeviceId: require, videoDevices: importDefault } = stateFromStoresObject);
   let tmp4 = null;
   if (stateFromStoresObject.isVideoEnabled) {
-    obj = { accessibilityLabel: null, source: null, onPress: null, disableBackground: true };
+    const obj2 = { accessibilityLabel: null, source: null, onPress: null, disableBackground: true };
     const intl = util.intl;
-    obj.accessibilityLabel = intl.string(util.t["t9eQ/g"]);
-    obj.source = _modDef10164;
-    obj.onPress = function onPress() {
+    obj2.accessibilityLabel = intl.string(util.t["t9eQ/g"]);
+    obj2.source = _modDef10164;
+    obj2.onPress = function onPress() {
       const keys = Object.keys(closure_1_1);
       const found = keys.find((item) => item !== closure_1_0);
       if (null != found) {

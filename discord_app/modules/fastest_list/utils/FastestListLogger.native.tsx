@@ -8,6 +8,5 @@ const result = size.fileFinishedImporting("modules/fastest_list/utils/FastestLis
 
 export const logFastestListError = function logFastestListError(arg0, extra) {
   logger.error(arg0, extra);
-  const obj = { extra };
-  obj.captureMessage(arg0, obj);
+  SentryUtilsDefault.captureMessage(arg0, { extra });
 };

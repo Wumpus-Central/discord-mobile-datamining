@@ -65,15 +65,15 @@ prototype["handleBackgroundSync"] = function handleBackgroundSync(arg0, arg1) {
         if (mapped == null) {
           mapped = [];
         }
-        let obj = { op: "update", writes: mapped, deletes: null };
+        const obj2 = { op: "update", writes: mapped, deletes: null };
         let deleted_channel_ids = iter.partial_updates.deleted_channel_ids;
         if (deleted_channel_ids == null) {
           deleted_channel_ids = [];
         }
-        obj.deletes = deleted_channel_ids;
-        const result = self.handleGuildSynchronize(iter.id, obj, iter);
+        obj2.deletes = deleted_channel_ids;
+        const result = self.handleGuildSynchronize(iter.id, obj2, iter);
       } else {
-        obj = { op: "full_sync", items: null };
+        const obj = { op: "full_sync", items: null };
         const channels1 = iter.channels;
         obj.items = channels1.map(asRecord);
         const result1 = self.handleGuildSynchronize(iter.id, obj, iter);

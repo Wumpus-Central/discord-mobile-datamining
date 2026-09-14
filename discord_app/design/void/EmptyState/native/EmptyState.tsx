@@ -16,29 +16,28 @@ let closure_7 = {
   accessibilityElementsHidden: true,
   importantForAccessibility: "no-hide-descendants",
 };
-fn(4636);
-let createStyles = { container: null, emptyImage: null, textGroup: null, emptyTitle: null, emptyBody: null };
-createStyles = {
-  flex: 1,
-  justifyContent: "center",
-  alignItems: "center",
-  paddingHorizontal: 36,
-  paddingBottom: 80,
-  backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER,
+const createStyles = fn(4636);
+let obj2 = {
+  container: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+    paddingHorizontal: 36,
+    paddingBottom: 80,
+    backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER,
+  },
+  emptyImage: { flex: 1, maxWidth: 300, maxHeight: 200 },
+  textGroup: { alignSelf: "stretch", alignItems: "center" },
+  emptyTitle: { marginTop: 20, textTransform: "uppercase" },
+  emptyBody: { textAlign: "center", marginTop: 8 },
 };
-createStyles.container = createStyles;
-createStyles.emptyImage = { flex: 1, maxWidth: 300, maxHeight: 200 };
-createStyles.textGroup = { alignSelf: "stretch", alignItems: "center" };
-createStyles.emptyTitle = { marginTop: 20, textTransform: "uppercase" };
-createStyles.emptyBody = { textAlign: "center", marginTop: 8 };
-let closure_8 = createStyles.createStyles(createStyles);
+let closure_8 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("design/void/EmptyState/native/EmptyState.tsx");
 
 export default function EmptyState(Illustration) {
   const tmp = closure_8();
-  let obj = shared;
-  const themeContext = obj.useThemeContext();
+  const themeContext = shared.useThemeContext();
   let hasItem;
   if (themeContext != null) {
     const enabledExperiments = themeContext.enabledExperiments;
@@ -46,38 +45,38 @@ export default function EmptyState(Illustration) {
       hasItem = enabledExperiments.includes("mana-type-consolidation");
     }
   }
-  let tmp2Result = shared;
+  shared;
   if (null != Illustration.Illustration) {
-    obj = {};
+    const obj2 = {};
     const merged = Object.assign(closure_7);
-    obj.resizeMode = "contain";
+    obj2.resizeMode = "contain";
     const items = [tmp.emptyImage, Illustration.imageStyle];
-    obj.style = items;
-    let tmp11Result = React4(Illustration.Illustration, obj);
+    obj2.style = items;
+    let tmp11Result = React4(Illustration.Illustration, obj2);
   } else {
     tmp11Result = null;
     if (tmp9) {
-      obj = {};
+      const obj3 = {};
       const merged1 = Object.assign(closure_7);
-      obj.resizeMode = "contain";
-      tmp2Result = shared;
-      obj.source = tmp2Result.isThemeLight(tmp8) ? Illustration.lightSource : Illustration.darkSource;
+      obj3.resizeMode = "contain";
+      obj3.source = shared.isThemeLight(tmp8) ? Illustration.lightSource : Illustration.darkSource;
       const items1 = [tmp.emptyImage, Illustration.imageStyle];
-      obj.style = items1;
-      tmp11Result = React4(React3, obj);
+      obj3.style = items1;
+      tmp11Result = React4(React3, obj3);
+      const tmp2Result2 = shared;
     }
     tmp9 = null != Illustration.lightSource && null != Illustration.darkSource;
   }
   ({ body, title } = Illustration);
-  const obj1 = { style: null, children: null };
+  const obj4 = { style: null, children: null };
   const items2 = [tmp.container, Illustration.style];
-  obj1.style = items2;
+  obj4.style = items2;
   const items3 = [tmp11Result, ,];
   if (null != title) {
-    const obj2 = { style: tmp.textGroup, accessible: true, children: null };
+    const obj5 = { style: tmp.textGroup, accessible: true, children: null };
     let tmp25 = null;
     if (null != title) {
-      const obj3 = {
+      const obj6 = {
         variant: "heading-lg/semibold",
         color: "mobile-text-heading-primary",
         maxFontSizeMultiplier: 2,
@@ -85,14 +84,14 @@ export default function EmptyState(Illustration) {
         children: null,
       };
       const items4 = [tmp.emptyTitle, tmp21, closure_6];
-      obj3.style = items4;
-      obj3.children = title;
-      tmp25 = React4(Text_Text.Text, obj3);
+      obj6.style = items4;
+      obj6.children = title;
+      tmp25 = React4(Text_Text.Text, obj6);
     }
     const items5 = [tmp25];
     let tmp27 = null;
     if (null != body) {
-      const obj4 = {
+      const obj7 = {
         variant: "text-md/medium",
         color: "text-muted",
         maxFontSizeMultiplier: 2,
@@ -100,18 +99,18 @@ export default function EmptyState(Illustration) {
         children: null,
       };
       const items6 = [tmp.emptyBody, tmp20];
-      obj4.style = items6;
-      obj4.children = body;
-      tmp27 = React4(Text_Text.Text, obj4);
+      obj7.style = items6;
+      obj7.children = body;
+      tmp27 = React4(Text_Text.Text, obj7);
     }
     items5[1] = tmp27;
-    obj2.children = items5;
-    let tmp22Result = hasOwnProperty(React2, obj2);
+    obj5.children = items5;
+    let tmp22Result = hasOwnProperty(React2, obj5);
   } else {
     tmp22Result = null;
   }
   items3[1] = tmp22Result;
   items3[2] = Illustration.children;
-  obj1.children = items3;
-  return hasOwnProperty(React2, obj1);
+  obj4.children = items3;
+  return hasOwnProperty(React2, obj4);
 }

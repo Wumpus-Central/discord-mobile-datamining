@@ -10,9 +10,8 @@ import VoicePanelStore from "../VoicePanelStore.tsx";
 require = fn;
 function VoicePanel(arg0) {
   _require = arg0;
-  let obj = require("initialize");
   const items = [ChannelStore];
-  const stateFromStores = obj.useStateFromStores(items, () => {
+  const stateFromStores = require("initialize").useStateFromStores(items, () => {
     const channel = ChannelStore.getChannel(channelId.channelId);
     let guild_id;
     if (channel != null) {
@@ -20,10 +19,11 @@ function VoicePanel(arg0) {
     }
     return guild_id;
   });
-  obj = {};
+  const obj2 = {};
+  const obj = require("initialize");
   const merged = Object.assign(arg0);
-  obj.guildId = stateFromStores;
-  obj.children = noop.useMemo(() => jsx(VoicePanelUIDefault, {}), []);
+  obj2.guildId = stateFromStores;
+  obj2.children = noop.useMemo(() => jsx(VoicePanelUIDefault, {}), []);
   return jsx(VoicePanelControllerDefault, {});
 }
 function getChannelKey(arg0) {

@@ -10,8 +10,8 @@ export const toggle = function toggle(toggle, flag) {
   if (typeof flag !== "boolean") {
     tmp = !DesignTogglesStore.get(toggle);
   }
-  const obj = { type: "DEV_TOOLS_DESIGN_TOGGLE_SET", toggle, value: tmp };
-  obj.dispatch(obj);
+  DispatcherDefault.dispatch({ type: "DEV_TOOLS_DESIGN_TOGGLE_SET", toggle, value: tmp });
+  const obj2 = { type: "DEV_TOOLS_DESIGN_TOGGLE_SET", toggle, value: tmp };
 };
 export const clearAll = function clearAll() {
   for (const key10005 in DesignTogglesStore.all()) {
@@ -20,8 +20,8 @@ export const clearAll = function clearAll() {
       flag = !DesignTogglesStore.get(key10005);
     }
     let obj = DispatcherDefault;
-    obj = { type: "DEV_TOOLS_DESIGN_TOGGLE_SET", toggle: key10005, value: flag };
-    let dispatchResult = obj.dispatch(obj);
+    let obj2 = { type: "DEV_TOOLS_DESIGN_TOGGLE_SET", toggle: key10005, value: flag };
+    let dispatchResult = obj.dispatch(obj2);
     continue;
   }
 };

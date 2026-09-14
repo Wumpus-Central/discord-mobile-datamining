@@ -36,7 +36,7 @@ function getActiveGuildThemeGuildIdSnapshot() {
       const rootState = rootNavigationRef.getRootState();
       let tmp4;
       if (null != rootState) {
-        let routes = rootState.routes;
+        const routes = rootState.routes;
         if (null != routes) {
           let guildId;
           if (routes[rootState.index] != null) {
@@ -79,9 +79,9 @@ function getActiveGuildThemeGuildIdSnapshot() {
       if (null == tmp4) {
         let found;
         if (rootState != null) {
-          routes = rootState.routes;
-          if (routes != null) {
-            const mapped = routes.map(NavigationRouteUtils.coerceMainRoute);
+          const routes1 = rootState.routes;
+          if (routes1 != null) {
+            const mapped = routes1.map(NavigationRouteUtils.coerceMainRoute);
             found = mapped.find((item) => null != item);
           }
         }
@@ -151,7 +151,7 @@ const result = size.fileFinishedImporting("modules/guild_themes/native/useRouted
 
 export default function useRoutedActiveGuildTheme() {
   const context = noop.useContext(GuildThemeGuildIdOverrideContextDefault);
-  [tmp4, require] = _slicedToArray(noop.useState(getActiveGuildThemeGuildIdSnapshot), 2);
+  [tmp4, require] = noop.useState(getActiveGuildThemeGuildIdSnapshot);
   const effect = noop.useEffect(() => {
     const rootNavigationRef = RootNavigationRef.getRootNavigationRef();
     if (null != rootNavigationRef) {

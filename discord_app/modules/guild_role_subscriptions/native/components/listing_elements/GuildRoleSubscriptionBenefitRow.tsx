@@ -11,26 +11,26 @@ function BenefitRow(description) {
   description = description.description;
   ({ emojiId, guildId, title } = description);
   const tmp = closure_7();
-  let obj = { style: tmp.container, children: null };
+  const obj = { style: tmp.container, children: null };
   const items = [
     hasOwnProperty(EmojiIconDefault, { guildId, id: emojiId, size: 22, fontSize: 18 }),
     hasOwnProperty(native.Spacer, { size: 16 }),
   ];
-  obj = { style: tmp.textContainer, children: null };
+  const obj2 = { style: tmp.textContainer, children: null };
   const items1 = [title];
   let tmp4Result = null;
   if (null != description) {
-    obj = {
+    const obj3 = {
       style: tmp.description,
       variant: "text-sm/normal",
       color: "interactive-text-default",
       children: description,
     };
-    tmp4Result = hasOwnProperty(Text_Text.Text, obj);
+    tmp4Result = hasOwnProperty(Text_Text.Text, obj3);
   }
   items1[1] = tmp4Result;
-  obj.children = items1;
-  items[2] = timestampProducer(View, obj);
+  obj2.children = items1;
+  items[2] = timestampProducer(View, obj2);
   obj.children = items;
   return timestampProducer(View, obj);
 }
@@ -53,26 +53,26 @@ const result = size.fileFinishedImporting(
 export const ChannelBenefitRow = function ChannelBenefitRow(benefit) {
   benefit = benefit.benefit;
   const tmp = closure_7();
-  let obj = benefit(504);
   const items = [ChannelStore];
   const items1 = [benefit.ref_id];
-  const stateFromStores = obj.useStateFromStores(items, () => ChannelStore.getChannel(benefit.ref_id), items1);
-  obj = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
+  const stateFromStores = benefit(504).useStateFromStores(items, () => ChannelStore.getChannel(benefit.ref_id), items1);
+  const obj = benefit(504);
+  const obj2 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
   const intl = benefit(1114).intl;
-  obj.children = "[" + intl.string(benefit(1114).t.bz1PZX) + "]";
-  let tmp8 = closure_5(benefit(4632).Text, obj);
+  obj2.children = "[" + intl.string(benefit(1114).t.bz1PZX) + "]";
+  let tmp8 = closure_5(benefit(4632).Text, obj2);
   if (null != stateFromStores) {
-    obj = { style: tmp.channelTitle, children: null };
-    const obj1 = {
+    const obj3 = { style: tmp.channelTitle, children: null };
+    const obj4 = {
       style: tmp.channelIcon,
-      size: tmp2(1178).Icon.Sizes.CUSTOM,
+      size: tmp2(1176).Icon.Sizes.CUSTOM,
       source: tmp2(5109).getChannelIcon(stateFromStores),
     };
-    const items2 = [closure_5(tmp2(1178).Icon, obj1)];
-    const obj2 = { variant: "text-md/medium", color: "mobile-text-heading-primary", children: tmp6 };
-    items2[1] = closure_5(tmp2(4632).Text, obj2);
-    obj.children = items2;
-    tmp8 = closure_6(View, obj);
+    const items2 = [closure_5(tmp2(1176).Icon, obj4)];
+    const obj5 = { variant: "text-md/medium", color: "mobile-text-heading-primary", children: tmp6 };
+    items2[1] = closure_5(tmp2(4632).Text, obj5);
+    obj3.children = items2;
+    tmp8 = closure_6(View, obj3);
     const tmp2Result = tmp2(5109);
   }
   if (null != benefit.emoji_id) {
@@ -98,12 +98,18 @@ export const IntangibleBenefitRow = function IntangibleBenefitRow(benefit) {
   } else {
     str = "";
     if (null != benefit.emoji_name) {
-      let obj = UnicodeEmojisDefault;
-      str = obj.convertSurrogateToName(benefit.emoji_name, false);
+      str = UnicodeEmojisDefault.convertSurrogateToName(benefit.emoji_name, false);
     }
   }
-  obj = { emojiId: str, guildId: benefit.guildId, title: null, description: benefit.description };
-  obj = { variant: "text-md/medium", color: "mobile-text-heading-primary", children: benefit.name };
-  obj.title = hasOwnProperty(Text_Text.Text, obj);
-  return hasOwnProperty(BenefitRow, obj);
+  const obj2 = {
+    emojiId: str,
+    guildId: benefit.guildId,
+    title: hasOwnProperty(Text_Text.Text, {
+      variant: "text-md/medium",
+      color: "mobile-text-heading-primary",
+      children: benefit.name,
+    }),
+    description: benefit.description,
+  };
+  return hasOwnProperty(BenefitRow, obj2);
 };

@@ -36,7 +36,7 @@ export const GuildBadgeWiltedFlower = function GuildBadgeWiltedFlower(width) {
     width,
     Object.assign({ width: 0, height: 0, primaryTintColor: 0, secondaryTintColor: 0 }),
   );
-  let obj = {
+  const transformedBadgeColors = GuildBadgeUtils.getTransformedBadgeColors({
     primaryBaseColors,
     primaryTintColor,
     primaryTintLuminances,
@@ -45,15 +45,14 @@ export const GuildBadgeWiltedFlower = function GuildBadgeWiltedFlower(width) {
     secondaryTintColor,
     secondaryTintLuminances,
     secondaryLuminanceWeights: items1,
-  };
-  const transformedBadgeColors = obj.getTransformedBadgeColors(obj);
+  });
   ({ primaryColorsTransformed, secondaryColorsTransformed } = transformedBadgeColors);
-  obj = {};
+  const obj3 = {};
   const merged1 = Object.assign(merged);
-  obj.width = num;
-  obj.height = num2;
-  obj.viewBox = "0 0 16 16";
-  obj.fill = "none";
+  obj3.width = num;
+  obj3.height = num2;
+  obj3.viewBox = "0 0 16 16";
+  obj3.fill = "none";
   let tmp9;
   if (secondaryColorsTransformed != null) {
     tmp9 = secondaryColorsTransformed[1];
@@ -95,6 +94,6 @@ export const GuildBadgeWiltedFlower = function GuildBadgeWiltedFlower(width) {
     d: "M7 14h-1v-1h1v1ZM3 11H2v-2H1v4H0V7h1v1h1V3h1v8ZM6 13h-1v-1h1v1ZM5 12h-1V4h1v8ZM11 12H7v-1h4v1ZM15 12H12v-1h3v1ZM7 11h-1v-2h1v2ZM12 11h-1v-1h1v1ZM16 11h-1v-2h1v2ZM8 9h-1V4h1v5ZM15 9h-1V4h1v5ZM6 4h-1v-1h1v1ZM9 4h-1v-1h-2V2h3v2ZM14 4h-1v-1h1v1ZM4 3h-1V2h1v1ZM13 3h-1V2h1v1ZM5 2h-1V1h1v1ZM12 2h-1V1h1v1ZM11 1H5V0h6v1Z",
     fill: "black",
   });
-  obj.children = items;
-  return React3(inlineStyles.Svg, obj);
+  obj3.children = items;
+  return React3(inlineStyles.Svg, obj3);
 };

@@ -46,7 +46,7 @@ export default function getActivityJoinability(arg0) {
     } else {
       if (isEmbedded) {
         if (null != channelId) {
-          obj = {
+          const obj5 = {
             userId: user.id,
             activity,
             channelId,
@@ -58,12 +58,12 @@ export default function getActivityJoinability(arg0) {
             PermissionStore: null,
             GuildStore: null,
           };
-          obj.isActivitiesEnabledForCurrentPlatform =
+          obj5.isActivitiesEnabledForCurrentPlatform =
             useIsActivitiesEnabledForCurrentPlatform.getIsActivitiesEnabledForCurrentPlatform();
-          obj.ChannelStore = ChannelStore;
-          obj.VoiceStateStore = VoiceStateStore;
-          obj.PermissionStore = tmp3;
-          obj.GuildStore = GuildStore;
+          obj5.ChannelStore = ChannelStore;
+          obj5.VoiceStateStore = VoiceStateStore;
+          obj5.PermissionStore = tmp3;
+          obj5.GuildStore = GuildStore;
           if (tmp45Result === getEmbeddedActivityJoinability.EmbeddedActivityJoinability.CAN_JOIN) {
             let CANNOT_JOIN2 = obj.CAN_JOIN;
           } else {

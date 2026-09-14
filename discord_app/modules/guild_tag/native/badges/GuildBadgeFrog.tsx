@@ -35,7 +35,7 @@ export const GuildBadgeFrog = function GuildBadgeFrog(width) {
     width,
     Object.assign({ width: 0, height: 0, primaryTintColor: 0, secondaryTintColor: 0 }),
   );
-  let obj = {
+  const transformedBadgeColors = GuildBadgeUtils.getTransformedBadgeColors({
     primaryBaseColors,
     primaryTintColor,
     primaryTintLuminances,
@@ -44,15 +44,14 @@ export const GuildBadgeFrog = function GuildBadgeFrog(width) {
     secondaryTintColor,
     secondaryTintLuminances,
     secondaryLuminanceWeights: items1,
-  };
-  const transformedBadgeColors = obj.getTransformedBadgeColors(obj);
+  });
   ({ primaryColorsTransformed, secondaryColorsTransformed } = transformedBadgeColors);
-  obj = {};
+  const obj3 = {};
   const merged1 = Object.assign(merged);
-  obj.width = num;
-  obj.height = num2;
-  obj.viewBox = "0 0 16 16";
-  obj.fill = "none";
+  obj3.width = num;
+  obj3.height = num2;
+  obj3.viewBox = "0 0 16 16";
+  obj3.fill = "none";
   items = [
     React2(inlineStyles.Path, {
       d: "M9 2V3H7V2H3V3H2V7H1V12H2V13H4V14H12V13H14V12H15V7H14V3H13V2H9Z",
@@ -99,6 +98,6 @@ export const GuildBadgeFrog = function GuildBadgeFrog(width) {
     React2(inlineStyles.Path, { d: "M10 7H9V8H10V7Z", fill: "black" }),
     React2(inlineStyles.Path, { d: "M3 8H2V9H3V8Z", fill: "black" }),
   ];
-  obj.children = items;
-  return React3(inlineStyles.Svg, obj);
+  obj3.children = items;
+  return React3(inlineStyles.Svg, obj3);
 };

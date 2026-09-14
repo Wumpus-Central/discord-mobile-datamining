@@ -11,7 +11,7 @@ const SearchConstants = fn(7982);
   SEARCH_QUERY_DEFAULT_FILTERS: metroRequire,
 } = SearchConstants);
 const SearchTypes = fn(1074).SearchTypes;
-const AbstractSearchFetchManager = fn(12478).AbstractSearchFetchManager;
+const AbstractSearchFetchManager = fn(12479).AbstractSearchFetchManager;
 class SearchTabsFetchManager extends AbstractSearchFetchManager {}
 const prototype = SearchTabsFetchManager.prototype;
 prototype["createRequestPayload"] = function createRequestPayload(trackExactTotalHits) {
@@ -32,13 +32,13 @@ prototype["createRequestPayload"] = function createRequestPayload(trackExactTota
     } else {
       obj = {};
     }
-    obj = {};
+    const obj2 = {};
     const merged = Object.assign(timestampProducer);
     const merged1 = Object.assign(obj);
     const merged2 = Object.assign(closure_2);
     const merged3 = Object.assign(dependencyMap);
-    obj.limit = require(item);
-    obj.tabs[item] = obj;
+    obj2.limit = require(item);
+    obj.tabs[item] = obj2;
     const tmp = require(item);
   });
   return obj;

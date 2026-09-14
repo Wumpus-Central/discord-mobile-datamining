@@ -18,10 +18,10 @@ function updateGiftCode(giftCode) {
     if (null != fromServer.expiresAt) {
       const timeout = new code(1952).Timeout();
       dependencyMap[code] = timeout;
-      value = map.get(code);
-      if (null != value) {
-        if (null != value.expiresAt) {
-          const expiresAt = value.expiresAt;
+      value2 = map.get(code);
+      if (null != value2) {
+        if (null != value2.expiresAt) {
+          const expiresAt = value2.expiresAt;
           const valueOfResult = expiresAt.valueOf();
           const diff = valueOfResult - _modDef4228().valueOf();
           if (diff <= 0) {
@@ -318,11 +318,10 @@ const giftCodeStore = new GiftCodeStore(DispatcherDefault, {
   GIFT_CODE_REDEEM_SUCCESS: function handleGiftCodeAcceptSuccess(code) {
     code = code.code;
     closure_10 = closure_10.filter((item) => item !== code);
-    let obj = map;
     value = map.get(code);
     if (null != value) {
-      obj = { redeemed: true, uses: value.uses + 1 };
-      const result = obj.set(code, value.merge(obj));
+      const obj2 = { redeemed: true, uses: value.uses + 1 };
+      const result = map.set(code, value.merge(obj2));
     }
   },
   GIFT_CODE_REDEEM_FAILURE: function handleGiftCodeAcceptFailure(code) {

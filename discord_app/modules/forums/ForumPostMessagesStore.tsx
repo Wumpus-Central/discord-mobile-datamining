@@ -44,13 +44,13 @@ function handleReaction(colors) {
             return false;
           }
         }
-        let obj = {};
+        const obj = {};
         const merged = Object.assign(tmp5);
         dependencyMap[channelId] = obj;
         if ("MESSAGE_REACTION_ADD" === tmp) {
           const firstMessage2 = tmp5.firstMessage;
-          obj = { colors: colors.colors, reactionType };
-          let addReactionResult = firstMessage2.addReaction(emoji, tmp6, obj);
+          const obj2 = { colors: colors.colors, reactionType };
+          let addReactionResult = firstMessage2.addReaction(emoji, tmp6, obj2);
         } else {
           const firstMessage = tmp5.firstMessage;
           addReactionResult = firstMessage.removeReaction(emoji, tmp6, reactionType);
@@ -90,17 +90,17 @@ const forumPostMessagesStore = new ForumPostMessagesStore(DispatcherDefault, {
     isPushNotification = isPushNotification.isPushNotification;
     let tmp = !isPushNotification;
     if (!isPushNotification) {
-      let obj = SnowflakeUtilsDefault;
       const tmp4 =
-        isPushNotification.message.id === obj.castChannelIdAsMessageId(isPushNotification.message.channel_id);
+        isPushNotification.message.id ===
+        SnowflakeUtilsDefault.castChannelIdAsMessageId(isPushNotification.message.channel_id);
       if (tmp4) {
         const message = isPushNotification.message;
         let messageRecord = null;
         if (null != message) {
           messageRecord = MessageRecordUtils.createMessageRecord(message);
         }
-        obj = { loaded: true, firstMessage: messageRecord };
-        closure_5[isPushNotification.message.channel_id] = obj;
+        const obj3 = { loaded: true, firstMessage: messageRecord };
+        closure_5[isPushNotification.message.channel_id] = obj3;
       }
       tmp = tmp4;
     }
@@ -217,8 +217,8 @@ const forumPostMessagesStore = new ForumPostMessagesStore(DispatcherDefault, {
         let obj = MessageRecordUtils;
         messageRecord = obj.createMessageRecord(first_message);
       }
-      obj = { loaded: true, firstMessage: messageRecord };
-      closure_5[key10006] = obj;
+      let obj2 = { loaded: true, firstMessage: messageRecord };
+      closure_5[key10006] = obj2;
       continue;
     }
   },
@@ -228,12 +228,11 @@ const forumPostMessagesStore = new ForumPostMessagesStore(DispatcherDefault, {
     ({ channelId, messages } = arg0);
     let tmp2 = null != tmp;
     if (tmp2) {
-      let obj = SnowflakeUtilsDefault;
-      tmp2 = tmp.id === obj.castChannelIdAsMessageId(channelId);
+      tmp2 = tmp.id === SnowflakeUtilsDefault.castChannelIdAsMessageId(channelId);
     }
     if (tmp2) {
-      obj = { loaded: true, firstMessage: MessageRecordUtils.createMessageRecord(tmp) };
-      closure_5[channelId] = obj;
+      const obj2 = { loaded: true, firstMessage: MessageRecordUtils.createMessageRecord(tmp) };
+      closure_5[channelId] = obj2;
     }
   },
 });

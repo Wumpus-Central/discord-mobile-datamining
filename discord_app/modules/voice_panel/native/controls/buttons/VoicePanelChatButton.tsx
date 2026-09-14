@@ -9,8 +9,8 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: closure_4, Fragment: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-fn(4636);
-let createStyles = {
+const createStyles = fn(4636);
+let obj2 = {
   iconContainer: {
     position: "absolute",
     justifyContent: "center",
@@ -30,10 +30,9 @@ let size = {
   top: 0,
   right: 0,
 };
-createStyles.badge = size;
-createStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_NOTIFICATION };
-createStyles.notificationBadge = createStyles;
-let closure_7 = createStyles.createStyles(createStyles);
+obj2.badge = size;
+obj2.notificationBadge = { backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_NOTIFICATION };
+let closure_7 = createStyles.createStyles(obj2);
 size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_panel/native/controls/buttons/VoicePanelChatButton.tsx");
 
@@ -71,28 +70,31 @@ export default function ChatButton(props) {
   ({ iconContainer: arr2[3], badge: arr2[4], notificationBadge: arr2[5] } = tmp2);
   items1[6] = voicePanelButtonStyles.iconFill.color;
   element.children = noop.useMemo(() => {
-    let obj = {
-      fill: backgroundColor,
-      circleRadius: props.width / 2,
-      cutoutRadius: 8,
-      enableCutout: null != closure_5,
-      cutoutPositionInDegrees: 45,
-      alignBadgeEdgeWithCircleEdge: true,
-      badgeRadius: 5,
-      scaleToPixelDensity: true,
+    const children = [
+      React4(CircleWithCutoutDefault, {
+        fill: backgroundColor,
+        circleRadius: props.width / 2,
+        cutoutRadius: 8,
+        enableCutout: null != closure_5,
+        cutoutPositionInDegrees: 45,
+        alignBadgeEdgeWithCircleEdge: true,
+        badgeRadius: 5,
+        scaleToPixelDensity: true,
+      }),
+      ,
+    ];
+    const obj2 = {
+      style: iconContainer.iconContainer,
+      children: React4(ChatIcon.ChatIcon, { color: voicePanelButtonStyles.iconFill.color }),
     };
-    const children = [React4(CircleWithCutoutDefault, obj), ,];
-    obj = { style: iconContainer.iconContainer, children: null };
-    obj = { color: voicePanelButtonStyles.iconFill.color };
-    obj.children = React4(ChatIcon.ChatIcon, obj);
-    children[1] = React4(NativeViewDefault, obj);
+    children[1] = React4(NativeViewDefault, obj2);
     let tmp3Result = null != closure_5;
     if (tmp3Result) {
-      const obj1 = { style: null };
+      const obj4 = { style: null };
       const items1 = [,];
       ({ badge: arr2[0], notificationBadge: arr2[1] } = iconContainer);
-      obj1.style = items1;
-      tmp3Result = React4(NativeViewDefault, obj1);
+      obj4.style = items1;
+      tmp3Result = React4(NativeViewDefault, obj4);
     }
     children[2] = tmp3Result;
     return timestampProducer(hasOwnProperty, { children });

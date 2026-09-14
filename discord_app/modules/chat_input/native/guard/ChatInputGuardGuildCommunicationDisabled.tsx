@@ -15,8 +15,8 @@ const result = size.fileFinishedImporting(
 
 export default noop.memo(function CommunicationDisabledNoticeForGuild(guildMember) {
   guildMember = guildMember.guildMember;
-  let obj = useCommunicationDisabledCountdownCleanup;
-  const communicationDisabledCountdownCleanup = obj.useCommunicationDisabledCountdownCleanup(guildMember);
+  const communicationDisabledCountdownCleanup =
+    useCommunicationDisabledCountdownCleanup.useCommunicationDisabledCountdownCleanup(guildMember);
   const communicationDisabledUntil = guildMember.communicationDisabledUntil;
   if (null == communicationDisabledUntil) {
     const _Date2 = Date;
@@ -25,18 +25,18 @@ export default noop.memo(function CommunicationDisabledNoticeForGuild(guildMembe
     const _Date = Date;
     date = new Date(communicationDisabledUntil);
   }
-  obj = {
+  const obj2 = { type: "simple-action", icon: null, message: null, subtext: null, countdown: null };
+  obj2.icon = jsx(ClockWarningIcon.ClockWarningIcon, {});
+  const intl = util.intl;
+  obj2.message = intl.string(util.t.VSpdzK);
+  const intl2 = util.intl;
+  obj2.subtext = intl2.format(util.t["4ZwD5G"], { link });
+  obj2.countdown = date;
+  return jsx(ChatInputGuardDefault, {
     type: "simple-action",
-    icon: jsx(ClockWarningIcon.ClockWarningIcon, {}),
+    icon: null,
     message: null,
     subtext: null,
     countdown: null,
-  };
-  const intl = util.intl;
-  obj.message = intl.string(util.t.VSpdzK);
-  const intl2 = util.intl;
-  obj = { link };
-  obj.subtext = intl2.format(util.t["4ZwD5G"], obj);
-  obj.countdown = date;
-  return jsx(ChatInputGuardDefault, { link });
+  });
 });

@@ -23,8 +23,8 @@ let closure_10 = async function _getGuildEventsForCurrentUser(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj3 = { value, done: true };
+      return obj3;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -37,8 +37,8 @@ let closure_10 = async function _getGuildEventsForCurrentUser(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c6 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj4 = { value, done: true };
+          return obj4;
         } else {
           closure_2 = tmp3;
           closure_1 = tmp7;
@@ -48,12 +48,13 @@ let closure_10 = async function _getGuildEventsForCurrentUser(arg0) {
               if (!set2.has(closure_0)) {
                 c4 = 1;
                 set.add(closure_0);
-                let obj1 = GuildScheduledEventsActionCreatorsDefault;
                 c5 = 2;
                 c6 = 1;
-                obj1 = { value: null, done: false };
-                obj1.value = obj1.getGuildEventsForCurrentUser(closure_0);
-                return obj1;
+                const obj5 = {
+                  value: GuildScheduledEventsActionCreatorsDefault.getGuildEventsForCurrentUser(closure_0),
+                  done: false,
+                };
+                return obj5;
               }
             }
           }
@@ -71,7 +72,7 @@ let closure_10 = async function _getGuildEventsForCurrentUser(arg0) {
         }
         c4 = 0;
         c6 = 3;
-        obj = { value, done: true };
+        const obj = { value, done: true };
         return obj;
       }
       c6 = 3;
@@ -171,8 +172,8 @@ prototype["handleConnectionOpen"] = function handleConnectionOpen() {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -186,8 +187,8 @@ prototype["handleConnectionOpen"] = function handleConnectionOpen() {
             throw value;
           } else if (arg0 === 2) {
             c7 = 3;
-            obj = { value, done: true };
-            return obj;
+            let obj3 = { value, done: true };
+            return obj3;
           } else {
             closure_2 = tmp4;
             closure_130_1 = undefined;
@@ -216,8 +217,8 @@ prototype["handleConnectionOpen"] = function handleConnectionOpen() {
             c5 = 0;
             _self.return();
             c7 = 3;
-            let obj1 = { value, done: true };
-            return obj1;
+            let obj4 = { value, done: true };
+            return obj4;
           } else {
             let _Promise = Promise;
             let tmp6 = new.target;
@@ -225,8 +226,8 @@ prototype["handleConnectionOpen"] = function handleConnectionOpen() {
             let promise = new Promise((arg0) => setTimeout(arg0, 200 * Math.random() + 50));
             c6 = 3;
             c7 = 1;
-            let obj2 = { value: promise, done: false };
-            return obj2;
+            let obj5 = { value: promise, done: false };
+            return obj5;
           }
         } else if (arg0 === 1) {
           c7 = 3;
@@ -235,7 +236,7 @@ prototype["handleConnectionOpen"] = function handleConnectionOpen() {
           c5 = 0;
           _self.return();
           c7 = 3;
-          obj = { value, done: true };
+          let obj = { value, done: true };
           return obj;
         } else {
           c5 = 0;
@@ -245,8 +246,8 @@ prototype["handleConnectionOpen"] = function handleConnectionOpen() {
           closure_130_1 = tmp16;
           c6 = 2;
           c7 = 1;
-          let obj3 = { value: closure_131_0.getGuildEventUserCounts(closure_130_0, closure_130_1.id, []), done: false };
-          return obj3;
+          let obj6 = { value: closure_131_0.getGuildEventUserCounts(closure_130_0, closure_130_1.id, []), done: false };
+          return obj6;
         }
       }
     }
@@ -287,8 +288,8 @@ prototype["handleChannelSelect"] = function handleChannelSelect(guildId) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -302,8 +303,8 @@ prototype["handleChannelSelect"] = function handleChannelSelect(guildId) {
             throw value;
           } else if (arg0 === 2) {
             c9 = 3;
-            obj = { value, done: true };
-            return obj;
+            let obj3 = { value, done: true };
+            return obj3;
           } else {
             closure_5 = tmp;
             let guildScheduledEventsForGuild = tmp4;
@@ -328,8 +329,8 @@ prototype["handleChannelSelect"] = function handleChannelSelect(guildId) {
           let promise = new Promise((arg0) => setTimeout(arg0, 200 * Math.random() + 50));
           c8 = 3;
           c9 = 1;
-          let obj1 = { value: promise, done: false };
-          return obj1;
+          let obj4 = { value: promise, done: false };
+          return obj4;
         } else if (3 === tmp4) {
           if (arg0 === 1) {
             c9 = 3;
@@ -338,8 +339,8 @@ prototype["handleChannelSelect"] = function handleChannelSelect(guildId) {
             c6 = 0;
             guildId.return();
             c9 = 3;
-            let obj2 = { value, done: true };
-            return obj2;
+            let obj5 = { value, done: true };
+            return obj5;
           } else {
             throw closure_3;
           }
@@ -352,21 +353,21 @@ prototype["handleChannelSelect"] = function handleChannelSelect(guildId) {
             let _Promise2 = Promise;
             let tmp13 = new.target;
             let tmp14 = new.target;
-            promise = new Promise((arg0) => setTimeout(arg0, 200 * Math.random() + 50));
+            let promise3 = new Promise((arg0) => setTimeout(arg0, 200 * Math.random() + 50));
             c8 = 5;
             c9 = 1;
-            let obj3 = { value: promise, done: false };
-            return obj3;
+            let obj6 = { value: promise3, done: false };
+            return obj6;
           } else {
             c6 = 1;
             let _Promise = Promise;
             let tmp9 = new.target;
             let tmp10 = new.target;
-            let promise1 = new Promise((arg0) => setTimeout(arg0, 200 * Math.random() + 50));
+            let promise4 = new Promise((arg0) => setTimeout(arg0, 200 * Math.random() + 50));
             c8 = 6;
             c9 = 1;
-            let obj4 = { value: promise1, done: false };
-            return obj4;
+            let obj7 = { value: promise4, done: false };
+            return obj7;
           }
         } else if (5 === tmp4) {
           if (arg0 === 1) {
@@ -376,14 +377,14 @@ prototype["handleChannelSelect"] = function handleChannelSelect(guildId) {
             c6 = 0;
             guildId.return();
             c9 = 3;
-            let obj5 = { value, done: true };
-            return obj5;
+            let obj8 = { value, done: true };
+            return obj8;
           } else {
             c6 = 0;
             guildId.return();
             c9 = 3;
-            let obj6 = { value, done: true };
-            return obj6;
+            let obj9 = { value, done: true };
+            return obj9;
           }
         } else if (arg0 === 1) {
           c9 = 3;
@@ -392,7 +393,7 @@ prototype["handleChannelSelect"] = function handleChannelSelect(guildId) {
           c6 = 0;
           guildId.return();
           c9 = 3;
-          obj = { value, done: true };
+          let obj = { value, done: true };
           return obj;
         } else {
           c6 = 0;
@@ -402,8 +403,11 @@ prototype["handleChannelSelect"] = function handleChannelSelect(guildId) {
           c6 = 2;
           c8 = 4;
           c9 = 1;
-          let obj7 = { value: closure_133_1.getGuildEventUserCounts(closure_133_0, closure_132_0.id, []), done: false };
-          return obj7;
+          let obj10 = {
+            value: closure_133_1.getGuildEventUserCounts(closure_133_0, closure_132_0.id, []),
+            done: false,
+          };
+          return obj10;
         }
       }
     }

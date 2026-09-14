@@ -25,11 +25,11 @@ prototype["trigger"] = function trigger() {
   }
   const result = ApexExperimentStore.trackCommonTriggerPointExposures(this.params.location);
   ({ triggerPoint, experiments } = this);
-  obj = {};
+  const obj2 = {};
   const merged = Object.assign(this.params);
   const merged1 = Object.assign(obj);
   const item = experiments.forEach((trackExposure) => {
-    trackExposure.trackExposure(obj);
+    trackExposure.trackExposure(obj2);
   });
 };
 prototype["getExperiments"] = function getExperiments() {

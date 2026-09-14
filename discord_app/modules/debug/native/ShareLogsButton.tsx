@@ -16,8 +16,10 @@ export default noop.memo(function ShareLogsButton() {
   const intl = util.intl;
   obj.accessibilityLabel = intl.string(util.t["Aw+09z"]);
   obj.onPress = function onPress() {
-    const obj = { message: LogAggregator.stringify() };
-    return obj.showShareActionSheet(obj, "Debug Logs");
+    const obj2 = { message: null };
+    const obj = showShareActionSheet;
+    obj2.message = LogAggregator.stringify();
+    return obj.showShareActionSheet(obj2, "Debug Logs");
   };
   obj.children = jsx(ShareIcon.ShareIcon, {});
   return jsx(Pressables.PressableOpacity, { accessibilityLabel: null, onPress: null, children: null });

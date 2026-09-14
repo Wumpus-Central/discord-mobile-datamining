@@ -23,8 +23,8 @@ function b64ToProto(arg0, arg1) {
 }
 const ZERO_STRING_GUILD_ID = fn(1074).ZERO_STRING_GUILD_ID;
 let obj = {
-  [PRELOADED_USER_SETTINGS]: fn(1187).PreloadedUserSettings,
-  [FRECENCY_AND_FAVORITES_SETTINGS]: fn(1222).FrecencyUserSettings,
+  [PRELOADED_USER_SETTINGS]: fn(1185).PreloadedUserSettings,
+  [FRECENCY_AND_FAVORITES_SETTINGS]: fn(1220).FrecencyUserSettings,
 };
 ({ PRELOADED_USER_SETTINGS, FRECENCY_AND_FAVORITES_SETTINGS } = fn(1084).UserSettingsTypes);
 const size = fn(2);
@@ -176,15 +176,13 @@ export const runMigrations = function runMigrations(proto, arg1) {
     }
     continue;
   }
-  obj = { proto, isDirty: flag, cleanupFuncs: items };
-  return obj;
+  return { proto, isDirty: flag, cleanupFuncs: items };
 };
 export const serializeUsageHistory = function serializeUsageHistory(usageHistory, FREQUENCY_ITEM_LIMIT) {
   let length;
   const entries = Object.entries(usageHistory);
   if (entries.length > FREQUENCY_ITEM_LIMIT) {
-    obj = _modDef12;
-    const reversed = obj
+    const reversed = _modDef12
       .sortBy(entries, (arg0) => {
         [, tmp] = arg0;
         return tmp.recentUses[tmp.recentUses.length - 1];
@@ -196,17 +194,17 @@ export const serializeUsageHistory = function serializeUsageHistory(usageHistory
         length = reversed.length;
       } while (length > FREQUENCY_ITEM_LIMIT);
     }
-    const sortByResult = obj.sortBy(entries, (arg0) => {
+    const sortByResult = _modDef12.sortBy(entries, (arg0) => {
       [, tmp] = arg0;
       return tmp.recentUses[tmp.recentUses.length - 1];
     });
   }
-  obj = {};
+  const obj2 = {};
   while (tmp5 !== undefined) {
     let tmp8 = _slicedToArray(tmp6, 2);
     let tmp9 = tmp8[1];
     let FrecencyItem = frecency_user_settings.FrecencyItem;
-    obj = FrecencyItem.create();
+    let obj3 = FrecencyItem.create();
     ({ frecency: tmp12.frecency, recentUses } = tmp9);
     let found = recentUses.filter((item) => {
       let tmp = null != item;
@@ -216,12 +214,12 @@ export const serializeUsageHistory = function serializeUsageHistory(usageHistory
       return tmp;
     });
     let _String = String;
-    obj.recentUses = found.map(String);
+    obj3.recentUses = found.map(String);
     let _Math = Math;
-    obj.score = Math.round(tmp9.score);
-    obj.totalUses = tmp9.totalUses;
-    obj[tmp8[0]] = obj;
+    obj3.score = Math.round(tmp9.score);
+    obj3.totalUses = tmp9.totalUses;
+    obj2[tmp8[0]] = obj3;
     continue;
   }
-  return obj;
+  return obj2;
 };

@@ -1,8 +1,10 @@
 // discord_app/modules/emojis/UnicodeEmojis.tsx
 import _modDef12 from "../../../_runtime/metro/00012__.js";
 import EmojiTypes from "EmojiTypes.tsx";
-import _mod14071 from "../../../_runtime/metro/14071__.js";
+import _mod14072 from "../../../_runtime/metro/14072__.js";
 import defaultImageSrcGenerator from "../../../node_modules/.pnpm/@discordapp+twemoji@16.0.1/node_modules/@discordapp/twemoji/dist/twemoji.npm.js";
+
+const require = globalThis.__r;
 
 require = fn;
 function parseRawEmojiObject(item10011) {
@@ -18,7 +20,7 @@ function parseRawEmojiObject(item10011) {
 function findInlineEmojisFromSurrogates(text, arg1) {
   if (true !== arg1) {
     if (!re8.test(text)) {
-      let obj = { type: "text", text };
+      const obj = { type: "text", text };
       items = [obj];
       return items;
     }
@@ -50,22 +52,23 @@ function findInlineEmojisFromSurrogates(text, arg1) {
               first = tmp19.names[0];
             }
             if (null != first) {
-              obj = { type: "emoji", surrogate: text, emojiName: null };
+              let obj2 = { type: "emoji", surrogate: text, emojiName: null };
               let _HermesInternal2 = HermesInternal;
-              obj.emojiName = ":" + first + ":";
+              obj2.emojiName = ":" + first + ":";
+              let obj3 = obj2;
             } else {
-              obj = { type: "text", text };
+              obj3 = { type: "text", text };
             }
             if (items1.length > 0) {
               let tmp21 = items1[items1.length - 1];
-              if ("text" === obj.type) {
+              if ("text" === obj3.type) {
                 if ("text" === tmp21.type) {
-                  tmp21.text = tmp21.text + obj.text;
+                  tmp21.text = tmp21.text + obj3.text;
                   let sum = str3;
                 }
               }
             }
-            let arr = items1.push(obj);
+            let arr = items1.push(obj3);
             sum = str3;
           } else if (re15.test(tmp3)) {
             sum = str + tmp3;
@@ -80,14 +83,14 @@ function findInlineEmojisFromSurrogates(text, arg1) {
               first1 = tmp13.names[0];
             }
             if (null != first1) {
-              let obj1 = { type: "emoji", surrogate: str, emojiName: null };
+              let obj4 = { type: "emoji", surrogate: str, emojiName: null };
               let _HermesInternal = HermesInternal;
-              obj1.emojiName = ":" + first1 + ":";
-              let obj2 = obj1;
+              obj4.emojiName = ":" + first1 + ":";
+              let obj5 = obj4;
             } else {
-              obj2 = { type: "text", text: str };
+              obj5 = { type: "text", text: str };
             }
-            arr = items1.push(obj2);
+            let arr2 = items1.push(obj5);
             text = tmp3;
             str3 = "";
           }
@@ -117,14 +120,14 @@ function findInlineEmojisFromSurrogates(text, arg1) {
       first2 = tmp27.names[0];
     }
     if (null != first2) {
-      const obj3 = { type: "emoji", surrogate: str2, emojiName: null };
+      const obj6 = { type: "emoji", surrogate: str2, emojiName: null };
       combined = ":" + first2 + ":";
-      obj3.emojiName = combined;
-      let obj4 = obj3;
+      obj6.emojiName = combined;
+      let obj7 = obj6;
     } else {
-      obj4 = { type: "text", text: str2 };
+      obj7 = { type: "text", text: str2 };
     }
-    items1.push(obj4);
+    items1.push(obj7);
   }
   tmp23 = null != str2 && "" !== str2;
 }
@@ -469,7 +472,7 @@ export default {
     hasOwnProperty = Object.prototype.hasOwnProperty;
     const call = hasOwnProperty.call;
     if (typeof call === "unknown" ? hasOwnProperty(key10009) : call(tmp3, key10009)) {
-      str = _mod14071[key10009];
+      str = _mod14072[key10009];
     }
     let combined = str;
     if (flag) {

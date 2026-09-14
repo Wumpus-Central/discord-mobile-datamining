@@ -8,33 +8,34 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-fn(4636);
-let createStyles = { container: { overflow: "hidden" }, content: null };
-createStyles = {
-  backgroundColor: nativeDefault.colors.TABLEROW_BACKGROUND_DEFAULT,
-  borderRadius: nativeDefault.modules.mobile.TABLE_ROW_BORDER_RADIUS,
-  padding: nativeDefault.modules.mobile.TABLE_ROW_PADDING,
+const createStyles = fn(4636);
+let obj2 = {
+  container: { overflow: "hidden" },
+  content: {
+    backgroundColor: nativeDefault.colors.TABLEROW_BACKGROUND_DEFAULT,
+    borderRadius: nativeDefault.modules.mobile.TABLE_ROW_BORDER_RADIUS,
+    padding: nativeDefault.modules.mobile.TABLE_ROW_PADDING,
+  },
 };
-createStyles.content = createStyles;
-let closure_5 = createStyles.createStyles(createStyles);
+let closure_5 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("design/components/RowGroup/native/RowGroup.native.tsx");
 
 export const RowGroup = function RowGroup(children) {
   ({ title, trailing } = children);
   const tmp = closure_5();
-  let obj = { style: tmp.container, children: null };
+  const obj = { style: tmp.container, children: null };
   let tmp2Result = null != title || null != trailing;
   if (tmp2Result) {
     let tmp7 = null != title;
     if (tmp7) {
-      obj = { title };
-      tmp7 = React3(TableRowGroup.TableRowGroupTitle, obj);
+      const obj2 = { title };
+      tmp7 = React3(TableRowGroup.TableRowGroupTitle, obj2);
     }
-    obj = { direction: "horizontal", spacing: 4, children: null };
+    const obj3 = { direction: "horizontal", spacing: 4, children: null };
     const items = [tmp7, trailing];
-    obj.children = items;
-    tmp2Result = React4(Stack_Stack.Stack, obj);
+    obj3.children = items;
+    tmp2Result = React4(Stack_Stack.Stack, obj3);
   }
   const items1 = [tmp2Result, React3(View, { style: tmp.content, children: children.children })];
   obj.children = items1;

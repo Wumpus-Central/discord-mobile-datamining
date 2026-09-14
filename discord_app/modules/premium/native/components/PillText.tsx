@@ -10,17 +10,17 @@ import size from "../../../../../_runtime/metro/00002__.js";
 
 const HorizontalGradient = Constants.HorizontalGradient;
 const jsx = jsxProd.jsx;
-let obj = { pillTextContainer: null, pillText: null };
-obj = { paddingHorizontal: 8, borderRadius: nativeDefault.radii.lg, justifyContent: "center" };
-obj.pillTextContainer = obj;
-obj.pillText = { textTransform: "uppercase" };
+let obj = {
+  pillTextContainer: { paddingHorizontal: 8, borderRadius: nativeDefault.radii.lg, justifyContent: "center" },
+  pillText: { textTransform: "uppercase" },
+};
 let closure_5 = createStyles.createStyles(obj);
 const result = size.fileFinishedImporting("modules/premium/native/components/PillText.tsx");
 
 export default function PillText(arg0) {
   ({ pillText, style } = arg0);
   const tmp = closure_5();
-  let obj = {
+  const obj = {
     style: null,
     start: HorizontalGradient.START,
     end: HorizontalGradient.END,
@@ -30,7 +30,6 @@ export default function PillText(arg0) {
   const items = [tmp.pillTextContainer, style];
   obj.style = items;
   const tmp2 = usePremiumPrimaryGradientColorsDefault();
-  obj = { variant: "text-xs/semibold", color: "text-overlay-light", style: tmp.pillText, children: pillText };
   obj.children = jsx(Text_Text.Text, {
     variant: "text-xs/semibold",
     color: "text-overlay-light",
@@ -38,9 +37,10 @@ export default function PillText(arg0) {
     children: pillText,
   });
   return jsx(LinearGradientDefault, {
-    variant: "text-xs/semibold",
-    color: "text-overlay-light",
-    style: tmp.pillText,
-    children: pillText,
+    style: null,
+    start: HorizontalGradient.START,
+    end: HorizontalGradient.END,
+    colors: usePremiumPrimaryGradientColorsDefault(),
+    children: null,
   });
 }

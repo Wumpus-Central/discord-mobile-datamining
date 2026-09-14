@@ -2,6 +2,8 @@
 import SnowflakeUtilsDefault from "../../utils/SnowflakeUtils.tsx";
 import ChannelStore from "../../stores/ChannelStore.tsx";
 
+const require = globalThis.__r;
+
 const require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/media_channel/useIsFirstMessageInMediaPost.tsx");

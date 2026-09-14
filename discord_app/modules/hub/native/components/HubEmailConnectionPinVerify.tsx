@@ -7,10 +7,12 @@ import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep
 import noop from "../../../../../_runtime/metro/00019__.js";
 import GuildStore from "../../../../stores/GuildStore.tsx";
 
+const require = globalThis.__r;
+
 const require = fn;
 function presentResendToast(content) {
-  const obj = { key: "HUB_EMAIL_RESET", content, icon: _modDef10013 };
-  obj.open(obj);
+  const obj = ToastActionCreatorsDefault;
+  obj.open({ key: "HUB_EMAIL_RESET", content, icon: _modDef10013 });
 }
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, Image: closure_7 } = get_ActivityIndicator);
@@ -61,11 +63,11 @@ export default function HubEmailConnectionPinVerify(email) {
       require("navigateToLastChannel")();
     });
     return () => {
-      closure_1_1(12868).terminate();
+      closure_1_1(12869).terminate();
     };
   }, items);
-  let obj = require("../../../../../_runtime/metro/00012__.js");
-  const throttleResult = obj.throttle(
+  const obj = require("../../../../../_runtime/metro/00012__.js");
+  const throttleResult = require("../../../../../_runtime/metro/00012__.js").throttle(
     asyncGeneratorStep(async () => {
       await closure_1(tmp3[12]).sendVerificationEmail(email, true, importDefault);
       if (1 === tmp7) {
@@ -75,7 +77,7 @@ export default function HubEmailConnectionPinVerify(email) {
         closure_129_0 = aPIError;
         let anyErrorMessage;
         if (closure_129_0 != null) {
-          anyErrorMessage = obj1.getAnyErrorMessage();
+          anyErrorMessage = obj2.getAnyErrorMessage();
         }
         email = anyErrorMessage;
         if (anyErrorMessage == null) {
@@ -84,7 +86,7 @@ export default function HubEmailConnectionPinVerify(email) {
         }
         presentResendToast(email);
         c6 = 3;
-        obj1 = closure_129_0;
+        obj2 = closure_129_0;
       } else if (arg0 === 1) {
         c6 = 3;
         throw value;
@@ -97,11 +99,12 @@ export default function HubEmailConnectionPinVerify(email) {
     }),
     1000,
   );
-  [obj2, c3] = _slicedToArray(noop.useState(null), 2);
-  obj = { style: tmp.container, children: null };
-  obj = { source: require("../../../../../_runtime/metro/12869__.js") };
-  const items1 = [closure_9(closure_7, obj), , , , ,];
-  let obj1 = {
+  [obj2, c3] = noop.useState(null);
+  const obj3 = { style: tmp.container, children: null };
+  const tmp5 = _slicedToArray(noop.useState(null), 2);
+  const tmp7 = email;
+  const items1 = [closure_9(closure_7, { source: require("../../../../../_runtime/metro/12870__.js") }), , , , ,];
+  const obj5 = {
     style: tmp.title,
     accessibilityRole: "header",
     variant: "heading-xl/extrabold",
@@ -109,18 +112,17 @@ export default function HubEmailConnectionPinVerify(email) {
     children: null,
   };
   let intl = email(onClose[13]).intl;
-  obj1.children = intl.string(email(onClose[13]).t.SJ3Lxc);
-  items1[1] = closure_9(email(onClose[18]).Text, obj1);
-  obj2 = { style: tmp.description, variant: "text-sm/medium", color: "text-default", children: null };
+  obj5.children = intl.string(email(onClose[13]).t.SJ3Lxc);
+  items1[1] = closure_9(email(onClose[18]).Text, obj5);
+  const obj6 = { style: tmp.description, variant: "text-sm/medium", color: "text-default", children: null };
   let intl2 = email(onClose[13]).intl;
-  obj2.children = intl2.format(email(onClose[13]).t["b+W0oq"], { onClick: throttleResult, email });
-  items1[2] = closure_9(email(onClose[18]).Text, obj2);
-  const obj3 = { style: tmp.label, variant: "text-sm/semibold", color: "text-muted", children: null };
+  obj6.children = intl2.format(email(onClose[13]).t["b+W0oq"], { onClick: throttleResult, email });
+  items1[2] = closure_9(email(onClose[18]).Text, obj6);
+  const obj7 = { style: tmp.label, variant: "text-sm/semibold", color: "text-muted", children: null };
   const intl3 = email(onClose[13]).intl;
-  obj3.children = intl3.string(email(onClose[13]).t.rpWT1s);
-  items1[3] = closure_9(email(onClose[18]).Text, obj3);
-  const tmp5 = _slicedToArray(noop.useState(null), 2);
-  const tmp7 = email;
+  obj7.children = intl3.string(email(onClose[13]).t.rpWT1s);
+  items1[3] = closure_9(email(onClose[18]).Text, obj7);
+  const obj4 = { source: require("../../../../../_runtime/metro/12870__.js") };
   items1[4] = closure_9(email(onClose[19]).CodeBlocks, {
     hasError: false,
     count: 8,
@@ -136,17 +138,17 @@ export default function HubEmailConnectionPinVerify(email) {
     },
     codeType: email(onClose[19]).CodeType.ALPHANUMERIC,
   });
-  let tmp6Result = null != obj1;
+  let tmp6Result = null != obj2;
   if (tmp6Result) {
-    const obj5 = {
+    const obj9 = {
       variant: "text-sm/medium",
       color: "text-feedback-critical",
       style: tmp.error,
-      children: obj1.getAnyErrorMessage(),
+      children: obj2.getAnyErrorMessage(),
     };
-    tmp6Result = closure_9(tmp7(onClose[18]).Text, obj5);
+    tmp6Result = closure_9(tmp7(onClose[18]).Text, obj9);
   }
-  const obj4 = {
+  const obj8 = {
     hasError: false,
     count: 8,
     onCodeEntered: function handleCodeEntered(arg0) {
@@ -162,6 +164,6 @@ export default function HubEmailConnectionPinVerify(email) {
     codeType: email(onClose[19]).CodeType.ALPHANUMERIC,
   };
   items1[5] = tmp6Result;
-  obj.children = items1;
-  return closure_9(email(onClose[16]).HubEmailConnectionScreen, { children: closure_10(closure_6, obj) });
+  obj3.children = items1;
+  return closure_9(email(onClose[16]).HubEmailConnectionScreen, { children: closure_10(closure_6, obj3) });
 }

@@ -5,6 +5,8 @@ import _slicedToArray from "../../../_runtime/metro/00032__.js";
 import noop from "../../../_runtime/metro/00019__.js";
 import FamilyCenterStore from "FamilyCenterStore.tsx";
 
+const require = globalThis.__r;
+
 require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/parent_tools/ChangeSpendingLimitFormState.tsx");
@@ -13,9 +15,9 @@ export const useChangeSpendingLimitFormState = function useChangeSpendingLimitFo
   _require = teenId;
   let ParentalControlledSpendingLimit = require("ParentalControlledUserSettings").ParentalControlledSpendingLimit;
   controlledSetting = ParentalControlledSpendingLimit.useControlledSetting(teenId);
-  let obj = require("initialize");
   const items = [closure_5];
-  const stateFromStores = obj.useStateFromStores(items, () => closure_5.getSpendingLimit());
+  const stateFromStores = require("initialize").useStateFromStores(items, () => closure_5.getSpendingLimit());
+  let obj = require("initialize");
   const items1 = [closure_5];
   const stateFromStores1 = require("initialize").useStateFromStores(items1, () => {
     const monthlyPurchases = closure_5.getMonthlyPurchases();
@@ -89,7 +91,7 @@ export const useChangeSpendingLimitFormState = function useChangeSpendingLimitFo
   const tmp10Result = tmp10(noop.useState(false), 2);
   closure_8 = tmp10Result[1];
   const items4 = [tmp18, tmp14, rounded, teenId, formatted];
-  obj = {
+  let obj4 = {
     amountInput: tmp12,
     handleAmountChange: callback,
     currency: formatted,
@@ -113,8 +115,8 @@ export const useChangeSpendingLimitFormState = function useChangeSpendingLimitFo
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
-          let obj = { value, done: true };
-          return obj;
+          const obj2 = { value, done: true };
+          return obj2;
         } else {
           return { value: "HermesInternal", done: null };
         }
@@ -127,31 +129,31 @@ export const useChangeSpendingLimitFormState = function useChangeSpendingLimitFo
               throw value;
             } else if (arg0 === 2) {
               c4 = 3;
-              obj = { value, done: true };
-              return obj;
+              const obj3 = { value, done: true };
+              return obj3;
             } else {
               if (closure_6) {
                 closure_8(true);
                 c3 = 1;
                 if (closure_5) {
-                  const ParentalControlledSpendingLimit2 = tmp3(14914).ParentalControlledSpendingLimit;
+                  const ParentalControlledSpendingLimit2 = tmp3(14915).ParentalControlledSpendingLimit;
                   dependencyMap = 2;
                   c4 = 1;
-                  const obj1 = {
+                  const obj4 = {
                     value: ParentalControlledSpendingLimit2.updateControlledSetting(tmp3, null),
                     done: false,
                   };
-                  return obj1;
+                  return obj4;
                 } else if (null != rounded) {
-                  const ParentalControlledSpendingLimit = tmp3(14914).ParentalControlledSpendingLimit;
-                  const obj2 = { amount: tmp16, currency: formatted };
+                  const ParentalControlledSpendingLimit = tmp3(14915).ParentalControlledSpendingLimit;
+                  const obj5 = { amount: tmp16, currency: formatted };
                   dependencyMap = 3;
                   c4 = 1;
-                  const obj3 = {
-                    value: ParentalControlledSpendingLimit.updateControlledSetting(tmp3, obj2),
+                  const obj6 = {
+                    value: ParentalControlledSpendingLimit.updateControlledSetting(tmp3, obj5),
                     done: false,
                   };
-                  return obj3;
+                  return obj6;
                 }
               }
               c4 = 3;
@@ -169,8 +171,8 @@ export const useChangeSpendingLimitFormState = function useChangeSpendingLimitFo
               c3 = 0;
               closure_128_8(false);
               c4 = 3;
-              const obj4 = { value, done: true };
-              return obj4;
+              const obj7 = { value, done: true };
+              return obj7;
             }
           } else if (arg0 === 1) {
             c4 = 3;
@@ -179,7 +181,7 @@ export const useChangeSpendingLimitFormState = function useChangeSpendingLimitFo
             c3 = 0;
             closure_128_8(false);
             c4 = 3;
-            obj = { value, done: true };
+            const obj = { value, done: true };
             return obj;
           }
           c3 = 0;
@@ -206,11 +208,11 @@ export const useChangeSpendingLimitFormState = function useChangeSpendingLimitFo
   if (tmp23) {
     tmp23 = rounded <= stateFromStores1;
   }
-  obj.isOverspending = tmp23;
-  obj.canSave = tmp18;
-  obj.isSubmitting = tmp10Result[0];
-  obj.renewalDate = memo1;
-  obj.monthlySpend = stateFromStores1;
-  obj.save = callback1;
-  return obj;
+  obj4.isOverspending = tmp23;
+  obj4.canSave = tmp18;
+  obj4.isSubmitting = tmp10Result[0];
+  obj4.renewalDate = memo1;
+  obj4.monthlySpend = stateFromStores1;
+  obj4.save = callback1;
+  return obj4;
 };

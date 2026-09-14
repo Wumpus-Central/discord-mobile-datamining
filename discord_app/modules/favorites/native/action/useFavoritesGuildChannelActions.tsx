@@ -3,18 +3,20 @@ import AuthenticationStore from "../../../../stores/AuthenticationStore.tsx";
 import GuildMemberStore from "../../../../stores/GuildMemberStore.tsx";
 import FavoriteStore from "../../FavoriteStore.tsx";
 
+const require = globalThis.__r;
+
 const require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/favorites/native/action/useFavoritesGuildChannelActions.tsx");
 
 export default function useFavoritesGuildChannelActions(channelId, FavoritesGuildActionSheet) {
   _require = channelId;
-  let obj = require("FavoritesHooks");
-  const favoritesAccess = obj.useFavoritesAccess(FavoritesGuildActionSheet);
+  const favoritesAccess = require("FavoritesHooks").useFavoritesAccess(FavoritesGuildActionSheet);
   ({ hasAccess, isExperimentEnabled } = favoritesAccess);
+  const obj = require("FavoritesHooks");
+  const tmp = _require;
   let isFavoritableChannelResult = require("FavoritesUtils").isFavoritableChannel(channelId);
   const obj2 = require("FavoritesUtils");
-  const tmp = _require;
   const items = [FavoriteStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => FavoriteStore.isFavorite(channelId.id));
   const obj3 = require("initialize");
@@ -41,8 +43,8 @@ export default function useFavoritesGuildChannelActions(channelId, FavoritesGuil
   if (tmp7) {
     tmp7 = !isFavoritesGuildSelected;
   }
-  const favoritesBetaTagDismissibleContent = tmp(10368).useFavoritesBetaTagDismissibleContent(tmp7);
-  obj = {
+  const favoritesBetaTagDismissibleContent = tmp(10369).useFavoritesBetaTagDismissibleContent(tmp7);
+  return {
     isExperimentEnabled,
     hasFavoritesAccess: hasAccess,
     canFavoriteChannel: isFavoritableChannelResult,
@@ -52,5 +54,4 @@ export default function useFavoritesGuildChannelActions(channelId, FavoritesGuil
     shouldShowBetaTag: favoritesBetaTagDismissibleContent.shouldShowBetaTag,
     dismissBetaTag: favoritesBetaTagDismissibleContent.dismissBetaTag,
   };
-  return obj;
 }

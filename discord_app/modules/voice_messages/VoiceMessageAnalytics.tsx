@@ -20,7 +20,7 @@ export const logVoiceMessagePlaybackStarted = function logVoiceMessagePlaybackSt
   id,
 ) {
   let tmp = totalDurationSecs;
-  const obj = {
+  const obj2 = {
     message_id: messageId,
     total_duration_secs: totalDurationSecs,
     start_duration_secs: null,
@@ -29,9 +29,9 @@ export const logVoiceMessagePlaybackStarted = function logVoiceMessagePlaybackSt
   if (totalDurationSecs == null) {
     tmp = startDurationSecs;
   }
-  obj.start_duration_secs = Math.min(tmp, startDurationSecs);
-  obj.sender_user_id = id;
-  obj.track(AnalyticEvents.VOICE_MESSAGE_PLAYBACK_STARTED, obj);
+  obj2.start_duration_secs = Math.min(tmp, startDurationSecs);
+  obj2.sender_user_id = id;
+  AnalyticsUtilsDefault.track(AnalyticEvents.VOICE_MESSAGE_PLAYBACK_STARTED, obj2);
 };
 export const logVoiceMessagePlaybackEnded = function logVoiceMessagePlaybackEnded(
   messageId,
@@ -41,7 +41,7 @@ export const logVoiceMessagePlaybackEnded = function logVoiceMessagePlaybackEnde
   durationListeningSecs,
 ) {
   let tmp = totalDurationSecs;
-  const obj = {
+  const obj2 = {
     message_id: messageId,
     total_duration_secs: totalDurationSecs,
     end_duration_secs: null,
@@ -51,12 +51,14 @@ export const logVoiceMessagePlaybackEnded = function logVoiceMessagePlaybackEnde
   if (totalDurationSecs == null) {
     tmp = endDurationSecs;
   }
-  obj.end_duration_secs = Math.min(tmp, endDurationSecs);
-  obj.sender_user_id = id;
-  obj.duration_listening_secs = durationListeningSecs;
-  obj.track(AnalyticEvents.VOICE_MESSAGE_PLAYBACK_ENDED, obj);
+  obj2.end_duration_secs = Math.min(tmp, endDurationSecs);
+  obj2.sender_user_id = id;
+  obj2.duration_listening_secs = durationListeningSecs;
+  AnalyticsUtilsDefault.track(AnalyticEvents.VOICE_MESSAGE_PLAYBACK_ENDED, obj2);
 };
 export const logVoiceMessagePlaybackFailed = function logVoiceMessagePlaybackFailed(messageId, errorMessage) {
-  const obj = { message_id: messageId, error_message: errorMessage };
-  obj.track(AnalyticEvents.VOICE_MESSAGE_PLAYBACK_FAILED, obj);
+  AnalyticsUtilsDefault.track(AnalyticEvents.VOICE_MESSAGE_PLAYBACK_FAILED, {
+    message_id: messageId,
+    error_message: errorMessage,
+  });
 };

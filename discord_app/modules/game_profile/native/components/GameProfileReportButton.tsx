@@ -16,12 +16,11 @@ export default function GameProfileReportButton(applicationId) {
   const trackAction = applicationId.trackAction;
   const items = [applicationId, trackAction];
   const callback = noop.useCallback(() => {
-    let obj = ActionSheetActionCreatorsDefault;
-    obj.hideActionSheet();
+    ActionSheetActionCreatorsDefault.hideActionSheet();
     trackAction(GameProfileAnalyticUtils.GameProfileTrackActionActions.Feedback);
-    obj = { applicationId };
     const obj2 = ModalActionCreatorsDefault;
-    obj2.pushLazy(asyncRequireImpl(9027, dependencyMap.paths), obj, GameDetectionReportModal.MODAL_KEY);
+    const obj3 = { applicationId };
+    obj2.pushLazy(asyncRequireImpl(9027, dependencyMap.paths), obj3, GameDetectionReportModal.MODAL_KEY);
   }, items);
   let obj = { variant: "secondary", size: "md", text: null, onPress: null };
   const intl = applicationId(1114).intl;

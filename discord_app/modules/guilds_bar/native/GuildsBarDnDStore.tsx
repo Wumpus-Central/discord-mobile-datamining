@@ -3,8 +3,10 @@ import SentryUtilsDefault from "../../../utils/SentryUtils.native.tsx";
 import ReactBatchUpdates from "../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
 import _mod4259 from "../../../../_runtime/metro/04259__.js";
 import SortedGuildStore from "../../../stores/SortedGuildStore.tsx";
-import identity from "../../../../_runtime/metro/01244__.js";
+import identity from "../../../../_runtime/metro/01242__.js";
 import size from "../../../../_runtime/metro/00002__.js";
+
+const require = globalThis.__r;
 
 const GuildsNodeType = SortedGuildStore.GuildsNodeType;
 const INITIAL_GESTURE_STATE = { mode: null, initialX: 0, initialY: 0, absoluteX: 0, absoluteY: 0 };
@@ -12,27 +14,27 @@ let c5 = -1;
 const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
   _require = arg0;
   closure_1 = arg1;
-  obj = {
+  let obj = {
     dragSpecs: "Boolean",
     overSpecs: "ip",
     dropSpecs: "isArray",
     dragRegion: require("ReanimatedRexport").makeMutable({ min: 0, max: 0 }),
     gestureState: null,
     dragDropInProgress: null,
-    listInsets: "actor",
-    scrollPosition: "entertainer",
-    windowSize: "rock",
-    setStateShallow: "rockstar",
-    dropStart: "singer",
-    dropComplete: "star",
+    listInsets: 12,
+    scrollPosition: 12,
+    windowSize: null,
+    setStateShallow: null,
+    dropStart: 0,
+    dropComplete: "No Output Devices",
   };
-  const obj2 = require("ReanimatedRexport");
+  let obj2 = require("ReanimatedRexport");
   obj.gestureState = require("ReanimatedRexport").makeMutable(obj);
-  const obj3 = require("ReanimatedRexport");
+  let obj3 = require("ReanimatedRexport");
   obj.dragDropInProgress = require("ReanimatedRexport").makeMutable(false);
   let obj4 = require("ReanimatedRexport");
   obj.listInsets = require("ReanimatedRexport").makeMutable({ start: 0, end: 0 });
-  const obj5 = require("ReanimatedRexport");
+  let obj5 = require("ReanimatedRexport");
   obj.scrollPosition = require("ReanimatedRexport").makeMutable(0);
   obj.setStateShallow = function setStateShallow(obj) {
     closure_0 = obj;
@@ -42,7 +44,7 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
       if (tmp[key10006] === arg0[key10006]) {
         continue;
       } else {
-        obj = closure_0(1249);
+        obj = closure_0(1247);
         let batchUpdatesResult = obj.batchUpdates(() => {
           const merged = Object.assign(closure_1);
           const merged1 = Object.assign(closure_0);
@@ -54,11 +56,11 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
   obj.dropStart = function dropStart(newDropSpec) {
     dropSpecs = newDropSpec;
     ({ dropSpecs, gestureState } = gestureState());
-    closure_1(1232);
-    let data = { category: "GuildsBarGesture", message: "dropStart started", data: null };
-    data = { newDropSpec, dropSpecs, gestureState: gestureState.get() };
-    data.data = data;
-    data.addBreadcrumb(data);
+    const tmp = gestureState();
+    let obj2 = { category: "GuildsBarGesture", message: "dropStart started", data: null };
+    const obj = closure_1(1230);
+    obj2.data = { newDropSpec, dropSpecs, gestureState: gestureState.get() };
+    obj.addBreadcrumb(obj2);
     if (null != dropSpecs) {
       const _Error = Error;
       const error = new Error(
@@ -66,30 +68,30 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
       );
       throw error;
     } else {
-      dropSpecs(1249).batchUpdates(() => dropSpecs({ dropSpecs, dragSpecs: "Array", overSpecs: "accessible" }));
+      dropSpecs(1247).batchUpdates(() => dropSpecs({ dropSpecs, dragSpecs: "Array", overSpecs: "isArray" }));
       const _clearTimeout = clearTimeout;
       clearTimeout(timeout);
       const _setTimeout = setTimeout;
       timeout = setTimeout(() => {
-        obj = gestureState;
         value = gestureState.get();
         if ("drag" === value.mode) {
-          obj = {};
+          const obj2 = {};
           const merged = Object.assign(value);
-          obj.mode = null;
-          const result = obj.set(obj);
+          obj2.mode = null;
+          const result = gestureState.set(obj2);
         }
       }, 0);
-      const obj4 = dropSpecs(1249);
+      const obj4 = dropSpecs(1247);
     }
-    const tmp = gestureState();
+    const obj3 = { newDropSpec, dropSpecs, gestureState: gestureState.get() };
   };
   obj.dropComplete = function dropComplete() {
     ({ gestureState, dragDropInProgress, dropSpecs, dragSpecs } = closure_1());
-    let data = { category: "GuildsBarGesture", message: "dropComplete started", data: null };
-    data = { gestureState: gestureState.get(), dropSpecs, dragSpecs };
-    data.data = data;
-    data.addBreadcrumb(data);
+    const tmp = closure_1();
+    const obj2 = { category: "GuildsBarGesture", message: "dropComplete started", data: null };
+    const obj = SentryUtilsDefault;
+    obj2.data = { gestureState: gestureState.get(), dropSpecs, dragSpecs };
+    obj.addBreadcrumb(obj2);
     if (null != dropSpecs) {
       ReactBatchUpdates.batchUpdates(() => closure_1_0({ dropSpecs: "r" }));
       const _clearTimeout = clearTimeout;
@@ -99,13 +101,13 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
       }
       value = gestureState.get();
       if ("drag" === value.mode) {
-        const obj1 = {};
+        const obj5 = {};
         const merged = Object.assign(value);
-        obj1.mode = null;
-        const result1 = gestureState.set(obj1);
+        obj5.mode = null;
+        const result1 = gestureState.set(obj5);
       }
     }
-    const tmp = closure_1();
+    const obj3 = { gestureState: gestureState.get(), dropSpecs, dragSpecs };
   };
   return obj;
 });
@@ -120,8 +122,8 @@ export const useItemDragState = function useItemDragState(arg0, arg1) {
     ({ dragSpecs, overSpecs, dropSpecs, dragDropInProgress } = arg0);
     if (null == dragSpecs) {
       if (null == dropSpecs) {
-        obj = { isDragTarget: false, dragState: "ip", overState: "isArray", itemSize: null, dragDropInProgress };
-        return obj;
+        const obj2 = { isDragTarget: false, dragState: "ip", overState: "isArray", itemSize: null, dragDropInProgress };
+        return obj2;
       }
     }
     let tmp2 = !closure_1;
@@ -163,7 +165,7 @@ export const useItemDragState = function useItemDragState(arg0, arg1) {
       }
       tmp8 = tmp11;
     }
-    obj = { isDragTarget: tmp2, dragState: null, overState: null, itemSize: null, dragDropInProgress: null };
+    const obj = { isDragTarget: tmp2, dragState: null, overState: null, itemSize: null, dragDropInProgress: null };
     if (tmp2) {
       let str = "dropping";
       if (null == dropSpecs) {

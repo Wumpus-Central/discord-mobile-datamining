@@ -22,21 +22,20 @@ const result = size.fileFinishedImporting(
 export default function GuildBoostingMarketingOverview(guildId) {
   guildId = guildId.guildId;
   const guildBoostSlots = guildId.guildBoostSlots;
-  let obj = guildId(stateFromStores[8]);
-  const giftCardMobileConsumptionHalfsheet = obj.useGiftCardMobileConsumptionHalfsheet();
+  let tmp = closure_13();
+  const giftCardMobileConsumptionHalfsheet = guildId(stateFromStores[8]).useGiftCardMobileConsumptionHalfsheet();
   if (guildBoostSlots != null) {
     const first = guildBoostSlots[0];
   }
-  let tmp2Result = tmp2(tmp3[9]);
+  let obj = guildId(stateFromStores[8]);
   const items = [GuildStore];
-  stateFromStores = tmp2Result.useStateFromStores(items, () => GuildStore.getGuild(guildId));
-  tmp2Result = tmp2(tmp3[10]);
-  const navigation = tmp2Result.useNavigation();
+  stateFromStores = guildId(stateFromStores[9]).useStateFromStores(items, () => GuildStore.getGuild(guildId));
+  const tmp2Result = guildId(stateFromStores[9]);
+  const navigation = guildId(stateFromStores[10]).useNavigation();
   const analyticsLocations = guildBoostSlots(tmp3[11])().analyticsLocations;
-  let obj3 = analyticsLocations;
   const tmp9 = navigation(analyticsLocations.useState(false), 2);
   closure_5 = tmp9[1];
-  let tmp = closure_13();
+  const tmp2Result3 = guildId(stateFromStores[10]);
   [GuildStore, UserStore] = navigation(analyticsLocations.useState(0), 2);
   analyticsLocations.useRef(false);
   const tmp11 = guildBoostSlots(stateFromStores[12])(() => Date.now());
@@ -56,7 +55,7 @@ export default function GuildBoostingMarketingOverview(guildId) {
     name = stateFromStores.name;
   }
   items2[2] = name;
-  const layoutEffect = obj3.useLayoutEffect(() => {
+  const layoutEffect = obj4.useLayoutEffect(() => {
     let tmp = null != guildBoostSlots;
     if (tmp) {
       tmp = guildBoostSlots.length > 0;
@@ -75,20 +74,19 @@ export default function GuildBoostingMarketingOverview(guildId) {
     navigation.setOptions({ title: str });
   }, items2);
   const items3 = [guildId, analyticsLocations, tmp11];
-  const effect = obj3.useEffect(
+  const effect = obj4.useEffect(
     () => () => {
-      guildBoostSlots(stateFromStores[15]);
-      const obj = {
+      const obj = guildBoostSlots(stateFromStores[15]);
+      obj.track(constants.MODAL_DISMISSED, {
         type: constants2.PREMIUM_GUILD_USER_MODAL,
         location_stack,
         guild_id,
         duration_open_ms: Date.now() - closure_1_9,
-      };
-      obj.track(constants.MODAL_DISMISSED, obj);
+      });
     },
     items3,
   );
-  const effect1 = obj3.useEffect(() => {
+  const effect1 = obj4.useEffect(() => {
     guildBoostSlots(stateFromStores[16]).wait(() => {
       const premiumSubscriptionPlans = guildId(7360).fetchPremiumSubscriptionPlans();
       const obj = guildId(7360);
@@ -97,8 +95,8 @@ export default function GuildBoostingMarketingOverview(guildId) {
   }, []);
   let tmp18 = null;
   if (null != stateFromStores) {
-    obj = { children: null };
-    obj = {
+    let obj2 = { children: null };
+    const obj3 = {
       contentContainerStyle: tmp.wrapper,
       onScroll(nativeEvent) {
         nativeEvent = nativeEvent.nativeEvent;
@@ -110,12 +108,12 @@ export default function GuildBoostingMarketingOverview(guildId) {
           tmp3 = sum >= tmp.height - GuildBoostingMarketingPersistentCta.VISIBILITY_OFFSET;
         }
         if (tmp3) {
-          const obj = {
+          const obj2 = {
             type: constants2.PREMIUM_GUILD_USER_MODAL,
             location_stack: analyticsLocations,
             guild_id: stateFromStores.id,
           };
-          obj.track(constants.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, obj);
+          AnalyticsUtilsDefault.track(constants.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, obj2);
           ref.current = true;
         }
         closure_5(contentOffset.y >= GuildStore);
@@ -123,7 +121,7 @@ export default function GuildBoostingMarketingOverview(guildId) {
       scrollEventThrottle: 16,
       children: null,
     };
-    const obj1 = {
+    const obj5 = {
       guild: stateFromStores,
       previousGuildSubscriptionSlot: first,
       onLayout(nativeEvent) {
@@ -132,26 +130,26 @@ export default function GuildBoostingMarketingOverview(guildId) {
       fractionalPremiumInfo: tmp12,
       premiumGroupRole: UNSPECIFIED,
     };
-    const items4 = [closure_10(tmp8(tmp3[20]), obj1), , , , ,];
-    const obj2 = { guild: stateFromStores };
-    items4[1] = closure_10(tmp8(tmp3[21]), obj2);
-    obj3 = { guild: stateFromStores };
-    items4[2] = closure_10(tmp8(tmp3[22]), obj3);
+    const items4 = [closure_10(tmp8(tmp3[20]), obj5), , , , ,];
+    const obj6 = { guild: stateFromStores };
+    items4[1] = closure_10(tmp8(tmp3[21]), obj6);
+    const obj7 = { guild: stateFromStores };
+    items4[2] = closure_10(tmp8(tmp3[22]), obj7);
     items4[3] = closure_10(tmp8(tmp3[23]), {});
     items4[4] = closure_10(tmp8(tmp3[24]), {});
     items4[5] = closure_10(tmp8(tmp3[25]), {});
-    obj.children = items4;
-    const items5 = [closure_11(closure_5, obj)];
-    const obj4 = {
+    obj3.children = items4;
+    const items5 = [closure_11(closure_5, obj3)];
+    const obj8 = {
       guild: stateFromStores,
       previousGuildSubscriptionSlot: first,
       isVisible: tmp9[0],
       fractionalPremiumState: tmp12.fractionalState,
       premiumGroupRole: UNSPECIFIED,
     };
-    items5[1] = closure_10(tmp8(tmp3[19]), obj4);
-    obj.children = items5;
-    tmp18 = closure_11(closure_12, obj);
+    items5[1] = closure_10(tmp8(tmp3[19]), obj8);
+    obj2.children = items5;
+    tmp18 = closure_11(closure_12, obj2);
   }
   return tmp18;
 }

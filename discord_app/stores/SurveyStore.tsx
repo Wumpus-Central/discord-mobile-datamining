@@ -441,8 +441,8 @@ function handleSelectedGuildChange() {
         }
       })(first)
     ) {
-      obj = { type: "SURVEY_FETCHED", survey: first };
-      setSurvey(obj);
+      obj2 = { type: "SURVEY_FETCHED", survey: first };
+      setSurvey(obj2);
     }
   }
   if (null != c17) {
@@ -461,7 +461,7 @@ let c18 = false;
 let c19 = null;
 const DAY = DurationsDefault.Millis.DAY;
 const result = 10 * DurationsDefault.Millis.HOUR;
-obj = {
+let obj2 = {
   IS_OWNER: "is_owner",
   IS_ADMIN: "is_admin",
   IS_COMMUNITY: "is_community",
@@ -471,7 +471,7 @@ obj = {
   GUILD_PERMISSIONS: "guild_permissions",
   GUILD_SIZE_ALL: "guild_size_all",
 };
-const set = new Set(Object.values(obj));
+const set = new Set(Object.values(obj2));
 const PersistedStore = initializeDefault.PersistedStore;
 class SurveyStore extends PersistedStore {}
 const prototype = SurveyStore.prototype;
@@ -552,7 +552,7 @@ let items = [
   },
 ];
 SurveyStore.migrations = items;
-obj = {
+const surveyStore = new SurveyStore(DispatcherDefault, {
   CONNECTION_OPEN: fetchSurveyIfNeeded,
   CONNECTION_RESUMED: fetchSurveyIfNeeded,
   SURVEY_FETCHED: setSurvey,
@@ -594,8 +594,7 @@ obj = {
   SURVEY_SEEN: function handleSurveySeen() {
     closure_13.lastSeen = Date.now();
   },
-};
-const surveyStore = new SurveyStore(DispatcherDefault, obj);
+});
 const size = fn(2);
 const result1 = size.fileFinishedImporting("stores/SurveyStore.tsx");
 

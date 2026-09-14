@@ -42,34 +42,63 @@ export default function QuestDisclosureModal(arg0) {
   function onClose() {
     return isTargetedDisclosure(gamePublisher[3]).hideModal();
   }
-  let obj = {
-    headerLeft: CloseButton,
-    headerRight() {
-      return null;
+  const obj2 = {
+    screens: {
+      [closure_4.DISCLOSURE]: {
+        headerLeft: CloseButton,
+        headerRight() {
+          return null;
+        },
+        headerTitle() {
+          const obj = { title: null };
+          const intl = adCreativeType(gamePublisher[4]).intl;
+          obj.title = intl.string(adCreativeType(gamePublisher[4]).t.GcsZKJ);
+          return gameTitle(adCreativeType(gamePublisher[5]).NavigatorHeader, obj);
+        },
+        render() {
+          return jsx(QuestDisclosureModalInnerDefault, {
+            adCreativeType,
+            isTargetedDisclosure,
+            gamePublisher,
+            gameTitle,
+            onClose,
+            cosponsorName,
+            isVideoQuest,
+          });
+        },
+      },
     },
-    headerTitle() {
-      const obj = { title: null };
-      const intl = adCreativeType(gamePublisher[4]).intl;
-      obj.title = intl.string(adCreativeType(gamePublisher[4]).t.GcsZKJ);
-      return gameTitle(adCreativeType(gamePublisher[5]).NavigatorHeader, obj);
-    },
-    render() {
-      return jsx(QuestDisclosureModalInnerDefault, {
-        adCreativeType,
-        isTargetedDisclosure,
-        gamePublisher,
-        gameTitle,
-        onClose,
-        cosponsorName,
-        isVideoQuest,
-      });
-    },
+    initialRouteName: constants.DISCLOSURE,
+    headerBackTitle: null,
   };
-  obj = { screens: { [closure_4.DISCLOSURE]: obj }, initialRouteName: constants.DISCLOSURE, headerBackTitle: null };
   let intl = util.intl;
-  obj.headerBackTitle = intl.string(util.t["13/7kX"]);
+  obj2.headerBackTitle = intl.string(util.t["13/7kX"]);
   return jsx(Navigator.Navigator, {
-    screens: { [closure_4.DISCLOSURE]: obj },
+    screens: {
+      [closure_4.DISCLOSURE]: {
+        headerLeft: CloseButton,
+        headerRight() {
+          return null;
+        },
+        headerTitle() {
+          const obj = { title: null };
+          const intl = adCreativeType(gamePublisher[4]).intl;
+          obj.title = intl.string(adCreativeType(gamePublisher[4]).t.GcsZKJ);
+          return gameTitle(adCreativeType(gamePublisher[5]).NavigatorHeader, obj);
+        },
+        render() {
+          return jsx(QuestDisclosureModalInnerDefault, {
+            adCreativeType,
+            isTargetedDisclosure,
+            gamePublisher,
+            gameTitle,
+            onClose,
+            cosponsorName,
+            isVideoQuest,
+          });
+        },
+      },
+    },
     initialRouteName: constants.DISCLOSURE,
     headerBackTitle: null,
   });

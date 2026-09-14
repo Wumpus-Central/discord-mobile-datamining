@@ -44,19 +44,19 @@ export default function useActivityWebViewLockManager() {
       const items = [id];
       const insertionEffect = getCanRender.useInsertionEffect(() => {
         set.add(closure_0);
-        const obj = { callback, canRender: null };
+        const obj2 = { callback, canRender: null };
         let tmp4 = 0 === set.size;
         if (!tmp4) {
-          const iter2 = obj.values().next();
+          const iter2 = set.values().next();
           value = undefined;
           if (iter2 != null) {
             value = iter2.value;
           }
           tmp4 = value === closure_0;
-          const iter = obj.values();
+          const iter = set.values();
         }
-        obj.canRender = tmp4;
-        const result = map.set(closure_0, obj);
+        obj2.canRender = tmp4;
+        const result = map.set(closure_0, obj2);
         return () => {
           set.delete(closure_1_0);
           set.delete(closure_1_0);

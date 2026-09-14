@@ -5,6 +5,8 @@ import getPIPBottomOffsetForPIPModeDefault from "../../../../panels/morphable/na
 import getAdjustedBottomOffsetsDefault from "../../../../panels/morphable/native/getAdjustedBottomOffsets.tsx";
 import size from "../../../../../../_runtime/metro/00002__.js";
 
+const require = globalThis.__r;
+
 let __initData = {
   code: "function usePIPAvoidanceSpecsTsx1(){const{keyboardHeight,safeArea,screenName}=this.__closure;return{keyboardHeight:keyboardHeight.get(),safeAreaBottom:safeArea.bottom,screenName:screenName.get()};}",
 };
@@ -15,12 +17,12 @@ const result = size.fileFinishedImporting("modules/activities/panel/native/pip/u
 
 export default function usePIPAvoidanceSpecs(safeArea) {
   _require = safeArea;
-  let obj = require("ReanimatedRexport");
-  const sharedValue = obj.useSharedValue({ top: 0, bottom: 0 });
-  const tmp2 = sharedValue(16801)();
+  const sharedValue = require("ReanimatedRexport").useSharedValue({ top: 0, bottom: 0 });
+  const tmp2 = sharedValue(16803)();
   dependencyMap = tmp2;
-  const tmp3 = sharedValue(17120)();
+  const tmp3 = sharedValue(17122)();
   __initData = tmp3;
+  let obj = require("ReanimatedRexport");
   const fn = function n() {
     return { keyboardHeight: closure_2.get(), safeAreaBottom: safeArea.bottom, screenName: closure_3.get() };
   };
@@ -28,26 +30,30 @@ export default function usePIPAvoidanceSpecs(safeArea) {
   fn.__workletHash = 9790941132204;
   fn.__initData = __initData;
   const fn2 = function f(safeAreaState, current) {
-    let obj = cheapWorkletShallowEqual;
     if (!obj.cheapWorkletShallowEqual(safeAreaState, tmp)) {
       ({ keyboardHeight, safeAreaBottom, screenName } = safeAreaState);
-      obj = { screenBottomOffset: getPIPBottomOffsetForPIPModeDefault(screenName), safeAreaBottom, keyboardHeight };
-      const rect = { top: 0, bottom: getAdjustedBottomOffsetsDefault(obj).bottomOffset };
+      const obj2 = {
+        screenBottomOffset: getPIPBottomOffsetForPIPModeDefault(screenName),
+        safeAreaBottom,
+        keyboardHeight,
+      };
+      const rect = { top: 0, bottom: getAdjustedBottomOffsetsDefault(obj2).bottomOffset };
       updateSharedValueIfChangedDefault(sharedValue, rect);
       const tmp4 = getPIPBottomOffsetForPIPModeDefault(screenName);
     }
+    obj = cheapWorkletShallowEqual;
     tmp = current;
   };
-  obj = {
+  let obj2 = require("ReanimatedRexport");
+  fn2.__closure = {
     cheapWorkletShallowEqual: require("cheapWorkletShallowEqual").cheapWorkletShallowEqual,
-    getPIPBottomOffsetForPIPMode: sharedValue(17023),
-    getAdjustedBottomOffsets: sharedValue(17121),
-    updateSharedValueIfChanged: sharedValue(11487),
+    getPIPBottomOffsetForPIPMode: sharedValue(17025),
+    getAdjustedBottomOffsets: sharedValue(17123),
+    updateSharedValueIfChanged: sharedValue(11488),
     pipAvoidanceSpecs: sharedValue,
   };
-  fn2.__closure = obj;
   fn2.__workletHash = 643938425459;
   fn2.__initData = __initData2;
-  const animatedReaction = require("ReanimatedRexport").useAnimatedReaction(fn, fn2);
+  const animatedReaction = obj2.useAnimatedReaction(fn, fn2);
   return sharedValue;
 }

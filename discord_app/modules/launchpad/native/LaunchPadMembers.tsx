@@ -24,39 +24,38 @@ const result = size.fileFinishedImporting("modules/launchpad/native/LaunchPadMem
 
 export default noop.memo(function LaunchPadMembers() {
   const tmp = closure_7();
-  let obj = useStateFromStores;
   const items = [SelectedChannelStore, ChannelStore];
-  const stateFromStoresObject = obj.useStateFromStoresObject(items, () => {
+  const stateFromStoresObject = useStateFromStores.useStateFromStoresObject(items, () => {
     currentlySelectedChannelId = currentlySelectedChannelId.getCurrentlySelectedChannelId();
     channel = channel.getChannel(currentlySelectedChannelId);
     if (null != currentlySelectedChannelId) {
       if (null != channel) {
         if (channel.isPrivate()) {
-          let obj = { channelId: currentlySelectedChannelId, type: "private" };
+          const obj = { channelId: currentlySelectedChannelId, type: "private" };
           return obj;
         } else {
           const guild_id = channel.guild_id;
           if (channel.isThread()) {
-            obj = { channelId: currentlySelectedChannelId, guildId: guild_id, type: "thread" };
-            let obj1 = obj;
+            const obj2 = { channelId: currentlySelectedChannelId, guildId: guild_id, type: "thread" };
+            let obj3 = obj2;
           } else {
-            obj1 = { channelId: currentlySelectedChannelId, guildId: guild_id, type: "guild" };
+            obj3 = { channelId: currentlySelectedChannelId, guildId: guild_id, type: "guild" };
           }
-          return obj1;
+          return obj3;
         }
       }
     }
     return { channelId: "call", type: true };
   });
   if ("private" === stateFromStoresObject.type) {
-    obj = { style: tmp.wrapper, children: null };
-    obj = {
+    let obj2 = { style: tmp.wrapper, children: null };
+    const obj4 = {
       channelId: stateFromStoresObject.channelId,
       listStyleOverride: tmp.listStyle,
       disableBottomSafeZone: true,
       insetEnd: 20,
     };
-    obj.children = jsx(
+    obj2.children = jsx(
       PrivateChannelUserListDefault,
       {
         channelId: stateFromStoresObject.channelId,
@@ -66,42 +65,35 @@ export default noop.memo(function LaunchPadMembers() {
       },
       stateFromStoresObject.channelId,
     );
-    let tmp8 = (
-      <View
-        channelId={stateFromStoresObject.channelId}
-        listStyleOverride={tmp.listStyle}
-        disableBottomSafeZone
-        insetEnd={20}
-      />
-    );
+    let tmp8 = <View style={tmp.wrapper}>{null}</View>;
   } else if ("thread" === stateFromStoresObject.type) {
-    let obj1 = { style: tmp.wrapper, children: null };
-    const obj2 = { channelId: null, guildId: null, listStyleOverride: null, disableBottomSafeZone: true, insetEnd: 20 };
+    const obj6 = { style: tmp.wrapper, children: null };
+    const obj7 = { channelId: null, guildId: null, listStyleOverride: null, disableBottomSafeZone: true, insetEnd: 20 };
     ({ channelId: obj5.channelId, guildId: obj5.guildId } = stateFromStoresObject);
-    obj2.listStyleOverride = tmp.listStyle;
-    obj1.children = jsx(
+    obj7.listStyleOverride = tmp.listStyle;
+    obj6.children = jsx(
       ThreadChannelUserListDefault,
       { channelId: null, guildId: null, listStyleOverride: null, disableBottomSafeZone: true, insetEnd: 20 },
       stateFromStoresObject.channelId,
     );
     tmp8 = <View style={tmp.wrapper}>{null}</View>;
   } else if ("guild" === stateFromStoresObject.type) {
-    const obj3 = { style: tmp.wrapper, children: null };
-    const obj4 = { channelId: null, guildId: null, listStyleOverride: null, disableBottomSafeZone: true, insetEnd: 20 };
+    const obj8 = { style: tmp.wrapper, children: null };
+    const obj9 = { channelId: null, guildId: null, listStyleOverride: null, disableBottomSafeZone: true, insetEnd: 20 };
     ({ channelId: obj3.channelId, guildId: obj3.guildId } = stateFromStoresObject);
-    obj4.listStyleOverride = tmp.listStyle;
-    obj3.children = jsx(
+    obj9.listStyleOverride = tmp.listStyle;
+    obj8.children = jsx(
       GuildChannelUserListDefault,
       { channelId: null, guildId: null, listStyleOverride: null, disableBottomSafeZone: true, insetEnd: 20 },
       stateFromStoresObject.channelId,
     );
     tmp8 = <View style={tmp.wrapper}>{null}</View>;
   } else {
-    const obj5 = { style: tmp.emptyWrapper, children: null };
-    const obj6 = { style: tmp.emptyText, variant: "text-md/semibold", children: null };
+    const obj17 = { style: tmp.emptyWrapper, children: null };
+    const obj18 = { style: tmp.emptyText, variant: "text-md/semibold", children: null };
     const intl = util.intl;
-    obj6.children = intl.string(util.t["+7wtJq"]);
-    obj5.children = jsx(Text_Text.Text, { style: tmp.emptyText, variant: "text-md/semibold", children: null });
+    obj18.children = intl.string(util.t["+7wtJq"]);
+    obj17.children = jsx(Text_Text.Text, { style: tmp.emptyText, variant: "text-md/semibold", children: null });
     tmp8 = <View style={tmp.emptyWrapper}>{null}</View>;
   }
   return tmp8;

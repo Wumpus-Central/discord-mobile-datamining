@@ -23,8 +23,7 @@ export const PressableScale = noop.forwardRef((scaleAmountInPx, ref) => {
     scaleAmountInPx,
     Object.assign({ style: 0, scaleAmountInPx: 0, onLayout: 0, onPressIn: 0, onPressOut: 0 }),
   );
-  let obj = ReanimatedRexport2;
-  const sharedValue = obj.useSharedValue(0);
+  const sharedValue = ReanimatedRexport2.useSharedValue(0);
   const buttonPressAnimationProps = ButtonHooks.useButtonPressAnimationProps(
     sharedValue,
     num,
@@ -32,12 +31,12 @@ export const PressableScale = noop.forwardRef((scaleAmountInPx, ref) => {
     onPressIn,
     onPressOut,
   );
-  obj = {};
+  const obj3 = {};
   const merged1 = Object.assign(_objectWithoutProperties(buttonPressAnimationProps, closure_2));
   const merged2 = Object.assign(merged);
-  obj.ref = ref;
-  obj.accessibilityRole = "button";
+  obj3.ref = ref;
+  obj3.accessibilityRole = "button";
   const items = [buttonPressAnimationProps.style, scaleAmountInPx.style];
-  obj.style = items;
+  obj3.style = items;
   return <closure_5 />;
 });

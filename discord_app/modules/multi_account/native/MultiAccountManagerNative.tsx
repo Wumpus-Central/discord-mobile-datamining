@@ -4,7 +4,7 @@ import DurationsDefault from "../../../utils/Durations.tsx";
 import ToastActionCreatorsDefault from "../../toast/native/ToastActionCreators.tsx";
 import ModalActionCreatorsDefault from "../../../actions/ModalActionCreators.tsx";
 import Constants2 from "../Constants.tsx";
-import _modDef17543 from "../../../../_runtime/metro/17543__.js";
+import _modDef17544 from "../../../../_runtime/metro/17544__.js";
 import Constants from "../../../Constants.tsx";
 import MultiAccountManager from "../MultiAccountManager.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
@@ -21,29 +21,28 @@ let obj = Object.create(
     obj.cancelled = false;
     obj.push = function push() {
       obj = ModalActionCreatorsDefault;
-      obj.pushLazy(obj(1896)(17541, dependencyMap.paths), {}, c7);
+      obj.pushLazy(obj(1896)(17542, dependencyMap.paths), {}, c7);
       if (obj.cancelled) {
         ModalActionCreatorsDefault.popWithKey(c7);
         const tmpResult = ModalActionCreatorsDefault;
       }
     };
     obj.enqueue = function enqueue() {
-      let arr = obj;
       obj.cancelled = false;
       obj = obj(4495);
       const rootNavigationRef = obj.getRootNavigationRef();
       if (null != rootNavigationRef) {
         if (rootNavigationRef.isReady()) {
-          arr = arr.push();
+          arr.push();
         }
       }
       const ComponentDispatch = obj(1109).ComponentDispatch;
       ComponentDispatch.subscribeOnce(constants.NAVIGATOR_READY, () => {
-        let arr = cancelled;
         if (!cancelled.cancelled) {
-          arr = arr.push();
+          cancelled.push();
         }
       });
+      arr = obj;
     };
     obj.pop = function pop() {
       obj.cancelled = true;
@@ -56,29 +55,28 @@ let obj = Object.create(
 obj.cancelled = false;
 obj.push = function push() {
   obj = ModalActionCreatorsDefault;
-  obj.pushLazy(obj(1896)(17541, dependencyMap.paths), {}, c7);
+  obj.pushLazy(obj(1896)(17542, dependencyMap.paths), {}, c7);
   if (obj.cancelled) {
     ModalActionCreatorsDefault.popWithKey(c7);
     const tmpResult = ModalActionCreatorsDefault;
   }
 };
 obj.enqueue = function enqueue() {
-  let arr = obj;
   obj.cancelled = false;
   obj = obj(4495);
   const rootNavigationRef = obj.getRootNavigationRef();
   if (null != rootNavigationRef) {
     if (rootNavigationRef.isReady()) {
-      arr = arr.push();
+      arr.push();
     }
   }
   const ComponentDispatch = obj(1109).ComponentDispatch;
   ComponentDispatch.subscribeOnce(constants.NAVIGATOR_READY, () => {
-    let arr = cancelled;
     if (!cancelled.cancelled) {
-      arr = arr.push();
+      cancelled.push();
     }
   });
+  arr = obj;
 };
 obj.pop = function pop() {
   obj.cancelled = true;
@@ -115,20 +113,21 @@ prototype["onSwitchSuccess"] = function onSwitchSuccess(currentUser, navigateHom
     tmp = user;
   }
   const timerId = setTimeout(() => {
-    obj = { key: "SWITCH_ACCOUNTS_TOAST_LOGIN_SUCCESS", content: null, icon: null };
+    obj = ToastActionCreatorsDefault;
+    const obj2 = { key: "SWITCH_ACCOUNTS_TOAST_LOGIN_SUCCESS", content: null, icon: null };
     const intl = obj(1114).intl;
-    obj = { username: user.username };
-    obj.content = intl.formatToPlainString(obj(1114).t.wx7O3L, obj);
-    obj.icon = _modDef17543;
-    obj.open(obj);
+    obj2.content = intl.formatToPlainString(obj(1114).t.wx7O3L, { username: user.username });
+    obj2.icon = _modDef17544;
+    obj.open(obj2);
   }, 100);
 };
 prototype["onSwitchError"] = function onSwitchError() {
-  obj = { key: "SWITCH_ACCOUNTS_TOAST_LOGIN_ERROR", content: null, icon: null };
+  obj = ToastActionCreatorsDefault;
+  const obj2 = { key: "SWITCH_ACCOUNTS_TOAST_LOGIN_ERROR", content: null, icon: null };
   const intl = obj(1114).intl;
-  obj.content = intl.string(obj(1114).t.pqvKWA);
-  obj.icon = _modDef17543;
-  obj.open(obj);
+  obj2.content = intl.string(obj(1114).t.pqvKWA);
+  obj2.icon = _modDef17544;
+  obj.open(obj2);
 };
 prototype["onSwitchComplete"] = function onSwitchComplete() {
   obj = ModalActionCreatorsDefault;

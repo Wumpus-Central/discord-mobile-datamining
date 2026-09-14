@@ -10,31 +10,29 @@ import AccessibilityStore from "../../a11y/AccessibilityStore.tsx";
 import ThemeStore from "../../user_settings/ThemeStore.tsx";
 import UserSettingsProtoStore from "../../user_settings/UserSettingsProtoStore.tsx";
 
-let obj = {};
-const merged = Object.assign(fn(14554).crossPlatformCommands);
+const merged = Object.assign(fn(14555).crossPlatformCommands);
 const activities = Object.assign(commands_activitiesDefault);
 const auth = Object.assign(authDefault);
 const voiceSettings = Object.assign(voiceSettingsDefault);
 const unsupported = Object.assign(unsupportedDefault);
-obj = {};
 Object.assign(crossPlatformRPCEventHandlersDefault);
-const discordEnvironmentEvents = fn(14610);
+const discordEnvironmentEvents = fn(14611);
 const merged6 = Object.assign(discordEnvironmentEvents.createDiscordEnvironmentEvents(true));
-const merged7 = Object.assign(fn(14611).voiceSettingsEventHandlers);
-obj = {
+const merged7 = Object.assign(fn(14612).voiceSettingsEventHandlers);
+const obj4 = {
   server: NativeRPCServerDefault,
-  commands: obj,
-  events: obj,
+  commands: {},
+  events: {},
   stores: null,
   transports: null,
   registerTransportsForEmbeddedPlatform: null,
 };
 const items = [ThemeStore, AccessibilityStore, UserSettingsProtoStore];
-obj.stores = items;
+obj4.stores = items;
 const items1 = [WebViewPostMessageTransportDefault];
-obj.transports = items1;
-obj.registerTransportsForEmbeddedPlatform = function registerTransportsForEmbeddedPlatform() {};
+obj4.transports = items1;
+obj4.registerTransportsForEmbeddedPlatform = function registerTransportsForEmbeddedPlatform() {};
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/rpc/native/NativeRPCImplementation.tsx");
 
-export default obj;
+export default obj4;

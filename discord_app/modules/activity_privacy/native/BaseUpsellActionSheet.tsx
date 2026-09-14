@@ -18,11 +18,12 @@ function renderSuccessIcon() {
 }
 function StoreGuildIcon(guildId) {
   guildId = guildId.guildId;
-  let obj = guildId(504);
   const items = [GuildStore];
-  const stateFromStores = obj.useStateFromStores(items, () => GuildStore.getGuild(guildId));
-  obj = { guild: stateFromStores, size: guildId(5665).GuildIconSizes.XSMALL };
-  return closure_7(GuildIconDefault, obj);
+  const stateFromStores = guildId(504).useStateFromStores(items, () => GuildStore.getGuild(guildId));
+  const obj2 = { guild: stateFromStores, size: null };
+  const obj = guildId(504);
+  obj2.size = guildId(5665).GuildIconSizes.XSMALL;
+  return closure_7(GuildIconDefault, obj2);
 }
 function GuildCard(guildIds) {
   guildIds = guildIds.guildIds;
@@ -31,9 +32,8 @@ function GuildCard(guildIds) {
   const tmp = closure_10();
   const items = [guildIds];
   const memo = noop.useMemo(() => ActivityPrivacyUpsellUtils.sortGuildIdsByFrecency(guildIds), items);
-  let obj = guildIds(substr[7]);
   const items1 = [GuildStore];
-  const stateFromStores = obj.useStateFromStores(items1, () => GuildStore.getGuild(memo[0]));
+  const stateFromStores = guildIds(substr[7]).useStateFromStores(items1, () => GuildStore.getGuild(memo[0]));
   if (direction === guildIds(substr[9]).ChangeDirection.RESTRICTING) {
     const intl2 = tmp2(tmp3[10]).intl;
     let stringResult = intl2.string(tmp2(tmp3[10]).t.e6Kpa7);
@@ -56,10 +56,11 @@ function GuildCard(guildIds) {
   if (4 !== memo.length) {
     substr = memo.slice(0, 3);
   }
+  const obj = guildIds(substr[7]);
   const items2 = [GuildStore];
   const items3 = [substr];
-  obj = { style: tmp.card, onPress, children: null };
-  obj = { style: tmp.cardInfo, children: null };
+  const obj2 = { style: tmp.card, onPress, children: null };
+  const obj3 = { style: tmp.cardInfo, children: null };
   const stateFromStoresArray = guildIds(substr[7]).useStateFromStoresArray(
     items2,
     () =>
@@ -76,11 +77,11 @@ function GuildCard(guildIds) {
       }),
     items3,
   );
-  const obj1 = { variant: "text-md/semibold", color: "text-strong", children: null };
+  const obj4 = { variant: "text-md/semibold", color: "text-strong", children: null };
   const intl3 = tmp2(tmp3[10]).intl;
-  obj1.children = intl3.format(guildIds(substr[10]).t["0fkj8J"], { count: guildIds.length });
-  const items4 = [closure_7(guildIds(substr[11]).Text, obj1)];
-  const obj3 = { style: tmp.statusRow, children: null };
+  obj4.children = intl3.format(guildIds(substr[10]).t["0fkj8J"], { count: guildIds.length });
+  const items4 = [closure_7(guildIds(substr[11]).Text, obj4)];
+  const obj6 = { style: tmp.statusRow, children: null };
   let str2 = "text-muted";
   if (direction === guildIds(substr[9]).ChangeDirection.RESTRICTING) {
     str2 = "text-feedback-positive";
@@ -88,7 +89,7 @@ function GuildCard(guildIds) {
   const items5 = [
     closure_7(guildIds(substr[11]).Text, { variant: "text-sm/medium", color: str2, children: stringResult }),
   ];
-  const obj4 = {
+  const obj7 = {
     variant: "text-sm/medium",
     color: "text-muted",
     lineClamp: 1,
@@ -97,13 +98,13 @@ function GuildCard(guildIds) {
   };
   const intl4 = tmp2(tmp3[10]).intl;
   const t = tmp2(tmp3[10]).t;
-  obj4.children = intl4.format(tmp7 ? t["8ZLbvR"] : t["+NoTYm"], { guildName: str });
-  items5[1] = closure_7(guildIds(substr[11]).Text, obj4);
-  obj3.children = items5;
-  items4[1] = closure_8(closure_5, obj3);
-  obj.children = items4;
-  const items6 = [closure_8(closure_5, obj), ,];
-  const obj2 = { count: guildIds.length };
+  obj7.children = intl4.format(tmp7 ? t["8ZLbvR"] : t["+NoTYm"], { guildName: str });
+  items5[1] = closure_7(guildIds(substr[11]).Text, obj7);
+  obj6.children = items5;
+  items4[1] = closure_8(closure_5, obj6);
+  obj3.children = items4;
+  const items6 = [closure_8(closure_5, obj3), ,];
+  const obj5 = { count: guildIds.length };
   const tmp10 = null != onPress ? closure_4 : closure_5;
   const tmp2Result = guildIds(substr[7]);
   items6[1] = closure_7(guildIds(substr[12]).GuildIconPile, {
@@ -114,22 +115,22 @@ function GuildCard(guildIds) {
   });
   let tmp12Result = null != onPress;
   if (tmp12Result) {
-    const obj6 = { style: tmp.chevron, children: null };
-    const obj7 = { color: memo(tmp3[5]).colors.TEXT_SUBTLE, size: "xs" };
-    obj6.children = closure_7(tmp2(tmp3[13]).ChevronLargeRightIcon, obj7);
-    tmp12Result = closure_7(closure_5, obj6);
+    const obj9 = { style: tmp.chevron, children: null };
+    const obj10 = { color: memo(tmp3[5]).colors.TEXT_SUBTLE, size: "xs" };
+    obj9.children = closure_7(tmp2(tmp3[13]).ChevronLargeRightIcon, obj10);
+    tmp12Result = closure_7(closure_5, obj9);
   }
   items6[2] = tmp12Result;
-  obj.children = items6;
-  return closure_8(tmp10, obj);
+  obj2.children = items6;
+  return closure_8(tmp10, obj2);
 }
 get_ActivityIndicator = fn(17);
 ({ Pressable: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-fn(4636);
-let createStyles = {
-  container: null,
+const createStyles = fn(4636);
+let obj2 = {
+  container: { paddingVertical: nativeDefault.space.PX_24, paddingHorizontal: nativeDefault.space.PX_24 },
   title: null,
   description: null,
   card: null,
@@ -139,13 +140,12 @@ let createStyles = {
   chevron: null,
   buttonsContainer: null,
 };
-createStyles = { paddingVertical: nativeDefault.space.PX_24, paddingHorizontal: nativeDefault.space.PX_24 };
-createStyles.container = createStyles;
-createStyles.title = { marginBottom: nativeDefault.space.PX_8 };
-let obj1 = { marginBottom: nativeDefault.space.PX_8 };
-createStyles.description = { marginBottom: nativeDefault.space.PX_24 };
-let obj2 = { marginBottom: nativeDefault.space.PX_24 };
-createStyles.card = {
+let obj3 = { paddingVertical: nativeDefault.space.PX_24, paddingHorizontal: nativeDefault.space.PX_24 };
+obj2.title = { marginBottom: nativeDefault.space.PX_8 };
+let obj4 = { marginBottom: nativeDefault.space.PX_8 };
+obj2.description = { marginBottom: nativeDefault.space.PX_24 };
+let obj5 = { marginBottom: nativeDefault.space.PX_24 };
+obj2.card = {
   backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE,
   borderRadius: nativeDefault.radii.md,
   padding: nativeDefault.space.PX_16,
@@ -154,7 +154,7 @@ createStyles.card = {
   alignItems: "center",
   justifyContent: "space-between",
 };
-let obj3 = {
+let obj6 = {
   backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE,
   borderRadius: nativeDefault.radii.md,
   padding: nativeDefault.space.PX_16,
@@ -163,20 +163,15 @@ let obj3 = {
   alignItems: "center",
   justifyContent: "space-between",
 };
-createStyles.cardInfo = { flex: 1, marginRight: nativeDefault.space.PX_12 };
-let obj4 = { flex: 1, marginRight: nativeDefault.space.PX_12 };
-createStyles.statusRow = {
-  flexDirection: "row",
-  alignItems: "center",
-  marginTop: nativeDefault.space.PX_4,
-  paddingBottom: 2,
-};
-createStyles.guildSummary = { flexShrink: 1 };
-const obj5 = { flexDirection: "row", alignItems: "center", marginTop: nativeDefault.space.PX_4, paddingBottom: 2 };
-createStyles.chevron = { marginLeft: nativeDefault.space.PX_8 };
-let obj6 = { marginLeft: nativeDefault.space.PX_8 };
-createStyles.buttonsContainer = { gap: nativeDefault.space.PX_8 };
-let closure_10 = createStyles.createStyles(createStyles);
+obj2.cardInfo = { flex: 1, marginRight: nativeDefault.space.PX_12 };
+let obj7 = { flex: 1, marginRight: nativeDefault.space.PX_12 };
+obj2.statusRow = { flexDirection: "row", alignItems: "center", marginTop: nativeDefault.space.PX_4, paddingBottom: 2 };
+obj2.guildSummary = { flexShrink: 1 };
+const obj8 = { flexDirection: "row", alignItems: "center", marginTop: nativeDefault.space.PX_4, paddingBottom: 2 };
+obj2.chevron = { marginLeft: nativeDefault.space.PX_8 };
+let obj9 = { marginLeft: nativeDefault.space.PX_8 };
+obj2.buttonsContainer = { gap: nativeDefault.space.PX_8 };
+let closure_10 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/activity_privacy/native/BaseUpsellActionSheet.tsx");
 
@@ -188,25 +183,26 @@ export default function BaseUpsellActionSheet(toastContent) {
   const items = [onConfirm, toastContent];
   const callback = noop.useCallback(() => {
     onConfirm();
-    let obj = ActionSheetActionCreatorsDefault;
-    obj.hideActionSheet();
-    obj = { key: "ACTIVITY_PRIVACY_UPSELL_TOAST", content: toastContent, icon: renderSuccessIcon };
-    ToastActionCreatorsDefault.open(obj);
+    ActionSheetActionCreatorsDefault.hideActionSheet();
+    ToastActionCreatorsDefault.open({
+      key: "ACTIVITY_PRIVACY_UPSELL_TOAST",
+      content: toastContent,
+      icon: renderSuccessIcon,
+    });
   }, items);
   const callback1 = noop.useCallback(() => {
     onConfirm(dependencyMap[14]).hideActionSheet();
   }, []);
   let obj = { startExpanded: true, children: null };
-  obj = { style: tmp.container, children: null };
-  obj = {
-    style: tmp.title,
-    accessibilityRole: "header",
-    variant: "heading-xl/bold",
-    color: "text-strong",
-    children: title,
-  };
+  const obj2 = { style: tmp.container, children: null };
   const items1 = [
-    closure_7(toastContent(4632).Text, obj),
+    closure_7(toastContent(4632).Text, {
+      style: tmp.title,
+      accessibilityRole: "header",
+      variant: "heading-xl/bold",
+      color: "text-strong",
+      children: title,
+    }),
     closure_7(toastContent(4632).Text, {
       style: tmp.description,
       variant: "text-md/medium",
@@ -215,18 +211,18 @@ export default function BaseUpsellActionSheet(toastContent) {
     }),
     closure_7(GuildCard, { guildIds: affectedGuildIds, direction, onPress: onCardPress }),
   ];
-  const obj2 = { style: tmp.buttonsContainer, children: null };
+  const obj5 = { style: tmp.buttonsContainer, children: null };
   const items2 = [
     closure_7(toastContent(5056).Button, { variant: "primary", size: "md", text: confirmText, onPress: callback }),
   ];
-  const obj3 = { variant: "secondary", size: "md", text: null, onPress: null };
+  const obj6 = { variant: "secondary", size: "md", text: null, onPress: null };
   const intl = toastContent(1114).intl;
-  obj3.text = intl.string(toastContent(1114).t.X1rGEm);
-  obj3.onPress = callback1;
-  items2[1] = closure_7(toastContent(5056).Button, obj3);
-  obj2.children = items2;
-  items1[3] = closure_8(closure_5, obj2);
-  obj.children = items1;
-  obj.children = closure_8(closure_5, obj);
+  obj6.text = intl.string(toastContent(1114).t.X1rGEm);
+  obj6.onPress = callback1;
+  items2[1] = closure_7(toastContent(5056).Button, obj6);
+  obj5.children = items2;
+  items1[3] = closure_8(closure_5, obj5);
+  obj2.children = items1;
+  obj.children = closure_8(closure_5, obj2);
   return closure_7(toastContent(7253).BottomSheet, obj);
 }

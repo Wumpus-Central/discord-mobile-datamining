@@ -7,7 +7,7 @@ import size from "../../../_runtime/metro/00002__.js";
 const result = size.fileFinishedImporting("modules/user_profile/ProfileUpdateRequestUtils.tsx");
 
 export const getProfileChangesForUpdateRequest = function getProfileChangesForUpdateRequest(pendingChanges, id) {
-  let obj = {};
+  const obj = {};
   if (undefined !== pendingChanges.pendingBanner) {
     const pendingBanner = pendingChanges.pendingBanner;
     let imageUri;
@@ -41,10 +41,10 @@ export const getProfileChangesForUpdateRequest = function getProfileChangesForUp
   ({ pendingProfileEffect, pendingProfileFrame } = pendingChanges);
   if (undefined === pendingProfileEffect) {
     if (undefined === pendingProfileFrame) {
-      obj = {};
+      let obj2 = {};
     }
-    if (undefined !== obj.collectibles_sku_ids) {
-      obj.collectibles_sku_ids = obj.collectibles_sku_ids;
+    if (undefined !== obj2.collectibles_sku_ids) {
+      obj.collectibles_sku_ids = obj2.collectibles_sku_ids;
     }
     return obj;
   }
@@ -61,8 +61,11 @@ export const getProfileChangesForUpdateRequest = function getProfileChangesForUp
     const found = items.filter((type) => type.type !== CollectiblesItemType.CollectiblesItemType.PROFILE_EFFECT);
     let arr3 = found;
     if (null !== pendingProfileEffect) {
-      obj = { skuId: pendingProfileEffect.skuId, type: CollectiblesItemType.CollectiblesItemType.PROFILE_EFFECT };
-      found.push(obj);
+      const obj3 = {
+        skuId: pendingProfileEffect.skuId,
+        type: CollectiblesItemType.CollectiblesItemType.PROFILE_EFFECT,
+      };
+      found.push(obj3);
       arr3 = found;
     }
   }
@@ -75,7 +78,7 @@ export const getProfileChangesForUpdateRequest = function getProfileChangesForUp
       arr5 = found1;
     }
   }
-  obj = { collectibles_sku_ids: arr5.map((skuId) => skuId.skuId) };
+  obj2 = { collectibles_sku_ids: arr5.map((skuId) => skuId.skuId) };
 };
 export const getAccountUpdateForUpdateRequest = function getAccountUpdateForUpdateRequest(pendingChanges) {
   const obj = {};

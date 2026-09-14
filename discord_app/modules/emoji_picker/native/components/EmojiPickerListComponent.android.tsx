@@ -12,8 +12,8 @@ const ReanimatedRexport = ReanimatedRexport2;
 
 require = fn;
 const EmojiCategoryTypes = fn(5544).EmojiCategoryTypes;
-const IMAGE_SIZE = fn(10418).IMAGE_SIZE;
-const PADDING_VERTICAL = fn(1219).PADDING_VERTICAL;
+const IMAGE_SIZE = fn(10419).IMAGE_SIZE;
+const PADDING_VERTICAL = fn(1217).PADDING_VERTICAL;
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9, jsxs: c10 } = jsxProd);
 const createStyles = fn(4636);
@@ -67,7 +67,7 @@ export default noop.forwardRef((analyticsLocations, arg1) => {
       Commands.scrollingEnabled(tmp.current, arg0);
     }
   }, []);
-  let obj = analyticsLocations(categoryIndexActive[7]);
+  let tmp = ref();
   class H {
     constructor() {
       return bottomSheetIndex.get();
@@ -110,13 +110,13 @@ export default noop.forwardRef((analyticsLocations, arg1) => {
       return;
     }
   }
-  obj = {
+  let obj = analyticsLocations(categoryIndexActive[7]);
+  D.__closure = {
     inPortalKeyboard,
     IS_META_QUEST: callback1,
     runOnJS: analyticsLocations(categoryIndexActive[7]).runOnJS,
     scrollingEnabled,
   };
-  D.__closure = obj;
   D.__workletHash = 2460528828147;
   D.__initData = __initData2;
   const animatedReaction = obj.useAnimatedReaction(H, D);
@@ -168,7 +168,14 @@ export default noop.forwardRef((analyticsLocations, arg1) => {
     onStickyHeaderRendered() {},
   }));
   const items6 = [animateEmoji];
-  obj = {
+  let obj2 = {
+    inPortalKeyboard,
+    IS_META_QUEST: callback1,
+    runOnJS: analyticsLocations(categoryIndexActive[7]).runOnJS,
+    scrollingEnabled,
+  };
+  const items7 = [guildId, analyticsLocations, useTier0UpsellContent, data.hasSearchUpsell];
+  const obj3 = {
     config: data.useMemo(
       () => ({
         animateEmoji,
@@ -189,24 +196,44 @@ export default noop.forwardRef((analyticsLocations, arg1) => {
     paddingBottom,
     useTier0UpsellContent,
     ref,
-    style: ref().container,
+    style: tmp.container,
   };
-  const items7 = [guildId, analyticsLocations, useTier0UpsellContent, data.hasSearchUpsell];
-  let tmp = ref();
-  const obj1 = { children: null };
+  const obj4 = { children: null };
   const items8 = [
-    onLongPressEmoji(scrollingEnabled, obj),
+    onLongPressEmoji(scrollingEnabled, {
+      config: data.useMemo(
+        () => ({
+          animateEmoji,
+          scrollFastOptimizationEnabled: true,
+          scrollFastVelocity: 8000,
+          disableAnimationsOnScroll: true,
+        }),
+        items6,
+      ),
+      emojiData: data,
+      emojiMargin: onPressEmoji,
+      emojiSize: inPortalKeyboard,
+      onPressEmoji: callback2,
+      onLongPressEmoji: callback3,
+      onStickyHeaderRender: callback4,
+      onShowNitroUpsell: callback5,
+      paddingTop,
+      paddingBottom,
+      useTier0UpsellContent,
+      ref,
+      style: tmp.container,
+    }),
     data.useMemo(() => {
       let tmp = null;
       if (data.hasSearchUpsell) {
-        let obj = { portalId: EmojiCategoryTypes.PREMIUM_UPSELL, children: null };
-        obj = { guildId, analyticsLocations, useTier0UpsellContent };
-        obj.children = React6(EmojiPickerPremiumSearchUpsell.PremiumSearchUpsell, obj);
+        const obj = { portalId: EmojiCategoryTypes.PREMIUM_UPSELL, children: null };
+        const obj2 = { guildId, analyticsLocations, useTier0UpsellContent };
+        obj.children = React6(EmojiPickerPremiumSearchUpsell.PremiumSearchUpsell, obj2);
         tmp = React6(PortalToNativeViewDefault, obj);
       }
       return tmp;
     }, items7),
   ];
-  obj1.children = items8;
-  return useTier0UpsellContent(onShowNitroUpsell, obj1);
+  obj4.children = items8;
+  return useTier0UpsellContent(onShowNitroUpsell, obj4);
 });

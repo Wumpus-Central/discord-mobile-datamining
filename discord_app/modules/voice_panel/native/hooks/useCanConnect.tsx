@@ -5,6 +5,8 @@ import GuildStore from "../../../../stores/GuildStore.tsx";
 import PermissionStore from "../../../../stores/PermissionStore.tsx";
 import VoiceStateStore from "../../../../stores/VoiceStateStore.tsx";
 
+const require = globalThis.__r;
+
 require = fn;
 const Permissions = fn(1085).Permissions;
 const size = fn(2);

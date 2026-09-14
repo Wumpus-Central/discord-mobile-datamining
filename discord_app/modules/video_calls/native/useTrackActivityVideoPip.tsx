@@ -3,6 +3,8 @@ import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 import ChannelCallLifecycleStore from "ChannelCallLifecycleStore.tsx";
 
+const require = globalThis.__r;
+
 const require = fn;
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const size = fn(2);

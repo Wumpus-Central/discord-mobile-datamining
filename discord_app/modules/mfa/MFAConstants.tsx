@@ -1,6 +1,8 @@
 // discord_app/modules/mfa/MFAConstants.tsx
 import size from "../../../_runtime/metro/00002__.js";
 
+const require = globalThis.__r;
+
 const obj = {};
 Object.defineProperty(obj, "webauthn", {
   get: () => {

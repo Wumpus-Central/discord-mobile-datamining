@@ -3,6 +3,8 @@ import usePowerupActiveStatusDefault from "usePowerupActiveStatus.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import GuildPowerupsStore from "../GuildPowerupsStore.tsx";
 
+const require = globalThis.__r;
+
 const require = fn;
 const PowerupActiveStatusType = fn(4526).PowerupActiveStatusType;
 const size = fn(2);
@@ -49,7 +51,7 @@ export default function useCanGuildPowerupBeToggled(arg0, arg1, arg2) {
             const dependencies = skuId.dependencies;
             found1 = dependencies.find((item) => null == unlockedPowerups[item]);
           }
-          let obj = { disabled: null != found1, reason: null };
+          const obj = { disabled: null != found1, reason: null };
           let formatToPlainStringResult;
           if (null != found1) {
             if (null != allPowerups[found1]) {
@@ -59,8 +61,11 @@ export default function useCanGuildPowerupBeToggled(arg0, arg1, arg2) {
               if (allPowerups[found1] != null) {
                 title = tmp13.title;
               }
-              obj = { perk: title };
-              formatToPlainStringResult = intl.formatToPlainString(dependencyMap ? tmp11.vCEBiS : tmp11["1B8AZr"], obj);
+              const obj2 = { perk: title };
+              formatToPlainStringResult = intl.formatToPlainString(
+                dependencyMap ? tmp11.vCEBiS : tmp11["1B8AZr"],
+                obj2,
+              );
               const tmp12 = dependencyMap ? tmp11.vCEBiS : tmp11["1B8AZr"];
             }
           }

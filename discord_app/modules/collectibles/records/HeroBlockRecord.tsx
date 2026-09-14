@@ -31,10 +31,9 @@ const prototype = function HeroBlockRecord(unpublished_at) {
     mobile_hero_url: tmp.mobileHeroUrl,
     mobile_hero_animated_url: tmp.mobileHeroAnimatedUrl,
   } = unpublished_at);
-  let tmp2Result = CollectiblesUtils;
-  obj.bannerDisplayConfig = tmp2Result.getAssetDisplayConfig(unpublished_at.banner_display_config);
-  tmp2Result = CollectiblesUtils;
-  obj.logoDisplayConfig = tmp2Result.getAssetDisplayConfig(unpublished_at.logo_display_config);
+  obj.bannerDisplayConfig = CollectiblesUtils.getAssetDisplayConfig(unpublished_at.banner_display_config);
+  const tmp2Result = CollectiblesUtils;
+  obj.logoDisplayConfig = CollectiblesUtils.getAssetDisplayConfig(unpublished_at.logo_display_config);
   return obj;
 }.prototype;
 prototype["fromServer"] = function fromServer(arg0) {

@@ -16,11 +16,9 @@ const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 const createStyles = fn(4636);
 let closure_7 = createStyles.createStyles(() => {
-  let obj = { container: null, label: null, leading: null, trailing: null, disabled: null, error: null };
-  obj = { flexDirection: "row", justifyContent: "flex-start", alignItems: "center" };
-  obj = { paddingHorizontal: 16, paddingVertical: 16 };
-  const merged = Object.assign(obj);
-  obj.container = obj;
+  const obj = { container: null, label: null, leading: null, trailing: null, disabled: null, error: null };
+  const merged = Object.assign({ paddingHorizontal: 16, paddingVertical: 16 });
+  obj.container = { flexDirection: "row", justifyContent: "flex-start", alignItems: "center" };
   obj.label = { flexShrink: 1, flexGrow: 1, flexBasis: "30%" };
   obj.leading = { flexGrow: 0, marginRight: 16 };
   obj.trailing = { marginLeft: "auto", paddingLeft: 16, textAlign: "right", flexShrink: 0 };
@@ -84,7 +82,6 @@ let merged = Object.assign(
     }
     const tmp = closure_7();
     closure_8 = tmp;
-    let obj = trailing;
     if (trailing.useContext(label(subLabel[6]).RedesignCompatContext)) {
       if (typeof label === "function") {
         let tmp15 = null;
@@ -132,7 +129,7 @@ let merged = Object.assign(
         } else {
           tmp30 = trailing;
         }
-        obj = {
+        let obj2 = {
           variant: label.variant,
           start,
           end: flag4,
@@ -154,7 +151,7 @@ let merged = Object.assign(
           onPress,
           onLongPress,
         };
-        return style(tmp2(subLabel[7]).TableRow, obj);
+        return style(tmp2(subLabel[7]).TableRow, obj2);
       }
       let tmp20 = null;
       if (null != subLabel) {
@@ -169,15 +166,15 @@ let merged = Object.assign(
       function renderInnerView() {
         if (typeof label !== "function") {
           if (!noop.isValidElement(label)) {
-            let obj = { numberOfLines, text: label, style };
+            const obj = { numberOfLines, text: label, style };
             let tmp7 = hasOwnProperty(FormLabelDefault, obj);
           }
           if (typeof subLabel !== "function") {
             if (!noop.isValidElement(subLabel)) {
               let tmp13 = null;
               if (null != subLabel) {
-                obj = { text: subLabel, numberOfLines };
-                tmp13 = hasOwnProperty(FormSubLabelDefault, obj);
+                const obj2 = { text: subLabel, numberOfLines };
+                tmp13 = hasOwnProperty(FormSubLabelDefault, obj2);
               }
             }
             if (typeof leading === "function") {
@@ -208,29 +205,29 @@ let merged = Object.assign(
             }
             let tmp37 = null;
             if (null != leading) {
-              obj = { style: null, children: null };
+              const obj3 = { style: null, children: null };
               const items = [closure_8.leading, closure_1_7];
-              obj.style = items;
-              obj.children = tmp27;
-              tmp37 = hasOwnProperty(React4, obj);
+              obj3.style = items;
+              obj3.children = tmp27;
+              tmp37 = hasOwnProperty(React4, obj3);
             }
             const items1 = [tmp37, ,];
-            const obj1 = { style: closure_8.label, children: null };
+            const obj4 = { style: closure_8.label, children: null };
             const items2 = [tmp7, tmp13];
-            obj1.children = items2;
-            items1[1] = timestampProducer(React4, obj1);
+            obj4.children = items2;
+            items1[1] = timestampProducer(React4, obj4);
             let tmp44 = null;
             if (null != trailing) {
-              const obj2 = { style: null, children: null };
+              const obj5 = { style: null, children: null };
               const items3 = [closure_8.trailing, closure_1_6];
-              obj2.style = items3;
-              obj2.children = tmp33;
-              tmp44 = hasOwnProperty(React4, obj2);
+              obj5.style = items3;
+              obj5.children = tmp33;
+              tmp44 = hasOwnProperty(React4, obj5);
             }
-            const obj3 = { children: null };
+            const obj6 = { children: null };
             items1[2] = tmp44;
-            obj3.children = items1;
-            return timestampProducer(noop.Fragment, obj3);
+            obj6.children = items1;
+            return timestampProducer(noop.Fragment, obj6);
           }
           let tmp18 = null;
           if (null != subLabel) {
@@ -252,11 +249,11 @@ let merged = Object.assign(
         }
         tmp7 = tmp8;
       }
-      obj = { disabled: flag };
+      let obj3 = { disabled: flag };
       const merged = Object.assign(accessibilityState);
       if (null == onPress) {
         if (null == onLongPress) {
-          let obj1 = {
+          let obj4 = {
             ref,
             style: null,
             accessible: null,
@@ -280,21 +277,21 @@ let merged = Object.assign(
             disabled = tmp.disabled;
           }
           items[4] = disabled;
-          obj1.style = items;
-          obj1.accessible = flag3;
-          obj1.accessibilityRole = accessibilityRole;
-          obj1.accessibilityState = obj;
-          obj1.accessibilityLabel = accessibilityLabel;
-          obj1.accessibilityHint = accessibilityHint;
-          obj1.accessibilityActions = accessibilityActions;
-          obj1.onAccessibilityAction = onAccessibilityAction;
-          obj1.onAccessibilityTap = onAccessibilityTap;
-          obj1.children = renderInnerView();
-          let tmp11Result = style(numberOfLines, obj1);
+          obj4.style = items;
+          obj4.accessible = flag3;
+          obj4.accessibilityRole = accessibilityRole;
+          obj4.accessibilityState = obj3;
+          obj4.accessibilityLabel = accessibilityLabel;
+          obj4.accessibilityHint = accessibilityHint;
+          obj4.accessibilityActions = accessibilityActions;
+          obj4.onAccessibilityAction = onAccessibilityAction;
+          obj4.onAccessibilityTap = onAccessibilityTap;
+          obj4.children = renderInnerView();
+          let tmp11Result = style(numberOfLines, obj4);
         }
         return tmp11Result;
       }
-      let obj2 = {
+      let obj5 = {
         ref,
         style: null,
         disabled: null,
@@ -323,38 +320,38 @@ let merged = Object.assign(
         disabled1 = tmp.disabled;
       }
       items1[4] = disabled1;
-      obj2.style = items1;
-      obj2.disabled = flag;
+      obj5.style = items1;
+      obj5.disabled = flag;
       let str = accessibilityRole;
       if (accessibilityRole == null) {
         str = "button";
       }
-      obj2.accessibilityRole = str;
-      obj2.accessibilityState = obj;
-      obj2.accessibilityLabel = accessibilityLabel;
-      obj2.accessibilityHint = accessibilityHint;
-      obj2.accessibilityActions = accessibilityActions;
-      obj2.onAccessibilityAction = onAccessibilityAction;
+      obj5.accessibilityRole = str;
+      obj5.accessibilityState = obj3;
+      obj5.accessibilityLabel = accessibilityLabel;
+      obj5.accessibilityHint = accessibilityHint;
+      obj5.accessibilityActions = accessibilityActions;
+      obj5.onAccessibilityAction = onAccessibilityAction;
       let tmp13;
       if (!flag) {
         tmp13 = onAccessibilityTap;
       }
-      obj2.onAccessibilityTap = tmp13;
+      obj5.onAccessibilityTap = tmp13;
       let tmp14;
       if (!flag) {
         tmp14 = onPress;
       }
-      obj2.onPress = tmp14;
-      obj2.onLongPress = onLongPress;
-      obj2.onPressOut = label.onPressOut;
-      obj2.delayLongPress = delayLongPress;
+      obj5.onPress = tmp14;
+      obj5.onLongPress = onLongPress;
+      obj5.onPressOut = label.onPressOut;
+      obj5.delayLongPress = delayLongPress;
       let num2;
       if (trailing.useContext(label(subLabel[5]).FormContext).isForm) {
         num2 = 130;
       }
-      obj2.unstable_pressDelay = num2;
-      obj2.children = renderInnerView();
-      tmp11Result = style(tmp2(subLabel[10]).PressableHighlight, obj2);
+      obj5.unstable_pressDelay = num2;
+      obj5.children = renderInnerView();
+      tmp11Result = style(tmp2(subLabel[10]).PressableHighlight, obj5);
     }
   }),
   obj,

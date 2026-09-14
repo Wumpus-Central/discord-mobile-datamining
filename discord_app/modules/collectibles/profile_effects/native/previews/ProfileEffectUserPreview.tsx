@@ -13,11 +13,11 @@ const result = size.fileFinishedImporting(
 export default function ProfileEffectUserPreview(profileEffect) {
   profileEffect = profileEffect.profileEffect;
   const merged = Object.assign(profileEffect, Object.assign({ profileEffect: 0 }));
-  let obj = { profileEffectOverride: profileEffect, accessibilityLabel: null };
+  const obj = { profileEffectOverride: profileEffect, accessibilityLabel: null };
   if (null != profileEffect) {
     const intl2 = util.intl;
-    obj = { a11y_text: profileEffect.accessibilityLabel };
-    let formatToPlainStringResult = intl2.formatToPlainString(util.t.mbHmX2, obj);
+    const obj2 = { a11y_text: profileEffect.accessibilityLabel };
+    let formatToPlainStringResult = intl2.formatToPlainString(util.t.mbHmX2, obj2);
   } else {
     const intl = util.intl;
     formatToPlainStringResult = intl.string(util.t.XYdHeC);

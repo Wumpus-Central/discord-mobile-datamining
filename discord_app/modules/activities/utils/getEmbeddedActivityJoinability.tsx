@@ -55,11 +55,11 @@ function getEmbeddedActivityJoinability(arg0) {
             session_id = activity.session_id;
           }
           const voiceStateForSession = VoiceStateStore.getVoiceStateForSession(userId, session_id);
-          channelId = undefined;
+          let channelId1;
           if (voiceStateForSession != null) {
-            channelId = voiceStateForSession.channelId;
+            channelId1 = voiceStateForSession.channelId;
           }
-          tmp10 = channelId;
+          tmp10 = channelId1;
         }
         if (null == tmp10) {
           return obj.NO_CHANNEL;

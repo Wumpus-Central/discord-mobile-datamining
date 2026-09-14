@@ -5,6 +5,8 @@ import GameServerStore from "../../../game_server/GameServerStore.tsx";
 import GuildStore from "../../../../stores/GuildStore.tsx";
 import GuildPowerupsStore from "../GuildPowerupsStore.tsx";
 
+const require = globalThis.__r;
+
 require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/powerups/hooks/useGuildPowerupsBoostCount.tsx");
@@ -23,11 +25,11 @@ export default function useGuildAppliedBoostCount(guildId) {
   if (num == null) {
     num = 0;
   }
-  let tmpResult = tmp(tmp2[4]);
-  const gameServerEnabled = tmpResult.useGameServerEnabled(guildId, "GuildPowerupsBoostCount");
-  tmpResult = tmp(tmp2[5]);
+  let obj = require("initialize");
+  const gameServerEnabled = require("GameServerExperiment").useGameServerEnabled(guildId, "GuildPowerupsBoostCount");
+  const tmpResult = require("GameServerExperiment");
   const items1 = [GuildPowerupsStore];
-  const stateFromStores = tmpResult.useStateFromStores(items1, () => {
+  const stateFromStores = require("initialize").useStateFromStores(items1, () => {
     const stateForGuild = GuildPowerupsStore.getStateForGuild(closure_0);
     let appliedBoosts;
     if (stateForGuild != null) {
@@ -35,7 +37,7 @@ export default function useGuildAppliedBoostCount(guildId) {
     }
     return appliedBoosts;
   });
-  let obj = require("initialize");
+  const tmpResult3 = require("initialize");
   const items2 = [stateFromStores];
   stateFromStores1 = require("initialize").useStateFromStores(items2, () => {
     const stateForGuild = GameServerStore.getStateForGuild(closure_0);
@@ -53,15 +55,14 @@ export default function useGuildAppliedBoostCount(guildId) {
         num = 0;
       }
       const sum = tmp + num;
-      let obj = { available: null, spent: null, total: null, isLoading: false };
+      const obj = { available: null, spent: null, total: null, isLoading: false };
       const _Math = Math;
       obj.available = Math.max(0, num - sum);
       obj.spent = sum;
       obj.total = num;
       return obj;
     }
-    obj = { available: 0, spent: 0, total: num, isLoading: true };
-    return obj;
+    return { available: 0, spent: 0, total: num, isLoading: true };
   }, items3);
 }
 export const getGuildPowerupsBoostCount = function getGuildPowerupsBoostCount(id) {
@@ -73,8 +74,7 @@ export const getGuildPowerupsBoostCount = function getGuildPowerupsBoostCount(id
   if (total == null) {
     total = 0;
   }
-  let obj = GameServerExperiment;
-  const gameServerEnabled = obj.getGameServerEnabled(id, "GuildPowerupsBoostCount");
+  const gameServerEnabled = GameServerExperiment.getGameServerEnabled(id, "GuildPowerupsBoostCount");
   const stateForGuild = GuildPowerupsStore.getStateForGuild(id);
   let appliedBoosts;
   if (stateForGuild != null) {
@@ -89,12 +89,12 @@ export const getGuildPowerupsBoostCount = function getGuildPowerupsBoostCount(id
       num2 = 0;
     }
     const sum = appliedBoosts + num2;
-    obj = { available: null, spent: null, total: null };
+    const obj2 = { available: null, spent: null, total: null };
     const _Math = Math;
-    obj.available = Math.max(0, total - sum);
-    obj.spent = sum;
-    obj.total = total;
-    return obj;
+    obj2.available = Math.max(0, total - sum);
+    obj2.spent = sum;
+    obj2.total = total;
+    return obj2;
   }
   return { available: 0, spent: 0, total };
 };

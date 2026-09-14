@@ -6,6 +6,8 @@ import NotificationSettingsMessageUnreadActionSheetDefault from "NotificationSet
 import noop from "../../../../../_runtime/metro/00019__.js";
 import UserGuildSettingsStore from "../../../../stores/UserGuildSettingsStore.tsx";
 
+const require = globalThis.__r;
+
 require = fn;
 const UserNotificationSettings = fn(1074).UserNotificationSettings;
 const UnreadSetting = fn(4818).UnreadSetting;
@@ -18,32 +20,34 @@ let result = size.fileFinishedImporting(
 
 export default function NotificationSettingsMessageUnreadChannelActionSheet(channel) {
   _require = channel;
-  let obj = require("notficationSettingsChannelFlagUtils");
-  const channelPresetSettings = obj.useChannelPresetSettings(channel.channel);
+  const channelPresetSettings = require("notficationSettingsChannelFlagUtils").useChannelPresetSettings(
+    channel.channel,
+  );
   ({ unread, notification } = channelPresetSettings);
-  obj = { value: unread, disabledMentionOnlyWithReason: null, onChange: null };
+  let obj2 = { value: unread, disabledMentionOnlyWithReason: null, onChange: null };
   let stringResult;
+  let obj = require("notficationSettingsChannelFlagUtils");
   if (notification === UserNotificationSettings.ALL_MESSAGES) {
     const intl = tmp(1114).intl;
     stringResult = intl.string(tmp(1114).t.eP8yWU);
   }
-  obj.disabledMentionOnlyWithReason = stringResult;
-  obj.onChange = function onChange(toggleExpandedHistory) {
+  obj2.disabledMentionOnlyWithReason = stringResult;
+  obj2.onChange = function onChange(toggleExpandedHistory) {
     const channelIdFlags = UserGuildSettingsStore.getChannelIdFlags(channel.channel.guild_id, channel.channel.id);
-    let obj = NotificationSettingsModalActionCreatorsDefault;
+    const obj = NotificationSettingsModalActionCreatorsDefault;
     if (toggleExpandedHistory === UnreadSetting.ALL_MESSAGES) {
       let UNREADS_ONLY_MENTIONS = constants.UNREADS_ALL_MESSAGES;
     } else {
       UNREADS_ONLY_MENTIONS = constants.UNREADS_ONLY_MENTIONS;
     }
-    obj = { flags: notificationSettingsFlagUtils.withChannelUnreadFlags(channelIdFlags, UNREADS_ONLY_MENTIONS) };
     const NotificationLabel = NotificationSettingsUtils.NotificationLabel;
     const result = obj.updateChannelOverrideSettings(
       channel.channel.guild_id,
       channel.channel.id,
-      obj,
+      { flags: notificationSettingsFlagUtils.withChannelUnreadFlags(channelIdFlags, UNREADS_ONLY_MENTIONS) },
       NotificationLabel.unreads(toggleExpandedHistory),
     );
+    const obj3 = { flags: notificationSettingsFlagUtils.withChannelUnreadFlags(channelIdFlags, UNREADS_ONLY_MENTIONS) };
   };
   return jsx(NotificationSettingsMessageUnreadActionSheetDefault, {
     value: unread,

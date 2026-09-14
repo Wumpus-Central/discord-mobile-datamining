@@ -39,7 +39,6 @@ export const formatUsernameLiveCheckValidation = function formatUsernameLiveChec
       obj.message = intl.string(util.t.PgfBSx);
       return obj;
     });
-  obj = { error: _mod4821.P.nullish };
   const withResult3 = match
     .with({ rateLimited: true }, () => {
       const obj = { type: UniqueUsernamesTypes.NameValidationState.RATE_LIMIT, message: null };
@@ -60,26 +59,11 @@ export const formatUsernameLiveCheckValidation = function formatUsernameLiveChec
       obj.message = intl.string(util.t.mCrAUb);
       return obj;
     });
-  return match
-    .with({ rateLimited: true }, () => {
-      const obj = { type: UniqueUsernamesTypes.NameValidationState.RATE_LIMIT, message: null };
-      const intl = util.intl;
-      obj.message = intl.string(util.t.T15lqn);
-      return obj;
-    })
-    .with(obj, (error) => ({ type: UniqueUsernamesTypes.NameValidationState.ERROR, message: error.error }))
-    .with({ taken: false }, () => {
-      const obj = { type: UniqueUsernamesTypes.NameValidationState.AVAILABLE, message: null };
-      const intl = util.intl;
-      obj.message = intl.string(util.t.PgfBSx);
-      return obj;
-    })
-    .with({ taken: true }, () => {
-      const obj = { type: UniqueUsernamesTypes.NameValidationState.ERROR, message: null };
-      const intl = util.intl;
-      obj.message = intl.string(util.t.mCrAUb);
-      return obj;
-    })
-    .with(obj, () => ({ type: UniqueUsernamesTypes.NameValidationState.INTERNAL_ERROR, message: "" }))
+  const obj2 = { error: _mod4821.P.nullish };
+  return withResult3
+    .with({ error: _mod4821.P.nullish }, () => ({
+      type: UniqueUsernamesTypes.NameValidationState.INTERNAL_ERROR,
+      message: "",
+    }))
     .otherwise(() => {});
 };

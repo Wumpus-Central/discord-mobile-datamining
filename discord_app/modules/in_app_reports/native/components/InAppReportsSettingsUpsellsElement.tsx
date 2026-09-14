@@ -38,14 +38,17 @@ const Constants = fn(1074);
 ({ AnalyticEvents: closure_7, UserSettingsSections: closure_8 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-fn(4636);
-let createStyles = { container: null, settingsContainer: null, goToSettingsText: null };
-createStyles = { paddingHorizontal: nativeDefault.space.PX_16 };
-createStyles.container = createStyles;
-createStyles.settingsContainer = { width: "100%", marginBottom: nativeDefault.space.PX_8 };
-let obj1 = { width: "100%", marginBottom: nativeDefault.space.PX_8 };
-createStyles.goToSettingsText = { marginTop: nativeDefault.space.PX_4 };
-let closure_11 = createStyles.createStyles(createStyles);
+const createStyles = fn(4636);
+let obj2 = {
+  container: { paddingHorizontal: nativeDefault.space.PX_16 },
+  settingsContainer: null,
+  goToSettingsText: null,
+};
+let obj3 = { paddingHorizontal: nativeDefault.space.PX_16 };
+obj2.settingsContainer = { width: "100%", marginBottom: nativeDefault.space.PX_8 };
+let obj4 = { width: "100%", marginBottom: nativeDefault.space.PX_8 };
+obj2.goToSettingsText = { marginTop: nativeDefault.space.PX_4 };
+let closure_11 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting(
   "modules/in_app_reports/native/components/InAppReportsSettingsUpsellsElement.tsx",
@@ -58,24 +61,26 @@ export default function SettingsUpsellElement(settingsUpsells) {
   const reportSubType = settingsUpsells.reportSubType;
   closure_5 = undefined;
   const tmp = closure_11();
-  let obj = settingsUpsells(reportId[12]);
   const items = [ChannelStore];
-  const stateFromStores = obj.useStateFromStores(items, () => ChannelStore.getChannel(importDefault));
-  let obj1 = settingsUpsells(reportId[13]);
+  const stateFromStores = settingsUpsells(reportId[12]).useStateFromStores(items, () =>
+    ChannelStore.getChannel(importDefault),
+  );
+  let obj = settingsUpsells(reportId[12]);
   let type;
   if (stateFromStores != null) {
     type = stateFromStores.type;
   }
-  const settingsUpsellsConfigs = obj1.useSettingsUpsellsConfigs(settingsUpsells, type);
+  const settingsUpsellsConfigs = settingsUpsells(reportId[13]).useSettingsUpsellsConfigs(settingsUpsells, type);
+  let obj2 = settingsUpsells(reportId[13]);
   closure_5 = settingsUpsells(reportId[9]).useTrackSettingsUpsellsAction(reportType, reportSubType, reportId);
   let tmp6 = null;
   if (0 !== settingsUpsellsConfigs.length) {
-    obj = { style: tmp.container, children: null };
-    obj = { style: tmp.settingsContainer, children: null };
-    obj1 = { title: null, hasIcons: true, children: null };
+    let obj3 = { style: tmp.container, children: null };
+    const obj4 = { style: tmp.settingsContainer, children: null };
+    const obj5 = { title: null, hasIcons: true, children: null };
     const intl = tmp2(reportId[15]).intl;
-    obj1.title = intl.string(tmp2(reportId[15]).t["1yxTIJ"]);
-    obj1.children = settingsUpsellsConfigs.map((getTitle, index) => {
+    obj5.title = intl.string(tmp2(reportId[15]).t["1yxTIJ"]);
+    obj5.children = settingsUpsellsConfigs.map((getTitle, index) => {
       ({ getDisabledTitle, getDescription, onApply } = getTitle);
       return React7(
         SettingsUpsellsTableRow,
@@ -89,28 +94,28 @@ export default function SettingsUpsellElement(settingsUpsells) {
         index,
       );
     });
-    obj.children = closure_9(tmp2(reportId[14]).TableRowGroup, obj1);
-    const items1 = [closure_9(closure_5, obj)];
-    const obj2 = { variant: "text-sm/medium", style: tmp.goToSettingsText, children: null };
+    obj4.children = closure_9(tmp2(reportId[14]).TableRowGroup, obj5);
+    const items1 = [closure_9(closure_5, obj4)];
+    const obj6 = { variant: "text-sm/medium", style: tmp.goToSettingsText, children: null };
     const intl2 = tmp2(reportId[15]).intl;
-    const obj3 = {
+    const obj7 = {
       goToSettingsHook() {
-        let obj = { screen: constants2.CONTENT_AND_SOCIAL };
-        obj.openUserSettings(obj);
-        obj = {
+        openUserSettings.openUserSettings({ screen: constants2.CONTENT_AND_SOCIAL });
+        const obj2 = { screen: constants2.CONTENT_AND_SOCIAL };
+        const obj3 = AppAnalyticsUtilsDefault;
+        obj3.trackWithMetadata(constants.IAR_SETTINGS_UPSELLS_ACTION, {
           report_id: reportId,
           report_type: reportType.name,
           report_subtype: reportSubType,
           action:
             in_app_reports_ReportUtils.TrackIarSettingsUpsellsActionType.SETTINGS_UPSELLS_GO_TO_SETTINGS_LINK_CLICKED,
-        };
-        AppAnalyticsUtilsDefault.trackWithMetadata(constants.IAR_SETTINGS_UPSELLS_ACTION, obj);
+        });
       },
     };
-    obj2.children = intl2.format(tmp2(reportId[15]).t["u7mo+k"], obj3);
-    items1[1] = closure_9(tmp2(reportId[16]).Text, obj2);
-    obj.children = items1;
-    tmp6 = closure_10(closure_5, obj);
+    obj6.children = intl2.format(tmp2(reportId[15]).t["u7mo+k"], obj7);
+    items1[1] = closure_9(tmp2(reportId[16]).Text, obj6);
+    obj3.children = items1;
+    tmp6 = closure_10(closure_5, obj3);
   }
   return tmp6;
 }

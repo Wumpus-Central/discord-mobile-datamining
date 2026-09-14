@@ -93,7 +93,7 @@ const items = [
   },
 ];
 NotificationSettingsStore.migrations = items;
-obj = {
+const notificationSettingsStore = new NotificationSettingsStore(DispatcherDefault, {
   NOTIFICATIONS_SET_DESKTOP_TYPE: handleSetDesktopType,
   NOTIFICATIONS_SET_TTS_TYPE: function handleSetTTSType(ttsType) {
     obj.ttsType = ttsType.ttsType;
@@ -124,8 +124,7 @@ obj = {
   NOTIFICATIONS_SET_SCREEN_DOWNTIME_REMINDER: function handleSetScreenDowntimeReminder(screenDowntimeReminder) {
     obj.screenDowntimeReminder = screenDowntimeReminder.screenDowntimeReminder;
   },
-};
-const notificationSettingsStore = new NotificationSettingsStore(DispatcherDefault, obj);
+});
 const result = size.fileFinishedImporting("stores/NotificationSettingsStore.tsx");
 
 export default notificationSettingsStore;

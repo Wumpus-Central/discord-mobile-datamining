@@ -12,12 +12,12 @@ const result = size.fileFinishedImporting("modules/verification/native/component
 
 export default function CountrySelectModal() {
   const screens = noop.useMemo(() => {
-    let obj = { COUNTRY_SELECT: null };
-    obj = { title: null, headerLeft: null, render: null };
+    const obj = { COUNTRY_SELECT: null };
+    const obj2 = { title: null, headerLeft: null, render: null };
     const intl = util.intl;
-    obj.title = intl.string(util.t.gzXECH);
-    obj.headerLeft = NavigatorHeader.getHeaderCloseButton(ModalActionCreatorsDefault.pop);
-    obj.render = function render() {
+    obj2.title = intl.string(util.t.gzXECH);
+    obj2.headerLeft = NavigatorHeader.getHeaderCloseButton(ModalActionCreatorsDefault.pop);
+    obj2.render = function render() {
       return closure_1_4(closure_1_1(dependencyMap[5]), {
         onClose() {
           return closure_1_1(4839).pop();
@@ -27,7 +27,7 @@ export default function CountrySelectModal() {
         },
       });
     };
-    obj.COUNTRY_SELECT = obj;
+    obj.COUNTRY_SELECT = obj2;
     return obj;
   }, []);
   const effect = noop.useEffect(

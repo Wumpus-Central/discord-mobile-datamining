@@ -10,20 +10,20 @@ get_ActivityIndicator = fn(17);
 ({ View: c3, Platform } = get_ActivityIndicator);
 const HorizontalGradient = fn(1074).HorizontalGradient;
 const jsx = fn(21).jsx;
-fn(4636);
-let createStyles = { tagContainer: null, tagText: null };
-createStyles = {
-  height: "auto",
-  backgroundColor: nativeDefault.unsafe_rawColors.RED_400,
-  justifyContent: "center",
-  alignItems: "center",
-  paddingHorizontal: 4,
-  marginBottom: 2,
-  borderRadius: nativeDefault.radii.round,
+const createStyles = fn(4636);
+let obj2 = {
+  tagContainer: {
+    height: "auto",
+    backgroundColor: nativeDefault.unsafe_rawColors.RED_400,
+    justifyContent: "center",
+    alignItems: "center",
+    paddingHorizontal: 4,
+    marginBottom: 2,
+    borderRadius: nativeDefault.radii.round,
+  },
+  tagText: { textTransform: "uppercase" },
 };
-createStyles.tagContainer = createStyles;
-createStyles.tagText = { textTransform: "uppercase" };
-let closure_6 = createStyles.createStyles(createStyles);
+let closure_6 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("design/void/NewTag/native/NewTag.tsx");
 
@@ -58,33 +58,33 @@ export default function NewTag(color) {
   );
   const tmp6 = closure_6();
   if (flag) {
-    let obj = { style: null, start: null, end: null, colors: null, children: null };
-    obj = { borderRadius: sm, marginLeft: nativeDefault.space.PX_4 };
-    obj.style = obj;
+    const obj2 = { style: null, start: null, end: null, colors: null, children: null };
+    const obj4 = { borderRadius: sm, marginLeft: nativeDefault.space.PX_4 };
+    obj2.style = obj4;
     ({ START: obj3.start, END: obj3.end } = HorizontalGradient);
-    obj.colors = colors;
-    const obj1 = { style: null, children: null };
+    obj2.colors = colors;
+    const obj5 = { style: null, children: null };
     const items1 = [tmp6.tagContainer, containerStyle];
-    obj1.style = items1;
-    const obj2 = { variant, color: str };
+    obj5.style = items1;
+    const obj6 = { variant, color: str };
     const merged1 = Object.assign(merged);
     const items2 = [tmp6.tagText, textStyle];
-    obj2.style = items2;
+    obj6.style = items2;
     const intl2 = util.intl;
-    obj2.children = intl2.string(util.t.y2b7CA);
-    obj1.children = jsx(Text_Text.Text, { variant, color: str });
-    obj.children = <React3 style={null}>{null}</React3>;
-    let tmp7Result = jsx(LinearGradientDefault, { borderRadius: sm, marginLeft: nativeDefault.space.PX_4 });
+    obj6.children = intl2.string(util.t.y2b7CA);
+    obj5.children = jsx(Text_Text.Text, { variant, color: str });
+    obj2.children = <React3 style={null}>{null}</React3>;
+    let tmp7Result = jsx(LinearGradientDefault, { style: null, start: null, end: null, colors: null, children: null });
   } else {
-    obj = { style: null, children: null };
+    const obj = { style: null, children: null };
     const items3 = [tmp6.tagContainer, containerStyle];
     obj.style = items3;
-    const obj3 = { variant, color: str };
+    const obj11 = { variant, color: str };
     const merged2 = Object.assign(merged);
     const items4 = [tmp6.tagText, textStyle];
-    obj3.style = items4;
+    obj11.style = items4;
     const intl = util.intl;
-    obj3.children = intl.string(util.t.y2b7CA);
+    obj11.children = intl.string(util.t.y2b7CA);
     obj.children = jsx(Text_Text.Text, { variant, color: str });
     tmp7Result = <React3 style={null}>{null}</React3>;
   }

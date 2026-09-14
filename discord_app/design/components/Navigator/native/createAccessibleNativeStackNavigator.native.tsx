@@ -31,8 +31,7 @@ function AccessibleNativeStackNavigator(arg0) {
       UNSTABLE_router: 0,
     }),
   );
-  let obj = Link;
-  const navigationBuilder = obj.useNavigationBuilder(Link.StackRouter, {
+  const navigationBuilder = Link.useNavigationBuilder(Link.StackRouter, {
     id,
     initialRouteName,
     UNSTABLE_routeNamesChangeBehavior,
@@ -47,23 +46,23 @@ function AccessibleNativeStackNavigator(arg0) {
   ({ state, describe, navigation, NavigationContent } = navigationBuilder);
   const accessibilityNativeStackOptions = Navigator.useAccessibilityNativeStackOptions();
   const items = [descriptors, accessibilityNativeStackOptions];
-  obj = { children: null };
+  let obj3 = { children: null };
   const memo = noop.useMemo(() => {
     if (null == accessibilityNativeStackOptions) {
       return descriptors;
     } else {
-      let obj = {};
+      const obj = {};
       for (const key10006 in descriptors) {
         let tmp14 = descriptors[key10006];
         let tmp10 = tmp14;
         if ("none" !== tmp14.options.animation) {
-          obj = {};
+          let obj2 = {};
           let merged = Object.assign(tmp14);
-          obj = {};
+          let obj3 = {};
           let merged1 = Object.assign(tmp14.options);
           let merged2 = Object.assign(accessibilityNativeStackOptions);
-          obj.options = obj;
-          tmp10 = obj;
+          obj2.options = obj3;
+          tmp10 = obj2;
         }
         obj[key10006] = tmp10;
         continue;
@@ -71,14 +70,14 @@ function AccessibleNativeStackNavigator(arg0) {
       return obj;
     }
   }, items);
-  obj = {};
+  const obj4 = {};
   let merged1 = Object.assign(merged);
-  obj.state = state;
-  obj.navigation = navigation;
-  obj.descriptors = memo;
-  obj.describe = describe;
-  obj.children = jsx(NativeStackNavigator.NativeStackView, {});
-  return <NavigationContent />;
+  obj4.state = state;
+  obj4.navigation = navigation;
+  obj4.descriptors = memo;
+  obj4.describe = describe;
+  obj3.children = jsx(NativeStackNavigator.NativeStackView, {});
+  return <NavigationContent>{null}</NavigationContent>;
 }
 const jsx = fn(21).jsx;
 const size = fn(2);
@@ -97,18 +96,18 @@ export const useAccessibilityPatchedDescriptors = function useAccessibilityPatch
     if (null == accessibilityNativeStackOptions) {
       return descriptors;
     } else {
-      let obj = {};
+      const obj = {};
       for (const key10006 in descriptors) {
         let tmp14 = descriptors[key10006];
         let tmp10 = tmp14;
         if ("none" !== tmp14.options.animation) {
-          obj = {};
+          let obj2 = {};
           let merged = Object.assign(tmp14);
-          obj = {};
+          let obj3 = {};
           let merged1 = Object.assign(tmp14.options);
           let merged2 = Object.assign(accessibilityNativeStackOptions);
-          obj.options = obj;
-          tmp10 = obj;
+          obj2.options = obj3;
+          tmp10 = obj2;
         }
         obj[key10006] = tmp10;
         continue;

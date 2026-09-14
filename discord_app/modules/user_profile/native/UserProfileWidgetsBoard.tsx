@@ -19,13 +19,13 @@ require = fn;
 function WidgetRenderer(arg0) {
   ({ userId, widget, cardStyle } = arg0);
   if (widget instanceof UserProfileApplicationWidgetTypes.ApplicationWidget) {
-    let obj = { userId, widget, cardStyle };
-    let tmp3Result = closure_1_10(UserProfileApplicationWidgetCardDefault, obj);
+    const obj2 = { userId, widget, cardStyle };
+    let tmp3Result = closure_1_10(UserProfileApplicationWidgetCardDefault, obj2);
   } else if (widget instanceof UserProfilePersonalWidget.UserProfilePersonalWidget) {
-    obj = { userId, widget, cardStyle };
-    tmp3Result = closure_1_10(UserProfilePersonalWidgetCardDefault, obj);
+    const obj3 = { userId, widget, cardStyle };
+    tmp3Result = closure_1_10(UserProfilePersonalWidgetCardDefault, obj3);
   } else {
-    obj = { userId, widget, cardStyle };
+    const obj = { userId, widget, cardStyle };
     tmp3Result = closure_1_10(memoResult, obj);
   }
   return tmp3Result;
@@ -36,9 +36,9 @@ const UserProfileSections = fn(8300).UserProfileSections;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
 const hitSlop = { top: 8, bottom: 8, left: 8, right: 8 };
-fn(4636);
+const createStyles = fn(4636);
 let obj = {
-  board: null,
+  board: { gap: nativeDefault.space.PX_16 },
   coverPlaceholder: null,
   favoriteRow: null,
   favoriteDetails: null,
@@ -55,33 +55,32 @@ let obj = {
   tag: null,
   viewMore: null,
 };
-obj = { gap: nativeDefault.space.PX_16 };
-obj.board = obj;
-const createStyles = {
+let obj3 = { gap: nativeDefault.space.PX_16 };
+obj.coverPlaceholder = {
   borderRadius: nativeDefault.radii.sm,
   backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
 };
-obj.coverPlaceholder = createStyles;
+let obj4 = { borderRadius: nativeDefault.radii.sm, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj.favoriteRow = { flexDirection: "row", gap: nativeDefault.space.PX_12 };
-let obj2 = { flexDirection: "row", gap: nativeDefault.space.PX_12 };
+let obj5 = { flexDirection: "row", gap: nativeDefault.space.PX_12 };
 obj.favoriteDetails = { flex: 1, gap: nativeDefault.space.PX_8 };
 obj.favoriteCover = { aspectRatio: 0.75 };
-let obj3 = { flex: 1, gap: nativeDefault.space.PX_8 };
+let obj6 = { flex: 1, gap: nativeDefault.space.PX_8 };
 obj.list = { gap: nativeDefault.space.PX_16 };
-let obj4 = { gap: nativeDefault.space.PX_16 };
+let obj7 = { gap: nativeDefault.space.PX_16 };
 obj.listRow = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_12 };
 obj.listCover = { aspectRatio: 0.75 };
-let obj5 = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_12 };
+let obj8 = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_12 };
 obj.listDetails = { flex: 1, gap: nativeDefault.space.PX_8 };
-let obj6 = { flex: 1, gap: nativeDefault.space.PX_8 };
+let obj9 = { flex: 1, gap: nativeDefault.space.PX_8 };
 obj.comment = { flexDirection: "row", alignItems: "flex-start", gap: nativeDefault.space.PX_4 };
 obj.commentText = { flex: 1 };
-let obj7 = { flexDirection: "row", alignItems: "flex-start", gap: nativeDefault.space.PX_4 };
+let obj10 = { flexDirection: "row", alignItems: "flex-start", gap: nativeDefault.space.PX_4 };
 obj.grid = { flexDirection: "row", flexWrap: "wrap", gap: nativeDefault.space.PX_16 };
 obj.gridCover = { aspectRatio: 0.75 };
-let obj8 = { flexDirection: "row", flexWrap: "wrap", gap: nativeDefault.space.PX_16 };
+let obj11 = { flexDirection: "row", flexWrap: "wrap", gap: nativeDefault.space.PX_16 };
 obj.tags = { flexDirection: "row", flexWrap: "wrap", gap: nativeDefault.space.PX_4 };
-let obj9 = { flexDirection: "row", flexWrap: "wrap", gap: nativeDefault.space.PX_4 };
+let obj12 = { flexDirection: "row", flexWrap: "wrap", gap: nativeDefault.space.PX_4 };
 obj.tag = {
   flexDirection: "row",
   alignItems: "center",
@@ -92,7 +91,7 @@ obj.tag = {
   borderWidth: 1,
   borderColor: nativeDefault.colors.BORDER_SUBTLE,
 };
-let obj10 = {
+let obj13 = {
   flexDirection: "row",
   alignItems: "center",
   gap: nativeDefault.space.PX_4,
@@ -108,14 +107,14 @@ let closure_15 = noop.memo((arg0) => {
   ({ uri, style } = arg0);
   const tmp = closure_14();
   if (null != uri) {
-    let obj = { source: null, style: null };
-    obj = { uri };
-    obj.source = obj;
+    const obj2 = { source: null, style: null };
+    const obj3 = { uri };
+    obj2.source = obj3;
     const items = [style, tmp.coverPlaceholder];
-    obj.style = items;
-    let tmp4 = closure_1_10(hasOwnProperty, obj);
+    obj2.style = items;
+    let tmp4 = closure_1_10(hasOwnProperty, obj2);
   } else {
-    obj = { style: null };
+    const obj = { style: null };
     const items1 = [style, tmp.coverPlaceholder];
     obj.style = items1;
     tmp4 = closure_1_10(React5, obj);
@@ -130,11 +129,10 @@ let closure_16 = noop.memo((tags) => {
     tags = [];
   }
   const flatMapResult = tags.flatMap((tag) => {
-    let obj = closure_0(dependencyMap[11]);
-    const widgetGameTagMetadata = obj.getWidgetGameTagMetadata(tag);
+    const widgetGameTagMetadata = closure_0(dependencyMap[11]).getWidgetGameTagMetadata(tag);
     if (null != widgetGameTagMetadata) {
-      obj = { tag, meta: widgetGameTagMetadata };
-      const items = [obj];
+      const obj2 = { tag, meta: widgetGameTagMetadata };
+      const items = [obj2];
       let items1 = items;
     } else {
       items1 = [];
@@ -147,11 +145,14 @@ let closure_16 = noop.memo((tags) => {
       style: tmp.tags,
       children: flatMapResult.map((meta) => {
         meta = meta.meta;
-        let obj = { style: closure_0.tag, children: null };
-        obj = { size: "xs", color: nativeDefault.colors.TEXT_MUTED };
-        const items = [closure_2_10(meta.icon, obj)];
-        obj = { variant: "text-xs/medium", color: "text-muted", children: meta.getText() };
-        items[1] = closure_2_10(Text_Text.Text, obj);
+        const obj = { style: closure_0.tag, children: null };
+        const items = [closure_2_10(meta.icon, { size: "xs", color: nativeDefault.colors.TEXT_MUTED })];
+        const obj2 = { size: "xs", color: nativeDefault.colors.TEXT_MUTED };
+        items[1] = closure_2_10(Text_Text.Text, {
+          variant: "text-xs/medium",
+          color: "text-muted",
+          children: meta.getText(),
+        });
         obj.children = items;
         return closure_2_11(React5, obj, meta.tag);
       }),
@@ -166,7 +167,7 @@ let closure_17 = noop.memo((game) => {
   ({ userId, coverWidth, disableInteraction } = game);
   let tmp = closure_14();
   ({ gameName, coverImageUrl } = useGameNameAndCoverImageDefault(game.gameId));
-  let obj = {
+  const obj = {
     location: "UserProfileWidgetsBoard",
     applicationId: game.gameId,
     source: null,
@@ -182,8 +183,8 @@ let closure_17 = noop.memo((game) => {
     tmp5Result = tmp5(obj);
   }
   closure_0 = tmp5Result;
-  obj = { style: tmp.favoriteRow, children: null };
-  obj = {
+  const obj2 = { style: tmp.favoriteRow, children: null };
+  const obj3 = {
     onPress() {
       let tmp;
       if (closure_0 != null) {
@@ -196,12 +197,12 @@ let closure_17 = noop.memo((game) => {
     accessibilityLabel: gameName,
     children: null,
   };
-  const obj1 = { uri: coverImageUrl, style: null };
+  const obj4 = { uri: coverImageUrl, style: null };
   const items = [tmp.favoriteCover, { width: coverWidth }];
-  obj1.style = items;
-  obj.children = closure_1_10(closure_15, obj1);
-  const items1 = [closure_1_10(timestampProducer, obj)];
-  const obj2 = { style: tmp.favoriteDetails, children: null };
+  obj4.style = items;
+  obj3.children = closure_1_10(closure_15, obj4);
+  const items1 = [closure_1_10(timestampProducer, obj3)];
+  const obj5 = { style: tmp.favoriteDetails, children: null };
   tmp5 = useOpenGameProfileModalDefault;
   const items2 = [
     closure_1_10(timestampProducer, {
@@ -224,7 +225,7 @@ let closure_17 = noop.memo((game) => {
     }),
     ,
   ];
-  const obj3 = {
+  const obj6 = {
     onPress() {
       let tmp;
       if (closure_0 != null) {
@@ -249,26 +250,26 @@ let closure_17 = noop.memo((game) => {
   const isNullOrEmptyResult = StringUtils.isNullOrEmpty(trimmed);
   let tmp8Result = !isNullOrEmptyResult;
   if (!isNullOrEmptyResult) {
-    const obj4 = { style: tmp.comment, children: null };
-    const obj5 = { size: "xxs", color: nativeDefault.colors.TEXT_MUTED };
-    const items3 = [closure_1_10(QuoteIcon.QuoteIcon, obj5)];
-    const obj6 = {
+    const obj7 = { style: tmp.comment, children: null };
+    const obj8 = { size: "xxs", color: nativeDefault.colors.TEXT_MUTED };
+    const items3 = [closure_1_10(QuoteIcon.QuoteIcon, obj8)];
+    const obj9 = {
       variant: "text-sm/normal",
       color: "text-muted",
       lineClamp: 3,
       style: tmp.commentText,
       children: game.comment,
     };
-    items3[1] = closure_1_10(Text_Text.Text, obj6);
-    obj4.children = items3;
-    tmp8Result = closure_1_11(React5, obj4);
+    items3[1] = closure_1_10(Text_Text.Text, obj9);
+    obj7.children = items3;
+    tmp8Result = closure_1_11(React5, obj7);
   }
   items2[1] = tmp8Result;
   items2[2] = closure_1_10(closure_16, { tags: game.tags });
-  obj2.children = items2;
-  items1[1] = closure_1_11(React5, obj2);
-  obj.children = items1;
-  return closure_1_11(React5, obj);
+  obj5.children = items2;
+  items1[1] = closure_1_11(React5, obj5);
+  obj2.children = items1;
+  return closure_1_11(React5, obj2);
 });
 let closure_18 = noop.memo((game) => {
   game = game.game;
@@ -276,7 +277,7 @@ let closure_18 = noop.memo((game) => {
   ({ userId, coverWidth, disableInteraction } = game);
   let tmp = closure_14();
   ({ gameName, coverImageUrl } = useGameNameAndCoverImageDefault(game.gameId));
-  let obj = {
+  const obj = {
     location: "UserProfileWidgetsBoard",
     applicationId: game.gameId,
     source: null,
@@ -292,8 +293,8 @@ let closure_18 = noop.memo((game) => {
     tmp4Result = tmp4(obj);
   }
   closure_0 = tmp4Result;
-  obj = { style: tmp.listRow, children: null };
-  obj = {
+  const obj2 = { style: tmp.listRow, children: null };
+  const obj3 = {
     onPress() {
       let tmp;
       if (closure_0 != null) {
@@ -306,12 +307,12 @@ let closure_18 = noop.memo((game) => {
     accessibilityLabel: gameName,
     children: null,
   };
-  const obj1 = { uri: coverImageUrl, style: null };
+  const obj4 = { uri: coverImageUrl, style: null };
   const items = [tmp.listCover, { width: coverWidth }];
-  obj1.style = items;
-  obj.children = closure_1_10(closure_15, obj1);
-  const items1 = [closure_1_10(timestampProducer, obj)];
-  const obj2 = { style: tmp.listDetails, children: null };
+  obj4.style = items;
+  obj3.children = closure_1_10(closure_15, obj4);
+  const items1 = [closure_1_10(timestampProducer, obj3)];
+  const obj5 = { style: tmp.listDetails, children: null };
   tmp4 = useOpenGameProfileModalDefault;
   const items2 = [
     closure_1_10(timestampProducer, {
@@ -334,10 +335,10 @@ let closure_18 = noop.memo((game) => {
     }),
     closure_1_10(closure_16, { tags: game.tags }),
   ];
-  obj2.children = items2;
-  items1[1] = closure_1_11(React5, obj2);
-  obj.children = items1;
-  return closure_1_11(React5, obj);
+  obj5.children = items2;
+  items1[1] = closure_1_11(React5, obj5);
+  obj2.children = items1;
+  return closure_1_11(React5, obj2);
 });
 let closure_19 = noop.memo((game) => {
   game = game.game;
@@ -345,7 +346,7 @@ let closure_19 = noop.memo((game) => {
   ({ userId, coverWidth, disableInteraction } = game);
   let tmp = closure_14();
   ({ coverImageUrl, gameName } = useGameNameAndCoverImageDefault(game.gameId));
-  let obj = {
+  const obj = {
     location: "UserProfileWidgetsBoard",
     applicationId: game.gameId,
     source: null,
@@ -361,7 +362,7 @@ let closure_19 = noop.memo((game) => {
     tmp3Result = tmp3(obj);
   }
   closure_0 = tmp3Result;
-  obj = {
+  const obj2 = {
     onPress() {
       let tmp;
       if (closure_0 != null) {
@@ -374,11 +375,11 @@ let closure_19 = noop.memo((game) => {
     accessibilityLabel: gameName,
     children: null,
   };
-  obj = { uri: coverImageUrl, style: null };
+  const obj3 = { uri: coverImageUrl, style: null };
   const items = [tmp.gridCover, { width: coverWidth }];
-  obj.style = items;
-  obj.children = closure_1_10(closure_15, obj);
-  return closure_1_10(timestampProducer, obj);
+  obj3.style = items;
+  obj2.children = closure_1_10(closure_15, obj3);
+  return closure_1_10(timestampProducer, obj2);
 });
 const memoResult = noop.memo((style) => {
   const userId = style.userId;
@@ -387,12 +388,15 @@ const memoResult = noop.memo((style) => {
   _slicedToArray = undefined;
   noop = undefined;
   const tmp = closure_14();
-  let obj = userId(disableInteraction[16]);
   const items = [AuthenticationStore];
-  const stateFromStores = obj.useStateFromStores(items, () => AuthenticationStore.getId() === userId);
-  [tmp6, c3] = _slicedToArray(noop.useState(false), 2);
+  const stateFromStores = userId(disableInteraction[16]).useStateFromStores(
+    items,
+    () => AuthenticationStore.getId() === userId,
+  );
+  const obj = userId(disableInteraction[16]);
+  [tmp6, c3] = noop.useState(false);
   const tmp5 = _slicedToArray(noop.useState(false), 2);
-  [tmp8, c4] = _slicedToArray(noop.useState(0), 2);
+  [tmp8, c4] = noop.useState(0);
   const result = (tmp8 - 2 * widget(disableInteraction[7]).space.PX_16) / 3;
   c5 = result;
   const items1 = [widget.games];
@@ -401,8 +405,8 @@ const memoResult = noop.memo((style) => {
   if (userId(disableInteraction[18]).WidgetType.FAVORITE_GAMES === type) {
     let tmp33 = tmp8 > 0;
     if (tmp33) {
-      obj = { userId, game: memo[0], coverWidth: result, disableInteraction };
-      tmp33 = closure_10(closure_17, obj);
+      const obj2 = { userId, game: memo[0], coverWidth: result, disableInteraction };
+      tmp33 = closure_10(closure_17, obj2);
     }
     let tmp13Result = tmp33;
   } else if (tmp2(tmp3[18]).WidgetType.CURRENT_GAMES === type) {
@@ -410,22 +414,22 @@ const memoResult = noop.memo((style) => {
     if (!tmp6) {
       substr = memo.slice(0, 2);
     }
-    obj = { style: tmp.list, children: null };
+    const obj3 = { style: tmp.list, children: null };
     let mapped = tmp8 > 0;
     if (mapped) {
       mapped = substr.map((game) =>
         closure_2_10(closure_18, { userId, game, coverWidth, disableInteraction }, game.gameId),
       );
     }
-    obj.children = mapped;
-    const items2 = [closure_10(closure_7, obj)];
+    obj3.children = mapped;
+    const items2 = [closure_10(closure_7, obj3)];
     if (memo.length <= 2) {
-      const obj1 = { children: null };
+      const obj4 = { children: null };
       items2[1] = tmp23;
-      obj1.children = items2;
-      tmp13Result = closure_11(closure_12, obj1);
+      obj4.children = items2;
+      tmp13Result = closure_11(closure_12, obj4);
     } else {
-      const obj2 = {
+      const obj5 = {
         style: tmp.viewMore,
         hitSlop,
         onPress() {
@@ -438,12 +442,12 @@ const memoResult = noop.memo((style) => {
       if (tmp6) {
         let stringResult = intl2.string(tmp2(tmp3[19]).t["6MwJo/"]);
       } else {
-        const obj3 = { numberOfItems: memo.length - 2 };
-        stringResult = intl2.formatToPlainString(tmp2(tmp3[19]).t.zr0Y5R, obj3);
+        const obj6 = { numberOfItems: memo.length - 2 };
+        stringResult = intl2.formatToPlainString(tmp2(tmp3[19]).t.zr0Y5R, obj6);
       }
-      const obj4 = { variant: "text-sm/medium", color: "text-muted", children: stringResult };
-      obj2.children = closure_10(tmp2(tmp3[12]).Text, obj4);
-      closure_10(closure_6, obj2);
+      const obj7 = { variant: "text-sm/medium", color: "text-muted", children: stringResult };
+      obj5.children = closure_10(tmp2(tmp3[12]).Text, obj7);
+      closure_10(closure_6, obj5);
     }
   } else {
     if (tmp2(tmp3[18]).WidgetType.WANT_TO_PLAY_GAMES !== type) {
@@ -455,22 +459,22 @@ const memoResult = noop.memo((style) => {
     if (!tmp6) {
       substr1 = memo.slice(0, 6);
     }
-    const obj5 = { style: tmp.grid, children: null };
+    const obj8 = { style: tmp.grid, children: null };
     let mapped1 = tmp8 > 0;
     if (mapped1) {
       mapped1 = substr1.map((game) =>
         closure_2_10(closure_19, { userId, game, coverWidth, disableInteraction }, game.gameId),
       );
     }
-    obj5.children = mapped1;
-    const items3 = [closure_10(closure_7, obj5)];
+    obj8.children = mapped1;
+    const items3 = [closure_10(closure_7, obj8)];
     if (memo.length <= 6) {
-      const obj6 = { children: null };
+      const obj9 = { children: null };
       items3[1] = tmp12;
-      obj6.children = items3;
-      tmp13Result = closure_11(closure_12, obj6);
+      obj9.children = items3;
+      tmp13Result = closure_11(closure_12, obj9);
     } else {
-      const obj7 = {
+      const obj10 = {
         style: tmp.viewMore,
         hitSlop,
         onPress() {
@@ -483,34 +487,34 @@ const memoResult = noop.memo((style) => {
       if (tmp6) {
         let stringResult1 = intl.string(tmp2(tmp3[19]).t["6MwJo/"]);
       } else {
-        const obj8 = { numberOfItems: memo.length - 6 };
-        stringResult1 = intl.formatToPlainString(tmp2(tmp3[19]).t.zr0Y5R, obj8);
+        const obj11 = { numberOfItems: memo.length - 6 };
+        stringResult1 = intl.formatToPlainString(tmp2(tmp3[19]).t.zr0Y5R, obj11);
       }
-      const obj9 = { variant: "text-sm/medium", color: "text-muted", children: stringResult1 };
-      obj7.children = closure_10(tmp2(tmp3[12]).Text, obj9);
-      closure_10(closure_6, obj7);
+      const obj12 = { variant: "text-sm/medium", color: "text-muted", children: stringResult1 };
+      obj10.children = closure_10(tmp2(tmp3[12]).Text, obj12);
+      closure_10(closure_6, obj10);
     }
   }
-  const obj10 = { style: style.cardStyle, title: null, trailingAction: null, children: null };
+  const obj13 = { style: style.cardStyle, title: null, trailingAction: null, children: null };
   const tmp7 = _slicedToArray(noop.useState(0), 2);
   const tmp9Result = widget(disableInteraction[20]);
-  obj10.title = userId(disableInteraction[21]).getWidgetTitle(widget);
+  obj13.title = userId(disableInteraction[21]).getWidgetTitle(widget);
   let tmp36Result = !stateFromStores;
   if (!stateFromStores) {
     tmp36Result = !disableInteraction;
   }
   if (tmp36Result) {
-    const obj11 = { userId, widget };
-    tmp36Result = closure_10(tmp9(tmp3[22]), obj11);
+    const obj14 = { userId, widget };
+    tmp36Result = closure_10(tmp9(tmp3[22]), obj14);
   }
-  obj10.trailingAction = tmp36Result;
-  obj10.children = closure_10(closure_7, {
+  obj13.trailingAction = tmp36Result;
+  obj13.children = closure_10(closure_7, {
     onLayout(nativeEvent) {
       return _undefined2(nativeEvent.nativeEvent.layout.width);
     },
     children: tmp13Result,
   });
-  return closure_10(tmp9Result, obj10);
+  return closure_10(tmp9Result, obj13);
 });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_profile/native/UserProfileWidgetsBoard.tsx");
@@ -522,11 +526,11 @@ export default function UserProfileWidgetsBoard(userId) {
     flag = true;
   }
   const cardStyle = userId.cardStyle;
-  let obj = userId(9161);
-  const displayableBoardWidgets = obj.useDisplayableBoardWidgets(userId);
+  const tmp = closure_14();
+  const displayableBoardWidgets = userId(9161).useDisplayableBoardWidgets(userId);
   closure_129_0 = flag;
   closure_129_1 = tmp2;
-  const tmp = closure_14();
+  let obj = userId(9161);
   const trackUserProfileAction = userId(8307).useUserProfileAnalyticsContext().trackUserProfileAction;
   closure_129_2 = trackUserProfileAction;
   closure_129_3 = noop.useRef(false);
@@ -548,13 +552,13 @@ export default function UserProfileWidgetsBoard(userId) {
   }, items);
   let tmp4 = null;
   if (0 !== displayableBoardWidgets.length) {
-    obj = {
+    const obj3 = {
       style: tmp.board,
       children: displayableBoardWidgets.map((widget) =>
         closure_2_10(WidgetRenderer, { userId, widget, cardStyle }, widget.getUniqueKey()),
       ),
     };
-    tmp4 = closure_10(closure_7, obj);
+    tmp4 = closure_10(closure_7, obj3);
   }
   return tmp4;
 }

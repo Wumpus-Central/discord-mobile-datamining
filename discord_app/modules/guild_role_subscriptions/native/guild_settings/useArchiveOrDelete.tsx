@@ -5,6 +5,8 @@ import GuildRoleSubscriptionListingEditStateUtilsAll from "../../edit_state/Guil
 import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 
+const require = globalThis.__r;
+
 require = fn;
 const noop = fn(19);
 ({ useEffect: metroRequire, useRef: closure_7 } = noop);
@@ -26,8 +28,8 @@ export default function useArchiveOrDelete(guildId, groupListingId, editStateId,
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -40,14 +42,14 @@ export default function useArchiveOrDelete(guildId, groupListingId, editStateId,
             throw value;
           } else if (arg0 === 2) {
             c2 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
-            const obj1 = { title, body, confirmText, confirmColor: tmp2(1178).ButtonColors.RED };
+            const obj4 = { title, body, confirmText, confirmColor: tmp2(1176).ButtonColors.RED };
             v2 = 1;
             c2 = 1;
-            const obj2 = { value: v2(4981).confirm(obj1), done: false };
-            return obj2;
+            const obj5 = { value: v2(4981).confirm(obj4), done: false };
+            return obj5;
           }
         } else {
           if (1 === tmp5) {
@@ -56,8 +58,8 @@ export default function useArchiveOrDelete(guildId, groupListingId, editStateId,
               throw value;
             } else if (arg0 === 2) {
               c2 = 3;
-              const obj3 = { value, done: true };
-              return obj3;
+              const obj6 = { value, done: true };
+              return obj6;
             } else if (value) {
               if (closure_128_12) {
                 closure_128_7(closure_128_2);
@@ -69,13 +71,13 @@ export default function useArchiveOrDelete(guildId, groupListingId, editStateId,
                 if (closure_128_11) {
                   v2 = 3;
                   c2 = 1;
-                  const obj4 = { value: closure_128_8(closure_128_0, closure_128_1, closure_128_2), done: false };
-                  return obj4;
+                  const obj7 = { value: closure_128_8(closure_128_0, closure_128_1, closure_128_2), done: false };
+                  return obj7;
                 } else {
                   v2 = 2;
                   c2 = 1;
-                  const obj5 = { value: closure_128_9(closure_128_0, closure_128_1, closure_128_2), done: false };
-                  return obj5;
+                  const obj8 = { value: closure_128_9(closure_128_0, closure_128_1, closure_128_2), done: false };
+                  return obj8;
                 }
               }
             }
@@ -86,8 +88,8 @@ export default function useArchiveOrDelete(guildId, groupListingId, editStateId,
                 throw value;
               } else if (arg0 === 2) {
                 c2 = 3;
-                const obj6 = { value, done: true };
-                return obj6;
+                const obj10 = { value, done: true };
+                return obj10;
               }
             } else if (arg0 === 1) {
               c2 = 3;
@@ -98,7 +100,7 @@ export default function useArchiveOrDelete(guildId, groupListingId, editStateId,
               }
             }
             c2 = 3;
-            obj = { value, done: true };
+            const obj = { value, done: true };
             return obj;
           }
           c2 = 3;
@@ -110,8 +112,8 @@ export default function useArchiveOrDelete(guildId, groupListingId, editStateId,
     }
   };
   let stringResult3 = dependencyMap;
+  const subscriptionListing = require("GuildRoleSubscriptionsHooks").useSubscriptionListing(editStateId);
   let obj = require("GuildRoleSubscriptionsHooks");
-  const subscriptionListing = obj.useSubscriptionListing(editStateId);
   const removeEditStateId = GuildRoleSubscriptionListingEditStateUtilsAll.useEditStateIds(
     groupListingId,
     guildId,
@@ -137,9 +139,9 @@ export default function useArchiveOrDelete(guildId, groupListingId, editStateId,
   if (true !== archived) {
     if (!tmp9) {
       let intl = tmp(1114).intl;
-      obj = { tierName: first };
+      let obj6 = { tierName: first };
       const intl2 = tmp(1114).intl;
-      const formatToPlainStringResult = intl.formatToPlainString(tmp(1114).t.OuuIOY, obj);
+      const formatToPlainStringResult = intl.formatToPlainString(tmp(1114).t.OuuIOY, obj6);
       const intl3 = tmp(1114).intl;
       const stringResult = intl2.string(tmp(1114).t.RL0wjm);
       const intl4 = tmp(1114).intl;
@@ -160,7 +162,7 @@ export default function useArchiveOrDelete(guildId, groupListingId, editStateId,
           ToastUtilsAll.presentFailedToast(intl.string(util.t.R0RpRX));
         }
       }, items);
-      obj = {
+      let obj7 = {
         headerText: formatToPlainStringResult,
         buttonText: stringResult,
         descriptionText: intl3.string(tmp(1114).t["5/Jeg2"]),
@@ -177,7 +179,7 @@ export default function useArchiveOrDelete(guildId, groupListingId, editStateId,
         deleting: submitting,
         archiving: submitting2,
       };
-      return obj;
+      return obj7;
     }
   }
   const intl7 = tmp(1114).intl;

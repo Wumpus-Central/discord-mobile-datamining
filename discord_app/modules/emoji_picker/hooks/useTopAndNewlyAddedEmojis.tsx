@@ -1,6 +1,8 @@
 // discord_app/modules/emoji_picker/hooks/useTopAndNewlyAddedEmojis.tsx
 import EmojiStore from "../../emojis/EmojiStore.tsx";
 
+const require = globalThis.__r;
+
 const require = fn;
 const EmojiIntention = fn(1374).EmojiIntention;
 let closure_4 = [];
@@ -15,21 +17,20 @@ export default function useTopAndNewlyAddedEmojis(arg0, arg1) {
   return require("useStateFromStores").useStateFromStoresObject(
     items,
     () => {
-      let obj = EmojiStore;
       if (EmojiStore !== undefined) {
         if (closure_1 !== EmojiIntention.REACTION) {
-          let topEmoji = obj.getTopEmoji(closure_0);
+          let topEmoji = EmojiStore.getTopEmoji(closure_0);
         } else {
           topEmoji = closure_4;
         }
-        obj = { topEmojis: topEmoji, newlyAddedEmojis: null };
+        const obj2 = { topEmojis: topEmoji, newlyAddedEmojis: null };
         if (closure_1 !== EmojiIntention.REACTION) {
-          let newlyAddedEmoji = obj.getNewlyAddedEmoji(closure_0);
+          let newlyAddedEmoji = EmojiStore.getNewlyAddedEmoji(closure_0);
         } else {
           newlyAddedEmoji = closure_4;
         }
-        obj.newlyAddedEmojis = newlyAddedEmoji;
-        return obj;
+        obj2.newlyAddedEmojis = newlyAddedEmoji;
+        return obj2;
       }
     },
     items1,

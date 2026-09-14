@@ -46,7 +46,7 @@ const result = size.fileFinishedImporting(
 export const useUserListActionsProps = function useUserListActionsProps(actions) {
   actions = actions.actions;
   const style = actions.style;
-  const tmp = style(10993)();
+  const tmp = style(10994)();
   dependencyMap = tmp;
   const items = [actions, tmp, style];
   return noop.useMemo(() => {
@@ -74,15 +74,15 @@ export const useUserListActionsProps = function useUserListActionsProps(actions)
             num3 = actions.length * closure_2 + num + num2;
           }
         }
-        obj = { headerSize: num3, renderHeader: null };
+        const obj2 = { headerSize: num3, renderHeader: null };
         let fn;
         if (null != actions) {
           if (actions.length > 0) {
             fn = () => <UserFlashListActions actions={actions} style={style} />;
           }
         }
-        obj.renderHeader = fn;
-        return obj;
+        obj2.renderHeader = fn;
+        return obj2;
       }
     }
     const error = new Error("UserListActions: paddingTop and paddingBottom must be numbers.");

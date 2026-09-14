@@ -8,6 +8,8 @@ import PermissionStore from "../../stores/PermissionStore.tsx";
 import PresenceStore from "../../stores/PresenceStore.tsx";
 import RTCConnectionStore from "../../stores/RTCConnectionStore.tsx";
 
+const require = globalThis.__r;
+
 const require = fn;
 function canFulfillStreamRequest(channel_id) {
   if (flag === undefined) {

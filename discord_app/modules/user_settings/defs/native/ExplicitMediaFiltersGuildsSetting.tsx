@@ -27,18 +27,18 @@ const pressable = SettingBuilders.createPressable({
   },
   onPress: function onObscuredContentGuildsOnPress() {
     const intl = util.intl;
+    const obj = SensitiveMediaExplicitRedactionSettingsUtils;
     const stringResult = intl.string(util.t.GYpoAq);
-    let obj = { title: stringResult, subtitle: null, handlePress: null, excluded: null, currentValue: null };
+    const obj3 = { title: stringResult, subtitle: null, handlePress: null, excluded: null, currentValue: null };
     const intl2 = util.intl;
-    obj.subtitle = intl2.string(util.t["FP+a42"]);
-    obj.handlePress = function handlePress(explicitContentGuilds) {
-      const obj = { explicitContentGuilds };
-      return obj.updateExplicitContentSetting(obj);
+    obj3.subtitle = intl2.string(util.t["FP+a42"]);
+    obj3.handlePress = function handlePress(explicitContentGuilds) {
+      return SensitiveMediaExplicitRedactionSettingsUtils.updateExplicitContentSetting({ explicitContentGuilds });
     };
     const items = [preloaded_user_settings.ExplicitContentRedaction.BLOCK];
-    obj.excluded = items;
-    obj.currentValue = obj.getExplicitContentSettingOrDefault().explicitContentGuilds;
-    const result = ExplicitMediaRedactionNativeUtils.handleSensitiveMediaFilterPress(obj);
+    obj3.excluded = items;
+    obj3.currentValue = obj.getExplicitContentSettingOrDefault().explicitContentGuilds;
+    const result = ExplicitMediaRedactionNativeUtils.handleSensitiveMediaFilterPress(obj3);
   },
   useSearchTerms: function getSearchTerms() {
     const intl = util.intl;

@@ -4,7 +4,7 @@ import encodeProperties from "encodeProperties.tsx";
 import getSystemLocale2 from "../i18n/getSystemLocale.tsx";
 import ClientModDetectionUtils from "../../shared/utils/ClientModDetectionUtils.tsx";
 import clientLaunchId from "clientLaunchId.tsx";
-import formatDefault from "../../../../_runtime/01341_format.js";
+import formatDefault from "../../../../_runtime/01339_format.js";
 import NativeMetaQuestModule from "../rtn-codegen/js/NativeMetaQuestModule.tsx";
 import NativeDeviceModule from "../rtn-codegen/js/NativeDeviceModule.tsx";
 import NativeClientInfoModule from "../rtn-codegen/js/NativeClientInfoModule.tsx";
@@ -149,38 +149,38 @@ if (null == obj) {
         value = tmp6;
       }
       const Storage3 = Storage5.Storage;
-      value = Storage3.get(referralProperties);
-      if (null == value) {
+      let value3 = Storage3.get(referralProperties);
+      if (null == value3) {
         obj = {};
         const Storage4 = Storage5.Storage;
         const result1 = Storage4.set(referralProperties, obj);
-        value = obj;
+        value3 = obj;
       }
       const SessionStorage = SessionStorage3.SessionStorage;
-      let value1 = SessionStorage.get(referralProperties);
-      if (null == value1) {
-        obj = {};
-        obj = {};
+      let value4 = SessionStorage.get(referralProperties);
+      if (null == value4) {
+        const obj3 = {};
         const _Object = Object;
-        const keys = Object.keys(obj);
+        const keys = Object.keys({});
         const mapped = keys.map((item) => {
-          obj["" + item + "_current"] = obj[item];
-          return obj[item];
+          obj3["" + item + "_current"] = obj2[item];
+          return obj2[item];
         });
         const SessionStorage2 = SessionStorage3.SessionStorage;
-        const result2 = SessionStorage2.set(referralProperties, obj);
-        value1 = obj;
+        const result2 = SessionStorage2.set(referralProperties, obj3);
+        value4 = obj3;
+        const obj2 = {};
       }
-      const obj1 = {};
+      const obj4 = {};
       const merged = Object.assign(value);
-      obj1.browser_user_agent = window.navigator.userAgent || "";
-      obj1.browser_version = formatDefault.version || "";
+      obj4.browser_user_agent = window.navigator.userAgent || "";
+      obj4.browser_version = formatDefault.version || "";
       const tmp16 = formatDefault.version || "";
       const _default = NativeDeviceModule.default;
-      obj1.os_version = NativeDeviceModule.default.getConstants().systemVersion || "";
-      const merged1 = Object.assign(value);
-      const merged2 = Object.assign(value1);
-      return obj1;
+      obj4.os_version = NativeDeviceModule.default.getConstants().systemVersion || "";
+      const merged1 = Object.assign(value3);
+      const merged2 = Object.assign(value4);
+      return obj4;
     })();
   } catch (err) {
     obj = {};
@@ -194,7 +194,7 @@ function extendSuperProperties(arg0) {
 }
 let result = extendSuperProperties(
   (function getContextualSuperProperties() {
-    obj = { client_build_number: parseInt("6411", 10) };
+    obj = { client_build_number: parseInt("6417", 10) };
     let buildNumber;
     if (DiscordNative != null) {
       const app = DiscordNative.app;

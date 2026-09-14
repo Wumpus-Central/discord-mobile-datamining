@@ -2,6 +2,8 @@
 import _modDef12 from "../../../../_runtime/metro/00012__.js";
 import VerifiedKeyStore from "../VerifiedKeyStore.tsx";
 
+const require = globalThis.__r;
+
 const require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/rtc/hooks/useSecureFramesUserVerifiedKeys.tsx");

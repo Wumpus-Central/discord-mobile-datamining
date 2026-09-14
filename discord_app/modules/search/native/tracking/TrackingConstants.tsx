@@ -3,7 +3,7 @@ import SearchConstants from "../../SearchConstants.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
 
 ({ SearchHistoryItemTypes, SearchTabs } = SearchConstants);
-let obj = {
+const obj = {
   RECENT: "recent",
   CHANNELS: "channels",
   MEDIA: "media",
@@ -15,7 +15,23 @@ let obj = {
   MEMBERS: "members",
   THREADS: "threads",
 };
-obj = {
+const obj3 = {
+  GUILD_CHANNEL: "guild_channel",
+  GDM_CHANNEL: "gdm_channel",
+  DM_CHANNEL: "dm_channel",
+  PLAINTEXT: "plaintext",
+};
+const result = size.fileFinishedImporting("modules/search/native/tracking/TrackingConstants.tsx");
+
+export const SearchEntrypointAnalyticsLocations = {
+  GUILD: "guild",
+  CHANNEL_HEADER: "channel_header",
+  CHANNEL_DETAILS_HEADER: "channel_details_header",
+  DM_LIST: "dm_list",
+  INDIVIDUAL_DM: "individual_dm",
+};
+export const AnalyticsSearchTabs = obj;
+export const SEARCH_TAB_TO_ANALYTICS_SEARCH_TAB = {
   [SearchTabs.RECENT]: obj.RECENT,
   [SearchTabs.GUILD_CHANNELS]: obj.CHANNELS,
   [SearchTabs.MEDIA]: obj.MEDIA,
@@ -27,25 +43,13 @@ obj = {
   [SearchTabs.MEMBERS]: obj.MEMBERS,
   [SearchTabs.THREADS]: obj.THREADS,
 };
-obj = { GUILD_CHANNEL: "guild_channel", GDM_CHANNEL: "gdm_channel", DM_CHANNEL: "dm_channel", PLAINTEXT: "plaintext" };
-const result = size.fileFinishedImporting("modules/search/native/tracking/TrackingConstants.tsx");
-
-export const SearchEntrypointAnalyticsLocations = {
-  GUILD: "guild",
-  CHANNEL_HEADER: "channel_header",
-  CHANNEL_DETAILS_HEADER: "channel_details_header",
-  DM_LIST: "dm_list",
-  INDIVIDUAL_DM: "individual_dm",
-};
-export const AnalyticsSearchTabs = obj;
-export const SEARCH_TAB_TO_ANALYTICS_SEARCH_TAB = obj;
-export const AnalyticsSearchHistoryTypes = obj;
+export const AnalyticsSearchHistoryTypes = obj3;
 export const SEARCH_HISTORY_TO_ANALYTICS_SEARCH_HISTORY = {
-  [SearchHistoryItemTypes.GUILD_TEXT_CHANNEL]: obj.GUILD_CHANNEL,
-  [SearchHistoryItemTypes.GUILD_VOICE_CHANNEL]: obj.GUILD_CHANNEL,
-  [SearchHistoryItemTypes.GROUP_DM]: obj.GDM_CHANNEL,
-  [SearchHistoryItemTypes.DM]: obj.DM_CHANNEL,
-  [SearchHistoryItemTypes.TEXT]: obj.PLAINTEXT,
+  [SearchHistoryItemTypes.GUILD_TEXT_CHANNEL]: obj3.GUILD_CHANNEL,
+  [SearchHistoryItemTypes.GUILD_VOICE_CHANNEL]: obj3.GUILD_CHANNEL,
+  [SearchHistoryItemTypes.GROUP_DM]: obj3.GDM_CHANNEL,
+  [SearchHistoryItemTypes.DM]: obj3.DM_CHANNEL,
+  [SearchHistoryItemTypes.TEXT]: obj3.PLAINTEXT,
 };
 export const SearchFilterAddLocations = {
   SEARCH_HISTORY: "search_history",

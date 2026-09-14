@@ -2,12 +2,12 @@
 import APIError from "../../errors/APIError.tsx";
 
 const prototype = function UploaderError(body, arg1) {
-  tmp = new tmp(body, arg1, new.target, tmp, new.target);
-  tmp.attachments = [];
+  const tmp2 = new tmp(body, arg1, new.target, tmp, new.target);
+  tmp2.attachments = [];
   if (tmp3) {
-    tmp.attachments = body.body.attachments;
+    tmp2.attachments = body.body.attachments;
   }
-  return tmp;
+  return tmp2;
 }.prototype;
 class prototype extends tmp2 {}
 const size = fn(2);

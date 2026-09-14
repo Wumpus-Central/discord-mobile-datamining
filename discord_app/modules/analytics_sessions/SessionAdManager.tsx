@@ -39,12 +39,11 @@ class SessionAdManager extends tmp3 {
       }
     };
     applyArgumentsResult.startAnalyticHeartbeat = function startAnalyticHeartbeat() {
-      let obj = applyArgumentsResult;
       if (!applyArgumentsResult.schedulerStarted) {
-        obj.schedulerStarted = true;
-        obj = { category: ad, message: "Starting ad session heartbeat" };
-        SentryUtilsDefault.addBreadcrumb(obj);
-        obj.maybeStartHeartbeat();
+        applyArgumentsResult.schedulerStarted = true;
+        const obj3 = { category: ad, message: "Starting ad session heartbeat" };
+        SentryUtilsDefault.addBreadcrumb(obj3);
+        applyArgumentsResult.maybeStartHeartbeat();
       }
     };
     applyArgumentsResult.trackHeartbeat = function trackHeartbeat() {
@@ -54,8 +53,8 @@ class SessionAdManager extends tmp3 {
       }
       if (!applyArgumentsResult.schedulerStarted) {
         if (!flag) {
-          let obj = { category: ad, message: "Ad heartbeat called but scheduler not started" };
-          obj.addBreadcrumb(obj);
+          const obj2 = { category: ad, message: "Ad heartbeat called but scheduler not started" };
+          SentryUtilsDefault.addBreadcrumb(obj2);
           const heartbeatInterval = applyArgumentsResult.heartbeatInterval;
           heartbeatInterval.stop();
         }
@@ -63,13 +62,17 @@ class SessionAdManager extends tmp3 {
       const nowResult = performance.now();
       const diff = nowResult - applyArgumentsResult.lastHeartbeatTimestamp;
       const orRefreshAdSession = SessionAdGenerator.getOrRefreshAdSession();
-      obj = {
+      AnalyticsUtilsDefault.track(constants.CLIENT_AD_HEARTBEAT, {
+        client_ad_session_id: orRefreshAdSession.uuid,
+        client_heartbeat_initialization_timestamp: orRefreshAdSession.createdAtTimestamp,
+        client_heartbeat_version: 3,
+      });
+      applyArgumentsResult.lastHeartbeatTimestamp = nowResult;
+      const obj5 = {
         client_ad_session_id: orRefreshAdSession.uuid,
         client_heartbeat_initialization_timestamp: orRefreshAdSession.createdAtTimestamp,
         client_heartbeat_version: 3,
       };
-      AnalyticsUtilsDefault.track(constants.CLIENT_AD_HEARTBEAT, obj);
-      applyArgumentsResult.lastHeartbeatTimestamp = nowResult;
     };
     applyArgumentsResult.stopAnalyticHeartbeat = function stopAnalyticHeartbeat() {
       if (DEFAULT === undefined) {
@@ -78,10 +81,10 @@ class SessionAdManager extends tmp3 {
       if (applyArgumentsResult.schedulerStarted) {
         applyArgumentsResult.schedulerStarted = false;
         applyArgumentsResult.lastHeartbeatTimestamp = 0;
-        const obj = { category: ad, message: null };
+        const obj2 = { category: ad, message: null };
         const _HermesInternal = HermesInternal;
-        obj.message = "Stopping ad session heartbeat: " + DEFAULT;
-        obj.addBreadcrumb(obj);
+        obj2.message = "Stopping ad session heartbeat: " + DEFAULT;
+        SentryUtilsDefault.addBreadcrumb(obj2);
         const heartbeatInterval = applyArgumentsResult.heartbeatInterval;
         heartbeatInterval.stop();
       }

@@ -167,18 +167,18 @@ export default noop.memo(
                   }
                   let _HermesInternal2 = HermesInternal;
                   let combined = "" + listId + "-" + first1;
-                  value = map.get(combined);
-                  if (null != value) {
-                    let result = map1.set(combined, value);
+                  let value3 = map.get(combined);
+                  if (null != value3) {
+                    let result = map1.set(combined, value3);
                     let deleteResult = map.delete(combined);
-                    obj = { portalId: combined, children: null };
+                    let obj2 = { portalId: combined, children: null };
                     let tmp21 = estimatedListSize(horizontal[8]);
-                    obj.children = fastestListChildJSX(tmp9, itemSize);
+                    obj2.children = fastestListChildJSX(tmp9, itemSize);
                     let _HermesInternal3 = HermesInternal;
-                    let arr = items.push(marginEnd(tmp21, obj, "" + value));
+                    let arr = items.push(marginEnd(tmp21, obj2, "" + value3));
                   } else {
                     obj = { keyId: combined, item: tmp9, itemSize };
-                    arr = items1.push(obj);
+                    let arr2 = items1.push(obj);
                   }
                   num = num + 1;
                 } while (num <= diff);
@@ -193,24 +193,24 @@ export default noop.memo(
           if (map.size > 0) {
             let iter2 = map.keys();
             value = iter2.next().value;
-            value = map.get(value);
-            let result1 = map1.set(keyId, value);
+            let value4 = map.get(value);
+            let result1 = map1.set(keyId, value4);
             let deleteResult1 = map.delete(value);
-            obj = { portalId: keyId, children: null };
+            let obj3 = { portalId: keyId, children: null };
             let tmp47 = estimatedListSize(horizontal[8]);
-            obj.children = fastestListChildJSX(item, itemSize);
+            obj3.children = fastestListChildJSX(item, itemSize);
             let _HermesInternal5 = HermesInternal;
-            let arr1 = items.push(marginEnd(tmp47, obj, "" + value));
+            let arr10 = items.push(marginEnd(tmp47, obj3, "" + value4));
           } else {
             let tmp29 = +keyIndex;
             keyIndex = tmp29 + 1;
             let text = `key-${tmp29}`;
             let result2 = map1.set(keyId, `key-${tmp29}`);
-            let obj1 = { portalId: keyId, children: null };
+            let obj4 = { portalId: keyId, children: null };
             let tmp36 = estimatedListSize(horizontal[8]);
-            obj1.children = fastestListChildJSX(item, itemSize);
+            obj4.children = fastestListChildJSX(item, itemSize);
             let _HermesInternal4 = HermesInternal;
-            let arr2 = items.push(marginEnd(tmp36, obj1, "" + `key-${tmp29}`));
+            let arr11 = items.push(marginEnd(tmp36, obj4, "" + `key-${tmp29}`));
           }
           continue;
         }
@@ -221,11 +221,11 @@ export default noop.memo(
               if ("" !== listHeaderKey) {
                 str2 = listHeaderKey;
               }
-              const obj2 = { portalId: null, children: null };
+              const obj5 = { portalId: null, children: null };
               const _HermesInternal6 = HermesInternal;
-              obj2.portalId = "" + listId + "-" + str2;
-              obj2.children = fastestListChildJSX(tmp51(), listHeaderSize);
-              items.push(marginEnd(estimatedListSize(horizontal[8]), obj2, str2));
+              obj5.portalId = "" + listId + "-" + str2;
+              obj5.children = fastestListChildJSX(tmp51(), listHeaderSize);
+              items.push(marginEnd(estimatedListSize(horizontal[8]), obj5, str2));
               const tmp56 = estimatedListSize(horizontal[8]);
             }
           }
@@ -239,8 +239,8 @@ export default noop.memo(
               }
               const _HermesInternal7 = HermesInternal;
               const combined1 = "" + listId + "-" + str3;
-              const obj3 = { portalId: combined1, children: fastestListChildJSX(tmp58(), listFooterSize) };
-              items.push(marginEnd(estimatedListSize(horizontal[8]), obj3, combined1));
+              const obj6 = { portalId: combined1, children: fastestListChildJSX(tmp58(), listFooterSize) };
+              items.push(marginEnd(estimatedListSize(horizontal[8]), obj6, combined1));
               const tmp64 = estimatedListSize(horizontal[8]);
             }
           }
@@ -258,10 +258,10 @@ export default noop.memo(
                   }
                   let _HermesInternal9 = HermesInternal;
                   let combined3 = "" + listId + "-" + combined2;
-                  let obj4 = { portalId: combined3, children: null };
+                  let obj7 = { portalId: combined3, children: null };
                   let tmp74 = estimatedListSize(horizontal[8]);
-                  obj4.children = fastestListChildJSX(tmp97(sectionStart), tmp68);
-                  let arr5 = items.push(marginEnd(tmp74, obj4, combined3));
+                  obj7.children = fastestListChildJSX(tmp97(sectionStart), tmp68);
+                  let arr14 = items.push(marginEnd(tmp74, obj7, combined3));
                 }
               }
               let tmp76 = tmp3 ? sectionHeaderSizes[0] : sectionHeaderSizes[sectionStart];
@@ -274,18 +274,18 @@ export default noop.memo(
                   }
                   let _HermesInternal11 = HermesInternal;
                   let combined5 = "" + listId + "-" + combined4;
-                  let obj5 = { portalId: combined5, children: null };
+                  let obj8 = { portalId: combined5, children: null };
                   let tmp82 = estimatedListSize(horizontal[8]);
-                  obj5.children = fastestListChildJSX(tmp98(sectionStart), tmp76);
-                  let arr6 = items.push(marginEnd(tmp82, obj5, combined5));
+                  obj8.children = fastestListChildJSX(tmp98(sectionStart), tmp76);
+                  let arr15 = items.push(marginEnd(tmp82, obj8, combined5));
                 }
               }
             }
             sectionStart = sectionStart + 1;
           } while (sectionStart <= sectionEnd);
         }
-        const obj6 = { items, keys: map1, keyIndex };
-        return obj6;
+        const obj9 = { items, keys: map1, keyIndex };
+        return obj9;
       }
     }, items1);
     const items2 = [memo1];

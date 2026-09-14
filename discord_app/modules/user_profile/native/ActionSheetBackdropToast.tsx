@@ -13,17 +13,17 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet } = get_ActivityIndicator);
 const ACTION_SHEET_START_HEIGHT_RATIO = fn(7254).ACTION_SHEET_START_HEIGHT_RATIO;
 const jsx = fn(21).jsx;
-let PlatformUtils = fn(1150);
+const PlatformUtils = fn(1363);
 const isInIOS = PlatformUtils.isIOS();
-fn(4636);
-PlatformUtils = { container: null, toast: null };
-PlatformUtils = {};
+const createStyles = fn(4636);
+let obj3 = { container: null, toast: null };
+let obj4 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
-PlatformUtils.flex = 1;
-PlatformUtils.alignItems = "center";
-PlatformUtils.justifyContent = "center";
-PlatformUtils.container = PlatformUtils;
-const createStyles = {
+obj4.flex = 1;
+obj4.alignItems = "center";
+obj4.justifyContent = "center";
+obj3.container = obj4;
+obj3.toast = {
   position: "absolute",
   bottom: 16,
   backgroundColor: nativeDefault.colors.MOBILE_TOAST_BACKGROUND_DEFAULT,
@@ -32,8 +32,7 @@ const createStyles = {
   paddingBottom: 8,
   paddingHorizontal: 16,
 };
-PlatformUtils.toast = createStyles;
-let closure_8 = createStyles.createStyles(PlatformUtils);
+let closure_8 = createStyles.createStyles(obj3);
 const __initData = {
   code: "function ActionSheetBackdropToastTsx1(){const{isInIOS,isExpanded,maxDynamicContentSize,TOAST_BOTTOM_MARGIN,nonExpandedHeight,ACTION_SHEET_START_HEIGHT_RATIO,TOAST_BOTTOM_GAP,positionDelta,TOAST_ANIMATION_Y_DELTA,opacity}=this.__closure;return{bottom:(isInIOS?isExpanded?maxDynamicContentSize+TOAST_BOTTOM_MARGIN:nonExpandedHeight+TOAST_BOTTOM_MARGIN:isExpanded?maxDynamicContentSize+TOAST_BOTTOM_MARGIN:ACTION_SHEET_START_HEIGHT_RATIO*maxDynamicContentSize+TOAST_BOTTOM_GAP)+ +(1-positionDelta.get())*TOAST_ANIMATION_Y_DELTA,opacity:opacity.get()};}",
 };
@@ -48,30 +47,31 @@ export const ActionSheetBackdropToast = function ActionSheetBackdropToast(childr
   importDefault = result;
   const diff = height - isExpanded(5763).NAV_BAR_HEIGHT_MULTILINE - useSafeAreaInsetsDefault().top;
   dependencyMap = diff;
+  const sharedValue = isExpanded(4373).useSharedValue(0);
   let obj = isExpanded(4373);
-  const sharedValue = obj.useSharedValue(0);
-  let obj1 = isExpanded(4373);
-  const sharedValue1 = obj1.useSharedValue(0);
+  const sharedValue1 = isExpanded(4373).useSharedValue(0);
   const items = [sharedValue, sharedValue1];
   const effect = sharedValue.useEffect(() => {
-    let obj = { duration: 200, easing: null };
+    let obj = ReanimatedRexport;
+    const obj3 = { duration: 200, easing: null };
     let Easing = ReanimatedRexport.Easing;
-    obj.easing = Easing.in(ReanimatedRexport.Easing.ease);
-    let result = sharedValue.set(obj.withDelay(100, timing.withTiming(1, obj)));
-    obj = { duration: 300, easing: null };
+    obj3.easing = Easing.in(ReanimatedRexport.Easing.ease);
+    let result = sharedValue.set(obj.withDelay(100, timing.withTiming(1, obj3)));
+    const obj5 = { duration: 300, easing: null };
     const Easing2 = ReanimatedRexport.Easing;
-    obj.easing = Easing2.in(ReanimatedRexport.Easing.linear);
-    let result1 = sharedValue1.set(timing.withTiming(1, obj));
+    obj5.easing = Easing2.in(ReanimatedRexport.Easing.linear);
+    let result1 = sharedValue1.set(timing.withTiming(1, obj5));
     return () => {
-      let obj = isExpanded(4373);
+      const obj = isExpanded(4373);
       const result = sharedValue.set(obj.withDelay(200, isExpanded(4637).withTiming(0)));
       const obj2 = isExpanded(4637);
-      obj = { duration: 200, easing: null };
+      const obj4 = { duration: 200, easing: null };
       const Easing = isExpanded(4373).Easing;
-      obj.easing = Easing.out(isExpanded(4373).Easing.exp);
-      const result1 = sharedValue1.set(isExpanded(4637).withTiming(0, obj));
+      obj4.easing = Easing.out(isExpanded(4373).Easing.exp);
+      const result1 = sharedValue1.set(isExpanded(4637).withTiming(0, obj4));
     };
   }, items);
+  let obj2 = isExpanded(4373);
   const fn = function x() {
     if (closure_7) {
       if (isExpanded) {
@@ -89,7 +89,7 @@ export const ActionSheetBackdropToast = function ActionSheetBackdropToast(childr
       return obj;
     }
   };
-  obj = {
+  fn.__closure = {
     isInIOS,
     isExpanded,
     maxDynamicContentSize: diff,
@@ -101,14 +101,13 @@ export const ActionSheetBackdropToast = function ActionSheetBackdropToast(childr
     TOAST_ANIMATION_Y_DELTA: 15,
     opacity: sharedValue1,
   };
-  fn.__closure = obj;
   fn.__workletHash = 9630436597435;
   fn.__initData = __initData;
-  obj = { style: null, pointerEvents: "none", children: null };
+  let obj5 = { style: null, pointerEvents: "none", children: null };
   const items1 = [tmp.container];
-  obj.style = items1;
+  obj5.style = items1;
   const animatedStyle = isExpanded(4373).useAnimatedStyle(fn);
-  obj1 = {
+  const obj6 = {
     style: null,
     children: jsx(isExpanded(4632).Text, {
       variant: "text-sm/medium",
@@ -117,8 +116,8 @@ export const ActionSheetBackdropToast = function ActionSheetBackdropToast(childr
     }),
   };
   const items2 = [tmp.toast, animatedStyle];
-  obj1.style = items2;
-  obj.children = jsx(ReanimatedRexportDefault.View, {
+  obj6.style = items2;
+  obj5.children = jsx(ReanimatedRexportDefault.View, {
     style: null,
     children: jsx(isExpanded(4632).Text, {
       variant: "text-sm/medium",

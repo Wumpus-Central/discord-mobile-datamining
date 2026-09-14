@@ -78,7 +78,7 @@ prototype["_trackStartSpeaking"] = function _trackStartSpeaking() {
   if (this._currentUserSpeaking) {
     const channelId = RTCConnectionStore.getChannelId();
     const guildId = RTCConnectionStore.getGuildId();
-    const obj = {
+    const obj2 = {
       mode: MediaEngineStore.getMode(),
       priority: SpeakingStore.isCurrentUserPrioritySpeaking(),
       channel: channelId,
@@ -91,38 +91,28 @@ prototype["_trackStartSpeaking"] = function _trackStartSpeaking() {
     };
     const merged = Object.assign(self.getGameMetadata());
     const merged1 = Object.assign(RTCConnectionStore.getPacketStats());
-    obj.trackWithMetadata(constants.START_SPEAKING, obj);
+    AppAnalyticsUtils.trackWithMetadata(constants.START_SPEAKING, obj2);
   }
 };
 prototype["_trackStartListening"] = function _trackStartListening() {
-  let obj = MediaEngineStore;
   if (!MediaEngineStore.isDeaf()) {
     const self = this;
     if (this._anyoneElseSpeaking) {
       const channelId = RTCConnectionStore.getChannelId();
       const guildId = RTCConnectionStore.getGuildId();
-      obj = {
-        mute: null,
-        anyone_priority: null,
-        channel: null,
-        server: null,
-        channel_id: null,
-        guild_id: null,
-        rtc_connection_id: null,
-        media_session_id: null,
-        voice_state_count: null,
+      const obj3 = {
+        mute: MediaEngineStore.isMute(),
+        anyone_priority: SpeakingStore.isAnyonePrioritySpeaking(),
+        channel: channelId,
+        server: guildId,
+        channel_id: channelId,
+        guild_id: guildId,
+        rtc_connection_id: RTCConnectionStore.getRTCConnectionId(),
+        media_session_id: RTCConnectionStore.getMediaSessionId(),
+        voice_state_count: SortedVoiceStateStore.countVoiceStatesForChannel(self._voiceChannelId),
       };
-      obj.mute = obj.isMute();
-      obj.anyone_priority = SpeakingStore.isAnyonePrioritySpeaking();
-      obj.channel = channelId;
-      obj.server = guildId;
-      obj.channel_id = channelId;
-      obj.guild_id = guildId;
-      obj.rtc_connection_id = RTCConnectionStore.getRTCConnectionId();
-      obj.media_session_id = RTCConnectionStore.getMediaSessionId();
-      obj.voice_state_count = SortedVoiceStateStore.countVoiceStatesForChannel(self._voiceChannelId);
       const merged = Object.assign(self.getGameMetadata());
-      AppAnalyticsUtils.trackWithMetadata(constants.START_LISTENING, obj);
+      AppAnalyticsUtils.trackWithMetadata(constants.START_LISTENING, obj3);
     }
   }
 };

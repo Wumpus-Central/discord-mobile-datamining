@@ -6,6 +6,8 @@ import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
+const require = globalThis.__r;
+
 require = fn;
 const jsx = fn(21).jsx;
 const logger = new LoggerDefault("useTooltip.native");
@@ -51,8 +53,8 @@ export const useTooltip = function useTooltip(ref, memo) {
     memo = arg0;
     closure_1 = async function _measureHelper(arg0) {
       closure_129_0 = ref;
-      const measurements = memo(11267).getMeasurements(surfaceRef.surfaceRef, memo);
-      const items = [measurements, memo(11267).getMeasurements(closure_1, memo)];
+      const measurements = memo(11268).getMeasurements(surfaceRef.surfaceRef, memo);
+      const items = [measurements, memo(11268).getMeasurements(closure_1, memo)];
       await Promise.all(items);
       if (1 === tmp7) {
         c4 = 0;
@@ -125,8 +127,8 @@ export const useTooltipHelper = function useTooltipHelper(ref, targetRef, callba
     memo = arg0;
     closure_1 = async function _measureHelper(arg0) {
       closure_129_0 = ref;
-      const measurements = memo(11267).getMeasurements(surfaceRef.surfaceRef, memo);
-      const items = [measurements, memo(11267).getMeasurements(closure_1, memo)];
+      const measurements = memo(11268).getMeasurements(surfaceRef.surfaceRef, memo);
+      const items = [measurements, memo(11268).getMeasurements(closure_1, memo)];
       await Promise.all(items);
       if (1 === tmp7) {
         c4 = 0;

@@ -28,39 +28,37 @@ export const getPremiumGroupInviteEmbedText = function getPremiumGroupInviteEmbe
       const user = UserStore.getUser(found);
       let nameFromUserResult = null;
       if (null != user) {
-        let obj4 = UserUtils;
-        nameFromUserResult = obj4.nameFromUser(user);
+        nameFromUserResult = UserUtils.nameFromUser(user);
       }
       tmp8 = nameFromUserResult;
     }
     let tmp15 = null;
     if (null != tmp8) {
-      let obj = { message: null, header: null, body: null };
+      const obj2 = { message: null, header: null, body: null };
       const intl4 = util.intl;
-      obj = { receiverName: tmp8, premiumGroupProductName: tmp };
-      obj.message = intl4.format(_modDef3074.MkcFjx, obj);
+      const obj3 = { receiverName: tmp8, premiumGroupProductName: tmp };
+      obj2.message = intl4.format(_modDef3074.MkcFjx, obj3);
       const intl5 = util.intl;
-      const obj1 = { premiumGroupProductName: tmp };
-      obj.header = intl5.formatToPlainString(_modDef3074["5uwv8J"], obj1);
+      const obj4 = { premiumGroupProductName: tmp };
+      obj2.header = intl5.formatToPlainString(_modDef3074["5uwv8J"], obj4);
       const intl6 = util.intl;
-      const obj2 = { receiverName: tmp8 };
-      obj.body = intl6.formatToPlainString(_modDef3074["AmE0B/"], obj2);
-      tmp15 = obj;
+      const obj6 = { receiverName: tmp8 };
+      obj2.body = intl6.formatToPlainString(_modDef3074["AmE0B/"], obj6);
+      tmp15 = obj2;
     }
     return tmp15;
   } else {
-    obj = UserUtils;
-    const nameFromUserResult1 = obj.nameFromUser(sender);
-    const obj3 = { message: null, header: null, body: null };
+    const nameFromUserResult1 = UserUtils.nameFromUser(sender);
+    const obj7 = { message: null, header: null, body: null };
     const intl = util.intl;
-    obj4 = { senderName: nameFromUserResult1, premiumGroupProductName: tmp, helpCenterLink };
-    obj3.message = intl.format(_modDef3074["51Kv/4"], obj4);
+    const obj8 = { senderName: nameFromUserResult1, premiumGroupProductName: tmp, helpCenterLink };
+    obj7.message = intl.format(_modDef3074["51Kv/4"], obj8);
     const intl2 = util.intl;
-    obj3.header = intl2.string(_modDef3074.ssge1y);
+    obj7.header = intl2.string(_modDef3074.ssge1y);
     const intl3 = util.intl;
-    const obj5 = { senderName: nameFromUserResult1, premiumGroupProductName: tmp };
-    obj3.body = intl3.formatToPlainString(_modDef3074.tej76V, obj5);
-    return obj3;
+    const obj9 = { senderName: nameFromUserResult1, premiumGroupProductName: tmp };
+    obj7.body = intl3.formatToPlainString(_modDef3074.tej76V, obj9);
+    return obj7;
   }
 };
 export function useIsEligibleForPremiumGroupPurchase() {

@@ -35,7 +35,7 @@ export const GuildBadgeToadstool = function GuildBadgeToadstool(width) {
     width,
     Object.assign({ width: 0, height: 0, primaryTintColor: 0, secondaryTintColor: 0 }),
   );
-  let obj = {
+  const transformedBadgeColors = GuildBadgeUtils.getTransformedBadgeColors({
     primaryBaseColors,
     primaryTintColor,
     primaryTintLuminances,
@@ -44,15 +44,14 @@ export const GuildBadgeToadstool = function GuildBadgeToadstool(width) {
     secondaryTintColor,
     secondaryTintLuminances,
     secondaryLuminanceWeights: items1,
-  };
-  const transformedBadgeColors = obj.getTransformedBadgeColors(obj);
+  });
   ({ primaryColorsTransformed, secondaryColorsTransformed } = transformedBadgeColors);
-  obj = {};
+  const obj3 = {};
   const merged1 = Object.assign(merged);
-  obj.width = num;
-  obj.height = num2;
-  obj.viewBox = "0 0 16 16";
-  obj.fill = "none";
+  obj3.width = num;
+  obj3.height = num2;
+  obj3.viewBox = "0 0 16 16";
+  obj3.fill = "none";
   items = [
     React2(inlineStyles.Path, { d: "M11 12v-2h-1V9H6v1H5v2H4v3h8v-3h-1Z", fill: secondaryColorsTransformed[1] }),
     React2(inlineStyles.Path, {
@@ -82,6 +81,6 @@ export const GuildBadgeToadstool = function GuildBadgeToadstool(width) {
       fill: "#000",
     }),
   ];
-  obj.children = items;
-  return React3(inlineStyles.Svg, obj);
+  obj3.children = items;
+  return React3(inlineStyles.Svg, obj3);
 };

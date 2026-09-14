@@ -4,8 +4,10 @@ import ClientThemesUtils from "../../../client_themes/ClientThemesUtils.tsx";
 import _modDef2626 from "../../../client_themes/intl/ClientThemes.messages.js";
 import ThemeStore from "../../ThemeStore.tsx";
 
+const require = globalThis.__r;
+
 require = fn;
-let closure_4 = fn(1230).BACKGROUND_GRADIENT_PRESETS_MAP;
+let closure_4 = fn(1228).BACKGROUND_GRADIENT_PRESETS_MAP;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/useSyncedModeThemeName.tsx");
 

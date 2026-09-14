@@ -19,25 +19,25 @@ import PermissionStore from "../../../../../stores/PermissionStore.tsx";
 require = fn;
 function VideoButtonRive(arg0) {
   ({ isVideoEnabled, color } = arg0);
-  let obj = { style: { width: 24, height: 24, pointerEvents: "none" }, children: null };
-  obj = { dataBinding: { fill: color, on: isVideoEnabled }, defaultViewModelInstance: null, fallback: null };
+  const obj = { style: { width: 24, height: 24, pointerEvents: "none" }, children: null };
+  const obj2 = { dataBinding: { fill: color, on: isVideoEnabled }, defaultViewModelInstance: null, fallback: null };
   let str = "CamOff";
   if (isVideoEnabled) {
     str = "CamOn";
   }
-  obj.defaultViewModelInstance = str;
+  obj2.defaultViewModelInstance = str;
   if (isVideoEnabled) {
     let VideoSlashIcon = VideoIcon.VideoIcon;
   } else {
     VideoSlashIcon = VideoSlashIcon2.VideoSlashIcon;
   }
-  obj.fallback = <VideoSlashIcon color={color} />;
+  obj2.fallback = <VideoSlashIcon color={color} />;
   obj.children = jsx(native.CameraRive, {
     dataBinding: { fill: color, on: isVideoEnabled },
     defaultViewModelInstance: null,
     fallback: null,
   });
-  return <View dataBinding={{ fill: color, on: isVideoEnabled }} defaultViewModelInstance={null} fallback={null} />;
+  return <View style={{ width: 24, height: 24, pointerEvents: "none" }}>{null}</View>;
 }
 const View = fn(17).View;
 const Features = fn(4661).Features;
@@ -50,10 +50,10 @@ export default function VideoButton(arg0) {
   let stateFromStores1;
   let stateFromStores2;
   let color;
-  let obj = stateFromStores2;
   ({ props, wrapperSpecs } = arg0);
   const channelId = stateFromStores2.useContext(stateFromStores(stateFromStores1[9])).channelId;
   const voicePanelButtonStyles = channelId(stateFromStores1[10]).useVoicePanelButtonStyles(wrapperSpecs);
+  let obj = stateFromStores2;
   let obj2 = channelId(stateFromStores1[10]);
   let tmp = stateFromStores;
   const items = [GuildStore, PermissionStore, ChannelStore];
@@ -75,7 +75,7 @@ export default function VideoButton(arg0) {
   stateFromStores1 = channelId(stateFromStores1[11]).useStateFromStores(items1, () =>
     MediaEngineStore.isVideoEnabled(),
   );
-  const obj4 = channelId(stateFromStores1[11]);
+  let obj4 = channelId(stateFromStores1[11]);
   const items2 = [MediaEngineStore];
   stateFromStores2 = channelId(stateFromStores1[11]).useStateFromStores(items2, () =>
     MediaEngineStore.supports(constants.VIDEO),
@@ -119,7 +119,7 @@ export default function VideoButton(arg0) {
     element.accessibilityLabel = stringResult;
     element.style = stateFromStores1 ? voicePanelButtonStyles.iconBgSelected : voicePanelButtonStyles.iconBg;
     if (!videoEnabled) {
-      obj = { color: voicePanelButtonStyles.iconFill.color };
+      const obj6 = { color: voicePanelButtonStyles.iconFill.color };
       memo = jsx(tmp3(tmp2[21]).VideoDenyIcon, { color: voicePanelButtonStyles.iconFill.color });
     }
     element.children = memo;

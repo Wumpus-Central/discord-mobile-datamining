@@ -14,15 +14,14 @@ function updateProduct(currencyCode) {
     if (formatted === CurrencyCodes.EUR) {
       let formatDualPriceForBGResult = PriceUtils.formatDualPriceForBG(result, { convertToMajorUnits: false });
     }
-    let obj = {};
+    const obj3 = {};
     const merged = Object.assign(currencyCode);
-    obj.price = currencyCode.price;
-    obj.currencyCode = formatted;
-    obj.priceString = formatDualPriceForBGResult;
-    return obj;
+    obj3.price = currencyCode.price;
+    obj3.currencyCode = formatted;
+    obj3.priceString = formatDualPriceForBGResult;
+    return obj3;
   }
-  obj = PriceUtils;
-  formatDualPriceForBGResult = obj.formatSingleCurrencyPrice(result, formatted, { convertToMajorUnits: false });
+  formatDualPriceForBGResult = PriceUtils.formatSingleCurrencyPrice(result, formatted, { convertToMajorUnits: false });
 }
 function skusLoaded(arg0) {
   ({ skus, skusType } = arg0);

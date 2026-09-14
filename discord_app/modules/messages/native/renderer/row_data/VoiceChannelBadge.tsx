@@ -13,11 +13,11 @@ const Image = _mod17.Image;
 const Permissions = Constants.Permissions;
 let result = size.fileFinishedImporting("modules/messages/native/renderer/row_data/VoiceChannelBadge.tsx");
 
-export const createVoiceChannelBadge = function createVoiceChannelBadge(id, guildId) {
-  let obj = VoiceChannelBadgeExperiment;
+export const createVoiceChannelBadge = function createVoiceChannelBadge(id, guildId1) {
+  const guildId = guildId1;
   if (obj.getVoiceChannelBadgeExperiment({ guildId, location: "VoiceChannelBadgeNative" }).enabled) {
-    if (null != guildId) {
-      const discoverableVoiceState = VoiceStateStore.getDiscoverableVoiceState(guildId, id);
+    if (null != guildId1) {
+      const discoverableVoiceState = VoiceStateStore.getDiscoverableVoiceState(guildId1, id);
       if (null != discoverableVoiceState) {
         let channelId;
         if (discoverableVoiceState != null) {
@@ -25,18 +25,16 @@ export const createVoiceChannelBadge = function createVoiceChannelBadge(id, guil
         }
         const channel = ChannelStore.getChannel(channelId);
         if (null != channel) {
-          let tmpResult = utils_ChannelUtils;
-          const assetSource = Image.resolveAssetSource(tmpResult.getChannelIcon(channel));
+          const assetSource = Image.resolveAssetSource(utils_ChannelUtils.getChannelIcon(channel));
           let uri;
           if (assetSource != null) {
             uri = assetSource.uri;
           }
           if (null != uri) {
-            tmpResult = AgeGateUtils;
-            let result = tmpResult.shouldAgeVerifyForAgeGate();
+            let result = AgeGateUtils.shouldAgeVerifyForAgeGate();
             if (result) {
               result = AgeGateUtils.shouldShowAgeGateForChannelId(channel.id);
-              const tmpResult1 = AgeGateUtils;
+              const tmpResult4 = AgeGateUtils;
             }
             let isPrivateResult = channel.isPrivate();
             if (!isPrivateResult) {
@@ -49,13 +47,16 @@ export const createVoiceChannelBadge = function createVoiceChannelBadge(id, guil
             }
             if (!result) {
               if (isPrivateResult) {
-                obj = { channelId: channel.id, channelIconUrl: uri };
-                return obj;
+                const obj2 = { channelId: channel.id, channelIconUrl: uri };
+                return obj2;
               }
             }
+            const tmpResult3 = AgeGateUtils;
           }
+          const tmpResult = utils_ChannelUtils;
         }
       }
     }
   }
+  obj = VoiceChannelBadgeExperiment;
 };

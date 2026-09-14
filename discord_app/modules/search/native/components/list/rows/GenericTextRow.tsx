@@ -20,7 +20,7 @@ export default noop.memo(function GenericTextRow(text) {
   const tmp = closure_6();
   const items = [onPress, text];
   let obj = { style: tmp.title, children: null };
-  onPress = noop.useCallback(
+  const onPress1 = noop.useCallback(
     asyncGeneratorStep(async () => {
       if (c0 === 2) {
         c0 = 3;
@@ -29,8 +29,8 @@ export default noop.memo(function GenericTextRow(text) {
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
-          let obj = { value, done: true };
-          return obj;
+          const obj2 = { value, done: true };
+          return obj2;
         } else {
           return { value: "HermesInternal", done: null };
         }
@@ -43,20 +43,20 @@ export default noop.memo(function GenericTextRow(text) {
               throw value;
             } else if (arg0 === 2) {
               c0 = 3;
-              obj = { value, done: true };
-              return obj;
+              const obj3 = { value, done: true };
+              return obj3;
             } else {
               c1 = 1;
               c0 = 1;
-              const obj1 = { value: onPress(text), done: false };
-              return obj1;
+              const obj4 = { value: onPress(text), done: false };
+              return obj4;
             }
           } else if (arg0 === 1) {
             c0 = 3;
             throw value;
           } else if (arg0 === 2) {
             c0 = 3;
-            obj = { value, done: true };
+            const obj = { value, done: true };
             return obj;
           } else {
             c0 = 3;
@@ -70,13 +70,6 @@ export default noop.memo(function GenericTextRow(text) {
     }),
     items,
   );
-  obj = {
-    lineClamp: 1,
-    variant: "text-md/medium",
-    color: "mobile-text-heading-primary",
-    style: tmp.container,
-    children: text,
-  };
   obj.children = jsx(Text_Text.Text, {
     lineClamp: 1,
     variant: "text-md/medium",
@@ -84,19 +77,15 @@ export default noop.memo(function GenericTextRow(text) {
     style: tmp.container,
     children: text,
   });
-  const label = (
-    <View lineClamp={1} variant="text-md/medium" color="mobile-text-heading-primary" style={tmp.container}>
-      {text}
-    </View>
-  );
-  icon = null != icon;
-  if (icon) {
-    icon = <icon size="sm" color="mobile-text-heading-primary" />;
+  const label = <View style={tmp.title}>{null}</View>;
+  let icon1 = null != icon;
+  if (icon1) {
+    icon1 = <icon size="sm" color="mobile-text-heading-primary" />;
   }
   return jsx(SearchListRow.SearchListRow, {
-    icon,
+    icon: icon1,
     label,
-    onPress,
+    onPress: onPress1,
     trailing,
     accessibilityActions,
     onAccessibilityAction,

@@ -67,7 +67,7 @@ prototype["updateServiceHandler"] = function updateServiceHandler(arg0, usesGate
       const result = serviceNotifications.set(arg0, usesGateway);
       self.handleChange();
     }
-    tmp16 = obj(1332);
+    tmp16 = obj(1330);
   }
 };
 prototype["removeServiceHandler"] = function removeServiceHandler(arg0) {

@@ -56,7 +56,7 @@ export const useCollectiblesShopDeepLinkProps = function useCollectiblesShopDeep
   return initialCategorySkuId(() => {
     if (null != initialBaseProductSkuId) {
       if (null != initialCategorySkuId) {
-        let obj = {
+        let obj2 = {
           initialProductSkuId: tmp,
           initialVariantIndex,
           initialCategorySkuId: tmp6,
@@ -71,20 +71,19 @@ export const useCollectiblesShopDeepLinkProps = function useCollectiblesShopDeep
             products.findIndex((skuId) => skuId.skuId === initialBaseProductSkuId),
           );
         }
-        obj.productIndex = bound;
-        obj = categories;
+        obj2.productIndex = bound;
         let bound1;
         if (null != categories) {
           const _Math2 = Math;
           bound1 = Math.max(
             0,
-            obj.findIndex((skuId) => skuId.skuId === initialCategorySkuId),
+            categories.findIndex((skuId) => skuId.skuId === initialCategorySkuId),
           );
         }
-        obj.categoryIndex = bound1;
+        obj2.categoryIndex = bound1;
       }
-      return obj;
+      return obj2;
     }
-    obj = closure_5;
+    obj2 = closure_5;
   }, items1);
 };

@@ -4,6 +4,8 @@ import DeclarativeNotificationSettingsRedesignExperiment from "DeclarativeNotifi
 import _slicedToArray from "../../../_runtime/metro/00032__.js";
 import noop from "../../../_runtime/metro/00019__.js";
 
+const require = globalThis.__r;
+
 require = fn;
 function getNamedExperiment(experiment) {
   const tmp = NotificationSettingsExperiments.knownExperimentConfigs[experiment];
@@ -16,7 +18,7 @@ function getNamedExperiment(experiment) {
     return tmp;
   }
 }
-const NotificationSettingsConstants = fn(14532);
+const NotificationSettingsConstants = fn(14533);
 ({ NOTIF_SETTING_MAPPING: closure_4, NOTIF_SETTINGS: hasOwnProperty } = NotificationSettingsConstants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/notifications/NotificationSettingsUtils.tsx");
@@ -24,8 +26,9 @@ let result = size.fileFinishedImporting("modules/notifications/NotificationSetti
 export const getAssignedNotifSettingsAndMappings = function getAssignedNotifSettingsAndMappings() {
   const settings = [];
   const mappings = [];
-  let obj = DeclarativeNotificationSettingsRedesignExperiment;
-  const result = obj.isDeclarativeNotificationSettingsRedesignEnabled("getAssignedNotifSettingsAndMappings");
+  const result = DeclarativeNotificationSettingsRedesignExperiment.isDeclarativeNotificationSettingsRedesignEnabled(
+    "getAssignedNotifSettingsAndMappings",
+  );
   const set = new Set();
   const iter = dependencyMap[Symbol.iterator]();
   const nextResult = iter.next();
@@ -51,10 +54,10 @@ export const getAssignedNotifSettingsAndMappings = function getAssignedNotifSett
     let parsed = parseInt(tmp17[0]);
     for (const item10071 of tmp18) {
       if (set.has(item10071)) {
-        obj = { notifType: null, notifSetting: null };
-        obj.notifType = parsed;
-        obj.notifSetting = item10071;
-        arr = mappings.push(obj);
+        let obj2 = { notifType: null, notifSetting: null };
+        obj2.notifType = parsed;
+        obj2.notifSetting = item10071;
+        let arr2 = mappings.push(obj2);
         obj4.return();
         break;
       }
@@ -89,13 +92,13 @@ export const useNotifSettingVisibility = function useNotifSettingVisibility(GAMI
           if (nextResult.id === arg0) {
             let redesignState = tmp3.redesignState;
             if (null != tmp3.experiment) {
-              let obj = { redesignState, experiment: null, variations: null };
-              obj.experiment = closure_1_6(nextResult.experiment);
-              obj.variations = nextResult.variations;
+              let obj2 = { redesignState, experiment: null, variations: null };
+              obj2.experiment = closure_1_6(nextResult.experiment);
+              obj2.variations = nextResult.variations;
               iter.return();
-              return obj;
+              return obj2;
             } else if (null != redesignState) {
-              obj = { redesignState: null };
+              let obj = { redesignState: null };
               obj.redesignState = redesignState;
               iter.return();
               return obj;

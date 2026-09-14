@@ -151,8 +151,8 @@ prototype["asyncGet"] = function asyncGet(ContactSyncDMListCTADismissed, arg1, a
       }
     });
   } else {
-    value = self.getItem(ContactSyncDMListCTADismissed);
-    value.then((result) => {
+    value2 = self.getItem(ContactSyncDMListCTADismissed);
+    value2.then((result) => {
       if (null != result) {
         const _Date = Date;
         const timestamp = Date.now();
@@ -182,8 +182,8 @@ prototype["asyncGetRaw"] = function asyncGetRaw(arg0, arg1) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -196,8 +196,8 @@ prototype["asyncGetRaw"] = function asyncGetRaw(arg0, arg1) {
             throw value;
           } else if (arg0 === 2) {
             item = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
             closure_128_0 = undefined;
             if (null != tmp2) {
@@ -208,7 +208,7 @@ prototype["asyncGetRaw"] = function asyncGetRaw(arg0, arg1) {
             if (secureKeys.has(tmp5)) {
               value = item2.getItem(tmp5);
             } else {
-              value = item.getItem(tmp5);
+              value2 = item.getItem(tmp5);
             }
             c2 = 1;
             item = 1;
@@ -218,21 +218,21 @@ prototype["asyncGetRaw"] = function asyncGetRaw(arg0, arg1) {
           throw value;
         } else if (arg0 === 2) {
           item = 3;
-          const obj1 = { value, done: true };
-          return obj1;
+          const obj5 = { value, done: true };
+          return obj5;
         } else {
           closure_128_0 = value;
           let tmp14 = null;
           if (null != closure_128_0) {
             if (null != closure_129_1) {
-              obj = tmp5(tmp2[3]);
-              obj.mark("\u{1F4BE}", "Got: " + closure_129_1);
+              tmp5(tmp2[3]).mark("\u{1F4BE}", "Got: " + closure_129_1);
+              const obj = tmp5(tmp2[3]);
             }
             tmp14 = closure_128_0;
           }
           item = 3;
-          const obj2 = { value: tmp14, done: true };
-          return obj2;
+          const obj6 = { value: tmp14, done: true };
+          return obj6;
         }
       } catch (tmp25) {
         item = tmp;
@@ -300,18 +300,18 @@ prototype["clear"] = function clear() {
     DCDStrongboxManager.clear(items);
   }
 };
-let size = Object.create(ProxyAsyncStorage.prototype);
-let closure_129_0 = size;
-size.parsePromise = new Promise((parseResolve) => {
+let obj2 = Object.create(ProxyAsyncStorage.prototype);
+let closure_129_0 = obj2;
+obj2.parsePromise = new Promise((parseResolve) => {
   obj.parseResolve = parseResolve;
 });
-size.storage = {};
+obj2.storage = {};
 let promise = new Promise((parseResolve) => {
   obj.parseResolve = parseResolve;
 });
-size.secureKeys = new Set();
-size.hasLoaded = false;
-size = fn(2);
+obj2.secureKeys = new Set();
+obj2.hasLoaded = false;
+const size = fn(2);
 let result = size.fileFinishedImporting("../discord_common/js/packages/storage/native/Storage.tsx");
 
-export const impl = size;
+export const impl = obj2;

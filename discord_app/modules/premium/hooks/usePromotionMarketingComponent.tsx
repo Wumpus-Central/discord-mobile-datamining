@@ -5,6 +5,8 @@ import noop from "../../../../_runtime/metro/00019__.js";
 import UserOfferStore from "../../../stores/billing/UserOfferStore.tsx";
 import PromotionsStore from "../promotions/PromotionsStore.tsx";
 
+const require = globalThis.__r;
+
 require = fn;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/premium/hooks/usePromotionMarketingComponent.tsx");

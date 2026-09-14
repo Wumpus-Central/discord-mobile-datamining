@@ -15,21 +15,20 @@ function trackRoundtrip(apiResponseTimestamp, transition_case, fetched_at) {
     if (null != apiResponseTimestamp.apiResponseTimestamp) {
       diff = apiResponseTimestamp.apiResponseTimestamp - apiResponseTimestamp.initialSendTimestamp;
     }
-    let obj = NetStats;
-    const signalStrength = obj.getSignalStrength();
-    obj = {};
+    const signalStrength = NetStats.getSignalStrength();
+    const obj4 = {};
     const merged = Object.assign(getDeviceMetadataDefault());
     ({ endpoint: obj3.endpoint, wasSuccessful: obj3.was_successful } = apiResponseTimestamp);
-    obj.api_latency_ms = diff;
-    obj.mobile_network_type = NetworkStore.getType();
+    obj4.api_latency_ms = diff;
+    obj4.mobile_network_type = NetworkStore.getType();
     let tmp10 = null != signalStrength;
     if (tmp10) {
-      obj = { mobile_signal_strength_level: signalStrength };
-      tmp10 = obj;
+      const obj5 = { mobile_signal_strength_level: signalStrength };
+      tmp10 = obj5;
     }
     const merged1 = Object.assign(tmp10);
     ({ callerSource: obj3.caller_source, adRequestId: obj3.ad_request_id } = apiResponseTimestamp);
-    obj.fetched_at = fetched_at;
+    obj4.fetched_at = fetched_at;
     const previousAdDecision = apiResponseTimestamp.previousAdDecision;
     let decision_id;
     if (previousAdDecision != null) {
@@ -41,7 +40,7 @@ function trackRoundtrip(apiResponseTimestamp, transition_case, fetched_at) {
     if (decision_id == null) {
       decision_id = null;
     }
-    obj.previous_ad_request_id = decision_id;
+    obj4.previous_ad_request_id = decision_id;
     const previousAdDecision2 = apiResponseTimestamp.previousAdDecision;
     let fetchedAt;
     if (previousAdDecision2 != null) {
@@ -50,11 +49,11 @@ function trackRoundtrip(apiResponseTimestamp, transition_case, fetched_at) {
     if (fetchedAt == null) {
       fetchedAt = null;
     }
-    obj.previous_fetched_at = fetchedAt;
-    obj.transition_case = transition_case;
+    obj4.previous_fetched_at = fetchedAt;
+    obj4.transition_case = transition_case;
     const obj2 = AnalyticsUtilsDefault;
-    obj.is_foregrounded = SessionForegroundUtils.isForegrounded();
-    obj2.track(AnalyticEvents.QUEST_DECISION_ROUNDTRIP, obj);
+    obj4.is_foregrounded = SessionForegroundUtils.isForegrounded();
+    obj2.track(AnalyticEvents.QUEST_DECISION_ROUNDTRIP, obj4);
     const tmp2Result = SessionForegroundUtils;
   }
 }
@@ -134,11 +133,11 @@ prototype["recordQuestRequestApiResponse"] = function recordQuestRequestApiRespo
   if (null != value) {
     let tmp7 = null;
     if (null !== currentFetchedAt) {
-      let obj = { creative: currentCreative, fetchedAt: currentFetchedAt, ttlMillis: 0, adDecisionData: null };
+      const obj = { creative: currentCreative, fetchedAt: currentFetchedAt, ttlMillis: 0, adDecisionData: null };
       let tmp6;
       if (tmp5 != adRequestId) {
-        obj = { decision_id: adRequestId };
-        tmp6 = obj;
+        const obj2 = { decision_id: adRequestId };
+        tmp6 = obj2;
       }
       obj.adDecisionData = tmp6;
       tmp7 = obj;
@@ -200,14 +199,14 @@ prototype["recordQuestRequestApiResponse"] = function recordQuestRequestApiRespo
       tmp14Result = AdDecisionUtils;
     }
     const _HermesInternal = HermesInternal;
-    obj = {};
+    const obj4 = {};
     const combined1 = "" + str2 + "_to_" + str5;
     const merged = Object.assign(value);
     const _Date = Date;
-    obj.apiResponseTimestamp = Date.now();
-    obj.wasSuccessful = adRequestId.wasSuccessful;
-    obj.adRequestId = adRequestId;
-    tmp5 = trackRoundtrip(obj, combined1, currentFetchedAt);
+    obj4.apiResponseTimestamp = Date.now();
+    obj4.wasSuccessful = adRequestId.wasSuccessful;
+    obj4.adRequestId = adRequestId;
+    tmp5 = trackRoundtrip(obj4, combined1, currentFetchedAt);
     const pendingRequests2 = this.pendingRequests;
     pendingRequests2.delete(arg0);
   }

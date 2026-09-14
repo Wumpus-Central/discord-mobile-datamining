@@ -1,6 +1,6 @@
 // discord_app/modules/sound_playback/native/SoundUtils.tsx
 import _mod17 from "../../../../_runtime/metro/00017__.js";
-import MetaQuestUtils from "../../device/MetaQuestUtils.android.tsx";
+import MetaQuestUtils_mod from "../../device/MetaQuestUtils.android.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
 const NativeModules = _mod17.NativeModules;
@@ -110,7 +110,7 @@ let obj = {
   MEDIA: "media",
   NOTIFICATION_NO_VIBRATION: "notification_no_vibration",
 };
-obj = {
+const obj3 = {
   call_calling: obj.VOICE,
   call_ringing: null,
   call_ringing_halloween: null,
@@ -145,8 +145,10 @@ obj = {
   activity_user_join: null,
   activity_user_left: null,
 };
-obj.call_ringing = MetaQuestUtils.isMetaQuest() ? obj.MEDIA : obj.RING_TONE;
-obj.call_ringing_halloween = MetaQuestUtils.isMetaQuest() ? obj.MEDIA : obj.RING_TONE;
+let MetaQuestUtils = MetaQuestUtils_mod;
+obj3.call_ringing = MetaQuestUtils.isMetaQuest() ? obj.MEDIA : obj.RING_TONE;
+let MetaQuestUtils = MetaQuestUtils_mod;
+obj3.call_ringing_halloween = MetaQuestUtils.isMetaQuest() ? obj.MEDIA : obj.RING_TONE;
 ({
   VOICE: obj2.camera_on,
   VOICE: obj2.camera_off,
@@ -181,9 +183,9 @@ obj.call_ringing_halloween = MetaQuestUtils.isMetaQuest() ? obj.MEDIA : obj.RING
 } = obj);
 const result = size.fileFinishedImporting("modules/sound_playback/native/SoundUtils.tsx");
 let fn = (name, call_calling, _volume, DEFAULT) => {
-  obj = Object.create(new.target.prototype);
+  const obj = Object.create(new.target.prototype);
   obj.name = name;
-  obj.usage = obj[call_calling];
+  obj.usage = obj3[call_calling];
   obj._volume = _volume;
   obj.outputChannel = DEFAULT;
   return obj;
@@ -283,7 +285,7 @@ prototype2["ensureSound"] = function ensureSound() {
           }
           closure_0(obj);
         };
-        obj = Object.create(tmp.prototype);
+        const obj = Object.create(tmp.prototype);
         obj._volume = tmp4;
         obj._loaded = false;
         closure_3 = tmp6 + 1;

@@ -60,9 +60,9 @@ class ActionButton {
     if (flag) {
       num2 = 0.25;
     }
-    obj = { style: items, children: null };
+    obj1 = { style: items, children: null };
     items[2] = { opacity: num2 };
-    obj1 = {
+    obj12 = {
       circleRadius: tmp6.buttonRadius,
       cutoutRadius: sum,
       enableCutout: showBadge,
@@ -73,35 +73,35 @@ class ActionButton {
     if (null == backgroundColor) {
       backgroundColor = closure_9;
     }
-    obj1.circleFillColor = backgroundColor;
+    obj12.circleFillColor = backgroundColor;
     items1 = [, , ,];
-    items1[0] = tmp10(tmp2Result, obj1);
-    obj2 = { style: null, children: null };
+    items1[0] = tmp10(tmp2Result, obj12);
+    obj13 = { style: null, children: null };
     items2 = [,];
     items2[0] = tmp.iconContainer;
     items2[1] = { width: result, height: result };
-    obj2.style = items2;
+    obj13.style = items2;
     if (null != lottieComponent) {
       tmp17 = closure_3;
-      obj3 = { color: null };
-      obj3.color = lottieComponentColor;
-      cloneElementResult = closure_3.cloneElement(lottieComponent, obj3);
+      obj14 = { color: null };
+      obj14.color = lottieComponentColor;
+      cloneElementResult = closure_3.cloneElement(lottieComponent, obj14);
     } else if (null != IconComponent) {
-      obj4 = { style: null };
-      obj4.style = imageStyle;
-      cloneElementResult = tmp10(IconComponent, obj4);
+      obj15 = { style: null };
+      obj15.style = imageStyle;
+      cloneElementResult = tmp10(IconComponent, obj15);
     } else {
       tmp15 = Image;
-      obj5 = { source: null, style: null };
-      obj5.source = source;
-      obj5.style = imageStyle;
-      cloneElementResult = tmp10(Image, obj5);
+      obj16 = { source: null, style: null };
+      obj16.source = source;
+      obj16.style = imageStyle;
+      cloneElementResult = tmp10(Image, obj16);
     }
-    obj2.children = cloneElementResult;
-    items1[1] = tmp10(tmp13, obj2);
+    obj13.children = cloneElementResult;
+    items1[1] = tmp10(tmp13, obj13);
     tmp10Result = null;
     if (showBadge) {
-      obj6 = { style: null };
+      obj17 = { style: null };
       items3 = [,];
       items3[0] = tmp.badge;
       size = { width: null, height: null, borderRadius: null, top: null, left: null };
@@ -114,13 +114,13 @@ class ActionButton {
       tmp11Result1 = tmp11(tmp3[9]);
       size.left = tmp11Result1.getBadgeLeft(tmp6.badgeRadius, tmp6.buttonRadius, 45);
       items3[1] = size;
-      obj6.style = items3;
-      tmp10Result = tmp10(tmp13, obj6);
+      obj17.style = items3;
+      tmp10Result = tmp10(tmp13, obj17);
     }
     items1[2] = tmp10Result;
     items1[3] = children;
-    obj.children = items1;
-    obj.children = tmp12(tmp13, obj);
+    obj1.children = items1;
+    obj.children = tmp12(tmp13, obj1);
     return tmp10(onPress(tmp3[8]).PressableOpacity, obj);
   }
 }
@@ -129,13 +129,13 @@ get_ActivityIndicator = fn(17);
 const resetFocusTimer = fn(9597).resetFocusTimer;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-let ColorUtils = fn(4486);
+const ColorUtils = fn(4486);
 let closure_9 = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.WHITE, 0.24);
 let closure_10 = Object.freeze({ buttonRadius: 28, badgeRadius: 6, cutoutInset: 3 });
 const frozen = Object.freeze({ buttonRadius: 24, badgeRadius: 4, cutoutInset: 2 });
 let closure_12 = 24 + 2 * frozen.buttonRadius * 5 + 96;
-fn(4636);
-ColorUtils = {
+const createStyles = fn(4636);
+let obj3 = {
   buttonContainer: { position: "absolute" },
   iconContainer: { position: "absolute", justifyContent: "center", alignItems: "center" },
   badge: { backgroundColor: "white", position: "absolute" },
@@ -157,13 +157,12 @@ const rect = {
   alignItems: "center",
   justifyContent: "center",
 };
-ColorUtils.notificationArea = rect;
-ColorUtils.notificationText = { lineHeight: 16 };
-ColorUtils = { backgroundColor: nativeDefault.colors.CONTROL_CRITICAL_PRIMARY_BACKGROUND_DEFAULT };
-ColorUtils.notificationAreaMentioned = ColorUtils;
-const createStyles = { backgroundColor: nativeDefault.unsafe_rawColors.PRIMARY_600 };
-ColorUtils.notificationAreaUnread = createStyles;
-createStyles.createStyles(ColorUtils);
+obj3.notificationArea = rect;
+obj3.notificationText = { lineHeight: 16 };
+obj3.notificationAreaMentioned = { backgroundColor: nativeDefault.colors.CONTROL_CRITICAL_PRIMARY_BACKGROUND_DEFAULT };
+let obj4 = { backgroundColor: nativeDefault.colors.CONTROL_CRITICAL_PRIMARY_BACKGROUND_DEFAULT };
+obj3.notificationAreaUnread = { backgroundColor: nativeDefault.unsafe_rawColors.PRIMARY_600 };
+createStyles.createStyles(obj3);
 let size = fn(2);
 let result = size.fileFinishedImporting("modules/video_calls/native/components/CallBarAction.tsx");
 
@@ -220,10 +219,11 @@ export const PrimaryActionButton = function PrimaryActionButton(isSmallSize) {
     flag = false;
   }
   const merged = Object.assign(isSmallSize, Object.assign({ isSmallSize: 0 }));
-  let obj = { backgroundColor: nativeDefault.unsafe_rawColors.RED_400, imageStyle: null, isSmallSize: null };
-  obj = { tintColor: nativeDefault.unsafe_rawColors.WHITE };
-  obj.imageStyle = obj;
-  obj.isSmallSize = flag;
+  const obj = {
+    backgroundColor: nativeDefault.unsafe_rawColors.RED_400,
+    imageStyle: { tintColor: nativeDefault.unsafe_rawColors.WHITE },
+    isSmallSize: flag,
+  };
   const merged1 = Object.assign(merged);
   return React5(ActionButton, obj);
 };
@@ -231,27 +231,27 @@ export const NotifiedActionButton = function NotifiedActionButton(isMentioned) {
   isMentioned = isMentioned.isMentioned;
   const merged = Object.assign(isMentioned, Object.assign({ notifications: 0, isMentioned: 0 }));
   const tmp2 = closure_13();
-  let obj = {};
+  const obj = {};
   const merged1 = Object.assign(merged);
   const items = [tmp2.notificationArea];
   if (true !== isMentioned) {
     if (undefined !== isMentioned) {
       let notificationAreaMentioned = tmp2.notificationAreaUnread;
     }
-    obj = { children: null };
-    obj = { style: null, children: null };
+    const obj2 = { children: null };
+    const obj3 = { style: null, children: null };
     items[1] = notificationAreaMentioned;
-    obj.style = items;
-    const obj1 = {
+    obj3.style = items;
+    const obj4 = {
       style: tmp2.notificationText,
       variant: "text-xs/semibold",
       color: "text-overlay-light",
       children: isMentioned.notifications,
     };
-    obj.children = React5(Text_Text.Text, obj1);
-    obj.children = React5(hasOwnProperty, obj);
-    obj.children = React5(ActionButton, obj);
-    return React5(hasOwnProperty, obj);
+    obj3.children = React5(Text_Text.Text, obj4);
+    obj.children = React5(hasOwnProperty, obj3);
+    obj2.children = React5(ActionButton, obj);
+    return React5(hasOwnProperty, obj2);
   }
   notificationAreaMentioned = tmp2.notificationAreaMentioned;
 };

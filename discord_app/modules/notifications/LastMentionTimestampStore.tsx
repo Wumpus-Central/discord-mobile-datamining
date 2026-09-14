@@ -287,7 +287,7 @@ export const trackMessageNotificationTimestamps = function trackMessageNotificat
       return roles.includes(item);
     });
   }
-  const obj = {
+  const obj2 = {
     type: "MESSAGE_NOTIFICATION_SHOWN",
     guildId,
     mentioned: someResult,
@@ -297,7 +297,7 @@ export const trackMessageNotificationTimestamps = function trackMessageNotificat
   if (someResult1) {
     someResult1 = !result1;
   }
-  obj.roleMentioned = someResult1;
-  obj.everyoneMentioned = true === mentions.mention_everyone && !result;
-  obj.dispatch(obj);
+  obj2.roleMentioned = someResult1;
+  obj2.everyoneMentioned = true === mentions.mention_everyone && !result;
+  DispatcherDefault.dispatch(obj2);
 };

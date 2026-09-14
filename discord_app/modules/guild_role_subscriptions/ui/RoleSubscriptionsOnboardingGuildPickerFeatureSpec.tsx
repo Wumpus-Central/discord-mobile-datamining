@@ -27,19 +27,21 @@ export default {
       () => (guild, arg1) => {
         let result = closure_1_3(guild, arg1);
         if (result) {
-          closure_1_0(7363);
-          const obj = {
+          const obj2 = {
             guild,
             isOwner: true,
             canManageGuildRoleSubscriptions: true,
-            isUserInCreatorMonetizationEligibleCountry: closure_1_0(7364).isUserInCreatorMonetizationEligibleCountry(),
+            isUserInCreatorMonetizationEligibleCountry: null,
             shouldRestrictUpdatingRoleSubscriptionSettings: null,
           };
+          const obj = closure_1_0(7363);
+          obj2.isUserInCreatorMonetizationEligibleCountry =
+            closure_1_0(7364).isUserInCreatorMonetizationEligibleCountry();
           const obj3 = closure_1_0(7364);
-          obj.shouldRestrictUpdatingRoleSubscriptionSettings = closure_1_0(
+          obj2.shouldRestrictUpdatingRoleSubscriptionSettings = closure_1_0(
             4268,
           ).shouldRestrictUpdatingCreatorMonetizationSettings(guild.id);
-          result = obj.canSeeGuildRoleSubscriptionSettings(obj);
+          result = obj.canSeeGuildRoleSubscriptionSettings(obj2);
           const obj4 = closure_1_0(4268);
         }
         return result;

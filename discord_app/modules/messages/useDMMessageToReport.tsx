@@ -8,14 +8,16 @@ const result = size.fileFinishedImporting("modules/messages/useDMMessageToReport
 
 export const useDMMessageToReport = function useDMMessageToReport(channel, id, arg2) {
   let isRelationshipTypeSpamReportable = arg2;
-  let obj = useIsRelationshipTypeSpamReportable;
   if (!arg2) {
     isRelationshipTypeSpamReportable = obj.useIsRelationshipTypeSpamReportable(id);
   }
-  let tmp2Result = useLongestChannelMessageBeforeReply;
-  const longestChannelMessageBeforeReply = tmp2Result.useLongestChannelMessageBeforeReply(channel.id, id);
-  tmp2Result = useMessageRequestPreview;
-  const messageRequestPreview = tmp2Result.useMessageRequestPreview(channel, {
+  obj = useIsRelationshipTypeSpamReportable;
+  const longestChannelMessageBeforeReply = useLongestChannelMessageBeforeReply.useLongestChannelMessageBeforeReply(
+    channel.id,
+    id,
+  );
+  const tmp2Result = useLongestChannelMessageBeforeReply;
+  const messageRequestPreview = useMessageRequestPreview.useMessageRequestPreview(channel, {
     enabled: isRelationshipTypeSpamReportable,
   });
   const message = messageRequestPreview.message;
@@ -35,6 +37,5 @@ export const useDMMessageToReport = function useDMMessageToReport(channel, id, a
     }
     tmp6 = tmp8;
   }
-  obj = { message: tmp6, isReportable: isRelationshipTypeSpamReportable, isLoaded: null != tmp6 || loaded || error };
-  return obj;
+  return { message: tmp6, isReportable: isRelationshipTypeSpamReportable, isLoaded: null != tmp6 || loaded || error };
 };

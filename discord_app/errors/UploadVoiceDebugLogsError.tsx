@@ -1,6 +1,8 @@
 // discord_app/errors/UploadVoiceDebugLogsError.tsx
 import size from "../../_runtime/metro/00002__.js";
 
+const require = globalThis.__r;
+
 const UploadErrorCodes = {
   GENERAL: 0,
   [0]: "GENERAL",

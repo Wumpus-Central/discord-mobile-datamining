@@ -2,6 +2,8 @@
 import ModalActionCreatorsDefault from "../../../actions/ModalActionCreators.tsx";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 
+const require = globalThis.__r;
+
 const require = fn;
 const ShopProductPurchaseSuccessModal = "ShopProductPurchaseSuccessModal";
 const size = fn(2);

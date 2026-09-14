@@ -84,10 +84,10 @@ function handleThreadMemberUpdate(joinTimestamp) {
     result.catch(NOOP);
   }
 }
-const FavoritesGuildSuggestionsStore = fn(16297);
+const FavoritesGuildSuggestionsStore = fn(16299);
 ({ NO_SUGGESTIONS: c3, setFavoritesGuildSuggestions: closure_4 } = FavoritesGuildSuggestionsStore);
 const NOOP = fn(1074).NOOP;
-let prototype = function FavoriteManager() {
+const prototype = function FavoriteManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
   applyArgumentsResult.actions = {
     CHANNEL_DELETE: handleChannelDelete,
@@ -103,8 +103,8 @@ let prototype = function FavoriteManager() {
   return applyArgumentsResult;
 }.prototype;
 class prototype extends tmp3 {}
-prototype = new prototype();
+const prototype1 = new prototype();
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/favorites/FavoriteManager.tsx");
 
-export default prototype;
+export default prototype1;

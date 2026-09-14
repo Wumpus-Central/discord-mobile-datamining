@@ -9,6 +9,8 @@ import noop from "../../../../_runtime/metro/00019__.js";
 import InviteStore from "../../../stores/InviteStore.tsx";
 import SortedVoiceStateStore from "../../../stores/views/SortedVoiceStateStore.tsx";
 
+const require = globalThis.__r;
+
 require = fn;
 function getVoiceInviteEmbedRenderInfo(state) {
   if (state.state !== constants3.RESOLVING) {
@@ -18,8 +20,7 @@ function getVoiceInviteEmbedRenderInfo(state) {
           if (obj5.getInviteType(state) !== InviteTypes.GUILD) {
             return null;
           } else {
-            let tmp7Result = InviteTypeUtils;
-            const guildInviteExtendedType = tmp7Result.getGuildInviteExtendedType(state);
+            const guildInviteExtendedType = InviteTypeUtils.getGuildInviteExtendedType(state);
             if (guildInviteExtendedType !== InviteTypeUtils.GuildInviteExtendedType.VOICE_CHANNEL) {
               return null;
             } else {
@@ -30,18 +31,19 @@ function getVoiceInviteEmbedRenderInfo(state) {
               }
               let tmp4 = null;
               if (null != id) {
-                tmp7Result = VoiceChannelListInviteExperiment;
-                let obj = { guildId: id, location: "mobile_invite_embed_impression" };
-                let enabled = tmp7Result.getVoiceChannelListInviteExperiment(obj).enabled;
+                const obj = { guildId: id, location: "mobile_invite_embed_impression" };
+                let enabled = VoiceChannelListInviteExperiment.getVoiceChannelListInviteExperiment(obj).enabled;
                 if (enabled) {
                   enabled = VoiceChannelListInviteEmbed.canShowVoiceChannelListInviteEmbed(state);
-                  const tmp7Result1 = VoiceChannelListInviteEmbed;
+                  const tmp7Result4 = VoiceChannelListInviteEmbed;
                 }
-                obj = { treatmentRendered: enabled };
-                tmp4 = obj;
+                const obj2 = { treatmentRendered: enabled };
+                tmp4 = obj2;
+                const tmp7Result3 = VoiceChannelListInviteExperiment;
               }
               return tmp4;
             }
+            const tmp7Result = InviteTypeUtils;
           }
           obj5 = InviteTypeUtils;
         }
@@ -132,11 +134,11 @@ export const handleAnnouncementMessageViewTracking = function handleAnnouncement
       const item = arr.forEach((message) => {
         message = message.message;
         const messageReference = message.messageReference;
-        let guild_id;
+        let guild_id1;
         if (messageReference != null) {
-          guild_id = messageReference.guild_id;
+          guild_id1 = messageReference.guild_id;
         }
-        let hasFlagResult = null != guild_id && null != message.webhookId;
+        let hasFlagResult = null != guild_id1 && null != message.webhookId;
         if (hasFlagResult) {
           hasFlagResult = message.hasFlag(constants4.IS_CROSSPOST);
         }
@@ -148,12 +150,12 @@ export const handleAnnouncementMessageViewTracking = function handleAnnouncement
             }
             if (hasFlagResult) {
               const messageReference2 = message.messageReference;
-              let guild_id1;
+              let guild_id2;
               if (messageReference2 != null) {
-                guild_id1 = messageReference2.guild_id;
+                guild_id2 = messageReference2.guild_id;
               }
-              if (null != guild_id1) {
-                guild_id = message.messageReference.guild_id;
+              if (null != guild_id2) {
+                let guild_id = message.messageReference.guild_id;
               }
               if (!hasFlagResult) {
                 const obj = {

@@ -10,8 +10,8 @@ let closure_4 = async function _importWithRetry(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -24,8 +24,8 @@ let closure_4 = async function _importWithRetry(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c6 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           closure_2 = tmp3;
           closure_1 = tmp7;
@@ -46,17 +46,17 @@ let closure_4 = async function _importWithRetry(arg0) {
             throw value;
           } else if (arg0 === 2) {
             c6 = 3;
-            const obj1 = { value, done: true };
-            return obj1;
+            const obj4 = { value, done: true };
+            return obj4;
           } else {
             closure_129_3 = 500;
             closure_129_4 = 0;
             c4 = 1;
             const _performance = performance;
-            const obj2 = { detail: null };
-            const obj3 = { webpackId: closure_129_1, name: closure_129_2 };
-            obj2.detail = obj3;
-            performance.mark("importWithRetry:start", obj2);
+            const obj5 = { detail: null };
+            const obj6 = { webpackId: closure_129_1, name: closure_129_2 };
+            obj5.detail = obj6;
+            performance.mark("importWithRetry:start", obj5);
             closure_129_0();
             c5 = 3;
             c6 = 1;
@@ -71,8 +71,8 @@ let closure_4 = async function _importWithRetry(arg0) {
           } else {
             c5 = 4;
             c6 = 1;
-            const obj4 = { value: closure_130_2(closure_129_3), done: false };
-            return obj4;
+            const obj7 = { value: closure_130_2(closure_129_3), done: false };
+            return obj7;
           }
         } else if (3 === tmp7) {
           if (arg0 === 1) {
@@ -81,13 +81,13 @@ let closure_4 = async function _importWithRetry(arg0) {
           } else if (arg0 === 2) {
             c4 = 0;
             c6 = 3;
-            const obj5 = { value, done: true };
-            return obj5;
+            const obj8 = { value, done: true };
+            return obj8;
           } else {
             c4 = 0;
             c6 = 3;
-            const obj6 = { value, done: true };
-            return obj6;
+            const obj9 = { value, done: true };
+            return obj9;
           }
         } else if (4 === tmp7) {
           if (arg0 === 1) {
@@ -95,13 +95,13 @@ let closure_4 = async function _importWithRetry(arg0) {
             throw value;
           } else if (arg0 === 2) {
             c6 = 3;
-            const obj7 = { value, done: true };
-            return obj7;
+            const obj10 = { value, done: true };
+            return obj10;
           } else {
             c5 = 5;
             c6 = 1;
-            const obj8 = { value: closure_130_3(), done: false };
-            return obj8;
+            const obj11 = { value: closure_130_3(), done: false };
+            return obj11;
           }
         } else if (arg0 === 1) {
           c6 = 3;
@@ -112,7 +112,7 @@ let closure_4 = async function _importWithRetry(arg0) {
           closure_129_4 = closure_129_4 + 1;
         }
         c6 = 3;
-        obj = { value, done: true };
+        const obj = { value, done: true };
         return obj;
       }
     } catch (tmp34) {

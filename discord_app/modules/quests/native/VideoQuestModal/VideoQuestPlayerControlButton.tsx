@@ -7,15 +7,18 @@ import n from "../../../../../_runtime/metro/00672__.js";
 
 require = fn;
 const jsx = fn(21).jsx;
-fn(4636);
-let obj = { disabled: { opacity: 0.5 }, container: null, blur: null };
-obj = { borderRadius: nativeDefault.radii.round, overflow: "hidden" };
-obj.container = obj;
-const createStyles = { backgroundColor: null, padding: null };
+const createStyles = fn(4636);
+let obj = {
+  disabled: { opacity: 0.5 },
+  container: { borderRadius: nativeDefault.radii.round, overflow: "hidden" },
+  blur: null,
+};
+const obj4 = { backgroundColor: null, padding: null };
+const obj3 = { borderRadius: nativeDefault.radii.round, overflow: "hidden" };
 const importDefaultResultResult = n(nativeDefault.unsafe_rawColors.BLACK);
-createStyles.backgroundColor = n(nativeDefault.unsafe_rawColors.BLACK).alpha(0.5).hex();
-createStyles.padding = nativeDefault.space.PX_12;
-obj.blur = createStyles;
+obj4.backgroundColor = n(nativeDefault.unsafe_rawColors.BLACK).alpha(0.5).hex();
+obj4.padding = nativeDefault.space.PX_12;
+obj.blur = obj4;
 let closure_4 = createStyles.createStyles(obj);
 const alphaResult = n(nativeDefault.unsafe_rawColors.BLACK).alpha(0.5);
 const size = fn(2);
@@ -30,11 +33,10 @@ export const VideoQuestPlayerControlButton = noop.memo((arg0) => {
   if (disabled) {
     disabled = tmp2.disabled;
   }
-  let obj = { style: items };
+  const obj = { style: items };
   items[1] = disabled;
   items[2] = style;
   const merged1 = Object.assign(merged);
-  obj = { style: tmp2.blur, blurAmount: 0.2, blurStyle: "default", blurTheme: "dark", children };
   obj.children = jsx(VisualEffectViewDefault, {
     style: tmp2.blur,
     blurAmount: 0.2,
@@ -42,11 +44,5 @@ export const VideoQuestPlayerControlButton = noop.memo((arg0) => {
     blurTheme: "dark",
     children,
   });
-  return jsx(Pressables.PressableOpacity, {
-    style: tmp2.blur,
-    blurAmount: 0.2,
-    blurStyle: "default",
-    blurTheme: "dark",
-    children,
-  });
+  return jsx(Pressables.PressableOpacity, { style: items });
 });

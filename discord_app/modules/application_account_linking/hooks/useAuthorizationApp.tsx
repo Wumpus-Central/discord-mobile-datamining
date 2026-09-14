@@ -3,8 +3,10 @@ import noop from "../../../../_runtime/metro/00019__.js";
 import ApplicationStore from "../../applications/ApplicationStore.tsx";
 import ApplicationRecord from "../../../records/ApplicationRecord.tsx";
 
+const require = globalThis.__r;
+
 const require = fn;
-const ApplicationTypes = fn(1350).ApplicationTypes;
+const ApplicationTypes = fn(1348).ApplicationTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/application_account_linking/hooks/useAuthorizationApp.tsx");
 

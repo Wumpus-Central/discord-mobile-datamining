@@ -20,29 +20,29 @@ export default function BenchmarkResultsList(results) {
     const items = [
       results.map((kind) => {
         if ("mount" === kind.kind) {
-          let obj = { label: null, subLabel: null };
+          const obj = { label: null, subLabel: null };
           ({ label: obj.label, elapsedMs } = kind);
           const _HermesInternal = HermesInternal;
           obj.subLabel = "" + elapsedMs.toFixed(1) + " ms total";
           let tmp5 = closure_1_2(TableRow.TableRow, obj, kind.id);
         } else {
-          obj = { label: null, subLabel: null };
+          const obj2 = { label: null, subLabel: null };
           const meanMs = kind.meanMs;
           const toFixedResult = meanMs.toFixed(1);
           const worstMs = kind.worstMs;
           const _HermesInternal2 = HermesInternal;
-          obj.label = "Scroll \u00B7 mean " + toFixedResult + " ms \u00B7 worst " + worstMs.toFixed(1) + " ms";
+          obj2.label = "Scroll \u00B7 mean " + toFixedResult + " ms \u00B7 worst " + worstMs.toFixed(1) + " ms";
           ({ dropped, frames } = kind);
           const FRAME_BUDGET_MS = startFrameMonitor.FRAME_BUDGET_MS;
           const _HermesInternal3 = HermesInternal;
-          obj.subLabel = "" + dropped + "/" + frames + " frames over " + FRAME_BUDGET_MS.toFixed(1) + " ms";
-          tmp5 = closure_1_2(TableRow.TableRow, obj, kind.id);
+          obj2.subLabel = "" + dropped + "/" + frames + " frames over " + FRAME_BUDGET_MS.toFixed(1) + " ms";
+          tmp5 = closure_1_2(TableRow.TableRow, obj2, kind.id);
         }
         return tmp5;
       }),
     ];
-    obj = { label: "Clear results", variant: "danger", arrow: true, onPress: tmp };
-    items[1] = React2(TableRow.TableRow, obj);
+    let obj2 = { label: "Clear results", variant: "danger", arrow: true, onPress: tmp };
+    items[1] = React2(TableRow.TableRow, obj2);
     obj.children = items;
     tmp2 = React3(TableRowGroup.TableRowGroup, obj);
   }

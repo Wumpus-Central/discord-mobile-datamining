@@ -5,6 +5,8 @@ import ChannelStore from "../../stores/ChannelStore.tsx";
 import GuildStore from "../../stores/GuildStore.tsx";
 import PermissionStore from "../../stores/PermissionStore.tsx";
 
+const require = globalThis.__r;
+
 require = fn;
 function canForwardMessage(state) {
   let obj = PermissionStore;
@@ -26,30 +28,30 @@ function canForwardMessage(state) {
   if (null == state) {
     return false;
   } else {
-    let hasItem = state.state !== constants2.SEND_FAILED;
-    if (hasItem) {
+    let hasItem1 = state.state !== constants2.SEND_FAILED;
+    if (hasItem1) {
       const FORWARDABLE = constants3.FORWARDABLE;
-      hasItem = FORWARDABLE.has(state.type);
+      hasItem1 = FORWARDABLE.has(state.type);
     }
-    if (hasItem) {
-      hasItem = null == state.poll;
+    if (hasItem1) {
+      hasItem1 = null == state.poll;
     }
-    if (hasItem) {
-      hasItem = null == state.sharedClientTheme;
+    if (hasItem1) {
+      hasItem1 = null == state.sharedClientTheme;
     }
-    if (hasItem) {
-      hasItem = null == state.activity;
+    if (hasItem1) {
+      hasItem1 = null == state.activity;
     }
-    if (hasItem) {
-      hasItem = null == state.call;
+    if (hasItem1) {
+      hasItem1 = null == state.call;
     }
-    if (hasItem) {
-      hasItem = null == state.activityInstance;
+    if (hasItem1) {
+      hasItem1 = null == state.activityInstance;
     }
-    if (hasItem) {
-      hasItem = 0 === FlagUtils.removeFlag(state.flags, closure_10);
+    if (hasItem1) {
+      hasItem1 = 0 === FlagUtils.removeFlag(state.flags, closure_10);
     }
-    if (hasItem) {
+    if (hasItem1) {
       const channel = obj3.getChannel(state.channel_id);
       if (null != channel) {
         if (!obj.can(constants4.READ_MESSAGE_HISTORY, channel)) {
@@ -65,7 +67,7 @@ function canForwardMessage(state) {
       let tmp8 = null == guild_id;
       if (!tmp8) {
         const guild = obj4.getGuild(guild_id);
-        hasItem = undefined;
+        let hasItem;
         if (guild != null) {
           const features = guild.features;
           hasItem = features.has(constants.FORWARDING_DISABLED);

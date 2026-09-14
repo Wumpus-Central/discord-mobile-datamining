@@ -50,17 +50,17 @@ function messageTimestampIsInInterval(arg0, arg1) {
 function createFailedMessage(channel_id) {
   channel_id = channel_id.channel_id;
   ({ content, tts, state } = channel_id);
-  let obj = { channelId: channel_id, content, tts, state: MessageStates.SEND_FAILED };
-  const tmp3 = file(7854)(obj);
+  const tmp3 = file(7854)({ channelId: channel_id, content, tts, state: MessageStates.SEND_FAILED });
   const id = tmp3;
   ({ timestamp: tmp3.timestamp, file } = channel_id);
-  obj = { isHydratingExpiredPendingMessage: state === MessageStates.SENDING };
-  file(7559).receiveMessage(channel_id, tmp3, true, obj);
+  file(7559).receiveMessage(channel_id, tmp3, true, { isHydratingExpiredPendingMessage: state === MessageStates.SENDING });
   if (null != file) {
     file(573).wait(() => UploadActionCreatorsDefault.restoreFailedUpload(id.id, file));
     const tmpResult = file(573);
   }
+  const obj = { channelId: channel_id, content, tts, state: MessageStates.SEND_FAILED };
   const obj2 = file(7559);
+  const obj3 = { isHydratingExpiredPendingMessage: state === MessageStates.SENDING };
 }
 function resumeSendingMessage() {
   const self = this;
@@ -108,8 +108,8 @@ let closure_25 = async function _rehydrateFailedMessages(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -123,8 +123,8 @@ let closure_25 = async function _rehydrateFailedMessages(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c9 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           closure_7 = tmp2;
           closure_6 = tmp3;
@@ -136,8 +136,8 @@ let closure_25 = async function _rehydrateFailedMessages(arg0) {
           let state;
           c8 = 1;
           c9 = 1;
-          const obj1 = { value: getAllCachedMessages(), done: false };
-          return obj1;
+          const obj4 = { value: getAllCachedMessages(), done: false };
+          return obj4;
         }
       } else {
         if (1 === keys) {
@@ -146,8 +146,8 @@ let closure_25 = async function _rehydrateFailedMessages(arg0) {
             throw value;
           } else if (arg0 === 2) {
             c9 = 3;
-            const obj2 = { value, done: true };
-            return obj2;
+            const obj5 = { value, done: true };
+            return obj5;
           } else {
             closure_134_1 = value;
             const _Object = Object;
@@ -174,7 +174,7 @@ let closure_25 = async function _rehydrateFailedMessages(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c9 = 3;
-          obj = { value, done: true };
+          const obj = { value, done: true };
           return obj;
         }
         while (importDefault[closure_3] !== undefined) {
@@ -204,8 +204,8 @@ let closure_25 = async function _rehydrateFailedMessages(arg0) {
                     let verboseResult1 = closure_135_11.verbose("sending message with data " + JSON.stringify(closure_134_3));
                     c8 = 2;
                     c9 = 1;
-                    let obj3 = { value: closure_135_23(closure_134_3), done: false };
-                    return obj3;
+                    let obj6 = { value: closure_135_23(closure_134_3), done: false };
+                    return obj6;
                   }
                 }
                 let tmp36 = globalThis;
@@ -241,7 +241,7 @@ let closure_25 = async function _rehydrateFailedMessages(arg0) {
   }
 };
 const MessageStates = fn(1074).MessageStates;
-const MutexUtils = fn(14639);
+const MutexUtils = fn(14640);
 let closure_10 = MutexUtils.createLock();
 let closure_11 = new LoggerDefault("LocalMessageCacheManager");
 const LocalMessageCacheManagerMessageCacheKey = "LocalMessageCacheManagerMessageCacheKey";
@@ -259,7 +259,6 @@ function _getMessage(arg0) {
 
 }
 function _writeMessage(c0, id) {
-  let obj = closure_11;
   id = undefined;
   if (id != null) {
     id = id.id;
@@ -271,26 +270,26 @@ function _writeMessage(c0, id) {
   closure_11.verbose("_writeMessage", id, channel_id);
   if (typeof _getMessages === "function") {
     const Storage = Storage3.Storage;
-    obj = Storage.get(LocalMessageCacheManagerMessageCacheKey);
-    if (null == obj) {
-      obj = {};
+    let obj2 = Storage.get(LocalMessageCacheManagerMessageCacheKey);
+    if (null == obj2) {
+      obj2 = {};
     }
     if (null != id) {
-      obj = {};
+      const obj3 = {};
       const merged = Object.assign(id);
       let str = id.content;
       if (str == null) {
         str = "";
       }
-      obj.content = str;
-      obj[c0] = obj;
-      obj.verbose("_writeMessage after write", obj[c0].id, obj[c0].channel_id);
+      obj3.content = str;
+      obj2[c0] = obj3;
+      closure_11.verbose("_writeMessage after write", obj2[c0].id, obj2[c0].channel_id);
     } else {
       delete tmp[tmp2];
     }
     const Storage2 = Storage3.Storage;
-    const result = Storage2.set(LocalMessageCacheManagerMessageCacheKey, obj);
-    return obj;
+    const result = Storage2.set(LocalMessageCacheManagerMessageCacheKey, obj2);
+    return obj2;
   } else {
     throw new TypeError("Trying to call a non-function");
   }
@@ -316,8 +315,8 @@ class LocalMessageCacheManager extends tmp3 {
           if (arg0 === 1) {
             throw value;
           } else if (arg0 === 2) {
-            let obj = { value, done: true };
-            return obj;
+            let obj2 = { value, done: true };
+            return obj2;
           } else {
             return { value: "HermesInternal", done: null };
           }
@@ -330,8 +329,8 @@ class LocalMessageCacheManager extends tmp3 {
                 throw value;
               } else if (arg0 === 2) {
                 c10 = 3;
-                obj = { value, done: true };
-                return obj;
+                const obj3 = { value, done: true };
+                return obj3;
               } else {
                 closure_6 = tmp8;
                 closure_134_0 = undefined;
@@ -341,8 +340,8 @@ class LocalMessageCacheManager extends tmp3 {
                 let state;
                 c9 = 1;
                 c10 = 1;
-                const obj1 = { value: getAllCachedMessages(), done: false };
-                return obj1;
+                const obj4 = { value: getAllCachedMessages(), done: false };
+                return obj4;
               }
             } else {
               if (1 === tmp8) {
@@ -351,8 +350,8 @@ class LocalMessageCacheManager extends tmp3 {
                   throw value;
                 } else if (arg0 === 2) {
                   c10 = 3;
-                  const obj2 = { value, done: true };
-                  return obj2;
+                  const obj5 = { value, done: true };
+                  return obj5;
                 } else {
                   closure_134_0 = value;
                   closure_134_1 = async function _loop(arg0) {
@@ -363,8 +362,8 @@ class LocalMessageCacheManager extends tmp3 {
                       if (arg0 === 1) {
                         throw value;
                       } else if (arg0 === 2) {
-                        let obj = { value, done: true };
-                        return obj;
+                        const obj2 = { value, done: true };
+                        return obj2;
                       } else {
                         return { value: "HermesInternal", done: null };
                       }
@@ -376,15 +375,13 @@ class LocalMessageCacheManager extends tmp3 {
                           throw value;
                         } else if (arg0 === 2) {
                           c1 = 3;
-                          obj = { value, done: true };
+                          const obj = { value, done: true };
                           return obj;
                         } else {
                           if (next === constants.SENDING) {
                             const _setTimeout = setTimeout;
                             const timerId = setTimeout(() => {
-                              c1(closure_2_2[21]);
-                              const obj = { channelId };
-                              const messages = obj.fetchMessages(obj);
+                              const messages = c1(closure_2_2[21]).fetchMessages({ channelId });
                             }, 0);
                           }
                           c1 = 3;
@@ -434,8 +431,8 @@ class LocalMessageCacheManager extends tmp3 {
                         c7 = 0;
                         applyArgumentsResult.return();
                         c10 = 3;
-                        const obj3 = { value, done: true };
-                        return obj3;
+                        const obj6 = { value, done: true };
+                        return obj6;
                       } else {
                         const iter2 = method(closure_2);
                         HermesBuiltin.ensureObject("iterator.return() did not return an object");
@@ -443,7 +440,7 @@ class LocalMessageCacheManager extends tmp3 {
                           c7 = 0;
                           applyArgumentsResult.return();
                           c10 = 3;
-                          obj = { value: iter2.value, done: true };
+                          let obj = { value: iter2.value, done: true };
                           return obj;
                         } else {
                           c9 = 3;
@@ -530,12 +527,12 @@ class LocalMessageCacheManager extends tmp3 {
       applyArgumentsResult.handleMessageCreate = function handleMessageCreate(message) {
         message = message.message;
         const author = message.author;
-        let id;
+        let id1;
         if (author != null) {
-          id = author.id;
+          id1 = author.id;
         }
-        if (id === AuthenticationStore.getId()) {
-          id = message.nonce;
+        if (id1 === AuthenticationStore.getId()) {
+          let id = message.nonce;
           if (id == null) {
             id = message.id;
           }
@@ -545,13 +542,12 @@ class LocalMessageCacheManager extends tmp3 {
               closure_10(() => _writeMessage(c0, null));
             }
           }
-          let obj = applyArgumentsResult.#e;
-          obj.add(message.channel_id);
-          obj = { key: id, message, sendMessageOptions: message.sendMessageOptions };
+          applyArgumentsResult.#e.add(message.channel_id);
+          const obj2 = { key: id, message, sendMessageOptions: message.sendMessageOptions };
           c0 = undefined;
           c1 = undefined;
           c2 = undefined;
-          ({ key: c0, message: message2, file: c1, sendMessageOptions: c2 } = obj);
+          ({ key: c0, message: message2, file: c1, sendMessageOptions: c2 } = obj2);
           c3 = undefined;
           c4 = undefined;
           c5 = undefined;
@@ -570,22 +566,22 @@ class LocalMessageCacheManager extends tmp3 {
                 if (null == obj) {
                   obj = {};
                 }
-                obj = { content, type, state: null, channel_id: null, tts: null, id: null, nonce: null, timestamp: null, flags: null, file: null, sendMessageOptions: null };
+                const obj2 = { content, type, state: null, channel_id: null, tts: null, id: null, nonce: null, timestamp: null, flags: null, file: null, sendMessageOptions: null };
                 let SENDING = c11;
                 if (c11 == null) {
                   SENDING = constants.SENDING;
                 }
-                obj.state = SENDING;
-                obj.channel_id = channel_id;
-                obj.tts = tts;
-                obj.id = id;
-                obj.nonce = nonce;
+                obj2.state = SENDING;
+                obj2.channel_id = channel_id;
+                obj2.tts = tts;
+                obj2.id = id;
+                obj2.nonce = nonce;
                 let toISOStringResult = _undefined;
                 if (typeof _undefined !== "string") {
                   toISOStringResult = _undefined.toISOString();
                 }
-                obj.timestamp = toISOStringResult;
-                obj.flags = flags;
+                obj2.timestamp = toISOStringResult;
+                obj2.flags = flags;
                 let tmp18 = closure_1_1;
                 if (closure_1_1 == null) {
                   let file;
@@ -594,20 +590,20 @@ class LocalMessageCacheManager extends tmp3 {
                   }
                   tmp18 = file;
                 }
-                obj.file = tmp18;
-                let obj1 = closure_1_2;
+                obj2.file = tmp18;
+                let obj4 = closure_1_2;
                 if (null != closure_1_2) {
-                  if (obj1 == null) {
-                    obj1 = {};
+                  if (obj4 == null) {
+                    obj4 = {};
                   }
-                  const obj2 = {};
-                  const merged = Object.assign(obj1);
-                  let sendMessageOptions = obj2;
+                  const obj5 = {};
+                  const merged = Object.assign(obj4);
+                  let sendMessageOptions = obj5;
                 } else if (tmp7 != null) {
                   sendMessageOptions = tmp7.sendMessageOptions;
                 }
-                obj.sendMessageOptions = sendMessageOptions;
-                _writeMessage(closure_1_0, obj);
+                obj2.sendMessageOptions = sendMessageOptions;
+                _writeMessage(closure_1_0, obj2);
               } else {
                 throw new TypeError("Trying to call a non-function");
               }
@@ -641,8 +637,8 @@ class LocalMessageCacheManager extends tmp3 {
           if (arg0 === 1) {
             throw value;
           } else if (arg0 === 2) {
-            let obj = { value, done: true };
-            return obj;
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
             return { value: "HermesInternal", done: null };
           }
@@ -655,36 +651,33 @@ class LocalMessageCacheManager extends tmp3 {
                 throw value;
               } else if (arg0 === 2) {
                 c1 = 3;
-                obj = { value, done: true };
-                return obj;
-              } else {
-                let obj1 = importDefault[closure_1_26];
-                if (!obj1.has(closure_0)) {
-                  obj1.add(closure_0);
-                  c2 = 1;
-                  c1 = 1;
-                  obj1 = {
-                    value: (function rehydrateFailedMessages() {
-                                const self = this;
-                                const apply = closure_1_25.apply;
-                                if (typeof apply === "unknown") {
-                                  applyArgumentsResult = HermesBuiltin.applyArguments(self);
-                                } else {
-                                  applyArgumentsResult = apply(self, arguments);
-                                }
-                                return applyArgumentsResult;
-                              })(closure_0),
-                    done: false
-                  };
-                  return obj1;
-                }
+                const obj4 = { value, done: true };
+                return obj4;
+              } else if (!importDefault[closure_1_26].has(closure_0)) {
+                obj2.add(closure_0);
+                c2 = 1;
+                c1 = 1;
+                const obj5 = {
+                  value: (function rehydrateFailedMessages() {
+                            const self = this;
+                            const apply = closure_1_25.apply;
+                            if (typeof apply === "unknown") {
+                              applyArgumentsResult = HermesBuiltin.applyArguments(self);
+                            } else {
+                              applyArgumentsResult = apply(self, arguments);
+                            }
+                            return applyArgumentsResult;
+                          })(closure_0),
+                  done: false
+                };
+                return obj5;
               }
             } else if (arg0 === 1) {
               c1 = 3;
               throw value;
             } else if (arg0 === 2) {
               c1 = 3;
-              obj = { value, done: true };
+              const obj = { value, done: true };
               return obj;
             }
             c1 = 3;
@@ -732,22 +725,22 @@ class LocalMessageCacheManager extends tmp3 {
                 if (null == obj) {
                   obj = {};
                 }
-                obj = { content, type, state: null, channel_id: null, tts: null, id: null, nonce: null, timestamp: null, flags: null, file: null, sendMessageOptions: null };
+                const obj2 = { content, type, state: null, channel_id: null, tts: null, id: null, nonce: null, timestamp: null, flags: null, file: null, sendMessageOptions: null };
                 let SENDING = c11;
                 if (c11 == null) {
                   SENDING = constants.SENDING;
                 }
-                obj.state = SENDING;
-                obj.channel_id = channel_id;
-                obj.tts = tts;
-                obj.id = id;
-                obj.nonce = nonce;
+                obj2.state = SENDING;
+                obj2.channel_id = channel_id;
+                obj2.tts = tts;
+                obj2.id = id;
+                obj2.nonce = nonce;
                 let toISOStringResult = _undefined;
                 if (typeof _undefined !== "string") {
                   toISOStringResult = _undefined.toISOString();
                 }
-                obj.timestamp = toISOStringResult;
-                obj.flags = flags;
+                obj2.timestamp = toISOStringResult;
+                obj2.flags = flags;
                 let tmp18 = closure_1_1;
                 if (closure_1_1 == null) {
                   let file;
@@ -756,20 +749,20 @@ class LocalMessageCacheManager extends tmp3 {
                   }
                   tmp18 = file;
                 }
-                obj.file = tmp18;
-                let obj1 = closure_1_2;
+                obj2.file = tmp18;
+                let obj4 = closure_1_2;
                 if (null != closure_1_2) {
-                  if (obj1 == null) {
-                    obj1 = {};
+                  if (obj4 == null) {
+                    obj4 = {};
                   }
-                  const obj2 = {};
-                  const merged = Object.assign(obj1);
-                  let sendMessageOptions = obj2;
+                  const obj5 = {};
+                  const merged = Object.assign(obj4);
+                  let sendMessageOptions = obj5;
                 } else if (tmp7 != null) {
                   sendMessageOptions = tmp7.sendMessageOptions;
                 }
-                obj.sendMessageOptions = sendMessageOptions;
-                _writeMessage(closure_1_0, obj);
+                obj2.sendMessageOptions = sendMessageOptions;
+                _writeMessage(closure_1_0, obj2);
               } else {
                 throw new TypeError("Trying to call a non-function");
               }
@@ -795,10 +788,10 @@ class LocalMessageCacheManager extends tmp3 {
                     obj = {};
                   }
                   if (null != obj[closure_0]) {
-                    obj = {};
+                    const obj2 = {};
                     const merged = Object.assign(tmp7);
                     const merged1 = Object.assign(obj);
-                    closure_2_17(closure_0, obj);
+                    closure_2_17(closure_0, obj2);
                   }
                 } else {
                   throw new TypeError("Trying to call a non-function");
@@ -834,10 +827,10 @@ class LocalMessageCacheManager extends tmp3 {
                 obj = {};
               }
               if (null != obj[closure_0]) {
-                obj = {};
+                const obj2 = {};
                 const merged = Object.assign(tmp7);
                 const merged1 = Object.assign(obj);
-                closure_2_17(closure_0, obj);
+                closure_2_17(closure_0, obj2);
               }
             } else {
               throw new TypeError("Trying to call a non-function");
@@ -859,10 +852,10 @@ class LocalMessageCacheManager extends tmp3 {
                 obj = {};
               }
               if (null != obj[closure_0]) {
-                obj = {};
+                const obj2 = {};
                 const merged = Object.assign(tmp7);
                 const merged1 = Object.assign(obj);
-                closure_2_17(closure_0, obj);
+                closure_2_17(closure_0, obj2);
               }
             } else {
               throw new TypeError("Trying to call a non-function");
@@ -910,8 +903,8 @@ prototype["_initialize"] = function _initialize() {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -925,8 +918,8 @@ prototype["_initialize"] = function _initialize() {
             throw value;
           } else if (arg0 === 2) {
             c8 = 3;
-            obj = { value, done: true };
-            return obj;
+            let obj5 = { value, done: true };
+            return obj5;
           } else {
             closure_4 = tmp;
             closure_3 = tmp4;
@@ -938,8 +931,8 @@ prototype["_initialize"] = function _initialize() {
             let cached;
             c7 = 1;
             c8 = 1;
-            let obj1 = { value: getAllCachedMessages(), done: false };
-            return obj1;
+            let obj6 = { value: getAllCachedMessages(), done: false };
+            return obj6;
           }
         } else {
           if (1 === tmp4) {
@@ -948,8 +941,8 @@ prototype["_initialize"] = function _initialize() {
               throw value;
             } else if (arg0 === 2) {
               c8 = 3;
-              let obj2 = { value, done: true };
-              return obj2;
+              let obj7 = { value, done: true };
+              return obj7;
             } else {
               closure_131_0 = value;
               let _Object = Object;
@@ -959,10 +952,10 @@ prototype["_initialize"] = function _initialize() {
               let values = Object.values(closure_131_0);
               _self = values[Symbol.iterator]();
               if (_self === undefined) {
-                obj2 = values(573);
-                let subscription = obj2.subscribe("LOAD_MESSAGES_SUCCESS", closure_132_0.handleLoadMessagesSuccess);
                 let obj3 = values(573);
-                let subscription1 = obj3.subscribe("CACHE_LOADED", closure_132_0.handleCacheLoaded);
+                let subscription = obj3.subscribe("LOAD_MESSAGES_SUCCESS", closure_132_0.handleLoadMessagesSuccess);
+                let obj4 = values(573);
+                let subscription1 = obj4.subscribe("CACHE_LOADED", closure_132_0.handleCacheLoaded);
                 c8 = 3;
                 return { value: "HermesInternal", done: null };
               } else {
@@ -988,8 +981,8 @@ prototype["_initialize"] = function _initialize() {
                   let verboseResult2 = closure_1_11.verbose("manually invoking handleChannelLoaded");
                   c7 = 3;
                   c8 = 1;
-                  obj3 = { value: closure_132_0.handleChannelLoaded(channel_id), done: false };
-                  return obj3;
+                  let obj8 = { value: closure_132_0.handleChannelLoaded(channel_id), done: false };
+                  return obj8;
                 }
               }
             }
@@ -1004,7 +997,7 @@ prototype["_initialize"] = function _initialize() {
             c6 = 0;
             _self.return();
             c8 = 3;
-            obj = { value, done: true };
+            let obj = { value, done: true };
             return obj;
           }
           c6 = 0;

@@ -6,6 +6,8 @@ import MediaViewerAnalyticsManager from "../MediaViewerAnalyticsManager.tsx";
 import useVideoControls from "useVideoControls.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
+const require = globalThis.__r;
+
 require = fn;
 let closure_4 = {
   damping: 15,
@@ -45,9 +47,9 @@ export const useMediaViewerPanGestureConfig = function useMediaViewerPanGestureC
   const sharedValue1 = require("ReanimatedRexport").useSharedValue(false);
   let obj2 = require("ReanimatedRexport");
   const sharedValue2 = require("ReanimatedRexport").useSharedValue(0);
-  const obj3 = require("ReanimatedRexport");
+  let obj3 = require("ReanimatedRexport");
   const sharedValue3 = require("ReanimatedRexport").useSharedValue(0);
-  const obj4 = require("ReanimatedRexport");
+  let obj4 = require("ReanimatedRexport");
   const sharedValue4 = require("ReanimatedRexport").useSharedValue({ y: 0, x: 0 });
   const obj5 = require("ReanimatedRexport");
   const sharedValue5 = require("ReanimatedRexport").useSharedValue(true);
@@ -63,22 +65,22 @@ export const useMediaViewerPanGestureConfig = function useMediaViewerPanGestureC
   const items1 = [arg0, handleClose, sharedValue, sharedValue2, sharedValue3];
   const callback1 = sharedValue.useCallback(() => {
     const result = sharedValue.set(true);
-    let obj = sharedValue3;
     if (sharedValue3.get() < 0) {
       let tmp2 = -closure_0;
     } else {
       tmp2 = closure_0;
     }
-    obj = { velocity: obj.get() };
+    const obj2 = spring;
     const merged = Object.assign(closure_4);
     const fn = function t() {
       closure_0(closure_2[1]).runOnJS(handleClose)();
     };
-    obj = { runOnJS: ReanimatedRexport.runOnJS, handleClose };
-    fn.__closure = obj;
+    const obj3 = { velocity: sharedValue3.get() };
+    fn.__closure = { runOnJS: ReanimatedRexport.runOnJS, handleClose };
     fn.__workletHash = 7033730772994;
     fn.__initData = __initData;
-    const result1 = sharedValue2.set(spring.withSpring(tmp2, obj, "respect-motion-settings", fn));
+    const result1 = sharedValue2.set(obj2.withSpring(tmp2, obj3, "respect-motion-settings", fn));
+    const obj4 = { runOnJS: ReanimatedRexport.runOnJS, handleClose };
   }, items1);
   const items2 = [
     sharedValue3,
@@ -127,11 +129,11 @@ export const useMediaViewerPanGesture = function useMediaViewerPanGesture(panGes
         return;
       }
     }
-    let obj = { start, translatePos, isInteracting };
-    V.__closure = obj;
+    V.__closure = { start, translatePos, isInteracting };
     V.__workletHash = 12024094550213;
     V.__initData = __initData3;
     const failOffsetXResult = Gesture.Pan().maxPointers(1).activeOffsetY([-10, 10]).failOffsetX([-10, 10]);
+    const obj = { start, translatePos, isInteracting };
     class S {
       constructor(arg0) {
         ({ velocityY, translationY } = arg0);
@@ -140,10 +142,10 @@ export const useMediaViewerPanGesture = function useMediaViewerPanGesture(panGes
         return;
       }
     }
-    obj = { translatePos, start, velocity };
-    S.__closure = obj;
+    S.__closure = { translatePos, start, velocity };
     S.__workletHash = 9790035695747;
     S.__initData = __initData2;
+    const obj2 = { translatePos, start, velocity };
     const onStartResult = Gesture.Pan().maxPointers(1).activeOffsetY([-10, 10]).failOffsetX([-10, 10]).onStart(V);
     const fn = function w(arg0, fail) {
       if (!enabled.get()) {
@@ -153,7 +155,7 @@ export const useMediaViewerPanGesture = function useMediaViewerPanGesture(panGes
     fn.__closure = { enabled };
     fn.__workletHash = 10675684732258;
     fn.__initData = __initData;
-    const obj1 = { enabled };
+    let obj3 = { enabled };
     const onUpdateResult = Gesture.Pan()
       .maxPointers(1)
       .activeOffsetY([-10, 10])
@@ -162,15 +164,13 @@ export const useMediaViewerPanGesture = function useMediaViewerPanGesture(panGes
       .onUpdate(S);
     const fn2 = function t() {
       const result = closure_1_2.set(false);
-      let obj = velocity;
       if (Math.abs(velocity.get()) > closure_1_0) {
         swipeVelocityThreshold(isInteracting[1]).runOnJS(closure_1_6)();
         const obj5 = swipeVelocityThreshold(isInteracting[1]);
       } else if (0 !== translatePos.get()) {
-        obj = { velocity: null };
-        obj.velocity = obj.get();
+        const obj4 = { velocity: velocity.get() };
         const merged = Object.assign(start);
-        const result1 = translatePos.set(swipeVelocityThreshold(isInteracting[4]).withSpring(0, obj));
+        const result1 = translatePos.set(swipeVelocityThreshold(isInteracting[4]).withSpring(0, obj4));
         const obj3 = swipeVelocityThreshold(isInteracting[4]);
       }
     };

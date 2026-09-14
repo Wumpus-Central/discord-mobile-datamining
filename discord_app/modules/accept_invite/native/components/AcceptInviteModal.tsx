@@ -4,6 +4,8 @@ import InviteCodeUtils from "../../../instant_invite/InviteCodeUtils.tsx";
 import AcceptInviteContainerDefault from "../../../create_guild/native/components/AcceptInviteContainer.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
+const require = globalThis.__r;
+
 require = fn;
 const CreateGuildModalStates = fn(7081).CreateGuildModalStates;
 const jsx = fn(21).jsx;
@@ -17,25 +19,25 @@ export default function AcceptInviteModal(arg0) {
   const items = [arg0];
   obj.screens = noop.useMemo(() => {
     let obj = {};
-    obj = {
+    const obj2 = {
       fullscreen: true,
       headerShown: false,
       impressionName: discord_common_AnalyticsUtils.ImpressionNames.INVITE_ACCEPT,
       impressionProperties: null,
       render: null,
     };
-    obj = {
+    const obj3 = {
       deeplink_attempt_id: closure_0.deeplinkAttemptId,
       invite_code: InviteCodeUtils.parseInviteCodeFromInviteKey(closure_0.code),
     };
-    obj.impressionProperties = obj;
-    obj.render = function render() {
+    obj2.impressionProperties = obj3;
+    obj2.render = function render() {
       const obj = {};
       const merged = Object.assign(closure_0);
       obj.onPressClose = closure_0(8864).clearDisplayedInvite;
       return jsx(AcceptInviteContainerDefault, {});
     };
-    obj[CreateGuildModalStates.ACCEPT_INVITE] = obj;
+    obj[CreateGuildModalStates.ACCEPT_INVITE] = obj2;
     return obj;
   }, items);
   return jsx(require("Navigator").Navigator, { screens: null, initialRouteName: CreateGuildModalStates.ACCEPT_INVITE });

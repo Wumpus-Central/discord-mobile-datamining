@@ -25,16 +25,14 @@ require = fn;
 function PremiumGiftPlanSelectPromotionDetails(config) {
   config = config.config;
   ({ numClaimableRewards, isSelected, onPress } = config);
-  obj = MarketingComponentHooks;
-  const themeAndReducedMotionAwareAssetUrl = obj.useThemeAndReducedMotionAwareAssetUrl(config.avatarAsset, true);
-  obj = { theme: constants3.DARK, children: null };
-  obj = {
-    style: closure_15(config.isLargeSize).promotionDetailsContainer,
-    colors: [4294967102, 4294967053],
-    children: null,
-  };
   const tmp = closure_15(config.isLargeSize);
-  const obj1 = {
+  const themeAndReducedMotionAwareAssetUrl = MarketingComponentHooks.useThemeAndReducedMotionAwareAssetUrl(
+    config.avatarAsset,
+    true,
+  );
+  const obj2 = { theme: constants3.DARK, children: null };
+  const obj3 = { style: tmp.promotionDetailsContainer, colors: [4294967102, 4294967053], children: null };
+  obj4 = {
     imageUrl: themeAndReducedMotionAwareAssetUrl,
     title: null,
     subtitle: null,
@@ -49,26 +47,26 @@ function PremiumGiftPlanSelectPromotionDetails(config) {
   } else {
     header = config.header;
   }
-  obj1.title = header;
+  obj4.title = header;
   obj5 = StringUtils;
   if (tmp2Result.isNullOrEmpty(config.mobileBody)) {
     const intl2 = util.intl;
-    obj2 = { availableCount: numClaimableRewards };
-    let mobileBody = intl2.formatToPlainString(util.t["2h5M+X"], obj2);
+    const obj6 = { availableCount: numClaimableRewards };
+    let mobileBody = intl2.formatToPlainString(util.t["2h5M+X"], obj6);
   } else {
     mobileBody = config.mobileBody;
   }
-  obj1.subtitle = mobileBody;
-  obj1.shouldAnimate = isSelected;
-  const items = [React7(tmp8, obj1)];
-  const obj3 = { variant: "primary-overlay", text: null, onPress: null };
+  obj4.subtitle = mobileBody;
+  obj4.shouldAnimate = isSelected;
+  const items = [React7(tmp8, obj4)];
+  const obj7 = { variant: "primary-overlay", text: null, onPress: null };
   const intl3 = util.intl;
-  obj3.text = intl3.string(util.t.Ve9Ge6);
-  obj3.onPress = onPress;
-  items[1] = React7(components_Button_Button.Button, obj3);
-  obj.children = items;
-  obj.children = closure_1_10(tmp7, obj);
-  return React7(native.ThemeContextProvider, obj);
+  obj7.text = intl3.string(util.t.Ve9Ge6);
+  obj7.onPress = onPress;
+  items[1] = React7(components_Button_Button.Button, obj7);
+  obj3.children = items;
+  obj2.children = closure_1_10(tmp7, obj3);
+  return React7(native.ThemeContextProvider, obj2);
 }
 const View = fn(17).View;
 const PremiumConstants = fn(1373);
@@ -77,35 +75,34 @@ const Constants = fn(1085);
 ({ Fonts: closure_7, ThemeTypes: closure_8 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-let obj = { default: null, compact: null, smallCompact: null };
-obj = { paddingVertical: nativeDefault.space.PX_8 };
-obj.default = obj;
+let obj = { default: { paddingVertical: nativeDefault.space.PX_8 }, compact: null, smallCompact: null };
+let obj2 = { paddingVertical: nativeDefault.space.PX_8 };
 obj.compact = { paddingVertical: nativeDefault.space.PX_4 };
 obj.smallCompact = { paddingVertical: 2 };
-let obj2 = { default: null, compact: null, smallCompact: null };
-let obj1 = { paddingVertical: nativeDefault.space.PX_4 };
-obj2.default = { marginTop: nativeDefault.space.PX_24 };
-let obj3 = { marginTop: nativeDefault.space.PX_24 };
-obj2.compact = { marginTop: nativeDefault.space.PX_12 };
-let obj4 = { marginTop: nativeDefault.space.PX_12 };
-obj2.smallCompact = { marginTop: nativeDefault.space.PX_8 };
-let obj6 = { default: null, compact: null, smallCompact: null };
-let obj5 = { marginTop: nativeDefault.space.PX_8 };
-obj6.default = { marginTop: nativeDefault.space.PX_8 };
-const obj7 = { marginTop: nativeDefault.space.PX_8 };
-obj6.compact = { marginTop: nativeDefault.space.PX_12 };
-const obj8 = { marginTop: nativeDefault.space.PX_12 };
-obj6.smallCompact = { marginTop: nativeDefault.space.PX_8 };
-const obj10 = { default: null, compact: null, smallCompact: null };
-const obj9 = { marginTop: nativeDefault.space.PX_8 };
-obj10.default = { marginTop: nativeDefault.space.PX_24 };
-const obj11 = { marginTop: nativeDefault.space.PX_24 };
-obj10.compact = { marginTop: nativeDefault.space.PX_12 };
-const obj12 = { marginTop: nativeDefault.space.PX_12 };
-obj10.smallCompact = { marginTop: nativeDefault.space.PX_8 };
+let obj4 = { default: null, compact: null, smallCompact: null };
+let obj3 = { paddingVertical: nativeDefault.space.PX_4 };
+obj4.default = { marginTop: nativeDefault.space.PX_24 };
+let obj5 = { marginTop: nativeDefault.space.PX_24 };
+obj4.compact = { marginTop: nativeDefault.space.PX_12 };
+let obj6 = { marginTop: nativeDefault.space.PX_12 };
+obj4.smallCompact = { marginTop: nativeDefault.space.PX_8 };
+let obj8 = { default: null, compact: null, smallCompact: null };
+let obj7 = { marginTop: nativeDefault.space.PX_8 };
+obj8.default = { marginTop: nativeDefault.space.PX_8 };
+let obj9 = { marginTop: nativeDefault.space.PX_8 };
+obj8.compact = { marginTop: nativeDefault.space.PX_12 };
+const obj10 = { marginTop: nativeDefault.space.PX_12 };
+obj8.smallCompact = { marginTop: nativeDefault.space.PX_8 };
+const obj12 = { default: null, compact: null, smallCompact: null };
+const obj11 = { marginTop: nativeDefault.space.PX_8 };
+obj12.default = { marginTop: nativeDefault.space.PX_24 };
+const obj13 = { marginTop: nativeDefault.space.PX_24 };
+obj12.compact = { marginTop: nativeDefault.space.PX_12 };
+const obj14 = { marginTop: nativeDefault.space.PX_12 };
+obj12.smallCompact = { marginTop: nativeDefault.space.PX_8 };
 const createStyles = fn(4636);
 let closure_15 = createStyles.createStyles(() => {
-  let logo = {
+  obj = {
     card: null,
     logo: null,
     pricing: null,
@@ -116,29 +113,33 @@ let closure_15 = createStyles.createStyles(() => {
     featureText: null,
     promotionDetailsContainer: null,
   };
-  logo = {
+  const merged = Object.assign(nativeDefault.shadows.SHADOW_LOW);
+  obj.card = {
     justifyContent: "flex-start",
     borderRadius: nativeDefault.radii.sm,
     backgroundColor: nativeDefault.colors.BG_SURFACE_RAISED,
   };
-  const merged = Object.assign(nativeDefault.shadows.SHADOW_LOW);
-  logo.card = logo;
-  logo = { marginTop: nativeDefault.space.PX_40, marginStart: nativeDefault.space.PX_24 };
-  logo.logo = logo;
-  logo.pricing = { maxWidth: 140, marginStart: nativeDefault.space.PX_24 };
-  const obj1 = { maxWidth: 140, marginStart: nativeDefault.space.PX_24 };
-  logo.featureTitle = { marginStart: nativeDefault.space.PX_24 };
-  obj2 = { marginStart: nativeDefault.space.PX_24 };
-  logo.features = { marginTop: nativeDefault.space.PX_8, marginHorizontal: nativeDefault.space.PX_24 };
-  const obj3 = { marginTop: nativeDefault.space.PX_8, marginHorizontal: nativeDefault.space.PX_24 };
-  logo.button = { marginHorizontal: nativeDefault.space.PX_24, marginBottom: nativeDefault.space.PX_24 };
-  logo.featureIcon = { width: 24, height: 24 };
-  const obj5 = {};
-  const obj4 = { marginHorizontal: nativeDefault.space.PX_24, marginBottom: nativeDefault.space.PX_24 };
+  const obj2 = {
+    justifyContent: "flex-start",
+    borderRadius: nativeDefault.radii.sm,
+    backgroundColor: nativeDefault.colors.BG_SURFACE_RAISED,
+  };
+  obj.logo = { marginTop: nativeDefault.space.PX_40, marginStart: nativeDefault.space.PX_24 };
+  const obj3 = { marginTop: nativeDefault.space.PX_40, marginStart: nativeDefault.space.PX_24 };
+  obj.pricing = { maxWidth: 140, marginStart: nativeDefault.space.PX_24 };
+  obj4 = { maxWidth: 140, marginStart: nativeDefault.space.PX_24 };
+  obj.featureTitle = { marginStart: nativeDefault.space.PX_24 };
+  const obj5 = { marginStart: nativeDefault.space.PX_24 };
+  obj.features = { marginTop: nativeDefault.space.PX_8, marginHorizontal: nativeDefault.space.PX_24 };
+  const obj6 = { marginTop: nativeDefault.space.PX_8, marginHorizontal: nativeDefault.space.PX_24 };
+  obj.button = { marginHorizontal: nativeDefault.space.PX_24, marginBottom: nativeDefault.space.PX_24 };
+  obj.featureIcon = { width: 24, height: 24 };
+  obj8 = {};
+  const obj7 = { marginHorizontal: nativeDefault.space.PX_24, marginBottom: nativeDefault.space.PX_24 };
   const merged1 = Object.assign(TextStylesDefault(constants2.PRIMARY_NORMAL, nativeDefault.colors.WHITE, 16));
-  obj5.marginStart = -8;
-  logo.featureText = obj5;
-  logo.promotionDetailsContainer = {
+  obj8.marginStart = -8;
+  obj.featureText = obj8;
+  obj.promotionDetailsContainer = {
     marginHorizontal: nativeDefault.space.PX_24,
     marginTop: nativeDefault.space.PX_20,
     marginBottom: nativeDefault.space.PX_32,
@@ -146,9 +147,9 @@ let closure_15 = createStyles.createStyles(() => {
     gap: nativeDefault.space.PX_12,
     borderRadius: nativeDefault.radii.sm,
   };
-  return logo;
+  return obj;
 });
-const obj13 = { marginTop: nativeDefault.space.PX_8 };
+const obj15 = { marginTop: nativeDefault.space.PX_8 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/native/gifting/PremiumGiftFeaturesCard.tsx");
 
@@ -191,34 +192,29 @@ export default noop.memo(function PremiumGiftFeaturesCard(variant) {
   if (tmp11) {
     tmp11 = claimableRewards.length > 0;
   }
-  obj = { style: null, children: null };
+  const obj2 = { style: null, children: null };
   const items1 = [tmp6.card, style];
-  obj.style = items1;
-  obj = { premiumType, style: null };
+  obj2.style = items1;
+  const obj3 = { premiumType, style: null };
   const items2 = [tmp6.card, style];
-  obj.style = items2;
+  obj3.style = items2;
   const tmp10 = usePremiumProductPricingStringDefault(premiumType, constants.YEAR);
   const merged1 = Object.assign(merged);
-  const items3 = [
-    React7(PremiumFeaturesWumpusDefault, { premiumType }),
-    React7(PremiumFeaturesLogoDefault, { style: tmp6.logo, premiumType }),
-    ,
-    ,
-    ,
-    ,
-  ];
-  obj2 = { style: null, variant: "text-sm/medium", color: "text-overlay-light", children: null };
-  const items4 = [tmp6.pricing, obj6[str]];
-  obj2.style = items4;
+  const items3 = [React7(PremiumFeaturesWumpusDefault, { premiumType }), , , , , ,];
+  obj4 = { style: tmp6.logo, premiumType };
+  items3[1] = React7(PremiumFeaturesLogoDefault, obj4);
+  const obj5 = { style: null, variant: "text-sm/medium", color: "text-overlay-light", children: null };
+  const items4 = [tmp6.pricing, obj8[str]];
+  obj5.style = items4;
   const intl = util.intl;
-  obj2.children = intl.format(util.t.Ob6fwp, { monthlyPrice: tmp9, yearlyPrice: tmp10 });
-  items3[2] = React7(Text_Text.Text, obj2);
-  const obj3 = { style: null, variant: "heading-sm/bold", color: "text-overlay-light", children: null };
-  const items5 = [tmp6.featureTitle, obj2[str]];
-  obj3.style = items5;
+  obj5.children = intl.format(util.t.Ob6fwp, { monthlyPrice: tmp9, yearlyPrice: tmp10 });
+  items3[2] = React7(Text_Text.Text, obj5);
+  const obj6 = { style: null, variant: "heading-sm/bold", color: "text-overlay-light", children: null };
+  const items5 = [tmp6.featureTitle, obj4[str]];
+  obj6.style = items5;
   const intl2 = util.intl;
-  obj3.children = intl2.string(util.t.JgsVht);
-  items3[3] = React7(Text_Text.Text, obj3);
+  obj6.children = intl2.string(util.t.JgsVht);
+  items3[3] = React7(Text_Text.Text, obj6);
   items3[4] = React7(PremiumFeatureListDefault, {
     style: tmp6.features,
     features: tmp8,
@@ -230,24 +226,24 @@ export default noop.memo(function PremiumGiftFeaturesCard(variant) {
   if (tmp11) {
     if (null != stateFromStores) {
       if (premiumType === hasOwnProperty.TIER_2) {
-        const obj5 = {
+        obj8 = {
           config: stateFromStores,
           numClaimableRewards: claimableRewards.length,
           isLargeSize: tmp5,
           isSelected,
           onPress,
         };
-        let tmp12Result = React7(PremiumGiftPlanSelectPromotionDetails, obj5);
+        let tmp12Result = React7(PremiumGiftPlanSelectPromotionDetails, obj8);
       }
       items3[6] = tmp12Result;
-      obj.children = items3;
-      obj.children = closure_1_10(tmp7Result, obj);
-      return React7(View, obj);
+      obj3.children = items3;
+      obj2.children = closure_1_10(tmp7Result, obj3);
+      return React7(View, obj2);
     }
   }
-  obj6 = { style: null, children: null };
-  const items6 = [tmp6.button, obj10[str]];
-  obj6.style = items6;
+  const obj9 = { style: null, children: null };
+  const items6 = [tmp6.button, obj12[str]];
+  obj9.style = items6;
   if (premiumType === hasOwnProperty.TIER_0) {
     const intl4 = util.intl;
     let stringResult = intl4.string(util.t.rk4Uu8);
@@ -255,10 +251,9 @@ export default noop.memo(function PremiumGiftFeaturesCard(variant) {
     const intl3 = util.intl;
     stringResult = intl3.string(util.t.Ve9Ge6);
   }
-  obj6.children = React7(components_Button_Button.Button, { variant: "primary-overlay", text: stringResult, onPress });
-  tmp12Result = React7(View, obj6);
-  const obj1 = { style: tmp6.logo, premiumType };
-  const obj4 = {
+  obj9.children = React7(components_Button_Button.Button, { variant: "primary-overlay", text: stringResult, onPress });
+  tmp12Result = React7(View, obj9);
+  const obj7 = {
     style: tmp6.features,
     features: tmp8,
     iconStyle: tmp6.featureIcon,

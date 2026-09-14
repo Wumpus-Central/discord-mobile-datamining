@@ -80,23 +80,23 @@ const forumPostRecentMessageStore = new ForumPostRecentMessageStore(DispatcherDe
           if (null != message3) {
             messageRecord = MessageRecordUtils.createMessageRecord(message3);
           }
-          let obj = { loaded: true, message: messageRecord };
+          const obj = { loaded: true, message: messageRecord };
           dependencyMap[tmp.message.channel_id] = obj;
         }
         obj3 = SnowflakeUtilsDefault;
       }
       tmp = dependencyMap;
-      obj = { loaded: true, message: null };
-      dependencyMap[tmp.message.channel_id] = obj;
+      const obj5 = { loaded: true, message: null };
+      dependencyMap[tmp.message.channel_id] = obj5;
     }
   },
   MESSAGE_UPDATE: function handleMessageUpdate(message) {
     message = message.message;
-    let channel_id;
+    let channel_id1;
     if (message != null) {
-      channel_id = message.channel_id;
+      channel_id1 = message.channel_id;
     }
-    const channel = ChannelStore.getChannel(channel_id);
+    const channel = ChannelStore.getChannel(channel_id1);
     let flag = false;
     if (null != channel) {
       flag = false;
@@ -118,18 +118,18 @@ const forumPostRecentMessageStore = new ForumPostRecentMessageStore(DispatcherDe
     let tmp9 = flag;
     if (tmp9) {
       if (message.message.channel_id !== message.message.id) {
-        channel_id = message.message.channel_id;
-        message = undefined;
+        const channel_id = message.message.channel_id;
+        let message1;
         if (dependencyMap[channel_id] != null) {
-          message = tmp14.message;
+          message1 = tmp14.message;
         }
         if (tmp16) {
           const obj = {};
           const merged = Object.assign(tmp12);
-          obj.message = MessageRecordUtils.updateMessageRecord(message, message.message);
+          obj.message = MessageRecordUtils.updateMessageRecord(message1, message.message);
           dependencyMap[channel_id] = obj;
         }
-        tmp16 = null != dependencyMap[channel_id] && null != message;
+        tmp16 = null != dependencyMap[channel_id] && null != message1;
       }
       tmp9 = tmp10;
     }
@@ -160,8 +160,8 @@ const forumPostRecentMessageStore = new ForumPostRecentMessageStore(DispatcherDe
         let obj = MessageRecordUtils;
         messageRecord = obj.createMessageRecord(most_recent_message);
       }
-      obj = { loaded: true, message: messageRecord };
-      closure_5[key10006] = obj;
+      let obj2 = { loaded: true, message: messageRecord };
+      closure_5[key10006] = obj2;
       continue;
     }
   },

@@ -19,7 +19,7 @@ export default noop.memo(function InstantInviteSelfMeasurer(type) {
     str = "height";
   }
   const items = [onMeasured, str];
-  let obj = {
+  const obj = {
     style: null,
     onLayout: noop.useCallback((nativeEvent) => {
       const layout = nativeEvent.nativeEvent.layout;
@@ -34,10 +34,10 @@ export default noop.memo(function InstantInviteSelfMeasurer(type) {
   const items1 = [type.containerStyle, closure_6().container];
   obj.style = items1;
   if ("invite" === item.type) {
-    obj = { invite: item.data };
+    const obj2 = { invite: item.data };
     let tmp2Result = jsx(InstantInviteDefault, { invite: item.data });
   } else {
-    obj = { channel: item.data };
+    const obj3 = { channel: item.data };
     tmp2Result = jsx(InstantInvite.LinkedChannelInvite, { channel: item.data });
   }
   obj.children = tmp2Result;

@@ -6,6 +6,8 @@ import ChannelAffinitiesV2Store from "../../channel_affinities_v2/ChannelAffinit
 import UserAffinitiesV2Store from "../../user_affinities/UserAffinitiesV2Store.tsx";
 import ChannelStore from "../../../stores/ChannelStore.tsx";
 
+const require = globalThis.__r;
+
 require = fn;
 function getAffineChannelId(channelId) {
   return channelId.channelId;
@@ -13,8 +15,8 @@ function getAffineChannelId(channelId) {
 function getAffineUserDMId(otherUserId) {
   return ChannelStore.getDMFromUserId(otherUserId.otherUserId);
 }
-const NO_SUGGESTIONS = fn(16297).NO_SUGGESTIONS;
-const isAllowedType = fn(11114).isAllowedType;
+const NO_SUGGESTIONS = fn(16299).NO_SUGGESTIONS;
+const isAllowedType = fn(11115).isAllowedType;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/favorites/hooks/useFavoritesGuildSuggestionCandidates.tsx");
 
@@ -41,7 +43,7 @@ export default function useFavoritesGuildSuggestionCandidates(arg0) {
   const effect1 = memo.useEffect(() => {
     const userAffinitiesV2 = closure_0(results[8]).fetchUserAffinitiesV2();
   }, []);
-  const obj2 = require("initialize");
+  let obj2 = require("initialize");
   const items2 = [UserAffinitiesV2Store];
   const stateFromStores1 = require("initialize").useStateFromStores(items2, () =>
     userAffinitiesMap.getUserAffinitiesMap(),
@@ -61,13 +63,13 @@ export default function useFavoritesGuildSuggestionCandidates(arg0) {
   return memo.useMemo(() => {
     let items = [];
     const set = new Set();
-    let obj = { affinities: memo, getChannelId: getAffineChannelId, index: 0 };
-    obj = { affinities: memo1, getChannelId: getAffineUserDMId, index: 0 };
+    const obj = { affinities: memo, getChannelId: getAffineChannelId, index: 0 };
+    const obj2 = { affinities: memo1, getChannelId: getAffineUserDMId, index: 0 };
     let num = 0;
     if (items.length < closure_0) {
       while (true) {
         let result = items.length % 2;
-        let obj4 = obj;
+        let obj4 = obj2;
         if (result === 0) {
           obj4 = obj;
         }
@@ -102,7 +104,7 @@ export default function useFavoritesGuildSuggestionCandidates(arg0) {
         if (null == tmp3) {
           let obj5 = obj;
           if (result === 0) {
-            obj5 = obj;
+            obj5 = obj2;
           }
           let tmp11 = null;
           if (obj5.index < obj5.affinities.length) {

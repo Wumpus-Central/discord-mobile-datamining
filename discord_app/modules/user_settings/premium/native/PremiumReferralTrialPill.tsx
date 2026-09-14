@@ -19,39 +19,28 @@ let obj = {
     marginTop: 36,
     marginBottom: 20,
   },
-  pillContainer: null,
-  text: null,
+  pillContainer: {
+    backgroundColor: nativeDefault.colors.WHITE,
+    borderRadius: nativeDefault.radii.round,
+    alignItems: "center",
+    justifyContent: "center",
+    margin: 8,
+    paddingHorizontal: 8,
+    overflow: "visible",
+  },
+  text: { color: "#AC46C3", paddingHorizontal: 1, paddingBottom: 2, textAlign: "center" },
 };
-obj = {
-  backgroundColor: nativeDefault.colors.WHITE,
-  borderRadius: nativeDefault.radii.round,
-  alignItems: "center",
-  justifyContent: "center",
-  margin: 8,
-  paddingHorizontal: 8,
-  overflow: "visible",
-};
-obj.pillContainer = obj;
-obj.text = { color: "#AC46C3", paddingHorizontal: 1, paddingBottom: 2, textAlign: "center" };
 let closure_4 = createStyles.createStyles(obj);
 const result = size.fileFinishedImporting("modules/user_settings/premium/native/PremiumReferralTrialPill.tsx");
 
 export const PremiumReferralTrialPill = (hasExtraMargin) => {
   const tmp = closure_4();
-  let obj = { style: hasExtraMargin.hasExtraMargin ? tmp.pillParentExtraMargin : tmp.pillParent, children: null };
-  obj = { style: tmp.pillContainer, children: null };
-  obj = { variant: "text-xs/bold", style: tmp.text, children: null };
+  const obj = { style: hasExtraMargin.hasExtraMargin ? tmp.pillParentExtraMargin : tmp.pillParent, children: null };
+  const obj2 = { style: tmp.pillContainer, children: null };
+  const obj3 = { variant: "text-xs/bold", style: tmp.text, children: null };
   const intl = util.intl;
-  obj.children = intl.string(util.t.Y1q7js).toUpperCase();
-  obj.children = jsx(Text_Text.Text, { variant: "text-xs/bold", style: tmp.text, children: null });
-  obj.children = (
-    <View variant="text-xs/bold" style={tmp.text}>
-      {null}
-    </View>
-  );
-  return (
-    <View variant="text-xs/bold" style={tmp.text}>
-      {null}
-    </View>
-  );
+  obj3.children = intl.string(util.t.Y1q7js).toUpperCase();
+  obj2.children = jsx(Text_Text.Text, { variant: "text-xs/bold", style: tmp.text, children: null });
+  obj.children = <View style={tmp.pillContainer}>{null}</View>;
+  return <View style={hasExtraMargin.hasExtraMargin ? tmp.pillParentExtraMargin : tmp.pillParent}>{null}</View>;
 };

@@ -10,8 +10,8 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-fn(4636);
-const createStyles = { container: { height: "100%" }, stepContainer: null };
+const createStyles = fn(4636);
+let obj2 = { container: { height: "100%" }, stepContainer: null };
 const rect = {
   flexDirection: "column",
   alignItems: "center",
@@ -21,8 +21,8 @@ const rect = {
   right: 0,
   height: fn(5763).NAV_BAR_HEIGHT,
 };
-createStyles.stepContainer = rect;
-let closure_8 = createStyles.createStyles(createStyles);
+obj2.stepContainer = rect;
+let closure_8 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("design/components/Modal/native/StepModal.native.tsx");
 
@@ -35,7 +35,7 @@ export const StepModal = function StepModal(steps) {
   const tmp4 = _slicedToArray(noop.useState(0), 2);
   closure_2 = tmp4[1];
   const items = [onWillFocus, steps];
-  let obj = { style: tmp2.container, children: null };
+  const obj = { style: tmp2.container, children: null };
   const callback = noop.useCallback((onDidFocus) => {
     let num;
     if (steps != null) {
@@ -49,17 +49,16 @@ export const StepModal = function StepModal(steps) {
       onWillFocus(onDidFocus);
     }
   }, items);
-  obj = {};
+  const obj2 = {};
   const merged1 = Object.assign(merged);
-  obj.onWillFocus = callback;
-  obj = { height: NavigatorConstants.NAV_BAR_HEIGHT + tmp3.top };
-  obj.headerStyle = obj;
-  obj.hideTitle = true;
-  const items1 = [timestampProducer(Modal.Modal, obj)];
-  const obj1 = { style: null, pointerEvents: "box-none", children: null };
+  obj2.onWillFocus = callback;
+  obj2.headerStyle = { height: NavigatorConstants.NAV_BAR_HEIGHT + tmp3.top };
+  obj2.hideTitle = true;
+  const items1 = [timestampProducer(Modal.Modal, obj2)];
+  const obj4 = { style: null, pointerEvents: "box-none", children: null };
   const items2 = [tmp2.stepContainer, { marginTop: tmp3.top }];
-  obj1.style = items2;
-  const obj2 = { currentStep: tmp4[0], totalSteps: null };
+  obj4.style = items2;
+  const obj5 = { currentStep: tmp4[0], totalSteps: null };
   let num;
   if (steps != null) {
     num = steps.length;
@@ -67,9 +66,9 @@ export const StepModal = function StepModal(steps) {
   if (num == null) {
     num = 0;
   }
-  obj2.totalSteps = num;
-  obj1.children = timestampProducer(ModalStepIndicator.ModalStepIndicator, obj2);
-  items1[1] = timestampProducer(View, obj1);
+  obj5.totalSteps = num;
+  obj4.children = timestampProducer(ModalStepIndicator.ModalStepIndicator, obj5);
+  items1[1] = timestampProducer(View, obj4);
   obj.children = items1;
   return React5(View, obj);
 };

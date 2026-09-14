@@ -1,5 +1,5 @@
 // discord_app/modules/settings/tracking/SettingSearchSessionAnalyticsManager.tsx
-import v1 from "../../../../_runtime/01256_v1.js";
+import v1 from "../../../../_runtime/01254_v1.js";
 import Tracking from "Tracking.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
@@ -29,10 +29,10 @@ prototype["maybeTrackQueryEntered"] = function maybeTrackQueryEntered() {
 prototype["terminate"] = function terminate() {
   const self = this;
   if (tmp) {
-    const obj = { searchSessionDuration: null };
+    const obj2 = { searchSessionDuration: null };
     const _Date = Date;
-    obj.searchSessionDuration = Date.now() - self.searchSessionStartTime;
-    const result = obj.trackSettingSearchClosed(obj);
+    obj2.searchSessionDuration = Date.now() - self.searchSessionStartTime;
+    const result = Tracking.trackSettingSearchClosed(obj2);
     self.searchSessionId = null;
     self.searchSessionStartTime = null;
     self.isQueryEnteredTracked = false;

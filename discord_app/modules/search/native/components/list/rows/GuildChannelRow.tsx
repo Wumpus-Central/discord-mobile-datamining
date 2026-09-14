@@ -10,12 +10,11 @@ import noop from "../../../../../../../_runtime/metro/00019__.js";
 require = fn;
 function GuildChannelLabel(channel) {
   channel = channel.channel;
-  let obj = { style: closure_7().content, children: null };
+  const obj = { style: closure_7().content, children: null };
   const tmp = closure_7();
   const tmp2 = useChannelNameDefault(channel);
-  obj = { channel, layout, name: tmp2 };
-  obj.children = ChannelContent.renderChannelContent(obj);
-  return <React4 channel={channel} layout={layout} name={tmp2} />;
+  obj.children = ChannelContent.renderChannelContent({ channel, layout, name: tmp2 });
+  return <React4 style={closure_7().content}>{null}</React4>;
 }
 get_ActivityIndicator = fn(17);
 ({ Image: c3, View: closure_4 } = get_ActivityIndicator);
@@ -42,24 +41,24 @@ export default noop.memo(function GuildChannelRow(channel) {
     Object.assign({ channel: 0, subtitle: 0, trailing: 0, extras: 0, onPress: 0, voiceStates: 0 }),
   );
   const tmp2 = closure_7();
-  let obj = renderChannelItem;
-  const channelAccessibilityProps = obj.getChannelAccessibilityProps({
+  const channelAccessibilityProps = renderChannelItem.getChannelAccessibilityProps({
     channel,
     unread: false,
     mentionCount: 0,
     voiceStates,
   });
-  obj = { style: tmp2.simpleIcon, source: utils_ChannelUtils.getSimpleChannelIcon(channel) };
-  obj = {};
+  const obj2 = { style: tmp2.simpleIcon, source: null };
+  obj2.source = utils_ChannelUtils.getSimpleChannelIcon(channel);
+  const obj6 = {};
   const merged1 = Object.assign(channelAccessibilityProps);
   const merged2 = Object.assign(merged);
   ({ container: obj4.containerStyle, iconContainer: obj4.iconContainerStyle } = tmp2);
-  obj.icon = <React3 />;
-  obj.iconWidth = 32;
-  obj.label = <GuildChannelLabel channel={channel} />;
-  obj.subLabel = subtitle;
-  obj.onPress = onPress;
-  obj.trailing = trailing;
-  obj.extras = extras;
+  obj6.icon = <React3 style={tmp2.simpleIcon} source={null} />;
+  obj6.iconWidth = 32;
+  obj6.label = <GuildChannelLabel channel={channel} />;
+  obj6.subLabel = subtitle;
+  obj6.onPress = onPress;
+  obj6.trailing = trailing;
+  obj6.extras = extras;
   return jsx(SearchListRow.SearchListRow, {});
 });

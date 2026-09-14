@@ -13,32 +13,32 @@ import _modDef9913 from "../../../../_runtime/metro/09913__.js";
 import CalendarIcon from "../../../design/components/Icon/native/redesign/generated/CalendarIcon.tsx";
 import VideoIcon from "../../../design/components/Icon/native/redesign/generated/VideoIcon.tsx";
 import useGuildsBarGuildMediaStateDefault from "../useGuildsBarGuildMediaState.tsx";
-import _modDef16430 from "../../../../_runtime/metro/16430__.js";
-import _modDef16431 from "../../../../_runtime/metro/16431__.js";
 import _modDef16432 from "../../../../_runtime/metro/16432__.js";
+import _modDef16433 from "../../../../_runtime/metro/16433__.js";
+import _modDef16434 from "../../../../_runtime/metro/16434__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 function getMediaIcon(activeEvent) {
   if (activeEvent.activeEvent) {
-    let obj = { icon: CalendarIcon.CalendarIcon, source: _modDef9913 };
-    let tmp6 = obj;
+    const obj2 = { icon: CalendarIcon.CalendarIcon, source: _modDef9913 };
+    let tmp6 = obj2;
   } else if (tmp4) {
-    obj = { icon: StageIcon.StageIcon, source: _modDef8745 };
-    tmp6 = obj;
-  } else if (tmp3) {
-    const obj1 = { icon: ScreenIcon.ScreenIcon, source: _modDef16430 };
-    tmp6 = obj1;
-  } else if (tmp2) {
-    const obj2 = { icon: VideoIcon.VideoIcon, source: _modDef16431 };
-    tmp6 = obj2;
-  } else if (tmp) {
-    const obj3 = { icon: VoiceNormalIcon.VoiceNormalIcon, source: _modDef16432 };
+    const obj3 = { icon: StageIcon.StageIcon, source: _modDef8745 };
     tmp6 = obj3;
+  } else if (tmp3) {
+    const obj4 = { icon: ScreenIcon.ScreenIcon, source: _modDef16432 };
+    tmp6 = obj4;
+  } else if (tmp2) {
+    const obj5 = { icon: VideoIcon.VideoIcon, source: _modDef16433 };
+    tmp6 = obj5;
+  } else if (tmp) {
+    const obj6 = { icon: VoiceNormalIcon.VoiceNormalIcon, source: _modDef16434 };
+    tmp6 = obj6;
   } else {
     tmp6 = null;
     if (tmp5) {
-      obj = { icon: AppsIcon.AppsIcon, source: _modDef5114 };
+      const obj = { icon: AppsIcon.AppsIcon, source: _modDef5114 };
       tmp6 = obj;
     }
   }
@@ -68,8 +68,7 @@ const size1 = {
   backgroundColor: nativeDefault.colors.BACKGROUND_MOD_STRONG,
 };
 obj.activityIconWrapper = size1;
-obj = { backgroundColor: nativeDefault.colors.CONTROL_CONNECTED_BACKGROUND_DEFAULT };
-obj.activityIconWrapperActive = obj;
+obj.activityIconWrapperActive = { backgroundColor: nativeDefault.colors.CONTROL_CONNECTED_BACKGROUND_DEFAULT };
 const size2 = { width: 12, height: 12, borderRadius: nativeDefault.radii.none };
 obj.activityIcon = size2;
 let closure_5 = createStyles.createStyles(obj);
@@ -77,17 +76,16 @@ const memoResult = noop.memo((arg0) => {
   ({ IconComponent, isCurrentUserConnected } = arg0);
   ({ style, source } = arg0);
   let activityIcon = closure_5();
-  let obj = useToken;
-  let WHITE = obj.useToken(nativeDefault.colors.ICON_DEFAULT);
-  obj = { style: null, children: null };
+  let WHITE = useToken.useToken(nativeDefault.colors.ICON_DEFAULT);
+  const obj2 = { style: null, children: null };
   const items = [activityIcon.activityWrapper, style];
-  obj.style = items;
+  obj2.style = items;
   const items1 = [activityIcon.activityIconWrapper];
   let prop = null;
   if (isCurrentUserConnected) {
     prop = activityIcon.activityIconWrapperActive;
   }
-  obj = { style: items1, children: null };
+  const obj3 = { style: items1, children: null };
   items1[1] = prop;
   if (null != IconComponent) {
     const colors = { color: null, size: "xxs", style: null };
@@ -97,18 +95,19 @@ const memoResult = noop.memo((arg0) => {
     <IconComponent color={null} size="xxs" style={null} />;
     const tmp8 = isCurrentUserConnected ? colors.WHITE : colors.ICON_DEFAULT;
   } else {
-    const obj1 = { source, color: null, style: null };
+    const obj4 = { source, color: null, style: null };
     if (isCurrentUserConnected) {
       WHITE = nativeDefault.unsafe_rawColors.WHITE;
     }
-    obj1.color = WHITE;
-    obj1.style = activityIcon.activityIcon;
-    obj.children = jsx(native.Icon, { source, color: null, style: null });
-    obj.children = <tmp6 {...obj} />;
-    return <tmp5 {...obj} />;
+    obj4.color = WHITE;
+    obj4.style = activityIcon.activityIcon;
+    obj3.children = jsx(native.Icon, { source, color: null, style: null });
+    obj2.children = <tmp6 {...obj3} />;
+    return <tmp5 {...obj2} />;
   }
 });
 const metroRequire = memoResult;
+let obj3 = { backgroundColor: nativeDefault.colors.CONTROL_CONNECTED_BACKGROUND_DEFAULT };
 size = fn(2);
 const result = size.fileFinishedImporting("modules/guilds_bar/native/GuildsBarActivityIndicator.tsx");
 
@@ -123,11 +122,11 @@ export default noop.memo(function GuildsBarGuildActivityIndicator(arg0) {
     icon = tmp2.icon;
   }
   const items = [icon, ,];
-  let source;
+  let source1;
   if (tmp2 != null) {
-    source = tmp2.source;
+    source1 = tmp2.source;
   }
-  items[1] = source;
+  items[1] = source1;
   items[2] = tmp.isCurrentUserConnected;
   const memo = noop.useMemo(() => {
     let icon;
@@ -146,7 +145,7 @@ export default noop.memo(function GuildsBarGuildActivityIndicator(arg0) {
     obj.isCurrentUserConnected = closure_0.isCurrentUserConnected;
     return obj;
   }, items);
-  source = memo.source;
+  let source = memo.source;
   let tmp9 = null;
   if (null != source) {
     let obj = { IconComponent: tmp7, style, source, isCurrentUserConnected: tmp8 };

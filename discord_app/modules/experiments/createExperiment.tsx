@@ -4,6 +4,8 @@ import _slicedToArray from "../../../_runtime/metro/00032__.js";
 import AuthenticationStore from "../../stores/AuthenticationStore.tsx";
 import ExperimentStore from "ExperimentStore.tsx";
 
+const require = globalThis.__r;
+
 require = fn;
 const noop = fn(19);
 ({ useState: closure_4, useEffect: hasOwnProperty } = noop);
@@ -12,8 +14,8 @@ const ExperimentConstants = fn(4553);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/experiments/createExperiment.tsx");
 
-export default function createExperiment(createExperiment) {
-  _require = createExperiment;
+export default function createExperiment(config) {
+  _require = config;
   function trackAutoExposure(guildId) {
     let obj = trackExposureOptions;
     if (trackExposureOptions === undefined) {
@@ -30,8 +32,8 @@ export default function createExperiment(createExperiment) {
     } else {
       let tmp3 = obj;
       if (obj === undefined) {
-        obj = { excluded: false, exposureType: constants2.MANUAL };
-        tmp3 = obj;
+        const obj2 = { excluded: false, exposureType: constants2.MANUAL };
+        tmp3 = obj2;
       }
       const id = result3.id;
       if ("guild" === user.kind) {
@@ -179,39 +181,36 @@ export default function createExperiment(createExperiment) {
     }
     NOT_ELIGIBLE = constants.NOT_ELIGIBLE;
   }
-  let obj = require("validateTriggerPoint");
-  let result = obj.validateOneExperiment(
-    createExperiment.id,
-    createExperiment.label,
-    createExperiment.commonTriggerPoint,
+  let result = require("validateTriggerPoint").validateOneExperiment(
+    config.id,
+    config.label,
+    config.commonTriggerPoint,
   );
   let map = new Map();
-  obj = { description: "Not Eligible", config: createExperiment.defaultConfig };
-  const result1 = map.set(constants.NOT_ELIGIBLE, obj);
-  obj = { description: "Control Bucket", config: createExperiment.defaultConfig };
-  const result2 = map.set(constants.CONTROL, obj);
-  const treatments = createExperiment.treatments;
+  const result1 = map.set(constants.NOT_ELIGIBLE, { description: "Not Eligible", config: config.defaultConfig });
+  const result2 = map.set(constants.CONTROL, { description: "Control Bucket", config: config.defaultConfig });
+  const treatments = config.treatments;
   const item = treatments.forEach((config) => {
     const result = map.set(config.id, {
       description: "Treatment " + config.id + ": " + config.label,
       config: config.config,
     });
   });
-  const obj1 = {
-    id: createExperiment.id,
-    title: createExperiment.label,
-    commonTriggerPoint: createExperiment.commonTriggerPoint,
+  const obj4 = {
+    id: config.id,
+    title: config.label,
+    commonTriggerPoint: config.commonTriggerPoint,
     description: null,
     buckets: [...map.keys()],
   };
   let items = [...map.values()];
-  obj1.description = items.map((description) => description.description);
-  if ("guild" === createExperiment.kind) {
-    let tmpResult = tmp(tmp2[5]);
-    result3 = tmpResult.registerGuildExperiment(obj1);
+  obj4.description = items.map((description) => description.description);
+  if ("guild" === config.kind) {
+    result3 = tmp(tmp2[5]).registerGuildExperiment(obj4);
+    const tmpResult = tmp(tmp2[5]);
   } else {
-    tmpResult = tmp(tmp2[5]);
-    result3 = tmpResult.registerUserExperiment(obj1);
+    result3 = tmp(tmp2[5]).registerUserExperiment(obj4);
+    const tmpResult2 = tmp(tmp2[5]);
   }
   return {
     useExperiment(guildId) {
@@ -398,10 +397,10 @@ export default function createExperiment(createExperiment) {
       if (aaMode1) {
         let defaultConfig1 = user.defaultConfig;
       } else {
-        value = map.get(constants.NOT_ELIGIBLE);
+        value2 = map.get(constants.NOT_ELIGIBLE);
         defaultConfig1 = undefined;
-        if (value != null) {
-          defaultConfig1 = value.config;
+        if (value2 != null) {
+          defaultConfig1 = value2.config;
         }
         if (defaultConfig1 == null) {
           defaultConfig1 = user.defaultConfig;
@@ -409,7 +408,7 @@ export default function createExperiment(createExperiment) {
       }
       return defaultConfig1;
     },
-    definition: createExperiment,
+    definition: config,
     isAAMode(guildId) {
       const id = user.id;
       if ("guild" === user.kind) {

@@ -1,7 +1,7 @@
 // discord_app/modules/guilds_bar/native/GuildsBarGeoRestrictedBadge.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
-import _modDef12393 from "../../../../_runtime/metro/12393__.js";
+import _modDef12394 from "../../../../_runtime/metro/12394__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 const View = fn(17).View;
@@ -31,10 +31,14 @@ const result = size.fileFinishedImporting("modules/guilds_bar/native/GuildsBarGe
 
 export default noop.memo(function GuildsBarGeoRestrictedBadge(style) {
   const tmp = closure_4();
-  let obj = { style: null, pointerEvents: "none", children: null };
+  const obj = { style: null, pointerEvents: "none", children: null };
   const items = [tmp.badgeImageContainer, style.style];
   obj.style = items;
-  obj = { source: _modDef12393, style: tmp.badgeImage };
-  obj.children = jsx(FastImageDefault, { source: _modDef12393, style: tmp.badgeImage });
-  return <View source={_modDef12393} style={tmp.badgeImage} />;
+  const obj2 = { source: _modDef12394, style: tmp.badgeImage };
+  obj.children = jsx(FastImageDefault, { source: _modDef12394, style: tmp.badgeImage });
+  return (
+    <View style={null} pointerEvents="none">
+      {null}
+    </View>
+  );
 });

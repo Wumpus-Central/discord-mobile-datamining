@@ -9,7 +9,8 @@ const result = size.fileFinishedImporting(
 
 export default {
   show(href) {
-    const obj = { href };
-    obj.openLazy(asyncRequireImpl(13077, dependencyMap.paths), "suspicious-download", obj);
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(13078, dependencyMap.paths), "suspicious-download", {
+      href,
+    });
   },
 };

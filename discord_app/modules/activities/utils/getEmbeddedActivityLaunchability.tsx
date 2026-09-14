@@ -6,6 +6,8 @@ import GuildStore from "../../../stores/GuildStore.tsx";
 import PermissionStore from "../../../stores/PermissionStore.tsx";
 import VoiceStateStore from "../../../stores/VoiceStateStore.tsx";
 
+const require = globalThis.__r;
+
 require = fn;
 function getEmbeddedActivityLaunchability(arg0) {
   ({ channelId, ChannelStore, GuildStore, PermissionStore, VoiceStateStore } = arg0);

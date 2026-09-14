@@ -5,8 +5,8 @@ import UserSettingsVoiceUtils from "../../voice/native/UserSettingsVoiceUtils.ts
 import MediaEngineStore from "../../../../stores/MediaEngineStore.tsx";
 
 require = fn;
-fn(11601);
-let SettingBuilders = {
+const SettingBuilders = fn(11602);
+const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.t8Qhib);
@@ -26,9 +26,8 @@ let SettingBuilders = {
     const items = [MediaEngineStore];
     return initialize.useStateFromStores(items, () => !noiseCancellationSupported.isNoiseCancellationSupported());
   },
-};
-SettingBuilders = SettingBuilders.createToggle(SettingBuilders);
+});
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_settings/defs/native/NoiseSuppressionSetting.tsx");
 
-export default SettingBuilders;
+export default toggle;

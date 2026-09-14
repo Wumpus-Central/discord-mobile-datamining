@@ -8,6 +8,7 @@ import _slicedToArray from "../../../_runtime/metro/00032__.js";
 import noop from "../../../_runtime/metro/00019__.js";
 import AuthenticationStore from "../../stores/AuthenticationStore.tsx";
 
+const require = globalThis.__r;
 const useAudienceRequestToSpeakStateDefault = useAudienceRequestToSpeakState;
 
 require = fn;
@@ -34,22 +35,24 @@ export default function useToggleRequestToSpeak(id) {
   const items2 = [
     first,
     () => {
-      let obj = useStageSpeakingForCurrentUser;
       if (obj.shouldAgeVerifyToSpeakForCurrentUser(id.id)) {
-        obj = { entryPoint: AgeVerificationAnalyticsUtils.AgeVerificationModalEntryPoint.STAGE_CHANNEL_RAISE_HAND };
-        const result = AgeVerificationActionCreatorsDefault.showAgeVerificationGetStartedModal(obj);
+        const obj2 = {
+          entryPoint: AgeVerificationAnalyticsUtils.AgeVerificationModalEntryPoint.STAGE_CHANNEL_RAISE_HAND,
+        };
+        const result = AgeVerificationActionCreatorsDefault.showAgeVerificationGetStartedModal(obj2);
       } else {
         if (
           closure_1 === useAudienceRequestToSpeakState.RequestToSpeakStates.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK
         ) {
-          let tmpResult = StageChannelActionCreators;
-          const result1 = tmpResult.audienceAckRequestToSpeak(id, true);
+          const result1 = StageChannelActionCreators.audienceAckRequestToSpeak(id, true);
+          const tmpResult = StageChannelActionCreators;
         } else {
-          tmpResult = StageChannelActionCreators;
-          tmpResult.toggleRequestToSpeak(id, !first);
+          StageChannelActionCreators.toggleRequestToSpeak(id, !first);
+          const tmpResult2 = StageChannelActionCreators;
         }
         closure_4(!first);
       }
+      obj = useStageSpeakingForCurrentUser;
     },
   ];
   return items2;

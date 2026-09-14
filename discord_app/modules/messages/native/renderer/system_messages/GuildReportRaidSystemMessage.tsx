@@ -25,11 +25,10 @@ export const createGuildReportRaidSystemMessage = function createGuildReportRaid
     guild_id = channel.guild_id;
   }
   const guild = GuildStore.getGuild(guild_id);
-  let obj = useAuthorWithProcessedColor;
-  const messageAuthorWithProcessedColor = obj.getMessageAuthorWithProcessedColor(message);
   const tmp3 = resolveMessageContentColorsDefault(theme);
+  const messageAuthorWithProcessedColor = useAuthorWithProcessedColor.getMessageAuthorWithProcessedColor(message);
   let automodUsernameColor = GuildAlertModeSystemMessage.resolveAlertModeColors(theme).automodUsernameColor;
-  obj = {
+  const obj3 = {
     username: messageAuthorWithProcessedColor.nick,
     usernameOnClick: formatUsernameOnClickDefault({
       message,
@@ -45,20 +44,21 @@ export const createGuildReportRaidSystemMessage = function createGuildReportRaid
   if (str == null) {
     str = "";
   }
-  obj.guildName = str;
-  obj = {};
+  obj3.guildName = str;
+  const obj4 = {};
   const merged = Object.assign(createCommonMessageDefault(roleStyle));
   const intl = util.intl;
-  obj.content = intl.formatToParts(util.t["MTmH+u"], obj);
+  obj4.content = intl.formatToParts(util.t["MTmH+u"], obj3);
   const intl2 = util.intl;
-  obj.username = intl2.string(util.t.hG1StD);
+  obj4.username = intl2.string(util.t.hG1StD);
   if (automodUsernameColor == null) {
     automodUsernameColor = null;
   }
-  obj.usernameColor = automodUsernameColor;
-  const tmp8Result = AvatarUtils;
+  obj4.usernameColor = automodUsernameColor;
   const tmp11 = getTagPropertiesDefault({ message, channel, isSystemDM: true, colors: tmp3 });
-  obj.avatarURL = tmp8Result.ensureAvatarSource(tmp8Result.makeSource(utils_AvatarUtils.getAutomodAvatarURL())).uri;
+  const tmp8Result = utils_AvatarUtils;
+  const tmp8Result3 = AvatarUtils;
+  obj4.avatarURL = tmp8Result.ensureAvatarSource(tmp8Result3.makeSource(utils_AvatarUtils.getAutomodAvatarURL())).uri;
   const merged1 = Object.assign(tmp11);
-  return obj;
+  return obj4;
 };

@@ -16,7 +16,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 function Radio() {
-  let obj = { children: null };
+  const obj = { children: null };
   const items = [
     timestampProducer(Text_Text.Text, { variant: "heading-lg/bold", children: "Radio" }),
     timestampProducer(Text_Text.Text, {
@@ -24,7 +24,13 @@ function Radio() {
       children: "Select a single option from a short list of multiple options",
     }),
   ];
-  obj = { title: "Role Colors", hasIcons: false, defaultValue: "color-in-names", onChange: NOOP, children: null };
+  const obj2 = {
+    title: "Role Colors",
+    hasIcons: false,
+    defaultValue: "color-in-names",
+    onChange: NOOP,
+    children: null,
+  };
   const items1 = [
     timestampProducer(TableRadioRow.TableRadioRow, { label: "Show role colors in names", value: "color-in-names" }),
     timestampProducer(TableRadioRow.TableRadioRow, {
@@ -39,40 +45,40 @@ function Radio() {
       disabled: true,
     }),
   ];
-  obj.children = items1;
-  items[2] = React5(TableRadioGroup.TableRadioGroup, obj);
+  obj2.children = items1;
+  items[2] = React5(TableRadioGroup.TableRadioGroup, obj2);
   obj.children = items;
   return React5(React6, obj);
 }
 function Switch() {
-  [tmp2, c0] = _slicedToArray(noop.useState(true), 2);
-  let obj = {
+  [tmp2, c0] = noop.useState(true);
+  const tmp = _slicedToArray(noop.useState(true), 2);
+  const obj = {
     value: tmp2,
     onValueChange: noop.useCallback((arg0) => {
       _undefined(arg0);
     }, []),
   };
-  const tmp = _slicedToArray(noop.useState(true), 2);
-  [tmp4, c0] = _slicedToArray(noop.useState(false), 2);
-  obj = {
+  [tmp4, c0] = noop.useState(false);
+  const tmp3 = _slicedToArray(noop.useState(false), 2);
+  const obj2 = {
     value: tmp4,
     onValueChange: noop.useCallback((arg0) => {
       _undefined(arg0);
     }, []),
   };
-  const tmp3 = _slicedToArray(noop.useState(false), 2);
-  [tmp6, c0] = _slicedToArray(noop.useState(true), 2);
-  obj = {
+  [tmp6, c0] = noop.useState(true);
+  const tmp5 = _slicedToArray(noop.useState(true), 2);
+  c0 = undefined;
+  const obj3 = {
     value: tmp6,
     onValueChange: noop.useCallback((arg0) => {
       _undefined(arg0);
     }, []),
   };
-  c0 = undefined;
-  const tmp5 = _slicedToArray(noop.useState(true), 2);
-  [tmp8, c0] = _slicedToArray(noop.useState(false), 2);
+  [tmp8, c0] = noop.useState(false);
   const tmp7 = _slicedToArray(noop.useState(false), 2);
-  const obj2 = { children: null };
+  const obj5 = { children: null };
   const items = [
     timestampProducer(Text_Text.Text, { variant: "heading-lg/bold", children: "Switch" }),
     timestampProducer(Text_Text.Text, {
@@ -81,17 +87,17 @@ function Switch() {
     }),
     ,
   ];
-  const obj3 = { title: "Emoji", hasIcons: false, children: null };
+  const obj6 = { title: "Emoji", hasIcons: false, children: null };
   const merged = Object.assign(obj);
-  obj3.children = timestampProducer(TableSwitchRow.TableSwitchRow, {
+  obj6.children = timestampProducer(TableSwitchRow.TableSwitchRow, {
     label: "Show emoji reactions on messages",
     subLabel: "Show more information in less space",
   });
-  items[2] = timestampProducer(TableRowGroup.TableRowGroup, obj3);
-  const obj5 = { title: "Display images, videos, and lolcats", hasIcons: false, children: null };
-  const merged1 = Object.assign(obj);
+  items[2] = timestampProducer(TableRowGroup.TableRowGroup, obj6);
+  const obj8 = { title: "Display images, videos, and lolcats", hasIcons: false, children: null };
+  const merged1 = Object.assign(obj2);
   const items1 = [timestampProducer(TableSwitchRow.TableSwitchRow, { label: "When posted as links to chat" }), , ,];
-  const merged2 = Object.assign(obj);
+  const merged2 = Object.assign(obj3);
   items1[1] = timestampProducer(TableSwitchRow.TableSwitchRow, { label: "When uploaded directly to Discord" });
   const merged3 = Object.assign({
     value: tmp8,
@@ -107,10 +113,10 @@ function Switch() {
     value: false,
     onValueChange: NOOP,
   });
-  obj5.children = items1;
-  items[3] = React5(TableRowGroup.TableRowGroup, obj5);
-  obj2.children = items;
-  return React5(React6, obj2);
+  obj8.children = items1;
+  items[3] = React5(TableRowGroup.TableRowGroup, obj8);
+  obj5.children = items;
+  return React5(React6, obj5);
 }
 function InlineCheckbox(startChecked) {
   let flag = startChecked.startChecked;
@@ -122,7 +128,7 @@ function InlineCheckbox(startChecked) {
     flag = true;
   }
   c0 = undefined;
-  [tmp2, c0] = _slicedToArray(noop.useState(flag), 2);
+  [tmp2, c0] = noop.useState(flag);
   const onToggle = noop.useCallback((arg0) => {
     _undefined(arg0);
   }, []);
@@ -144,7 +150,7 @@ function InlineCheckboxDemo() {
   return React5(React6, obj);
 }
 function CheckboxRowDemo() {
-  let obj = { children: null };
+  const obj = { children: null };
   const items = [
     timestampProducer(Text_Text.Text, { variant: "heading-lg/bold", children: "Checkbox" }),
     timestampProducer(Text_Text.Text, {
@@ -152,10 +158,14 @@ function CheckboxRowDemo() {
       children: "Select one or more options from a short list of options",
     }),
   ];
-  obj = { title: "Who can send you a friend request?", hasIcons: false, children: null };
-  obj = { label: "Everyone", subLabel: "Anyone can send you a friend request", checked: false, onPress: NOOP };
+  const obj2 = { title: "Who can send you a friend request?", hasIcons: false, children: null };
   const items1 = [
-    timestampProducer(TableCheckboxRow.TableCheckboxRow, obj),
+    timestampProducer(TableCheckboxRow.TableCheckboxRow, {
+      label: "Everyone",
+      subLabel: "Anyone can send you a friend request",
+      checked: false,
+      onPress: NOOP,
+    }),
     timestampProducer(TableCheckboxRow.TableCheckboxRow, {
       label: "Friends of Friends",
       subLabel: "Anyone who is friends with your friends can send you a friend request",
@@ -169,22 +179,25 @@ function CheckboxRowDemo() {
       onPress: NOOP,
     }),
   ];
-  obj.children = items1;
-  items[2] = React5(TableRowGroup.TableRowGroup, obj);
+  obj2.children = items1;
+  items[2] = React5(TableRowGroup.TableRowGroup, obj2);
   obj.children = items;
   return React5(React6, obj);
 }
 function SliderDemo() {
-  let obj = { children: null };
+  const obj = { children: null };
   const items = [timestampProducer(Text_Text.Text, { variant: "heading-lg/bold", children: "Slider" })];
-  obj = { start: true, end: true, label: "Volume", subLabel: null };
-  obj = {
-    startIcon: timestampProducer(VoiceXIcon.VoiceXIcon, {}),
-    endIcon: timestampProducer(VoiceNormalIcon.VoiceNormalIcon, {}),
-    onValueChange: NOOP,
+  const obj2 = {
+    start: true,
+    end: true,
+    label: "Volume",
+    subLabel: timestampProducer(Slider.Slider, {
+      startIcon: timestampProducer(VoiceXIcon.VoiceXIcon, {}),
+      endIcon: timestampProducer(VoiceNormalIcon.VoiceNormalIcon, {}),
+      onValueChange: NOOP,
+    }),
   };
-  obj.subLabel = timestampProducer(Slider.Slider, obj);
-  items[1] = timestampProducer(TableRow.TableRow, obj);
+  items[1] = timestampProducer(TableRow.TableRow, obj2);
   obj.children = items;
   return React5(React6, obj);
 }
@@ -200,8 +213,8 @@ const result = size.fileFinishedImporting(
 );
 
 export default function UserSettingsDesignSystemFormPrimitives() {
-  let obj = { children: null };
-  obj = { spacing: 24, style: closure_9().container, children: null };
+  const obj = { children: null };
+  const obj2 = { spacing: 24, style: closure_9().container, children: null };
   const items = [
     timestampProducer(Radio, {}),
     timestampProducer(Switch, {}),
@@ -209,7 +222,7 @@ export default function UserSettingsDesignSystemFormPrimitives() {
     timestampProducer(InlineCheckboxDemo, {}),
     timestampProducer(SliderDemo, {}),
   ];
-  obj.children = items;
-  obj.children = React5(Stack_Stack.Stack, obj);
+  obj2.children = items;
+  obj.children = React5(Stack_Stack.Stack, obj2);
   return timestampProducer(ScrollView, obj);
 }

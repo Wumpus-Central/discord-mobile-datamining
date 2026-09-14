@@ -12,12 +12,15 @@ export const showGuildSettingsModalStickerInfoActionSheet = function showGuildSe
   arg0,
 ) {
   ({ guildId, stickerId } = arg0);
-  const obj = {
-    guildId,
-    stickerId,
-    hideActionSheet() {
-      ActionSheetActionCreatorsDefault.hideActionSheet(GuildSettingsModalStickerInfoActionSheet);
+  ActionSheetActionCreatorsDefault.openLazy(
+    asyncRequireImpl(17699, dependencyMap.paths),
+    GuildSettingsModalStickerInfoActionSheet,
+    {
+      guildId,
+      stickerId,
+      hideActionSheet() {
+        ActionSheetActionCreatorsDefault.hideActionSheet(GuildSettingsModalStickerInfoActionSheet);
+      },
     },
-  };
-  obj.openLazy(asyncRequireImpl(17698, dependencyMap.paths), GuildSettingsModalStickerInfoActionSheet, obj);
+  );
 };

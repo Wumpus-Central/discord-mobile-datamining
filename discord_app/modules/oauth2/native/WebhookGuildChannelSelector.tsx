@@ -14,14 +14,18 @@ const View = fn(17).View;
 const createChannelRecord = fn(1961).createChannelRecord;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-fn(4636);
-let createStyles = { selectorGroup: { flexDirection: "column", gap: 8 }, select: null, label: null, error: null };
-createStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, borderRadius: nativeDefault.radii.xs };
-createStyles.select = createStyles;
-createStyles.label = { color: nativeDefault.colors.TEXT_SUBTLE, fontWeight: "500" };
-let obj1 = { color: nativeDefault.colors.TEXT_SUBTLE, fontWeight: "500" };
-createStyles.error = { color: nativeDefault.unsafe_rawColors.RED_400 };
-createStyles = createStyles.createStyles(createStyles);
+const createStyles = fn(4636);
+let obj2 = {
+  selectorGroup: { flexDirection: "column", gap: 8 },
+  select: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, borderRadius: nativeDefault.radii.xs },
+  label: null,
+  error: null,
+};
+let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, borderRadius: nativeDefault.radii.xs };
+obj2.label = { color: nativeDefault.colors.TEXT_SUBTLE, fontWeight: "500" };
+let obj4 = { color: nativeDefault.colors.TEXT_SUBTLE, fontWeight: "500" };
+obj2.error = { color: nativeDefault.unsafe_rawColors.RED_400 };
+const styles = createStyles.createStyles(obj2);
 const WebhookGuildChannelSelector = "WebhookGuildChannelSelector";
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/oauth2/native/WebhookGuildChannelSelector.tsx");
@@ -31,12 +35,11 @@ export default function WebhookGuildChannelSelector(selectedGuildId) {
   const selectedChannelId = selectedGuildId.selectedChannelId;
   const onChannelChange = selectedGuildId.onChannelChange;
   const error = selectedGuildId.error;
+  first = undefined;
   _slicedToArray = undefined;
   noop = undefined;
-  const tmp = createStyles();
-  let tmp2 = _slicedToArray(noop.useState(null), 2);
-  const first = tmp2[0];
-  _slicedToArray = tmp2[1];
+  const tmp = styles();
+  [first, _slicedToArray] = noop.useState(null);
   noop = noop.useRef(false);
   const items = [first, onChannelChange, selectedChannelId, selectedGuildId];
   const items1 = [onChannelChange, selectedGuildId];
@@ -46,23 +49,24 @@ export default function WebhookGuildChannelSelector(selectedGuildId) {
       tmp2 = first.guildId === selectedGuildId;
     }
     if (tmp2) {
-      let obj = { title: null, items: null, onItemSelect: null, selectedItem: null, hasIcons: false };
+      const obj2 = { title: null, items: null, onItemSelect: null, selectedItem: null, hasIcons: false };
+      let obj = ActionSheetActionCreatorsDefault;
       const intl = util.intl;
-      obj.title = intl.string(util.t["Re/64R"]);
+      obj2.title = intl.string(util.t["Re/64R"]);
       const channels = first.channels;
-      obj.items = channels.map((id) => {
+      obj2.items = channels.map((id) => {
         const obj = {
           label: selectedGuildId(4789).computeChannelName(closure_1_7(id), closure_1_9, closure_1_8),
           value: id.id,
         };
         return obj;
       });
-      obj.onItemSelect = function onItemSelect(arg0) {
+      obj2.onItemSelect = function onItemSelect(arg0) {
         dependencyMap(arg0);
         selectedChannelId(onChannelChange[10]).hideActionSheet(WebhookGuildChannelSelector);
       };
-      obj.selectedItem = selectedChannelId;
-      obj.openLazy(asyncRequireImpl(9556, dependencyMap.paths), WebhookGuildChannelSelector, obj);
+      obj2.selectedItem = selectedChannelId;
+      obj.openLazy(asyncRequireImpl(9556, dependencyMap.paths), WebhookGuildChannelSelector, obj2);
       const tmp7 = asyncRequireImpl(9556, dependencyMap.paths);
     }
   }, items);
@@ -75,8 +79,8 @@ export default function WebhookGuildChannelSelector(selectedGuildId) {
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
-          let obj = { value, done: true };
-          return obj;
+          const obj2 = { value, done: true };
+          return obj2;
         } else {
           return { value: "HermesInternal", done: null };
         }
@@ -89,26 +93,25 @@ export default function WebhookGuildChannelSelector(selectedGuildId) {
               throw value;
             } else if (arg0 === 2) {
               v3 = 3;
-              obj = { value, done: true };
-              return obj;
+              const obj4 = { value, done: true };
+              return obj4;
             } else {
               closure_2 = tmp5;
               closure_1 = tmp2;
               closure_129_0 = closure_0;
               closure_129_1 = undefined;
-              let obj2 = selectedGuildId(onChannelChange[15]);
               c3 = 1;
               v3 = 1;
-              const obj1 = { value: obj2.fetchChannels(closure_0), done: false };
-              return obj1;
+              const obj5 = { value: selectedGuildId(onChannelChange[15]).fetchChannels(closure_0), done: false };
+              return obj5;
             }
           } else if (arg0 === 1) {
             v3 = 3;
             throw value;
           } else if (arg0 === 2) {
             v3 = 3;
-            obj2 = { value, done: true };
-            return obj2;
+            const obj6 = { value, done: true };
+            return obj6;
           } else {
             closure_129_1 = value;
             if (closure_0 === closure_129_0) {
@@ -116,7 +119,7 @@ export default function WebhookGuildChannelSelector(selectedGuildId) {
                 name = name.name;
                 return name.localeCompare(name2.name);
               });
-              obj = { guildId: closure_129_0, channels: closure_129_1 };
+              const obj = { guildId: closure_129_0, channels: closure_129_1 };
               v3(obj);
               ref.current = true;
             }
@@ -169,16 +172,16 @@ export default function WebhookGuildChannelSelector(selectedGuildId) {
       found = channels.find((id) => id.id === selectedChannelId);
     }
     let obj = { style: tmp.selectorGroup, children: null };
-    obj = { variant: "eyebrow", color: "text-default", children: null };
+    let obj2 = { variant: "eyebrow", color: "text-default", children: null };
     let intl = selectedGuildId(onChannelChange[13]).intl;
-    obj.children = intl.string(selectedGuildId(onChannelChange[13]).t["8qKd+J"]);
-    const items3 = [closure_10(selectedGuildId(onChannelChange[16]).Text, obj), , ,];
+    obj2.children = intl.string(selectedGuildId(onChannelChange[13]).t["8qKd+J"]);
+    const items3 = [closure_10(selectedGuildId(onChannelChange[16]).Text, obj2), , ,];
     let tmp10Result = null;
     if (null != error) {
       tmp10Result = null;
       if ("" !== error) {
-        obj = { style: tmp.error, children: error };
-        tmp10Result = closure_10(tmp11(tmp12[17]).LegacyText, obj);
+        const obj3 = { style: tmp.error, children: error };
+        tmp10Result = closure_10(tmp11(tmp12[17]).LegacyText, obj3);
       }
     }
     items3[1] = tmp10Result;
@@ -190,20 +193,20 @@ export default function WebhookGuildChannelSelector(selectedGuildId) {
       const intl2 = tmp11(tmp12[13]).intl;
       name = intl2.string(tmp11(tmp12[13]).t["Re/64R"]);
     }
-    let obj1 = {
+    let obj4 = {
       label: name,
       disabled: null == selectedGuildId,
       trailing: closure_10(selectedGuildId(onChannelChange[18]).FormRow.Arrow, {}),
       DEPRECATED_style: tmp.select,
       onPress: callback,
     };
-    items3[2] = closure_10(selectedGuildId(onChannelChange[18]).FormRow, obj1);
-    let obj2 = { style: tmp.label, children: null };
+    items3[2] = closure_10(selectedGuildId(onChannelChange[18]).FormRow, obj4);
+    let obj5 = { style: tmp.label, children: null };
     const intl3 = tmp11(tmp12[13]).intl;
-    obj2.children = intl3.string(selectedGuildId(onChannelChange[13]).t.kQXMfN);
-    items3[3] = closure_10(selectedGuildId(onChannelChange[17]).LegacyText, obj2);
+    obj5.children = intl3.string(selectedGuildId(onChannelChange[13]).t.kQXMfN);
+    items3[3] = closure_10(selectedGuildId(onChannelChange[17]).LegacyText, obj5);
     obj.children = items3;
     return closure_11(View, obj);
   }
 }
-export const useStyles = createStyles;
+export const useStyles = styles;

@@ -63,7 +63,10 @@ export const fetchGuildEmbed = function fetchGuildEmbed(guildId) {
   const HTTP = HTTPUtils.HTTP;
   value = HTTP.get({ url: Endpoints.GUILD_WIDGET(guildId), oldFormErrors: true, rejectWithError: true });
   return value.then((body) => {
-    const obj = { type: "GUILD_SETTINGS_SET_WIDGET", enabled: body.body.enabled, channelId: body.body.channel_id };
-    obj.dispatch(obj);
+    DispatcherDefault.dispatch({
+      type: "GUILD_SETTINGS_SET_WIDGET",
+      enabled: body.body.enabled,
+      channelId: body.body.channel_id,
+    });
   });
 };

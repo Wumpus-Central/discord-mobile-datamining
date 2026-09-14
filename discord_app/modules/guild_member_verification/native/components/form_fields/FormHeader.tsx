@@ -6,15 +6,15 @@ import TextStyles from "../../../../rebrand/native/TextStyles.tsx";
 
 require = fn;
 const jsx = fn(21).jsx;
-fn(4636);
-let createStyles = { fieldHeader: null };
-createStyles = {};
+const createStyles = fn(4636);
+const obj2 = { fieldHeader: null };
+const obj3 = {};
 let merged = Object.assign(
   TextStyles(fn(1085).Fonts.DISPLAY_EXTRABOLD, nativeDefault.colors.TEXT_SUBTLE, 12, { uppercase: true }),
 );
-createStyles.paddingBottom = 8;
-createStyles.fieldHeader = createStyles;
-let closure_3 = createStyles.createStyles(createStyles);
+obj3.paddingBottom = 8;
+obj2.fieldHeader = obj3;
+let closure_3 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting(
   "modules/guild_member_verification/native/components/form_fields/FormHeader.tsx",

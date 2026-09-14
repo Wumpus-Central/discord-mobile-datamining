@@ -14,22 +14,23 @@ require = fn;
 function PricingSubheadingCopy() {
   let tmp = closure_21();
   _require = tmp;
-  let obj = require("initialize");
   let items = [UserStore];
-  const stateFromStores = obj.useStateFromStores(items, () => currentUser.getCurrentUser());
-  let obj1 = require("PremiumUtils");
-  const hasBoostDiscountResult = obj1.hasBoostDiscount(stateFromStores);
-  let obj2 = require("initialize");
+  const stateFromStores = require("initialize").useStateFromStores(items, () => currentUser.getCurrentUser());
+  let obj = require("initialize");
+  const hasBoostDiscountResult = require("PremiumUtils").hasBoostDiscount(stateFromStores);
+  const obj2 = require("PremiumUtils");
   const items1 = [LocaleStore];
-  const stateFromStores1 = obj2.useStateFromStores(items1, () => locale.locale);
-  let obj3 = require("useSubscriptionPlansLoaded");
-  const subscriptionPlansLoaded = obj3.useSubscriptionPlansLoaded();
-  let obj4 = require("initialize");
+  const stateFromStores1 = require("initialize").useStateFromStores(items1, () => locale.locale);
+  const obj3 = require("initialize");
+  const subscriptionPlansLoaded = require("useSubscriptionPlansLoaded").useSubscriptionPlansLoaded();
+  const obj4 = require("useSubscriptionPlansLoaded");
   const items2 = [SubscriptionStore];
-  importDefault = obj4.useStateFromStores(items2, () => premiumTypeSubscription.getPremiumTypeSubscription());
-  let obj5 = require("initialize");
+  importDefault = require("initialize").useStateFromStores(items2, () =>
+    premiumTypeSubscription.getPremiumTypeSubscription(),
+  );
+  const obj5 = require("initialize");
   const items3 = [SubscriptionPlanStore];
-  let stateFromStores2 = obj5.useStateFromStores(items3, () => {
+  let stateFromStores2 = require("initialize").useStateFromStores(items3, () => {
     value = undefined;
     if (null != closure_1) {
       value = SubscriptionPlanStore.get(tmp.planId);
@@ -42,11 +43,11 @@ function PricingSubheadingCopy() {
       const obj = closure_1(str3[15]);
     }
   }, []);
-  let obj6 = require("initialize");
-  let obj7 = IAPStore;
+  const obj6 = require("initialize");
   const items4 = [IAPStore];
+  const obj7 = require("initialize");
   [tmp12, tmp13, tmp14, tmp15, tmp16] = str2(
-    obj6.useStateFromStoresArray(items4, () => {
+    require("initialize").useStateFromStoresArray(items4, () => {
       const items = [
         IAPStore.getProduct(closure_0(str3[17]).ProductIds.PREMIUM_GUILD_1_MONTHLY),
         IAPStore.getProduct(closure_0(str3[17]).ProductIds.PREMIUM_TIER_2_MONTHLY),
@@ -63,7 +64,7 @@ function PricingSubheadingCopy() {
   }
   ({ interval, intervalCount } = stateFromStores2);
   if (subscriptionPlansLoaded) {
-    if (obj7.isReady()) {
+    if (IAPStore.isReady()) {
       if (null != tmp12) {
         if (tmp12 != null) {
           const formatted = tmp12.currencyCode.toLowerCase();
@@ -107,46 +108,46 @@ function PricingSubheadingCopy() {
             tmp22 = price;
           }
         }
-        let tmp2Result = tmp2(tmp3[19]);
+        const tmp2Result = tmp2(tmp3[19]);
         let result = diff1;
         if (tmp25) {
-          tmp2Result = tmp2(tmp3[20]);
-          result = tmp2Result.convertToMajorCurrencyUnits(diff1, CurrencyCodes.USD);
+          result = tmp2(tmp3[20]).convertToMajorCurrencyUnits(diff1, CurrencyCodes.USD);
+          const tmp2Result10 = tmp2(tmp3[20]);
         }
-        tmp25 = tmp2Result.isAndroid() && null != diff1;
-        const tmp2Result1 = tmp2(tmp3[19]);
+        tmp25 = tmp2(tmp3[19]).isAndroid() && null != diff1;
+        const tmp2Result11 = tmp2(tmp3[19]);
         let result1 = tmp22;
         if (tmp28) {
           result1 = tmp2(tmp3[20]).convertToMajorCurrencyUnits(tmp22, CurrencyCodes.USD);
-          const tmp2Result2 = tmp2(tmp3[20]);
+          const tmp2Result12 = tmp2(tmp3[20]);
         }
         str2 = "...";
         str3 = "...";
         if (null != result) {
-          const tmp2Result3 = tmp2(tmp3[21]);
-          str3 = tmp2Result3.formatRate(
+          const tmp2Result13 = tmp2(tmp3[21]);
+          str3 = tmp2Result13.formatRate(
             tmp2(tmp3[21]).formatPrice(result, formatted, { convertToMajorUnits: false }),
             interval,
             intervalCount,
           );
-          const tmp2Result4 = tmp2(tmp3[21]);
+          const tmp2Result14 = tmp2(tmp3[21]);
         }
         if (null != result1) {
-          const tmp2Result5 = tmp2(tmp3[21]);
-          str2 = tmp2Result5.formatRate(
+          const tmp2Result15 = tmp2(tmp3[21]);
+          str2 = tmp2Result15.formatRate(
             tmp2(tmp3[21]).formatPrice(result1, formatted, { convertToMajorUnits: false }),
             interval,
             intervalCount,
           );
-          const tmp2Result6 = tmp2(tmp3[21]);
+          const tmp2Result16 = tmp2(tmp3[21]);
         }
         if (result !== result1) {
-          obj = { style: tmp.cardText, accessibilityLabel: null, variant: "text-md/medium", children: null };
+          const obj9 = { style: tmp.cardText, accessibilityLabel: null, variant: "text-md/medium", children: null };
           const intl2 = tmp2(tmp3[22]).intl;
-          obj = { price: str3, originalPrice: str2 };
-          obj.accessibilityLabel = intl2.formatToPlainString(tmp2(tmp3[22]).t.lEIwDw, obj);
+          const obj10 = { price: str3, originalPrice: str2 };
+          obj9.accessibilityLabel = intl2.formatToPlainString(tmp2(tmp3[22]).t.lEIwDw, obj10);
           const intl3 = tmp2(tmp3[22]).intl;
-          obj1 = {
+          const obj11 = {
             price: str3,
             originalPrice: str2,
             originalPriceHook(children, arg1) {
@@ -163,32 +164,31 @@ function PricingSubheadingCopy() {
               return tmp;
             },
           };
-          obj.children = intl3.format(tmp2(tmp3[22]).t.eRSsbf, obj1);
-          obj2 = obj;
+          obj9.children = intl3.format(tmp2(tmp3[22]).t.eRSsbf, obj11);
+          let obj12 = obj9;
         } else {
-          obj2 = { style: tmp.cardText, variant: "text-md/medium", children: null };
+          obj12 = { style: tmp.cardText, variant: "text-md/medium", children: null };
           const intl = tmp2(tmp3[22]).intl;
-          obj3 = { price: str3 };
-          obj2.children = intl.format(tmp2(tmp3[22]).t.Mmf63F, obj3);
+          const obj13 = { price: str3 };
+          obj12.children = intl.format(tmp2(tmp3[22]).t.Mmf63F, obj13);
         }
-        const tmp31Result = closure_18(tmp2(tmp3[18]).Text, obj2);
-        let tmp5Result = tmp5(tmp3[13]);
+        const tmp31Result = closure_18(tmp2(tmp3[18]).Text, obj12);
+        tmp28 = tmp2(tmp3[19]).isAndroid() && null != tmp22;
         if (tmp5Result.hasFreeBoosts(stateFromStores)) {
           if (hasBoostDiscountResult) {
-            tmp5Result = tmp5(tmp3[13]);
-            if (tmp5Result.isPremium(stateFromStores, closure_14.TIER_2)) {
-              obj4 = { children: null };
-              obj5 = { style: tmp.cardText, variant: "text-md/medium", children: null };
+            if (tmp5Result3.isPremium(stateFromStores, closure_14.TIER_2)) {
+              const obj14 = { children: null };
+              const obj15 = { style: tmp.cardText, variant: "text-md/medium", children: null };
               const intl5 = tmp2(tmp3[22]).intl;
-              obj6 = {
+              const obj16 = {
                 freeSubscriptionCount,
                 discountPercent: tmp2(tmp3[23]).formatPercent(stateFromStores1, closure_17 / 100),
               };
-              obj5.children = intl5.format(tmp2(tmp3[22]).t["ZikTt+"], obj6);
-              const items5 = [closure_18(tmp2(tmp3[18]).Text, obj5), tmp31Result];
-              obj4.children = items5;
-              let tmp34 = closure_20(closure_19, obj4);
-              const tmp2Result7 = tmp2(tmp3[23]);
+              obj15.children = intl5.format(tmp2(tmp3[22]).t["ZikTt+"], obj16);
+              const items5 = [closure_18(tmp2(tmp3[18]).Text, obj15), tmp31Result];
+              obj14.children = items5;
+              let tmp34 = closure_20(closure_19, obj14);
+              const tmp2Result17 = tmp2(tmp3[23]);
             }
             return tmp34;
           }
@@ -196,20 +196,20 @@ function PricingSubheadingCopy() {
         tmp34 = tmp31Result;
         if (hasBoostDiscountResult) {
           tmp34 = tmp31Result;
-          if (tmp5Result1.isPremium(stateFromStores, closure_14.TIER_1)) {
-            obj7 = { children: null };
-            const obj8 = { style: tmp.cardText, variant: "text-md/medium", children: null };
+          if (tmp5Result4.isPremium(stateFromStores, closure_14.TIER_1)) {
+            const obj17 = { children: null };
+            const obj18 = { style: tmp.cardText, variant: "text-md/medium", children: null };
             const intl4 = tmp2(tmp3[22]).intl;
-            const obj9 = { discountPercent: tmp2(tmp3[23]).formatPercent(stateFromStores1, closure_17 / 100) };
-            obj8.children = intl4.format(tmp2(tmp3[22]).t.XVMAKU, obj9);
-            const items6 = [closure_18(tmp2(tmp3[18]).Text, obj8), tmp31Result];
-            obj7.children = items6;
-            tmp34 = closure_20(closure_19, obj7);
-            const tmp2Result8 = tmp2(tmp3[23]);
+            const obj19 = { discountPercent: tmp2(tmp3[23]).formatPercent(stateFromStores1, closure_17 / 100) };
+            obj18.children = intl4.format(tmp2(tmp3[22]).t.XVMAKU, obj19);
+            const items6 = [closure_18(tmp2(tmp3[18]).Text, obj18), tmp31Result];
+            obj17.children = items6;
+            tmp34 = closure_20(closure_19, obj17);
+            const tmp2Result18 = tmp2(tmp3[23]);
           }
-          tmp5Result1 = tmp5(tmp3[13]);
+          tmp5Result4 = tmp5(tmp3[13]);
         }
-        tmp28 = tmp2(tmp3[19]).isAndroid() && null != tmp22;
+        tmp5Result = tmp5(tmp3[13]);
       }
     }
   }
@@ -240,9 +240,9 @@ let result = size.fileFinishedImporting("components_native/premium/PremiumSubscr
 
 export default function PremiumSubscriptionPricingUpsell() {
   const tmp = closure_21();
-  let obj = { style: tmp.pricingSection, children: null };
-  const subscriptionPlansLoaded = obj.useSubscriptionPlansLoaded();
-  obj = {
+  const obj2 = { style: tmp.pricingSection, children: null };
+  const subscriptionPlansLoaded = useSubscriptionPlansLoaded.useSubscriptionPlansLoaded();
+  const obj3 = {
     style: tmp.title,
     accessibilityRole: "header",
     variant: "heading-lg/semibold",
@@ -250,13 +250,13 @@ export default function PremiumSubscriptionPricingUpsell() {
     children: null,
   };
   const intl = util.intl;
-  obj.children = intl.string(util.t["3x1PFE"]);
-  const items = [collapsedCategories(Text_Text.Text, obj)];
+  obj3.children = intl.string(util.t["3x1PFE"]);
+  const items = [collapsedCategories(Text_Text.Text, obj3)];
   let tmp5Result = null;
   if (subscriptionPlansLoaded) {
     tmp5Result = collapsedCategories(PricingSubheadingCopy, {});
   }
   items[1] = tmp5Result;
-  obj.children = items;
-  return closure_1_20(View, obj);
+  obj2.children = items;
+  return closure_1_20(View, obj2);
 }

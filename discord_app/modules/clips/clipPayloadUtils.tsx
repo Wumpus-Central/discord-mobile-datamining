@@ -1,6 +1,8 @@
 // discord_app/modules/clips/clipPayloadUtils.tsx
 import _slicedToArray from "../../../_runtime/metro/00032__.js";
 
+const require = globalThis.__r;
+
 const require = fn;
 const ClipsConstants = fn(5213);
 ({

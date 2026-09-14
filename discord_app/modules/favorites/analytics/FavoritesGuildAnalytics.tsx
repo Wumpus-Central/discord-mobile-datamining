@@ -22,12 +22,17 @@ export const trackFavoritesGuildAddToFavorites = function trackFavoritesGuildAdd
   type,
   total_favorites,
 ) {
-  const obj = { source, channel_type: type, total_favorites };
-  obj.track(AnalyticEvents.FAVORITES_GUILD_ADD_TO_FAVORITES, obj);
+  AnalyticsUtilsDefault.track(AnalyticEvents.FAVORITES_GUILD_ADD_TO_FAVORITES, {
+    source,
+    channel_type: type,
+    total_favorites,
+  });
 };
 export const trackFavoritesGuildRemoveFromFavorites = function trackFavoritesGuildRemoveFromFavorites(type, length) {
-  const obj = { channel_type: type, total_favorites: length };
-  obj.track(AnalyticEvents.FAVORITES_GUILD_REMOVE_FROM_FAVORITES, obj);
+  AnalyticsUtilsDefault.track(AnalyticEvents.FAVORITES_GUILD_REMOVE_FROM_FAVORITES, {
+    channel_type: type,
+    total_favorites: length,
+  });
 };
 export const trackFavoritesGuildOrderUpdated = function trackFavoritesGuildOrderUpdated() {
   AnalyticsUtilsDefault.track(AnalyticEvents.FAVORITES_GUILD_ORDER_UPDATED);
@@ -36,6 +41,5 @@ export const trackFavoritesGuildVisibilitySettingToggled = function trackFavorit
   auto,
   is_visible,
 ) {
-  const obj = { source: auto, is_visible };
-  obj.track(AnalyticEvents.FAVORITES_GUILD_SETTING_TOGGLED, obj);
+  AnalyticsUtilsDefault.track(AnalyticEvents.FAVORITES_GUILD_SETTING_TOGGLED, { source: auto, is_visible });
 };

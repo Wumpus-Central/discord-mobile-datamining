@@ -3,50 +3,49 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import native from "../../../../design/void/native.tsx";
 import TouchableHitBoxDefault from "../../../../design/void/TouchableHitBox/native/TouchableHitBox.tsx";
 import _modDef10069 from "../../../../../_runtime/metro/10069__.js";
-import _modDef13984 from "../../../../../_runtime/metro/13984__.js";
+import _modDef13985 from "../../../../../_runtime/metro/13985__.js";
 import FormStylesDefault from "FormStyles.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
-import TextStyles from "../../../rebrand/native/TextStyles.tsx";
+import TextStyles_mod from "../../../rebrand/native/TextStyles.tsx";
 
 require = fn;
 function LockedIcon() {
-  return React3(native.Icon, { size: native.Icon.Sizes.MEDIUM, source: _modDef13984 });
+  return React3(native.Icon, { size: native.Icon.Sizes.MEDIUM, source: _modDef13985 });
 }
 function DropdownIcon() {
-  let obj = { style: null, size: null, source: null };
-  obj = { transform: null };
+  const obj = { style: null, size: native.Icon.Sizes.MEDIUM, source: _modDef10069 };
+  const obj2 = { transform: null };
   const items = [{ rotate: "90deg" }];
-  obj.transform = items;
-  obj.style = obj;
-  obj.size = native.Icon.Sizes.MEDIUM;
-  obj.source = _modDef10069;
+  obj2.transform = items;
+  obj.style = obj2;
   return React3(native.Icon, obj);
 }
 const Fonts = fn(1074).Fonts;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-fn(4636);
-let createStyles = {
+const createStyles = fn(4636);
+let obj2 = {
   container: { alignItems: "center", flexDirection: "row" },
   content: { marginStart: 8, flexGrow: 1 },
   placeholder: null,
   text: null,
 };
-createStyles = {};
+let TextStyles = TextStyles_mod;
 const merged = Object.assign(TextStyles(Fonts.PRIMARY_MEDIUM, nativeDefault.colors.TEXT_MUTED, 16));
-createStyles.placeholder = createStyles;
+obj2.placeholder = {};
+let TextStyles = TextStyles_mod;
 const merged1 = Object.assign(TextStyles(Fonts.PRIMARY_MEDIUM, nativeDefault.colors.TEXT_DEFAULT, 16));
-createStyles.text = {};
-createStyles = createStyles.createStyles(createStyles);
+obj2.text = {};
+const styles = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/components/FormDropdown.tsx");
 
 export default function FormDropdown(arg0) {
   ({ disabled, label } = arg0);
   ({ leading, onPress, placeholder } = arg0);
-  const tmp = createStyles();
+  const tmp = styles();
   const tmp4 = FormStylesDefault();
-  let obj = { style: null, accessibilityRole: "spinbutton", disabled, onPress: null, children: null };
+  const obj = { style: null, accessibilityRole: "spinbutton", disabled, onPress: null, children: null };
   const items = [tmp.container, tmp4.dropdownInput];
   obj.style = items;
   let tmp9;
@@ -57,15 +56,15 @@ export default function FormDropdown(arg0) {
   obj.onPress = tmp9;
   const items1 = [leading, ,];
   const items2 = [tmp.content];
-  obj = { style: items2, children: null };
+  const obj2 = { style: items2, children: null };
   items2[1] = null != label ? tmp.text : tmp.placeholder;
   if (label == null) {
     label = placeholder;
   }
-  obj.children = label;
-  items1[1] = React3(native.LegacyText, obj);
+  obj2.children = label;
+  items1[1] = React3(native.LegacyText, obj2);
   items1[2] = tmp5Result;
   obj.children = items1;
   return React4(TouchableHitBoxDefault, obj);
 }
-export const useFormDropdownStyles = createStyles;
+export const useFormDropdownStyles = styles;

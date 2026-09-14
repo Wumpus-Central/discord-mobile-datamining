@@ -5,6 +5,8 @@ import notificationSettingsFlagUtils from "../utils/notificationSettingsFlagUtil
 import noop from "../../../../../_runtime/metro/00019__.js";
 import UserGuildSettingsStore from "../../../../stores/UserGuildSettingsStore.tsx";
 
+const require = globalThis.__r;
+
 require = fn;
 const UserNotificationSettings = fn(1074).UserNotificationSettings;
 const UnreadSetting = fn(4818).UnreadSetting;
@@ -17,20 +19,22 @@ let result = size.fileFinishedImporting(
 
 export default function NotificationSettingsMessageNotificationChannelActionSheet(channel) {
   _require = channel;
-  let obj = require("notficationSettingsChannelFlagUtils");
-  const channelPresetSettings = obj.useChannelPresetSettings(channel.channel);
+  const channelPresetSettings = require("notficationSettingsChannelFlagUtils").useChannelPresetSettings(
+    channel.channel,
+  );
   const unread = channelPresetSettings.unread;
   const notification = channelPresetSettings.notification;
-  obj = { context: "channel", value: notification, allMessagesSubLabel: null, onChange: null };
+  let obj2 = { context: "channel", value: notification, allMessagesSubLabel: null, onChange: null };
   let stringResult;
+  let obj = require("notficationSettingsChannelFlagUtils");
   if (notification !== UserNotificationSettings.ALL_MESSAGES) {
     if (unread !== UnreadSetting.ALL_MESSAGES) {
       const intl = tmp(1114).intl;
       stringResult = intl.string(tmp(1114).t.eP8yWU);
     }
   }
-  obj.allMessagesSubLabel = stringResult;
-  obj.onChange = function onChange(message_notifications) {
+  obj2.allMessagesSubLabel = stringResult;
+  obj2.onChange = function onChange(message_notifications) {
     const obj = { message_notifications };
     let tmp = message_notifications === UserNotificationSettings.ALL_MESSAGES;
     if (tmp) {

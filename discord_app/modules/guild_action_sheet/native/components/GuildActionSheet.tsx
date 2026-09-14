@@ -17,11 +17,12 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
 const createStyles = fn(4636);
-let obj = { container: null, actions: null };
-obj = { flex: 1, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
-obj.container = obj;
-obj.actions = { paddingHorizontal: 16, gap: 24 };
+let obj = {
+  container: { flex: 1, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND },
+  actions: { paddingHorizontal: 16, gap: 24 },
+};
 let closure_6 = createStyles.createStyles(obj);
+let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_action_sheet/native/components/GuildActionSheet.tsx");
 
@@ -31,10 +32,9 @@ export default noop.memo(function GuildActionSheet(arg0) {
     expanded = false;
   }
   const tmp = closure_6();
-  let obj = useBottomSheetRef;
-  bottomSheetRef = obj.useBottomSheetRef();
-  ({ bottomSheetRef, bottomSheetClose } = bottomSheetRef);
-  obj = {
+  const bottomSheetRef1 = useBottomSheetRef.useBottomSheetRef();
+  ({ bottomSheetRef, bottomSheetClose } = bottomSheetRef1);
+  const obj2 = {
     ref: bottomSheetRef,
     handleDisabled: true,
     showGradient: true,
@@ -42,18 +42,18 @@ export default noop.memo(function GuildActionSheet(arg0) {
     startExpanded: expanded,
     children: null,
   };
-  obj = { scrollsToTop: false, style: tmp.container, contentContainerStyle: null, children: null };
+  const obj3 = { scrollsToTop: false, style: tmp.container, contentContainerStyle: null, children: null };
   let num = 0;
   if (obj4.isAndroid()) {
     num = 16;
   }
-  obj.contentContainerStyle = { paddingBottom: useSafeAreaInsetsDefault().bottom + num };
+  obj3.contentContainerStyle = { paddingBottom: useSafeAreaInsetsDefault().bottom + num };
   const items = [
     React4(GuildActionSheetHeaderDefault, { guild }),
     React4(GuildActionSheetTabItemsDefault, { guild }),
     ,
   ];
-  const obj1 = { style: tmp.actions, children: null };
+  const obj5 = { style: tmp.actions, children: null };
   const items1 = [
     React4(GuildActionSheetActions.GuildUnreadAction, { guild }),
     React4(GuildActionSheetProgressDefault, { guild }),
@@ -62,10 +62,10 @@ export default noop.memo(function GuildActionSheet(arg0) {
     React4(GuildActionSheetActions.GuildDeveloperOptionAction, { guild }),
     React4(GuildActionSheetEmojiSectionDefault, { guildId: guild.id }),
   ];
-  obj1.children = items1;
-  items[2] = hasOwnProperty(View, obj1);
+  obj5.children = items1;
+  items[2] = hasOwnProperty(View, obj5);
   items[3] = React4(ActionSheetHeaderBar.ActionSheetHeaderBar, { variant: "floating", onPress: bottomSheetClose });
-  obj.children = items;
-  obj.children = hasOwnProperty(BottomSheetModal.BottomSheetScrollView, obj);
-  return React4(Sheet_BottomSheet.BottomSheet, obj);
+  obj3.children = items;
+  obj2.children = hasOwnProperty(BottomSheetModal.BottomSheetScrollView, obj3);
+  return React4(Sheet_BottomSheet.BottomSheet, obj2);
 });

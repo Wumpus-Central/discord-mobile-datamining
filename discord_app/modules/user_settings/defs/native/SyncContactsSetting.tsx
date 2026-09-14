@@ -7,8 +7,8 @@ import UserStore from "../../../../stores/UserStore.tsx";
 
 require = fn;
 const PlatformTypes = fn(1074).PlatformTypes;
-fn(11601);
-let SettingBuilders = {
+const SettingBuilders = fn(11602);
+const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.uSvEy7);
@@ -27,9 +27,8 @@ let SettingBuilders = {
     }
     ContactSyncSettings.handleSyncContacts(localAccount, phone, arg0);
   },
-};
-SettingBuilders = SettingBuilders.createToggle(SettingBuilders);
+});
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/SyncContactsSetting.tsx");
 
-export default SettingBuilders;
+export default toggle;

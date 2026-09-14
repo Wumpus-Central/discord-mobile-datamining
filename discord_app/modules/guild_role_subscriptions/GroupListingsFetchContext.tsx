@@ -39,9 +39,9 @@ export const GroupListingsFetchContextProvider = function GroupListingsFetchCont
   let first;
   closure_6 = undefined;
   ({ children, refetchOnMount } = guildId);
-  let obj = guildId(countryCode[5]);
   const items = [first];
-  const stateFromStores = obj.useStateFromStores(items, () => first.isConnected());
+  const stateFromStores = guildId(countryCode[5]).useStateFromStores(items, () => first.isConnected());
+  let obj = guildId(countryCode[5]);
   const items1 = [closure_6];
   const stateFromStores1 = guildId(countryCode[5]).useStateFromStores(items1, () => {
     if (null != guildId) {
@@ -66,8 +66,9 @@ export const GroupListingsFetchContextProvider = function GroupListingsFetchCont
           }
           if (tmp5) {
             closure_6(false);
-            const obj = { includeSoftDeleted, countryCode };
-            const allSubscriptionListingsDataForGuild = obj.fetchAllSubscriptionListingsDataForGuild(guildId, obj);
+            const obj2 = { includeSoftDeleted, countryCode };
+            const allSubscriptionListingsDataForGuild =
+              GuildRoleSubscriptionsActionCreatorsAll.fetchAllSubscriptionListingsDataForGuild(guildId, obj2);
           }
         }
       }
@@ -76,7 +77,6 @@ export const GroupListingsFetchContextProvider = function GroupListingsFetchCont
   if (tmp6) {
     tmp6 = !first;
   }
-  obj = { value: { listingsLoaded: tmp6, fetchGroupListingsForGuild: callback }, children };
   return (
     <redux.Provider value={{ listingsLoaded: tmp6, fetchGroupListingsForGuild: callback }}>{children}</redux.Provider>
   );

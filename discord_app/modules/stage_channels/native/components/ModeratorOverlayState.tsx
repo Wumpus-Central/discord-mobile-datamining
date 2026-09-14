@@ -1,6 +1,6 @@
 // discord_app/modules/stage_channels/native/components/ModeratorOverlayState.tsx
 import _mod4259 from "../../../../../_runtime/metro/04259__.js";
-import identity from "../../../../../_runtime/metro/01244__.js";
+import identity from "../../../../../_runtime/metro/01242__.js";
 import size from "../../../../../_runtime/metro/00002__.js";
 
 let closure_2 = identity.createWithEqualityFn((arg0, arg1) => {
@@ -11,7 +11,7 @@ let closure_2 = identity.createWithEqualityFn((arg0, arg1) => {
     dismissOverlay(arg0) {
       const overlayDismissedChannelIds = dependencyMap().overlayDismissedChannelIds;
       overlayDismissedChannelIds.add(arg0);
-      overlayDismissedChannelIds(1249).batchUpdates(() => overlayDismissedChannelIds({ overlayDismissedChannelIds }));
+      overlayDismissedChannelIds(1247).batchUpdates(() => overlayDismissedChannelIds({ overlayDismissedChannelIds }));
     },
   };
   return obj;

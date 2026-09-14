@@ -3,6 +3,8 @@ import AuthenticationStore from "../../stores/AuthenticationStore.tsx";
 import MediaEngineStore from "../../stores/MediaEngineStore.tsx";
 import VoiceStateStore from "../../stores/VoiceStateStore.tsx";
 
+const require = globalThis.__r;
+
 const require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/video_calls/useDeafStates.tsx");
@@ -14,16 +16,15 @@ export default function useDeafStates(arg0) {
   return require("initialize").useStateFromStoresObject(
     items,
     () => {
-      let obj = closure_0;
       if (VoiceStateStore !== undefined) {
         if (MediaEngineStore !== undefined) {
           if (AuthenticationStore !== undefined) {
             let voiceState = null;
-            if (null != obj) {
-              const guildId = obj.getGuildId();
+            if (null != guildId) {
+              guildId = guildId.getGuildId();
               voiceState = VoiceStateStore.getVoiceState(guildId, AuthenticationStore.getId());
             }
-            obj = { selfDeaf: MediaEngineStore.isSelfDeaf(), deaf: null };
+            const obj5 = { selfDeaf: MediaEngineStore.isSelfDeaf(), deaf: null };
             let flag;
             if (voiceState != null) {
               flag = voiceState.deaf;
@@ -31,8 +32,8 @@ export default function useDeafStates(arg0) {
             if (flag == null) {
               flag = false;
             }
-            obj.deaf = flag;
-            return obj;
+            obj5.deaf = flag;
+            return obj5;
           }
         }
       }
@@ -58,7 +59,7 @@ export const getDeafStates = function getDeafStates(channel) {
     const guildId = channel.getGuildId();
     voiceState = obj.getVoiceState(guildId, obj3.getId());
   }
-  obj = { selfDeaf: obj2.isSelfDeaf(), deaf: null };
+  const obj4 = { selfDeaf: obj2.isSelfDeaf(), deaf: null };
   let flag;
   if (voiceState != null) {
     flag = voiceState.deaf;
@@ -66,6 +67,6 @@ export const getDeafStates = function getDeafStates(channel) {
   if (flag == null) {
     flag = false;
   }
-  obj.deaf = flag;
-  return obj;
+  obj4.deaf = flag;
+  return obj4;
 };

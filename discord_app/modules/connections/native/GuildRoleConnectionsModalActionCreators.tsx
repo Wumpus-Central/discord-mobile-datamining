@@ -9,16 +9,19 @@ const result = size.fileFinishedImporting("modules/connections/native/GuildRoleC
 
 export const openGuildRoleConnectionsModal = function openGuildRoleConnectionsModal(guildId) {
   const onClose = guildId.onClose;
-  const obj = {
-    guildId: guildId.guildId,
-    onClose() {
-      ModalActionCreatorsDefault.popWithKey(ROLE_CONNECTIONS_MODAL_KEY);
-      if (onClose != null) {
-        onClose();
-      }
+  ModalActionCreatorsDefault.pushLazy(
+    onClose(1896)(11700, dependencyMap.paths),
+    {
+      guildId: guildId.guildId,
+      onClose() {
+        ModalActionCreatorsDefault.popWithKey(ROLE_CONNECTIONS_MODAL_KEY);
+        if (onClose != null) {
+          onClose();
+        }
+      },
     },
-  };
-  obj.pushLazy(onClose(1896)(11699, dependencyMap.paths), obj, ROLE_CONNECTIONS_MODAL_KEY);
+    ROLE_CONNECTIONS_MODAL_KEY,
+  );
 };
 export const makeGuildRoleConnectionsConnectAccountsActionSheetKey =
   function makeGuildRoleConnectionsConnectAccountsActionSheetKey(id) {
@@ -28,10 +31,10 @@ export const openGuildRoleConnectionsConnectAccountModal = function openGuildRol
   verificationRole,
   guildId,
 ) {
-  const obj = { role: verificationRole, guildId };
+  const obj = ActionSheetActionCreatorsDefault;
   obj.openLazy(
-    asyncRequireImpl(11691, dependencyMap.paths),
+    asyncRequireImpl(11692, dependencyMap.paths),
     "GuildRoleConnectionsConnectAccountsActionSheet-" + verificationRole.id,
-    obj,
+    { role: verificationRole, guildId },
   );
 };

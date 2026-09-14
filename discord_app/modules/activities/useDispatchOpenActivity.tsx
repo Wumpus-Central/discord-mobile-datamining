@@ -18,8 +18,8 @@ export default function useDispatchOpenActivity(connectedEmbeddedActivity) {
       tmp2 = null != applicationId;
     }
     if (tmp2) {
-      const obj = { type: "EMBEDDED_ACTIVITY_OPEN", location: connectedEmbeddedActivity.location, applicationId };
-      obj.dispatch(obj);
+      const obj2 = { type: "EMBEDDED_ACTIVITY_OPEN", location: connectedEmbeddedActivity.location, applicationId };
+      DispatcherDefault.dispatch(obj2);
     }
   }, items);
 }

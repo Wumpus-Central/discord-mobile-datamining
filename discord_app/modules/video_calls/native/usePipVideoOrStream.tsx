@@ -10,6 +10,8 @@ import ChannelStore from "../../../stores/ChannelStore.tsx";
 import MediaEngineStore from "../../../stores/MediaEngineStore.tsx";
 import RTCConnectionStore from "../../../stores/RTCConnectionStore.tsx";
 
+const require = globalThis.__r;
+
 require = fn;
 const CallConstants = fn(4657);
 ({ isStreamParticipant: closure_11, isUserParticipant: closure_12, ParticipantTypes: map1 } = CallConstants);
@@ -78,18 +80,25 @@ export default function usePipVideoOrStream(arg0) {
       if (closure_2_11(tmp8)) {
         if (
           allActiveStreamsForChannel.filter((streamType) => {
-            isActivityViewFocused(stateFromStores1[10]);
-            const obj = {
+            id = undefined;
+            const obj = isActivityViewFocused(stateFromStores1[10]);
+            const obj2 = {
               streamType: streamType.streamType,
               guildId: streamType.guildId,
               channelId: streamType.channelId,
               ownerId: streamType.ownerId,
             };
-            id = undefined;
             if (_undefined != null) {
               id = _undefined.id;
             }
-            return obj.encodeStreamKey(obj) === id;
+            return (
+              isActivityViewFocused(stateFromStores1[10]).encodeStreamKey({
+                streamType: streamType.streamType,
+                guildId: streamType.guildId,
+                channelId: streamType.channelId,
+                ownerId: streamType.ownerId,
+              }) === id
+            );
           }).length <= 0
         ) {
           c0 = undefined;
@@ -147,10 +156,10 @@ export const useHasPipParticipant = function useHasPipParticipant(isActivityView
     channelId.getChannelId(),
   );
   closure_129_0 = tmp4;
-  let tmpResult = tmp(tmp2[9]);
+  let obj = isActivityViewFocused(stateFromStores1[9]);
   const items1 = [ChannelRTCStore, VideoSpeakerStore, ApplicationStreamingStore];
   const items2 = [stateFromStores];
-  stateFromStores1 = tmpResult.useStateFromStores(
+  stateFromStores1 = isActivityViewFocused(stateFromStores1[9]).useStateFromStores(
     items1,
     () => {
       if (null != isActivityViewFocused) {
@@ -208,18 +217,25 @@ export const useHasPipParticipant = function useHasPipParticipant(isActivityView
       if (closure_2_11(tmp8)) {
         if (
           allActiveStreamsForChannel.filter((streamType) => {
-            isActivityViewFocused(stateFromStores1[10]);
-            const obj = {
+            id = undefined;
+            const obj = isActivityViewFocused(stateFromStores1[10]);
+            const obj2 = {
               streamType: streamType.streamType,
               guildId: streamType.guildId,
               channelId: streamType.channelId,
               ownerId: streamType.ownerId,
             };
-            id = undefined;
             if (_undefined != null) {
               id = _undefined.id;
             }
-            return obj.encodeStreamKey(obj) === id;
+            return (
+              isActivityViewFocused(stateFromStores1[10]).encodeStreamKey({
+                streamType: streamType.streamType,
+                guildId: streamType.guildId,
+                channelId: streamType.channelId,
+                ownerId: streamType.ownerId,
+              }) === id
+            );
           }).length <= 0
         ) {
           c0 = undefined;
@@ -268,10 +284,10 @@ export const useHasPipParticipant = function useHasPipParticipant(isActivityView
     },
     items2,
   );
-  tmpResult = tmp(tmp2[9]);
+  const tmpResult = isActivityViewFocused(stateFromStores1[9]);
   const items3 = [ChannelStore, EmbeddedActivitiesStore, MediaEngineStore];
   const items4 = [stateFromStores, stateFromStores1, isActivityViewFocused];
-  return tmpResult.useStateFromStores(
+  return isActivityViewFocused(stateFromStores1[9]).useStateFromStores(
     items3,
     () => {
       if (null == ChannelStore.getChannel(stateFromStores)) {

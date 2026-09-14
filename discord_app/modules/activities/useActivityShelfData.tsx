@@ -5,6 +5,8 @@ import UserStore from "../../stores/UserStore.tsx";
 import TestModeStore from "../../stores/game_store/TestModeStore.tsx";
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore.tsx";
 
+const require = globalThis.__r;
+
 require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/activities/useActivityShelfData.tsx");
@@ -73,7 +75,7 @@ export const useActivityShelfData = function useActivityShelfData(guildId) {
         supported_platforms = [];
       }
       const tmp = stateFromStores(9540);
-      return supported_platforms.includes(tmp(guildId(1150).getOS()));
+      return supported_platforms.includes(tmp(guildId(1363).getOS()));
     });
     const found1 = found.filter((activity) => {
       const requires_age_gate = activity.activity.requires_age_gate;

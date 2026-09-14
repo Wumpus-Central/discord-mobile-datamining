@@ -97,8 +97,8 @@ prototype["try"] = function try(nextWantsResult, string) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -111,8 +111,8 @@ prototype["try"] = function try(nextWantsResult, string) {
             throw value;
           } else if (arg0 === 2) {
             c5 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
             closure_0 = tmp7;
             closure_128_0 = undefined;
@@ -120,8 +120,8 @@ prototype["try"] = function try(nextWantsResult, string) {
             self.markFetching(closure_0);
             c4 = 2;
             c5 = 1;
-            const obj1 = { value: tmp3(), done: false };
-            return obj1;
+            const obj4 = { value: tmp3(), done: false };
+            return obj4;
           }
         } else if (1 === tmp7) {
           c3 = 0;
@@ -134,14 +134,14 @@ prototype["try"] = function try(nextWantsResult, string) {
         } else if (arg0 === 2) {
           c3 = 0;
           c5 = 3;
-          const obj2 = { value, done: true };
-          return obj2;
+          const obj5 = { value, done: true };
+          return obj5;
         } else {
           closure_128_0 = value;
           closure_129_2.markCompleted(closure_129_0);
           c3 = 0;
           c5 = 3;
-          obj = { value: closure_128_0, done: true };
+          const obj = { value: closure_128_0, done: true };
           return obj;
         }
       } catch (tmp25) {

@@ -10,8 +10,7 @@ let closure_5 = async function _writeCaches() {
       throw value;
     } else if (arg0 === 2) {
       c4 = 3;
-      let obj1 = { value, done: true };
-      return obj1;
+      return { value, done: true };
     } else if (closure_130_4.canWriteCaches(closure_129_0)) {
       c3 = 2;
       c4 = 1;
@@ -26,8 +25,7 @@ let closure_5 = async function _writeCaches() {
       return { value, done: true };
     } else {
       closure_129_1 = [];
-      obj1 = closure_130_0(closure_130_1[3]);
-      obj1.dispatch({ type: "WRITE_CACHES", promisesToWaitOn: closure_129_1 });
+      closure_130_0(closure_130_1[3]).dispatch({ type: "WRITE_CACHES", promisesToWaitOn: closure_129_1 });
       c3 = 3;
       c4 = 1;
       return { value: Promise.all(closure_129_1), done: false };

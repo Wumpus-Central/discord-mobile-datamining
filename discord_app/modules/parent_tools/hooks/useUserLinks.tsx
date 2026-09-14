@@ -4,6 +4,8 @@ import noop from "../../../../_runtime/metro/00019__.js";
 import UserStore from "../../../stores/UserStore.tsx";
 import FamilyCenterStore from "../FamilyCenterStore.tsx";
 
+const require = globalThis.__r;
+
 require = fn;
 const FamilyCenterConstants = fn(7641);
 ({

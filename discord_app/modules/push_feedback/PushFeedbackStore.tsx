@@ -58,7 +58,7 @@ const pushFeedbackStore = new PushFeedbackStore(DispatcherDefault, {
     if (flag) {
       let tmp3 = pushFeedbackMap[notificationType];
       if (tmp3 == null) {
-        let obj = { messageId, channelId, pushType: notificationType };
+        const obj = { messageId, channelId, pushType: notificationType };
         tmp3 = obj;
       }
       let userViewInfo = tmp3.userViewInfo;
@@ -73,9 +73,9 @@ const pushFeedbackStore = new PushFeedbackStore(DispatcherDefault, {
         let num2 = 1;
       } else if (viewCount >= 10) {
         if (null != null) {
-          obj = { messageId, channelId, pushType: notificationType, userViewInfo: null };
-          c1 = obj;
-          pushFeedbackMap[notificationType] = obj;
+          const obj2 = { messageId, channelId, pushType: notificationType, userViewInfo: null };
+          c1 = obj2;
+          pushFeedbackMap[notificationType] = obj2;
         } else {
           c1 = null;
         }

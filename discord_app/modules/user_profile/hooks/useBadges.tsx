@@ -16,10 +16,9 @@ export default function useBadges(getBadges, arg1) {
   if (undefined !== arg1) {
     setting = arg1;
   }
-  let tmpResult = useStateFromStores;
   const items = [UserStore];
-  const stateFromStores = tmpResult.useStateFromStores(items, () => currentUser.getCurrentUser());
-  tmpResult = useStateFromStores;
+  const stateFromStores = useStateFromStores.useStateFromStores(items, () => currentUser.getCurrentUser());
+  useStateFromStores;
   [][0] = StreamerModeStore;
   if (null == getBadges) {
     return [];
@@ -52,5 +51,6 @@ export default function useBadges(getBadges, arg1) {
     }
     return mapped;
   }
+  const tmpResult = useStateFromStores;
 }
 export const QUEST_COMPLETED_BADGE = "quest_completed";

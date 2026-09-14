@@ -8,7 +8,7 @@ import AuthenticationStore from "../stores/AuthenticationStore.tsx";
 import NetworkStore from "../stores/NetworkStore.tsx";
 import Queue from "../utils/Queue.tsx";
 
-let handleCommand = fn;
+let handleCommand1 = fn;
 let closure_3 = ["channelId", "analyticsLocation"];
 let closure_4 = ["channelId", "analyticsLocation"];
 const Constants = fn(1074);
@@ -32,13 +32,13 @@ class MessageQueue extends tmp5 {
       num = 5;
     }
     tmp2 = new closure_1(closure_2[8])("MessageQueue");
-    tmp = new tmp(tmp2, new.target, new.target, tmp, new.target);
-    closure_0 = tmp;
+    tmp1 = new tmp(tmp2, new.target, new.target, tmp, new.target);
+    closure_0 = tmp1;
     map = new Map();
-    tmp.requests = map;
+    tmp1.requests = map;
     map1 = new Map();
-    tmp.analyticsTimeouts = map1;
-    tmp.handleEdit = function handleEdit(messageId, fn) {
+    tmp1.analyticsTimeouts = map1;
+    tmp1.handleEdit = function handleEdit(messageId, fn) {
       messageId = messageId.messageId;
       ({ channelId, isCrossposted } = messageId);
       const merged = Object.assign(messageId, Object.assign({ channelId: 0, messageId: 0, isCrossposted: 0 }));
@@ -61,13 +61,13 @@ class MessageQueue extends tmp5 {
       const HTTP = messageId(dependencyMap[12]).HTTP;
       HTTP.patch(request, messageId.createResponseHandler(messageId, fn));
     };
-    tmp.maxSize = num;
-    return tmp;
+    tmp1.maxSize = num;
+    return tmp1;
   }
   clear() {
     self = this;
-    requests = this.requests;
-    item = requests.forEach((abort) => abort.abort());
+    requests1 = this.requests;
+    item = requests1.forEach((abort) => abort.abort());
     requests = this.requests;
     clearResult = requests.clear();
     analyticsTimeouts = this.analyticsTimeouts;
@@ -127,13 +127,13 @@ prototype["cancelPendingSendRequests"] = function cancelPendingSendRequests(chan
       let message = arr.message;
       if (message.type === obj.SEND) {
         if (message.message.channelId === channelId) {
-          arr = items.push(message.message);
+          let arr2 = items.push(message.message);
           if (self.queue.length <= 0) {
             break;
           }
         }
       }
-      let arr1 = items1.push(arr);
+      let arr3 = items1.push(arr);
     }
   }
   const queue1 = self.queue;
@@ -150,9 +150,7 @@ prototype["startQueueMetricTimers"] = function startQueueMetricTimers(nonce) {
     items.map((item) => {
       const queued_duration_ms = item;
       return setTimeout(() => {
-        handleCommand(dependencyMap[9]);
-        obj = { queued_duration_ms };
-        obj.trackWithMetadata(constants.SEND_MESSAGE_QUEUED, obj);
+        handleCommand1(dependencyMap[9]).trackWithMetadata(constants.SEND_MESSAGE_QUEUED, { queued_duration_ms });
       }, item);
     }),
   );
@@ -205,17 +203,17 @@ prototype["handleSend"] = function handleSend(nonce, fn) {
     tmp3 = analyticsLocation;
   }
   if (null != tmp3) {
-    let body = { location: tmp3 };
-    const tmp4 = body;
+    obj = { location: tmp3 };
+    const tmp4 = obj;
   }
   const tmp = _objectWithoutProperties(nonce, closure_3);
-  const signalStrength = handleCommand(7562).getSignalStrength();
-  body = { mobile_network_type: NetworkStore.getType() };
+  const signalStrength = handleCommand1(7562).getSignalStrength();
+  const obj2 = handleCommand1(7562);
   const merged = Object.assign(tmp);
   let tmp8 = null != signalStrength;
   if (tmp8) {
-    body = { signal_strength: signalStrength };
-    tmp8 = body;
+    const obj4 = { signal_strength: signalStrength };
+    tmp8 = obj4;
   }
   const self = this;
   const merged1 = Object.assign(tmp8);
@@ -232,15 +230,15 @@ prototype["handleSend"] = function handleSend(nonce, fn) {
       const result = requests.set(nonce.nonce, abortController);
     }
     const result1 = self.startQueueMetricTimers(nonce.nonce);
-    const HTTP = handleCommand(1272).HTTP;
-    const request = { url: closure_1_10.MESSAGES(channelId), body, context: tmp4, oldFormErrors: true };
+    const HTTP = handleCommand1(1270).HTTP;
+    const request = { url: closure_1_10.MESSAGES(channelId), body: obj3, context: tmp4, oldFormErrors: true };
     const merged2 = Object.assign(closure_12);
     request.signal = abortController.signal;
     request.rejectWithError = true;
     HTTP.post(request, self.createResponseHandler(nonce.nonce, fn));
     const responseHandler = self.createResponseHandler(nonce.nonce, fn);
   }
-  const obj2 = handleCommand(7562);
+  obj3 = { mobile_network_type: NetworkStore.getType() };
 };
 prototype["handleSendAnnouncement"] = function handleSendAnnouncement(message, fn) {
   ({ channelId, analyticsLocation } = message);
@@ -249,17 +247,17 @@ prototype["handleSendAnnouncement"] = function handleSendAnnouncement(message, f
     tmp3 = analyticsLocation;
   }
   if (null != tmp3) {
-    let body = { location: tmp3 };
-    const tmp4 = body;
+    obj = { location: tmp3 };
+    const tmp4 = obj;
   }
   const tmp = _objectWithoutProperties(message, closure_4);
-  const signalStrength = handleCommand(7562).getSignalStrength();
-  body = { mobile_network_type: NetworkStore.getType() };
+  const signalStrength = handleCommand1(7562).getSignalStrength();
+  const obj2 = handleCommand1(7562);
   const merged = Object.assign(tmp);
   let tmp8 = null != signalStrength;
   if (tmp8) {
-    body = { signal_strength: signalStrength };
-    tmp8 = body;
+    const obj4 = { signal_strength: signalStrength };
+    tmp8 = obj4;
   }
   const self = this;
   const merged1 = Object.assign(tmp8);
@@ -276,23 +274,28 @@ prototype["handleSendAnnouncement"] = function handleSendAnnouncement(message, f
       const result = requests.set(message.nonce, abortController);
     }
     const result1 = self.startQueueMetricTimers(message.nonce);
-    const HTTP = handleCommand(1272).HTTP;
-    const request = { url: closure_1_10.MESSAGES_ANNOUNCEMENT(channelId), body, context: tmp4, oldFormErrors: true };
+    const HTTP = handleCommand1(1270).HTTP;
+    const request = {
+      url: closure_1_10.MESSAGES_ANNOUNCEMENT(channelId),
+      body: obj3,
+      context: tmp4,
+      oldFormErrors: true,
+    };
     const merged2 = Object.assign(closure_12);
     request.signal = abortController.signal;
     request.rejectWithError = true;
     HTTP.post(request, self.createResponseHandler(message.nonce, fn));
     const responseHandler = self.createResponseHandler(message.nonce, fn);
   }
-  const obj2 = handleCommand(7562);
+  obj3 = { mobile_network_type: NetworkStore.getType() };
 };
-handleCommand = function handleCommand(dependencyMap, fn) {
+function handleCommand(message, fn) {
   const self = this;
-  const guildId = dependencyMap.guildId;
-  const nonce = dependencyMap.nonce;
-  ({ attachments, maxSizeCallback: handleCommand } = dependencyMap);
+  const guildId = message.guildId;
+  const nonce = message.nonce;
+  ({ attachments, maxSizeCallback: handleCommand1 } = message);
   const body = {
-    type: handleCommand(nonce[13]).InteractionTypes.APPLICATION_COMMAND,
+    type: handleCommand1(nonce[13]).InteractionTypes.APPLICATION_COMMAND,
     application_id: applicationId,
     guild_id: guildId,
     channel_id: channelId,
@@ -303,21 +306,21 @@ handleCommand = function handleCommand(dependencyMap, fn) {
     section_name: sectionName,
     source,
   };
-  ({ applicationId, channelId, data, analytics_location, sectionName, source } = dependencyMap);
+  ({ applicationId, channelId, data, analytics_location, sectionName, source } = message);
   if (null != attachments) {
     body.data.attachments = attachments.map((status, index) => {
       guildId(nonce[14])(
-        status.status === handleCommand(nonce[15]).CloudUploadStatus.COMPLETED,
+        status.status === handleCommand1(nonce[15]).CloudUploadStatus.COMPLETED,
         "Uploads must be staged before trying to send a message",
       );
       const tmp = guildId(nonce[14]);
-      return handleCommand(nonce[16]).getAttachmentPayload(status, index);
+      return handleCommand1(nonce[16]).getAttachmentPayload(status, index);
     });
   }
   const abortController = new AbortController();
   const requests = self.requests;
   const result = requests.set(nonce, abortController);
-  const HTTP = handleCommand(nonce[12]).HTTP;
+  const HTTP = handleCommand1(nonce[12]).HTTP;
   const request = {
     url: closure_10.INTERACTIONS,
     body,
@@ -326,23 +329,23 @@ handleCommand = function handleCommand(dependencyMap, fn) {
     onRequestCreated(on) {
       on.on("progress", (total) => {
         total = total.total;
-        const maxFileSizeResult = handleCommand(nonce[17]).maxFileSize(guildId);
+        const maxFileSizeResult = handleCommand1(nonce[17]).maxFileSize(guildId);
         if (tmp2) {
           self.cancelRequest(closure_1_2);
           if (closure_1_0 != null) {
             closure_1_0(maxFileSizeResult);
           }
         }
-        obj = handleCommand(nonce[17]);
+        obj = handleCommand1(nonce[17]);
         tmp2 = null != total && total > maxFileSizeResult;
       });
     },
   };
   HTTP.post(request, self.createResponseHandler(nonce, fn));
-};
+}
 prototype["handleCommand"] = handleCommand;
 const tmp6 = new LoggerDefault("MessageQueue");
-handleCommand = new handleCommand(
+handleCommand1 = new handleCommand(
   tmp6,
   tmp2,
   tmp,
@@ -355,10 +358,10 @@ handleCommand = new handleCommand(
   dependencyMap,
   tmp6,
 );
-handleCommand.requests = new Map();
+handleCommand1.requests = new Map();
 let map = new Map();
-handleCommand.analyticsTimeouts = new Map();
-handleCommand.handleEdit = function handleEdit(messageId, fn) {
+handleCommand1.analyticsTimeouts = new Map();
+handleCommand1.handleEdit = function handleEdit(messageId, fn) {
   messageId = messageId.messageId;
   ({ channelId, isCrossposted } = messageId);
   const merged = Object.assign(messageId, Object.assign({ channelId: 0, messageId: 0, isCrossposted: 0 }));
@@ -381,11 +384,11 @@ handleCommand.handleEdit = function handleEdit(messageId, fn) {
   const HTTP = messageId(dependencyMap[12]).HTTP;
   HTTP.patch(request, messageId.createResponseHandler(messageId, fn));
 };
-handleCommand.maxSize = 5;
+handleCommand1.maxSize = 5;
 const size = fn(2);
 let result = size.fileFinishedImporting("lib/MessageQueue.tsx");
 
-export default handleCommand;
+export default handleCommand1;
 export { MessageDataType };
 export const isMessageDataSend = function isMessageDataSend(type) {
   return type.type === obj.SEND || type.type === tmp.SEND_ANNOUNCEMENT;

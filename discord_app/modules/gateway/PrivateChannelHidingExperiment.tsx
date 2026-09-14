@@ -3,19 +3,19 @@ import PrivateChannelHidingExperimentCache from "PrivateChannelHidingExperimentC
 import ApexExperiment from "../experiments/apex/index.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
-let obj = {
+const obj = {
   name: "2026-02-private-channel-hiding",
   kind: "user",
   defaultConfig: { enableObfuscation: false, enableIntegrityCheck: false },
   variations: null,
 };
-obj = {
+const obj2 = {
   1: null,
   2: { enableObfuscation: true, enableIntegrityCheck: false },
   3: { enableObfuscation: true, enableIntegrityCheck: true },
 };
-obj[3] = { enableObfuscation: false, enableIntegrityCheck: false };
-obj.variations = obj;
+obj2[3] = { enableObfuscation: false, enableIntegrityCheck: false };
+obj.variations = obj2;
 let closure_0 = ApexExperiment.createApexExperiment(obj);
 const result = size.fileFinishedImporting("modules/gateway/PrivateChannelHidingExperiment.tsx");
 

@@ -29,10 +29,10 @@ function renderItem(item) {
   item = item.item;
   const type = item.type;
   if ("section" === type) {
-    let obj = { title: item.title };
+    const obj2 = { title: item.title };
     return <ThreadListSection title={item.title} />;
   } else if ("thread" === type) {
-    obj = { threadId: null, onPress: null, start: null, end: null };
+    const obj = { threadId: null, onPress: null, start: null, end: null };
     ({ threadId: obj.threadId, onPress: obj.onPress, start: obj.start, end: obj.end } = item);
     return jsx(ThreadListTableRowDefault, { threadId: null, onPress: null, start: null, end: null });
   }
@@ -50,12 +50,12 @@ function EnterExitCrossFadeContainer(cleanUp) {
   const state = cleanUp.state;
   let sharedValue;
   ({ contentContainerStyle, children } = cleanUp);
-  let obj = cleanUp(sharedValue[6]);
   let num = 0;
   if (state === cleanUp(sharedValue[7]).TransitionStates.MOUNTED) {
     num = 1;
   }
-  sharedValue = obj.useSharedValue(num);
+  sharedValue = cleanUp(sharedValue[6]).useSharedValue(num);
+  let obj = cleanUp(sharedValue[6]);
   let fn = function p() {
     let obj = { opacity: null };
     value = sharedValue.get();
@@ -69,27 +69,27 @@ function EnterExitCrossFadeContainer(cleanUp) {
         const obj = cleanUp(sharedValue[6]);
       }
     };
-    obj = { state, TransitionStates: native.TransitionStates, runOnJS: ReanimatedRexport.runOnJS, cleanUp };
-    fn.__closure = obj;
+    const obj2 = spring;
+    fn.__closure = { state, TransitionStates: native.TransitionStates, runOnJS: ReanimatedRexport.runOnJS, cleanUp };
     fn.__workletHash = 2519144051135;
     fn.__initData = __initData;
-    obj.opacity = spring.withSpring(value, springPresets.springStandard, "respect-motion-settings", fn);
+    obj.opacity = obj2.withSpring(value, springPresets.springStandard, "respect-motion-settings", fn);
     return obj;
   };
-  obj = {
-    withSpring: tmp(tmp2[8]).withSpring,
+  const tmpResult = cleanUp(sharedValue[6]);
+  fn.__closure = {
+    withSpring: cleanUp(sharedValue[8]).withSpring,
     opacity: sharedValue,
-    springStandard: tmp(tmp2[9]).springStandard,
+    springStandard: cleanUp(sharedValue[9]).springStandard,
     state,
-    TransitionStates: tmp(tmp2[7]).TransitionStates,
-    runOnJS: tmp(tmp2[6]).runOnJS,
+    TransitionStates: cleanUp(sharedValue[7]).TransitionStates,
+    runOnJS: cleanUp(sharedValue[6]).runOnJS,
     cleanUp,
   };
-  fn.__closure = obj;
   fn.__workletHash = 5037750127944;
   fn.__initData = __initData;
   const items = [sharedValue, state];
-  const animatedStyle = cleanUp(sharedValue[6]).useAnimatedStyle(fn);
+  const animatedStyle = tmpResult.useAnimatedStyle(fn);
   const effect = noop.useEffect(() => {
     let num = 1;
     if (state === native.TransitionStates.YEETED) {
@@ -97,9 +97,9 @@ function EnterExitCrossFadeContainer(cleanUp) {
     }
     const result = sharedValue.set(num);
   }, items);
-  obj = { style: null, children: <closure_5 style={contentContainerStyle}>{children}</closure_5> };
+  const obj3 = { style: null, children: <closure_5 style={contentContainerStyle}>{children}</closure_5> };
   const items1 = [absoluteFill.absoluteFill, animatedStyle];
-  obj.style = items1;
+  obj3.style = items1;
   return jsx(state(sharedValue[6]).View, {
     style: null,
     children: <closure_5 style={contentContainerStyle}>{children}</closure_5>,
@@ -138,10 +138,10 @@ export default function ThreadList(onCreateThreadPress) {
   let loadMore;
   let tmp = canLoadMore();
   noop = tmp;
-  let obj = onThreadPress(contentContainerStyle[10]);
-  const activeThreads = obj.useActiveThreads(channel);
+  const activeThreads = onThreadPress(contentContainerStyle[10]).useActiveThreads(channel);
   const joinedThreadIds = activeThreads.joinedThreadIds;
   const unjoinedThreadIds = activeThreads.unjoinedThreadIds;
+  let obj = onThreadPress(contentContainerStyle[10]);
   const archivedThreads = onThreadPress(contentContainerStyle[10]).useArchivedThreads(
     channel,
     onThreadPress(contentContainerStyle[11]).ThreadSortOrder.LATEST_ACTIVITY,
@@ -165,14 +165,13 @@ export default function ThreadList(onCreateThreadPress) {
   let items1 = [threadIds, joinedThreadIds, onThreadPress, unjoinedThreadIds];
   const memo = noop.useMemo(() => {
     const items = [];
-    let arr1 = joinedThreadIds;
     if (joinedThreadIds.length > 0) {
-      let obj = { type: "section", title: null };
+      const obj2 = { type: "section", title: null };
       const intl2 = onThreadPress(contentContainerStyle[13]).intl;
-      obj = { count: arr1.length };
-      obj.title = intl2.formatToPlainString(onThreadPress(contentContainerStyle[13]).t.fcXlhe, obj);
-      items.push(obj);
-      const item = arr1.forEach((threadId, index) =>
+      const obj3 = { count: joinedThreadIds.length };
+      obj2.title = intl2.formatToPlainString(onThreadPress(contentContainerStyle[13]).t.fcXlhe, obj3);
+      items.push(obj2);
+      const item = joinedThreadIds.forEach((threadId, index) =>
         items.push({
           type: "thread",
           threadId,
@@ -183,11 +182,11 @@ export default function ThreadList(onCreateThreadPress) {
       );
     }
     if (unjoinedThreadIds.length > 0) {
-      const obj1 = { type: "section", title: null };
+      const obj4 = { type: "section", title: null };
       const intl3 = onThreadPress(contentContainerStyle[13]).intl;
-      const obj2 = { count: unjoinedThreadIds.length };
-      obj1.title = intl3.formatToPlainString(onThreadPress(contentContainerStyle[13]).t.GHY7yQ, obj2);
-      items.push(obj1);
+      const obj5 = { count: unjoinedThreadIds.length };
+      obj4.title = intl3.formatToPlainString(onThreadPress(contentContainerStyle[13]).t.GHY7yQ, obj5);
+      items.push(obj4);
       const item1 = unjoinedThreadIds.forEach((threadId, index) =>
         items.push({
           type: "thread",
@@ -199,10 +198,10 @@ export default function ThreadList(onCreateThreadPress) {
       );
     }
     if (threadIds.length > 0) {
-      obj = { type: "section", title: null };
+      const obj = { type: "section", title: null };
       const intl = onThreadPress(contentContainerStyle[13]).intl;
       obj.title = intl.string(onThreadPress(contentContainerStyle[13]).t.XsgrjS);
-      arr1 = items.push(obj);
+      items.push(obj);
       const item2 = threadIds.forEach((threadId, index) =>
         items.push({
           type: "thread",
@@ -235,13 +234,13 @@ export default function ThreadList(onCreateThreadPress) {
   const memo2 = noop.useMemo(() => {
     let tmp2 = null;
     if (null != onCreateThreadPress) {
-      let obj = { icon: null, onPress: null, label: null, start: true, end: true, arrow: true };
-      obj = { IconComponent: ThreadPlusIcon.ThreadPlusIcon };
+      const obj = { icon: null, onPress: null, label: null, start: true, end: true, arrow: true };
+      const obj2 = { IconComponent: ThreadPlusIcon.ThreadPlusIcon };
       obj.icon = jsx(RowButton.RowButton.Icon, { IconComponent: ThreadPlusIcon.ThreadPlusIcon });
       obj.onPress = tmp;
       const intl = util.intl;
       obj.label = intl.string(util.t.rBIGBL);
-      tmp2 = jsx(TableRow.TableRow, { IconComponent: ThreadPlusIcon.ThreadPlusIcon });
+      tmp2 = jsx(TableRow.TableRow, { icon: null, onPress: null, label: null, start: true, end: true, arrow: true });
     }
     return tmp2;
   }, items3);
@@ -255,26 +254,35 @@ export default function ThreadList(onCreateThreadPress) {
   items4[9] = contentContainerStyle;
   const callback1 = noop.useCallback((key, arg1, state, cleanUp) => {
     if (constants.EMPTY === arg1) {
-      let obj = { contentContainerStyle: closure_3.container, state, cleanUp, children: null };
-      obj = { onCreateThreadPress };
-      obj.children = jsx(ThreadListEmptyDefault, { onCreateThreadPress });
-      return <EnterExitCrossFadeContainer key={key} onCreateThreadPress={onCreateThreadPress} />;
+      const obj2 = { contentContainerStyle: closure_3.container, state, cleanUp, children: null };
+      const obj3 = { onCreateThreadPress };
+      obj2.children = jsx(ThreadListEmptyDefault, { onCreateThreadPress });
+      return (
+        <EnterExitCrossFadeContainer
+          key={key}
+          contentContainerStyle={closure_3.container}
+          state={state}
+          cleanUp={cleanUp}
+        >
+          {null}
+        </EnterExitCrossFadeContainer>
+      );
     } else if (constants.LOADING === arg1) {
-      const obj1 = { contentContainerStyle: null, state: null, cleanUp: null, children: null };
+      const obj4 = { contentContainerStyle: null, state: null, cleanUp: null, children: null };
       const items = [,];
       ({ container: arr[0], center: arr[1] } = closure_3);
-      obj1.contentContainerStyle = items;
-      obj1.state = state;
-      obj1.cleanUp = cleanUp;
-      obj1.children = jsx(ThreadListLoadingIndicatorDefault, {});
+      obj4.contentContainerStyle = items;
+      obj4.state = state;
+      obj4.cleanUp = cleanUp;
+      obj4.children = jsx(ThreadListLoadingIndicatorDefault, {});
       return (
         <EnterExitCrossFadeContainer key={key} contentContainerStyle={null} state={null} cleanUp={null}>
           {null}
         </EnterExitCrossFadeContainer>
       );
     } else if (constants.LIST === arg1) {
-      obj = { contentContainerStyle: closure_3.container, state, cleanUp, children: null };
-      const obj2 = {
+      const obj = { contentContainerStyle: closure_3.container, state, cleanUp, children: null };
+      const obj5 = {
         data: memo,
         ListHeaderComponent: memo2,
         ListHeaderComponentStyle: closure_3.header,
@@ -288,18 +296,18 @@ export default function ThreadList(onCreateThreadPress) {
         contentContainerStyle: null,
       };
       const intl = util.intl;
-      obj2.accessibilityLabel = intl.string(util.t.B2panI);
+      obj5.accessibilityLabel = intl.string(util.t.B2panI);
       let tmp13;
       if (loading) {
         tmp13 = ThreadListLoadingIndicatorDefault;
       }
-      obj2.ListFooterComponent = tmp13;
+      obj5.ListFooterComponent = tmp13;
       let footer;
       if (loading) {
         footer = closure_3.footer;
       }
-      obj2.ListFooterComponentStyle = footer;
-      obj2.contentContainerStyle = contentContainerStyle;
+      obj5.ListFooterComponentStyle = footer;
+      obj5.contentContainerStyle = contentContainerStyle;
       obj.children = jsx(_mod9003.AnimatedFlashList, {
         data: memo,
         ListHeaderComponent: memo2,
@@ -325,6 +333,9 @@ export default function ThreadList(onCreateThreadPress) {
       );
     }
   }, items4);
-  obj = { items: memo1, renderItem: callback1, getItemKey: getThreadListStateKey };
-  return threadIds(onThreadPress(contentContainerStyle[7]).TransitionGroup, obj);
+  return threadIds(onThreadPress(contentContainerStyle[7]).TransitionGroup, {
+    items: memo1,
+    renderItem: callback1,
+    getItemKey: getThreadListStateKey,
+  });
 }

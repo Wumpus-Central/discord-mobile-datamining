@@ -2,6 +2,8 @@
 import initialize from "../../../discord_common/js/packages/flux/index.tsx";
 import RegionalFeatureConfigStore from "RegionalFeatureConfigStore.tsx";
 
+const require = globalThis.__r;
+
 require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/regional_feature_config/RegionalFeatureConfigUtils.tsx");

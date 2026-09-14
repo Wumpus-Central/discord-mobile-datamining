@@ -11,7 +11,6 @@ let closure_6 = async function _onAddDirectoryGuildEntry() {
     closure_129_4,
   );
   closure_129_5();
-  closure_130_2(closure_130_3[3]);
   closure_130_1(closure_130_3[4]).openLazy({
     importer() {
       return closure_0(paths[6])(paths[5], paths.paths).then((result) => {

@@ -4,7 +4,7 @@ import WebAuthnScreens2 from "WebAuthnScreens.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const WebAuthnScreens = fn(14744).WebAuthnScreens;
+const WebAuthnScreens = fn(14745).WebAuthnScreens;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/webauthn/native/UserSettingsWebAuthn.tsx");
@@ -18,13 +18,12 @@ export default function UserSettingsWebAuthn(showNav) {
   if (flag === undefined) {
     flag = false;
   }
-  let obj = WebAuthnScreens2;
-  const screens = obj.getScreens({ isModal: false });
+  const screens = WebAuthnScreens2.getScreens({ isModal: false });
   const layoutEffect = noop.useLayoutEffect(() => {
     options.setOptions({ headerShown: flag });
   });
-  obj = { screens, initialRouteName, initialRouteStack: null, useContainer: false };
+  const obj2 = { screens, initialRouteName, initialRouteStack: null, useContainer: false };
   const items = [{ name: initialRouteName }];
-  obj.initialRouteStack = items;
+  obj2.initialRouteStack = items;
   return jsx(Navigator.Navigator, { screens, initialRouteName, initialRouteStack: null, useContainer: false });
 }

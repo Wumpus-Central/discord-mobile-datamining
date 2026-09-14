@@ -11,10 +11,10 @@ class BaseSocket {
     merged = Object.assign({ id: null, authorization: null, application: null, abortController: null });
     obj2 = closure_0(closure_1[1]);
     merged[0] = obj2.uniqueId();
-    obj = { authing: false, scopes: [], accessToken: null, expires: null };
+    obj1 = { authing: false, scopes: [], accessToken: null, expires: null };
     date = new Date(0);
-    obj.expires = date;
-    merged[1] = obj;
+    obj1.expires = date;
+    merged[1] = obj1;
     merged[2] = { id: null, name: null, icon: null };
     abortController = new AbortController();
     merged[3] = abortController;
@@ -27,9 +27,8 @@ class BaseSocket {
 }
 const prototype = BaseSocket.prototype;
 prototype["checkRpcVersion"] = function checkRpcVersion(version) {
-  let tmp2 = RPCErrorDefault;
-  tmp2 = new tmp2({ closeCode: constants.INVALID_VERSION }, "Invalid Version: " + version);
-  throw tmp2;
+  const obj = { closeCode: constants.INVALID_VERSION };
+  throw new RPCErrorDefault({ closeCode: constants.INVALID_VERSION }, "Invalid Version: " + version);
 };
 Object.defineProperty(prototype, "transport", {
   get: function transport() {

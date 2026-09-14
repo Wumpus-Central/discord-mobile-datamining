@@ -3,7 +3,6 @@ import util from "../../../../intl/index.native.tsx";
 import PlatformUtils from "../../../../utils/PlatformUtils.tsx";
 import UserSettings from "../../UserSettings.tsx";
 import AgeGateUtils from "../../../age_gate/AgeGateUtils.tsx";
-import AgeVerificationUtils from "../../../age_assurance/AgeVerificationUtils.tsx";
 import SettingsConstants from "../../core/native/SettingsConstants.tsx";
 import AgeVerificationActionCreatorsDefault from "../../../age_assurance/AgeVerificationActionCreators.native.tsx";
 import AgeVerificationAnalyticsUtils from "../../../age_assurance/AgeVerificationAnalyticsUtils.tsx";
@@ -26,17 +25,17 @@ const toggle = SettingBuilders.createToggle({
     return AgeRestrictedContentSettingsUtils.useViewNsfwCommandsOrDefault();
   },
   onValueChange: function handleValueChange(arg0) {
-    let obj = AgeGateUtils;
     if (obj.shouldAgeVerifyForSettingsToggles()) {
       if (arg0) {
-        obj = {
+        const obj3 = {
           entryPoint: AgeVerificationAnalyticsUtils.AgeVerificationModalEntryPoint.AGE_RESTRICTED_DM_COMMANDS_SETTINGS,
         };
-        const result = AgeVerificationActionCreatorsDefault.showAgeVerificationGetStartedModal(obj);
+        const result = AgeVerificationActionCreatorsDefault.showAgeVerificationGetStartedModal(obj3);
       }
     }
     const ViewNsfwCommands = UserSettings.ViewNsfwCommands;
     ViewNsfwCommands.updateSetting(arg0);
+    obj = AgeGateUtils;
   },
   usePredicate() {
     let shouldAgeVerifyForSettingsToggles = AgeGateUtils.useShouldAgeVerifyForSettingsToggles();
@@ -44,7 +43,6 @@ const toggle = SettingBuilders.createToggle({
     if (flag == null) {
       flag = true;
     }
-    let tmpResult = AgeVerificationUtils;
     if (shouldAgeVerifyForSettingsToggles) {
       shouldAgeVerifyForSettingsToggles = !tmpResult.useIsVerifiedTeen();
     }
@@ -52,8 +50,8 @@ const toggle = SettingBuilders.createToggle({
       shouldAgeVerifyForSettingsToggles = flag;
     }
     if (shouldAgeVerifyForSettingsToggles) {
-      tmpResult = PlatformUtils;
-      shouldAgeVerifyForSettingsToggles = tmpResult.isAndroid();
+      shouldAgeVerifyForSettingsToggles = PlatformUtils.isAndroid();
+      const tmpResult2 = PlatformUtils;
     }
     return shouldAgeVerifyForSettingsToggles;
   },

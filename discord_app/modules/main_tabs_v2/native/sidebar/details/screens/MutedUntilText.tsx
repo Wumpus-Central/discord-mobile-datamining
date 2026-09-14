@@ -42,22 +42,27 @@ export default function MutedUntilText(arg0) {
       } else {
         return null;
       }
-      obj = { style: tmp.formHintText, variant: "text-sm/medium", color: "text-muted", children: null };
+      const obj2 = { style: tmp.formHintText, variant: "text-sm/medium", color: "text-muted", children: null };
       const intl5 = tmp15(1114).intl;
-      obj = { endTime: null, endTimeHook: null };
+      const obj3 = { endTime: null, endTimeHook: null };
       const _Date = Date;
       const date = new Date(muteConfig.end_time);
-      obj.endTime = date.toLocaleString(tmp15(1114).intl.currentLocale, {
+      obj3.endTime = date.toLocaleString(tmp15(1114).intl.currentLocale, {
         month: "numeric",
         day: "numeric",
         hour: "numeric",
         minute: "2-digit",
       });
-      obj.endTimeHook = function endTimeHook(children) {
+      obj3.endTimeHook = function endTimeHook(children) {
         return jsx(Text_Text.Text, { variant: "text-sm/medium", color: "control-brand-foreground", children }, "muted");
       };
-      obj.children = intl5.format(N2NXMd, obj);
-      return jsx(tmp15(4632).Text, { endTime: null, endTimeHook: null });
+      obj2.children = intl5.format(N2NXMd, obj3);
+      return jsx(tmp15(4632).Text, {
+        style: tmp.formHintText,
+        variant: "text-sm/medium",
+        color: "text-muted",
+        children: null,
+      });
     }
   }
   if (obj.SERVER === type) {

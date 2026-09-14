@@ -18,8 +18,23 @@ const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
 const createStyles = fn(4636);
 let closure_14 = createStyles.createStyles(() => {
-  let obj = { pressable: null, nameplate: null, rowActive: null, selectedBorder: null, rowSelected: null };
-  obj = {
+  const obj = {
+    pressable: {
+      marginBottom: 1,
+      borderRadius: nativeDefault.radii.md,
+      marginHorizontal: nativeDefault.space.PX_8,
+      paddingHorizontal: nativeDefault.space.PX_8,
+      marginVertical: nativeDefault.space.PX_4,
+      flexDirection: "row",
+      alignItems: "center",
+      flex: 1,
+    },
+    nameplate: null,
+    rowActive: null,
+    selectedBorder: null,
+    rowSelected: null,
+  };
+  const obj2 = {
     marginBottom: 1,
     borderRadius: nativeDefault.radii.md,
     marginHorizontal: nativeDefault.space.PX_8,
@@ -29,9 +44,8 @@ let closure_14 = createStyles.createStyles(() => {
     alignItems: "center",
     flex: 1,
   };
-  obj.pressable = obj;
-  obj = { borderRadius: nativeDefault.radii.md };
-  obj.nameplate = obj;
+  obj.nameplate = { borderRadius: nativeDefault.radii.md };
+  const obj3 = { borderRadius: nativeDefault.radii.md };
   obj.rowActive = { backgroundColor: nativeDefault.colors.INTERACTIVE_BACKGROUND_ACTIVE };
   const rect = {
     position: "absolute",
@@ -44,7 +58,7 @@ let closure_14 = createStyles.createStyles(() => {
     borderRadius: nativeDefault.radii.md,
   };
   obj.selectedBorder = rect;
-  const obj1 = { backgroundColor: nativeDefault.colors.INTERACTIVE_BACKGROUND_ACTIVE };
+  const obj4 = { backgroundColor: nativeDefault.colors.INTERACTIVE_BACKGROUND_ACTIVE };
   obj.rowSelected = {
     borderRadius: nativeDefault.radii.md,
     backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED,
@@ -61,9 +75,8 @@ export default noop.memo(function MessagesItemChannelBase(channel) {
   const height = channel.height;
   const setIsPressed = channel.setIsPressed;
   let isPressed;
-  let obj = channel(isPressed[12]);
   let items = [SelectedChannelStore];
-  const stateFromStores = obj.useStateFromStores(items, () => {
+  const stateFromStores = channel(isPressed[12]).useStateFromStores(items, () => {
     let id;
     const channelId = SelectedChannelStore.getChannelId(null);
     if (channel != null) {
@@ -73,7 +86,6 @@ export default noop.memo(function MessagesItemChannelBase(channel) {
   });
   let tmp4 = closure_14();
   closure_5 = tmp4;
-  let obj1 = setIsPressed;
   const items1 = [height];
   const items2 = [tmp4, stateFromStores];
   const memo = setIsPressed.useMemo(() => ({ height, overflow: "hidden" }), items1);
@@ -86,73 +98,71 @@ export default noop.memo(function MessagesItemChannelBase(channel) {
     items[1] = rowSelected;
     return items;
   }, items2);
-  let obj2 = channel(isPressed[12]);
+  const obj = channel(isPressed[12]);
   const items3 = [closure_5];
-  const stateFromStoresObject = obj2.useStateFromStoresObject(items3, () => {
-    let obj = channel;
+  const stateFromStoresObject = channel(isPressed[12]).useStateFromStoresObject(items3, () => {
     if (channel.isDM()) {
-      const activities = PresenceStore.getActivities(obj.getRecipientId());
+      const activities = PresenceStore.getActivities(channel.getRecipientId());
     }
-    if (obj.isDM()) {
-      obj = { status: null, activities: null };
-      obj.status = PresenceStore.getStatus(obj.getRecipientId());
-      obj.activities = activities;
+    if (channel.isDM()) {
+      const obj2 = { status: PresenceStore.getStatus(channel.getRecipientId()), activities };
+      let obj3 = obj2;
     } else {
-      obj = { status: "Array", activities: "PX_16" };
+      obj3 = { status: "Array", activities: "PX_16" };
     }
-    return obj;
+    return obj3;
   });
   ({ status, activities } = stateFromStoresObject);
   let obj3 = channel(isPressed[12]);
   const items4 = [isPressed];
-  const stateFromStoresObject1 = obj3.useStateFromStoresObject(items4, () => {
+  const stateFromStoresObject1 = channel(isPressed[12]).useStateFromStoresObject(items4, () => {
     const mentionCount = ReadStateStore.getMentionCount(channel.id);
-    const obj = { mentionCount, hasUnreadMessages: null };
+    const obj3 = { mentionCount, hasUnreadMessages: null };
     let tmp2 = mentionCount > 0;
     if (!tmp2) {
-      tmp2 = null != channel.getGuildId() && obj.hasUnread(channel.id);
-      const tmp4 = null != channel.getGuildId() && obj.hasUnread(channel.id);
+      tmp2 = null != channel.getGuildId() && ReadStateStore.hasUnread(channel.id);
+      const tmp4 = null != channel.getGuildId() && ReadStateStore.hasUnread(channel.id);
     }
-    obj.hasUnreadMessages = tmp2;
-    return obj;
+    obj3.hasUnreadMessages = tmp2;
+    return obj3;
   });
   const hasUnreadMessages = stateFromStoresObject1.hasUnreadMessages;
+  const obj4 = channel(isPressed[12]);
   ({ isIncomingCall, isOngoingCall } = height(isPressed[13])(channel.id));
-  let obj4 = channel(isPressed[12]);
+  const tmp10 = height(isPressed[13])(channel.id);
   const items5 = [UserGuildSettingsStore];
-  const stateFromStoresObject2 = obj4.useStateFromStoresObject(items5, () => ({
+  const stateFromStoresObject2 = channel(isPressed[12]).useStateFromStoresObject(items5, () => ({
     resolvedUnreadSetting: UserGuildSettingsStore.resolveUnreadSetting(channel),
     muted: UserGuildSettingsStore.isChannelMuted(channel.getGuildId(), channel.id),
     favorite: UserGuildSettingsStore.isMessagesFavorite(channel.id),
   }));
   ({ resolvedUnreadSetting, muted, favorite } = stateFromStoresObject2);
-  let obj5 = channel(isPressed[12]);
+  const obj5 = channel(isPressed[12]);
   const items6 = [RelationshipStore];
-  const stateFromStoresObject3 = obj5.useStateFromStoresObject(items6, () => {
-    let obj = channel;
+  const stateFromStoresObject3 = channel(isPressed[12]).useStateFromStoresObject(items6, () => {
     let isIgnoredResult = channel.isDM();
     if (isIgnoredResult) {
-      isIgnoredResult = RelationshipStore.isIgnored(obj.getRecipientId());
+      isIgnoredResult = RelationshipStore.isIgnored(channel.getRecipientId());
     }
-    obj = { ignored: isIgnoredResult, blocked: null };
-    let isBlockedResult = obj.isDM();
+    const obj2 = { ignored: isIgnoredResult, blocked: null };
+    let isBlockedResult = channel.isDM();
     if (isBlockedResult) {
-      isBlockedResult = RelationshipStore.isBlocked(obj.getRecipientId());
+      isBlockedResult = RelationshipStore.isBlocked(channel.getRecipientId());
     }
-    obj.blocked = isBlockedResult;
-    return obj;
+    obj2.blocked = isBlockedResult;
+    return obj2;
   });
   ({ ignored, blocked } = stateFromStoresObject3);
-  let obj6 = channel(isPressed[12]);
+  const obj6 = channel(isPressed[12]);
   const items7 = [UserStore];
-  const stateFromStores1 = obj6.useStateFromStores(items7, () => {
+  const stateFromStores1 = channel(isPressed[12]).useStateFromStores(items7, () => {
     let recipientId;
     if (true === channel.isDM()) {
       recipientId = channel.getRecipientId();
     }
     return UserStore.getUser(recipientId);
   });
-  const tmp10 = height(isPressed[13])(channel.id);
+  const obj7 = channel(isPressed[12]);
   const nameplate = channel(isPressed[14]).useNameplate({ user: stateFromStores1 });
   let tmp15 = null != nameplate;
   if (tmp15) {
@@ -167,7 +177,7 @@ export default noop.memo(function MessagesItemChannelBase(channel) {
   const items9 = [, ,];
   ({ guild_id: arr10[0], id: arr10[1] } = channel);
   items9[2] = setIsPressed;
-  const memo2 = obj1.useMemo(() => {
+  const memo2 = obj2.useMemo(() => {
     let tmp = null;
     if (obj.isIOS()) {
       if (isPressed) {
@@ -181,29 +191,29 @@ export default noop.memo(function MessagesItemChannelBase(channel) {
     return tmp;
   }, items8);
   const items10 = [setIsPressed];
-  const callback = obj1.useCallback(() => {
+  const callback = obj2.useCallback(() => {
     ChannelActionCreatorsDefault.preload(channel.guild_id, channel.id);
     setIsPressed(true);
   }, items9);
   const items11 = [channel.id];
-  const callback1 = obj1.useCallback(() => {
+  const callback1 = obj2.useCallback(() => {
     setIsPressed(false);
   }, items10);
   const items12 = [channel.id];
-  const callback2 = obj1.useCallback(() => {
+  const callback2 = obj2.useCallback(() => {
     transitionToChannel.transitionToChannel(channel.id);
   }, items11);
-  obj = { style: memo, collapsable: false, children: null };
-  const callback3 = obj1.useCallback(() => {
+  const obj9 = { style: memo, collapsable: false, children: null };
+  const callback3 = obj2.useCallback(() => {
     const result = openChannelLongPressActionSheet.openChannelLongPressActionSheet(channel.id);
   }, items12);
-  obj = {
+  const obj10 = {
     onPressIn: callback,
     onPressOut: callback1,
     onPress: callback2,
     onLongPress: callback3,
     accessibilityRole: "button",
-    accessibilityLabel: tmp9(tmp2[20])({
+    accessibilityLabel: height(isPressed[20])({
       channel,
       unread: hasUnreadMessages,
       mentionCount: stateFromStoresObject1.mentionCount,
@@ -218,20 +228,20 @@ export default noop.memo(function MessagesItemChannelBase(channel) {
     children: null,
   };
   const obj8 = channel(isPressed[14]);
-  obj.accessibilityHint = channel(isPressed[20]).getChannelA11yHint({
+  obj10.accessibilityHint = channel(isPressed[20]).getChannelA11yHint({
     channel,
     muted,
     userStatus: status,
     isFavorite: favorite,
   });
-  obj.underlayColor = tmp4.rowActive.backgroundColor;
-  obj.style = memo1;
+  obj10.underlayColor = tmp4.rowActive.backgroundColor;
+  obj10.style = memo1;
   let tmp26;
-  let tmp9Result = tmp9(tmp2[21]);
+  const tmpResult = channel(isPressed[20]);
   if (tmp15) {
     tmp26 = nameplate;
   }
-  obj1 = { nameplate: tmp26, isFocused: stateFromStores, isPressed, isMuted: null, fadeIn: null, style: null };
+  const obj11 = { nameplate: tmp26, isFocused: stateFromStores, isPressed, isMuted: null, fadeIn: null, style: null };
   let tmp27 = muted;
   if (!muted) {
     tmp27 = ignored;
@@ -239,22 +249,22 @@ export default noop.memo(function MessagesItemChannelBase(channel) {
   if (!tmp27) {
     tmp27 = blocked;
   }
-  obj1.isMuted = tmp27;
-  obj1.fadeIn = isPressed;
-  obj1.style = tmp4.nameplate;
-  const items13 = [closure_12(tmp9Result, obj1), , , ,];
+  obj11.isMuted = tmp27;
+  obj11.fadeIn = isPressed;
+  obj11.style = tmp4.nameplate;
+  const items13 = [closure_12(height(isPressed[21]), obj11), , , ,];
   let tmp22Result = stateFromStores;
   if (stateFromStores) {
-    obj2 = { style: tmp4.selectedBorder, pointerEvents: "none" };
-    tmp22Result = closure_12(tmp23, obj2);
+    const obj12 = { style: tmp4.selectedBorder, pointerEvents: "none" };
+    tmp22Result = closure_12(tmp23, obj12);
   }
   items13[1] = tmp22Result;
-  obj3 = { unread: hasUnreadMessages, resolvedUnreadSetting, muted, layout: null, panelVariant: true };
-  tmp9Result = tmp9(tmp2[22]);
-  obj3.layout = channel(isPressed[23]).ChannelListLayoutTypes.COZY_DRAWER_SMOL;
-  items13[2] = closure_12(tmp9Result, obj3);
-  obj4 = { backgroundColor: memo2, children: null };
-  obj5 = {
+  const obj13 = { unread: hasUnreadMessages, resolvedUnreadSetting, muted, layout: null, panelVariant: true };
+  const tmp9Result = height(isPressed[21]);
+  obj13.layout = channel(isPressed[23]).ChannelListLayoutTypes.COZY_DRAWER_SMOL;
+  items13[2] = closure_12(height(isPressed[22]), obj13);
+  const obj14 = { backgroundColor: memo2, children: null };
+  const obj15 = {
     channel,
     channelSelected: stateFromStores,
     hasUnreadMessages,
@@ -264,12 +274,12 @@ export default noop.memo(function MessagesItemChannelBase(channel) {
     isStreaming: null,
     status: null,
   };
-  const tmpResult = channel(isPressed[20]);
-  obj5.isStreaming = height(isPressed[26])(activities);
-  obj5.status = status;
-  obj4.children = closure_12(height(isPressed[25]), obj5);
-  items13[3] = closure_12(channel(isPressed[24]).CutoutBackgroundProvider, obj4);
-  obj6 = {
+  const tmp9Result4 = height(isPressed[22]);
+  obj15.isStreaming = height(isPressed[26])(activities);
+  obj15.status = status;
+  obj14.children = closure_12(height(isPressed[25]), obj15);
+  items13[3] = closure_12(channel(isPressed[24]).CutoutBackgroundProvider, obj14);
+  const obj16 = {
     channel,
     channelSelected: stateFromStores,
     favorite,
@@ -282,17 +292,17 @@ export default noop.memo(function MessagesItemChannelBase(channel) {
     hasNameplate: null,
   };
   let someResult;
-  const tmp9Result1 = height(isPressed[25]);
+  const tmp9Result5 = height(isPressed[25]);
   if (activities != null) {
     someResult = activities.some((type) => type.type !== constants.CUSTOM_STATUS);
   }
-  obj6.hasActivity = true === someResult;
-  obj6.hasUnreadMessages = hasUnreadMessages;
-  obj6.resolvedUnreadSetting = resolvedUnreadSetting;
-  obj6.hasNameplate = tmp15;
-  items13[4] = closure_12(height(isPressed[27]), obj6);
-  obj.children = items13;
-  obj.children = closure_13(channel(isPressed[19]).PressableHighlight, obj);
-  return closure_12(stateFromStores, obj);
+  obj16.hasActivity = true === someResult;
+  obj16.hasUnreadMessages = hasUnreadMessages;
+  obj16.resolvedUnreadSetting = resolvedUnreadSetting;
+  obj16.hasNameplate = tmp15;
+  items13[4] = closure_12(height(isPressed[27]), obj16);
+  obj10.children = items13;
+  obj9.children = closure_13(channel(isPressed[19]).PressableHighlight, obj10);
+  return closure_12(stateFromStores, obj9);
 });
 export const MESSAGES_ITEM_CHANNEL_PRESSABLE_PADDING = 1;

@@ -31,9 +31,12 @@ const rect = {
   backgroundColor: nativeDefault.colors.BORDER_STRONG,
 };
 obj.horizontalLine = rect;
-obj = { backgroundColor: nativeDefault.colors.TEXT_BRAND, borderColor: nativeDefault.colors.BORDER_SUBTLE };
-obj.filledCircle = obj;
+obj.filledCircle = {
+  backgroundColor: nativeDefault.colors.TEXT_BRAND,
+  borderColor: nativeDefault.colors.BORDER_SUBTLE,
+};
 let closure_3 = createStyles.createStyles(obj);
+const obj3 = { backgroundColor: nativeDefault.colors.TEXT_BRAND, borderColor: nativeDefault.colors.BORDER_SUBTLE };
 size = fn(2);
 const result = size.fileFinishedImporting(
   "modules/user_settings/account/native/mfa_modal_flow/TwoFASetupModalHeader.tsx",
@@ -44,10 +47,8 @@ export const PageMarker = noop.memo((arg0) => {
   const tmp = closure_3();
   closure_1 = tmp;
   const ArrayResult = Array(numMarkers);
-  let obj = { style: null, children: null };
-  const items = [tmp.pageMarkerContainer];
-  obj = { width: 20 * numMarkers };
-  items[1] = obj;
+  const obj = { style: null, children: null };
+  const items = [tmp.pageMarkerContainer, { width: 20 * numMarkers }];
   obj.style = items;
   const mapped = Array(numMarkers)
     .fill(undefined)

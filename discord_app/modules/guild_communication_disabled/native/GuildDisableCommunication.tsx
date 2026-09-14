@@ -26,15 +26,14 @@ const GuildDisableCommunicationConstants = fn(2023);
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_11, Fragment: closure_12, jsxs: map1 } = jsxProd);
-let obj = {
-  value: DisableCommunicationDuration.DURATION_60_SEC,
-  getLabel() {
-    const intl = util.intl;
-    return intl.formatToPlainString(util.t.iruf5E, { minutes: 1 });
-  },
-};
 let items = [
-  obj,
+  {
+    value: DisableCommunicationDuration.DURATION_60_SEC,
+    getLabel() {
+      const intl = util.intl;
+      return intl.formatToPlainString(util.t.iruf5E, { minutes: 1 });
+    },
+  },
   {
     value: DisableCommunicationDuration.DURATION_5_MIN,
     getLabel() {
@@ -71,18 +70,25 @@ let items = [
     },
   },
 ];
-fn(4636);
-obj = {
+const createStyles = fn(4636);
+let obj2 = {
   container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },
   reasonTextArea: null,
   buttonContainer: null,
 };
-const createStyles = { marginVertical: nativeDefault.space.PX_16 };
-obj.reasonTextArea = createStyles;
-let obj1 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
-obj.buttonContainer = { marginBottom: nativeDefault.space.PX_16 };
-let closure_15 = createStyles.createStyles(obj);
-let obj3 = { marginBottom: nativeDefault.space.PX_16 };
+let obj = {
+  value: DisableCommunicationDuration.DURATION_60_SEC,
+  getLabel() {
+    const intl = util.intl;
+    return intl.formatToPlainString(util.t.iruf5E, { minutes: 1 });
+  },
+};
+let obj4 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
+obj2.reasonTextArea = { marginVertical: nativeDefault.space.PX_16 };
+let obj5 = { marginVertical: nativeDefault.space.PX_16 };
+obj2.buttonContainer = { marginBottom: nativeDefault.space.PX_16 };
+let closure_15 = createStyles.createStyles(obj2);
+let obj6 = { marginBottom: nativeDefault.space.PX_16 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_communication_disabled/native/GuildDisableCommunication.tsx");
 
@@ -99,8 +105,8 @@ export default noop.memo(function GuildDisableCommunication(arg0) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -113,14 +119,14 @@ export default noop.memo(function GuildDisableCommunication(arg0) {
             throw value;
           } else if (arg0 === 2) {
             c3 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
-            let obj3 = tmp4(11972);
+            const obj4 = tmp4(11973);
             dependencyMap = 1;
             c3 = 1;
-            const obj1 = {
-              value: obj3.setCommunicationDisabledDuration(
+            const obj5 = {
+              value: obj4.setCommunicationDisabledDuration(
                 guild_id,
                 id.id,
                 items[asyncGeneratorStep].value,
@@ -128,15 +134,15 @@ export default noop.memo(function GuildDisableCommunication(arg0) {
               ),
               done: false,
             };
-            return obj1;
+            return obj5;
           }
         } else if (arg0 === 1) {
           c3 = 3;
           throw value;
         } else if (arg0 === 2) {
           c3 = 3;
-          const obj2 = { value, done: true };
-          return obj2;
+          const obj6 = { value, done: true };
+          return obj6;
         } else {
           const intl = user(1114).intl;
           const obj8 = tmp4(4335);
@@ -145,9 +151,9 @@ export default noop.memo(function GuildDisableCommunication(arg0) {
           if (name == null) {
             user = "";
           }
-          obj = { key: "GUILD_COMMUNICATION_DISABLED_SUCCESS", content: null, icon: null };
-          obj3 = { user };
-          obj.content = intl.formatToPlainString(user(1114).t.O9C3Nt, obj3);
+          const obj = { key: "GUILD_COMMUNICATION_DISABLED_SUCCESS", content: null, icon: null };
+          const obj7 = { user };
+          obj.content = intl.formatToPlainString(user(1114).t.O9C3Nt, obj7);
           obj.icon = tmp4(9696);
           obj8.open(obj);
           closure_129_2();
@@ -161,7 +167,7 @@ export default noop.memo(function GuildDisableCommunication(arg0) {
     }
   };
   const tmp = closure_15();
-  [c3, c4] = _slicedToArray(noop.useState(0), 2);
+  [c3, c4] = noop.useState(0);
   noop = noop.useRef("");
   const ref = noop.useRef(null);
   const ref1 = noop.useRef(null);
@@ -171,30 +177,29 @@ export default noop.memo(function GuildDisableCommunication(arg0) {
   obj.inputs = items;
   useSafeAreaAvoidingInputsDefault(obj);
   useMountEffectDefault(() => {
-    const obj = { type, guild_id, other_user_id: require.id };
-    obj.track(AnalyticEvents.OPEN_MODAL, obj);
+    AnalyticsUtilsDefault.track(AnalyticEvents.OPEN_MODAL, { type, guild_id, other_user_id: require.id });
   });
-  obj = { style: tmp.container, ref, contentContainerStyle: null, children: null };
-  obj = { paddingHorizontal: nativeDefault.space.PX_12, paddingBottom: insets.bottom };
-  obj.contentContainerStyle = obj;
-  let obj1 = { children: null };
-  let obj2 = { style: null, variant: "heading-md/semibold", children: null };
+  let obj2 = { style: tmp.container, ref, contentContainerStyle: null, children: null };
   const tmp2 = _slicedToArray(noop.useState(0), 2);
-  obj2.style = { marginVertical: nativeDefault.space.PX_16 };
+  obj2.contentContainerStyle = { paddingHorizontal: nativeDefault.space.PX_12, paddingBottom: insets.bottom };
+  let obj4 = { children: null };
+  let obj5 = { style: null, variant: "heading-md/semibold", children: null };
+  let obj3 = { paddingHorizontal: nativeDefault.space.PX_12, paddingBottom: insets.bottom };
+  obj5.style = { marginVertical: nativeDefault.space.PX_16 };
   let intl = util.intl;
-  obj2.children = intl.format(util.t.Ns83GT, { helpdeskArticle });
-  const items1 = [closure_11(Text_Text.Text, obj2), , ,];
-  const obj5 = { title: null, defaultValue: 0, onChange: null, hasIcons: false, children: null };
+  obj5.children = intl.format(util.t.Ns83GT, { helpdeskArticle });
+  const items1 = [closure_11(Text_Text.Text, obj5), , ,];
+  let obj8 = { title: null, defaultValue: 0, onChange: null, hasIcons: false, children: null };
   const intl2 = util.intl;
-  obj5.title = intl2.string(util.t["9XsExm"]);
-  obj5.onChange = function onChange(arg0) {
+  obj8.title = intl2.string(util.t["9XsExm"]);
+  obj8.onChange = function onChange(arg0) {
     _undefined(arg0);
   };
-  obj5.children = items.map((getLabel, value) =>
+  obj8.children = items.map((getLabel, value) =>
     closure_1_11(TableRadioRow.TableRadioRow, { value, label: getLabel.getLabel() }, value),
   );
-  items1[1] = closure_11(TableRadioGroup.TableRadioGroup, obj5);
-  const obj6 = {
+  items1[1] = closure_11(TableRadioGroup.TableRadioGroup, obj8);
+  const obj9 = {
     ref: ref1,
     containerStyle: tmp.reasonTextArea,
     placeholder: null,
@@ -203,18 +208,18 @@ export default noop.memo(function GuildDisableCommunication(arg0) {
     onChange: null,
   };
   const intl3 = util.intl;
-  obj6.placeholder = intl3.string(util.t.GakiH1);
+  obj9.placeholder = intl3.string(util.t.GakiH1);
   const intl4 = util.intl;
-  obj6.label = intl4.string(util.t.ewHW15);
-  obj6.onChange = function onChange(current) {
+  obj9.label = intl4.string(util.t.ewHW15);
+  obj9.onChange = function onChange(current) {
     closure_5.current = current;
   };
-  items1[2] = closure_11(TextArea.TextArea, obj6);
-  const obj7 = { style: tmp.buttonContainer, children: null };
-  let obj8 = { variant: "primary", text: null, onPress: null };
+  items1[2] = closure_11(TextArea.TextArea, obj9);
+  const obj10 = { style: tmp.buttonContainer, children: null };
+  const obj11 = { variant: "primary", text: null, onPress: null };
   const intl5 = util.intl;
-  obj8.text = intl5.string(util.t.MlPTIi);
-  obj8.onPress = function handleSubmitButtonPressed() {
+  obj11.text = intl5.string(util.t.MlPTIi);
+  obj11.onPress = function handleSubmitButtonPressed() {
     const self = this;
     const apply = closure_6.apply;
     if (typeof apply === "unknown") {
@@ -224,9 +229,9 @@ export default noop.memo(function GuildDisableCommunication(arg0) {
     }
     return applyArgumentsResult;
   };
-  obj7.children = closure_11(components_Button_Button.Button, obj8);
-  items1[3] = closure_11(closure_6, obj7);
-  obj1.children = items1;
-  obj.children = closure_13(closure_12, obj1);
-  return closure_11(closure_7, obj);
+  obj10.children = closure_11(components_Button_Button.Button, obj11);
+  items1[3] = closure_11(closure_6, obj10);
+  obj4.children = items1;
+  obj2.children = closure_13(closure_12, obj4);
+  return closure_11(closure_7, obj2);
 });

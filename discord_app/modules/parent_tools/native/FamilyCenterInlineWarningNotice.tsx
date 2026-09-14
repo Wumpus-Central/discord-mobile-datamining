@@ -8,9 +8,21 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-fn(4636);
-let createStyles = { container: null, text: null };
-createStyles = {
+const createStyles = fn(4636);
+const obj2 = {
+  container: {
+    flexDirection: "row",
+    alignItems: "flex-start",
+    gap: nativeDefault.space.PX_8,
+    padding: nativeDefault.space.PX_12,
+    borderWidth: 1,
+    borderColor: nativeDefault.colors.BORDER_FEEDBACK_WARNING,
+    borderRadius: nativeDefault.radii.lg,
+    backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_WARNING,
+  },
+  text: null,
+};
+const obj3 = {
   flexDirection: "row",
   alignItems: "flex-start",
   gap: nativeDefault.space.PX_8,
@@ -20,22 +32,21 @@ createStyles = {
   borderRadius: nativeDefault.radii.lg,
   backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_WARNING,
 };
-createStyles.container = createStyles;
-createStyles.text = { flex: 1, paddingRight: nativeDefault.space.PX_8 };
-let closure_6 = createStyles.createStyles(createStyles);
+obj2.text = { flex: 1, paddingRight: nativeDefault.space.PX_8 };
+let closure_6 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/parent_tools/native/FamilyCenterInlineWarningNotice.tsx");
 
 export default function FamilyCenterInlineWarningNotice(arg0) {
   ({ text, style } = arg0);
   const tmp = closure_6();
-  let obj = { style: null, children: null };
+  const obj = { style: null, children: null };
   const items = [tmp.container, style];
   obj.style = items;
-  obj = { size: "sm", color: nativeDefault.colors.ICON_FEEDBACK_WARNING };
-  const items1 = [React4(WarningIcon.WarningIcon, obj)];
-  obj = { variant: "text-sm/medium", color: "text-strong", style: tmp.text, children: text };
-  items1[1] = React4(Text_Text.Text, obj);
+  const items1 = [
+    React4(WarningIcon.WarningIcon, { size: "sm", color: nativeDefault.colors.ICON_FEEDBACK_WARNING }),
+    React4(Text_Text.Text, { variant: "text-sm/medium", color: "text-strong", style: tmp.text, children: text }),
+  ];
   obj.children = items1;
   return hasOwnProperty(View, obj);
 }

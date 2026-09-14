@@ -13,10 +13,10 @@ import InviteRecord from "../../../../records/InviteRecord.tsx";
 require = fn;
 function GroupDMInviteManagement(channelId) {
   channelId = channelId.channelId;
+  first = undefined;
+  dependencyMap = undefined;
   _slicedToArray = undefined;
-  const tmp2 = _slicedToArray(noop.useState([]), 2);
-  const first = tmp2[0];
-  dependencyMap = tmp2[1];
+  [first, dependencyMap] = noop.useState([]);
   const tmp3 = _slicedToArray(noop.useState(true), 2);
   closure_3 = tmp3[1];
   first(5073)(() => {
@@ -28,8 +28,8 @@ function GroupDMInviteManagement(channelId) {
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
-          let obj = { value, done: true };
-          return obj;
+          const obj2 = { value, done: true };
+          return obj2;
         } else {
           return { value: "HermesInternal", done: null };
         }
@@ -42,14 +42,14 @@ function GroupDMInviteManagement(channelId) {
               throw value;
             } else if (arg0 === 2) {
               v3 = 3;
-              obj = { value, done: true };
-              return obj;
+              const obj3 = { value, done: true };
+              return obj3;
             } else {
               closure_1 = tmp2;
               closure_0 = tmp5;
               closure_128_0 = undefined;
               const HTTP = channelId(closure_2_2[10]).HTTP;
-              const obj1 = {
+              const obj4 = {
                 url: closure_2_10.INSTANT_INVITES(closure_0),
                 retries: 3,
                 oldFormErrors: true,
@@ -57,15 +57,15 @@ function GroupDMInviteManagement(channelId) {
               };
               v1 = 1;
               v3 = 1;
-              const obj2 = { value: HTTP.get(obj1), done: false };
-              return obj2;
+              const obj5 = { value: HTTP.get(obj4), done: false };
+              return obj5;
             }
           } else if (arg0 === 1) {
             v3 = 3;
             throw value;
           } else if (arg0 === 2) {
             v3 = 3;
-            obj = { value, done: true };
+            let obj = { value, done: true };
             return obj;
           } else {
             const body = value.body;
@@ -127,19 +127,19 @@ function GroupDMInviteManagement(channelId) {
   if (tmp3[0]) {
     let tmp14 = jsx(channelId(7142).SceneLoadingIndicator, {});
   } else if (0 === first.length) {
-    let obj = { lightSource: tmp4(11080), darkSource: tmp4(11081), title: null, body: null };
+    let obj2 = { lightSource: tmp4(11081), darkSource: tmp4(11082), title: null, body: null };
     const intl = channelId(1114).intl;
-    obj.title = intl.string(channelId(1114).t["+nLJkZ"]);
+    obj2.title = intl.string(channelId(1114).t["+nLJkZ"]);
     const intl2 = channelId(1114).intl;
-    obj.body = intl2.string(channelId(1114).t.F53CAc);
-    tmp14 = jsx(channelId(1178).EmptyState, {
-      lightSource: tmp4(11080),
-      darkSource: tmp4(11081),
+    obj2.body = intl2.string(channelId(1114).t.F53CAc);
+    tmp14 = jsx(channelId(1176).EmptyState, {
+      lightSource: tmp4(11081),
+      darkSource: tmp4(11082),
       title: null,
       body: null,
     });
   } else {
-    obj = {
+    let obj = {
       style: tmp.list,
       data: memo,
       keyExtractor: callback,
@@ -176,16 +176,16 @@ export default noop.memo(function GroupDMInviteManagementScreen(channelId) {
   const onClose = channelId.onClose;
   const items = [channelId, onClose];
   const memo = noop.useMemo(() => {
-    let obj = {};
-    obj = { title: null, headerLeft: null, render: null, impressionName: null };
+    const obj = {};
+    const obj2 = { title: null, headerLeft: null, render: null, impressionName: null };
     const intl = util.intl;
-    obj.title = intl.string(util.t.OQ9MKu);
-    obj.headerLeft = NavigatorHeader.getHeaderCloseButton(onClose);
-    obj.render = function render() {
+    obj2.title = intl.string(util.t.OQ9MKu);
+    obj2.headerLeft = NavigatorHeader.getHeaderCloseButton(onClose);
+    obj2.render = function render() {
       return <GroupDMInviteManagement channelId={channelId} />;
     };
-    obj.impressionName = discord_common_AnalyticsUtils.ImpressionNames.GDM_SETTINGS_INVITES;
-    obj[constants.INSTANT_INVITES_MANAGEMENT] = obj;
+    obj2.impressionName = discord_common_AnalyticsUtils.ImpressionNames.GDM_SETTINGS_INVITES;
+    obj[constants.INSTANT_INVITES_MANAGEMENT] = obj2;
     return obj;
   }, items);
   return jsx(channelId(7103).Navigator, { screens: memo, initialRouteName: constants.INSTANT_INVITES_MANAGEMENT });

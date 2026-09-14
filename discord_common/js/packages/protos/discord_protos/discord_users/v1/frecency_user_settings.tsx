@@ -1,11 +1,11 @@
 // discord_common/js/packages/protos/discord_protos/discord_users/v1/frecency_user_settings.tsx
-import _mod1188 from "../../../../../../../_runtime/metro/01188__.js";
+import _mod1186 from "../../../../../../../_runtime/metro/01186__.js";
 import user_settings_shared from "user_settings_shared.tsx";
 import _slicedToArray from "../../../../../../../_runtime/metro/00032__.js";
 
 require = fn;
-let GIFType = { NONE: 0, [0]: "NONE", IMAGE: 1, [1]: "IMAGE", VIDEO: 2, [2]: "VIDEO" };
-const MessageType = fn(1188).MessageType;
+const GIFType = { NONE: 0, [0]: "NONE", IMAGE: 1, [1]: "IMAGE", VIDEO: 2, [2]: "VIDEO" };
+const MessageType = fn(1186).MessageType;
 class FrecencyUserSettings$Type extends MessageType {
   constructor() {
     obj = {
@@ -31,7 +31,7 @@ class FrecencyUserSettings$Type extends MessageType {
       name: "favorite_stickers",
       kind: "message",
       T() {
-        return object1;
+        return object11;
       },
     };
     items[3] = {
@@ -39,7 +39,7 @@ class FrecencyUserSettings$Type extends MessageType {
       name: "sticker_frecency",
       kind: "message",
       T() {
-        return object2;
+        return object12;
       },
     };
     items[4] = {
@@ -47,7 +47,7 @@ class FrecencyUserSettings$Type extends MessageType {
       name: "favorite_emojis",
       kind: "message",
       T() {
-        return object3;
+        return object13;
       },
     };
     items[5] = {
@@ -55,7 +55,7 @@ class FrecencyUserSettings$Type extends MessageType {
       name: "emoji_frecency",
       kind: "message",
       T() {
-        return object4;
+        return object14;
       },
     };
     items[6] = {
@@ -63,7 +63,7 @@ class FrecencyUserSettings$Type extends MessageType {
       name: "application_command_frecency",
       kind: "message",
       T() {
-        return object5;
+        return object15;
       },
     };
     items[7] = {
@@ -71,7 +71,7 @@ class FrecencyUserSettings$Type extends MessageType {
       name: "favorite_soundboard_sounds",
       kind: "message",
       T() {
-        return object7;
+        return object17;
       },
     };
     items[8] = {
@@ -87,7 +87,7 @@ class FrecencyUserSettings$Type extends MessageType {
       name: "heard_sound_frecency",
       kind: "message",
       T() {
-        return object8;
+        return object18;
       },
     };
     items[10] = {
@@ -98,35 +98,34 @@ class FrecencyUserSettings$Type extends MessageType {
         return heardSoundFrecencyType;
       },
     };
-    obj = { no: 12, name: "guild_and_channel_frecency", kind: "message", T: null };
+    obj1 = { no: 12, name: "guild_and_channel_frecency", kind: "message", T: null };
     class T {
       constructor() {
         return closure_1_16;
       }
     }
-    obj.T = T;
-    items[11] = obj;
+    obj1.T = T;
+    items[11] = obj1;
     items[12] = {
       no: 13,
       name: "emoji_reaction_frecency",
       kind: "message",
       T() {
-        return object4;
+        return object14;
       },
     };
-    tmp = new tmp("discord_protos.discord_users.v1.FrecencyUserSettings", items, T);
-    return tmp;
+    tmp1 = new tmp("discord_protos.discord_users.v1.FrecencyUserSettings", items, T);
+    return tmp1;
   }
 }
 const prototype = FrecencyUserSettings$Type.prototype;
 prototype["create"] = function create(arr) {
-  let obj = {};
+  const obj = {};
   const _Object = Object;
-  obj = { enumerable: false, value: this };
-  _Object.defineProperty(obj, _mod1188.MESSAGE_TYPE, obj);
+  _Object.defineProperty(obj, _mod1186.MESSAGE_TYPE, { enumerable: false, value: this });
   if (undefined !== arr) {
-    const result = _mod1188.reflectionMergePartial(this, obj, arr);
-    const tmpResult = _mod1188;
+    const result = _mod1186.reflectionMergePartial(this, obj, arr);
+    const tmpResult = _mod1186;
   }
   return obj;
 };
@@ -137,7 +136,7 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, arg2, a
     obj = self.create();
   }
   if (pos.pos < pos.pos + arg1) {
-    [r10019, r10020] = _slicedToArray(pos.tag(), 2);
+    [r10019, r10020] = pos.tag();
     const tmp3 = _slicedToArray(pos.tag(), 2);
   }
   return obj;
@@ -145,202 +144,202 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, arg2, a
 prototype["internalBinaryWrite"] = function internalBinaryWrite(versions, tag, writeUnknownFields) {
   if (versions.versions) {
     const Versions = user_settings_shared.Versions;
-    const tagResult = tag.tag(1, _mod1188.WireType.LengthDelimited);
+    const tagResult = tag.tag(1, _mod1186.WireType.LengthDelimited);
     const joined = Versions.internalBinaryWrite(
       versions.versions,
-      tag.tag(1, _mod1188.WireType.LengthDelimited).fork(),
+      tag.tag(1, _mod1186.WireType.LengthDelimited).fork(),
       writeUnknownFields,
     ).join();
     const internalBinaryWriteResult = Versions.internalBinaryWrite(
       versions.versions,
-      tag.tag(1, _mod1188.WireType.LengthDelimited).fork(),
+      tag.tag(1, _mod1186.WireType.LengthDelimited).fork(),
       writeUnknownFields,
     );
   }
   if (versions.favoriteGifs) {
-    const tagResult1 = tag.tag(2, _mod1188.WireType.LengthDelimited);
+    const tagResult1 = tag.tag(2, _mod1186.WireType.LengthDelimited);
     const joined1 = object
       .internalBinaryWrite(
         versions.favoriteGifs,
-        tag.tag(2, _mod1188.WireType.LengthDelimited).fork(),
+        tag.tag(2, _mod1186.WireType.LengthDelimited).fork(),
         writeUnknownFields,
       )
       .join();
     const internalBinaryWriteResult1 = object.internalBinaryWrite(
       versions.favoriteGifs,
-      tag.tag(2, _mod1188.WireType.LengthDelimited).fork(),
+      tag.tag(2, _mod1186.WireType.LengthDelimited).fork(),
       writeUnknownFields,
     );
   }
   if (versions.favoriteStickers) {
-    const tagResult2 = tag.tag(3, _mod1188.WireType.LengthDelimited);
-    const joined2 = object1
+    const tagResult2 = tag.tag(3, _mod1186.WireType.LengthDelimited);
+    const joined2 = object11
       .internalBinaryWrite(
         versions.favoriteStickers,
-        tag.tag(3, _mod1188.WireType.LengthDelimited).fork(),
+        tag.tag(3, _mod1186.WireType.LengthDelimited).fork(),
         writeUnknownFields,
       )
       .join();
-    const internalBinaryWriteResult2 = object1.internalBinaryWrite(
+    const internalBinaryWriteResult2 = object11.internalBinaryWrite(
       versions.favoriteStickers,
-      tag.tag(3, _mod1188.WireType.LengthDelimited).fork(),
+      tag.tag(3, _mod1186.WireType.LengthDelimited).fork(),
       writeUnknownFields,
     );
   }
   if (versions.stickerFrecency) {
-    const tagResult3 = tag.tag(4, _mod1188.WireType.LengthDelimited);
-    const joined3 = object2
+    const tagResult3 = tag.tag(4, _mod1186.WireType.LengthDelimited);
+    const joined3 = object12
       .internalBinaryWrite(
         versions.stickerFrecency,
-        tag.tag(4, _mod1188.WireType.LengthDelimited).fork(),
+        tag.tag(4, _mod1186.WireType.LengthDelimited).fork(),
         writeUnknownFields,
       )
       .join();
-    const internalBinaryWriteResult3 = object2.internalBinaryWrite(
+    const internalBinaryWriteResult3 = object12.internalBinaryWrite(
       versions.stickerFrecency,
-      tag.tag(4, _mod1188.WireType.LengthDelimited).fork(),
+      tag.tag(4, _mod1186.WireType.LengthDelimited).fork(),
       writeUnknownFields,
     );
   }
   if (versions.favoriteEmojis) {
-    const tagResult4 = tag.tag(5, _mod1188.WireType.LengthDelimited);
-    const joined4 = object3
+    const tagResult4 = tag.tag(5, _mod1186.WireType.LengthDelimited);
+    const joined4 = object13
       .internalBinaryWrite(
         versions.favoriteEmojis,
-        tag.tag(5, _mod1188.WireType.LengthDelimited).fork(),
+        tag.tag(5, _mod1186.WireType.LengthDelimited).fork(),
         writeUnknownFields,
       )
       .join();
-    const internalBinaryWriteResult4 = object3.internalBinaryWrite(
+    const internalBinaryWriteResult4 = object13.internalBinaryWrite(
       versions.favoriteEmojis,
-      tag.tag(5, _mod1188.WireType.LengthDelimited).fork(),
+      tag.tag(5, _mod1186.WireType.LengthDelimited).fork(),
       writeUnknownFields,
     );
   }
   if (versions.emojiFrecency) {
-    const tagResult5 = tag.tag(6, _mod1188.WireType.LengthDelimited);
-    const joined5 = object4
+    const tagResult5 = tag.tag(6, _mod1186.WireType.LengthDelimited);
+    const joined5 = object14
       .internalBinaryWrite(
         versions.emojiFrecency,
-        tag.tag(6, _mod1188.WireType.LengthDelimited).fork(),
+        tag.tag(6, _mod1186.WireType.LengthDelimited).fork(),
         writeUnknownFields,
       )
       .join();
-    const internalBinaryWriteResult5 = object4.internalBinaryWrite(
+    const internalBinaryWriteResult5 = object14.internalBinaryWrite(
       versions.emojiFrecency,
-      tag.tag(6, _mod1188.WireType.LengthDelimited).fork(),
+      tag.tag(6, _mod1186.WireType.LengthDelimited).fork(),
       writeUnknownFields,
     );
   }
   if (versions.applicationCommandFrecency) {
-    const tagResult6 = tag.tag(7, _mod1188.WireType.LengthDelimited);
-    const joined6 = object5
+    const tagResult6 = tag.tag(7, _mod1186.WireType.LengthDelimited);
+    const joined6 = object15
       .internalBinaryWrite(
         versions.applicationCommandFrecency,
-        tag.tag(7, _mod1188.WireType.LengthDelimited).fork(),
+        tag.tag(7, _mod1186.WireType.LengthDelimited).fork(),
         writeUnknownFields,
       )
       .join();
-    const internalBinaryWriteResult6 = object5.internalBinaryWrite(
+    const internalBinaryWriteResult6 = object15.internalBinaryWrite(
       versions.applicationCommandFrecency,
-      tag.tag(7, _mod1188.WireType.LengthDelimited).fork(),
+      tag.tag(7, _mod1186.WireType.LengthDelimited).fork(),
       writeUnknownFields,
     );
   }
   if (versions.favoriteSoundboardSounds) {
-    const tagResult7 = tag.tag(8, _mod1188.WireType.LengthDelimited);
-    const joined7 = object7
+    const tagResult7 = tag.tag(8, _mod1186.WireType.LengthDelimited);
+    const joined7 = object17
       .internalBinaryWrite(
         versions.favoriteSoundboardSounds,
-        tag.tag(8, _mod1188.WireType.LengthDelimited).fork(),
+        tag.tag(8, _mod1186.WireType.LengthDelimited).fork(),
         writeUnknownFields,
       )
       .join();
-    const internalBinaryWriteResult7 = object7.internalBinaryWrite(
+    const internalBinaryWriteResult7 = object17.internalBinaryWrite(
       versions.favoriteSoundboardSounds,
-      tag.tag(8, _mod1188.WireType.LengthDelimited).fork(),
+      tag.tag(8, _mod1186.WireType.LengthDelimited).fork(),
       writeUnknownFields,
     );
   }
   if (versions.applicationFrecency) {
-    const tagResult8 = tag.tag(9, _mod1188.WireType.LengthDelimited);
+    const tagResult8 = tag.tag(9, _mod1186.WireType.LengthDelimited);
     const joined8 = playedSoundFrecencyType
       .internalBinaryWrite(
         versions.applicationFrecency,
-        tag.tag(9, _mod1188.WireType.LengthDelimited).fork(),
+        tag.tag(9, _mod1186.WireType.LengthDelimited).fork(),
         writeUnknownFields,
       )
       .join();
     const internalBinaryWriteResult8 = playedSoundFrecencyType.internalBinaryWrite(
       versions.applicationFrecency,
-      tag.tag(9, _mod1188.WireType.LengthDelimited).fork(),
+      tag.tag(9, _mod1186.WireType.LengthDelimited).fork(),
       writeUnknownFields,
     );
   }
   if (versions.heardSoundFrecency) {
-    const tagResult9 = tag.tag(10, _mod1188.WireType.LengthDelimited);
-    const joined9 = object8
+    const tagResult9 = tag.tag(10, _mod1186.WireType.LengthDelimited);
+    const joined9 = object18
       .internalBinaryWrite(
         versions.heardSoundFrecency,
-        tag.tag(10, _mod1188.WireType.LengthDelimited).fork(),
+        tag.tag(10, _mod1186.WireType.LengthDelimited).fork(),
         writeUnknownFields,
       )
       .join();
-    const internalBinaryWriteResult9 = object8.internalBinaryWrite(
+    const internalBinaryWriteResult9 = object18.internalBinaryWrite(
       versions.heardSoundFrecency,
-      tag.tag(10, _mod1188.WireType.LengthDelimited).fork(),
+      tag.tag(10, _mod1186.WireType.LengthDelimited).fork(),
       writeUnknownFields,
     );
   }
   if (versions.playedSoundFrecency) {
-    const tagResult10 = tag.tag(11, _mod1188.WireType.LengthDelimited);
+    const tagResult10 = tag.tag(11, _mod1186.WireType.LengthDelimited);
     const joined10 = heardSoundFrecencyType
       .internalBinaryWrite(
         versions.playedSoundFrecency,
-        tag.tag(11, _mod1188.WireType.LengthDelimited).fork(),
+        tag.tag(11, _mod1186.WireType.LengthDelimited).fork(),
         writeUnknownFields,
       )
       .join();
     const internalBinaryWriteResult10 = heardSoundFrecencyType.internalBinaryWrite(
       versions.playedSoundFrecency,
-      tag.tag(11, _mod1188.WireType.LengthDelimited).fork(),
+      tag.tag(11, _mod1186.WireType.LengthDelimited).fork(),
       writeUnknownFields,
     );
   }
   if (versions.guildAndChannelFrecency) {
-    const tagResult11 = tag.tag(12, _mod1188.WireType.LengthDelimited);
+    const tagResult11 = tag.tag(12, _mod1186.WireType.LengthDelimited);
     const joined11 = closure_16
       .internalBinaryWrite(
         versions.guildAndChannelFrecency,
-        tag.tag(12, _mod1188.WireType.LengthDelimited).fork(),
+        tag.tag(12, _mod1186.WireType.LengthDelimited).fork(),
         writeUnknownFields,
       )
       .join();
     const internalBinaryWriteResult11 = closure_16.internalBinaryWrite(
       versions.guildAndChannelFrecency,
-      tag.tag(12, _mod1188.WireType.LengthDelimited).fork(),
+      tag.tag(12, _mod1186.WireType.LengthDelimited).fork(),
       writeUnknownFields,
     );
   }
   if (versions.emojiReactionFrecency) {
-    const tagResult12 = tag.tag(13, _mod1188.WireType.LengthDelimited);
-    const joined12 = object4
+    const tagResult12 = tag.tag(13, _mod1186.WireType.LengthDelimited);
+    const joined12 = object14
       .internalBinaryWrite(
         versions.emojiReactionFrecency,
-        tag.tag(13, _mod1188.WireType.LengthDelimited).fork(),
+        tag.tag(13, _mod1186.WireType.LengthDelimited).fork(),
         writeUnknownFields,
       )
       .join();
-    const internalBinaryWriteResult12 = object4.internalBinaryWrite(
+    const internalBinaryWriteResult12 = object14.internalBinaryWrite(
       versions.emojiReactionFrecency,
-      tag.tag(13, _mod1188.WireType.LengthDelimited).fork(),
+      tag.tag(13, _mod1186.WireType.LengthDelimited).fork(),
       writeUnknownFields,
     );
   }
   let onWrite = writeUnknownFields.writeUnknownFields;
   if (false !== onWrite) {
     if (1 == onWrite) {
-      onWrite = _mod1188.UnknownFieldHandler.onWrite;
+      onWrite = _mod1186.UnknownFieldHandler.onWrite;
     }
     const self = this;
     onWrite(this.typeName, versions, tag);
@@ -348,7 +347,7 @@ prototype["internalBinaryWrite"] = function internalBinaryWrite(versions, tag, w
   return tag;
 };
 const frecencyUserSettingsType = new FrecencyUserSettings$Type();
-const MessageType2 = fn(1188).MessageType;
+const MessageType2 = fn(1186).MessageType;
 class FavoriteGIFs$Type extends MessageType2 {
   constructor() {
     obj = {
@@ -359,26 +358,25 @@ class FavoriteGIFs$Type extends MessageType2 {
       V: {
         kind: "message",
         T() {
-          return object;
+          return object10;
         },
       },
     };
     items = [,];
     items[0] = obj;
     items[1] = { no: 2, name: "hide_tooltip", kind: "scalar", T: 8 };
-    tmp = new tmp("discord_protos.discord_users.v1.FavoriteGIFs", items, new.target);
-    return tmp;
+    tmp1 = new tmp("discord_protos.discord_users.v1.FavoriteGIFs", items, new.target);
+    return tmp1;
   }
 }
 const prototype2 = FavoriteGIFs$Type.prototype;
 prototype2["create"] = function create(arr) {
-  let obj = { gifs: {}, hideTooltip: false };
+  const obj = { gifs: {}, hideTooltip: false };
   const _Object = Object;
-  obj = { enumerable: false, value: this };
-  _Object.defineProperty(obj, _mod1188.MESSAGE_TYPE, obj);
+  _Object.defineProperty(obj, _mod1186.MESSAGE_TYPE, { enumerable: false, value: this });
   if (undefined !== arr) {
-    const result = _mod1188.reflectionMergePartial(this, obj, arr);
-    const tmpResult = _mod1188;
+    const result = _mod1186.reflectionMergePartial(this, obj, arr);
+    const tmpResult = _mod1186;
   }
   return obj;
 };
@@ -414,7 +412,7 @@ prototype2["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUn
           let skipResult = pos.skip(tmp6);
           if (false !== onRead) {
             if (true === onRead) {
-              onRead = _mod1188.UnknownFieldHandler.onRead;
+              onRead = _mod1186.UnknownFieldHandler.onRead;
             }
             let onReadResult = onRead(self.typeName, obj, tmp5, tmp6, skipResult);
           }
@@ -439,7 +437,7 @@ prototype2["binaryReadMap1"] = function binaryReadMap1(arg0, pos, arg2) {
       } else if (2 !== tmp7) {
         break;
       } else {
-        internalBinaryReadResult = object.internalBinaryRead(pos, pos.uint32(), arg2);
+        internalBinaryReadResult = object10.internalBinaryRead(pos, pos.uint32(), arg2);
       }
       tmp2 = internalBinaryReadResult;
       tmp3 = stringResult;
@@ -454,7 +452,7 @@ prototype2["binaryReadMap1"] = function binaryReadMap1(arg0, pos, arg2) {
     str = "";
   }
   if (obj == null) {
-    obj = object.create();
+    obj = object10.create();
   }
   arg0[str] = obj;
 };
@@ -463,45 +461,47 @@ prototype2["internalBinaryWrite"] = function internalBinaryWrite(gifs, tag, writ
   const iter = keys[Symbol.iterator]();
   const nextResult = iter.next();
   while (iter !== undefined) {
-    let tagResult = tag.tag(1, _mod1188.WireType.LengthDelimited);
+    let tagResult = tag.tag(1, _mod1186.WireType.LengthDelimited);
     let forkResult = tagResult.fork();
-    let tagResult1 = forkResult.tag(1, _mod1188.WireType.LengthDelimited);
+    let tagResult1 = forkResult.tag(1, _mod1186.WireType.LengthDelimited);
     let stringResult = tagResult1.string(nextResult);
-    let tagResult2 = tag.tag(2, _mod1188.WireType.LengthDelimited);
+    let tagResult2 = tag.tag(2, _mod1186.WireType.LengthDelimited);
     let forkResult1 = tagResult2.fork();
-    let internalBinaryWriteResult = object.internalBinaryWrite(gifs.gifs[nextResult], tag, writeUnknownFields);
+    let internalBinaryWriteResult = object10.internalBinaryWrite(gifs.gifs[nextResult], tag, writeUnknownFields);
     let joined = tag.join();
     let joined1 = joined.join();
     continue;
   }
   if (false !== gifs.hideTooltip) {
-    tag.tag(2, _mod1188.WireType.Varint).bool(gifs.hideTooltip);
-    const tagResult3 = tag.tag(2, _mod1188.WireType.Varint);
+    tag.tag(2, _mod1186.WireType.Varint).bool(gifs.hideTooltip);
+    const tagResult3 = tag.tag(2, _mod1186.WireType.Varint);
   }
   let onWrite = writeUnknownFields.writeUnknownFields;
   if (false !== onWrite) {
     if (1 == onWrite) {
-      onWrite = _mod1188.UnknownFieldHandler.onWrite;
+      onWrite = _mod1186.UnknownFieldHandler.onWrite;
     }
     const self = this;
     onWrite(this.typeName, gifs, tag);
   }
   return tag;
 };
-GIFType = {
-  no: 1,
-  name: "gifs",
-  kind: "map",
-  K: 9,
-  V: {
-    kind: "message",
-    T() {
-      return object;
+let items = [
+  {
+    no: 1,
+    name: "gifs",
+    kind: "map",
+    K: 9,
+    V: {
+      kind: "message",
+      T() {
+        return object10;
+      },
     },
   },
-};
-let items = [GIFType, { no: 2, name: "hide_tooltip", kind: "scalar", T: 8 }];
-let object = new Object(
+  { no: 2, name: "hide_tooltip", kind: "scalar", T: 8 },
+];
+const object = new Object(
   "discord_protos.discord_users.v1.FavoriteGIFs",
   items,
   tmp4,
@@ -509,7 +509,7 @@ let object = new Object(
   "create",
   "internalBinaryRead",
 );
-const MessageType3 = fn(1188).MessageType;
+const MessageType3 = fn(1186).MessageType;
 class FavoriteGIF$Type extends MessageType3 {
   constructor() {
     obj = {
@@ -527,18 +527,18 @@ class FavoriteGIF$Type extends MessageType3 {
     items[2] = { no: 3, name: "width", kind: "scalar", T: 13 };
     items[3] = { no: 4, name: "height", kind: "scalar", T: 13 };
     items[4] = { no: 5, name: "order", kind: "scalar", T: 13 };
-    tmp = new tmp("discord_protos.discord_users.v1.FavoriteGIF", items, new.target);
-    return tmp;
+    tmp1 = new tmp("discord_protos.discord_users.v1.FavoriteGIF", items, new.target);
+    return tmp1;
   }
 }
 const prototype3 = FavoriteGIF$Type.prototype;
 prototype3["create"] = function create(arr) {
   const size = { format: 0, src: "", width: 0, height: 0, order: 0 };
   const _Object = Object;
-  _Object.defineProperty(size, _mod1188.MESSAGE_TYPE, { enumerable: false, value: this });
+  _Object.defineProperty(size, _mod1186.MESSAGE_TYPE, { enumerable: false, value: this });
   if (undefined !== arr) {
-    const result = _mod1188.reflectionMergePartial(this, size, arr);
-    const tmpResult = _mod1188;
+    const result = _mod1186.reflectionMergePartial(this, size, arr);
+    const tmpResult = _mod1186;
   }
   return size;
 };
@@ -580,7 +580,7 @@ prototype3["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUn
           let skipResult = pos.skip(tmp6);
           if (false !== onRead) {
             if (true === onRead) {
-              onRead = _mod1188.UnknownFieldHandler.onRead;
+              onRead = _mod1186.UnknownFieldHandler.onRead;
             }
             let onReadResult = onRead(self.typeName, obj, tmp5, tmp6, skipResult);
           }
@@ -592,70 +592,75 @@ prototype3["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUn
 };
 prototype3["internalBinaryWrite"] = function internalBinaryWrite(format, tag, writeUnknownFields) {
   if (0 !== format.format) {
-    tag.tag(1, _mod1188.WireType.Varint).int32(format.format);
-    const tagResult = tag.tag(1, _mod1188.WireType.Varint);
+    tag.tag(1, _mod1186.WireType.Varint).int32(format.format);
+    const tagResult = tag.tag(1, _mod1186.WireType.Varint);
   }
   if ("" !== format.src) {
-    tag.tag(2, _mod1188.WireType.LengthDelimited).string(format.src);
-    const tagResult1 = tag.tag(2, _mod1188.WireType.LengthDelimited);
+    tag.tag(2, _mod1186.WireType.LengthDelimited).string(format.src);
+    const tagResult1 = tag.tag(2, _mod1186.WireType.LengthDelimited);
   }
   if (0 !== format.width) {
-    tag.tag(3, _mod1188.WireType.Varint).uint32(format.width);
-    const tagResult2 = tag.tag(3, _mod1188.WireType.Varint);
+    tag.tag(3, _mod1186.WireType.Varint).uint32(format.width);
+    const tagResult2 = tag.tag(3, _mod1186.WireType.Varint);
   }
   if (0 !== format.height) {
-    tag.tag(4, _mod1188.WireType.Varint).uint32(format.height);
-    const tagResult3 = tag.tag(4, _mod1188.WireType.Varint);
+    tag.tag(4, _mod1186.WireType.Varint).uint32(format.height);
+    const tagResult3 = tag.tag(4, _mod1186.WireType.Varint);
   }
   if (0 !== format.order) {
-    tag.tag(5, _mod1188.WireType.Varint).uint32(format.order);
-    const tagResult4 = tag.tag(5, _mod1188.WireType.Varint);
+    tag.tag(5, _mod1186.WireType.Varint).uint32(format.order);
+    const tagResult4 = tag.tag(5, _mod1186.WireType.Varint);
   }
   let onWrite = writeUnknownFields.writeUnknownFields;
   if (false !== onWrite) {
     if (1 == onWrite) {
-      onWrite = _mod1188.UnknownFieldHandler.onWrite;
+      onWrite = _mod1186.UnknownFieldHandler.onWrite;
     }
     const self = this;
     onWrite(this.typeName, format, tag);
   }
   return tag;
 };
-GIFType = {
-  no: 1,
-  name: "format",
-  kind: "enum",
-  T() {
-    const items = ["discord_protos.discord_users.v1.GIFType", GIFType];
-    return items;
-  },
-};
 const items1 = [
-  GIFType,
+  {
+    no: 1,
+    name: "format",
+    kind: "enum",
+    T() {
+      const items = ["discord_protos.discord_users.v1.GIFType", GIFType];
+      return items;
+    },
+  },
   { no: 2, name: "src", kind: "scalar", T: 9 },
   { no: 3, name: "width", kind: "scalar", T: 13 },
   { no: 4, name: "height", kind: "scalar", T: 13 },
   { no: 5, name: "order", kind: "scalar", T: 13 },
 ];
-object = new Object("discord_protos.discord_users.v1.FavoriteGIF", items1, tmp4, tmp3, "create", "internalBinaryRead");
-const MessageType4 = fn(1188).MessageType;
+const object10 = new Object(
+  "discord_protos.discord_users.v1.FavoriteGIF",
+  items1,
+  tmp4,
+  tmp3,
+  "create",
+  "internalBinaryRead",
+);
+const MessageType4 = fn(1186).MessageType;
 class FavoriteStickers$Type extends MessageType4 {
   constructor() {
     items = [];
     items[0] = { no: 1, name: "sticker_ids", kind: "scalar", repeat: 1, T: 6 };
-    tmp = new tmp("discord_protos.discord_users.v1.FavoriteStickers", items, new.target);
-    return tmp;
+    tmp1 = new tmp("discord_protos.discord_users.v1.FavoriteStickers", items, new.target);
+    return tmp1;
   }
 }
 const prototype4 = FavoriteStickers$Type.prototype;
 prototype4["create"] = function create(arr) {
-  let obj = { stickerIds: [] };
+  const obj = { stickerIds: [] };
   const _Object = Object;
-  obj = { enumerable: false, value: this };
-  _Object.defineProperty(obj, _mod1188.MESSAGE_TYPE, obj);
+  _Object.defineProperty(obj, _mod1186.MESSAGE_TYPE, { enumerable: false, value: this });
   if (undefined !== arr) {
-    const result = _mod1188.reflectionMergePartial(this, obj, arr);
-    const tmpResult = _mod1188;
+    const result = _mod1186.reflectionMergePartial(this, obj, arr);
+    const tmpResult = _mod1186;
   }
   return obj;
 };
@@ -671,7 +676,7 @@ prototype4["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUn
       let tmp4 = _slicedToArray(pos.tag(), 2);
       [tmp5, tmp6] = tmp4;
       if (1 === tmp5) {
-        if (tmp6 === _mod1188.WireType.LengthDelimited) {
+        if (tmp6 === _mod1186.WireType.LengthDelimited) {
           let sum1 = pos.int32() + pos.pos;
           if (pos.pos < sum1) {
             do {
@@ -684,7 +689,7 @@ prototype4["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUn
         } else {
           let stickerIds1 = obj.stickerIds;
           let str4 = pos.fixed64();
-          arr = stickerIds1.push(str4.toString());
+          let arr2 = stickerIds1.push(str4.toString());
         }
       } else {
         let onRead = readUnknownField.readUnknownField;
@@ -703,7 +708,7 @@ prototype4["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUn
           let skipResult = pos.skip(tmp6);
           if (false !== onRead) {
             if (true === onRead) {
-              onRead = _mod1188.UnknownFieldHandler.onRead;
+              onRead = _mod1186.UnknownFieldHandler.onRead;
             }
             let onReadResult = onRead(self.typeName, obj, tmp5, tmp6, skipResult);
           }
@@ -716,7 +721,7 @@ prototype4["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUn
 prototype4["internalBinaryWrite"] = function internalBinaryWrite(stickerIds, tag, writeUnknownFields) {
   let length;
   if (stickerIds.stickerIds.length) {
-    tag.tag(1, _mod1188.WireType.LengthDelimited).fork();
+    tag.tag(1, _mod1186.WireType.LengthDelimited).fork();
     let num2 = 0;
     if (0 < stickerIds.stickerIds.length) {
       do {
@@ -726,12 +731,12 @@ prototype4["internalBinaryWrite"] = function internalBinaryWrite(stickerIds, tag
       } while (num2 < length);
     }
     const joined = tag.join();
-    const tagResult = tag.tag(1, _mod1188.WireType.LengthDelimited);
+    const tagResult = tag.tag(1, _mod1186.WireType.LengthDelimited);
   }
   let onWrite = writeUnknownFields.writeUnknownFields;
   if (false !== onWrite) {
     if (1 == onWrite) {
-      onWrite = _mod1188.UnknownFieldHandler.onWrite;
+      onWrite = _mod1186.UnknownFieldHandler.onWrite;
     }
     const self = this;
     onWrite(this.typeName, stickerIds, tag);
@@ -739,7 +744,7 @@ prototype4["internalBinaryWrite"] = function internalBinaryWrite(stickerIds, tag
   return tag;
 };
 const items2 = [{ no: 1, name: "sticker_ids", kind: "scalar", repeat: 1, T: 6 }];
-const object1 = new Object(
+const object11 = new Object(
   "discord_protos.discord_users.v1.FavoriteStickers",
   items2,
   tmp4,
@@ -747,7 +752,7 @@ const object1 = new Object(
   "create",
   "internalBinaryRead",
 );
-const MessageType5 = fn(1188).MessageType;
+const MessageType5 = fn(1186).MessageType;
 class StickerFrecency$Type extends MessageType5 {
   constructor() {
     obj = {
@@ -758,25 +763,24 @@ class StickerFrecency$Type extends MessageType5 {
       V: {
         kind: "message",
         T() {
-          return object6;
+          return object16;
         },
       },
     };
     items = [];
     items[0] = obj;
-    tmp = new tmp("discord_protos.discord_users.v1.StickerFrecency", items, new.target);
-    return tmp;
+    tmp1 = new tmp("discord_protos.discord_users.v1.StickerFrecency", items, new.target);
+    return tmp1;
   }
 }
 const prototype5 = StickerFrecency$Type.prototype;
 prototype5["create"] = function create(arr) {
-  let obj = { stickers: {} };
+  const obj = { stickers: {} };
   const _Object = Object;
-  obj = { enumerable: false, value: this };
-  _Object.defineProperty(obj, _mod1188.MESSAGE_TYPE, obj);
+  _Object.defineProperty(obj, _mod1186.MESSAGE_TYPE, { enumerable: false, value: this });
   if (undefined !== arr) {
-    const result = _mod1188.reflectionMergePartial(this, obj, arr);
-    const tmpResult = _mod1188;
+    const result = _mod1186.reflectionMergePartial(this, obj, arr);
+    const tmpResult = _mod1186;
   }
   return obj;
 };
@@ -810,7 +814,7 @@ prototype5["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUn
           let skipResult = pos.skip(tmp6);
           if (false !== onRead) {
             if (true === onRead) {
-              onRead = _mod1188.UnknownFieldHandler.onRead;
+              onRead = _mod1186.UnknownFieldHandler.onRead;
             }
             let onReadResult = onRead(self.typeName, obj, tmp5, tmp6, skipResult);
           }
@@ -828,19 +832,20 @@ prototype5["binaryReadMap1"] = function binaryReadMap1(arg0, pos, arg2) {
     while (true) {
       let tmp6 = _slicedToArray(pos.tag(), 2);
       [tmp7, r10020] = tmp6;
-      str = tmp3;
+      let str1 = tmp3;
       if (1 === tmp7) {
         let str3 = pos.fixed64();
-        str = str3.toString();
+        str1 = str3.toString();
         let internalBinaryReadResult = tmp2;
       } else if (2 !== tmp7) {
         break;
       } else {
-        internalBinaryReadResult = object6.internalBinaryRead(pos, pos.uint32(), arg2);
+        internalBinaryReadResult = object16.internalBinaryRead(pos, pos.uint32(), arg2);
       }
       tmp2 = internalBinaryReadResult;
-      tmp3 = str;
+      tmp3 = str1;
       obj = internalBinaryReadResult;
+      str = str1;
     }
     const _globalThis = globalThis;
     const error = new Error(
@@ -852,7 +857,7 @@ prototype5["binaryReadMap1"] = function binaryReadMap1(arg0, pos, arg2) {
     str = "0";
   }
   if (obj == null) {
-    obj = object6.create();
+    obj = object16.create();
   }
   arg0[str] = obj;
 };
@@ -861,13 +866,17 @@ prototype5["internalBinaryWrite"] = function internalBinaryWrite(stickers, tag, 
   const iter = keys[Symbol.iterator]();
   const nextResult = iter.next();
   while (iter !== undefined) {
-    let tagResult = tag.tag(1, _mod1188.WireType.LengthDelimited);
+    let tagResult = tag.tag(1, _mod1186.WireType.LengthDelimited);
     let forkResult = tagResult.fork();
-    let tagResult1 = forkResult.tag(1, _mod1188.WireType.Bit64);
+    let tagResult1 = forkResult.tag(1, _mod1186.WireType.Bit64);
     let fixed64Result = tagResult1.fixed64(nextResult);
-    let tagResult2 = tag.tag(2, _mod1188.WireType.LengthDelimited);
+    let tagResult2 = tag.tag(2, _mod1186.WireType.LengthDelimited);
     let forkResult1 = tagResult2.fork();
-    let internalBinaryWriteResult = object6.internalBinaryWrite(stickers.stickers[nextResult], tag, writeUnknownFields);
+    let internalBinaryWriteResult = object16.internalBinaryWrite(
+      stickers.stickers[nextResult],
+      tag,
+      writeUnknownFields,
+    );
     let joined = tag.join();
     let joined1 = joined.join();
     continue;
@@ -875,7 +884,7 @@ prototype5["internalBinaryWrite"] = function internalBinaryWrite(stickers, tag, 
   let onWrite = writeUnknownFields.writeUnknownFields;
   if (false !== onWrite) {
     if (1 == onWrite) {
-      onWrite = _mod1188.UnknownFieldHandler.onWrite;
+      onWrite = _mod1186.UnknownFieldHandler.onWrite;
     }
     const self = this;
     onWrite(this.typeName, stickers, tag);
@@ -891,12 +900,12 @@ const items3 = [
     V: {
       kind: "message",
       T() {
-        return object6;
+        return object16;
       },
     },
   },
 ];
-const object2 = new Object(
+const object12 = new Object(
   "discord_protos.discord_users.v1.StickerFrecency",
   items3,
   tmp4,
@@ -904,24 +913,23 @@ const object2 = new Object(
   "create",
   "internalBinaryRead",
 );
-const MessageType6 = fn(1188).MessageType;
+const MessageType6 = fn(1186).MessageType;
 class FavoriteEmojis$Type extends MessageType6 {
   constructor() {
     items = [];
     items[0] = { no: 1, name: "emojis", kind: "scalar", repeat: 2, T: 9 };
-    tmp = new tmp("discord_protos.discord_users.v1.FavoriteEmojis", items, new.target);
-    return tmp;
+    tmp1 = new tmp("discord_protos.discord_users.v1.FavoriteEmojis", items, new.target);
+    return tmp1;
   }
 }
 const prototype6 = FavoriteEmojis$Type.prototype;
 prototype6["create"] = function create(arr) {
-  let obj = { emojis: [] };
+  const obj = { emojis: [] };
   const _Object = Object;
-  obj = { enumerable: false, value: this };
-  _Object.defineProperty(obj, _mod1188.MESSAGE_TYPE, obj);
+  _Object.defineProperty(obj, _mod1186.MESSAGE_TYPE, { enumerable: false, value: this });
   if (undefined !== arr) {
-    const result = _mod1188.reflectionMergePartial(this, obj, arr);
-    const tmpResult = _mod1188;
+    const result = _mod1186.reflectionMergePartial(this, obj, arr);
+    const tmpResult = _mod1186;
   }
   return obj;
 };
@@ -956,7 +964,7 @@ prototype6["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUn
           let skipResult = pos.skip(tmp6);
           if (false !== onRead) {
             if (true === onRead) {
-              onRead = _mod1188.UnknownFieldHandler.onRead;
+              onRead = _mod1186.UnknownFieldHandler.onRead;
             }
             let onReadResult = onRead(self.typeName, obj, tmp5, tmp6, skipResult);
           }
@@ -971,7 +979,7 @@ prototype6["internalBinaryWrite"] = function internalBinaryWrite(emojis, tag, wr
   let num = 0;
   if (0 < emojis.emojis.length) {
     do {
-      let tagResult = tag.tag(1, _mod1188.WireType.LengthDelimited);
+      let tagResult = tag.tag(1, _mod1186.WireType.LengthDelimited);
       let stringResult = tagResult.string(emojis.emojis[num]);
       num = num + 1;
       length = emojis.emojis.length;
@@ -980,7 +988,7 @@ prototype6["internalBinaryWrite"] = function internalBinaryWrite(emojis, tag, wr
   let onWrite = writeUnknownFields.writeUnknownFields;
   if (false !== onWrite) {
     if (1 == onWrite) {
-      onWrite = _mod1188.UnknownFieldHandler.onWrite;
+      onWrite = _mod1186.UnknownFieldHandler.onWrite;
     }
     const self = this;
     onWrite(this.typeName, emojis, tag);
@@ -988,7 +996,7 @@ prototype6["internalBinaryWrite"] = function internalBinaryWrite(emojis, tag, wr
   return tag;
 };
 const items4 = [{ no: 1, name: "emojis", kind: "scalar", repeat: 2, T: 9 }];
-const object3 = new Object(
+const object13 = new Object(
   "discord_protos.discord_users.v1.FavoriteEmojis",
   items4,
   tmp4,
@@ -996,7 +1004,7 @@ const object3 = new Object(
   "create",
   "internalBinaryRead",
 );
-const MessageType7 = fn(1188).MessageType;
+const MessageType7 = fn(1186).MessageType;
 class EmojiFrecency$Type extends MessageType7 {
   constructor() {
     obj = {
@@ -1007,25 +1015,24 @@ class EmojiFrecency$Type extends MessageType7 {
       V: {
         kind: "message",
         T() {
-          return object6;
+          return object16;
         },
       },
     };
     items = [];
     items[0] = obj;
-    tmp = new tmp("discord_protos.discord_users.v1.EmojiFrecency", items, new.target);
-    return tmp;
+    tmp1 = new tmp("discord_protos.discord_users.v1.EmojiFrecency", items, new.target);
+    return tmp1;
   }
 }
 const prototype7 = EmojiFrecency$Type.prototype;
 prototype7["create"] = function create(arr) {
-  let obj = { emojis: {} };
+  const obj = { emojis: {} };
   const _Object = Object;
-  obj = { enumerable: false, value: this };
-  _Object.defineProperty(obj, _mod1188.MESSAGE_TYPE, obj);
+  _Object.defineProperty(obj, _mod1186.MESSAGE_TYPE, { enumerable: false, value: this });
   if (undefined !== arr) {
-    const result = _mod1188.reflectionMergePartial(this, obj, arr);
-    const tmpResult = _mod1188;
+    const result = _mod1186.reflectionMergePartial(this, obj, arr);
+    const tmpResult = _mod1186;
   }
   return obj;
 };
@@ -1059,7 +1066,7 @@ prototype7["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUn
           let skipResult = pos.skip(tmp6);
           if (false !== onRead) {
             if (true === onRead) {
-              onRead = _mod1188.UnknownFieldHandler.onRead;
+              onRead = _mod1186.UnknownFieldHandler.onRead;
             }
             let onReadResult = onRead(self.typeName, obj, tmp5, tmp6, skipResult);
           }
@@ -1084,7 +1091,7 @@ prototype7["binaryReadMap1"] = function binaryReadMap1(arg0, pos, arg2) {
       } else if (2 !== tmp7) {
         break;
       } else {
-        internalBinaryReadResult = object6.internalBinaryRead(pos, pos.uint32(), arg2);
+        internalBinaryReadResult = object16.internalBinaryRead(pos, pos.uint32(), arg2);
       }
       tmp2 = internalBinaryReadResult;
       tmp3 = stringResult;
@@ -1099,7 +1106,7 @@ prototype7["binaryReadMap1"] = function binaryReadMap1(arg0, pos, arg2) {
     str = "";
   }
   if (obj == null) {
-    obj = object6.create();
+    obj = object16.create();
   }
   arg0[str] = obj;
 };
@@ -1108,13 +1115,13 @@ prototype7["internalBinaryWrite"] = function internalBinaryWrite(emojis, tag, wr
   const iter = keys[Symbol.iterator]();
   const nextResult = iter.next();
   while (iter !== undefined) {
-    let tagResult = tag.tag(1, _mod1188.WireType.LengthDelimited);
+    let tagResult = tag.tag(1, _mod1186.WireType.LengthDelimited);
     let forkResult = tagResult.fork();
-    let tagResult1 = forkResult.tag(1, _mod1188.WireType.LengthDelimited);
+    let tagResult1 = forkResult.tag(1, _mod1186.WireType.LengthDelimited);
     let stringResult = tagResult1.string(nextResult);
-    let tagResult2 = tag.tag(2, _mod1188.WireType.LengthDelimited);
+    let tagResult2 = tag.tag(2, _mod1186.WireType.LengthDelimited);
     let forkResult1 = tagResult2.fork();
-    let internalBinaryWriteResult = object6.internalBinaryWrite(emojis.emojis[nextResult], tag, writeUnknownFields);
+    let internalBinaryWriteResult = object16.internalBinaryWrite(emojis.emojis[nextResult], tag, writeUnknownFields);
     let joined = tag.join();
     let joined1 = joined.join();
     continue;
@@ -1122,7 +1129,7 @@ prototype7["internalBinaryWrite"] = function internalBinaryWrite(emojis, tag, wr
   let onWrite = writeUnknownFields.writeUnknownFields;
   if (false !== onWrite) {
     if (1 == onWrite) {
-      onWrite = _mod1188.UnknownFieldHandler.onWrite;
+      onWrite = _mod1186.UnknownFieldHandler.onWrite;
     }
     const self = this;
     onWrite(this.typeName, emojis, tag);
@@ -1138,12 +1145,12 @@ const items5 = [
     V: {
       kind: "message",
       T() {
-        return object6;
+        return object16;
       },
     },
   },
 ];
-const object4 = new Object(
+const object14 = new Object(
   "discord_protos.discord_users.v1.EmojiFrecency",
   items5,
   tmp4,
@@ -1151,7 +1158,7 @@ const object4 = new Object(
   "create",
   "internalBinaryRead",
 );
-const MessageType8 = fn(1188).MessageType;
+const MessageType8 = fn(1186).MessageType;
 class ApplicationCommandFrecency$Type extends MessageType8 {
   constructor() {
     obj = {
@@ -1162,25 +1169,24 @@ class ApplicationCommandFrecency$Type extends MessageType8 {
       V: {
         kind: "message",
         T() {
-          return object6;
+          return object16;
         },
       },
     };
     items = [];
     items[0] = obj;
-    tmp = new tmp("discord_protos.discord_users.v1.ApplicationCommandFrecency", items, new.target);
-    return tmp;
+    tmp1 = new tmp("discord_protos.discord_users.v1.ApplicationCommandFrecency", items, new.target);
+    return tmp1;
   }
 }
 const prototype8 = ApplicationCommandFrecency$Type.prototype;
 prototype8["create"] = function create(arr) {
-  let obj = { applicationCommands: {} };
+  const obj = { applicationCommands: {} };
   const _Object = Object;
-  obj = { enumerable: false, value: this };
-  _Object.defineProperty(obj, _mod1188.MESSAGE_TYPE, obj);
+  _Object.defineProperty(obj, _mod1186.MESSAGE_TYPE, { enumerable: false, value: this });
   if (undefined !== arr) {
-    const result = _mod1188.reflectionMergePartial(this, obj, arr);
-    const tmpResult = _mod1188;
+    const result = _mod1186.reflectionMergePartial(this, obj, arr);
+    const tmpResult = _mod1186;
   }
   return obj;
 };
@@ -1214,7 +1220,7 @@ prototype8["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUn
           let skipResult = pos.skip(tmp6);
           if (false !== onRead) {
             if (true === onRead) {
-              onRead = _mod1188.UnknownFieldHandler.onRead;
+              onRead = _mod1186.UnknownFieldHandler.onRead;
             }
             let onReadResult = onRead(self.typeName, obj, tmp5, tmp6, skipResult);
           }
@@ -1239,7 +1245,7 @@ prototype8["binaryReadMap1"] = function binaryReadMap1(arg0, pos, arg2) {
       } else if (2 !== tmp7) {
         break;
       } else {
-        internalBinaryReadResult = object6.internalBinaryRead(pos, pos.uint32(), arg2);
+        internalBinaryReadResult = object16.internalBinaryRead(pos, pos.uint32(), arg2);
       }
       tmp2 = internalBinaryReadResult;
       tmp3 = stringResult;
@@ -1256,7 +1262,7 @@ prototype8["binaryReadMap1"] = function binaryReadMap1(arg0, pos, arg2) {
     str = "";
   }
   if (obj == null) {
-    obj = object6.create();
+    obj = object16.create();
   }
   arg0[str] = obj;
 };
@@ -1265,13 +1271,13 @@ prototype8["internalBinaryWrite"] = function internalBinaryWrite(applicationComm
   const iter = keys[Symbol.iterator]();
   const nextResult = iter.next();
   while (iter !== undefined) {
-    let tagResult = tag.tag(1, _mod1188.WireType.LengthDelimited);
+    let tagResult = tag.tag(1, _mod1186.WireType.LengthDelimited);
     let forkResult = tagResult.fork();
-    let tagResult1 = forkResult.tag(1, _mod1188.WireType.LengthDelimited);
+    let tagResult1 = forkResult.tag(1, _mod1186.WireType.LengthDelimited);
     let stringResult = tagResult1.string(nextResult);
-    let tagResult2 = tag.tag(2, _mod1188.WireType.LengthDelimited);
+    let tagResult2 = tag.tag(2, _mod1186.WireType.LengthDelimited);
     let forkResult1 = tagResult2.fork();
-    let internalBinaryWriteResult = object6.internalBinaryWrite(
+    let internalBinaryWriteResult = object16.internalBinaryWrite(
       applicationCommands.applicationCommands[nextResult],
       tag,
       writeUnknownFields,
@@ -1283,7 +1289,7 @@ prototype8["internalBinaryWrite"] = function internalBinaryWrite(applicationComm
   let onWrite = writeUnknownFields.writeUnknownFields;
   if (false !== onWrite) {
     if (1 == onWrite) {
-      onWrite = _mod1188.UnknownFieldHandler.onWrite;
+      onWrite = _mod1186.UnknownFieldHandler.onWrite;
     }
     const self = this;
     onWrite(this.typeName, applicationCommands, tag);
@@ -1299,12 +1305,12 @@ const items6 = [
     V: {
       kind: "message",
       T() {
-        return object6;
+        return object16;
       },
     },
   },
 ];
-const object5 = new Object(
+const object15 = new Object(
   "discord_protos.discord_users.v1.ApplicationCommandFrecency",
   items6,
   tmp4,
@@ -1312,7 +1318,7 @@ const object5 = new Object(
   "create",
   "internalBinaryRead",
 );
-const MessageType9 = fn(1188).MessageType;
+const MessageType9 = fn(1186).MessageType;
 class FrecencyItem$Type extends MessageType9 {
   constructor() {
     items = [, , ,];
@@ -1320,19 +1326,18 @@ class FrecencyItem$Type extends MessageType9 {
     items[1] = { no: 2, name: "recent_uses", kind: "scalar", repeat: 1, T: 4 };
     items[2] = { no: 3, name: "frecency", kind: "scalar", T: 5 };
     items[3] = { no: 4, name: "score", kind: "scalar", T: 5 };
-    tmp = new tmp("discord_protos.discord_users.v1.FrecencyItem", items, new.target);
-    return tmp;
+    tmp1 = new tmp("discord_protos.discord_users.v1.FrecencyItem", items, new.target);
+    return tmp1;
   }
 }
 const prototype9 = FrecencyItem$Type.prototype;
 prototype9["create"] = function create(arr) {
-  let obj = { totalUses: 0, recentUses: [], frecency: 0, score: 0 };
+  const obj = { totalUses: 0, recentUses: [], frecency: 0, score: 0 };
   const _Object = Object;
-  obj = { enumerable: false, value: this };
-  _Object.defineProperty(obj, _mod1188.MESSAGE_TYPE, obj);
+  _Object.defineProperty(obj, _mod1186.MESSAGE_TYPE, { enumerable: false, value: this });
   if (undefined !== arr) {
-    const result = _mod1188.reflectionMergePartial(this, obj, arr);
-    const tmpResult = _mod1188;
+    const result = _mod1186.reflectionMergePartial(this, obj, arr);
+    const tmpResult = _mod1186;
   }
   return obj;
 };
@@ -1350,7 +1355,7 @@ prototype9["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUn
       if (1 === tmp5) {
         obj.totalUses = pos.uint32();
       } else if (2 === tmp5) {
-        if (tmp6 === _mod1188.WireType.LengthDelimited) {
+        if (tmp6 === _mod1186.WireType.LengthDelimited) {
           let sum1 = pos.int32() + pos.pos;
           if (pos.pos < sum1) {
             do {
@@ -1363,7 +1368,7 @@ prototype9["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUn
         } else {
           let recentUses1 = obj.recentUses;
           let str4 = pos.uint64();
-          arr = recentUses1.push(str4.toString());
+          let arr2 = recentUses1.push(str4.toString());
         }
       } else if (3 === tmp5) {
         obj.frecency = pos.int32();
@@ -1386,7 +1391,7 @@ prototype9["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUn
           let skipResult = pos.skip(tmp6);
           if (false !== onRead) {
             if (true === onRead) {
-              onRead = _mod1188.UnknownFieldHandler.onRead;
+              onRead = _mod1186.UnknownFieldHandler.onRead;
             }
             let onReadResult = onRead(self.typeName, obj, tmp5, tmp6, skipResult);
           }
@@ -1399,11 +1404,11 @@ prototype9["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUn
 prototype9["internalBinaryWrite"] = function internalBinaryWrite(totalUses, tag, writeUnknownFields) {
   let length;
   if (0 !== totalUses.totalUses) {
-    tag.tag(1, _mod1188.WireType.Varint).uint32(totalUses.totalUses);
-    const tagResult = tag.tag(1, _mod1188.WireType.Varint);
+    tag.tag(1, _mod1186.WireType.Varint).uint32(totalUses.totalUses);
+    const tagResult = tag.tag(1, _mod1186.WireType.Varint);
   }
   if (totalUses.recentUses.length) {
-    tag.tag(2, _mod1188.WireType.LengthDelimited).fork();
+    tag.tag(2, _mod1186.WireType.LengthDelimited).fork();
     let num4 = 0;
     if (0 < totalUses.recentUses.length) {
       do {
@@ -1413,20 +1418,20 @@ prototype9["internalBinaryWrite"] = function internalBinaryWrite(totalUses, tag,
       } while (num4 < length);
     }
     const joined = tag.join();
-    const tagResult1 = tag.tag(2, _mod1188.WireType.LengthDelimited);
+    const tagResult1 = tag.tag(2, _mod1186.WireType.LengthDelimited);
   }
   if (0 !== totalUses.frecency) {
-    tag.tag(3, _mod1188.WireType.Varint).int32(totalUses.frecency);
-    const tagResult2 = tag.tag(3, _mod1188.WireType.Varint);
+    tag.tag(3, _mod1186.WireType.Varint).int32(totalUses.frecency);
+    const tagResult2 = tag.tag(3, _mod1186.WireType.Varint);
   }
   if (0 !== totalUses.score) {
-    tag.tag(4, _mod1188.WireType.Varint).int32(totalUses.score);
-    const tagResult3 = tag.tag(4, _mod1188.WireType.Varint);
+    tag.tag(4, _mod1186.WireType.Varint).int32(totalUses.score);
+    const tagResult3 = tag.tag(4, _mod1186.WireType.Varint);
   }
   let onWrite = writeUnknownFields.writeUnknownFields;
   if (false !== onWrite) {
     if (1 == onWrite) {
-      onWrite = _mod1188.UnknownFieldHandler.onWrite;
+      onWrite = _mod1186.UnknownFieldHandler.onWrite;
     }
     const self = this;
     onWrite(this.typeName, totalUses, tag);
@@ -1439,7 +1444,7 @@ const items7 = [
   { no: 3, name: "frecency", kind: "scalar", T: 5 },
   { no: 4, name: "score", kind: "scalar", T: 5 },
 ];
-const object6 = new Object(
+const object16 = new Object(
   "discord_protos.discord_users.v1.FrecencyItem",
   items7,
   tmp4,
@@ -1447,24 +1452,23 @@ const object6 = new Object(
   "create",
   "internalBinaryRead",
 );
-const MessageType10 = fn(1188).MessageType;
+const MessageType10 = fn(1186).MessageType;
 class FavoriteSoundboardSounds$Type extends MessageType10 {
   constructor() {
     items = [];
     items[0] = { no: 1, name: "sound_ids", kind: "scalar", repeat: 1, T: 6 };
-    tmp = new tmp("discord_protos.discord_users.v1.FavoriteSoundboardSounds", items, new.target);
-    return tmp;
+    tmp1 = new tmp("discord_protos.discord_users.v1.FavoriteSoundboardSounds", items, new.target);
+    return tmp1;
   }
 }
 const prototype10 = FavoriteSoundboardSounds$Type.prototype;
 prototype10["create"] = function create(arr) {
-  let obj = { soundIds: [] };
+  const obj = { soundIds: [] };
   const _Object = Object;
-  obj = { enumerable: false, value: this };
-  _Object.defineProperty(obj, _mod1188.MESSAGE_TYPE, obj);
+  _Object.defineProperty(obj, _mod1186.MESSAGE_TYPE, { enumerable: false, value: this });
   if (undefined !== arr) {
-    const result = _mod1188.reflectionMergePartial(this, obj, arr);
-    const tmpResult = _mod1188;
+    const result = _mod1186.reflectionMergePartial(this, obj, arr);
+    const tmpResult = _mod1186;
   }
   return obj;
 };
@@ -1480,7 +1484,7 @@ prototype10["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readU
       let tmp4 = _slicedToArray(pos.tag(), 2);
       [tmp5, tmp6] = tmp4;
       if (1 === tmp5) {
-        if (tmp6 === _mod1188.WireType.LengthDelimited) {
+        if (tmp6 === _mod1186.WireType.LengthDelimited) {
           let sum1 = pos.int32() + pos.pos;
           if (pos.pos < sum1) {
             do {
@@ -1493,7 +1497,7 @@ prototype10["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readU
         } else {
           let soundIds1 = obj.soundIds;
           let str4 = pos.fixed64();
-          arr = soundIds1.push(str4.toString());
+          let arr2 = soundIds1.push(str4.toString());
         }
       } else {
         let onRead = readUnknownField.readUnknownField;
@@ -1512,7 +1516,7 @@ prototype10["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readU
           let skipResult = pos.skip(tmp6);
           if (false !== onRead) {
             if (true === onRead) {
-              onRead = _mod1188.UnknownFieldHandler.onRead;
+              onRead = _mod1186.UnknownFieldHandler.onRead;
             }
             let onReadResult = onRead(self.typeName, obj, tmp5, tmp6, skipResult);
           }
@@ -1525,7 +1529,7 @@ prototype10["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readU
 prototype10["internalBinaryWrite"] = function internalBinaryWrite(soundIds, tag, writeUnknownFields) {
   let length;
   if (soundIds.soundIds.length) {
-    tag.tag(1, _mod1188.WireType.LengthDelimited).fork();
+    tag.tag(1, _mod1186.WireType.LengthDelimited).fork();
     let num2 = 0;
     if (0 < soundIds.soundIds.length) {
       do {
@@ -1535,12 +1539,12 @@ prototype10["internalBinaryWrite"] = function internalBinaryWrite(soundIds, tag,
       } while (num2 < length);
     }
     const joined = tag.join();
-    const tagResult = tag.tag(1, _mod1188.WireType.LengthDelimited);
+    const tagResult = tag.tag(1, _mod1186.WireType.LengthDelimited);
   }
   let onWrite = writeUnknownFields.writeUnknownFields;
   if (false !== onWrite) {
     if (1 == onWrite) {
-      onWrite = _mod1188.UnknownFieldHandler.onWrite;
+      onWrite = _mod1186.UnknownFieldHandler.onWrite;
     }
     const self = this;
     onWrite(this.typeName, soundIds, tag);
@@ -1548,7 +1552,7 @@ prototype10["internalBinaryWrite"] = function internalBinaryWrite(soundIds, tag,
   return tag;
 };
 const items8 = [{ no: 1, name: "sound_ids", kind: "scalar", repeat: 1, T: 6 }];
-const object7 = new Object(
+const object17 = new Object(
   "discord_protos.discord_users.v1.FavoriteSoundboardSounds",
   items8,
   tmp4,
@@ -1556,7 +1560,7 @@ const object7 = new Object(
   "create",
   "internalBinaryRead",
 );
-const MessageType11 = fn(1188).MessageType;
+const MessageType11 = fn(1186).MessageType;
 class HeardSoundFrecency$Type extends MessageType11 {
   constructor() {
     obj = {
@@ -1567,25 +1571,24 @@ class HeardSoundFrecency$Type extends MessageType11 {
       V: {
         kind: "message",
         T() {
-          return object6;
+          return object16;
         },
       },
     };
     items = [];
     items[0] = obj;
-    tmp = new tmp("discord_protos.discord_users.v1.HeardSoundFrecency", items, new.target);
-    return tmp;
+    tmp1 = new tmp("discord_protos.discord_users.v1.HeardSoundFrecency", items, new.target);
+    return tmp1;
   }
 }
 const prototype11 = HeardSoundFrecency$Type.prototype;
 prototype11["create"] = function create(arr) {
-  let obj = { heardSounds: {} };
+  const obj = { heardSounds: {} };
   const _Object = Object;
-  obj = { enumerable: false, value: this };
-  _Object.defineProperty(obj, _mod1188.MESSAGE_TYPE, obj);
+  _Object.defineProperty(obj, _mod1186.MESSAGE_TYPE, { enumerable: false, value: this });
   if (undefined !== arr) {
-    const result = _mod1188.reflectionMergePartial(this, obj, arr);
-    const tmpResult = _mod1188;
+    const result = _mod1186.reflectionMergePartial(this, obj, arr);
+    const tmpResult = _mod1186;
   }
   return obj;
 };
@@ -1619,7 +1622,7 @@ prototype11["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readU
           let skipResult = pos.skip(tmp6);
           if (false !== onRead) {
             if (true === onRead) {
-              onRead = _mod1188.UnknownFieldHandler.onRead;
+              onRead = _mod1186.UnknownFieldHandler.onRead;
             }
             let onReadResult = onRead(self.typeName, obj, tmp5, tmp6, skipResult);
           }
@@ -1644,7 +1647,7 @@ prototype11["binaryReadMap1"] = function binaryReadMap1(arg0, pos, arg2) {
       } else if (2 !== tmp7) {
         break;
       } else {
-        internalBinaryReadResult = object6.internalBinaryRead(pos, pos.uint32(), arg2);
+        internalBinaryReadResult = object16.internalBinaryRead(pos, pos.uint32(), arg2);
       }
       tmp2 = internalBinaryReadResult;
       tmp3 = stringResult;
@@ -1661,7 +1664,7 @@ prototype11["binaryReadMap1"] = function binaryReadMap1(arg0, pos, arg2) {
     str = "";
   }
   if (obj == null) {
-    obj = object6.create();
+    obj = object16.create();
   }
   arg0[str] = obj;
 };
@@ -1670,13 +1673,13 @@ prototype11["internalBinaryWrite"] = function internalBinaryWrite(heardSounds, t
   const iter = keys[Symbol.iterator]();
   const nextResult = iter.next();
   while (iter !== undefined) {
-    let tagResult = tag.tag(1, _mod1188.WireType.LengthDelimited);
+    let tagResult = tag.tag(1, _mod1186.WireType.LengthDelimited);
     let forkResult = tagResult.fork();
-    let tagResult1 = forkResult.tag(1, _mod1188.WireType.LengthDelimited);
+    let tagResult1 = forkResult.tag(1, _mod1186.WireType.LengthDelimited);
     let stringResult = tagResult1.string(nextResult);
-    let tagResult2 = tag.tag(2, _mod1188.WireType.LengthDelimited);
+    let tagResult2 = tag.tag(2, _mod1186.WireType.LengthDelimited);
     let forkResult1 = tagResult2.fork();
-    let internalBinaryWriteResult = object6.internalBinaryWrite(
+    let internalBinaryWriteResult = object16.internalBinaryWrite(
       heardSounds.heardSounds[nextResult],
       tag,
       writeUnknownFields,
@@ -1688,7 +1691,7 @@ prototype11["internalBinaryWrite"] = function internalBinaryWrite(heardSounds, t
   let onWrite = writeUnknownFields.writeUnknownFields;
   if (false !== onWrite) {
     if (1 == onWrite) {
-      onWrite = _mod1188.UnknownFieldHandler.onWrite;
+      onWrite = _mod1186.UnknownFieldHandler.onWrite;
     }
     const self = this;
     onWrite(this.typeName, heardSounds, tag);
@@ -1704,12 +1707,12 @@ const items9 = [
     V: {
       kind: "message",
       T() {
-        return object6;
+        return object16;
       },
     },
   },
 ];
-const object8 = new Object(
+const object18 = new Object(
   "discord_protos.discord_users.v1.HeardSoundFrecency",
   items9,
   tmp4,
@@ -1727,12 +1730,12 @@ const object8 = new Object(
   GIFType,
   frecencyUserSettingsType,
   object,
-  object,
-  object1,
-  object2,
-  object3,
+  object10,
+  object11,
+  object12,
+  object13,
 );
-const MessageType12 = fn(1188).MessageType;
+const MessageType12 = fn(1186).MessageType;
 class PlayedSoundFrecency$Type extends MessageType12 {
   constructor() {
     obj = {
@@ -1743,25 +1746,24 @@ class PlayedSoundFrecency$Type extends MessageType12 {
       V: {
         kind: "message",
         T() {
-          return object6;
+          return object16;
         },
       },
     };
     items = [];
     items[0] = obj;
-    tmp = new tmp("discord_protos.discord_users.v1.PlayedSoundFrecency", items, new.target);
-    return tmp;
+    tmp1 = new tmp("discord_protos.discord_users.v1.PlayedSoundFrecency", items, new.target);
+    return tmp1;
   }
 }
 const prototype12 = PlayedSoundFrecency$Type.prototype;
 prototype12["create"] = function create(arr) {
-  let obj = { playedSounds: {} };
+  const obj = { playedSounds: {} };
   const _Object = Object;
-  obj = { enumerable: false, value: this };
-  _Object.defineProperty(obj, _mod1188.MESSAGE_TYPE, obj);
+  _Object.defineProperty(obj, _mod1186.MESSAGE_TYPE, { enumerable: false, value: this });
   if (undefined !== arr) {
-    const result = _mod1188.reflectionMergePartial(this, obj, arr);
-    const tmpResult = _mod1188;
+    const result = _mod1186.reflectionMergePartial(this, obj, arr);
+    const tmpResult = _mod1186;
   }
   return obj;
 };
@@ -1795,7 +1797,7 @@ prototype12["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readU
           let skipResult = pos.skip(tmp6);
           if (false !== onRead) {
             if (true === onRead) {
-              onRead = _mod1188.UnknownFieldHandler.onRead;
+              onRead = _mod1186.UnknownFieldHandler.onRead;
             }
             let onReadResult = onRead(self.typeName, obj, tmp5, tmp6, skipResult);
           }
@@ -1820,7 +1822,7 @@ prototype12["binaryReadMap1"] = function binaryReadMap1(arg0, pos, arg2) {
       } else if (2 !== tmp7) {
         break;
       } else {
-        internalBinaryReadResult = object6.internalBinaryRead(pos, pos.uint32(), arg2);
+        internalBinaryReadResult = object16.internalBinaryRead(pos, pos.uint32(), arg2);
       }
       tmp2 = internalBinaryReadResult;
       tmp3 = stringResult;
@@ -1837,7 +1839,7 @@ prototype12["binaryReadMap1"] = function binaryReadMap1(arg0, pos, arg2) {
     str = "";
   }
   if (obj == null) {
-    obj = object6.create();
+    obj = object16.create();
   }
   arg0[str] = obj;
 };
@@ -1846,13 +1848,13 @@ prototype12["internalBinaryWrite"] = function internalBinaryWrite(playedSounds, 
   const iter = keys[Symbol.iterator]();
   const nextResult = iter.next();
   while (iter !== undefined) {
-    let tagResult = tag.tag(1, _mod1188.WireType.LengthDelimited);
+    let tagResult = tag.tag(1, _mod1186.WireType.LengthDelimited);
     let forkResult = tagResult.fork();
-    let tagResult1 = forkResult.tag(1, _mod1188.WireType.LengthDelimited);
+    let tagResult1 = forkResult.tag(1, _mod1186.WireType.LengthDelimited);
     let stringResult = tagResult1.string(nextResult);
-    let tagResult2 = tag.tag(2, _mod1188.WireType.LengthDelimited);
+    let tagResult2 = tag.tag(2, _mod1186.WireType.LengthDelimited);
     let forkResult1 = tagResult2.fork();
-    let internalBinaryWriteResult = object6.internalBinaryWrite(
+    let internalBinaryWriteResult = object16.internalBinaryWrite(
       playedSounds.playedSounds[nextResult],
       tag,
       writeUnknownFields,
@@ -1864,7 +1866,7 @@ prototype12["internalBinaryWrite"] = function internalBinaryWrite(playedSounds, 
   let onWrite = writeUnknownFields.writeUnknownFields;
   if (false !== onWrite) {
     if (1 == onWrite) {
-      onWrite = _mod1188.UnknownFieldHandler.onWrite;
+      onWrite = _mod1186.UnknownFieldHandler.onWrite;
     }
     const self = this;
     onWrite(this.typeName, playedSounds, tag);
@@ -1880,7 +1882,7 @@ const items10 = [
     V: {
       kind: "message",
       T() {
-        return object6;
+        return object16;
       },
     },
   },
@@ -1903,15 +1905,15 @@ const heardSoundFrecencyType = new HeardSoundFrecency$Type(
   GIFType,
   frecencyUserSettingsType,
   object,
-  object,
-  object1,
-  object2,
-  object3,
-  object4,
-  object5,
-  object6,
+  object10,
+  object11,
+  object12,
+  object13,
+  object14,
+  object15,
+  object16,
 );
-const MessageType13 = fn(1188).MessageType;
+const MessageType13 = fn(1186).MessageType;
 class ApplicationFrecency$Type extends MessageType13 {
   constructor() {
     obj = {
@@ -1922,25 +1924,24 @@ class ApplicationFrecency$Type extends MessageType13 {
       V: {
         kind: "message",
         T() {
-          return object6;
+          return object16;
         },
       },
     };
     items = [];
     items[0] = obj;
-    tmp = new tmp("discord_protos.discord_users.v1.ApplicationFrecency", items, new.target);
-    return tmp;
+    tmp1 = new tmp("discord_protos.discord_users.v1.ApplicationFrecency", items, new.target);
+    return tmp1;
   }
 }
 const prototype13 = ApplicationFrecency$Type.prototype;
 prototype13["create"] = function create(arr) {
-  let obj = { applications: {} };
+  const obj = { applications: {} };
   const _Object = Object;
-  obj = { enumerable: false, value: this };
-  _Object.defineProperty(obj, _mod1188.MESSAGE_TYPE, obj);
+  _Object.defineProperty(obj, _mod1186.MESSAGE_TYPE, { enumerable: false, value: this });
   if (undefined !== arr) {
-    const result = _mod1188.reflectionMergePartial(this, obj, arr);
-    const tmpResult = _mod1188;
+    const result = _mod1186.reflectionMergePartial(this, obj, arr);
+    const tmpResult = _mod1186;
   }
   return obj;
 };
@@ -1974,7 +1975,7 @@ prototype13["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readU
           let skipResult = pos.skip(tmp6);
           if (false !== onRead) {
             if (true === onRead) {
-              onRead = _mod1188.UnknownFieldHandler.onRead;
+              onRead = _mod1186.UnknownFieldHandler.onRead;
             }
             let onReadResult = onRead(self.typeName, obj, tmp5, tmp6, skipResult);
           }
@@ -1999,7 +2000,7 @@ prototype13["binaryReadMap1"] = function binaryReadMap1(arg0, pos, arg2) {
       } else if (2 !== tmp7) {
         break;
       } else {
-        internalBinaryReadResult = object6.internalBinaryRead(pos, pos.uint32(), arg2);
+        internalBinaryReadResult = object16.internalBinaryRead(pos, pos.uint32(), arg2);
       }
       tmp2 = internalBinaryReadResult;
       tmp3 = stringResult;
@@ -2016,7 +2017,7 @@ prototype13["binaryReadMap1"] = function binaryReadMap1(arg0, pos, arg2) {
     str = "";
   }
   if (obj == null) {
-    obj = object6.create();
+    obj = object16.create();
   }
   arg0[str] = obj;
 };
@@ -2025,13 +2026,13 @@ prototype13["internalBinaryWrite"] = function internalBinaryWrite(applications, 
   const iter = keys[Symbol.iterator]();
   const nextResult = iter.next();
   while (iter !== undefined) {
-    let tagResult = tag.tag(1, _mod1188.WireType.LengthDelimited);
+    let tagResult = tag.tag(1, _mod1186.WireType.LengthDelimited);
     let forkResult = tagResult.fork();
-    let tagResult1 = forkResult.tag(1, _mod1188.WireType.LengthDelimited);
+    let tagResult1 = forkResult.tag(1, _mod1186.WireType.LengthDelimited);
     let stringResult = tagResult1.string(nextResult);
-    let tagResult2 = tag.tag(2, _mod1188.WireType.LengthDelimited);
+    let tagResult2 = tag.tag(2, _mod1186.WireType.LengthDelimited);
     let forkResult1 = tagResult2.fork();
-    let internalBinaryWriteResult = object6.internalBinaryWrite(
+    let internalBinaryWriteResult = object16.internalBinaryWrite(
       applications.applications[nextResult],
       tag,
       writeUnknownFields,
@@ -2043,7 +2044,7 @@ prototype13["internalBinaryWrite"] = function internalBinaryWrite(applications, 
   let onWrite = writeUnknownFields.writeUnknownFields;
   if (false !== onWrite) {
     if (1 == onWrite) {
-      onWrite = _mod1188.UnknownFieldHandler.onWrite;
+      onWrite = _mod1186.UnknownFieldHandler.onWrite;
     }
     const self = this;
     onWrite(this.typeName, applications, tag);
@@ -2059,7 +2060,7 @@ const items11 = [
     V: {
       kind: "message",
       T() {
-        return object6;
+        return object16;
       },
     },
   },
@@ -2082,18 +2083,18 @@ const playedSoundFrecencyType = new PlayedSoundFrecency$Type(
   GIFType,
   frecencyUserSettingsType,
   object,
-  object,
-  object1,
-  object2,
-  object3,
-  object4,
-  object5,
-  object6,
-  object7,
-  object8,
+  object10,
+  object11,
+  object12,
+  object13,
+  object14,
+  object15,
+  object16,
+  object17,
+  object18,
   heardSoundFrecencyType,
 );
-const MessageType14 = fn(1188).MessageType;
+const MessageType14 = fn(1186).MessageType;
 class GuildAndChannelFrecency$Type extends MessageType14 {
   constructor() {
     obj = {
@@ -2104,25 +2105,24 @@ class GuildAndChannelFrecency$Type extends MessageType14 {
       V: {
         kind: "message",
         T() {
-          return object6;
+          return object16;
         },
       },
     };
     items = [];
     items[0] = obj;
-    tmp = new tmp("discord_protos.discord_users.v1.GuildAndChannelFrecency", items, new.target);
-    return tmp;
+    tmp1 = new tmp("discord_protos.discord_users.v1.GuildAndChannelFrecency", items, new.target);
+    return tmp1;
   }
 }
 const prototype14 = GuildAndChannelFrecency$Type.prototype;
 prototype14["create"] = function create(arr) {
-  let obj = { guildAndChannels: {} };
+  const obj = { guildAndChannels: {} };
   const _Object = Object;
-  obj = { enumerable: false, value: this };
-  _Object.defineProperty(obj, _mod1188.MESSAGE_TYPE, obj);
+  _Object.defineProperty(obj, _mod1186.MESSAGE_TYPE, { enumerable: false, value: this });
   if (undefined !== arr) {
-    const result = _mod1188.reflectionMergePartial(this, obj, arr);
-    const tmpResult = _mod1188;
+    const result = _mod1186.reflectionMergePartial(this, obj, arr);
+    const tmpResult = _mod1186;
   }
   return obj;
 };
@@ -2156,7 +2156,7 @@ prototype14["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readU
           let skipResult = pos.skip(tmp6);
           if (false !== onRead) {
             if (true === onRead) {
-              onRead = _mod1188.UnknownFieldHandler.onRead;
+              onRead = _mod1186.UnknownFieldHandler.onRead;
             }
             let onReadResult = onRead(self.typeName, obj, tmp5, tmp6, skipResult);
           }
@@ -2174,19 +2174,20 @@ prototype14["binaryReadMap1"] = function binaryReadMap1(arg0, pos, arg2) {
     while (true) {
       let tmp6 = _slicedToArray(pos.tag(), 2);
       [tmp7, r10020] = tmp6;
-      str = tmp3;
+      let str1 = tmp3;
       if (1 === tmp7) {
         let str3 = pos.fixed64();
-        str = str3.toString();
+        str1 = str3.toString();
         let internalBinaryReadResult = tmp2;
       } else if (2 !== tmp7) {
         break;
       } else {
-        internalBinaryReadResult = object6.internalBinaryRead(pos, pos.uint32(), arg2);
+        internalBinaryReadResult = object16.internalBinaryRead(pos, pos.uint32(), arg2);
       }
       tmp2 = internalBinaryReadResult;
-      tmp3 = str;
+      tmp3 = str1;
       obj = internalBinaryReadResult;
+      str = str1;
     }
     const _globalThis = globalThis;
     const error = new Error(
@@ -2198,7 +2199,7 @@ prototype14["binaryReadMap1"] = function binaryReadMap1(arg0, pos, arg2) {
     str = "0";
   }
   if (obj == null) {
-    obj = object6.create();
+    obj = object16.create();
   }
   arg0[str] = obj;
 };
@@ -2207,13 +2208,13 @@ prototype14["internalBinaryWrite"] = function internalBinaryWrite(guildAndChanne
   const iter = keys[Symbol.iterator]();
   const nextResult = iter.next();
   while (iter !== undefined) {
-    let tagResult = tag.tag(1, _mod1188.WireType.LengthDelimited);
+    let tagResult = tag.tag(1, _mod1186.WireType.LengthDelimited);
     let forkResult = tagResult.fork();
-    let tagResult1 = forkResult.tag(1, _mod1188.WireType.Bit64);
+    let tagResult1 = forkResult.tag(1, _mod1186.WireType.Bit64);
     let fixed64Result = tagResult1.fixed64(nextResult);
-    let tagResult2 = tag.tag(2, _mod1188.WireType.LengthDelimited);
+    let tagResult2 = tag.tag(2, _mod1186.WireType.LengthDelimited);
     let forkResult1 = tagResult2.fork();
-    let internalBinaryWriteResult = object6.internalBinaryWrite(
+    let internalBinaryWriteResult = object16.internalBinaryWrite(
       guildAndChannels.guildAndChannels[nextResult],
       tag,
       writeUnknownFields,
@@ -2225,7 +2226,7 @@ prototype14["internalBinaryWrite"] = function internalBinaryWrite(guildAndChanne
   let onWrite = writeUnknownFields.writeUnknownFields;
   if (false !== onWrite) {
     if (1 == onWrite) {
-      onWrite = _mod1188.UnknownFieldHandler.onWrite;
+      onWrite = _mod1186.UnknownFieldHandler.onWrite;
     }
     const self = this;
     onWrite(this.typeName, guildAndChannels, tag);
@@ -2241,7 +2242,7 @@ const items12 = [
     V: {
       kind: "message",
       T() {
-        return object6;
+        return object16;
       },
     },
   },
@@ -2264,13 +2265,13 @@ let tmp19 = new "binaryReadMap1"(
   GIFType,
   frecencyUserSettingsType,
   object,
-  object,
-  object1,
-  object2,
-  object3,
-  object4,
-  object5,
-  object6,
+  object10,
+  object11,
+  object12,
+  object13,
+  object14,
+  object15,
+  object16,
 );
 let closure_16 = tmp19;
 let size = fn(2);
@@ -2281,15 +2282,15 @@ let result = size.fileFinishedImporting(
 export { GIFType };
 export const FrecencyUserSettings = frecencyUserSettingsType;
 export const FavoriteGIFs = object;
-export const FavoriteGIF = object;
-export const FavoriteStickers = object1;
-export const StickerFrecency = object2;
-export const FavoriteEmojis = object3;
-export const EmojiFrecency = object4;
-export const ApplicationCommandFrecency = object5;
-export const FrecencyItem = object6;
-export const FavoriteSoundboardSounds = object7;
-export const HeardSoundFrecency = object8;
+export const FavoriteGIF = object10;
+export const FavoriteStickers = object11;
+export const StickerFrecency = object12;
+export const FavoriteEmojis = object13;
+export const EmojiFrecency = object14;
+export const ApplicationCommandFrecency = object15;
+export const FrecencyItem = object16;
+export const FavoriteSoundboardSounds = object17;
+export const HeardSoundFrecency = object18;
 export const PlayedSoundFrecency = heardSoundFrecencyType;
 export const ApplicationFrecency = playedSoundFrecencyType;
 export const GuildAndChannelFrecency = tmp19;

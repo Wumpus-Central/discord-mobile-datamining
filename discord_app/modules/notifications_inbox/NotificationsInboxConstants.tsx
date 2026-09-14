@@ -5,13 +5,13 @@ import util from "../../intl/index.native.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
 const NOTIFICATIONS_INBOX = Constants.NOTIFICATIONS_INBOX;
-let MESSAGE_CATEGORY_DISPLAY_MAP = { UNREAD: "UNREAD", TODAY: "TODAY", YESTERDAY: "YESTERDAY", OLDER: "OLDER" };
-MESSAGE_CATEGORY_DISPLAY_MAP = { ALL: "all", MENTIONS: "mentions", BOOKMARKS: "bookmarks" };
-MESSAGE_CATEGORY_DISPLAY_MAP = {};
-MESSAGE_CATEGORY_DISPLAY_MAP[MESSAGE_CATEGORY_DISPLAY_MAP.UNREAD] = util.t.sRUdB8;
-MESSAGE_CATEGORY_DISPLAY_MAP[MESSAGE_CATEGORY_DISPLAY_MAP.TODAY] = util.t.F4jZQs;
-MESSAGE_CATEGORY_DISPLAY_MAP[MESSAGE_CATEGORY_DISPLAY_MAP.YESTERDAY] = util.t.gnv4pE;
-MESSAGE_CATEGORY_DISPLAY_MAP[MESSAGE_CATEGORY_DISPLAY_MAP.OLDER] = util.t.exrPZv;
+let obj = { UNREAD: "UNREAD", TODAY: "TODAY", YESTERDAY: "YESTERDAY", OLDER: "OLDER" };
+const obj2 = { ALL: "all", MENTIONS: "mentions", BOOKMARKS: "bookmarks" };
+const obj3 = {};
+obj3[obj.UNREAD] = util.t.sRUdB8;
+obj3[obj.TODAY] = util.t.F4jZQs;
+obj3[obj.YESTERDAY] = util.t.gnv4pE;
+obj3[obj.OLDER] = util.t.exrPZv;
 const result = size.fileFinishedImporting("modules/notifications_inbox/NotificationsInboxConstants.tsx");
 
 export const ANALYTICS_NAME = "Notifications Inbox";
@@ -22,7 +22,7 @@ export const MAX_MESSAGES_PER_CHANNEL = 50;
 export const MAX_UNREAD_MESSAGES_PER_CHANNEL = 10;
 export const NOTIFICATIONS_INBOX_FEATURE = "notifications-inbox";
 export const getNotificationsInboxGuild = function getNotificationsInboxGuild(arg0) {
-  if (arg0 === obj.BOOKMARKS) {
+  if (arg0 === obj2.BOOKMARKS) {
     const intl3 = util.intl;
     let stringResult = intl3.string(util.t["2pAkDA"]);
     let tmp2 = require;
@@ -35,26 +35,26 @@ export const getNotificationsInboxGuild = function getNotificationsInboxGuild(ar
     const intl = util.intl;
     stringResult = intl.string(util.t.HcoRu0);
   }
-  obj = { id: NOTIFICATIONS_INBOX, name: stringResult, description: "", icon: "Array", features: [] };
+  const obj = { id: NOTIFICATIONS_INBOX, name: stringResult, description: "", icon: "Array", features: [] };
   return tmp2(1971).fromGuildBasic(obj);
 };
-export const MessageCategory = MESSAGE_CATEGORY_DISPLAY_MAP;
-export const InboxFilters = MESSAGE_CATEGORY_DISPLAY_MAP;
+export const MessageCategory = obj;
+export const InboxFilters = obj2;
 export const InboxReadState = { READ: "READ", UNREAD: "UNREAD" };
 export const InboxMessageType = {
   ALL_MESSAGES_CHANNEL: "ALL_MESSAGES_CHANNEL",
   MENTION: "MENTION",
   BOOKMARK: "BOOKMARK",
 };
-export { MESSAGE_CATEGORY_DISPLAY_MAP };
+export const MESSAGE_CATEGORY_DISPLAY_MAP = obj3;
 export const getFilterMap = function getFilterMap() {
-  obj = {};
+  const obj = {};
   const intl = util.intl;
-  obj[obj.ALL] = intl.string(util.t.iWyjNt);
+  obj[obj2.ALL] = intl.string(util.t.iWyjNt);
   const intl2 = util.intl;
-  obj[obj.MENTIONS] = intl2.string(util.t.jbV6MM);
+  obj[obj2.MENTIONS] = intl2.string(util.t.jbV6MM);
   const intl3 = util.intl;
-  obj[obj.BOOKMARKS] = intl3.string(util.t["+rlGYW"]);
+  obj[obj2.BOOKMARKS] = intl3.string(util.t["+rlGYW"]);
   return obj;
 };
 export const ChannelLoadState = { UNLOADED: "unloaded", LOADED: "loaded", LOADED_UNREAD: "loadedUnread" };

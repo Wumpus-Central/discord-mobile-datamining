@@ -23,39 +23,37 @@ export default {
       const promise = del(closure_2);
       del(closure_2)
         .then((status) => {
-          let obj = trackedActionData;
           let properties = trackedActionData.properties;
           if (typeof trackedActionData.properties === "function") {
-            properties = obj.properties(status);
+            properties = trackedActionData.properties(status);
           }
-          obj = { status_code: status.status };
           const merged = Object.assign(closure_3);
           const merged1 = Object.assign(properties);
-          AnalyticsUtils.trackNetworkAction(obj.event, obj);
+          AnalyticsUtils.trackNetworkAction(trackedActionData.event, { status_code: status.status });
           closure_0(status);
+          const obj3 = { status_code: status.status };
         })
         .catch((error) => {
-          let obj = trackedActionData;
           let properties = trackedActionData.properties;
           if (typeof trackedActionData.properties === "function") {
-            properties = obj.properties(error);
+            properties = trackedActionData.properties(error);
           }
-          obj = { status_code: error.status, error_code: null, error_message: null };
+          const obj3 = { status_code: error.status, error_code: null, error_message: null };
           const body = error.body;
           let code;
           if (body != null) {
             code = body.code;
           }
-          obj.error_code = code;
+          obj3.error_code = code;
           const body2 = error.body;
           let message;
           if (body2 != null) {
             message = body2.message;
           }
-          obj.error_message = message;
+          obj3.error_message = message;
           const merged = Object.assign(closure_3);
           const merged1 = Object.assign(properties);
-          AnalyticsUtils.trackNetworkAction(obj.event, obj);
+          AnalyticsUtils.trackNetworkAction(trackedActionData.event, obj3);
           closure_1(error);
         });
     });
@@ -75,39 +73,37 @@ export default {
       const promise = del(closure_2);
       del(closure_2)
         .then((status) => {
-          let obj = trackedActionData;
           let properties = trackedActionData.properties;
           if (typeof trackedActionData.properties === "function") {
-            properties = obj.properties(status);
+            properties = trackedActionData.properties(status);
           }
-          obj = { status_code: status.status };
           const merged = Object.assign(closure_3);
           const merged1 = Object.assign(properties);
-          AnalyticsUtils.trackNetworkAction(obj.event, obj);
+          AnalyticsUtils.trackNetworkAction(trackedActionData.event, { status_code: status.status });
           closure_0(status);
+          const obj3 = { status_code: status.status };
         })
         .catch((error) => {
-          let obj = trackedActionData;
           let properties = trackedActionData.properties;
           if (typeof trackedActionData.properties === "function") {
-            properties = obj.properties(error);
+            properties = trackedActionData.properties(error);
           }
-          obj = { status_code: error.status, error_code: null, error_message: null };
+          const obj3 = { status_code: error.status, error_code: null, error_message: null };
           const body = error.body;
           let code;
           if (body != null) {
             code = body.code;
           }
-          obj.error_code = code;
+          obj3.error_code = code;
           const body2 = error.body;
           let message;
           if (body2 != null) {
             message = body2.message;
           }
-          obj.error_message = message;
+          obj3.error_message = message;
           const merged = Object.assign(closure_3);
           const merged1 = Object.assign(properties);
-          AnalyticsUtils.trackNetworkAction(obj.event, obj);
+          AnalyticsUtils.trackNetworkAction(trackedActionData.event, obj3);
           closure_1(error);
         });
     });
@@ -127,39 +123,37 @@ export default {
       const promise = del(closure_2);
       del(closure_2)
         .then((status) => {
-          let obj = trackedActionData;
           let properties = trackedActionData.properties;
           if (typeof trackedActionData.properties === "function") {
-            properties = obj.properties(status);
+            properties = trackedActionData.properties(status);
           }
-          obj = { status_code: status.status };
           const merged = Object.assign(closure_3);
           const merged1 = Object.assign(properties);
-          AnalyticsUtils.trackNetworkAction(obj.event, obj);
+          AnalyticsUtils.trackNetworkAction(trackedActionData.event, { status_code: status.status });
           closure_0(status);
+          const obj3 = { status_code: status.status };
         })
         .catch((error) => {
-          let obj = trackedActionData;
           let properties = trackedActionData.properties;
           if (typeof trackedActionData.properties === "function") {
-            properties = obj.properties(error);
+            properties = trackedActionData.properties(error);
           }
-          obj = { status_code: error.status, error_code: null, error_message: null };
+          const obj3 = { status_code: error.status, error_code: null, error_message: null };
           const body = error.body;
           let code;
           if (body != null) {
             code = body.code;
           }
-          obj.error_code = code;
+          obj3.error_code = code;
           const body2 = error.body;
           let message;
           if (body2 != null) {
             message = body2.message;
           }
-          obj.error_message = message;
+          obj3.error_message = message;
           const merged = Object.assign(closure_3);
           const merged1 = Object.assign(properties);
-          AnalyticsUtils.trackNetworkAction(obj.event, obj);
+          AnalyticsUtils.trackNetworkAction(trackedActionData.event, obj3);
           closure_1(error);
         });
     });
@@ -179,39 +173,37 @@ export default {
       const promise = del(closure_2);
       del(closure_2)
         .then((status) => {
-          let obj = trackedActionData;
           let properties = trackedActionData.properties;
           if (typeof trackedActionData.properties === "function") {
-            properties = obj.properties(status);
+            properties = trackedActionData.properties(status);
           }
-          obj = { status_code: status.status };
           const merged = Object.assign(closure_3);
           const merged1 = Object.assign(properties);
-          AnalyticsUtils.trackNetworkAction(obj.event, obj);
+          AnalyticsUtils.trackNetworkAction(trackedActionData.event, { status_code: status.status });
           closure_0(status);
+          const obj3 = { status_code: status.status };
         })
         .catch((error) => {
-          let obj = trackedActionData;
           let properties = trackedActionData.properties;
           if (typeof trackedActionData.properties === "function") {
-            properties = obj.properties(error);
+            properties = trackedActionData.properties(error);
           }
-          obj = { status_code: error.status, error_code: null, error_message: null };
+          const obj3 = { status_code: error.status, error_code: null, error_message: null };
           const body = error.body;
           let code;
           if (body != null) {
             code = body.code;
           }
-          obj.error_code = code;
+          obj3.error_code = code;
           const body2 = error.body;
           let message;
           if (body2 != null) {
             message = body2.message;
           }
-          obj.error_message = message;
+          obj3.error_message = message;
           const merged = Object.assign(closure_3);
           const merged1 = Object.assign(properties);
-          AnalyticsUtils.trackNetworkAction(obj.event, obj);
+          AnalyticsUtils.trackNetworkAction(trackedActionData.event, obj3);
           closure_1(error);
         });
     });
@@ -231,39 +223,37 @@ export default {
       const promise = del(closure_2);
       del(closure_2)
         .then((status) => {
-          let obj = trackedActionData;
           let properties = trackedActionData.properties;
           if (typeof trackedActionData.properties === "function") {
-            properties = obj.properties(status);
+            properties = trackedActionData.properties(status);
           }
-          obj = { status_code: status.status };
           const merged = Object.assign(closure_3);
           const merged1 = Object.assign(properties);
-          AnalyticsUtils.trackNetworkAction(obj.event, obj);
+          AnalyticsUtils.trackNetworkAction(trackedActionData.event, { status_code: status.status });
           closure_0(status);
+          const obj3 = { status_code: status.status };
         })
         .catch((error) => {
-          let obj = trackedActionData;
           let properties = trackedActionData.properties;
           if (typeof trackedActionData.properties === "function") {
-            properties = obj.properties(error);
+            properties = trackedActionData.properties(error);
           }
-          obj = { status_code: error.status, error_code: null, error_message: null };
+          const obj3 = { status_code: error.status, error_code: null, error_message: null };
           const body = error.body;
           let code;
           if (body != null) {
             code = body.code;
           }
-          obj.error_code = code;
+          obj3.error_code = code;
           const body2 = error.body;
           let message;
           if (body2 != null) {
             message = body2.message;
           }
-          obj.error_message = message;
+          obj3.error_message = message;
           const merged = Object.assign(closure_3);
           const merged1 = Object.assign(properties);
-          AnalyticsUtils.trackNetworkAction(obj.event, obj);
+          AnalyticsUtils.trackNetworkAction(trackedActionData.event, obj3);
           closure_1(error);
         });
     });

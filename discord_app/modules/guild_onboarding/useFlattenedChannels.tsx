@@ -3,6 +3,8 @@ import _modDef12 from "../../../_runtime/metro/00012__.js";
 import GlobalUtils from "../../utils/GlobalUtils.tsx";
 import ChannelStore from "../../stores/ChannelStore.tsx";
 
+const require = globalThis.__r;
+
 require = fn;
 function getFlattenedChannels(guildId, set, found) {
   _require = set;

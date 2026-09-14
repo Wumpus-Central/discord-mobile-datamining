@@ -1,7 +1,7 @@
 // discord_app/modules/poggermode/PoggermodeConstants.tsx
 import size from "../../../_runtime/metro/00002__.js";
 
-let ShakeLevel = {
+let obj = {
   LEVEL_1: 0,
   [0]: "LEVEL_1",
   LEVEL_2: 1,
@@ -13,12 +13,12 @@ let ShakeLevel = {
   LEVEL_5: 4,
   [4]: "LEVEL_5",
 };
-ShakeLevel = {
-  [ShakeLevel.LEVEL_1]: items,
-  [ShakeLevel.LEVEL_2]: items1,
-  [ShakeLevel.LEVEL_3]: items2,
-  [ShakeLevel.LEVEL_4]: items3,
-  [ShakeLevel.LEVEL_5]: items4,
+const obj2 = {
+  [obj.LEVEL_1]: items,
+  [obj.LEVEL_2]: items1,
+  [obj.LEVEL_3]: items2,
+  [obj.LEVEL_4]: items3,
+  [obj.LEVEL_5]: items4,
 };
 items = [
   [1, 0.0001],
@@ -70,43 +70,31 @@ items4 = [
   [1000, 100],
   [9001, 10000],
 ];
-const keys = Object.keys(ShakeLevel);
+const keys = Object.keys(obj2);
 const reduced = keys.reduce(
   (acc, item) => {
     const obj = {};
     const merged = Object.assign(acc);
-    obj[item] = obj[item].map((item) => {
+    obj[item] = obj2[item].map((item) => {
       [tmp] = item;
       return tmp;
     });
     return obj;
   },
-  {
-    [ShakeLevel.LEVEL_1]: [],
-    [ShakeLevel.LEVEL_2]: [],
-    [ShakeLevel.LEVEL_3]: [],
-    [ShakeLevel.LEVEL_4]: [],
-    [ShakeLevel.LEVEL_5]: [],
-  },
+  { [obj.LEVEL_1]: [], [obj.LEVEL_2]: [], [obj.LEVEL_3]: [], [obj.LEVEL_4]: [], [obj.LEVEL_5]: [] },
 );
-const keys1 = Object.keys(ShakeLevel);
+const keys1 = Object.keys(obj2);
 const reduced1 = keys1.reduce(
   (acc, item) => {
     const obj = {};
     const merged = Object.assign(acc);
-    obj[item] = obj[item].map((item) => {
+    obj[item] = obj2[item].map((item) => {
       [, tmp] = item;
       return tmp;
     });
     return obj;
   },
-  {
-    [ShakeLevel.LEVEL_1]: [],
-    [ShakeLevel.LEVEL_2]: [],
-    [ShakeLevel.LEVEL_3]: [],
-    [ShakeLevel.LEVEL_4]: [],
-    [ShakeLevel.LEVEL_5]: [],
-  },
+  { [obj.LEVEL_1]: [], [obj.LEVEL_2]: [], [obj.LEVEL_3]: [], [obj.LEVEL_4]: [], [obj.LEVEL_5]: [] },
 );
 const result = size.fileFinishedImporting("modules/poggermode/PoggermodeConstants.tsx");
 
@@ -128,6 +116,6 @@ export const ShakeLocation = {
   MENTION: 2,
   [2]: "MENTION",
 };
-export { ShakeLevel };
+export const ShakeLevel = obj;
 export const SHAKE_STEPS = reduced;
 export const SHAKE_STEP_DIVIDER = reduced1;

@@ -3,6 +3,8 @@ import DispatcherDefault from "../../Dispatcher.tsx";
 import APIErrorDefault from "../../errors/APIError.tsx";
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 
+const require = globalThis.__r;
+
 const require = fn;
 let closure_5 = async function _getApplicationSubscriptionGroupListingsForApplication() {
   const HTTP = require("HTTPUtils").HTTP;
@@ -81,25 +83,25 @@ export const getSubscriptionGroupForSubscriptionPlan = function getSubscriptionG
 };
 export const fetchApplication = function fetchApplication(applicationId, signal) {
   _require = applicationId;
-  let obj = { type: "APPLICATION_FETCH", applicationId };
-  obj.dispatch(obj);
+  DispatcherDefault.dispatch({ type: "APPLICATION_FETCH", applicationId });
   const HTTP = require("HTTPUtils").HTTP;
-  obj = {
-    url: Endpoints.APPLICATION_PUBLIC(applicationId),
-    signal,
-    rejectWithError: require("HTTPUtils").rejectWithMigratedError(),
-  };
-  value = HTTP.get(obj);
+  const obj3 = { url: Endpoints.APPLICATION_PUBLIC(applicationId), signal, rejectWithError: null };
+  let obj2 = { type: "APPLICATION_FETCH", applicationId };
+  obj3.rejectWithError = require("HTTPUtils").rejectWithMigratedError();
+  value = HTTP.get(obj3);
   const obj4 = require("HTTPUtils");
   return value
     .then((application) => {
-      const obj = { type: "APPLICATION_FETCH_SUCCESS", application: application.body, isHydrated: true };
-      obj.dispatch(obj);
+      DispatcherDefault.dispatch({
+        type: "APPLICATION_FETCH_SUCCESS",
+        application: application.body,
+        isHydrated: true,
+      });
       return application.body;
     })
     .catch((error) => {
-      const obj = { type: "APPLICATION_FETCH_FAIL", applicationId };
-      obj.dispatch(obj);
+      DispatcherDefault.dispatch({ type: "APPLICATION_FETCH_FAIL", applicationId });
+      const obj2 = { type: "APPLICATION_FETCH_FAIL", applicationId };
       return Promise.reject(new APIErrorDefault(error));
     });
 };

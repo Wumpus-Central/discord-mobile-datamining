@@ -9,7 +9,7 @@ const result = size.fileFinishedImporting("modules/app_analytics/track/friends_l
 
 export default function trackFriendsListClicked(arg0) {
   ({ tab_opened, source } = arg0);
-  const obj = { tab_opened, source };
-  const merged = Object.assign(getTrackFriendsListViewedDataDefault());
-  obj.track(AnalyticEvents.FRIENDS_LIST_CLICKED, obj);
+  const tmp = getTrackFriendsListViewedDataDefault();
+  const merged = Object.assign(tmp);
+  AnalyticsUtilsDefault.track(AnalyticEvents.FRIENDS_LIST_CLICKED, { tab_opened, source });
 }

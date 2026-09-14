@@ -54,9 +54,9 @@ BaseInvoiceRecord["createInvoiceFromOrder"] = function createInvoiceFromOrder(bi
       const found = order_line_items.find((id) => id.id === unit_price.ref_order_line_item_id);
       let tmp2 = null;
       if (null != found) {
-        let obj = { skuId: found.sku_id, unitPrice: null, quantity: null };
-        obj = { amount: unit_price.unit_price, currency: invoice_preview.currency };
-        obj.unitPrice = obj;
+        const obj = { skuId: found.sku_id, unitPrice: null, quantity: null };
+        const obj2 = { amount: unit_price.unit_price, currency: invoice_preview.currency };
+        obj.unitPrice = obj2;
         obj.quantity = unit_price.quantity;
         tmp2 = obj;
       }

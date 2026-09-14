@@ -3,6 +3,8 @@ import URLUtilsDefault from "../../../utils/URLUtils.tsx";
 import findCodedLinks from "../../coded_links/findCodedLinks.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
+const require = globalThis.__r;
+
 const items = [findCodedLinks.parseQuestsEmbedCode];
 const result = size.fileFinishedImporting("modules/activities/utils/activityShareLink.tsx");
 

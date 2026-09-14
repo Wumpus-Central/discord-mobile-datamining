@@ -6,6 +6,8 @@ import showSearchableDestinationListModalDefault from "../../share/native/showSe
 import ForwardingAnalyticsUtils from "../ForwardingAnalyticsUtils.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
+const require = globalThis.__r;
+
 require = fn;
 const jsx = fn(21).jsx;
 let c5 = "forward-modal";
@@ -21,7 +23,7 @@ export const openForwardModal = function openForwardModal(arg0) {
   ({ forwardOptions, customSendHandler } = arg0);
   ForwardingAnalyticsUtils.trackForwardStart(message.channel_id, message.id, source);
   showSearchableDestinationListModalDefault(
-    asyncRequireImpl(11811, dependencyMap.paths),
+    asyncRequireImpl(11812, dependencyMap.paths),
     { message, initialSelectedDestinations, forwardOptions, source, customSendHandler },
     c5,
   );

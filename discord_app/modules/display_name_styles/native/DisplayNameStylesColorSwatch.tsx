@@ -7,7 +7,7 @@ import DisplayNameEffect from "../../../../discord_common/js/shared/shared-const
 import LinearGradientDefault from "../../../../_runtime/05068_LinearGradient.js";
 import GummyStripesDefault from "effects/GummyStripes.tsx";
 import createStyles from "../../../design/components/Styles/native/createStyles.tsx";
-import size from "../../../../_runtime/metro/00002__.js";
+import size_mod from "../../../../_runtime/metro/00002__.js";
 
 const View = _mod17.View;
 const jsx = jsxProd.jsx;
@@ -16,6 +16,7 @@ let size = { width: 24, height: 24, borderRadius: nativeDefault.radii.xs };
 obj.colorSwatch = size;
 obj.gummySwatch = { flexDirection: "row", overflow: "hidden" };
 let closure_5 = createStyles.createStyles(obj);
+let size = size_mod;
 const result = size.fileFinishedImporting("modules/display_name_styles/native/DisplayNameStylesColorSwatch.tsx");
 
 export default function DisplayNameStylesColorSwatch(colors) {
@@ -23,17 +24,17 @@ export default function DisplayNameStylesColorSwatch(colors) {
   const tmp = closure_5();
   if (colors.effectId === DisplayNameEffect.DisplayNameEffect.GUMMY) {
     if (colors.length > 0) {
-      let obj = { style: null, children: null };
+      const obj = { style: null, children: null };
       const items = [,];
       ({ colorSwatch: arr3[0], gummySwatch: arr3[1] } = tmp);
       obj.style = items;
-      obj = { colors };
+      const obj2 = { colors };
       obj.children = jsx(GummyStripesDefault, { colors });
-      return <View colors={colors} />;
+      return <View style={null}>{null}</View>;
     }
   }
   if (colors.length >= 2) {
-    const obj1 = {
+    const obj3 = {
       colors: colors.map((item) => utils_ColorUtils.int2hex(item)),
       start: { x: 0, y: 0 },
       end: { x: 1, y: 0 },
@@ -51,11 +52,11 @@ export default function DisplayNameStylesColorSwatch(colors) {
       str = utils_ColorUtils.int2hex(colors[0]);
       const tmp2Result = utils_ColorUtils;
     }
-    const obj2 = { style: null };
+    const obj4 = { style: null };
     const items1 = [tmp.colorSwatch];
-    const obj3 = { backgroundColor: str };
-    items1[1] = obj3;
-    obj2.style = items1;
+    const obj5 = { backgroundColor: str };
+    items1[1] = obj5;
+    obj4.style = items1;
     return <View style={null} />;
   }
 }

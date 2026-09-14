@@ -14,14 +14,14 @@ export default function FormIcon(color) {
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0, themedColor: 0 }));
   const tmp2 = closure_3();
   if (null != themedColor) {
-    let obj = { style: null, themedColor: null };
+    const obj2 = { style: null, themedColor: null };
     const items = [tmp2.icon, style];
-    obj.style = items;
-    obj.themedColor = themedColor;
+    obj2.style = items;
+    obj2.themedColor = themedColor;
     const merged1 = Object.assign(merged);
     let tmp9 = jsx(native.ThemedIcon, { style: null, themedColor: null });
   } else {
-    obj = { style: null, color: null };
+    const obj = { style: null, color: null };
     const items1 = [tmp2.icon, style];
     obj.style = items1;
     obj.color = color.color;

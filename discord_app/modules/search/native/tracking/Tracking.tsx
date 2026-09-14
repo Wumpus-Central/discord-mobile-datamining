@@ -1,5 +1,5 @@
 // discord_app/modules/search/native/tracking/Tracking.tsx
-import v1 from "../../../../../_runtime/01256_v1.js";
+import v1 from "../../../../../_runtime/01254_v1.js";
 import UserSettings from "../../../user_settings/UserSettings.tsx";
 import AppAnalyticsUtilsDefault from "../../../app_analytics/AppAnalyticsUtils.tsx";
 import SearchUtils from "../../SearchUtils.tsx";
@@ -17,33 +17,37 @@ const result = size.fileFinishedImporting("modules/search/native/tracking/Tracki
 export default {
   trackSearchOpened(arg0) {
     ({ searchContext, searchLocation } = arg0);
-    let obj = SearchSessionAnalyticsManagerDefault;
-    obj.initialize(searchContext, searchLocation);
+    SearchSessionAnalyticsManagerDefault.initialize(searchContext, searchLocation);
     const channelIdFromSearchContext = SearchUtils.getChannelIdFromSearchContext(searchContext);
     const channel = ChannelStore.getChannel(channelIdFromSearchContext);
-    obj = { search_session_id: null, search_location: null, guild_id: null, channel_id: null, channel_type: null };
+    const obj4 = {
+      search_session_id: null,
+      search_location: null,
+      guild_id: null,
+      channel_id: null,
+      channel_type: null,
+    };
     const obj3 = AppAnalyticsUtilsDefault;
-    obj.search_session_id = SearchSessionAnalyticsManagerDefault.getSessionId(searchContext);
-    obj.search_location = searchLocation;
-    obj.guild_id = SearchUtils.getGuildIdFromSearchContext(searchContext);
-    obj.channel_id = channelIdFromSearchContext;
+    obj4.search_session_id = SearchSessionAnalyticsManagerDefault.getSessionId(searchContext);
+    obj4.search_location = searchLocation;
+    obj4.guild_id = SearchUtils.getGuildIdFromSearchContext(searchContext);
+    obj4.channel_id = channelIdFromSearchContext;
     let type;
     if (channel != null) {
       type = channel.type;
     }
-    obj.channel_type = type;
-    obj3.trackWithMetadata(React5.SEARCH_OPENED_MOBILE, obj);
+    obj4.channel_type = type;
+    obj3.trackWithMetadata(React5.SEARCH_OPENED_MOBILE, obj4);
   },
   trackSearchStarted(searchContext) {
     searchContext = searchContext.searchContext;
-    let obj = SearchQueryStore;
     if (!SearchQueryStore.isInitialSearchQuery(searchContext)) {
       SearchSessionAnalyticsManagerDefault.refreshQueryId(searchContext);
       const channelIdFromSearchContext = SearchUtils.getChannelIdFromSearchContext(searchContext);
       const channel = ChannelStore.getChannel(channelIdFromSearchContext);
-      const str = obj.getQueryString(searchContext);
-      const str2 = obj.getTextInputValue(searchContext);
-      obj = {
+      const str = SearchQueryStore.getQueryString(searchContext);
+      const str2 = SearchQueryStore.getTextInputValue(searchContext);
+      const obj5 = {
         search_session_id: null,
         search_query_id: null,
         search_location: null,
@@ -54,33 +58,32 @@ export default {
         search_query_content_length: null,
       };
       const obj4 = AppAnalyticsUtilsDefault;
-      obj.search_session_id = SearchSessionAnalyticsManagerDefault.getSessionId(searchContext);
-      obj.search_query_id = SearchSessionAnalyticsManagerDefault.getQueryId(searchContext);
-      obj.search_location = SearchSessionAnalyticsManagerDefault.getLocation(searchContext);
-      obj.guild_id = SearchUtils.getGuildIdFromSearchContext(searchContext);
-      obj.channel_id = channelIdFromSearchContext;
+      obj5.search_session_id = SearchSessionAnalyticsManagerDefault.getSessionId(searchContext);
+      obj5.search_query_id = SearchSessionAnalyticsManagerDefault.getQueryId(searchContext);
+      obj5.search_location = SearchSessionAnalyticsManagerDefault.getLocation(searchContext);
+      obj5.guild_id = SearchUtils.getGuildIdFromSearchContext(searchContext);
+      obj5.channel_id = channelIdFromSearchContext;
       let type;
       if (channel != null) {
         type = channel.type;
       }
-      obj.channel_type = type;
-      obj.search_query_length = str.trim().length;
-      obj.search_query_content_length = str2.trim().length;
-      obj4.trackWithMetadata(React5.SEARCH_STARTED_MOBILE, obj);
+      obj5.channel_type = type;
+      obj5.search_query_length = str.trim().length;
+      obj5.search_query_content_length = str2.trim().length;
+      obj4.trackWithMetadata(React5.SEARCH_STARTED_MOBILE, obj5);
     }
   },
   trackSearchResultClicked(arg0) {
     ({ searchContext, channelId } = arg0);
-    let obj = SearchQueryStore;
     ({ index, messageId, userId, entityType } = arg0);
     if (!SearchQueryStore.isInitialSearchQuery(searchContext)) {
       const guildIdFromSearchContext = SearchUtils.getGuildIdFromSearchContext(searchContext);
       const channelIdFromSearchContext = SearchUtils.getChannelIdFromSearchContext(searchContext);
       const channel = ChannelStore.getChannel(channelIdFromSearchContext);
       const channel1 = ChannelStore.getChannel(channelId);
-      const str = obj.getQueryString(searchContext);
-      const str2 = obj.getTextInputValue(searchContext);
-      obj = {
+      const str = SearchQueryStore.getQueryString(searchContext);
+      const str2 = SearchQueryStore.getTextInputValue(searchContext);
+      const obj5 = {
         search_session_id: null,
         search_location: null,
         search_query_id: null,
@@ -100,37 +103,36 @@ export default {
         channel_type: null,
       };
       const obj4 = AppAnalyticsUtilsDefault;
-      obj.search_session_id = SearchSessionAnalyticsManagerDefault.getSessionId(searchContext);
-      obj.search_location = SearchSessionAnalyticsManagerDefault.getLocation(searchContext);
-      obj.search_query_id = SearchSessionAnalyticsManagerDefault.getQueryId(searchContext);
-      obj.search_query_length = str.trim().length;
-      obj.search_query_content_length = str2.trim().length;
-      obj.search_tab_selected = SearchSessionAnalyticsManagerDefault.getSelectedTab(searchContext);
-      obj.search_result_index = index;
-      obj.search_result_click_id = v1.v4();
-      obj.search_result_content_entity_type = entityType;
-      obj.search_result_user_id = userId;
-      obj.search_result_message_id = messageId;
-      obj.search_result_channel_id = channelId;
-      obj.search_result_guild_id = guildIdFromSearchContext;
+      obj5.search_session_id = SearchSessionAnalyticsManagerDefault.getSessionId(searchContext);
+      obj5.search_location = SearchSessionAnalyticsManagerDefault.getLocation(searchContext);
+      obj5.search_query_id = SearchSessionAnalyticsManagerDefault.getQueryId(searchContext);
+      obj5.search_query_length = str.trim().length;
+      obj5.search_query_content_length = str2.trim().length;
+      obj5.search_tab_selected = SearchSessionAnalyticsManagerDefault.getSelectedTab(searchContext);
+      obj5.search_result_index = index;
+      obj5.search_result_click_id = v1.v4();
+      obj5.search_result_content_entity_type = entityType;
+      obj5.search_result_user_id = userId;
+      obj5.search_result_message_id = messageId;
+      obj5.search_result_channel_id = channelId;
+      obj5.search_result_guild_id = guildIdFromSearchContext;
       let type;
       if (channel1 != null) {
         type = channel1.type;
       }
-      obj.search_result_channel_type = type;
-      obj.guild_id = guildIdFromSearchContext;
-      obj.channel_id = channelIdFromSearchContext;
+      obj5.search_result_channel_type = type;
+      obj5.guild_id = guildIdFromSearchContext;
+      obj5.channel_id = channelIdFromSearchContext;
       let type1;
       if (channel != null) {
         type1 = channel.type;
       }
-      obj.channel_type = type1;
-      obj4.trackWithMetadata(React5.SEARCH_RESULT_CLICKED_MOBILE, obj);
+      obj5.channel_type = type1;
+      obj4.trackWithMetadata(React5.SEARCH_RESULT_CLICKED_MOBILE, obj5);
     }
   },
   trackSearchResultReturned(searchContext) {
     searchContext = searchContext.searchContext;
-    let obj = SearchQueryStore;
     ({
       searchResultTotalCount,
       numMemberTabReturnedResults,
@@ -145,9 +147,9 @@ export default {
       const guildIdFromSearchContext = SearchUtils.getGuildIdFromSearchContext(searchContext);
       const channelIdFromSearchContext = SearchUtils.getChannelIdFromSearchContext(searchContext);
       const channel = ChannelStore.getChannel(channelIdFromSearchContext);
-      const str = obj.getQueryString(searchContext);
-      const str2 = obj.getTextInputValue(searchContext);
-      obj = {
+      const str = SearchQueryStore.getQueryString(searchContext);
+      const str2 = SearchQueryStore.getTextInputValue(searchContext);
+      const obj5 = {
         search_session_id: null,
         search_location: null,
         search_query_id: null,
@@ -167,41 +169,40 @@ export default {
         channel_type: null,
       };
       const obj4 = AppAnalyticsUtilsDefault;
-      obj.search_session_id = SearchSessionAnalyticsManagerDefault.getSessionId(searchContext);
-      obj.search_location = SearchSessionAnalyticsManagerDefault.getLocation(searchContext);
-      obj.search_query_id = SearchSessionAnalyticsManagerDefault.getQueryId(searchContext);
-      obj.search_query_length = str.trim().length;
-      obj.search_query_content_length = str2.trim().length;
-      obj.search_result_total_count = searchResultTotalCount;
-      obj.num_member_tab_returned_results = numMemberTabReturnedResults;
-      obj.num_channel_tab_returned_results = numChannelTabReturnedResults;
-      obj.num_people_tab_returned_results = numPeopleTabReturnedResults;
-      obj.num_message_tab_returned_results = numMessageTabReturnedResults;
-      obj.num_media_tab_returned_results = numMediaTabReturnedResults;
-      obj.num_file_tab_returned_results = numFileTabReturnedResults;
-      obj.num_link_tab_returned_results = numLinkTabReturnedResults;
-      obj.exact_search_result_count_setting_enabled = UserSettings.SearchResultExactCountEnabled.getSetting();
-      obj.guild_id = guildIdFromSearchContext;
-      obj.channel_id = channelIdFromSearchContext;
+      obj5.search_session_id = SearchSessionAnalyticsManagerDefault.getSessionId(searchContext);
+      obj5.search_location = SearchSessionAnalyticsManagerDefault.getLocation(searchContext);
+      obj5.search_query_id = SearchSessionAnalyticsManagerDefault.getQueryId(searchContext);
+      obj5.search_query_length = str.trim().length;
+      obj5.search_query_content_length = str2.trim().length;
+      obj5.search_result_total_count = searchResultTotalCount;
+      obj5.num_member_tab_returned_results = numMemberTabReturnedResults;
+      obj5.num_channel_tab_returned_results = numChannelTabReturnedResults;
+      obj5.num_people_tab_returned_results = numPeopleTabReturnedResults;
+      obj5.num_message_tab_returned_results = numMessageTabReturnedResults;
+      obj5.num_media_tab_returned_results = numMediaTabReturnedResults;
+      obj5.num_file_tab_returned_results = numFileTabReturnedResults;
+      obj5.num_link_tab_returned_results = numLinkTabReturnedResults;
+      obj5.exact_search_result_count_setting_enabled = UserSettings.SearchResultExactCountEnabled.getSetting();
+      obj5.guild_id = guildIdFromSearchContext;
+      obj5.channel_id = channelIdFromSearchContext;
       let type;
       if (channel != null) {
         type = channel.type;
       }
-      obj.channel_type = type;
-      obj4.trackWithMetadata(React5.SEARCH_RESULT_RETURNED_MOBILE, obj);
+      obj5.channel_type = type;
+      obj4.trackWithMetadata(React5.SEARCH_RESULT_RETURNED_MOBILE, obj5);
       const SearchResultExactCountEnabled = UserSettings.SearchResultExactCountEnabled;
     }
   },
   trackSearchEmptyResult(searchContext) {
     searchContext = searchContext.searchContext;
-    let obj = SearchQueryStore;
     if (!SearchQueryStore.isInitialSearchQuery(searchContext)) {
       const guildIdFromSearchContext = SearchUtils.getGuildIdFromSearchContext(searchContext);
       const channelIdFromSearchContext = SearchUtils.getChannelIdFromSearchContext(searchContext);
       const channel = ChannelStore.getChannel(channelIdFromSearchContext);
-      const str = obj.getQueryString(searchContext);
-      const str2 = obj.getTextInputValue(searchContext);
-      obj = {
+      const str = SearchQueryStore.getQueryString(searchContext);
+      const str2 = SearchQueryStore.getTextInputValue(searchContext);
+      const obj5 = {
         search_session_id: null,
         search_location: null,
         search_query_id: null,
@@ -212,31 +213,30 @@ export default {
         channel_type: null,
       };
       const obj4 = AppAnalyticsUtilsDefault;
-      obj.search_session_id = SearchSessionAnalyticsManagerDefault.getSessionId(searchContext);
-      obj.search_location = SearchSessionAnalyticsManagerDefault.getLocation(searchContext);
-      obj.search_query_id = SearchSessionAnalyticsManagerDefault.getQueryId(searchContext);
-      obj.search_query_length = str.trim().length;
-      obj.search_query_content_length = str2.trim().length;
-      obj.guild_id = guildIdFromSearchContext;
-      obj.channel_id = channelIdFromSearchContext;
+      obj5.search_session_id = SearchSessionAnalyticsManagerDefault.getSessionId(searchContext);
+      obj5.search_location = SearchSessionAnalyticsManagerDefault.getLocation(searchContext);
+      obj5.search_query_id = SearchSessionAnalyticsManagerDefault.getQueryId(searchContext);
+      obj5.search_query_length = str.trim().length;
+      obj5.search_query_content_length = str2.trim().length;
+      obj5.guild_id = guildIdFromSearchContext;
+      obj5.channel_id = channelIdFromSearchContext;
       let type;
       if (channel != null) {
         type = channel.type;
       }
-      obj.channel_type = type;
-      obj4.trackWithMetadata(React5.SEARCH_EMPTY_RESULT_MOBILE, obj);
+      obj5.channel_type = type;
+      obj4.trackWithMetadata(React5.SEARCH_EMPTY_RESULT_MOBILE, obj5);
     }
   },
   trackSearchEmptyMessageResult(searchContext) {
     searchContext = searchContext.searchContext;
-    let obj = SearchQueryStore;
     if (!SearchQueryStore.isInitialSearchQuery(searchContext)) {
       const guildIdFromSearchContext = SearchUtils.getGuildIdFromSearchContext(searchContext);
       const channelIdFromSearchContext = SearchUtils.getChannelIdFromSearchContext(searchContext);
       const channel = ChannelStore.getChannel(channelIdFromSearchContext);
-      const str = obj.getQueryString(searchContext);
-      const str2 = obj.getTextInputValue(searchContext);
-      obj = {
+      const str = SearchQueryStore.getQueryString(searchContext);
+      const str2 = SearchQueryStore.getTextInputValue(searchContext);
+      const obj5 = {
         search_session_id: null,
         search_location: null,
         search_query_id: null,
@@ -247,19 +247,19 @@ export default {
         channel_type: null,
       };
       const obj4 = AppAnalyticsUtilsDefault;
-      obj.search_session_id = SearchSessionAnalyticsManagerDefault.getSessionId(searchContext);
-      obj.search_location = SearchSessionAnalyticsManagerDefault.getLocation(searchContext);
-      obj.search_query_id = SearchSessionAnalyticsManagerDefault.getQueryId(searchContext);
-      obj.search_query_length = str.trim().length;
-      obj.search_query_content_length = str2.trim().length;
-      obj.guild_id = guildIdFromSearchContext;
-      obj.channel_id = channelIdFromSearchContext;
+      obj5.search_session_id = SearchSessionAnalyticsManagerDefault.getSessionId(searchContext);
+      obj5.search_location = SearchSessionAnalyticsManagerDefault.getLocation(searchContext);
+      obj5.search_query_id = SearchSessionAnalyticsManagerDefault.getQueryId(searchContext);
+      obj5.search_query_length = str.trim().length;
+      obj5.search_query_content_length = str2.trim().length;
+      obj5.guild_id = guildIdFromSearchContext;
+      obj5.channel_id = channelIdFromSearchContext;
       let type;
       if (channel != null) {
         type = channel.type;
       }
-      obj.channel_type = type;
-      obj4.trackWithMetadata(React5.SEARCH_EMPTY_MESSAGE_RESULT_MOBILE, obj);
+      obj5.channel_type = type;
+      obj4.trackWithMetadata(React5.SEARCH_EMPTY_MESSAGE_RESULT_MOBILE, obj5);
     }
   },
   trackSearchClosed(searchContext) {
@@ -268,70 +268,78 @@ export default {
   trackSearchIndexing(searchContext) {
     searchContext = searchContext.searchContext;
     ({ isHistoricalIndexing, documentsIndexed } = searchContext);
-    const obj = {
+    const obj2 = {
       is_historical_indexing: isHistoricalIndexing,
       documents_indexed: documentsIndexed,
-      search_tab_selected: SearchSessionAnalyticsManagerDefault.getSelectedTab(searchContext),
+      search_tab_selected: null,
       search_location: null,
       search_session_id: null,
       search_query_id: null,
     };
-    obj.search_location = SearchSessionAnalyticsManagerDefault.getLocation(searchContext);
-    obj.search_session_id = SearchSessionAnalyticsManagerDefault.getSessionId(searchContext);
-    obj.search_query_id = SearchSessionAnalyticsManagerDefault.getQueryId(searchContext);
-    obj.trackWithMetadata(React5.SEARCH_V2_INDEXING_VIEWED, obj);
+    const obj = AppAnalyticsUtilsDefault;
+    obj2.search_tab_selected = SearchSessionAnalyticsManagerDefault.getSelectedTab(searchContext);
+    obj2.search_location = SearchSessionAnalyticsManagerDefault.getLocation(searchContext);
+    obj2.search_session_id = SearchSessionAnalyticsManagerDefault.getSessionId(searchContext);
+    obj2.search_query_id = SearchSessionAnalyticsManagerDefault.getQueryId(searchContext);
+    obj.trackWithMetadata(React5.SEARCH_V2_INDEXING_VIEWED, obj2);
   },
   trackSearchHistoryClicked(searchContext) {
     searchContext = searchContext.searchContext;
     const channel = ChannelStore.getChannel(searchContext.channelId);
-    const obj = {
-      search_tab_selected: SearchSessionAnalyticsManagerDefault.getSelectedTab(searchContext),
+    const obj2 = {
+      search_tab_selected: null,
       search_location: null,
       search_session_id: null,
       search_result_channel_type: null,
       search_history_type: null,
     };
-    obj.search_location = SearchSessionAnalyticsManagerDefault.getLocation(searchContext);
-    obj.search_session_id = SearchSessionAnalyticsManagerDefault.getSessionId(searchContext);
+    const obj = AppAnalyticsUtilsDefault;
+    obj2.search_tab_selected = SearchSessionAnalyticsManagerDefault.getSelectedTab(searchContext);
+    obj2.search_location = SearchSessionAnalyticsManagerDefault.getLocation(searchContext);
+    obj2.search_session_id = SearchSessionAnalyticsManagerDefault.getSessionId(searchContext);
     let type;
     if (channel != null) {
       type = channel.type;
     }
-    obj.search_result_channel_type = type;
-    obj.search_history_type = closure_5[searchContext.searchHistoryItemType];
-    obj.trackWithMetadata(React5.SEARCH_V2_HISTORY_CLICKED, obj);
+    obj2.search_result_channel_type = type;
+    obj2.search_history_type = closure_5[searchContext.searchHistoryItemType];
+    obj.trackWithMetadata(React5.SEARCH_V2_HISTORY_CLICKED, obj2);
   },
   trackSuggestedSearchClicked(searchContext) {
     searchContext = searchContext.searchContext;
     const channel = ChannelStore.getChannel(searchContext.channelId);
-    const obj = {
-      search_tab_selected: SearchSessionAnalyticsManagerDefault.getSelectedTab(searchContext),
+    const obj2 = {
+      search_tab_selected: null,
       search_location: null,
       search_session_id: null,
       search_result_channel_type: null,
     };
-    obj.search_location = SearchSessionAnalyticsManagerDefault.getLocation(searchContext);
-    obj.search_session_id = SearchSessionAnalyticsManagerDefault.getSessionId(searchContext);
+    const obj = AppAnalyticsUtilsDefault;
+    obj2.search_tab_selected = SearchSessionAnalyticsManagerDefault.getSelectedTab(searchContext);
+    obj2.search_location = SearchSessionAnalyticsManagerDefault.getLocation(searchContext);
+    obj2.search_session_id = SearchSessionAnalyticsManagerDefault.getSessionId(searchContext);
     let type;
     if (channel != null) {
       type = channel.type;
     }
-    obj.search_result_channel_type = type;
-    obj.trackWithMetadata(React5.SEARCH_V2_SUGGESTED_CLICKED, obj);
+    obj2.search_result_channel_type = type;
+    obj.trackWithMetadata(React5.SEARCH_V2_SUGGESTED_CLICKED, obj2);
   },
   trackSearchFilterAdd(location) {
     ({ searchContext, searchTokenType } = location);
-    const obj = {
-      search_tab_selected: SearchSessionAnalyticsManagerDefault.getSelectedTab(searchContext),
+    const obj2 = {
+      search_tab_selected: null,
       search_location: null,
       search_session_id: null,
       search_query_id: null,
       search_filter_type: null,
       location: null,
     };
-    obj.search_location = SearchSessionAnalyticsManagerDefault.getLocation(searchContext);
-    obj.search_session_id = SearchSessionAnalyticsManagerDefault.getSessionId(searchContext);
-    obj.search_query_id = SearchSessionAnalyticsManagerDefault.getQueryId(searchContext);
+    const obj = AppAnalyticsUtilsDefault;
+    obj2.search_tab_selected = SearchSessionAnalyticsManagerDefault.getSelectedTab(searchContext);
+    obj2.search_location = SearchSessionAnalyticsManagerDefault.getLocation(searchContext);
+    obj2.search_session_id = SearchSessionAnalyticsManagerDefault.getSessionId(searchContext);
+    obj2.search_query_id = SearchSessionAnalyticsManagerDefault.getQueryId(searchContext);
     let str = "filter_from";
     if (constants.FILTER_FROM !== searchTokenType) {
       str = "filter_mentions";
@@ -354,23 +362,25 @@ export default {
         }
       }
     }
-    obj.search_filter_type = str;
-    obj.location = location.location;
-    obj.trackWithMetadata(React5.SEARCH_V2_FILTER_ADD, obj);
+    obj2.search_filter_type = str;
+    obj2.location = location.location;
+    obj.trackWithMetadata(React5.SEARCH_V2_FILTER_ADD, obj2);
   },
   trackSearchFilterRemove(isDefault) {
     ({ searchContext, searchTokenType } = isDefault);
-    const obj = {
-      search_tab_selected: SearchSessionAnalyticsManagerDefault.getSelectedTab(searchContext),
+    const obj2 = {
+      search_tab_selected: null,
       search_location: null,
       search_session_id: null,
       search_query_id: null,
       search_filter_type: null,
       is_default_search_filter: null,
     };
-    obj.search_location = SearchSessionAnalyticsManagerDefault.getLocation(searchContext);
-    obj.search_session_id = SearchSessionAnalyticsManagerDefault.getSessionId(searchContext);
-    obj.search_query_id = SearchSessionAnalyticsManagerDefault.getQueryId(searchContext);
+    const obj = AppAnalyticsUtilsDefault;
+    obj2.search_tab_selected = SearchSessionAnalyticsManagerDefault.getSelectedTab(searchContext);
+    obj2.search_location = SearchSessionAnalyticsManagerDefault.getLocation(searchContext);
+    obj2.search_session_id = SearchSessionAnalyticsManagerDefault.getSessionId(searchContext);
+    obj2.search_query_id = SearchSessionAnalyticsManagerDefault.getQueryId(searchContext);
     let str = "filter_from";
     if (constants.FILTER_FROM !== searchTokenType) {
       str = "filter_mentions";
@@ -393,43 +403,42 @@ export default {
         }
       }
     }
-    obj.search_filter_type = str;
-    obj.is_default_search_filter = isDefault.isDefault;
-    obj.trackWithMetadata(React5.SEARCH_V2_FILTER_REMOVE, obj);
+    obj2.search_filter_type = str;
+    obj2.is_default_search_filter = isDefault.isDefault;
+    obj.trackWithMetadata(React5.SEARCH_V2_FILTER_REMOVE, obj2);
   },
   trackSearchTabSelected(searchContext) {
     searchContext = searchContext.searchContext;
-    const obj = {
-      search_session_id: SearchSessionAnalyticsManagerDefault.getSessionId(searchContext),
-      search_query_id: null,
-      search_tab_selected: null,
-      search_location: null,
-    };
-    obj.search_query_id = SearchSessionAnalyticsManagerDefault.getQueryId(searchContext);
-    obj.search_tab_selected = SearchSessionAnalyticsManagerDefault.getSelectedTab(searchContext);
-    obj.search_location = SearchSessionAnalyticsManagerDefault.getLocation(searchContext);
-    obj.trackWithMetadata(React5.SEARCH_V2_TAB_SELECTED, obj);
+    const obj2 = { search_session_id: null, search_query_id: null, search_tab_selected: null, search_location: null };
+    const obj = AppAnalyticsUtilsDefault;
+    obj2.search_session_id = SearchSessionAnalyticsManagerDefault.getSessionId(searchContext);
+    obj2.search_query_id = SearchSessionAnalyticsManagerDefault.getQueryId(searchContext);
+    obj2.search_tab_selected = SearchSessionAnalyticsManagerDefault.getSelectedTab(searchContext);
+    obj2.search_location = SearchSessionAnalyticsManagerDefault.getLocation(searchContext);
+    obj.trackWithMetadata(React5.SEARCH_V2_TAB_SELECTED, obj2);
   },
   trackSearchJumpToMessage(arg0) {
     ({ searchContext, channelId } = arg0);
     const channel = ChannelStore.getChannel(channelId);
-    const obj = {
-      search_tab_selected: SearchSessionAnalyticsManagerDefault.getSelectedTab(searchContext),
+    const obj2 = {
+      search_tab_selected: null,
       search_location: null,
       search_session_id: null,
       search_query_id: null,
       search_result_channel_type: null,
       search_result_channel_id: null,
     };
-    obj.search_location = SearchSessionAnalyticsManagerDefault.getLocation(searchContext);
-    obj.search_session_id = SearchSessionAnalyticsManagerDefault.getSessionId(searchContext);
-    obj.search_query_id = SearchSessionAnalyticsManagerDefault.getQueryId(searchContext);
+    const obj = AppAnalyticsUtilsDefault;
+    obj2.search_tab_selected = SearchSessionAnalyticsManagerDefault.getSelectedTab(searchContext);
+    obj2.search_location = SearchSessionAnalyticsManagerDefault.getLocation(searchContext);
+    obj2.search_session_id = SearchSessionAnalyticsManagerDefault.getSessionId(searchContext);
+    obj2.search_query_id = SearchSessionAnalyticsManagerDefault.getQueryId(searchContext);
     let type;
     if (channel != null) {
       type = channel.type;
     }
-    obj.search_result_channel_type = type;
-    obj.search_result_channel_id = channelId;
-    obj.trackWithMetadata(React5.SEARCH_V2_JUMP_TO_MESSAGE, obj);
+    obj2.search_result_channel_type = type;
+    obj2.search_result_channel_id = channelId;
+    obj.trackWithMetadata(React5.SEARCH_V2_JUMP_TO_MESSAGE, obj2);
   },
 };

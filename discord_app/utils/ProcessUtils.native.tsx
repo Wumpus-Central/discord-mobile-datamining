@@ -204,7 +204,7 @@ function getCpuUsageElectronProcessTypeDetails() {
   return null;
 }
 prototype["getCpuUsageElectronProcessTypeDetails"] = getCpuUsageElectronProcessTypeDetails;
-tmp = new tmp(
+let tmp5 = new tmp(
   tmp4,
   tmp3,
   tmp2,
@@ -218,8 +218,8 @@ tmp = new tmp(
   dependencyMap,
   exports,
 );
-closure_1 = tmp;
-tmp.shouldCollectHermesInstrumentedStats = false;
+closure_1 = tmp5;
+tmp5.shouldCollectHermesInstrumentedStats = false;
 prop = undefined;
 if (NativeModules != null) {
   prop = NativeModules.SystemResourceManager;
@@ -278,4 +278,4 @@ let timerId = setInterval(() => {
 }, 1000);
 const result = size.fileFinishedImporting("utils/ProcessUtils.native.tsx");
 
-export default tmp;
+export default tmp5;

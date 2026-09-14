@@ -7,13 +7,13 @@ import UserStore from "../../../stores/UserStore.tsx";
 require = fn;
 const MAX_GROUP_DM_PARTICIPANTS = fn(1074).MAX_GROUP_DM_PARTICIPANTS;
 const PremiumTypes = fn(1373).PremiumTypes;
-let obj = { MARKETING: "marketing", CHECKOUT: "checkout" };
-obj = { NONE: "none", MANAGE: "manage", MARKETING: "marketing", CHECKOUT: "checkout" };
+const GroupDMNitroAcquisitionStrategy = { MARKETING: "marketing", CHECKOUT: "checkout" };
+let obj2 = { NONE: "none", MANAGE: "manage", MARKETING: "marketing", CHECKOUT: "checkout" };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/group_dm/native/GroupDMNitroUpsellModel.tsx");
 
-export const GroupDMNitroAcquisitionStrategy = obj;
-export const GroupDMNitroUpsellRoute = obj;
+export { GroupDMNitroAcquisitionStrategy };
+export const GroupDMNitroUpsellRoute = obj2;
 export const getGroupDMNitroAudience = function getGroupDMNitroAudience(premiumType) {
   if (flag === undefined) {
     flag = false;
@@ -97,14 +97,14 @@ export const getGroupDMNitroUpsellRoute = function getGroupDMNitroUpsellRoute(au
   }
   if (tmp2) {
     if (tmp) {
-      let CHECKOUT = obj.MANAGE;
+      let CHECKOUT = obj2.MANAGE;
     } else if (acquisitionStrategy === obj.MARKETING) {
-      CHECKOUT = obj.MARKETING;
+      CHECKOUT = obj2.MARKETING;
     } else {
-      CHECKOUT = obj.CHECKOUT;
+      CHECKOUT = obj2.CHECKOUT;
     }
   } else {
-    return obj.NONE;
+    return obj2.NONE;
   }
 };
 export const getGroupDMAddMembersEntryAction = function getGroupDMAddMembersEntryAction(audience) {

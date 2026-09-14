@@ -16,6 +16,8 @@ export const onNotifyFriendsOnProfileUpdateSettingsChanged = function onNotifyFr
 ) {
   const NotifyFriendsOnProfileUpdate = UserSettings.NotifyFriendsOnProfileUpdate;
   NotifyFriendsOnProfileUpdate.updateSetting(notify_friends_on_profile_update);
-  const obj = { update_type: constants.ACCOUNT, notify_friends_on_profile_update };
-  obj.track(AnalyticEvents.NOTIFICATION_SETTINGS_UPDATED, obj);
+  AnalyticsUtilsDefault.track(AnalyticEvents.NOTIFICATION_SETTINGS_UPDATED, {
+    update_type: constants.ACCOUNT,
+    notify_friends_on_profile_update,
+  });
 };

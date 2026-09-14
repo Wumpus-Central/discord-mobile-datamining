@@ -31,10 +31,11 @@ import _mod3456 from "../../../_runtime/metro/03456__.js";
 import _mod3457 from "../../../_runtime/metro/03457__.js";
 import _mod3458 from "../../../_runtime/metro/03458__.js";
 import _mod3459 from "../../../_runtime/metro/03459__.js";
-import 01155__ from "../../../_runtime/metro/01155__.js";
+import module_1153_mod from "../../../_runtime/metro/01153__.js";
 import size from "../../../_runtime/metro/00002__.js";
 
-const loader = module_1155.createLoader({
+let module_1153 = module_1153_mod;
+const loader = module_1153.createLoader({
   bg() {
     const jsonAsset = AssetJsonUtils.loadJsonAsset(_mod3429);
     return jsonAsset.then((result) => ({ default: result }));
@@ -160,7 +161,8 @@ const loader = module_1155.createLoader({
     return jsonAsset.then((result) => ({ default: result }));
   }
 }, "en-US");
-const messagesProxy = module_1155.makeMessagesProxy(loader);
+let module_1153 = module_1153_mod;
+const messagesProxy = module_1153.makeMessagesProxy(loader);
 const result = size.fileFinishedImporting("modules/video_player/VideoPlayer.messages.js");
 
 export default messagesProxy;

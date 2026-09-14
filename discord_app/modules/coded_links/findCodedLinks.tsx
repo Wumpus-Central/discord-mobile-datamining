@@ -10,7 +10,7 @@ import InviteTypeUtils from "../instant_invite/InviteTypeUtils.tsx";
 import ExperimentEmbedUtils from "../experiments/ExperimentEmbedUtils.tsx";
 import Authorize from "../oauth2/Authorize.tsx";
 import InviteStore from "../../stores/InviteStore.tsx";
-import RegexUtils from "../../utils/RegexUtils.tsx";
+import RegexUtils_mod from "../../utils/RegexUtils.tsx";
 
 require = fn;
 function getPathsFromURL(target) {
@@ -48,12 +48,12 @@ function getPathsFromURL(target) {
         replaced1 = str5.replace(/^www[.]/i, "");
       }
       let tmp7 = null;
-      if (replaced1 === obj.host) {
+      if (replaced1 === obj7.host) {
         let str7 = url.pathname;
         if (str7 == null) {
           str7 = "";
         }
-        let str8 = tmp5.pathPrefix;
+        let str8 = obj7.pathPrefix;
         if (str8 == null) {
           str8 = "";
         }
@@ -73,12 +73,12 @@ function getPathsFromURL(target) {
         replaced2 = str10.replace(/^www[.]/i, "");
       }
       let tmp12 = null;
-      if (replaced2 === obj2.host) {
+      if (replaced2 === obj13.host) {
         let str12 = url.pathname;
         if (str12 == null) {
           str12 = "";
         }
-        let str13 = obj2.pathPrefix;
+        let str13 = obj13.pathPrefix;
         if (str13 == null) {
           str13 = "";
         }
@@ -98,12 +98,12 @@ function getPathsFromURL(target) {
           replaced3 = str32.replace(/^www[.]/i, "");
         }
         let tmp16 = null;
-        if (replaced3 === obj4.host) {
+        if (replaced3 === obj19.host) {
           let str16 = url.pathname;
           if (str16 == null) {
             str16 = "";
           }
-          let str17 = obj4.pathPrefix;
+          let str17 = obj19.pathPrefix;
           if (str17 == null) {
             str17 = "";
           }
@@ -125,12 +125,12 @@ function getPathsFromURL(target) {
           replaced4 = str33.replace(/^www[.]/i, "");
         }
         let tmp20 = null;
-        if (replaced4 === obj6.host) {
+        if (replaced4 === obj23.host) {
           let str20 = url.pathname;
           if (str20 == null) {
             str20 = "";
           }
-          let str21 = obj6.pathPrefix;
+          let str21 = obj23.pathPrefix;
           if (str21 == null) {
             str21 = "";
           }
@@ -152,12 +152,12 @@ function getPathsFromURL(target) {
           replaced5 = str34.replace(/^www[.]/i, "");
         }
         let tmp24 = null;
-        if (replaced5 === obj9.host) {
+        if (replaced5 === obj26.host) {
           let str24 = url.pathname;
           if (str24 == null) {
             str24 = "";
           }
-          let str25 = obj9.pathPrefix;
+          let str25 = obj26.pathPrefix;
           if (str25 == null) {
             str25 = "";
           }
@@ -179,12 +179,12 @@ function getPathsFromURL(target) {
           replaced6 = str35.replace(/^www[.]/i, "");
         }
         let tmp28 = null;
-        if (replaced6 === obj11.host) {
+        if (replaced6 === obj41.host) {
           let str28 = url.pathname;
           if (str28 == null) {
             str28 = "";
           }
-          let str29 = obj11.pathPrefix;
+          let str29 = obj41.pathPrefix;
           if (str29 == null) {
             str29 = "";
           }
@@ -236,102 +236,108 @@ const re21 = tmp3;
 if (null == INVITE_HOST) {
   let obj = { host: null, pathPrefix: null };
 } else if (INVITE_HOST.indexOf("/") >= 0) {
-  let obj1 = fn(1367);
-  let parsed = obj1.parse(INVITE_HOST, undefined, true);
-  obj = { host: null, pathPrefix: null };
+  let parsed = fn(1367).parse(INVITE_HOST, undefined, true);
   ({ host: obj3.host, pathname: obj3.pathPrefix } = parsed);
+  obj = { host: null, pathPrefix: null };
+  const obj2 = fn(1367);
+  let obj4 = { host: null, pathPrefix: null };
 } else {
   obj = { host: INVITE_HOST, pathPrefix: null };
 }
 if (null == GUILD_TEMPLATE_HOST) {
-  obj = { host: null, pathPrefix: null };
+  let obj7 = { host: null, pathPrefix: null };
 } else if (GUILD_TEMPLATE_HOST.indexOf("/") >= 0) {
-  let obj4 = fn(1367);
-  const parsed1 = obj4.parse(GUILD_TEMPLATE_HOST, undefined, true);
-  obj1 = { host: null, pathPrefix: null };
+  const parsed1 = fn(1367).parse(GUILD_TEMPLATE_HOST, undefined, true);
   ({ host: obj6.host, pathname: obj6.pathPrefix } = parsed1);
-  obj = obj1;
+  obj7 = { host: null, pathPrefix: null };
+  let obj10 = { host: null, pathPrefix: null };
+  const obj5 = fn(1367);
 } else {
-  obj = { host: GUILD_TEMPLATE_HOST, pathPrefix: null };
+  obj7 = { host: GUILD_TEMPLATE_HOST, pathPrefix: null };
 }
 if (WEBAPP_ENDPOINT == null) {
   let _HermesInternal = HermesInternal;
   WEBAPP_ENDPOINT = "//canary." + PRIMARY_DOMAIN;
 }
 if (null == WEBAPP_ENDPOINT) {
-  let obj2 = { host: null, pathPrefix: null };
+  let obj13 = { host: null, pathPrefix: null };
 } else if (WEBAPP_ENDPOINT.indexOf("/") >= 0) {
-  let obj7 = fn(1367);
-  const parsed2 = obj7.parse(WEBAPP_ENDPOINT, undefined, true);
-  let obj3 = { host: null, pathPrefix: null };
+  const parsed2 = fn(1367).parse(WEBAPP_ENDPOINT, undefined, true);
   ({ host: obj9.host, pathname: obj9.pathPrefix } = parsed2);
-  obj2 = obj3;
+  obj13 = { host: null, pathPrefix: null };
+  const obj16 = { host: null, pathPrefix: null };
+  const obj8 = fn(1367);
 } else {
-  obj2 = { host: WEBAPP_ENDPOINT, pathPrefix: null };
+  obj13 = { host: WEBAPP_ENDPOINT, pathPrefix: null };
 }
 let combined = "//canary." + PRIMARY_DOMAIN;
 if (null == combined) {
-  obj4 = { host: null, pathPrefix: null };
+  let obj19 = { host: null, pathPrefix: null };
 } else if (combined.indexOf("/") >= 0) {
-  let obj10 = fn(1367);
-  const parsed3 = obj10.parse(combined, undefined, true);
+  const parsed3 = fn(1367).parse(combined, undefined, true);
   ({ host: obj12.host, pathname: obj12.pathPrefix } = parsed3);
-  obj4 = { host: null, pathPrefix: null };
-  let obj5 = { host: null, pathPrefix: null };
+  obj19 = { host: null, pathPrefix: null };
+  let obj11 = fn(1367);
+  let obj22 = { host: null, pathPrefix: null };
 } else {
-  obj4 = { host: combined, pathPrefix: null };
+  obj19 = { host: combined, pathPrefix: null };
 }
 let combined1 = "//ptb." + PRIMARY_DOMAIN;
 if (null == combined1) {
-  let obj6 = { host: null, pathPrefix: null };
+  let obj23 = { host: null, pathPrefix: null };
 } else if (combined1.indexOf("/") >= 0) {
   const parsed4 = fn(1367).parse(combined1, undefined, true);
-  obj7 = { host: null, pathPrefix: null };
   ({ host: obj15.host, pathname: obj15.pathPrefix } = parsed4);
-  obj6 = obj7;
-  let obj14 = fn(1367);
+  obj23 = { host: null, pathPrefix: null };
+  const obj14 = fn(1367);
+  let obj24 = { host: null, pathPrefix: null };
 } else {
-  obj6 = { host: combined1, pathPrefix: null };
+  obj23 = { host: combined1, pathPrefix: null };
 }
 if ("discordapp.com".indexOf("/") >= 0) {
   const parsed5 = fn(1367).parse("discordapp.com", undefined, true);
   ({ host: obj18.host, pathname: obj18.pathPrefix } = parsed5);
-  let obj9 = { host: null, pathPrefix: null };
+  let obj26 = { host: null, pathPrefix: null };
   let obj17 = fn(1367);
-  let obj8 = { host: null, pathPrefix: null };
+  let obj25 = { host: null, pathPrefix: null };
 } else {
-  obj9 = { host: "discordapp.com", pathPrefix: null };
+  obj26 = { host: "discordapp.com", pathPrefix: null };
 }
 if ("discord.com".indexOf("/") >= 0) {
   const parsed6 = fn(1367).parse("discord.com", undefined, true);
-  obj10 = { host: null, pathPrefix: null };
   ({ host: obj21.host, pathname: obj21.pathPrefix } = parsed6);
-  let obj11 = obj10;
+  let obj41 = { host: null, pathPrefix: null };
   let obj20 = fn(1367);
+  let obj27 = { host: null, pathPrefix: null };
 } else {
-  obj11 = { host: "discord.com", pathPrefix: null };
+  obj41 = { host: "discord.com", pathPrefix: null };
 }
+let RegexUtils = RegexUtils_mod;
 let str7 = obj.host;
 if (str7 == null) {
   str7 = "";
 }
 let items = [RegexUtils.escape(str7), , , ,];
-let str8 = obj.host;
+let RegexUtils = RegexUtils_mod;
+let str8 = obj7.host;
 if (str8 == null) {
   str8 = "";
 }
 items[1] = RegexUtils.escape(str8);
-let str9 = obj2.host;
+let RegexUtils = RegexUtils_mod;
+let str9 = obj13.host;
 if (str9 == null) {
   str9 = "";
 }
 items[2] = RegexUtils.escape(str9);
-let str10 = obj9.host;
+let RegexUtils = RegexUtils_mod;
+let str10 = obj26.host;
 if (str10 == null) {
   str10 = "";
 }
 items[3] = RegexUtils.escape(str10);
-let str11 = obj11.host;
+let RegexUtils = RegexUtils_mod;
+let str11 = obj41.host;
 if (str11 == null) {
   str11 = "";
 }
@@ -369,31 +375,27 @@ function findCodedLinks(str) {
                     query = url.query;
                   }
                 }
-                obj = BuildOverrideUtils;
                 if (obj.isBuildOverrideLink(iter)) {
-                  let obj1 = set;
                   if (!set.has(iter)) {
-                    obj1.add(iter);
-                    obj = { type: CodedLink.CodedLinkType.BUILD_OVERRIDE, code: iter, url: iter };
-                    items.push(obj);
+                    set.add(iter);
+                    const obj3 = { type: CodedLink.CodedLinkType.BUILD_OVERRIDE, code: iter, url: iter };
+                    items.push(obj3);
                   }
                 }
-                let tmp4Result = BuildOverrideUtils;
+                obj = BuildOverrideUtils;
                 if (tmp4Result.isManualBuildOverrideLink(iter)) {
-                  obj4 = set;
                   if (!set.has(iter)) {
-                    obj4.add(iter);
-                    obj = { type: CodedLink.CodedLinkType.MANUAL_BUILD_OVERRIDE, code: iter, url: iter };
-                    items.push(obj);
+                    set.add(iter);
+                    const obj4 = { type: CodedLink.CodedLinkType.MANUAL_BUILD_OVERRIDE, code: iter, url: iter };
+                    items.push(obj4);
                   }
                 }
-                tmp4Result = ExperimentEmbedUtils;
-                if (tmp4Result.isExperimentEmbedURL(iter)) {
-                  let obj7 = set;
+                tmp4Result = BuildOverrideUtils;
+                if (tmp4Result8.isExperimentEmbedURL(iter)) {
                   if (!set.has(iter)) {
-                    obj7.add(iter);
-                    obj1 = { type: CodedLink.CodedLinkType.EXPERIMENT, code: iter, url: iter };
-                    items.push(obj1);
+                    set.add(iter);
+                    const obj6 = { type: CodedLink.CodedLinkType.EXPERIMENT, code: iter, url: iter };
+                    items.push(obj6);
                   }
                 }
                 let match;
@@ -408,31 +410,27 @@ function findCodedLinks(str) {
                     );
                     invite = invite.getInvite(inviteKeyFromUrlParams);
                     if (null != invite) {
-                      if (tmp4Result2.isEmbeddedApplicationInvite(invite)) {
-                        let obj13 = set;
+                      if (tmp4Result10.isEmbeddedApplicationInvite(invite)) {
                         if (!set.has(inviteKeyFromUrlParams)) {
-                          obj13.add(inviteKeyFromUrlParams);
-                          obj2 = {
+                          set.add(inviteKeyFromUrlParams);
+                          obj7 = {
                             type: CodedLink.CodedLinkType.EMBEDDED_ACTIVITY_INVITE,
                             code: inviteKeyFromUrlParams,
                             url: iter,
                           };
-                          items.push(obj2);
+                          items.push(obj7);
                         }
                       }
-                      tmp4Result2 = InviteTypeUtils;
+                      tmp4Result10 = InviteTypeUtils;
                     }
                     if (iter.includes("\\")) {
                       return 0;
-                    } else {
-                      obj11 = set;
-                      if (!set.has(inviteKeyFromUrlParams)) {
-                        obj11.add(inviteKeyFromUrlParams);
-                        const obj3 = { type: CodedLink.CodedLinkType.INVITE, code: inviteKeyFromUrlParams, url: iter };
-                        items.push(obj3);
-                      }
+                    } else if (!set.has(inviteKeyFromUrlParams)) {
+                      set.add(inviteKeyFromUrlParams);
+                      const obj9 = { type: CodedLink.CodedLinkType.INVITE, code: inviteKeyFromUrlParams, url: iter };
+                      items.push(obj9);
                     }
-                    const tmp4Result1 = InviteCodeUtils;
+                    const tmp4Result9 = InviteCodeUtils;
                   }
                 }
                 let match1;
@@ -441,11 +439,10 @@ function findCodedLinks(str) {
                 }
                 if (null != match1) {
                   const substr = templateHostRemainingPath.substring(1);
-                  let obj15 = set;
                   if (!set.has(substr)) {
-                    obj15.add(substr);
-                    obj4 = { type: CodedLink.CodedLinkType.TEMPLATE, code: substr, url: iter };
-                    items.push(obj4);
+                    set.add(substr);
+                    const obj10 = { type: CodedLink.CodedLinkType.TEMPLATE, code: substr, url: iter };
+                    items.push(obj10);
                   }
                 }
                 let match2;
@@ -462,21 +459,21 @@ function findCodedLinks(str) {
                         match2[2],
                         url.search,
                       );
-                      let obj20 = set;
                       if (!set.has(inviteKeyFromUrlParams1)) {
-                        obj20.add(inviteKeyFromUrlParams1);
-                        const obj5 = { type: CodedLink.CodedLinkType.INVITE, code: inviteKeyFromUrlParams1, url: iter };
-                        items.push(obj5);
+                        set.add(inviteKeyFromUrlParams1);
+                        const obj11 = {
+                          type: CodedLink.CodedLinkType.INVITE,
+                          code: inviteKeyFromUrlParams1,
+                          url: iter,
+                        };
+                        items.push(obj11);
                       }
-                      const tmp4Result3 = InviteCodeUtils;
+                      const tmp4Result11 = InviteCodeUtils;
                     }
-                  } else {
-                    let obj17 = set;
-                    if (!set.has(match2[2])) {
-                      obj17.add(tmp34);
-                      obj6 = { type: formatted, code: tmp34, url: iter };
-                      items.push(obj6);
-                    }
+                  } else if (!set.has(match2[2])) {
+                    set.add(tmp34);
+                    obj13 = { type: formatted, code: tmp34, url: iter };
+                    items.push(obj13);
                   }
                 }
                 let match3;
@@ -485,11 +482,10 @@ function findCodedLinks(str) {
                 }
                 if (null != match3) {
                   const replaced = primaryHostRemainingPath.replace("/channels/", "");
-                  let obj22 = set;
                   if (!set.has(replaced)) {
-                    obj22.add(replaced);
-                    obj7 = { type: CodedLink.CodedLinkType.CHANNEL_LINK, code: replaced, url: iter };
-                    items.push(obj7);
+                    set.add(replaced);
+                    const obj15 = { type: CodedLink.CodedLinkType.CHANNEL_LINK, code: replaced, url: iter };
+                    items.push(obj15);
                   }
                 }
                 let tmp48 = null;
@@ -501,8 +497,8 @@ function findCodedLinks(str) {
                     if (match4.length >= 4) {
                       let tmp51 = null;
                       if (null != match4[2]) {
-                        const obj8 = { guildId: match4[1], guildEventId: tmp50, recurrenceId: match4[4] };
-                        tmp51 = obj8;
+                        const obj17 = { guildId: match4[1], guildEventId: tmp50, recurrenceId: match4[4] };
+                        tmp51 = obj17;
                       }
                       tmp48 = tmp51;
                     }
@@ -519,8 +515,8 @@ function findCodedLinks(str) {
                   const sum = combined + str7;
                   if (!set.has(sum)) {
                     set.add(sum);
-                    obj9 = { type: CodedLink.CodedLinkType.EVENT, code: sum, url: iter };
-                    items.push(obj9);
+                    obj19 = { type: CodedLink.CodedLinkType.EVENT, code: sum, url: iter };
+                    items.push(obj19);
                   }
                 }
                 let match5;
@@ -548,11 +544,11 @@ function findCodedLinks(str) {
                     if (!tmp58) {
                       if (!set.has(clientId)) {
                         set.add(clientId);
-                        const obj10 = { type: CodedLink.CodedLinkType.APP_OAUTH2_LINK, code: clientId, url: iter };
-                        items.push(obj10);
+                        const obj20 = { type: CodedLink.CodedLinkType.APP_OAUTH2_LINK, code: clientId, url: iter };
+                        items.push(obj20);
                       }
                     }
-                    const tmp4Result4 = Authorize;
+                    const tmp4Result12 = Authorize;
                   }
                 }
                 let match6;
@@ -562,8 +558,8 @@ function findCodedLinks(str) {
                 if (null != match6) {
                   if (!set.has(match6[2])) {
                     set.add(tmp65);
-                    obj11 = { type: CodedLink.CodedLinkType.APP_DIRECTORY_PROFILE, code: tmp65, url: iter };
-                    items.push(obj11);
+                    const obj22 = { type: CodedLink.CodedLinkType.APP_DIRECTORY_PROFILE, code: tmp65, url: iter };
+                    items.push(obj22);
                   }
                 }
                 let match7;
@@ -578,18 +574,18 @@ function findCodedLinks(str) {
                     );
                     if (!set.has(storefrontSKUCodedLink)) {
                       set.add(storefrontSKUCodedLink);
-                      const obj12 = {
+                      const obj24 = {
                         type: CodedLink.CodedLinkType.APP_DIRECTORY_STOREFRONT_SKU,
                         code: storefrontSKUCodedLink,
                         url: iter,
                       };
-                      items.push(obj12);
+                      items.push(obj24);
                     }
-                    const tmp4Result5 = storefrontMessageEmbedCodedLink;
+                    const tmp4Result13 = storefrontMessageEmbedCodedLink;
                   } else if (!set.has(tmp150)) {
                     set.add(tmp150);
-                    obj13 = { type: CodedLink.CodedLinkType.APP_DIRECTORY_STOREFRONT, code: tmp150, url: iter };
-                    items.push(obj13);
+                    const obj25 = { type: CodedLink.CodedLinkType.APP_DIRECTORY_STOREFRONT, code: tmp150, url: iter };
+                    items.push(obj25);
                   }
                 }
                 let match8;
@@ -599,8 +595,8 @@ function findCodedLinks(str) {
                 if (null != match8) {
                   if (!set.has(match8[1])) {
                     set.add(tmp80);
-                    const obj14 = { type: CodedLink.CodedLinkType.ACTIVITY_BOOKMARK, code: tmp80, url: iter };
-                    items.push(obj14);
+                    const obj27 = { type: CodedLink.CodedLinkType.ACTIVITY_BOOKMARK, code: tmp80, url: iter };
+                    items.push(obj27);
                   }
                 }
                 let match9;
@@ -612,8 +608,8 @@ function findCodedLinks(str) {
                   const combined1 = "" + match9[1] + "-" + match9[2];
                   if (!set.has(combined1)) {
                     set.add(combined1);
-                    obj15 = { type: CodedLink.CodedLinkType.GUILD_PRODUCT, code: combined1, url: iter };
-                    items.push(obj15);
+                    const obj29 = { type: CodedLink.CodedLinkType.GUILD_PRODUCT, code: combined1, url: iter };
+                    items.push(obj29);
                   }
                 }
                 let match10;
@@ -623,8 +619,8 @@ function findCodedLinks(str) {
                 if (null != match10) {
                   if (!set.has(match10[1])) {
                     set.add(tmp93);
-                    const obj16 = { type: CodedLink.CodedLinkType.SERVER_SHOP, code: tmp93, url: iter };
-                    items.push(obj16);
+                    const obj31 = { type: CodedLink.CodedLinkType.SERVER_SHOP, code: tmp93, url: iter };
+                    items.push(obj31);
                   }
                 }
                 let match11;
@@ -640,8 +636,8 @@ function findCodedLinks(str) {
                   const combined2 = "" + match11[3] + "-" + tmp99;
                   if (!set.has(combined2)) {
                     set.add(combined2);
-                    obj17 = { type: CodedLink.CodedLinkType.SOCIAL_LAYER_STOREFRONT, code: combined2, url: iter };
-                    items.push(obj17);
+                    const obj33 = { type: CodedLink.CodedLinkType.SOCIAL_LAYER_STOREFRONT, code: combined2, url: iter };
+                    items.push(obj33);
                   }
                 }
                 const str13 = getPathsFromURL(iter).primaryHostRemainingPath;
@@ -659,8 +655,8 @@ function findCodedLinks(str) {
                 if (null != tmp107) {
                   if (!set.has(tmp107)) {
                     set.add(tmp107);
-                    const obj18 = { type: CodedLink.CodedLinkType.QUESTS_EMBED, code: tmp107, url: iter };
-                    items.push(obj18);
+                    const obj34 = { type: CodedLink.CodedLinkType.QUESTS_EMBED, code: tmp107, url: iter };
+                    items.push(obj34);
                   }
                 }
                 let match13;
@@ -670,8 +666,8 @@ function findCodedLinks(str) {
                 if (null != match13) {
                   if (!set.has(match13[1])) {
                     set.add(tmp113);
-                    const obj19 = { type: CodedLink.CodedLinkType.GAME_PROFILE, code: tmp113, url: iter };
-                    items.push(obj19);
+                    const obj36 = { type: CodedLink.CodedLinkType.GAME_PROFILE, code: tmp113, url: iter };
+                    items.push(obj36);
                   }
                 }
                 let match14;
@@ -681,8 +677,8 @@ function findCodedLinks(str) {
                 if (null != match14) {
                   if (!set.has(match14[1])) {
                     set.add(tmp119);
-                    obj20 = { type: CodedLink.CodedLinkType.GAME_SERVER_SHARE, code: tmp119, url: iter };
-                    items.push(obj20);
+                    const obj38 = { type: CodedLink.CodedLinkType.GAME_SERVER_SHARE, code: tmp119, url: iter };
+                    items.push(obj38);
                   }
                 }
                 let match15;
@@ -692,31 +688,31 @@ function findCodedLinks(str) {
                 if (null != match15) {
                   if (!set.has(match15[1])) {
                     set.add(tmp125);
-                    const obj21 = { type: CodedLink.CodedLinkType.USER_PROFILE, code: tmp125, url: iter };
-                    items.push(obj21);
+                    const obj40 = { type: CodedLink.CodedLinkType.USER_PROFILE, code: tmp125, url: iter };
+                    items.push(obj40);
                   }
                 }
                 if ("/shop" === primaryHostRemainingPath) {
                   let parsed = null;
                   if (null != query) {
                     parsed = keysSorter.parse(query);
-                    const tmp4Result6 = keysSorter;
+                    const tmp4Result14 = keysSorter;
                   }
                   let str15;
                   if (parsed != null) {
                     str15 = parsed.tab;
                   }
                   if (str15 === constants.GAME_SHOPS) {
-                    applicationId = undefined;
+                    let applicationId1;
                     if (parsed != null) {
-                      applicationId = parsed.applicationId;
+                      applicationId1 = parsed.applicationId;
                     }
-                    if (null != applicationId) {
-                      skuId = undefined;
+                    if (null != applicationId1) {
+                      let skuId1;
                       if (parsed != null) {
-                        skuId = parsed.skuId;
+                        skuId1 = parsed.skuId;
                       }
-                      if (null != skuId) {
+                      if (null != skuId1) {
                         ({ applicationId, skuId } = parsed);
                         let tmp140 = typeof applicationId === "string";
                         if (typeof applicationId === "string") {
@@ -727,12 +723,12 @@ function findCodedLinks(str) {
                           const combined3 = "" + skuId + "-" + applicationId;
                           if (!set.has(combined3)) {
                             set.add(combined3);
-                            obj22 = {
+                            const obj42 = {
                               type: CodedLink.CodedLinkType.SOCIAL_LAYER_STOREFRONT_APP,
                               code: combined3,
                               url: iter,
                             };
-                            items.push(obj22);
+                            items.push(obj42);
                           }
                         }
                       }
@@ -756,10 +752,11 @@ function findCodedLinks(str) {
                   const combined4 = "" + str15 + "-" + str17;
                   if (!set.has(combined4)) {
                     set.add(combined4);
-                    const obj23 = { type: CodedLink.CodedLinkType.COLLECTIBLES_SHOP, code: combined4, url: iter };
-                    items.push(obj23);
+                    const obj44 = { type: CodedLink.CodedLinkType.COLLECTIBLES_SHOP, code: combined4, url: iter };
+                    items.push(obj44);
                   }
                 }
+                tmp4Result8 = ExperimentEmbedUtils;
               }
             }
             return 0;
@@ -807,12 +804,12 @@ export const remainingPathFromDiscordHostMatch = function remainingPathFromDisco
     replaced = str.replace(/^www[.]/i, "");
   }
   let tmp3 = null;
-  if (replaced === obj2.host) {
+  if (replaced === obj13.host) {
     let str3 = parseURLSafelyResult.pathname;
     if (str3 == null) {
       str3 = "";
     }
-    let str4 = obj2.pathPrefix;
+    let str4 = obj13.pathPrefix;
     if (str4 == null) {
       str4 = "";
     }
@@ -832,12 +829,12 @@ export const remainingPathFromDiscordHostMatch = function remainingPathFromDisco
       replaced1 = str22.replace(/^www[.]/i, "");
     }
     let tmp7 = null;
-    if (replaced1 === obj4.host) {
+    if (replaced1 === obj19.host) {
       let str7 = parseURLSafelyResult.pathname;
       if (str7 == null) {
         str7 = "";
       }
-      let str8 = obj4.pathPrefix;
+      let str8 = obj19.pathPrefix;
       if (str8 == null) {
         str8 = "";
       }
@@ -859,12 +856,12 @@ export const remainingPathFromDiscordHostMatch = function remainingPathFromDisco
       replaced2 = str23.replace(/^www[.]/i, "");
     }
     let tmp11 = null;
-    if (replaced2 === obj6.host) {
+    if (replaced2 === obj23.host) {
       let str11 = parseURLSafelyResult.pathname;
       if (str11 == null) {
         str11 = "";
       }
-      let str12 = obj6.pathPrefix;
+      let str12 = obj23.pathPrefix;
       if (str12 == null) {
         str12 = "";
       }
@@ -886,12 +883,12 @@ export const remainingPathFromDiscordHostMatch = function remainingPathFromDisco
       replaced3 = str24.replace(/^www[.]/i, "");
     }
     let tmp15 = null;
-    if (replaced3 === obj9.host) {
+    if (replaced3 === obj26.host) {
       let str15 = parseURLSafelyResult.pathname;
       if (str15 == null) {
         str15 = "";
       }
-      let str16 = obj9.pathPrefix;
+      let str16 = obj26.pathPrefix;
       if (str16 == null) {
         str16 = "";
       }
@@ -913,12 +910,12 @@ export const remainingPathFromDiscordHostMatch = function remainingPathFromDisco
       replaced4 = str25.replace(/^www[.]/i, "");
     }
     let tmp19 = null;
-    if (replaced4 === obj11.host) {
+    if (replaced4 === obj41.host) {
       let str19 = parseURLSafelyResult.pathname;
       if (str19 == null) {
         str19 = "";
       }
-      let str20 = obj11.pathPrefix;
+      let str20 = obj41.pathPrefix;
       if (str20 == null) {
         str20 = "";
       }
@@ -950,7 +947,7 @@ export const isSuspiciousCodedLink = function isSuspiciousCodedLink(arr) {
       if (replaced === obj.host) {
         return true;
       } else {
-        const items = [obj2, obj4, obj6, obj9, obj11];
+        const items = [obj13, obj19, obj23, obj26, obj41];
         if (
           items.some((host) => {
             let replaced;
@@ -1041,31 +1038,27 @@ export const findCodedLink = function findCodedLink(sanitizeUrlResult) {
                     query = url.query;
                   }
                 }
-                obj = BuildOverrideUtils;
                 if (obj.isBuildOverrideLink(iter)) {
-                  let obj1 = set;
                   if (!set.has(iter)) {
-                    obj1.add(iter);
-                    obj = { type: CodedLink.CodedLinkType.BUILD_OVERRIDE, code: iter, url: iter };
-                    items.push(obj);
+                    set.add(iter);
+                    const obj3 = { type: CodedLink.CodedLinkType.BUILD_OVERRIDE, code: iter, url: iter };
+                    items.push(obj3);
                   }
                 }
-                let tmp4Result = BuildOverrideUtils;
+                obj = BuildOverrideUtils;
                 if (tmp4Result.isManualBuildOverrideLink(iter)) {
-                  obj4 = set;
                   if (!set.has(iter)) {
-                    obj4.add(iter);
-                    obj = { type: CodedLink.CodedLinkType.MANUAL_BUILD_OVERRIDE, code: iter, url: iter };
-                    items.push(obj);
+                    set.add(iter);
+                    const obj4 = { type: CodedLink.CodedLinkType.MANUAL_BUILD_OVERRIDE, code: iter, url: iter };
+                    items.push(obj4);
                   }
                 }
-                tmp4Result = ExperimentEmbedUtils;
-                if (tmp4Result.isExperimentEmbedURL(iter)) {
-                  let obj7 = set;
+                tmp4Result = BuildOverrideUtils;
+                if (tmp4Result8.isExperimentEmbedURL(iter)) {
                   if (!set.has(iter)) {
-                    obj7.add(iter);
-                    obj1 = { type: CodedLink.CodedLinkType.EXPERIMENT, code: iter, url: iter };
-                    items.push(obj1);
+                    set.add(iter);
+                    const obj6 = { type: CodedLink.CodedLinkType.EXPERIMENT, code: iter, url: iter };
+                    items.push(obj6);
                   }
                 }
                 let match;
@@ -1080,31 +1073,27 @@ export const findCodedLink = function findCodedLink(sanitizeUrlResult) {
                     );
                     invite = invite.getInvite(inviteKeyFromUrlParams);
                     if (null != invite) {
-                      if (tmp4Result2.isEmbeddedApplicationInvite(invite)) {
-                        let obj13 = set;
+                      if (tmp4Result10.isEmbeddedApplicationInvite(invite)) {
                         if (!set.has(inviteKeyFromUrlParams)) {
-                          obj13.add(inviteKeyFromUrlParams);
-                          obj2 = {
+                          set.add(inviteKeyFromUrlParams);
+                          obj7 = {
                             type: CodedLink.CodedLinkType.EMBEDDED_ACTIVITY_INVITE,
                             code: inviteKeyFromUrlParams,
                             url: iter,
                           };
-                          items.push(obj2);
+                          items.push(obj7);
                         }
                       }
-                      tmp4Result2 = InviteTypeUtils;
+                      tmp4Result10 = InviteTypeUtils;
                     }
                     if (iter.includes("\\")) {
                       return 0;
-                    } else {
-                      obj11 = set;
-                      if (!set.has(inviteKeyFromUrlParams)) {
-                        obj11.add(inviteKeyFromUrlParams);
-                        const obj3 = { type: CodedLink.CodedLinkType.INVITE, code: inviteKeyFromUrlParams, url: iter };
-                        items.push(obj3);
-                      }
+                    } else if (!set.has(inviteKeyFromUrlParams)) {
+                      set.add(inviteKeyFromUrlParams);
+                      const obj9 = { type: CodedLink.CodedLinkType.INVITE, code: inviteKeyFromUrlParams, url: iter };
+                      items.push(obj9);
                     }
-                    const tmp4Result1 = InviteCodeUtils;
+                    const tmp4Result9 = InviteCodeUtils;
                   }
                 }
                 let match1;
@@ -1113,11 +1102,10 @@ export const findCodedLink = function findCodedLink(sanitizeUrlResult) {
                 }
                 if (null != match1) {
                   const substr = templateHostRemainingPath.substring(1);
-                  let obj15 = set;
                   if (!set.has(substr)) {
-                    obj15.add(substr);
-                    obj4 = { type: CodedLink.CodedLinkType.TEMPLATE, code: substr, url: iter };
-                    items.push(obj4);
+                    set.add(substr);
+                    const obj10 = { type: CodedLink.CodedLinkType.TEMPLATE, code: substr, url: iter };
+                    items.push(obj10);
                   }
                 }
                 let match2;
@@ -1134,21 +1122,21 @@ export const findCodedLink = function findCodedLink(sanitizeUrlResult) {
                         match2[2],
                         url.search,
                       );
-                      let obj20 = set;
                       if (!set.has(inviteKeyFromUrlParams1)) {
-                        obj20.add(inviteKeyFromUrlParams1);
-                        const obj5 = { type: CodedLink.CodedLinkType.INVITE, code: inviteKeyFromUrlParams1, url: iter };
-                        items.push(obj5);
+                        set.add(inviteKeyFromUrlParams1);
+                        const obj11 = {
+                          type: CodedLink.CodedLinkType.INVITE,
+                          code: inviteKeyFromUrlParams1,
+                          url: iter,
+                        };
+                        items.push(obj11);
                       }
-                      const tmp4Result3 = InviteCodeUtils;
+                      const tmp4Result11 = InviteCodeUtils;
                     }
-                  } else {
-                    let obj17 = set;
-                    if (!set.has(match2[2])) {
-                      obj17.add(tmp34);
-                      obj6 = { type: formatted, code: tmp34, url: iter };
-                      items.push(obj6);
-                    }
+                  } else if (!set.has(match2[2])) {
+                    set.add(tmp34);
+                    obj13 = { type: formatted, code: tmp34, url: iter };
+                    items.push(obj13);
                   }
                 }
                 let match3;
@@ -1157,11 +1145,10 @@ export const findCodedLink = function findCodedLink(sanitizeUrlResult) {
                 }
                 if (null != match3) {
                   const replaced = primaryHostRemainingPath.replace("/channels/", "");
-                  let obj22 = set;
                   if (!set.has(replaced)) {
-                    obj22.add(replaced);
-                    obj7 = { type: CodedLink.CodedLinkType.CHANNEL_LINK, code: replaced, url: iter };
-                    items.push(obj7);
+                    set.add(replaced);
+                    const obj15 = { type: CodedLink.CodedLinkType.CHANNEL_LINK, code: replaced, url: iter };
+                    items.push(obj15);
                   }
                 }
                 let tmp48 = null;
@@ -1173,8 +1160,8 @@ export const findCodedLink = function findCodedLink(sanitizeUrlResult) {
                     if (match4.length >= 4) {
                       let tmp51 = null;
                       if (null != match4[2]) {
-                        const obj8 = { guildId: match4[1], guildEventId: tmp50, recurrenceId: match4[4] };
-                        tmp51 = obj8;
+                        const obj17 = { guildId: match4[1], guildEventId: tmp50, recurrenceId: match4[4] };
+                        tmp51 = obj17;
                       }
                       tmp48 = tmp51;
                     }
@@ -1191,8 +1178,8 @@ export const findCodedLink = function findCodedLink(sanitizeUrlResult) {
                   const sum = combined + str7;
                   if (!set.has(sum)) {
                     set.add(sum);
-                    obj9 = { type: CodedLink.CodedLinkType.EVENT, code: sum, url: iter };
-                    items.push(obj9);
+                    obj19 = { type: CodedLink.CodedLinkType.EVENT, code: sum, url: iter };
+                    items.push(obj19);
                   }
                 }
                 let match5;
@@ -1220,11 +1207,11 @@ export const findCodedLink = function findCodedLink(sanitizeUrlResult) {
                     if (!tmp58) {
                       if (!set.has(clientId)) {
                         set.add(clientId);
-                        const obj10 = { type: CodedLink.CodedLinkType.APP_OAUTH2_LINK, code: clientId, url: iter };
-                        items.push(obj10);
+                        const obj20 = { type: CodedLink.CodedLinkType.APP_OAUTH2_LINK, code: clientId, url: iter };
+                        items.push(obj20);
                       }
                     }
-                    const tmp4Result4 = Authorize;
+                    const tmp4Result12 = Authorize;
                   }
                 }
                 let match6;
@@ -1234,8 +1221,8 @@ export const findCodedLink = function findCodedLink(sanitizeUrlResult) {
                 if (null != match6) {
                   if (!set.has(match6[2])) {
                     set.add(tmp65);
-                    obj11 = { type: CodedLink.CodedLinkType.APP_DIRECTORY_PROFILE, code: tmp65, url: iter };
-                    items.push(obj11);
+                    const obj22 = { type: CodedLink.CodedLinkType.APP_DIRECTORY_PROFILE, code: tmp65, url: iter };
+                    items.push(obj22);
                   }
                 }
                 let match7;
@@ -1250,18 +1237,18 @@ export const findCodedLink = function findCodedLink(sanitizeUrlResult) {
                     );
                     if (!set.has(storefrontSKUCodedLink)) {
                       set.add(storefrontSKUCodedLink);
-                      const obj12 = {
+                      const obj24 = {
                         type: CodedLink.CodedLinkType.APP_DIRECTORY_STOREFRONT_SKU,
                         code: storefrontSKUCodedLink,
                         url: iter,
                       };
-                      items.push(obj12);
+                      items.push(obj24);
                     }
-                    const tmp4Result5 = storefrontMessageEmbedCodedLink;
+                    const tmp4Result13 = storefrontMessageEmbedCodedLink;
                   } else if (!set.has(tmp150)) {
                     set.add(tmp150);
-                    obj13 = { type: CodedLink.CodedLinkType.APP_DIRECTORY_STOREFRONT, code: tmp150, url: iter };
-                    items.push(obj13);
+                    const obj25 = { type: CodedLink.CodedLinkType.APP_DIRECTORY_STOREFRONT, code: tmp150, url: iter };
+                    items.push(obj25);
                   }
                 }
                 let match8;
@@ -1271,8 +1258,8 @@ export const findCodedLink = function findCodedLink(sanitizeUrlResult) {
                 if (null != match8) {
                   if (!set.has(match8[1])) {
                     set.add(tmp80);
-                    const obj14 = { type: CodedLink.CodedLinkType.ACTIVITY_BOOKMARK, code: tmp80, url: iter };
-                    items.push(obj14);
+                    const obj27 = { type: CodedLink.CodedLinkType.ACTIVITY_BOOKMARK, code: tmp80, url: iter };
+                    items.push(obj27);
                   }
                 }
                 let match9;
@@ -1284,8 +1271,8 @@ export const findCodedLink = function findCodedLink(sanitizeUrlResult) {
                   const combined1 = "" + match9[1] + "-" + match9[2];
                   if (!set.has(combined1)) {
                     set.add(combined1);
-                    obj15 = { type: CodedLink.CodedLinkType.GUILD_PRODUCT, code: combined1, url: iter };
-                    items.push(obj15);
+                    const obj29 = { type: CodedLink.CodedLinkType.GUILD_PRODUCT, code: combined1, url: iter };
+                    items.push(obj29);
                   }
                 }
                 let match10;
@@ -1295,8 +1282,8 @@ export const findCodedLink = function findCodedLink(sanitizeUrlResult) {
                 if (null != match10) {
                   if (!set.has(match10[1])) {
                     set.add(tmp93);
-                    const obj16 = { type: CodedLink.CodedLinkType.SERVER_SHOP, code: tmp93, url: iter };
-                    items.push(obj16);
+                    const obj31 = { type: CodedLink.CodedLinkType.SERVER_SHOP, code: tmp93, url: iter };
+                    items.push(obj31);
                   }
                 }
                 let match11;
@@ -1312,8 +1299,8 @@ export const findCodedLink = function findCodedLink(sanitizeUrlResult) {
                   const combined2 = "" + match11[3] + "-" + tmp99;
                   if (!set.has(combined2)) {
                     set.add(combined2);
-                    obj17 = { type: CodedLink.CodedLinkType.SOCIAL_LAYER_STOREFRONT, code: combined2, url: iter };
-                    items.push(obj17);
+                    const obj33 = { type: CodedLink.CodedLinkType.SOCIAL_LAYER_STOREFRONT, code: combined2, url: iter };
+                    items.push(obj33);
                   }
                 }
                 const str13 = getPathsFromURL(iter).primaryHostRemainingPath;
@@ -1331,8 +1318,8 @@ export const findCodedLink = function findCodedLink(sanitizeUrlResult) {
                 if (null != tmp107) {
                   if (!set.has(tmp107)) {
                     set.add(tmp107);
-                    const obj18 = { type: CodedLink.CodedLinkType.QUESTS_EMBED, code: tmp107, url: iter };
-                    items.push(obj18);
+                    const obj34 = { type: CodedLink.CodedLinkType.QUESTS_EMBED, code: tmp107, url: iter };
+                    items.push(obj34);
                   }
                 }
                 let match13;
@@ -1342,8 +1329,8 @@ export const findCodedLink = function findCodedLink(sanitizeUrlResult) {
                 if (null != match13) {
                   if (!set.has(match13[1])) {
                     set.add(tmp113);
-                    const obj19 = { type: CodedLink.CodedLinkType.GAME_PROFILE, code: tmp113, url: iter };
-                    items.push(obj19);
+                    const obj36 = { type: CodedLink.CodedLinkType.GAME_PROFILE, code: tmp113, url: iter };
+                    items.push(obj36);
                   }
                 }
                 let match14;
@@ -1353,8 +1340,8 @@ export const findCodedLink = function findCodedLink(sanitizeUrlResult) {
                 if (null != match14) {
                   if (!set.has(match14[1])) {
                     set.add(tmp119);
-                    obj20 = { type: CodedLink.CodedLinkType.GAME_SERVER_SHARE, code: tmp119, url: iter };
-                    items.push(obj20);
+                    const obj38 = { type: CodedLink.CodedLinkType.GAME_SERVER_SHARE, code: tmp119, url: iter };
+                    items.push(obj38);
                   }
                 }
                 let match15;
@@ -1364,31 +1351,31 @@ export const findCodedLink = function findCodedLink(sanitizeUrlResult) {
                 if (null != match15) {
                   if (!set.has(match15[1])) {
                     set.add(tmp125);
-                    const obj21 = { type: CodedLink.CodedLinkType.USER_PROFILE, code: tmp125, url: iter };
-                    items.push(obj21);
+                    const obj40 = { type: CodedLink.CodedLinkType.USER_PROFILE, code: tmp125, url: iter };
+                    items.push(obj40);
                   }
                 }
                 if ("/shop" === primaryHostRemainingPath) {
                   let parsed = null;
                   if (null != query) {
                     parsed = keysSorter.parse(query);
-                    const tmp4Result6 = keysSorter;
+                    const tmp4Result14 = keysSorter;
                   }
                   let str15;
                   if (parsed != null) {
                     str15 = parsed.tab;
                   }
                   if (str15 === constants.GAME_SHOPS) {
-                    applicationId = undefined;
+                    let applicationId1;
                     if (parsed != null) {
-                      applicationId = parsed.applicationId;
+                      applicationId1 = parsed.applicationId;
                     }
-                    if (null != applicationId) {
-                      skuId = undefined;
+                    if (null != applicationId1) {
+                      let skuId1;
                       if (parsed != null) {
-                        skuId = parsed.skuId;
+                        skuId1 = parsed.skuId;
                       }
-                      if (null != skuId) {
+                      if (null != skuId1) {
                         ({ applicationId, skuId } = parsed);
                         let tmp140 = typeof applicationId === "string";
                         if (typeof applicationId === "string") {
@@ -1399,12 +1386,12 @@ export const findCodedLink = function findCodedLink(sanitizeUrlResult) {
                           const combined3 = "" + skuId + "-" + applicationId;
                           if (!set.has(combined3)) {
                             set.add(combined3);
-                            obj22 = {
+                            const obj42 = {
                               type: CodedLink.CodedLinkType.SOCIAL_LAYER_STOREFRONT_APP,
                               code: combined3,
                               url: iter,
                             };
-                            items.push(obj22);
+                            items.push(obj42);
                           }
                         }
                       }
@@ -1428,10 +1415,11 @@ export const findCodedLink = function findCodedLink(sanitizeUrlResult) {
                   const combined4 = "" + str15 + "-" + str17;
                   if (!set.has(combined4)) {
                     set.add(combined4);
-                    const obj23 = { type: CodedLink.CodedLinkType.COLLECTIBLES_SHOP, code: combined4, url: iter };
-                    items.push(obj23);
+                    const obj44 = { type: CodedLink.CodedLinkType.COLLECTIBLES_SHOP, code: combined4, url: iter };
+                    items.push(obj44);
                   }
                 }
+                tmp4Result8 = ExperimentEmbedUtils;
               }
             }
             return 0;

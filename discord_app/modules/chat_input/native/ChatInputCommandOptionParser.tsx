@@ -11,6 +11,8 @@ import EmojiStore from "../../emojis/EmojiStore.tsx";
 import GuildRoleStore from "../../../stores/GuildRoleStore.tsx";
 import PermissionStore from "../../../stores/PermissionStore.tsx";
 
+const require = globalThis.__r;
+
 require = fn;
 function findTokenLocations(arr, pillText, fn) {
   const items = [];
@@ -145,11 +147,11 @@ export const getMatchedOptionsWithValue = (length2, activeCommand) => {
       const options = activeCommand.options;
     }
   }
-  activeCommand = undefined;
+  let activeCommand1;
   if (activeCommand != null) {
-    activeCommand = activeCommand.activeCommand;
+    activeCommand1 = activeCommand.activeCommand;
   }
-  if (null != activeCommand) {
+  if (null != activeCommand1) {
     if (null != options) {
       const preferredOptionValues = activeCommand.preferredOptionValues;
       re15.lastIndex = 0;
@@ -196,11 +198,11 @@ export const getMatchedOptionsWithValue = (length2, activeCommand) => {
                   obj.data = tmp16.data;
                   let arr = items.push(obj);
                 }
-                obj = { location: match.index + 1, length: match[0].length - 1, data: null };
-                let obj1 = { type: ChatInputParser.ChatInputParseResultDataType.COMMAND_OPTION, option: options[num] };
-                obj.data = obj1;
+                let obj2 = { location: match.index + 1, length: match[0].length - 1, data: null };
+                let obj3 = { type: ChatInputParser.ChatInputParseResultDataType.COMMAND_OPTION, option: options[num] };
+                obj2.data = obj3;
                 let addResult = set.add(num);
-                tmp8 = obj;
+                tmp8 = obj2;
               }
               num = num + 1;
               tmp16 = tmp8;
@@ -214,7 +216,7 @@ export const getMatchedOptionsWithValue = (length2, activeCommand) => {
         tmp20 = tmp4;
       }
       if (null != tmp20) {
-        const obj2 = { location: null, length: null, data: null };
+        const obj4 = { location: null, length: null, data: null };
         ({ location: obj7.location, location: _location2 } = tmp20);
         const displayName1 = tmp20.data.option.displayName;
         let tmp21;
@@ -230,9 +232,9 @@ export const getMatchedOptionsWithValue = (length2, activeCommand) => {
         if (startsWithResult1) {
           diff1 = displayName1.length + 1 + tmp21.displayText.length;
         }
-        obj2.length = diff1;
-        obj2.data = tmp20.data;
-        items.push(obj2);
+        obj4.length = diff1;
+        obj4.data = tmp20.data;
+        items.push(obj4);
       }
       return items;
     }
@@ -246,11 +248,11 @@ export const getMatchedOptions = (arg0, activeCommand) => {
       const options = activeCommand.options;
     }
   }
-  activeCommand = undefined;
+  let activeCommand1;
   if (activeCommand != null) {
-    activeCommand = activeCommand.activeCommand;
+    activeCommand1 = activeCommand.activeCommand;
   }
-  if (null != activeCommand) {
+  if (null != activeCommand1) {
     if (null != options) {
       re15.lastIndex = 0;
       const items = [];
@@ -268,8 +270,8 @@ export const getMatchedOptions = (arg0, activeCommand) => {
               }
               if (!hasItem) {
                 let obj = { location: match.index + 1, length: match[0].length - 1, data: null };
-                obj = { type: ChatInputParser.ChatInputParseResultDataType.COMMAND_OPTION, option: options[num] };
-                obj.data = obj;
+                let obj2 = { type: ChatInputParser.ChatInputParseResultDataType.COMMAND_OPTION, option: options[num] };
+                obj.data = obj2;
                 let arr = items.push(obj);
                 let addResult = set.add(num);
               }
@@ -317,8 +319,8 @@ export const getEmojiHighlightNodes = function getEmojiHighlightNodes(channel, a
         let obj2 = EmojiUtilsDefault;
         let obj = { emoji: byId, channel, intention: EmojiIntention.CHAT };
         if (null === obj2.getEmojiUnavailableReason(obj)) {
-          obj = { location: match.index, length: match[0].length };
-          let arr = items.push(obj);
+          let obj3 = { location: match.index, length: match[0].length };
+          let arr = items.push(obj3);
         }
       }
       match = re16.exec(arg1);
@@ -329,8 +331,7 @@ export const getEmojiHighlightNodes = function getEmojiHighlightNodes(channel, a
 };
 export const getUsernameHighlightNodes = function getUsernameHighlightNodes(channel, arg1) {
   const items = [];
-  let obj = ApplicationCommandOptionValueParser;
-  const users = obj.getUsers(channel);
+  const users = ApplicationCommandOptionValueParser.getUsers(channel);
   closure_0 = (arg0) => arg0;
   let match = re17.exec(arg1);
   if (null != match) {
@@ -338,8 +339,8 @@ export const getUsernameHighlightNodes = function getUsernameHighlightNodes(chan
       let str = match[1];
       closure_0 = str.trim();
       if (null != users.find((text) => require(text.text) === closure_0)) {
-        obj = { location: match.index, length: match[0].length };
-        let arr = items.push(obj);
+        let obj3 = { location: match.index, length: match[0].length };
+        let arr = items.push(obj3);
       }
       match = re17.exec(arg1);
     } while (null != match);
@@ -351,8 +352,8 @@ export const getUsernameHighlightNodes = function getUsernameHighlightNodes(chan
       let str2 = match1[1];
       closure_0 = str2.trim();
       if (null != users.find((text) => require(text.text) === closure_0)) {
-        obj = { location: match1.index, length: match1[0].length };
-        arr = items.push(obj);
+        let obj5 = { location: match1.index, length: match1[0].length };
+        let arr2 = items.push(obj5);
       }
       match1 = re18.exec(arg1);
     } while (null != match1);
@@ -362,14 +363,13 @@ export const getUsernameHighlightNodes = function getUsernameHighlightNodes(chan
 export { findGameMentionTokens };
 export const serializeComposerGameMentions = function serializeComposerGameMentions(text, mentionGames) {
   let items = [];
-  let values = mentionGames.values();
+  const values = mentionGames.values();
   for (const item10008 of values) {
     let arr = items.push(item10008.name);
     continue;
   }
   closure_1 = text;
   function _loop2() {
-    let arr = closure_1;
     name = name.name;
     let arr2 = map1(name);
     const found = items.filter((item) => item !== arr2);
@@ -389,7 +389,7 @@ export const serializeComposerGameMentions = function serializeComposerGameMenti
         });
         let tmp4 = !someResult;
         if (!someResult) {
-          arr = items.push(index);
+          let arr3 = items.push(index);
         }
         index = arr.indexOf(arr2, index + arr2.length);
       } while (-1 !== index);
@@ -400,8 +400,8 @@ export const serializeComposerGameMentions = function serializeComposerGameMenti
       return sum + arr.slice(item + arr2.length);
     }, closure_1);
   }
-  values = mentionGames.values();
-  const iter = values[Symbol.iterator]();
+  const values2 = mentionGames.values();
+  const iter = values2[Symbol.iterator]();
   while (iter !== undefined) {
     let name = iter.next();
     let _loop2Result = _loop2();
@@ -412,14 +412,14 @@ export const serializeComposerGameMentions = function serializeComposerGameMenti
 export { buildGameMentionResult };
 export const getGameHighlightNodes = function getGameHighlightNodes(mentionGames, text) {
   const items = [];
-  let values = mentionGames.values();
+  const values = mentionGames.values();
   for (const item10016 of values) {
     let arr = items.push(item10016.name);
     continue;
   }
   const items1 = [];
-  values = mentionGames.values();
-  const iter = values[Symbol.iterator]();
+  const values2 = mentionGames.values();
+  const iter = values2[Symbol.iterator]();
   const nextResult = iter.next();
   while (iter !== undefined) {
     let tmp5 = nextResult;
@@ -429,7 +429,7 @@ export const getGameHighlightNodes = function getGameHighlightNodes(mentionGames
       ({ length, icon, iconSize, iconCornerRadius, iconSpacing } = tmp17);
       for (const item10039 of locations) {
         let obj = { location: item10039, length, icon, iconSize, iconCornerRadius, iconSpacing };
-        arr = items1.push(obj);
+        let arr2 = items1.push(obj);
         continue;
       }
     }
@@ -448,16 +448,16 @@ export const uniqueTimestampPillText = function uniqueTimestampPillText(mentionT
     let tmp4 = arg1;
     if (value.timestamp !== timestamp.timestamp) {
       const text = `${tmp4}⁠`;
-      value = mentionTimestamps.get(`${tmp4}⁠`);
+      value2 = mentionTimestamps.get(`${tmp4}⁠`);
       tmp2 = text;
-      while (null != value) {
+      while (null != value2) {
         tmp4 = text;
-        if (value.timestamp !== timestamp.timestamp) {
+        if (value2.timestamp !== timestamp.timestamp) {
           continue;
         } else {
           tmp4 = text;
           tmp2 = text;
-          if (value.format === timestamp.format) {
+          if (value2.format === timestamp.format) {
             break;
           }
         }
@@ -559,7 +559,6 @@ export const getChannelHighlightNodes = function getChannelHighlightNodes(channe
   dependencyMap = require("ApplicationCommandOptionValueParser").getChannels(channel);
   let lastIndex = 0;
   function _loop5() {
-    let arr = closure_0;
     const index = closure_0.indexOf("#", lastIndex);
     lastIndex = index;
     if (index < 0) {
@@ -588,11 +587,10 @@ export const getChannelHighlightNodes = function getChannelHighlightNodes(channe
             }
           }
         }
-        let obj = useChannelName;
-        closure_0 = obj.unescapeChannelName(str2.substring(tmp2 + 2, lastIndex));
+        closure_0 = useChannelName.unescapeChannelName(str2.substring(tmp2 + 2, lastIndex));
         if (null != closure_2.find((text) => text.text === closure_0)) {
-          obj = { location: tmp2, length: lastIndex - tmp2 + 1 };
-          arr = items.push(obj);
+          const obj2 = { location: tmp2, length: lastIndex - tmp2 + 1 };
+          items.push(obj2);
         } else {
           lastIndex = tmp2 + 1;
         }
@@ -602,8 +600,8 @@ export const getChannelHighlightNodes = function getChannelHighlightNodes(channe
         if (null != match) {
           closure_1 = match[1].trim();
           if (null != closure_2.find((text) => text.text === closure_1)) {
-            obj = { location: match.index, length: match[0].length };
-            arr = items.push(obj);
+            const obj3 = { location: match.index, length: match[0].length };
+            items.push(obj3);
           }
         }
       }

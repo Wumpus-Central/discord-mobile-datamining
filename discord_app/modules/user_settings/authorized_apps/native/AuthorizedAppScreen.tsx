@@ -10,8 +10,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/authorized_apps/native/AuthorizedAppScreen.tsx");
 
 export default function AuthorizedAppScreen() {
-  let obj = useSettingNavigationRoute;
-  const settingNavigationRoute = obj.useSettingNavigationRoute();
+  const settingNavigationRoute = useSettingNavigationRoute.useSettingNavigationRoute();
   const stackNavigation = useNavigation.useStackNavigation();
   const items = [stackNavigation, settingNavigationRoute.params.oauth2Token.application.name];
   const layoutEffect = noop.useLayoutEffect(() => {
@@ -20,6 +19,5 @@ export default function AuthorizedAppScreen() {
       headerShown: true,
     });
   }, items);
-  obj = { oauth2Token: settingNavigationRoute.params.oauth2Token };
   return jsx(UserSettingsAuthedAppDefault, { oauth2Token: settingNavigationRoute.params.oauth2Token });
 }

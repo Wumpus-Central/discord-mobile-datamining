@@ -4,7 +4,7 @@ import PlatformUtils from "../../../../utils/PlatformUtils.tsx";
 import native2 from "../../../../../discord_common/js/packages/design/native.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
-const native = TextArea(1178);
+const native = TextArea(1176);
 const shared = TextArea(4488);
 const RedesignCompat = TextArea(5767);
 const TextInput = TextArea(6707);
@@ -12,17 +12,16 @@ const TextArea2 = TextArea(7188);
 require = fn;
 const KeyboardThemes = fn(1074).KeyboardThemes;
 const jsx = fn(21).jsx;
-fn(4636);
+const createStyles = fn(4636);
 let obj = {
   inputViewContainer: { paddingVertical: 13, paddingHorizontal: 15 },
-  placeholderText: null,
+  placeholderText: { color: nativeDefault.colors.INPUT_PLACEHOLDER_TEXT_DEFAULT },
   inputText: null,
 };
-obj = { color: nativeDefault.colors.INPUT_PLACEHOLDER_TEXT_DEFAULT };
-obj.placeholderText = obj;
-const createStyles = { color: nativeDefault.colors.TEXT_DEFAULT };
-obj.inputText = createStyles;
+let obj3 = { color: nativeDefault.colors.INPUT_PLACEHOLDER_TEXT_DEFAULT };
+obj.inputText = { color: nativeDefault.colors.TEXT_DEFAULT };
 let closure_5 = createStyles.createStyles(obj);
+const obj4 = { color: nativeDefault.colors.TEXT_DEFAULT };
 const size = fn(2);
 const result = size.fileFinishedImporting("design/void/Form/native/FormInput.tsx");
 
@@ -62,8 +61,7 @@ export default noop.forwardRef((helpText, arg1) => {
   }
   ({ clearButtonVisibility, autoCapitalize, autoCorrect, showBorder } = helpText);
   if (showBorder === undefined) {
-    let obj = PlatformUtils;
-    showBorder = obj.isAndroid();
+    showBorder = PlatformUtils.isAndroid();
   }
   let flag5 = helpText.showCharactersRemaining;
   if (flag5 === undefined) {
@@ -109,7 +107,7 @@ export default noop.forwardRef((helpText, arg1) => {
   let ref1;
   let color = closure_5();
   let TextArea = require;
-  obj = dependencyMap;
+  let obj2 = dependencyMap;
   native2;
   if (null != keyboardAppearance) {
     const tmp7 = noop.useContext(RedesignCompat.RedesignCompatContext) && flag7;
@@ -191,7 +189,7 @@ export default noop.forwardRef((helpText, arg1) => {
     if (tmp7) {
       if (flag3) {
         TextArea = TextArea2.TextArea;
-        obj = {
+        obj2 = {
           ref,
           returnKeyType: "default",
           onChange,
@@ -210,19 +208,19 @@ export default noop.forwardRef((helpText, arg1) => {
           errorMessage: null,
         };
         color = color.placeholderText.color;
-        obj.placeholderTextColor = color;
-        obj.placeholder = placeholder;
-        obj.secureTextEntry = tmp9;
-        obj.isDisabled = flag2;
-        obj.autoFocus = flag4;
-        obj.autoCapitalize = autoCapitalize;
-        obj.autoCorrect = autoCorrect;
+        obj2.placeholderTextColor = color;
+        obj2.placeholder = placeholder;
+        obj2.secureTextEntry = tmp9;
+        obj2.isDisabled = flag2;
+        obj2.autoFocus = flag4;
+        obj2.autoCapitalize = autoCapitalize;
+        obj2.autoCorrect = autoCorrect;
         autoCorrect = onEndEditing.maxLength;
-        obj.maxLength = autoCorrect;
+        obj2.maxLength = autoCorrect;
         onEndEditing = onEndEditing.onEndEditing;
-        obj.onEndEditing = onEndEditing;
-        obj.value = value;
-        obj.errorMessage = error;
+        obj2.onEndEditing = onEndEditing;
+        obj2.value = value;
+        obj2.errorMessage = error;
         let tmp14Result = (
           <TextArea
             ref={ref}
@@ -244,7 +242,7 @@ export default noop.forwardRef((helpText, arg1) => {
           />
         );
       } else {
-        obj = {
+        const obj3 = {
           ref,
           returnKeyType: "done",
           onChange,
@@ -280,7 +278,7 @@ export default noop.forwardRef((helpText, arg1) => {
         });
       }
     } else {
-      const obj1 = {
+      const obj5 = {
         ref: ref1,
         inputTextColor: color.inputText.color,
         multiline: flag3,
@@ -314,39 +312,39 @@ export default noop.forwardRef((helpText, arg1) => {
           str3 = "default";
         }
       }
-      obj1.returnKeyType = str3;
-      obj1.onChangeText = onChange;
-      obj1.keyboardAppearance = keyboardAppearance;
-      obj1.keyboardType = str2;
-      obj1.placeholderTextColor = color.placeholderText.color;
-      obj1.title = title;
-      obj1.helpText = str;
+      obj5.returnKeyType = str3;
+      obj5.onChangeText = onChange;
+      obj5.keyboardAppearance = keyboardAppearance;
+      obj5.keyboardType = str2;
+      obj5.placeholderTextColor = color.placeholderText.color;
+      obj5.title = title;
+      obj5.helpText = str;
       let str4 = error;
       if (error == null) {
         str4 = "";
       }
-      obj1.error = str4;
-      obj1.placeholder = placeholder;
-      obj1.secureTextEntry = tmp9;
-      obj1.disabled = flag2;
-      obj1.autoFocus = flag4;
-      obj1.numberOfLines = num;
-      obj1.autoCapitalize = autoCapitalize;
-      obj1.autoCorrect = autoCorrect;
-      obj1.showBorder = showBorder;
-      obj1.showCharactersRemaining = flag5;
+      obj5.error = str4;
+      obj5.placeholder = placeholder;
+      obj5.secureTextEntry = tmp9;
+      obj5.disabled = flag2;
+      obj5.autoFocus = flag4;
+      obj5.numberOfLines = num;
+      obj5.autoCapitalize = autoCapitalize;
+      obj5.autoCorrect = autoCorrect;
+      obj5.showBorder = showBorder;
+      obj5.showCharactersRemaining = flag5;
       const items = [color.inputViewContainer, style];
-      obj1.style = items;
-      obj1.inputTextStyle = inputTextStyle;
+      obj5.style = items;
+      obj5.inputTextStyle = inputTextStyle;
       let str5 = value;
       if (value == null) {
         str5 = "";
       }
-      obj1.value = str5;
+      obj5.value = str5;
       if (flag3) {
         clearButtonVisibility = native.ClearButtonVisibility.NEVER;
       }
-      obj1.clearButtonVisibility = clearButtonVisibility;
+      obj5.clearButtonVisibility = clearButtonVisibility;
       const merged = Object.assign(onEndEditing);
       return jsx(native.InputView, {
         ref: ref1,

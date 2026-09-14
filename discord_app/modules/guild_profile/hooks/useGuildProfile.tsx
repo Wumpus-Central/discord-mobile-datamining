@@ -3,22 +3,26 @@ import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js
 import noop from "../../../../_runtime/metro/00019__.js";
 import GuildProfileStore from "../GuildProfileStore.tsx";
 
+const require = globalThis.__r;
+
 const require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_profile/hooks/useGuildProfile.tsx");
 
 export const useGuildProfile = function useGuildProfile(guildId) {
   _require = guildId;
-  let obj = require("initialize");
   const items = [GuildProfileStore];
-  const stateFromStores = obj.useStateFromStores(items, () => GuildProfileStore.getProfile(closure_0));
+  const stateFromStores = require("initialize").useStateFromStores(items, () =>
+    GuildProfileStore.getProfile(closure_0),
+  );
+  let obj = require("initialize");
   const items1 = [GuildProfileStore];
-  obj = { guildProfile: stateFromStores, fetchGuildProfile: null, fetchStatus: null };
+  const obj3 = { guildProfile: stateFromStores, fetchGuildProfile: null, fetchStatus: null };
   const stateFromStores1 = require("initialize").useStateFromStores(items1, () =>
     GuildProfileStore.getFetchStatus(closure_0),
   );
   const items2 = [guildId];
-  obj.fetchGuildProfile = noop.useCallback(
+  obj3.fetchGuildProfile = noop.useCallback(
     asyncGeneratorStep(async () => {
       if (c4 === 2) {
         c4 = 3;
@@ -27,8 +31,8 @@ export const useGuildProfile = function useGuildProfile(guildId) {
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
-          let obj = { value, done: true };
-          return obj;
+          const obj2 = { value, done: true };
+          return obj2;
         } else {
           return { value: "HermesInternal", done: null };
         }
@@ -41,8 +45,8 @@ export const useGuildProfile = function useGuildProfile(guildId) {
               throw value;
             } else if (arg0 === 2) {
               c4 = 3;
-              obj = { value, done: true };
-              return obj;
+              const obj4 = { value, done: true };
+              return obj4;
             } else {
               closure_2 = tmp5;
               closure_129_0 = undefined;
@@ -61,26 +65,24 @@ export const useGuildProfile = function useGuildProfile(guildId) {
               throw value;
             } else if (arg0 === 2) {
               c4 = 3;
-              const obj1 = { value, done: true };
-              return obj1;
+              const obj5 = { value, done: true };
+              return obj5;
             } else {
-              let obj2 = guildId(tmp2[4]);
               c3 = 2;
               c4 = 1;
-              obj2 = { value: null, done: false };
-              obj2.value = obj2.getGuildProfile(closure_130_0, closure_129_0);
-              return obj2;
+              const obj6 = { value: guildId(tmp2[4]).getGuildProfile(closure_130_0, closure_129_0), done: false };
+              return obj6;
             }
           } else if (arg0 === 1) {
             c4 = 3;
             throw value;
           } else if (arg0 === 2) {
             c4 = 3;
-            const obj3 = { value, done: true };
-            return obj3;
+            const obj7 = { value, done: true };
+            return obj7;
           } else {
             c4 = 3;
-            obj = { value, done: true };
+            const obj = { value, done: true };
             return obj;
           }
         } catch (tmp12) {
@@ -91,6 +93,6 @@ export const useGuildProfile = function useGuildProfile(guildId) {
     }),
     items2,
   );
-  obj.fetchStatus = stateFromStores1;
-  return obj;
+  obj3.fetchStatus = stateFromStores1;
+  return obj3;
 };

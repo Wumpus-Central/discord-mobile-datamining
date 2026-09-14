@@ -15,10 +15,20 @@ import ChangelogStore from "../modules/changelog/ChangelogStore.tsx";
 import ChannelStore from "../stores/ChannelStore.tsx";
 import ReadStateStore from "../stores/ReadStateStore.tsx";
 
+const require = globalThis.__r;
+
 require = fn;
 let closure_6 = fn(1961).createChannelRecordFromServer;
 const Constants = fn(1074);
-({ AnalyticEvents: closure_9, AbortCodes: c10, Endpoints: closure_11, Routes: closure_12, ME: map1, CURRENT_APP_CONTEXT: closure_14, ChannelTypes: closure_15 } = Constants);
+({
+  AnalyticEvents: closure_9,
+  AbortCodes: c10,
+  Endpoints: closure_11,
+  Routes: closure_12,
+  ME: map1,
+  CURRENT_APP_CONTEXT: closure_14,
+  ChannelTypes: closure_15,
+} = Constants);
 const size = fn(2);
 let result = size.fileFinishedImporting("actions/ChannelActionCreators.tsx");
 
@@ -45,8 +55,8 @@ export default {
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
-          let obj = { value, done: true };
-          return obj;
+          const obj2 = { value, done: true };
+          return obj2;
         } else {
           return { value: "HermesInternal", done: null };
         }
@@ -59,8 +69,8 @@ export default {
               throw value;
             } else if (arg0 === 2) {
               c5 = 3;
-              obj = { value, done: true };
-              return obj;
+              const obj3 = { value, done: true };
+              return obj3;
             } else {
               closure_0 = tmp7;
               closure_128_1 = undefined;
@@ -83,27 +93,37 @@ export default {
               closure_128_0 = joinCallIfRequested;
               const _getRecipientsResult = self._getRecipients(_require);
               if (1 === _getRecipientsResult.length) {
-                const _openCachedDMChannelResult = self._openCachedDMChannel(v0(_getRecipientsResult, 1)[0], asyncGeneratorStep, navigateToChannel);
+                const _openCachedDMChannelResult = self._openCachedDMChannel(
+                  v0(_getRecipientsResult, 1)[0],
+                  asyncGeneratorStep,
+                  navigateToChannel,
+                );
                 if (null != _openCachedDMChannelResult) {
                   joinCallIfRequested(_openCachedDMChannelResult);
                   c5 = 3;
-                  const obj1 = { value: Promise.resolve(_openCachedDMChannelResult.id), done: true };
-                  return obj1;
+                  const obj4 = { value: Promise.resolve(_openCachedDMChannelResult.id), done: true };
+                  return obj4;
                 }
               }
               v0 = 1;
               const HTTP = closure_0(tmp43[8]).HTTP;
-              const request = { url: constants2.USER_CHANNELS, body: null, context: null, oldFormErrors: true, retries: 3, rejectWithError: null };
-              const obj2 = { recipients: _getRecipientsResult };
-              request.body = obj2;
-              const obj3 = { location: _location };
-              request.context = obj3;
-              let obj5 = closure_0(tmp43[8]);
-              request.rejectWithError = obj5.rejectWithMigratedError();
+              const request = {
+                url: constants2.USER_CHANNELS,
+                body: null,
+                context: null,
+                oldFormErrors: true,
+                retries: 3,
+                rejectWithError: null,
+              };
+              const obj5 = { recipients: _getRecipientsResult };
+              request.body = obj5;
+              const obj7 = { location: _location };
+              request.context = obj7;
+              request.rejectWithError = closure_0(tmp43[8]).rejectWithMigratedError();
               c4 = 2;
               c5 = 1;
-              const obj4 = { value: HTTP.post(request), done: false };
-              return obj4;
+              const obj8 = { value: HTTP.post(request), done: false };
+              return obj8;
             }
           } else if (1 === tmp7) {
             v0 = 0;
@@ -125,8 +145,8 @@ export default {
           } else if (arg0 === 2) {
             v0 = 0;
             c5 = 3;
-            obj5 = { value, done: true };
-            return obj5;
+            const obj9 = { value, done: true };
+            return obj9;
           } else {
             closure_128_1 = value;
             if (closure_129_5) {
@@ -137,7 +157,7 @@ export default {
             }
             v0 = 0;
             c5 = 3;
-            obj = { value: closure_128_1.body.id, done: true };
+            const obj = { value: closure_128_1.body.id, done: true };
             return obj;
           }
         } catch (tmp43) {
@@ -157,7 +177,7 @@ export default {
       navigateToChannel = true;
     }
     const self = this;
-    return self(function*() {
+    return self(function* () {
       if (c5 === 2) {
         c5 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -165,8 +185,8 @@ export default {
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
-          let obj = { value, done: true };
-          return obj;
+          const obj2 = { value, done: true };
+          return obj2;
         } else {
           return { value: "HermesInternal", done: null };
         }
@@ -179,23 +199,30 @@ export default {
               throw value;
             } else if (arg0 === 2) {
               c5 = 3;
-              obj = { value, done: true };
-              return obj;
+              const obj3 = { value, done: true };
+              return obj3;
             } else {
               closure_0 = tmp7;
               closure_128_0 = undefined;
               c3 = 1;
               const HTTP = closure_0(tmp31[8]).HTTP;
-              const request = { url: constants2.USER_GROUP_DM_SHELL, body: null, context: null, oldFormErrors: true, retries: 3, rejectWithError: null };
-              const obj1 = { recipient_id };
-              request.body = obj1;
-              const obj2 = { location: _location };
-              request.context = obj2;
+              const request = {
+                url: constants2.USER_GROUP_DM_SHELL,
+                body: null,
+                context: null,
+                oldFormErrors: true,
+                retries: 3,
+                rejectWithError: null,
+              };
+              const obj4 = { recipient_id };
+              request.body = obj4;
+              const obj5 = { location: _location };
+              request.context = obj5;
               request.rejectWithError = closure_0(tmp31[8]).rejectWithMigratedError();
               c4 = 2;
               c5 = 1;
-              const obj3 = { value: HTTP.post(request), done: false };
-              return obj3;
+              const obj6 = { value: HTTP.post(request), done: false };
+              return obj6;
             }
           } else if (1 === tmp7) {
             c3 = 0;
@@ -217,8 +244,8 @@ export default {
           } else if (arg0 === 2) {
             c3 = 0;
             c5 = 3;
-            const obj4 = { value, done: true };
-            return obj4;
+            const obj7 = { value, done: true };
+            return obj7;
           } else {
             closure_128_0 = value;
             if (closure_129_3) {
@@ -229,7 +256,7 @@ export default {
             }
             c3 = 0;
             c5 = 3;
-            obj = { value: closure_128_0.body.id, done: true };
+            const obj = { value: closure_128_0.body.id, done: true };
             return obj;
           }
         } catch (tmp31) {
@@ -277,14 +304,18 @@ export default {
     closure_0 = id;
     const self = this;
     return (async () => {
-      const HTTP = tmp2(1272).HTTP;
-      const request = { url: constants.USER_CHANNELS, body: { recipients: self._getRecipients(tmp2) }, oldFormErrors: true, rejectWithError: null };
+      const HTTP = tmp2(1270).HTTP;
+      const request = {
+        url: constants.USER_CHANNELS,
+        body: { recipients: self._getRecipients(tmp2) },
+        oldFormErrors: true,
+        rejectWithError: null,
+      };
       self._getRecipients(tmp2);
-      request.rejectWithError = tmp2(1272).rejectWithMigratedError();
+      request.rejectWithError = tmp2(1270).rejectWithMigratedError();
       await HTTP.post(request);
       closure_128_0 = value;
       closure_128_1 = closure_1_6(closure_128_0.body);
-      { recipients: self._getRecipients(tmp2) };
       tmp5(573).dispatch({ type: "CHANNEL_CREATE", channel: closure_128_1 });
       return closure_128_1.id;
     })();
@@ -300,8 +331,8 @@ export default {
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
-          let obj = { value, done: true };
-          return obj;
+          const obj2 = { value, done: true };
+          return obj2;
         } else {
           return { value: "HermesInternal", done: null };
         }
@@ -314,15 +345,15 @@ export default {
               throw value;
             } else if (arg0 === 2) {
               c0 = 3;
-              obj = { value, done: true };
-              return obj;
+              const obj3 = { value, done: true };
+              return obj3;
             } else {
               dMFromUserId = dMFromUserId.getDMFromUserId(closure_0);
               if (null == dMFromUserId) {
                 c1 = 1;
                 c0 = 1;
-                const obj1 = { value: self.ensurePrivateChannel(closure_0), done: false };
-                return obj1;
+                const obj4 = { value: self.ensurePrivateChannel(closure_0), done: false };
+                return obj4;
               }
             }
           } else if (arg0 === 1) {
@@ -332,13 +363,13 @@ export default {
             dMFromUserId = value;
             if (arg0 === 2) {
               c0 = 3;
-              obj = { value, done: true };
+              const obj = { value, done: true };
               return obj;
             }
           }
           c0 = 3;
-          const obj2 = { value: dMFromUserId, done: true };
-          return obj2;
+          const obj5 = { value: dMFromUserId, done: true };
+          return obj5;
         } catch (tmp10) {
           c0 = tmp;
           throw tmp10;
@@ -349,11 +380,10 @@ export default {
   getDMChannel(arr) {
     closure_0 = arr;
     return (async () => {
-      const HTTP = tmp5(1272).HTTP;
+      const HTTP = tmp5(1270).HTTP;
       await HTTP.get({ url: closure_1_11.DM_CHANNEL(tmp5), rejectWithError: true });
       closure_128_0 = value;
       closure_128_1 = closure_1_6(closure_128_0.body);
-      { url: closure_1_11.DM_CHANNEL(tmp5), rejectWithError: true };
       tmp2(573).dispatch({ type: "CHANNEL_CREATE", channel: closure_128_1 });
       return closure_128_1.id;
     })();
@@ -394,44 +424,73 @@ export default {
       flag2 = false;
     }
     if (isChangelogChannelDefault(id)) {
-      let tmpResult = AnalyticsUtilsDefault;
-      let obj = { last_changelog_id: ChangelogStore.latestChangelogId(), unread_count: ReadStateStore.getUnreadCount(id) };
-      tmpResult.track(constants.CHANGE_LOG_DM_REMOVED, obj);
+      const obj = {
+        last_changelog_id: ChangelogStore.latestChangelogId(),
+        unread_count: ReadStateStore.getUnreadCount(id),
+      };
+      AnalyticsUtilsDefault.track(constants.CHANGE_LOG_DM_REMOVED, obj);
+      const tmpResult = AnalyticsUtilsDefault;
     }
-    tmpResult = DispatcherDefault;
-    obj = { type: "CHANNEL_DELETE", channel: { id, guild_id: "Array", parent_id: "accessible" }, silent: flag2 };
-    tmpResult.dispatch(obj);
+    DispatcherDefault.dispatch({
+      type: "CHANNEL_DELETE",
+      channel: { id, guild_id: "Array", parent_id: "isArray" },
+      silent: flag2,
+    });
     if (flag) {
       router_utils.transitionTo(constants2.FRIENDS);
     }
     const HTTP = HTTPUtils.HTTP;
-    const request = { url: closure_1_11.CHANNEL(id), query: { silent: flag2 }, oldFormErrors: true, rejectWithError: HTTPUtils.rejectWithMigratedError() };
+    const request = {
+      url: closure_1_11.CHANNEL(id),
+      query: { silent: flag2 },
+      oldFormErrors: true,
+      rejectWithError: null,
+    };
+    const obj2 = { type: "CHANNEL_DELETE", channel: { id, guild_id: "Array", parent_id: "isArray" }, silent: flag2 };
+    const tmpResult2 = DispatcherDefault;
+    request.rejectWithError = HTTPUtils.rejectWithMigratedError();
     const delResult = HTTP.del(request);
-    return HTTP.del(request).then(() => {
-      const AccessibilityAnnouncer = require("shared").AccessibilityAnnouncer;
-      const intl = require("util").intl;
-      AccessibilityAnnouncer.announce(intl.string(require("util").t.nRbucl));
-    }).catch(() => {
-      const AccessibilityAnnouncer = require("shared").AccessibilityAnnouncer;
-      const intl = require("util").intl;
-      AccessibilityAnnouncer.announce(intl.string(require("util").t.ndXVI5));
-    });
+    return HTTP.del(request)
+      .then(() => {
+        const AccessibilityAnnouncer = require("shared").AccessibilityAnnouncer;
+        const intl = require("util").intl;
+        AccessibilityAnnouncer.announce(intl.string(require("util").t.nRbucl));
+      })
+      .catch(() => {
+        const AccessibilityAnnouncer = require("shared").AccessibilityAnnouncer;
+        const intl = require("util").intl;
+        AccessibilityAnnouncer.announce(intl.string(require("util").t.ndXVI5));
+      });
   },
   bulkLeaveGroupDMs(channel_ids) {
     const HTTP = HTTPUtils.HTTP;
-    const request = { url: closure_1_11.USER_CHANNELS_BULK_LEAVE, body: { channel_ids }, oldFormErrors: true, rejectWithError: true };
+    const request = {
+      url: closure_1_11.USER_CHANNELS_BULK_LEAVE,
+      body: { channel_ids },
+      oldFormErrors: true,
+      rejectWithError: true,
+    };
     return HTTP.post(request);
   },
-  updatePermissionOverwrite(id, arr) {
+  updatePermissionOverwrite(id, arr3) {
     closure_0 = id;
-    closure_1 = arr;
+    closure_1 = arr3;
     return (async () => {
       const body = tmp2;
-      const HTTP = tmp5(1272).HTTP;
-      const request = { url: closure_1_11.CHANNEL_PERMISSIONS_OVERWRITE(tmp5, body.id), body, oldFormErrors: true, rejectWithError: tmp5(1272).rejectWithMigratedError() };
+      const HTTP = tmp5(1270).HTTP;
+      const request = {
+        url: closure_1_11.CHANNEL_PERMISSIONS_OVERWRITE(tmp5, body.id),
+        body,
+        oldFormErrors: true,
+        rejectWithError: tmp5(1270).rejectWithMigratedError(),
+      };
       await HTTP.put(request);
       closure_128_0 = value;
-      body(573).dispatch({ type: "CHANNEL_PERMISSIONS_PUT_OVERWRITE_SUCCESS", channelId: closure_129_0, overwrite: closure_129_1 });
+      body(573).dispatch({
+        type: "CHANNEL_PERMISSIONS_PUT_OVERWRITE_SUCCESS",
+        channelId: closure_129_0,
+        overwrite: closure_129_1,
+      });
       return closure_128_0;
     })();
   },
@@ -439,11 +498,18 @@ export default {
     closure_0 = channelId;
     closure_1 = id;
     return (async () => {
-      const HTTP = tmp5(1272).HTTP;
-      await HTTP.del({ url: closure_1_11.CHANNEL_PERMISSIONS_OVERWRITE(tmp5, tmp2), oldFormErrors: true, rejectWithError: tmp5(1272).rejectWithMigratedError() });
+      const HTTP = tmp5(1270).HTTP;
+      await HTTP.del({
+        url: closure_1_11.CHANNEL_PERMISSIONS_OVERWRITE(tmp5, tmp2),
+        oldFormErrors: true,
+        rejectWithError: tmp5(1270).rejectWithMigratedError(),
+      });
       closure_128_0 = value;
-      { url: closure_1_11.CHANNEL_PERMISSIONS_OVERWRITE(tmp5, tmp2), oldFormErrors: true, rejectWithError: tmp5(1272).rejectWithMigratedError() };
-      tmp2(573).dispatch({ type: "CHANNEL_PERMISSIONS_DELETE_OVERWRITE_SUCCESS", channelId: closure_129_0, overwriteId: closure_129_1 });
+      tmp2(573).dispatch({
+        type: "CHANNEL_PERMISSIONS_DELETE_OVERWRITE_SUCCESS",
+        channelId: closure_129_0,
+        overwriteId: closure_129_1,
+      });
       return closure_128_0;
     })();
   },
@@ -452,29 +518,35 @@ export default {
     closure_1 = arg0;
     _require = arg3;
     const HTTP = require("HTTPUtils").HTTP;
-    let obj = { url: closure_11.CHANNEL_RECIPIENT(arg0, arg1), context: null, oldFormErrors: true, rejectWithError: true };
-    obj = { location };
-    obj.context = obj;
+    const obj = {
+      url: closure_11.CHANNEL_RECIPIENT(arg0, arg1),
+      context: { location },
+      oldFormErrors: true,
+      rejectWithError: true,
+    };
+    const obj2 = { location };
     const putResult = HTTP.put(obj);
-    return HTTP.put(obj).then((status) => {
-      const AccessibilityAnnouncer = shared.AccessibilityAnnouncer;
-      const intl = util.intl;
-      AccessibilityAnnouncer.announce(intl.string(util.t.cU0t1F));
-      if (closure_0 != null) {
-        closure_0();
-      }
-      if (201 === status.status) {
-        let id = self._openPrivateChannel(status.body).id;
-      } else {
-        id = closure_1;
-      }
-      return id;
-    }).catch(() => {
-      const AccessibilityAnnouncer = shared.AccessibilityAnnouncer;
-      const intl = util.intl;
-      AccessibilityAnnouncer.announce(intl.string(util.t["8GEdej"]));
-      return closure_1;
-    });
+    return HTTP.put(obj)
+      .then((status) => {
+        const AccessibilityAnnouncer = shared.AccessibilityAnnouncer;
+        const intl = util.intl;
+        AccessibilityAnnouncer.announce(intl.string(util.t.cU0t1F));
+        if (closure_0 != null) {
+          closure_0();
+        }
+        if (201 === status.status) {
+          let id = self._openPrivateChannel(status.body).id;
+        } else {
+          id = closure_1;
+        }
+        return id;
+      })
+      .catch(() => {
+        const AccessibilityAnnouncer = shared.AccessibilityAnnouncer;
+        const intl = util.intl;
+        AccessibilityAnnouncer.announce(intl.string(util.t["8GEdej"]));
+        return closure_1;
+      });
   },
   addRecipients(id, length, arg2, arg3) {
     const self = this;
@@ -500,10 +572,8 @@ export default {
     return (async () => {
       const name = tmp3;
       const channel2 = channel.getChannel(tmp2);
-      const HTTP = tmp2(1272).HTTP;
-      const request = { url: closure_1_11.CHANNEL(tmp2), body: null, oldFormErrors: true, rejectWithError: true };
-      let obj1 = { name };
-      request.body = obj1;
+      const HTTP = tmp2(1270).HTTP;
+      const request = { url: closure_1_11.CHANNEL(tmp2), body: { name }, oldFormErrors: true, rejectWithError: true };
       await HTTP.patch(request);
       closure_128_1 = value;
       if (channel2 != null) {
@@ -520,8 +590,8 @@ export default {
         obj = channel2;
       }
       if (!tmp10) {
-        obj1 = name(7426);
-        const result = obj1.checkGuildTemplateDirty(closure_128_2);
+        const result = name(7426).checkGuildTemplateDirty(closure_128_2);
+        name(7426);
       }
       return closure_128_1;
     })();
@@ -538,8 +608,8 @@ export default {
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
-          let obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           return { value: "HermesInternal", done: null };
         }
@@ -552,8 +622,8 @@ export default {
               throw value;
             } else if (arg0 === 2) {
               c5 = 3;
-              obj = { value, done: true };
-              return obj;
+              const obj4 = { value, done: true };
+              return obj4;
             } else {
               let icon = tmp3;
               const channel_id = tmp7;
@@ -563,42 +633,46 @@ export default {
               closure_128_3 = undefined;
               channel = channel.getChannel(channel_id);
               closure_128_0 = channel;
-              let obj1 = { channel_id, channel_type: null, old_icon_set: null, new_icon_set: null, location: null };
+              const obj6 = { channel_id, channel_type: null, old_icon_set: null, new_icon_set: null, location: null };
               let type;
               if (channel != null) {
                 type = channel.type;
               }
-              obj1.channel_type = type;
+              obj6.channel_type = type;
               icon = undefined;
               if (channel != null) {
                 icon = channel.icon;
               }
-              obj1.old_icon_set = null != icon;
-              obj1.new_icon_set = null != icon;
-              obj1.location = _location;
-              closure_128_1 = obj1;
-              let obj6 = icon(_location[15]);
-              const obj2 = {};
-              const merged = Object.assign(obj1);
-              obj2.status = "initiated";
-              obj6.track(constants.CHANNEL_ICON_EDIT_PROGRESSED, obj2);
+              obj6.old_icon_set = null != icon;
+              obj6.new_icon_set = null != icon;
+              obj6.location = _location;
+              closure_128_1 = obj6;
+              const obj8 = {};
+              const merged = Object.assign(obj6);
+              obj8.status = "initiated";
+              icon(_location[15]).track(constants.CHANNEL_ICON_EDIT_PROGRESSED, obj8);
               c3 = 1;
               const HTTP = channel_id(_location[8]).HTTP;
-              const request = { url: closure_1_11.CHANNEL(channel_id), body: null, oldFormErrors: true, rejectWithError: true, failImmediatelyWhenRateLimited: true };
-              const obj3 = { icon };
-              request.body = obj3;
+              const request = {
+                url: closure_1_11.CHANNEL(channel_id),
+                body: null,
+                oldFormErrors: true,
+                rejectWithError: true,
+                failImmediatelyWhenRateLimited: true,
+              };
+              const obj9 = { icon };
+              request.body = obj9;
               c4 = 2;
               c5 = 1;
-              let obj4 = { value: HTTP.patch(request), done: false };
-              return obj4;
+              const obj10 = { value: HTTP.patch(request), done: false };
+              return obj10;
             }
           } else if (1 === tmp7) {
             c3 = 0;
             closure_128_4 = _location;
-            obj4 = icon(_location[15]);
-            const obj5 = {};
+            const obj11 = {};
             const merged1 = Object.assign(closure_128_1);
-            obj5.status = "failed";
+            obj11.status = "failed";
             let retry_after;
             if (closure_128_4 != null) {
               const body = closure_128_4.body;
@@ -606,7 +680,7 @@ export default {
                 retry_after = body.retry_after;
               }
             }
-            obj5.is_rate_limited = null != retry_after;
+            obj11.is_rate_limited = null != retry_after;
             let message;
             if (closure_128_4 != null) {
               const body2 = closure_128_4.body;
@@ -614,8 +688,8 @@ export default {
                 message = body2.message;
               }
             }
-            obj5.error_message = message;
-            obj4.track(constants.CHANNEL_ICON_EDIT_PROGRESSED, obj5);
+            obj11.error_message = message;
+            icon(_location[15]).track(constants.CHANNEL_ICON_EDIT_PROGRESSED, obj11);
             throw closure_128_4;
           } else if (arg0 === 1) {
             c5 = 3;
@@ -623,14 +697,14 @@ export default {
           } else if (arg0 === 2) {
             c3 = 0;
             c5 = 3;
-            obj6 = { value, done: true };
-            return obj6;
+            const obj12 = { value, done: true };
+            return obj12;
           } else {
             closure_128_2 = value;
-            const obj7 = {};
+            const obj13 = {};
             const merged2 = Object.assign(closure_128_1);
-            obj7.status = "success";
-            icon(_location[15]).track(constants.CHANNEL_ICON_EDIT_PROGRESSED, obj7);
+            obj13.status = "success";
+            icon(_location[15]).track(constants.CHANNEL_ICON_EDIT_PROGRESSED, obj13);
             let guildId;
             if (closure_128_0 != null) {
               guildId = closure_128_0.getGuildId();
@@ -638,21 +712,21 @@ export default {
             closure_128_3 = guildId;
             let tmp11 = null == closure_128_3;
             if (!tmp11) {
-              obj = closure_128_0;
               let isThreadResult;
               if (closure_128_0 != null) {
                 isThreadResult = obj.isThread();
               }
               tmp11 = isThreadResult;
+              obj = closure_128_0;
             }
             if (!tmp11) {
-              obj1 = icon(_location[19]);
-              const result = obj1.checkGuildTemplateDirty(closure_128_3);
+              const result = icon(_location[19]).checkGuildTemplateDirty(closure_128_3);
+              const obj2 = icon(_location[19]);
             }
             c3 = 0;
             c5 = 3;
-            const obj8 = { value: closure_128_2, done: true };
-            return obj8;
+            const obj15 = { value: closure_128_2, done: true };
+            return obj15;
           }
         } catch (tmp51) {
           _location = tmp51;
@@ -678,8 +752,8 @@ export default {
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
-          let obj = { value, done: true };
-          return obj;
+          const obj4 = { value, done: true };
+          return obj4;
         } else {
           return { value: "HermesInternal", done: null };
         }
@@ -692,8 +766,8 @@ export default {
               throw value;
             } else if (arg0 === 2) {
               c5 = 3;
-              obj = { value, done: true };
-              return obj;
+              const obj5 = { value, done: true };
+              return obj5;
             } else {
               const channel_id = tmp5;
               closure_128_0 = undefined;
@@ -704,47 +778,46 @@ export default {
               closure_128_0 = tmp72;
               channel = channel.getChannel(channel_id);
               closure_128_1 = channel;
-              let obj1 = { channel_id, channel_type: null, old_icon_set: null, new_icon_set: null, location: null };
+              const obj6 = { channel_id, channel_type: null, old_icon_set: null, new_icon_set: null, location: null };
               let type;
               if (channel != null) {
                 type = channel.type;
               }
-              obj1.channel_type = type;
+              obj6.channel_type = type;
               let icon;
               if (channel != null) {
                 icon = channel.icon;
               }
-              obj1.old_icon_set = null != icon;
-              obj1.new_icon_set = null != tmp3.icon;
-              obj1.location = _location;
-              closure_128_2 = obj1;
+              obj6.old_icon_set = null != icon;
+              obj6.new_icon_set = null != tmp3.icon;
+              obj6.location = _location;
+              closure_128_2 = obj6;
               if ("icon" in tmp3) {
-                let obj8 = tmp3(_location[15]);
-                let obj2 = {};
-                const merged = Object.assign(obj1);
-                obj2.status = "initiated";
-                obj8.track(constants.CHANNEL_ICON_EDIT_PROGRESSED, obj2);
+                const obj8 = {};
+                const merged = Object.assign(obj6);
+                obj8.status = "initiated";
+                tmp3(_location[15]).track(constants.CHANNEL_ICON_EDIT_PROGRESSED, obj8);
+                const obj9 = tmp3(_location[15]);
               }
               c3 = 1;
               const HTTP = channel_id(_location[8]).HTTP;
               const request = { context: null, url: null, body: null, oldFormErrors: true, rejectWithError: true };
-              const obj3 = { location: _location };
-              request.context = obj3;
+              const obj10 = { location: _location };
+              request.context = obj10;
               request.url = closure_1_11.CHANNEL(channel_id);
               request.body = tmp3;
               c4 = 2;
               c5 = 1;
-              const obj4 = { value: HTTP.patch(request), done: false };
-              return obj4;
+              const obj11 = { value: HTTP.patch(request), done: false };
+              return obj11;
             }
           } else if (1 === tmp8) {
             c3 = 0;
             closure_128_5 = _location;
             if (closure_128_0) {
-              let obj6 = tmp3(_location[15]);
-              const obj5 = {};
+              const obj12 = {};
               const merged1 = Object.assign(closure_128_2);
-              obj5.status = "failed";
+              obj12.status = "failed";
               let retry_after;
               if (closure_128_5 != null) {
                 const body = closure_128_5.body;
@@ -752,7 +825,7 @@ export default {
                   retry_after = body.retry_after;
                 }
               }
-              obj5.is_rate_limited = null != retry_after;
+              obj12.is_rate_limited = null != retry_after;
               let message;
               if (closure_128_5 != null) {
                 const body2 = closure_128_5.body;
@@ -760,8 +833,9 @@ export default {
                   message = body2.message;
                 }
               }
-              obj5.error_message = message;
-              obj6.track(constants.CHANNEL_ICON_EDIT_PROGRESSED, obj5);
+              obj12.error_message = message;
+              tmp3(_location[15]).track(constants.CHANNEL_ICON_EDIT_PROGRESSED, obj12);
+              const obj7 = tmp3(_location[15]);
             }
             throw closure_128_5;
           } else if (arg0 === 1) {
@@ -770,8 +844,8 @@ export default {
           } else if (arg0 === 2) {
             c3 = 0;
             c5 = 3;
-            obj6 = { value, done: true };
-            return obj6;
+            const obj13 = { value, done: true };
+            return obj13;
           } else {
             closure_128_3 = value;
             let guildId;
@@ -781,28 +855,28 @@ export default {
             closure_128_4 = guildId;
             let tmp12 = null == closure_128_4;
             if (!tmp12) {
-              obj = closure_128_1;
               let isThreadResult;
               if (closure_128_1 != null) {
                 isThreadResult = obj.isThread();
               }
               tmp12 = isThreadResult;
+              obj = closure_128_1;
             }
             if (!tmp12) {
-              obj1 = tmp3(_location[19]);
-              const result = obj1.checkGuildTemplateDirty(closure_128_4);
+              const result = tmp3(_location[19]).checkGuildTemplateDirty(closure_128_4);
+              const obj2 = tmp3(_location[19]);
             }
             if (closure_128_0) {
-              obj2 = tmp3(_location[15]);
-              const obj7 = {};
+              const obj14 = {};
               const merged2 = Object.assign(closure_128_2);
-              obj7.status = "success";
-              obj2.track(constants.CHANNEL_ICON_EDIT_PROGRESSED, obj7);
+              obj14.status = "success";
+              tmp3(_location[15]).track(constants.CHANNEL_ICON_EDIT_PROGRESSED, obj14);
+              const obj3 = tmp3(_location[15]);
             }
             c3 = 0;
             c5 = 3;
-            obj8 = { value: closure_128_3, done: true };
-            return obj8;
+            const obj15 = { value: closure_128_3, done: true };
+            return obj15;
           }
         } catch (tmp62) {
           _location = tmp62;
@@ -821,13 +895,11 @@ export default {
     return HTTP.post({ url: closure_1_11.CHANNEL_CONVERT(arg0), oldFormErrors: true, rejectWithError: true });
   },
   preload(arg0, channelId) {
-    let obj = DispatcherDefault;
     let tmp = null;
     if (arg0 !== map1) {
       tmp = arg0;
     }
-    obj = { type: "CHANNEL_PRELOAD", guildId: tmp, channelId, context };
-    obj.dispatch(obj);
+    DispatcherDefault.dispatch({ type: "CHANNEL_PRELOAD", guildId: tmp, channelId, context });
   },
   fetchChannelStoreListing(channelId, arg1) {
     _require = channelId;
@@ -838,8 +910,7 @@ export default {
     }
     const result1 = require("StoreUtils").httpGetWithCountryCodeQuery(result);
     return result1.then((body) => {
-      const obj = { type: "STORE_LISTING_FETCH_SUCCESS", channelId, storeListing: body.body };
-      obj.dispatch(obj);
+      DispatcherDefault.dispatch({ type: "STORE_LISTING_FETCH_SUCCESS", channelId, storeListing: body.body });
     });
   },
   createTextChannel(guildId, topic, parent_id, formatToPlainStringResult) {
@@ -849,18 +920,22 @@ export default {
     closure_3 = formatToPlainStringResult;
     return (async () => {
       const name = tmp2;
-      const obj1 = { type: constants.GUILD_TEXT, name, permission_overwrites: [] };
+      const obj4 = { type: constants.GUILD_TEXT, name, permission_overwrites: [] };
       if (null != parent_id) {
-        obj1.parent_id = parent_id;
+        obj4.parent_id = parent_id;
       }
       if (null != topic) {
-        obj1.topic = topic;
+        obj4.topic = topic;
       }
       const HTTP = tmp5(parent_id[8]).HTTP;
-      const request = { url: closure_1_11.GUILD_CHANNELS(tmp5), body: obj1, oldFormErrors: true, rejectWithError: tmp5(parent_id[8]).rejectWithMigratedError() };
+      const request = {
+        url: closure_1_11.GUILD_CHANNELS(tmp5),
+        body: obj4,
+        oldFormErrors: true,
+        rejectWithError: tmp5(parent_id[8]).rejectWithMigratedError(),
+      };
       await HTTP.post(request);
       closure_128_0 = value;
-      tmp5(parent_id[8]);
       const result = name(parent_id[19]).checkGuildTemplateDirty(closure_129_0);
       return closure_128_0;
     })();
@@ -886,5 +961,5 @@ export default {
       c2 = 0;
       return closure_128_1;
     })();
-  }
+  },
 };

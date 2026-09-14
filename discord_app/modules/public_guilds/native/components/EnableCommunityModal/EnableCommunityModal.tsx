@@ -33,38 +33,35 @@ export default function EnableCommunityModal() {
       obj.accessibilityLabel = intl.string(closure_1_0(1114).t.cpT0Cq);
       return closure_1_4(closure_1_0(7480).HeaderActionButton, obj);
     }
-    let obj = {
-      headerRight,
-      headerLeft,
-      headerTitle() {
-        return null;
-      },
-      render() {
-        return closure_1_4(closure_1_1(17780), {});
-      },
-    };
-    obj = {
-      headerRight,
-      headerTitle() {
-        return null;
-      },
-      render() {
-        return closure_1_4(closure_1_1(17792), {});
-      },
-    };
-    obj = {
-      headerRight,
-      headerTitle() {
-        return null;
-      },
-      render() {
-        return closure_1_4(closure_1_1(17793), {});
-      },
-    };
     return {
-      [closure_1_0(closure_1_2[8]).EnableCommunityModalSteps.STEP_1]: obj,
-      [closure_1_0(closure_1_2[8]).EnableCommunityModalSteps.STEP_2]: obj,
-      [closure_1_0(closure_1_2[8]).EnableCommunityModalSteps.STEP_3]: obj,
+      [closure_1_0(closure_1_2[8]).EnableCommunityModalSteps.STEP_1]: {
+        headerRight,
+        headerLeft,
+        headerTitle() {
+          return null;
+        },
+        render() {
+          return closure_1_4(closure_1_1(17781), {});
+        },
+      },
+      [closure_1_0(closure_1_2[8]).EnableCommunityModalSteps.STEP_2]: {
+        headerRight,
+        headerTitle() {
+          return null;
+        },
+        render() {
+          return closure_1_4(closure_1_1(17793), {});
+        },
+      },
+      [closure_1_0(closure_1_2[8]).EnableCommunityModalSteps.STEP_3]: {
+        headerRight,
+        headerTitle() {
+          return null;
+        },
+        render() {
+          return closure_1_4(closure_1_1(17794), {});
+        },
+      },
     };
   }, []);
   let obj = {

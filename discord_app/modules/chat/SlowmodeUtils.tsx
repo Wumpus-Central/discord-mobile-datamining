@@ -4,6 +4,8 @@ import util from "../../intl/index.native.tsx";
 import _modDef4228 from "../../../_runtime/metro/04228__.js";
 import PermissionStore from "../../stores/PermissionStore.tsx";
 
+const require = globalThis.__r;
+
 require = fn;
 const Permissions = fn(1074).Permissions;
 const size = fn(2);
@@ -27,20 +29,20 @@ export const getSlowmodeIndicatorText = function getSlowmodeIndicatorText(stateF
     const intl2 = util.intl;
     return intl2.string(util.t["8+NidX"]);
   } else if (stateFromStores >= DurationsDefault.Millis.HOUR) {
-    let tmp2Result = _modDef4228;
-    const time2 = tmp2Result.duration(stateFromStores);
+    const time2 = _modDef4228.duration(stateFromStores);
     const _HermesInternal3 = HermesInternal;
     const combined = "" + time2.minutes();
+    const tmp2Result = _modDef4228;
     const _HermesInternal4 = HermesInternal;
     const combined1 = "" + time2.seconds();
     const padStartResult = combined.padStart(2, "0");
     const _HermesInternal5 = HermesInternal;
     return "" + time2.hours() + ":" + padStartResult + ":" + combined1.padStart(2, "0");
   } else if (stateFromStores > 0) {
-    tmp2Result = _modDef4228;
-    const time = tmp2Result.duration(stateFromStores);
+    const time = _modDef4228.duration(stateFromStores);
     const _HermesInternal = HermesInternal;
     const combined2 = "" + time.seconds();
+    const tmp2Result2 = _modDef4228;
     const _HermesInternal2 = HermesInternal;
     return "" + time.minutes() + ":" + combined2.padStart(2, "0");
   } else {

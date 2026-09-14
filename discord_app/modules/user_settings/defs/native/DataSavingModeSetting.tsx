@@ -6,8 +6,8 @@ import UserSettingsText from "../../chat/native/UserSettingsText.tsx";
 import UnsyncedUserSettingsStore from "../../UnsyncedUserSettingsStore.tsx";
 
 require = fn;
-fn(11601);
-let SettingBuilders = {
+const SettingBuilders = fn(11602);
+const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.ix8XIj);
@@ -18,21 +18,20 @@ let SettingBuilders = {
     return initialize.useStateFromStores(items, () => dataSavingMode.dataSavingMode);
   },
   onValueChange: function onDataSavingModeSettingValueChange(dataSavingMode) {
-    const obj = {
+    const obj2 = {
       videoUploadQuality: UnsyncedUserSettingsStore.videoUploadQuality,
       viewImageDescriptions: null,
       lowQualityImageMode: null,
       dataSavingMode: null,
     };
     const ViewImageDescriptions = UserSettings.ViewImageDescriptions;
-    obj.viewImageDescriptions = ViewImageDescriptions.getSetting();
-    obj.lowQualityImageMode = UnsyncedUserSettingsStore.lowQualityImageMode;
-    obj.dataSavingMode = dataSavingMode;
-    obj.setDataSavingMode(obj);
+    obj2.viewImageDescriptions = ViewImageDescriptions.getSetting();
+    obj2.lowQualityImageMode = UnsyncedUserSettingsStore.lowQualityImageMode;
+    obj2.dataSavingMode = dataSavingMode;
+    UserSettingsText.setDataSavingMode(obj2);
   },
-};
-SettingBuilders = SettingBuilders.createToggle(SettingBuilders);
+});
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/DataSavingModeSetting.tsx");
 
-export default SettingBuilders;
+export default toggle;

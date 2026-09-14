@@ -1,6 +1,8 @@
 // discord_app/modules/video_calls/useIsStreamFocused.tsx
 import ChannelRTCStore from "../calls/ChannelRTCStore.tsx";
 
+const require = globalThis.__r;
+
 const require = fn;
 const isStreamParticipant = fn(4657).isStreamParticipant;
 const size = fn(2);

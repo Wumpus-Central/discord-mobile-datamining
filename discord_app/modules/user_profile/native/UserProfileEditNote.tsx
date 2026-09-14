@@ -24,11 +24,10 @@ export default function UserProfileEditNote(userId) {
   let maxLength;
   closure_7 = undefined;
   let ref;
-  let obj = userId(onClose[6]);
-  const navigation = obj.useNavigation();
+  const tmp = closure_9();
+  const navigation = userId(onClose[6]).useNavigation();
   const tmp5 = onSave(onClose[7])(userId);
   const note = tmp5.note;
-  let obj1 = navigation;
   let str = note;
   if (note == null) {
     str = "";
@@ -36,9 +35,9 @@ export default function UserProfileEditNote(userId) {
   const tmp6 = flag(navigation.useState(str), 2);
   maxLength = tmp6[0];
   closure_7 = tmp8;
-  ref = obj1.useRef(null);
+  ref = obj2.useRef(null);
   const items = [flag];
-  const effect = obj1.useEffect(() => {
+  const effect = obj2.useEffect(() => {
     if (flag) {
       const current = ref.current;
       if (current != null) {
@@ -47,7 +46,7 @@ export default function UserProfileEditNote(userId) {
     }
   }, items);
   const items1 = [navigation, userId, note, maxLength, onSave, onClose];
-  const layoutEffect = obj1.useLayoutEffect(() => {
+  const layoutEffect = obj2.useLayoutEffect(() => {
     let obj = {
       headerLeft: NavigatorHeader.getHeaderConditionalBackButton(
         () =>
@@ -57,7 +56,7 @@ export default function UserProfileEditNote(userId) {
             if (closure_5 == null) {
               str = "";
             }
-            const tmp2 = closure_1_1(11054);
+            const tmp2 = closure_1_1(11055);
             tmp2({
               hasEdits: str !== closure_6,
               onHasEdits: closure_1_0(4502).dismissKeyboard,
@@ -118,15 +117,15 @@ export default function UserProfileEditNote(userId) {
     };
     navigation.setOptions(obj);
   }, items1);
-  obj = { contentContainerStyle: closure_9().contentContainer, keyboardShouldPersistTaps: "always", children: null };
-  obj = { variant: "text-sm/semibold", children: null };
+  const obj3 = { contentContainerStyle: tmp.contentContainer, keyboardShouldPersistTaps: "always", children: null };
+  const obj4 = { variant: "text-sm/semibold", children: null };
   let intl = tmp2(tmp3[12]).intl;
-  obj.children = intl.string(userId(onClose[12]).t["mQKv+v"]);
-  const items2 = [closure_7(userId(onClose[14]).Text, obj)];
-  obj1 = {
+  obj4.children = intl.string(userId(onClose[12]).t["mQKv+v"]);
+  const items2 = [closure_7(userId(onClose[14]).Text, obj4)];
+  const obj5 = {
     ref,
     value: maxLength,
-    onChange: tmp8,
+    onChange: tmp6[1],
     maxLength,
     autoCorrect: false,
     autoCapitalize: "none",
@@ -141,10 +140,10 @@ export default function UserProfileEditNote(userId) {
   } else {
     stringResult = string(t.tRZR6T);
   }
-  obj1.placeholder = stringResult;
+  obj5.placeholder = stringResult;
   const intl3 = tmp2(tmp3[12]).intl;
-  obj1.accessibilityLabel = intl3.string(userId(onClose[12]).t["mQKv+v"]);
-  items2[1] = closure_7(userId(onClose[15]).TextArea, obj1);
-  obj.children = items2;
-  return ref(note, obj);
+  obj5.accessibilityLabel = intl3.string(userId(onClose[12]).t["mQKv+v"]);
+  items2[1] = closure_7(userId(onClose[15]).TextArea, obj5);
+  obj3.children = items2;
+  return ref(note, obj3);
 }

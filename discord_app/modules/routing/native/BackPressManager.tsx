@@ -8,13 +8,12 @@ import LifecycleManager from "../../../lib/LifecycleManager.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
 function handleBackPress() {
-  let obj = ContextMenuState;
-  obj.hideContextMenu();
+  ContextMenuState.hideContextMenu();
   const keyboardType = useKeyboardType.getKeyboardType();
   let flag = keyboardType !== KeyboardTypes.KeyboardTypes.SYSTEM;
   if (flag) {
-    obj = { type: KeyboardTypes.KeyboardTypes.SYSTEM };
-    KeyboardUIStore.setKeyboardType(obj);
+    const obj3 = { type: KeyboardTypes.KeyboardTypes.SYSTEM };
+    KeyboardUIStore.setKeyboardType(obj3);
     flag = true;
     const tmpResult = KeyboardUIStore;
   }

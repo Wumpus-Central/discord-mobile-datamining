@@ -1,6 +1,8 @@
 // discord_app/modules/media_channel/useCanSetThumbnail.tsx
 import ChannelStore from "../../stores/ChannelStore.tsx";
 
+const require = globalThis.__r;
+
 const require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/media_channel/useCanSetThumbnail.tsx");

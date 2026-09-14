@@ -41,8 +41,8 @@ let closure_18 = async function _handleThumbnailUpload() {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj3 = { value, done: true };
+        return obj3;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -55,8 +55,8 @@ let closure_18 = async function _handleThumbnailUpload() {
             throw value;
           } else if (arg0 === 2) {
             c7 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj4 = { value, done: true };
+            return obj4;
           } else {
             closure_3 = tmp3;
             closure_2 = tmp7;
@@ -67,9 +67,8 @@ let closure_18 = async function _handleThumbnailUpload() {
               timeout.stop();
               const _HermesInternal = HermesInternal;
               const combined = "" + closure_2_8 + closure_1;
-              let obj1 = DispatcherDefault;
-              obj1 = { type: "STREAM_PREVIEW_FETCH_SUCCESS", streamKey, previewURL: combined };
-              obj1.dispatch(obj1);
+              const obj5 = { type: "STREAM_PREVIEW_FETCH_SUCCESS", streamKey, previewURL: combined };
+              DispatcherDefault.dispatch(obj5);
               c5 = 1;
               const HTTP = HTTPUtils.HTTP;
               const request = {
@@ -78,12 +77,12 @@ let closure_18 = async function _handleThumbnailUpload() {
                 oldFormErrors: true,
                 rejectWithError: false,
               };
-              obj2 = { thumbnail: combined };
-              request.body = obj2;
+              const obj6 = { thumbnail: combined };
+              request.body = obj6;
               c6 = 2;
               c7 = 1;
-              const obj3 = { value: HTTP.post(request), done: false };
-              return obj3;
+              const obj7 = { value: HTTP.post(request), done: false };
+              return obj7;
             }
           }
         } else {
@@ -100,7 +99,7 @@ let closure_18 = async function _handleThumbnailUpload() {
           }
           c5 = 0;
           c7 = 3;
-          obj = { value, done: true };
+          const obj = { value, done: true };
           return obj;
         }
         c7 = 3;
@@ -219,10 +218,10 @@ prototype["_initialize"] = function _initialize() {
   });
   const result3 = voiceEngine.setBroadcastBlockedCallback(() => {
     logger.log("Broadcast Blocked");
-    const obj = { alertBody: null };
+    obj2 = { alertBody: null };
     const intl = util.intl;
-    obj.alertBody = intl.string(util.t.iYQlwv);
-    const result = obj.presentLocalNotification(obj);
+    obj2.alertBody = intl.string(util.t.iYQlwv);
+    const result = PushNotificationDefault.presentLocalNotification(obj2);
   });
   const subscription = DispatcherDefault.subscribe("VOICE_CHANNEL_SELECT", this.#e);
 };

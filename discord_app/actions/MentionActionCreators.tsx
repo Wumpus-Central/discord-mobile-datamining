@@ -16,8 +16,7 @@ export default {
     DispatcherDefault.dispatch({ type: "CLEAR_MENTIONS" });
   },
   truncateMentions(size) {
-    const obj = { type: "TRUNCATE_MENTIONS", size };
-    obj.dispatch(obj);
+    DispatcherDefault.dispatch({ type: "TRUNCATE_MENTIONS", size });
   },
   fetchRecentMentions(feature) {
     const before = feature.before;
@@ -38,7 +37,7 @@ export default {
       flag2 = true;
     }
     DispatcherDefault.dispatch({ type: "LOAD_RECENT_MENTIONS", guildId });
-    const HTTP = before(1272).HTTP;
+    const HTTP = before(1270).HTTP;
     const request = {
       url: constants.MENTIONS,
       query: { before, limit, guild_id: guildId, roles: flag, everyone: flag2, feature: feature.feature },
@@ -50,13 +49,12 @@ export default {
     return value.then(
       (body) => {
         body = body.body;
-        const obj = {
+        DispatcherDefault.dispatch({
           type: "LOAD_RECENT_MENTIONS_SUCCESS",
           messages: body,
           isAfter: null != before,
           hasMoreAfter: body.length >= React4,
-        };
-        obj.dispatch(obj);
+        });
       },
       () => {
         DispatcherDefault.dispatch({ type: "LOAD_RECENT_MENTIONS_FAILURE" });
@@ -65,10 +63,9 @@ export default {
   },
   deleteRecentMention(id) {
     const HTTP = HTTPUtils.HTTP;
-    let obj = { url: React3.MENTIONS_MESSAGE_ID(id), retries: 2, oldFormErrors: true, rejectWithError: true };
-    HTTP.del(obj);
-    obj = { type: "RECENT_MENTION_DELETE", id };
-    DispatcherDefault.dispatch(obj);
+    HTTP.del({ url: React3.MENTIONS_MESSAGE_ID(id), retries: 2, oldFormErrors: true, rejectWithError: true });
+    const obj = { url: React3.MENTIONS_MESSAGE_ID(id), retries: 2, oldFormErrors: true, rejectWithError: true };
+    DispatcherDefault.dispatch({ type: "RECENT_MENTION_DELETE", id });
   },
   setRecentMentionsStale() {
     DispatcherDefault.dispatch({ type: "SET_RECENT_MENTIONS_STALE" });

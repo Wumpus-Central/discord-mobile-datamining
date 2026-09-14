@@ -11,10 +11,13 @@ const result = size.fileFinishedImporting("modules/stickers/native/openStickerPa
 export default function openStickerPackDetailActionSheet(stickerPack) {
   stickerPack = stickerPack.stickerPack;
   ({ analyticsLocation, analyticsPopoutType } = stickerPack);
-  const obj = { location: analyticsLocation, sticker_pack_id: stickerPack.id };
-  obj.track(AnalyticEvents.STICKER_PACK_VIEW_ALL, obj);
+  AnalyticsUtilsDefault.track(AnalyticEvents.STICKER_PACK_VIEW_ALL, {
+    location: analyticsLocation,
+    sticker_pack_id: stickerPack.id,
+  });
+  const obj2 = { location: analyticsLocation, sticker_pack_id: stickerPack.id };
   ActionSheetActionCreatorsDefault.openLazy(
-    asyncRequireImpl(10523, dependencyMap.paths),
+    asyncRequireImpl(10524, dependencyMap.paths),
     "StickerPackDetailActionSheet",
     { stickerPack, analyticsPopoutType },
   );

@@ -18,7 +18,7 @@ const Constants = fn(4661);
   MediaTypes: closure_7,
   SpeakingFlags: closure_8,
 } = Constants);
-let obj = {
+const RTCSocketOpcode = {
   IDENTIFY: 0,
   [0]: "IDENTIFY",
   SELECT_PROTOCOL: 1,
@@ -84,7 +84,7 @@ let obj = {
   SFU_UPDATE: 33,
   [33]: "SFU_UPDATE",
 };
-obj = {
+let obj2 = {
   AUTHENTICATION_FAILED: 4004,
   [4004]: "AUTHENTICATION_FAILED",
   INVALID_SESSION: 4006,
@@ -123,7 +123,7 @@ const constants3 = {
 let closure_13 = 20 * DurationsDefault.Millis.SECOND;
 const MINUTE = DurationsDefault.Millis.MINUTE;
 let closure_15 = 5 * DurationsDefault.Millis.SECOND;
-obj = {
+let obj3 = {
   Connecting: "connecting",
   Connect: "connect",
   Disconnect: "disconnect",
@@ -170,8 +170,8 @@ class RTCControlSocket extends tmp3 {
     tmp6.serverVersion = 0;
     tmp6.url = global;
     tmp8 = closure_1(closure_2[6]);
-    tmp8 = new tmp8("RTCControlSocket(" + DEFAULT + ")");
-    tmp6.logger = tmp8;
+    tmp81 = new tmp8("RTCControlSocket(" + DEFAULT + ")");
+    tmp6.logger = tmp81;
     logger = tmp6.logger;
     enableNativeLoggerResult = logger.enableNativeLogger(true);
     tmp6.webSocket = null;
@@ -203,8 +203,7 @@ prototype["createWebSocket"] = function createWebSocket() {
     logger2.error("Connect called with already existing websocket");
     self.cleanupWebSocket((close) => close.close(4000));
   }
-  obj = self(4665);
-  self.connectionStartTime = obj.now();
+  self.connectionStartTime = self(4665).now();
   self.helloTimeout = setTimeout(() => {
     self.handleClose(
       false,
@@ -215,13 +214,22 @@ prototype["createWebSocket"] = function createWebSocket() {
         " ms - did not receive OP_HELLO in time.",
     );
   }, closure_13);
-  obj = { location: "RTCControlSocket", supportsSfuUpdate: MediaEngineStore.supports(constants.UDP_ENDPOINT_UPDATE) };
-  const webSocket = new WebSocket("" + self.url + "?v=" + self(14165).getVoiceGatewayProtocolVersion(obj));
+  let obj = self(4665);
+  obj2 = self(14166);
+  const webSocket = new WebSocket(
+    "" +
+      self.url +
+      "?v=" +
+      obj2.getVoiceGatewayProtocolVersion({
+        location: "RTCControlSocket",
+        supportsSfuUpdate: MediaEngineStore.supports(constants.UDP_ENDPOINT_UPDATE),
+      }),
+  );
   self.webSocket = webSocket;
   webSocket.binaryType = "arraybuffer";
   webSocket.onopen = () => {
     if (self.connectionState === constants.CONNECTING) {
-      self.emit(self.Connect);
+      self.emit(obj3.Connect);
     } else if (self.connectionState === constants.RECONNECTING) {
       self.doResumeOrClose();
     }
@@ -229,12 +237,12 @@ prototype["createWebSocket"] = function createWebSocket() {
     const diff = TimeUtils.now() - self.connectionStartTime;
     const logger = self.logger;
     logger.info("[CONNECTED] " + self.url + " in " + diff + " ms");
-    self.emit(self.Ping, Math.round(diff / 2));
+    self.emit(obj3.Ping, Math.round(diff / 2));
   };
   webSocket.onmessage = (data) => {
     const result = self.parseWebSocketMessage(data);
     ({ op, seq, d } = result);
-    self.emit(self.ReceiveMessage, op, d);
+    self.emit(obj3.ReceiveMessage, op, d);
     if (seq) {
       self.lastRecvSeqNum = seq;
     }
@@ -260,42 +268,42 @@ prototype["createWebSocket"] = function createWebSocket() {
     } else if (self.READY === op) {
       self.handleReady(d);
     } else if (self.SFU_UPDATE === op) {
-      self.emit(self.SfuUpdate, d);
+      self.emit(obj3.SfuUpdate, d);
     } else if (self.RESUMED === op) {
       self.handleResumed(d);
     } else if (self.SELECT_PROTOCOL_ACK === op) {
       if (d.bandwidth_estimation_experiment) {
-        self.emit(self.BandwidthEstimationExperiment, d.bandwidth_estimation_experiment);
+        self.emit(obj3.BandwidthEstimationExperiment, d.bandwidth_estimation_experiment);
       }
-      self.emit(self.Codecs, d.audio_codec, d.video_codec);
+      self.emit(obj3.Codecs, d.audio_codec, d.video_codec);
       if (d.media_session_id) {
-        self.emit(self.MediaSessionId, d.media_session_id);
+        self.emit(obj3.MediaSessionId, d.media_session_id);
       }
       if (d.sdp) {
-        self.emit(self.SDP, d.sdp);
+        self.emit(obj3.SDP, d.sdp);
       } else if (d.mode) {
-        self.emit(self.Encryption, d.mode, d.secret_key);
+        self.emit(obj3.Encryption, d.mode, d.secret_key);
       }
       if (d.keyframe_interval) {
-        self.emit(self.KeyframeInterval, d.keyframe_interval);
+        self.emit(obj3.KeyframeInterval, d.keyframe_interval);
       }
       let num8 = d.dave_protocol_version;
       if (!num8) {
         num8 = 0;
       }
-      self.emit(self.SecureFramesInit, num8);
+      self.emit(obj3.SecureFramesInit, num8);
       self.resumable = true;
     } else if (self.SPEAKING === op) {
       const speaking = d.speaking;
       if (typeof speaking !== "boolean") {
-        self.emit(self.Speaking, d.user_id, d.ssrc, tmp61);
+        self.emit(obj3.Speaking, d.user_id, d.ssrc, tmp61);
       }
     } else if (self.HEARTBEAT === op) {
       self.sendHeartbeat();
     } else if (self.HEARTBEAT_ACK === op) {
       self.handleHeartbeatAck(d);
     } else if (self.VIDEO === op) {
-      const Video = self.Video;
+      const Video = obj3.Video;
       ({ user_id, audio_ssrc, video_ssrc, streams } = d);
       let mapped1;
       if (streams != null) {
@@ -310,7 +318,7 @@ prototype["createWebSocket"] = function createWebSocket() {
           } else {
             VIDEO = constants.VIDEO;
           }
-          obj = {
+          const obj = {
             type: VIDEO,
             rid: rid.rid,
             ssrc: rid.ssrc,
@@ -339,65 +347,65 @@ prototype["createWebSocket"] = function createWebSocket() {
       }
       self.emit(Video, user_id, audio_ssrc, video_ssrc, mapped1);
     } else if (self.CLIENT_CONNECT === op) {
-      self.emit(self.ClientConnect, d.user_ids);
+      self.emit(obj3.ClientConnect, d.user_ids);
     } else if (self.CLIENT_DISCONNECT === op) {
-      self.emit(self.ClientDisconnect, d.user_id);
+      self.emit(obj3.ClientDisconnect, d.user_id);
     } else if (self.SESSION_UPDATE === op) {
       if (!tmp45) {
-        self.emit(self.Codecs, d.audio_codec, d.video_codec);
+        self.emit(obj3.Codecs, d.audio_codec, d.video_codec);
       }
       if (null != d.media_session_id) {
-        self.emit(self.MediaSessionId, d.media_session_id);
+        self.emit(obj3.MediaSessionId, d.media_session_id);
       }
       if (d.keyframe_interval) {
-        self.emit(self.KeyframeInterval, d.keyframe_interval);
+        self.emit(obj3.KeyframeInterval, d.keyframe_interval);
       }
       tmp45 = null == d.audio_codec && null == d.video_codec;
     } else if (self.MEDIA_SINK_WANTS === op) {
-      self.emit(self.MediaSinkWants, d);
+      self.emit(obj3.MediaSinkWants, d);
     } else if (self.VOICE_BACKEND_VERSION === op) {
       if (tmp41) {
-        self.emit(self.VoiceBackendVersion, d.voice, d.rtc_worker);
+        self.emit(obj3.VoiceBackendVersion, d.voice, d.rtc_worker);
       }
       tmp41 = null != d.voice && null != d.rtc_worker;
     } else if (self.FLAGS === op) {
       if (tmp38) {
-        self.emit(self.Flags, d.user_id, d.flags);
+        self.emit(obj3.Flags, d.user_id, d.flags);
       }
       tmp38 = null != d.flags && null != d.user_id;
     } else if (self.PLATFORM === op) {
       if (tmp35) {
-        self.emit(self.Platform, d.user_id, d.platform);
+        self.emit(obj3.Platform, d.user_id, d.platform);
       }
       tmp35 = null != d.platform && null != d.user_id;
     } else if (self.DAVE_PROTOCOL_PREPARE_TRANSITION === op) {
       if (tmp32) {
-        self.emit(self.SecureFramesPrepareTransition, d.transition_id, d.protocol_version);
+        self.emit(obj3.SecureFramesPrepareTransition, d.transition_id, d.protocol_version);
       }
       tmp32 = null != d.transition_id && null != d.protocol_version;
     } else if (self.DAVE_PROTOCOL_EXECUTE_TRANSITION === op) {
       if (null != d.transition_id) {
-        self.emit(self.SecureFramesExecuteTransition, d.transition_id);
+        self.emit(obj3.SecureFramesExecuteTransition, d.transition_id);
       }
     } else if (self.DAVE_PROTOCOL_PREPARE_EPOCH === op) {
       if (tmp28) {
-        self.emit(self.SecureFramesPrepareEpoch, d.epoch, d.protocol_version);
+        self.emit(obj3.SecureFramesPrepareEpoch, d.epoch, d.protocol_version);
       }
       tmp28 = null != d.epoch && null != d.protocol_version;
     } else if (self.MLS_EXTERNAL_SENDER_PACKAGE === op) {
-      self.emit(self.MLSExternalSenderPackage, d);
+      self.emit(obj3.MLSExternalSenderPackage, d);
     } else if (self.MLS_PROPOSALS === op) {
-      self.emit(self.MLSProposals, d);
+      self.emit(obj3.MLSProposals, d);
     } else if (self.MLS_PREPARE_COMMIT_TRANSITION === op) {
       const _DataView2 = DataView;
       const dataView = new DataView(d.buffer, d.byteOffset, 2);
       const uint16 = dataView.getUint16(0, false);
-      self.emit(self.MLSPrepareCommitTransition, uint16, d.slice(2));
+      self.emit(obj3.MLSPrepareCommitTransition, uint16, d.slice(2));
     } else if (self.MLS_WELCOME === op) {
       const _DataView = DataView;
       const dataView1 = new DataView(d.buffer, d.byteOffset, 2);
       const uint161 = dataView1.getUint16(0, false);
-      self.emit(self.MLSWelcome, uint161, d.slice(2));
+      self.emit(obj3.MLSWelcome, uint161, d.slice(2));
     } else {
       const logger3 = self.logger;
       const _HermesInternal3 = HermesInternal;
@@ -418,14 +426,14 @@ prototype["send"] = function send(op) {
     const _WebSocket = WebSocket;
     if (webSocket.readyState === WebSocket.OPEN) {
       const _JSON = JSON;
-      obj = { op, d: tmp };
+      const obj = { op, d: tmp };
       const json = JSON.stringify(obj);
       if (DeveloperOptionsStore.isLoggingGatewayEvents) {
         const logger = self.logger;
         const _HermesInternal = HermesInternal;
         logger.info("<~ " + json);
       }
-      self.emit(obj.SendMessage, op, tmp);
+      self.emit(obj3.SendMessage, op, tmp);
       try {
         webSocket.send(json);
       } catch (err) {}
@@ -449,7 +457,6 @@ prototype["sendBinary"] = function sendBinary(MLS_COMMIT_WELCOME, uint8Array) {
 };
 prototype["doResumeOrClose"] = function doResumeOrClose() {
   const self = this;
-  obj = TimeUtils;
   if (null !== this.serverId) {
     if (null !== self.channelId) {
       if (null !== self.token) {
@@ -462,8 +469,8 @@ prototype["doResumeOrClose"] = function doResumeOrClose() {
       }
     }
   }
-  self.disconnect(false, obj.UNRESUMABLE, "Cannot resume connection.");
-  nowResult = obj.now();
+  self.disconnect(false, obj2.UNRESUMABLE, "Cannot resume connection.");
+  nowResult = TimeUtils.now();
 };
 prototype["doResume"] = function doResume() {
   const self = this;
@@ -486,9 +493,9 @@ prototype["doResume"] = function doResume() {
   logger.info(
     "[RESUME] resuming session. serverId=" + serverId + " channelId=" + str + " sessionId=" + str2 + " seqAck=" + num,
   );
-  self.emit(obj.Resuming);
+  self.emit(obj3.Resuming);
   self.connectionState = constants3.RESUMING;
-  obj = {
+  const obj = {
     token: self.token,
     session_id: self.sessionId,
     server_id: self.serverId,
@@ -538,7 +545,7 @@ prototype["handleReady"] = function handleReady(experiments) {
   const self = this;
   const backoff = this.backoff;
   backoff.succeed();
-  obj = TimeUtils;
+  const obj = TimeUtils;
   const logger = this.logger;
   logger.info("[READY] took " + obj.now() - this.connectionStartTime + " ms");
   if (this.serverVersion >= 6) {
@@ -558,7 +565,7 @@ prototype["handleReady"] = function handleReady(experiments) {
       } else {
         VIDEO = constants.VIDEO;
       }
-      obj = {
+      const obj = {
         type: VIDEO,
         rid: rid.rid,
         ssrc: rid.ssrc,
@@ -585,7 +592,7 @@ prototype["handleReady"] = function handleReady(experiments) {
   if (mapped == null) {
     mapped = [];
   }
-  self.emit(obj.Ready, ip, port, modes, ssrc, mapped, experiments.experiments);
+  self.emit(obj3.Ready, ip, port, modes, ssrc, mapped, experiments.experiments);
 };
 prototype["supportsSfuUpdate"] = function supportsSfuUpdate() {
   return this.serverVersion >= 10;
@@ -604,23 +611,22 @@ prototype["handleClose"] = function handleClose(arg0, arg1, arg2) {
     flag = false;
   }
   self.cleanupWebSocket();
-  if (arg1 !== obj.AUTHENTICATION_FAILED) {
-    if (arg1 !== obj.SERVER_CRASH) {
-      if (arg1 !== obj.SERVER_NOT_FOUND) {
-        if (arg1 !== obj.INVALID_SESSION) {
+  if (arg1 !== obj2.AUTHENTICATION_FAILED) {
+    if (arg1 !== obj2.SERVER_CRASH) {
+      if (arg1 !== obj2.SERVER_NOT_FOUND) {
+        if (arg1 !== obj2.INVALID_SESSION) {
           if (self.backoff.fails > 3) {
             const logger = self.logger;
-            let str = "[WS CLOSED] Backoff exceed. Resetting.";
             logger.warn("[WS CLOSED] Backoff exceed. Resetting.");
             self.disconnect(flag, arg1, arg2);
           } else {
             ({ backoff, logger: logger2 } = self);
-            str = flag.toString();
+            const str1 = flag.toString();
             const result = backoff.fail(() => self.reconnect(flag, closure_2, closure_0)) / 1000;
             const _HermesInternal = HermesInternal;
             logger2.warn(
               "[WS CLOSED] (clean: " +
-                str +
+                str1 +
                 ", code: " +
                 arg1 +
                 ", reason: " +
@@ -643,7 +649,7 @@ prototype["disconnect"] = function disconnect(arg0, arg1, arg2) {
   this.cleanupWebSocket();
   this.cleanupState();
   this.connectionState = constants3.DISCONNECTED;
-  this.emit(obj.Disconnect, arg0, arg1, arg2);
+  this.emit(obj3.Disconnect, arg0, arg1, arg2);
 };
 prototype["reconnect"] = function reconnect(arg0, arg1, arg2) {
   const logger = this.logger;
@@ -692,7 +698,7 @@ prototype["parseWebSocketMessage"] = function parseWebSocketMessage(data) {
     if (self.serverVersion >= 8) {
       num3 = 2;
     }
-    obj = { op: uint8Array[num3], seq: uint16, d: uint8Array.subarray(num3 + 1) };
+    const obj = { op: uint8Array[num3], seq: uint16, d: uint8Array.subarray(num3 + 1) };
     return obj;
   } else {
     const _JSON = JSON;
@@ -715,8 +721,7 @@ prototype["handleHeartbeatAck"] = function handleHeartbeatAck(d) {
   if (this.serverVersion >= 8) {
     t = d.t;
   }
-  obj = TimeUtils;
-  self.emit(obj.Ping, obj.now() - t);
+  self.emit(obj3.Ping, TimeUtils.now() - t);
   self.lastHeartbeatAckTime = TimeUtils.now();
   self.heartbeatAck = true;
   if (null !== self.expeditedHeartbeatTimeout) {
@@ -731,7 +736,7 @@ prototype["handleHeartbeatTimeout"] = function handleHeartbeatTimeout() {
   const self = this;
   this.cleanupWebSocket((close) => close.close(4000));
   ({ backoff, logger } = this);
-  const result = backoff.fail(() => self.reconnect(false, obj.HEARTBEAT_TIMEOUT, "Heartbeat timeout.")) / 1000;
+  const result = backoff.fail(() => self.reconnect(false, obj2.HEARTBEAT_TIMEOUT, "Heartbeat timeout.")) / 1000;
   logger.warn("[HEARTBEAT ACK TIMEOUT] reconnecting in " + result.toFixed(2) + " seconds.");
 };
 prototype["startHeartbeater"] = function startHeartbeater() {
@@ -763,8 +768,8 @@ prototype["sendHeartbeat"] = function sendHeartbeat() {
     const logger2 = self.logger;
     const _HermesInternal = HermesInternal;
     logger2.info("Sending heartbeat with last received sequence number: " + num);
-    obj = { t: TimeUtils.now(), seq_ack: num };
-    self.send(obj.HEARTBEAT, obj);
+    obj2 = { t: TimeUtils.now(), seq_ack: num };
+    self.send(obj.HEARTBEAT, obj2);
   } else {
     const logger = self.logger;
     logger.info("Sending heartbeat");
@@ -794,7 +799,7 @@ prototype["connect"] = function connect() {
   } else {
     self.connectionState = tmp.CONNECTING;
     const webSocket = self.createWebSocket();
-    self.emit(obj.Connecting);
+    self.emit(obj3.Connecting);
     flag = true;
   }
   return flag;
@@ -811,7 +816,7 @@ prototype["identify"] = function identify(streamParameters) {
   this.sessionId = sessionId;
   this.token = token;
   this.connectionState = constants3.IDENTIFYING;
-  obj = {
+  const obj = {
     server_id: serverId,
     channel_id: channelId,
     user_id: userId,
@@ -824,7 +829,7 @@ prototype["identify"] = function identify(streamParameters) {
   let mapped;
   if (streamParameters != null) {
     mapped = streamParameters.map((type) => {
-      obj = {
+      const obj = {
         type: type.type,
         rid: type.rid,
         ssrc: type.ssrc,
@@ -912,7 +917,7 @@ prototype["resetBackoff"] = function resetBackoff() {
     logger.info(`Connection backoff reset ${str2}`);
     const backoff = self.backoff;
     backoff.succeed();
-    self.reconnect(false, obj.RESET_BACKOFF, "Reset backoff.");
+    self.reconnect(false, obj2.RESET_BACKOFF, "Reset backoff.");
     flag = true;
   }
   return flag;
@@ -923,13 +928,13 @@ prototype["close"] = function close() {
   this.cleanupWebSocket((close) => close.close(4000));
   this.cleanupState();
   this.connectionState = constants3.DISCONNECTED;
-  this.emit(obj.Disconnect, true, 1000, "Force Close");
+  this.emit(obj3.Disconnect, true, 1000, "Force Close");
 };
 prototype["destroy"] = function destroy() {
   this.close();
 };
 prototype["selectProtocol"] = function selectProtocol(protocol, rTCConnectionId, sdp, _selectedExperiments) {
-  obj = {};
+  const obj = {};
   let tmp = obj;
   sdp = null;
   if (null != sdp) {
@@ -937,10 +942,10 @@ prototype["selectProtocol"] = function selectProtocol(protocol, rTCConnectionId,
       if (null != sdp.sdp) {
         if ("" !== sdp.sdp) {
           sdp = sdp.sdp;
-          obj = {};
+          obj3 = {};
           const merged = Object.assign(sdp);
           const codecs = sdp.codecs;
-          obj.codecs = codecs.map((name) => ({
+          obj3.codecs = codecs.map((name) => ({
             name: name.name,
             type: name.type,
             priority: 1000 * name.priority,
@@ -949,8 +954,8 @@ prototype["selectProtocol"] = function selectProtocol(protocol, rTCConnectionId,
             encode: name.encode,
             decode: name.decode,
           }));
-          obj.rtc_connection_id = rTCConnectionId;
-          tmp = obj;
+          obj3.rtc_connection_id = rTCConnectionId;
+          tmp = obj3;
         }
       }
     }
@@ -970,12 +975,11 @@ prototype["selectProtocol"] = function selectProtocol(protocol, rTCConnectionId,
     }
     tmp = obj;
     if (BooleanResult) {
-      obj = { address: null, port: null, mode: null };
       ({ address: obj2.address, port: obj2.port, mode: obj2.mode } = sdp);
-      const obj1 = {};
+      const obj5 = {};
       const merged1 = Object.assign(sdp);
       const codecs1 = sdp.codecs;
-      obj1.codecs = codecs1.map((name) => ({
+      obj5.codecs = codecs1.map((name) => ({
         name: name.name,
         type: name.type,
         priority: 1000 * name.priority,
@@ -984,18 +988,18 @@ prototype["selectProtocol"] = function selectProtocol(protocol, rTCConnectionId,
         encode: name.encode,
         decode: name.decode,
       }));
-      obj1.rtc_connection_id = rTCConnectionId;
-      obj1.experiments = _selectedExperiments;
-      tmp = obj1;
-      sdp = obj;
+      obj5.rtc_connection_id = rTCConnectionId;
+      obj5.experiments = _selectedExperiments;
+      tmp = obj5;
+      sdp = { address: null, port: null, mode: null };
+      const obj4 = { address: null, port: null, mode: null };
     }
   }
-  const obj2 = { protocol, data: sdp };
   const merged2 = Object.assign(tmp);
-  this.send(obj.SELECT_PROTOCOL, obj2);
+  this.send(obj.SELECT_PROTOCOL, { protocol, data: sdp });
 };
 prototype["updateSession"] = function updateSession(codecs) {
-  obj = { codecs: null };
+  const obj = { codecs: null };
   codecs = codecs.codecs;
   obj.codecs = codecs.map((name) => ({
     name: name.name,
@@ -1025,11 +1029,11 @@ prototype["speaking"] = function speaking(_lastSentSpeakingStatus) {
   this.send(obj.SPEAKING, { speaking: BooleanResult, delay: num, ssrc: num2 });
 };
 prototype["video"] = function video(audio_ssrc, video_ssrc, rtx_ssrc, arr) {
-  obj = { audio_ssrc, video_ssrc, rtx_ssrc, streams: null };
+  let obj = { audio_ssrc, video_ssrc, rtx_ssrc, streams: null };
   let mapped;
   if (arr != null) {
     mapped = arr.map((type) => {
-      obj = {
+      const obj = {
         type: type.type,
         rid: type.rid,
         ssrc: type.ssrc,
@@ -1063,7 +1067,7 @@ prototype["mediaSinkWants"] = function mediaSinkWants(localVideoSinkWants) {
   }
 };
 prototype["secureFramesReadyForTransition"] = function secureFramesReadyForTransition(transition_id) {
-  obj = { transition_id };
+  const obj = { transition_id };
   this.send(obj.DAVE_PROTOCOL_READY_FOR_TRANSITION, obj);
 };
 prototype["sendMLSKeyPackage"] = function sendMLSKeyPackage(arg0) {
@@ -1079,20 +1083,20 @@ prototype["sendMLSCommitWelcome"] = function sendMLSCommitWelcome(byteLength) {
   this.sendBinary(obj.MLS_COMMIT_WELCOME, uint8Array);
 };
 prototype["flagMLSInvalidCommitWelcome"] = function flagMLSInvalidCommitWelcome(transition_id) {
-  obj = { transition_id };
+  const obj = { transition_id };
   this.send(obj.MLS_INVALID_COMMIT_WELCOME, obj);
 };
 prototype["disconnectForRepeatedMLSInvalidMessages"] = function disconnectForRepeatedMLSInvalidMessages(arg0) {
   const logger = this.logger;
   logger.warn("[MLS] " + arg0 + " consecutive invalid commit/welcome messages.");
   this.cleanupWebSocket((close) => close.close(constants.REPEATED_MLS_INVALID_MESSAGES));
-  this.disconnect(false, obj.REPEATED_MLS_INVALID_MESSAGES, "Repeated invalid MLS commit/welcome messages.");
+  this.disconnect(false, obj2.REPEATED_MLS_INVALID_MESSAGES, "Repeated invalid MLS commit/welcome messages.");
 };
 prototype["disconnectForRefusedDaveDowngrade"] = function disconnectForRefusedDaveDowngrade(EPOCH) {
   const logger = this.logger;
   logger.warn("[DAVE] Refused protocol downgrade to version 0 at " + EPOCH + ".");
   this.cleanupWebSocket((close) => close.close(constants.DAVE_DOWNGRADE_REFUSED));
-  this.disconnect(false, obj.DAVE_DOWNGRADE_REFUSED, "Refused DAVE protocol downgrade.");
+  this.disconnect(false, obj2.DAVE_DOWNGRADE_REFUSED, "Refused DAVE protocol downgrade.");
 };
 prototype["noRoute"] = function noRoute() {
   this.send(obj.CLIENT_CANNOT_REACH_RTC_SERVER, {});
@@ -1104,6 +1108,6 @@ let size = fn(2);
 let result = size.fileFinishedImporting("lib/RTCControlSocket.tsx");
 
 export default RTCControlSocket;
-export const RTCSocketOpcode = obj;
-export const RTCSocketCloseCode = obj;
-export const SocketEvent = obj;
+export { RTCSocketOpcode };
+export const RTCSocketCloseCode = obj2;
+export const SocketEvent = obj3;

@@ -15,8 +15,8 @@ let closure_11 = async function _requestAndSyncContacts() {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj3 = { value, done: true };
+      return obj3;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -36,8 +36,8 @@ let closure_11 = async function _requestAndSyncContacts() {
             } else if (arg0 === 2) {
               c4 = 0;
               c6 = 3;
-              obj = { value, done: true };
-              return obj;
+              const obj4 = { value, done: true };
+              return obj4;
             } else {
               closure_129_1 = value;
               let names = closure_129_1.names;
@@ -50,27 +50,25 @@ let closure_11 = async function _requestAndSyncContacts() {
           } else if (arg0 === 2) {
             c4 = 0;
             c6 = 3;
-            obj = { value, done: true };
+            const obj = { value, done: true };
             return obj;
           }
           const Storage = closure_130_0(closure_130_1[6]).Storage;
           const result = Storage.set(closure_130_10, closure_129_0);
           c4 = 0;
         }
-        let obj1 = closure_130_0(closure_130_1[7]);
         c5 = 3;
         c6 = 1;
-        obj1 = { value: null, done: false };
-        obj1.value = obj1.uploadContacts(payload, true);
-        return obj1;
+        const obj6 = { value: closure_130_0(closure_130_1[7]).uploadContacts(payload, true), done: false };
+        return obj6;
       }
       if (arg0 === 1) {
         c6 = 3;
         throw value;
       } else if (arg0 === 2) {
         c6 = 3;
-        const obj2 = { value, done: true };
-        return obj2;
+        const obj7 = { value, done: true };
+        return obj7;
       } else {
         closure_2 = tmp3;
         closure_1 = tmp5;
@@ -101,8 +99,8 @@ let closure_11 = async function _requestAndSyncContacts() {
           } else {
             c5 = 2;
             c6 = 1;
-            const obj3 = { value: ContactSyncUtils.getContacts(phone, state.getState().storedContacts), done: false };
-            return obj3;
+            const obj8 = { value: ContactSyncUtils.getContacts(phone, state.getState().storedContacts), done: false };
+            return obj8;
           }
         }
       }
@@ -117,16 +115,16 @@ let closure_11 = async function _requestAndSyncContacts() {
     }
   }
 };
-const ContactSyncPersistedStore = fn(12808);
+const ContactSyncPersistedStore = fn(12809);
 ({
   setStoredContacts: hasOwnProperty,
   deleteStoredContacts: metroRequire,
   useContactSyncStore: closure_7,
 } = ContactSyncPersistedStore);
-const ContactPermissions = fn(12807).ContactPermissions;
+const ContactPermissions = fn(12808).ContactPermissions;
 const PlatformTypes = fn(1074).PlatformTypes;
 const LAST_USER_CONTACTS_REQUEST_TIMESTAMP_KEY = "LAST_USER_CONTACTS_REQUEST_TIMESTAMP_KEY";
-let prototype = function ContactSyncLifecycleManager() {
+const prototype = function ContactSyncLifecycleManager() {
   let applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
   require = applyArgumentsResult;
   applyArgumentsResult.actions = {
@@ -164,11 +162,11 @@ let prototype = function ContactSyncLifecycleManager() {
   return applyArgumentsResult;
 }.prototype;
 class prototype extends tmp3 {}
-prototype = new prototype();
+const prototype1 = new prototype();
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/contact_sync/native/ContactSyncManager.tsx");
 
-export default prototype;
+export default prototype1;
 export const LAST_USER_CONTACTS_REQUEST_TIMESTAMP_KEY = "LAST_USER_CONTACTS_REQUEST_TIMESTAMP_KEY";
 export const removeLastUserContactsUpload = function removeLastUserContactsUpload() {
   const Storage = Storage3.Storage;

@@ -6,7 +6,7 @@ import AuthenticationStore from "../../stores/AuthenticationStore.tsx";
 import StreamRTCConnectionStore from "../../stores/StreamRTCConnectionStore.tsx";
 
 require = fn;
-function updateAveragedStatsHelper(minVersion, arr, arg2, arr, arr2) {
+function updateAveragedStatsHelper(minVersion, arr5, arg2, arr, arr2) {
   let tmp = arg2;
   const found = arr.find((type) => "video" === type.type);
   if (null == arg2) {
@@ -81,7 +81,7 @@ function updateAveragedStatsHelper(minVersion, arr, arg2, arr, arr2) {
       found1 = arr2.find((type) => "video" === type.type);
     }
     if (null != found1) {
-      if (arr >= tmp.minVersion) {
+      if (arr5 >= tmp.minVersion) {
         tmp.numDatapoints = tmp.numDatapoints - 1;
         if ("packetsSent" in found1) {
           let num11 = found1.packetsSent;
@@ -284,17 +284,17 @@ const mediaEngineStatsStore = new MediaEngineStatsStore(DispatcherDefault, {
           dependencyMap[tmp3] = [];
         }
         let arr2 = dependencyMap[tmp3];
-        arr2.push(tmp2);
-        let arr;
+        let arr = arr2.push(tmp2);
+        let arr5;
         if (dependencyMap[tmp3].length > 30) {
           let arr3 = dependencyMap[tmp3];
-          arr = arr3.shift();
+          arr5 = arr3.shift();
         }
         let tmp12 = prop;
         let tmp13 = nextResult;
         let tmp15 = getStatsHistoryAtIndex(tmp3, 15);
-        updateAveragedStats(closure_6, tmp12, tmp13, tmp15);
-        let tmp10Result = updateAveragedStats(closure_5, tmp3, tmp2, arr);
+        let tmp10Result = updateAveragedStats(closure_6, tmp12, tmp13, tmp15);
+        let tmp10Result2 = updateAveragedStats(closure_5, tmp3, tmp2, arr5);
       }
       continue;
     }

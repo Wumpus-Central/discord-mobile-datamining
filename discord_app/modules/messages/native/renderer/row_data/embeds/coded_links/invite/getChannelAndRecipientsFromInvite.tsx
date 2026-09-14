@@ -13,13 +13,13 @@ export default function getChannelAndRecipientsFromInvite(channel) {
       const recipients = channel.channel.recipients;
       let substr = recipients.slice();
     }
-    let obj = { recipients_: substr, channel: null };
+    const obj = { recipients_: substr, channel: null };
     let tmp = null;
     if (null != channel.channel) {
-      obj = {};
+      const obj2 = {};
       const merged = Object.assign(channel.channel);
-      obj.recipients = substr;
-      tmp = closure_0(obj);
+      obj2.recipients = substr;
+      tmp = closure_0(obj2);
     }
     obj.channel = tmp;
     return obj;

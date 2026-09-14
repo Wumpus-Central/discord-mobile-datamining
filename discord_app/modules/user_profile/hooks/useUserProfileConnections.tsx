@@ -3,6 +3,8 @@ import _mod19 from "../../../../_runtime/metro/00019__.js";
 import UserProfileStore from "../UserProfileStore.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
+const require = globalThis.__r;
+
 const useMemo = _mod19.useMemo;
 let closure_5 = [];
 const result = size.fileFinishedImporting("modules/user_profile/hooks/useUserProfileConnections.tsx");

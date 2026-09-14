@@ -10,7 +10,6 @@ import AutomaticLifecycleManager from "../../../../lib/AutomaticLifecycleManager
 require = fn;
 function handleChannelSelect(opensChannel) {
   ({ guildId, channelId, fromGuildId, fromChannelId } = opensChannel);
-  let obj = navigationTTIEnabled;
   if (obj.isNavigationTTIEnabled()) {
     if (null != channelId) {
       if (false !== opensChannel.opensChannel) {
@@ -26,21 +25,21 @@ function handleChannelSelect(opensChannel) {
         }
         if (undefined === fromGuildId) {
           const channel = ChannelStore.getChannel(fromChannelId);
-          guildId = undefined;
+          let guildId1;
           if (channel != null) {
-            guildId = channel.getGuildId();
+            guildId1 = channel.getGuildId();
           }
-          if (guildId == null) {
-            guildId = null;
+          if (guildId1 == null) {
+            guildId1 = null;
           }
-          fromGuildId = guildId;
+          fromGuildId = guildId1;
         }
-        obj = {
+        const obj2 = {
           definition: NavigationTTIDefinition.CHANNEL_NAVIGATION_TTI,
           destinationKey: channelId,
           properties: null,
         };
-        obj = {
+        const obj4 = {
           trigger: "navigation",
           from_guild_id: fromGuildId,
           to_guild_id: guildId,
@@ -58,23 +57,24 @@ function handleChannelSelect(opensChannel) {
         if (type == null) {
           type = null;
         }
-        obj.channel_type = type;
-        obj.changed_guild = fromGuildId !== guildId;
-        obj.warm_message_cache = MessageStore.hasPresent(channelId);
-        obj.properties = obj;
-        NavigationSpanTrackerDefault.beginNavigation(obj);
+        obj4.channel_type = type;
+        obj4.changed_guild = fromGuildId !== guildId;
+        obj4.warm_message_cache = MessageStore.hasPresent(channelId);
+        obj2.properties = obj4;
+        NavigationSpanTrackerDefault.beginNavigation(obj2);
       }
     }
   }
+  obj = navigationTTIEnabled;
 }
-let prototype = function NavigationTTIDispatcherManager() {
+const prototype = function NavigationTTIDispatcherManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
   applyArgumentsResult.actions = { CHANNEL_SELECT: handleChannelSelect };
   return applyArgumentsResult;
 }.prototype;
 class prototype extends tmp2 {}
-prototype = new prototype();
+const prototype1 = new prototype();
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/tti_analytics/native/navigation/NavigationTTIDispatcherManager.tsx");
 
-export default prototype;
+export default prototype1;

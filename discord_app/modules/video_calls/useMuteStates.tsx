@@ -5,6 +5,8 @@ import MediaEngineStore from "../../stores/MediaEngineStore.tsx";
 import PermissionStore from "../../stores/PermissionStore.tsx";
 import VoiceStateStore from "../../stores/VoiceStateStore.tsx";
 
+const require = globalThis.__r;
+
 const require = fn;
 function getMuteStates(voiceStateStore) {
   ({ channel, authenticationStore } = voiceStateStore);

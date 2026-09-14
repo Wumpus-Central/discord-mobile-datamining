@@ -2,7 +2,7 @@
 import LoggerDefault from "../../debug/Logger.tsx";
 import Constants2 from "../../../../discord_common/js/shared/Constants.tsx";
 import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
-import v1 from "../../../../_runtime/01256_v1.js";
+import v1 from "../../../../_runtime/01254_v1.js";
 import FlagUtils from "../../../../discord_common/js/shared/utils/FlagUtils.tsx";
 import ChannelConstants from "../../channel/ChannelConstants.tsx";
 import DatabaseDaosDefault from "../DatabaseDaos.tsx";
@@ -166,8 +166,8 @@ prototype["processMemberRoleIds"] = function processMemberRoleIds(arg0, roles) {
         return obj;
       }
     }
-    obj = { rolesAreDifferent: false, allRoleIds: set };
-    return obj;
+    const obj2 = { rolesAreDifferent: false, allRoleIds: set };
+    return obj2;
   }
 };
 prototype["userBecameGuildOwner"] = function userBecameGuildOwner(ownerId, owner_id, id) {
@@ -182,29 +182,28 @@ prototype["userBecameGuildOwner"] = function userBecameGuildOwner(ownerId, owner
   return tmp;
 };
 prototype["handleBackgroundSyncGuild"] = function handleBackgroundSyncGuild(item10008, database) {
-  let obj = GuildMemberStore;
   let selfMember = GuildMemberStore.getSelfMember(item10008.id);
   if (selfMember == null) {
-    selfMember = obj.getCachedSelfMember(item10008.id);
+    selfMember = GuildMemberStore.getCachedSelfMember(item10008.id);
   }
   if (null != selfMember) {
     const self = this;
     if ("partial" === item10008.data_mode) {
       if (self.backgroundSyncGuildHasObfuscatedChannels(item10008)) {
         let ChannelVisibleParentHidden = closure_17.Unknown;
-        obj = {};
+        const obj2 = {};
         if (null != item10008.partial_updates.roles) {
-          let roles = item10008.partial_updates.roles;
+          const roles = item10008.partial_updates.roles;
           for (const item10021 of roles) {
-            obj = { id: item10021.id, permissions: null, tags: null };
+            let obj3 = { id: item10021.id, permissions: null, tags: null };
             let deserializer = BigFlagUtils;
-            obj.permissions = deserializer.deserialize(item10021.permissions);
+            obj3.permissions = deserializer.deserialize(item10021.permissions);
             let tags = item10021.tags;
             if (tags == null) {
               tags = {};
             }
-            obj.tags = tags;
-            obj[item10021.id] = obj;
+            obj3.tags = tags;
+            obj2[item10021.id] = obj3;
             continue;
           }
         }
@@ -224,15 +223,15 @@ prototype["handleBackgroundSyncGuild"] = function handleBackgroundSyncGuild(item
           let flag = userBecameGuildOwnerResult;
         } else {
           const unsafeMutableRoles = GuildRoleStore.getUnsafeMutableRoles(item10008.id);
-          roles = undefined;
+          let roles1;
           if (selfMember != null) {
-            roles = selfMember.roles;
+            roles1 = selfMember.roles;
           }
-          if (roles == null) {
-            roles = [];
+          if (roles1 == null) {
+            roles1 = [];
           }
-          const set = new Set(roles);
-          const result = self.detectRoleVisibilityChanges(item10008.id, unsafeMutableRoles, obj, set);
+          const set = new Set(roles1);
+          const result = self.detectRoleVisibilityChanges(item10008.id, unsafeMutableRoles, obj2, set);
           flag = userBecameGuildOwnerResult;
           if (null != result) {
             flag = true;
@@ -291,10 +290,9 @@ prototype["handleGuild"] = function handleGuild(channels, database, BackgroundSy
     let tmp10 = null;
     let tmp11 = MemberRoles;
     if (!flag) {
-      let obj = GuildMemberStore;
       let selfMember = GuildMemberStore.getSelfMember(channels.id);
       if (selfMember == null) {
-        selfMember = obj.getCachedSelfMember(channels.id);
+        selfMember = GuildMemberStore.getCachedSelfMember(channels.id);
       }
       const members = channels.members;
       const found = members.find((user) => user.user.id === id);
@@ -335,7 +333,6 @@ prototype["handleGuild"] = function handleGuild(channels, database, BackgroundSy
         } else {
           writes = channels.roles.writes;
         }
-        obj = {};
         writes[Symbol.iterator]();
       }
     }
@@ -384,13 +381,16 @@ prototype["markGuildForResync"] = function markGuildForResync(
   BackgroundSync,
   ChannelVisibleParentHidden,
 ) {
-  let obj = v1;
-  const v4Result = obj.v4();
-  obj = { guild_id: id, request_id: v4Result, trigger: BackgroundSync, change_type: ChannelVisibleParentHidden };
-  AnalyticsUtilsDefault.track(constants.GUILD_CHANNEL_RESYNC_REQUESTED, obj);
+  const v4Result = v1.v4();
+  AnalyticsUtilsDefault.track(constants.GUILD_CHANNEL_RESYNC_REQUESTED, {
+    guild_id: id,
+    request_id: v4Result,
+    trigger: BackgroundSync,
+    change_type: ChannelVisibleParentHidden,
+  });
+  const obj3 = { guild_id: id, request_id: v4Result, trigger: BackgroundSync, change_type: ChannelVisibleParentHidden };
   const result = DatabaseDaosDefault.guildsRequiringChannelSyncTransaction(database);
-  obj = { id, requestId: v4Result };
-  result.put(obj);
+  result.put({ id, requestId: v4Result });
 };
 prototype["unmarkGuildForResync"] = function unmarkGuildForResync(id, database) {
   const result = DatabaseDaosDefault.guildsRequiringChannelSyncTransaction(database);
@@ -468,15 +468,16 @@ prototype["gatewayGuildHasObfuscatedChannels"] = function gatewayGuildHasObfusca
 };
 prototype["backgroundSyncGuildHasObfuscatedChannels"] = function backgroundSyncGuildHasObfuscatedChannels(data_mode) {
   if ("partial" === data_mode.data_mode) {
-    let channels = data_mode.partial_updates.channels;
-    if (channels == null) {
-      channels = [];
+    let channels1 = data_mode.partial_updates.channels;
+    if (channels1 == null) {
+      channels1 = [];
     }
     let deleted_channel_ids = data_mode.partial_updates.deleted_channel_ids;
     if (deleted_channel_ids == null) {
       deleted_channel_ids = [];
     }
     let items = deleted_channel_ids;
+    let channels = channels1;
   } else {
     channels = data_mode.channels;
     items = [];

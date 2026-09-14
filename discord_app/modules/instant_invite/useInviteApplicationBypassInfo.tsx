@@ -1,6 +1,8 @@
 // discord_app/modules/instant_invite/useInviteApplicationBypassInfo.tsx
 import PermissionStore from "../../stores/PermissionStore.tsx";
 
+const require = globalThis.__r;
+
 const require = fn;
 const Constants = fn(1074);
 ({ GuildFeatures: c3, Permissions: closure_4 } = Constants);

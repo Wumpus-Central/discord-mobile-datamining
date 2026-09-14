@@ -10,8 +10,8 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-fn(4636);
-let createStyles = {
+const createStyles = fn(4636);
+let obj2 = {
   screen: {
     flex: 1,
     position: "absolute",
@@ -32,14 +32,13 @@ let size = {
   backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL,
   width: "60%",
 };
-createStyles.progressBackground = size;
-createStyles = {
+obj2.progressBackground = size;
+obj2.progressForeground = {
   backgroundColor: nativeDefault.unsafe_rawColors.GREEN_330,
   borderRadius: nativeDefault.radii.round,
   height: 8,
 };
-createStyles.progressForeground = createStyles;
-let closure_7 = createStyles.createStyles(createStyles);
+let closure_7 = createStyles.createStyles(obj2);
 const __initData = {
   code: 'function NewMemberActionsCompletedModalTsx1(){const{withDelay,withTiming,barWidth}=this.__closure;return{width:withDelay(500,withTiming(barWidth.get()*100+"%",{duration:700}))};}',
 };
@@ -50,41 +49,44 @@ export default function NewMemberActionsCompleted(arg0) {
   let sharedValue;
   ({ initialPercent, numActions } = arg0);
   const tmp = closure_7();
-  let obj = sharedValue(4373);
-  sharedValue = obj.useSharedValue(initialPercent);
+  sharedValue = sharedValue(4373).useSharedValue(initialPercent);
   const items = [sharedValue];
   const effect = noop.useEffect(() => {
     const result = sharedValue.set(1);
   }, items);
-  let obj1 = sharedValue(4373);
+  let obj = sharedValue(4373);
   const fn = function b() {
     const obj = { width: null };
     const obj2 = ReanimatedRexport;
     obj.width = obj2.withDelay(500, timing.withTiming(`${100 * sharedValue.get()}%`, { duration: 700 }));
     return obj;
   };
-  obj = { withDelay: sharedValue(4373).withDelay, withTiming: sharedValue(4637).withTiming, barWidth: sharedValue };
-  fn.__closure = obj;
+  let obj2 = sharedValue(4373);
+  fn.__closure = {
+    withDelay: sharedValue(4373).withDelay,
+    withTiming: sharedValue(4637).withTiming,
+    barWidth: sharedValue,
+  };
   fn.__workletHash = 7643178959760;
   fn.__initData = __initData;
-  const animatedStyle = obj1.useAnimatedStyle(fn);
+  const animatedStyle = obj2.useAnimatedStyle(fn);
   const effect1 = noop.useEffect(() => {
     const timerId = setTimeout(
-      () => closure_1_1(4839).popWithKey(sharedValue(12414).NEW_MEMBER_ACTION_COMPLETE_MODAL_KEY),
+      () => closure_1_1(4839).popWithKey(sharedValue(12415).NEW_MEMBER_ACTION_COMPLETE_MODAL_KEY),
       2500,
     );
   }, []);
-  obj = { style: tmp.screen, children: null };
-  obj1 = { style: tmp.text, variant: "heading-xl/semibold", color: "text-overlay-light", children: null };
+  const obj4 = { style: tmp.screen, children: null };
+  const obj5 = { style: tmp.text, variant: "heading-xl/semibold", color: "text-overlay-light", children: null };
   const intl = sharedValue(1114).intl;
-  obj1.children = intl.format(sharedValue(1114).t.pGj5u2, { count: numActions });
-  const items1 = [closure_5(sharedValue(4632).Text, obj1)];
-  let obj2 = { style: tmp.progressBackground, children: null };
-  const obj3 = { style: null };
+  obj5.children = intl.format(sharedValue(1114).t.pGj5u2, { count: numActions });
+  const items1 = [closure_5(sharedValue(4632).Text, obj5)];
+  const obj6 = { style: tmp.progressBackground, children: null };
+  const obj7 = { style: null };
   const items2 = [tmp.progressForeground, animatedStyle];
-  obj3.style = items2;
-  obj2.children = closure_5(ReanimatedRexportDefault.View, obj3);
-  items1[1] = closure_5(View, obj2);
-  obj.children = items1;
-  return closure_6(View, obj);
+  obj7.style = items2;
+  obj6.children = closure_5(ReanimatedRexportDefault.View, obj7);
+  items1[1] = closure_5(View, obj6);
+  obj4.children = items1;
+  return closure_6(View, obj4);
 }

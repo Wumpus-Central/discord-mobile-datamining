@@ -23,19 +23,24 @@ export default function UserVerification(arg0) {
     const platform = field.platform;
     let tmp5 = platform === MemberVerificationTypes.UserVerificationFieldPlatforms.PHONE;
     if (tmp5) {
-      let obj = {
+      const obj = {
         passesVerification: verification[MemberVerificationTypes.UserVerificationFieldPlatforms.PHONE],
         platform: MemberVerificationTypes.UserVerificationFieldPlatforms.PHONE,
       };
       tmp5 = React3(IdentityVerificationFieldDefault, obj);
     }
     const items = [tmp5, ,];
-    obj = {
+    const obj2 = {
       passesVerification: verification[MemberVerificationTypes.UserVerificationFieldPlatforms.EMAIL],
       platform: MemberVerificationTypes.UserVerificationFieldPlatforms.EMAIL,
     };
-    items[1] = React3(IdentityVerificationFieldDefault, obj);
-    obj = { style: tmp.emailPhoneNote, variant: "heading-deprecated-12/medium", color: "text-default", children: null };
+    items[1] = React3(IdentityVerificationFieldDefault, obj2);
+    const obj3 = {
+      style: tmp.emailPhoneNote,
+      variant: "heading-deprecated-12/medium",
+      color: "text-default",
+      children: null,
+    };
     if (platform === MemberVerificationTypes.UserVerificationFieldPlatforms.PHONE) {
       const intl2 = util.intl;
       let stringResult = intl2.string(util.t["jMh+TY"]);
@@ -43,10 +48,10 @@ export default function UserVerification(arg0) {
       const intl = util.intl;
       stringResult = intl.string(util.t.Vgv9ip);
     }
-    const obj1 = { children: null };
-    obj.children = stringResult;
-    items[2] = React3(Text_Text.Text, obj);
-    obj1.children = items;
-    return hasOwnProperty(React4, obj1);
+    const obj4 = { children: null };
+    obj3.children = stringResult;
+    items[2] = React3(Text_Text.Text, obj3);
+    obj4.children = items;
+    return hasOwnProperty(React4, obj4);
   }
 }

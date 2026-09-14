@@ -8,27 +8,37 @@ import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 import LocaleStore from "../../../../user_settings/LocaleStore.tsx";
 
+const require = globalThis.__r;
 const ClipViewDefault = ClipView;
 
 require = fn;
 const View = fn(17).View;
-const CHANNEL_SPRING_CONFIG = fn(13159).CHANNEL_SPRING_CONFIG;
+const CHANNEL_SPRING_CONFIG = fn(13160).CHANNEL_SPRING_CONFIG;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 let SPRING_CONFIG = { damping: 17, stiffness: 320, mass: 0.5 };
 const createStyles = fn(4636);
 createStyles.createStyles((arg0, marginLeft) => {
-  let obj = {
+  const obj = {
     avatarStack: { flexDirection: "row" },
-    stageAvatarStack: null,
-    avatarBubbles: null,
-    avatars: null,
-    shiftedAvatar: null,
+    stageAvatarStack: {
+      flexDirection: "row",
+      justifyContent: "space-between",
+      alignItems: "center",
+      backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE,
+      borderRadius: 24,
+      paddingLeft: 4,
+      paddingRight: 4,
+      paddingVertical: 4,
+    },
+    avatarBubbles: { display: "flex", flexDirection: "row" },
+    avatars: { display: "flex", flexDirection: "row" },
+    shiftedAvatar: { marginLeft: -marginLeft },
     userCounter: null,
     ellipsisWrapper: null,
     ellipsisBorder: null,
   };
-  obj = {
+  const obj2 = {
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
@@ -38,11 +48,7 @@ createStyles.createStyles((arg0, marginLeft) => {
     paddingRight: 4,
     paddingVertical: 4,
   };
-  obj.stageAvatarStack = obj;
-  obj.avatarBubbles = { display: "flex", flexDirection: "row" };
-  obj.avatars = { display: "flex", flexDirection: "row" };
-  obj.shiftedAvatar = { marginLeft: -marginLeft };
-  obj = {
+  obj.userCounter = {
     backgroundColor: nativeDefault.colors.BACKGROUND_MOD_STRONG,
     flexDirection: "row",
     alignItems: "center",
@@ -54,8 +60,27 @@ createStyles.createStyles((arg0, marginLeft) => {
     paddingHorizontal: 4,
     paddingTop: 1,
   };
-  obj.userCounter = obj;
   obj.ellipsisWrapper = {
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "center",
+    alignItems: "flex-end",
+    overflow: "hidden",
+    marginLeft: -4 - marginLeft,
+  };
+  const obj3 = {
+    backgroundColor: nativeDefault.colors.BACKGROUND_MOD_STRONG,
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "center",
+    marginLeft: -marginLeft,
+    height: native.AVATAR_SIZE_MAP[arg0],
+    minWidth: native.AVATAR_SIZE_MAP[arg0],
+    borderRadius: 10,
+    paddingHorizontal: 4,
+    paddingTop: 1,
+  };
+  const obj4 = {
     display: "flex",
     flexDirection: "row",
     justifyContent: "center",
@@ -110,21 +135,24 @@ export const HappeningNowAvatarStack = function HappeningNowAvatarStack(userLimi
   let mapped;
   const tmp3 = mapped(XSMALL_20, num3);
   closure_6 = tmp3;
-  let obj = num2;
   [tmp5, c7] = XSMALL_20(
     num2.useState(() => isTyping),
     2,
   );
-  let obj1 = require("ReanimatedRexport");
+  let obj = num2;
+  const tmp4 = XSMALL_20(
+    num2.useState(() => isTyping),
+    2,
+  );
   let num4 = 0;
   if (isTyping) {
     num4 = 1;
   }
-  sharedValue = obj1.useSharedValue(num4);
-  let tmp6Result = require("useStateFromStores");
+  sharedValue = require("ReanimatedRexport").useSharedValue(num4);
+  let obj2 = require("ReanimatedRexport");
   let items = [closure_6];
-  const stateFromStores = tmp6Result.useStateFromStores(items, () => closure_6.locale);
-  tmp6Result = require("ReanimatedRexport");
+  const stateFromStores = require("useStateFromStores").useStateFromStores(items, () => closure_6.locale);
+  const tmp6Result = require("useStateFromStores");
   class V {
     constructor() {
       obj = { opacity: null, width: null };
@@ -135,14 +163,13 @@ export const HappeningNowAvatarStack = function HappeningNowAvatarStack(userLimi
       return obj;
     }
   }
-  obj = { interpolate: require("ReanimatedRexport").interpolate, typingValue: sharedValue, ELLIPSIS_WIDTH: 28 };
-  V.__closure = obj;
+  const tmp6Result5 = require("ReanimatedRexport");
+  V.__closure = { interpolate: require("ReanimatedRexport").interpolate, typingValue: sharedValue, ELLIPSIS_WIDTH: 28 };
   V.__workletHash = 14140918847743;
   V.__initData = __initData;
   const items1 = [isTyping, sharedValue];
-  const animatedStyle = tmp6Result.useAnimatedStyle(V);
+  const animatedStyle = tmp6Result5.useAnimatedStyle(V);
   const effect = obj.useEffect(() => {
-    let obj = spring;
     let num = 0;
     if (isTyping) {
       num = 1;
@@ -153,11 +180,12 @@ export const HappeningNowAvatarStack = function HappeningNowAvatarStack(userLimi
         const obj = guildId(isStage[9]);
       }
     };
-    obj = { runOnJS: ReanimatedRexport.runOnJS, setRenderComponents, isTyping };
-    fn.__closure = obj;
+    let obj = spring;
+    fn.__closure = { runOnJS: ReanimatedRexport.runOnJS, setRenderComponents, isTyping };
     fn.__workletHash = 2498652829757;
     fn.__initData = __initData;
     const result = sharedValue.set(obj.withSpring(num, CHANNEL_SPRING_CONFIG, "respect-motion-settings", fn));
+    const obj2 = { runOnJS: ReanimatedRexport.runOnJS, setRenderComponents, isTyping };
   }, items1);
   substr = users.slice(0, num);
   if (userCount == null) {
@@ -167,15 +195,14 @@ export const HappeningNowAvatarStack = function HappeningNowAvatarStack(userLimi
   SPRING_CONFIG = diff;
   mapped = substr.map((user, index) => {
     const diff = substr.length - 1;
-    let obj = { user, guildId, size: XSMALL_20 };
-    const tmp6 = React6(native.Avatar, obj);
+    const tmp6 = React6(native.Avatar, { user, guildId, size: XSMALL_20 });
     let shiftedAvatar;
     if (0 !== index) {
       shiftedAvatar = closure_6.shiftedAvatar;
     }
-    obj = { style: shiftedAvatar, children: null };
+    const obj2 = { style: shiftedAvatar, children: null };
     if (index !== diff) {
-      obj = { cutouts: null, children: null };
+      const obj3 = { cutouts: null, children: null };
       const point = {
         shape: ClipView.CutoutShape.Circle,
         x: native.AVATAR_SIZE_MAP[XSMALL_20] - num3 - num2,
@@ -183,22 +210,19 @@ export const HappeningNowAvatarStack = function HappeningNowAvatarStack(userLimi
         size: native.AVATAR_SIZE_MAP[XSMALL_20] + 2 * num2,
       };
       const items = [point];
-      obj.cutouts = items;
-      obj.children = tmp6;
-      let tmp2Result = React6(ClipViewDefault, obj);
+      obj3.cutouts = items;
+      obj3.children = tmp6;
+      let tmp2Result = React6(ClipViewDefault, obj3);
     } else {
       tmp2Result = tmp6;
       if (!isStage) {
         tmp2Result = tmp6;
       }
     }
-    obj.children = tmp2Result;
-    return React6(View, obj, user.id);
+    obj2.children = tmp2Result;
+    return React6(View, obj2, user.id);
   });
-  const tmp4 = XSMALL_20(
-    num2.useState(() => isTyping),
-    2,
-  );
+  let obj3 = { interpolate: require("ReanimatedRexport").interpolate, typingValue: sharedValue, ELLIPSIS_WIDTH: 28 };
   class H {
     constructor() {
       num = 0;
@@ -230,7 +254,8 @@ export const HappeningNowAvatarStack = function HappeningNowAvatarStack(userLimi
       return obj;
     }
   }
-  obj = {
+  const tmp6Result6 = require("ReanimatedRexport");
+  H.__closure = {
     isStage,
     extraUsers: diff,
     avatars: mapped,
@@ -240,63 +265,62 @@ export const HappeningNowAvatarStack = function HappeningNowAvatarStack(userLimi
     withSpring: require("spring").withSpring,
     SPRING_CONFIG,
   };
-  H.__closure = obj;
   H.__workletHash = 5027466437777;
   H.__initData = __initData2;
-  const animatedStyle1 = require("ReanimatedRexport").useAnimatedStyle(H);
-  obj1 = { style: null, children: null };
+  const animatedStyle1 = tmp6Result6.useAnimatedStyle(H);
+  const obj5 = { style: null, children: null };
   if (isStage) {
     const items2 = [tmp3.stageAvatarStack, style];
-    obj1.style = items2;
-    let obj2 = { style: null, children: null };
+    obj5.style = items2;
+    const obj6 = { style: null, children: null };
     const items3 = [tmp3.avatars, animatedStyle1];
-    obj2.style = items3;
-    obj2.children = mapped;
-    const items4 = [sharedValue(isTyping(isStage[9]).View, obj2)];
-    const obj3 = {
+    obj6.style = items3;
+    obj6.children = mapped;
+    const items4 = [sharedValue(isTyping(isStage[9]).View, obj6)];
+    const obj7 = {
       color: "text-default",
       variant: "text-xs/semibold",
       children: require("NumberUtils").humanizeValue(userCount, stateFromStores),
     };
-    items4[1] = sharedValue(require("Text/Text").Text, obj3);
-    obj1.children = items4;
-    let tmp20 = obj1;
-    const tmp6Result2 = require("NumberUtils");
+    items4[1] = sharedValue(require("Text/Text").Text, obj7);
+    obj5.children = items4;
+    let tmp20 = obj5;
+    const tmp6Result7 = require("NumberUtils");
   } else {
     const items5 = [tmp3.avatarStack, style];
-    obj1.style = items5;
-    const obj4 = { style: null, children: null };
+    obj5.style = items5;
+    const obj8 = { style: null, children: null };
     const items6 = [tmp3.avatarBubbles, animatedStyle1];
-    obj4.style = items6;
-    const obj5 = { style: tmp3.avatars, children: mapped };
-    const items7 = [sharedValue(tmp16, obj5)];
+    obj8.style = items6;
+    const obj9 = { style: tmp3.avatars, children: mapped };
+    const items7 = [sharedValue(tmp16, obj9)];
     let tmp18Result = null;
     if (diff > 0) {
-      const obj6 = { style: tmp3.userCounter, children: null };
-      const obj7 = { color: "text-default", variant: "text-xxs/semibold", allowFontScaling: false, children: null };
+      const obj10 = { style: tmp3.userCounter, children: null };
+      const obj11 = { color: "text-default", variant: "text-xxs/semibold", allowFontScaling: false, children: null };
       const items8 = ["+", require("NumberUtils").humanizeValue(diff, stateFromStores)];
-      obj7.children = items8;
-      obj6.children = tmp15(require("Text/Text").Text, obj7);
-      tmp18Result = tmp18(tmp16, obj6);
-      const tmp6Result3 = require("NumberUtils");
+      obj11.children = items8;
+      obj10.children = tmp15(require("Text/Text").Text, obj11);
+      tmp18Result = tmp18(tmp16, obj10);
+      const tmp6Result8 = require("NumberUtils");
     }
     items7[1] = tmp18Result;
-    obj4.children = items7;
-    const items9 = [tmp15(isTyping(isStage[9]).View, obj4)];
-    if (!tmp18Result) {
-      tmp18Result = isTyping;
+    obj8.children = items7;
+    const items9 = [tmp15(isTyping(isStage[9]).View, obj8)];
+    if (!tmp18Result2) {
+      tmp18Result2 = isTyping;
     }
-    if (tmp18Result) {
-      const obj8 = { style: null, children: null };
+    if (tmp18Result2) {
+      const obj12 = { style: null, children: null };
       const items10 = [tmp3.ellipsisWrapper, animatedStyle];
-      obj8.style = items10;
-      const obj9 = { style: tmp3.ellipsisBorder };
-      obj8.children = tmp18(require("typing_indicators/TypingIndicator").TypingIndicator, obj9);
-      tmp18Result = tmp18(tmp17(isStage[9]).View, obj8);
+      obj12.style = items10;
+      const obj13 = { style: tmp3.ellipsisBorder };
+      obj12.children = tmp18(require("typing_indicators/TypingIndicator").TypingIndicator, obj13);
+      tmp18Result2 = tmp18(tmp17(isStage[9]).View, obj12);
     }
-    items9[1] = tmp18Result;
-    obj1.children = items9;
-    tmp20 = obj1;
+    items9[1] = tmp18Result2;
+    obj5.children = items9;
+    tmp20 = obj5;
     tmp17 = isTyping;
   }
   return substr(num3, tmp20);

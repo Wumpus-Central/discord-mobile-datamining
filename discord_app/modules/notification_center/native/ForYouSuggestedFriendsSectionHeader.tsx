@@ -7,9 +7,22 @@ import noop from "../../../../_runtime/metro/00019__.js";
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-fn(4636);
-let createStyles = { container: null, noDivider: null, text: null };
-createStyles = {
+const createStyles = fn(4636);
+let obj2 = {
+  container: {
+    borderTopWidth: 1,
+    borderTopColor: nativeDefault.colors.BORDER_SUBTLE,
+    marginTop: 12,
+    marginBottom: 8,
+    paddingHorizontal: 24,
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
+  },
+  noDivider: { borderTopWidth: 0, marginTop: 0 },
+  text: null,
+};
+const obj3 = {
   borderTopWidth: 1,
   borderTopColor: nativeDefault.colors.BORDER_SUBTLE,
   marginTop: 12,
@@ -19,10 +32,8 @@ createStyles = {
   alignItems: "center",
   justifyContent: "space-between",
 };
-createStyles.container = createStyles;
-createStyles.noDivider = { borderTopWidth: 0, marginTop: 0 };
-createStyles.text = { marginTop: nativeDefault.space.PX_16 };
-let closure_4 = createStyles.createStyles(createStyles);
+obj2.text = { marginTop: nativeDefault.space.PX_16 };
+let closure_4 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/notification_center/native/ForYouSuggestedFriendsSectionHeader.tsx");
 
@@ -34,20 +45,16 @@ export default function ForYouSuggestedFriendsSectionHeader(showDivider) {
   if (!showDivider) {
     noDivider = tmp.noDivider;
   }
-  let obj = { style: items, children: null };
+  const obj = { style: items, children: null };
   items[1] = noDivider;
-  obj = { style: tmp.text, color: "text-muted", variant: "text-sm/semibold", children: null };
+  const obj2 = { style: tmp.text, color: "text-muted", variant: "text-sm/semibold", children: null };
   const intl = util.intl;
-  obj.children = intl.string(util.t["1uAmCw"]);
+  obj2.children = intl.string(util.t["1uAmCw"]);
   obj.children = jsx(Text_Text.Text, {
     style: tmp.text,
     color: "text-muted",
     variant: "text-sm/semibold",
     children: null,
   });
-  return (
-    <View style={tmp.text} color="text-muted" variant="text-sm/semibold">
-      {null}
-    </View>
-  );
+  return <View style={items}>{null}</View>;
 }

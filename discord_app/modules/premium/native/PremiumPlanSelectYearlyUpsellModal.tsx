@@ -1,7 +1,7 @@
 // discord_app/modules/premium/native/PremiumPlanSelectYearlyUpsellModal.tsx
 import common_AlertDefault from "../../../components_native/common/Alert.tsx";
 import TextStylesDefault from "../../rebrand/native/TextStyles.tsx";
-import _modDef13639 from "../../../../_runtime/metro/13639__.js";
+import _modDef13640 from "../../../../_runtime/metro/13640__.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import LocaleStore from "../../user_settings/LocaleStore.tsx";
@@ -10,12 +10,12 @@ import IAPStore from "../../../stores/native/IAPStore.android.tsx";
 const require = fn;
 get_ActivityIndicator = fn(17);
 ({ Image: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const usePremiumPlanSelectStore = fn(13629).usePremiumPlanSelectStore;
+const usePremiumPlanSelectStore = fn(13630).usePremiumPlanSelectStore;
 let closure_10 = fn(1373).PREMIUM_YEARLY_DISCOUNT_PERCENT;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-fn(4636);
-let createStyles = {
+const createStyles = fn(4636);
+let obj2 = {
   container: { marginHorizontal: 26 },
   image: { alignSelf: "center", marginVertical: 32 },
   header: null,
@@ -24,23 +24,23 @@ let createStyles = {
   continueButton: null,
   cancelButton: null,
 };
-createStyles = {};
+let obj3 = {};
 const merged = Object.assign(TextStylesDefault(fn(1085).Fonts.DISPLAY_EXTRABOLD, undefined, 24));
-createStyles.alignSelf = "center";
-createStyles.textAlign = "center";
-createStyles.paddingBottom = 8;
-createStyles.color = fn(5522).DARK_WHITE_500_LIGHT_BLACK_500;
-createStyles.header = createStyles;
-createStyles.description = {
+obj3.alignSelf = "center";
+obj3.textAlign = "center";
+obj3.paddingBottom = 8;
+obj3.color = fn(5522).DARK_WHITE_500_LIGHT_BLACK_500;
+obj2.header = obj3;
+obj2.description = {
   alignSelf: "center",
   textAlign: "center",
   paddingBottom: 32,
   color: fn(5522).DARK_WHITE_500_LIGHT_BLACK_500,
 };
-createStyles.upsellButton = { marginBottom: 16 };
-createStyles.continueButton = { marginBottom: 4 };
-createStyles.cancelButton = { marginTop: 8, marginBottom: 4 };
-let closure_13 = createStyles.createStyles(createStyles);
+obj2.upsellButton = { marginBottom: 16 };
+obj2.continueButton = { marginBottom: 4 };
+obj2.cancelButton = { marginTop: 8, marginBottom: 4 };
+let closure_13 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/native/PremiumPlanSelectYearlyUpsellModal.tsx");
 
@@ -51,17 +51,17 @@ export default function PremiumPlanSelectYearlyUpsellModal(arg0) {
   noop = undefined;
   const tmp = closure_13();
   const tmp2 = usePremiumPlanSelectStore((isPurchasing) => isPurchasing.isPurchasing);
-  let obj = noop;
-  [tmp4, c3] = _slicedToArray(noop.useState(null), 2);
-  let obj1 = productId(7512);
-  const premiumBundledItemsFromProductId = obj1.getPremiumBundledItemsFromProductId(productId);
-  let obj2 = productId(504);
+  [tmp4, c3] = noop.useState(null);
+  const obj = noop;
+  const tmp3 = _slicedToArray(noop.useState(null), 2);
+  const premiumBundledItemsFromProductId = productId(7512).getPremiumBundledItemsFromProductId(productId);
+  const obj2 = productId(7512);
   let items = [LocaleStore];
-  const stateFromStores = obj2.useStateFromStores(items, () => locale.locale);
-  let obj3 = productId(504);
+  const stateFromStores = productId(504).useStateFromStores(items, () => locale.locale);
+  const obj3 = productId(504);
   const items1 = [IAPStore];
   const tmp9 = _slicedToArray(
-    obj3.useStateFromStoresArray(items1, () => {
+    productId(504).useStateFromStoresArray(items1, () => {
       const items = [IAPStore.getProduct(productId), IAPStore.isBusy()];
       return items;
     }),
@@ -89,59 +89,60 @@ export default function PremiumPlanSelectYearlyUpsellModal(arg0) {
   if (null == premiumTier || null == orderPriceString) {
     return null;
   } else {
-    let tmp5Result = productId(1880);
-    const formatPercentResult = tmp5Result.formatPercent(stateFromStores, closure_10 / 100);
-    obj = { onClose, noDefaultButtons: true, children: null };
-    obj = { style: tmp.container, children: null };
-    obj1 = { style: tmp.image, source: _modDef13639 };
-    const items2 = [closure_11(closure_5, obj1), , , , ,];
-    obj2 = { style: tmp.header, accessibilityRole: "header", children: null };
+    const formatPercentResult = productId(1880).formatPercent(stateFromStores, closure_10 / 100);
+    const obj5 = { onClose, noDefaultButtons: true, children: null };
+    const obj6 = { style: tmp.container, children: null };
+    const obj7 = { style: tmp.image, source: null };
+    const tmp5Result = productId(1880);
+    obj7.source = _modDef13640;
+    const items2 = [closure_11(closure_5, obj7), , , , ,];
+    const obj8 = { style: tmp.header, accessibilityRole: "header", children: null };
     const intl = productId(1114).intl;
-    obj3 = { discountPercentage: formatPercentResult, planName: null };
-    tmp5Result = productId(4294);
-    obj3.planName = tmp5Result.getPremiumTypeDisplayName(premiumTier);
-    obj2.children = intl.format(productId(1114).t.LQCVfK, obj3);
-    items2[1] = closure_11(productId(1178).LegacyText, obj2);
-    const obj4 = { style: tmp.description, children: null };
+    const obj9 = { discountPercentage: formatPercentResult, planName: null };
+    const tmp19 = common_AlertDefault;
+    obj9.planName = productId(4294).getPremiumTypeDisplayName(premiumTier);
+    obj8.children = intl.format(productId(1114).t.LQCVfK, obj9);
+    items2[1] = closure_11(productId(1176).LegacyText, obj8);
+    const obj10 = { style: tmp.description, children: null };
     const intl2 = productId(1114).intl;
-    const obj5 = { discountPercentage: formatPercentResult };
-    obj4.children = intl2.format(productId(1114).t["7chOVL"], obj5);
-    items2[2] = closure_11(productId(1178).LegacyText, obj4);
-    const obj6 = { style: tmp.upsellButton, children: null };
-    const obj7 = { variant: "active", text: null, onPress: null, disabled: null, loading: null };
+    const obj11 = { discountPercentage: formatPercentResult };
+    obj10.children = intl2.format(productId(1114).t["7chOVL"], obj11);
+    items2[2] = closure_11(productId(1176).LegacyText, obj10);
+    const obj12 = { style: tmp.upsellButton, children: null };
+    const obj13 = { variant: "active", text: null, onPress: null, disabled: null, loading: null };
     const intl3 = productId(1114).intl;
-    const obj8 = { price: orderPriceString };
-    obj7.text = intl3.formatToPlainString(productId(1114).t.Qvq6GE, obj8);
-    obj7.onPress = function onPress() {
+    const obj14 = { price: orderPriceString };
+    obj13.text = intl3.formatToPlainString(productId(1114).t.Qvq6GE, obj14);
+    obj13.onPress = function onPress() {
       _undefined("upsell");
       importDefault();
     };
-    obj7.disabled = tmp11;
-    obj7.loading = "upsell" === tmp4 && tmp2;
-    obj6.children = closure_11(productId(5056).Button, obj7);
-    items2[3] = closure_11(closure_6, obj6);
-    const obj9 = { style: tmp.continueButton, children: null };
-    const obj10 = { variant: "secondary", text: null, onPress: null, disabled: null, loading: null };
+    obj13.disabled = tmp11;
+    obj13.loading = "upsell" === tmp4 && tmp2;
+    obj12.children = closure_11(productId(5056).Button, obj13);
+    items2[3] = closure_11(closure_6, obj12);
+    const obj15 = { style: tmp.continueButton, children: null };
+    const obj16 = { variant: "secondary", text: null, onPress: null, disabled: null, loading: null };
     const intl4 = productId(1114).intl;
-    obj10.text = intl4.string(productId(1114).t.YwEyQM);
-    obj10.onPress = function onPress() {
+    obj16.text = intl4.string(productId(1114).t.YwEyQM);
+    obj16.onPress = function onPress() {
       _undefined("default");
       dependencyMap();
     };
-    obj10.disabled = tmp11;
-    obj10.loading = "default" === tmp4 && tmp2;
-    obj9.children = closure_11(productId(5056).Button, obj10);
-    items2[4] = closure_11(closure_6, obj9);
-    const obj11 = { style: tmp.cancelButton, children: null };
-    const obj12 = { variant: "tertiary", text: null, onPress: null };
+    obj16.disabled = tmp11;
+    obj16.loading = "default" === tmp4 && tmp2;
+    obj15.children = closure_11(productId(5056).Button, obj16);
+    items2[4] = closure_11(closure_6, obj15);
+    const obj17 = { style: tmp.cancelButton, children: null };
+    const obj18 = { variant: "tertiary", text: null, onPress: null };
     const intl5 = productId(1114).intl;
-    obj12.text = intl5.string(productId(1114).t.cpT0Cq);
-    obj12.onPress = onClose;
-    obj11.children = closure_11(productId(5056).Button, obj12);
-    items2[5] = closure_11(closure_6, obj11);
-    obj.children = items2;
-    obj.children = closure_12(closure_6, obj);
-    return closure_11(common_AlertDefault, obj);
+    obj18.text = intl5.string(productId(1114).t.cpT0Cq);
+    obj18.onPress = onClose;
+    obj17.children = closure_11(productId(5056).Button, obj18);
+    items2[5] = closure_11(closure_6, obj17);
+    obj6.children = items2;
+    obj5.children = closure_12(closure_6, obj6);
+    return closure_11(tmp19, obj5);
   }
-  const tmp3 = _slicedToArray(noop.useState(null), 2);
+  const obj4 = productId(504);
 }

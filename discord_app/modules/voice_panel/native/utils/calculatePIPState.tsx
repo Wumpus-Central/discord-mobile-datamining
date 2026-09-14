@@ -5,7 +5,7 @@ import ChannelRTCStore from "../../../calls/ChannelRTCStore.tsx";
 import ApplicationStreamingStore from "../../../../stores/ApplicationStreamingStore.tsx";
 
 require = fn;
-const VoicePanelModes = fn(12402).VoicePanelModes;
+const VoicePanelModes = fn(12403).VoicePanelModes;
 const ParticipantTypes = fn(4657).ParticipantTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_panel/native/utils/calculatePIPState.tsx");
@@ -35,7 +35,7 @@ export default function calculatePIPState(
   if (tmp11) {
     set.add(focusedId.focusedId);
   }
-  let obj = {
+  const pIPParticipantToShow = VoicePanelPIPUtils.computePIPParticipantToShow({
     channelId,
     lastParticipantId,
     speakingUserId,
@@ -43,8 +43,7 @@ export default function calculatePIPState(
     blockList: set,
     panelMode: focusedId.mode,
     showSecondaryPIP: focusedId.showSecondaryPIP,
-  };
-  const pIPParticipantToShow = VoicePanelPIPUtils.computePIPParticipantToShow(obj);
+  });
   let type1;
   if (pIPParticipantToShow != null) {
     type1 = pIPParticipantToShow.type;
@@ -68,6 +67,15 @@ export default function calculatePIPState(
     }
     tmp18 = tmp20;
   }
+  const obj = {
+    channelId,
+    lastParticipantId,
+    speakingUserId,
+    focusedParticipantId: focusedId.focusedId,
+    blockList: set,
+    panelMode: focusedId.mode,
+    showSecondaryPIP: focusedId.showSecondaryPIP,
+  };
   tmp11 = null != focusedId.focusedId && tmp10;
   let id1;
   if (pIPParticipantToShow != null) {
@@ -80,7 +88,8 @@ export default function calculatePIPState(
   if (tmp10) {
     tmp10 = tmp;
   }
-  obj = {
+  const tmp13Result = VoicePanelPIPUtils;
+  return {
     participant: pIPParticipantToShow,
     dimensions: VoicePanelPIPUtils.computePIPSize(
       SquarePIPReferenceDimensions,
@@ -89,5 +98,4 @@ export default function calculatePIPState(
       focusedId.showSecondaryPIP,
     ),
   };
-  return obj;
 }

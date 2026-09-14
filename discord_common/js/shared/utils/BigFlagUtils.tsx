@@ -222,10 +222,9 @@ prototype["toString"] = function toString() {
         num2 = num2 + 1;
       } while (num2 < 4);
     });
-    let str = IntegerDefault.fromArray(array, 16);
-    str = str.toString();
-    self.str = str;
-    return str;
+    const str1 = IntegerDefault.fromArray(array, 16).toString();
+    self.str = str1;
+    return str1;
   }
 };
 prototype["toJSON"] = function toJSON() {

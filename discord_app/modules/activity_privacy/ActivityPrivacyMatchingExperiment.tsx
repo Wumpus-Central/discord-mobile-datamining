@@ -18,22 +18,19 @@ const result = size.fileFinishedImporting("modules/activity_privacy/ActivityPriv
 export const useIsInActivityPrivacyCopyExperiment = function useIsInActivityPrivacyCopyExperiment(
   ActivityPrivacyDefaultSharingSetting,
 ) {
-  let obj = PrivateProfilesExperiment;
-  let copyChanges = obj.useIsInPrivateProfilesExperiment(ActivityPrivacyDefaultSharingSetting);
-  obj = { location: ActivityPrivacyDefaultSharingSetting };
+  let copyChanges = PrivateProfilesExperiment.useIsInPrivateProfilesExperiment(ActivityPrivacyDefaultSharingSetting);
   if (!copyChanges) {
-    copyChanges = closure_2.useConfig(obj).copyChanges;
+    copyChanges = closure_2.useConfig(obj2).copyChanges;
   }
   return copyChanges;
 };
 export const getIsInActivityPrivacyUpsellExperiment = function getIsInActivityPrivacyUpsellExperiment(
   ActivityPrivacyDefaultSharingSetting,
 ) {
-  let obj = PrivateProfilesExperiment;
-  let upsell = obj.getIsInPrivateProfilesExperiment(ActivityPrivacyDefaultSharingSetting);
+  let upsell = PrivateProfilesExperiment.getIsInPrivateProfilesExperiment(ActivityPrivacyDefaultSharingSetting);
   if (!upsell) {
-    obj = { location: ActivityPrivacyDefaultSharingSetting };
-    upsell = closure_2.getConfig(obj).upsell;
+    const obj2 = { location: ActivityPrivacyDefaultSharingSetting };
+    upsell = closure_2.getConfig(obj2).upsell;
   }
   return upsell;
 };

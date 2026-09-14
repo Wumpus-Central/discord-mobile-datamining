@@ -13,18 +13,17 @@ const result = size.fileFinishedImporting("modules/activities/confirmActivityCha
 export default function confirmActivityChangeModal(name, channel, onConfirm, onCancel) {
   let str = "";
   if (null != channel) {
-    let obj = useChannelName;
-    str = obj.computeChannelName(channel, UserStore, RelationshipStore);
+    str = useChannelName.computeChannelName(channel, UserStore, RelationshipStore);
   }
-  obj = { title: null, cancelText: null, confirmText: null, onConfirm: null, onCancel: null, body: null };
+  const obj3 = { title: null, cancelText: null, confirmText: null, onConfirm: null, onCancel: null, body: null };
   const intl = util.intl;
-  obj.title = intl.string(util.t.XkIWkk);
+  obj3.title = intl.string(util.t.XkIWkk);
   const intl2 = util.intl;
-  obj.cancelText = intl2.string(util.t["ETE/oC"]);
+  obj3.cancelText = intl2.string(util.t["ETE/oC"]);
   const intl3 = util.intl;
-  obj.confirmText = intl3.string(util.t["cY+Oob"]);
-  obj.onConfirm = onConfirm;
-  obj.onCancel = onCancel;
+  obj3.confirmText = intl3.string(util.t["cY+Oob"]);
+  obj3.onConfirm = onConfirm;
+  obj3.onCancel = onCancel;
   const intl4 = util.intl;
   name = undefined;
   if (name != null) {
@@ -34,14 +33,14 @@ export default function confirmActivityChangeModal(name, channel, onConfirm, onC
     const intl5 = util.intl;
     name = intl5.string(util.t.G99XFs);
   }
-  obj = { currentApplicationName: name, currentApplicationChannelName: null };
+  const obj4 = { currentApplicationName: name, currentApplicationChannelName: null };
   const obj2 = AlertActionCreatorsDefault;
   if (tmp6Result.isNullOrEmpty(str)) {
     const intl6 = util.intl;
     str = intl6.string(util.t.OGUjmt);
   }
-  obj.currentApplicationChannelName = str;
-  obj.body = intl4.format(util.t["5/Xort"], obj);
-  obj2.show(obj);
+  obj4.currentApplicationChannelName = str;
+  obj3.body = intl4.format(util.t["5/Xort"], obj4);
+  obj2.show(obj3);
   tmp6Result = StringUtils;
 }

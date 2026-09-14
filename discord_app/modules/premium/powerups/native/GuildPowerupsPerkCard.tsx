@@ -16,27 +16,25 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-fn(4636);
-let createStyles = {
-  container: null,
-  card: null,
+const createStyles = fn(4636);
+let obj2 = {
+  container: { marginHorizontal: nativeDefault.space.PX_16 },
+  card: { padding: 0, overflow: "hidden" },
   contentContainer: null,
   imageContainer: null,
   gradient: null,
   headerContainer: null,
   badge: null,
 };
-createStyles = { marginHorizontal: nativeDefault.space.PX_16 };
-createStyles.container = createStyles;
-createStyles.card = { padding: 0, overflow: "hidden" };
-createStyles.contentContainer = { gap: nativeDefault.space.PX_16, padding: nativeDefault.space.PX_16 };
-createStyles.imageContainer = { width: "100%", height: 160 };
-createStyles.gradient = { position: "absolute", left: 0, right: 0, top: 0, height: "100%" };
-let obj1 = { gap: nativeDefault.space.PX_16, padding: nativeDefault.space.PX_16 };
-createStyles.headerContainer = { gap: nativeDefault.space.PX_4 };
+let obj3 = { marginHorizontal: nativeDefault.space.PX_16 };
+obj2.contentContainer = { gap: nativeDefault.space.PX_16, padding: nativeDefault.space.PX_16 };
+obj2.imageContainer = { width: "100%", height: 160 };
+obj2.gradient = { position: "absolute", left: 0, right: 0, top: 0, height: "100%" };
+let obj4 = { gap: nativeDefault.space.PX_16, padding: nativeDefault.space.PX_16 };
+obj2.headerContainer = { gap: nativeDefault.space.PX_4 };
 const rect = { position: "absolute", top: nativeDefault.space.PX_12, right: nativeDefault.space.PX_12 };
-createStyles.badge = rect;
-let closure_6 = createStyles.createStyles(createStyles);
+obj2.badge = rect;
+let closure_6 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/powerups/native/GuildPowerupsPerkCard.tsx");
 
@@ -63,78 +61,72 @@ export default function GuildPowerupsPerkCard(arg0) {
     }),
   );
   const tmp2 = closure_6();
-  let obj = shared;
   const tmp5 = useThemeDefault();
-  let obj1 = ManaTypeConsolidationExperiment;
-  const manaTypeConsolidationExperiment = obj1.useManaTypeConsolidationExperiment("GuildPowerupsPerkCard");
-  const isThemeDarkResult = obj.isThemeDark(useThemeDefault());
-  obj = { containerStyle: null, style: tmp2.card, status, onPress, children: null };
+  const isThemeDarkResult = shared.isThemeDark(tmp5);
+  const manaTypeConsolidationExperiment =
+    ManaTypeConsolidationExperiment.useManaTypeConsolidationExperiment("GuildPowerupsPerkCard");
+  const obj3 = { containerStyle: null, style: tmp2.card, status, onPress, children: null };
   const items = [tmp2.container, style];
-  obj.containerStyle = items;
-  obj = { style: tmp2.imageContainer, children: null };
-  let tmp3Result = GuildPowerupsCardDefault;
+  obj3.containerStyle = items;
+  const obj4 = { style: tmp2.imageContainer, children: null };
+  const tmp9 = isThemeDarkResult ? ["#0f101100", "#0f101166"] : ["#0f101100", "#0f10111a"];
   if (riveComponent == null) {
-    tmp3Result = GuildPowerupsImageDefault;
     if (imageUrl == null) {
       imageUrl = "";
     }
-    obj1 = { imageUrl, isAnimated: isImageAnimated };
-    riveComponent = React4(tmp3Result, obj1);
+    const obj5 = { imageUrl, isAnimated: isImageAnimated };
+    riveComponent = React4(GuildPowerupsImageDefault, obj5);
+    const tmp3Result2 = GuildPowerupsImageDefault;
   }
-  const items1 = [riveComponent];
-  const tmp9 = obj.isThemeDark(useThemeDefault()) ? ["#0f101100", "#0f101166"] : ["#0f101100", "#0f10111a"];
-  items1[1] = React4(LinearGradientDefault, {
-    colors: obj.isThemeDark(useThemeDefault()) ? ["#0f101100", "#0f101166"] : ["#0f101100", "#0f10111a"],
-    style: tmp2.gradient,
-  });
-  obj.children = items1;
-  const items2 = [hasOwnProperty(View, obj), , ,];
-  const obj3 = { style: tmp2.contentContainer, children: null };
-  const obj4 = { style: tmp2.headerContainer, children: null };
+  const items1 = [riveComponent, React4(LinearGradientDefault, { colors: tmp9, style: tmp2.gradient })];
+  obj4.children = items1;
+  const items2 = [hasOwnProperty(View, obj4), , ,];
+  const obj7 = { style: tmp2.contentContainer, children: null };
+  const obj8 = { style: tmp2.headerContainer, children: null };
   let str;
   if (manaTypeConsolidationExperiment) {
     str = "text-strong";
   }
-  const obj5 = { color: str, variant: null, children: null };
+  const obj9 = { color: str, variant: null, children: null };
   let str2 = "heading-md/bold";
   if (manaTypeConsolidationExperiment) {
     str2 = "experimental/heading-md/semibold";
   }
-  obj5.variant = str2;
-  obj5.children = title;
-  const items3 = [React4(Text_Text.Text, obj5)];
+  obj9.variant = str2;
+  obj9.children = title;
+  const items3 = [React4(Text_Text.Text, obj9)];
   let str3 = "text-sm/medium";
   if (manaTypeConsolidationExperiment) {
     str3 = "experimental/body-sm/normal";
   }
   items3[1] = React4(Text_Text.Text, { variant: str3, children: description });
-  obj4.children = items3;
-  const items4 = [hasOwnProperty(View, obj4)];
-  const obj6 = {};
+  obj8.children = items3;
+  const items4 = [hasOwnProperty(View, obj8)];
+  const obj10 = {};
   const merged1 = Object.assign(merged);
-  obj6.status = status;
-  items4[1] = React4(GuildPowerupsCardFooter.GuildPowerupsCardFooter, obj6);
-  obj3.children = items4;
-  items2[1] = hasOwnProperty(View, obj3);
+  obj10.status = status;
+  items4[1] = React4(GuildPowerupsCardFooter.GuildPowerupsCardFooter, obj10);
+  obj7.children = items4;
+  items2[1] = hasOwnProperty(View, obj7);
   let tmp15Result = "new" === badge;
   if (tmp15Result) {
-    const obj7 = { text: null, style: null };
+    const obj11 = { text: null, style: null };
     const intl = util.intl;
-    obj7.text = intl.string(util.t.y2b7CA);
-    obj7.style = tmp2.badge;
-    tmp15Result = React4(native.TextBadge, obj7);
+    obj11.text = intl.string(util.t.y2b7CA);
+    obj11.style = tmp2.badge;
+    tmp15Result = React4(native.TextBadge, obj11);
   }
   items2[2] = tmp15Result;
-  tmp15Result = "beta" === badge;
-  if (tmp15Result) {
-    const obj8 = { text: null, color: null, style: null };
+  let tmp15Result2 = "beta" === badge;
+  if (tmp15Result2) {
+    const obj12 = { text: null, color: null, style: null };
     const intl2 = util.intl;
-    obj8.text = intl2.string(util.t.oW0eUd);
-    obj8.color = native.BadgeColors.BRAND;
-    obj8.style = tmp2.badge;
-    tmp15Result = React4(native.TextBadge, obj8);
+    obj12.text = intl2.string(util.t.oW0eUd);
+    obj12.color = native.BadgeColors.BRAND;
+    obj12.style = tmp2.badge;
+    tmp15Result2 = React4(native.TextBadge, obj12);
   }
-  items2[3] = tmp15Result;
-  obj.children = items2;
-  return hasOwnProperty(tmp3Result, obj);
+  items2[3] = tmp15Result2;
+  obj3.children = items2;
+  return hasOwnProperty(GuildPowerupsCardDefault, obj3);
 }

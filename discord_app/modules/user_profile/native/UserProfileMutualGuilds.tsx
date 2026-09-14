@@ -19,40 +19,37 @@ const result = size.fileFinishedImporting("modules/user_profile/native/UserProfi
 export default function UserProfileMutualGuilds(user) {
   user = user.user;
   const tmp = closure_7();
-  let obj = user(8307);
-  const trackUserProfileAction = obj.useUserProfileAnalyticsContext().trackUserProfileAction;
-  const mutualGuilds = trackUserProfileAction(12731)(user).mutualGuilds;
-  if (trackUserProfileAction(13124)(user)) {
+  const trackUserProfileAction = user(8307).useUserProfileAnalyticsContext().trackUserProfileAction;
+  const mutualGuilds = trackUserProfileAction(12732)(user).mutualGuilds;
+  if (trackUserProfileAction(13125)(user)) {
     if (null != mutualGuilds) {
       if (0 !== mutualGuilds.length) {
         const substr = mutualGuilds.slice(0, 3);
         const mapped = substr.map((guild) => guild.guild);
-        obj = { style: tmp.container, children: null };
-        obj = {
+        const obj2 = { style: tmp.container, children: null };
+        const obj3 = {
           style: tmp.section,
           accessibilityRole: "button",
           onPress() {
-            let obj = { action: "PRESS_SECTION", section: UserProfileSections.MUTUAL_GUILDS };
-            trackUserProfileAction(obj);
-            obj = {
-              user,
-              onPressMutualGuild(arg0) {
-                closure_1_1({ action: "PRESS_MUTUAL_GUILD" });
-                user(7445).transitionToGuild(arg0);
-                const obj = user(7445);
-                trackUserProfileAction(4603).hideAllActionSheets();
-              },
-            };
+            trackUserProfileAction({ action: "PRESS_SECTION", section: UserProfileSections.MUTUAL_GUILDS });
             ActionSheetActionCreatorsDefault.openLazy(
-              asyncRequireImpl(12730, dependencyMap.paths),
+              asyncRequireImpl(12731, dependencyMap.paths),
               "UserProfileMutualGuildsActionSheet",
-              obj,
+              {
+                user,
+                onPressMutualGuild(arg0) {
+                  closure_1_1({ action: "PRESS_MUTUAL_GUILD" });
+                  user(7445).transitionToGuild(arg0);
+                  const obj = user(7445);
+                  trackUserProfileAction(4603).hideAllActionSheets();
+                },
+              },
               "stack",
             );
           },
           children: null,
         };
-        const obj1 = {
+        const obj4 = {
           size: tmp2(5665).GuildIconSizes.XXSMALL,
           totalCount: mapped.length,
           names: mapped.map((name) => name.name),
@@ -61,16 +58,16 @@ export default function UserProfileMutualGuilds(user) {
             return closure_1_5(trackUserProfileAction(5665), obj, guild.id);
           }),
         };
-        const items = [closure_5(tmp2(12747).GuildIconPile, obj1)];
-        const obj2 = {
+        const items = [closure_5(tmp2(12748).GuildIconPile, obj4)];
+        const obj5 = {
           variant: "text-sm/medium",
           color: "text-default",
-          children: trackUserProfileAction(12732)(mutualGuilds.length),
+          children: trackUserProfileAction(12733)(mutualGuilds.length),
         };
-        items[1] = closure_5(tmp2(4632).Text, obj2);
-        obj.children = items;
-        obj.children = closure_6(tmp2(5204).PressableOpacity, obj);
-        return closure_5(View, obj);
+        items[1] = closure_5(tmp2(4632).Text, obj5);
+        obj3.children = items;
+        obj2.children = closure_6(tmp2(5204).PressableOpacity, obj3);
+        return closure_5(View, obj2);
       }
     }
   }

@@ -2,6 +2,8 @@
 import GuildStore from "../../stores/GuildStore.tsx";
 import PermissionStore from "../../stores/PermissionStore.tsx";
 
+const require = globalThis.__r;
+
 const require = fn;
 const Permissions = fn(1074).Permissions;
 const size = fn(2);
@@ -39,15 +41,15 @@ export const useCanUseGuildSpace = function useCanUseGuildSpace(id, useGuildActi
     id,
     useGuildActionRows,
   );
-  let tmpResult = tmp(504);
+  const obj = require("GuildSpaceExperiment");
   const items = [GuildStore];
   const items1 = [id];
-  const stateFromStores = tmpResult.useStateFromStores(items, () => GuildStore.getGuild(closure_0), items1);
+  const stateFromStores = require("initialize").useStateFromStores(items, () => GuildStore.getGuild(closure_0), items1);
   closure_129_0 = stateFromStores;
-  tmpResult = tmp(504);
+  const tmpResult = require("initialize");
   const items2 = [PermissionStore];
   const items3 = [stateFromStores];
-  const stateFromStores1 = tmpResult.useStateFromStores(
+  const stateFromStores1 = require("initialize").useStateFromStores(
     items2,
     () => {
       let canResult = null != closure_0;

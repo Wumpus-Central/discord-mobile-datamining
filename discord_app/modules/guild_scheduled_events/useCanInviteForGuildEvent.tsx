@@ -7,6 +7,8 @@ import GuildChannelStore from "../../stores/GuildChannelStore.tsx";
 import GuildStore from "../../stores/GuildStore.tsx";
 import PermissionStore from "../../stores/PermissionStore.tsx";
 
+const require = globalThis.__r;
+
 require = fn;
 function canEveryoneRoleViewEvent(guildEvent) {
   let tmp = items1;
@@ -17,9 +19,9 @@ function canEveryoneRoleViewEvent(guildEvent) {
   [obj] = tmp;
   let tmp3 = guildEvent;
   if ("entity_type" in guildEvent) {
-    obj = { entityType: null, channelId: null };
     ({ entity_type: obj2.entityType, channel_id: obj2.channelId } = guildEvent);
-    tmp3 = obj;
+    tmp3 = { entityType: null, channelId: null };
+    const obj4 = { entityType: null, channelId: null };
   }
   if (tmp3.entityType === constants.EXTERNAL) {
     return true;

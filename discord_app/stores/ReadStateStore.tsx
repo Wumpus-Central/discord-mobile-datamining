@@ -117,8 +117,8 @@ let closure_78 = async function _processBulkAckQueue(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -131,8 +131,8 @@ let closure_78 = async function _processBulkAckQueue(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c6 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           closure_2 = tmp3;
           const read_states = tmp7;
@@ -144,15 +144,15 @@ let closure_78 = async function _processBulkAckQueue(arg0) {
               _require();
             }
             c6 = 3;
-            const obj1 = { value: undefined, done: true };
-            return obj1;
+            const obj4 = { value: undefined, done: true };
+            return obj4;
           } else {
             c66 = true;
             closure_129_1 = navigation.splice(0, 100);
             c4 = 1;
             c5 = 3;
             c6 = 1;
-            const obj2 = {
+            const obj5 = {
               value: networkAwareRetryDefault(() => {
                           const HTTP = closure_0(closure_2[42]).HTTP;
                           const request = { url: constants.BULK_ACK, body: { read_states }, oldFormErrors: true, rejectWithError: false };
@@ -160,7 +160,7 @@ let closure_78 = async function _processBulkAckQueue(arg0) {
                         }),
               done: false
             };
-            return obj2;
+            return obj5;
           }
         }
       } else if (1 === tmp7) {
@@ -175,8 +175,8 @@ let closure_78 = async function _processBulkAckQueue(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c6 = 3;
-          const obj3 = { value, done: true };
-          return obj3;
+          const obj6 = { value, done: true };
+          return obj6;
         } else {
           closure_130_77(closure_129_0);
           c6 = 3;
@@ -188,15 +188,14 @@ let closure_78 = async function _processBulkAckQueue(arg0) {
       } else if (arg0 === 2) {
         c4 = 0;
         c6 = 3;
-        const obj4 = { value, done: true };
-        return obj4;
+        const obj7 = { value, done: true };
+        return obj7;
       } else {
         c4 = 0;
-        obj = closure_130_0(closure_130_2[43]);
         c5 = 2;
         c6 = 1;
-        const obj5 = { value: obj.timeoutPromise(1000), done: false };
-        return obj5;
+        const obj8 = { value: closure_130_0(closure_130_2[43]).timeoutPromise(1000), done: false };
+        return obj8;
       }
     } catch (tmp23) {
       closure_3 = tmp23;
@@ -487,11 +486,11 @@ function mergeForGuild(guild) {
     obj = ReadState;
     tmp3 = ReadStateTypes;
   }
-  value = obj.get(guild.id, tmp3.GUILD_HOME);
+  const value3 = obj.get(guild.id, tmp3.GUILD_HOME);
   const obj4 = id(11);
   const tmp12 = id(4228);
   const tmp12Result = id(4228)(Date.now());
-  value.lastMessageId = obj4.fromTimestamp(id(4228)(Date.now()).subtract(24, "h").valueOf());
+  value3.lastMessageId = obj4.fromTimestamp(id(4228)(Date.now()).subtract(24, "h").valueOf());
   guild = GuildStore.getGuild(guild.id);
   if (null != guild) {
     let prop2;
@@ -499,9 +498,9 @@ function mergeForGuild(guild) {
       prop2 = guild.latestOnboardingQuestionId;
     }
     if (null != prop2) {
-      const value1 = obj.get(guild.id, tmp3.GUILD_ONBOARDING_QUESTION);
-      value1._guildId = guild.id;
-      value1.lastMessageId = prop2;
+      const value4 = obj.get(guild.id, tmp3.GUILD_ONBOARDING_QUESTION);
+      value4._guildId = guild.id;
+      value4.lastMessageId = prop2;
     }
   }
   const subtractResult = id(4228)(Date.now()).subtract(24, "h");
@@ -667,15 +666,14 @@ function handleChannelSectionStoreUpdate() {
     }
     let flag = flag2;
   } else {
-    let obj = { section: constants3.CHANNEL, object: constants2.ACK_CHANNEL_SECTION_STORE_UPDATE, objectType: constants.ACK_AUTOMATIC };
+    const obj = { section: constants3.CHANNEL, object: constants2.ACK_CHANNEL_SECTION_STORE_UPDATE, objectType: constants.ACK_AUTOMATIC };
     flag = false;
     if (null != currentSidebarChannelId) {
-      value = ReadState.get(currentSidebarChannelId);
-      let ackResult = shouldAutomaticallyAck(value, undefined);
+      value2 = ReadState.get(currentSidebarChannelId);
+      let ackResult = shouldAutomaticallyAck(value2, undefined);
       if (ackResult) {
-        obj = { trackAnalytics: true, location: null };
-        obj.location = obj;
-        ackResult = value.ack(obj);
+        const obj2 = { trackAnalytics: true, location: obj };
+        ackResult = value2.ack(obj2);
       }
       flag = ackResult;
     }
@@ -730,8 +728,8 @@ const logger = new LoggerDefault("ReadStateStore");
 function isOverlayChannelVisible() {
   return false;
 }
-if (fn(13922).OVERLAY_SUPPORTED) {
-  isOverlayChannelVisible = fn(13923).isOverlayChannelVisible;
+if (fn(13923).OVERLAY_SUPPORTED) {
+  isOverlayChannelVisible = fn(13924).isOverlayChannelVisible;
 }
 function handleMessageDelete(channelId) {
   value = ReadState.get(channelId.channelId);
@@ -969,7 +967,7 @@ class ReadState {
       tmp = ReadStateTypes;
       CHANNEL = ReadStateTypes.CHANNEL;
     }
-    merged = Object.assign({ type: null, outgoingAckTimer: null, ackMessageIdAtChannelSelect: null, ackedWhileCached: "a" });
+    merged = Object.assign({ type: null, outgoingAckTimer: null, ackMessageIdAtChannelSelect: null, ackedWhileCached: "Array" });
     merged[0] = ReadStateTypes.CHANNEL;
     merged.channelId = global;
     merged.type = CHANNEL;
@@ -999,11 +997,11 @@ class ReadState {
 const prototype2 = ReadState.prototype;
 ReadState["forEach"] = function forEach(fn) {
   const _readStates = ReadState._readStates;
-  let values = _readStates.values();
+  const values = _readStates.values();
   const iter = values[Symbol.iterator]();
   while (iter !== undefined) {
-    values = nextResult.values();
-    for (const item10017 of values) {
+    let values2 = nextResult.values();
+    for (const item10017 of values2) {
       if (false === arg0(item10017)) {
         obj2.return();
         break;
@@ -1020,18 +1018,18 @@ ReadState["get"] = function get(channelId) {
     CHANNEL = ReadStateTypes.CHANNEL;
   }
   const _readStates = ReadState._readStates;
-  _readStates.get(CHANNEL);
-  value = undefined;
+  value = _readStates.get(CHANNEL);
+  let value3;
   if (value != null) {
-    value = value.get(channelId);
+    value3 = value.get(channelId);
   }
-  if (null == value) {
+  if (null == value3) {
     if (typeof ReadState === "function") {
       let CHANNEL2 = CHANNEL;
       if (CHANNEL === undefined) {
         CHANNEL2 = ReadStateTypes.CHANNEL;
       }
-      merged = Object.assign({ type: null, outgoingAckTimer: null, ackMessageIdAtChannelSelect: null, ackedWhileCached: "a" });
+      merged = Object.assign({ type: null, outgoingAckTimer: null, ackMessageIdAtChannelSelect: null, ackedWhileCached: "Array" });
       merged[0] = ReadStateTypes.CHANNEL;
       merged.channelId = channelId;
       merged.type = CHANNEL2;
@@ -1056,24 +1054,24 @@ ReadState["get"] = function get(channelId) {
       merged._mentionCount = 0;
       merged.outgoingAck = null;
       const _readStates2 = ReadState._readStates;
-      let value1 = _readStates2.get(CHANNEL);
-      if (value1 == null) {
+      let value4 = _readStates2.get(CHANNEL);
+      if (value4 == null) {
         const _Map = Map;
-        value1 = new Map();
+        value4 = new Map();
       }
-      const result = value1.set(channelId, merged);
+      const result = value4.set(channelId, merged);
       const _readStates3 = ReadState._readStates;
-      value = merged;
+      value3 = merged;
       if (!_readStates3.has(CHANNEL)) {
         const _readStates4 = ReadState._readStates;
-        const result1 = _readStates4.set(CHANNEL, value1);
-        value = merged;
+        const result1 = _readStates4.set(CHANNEL, value4);
+        value3 = merged;
       }
     } else {
       throw new TypeError("Trying to call a non-function");
     }
   }
-  return value;
+  return value3;
 };
 ReadState["getGuildSentinels"] = function getGuildSentinels(_guildId) {
   const self = this;
@@ -1090,12 +1088,12 @@ ReadState["getIfExists"] = function getIfExists(id) {
     CHANNEL = ReadStateTypes.CHANNEL;
   }
   const _readStates = ReadState._readStates;
-  _readStates.get(CHANNEL);
-  value = undefined;
+  value = _readStates.get(CHANNEL);
+  value2 = undefined;
   if (value != null) {
-    value = value.get(id);
+    value2 = value.get(id);
   }
-  return value;
+  return value2;
 };
 ReadState["getMentionChannelIds"] = function getMentionChannelIds() {
   const items = [];
@@ -1154,10 +1152,10 @@ ReadState["clearAll"] = function clearAll() {
 prototype2["serialize"] = function serialize(arg0) {
   ({ channelId, type, _guildId, _isThread, _isActiveThread, _isJoinedThread, _persisted, _lastMessageId, _lastMessageTimestamp, _ackMessageId, _ackMessageTimestamp, ackPinTimestamp, lastPinTimestamp, _mentionCount, flags, lastViewed } = this);
   if (arg0) {
-    let obj = { channelId, type, _guildId, _isThread, _isActiveThread, _isJoinedThread, _persisted, loadedMessages: tmp, _lastMessageId, _lastMessageTimestamp, _ackMessageId, _ackMessageTimestamp, ackPinTimestamp, isManualAck: tmp2, lastPinTimestamp, _oldestUnreadMessageId: tmp3, oldestUnreadMessageIdStale: tmp4, estimated: tmp5, _mentionCount, flags, lastViewed };
-    return obj;
+    const obj2 = { channelId, type, _guildId, _isThread, _isActiveThread, _isJoinedThread, _persisted, loadedMessages: tmp, _lastMessageId, _lastMessageTimestamp, _ackMessageId, _ackMessageTimestamp, ackPinTimestamp, isManualAck: tmp2, lastPinTimestamp, _oldestUnreadMessageId: tmp3, oldestUnreadMessageIdStale: tmp4, estimated: tmp5, _mentionCount, flags, lastViewed };
+    return obj2;
   } else {
-    obj = { channelId, type, _guildId, _persisted, _lastMessageId, _lastMessageTimestamp, _ackMessageId, _ackMessageTimestamp, ackPinTimestamp, lastPinTimestamp, _mentionCount, flags };
+    const obj = { channelId, type, _guildId, _persisted, _lastMessageId, _lastMessageTimestamp, _ackMessageId, _ackMessageTimestamp, ackPinTimestamp, lastPinTimestamp, _mentionCount, flags };
     let tmp7 = null != lastViewed;
     if (tmp7) {
       tmp7 = lastViewed > 0;
@@ -1659,10 +1657,10 @@ prototype2["getGuildChannelUnreadState"] = function getGuildChannelUnreadState(b
     }
   }
   if ("basicPermissions" in basicPermissions) {
-    let obj = BasicPermissionUtilsDefault;
     if (!obj.has(basicPermissions.basicPermissions, BasicPermissions.VIEW_CHANNEL)) {
       return { mentionCount: 0, unread: false, isMentionLowImportance: false };
     }
+    obj = BasicPermissionUtilsDefault;
   } else if (GatedChannelStore.isChannelGated(self.guildId, self.channelId)) {
     if (!PermissionStore.can(constants6.VIEW_CHANNEL, basicPermissions)) {
       return { mentionCount: 0, unread: false, isMentionLowImportance: false };
@@ -1670,11 +1668,12 @@ prototype2["getGuildChannelUnreadState"] = function getGuildChannelUnreadState(b
   }
   if (!arg3) {
     if (!arg4) {
-      obj = { mentionCount: self.mentionCount, unread: self.getAckTimestamp() < self._lastMessageTimestamp, isMentionLowImportance: self.isMentionLowImportance };
+      let obj2 = { mentionCount: self.mentionCount, unread: self.getAckTimestamp() < self._lastMessageTimestamp, isMentionLowImportance: self.isMentionLowImportance };
     }
-    return obj;
+    return obj2;
   }
-  obj = { mentionCount: self.mentionCount, unread: false, isMentionLowImportance: self.isMentionLowImportance };
+  obj2 = { mentionCount: self.mentionCount, unread: false, isMentionLowImportance: self.isMentionLowImportance };
+  const obj3 = { mentionCount: self.mentionCount, unread: false, isMentionLowImportance: self.isMentionLowImportance };
 };
 prototype2["hasUnread"] = function hasUnread() {
   return this.getAckTimestamp() < this._lastMessageTimestamp;
@@ -1800,12 +1799,11 @@ prototype2["ack"] = function ack(immediate) {
             if (channel.isForumPost()) {
               if (null != channel.parent_id) {
                 const parent_id = channel.parent_id;
-                value = ReadState.get(parent_id);
-                closure_129_0 = value;
+                value2 = ReadState.get(parent_id);
+                closure_129_0 = value2;
                 let hasLoadedResult = ActiveThreadsStore.hasLoaded(channel.guild_id);
                 if (hasLoadedResult) {
-                  let obj = require("SnowflakeUtils");
-                  const keys = obj.keys(ActiveThreadsStore.getThreadsForParent(channel.guild_id, parent_id));
+                  const keys = require("SnowflakeUtils").keys(ActiveThreadsStore.getThreadsForParent(channel.guild_id, parent_id));
                   hasLoadedResult = keys.every((item) => {
                     let hasOpenedThreadResult = readStateStoreClass.hasOpenedThread(item);
                     if (!hasOpenedThreadResult) {
@@ -1814,12 +1812,13 @@ prototype2["ack"] = function ack(immediate) {
                     }
                     return hasOpenedThreadResult;
                   });
+                  let obj = require("SnowflakeUtils");
                 }
                 if (hasLoadedResult) {
-                  obj = { trackAnalytics: true, location: null };
-                  obj = { section: constants3.CHANNEL, object: constants2.ACK_FORUM_CHANNEL_NO_UNREAD_POSTS, objectType: constants.ACK_AUTOMATIC };
-                  obj.location = obj;
-                  value.ack(obj);
+                  const obj2 = { trackAnalytics: true, location: null };
+                  const obj3 = { section: constants3.CHANNEL, object: constants2.ACK_FORUM_CHANNEL_NO_UNREAD_POSTS, objectType: constants.ACK_AUTOMATIC };
+                  obj2.location = obj3;
+                  value2.ack(obj2);
                 }
               }
             }
@@ -1940,14 +1939,14 @@ prototype2["_ack"] = function _ack(importDefault, ackMessageId) {
         }
         DispatcherDefault.dispatch({ type: "MESSAGE_ACKED" });
         if (closure_2) {
-          asyncRequireImpl(13926, dependencyMap.paths).then((result) => {
+          asyncRequireImpl(13927, dependencyMap.paths).then((result) => {
             let obj = importDefault;
             if (importDefault == null) {
               obj = {};
             }
             result.default(channelId.channelId, obj);
           });
-          const promise = asyncRequireImpl(13926, dependencyMap.paths);
+          const promise = asyncRequireImpl(13927, dependencyMap.paths);
         }
       }
     });
@@ -2003,30 +2002,30 @@ prototype2["delete"] = function delete() {
   const self = this;
   const basicChannel = ChannelStore.getBasicChannel(this.channelId);
   ({ channelId, type } = this);
-  let obj = { remote: flag, persisted: this._persisted, channelMissing: null == basicChannel, isOld: null, validType: null, readableType: null, oldThreadCutoff: null, mentionCount: null, channelId: null, ackMessageId: null, lastMessageId: null };
+  const obj = { remote: flag, persisted: this._persisted, channelMissing: null == basicChannel, isOld: null, validType: null, readableType: null, oldThreadCutoff: null, mentionCount: null, channelId: null, ackMessageId: null, lastMessageId: null };
   const fromTimestampResult = require("SnowflakeUtils").fromTimestamp(Date.now() - closure_69);
   let tmp7 = this.mentionCount > 0;
   if (!tmp7) {
-    let tmp3Result = require("SnowflakeUtils");
-    let tmp8 = tmp3Result.compare(self.channelId, fromTimestampResult) <= 0;
+    let tmp8 = require("SnowflakeUtils").compare(self.channelId, fromTimestampResult) <= 0;
     if (tmp8) {
       let tmp9 = null != self._ackMessageId;
       if (tmp9) {
-        tmp3Result = require("SnowflakeUtils");
-        tmp9 = tmp3Result.compare(self._ackMessageId, fromTimestampResult) > 0;
+        tmp9 = require("SnowflakeUtils").compare(self._ackMessageId, fromTimestampResult) > 0;
+        const tmp3Result4 = require("SnowflakeUtils");
       }
       let tmp10 = !tmp9;
       if (!tmp9) {
         let tmp11 = null != self._lastMessageId;
         if (tmp11) {
           tmp11 = require("SnowflakeUtils").compare(self._lastMessageId, fromTimestampResult) > 0;
-          const tmp3Result1 = require("SnowflakeUtils");
+          const tmp3Result5 = require("SnowflakeUtils");
         }
         tmp10 = !tmp11;
       }
       tmp8 = tmp10;
     }
     tmp7 = tmp8;
+    const tmp3Result = require("SnowflakeUtils");
   }
   obj.isOld = tmp7;
   let hasItem = null != basicChannel;
@@ -2049,8 +2048,8 @@ prototype2["delete"] = function delete() {
   if (flag) {
     const HTTP = HTTPUtils.HTTP;
     const request = { url: __initData17.CHANNEL_ACK(self.channelId), body: null, oldFormErrors: true, rejectWithError: true };
-    obj = { version: 2, read_state_type: self.type };
-    request.body = obj;
+    const obj3 = { version: 2, read_state_type: self.type };
+    request.body = obj3;
     HTTP.del(request);
   }
   const _readStates = ReadState._readStates;
@@ -2060,7 +2059,7 @@ prototype2["delete"] = function delete() {
   }
   const _mentionChannels = ReadState._mentionChannels;
   _mentionChannels.delete(self.channelId);
-  const tmp3Result2 = require("SnowflakeUtils");
+  const tmp3Result6 = require("SnowflakeUtils");
 };
 prototype2["shouldDeleteReadState"] = function shouldDeleteReadState(arg0) {
   if (0 !== GuildAvailabilityStore.totalUnavailableGuilds) {
@@ -2098,15 +2097,15 @@ prototype2["shouldDeleteReadState"] = function shouldDeleteReadState(arg0) {
         if (tmp32) {
           let tmp33 = null != self._ackMessageId;
           if (tmp33) {
-            let tmp30Result = require("SnowflakeUtils");
-            tmp33 = tmp30Result.compare(self._ackMessageId, arg0) > 0;
+            tmp33 = require("SnowflakeUtils").compare(self._ackMessageId, arg0) > 0;
+            const tmp30Result = require("SnowflakeUtils");
           }
           let tmp34 = !tmp33;
           if (!tmp33) {
             let tmp35 = null != self._lastMessageId;
             if (tmp35) {
-              tmp30Result = require("SnowflakeUtils");
-              tmp35 = tmp30Result.compare(self._lastMessageId, arg0) > 0;
+              tmp35 = require("SnowflakeUtils").compare(self._lastMessageId, arg0) > 0;
+              const tmp30Result2 = require("SnowflakeUtils");
             }
             tmp34 = !tmp35;
           }
@@ -2115,17 +2114,17 @@ prototype2["shouldDeleteReadState"] = function shouldDeleteReadState(arg0) {
         tmp29 = tmp32;
         const obj4 = require("SnowflakeUtils");
       }
-      let hasItem = tmp29;
+      let hasItem1 = tmp29;
     } else {
-      hasItem = set.has(basicChannel.type);
-      if (hasItem) {
+      hasItem1 = set.has(basicChannel.type);
+      if (hasItem1) {
         const tmp6 = closure_1_17(basicChannel.type);
         let tmp7 = !tmp6;
         if (tmp6) {
           const tmp9 = closure_1_19(basicChannel.type);
           let tmp10 = !tmp9;
           if (!tmp9) {
-            hasItem = set2.has(basicChannel.type);
+            const hasItem = set2.has(basicChannel.type);
             let tmp13 = !hasItem;
             if (hasItem) {
               const guildId = self.guildId;
@@ -2141,15 +2140,15 @@ prototype2["shouldDeleteReadState"] = function shouldDeleteReadState(arg0) {
                   if (tmp20) {
                     let tmp21 = null != self._ackMessageId;
                     if (tmp21) {
-                      let tmp18Result = require("SnowflakeUtils");
-                      tmp21 = tmp18Result.compare(self._ackMessageId, arg0) > 0;
+                      tmp21 = require("SnowflakeUtils").compare(self._ackMessageId, arg0) > 0;
+                      const tmp18Result = require("SnowflakeUtils");
                     }
                     let tmp22 = !tmp21;
                     if (!tmp21) {
                       let tmp23 = null != self._lastMessageId;
                       if (tmp23) {
-                        tmp18Result = require("SnowflakeUtils");
-                        tmp23 = tmp18Result.compare(self._lastMessageId, arg0) > 0;
+                        tmp23 = require("SnowflakeUtils").compare(self._lastMessageId, arg0) > 0;
+                        const tmp18Result2 = require("SnowflakeUtils");
                       }
                       tmp22 = !tmp23;
                     }
@@ -2174,10 +2173,10 @@ prototype2["shouldDeleteReadState"] = function shouldDeleteReadState(arg0) {
           }
           tmp7 = tmp10;
         }
-        hasItem = tmp7;
+        hasItem1 = tmp7;
       }
     }
-    return hasItem;
+    return hasItem1;
   }
 };
 prototype2["getAckTimestamp"] = function getAckTimestamp() {
@@ -2906,19 +2905,19 @@ const readStateStoreClass = new ReadStateStoreClass(DispatcherDefault, {
     if (tmp) {
       value.lastMessageId = messages[0].id;
     }
-    messages = MessageStore.getMessages(channelId);
-    if (null != messages) {
+    const messages1 = MessageStore.getMessages(channelId);
+    if (null != messages1) {
       if (messages.length > 0) {
         require("SnowflakeUtils");
         value.rebuildChannelState();
       }
-      if (!messages.hasPresent()) {
-        if (messages.jumpTargetId !== value.ackMessageId) {
+      if (!messages1.hasPresent()) {
+        if (messages1.jumpTargetId !== value.ackMessageId) {
           if (isAfter) {
             isAfter = null != value.ackMessageId;
           }
           if (isAfter) {
-            isAfter = messages.has(value.ackMessageId, true);
+            isAfter = messages1.has(value.ackMessageId, true);
           }
           if (isAfter) {
             value.unreadCount = value.unreadCount + messages.length;
@@ -2984,12 +2983,10 @@ const readStateStoreClass = new ReadStateStoreClass(DispatcherDefault, {
   },
   MESSAGE_CREATE: function handleIncomingMessage(isPushNotification) {
     ({ channelId, message } = isPushNotification);
-    let obj = ReadState;
     value = ReadState.get(channelId);
     let hasUnreadResult = value.hasUnread();
     value.lastMessageId = message.id;
     const currentUser = UserStore.getCurrentUser();
-    let obj2 = ChannelStore;
     const basicChannel = ChannelStore.getBasicChannel(channelId);
     if (null != message.author) {
       if (null != currentUser) {
@@ -2999,18 +2996,18 @@ const readStateStoreClass = new ReadStateStoreClass(DispatcherDefault, {
             if (null != value.outgoingAck) {
               value.clearOutgoingAck();
             }
-            obj = { channelId, messageId: message.id, manual: false };
-            ({ messageId, manual, newMentionCount } = obj);
-            value = obj.get(obj.channelId);
+            const obj2 = { channelId, messageId: message.id, manual: false };
+            ({ messageId, manual, newMentionCount } = obj2);
+            const value3 = ReadState.get(obj2.channelId);
             if (manual) {
-              value.rebuildChannelState(messageId, true, newMentionCount);
-              value.clearOutgoingAck();
+              value3.rebuildChannelState(messageId, true, newMentionCount);
+              value3.clearOutgoingAck();
               let flag = true;
             } else {
-              flag = messageId !== value._ackMessageId;
+              flag = messageId !== value3._ackMessageId;
               if (flag) {
-                obj = { messageId, local: true, trackAnalytics: false };
-                flag = value.ack(obj);
+                const obj4 = { messageId, local: true, trackAnalytics: false };
+                flag = value3.ack(obj4);
               }
             }
             return flag;
@@ -3018,8 +3015,7 @@ const readStateStoreClass = new ReadStateStoreClass(DispatcherDefault, {
         }
       }
     }
-    let obj6 = RootNavigationRef;
-    const rootNavigationRef = obj6.getRootNavigationRef();
+    const rootNavigationRef = RootNavigationRef.getRootNavigationRef();
     let isReadyResult;
     if (rootNavigationRef != null) {
       isReadyResult = rootNavigationRef.isReady();
@@ -3042,23 +3038,23 @@ const readStateStoreClass = new ReadStateStoreClass(DispatcherDefault, {
           }
           if ("guilds" === name1) {
             const params = currentRoute.params;
-            channelId = undefined;
+            let channelId1;
             if (params != null) {
-              channelId = params.channelId;
+              channelId1 = params.channelId;
             }
-            channelId2 = channelId;
+            channelId2 = channelId1;
           }
         }
       }
     } else if (null == rootNavigationRef) {
-      const channelId1 = SelectedChannelStore.getChannelId();
-      currentSidebarChannelId = ChannelSectionStore.getCurrentSidebarChannelId(channelId1);
-      channelId2 = channelId1;
+      const channelId4 = SelectedChannelStore.getChannelId();
+      currentSidebarChannelId = ChannelSectionStore.getCurrentSidebarChannelId(channelId4);
+      channelId2 = channelId4;
     }
     let result = channelId2 === channelId || currentSidebarChannelId === channelId;
     if (!result) {
-      let tmp8Result = visibleInlineChannels;
-      result = tmp8Result.isChannelVisibleInline(channelId, (arg0) => focused.isFocused(arg0));
+      result = visibleInlineChannels.isChannelVisibleInline(channelId, (arg0) => focused.isFocused(arg0));
+      const tmp8Result = visibleInlineChannels;
     }
     if (result) {
       if (shouldAutomaticallyAck(value)) {
@@ -3068,10 +3064,10 @@ const readStateStoreClass = new ReadStateStoreClass(DispatcherDefault, {
           if (tmp22) {
             tmp22 = isOverlayChannelVisible(channelId3);
           }
-          const obj1 = { messageId: message.id, trackAnalytics: true, location: null };
-          obj2 = { section: tmp22 ? constants3.OVERLAY : constants3.CHANNEL, object: constants2.ACK_INCOMING_MESSAGE, objectType: constants.ACK_AUTOMATIC };
-          obj1.location = obj2;
-          return value.ack(obj1);
+          const obj5 = { messageId: message.id, trackAnalytics: true, location: null };
+          const obj6 = { section: tmp22 ? constants3.OVERLAY : constants3.CHANNEL, object: constants2.ACK_INCOMING_MESSAGE, objectType: constants.ACK_AUTOMATIC };
+          obj5.location = obj6;
+          return value.ack(obj5);
         }
       }
     }
@@ -3080,16 +3076,16 @@ const readStateStoreClass = new ReadStateStoreClass(DispatcherDefault, {
       tmp27 = isOverlayChannelVisible(channelId);
     }
     if (tmp27) {
-      const obj3 = { messageId: message.id, trackAnalytics: true, location: null };
-      const obj4 = { section: constants3.OVERLAY, object: constants2.ACK_INCOMING_MESSAGE, objectType: constants.ACK_AUTOMATIC };
-      obj3.location = obj4;
-      return value.ack(obj3);
+      const obj8 = { messageId: message.id, trackAnalytics: true, location: null };
+      const obj9 = { section: constants3.OVERLAY, object: constants2.ACK_INCOMING_MESSAGE, objectType: constants.ACK_AUTOMATIC };
+      obj8.location = obj9;
+      return value.ack(obj8);
     } else {
       if (null != value.oldestUnreadMessageId) {
         if (!value.oldestUnreadMessageIdStale) {
           if (!hasUnreadResult) {
-            tmp8Result = isChannelFocused;
-            hasUnreadResult = tmp8Result.getFocusedChannelId() === channelId;
+            hasUnreadResult = isChannelFocused.getFocusedChannelId() === channelId;
+            const tmp8Result4 = isChannelFocused;
           }
           if (!hasUnreadResult) {
             value.oldestUnreadMessageId = message.id;
@@ -3101,63 +3097,63 @@ const readStateStoreClass = new ReadStateStoreClass(DispatcherDefault, {
         if (!RelationshipStore.isBlockedOrIgnoredForMessage(message)) {
           if (message.type !== constants7.RECIPIENT_REMOVE) {
             if (null != currentUser) {
-              const obj5 = { rawMessage: message, userId: currentUser.id, suppressEveryone: UserGuildSettingsStore.isSuppressEveryoneEnabled(value.guildId), suppressRoles: UserGuildSettingsStore.isSuppressRolesEnabled(value.guildId) };
-              if (tmp8Result1.isRawMessageMentioned(obj5)) {
-                obj6 = { shouldMention: true, isMentionLowImportance: false };
+              const obj10 = { rawMessage: message, userId: currentUser.id, suppressEveryone: UserGuildSettingsStore.isSuppressEveryoneEnabled(value.guildId), suppressRoles: UserGuildSettingsStore.isSuppressRolesEnabled(value.guildId) };
+              if (tmp8Result5.isRawMessageMentioned(obj10)) {
+                let obj11 = { shouldMention: true, isMentionLowImportance: false };
               }
-              if (obj6.shouldMention) {
-                value.isMentionLowImportance = obj6.isMentionLowImportance;
+              if (obj11.shouldMention) {
+                value.isMentionLowImportance = obj11.isMentionLowImportance;
                 value.mentionCount = value.mentionCount + 1;
                 if (null != currentUser) {
-                  obj.get(currentUser.id, ReadStateTypes.NOTIFICATION_CENTER).lastMessageId = message.id;
+                  ReadState.get(currentUser.id, ReadStateTypes.NOTIFICATION_CENTER).lastMessageId = message.id;
                   if (NotificationCenterItemsStore.tabFocused) {
-                    const value1 = obj.get(currentUser.id, ReadStateTypes.NOTIFICATION_CENTER);
+                    const value4 = ReadState.get(currentUser.id, ReadStateTypes.NOTIFICATION_CENTER);
                     if (tmp38) {
-                      let tmp39 = null != value1.lastMessageId;
+                      let tmp39 = null != value4.lastMessageId;
                       if (!tmp39) {
-                        tmp39 = 0 !== value1.mentionCount;
+                        tmp39 = 0 !== value4.mentionCount;
                       }
                       if (tmp39) {
-                        let lastMessageId = value1.lastMessageId;
+                        let lastMessageId = value4.lastMessageId;
                         if (lastMessageId == null) {
-                          lastMessageId = require("SnowflakeUtils").fromTimestamp(value1.getAckTimestamp());
+                          lastMessageId = require("SnowflakeUtils").fromTimestamp(value4.getAckTimestamp());
                           const obj20 = require("SnowflakeUtils");
                         }
-                        const obj7 = { messageId: lastMessageId, local: false, trackAnalytics: false };
-                        value1.ack(obj7);
+                        const obj12 = { messageId: lastMessageId, local: false, trackAnalytics: false };
+                        value4.ack(obj12);
                       }
                     }
-                    tmp38 = undefined !== value1.ackMessageId && value1.lastMessageId !== value1.ackMessageId;
+                    tmp38 = undefined !== value4.ackMessageId && value4.lastMessageId !== value4.ackMessageId;
                   }
                 }
               }
-              tmp8Result1 = isMessageMentioned;
+              tmp8Result5 = isMessageMentioned;
             }
-            const channel = obj2.getChannel(message.channel_id);
+            const channel = ChannelStore.getChannel(message.channel_id);
             let tmp34 = null != channel && channel.isPrivate();
             if (tmp34) {
               tmp34 = !UserGuildSettingsStore.isGuildOrCategoryOrChannelMuted(channel.guild_id, channel.id);
             }
             if (tmp34) {
-              obj6 = { shouldMention: true, isMentionLowImportance: false };
+              obj11 = { shouldMention: true, isMentionLowImportance: false };
             } else {
               if (UserGuildSettingsStore.mentionOnAllMessages) {
                 if (null != channel) {
                   if (channel.isThread()) {
-                    if (tmp8Result2.computeThreadNotificationSetting(channel) === ThreadMemberFlags.ALL_MESSAGES) {
-                      obj6 = { shouldMention: true, isMentionLowImportance: true };
+                    if (tmp8Result6.computeThreadNotificationSetting(channel) === ThreadMemberFlags.ALL_MESSAGES) {
+                      obj11 = { shouldMention: true, isMentionLowImportance: true };
                     }
-                    tmp8Result2 = ThreadNotificationSettings;
+                    tmp8Result6 = ThreadNotificationSettings;
                   } else if (!channel.isVocal()) {
                     if (!UserGuildSettingsStore.isChannelMuted(channel.guild_id, channel.id)) {
                       if (UserGuildSettingsStore.resolvedMessageNotifications(channel) === constants10.ALL_MESSAGES) {
-                        obj6 = { shouldMention: true, isMentionLowImportance: true };
+                        obj11 = { shouldMention: true, isMentionLowImportance: true };
                       }
                     }
                   }
                 }
               }
-              obj6 = { shouldMention: false, isMentionLowImportance: false };
+              obj11 = { shouldMention: false, isMentionLowImportance: false };
             }
           } else {
             let type;
@@ -3194,7 +3190,7 @@ const readStateStoreClass = new ReadStateStoreClass(DispatcherDefault, {
   },
   CHANNEL_LOCAL_ACK: function handleChannelLocalAck(channelId) {
     value = ReadState.get(channelId.channelId);
-    return value.ack({ messageId: "HermesInternal", local: "HermesInternal", immediate: "PX_16", force: "noiseSuppression", isExplicitUserAction: "APPLICATION_COMMAND_SET_ACTIVE_COMMAND", trackAnalytics: null });
+    return value.ack({ messageId: "HermesInternal", local: "HermesInternal", immediate: "PX_16", force: "noiseSuppression", isExplicitUserAction: "DRAFT_SAVE", trackAnalytics: null });
   },
   CHANNEL_PINS_ACK: function handleChannelPinsAck(channelId) {
     value = ReadState.get(channelId.channelId);
@@ -3229,8 +3225,8 @@ const readStateStoreClass = new ReadStateStoreClass(DispatcherDefault, {
       value = ReadState.get(channel.id);
       let ackMessageId = value.ackMessageId;
       if (ackMessageId == null) {
-        let obj1 = require("SnowflakeUtils");
-        ackMessageId = obj1.fromTimestamp(value.getAckTimestamp());
+        ackMessageId = require("SnowflakeUtils").fromTimestamp(value.getAckTimestamp());
+        const obj2 = require("SnowflakeUtils");
       }
       value.ackMessageIdAtChannelSelect = ackMessageId;
       value.recordLastViewedTime();
@@ -3245,11 +3241,11 @@ const readStateStoreClass = new ReadStateStoreClass(DispatcherDefault, {
     if (channelId !== channelId) {
       let flag4 = false;
       if (null != tmp11) {
-        value = ReadState.get(tmp11);
-        const hasUnreadResult = value.hasUnread();
+        const value5 = ReadState.get(tmp11);
+        const hasUnreadResult = value5.hasUnread();
         let flag5 = !hasUnreadResult;
         if (!hasUnreadResult) {
-          value.oldestUnreadMessageId = null;
+          value5.oldestUnreadMessageId = null;
           flag5 = true;
         }
         flag4 = flag5;
@@ -3259,11 +3255,11 @@ const readStateStoreClass = new ReadStateStoreClass(DispatcherDefault, {
       }
       let flag6 = false;
       if (null != currentSidebarChannelId) {
-        const value1 = ReadState.get(tmp14);
-        const hasUnreadResult1 = value1.hasUnread();
+        const value6 = ReadState.get(tmp14);
+        const hasUnreadResult1 = value6.hasUnread();
         let flag7 = !hasUnreadResult1;
         if (!hasUnreadResult1) {
-          value1.oldestUnreadMessageId = null;
+          value6.oldestUnreadMessageId = null;
           flag7 = true;
         }
         flag6 = flag7;
@@ -3288,15 +3284,14 @@ const readStateStoreClass = new ReadStateStoreClass(DispatcherDefault, {
     }
     let tmp21 = flag3;
     if (tmp17) {
-      let obj = { section: constants3.CHANNEL, object: constants2.ACK_CHANNEL_SELECT_SAME_CHANNEL, objectType: constants.ACK_AUTOMATIC };
+      const obj = { section: constants3.CHANNEL, object: constants2.ACK_CHANNEL_SELECT_SAME_CHANNEL, objectType: constants.ACK_AUTOMATIC };
       let flag8 = false;
       if (null != channelId) {
-        value2 = ReadState.get(channelId);
-        let ackResult = shouldAutomaticallyAck(value2, undefined);
+        const value7 = ReadState.get(channelId);
+        let ackResult = shouldAutomaticallyAck(value7, undefined);
         if (ackResult) {
-          obj = { trackAnalytics: true, location: null };
-          obj.location = obj;
-          ackResult = value2.ack(obj);
+          const obj3 = { trackAnalytics: true, location: obj };
+          ackResult = value7.ack(obj3);
         }
         flag8 = ackResult;
       }
@@ -3307,14 +3302,14 @@ const readStateStoreClass = new ReadStateStoreClass(DispatcherDefault, {
     }
     let tmp28 = tmp21;
     if (channelId === channelId) {
-      obj1 = { section: constants3.CHANNEL, object: constants2.ACK_CHANNEL_SELECT_SAME_CHANNEL_SIDEBAR, objectType: constants.ACK_AUTOMATIC };
+      const obj4 = { section: constants3.CHANNEL, object: constants2.ACK_CHANNEL_SELECT_SAME_CHANNEL_SIDEBAR, objectType: constants.ACK_AUTOMATIC };
       let flag9 = false;
       if (null != currentSidebarChannelId) {
-        const value3 = ReadState.get(currentSidebarChannelId);
-        let ackResult1 = shouldAutomaticallyAck(value3, undefined);
+        const value8 = ReadState.get(currentSidebarChannelId);
+        let ackResult1 = shouldAutomaticallyAck(value8, undefined);
         if (ackResult1) {
-          const obj2 = { trackAnalytics: true, location: obj1 };
-          ackResult1 = value3.ack(obj2);
+          const obj5 = { trackAnalytics: true, location: obj4 };
+          ackResult1 = value8.ack(obj5);
         }
         flag9 = ackResult1;
       }
@@ -3327,7 +3322,6 @@ const readStateStoreClass = new ReadStateStoreClass(DispatcherDefault, {
   },
   OVERLAY_TEXT_CHAT_ACK_CHANNEL: function handleOverlayTextChatAckChannel(channelId) {
     channelId = channelId.channelId;
-    let obj = ReadState;
     value = ReadState.get(channelId);
     let ackMessageId = value.ackMessageId;
     if (ackMessageId == null) {
@@ -3337,19 +3331,17 @@ const readStateStoreClass = new ReadStateStoreClass(DispatcherDefault, {
     value.ackMessageIdAtChannelSelect = ackMessageId;
     value.recordLastViewedTime();
     if (null != channelId) {
-      value = obj.get(channelId);
-      const hasUnreadResult = value.hasUnread();
+      const value3 = ReadState.get(channelId);
+      const hasUnreadResult = value3.hasUnread();
       if (!hasUnreadResult) {
-        value.oldestUnreadMessageId = null;
+        value3.oldestUnreadMessageId = null;
       }
     }
-    obj = { section: constants3.OVERLAY, object: constants2.ACK_CHANNEL_SELECT_SAME_CHANNEL_DISPATCH, objectType: constants.ACK_AUTOMATIC };
     if (null != channelId) {
-      const value1 = obj.get(channelId);
-      if (shouldAutomaticallyAck(value1, undefined)) {
-        obj = { trackAnalytics: true, location: null };
-        obj.location = obj;
-        value1.ack(obj);
+      const value4 = ReadState.get(channelId);
+      if (shouldAutomaticallyAck(value4, undefined)) {
+        const obj4 = { trackAnalytics: true, location: obj2 };
+        value4.ack(obj4);
       }
     }
     return true;
@@ -3360,9 +3352,9 @@ const readStateStoreClass = new ReadStateStoreClass(DispatcherDefault, {
       value = ReadState.get(channelId);
       if (!value.hasMentions()) {
         value.oldestUnreadMessageId = null;
-        let obj = { isExplicitUserAction: true, trackAnalytics: true, location: null };
-        obj = { section: constants3.CHANNEL, object: constants2.ACK_VOICE_CHANNEL_SELECT, objectType: constants.ACK_SEMI_AUTOMATIC };
-        obj.location = obj;
+        const obj = { isExplicitUserAction: true, trackAnalytics: true, location: null };
+        const obj2 = { section: constants3.CHANNEL, object: constants2.ACK_VOICE_CHANNEL_SELECT, objectType: constants.ACK_SEMI_AUTOMATIC };
+        obj.location = obj2;
         return value.ack(obj);
       }
     }
@@ -3419,15 +3411,15 @@ const readStateStoreClass = new ReadStateStoreClass(DispatcherDefault, {
     }
     if (channel.ownerId === id) {
       ReadState.get(channel.id)._persisted = true;
-      let obj = { channelId: parent_id, messageId: channel.id, manual: false };
-      ({ messageId, manual, newMentionCount } = obj);
-      value = ReadState.get(obj.channelId);
+      const obj3 = { channelId: parent_id, messageId: channel.id, manual: false };
+      ({ messageId, manual, newMentionCount } = obj3);
+      value2 = ReadState.get(obj3.channelId);
       if (manual) {
-        value.rebuildChannelState(messageId, true, newMentionCount);
-        value.clearOutgoingAck();
-      } else if (messageId !== value._ackMessageId) {
-        obj = { messageId, local: true, trackAnalytics: false };
-        value.ack(obj);
+        value2.rebuildChannelState(messageId, true, newMentionCount);
+        value2.clearOutgoingAck();
+      } else if (messageId !== value2._ackMessageId) {
+        const obj4 = { messageId, local: true, trackAnalytics: false };
+        value2.ack(obj4);
       }
     }
   },
@@ -3462,9 +3454,9 @@ const readStateStoreClass = new ReadStateStoreClass(DispatcherDefault, {
         value._isActiveThread = true;
         value._isJoinedThread = JoinedThreadsStore.hasJoined(type.id);
         if (type.isForumPost()) {
-          value = ReadState.get(type.parent_id);
-          if (obj2.compare(value.lastMessageId, type.id) < 0) {
-            value.lastMessageId = type.id;
+          value2 = ReadState.get(type.parent_id);
+          if (obj2.compare(value2.lastMessageId, type.id) < 0) {
+            value2.lastMessageId = type.id;
           }
           obj2 = require("SnowflakeUtils");
         }
@@ -3495,7 +3487,6 @@ const readStateStoreClass = new ReadStateStoreClass(DispatcherDefault, {
       if (has.has(windowId.windowId)) {
         let focused = windowId.focused;
         if (null != arg0) {
-          let obj = ReadState;
           value = ReadState.get(arg0);
           if (!focused) {
             focused = value.hasUnread();
@@ -3503,15 +3494,14 @@ const readStateStoreClass = new ReadStateStoreClass(DispatcherDefault, {
           if (!focused) {
             value.oldestUnreadMessageIdStale = true;
           }
-          obj = { section: constants3.CHANNEL, object: constants2.ACK_WINDOW_FOCUS, objectType: constants.ACK_AUTOMATIC };
+          const obj2 = { section: constants3.CHANNEL, object: constants2.ACK_WINDOW_FOCUS, objectType: constants.ACK_AUTOMATIC };
           let flag3 = false;
           if (null != arg0) {
-            value = obj.get(arg0);
-            let ackResult = shouldAutomaticallyAck(value, undefined);
+            value2 = ReadState.get(arg0);
+            let ackResult = shouldAutomaticallyAck(value2, undefined);
             if (ackResult) {
-              obj = { trackAnalytics: true, location: null };
-              obj.location = obj;
-              ackResult = value.ack(obj);
+              const obj3 = { trackAnalytics: true, location: obj2 };
+              ackResult = value2.ack(obj3);
             }
             flag3 = ackResult;
           }
@@ -3522,15 +3512,13 @@ const readStateStoreClass = new ReadStateStoreClass(DispatcherDefault, {
   },
   UPDATE_CHANNEL_DIMENSIONS: function handleScroll(channelId) {
     channelId = channelId.channelId;
-    let obj = { section: constants3.CHANNEL, object: constants2.ACK_CHANNEL_SCROLL, objectType: constants.ACK_AUTOMATIC };
     let flag = false;
     if (null != channelId) {
       value = ReadState.get(channelId);
       let ackResult = shouldAutomaticallyAck(value, tmp);
       if (ackResult) {
-        obj = { trackAnalytics: true, location: null };
-        obj.location = obj;
-        ackResult = value.ack(obj);
+        const obj2 = { trackAnalytics: true, location: obj };
+        ackResult = value.ack(obj2);
       }
       flag = ackResult;
     }
@@ -3559,7 +3547,7 @@ const readStateStoreClass = new ReadStateStoreClass(DispatcherDefault, {
     });
     const item = found.forEach((messageId) => {
       value = ReadState.get(messageId.channelId, messageId.readStateType);
-      value.ack({ messageId: messageId.messageId, local: true, immediate: "HermesInternal", force: "PX_16", isExplicitUserAction: "bindUserMenu", trackAnalytics: null });
+      value.ack({ messageId: messageId.messageId, local: true, immediate: "HermesInternal", force: "PX_16", isExplicitUserAction: "describe", trackAnalytics: "pipe" });
     });
     if (context === closure_1_41) {
       const push = navigation.push;
@@ -3581,17 +3569,14 @@ const readStateStoreClass = new ReadStateStoreClass(DispatcherDefault, {
   },
   REGISTER_VISIBLE_INLINE_CHANNEL: function handleRegisterVisibleInlineChannel(channelId) {
     channelId = channelId.channelId;
-    let obj = visibleInlineChannels;
-    const result = obj.registerVisibleInlineChannel(channelId, channelId.windowId);
-    obj = { section: constants3.CHANNEL, object: constants2.ACK_MESSAGE_VIEWED, objectType: constants.ACK_AUTOMATIC };
+    const result = visibleInlineChannels.registerVisibleInlineChannel(channelId, channelId.windowId);
     let flag = false;
     if (null != channelId) {
       value = ReadState.get(channelId);
       let ackResult = shouldAutomaticallyAck(value, undefined);
       if (ackResult) {
-        obj = { trackAnalytics: true, location: null };
-        obj.location = obj;
-        ackResult = value.ack(obj);
+        const obj3 = { trackAnalytics: true, location: obj2 };
+        ackResult = value.ack(obj3);
       }
       flag = ackResult;
     }
@@ -3659,15 +3644,13 @@ const readStateStoreClass = new ReadStateStoreClass(DispatcherDefault, {
   },
   RESORT_THREADS: function handleResortThreads(channelId) {
     channelId = channelId.channelId;
-    let obj = { section: constants3.CHANNEL, object: constants2.ACK_RESORT_THREADS, objectType: constants.ACK_AUTOMATIC };
     let flag = false;
     if (null != channelId) {
       value = ReadState.get(channelId);
       let ackResult = shouldAutomaticallyAck(value, undefined);
       if (ackResult) {
-        obj = { trackAnalytics: true, location: null };
-        obj.location = obj;
-        ackResult = value.ack(obj);
+        const obj2 = { trackAnalytics: true, location: obj };
+        ackResult = value.ack(obj2);
       }
       flag = ackResult;
     }
@@ -3676,15 +3659,14 @@ const readStateStoreClass = new ReadStateStoreClass(DispatcherDefault, {
   CHANNEL_RTC_UPDATE_CHAT_OPEN: function handleUpdateChatOpen(channelId) {
     channelId = channelId.channelId;
     if (channelId.chatOpen) {
-      let obj = { section: constants3.CHANNEL, object: constants2.ACK_CHANNEL_RTC_UPDATE_CHAT_OPEN, objectType: constants.ACK_AUTOMATIC };
+      const obj = { section: constants3.CHANNEL, object: constants2.ACK_CHANNEL_RTC_UPDATE_CHAT_OPEN, objectType: constants.ACK_AUTOMATIC };
       let flag = false;
       if (null != channelId) {
         value = ReadState.get(channelId);
         let ackResult = shouldAutomaticallyAck(value, undefined);
         if (ackResult) {
-          obj = { trackAnalytics: true, location: null };
-          obj.location = obj;
-          ackResult = value.ack(obj);
+          const obj2 = { trackAnalytics: true, location: obj };
+          ackResult = value.ack(obj2);
         }
         flag = ackResult;
       }
@@ -3706,25 +3688,25 @@ const readStateStoreClass = new ReadStateStoreClass(DispatcherDefault, {
       value.lastMessageId = item.id;
       if (NotificationCenterItemsStore.tabFocused) {
         let lastMessageId = item.id;
-        value = ReadState.get(id, ReadStateTypes.NOTIFICATION_CENTER);
+        value2 = ReadState.get(id, ReadStateTypes.NOTIFICATION_CENTER);
         if (tmp3) {
-          let tmp4 = null != value.lastMessageId;
+          let tmp4 = null != value2.lastMessageId;
           if (!tmp4) {
-            tmp4 = 0 !== value.mentionCount;
+            tmp4 = 0 !== value2.mentionCount;
           }
           if (tmp4) {
             if (lastMessageId == null) {
-              lastMessageId = value.lastMessageId;
+              lastMessageId = value2.lastMessageId;
             }
             if (lastMessageId == null) {
-              lastMessageId = require("SnowflakeUtils").fromTimestamp(value.getAckTimestamp());
+              lastMessageId = require("SnowflakeUtils").fromTimestamp(value2.getAckTimestamp());
               const obj2 = require("SnowflakeUtils");
             }
             const obj = { messageId: lastMessageId, local: false, trackAnalytics: false };
-            value.ack(obj);
+            value2.ack(obj);
           }
         }
-        tmp3 = lastMessageId !== value.ackMessageId && value.lastMessageId !== value.ackMessageId;
+        tmp3 = lastMessageId !== value2.ackMessageId && value2.lastMessageId !== value2.ackMessageId;
       } else {
         value.mentionCount = value.mentionCount + 1;
       }
@@ -3742,16 +3724,15 @@ const readStateStoreClass = new ReadStateStoreClass(DispatcherDefault, {
           return false;
         }
       }
-      let obj = ReadState;
       value = ReadState.get(currentUser.id, ReadStateTypes.NOTIFICATION_CENTER);
-      let _Date = Date;
+      const _Date = Date;
       if (relationship.relationship.type === constants8.FRIEND) {
         const _Date2 = Date;
-        _Date = new _Date(Date.now());
-        let time = _Date.getTime();
+        const _Date1 = new _Date(Date.now());
+        let time = _Date1.getTime();
       } else {
-        const _Date1 = new _Date(relationship.relationship.since);
-        time = _Date1.getTime();
+        const _Date3 = new _Date(relationship.relationship.since);
+        time = _Date3.getTime();
       }
       let num2 = 0;
       if (null != value.ackMessageId) {
@@ -3761,20 +3742,20 @@ const readStateStoreClass = new ReadStateStoreClass(DispatcherDefault, {
       if (num2 < time) {
         value.lastMessageId = require("SnowflakeUtils").fromTimestamp(time);
         if (NotificationCenterItemsStore.tabFocused) {
-          value = obj.get(currentUser.id, ReadStateTypes.NOTIFICATION_CENTER);
+          value2 = ReadState.get(currentUser.id, ReadStateTypes.NOTIFICATION_CENTER);
           if (tmp15) {
             if (tmp16) {
-              let lastMessageId = value.lastMessageId;
+              let lastMessageId = value2.lastMessageId;
               if (lastMessageId == null) {
-                lastMessageId = require("SnowflakeUtils").fromTimestamp(value.getAckTimestamp());
+                lastMessageId = require("SnowflakeUtils").fromTimestamp(value2.getAckTimestamp());
                 const tmp20Result = require("SnowflakeUtils");
               }
-              obj = { messageId: lastMessageId, local: false, trackAnalytics: false };
-              value.ack(obj);
+              const obj2 = { messageId: lastMessageId, local: false, trackAnalytics: false };
+              value2.ack(obj2);
             }
-            tmp16 = null != value.lastMessageId || 0 !== value.mentionCount;
+            tmp16 = null != value2.lastMessageId || 0 !== value2.mentionCount;
           }
-          tmp15 = undefined !== value.ackMessageId && value.lastMessageId !== value.ackMessageId;
+          tmp15 = undefined !== value2.ackMessageId && value2.lastMessageId !== value2.ackMessageId;
         } else {
           const mentionCount = value.mentionCount;
           if (tmp4) {
@@ -3965,16 +3946,15 @@ const readStateStoreClass = new ReadStateStoreClass(DispatcherDefault, {
   APP_STATE_UPDATE: function handleAppStateUpdate(state) {
     let tmp = state.state === constants12.ACTIVE;
     if (tmp) {
-      let obj = { section: constants3.CHANNEL, object: constants2.ACK_APP_FOREGROUND, objectType: constants.ACK_AUTOMATIC };
+      const obj = { section: constants3.CHANNEL, object: constants2.ACK_APP_FOREGROUND, objectType: constants.ACK_AUTOMATIC };
       channelId = SelectedChannelStore.getChannelId();
       let flag = false;
       if (null != channelId) {
         value = ReadState.get(channelId);
         let ackResult = shouldAutomaticallyAck(value, undefined);
         if (ackResult) {
-          obj = { trackAnalytics: true, location: null };
-          obj.location = obj;
-          ackResult = value.ack(obj);
+          const obj2 = { trackAnalytics: true, location: obj };
+          ackResult = value.ack(obj2);
         }
         flag = ackResult;
       }

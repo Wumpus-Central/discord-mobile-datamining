@@ -5,13 +5,14 @@ import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../../../modules/a11y/AccessibilityStore.tsx";
 
+const require = globalThis.__r;
 const ReanimatedRexportDefault = ReanimatedRexport;
 
 require = fn;
 let AppState = fn(17).AppState;
-let jsx = fn(21).jsx;
-fn(4636);
-const createStyles = {
+const jsx = fn(21).jsx;
+const createStyles = fn(4636);
+let obj2 = {
   shinyButton: { overflow: "hidden" },
   shineContainer: { width: "100%", height: "100%", position: "absolute", overflow: "hidden" },
   shine: null,
@@ -27,8 +28,8 @@ let size = {
 };
 let items = [{ rotate: "30deg" }];
 size.transform = items;
-createStyles.shine = size;
-let closure_8 = createStyles.createStyles(createStyles);
+obj2.shine = size;
+let closure_8 = createStyles.createStyles(obj2);
 let __initData = {
   code: "function ShinyButtonTsx1(){const{width,OFFSCREEN_OFFSET,withRepeat,withSequence,withTiming,withDelay,INITIAL_ANIMATION_DELAY,ANIMATION_DURATION}=this.__closure;if(width==null){return{transform:[{translateX:-OFFSCREEN_OFFSET}]};}return{transform:[{translateX:withRepeat(withSequence(withTiming(-OFFSCREEN_OFFSET,{duration:0},'animate-always'),withDelay(INITIAL_ANIMATION_DELAY,withTiming(width+OFFSCREEN_OFFSET,{duration:ANIMATION_DURATION},'animate-always'))),-1)}]};}",
 };
@@ -46,6 +47,8 @@ export default function ShinyButton(disabled) {
     disabled,
     Object.assign({ style: 0, disabled: 0, submitting: 0, shineDisabled: 0, shineStyle: 0, shineInnerStyle: 0 }),
   );
+  width = undefined;
+  jsx = undefined;
   closure_8 = undefined;
   __initData = undefined;
   c10 = undefined;
@@ -54,13 +57,11 @@ export default function ShinyButton(disabled) {
   }
   const tmp2 = closure_8();
   AppState = tmp2;
-  const tmp3 = _slicedToArray(noop.useState(null), 2);
-  const width = tmp3[0];
-  jsx = tmp3[1];
-  let obj = disabled(shineDisabled[6]);
+  [width, jsx] = noop.useState(null);
   let items = [width];
-  closure_8 = obj.useStateFromStores(items, () => first.useReducedMotion, []);
-  [c9, c10] = _slicedToArray(noop.useState("active" === AppState.currentState), 2);
+  closure_8 = disabled(shineDisabled[6]).useStateFromStores(items, () => first.useReducedMotion, []);
+  let obj = disabled(shineDisabled[6]);
+  [c9, c10] = noop.useState("active" === AppState.currentState);
   const effect = noop.useEffect(() => {
     closure_0 = closure_5.addEventListener("change", (event) => {
       closure_1_10("active" === event);
@@ -72,29 +73,31 @@ export default function ShinyButton(disabled) {
   const tmp5 = _slicedToArray(noop.useState("active" === AppState.currentState), 2);
   const fn = function p() {
     if (null == first) {
-      let obj = { transform: null };
+      const obj = { transform: null };
       const items = [{ translateX: -100 }];
       obj.transform = items;
+      let obj2 = obj;
     } else {
-      obj = { transform: null };
-      obj = { translateX: null };
+      obj2 = { transform: null };
+      const obj3 = { translateX: null };
       const obj4 = ReanimatedRexport;
       const obj5 = ReanimatedRexport;
       const withTimingResult = timing.withTiming(-100, { duration: 0 }, "animate-always");
       const obj7 = ReanimatedRexport;
-      obj.translateX = obj4.withRepeat(
+      obj3.translateX = obj4.withRepeat(
         obj5.withSequence(
           withTimingResult,
           obj7.withDelay(750, timing.withTiming(tmp + 100, { duration: 2000 }, "animate-always")),
         ),
         -1,
       );
-      const items1 = [obj];
-      obj.transform = items1;
+      const items1 = [obj3];
+      obj2.transform = items1;
     }
-    return obj;
+    return obj2;
   };
-  obj = {
+  let obj2 = disabled(shineDisabled[7]);
+  fn.__closure = {
     width,
     OFFSCREEN_OFFSET: 100,
     withRepeat: disabled(shineDisabled[7]).withRepeat,
@@ -104,17 +107,25 @@ export default function ShinyButton(disabled) {
     INITIAL_ANIMATION_DELAY: 750,
     ANIMATION_DURATION: 2000,
   };
-  fn.__closure = obj;
   fn.__workletHash = 5550564727650;
   fn.__initData = __initData;
-  closure_11 = disabled(shineDisabled[7]).useAnimatedStyle(fn);
-  obj = {};
-  const obj2 = disabled(shineDisabled[7]);
+  closure_11 = obj2.useAnimatedStyle(fn);
+  let obj4 = {};
+  let obj3 = {
+    width,
+    OFFSCREEN_OFFSET: 100,
+    withRepeat: disabled(shineDisabled[7]).withRepeat,
+    withSequence: disabled(shineDisabled[7]).withSequence,
+    withTiming: disabled(shineDisabled[8]).withTiming,
+    withDelay: disabled(shineDisabled[7]).withDelay,
+    INITIAL_ANIMATION_DELAY: 750,
+    ANIMATION_DURATION: 2000,
+  };
   const merged1 = Object.assign(merged);
   let items1 = [disabled.style, tmp2.shinyButton];
-  obj.style = items1;
-  obj.disabled = disabled;
-  obj.renderShine = function renderShine() {
+  obj4.style = items1;
+  obj4.disabled = disabled;
+  obj4.renderShine = function renderShine() {
     let tmp = null;
     if (!disabled) {
       tmp = null;
@@ -125,18 +136,18 @@ export default function ShinyButton(disabled) {
           if (!shineDisabled) {
             tmp = null;
             if (c9) {
-              let obj = { onLayout: handleLayout, style: null, children: null };
+              const obj = { onLayout: handleLayout, style: null, children: null };
               const items = [closure_5.shineContainer, closure_11];
               obj.style = items;
-              obj = { style: null, children: null };
+              const obj2 = { style: null, children: null };
               const items1 = [closure_5.shine, _slicedToArray];
-              obj.style = items1;
-              obj = { style: null };
+              obj2.style = items1;
+              const obj3 = { style: null };
               const items2 = [closure_5.shineInner, noop];
-              obj.style = items2;
-              obj.children = jsx(ReanimatedRexportDefault.View, { style: null });
-              obj.children = jsx(ReanimatedRexportDefault.View, { style: null });
-              tmp = jsx(ReanimatedRexportDefault.View, { style: null });
+              obj3.style = items2;
+              obj2.children = jsx(ReanimatedRexportDefault.View, { style: null });
+              obj.children = jsx(ReanimatedRexportDefault.View, { style: null, children: null });
+              tmp = jsx(ReanimatedRexportDefault.View, { onLayout: handleLayout, style: null, children: null });
             }
           }
         }

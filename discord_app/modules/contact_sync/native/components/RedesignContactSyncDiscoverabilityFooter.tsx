@@ -15,15 +15,15 @@ const result = size.fileFinishedImporting(
 
 export default function RedesignContactSyncDiscoverabilityFooter(arg0) {
   ({ discoverabilityEnabled, onValueChanged } = arg0);
-  let obj = { hasIcons: false, helperText: null, children: null };
+  const obj = { hasIcons: false, helperText: null, children: null };
   const intl = util.intl;
-  obj = { helpdeskUrl: HelpdeskUtilsDefault.getArticleURL(HelpdeskArticles.CONTACT_SYNC) };
-  obj.helperText = intl.format(util.t.zopgpe, obj);
-  obj = { label: null, onValueChange: null, value: null };
+  const obj2 = { helpdeskUrl: HelpdeskUtilsDefault.getArticleURL(HelpdeskArticles.CONTACT_SYNC) };
+  obj.helperText = intl.format(util.t.zopgpe, obj2);
+  const obj4 = { label: null, onValueChange: null, value: null };
   const intl2 = util.intl;
-  obj.label = intl2.string(util.t.a5QL24);
-  obj.onValueChange = onValueChanged;
-  obj.value = discoverabilityEnabled;
+  obj4.label = intl2.string(util.t.a5QL24);
+  obj4.onValueChange = onValueChanged;
+  obj4.value = discoverabilityEnabled;
   obj.children = jsx(TableSwitchRow.TableSwitchRow, { label: null, onValueChange: null, value: null });
-  return jsx(TableRowGroup.TableRowGroup, { label: null, onValueChange: null, value: null });
+  return jsx(TableRowGroup.TableRowGroup, { hasIcons: false, helperText: null, children: null });
 }

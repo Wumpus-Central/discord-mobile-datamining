@@ -3,6 +3,8 @@ import ChannelStore from "../../stores/ChannelStore.tsx";
 import PermissionStore from "../../stores/PermissionStore.tsx";
 import SelectedChannelStore from "../../stores/SelectedChannelStore.tsx";
 
+const require = globalThis.__r;
+
 const require = fn;
 const Constants = fn(1074);
 ({ ChannelTypesSets: hasOwnProperty, Permissions: metroRequire } = Constants);

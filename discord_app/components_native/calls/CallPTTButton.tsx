@@ -11,9 +11,9 @@ import RTCConnectionStore from "../../stores/RTCConnectionStore.tsx";
 require = fn;
 const InputModes = fn(1074).InputModes;
 const jsx = fn(21).jsx;
-let CallPTTButtonLooks = { BRAND: "brand", BLUR: "blur" };
-fn(4636);
-CallPTTButtonLooks = {
+const CallPTTButtonLooks = { BRAND: "brand", BLUR: "blur" };
+const createStyles = fn(4636);
+let obj2 = {
   button: { margin: 13 },
   container: null,
   buttonBlur: null,
@@ -21,32 +21,32 @@ CallPTTButtonLooks = {
   textStyle: null,
   brandButtonContainer: null,
 };
-let obj1 = { borderRadius: nativeDefault.radii.xs, overflow: "hidden", backgroundColor: null };
+let obj4 = { borderRadius: nativeDefault.radii.xs, overflow: "hidden", backgroundColor: null };
 let ColorUtils = fn(4486);
-obj1.backgroundColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.WHITE, 0.24);
-CallPTTButtonLooks.container = obj1;
-CallPTTButtonLooks.buttonBlur = { backgroundColor: "transparent" };
-const createStyles = { backgroundColor: null };
+obj4.backgroundColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.WHITE, 0.24);
+obj2.container = obj4;
+obj2.buttonBlur = { backgroundColor: "transparent" };
+const obj5 = { backgroundColor: null };
 ColorUtils = fn(4486);
-createStyles.backgroundColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.BLACK, 0.6);
-CallPTTButtonLooks.buttonBlurPressed = createStyles;
-CallPTTButtonLooks.textStyle = { fontSize: 16 };
-CallPTTButtonLooks.brandButtonContainer = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
-let closure_11 = createStyles.createStyles(CallPTTButtonLooks);
+obj5.backgroundColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.BLACK, 0.6);
+obj2.buttonBlurPressed = obj5;
+obj2.textStyle = { fontSize: 16 };
+obj2.brandButtonContainer = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
+let closure_11 = createStyles.createStyles(obj2);
 const __initData = {
   code: "function CallPTTButtonTsx1(){const{runOnJS,setDragging}=this.__closure;runOnJS(setDragging)(false);}",
 };
 const __initData2 = {
   code: "function CallPTTButtonTsx2(){const{runOnJS,setDragging,setPressed,setIsSwipeToChatDisabled}=this.__closure;runOnJS(setDragging)(true);runOnJS(setPressed)(false);if(setIsSwipeToChatDisabled!=null){runOnJS(setIsSwipeToChatDisabled)(false);}}",
 };
-let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
+let obj7 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 const size = fn(2);
 const result = size.fileFinishedImporting("components_native/calls/CallPTTButton.tsx");
 
 export default noop.memo((look) => {
   let BRAND = look.look;
   if (BRAND === undefined) {
-    BRAND = __closure.BRAND;
+    BRAND = obj.BRAND;
   }
   ({ style, sendCallback } = look);
   let stateFromStores1;
@@ -58,17 +58,21 @@ export default noop.memo((look) => {
   let prop;
   let string = closure_11();
   let onTouchStart = stateFromStores1;
-  __closure = sendCallback(stateFromStores1[10]);
+  obj = sendCallback(stateFromStores1[10]);
   const items = [mode];
-  const stateFromStores = __closure.useStateFromStores(items, () => mode.getMode());
-  let obj1 = sendCallback(stateFromStores1[10]);
+  const stateFromStores = obj.useStateFromStores(items, () => mode.getMode());
   const items1 = [ref];
-  stateFromStores1 = obj1.useStateFromStores(items1, () => ref.getChannelId());
+  stateFromStores1 = sendCallback(stateFromStores1[10]).useStateFromStores(items1, () => ref.getChannelId());
   let obj2 = sendCallback(stateFromStores1[10]);
   const items2 = [first1];
   const items3 = [stateFromStores1];
-  const stateFromStores2 = obj2.useStateFromStores(items2, () => ChannelStore.getChannel(stateFromStores1), items3);
+  const stateFromStores2 = sendCallback(stateFromStores1[10]).useStateFromStores(
+    items2,
+    () => ChannelStore.getChannel(stateFromStores1),
+    items3,
+  );
   let View = stopCallback;
+  const obj3 = sendCallback(stateFromStores1[10]);
   const tmp6 = first(noop.useState(false), 2);
   first = tmp6[0];
   noop = tmp8;
@@ -124,16 +128,21 @@ export default noop.memo((look) => {
       return;
     }
   }
-  __closure = {
+  const PanResult = Gesture.Pan();
+  F.__closure = {
     runOnJS: sendCallback(onTouchStart[15]).runOnJS,
-    setDragging: tmp11,
-    setPressed: tmp8,
+    setDragging: tmp9[1],
+    setPressed: tmp6[1],
     setIsSwipeToChatDisabled: prop,
   };
-  F.__closure = __closure;
   F.__workletHash = 10056118853836;
   F.__initData = __initData2;
-  const PanResult = Gesture.Pan();
+  const obj4 = {
+    runOnJS: sendCallback(onTouchStart[15]).runOnJS,
+    setDragging: tmp9[1],
+    setPressed: tmp6[1],
+    setIsSwipeToChatDisabled: prop,
+  };
   class N {
     constructor() {
       obj = closure_0(closure_2[15]);
@@ -141,18 +150,18 @@ export default noop.memo((look) => {
       return;
     }
   }
-  __closure = { runOnJS: sendCallback(onTouchStart[15]).runOnJS, setDragging: tmp11 };
-  N.__closure = __closure;
+  const onStartResult = PanResult.onStart(F);
+  N.__closure = { runOnJS: sendCallback(onTouchStart[15]).runOnJS, setDragging: tmp9[1] };
   N.__workletHash = 8439106360958;
   N.__initData = __initData;
-  let onEndResult = Gesture.Pan().onStart(F).onEnd(N);
+  let onEndResult = onStartResult.onEnd(N);
   let tmp18 = null;
   if (null != stateFromStores1) {
     tmp18 = null;
     if (prop.VOICE_ACTIVITY !== stateFromStores) {
       tmp18 = null;
       if (!isGuildStageVoiceResult) {
-        if (BRAND === __closure.BRAND) {
+        if (BRAND === obj.BRAND) {
           const items5 = [string.brandButtonContainer];
           const items6 = [string.button, style];
           let buttonBlurPressed = items6;
@@ -168,11 +177,11 @@ export default noop.memo((look) => {
           }
           buttonBlurPressed = string.buttonBlurPressed;
         }
-        obj1 = { gesture: onEndResult, children: null };
+        const obj7 = { gesture: onEndResult, children: null };
         View = View(onTouchStart[15]).View;
-        obj2 = { style: items7, children: null };
+        const obj8 = { style: items7, children: null };
         style = sendCallback(onTouchStart[16]).Button;
-        const obj3 = {
+        const obj9 = {
           style: buttonBlurPressed,
           textStyle: string.textStyle,
           text: null,
@@ -182,7 +191,7 @@ export default noop.memo((look) => {
         };
         const intl = sendCallback(onTouchStart[17]).intl;
         string = intl.string;
-        obj3.text = string(sendCallback(onTouchStart[17]).t.Q8gkVL);
+        obj9.text = string(sendCallback(onTouchStart[17]).t.Q8gkVL);
         onTouchStart = function onTouchStart() {
           closure_4(true);
           mode(false);
@@ -190,14 +199,14 @@ export default noop.memo((look) => {
             prop(true);
           }
         };
-        obj3.onTouchStart = onTouchStart;
-        obj3.onTouchEnd = function onTouchEnd() {
+        obj9.onTouchStart = onTouchStart;
+        obj9.onTouchEnd = function onTouchEnd() {
           closure_4(false);
           if (prop != null) {
             prop(false);
           }
         };
-        obj2.children = (
+        obj8.children = (
           <style
             style={buttonBlurPressed}
             textStyle={string.textStyle}
@@ -208,7 +217,7 @@ export default noop.memo((look) => {
           />
         );
         onEndResult = <View style={items7}>{null}</View>;
-        obj1.children = onEndResult;
+        obj7.children = onEndResult;
         jsx(sendCallback(onTouchStart[14]).GestureDetector, { gesture: onEndResult, children: null });
       }
     }

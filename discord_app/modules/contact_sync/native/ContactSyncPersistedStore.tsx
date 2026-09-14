@@ -5,6 +5,8 @@ import ReactBatchUpdates from "../../../../discord_common/js/shared/utils/ReactB
 import 00560__ from "../../../../_runtime/metro/00560__.js";
 import size from "../../../../_runtime/metro/00002__.js";
 
+const require = globalThis.__r;
+
 const V2_DCD_CONTACTS_STORAGE_KEY = "V2_DCD_CONTACTS_STORAGE_KEY";
 const ContactSyncUpsellCTADismissed = "ContactSyncUpsellCTADismissed";
 const ContactSyncDMListCTADismissed = "ContactSyncDMListCTADismissed";
@@ -23,10 +25,7 @@ Storage.asyncGet("V2_DCD_CONTACTS_STORAGE_KEY", async (arg0) => {
     });
   });
   let obj = require("ReactBatchUpdates");
-  DispatcherDefault.wait(() => {
-    const obj = { type: "CONTACT_SYNC_STORED_CONTACTS", empty: "" === closure_0 };
-    return obj.dispatch(obj);
-  });
+  DispatcherDefault.wait(() => DispatcherDefault.dispatch({ type: "CONTACT_SYNC_STORED_CONTACTS", empty: "" === closure_0 }));
 });
 const useContactSyncStore = module_560.create(() => ({ loadedPolicyNotice: false, storedContacts: "", upsellCTADismissed: false, policyUpdateNoticeDismissed: false, dmListCTADismissed: false }));
 let Storage2 = Storage4.Storage;
@@ -70,10 +69,7 @@ export const setStoredContacts = function setStoredContacts(arg0) {
     });
   });
   const obj = require("ReactBatchUpdates");
-  DispatcherDefault.wait(() => {
-    const obj = { type: "CONTACT_SYNC_STORED_CONTACTS", empty: "" === closure_0 };
-    return obj.dispatch(obj);
-  });
+  DispatcherDefault.wait(() => DispatcherDefault.dispatch({ type: "CONTACT_SYNC_STORED_CONTACTS", empty: "" === closure_0 }));
 };
 export const deleteStoredContacts = function deleteStoredContacts() {
   const Storage = Storage4.Storage;

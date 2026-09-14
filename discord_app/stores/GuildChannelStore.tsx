@@ -37,22 +37,21 @@ function rebuildGuildChannels(guildId) {
   closure_24[guildId] = obj;
   dependencyMap[guildId] = [];
   const id = obj.id;
-  let obj1 = obj(1982);
-  obj = {};
-  if (obj1.isFavoritesGuildId(id)) {
+  obj3 = {};
+  if (obj2.isFavoritesGuildId(id)) {
     const favoriteChannels = FavoriteStore.getFavoriteChannels();
-    let tmp7 = obj;
+    let tmp7 = obj3;
     const keys = Object.keys();
     if (keys !== undefined) {
-      tmp7 = obj;
+      tmp7 = obj3;
       while (keys[tmp] !== undefined) {
         let channel = ChannelStore.getChannel(tmp15);
         if (null == channel) {
           continue;
         } else {
           let tmp17 = closure_6(favoriteChannels, favoriteChannels[tmp15], channel);
-          obj = { channel: tmp17, comparator: tmp17.position };
-          obj[tmp15] = obj;
+          let obj4 = { channel: tmp17, comparator: tmp17.position };
+          obj3[tmp15] = obj4;
           continue;
         }
         continue;
@@ -60,17 +59,21 @@ function rebuildGuildChannels(guildId) {
     }
   } else {
     const mutableGuildChannelsForGuild = ChannelStore.getMutableGuildChannelsForGuild(id);
-    tmp7 = obj;
+    tmp7 = obj3;
     const keys1 = Object.keys();
     if (keys1 !== undefined) {
-      tmp7 = obj;
+      tmp7 = obj3;
       while (keys1[tmp] !== undefined) {
-        obj1 = { channel: mutableGuildChannelsForGuild[tmp9], comparator: mutableGuildChannelsForGuild[tmp9].position };
-        obj[tmp9] = obj1;
+        let obj8 = {
+          channel: mutableGuildChannelsForGuild[tmp9],
+          comparator: mutableGuildChannelsForGuild[tmp9].position,
+        };
+        obj3[tmp9] = obj8;
         continue;
       }
     }
   }
+  obj2 = obj(1982);
   const item = id(12).forEach(tmp7, (channel) => {
     channel = channel.channel;
     obj.count = obj.count + 1;
@@ -84,19 +87,18 @@ function rebuildGuildChannels(guildId) {
       if (null == dependencyMap[id]) {
         dependencyMap[id] = [];
       }
-      let arr = dependencyMap[id];
-      arr = arr.push(channel);
+      dependencyMap[id].push(channel);
     }
     if (null != obj[type]) {
-      arr = obj[type].push(channel);
+      obj[type].push(channel);
     }
   });
   const sorted = obj[SELECTABLE].sort(comparator);
   const sorted1 = obj[VOCAL].sort(comparator);
   const sorted2 = obj[ChannelTypes.GUILD_CATEGORY].sort(comparator);
-  const obj2 = {};
-  closure_25[obj.id] = obj2;
-  closure_129_0 = obj2;
+  const obj9 = {};
+  closure_25[obj.id] = obj9;
+  closure_129_0 = obj9;
   closure_129_1 = {};
   const item1 = obj[SELECTABLE].forEach((channel) => {
     channel = channel.channel;
@@ -184,8 +186,8 @@ function handleGuildRoleUpdate(guildId) {
   }
 }
 function hasElevatedPermissions(user, context) {
-  obj = { user, context, checkElevated: false };
-  return obj.hasAny(PermissionUtilsAll.computePermissions(obj), closure_1_20);
+  obj = BigFlagUtilsAll;
+  return obj.hasAny(PermissionUtilsAll.computePermissions({ user, context, checkElevated: false }), closure_1_20);
 }
 function handleFavoritesUpdate() {
   rebuildGuildChannels(closure_1_17);
@@ -209,13 +211,18 @@ let closure_25 = {};
 let closure_26 = {};
 let channelId = null;
 let closure_28 = {};
-let obj = { comparator: -1, channel: null };
-obj = { id: Constants.NULL_STRING_CHANNEL_ID, type: ChannelTypes.GUILD_CATEGORY, name: "Uncategorized" };
-obj.channel = createChannelRecord(obj);
-obj = { id: Constants.NULL_STRING_GUILD_ID, SELECTABLE: [], VOCAL: [] };
+let obj = {
+  comparator: -1,
+  channel: createChannelRecord({
+    id: Constants.NULL_STRING_CHANNEL_ID,
+    type: ChannelTypes.GUILD_CATEGORY,
+    name: "Uncategorized",
+  }),
+};
+let obj3 = { id: Constants.NULL_STRING_GUILD_ID, SELECTABLE: [], VOCAL: [] };
 let items = [obj];
-obj[ChannelTypes.GUILD_CATEGORY] = items;
-obj.count = 0;
+obj3[ChannelTypes.GUILD_CATEGORY] = items;
+obj3.count = 0;
 let closure_31 = [];
 let closure_32 = {};
 const Store = initializeDefault.Store;
@@ -246,7 +253,7 @@ prototype["getChannels"] = function getChannels(guildId) {
     }
     let tmp = tmp3;
   } else {
-    tmp = obj;
+    tmp = obj3;
   }
   return tmp;
 };

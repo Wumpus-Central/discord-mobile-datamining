@@ -11,7 +11,7 @@ class BlankAudience {
       tmp = jsx;
       tmp2 = closure_0;
       tmp3 = closure_1;
-      arr = items.push(jsx(closure_0(closure_1[5]), {}, num));
+      arr1 = items.push(jsx(closure_0(closure_1[5]), {}, num));
     }
     return items;
   }
@@ -48,15 +48,15 @@ export default noop.memo((theme) => {
   if (renderBlankAudience) {
     str = "space-between";
   }
-  let obj = { style: items, children: null };
+  const obj = { style: items, children: null };
   items[1] = { justifyContent: str };
   const items1 = [
     participants.map((participant) => React4(AudienceTileDefault, { theme, channel, participant }, participant.id)),
   ];
   let tmp5 = null;
   if (num > 0) {
-    obj = { count: num };
-    tmp5 = closure_4(BlankAudience, obj);
+    const obj2 = { count: num };
+    tmp5 = closure_4(BlankAudience, obj2);
   }
   items1[1] = tmp5;
   obj.children = items1;

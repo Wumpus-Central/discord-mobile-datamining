@@ -10,8 +10,8 @@ let closure_7 = async function _handleContentLinking(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -24,8 +24,8 @@ let closure_7 = async function _handleContentLinking(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c4 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj4 = { value, done: true };
+          return obj4;
         } else {
           c2 = 0;
           closure_1 = tmp2;
@@ -58,8 +58,8 @@ let closure_7 = async function _handleContentLinking(arg0) {
             throw value;
           } else if (arg0 === 2) {
             c4 = 3;
-            const obj1 = { value, done: true };
-            return obj1;
+            const obj6 = { value, done: true };
+            return obj6;
           } else {
             closure_130_1(closure_130_2[3]).popAll();
             safe = closure_129_2.safe;
@@ -94,8 +94,8 @@ let closure_7 = async function _handleContentLinking(arg0) {
               });
               c3 = 2;
               c4 = 1;
-              let obj2 = { value: promise, done: false };
-              return obj2;
+              const obj7 = { value: promise, done: false };
+              return obj7;
             }
             const obj12 = closure_130_1(closure_130_2[3]);
           }
@@ -106,15 +106,15 @@ let closure_7 = async function _handleContentLinking(arg0) {
               throw value;
             } else if (arg0 === 2) {
               c4 = 3;
-              const obj3 = { value, done: true };
-              return obj3;
+              const obj8 = { value, done: true };
+              return obj8;
             }
           } else if (arg0 === 1) {
             c4 = 3;
             throw value;
           } else if (arg0 === 2) {
             c4 = 3;
-            obj = { value, done: true };
+            const obj = { value, done: true };
             return obj;
           }
           let tmp31 = null != closure_129_1;
@@ -122,28 +122,31 @@ let closure_7 = async function _handleContentLinking(arg0) {
             tmp31 = null != closure_129_4;
           }
           if (tmp31) {
-            let obj4 = closure_130_1(closure_130_2[6]);
-            obj4.setSelectedSummary(closure_129_1, closure_129_4);
+            closure_130_1(closure_130_2[6]).setSelectedSummary(closure_129_1, closure_129_4);
+            const obj5 = closure_130_1(closure_130_2[6]);
           }
           c4 = 3;
           return { value: "HermesInternal", done: null };
         }
         if (safe) {
-          obj4 = { navigationReplace: closure_129_7, openChannel: true, skipMessageFetch };
+          const obj9 = { navigationReplace: closure_129_7, openChannel: true, skipMessageFetch };
           c3 = 3;
           c4 = 1;
-          const obj5 = {
+          const obj10 = {
             value: closure_130_1(closure_130_2[4])(
               closure_130_5.CHANNEL(closure_129_0, closure_129_1, closure_129_3),
-              obj4,
+              obj9,
             ),
             done: false,
           };
-          return obj5;
+          return obj10;
         } else {
-          obj2 = closure_130_0(closure_130_2[5]);
-          const obj6 = { navigationReplace: closure_129_7, openChannel: true, skipMessageFetch };
-          obj2.transitionTo(closure_130_5.CHANNEL(closure_129_0, closure_129_1, closure_129_3), obj6);
+          const obj11 = { navigationReplace: closure_129_7, openChannel: true, skipMessageFetch };
+          closure_130_0(closure_130_2[5]).transitionTo(
+            closure_130_5.CHANNEL(closure_129_0, closure_129_1, closure_129_3),
+            obj11,
+          );
+          const obj3 = closure_130_0(closure_130_2[5]);
         }
       }
     } catch (tmp59) {

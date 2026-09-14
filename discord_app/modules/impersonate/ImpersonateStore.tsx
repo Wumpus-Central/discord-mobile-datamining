@@ -159,13 +159,12 @@ ImpersonateStore.displayName = "ImpersonateStore";
 const impersonateStore = new ImpersonateStore(DispatcherDefault, {
   IMPERSONATE_UPDATE: function handleImpersonateUpdate(arg0) {
     ({ guildId, data } = arg0);
-    let obj = SnowflakeUtilsDefault;
-    const result = obj.castGuildIdAsEveryoneGuildRoleId(guildId);
+    const result = SnowflakeUtilsDefault.castGuildIdAsEveryoneGuildRoleId(guildId);
     delete tmp2[tmp];
-    obj = {};
+    const obj2 = {};
     const merged = Object.assign(data);
-    obj.timestamp = Date.now();
-    closure_8[guildId] = obj;
+    obj2.timestamp = Date.now();
+    closure_8[guildId] = obj2;
   },
   IMPERSONATE_STOP: function handleImpersonateStop(arg0) {
     if (null == dependencyMap[arg0.guildId]) {

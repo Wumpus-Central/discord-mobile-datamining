@@ -6,6 +6,9 @@ import size from "../../../../../_runtime/metro/00002__.js";
 const result = size.fileFinishedImporting("modules/soundboard/native/utils/openSoundboardSoundPreviewActionSheet.tsx");
 
 export default function openSoundboardSoundPreviewActionSheet(channel, sound, analyticsSource, soundGridLocation) {
-  const obj = { channel, sound, soundGridLocation, analyticsSource };
-  obj.openLazy(asyncRequireImpl(17185, dependencyMap.paths), "SoundboardSoundPreviewActionSheet", obj);
+  ActionSheetActionCreatorsDefault.openLazy(
+    asyncRequireImpl(17187, dependencyMap.paths),
+    "SoundboardSoundPreviewActionSheet",
+    { channel, sound, soundGridLocation, analyticsSource },
+  );
 }

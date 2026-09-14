@@ -240,14 +240,14 @@ prototype["getCoverImageUrl"] = function getCoverImageUrl(arg0, size) {
   } else if (null == size) {
     return tmp;
   } else {
-    URLUtilsDefault.toURLSafe(tmp);
-    let str = tmp;
+    const str = URLUtilsDefault.toURLSafe(tmp);
+    let str1 = tmp;
     if (null != str) {
       const searchParams = str.searchParams;
       const result = searchParams.set("size", size.size.toString());
-      str = str.toString();
+      str1 = str.toString();
     }
-    return str;
+    return str1;
   }
 };
 GameStore.displayName = "NewGameStore";

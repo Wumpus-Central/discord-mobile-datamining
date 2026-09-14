@@ -15,27 +15,38 @@ get_ActivityIndicator = fn(17);
 ({ View: metroRequire, SectionList: closure_7 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: c10, jsxs: closure_11 } = jsxProd);
-fn(4636);
-let createStyles = { container: null, emojiList: null, row: null, emojiImage: null, emojiAlias: null };
-createStyles = {
+const createStyles = fn(4636);
+let obj2 = {
+  container: {
+    backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "flex-start",
+    height: "100%",
+  },
+  emojiList: null,
+  row: null,
+  emojiImage: null,
+  emojiAlias: null,
+};
+let obj3 = {
   backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
   display: "flex",
   flexDirection: "column",
   justifyContent: "flex-start",
   height: "100%",
 };
-createStyles.container = createStyles;
-createStyles.emojiList = {
+obj2.emojiList = {
   flexGrow: 0,
   marginVertical: 24,
   marginHorizontal: 16,
   borderRadius: nativeDefault.radii.sm,
   backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
 };
-createStyles.row = { alignItems: "flex-start", paddingTop: 16, paddingBottom: 14 };
-createStyles.emojiImage = { width: 24, height: 24, marginBottom: 2 };
-createStyles.emojiAlias = { marginBottom: 2 };
-let closure_12 = createStyles.createStyles(createStyles);
+obj2.row = { alignItems: "flex-start", paddingTop: 16, paddingBottom: 14 };
+obj2.emojiImage = { width: 24, height: 24, marginBottom: 2 };
+obj2.emojiAlias = { marginBottom: 2 };
+let closure_12 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting(
   "modules/guild_role_subscriptions/native/components/GuildRoleSubscriptionEmojiEditorModal.tsx",
@@ -46,6 +57,7 @@ export default function GuildRoleSubscriptionEmojiEditorModal(guildId) {
   const subscriptionRoleId = guildId.subscriptionRoleId;
   const onClose = guildId.onClose;
   const onSave = guildId.onSave;
+  first = undefined;
   closure_8 = undefined;
   function handleSave() {
     const self = this;
@@ -77,12 +89,11 @@ export default function GuildRoleSubscriptionEmojiEditorModal(guildId) {
   _slicedToArray = tmp;
   let tmp2 = subscriptionRoleId(onClose[8])(guildId);
   noop = tmp2;
-  let obj = guildId(onClose[9]);
   const items = [closure_8];
-  const stateFromStores = obj.useStateFromStores(items, () => SubscriptionRoleStore.getSubscriptionRoles(guildId));
-  const tmp4 = _slicedToArray(noop.useState(initialTierEmojiIds), 2);
-  const first = tmp4[0];
-  closure_8 = tmp4[1];
+  const stateFromStores = guildId(onClose[9]).useStateFromStores(items, () =>
+    SubscriptionRoleStore.getSubscriptionRoles(guildId),
+  );
+  [first, closure_8] = noop.useState(initialTierEmojiIds);
   let items1 = [stateFromStores, tmp2, subscriptionRoleId, first];
   let set = noop.useMemo(() => {
     if (null == subscriptionRoleId) {
@@ -113,61 +124,68 @@ export default function GuildRoleSubscriptionEmojiEditorModal(guildId) {
       return set1;
     }
   }, items1);
-  obj = { style: tmp.container, children: null };
-  obj = { title: null, onClose: null, onSave: null, listingId: null, canSave: true };
+  let obj2 = { style: tmp.container, children: null };
+  let obj3 = { title: null, onClose: null, onSave: null, listingId: null, canSave: true };
+  let obj = guildId(onClose[9]);
   let intl = guildId(onClose[13]).intl;
-  obj.title = intl.string(guildId(onClose[13]).t.W4XhnR);
-  obj.onClose = onClose;
-  obj.onSave = function onSave() {
+  obj3.title = intl.string(guildId(onClose[13]).t.W4XhnR);
+  obj3.onClose = onClose;
+  obj3.onSave = function onSave() {
     if (0 === set.size) {
       handleSave();
     } else {
-      let obj = { title: null, body: null, cancelText: null, confirmText: null, onConfirm: null, confirmColor: null };
+      const obj2 = {
+        title: null,
+        body: null,
+        cancelText: null,
+        confirmText: null,
+        onConfirm: null,
+        confirmColor: null,
+      };
       const intl = util.intl;
-      obj.title = intl.string(util.t["30V0t5"]);
+      obj2.title = intl.string(util.t["30V0t5"]);
       const intl2 = util.intl;
-      obj = { numberOfEmojiSlatedForDeletion: tmp.size };
-      obj.body = intl2.formatToPlainString(util.t["o6j/wN"], obj);
+      const obj3 = { numberOfEmojiSlatedForDeletion: tmp.size };
+      obj2.body = intl2.formatToPlainString(util.t["o6j/wN"], obj3);
       const intl3 = util.intl;
-      obj.cancelText = intl3.string(util.t["ETE/oC"]);
+      obj2.cancelText = intl3.string(util.t["ETE/oC"]);
       const intl4 = util.intl;
-      obj.confirmText = intl4.string(util.t["cY+Oob"]);
-      obj.onConfirm = handleSave;
-      obj.confirmColor = common_AlertDefault.Colors.RED;
-      obj.show(obj);
+      obj2.confirmText = intl4.string(util.t["cY+Oob"]);
+      obj2.onConfirm = handleSave;
+      obj2.confirmColor = common_AlertDefault.Colors.RED;
+      AlertActionCreatorsDefault.show(obj2);
     }
   };
-  obj.listingId = listingId;
-  const items2 = [set(subscriptionRoleId(onClose[12]), obj)];
-  let obj1 = {
+  obj3.listingId = listingId;
+  const items2 = [set(subscriptionRoleId(onClose[12]), obj3)];
+  let obj4 = {
     style: tmp.emojiList,
     renderItem(item) {
       item = item.item;
       const hasItem = first.has(item.id);
       closure_1 = set.has(item.id);
-      let obj = { style: emojiAlias.row, leading: null, label: null, onPress: null, trailing: null };
-      obj = { style: emojiAlias.emojiImage, source: null };
-      obj = { uri: null };
+      const obj = { style: emojiAlias.row, leading: null, label: null, onPress: null, trailing: null };
+      let obj2 = { style: emojiAlias.emojiImage, source: null };
+      let obj3 = { uri: null };
       const tmp2 = subscriptionRoleId(onClose[10]);
-      obj.uri = subscriptionRoleId(onClose[11]).getEmojiURL({ id: item.id, animated: item.animated, size: 48 });
-      obj.source = obj;
-      obj.leading = set(tmp2, obj);
+      obj3.uri = subscriptionRoleId(onClose[11]).getEmojiURL({ id: item.id, animated: item.animated, size: 48 });
+      obj2.source = obj3;
+      obj.leading = set(tmp2, obj2);
       obj.label = function label() {
-        let obj = { name: item.name, style: emojiAlias.emojiAlias };
-        const children = [React7(EmojiAliasDefault, obj)];
+        const children = [React7(EmojiAliasDefault, { name: item.name, style: emojiAlias.emojiAlias })];
         let tmpResult = closure_1;
         if (closure_1) {
-          obj = { children: null };
-          obj = { variant: "text-sm/normal", color: "interactive-text-active", children: null };
+          const obj2 = { children: null };
+          const obj3 = { variant: "text-sm/normal", color: "interactive-text-active", children: null };
           const intl = util.intl;
-          obj.children = intl.string(util.t["1GlN06"]);
-          const items1 = [React7(Text_Text.Text, obj)];
-          const obj1 = { variant: "text-sm/normal", color: "text-feedback-critical", children: null };
+          obj3.children = intl.string(util.t["1GlN06"]);
+          const items1 = [React7(Text_Text.Text, obj3)];
+          const obj4 = { variant: "text-sm/normal", color: "text-feedback-critical", children: null };
           const intl2 = util.intl;
-          obj1.children = intl2.string(util.t.J0XdJ4);
-          items1[1] = React7(Text_Text.Text, obj1);
-          obj.children = items1;
-          tmpResult = closure_3_11(closure_3_10, obj);
+          obj4.children = intl2.string(util.t.J0XdJ4);
+          items1[1] = React7(Text_Text.Text, obj4);
+          obj2.children = items1;
+          tmpResult = closure_3_11(closure_3_10, obj2);
         }
         children[1] = tmpResult;
         return closure_3_11(closure_3_10, { children });
@@ -189,16 +207,16 @@ export default function GuildRoleSubscriptionEmojiEditorModal(guildId) {
     ItemSeparatorComponent: null,
     keyboardShouldPersistTaps: "always",
   };
-  const obj2 = { title: null, data: null };
+  const obj5 = { title: null, data: null };
   let intl2 = guildId(onClose[13]).intl;
-  obj2.title = intl2.string(guildId(onClose[13]).t["9Oq93m"]);
-  obj2.data = tmp2;
-  const items3 = [obj2];
-  obj1.sections = items3;
-  obj1.ItemSeparatorComponent = function ItemSeparatorComponent() {
+  obj5.title = intl2.string(guildId(onClose[13]).t["9Oq93m"]);
+  obj5.data = tmp2;
+  const items3 = [obj5];
+  obj4.sections = items3;
+  obj4.ItemSeparatorComponent = function ItemSeparatorComponent() {
     return set(guildId(onClose[16]).FormDivider, { iconPush: true });
   };
-  items2[1] = set(first, obj1);
-  obj.children = items2;
-  return closure_11(stateFromStores, obj);
+  items2[1] = set(first, obj4);
+  obj2.children = items2;
+  return closure_11(stateFromStores, obj2);
 }

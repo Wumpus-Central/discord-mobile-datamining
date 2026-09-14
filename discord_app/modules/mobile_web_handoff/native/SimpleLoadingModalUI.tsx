@@ -76,7 +76,7 @@ export default function SimpleLoadingModal(operation) {
       .then((result) => constants(result))
       .catch((error) => callback2(error));
   }, items3);
-  let obj = {
+  const obj = {
     transparent: true,
     animationType: "none",
     onShow() {
@@ -93,11 +93,28 @@ export default function SimpleLoadingModal(operation) {
     },
     children: null,
   };
-  obj = { style: callback().modalBackground, children: jsx(operation(onResolved[4]).ActivityIndicator, {}) };
+  const tmp = callback();
   obj.children = (
     <onDismissed style={callback().modalBackground}>{jsx(operation(onResolved[4]).ActivityIndicator, {})}</onDismissed>
   );
   return (
-    <cancelable style={callback().modalBackground}>{jsx(operation(onResolved[4]).ActivityIndicator, {})}</cancelable>
+    <cancelable
+      transparent
+      animationType="none"
+      onShow={function onShow() {
+        if (ref.current === constants.DISMISSED) {
+          onDismissed();
+        } else {
+          tmp.current = tmp2.SHOWN;
+        }
+      }}
+      onRequestClose={function onRequestClose() {
+        if (cancelable) {
+          callback();
+        }
+      }}
+    >
+      {null}
+    </cancelable>
   );
 }

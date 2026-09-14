@@ -20,12 +20,11 @@ export default function LeaveServerAlert(guild) {
   } else {
     stringResult = string(t.J2TBi3);
   }
-  let obj = { title: stringResult, content: null, actions: null };
+  const obj = { title: stringResult, content: null, actions: null };
   const intl2 = tmp2(1114).intl;
-  obj = { name: guild.name };
-  obj.content = intl2.formatToPlainString(guild(1114).t.TB1og8, obj);
-  obj = { children: null };
-  const obj1 = {
+  obj.content = intl2.formatToPlainString(guild(1114).t.TB1og8, { name: guild.name });
+  const obj3 = { children: null };
+  const obj4 = {
     variant: "destructive",
     onPress() {
       return GuildSettingsActionCreatorsDefault.leaveGuild(guild.id);
@@ -33,13 +32,13 @@ export default function LeaveServerAlert(guild) {
     text: null,
   };
   const intl3 = tmp2(1114).intl;
-  obj1.text = intl3.string(guild(1114).t.p89ACt);
-  const items = [closure_4(guild(4986).AlertActionButton, obj1, "confirm")];
-  const obj2 = { variant: "secondary", text: null };
+  obj4.text = intl3.string(guild(1114).t.p89ACt);
+  const items = [closure_4(guild(4986).AlertActionButton, obj4, "confirm")];
+  const obj5 = { variant: "secondary", text: null };
   const intl4 = tmp2(1114).intl;
-  obj2.text = intl4.string(guild(1114).t.gm1Vej);
-  items[1] = closure_4(guild(4986).AlertActionButton, obj2, "cancel");
-  obj.children = items;
-  obj.actions = closure_5(guild(4986).AlertActions, obj);
+  obj5.text = intl4.string(guild(1114).t.gm1Vej);
+  items[1] = closure_4(guild(4986).AlertActionButton, obj5, "cancel");
+  obj3.children = items;
+  obj.actions = closure_5(guild(4986).AlertActions, obj3);
   return closure_4(guild(4986).AlertModal, obj);
 }

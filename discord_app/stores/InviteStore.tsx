@@ -10,27 +10,27 @@ function updateInvite(code, fn) {
   if (code == null) {
     str = "";
   }
-  let obj = InviteCodeUtils;
-  const result = obj.parseExtraDataFromInviteKey(str);
+  const result = InviteCodeUtils.parseExtraDataFromInviteKey(str);
   value = map.get(str);
   if (null != value) {
-    obj = { state: InviteStates.RESOLVING };
+    const obj2 = { state: InviteStates.RESOLVING };
     const merged = Object.assign(value);
+    let obj3 = obj2;
   } else {
-    obj = { state: InviteStates.RESOLVING, code: result.baseCode };
+    obj3 = { state: InviteStates.RESOLVING, code: result.baseCode };
   }
-  fn(obj);
+  fn(obj3);
   map = new Map(map);
-  const result1 = map.set(str, obj);
-  const guild = obj.guild;
+  const result1 = map.set(str, obj3);
+  const guild = obj3.guild;
   let id;
   if (guild != null) {
     id = guild.id;
   }
   if (null != id) {
-    obj1 = {};
-    const merged1 = Object.assign(obj1);
-    obj1[obj.guild.id] = str;
+    obj4 = {};
+    const merged1 = Object.assign(obj4);
+    obj4[obj3.guild.id] = str;
   }
 }
 function handleInviteResolveFailure(code) {
@@ -62,7 +62,7 @@ prototype["getInvites"] = function getInvites() {
   return map;
 };
 prototype["getInviteKeyForGuildId"] = function getInviteKeyForGuildId(id) {
-  return obj1[id];
+  return obj4[id];
 };
 prototype["getFriendMemberIds"] = function getFriendMemberIds(arg0) {
   return map.get(arg0);
@@ -71,11 +71,9 @@ InviteStore.displayName = "InviteStore";
 const inviteStore = new InviteStore(DispatcherDefault, {
   INVITE_RESOLVE: function handleInviteResolve(code) {
     code = code.code;
-    let obj = InviteCodeUtils;
-    const result = obj.parseExtraDataFromInviteKey(code);
+    const result = InviteCodeUtils.parseExtraDataFromInviteKey(code);
     map = new Map(map);
-    obj = { code: result.baseCode, state: InviteStates.RESOLVING };
-    const result1 = map.set(code, obj);
+    const result1 = map.set(code, { code: result.baseCode, state: InviteStates.RESOLVING });
   },
   INVITE_RESOLVE_SUCCESS: function handleInviteResolveSuccess(code) {
     updateInvite(code.code, (arg0) => {

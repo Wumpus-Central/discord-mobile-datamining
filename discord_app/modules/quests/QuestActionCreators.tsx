@@ -32,8 +32,8 @@ let closure_16 = async function _manuallyStartConsoleQuest(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj3 = { value, done: true };
+      return obj3;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -46,8 +46,8 @@ let closure_16 = async function _manuallyStartConsoleQuest(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c8 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj4 = { value, done: true };
+          return obj4;
         } else {
           closure_4 = tmp3;
           closure_3 = tmp7;
@@ -71,22 +71,27 @@ let closure_16 = async function _manuallyStartConsoleQuest(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c8 = 3;
-          let obj1 = { value, done: true };
-          return obj1;
+          const obj5 = { value, done: true };
+          return obj5;
         } else {
           c6 = 1;
           const HTTP = closure_132_0(closure_132_2[11]).HTTP;
-          const request = { url: closure_132_14.QUEST_ON_CONSOLE_START(closure_131_0), query: null, failImmediatelyWhenRateLimited: true, rejectWithError: false };
+          const request = {
+            url: closure_132_14.QUEST_ON_CONSOLE_START(closure_131_0),
+            query: null,
+            failImmediatelyWhenRateLimited: true,
+            rejectWithError: false,
+          };
           let tmp48;
           if (closure_131_1) {
-            const obj2 = { preview: closure_131_1 };
-            tmp48 = obj2;
+            const obj6 = { preview: closure_131_1 };
+            tmp48 = obj6;
           }
           request.query = tmp48;
           c7 = 3;
           c8 = 1;
-          const obj3 = { value: HTTP.post(request), done: false };
-          return obj3;
+          const obj7 = { value: HTTP.post(request), done: false };
+          return obj7;
         }
       } else if (2 === tmp7) {
         c6 = 0;
@@ -94,15 +99,20 @@ let closure_16 = async function _manuallyStartConsoleQuest(arg0) {
         const tmp25 = new closure_132_1(closure_132_2[13])(closure_131_5);
         closure_131_3 = tmp25;
         if (429 === closure_131_3.status) {
-          const obj4 = { errorHints: null };
-          const obj5 = { type: closure_132_0(closure_132_2[10]).QuestConsoleStartErrorLocal.RATE_LIMITED, message: null, connected_account_id: "", connected_account_type: "" };
+          const obj8 = { errorHints: null };
+          const obj9 = {
+            type: closure_132_0(closure_132_2[10]).QuestConsoleStartErrorLocal.RATE_LIMITED,
+            message: null,
+            connected_account_id: "",
+            connected_account_type: "",
+          };
           const intl2 = closure_132_0(closure_132_2[14]).intl;
-          obj5.message = intl2.string(closure_132_0(closure_132_2[14]).t.Whhv4w);
-          const items = [obj5];
-          obj4.errorHints = items;
+          obj9.message = intl2.string(closure_132_0(closure_132_2[14]).t.Whhv4w);
+          const items = [obj9];
+          obj8.errorHints = items;
           c8 = 3;
-          const obj6 = { value: obj4, done: true };
-          return obj6;
+          const obj10 = { value: obj8, done: true };
+          return obj10;
         } else {
           const anyErrorMessage = closure_131_3.getAnyErrorMessage();
           closure_2 = anyErrorMessage;
@@ -111,13 +121,18 @@ let closure_16 = async function _manuallyStartConsoleQuest(arg0) {
             closure_2 = intl.string(closure_132_0(closure_132_2[14]).t.xSCvBf);
           }
           closure_131_4 = closure_2;
-          const obj7 = { errorHints: null };
-          const obj8 = { type: closure_132_0(closure_132_2[10]).QuestConsoleStartErrorLocal.GENERIC, message: closure_131_4, connected_account_id: "", connected_account_type: "" };
-          const items1 = [obj8];
-          obj7.errorHints = items1;
+          const obj11 = { errorHints: null };
+          const obj12 = {
+            type: closure_132_0(closure_132_2[10]).QuestConsoleStartErrorLocal.GENERIC,
+            message: closure_131_4,
+            connected_account_id: "",
+            connected_account_type: "",
+          };
+          const items1 = [obj12];
+          obj11.errorHints = items1;
           c8 = 3;
-          const obj9 = { value: obj7, done: true };
-          return obj9;
+          const obj13 = { value: obj11, done: true };
+          return obj13;
         }
       } else if (arg0 === 1) {
         c8 = 3;
@@ -125,30 +140,30 @@ let closure_16 = async function _manuallyStartConsoleQuest(arg0) {
       } else if (arg0 === 2) {
         c6 = 0;
         c8 = 3;
-        const obj10 = { value, done: true };
-        return obj10;
+        const obj14 = { value, done: true };
+        return obj14;
       } else {
         body = value.body;
         if (null != body.quest_user_status) {
-          obj1 = closure_132_1(closure_132_2[12]);
-          const obj11 = { type: "QUESTS_USER_STATUS_UPDATE", user_status: body.quest_user_status };
-          obj1.dispatch(obj11);
+          const obj15 = { type: "QUESTS_USER_STATUS_UPDATE", user_status: body.quest_user_status };
+          closure_132_1(closure_132_2[12]).dispatch(obj15);
+          const obj2 = closure_132_1(closure_132_2[12]);
         } else if (null != body.error_hints_v2) {
           if (body.error_hints_v2.length > 0) {
-            const obj12 = { errorHints: null };
+            const obj16 = { errorHints: null };
             const error_hints_v2 = body.error_hints_v2;
-            obj12.errorHints = error_hints_v2.slice(0, 5);
+            obj16.errorHints = error_hints_v2.slice(0, 5);
             c6 = 0;
             c8 = 3;
-            obj = { value: obj12, done: true };
+            const obj = { value: obj16, done: true };
             return obj;
           }
         }
         c6 = 0;
-        const obj13 = { errorHints: [] };
+        const obj17 = { errorHints: [] };
         c8 = 3;
-        const obj14 = { value: obj13, done: true };
-        return obj14;
+        const obj18 = { value: obj17, done: true };
+        return obj18;
       }
     } catch (tmp50) {
       closure_5 = tmp50;
@@ -169,8 +184,8 @@ let closure_17 = async function _manualStopConsoleQuest(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -183,22 +198,22 @@ let closure_17 = async function _manualStopConsoleQuest(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c1 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           const HTTP = HTTPUtils.HTTP;
-          const obj1 = { url: value.QUEST_ON_CONSOLE_STOP(closure_0), rejectWithError: false };
+          const obj4 = { url: value.QUEST_ON_CONSOLE_STOP(closure_0), rejectWithError: false };
           c2 = 1;
           c1 = 1;
-          const obj2 = { value: HTTP.post(obj1), done: false };
-          return obj2;
+          const obj5 = { value: HTTP.post(obj4), done: false };
+          return obj5;
         }
       } else if (arg0 === 1) {
         c1 = 3;
         throw value;
       } else if (arg0 === 2) {
         c1 = 3;
-        obj = { value, done: true };
+        const obj = { value, done: true };
         return obj;
       } else {
         c1 = 3;
@@ -218,8 +233,8 @@ let closure_18 = async function _resetRecentQuestCompletions() {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -232,22 +247,22 @@ let closure_18 = async function _resetRecentQuestCompletions() {
           throw value;
         } else if (arg0 === 2) {
           c0 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           const HTTP = HTTPUtils.HTTP;
-          const obj1 = { url: constants.QUESTS_RESET_RECENT_QUEST_COMPLETIONS, rejectWithError: false };
+          const obj4 = { url: constants.QUESTS_RESET_RECENT_QUEST_COMPLETIONS, rejectWithError: false };
           c1 = 1;
           c0 = 1;
-          const obj2 = { value: HTTP.del(obj1), done: false };
-          return obj2;
+          const obj5 = { value: HTTP.del(obj4), done: false };
+          return obj5;
         }
       } else if (arg0 === 1) {
         c0 = 3;
         throw value;
       } else if (arg0 === 2) {
         c0 = 3;
-        obj = { value, done: true };
+        const obj = { value, done: true };
         return obj;
       } else {
         c0 = 3;
@@ -267,8 +282,8 @@ let closure_19 = async function _fetchCurrentQuests() {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj3 = { value, done: true };
+      return obj3;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -281,8 +296,8 @@ let closure_19 = async function _fetchCurrentQuests() {
           throw value;
         } else if (arg0 === 2) {
           c6 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj5 = { value, done: true };
+          return obj5;
         } else {
           dependencyMap = tmp3;
           closure_1 = tmp5;
@@ -306,26 +321,25 @@ let closure_19 = async function _fetchCurrentQuests() {
             const items = [];
             closure_0 = HermesBuiltin.arraySpread(quests.keys(), closure_0);
             closure_129_0 = items;
-            let obj3 = DispatcherDefault;
-            obj3.dispatch({ type: "QUESTS_FETCH_CURRENT_QUESTS_BEGIN" });
+            DispatcherDefault.dispatch({ type: "QUESTS_FETCH_CURRENT_QUESTS_BEGIN" });
             c4 = 1;
             const HTTP = HTTPUtils.HTTP;
-            let obj1 = { url: constants.QUESTS_CURRENT_QUESTS, rejectWithError: false };
+            const obj6 = { url: constants.QUESTS_CURRENT_QUESTS, rejectWithError: false };
             c5 = 2;
             c6 = 1;
-            const obj2 = { value: HTTP.get(obj1), done: false };
-            return obj2;
+            const obj7 = { value: HTTP.get(obj6), done: false };
+            return obj7;
           }
         }
       } else {
         if (1 === tmp8) {
           c4 = 0;
           closure_129_14 = closure_3;
-          obj1 = closure_130_1(closure_130_2[12]);
-          obj3 = { type: "QUESTS_FETCH_CURRENT_QUESTS_FAILURE", error: null };
+          const obj8 = { type: "QUESTS_FETCH_CURRENT_QUESTS_FAILURE", error: null };
           const tmp20 = new closure_130_1(closure_130_2[13])(closure_129_14);
-          obj3.error = tmp20;
-          obj1.dispatch(obj3);
+          obj8.error = tmp20;
+          closure_130_1(closure_130_2[12]).dispatch(obj8);
+          const obj2 = closure_130_1(closure_130_2[12]);
         } else if (arg0 === 1) {
           c6 = 3;
           throw value;
@@ -354,21 +368,36 @@ let closure_19 = async function _fetchCurrentQuests() {
           closure_129_10 = closure_129_6.map((id) => id.id);
           closure_129_11 = closure_129_8.filter((item) => !closure_1_10.includes(item));
           closure_129_12 = closure_129_0.filter((item) => !closure_1_10.includes(item));
-          const obj4 = { category: "quests.fetch", message: "fetchCurrentQuests completed", data: null };
-          const obj5 = { rawCount: closure_129_7.length, rawIds: closure_129_7, validCount: closure_129_10.length, validIds: closure_129_10, prevQuestIds: closure_129_0, droppedByConfigVersion: closure_129_9, droppedByPlatformFilter: closure_129_11, removedFromStore: closure_129_12 };
-          obj4.data = obj5;
-          closure_130_1(closure_130_2[16]).addBreadcrumb(obj4);
+          const obj10 = { category: "quests.fetch", message: "fetchCurrentQuests completed", data: null };
+          const obj11 = {
+            rawCount: closure_129_7.length,
+            rawIds: closure_129_7,
+            validCount: closure_129_10.length,
+            validIds: closure_129_10,
+            prevQuestIds: closure_129_0,
+            droppedByConfigVersion: closure_129_9,
+            droppedByPlatformFilter: closure_129_11,
+            removedFromStore: closure_129_12,
+          };
+          obj10.data = obj11;
+          closure_130_1(closure_130_2[16]).addBreadcrumb(obj10);
           const excluded_quests = closure_129_1.body.excluded_quests;
           closure_129_13 = excluded_quests.map((item) => closure_1_0(7812).excludedQuestFromServer(item));
           const obj9 = closure_130_1(closure_130_2[16]);
-          const obj6 = { type: "QUESTS_FETCH_CURRENT_QUESTS_SUCCESS", quests: closure_129_6, excludedQuests: closure_129_13, questEnrollmentBlockedUntil: closure_129_4, questAccessSuspendedUntil: closure_129_5 };
-          closure_130_1(closure_130_2[12]).dispatch(obj6);
+          const obj13 = {
+            type: "QUESTS_FETCH_CURRENT_QUESTS_SUCCESS",
+            quests: closure_129_6,
+            excludedQuests: closure_129_13,
+            questEnrollmentBlockedUntil: closure_129_4,
+            questAccessSuspendedUntil: closure_129_5,
+          };
+          closure_130_1(closure_130_2[12]).dispatch(obj13);
           c4 = 0;
           const obj12 = closure_130_1(closure_130_2[12]);
         }
         c4 = 0;
         c6 = 3;
-        obj = { value, done: true };
+        const obj = { value, done: true };
         return obj;
       }
       c6 = 3;
@@ -391,8 +420,8 @@ let closure_20 = async function _sendHeartbeat(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -405,8 +434,8 @@ let closure_20 = async function _sendHeartbeat(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c7 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj4 = { value, done: true };
+          return obj4;
         } else {
           closure_3 = tmp3;
           closure_2 = tmp7;
@@ -433,15 +462,33 @@ let closure_20 = async function _sendHeartbeat(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c7 = 3;
-          const obj1 = { value, done: true };
-          return obj1;
+          const obj6 = { value, done: true };
+          return obj6;
         } else {
           c5 = 1;
-          const request = { url: closure_131_14.QUESTS_HEARTBEAT(closure_130_0), body: null, trackedActionData: null, rejectWithError: false };
-          let obj2 = { stream_key: closure_130_1, application_id: closure_130_2, terminal: closure_130_3, executable_path: closure_130_4, executable_fingerprint: closure_130_5 };
-          request.body = obj2;
-          const obj3 = { event: closure_131_0(closure_131_2[18]).NetworkActionNames.QUEST_HEARTBEAT, properties: null };
-          let obj4 = { quest_id: closure_130_0, application_id: closure_130_2, terminal: closure_130_3, is_overlay: false, stack_trace: null, is_playtime_eligible: true };
+          const request = {
+            url: closure_131_14.QUESTS_HEARTBEAT(closure_130_0),
+            body: null,
+            trackedActionData: null,
+            rejectWithError: false,
+          };
+          const obj7 = {
+            stream_key: closure_130_1,
+            application_id: closure_130_2,
+            terminal: closure_130_3,
+            executable_path: closure_130_4,
+            executable_fingerprint: closure_130_5,
+          };
+          request.body = obj7;
+          const obj8 = { event: closure_131_0(closure_131_2[18]).NetworkActionNames.QUEST_HEARTBEAT, properties: null };
+          const obj9 = {
+            quest_id: closure_130_0,
+            application_id: closure_130_2,
+            terminal: closure_130_3,
+            is_overlay: false,
+            stack_trace: null,
+            is_playtime_eligible: true,
+          };
           const _Error = Error;
           const error = new Error();
           const stack = error.stack;
@@ -449,44 +496,44 @@ let closure_20 = async function _sendHeartbeat(arg0) {
           if (stack == null) {
             stack_trace = "";
           }
-          obj4.stack_trace = stack_trace;
-          obj3.properties = obj4;
-          request.trackedActionData = obj3;
+          obj9.stack_trace = stack_trace;
+          obj8.properties = obj9;
+          request.trackedActionData = obj8;
           c6 = 3;
           c7 = 1;
-          const obj5 = { value: closure_131_1(closure_131_2[17]).post(request), done: false };
-          return obj5;
+          const obj10 = { value: closure_131_1(closure_131_2[17]).post(request), done: false };
+          return obj10;
         }
       } else {
         if (2 === tmp7) {
           c5 = 0;
           closure_130_7 = closure_4;
-          obj4 = closure_131_1(closure_131_2[12]);
-          const obj6 = { type: "QUESTS_SEND_HEARTBEAT_FAILURE", error: null, questId: null, streamKey: null };
+          const obj12 = { type: "QUESTS_SEND_HEARTBEAT_FAILURE", error: null, questId: null, streamKey: null };
           const tmp29 = new closure_131_1(closure_131_2[13])(closure_130_7);
-          obj6.error = tmp29;
-          obj6.questId = closure_130_0;
-          obj6.streamKey = closure_130_1;
-          obj4.dispatch(obj6);
+          obj12.error = tmp29;
+          obj12.questId = closure_130_0;
+          obj12.streamKey = closure_130_1;
+          closure_131_1(closure_131_2[12]).dispatch(obj12);
           c7 = 3;
+          const obj5 = closure_131_1(closure_131_2[12]);
         } else if (arg0 === 1) {
           c7 = 3;
           throw value;
         } else if (arg0 !== 2) {
           closure_130_6 = value;
-          obj = closure_131_1(closure_131_2[12]);
-          const obj7 = { type: "QUESTS_SEND_HEARTBEAT_SUCCESS", userStatus: null, questId: null, streamKey: null };
-          obj2 = closure_131_0(closure_131_2[15]);
-          obj7.userStatus = obj2.questUserStatusFromServer(closure_130_6.body);
-          obj7.questId = closure_130_0;
-          obj7.streamKey = closure_130_1;
-          obj.dispatch(obj7);
+          const obj13 = { type: "QUESTS_SEND_HEARTBEAT_SUCCESS", userStatus: null, questId: null, streamKey: null };
+          const obj = closure_131_1(closure_131_2[12]);
+          obj13.userStatus = closure_131_0(closure_131_2[15]).questUserStatusFromServer(closure_130_6.body);
+          obj13.questId = closure_130_0;
+          obj13.streamKey = closure_130_1;
+          obj.dispatch(obj13);
           c5 = 0;
+          const obj3 = closure_131_0(closure_131_2[15]);
         }
         c5 = 0;
         c7 = 3;
-        const obj8 = { value, done: true };
-        return obj8;
+        const obj14 = { value, done: true };
+        return obj14;
       }
     } catch (tmp35) {
       closure_4 = tmp35;
@@ -513,8 +560,8 @@ let closure_22 = async function _enrollInQuest(arg0, arg1) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -527,8 +574,8 @@ let closure_22 = async function _enrollInQuest(arg0, arg1) {
             throw value;
           } else if (arg0 === 2) {
             c7 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj4 = { value, done: true };
+            return obj4;
           } else {
             closure_3 = tmp3;
             closure_2 = tmp7;
@@ -536,125 +583,156 @@ let closure_22 = async function _enrollInQuest(arg0, arg1) {
             closure_130_1 = undefined;
             if (null != questContentCTA.questContentCTA) {
               questContentCTA = tmp68.questContentCTA;
-              if (obj27.shouldMigrateToAdAnalyticsInterface(AdAnalyticsInterfaceExperiment.AdAnalyticsInterfaceExperimentStep.STEP_2_CLICKED_INTERNAL, "enroll_in_quest")) {
-                let tmp73Result = captureAdUserAction;
-                const obj1 = { type: captureAdUserActionTypes.AdUserActionType.CLICK_INTERNAL, adCreativeType: AdCreativeType.AdCreativeType.QUEST, adCreativeId: questId, questContentCTA, surfaceId: null, sourceQuestContent: null, questContentPosition: null, questContentRowIndex: null };
-                ({ questContent: obj9.surfaceId, sourceQuestContent: obj9.sourceQuestContent, questContentPosition: obj9.questContentPosition, questContentRowIndex: obj9.questContentRowIndex } = tmp68);
-                tmp73Result.captureAdUserAction(obj1);
+              if (
+                obj27.shouldMigrateToAdAnalyticsInterface(
+                  AdAnalyticsInterfaceExperiment.AdAnalyticsInterfaceExperimentStep.STEP_2_CLICKED_INTERNAL,
+                  "enroll_in_quest",
+                )
+              ) {
+                const obj5 = {
+                  type: captureAdUserActionTypes.AdUserActionType.CLICK_INTERNAL,
+                  adCreativeType: AdCreativeType.AdCreativeType.QUEST,
+                  adCreativeId: questId,
+                  questContentCTA,
+                  surfaceId: null,
+                  sourceQuestContent: null,
+                  questContentPosition: null,
+                  questContentRowIndex: null,
+                };
+                ({
+                  questContent: obj9.surfaceId,
+                  sourceQuestContent: obj9.sourceQuestContent,
+                  questContentPosition: obj9.questContentPosition,
+                  questContentRowIndex: obj9.questContentRowIndex,
+                } = tmp68);
+                captureAdUserAction.captureAdUserAction(obj5);
+                const tmp73Result = captureAdUserAction;
               } else {
-                tmp73Result = AnalyticsActions;
-                let obj2 = { questId, questContent: tmp68.questContent, questContentCTA, questContentPosition: null, questContentRowIndex: null, sourceQuestContent: null };
-                ({ questContentPosition: obj7.questContentPosition, questContentRowIndex: obj7.questContentRowIndex, sourceQuestContent: obj7.sourceQuestContent } = tmp68);
-                const result = tmp73Result.trackQuestContentClicked(obj2);
+                const obj6 = {
+                  questId,
+                  questContent: tmp68.questContent,
+                  questContentCTA,
+                  questContentPosition: null,
+                  questContentRowIndex: null,
+                  sourceQuestContent: null,
+                };
+                ({
+                  questContentPosition: obj7.questContentPosition,
+                  questContentRowIndex: obj7.questContentRowIndex,
+                  sourceQuestContent: obj7.sourceQuestContent,
+                } = tmp68);
+                const result = AnalyticsActions.trackQuestContentClicked(obj6);
+                const tmp73Result2 = AnalyticsActions;
               }
               obj27 = AdAnalyticsInterfaceExperiment;
             }
             if (questId === ORBS_INTRO_QUEST_ID) {
-              let obj9 = VirtualCurrencyUtils;
-              const result1 = obj9.dismissOrbsOnboardingExperience();
+              const result1 = VirtualCurrencyUtils.dismissOrbsOnboardingExperience();
             }
             if (enrolling.isEnrolling(questId)) {
-              const obj3 = { type: constants.PREVIOUS_IN_FLIGHT_REQUEST };
+              const obj8 = { type: constants.PREVIOUS_IN_FLIGHT_REQUEST };
               c7 = 3;
-              const obj4 = { value: obj3, done: true };
-              return obj4;
+              const obj12 = { value: obj8, done: true };
+              return obj12;
             } else {
-              let obj10 = DispatcherDefault;
-              const obj5 = { type: "QUESTS_ENROLL_BEGIN", questId };
-              obj10.dispatch(obj5);
+              const obj15 = { type: "QUESTS_ENROLL_BEGIN", questId };
+              DispatcherDefault.dispatch(obj15);
               c5 = 1;
-              let obj12 = QuestDataUtils;
-              const adMetadataSealed = obj12.getAdMetadataSealed(tmp68.questContent);
+              const adMetadataSealed = QuestDataUtils.getAdMetadataSealed(tmp68.questContent);
               const adTrafficMetadataSealed = QuestDataUtils.getAdTrafficMetadataSealed(tmp68.questContent, questId);
               const HTTP = HTTPUtils.HTTP;
               const request = { url: closure_2_14.QUESTS_ENROLL(questId), body: null, rejectWithError: true };
-              const obj6 = { location: tmp68.questContent };
+              const obj16 = { location: tmp68.questContent };
               const merged = Object.assign(QuestDataUtils.getAdDecisionData(questId, tmp68.questContent));
               let tmp47 = null;
               if (null != adMetadataSealed) {
                 tmp47 = adMetadataSealed;
               }
-              obj6.metadata_sealed = tmp47;
+              obj16.metadata_sealed = tmp47;
               let tmp48 = null;
               if (null != adTrafficMetadataSealed) {
                 tmp48 = adTrafficMetadataSealed;
               }
-              obj6.traffic_metadata_sealed = tmp48;
-              request.body = obj6;
+              obj16.traffic_metadata_sealed = tmp48;
+              request.body = obj16;
               c6 = 2;
               c7 = 1;
-              const obj7 = { value: HTTP.post(request), done: false };
-              return obj7;
+              const obj18 = { value: HTTP.post(request), done: false };
+              return obj18;
             }
           }
         } else if (1 === tmp7) {
           c5 = 0;
           closure_130_2 = closure_4;
-          obj2 = closure_131_1(closure_131_2[12]);
-          const obj8 = { type: "QUESTS_ENROLL_FAILURE", questId: closure_130_0 };
-          obj2.dispatch(obj8);
-          obj9 = { type: null };
+          const obj19 = { type: "QUESTS_ENROLL_FAILURE", questId: closure_130_0 };
+          closure_131_1(closure_131_2[12]).dispatch(obj19);
+          const obj20 = { type: null };
           let CAPTCHA_FAILED = closure_131_21;
-          if ((function isCaptchaError(status) {
-            let tmp = status instanceof closure_1_0(closure_1_2[19]).CaptchaCancelError;
-            if (!tmp) {
-              let tmp3 = null != status && typeof status === "object";
-              if (tmp3) {
-                let tmp4 = 400 === status.status;
-                if (tmp4) {
-                  const body = status.body;
-                  let captcha_key;
-                  if (body != null) {
-                    captcha_key = body.captcha_key;
+          if (
+            (function isCaptchaError(status) {
+              let tmp = status instanceof closure_1_0(closure_1_2[19]).CaptchaCancelError;
+              if (!tmp) {
+                let tmp3 = null != status && typeof status === "object";
+                if (tmp3) {
+                  let tmp4 = 400 === status.status;
+                  if (tmp4) {
+                    const body = status.body;
+                    let captcha_key;
+                    if (body != null) {
+                      captcha_key = body.captcha_key;
+                    }
+                    tmp4 = null != captcha_key;
                   }
-                  tmp4 = null != captcha_key;
-                }
-                if (!tmp4) {
-                  let tmp6 = null != status.captchaFields;
-                  if (tmp6) {
-                    const _Object = Object;
-                    tmp6 = Object.keys(status.captchaFields).length > 0;
+                  if (!tmp4) {
+                    let tmp6 = null != status.captchaFields;
+                    if (tmp6) {
+                      const _Object = Object;
+                      tmp6 = Object.keys(status.captchaFields).length > 0;
+                    }
+                    tmp4 = tmp6;
                   }
-                  tmp4 = tmp6;
-                }
-                if (!tmp4) {
-                  const fields = status.fields;
-                  let captcha_key1;
-                  if (fields != null) {
-                    captcha_key1 = fields.captcha_key;
+                  if (!tmp4) {
+                    const fields = status.fields;
+                    let captcha_key1;
+                    if (fields != null) {
+                      captcha_key1 = fields.captcha_key;
+                    }
+                    tmp4 = null != captcha_key1;
                   }
-                  tmp4 = null != captcha_key1;
+                  tmp3 = tmp4;
                 }
-                tmp3 = tmp4;
+                tmp = tmp3;
               }
-              tmp = tmp3;
-            }
-            return tmp;
-          })(closure_130_2)) {
+              return tmp;
+            })(closure_130_2)
+          ) {
             CAPTCHA_FAILED = CAPTCHA_FAILED.CAPTCHA_FAILED;
-            obj9.type = CAPTCHA_FAILED;
+            obj20.type = CAPTCHA_FAILED;
           } else {
-            obj9.type = CAPTCHA_FAILED.UNKNOWN_ERROR;
+            obj20.type = CAPTCHA_FAILED.UNKNOWN_ERROR;
           }
           c7 = 3;
+          const obj3 = closure_131_1(closure_131_2[12]);
         } else if (arg0 === 1) {
           c7 = 3;
           throw value;
         } else if (arg0 === 2) {
           c5 = 0;
           c7 = 3;
-          obj10 = { value, done: true };
-          return obj10;
+          const obj21 = { value, done: true };
+          return obj21;
         } else {
           closure_130_1 = value;
-          const obj11 = { type: "QUESTS_ENROLL_SUCCESS", enrolledQuestUserStatus: null };
+          const obj22 = { type: "QUESTS_ENROLL_SUCCESS", enrolledQuestUserStatus: null };
           const obj23 = closure_131_1(closure_131_2[12]);
-          obj11.enrolledQuestUserStatus = closure_131_0(closure_131_2[15]).questUserStatusFromServer(closure_130_1.body);
-          obj23.dispatch(obj11);
-          obj12 = { type: closure_131_21.SUCCESS };
+          obj22.enrolledQuestUserStatus = closure_131_0(closure_131_2[15]).questUserStatusFromServer(
+            closure_130_1.body,
+          );
+          obj23.dispatch(obj22);
+          const obj24 = { type: closure_131_21.SUCCESS };
           c5 = 0;
           c7 = 3;
-          obj = { value: obj12, done: true };
+          const obj = { value: obj24, done: true };
           return obj;
         }
       } catch (tmp50) {
@@ -681,8 +759,8 @@ let closure_23 = async function _claimQuestReward() {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -695,8 +773,8 @@ let closure_23 = async function _claimQuestReward() {
             throw value;
           } else if (arg0 === 2) {
             c8 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj4 = { value, done: true };
+            return obj4;
           } else {
             closure_4 = tmp3;
             closure_3 = tmp7;
@@ -707,42 +785,40 @@ let closure_23 = async function _claimQuestReward() {
               c8 = 3;
               return { value: "HermesInternal", done: null };
             } else {
-              let obj7 = DispatcherDefault;
-              const obj1 = { type: "QUESTS_CLAIM_REWARD_BEGIN", questId };
-              obj7.dispatch(obj1);
+              const obj5 = { type: "QUESTS_CLAIM_REWARD_BEGIN", questId };
+              DispatcherDefault.dispatch(obj5);
               c6 = 1;
               const adMetadataSealed = QuestDataUtils.getAdMetadataSealed(_location);
               const adTrafficMetadataSealed = QuestDataUtils.getAdTrafficMetadataSealed(_location, questId);
               const HTTP = HTTPUtils.HTTP;
               const request = { url: closure_2_14.QUESTS_CLAIM_REWARD(questId), body: null, rejectWithError: false };
-              let obj2 = { platform, location: _location };
+              const obj7 = { platform, location: _location };
               const merged = Object.assign(QuestDataUtils.getAdDecisionData(questId, _location));
               let tmp56 = null;
               if (null != adMetadataSealed) {
                 tmp56 = adMetadataSealed;
               }
-              obj2.metadata_sealed = tmp56;
+              obj7.metadata_sealed = tmp56;
               let tmp57 = null;
               if (null != adTrafficMetadataSealed) {
                 tmp57 = adTrafficMetadataSealed;
               }
-              obj2.traffic_metadata_sealed = tmp57;
-              request.body = obj2;
+              obj7.traffic_metadata_sealed = tmp57;
+              request.body = obj7;
               c7 = 2;
               c8 = 1;
-              const obj3 = { value: HTTP.post(request), done: false };
-              return obj3;
+              const obj9 = { value: HTTP.post(request), done: false };
+              return obj9;
             }
           }
         } else if (1 === tmp7) {
           c6 = 0;
           closure_131_3 = closure_5;
-          let obj5 = closure_132_1(closure_132_2[12]);
-          const obj4 = { type: "QUESTS_CLAIM_REWARD_FAILURE", error: null, questId: null };
+          const obj12 = { type: "QUESTS_CLAIM_REWARD_FAILURE", error: null, questId: null };
           const tmp35 = new closure_132_1(closure_132_2[13])(closure_131_3);
-          obj4.error = tmp35;
-          obj4.questId = closure_131_0;
-          obj5.dispatch(obj4);
+          obj12.error = tmp35;
+          obj12.questId = closure_131_0;
+          closure_132_1(closure_132_2[12]).dispatch(obj12);
           throw closure_131_3;
         } else if (arg0 === 1) {
           c8 = 3;
@@ -750,19 +826,19 @@ let closure_23 = async function _claimQuestReward() {
         } else if (arg0 === 2) {
           c6 = 0;
           c8 = 3;
-          obj5 = { value, done: true };
-          return obj5;
+          const obj13 = { value, done: true };
+          return obj13;
         } else {
           closure_131_1 = value;
           closure_131_2 = closure_132_0(closure_132_2[15]).questsEntitlementsFromServer(closure_131_1.body);
           if (0 === closure_131_2.errors.length) {
-            obj2 = closure_132_1(closure_132_2[12]);
-            const obj6 = { type: "QUESTS_CLAIM_REWARD_SUCCESS", questId: closure_131_0, entitlements: closure_131_2 };
-            obj2.dispatch(obj6);
+            const obj15 = { type: "QUESTS_CLAIM_REWARD_SUCCESS", questId: closure_131_0, entitlements: closure_131_2 };
+            closure_132_1(closure_132_2[12]).dispatch(obj15);
+            const obj3 = closure_132_1(closure_132_2[12]);
           } else {
-            obj = closure_132_1(closure_132_2[12]);
-            obj7 = { type: "QUESTS_CLAIM_REWARD_FAILURE", error: closure_131_2.errors, questId: closure_131_0 };
-            obj.dispatch(obj7);
+            const obj16 = { type: "QUESTS_CLAIM_REWARD_FAILURE", error: closure_131_2.errors, questId: closure_131_0 };
+            closure_132_1(closure_132_2[12]).dispatch(obj16);
+            const obj = closure_132_1(closure_132_2[12]);
           }
           c6 = 0;
           c8 = 3;
@@ -792,8 +868,8 @@ let closure_24 = async function _fetchQuestRewardCode() {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -806,8 +882,8 @@ let closure_24 = async function _fetchQuestRewardCode() {
             throw value;
           } else if (arg0 === 2) {
             c6 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj4 = { value, done: true };
+            return obj4;
           } else {
             closure_2 = tmp3;
             closure_1 = tmp7;
@@ -816,44 +892,42 @@ let closure_24 = async function _fetchQuestRewardCode() {
             if (fetchingRewardCode.isFetchingRewardCode(questId)) {
               c6 = 3;
             } else {
-              let obj6 = DispatcherDefault;
-              const obj1 = { type: "QUESTS_FETCH_REWARD_CODE_BEGIN", questId };
-              obj6.dispatch(obj1);
+              const obj6 = { type: "QUESTS_FETCH_REWARD_CODE_BEGIN", questId };
+              DispatcherDefault.dispatch(obj6);
               c4 = 1;
               const HTTP = HTTPUtils.HTTP;
-              let obj2 = { url: closure_2_14.QUESTS_REWARD_CODE(questId), rejectWithError: false };
+              const obj8 = { url: closure_2_14.QUESTS_REWARD_CODE(questId), rejectWithError: false };
               c5 = 2;
               c6 = 1;
-              const obj3 = { value: HTTP.get(obj2), done: false };
-              return obj3;
+              const obj9 = { value: HTTP.get(obj8), done: false };
+              return obj9;
             }
           }
         } else if (1 === tmp7) {
           c4 = 0;
           closure_129_2 = closure_3;
-          let obj4 = closure_130_1(closure_130_2[12]);
-          obj4 = { type: "QUESTS_FETCH_REWARD_CODE_FAILURE", error: null, questId: null };
+          const obj10 = { type: "QUESTS_FETCH_REWARD_CODE_FAILURE", error: null, questId: null };
           const tmp28 = new closure_130_1(closure_130_2[13])(closure_129_2);
-          obj4.error = tmp28;
-          obj4.questId = closure_129_0;
-          obj4.dispatch(obj4);
+          obj10.error = tmp28;
+          obj10.questId = closure_129_0;
+          closure_130_1(closure_130_2[12]).dispatch(obj10);
           throw closure_129_2;
         } else if (arg0 === 1) {
           c6 = 3;
           throw value;
         } else if (arg0 !== 2) {
           closure_129_1 = value;
-          obj = closure_130_1(closure_130_2[12]);
-          const obj5 = { type: "QUESTS_FETCH_REWARD_CODE_SUCCESS", questId: closure_129_0, rewardCode: null };
-          obj2 = closure_130_0(closure_130_2[15]);
-          obj5.rewardCode = obj2.questsRewardCodeFromServer(closure_129_1.body);
-          obj.dispatch(obj5);
+          const obj11 = { type: "QUESTS_FETCH_REWARD_CODE_SUCCESS", questId: closure_129_0, rewardCode: null };
+          const obj = closure_130_1(closure_130_2[12]);
+          obj11.rewardCode = closure_130_0(closure_130_2[15]).questsRewardCodeFromServer(closure_129_1.body);
+          obj.dispatch(obj11);
           c4 = 0;
+          const obj3 = closure_130_0(closure_130_2[15]);
         }
         c4 = 0;
         c6 = 3;
-        obj6 = { value, done: true };
-        return obj6;
+        const obj12 = { value, done: true };
+        return obj12;
       } catch (tmp39) {
         closure_3 = tmp39;
         if (tmp4 === c4) {
@@ -878,8 +952,8 @@ let closure_25 = async function _dismissQuestContent() {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -892,8 +966,8 @@ let closure_25 = async function _dismissQuestContent() {
             throw value;
           } else if (arg0 === 2) {
             c7 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
             closure_3 = tmp3;
             closure_2 = tmp7;
@@ -903,26 +977,28 @@ let closure_25 = async function _dismissQuestContent() {
             const isDismissingContentResult = dismissingContent.isDismissingContent(questId);
             if (!isDismissingContentResult) {
               if (obj18.isDismissible(content)) {
-                let obj5 = DispatcherDefault;
-                const obj1 = { type: "QUESTS_DISMISS_CONTENT_BEGIN", questId, content };
-                obj5.dispatch(obj1);
+                const obj5 = { type: "QUESTS_DISMISS_CONTENT_BEGIN", questId, content };
+                DispatcherDefault.dispatch(obj5);
                 c5 = 1;
-                let obj7 = QuestDataUtils;
-                const adTrafficMetadataSealed = obj7.getAdTrafficMetadataSealed(content, questId);
+                const adTrafficMetadataSealed = QuestDataUtils.getAdTrafficMetadataSealed(content, questId);
                 const HTTP = HTTPUtils.HTTP;
-                const request = { url: closure_2_14.QUESTS_DISMISS_CONTENT(questId, content), body: null, rejectWithError: false };
-                const obj2 = {};
+                const request = {
+                  url: closure_2_14.QUESTS_DISMISS_CONTENT(questId, content),
+                  body: null,
+                  rejectWithError: false,
+                };
+                const obj7 = {};
                 const merged = Object.assign(QuestDataUtils.getAdDecisionData(questId, content));
                 let tmp44 = null;
                 if (null != adTrafficMetadataSealed) {
                   tmp44 = adTrafficMetadataSealed;
                 }
-                obj2.traffic_metadata_sealed = tmp44;
-                request.body = obj2;
+                obj7.traffic_metadata_sealed = tmp44;
+                request.body = obj7;
                 c6 = 2;
                 c7 = 1;
-                let obj3 = { value: HTTP.post(request), done: false };
-                return obj3;
+                const obj9 = { value: HTTP.post(request), done: false };
+                return obj9;
               }
             }
             obj18 = QuestDataUtils;
@@ -931,33 +1007,38 @@ let closure_25 = async function _dismissQuestContent() {
           if (1 === tmp7) {
             c5 = 0;
             closure_130_3 = closure_4;
-            obj3 = closure_131_1(closure_131_2[12]);
-            const obj4 = { type: "QUESTS_DISMISS_CONTENT_FAILURE", error: null, questId: null };
+            const obj10 = { type: "QUESTS_DISMISS_CONTENT_FAILURE", error: null, questId: null };
             const tmp27 = new closure_131_1(closure_131_2[13])(closure_130_3);
-            obj4.error = tmp27;
-            obj4.questId = closure_130_0;
-            obj3.dispatch(obj4);
+            obj10.error = tmp27;
+            obj10.questId = closure_130_0;
+            closure_131_1(closure_131_2[12]).dispatch(obj10);
+            const obj4 = closure_131_1(closure_131_2[12]);
           } else if (arg0 === 1) {
             c7 = 3;
             throw value;
           } else if (arg0 !== 2) {
             closure_130_2 = value;
-            obj5 = { type: "QUESTS_DISMISS_CONTENT_SUCCESS", dismissedQuestUserStatus: null };
+            const obj12 = { type: "QUESTS_DISMISS_CONTENT_SUCCESS", dismissedQuestUserStatus: null };
             const obj15 = closure_131_1(closure_131_2[12]);
-            obj5.dismissedQuestUserStatus = closure_131_0(closure_131_2[15]).questUserStatusFromServer(closure_130_2.body);
-            obj15.dispatch(obj5);
+            obj12.dismissedQuestUserStatus = closure_131_0(closure_131_2[15]).questUserStatusFromServer(
+              closure_130_2.body,
+            );
+            obj15.dispatch(obj12);
             if (closure_131_15.has(closure_130_1)) {
-              obj = closure_131_0(closure_131_2[27]);
-              const obj6 = { quest_id: closure_130_0 };
-              obj.fireSurveyAction(closure_131_0(closure_131_2[28]).SurveyActionTypes.QUEST_DISMISSED, obj6);
+              const obj13 = { quest_id: closure_130_0 };
+              closure_131_0(closure_131_2[27]).fireSurveyAction(
+                closure_131_0(closure_131_2[28]).SurveyActionTypes.QUEST_DISMISSED,
+                obj13,
+              );
+              const obj = closure_131_0(closure_131_2[27]);
             }
             c5 = 0;
             const obj17 = closure_131_0(closure_131_2[15]);
           }
           c5 = 0;
           c7 = 3;
-          obj7 = { value, done: true };
-          return obj7;
+          const obj14 = { value, done: true };
+          return obj14;
         }
         c7 = 3;
       } catch (tmp45) {
@@ -980,8 +1061,8 @@ let closure_26 = async function _completeQuestPreview(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -994,8 +1075,8 @@ let closure_26 = async function _completeQuestPreview(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c7 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj4 = { value, done: true };
+          return obj4;
         } else {
           closure_3 = tmp3;
           closure_2 = tmp7;
@@ -1017,46 +1098,50 @@ let closure_26 = async function _completeQuestPreview(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c7 = 3;
-          const obj1 = { value, done: true };
-          return obj1;
+          const obj6 = { value, done: true };
+          return obj6;
         } else {
           c5 = 1;
           const HTTP = closure_131_0(closure_131_2[11]).HTTP;
-          const request = { url: closure_131_14.QUESTS_PREVIEW_COMPLETE(closure_130_0), body: null, rejectWithError: false };
-          let obj2 = { percent: closure_130_1 };
-          request.body = obj2;
+          const request = {
+            url: closure_131_14.QUESTS_PREVIEW_COMPLETE(closure_130_0),
+            body: null,
+            rejectWithError: false,
+          };
+          const obj7 = { percent: closure_130_1 };
+          request.body = obj7;
           c6 = 3;
           c7 = 1;
-          const obj3 = { value: HTTP.post(request), done: false };
-          return obj3;
+          const obj8 = { value: HTTP.post(request), done: false };
+          return obj8;
         }
       } else {
         if (2 === tmp7) {
           c5 = 0;
           closure_130_3 = closure_4;
-          let obj4 = closure_131_1(closure_131_2[12]);
-          obj4 = { type: "QUESTS_PREVIEW_UPDATE_FAILURE", error: null, questId: null };
+          const obj9 = { type: "QUESTS_PREVIEW_UPDATE_FAILURE", error: null, questId: null };
           const tmp27 = new closure_131_1(closure_131_2[13])(closure_130_3);
-          obj4.error = tmp27;
-          obj4.questId = closure_130_0;
-          obj4.dispatch(obj4);
+          obj9.error = tmp27;
+          obj9.questId = closure_130_0;
+          closure_131_1(closure_131_2[12]).dispatch(obj9);
           c7 = 3;
+          const obj5 = closure_131_1(closure_131_2[12]);
         } else if (arg0 === 1) {
           c7 = 3;
           throw value;
         } else if (arg0 !== 2) {
           closure_130_2 = value;
-          obj = closure_131_1(closure_131_2[12]);
-          const obj5 = { type: "QUESTS_PREVIEW_UPDATE_SUCCESS", previewQuestUserStatus: null };
-          obj2 = closure_131_0(closure_131_2[15]);
-          obj5.previewQuestUserStatus = obj2.questUserStatusFromServer(closure_130_2.body);
-          obj.dispatch(obj5);
+          const obj10 = { type: "QUESTS_PREVIEW_UPDATE_SUCCESS", previewQuestUserStatus: null };
+          const obj = closure_131_1(closure_131_2[12]);
+          obj10.previewQuestUserStatus = closure_131_0(closure_131_2[15]).questUserStatusFromServer(closure_130_2.body);
+          obj.dispatch(obj10);
           c5 = 0;
+          const obj3 = closure_131_0(closure_131_2[15]);
         }
         c5 = 0;
         c7 = 3;
-        const obj6 = { value, done: true };
-        return obj6;
+        const obj11 = { value, done: true };
+        return obj11;
       }
     } catch (tmp32) {
       closure_4 = tmp32;
@@ -1078,23 +1163,23 @@ let closure_27 = async function _resetQuestPreviewStatus(arg0) {
   if (1 === tmp7) {
     c4 = 0;
     closure_129_2 = closure_3;
-    let obj2 = { type: "QUESTS_PREVIEW_UPDATE_FAILURE", error: null, questId: null };
-    obj2.error = new closure_130_1(closure_130_2[13])(closure_129_2);
-    obj2.questId = closure_129_0;
-    closure_130_1(closure_130_2[12]).dispatch(obj2);
+    const obj7 = { type: "QUESTS_PREVIEW_UPDATE_FAILURE", error: null, questId: null };
+    obj7.error = new closure_130_1(closure_130_2[13])(closure_129_2);
+    obj7.questId = closure_129_0;
+    closure_130_1(closure_130_2[12]).dispatch(obj7);
     c6 = 3;
+    closure_130_1(closure_130_2[12]);
     new closure_130_1(closure_130_2[13])(closure_129_2);
-    const obj4 = closure_130_1(closure_130_2[12]);
   } else if (arg0 === 1) {
     c6 = 3;
     throw value;
   } else if (arg0 !== 2) {
     closure_129_1 = value;
-    const obj3 = { type: "QUESTS_PREVIEW_UPDATE_SUCCESS", previewQuestUserStatus: null };
-    obj2 = closure_130_0(closure_130_2[15]);
-    obj3.previewQuestUserStatus = obj2.questUserStatusFromServer(closure_129_1.body);
-    closure_130_1(closure_130_2[12]).dispatch(obj3);
+    const obj8 = { type: "QUESTS_PREVIEW_UPDATE_SUCCESS", previewQuestUserStatus: null };
+    obj8.previewQuestUserStatus = closure_130_0(closure_130_2[15]).questUserStatusFromServer(closure_129_1.body);
+    closure_130_1(closure_130_2[12]).dispatch(obj8);
     c4 = 0;
+    closure_130_0(closure_130_2[15]);
     closure_130_1(closure_130_2[12]);
   }
   return value;
@@ -1109,23 +1194,23 @@ let closure_28 = async function _resetQuestDismissibilityStatus(arg0) {
   if (1 === tmp7) {
     c4 = 0;
     closure_129_2 = closure_3;
-    let obj2 = { type: "QUESTS_PREVIEW_UPDATE_FAILURE", error: null, questId: null };
-    obj2.error = new closure_130_1(closure_130_2[13])(closure_129_2);
-    obj2.questId = closure_129_0;
-    closure_130_1(closure_130_2[12]).dispatch(obj2);
+    const obj7 = { type: "QUESTS_PREVIEW_UPDATE_FAILURE", error: null, questId: null };
+    obj7.error = new closure_130_1(closure_130_2[13])(closure_129_2);
+    obj7.questId = closure_129_0;
+    closure_130_1(closure_130_2[12]).dispatch(obj7);
     c6 = 3;
+    closure_130_1(closure_130_2[12]);
     new closure_130_1(closure_130_2[13])(closure_129_2);
-    const obj4 = closure_130_1(closure_130_2[12]);
   } else if (arg0 === 1) {
     c6 = 3;
     throw value;
   } else if (arg0 !== 2) {
     closure_129_1 = value;
-    const obj3 = { type: "QUESTS_PREVIEW_UPDATE_SUCCESS", previewQuestUserStatus: null };
-    obj2 = closure_130_0(closure_130_2[15]);
-    obj3.previewQuestUserStatus = obj2.questUserStatusFromServer(closure_129_1.body);
-    closure_130_1(closure_130_2[12]).dispatch(obj3);
+    const obj8 = { type: "QUESTS_PREVIEW_UPDATE_SUCCESS", previewQuestUserStatus: null };
+    obj8.previewQuestUserStatus = closure_130_0(closure_130_2[15]).questUserStatusFromServer(closure_129_1.body);
+    closure_130_1(closure_130_2[12]).dispatch(obj8);
     c4 = 0;
+    closure_130_0(closure_130_2[15]);
     closure_130_1(closure_130_2[12]);
   }
   return value;
@@ -1138,8 +1223,8 @@ let closure_29 = async function _fetchClaimedQuests() {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -1152,48 +1237,49 @@ let closure_29 = async function _fetchClaimedQuests() {
           throw value;
         } else if (arg0 === 2) {
           c5 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           closure_1 = tmp3;
           closure_0 = tmp7;
           closure_128_0 = undefined;
           if (!QuestStore.isFetchingClaimedQuests) {
-            let obj5 = DispatcherDefault;
-            obj5.dispatch({ type: "QUESTS_FETCH_CLAIMED_QUESTS_BEGIN" });
+            DispatcherDefault.dispatch({ type: "QUESTS_FETCH_CLAIMED_QUESTS_BEGIN" });
             c3 = 1;
             const HTTP = HTTPUtils.HTTP;
-            const obj1 = { url: constants.QUESTS_CLAIMED_QUESTS, rejectWithError: false };
+            const obj5 = { url: constants.QUESTS_CLAIMED_QUESTS, rejectWithError: false };
             c4 = 2;
             c5 = 1;
-            const obj2 = { value: HTTP.get(obj1), done: false };
-            return obj2;
+            const obj7 = { value: HTTP.get(obj5), done: false };
+            return obj7;
           }
         }
       } else {
         if (1 === tmp7) {
           c3 = 0;
           closure_128_1 = closure_2;
-          let obj3 = closure_129_1(closure_129_2[12]);
-          obj3 = { type: "QUESTS_FETCH_CLAIMED_QUESTS_FAILURE", error: null };
+          const obj8 = { type: "QUESTS_FETCH_CLAIMED_QUESTS_FAILURE", error: null };
           const tmp25 = new closure_129_1(closure_129_2[13])(closure_128_1);
-          obj3.error = tmp25;
-          obj3.dispatch(obj3);
+          obj8.error = tmp25;
+          closure_129_1(closure_129_2[12]).dispatch(obj8);
+          const obj4 = closure_129_1(closure_129_2[12]);
         } else if (arg0 === 1) {
           c5 = 3;
           throw value;
         } else if (arg0 !== 2) {
           const quests = value.body.quests;
-          closure_128_0 = quests.map((item) => closure_1_0(closure_1_2[15]).getClaimedQuestWithUserStatusFromServer(item));
-          obj = closure_129_1(closure_129_2[12]);
-          const obj4 = { type: "QUESTS_FETCH_CLAIMED_QUESTS_SUCCESS", quests: closure_128_0 };
-          obj.dispatch(obj4);
+          closure_128_0 = quests.map((item) =>
+            closure_1_0(closure_1_2[15]).getClaimedQuestWithUserStatusFromServer(item),
+          );
+          const obj9 = { type: "QUESTS_FETCH_CLAIMED_QUESTS_SUCCESS", quests: closure_128_0 };
+          closure_129_1(closure_129_2[12]).dispatch(obj9);
           c3 = 0;
+          const obj = closure_129_1(closure_129_2[12]);
         }
         c3 = 0;
         c5 = 3;
-        obj5 = { value, done: true };
-        return obj5;
+        const obj10 = { value, done: true };
+        return obj10;
       }
       c5 = 3;
     } catch (tmp34) {
@@ -1220,8 +1306,8 @@ let closure_30 = async function _fetchQuestToDeliver() {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -1234,8 +1320,8 @@ let closure_30 = async function _fetchQuestToDeliver() {
             throw value;
           } else if (arg0 === 2) {
             c8 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj4 = { value, done: true };
+            return obj4;
           } else {
             closure_4 = tmp3;
             closure_3 = tmp5;
@@ -1259,23 +1345,27 @@ let closure_30 = async function _fetchQuestToDeliver() {
             let quest;
             const _Date = Date;
             closure_131_2 = Date.now();
-            const result = QuestDecisionRoundtripTrackerDefault.recordQuestRequestAttempt("/quests/decision", closure_1, placement);
-            const obj1 = { type: "QUESTS_FETCH_QUEST_TO_DELIVER_BEGIN", placement };
-            DispatcherDefault.dispatch(obj1);
+            const result = QuestDecisionRoundtripTrackerDefault.recordQuestRequestAttempt(
+              "/quests/decision",
+              closure_1,
+              placement,
+            );
+            const obj6 = { type: "QUESTS_FETCH_QUEST_TO_DELIVER_BEGIN", placement };
+            DispatcherDefault.dispatch(obj6);
             c6 = 1;
             c7 = 2;
             c8 = 1;
-            let obj2 = { value: SessionHeartbeatScheduler.getSession(), done: false };
-            return obj2;
+            const obj7 = { value: SessionHeartbeatScheduler.getSession(), done: false };
+            return obj7;
           }
         } else {
           if (1 === tmp8) {
             c6 = 0;
             closure_131_18 = closure_5;
-            const obj3 = { wasSuccessful: false, currentFetchedAt: closure_131_2 };
-            const result1 = closure_132_1(closure_132_2[29]).recordQuestRequestApiResponse("/quests/decision", obj3);
+            const obj9 = { wasSuccessful: false, currentFetchedAt: closure_131_2 };
+            const result1 = closure_132_1(closure_132_2[29]).recordQuestRequestApiResponse("/quests/decision", obj9);
             const obj22 = closure_132_1(closure_132_2[29]);
-            let obj4 = {};
+            const obj12 = {};
             const merged = Object.assign(closure_132_1(closure_132_2[38])());
             let message;
             if (closure_131_18 != null) {
@@ -1285,17 +1375,17 @@ let closure_30 = async function _fetchQuestToDeliver() {
             if (message == null) {
               reason = null;
             }
-            obj4.reason = reason;
+            obj12.reason = reason;
             const obj26 = new closure_132_1(closure_132_2[13])(closure_131_18);
-            obj4.api_error = obj26.getAnyErrorMessage();
-            obj4.caller_source = closure_131_1;
-            closure_132_1(closure_132_2[37]).track(closure_132_13.QUEST_DECISION_ROUNDTRIP_ERROR, obj4);
+            obj12.api_error = obj26.getAnyErrorMessage();
+            obj12.caller_source = closure_131_1;
+            closure_132_1(closure_132_2[37]).track(closure_132_13.QUEST_DECISION_ROUNDTRIP_ERROR, obj12);
             const obj24 = closure_132_1(closure_132_2[37]);
-            const obj5 = { type: "QUESTS_FETCH_QUEST_TO_DELIVER_FAILURE", error: null, placement: null };
+            const obj13 = { type: "QUESTS_FETCH_QUEST_TO_DELIVER_FAILURE", error: null, placement: null };
             const tmp188 = new closure_132_1(closure_132_2[13])(closure_131_18);
-            obj5.error = tmp188;
-            obj5.placement = closure_131_0;
-            closure_132_1(closure_132_2[12]).dispatch(obj5);
+            obj13.error = tmp188;
+            obj13.placement = closure_131_0;
+            closure_132_1(closure_132_2[12]).dispatch(obj13);
             c8 = 3;
             const obj27 = closure_132_1(closure_132_2[12]);
           } else if (2 === tmp8) {
@@ -1305,15 +1395,14 @@ let closure_30 = async function _fetchQuestToDeliver() {
             } else if (arg0 === 2) {
               c6 = 0;
               c8 = 3;
-              const obj6 = { value, done: true };
-              return obj6;
+              const obj14 = { value, done: true };
+              return obj14;
             } else {
               closure_131_3 = value;
-              let obj18 = closure_132_0(closure_132_2[31]);
               c7 = 3;
               c8 = 1;
-              let obj7 = { value: obj18.getOrRefreshAdSession(), done: false };
-              return obj7;
+              const obj15 = { value: closure_132_0(closure_132_2[31]).getOrRefreshAdSession(), done: false };
+              return obj15;
             }
           } else if (3 === tmp8) {
             if (arg0 === 1) {
@@ -1322,8 +1411,8 @@ let closure_30 = async function _fetchQuestToDeliver() {
             } else if (arg0 === 2) {
               c6 = 0;
               c8 = 3;
-              const obj8 = { value, done: true };
-              return obj8;
+              const obj16 = { value, done: true };
+              return obj16;
             } else {
               closure_131_4 = value;
               const LessPersonalizedAdsExperiment = closure_132_0(closure_132_2[32]).LessPersonalizedAdsExperiment;
@@ -1360,10 +1449,10 @@ let closure_30 = async function _fetchQuestToDeliver() {
               }
               closure_131_10 = tmp118;
               const _URLSearchParams = URLSearchParams;
-              let obj9 = { placement: null };
+              const obj17 = { placement: null };
               const _String3 = String;
-              obj9.placement = String(closure_131_0);
-              const uRLSearchParams = new URLSearchParams(obj9);
+              obj17.placement = String(closure_131_0);
+              const uRLSearchParams = new URLSearchParams(obj17);
               closure_131_11 = uRLSearchParams;
               let uuid;
               if (closure_131_3 != null) {
@@ -1379,15 +1468,15 @@ let closure_30 = async function _fetchQuestToDeliver() {
                 const item = closure_131_10.forEach((item) => closure_1_11.append("visible_guild_ids", item));
               }
               const HTTP = closure_132_0(closure_132_2[11]).HTTP;
-              let obj10 = { url: null, rejectWithError: false, context: null };
+              const obj18 = { url: null, rejectWithError: false, context: null };
               const _HermesInternal = HermesInternal;
-              obj10.url = "" + closure_132_14.QUEST_FETCH_QUEST_TO_DELIVER + "?" + closure_131_11.toString();
-              const obj11 = { connection_type: closure_132_7.getType() };
-              obj10.context = obj11;
+              obj18.url = "" + closure_132_14.QUEST_FETCH_QUEST_TO_DELIVER + "?" + closure_131_11.toString();
+              const obj20 = { connection_type: closure_132_7.getType() };
+              obj18.context = obj20;
               c7 = 4;
               c8 = 1;
-              const obj12 = { value: HTTP.get(obj10), done: false };
-              return obj12;
+              const obj21 = { value: HTTP.get(obj18), done: false };
+              return obj21;
             }
           } else if (arg0 === 1) {
             c8 = 3;
@@ -1395,35 +1484,42 @@ let closure_30 = async function _fetchQuestToDeliver() {
           } else if (arg0 === 2) {
             c6 = 0;
             c8 = 3;
-            const obj13 = { value, done: true };
-            return obj13;
+            const obj23 = { value, done: true };
+            return obj23;
           } else {
             body = value.body;
-            let creative = body.creative;
-            let creative_type;
+            const creative = body.creative;
+            let creative_type1;
             if (creative != null) {
-              creative_type = creative.creative_type;
+              creative_type1 = creative.creative_type;
             }
-            if (creative_type !== closure_132_0(closure_132_2[23]).AdCreativeType.BOUNTY) {
-              creative = body.creative;
+            if (creative_type1 !== closure_132_0(closure_132_2[23]).AdCreativeType.BOUNTY) {
+              let creative1 = body.creative;
             } else {
-              const BountiesMobileQuestBarExperiment = closure_132_0(closure_132_2[34]).BountiesMobileQuestBarExperiment;
-              creative = null;
+              const BountiesMobileQuestBarExperiment = closure_132_0(
+                closure_132_2[34],
+              ).BountiesMobileQuestBarExperiment;
+              creative1 = null;
             }
-            closure_131_14 = creative;
+            closure_131_14 = creative1;
             closure_131_15 = null;
             if (null != closure_131_14) {
-              creative_type = closure_131_14.creative_type;
+              const creative_type = closure_131_14.creative_type;
               if (closure_132_0(closure_132_2[23]).AdCreativeType.QUEST === creative_type) {
-                obj2 = closure_132_0(closure_132_2[15]);
-                closure_131_12 = obj2.questConfigFromServer(closure_131_14.creative_content);
-                const obj14 = { type: closure_132_0(closure_132_2[23]).AdCreativeType.QUEST, questId: closure_131_12.id };
-                closure_131_15 = obj14;
+                closure_131_12 = closure_132_0(closure_132_2[15]).questConfigFromServer(
+                  closure_131_14.creative_content,
+                );
+                const obj25 = {
+                  type: closure_132_0(closure_132_2[23]).AdCreativeType.QUEST,
+                  questId: closure_131_12.id,
+                };
+                closure_131_15 = obj25;
+                const obj3 = closure_132_0(closure_132_2[15]);
               } else if (closure_132_0(closure_132_2[23]).AdCreativeType.BOUNTY === creative_type) {
-                obj = closure_132_0(closure_132_2[35]);
-                closure_131_16 = obj.bountyFromServer(closure_131_14.creative_content);
-                const obj15 = { type: closure_132_0(closure_132_2[23]).AdCreativeType.BOUNTY, bounty: closure_131_16 };
-                closure_131_15 = obj15;
+                closure_131_16 = closure_132_0(closure_132_2[35]).bountyFromServer(closure_131_14.creative_content);
+                const obj28 = { type: closure_132_0(closure_132_2[23]).AdCreativeType.BOUNTY, bounty: closure_131_16 };
+                closure_131_15 = obj28;
+                let obj = closure_132_0(closure_132_2[35]);
               } else {
                 const NO_FILL = closure_132_0(closure_132_2[23]).AdCreativeType.NO_FILL;
               }
@@ -1431,87 +1527,112 @@ let closure_30 = async function _fetchQuestToDeliver() {
               quest = body.quest;
               if (null != quest) {
                 closure_131_12 = closure_132_0(closure_132_2[15]).questConfigFromServer(quest);
-                const obj16 = { type: closure_132_0(closure_132_2[23]).AdCreativeType.QUEST, questId: closure_131_12.id };
-                closure_131_15 = obj16;
+                const obj29 = {
+                  type: closure_132_0(closure_132_2[23]).AdCreativeType.QUEST,
+                  questId: closure_131_12.id,
+                };
+                closure_131_15 = obj29;
                 const obj32 = closure_132_0(closure_132_2[15]);
               }
             }
-            obj4 = closure_132_1(closure_132_2[12]);
-            const obj17 = { type: "QUESTS_FETCH_QUEST_TO_DELIVER_SUCCESS", quest: closure_131_12, creative: closure_131_15, isNoFill: null, adDecisionData: null, metadataSealed: null, trafficMetadataSealed: null, provenanceMetadataSealed: null, adContext: null, responseTtlSeconds: null, placement: null, fetchedAt: null };
-            let creative_type1;
+            const obj30 = {
+              type: "QUESTS_FETCH_QUEST_TO_DELIVER_SUCCESS",
+              quest: closure_131_12,
+              creative: closure_131_15,
+              isNoFill: null,
+              adDecisionData: null,
+              metadataSealed: null,
+              trafficMetadataSealed: null,
+              provenanceMetadataSealed: null,
+              adContext: null,
+              responseTtlSeconds: null,
+              placement: null,
+              fetchedAt: null,
+            };
+            let creative_type2;
             if (closure_131_14 != null) {
-              creative_type1 = closure_131_14.creative_type;
+              creative_type2 = closure_131_14.creative_type;
             }
-            obj17.isNoFill = creative_type1 === closure_132_0(closure_132_2[23]).AdCreativeType.NO_FILL;
+            obj30.isNoFill = creative_type2 === closure_132_0(closure_132_2[23]).AdCreativeType.NO_FILL;
             const ad_identifiers = body.ad_identifiers;
             let ad_id;
             if (ad_identifiers != null) {
               ad_id = ad_identifiers.ad_id;
             }
-            obj18 = { ad_id, adset_id: null, ad_set_id: null, campaign_id: null, creative_id: null, creative_type: null, decision_id: null, is_targeted: null };
+            const obj31 = {
+              ad_id,
+              adset_id: null,
+              ad_set_id: null,
+              campaign_id: null,
+              creative_id: null,
+              creative_type: null,
+              decision_id: null,
+              is_targeted: null,
+            };
             const ad_identifiers2 = body.ad_identifiers;
             let adset_id;
             if (ad_identifiers2 != null) {
               adset_id = ad_identifiers2.adset_id;
             }
-            obj18.adset_id = adset_id;
+            obj31.adset_id = adset_id;
             const ad_identifiers3 = body.ad_identifiers;
             let ad_set_id;
             if (ad_identifiers3 != null) {
               ad_set_id = ad_identifiers3.ad_set_id;
             }
-            obj18.ad_set_id = ad_set_id;
+            obj31.ad_set_id = ad_set_id;
             const ad_identifiers4 = body.ad_identifiers;
             let campaign_id;
             if (ad_identifiers4 != null) {
               campaign_id = ad_identifiers4.campaign_id;
             }
-            obj18.campaign_id = campaign_id;
+            obj31.campaign_id = campaign_id;
             const ad_identifiers5 = body.ad_identifiers;
             let creative_id;
             if (ad_identifiers5 != null) {
               creative_id = ad_identifiers5.creative_id;
             }
-            obj18.creative_id = creative_id;
+            obj31.creative_id = creative_id;
             const ad_identifiers6 = body.ad_identifiers;
-            let creative_type2;
+            let creative_type3;
             if (ad_identifiers6 != null) {
-              creative_type2 = ad_identifiers6.creative_type;
+              creative_type3 = ad_identifiers6.creative_type;
             }
-            obj18.creative_type = creative_type2;
-            obj18.decision_id = body.request_id;
-            obj18.is_targeted = null != body.ad_identifiers;
-            obj17.adDecisionData = obj18;
-            obj17.metadataSealed = body.metadata_sealed;
-            obj17.trafficMetadataSealed = body.traffic_metadata_sealed;
-            obj17.provenanceMetadataSealed = body.provenance_metadata_sealed;
-            obj17.adContext = body.ad_context;
-            obj17.responseTtlSeconds = body.response_ttl_seconds;
-            obj17.placement = closure_131_0;
-            obj17.fetchedAt = closure_131_2;
-            obj4.dispatch(obj17);
-            obj7 = closure_132_1(closure_132_2[29]);
-            const obj19 = { wasSuccessful: true, adRequestId: null, currentCreative: null, currentFetchedAt: null };
+            obj31.creative_type = creative_type3;
+            obj31.decision_id = body.request_id;
+            obj31.is_targeted = null != body.ad_identifiers;
+            obj30.adDecisionData = obj31;
+            obj30.metadataSealed = body.metadata_sealed;
+            obj30.trafficMetadataSealed = body.traffic_metadata_sealed;
+            obj30.provenanceMetadataSealed = body.provenance_metadata_sealed;
+            obj30.adContext = body.ad_context;
+            obj30.responseTtlSeconds = body.response_ttl_seconds;
+            obj30.placement = closure_131_0;
+            obj30.fetchedAt = closure_131_2;
+            closure_132_1(closure_132_2[12]).dispatch(obj30);
+            const obj5 = closure_132_1(closure_132_2[12]);
+            const obj33 = { wasSuccessful: true, adRequestId: null, currentCreative: null, currentFetchedAt: null };
             const _String = String;
-            obj19.adRequestId = String(body.request_id);
-            obj19.currentCreative = closure_131_15;
-            obj19.currentFetchedAt = closure_131_2;
-            const result2 = obj7.recordQuestRequestApiResponse("/quests/decision", obj19);
+            obj33.adRequestId = String(body.request_id);
+            obj33.currentCreative = closure_131_15;
+            obj33.currentFetchedAt = closure_131_2;
+            const result2 = closure_132_1(closure_132_2[29]).recordQuestRequestApiResponse("/quests/decision", obj33);
             if (null != closure_131_12) {
               if (closure_131_0 === closure_132_0(closure_132_2[10]).AdPlacement.DESKTOP_ACCOUNT_PANEL_AREA) {
-                obj9 = closure_132_1(closure_132_2[36]);
-                obj9.startTracking(closure_131_12.id);
+                closure_132_1(closure_132_2[36]).startTracking(closure_131_12.id);
+                const obj10 = closure_132_1(closure_132_2[36]);
               }
-              obj10 = closure_132_1(closure_132_2[37]);
-              const obj20 = {};
+              const obj36 = {};
               const merged1 = Object.assign(closure_132_1(closure_132_2[38])());
-              obj20.quest_id = closure_131_12.id;
-              obj20.caller_source = closure_131_1;
+              obj36.quest_id = closure_131_12.id;
+              obj36.caller_source = closure_131_1;
               const _String2 = String;
-              obj20.ad_request_id = String(body.request_id);
-              obj10.track(closure_132_13.QUEST_DECISION_RECEIVED, obj20);
+              obj36.ad_request_id = String(body.request_id);
+              closure_132_1(closure_132_2[37]).track(closure_132_13.QUEST_DECISION_RECEIVED, obj36);
               c6 = 0;
+              const obj11 = closure_132_1(closure_132_2[37]);
             }
+            const obj8 = closure_132_1(closure_132_2[29]);
           }
           c6 = 0;
           c8 = 3;
@@ -1543,8 +1664,8 @@ let closure_31 = async function _fetchEarnedQuestToDeliver(arg0) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -1557,8 +1678,8 @@ let closure_31 = async function _fetchEarnedQuestToDeliver(arg0) {
             throw value;
           } else if (arg0 === 2) {
             c9 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
             closure_5 = tmp3;
             closure_4 = tmp5;
@@ -1592,13 +1713,13 @@ let closure_31 = async function _fetchEarnedQuestToDeliver(arg0) {
                 const _Date = Date;
                 closure_132_3 = Date.now();
                 const result = EarnedDecisionRoundtripTrackerDefault.recordEarnedRequestAttempt(content, dependencyMap);
-                const obj1 = { type: "QUESTS_FETCH_EARNED_QUEST_TO_DELIVER_BEGIN", content };
-                DispatcherDefault.dispatch(obj1);
+                const obj4 = { type: "QUESTS_FETCH_EARNED_QUEST_TO_DELIVER_BEGIN", content };
+                DispatcherDefault.dispatch(obj4);
                 c7 = 1;
                 c8 = 2;
                 c9 = 1;
-                const obj2 = { value: SessionHeartbeatScheduler.getSession(), done: false };
-                return obj2;
+                const obj5 = { value: SessionHeartbeatScheduler.getSession(), done: false };
+                return obj5;
               }
             }
           }
@@ -1606,15 +1727,15 @@ let closure_31 = async function _fetchEarnedQuestToDeliver(arg0) {
           if (1 === tmp8) {
             c7 = 0;
             closure_132_10 = closure_6;
-            let obj5 = closure_133_1(closure_133_2[39]);
-            const obj3 = { wasSuccessful: false, fetchedAt: closure_132_3 };
-            const result1 = obj5.recordEarnedRequestApiResponse(closure_132_0, obj3);
-            let obj7 = closure_133_1(closure_133_2[12]);
-            const obj4 = { type: "QUESTS_FETCH_EARNED_QUEST_TO_DELIVER_FAILURE", error: null, content: null };
+            const obj7 = { wasSuccessful: false, fetchedAt: closure_132_3 };
+            const result1 = closure_133_1(closure_133_2[39]).recordEarnedRequestApiResponse(closure_132_0, obj7);
+            const obj6 = closure_133_1(closure_133_2[39]);
+            const obj9 = { type: "QUESTS_FETCH_EARNED_QUEST_TO_DELIVER_FAILURE", error: null, content: null };
             const tmp30 = new closure_133_1(closure_133_2[13])(closure_132_10);
-            obj4.error = tmp30;
-            obj4.content = closure_132_0;
-            obj7.dispatch(obj4);
+            obj9.error = tmp30;
+            obj9.content = closure_132_0;
+            closure_133_1(closure_133_2[12]).dispatch(obj9);
+            const obj8 = closure_133_1(closure_133_2[12]);
           } else if (2 === tmp8) {
             if (arg0 === 1) {
               c9 = 3;
@@ -1622,8 +1743,8 @@ let closure_31 = async function _fetchEarnedQuestToDeliver(arg0) {
             } else if (arg0 === 2) {
               c7 = 0;
               c9 = 3;
-              obj5 = { value, done: true };
-              return obj5;
+              const obj10 = { value, done: true };
+              return obj10;
             } else {
               closure_132_4 = value;
               closure_132_5 = closure_132_2.join(",");
@@ -1632,11 +1753,14 @@ let closure_31 = async function _fetchEarnedQuestToDeliver(arg0) {
               if (closure_132_4 != null) {
                 uuid = closure_132_4.uuid;
               }
-              const obj6 = { url: closure_133_14.QUEST_EARNED_DECISION(closure_132_5, closure_132_0, uuid), rejectWithError: false };
+              const obj11 = {
+                url: closure_133_14.QUEST_EARNED_DECISION(closure_132_5, closure_132_0, uuid),
+                rejectWithError: false,
+              };
               c8 = 3;
               c9 = 1;
-              obj7 = { value: HTTP.get(obj6), done: false };
-              return obj7;
+              const obj12 = { value: HTTP.get(obj11), done: false };
+              return obj12;
             }
           } else if (arg0 === 1) {
             c9 = 3;
@@ -1646,41 +1770,49 @@ let closure_31 = async function _fetchEarnedQuestToDeliver(arg0) {
             quests = closure_132_6.body.quests;
             response_ttl_seconds = closure_132_6.body.response_ttl_seconds;
             const _Map = Map;
-            const map = new Map(closure_132_2.map((item) => {
-              let tmp;
-              if (closure_1_7 != null) {
-                tmp = closure_1_7[item];
-              }
-              const items = [item, ];
-              let tmp2 = null;
-              if (null != tmp) {
-                tmp2 = null;
-                if (obj.isQuestWithKnownConfigVersion(tmp)) {
-                  tmp2 = tmp;
+            const map = new Map(
+              closure_132_2.map((item) => {
+                let tmp;
+                if (closure_1_7 != null) {
+                  tmp = closure_1_7[item];
                 }
-                obj = closure_0(7812);
-              }
-              items[1] = tmp2;
-              return items;
-            }));
+                const items = [item];
+                let tmp2 = null;
+                if (null != tmp) {
+                  tmp2 = null;
+                  if (obj.isQuestWithKnownConfigVersion(tmp)) {
+                    tmp2 = tmp;
+                  }
+                  obj = closure_0(7812);
+                }
+                items[1] = tmp2;
+                return items;
+              }),
+            );
             closure_132_9 = map;
-            const obj8 = { type: "QUESTS_FETCH_EARNED_QUEST_TO_DELIVER_SUCCESS", serverQuests: closure_132_9, content: closure_132_0, fetchedAt: closure_132_3, responseTtlSeconds: response_ttl_seconds };
-            closure_133_1(closure_133_2[12]).dispatch(obj8);
+            const obj14 = {
+              type: "QUESTS_FETCH_EARNED_QUEST_TO_DELIVER_SUCCESS",
+              serverQuests: closure_132_9,
+              content: closure_132_0,
+              fetchedAt: closure_132_3,
+              responseTtlSeconds: response_ttl_seconds,
+            };
+            closure_133_1(closure_133_2[12]).dispatch(obj14);
             const obj13 = closure_133_1(closure_133_2[12]);
             const request_id = closure_132_6.body.request_id;
             requestId = request_id;
             if (request_id == null) {
               requestId = null;
             }
-            obj = { wasSuccessful: true, requestId, fetchedAt: closure_132_3 };
+            let obj = { wasSuccessful: true, requestId, fetchedAt: closure_132_3 };
             const result2 = closure_133_1(closure_133_2[39]).recordEarnedRequestApiResponse(closure_132_0, obj);
             c7 = 0;
             const obj15 = closure_133_1(closure_133_2[39]);
           }
           c7 = 0;
           c9 = 3;
-          const obj9 = { value, done: true };
-          return obj9;
+          const obj18 = { value, done: true };
+          return obj18;
         }
         c9 = 3;
       } catch (tmp36) {
@@ -1706,8 +1838,8 @@ let closure_32 = async function _updateVideoProgress() {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -1720,15 +1852,22 @@ let closure_32 = async function _updateVideoProgress() {
             throw value;
           } else if (arg0 === 2) {
             c3 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
-            let obj4 = TrackedHTTPUtilsDefault;
-            const request = { url: closure_2_14.QUESTS_VIDEO_PROGRESS(quest_id), body: null, trackedActionData: null, rejectWithError: false };
-            const obj1 = { timestamp };
-            request.body = obj1;
-            const obj2 = { event: discord_common_AnalyticsUtils.NetworkActionNames.QUEST_VIDEO_PROGRESS, properties: null };
-            const obj3 = { quest_id, timestamp_sec: timestamp.toString(), stack_trace: null };
+            const request = {
+              url: closure_2_14.QUESTS_VIDEO_PROGRESS(quest_id),
+              body: null,
+              trackedActionData: null,
+              rejectWithError: false,
+            };
+            const obj4 = { timestamp };
+            request.body = obj4;
+            const obj6 = {
+              event: discord_common_AnalyticsUtils.NetworkActionNames.QUEST_VIDEO_PROGRESS,
+              properties: null,
+            };
+            const obj7 = { quest_id, timestamp_sec: timestamp.toString(), stack_trace: null };
             const _Error = Error;
             const error = new Error();
             const stack = error.stack;
@@ -1736,21 +1875,20 @@ let closure_32 = async function _updateVideoProgress() {
             if (stack == null) {
               stack_trace = "";
             }
-            obj3.stack_trace = stack_trace;
-            obj2.properties = obj3;
-            request.trackedActionData = obj2;
+            obj7.stack_trace = stack_trace;
+            obj6.properties = obj7;
+            request.trackedActionData = obj6;
             c4 = 1;
             c3 = 1;
-            obj4 = { value: null, done: false };
-            obj4.value = obj4.post(request);
-            return obj4;
+            const obj8 = { value: TrackedHTTPUtilsDefault.post(request), done: false };
+            return obj8;
           }
         } else if (arg0 === 1) {
           c3 = 3;
           throw value;
         } else if (arg0 === 2) {
           c3 = 3;
-          obj = { value, done: true };
+          const obj = { value, done: true };
           return obj;
         } else {
           c3 = 3;
@@ -1771,7 +1909,7 @@ let closure_33 = async function _fetchVideoTranscript(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
+      const obj = { value, done: true };
       return obj;
     } else {
       return { value: "HermesInternal", done: null };
@@ -1785,8 +1923,8 @@ let closure_33 = async function _fetchVideoTranscript(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c7 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj2 = { value, done: true };
+          return obj2;
         } else {
           closure_3 = tmp3;
           closure_2 = tmp7;
@@ -1810,48 +1948,58 @@ let closure_33 = async function _fetchVideoTranscript(arg0) {
             throw value;
           } else if (arg0 === 2) {
             c7 = 3;
-            const obj1 = { value, done: true };
-            return obj1;
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
             const obj15 = closure_131_0(closure_131_2[40]);
-            questAsset = obj15.getQuestAsset(closure_130_0, closure_131_0(closure_131_2[40]).QuestAssetType.VIDEO_PLAYER_TRANSCRIPT, undefined, closure_130_1);
+            questAsset = obj15.getQuestAsset(
+              closure_130_0,
+              closure_131_0(closure_131_2[40]).QuestAssetType.VIDEO_PLAYER_TRANSCRIPT,
+              undefined,
+              closure_130_1,
+            );
             if (null != questAsset) {
               const state = closure_131_10.getState();
-              const obj2 = { questId: closure_130_0.id, fetchStatus: closure_131_11.FETCHING };
-              state.setTranscriptAsset(obj2);
+              const obj4 = { questId: closure_130_0.id, fetchStatus: closure_131_11.FETCHING };
+              state.setTranscriptAsset(obj4);
               c5 = 1;
               const HTTP = closure_131_0(closure_131_2[11]).HTTP;
-              const obj3 = { url: questAsset.url, rejectWithError: true };
+              const obj5 = { url: questAsset.url, rejectWithError: true };
               c6 = 3;
               c7 = 1;
-              const obj4 = { value: HTTP.get(obj3), done: false };
-              return obj4;
+              const obj6 = { value: HTTP.get(obj5), done: false };
+              return obj6;
             } else {
               const state1 = closure_131_10.getState();
-              const obj5 = { questId: closure_130_0.id, fetchStatus: closure_131_11.FAILURE };
-              state1.setTranscriptAsset(obj5);
+              const obj7 = { questId: closure_130_0.id, fetchStatus: closure_131_11.FAILURE };
+              state1.setTranscriptAsset(obj7);
             }
           }
         } else {
           if (2 === tmp7) {
             c5 = 0;
             const state2 = closure_131_10.getState();
-            const obj6 = { questId: closure_130_0.id, fetchStatus: closure_131_11.FAILURE };
-            state2.setTranscriptAsset(obj6);
+            const obj8 = { questId: closure_130_0.id, fetchStatus: closure_131_11.FAILURE };
+            state2.setTranscriptAsset(obj8);
           } else if (arg0 === 1) {
             c7 = 3;
             throw value;
           } else if (arg0 !== 2) {
             closure_130_3 = value;
             const state3 = closure_131_10.getState();
-            const obj7 = { questId: closure_130_0.id, fetchStatus: closure_131_11.SUCCESS, text: closure_130_3.text, url: questAsset.url };
-            state3.setTranscriptAsset(obj7);
+            const obj9 = {
+              questId: closure_130_0.id,
+              fetchStatus: closure_131_11.SUCCESS,
+              text: closure_130_3.text,
+              url: questAsset.url,
+            };
+            state3.setTranscriptAsset(obj9);
             c5 = 0;
           }
           c5 = 0;
           c7 = 3;
-          const obj8 = { value, done: true };
-          return obj8;
+          const obj10 = { value, done: true };
+          return obj10;
         }
         c7 = 3;
       }
@@ -1872,7 +2020,6 @@ let closure_34 = async function _fetchQuest() {
   const HTTP = HTTPUtils.HTTP;
   await HTTP.get({ url: closure_2_14.QUEST(closure_0), rejectWithError: false });
   closure_129_0 = value;
-  { url: value.QUEST(closure_0), rejectWithError: false };
   return closure_130_0(closure_130_2[15]).questConfigFromServer(closure_129_0.body);
 };
 let closure_35 = async function _fetchQuestPreview() {
@@ -1887,8 +2034,8 @@ let closure_35 = async function _fetchQuestPreview() {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -1901,8 +2048,8 @@ let closure_35 = async function _fetchQuestPreview() {
             throw value;
           } else if (arg0 === 2) {
             c6 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj4 = { value, done: true };
+            return obj4;
           } else {
             closure_2 = tmp3;
             closure_1 = tmp7;
@@ -1911,44 +2058,42 @@ let closure_35 = async function _fetchQuestPreview() {
             if (fetchingQuestPreview.isFetchingQuestPreview(questId)) {
               c6 = 3;
             } else {
-              let obj6 = DispatcherDefault;
-              const obj1 = { type: "QUESTS_FETCH_PREVIEW_BEGIN", questId };
-              obj6.dispatch(obj1);
+              const obj6 = { type: "QUESTS_FETCH_PREVIEW_BEGIN", questId };
+              DispatcherDefault.dispatch(obj6);
               c4 = 1;
               const HTTP = HTTPUtils.HTTP;
-              let obj2 = { url: closure_2_14.QUEST_PREVIEW(questId), rejectWithError: false };
+              const obj8 = { url: closure_2_14.QUEST_PREVIEW(questId), rejectWithError: false };
               c5 = 2;
               c6 = 1;
-              const obj3 = { value: HTTP.get(obj2), done: false };
-              return obj3;
+              const obj9 = { value: HTTP.get(obj8), done: false };
+              return obj9;
             }
           }
         } else if (1 === tmp7) {
           c4 = 0;
           closure_129_2 = closure_3;
-          let obj4 = closure_130_1(closure_130_2[12]);
-          obj4 = { type: "QUESTS_FETCH_PREVIEW_FAILURE", error: null, questId: null };
+          const obj10 = { type: "QUESTS_FETCH_PREVIEW_FAILURE", error: null, questId: null };
           const tmp28 = new closure_130_1(closure_130_2[13])(closure_129_2);
-          obj4.error = tmp28;
-          obj4.questId = closure_129_0;
-          obj4.dispatch(obj4);
+          obj10.error = tmp28;
+          obj10.questId = closure_129_0;
+          closure_130_1(closure_130_2[12]).dispatch(obj10);
           throw closure_129_2;
         } else if (arg0 === 1) {
           c6 = 3;
           throw value;
         } else if (arg0 !== 2) {
           closure_129_1 = value;
-          obj = closure_130_1(closure_130_2[12]);
-          const obj5 = { type: "QUESTS_FETCH_PREVIEW_SUCCESS", questId: closure_129_0, quest: null };
-          obj2 = closure_130_0(closure_130_2[15]);
-          obj5.quest = obj2.questWithUserStatusFromServer(closure_129_1.body);
-          obj.dispatch(obj5);
+          const obj11 = { type: "QUESTS_FETCH_PREVIEW_SUCCESS", questId: closure_129_0, quest: null };
+          const obj = closure_130_1(closure_130_2[12]);
+          obj11.quest = closure_130_0(closure_130_2[15]).questWithUserStatusFromServer(closure_129_1.body);
+          obj.dispatch(obj11);
           c4 = 0;
+          const obj3 = closure_130_0(closure_130_2[15]);
         }
         c4 = 0;
         c6 = 3;
-        obj6 = { value, done: true };
-        return obj6;
+        const obj12 = { value, done: true };
+        return obj12;
       } catch (tmp39) {
         closure_3 = tmp39;
         if (tmp4 === c4) {
@@ -1969,8 +2114,8 @@ let closure_37 = async function _fetchQuestHomeHero() {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj3 = { value, done: true };
+      return obj3;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -1983,8 +2128,8 @@ let closure_37 = async function _fetchQuestHomeHero() {
           throw value;
         } else if (arg0 === 2) {
           c7 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj4 = { value, done: true };
+          return obj4;
         } else {
           closure_3 = tmp3;
           closure_2 = tmp5;
@@ -2006,25 +2151,24 @@ let closure_37 = async function _fetchQuestHomeHero() {
             }
             const _Date2 = Date;
             closure_130_1 = Date.now();
-            let obj1 = { type: "QUESTS_FETCH_QUEST_HOME_HERO_BEGIN", placement: QUEST_HOME_BANNER_DESKTOP };
-            DispatcherDefault.dispatch(obj1);
+            const obj5 = { type: "QUESTS_FETCH_QUEST_HOME_HERO_BEGIN", placement: QUEST_HOME_BANNER_DESKTOP };
+            DispatcherDefault.dispatch(obj5);
             c5 = 1;
             c6 = 2;
             c7 = 1;
-            const obj2 = { value: SessionHeartbeatScheduler.getSession(), done: false };
-            return obj2;
+            const obj6 = { value: SessionHeartbeatScheduler.getSession(), done: false };
+            return obj6;
           }
           c7 = 3;
         }
       } else if (1 === tmp8) {
         c5 = 0;
         closure_130_9 = closure_4;
-        let obj12 = closure_131_1(closure_131_2[12]);
-        const obj3 = { type: "QUESTS_FETCH_QUEST_HOME_HERO_FAILURE", error: null, placement: null };
+        const obj7 = { type: "QUESTS_FETCH_QUEST_HOME_HERO_FAILURE", error: null, placement: null };
         const tmp91 = new closure_131_1(closure_131_2[13])(closure_130_9);
-        obj3.error = tmp91;
-        obj3.placement = closure_130_0;
-        obj12.dispatch(obj3);
+        obj7.error = tmp91;
+        obj7.placement = closure_130_0;
+        closure_131_1(closure_131_2[12]).dispatch(obj7);
         throw closure_130_9;
       } else if (2 === tmp8) {
         if (arg0 === 1) {
@@ -2033,15 +2177,14 @@ let closure_37 = async function _fetchQuestHomeHero() {
         } else if (arg0 === 2) {
           c5 = 0;
           c7 = 3;
-          const obj4 = { value, done: true };
-          return obj4;
+          const obj8 = { value, done: true };
+          return obj8;
         } else {
           closure_130_2 = value;
-          let obj9 = closure_131_0(closure_131_2[31]);
           c6 = 3;
           c7 = 1;
-          const obj5 = { value: obj9.getOrRefreshAdSession(), done: false };
-          return obj5;
+          const obj9 = { value: closure_131_0(closure_131_2[31]).getOrRefreshAdSession(), done: false };
+          return obj9;
         }
       } else if (3 === tmp8) {
         if (arg0 === 1) {
@@ -2050,15 +2193,15 @@ let closure_37 = async function _fetchQuestHomeHero() {
         } else if (arg0 === 2) {
           c5 = 0;
           c7 = 3;
-          const obj6 = { value, done: true };
-          return obj6;
+          const obj11 = { value, done: true };
+          return obj11;
         } else {
           closure_130_3 = value;
           const _URLSearchParams = URLSearchParams;
-          const obj7 = { placement: null, num_decisions_requested: "1" };
+          const obj12 = { placement: null, num_decisions_requested: "1" };
           const _String = String;
-          obj7.placement = String(closure_130_0);
-          const uRLSearchParams = new URLSearchParams(obj7);
+          obj12.placement = String(closure_130_0);
+          const uRLSearchParams = new URLSearchParams(obj12);
           closure_130_4 = uRLSearchParams;
           let uuid;
           if (closure_130_2 != null) {
@@ -2071,15 +2214,15 @@ let closure_37 = async function _fetchQuestHomeHero() {
             closure_130_4.append("client_ad_session_id", closure_130_3.uuid);
           }
           const HTTP = closure_131_0(closure_131_2[11]).HTTP;
-          const obj8 = { url: null, rejectWithError: false, context: null };
+          const obj14 = { url: null, rejectWithError: false, context: null };
           const _HermesInternal = HermesInternal;
-          obj8.url = "" + closure_131_14.QUESTS_GET_DECISIONS + "?" + closure_130_4.toString();
-          obj9 = { connection_type: closure_131_7.getType() };
-          obj8.context = obj9;
+          obj14.url = "" + closure_131_14.QUESTS_GET_DECISIONS + "?" + closure_130_4.toString();
+          const obj16 = { connection_type: closure_131_7.getType() };
+          obj14.context = obj16;
           c6 = 4;
           c7 = 1;
-          const obj10 = { value: HTTP.get(obj8), done: false };
-          return obj10;
+          const obj18 = { value: HTTP.get(obj14), done: false };
+          return obj18;
         }
       } else if (arg0 === 1) {
         c7 = 3;
@@ -2111,19 +2254,37 @@ let closure_37 = async function _fetchQuestHomeHero() {
           tmp16 = closure_130_7.creative_type === closure_131_0(closure_131_2[23]).AdCreativeType.QUEST_HOME_HERO;
         }
         if (tmp16) {
-          obj = closure_131_0(closure_131_2[42]);
-          closure_130_8 = obj.questHomeHeroFromServer(closure_130_7);
+          closure_130_8 = closure_131_0(closure_131_2[42]).questHomeHeroFromServer(closure_130_7);
+          const obj = closure_131_0(closure_131_2[42]);
         }
-        obj1 = closure_131_1(closure_131_2[12]);
-        const obj11 = { type: "QUESTS_FETCH_QUEST_HOME_HERO_SUCCESS", questHomeHero: closure_130_8, adDecisionData: null, metadataSealed: null, trafficMetadataSealed: null, provenanceMetadataSealed: null, adContext: null, responseTtlSeconds: null, placement: null, fetchedAt: null };
+        const obj19 = {
+          type: "QUESTS_FETCH_QUEST_HOME_HERO_SUCCESS",
+          questHomeHero: closure_130_8,
+          adDecisionData: null,
+          metadataSealed: null,
+          trafficMetadataSealed: null,
+          provenanceMetadataSealed: null,
+          adContext: null,
+          responseTtlSeconds: null,
+          placement: null,
+          fetchedAt: null,
+        };
         let ad_id;
         if (closure_130_6 != null) {
-          let ad_identifiers = closure_130_6.ad_identifiers;
+          const ad_identifiers = closure_130_6.ad_identifiers;
           if (ad_identifiers != null) {
             ad_id = ad_identifiers.ad_id;
           }
         }
-        obj12 = { ad_id, ad_set_id: null, campaign_id: null, creative_id: null, creative_type: null, decision_id: null, is_targeted: null };
+        const obj20 = {
+          ad_id,
+          ad_set_id: null,
+          campaign_id: null,
+          creative_id: null,
+          creative_type: null,
+          decision_id: null,
+          is_targeted: null,
+        };
         let ad_set_id;
         if (closure_130_6 != null) {
           const ad_identifiers2 = closure_130_6.ad_identifiers;
@@ -2131,7 +2292,7 @@ let closure_37 = async function _fetchQuestHomeHero() {
             ad_set_id = ad_identifiers2.ad_set_id;
           }
         }
-        obj12.ad_set_id = ad_set_id;
+        obj20.ad_set_id = ad_set_id;
         let campaign_id;
         if (closure_130_6 != null) {
           const ad_identifiers3 = closure_130_6.ad_identifiers;
@@ -2139,7 +2300,7 @@ let closure_37 = async function _fetchQuestHomeHero() {
             campaign_id = ad_identifiers3.campaign_id;
           }
         }
-        obj12.campaign_id = campaign_id;
+        obj20.campaign_id = campaign_id;
         let creative_id;
         if (closure_130_6 != null) {
           const ad_identifiers4 = closure_130_6.ad_identifiers;
@@ -2147,7 +2308,7 @@ let closure_37 = async function _fetchQuestHomeHero() {
             creative_id = ad_identifiers4.creative_id;
           }
         }
-        obj12.creative_id = creative_id;
+        obj20.creative_id = creative_id;
         let creative_type;
         if (closure_130_6 != null) {
           const ad_identifiers5 = closure_130_6.ad_identifiers;
@@ -2155,48 +2316,49 @@ let closure_37 = async function _fetchQuestHomeHero() {
             creative_type = ad_identifiers5.creative_type;
           }
         }
-        obj12.creative_type = creative_type;
-        obj12.decision_id = body.request_id;
-        ad_identifiers = undefined;
+        obj20.creative_type = creative_type;
+        obj20.decision_id = body.request_id;
+        let ad_identifiers1;
         if (closure_130_6 != null) {
-          ad_identifiers = closure_130_6.ad_identifiers;
+          ad_identifiers1 = closure_130_6.ad_identifiers;
         }
-        obj12.is_targeted = null != ad_identifiers;
-        obj11.adDecisionData = obj12;
+        obj20.is_targeted = null != ad_identifiers1;
+        obj19.adDecisionData = obj20;
         let metadata_sealed;
         if (closure_130_6 != null) {
           metadata_sealed = closure_130_6.metadata_sealed;
         }
-        obj11.metadataSealed = metadata_sealed;
+        obj19.metadataSealed = metadata_sealed;
         let prop;
         if (closure_130_6 != null) {
           prop = closure_130_6.traffic_metadata_sealed;
         }
-        obj11.trafficMetadataSealed = prop;
+        obj19.trafficMetadataSealed = prop;
         let prop1;
         if (closure_130_6 != null) {
           prop1 = closure_130_6.provenance_metadata_sealed;
         }
-        obj11.provenanceMetadataSealed = prop1;
+        obj19.provenanceMetadataSealed = prop1;
         let ad_context;
         if (closure_130_6 != null) {
           ad_context = closure_130_6.ad_context;
         }
-        obj11.adContext = ad_context;
+        obj19.adContext = ad_context;
         let response_ttl_seconds;
         if (closure_130_6 != null) {
           response_ttl_seconds = closure_130_6.response_ttl_seconds;
         }
-        obj11.responseTtlSeconds = response_ttl_seconds;
-        obj11.placement = closure_130_0;
-        obj11.fetchedAt = closure_130_1;
-        obj1.dispatch(obj11);
+        obj19.responseTtlSeconds = response_ttl_seconds;
+        obj19.placement = closure_130_0;
+        obj19.fetchedAt = closure_130_1;
+        closure_131_1(closure_131_2[12]).dispatch(obj19);
         c5 = 0;
+        const obj2 = closure_131_1(closure_131_2[12]);
       }
       c5 = 0;
       c7 = 3;
-      const obj13 = { value, done: true };
-      return obj13;
+      const obj21 = { value, done: true };
+      return obj21;
     } catch (tmp103) {
       closure_4 = tmp103;
       if (tmp4 === c5) {
@@ -2216,8 +2378,8 @@ let closure_38 = async function _fetchQuestHomeHeroPreview(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj3 = { value, done: true };
+      return obj3;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -2230,8 +2392,8 @@ let closure_38 = async function _fetchQuestHomeHeroPreview(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c8 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj4 = { value, done: true };
+          return obj4;
         } else {
           closure_4 = tmp3;
           closure_3 = tmp5;
@@ -2245,34 +2407,33 @@ let closure_38 = async function _fetchQuestHomeHeroPreview(arg0) {
           closure_131_0 = QUEST_HOME_BANNER_DESKTOP;
           const _Date = Date;
           closure_131_1 = Date.now();
-          let obj1 = { type: "QUESTS_FETCH_QUEST_HOME_HERO_BEGIN", placement: QUEST_HOME_BANNER_DESKTOP };
-          DispatcherDefault.dispatch(obj1);
+          const obj5 = { type: "QUESTS_FETCH_QUEST_HOME_HERO_BEGIN", placement: QUEST_HOME_BANNER_DESKTOP };
+          DispatcherDefault.dispatch(obj5);
           c6 = 1;
           const _URLSearchParams = URLSearchParams;
           const items = ["ad_creative_ids", closure_0];
-          const items1 = [items, ];
+          const items1 = [items];
           const _String = String;
           const items2 = ["placement", String(QUEST_HOME_BANNER_DESKTOP)];
           items1[1] = items2;
           const str4 = new URLSearchParams(items1);
           const HTTP = HTTPUtils.HTTP;
-          const obj2 = { url: null, rejectWithError: false };
+          const obj7 = { url: null, rejectWithError: false };
           const _HermesInternal = HermesInternal;
-          obj2.url = "" + constants.QUESTS_CREATIVE_PREVIEW + "?" + str4.toString();
+          obj7.url = "" + constants.QUESTS_CREATIVE_PREVIEW + "?" + str4.toString();
           c7 = 2;
           c8 = 1;
-          const obj3 = { value: HTTP.get(obj2), done: false };
-          return obj3;
+          const obj8 = { value: HTTP.get(obj7), done: false };
+          return obj8;
         }
       } else if (1 === tmp8) {
         c6 = 0;
         closure_131_6 = closure_5;
-        let obj5 = closure_132_1(closure_132_2[12]);
-        const obj4 = { type: "QUESTS_FETCH_QUEST_HOME_HERO_FAILURE", error: null, placement: null };
+        const obj9 = { type: "QUESTS_FETCH_QUEST_HOME_HERO_FAILURE", error: null, placement: null };
         const tmp69 = new closure_132_1(closure_132_2[13])(closure_131_6);
-        obj4.error = tmp69;
-        obj4.placement = closure_131_0;
-        obj5.dispatch(obj4);
+        obj9.error = tmp69;
+        obj9.placement = closure_131_0;
+        closure_132_1(closure_132_2[12]).dispatch(obj9);
         throw closure_131_6;
       } else if (arg0 === 1) {
         c8 = 3;
@@ -2280,8 +2441,8 @@ let closure_38 = async function _fetchQuestHomeHeroPreview(arg0) {
       } else if (arg0 === 2) {
         c6 = 0;
         c8 = 3;
-        obj5 = { value, done: true };
-        return obj5;
+        const obj10 = { value, done: true };
+        return obj10;
       } else {
         body = value.body;
         const decisions = body.decisions;
@@ -2309,19 +2470,37 @@ let closure_38 = async function _fetchQuestHomeHeroPreview(arg0) {
           tmp16 = closure_131_4.creative_type === closure_132_0(closure_132_2[23]).AdCreativeType.QUEST_HOME_HERO;
         }
         if (tmp16) {
-          obj = closure_132_0(closure_132_2[42]);
-          closure_131_5 = obj.questHomeHeroFromServer(closure_131_4);
+          closure_131_5 = closure_132_0(closure_132_2[42]).questHomeHeroFromServer(closure_131_4);
+          const obj = closure_132_0(closure_132_2[42]);
         }
-        obj1 = closure_132_1(closure_132_2[12]);
-        const obj6 = { type: "QUESTS_FETCH_QUEST_HOME_HERO_SUCCESS", questHomeHero: closure_131_5, adDecisionData: null, metadataSealed: null, trafficMetadataSealed: null, provenanceMetadataSealed: null, adContext: null, responseTtlSeconds: null, placement: null, fetchedAt: null };
+        const obj12 = {
+          type: "QUESTS_FETCH_QUEST_HOME_HERO_SUCCESS",
+          questHomeHero: closure_131_5,
+          adDecisionData: null,
+          metadataSealed: null,
+          trafficMetadataSealed: null,
+          provenanceMetadataSealed: null,
+          adContext: null,
+          responseTtlSeconds: null,
+          placement: null,
+          fetchedAt: null,
+        };
         let ad_id;
         if (closure_131_3 != null) {
-          let ad_identifiers = closure_131_3.ad_identifiers;
+          const ad_identifiers = closure_131_3.ad_identifiers;
           if (ad_identifiers != null) {
             ad_id = ad_identifiers.ad_id;
           }
         }
-        const obj7 = { ad_id, ad_set_id: null, campaign_id: null, creative_id: null, creative_type: null, decision_id: null, is_targeted: null };
+        const obj13 = {
+          ad_id,
+          ad_set_id: null,
+          campaign_id: null,
+          creative_id: null,
+          creative_type: null,
+          decision_id: null,
+          is_targeted: null,
+        };
         let ad_set_id;
         if (closure_131_3 != null) {
           const ad_identifiers2 = closure_131_3.ad_identifiers;
@@ -2329,7 +2508,7 @@ let closure_38 = async function _fetchQuestHomeHeroPreview(arg0) {
             ad_set_id = ad_identifiers2.ad_set_id;
           }
         }
-        obj7.ad_set_id = ad_set_id;
+        obj13.ad_set_id = ad_set_id;
         let campaign_id;
         if (closure_131_3 != null) {
           const ad_identifiers3 = closure_131_3.ad_identifiers;
@@ -2337,7 +2516,7 @@ let closure_38 = async function _fetchQuestHomeHeroPreview(arg0) {
             campaign_id = ad_identifiers3.campaign_id;
           }
         }
-        obj7.campaign_id = campaign_id;
+        obj13.campaign_id = campaign_id;
         let creative_id;
         if (closure_131_3 != null) {
           const ad_identifiers4 = closure_131_3.ad_identifiers;
@@ -2345,7 +2524,7 @@ let closure_38 = async function _fetchQuestHomeHeroPreview(arg0) {
             creative_id = ad_identifiers4.creative_id;
           }
         }
-        obj7.creative_id = creative_id;
+        obj13.creative_id = creative_id;
         let creative_type;
         if (closure_131_3 != null) {
           const ad_identifiers5 = closure_131_3.ad_identifiers;
@@ -2353,42 +2532,42 @@ let closure_38 = async function _fetchQuestHomeHeroPreview(arg0) {
             creative_type = ad_identifiers5.creative_type;
           }
         }
-        obj7.creative_type = creative_type;
-        obj7.decision_id = body.request_id;
-        ad_identifiers = undefined;
+        obj13.creative_type = creative_type;
+        obj13.decision_id = body.request_id;
+        let ad_identifiers1;
         if (closure_131_3 != null) {
-          ad_identifiers = closure_131_3.ad_identifiers;
+          ad_identifiers1 = closure_131_3.ad_identifiers;
         }
-        obj7.is_targeted = null != ad_identifiers;
-        obj6.adDecisionData = obj7;
+        obj13.is_targeted = null != ad_identifiers1;
+        obj12.adDecisionData = obj13;
         let metadata_sealed;
         if (closure_131_3 != null) {
           metadata_sealed = closure_131_3.metadata_sealed;
         }
-        obj6.metadataSealed = metadata_sealed;
+        obj12.metadataSealed = metadata_sealed;
         let prop;
         if (closure_131_3 != null) {
           prop = closure_131_3.traffic_metadata_sealed;
         }
-        obj6.trafficMetadataSealed = prop;
+        obj12.trafficMetadataSealed = prop;
         let prop1;
         if (closure_131_3 != null) {
           prop1 = closure_131_3.provenance_metadata_sealed;
         }
-        obj6.provenanceMetadataSealed = prop1;
+        obj12.provenanceMetadataSealed = prop1;
         let ad_context;
         if (closure_131_3 != null) {
           ad_context = closure_131_3.ad_context;
         }
-        obj6.adContext = ad_context;
+        obj12.adContext = ad_context;
         let response_ttl_seconds;
         if (closure_131_3 != null) {
           response_ttl_seconds = closure_131_3.response_ttl_seconds;
         }
-        obj6.responseTtlSeconds = response_ttl_seconds;
-        obj6.placement = closure_131_0;
-        obj6.fetchedAt = closure_131_1;
-        obj1.dispatch(obj6);
+        obj12.responseTtlSeconds = response_ttl_seconds;
+        obj12.placement = closure_131_0;
+        obj12.fetchedAt = closure_131_1;
+        closure_132_1(closure_132_2[12]).dispatch(obj12);
         c6 = 0;
         c8 = 3;
         return { value: "HermesInternal", done: null };
@@ -2404,14 +2583,23 @@ let closure_38 = async function _fetchQuestHomeHeroPreview(arg0) {
     }
   }
 };
-const getVisibleGuildIdsMethod = fn(11328).getVisibleGuildIdsMethod;
+const getVisibleGuildIdsMethod = fn(11329).getVisibleGuildIdsMethod;
 const FetchStatus = fn(7807).FetchStatus;
 const ORBS_INTRO_QUEST_ID = fn(5525).ORBS_INTRO_QUEST_ID;
 const Constants = fn(1074);
 ({ AnalyticEvents: map1, Endpoints: closure_14 } = Constants);
-let items = [fn(5528).QuestContent.QUEST_BAR, fn(5528).QuestContent.QUEST_BAR_V2, fn(5528).QuestContent.QUEST_BAR_MOBILE];
+let items = [
+  fn(5528).QuestContent.QUEST_BAR,
+  fn(5528).QuestContent.QUEST_BAR_V2,
+  fn(5528).QuestContent.QUEST_BAR_MOBILE,
+];
 const set = new Set(items);
-const QuestEnrollmentResultType = { SUCCESS: "success", CAPTCHA_FAILED: "captcha_failed", UNKNOWN_ERROR: "unknown_error", PREVIOUS_IN_FLIGHT_REQUEST: "previous_in_flight_request" };
+const QuestEnrollmentResultType = {
+  SUCCESS: "success",
+  CAPTCHA_FAILED: "captcha_failed",
+  UNKNOWN_ERROR: "unknown_error",
+  PREVIOUS_IN_FLIGHT_REQUEST: "previous_in_flight_request",
+};
 let closure_36 = 5 * DurationsDefault.Millis.MINUTE;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/quests/QuestActionCreators.tsx");
@@ -2508,8 +2696,7 @@ export const dismissQuestContent = function dismissQuestContent() {
   return applyArgumentsResult;
 };
 export const dismissProgressTrackingFailureNotice = function dismissProgressTrackingFailureNotice(streamKey) {
-  const obj = { type: "QUESTS_DISMISS_PROGRESS_TRACKING_FAILURE_NOTICE", streamKey };
-  obj.dispatch(obj);
+  DispatcherDefault.dispatch({ type: "QUESTS_DISMISS_PROGRESS_TRACKING_FAILURE_NOTICE", streamKey });
 };
 export const completeQuestPreview = function completeQuestPreview() {
   const self = this;
@@ -2542,12 +2729,10 @@ export const resetQuestDismissibilityStatus = function resetQuestDismissibilityS
   return applyArgumentsResult;
 };
 export const overrideQuestForPlacement = function overrideQuestForPlacement(placement, questId) {
-  const obj = { type: "QUESTS_PREVIEW_OVERRIDE", placement, questId };
-  obj.dispatch(obj);
+  DispatcherDefault.dispatch({ type: "QUESTS_PREVIEW_OVERRIDE", placement, questId });
 };
 export const selectTaskPlatform = function selectTaskPlatform(questId, platform) {
-  const obj = { type: "QUESTS_SELECT_TASK_PLATFORM", questId, platform };
-  obj.dispatch(obj);
+  DispatcherDefault.dispatch({ type: "QUESTS_SELECT_TASK_PLATFORM", questId, platform });
 };
 export const questsVisibleMobileMessagesChanged = function questsVisibleMobileMessagesChanged(payload) {
   const action = { type: "QUESTS_VISIBLE_MOBILE_MESSAGES_CHANGED", payload };
@@ -2564,12 +2749,15 @@ export const fetchClaimedQuests = function fetchClaimedQuests() {
   return applyArgumentsResult;
 };
 export const updateOptimisticProgress = function updateOptimisticProgress(id, taskType, currentTime) {
-  const obj = { type: "QUESTS_UPDATE_OPTIMISTIC_PROGRESS", questId: id, taskEventName: taskType, progress: currentTime };
-  obj.dispatch(obj);
+  DispatcherDefault.dispatch({
+    type: "QUESTS_UPDATE_OPTIMISTIC_PROGRESS",
+    questId: id,
+    taskEventName: taskType,
+    progress: currentTime,
+  });
 };
 export const resetOptimisticProgress = function resetOptimisticProgress(questId) {
-  const obj = { type: "QUESTS_RESET_OPTIMISTIC_PROGRESS", questId };
-  obj.dispatch(obj);
+  DispatcherDefault.dispatch({ type: "QUESTS_RESET_OPTIMISTIC_PROGRESS", questId });
 };
 export const fetchQuestToDeliver = function fetchQuestToDeliver() {
   const self = this;
@@ -2582,8 +2770,13 @@ export const fetchQuestToDeliver = function fetchQuestToDeliver() {
   return applyArgumentsResult;
 };
 export const clearQuestAdDecision = function clearQuestAdDecision(placement, ttlMillis) {
-  const obj = { type: "QUESTS_CLEAR_EXPIRED_QUEST_TO_DELIVER", placement, fetchedAt: Date.now(), responseTtlSeconds: ttlMillis / 1000 };
-  obj.dispatch(obj);
+  const obj = DispatcherDefault;
+  obj.dispatch({
+    type: "QUESTS_CLEAR_EXPIRED_QUEST_TO_DELIVER",
+    placement,
+    fetchedAt: Date.now(),
+    responseTtlSeconds: ttlMillis / 1000,
+  });
 };
 export const fetchEarnedQuestToDeliver = function fetchEarnedQuestToDeliver() {
   const self = this;
@@ -2596,8 +2789,7 @@ export const fetchEarnedQuestToDeliver = function fetchEarnedQuestToDeliver() {
   return applyArgumentsResult;
 };
 export const updatePrevRestingQuestDockMode = function updatePrevRestingQuestDockMode(mode) {
-  const obj = { type: "QUESTS_PREV_RESTING_QUEST_DOCK_MODE_UPDATE", mode };
-  obj.dispatch(obj);
+  DispatcherDefault.dispatch({ type: "QUESTS_PREV_RESTING_QUEST_DOCK_MODE_UPDATE", mode });
 };
 export const updateVideoProgress = function updateVideoProgress() {
   const self = this;
@@ -2619,8 +2811,13 @@ export const fetchVideoTranscript = function fetchVideoTranscript() {
   }
   return applyArgumentsResult;
 };
-export const updateQuestDockVisibilityEligibility = function updateQuestDockVisibilityEligibility(isEligibleToBeVisible) {
-  DispatcherDefault.dispatch({ type: "QUESTS_DOCK_VISIBILITY_ELIGIBILITY_UPDATE", isEligibleToBeVisible: isEligibleToBeVisible.isEligibleToBeVisible });
+export const updateQuestDockVisibilityEligibility = function updateQuestDockVisibilityEligibility(
+  isEligibleToBeVisible,
+) {
+  DispatcherDefault.dispatch({
+    type: "QUESTS_DOCK_VISIBILITY_ELIGIBILITY_UPDATE",
+    isEligibleToBeVisible: isEligibleToBeVisible.isEligibleToBeVisible,
+  });
 };
 export const fetchQuest = function fetchQuest() {
   const self = this;
@@ -2663,22 +2860,17 @@ export const fetchQuestHomeHeroPreview = function fetchQuestHomeHeroPreview() {
   return applyArgumentsResult;
 };
 export const dismissQuestActivityModal = function dismissQuestActivityModal(id) {
-  const obj = { type: "UNENROLLED_ACTIVITY_QUEST_DISMISS", questId: id };
-  obj.dispatch(obj);
+  DispatcherDefault.dispatch({ type: "UNENROLLED_ACTIVITY_QUEST_DISMISS", questId: id });
 };
 export const setAutoEnroll = function setAutoEnroll(autoEnroll) {
-  const obj = { type: "UNENROLLED_ACTIVITY_QUEST_AUTO_ENROLL", autoEnroll };
-  obj.dispatch(obj);
+  DispatcherDefault.dispatch({ type: "UNENROLLED_ACTIVITY_QUEST_AUTO_ENROLL", autoEnroll });
 };
 export const markAdContentSeen = function markAdContentSeen(QUEST, items) {
-  const obj = { type: "AD_CONTENT_MARK_SEEN", adCreativeType: QUEST, contentIds: items };
-  obj.dispatch(obj);
+  DispatcherDefault.dispatch({ type: "AD_CONTENT_MARK_SEEN", adCreativeType: QUEST, contentIds: items });
 };
 export const markAdContentUnseen = function markAdContentUnseen(QUEST, items) {
-  const obj = { type: "AD_CONTENT_MARK_UNSEEN", adCreativeType: QUEST, contentIds: items };
-  obj.dispatch(obj);
+  DispatcherDefault.dispatch({ type: "AD_CONTENT_MARK_UNSEEN", adCreativeType: QUEST, contentIds: items });
 };
 export const markQuestDiscovered = function markQuestDiscovered(questId) {
-  const obj = { type: "QUESTS_MARK_DISCOVERED", questId };
-  obj.dispatch(obj);
+  DispatcherDefault.dispatch({ type: "QUESTS_MARK_DISCOVERED", questId });
 };

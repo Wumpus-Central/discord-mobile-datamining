@@ -8,6 +8,8 @@ import UserStore from "../../stores/UserStore.tsx";
 import Constants from "../../Constants.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
+const require = globalThis.__r;
+
 let useRef = _mod19.useRef;
 ({ RelationshipTypes: closure_7, UserFlags: closure_8 } = Constants);
 const ChannelFlags = ChannelConstants.ChannelFlags;

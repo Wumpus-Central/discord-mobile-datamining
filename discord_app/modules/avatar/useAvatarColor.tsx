@@ -4,9 +4,11 @@ import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 import noop from "../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../a11y/AccessibilityStore.tsx";
 
+const require = globalThis.__r;
+
 const require = fn;
 function hasFetchedColors(game_name) {
-  return null != module_560.getState().palette[game_name];
+  return null != obj3.getState().palette[game_name];
 }
 let closure_9 = async function _maybeFetchColors(arg0) {
   if (c1 === 2) {
@@ -16,8 +18,8 @@ let closure_9 = async function _maybeFetchColors(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -30,20 +32,20 @@ let closure_9 = async function _maybeFetchColors(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c1 = 3;
-          obj = { value, done: true };
-          return obj;
+          obj3 = { value, done: true };
+          return obj3;
         } else if (!hasFetchedColors(closure_0)) {
           c2 = 1;
           c1 = 1;
-          const obj1 = { value: fetchColors(closure_0), done: false };
-          return obj1;
+          const obj4 = { value: fetchColors(closure_0), done: false };
+          return obj4;
         }
       } else if (arg0 === 1) {
         c1 = 3;
         throw value;
       } else if (arg0 === 2) {
         c1 = 3;
-        obj = { value, done: true };
+        const obj = { value, done: true };
         return obj;
       }
       c1 = 3;
@@ -72,8 +74,8 @@ let closure_11 = async function _fetchColors(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      obj3 = { value, done: true };
+      return obj3;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -86,8 +88,8 @@ let closure_11 = async function _fetchColors(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c6 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj7 = { value, done: true };
+          return obj7;
         } else {
           closure_2 = tmp3;
           closure_1 = tmp7;
@@ -97,11 +99,11 @@ let closure_11 = async function _fetchColors(arg0) {
           if (!state.getState().fetching[closure_0]) {
             require("ReactBatchUpdates").batchUpdates(() =>
               state.setState((fetching) => {
-                let obj = { fetching: null };
-                obj = {};
+                const obj = { fetching: null };
+                const obj2 = {};
                 const merged = Object.assign(fetching.fetching);
-                obj[closure_1_0] = true;
-                obj.fetching = obj;
+                obj2[closure_1_0] = true;
+                obj.fetching = obj2;
                 return obj;
               }),
             );
@@ -109,8 +111,8 @@ let closure_11 = async function _fetchColors(arg0) {
             const obj5 = require("ReactBatchUpdates");
             c5 = 2;
             c6 = 1;
-            let obj1 = { value: require("ImageUtils").getPaletteForAvatar(closure_0), done: false };
-            return obj1;
+            const obj8 = { value: require("ImageUtils").getPaletteForAvatar(closure_0), done: false };
+            return obj8;
           }
         }
       } else {
@@ -118,11 +120,11 @@ let closure_11 = async function _fetchColors(arg0) {
           c4 = 0;
           closure_130_0(closure_130_2[5]).batchUpdates(() =>
             state.setState((fetching) => {
-              let obj = { fetching: null };
-              obj = {};
+              const obj = { fetching: null };
+              const obj2 = {};
               const merged = Object.assign(fetching.fetching);
-              obj[closure_1_0] = false;
-              obj.fetching = obj;
+              obj2[closure_1_0] = false;
+              obj.fetching = obj2;
               return obj;
             }),
           );
@@ -132,30 +134,32 @@ let closure_11 = async function _fetchColors(arg0) {
           throw value;
         } else if (arg0 !== 2) {
           closure_129_1 = value;
-          obj = closure_130_0(closure_130_2[7]);
-          complimentaryPaletteForColor = obj.getComplimentaryPaletteForColor(closure_129_1[0]);
-          obj1 = closure_130_0(closure_130_2[5]);
-          obj1.batchUpdates(() => {
+          complimentaryPaletteForColor = closure_130_0(closure_130_2[7]).getComplimentaryPaletteForColor(
+            closure_129_1[0],
+          );
+          let obj = closure_130_0(closure_130_2[7]);
+          closure_130_0(closure_130_2[5]).batchUpdates(() => {
             state.setState((fetching) => {
-              let obj = { fetching: null, palette: null };
-              obj = {};
+              const obj = { fetching: null, palette: null };
+              const obj2 = {};
               const merged = Object.assign(fetching.fetching);
-              obj[closure_1_0] = false;
-              obj.fetching = obj;
-              obj = {};
+              obj2[closure_1_0] = false;
+              obj.fetching = obj2;
+              obj3 = {};
               const merged1 = Object.assign(fetching.palette);
               const items = [...closure_1_2];
-              obj[closure_1_0] = items;
-              obj.palette = obj;
+              obj3[closure_1_0] = items;
+              obj.palette = obj3;
               return obj;
             });
           });
           c4 = 0;
+          let obj2 = closure_130_0(closure_130_2[5]);
         }
         c4 = 0;
         c6 = 3;
-        const obj2 = { value, done: true };
-        return obj2;
+        const obj9 = { value, done: true };
+        return obj9;
       }
       c6 = 3;
     } catch (tmp27) {
@@ -169,8 +173,8 @@ let closure_11 = async function _fetchColors(arg0) {
     }
   }
 };
-let module_560 = fn(560);
-module_560 = module_560.create(() => ({ palette: {}, fetching: {} }));
+const module_560 = fn(560);
+let obj3 = module_560.create(() => ({ palette: {}, fetching: {} }));
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/avatar/useAvatarColor.tsx");
 
@@ -183,7 +187,7 @@ export default function useAvatarColor(uri, arg1) {
   if (flag === undefined) {
     flag = true;
   }
-  const tmp = module_560((arg0) => {
+  const tmp = obj3((arg0) => {
     let tmp2;
     if (null != closure_0) {
       tmp2 = arg0.palette[tmp];
@@ -218,11 +222,11 @@ export default function useAvatarColor(uri, arg1) {
     if (dependencyMap != null) {
       mapped = dependencyMap.map((item) => {
         [tmp, tmp2, tmp3] = item;
-        let obj = flag(7655)({ r: tmp, g: tmp2, b: tmp3 });
-        ({ h, s, l } = obj.toHsl());
-        obj = { h, s: s * stateFromStores, l };
-        const toHslResult = obj.toHsl();
-        return flag(7655)(obj).toHexString();
+        const obj = flag(7655)({ r: tmp, g: tmp2, b: tmp3 });
+        ({ h, s, l } = flag(7655)({ r: tmp, g: tmp2, b: tmp3 }).toHsl());
+        const obj2 = { h, s: s * stateFromStores, l };
+        const toHslResult = flag(7655)({ r: tmp, g: tmp2, b: tmp3 }).toHsl();
+        return flag(7655)({ h, s: s * stateFromStores, l }).toHexString();
       });
     }
     return mapped;
@@ -233,7 +237,7 @@ export default function useAvatarColor(uri, arg1) {
   }
   return stateFromStores(memo, 1)[0];
 }
-export const useColorStore = module_560;
+export const useColorStore = obj3;
 export { hasFetchedColors };
 export const maybeFetchColors = function maybeFetchColors() {
   const self = this;
@@ -247,7 +251,7 @@ export const maybeFetchColors = function maybeFetchColors() {
 };
 export const useHasFetchedColors = function useHasFetchedColors(arg0) {
   closure_0 = arg0;
-  return !module_560((arg0) => {
+  return !obj3((arg0) => {
     let tmp2 = null != closure_0;
     if (tmp2) {
       tmp2 = arg0.fetching[tmp];
@@ -261,7 +265,7 @@ export const useAvatarColors = function useAvatarColors(pendingAvatarSrc, PRIMAR
   if (arg2 === undefined) {
     flag = true;
   }
-  const tmp = module_560((arg0) => {
+  const tmp = obj3((arg0) => {
     let tmp2;
     if (null != closure_0) {
       tmp2 = arg0.palette[tmp];
@@ -296,11 +300,11 @@ export const useAvatarColors = function useAvatarColors(pendingAvatarSrc, PRIMAR
     if (dependencyMap != null) {
       mapped = dependencyMap.map((item) => {
         [tmp, tmp2, tmp3] = item;
-        let obj = flag(7655)({ r: tmp, g: tmp2, b: tmp3 });
-        ({ h, s, l } = obj.toHsl());
-        obj = { h, s: s * stateFromStores, l };
-        const toHslResult = obj.toHsl();
-        return flag(7655)(obj).toHexString();
+        const obj = flag(7655)({ r: tmp, g: tmp2, b: tmp3 });
+        ({ h, s, l } = flag(7655)({ r: tmp, g: tmp2, b: tmp3 }).toHsl());
+        const obj2 = { h, s: s * stateFromStores, l };
+        const toHslResult = flag(7655)({ r: tmp, g: tmp2, b: tmp3 }).toHsl();
+        return flag(7655)({ h, s: s * stateFromStores, l }).toHexString();
       });
     }
     return mapped;

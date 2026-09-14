@@ -9,7 +9,7 @@ import useRecipientsLabel from "../../../useRecipientsLabel.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const UserRowModes = fn(10988).UserRowModes;
+const UserRowModes = fn(10989).UserRowModes;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/user_list/GroupDMRow.tsx");
@@ -37,15 +37,15 @@ export default function GroupDMRow(channel) {
       tmp(channel);
     }
   }, items);
-  let obj = { size: native.AvatarSizes.REFRESH_MEDIUM_32, channel };
-  let obj1 = useRecipientsLabel;
-  const recipientsLabel = obj1.useRecipientsLabel(channel);
-  obj = {};
+  const obj = { size: native.AvatarSizes.REFRESH_MEDIUM_32, channel };
+  const tmp8 = jsx(GroupDMAvatarDefault, { size: native.AvatarSizes.REFRESH_MEDIUM_32, channel });
+  const recipientsLabel = useRecipientsLabel.useRecipientsLabel(channel);
+  const obj3 = {};
   const merged1 = Object.assign(merged);
-  obj.disabled = flag2;
+  obj3.disabled = flag2;
   let tmp5Result;
   if (null != recipientsLabel) {
-    obj = { variant: "text-xs/medium", color: "text-muted", lineClamp: 1, children: recipientsLabel };
+    const obj4 = { variant: "text-xs/medium", color: "text-muted", lineClamp: 1, children: recipientsLabel };
     tmp5Result = jsx(Text_Text.Text, {
       variant: "text-xs/medium",
       color: "text-muted",
@@ -53,24 +53,24 @@ export default function GroupDMRow(channel) {
       children: recipientsLabel,
     });
   }
-  obj.subLabel = tmp5Result;
-  obj.icon = jsx(GroupDMAvatarDefault, {});
-  obj.onPress = callback;
+  obj3.subLabel = tmp5Result;
+  obj3.icon = tmp8;
+  obj3.onPress = callback;
   if (str == null) {
     str = "";
   }
-  obj.label = str;
-  obj.labelLineClamp = 1;
-  obj.height = "100%";
+  obj3.label = str;
+  obj3.labelLineClamp = 1;
+  obj3.height = "100%";
   if (NONE === UserRowModes.TOGGLE) {
-    obj1 = {};
-    const merged2 = Object.assign(obj);
-    obj1.checked = flag;
-    tmp5Result = jsx(TableCheckboxRow.TableCheckboxRow, {});
+    const obj5 = {};
+    const merged2 = Object.assign(obj3);
+    obj5.checked = flag;
+    let tmp5Result2 = jsx(TableCheckboxRow.TableCheckboxRow, {});
   } else {
-    const obj2 = {};
-    const merged3 = Object.assign(obj);
-    tmp5Result = jsx(TableRow.TableRow, {});
+    const obj6 = {};
+    const merged3 = Object.assign(obj3);
+    tmp5Result2 = jsx(TableRow.TableRow, {});
   }
-  return tmp5Result;
+  return tmp5Result2;
 }

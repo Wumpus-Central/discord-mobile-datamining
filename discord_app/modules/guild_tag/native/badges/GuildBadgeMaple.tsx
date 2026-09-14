@@ -28,19 +28,18 @@ export const GuildBadgeMaple = function GuildBadgeMaple(primaryTintColor) {
     num2 = 24;
   }
   const merged = Object.assign(primaryTintColor, Object.assign({ width: 0, height: 0, primaryTintColor: 0 }));
-  let obj = {
+  const primaryColorsTransformed = GuildBadgeUtils.getTransformedBadgeColors({
     primaryBaseColors,
     primaryTintColor: primaryTintColor.primaryTintColor,
     primaryTintLuminances,
     primaryLuminanceWeights: items,
-  };
-  const primaryColorsTransformed = obj.getTransformedBadgeColors(obj).primaryColorsTransformed;
-  obj = {};
+  }).primaryColorsTransformed;
+  const obj3 = {};
   const merged1 = Object.assign(merged);
-  obj.width = num;
-  obj.height = num2;
-  obj.viewBox = "0 0 16 16";
-  obj.fill = "none";
+  obj3.width = num;
+  obj3.height = num2;
+  obj3.viewBox = "0 0 16 16";
+  obj3.fill = "none";
   items = [
     React2(inlineStyles.Path, {
       d: "M5 12h-1v-1h1v1ZM7 12h-1v-2h-1v-1h1V6h1v6ZM5 9h-1v-1h1v1ZM4 8h-1v-1h1v1ZM3 7H2v-1h1v1Z",
@@ -75,6 +74,6 @@ export const GuildBadgeMaple = function GuildBadgeMaple(primaryTintColor) {
       fill: "black",
     }),
   ];
-  obj.children = items;
-  return React3(inlineStyles.Svg, obj);
+  obj3.children = items;
+  return React3(inlineStyles.Svg, obj3);
 };

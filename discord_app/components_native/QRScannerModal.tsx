@@ -27,23 +27,22 @@ const UserSettingsSections = fn(1074).UserSettingsSections;
 let closure_7 = fn(7641).FAMILY_CENTER_LINK_REQUEST_REGEX;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-let PlatformUtils = fn(1150);
+const PlatformUtils = fn(1363);
 if (PlatformUtils.isAndroid()) {
   let importDefaultResult = QRScannerNativeComponentDefault;
 } else {
   importDefaultResult = requireNativeComponent("DCDQRScanner");
 }
 let c10 = importDefaultResult;
-PlatformUtils = {
+let obj2 = {
   scanner: { position: "absolute", height: "100%", width: "100%" },
   closeButton: { marginLeft: 8 },
-  emptyView: null,
+  emptyView: { backgroundColor: nativeDefault.unsafe_rawColors.BLACK },
   showHelp: null,
   text: null,
 };
-PlatformUtils = { backgroundColor: nativeDefault.unsafe_rawColors.BLACK };
-PlatformUtils.emptyView = PlatformUtils;
-PlatformUtils.showHelp = {
+let obj3 = { backgroundColor: nativeDefault.unsafe_rawColors.BLACK };
+obj2.showHelp = {
   marginLeft: 16,
   marginRight: 16,
   marginTop: "auto",
@@ -54,7 +53,7 @@ PlatformUtils.showHelp = {
   paddingLeft: 16,
   paddingRight: 16,
 };
-let obj1 = {
+let obj4 = {
   marginLeft: 16,
   marginRight: 16,
   marginTop: "auto",
@@ -65,7 +64,7 @@ let obj1 = {
   paddingLeft: 16,
   paddingRight: 16,
 };
-PlatformUtils.text = { color: nativeDefault.unsafe_rawColors.WHITE, textAlign: "center" };
+obj2.text = { color: nativeDefault.unsafe_rawColors.WHITE, textAlign: "center" };
 let closure_13 = { SUCCEEDED: "SUCCEEDED", FAILED: "FAILED" };
 const size = fn(2);
 let result = size.fileFinishedImporting("components_native/QRScannerModal.tsx");
@@ -73,7 +72,7 @@ let result = size.fileFinishedImporting("components_native/QRScannerModal.tsx");
 export default function QRScannerModal(showHelp) {
   showHelp = showHelp.showHelp;
   const onScanSuccess = showHelp.onScanSuccess;
-  [tmp3, importDefault] = _slicedToArray(noop.useState(true), 2);
+  [tmp3, importDefault] = noop.useState(true);
   const effect = noop.useEffect(() => {
     closure_0 = onScanSuccess(dependencyMap[9]).runAfterInteractions(() => {
       closure_1_1(false);
@@ -87,18 +86,18 @@ export default function QRScannerModal(showHelp) {
   let obj = { style: { flex: 1 }, children: null };
   ({ bottom, top } = useSafeAreaInsetsDefault());
   if (tmp3) {
-    obj = { style: null };
+    obj2 = { style: null };
     const items = [,];
-    ({ scanner: arr[0], emptyView: arr[1] } = PlatformUtils);
-    obj.style = items;
-    let tmp10Result = closure_8(closure_5, obj);
-    let tmp12 = PlatformUtils;
+    ({ scanner: arr[0], emptyView: arr[1] } = obj2);
+    obj2.style = items;
+    let tmp10Result = closure_8(closure_5, obj2);
+    let tmp12 = obj2;
     let tmp14 = closure_8;
   } else {
-    obj = { style: null, pointerEvents: "none", onQRCodeFound: null };
-    tmp12 = PlatformUtils;
-    obj.style = PlatformUtils.scanner;
-    obj.onQRCodeFound = function onQRCodeFound(nativeEvent) {
+    let obj3 = { style: null, pointerEvents: "none", onQRCodeFound: null };
+    tmp12 = obj2;
+    obj3.style = obj2.scanner;
+    obj3.onQRCodeFound = function onQRCodeFound(nativeEvent) {
       if (constants.SUCCEEDED === nativeEvent.nativeEvent.status) {
         if (undefined !== onScanSuccess) {
           tmp2(nativeEvent.nativeEvent.result);
@@ -107,14 +106,13 @@ export default function QRScannerModal(showHelp) {
           if (url == null) {
             url = {};
           }
-          let obj = QRLoginUtils;
-          const result = obj.findRemoteAuthFingerprint(url.hostname, str);
+          const result = QRLoginUtils.findRemoteAuthFingerprint(url.hostname, str);
           if (null != result) {
-            let tmp21Result = ModalActionCreatorsDefault;
-            tmp21Result.pop();
-            tmp21Result = ModalActionCreatorsDefault;
-            obj = { remoteAuthFingerprint: result };
-            tmp21Result.pushLazy(asyncRequireImpl(13951, dependencyMap.paths), obj);
+            ModalActionCreatorsDefault.pop();
+            const tmp21Result = ModalActionCreatorsDefault;
+            obj2 = { remoteAuthFingerprint: result };
+            ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(13952, dependencyMap.paths), obj2);
+            const tmp21Result4 = ModalActionCreatorsDefault;
           } else {
             let match;
             if (str != null) {
@@ -123,59 +121,59 @@ export default function QRScannerModal(showHelp) {
             if (null != match) {
               if (null != str) {
                 ModalActionCreatorsDefault.pop();
-                let tmp3Result = openUserSettings;
-                obj = { screen: UserSettingsSections.FAMILY_CENTER };
-                tmp3Result.openUserSettings(obj);
-                tmp3Result = FamilyCenterNativeUtils;
-                const result1 = tmp3Result.handleFamilyCenterQRCodeScan(str, "UserSettingsQRCodeScan");
-                const tmp21Result1 = ModalActionCreatorsDefault;
+                const tmp21Result5 = ModalActionCreatorsDefault;
+                const obj3 = { screen: UserSettingsSections.FAMILY_CENTER };
+                openUserSettings.openUserSettings(obj3);
+                const tmp3Result = openUserSettings;
+                const result1 = FamilyCenterNativeUtils.handleFamilyCenterQRCodeScan(str, "UserSettingsQRCodeScan");
+                const tmp3Result2 = FamilyCenterNativeUtils;
               }
             }
             LinkingDefault.openURL(nativeEvent.nativeEvent.result, undefined, false);
             let tmp9 = importDefault;
-            const tmp21Result2 = LinkingDefault;
+            const tmp21Result6 = LinkingDefault;
           }
         }
       } else {
         const FAILED = tmp.FAILED;
-        const obj1 = { body: null, title: null };
+        const obj4 = { body: null, title: null };
         const intl = util.intl;
-        obj1.body = intl.string(util.t.QOQlWa);
+        obj4.body = intl.string(util.t.QOQlWa);
         const intl2 = util.intl;
-        obj1.title = intl2.string(util.t["6S318H"]);
-        actions_AlertActionCreatorsDefault.show(obj1);
+        obj4.title = intl2.string(util.t["6S318H"]);
+        actions_AlertActionCreatorsDefault.show(obj4);
         tmp9 = importDefault;
       }
       tmp9(4839).pop();
       const tmp9Result = tmp9(4839);
     };
-    tmp10Result = closure_8(DCDQRScanner, obj);
+    tmp10Result = closure_8(DCDQRScanner, obj3);
     tmp14 = closure_8;
   }
   const items1 = [tmp10Result, ,];
-  let obj1 = { accessibilityRole: "button", accessibilityLabel: null, source: null, style: null, onPress: null };
+  let obj4 = { accessibilityRole: "button", accessibilityLabel: null, source: null, style: null, onPress: null };
   const tmp7 = useSafeAreaInsetsDefault();
   let intl = onScanSuccess(1114).intl;
-  obj1.accessibilityLabel = intl.string(onScanSuccess(1114).t.cpT0Cq);
-  obj1.source = _modDef7192;
+  obj4.accessibilityLabel = intl.string(onScanSuccess(1114).t.cpT0Cq);
+  obj4.source = _modDef7192;
   const items2 = [tmp12.closeButton, { marginTop: top }];
-  obj1.style = items2;
-  obj1.onPress = ModalActionCreatorsDefault.pop;
-  items1[1] = tmp14(TouchableHitBoxDefault, obj1);
+  obj4.style = items2;
+  obj4.onPress = ModalActionCreatorsDefault.pop;
+  items1[1] = tmp14(TouchableHitBoxDefault, obj4);
   let tmp14Result = null;
   if (tmp) {
     tmp14Result = null;
     if (!tmp3) {
-      const obj2 = { style: null, children: null };
+      const obj5 = { style: null, children: null };
       const items3 = [tmp12.showHelp];
-      const obj3 = { marginBottom: bottom + 8 };
-      items3[1] = obj3;
-      obj2.style = items3;
-      const obj4 = { style: tmp12.text, children: null };
+      const obj6 = { marginBottom: bottom + 8 };
+      items3[1] = obj6;
+      obj5.style = items3;
+      const obj7 = { style: tmp12.text, children: null };
       let intl2 = tmp17(1114).intl;
-      obj4.children = intl2.string(tmp17(1114).t.dklV0G);
-      obj2.children = tmp14(tmp17(1178).LegacyText, obj4);
-      tmp14Result = tmp14(closure_5, obj2);
+      obj7.children = intl2.string(tmp17(1114).t.dklV0G);
+      obj5.children = tmp14(tmp17(1176).LegacyText, obj7);
+      tmp14Result = tmp14(closure_5, obj5);
     }
   }
   items1[2] = tmp14Result;

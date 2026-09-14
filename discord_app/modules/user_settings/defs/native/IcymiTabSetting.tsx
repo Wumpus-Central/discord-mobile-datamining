@@ -18,12 +18,11 @@ const toggle = SettingBuilders.createToggle({
     return useLabFeatureDefault(ICYMIExperiment.ICYMI_LAB_FEATURE);
   },
   onValueChange: function onICYMISettingValueChange(enabled) {
-    let obj = ICYMIActionCreatorsDefault;
     let str = "show";
     if (enabled) {
       str = "hide";
     }
-    obj.itemInteracted(str, "icymi_tab_toggle", "press");
+    ICYMIActionCreatorsDefault.itemInteracted(str, "icymi_tab_toggle", "press");
     ICYMIActionCreatorsDefault.feedPageActioned({
       actionParameters: {
         actionGestureType: "press",
@@ -33,8 +32,8 @@ const toggle = SettingBuilders.createToggle({
       },
     });
     const tmpResult = ICYMIActionCreatorsDefault;
-    obj = { enabled };
-    LabFeatureActions.toggleLabFeature(ICYMIExperiment.ICYMI_LAB_FEATURE, obj);
+    LabFeatureActions.toggleLabFeature(ICYMIExperiment.ICYMI_LAB_FEATURE, { enabled });
+    const obj2 = { enabled };
   },
   usePredicate: function useICYMIPredicate() {
     const ICYMIStaffOnlyExperiment = ICYMIExperiment.ICYMIStaffOnlyExperiment;

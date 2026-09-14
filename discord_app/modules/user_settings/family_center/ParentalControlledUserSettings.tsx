@@ -6,19 +6,20 @@ import wrappers from "../../../../discord_common/js/packages/protos/google/proto
 import UserSettings from "../UserSettings.tsx";
 import DMSafetyConstants from "../privacy_and_safety/DMSafetyConstants.tsx";
 import SpendingLimitUtils from "../../parent_tools/SpendingLimitUtils.tsx";
-import ParentalControlledUserSettingsDefinitions from "ParentalControlledUserSettingsDefinitions.tsx";
+import ParentalControlledUserSettingsDefinitions_mod from "ParentalControlledUserSettingsDefinitions.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
 const constants = DMSafetyConstants.ExplicitContentFilterTypes;
 const AllFriendSourceFlags = Constants.AllFriendSourceFlags;
-let obj = { comparator: discord_common_shallowEqualDefault };
+let ParentalControlledUserSettingsDefinitions = ParentalControlledUserSettingsDefinitions_mod;
 const result = ParentalControlledUserSettingsDefinitions.defineParentalControlledSetting(
   "textAndImages",
   "explicitContentSettings",
   UserSettings.explicitContentFromProto,
   UserSettings.explicitContentToProto,
-  obj,
+  { comparator: discord_common_shallowEqualDefault },
 );
+let ParentalControlledUserSettingsDefinitions = ParentalControlledUserSettingsDefinitions_mod;
 const result1 = ParentalControlledUserSettingsDefinitions.defineParentalControlledSetting(
   "textAndImages",
   "explicitContentFilter",
@@ -37,14 +38,16 @@ const result1 = ParentalControlledUserSettingsDefinitions.defineParentalControll
     return UInt32Value.create({ value });
   },
 );
-obj = { comparator: discord_common_shallowEqualDefault };
+let ParentalControlledUserSettingsDefinitions = ParentalControlledUserSettingsDefinitions_mod;
+let obj = { comparator: discord_common_shallowEqualDefault };
 const result2 = ParentalControlledUserSettingsDefinitions.defineParentalControlledSetting(
   "textAndImages",
   "goreContentSettings",
   UserSettings.goreContentFromProto,
   UserSettings.goreContentToProto,
-  obj,
+  { comparator: discord_common_shallowEqualDefault },
 );
+let ParentalControlledUserSettingsDefinitions = ParentalControlledUserSettingsDefinitions_mod;
 const result3 = ParentalControlledUserSettingsDefinitions.defineParentalControlledSetting(
   "privacy",
   "defaultMessageRequestRestricted",
@@ -60,6 +63,7 @@ const result3 = ParentalControlledUserSettingsDefinitions.defineParentalControll
     return BoolValue.create({ value });
   },
 );
+let ParentalControlledUserSettingsDefinitions = ParentalControlledUserSettingsDefinitions_mod;
 const result4 = ParentalControlledUserSettingsDefinitions.defineParentalControlledSetting(
   "privacy",
   "defaultGuildsRestricted",
@@ -72,6 +76,7 @@ const result4 = ParentalControlledUserSettingsDefinitions.defineParentalControll
   },
   (arg0) => arg0,
 );
+let ParentalControlledUserSettingsDefinitions = ParentalControlledUserSettingsDefinitions_mod;
 const result5 = ParentalControlledUserSettingsDefinitions.defineParentalControlledSetting(
   "privacy",
   "defaultGuildsRestrictedV2",
@@ -87,6 +92,7 @@ const result5 = ParentalControlledUserSettingsDefinitions.defineParentalControll
     return BoolValue.create({ value });
   },
 );
+let ParentalControlledUserSettingsDefinitions = ParentalControlledUserSettingsDefinitions_mod;
 const result6 = ParentalControlledUserSettingsDefinitions.defineParentalControlledSetting(
   "privacy",
   "friendSourceFlags",
@@ -105,6 +111,7 @@ const result6 = ParentalControlledUserSettingsDefinitions.defineParentalControll
     return UInt32Value.create({ value });
   },
 );
+let ParentalControlledUserSettingsDefinitions = ParentalControlledUserSettingsDefinitions_mod;
 const result7 = ParentalControlledUserSettingsDefinitions.defineParentalControlledSetting(
   "privacy",
   "dropsOptedOut",
@@ -123,6 +130,7 @@ const result7 = ParentalControlledUserSettingsDefinitions.defineParentalControll
     return BoolValue.create({ value });
   },
 );
+let ParentalControlledUserSettingsDefinitions = ParentalControlledUserSettingsDefinitions_mod;
 const result8 = ParentalControlledUserSettingsDefinitions.defineParentalControlledSetting(
   "privacy",
   "quests3PDataOptedOut",
@@ -141,6 +149,8 @@ const result8 = ParentalControlledUserSettingsDefinitions.defineParentalControll
     return BoolValue.create({ value });
   },
 );
+let ParentalControlledUserSettingsDefinitions = ParentalControlledUserSettingsDefinitions_mod;
+let obj2 = { comparator: discord_common_shallowEqualDefault };
 const result9 = ParentalControlledUserSettingsDefinitions.defineParentalControlledSetting(
   "safetySettings",
   "spendingLimitSettings",
@@ -166,13 +176,13 @@ const result9 = ParentalControlledUserSettingsDefinitions.defineParentalControll
     } else {
       ({ amount, currency } = arg0);
       const SpendingLimitSettings = preloaded_user_settings.SpendingLimitSettings;
-      let obj = { oneTimePurchaseLimit: null };
+      const obj = { oneTimePurchaseLimit: null };
       const SpendingLimit = preloaded_user_settings.SpendingLimit;
-      obj = { amount: null, currency: null };
+      const obj2 = { amount: null, currency: null };
       const _String = String;
-      obj.amount = String(amount);
-      obj.currency = currency;
-      obj.oneTimePurchaseLimit = SpendingLimit.create(obj);
+      obj2.amount = String(amount);
+      obj2.currency = currency;
+      obj.oneTimePurchaseLimit = SpendingLimit.create(obj2);
       return SpendingLimitSettings.create(obj);
     }
   },

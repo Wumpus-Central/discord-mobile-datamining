@@ -5,7 +5,7 @@ import noop from "../../../_runtime/metro/00019__.js";
 require = fn;
 function getJoinOrStartButtonState(channel) {
   ({ embeddedActivity, joinability, currentEmbeddedActivity } = channel);
-  let obj = { disabled: false, isJoinAction: !tmp, text: null, tooltip: "Array" };
+  const obj = { disabled: false, isJoinAction: null != embeddedActivity, text: null, tooltip: "Array" };
   const intl = util.intl;
   const string = intl.string;
   const t = util.t;
@@ -21,27 +21,27 @@ function getJoinOrStartButtonState(channel) {
   if (null != embeddedActivity) {
     if (null != currentEmbeddedActivity) {
       if (embeddedActivity.launchId === currentEmbeddedActivity.launchId) {
-        obj = {};
+        const obj2 = {};
         const merged = Object.assign(obj);
-        obj.disabled = true;
+        obj2.disabled = true;
         const intl10 = tmp6(1114).intl;
-        obj.text = intl10.string(tmp6(1114).t.DPfdsq);
-        obj.tooltip = undefined;
-        return obj;
+        obj2.text = intl10.string(tmp6(1114).t.DPfdsq);
+        obj2.tooltip = undefined;
+        return obj2;
       }
     }
   }
   if (null == embeddedActivity) {
-    obj = {};
+    const obj3 = {};
     const merged1 = Object.assign(obj);
-    obj.disabled = !result;
+    obj3.disabled = !result;
     let stringResult1;
     if (!result) {
       const intl9 = tmp6(1114).intl;
       stringResult1 = intl9.string(tmp6(1114).t.f41E1g);
     }
-    obj.tooltip = stringResult1;
-    return obj;
+    obj3.tooltip = stringResult1;
+    return obj3;
   } else {
     if (null != joinability) {
       if (joinability !== tmp6(9661).EmbeddedActivityJoinability.CAN_JOIN) {
@@ -67,11 +67,11 @@ function getJoinOrStartButtonState(channel) {
           const intl2 = tmp6(1114).intl;
           stringResult2 = intl2.string(tmp6(1114).t.Etp6uI);
         }
-        const obj1 = {};
+        const obj4 = {};
         const merged2 = Object.assign(obj);
-        obj1.disabled = true;
-        obj1.tooltip = stringResult2;
-        return obj1;
+        obj4.disabled = true;
+        obj4.tooltip = stringResult2;
+        return obj4;
       }
     }
     return obj;

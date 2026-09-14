@@ -3,10 +3,12 @@ import initializeDefault from "../../../discord_common/js/packages/flux/index.ts
 import DispatcherDefault from "../../Dispatcher.tsx";
 import SentryUtilsDefault from "../../utils/SentryUtils.native.tsx";
 import UserProfileStore from "../user_profile/UserProfileStore.tsx";
-import WishlistRecord from "records/WishlistRecord.tsx";
+import WishlistRecord_mod from "records/WishlistRecord.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
+let WishlistRecord = WishlistRecord_mod;
 ({ getWishlistSkuIds: c3, wishlistHasSkuId: closure_4 } = WishlistRecord);
+let WishlistRecord = WishlistRecord_mod;
 const dependencyMap = {};
 const Store = initializeDefault.Store;
 class WishlistStore extends Store {}
@@ -114,16 +116,16 @@ const wishlistStore = new WishlistStore(DispatcherDefault, {
     ({ wishlistId, skuId: require } = arg0);
     let tmp2 = dependencyMap[wishlistId];
     if (tmp2 == null) {
-      let obj = { data: null, status: "not_loaded" };
+      const obj = { data: null, status: "not_loaded" };
       tmp[wishlistId] = obj;
       tmp2 = obj;
     }
     if (null != tmp2.data) {
-      obj = { id: tmp2.data.id, userId: tmp2.data.userId, items: null, applications: null };
+      const obj2 = { id: tmp2.data.id, userId: tmp2.data.userId, items: null, applications: null };
       const items = tmp2.data.items;
-      obj.items = items.filter((skuId) => skuId.skuId !== require);
-      obj.applications = tmp2.data.applications;
-      const tmp7 = new WishlistRecord(obj);
+      obj2.items = items.filter((skuId) => skuId.skuId !== require);
+      obj2.applications = tmp2.data.applications;
+      const tmp7 = new WishlistRecord(obj2);
       tmp2.data = tmp7;
     }
   },

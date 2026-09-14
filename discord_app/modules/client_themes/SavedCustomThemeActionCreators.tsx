@@ -10,11 +10,10 @@ const result = size.fileFinishedImporting("modules/client_themes/SavedCustomThem
 
 export const fetchUserCustomThemes = function fetchUserCustomThemes() {
   if (!SavedCustomThemeStore.isFetching()) {
-    let obj = DispatcherDefault;
-    obj.dispatch({ type: "SAVED_CUSTOM_THEMES_FETCH_START" });
+    DispatcherDefault.dispatch({ type: "SAVED_CUSTOM_THEMES_FETCH_START" });
     const HTTP = HTTPUtils.HTTP;
-    obj = { url: Endpoints.USERS_ME_CUSTOM_THEMES, oldFormErrors: true, rejectWithError: true };
-    value = HTTP.get(obj);
+    const obj2 = { url: Endpoints.USERS_ME_CUSTOM_THEMES, oldFormErrors: true, rejectWithError: true };
+    value = HTTP.get(obj2);
     value
       .then((body) => {
         body = body.body;
@@ -28,8 +27,7 @@ export const fetchUserCustomThemes = function fetchUserCustomThemes() {
         DispatcherDefault.dispatch({ type: "SAVED_CUSTOM_THEMES_FETCH_SUCCESS", themes: custom_themes });
       })
       .catch((error) => {
-        const obj = { type: "SAVED_CUSTOM_THEMES_FETCH_FAILURE", error };
-        obj.dispatch(obj);
+        DispatcherDefault.dispatch({ type: "SAVED_CUSTOM_THEMES_FETCH_FAILURE", error });
       });
     const nextPromise = value.then((body) => {
       body = body.body;

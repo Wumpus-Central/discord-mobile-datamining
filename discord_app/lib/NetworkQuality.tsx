@@ -19,12 +19,12 @@ class NetworkQuality {
 const prototype = NetworkQuality.prototype;
 prototype["_initStats"] = function _initStats() {
   const obj = { effectiveConnectionSpeedBuckets: {}, connectionTypeBuckets: {} };
-  let values = Object.values(constants);
+  const values = Object.values(constants);
   const item = values.forEach((item) => {
     obj.connectionTypeBuckets[item] = 0;
   });
-  values = Object.values(constants2);
-  const item1 = values.forEach((item) => {
+  const values2 = Object.values(constants2);
+  const item1 = values2.forEach((item) => {
     obj.effectiveConnectionSpeedBuckets[item] = 0;
   });
   return obj;

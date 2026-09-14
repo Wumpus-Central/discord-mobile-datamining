@@ -8,21 +8,21 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/OverridePremiumTypeActions.tsx");
 
 export const updateClientPremiumTypeOverride = function updateClientPremiumTypeOverride(premiumType, currentUser) {
-  let obj = { type: "SET_PREMIUM_TYPE_OVERRIDE", premiumType };
-  obj.dispatch(obj);
+  DispatcherDefault.dispatch({ type: "SET_PREMIUM_TYPE_OVERRIDE", premiumType });
   if (currentUser == null) {
     currentUser = UserStore.getCurrentUser();
   }
   if (null != currentUser) {
-    let tmp2Result = DispatcherDefault;
-    obj = { type: "UPDATE_CLIENT_PREMIUM_TYPE", user: currentUser };
-    tmp2Result.dispatch(obj);
-    tmp2Result = DispatcherDefault;
-    const obj1 = { type: "CURRENT_USER_UPDATE", user: createMessage.userRecordToServer(currentUser) };
-    tmp2Result.dispatch(obj1);
+    const obj3 = { type: "UPDATE_CLIENT_PREMIUM_TYPE", user: currentUser };
+    DispatcherDefault.dispatch(obj3);
+    const tmp2Result = DispatcherDefault;
+    const obj4 = { type: "CURRENT_USER_UPDATE", user: null };
+    const tmp2Result2 = DispatcherDefault;
+    obj4.user = createMessage.userRecordToServer(currentUser);
+    tmp2Result2.dispatch(obj4);
   }
+  const obj2 = { type: "SET_PREMIUM_TYPE_OVERRIDE", premiumType };
 };
 export const updateClientCreatedAtOverride = function updateClientCreatedAtOverride(createdAt) {
-  const obj = { type: "SET_CREATED_AT_OVERRIDE", createdAt };
-  obj.dispatch(obj);
+  DispatcherDefault.dispatch({ type: "SET_CREATED_AT_OVERRIDE", createdAt });
 };

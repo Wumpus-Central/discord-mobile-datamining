@@ -11,11 +11,10 @@ export default function trackGuildViewedClickstream(guildId) {
   guildId = guildId.guildId;
   let isPseudoGuildIdResult = null == guildId;
   if (!isPseudoGuildIdResult) {
-    let obj = RouteUtils;
-    isPseudoGuildIdResult = obj.isPseudoGuildId(guildId);
+    isPseudoGuildIdResult = RouteUtils.isPseudoGuildId(guildId);
   }
   if (!isPseudoGuildIdResult) {
-    obj = { guild_id: guildId };
-    Clickstream.trackClickstream(AnalyticEvents.GUILD_VIEWED_CLICKSTREAM, obj);
+    const obj3 = { guild_id: guildId };
+    Clickstream.trackClickstream(AnalyticEvents.GUILD_VIEWED_CLICKSTREAM, obj3);
   }
 }

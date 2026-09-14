@@ -4,6 +4,8 @@ import GuildMemberStore from "../../stores/GuildMemberStore.tsx";
 import GuildOnboardingHomeSettingsStore from "GuildOnboardingHomeSettingsStore.tsx";
 import GuildOnboardingMemberActionStore from "GuildOnboardingMemberActionStore.tsx";
 
+const require = globalThis.__r;
+
 const require = fn;
 const GuildMemberFlags = fn(4262).GuildMemberFlags;
 const size = fn(2);
@@ -12,15 +14,15 @@ const result = size.fileFinishedImporting("modules/guild_onboarding_home/MemberA
 export const useMemberActionsForChannel = function useMemberActionsForChannel(guild_id, channel) {
   _require = guild_id;
   importDefault = channel;
-  let obj = require("useStateFromStores");
+  const tmp = useIsNewMemberDefault(guild_id);
   const items = [GuildOnboardingHomeSettingsStore];
   const items1 = [guild_id];
-  const stateFromStores = obj.useStateFromStores(
+  const stateFromStores = require("useStateFromStores").useStateFromStores(
     items,
     () => GuildOnboardingHomeSettingsStore.getNewMemberActions(closure_0),
     items1,
   );
-  const tmp = useIsNewMemberDefault(guild_id);
+  const obj = require("useStateFromStores");
   const items2 = [GuildOnboardingMemberActionStore];
   const stateFromStores1 = require("useStateFromStores").useStateFromStores(items2, () =>
     GuildOnboardingMemberActionStore.getCompletedActions(closure_0),
@@ -40,7 +42,7 @@ export const useMemberActionsForChannel = function useMemberActionsForChannel(gu
         tmp4 = stateFromStores[num];
       }
     }
-    obj = { channelAction: tmp4, completed: null };
+    const obj2 = { channelAction: tmp4, completed: null };
     let tmp5 = null != tmp4;
     if (tmp5) {
       let tmp6;
@@ -49,8 +51,8 @@ export const useMemberActionsForChannel = function useMemberActionsForChannel(gu
       }
       tmp5 = true === tmp6;
     }
-    obj.completed = tmp5;
-    return obj;
+    obj2.completed = tmp5;
+    return obj2;
   } else {
     return {};
   }

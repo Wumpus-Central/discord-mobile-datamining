@@ -4,7 +4,6 @@ import util from "../../../../intl/index.native.tsx";
 import AnalyticsUtilsDefault from "../../../../utils/AnalyticsUtils.tsx";
 import HelpdeskUtilsDefault from "../../../../utils/HelpdeskUtils.tsx";
 import LinkingDefault from "../../../../lib/native/Linking.tsx";
-import shared from "../../../../design/shared.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import _modDef10127 from "../../../../../_runtime/metro/10127__.js";
 import _modDef10128 from "../../../../../_runtime/metro/10128__.js";
@@ -13,15 +12,14 @@ import ThemeStore from "../../ThemeStore.tsx";
 
 require = fn;
 function handleKrispLinkPressed() {
-  let obj = HelpdeskUtilsDefault;
-  const articleURL = obj.getArticleURL(constants4.NOISE_SUPPRESSION);
-  obj = { text: null, href: null, location: null };
+  const articleURL = HelpdeskUtilsDefault.getArticleURL(constants4.NOISE_SUPPRESSION);
+  const obj3 = { text: null, href: null, location: null };
   const intl = util.intl;
-  obj.text = intl.string(util.t.hvVgAZ);
-  obj.href = articleURL;
-  obj = { page: constants2.USER_SETTINGS, section: constants3.SETTINGS_VOICE_AND_VIDEO };
-  obj.location = obj;
-  AnalyticsUtilsDefault.track(constants.NOISE_CANCELLATION_LINK_CLICKED, obj);
+  obj3.text = intl.string(util.t.hvVgAZ);
+  obj3.href = articleURL;
+  obj3.location = { page: constants2.USER_SETTINGS, section: constants3.SETTINGS_VOICE_AND_VIDEO };
+  AnalyticsUtilsDefault.track(constants.NOISE_CANCELLATION_LINK_CLICKED, obj3);
+  const obj4 = { page: constants2.USER_SETTINGS, section: constants3.SETTINGS_VOICE_AND_VIDEO };
   LinkingDefault.openURL(articleURL);
 }
 get_ActivityIndicator = fn(17);
@@ -49,30 +47,28 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/voice/native/KrispLogo.tsx");
 
 export default function KrispLogo() {
-  let obj = initialize;
   const items = [ThemeStore];
-  const stateFromStores = obj.useStateFromStores(items, () => theme.theme);
-  let obj1 = shared;
-  if (obj1.isThemeLight(stateFromStores)) {
+  const stateFromStores = initialize.useStateFromStores(items, () => theme.theme);
+  if (obj2.isThemeLight(stateFromStores)) {
     let tmp4Result = _modDef10127;
   } else {
     tmp4Result = _modDef10128;
   }
-  obj = { style: closure_13.detailsView, children: null };
-  obj = { style: closure_13.logo, source: tmp4Result, accessibilityLabel: null };
+  const obj3 = { style: closure_13.detailsView, children: null };
+  const obj4 = { style: closure_13.logo, source: tmp4Result, accessibilityLabel: null };
   const intl = util.intl;
-  obj.accessibilityLabel = intl.string(util.t.vFiCSx);
-  const items1 = [closure_1_11(React3, obj)];
-  obj1 = { accessibilityRole: "link", accessibilityLabel: null, onPress: null, children: null };
+  obj4.accessibilityLabel = intl.string(util.t.vFiCSx);
+  const items1 = [closure_1_11(React3, obj4)];
+  const obj5 = { accessibilityRole: "link", accessibilityLabel: null, onPress: null, children: null };
   const intl2 = util.intl;
-  obj1.accessibilityLabel = intl2.string(util.t.hvVgAZ);
-  obj1.onPress = handleKrispLinkPressed;
-  const obj2 = { variant: "text-sm/medium", color: "text-link", children: null };
+  obj5.accessibilityLabel = intl2.string(util.t.hvVgAZ);
+  obj5.onPress = handleKrispLinkPressed;
+  const obj6 = { variant: "text-sm/medium", color: "text-link", children: null };
   const intl3 = util.intl;
-  obj2.children = intl3.string(util.t.hvVgAZ);
-  obj1.children = closure_1_11(Text_Text.Text, obj2);
-  items1[1] = closure_1_11(hasOwnProperty, obj1);
-  obj.children = items1;
-  return closure_1_12(React4, obj);
+  obj6.children = intl3.string(util.t.hvVgAZ);
+  obj5.children = closure_1_11(Text_Text.Text, obj6);
+  items1[1] = closure_1_11(hasOwnProperty, obj5);
+  obj3.children = items1;
+  return closure_1_12(React4, obj3);
 }
 export { handleKrispLinkPressed };

@@ -30,9 +30,9 @@ export default function PremiumExpressionPickerFeatureUpsell(bottomSheetIndex) {
   const tmp3 = useKeyboardIsOpenDefault();
   ReanimatedRexport;
   const fn = function b() {
-    value = shouldShow.get();
-    if (!value) {
-      return value;
+    const value1 = shouldShow.get();
+    if (!value1) {
+      return value1;
     } else {
       value = bottomSheetIndex.get();
       if (inPortalKeyboard) {
@@ -47,10 +47,10 @@ export default function PremiumExpressionPickerFeatureUpsell(bottomSheetIndex) {
   fn.__initData = __initData;
   let tmp7 = null;
   if (!tmp3) {
-    let obj = { style: tmp4.container, children: null };
-    obj = { shouldShow: tmp6, featureName: bottomSheetIndex.featureName };
+    const obj = { style: tmp4.container, children: null };
+    const obj2 = { shouldShow: tmp6, featureName: bottomSheetIndex.featureName };
     obj.children = jsx(PremiumFeatureUpsellDefault, { shouldShow: tmp6, featureName: bottomSheetIndex.featureName });
-    tmp7 = <View shouldShow={tmp6} featureName={bottomSheetIndex.featureName} />;
+    tmp7 = <View style={tmp4.container}>{null}</View>;
   }
   return tmp7;
 }

@@ -25,7 +25,7 @@ let size = fn(2);
 const result = size.fileFinishedImporting("modules/quests/native/BountiesModal/BountiesModalCloseButton.tsx");
 
 export default function BountiesModalCloseButton(onPress) {
-  let obj = {
+  const obj = {
     accessibilityLabel: null,
     accessibilityRole: "button",
     hitSlop: 12,
@@ -37,13 +37,17 @@ export default function BountiesModalCloseButton(onPress) {
   obj.accessibilityLabel = intl.string(util.t.cpT0Cq);
   obj.onPress = onPress.onPress;
   obj.style = closure_4().closeButton;
-  obj = { size: "sm", color: nativeDefault.colors.CONTROL_OVERLAY_SECONDARY_TEXT_DEFAULT };
+  const tmp = closure_4();
   obj.children = jsx(XSmallIcon.XSmallIcon, {
     size: "sm",
     color: nativeDefault.colors.CONTROL_OVERLAY_SECONDARY_TEXT_DEFAULT,
   });
   return jsx(Pressables.PressableOpacity, {
-    size: "sm",
-    color: nativeDefault.colors.CONTROL_OVERLAY_SECONDARY_TEXT_DEFAULT,
+    accessibilityLabel: null,
+    accessibilityRole: "button",
+    hitSlop: 12,
+    onPress: null,
+    style: null,
+    children: null,
   });
 }

@@ -9,62 +9,47 @@ import fuzzysearchDefault from "../../../../../_runtime/05598_fuzzysearch.js";
 import NavigatorHeader from "../../../../design/components/Navigator/native/NavigatorHeader.native.tsx";
 import SearchBarNavDefault from "../../../main_tabs_v2/native/shared_components/SearchBarNav.tsx";
 import HubActionCreatorsDefault from "../../../../actions/HubActionCreators.tsx";
-import _modDef12871 from "../../../../../_runtime/metro/12871__.js";
+import _modDef12872 from "../../../../../_runtime/metro/12872__.js";
 import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
+const require = globalThis.__r;
+
 require = fn;
 function EmptyState() {
   const tmp = closure_13();
-  let obj = { style: tmp.emptyWrapper, children: null };
-  obj = { style: tmp.emptyStateImage, source: _modDef12871 };
-  const items = [closure_1_10(React5, obj)];
-  obj = {
+  const obj = { style: tmp.emptyWrapper, children: null };
+  const items = [closure_1_10(React5, { style: tmp.emptyStateImage, source: _modDef12872 })];
+  const obj3 = {
     style: tmp.emptyStateTitle,
     variant: "text-sm/semibold",
     color: "mobile-text-heading-primary",
     children: null,
   };
   const intl = util.intl;
-  obj.children = intl.string(util.t["6HXiuE"]);
-  items[1] = closure_1_10(Text_Text.Text, obj);
+  obj3.children = intl.string(util.t["6HXiuE"]);
+  items[1] = closure_1_10(Text_Text.Text, obj3);
   obj.children = items;
   return closure_1_11(timestampProducer, obj);
 }
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, Image: closure_7, FlatList: closure_8 } = get_ActivityIndicator);
-const HubEmailConnectionSteps = fn(12848).HubEmailConnectionSteps;
+const HubEmailConnectionSteps = fn(12849).HubEmailConnectionSteps;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
-fn(4636);
-let createStyles = {
-  scrollContainer: null,
-  fauxHeader: null,
-  emptyWrapper: null,
-  emptyStateImage: null,
-  emptyStateTitle: null,
+const createStyles = fn(4636);
+let obj2 = {
+  scrollContainer: { flex: 1, width: "100%", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },
+  fauxHeader: { paddingHorizontal: 0 },
+  emptyWrapper: { flex: 1, alignItems: "center", justifyContent: "center", marginTop: 64, paddingHorizontal: 16 },
+  emptyStateImage: { marginBottom: 24 },
+  emptyStateTitle: { marginBottom: 4, textAlign: "center" },
   error: null,
 };
-createStyles = { flex: 1, width: "100%", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
-createStyles.scrollContainer = createStyles;
-createStyles.fauxHeader = { paddingHorizontal: 0 };
-createStyles.emptyWrapper = {
-  flex: 1,
-  alignItems: "center",
-  justifyContent: "center",
-  marginTop: 64,
-  paddingHorizontal: 16,
-};
-createStyles.emptyStateImage = { marginBottom: 24 };
-createStyles.emptyStateTitle = { marginBottom: 4, textAlign: "center" };
-createStyles.error = {
-  color: nativeDefault.unsafe_rawColors.RED_400,
-  alignSelf: "center",
-  fontSize: 14,
-  marginBottom: 8,
-};
-let closure_13 = createStyles.createStyles(createStyles);
+let obj3 = { flex: 1, width: "100%", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
+obj2.error = { color: nativeDefault.unsafe_rawColors.RED_400, alignSelf: "center", fontSize: 14, marginBottom: 8 };
+let closure_13 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/hub/native/components/HubEmailConnectionGuildSelectSearch.tsx");
 
@@ -76,10 +61,8 @@ export default function HubEmailConnectionGuildSelectSearch(arg0) {
   c7 = undefined;
   const tmp = closure_13();
   dependencyMap = tmp;
-  let obj = useNavigation;
-  closure_3 = obj.useNavigation();
-  const tmp4 = _slicedToArray(noop.useState(""), 2);
-  _slicedToArray = tmp4[0];
+  closure_3 = useNavigation.useNavigation();
+  [_slicedToArray, obj5.onChange] = noop.useState("");
   [obj2, c5] = _slicedToArray(noop.useState(null), 2);
   const tmp5 = _slicedToArray(noop.useState(null), 2);
   [c6, c7] = _slicedToArray(noop.useState(false), 2);
@@ -88,22 +71,21 @@ export default function HubEmailConnectionGuildSelectSearch(arg0) {
     return fuzzysearchDefault(formatted, name.name.toLowerCase());
   });
   let anyErrorMessage;
-  if (obj1 != null) {
-    anyErrorMessage = obj1.getAnyErrorMessage();
+  if (obj2 != null) {
+    anyErrorMessage = obj2.getAnyErrorMessage();
   }
-  obj = { children: null };
-  obj = { style: tmp.fauxHeader, children: null };
-  obj1 = { placeholder: null, onChange: null, onClose: null };
+  const obj3 = { children: null };
+  let obj4 = { style: tmp.fauxHeader, children: null };
+  let obj5 = { placeholder: null, onChange: null, onClose: null };
   const tmp6 = _slicedToArray(noop.useState(false), 2);
   const intl = util.intl;
-  obj1.placeholder = intl.string(util.t.nL2wKD);
-  obj1.onChange = tmp4[1];
-  obj1.onClose = function onClose() {
+  obj5.placeholder = intl.string(util.t.nL2wKD);
+  obj5.onClose = function onClose() {
     closure_3.pop();
   };
-  obj.children = closure_10(SearchBarNavDefault, obj1);
-  const items = [closure_10(NavigatorHeader.FauxHeader, obj)];
-  obj2 = {
+  obj4.children = closure_10(SearchBarNavDefault, obj5);
+  const items = [closure_10(NavigatorHeader.FauxHeader, obj4)];
+  let obj6 = {
     keyboardShouldPersistTaps: "always",
     data: found,
     ListHeaderComponent() {
@@ -129,8 +111,8 @@ export default function HubEmailConnectionGuildSelectSearch(arg0) {
             if (arg0 === 1) {
               throw value;
             } else if (arg0 === 2) {
-              let obj = { value, done: true };
-              return obj;
+              const obj2 = { value, done: true };
+              return obj2;
             } else {
               return { value: "HermesInternal", done: null };
             }
@@ -143,19 +125,18 @@ export default function HubEmailConnectionGuildSelectSearch(arg0) {
                   throw value;
                 } else if (arg0 === 2) {
                   v3 = 3;
-                  obj = { value, done: true };
-                  return obj;
+                  const obj4 = { value, done: true };
+                  return obj4;
                 } else {
                   const onClose = tmp4;
                   const email = tmp8;
                   v3(null);
                   closure_1_7(true);
                   c3 = 2;
-                  let obj2 = HubActionCreatorsDefault;
                   c4 = 3;
                   v3 = 1;
-                  const obj1 = { value: obj2.sendVerificationEmail(email, true, id), done: false };
-                  return obj1;
+                  const obj5 = { value: HubActionCreatorsDefault.sendVerificationEmail(email, true, id), done: false };
+                  return obj5;
                 }
               } else if (1 === tmp8) {
                 c3 = 0;
@@ -174,15 +155,15 @@ export default function HubEmailConnectionGuildSelectSearch(arg0) {
                   v3 = 3;
                   throw value;
                 } else if (arg0 !== 2) {
-                  obj = { email, onClose, guildId: closure_129_0 };
+                  const obj = { email, onClose, guildId: closure_129_0 };
                   c3.push(constants.VERIFY_PIN, obj);
                   c3 = 1;
                 }
                 c3 = 0;
                 closure_1_7(false);
                 v3 = 3;
-                obj2 = { value, done: true };
-                return obj2;
+                const obj6 = { value, done: true };
+                return obj6;
               }
             } catch (tmp48) {
               closure_2 = tmp48;
@@ -214,8 +195,8 @@ export default function HubEmailConnectionGuildSelectSearch(arg0) {
     contentContainerStyle: null,
   };
   const tmp8Result = SearchBarNavDefault;
-  obj2.contentContainerStyle = { paddingBottom: useSafeAreaInsetsDefault().bottom + 16, paddingTop: 16 };
-  items[1] = closure_10(anyErrorMessage, obj2);
-  obj.children = items;
-  return closure_11(closure_12, obj);
+  obj6.contentContainerStyle = { paddingBottom: useSafeAreaInsetsDefault().bottom + 16, paddingTop: 16 };
+  items[1] = closure_10(anyErrorMessage, obj6);
+  obj3.children = items;
+  return closure_11(closure_12, obj3);
 }

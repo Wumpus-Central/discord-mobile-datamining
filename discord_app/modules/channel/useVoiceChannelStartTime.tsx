@@ -5,6 +5,8 @@ import GatewayConnectionStore from "../gateway/GatewayConnectionStore.tsx";
 import GuildAvailabilityStore from "../../stores/GuildAvailabilityStore.tsx";
 import VoiceChannelStartTimeStore from "VoiceChannelStartTimeStore.tsx";
 
+const require = globalThis.__r;
+
 require = fn;
 const ChannelTypes = fn(1074).ChannelTypes;
 const size = fn(2);

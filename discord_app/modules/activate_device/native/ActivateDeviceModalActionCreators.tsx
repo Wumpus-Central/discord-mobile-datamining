@@ -8,8 +8,11 @@ const result = size.fileFinishedImporting("modules/activate_device/native/Activa
 
 export default {
   showModal(userCode) {
-    const obj = { userCode };
-    obj.pushLazy(asyncRequireImpl(13961, dependencyMap.paths), obj, ACTIVATE_DEVICE_MODAL_KEY);
+    ModalActionCreatorsDefault.pushLazy(
+      asyncRequireImpl(13962, dependencyMap.paths),
+      { userCode },
+      ACTIVATE_DEVICE_MODAL_KEY,
+    );
   },
   hideModal() {
     ModalActionCreatorsDefault.popWithKey(ACTIVATE_DEVICE_MODAL_KEY);

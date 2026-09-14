@@ -41,7 +41,7 @@ const Constants = fn(1074);
   UpsellTypes: closure_14,
 } = Constants);
 const BOOLEAN_CHOICES = fn(5080).BOOLEAN_CHOICES;
-const ApplicationCommandsConstants = fn(10391);
+const ApplicationCommandsConstants = fn(10392);
 ({ AUTOCOMPLETE_EMOJI_ROW_HEIGHT: closure_16, AUTOCOMPLETE_ROW_HEIGHT: closure_17 } = ApplicationCommandsConstants);
 const ChannelAutocompleteConstants = fn(5081);
 ({
@@ -52,7 +52,7 @@ const ChannelAutocompleteConstants = fn(5081);
   GAME_MENTION_INPUT_PREFIX: closure_22,
   TIMESTAMP_MENTION_INPUT_PREFIX: closure_23,
 } = ChannelAutocompleteConstants);
-const AutocompleteTypes = fn(10552).AutocompleteTypes;
+const AutocompleteTypes = fn(10553).AutocompleteTypes;
 const EmojiInteractionPoint = fn(1374).EmojiInteractionPoint;
 const jsxProd = fn(21);
 ({ jsx: closure_26, Fragment: closure_27, jsxs: closure_28 } = jsxProd);
@@ -63,7 +63,7 @@ let closure_32 = { allowSpaces: true, maxQueryLength: 64 };
 const createStyles = fn(4636);
 let closure_33 = createStyles.createStyles(
   (borderRadius, borderWidth, borderTopWidth, marginHorizontal, marginBottom) => {
-    let obj = {
+    const obj = {
       autocompletePositionRelative: { position: "relative" },
       autocompleteWrapper: null,
       autocompleteContainer: null,
@@ -72,13 +72,13 @@ let closure_33 = createStyles.createStyles(
       sectionTitle: null,
       stickersAutocompleteList: null,
     };
-    let obj1 = PlatformUtils;
     let str = "absolute";
-    if (obj1.isAndroid()) {
+    if (obj2.isAndroid()) {
       str = "relative";
     }
     obj.autocompleteWrapper = { position: str, marginHorizontal, marginBottom };
-    obj = {
+    obj2 = PlatformUtils;
+    obj.autocompleteContainer = {
       backgroundColor: nativeDefault.colors.MOBILE_FLOATING_ACCESSORY_BACKGROUND,
       borderRadius,
       borderWidth,
@@ -86,18 +86,33 @@ let closure_33 = createStyles.createStyles(
       borderColor: nativeDefault.colors.MOBILE_FLOATING_ACCESSORY_BORDER,
       overflow: "hidden",
     };
-    obj.autocompleteContainer = obj;
-    obj = { flexGrow: 0, flexShrink: 1, backgroundColor: nativeDefault.colors.MOBILE_FLOATING_ACCESSORY_BACKGROUND };
-    obj.autocomplete = obj;
-    obj1 = { backgroundColor: nativeDefault.colors.MOBILE_FLOATING_ACCESSORY_BORDER, marginLeft: -16 };
-    obj.sectionDivider = obj1;
+    const obj3 = {
+      backgroundColor: nativeDefault.colors.MOBILE_FLOATING_ACCESSORY_BACKGROUND,
+      borderRadius,
+      borderWidth,
+      borderTopWidth,
+      borderColor: nativeDefault.colors.MOBILE_FLOATING_ACCESSORY_BORDER,
+      overflow: "hidden",
+    };
+    obj.autocomplete = {
+      flexGrow: 0,
+      flexShrink: 1,
+      backgroundColor: nativeDefault.colors.MOBILE_FLOATING_ACCESSORY_BACKGROUND,
+    };
+    const obj4 = {
+      flexGrow: 0,
+      flexShrink: 1,
+      backgroundColor: nativeDefault.colors.MOBILE_FLOATING_ACCESSORY_BACKGROUND,
+    };
+    obj.sectionDivider = { backgroundColor: nativeDefault.colors.MOBILE_FLOATING_ACCESSORY_BORDER, marginLeft: -16 };
+    const obj5 = { backgroundColor: nativeDefault.colors.MOBILE_FLOATING_ACCESSORY_BORDER, marginLeft: -16 };
     obj.sectionTitle = {
       backgroundColor: nativeDefault.colors.MOBILE_FLOATING_ACCESSORY_BACKGROUND,
       paddingLeft: 12,
       marginVertical: 12,
       justifyContent: "center",
     };
-    const obj2 = {
+    const obj6 = {
       backgroundColor: nativeDefault.colors.MOBILE_FLOATING_ACCESSORY_BACKGROUND,
       paddingLeft: 12,
       marginVertical: 12,
@@ -152,9 +167,8 @@ const forwardRefResult = noop.forwardRef((analyticsLocations, arg1) => {
   let first4;
   closure_60 = undefined;
   ({ canOnlyUseTextCommands, screenIndex } = analyticsLocations);
-  let obj = require("initialize");
   let items = [optionStates];
-  const stateFromStoresObject = obj.useStateFromStoresObject(items, () => ({
+  const stateFromStoresObject = require("initialize").useStateFromStoresObject(items, () => ({
     optionStates: ApplicationCommandStore.getOptionStates(channel.id),
     activeOption: ApplicationCommandStore.getActiveOption(channel.id),
     activeCommand: ApplicationCommandStore.getActiveCommand(channel.id),
@@ -163,15 +177,15 @@ const forwardRefResult = noop.forwardRef((analyticsLocations, arg1) => {
   optionStates = stateFromStoresObject.optionStates;
   const activeOption = stateFromStoresObject.activeOption;
   const activeCommand = stateFromStoresObject.activeCommand;
-  let obj1 = require("useToken");
-  const token = obj1.useToken(channel(canMentionEveryone[18]).modules.mobile.TABLE_ROW_HEIGHT);
-  let obj2 = require("useScaledTextLineHeight");
-  const scaledTextLineHeight = obj2.useScaledTextLineHeight(beginSearch);
-  let obj3 = require("TimestampSearchHeader");
-  let timestampSearchHeaderHeight = obj3.useTimestampSearchHeaderHeight();
+  let obj = require("initialize");
+  const token = require("useToken").useToken(channel(canMentionEveryone[18]).modules.mobile.TABLE_ROW_HEIGHT);
+  let obj2 = require("useToken");
+  const scaledTextLineHeight = require("useScaledTextLineHeight").useScaledTextLineHeight(beginSearch);
+  let obj3 = require("useScaledTextLineHeight");
+  let tmp8 = channel(canMentionEveryone[26])();
+  let timestampSearchHeaderHeight = require("TimestampSearchHeader").useTimestampSearchHeaderHeight();
   const IncludeStickersInAutocomplete = require("UserSettings").IncludeStickersInAutocomplete;
   const setting = IncludeStickersInAutocomplete.getSetting();
-  let obj4 = onChangeAutoCompleteVisibility;
   const tmp12 = keyboardType(onChangeAutoCompleteVisibility.useState(autocompleteType), 2);
   const first = tmp12[0];
   const resultCount = first.resultCount;
@@ -180,12 +194,12 @@ const forwardRefResult = noop.forwardRef((analyticsLocations, arg1) => {
   let hasStickerResults = first.hasStickerResults;
   let hasNonStickerResults = first.hasNonStickerResults;
   closure_18 = tmp12[1];
-  let obj5 = require("initialize");
+  let obj4 = require("TimestampSearchHeader");
   let items1 = [activeOption];
-  const stateFromStores = obj5.useStateFromStores(items1, () => activeOption.loadState);
+  const stateFromStores = require("initialize").useStateFromStores(items1, () => activeOption.loadState);
   let obj6 = require("initialize");
   const items2 = [token];
-  const stateFromStores1 = obj6.useStateFromStores(items2, () => token.loadState);
+  const stateFromStores1 = require("initialize").useStateFromStores(items2, () => token.loadState);
   const context = onChangeAutoCompleteVisibility.useContext(require("RedesignCompat").RedesignCompatContext);
   const items3 = [channel, setting];
   const memo = onChangeAutoCompleteVisibility.useMemo(
@@ -202,7 +216,7 @@ const forwardRefResult = noop.forwardRef((analyticsLocations, arg1) => {
   c22 = text;
   const selectionStart = first1.selectionStart;
   let selectionEnd = first1.selectionEnd;
-  let tmp8 = channel(canMentionEveryone[26])();
+  let obj7 = require("initialize");
   [tmp21, c25] = keyboardType(onChangeAutoCompleteVisibility.useState(0), 2);
   const IncludeGameMentionsInAutocomplete = require("UserSettings").IncludeGameMentionsInAutocomplete;
   const setting1 = IncludeGameMentionsInAutocomplete.getSetting();
@@ -248,7 +262,7 @@ const forwardRefResult = noop.forwardRef((analyticsLocations, arg1) => {
               if ("gameMentionInput" === result1) {
                 if (setting1) {
                   if (null == anchor) {
-                    let tmp33Result = autocompleter_AutocompleteUtils;
+                    const tmp33Result = autocompleter_AutocompleteUtils;
                     if (tmp33Result.isSpaceJustTypedAtCaret(text, selectionEnd, tmp, tmp2)) {
                       const current2 = chatInputRef.current;
                       current2.insertText(__initData2, result.tokenStart, false, undefined, tmp2);
@@ -259,8 +273,8 @@ const forwardRefResult = noop.forwardRef((analyticsLocations, arg1) => {
               } else if ("timestampMentionInput" === result1) {
                 if (enabled) {
                   if (null == anchor2) {
-                    tmp33Result = autocompleter_AutocompleteUtils;
-                    if (tmp33Result.isSpaceJustTypedAtCaret(text, selectionEnd, tmp, tmp2)) {
+                    const tmp33Result2 = autocompleter_AutocompleteUtils;
+                    if (tmp33Result2.isSpaceJustTypedAtCaret(text, selectionEnd, tmp, tmp2)) {
                       const current = chatInputRef.current;
                       current.insertText(__initData3, result.tokenStart, false, undefined, tmp2);
                       beginSearch2(result.tokenStart);
@@ -321,8 +335,10 @@ const forwardRefResult = noop.forwardRef((analyticsLocations, arg1) => {
     if (null != text) {
       if (0 !== str.trim().length) {
         if (null != activeOption) {
-          let obj1 = analyticsLocations(canMentionEveryone[37]);
-          let applicationCommandOptionQueryOptions = obj1.getApplicationCommandOptionQueryOptions(activeOption);
+          let applicationCommandOptionQueryOptions = analyticsLocations(
+            canMentionEveryone[37],
+          ).getApplicationCommandOptionQueryOptions(activeOption);
+          const obj2 = analyticsLocations(canMentionEveryone[37]);
         } else {
           applicationCommandOptionQueryOptions = {
             canMentionEveryone,
@@ -404,7 +420,7 @@ const forwardRefResult = noop.forwardRef((analyticsLocations, arg1) => {
                     query = str8;
                     tmp71 = str8;
                   }
-                  let optionValues = {};
+                  const optionValues = {};
                   const _Object2 = Object;
                   const entries = Object.entries(optionStates);
                   const item = entries.forEach((item) => {
@@ -413,14 +429,14 @@ const forwardRefResult = noop.forwardRef((analyticsLocations, arg1) => {
                       obj[tmp] = tmp2.optionValue;
                     }
                   });
-                  optionValues = {
+                  const obj7 = {
                     query: tmp71,
                     autocompleteType: CHOICES,
                     autocompleteSelectionStart: num + num2,
                     queryOptions: null,
                     showOptionValuesPicker: null,
                   };
-                  obj1 = {
+                  const obj8 = {
                     activeCommand,
                     optionValues,
                     isActiveApplicationCommand: flag,
@@ -429,9 +445,9 @@ const forwardRefResult = noop.forwardRef((analyticsLocations, arg1) => {
                     channelTypes,
                   };
                   const merged = Object.assign(applicationCommandOptionQueryOptions);
-                  optionValues.queryOptions = obj1;
-                  optionValues.showOptionValuesPicker = flag;
-                  return optionValues;
+                  obj7.queryOptions = obj8;
+                  obj7.showOptionValuesPicker = flag;
+                  return obj7;
                 }
               }
               prefix = "";
@@ -444,30 +460,30 @@ const forwardRefResult = noop.forwardRef((analyticsLocations, arg1) => {
         }
         if (setting1) {
           if (null != anchor) {
-            let obj2 = {
+            const obj9 = {
               query: str.slice(anchor + text.length, selectionEnd).toLowerCase(),
               autocompleteType: selectionEnd.GAME_MENTIONS,
               autocompleteSelectionStart: anchor,
               queryOptions: null,
             };
-            let obj3 = {};
+            const obj10 = {};
             const merged1 = Object.assign(applicationCommandOptionQueryOptions);
-            obj2.queryOptions = obj3;
-            return obj2;
+            obj9.queryOptions = obj10;
+            return obj9;
           }
         }
         if (null != anchor2) {
           if (null == activeCommand) {
-            let obj4 = {
+            const obj11 = {
               query: str.slice(anchor2 + selectionStart.length, selectionEnd),
               autocompleteType: selectionEnd.TIMESTAMPS,
               autocompleteSelectionStart: anchor2,
               queryOptions: null,
             };
-            let obj5 = {};
+            const obj12 = {};
             const merged2 = Object.assign(applicationCommandOptionQueryOptions);
-            obj4.queryOptions = obj5;
-            return obj4;
+            obj11.queryOptions = obj12;
+            return obj11;
           }
         }
         let sum = null;
@@ -484,21 +500,21 @@ const forwardRefResult = noop.forwardRef((analyticsLocations, arg1) => {
         }
         let tmp29 = selectionStart;
         while (true) {
-          obj2 = analyticsLocations(canMentionEveryone[39]);
+          let obj3 = analyticsLocations(canMentionEveryone[39]);
           let arr = text;
           let tmp34 = tmp8;
           let tmp35 = tmp9;
           let num5 = sum;
-          let result = obj2.isAutocompleteSeparatingBoundary(text, tmp29);
+          let result = obj3.isAutocompleteSeparatingBoundary(text, tmp29);
           if (tmp28) {
             num5 = 0;
           }
           if (tmp29 === num5) {
             let substr1 = arr.slice(tmp29, selectionEnd);
-            obj3 = analyticsLocations(canMentionEveryone[33]);
-            prefix = obj3.getPrefix(substr1);
-            obj4 = analyticsLocations(canMentionEveryone[33]);
-            query = obj4.getQuery(substr1);
+            let obj4 = analyticsLocations(canMentionEveryone[33]);
+            prefix = obj4.getPrefix(substr1);
+            let obj5 = analyticsLocations(canMentionEveryone[33]);
+            query = obj5.getQuery(substr1);
             if (null != query) {
               if (prefix !== focused) {
                 let tmp47 = tmp29;
@@ -509,25 +525,25 @@ const forwardRefResult = noop.forwardRef((analyticsLocations, arg1) => {
               }
               let tmp52 = tmp48;
               if (tmp35 === selectionEnd.SLASHES) {
-                obj5 = analyticsLocations(canMentionEveryone[40]);
+                let obj6 = analyticsLocations(canMentionEveryone[40]);
                 let str5 = tmp48;
                 if (tmp48 == null) {
                   str5 = "";
                 }
-                text = obj5.getTextBeforeFirstOption(str5).text;
+                text = obj6.getTextBeforeFirstOption(str5).text;
                 query = text;
                 tmp52 = text;
               }
-              let obj6 = {
+              let obj13 = {
                 query: tmp52,
                 autocompleteType: tmp35,
                 autocompleteSelectionStart: tmp47,
                 queryOptions: null,
               };
-              let obj7 = {};
+              let obj14 = {};
               let merged3 = Object.assign(applicationCommandOptionQueryOptions);
-              obj6.queryOptions = obj7;
-              return obj6;
+              obj13.queryOptions = obj14;
+              return obj13;
             }
             let _Object = Object;
             let keys = Object.keys(memo);
@@ -596,32 +612,7 @@ const forwardRefResult = noop.forwardRef((analyticsLocations, arg1) => {
   }
   const items7 = [
     tmp29[0],
-    obj4.useCallback((arg0) => {
-      if (arg0 > 0) {
-        const _Math = Math;
-        analyticsLocations = Math.round(arg0);
-        analyticsLocations((arg0) => {
-          let tmp = closure_0;
-          if (arg0 === closure_0) {
-            tmp = arg0;
-          }
-          return tmp;
-        });
-      }
-    }, []),
-  ];
-  let tmp11Result = tmp11(items7, 2);
-  [tmp35, c40] = tmp11Result;
-  tmp11Result = tmp11(obj4.useState(null), 2);
-  _require = tmp37;
-  const tmp11Result1 = keyboardType(obj4.useState(autocompleteType), 2);
-  if (tmp11Result1[0] !== autocompleteType) {
-    tmp11Result1[1](autocompleteType);
-    tmp37(null);
-  }
-  const items8 = [
-    tmp11Result[0],
-    obj4.useCallback((arg0) => {
+    onChangeAutoCompleteVisibility.useCallback((arg0) => {
       if (arg0 > 0) {
         const _Math = Math;
         analyticsLocations = Math.round(arg0);
@@ -636,17 +627,17 @@ const forwardRefResult = noop.forwardRef((analyticsLocations, arg1) => {
     }, []),
   ];
   const tmp20 = keyboardType(onChangeAutoCompleteVisibility.useState(0), 2);
-  [tmp42, c41] = keyboardType(items8, 2);
-  const tmp11Result3 = keyboardType(obj4.useState(null), 2);
-  _require = tmp44;
-  const tmp11Result4 = keyboardType(obj4.useState(autocompleteType), 2);
-  if (tmp11Result4[0] !== autocompleteType) {
-    tmp11Result4[1](autocompleteType);
-    tmp44(null);
+  [tmp35, c40] = keyboardType(items7, 2);
+  const tmp11Result9 = keyboardType(onChangeAutoCompleteVisibility.useState(null), 2);
+  _require = tmp37;
+  const tmp11Result10 = keyboardType(onChangeAutoCompleteVisibility.useState(autocompleteType), 2);
+  if (tmp11Result10[0] !== autocompleteType) {
+    tmp11Result10[1](autocompleteType);
+    tmp37(null);
   }
-  const items9 = [
-    tmp11Result3[0],
-    obj4.useCallback((arg0) => {
+  const items8 = [
+    tmp11Result9[0],
+    onChangeAutoCompleteVisibility.useCallback((arg0) => {
       if (arg0 > 0) {
         const _Math = Math;
         analyticsLocations = Math.round(arg0);
@@ -660,23 +651,47 @@ const forwardRefResult = noop.forwardRef((analyticsLocations, arg1) => {
       }
     }, []),
   ];
-  const tmp11Result5 = keyboardType(items9, 2);
-  first2 = tmp11Result5[0];
-  closure_43 = tmp11Result5[1];
+  const tmp11Result = keyboardType(items7, 2);
+  [tmp42, c41] = keyboardType(items8, 2);
+  const tmp11Result12 = keyboardType(onChangeAutoCompleteVisibility.useState(null), 2);
+  _require = tmp44;
+  const tmp11Result13 = keyboardType(onChangeAutoCompleteVisibility.useState(autocompleteType), 2);
+  if (tmp11Result13[0] !== autocompleteType) {
+    tmp11Result13[1](autocompleteType);
+    tmp44(null);
+  }
+  const items9 = [
+    tmp11Result12[0],
+    onChangeAutoCompleteVisibility.useCallback((arg0) => {
+      if (arg0 > 0) {
+        const _Math = Math;
+        analyticsLocations = Math.round(arg0);
+        analyticsLocations((arg0) => {
+          let tmp = closure_0;
+          if (arg0 === closure_0) {
+            tmp = arg0;
+          }
+          return tmp;
+        });
+      }
+    }, []),
+  ];
+  const tmp11Result14 = keyboardType(items9, 2);
+  first2 = tmp11Result14[0];
+  closure_43 = tmp11Result14[1];
   closure_44 = tmp35;
   timestampSearchHeaderHeight = tmp42;
   const items10 = [anchor2];
-  const effect2 = obj4.useEffect(() => {
+  const effect2 = obj5.useEffect(() => {
     if (null != anchor2) {
       RunAfterInteractionsUtils.runAfterInteractions(TimestampSuggestionUtils.preloadTimestampParser);
     }
   }, items10);
   const items11 = [autocompleteType, query, queryOptions, memo];
-  callback = obj4.useCallback((arg0) => {
+  callback = obj5.useCallback((arg0) => {
     if (null != autocompleteType) {
       if (null != query) {
-        let obj = memo[tmp];
-        const queryResultsResult = obj.queryResults(tmp2, queryOptions, arg0);
+        const queryResultsResult = memo[tmp].queryResults(tmp2, queryOptions, arg0);
         const items = [];
         const items1 = [];
         const item = queryResultsResult.forEach((type) => {
@@ -686,20 +701,20 @@ const forwardRefResult = noop.forwardRef((analyticsLocations, arg1) => {
             items1.push(type);
           }
         });
-        obj = {
+        const obj2 = {
           resultCount: queryResultsResult.length,
           stickerResults: items,
           nonStickerResults: items1,
           hasStickerResults: items.length > 0,
           hasNonStickerResults: items1.length > 0,
         };
-        closure_18(obj);
+        closure_18(obj2);
       }
     }
     closure_18(closure_35);
   }, items11);
   const items12 = [autocompleteType, callback, memo];
-  const effect3 = obj4.useEffect(() => {
+  const effect3 = obj5.useEffect(() => {
     let tmp2 = null;
     if (null != autocompleteType) {
       let stores;
@@ -717,11 +732,11 @@ const forwardRefResult = noop.forwardRef((analyticsLocations, arg1) => {
     }
   }, items12);
   const items13 = [callback];
-  const effect4 = obj4.useEffect(() => {
+  const effect4 = obj5.useEffect(() => {
     callback(true);
   }, items13);
   const items14 = [stickerResults, nonStickerResults];
-  callback1 = obj4.useCallback(
+  callback1 = obj5.useCallback(
     () => ({
       numStickerResults: stickerResults.length,
       numEmojiResults: nonStickerResults.filter((type) => type.type === constants.EMOJI).length,
@@ -729,7 +744,7 @@ const forwardRefResult = noop.forwardRef((analyticsLocations, arg1) => {
     items14,
   );
   const items15 = [autocompleteType, focused, keyboardType, resultCount];
-  memo2 = obj4.useMemo(() => {
+  memo2 = obj5.useMemo(() => {
     let tmp = resultCount > 0;
     if (!tmp) {
       tmp = autocompleteType === AutocompleteTypes.SLASHES || tmp2 === AutocompleteTypes.SLASHES_DISCOVERY;
@@ -750,9 +765,9 @@ const forwardRefResult = noop.forwardRef((analyticsLocations, arg1) => {
     }
     return tmp9;
   }, items15);
-  obj4.useRef(false);
+  onChangeAutoCompleteVisibility.useRef(false);
   const items16 = [autocompleteType, activeCommand];
-  const effect5 = obj4.useEffect(() => {
+  const effect5 = obj5.useEffect(() => {
     let tmp4 = autocompleteType === AutocompleteTypes.SLASHES;
     if (ref.current) {
       if (!tmp4) {
@@ -776,7 +791,7 @@ const forwardRefResult = noop.forwardRef((analyticsLocations, arg1) => {
       }
     }
   }, items16);
-  obj4.useRef(null);
+  onChangeAutoCompleteVisibility.useRef(null);
   const items17 = [
     onChangeAutoCompleteVisibility,
     activeCommand,
@@ -786,7 +801,7 @@ const forwardRefResult = noop.forwardRef((analyticsLocations, arg1) => {
     callback1,
     setting1,
   ];
-  const effect6 = obj4.useEffect(() => {
+  const effect6 = obj5.useEffect(() => {
     let tmp = memo2;
     if (!memo2) {
       tmp = null != activeCommand;
@@ -803,25 +818,25 @@ const forwardRefResult = noop.forwardRef((analyticsLocations, arg1) => {
       const combined = "" + channel.id + ":" + str;
       if (ref2.current !== combined) {
         ref2.current = combined;
-        const obj = {};
+        const obj2 = {};
         const merged = Object.assign(callback1());
         let tmp17;
         if (autocompleteType === AutocompleteTypes.MENTIONS) {
           tmp17 = setting1;
         }
-        obj.gameMentionsAvailable = tmp17;
-        const result = obj.iOSTrackAutocompleteOpen(autocompleteType, channel, obj);
+        obj2.gameMentionsAvailable = tmp17;
+        const result = ChannelAutocompleteAnalytics.iOSTrackAutocompleteOpen(autocompleteType, channel, obj2);
       }
     } else {
       ref2.current = null;
     }
   }, items17);
-  const tmp11Result2 = keyboardType(items8, 2);
+  const tmp11Result11 = keyboardType(items8, 2);
   const insets = tmp4(tmp2[21])({ includeKeyboardHeight: true }).insets;
   let diff = channel(canMentionEveryone[20])({ ignoreKeyboard: true }).height - insets.top - insets.bottom;
   diff1 = diff - tmp(tmp2[22]).NAV_BAR_HEIGHT - tmp21;
   const items18 = [autocompleteType, stickerResults.length, diff1, scaledTextLineHeight, tmp35, tmp42];
-  memo3 = obj4.useMemo(() => {
+  memo3 = obj5.useMemo(() => {
     const sum = scaledTextLineHeight + 24;
     const sum1 = c31 + sum;
     if (stickerResults.length > 0) {
@@ -840,8 +855,8 @@ const forwardRefResult = noop.forwardRef((analyticsLocations, arg1) => {
     }
     return Math.min(diff1, sum2);
   }, items18);
-  const tmp11Result6 = keyboardType(obj4.useState(null), 2);
-  first3 = tmp11Result6[0];
+  const tmp11Result15 = keyboardType(onChangeAutoCompleteVisibility.useState(null), 2);
+  first3 = tmp11Result15[0];
   closure_54 = tmp64;
   const items19 = [
     resultCount,
@@ -859,7 +874,7 @@ const forwardRefResult = noop.forwardRef((analyticsLocations, arg1) => {
     tmp35,
     first2,
   ];
-  const memo4 = obj4.useMemo(() => {
+  const memo4 = obj5.useMemo(() => {
     if (autocompleteType === AutocompleteTypes.EMOJIS_AND_STICKERS) {
       let num7 = 0;
       if (0 !== nonStickerResults.length) {
@@ -929,19 +944,19 @@ const forwardRefResult = noop.forwardRef((analyticsLocations, arg1) => {
     return Math.min(num12, memo3);
   }, items19);
   closure_55 = tmp66;
-  let tmpResult = tmp(tmp2[24]);
-  const token1 = tmpResult.useToken(tmp4(tmp2[18]).modules.mobile.CHAT_INPUT_FLOATING_BORDER_RADIUS);
-  tmpResult = tmp(tmp2[24]);
-  const token2 = tmpResult.useToken(tmp4(tmp2[18]).modules.mobile.CHAT_INPUT_FLOATING_ACCESSORY_BORDER_WIDTH);
   const tmp58 = channel(canMentionEveryone[20])({ ignoreKeyboard: true });
+  const token1 = require("useToken").useToken(tmp4(tmp2[18]).modules.mobile.CHAT_INPUT_FLOATING_BORDER_RADIUS);
+  let tmpResult = require("useToken");
+  const token2 = require("useToken").useToken(tmp4(tmp2[18]).modules.mobile.CHAT_INPUT_FLOATING_ACCESSORY_BORDER_WIDTH);
+  const tmpResult6 = require("useToken");
   const token3 = require("useToken").useToken(
     tmp4(tmp2[18]).modules.mobile.CHAT_INPUT_FLOATING_ACCESSORY_TOP_BORDER_WIDTH,
   );
-  const tmpResult1 = require("useToken");
+  const tmpResult7 = require("useToken");
   const token4 = require("useToken").useToken(
     tmp4(tmp2[18]).modules.mobile.CHAT_INPUT_FLOATING_ACCESSORY_MARGIN_HORIZONTAL,
   );
-  const tmpResult2 = require("useToken");
+  const tmpResult8 = require("useToken");
   token5 = require("useToken").useToken(tmp4(tmp2[18]).modules.mobile.CHAT_INPUT_FLOATING_ACCESSORY_MARGIN_BOTTOM);
   let num = 0;
   if (memo4 > 0) {
@@ -960,13 +975,13 @@ const forwardRefResult = noop.forwardRef((analyticsLocations, arg1) => {
     }
   }
   const tmp72Result = closure_33(token1, num, num2, token4, num3);
-  const tmpResult3 = require("useToken");
+  const tmpResult9 = require("useToken");
   let prop = null;
-  if (tmpResult4.isIOS()) {
+  if (tmpResult10.isIOS()) {
     prop = tmp72Result.autocompletePositionRelative;
   }
   const items20 = [memo4 > 0, token5];
-  const memo5 = obj4.useMemo(() => {
+  const memo5 = obj5.useMemo(() => {
     let tmp;
     if (closure_55) {
       const obj = { marginTop: token5 };
@@ -975,8 +990,8 @@ const forwardRefResult = noop.forwardRef((analyticsLocations, arg1) => {
     return tmp;
   }, items20);
   const items21 = [analyticsLocations, beginSearch, beginSearch2, channel, chatInputRef];
-  tmpResult4 = require("PlatformUtils");
-  callback2 = obj4.useCallback((type, tokenStart, arg2) => {
+  tmpResult10 = require("PlatformUtils");
+  callback2 = obj5.useCallback((type, tokenStart, arg2) => {
     if (type.type !== constants.EMOJI_PREMIUM_UPSELL) {
       if (type.type === constants.GLOBAL) {
         if ("gameMentionInput" === type.inlineAutocompleteType) {
@@ -1045,13 +1060,13 @@ const forwardRefResult = noop.forwardRef((analyticsLocations, arg1) => {
         }
       }
     } else {
-      const obj = { initialUpsellKey: constants3.EMOJI_AUTOCOMPLETE, analyticsLocations };
-      const result2 = obj.handleShowUpsellAlert(obj);
+      const obj2 = { initialUpsellKey: constants3.EMOJI_AUTOCOMPLETE, analyticsLocations };
+      const result2 = PremiumUpsellUtilsDefault.handleShowUpsellAlert(obj2);
     }
   }, items21);
   const items22 = [chatInputRef, optionStates, channel];
   const items23 = [autocompleteSelectionStart, autocompleteType, callback1, channel, callback2, showOptionValuesPicker];
-  const callback3 = obj4.useCallback((type) => {
+  const callback3 = obj5.useCallback((type) => {
     const current = chatInputRef.current;
     const applicationCommandManager = current.getApplicationCommandManager();
     if (type.type === Server.ApplicationCommandOptionType.ATTACHMENT) {
@@ -1078,24 +1093,24 @@ const forwardRefResult = noop.forwardRef((analyticsLocations, arg1) => {
       }
     }
   }, items22);
-  callback4 = obj4.useCallback((type) => {
+  callback4 = obj5.useCallback((type) => {
     if (type.type === constants.GLOBAL) {
       if ("gameMentionInput" === type.inlineAutocompleteType) {
         type = constants.GAME_MENTION;
       }
-      const obj = { selectionType: type, stickerId: null, gameId: null };
+      const obj2 = { selectionType: type, stickerId: null, gameId: null };
       let id = null;
       if (type.type === constants.STICKER) {
         id = type.sticker.id;
       }
-      obj.stickerId = id;
+      obj2.stickerId = id;
       let id1 = null;
       if (type.type === constants.GAME_MENTION) {
         id1 = type.game.id;
       }
-      obj.gameId = id1;
+      obj2.gameId = id1;
       const merged = Object.assign(callback1());
-      const result = obj.iOSTrackAutocompleteSelect(autocompleteType, channel, obj);
+      const result = ChannelAutocompleteAnalytics.iOSTrackAutocompleteSelect(autocompleteType, channel, obj2);
       let num = autocompleteSelectionStart;
       if (autocompleteSelectionStart == null) {
         num = 0;
@@ -1109,102 +1124,102 @@ const forwardRefResult = noop.forwardRef((analyticsLocations, arg1) => {
     }
     type = type.type;
   }, items23);
-  const tmp11Result7 = keyboardType(obj4.useState(null), 2);
-  first4 = tmp11Result7[0];
-  closure_60 = tmp11Result7[1];
+  const tmp11Result16 = keyboardType(onChangeAutoCompleteVisibility.useState(null), 2);
+  first4 = tmp11Result16[0];
+  closure_60 = tmp11Result16[1];
   const items24 = [autocompleteType, callback4, first4, channel, activeCommand];
-  const callback5 = obj4.useCallback((item) => {
+  const callback5 = obj5.useCallback((item) => {
     item = item.item;
     const type = item.type;
     if (scaledTextLineHeight.USER === type) {
-      let obj = {};
+      const obj2 = {};
       const merged = Object.assign(item);
-      obj.guildId = channel.guild_id;
-      obj.onPress = function onPress() {
+      obj2.guildId = channel.guild_id;
+      obj2.onPress = function onPress() {
         return callback4(item);
       };
-      return setting1(channel(canMentionEveryone[19]).User, obj);
+      return setting1(channel(canMentionEveryone[19]).User, obj2);
     } else if (scaledTextLineHeight.GLOBAL === type) {
-      obj = {};
+      const obj3 = {};
       const merged1 = Object.assign(item);
-      obj.onPress = function onPress() {
+      obj3.onPress = function onPress() {
         return callback4(item);
       };
-      return setting1(channel(canMentionEveryone[19]).Global, obj);
+      return setting1(channel(canMentionEveryone[19]).Global, obj3);
     } else if (scaledTextLineHeight.ROLE === type) {
-      const obj1 = {};
+      const obj4 = {};
       const merged2 = Object.assign(item);
-      obj1.onPress = function onPress() {
+      obj4.onPress = function onPress() {
         return callback4(item);
       };
       let tmp65 = autocompleteType === selectionEnd.MENTIONS;
       if (tmp65) {
         tmp65 = null == activeCommand;
       }
-      obj1.showDescription = tmp65;
-      return setting1(channel(canMentionEveryone[19]).Role, obj1);
+      obj4.showDescription = tmp65;
+      return setting1(channel(canMentionEveryone[19]).Role, obj4);
     } else if (scaledTextLineHeight.CHANNEL === type) {
-      const obj2 = {};
-      const merged3 = Object.assign(item);
-      obj2.onPress = function onPress() {
-        return callback4(item);
-      };
-      return setting1(channel(canMentionEveryone[19]).Channel, obj2);
-    } else if (scaledTextLineHeight.EMOJI === type) {
-      const obj3 = {};
-      const merged4 = Object.assign(item);
-      obj3.onPress = function onPress() {
-        return callback4(item);
-      };
-      return setting1(channel(canMentionEveryone[19]).Emoji, obj3);
-    } else if (scaledTextLineHeight.EMOJI_PREMIUM_UPSELL === type) {
-      const obj4 = {};
-      const merged5 = Object.assign(item);
-      obj4.onPress = function onPress() {
-        return callback4(item);
-      };
-      return setting1(channel(canMentionEveryone[19]).EmojiPremiumUpsell, obj4);
-    } else if (scaledTextLineHeight.CHOICE === type) {
       const obj5 = {};
-      const merged6 = Object.assign(item);
+      const merged3 = Object.assign(item);
       obj5.onPress = function onPress() {
         return callback4(item);
       };
-      return setting1(channel(canMentionEveryone[19]).Choice, obj5);
-    } else if (scaledTextLineHeight.CHOICE_LOADING === type) {
-      return setting1(channel(canMentionEveryone[19]).ChoiceLoading, {});
-    } else if (scaledTextLineHeight.STICKER === type) {
+      return setting1(channel(canMentionEveryone[19]).Channel, obj5);
+    } else if (scaledTextLineHeight.EMOJI === type) {
       const obj6 = {};
-      const merged7 = Object.assign(item);
+      const merged4 = Object.assign(item);
       obj6.onPress = function onPress() {
         return callback4(item);
       };
-      obj6.onLongPress = function onLongPress() {
-        return closure_60(item.sticker.id);
-      };
-      obj6.isInteracting = first4 === item.sticker.id;
-      const _HermesInternal = HermesInternal;
-      return setting1(
-        channel(canMentionEveryone[19]).Sticker,
-        obj6,
-        "" + item.sticker.id + "-" + first4 === item.sticker.id,
-      );
-    } else if (scaledTextLineHeight.GAME_MENTION === type) {
+      return setting1(channel(canMentionEveryone[19]).Emoji, obj6);
+    } else if (scaledTextLineHeight.EMOJI_PREMIUM_UPSELL === type) {
       const obj7 = {};
-      const merged8 = Object.assign(item);
+      const merged5 = Object.assign(item);
       obj7.onPress = function onPress() {
         return callback4(item);
       };
-      return setting1(channel(canMentionEveryone[19]).Game, obj7);
-    } else if (scaledTextLineHeight.TIMESTAMP_MENTION === type) {
+      return setting1(channel(canMentionEveryone[19]).EmojiPremiumUpsell, obj7);
+    } else if (scaledTextLineHeight.CHOICE === type) {
       const obj8 = {};
-      const merged9 = Object.assign(item);
+      const merged6 = Object.assign(item);
       obj8.onPress = function onPress() {
         return callback4(item);
       };
-      return setting1(channel(canMentionEveryone[19]).Timestamp, obj8);
+      return setting1(channel(canMentionEveryone[19]).Choice, obj8);
+    } else if (scaledTextLineHeight.CHOICE_LOADING === type) {
+      return setting1(channel(canMentionEveryone[19]).ChoiceLoading, {});
+    } else if (scaledTextLineHeight.STICKER === type) {
+      const obj9 = {};
+      const merged7 = Object.assign(item);
+      obj9.onPress = function onPress() {
+        return callback4(item);
+      };
+      obj9.onLongPress = function onLongPress() {
+        return closure_60(item.sticker.id);
+      };
+      obj9.isInteracting = first4 === item.sticker.id;
+      const _HermesInternal = HermesInternal;
+      return setting1(
+        channel(canMentionEveryone[19]).Sticker,
+        obj9,
+        "" + item.sticker.id + "-" + first4 === item.sticker.id,
+      );
+    } else if (scaledTextLineHeight.GAME_MENTION === type) {
+      const obj10 = {};
+      const merged8 = Object.assign(item);
+      obj10.onPress = function onPress() {
+        return callback4(item);
+      };
+      return setting1(channel(canMentionEveryone[19]).Game, obj10);
+    } else if (scaledTextLineHeight.TIMESTAMP_MENTION === type) {
+      const obj11 = {};
+      const merged9 = Object.assign(item);
+      obj11.onPress = function onPress() {
+        return callback4(item);
+      };
+      return setting1(channel(canMentionEveryone[19]).Timestamp, obj11);
     } else if (scaledTextLineHeight.LABEL === type) {
-      obj = {};
+      const obj = {};
       const merged10 = Object.assign(item);
       return setting1(channel(canMentionEveryone[19]).Label, obj);
     } else {
@@ -1212,17 +1227,17 @@ const forwardRefResult = noop.forwardRef((analyticsLocations, arg1) => {
     }
   }, items24);
   const items25 = [tmp72Result.autocomplete, { maxHeight: memo3 }];
-  obj = { style: null, children: null };
+  let obj8 = { style: null, children: null };
   const items26 = [tmp72Result.autocompleteWrapper, prop];
-  obj.style = items26;
-  obj = { style: null, children: null };
+  obj8.style = items26;
+  let obj9 = { style: null, children: null };
   const items27 = [tmp72Result.autocompleteContainer, channel(canMentionEveryone[44])(memo4, screenIndex)];
-  obj.style = items27;
-  let tmp83Result1 = null != autocompleteType;
-  if (tmp83Result1) {
+  obj9.style = items27;
+  let tmp83Result4 = null != autocompleteType;
+  if (tmp83Result4) {
     let tmp85Result = autocompleteType === selectionEnd.SLASHES_DISCOVERY;
     if (tmp85Result) {
-      obj1 = {
+      let obj10 = {
         channel,
         onPressSlashItem(command, section, visualSection) {
           let num = autocompleteSelectionStart;
@@ -1250,12 +1265,12 @@ const forwardRefResult = noop.forwardRef((analyticsLocations, arg1) => {
         onHeightChange: tmp64,
         canOnlyUseTextCommands,
       };
-      tmp85Result = tmp85(tmp4(tmp2[49]), obj1);
+      tmp85Result = tmp85(tmp4(tmp2[49]), obj10);
     }
     const items28 = [tmp85Result, , , , ,];
-    tmp85Result = autocompleteType === tmp88.SLASHES;
-    if (tmp85Result) {
-      obj2 = {
+    let tmp85Result5 = autocompleteType === tmp88.SLASHES;
+    if (tmp85Result5) {
+      let obj11 = {
         channel,
         query: null,
         onPressCommandItem: null,
@@ -1268,8 +1283,8 @@ const forwardRefResult = noop.forwardRef((analyticsLocations, arg1) => {
       if (query == null) {
         str = "";
       }
-      obj2.query = str;
-      obj2.onPressCommandItem = function onPressCommandItem(commands, found) {
+      obj11.query = str;
+      obj11.onPressCommandItem = function onPressCommandItem(commands, found) {
         let num = autocompleteSelectionStart;
         if (autocompleteSelectionStart == null) {
           num = 0;
@@ -1292,10 +1307,10 @@ const forwardRefResult = noop.forwardRef((analyticsLocations, arg1) => {
           query,
         };
       };
-      obj2.style = items25;
-      obj2.ItemSeparatorComponent = tmp(tmp2[33]).getItemSeparator;
-      obj2.getItemLayout = tmp(tmp2[33]).getItemLayout;
-      obj2.onCommandsChange = function onCommandsChange(commands) {
+      obj11.style = items25;
+      obj11.ItemSeparatorComponent = tmp(tmp2[33]).getItemSeparator;
+      obj11.getItemLayout = tmp(tmp2[33]).getItemLayout;
+      obj11.onCommandsChange = function onCommandsChange(commands) {
         let num = 0;
         if (0 !== commands) {
           if (context) {
@@ -1304,27 +1319,27 @@ const forwardRefResult = noop.forwardRef((analyticsLocations, arg1) => {
         }
         closure_54(num);
       };
-      tmp85Result = tmp85(tmp4(tmp2[51]), obj2);
+      tmp85Result5 = tmp85(tmp4(tmp2[51]), obj11);
       const tmp4Result = tmp4(tmp2[51]);
     }
-    items28[1] = tmp85Result;
-    let tmp83Result = autocompleteType === tmp88.EMOJIS_AND_STICKERS;
-    if (tmp83Result) {
-      tmp83Result = hasStickerResults;
+    items28[1] = tmp85Result5;
+    let tmp83Result3 = autocompleteType === tmp88.EMOJIS_AND_STICKERS;
+    if (tmp83Result3) {
+      let tmp83Result = hasStickerResults;
       if (hasStickerResults) {
-        obj3 = { children: null };
-        obj4 = { style: null, children: null };
+        let obj12 = { children: null };
+        let obj13 = { style: null, children: null };
         const items29 = [tmp72Result.sectionTitle];
-        obj5 = { height: scaledTextLineHeight };
-        items29[1] = obj5;
-        obj4.style = items29;
-        obj6 = { variant: tmp6, children: null };
+        let obj14 = { height: scaledTextLineHeight };
+        items29[1] = obj14;
+        obj13.style = items29;
+        const obj15 = { variant: tmp6, children: null };
         const intl = tmp(tmp2[53]).intl;
-        let obj7 = { prefix: query };
-        obj6.children = intl.format(tmp(tmp2[53]).t.uferGG, obj7);
-        obj4.children = tmp85(tmp(tmp2[52]).Text, obj6);
-        const items30 = [tmp85(tmp84, obj4)];
-        let obj8 = {
+        const obj16 = { prefix: query };
+        obj15.children = intl.format(tmp(tmp2[53]).t.uferGG, obj16);
+        obj13.children = tmp85(tmp(tmp2[52]).Text, obj15);
+        const items30 = [tmp85(tmp84, obj13)];
+        const obj17 = {
           horizontal: true,
           style: null,
           keyExtractor: null,
@@ -1334,75 +1349,75 @@ const forwardRefResult = noop.forwardRef((analyticsLocations, arg1) => {
           getItemLayout: null,
           contentInset: null,
         };
-        const obj9 = {};
+        const obj18 = {};
         let merged = Object.assign(items25);
         let merged1 = Object.assign(tmp72Result.stickersAutocompleteList);
-        obj8.style = obj9;
-        obj8.keyExtractor = function keyExtractor(sticker) {
+        obj17.style = obj18;
+        obj17.keyExtractor = function keyExtractor(sticker) {
           return sticker.sticker.id;
         };
-        obj8.data = stickerResults;
-        obj8.renderItem = callback5;
-        obj8.getItemLayout = setData;
-        obj8.contentInset = { right: 12 };
-        items30[1] = tmp85(chatInputRef, obj8);
-        obj3.children = items30;
-        tmp83Result = tmp83(tmp87, obj3);
+        obj17.data = stickerResults;
+        obj17.renderItem = callback5;
+        obj17.getItemLayout = setData;
+        obj17.contentInset = { right: 12 };
+        items30[1] = tmp85(chatInputRef, obj17);
+        obj12.children = items30;
+        tmp83Result = tmp83(tmp87, obj12);
       }
       const items31 = [tmp83Result, ,];
       if (hasStickerResults) {
         hasStickerResults = hasNonStickerResults;
       }
       if (hasStickerResults) {
-        const obj10 = { style: tmp72Result.sectionDivider };
-        hasStickerResults = tmp85(tmp4(tmp2[54]), obj10);
+        const obj19 = { style: tmp72Result.sectionDivider };
+        hasStickerResults = tmp85(tmp4(tmp2[54]), obj19);
       }
       items31[1] = hasStickerResults;
       if (hasNonStickerResults) {
-        const obj11 = { style: null, children: null };
+        const obj20 = { style: null, children: null };
         const items32 = [tmp72Result.sectionTitle];
-        const obj12 = { height: scaledTextLineHeight };
-        items32[1] = obj12;
-        obj11.style = items32;
-        const obj13 = { variant: tmp6, children: null };
+        const obj21 = { height: scaledTextLineHeight };
+        items32[1] = obj21;
+        obj20.style = items32;
+        const obj22 = { variant: tmp6, children: null };
         const intl2 = tmp(tmp2[53]).intl;
-        const obj14 = { prefix: null };
+        const obj23 = { prefix: null };
         let _HermesInternal = HermesInternal;
-        obj14.prefix = "" + memo + query;
-        obj13.children = intl2.format(tmp(tmp2[53]).t.ksAVYt, obj14);
-        obj11.children = tmp85(tmp(tmp2[52]).Text, obj13);
-        hasNonStickerResults = tmp85(tmp84, obj11);
+        obj23.prefix = "" + memo + query;
+        obj22.children = intl2.format(tmp(tmp2[53]).t.ksAVYt, obj23);
+        obj20.children = tmp85(tmp(tmp2[52]).Text, obj22);
+        hasNonStickerResults = tmp85(tmp84, obj20);
       }
-      const obj15 = { children: null };
+      const obj24 = { children: null };
       items31[2] = hasNonStickerResults;
-      obj15.children = items31;
-      tmp83Result = tmp83(tmp87, obj15);
+      obj24.children = items31;
+      tmp83Result3 = tmp83(tmp87, obj24);
     }
-    items28[2] = tmp83Result;
-    let tmp85Result1 = autocompleteType === tmp88.GAME_MENTIONS;
-    if (tmp85Result1) {
-      const obj16 = {
+    items28[2] = tmp83Result3;
+    let tmp85Result6 = autocompleteType === tmp88.GAME_MENTIONS;
+    if (tmp85Result6) {
+      const obj25 = {
         onLayout(nativeEvent) {
           return _undefined(nativeEvent.nativeEvent.layout.height);
         },
         children: tmp85(tmp4(tmp2[55]), {}),
       };
-      tmp85Result1 = tmp85(tmp84, obj16);
+      tmp85Result6 = tmp85(tmp84, obj25);
     }
-    items28[3] = tmp85Result1;
-    let tmp85Result2 = autocompleteType === tmp88.TIMESTAMPS;
-    if (tmp85Result2) {
-      const obj17 = {
+    items28[3] = tmp85Result6;
+    let tmp85Result7 = autocompleteType === tmp88.TIMESTAMPS;
+    if (tmp85Result7) {
+      const obj26 = {
         onLayout(nativeEvent) {
           return _undefined2(nativeEvent.nativeEvent.layout.height);
         },
         children: tmp85(tmp4(tmp2[27]), {}),
       };
-      tmp85Result2 = tmp85(tmp84, obj17);
+      tmp85Result7 = tmp85(tmp84, obj26);
     }
-    const obj18 = { children: null };
-    items28[4] = tmp85Result2;
-    const obj19 = {
+    const obj27 = { children: null };
+    items28[4] = tmp85Result7;
+    const obj28 = {
       style: items25,
       keyExtractor(arg0, arg1) {
         return String(arg1);
@@ -1415,16 +1430,16 @@ const forwardRefResult = noop.forwardRef((analyticsLocations, arg1) => {
         return closure_43(arg1);
       },
     };
-    items28[5] = tmp85(chatInputRef, obj19);
-    obj18.children = items28;
-    tmp83Result1 = tmp83(tmp87, obj18);
+    items28[5] = tmp85(chatInputRef, obj28);
+    obj27.children = items28;
+    tmp83Result4 = tmp83(tmp87, obj27);
   }
-  obj.children = tmp83Result1;
-  const items33 = [setting1(channel(canMentionEveryone[48]).View, obj)];
-  let tmp85Result3 = null != activeCommand && !commandsDisabled;
-  if (tmp85Result3) {
-    const obj20 = { style: memo5, children: null };
-    const obj21 = {
+  obj9.children = tmp83Result4;
+  const items33 = [setting1(channel(canMentionEveryone[48]).View, obj9)];
+  let tmp85Result8 = null != activeCommand && !commandsDisabled;
+  if (tmp85Result8) {
+    const obj29 = { style: memo5, children: null };
+    const obj30 = {
       command: activeCommand,
       section: stateFromStoresObject.activeSection,
       guildId: channel.guild_id,
@@ -1432,15 +1447,15 @@ const forwardRefResult = noop.forwardRef((analyticsLocations, arg1) => {
       currentOption: activeOption,
       optionStates,
     };
-    obj20.children = tmp85(tmp4(tmp2[56]), obj21);
-    tmp85Result3 = tmp85(tmp84, obj20);
+    obj29.children = tmp85(tmp4(tmp2[56]), obj30);
+    tmp85Result8 = tmp85(tmp84, obj29);
   }
-  items33[1] = tmp85Result3;
-  obj.children = items33;
+  items33[1] = tmp85Result8;
+  obj8.children = items33;
   const tmp76 = channel(canMentionEveryone[44])(memo4, screenIndex);
   return setting1(commandsDisabled, {
     style: tmp72Result.autocompletePositionRelative,
-    children: anchor(commandsDisabled, obj),
+    children: anchor(commandsDisabled, obj8),
   });
 });
 forwardRefResult.displayName = "AutocompleteWrapper";

@@ -9,8 +9,7 @@ require = fn;
 function PremiumText(basePlanId) {
   ({ style, isCurrentPlan, isGift, product, text } = basePlanId);
   const tmp = closure_9();
-  let obj = PremiumUtilsDefault;
-  const intervalType = obj.getInterval(basePlanId.basePlanId).intervalType;
+  const intervalType = PremiumUtilsDefault.getInterval(basePlanId.basePlanId).intervalType;
   let combined = null;
   if (intervalType === constants.YEAR) {
     combined = null;
@@ -20,27 +19,27 @@ function PremiumText(basePlanId) {
     }
   }
   if (text != null) {
-    obj = { style: tmp.premiumText, children: null };
-    obj = { style, numberOfLines: 1, accessibilityLabel: null, children: null };
+    const obj2 = { style: tmp.premiumText, children: null };
+    const obj3 = { style, numberOfLines: 1, accessibilityLabel: null, children: null };
     const intl3 = util.intl;
     let title;
     if (product != null) {
       title = product.title;
     }
-    const obj1 = { product: title, description: text };
-    obj.accessibilityLabel = intl3.formatToPlainString(util.t.E0lS2r, obj1);
-    obj.children = text;
-    const items = [React5(native.LegacyText, obj)];
+    const obj4 = { product: title, description: text };
+    obj3.accessibilityLabel = intl3.formatToPlainString(util.t.E0lS2r, obj4);
+    obj3.children = text;
+    const items = [React5(native.LegacyText, obj3)];
     let tmp16Result = null;
     if (null != combined) {
-      const obj2 = { style: tmp.discount, children: null };
-      const obj3 = { style, numberOfLines: 1, children: combined };
-      obj2.children = React5(native.LegacyText, obj3);
-      tmp16Result = React5(View, obj2);
+      const obj5 = { style: tmp.discount, children: null };
+      const obj6 = { style, numberOfLines: 1, children: combined };
+      obj5.children = React5(native.LegacyText, obj6);
+      tmp16Result = React5(View, obj5);
     }
     items[1] = tmp16Result;
-    obj.children = items;
-    return React6(View, obj);
+    obj2.children = items;
+    return React6(View, obj2);
   } else {
     let priceString;
     if (product != null) {
@@ -52,24 +51,24 @@ function PremiumText(basePlanId) {
     if (intervalType !== constants.MONTH) {
       const intl = util.intl;
       const formatToPlainString = intl.formatToPlainString;
-      let t = util.t;
+      const t = util.t;
       if (isGift) {
-        const obj4 = { price: priceString };
-        let formatToPlainStringResult = formatToPlainString(t.rm53bV, obj4);
+        const obj7 = { price: priceString };
+        let formatToPlainStringResult = formatToPlainString(t.rm53bV, obj7);
       } else {
-        const obj5 = { price: priceString };
-        formatToPlainStringResult = formatToPlainString(isCurrentPlan ? t.dFbQCa : t["rS8FA+"], obj5);
+        const obj8 = { price: priceString };
+        formatToPlainStringResult = formatToPlainString(isCurrentPlan ? t.dFbQCa : t["rS8FA+"], obj8);
       }
     }
     const intl2 = util.intl;
     const formatToPlainString2 = intl2.formatToPlainString;
-    t = util.t;
+    let t1 = util.t;
     if (isGift) {
-      t = { price: priceString };
-      let formatToPlainString2Result = formatToPlainString2(t.FIjgMp, t);
+      t1 = { price: priceString };
+      let formatToPlainString2Result = formatToPlainString2(t1.FIjgMp, t1);
     } else {
-      const obj6 = { price: priceString };
-      formatToPlainString2Result = formatToPlainString2(isCurrentPlan ? t.V6iX43 : t.AbOLNu, obj6);
+      const obj9 = { price: priceString };
+      formatToPlainString2Result = formatToPlainString2(isCurrentPlan ? t1.V6iX43 : t1.AbOLNu, obj9);
     }
   }
 }
@@ -82,14 +81,14 @@ const PremiumConstants = fn(1373);
 } = PremiumConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-fn(4636);
-let createStyles = { discount: null, premiumText: null };
-createStyles = { borderWidth: 1, borderColor: null, borderRadius: 2, marginLeft: 4, paddingHorizontal: 2 };
+const createStyles = fn(4636);
+let obj2 = { discount: null, premiumText: null };
+let obj3 = { borderWidth: 1, borderColor: null, borderRadius: 2, marginLeft: 4, paddingHorizontal: 2 };
 const ColorUtils = fn(4486);
-createStyles.borderColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.WHITE, 0.3);
-createStyles.discount = createStyles;
-createStyles.premiumText = { flexDirection: "row" };
-let closure_9 = createStyles.createStyles(createStyles);
+obj3.borderColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.WHITE, 0.3);
+obj2.discount = obj3;
+obj2.premiumText = { flexDirection: "row" };
+let closure_9 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/native/renderPremiumButtonText.tsx");
 

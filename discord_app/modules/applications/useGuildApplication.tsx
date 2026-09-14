@@ -4,6 +4,8 @@ import _slicedToArray from "../../../_runtime/metro/00032__.js";
 import noop from "../../../_runtime/metro/00019__.js";
 import ApplicationStore from "ApplicationStore.tsx";
 
+const require = globalThis.__r;
+
 const require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/applications/useGuildApplication.tsx");
@@ -16,12 +18,10 @@ export default function useGuildApplication(arg0, arg1) {
     ApplicationStore.getGuildApplication(closure_0, closure_1),
   );
   let obj = require("initialize");
-  [tmp3, asyncGeneratorStep] = _slicedToArray(first.useState(null == application), 2);
+  [tmp3, asyncGeneratorStep] = first.useState(null == application);
   const error = _slicedToArray(first.useState(), 2);
   _slicedToArray = error[1];
-  const tmp5 = _slicedToArray(first.useState(false), 2);
-  first = tmp5[0];
-  closure_6 = tmp5[1];
+  [first, closure_6] = first.useState(false);
   const items1 = [application, arg1, arg0];
   const callback = first.useCallback(
     asyncGeneratorStep(async () => {
@@ -32,8 +32,8 @@ export default function useGuildApplication(arg0, arg1) {
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
-          let obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           return { value: "HermesInternal", done: null };
         }
@@ -46,8 +46,8 @@ export default function useGuildApplication(arg0, arg1) {
               throw value;
             } else if (arg0 === 2) {
               c5 = 3;
-              obj = { value, done: true };
-              return obj;
+              const obj4 = { value, done: true };
+              return obj4;
             } else {
               const type = tmp4;
               closure_0 = tmp8;
@@ -56,12 +56,11 @@ export default function useGuildApplication(arg0, arg1) {
                   closure_6(true);
                   asyncGeneratorStep(true);
                   c3 = 2;
-                  let obj1 = type(tmp41[5]);
-                  obj1 = { type, includeTeam: true };
+                  const obj5 = { type, includeTeam: true };
                   c4 = 3;
                   c5 = 1;
-                  const obj2 = { value: obj1.getApplicationsForGuild(tmp33, obj1), done: false };
-                  return obj2;
+                  const obj6 = { value: type(tmp41[5]).getApplicationsForGuild(tmp33, obj5), done: false };
+                  return obj6;
                 }
               }
               c5 = 3;
@@ -79,7 +78,7 @@ export default function useGuildApplication(arg0, arg1) {
               c3 = 0;
               closure_129_3(false);
               c5 = 3;
-              obj = { value, done: true };
+              const obj = { value, done: true };
               return obj;
             } else {
               c3 = 1;

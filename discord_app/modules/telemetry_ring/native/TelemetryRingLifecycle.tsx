@@ -34,11 +34,11 @@ prototype["_updateZoomedInExport"] = function _updateZoomedInExport() {
   }
   const result = ProcessUtilsDefault.setShouldCollectHermesInstrumentedStats(shouldRunResult);
   if (state === AppStates.ACTIVE) {
-    let tmp6Result = ZoomedInTelemetryDefault;
-    tmp6Result.start();
+    ZoomedInTelemetryDefault.start();
+    const tmp6Result = ZoomedInTelemetryDefault;
   } else {
-    tmp6Result = ZoomedInTelemetryDefault;
-    tmp6Result.stop();
+    ZoomedInTelemetryDefault.stop();
+    const tmp6Result2 = ZoomedInTelemetryDefault;
   }
 };
 prototype["_initialize"] = function _initialize() {
@@ -67,11 +67,11 @@ prototype["_terminate"] = function _terminate() {
     const result = self._experimentUnsubscribe();
     self._experimentUnsubscribe = null;
   }
-  let tmpResult = ZoomedInTelemetryDefault;
-  tmpResult.stop();
-  tmpResult = ProcessUtilsDefault;
-  const result1 = tmpResult.setShouldCollectHermesInstrumentedStats(false);
+  ZoomedInTelemetryDefault.stop();
+  const tmpResult = ZoomedInTelemetryDefault;
+  const result1 = ProcessUtilsDefault.setShouldCollectHermesInstrumentedStats(false);
   self._initialized = false;
+  const tmpResult2 = ProcessUtilsDefault;
 };
 const telemetryRingLifecycleImpl = new TelemetryRingLifecycleImpl();
 const size = fn(2);

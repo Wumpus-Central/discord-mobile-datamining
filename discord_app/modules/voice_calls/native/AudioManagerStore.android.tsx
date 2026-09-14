@@ -9,13 +9,15 @@ import Constants2 from "../../../../discord_common/js/packages/media-engine/Cons
 import NativeAudioManagerModuleDefault from "../../../../discord_common/js/packages/rtn-codegen/js/NativeAudioManagerModule.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
-const NativeAudioManagerModule = NativeAudioManagerModuleDefault;
+const NativeAudioManagerModule_mod = NativeAudioManagerModuleDefault;
 
 const RTCConnectionStates = Constants.RTCConnectionStates;
 const MediaEngineContextTypes = Constants2.MediaEngineContextTypes;
 const nativeEventEmitter = new _mod17.NativeEventEmitter(NativeAudioManagerModuleDefault);
 let global = [];
+let NativeAudioManagerModule = NativeAudioManagerModule_mod;
 global = NativeAudioManagerModule.getInvalidAndroidDevice();
+let NativeAudioManagerModule = NativeAudioManagerModule_mod;
 let device = NativeAudioManagerModule.getInvalidAndroidDevice();
 let c9 = false;
 const Store = initializeDefault.Store;
@@ -67,23 +69,22 @@ const audioManagerStore = new AudioManagerStore(DispatcherDefault, {
           tmp8 = device.simpleDeviceType !== NativeAudioManagerModule.AudioDeviceType.INVALID;
         }
         if (tmp8) {
-          let tmp4Result = _modDef12;
           if (tmp4Result.isString(device)) {
-            tmp4Result = SentryUtilsDefault;
-            let obj = { extra: null };
-            obj = { deviceString: device };
-            obj.extra = obj;
-            tmp4Result.captureMessage("AudioManagerStore received a string for an android audio device", obj);
+            const obj3 = { extra: null };
+            const obj4 = { deviceString: device };
+            obj3.extra = obj4;
+            SentryUtilsDefault.captureMessage("AudioManagerStore received a string for an android audio device", obj3);
+            const tmp4Result3 = SentryUtilsDefault;
           } else {
             NativeAudioManagerModuleDefault.setActiveAudioDevice(device);
-            const tmp4Result1 = NativeAudioManagerModuleDefault;
+            const tmp4Result4 = NativeAudioManagerModuleDefault;
           }
+          tmp4Result = _modDef12;
         }
       } else if (tmp13.DISCONNECTED === state) {
         if (!context.willReconnect) {
           c9 = false;
-          obj = NativeAudioManagerModuleDefault;
-          const result1 = obj.setCommunicationModeOn(false);
+          const result1 = NativeAudioManagerModuleDefault.setCommunicationModeOn(false);
         }
       }
     }
@@ -91,17 +92,17 @@ const audioManagerStore = new AudioManagerStore(DispatcherDefault, {
   NATIVE_AUDIO_SET_OUTPUT_DEVICE: function handleSetActiveAudioDevice(device) {
     device = device.device;
     if (c9) {
-      let obj = _modDef12;
       if (obj.isString(device)) {
-        let tmpResult = SentryUtilsDefault;
-        obj = { extra: null };
-        obj = { deviceString: device };
-        obj.extra = obj;
-        tmpResult.captureMessage("AudioManagerStore received a string for an android audio device", obj);
+        const obj2 = { extra: null };
+        const obj3 = { deviceString: device };
+        obj2.extra = obj3;
+        SentryUtilsDefault.captureMessage("AudioManagerStore received a string for an android audio device", obj2);
+        const tmpResult = SentryUtilsDefault;
       } else {
-        tmpResult = NativeAudioManagerModuleDefault;
-        tmpResult.setActiveAudioDevice(device);
+        NativeAudioManagerModuleDefault.setActiveAudioDevice(device);
+        const tmpResult2 = NativeAudioManagerModuleDefault;
       }
+      obj = _modDef12;
     }
   },
 });

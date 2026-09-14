@@ -4,16 +4,19 @@ import canViewInviteModal from "../instant_invite/canViewInviteModal.tsx";
 import noop from "../../../_runtime/metro/00019__.js";
 import AuthenticationStore from "../../stores/AuthenticationStore.tsx";
 import ChannelStore from "../../stores/ChannelStore.tsx";
-import GuildChannelStore from "../../stores/GuildChannelStore.tsx";
+import GuildChannelStore_mod from "../../stores/GuildChannelStore.tsx";
 import GuildMemberCountStore from "../../stores/GuildMemberCountStore.tsx";
 import GuildStore from "../../stores/GuildStore.tsx";
 import LayerStore from "../../stores/LayerStore.tsx";
 import MessageStore from "../../stores/MessageStore.tsx";
 import PermissionStore from "../../stores/PermissionStore.tsx";
 
+const require = globalThis.__r;
+
 require = fn;
 let GuildChannelStore = fn(2012);
 ({ GUILD_SELECTABLE_CHANNELS_KEY: metroRequire, GUILD_VOCAL_CHANNELS_KEY: closure_7 } = GuildChannelStore);
+let GuildChannelStore = GuildChannelStore_mod;
 const Constants = fn(1074);
 ({ Permissions: closure_14, MessageTypes: closure_15 } = Constants);
 const size = fn(2);

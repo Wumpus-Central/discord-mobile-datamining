@@ -11,16 +11,23 @@ const StageChannelListStore = fn(10174);
 ({ useActiveSpeakerPillScrollHandler: metroRequire, useActiveSpeakerPillState: closure_7 } = StageChannelListStore);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-fn(4636);
-let obj = {
+const createStyles = fn(4636);
+const obj = {
   container: { width: "100%", flexDirection: "column", alignItems: "center", justifyContent: "center" },
-  participantItemContainer: null,
-  participantAvatarContainer: null,
+  participantItemContainer: {
+    padding: 10,
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "center",
+    backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST,
+    borderRadius: nativeDefault.radii.round,
+  },
+  participantAvatarContainer: { alignItems: "center", justifyContent: "center" },
   participantAvatarText: null,
   participantNameplateContainer: null,
   participantNameplateSpeakingText: null,
 };
-obj = {
+let obj3 = {
   padding: 10,
   flexDirection: "row",
   alignItems: "center",
@@ -28,35 +35,37 @@ obj = {
   backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST,
   borderRadius: nativeDefault.radii.round,
 };
-obj.participantItemContainer = obj;
-obj.participantAvatarContainer = { alignItems: "center", justifyContent: "center" };
-const createStyles = {
+obj.participantAvatarText = {
   fontSize: 12,
   fontFamily: fn(1074).Fonts.PRIMARY_SEMIBOLD,
   color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY,
   lineHeight: 18,
 };
-obj.participantAvatarText = createStyles;
 obj.participantNameplateContainer = {
   paddingHorizontal: 3,
   flexDirection: "row",
   alignItems: "center",
   justifyContent: "center",
 };
+let obj4 = {
+  fontSize: 12,
+  fontFamily: fn(1074).Fonts.PRIMARY_SEMIBOLD,
+  color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY,
+  lineHeight: 18,
+};
 obj.participantNameplateSpeakingText = { lineHeight: 18, color: nativeDefault.colors.TEXT_SUBTLE };
 let closure_10 = createStyles.createStyles(obj);
-let obj2 = { lineHeight: 18, color: nativeDefault.colors.TEXT_SUBTLE };
+let obj5 = { lineHeight: 18, color: nativeDefault.colors.TEXT_SUBTLE };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/stage_channels/native/components/ActiveSpeakerTooltip.tsx");
 
 export default noop.memo((channel) => {
   channel = channel.channel;
   const tmp = closure_10();
-  let obj = channel(504);
   let items = [ChannelRTCStore];
   const items1 = [channel.id];
   const first = _slicedToArray(
-    obj.useStateFromStores(
+    channel(504).useStateFromStores(
       items,
       () => {
         const speakingParticipants = ChannelRTCStore.getSpeakingParticipants(channel.id);
@@ -75,33 +84,33 @@ export default noop.memo((channel) => {
   if (0 !== first.length) {
     tmp5 = null;
     if (_slicedToArray(closure_7(), 1)[0]) {
-      obj = { accessibilityRole: "button", style: tmp.container, onPress: tmp4, children: null };
-      obj = { style: tmp.participantItemContainer, children: null };
-      const obj1 = { style: tmp.participantAvatarContainer, children: null };
-      const obj2 = {
+      const obj2 = { accessibilityRole: "button", style: tmp.container, onPress: tmp4, children: null };
+      const obj3 = { style: tmp.participantItemContainer, children: null };
+      const obj4 = { style: tmp.participantAvatarContainer, children: null };
+      const obj5 = {
         namesStyle: tmp.participantAvatarText,
         users: first,
         withNames: true,
         channelId: channel.id,
         guildId: channel.getGuildId(),
       };
-      obj1.children = closure_8(UserSummaryItemDefault, obj2);
-      const items2 = [closure_8(View, obj1)];
-      const obj3 = { style: tmp.participantNameplateContainer, children: null };
-      const obj4 = {
+      obj4.children = closure_8(UserSummaryItemDefault, obj5);
+      const items2 = [closure_8(View, obj4)];
+      const obj6 = { style: tmp.participantNameplateContainer, children: null };
+      const obj7 = {
         style: tmp.participantNameplateSpeakingText,
         variant: "text-xs/medium",
         color: "text-default",
         children: null,
       };
       const intl = tmp2(1114).intl;
-      const obj5 = { count: first.length };
-      obj4.children = intl.format(tmp2(1114).t["+dia6l"], obj5);
-      obj3.children = closure_8(tmp2(4632).Text, obj4);
-      items2[1] = closure_8(View, obj3);
-      obj.children = items2;
-      obj.children = closure_9(View, obj);
-      tmp5 = closure_8(tmp2(5204).PressableOpacity, obj);
+      const obj8 = { count: first.length };
+      obj7.children = intl.format(tmp2(1114).t["+dia6l"], obj8);
+      obj6.children = closure_8(tmp2(4632).Text, obj7);
+      items2[1] = closure_8(View, obj6);
+      obj3.children = items2;
+      obj2.children = closure_9(View, obj3);
+      tmp5 = closure_8(tmp2(5204).PressableOpacity, obj2);
     }
   }
   return tmp5;

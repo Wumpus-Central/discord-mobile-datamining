@@ -37,8 +37,8 @@ function useGoogleSkuIds(arg0, arg1) {
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
-          let obj = { value, done: true };
-          return obj;
+          const obj2 = { value, done: true };
+          return obj2;
         } else {
           return { value: "HermesInternal", done: null };
         }
@@ -51,8 +51,8 @@ function useGoogleSkuIds(arg0, arg1) {
               throw value;
             } else if (arg0 === 2) {
               c5 = 3;
-              obj = { value, done: true };
-              return obj;
+              const obj6 = { value, done: true };
+              return obj6;
             } else {
               closure_1 = tmp3;
               closure_0 = tmp5;
@@ -69,8 +69,8 @@ function useGoogleSkuIds(arg0, arg1) {
                       ref = 1;
                       v2 = 2;
                       c5 = 1;
-                      const obj1 = { value: closure_2_0(9497).loadInAppSkus(differenceResult), done: false };
-                      return obj1;
+                      const obj7 = { value: closure_2_0(9497).loadInAppSkus(differenceResult), done: false };
+                      return obj7;
                     }
                   }
                 }
@@ -85,21 +85,21 @@ function useGoogleSkuIds(arg0, arg1) {
               closure_128_1 = closure_2;
               logger.error("Unable to fetch product IDs from google play store: ", closure_128_1);
               v2("Unable to fetch");
-              let obj2 = closure_2_0(4309);
-              const result = obj2.captureBillingException(closure_128_1);
+              const result = closure_2_0(4309).captureBillingException(closure_128_1);
+              const obj3 = closure_2_0(4309);
             } else if (arg0 === 1) {
               c5 = 3;
               throw value;
             } else if (arg0 !== 2) {
-              obj = closure_2_1(12);
-              ref.current = obj.union(ref.current, closure_128_0);
+              ref.current = closure_2_1(12).union(ref.current, closure_128_0);
               v2(null);
               ref = 0;
+              const obj = closure_2_1(12);
             }
             ref = 0;
             c5 = 3;
-            obj2 = { value, done: true };
-            return obj2;
+            const obj8 = { value, done: true };
+            return obj8;
           }
           c5 = 3;
         } catch (tmp38) {

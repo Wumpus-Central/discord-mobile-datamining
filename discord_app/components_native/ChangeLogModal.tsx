@@ -9,8 +9,8 @@ import ChangeLogStandardTemplateDefault from "ChangeLogStandardTemplate.tsx";
 import openMediaModal from "../modules/media_viewer/native/components/openMediaModal.tsx";
 import common_VideoDefault from "common/Video.tsx";
 import TouchableHitBoxDefault from "../design/void/TouchableHitBox/native/TouchableHitBox.tsx";
-import _modDef10525 from "../../_runtime/metro/10525__.js";
-import _modDef15630 from "../../_runtime/metro/15630__.js";
+import _modDef10526 from "../../_runtime/metro/10526__.js";
+import _modDef15631 from "../../_runtime/metro/15631__.js";
 import noop from "../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -52,7 +52,7 @@ class ChangeLogScreen {
       if (null != changelog) {
         let obj = {
           headerTitle() {
-            let obj = { title: null, subtitle: null };
+            const obj = { title: null, subtitle: null };
             const intl = changelog(navigation[13]).intl;
             obj.title = intl.string(changelog(navigation[13]).t.LRmNAl);
             const intl2 = changelog(navigation[13]).intl;
@@ -61,8 +61,8 @@ class ChangeLogScreen {
                 let toDateResult = loaded(navigation[23])(date.date).toDate();
                 const obj2 = loaded(navigation[23])(date.date);
               }
-              obj = { date: toDateResult };
-              obj.subtitle = intl2.formatToPlainString(tmp3, obj);
+              const obj3 = { date: toDateResult };
+              obj.subtitle = intl2.formatToPlainString(tmp3, obj3);
               return closure_2_7(changelog(navigation[22]).NavigatorHeader, obj);
             }
             toDateResult = new Date();
@@ -84,44 +84,44 @@ class ChangeLogScreen {
     if (currentChangelog.clientTooOld) {
       tmp20 = jsx;
       tmp21 = View;
-      obj = { style: null, children: null };
-      obj.style = legacyClassComponentStyles.empty;
-      obj1 = { variant: "heading-lg/medium", children: null };
+      obj1 = { style: null, children: null };
+      obj1.style = legacyClassComponentStyles.empty;
+      obj9 = { variant: "heading-lg/medium", children: null };
       intl2 = tmp(tmp2[13]).intl;
-      obj1.children = intl2.string(tmp(tmp2[13]).t.V9ospk);
-      obj.children = jsx(tmp(tmp2[25]).Text, obj1);
-      tmp15 = jsx(View, obj);
+      obj9.children = intl2.string(tmp(tmp2[13]).t.V9ospk);
+      obj1.children = jsx(tmp(tmp2[25]).Text, obj9);
+      tmp15 = jsx(View, obj1);
     } else if (null == changelog) {
       tmp16 = jsx;
-      obj2 = { style: null, children: null };
-      obj2.style = legacyClassComponentStyles.empty;
+      obj10 = { style: null, children: null };
+      obj10.style = legacyClassComponentStyles.empty;
       tmp17 = View;
       Text = tmp(tmp2[25]).Text;
-      obj3 = { variant: "text-md/semibold", children: null };
+      obj11 = { variant: "text-md/semibold", children: null };
       intl = tmp(tmp2[13]).intl;
       string = intl.string;
       t = tmp(tmp2[13]).t;
       if (loaded) {
         t = string(t.O1iRT8);
-        obj3.children = t;
-        obj3 = tmp16(Text, obj3);
-        obj2.children = obj3;
-        tmp18 = obj2;
+        obj11.children = t;
+        obj11 = tmp16(Text, obj11);
+        obj10.children = obj11;
+        tmp18 = obj10;
       } else {
-        obj3[1] = string(t.ZTNur7);
-        obj2.children = tmp16(Text, obj3);
-        tmp18 = obj2;
+        obj11[1] = string(t.ZTNur7);
+        obj10.children = tmp16(Text, obj11);
+        tmp18 = obj10;
       }
       tmp16Result = tmp16(tmp17, tmp18);
     } else {
       tmp13 = jsx;
       tmp14 = ChangeLog;
-      size = { onClose: null, height: null, width: null, changeLog: null };
-      size.onClose = fn;
-      size.height = bound;
-      size.width = diff;
-      size.changeLog = changelog;
-      tmp15 = jsx(ChangeLog, size);
+      size1 = { onClose: null, height: null, width: null, changeLog: null };
+      size1.onClose = fn;
+      size1.height = bound;
+      size1.width = diff;
+      size1.changeLog = changelog;
+      tmp15 = jsx(ChangeLog, size1);
     }
     return tmp15;
   }
@@ -135,19 +135,16 @@ const CHANGELOG_MODAL_KEY = fn(2010).CHANGELOG_MODAL_KEY;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 let c9 = 0.5625;
-fn(4636);
-let createStyles = {
+let createStyles = fn(4636);
+let obj2 = {
   video: { alignSelf: "center" },
   videoWrapper: { marginBottom: 8 },
-  videoSpecial: null,
-  videoOverlay: null,
+  videoSpecial: { borderRadius: nativeDefault.radii.xs, overflow: "hidden" },
+  videoOverlay: { position: "absolute", width: "100%", height: "100%" },
   playButton: null,
   playIcon: null,
   empty: null,
 };
-createStyles = { borderRadius: nativeDefault.radii.xs, overflow: "hidden" };
-createStyles.videoSpecial = createStyles;
-createStyles.videoOverlay = { position: "absolute", width: "100%", height: "100%" };
 let size = {
   position: "absolute",
   top: "50%",
@@ -159,13 +156,13 @@ let size = {
   width: 56,
   height: 56,
 };
-createStyles.playButton = size;
-createStyles.playIcon = { width: 21, height: 21 };
-createStyles.empty = { width: "100%", height: 240, alignItems: "center", paddingTop: 48 };
-let closure_10 = createStyles.createLegacyClassComponentStyles(createStyles);
+obj2.playButton = size;
+obj2.playIcon = { width: 21, height: 21 };
+obj2.empty = { width: "100%", height: 240, alignItems: "center", paddingTop: 48 };
+let closure_10 = createStyles.createLegacyClassComponentStyles(obj2);
 createStyles = fn(4636);
-let obj1 = { bulletPoint: null, listItem: null, listText: null, listItemContent: null };
-const size1 = {
+let obj4 = { bulletPoint: null, listItem: null, listText: null, listItemContent: null };
+let size1 = {
   width: 7,
   height: 7,
   borderRadius: 3.5,
@@ -173,27 +170,27 @@ const size1 = {
   marginTop: 7,
   backgroundColor: nativeDefault.colors.BACKGROUND_MOD_STRONG,
 };
-obj1.bulletPoint = size1;
-obj1.listItem = { flexDirection: "row", marginLeft: 4, marginBottom: 8 };
-obj1.listText = { color: nativeDefault.colors.TEXT_DEFAULT, fontSize: 14, lineHeight: 18, flex: 1 };
-obj1.listItemContent = { flexDirection: "column", flex: 1 };
-let closure_11 = createStyles.createLegacyClassComponentStyles(obj1);
+obj4.bulletPoint = size1;
+obj4.listItem = { flexDirection: "row", marginLeft: 4, marginBottom: 8 };
+let obj3 = { borderRadius: nativeDefault.radii.xs, overflow: "hidden" };
+obj4.listText = { color: nativeDefault.colors.TEXT_DEFAULT, fontSize: 14, lineHeight: 18, flex: 1 };
+obj4.listItemContent = { flexDirection: "column", flex: 1 };
+let closure_11 = createStyles.createLegacyClassComponentStyles(obj4);
 const PureComponent = noop.PureComponent;
 class ListItem extends PureComponent {}
 ListItem.prototype["render"] = function render() {
   const children = this.props.children;
   const tmp = closure_11(this.context);
-  let obj = { style: tmp.listItem, children: null };
-  obj = { style: tmp.bulletPoint };
-  const items = [React5(View, obj)];
-  obj = { style: tmp.listText, children: null };
+  const obj = { style: tmp.listItem, children: null };
+  const items = [React5(View, { style: tmp.bulletPoint })];
+  const obj3 = { style: tmp.listText, children: null };
   let childrenResult = children;
   if (typeof children === "function") {
-    const obj1 = { style: tmp.listText };
-    childrenResult = children(obj1);
+    const obj4 = { style: tmp.listText };
+    childrenResult = children(obj4);
   }
-  obj.children = childrenResult;
-  items[1] = React5(View, obj);
+  obj3.children = childrenResult;
+  items[1] = React5(View, obj3);
   obj.children = items;
   return React6(View, obj);
 };
@@ -217,7 +214,6 @@ class ChangeLog extends PureComponent2 {
       );
     };
     applyArgumentsResult.playVideo = function playVideo() {
-      let obj = applyArgumentsResult;
       const props = applyArgumentsResult.props;
       ({ video, image } = props.changeLog);
       ({ width, height } = props);
@@ -227,28 +223,29 @@ class ChangeLog extends PureComponent2 {
         }
       }
       if (null != video) {
-        obj = { videoURI: video };
+        const obj2 = { videoURI: video };
+        let obj3 = obj2;
       } else {
-        obj = { uri: image };
+        obj3 = { uri: image };
       }
-      obj.track(AnalyticEvents.CHANGE_LOG_VIDEO_INTERACTED);
-      const current = obj.ref.current;
+      applyArgumentsResult.track(AnalyticEvents.CHANGE_LOG_VIDEO_INTERACTED);
+      const current = applyArgumentsResult.ref.current;
       if (null != current) {
-        const obj1 = {
+        const obj5 = {
           initialSources: null,
           disableDownload: true,
           shareable: false,
           analyticsSource: "Change Log",
           originViewOrOriginLayout: null,
         };
-        const obj2 = {};
-        const merged = Object.assign(obj);
-        obj2.width = width;
-        obj2.height = height;
-        const items = [obj2];
-        obj1.initialSources = items;
-        obj1.originViewOrOriginLayout = current;
-        openMediaModal.openMediaModal(obj1);
+        const obj6 = {};
+        const merged = Object.assign(obj3);
+        obj6.width = width;
+        obj6.height = height;
+        const items = [obj6];
+        obj5.initialSources = items;
+        obj5.originViewOrOriginLayout = current;
+        openMediaModal.openMediaModal(obj5);
       }
     };
     return applyArgumentsResult;
@@ -270,21 +267,21 @@ prototype["track"] = function track(arg0) {
   const self = this;
   const changeLog = this.props.changeLog;
   if (null != changeLog) {
-    obj = { change_log_id: null };
+    const obj3 = { change_log_id: null };
     const _HermesInternal = HermesInternal;
-    obj.change_log_id = "" + changeLog.date + ":" + changeLog.revision;
+    obj3.change_log_id = "" + changeLog.date + ":" + changeLog.revision;
     const merged = Object.assign(obj);
-    let tmp10 = obj;
+    let tmp10 = obj3;
     if (arg0 === AnalyticEvents.CHANGE_LOG_CLOSED) {
-      obj = { seconds_open: null, max_scrolled_percentage: null };
+      const obj4 = { seconds_open: null, max_scrolled_percentage: null };
       const _Math = Math;
       const _Date = Date;
-      obj.seconds_open = Math.round((Date.now() - self.mountedAt) / 1000);
+      obj4.seconds_open = Math.round((Date.now() - self.mountedAt) / 1000);
       const _parseInt = parseInt;
       const maxScrolledPercentage = self.maxScrolledPercentage;
-      obj.max_scrolled_percentage = 100 * parseInt(maxScrolledPercentage.toPrecision(4), 10);
-      const merged1 = Object.assign(obj);
-      tmp10 = obj;
+      obj4.max_scrolled_percentage = 100 * parseInt(maxScrolledPercentage.toPrecision(4), 10);
+      const merged1 = Object.assign(obj3);
+      tmp10 = obj4;
     }
     AnalyticsUtilsDefault.track(arg0, tmp10);
   }
@@ -296,12 +293,13 @@ prototype["renderVideo"] = function renderVideo() {
   ({ changeLog, height, onClose } = props);
   ({ video, image, youtube_video_id } = changeLog);
   if (null != video) {
-    let obj = { videoURI: video };
+    const obj2 = { videoURI: video };
+    let obj = obj2;
   } else if (null == image) {
     let tmp4Result = null;
     if (null != youtube_video_id) {
-      obj = { style: tmp.videoWrapper, onAccessibilityEscape: onClose, children: null };
-      const obj1 = {
+      const obj3 = { style: tmp.videoWrapper, onAccessibilityEscape: onClose, children: null };
+      const obj4 = {
         height,
         play: false,
         videoId: youtube_video_id,
@@ -310,27 +308,27 @@ prototype["renderVideo"] = function renderVideo() {
         },
         useLocalHTML: true,
       };
-      const items = [closure_7(_modDef15630, obj1)];
+      const items = [closure_7(_modDef15631, obj4)];
       let tmp6Result = null;
       if (!tmp2) {
-        const obj2 = { style: tmp.videoOverlay, source: null };
-        const obj3 = { uri: null };
+        const obj5 = { style: tmp.videoOverlay, source: null };
+        const obj6 = { uri: null };
         const _HermesInternal = HermesInternal;
-        obj3.uri = "https://i.ytimg.com/vi/" + youtube_video_id + "/hqdefault.jpg";
-        obj2.source = obj3;
-        tmp6Result = closure_7(FastImageDefault, obj2);
+        obj6.uri = "https://i.ytimg.com/vi/" + youtube_video_id + "/hqdefault.jpg";
+        obj5.source = obj6;
+        tmp6Result = closure_7(FastImageDefault, obj5);
         const tmp7Result = FastImageDefault;
       }
       items[1] = tmp6Result;
-      obj.children = items;
-      tmp4Result = closure_8(View, obj);
+      obj3.children = items;
+      tmp4Result = closure_8(View, obj3);
     }
     return tmp4Result;
   } else {
     obj = { uri: image };
   }
-  const obj4 = { style: tmp.videoWrapper, onAccessibilityEscape: onClose, children: null };
-  const obj5 = { ref: self.ref, style: tmp.videoSpecial, children: null };
+  const obj7 = { style: tmp.videoWrapper, onAccessibilityEscape: onClose, children: null };
+  const obj8 = { ref: self.ref, style: tmp.videoSpecial, children: null };
   const size = {
     style: tmp.video,
     src: obj,
@@ -350,30 +348,30 @@ prototype["renderVideo"] = function renderVideo() {
   const items1 = [closure_7(common_VideoDefault, size)];
   let tmp12Result = null;
   if (null != video) {
-    const obj6 = {
+    const obj9 = {
       accessibilityLabel: "Play Video",
       accessibilityRole: "button",
       style: tmp.videoOverlay,
       onPress: self.playVideo,
       children: null,
     };
-    const obj7 = {
+    const obj10 = {
       accessibilityLabel: "Play Video",
       accessibilityRole: "button",
-      source: _modDef10525,
+      source: _modDef10526,
       onPress: self.playVideo,
       style: tmp.playButton,
-      iconSize: tmp18(1178).IconSizes.CUSTOM,
+      iconSize: tmp18(1176).IconSizes.CUSTOM,
       iconStyle: tmp.playIcon,
     };
-    obj6.children = closure_7(TouchableHitBoxDefault, obj7);
-    tmp12Result = closure_7(tmp18(5204).PressableOpacity, obj6);
+    obj9.children = closure_7(TouchableHitBoxDefault, obj10);
+    tmp12Result = closure_7(tmp18(5204).PressableOpacity, obj9);
     const tmp15Result = TouchableHitBoxDefault;
   }
   items1[1] = tmp12Result;
-  obj5.children = items1;
-  obj4.children = closure_8(View, obj5);
-  return closure_7(View, obj4);
+  obj8.children = items1;
+  obj7.children = closure_8(View, obj8);
+  return closure_7(View, obj7);
 };
 prototype["render"] = function render() {
   const obj = {};
@@ -388,15 +386,15 @@ let result = size.fileFinishedImporting("components_native/ChangeLogModal.tsx");
 
 export default function ChangelogModal() {
   const screens = noop.useMemo(() => {
-    let obj = { CHANGELOG: null };
-    obj = {
+    const obj = { CHANGELOG: null };
+    const obj2 = {
       name: "CHANGELOG",
       headerLeft: NavigatorHeader.getHeaderCloseButton(hideChangeLog),
       render() {
         return closure_1_7(closure_1_13, { onClose });
       },
     };
-    obj.CHANGELOG = obj;
+    obj.CHANGELOG = obj2;
     return obj;
   }, []);
   return React5(Navigator.Navigator, { screens, initialRouteName: "CHANGELOG" });

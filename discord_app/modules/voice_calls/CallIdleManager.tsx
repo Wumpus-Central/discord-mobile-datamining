@@ -43,7 +43,7 @@ function disconnect() {
   }
 }
 let c7 = 180000;
-let prototype = function CallIdleManager() {
+const prototype = function CallIdleManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
   require = applyArgumentsResult;
   const timeout = new Timers.Timeout();
@@ -112,8 +112,8 @@ let prototype = function CallIdleManager() {
   return applyArgumentsResult;
 }.prototype;
 class prototype extends tmp2 {}
-prototype = new prototype();
+const prototype1 = new prototype();
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_calls/CallIdleManager.tsx");
 
-export default prototype;
+export default prototype1;

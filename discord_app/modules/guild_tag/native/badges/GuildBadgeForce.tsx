@@ -1,5 +1,5 @@
 // discord_app/modules/guild_tag/native/badges/GuildBadgeForce.tsx
-import v1 from "../../../../../_runtime/01256_v1.js";
+import v1 from "../../../../../_runtime/01254_v1.js";
 import inlineStyles from "../../../../../_runtime/08574_inlineStyles.js";
 import GuildBadgeUtils from "GuildBadgeUtils.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -39,7 +39,7 @@ export const GuildBadgeForce = function GuildBadgeForce(width) {
     Object.assign({ width: 0, height: 0, primaryTintColor: 0, secondaryTintColor: 0 }),
   );
   const memo = noop.useMemo(() => "badge-force-gradient-" + v1.v4(), []);
-  let obj = {
+  const transformedBadgeColors = GuildBadgeUtils.getTransformedBadgeColors({
     primaryBaseColors,
     primaryTintColor,
     primaryTintLuminances,
@@ -48,8 +48,7 @@ export const GuildBadgeForce = function GuildBadgeForce(width) {
     secondaryTintColor,
     secondaryTintLuminances,
     secondaryLuminanceWeights: items1,
-  };
-  const transformedBadgeColors = obj.getTransformedBadgeColors(obj);
+  });
   ({ primaryColorsTransformed, secondaryColorsTransformed } = transformedBadgeColors);
   let tmp9Result = typeof num === "number";
   if (typeof num === "number") {
@@ -61,12 +60,12 @@ export const GuildBadgeForce = function GuildBadgeForce(width) {
   if (tmp9Result) {
     tmp9Result = num2 > 0;
   }
-  obj = {};
+  const obj3 = {};
   const merged1 = Object.assign(merged);
-  obj.width = num;
-  obj.height = num2;
-  obj.viewBox = "0 0 16 16";
-  obj.fill = "none";
+  obj3.width = num;
+  obj3.height = num2;
+  obj3.viewBox = "0 0 16 16";
+  obj3.fill = "none";
   items = [
     React3(inlineStyles.Path, {
       d: "M7 0H4v1h3V0ZM11 1H7v1h4V1ZM9 6H8v4h1V6ZM1 5H0v6h1V5ZM15 2h-4v1h4V2Z",
@@ -132,17 +131,17 @@ export const GuildBadgeForce = function GuildBadgeForce(width) {
     fill: "#000",
   });
   if (tmp9Result) {
-    const obj14 = { children: null };
-    const obj15 = { id: memo, cx: 0.75, cy: 0.5, r: 1, fx: 0.75, fy: 0.5, children: null };
-    const obj16 = { stopColor: primaryColorsTransformed[1], offset: "30%" };
-    items1 = [React3(inlineStyles.Stop, obj16)];
-    const obj17 = { stopColor: secondaryColorsTransformed[1], offset: "70%" };
-    items1[1] = React3(inlineStyles.Stop, obj17);
-    obj15.children = items1;
-    obj14.children = React4(inlineStyles.RadialGradient, obj15);
-    tmp9Result = React3(inlineStyles.Defs, obj14);
+    const obj17 = { children: null };
+    const obj18 = { id: memo, cx: 0.75, cy: 0.5, r: 1, fx: 0.75, fy: 0.5, children: null };
+    const obj19 = { stopColor: primaryColorsTransformed[1], offset: "30%" };
+    items1 = [React3(inlineStyles.Stop, obj19)];
+    const obj20 = { stopColor: secondaryColorsTransformed[1], offset: "70%" };
+    items1[1] = React3(inlineStyles.Stop, obj20);
+    obj18.children = items1;
+    obj17.children = React4(inlineStyles.RadialGradient, obj18);
+    tmp9Result = React3(inlineStyles.Defs, obj17);
   }
   items[20] = tmp9Result;
-  obj.children = items;
-  return React4(inlineStyles.Svg, obj);
+  obj3.children = items;
+  return React4(inlineStyles.Svg, obj3);
 };

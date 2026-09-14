@@ -4,14 +4,13 @@ import ApexExperiment from "../experiments/apex/index.tsx";
 import createExperiment from "../experiments/index.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
-let obj = {
+const apexExperiment = ApexExperiment.createApexExperiment({
   kind: "user",
   name: "2026-03-content-inventory-memberlist-and-ranker",
   defaultConfig: { enabled: true, impressionCappingEnabled: true },
   variations: { 0: { enabled: false, impressionCappingEnabled: false } },
-};
-const apexExperiment = ApexExperiment.createApexExperiment(obj);
-obj = {
+});
+const obj2 = {
   kind: "user",
   id: "2025-09_hotwheels_nvidia_boost",
   label: "Next iteration of the activity feed ranking model.",
@@ -23,8 +22,8 @@ const items = [
   { id: 16, label: "ML model V3 - Nvidia small boost", config: {} },
   { id: 17, label: "ML model V3 - Nvidia big boost", config: {} },
 ];
-obj.treatments = items;
-const experiment = createExperiment.createExperiment(obj);
+obj2.treatments = items;
+const experiment = createExperiment.createExperiment(obj2);
 const result = size.fileFinishedImporting("modules/content_inventory/ContentInventoryExperiments.tsx");
 
 export const MemberlistRankerExperiment = apexExperiment;

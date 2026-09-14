@@ -12,14 +12,13 @@ const frozen = Object.freeze({
   TODAY: "TODAY",
   DONT_CLEAR: "DONT_CLEAR",
 });
-let obj = {
-  value: StatusTypes.ONLINE,
-  label() {
-    return UserUtils.humanizeStatus(StatusTypes.ONLINE);
-  },
-};
 const items = [
-  obj,
+  {
+    value: StatusTypes.ONLINE,
+    label() {
+      return UserUtils.humanizeStatus(StatusTypes.ONLINE);
+    },
+  },
   {
     value: StatusTypes.IDLE,
     label() {
@@ -41,7 +40,7 @@ const items = [
 ];
 const items1 = [, , , ,];
 ({ TODAY: arr2[0], HOURS_4: arr2[1], HOURS_1: arr2[2], MINUTES_30: arr2[3], DONT_CLEAR: arr2[4] } = frozen);
-obj = {
+const obj2 = {
   PLAYING: "PLAYING",
   LISTENING_TO: "LISTENING_TO",
   WATCHING: "WATCHING",
@@ -76,234 +75,233 @@ obj = {
   ADD_STATUS: "ADD_STATUS",
   WHATS_ON_YOUR_MIND: "WHATS_ON_YOUR_MIND",
 };
-obj = {
-  value: obj.PLAYING,
-  label() {
-    const intl = util.intl;
-    return intl.string(util.t.r5TNmx);
-  },
-};
 const items2 = [
-  obj,
   {
-    value: obj.LISTENING_TO,
+    value: obj2.PLAYING,
+    label() {
+      const intl = util.intl;
+      return intl.string(util.t.r5TNmx);
+    },
+  },
+  {
+    value: obj2.LISTENING_TO,
     label() {
       const intl = util.intl;
       return intl.string(util.t["ylzor/"]);
     },
   },
   {
-    value: obj.WATCHING,
+    value: obj2.WATCHING,
     label() {
       const intl = util.intl;
       return intl.string(util.t.pzz9iP);
     },
   },
   {
-    value: obj.CURRENT_OBSESSION,
+    value: obj2.CURRENT_OBSESSION,
     label() {
       const intl = util.intl;
       return intl.string(util.t.xaCthD);
     },
   },
   {
-    value: obj.SHOWER_THOUGHT,
+    value: obj2.SHOWER_THOUGHT,
     label() {
       const intl = util.intl;
       return intl.string(util.t.Wf8fxL);
     },
   },
   {
-    value: obj.TODAY_I_LEARNED,
+    value: obj2.TODAY_I_LEARNED,
     label() {
       const intl = util.intl;
       return intl.string(util.t.pycKiy);
     },
   },
   {
-    value: obj.HOT_TAKE,
+    value: obj2.HOT_TAKE,
     label() {
       const intl = util.intl;
       return intl.string(util.t.l3pZci);
     },
   },
   {
-    value: obj.DAD_JOKE,
+    value: obj2.DAD_JOKE,
     label() {
       const intl = util.intl;
       return intl.string(util.t["3XVZ0v"]);
     },
   },
   {
-    value: obj.EMOJI_DAY,
+    value: obj2.EMOJI_DAY,
     label() {
       const intl = util.intl;
       return intl.string(util.t["4U+EJP"]);
     },
   },
   {
-    value: obj.USELESS_TALENT,
+    value: obj2.USELESS_TALENT,
     label() {
       const intl = util.intl;
       return intl.string(util.t["Z3Vn/X"]);
     },
   },
   {
-    value: obj.VIDEO_GAME_ITEM,
+    value: obj2.VIDEO_GAME_ITEM,
     label() {
       const intl = util.intl;
       return intl.string(util.t.PiepBk);
     },
   },
   {
-    value: obj.READING,
+    value: obj2.READING,
     label() {
       const intl = util.intl;
       return intl.string(util.t.pYQRnN);
     },
   },
   {
-    value: obj.SONG_STUCK,
+    value: obj2.SONG_STUCK,
     label() {
       const intl = util.intl;
       return intl.string(util.t.S7UJ0u);
     },
   },
   {
-    value: obj.MOST_USED_EMOJI,
+    value: obj2.MOST_USED_EMOJI,
     label() {
       const intl = util.intl;
       return intl.string(util.t["1TlHwx"]);
     },
   },
   {
-    value: obj.BEST_FOOD,
+    value: obj2.BEST_FOOD,
     label() {
       const intl = util.intl;
       return intl.string(util.t.ZPjuez);
     },
   },
   {
-    value: obj.FICTIONAL_WORLD,
+    value: obj2.FICTIONAL_WORLD,
     label() {
       const intl = util.intl;
       return intl.string(util.t.lyOeXL);
     },
   },
   {
-    value: obj.USERNAME_ORIGIN,
+    value: obj2.USERNAME_ORIGIN,
     label() {
       const intl = util.intl;
       return intl.string(util.t.l6Yb3T);
     },
   },
   {
-    value: obj.THEME_SONG,
+    value: obj2.THEME_SONG,
     label() {
       const intl = util.intl;
       return intl.string(util.t.Vok4QU);
     },
   },
   {
-    value: obj.FAVORITE_COLLECTIBLE,
+    value: obj2.FAVORITE_COLLECTIBLE,
     label() {
       const intl = util.intl;
       return intl.string(util.t.T24umy);
     },
   },
   {
-    value: obj.GAME_MECHANIC,
+    value: obj2.GAME_MECHANIC,
     label() {
       const intl = util.intl;
       return intl.string(util.t.kzToEh);
     },
   },
   {
-    value: obj.NPC_COMPANION,
+    value: obj2.NPC_COMPANION,
     label() {
       const intl = util.intl;
       return intl.string(util.t["/Zm5VV"]);
     },
   },
   {
-    value: obj.FOOD_CRAVING,
+    value: obj2.FOOD_CRAVING,
     label() {
       const intl = util.intl;
       return intl.string(util.t.ujnXus);
     },
   },
   {
-    value: obj.MYTHICAL_PET,
+    value: obj2.MYTHICAL_PET,
     label() {
       const intl = util.intl;
       return intl.string(util.t["45r7ue"]);
     },
   },
   {
-    value: obj.LATEST_HOBBY,
+    value: obj2.LATEST_HOBBY,
     label() {
       const intl = util.intl;
       return intl.string(util.t.SluNa8);
     },
   },
   {
-    value: obj.FAVORITE_ANIME,
+    value: obj2.FAVORITE_ANIME,
     label() {
       const intl = util.intl;
       return intl.string(util.t.R1f9RT);
     },
   },
   {
-    value: obj.RANKED_UP,
+    value: obj2.RANKED_UP,
     label() {
       const intl = util.intl;
       return intl.string(util.t.nXJgjn);
     },
   },
   {
-    value: obj.CHARACTER_CLASS,
+    value: obj2.CHARACTER_CLASS,
     label() {
       const intl = util.intl;
       return intl.string(util.t.SWVxPM);
     },
   },
   {
-    value: obj.HIGH_SCORE,
+    value: obj2.HIGH_SCORE,
     label() {
       const intl = util.intl;
       return intl.string(util.t.gbUeX7);
     },
   },
   {
-    value: obj.FINISHED_PLAYING,
+    value: obj2.FINISHED_PLAYING,
     label() {
       const intl = util.intl;
       return intl.string(util.t.bIrdLj);
     },
   },
   {
-    value: obj.FINISHED_READING,
+    value: obj2.FINISHED_READING,
     label() {
       const intl = util.intl;
       return intl.string(util.t["tcQn+J"]);
     },
   },
   {
-    value: obj.CANT_WAIT,
+    value: obj2.CANT_WAIT,
     label() {
       const intl = util.intl;
       return intl.string(util.t["40gTjw"]);
     },
   },
   {
-    value: obj.ADD_STATUS,
+    value: obj2.ADD_STATUS,
     label() {
       const intl = util.intl;
       return intl.string(util.t.Vq4UmS);
     },
   },
   {
-    value: obj.WHATS_ON_YOUR_MIND,
+    value: obj2.WHATS_ON_YOUR_MIND,
     label() {
       const intl = util.intl;
       return intl.string(util.t.xod367);
@@ -316,5 +314,5 @@ export const STATUS_MAX_LENGTH = 128;
 export const ClearAfterValues = frozen;
 export const StatusOptions = items;
 export const ClearAfterOptions = items1;
-export const CustomStatusPromptValues = obj;
+export const CustomStatusPromptValues = obj2;
 export const CustomStatusPrompts = items2;

@@ -1,6 +1,6 @@
 // discord_app/modules/game_profile/GameProfileAnalyticUtils.tsx
 import AnalyticsUtilsDefault from "../../utils/AnalyticsUtils.tsx";
-import v1 from "../../../_runtime/01256_v1.js";
+import v1 from "../../../_runtime/01254_v1.js";
 import ContentInventoryStore from "../content_inventory/ContentInventoryStore.tsx";
 
 require = fn;
@@ -160,7 +160,8 @@ export const generateViewId = function generateViewId() {
 export const trackGameProfileOpen = function trackGameProfileOpen(viewId) {
   viewId = viewId.viewId;
   ({ source, gameName, gameId, authorId, profileType } = viewId);
-  const obj = {
+  const obj = AnalyticsUtilsDefault;
+  obj.track(constants.GAME_PROFILE_OPEN, {
     view_id: viewId,
     source,
     game_name: gameName,
@@ -168,14 +169,13 @@ export const trackGameProfileOpen = function trackGameProfileOpen(viewId) {
     author_id: authorId,
     request_id: ContentInventoryStore.getFeedRequestId(ContentInventoryFeedKey.GLOBAL_FEED),
     profile_type: profileType,
-  };
-  obj.track(constants.GAME_PROFILE_OPEN, obj);
+  });
   return viewId;
 };
 export const trackGameProfileClose = function trackGameProfileClose(guildId) {
   guildId = guildId.guildId;
   ({ viewId, gameName, gameId, playedFriendIds, playedFriendsData, similarGames, isVerified } = guildId);
-  const obj = {
+  const obj2 = {
     view_id: viewId,
     game_name: gameName,
     application_id: gameId,
@@ -190,14 +190,14 @@ export const trackGameProfileClose = function trackGameProfileClose(guildId) {
   if (isVerified) {
     tmp = guildId;
   }
-  obj.official_guild_id = tmp;
-  obj.guild_id = guildId;
-  obj.track(constants.GAME_PROFILE_CLOSE, obj);
+  obj2.official_guild_id = tmp;
+  obj2.guild_id = guildId;
+  AnalyticsUtilsDefault.track(constants.GAME_PROFILE_CLOSE, obj2);
 };
 export const trackGameProfileAction = function trackGameProfileAction(guildId) {
   guildId = guildId.guildId;
   ({ gameName, gameId, action, recipientUserId, similarGameId, viewId, isVerified, source } = guildId);
-  const obj = {
+  const obj2 = {
     game_name: gameName,
     application_id: gameId,
     action,
@@ -212,10 +212,10 @@ export const trackGameProfileAction = function trackGameProfileAction(guildId) {
   if (isVerified) {
     tmp = guildId;
   }
-  obj.official_guild_id = tmp;
-  obj.guild_id = guildId;
-  obj.source = source;
-  obj.track(constants.GAME_PROFILE_ACTION, obj);
+  obj2.official_guild_id = tmp;
+  obj2.guild_id = guildId;
+  obj2.source = source;
+  AnalyticsUtilsDefault.track(constants.GAME_PROFILE_ACTION, obj2);
 };
 export const trackGameProfileEmbedAction = function trackGameProfileEmbedAction(arg0) {
   ({ gameName, gameId, action } = arg0);

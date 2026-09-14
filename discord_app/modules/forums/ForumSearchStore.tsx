@@ -82,10 +82,10 @@ const forumSearchStore = new ForumSearchStore(DispatcherDefault, {
         obj = { query: null, loading: false, results: null };
       }
       dependencyMap[channelId] = obj;
-      obj = {};
+      const obj2 = {};
       const merged = Object.assign(obj);
-      obj.query = channelId.query;
-      dependencyMap[channelId] = obj;
+      obj2.query = channelId.query;
+      dependencyMap[channelId] = obj2;
     } else {
       return false;
     }
@@ -100,10 +100,10 @@ const forumSearchStore = new ForumSearchStore(DispatcherDefault, {
         obj = { query: null, loading: false, results: null };
       }
       dependencyMap[channelId] = obj;
-      obj = {};
+      const obj2 = {};
       const merged = Object.assign(obj);
-      obj.loading = true;
-      dependencyMap[channelId] = obj;
+      obj2.loading = true;
+      dependencyMap[channelId] = obj2;
     } else {
       return false;
     }
@@ -118,11 +118,11 @@ const forumSearchStore = new ForumSearchStore(DispatcherDefault, {
         obj = { query: null, loading: false, results: null };
       }
       dependencyMap[channelId] = obj;
-      obj = {};
+      const obj2 = {};
       const merged = Object.assign(obj);
-      obj.loading = false;
-      obj.results = channelId.threadIds;
-      dependencyMap[channelId] = obj;
+      obj2.loading = false;
+      obj2.results = channelId.threadIds;
+      dependencyMap[channelId] = obj2;
     } else {
       return false;
     }
@@ -137,11 +137,11 @@ const forumSearchStore = new ForumSearchStore(DispatcherDefault, {
         obj = { query: null, loading: false, results: null };
       }
       dependencyMap[channelId] = obj;
-      obj = {};
+      const obj2 = {};
       const merged = Object.assign(obj);
-      obj.loading = false;
-      obj.results = [];
-      dependencyMap[channelId] = obj;
+      obj2.loading = false;
+      obj2.results = [];
+      dependencyMap[channelId] = obj2;
     } else {
       return false;
     }

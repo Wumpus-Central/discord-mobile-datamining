@@ -12,13 +12,12 @@ const result = size.fileFinishedImporting("modules/interaction_components/native
 
 export default noop.memo((type) => {
   type = type.type;
-  let obj = ComponentStateContext;
-  const componentStateContext = obj.useComponentStateContext();
+  const componentStateContext = ComponentStateContext.useComponentStateContext();
   _modDef38(null != componentStateContext, "CheckboxActionComponent must be rendered inside a ComponentStateContext");
   let tmp5;
   if (null != type.default) {
-    obj = { type, value: _default };
-    tmp5 = obj;
+    const obj2 = { type, value: _default };
+    tmp5 = obj2;
   }
   const componentState = componentStateContext.useComponentState(type, tmp5);
   const state = componentState.state;
@@ -36,23 +35,15 @@ export default noop.memo((type) => {
   if (parents != null) {
     first = parents[0];
   }
-  type = undefined;
+  let type1;
   if (first != null) {
-    type = first.type;
+    type1 = first.type;
   }
   let tmp11;
-  if (type === Server.ComponentType.LABEL) {
+  if (type1 === Server.ComponentType.LABEL) {
     tmp11 = first;
   }
   _modDef38(null != tmp11, "CheckboxActionComponent must be a child of a Label component");
-  obj = {
-    label: tmp11.label,
-    description: tmp11.description,
-    checked: memo,
-    onToggle(value) {
-      executeStateUpdate({ type, value });
-    },
-  };
   return jsx(Checkbox.Checkbox, {
     label: tmp11.label,
     description: tmp11.description,

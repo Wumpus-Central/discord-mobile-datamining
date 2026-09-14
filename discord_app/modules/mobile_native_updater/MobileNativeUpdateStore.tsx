@@ -25,8 +25,7 @@ prototype["checkForNewerBuild"] = function checkForNewerBuild() {
     obj.dispatch({ type: "MOBILE_NATIVE_UPDATE_CHECK_STARTED" });
     MobileNativeUpdateUtils.checkForNewerBuild().then(
       (newBuild) => {
-        obj = { type: "MOBILE_NATIVE_UPDATE_CHECK_FINISHED", newBuild };
-        obj.dispatch(obj);
+        DispatcherDefault.dispatch({ type: "MOBILE_NATIVE_UPDATE_CHECK_FINISHED", newBuild });
       },
       () => {
         DispatcherDefault.dispatch({ type: "MOBILE_NATIVE_UPDATE_CHECK_FAILED" });

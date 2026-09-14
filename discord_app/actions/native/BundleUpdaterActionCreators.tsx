@@ -11,20 +11,20 @@ const result = size.fileFinishedImporting("actions/native/BundleUpdaterActionCre
 export default {
   prepareUpdate(versionRequired) {
     if (versionRequired) {
-      const obj = { title: null, body: null, confirmText: null, cancelText: null, onConfirm: null };
+      const obj2 = { title: null, body: null, confirmText: null, cancelText: null, onConfirm: null };
       const intl = util.intl;
-      obj.title = intl.string(util.t.GQZdmI);
+      obj2.title = intl.string(util.t.GQZdmI);
       const intl2 = util.intl;
-      obj.body = intl2.string(util.t.Fizu9y);
+      obj2.body = intl2.string(util.t.Fizu9y);
       const intl3 = util.intl;
-      obj.confirmText = intl3.string(util.t.UefCDS);
+      obj2.confirmText = intl3.string(util.t.UefCDS);
       const intl4 = util.intl;
-      obj.cancelText = intl4.string(util.t["1SzcG6"]);
-      obj.onConfirm = function onConfirm() {
+      obj2.cancelText = intl4.string(util.t["1SzcG6"]);
+      obj2.onConfirm = function onConfirm() {
         BundleUpdaterManager = BundleUpdaterManager.BundleUpdaterManager;
         return BundleUpdaterManager.reload();
       };
-      obj.show(obj);
+      AlertActionCreatorsDefault.show(obj2);
       c4 = true;
     }
   },

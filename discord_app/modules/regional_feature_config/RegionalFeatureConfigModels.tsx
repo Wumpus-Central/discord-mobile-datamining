@@ -76,20 +76,20 @@ prototype3["shouldCollectAppStoreSignal"] = function shouldCollectAppStoreSignal
 };
 RegionalFeatureConfig["fromConnectionOpen"] = function fromConnectionOpen(regionalFeatureConfig) {
   if (typeof SettingsConfig === "function") {
-    let obj = Object.create(SettingsConfig.prototype);
+    const obj = Object.create(SettingsConfig.prototype);
     obj.teenByDefault = tmp2;
     if (typeof AgeVerificationConfig === "function") {
-      obj = Object.create(AgeVerificationConfig.prototype);
-      obj.gatedFeatures = tmp4;
+      const obj4 = Object.create(AgeVerificationConfig.prototype);
+      obj4.gatedFeatures = tmp4;
       if (typeof AppStoreConfig === "function") {
-        const obj1 = Object.create(tmp7.prototype);
-        obj1.shouldCollectSignal = true === tmp8;
+        const obj5 = Object.create(tmp7.prototype);
+        obj5.shouldCollectSignal = true === tmp8;
         if (typeof RegionalFeatureConfig === "function") {
-          const obj2 = Object.create(RegionalFeatureConfig.prototype);
-          obj2.settings = obj;
-          obj2.ageVerification = obj;
-          obj2.appStore = obj1;
-          return obj2;
+          const obj6 = Object.create(RegionalFeatureConfig.prototype);
+          obj6.settings = obj;
+          obj6.ageVerification = obj4;
+          obj6.appStore = obj5;
+          return obj6;
         } else {
           throw new TypeError("Trying to call a non-function");
         }

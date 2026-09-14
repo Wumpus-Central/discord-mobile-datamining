@@ -8,7 +8,10 @@ import CommandPermissionUtils from "CommandPermissionUtils.tsx";
 import _slicedToArray from "../../../_runtime/metro/00032__.js";
 import noop from "../../../_runtime/metro/00019__.js";
 import GuildStore from "../../stores/GuildStore.tsx";
-import ApplicationCommandIndexStore from "ApplicationCommandIndexStore.tsx";
+import ApplicationCommandIndexStore_mod from "ApplicationCommandIndexStore.tsx";
+
+const require = globalThis.__r;
+const CommandPermissionUtilsAll = CommandPermissionUtils;
 
 require = fn;
 function findCommandInSection(found, commandId) {
@@ -33,7 +36,7 @@ function findCommandInSection(found, commandId) {
       }
       let command;
       if (null != rootCommand) {
-        const obj = { rootCommand, command: rootCommand, applicationId: null };
+        const obj2 = { rootCommand, command: rootCommand, applicationId: null };
         const application = found.descriptor.application;
         let str;
         if (application != null) {
@@ -42,8 +45,8 @@ function findCommandInSection(found, commandId) {
         if (str == null) {
           str = "";
         }
-        obj.applicationId = str;
-        command = obj.buildCommand(obj);
+        obj2.applicationId = str;
+        command = ApplicationCommandUtils.buildCommand(obj2);
       }
       return command;
     }
@@ -56,6 +59,7 @@ let ApplicationCommandIndexStore = fn(9419);
   useQueryState: closure_8,
   useUserIndexState: closure_9,
 } = ApplicationCommandIndexStore);
+let ApplicationCommandIndexStore = ApplicationCommandIndexStore_mod;
 const BuiltInSectionId = fn(5080).BuiltInSectionId;
 const NOOP = fn(1074).NOOP;
 let items = [fn(1894).ApplicationCommandType.CHAT];
@@ -66,7 +70,7 @@ let result = size.fileFinishedImporting("modules/application_commands/Applicatio
 export const getCachedCommand = function getCachedCommand(type, commandId, applicationId) {
   closure_0 = applicationId;
   if (null == commandId) {
-    return { application: "justifyContent", command: "call", section: "window" };
+    return { application: "test", command: "call", section: "intl" };
   } else {
     const userState = ApplicationCommandIndexStore.getUserState();
     const result2 = userState.result;
@@ -98,7 +102,7 @@ export const getCachedCommand = function getCachedCommand(type, commandId, appli
         return id === closure_0;
       });
       if (null != found) {
-        let obj = {
+        const obj = {
           application: found.descriptor.application,
           command: findCommandInSection(found, commandId),
           section: found.descriptor,
@@ -111,13 +115,13 @@ export const getCachedCommand = function getCachedCommand(type, commandId, appli
       while (iter !== undefined) {
         let tmp7 = findCommandInSection(nextResult, commandId);
         if (null != tmp7) {
-          obj = { application: nextResult.descriptor.application, command: tmp7, section: nextResult.descriptor };
+          let obj2 = { application: nextResult.descriptor.application, command: tmp7, section: nextResult.descriptor };
           iter.return();
-          return obj;
+          return obj2;
         }
       }
     }
-    return { application: "justifyContent", command: "call", section: "window" };
+    return { application: "test", command: "call", section: "intl" };
   }
 };
 export const getCachedApplicationSection = function getCachedApplicationSection(type, CHAT, applicationId) {
@@ -161,13 +165,14 @@ export const getCachedApplicationSection = function getCachedApplicationSection(
   return descriptor;
 };
 export const getCachedResults = function getCachedResults(withAffinitySuggestions, CHAT, query) {
-  let obj = { commandTypes: null, text: query };
+  const obj = { commandTypes: null, text: query };
   items = [CHAT];
   obj.commandTypes = items;
-  obj = { scoreMethod: ApplicationCommandQueryTypes.ScoreMethod.COMMAND_OR_APPLICATION, allowFetch: false };
-  query = ApplicationCommandIndexStore.query(withAffinitySuggestions, obj, obj);
-  obj = { commands: query.commands, sections: query.descriptors };
-  return obj;
+  query = ApplicationCommandIndexStore.query(withAffinitySuggestions, obj, {
+    scoreMethod: ApplicationCommandQueryTypes.ScoreMethod.COMMAND_OR_APPLICATION,
+    allowFetch: false,
+  });
+  return { commands: query.commands, sections: query.descriptors };
 };
 export const getChangeKeys = function getChangeKeys(type) {
   const userState = ApplicationCommandIndexStore.getUserState();
@@ -187,17 +192,18 @@ export const getChangeKeys = function getChangeKeys(type) {
 export const useCachedResults = function useCachedResults(arg0, CHAT, text) {
   closure_0 = CHAT;
   items = [CHAT];
-  let obj = {
+  const obj = {
     commandTypes: noop.useMemo(() => {
       items = [closure_0];
       return items;
     }, items),
     text,
   };
-  obj = { scoreMethod: ApplicationCommandQueryTypes.ScoreMethod.COMMAND_OR_APPLICATION, allowFetch: false };
-  const tmp = React6(arg0, obj, obj);
-  obj = { commands: tmp.commands, sections: tmp.descriptors };
-  return obj;
+  const tmp = React6(arg0, obj, {
+    scoreMethod: ApplicationCommandQueryTypes.ScoreMethod.COMMAND_OR_APPLICATION,
+    allowFetch: false,
+  });
+  return { commands: tmp.commands, sections: tmp.descriptors };
 };
 export const useDiscovery = function useDiscovery(options) {
   ({ context, filters } = options);
@@ -213,14 +219,13 @@ export const useDiscovery = function useDiscovery(options) {
   if ("channel" === context.type) {
     guild_id = context.channel.guild_id;
   }
-  let obj = filters(guild_id[8]);
   items = [sectionedCommands];
   let items1 = [guild_id];
-  const stateFromStores = obj.useStateFromStores(items, () => GuildStore.getGuild(guild_id), items1);
-  obj = {};
+  const stateFromStores = filters(guild_id[8]).useStateFromStores(items, () => GuildStore.getGuild(guild_id), items1);
+  let obj2 = {};
   const merged = Object.assign(options);
-  obj.allowFetch = options.allowFetch;
-  let tmp4 = first(context, stateFromStores, filters, obj);
+  obj2.allowFetch = options.allowFetch;
+  let tmp4 = first(context, stateFromStores, filters, obj2);
   descriptors = tmp4.descriptors;
   commands = tmp4.commands;
   sectionedCommands = tmp4.sectionedCommands;
@@ -256,7 +261,7 @@ export const useDiscovery = function useDiscovery(options) {
   }, items2);
   let items3 = [loading, commands, descriptors, sectionedCommands, first, memo];
   return commands.useMemo(() => {
-    let obj = {
+    const obj = {
       loading,
       commands,
       activeSections: descriptors,
@@ -276,11 +281,11 @@ export const useDiscovery = function useDiscovery(options) {
       } else {
         commandsByActiveSection = sectionedCommands[0];
         if (null != commandsByActiveSection) {
-          obj = { section: commandsByActiveSection.section, data: null };
+          const obj2 = { section: commandsByActiveSection.section, data: null };
           items = [];
           HermesBuiltin.arraySpread(memo, HermesBuiltin.arraySpread(commandsByActiveSection.data, 0));
-          obj.data = items;
-          commandsByActiveSection = [obj];
+          obj2.data = items;
+          commandsByActiveSection = [obj2];
           HermesBuiltin.arraySpread(sectionedCommands.slice(1), 1);
           obj.commandsByActiveSection = commandsByActiveSection;
           let tmp7 = memo;
@@ -288,10 +293,10 @@ export const useDiscovery = function useDiscovery(options) {
           const tmp6 = ApplicationCommandBuiltIns.BUILT_IN_SECTIONS[BuiltInSectionId.BUILT_IN];
           const items1 = [tmp6];
           obj.activeSections = items1;
-          obj = { section: tmp6, data: null };
+          const obj3 = { section: tmp6, data: null };
           tmp7 = memo;
-          obj.data = memo;
-          const items2 = [obj];
+          obj3.data = memo;
+          const items2 = [obj3];
           obj.commandsByActiveSection = items2;
         }
         const items3 = [];
@@ -352,7 +357,7 @@ export const executeQuery = function executeQuery(withAffinitySuggestions, comma
     HermesBuiltin.arraySpread(items, HermesBuiltin.arraySpread(commands, 0));
     tmp8 = items1;
   }
-  section = { commands: tmp8, sections: null };
+  const obj2 = { commands: tmp8, sections: null };
   let tmp14 = descriptors;
   if (loading) {
     tmp14 = descriptors;
@@ -361,8 +366,8 @@ export const executeQuery = function executeQuery(withAffinitySuggestions, comma
       tmp14 = items2;
     }
   }
-  section.sections = tmp14;
-  return section;
+  obj2.sections = tmp14;
+  return obj2;
 };
 export const useQuery = function useQuery(arg0, commandTypes, placeholderCount) {
   closure_0 = commandTypes;
@@ -523,10 +528,14 @@ export const useCommandsForApplication = function useCommandsForApplication(arg0
     const mapped = values.map((rootCommand) => {
       let command = rootCommand;
       if (null != rootCommand.rootCommand) {
-        dependencyMap(sectionDescriptor[6]);
-        const obj = { rootCommand: null, command: null, applicationId: null };
         ({ rootCommand: obj2.rootCommand, rootCommand: obj2.command, applicationId: obj2.applicationId } = rootCommand);
-        command = obj.buildCommand(obj);
+        command = dependencyMap(sectionDescriptor[6]).buildCommand({
+          rootCommand: null,
+          command: null,
+          applicationId: null,
+        });
+        const obj = dependencyMap(sectionDescriptor[6]);
+        const obj3 = { rootCommand: null, command: null, applicationId: null };
       }
       return command;
     });
@@ -536,7 +545,7 @@ export const useCommandsForApplication = function useCommandsForApplication(arg0
     }, {});
     let application;
     if (tmp9 != null) {
-      let descriptor = tmp9.descriptor;
+      const descriptor = tmp9.descriptor;
       if (descriptor != null) {
         application = descriptor.application;
       }
@@ -544,11 +553,11 @@ export const useCommandsForApplication = function useCommandsForApplication(arg0
     let obj = { application, commands: null, sectionDescriptor: null, isGuildInstalled: null, isUserInstalled: null };
     const mapped1 = commands.map((item) => dependencyMap[item]);
     obj.commands = mapped1.filter(GlobalUtils.isNotNullish);
-    descriptor = undefined;
+    let descriptor1;
     if (tmp9 != null) {
-      descriptor = tmp9.descriptor;
+      descriptor1 = tmp9.descriptor;
     }
-    obj.sectionDescriptor = descriptor;
+    obj.sectionDescriptor = descriptor1;
     obj.isGuildInstalled = null != tmp6;
     obj.isUserInstalled = null != tmp2;
     return obj;
@@ -556,7 +565,6 @@ export const useCommandsForApplication = function useCommandsForApplication(arg0
 };
 export const useAccessibleCommandsForApplication = function useAccessibleCommandsForApplication(channel, arg1, arg2) {
   _require = channel;
-  let obj = isUserInstalled;
   items = [channel];
   closure_129_0 = arg1;
   closure_129_1 = arg2;
@@ -621,10 +629,14 @@ export const useAccessibleCommandsForApplication = function useAccessibleCommand
     const mapped = values.map((rootCommand) => {
       let command = rootCommand;
       if (null != rootCommand.rootCommand) {
-        dependencyMap(sectionDescriptor[6]);
-        const obj = { rootCommand: null, command: null, applicationId: null };
         ({ rootCommand: obj2.rootCommand, rootCommand: obj2.command, applicationId: obj2.applicationId } = rootCommand);
-        command = obj.buildCommand(obj);
+        command = dependencyMap(sectionDescriptor[6]).buildCommand({
+          rootCommand: null,
+          command: null,
+          applicationId: null,
+        });
+        const obj = dependencyMap(sectionDescriptor[6]);
+        const obj3 = { rootCommand: null, command: null, applicationId: null };
       }
       return command;
     });
@@ -634,7 +646,7 @@ export const useAccessibleCommandsForApplication = function useAccessibleCommand
     }, {});
     let application;
     if (tmp9 != null) {
-      let descriptor = tmp9.descriptor;
+      const descriptor = tmp9.descriptor;
       if (descriptor != null) {
         application = descriptor.application;
       }
@@ -642,11 +654,11 @@ export const useAccessibleCommandsForApplication = function useAccessibleCommand
     let obj = { application, commands: null, sectionDescriptor: null, isGuildInstalled: null, isUserInstalled: null };
     const mapped1 = commands.map((item) => dependencyMap[item]);
     obj.commands = mapped1.filter(GlobalUtils.isNotNullish);
-    descriptor = undefined;
+    let descriptor1;
     if (tmp9 != null) {
-      descriptor = tmp9.descriptor;
+      descriptor1 = tmp9.descriptor;
     }
-    obj.sectionDescriptor = descriptor;
+    obj.sectionDescriptor = descriptor1;
     obj.isGuildInstalled = null != tmp6;
     obj.isUserInstalled = null != tmp2;
     return obj;
@@ -656,9 +668,9 @@ export const useAccessibleCommandsForApplication = function useAccessibleCommand
   const isGuildInstalled = memo1.isGuildInstalled;
   isUserInstalled = memo1.isUserInstalled;
   const permissionContext = require("CommandPermissionContext").usePermissionContext(channel, items);
-  obj = { application: memo1.application, commands: null };
+  let obj3 = { application: memo1.application, commands: null };
   const items2 = [commands, permissionContext, sectionDescriptor, isGuildInstalled, isUserInstalled, channel];
-  obj.commands = obj.useMemo(() => {
+  obj3.commands = isUserInstalled.useMemo(() => {
     if (null != allowedForChannel) {
       let allowedForUser = null;
       if (null != allowedForUser.guild_id) {
@@ -691,11 +703,11 @@ export const useAccessibleCommandsForApplication = function useAccessibleCommand
             tmp,
             tmp.guild_id,
           );
-          const obj2 = commands(sectionDescriptor[13]);
+          let obj2 = commands(sectionDescriptor[13]);
         }
       }
       return arr.filter((item) => {
-        const obj = {
+        const obj2 = {
           applicationAllowedForUser: allowedForUser,
           applicationAllowedForChannel: allowedForChannel,
           isGuildInstalled,
@@ -706,11 +718,14 @@ export const useAccessibleCommandsForApplication = function useAccessibleCommand
         if (sectionDescriptor != null) {
           botId = sectionDescriptor.botId;
         }
-        obj.commandBotId = botId;
-        return obj.hasAccess(item, permissionContext, obj) === CommandPermissionUtils.HasAccessResult.ALLOWED;
+        obj2.commandBotId = botId;
+        return (
+          CommandPermissionUtilsAll.hasAccess(item, permissionContext, obj2) ===
+          CommandPermissionUtils.HasAccessResult.ALLOWED
+        );
       });
     }
     arr = allowedForChannel;
   }, items2);
-  return obj;
+  return obj3;
 };

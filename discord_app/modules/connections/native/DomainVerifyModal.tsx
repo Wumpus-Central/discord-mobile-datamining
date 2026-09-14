@@ -14,7 +14,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 require = fn;
 function DomainScreen(onClose) {
   onClose = onClose.onClose;
-  let first;
+  first = undefined;
   _slicedToArray = undefined;
   noop = undefined;
   function verify() {
@@ -76,20 +76,18 @@ function DomainScreen(onClose) {
       });
   }
   const tmp = closure_10();
-  let obj = onClose(first[7]);
-  importDefault = obj.useNavigation();
-  const tmp2 = _slicedToArray(noop.useState(""), 2);
-  first = tmp2[0];
+  importDefault = onClose(first[7]).useNavigation();
+  [first, obj4.onChangeText] = noop.useState("");
   const tmp4 = _slicedToArray(noop.useState(null), 2);
   _slicedToArray = tmp4[1];
   const tmp5 = _slicedToArray(noop.useState(false), 2);
   noop = tmp5[1];
-  obj = { bottom: true, style: tmp.container, children: null };
-  obj = { variant: "text-md/normal", color: "text-default", style: tmp.description, children: null };
+  const obj2 = { bottom: true, style: tmp.container, children: null };
+  const obj3 = { variant: "text-md/normal", color: "text-default", style: tmp.description, children: null };
   const intl = onClose(first[11]).intl;
-  obj.children = intl.string(onClose(first[11]).t.NxPUqY);
-  const items = [closure_8(onClose(first[10]).Text, obj), ,];
-  const obj1 = {
+  obj3.children = intl.string(onClose(first[11]).t.NxPUqY);
+  const items = [closure_8(onClose(first[10]).Text, obj3), ,];
+  const obj4 = {
     autoFocus: true,
     style: tmp.input,
     label: null,
@@ -99,20 +97,20 @@ function DomainScreen(onClose) {
     onChangeText: null,
     onSubmitEditing: null,
   };
+  let obj = onClose(first[7]);
   const intl2 = onClose(first[11]).intl;
-  obj1.label = intl2.string(onClose(first[11]).t["4jIAa+"]);
-  obj1.placeholder = onClose(first[13]).EXAMPLE_DOMAIN;
-  obj1.error = tmp4[0];
-  obj1.onChangeText = tmp2[1];
-  obj1.onSubmitEditing = verify;
-  items[1] = closure_8(require("FreeFormInputGroup"), obj1);
-  const obj2 = { loading: tmp5[0], disabled: "" === first, text: null, onPress: null };
+  obj4.label = intl2.string(onClose(first[11]).t["4jIAa+"]);
+  obj4.placeholder = onClose(first[13]).EXAMPLE_DOMAIN;
+  obj4.error = tmp4[0];
+  obj4.onSubmitEditing = verify;
+  items[1] = closure_8(require("FreeFormInputGroup"), obj4);
+  const obj5 = { loading: tmp5[0], disabled: "" === first, text: null, onPress: null };
   const intl3 = onClose(first[11]).intl;
-  obj2.text = intl3.string(onClose(first[11]).t.PDTjLN);
-  obj2.onPress = verify;
-  items[2] = closure_8(onClose(first[14]).Button, obj2);
-  obj.children = items;
-  return closure_9(onClose(first[9]).SafeAreaPaddingView, obj);
+  obj5.text = intl3.string(onClose(first[11]).t.PDTjLN);
+  obj5.onPress = verify;
+  items[2] = closure_8(onClose(first[14]).Button, obj5);
+  obj2.children = items;
+  return closure_9(onClose(first[9]).SafeAreaPaddingView, obj2);
 }
 function DNSProofScreen(proof) {
   ({ onClose: require, domain } = proof);
@@ -120,58 +118,58 @@ function DNSProofScreen(proof) {
   noop = undefined;
   c5 = undefined;
   const tmp = closure_10();
-  let obj = require("useNavigation");
-  _slicedToArray = obj.useNavigation();
-  [tmp5, c4] = _slicedToArray(noop.useState(null), 2);
+  _slicedToArray = require("useNavigation").useNavigation();
+  const obj = require("useNavigation");
+  [tmp5, c4] = noop.useState(null);
   const tmp4 = _slicedToArray(noop.useState(null), 2);
-  [tmp7, c5] = _slicedToArray(noop.useState(false), 2);
-  obj = { bottom: true, style: tmp.container, children: null };
-  obj = { variant: "text-md/normal", children: null };
+  [tmp7, c5] = noop.useState(false);
+  const obj2 = { bottom: true, style: tmp.container, children: null };
+  const obj3 = { variant: "text-md/normal", children: null };
   const intl = require("util").intl;
-  obj.children = intl.string(require("util").t.cSURbq);
-  const items = [closure_8(require("Text/Text").Text, obj), , , ,];
-  const obj1 = { style: tmp.dns, children: null };
-  const obj2 = { variant: "text-md/normal", children: null };
+  obj3.children = intl.string(require("util").t.cSURbq);
+  const items = [closure_8(require("Text/Text").Text, obj3), , , ,];
+  const obj4 = { style: tmp.dns, children: null };
+  const obj5 = { variant: "text-md/normal", children: null };
   const intl2 = require("util").intl;
-  obj2.children = intl2.string(require("util").t.GL3q7k);
-  const items1 = [closure_8(require("Text/Text").Text, obj2), , , , ,];
-  const obj3 = { variant: "text-md/normal", selectable: true, style: tmp.code, children: null };
-  let obj6 = require("DomainVerifyUtils");
-  obj3.children = obj6.getDnsName(domain);
-  items1[1] = closure_8(require("Text/Text").Text, obj3);
-  const obj4 = { variant: "text-md/normal", children: null };
+  obj5.children = intl2.string(require("util").t.GL3q7k);
+  const items1 = [closure_8(require("Text/Text").Text, obj5), , , , ,];
+  const obj6 = { variant: "text-md/normal", selectable: true, style: tmp.code, children: null };
+  const tmp6 = _slicedToArray(noop.useState(false), 2);
+  obj6.children = require("DomainVerifyUtils").getDnsName(domain);
+  items1[1] = closure_8(require("Text/Text").Text, obj6);
+  const obj8 = { variant: "text-md/normal", children: null };
   const intl3 = require("util").intl;
-  obj4.children = intl3.string(require("util").t.Ccmixu);
-  items1[2] = closure_8(require("Text/Text").Text, obj4);
+  obj8.children = intl3.string(require("util").t.Ccmixu);
+  items1[2] = closure_8(require("Text/Text").Text, obj8);
   items1[3] = closure_8(require("Text/Text").Text, {
     variant: "text-md/normal",
     selectable: true,
     style: tmp.code,
     children: "TXT",
   });
-  obj6 = { variant: "text-md/normal", children: null };
+  const obj10 = { variant: "text-md/normal", children: null };
   const intl4 = require("util").intl;
-  obj6.children = intl4.string(require("util").t.PVLriT);
-  items1[4] = closure_8(require("Text/Text").Text, obj6);
+  obj10.children = intl4.string(require("util").t.PVLriT);
+  items1[4] = closure_8(require("Text/Text").Text, obj10);
   items1[5] = closure_8(require("Text/Text").Text, {
     variant: "text-md/normal",
     selectable: true,
     style: tmp.code,
     children: proof,
   });
-  obj1.children = items1;
-  items[1] = closure_9(c5, obj1);
+  obj4.children = items1;
+  items[1] = closure_9(c5, obj4);
   let tmp9Result = null != tmp5;
   if (tmp9Result) {
-    const obj8 = { variant: "text-md/normal", color: "text-feedback-critical", style: tmp.error, children: tmp5 };
-    tmp9Result = closure_8(require("Text/Text").Text, obj8);
+    const obj12 = { variant: "text-md/normal", color: "text-feedback-critical", style: tmp.error, children: tmp5 };
+    tmp9Result = closure_8(require("Text/Text").Text, obj12);
   }
   items[2] = tmp9Result;
-  const obj9 = { style: tmp.button, children: null };
-  const obj10 = { loading: tmp7, text: null, onPress: null };
+  const obj13 = { style: tmp.button, children: null };
+  const obj14 = { loading: tmp7, text: null, onPress: null };
   const intl5 = require("util").intl;
-  obj10.text = intl5.string(require("util").t["13ofGu"]);
-  obj10.onPress = function onPress() {
+  obj14.text = intl5.string(require("util").t["13ofGu"]);
+  obj14.onPress = function onPress() {
     _undefined2(true);
     _undefined(null);
     const HTTP = HTTPUtils.HTTP;
@@ -219,67 +217,66 @@ function DNSProofScreen(proof) {
         _undefined2(false);
       });
   };
-  obj9.children = closure_8(require("components/Button/Button").Button, obj10);
-  items[3] = closure_8(c5, obj9);
-  const obj11 = { style: tmp.button, children: null };
-  const obj12 = { variant: "secondary", text: null, onPress: null };
+  obj13.children = closure_8(require("components/Button/Button").Button, obj14);
+  items[3] = closure_8(c5, obj13);
+  const obj15 = { style: tmp.button, children: null };
+  const obj16 = { variant: "secondary", text: null, onPress: null };
   const intl6 = require("util").intl;
-  obj12.text = intl6.string(require("util").t.CkfdNx);
-  obj12.onPress = function onPress() {
+  obj16.text = intl6.string(require("util").t.CkfdNx);
+  obj16.onPress = function onPress() {
     closure_3.push(constants.PROOF_HTTP, { proof, domain });
   };
-  obj11.children = closure_8(require("components/Button/Button").Button, obj12);
-  items[4] = closure_8(c5, obj11);
-  obj.children = items;
-  return closure_9(require("common/SafeAreaView").SafeAreaPaddingView, obj);
+  obj15.children = closure_8(require("components/Button/Button").Button, obj16);
+  items[4] = closure_8(c5, obj15);
+  obj2.children = items;
+  return closure_9(require("common/SafeAreaView").SafeAreaPaddingView, obj2);
 }
 function HTTPProofScreen(children) {
   ({ onClose: require, domain } = children);
   _slicedToArray = undefined;
   noop = undefined;
   const tmp = closure_10();
-  let obj = useNavigation;
-  dependencyMap = obj.useNavigation();
-  [tmp5, c3] = _slicedToArray(noop.useState(null), 2);
+  dependencyMap = useNavigation.useNavigation();
+  [tmp5, c3] = noop.useState(null);
   const tmp4 = _slicedToArray(noop.useState(null), 2);
-  [tmp7, c4] = _slicedToArray(noop.useState(false), 2);
-  obj = { bottom: true, style: tmp.container, children: null };
-  obj = { variant: "text-md/normal", children: null };
+  [tmp7, c4] = noop.useState(false);
+  const obj2 = { bottom: true, style: tmp.container, children: null };
+  const obj3 = { variant: "text-md/normal", children: null };
   const intl = util.intl;
-  obj.children = intl.string(util.t.p4ql7y);
-  const items = [closure_8(Text_Text.Text, obj), , , ,];
-  const obj1 = { style: tmp.dns, children: null };
-  const obj2 = { variant: "text-md/normal", children: null };
+  obj3.children = intl.string(util.t.p4ql7y);
+  const items = [closure_8(Text_Text.Text, obj3), , , ,];
+  const obj4 = { style: tmp.dns, children: null };
+  const obj5 = { variant: "text-md/normal", children: null };
   const intl2 = util.intl;
-  obj2.children = intl2.string(util.t.GL3q7k);
-  const items1 = [closure_8(Text_Text.Text, obj2), , ,];
-  const obj3 = { variant: "text-md/normal", selectable: true, style: tmp.code, children: null };
-  let obj6 = DomainVerifyUtils;
-  obj3.children = obj6.getHttpName(domain);
-  items1[1] = closure_8(Text_Text.Text, obj3);
-  const obj4 = { variant: "text-md/normal", children: null };
+  obj5.children = intl2.string(util.t.GL3q7k);
+  const items1 = [closure_8(Text_Text.Text, obj5), , ,];
+  const obj6 = { variant: "text-md/normal", selectable: true, style: tmp.code, children: null };
+  const tmp6 = _slicedToArray(noop.useState(false), 2);
+  obj6.children = DomainVerifyUtils.getHttpName(domain);
+  items1[1] = closure_8(Text_Text.Text, obj6);
+  const obj8 = { variant: "text-md/normal", children: null };
   const intl3 = util.intl;
-  obj4.children = intl3.string(util.t.PVLriT);
-  items1[2] = closure_8(Text_Text.Text, obj4);
+  obj8.children = intl3.string(util.t.PVLriT);
+  items1[2] = closure_8(Text_Text.Text, obj8);
   items1[3] = closure_8(Text_Text.Text, {
     variant: "text-md/normal",
     selectable: true,
     style: tmp.code,
     children: children.proof,
   });
-  obj1.children = items1;
-  items[1] = closure_9(View, obj1);
+  obj4.children = items1;
+  items[1] = closure_9(View, obj4);
   let tmp9Result = null != tmp5;
   if (tmp9Result) {
-    obj6 = { variant: "text-md/normal", color: "text-feedback-critical", style: tmp.error, children: tmp5 };
-    tmp9Result = closure_8(Text_Text.Text, obj6);
+    const obj10 = { variant: "text-md/normal", color: "text-feedback-critical", style: tmp.error, children: tmp5 };
+    tmp9Result = closure_8(Text_Text.Text, obj10);
   }
   items[2] = tmp9Result;
-  const obj7 = { style: tmp.button, children: null };
-  const obj8 = { loading: tmp7, text: null, onPress: null };
+  const obj11 = { style: tmp.button, children: null };
+  const obj12 = { loading: tmp7, text: null, onPress: null };
   const intl4 = util.intl;
-  obj8.text = intl4.string(util.t["13ofGu"]);
-  obj8.onPress = function onPress() {
+  obj12.text = intl4.string(util.t["13ofGu"]);
+  obj12.onPress = function onPress() {
     _undefined2(true);
     _undefined(null);
     const HTTP = HTTPUtils.HTTP;
@@ -327,46 +324,41 @@ function HTTPProofScreen(children) {
         _undefined2(false);
       });
   };
-  obj7.children = closure_8(components_Button_Button.Button, obj8);
-  items[3] = closure_8(View, obj7);
-  const obj9 = { style: tmp.button, children: null };
-  const obj10 = { variant: "secondary", text: null, onPress: null };
+  obj11.children = closure_8(components_Button_Button.Button, obj12);
+  items[3] = closure_8(View, obj11);
+  const obj13 = { style: tmp.button, children: null };
+  const obj14 = { variant: "secondary", text: null, onPress: null };
   const intl5 = util.intl;
-  obj10.text = intl5.string(util.t.RhJMVQ);
-  obj10.onPress = function onPress() {
+  obj14.text = intl5.string(util.t.RhJMVQ);
+  obj14.onPress = function onPress() {
     closure_2.pop();
   };
-  obj9.children = closure_8(components_Button_Button.Button, obj10);
-  items[4] = closure_8(View, obj9);
-  obj.children = items;
-  return closure_9(common_SafeAreaView.SafeAreaPaddingView, obj);
+  obj13.children = closure_8(components_Button_Button.Button, obj14);
+  items[4] = closure_8(View, obj13);
+  obj2.children = items;
+  return closure_9(common_SafeAreaView.SafeAreaPaddingView, obj2);
 }
 const View = fn(17).View;
 const Constants = fn(1074);
 ({ Endpoints: metroRequire, PlatformTypes: closure_7 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-fn(4636);
-let createStyles = {
+const createStyles = fn(4636);
+let obj2 = {
   container: { padding: 16 },
   description: { textAlign: "center" },
   input: { paddingHorizontal: 0, paddingVertical: 0, marginVertical: 16 },
-  dns: null,
-  error: null,
-  code: null,
-  button: null,
+  dns: {
+    backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST,
+    borderRadius: nativeDefault.radii.xs,
+    padding: 8,
+    marginTop: 16,
+  },
+  error: { marginTop: 16 },
+  code: { fontFamily: "monospace", marginBottom: 4 },
+  button: { marginTop: 16 },
 };
-createStyles = {
-  backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST,
-  borderRadius: nativeDefault.radii.xs,
-  padding: 8,
-  marginTop: 16,
-};
-createStyles.dns = createStyles;
-createStyles.error = { marginTop: 16 };
-createStyles.code = { fontFamily: "monospace", marginBottom: 4 };
-createStyles.button = { marginTop: 16 };
-let closure_10 = createStyles.createStyles(createStyles);
+let closure_10 = createStyles.createStyles(obj2);
 const constants2 = { DOMAIN: "DOMAIN", PROOF_DNS: "PROOF_DNS", PROOF_HTTP: "PROOF_HTTP" };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/connections/native/DomainVerifyModal.tsx");
@@ -378,36 +370,36 @@ export default function DomainVerifyModal(arg0) {
     function onClose() {
       return ModalActionCreatorsDefault.pop();
     }
-    let obj = {};
-    obj = { headerTitle: null, headerLeft: null, render: null };
+    const obj = {};
+    const obj2 = { headerTitle: null, headerLeft: null, render: null };
     const intl = onClose(1114).intl;
-    obj.headerTitle = intl.string(onClose(1114).t["7lo8+e"]);
-    let obj2 = onClose(5705);
-    obj.headerLeft = obj2.getHeaderBackButton(onClose);
-    obj.render = function render() {
+    obj2.headerTitle = intl.string(onClose(1114).t["7lo8+e"]);
+    obj2.headerLeft = onClose(5705).getHeaderBackButton(onClose);
+    obj2.render = function render() {
       return React6(DomainScreen, { onClose });
     };
-    obj[constants2.DOMAIN] = obj;
-    obj = { headerTitle: null, headerLeft: null, render: null };
+    obj[constants2.DOMAIN] = obj2;
+    const obj4 = { headerTitle: null, headerLeft: null, render: null };
     const intl2 = onClose(1114).intl;
-    obj.headerTitle = intl2.string(onClose(1114).t["7lo8+e"]);
-    obj.headerLeft = onClose(5705).getHeaderBackButton(onClose);
-    obj.render = function render(domain) {
+    obj4.headerTitle = intl2.string(onClose(1114).t["7lo8+e"]);
+    const obj3 = onClose(5705);
+    obj4.headerLeft = onClose(5705).getHeaderBackButton(onClose);
+    obj4.render = function render(domain) {
       return React6(DNSProofScreen, { domain: domain.domain, proof: domain.proof, onClose });
     };
-    obj[constants2.PROOF_DNS] = obj;
-    const obj1 = { headerTitle: null, headerLeft: null, render: null };
+    obj[constants2.PROOF_DNS] = obj4;
+    const obj6 = { headerTitle: null, headerLeft: null, render: null };
     const intl3 = onClose(1114).intl;
-    obj1.headerTitle = intl3.string(onClose(1114).t["7lo8+e"]);
+    obj6.headerTitle = intl3.string(onClose(1114).t["7lo8+e"]);
     const obj5 = onClose(5705);
-    obj1.headerLeft = onClose(5705).getHeaderBackButton(onClose);
-    obj1.render = function render(domain) {
+    obj6.headerLeft = onClose(5705).getHeaderBackButton(onClose);
+    obj6.render = function render(domain) {
       return React6(HTTPProofScreen, { domain: domain.domain, proof: domain.proof, onClose });
     };
-    obj[constants2.PROOF_HTTP] = obj1;
-    obj2 = { screens: obj, initialRouteName: constants2.DOMAIN, headerBackTitle: null };
+    obj[constants2.PROOF_HTTP] = obj6;
+    const obj8 = { screens: obj, initialRouteName: constants2.DOMAIN, headerBackTitle: null };
     const intl4 = onClose(1114).intl;
-    obj2.headerBackTitle = intl4.string(onClose(1114).t["13/7kX"]);
-    return closure_8(onClose(7103).Navigator, obj2);
+    obj8.headerBackTitle = intl4.string(onClose(1114).t["13/7kX"]);
+    return closure_8(onClose(7103).Navigator, obj8);
   }
 }

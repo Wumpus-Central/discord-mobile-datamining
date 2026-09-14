@@ -6,10 +6,10 @@ import AnalyticsUtilsDefault from "../../../../utils/AnalyticsUtils.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import LinearGradientDefault from "../../../../../_runtime/05068_LinearGradient.js";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
-import _modDef13558 from "../../../../../_runtime/metro/13558__.js";
 import _modDef13559 from "../../../../../_runtime/metro/13559__.js";
 import _modDef13560 from "../../../../../_runtime/metro/13560__.js";
 import _modDef13561 from "../../../../../_runtime/metro/13561__.js";
+import _modDef13562 from "../../../../../_runtime/metro/13562__.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -19,30 +19,36 @@ class PremiumFeaturesCardBackground {
     ({ style, children } = global);
     tmp = closure_15();
     obj = { style: tmp.cardContainer, children: null };
-    obj = { style: null, start: null, end: null, colors: null, children: null };
+    obj1 = { style: null, start: null, end: null, colors: null, children: null };
     items = [,];
     items[0] = tmp.card;
     items[1] = style;
-    obj.style = items;
+    obj1.style = items;
     tmp2 = closure_1(closure_2[9]);
-    obj.start = closure_0(closure_2[10]).VerticalGradient.START;
-    obj.end = closure_0(closure_2[10]).VerticalGradient.END;
-    obj.colors = Gradients.PREMIUM_TIER_0_PERK_CARD;
-    obj.children = children;
-    obj.children = jsx(tmp2, obj);
+    obj1.start = closure_0(closure_2[10]).VerticalGradient.START;
+    obj1.end = closure_0(closure_2[10]).VerticalGradient.END;
+    obj1.colors = Gradients.PREMIUM_TIER_0_PERK_CARD;
+    obj1.children = children;
+    obj.children = jsx(tmp2, obj1);
     return jsx(View, obj);
   }
 }
 function CarouselCard(arg0) {
   ({ style, title, imageSrc, imageStyle } = arg0);
   const tmp = closure_15();
-  let obj = { style, children: null };
-  obj = { variant: "heading-md/extrabold", color: "text-overlay-light", style: tmp.cardTitle, children: title };
-  const items = [closure_1_10(Text_Text.Text, obj)];
-  obj = { source: imageSrc, style: null, resizeMode: "contain" };
+  const obj = { style, children: null };
+  const items = [
+    closure_1_10(Text_Text.Text, {
+      variant: "heading-md/extrabold",
+      color: "text-overlay-light",
+      style: tmp.cardTitle,
+      children: title,
+    }),
+  ];
+  const obj3 = { source: imageSrc, style: null, resizeMode: "contain" };
   const items1 = [tmp.image, imageStyle];
-  obj.style = items1;
-  items[1] = closure_1_10(FastImageDefault, obj);
+  obj3.style = items1;
+  items[1] = closure_1_10(FastImageDefault, obj3);
   obj.children = items;
   return closure_1_11(PremiumFeaturesCardBackground, obj);
 }
@@ -51,8 +57,7 @@ function PremiumFeaturesCarousel(arg0) {
   let mapped;
   noop = undefined;
   const tmp = closure_14();
-  let obj = onEndReached(5043);
-  const isScreenReaderEnabled = obj.useIsScreenReaderEnabled();
+  const isScreenReaderEnabled = onEndReached(5043).useIsScreenReaderEnabled();
   const tmp5 = mapped(noop.useState(0), 2);
   const currentIndex = tmp5[0];
   dependencyMap = tmp7;
@@ -61,46 +66,44 @@ function PremiumFeaturesCarousel(arg0) {
   closure_129_1 = tmp8;
   let items = [tmp8];
   const memo = noop.useMemo(() => {
-    let obj = { title: null, imageSrc: null, imageStyle: null, premiumTypes: null };
+    const obj = { title: null, imageSrc: null, imageStyle: null, premiumTypes: null };
     const intl = util.intl;
     obj.title = intl.string(util.t["3cyhe3"]);
-    obj.imageSrc = _modDef13558;
+    obj.imageSrc = _modDef13559;
     obj.imageStyle = first.emojiImage;
     const items = [,];
     ({ TIER_0: arr[0], TIER_2: arr[1] } = PremiumTypes);
     obj.premiumTypes = new Set(items);
     const items1 = [obj, , ,];
-    obj = { title: null, imageSrc: null, premiumTypes: null };
+    const obj2 = { title: null, imageSrc: null, premiumTypes: null };
     const intl2 = util.intl;
-    obj.title = intl2.string(util.t["8AhJqy"]);
-    obj.imageSrc = _modDef13559;
+    obj2.title = intl2.string(util.t["8AhJqy"]);
+    obj2.imageSrc = _modDef13560;
     const items2 = [,];
     ({ TIER_0: arr3[0], TIER_2: arr3[1] } = PremiumTypes);
     const set = new Set(items);
-    obj.premiumTypes = new Set(items2);
-    items1[1] = obj;
-    obj = { title: null, imageSrc: null, premiumTypes: null };
+    obj2.premiumTypes = new Set(items2);
+    items1[1] = obj2;
+    const obj3 = { title: null, imageSrc: null, premiumTypes: null };
     const intl3 = util.intl;
-    obj.title = intl3.string(util.t["t/Mvdj"]);
-    obj.imageSrc = _modDef13560;
+    obj3.title = intl3.string(util.t["t/Mvdj"]);
+    obj3.imageSrc = _modDef13561;
     const items3 = [PremiumTypes.TIER_2];
     const set1 = new Set(items2);
-    obj.premiumTypes = new Set(items3);
-    items1[2] = obj;
-    const obj1 = { title: null, imageSrc: null, premiumTypes: null };
+    obj3.premiumTypes = new Set(items3);
+    items1[2] = obj3;
+    const obj4 = { title: null, imageSrc: null, premiumTypes: null };
     const intl4 = util.intl;
-    obj1.title = intl4.string(util.t["n+DGY/"]);
-    obj1.imageSrc = _modDef13561;
+    obj4.title = intl4.string(util.t["n+DGY/"]);
+    obj4.imageSrc = _modDef13562;
     const items4 = [PremiumTypes.TIER_2];
     const set2 = new Set(items3);
-    obj1.premiumTypes = new Set(items4);
-    items1[3] = obj1;
+    obj4.premiumTypes = new Set(items4);
+    items1[3] = obj4;
     return items1;
   }, items);
   mapped = memo.map((item, index) => {
-    let obj = { style: null };
-    obj = { width: onEndReached * c12 };
-    obj.style = obj;
+    const obj = { style: { width: onEndReached * c12 } };
     const merged = Object.assign(item);
     return closure_2_10(CarouselCard, obj, index);
   });
@@ -117,14 +120,14 @@ function PremiumFeaturesCarousel(arg0) {
   noop = sum;
   let items2 = [sum, mapped.length];
   const bound = Math.max(0, (width - result) / 2);
-  obj = { style: tmp.carouselContainer, children: null };
+  let obj2 = { style: tmp.carouselContainer, children: null };
   const callback = noop.useCallback((nativeEvent) => {
     closure_2(Math.max(0, Math.min(mapped.length - 1, Math.round(nativeEvent.nativeEvent.contentOffset.x / c4))));
   }, items2);
   if (!onEndReached(1608).isThumbstickScrollDevice) {
     if (!isScreenReaderEnabled) {
       let tmp17 = closure_10;
-      obj = {
+      let obj3 = {
         style: tmp.carousel,
         data: mapped,
         renderItem(item) {
@@ -140,14 +143,15 @@ function PremiumFeaturesCarousel(arg0) {
         modeConfig: { parallaxScrollingScale: 1, parallaxScrollingOffset: 45 },
         onSnapToItem: tmp7,
       };
-      let tmp19 = closure_10(currentIndex(10885), obj);
+      let tmp19 = closure_10(currentIndex(10886), obj3);
     }
     let items3 = [tmp19];
-    let obj1 = { containerStyle: tmp.indicators, numberOfItems: mapped.length, currentIndex };
-    items3[1] = tmp17(onEndReached(1178).CarouselPagination, obj1);
-    obj.children = items3;
-    return closure_11(closure_6, obj);
+    let obj4 = { containerStyle: tmp.indicators, numberOfItems: mapped.length, currentIndex };
+    items3[1] = tmp17(onEndReached(1176).CarouselPagination, obj4);
+    obj2.children = items3;
+    return closure_11(closure_6, obj2);
   }
+  let obj = onEndReached(5043);
   tmp19 = closure_10(closure_5, {
     style: tmp.carousel,
     contentContainerStyle: { paddingHorizontal: bound, gap: PX_12 },
@@ -160,7 +164,7 @@ function PremiumFeaturesCarousel(arg0) {
     children: mapped,
   });
   tmp17 = closure_10;
-  const obj2 = {
+  const obj5 = {
     style: tmp.carousel,
     contentContainerStyle: { paddingHorizontal: bound, gap: PX_12 },
     horizontal: true,
@@ -181,51 +185,53 @@ const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
 let c12 = 0.85;
 const PX_12 = nativeDefault.space.PX_12;
-fn(4636);
-let createStyles = {
+let createStyles = fn(4636);
+let obj2 = {
   container: { flex: 1 },
   headerText: { textAlign: "center" },
-  carouselContainer: null,
-  carousel: null,
+  carouselContainer: { flex: 1, marginTop: nativeDefault.space.PX_16 },
+  carousel: { flex: 1, minHeight: 262 },
   indicators: null,
 };
-createStyles = { flex: 1, marginTop: nativeDefault.space.PX_16 };
-createStyles.carouselContainer = createStyles;
-createStyles.carousel = { flex: 1, minHeight: 262 };
-createStyles.indicators = { marginBottom: -nativeDefault.space.PX_48 };
-let closure_14 = createStyles.createStyles(createStyles);
-fn(4636);
-let obj2 = { cardContainer: { flex: 1 }, card: null, image: null, cardTitle: null };
-let obj1 = { marginBottom: -nativeDefault.space.PX_48 };
-obj2.card = {
+let obj3 = { flex: 1, marginTop: nativeDefault.space.PX_16 };
+obj2.indicators = { marginBottom: -nativeDefault.space.PX_48 };
+let closure_14 = createStyles.createStyles(obj2);
+createStyles = fn(4636);
+const obj6 = { cardContainer: { flex: 1 }, card: null, image: null, cardTitle: null };
+let obj4 = { marginBottom: -nativeDefault.space.PX_48 };
+obj6.card = {
   flex: 1,
   alignSelf: "center",
   justifyContent: "space-between",
   borderRadius: nativeDefault.radii.lg,
   overflow: "hidden",
 };
-obj2.image = { alignSelf: "center" };
-createStyles = { marginTop: nativeDefault.space.PX_24, marginHorizontal: nativeDefault.space.PX_24 };
-obj2.cardTitle = createStyles;
-const __initData = createStyles.createStyles(obj2);
+obj6.image = { alignSelf: "center" };
+const obj7 = {
+  flex: 1,
+  alignSelf: "center",
+  justifyContent: "space-between",
+  borderRadius: nativeDefault.radii.lg,
+  overflow: "hidden",
+};
+obj6.cardTitle = { marginTop: nativeDefault.space.PX_24, marginHorizontal: nativeDefault.space.PX_24 };
+const __initData = createStyles.createStyles(obj6);
 createStyles = fn(4636);
 let closure_16 = createStyles.createStyles({ emojiImage: { alignSelf: "flex-end" } });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_settings/premium/native/PremiumFeaturesCarouselSection.tsx");
 
 export default function PremiumFeaturesCarouselSection(style) {
-  let first;
+  first = undefined;
+  dependencyMap = undefined;
   _slicedToArray = undefined;
   const tmp = closure_14();
   const analyticsLocations = first(7265)().analyticsLocations;
-  const tmp2 = _slicedToArray(noop.useState(false), 2);
-  first = tmp2[0];
-  dependencyMap = tmp2[1];
-  let obj = analyticsLocations(1477);
-  const tmp4 = _slicedToArray(noop.useState(obj.getWindowDimensions().width), 2);
+  [first, dependencyMap] = noop.useState(false);
+  const tmp4 = _slicedToArray(noop.useState(analyticsLocations(1477).getWindowDimensions().width), 2);
   _slicedToArray = tmp4[1];
   const items = [analyticsLocations, first];
-  obj = {
+  let obj2 = {
     style: null,
     onLayout(nativeEvent) {
       return closure_3(nativeEvent.nativeEvent.layout.width);
@@ -233,15 +239,15 @@ export default function PremiumFeaturesCarouselSection(style) {
     children: null,
   };
   const items1 = [tmp.container, style.style];
-  obj.style = items1;
+  obj2.style = items1;
   const callback = noop.useCallback(() => {
     if (!first) {
-      const obj = { location_stack: analyticsLocations };
-      obj.track(AnalyticEvents.PREMIUM_MARKETING_SCROLLED_TO_LAST, obj);
+      const obj2 = { location_stack: analyticsLocations };
+      AnalyticsUtilsDefault.track(AnalyticEvents.PREMIUM_MARKETING_SCROLLED_TO_LAST, obj2);
       closure_2(true);
     }
   }, items);
-  obj = {
+  const obj3 = {
     style: tmp.headerText,
     variant: "heading-xl/extrabold",
     color: "mobile-text-heading-primary",
@@ -249,13 +255,13 @@ export default function PremiumFeaturesCarouselSection(style) {
     children: null,
   };
   const intl = analyticsLocations(1114).intl;
-  obj.children = intl.string(analyticsLocations(1114).t.RGadQR);
+  obj3.children = intl.string(analyticsLocations(1114).t.RGadQR);
   const items2 = [
-    closure_10(analyticsLocations(4632).Text, obj),
+    closure_10(analyticsLocations(4632).Text, obj3),
     closure_10(PremiumFeaturesCarousel, { width: tmp4[0], onEndReached: callback }),
   ];
-  obj.children = items2;
-  return closure_11(closure_6, obj);
+  obj2.children = items2;
+  return closure_11(closure_6, obj2);
 }
 export const PREMIUM_FEATURES_PROPORTIONAL_CARD_WIDTH = 0.85;
 export { PremiumFeaturesCardBackground };

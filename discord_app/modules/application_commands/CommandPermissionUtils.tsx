@@ -118,8 +118,8 @@ export const hasAccess = function hasAccess(type, permissionContext, application
     }
     if (null != type.predicate) {
       if (context instanceof ChannelRecordBase) {
-        obj = { channel: context, guild: GuildStore.getGuild(context.guild_id) };
-        if (!type.predicate(obj)) {
+        const obj2 = { channel: context, guild: GuildStore.getGuild(context.guild_id) };
+        if (!type.predicate(obj2)) {
           return obj.PREDICATE_FAILED;
         }
       }
@@ -176,12 +176,13 @@ export const hasAccess = function hasAccess(type, permissionContext, application
               if (null != tmp28) {
                 permission = tmp28.permission;
               } else {
-                const tmp27Result = ApplicationCommandUtils;
+                const tmp27Result = IntegrationPermissionUtils;
+                const tmp27Result2 = ApplicationCommandUtils;
                 const tmp30 =
                   permissions[
                     tmp27Result.toPermissionKey(
                       tmp27Result,
-                      tmp27Result.allChannelsSentinel(contextGuildId),
+                      ApplicationCommandUtils.allChannelsSentinel(contextGuildId),
                       ApplicationCommandTypes.ApplicationCommandPermissionType.CHANNEL,
                     )
                   ];
@@ -190,7 +191,7 @@ export const hasAccess = function hasAccess(type, permissionContext, application
                   permission1 = tmp30.permission;
                 }
                 permission = permission1;
-                const allChannelsSentinelResult = tmp27Result.allChannelsSentinel(contextGuildId);
+                const allChannelsSentinelResult = ApplicationCommandUtils.allChannelsSentinel(contextGuildId);
               }
             }
             if (false === permission) {
@@ -208,19 +209,19 @@ export const hasAccess = function hasAccess(type, permissionContext, application
             if (false !== tmp38) {
               if (false !== applicationAllowedForUser) {
                 if (null != type.defaultMemberPermissions) {
-                  let tmp53Result = BigFlagUtilsAll;
                   if (
                     !tmp53Result.equals(
                       type.defaultMemberPermissions,
                       ApplicationCommandUtils.DISABLED_BY_DEFAULT_PERMISSION_FLAG,
                     )
                   ) {
-                    tmp53Result = BigFlagUtilsAll;
-                    if (tmp53Result.has(computedPermissions, type.defaultMemberPermissions)) {
+                    if (tmp53Result2.has(computedPermissions, type.defaultMemberPermissions)) {
                       let USER_DENIED2 = obj.ALLOWED;
                     }
+                    tmp53Result2 = BigFlagUtilsAll;
                   }
                   USER_DENIED2 = obj.USER_DENIED;
+                  tmp53Result = BigFlagUtilsAll;
                 } else {
                   USER_DENIED = obj.ALLOWED;
                 }
@@ -255,12 +256,13 @@ export const computeAllowedForChannel = function computeAllowedForChannel(permis
     if (null != tmp3) {
       return tmp3.permission;
     } else {
-      const tmpResult = ApplicationCommandUtils;
+      const tmpResult = IntegrationPermissionUtils;
+      const tmpResult2 = ApplicationCommandUtils;
       const tmp6 =
         permissions[
           tmpResult.toPermissionKey(
             tmpResult,
-            tmpResult.allChannelsSentinel(guild_id),
+            ApplicationCommandUtils.allChannelsSentinel(guild_id),
             ApplicationCommandTypes.ApplicationCommandPermissionType.CHANNEL,
           )
         ];

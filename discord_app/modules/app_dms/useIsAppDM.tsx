@@ -1,6 +1,8 @@
 // discord_app/modules/app_dms/useIsAppDM.tsx
 import UserStore from "../../stores/UserStore.tsx";
 
+const require = globalThis.__r;
+
 const require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/app_dms/useIsAppDM.tsx");

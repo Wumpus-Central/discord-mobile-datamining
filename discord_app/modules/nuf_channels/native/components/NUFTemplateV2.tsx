@@ -20,13 +20,18 @@ const result = size.fileFinishedImporting("modules/nuf_channels/native/component
 export default function NUFActionSheetTemplate(arg0) {
   ({ title, illustration, description, onCTAPress, CTALabel } = arg0);
   const tmp = closure_5();
-  let obj = { style: tmp.container, children: null };
-  obj = { style: tmp.illustration, children: illustration };
-  const items = [React3(View, obj), , ,];
-  obj = { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/bold", children: title };
-  items[1] = React3(Text_Text.Text, obj);
-  items[2] = React3(Text_Text.Text, { style: tmp.description, variant: "text-md/medium", children: description });
-  items[3] = React3(components_Button_Button.Button, { text: CTALabel, onPress: onCTAPress, grow: true });
+  const obj = { style: tmp.container, children: null };
+  const items = [
+    React3(View, { style: tmp.illustration, children: illustration }),
+    React3(Text_Text.Text, {
+      style: tmp.title,
+      accessibilityRole: "header",
+      variant: "heading-xl/bold",
+      children: title,
+    }),
+    React3(Text_Text.Text, { style: tmp.description, variant: "text-md/medium", children: description }),
+    React3(components_Button_Button.Button, { text: CTALabel, onPress: onCTAPress, grow: true }),
+  ];
   obj.children = items;
   return React4(View, obj);
 }

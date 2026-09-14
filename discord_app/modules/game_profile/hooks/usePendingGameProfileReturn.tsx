@@ -13,9 +13,8 @@ const result = size.fileFinishedImporting("modules/game_profile/hooks/usePending
 export default function usePendingGameProfileReturn(channelId) {
   channelId = channelId.channelId;
   let stateFromStores1;
-  let obj = channelId(stateFromStores1[4]);
   const items = [GameProfileStore];
-  const stateFromStores = obj.useStateFromStores(items, () => {
+  const stateFromStores = channelId(stateFromStores1[4]).useStateFromStores(items, () => {
     const pendingReturn = GameProfileStore.getPendingReturn();
     let tmp2 = null;
     if (null != pendingReturn) {
@@ -29,14 +28,15 @@ export default function usePendingGameProfileReturn(channelId) {
   const items1 = [stateFromStores];
   const callback = noop.useCallback(() => {
     if (null != stateFromStores) {
-      const obj = {
+      const obj2 = {
         gameId: stateFromStores.gameId,
         source: GameProfileAnalyticUtils.GameProfileSources.AnnouncementChannelReturn,
         initialScrollOffset: stateFromStores.initialScrollOffset,
       };
-      obj.returnToGameProfile(obj);
+      GameProfileActionCreatorsDefault.returnToGameProfile(obj2);
     }
   }, items1);
+  let obj = channelId(stateFromStores1[4]);
   const items2 = [GameStore];
   stateFromStores1 = channelId(stateFromStores1[4]).useStateFromStores(items2, () => {
     let gameId;
@@ -70,8 +70,13 @@ export default function usePendingGameProfileReturn(channelId) {
       if (stateFromStores1 != null) {
         iconURL = stateFromStores1.getIconURL(AVATAR_SIZE);
       }
-      obj = { gameId: stateFromStores1.id, gameName: name, gameIconUrl: iconURL, onReturnToGameProfile: callback };
-      return obj;
+      const obj3 = {
+        gameId: stateFromStores1.id,
+        gameName: name,
+        gameIconUrl: iconURL,
+        onReturnToGameProfile: callback,
+      };
+      return obj3;
     }
   }
   return null;

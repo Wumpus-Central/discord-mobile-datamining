@@ -3,6 +3,8 @@ import native from "../../../../design/void/native.tsx";
 import GuildDirectoryTemplatesIcons from "../GuildDirectoryTemplatesIcons.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
+const require = globalThis.__r;
+
 require = fn;
 class GuildTemplatesItem {
   constructor(arg0) {
@@ -26,9 +28,9 @@ class GuildTemplatesItem {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
-const GuildDirectoryConstants = fn(12434);
+const GuildDirectoryConstants = fn(12435);
 ({ getHubGuildTemplatesMap: metroRequire, HubGuildTemplateId: closure_7 } = GuildDirectoryConstants);
-const GuildDirectoryCreate = fn(12439).GuildDirectoryCreate;
+const GuildDirectoryCreate = fn(12440).GuildDirectoryCreate;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
 const createStyles = fn(4636);
@@ -46,8 +48,7 @@ export default function GuildDirectoryTemplates(directoryGuildName) {
   _require = directoryGuildName;
   const tmp = closure_11();
   importDefault = noop.useRef(directoryGuildName);
-  let obj = require("useNavigation");
-  navigation = obj.useNavigation();
+  navigation = require("useNavigation").useNavigation();
   const tmp3 = closure_6();
   const effect = noop.useEffect(() => {
     closure_1.current = current;
@@ -56,10 +57,12 @@ export default function GuildDirectoryTemplates(directoryGuildName) {
   const callback = noop.useCallback((guildTemplate) => {
     navigation.push(GuildDirectoryCreate.CREATE, { onHubGuildInfoSet: ref.current.onHubGuildInfoSet, guildTemplate });
   }, items);
-  obj = { children: null };
-  obj = { contentContainerStyle: { paddingBottom: require("useSafeAreaInsets")().bottom + 16 }, children: null };
-  const obj2 = { style: tmp.header, children: null };
-  const obj3 = {
+  const obj2 = { children: null };
+  const obj3 = { contentContainerStyle: null, children: null };
+  const obj = require("useNavigation");
+  obj3.contentContainerStyle = { paddingBottom: require("useSafeAreaInsets")().bottom + 16 };
+  const obj5 = { style: tmp.header, children: null };
+  const obj6 = {
     style: tmp.title,
     accessibilityRole: "header",
     variant: "heading-xl/extrabold",
@@ -67,34 +70,34 @@ export default function GuildDirectoryTemplates(directoryGuildName) {
     children: null,
   };
   const intl = require("util").intl;
-  obj3.children = intl.format(require("util").t.T7aLYT, { guildName: directoryGuildName.directoryGuildName });
-  const items1 = [closure_9(require("Text/Text").Text, obj3)];
-  const obj5 = { style: tmp.description, variant: "text-sm/medium", color: "text-default", children: null };
+  obj6.children = intl.format(require("util").t.T7aLYT, { guildName: directoryGuildName.directoryGuildName });
+  const items1 = [closure_9(require("Text/Text").Text, obj6)];
+  const obj8 = { style: tmp.description, variant: "text-sm/medium", color: "text-default", children: null };
   const intl2 = require("util").intl;
-  obj5.children = intl2.string(require("util").t["RA+St6"]);
-  items1[1] = closure_9(require("Text/Text").Text, obj5);
-  obj2.children = items1;
-  const items2 = [closure_10(closure_4, obj2), , ,];
-  const obj6 = { style: tmp.templateGroup, children: null };
-  const obj7 = { hasIcons: true, children: null };
-  const obj8 = { guildTemplate: null, onGuildTemplatePress: null };
-  const obj9 = {};
+  obj8.children = intl2.string(require("util").t["RA+St6"]);
+  items1[1] = closure_9(require("Text/Text").Text, obj8);
+  obj5.children = items1;
+  const items2 = [closure_10(closure_4, obj5), , ,];
+  const obj9 = { style: tmp.templateGroup, children: null };
+  const obj10 = { hasIcons: true, children: null };
+  const obj11 = { guildTemplate: null, onGuildTemplatePress: null };
+  const obj12 = {};
   const merged = Object.assign(tmp3[constants.CREATE]);
   const intl3 = require("util").intl;
-  obj9.label = intl3.string(require("util").t.WqJbLi);
-  obj8.guildTemplate = obj9;
-  obj8.onGuildTemplatePress = callback;
-  obj7.children = closure_9(GuildTemplatesItem, obj8);
-  obj6.children = closure_9(require("TableRowGroup").TableRowGroup, obj7);
-  items2[1] = closure_9(closure_4, obj6);
-  const obj10 = { style: tmp.label, children: null };
-  const obj1 = { paddingBottom: require("useSafeAreaInsets")().bottom + 16 };
-  const obj4 = { guildName: directoryGuildName.directoryGuildName };
+  obj12.label = intl3.string(require("util").t.WqJbLi);
+  obj11.guildTemplate = obj12;
+  obj11.onGuildTemplatePress = callback;
+  obj10.children = closure_9(GuildTemplatesItem, obj11);
+  obj9.children = closure_9(require("TableRowGroup").TableRowGroup, obj10);
+  items2[1] = closure_9(closure_4, obj9);
+  const obj13 = { style: tmp.label, children: null };
+  const obj4 = { paddingBottom: require("useSafeAreaInsets")().bottom + 16 };
+  const obj7 = { guildName: directoryGuildName.directoryGuildName };
   const intl4 = require("util").intl;
-  obj10.children = intl4.string(require("util").t.JGDkfg);
-  items2[2] = closure_9(require("FreeFormLabel"), obj10);
-  const obj11 = { style: tmp.templateGroup, children: null };
-  const obj12 = { hasIcons: true, children: null };
+  obj13.children = intl4.string(require("util").t.JGDkfg);
+  items2[2] = closure_9(require("FreeFormLabel"), obj13);
+  const obj14 = { style: tmp.templateGroup, children: null };
+  const obj15 = { hasIcons: true, children: null };
   const items3 = [
     closure_9(GuildTemplatesItem, { guildTemplate: tmp3[constants.HUB_STUDY], onGuildTemplatePress: callback }),
     closure_9(GuildTemplatesItem, { guildTemplate: tmp3[constants.HUB_SCHOOL_CLUB], onGuildTemplatePress: callback }),
@@ -103,11 +106,11 @@ export default function GuildDirectoryTemplates(directoryGuildName) {
     closure_9(GuildTemplatesItem, { guildTemplate: tmp3[constants.HUB_MAJOR], onGuildTemplatePress: callback }),
     closure_9(GuildTemplatesItem, { guildTemplate: tmp3[constants.HUB_DORM], onGuildTemplatePress: callback }),
   ];
-  obj12.children = items3;
-  obj11.children = closure_10(require("TableRowGroup").TableRowGroup, obj12);
-  items2[3] = closure_9(closure_4, obj11);
-  obj.children = items2;
-  obj.children = closure_10(closure_5, obj);
-  return closure_9(require("GuildDirectoryAddModal").GuildDirectoryAddModalScreen, obj);
+  obj15.children = items3;
+  obj14.children = closure_10(require("TableRowGroup").TableRowGroup, obj15);
+  items2[3] = closure_9(closure_4, obj14);
+  obj3.children = items2;
+  obj2.children = closure_10(closure_5, obj3);
+  return closure_9(require("GuildDirectoryAddModal").GuildDirectoryAddModalScreen, obj2);
 }
 export { GuildTemplatesItem };

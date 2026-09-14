@@ -10,8 +10,8 @@ import SelectedChannelStore from "../../../../../stores/SelectedChannelStore.tsx
 import VoiceStateStore from "../../../../../stores/VoiceStateStore.tsx";
 
 require = fn;
-const PermissionPromptType = fn(12538).PermissionPromptType;
-const NotificationPermissionConstants = fn(12539);
+const PermissionPromptType = fn(12539).PermissionPromptType;
+const NotificationPermissionConstants = fn(12540);
 ({ EventActionLocation: closure_8, NotificationNudgeSurface: closure_9 } = NotificationPermissionConstants);
 const jsx = fn(21).jsx;
 let c11 = "post-call-disconnect-nudge-key";
@@ -41,15 +41,15 @@ export default function PostCallDisconnectNudge(arg0) {
 }
 export const POST_CALL_DISCONNECT_NUDGE_KEY = "post-call-disconnect-nudge-key";
 export const usePostCallDisconnectNudge = function usePostCallDisconnectNudge() {
-  let obj = stateFromStores1(15567);
+  let obj = stateFromStores1(15568);
   let tmp2 = stateFromStores;
-  const canSeePushNotificationNudge = stateFromStores(12540).useCanSeePushNotificationNudge();
-  let obj2 = stateFromStores(12540);
+  const canSeePushNotificationNudge = stateFromStores(12541).useCanSeePushNotificationNudge();
+  let obj2 = stateFromStores(12541);
   const items = [VoiceStateStore];
   stateFromStores = stateFromStores(504).useStateFromStores(items, () =>
     currentClientVoiceChannelId.getCurrentClientVoiceChannelId(null),
   );
-  const obj3 = stateFromStores(504);
+  let obj3 = stateFromStores(504);
   const items1 = [markAsDismissed];
   stateFromStores1 = stateFromStores(504).useStateFromStores(items1, () => markAsDismissed.getChannelId());
   dependencyMap = first.useRef(stateFromStores);
@@ -87,10 +87,11 @@ export const usePostCallDisconnectNudge = function usePostCallDisconnectNudge() 
   const items3 = [first, tmp6Result[1]];
   const effect1 = obj5.useEffect(() => {
     if (null != first) {
-      let obj = PushNotificationActionCreators;
-      const result = obj.setPushPermissionReactivationSeen(PermissionPromptType.CALL_DISCONNECT_BOTTOM_SHEET);
-      obj = { markAsDismissed };
-      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(16621, dependencyMap.paths), c11, obj);
+      const result = PushNotificationActionCreators.setPushPermissionReactivationSeen(
+        PermissionPromptType.CALL_DISCONNECT_BOTTOM_SHEET,
+      );
+      const obj3 = { markAsDismissed };
+      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(16623, dependencyMap.paths), c11, obj3);
     }
   }, items3);
 };

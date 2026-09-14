@@ -7,10 +7,10 @@ const value = Platforms.get("spotify");
 let closure_1 = value;
 class SpotifyApplicationRecord extends tmp4 {
   constructor() {
-    tmp = new tmp({}, new.target, tmp);
-    tmp.id = spotify;
-    tmp.name = closure_1.name;
-    return tmp;
+    tmp1 = new tmp({}, new.target, tmp);
+    tmp1.id = spotify;
+    tmp1.name = closure_1.name;
+    return tmp1;
   }
 }
 const prototype = SpotifyApplicationRecord.prototype;

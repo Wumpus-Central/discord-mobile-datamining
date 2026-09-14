@@ -30,7 +30,7 @@ function FocusedControlsExpanded(availableHeight) {
       closure_4(tmp);
     }
   }, items);
-  availableHeight(bottom[13]);
+  const tmp = closure_18();
   const fn = function _() {
     const bound = Math.min((-1 * positionY.get()) / c15, 1);
     const obj = { opacity: bound, pointerEvents: null };
@@ -41,40 +41,40 @@ function FocusedControlsExpanded(availableHeight) {
     obj.pointerEvents = str;
     return obj;
   };
-  let obj = { positionY, EXPANDED_DRAWER_SHOW_POSITION };
-  fn.__closure = obj;
+  fn.__closure = { positionY, EXPANDED_DRAWER_SHOW_POSITION };
   fn.__workletHash = 10567472250823;
   fn.__initData = __initData;
-  obj = { style: { height: availableHeight }, children: null };
-  const obj1 = { scrollEnabled, children: null };
-  const animatedStyle = obj.useAnimatedStyle(fn);
-  obj2 = { style: null, onLayout: callback, children: availableHeight.expandedControls };
-  const items1 = [closure_18().expandedControlsContainer, animatedStyle];
-  obj2.style = items1;
-  obj1.children = closure_13(positionY(bottom[13]).View, obj2);
-  obj.children = closure_13(closure_7, obj1);
-  return closure_13(closure_5, obj);
+  const obj3 = { style: { height: availableHeight }, children: null };
+  const obj4 = { scrollEnabled, children: null };
+  const animatedStyle = availableHeight(bottom[13]).useAnimatedStyle(fn);
+  obj5 = { style: null, onLayout: callback, children: availableHeight.expandedControls };
+  const items1 = [tmp.expandedControlsContainer, animatedStyle];
+  obj5.style = items1;
+  obj4.children = closure_13(positionY(bottom[13]).View, obj5);
+  obj3.children = closure_13(closure_7, obj4);
+  return closure_13(closure_5, obj3);
 }
 function FocusedControlsBottomDrawerTooltip(positionY) {
   positionY = positionY.positionY;
   const tmp = closure_18();
-  let obj = positionY(9822);
-  const canShowTooltip = obj.useCanShowTooltip(positionY(1093).TooltipNames.SCREENSHARE_SWIPE_UP_CONTROLS, true);
+  const canShowTooltip = positionY(9822).useCanShowTooltip(
+    positionY(1093).TooltipNames.SCREENSHARE_SWIPE_UP_CONTROLS,
+    true,
+  );
   positionY(4373);
   const fn = function o() {
     return { opacity: 1 - Math.min((-1 * positionY.get()) / c15, 1) };
   };
-  obj = { positionY, EXPANDED_DRAWER_SHOW_POSITION };
-  fn.__closure = obj;
+  fn.__closure = { positionY, EXPANDED_DRAWER_SHOW_POSITION };
   fn.__workletHash = 4429631762525;
   fn.__initData = __initData2;
   let tmp7 = null;
   if (canShowTooltip) {
-    obj = { style: tmp6, children: null };
-    const obj1 = {
+    const obj3 = { style: tmp6, children: null };
+    const obj7 = {
       style: tmp.tooltipStyle,
-      arrowPosition: tmp2(1178).TooltipArrowPositions.CENTER,
-      arrowDirection: tmp2(1178).TooltipArrowDirections.DOWN,
+      arrowPosition: tmp2(1176).TooltipArrowPositions.CENTER,
+      arrowDirection: tmp2(1176).TooltipArrowDirections.DOWN,
       arrowWidth: 8,
       arrowHeight: 4,
       containerStyle: null,
@@ -83,9 +83,9 @@ function FocusedControlsBottomDrawerTooltip(positionY) {
     };
     ({ containerStyle: obj4.containerStyle, labelStyle: obj4.labelStyle } = tmp);
     const intl = tmp2(1114).intl;
-    obj1.label = intl.string(tmp2(1114).t.zYzy2i);
-    obj.children = closure_13(tmp2(1178).Tooltip, obj1);
-    tmp7 = closure_13(ReanimatedRexportDefault.View, obj);
+    obj7.label = intl.string(tmp2(1114).t.zYzy2i);
+    obj3.children = closure_13(tmp2(1176).Tooltip, obj7);
+    tmp7 = closure_13(ReanimatedRexportDefault.View, obj3);
   }
   return tmp7;
 }
@@ -95,15 +95,13 @@ function FocusedControlsAboveActionBarView(positionY) {
   const aboveActionBar = positionY.aboveActionBar;
   ({ onPressHeader, isExpanded } = positionY);
   const tmp = closure_18();
-  positionY(4373);
   const fn = function _() {
     return { opacity: 2 - Math.max(Math.abs(positionY.get()) / (offsetY / 3 - c15), 0) };
   };
-  let obj = { offsetY, EXPANDED_DRAWER_SHOW_POSITION, positionY };
-  fn.__closure = obj;
+  fn.__closure = { offsetY, EXPANDED_DRAWER_SHOW_POSITION, positionY };
   fn.__workletHash = 5042367101380;
   fn.__initData = __initData3;
-  obj = {
+  const obj3 = {
     accessible: true,
     onPress: onPressHeader,
     accessibilityRole: "button",
@@ -112,24 +110,24 @@ function FocusedControlsAboveActionBarView(positionY) {
     accessibilityState: { expanded: isExpanded },
     children: null,
   };
-  const obj1 = { style: tmp.aboveActionBarContainer, children: null };
-  const animatedStyle = obj.useAnimatedStyle(fn);
+  const obj4 = { style: tmp.aboveActionBarContainer, children: null };
+  const animatedStyle = positionY(4373).useAnimatedStyle(fn);
   const items = [
     closure_13(FocusedControlsBottomDrawerTooltip, { positionY }),
     closure_13(positionY(7257).ActionSheetHeaderBar, {}),
   ];
   let tmp4Result = null != aboveActionBar;
   if (tmp4Result) {
-    obj2 = { style: null, children: null };
+    obj5 = { style: null, children: null };
     const items1 = [tmp.aboveActionBarChildrenContainer, animatedStyle];
-    obj2.style = items1;
-    obj2.children = aboveActionBar;
-    tmp4Result = closure_13(offsetY(4373).View, obj2);
+    obj5.style = items1;
+    obj5.children = aboveActionBar;
+    tmp4Result = closure_13(offsetY(4373).View, obj5);
   }
   items[2] = tmp4Result;
-  obj1.children = items;
-  obj.children = closure_14(closure_5, obj1);
-  return closure_13(closure_6, obj);
+  obj4.children = items;
+  obj3.children = closure_14(closure_5, obj4);
+  return closure_13(closure_6, obj3);
 }
 class FocusedControlsBottomDrawer {
   constructor(arg0) {
@@ -277,12 +275,12 @@ class FocusedControlsBottomDrawer {
             return diff;
           }
         }
-        obj = { isLandscapeMode: null, controlMaxHeight: null, landscapeOffsetY: null, portraitOffsetY: null };
-        obj.isLandscapeMode = tmp5;
-        obj.controlMaxHeight = diff;
-        obj.landscapeOffsetY = sum4;
-        obj.portraitOffsetY = sum3;
-        O.__closure = obj;
+        obj1 = { isLandscapeMode: null, controlMaxHeight: null, landscapeOffsetY: null, portraitOffsetY: null };
+        obj1.isLandscapeMode = tmp5;
+        obj1.controlMaxHeight = diff;
+        obj1.landscapeOffsetY = sum4;
+        obj1.portraitOffsetY = sum3;
+        O.__closure = obj1;
         num10 = 13346503100323;
         O.__workletHash = 13346503100323;
         tmp28 = closure_27;
@@ -322,7 +320,7 @@ class FocusedControlsBottomDrawer {
             closure_8();
           }
           closure_7(!tmp);
-          obj2 = closure_0(sum3[20]);
+          const obj2 = closure_0(sum3[20]);
         }, items);
         Gesture = tmp19(tmp3[21]).Gesture;
         PanResult = Gesture.Pan();
@@ -341,7 +339,7 @@ class FocusedControlsBottomDrawer {
             return;
           }
         }
-        obj1 = {
+        obj27 = {
           runOnJS: null,
           clearFocusTimer: null,
           drawerOpen: null,
@@ -350,14 +348,14 @@ class FocusedControlsBottomDrawer {
           velocity: null,
           startY: null,
         };
-        obj1.runOnJS = tmp19(tmp3[13]).runOnJS;
+        obj27.runOnJS = tmp19(tmp3[13]).runOnJS;
         tmp35 = closure_8;
-        obj1.clearFocusTimer = closure_8;
-        obj1.drawerOpen = sharedValue2;
-        obj1.positionY = sharedValue;
-        obj1.velocity = sharedValue3;
-        obj1.startY = sharedValue1;
-        M.__closure = obj1;
+        obj27.clearFocusTimer = closure_8;
+        obj27.drawerOpen = sharedValue2;
+        obj27.positionY = sharedValue;
+        obj27.velocity = sharedValue3;
+        obj27.startY = sharedValue1;
+        M.__closure = obj27;
         num11 = 9674965708496;
         M.__workletHash = 9674965708496;
         tmp36 = closure_30;
@@ -380,12 +378,12 @@ class FocusedControlsBottomDrawer {
             return;
           }
         }
-        obj2 = { velocity: null, positionY: null, maxHeight: null, startY: null };
-        obj2.velocity = sharedValue3;
-        obj2.positionY = sharedValue;
-        obj2.maxHeight = derivedValue;
-        obj2.startY = sharedValue1;
-        N.__closure = obj2;
+        obj28 = { velocity: null, positionY: null, maxHeight: null, startY: null };
+        obj28.velocity = sharedValue3;
+        obj28.positionY = sharedValue;
+        obj28.maxHeight = derivedValue;
+        obj28.startY = sharedValue1;
+        N.__closure = obj28;
         num12 = 16755118181071;
         N.__workletHash = 16755118181071;
         tmp37 = closure_29;
@@ -411,8 +409,7 @@ class FocusedControlsBottomDrawer {
             openDrawer = function openDrawer() {
               ReanimatedRexport.runOnJS(handleOpen)();
               const result = sharedValue1.set(-closure_1_9.get());
-              obj2 = timing;
-              const result1 = first1.set(obj2.withTiming(sharedValue1.get(), obj2));
+              const result1 = first1.set(timing.withTiming(sharedValue1.get(), obj5));
               const result2 = sharedValue2.set(true);
               ReanimatedRexport.runOnJS(TooltipActionCreatorsDefault.acknowledgeTooltip)(
                 ConstantsIOS.TooltipNames.SCREENSHARE_SWIPE_UP_CONTROLS,
@@ -474,7 +471,7 @@ class FocusedControlsBottomDrawer {
             return;
           }
         }
-        obj3 = {
+        obj29 = {
           drawerOpen: null,
           positionY: null,
           maxHeight: null,
@@ -492,24 +489,24 @@ class FocusedControlsBottomDrawer {
           resetFocusTimer: null,
           handleClose: null,
         };
-        obj3.drawerOpen = sharedValue2;
-        obj3.positionY = sharedValue;
-        obj3.maxHeight = derivedValue;
-        obj3.velocity = sharedValue3;
-        obj3.runOnJS = tmp19(tmp3[13]).runOnJS;
-        obj3.handleOpen = handleOpen;
-        obj3.startY = sharedValue1;
-        obj3.withTiming = tmp19(tmp3[20]).withTiming;
+        obj29.drawerOpen = sharedValue2;
+        obj29.positionY = sharedValue;
+        obj29.maxHeight = derivedValue;
+        obj29.velocity = sharedValue3;
+        obj29.runOnJS = tmp19(tmp3[13]).runOnJS;
+        obj29.handleOpen = handleOpen;
+        obj29.startY = sharedValue1;
+        obj29.withTiming = tmp19(tmp3[20]).withTiming;
         tmp38 = closure_19;
-        obj3.TIMING_CONFIG = closure_19;
-        obj3.TooltipActionCreators = tmp2(tmp3[22]);
-        obj3.TooltipNames = tmp19(tmp3[15]).TooltipNames;
+        obj29.TIMING_CONFIG = closure_19;
+        obj29.TooltipActionCreators = tmp2(tmp3[22]);
+        obj29.TooltipNames = tmp19(tmp3[15]).TooltipNames;
         tmp39 = closure_20;
-        obj3.TIMING_CONFIG_EXIT = closure_20;
+        obj29.TIMING_CONFIG_EXIT = closure_20;
         tmp40 = closure_9;
-        obj3.resetFocusTimer = closure_9;
-        obj3.handleClose = handleClose;
-        H.__closure = obj3;
+        obj29.resetFocusTimer = closure_9;
+        obj29.handleClose = handleClose;
+        H.__closure = obj29;
         num13 = 6790759206787;
         H.__workletHash = 6790759206787;
         tmp41 = closure_28;
@@ -557,12 +554,12 @@ class FocusedControlsBottomDrawer {
           }
           size.borderRadius = num5;
           size.width = onClose;
-          const obj = { translateY: timing.withTiming(num, obj2) };
+          const obj = { translateY: timing.withTiming(num, obj5) };
           const items = [obj];
           size.transform = items;
           return size;
         };
-        obj4 = {
+        obj30 = {
           reveal: null,
           controlHeightWithOffset: null,
           sheetHeight: null,
@@ -572,15 +569,15 @@ class FocusedControlsBottomDrawer {
           withTiming: null,
           TIMING_CONFIG: null,
         };
-        obj4.reveal = reveal;
-        obj4.controlHeightWithOffset = sum;
-        obj4.sheetHeight = bound;
-        obj4.isLandscapeMode = tmp5;
-        obj4.safeAreaRight = right;
-        obj4.sheetWidth = tmp6;
-        obj4.withTiming = tmp19(tmp3[20]).withTiming;
-        obj4.TIMING_CONFIG = closure_19;
-        fn.__closure = obj4;
+        obj30.reveal = reveal;
+        obj30.controlHeightWithOffset = sum;
+        obj30.sheetHeight = bound;
+        obj30.isLandscapeMode = tmp5;
+        obj30.safeAreaRight = right;
+        obj30.sheetWidth = tmp6;
+        obj30.withTiming = tmp19(tmp3[20]).withTiming;
+        obj30.TIMING_CONFIG = closure_19;
+        fn.__closure = obj30;
         num15 = 608185354082;
         fn.__workletHash = 608185354082;
         tmp45 = closure_31;
@@ -590,7 +587,7 @@ class FocusedControlsBottomDrawer {
         items2[1] = first1;
         animatedStyle = tmp19Result5.useAnimatedStyle(fn);
         effect = onClose.useEffect(() => {
-          const result = first1.set(timing.withTiming(0, obj3));
+          const result = first1.set(timing.withTiming(0, obj6));
         }, items2);
         items3 = [,];
         items3[0] = reveal;
@@ -604,7 +601,7 @@ class FocusedControlsBottomDrawer {
         items4[0] = first1;
         effect2 = onClose.useEffect(() => {
           function handleSelectActivity() {
-            const result = first1.set(reveal(sum3[20]).withTiming(0, obj3));
+            const result = first1.set(reveal(sum3[20]).withTiming(0, obj6));
           }
           let ComponentDispatch = reveal(sum3[25]).ComponentDispatch;
           const subscription = ComponentDispatch.subscribe(sharedValue3.SELECT_ACTIVITY, handleSelectActivity);
@@ -617,18 +614,18 @@ class FocusedControlsBottomDrawer {
         class Z {
           constructor() {
             obj = { height: onDrawerOpen, transform: null };
-            obj = { translateY: closure_7 + closure_8.get() };
+            obj1 = { translateY: closure_7 + closure_8.get() };
             items = [];
-            items[0] = obj;
+            items[0] = obj1;
             obj.transform = items;
             return obj;
           }
         }
-        obj5 = { sheetHeight: null, offsetY: null, positionY: null };
-        obj5.sheetHeight = bound;
-        obj5.offsetY = diff;
-        obj5.positionY = first1;
-        Z.__closure = obj5;
+        obj31 = { sheetHeight: null, offsetY: null, positionY: null };
+        obj31.sheetHeight = bound;
+        obj31.offsetY = diff;
+        obj31.positionY = first1;
+        Z.__closure = obj31;
         num16 = 4471821639301;
         Z.__workletHash = 4471821639301;
         tmp50 = closure_32;
@@ -647,18 +644,18 @@ class FocusedControlsBottomDrawer {
         tmp19Result7 = tmp19(tmp3[26]);
         theme = tmp19Result7.useThemeContext().theme;
         tmp53 = closure_13;
-        obj6 = { style: null, pointerEvents: "box-none", children: null };
-        obj6.style = animatedStyle;
-        obj7 = { gesture: null, children: null };
-        obj7.gesture = tmp42[1];
+        obj32 = { style: null, pointerEvents: "box-none", children: null };
+        obj32.style = animatedStyle;
+        obj33 = { gesture: null, children: null };
+        obj33.gesture = tmp42[1];
         tmp54 = handleOpen;
-        obj8 = { style: null, children: null };
+        obj34 = { style: null, children: null };
         items6 = [,];
         items6[0] = tmp.bottomDrawerContainer;
         items6[1] = animatedStyle1;
-        obj8.style = items6;
-        obj9 = { blurTheme: null, style: null };
-        obj9.blurTheme = theme;
+        obj34.style = items6;
+        obj35 = { blurTheme: null, style: null };
+        obj35.blurTheme = theme;
         items7 = [,];
         items7[0] = tmp.visualEffectView;
         tmp2Result = tmp2(tmp3[27]);
@@ -668,28 +665,28 @@ class FocusedControlsBottomDrawer {
           prop = tmp.visualEffectViewBackground;
         }
         items7[1] = prop;
-        obj9.style = items7;
+        obj35.style = items7;
         items8 = [, , ,];
-        items8[0] = tmp53(tmp2Result, obj9);
+        items8[0] = tmp53(tmp2Result, obj35);
         tmp57 = FocusedControlsAboveActionBarView;
-        obj10 = { onPressHeader: null, aboveActionBar: null, positionY: null, offsetY: null, isExpanded: null };
-        obj10.onPressHeader = tmp44;
-        obj10.aboveActionBar = aboveActionBar;
-        obj10.positionY = first1;
-        obj10.offsetY = diff;
-        obj10.isExpanded = tmp42[3];
-        items8[1] = tmp53(FocusedControlsAboveActionBarView, obj10);
+        obj36 = { onPressHeader: null, aboveActionBar: null, positionY: null, offsetY: null, isExpanded: null };
+        obj36.onPressHeader = tmp44;
+        obj36.aboveActionBar = aboveActionBar;
+        obj36.positionY = first1;
+        obj36.offsetY = diff;
+        obj36.isExpanded = tmp42[3];
+        items8[1] = tmp53(FocusedControlsAboveActionBarView, obj36);
         items8[2] = children;
         tmp58 = FocusedControlsExpanded;
-        obj11 = { expandedControls: null, availableHeight: null, positionY: null };
-        obj11.expandedControls = expandedControls;
-        obj11.availableHeight = diff2;
-        obj11.positionY = first1;
-        items8[3] = tmp53(FocusedControlsExpanded, obj11);
-        obj8.children = items8;
-        obj7.children = tmp54(tmp2(tmp3[13]).View, obj8);
-        obj6.children = tmp53(tmp19(tmp3[21]).GestureDetector, obj7);
-        return tmp53(tmp2(tmp3[13]).View, obj6);
+        obj37 = { expandedControls: null, availableHeight: null, positionY: null };
+        obj37.expandedControls = expandedControls;
+        obj37.availableHeight = diff2;
+        obj37.positionY = first1;
+        items8[3] = tmp53(FocusedControlsExpanded, obj37);
+        obj34.children = items8;
+        obj33.children = tmp54(tmp2(tmp3[13]).View, obj34);
+        obj32.children = tmp53(tmp19(tmp3[21]).GestureDetector, obj33);
+        return tmp53(tmp2(tmp3[13]).View, obj32);
       } else {
         str4 = "Trying to call a non-function";
         throw new TypeError("Trying to call a non-function");
@@ -718,8 +715,8 @@ const jsxProd = fn(21);
 let c15 = 20;
 function EXTENDED_CONTROLS_OFFSET_Y(arg0) {}
 function EXTENDED_CONTROLS_LANDSCAPE_OFFSET_Y(arg0) {}
-fn(4636);
-let createStyles = {
+const createStyles = fn(4636);
+let obj2 = {
   bottomDrawerContainer: null,
   visualEffectView: null,
   visualEffectViewBackground: null,
@@ -732,33 +729,26 @@ let createStyles = {
   labelStyle: null,
 };
 const rect = { position: "absolute", left: 0, right: 0, bottom: 0, borderRadius: nativeDefault.radii.sm };
-createStyles.bottomDrawerContainer = rect;
-createStyles = {};
+obj2.bottomDrawerContainer = rect;
+let obj3 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
-createStyles.borderRadius = nativeDefault.radii.sm;
-createStyles.overflow = "hidden";
-createStyles.visualEffectView = createStyles;
-createStyles.visualEffectViewBackground = { backgroundColor: "rgba(0, 0, 0, .15)" };
-createStyles.expandedControlsContainer = { marginHorizontal: 16 };
-createStyles.aboveActionBarContainer = {
-  position: "absolute",
-  left: 0,
-  right: 0,
-  top: -32,
-  paddingTop: 4,
-  paddingBottom: 8,
-};
-createStyles.aboveActionBarChildrenContainer = { position: "absolute", left: 16, right: 16, top: -64 };
-createStyles.ptbButton = { margin: 0, marginHorizontal: 16, marginBottom: 8 };
-createStyles.tooltipStyle = { alignSelf: "center", position: "absolute", top: -28 };
-createStyles.containerStyle = { paddingHorizontal: 8, paddingVertical: 4 };
+obj3.borderRadius = nativeDefault.radii.sm;
+obj3.overflow = "hidden";
+obj2.visualEffectView = obj3;
+obj2.visualEffectViewBackground = { backgroundColor: "rgba(0, 0, 0, .15)" };
+obj2.expandedControlsContainer = { marginHorizontal: 16 };
+obj2.aboveActionBarContainer = { position: "absolute", left: 0, right: 0, top: -32, paddingTop: 4, paddingBottom: 8 };
+obj2.aboveActionBarChildrenContainer = { position: "absolute", left: 16, right: 16, top: -64 };
+obj2.ptbButton = { margin: 0, marginHorizontal: 16, marginBottom: 8 };
+obj2.tooltipStyle = { alignSelf: "center", position: "absolute", top: -28 };
+obj2.containerStyle = { paddingHorizontal: 8, paddingVertical: 4 };
 const merged1 = Object.assign(
   TextStyles(Fonts.DISPLAY_EXTRABOLD, nativeDefault.unsafe_rawColors.WHITE, 12, { uppercase: true }),
 );
-createStyles.labelStyle = {};
-const collapsedCategories = createStyles.createStyles(createStyles);
-let obj2 = { easing: fn(1178).STANDARD_EASING, duration: 250 };
-let obj3 = { easing: fn(1178).STANDARD_EASING, duration: 400 };
+obj2.labelStyle = {};
+const collapsedCategories = createStyles.createStyles(obj2);
+let obj5 = { easing: fn(1176).STANDARD_EASING, duration: 250 };
+let obj6 = { easing: fn(1176).STANDARD_EASING, duration: 400 };
 const __initData = {
   code: "function FocusedControlsBottomControlsTsx1(){const{positionY,EXPANDED_DRAWER_SHOW_POSITION}=this.__closure;const opacity=Math.min(positionY.get()*-1/EXPANDED_DRAWER_SHOW_POSITION,1);return{opacity:opacity,pointerEvents:opacity===0?'none':'auto'};}",
 };
@@ -797,8 +787,8 @@ export default function FocusedControlsBottomControls(omitPTT) {
   }
   c0 = undefined;
   const tmp = closure_18();
-  [tmp3, c0] = _slicedToArray(noop.useState(0), 2);
-  let obj = {
+  [tmp3, c0] = noop.useState(0);
+  const obj = {
     aboveActionBar: children,
     actionBarControlsHeight: tmp3,
     expandedControls,
@@ -807,7 +797,7 @@ export default function FocusedControlsBottomControls(omitPTT) {
     onDrawerOpen: omitPTT.onDrawerOpen,
     children: null,
   };
-  obj = {
+  const obj2 = {
     onLayout: noop.useCallback((nativeEvent) => {
       _undefined(nativeEvent.nativeEvent.layout.height);
     }, []),
@@ -816,12 +806,12 @@ export default function FocusedControlsBottomControls(omitPTT) {
   const items = [header, actionBar];
   let tmp4Result = null;
   if (!flag) {
-    obj = { look: CallPTTButton.CallPTTButtonLooks.BLUR, style: tmp.ptbButton, sendCallback, stopCallback };
-    tmp4Result = map1(CallPTTButtonDefault, obj);
+    const obj3 = { look: CallPTTButton.CallPTTButtonLooks.BLUR, style: tmp.ptbButton, sendCallback, stopCallback };
+    tmp4Result = map1(CallPTTButtonDefault, obj3);
   }
   items[2] = tmp4Result;
-  obj.children = items;
-  obj.children = closure_1_14(hasOwnProperty, obj);
+  obj2.children = items;
+  obj.children = closure_1_14(hasOwnProperty, obj2);
   return map1(FocusedControlsBottomDrawer, obj);
 }
 export const FOCUSED_CONTROLS_HEADER_HEIGHT = 54;

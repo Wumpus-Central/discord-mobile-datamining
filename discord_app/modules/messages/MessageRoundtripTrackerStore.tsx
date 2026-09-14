@@ -23,23 +23,22 @@ function trackRoundtrip(channelId) {
       if (null != channelId.gatewaySeenTimestamp) {
         diff1 = channelId.gatewaySeenTimestamp - channelId.initialSendTimestamp;
       }
-      let obj = NetStats;
-      const signalStrength = obj.getSignalStrength();
-      obj = {};
+      const signalStrength = NetStats.getSignalStrength();
+      const obj4 = {};
       const merged = Object.assign(getDeviceMetadataDefault());
-      obj.api_latency_ms = diff;
-      obj.gateway_latency_ms = diff1;
+      obj4.api_latency_ms = diff;
+      obj4.gateway_latency_ms = diff1;
       ({ id: obj3.channel_id, type: obj3.channel_type, guild_id: obj3.guild_id } = basicChannel);
-      obj.guild_size = GuildMemberCountStore.getMemberCount(basicChannel.guild_id);
-      obj.mobile_network_type = NetworkStore.getType();
-      obj.num_attachments = channelId.attachmentCount;
+      obj4.guild_size = GuildMemberCountStore.getMemberCount(basicChannel.guild_id);
+      obj4.mobile_network_type = NetworkStore.getType();
+      obj4.num_attachments = channelId.attachmentCount;
       let tmp17 = null != signalStrength;
       if (tmp17) {
-        obj = { mobile_signal_strength_level: signalStrength };
-        tmp17 = obj;
+        const obj6 = { mobile_signal_strength_level: signalStrength };
+        tmp17 = obj6;
       }
       const merged1 = Object.assign(tmp17);
-      AnalyticsUtilsDefault.track(AnalyticEvents.SEND_MESSAGE_ROUNDTRIP, obj);
+      AnalyticsUtilsDefault.track(AnalyticEvents.SEND_MESSAGE_ROUNDTRIP, obj4);
     }
   } else {
     const _HermesInternal = HermesInternal;
@@ -84,15 +83,14 @@ prototype["recordMessageSendAttempt"] = function recordMessageSendAttempt(channe
   if (num2 == null) {
     num2 = 0;
   }
-  obj = {
+  let pendingMessages = this.pendingMessages;
+  const result = pendingMessages.set(arg1, {
     initialSendTimestamp: Date.now(),
     apiResponseTimestamp: null,
     gatewaySeenTimestamp: null,
     channelId,
     attachmentCount: num + num2,
-  };
-  let pendingMessages = this.pendingMessages;
-  const result = pendingMessages.set(arg1, obj);
+  });
   const timerId = setTimeout(() => {
     const pendingMessages = self.pendingMessages;
     value = pendingMessages.get(closure_0);

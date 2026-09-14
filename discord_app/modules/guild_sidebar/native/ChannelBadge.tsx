@@ -19,20 +19,19 @@ export default function ChannelBadge(arg0) {
   ({ mentionCount, postsWithUnreadsCount, muted } = arg0);
   ({ isMentionLowImportance, isNewChannel } = arg0);
   const tmp = closure_6();
-  let obj = useStateFromStores;
   const items = [LocaleStore];
-  const stateFromStores = obj.useStateFromStores(items, () => locale.locale);
+  const stateFromStores = useStateFromStores.useStateFromStores(items, () => locale.locale);
   if (null != mentionCount) {
     if (mentionCount > 0) {
-      obj = { style: tmp.channelInfoContainer, children: null };
-      obj = { mentionsCount: mentionCount, isMentionLowImportance };
-      obj.children = jsx(MentionsBadgeDefault, { mentionsCount: mentionCount, isMentionLowImportance });
-      let tmp5 = <View mentionsCount={mentionCount} isMentionLowImportance={isMentionLowImportance} />;
+      const obj2 = { style: tmp.channelInfoContainer, children: null };
+      const obj3 = { mentionsCount: mentionCount, isMentionLowImportance };
+      obj2.children = jsx(MentionsBadgeDefault, { mentionsCount: mentionCount, isMentionLowImportance });
+      let tmp5 = <View style={tmp.channelInfoContainer}>{null}</View>;
     }
     return tmp5;
   }
   if (isNewChannel) {
-    const obj1 = { style: tmp.channelInfoContainer, children: jsx(NewBadgeDefault, {}) };
+    const obj4 = { style: tmp.channelInfoContainer, children: jsx(NewBadgeDefault, {}) };
     tmp5 = <View style={tmp.channelInfoContainer}>{jsx(NewBadgeDefault, {})}</View>;
   } else {
     tmp5 = null;
@@ -43,13 +42,13 @@ export default function ChannelBadge(arg0) {
         if (null != postsWithUnreadsCount) {
           tmp5 = null;
           if (postsWithUnreadsCount > 0) {
-            const obj2 = { style: tmp.channelInfoContainer, children: null };
-            const obj3 = {
+            const obj5 = { style: tmp.channelInfoContainer, children: null };
+            const obj6 = {
               variant: "text-xs/semibold",
               color: "text-muted",
               children: NumberUtils.humanizeValue(postsWithUnreadsCount, stateFromStores),
             };
-            obj2.children = jsx(Text_Text.Text, {
+            obj5.children = jsx(Text_Text.Text, {
               variant: "text-xs/semibold",
               color: "text-muted",
               children: NumberUtils.humanizeValue(postsWithUnreadsCount, stateFromStores),

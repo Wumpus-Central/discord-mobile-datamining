@@ -23,13 +23,15 @@ const result = size.fileFinishedImporting("modules/rtc/SecureFramesPlatformUtils
 
 export default {
   openSecureFramesStreamVerification(streamKey, channelId) {
-    const obj = { streamKey, channelId };
-    obj.openLazy(asyncRequireImpl(9295, dependencyMap.paths), timestampProducer, obj);
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(9295, dependencyMap.paths), timestampProducer, {
+      streamKey,
+      channelId,
+    });
   },
   openSecureFramesUserVerificationModal(id, id2, fn) {
     if (fn()) {
-      const obj = { userId: id, channelId: id2 };
-      obj.pushLazy(asyncRequireImpl(9284, dependencyMap.paths), obj, React5);
+      const obj2 = { userId: id, channelId: id2 };
+      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(9284, dependencyMap.paths), obj2, React5);
     }
   },
   openSecureFramesUpdateConfirmation(confirmText) {
@@ -40,16 +42,16 @@ export default {
       confirmText = intl.string(util.t["cY+Oob"]);
     }
     const onConfirm = confirmText.onConfirm;
-    const obj = { title, body: subtitle, confirmText, cancelText: null, confirmColor: null };
+    const obj2 = { title, body: subtitle, confirmText, cancelText: null, confirmColor: null };
     const intl2 = util.intl;
-    obj.cancelText = intl2.string(util.t["ETE/oC"]);
-    obj.confirmColor = native.ButtonColors.RED;
-    obj.confirm(obj).then((result) => {
+    obj2.cancelText = intl2.string(util.t["ETE/oC"]);
+    obj2.confirmColor = native.ButtonColors.RED;
+    actions_AlertActionCreatorsDefault.confirm(obj2).then((result) => {
       if (result) {
         onConfirm();
       }
     });
-    const confirmResult = obj.confirm(obj);
+    const confirmResult = actions_AlertActionCreatorsDefault.confirm(obj2);
   },
   handleSecureFramesUserVerificationLink(arg0) {
     ({ userId, fingerprint } = arg0);
@@ -65,15 +67,15 @@ export default {
     if (null != channelId) {
       if (null != channel) {
         safeTransitionToDefault(React7.CHANNEL(guildId, channelId));
-        let obj = { userId, channelId, guildId, fingerprint };
+        const obj = { userId, channelId, guildId, fingerprint };
         ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(9298, dependencyMap.paths), hasOwnProperty, obj);
       }
     }
-    obj = { title: null, body: null };
+    const obj3 = { title: null, body: null };
     const intl = util.intl;
-    obj.title = intl.string(util.t["5ICxE6"]);
+    obj3.title = intl.string(util.t["5ICxE6"]);
     const intl2 = util.intl;
-    obj.body = intl2.string(util.t["v1eXp/"]);
-    actions_AlertActionCreatorsDefault.show(obj);
+    obj3.body = intl2.string(util.t["v1eXp/"]);
+    actions_AlertActionCreatorsDefault.show(obj3);
   },
 };

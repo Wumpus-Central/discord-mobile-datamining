@@ -29,14 +29,14 @@ function retryFailedUsers() {
         if (null != user) {
           c2 = true;
           set.delete(item);
-          let obj = { userId: user.id, channelId };
-          const tmp23 = new VoiceStateRecord(obj);
+          const obj4 = { userId: user.id, channelId };
+          const tmp23 = new VoiceStateRecord(obj4);
           let tmp6 = guildId;
           if (guildId == null) {
             tmp6 = React7;
           }
           const result = closure_12.set(user.id, makeSortedVoiceState(tmp23, tmp6, user.id));
-          obj = {
+          const obj = {
             type: ParticipantTypes.USER,
             user,
             id: user.id,
@@ -158,14 +158,14 @@ const rTCConnectionDesyncStore = new RTCConnectionDesyncStore(DispatcherDefault,
             set.add(item);
             let flag = acc;
           } else {
-            let obj = { userId: user.id, channelId };
-            const tmp21 = new VoiceStateRecord(obj);
+            const obj4 = { userId: user.id, channelId };
+            const tmp21 = new VoiceStateRecord(obj4);
             let tmp2 = closure_1_0;
             if (closure_1_0 == null) {
               tmp2 = React7;
             }
             const result = closure_12.set(user.id, makeSortedVoiceState(tmp21, tmp2, user.id));
-            obj = {
+            const obj = {
               type: ParticipantTypes.USER,
               user,
               id: user.id,

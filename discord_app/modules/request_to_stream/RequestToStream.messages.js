@@ -31,10 +31,11 @@ import _mod2910 from "../../../_runtime/metro/02910__.js";
 import _mod2911 from "../../../_runtime/metro/02911__.js";
 import _mod2912 from "../../../_runtime/metro/02912__.js";
 import _mod2913 from "../../../_runtime/metro/02913__.js";
-import 01155__ from "../../../_runtime/metro/01155__.js";
+import module_1153_mod from "../../../_runtime/metro/01153__.js";
 import size from "../../../_runtime/metro/00002__.js";
 
-const loader = module_1155.createLoader({
+let module_1153 = module_1153_mod;
+const loader = module_1153.createLoader({
   bg() {
     const jsonAsset = AssetJsonUtils.loadJsonAsset(_mod2883);
     return jsonAsset.then((result) => ({ default: result }));
@@ -160,7 +161,8 @@ const loader = module_1155.createLoader({
     return jsonAsset.then((result) => ({ default: result }));
   }
 }, "en-US");
-const messagesProxy = module_1155.makeMessagesProxy(loader);
+let module_1153 = module_1153_mod;
+const messagesProxy = module_1153.makeMessagesProxy(loader);
 const result = size.fileFinishedImporting("modules/request_to_stream/RequestToStream.messages.js");
 
 export default messagesProxy;

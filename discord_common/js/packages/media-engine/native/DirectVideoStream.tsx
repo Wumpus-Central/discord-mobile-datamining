@@ -2,6 +2,8 @@
 import inject from "inject.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
 
+const require = globalThis.__r;
+
 class RefCountedStream {
   constructor(arg0) {
     createDiscordStream = window.createDiscordStream;
@@ -48,7 +50,6 @@ export const getDirectVideoStreamConsumerCount = function getDirectVideoStreamCo
 };
 export const acquireDirectVideoStream = function acquireDirectVideoStream(streamId) {
   _require = streamId;
-  let obj = map;
   value = map.get(streamId);
   if (null == value) {
     if (typeof c2 === "function") {
@@ -62,7 +63,7 @@ export const acquireDirectVideoStream = function acquireDirectVideoStream(stream
         merged.stream = createDiscordStream(streamId);
         let voiceEngine = require("inject").getVoiceEngine();
         let result = voiceEngine.addDirectVideoOutputSink(streamId);
-        const result1 = obj.set(streamId, merged);
+        const result1 = map.set(streamId, merged);
         value = merged;
         const obj4 = require("inject");
       }
@@ -73,7 +74,7 @@ export const acquireDirectVideoStream = function acquireDirectVideoStream(stream
   dependencyMap = value;
   value.addref();
   c2 = false;
-  obj = {
+  return {
     stream: value.stream,
     release() {
       if (!c2) {
@@ -86,5 +87,4 @@ export const acquireDirectVideoStream = function acquireDirectVideoStream(stream
       }
     },
   };
-  return obj;
 };

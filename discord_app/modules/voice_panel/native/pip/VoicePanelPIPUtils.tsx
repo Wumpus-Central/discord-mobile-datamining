@@ -8,14 +8,14 @@ import ApplicationStreamingStore from "../../../../stores/ApplicationStreamingSt
 import AuthenticationStore from "../../../../stores/AuthenticationStore.tsx";
 
 require = fn;
-const VoicePanelConstants = fn(12402);
+const VoicePanelConstants = fn(12403);
 ({ SECONDARY_PIP_TOP_MARGIN: hasOwnProperty, VoicePanelModes: metroRequire } = VoicePanelConstants);
-const VoicePanelPIPConstants = fn(17197);
+const VoicePanelPIPConstants = fn(17199);
 ({ VoicePanelPIPModes: closure_7, PIPReferenceDimensions } = VoicePanelPIPConstants);
 const SquarePIPReferenceDimensions = VoicePanelPIPConstants.SquarePIPReferenceDimensions;
 const SquareActivityPIPReferenceDimensions = VoicePanelPIPConstants.SquareActivityPIPReferenceDimensions;
 const ParticipantTypes = fn(4657).ParticipantTypes;
-const MorphablePanelConstants = fn(12403);
+const MorphablePanelConstants = fn(12404);
 const MIN_PIP_TOSS_VELOCITY = MorphablePanelConstants.MIN_PIP_TOSS_VELOCITY;
 const PIP_WINDOW_OFFSET = MorphablePanelConstants.PIP_WINDOW_OFFSET;
 const set = new Set();
@@ -27,9 +27,9 @@ clamp.__workletHash = 10301627783217;
 clamp.__initData = {
   code: "function clamp_VoicePanelPIPUtilsTsx1(value,min,max){return Math.min(Math.max(value,min),max);}",
 };
-let PIP_LAYOUT_PHYSICS = { mass: 0.3, damping: 80, stiffness: 150 };
+const PIP_LAYOUT_PHYSICS = { mass: 0.3, damping: 80, stiffness: 150 };
 function layoutTransition(originX) {
-  obj = { animations: null, initialValues: null };
+  const obj = { animations: null, initialValues: null };
   const size = { originX: spring.withSpring(originX.targetOriginX, obj), originY: null, width: null, height: null };
   size.originY = spring.withSpring(originX.targetOriginY, obj);
   size.width = spring.withSpring(originX.targetWidth, obj);
@@ -43,8 +43,7 @@ function layoutTransition(originX) {
   };
   return obj;
 }
-PIP_LAYOUT_PHYSICS = { withSpring: fn(5055).withSpring, PIP_LAYOUT_PHYSICS };
-layoutTransition.__closure = PIP_LAYOUT_PHYSICS;
+layoutTransition.__closure = { withSpring: fn(5055).withSpring, PIP_LAYOUT_PHYSICS };
 layoutTransition.__workletHash = 16735009420384;
 layoutTransition.__initData = {
   code: "function layoutTransition_VoicePanelPIPUtilsTsx2(values){const{withSpring,PIP_LAYOUT_PHYSICS}=this.__closure;return{animations:{originX:withSpring(values.targetOriginX,PIP_LAYOUT_PHYSICS),originY:withSpring(values.targetOriginY,PIP_LAYOUT_PHYSICS),width:withSpring(values.targetWidth,PIP_LAYOUT_PHYSICS),height:withSpring(values.targetHeight,PIP_LAYOUT_PHYSICS)},initialValues:{originX:values.currentOriginX,originY:values.currentOriginY,width:values.currentWidth,height:values.currentHeight}};}",
@@ -52,7 +51,7 @@ layoutTransition.__initData = {
 function getPIPWindowDimensions(width, left) {
   const bound = Math.max(left.left, PIP_WINDOW_OFFSET);
   const bound1 = Math.max(left.top, PIP_WINDOW_OFFSET);
-  obj = { xOffset: bound, yOffset: bound1, xRange: null, yRange: null };
+  const obj = { xOffset: bound, yOffset: bound1, xRange: null, yRange: null };
   const diff = width.width - bound;
   obj.xRange = diff - Math.max(left.right, PIP_WINDOW_OFFSET);
   const diff1 = width.height - bound1;
@@ -104,7 +103,7 @@ function getClampedPIPPosition(topAvoidanceRegion) {
   if (-1 !== pipX) {
     num2 = pipX;
   }
-  obj = { pipX: num2, pipY: null, windowDimensions: null, safeArea: null };
+  const obj = { pipX: num2, pipY: null, windowDimensions: null, safeArea: null };
   let num3 = 0;
   if (-1 !== pipY) {
     num3 = pipY;
@@ -134,10 +133,8 @@ function getClampedPIPPosition(topAvoidanceRegion) {
       if (typeof tmp12 === "function") {
         const _Math7 = Math;
         const _Math8 = Math;
-        point = { x: null, y: null };
-        point.x = tmp13 + point.x;
-        point.y = Math.min(Math.max(sum, tmp14), tmp15) + point.y;
-        return point;
+        const point1 = { x: tmp13 + point.x, y: Math.min(Math.max(sum, tmp14), tmp15) + point.y };
+        return point1;
       } else {
         throw new TypeError("Trying to call a non-function");
       }
@@ -260,7 +257,7 @@ function calculatePIPPositionFromVelocity(arg0) {
       num6 = num4 / diff3;
     }
     if (typeof clamp === "function") {
-      obj = { pipX: null, pipY: null };
+      const obj = { pipX: null, pipY: null };
       const _Math18 = Math;
       const _Math19 = Math;
       obj.pipX = Math.min(Math.max(num5, 0), 1);
@@ -353,11 +350,11 @@ export const computePIPParticipantToShow = function computePIPParticipantToShow(
   }
   if (panelMode === constants.PANEL) {
     if (null != focusedParticipantId) {
-      let type;
+      let type1;
       if (participant != null) {
-        type = participant.type;
+        type1 = participant.type;
       }
-      if (type === ParticipantTypes.STREAM) {
+      if (type1 === ParticipantTypes.STREAM) {
         let userVideo;
         if (participant != null) {
           userVideo = participant.userVideo;
@@ -366,11 +363,11 @@ export const computePIPParticipantToShow = function computePIPParticipantToShow(
           if (!blockList.has(participant.user.id)) {
             const participant1 = ChannelRTCStore.getParticipant(channelId, participant.user.id);
             if (null != participant1) {
-              obj = participantHasVideo;
               if (obj.canRenderParticipantVideo(participant1)) {
-                obj = { id: participant1.id, type: tmp6.USER };
-                return obj;
+                const obj2 = { id: participant1.id, type: tmp6.USER };
+                return obj2;
               }
+              obj = participantHasVideo;
             }
           }
         }
@@ -380,16 +377,16 @@ export const computePIPParticipantToShow = function computePIPParticipantToShow(
   if (null != focusedParticipantId) {
     if (null != participant) {
       if (!blockList.has(focusedParticipantId)) {
-        obj = { id: focusedParticipantId, type: participant.type };
-        return obj;
+        const obj3 = { id: focusedParticipantId, type: participant.type };
+        return obj3;
       }
     }
   }
-  let type1;
+  let type2;
   if (participant != null) {
-    type1 = participant.type;
+    type2 = participant.type;
   }
-  if (type1 !== ParticipantTypes.ACTIVITY) {
+  if (type2 !== ParticipantTypes.ACTIVITY) {
     if (!showSecondaryPIP.showSecondaryPIP) {
       const activityParticipants = ChannelRTCStore.getActivityParticipants(channelId);
       for (const item10060 of activityParticipants) {
@@ -400,10 +397,10 @@ export const computePIPParticipantToShow = function computePIPParticipantToShow(
           )
         ) {
           if (!blockList.has(item10060.id)) {
-            let obj1 = { id: null, type: null };
+            let obj8 = { id: null, type: null };
             ({ id: obj5.id, type: obj5.type } = item10060);
-            obj3.return();
-            return obj1;
+            obj4.return();
+            return obj8;
           }
         }
         continue;
@@ -414,10 +411,10 @@ export const computePIPParticipantToShow = function computePIPParticipantToShow(
   for (const item10083 of streamParticipants) {
     if (!blockList.has(item10083.id)) {
       if (null != ApplicationStreamingStore.getActiveStreamForUser(item10083.user.id, item10083.stream.guildId)) {
-        let obj2 = { id: null, type: null };
+        let obj14 = { id: null, type: null };
         ({ id: obj7.id, type: obj7.type } = item10083);
-        obj5.return();
-        return obj2;
+        obj6.return();
+        return obj14;
       }
     }
     continue;
@@ -425,8 +422,8 @@ export const computePIPParticipantToShow = function computePIPParticipantToShow(
   if (null != speakingUserId) {
     if (!blockList.has(speakingUserId)) {
       if (null != ChannelRTCStore.getParticipant(channelId, speakingUserId)) {
-        const obj3 = { id: speakingUserId, type: ParticipantTypes.USER };
-        return obj3;
+        const obj18 = { id: speakingUserId, type: ParticipantTypes.USER };
+        return obj18;
       }
     }
   }
@@ -436,16 +433,16 @@ export const computePIPParticipantToShow = function computePIPParticipantToShow(
   }
   if (null != participant2) {
     if (!blockList.has(participant2.id)) {
-      type = participant2.type;
+      const type = participant2.type;
       if (ParticipantTypes.STREAM === type) {
         if (
           null != ApplicationStreamingStore.getActiveStreamForUser(participant2.user.id, participant2.stream.guildId)
         ) {
-          let obj9 = participantHasVideo;
-          if (obj9.canRenderParticipantVideo(participant2)) {
+          if (obj10.canRenderParticipantVideo(participant2)) {
             ({ id: obj11.id, type: obj11.type } = participant2);
             return { id: null, type: null };
           }
+          obj10 = participantHasVideo;
         }
       } else if (ParticipantTypes.ACTIVITY === type) {
         const participants2 = participant2.participants;
@@ -454,9 +451,8 @@ export const computePIPParticipantToShow = function computePIPParticipantToShow(
             isActivityParticipantCurrentUserCurrentSession.isActivityParticipantCurrentUserCurrentSession(item),
           )
         ) {
-          const obj5 = { id: null, type: null };
           ({ id: obj9.id, type: obj9.type } = participant2);
-          return obj5;
+          return { id: null, type: null };
         }
       } else if (ParticipantTypes.USER === type) {
         ({ id: obj19.id, type: obj19.type } = participant2);
@@ -468,8 +464,8 @@ export const computePIPParticipantToShow = function computePIPParticipantToShow(
   if (!blockList.has(id)) {
     if (null != participant3) {
       if (obj13.canRenderParticipantVideo(participant3)) {
-        const obj7 = { id, type: ParticipantTypes.USER };
-        return obj7;
+        const obj33 = { id, type: ParticipantTypes.USER };
+        return obj33;
       }
       obj13 = participantHasVideo;
     }
@@ -479,10 +475,10 @@ export const computePIPParticipantToShow = function computePIPParticipantToShow(
     if (!blockList.has(item10162.id)) {
       let obj16 = participantHasVideo;
       if (obj16.canRenderParticipantVideo(item10162)) {
-        let obj8 = { id: null, type: null };
+        let obj34 = { id: null, type: null };
         ({ id: obj17.id, type: obj17.type } = item10162);
         obj15.return();
-        return obj8;
+        return obj34;
       }
     }
     continue;
@@ -491,12 +487,12 @@ export const computePIPParticipantToShow = function computePIPParticipantToShow(
   if (!blockList.has(id)) {
     if (null != participant3) {
       if (panelMode !== constants.PANEL) {
-        obj9 = { id, type: ParticipantTypes.USER };
-        tmp46 = obj9;
+        const obj35 = { id, type: ParticipantTypes.USER };
+        tmp46 = obj35;
       } else {
-        let type2;
+        let type3;
         if (participant != null) {
-          type2 = participant.type;
+          type3 = participant.type;
         }
       }
     }

@@ -10,18 +10,20 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
 const PX_16 = nativeDefault.space.PX_16;
-let PlatformUtils = fn(1151);
+const PlatformUtils = fn(1364);
 let num = 325;
 if (PlatformUtils.isIOS()) {
   num = 300;
 }
-fn(4636);
-PlatformUtils = { cardContainer: { width: 250, marginEnd: PX_16, flex: 1 }, scroller: null, scrollerContent: null };
-PlatformUtils = { height: num, paddingBottom: nativeDefault.space.PX_8 };
-PlatformUtils.scroller = PlatformUtils;
-const createStyles = { paddingHorizontal: nativeDefault.space.PX_16 };
-PlatformUtils.scrollerContent = createStyles;
-let closure_9 = createStyles.createStyles(PlatformUtils);
+const createStyles = fn(4636);
+const obj3 = {
+  cardContainer: { width: 250, marginEnd: PX_16, flex: 1 },
+  scroller: { height: num, paddingBottom: nativeDefault.space.PX_8 },
+  scrollerContent: null,
+};
+const obj4 = { height: num, paddingBottom: nativeDefault.space.PX_8 };
+obj3.scrollerContent = { paddingHorizontal: nativeDefault.space.PX_16 };
+let closure_9 = createStyles.createStyles(obj3);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/powerups/native/GuildPowerupsLevelsSection.tsx");
 
@@ -40,13 +42,14 @@ export default function GuildPowerupsLevelsSection(arg0) {
   const callback = memo.useCallback((current) => {
     closure_4.current = current;
   }, []);
-  obj = { title: null, description: null };
+  const obj2 = { title: null, description: null };
   const intl = util.intl;
-  obj.title = intl.string(listings(2428)["TXY/b0"]);
+  obj2.title = intl.string(listings(2428)["TXY/b0"]);
   const intl2 = util.intl;
-  obj.description = intl2.string(listings(2428).aJv4PB);
-  const items1 = [closure_5(listings(12681), obj)];
-  obj = {
+  obj2.description = intl2.string(listings(2428).aJv4PB);
+  const items1 = [closure_5(listings(12682), obj2)];
+  const tmp3 = listings(12682);
+  items1[1] = closure_5(MarketingCardsScroller.MarketingCardsScroller, {
     cardMarginRight: PX_16,
     cardWidth: 250,
     contentContainerStyle: tmp.scrollerContent,
@@ -54,13 +57,19 @@ export default function GuildPowerupsLevelsSection(arg0) {
     onScrollingChange: callback,
     style: tmp.scroller,
     children: memo.map((powerup, index) => {
-      let obj = { style: cardContainer.cardContainer, children: null };
-      obj = { guildId, powerup, nextPowerup: memo[index + 1], index, isScrollingRef };
-      obj.children = hasOwnProperty(GuildPowerupsLevelCardDefault, obj);
+      const obj = {
+        style: cardContainer.cardContainer,
+        children: hasOwnProperty(GuildPowerupsLevelCardDefault, {
+          guildId,
+          powerup,
+          nextPowerup: memo[index + 1],
+          index,
+          isScrollingRef,
+        }),
+      };
       return hasOwnProperty(View, obj, powerup.skuId);
     }),
-  };
-  items1[1] = closure_5(MarketingCardsScroller.MarketingCardsScroller, obj);
+  });
   obj.children = items1;
   return closure_7(closure_6, obj);
 }

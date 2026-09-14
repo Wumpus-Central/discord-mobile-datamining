@@ -24,8 +24,8 @@ export default (arg0) => {
           if (arg0 === 1) {
             throw value;
           } else if (arg0 === 2) {
-            let obj = { value, done: true };
-            return obj;
+            const obj2 = { value, done: true };
+            return obj2;
           } else {
             return { value: "HermesInternal", done: null };
           }
@@ -38,40 +38,40 @@ export default (arg0) => {
                 throw value;
               } else if (arg0 === 2) {
                 c4 = 3;
-                obj = { value, done: true };
-                return obj;
+                const obj3 = { value, done: true };
+                return obj3;
               } else {
                 closure_2 = tmp5;
                 closure_1 = tmp2;
                 closure_129_0 = closure_0;
                 closure_129_1 = undefined;
                 const obj6 = closure_0(dependencyMap[5]);
-                const obj1 = {
+                const obj4 = {
                   content: closure_0.channelReplyText,
                   tts: false,
                   invalidEmojis: [],
                   validNonShortcutEmojis: [],
                 };
-                const obj2 = { eagerDispatch: false, location: constants.PUSH_NOTIFICATION };
+                const obj5 = { eagerDispatch: false, location: constants.PUSH_NOTIFICATION };
                 c3 = 1;
                 c4 = 1;
-                const obj3 = { value: obj6.sendMessage(closure_0.channelId, obj1, false, obj2), done: false };
-                return obj3;
+                const obj7 = { value: obj6.sendMessage(closure_0.channelId, obj4, false, obj5), done: false };
+                return obj7;
               }
             } else if (arg0 === 1) {
               c4 = 3;
               throw value;
             } else if (arg0 === 2) {
               c4 = 3;
-              const obj4 = { value, done: true };
-              return obj4;
+              const obj8 = { value, done: true };
+              return obj8;
             } else {
               closure_129_1 = value;
               logger.log("Sent message, ok:", closure_129_1.ok);
               if (closure_129_1.ok) {
                 const PushNotificationAndroid = NativeModules.PushNotificationAndroid;
                 const _JSON = JSON;
-                obj = {};
+                const obj = {};
                 const merged = Object.assign(closure_129_1.body);
                 const merged1 = Object.assign(closure_129_0);
                 const result = PushNotificationAndroid.handleDirectReplySuccess(JSON.stringify(obj));

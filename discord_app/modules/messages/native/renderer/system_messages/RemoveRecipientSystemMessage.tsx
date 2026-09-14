@@ -21,9 +21,8 @@ export const createRemoveRecipientSystemMessage = function createRemoveRecipient
   if (hasItem) {
     hasItem = THREAD_CHANNEL_TYPES.has(channel.type);
   }
-  let obj = useAuthorWithProcessedColor;
-  const messageAuthorWithProcessedColor = obj.getMessageAuthorWithProcessedColor(message);
-  obj = {
+  const messageAuthorWithProcessedColor = useAuthorWithProcessedColor.getMessageAuthorWithProcessedColor(message);
+  const obj2 = {
     username: messageAuthorWithProcessedColor.nick,
     usernameOnClick: formatUsernameOnClickDefault({ message, author: messageAuthorWithProcessedColor, roleStyle }),
   };
@@ -32,31 +31,31 @@ export const createRemoveRecipientSystemMessage = function createRemoveRecipient
     const formatToParts = intl.formatToParts;
     const t = util.t;
     if (hasItem) {
-      let formatToPartsResult = formatToParts(t.uHmblj, obj);
+      let formatToPartsResult = formatToParts(t.uHmblj, obj2);
     } else {
-      formatToPartsResult = formatToParts(t["Qn5+Lf"], obj);
+      formatToPartsResult = formatToParts(t["Qn5+Lf"], obj2);
     }
-    obj = { content: formatToPartsResult };
+    const obj3 = { content: formatToPartsResult };
     const merged = Object.assign(createCommonMessageDefault(message));
-    return obj;
+    return obj3;
   } else {
     const user = UserStore.getUser(first);
     const userAuthorWithProcessedColor = useAuthorWithProcessedColor.getUserAuthorWithProcessedColor(user, channel);
-    const obj1 = {};
-    const merged1 = Object.assign(obj);
-    obj1.otherUsername = userAuthorWithProcessedColor.nick;
-    const obj2 = { userId: first, message, author: userAuthorWithProcessedColor, roleStyle };
-    obj1.otherUsernameOnClick = formatUsernameOnClickDefault(obj2);
+    const obj4 = {};
+    const merged1 = Object.assign(obj2);
+    obj4.otherUsername = userAuthorWithProcessedColor.nick;
+    const obj5 = { userId: first, message, author: userAuthorWithProcessedColor, roleStyle };
+    obj4.otherUsernameOnClick = formatUsernameOnClickDefault(obj5);
     const intl2 = util.intl;
     const formatToParts2 = intl2.formatToParts;
     const t2 = util.t;
     if (hasItem) {
-      let formatToParts2Result = formatToParts2(t2.KBrM5t, obj1);
+      let formatToParts2Result = formatToParts2(t2.KBrM5t, obj4);
     } else {
-      formatToParts2Result = formatToParts2(t2.QtZ0RD, obj1);
+      formatToParts2Result = formatToParts2(t2.QtZ0RD, obj4);
     }
-    const obj3 = { content: formatToParts2Result };
+    const obj6 = { content: formatToParts2Result };
     const merged2 = Object.assign(createCommonMessageDefault(message));
-    return obj3;
+    return obj6;
   }
 };

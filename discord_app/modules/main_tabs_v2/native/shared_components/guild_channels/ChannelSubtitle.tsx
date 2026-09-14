@@ -9,14 +9,13 @@ require = fn;
 function ChannelSubtitle(arg0) {
   ({ muted, textProps } = arg0);
   ({ connected, channelId, guildId, layout, subtitle } = arg0);
-  let obj = getChannelSubtitleData;
-  const channelSubtitleData = obj.getChannelSubtitleData(subtitle);
+  const channelSubtitleData = getChannelSubtitleData.getChannelSubtitleData(subtitle);
   if (null == channelSubtitleData) {
     return null;
   } else {
-    obj = {};
+    const obj2 = {};
     const merged = Object.assign(textProps);
-    obj = {
+    const obj3 = {
       content: channelSubtitleData.subtitle,
       muted: null,
       channelId: null,
@@ -28,21 +27,13 @@ function ChannelSubtitle(arg0) {
     if (muted == null) {
       muted = false;
     }
-    obj.muted = muted;
-    obj.channelId = channelId;
-    obj.guildId = guildId;
-    obj.layout = layout;
-    obj.disableAnimatedEmoji = !("voice" === channelSubtitleData.type && connected);
-    obj.children = MessagePreviewMarkup.renderMessagePreviewMarkup(obj);
-    return jsx(Text_Text.Text, {
-      content: channelSubtitleData.subtitle,
-      muted: null,
-      channelId: null,
-      guildId: null,
-      layout: null,
-      color: "text-muted",
-      disableAnimatedEmoji: null,
-    });
+    obj3.muted = muted;
+    obj3.channelId = channelId;
+    obj3.guildId = guildId;
+    obj3.layout = layout;
+    obj3.disableAnimatedEmoji = !("voice" === channelSubtitleData.type && connected);
+    obj2.children = MessagePreviewMarkup.renderMessagePreviewMarkup(obj3);
+    return jsx(Text_Text.Text, {});
   }
 }
 const jsx = fn(21).jsx;
@@ -56,20 +47,19 @@ export const renderChannelSubtitle = function renderChannelSubtitle(arg0) {
   if (null == subtitle) {
     return null;
   } else {
-    let obj = {
+    const obj2 = {
       variant: ChannelListLayout.getLayoutStyles(layout).messagePreview.text.variant,
       color: "text-muted",
       lineClamp: 1,
       maxFontSizeMultiplier: 1.75,
     };
     if (typeof subtitle === "string") {
-      obj = {};
-      const merged = Object.assign(obj);
+      const obj = {};
+      const merged = Object.assign(obj2);
       obj.children = subtitle;
       let tmp9 = jsx(Text_Text.Text, {});
     } else {
-      obj = { channelId: tmp2, guildId: tmp3, layout, subtitle, muted: tmp, connected: tmp4, textProps: null };
-      obj.textProps = obj;
+      const obj4 = { channelId: tmp2, guildId: tmp3, layout, subtitle, muted: tmp, connected: tmp4, textProps: obj2 };
       tmp9 = (
         <ChannelSubtitle
           channelId={tmp2}
@@ -78,7 +68,7 @@ export const renderChannelSubtitle = function renderChannelSubtitle(arg0) {
           subtitle={subtitle}
           muted={tmp}
           connected={tmp4}
-          textProps={null}
+          textProps={obj2}
         />
       );
     }

@@ -34,8 +34,7 @@ const AppealIngestionSignal = SafetyHubConstants.AppealIngestionSignal;
 ({ SuspendedAgeCheckStatus, AGE_CHECK_MAX_POLL_ATTEMPTS: hasOwnProperty } = SafetyHubConstants);
 const dependencyMap = {};
 let closure_7 = {};
-let obj = { state: SafetyHubModels.AccountStandingState.ALL_GOOD };
-let accountStanding = obj;
+let accountStanding = { state: SafetyHubModels.AccountStandingState.ALL_GOOD };
 let c9 = false;
 let c10 = false;
 let c12 = null;
@@ -145,7 +144,7 @@ prototype["getAgeCheckAttempts"] = function getAgeCheckAttempts() {
   return c26;
 };
 SafetyHubStore.displayName = "SafetyHubStore";
-obj = {
+const safetyHubStore = new SafetyHubStore(DispatcherDefault, {
   SAFETY_HUB_FETCH_START: function handleFetchStart() {
     c9 = true;
   },
@@ -322,8 +321,7 @@ obj = {
   },
   LOGOUT: reset,
   LOGIN_SUSPENDED_USER: reset,
-};
-const safetyHubStore = new SafetyHubStore(DispatcherDefault, obj);
+});
 const result = size.fileFinishedImporting("modules/safety_hub/SafetyHubStore.tsx");
 
 export default safetyHubStore;

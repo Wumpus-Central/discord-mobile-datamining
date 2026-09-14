@@ -25,8 +25,8 @@ export default noop.forwardRef((keyboardShouldPersistTaps, ref) => {
   ({ contentContainerStyle, onScroll, scrollsToTop, onLayout } = keyboardShouldPersistTaps);
   const tmp = closure_6();
   let redesign = noop.useContext(RedesignCompat.RedesignCompatContext);
-  let obj = { value: { isForm: true }, children: null };
-  obj = {
+  const obj = { value: { isForm: true }, children: null };
+  const obj2 = {
     ref,
     onLayout,
     scrollsToTop,
@@ -44,16 +44,30 @@ export default noop.forwardRef((keyboardShouldPersistTaps, ref) => {
     redesign = tmp.redesign;
   }
   items[2] = redesign;
-  obj.style = items;
-  obj = { paddingBottom: 38 + useSafeAreaInsetsKeyboardAwareDefault().insets.bottom };
-  const items1 = [obj, contentContainerStyle];
-  obj.contentContainerStyle = items1;
-  obj.contentInset = { top: 0 };
-  obj.keyboardShouldPersistTaps = str;
-  obj.alwaysBounceVertical = flag;
-  obj.onScroll = onScroll;
-  obj.children = children;
-  obj.children = <ScrollView paddingBottom={38 + useSafeAreaInsetsKeyboardAwareDefault().insets.bottom} />;
-  return <context.Provider paddingBottom={38 + useSafeAreaInsetsKeyboardAwareDefault().insets.bottom} />;
+  obj2.style = items;
+  const items1 = [{ paddingBottom: 38 + useSafeAreaInsetsKeyboardAwareDefault().insets.bottom }, contentContainerStyle];
+  obj2.contentContainerStyle = items1;
+  obj2.contentInset = { top: 0 };
+  obj2.keyboardShouldPersistTaps = str;
+  obj2.alwaysBounceVertical = flag;
+  obj2.onScroll = onScroll;
+  obj2.children = children;
+  obj.children = (
+    <ScrollView
+      ref={ref}
+      onLayout={onLayout}
+      scrollsToTop={scrollsToTop}
+      style={null}
+      contentContainerStyle={null}
+      contentInset={null}
+      automaticallyAdjustContentInsets={false}
+      keyboardShouldPersistTaps={null}
+      alwaysBounceVertical={null}
+      onScroll={null}
+    >
+      {null}
+    </ScrollView>
+  );
+  return <context.Provider value={{ isForm: true }}>{null}</context.Provider>;
 });
 export const FormContext = context;

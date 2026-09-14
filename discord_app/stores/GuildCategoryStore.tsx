@@ -5,7 +5,7 @@ import getFlattedChannelListDefault from "../modules/channel/getFlattedChannelLi
 import FavoriteStore from "../modules/favorites/FavoriteStore.tsx";
 import AuthenticationStore from "AuthenticationStore.tsx";
 import ChannelStore from "ChannelStore.tsx";
-import GuildChannelStore from "GuildChannelStore.tsx";
+import GuildChannelStore_mod from "GuildChannelStore.tsx";
 import GuildStore from "GuildStore.tsx";
 
 function setIndex(arg0, index) {
@@ -236,6 +236,7 @@ function handleFavoritesUpdate() {
 }
 let GuildChannelStore = fn(2012);
 ({ GUILD_SELECTABLE_CHANNELS_KEY: hasOwnProperty, GUILD_VOCAL_CHANNELS_KEY: metroRequire } = GuildChannelStore);
+let GuildChannelStore = GuildChannelStore_mod;
 const Constants = fn(1074);
 ({ ChannelTypes: closure_9, FAVORITES: c10 } = Constants);
 let c11 = null;

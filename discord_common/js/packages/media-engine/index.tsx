@@ -58,6 +58,5 @@ export const initializeMediaEngine = function initializeMediaEngine(BaseConnecti
     }
     _default = MediaEngineDummy.default;
   }
-  _default = new _default();
-  return _default;
+  return new _default();
 };

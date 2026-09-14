@@ -45,7 +45,7 @@ export default function useStableSafeAreaInsets() {
           const tmp4Result = appEntryKey(1611);
         }
         closure_1_1(stableSafeAreaInsets);
-        obj = appEntryKey(1150);
+        obj = appEntryKey(1363);
       }, appEntryKey),
     items,
   );

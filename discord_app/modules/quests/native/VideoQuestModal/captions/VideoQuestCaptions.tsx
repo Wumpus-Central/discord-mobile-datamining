@@ -7,8 +7,8 @@ import n from "../../../../../../_runtime/metro/00672__.js";
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-fn(4636);
-let createStyles = { container: null, captionBox: null, captionText: null };
+const createStyles = fn(4636);
+let obj2 = { container: null, captionBox: null, captionText: null };
 const rect = {
   position: "absolute",
   bottom: nativeDefault.space.PX_32,
@@ -17,16 +17,16 @@ const rect = {
   alignItems: "center",
   justifyContent: "flex-end",
 };
-createStyles.container = rect;
-createStyles = { backgroundColor: null, padding: null, borderRadius: null, overflow: "hidden" };
+obj2.container = rect;
+let obj3 = { backgroundColor: null, padding: null, borderRadius: null, overflow: "hidden" };
 const importDefaultResultResult = n(nativeDefault.unsafe_rawColors.BLACK);
-createStyles.backgroundColor = n(nativeDefault.unsafe_rawColors.BLACK).alpha(0.35).hex();
-createStyles.padding = nativeDefault.space.PX_8;
-createStyles.borderRadius = nativeDefault.radii.sm;
-createStyles.captionBox = createStyles;
+obj3.backgroundColor = n(nativeDefault.unsafe_rawColors.BLACK).alpha(0.35).hex();
+obj3.padding = nativeDefault.space.PX_8;
+obj3.borderRadius = nativeDefault.radii.sm;
+obj2.captionBox = obj3;
 const alphaResult = n(nativeDefault.unsafe_rawColors.BLACK).alpha(0.35);
-createStyles.captionText = { color: nativeDefault.colors.WHITE, textAlign: "center" };
-let closure_6 = createStyles.createStyles(createStyles);
+obj2.captionText = { color: nativeDefault.colors.WHITE, textAlign: "center" };
+let closure_6 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/quests/native/VideoQuestModal/captions/VideoQuestCaptions.tsx");
 
@@ -39,8 +39,7 @@ export const VideoQuestCaptions = function VideoQuestCaptions(currentTime) {
   }
   let captions;
   const tmp = closure_6();
-  let obj = currentTime(captions[6]);
-  const videoQuestCaptions = obj.useVideoQuestCaptions(quest);
+  const videoQuestCaptions = currentTime(captions[6]).useVideoQuestCaptions(quest);
   captions = videoQuestCaptions.captions;
   const items = [captions, currentTime, flag];
   const memo = noop.useMemo(() => {
@@ -57,7 +56,7 @@ export const VideoQuestCaptions = function VideoQuestCaptions(currentTime) {
   if ("success" === videoQuestCaptions.status) {
     tmp6 = null;
     if (null != memo) {
-      obj = {
+      const obj2 = {
         style: null,
         importantForAccessibility: "no-hide-descendants",
         accessibilityRole: "none",
@@ -65,15 +64,15 @@ export const VideoQuestCaptions = function VideoQuestCaptions(currentTime) {
         children: null,
       };
       const items1 = [tmp.container, style];
-      obj.style = items1;
-      obj = { style: tmp.captionBox, blurTheme: "dark", blurStyle: "default", blurAmount: 0.2, children: null };
-      const obj1 = { variant: "heading-sm/medium", style: tmp.captionText, children: memo.text };
-      obj.children = jsx(currentTime(tmp3[9]).Text, {
+      obj2.style = items1;
+      const obj3 = { style: tmp.captionBox, blurTheme: "dark", blurStyle: "default", blurAmount: 0.2, children: null };
+      const obj4 = { variant: "heading-sm/medium", style: tmp.captionText, children: memo.text };
+      obj3.children = jsx(currentTime(tmp3[9]).Text, {
         variant: "heading-sm/medium",
         style: tmp.captionText,
         children: memo.text,
       });
-      obj.children = jsx(flag(tmp3[8]), {
+      obj2.children = jsx(flag(tmp3[8]), {
         style: tmp.captionBox,
         blurTheme: "dark",
         blurStyle: "default",
@@ -81,7 +80,7 @@ export const VideoQuestCaptions = function VideoQuestCaptions(currentTime) {
         children: null,
       });
       tmp6 = (
-        <View style={tmp.captionBox} blurTheme="dark" blurStyle="default" blurAmount={0.2}>
+        <View style={null} importantForAccessibility="no-hide-descendants" accessibilityRole="none" accessible={false}>
           {null}
         </View>
       );

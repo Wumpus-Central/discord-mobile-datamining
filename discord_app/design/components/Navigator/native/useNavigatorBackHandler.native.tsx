@@ -32,14 +32,14 @@ export default function useNavigatorBackHandler() {
         if (ref.current) {
           let isIOSResult = "POP" === data.data.action.type;
           if (isIOSResult) {
-            let obj = onBeforeGoBack(navigation[2]);
-            isIOSResult = obj.isIOS();
+            isIOSResult = onBeforeGoBack(navigation[2]).isIOS();
+            const obj = onBeforeGoBack(navigation[2]);
           }
           if (data != null) {
             if (isIOSResult) {
-              obj = { preventable: false };
+              let obj2 = { preventable: false };
             } else {
-              obj = {
+              obj2 = {
                 preventable: true,
                 preventDefault() {
                   return data.preventDefault();
@@ -49,7 +49,7 @@ export default function useNavigatorBackHandler() {
                 },
               };
             }
-            tmp4(obj);
+            tmp4(obj2);
           }
         }
       }),

@@ -3,6 +3,8 @@ import UserProfileGradientUtils from "../../UserProfileGradientUtils.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
 
+const require = globalThis.__r;
+
 require = fn;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_profile/hooks/native/useUserProfileGradientColors.tsx");

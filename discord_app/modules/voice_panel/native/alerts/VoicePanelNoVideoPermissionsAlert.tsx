@@ -9,16 +9,16 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_panel/native/alerts/VoicePanelNoVideoPermissionsAlert.tsx");
 
 export default function VoicePanelNoVideoPermissionsAlert() {
-  let obj = { title: null, content: null, actions: null };
+  const obj2 = { title: null, content: null, actions: null };
   const intl = util.intl;
-  obj.title = intl.string(util.t.OYzPcW);
+  obj2.title = intl.string(util.t.OYzPcW);
   const intl2 = util.intl;
-  obj.content = intl2.string(util.t.oBH7Y2);
-  obj = { variant: "secondary", text: null, onPress: null };
+  obj2.content = intl2.string(util.t.oBH7Y2);
+  const obj3 = { variant: "secondary", text: null, onPress: null };
   const intl3 = util.intl;
-  obj.text = intl3.string(util.t["NX+WJN"]);
-  obj.onPress = obj.useDismissModalCallback();
-  obj.actions = jsx(AlertModal.AlertActionButton, { variant: "secondary", text: null, onPress: null });
-  return jsx(AlertModal.AlertModal, { variant: "secondary", text: null, onPress: null });
+  obj3.text = intl3.string(util.t["NX+WJN"]);
+  obj3.onPress = AlertModal.useDismissModalCallback();
+  obj2.actions = jsx(AlertModal.AlertActionButton, { variant: "secondary", text: null, onPress: null });
+  return jsx(AlertModal.AlertModal, { title: null, content: null, actions: null });
 }
 export const VOICE_PANEL_NO_VIDEO_PERMS_KEY = "voice-panel-no-video-perms";

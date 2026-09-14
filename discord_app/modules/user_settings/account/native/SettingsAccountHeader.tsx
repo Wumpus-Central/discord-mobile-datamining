@@ -14,11 +14,10 @@ import UserStore from "../../../../stores/UserStore.tsx";
 
 require = fn;
 function RestrictedAccountRedirect() {
-  let obj = {
+  const obj = {
     label: util.t.zqv4nV,
     labelHook() {
-      const obj = { screen: constants.SETTINGS_CONTENT_AND_SOCIAL };
-      obj.openUserSettings(obj);
+      openUserSettings.openUserSettings({ screen: constants.SETTINGS_CONTENT_AND_SOCIAL });
     },
     noticeType: SafetySettingsNoticeType.RESTRICTED_ACCOUNTS_SETTING_NOTICE,
   };
@@ -30,20 +29,17 @@ const SafetySettingsNoticeType = fn(8517).SafetySettingsNoticeType;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
 const createStyles = fn(4636);
-let obj = { header: null };
-obj = { paddingTop: nativeDefault.space.PX_24, gap: nativeDefault.space.PX_24 };
-obj.header = obj;
+let obj = { header: { paddingTop: nativeDefault.space.PX_24, gap: nativeDefault.space.PX_24 } };
 let closure_11 = createStyles.createStyles(obj);
+const obj3 = { paddingTop: nativeDefault.space.PX_24, gap: nativeDefault.space.PX_24 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/account/native/SettingsAccountHeader.tsx");
 
 export default noop.memo(() => {
-  let obj = initialize;
-  const items = [UserStore];
-  const stateFromStores = obj.useStateFromStores(items, () => currentUser.getCurrentUser());
-  let obj1 = UserSettingsAccountUnverifiedHeader;
-  const bannerText = obj1.getBannerText(stateFromStores);
   const tmp = closure_11();
+  const items = [UserStore];
+  const stateFromStores = initialize.useStateFromStores(items, () => currentUser.getCurrentUser());
+  const bannerText = UserSettingsAccountUnverifiedHeader.getBannerText(stateFromStores);
   const items1 = [RelationshipStore];
   const stateFromStores1 = initialize.useStateFromStores(
     items1,
@@ -53,7 +49,7 @@ export default noop.memo(() => {
     EmailVerificationModalActionCreatorsDefault.open();
   }, []);
   if (null != bannerText) {
-    obj = { style: tmp.header, children: null };
+    const obj4 = { style: tmp.header, children: null };
     let tmp11 = null;
     if (stateFromStores1) {
       tmp11 = React7(RestrictedAccountRedirect, {});
@@ -61,7 +57,7 @@ export default noop.memo(() => {
     const items2 = [tmp11];
     let tmp14 = null;
     if (null != bannerText) {
-      obj = {
+      const obj9 = {
         onPress: callback,
         variant: "danger",
         label: null,
@@ -71,15 +67,15 @@ export default noop.memo(() => {
         end: true,
       };
       ({ title: obj5.label, title: obj5.accessibilityLabel } = bannerText);
-      obj1 = { text: null, accessibilityLabel: null, onPress: null };
+      const obj10 = { text: null, accessibilityLabel: null, onPress: null };
       ({ button: obj6.text, button: obj6.accessibilityLabel } = bannerText);
-      obj1.onPress = callback;
-      obj.trailing = React7(components_Button_Button.Button, obj1);
-      tmp14 = React7(TableRow.TableRow, obj);
+      obj10.onPress = callback;
+      obj9.trailing = React7(components_Button_Button.Button, obj10);
+      tmp14 = React7(TableRow.TableRow, obj9);
     }
     items2[1] = tmp14;
-    obj.children = items2;
-    let tmp9Result = closure_1_10(View, obj);
+    obj4.children = items2;
+    let tmp9Result = closure_1_10(View, obj4);
   } else {
     tmp9Result = null;
   }

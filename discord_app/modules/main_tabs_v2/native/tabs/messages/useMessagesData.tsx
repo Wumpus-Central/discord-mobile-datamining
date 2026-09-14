@@ -13,39 +13,39 @@ const result = size.fileFinishedImporting("modules/main_tabs_v2/native/tabs/mess
 
 export default function useMessagesData() {
   let items = [numFriendSuggestions, friendSuggestions];
-  const stateFromStoresObject = connected(first[6]).useStateFromStoresObject(items, () => ({
+  const stateFromStoresObject = connected(channelFavorites[6]).useStateFromStoresObject(items, () => ({
     connected: null != numFriendSuggestions.getSessionId(),
     connectedToGateway: friendSuggestions.isConnected(),
   }));
   connected = stateFromStoresObject.connected;
   const connectedToGateway = stateFromStoresObject.connectedToGateway;
-  let obj = connected(first[6]);
+  let obj = connected(channelFavorites[6]);
   const items1 = [stateFromStores];
   const tmp4 = _slicedToArray(
-    connected(first[6]).useStateFromStoresArray(items1, () => stateFromStores.getSortedChannels()),
+    connected(channelFavorites[6]).useStateFromStoresArray(items1, () => stateFromStores.getSortedChannels()),
     2,
   );
-  first = tmp4[0];
+  channelFavorites = tmp4[0];
   _slicedToArray = tmp6;
   let tmp8 = connected;
-  const obj2 = connected(first[6]);
+  const obj2 = connected(channelFavorites[6]);
   if (connected) {
     tmp8 = connectedToGateway;
   }
-  const tmp7Result = connectedToGateway(first[7])({ location: "Messages Tab", isConnected: tmp8 });
+  const tmp7Result = connectedToGateway(channelFavorites[7])({ location: "Messages Tab", isConnected: tmp8 });
   const setAdded = tmp7Result.setAdded;
   friendSuggestions = tmp7Result.friendSuggestions;
   numFriendSuggestions = tmp7Result.numFriendSuggestions;
   const HappeningNowCardsDisabled = tmp(tmp2[8]).HappeningNowCardsDisabled;
   const setting = HappeningNowCardsDisabled.useSetting();
-  const tmp7 = connectedToGateway(first[7]);
+  const tmp7 = connectedToGateway(channelFavorites[7]);
   const items2 = [setting];
-  stateFromStores = connected(first[6]).useStateFromStores(items2, () => setting.getFriendCount());
+  stateFromStores = connected(channelFavorites[6]).useStateFromStores(items2, () => setting.getFriendCount());
   setAdded.useRef(-1);
   const items3 = [
     connected,
     connectedToGateway,
-    first,
+    channelFavorites,
     tmp4[1],
     numFriendSuggestions,
     friendSuggestions,
@@ -65,8 +65,6 @@ export default function useMessagesData() {
         ref.current = ref.current + 1;
       }
     }
-    let arr = first;
-    let arr1 = length;
     if (numFriendSuggestions <= 0) {
       if (tmp3) {
         let num3 = 0;
@@ -79,13 +77,13 @@ export default function useMessagesData() {
       bound = Math.min(tmp4, 5);
     }
     const items = [];
-    items.push(arr.length);
-    arr = items.push(arr1.length);
+    items.push(channelFavorites.length);
+    items.push(length.length);
     let num4 = 0;
     if (numFriendSuggestions > 0) {
       num4 = 1;
     }
-    arr1 = items.push(num4);
+    items.push(num4);
     let num5 = 0;
     if (numFriendSuggestions > 0) {
       num5 = 0;
@@ -98,7 +96,7 @@ export default function useMessagesData() {
     }
     items.push(num5);
     items.push(bound);
-    if (first.length + length.length > 0) {
+    if (channelFavorites.length + length.length > 0) {
       let HappeningNow = null;
       if (!setting) {
         HappeningNow = obj.HappeningNow;
@@ -111,8 +109,8 @@ export default function useMessagesData() {
       }
     }
     obj = {
-      channels: arr1,
-      channelFavorites: arr,
+      channels: length,
+      channelFavorites,
       dataKey: null,
       showFullscreenEmptyState: null,
       setAddedFriendSuggestions: null,
@@ -128,7 +126,7 @@ export default function useMessagesData() {
     }
     obj.dataKey = combined;
     let tmp26 = !tmp3;
-    if (first.length + length.length <= 0) {
+    if (channelFavorites.length + length.length <= 0) {
       tmp26 = connected;
     }
     if (tmp26) {

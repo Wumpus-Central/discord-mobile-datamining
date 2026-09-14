@@ -33,10 +33,9 @@ export default {
       await HTTP.get(request);
       if (1 === tmp7) {
         c3 = 0;
-        tmp3(tmp21[3]);
-        const obj3 = { type: "CHANNEL_FOLLOWER_STATS_FETCH_FAILURE", channelId: closure_129_0 };
-        obj3.dispatch(obj3);
+        tmp3(tmp21[3]).dispatch({ type: "CHANNEL_FOLLOWER_STATS_FETCH_FAILURE", channelId: closure_129_0 });
         c5 = 3;
+        tmp3(tmp21[3]);
       } else if (arg0 === 1) {
         c5 = 3;
         throw value;
@@ -54,11 +53,9 @@ export default {
     })();
   },
   dismissPublishBump(messageId) {
-    const obj = { type: "CHANNEL_FOLLOWING_PUBLISH_BUMP_DISMISSED", messageId };
-    obj.dispatch(obj);
+    DispatcherDefault.dispatch({ type: "CHANNEL_FOLLOWING_PUBLISH_BUMP_DISMISSED", messageId });
   },
   permanentlyHidePublishBump(channelId) {
-    const obj = { type: "CHANNEL_FOLLOWING_PUBLISH_BUMP_HIDE_PERMANENTLY", channelId };
-    obj.dispatch(obj);
+    DispatcherDefault.dispatch({ type: "CHANNEL_FOLLOWING_PUBLISH_BUMP_HIDE_PERMANENTLY", channelId });
   },
 };

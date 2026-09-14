@@ -114,7 +114,7 @@ prototype["whenInitialized"] = function whenInitialized(arg0) {
 };
 TestModeStore.displayName = "TestModeStore";
 TestModeStore.persistKey = "TestModeStore";
-obj = {
+const testModeStore = new TestModeStore(DispatcherDefault, {
   DEVELOPER_TEST_MODE_AUTHORIZATION_START: function handleDeveloperTestModeAuthorizationStart(applicationId) {
     set.add(applicationId.applicationId);
     error = null;
@@ -139,8 +139,7 @@ obj = {
   },
   LOGOUT: reset,
   DEVELOPER_TEST_MODE_RESET: reset,
-};
-const testModeStore = new TestModeStore(DispatcherDefault, obj);
+});
 const size = fn(2);
 let result = size.fileFinishedImporting("stores/game_store/TestModeStore.tsx");
 

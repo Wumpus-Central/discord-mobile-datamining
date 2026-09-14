@@ -9,18 +9,16 @@ const result = size.fileFinishedImporting("modules/message_request/hooks/useIsMe
 export const useIsMessageRequestRestrictedViewer = function useIsMessageRequestRestrictedViewer(
   ChatInputGuardMessageRequest,
 ) {
-  let obj = AgeVerificationUtils;
-  const isExplicitlyVerifiedAdult = obj.useIsExplicitlyVerifiedAdult();
+  const isExplicitlyVerifiedAdult = AgeVerificationUtils.useIsExplicitlyVerifiedAdult();
   const isSettingTeenByDefault = RegionalFeatureConfigUtils.useIsSettingTeenByDefault(
     SettingsDefaultFeature.SettingsDefaultFeature.MESSAGE_REQUEST_RESTRICTIONS,
   );
-  obj = { location: ChatInputGuardMessageRequest };
   let enabled = !isExplicitlyVerifiedAdult;
   if (!isExplicitlyVerifiedAdult) {
     enabled = isSettingTeenByDefault;
   }
   if (enabled) {
-    enabled = obj3.useConfig(obj).enabled;
+    enabled = obj3.useConfig(obj4).enabled;
   }
   return enabled;
 };

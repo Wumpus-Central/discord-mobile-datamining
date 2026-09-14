@@ -8,9 +8,11 @@ import components_Button_Button from "../../../../../design/components/Button/na
 import useIsScreenLandscape from "../../../../screen/useIsScreenLandscape.native.tsx";
 import useTrackImpressionDefault from "../../../../app_analytics/useTrackImpression.tsx";
 import useYouBarTotalHeight from "../../you_bar/hooks/useYouBarTotalHeight.tsx";
-import _modDef16149 from "../../../../../../_runtime/metro/16149__.js";
+import _modDef16151 from "../../../../../../_runtime/metro/16151__.js";
 import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
+
+const require = globalThis.__r;
 
 require = fn;
 get_ActivityIndicator = fn(17);
@@ -34,12 +36,12 @@ let result = size.fileFinishedImporting("modules/main_tabs_v2/native/tabs/messag
 export default function MessagesEmptyState() {
   const tmp = closure_10();
   let width = useWindowDimensionsDefault().width;
-  [tmp5, require] = _slicedToArray(noop.useState(0), 2);
+  [tmp5, require] = noop.useState(0);
   const callback = noop.useCallback((nativeEvent) => {
     require(nativeEvent.nativeEvent.layout.width);
   }, []);
-  let obj = useNavigation;
-  const navigation = obj.useNavigation();
+  const tmp4 = _slicedToArray(noop.useState(0), 2);
+  const navigation = useNavigation.useNavigation();
   const items = [navigation];
   const callback1 = noop.useCallback(() => {
     navigation.navigate("friends", {
@@ -47,59 +49,57 @@ export default function MessagesEmptyState() {
       params: { sourcePage: "Messages Empty State", presentation: "card" },
     });
   }, items);
-  obj = { type: null, name: null };
-  const tmp4 = _slicedToArray(noop.useState(0), 2);
-  obj.type = discord_common_AnalyticsUtils.ImpressionTypes.VIEW;
-  obj.name = discord_common_AnalyticsUtils.ImpressionNames.MESSAGES_EMPTY_NUX;
-  useTrackImpressionDefault(obj);
+  const obj2 = { type: null, name: null };
+  obj2.type = discord_common_AnalyticsUtils.ImpressionTypes.VIEW;
+  obj2.name = discord_common_AnalyticsUtils.ImpressionNames.MESSAGES_EMPTY_NUX;
+  useTrackImpressionDefault(obj2);
   if (tmp5 > 0) {
     width = tmp5;
   }
   const result = 0.9 * width;
-  let tmp7Result = useIsScreenLandscape;
-  const isScreenLandscape = tmp7Result.useIsScreenLandscape();
-  tmp7Result = useYouBarTotalHeight;
+  const isScreenLandscape = useIsScreenLandscape.useIsScreenLandscape();
+  useYouBarTotalHeight;
   const items1 = [tmp.scrollViewContentContainer];
   let tmp18;
   if (isScreenLandscape) {
-    obj = { paddingBottom: tmp15 };
-    tmp18 = obj;
+    const obj3 = { paddingBottom: tmp15 };
+    tmp18 = obj3;
   }
-  const obj1 = { alwaysBounceVertical: false, bounces: false, contentContainerStyle: items1, children: null };
+  const obj4 = { alwaysBounceVertical: false, bounces: false, contentContainerStyle: items1, children: null };
   items1[1] = tmp18;
-  const obj2 = { style: tmp.container, onLayout: callback, children: null };
-  const obj3 = { style: tmp.innerContainer, children: null };
-  const obj4 = { style: tmp.imageContainer, children: null };
-  const obj5 = { resizeMode: "contain", source: _modDef16149, style: null };
+  const obj5 = { style: tmp.container, onLayout: callback, children: null };
+  const obj6 = { style: tmp.innerContainer, children: null };
+  const obj7 = { style: tmp.imageContainer, children: null };
+  const obj8 = { resizeMode: "contain", source: _modDef16151, style: null };
   let num = 350;
   if (result < 622) {
     num = (result / 622) * 350;
   }
   const size = { height: num, width: Math.min(result, 622) };
-  obj5.style = size;
-  obj4.children = React6(timestampProducer, obj5);
-  const items2 = [React6(hasOwnProperty, obj4)];
-  const obj6 = { style: tmp.textWrapper, children: null };
-  const obj7 = { color: "mobile-text-heading-primary", variant: "heading-md/bold", style: tmp.title, children: null };
+  obj8.style = size;
+  obj7.children = React6(timestampProducer, obj8);
+  const items2 = [React6(hasOwnProperty, obj7)];
+  const obj9 = { style: tmp.textWrapper, children: null };
+  const obj10 = { color: "mobile-text-heading-primary", variant: "heading-md/bold", style: tmp.title, children: null };
   const intl = util.intl;
-  obj7.children = intl.string(util.t["8JZof8"]);
-  const items3 = [React6(Text_Text.Heading, obj7)];
-  const obj8 = { color: "text-default", variant: "text-md/medium", style: tmp.body, children: null };
+  obj10.children = intl.string(util.t["8JZof8"]);
+  const items3 = [React6(Text_Text.Heading, obj10)];
+  const obj11 = { color: "text-default", variant: "text-md/medium", style: tmp.body, children: null };
   const intl2 = util.intl;
-  obj8.children = intl2.string(util.t["qm+H7x"]);
-  items3[1] = React6(Text_Text.Text, obj8);
-  obj6.children = items3;
-  items2[1] = React7(hasOwnProperty, obj6);
-  obj3.children = items2;
-  const items4 = [React7(hasOwnProperty, obj3)];
-  const obj9 = { style: tmp.buttonWrapper, children: null };
-  const obj10 = { text: null, onPress: null, size: "lg" };
+  obj11.children = intl2.string(util.t["qm+H7x"]);
+  items3[1] = React6(Text_Text.Text, obj11);
+  obj9.children = items3;
+  items2[1] = React7(hasOwnProperty, obj9);
+  obj6.children = items2;
+  const items4 = [React7(hasOwnProperty, obj6)];
+  const obj12 = { style: tmp.buttonWrapper, children: null };
+  const obj13 = { text: null, onPress: null, size: "lg" };
   const intl3 = util.intl;
-  obj10.text = intl3.string(util.t.zIJnA6);
-  obj10.onPress = callback1;
-  obj9.children = React6(components_Button_Button.Button, obj10);
-  items4[1] = React6(hasOwnProperty, obj9);
-  obj2.children = items4;
-  obj1.children = React7(hasOwnProperty, obj2);
-  return React6(React5, obj1);
+  obj13.text = intl3.string(util.t.zIJnA6);
+  obj13.onPress = callback1;
+  obj12.children = React6(components_Button_Button.Button, obj13);
+  items4[1] = React6(hasOwnProperty, obj12);
+  obj5.children = items4;
+  obj4.children = React7(hasOwnProperty, obj5);
+  return React6(React5, obj4);
 }

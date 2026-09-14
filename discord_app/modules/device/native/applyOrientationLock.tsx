@@ -15,10 +15,10 @@ export const applyOrientationLock = function applyOrientationLock(PORTRAIT) {
 };
 export const releaseOrientationLock = function releaseOrientationLock(unlockAfterRotatingToPreviousLock) {
   if (isOrientationLockSupportedDefault()) {
-    const obj = {
+    const obj2 = {
       unlockAfterRotatingToPreviousLock: unlockAfterRotatingToPreviousLock.unlockAfterRotatingToPreviousLock,
     };
-    obj.unlockOrientation(obj);
+    DeviceOrientation.unlockOrientation(obj2);
   }
 };
 export const restoreDefaultOrientationLock = function restoreDefaultOrientationLock() {

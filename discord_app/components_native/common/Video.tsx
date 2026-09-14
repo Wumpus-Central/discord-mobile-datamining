@@ -113,9 +113,19 @@ get_ActivityIndicator = fn(17);
   AppState: closure_7,
 } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-fn(4636);
-let createStyles = { container: null, video: null };
-createStyles = {
+const createStyles = fn(4636);
+let obj2 = {
+  container: {
+    flex: 1,
+    shadowColor: nativeDefault.unsafe_rawColors.BLACK,
+    shadowOpacity: 0.5,
+    shadowOffset: { height: 1, width: 0 },
+    shadowRadius: 16,
+    backgroundColor: nativeDefault.colors.BACKGROUND_BRAND,
+  },
+  video: null,
+};
+let obj3 = {
   flex: 1,
   shadowColor: nativeDefault.unsafe_rawColors.BLACK,
   shadowOpacity: 0.5,
@@ -123,9 +133,8 @@ createStyles = {
   shadowRadius: 16,
   backgroundColor: nativeDefault.colors.BACKGROUND_BRAND,
 };
-createStyles.container = createStyles;
-createStyles.video = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BRAND };
-let closure_9 = createStyles.createLegacyClassComponentStyles(createStyles);
+obj2.video = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BRAND };
+let closure_9 = createStyles.createLegacyClassComponentStyles(obj2);
 const PureComponent = noop.PureComponent;
 class Video extends PureComponent {
   constructor() {
@@ -153,15 +162,15 @@ class Video extends PureComponent {
       }
       const current = applyArgumentsResult.ref.current;
       if (null != current) {
-        let obj = { initialSources: null, originViewOrOriginLayout: null };
-        obj = {};
+        const obj2 = { initialSources: null, originViewOrOriginLayout: null };
+        const obj3 = {};
         const merged = Object.assign(src);
-        obj.width = width;
-        obj.height = height;
-        const items = [obj];
-        obj.initialSources = items;
-        obj.originViewOrOriginLayout = current;
-        obj.openMediaModal(obj);
+        obj3.width = width;
+        obj3.height = height;
+        const items = [obj3];
+        obj2.initialSources = items;
+        obj2.originViewOrOriginLayout = current;
+        openMediaModal.openMediaModal(obj2);
       }
     };
     return applyArgumentsResult;
@@ -187,7 +196,7 @@ prototype["renderVideo"] = function renderVideo() {
       const videoURI = src.videoURI;
       let tmp13;
       if (null != videoURI) {
-        let obj = {
+        const obj = {
           style: null,
           source: null,
           poster: null,
@@ -204,8 +213,8 @@ prototype["renderVideo"] = function renderVideo() {
         items[1] = size;
         items[2] = tmp7;
         obj.style = items;
-        obj = { uri: videoURI };
-        obj.source = obj;
+        const obj2 = { uri: videoURI };
+        obj.source = obj2;
         obj.poster = tmp2;
         obj.muted = tmp5;
         obj.paused = tmp6;
@@ -214,7 +223,20 @@ prototype["renderVideo"] = function renderVideo() {
         obj.ariaHidden = tmp8;
         obj.disableFocus = tmp9;
         obj.httpEngine = tmp10;
-        tmp13 = <VideoComponent uri={videoURI} />;
+        tmp13 = (
+          <VideoComponent
+            style={null}
+            source={null}
+            poster={null}
+            muted={null}
+            paused={null}
+            resizeMode={null}
+            posterResizeMode={null}
+            ariaHidden={null}
+            disableFocus={null}
+            httpEngine={null}
+          />
+        );
       }
       return tmp13;
     }
@@ -225,13 +247,13 @@ prototype["renderImage"] = function renderImage() {
   const src = this.props.src;
   if ("uri" in src) {
     if ("" !== src.uri) {
-      let obj = { source: null, style: null, "aria-hidden": null };
-      obj = { uri: src.uri };
-      obj.source = obj;
+      const obj = { source: null, style: null, "aria-hidden": null };
+      const obj2 = { uri: src.uri };
+      obj.source = obj2;
       const size = { width: tmp, height: tmp2 };
       obj.style = size;
       obj["aria-hidden"] = tmp3;
-      return <timestampProducer uri={src.uri} />;
+      return <timestampProducer source={null} style={null} aria-hidden={null} />;
     }
   }
 };
@@ -239,7 +261,7 @@ prototype["render"] = function render() {
   const self = this;
   const props = this.props;
   let accessibilityLabel = props.accessibilityLabel;
-  let obj = { ref: this.ref, style: null, accessible: null, accessibilityLabel: null, children: null };
+  const obj = { ref: this.ref, style: null, accessible: null, accessibilityLabel: null, children: null };
   const items = [closure_9(this.context).container, { width: props.width, height: props.height }, props.style];
   obj.style = items;
   obj.accessible = null != accessibilityLabel;
@@ -247,19 +269,20 @@ prototype["render"] = function render() {
   if (this.state.postponeRender) {
     if (false !== tmp2) {
       obj.children = null;
-      let tmp3Result = <tmp4 {...obj} />;
+      const tmp3Result = <tmp4 {...obj} />;
+      let tmp3Result2 = tmp3Result;
       if (tmp) {
         if (accessibilityLabel == null) {
           const intl = util.intl;
           accessibilityLabel = intl.string(util.t.OIDkcp);
         }
-        obj = {
+        const obj2 = {
           accessibilityRole: "button",
           accessibilityLabel,
           onPress: self.handleOpenFullScreen,
           children: tmp3Result,
         };
-        tmp3Result = (
+        tmp3Result2 = (
           <React4
             accessibilityRole="button"
             accessibilityLabel={accessibilityLabel}
@@ -269,7 +292,7 @@ prototype["render"] = function render() {
           </React4>
         );
       }
-      return tmp3Result;
+      return tmp3Result2;
     }
   }
   if (self.isVideo()) {

@@ -4,6 +4,8 @@ import FlagUtils from "../../../discord_common/js/shared/utils/FlagUtils.tsx";
 import ImpersonateStore from "../impersonate/ImpersonateStore.tsx";
 import GuildMemberStore from "../../stores/GuildMemberStore.tsx";
 
+const require = globalThis.__r;
+
 require = fn;
 const GuildMemberFlags = fn(4262).GuildMemberFlags;
 const size = fn(2);

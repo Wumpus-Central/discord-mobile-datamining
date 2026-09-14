@@ -301,20 +301,21 @@ const channelListStore = new ChannelListStore(DispatcherDefault, {
   USER_GUILD_SETTINGS_GUILD_UPDATE: handleRebuildGuildId,
   USER_SETTINGS_PROTO_UPDATE: function handleSettingsProtoUpdate(settings) {
     settings = settings.settings;
-    let guilds;
+    let guilds1;
     importDefault = undefined;
     if (settings.type !== UserSettingsTypes.PRELOADED_USER_SETTINGS) {
       return false;
     } else {
-      guilds = undefined;
+      const guilds = settings.proto.guilds;
+      guilds1 = undefined;
       if (guilds != null) {
-        guilds = guilds.guilds;
+        guilds1 = guilds.guilds;
       }
       importDefault = false;
-      if (null != guilds) {
-        const keys = SnowflakeUtilsDefault.keys(guilds);
+      if (null != guilds1) {
+        const keys = SnowflakeUtilsDefault.keys(guilds1);
         const item = keys.forEach((item) => {
-          if (null != guilds[item].guildRecentsDismissedAt) {
+          if (null != guilds1[item].guildRecentsDismissedAt) {
             closure_1 = closure_20.updateRecentsCategory(item) || closure_1;
             const tmp2 = closure_20.updateRecentsCategory(item) || closure_1;
           }

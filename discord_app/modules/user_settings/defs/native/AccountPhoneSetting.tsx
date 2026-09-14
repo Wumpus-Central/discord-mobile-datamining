@@ -8,8 +8,8 @@ import UserStore from "../../../../stores/UserStore.tsx";
 
 require = fn;
 let closure_4 = fn(7146).PHONE_VERIFICATION_MODAL_KEY;
-fn(11601);
-let SettingBuilders = {
+const SettingBuilders = fn(11602);
+const pressable = SettingBuilders.createPressable({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.dEYpSt);
@@ -27,13 +27,14 @@ let SettingBuilders = {
     });
   },
   onPress: function onAccountPhoneSettingPress() {
-    const obj = { allowDeletePhone: true, reason: PhoneActionCreators.ChangePhoneReason.USER_SETTINGS_UPDATE };
-    obj.pushLazy(asyncRequireImpl(7145, dependencyMap.paths), obj, closure_4);
+    const obj2 = { allowDeletePhone: true, reason: null };
+    const obj = ModalActionCreatorsDefault;
+    obj2.reason = PhoneActionCreators.ChangePhoneReason.USER_SETTINGS_UPDATE;
+    obj.pushLazy(asyncRequireImpl(7145, dependencyMap.paths), obj2, closure_4);
   },
   withArrow: true,
-};
-SettingBuilders = SettingBuilders.createPressable(SettingBuilders);
+});
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/AccountPhoneSetting.tsx");
 
-export default SettingBuilders;
+export default pressable;

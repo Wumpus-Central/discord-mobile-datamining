@@ -17,7 +17,7 @@ export default function newIntlMessagesProvider() {
     closure_2.keysRequest((arr) => {
       i18nManager.valuesResult(
         arr.map((item) => {
-          const result = closure_1_0(1155).runtimeHashMessageKey(item);
+          const result = closure_1_0(1153).runtimeHashMessageKey(item);
           const tmp4 = closure_1_0(1114).t[result];
           let str = "";
           if (null != tmp4) {

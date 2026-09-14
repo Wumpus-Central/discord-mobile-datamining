@@ -1,6 +1,6 @@
 // discord_app/modules/keyboard/native/KeyCommands.tsx
 import noop from "../../../../_runtime/metro/00019__.js";
-import NativeKeyCommandsModule from "../../../../discord_common/js/packages/rtn-codegen/js/NativeKeyCommandsModule.tsx";
+import NativeKeyCommandsModule_mod from "../../../../discord_common/js/packages/rtn-codegen/js/NativeKeyCommandsModule.tsx";
 
 function toNativeKeyCommand(eventName) {
   return {
@@ -43,6 +43,7 @@ function unregisterKeyCommand(eventName) {
     });
   }
 }
+let NativeKeyCommandsModule = NativeKeyCommandsModule_mod;
 let closure_3 = [];
 let c4 = false;
 let closure_5 = null;

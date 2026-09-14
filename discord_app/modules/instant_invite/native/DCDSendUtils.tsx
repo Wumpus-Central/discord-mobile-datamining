@@ -4,6 +4,8 @@ import NativeIntentsModuleDefault from "../../../../discord_common/js/packages/r
 import get_ActivityIndicator from "../../../../_runtime/metro/00017__.js";
 import size from "../../../../_runtime/metro/00002__.js";
 
+const require = globalThis.__r;
+
 ({ Linking: c3, NativeModules: closure_4 } = get_ActivityIndicator);
 const result = size.fileFinishedImporting("modules/instant_invite/native/DCDSendUtils.tsx");
 

@@ -278,19 +278,19 @@ const collectiblesCategoryStore = new CollectiblesCategoryStore(DispatcherDefaul
         if (null != value.bundledProducts) {
           if (null != product.bundledProducts) {
             const _Map = Map;
-            let bundledProducts = value.bundledProducts;
+            const bundledProducts1 = value.bundledProducts;
             map = new Map(
-              bundledProducts.map((item) => {
+              bundledProducts1.map((item) => {
                 const items = [,];
                 ({ skuId: arr[0], prices: arr[1] } = item);
                 return items;
               }),
             );
-            bundledProducts = product.bundledProducts;
+            const bundledProducts = product.bundledProducts;
             for (const item10012 of bundledProducts) {
-              value = map.get(item10012.skuId);
-              let tmp6 = null != value;
-              let tmp5 = value;
+              value2 = map.get(item10012.skuId);
+              let tmp6 = null != value2;
+              let tmp5 = value2;
               if (tmp6) {
                 let _Object = Object;
                 tmp6 = 0 === Object.keys(item10012.prices).length;
@@ -329,10 +329,7 @@ const collectiblesCategoryStore = new CollectiblesCategoryStore(DispatcherDefaul
       obj = tmp10;
     }
     if (!obj.pending) {
-      obj.fail(() => {
-        const obj = { type: "COLLECTIBLES_PRODUCT_FETCH_BACKOFF_EXPIRED", skuId };
-        return obj.dispatch(obj);
-      });
+      obj.fail(() => DispatcherDefault.dispatch({ type: "COLLECTIBLES_PRODUCT_FETCH_BACKOFF_EXPIRED", skuId }));
     }
   },
   COLLECTIBLES_PRODUCT_FETCH_BACKOFF_EXPIRED: function handleProductFetchBackoffExpired(arg0) {

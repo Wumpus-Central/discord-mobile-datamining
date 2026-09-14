@@ -1,6 +1,8 @@
 // discord_app/lib/ZustandStore.tsx
 import size from "../../_runtime/metro/00002__.js";
 
+const require = globalThis.__r;
+
 function defaultStatesAreEqual(arg0, arg1) {
   return arg0 === arg1;
 }
@@ -8,7 +10,7 @@ const result = size.fileFinishedImporting("lib/ZustandStore.tsx");
 
 export const createZustandStore = function createZustandStore(arg0) {
   _require = arg0;
-  let obj = require("../../_runtime/metro/01244__.js");
+  let obj = require("../../_runtime/metro/01242__.js");
   dependencyMap = obj.createWithEqualityFn(
     require("../../_runtime/metro/04507__.js").subscribeWithSelector((arg0, arg1, arg2) => {
       closure_0 = arg0;

@@ -46,16 +46,16 @@ function parseRegisteredExperiments(stateFromStoresObject) {
   return {};
 }
 function getLegacyOverridesInfo(stateFromStoresObject1) {
-  let obj = {};
+  const obj = {};
   const entries = Object.entries(stateFromStoresObject1);
   while (tmp2 !== undefined) {
     let tmp5 = _slicedToArray(tmp3, 2);
     [tmp6, tmp7] = tmp5;
-    obj = { experimentId: tmp6, variantId: null, originalDescriptor: null };
+    let obj2 = { experimentId: tmp6, variantId: null, originalDescriptor: null };
     let bucket = tmp7.bucket;
-    obj.variantId = bucket.valueOf();
-    obj.originalDescriptor = tmp7;
-    obj[tmp6] = obj;
+    obj2.variantId = bucket.valueOf();
+    obj2.originalDescriptor = tmp7;
+    obj[tmp6] = obj2;
     continue;
   }
   return obj;
@@ -77,17 +77,19 @@ export const getLegacyExperiments = function getLegacyExperiments() {
   return obj;
 };
 export const useLegacyExperiments = function useLegacyExperiments() {
-  let obj = stateFromStoresObject(504);
   const items = [ExperimentStore];
-  stateFromStoresObject = obj.useStateFromStoresObject(items, () => ExperimentStore.getRegisteredExperiments());
+  stateFromStoresObject = stateFromStoresObject(504).useStateFromStoresObject(items, () =>
+    ExperimentStore.getRegisteredExperiments(),
+  );
+  const obj = stateFromStoresObject(504);
   const items1 = [ExperimentStore];
   const stateFromStoresObject1 = stateFromStoresObject(504).useStateFromStoresObject(items1, () =>
     ExperimentStore.getAllExperimentOverrideDescriptors(),
   );
-  obj = { experiments: null, overridesInfo: null };
+  const obj3 = { experiments: null, overridesInfo: null };
   const items2 = [stateFromStoresObject];
-  obj.experiments = useMemo(() => parseRegisteredExperiments(stateFromStoresObject), items2);
+  obj3.experiments = useMemo(() => parseRegisteredExperiments(stateFromStoresObject), items2);
   const items3 = [stateFromStoresObject1];
-  obj.overridesInfo = useMemo(() => getLegacyOverridesInfo(stateFromStoresObject1), items3);
-  return obj;
+  obj3.overridesInfo = useMemo(() => getLegacyOverridesInfo(stateFromStoresObject1), items3);
+  return obj3;
 };

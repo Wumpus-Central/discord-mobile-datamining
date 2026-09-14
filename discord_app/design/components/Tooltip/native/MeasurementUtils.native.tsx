@@ -19,8 +19,8 @@ let closure_4 = async function _retryMeasurements(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -33,8 +33,8 @@ let closure_4 = async function _retryMeasurements(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c10 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           closure_6 = tmp3;
           closure_5 = tmp7;
@@ -59,17 +59,17 @@ let closure_4 = async function _retryMeasurements(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c10 = 3;
-          const obj1 = { value, done: true };
-          return obj1;
+          const obj4 = { value, done: true };
+          return obj4;
         } else if (closure_133_4 > 3) {
           c10 = 3;
-          const obj2 = { value: closure_133_2(), done: true };
-          return obj2;
+          const obj5 = { value: closure_133_2(), done: true };
+          return obj5;
         } else {
           c8 = 1;
           c9 = 3;
           c10 = 1;
-          const obj3 = {
+          const obj6 = {
             value: (function measure(arg0) {
               return new Promise((arg0, fn) => {
                 closure_1 = fn;
@@ -93,7 +93,7 @@ let closure_4 = async function _retryMeasurements(arg0) {
             })(closure_133_0),
             done: false,
           };
-          return obj3;
+          return obj6;
         }
       } else {
         if (2 === tmp7) {
@@ -110,23 +110,23 @@ let closure_4 = async function _retryMeasurements(arg0) {
         } else if (arg0 === 2) {
           c8 = 0;
           c10 = 3;
-          const obj4 = { value, done: true };
-          return obj4;
+          const obj7 = { value, done: true };
+          return obj7;
         } else {
           closure_133_5 = value;
           if (null != closure_133_3) {
-            obj = closure_134_0(closure_134_1[1]);
             if (!obj.isEqual(closure_133_5, closure_133_3)) {
               const _setTimeout = setTimeout;
               const timerId1 = setTimeout(() => closure_3(closure_1_0, closure_1_1, closure_1_2, closure_1_5), 500);
               c8 = 0;
             }
+            obj = closure_134_0(closure_134_1[1]);
           }
         }
         c8 = 0;
         c10 = 3;
-        const obj5 = { value: closure_133_1(closure_133_5), done: true };
-        return obj5;
+        const obj8 = { value: closure_133_1(closure_133_5), done: true };
+        return obj8;
       }
     } catch (tmp32) {
       closure_7 = tmp32;

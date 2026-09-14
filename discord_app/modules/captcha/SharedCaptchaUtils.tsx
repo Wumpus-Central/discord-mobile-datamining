@@ -10,28 +10,27 @@ import size from "../../../_runtime/metro/00002__.js";
 } = CaptchaStore);
 let closure_3 = CaptchaConstants.CAPTCHA_SERVE_VOLUME_DISTRIBUTION_AGGREGATION_WINDOW_MS;
 const prototype = function CaptchaCancelError() {
-  tmp = new tmp("Captcha cancelled", new.target);
-  return tmp;
+  return new tmp("Captcha cancelled", new.target);
 }.prototype;
 class prototype extends Error {}
 const result = size.fileFinishedImporting("modules/captcha/SharedCaptchaUtils.tsx");
 
 export const CaptchaError = { CANCEL: "cancel", ERROR: "error", EXPIRED: "expired" };
 export const extractCaptchaPropsFromResponse = function extractCaptchaPropsFromResponse(body) {
-  let obj = {
+  const obj = {
     captchaService: body.captcha_service,
     sitekey: body.captcha_sitekey,
     captchaSessionId: body.captcha_session_id,
     options: null,
   };
-  obj = { rqdata: body.captcha_rqdata, rqtoken: body.captcha_rqtoken, serveInvisible: null, userflow: null };
+  const obj2 = { rqdata: body.captcha_rqdata, rqtoken: body.captcha_rqtoken, serveInvisible: null, userflow: null };
   let flag = body.should_serve_invisible;
   if (flag == null) {
     flag = false;
   }
-  obj.serveInvisible = flag;
-  obj.userflow = body.user_flow;
-  obj.options = obj;
+  obj2.serveInvisible = flag;
+  obj2.userflow = body.user_flow;
+  obj.options = obj2;
   return obj;
 };
 export const emitCaptchaDistributionMetric = function emitCaptchaDistributionMetric(constants) {

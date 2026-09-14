@@ -4,7 +4,7 @@ import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const ChatInputConstants = fn(12091);
+const ChatInputConstants = fn(12092);
 ({
   CHAT_INPUT_FLOATING_BOUNCE_SPRING_CONFIG: closure_4,
   CHAT_INPUT_FLOATING_COLLAPSED_SCALE: hasOwnProperty,
@@ -42,18 +42,17 @@ export default function useChatInputFloatingBounce(visible) {
   let sharedValue1;
   let setEnterFinished;
   closure_6 = undefined;
-  let obj = visible(num[3]);
   let num2 = 0;
   if (initiallyVisible) {
     num2 = 1;
   }
-  sharedValue = obj.useSharedValue(num2);
-  let tmpResult = tmp(tmp2[3]);
+  sharedValue = visible(num[3]).useSharedValue(num2);
+  let obj = visible(num[3]);
   let num3 = 1;
   if (!initiallyVisible) {
     num3 = setEnterFinished;
   }
-  sharedValue1 = tmpResult.useSharedValue(num3);
+  sharedValue1 = visible(num[3]).useSharedValue(num3);
   const tmp5 = onExitComplete(sharedValue.useState(initiallyVisible), 2);
   setEnterFinished = tmp6;
   const tmp7 = onExitComplete(sharedValue.useState(visible), 2);
@@ -100,8 +99,8 @@ export default function useChatInputFloatingBounce(visible) {
           return;
         }
       }
-      let obj = { runOnJS: visible(num[3]).runOnJS, setEnterFinished };
-      I.__closure = obj;
+      const obj2 = { runOnJS: visible(num[3]).runOnJS, setEnterFinished };
+      I.__closure = obj2;
       I.__workletHash = 9490441890617;
       I.__initData = __initData;
       const withTimingResult = obj4.withTiming(1, ref, "respect-motion-settings", I);
@@ -137,8 +136,8 @@ export default function useChatInputFloatingBounce(visible) {
           ReanimatedRexport.runOnJS(handleExitFinished)();
         }
       };
-      obj = { runOnJS: visible(num[3]).runOnJS, handleExitFinished };
-      fn.__closure = obj;
+      const obj5 = { runOnJS: visible(num[3]).runOnJS, handleExitFinished };
+      fn.__closure = obj5;
       fn.__workletHash = 6186469155404;
       fn.__initData = __initData2;
       const result2 = sharedValue.set(obj.withTiming(0, closure_1_7, "respect-motion-settings", fn));
@@ -148,14 +147,14 @@ export default function useChatInputFloatingBounce(visible) {
       const obj3 = visible((6186469155404)[4]);
     }
   }, items1);
-  obj = { animatedStyle: null, isInteractive: null };
-  tmpResult = tmp(tmp2[3]);
+  let obj2 = { animatedStyle: null, isInteractive: null };
+  const tmpResult = visible(num[3]);
   class J {
     constructor() {
       obj = { opacity: closure_3.get(), transform: null };
-      obj = { scale: closure_4.get() };
+      obj1 = { scale: closure_4.get() };
       items = [];
-      items[0] = obj;
+      items[0] = obj1;
       obj.transform = items;
       return obj;
     }
@@ -163,7 +162,7 @@ export default function useChatInputFloatingBounce(visible) {
   J.__closure = { opacity: sharedValue, scale: sharedValue1 };
   J.__workletHash = 8631256891065;
   J.__initData = __initData;
-  obj.animatedStyle = tmpResult.useAnimatedStyle(J);
-  obj.isInteractive = tmp10;
-  return obj;
+  obj2.animatedStyle = visible(num[3]).useAnimatedStyle(J);
+  obj2.isInteractive = tmp10;
+  return obj2;
 }

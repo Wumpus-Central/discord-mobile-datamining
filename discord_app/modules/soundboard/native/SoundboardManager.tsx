@@ -13,7 +13,7 @@ import BaseSoundboardManager from "../BaseSoundboardManager.tsx";
 require = fn;
 let map = new Map();
 let closure_8 = new LoggerDefault("SoundboardManagerNative");
-let prototype = function SoundboardManager() {
+const prototype = function SoundboardManager() {
   let applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
   require = applyArgumentsResult;
   applyArgumentsResult._stopAndClearSounds = function _stopAndClearSounds() {
@@ -94,8 +94,8 @@ let prototype = function SoundboardManager() {
   return applyArgumentsResult;
 }.prototype;
 class prototype extends tmp4 {}
-prototype = new prototype();
+const prototype1 = new prototype();
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/soundboard/native/SoundboardManager.tsx");
 
-export default prototype;
+export default prototype1;

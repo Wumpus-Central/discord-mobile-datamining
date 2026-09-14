@@ -243,7 +243,6 @@ prototype["addReaction"] = function addReaction(emoji) {
   closure_5 = -1;
   const reactions = this.reactions;
   const mapped = reactions.map((emoji, index) => {
-    let obj = ReactionUtils;
     let tmp3 = emoji;
     if (obj.emojiEquals(emoji.emoji, closure_0)) {
       closure_5 = index;
@@ -286,16 +285,16 @@ prototype["addReaction"] = function addReaction(emoji) {
           if (emoji.burst_colors.length > 0) {
             let burst_colors = emoji.burst_colors;
           }
-          obj = {};
+          const obj2 = {};
           const merged = Object.assign(emoji);
-          obj.me_burst = flag || emoji.me_burst;
-          obj.burst_count = sum;
-          obj = {};
+          obj2.me_burst = flag || emoji.me_burst;
+          obj2.burst_count = sum;
+          const obj3 = {};
           const merged1 = Object.assign(emoji.count_details);
-          obj.burst = sum;
-          obj.count_details = obj;
-          obj.burst_colors = burst_colors;
-          tmp3 = obj;
+          obj3.burst = sum;
+          obj2.count_details = obj3;
+          obj2.burst_colors = burst_colors;
+          tmp3 = obj2;
         }
         burst_colors = colors;
       } else if (NORMAL === MessageReactionsTypes.ReactionTypes.VOTE) {
@@ -312,14 +311,14 @@ prototype["addReaction"] = function addReaction(emoji) {
         } else {
           sum1 = num7;
         }
-        const obj1 = {};
+        const obj4 = {};
         const merged2 = Object.assign(emoji);
-        const obj2 = {};
+        const obj5 = {};
         const merged3 = Object.assign(emoji.count_details);
-        obj2.vote = sum1;
-        obj1.count_details = obj2;
-        obj1.me_vote = flag || emoji.me_vote;
-        tmp3 = obj1;
+        obj5.vote = sum1;
+        obj4.count_details = obj5;
+        obj4.me_vote = flag || emoji.me_vote;
+        tmp3 = obj4;
       } else {
         if (flag) {
           if (emoji.me) {
@@ -327,22 +326,22 @@ prototype["addReaction"] = function addReaction(emoji) {
           }
         }
         const sum2 = emoji.count + 1;
-        const obj3 = {};
+        const obj6 = {};
         const merged4 = Object.assign(emoji);
-        obj3.count = sum2;
-        const obj4 = {};
+        obj6.count = sum2;
+        const obj7 = {};
         const merged5 = Object.assign(emoji.count_details);
-        obj4.normal = sum2;
-        obj3.count_details = obj4;
-        obj3.me = flag || emoji.me;
-        tmp3 = obj3;
+        obj7.normal = sum2;
+        obj6.count_details = obj7;
+        obj6.me = flag || emoji.me;
+        tmp3 = obj6;
       }
     }
     return tmp3;
   });
   if (-1 === closure_5) {
     if (NORMAL === require("MessageReactionsTypes").ReactionTypes.BURST) {
-      obj = {
+      let obj2 = {
         emoji,
         me: false,
         me_burst: flag,
@@ -351,9 +350,9 @@ prototype["addReaction"] = function addReaction(emoji) {
         burst_count: 1,
         burst_colors: colors,
       };
-      mapped.push(obj);
+      mapped.push(obj2);
     } else if (NORMAL === tmp7(tmp8[5]).ReactionTypes.VOTE) {
-      obj = {
+      let obj3 = {
         emoji,
         me: false,
         me_burst: false,
@@ -363,9 +362,9 @@ prototype["addReaction"] = function addReaction(emoji) {
         burst_count: 0,
         burst_colors: [],
       };
-      mapped.push(obj);
+      mapped.push(obj3);
     } else {
-      let obj1 = {
+      let obj4 = {
         emoji,
         me: flag,
         me_burst: false,
@@ -374,7 +373,7 @@ prototype["addReaction"] = function addReaction(emoji) {
         burst_count: 0,
         burst_colors: [],
       };
-      mapped.push(obj1);
+      mapped.push(obj4);
     }
     tmp7 = _require;
     tmp8 = colors;
@@ -403,7 +402,6 @@ prototype["removeReaction"] = function removeReaction(arg0) {
   const reactions = this.reactions;
   const mapped = reactions.map((emoji, index) => {
     let merged1 = emoji;
-    let obj = ReactionUtils;
     if (!obj.emojiEquals(emoji.emoji, closure_0)) {
       return merged1;
     } else {
@@ -412,19 +410,19 @@ prototype["removeReaction"] = function removeReaction(arg0) {
           if (!merged1.me_burst) {
             let burst_count = merged1.burst_count;
           }
-          obj = {};
+          const obj2 = {};
           const merged = Object.assign(merged1);
-          obj.burst_count = burst_count;
+          obj2.burst_count = burst_count;
           let me_burst = !flag;
           if (!flag) {
             me_burst = merged1.me_burst;
           }
-          obj.me_burst = me_burst;
-          obj = {};
+          obj2.me_burst = me_burst;
+          const obj3 = {};
           merged1 = Object.assign(merged1.count_details);
-          obj.burst = burst_count;
-          obj.count_details = obj;
-          let obj1 = obj;
+          obj3.burst = burst_count;
+          obj2.count_details = obj3;
+          let obj4 = obj2;
           closure_3 = index;
         }
         burst_count = merged1.burst_count - 1;
@@ -433,18 +431,18 @@ prototype["removeReaction"] = function removeReaction(arg0) {
           if (!merged1.me) {
             let count = merged1.count;
           }
-          obj1 = {};
+          obj4 = {};
           const merged2 = Object.assign(merged1);
-          obj1.count = count;
+          obj4.count = count;
           let me = !flag;
           if (!flag) {
             me = merged1.me;
           }
-          obj1.me = me;
-          const obj2 = {};
+          obj4.me = me;
+          const obj5 = {};
           const merged3 = Object.assign(merged1.count_details);
-          obj2.normal = count;
-          obj1.count_details = obj2;
+          obj5.normal = count;
+          obj4.count_details = obj5;
         }
         count = merged1.count - 1;
       }
@@ -461,19 +459,20 @@ prototype["removeReaction"] = function removeReaction(arg0) {
       } else {
         diff = num2;
       }
-      const obj3 = {};
+      const obj6 = {};
       const merged4 = Object.assign(merged1);
-      const obj4 = {};
+      const obj7 = {};
       const merged5 = Object.assign(merged1.count_details);
-      obj4.vote = diff;
-      obj3.count_details = obj4;
+      obj7.vote = diff;
+      obj6.count_details = obj7;
       let me_vote = !flag;
       if (!flag) {
         me_vote = merged1.me_vote;
       }
-      obj3.me_vote = me_vote;
-      obj1 = obj3;
+      obj6.me_vote = me_vote;
+      obj4 = obj6;
     }
+    obj = ReactionUtils;
   });
   let obj = mapped[closure_3];
   if (obj == null) {
@@ -548,9 +547,9 @@ prototype["isInteractionPlaceholder"] = function isInteractionPlaceholder() {
   }
   return isNonUserBotResult;
 };
-prototype["canDeleteOwnMessage"] = function canDeleteOwnMessage(id1) {
+prototype["canDeleteOwnMessage"] = function canDeleteOwnMessage(id2) {
   const self = this;
-  if (this.author.id === id1) {
+  if (this.author.id === id2) {
     return true;
   } else {
     const interactionMetadata2 = self.interactionMetadata;
@@ -566,7 +565,7 @@ prototype["canDeleteOwnMessage"] = function canDeleteOwnMessage(id1) {
     if (interactionMetadata != null) {
       id = interactionMetadata.user.id;
     }
-    let tmp2 = id === id1;
+    let tmp2 = id === id2;
     if (tmp2) {
       const _Object = Object;
       tmp2 = 1 === Object.keys(prop).length;

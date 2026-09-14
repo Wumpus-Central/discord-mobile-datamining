@@ -9,7 +9,20 @@ const BoostedGuildTiers = Constants.BoostedGuildTiers;
 const numStageSeats = Constants.MAX_STAGE_VIDEO_USER_LIMIT_TIER3;
 const BoostedGuildFeatures = PremiumConstants.BoostedGuildFeatures;
 let obj = { tier: BoostedGuildTiers.TIER_1, perks: null };
-obj = {
+const items = [
+  {
+    perkIcon: GuildBoostingUtils.PerkIcons.EMOJI,
+    getCopy() {
+      const intl = util.intl;
+      return intl.formatToPlainString(util.t.Tlz0x1, {
+        numEmojiSlots: BoostedGuildFeatures[BoostedGuildTiers.TIER_1].limits.emoji,
+      });
+    },
+  },
+  ,
+  ,
+];
+const obj2 = {
   perkIcon: GuildBoostingUtils.PerkIcons.EMOJI,
   getCopy() {
     const intl = util.intl;
@@ -18,8 +31,7 @@ obj = {
     });
   },
 };
-const items = [obj, , ,];
-obj = {
+items[1] = {
   perkIcon: GuildBoostingUtils.PerkIcons.SOUNDBOARD,
   getCopy() {
     const intl = util.intl;
@@ -29,7 +41,16 @@ obj = {
   },
   isNew: true,
 };
-items[1] = obj;
+const obj3 = {
+  perkIcon: GuildBoostingUtils.PerkIcons.SOUNDBOARD,
+  getCopy() {
+    const intl = util.intl;
+    return intl.formatToPlainString(util.t["v+MIfo"], {
+      numSoundboardSlots: BoostedGuildFeatures[BoostedGuildTiers.TIER_1].limits.soundboardSounds,
+    });
+  },
+  isNew: true,
+};
 items[2] = {
   perkIcon: GuildBoostingUtils.PerkIcons.ANIMATED,
   getCopy() {
@@ -37,7 +58,7 @@ items[2] = {
     return intl.string(util.t.PbAyub);
   },
 };
-const obj1 = {
+const obj4 = {
   perkIcon: GuildBoostingUtils.PerkIcons.ANIMATED,
   getCopy() {
     const intl = util.intl;
@@ -53,8 +74,8 @@ items[3] = {
 };
 obj.perks = items;
 const items1 = [obj, ,];
-const obj3 = { tier: BoostedGuildTiers.TIER_2, perks: null };
-const obj2 = {
+const obj6 = { tier: BoostedGuildTiers.TIER_2, perks: null };
+const obj5 = {
   perkIcon: GuildBoostingUtils.PerkIcons.AUDIO,
   getCopy() {
     const intl = util.intl;
@@ -72,7 +93,7 @@ const items2 = [
   ,
   ,
 ];
-const obj4 = {
+const obj7 = {
   perkIcon: GuildBoostingUtils.PerkIcons.STREAM,
   getCopy() {
     const intl = util.intl;
@@ -89,7 +110,7 @@ items2[1] = {
     return intl.formatToPlainString(util.t.aFRl53, obj);
   },
 };
-const obj5 = {
+const obj8 = {
   perkIcon: GuildBoostingUtils.PerkIcons.UPLOAD,
   getCopy() {
     const intl = util.intl;
@@ -106,7 +127,7 @@ items2[2] = {
     return intl.string(util.t["6PV6Qc"]);
   },
 };
-const obj6 = {
+const obj9 = {
   perkIcon: GuildBoostingUtils.PerkIcons.CUSTOM_ROLE_ICON,
   getCopy() {
     const intl = util.intl;
@@ -120,10 +141,10 @@ items2[3] = {
     return intl.string(util.t["1a5rjl"]);
   },
 };
-obj3.perks = items2;
-items1[1] = obj3;
-const obj8 = { tier: BoostedGuildTiers.TIER_3, perks: null };
-const obj7 = {
+obj6.perks = items2;
+items1[1] = obj6;
+const obj11 = { tier: BoostedGuildTiers.TIER_3, perks: null };
+const obj10 = {
   perkIcon: GuildBoostingUtils.PerkIcons.CUSTOMIZATION,
   getCopy() {
     const intl = util.intl;
@@ -142,7 +163,7 @@ const items3 = [
   ,
   ,
 ];
-const obj9 = {
+const obj12 = {
   perkIcon: GuildBoostingUtils.PerkIcons.VANITY,
   getCopy() {
     const intl = util.intl;
@@ -159,7 +180,7 @@ items3[1] = {
     return intl.formatToPlainString(util.t.aFRl53, obj);
   },
 };
-const obj10 = {
+const obj13 = {
   perkIcon: GuildBoostingUtils.PerkIcons.UPLOAD,
   getCopy() {
     const intl = util.intl;
@@ -176,7 +197,7 @@ items3[2] = {
     return intl.string(util.t.Tsljqo);
   },
 };
-const obj11 = {
+const obj14 = {
   perkIcon: GuildBoostingUtils.PerkIcons.AUDIO,
   getCopy() {
     const intl = util.intl;
@@ -190,7 +211,7 @@ items3[3] = {
     return intl.string(util.t.nRKlmC);
   },
 };
-const obj12 = {
+const obj15 = {
   perkIcon: GuildBoostingUtils.PerkIcons.ANIMATED,
   getCopy() {
     const intl = util.intl;
@@ -204,8 +225,8 @@ items3[4] = {
     return intl.formatToPlainString(util.t.hsZ88d, { numStageSeats });
   },
 };
-obj8.perks = items3;
-items1[2] = obj8;
+obj11.perks = items3;
+items1[2] = obj11;
 const result = size.fileFinishedImporting("modules/guild_boosting/GuildBoostingMarketingConstants.tsx");
 
 export const TIER_CARDS = items1;

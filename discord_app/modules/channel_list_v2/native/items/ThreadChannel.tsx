@@ -37,11 +37,10 @@ function ThreadChannel(channel) {
     parent_id = channel.parent_id;
   }
   let obj = threadCount;
-  let obj1 = channel(threadCount[18]);
-  fontScale = obj1.useFontScale();
-  let obj2 = channel(threadCount[19]);
+  fontScale = channel(threadCount[18]).useFontScale();
+  const obj2 = channel(threadCount[18]);
   const items = [parent_id, ownerId, UserStore, SortedVoiceStateStore, VoiceStateStore, user, parentChannel, fontScale];
-  const stateFromStoresObject = obj2.useStateFromStoresObject(items, () => {
+  const stateFromStoresObject = channel(threadCount[19]).useStateFromStoresObject(items, () => {
     const isMutedResult = JoinedThreadsStore.isMuted(id);
     const obj = {
       user: UserStore.getUser(ownerId),
@@ -68,7 +67,6 @@ function ThreadChannel(channel) {
   user = stateFromStoresObject.user;
   parentChannel = stateFromStoresObject.parentChannel;
   ({ voiceStates, hasVideo, unread, mentionCount } = stateFromStoresObject);
-  let obj3 = noop;
   const items1 = [threadIndex, threadCount, fontScale, tmp.threadLineSegment];
   ({ isLocked, muted, isMentionLowImportance, selectedVoiceChannelId } = stateFromStoresObject);
   let num = 0;
@@ -122,14 +120,13 @@ function ThreadChannel(channel) {
   }
   let tmp8 = threadIndex;
   const items2 = [channel];
+  const obj3 = channel(threadCount[19]);
   const items3 = [channel, user, parentChannel];
-  const callback = obj3.useCallback(() => {
-    const obj = { source: constants.CHANNEL_LIST };
-    obj.transitionToThread(channel, obj);
+  const callback = obj4.useCallback(() => {
+    transitionToChannel.transitionToThread(channel, { source: constants.CHANNEL_LIST });
   }, items2);
   const items4 = [memo, ,];
-  obj = { color: tmp.threadLineSegment.backgroundColor, fontScale };
-  const callback1 = obj3.useCallback(() => {
+  const callback1 = obj4.useCallback(() => {
     if (channel.isForumPost()) {
       if (null != user) {
         if (null != parentChannel) {
@@ -141,19 +138,17 @@ function ThreadChannel(channel) {
     }
     showThreadLongPressActionSheetDefault(channel.id);
   }, items3);
-  items4[1] = closure_17(closure_21, obj);
-  obj = { style: tmp.threadRow, children: null };
-  obj1 = { style: tmp.unreadContainer, children: null };
+  items4[1] = closure_17(closure_21, { color: tmp.threadLineSegment.backgroundColor, fontScale });
+  const obj6 = { style: tmp.threadRow, children: null };
+  const obj7 = { style: tmp.unreadContainer, children: null };
   let tmp14Result = unread;
   if (unread) {
-    obj2 = { style: tmp.unreadIcon };
-    tmp14Result = closure_17(tmp15, obj2);
+    const obj8 = { style: tmp.unreadIcon };
+    tmp14Result = closure_17(tmp15, obj8);
   }
-  obj1.children = tmp14Result;
-  const items5 = [closure_17(id, obj1), ,];
-  obj3 = { style: tmp.spineSpacer };
-  items5[1] = closure_17(id, obj3);
-  const obj4 = {
+  obj7.children = tmp14Result;
+  const items5 = [closure_17(id, obj7), closure_17(id, { style: tmp.spineSpacer })];
+  const obj10 = {
     onPress: callback,
     onLongPress: callback1,
     style: tmp.container,
@@ -170,56 +165,58 @@ function ThreadChannel(channel) {
     channelInfo: null,
     children: null,
   };
-  let tmp8Result = tmp8(obj[24]);
-  obj4.accessibilityLabel = tmp8(obj[25])({ channel, unread, mentionCount });
-  obj4.accessibilityState = { selected };
-  obj4.channel = channel;
-  obj4.selected = selected;
-  obj4.muted = muted;
-  obj4.unread = unread;
-  obj4.resolvedUnreadSetting = UnreadSetting.ALL_MESSAGES;
+  const obj5 = { color: tmp.threadLineSegment.backgroundColor, fontScale };
+  const obj9 = { style: tmp.spineSpacer };
+  const tmp9 = threadIndex(obj[20])({ channel, locked: isLocked, video: hasVideo, selected });
+  obj10.accessibilityLabel = tmp8(obj[25])({ channel, unread, mentionCount });
+  obj10.accessibilityState = { selected };
+  obj10.channel = channel;
+  obj10.selected = selected;
+  obj10.muted = muted;
+  obj10.unread = unread;
+  obj10.resolvedUnreadSetting = UnreadSetting.ALL_MESSAGES;
   if (0 === mentionCount) {
-    tmp14Result = null;
+    let tmp14Result4 = null;
     if (tmp9) {
-      const obj5 = { userCount: num, video: hasVideo, channel };
-      tmp14Result = closure_17(tmp4(obj[26]).ConnectedUserLimit, obj5);
+      const obj11 = { userCount: num, video: hasVideo, channel };
+      tmp14Result4 = closure_17(tmp4(obj[26]).ConnectedUserLimit, obj11);
     }
-    let tmp14Result1 = tmp14Result;
+    let tmp14Result5 = tmp14Result4;
   } else {
-    const obj6 = { value: mentionCount, isMentionLowImportance };
-    tmp14Result1 = closure_17(tmp4(obj[27]).Badge, obj6);
+    const obj12 = { value: mentionCount, isMentionLowImportance };
+    tmp14Result5 = closure_17(tmp4(obj[27]).Badge, obj12);
   }
-  obj4.channelInfo = tmp14Result1;
+  obj10.channelInfo = tmp14Result5;
   if (0 === voiceStates.length) {
-    const obj7 = { children: null };
-    obj4.children = null;
-    items5[2] = closure_17(tmp8Result, obj4);
-    obj.children = items5;
-    items4[2] = closure_18(tmp15, obj);
-    obj7.children = items4;
-    return closure_18(closure_19, obj7);
+    const obj13 = { children: null };
+    obj10.children = null;
+    items5[2] = closure_17(tmp8Result, obj10);
+    obj6.children = items5;
+    items4[2] = closure_18(tmp15, obj6);
+    obj13.children = items4;
+    return closure_18(closure_19, obj13);
   } else {
     if (selectedVoiceChannelId !== channel.threadId) {
       if (1 !== voiceStates.length) {
-        const obj8 = { users: null, max: 8, guildId: null, renderIcon: false, noPadding: true };
-        tmp8Result = tmp8(obj[29]);
-        const obj9 = { channels: null, selectedChannelId: null, selectedVoiceChannelId: null, voiceStates: null };
+        const obj14 = { users: null, max: 8, guildId: null, renderIcon: false, noPadding: true };
+        const tmp8Result2 = tmp8(obj[29]);
+        const obj15 = { channels: null, selectedChannelId: null, selectedVoiceChannelId: null, voiceStates: null };
         const items6 = [channel];
-        obj9.channels = items6;
-        const obj10 = {};
-        obj10[channel.id] = voiceStates;
-        obj9.voiceStates = obj10;
-        obj8.users = tmp4(obj[30]).computeSummarizedVoiceUsers(obj9);
-        obj8.guildId = channel.guild_id;
-        let tmp14Result2 = closure_17(tmp8Result, obj8);
+        obj15.channels = items6;
+        const obj16 = {};
+        obj16[channel.id] = voiceStates;
+        obj15.voiceStates = obj16;
+        obj14.users = tmp4(obj[30]).computeSummarizedVoiceUsers(obj15);
+        obj14.guildId = channel.guild_id;
+        let tmp14Result6 = closure_17(tmp8Result2, obj14);
         const tmp4Result = tmp4(obj[30]);
       }
     }
     tmp8 = tmp8(obj[28]);
     obj = { channel, collapsed: false, voiceStates };
-    tmp14Result2 = closure_17(tmp8, obj);
+    tmp14Result6 = closure_17(tmp8, obj);
   }
-  tmp9 = threadIndex(obj[20])({ channel, locked: isLocked, video: hasVideo, selected });
+  tmp8Result = tmp8(obj[24]);
 }
 const View = fn(17).View;
 const RedesignChannelListConstants = fn(10246);
@@ -229,26 +226,21 @@ const UnreadSetting = fn(4818).UnreadSetting;
 let closure_16 = fn(1113).OpenThreadAnalyticsLocations;
 const jsxProd = fn(21);
 ({ jsx: closure_17, jsxs: closure_18, Fragment: closure_19 } = jsxProd);
-fn(4636);
+const createStyles = fn(4636);
 let obj = {
-  container: null,
-  threadRow: null,
-  unreadContainer: null,
-  spineSpacer: null,
+  container: {
+    marginVertical: CHANNEL_MARGIN_VERTICAL,
+    marginStart: 2,
+    marginEnd: 8,
+    borderRadius: nativeDefault.radii.md,
+    flex: 1,
+  },
+  threadRow: { flex: 0, flexDirection: "row", alignSelf: "stretch" },
+  unreadContainer: { width: 8, alignItems: "flex-start", justifyContent: "flex-start" },
+  spineSpacer: { width: 28 },
   unreadIcon: null,
   threadLineSegment: null,
 };
-obj = {
-  marginVertical: CHANNEL_MARGIN_VERTICAL,
-  marginStart: 2,
-  marginEnd: 8,
-  borderRadius: nativeDefault.radii.md,
-  flex: 1,
-};
-obj.container = obj;
-obj.threadRow = { flex: 0, flexDirection: "row", alignSelf: "stretch" };
-obj.unreadContainer = { width: 8, alignItems: "flex-start", justifyContent: "flex-start" };
-obj.spineSpacer = { width: 28 };
 let size = {
   width: 8,
   height: 8,
@@ -258,8 +250,19 @@ let size = {
   marginTop: 12,
 };
 obj.unreadIcon = size;
-const createStyles = { backgroundColor: nativeDefault.colors.SPINE_DEFAULT, width: 2, position: "absolute", left: 23 };
-obj.threadLineSegment = createStyles;
+let obj3 = {
+  marginVertical: CHANNEL_MARGIN_VERTICAL,
+  marginStart: 2,
+  marginEnd: 8,
+  borderRadius: nativeDefault.radii.md,
+  flex: 1,
+};
+obj.threadLineSegment = {
+  backgroundColor: nativeDefault.colors.SPINE_DEFAULT,
+  width: 2,
+  position: "absolute",
+  left: 23,
+};
 let closure_20 = createStyles.createStyles(obj);
 let closure_21 = noop.memo((arg0) => {
   ({ color, fontScale } = arg0);
@@ -278,13 +281,12 @@ const result = size.fileFinishedImporting("modules/channel_list_v2/native/items/
 export default function ConnectedThreadChannel(threadId) {
   threadId = threadId.threadId;
   ({ threadIndex, threadCount, selected } = threadId);
-  let obj = threadId(504);
   const items = [ChannelStore];
-  const stateFromStores = obj.useStateFromStores(items, () => ChannelStore.getChannel(threadId));
+  const stateFromStores = threadId(504).useStateFromStores(items, () => ChannelStore.getChannel(threadId));
   let tmp2 = null;
   if (null != stateFromStores) {
-    obj = { channel: stateFromStores, threadId, threadIndex, threadCount, selected };
-    tmp2 = closure_17(ThreadChannel, obj);
+    const obj2 = { channel: stateFromStores, threadId, threadIndex, threadCount, selected };
+    tmp2 = closure_17(ThreadChannel, obj2);
   }
   return tmp2;
 }

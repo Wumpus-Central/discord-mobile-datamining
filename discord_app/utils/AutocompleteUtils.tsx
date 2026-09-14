@@ -28,7 +28,7 @@ import JoinedThreadsStore from "../modules/threads/JoinedThreadsStore.tsx";
 import UserRecord from "../records/UserRecord.tsx";
 import ChannelStore from "../stores/ChannelStore.tsx";
 import FrecencyStore from "../stores/FrecencyStore.tsx";
-import GuildChannelStore from "../stores/GuildChannelStore.tsx";
+import GuildChannelStore_mod from "../stores/GuildChannelStore.tsx";
 import GuildMemberStore from "../stores/GuildMemberStore.tsx";
 import GuildRoleStore from "../stores/GuildRoleStore.tsx";
 import GuildStore from "../stores/GuildStore.tsx";
@@ -40,6 +40,8 @@ import SelectedChannelStore from "../stores/SelectedChannelStore.tsx";
 import SelectedGuildStore from "../stores/SelectedGuildStore.tsx";
 import UserStore from "../stores/UserStore.tsx";
 import SKUStore from "../stores/game_store/SKUStore.tsx";
+
+const require = globalThis.__r;
 
 require = fn;
 function NOOP() {
@@ -116,22 +118,22 @@ function queryMemberList(arg0) {
     do {
       let tmp5 = members[num2];
       if (tmp5 instanceof UserRecord) {
-        let nick = GuildMemberStore.getNick(guildId, tmp5.id);
+        let nick1 = GuildMemberStore.getNick(guildId, tmp5.id);
         let toLocaleLowerCaseResult1;
-        if (nick != null) {
-          toLocaleLowerCaseResult1 = nick.toLocaleLowerCase();
+        if (nick1 != null) {
+          toLocaleLowerCaseResult1 = nick1.toLocaleLowerCase();
         }
         let str = toLocaleLowerCaseResult1;
         let tmp9 = tmp5;
       } else {
-        nick = tmp5.nick;
+        let nick = tmp5.nick;
         if (nick != null) {
           str = nick.toLocaleLowerCase();
         }
         tmp9 = users[tmp5.userId];
       }
-      let obj1 = UserUtilsDefault;
-      let globalName = obj1.getGlobalName(tmp9);
+      let obj2 = UserUtilsDefault;
+      let globalName = obj2.getGlobalName(tmp9);
       if (globalName != null) {
         let str2 = globalName.toLocaleLowerCase();
       }
@@ -158,8 +160,8 @@ function queryMemberList(arg0) {
           if (null == str2) {
             let items3 = [null, null];
           } else {
-            tmp16Result = StringUtils;
-            let stripDiacriticsResult1 = tmp16Result.stripDiacritics(str2);
+            let tmp16Result2 = StringUtils;
+            let stripDiacriticsResult1 = tmp16Result2.stripDiacritics(str2);
             items3 = [stripDiacriticsResult1];
             let normalizer4 = StringUtils;
             items3[1] = normalizer4.normalize(stripDiacriticsResult1);
@@ -262,7 +264,7 @@ function queryMemberList(arg0) {
                             }
                           }
                         }
-                        obj = {
+                        let obj3 = {
                           type: AutocompleterResultTypes.USER,
                           record: tmp9,
                           score: null,
@@ -276,7 +278,7 @@ function queryMemberList(arg0) {
                         if (num4 == null) {
                           num4 = 1;
                         }
-                        obj.score = 1000 * num4;
+                        obj3.score = 1000 * num4;
                         let tmp39 = str2;
                         if (str2 == null) {
                           tmp39 = str;
@@ -284,7 +286,7 @@ function queryMemberList(arg0) {
                         if (tmp39 == null) {
                           tmp39 = str3;
                         }
-                        obj.comparator = tmp39;
+                        obj3.comparator = tmp39;
                         let tmp40 = str8;
                         if (str8 == null) {
                           tmp40 = str6;
@@ -292,8 +294,8 @@ function queryMemberList(arg0) {
                         if (tmp40 == null) {
                           tmp40 = str4;
                         }
-                        obj.sortable = tmp40;
-                        arr = items.push(obj);
+                        obj3.sortable = tmp40;
+                        let arr2 = items.push(obj3);
                         sum = num;
                       }
                     }
@@ -302,7 +304,13 @@ function queryMemberList(arg0) {
               }
             }
           }
-          obj1 = { type: AutocompleterResultTypes.USER, record: tmp9, score: null, comparator: null, sortable: null };
+          let obj5 = {
+            type: AutocompleterResultTypes.USER,
+            record: tmp9,
+            score: null,
+            comparator: null,
+            sortable: null,
+          };
           let num5 = c46;
           let num6;
           if (boosters != null) {
@@ -314,22 +322,22 @@ function queryMemberList(arg0) {
           if (num6 == null) {
             num6 = 1;
           }
-          obj1.score = 1000 * num5 * num6;
+          obj5.score = 1000 * num5 * num6;
           if (str2 == null) {
             str2 = str;
           }
           if (str2 == null) {
             str2 = str3;
           }
-          obj1.comparator = str2;
+          obj5.comparator = str2;
           if (str8 == null) {
             str8 = str6;
           }
           if (str8 == null) {
             str8 = str4;
           }
-          obj1.sortable = str8;
-          let arr1 = items.push(obj1);
+          obj5.sortable = str8;
+          let arr3 = items.push(obj5);
           sum = num;
         } else {
           sum = num;
@@ -444,6 +452,7 @@ const isEveryoneRole = fn(2016).isEveryoneRole;
 let GuildChannelStore = fn(2012);
 const GUILD_SELECTABLE_CHANNELS_KEY = GuildChannelStore.GUILD_SELECTABLE_CHANNELS_KEY;
 const GUILD_VOCAL_CHANNELS_KEY = GuildChannelStore.GUILD_VOCAL_CHANNELS_KEY;
+let GuildChannelStore = GuildChannelStore_mod;
 const Constants = fn(1074);
 ({ Permissions: closure_38, GuildFeatures: closure_39, ChannelTypes } = Constants);
 ({ SKUTypes: closure_41, MAX_AUTOCOMPLETE_RESULTS: closure_42 } = Constants);
@@ -559,7 +568,7 @@ let merged = Object.assign({
 let tmp6 = new LoggerDefault("AutocompleteUtils");
 merged[3] = new Map();
 let items = [GUILD_SELECTABLE_CHANNELS_KEY, GUILD_VOCAL_CHANNELS_KEY, ChannelTypes.GUILD_CATEGORY];
-let FunctionUtils = fn(1933);
+const FunctionUtils = fn(1933);
 let closure_66 = FunctionUtils.cachedFunction(() => {
   const channelsByRecipientId = new Map();
   const recipientsById = new Map();
@@ -588,7 +597,10 @@ let closure_66 = FunctionUtils.cachedFunction(() => {
     });
   return { channelsByRecipientId, recipientsById, recipients };
 });
-FunctionUtils = {
+const size = fn(2);
+let result = size.fileFinishedImporting("utils/AutocompleteUtils.tsx");
+
+export default {
   queryFriends(limit) {
     let num = limit.limit;
     if (num === undefined) {
@@ -633,14 +645,13 @@ FunctionUtils = {
       flag3 = false;
     }
     let channel1;
-    let obj = ChannelStore;
     const channel = ChannelStore.getChannel(request.channelId);
     if (null == channel) {
       return [];
     } else {
       channel1 = null;
       if (channel.isThread()) {
-        channel1 = obj.getChannel(channel.parent_id);
+        channel1 = ChannelStore.getChannel(channel.parent_id);
       }
       if (channel1 == null) {
         channel1 = channel;
@@ -662,15 +673,15 @@ FunctionUtils = {
           const currentUser = UserStore.getCurrentUser();
           let tmp6 = mapped;
           if (null != currentUser) {
-            obj = { userId: currentUser.id, nick: null };
-            mapped.push(obj);
+            let obj2 = { userId: currentUser.id, nick: null };
+            mapped.push(obj2);
             tmp6 = mapped;
           }
         } else {
           if (0 === query.length) {
             if (flag2) {
               const id = channel.id;
-              const channel2 = obj.getChannel(id);
+              const channel2 = ChannelStore.getChannel(id);
               closure_129_0 = channel2;
               if (null != id) {
                 if (null != channel2) {
@@ -736,21 +747,21 @@ FunctionUtils = {
             tmp6 = found1;
           }
         }
-        obj = {
+        const obj4 = {
           query,
           members: tmp6,
           limit,
           filter(user) {
             let isPrivateResult = channel1.isPrivate();
             if (!isPrivateResult) {
-              const obj = { permission: constants2.VIEW_CHANNEL, user, context: channel1 };
-              isPrivateResult = obj.can(obj);
+              const obj2 = { permission: constants2.VIEW_CHANNEL, user, context: channel1 };
+              isPrivateResult = PermissionUtilsAll.can(obj2);
             }
             return isPrivateResult;
           },
           allowSnowflake: flag3,
         };
-        return queryMemberList(obj);
+        return queryMemberList(obj4);
       }
     }
   },
@@ -837,11 +848,10 @@ FunctionUtils = {
         flag = query.length > 0;
       }
       if (flag) {
-        let obj = GuildUtilsDefault;
-        const members1 = obj.requestMembers(guildId, query, limit);
+        const members1 = GuildUtilsDefault.requestMembers(guildId, query, limit);
       }
-      obj = { query, members: found1, limit, filter, allowSnowflake };
-      return queryMemberList(obj);
+      let obj2 = { query, members: found1, limit, filter, allowSnowflake };
+      return queryMemberList(obj2);
     }
   },
   queryUsers(limit) {
@@ -874,13 +884,12 @@ FunctionUtils = {
       tmp = query.length > 0;
     }
     if (tmp) {
-      let obj = GuildUtilsDefault;
-      const members = obj.requestMembers(null, query, limit);
+      const members = GuildUtilsDefault.requestMembers(null, query, limit);
     }
-    obj = { query, limit, request: flag, filter, boosters, users: null };
+    const obj2 = { query, limit, request: flag, filter, boosters, users: null };
     const tmp6Result = _modDef12(UserStore.getUsers());
-    obj.users = _modDef12(UserStore.getUsers()).values().value();
-    return this.queryUsers(obj);
+    obj2.users = _modDef12(UserStore.getUsers()).values().value();
+    return this.queryUsers(obj2);
   },
   queryChannels(guildId) {
     guildId = guildId.guildId;
@@ -943,7 +952,7 @@ FunctionUtils = {
         allActiveJoinedThreads = [];
       }
       const tmp6Result = _modDef12(ChannelStore.loadAllGuildAndPrivateChannelsFromDisk());
-      let valueResult = values.concat(allActiveJoinedThreads).value();
+      const valueResult = values.concat(allActiveJoinedThreads).value();
       items = [];
       const maxScore = FrecencyStore.getMaxScore();
       valueResult[Symbol.iterator]();
@@ -952,7 +961,7 @@ FunctionUtils = {
     }
     let mapped = _modDef12(GuildChannelStore.getChannels(guildId)[type]).map((channel) => channel.channel);
     if (!items) {
-      valueResult = tmp12([]).value();
+      tmp12([]).value();
       const iter2 = tmp12([]);
     }
     if (includeAllThreads) {
@@ -983,7 +992,7 @@ FunctionUtils = {
     if ("" !== query) {
       str = query.toLocaleLowerCase();
     }
-    let obj = { exactQuery: null, containQuery: null, queryLower: null };
+    const obj = { exactQuery: null, containQuery: null, queryLower: null };
     const regExp = new RegExp("^" + RegexUtilsDefault.escape(str), "i");
     obj.exactQuery = regExp;
     const regExp1 = new RegExp(RegexUtilsDefault.escape(str), "i");
@@ -1002,18 +1011,18 @@ FunctionUtils = {
           if (query === tmp5.id) {
             let tmp11 = c46;
             if (tmp11 > 0) {
-              obj = {
+              let obj2 = {
                 type: AutocompleterResultTypes.GUILD,
                 record: null,
                 score: null,
                 comparator: null,
                 sortable: null,
               };
-              obj.record = tmp5;
-              obj.score = calculateScore(tmp12, boosters[tmp5.id]);
-              obj.comparator = tmp5.name;
-              obj.sortable = toLocaleLowerCaseResult;
-              let arr = items.push(obj);
+              obj2.record = tmp5;
+              obj2.score = calculateScore(tmp12, boosters[tmp5.id]);
+              obj2.comparator = tmp5.name;
+              obj2.sortable = toLocaleLowerCaseResult;
+              let arr = items.push(obj2);
             }
           }
         }
@@ -1091,7 +1100,7 @@ FunctionUtils = {
     }
     const normalizer = StringUtils;
     const stripDiacriticsResult = StringUtils.stripDiacritics(normalizer.normalize(query.toLocaleLowerCase()));
-    let obj = { exactQuery: null, containQuery: null, queryLower: null };
+    const obj = { exactQuery: null, containQuery: null, queryLower: null };
     const regExp = new RegExp("^" + RegexUtilsDefault.escape(stripDiacriticsResult), "i");
     obj.exactQuery = regExp;
     const regExp1 = new RegExp(RegexUtilsDefault.escape(stripDiacriticsResult), "i");
@@ -1129,10 +1138,10 @@ FunctionUtils = {
                 let arr = items1.push(tmp56);
               }
               if (null != globalName) {
-                arr = items1.push(globalName);
+                let arr2 = items1.push(globalName);
               }
               if (null != nickname) {
-                let arr1 = items1.push(nickname);
+                let arr6 = items1.push(nickname);
               }
             }
             continue;
@@ -1151,19 +1160,19 @@ FunctionUtils = {
             continue;
           }
           if (tmp17 > 0) {
-            obj = {
+            let obj3 = {
               type: AutocompleterResultTypes.GROUP_DM,
               record: null,
               score: null,
               comparator: null,
               sortable: null,
             };
-            obj.record = tmp6;
-            obj.score = calculateScore(tmp17, boosters[tmp6.id]);
+            obj3.record = tmp6;
+            obj3.score = calculateScore(tmp17, boosters[tmp6.id]);
             let obj13 = useChannelName;
-            obj.comparator = obj13.computeChannelName(tmp6, UserStore, RelationshipStore);
-            obj.sortable = tmp15;
-            let arr2 = items.push(obj);
+            obj3.comparator = obj13.computeChannelName(tmp6, UserStore, RelationshipStore);
+            obj3.sortable = tmp15;
+            let arr7 = items.push(obj3);
           }
         }
       }
@@ -1189,7 +1198,7 @@ FunctionUtils = {
       filter = NOOP;
     }
     const toLocaleLowerCaseResult = query.toLocaleLowerCase();
-    let obj = { exactQuery: null, containQuery: null, queryLower: null };
+    const obj = { exactQuery: null, containQuery: null, queryLower: null };
     const regExp = new RegExp("^" + RegexUtilsDefault.escape(toLocaleLowerCaseResult), "i");
     obj.exactQuery = regExp;
     const regExp1 = new RegExp(RegexUtilsDefault.escape(toLocaleLowerCaseResult), "i");
@@ -1206,18 +1215,18 @@ FunctionUtils = {
         let tmp8 = toLocaleLowerCaseResult1;
         let tmp10 = getMatchValue(toLocaleLowerCaseResult1, obj, flag);
         if (tmp10 > 0) {
-          obj = {
+          let obj4 = {
             type: AutocompleterResultTypes.APPLICATION,
             record: null,
             score: null,
             comparator: null,
             sortable: null,
           };
-          obj.record = tmp5;
-          obj.score = tmp11;
-          obj.comparator = tmp5.name;
-          obj.sortable = tmp8;
-          let arr = items.push(obj);
+          obj4.record = tmp5;
+          obj4.score = tmp11;
+          obj4.comparator = tmp5.name;
+          obj4.sortable = tmp8;
+          let arr = items.push(obj4);
         }
       }
       continue;
@@ -1238,48 +1247,48 @@ FunctionUtils = {
       flag = true;
     }
     const toLocaleLowerCaseResult = query.toLocaleLowerCase();
-    let obj = { exactQuery: null, containQuery: null, queryLower: null };
+    const obj = { exactQuery: null, containQuery: null, queryLower: null };
     const regExp = new RegExp("^" + RegexUtilsDefault.escape(toLocaleLowerCaseResult), "i");
     obj.exactQuery = regExp;
     const regExp1 = new RegExp(RegexUtilsDefault.escape(toLocaleLowerCaseResult), "i");
     obj.containQuery = regExp1;
     obj.queryLower = toLocaleLowerCaseResult;
-    obj = {};
+    const obj4 = {};
     const intl = util.intl;
     items = [intl.string(util.t.pWG4ze)];
-    obj[constants.SHOP] = items;
+    obj4[constants.SHOP] = items;
     const intl2 = util.intl;
     const items1 = [intl2.string(util.t.ElYQFS), ,];
     const intl3 = util.intl;
     items1[1] = intl3.string(util.t.pWG4ze);
     const intl4 = util.intl;
     items1[2] = intl4.string(util.t.EBYkzk);
-    obj[constants.SHOP_ORBS_TAB] = items1;
+    obj4[constants.SHOP_ORBS_TAB] = items1;
     const intl5 = util.intl;
     const items2 = [intl5.string(util.t.ElYQFS), ,];
     const intl6 = util.intl;
     items2[1] = intl6.string(util.t["v/R2aC"]);
     const intl7 = util.intl;
     items2[2] = intl7.string(util.t.qQR4tn);
-    obj[constants.QUEST_ORBS] = items2;
+    obj4[constants.QUEST_ORBS] = items2;
     const intl8 = util.intl;
     const items3 = [intl8.string(util.t.Ipxkog)];
-    obj[constants.NITRO_HOME] = items3;
+    obj4[constants.NITRO_HOME] = items3;
     const intl9 = util.intl;
     const items4 = [intl9.string(util.t.JALI2K)];
-    obj[constants.QUEST_HOME] = items4;
+    obj4[constants.QUEST_HOME] = items4;
     const intl10 = util.intl;
     const items5 = [intl10.string(util.t.PHjkRE)];
     const intl11 = util.intl;
     items5[1] = intl11.string(util.t.AKcFUj);
-    obj[constants.APPS_HOME] = items5;
+    obj4[constants.APPS_HOME] = items5;
     const intl12 = util.intl;
     const items6 = [intl12.string(util.t["3D5yo/"])];
-    obj[constants.SETTINGS] = items6;
+    obj4[constants.SETTINGS] = items6;
     const items7 = [];
-    for (const key10167 in obj) {
+    for (const key10167 in obj4) {
       let tmp20 = constants[key10167];
-      let tmp21 = obj[tmp20];
+      let tmp21 = obj4[tmp20];
       if (null == tmp21) {
         continue;
       } else {
@@ -1288,17 +1297,17 @@ FunctionUtils = {
           let tmp7 = toLocaleLowerCaseResult1;
           let tmp9 = getMatchValue(toLocaleLowerCaseResult1, obj, flag);
           if (tmp9 > 0) {
-            obj = {
+            let obj5 = {
               type: AutocompleterResultTypes.IN_APP_NAVIGATION,
               record: hasOwnProperty.fromType(tmp20),
               score: null,
               comparator: null,
               sortable: null,
             };
-            obj.score = calculateScore(tmp10);
-            obj.comparator = tmp7;
-            obj.sortable = tmp7;
-            let arr = items7.push(obj);
+            obj5.score = calculateScore(tmp10);
+            obj5.comparator = tmp7;
+            obj5.sortable = tmp7;
+            let arr = items7.push(obj5);
           }
           continue;
         }
@@ -1325,7 +1334,7 @@ FunctionUtils = {
       filter = NOOP;
     }
     const toLocaleLowerCaseResult = query.toLocaleLowerCase();
-    let obj = { exactQuery: null, containQuery: null, queryLower: null };
+    const obj = { exactQuery: null, containQuery: null, queryLower: null };
     const regExp = new RegExp("^" + RegexUtilsDefault.escape(toLocaleLowerCaseResult), "i");
     obj.exactQuery = regExp;
     const regExp1 = new RegExp(RegexUtilsDefault.escape(toLocaleLowerCaseResult), "i");
@@ -1345,12 +1354,18 @@ FunctionUtils = {
           let tmp12 = toLocaleLowerCaseResult1;
           let tmp14 = getMatchValue(toLocaleLowerCaseResult1, obj, flag);
           if (tmp14 > 0) {
-            obj = { type: AutocompleterResultTypes.SKU, record: null, score: null, comparator: null, sortable: null };
-            obj.record = tmp7;
-            obj.score = tmp15;
-            obj.comparator = tmp7.name;
-            obj.sortable = tmp12;
-            let arr = items.push(obj);
+            let obj4 = {
+              type: AutocompleterResultTypes.SKU,
+              record: null,
+              score: null,
+              comparator: null,
+              sortable: null,
+            };
+            obj4.record = tmp7;
+            obj4.score = tmp15;
+            obj4.comparator = tmp7.name;
+            obj4.sortable = tmp12;
+            let arr = items.push(obj4);
           }
         }
       }
@@ -1362,11 +1377,11 @@ FunctionUtils = {
     }
     return items;
   },
-  getRecentlyTalked(channelId, maxResults) {
-    const channel = ChannelStore.getChannel(channelId);
-    if (null != channelId) {
+  getRecentlyTalked(channelId1, maxResults) {
+    const channel = ChannelStore.getChannel(channelId1);
+    if (null != channelId1) {
       if (null != channel) {
-        const messages = MessageStore.getMessages(channelId);
+        const messages = MessageStore.getMessages(channelId1);
         const reversed = _modDef12(messages.toArray()).reverse();
         const tmp6Result = _modDef12(messages.toArray());
         const mapped = reversed.uniqBy((author) => author.author.id).map((author) => user.getUser(author.author.id));
@@ -1478,7 +1493,7 @@ FunctionUtils = {
           };
         });
       }
-      obj = {
+      const obj2 = {
         guildId: channel.guild_id,
         query,
         limit,
@@ -1486,7 +1501,7 @@ FunctionUtils = {
         request,
         allowSnowflake,
       };
-      queryChannelUsersResult = self.queryGuildUsers(obj);
+      queryChannelUsersResult = self.queryGuildUsers(obj2);
     } else {
       items = [];
       closure_7 = items.length;
@@ -1553,14 +1568,14 @@ FunctionUtils = {
                 return mentionable;
               })
               .value();
-            obj = { keys: ["name"] };
+            const obj3 = { keys: ["name"] };
             const obj4 = channel(flag7[45]);
             substr = channel(flag7[45])
-              .matchSorter(valueResult, query, obj)
+              .matchSorter(valueResult, query, obj3)
               .slice(0, limit - closure_7);
             closure_7 = closure_7 + substr.length;
             tmp5 = substr;
-            const matchSorterResult = channel(flag7[45]).matchSorter(valueResult, query, obj);
+            const matchSorterResult = channel(flag7[45]).matchSorter(valueResult, query, obj3);
           }
         }
       }
@@ -1613,18 +1628,18 @@ FunctionUtils = {
           }
           if (tmp5) {
             if (closure_7 < limit) {
-              let arr = items2.push(test);
+              let arr = items2;
+              items2.push(test);
               closure_7 = closure_7 + 1;
             } else {
               arr = substr;
               if (substr.length <= 0) {
-                let arr1 = items;
                 if (items.length > 0) {
-                  arr = arr1.pop();
+                  items.pop();
                 }
               }
             }
-            arr1 = arr.pop();
+            arr.pop();
           }
         }
       }
@@ -1644,8 +1659,8 @@ FunctionUtils = {
         }
         maybePushOtherGlobal(tmp35);
       }
-      const obj1 = { users: items, globals: items2, roles: tmp5 };
-      return obj1;
+      const obj5 = { users: items, globals: items2, roles: tmp5 };
+      return obj5;
     }
   },
   queryGuildMentionResults(canMentionUsers) {
@@ -1748,17 +1763,20 @@ FunctionUtils = {
     const toLocaleLowerCaseResult = query.toLocaleLowerCase();
     importDefault = toLocaleLowerCaseResult;
     const regExp = new RegExp("^" + require("RegexUtils").escape(toLocaleLowerCaseResult), "i");
-    let obj = require("RegexUtils");
+    const obj = require("RegexUtils");
     regExp1 = new RegExp(require("RegexUtils").escape(toLocaleLowerCaseResult), "i");
-    const obj2 = require("RegexUtils");
+    let obj2 = require("RegexUtils");
     const mapped = require("../../_runtime/metro/00012__.js")(fuzzy.choices).map((displayName, originalIndex) => {
       displayName = displayName.displayName;
-      let obj = { exactQuery: regExp, containQuery: regExp1, queryLower };
-      const tmp = getMatchValue(displayName.toLocaleLowerCase(), obj, flag);
+      const tmp = getMatchValue(
+        displayName.toLocaleLowerCase(),
+        { exactQuery: regExp, containQuery: regExp1, queryLower },
+        flag,
+      );
       let tmp2 = null;
       if (tmp > 0) {
-        obj = { choice: displayName, score: tmp, originalIndex };
-        tmp2 = obj;
+        const obj2 = { choice: displayName, score: tmp, originalIndex };
+        tmp2 = obj2;
       }
       return tmp2;
     });
@@ -1773,12 +1791,10 @@ FunctionUtils = {
   queryStaticRouteChannels(arg0) {
     ({ query, guild } = arg0);
     const toLocaleLowerCaseResult = query.toLocaleLowerCase();
-    let obj = { exactQuery: null, containQuery: null, queryLower: null };
-    let obj1 = RegexUtilsDefault;
-    const regExp = new RegExp("^" + obj1.escape(toLocaleLowerCaseResult), "i");
+    const obj = { exactQuery: null, containQuery: null, queryLower: null };
+    const regExp = new RegExp("^" + RegexUtilsDefault.escape(toLocaleLowerCaseResult), "i");
     obj.exactQuery = regExp;
-    let obj2 = RegexUtilsDefault;
-    const regExp1 = new RegExp(obj2.escape(toLocaleLowerCaseResult), "i");
+    const regExp1 = new RegExp(RegexUtilsDefault.escape(toLocaleLowerCaseResult), "i");
     obj.containQuery = regExp1;
     obj.queryLower = toLocaleLowerCaseResult;
     let canSeeOnboardingHomeResult = OnboardingHomeUtils.canSeeOnboardingHome(guild.id);
@@ -1793,18 +1809,18 @@ FunctionUtils = {
       const features3 = guild.features;
       result = features3.has(constants3.COMMUNITY);
     }
-    obj = { id: StaticChannelId.SERVER_GUIDE, name: null };
+    const obj5 = { id: StaticChannelId.SERVER_GUIDE, name: null };
     const intl = util.intl;
-    obj.name = intl.string(util.t.VbpLyU);
-    items = [obj, ,];
-    obj = { id: StaticChannelId.CHANNEL_BROWSER, name: null };
+    obj5.name = intl.string(util.t.VbpLyU);
+    items = [obj5, ,];
+    const obj6 = { id: StaticChannelId.CHANNEL_BROWSER, name: null };
     const intl2 = util.intl;
-    obj.name = intl2.string(util.t.et6wav);
-    items[1] = obj;
-    obj1 = { id: StaticChannelId.CUSTOMIZE_COMMUNITY, name: null };
+    obj6.name = intl2.string(util.t.et6wav);
+    items[1] = obj6;
+    const obj7 = { id: StaticChannelId.CUSTOMIZE_COMMUNITY, name: null };
     const intl3 = util.intl;
-    obj1.name = intl3.string(util.t.h9mGOP);
-    items[2] = obj1;
+    obj7.name = intl3.string(util.t.h9mGOP);
+    items[2] = obj7;
     const items1 = [];
     const iter = items[Symbol.iterator]();
     const nextResult = iter.next();
@@ -1815,13 +1831,13 @@ FunctionUtils = {
           if (tmp12.id !== StaticChannelId.CUSTOMIZE_COMMUNITY) {
             let name = tmp12.name;
             if (getMatchValue(name.toLocaleLowerCase(), obj, false) > 0) {
-              obj2 = { id: null, name: null, type: null, guild_id: null };
+              let obj8 = { id: null, name: null, type: null, guild_id: null };
               ({ id: obj9.id, name: obj9.name } = tmp12);
-              obj2.type = ChannelTypes.UNKNOWN;
-              obj2.guild_id = guild.id;
+              obj8.type = ChannelTypes.UNKNOWN;
+              obj8.guild_id = guild.id;
               let tmp24 = new.target;
               let tmp25 = new.target;
-              let tmp27 = new closure_1_19(obj2);
+              let tmp27 = new closure_1_19(obj8);
               let arr = items1.push(tmp27);
             }
           }
@@ -1837,8 +1853,8 @@ FunctionUtils = {
       type = GUILD_SELECTABLE_CHANNELS_KEY;
     }
     channelTypes = channelTypes.channelTypes;
-    let obj = { channels: null };
-    obj = {
+    const obj = { channels: null };
+    const obj2 = {
       query: channelTypes.query,
       guildId: channel.getGuildId(),
       limit: "r",
@@ -1853,7 +1869,21 @@ FunctionUtils = {
       type,
       allowEmptyQueries: null,
     };
-    obj.channels = this.queryChannels(obj).map((record) => record.record);
+    obj.channels = this.queryChannels({
+      query: channelTypes.query,
+      guildId: channel.getGuildId(),
+      limit: "r",
+      fuzzy: "HermesInternal",
+      filter(type) {
+        let hasItem = null == channelTypes;
+        if (!hasItem) {
+          hasItem = channelTypes.includes(type.type);
+        }
+        return hasItem;
+      },
+      type,
+      allowEmptyQueries: null,
+    }).map((record) => record.record);
     return obj;
   },
   queryApplicationCommandChannelResults(limit) {
@@ -1868,12 +1898,12 @@ FunctionUtils = {
       if (tmp12) {
         items.push(channel);
       }
-      let obj = { channels: items };
-      return obj;
+      const obj2 = { channels: items };
+      return obj2;
     } else {
       let items1 = [];
       for (const item10012 of items) {
-        obj = {
+        let obj = {
           query: tmp,
           guildId: channel.guild_id,
           limit,
@@ -1902,14 +1932,16 @@ FunctionUtils = {
       if (tmp8) {
         sorted = sorted.slice(0, limit);
       }
-      obj = { channels: sorted.map((record) => record.record) };
-      return obj;
+      const obj3 = { channels: sorted.map((record) => record.record) };
+      return obj3;
     }
   },
   queryChoiceResults(query) {
-    let obj = { choices: null };
-    obj = { query: query.query, choices: query.choices, limit: null };
-    obj.choices = this.queryChoice(obj).map((choice) => choice.choice);
+    const obj = {
+      choices: this.queryChoice({ query: query.query, choices: query.choices, limit: null }).map(
+        (choice) => choice.choice,
+      ),
+    };
     return obj;
   },
   queryEmojiResults(matchComparator) {
@@ -2110,10 +2142,6 @@ FunctionUtils = {
   },
   queryMemberList,
 };
-const size = fn(2);
-let result = size.fileFinishedImporting("utils/AutocompleteUtils.tsx");
-
-export default FunctionUtils;
 export const WHITESPACE_REGEX = tmp7;
 export { calculateScore };
 export const getGameProfileMatchTier = function getGameProfileMatchTier(name, arg1, index) {

@@ -18,9 +18,8 @@ function Wrapper(folder) {
   const tmp = closure_13();
   closure_1 = tmp;
   const memo = stateFromStoresArray.useMemo(() => ({ isMuted: false }), []);
-  let obj1 = folder(memo[10]);
   let items = [stateFromStoresArray2, UserGuildSettingsStore];
-  stateFromStoresArray = obj1.useStateFromStoresArray(items, () => {
+  stateFromStoresArray = folder(memo[10]).useStateFromStoresArray(items, () => {
     const guildIds = folder.guildIds;
     return guildIds.filter((item) => {
       const isMutedResult = muted.isMuted(item);
@@ -31,9 +30,10 @@ function Wrapper(folder) {
       return tmp2;
     });
   });
+  let obj = stateFromStoresArray;
   let obj2 = folder(memo[10]);
   const items1 = [formatResult3];
-  const stateFromStores = obj2.useStateFromStores(items1, () => {
+  const stateFromStores = folder(memo[10]).useStateFromStores(items1, () => {
     const first = stateFromStoresArray[0];
     let tmp2;
     if (null != first) {
@@ -46,9 +46,9 @@ function Wrapper(folder) {
     }
     return tmp2;
   });
-  let obj3 = folder(memo[10]);
+  const obj3 = folder(memo[10]);
   const items2 = [stateFromStoresArray2, UserGuildSettingsStore];
-  const stateFromStoresArray1 = obj3.useStateFromStoresArray(items2, () => {
+  const stateFromStoresArray1 = folder(memo[10]).useStateFromStoresArray(items2, () => {
     const guildIds = folder.guildIds;
     return guildIds.filter((item) => {
       const isMutedResult = muted.isMuted(item);
@@ -59,6 +59,7 @@ function Wrapper(folder) {
       return hasUnreadResult;
     });
   });
+  const obj4 = folder(memo[10]);
   const items3 = [formatResult3];
   const stateFromStores1 = folder(memo[10]).useStateFromStores(items3, () => {
     const first = stateFromStoresArray1[0];
@@ -136,9 +137,9 @@ function Wrapper(folder) {
     } else {
       BellSlashIcon = NOOP;
     }
-    let obj = { style: closure_1.title, children: null };
+    const obj = { style: closure_1.title, children: null };
     const items = [closure_2_11(BellSlashIcon, { size: "xs" })];
-    obj = {
+    const obj2 = {
       variant: "text-md/medium",
       style: closure_1.titleText,
       lineClamp: 1,
@@ -150,21 +151,20 @@ function Wrapper(folder) {
       const intl = util.intl;
       folderName = intl.string(util.t["JQ/1n3"]);
     }
-    obj.children = folderName;
-    items[1] = closure_2_11(Text_Text.Text, obj);
+    obj2.children = folderName;
+    items[1] = closure_2_11(Text_Text.Text, obj2);
     obj.children = items;
     return closure_2_12(View, obj);
   }, items6);
   let intl = folder(memo[13]).intl;
-  let obj = { num: folder.guildIds.length };
-  const formatResult = intl.format(folder(memo[13]).t.knOfkb, obj);
+  const formatResult = intl.format(folder(memo[13]).t.knOfkb, { num: folder.guildIds.length });
   formatResult3 = formatResult;
   c7 = "text-muted";
   if (stateFromStoresArray.length > 0) {
     if (null != stateFromStores) {
       const intl4 = tmp3(tmp4[13]).intl;
-      obj = { guildName: stateFromStores, count: stateFromStoresArray.length - 1 };
-      const formatResult1 = intl4.format(tmp3(tmp4[13]).t.UoFb3H, obj);
+      const obj9 = { guildName: stateFromStores, count: stateFromStoresArray.length - 1 };
+      const formatResult1 = intl4.format(tmp3(tmp4[13]).t.UoFb3H, obj9);
       formatResult3 = formatResult1;
       let str = "text-muted";
       let tmp14 = formatResult1;
@@ -174,19 +174,19 @@ function Wrapper(folder) {
       () => closure_2_11(Text_Text.Text, { variant: "text-xs/medium", color, lineClamp: 1, children: formatResult3 }),
       items7,
     );
-    obj1 = { title: memo1, subtitle: null };
+    const obj10 = { title: memo1, subtitle: null };
     let tmp20;
     if (!folder.expanded) {
       tmp20 = memo2;
     }
-    obj1.subtitle = tmp20;
-    return closure_11(tmp3(tmp4[14]).HomeDrawerSharedItem, obj1);
+    obj10.subtitle = tmp20;
+    return closure_11(tmp3(tmp4[14]).HomeDrawerSharedItem, obj10);
   }
   if (stateFromStoresArray2.length > 0) {
     if (null != stateFromStores2) {
       const intl3 = tmp3(tmp4[13]).intl;
-      obj2 = { guildName: stateFromStores2, count: stateFromStoresArray2.length - 1 };
-      const formatResult2 = intl3.format(tmp3(tmp4[13]).t["0CRdJQ"], obj2);
+      const obj11 = { guildName: stateFromStores2, count: stateFromStoresArray2.length - 1 };
+      const formatResult2 = intl3.format(tmp3(tmp4[13]).t["0CRdJQ"], obj11);
       formatResult3 = formatResult2;
       c7 = "text-voice-connected";
       str = "text-voice-connected";
@@ -201,12 +201,13 @@ function Wrapper(folder) {
   tmp14 = formatResult;
   if (tmp12) {
     const intl2 = tmp3(tmp4[13]).intl;
-    obj3 = { guildName: stateFromStores1, count: stateFromStoresArray1.length - 1 };
-    formatResult3 = intl2.format(tmp3(tmp4[13]).t["3Pm7uY"], obj3);
+    const obj12 = { guildName: stateFromStores1, count: stateFromStoresArray1.length - 1 };
+    formatResult3 = intl2.format(tmp3(tmp4[13]).t["3Pm7uY"], obj12);
     str = "text-muted";
     tmp14 = formatResult3;
   }
   const obj7 = folder(memo[10]);
+  const obj8 = { num: folder.guildIds.length };
 }
 const View = fn(17).View;
 const NOOP = fn(1074).NOOP;
@@ -222,9 +223,8 @@ const result = size.fileFinishedImporting("modules/home_drawer/native/HomeDrawer
 
 export default function HomeDrawerFolderExpandedChildren(folderId) {
   folderId = folderId.folderId;
-  let obj = folderId(504);
   const items = [SortedGuildStore];
-  const stateFromStores = obj.useStateFromStores(items, () => {
+  const stateFromStores = folderId(504).useStateFromStores(items, () => {
     let guildFolderById = null;
     if (null != folderId) {
       guildFolderById = SortedGuildStore.getGuildFolderById(tmp);
@@ -238,8 +238,8 @@ export default function HomeDrawerFolderExpandedChildren(folderId) {
     if (MobileHomeDrawerExperiment.useConfig({ location: "folder-expanded-children" }).enableHome) {
       tmp3 = null;
       if (!tmp2) {
-        obj = { folder: stateFromStores, expanded: folderId.expanded };
-        tmp3 = closure_11(Wrapper, obj);
+        const obj2 = { folder: stateFromStores, expanded: folderId.expanded };
+        tmp3 = closure_11(Wrapper, obj2);
       }
     }
   }

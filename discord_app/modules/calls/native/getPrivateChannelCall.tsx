@@ -2,6 +2,8 @@
 import CallsUtils from "../../voice_calls/native/CallsUtils.tsx";
 import VoiceStateStore from "../../../stores/VoiceStateStore.tsx";
 
+const require = globalThis.__r;
+
 require = fn;
 const NOOP_NULL = fn(1074).NOOP_NULL;
 const size = fn(2);
@@ -22,7 +24,7 @@ export default function getPrivateChannelCall(id) {
     handleJoinCall = require("PrivateChannelCallUtils").handleJoinCall;
   }
   const isInChannelResult = handleStartCall.isInChannel(id.id);
-  let obj = require("useIsCallActive");
+  const obj = require("useIsCallActive");
   if (id.isSystemDM()) {
     const C = handleJoinCall;
     let tmp9Result = null;
@@ -84,12 +86,12 @@ export default function getPrivateChannelCall(id) {
       stringResult = string(t.focH1t);
     }
   }
-  obj = { text: tmp9Result, accessibilityHint: null, inCall: null, onPress: null };
+  const obj2 = { text: tmp9Result, accessibilityHint: null, inCall: null, onPress: null };
   if (stringResult == null) {
     stringResult = tmp9Result;
   }
-  obj.accessibilityHint = stringResult;
-  obj.inCall = isInChannelResult;
-  obj.onPress = C;
-  return obj;
+  obj2.accessibilityHint = stringResult;
+  obj2.inCall = isInChannelResult;
+  obj2.onPress = C;
+  return obj2;
 }

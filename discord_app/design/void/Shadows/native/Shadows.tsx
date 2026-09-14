@@ -1,5 +1,4 @@
 // discord_app/design/void/Shadows/native/Shadows.tsx
-import PlatformUtils from "../../../../utils/PlatformUtils.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("design/void/Shadows/native/Shadows.tsx");
@@ -7,17 +6,17 @@ const result = size.fileFinishedImporting("design/void/Shadows/native/Shadows.ts
 export const generateBoxShadowStyle = (EIGHT_DP_ELEVATION_SHADOW_PARAMS) => {
   ({ xOffset, yOffset, shadowColorIos, shadowOpacity, shadowRadius, elevation, shadowColorAndroid } =
     EIGHT_DP_ELEVATION_SHADOW_PARAMS);
-  let obj = PlatformUtils;
   if (obj.isAndroid()) {
-    obj = { elevation, shadowColor: shadowColorAndroid };
+    const obj2 = { elevation, shadowColor: shadowColorAndroid };
+    let obj3 = obj2;
   } else {
-    obj = { shadowColor: shadowColorIos, shadowOffset: null, shadowOpacity: null, shadowRadius: null };
+    obj3 = { shadowColor: shadowColorIos, shadowOffset: null, shadowOpacity: null, shadowRadius: null };
     const size = { width: xOffset, height: yOffset };
-    obj.shadowOffset = size;
-    obj.shadowOpacity = shadowOpacity;
-    obj.shadowRadius = shadowRadius;
+    obj3.shadowOffset = size;
+    obj3.shadowOpacity = shadowOpacity;
+    obj3.shadowRadius = shadowRadius;
   }
-  return obj;
+  return obj3;
 };
 export const EIGHT_DP_ELEVATION_SHADOW_PARAMS = {
   xOffset: 0,

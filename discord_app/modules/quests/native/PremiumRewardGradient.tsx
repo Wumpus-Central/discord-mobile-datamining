@@ -11,10 +11,8 @@ require = fn;
 function PremiumRewardFillGradient(arg0) {
   ({ children, style } = arg0);
   const tmp = closure_8();
-  let obj = useToken;
-  const token = obj.useToken(nativeDefault.colors.EXPRESSIVE_GRADIENT_NITRO_PINK_START);
-  let obj1 = useToken;
-  const token1 = obj1.useToken(nativeDefault.colors.EXPRESSIVE_GRADIENT_NITRO_PINK_END);
+  const token = useToken.useToken(nativeDefault.colors.EXPRESSIVE_GRADIENT_NITRO_PINK_START);
+  const token1 = useToken.useToken(nativeDefault.colors.EXPRESSIVE_GRADIENT_NITRO_PINK_END);
   let items = [token, token1];
   const memo = noop.useMemo(() => {
     const items = [token, token1];
@@ -29,9 +27,9 @@ function PremiumRewardFillGradient(arg0) {
   const isThemeDarkResult = design_shared.isThemeDark(tmp6);
   c4 = isThemeDarkResult;
   let items1 = [transparentBlack, opaqueBlack, transparentWhite, opaqueWhite, isThemeDarkResult];
-  obj = { style: null, children: null };
+  const obj4 = { style: null, children: null };
   const items2 = [tmp.wrapper, style];
-  obj.style = items2;
+  obj4.style = items2;
   const memo1 = noop.useMemo(() => {
     if (c4) {
       const items = [transparentBlack, opaqueBlack];
@@ -41,46 +39,54 @@ function PremiumRewardFillGradient(arg0) {
     }
     return items1;
   }, items1);
-  obj = { style: tmp.fill, colors: memo, start, end, pointerEvents: "none" };
-  const items3 = [timestampProducer(LinearGradientDefault, obj), ,];
-  obj1 = { style: tmp.fill, colors: memo1, start: start2, end: end2, pointerEvents: "none" };
-  items3[1] = timestampProducer(LinearGradientDefault, obj1);
-  items3[2] = children;
-  obj.children = items3;
-  return React5(hasOwnProperty, obj);
+  const items3 = [
+    timestampProducer(LinearGradientDefault, { style: tmp.fill, colors: memo, start, end, pointerEvents: "none" }),
+    timestampProducer(LinearGradientDefault, {
+      style: tmp.fill,
+      colors: memo1,
+      start: start2,
+      end: end2,
+      pointerEvents: "none",
+    }),
+    children,
+  ];
+  obj4.children = items3;
+  return React5(hasOwnProperty, obj4);
 }
 function PremiumRewardGlowGradient(arg0) {
   ({ children, style } = arg0);
   const tmp = closure_8();
-  let obj = useToken;
-  const token = obj.useToken(nativeDefault.colors.EXPRESSIVE_GRADIENT_NITRO_PINK_START);
-  let obj1 = useToken;
-  const token1 = obj1.useToken(nativeDefault.colors.EXPRESSIVE_GRADIENT_NITRO_PINK_END);
+  const token = useToken.useToken(nativeDefault.colors.EXPRESSIVE_GRADIENT_NITRO_PINK_START);
+  const token1 = useToken.useToken(nativeDefault.colors.EXPRESSIVE_GRADIENT_NITRO_PINK_END);
   let items = [token, token1];
   const memo = noop.useMemo(() => {
     const items = [token, token1];
     return items;
   }, items);
-  let obj2 = design_shared;
-  const isThemeDarkResult = obj2.isThemeDark(useThemeDefault());
-  obj = { style: null, children: null };
+  const tmp7 = useThemeDefault();
+  const isThemeDarkResult = design_shared.isThemeDark(tmp7);
+  const obj4 = { style: null, children: null };
   const items1 = [tmp.wrapper, style];
-  obj.style = items1;
+  obj4.style = items1;
   const items2 = [tmp.glow];
   let glowLight = !isThemeDarkResult;
-  const tmp7 = useThemeDefault();
   if (!isThemeDarkResult) {
     glowLight = tmp.glowLight;
   }
-  obj = { style: items2, maskElement: null, children: null };
+  const obj5 = {
+    style: items2,
+    maskElement: timestampProducer(LinearGradientDefault, {
+      style: React4.absoluteFill,
+      colors: ["transparent", "black"],
+      start: start2,
+      end: end2,
+    }),
+    children: timestampProducer(LinearGradientDefault, { style: React4.absoluteFill, colors: memo, start, end }),
+  };
   items2[1] = glowLight;
-  obj1 = { style: React4.absoluteFill, colors: ["transparent", "black"], start: start2, end: end2 };
-  obj.maskElement = timestampProducer(LinearGradientDefault, obj1);
-  obj2 = { style: React4.absoluteFill, colors: memo, start, end };
-  obj.children = timestampProducer(LinearGradientDefault, obj2);
-  const items3 = [timestampProducer(_modDef5745, obj), children];
-  obj.children = items3;
-  return React5(hasOwnProperty, obj);
+  const items3 = [timestampProducer(_modDef5745, obj5), children];
+  obj4.children = items3;
+  return React5(hasOwnProperty, obj4);
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: closure_4, View: hasOwnProperty } = get_ActivityIndicator);

@@ -3,6 +3,8 @@ import noop from "../../../../_runtime/metro/00019__.js";
 import GameStore from "../../games/GameStore.tsx";
 import UserStore from "../../../stores/UserStore.tsx";
 
+const require = globalThis.__r;
+
 const require = fn;
 const ChannelAutocompleteConstants = fn(5081);
 ({ extractGameMentionIds: hasOwnProperty, GAME_MENTION_RAW_RE_GLOBAL: metroRequire } = ChannelAutocompleteConstants);

@@ -53,7 +53,7 @@ let result = size.fileFinishedImporting("utils/native/ChatInputUtils.tsx");
 export function createInputRefTracker(id, screenIndex) {
   closure_0 = screenIndex;
   let obj = { current: id };
-  obj = {
+  return {
     handleRef(current, id) {
       obj.current = id;
       if (null == current) {
@@ -70,13 +70,13 @@ export function createInputRefTracker(id, screenIndex) {
         }
       } else if (null == obj) {
         obj = { current };
-        value = map.get(id);
-        if (value == null) {
+        value2 = map.get(id);
+        if (value2 == null) {
           const _Map = Map;
-          value = new Map();
+          value2 = new Map();
         }
-        const result = value.set(closure_0, obj);
-        const result1 = map.set(id, value);
+        const result = value2.set(closure_0, obj);
+        const result1 = map.set(id, value2);
         const result2 = map1.set(closure_0, obj);
         const _process = process;
         if ("development" === process.env.DEVELOPMENT) {
@@ -98,13 +98,13 @@ export function createInputRefTracker(id, screenIndex) {
           map1.delete(closure_0);
         }
         const current = obj.current;
-        value = map.get(current);
-        if (value == null) {
+        value2 = map.get(current);
+        if (value2 == null) {
           const _Map = Map;
-          value = new Map();
+          value2 = new Map();
         }
-        const result = value.set(closure_0, obj);
-        const result1 = map.set(current, value);
+        const result = value2.set(closure_0, obj);
+        const result1 = map.set(current, value2);
         const result2 = map1.set(closure_0, obj);
         const _process = process;
         if ("development" === process.env.DEVELOPMENT) {
@@ -126,7 +126,6 @@ export function createInputRefTracker(id, screenIndex) {
       }
     },
   };
-  return obj;
 }
 export const getHighestActiveScreenIndex = function getHighestActiveScreenIndex() {
   let obj = arg0;
@@ -165,9 +164,9 @@ export const getChatInputRef = function getChatInputRef(id, screenIndex) {
     value = map.get(id);
     let current;
     if (value != null) {
-      value = value.get(screenIndex);
-      if (value != null) {
-        current = value.current;
+      value2 = value.get(screenIndex);
+      if (value2 != null) {
+        current = value2.current;
       }
     }
     return current;
@@ -209,13 +208,13 @@ export const getBestActiveInputForChannelId = function getBestActiveInputForChan
           }
         }
       }
-      value = undefined;
+      value2 = undefined;
       if (null != str) {
-        value = value.get(str);
+        value2 = value.get(str);
       }
       let current;
-      if (value != null) {
-        current = value.current;
+      if (value2 != null) {
+        current = value2.current;
       }
       return current;
     }
@@ -223,19 +222,18 @@ export const getBestActiveInputForChannelId = function getBestActiveInputForChan
 };
 export { getBestActiveInput };
 export const dismissKeyboard = function dismissKeyboard() {
-  let obj = KeyboardManagerUtils;
-  const result = obj.dismissGlobalKeyboard();
+  const result = KeyboardManagerUtils.dismissGlobalKeyboard();
   const obj2 = getBestActiveInput();
   if (null != obj2) {
     obj2.closeCustomKeyboard();
   }
-  let tmpResult = useKeyboardType;
-  const keyboardType = tmpResult.getKeyboardType();
+  const keyboardType = useKeyboardType.getKeyboardType();
   if (keyboardType !== KeyboardTypes.KeyboardTypes.SYSTEM) {
-    tmpResult = KeyboardUIStore;
-    obj = { type: KeyboardTypes.KeyboardTypes.SYSTEM };
-    tmpResult.setKeyboardType(obj);
+    const obj3 = { type: KeyboardTypes.KeyboardTypes.SYSTEM };
+    KeyboardUIStore.setKeyboardType(obj3);
+    const tmpResult3 = KeyboardUIStore;
   }
+  const tmpResult = useKeyboardType;
   const result1 = PortalKeyboardUIStore.closePortalKeyboardRequest();
-  const tmpResult1 = PortalKeyboardUIStore;
+  const tmpResult4 = PortalKeyboardUIStore;
 };

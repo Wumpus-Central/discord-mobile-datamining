@@ -13,10 +13,11 @@ const result = size.fileFinishedImporting(
 
 export default noop.memo(() => {
   const node = noop.useMemo(() => {
-    const obj = { sections: null };
+    const obj2 = { sections: null };
+    const obj = SettingBuilders;
     const items = [MobileNotifSettingsRouteBuilders.buildRealtimeSettingsSection()];
-    obj.sections = items;
-    return obj.createList(obj);
+    obj2.sections = items;
+    return obj.createList(obj2);
   }, []);
   return jsx(SettingLayoutDefault, { node });
 });

@@ -45,7 +45,7 @@ function render(fn, channelId, toAST) {
     contentMessage = channelId;
   }
   const content = contentMessage.content;
-  let obj = { channelId: channelId.channel_id, messageId: channelId.id, authorId: null, renderOptions: null };
+  const obj = { channelId: channelId.channel_id, messageId: channelId.id, authorId: null, renderOptions: null };
   const author = channelId.author;
   let id;
   if (author != null) {
@@ -54,28 +54,28 @@ function render(fn, channelId, toAST) {
   obj.authorId = id;
   obj.renderOptions = toAST;
   const tmpResult = formatInline(obj);
-  obj = {};
+  const obj3 = {};
   const merged = Object.assign(tmpResult);
   let allowLinks = tmp4;
   if (null == channelId.webhookId) {
     allowLinks = tmpResult.allowLinks;
   }
-  obj.allowLinks = allowLinks;
-  obj.allowEmojiLinks = null != channelId.webhookId;
+  obj3.allowLinks = allowLinks;
+  obj3.allowEmojiLinks = null != channelId.webhookId;
   ({ mentionChannels: obj2.mentionChannels, soundboardSounds } = channelId);
   if (soundboardSounds == null) {
     soundboardSounds = [];
   }
-  obj.soundboardSounds = soundboardSounds;
-  obj = {
+  obj3.soundboardSounds = soundboardSounds;
+  return {
     hasSpoilerEmbeds,
-    hasBailedAst: flag,
-    content: fn(content, true, obj, (ast, inline, arg2) => {
+    hasBailedAst: false,
+    content: fn(content, true, obj3, (ast, inline, arg2) => {
       flag = arg2;
       if (arg2 == null) {
         flag = false;
       }
-      const obj = {
+      const result = MarkupPostProcessors.runMessageMarkupPostProcessors({
         ast,
         inline,
         hasBailedAst: flag,
@@ -85,8 +85,7 @@ function render(fn, channelId, toAST) {
         hideSimpleEmbedContent,
         formatInline,
         toAST,
-      };
-      const result = obj.runMessageMarkupPostProcessors(obj);
+      });
       ({ ast, hasSpoilerEmbeds: c6 } = result);
       let tmp2 = ast;
       if (null != render) {
@@ -95,7 +94,6 @@ function render(fn, channelId, toAST) {
       return tmp2;
     }),
   };
-  return obj;
 }
 let result = size.fileFinishedImporting("modules/messages/renderMessageMarkup.tsx");
 
@@ -108,7 +106,7 @@ export default function renderMessageMarkup(arg0) {
   return render(obj.formatInline ? tmp2.parseInlineReply : tmp2.parse, arg0, obj);
 }
 export const getInitialParserStateFromMessage = function getInitialParserStateFromMessage(message, renderOptions) {
-  let obj = { channelId: message.channel_id, messageId: message.id, authorId: null, renderOptions: null };
+  const obj = { channelId: message.channel_id, messageId: message.id, authorId: null, renderOptions: null };
   const author = message.author;
   let id;
   if (author != null) {
@@ -117,20 +115,20 @@ export const getInitialParserStateFromMessage = function getInitialParserStateFr
   obj.authorId = id;
   obj.renderOptions = renderOptions;
   const tmpResult = getInitialParserState(obj);
-  obj = {};
+  const obj3 = {};
   const merged = Object.assign(tmpResult);
   let allowLinks = tmp4;
   if (null == message.webhookId) {
     allowLinks = tmpResult.allowLinks;
   }
-  obj.allowLinks = allowLinks;
-  obj.allowEmojiLinks = null != message.webhookId;
+  obj3.allowLinks = allowLinks;
+  obj3.allowEmojiLinks = null != message.webhookId;
   ({ mentionChannels: obj2.mentionChannels, soundboardSounds } = message);
   if (soundboardSounds == null) {
     soundboardSounds = [];
   }
-  obj.soundboardSounds = soundboardSounds;
-  return obj;
+  obj3.soundboardSounds = soundboardSounds;
+  return obj3;
 };
 export { getInitialParserState };
 export const renderMessageMarkupWithParser = function renderMessageMarkupWithParser(
@@ -150,20 +148,20 @@ export const renderMessageMarkupToAST = function renderMessageMarkupToAST(messag
     obj = {};
   }
   const tmp2 = MarkupUtilsDefault;
-  obj = {};
+  const obj2 = {};
   const merged = Object.assign(obj);
-  obj.toAST = true;
-  return render(obj.formatInline ? tmp2.parseInlineReplyToAST : tmp2.parseToAST, message, obj);
+  obj2.toAST = true;
+  return render(obj.formatInline ? tmp2.parseInlineReplyToAST : tmp2.parseToAST, message, obj2);
 };
 export const renderMessageMarkupToASTWithParser = function renderMessageMarkupToASTWithParser(arg0, message, arg2) {
   let obj = arg2;
   if (arg2 === undefined) {
     obj = {};
   }
-  obj = {};
+  const obj2 = {};
   const merged = Object.assign(obj);
-  obj.toAST = true;
-  return render(arg0, message, obj);
+  obj2.toAST = true;
+  return render(arg0, message, obj2);
 };
 export const renderMessageContentMarkup = function renderMessageContentMarkup(
   notifCenterV2MessagePreviewParser,
@@ -177,36 +175,40 @@ export const renderMessageContentMarkup = function renderMessageContentMarkup(
   if (obj === undefined) {
     obj = {};
   }
-  obj = {
-    allowLinks: false,
-    allowDevLinks: false,
-    allowEmojiLinks: false,
-    allowGameMentions: false,
-    mentionChannels: [],
-    soundboardSounds: [],
-    formatInline: true,
-    noStyleAndInteraction: false,
-    allowHeading: false,
-    allowList: false,
-    disableAutoBlockNewlines: true,
-    previewLinkTarget: false,
-    disableAnimatedEmoji: true,
-    guildId: guildId.guildId,
-    channelId: guildId.channelId,
-    messageId: guildId.messageId,
-    authorId: guildId.authorId,
-    muted: false,
-    disablePressableChannelMention: true,
-    textColor: obj.textColor,
-  };
-  return notifCenterV2MessagePreviewParser(guildId.content, true, obj, (arg0) => {
-    let tmp = arg0;
-    if (!Array.isArray(arg0)) {
-      const items = [arg0];
-      tmp = items;
-    }
-    return tmp;
-  });
+  return notifCenterV2MessagePreviewParser(
+    guildId.content,
+    true,
+    {
+      allowLinks: false,
+      allowDevLinks: false,
+      allowEmojiLinks: false,
+      allowGameMentions: false,
+      mentionChannels: [],
+      soundboardSounds: [],
+      formatInline: true,
+      noStyleAndInteraction: false,
+      allowHeading: false,
+      allowList: false,
+      disableAutoBlockNewlines: true,
+      previewLinkTarget: false,
+      disableAnimatedEmoji: true,
+      guildId: guildId.guildId,
+      channelId: guildId.channelId,
+      messageId: guildId.messageId,
+      authorId: guildId.authorId,
+      muted: false,
+      disablePressableChannelMention: true,
+      textColor: obj.textColor,
+    },
+    (arg0) => {
+      let tmp = arg0;
+      if (!Array.isArray(arg0)) {
+        const items = [arg0];
+        tmp = items;
+      }
+      return tmp;
+    },
+  );
 };
 export const renderAutomodMessageMarkup = function renderAutomodMessageMarkup(arg0, highlightWord, channelId) {
   return MarkupUtilsDefault.parseAutoModerationSystemMessage(

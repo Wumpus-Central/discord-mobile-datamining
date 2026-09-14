@@ -7,8 +7,8 @@ import AutomodActionUtils from "AutomodActionUtils.tsx";
 import AuthenticationStore from "../../stores/AuthenticationStore.tsx";
 
 require = fn;
-const getRuleCountByTriggerType = fn(17655).getRuleCountByTriggerType;
-const Constants = fn(11992);
+const getRuleCountByTriggerType = fn(17656).getRuleCountByTriggerType;
+const Constants = fn(11993);
 ({
   AutomodTriggerType: closure_4,
   MAX_KEYWORDS_PER_KEYWORD_FILTER: hasOwnProperty,
@@ -69,7 +69,8 @@ export const isRuleUserProfileFilter = function isRuleUserProfileFilter(triggerT
   return triggerType === constants.USER_PROFILE;
 };
 export const createDefaultRule = function createDefaultRule(guildId, triggerType) {
-  const obj = {
+  const obj = AutomodTriggerConfigs.triggerConfigs[triggerType];
+  const obj3 = {
     id: null,
     name: null,
     guildId: null,
@@ -87,19 +88,19 @@ export const createDefaultRule = function createDefaultRule(guildId, triggerType
     triggerType,
     guildId,
   );
-  obj.id = "" + guildId + "-" + triggerType + "-new-rule";
-  obj.name = obj.getDefaultRuleName();
-  obj.guildId = guildId;
-  obj.eventType = obj.eventType;
-  obj.triggerType = triggerType;
-  obj.triggerMetadata = defaultTriggerMetadataForTriggerType;
-  obj.creatorId = AuthenticationStore.getId();
-  obj.actions = AutomodActionUtils.getRuleDefaultActionsFromConfig(obj);
-  obj.exemptChannels = new Set();
+  obj3.id = "" + guildId + "-" + triggerType + "-new-rule";
+  obj3.name = obj.getDefaultRuleName();
+  obj3.guildId = guildId;
+  obj3.eventType = obj.eventType;
+  obj3.triggerType = triggerType;
+  obj3.triggerMetadata = defaultTriggerMetadataForTriggerType;
+  obj3.creatorId = AuthenticationStore.getId();
+  obj3.actions = AutomodActionUtils.getRuleDefaultActionsFromConfig(obj);
+  obj3.exemptChannels = new Set();
   const set = new Set();
-  obj.exemptRoles = new Set();
+  obj3.exemptRoles = new Set();
   const set1 = new Set();
-  let str = obj.id;
+  let str = obj3.id;
   if (str == null) {
     str = "INVALID_SNOWFLAKE";
   }
@@ -112,9 +113,9 @@ export const createDefaultRule = function createDefaultRule(guildId, triggerType
     const tmp7 = getRuleCountByTriggerType(guildId, triggerType);
     if (tmp7 > 0) {
       const _HermesInternal = HermesInternal;
-      obj.name = obj.name + " " + tmp7 + 1;
+      obj3.name = obj3.name + " " + tmp7 + 1;
     }
-    return obj;
+    return obj3;
   }
   obj5 = ApplicationCommandUtils;
 };
@@ -179,8 +180,8 @@ export const validateRuleBeforeSaveOrThrow = function validateRuleBeforeSaveOrTh
     if (keywordFilter.length > hasOwnProperty) {
       const _Error3 = Error;
       const intl3 = util.intl;
-      let obj = { limit: tmp2 };
-      const error1 = new Error(intl3.formatToPlainString(util.t.mee4qd, obj));
+      const obj2 = { limit: tmp2 };
+      const error1 = new Error(intl3.formatToPlainString(util.t.mee4qd, obj2));
       throw error1;
     } else {
       const item = keywordFilter.forEach((keyword) => {
@@ -194,7 +195,7 @@ export const validateRuleBeforeSaveOrThrow = function validateRuleBeforeSaveOrTh
       if (regexPatterns.length > timestampProducer) {
         const _Error2 = Error;
         const intl2 = util.intl;
-        obj = { limit: tmp33 };
+        const obj = { limit: tmp33 };
         const error2 = new Error(intl2.formatToPlainString(util.t.tDjhF1, obj));
         throw error2;
       } else {

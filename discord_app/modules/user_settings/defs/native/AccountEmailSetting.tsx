@@ -5,8 +5,8 @@ import EmailVerificationModalActionCreatorsDefault from "../../../../actions/nat
 import UserStore from "../../../../stores/UserStore.tsx";
 
 require = fn;
-fn(11601);
-let SettingBuilders = {
+const SettingBuilders = fn(11602);
+const pressable = SettingBuilders.createPressable({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t["w/qqKK"]);
@@ -27,9 +27,8 @@ let SettingBuilders = {
     EmailVerificationModalActionCreatorsDefault.open(true);
   },
   withArrow: true,
-};
-SettingBuilders = SettingBuilders.createPressable(SettingBuilders);
+});
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/AccountEmailSetting.tsx");
 
-export default SettingBuilders;
+export default pressable;

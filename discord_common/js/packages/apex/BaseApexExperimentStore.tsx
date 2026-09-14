@@ -2,7 +2,7 @@
 import initializeDefault from "../flux/index.tsx";
 import Storage2 from "../storage/Storage.tsx";
 import ApexTypes from "ApexTypes.tsx";
-import MurmurHashV3Default from "../../../../_runtime/01241_MurmurHashV3.js";
+import MurmurHashV3Default from "../../../../_runtime/01239_MurmurHashV3.js";
 import _objectWithoutProperties from "../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 
@@ -51,9 +51,9 @@ if (typeof window !== "undefined") {
   tmp3 = tmp4;
 }
 if (!tmp3) {
-  fn(1238);
+  fn(1236);
 }
-let items = [fn(1239).UnitType.User, fn(1239).UnitType.Installation];
+let items = [fn(1237).UnitType.User, fn(1237).UnitType.Installation];
 let closure_10 = {};
 let clientOverrides = {};
 const dependencyMap2 = {};
@@ -90,14 +90,14 @@ prototype["loadStoredState"] = function loadStoredState(version, buildOverrideEx
         tmp12[key10020] = v3Result;
         tmp9 = v3Result;
       }
-      obj = {
+      let obj3 = {
         hashedName: tmp9,
         variantId: arg1[key10020],
         isOverride: true,
         exposureTrackingEnabled: false,
         useAsEligibility: false,
       };
-      closure_13[key10020] = obj;
+      closure_13[key10020] = obj3;
       continue;
     }
     const self = this;
@@ -151,7 +151,7 @@ prototype["setExperimentAssignments"] = function setExperimentAssignments(apexEx
               if (tmp19 == null) {
                 num = 0;
               }
-              obj = {
+              let obj2 = {
                 hashedName: tmp17,
                 variantId: tmp18,
                 trackedVariantId: null,
@@ -161,13 +161,13 @@ prototype["setExperimentAssignments"] = function setExperimentAssignments(apexEx
                 useAsEligibility: null,
                 config: null,
               };
-              obj.trackedVariantId = tmp21;
-              obj.isOverride = num & ApexTypes.ExperimentFlags.IsOverride;
-              obj.revision = tmp20;
-              obj.exposureTrackingEnabled = num & ApexTypes.ExperimentFlags.ExposureTrackingEnabled;
-              obj.useAsEligibility = num & ApexTypes.ExperimentFlags.UseAsEligibility;
-              obj.config = tmp22;
-              tmp10.assignments[tmp17] = obj;
+              obj2.trackedVariantId = tmp21;
+              obj2.isOverride = num & ApexTypes.ExperimentFlags.IsOverride;
+              obj2.revision = tmp20;
+              obj2.exposureTrackingEnabled = num & ApexTypes.ExperimentFlags.ExposureTrackingEnabled;
+              obj2.useAsEligibility = num & ApexTypes.ExperimentFlags.UseAsEligibility;
+              obj2.config = tmp22;
+              tmp10.assignments[tmp17] = obj2;
               continue;
             }
           }
@@ -191,8 +191,8 @@ prototype["setGuildExperimentAssignments"] = function setGuildExperimentAssignme
     let tmp6 = _slicedToArray(tmp4, 2);
     [tmp7, tmp8] = tmp6;
     ({ evaluation_id, assignments } = tmp8);
-    obj = { evaluationId: evaluation_id, assignments: {} };
-    tmp[tmp7] = obj;
+    let obj2 = { evaluationId: evaluation_id, assignments: {} };
+    tmp[tmp7] = obj2;
     for (const item10038 of assignments) {
       let tmp14 = _slicedToArray(item10038, 5);
       [tmp15, tmp16, tmp17] = tmp14;
@@ -202,7 +202,7 @@ prototype["setGuildExperimentAssignments"] = function setGuildExperimentAssignme
       if (tmp17 == null) {
         num = 0;
       }
-      obj = {
+      let obj3 = {
         hashedName: tmp15,
         variantId: tmp16,
         trackedVariantId: null,
@@ -211,12 +211,12 @@ prototype["setGuildExperimentAssignments"] = function setGuildExperimentAssignme
         exposureTrackingEnabled: null,
         useAsEligibility: null,
       };
-      obj.trackedVariantId = tmp19;
-      obj.isOverride = num & ApexTypes.ExperimentFlags.IsOverride;
-      obj.revision = tmp18;
-      obj.exposureTrackingEnabled = num & ApexTypes.ExperimentFlags.ExposureTrackingEnabled;
-      obj.useAsEligibility = num & ApexTypes.ExperimentFlags.UseAsEligibility;
-      tmp9.assignments[tmp15] = obj;
+      obj3.trackedVariantId = tmp19;
+      obj3.isOverride = num & ApexTypes.ExperimentFlags.IsOverride;
+      obj3.revision = tmp18;
+      obj3.exposureTrackingEnabled = num & ApexTypes.ExperimentFlags.ExposureTrackingEnabled;
+      obj3.useAsEligibility = num & ApexTypes.ExperimentFlags.UseAsEligibility;
+      tmp9.assignments[tmp15] = obj3;
       continue;
     }
     continue;
@@ -357,7 +357,7 @@ prototype["getEvaluationAndAssignmentInner"] = function getEvaluationAndAssignme
 };
 prototype["getEvaluationAndAssignment"] = function getEvaluationAndAssignment(user, id, logger, tmpResult) {
   const self = this;
-  [tmp3, tmp4] = _slicedToArray(this.getEvaluationAndAssignmentInner(user, id, logger), 2);
+  [tmp3, tmp4] = this.getEvaluationAndAssignmentInner(user, id, logger);
   if ("guild" !== user) {
     items = [tmp3, tmp4];
     return items;
@@ -446,10 +446,10 @@ prototype["trackCommonTriggerPointExposures"] = function trackCommonTriggerPoint
     const combined = "" + evaluationId + "|" + evaluationId;
     let tmp3 = dependencyMap2[combined];
     if (null == tmp3) {
-      const v3Result = self(1241).v3(combined);
+      const v3Result = self(1239).v3(combined);
       tmp2[combined] = v3Result;
       tmp3 = v3Result;
-      obj = self(1241);
+      obj = self(1239);
     }
     self.withExposureTracking(tmp3, () =>
       self.track(
@@ -470,10 +470,10 @@ prototype["trackCommonTriggerPointExposures"] = function trackCommonTriggerPoint
     const combined = "" + evaluationId + "|" + evaluationId;
     let tmp3 = dependencyMap2[combined];
     if (null == tmp3) {
-      const v3Result = self(1241).v3(combined);
+      const v3Result = self(1239).v3(combined);
       tmp2[combined] = v3Result;
       tmp3 = v3Result;
-      obj = self(1241);
+      obj = self(1239);
     }
     _self.withExposureTracking(tmp3, () =>
       self.track(
@@ -508,15 +508,20 @@ prototype["trackExposureSuppression"] = function trackExposureSuppression(name, 
       const _Object = Object;
       const first = Object.keys(obj.installation)[0];
       if (null != first) {
-        obj = { experiment: name, unit_type: tmp.kind, suppression_source: client_override, installation_id: first };
-        self.track(WebAnalyticsEvents.EXPERIMENT_INSTALLATION_EXPOSURE_SUPPRESSED, obj, { flush: true });
+        const obj2 = {
+          experiment: name,
+          unit_type: tmp.kind,
+          suppression_source: client_override,
+          installation_id: first,
+        };
+        self.track(WebAnalyticsEvents.EXPERIMENT_INSTALLATION_EXPOSURE_SUPPRESSED, obj2, { flush: true });
       }
     } else if ("guild" === tmp.kind) {
       const _Object2 = Object;
       const first1 = Object.keys(obj.guild)[0];
       if (null != first1) {
-        obj = { experiment: name, unit_type: tmp.kind, suppression_source: client_override, guild_id: first1 };
-        self.track(WebAnalyticsEvents.EXPERIMENT_GUILD_EXPOSURE_SUPPRESSED, obj, { flush: true });
+        const obj3 = { experiment: name, unit_type: tmp.kind, suppression_source: client_override, guild_id: first1 };
+        self.track(WebAnalyticsEvents.EXPERIMENT_GUILD_EXPOSURE_SUPPRESSED, obj3, { flush: true });
       }
     }
   }
@@ -586,8 +591,8 @@ prototype["saveTrackedExposures"] = function saveTrackedExposures(exposures) {
   } catch (tmp6) {
     const self = this;
     logger.error("Error saving tracked exposures", tmp6);
-    obj = { module: this.surface, call: "ApexExperimentStore.saveTrackedExposures" };
-    this.track(WebAnalyticsEvents.EXPERIMENT_SAVE_EXPOSURE_FAILED, obj, { flush: true });
+    const obj2 = { module: this.surface, call: "ApexExperimentStore.saveTrackedExposures" };
+    this.track(WebAnalyticsEvents.EXPERIMENT_SAVE_EXPOSURE_FAILED, obj2, { flush: true });
   }
 };
 prototype["clearForTests"] = function clearForTests() {

@@ -15,7 +15,7 @@ function updateTtl() {
   ({ state, msUntilReward } = (function getCacheTtlState() {
     value = value.getValue();
     if (null == value) {
-      let obj = { state: closure_1_8.MORE_THAN_24H_BEFORE_REWARD };
+      const obj = { state: closure_1_8.MORE_THAN_24H_BEFORE_REWARD };
       return obj;
     } else {
       const _Date2 = Date;
@@ -33,29 +33,29 @@ function updateTtl() {
           let tmp11 = _modDef3890(tmp7, 10);
           let tmp12 = tmp11;
           if (date >= tmp11) {
-            obj = { state: closure_1_8.PAST_REWARD_DATE };
-            obj7.return();
-            return obj;
-          } else if (date >= tmp7) {
-            let obj1 = {
-              state: closure_1_8.LESS_THAN_24H_BEFORE_REWARD,
-              msUntilReward: differenceInMillisecondsDefault(tmp12, date),
-            };
-            obj7.return();
-            return obj1;
-          } else if (date >= _modDef3873(tmp7, -1)) {
-            let obj2 = {
-              state: closure_1_8.LESS_THAN_24H_BEFORE_REWARD,
-              msUntilReward: differenceInMillisecondsDefault(tmp12, date),
-            };
+            let obj2 = { state: closure_1_8.PAST_REWARD_DATE };
             obj7.return();
             return obj2;
+          } else if (date >= tmp7) {
+            let obj3 = {
+              state: closure_1_8.LESS_THAN_24H_BEFORE_REWARD,
+              msUntilReward: differenceInMillisecondsDefault(tmp12, date),
+            };
+            obj7.return();
+            return obj3;
+          } else if (date >= _modDef3873(tmp7, -1)) {
+            let obj4 = {
+              state: closure_1_8.LESS_THAN_24H_BEFORE_REWARD,
+              msUntilReward: differenceInMillisecondsDefault(tmp12, date),
+            };
+            obj7.return();
+            return obj4;
           }
         }
         continue;
       }
-      const obj3 = { state: closure_1_8.MORE_THAN_24H_BEFORE_REWARD };
-      return obj3;
+      const obj5 = { state: closure_1_8.MORE_THAN_24H_BEFORE_REWARD };
+      return obj5;
     }
   })());
   if (closure_8.LESS_THAN_24H_BEFORE_REWARD === state) {
@@ -73,7 +73,7 @@ function updateTtl() {
   const tmp = (function getCacheTtlState() {
     value = value.getValue();
     if (null == value) {
-      let obj = { state: closure_1_8.MORE_THAN_24H_BEFORE_REWARD };
+      const obj = { state: closure_1_8.MORE_THAN_24H_BEFORE_REWARD };
       return obj;
     } else {
       const _Date2 = Date;
@@ -91,38 +91,38 @@ function updateTtl() {
           let tmp11 = _modDef3890(tmp7, 10);
           let tmp12 = tmp11;
           if (date >= tmp11) {
-            obj = { state: closure_1_8.PAST_REWARD_DATE };
-            obj7.return();
-            return obj;
-          } else if (date >= tmp7) {
-            let obj1 = {
-              state: closure_1_8.LESS_THAN_24H_BEFORE_REWARD,
-              msUntilReward: differenceInMillisecondsDefault(tmp12, date),
-            };
-            obj7.return();
-            return obj1;
-          } else if (date >= _modDef3873(tmp7, -1)) {
-            let obj2 = {
-              state: closure_1_8.LESS_THAN_24H_BEFORE_REWARD,
-              msUntilReward: differenceInMillisecondsDefault(tmp12, date),
-            };
+            let obj2 = { state: closure_1_8.PAST_REWARD_DATE };
             obj7.return();
             return obj2;
+          } else if (date >= tmp7) {
+            let obj3 = {
+              state: closure_1_8.LESS_THAN_24H_BEFORE_REWARD,
+              msUntilReward: differenceInMillisecondsDefault(tmp12, date),
+            };
+            obj7.return();
+            return obj3;
+          } else if (date >= _modDef3873(tmp7, -1)) {
+            let obj4 = {
+              state: closure_1_8.LESS_THAN_24H_BEFORE_REWARD,
+              msUntilReward: differenceInMillisecondsDefault(tmp12, date),
+            };
+            obj7.return();
+            return obj4;
           }
         }
         continue;
       }
-      const obj3 = { state: closure_1_8.MORE_THAN_24H_BEFORE_REWARD };
-      return obj3;
+      const obj5 = { state: closure_1_8.MORE_THAN_24H_BEFORE_REWARD };
+      return obj5;
     }
   })();
 }
-let DidNotFetchReason = {
+const DidNotFetchReason = {
   NOT_ELIGIBLE_FOR_ANY_PROGRAM_REWARD: "NOT_ELIGIBLE_FOR_ANY_PROGRAM_REWARD",
   CACHE_SHOULD_NOT_FETCH: "CACHE_SHOULD_NOT_FETCH",
 };
 let c6 = 86400000;
-const networkTtlCache = new fn(13814).NetworkTtlCache({ ttlMs: 86400000 });
+const networkTtlCache = new fn(13815).NetworkTtlCache({ ttlMs: 86400000 });
 let closure_8 = {
   MORE_THAN_24H_BEFORE_REWARD: "MORE_THAN_24H_BEFORE_REWARD",
   LESS_THAN_24H_BEFORE_REWARD: "LESS_THAN_24H_BEFORE_REWARD",
@@ -142,7 +142,7 @@ class ProgramRewardsStore extends PersistedStore {
       if (items == null) {
         items = [];
       }
-      let obj = {};
+      const obj = {};
       while (tmp2 !== undefined) {
         let tmp5 = _slicedToArray(tmp3, 2);
         [tmp6, tmp8] = tmp5;
@@ -154,7 +154,7 @@ class ProgramRewardsStore extends PersistedStore {
         obj[StringResult] = tmp8;
         continue;
       }
-      obj = {
+      const obj2 = {
         status: applyArgumentsResult.getStatus(),
         isFetching: applyArgumentsResult.isFetching(),
         isFetched: applyArgumentsResult.isFetched(),
@@ -173,13 +173,13 @@ class ProgramRewardsStore extends PersistedStore {
       if (fetchedAt == null) {
         fetchedAt = null;
       }
-      obj.fetchedAt = fetchedAt;
+      obj2.fetchedAt = fetchedAt;
       let tmp15 = null;
       if (Object.keys(obj).length > 0) {
         tmp15 = obj;
       }
-      obj.rewards = tmp15;
-      return obj;
+      obj2.rewards = tmp15;
+      return obj2;
     };
     applyArgumentsResult.__getLocalVarsEditConfig = function __getLocalVarsEditConfig() {
       let obj = {
@@ -240,7 +240,7 @@ prototype["initialize"] = function initialize(cache) {
   ({ state, msUntilReward } = (function getCacheTtlState() {
     value = value.getValue();
     if (null == value) {
-      let obj = { state: closure_1_8.MORE_THAN_24H_BEFORE_REWARD };
+      const obj = { state: closure_1_8.MORE_THAN_24H_BEFORE_REWARD };
       return obj;
     } else {
       const _Date2 = Date;
@@ -258,29 +258,29 @@ prototype["initialize"] = function initialize(cache) {
           let tmp11 = _modDef3890(tmp7, 10);
           let tmp12 = tmp11;
           if (date >= tmp11) {
-            obj = { state: closure_1_8.PAST_REWARD_DATE };
-            obj7.return();
-            return obj;
-          } else if (date >= tmp7) {
-            let obj1 = {
-              state: closure_1_8.LESS_THAN_24H_BEFORE_REWARD,
-              msUntilReward: differenceInMillisecondsDefault(tmp12, date),
-            };
-            obj7.return();
-            return obj1;
-          } else if (date >= _modDef3873(tmp7, -1)) {
-            let obj2 = {
-              state: closure_1_8.LESS_THAN_24H_BEFORE_REWARD,
-              msUntilReward: differenceInMillisecondsDefault(tmp12, date),
-            };
+            let obj2 = { state: closure_1_8.PAST_REWARD_DATE };
             obj7.return();
             return obj2;
+          } else if (date >= tmp7) {
+            let obj3 = {
+              state: closure_1_8.LESS_THAN_24H_BEFORE_REWARD,
+              msUntilReward: differenceInMillisecondsDefault(tmp12, date),
+            };
+            obj7.return();
+            return obj3;
+          } else if (date >= _modDef3873(tmp7, -1)) {
+            let obj4 = {
+              state: closure_1_8.LESS_THAN_24H_BEFORE_REWARD,
+              msUntilReward: differenceInMillisecondsDefault(tmp12, date),
+            };
+            obj7.return();
+            return obj4;
           }
         }
         continue;
       }
-      const obj3 = { state: closure_1_8.MORE_THAN_24H_BEFORE_REWARD };
-      return obj3;
+      const obj5 = { state: closure_1_8.MORE_THAN_24H_BEFORE_REWARD };
+      return obj5;
     }
   })());
   if (closure_8.LESS_THAN_24H_BEFORE_REWARD === state) {
@@ -298,7 +298,7 @@ prototype["initialize"] = function initialize(cache) {
   const tmp10 = (function getCacheTtlState() {
     value = value.getValue();
     if (null == value) {
-      let obj = { state: closure_1_8.MORE_THAN_24H_BEFORE_REWARD };
+      const obj = { state: closure_1_8.MORE_THAN_24H_BEFORE_REWARD };
       return obj;
     } else {
       const _Date2 = Date;
@@ -316,29 +316,29 @@ prototype["initialize"] = function initialize(cache) {
           let tmp11 = _modDef3890(tmp7, 10);
           let tmp12 = tmp11;
           if (date >= tmp11) {
-            obj = { state: closure_1_8.PAST_REWARD_DATE };
-            obj7.return();
-            return obj;
-          } else if (date >= tmp7) {
-            let obj1 = {
-              state: closure_1_8.LESS_THAN_24H_BEFORE_REWARD,
-              msUntilReward: differenceInMillisecondsDefault(tmp12, date),
-            };
-            obj7.return();
-            return obj1;
-          } else if (date >= _modDef3873(tmp7, -1)) {
-            let obj2 = {
-              state: closure_1_8.LESS_THAN_24H_BEFORE_REWARD,
-              msUntilReward: differenceInMillisecondsDefault(tmp12, date),
-            };
+            let obj2 = { state: closure_1_8.PAST_REWARD_DATE };
             obj7.return();
             return obj2;
+          } else if (date >= tmp7) {
+            let obj3 = {
+              state: closure_1_8.LESS_THAN_24H_BEFORE_REWARD,
+              msUntilReward: differenceInMillisecondsDefault(tmp12, date),
+            };
+            obj7.return();
+            return obj3;
+          } else if (date >= _modDef3873(tmp7, -1)) {
+            let obj4 = {
+              state: closure_1_8.LESS_THAN_24H_BEFORE_REWARD,
+              msUntilReward: differenceInMillisecondsDefault(tmp12, date),
+            };
+            obj7.return();
+            return obj4;
           }
         }
         continue;
       }
-      const obj3 = { state: closure_1_8.MORE_THAN_24H_BEFORE_REWARD };
-      return obj3;
+      const obj5 = { state: closure_1_8.MORE_THAN_24H_BEFORE_REWARD };
+      return obj5;
     }
   })();
 };
@@ -398,18 +398,16 @@ prototype["isReady"] = function isReady() {
   return tmp2;
 };
 prototype["shouldFetch"] = function shouldFetch() {
-  let obj = ProgramRewardsUtils;
+  const obj = ProgramRewardsUtils;
   if (obj.canFetchAnyProgramReward("ProgramRewardsStore.shouldFetch")) {
     if (networkTtlCache.shouldFetch()) {
-      obj = { shouldFetch: true };
+      let obj2 = { shouldFetch: true };
     } else {
-      obj = { shouldFetch: false, reason: null };
-      obj.reason = obj.CACHE_SHOULD_NOT_FETCH;
+      obj2 = { shouldFetch: false, reason: obj.CACHE_SHOULD_NOT_FETCH };
     }
   } else {
-    obj = { shouldFetch: false, reason: null };
-    obj.reason = obj.NOT_ELIGIBLE_FOR_ANY_PROGRAM_REWARD;
-    return obj;
+    const obj3 = { shouldFetch: false, reason: obj.NOT_ELIGIBLE_FOR_ANY_PROGRAM_REWARD };
+    return obj3;
   }
 };
 prototype["isError"] = function isError() {
@@ -419,19 +417,19 @@ prototype["getStatus"] = function getStatus() {
   return networkTtlCache.getStatus();
 };
 prototype["getRewardForProgram"] = function getRewardForProgram(arg0) {
-  networkTtlCache.getValue();
-  value = undefined;
+  value = networkTtlCache.getValue();
+  value2 = undefined;
   if (value != null) {
-    value = value.get(arg0);
+    value2 = value.get(arg0);
   }
-  return value;
+  return value2;
 };
 prototype["forceExpire"] = function forceExpire() {
   networkTtlCache.forceExpire();
 };
 ProgramRewardsStore.displayName = "ProgramRewardsStore";
 ProgramRewardsStore.persistKey = "ProgramRewardsStore";
-DidNotFetchReason = {
+const programRewardsStore = new ProgramRewardsStore(DispatcherDefault, {
   LOGOUT: function handleReset() {
     networkTtlCache.clear();
   },
@@ -451,7 +449,7 @@ DidNotFetchReason = {
       ({ state, msUntilReward } = (function getCacheTtlState() {
         value = value.getValue();
         if (null == value) {
-          let obj = { state: closure_1_8.MORE_THAN_24H_BEFORE_REWARD };
+          const obj = { state: closure_1_8.MORE_THAN_24H_BEFORE_REWARD };
           return obj;
         } else {
           const _Date2 = Date;
@@ -469,29 +467,29 @@ DidNotFetchReason = {
               let tmp11 = _modDef3890(tmp7, 10);
               let tmp12 = tmp11;
               if (date >= tmp11) {
-                obj = { state: closure_1_8.PAST_REWARD_DATE };
-                obj7.return();
-                return obj;
-              } else if (date >= tmp7) {
-                let obj1 = {
-                  state: closure_1_8.LESS_THAN_24H_BEFORE_REWARD,
-                  msUntilReward: differenceInMillisecondsDefault(tmp12, date),
-                };
-                obj7.return();
-                return obj1;
-              } else if (date >= _modDef3873(tmp7, -1)) {
-                let obj2 = {
-                  state: closure_1_8.LESS_THAN_24H_BEFORE_REWARD,
-                  msUntilReward: differenceInMillisecondsDefault(tmp12, date),
-                };
+                let obj2 = { state: closure_1_8.PAST_REWARD_DATE };
                 obj7.return();
                 return obj2;
+              } else if (date >= tmp7) {
+                let obj3 = {
+                  state: closure_1_8.LESS_THAN_24H_BEFORE_REWARD,
+                  msUntilReward: differenceInMillisecondsDefault(tmp12, date),
+                };
+                obj7.return();
+                return obj3;
+              } else if (date >= _modDef3873(tmp7, -1)) {
+                let obj4 = {
+                  state: closure_1_8.LESS_THAN_24H_BEFORE_REWARD,
+                  msUntilReward: differenceInMillisecondsDefault(tmp12, date),
+                };
+                obj7.return();
+                return obj4;
               }
             }
             continue;
           }
-          const obj3 = { state: closure_1_8.MORE_THAN_24H_BEFORE_REWARD };
-          return obj3;
+          const obj5 = { state: closure_1_8.MORE_THAN_24H_BEFORE_REWARD };
+          return obj5;
         }
       })());
       if (closure_8.LESS_THAN_24H_BEFORE_REWARD === state) {
@@ -509,7 +507,7 @@ DidNotFetchReason = {
       const tmp8 = (function getCacheTtlState() {
         value = value.getValue();
         if (null == value) {
-          let obj = { state: closure_1_8.MORE_THAN_24H_BEFORE_REWARD };
+          const obj = { state: closure_1_8.MORE_THAN_24H_BEFORE_REWARD };
           return obj;
         } else {
           const _Date2 = Date;
@@ -527,29 +525,29 @@ DidNotFetchReason = {
               let tmp11 = _modDef3890(tmp7, 10);
               let tmp12 = tmp11;
               if (date >= tmp11) {
-                obj = { state: closure_1_8.PAST_REWARD_DATE };
-                obj7.return();
-                return obj;
-              } else if (date >= tmp7) {
-                let obj1 = {
-                  state: closure_1_8.LESS_THAN_24H_BEFORE_REWARD,
-                  msUntilReward: differenceInMillisecondsDefault(tmp12, date),
-                };
-                obj7.return();
-                return obj1;
-              } else if (date >= _modDef3873(tmp7, -1)) {
-                let obj2 = {
-                  state: closure_1_8.LESS_THAN_24H_BEFORE_REWARD,
-                  msUntilReward: differenceInMillisecondsDefault(tmp12, date),
-                };
+                let obj2 = { state: closure_1_8.PAST_REWARD_DATE };
                 obj7.return();
                 return obj2;
+              } else if (date >= tmp7) {
+                let obj3 = {
+                  state: closure_1_8.LESS_THAN_24H_BEFORE_REWARD,
+                  msUntilReward: differenceInMillisecondsDefault(tmp12, date),
+                };
+                obj7.return();
+                return obj3;
+              } else if (date >= _modDef3873(tmp7, -1)) {
+                let obj4 = {
+                  state: closure_1_8.LESS_THAN_24H_BEFORE_REWARD,
+                  msUntilReward: differenceInMillisecondsDefault(tmp12, date),
+                };
+                obj7.return();
+                return obj4;
               }
             }
             continue;
           }
-          const obj3 = { state: closure_1_8.MORE_THAN_24H_BEFORE_REWARD };
-          return obj3;
+          const obj5 = { state: closure_1_8.MORE_THAN_24H_BEFORE_REWARD };
+          return obj5;
         }
       })();
     } else {
@@ -565,8 +563,7 @@ DidNotFetchReason = {
   },
   CURRENT_USER_UPDATE: updateTtl,
   CONNECTION_OPEN: updateTtl,
-};
-const programRewardsStore = new ProgramRewardsStore(DispatcherDefault, DidNotFetchReason);
+});
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/rewards/ProgramRewardsStore.tsx");
 

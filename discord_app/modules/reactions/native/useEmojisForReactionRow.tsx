@@ -1,6 +1,8 @@
 // discord_app/modules/reactions/native/useEmojisForReactionRow.tsx
 import noop from "../../../../_runtime/metro/00019__.js";
 
+const require = globalThis.__r;
+
 const require = fn;
 const EmojiIntention = fn(1374).EmojiIntention;
 const size = fn(2);
@@ -14,11 +16,14 @@ export const useEmojisForReactionRow = function useEmojisForReactionRow(channel,
   const items = [frequentlyUsedReactionEmojis, channel, rounded];
   const memo = noop.useMemo(() => {
     let length;
-    const found = frequentlyUsedReactionEmojis.filter((emoji) => {
-      frequentlyUsedReactionEmojis(rounded[4]);
-      const obj = { emoji, channel, intention: constants.REACTION };
-      return !obj.isEmojiFilteredOrLocked(obj);
-    });
+    const found = frequentlyUsedReactionEmojis.filter(
+      (emoji) =>
+        !frequentlyUsedReactionEmojis(rounded[4]).isEmojiFilteredOrLocked({
+          emoji,
+          channel,
+          intention: constants.REACTION,
+        }),
+    );
     if (found.length < rounded) {
       do {
         let arr = found.push(null);

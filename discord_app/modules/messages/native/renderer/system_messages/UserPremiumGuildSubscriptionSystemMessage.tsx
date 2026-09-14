@@ -15,8 +15,7 @@ export const createUserPremiumGuildSubscriptionSystemMessage = function createUs
 ) {
   const message = roleStyle.message;
   const tmp3 = getNumSubscriptionsPurchasedFromSystemMessageDefault(message);
-  let obj = useAuthorWithProcessedColor;
-  const messageAuthorWithProcessedColor = obj.getMessageAuthorWithProcessedColor(message);
+  const messageAuthorWithProcessedColor = useAuthorWithProcessedColor.getMessageAuthorWithProcessedColor(message);
   const tmp6 = formatUsernameOnClickDefault({
     message,
     author: messageAuthorWithProcessedColor,
@@ -24,12 +23,12 @@ export const createUserPremiumGuildSubscriptionSystemMessage = function createUs
   });
   if (tmp3 > 1) {
     const intl2 = util.intl;
-    obj = { username: messageAuthorWithProcessedColor.nick, usernameOnClick: tmp6, numSubscriptions: tmp3 };
-    let formatToPartsResult = intl2.formatToParts(util.t.rbj006, obj);
+    const obj2 = { username: messageAuthorWithProcessedColor.nick, usernameOnClick: tmp6, numSubscriptions: tmp3 };
+    let formatToPartsResult = intl2.formatToParts(util.t.rbj006, obj2);
   } else {
     const intl = util.intl;
-    obj = { username: messageAuthorWithProcessedColor.nick, usernameOnClick: tmp6 };
-    formatToPartsResult = intl.formatToParts(util.t.ihxM9x, obj);
+    const obj3 = { username: messageAuthorWithProcessedColor.nick, usernameOnClick: tmp6 };
+    formatToPartsResult = intl.formatToParts(util.t.ihxM9x, obj3);
   }
   const merged = Object.assign(createCommonMessageDefault(roleStyle));
   return { content: formatToPartsResult };

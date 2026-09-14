@@ -21,8 +21,8 @@ export default function BurstReactionAnimation(arg0) {
     arg0,
     Object.assign({ channelId: 0, messageId: 0, emoji: 0, isFullscreen: 0, onComplete: 0, withFadeOut: 0 }),
   );
-  let obj = burst_reactions_BurstReactionEffectUtils;
-  const burstReactionAnimationSource = obj.useBurstReactionAnimationSource({
+  const tmp2 = closure_5();
+  const burstReactionAnimationSource = burst_reactions_BurstReactionEffectUtils.useBurstReactionAnimationSource({
     emoji,
     messageId,
     channelId,
@@ -34,20 +34,20 @@ export default function BurstReactionAnimation(arg0) {
     return null;
   } else {
     if (withFadeOut) {
-      obj = { onComplete };
+      const obj2 = { onComplete };
+      let obj3 = obj2;
     } else {
-      obj = { onAnimationFinish: onComplete };
+      obj3 = { onAnimationFinish: onComplete };
     }
-    const obj1 = { style: tmp2.content, loop: false, speed: null };
+    const obj4 = { style: tmp2.content, loop: false, speed: null };
     let num = 1.2;
     if (tmp6) {
       num = 0.5;
     }
-    obj1.speed = num;
+    obj4.speed = num;
     const merged1 = Object.assign(merged);
-    const merged2 = Object.assign(obj);
-    obj1.source = burstReactionAnimationSource;
+    const merged2 = Object.assign(obj3);
+    obj4.source = burstReactionAnimationSource;
     return jsx(importDefault(withFadeOut ? 7929 : 5610), { style: tmp2.content, loop: false, speed: null });
   }
-  tmp2 = closure_5();
 }

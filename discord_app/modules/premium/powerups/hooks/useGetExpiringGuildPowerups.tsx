@@ -4,6 +4,8 @@ import getExpiringGuildEntitlements from "../utils/getExpiringGuildEntitlements.
 import noop from "../../../../../_runtime/metro/00019__.js";
 import GuildPowerupsStore from "../GuildPowerupsStore.tsx";
 
+const require = globalThis.__r;
+
 require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/powerups/hooks/useGetExpiringGuildPowerups.tsx");

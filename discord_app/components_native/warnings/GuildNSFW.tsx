@@ -6,6 +6,8 @@ import _objectWithoutProperties from "../../../_runtime/metro/00109__objectWitho
 import noop from "../../../_runtime/metro/00019__.js";
 import GuildStore from "../../stores/GuildStore.tsx";
 
+const require = globalThis.__r;
+
 const require = fn;
 let closure_3 = ["modalType", "emphasiseDisagree"];
 const jsx = fn(21).jsx;
@@ -14,16 +16,18 @@ let result = size.fileFinishedImporting("components_native/warnings/GuildNSFW.ts
 
 export default function GuildNSFW(channelId) {
   _require = channelId;
-  let obj = require("initialize");
   const items = [GuildStore];
-  const stateFromStores = obj.useStateFromStores(items, () => GuildStore.getGuild(channelId.guildId));
-  let obj1 = require("AgeGateUtils");
-  const ageGateVerifyContentForGuild = obj1.useAgeGateVerifyContentForGuild(stateFromStores);
+  const stateFromStores = require("initialize").useStateFromStores(items, () => GuildStore.getGuild(channelId.guildId));
+  let obj = require("initialize");
+  const ageGateVerifyContentForGuild = require("AgeGateUtils").useAgeGateVerifyContentForGuild(stateFromStores);
   const modalType = ageGateVerifyContentForGuild.modalType;
-  obj = {};
+  const obj2 = require("AgeGateUtils");
+  const obj3 = {};
   const callback = noop.useCallback(() => {
-    const obj = { entryPoint: channelId(8531).AgeVerificationModalEntryPoint.NSFW_GUILD };
-    const result = obj.showAgeVerificationGetStartedModal(obj);
+    const obj = AgeVerificationActionCreatorsDefault;
+    const result = obj.showAgeVerificationGetStartedModal({
+      entryPoint: channelId(8531).AgeVerificationModalEntryPoint.NSFW_GUILD,
+    });
   }, []);
   const merged = Object.assign(_objectWithoutProperties(ageGateVerifyContentForGuild, closure_3));
   let id;
@@ -36,29 +40,29 @@ export default function GuildNSFW(channelId) {
       onReturnToSafety();
     }
   }
-  obj.guildId = id;
-  obj.channelId = channelId.channelId;
+  obj3.guildId = id;
+  obj3.channelId = channelId.channelId;
   const intl = tmp(1114).intl;
-  obj.disagreement = intl.string(require("util").t["/g10LC"]);
+  obj3.disagreement = intl.string(require("util").t["/g10LC"]);
   if (require("AgeVerificationAnalyticsUtils").NsfwSpaceWarningModalType.NSFW_CHANNEL_AGE_VERIFY !== modalType) {
     if (tmp(8531).NsfwSpaceWarningModalType.GUILD_LARGE_SERVER !== modalType) {
       if (tmp(8531).NsfwSpaceWarningModalType.NSFW_CHANNEL_UNDERAGE === modalType) {
-        obj = { modalType, disagreementButtonVariant: "primary", onDisagree: handleDisagree };
-        const merged1 = Object.assign(obj);
+        const obj4 = { modalType, disagreementButtonVariant: "primary", onDisagree: handleDisagree };
+        const merged1 = Object.assign(obj3);
         return jsx(GatedContentDefault, {
           modalType,
           disagreementButtonVariant: "primary",
           onDisagree: handleDisagree,
         });
       } else {
-        obj1 = {
+        const obj5 = {
           modalType,
           onAgree: function handleAgree() {
             GuildActionCreatorsDefault.nsfwAgree(channelId.guildId);
           },
           onDisagree: handleDisagree,
         };
-        const merged2 = Object.assign(obj);
+        const merged2 = Object.assign(obj3);
         return jsx(GatedContentDefault, {
           modalType,
           onAgree: function handleAgree() {
@@ -69,7 +73,7 @@ export default function GuildNSFW(channelId) {
       }
     }
   }
-  const obj2 = {
+  const obj6 = {
     modalType,
     onAgree: callback,
     onDisagree: handleDisagree,
@@ -81,13 +85,13 @@ export default function GuildNSFW(channelId) {
   if (true === ageGateVerifyContentForGuild.emphasiseDisagree) {
     str = "secondary";
   }
-  obj2.agreementButtonVariant = str;
+  obj6.agreementButtonVariant = str;
   let str2 = "secondary";
   if (true === ageGateVerifyContentForGuild.emphasiseDisagree) {
     str2 = "primary";
   }
-  obj2.disagreementButtonVariant = str2;
-  const merged3 = Object.assign(obj);
+  obj6.disagreementButtonVariant = str2;
+  const merged3 = Object.assign(obj3);
   return jsx(GatedContentDefault, {
     modalType,
     onAgree: callback,

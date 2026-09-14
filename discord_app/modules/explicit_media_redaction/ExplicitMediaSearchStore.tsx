@@ -36,10 +36,10 @@ const explicitMediaSearchStore = new ExplicitMediaSearchStore(DispatcherDefault,
         const combined = "" + message.channel_id + ":" + message.id;
         let flag = null != tmp7;
         if (flag) {
-          const obj = { attachments: null, embeds: null };
           ({ attachments: obj2.attachments, embeds: obj2.embeds } = message);
-          dependencyMap[combined] = obj.updateMessageRecord(tmp7, obj);
+          dependencyMap[combined] = MessageRecordUtils.updateMessageRecord(tmp7, { attachments: null, embeds: null });
           flag = true;
+          const obj3 = { attachments: null, embeds: null };
         }
         return flag;
       }

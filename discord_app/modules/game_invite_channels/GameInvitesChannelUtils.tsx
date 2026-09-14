@@ -7,6 +7,8 @@ import hasFlagDefault from "../activities/utils/hasFlag.tsx";
 import _objectWithoutProperties from "../../../_runtime/metro/00109__objectWithoutProperties.js";
 import ChannelStore from "../../stores/ChannelStore.tsx";
 
+const require = globalThis.__r;
+
 require = fn;
 let closure_3 = ["data"];
 const useMemo = fn(19).useMemo;
@@ -89,8 +91,7 @@ export const useIsGameInvitePostVoiceEnabled = function useIsGameInvitePostVoice
   );
 };
 export const useFirstMessage = function useFirstMessage(stateFromStores, enabled) {
-  const obj = { enabled, allowArchived: true };
-  return obj.useFirstForumPostMessage(stateFromStores, obj);
+  return ForumPostDataLoader.useFirstForumPostMessage(stateFromStores, { enabled, allowArchived: true });
 };
 export const useGameInvitesChannelOfficialApplication = function useGameInvitesChannelOfficialApplication(id) {
   _require = id;
@@ -102,18 +103,17 @@ export const useGameInvitesChannelOfficialApplication = function useGameInvitesC
     isGameInvitesChannelResult = stateFromStores.isGameInvitesChannel();
   }
   _modDef38(isGameInvitesChannelResult, "requires a game invites channel");
-  let tmpResult = tmp(7412);
   let gameId;
   if (stateFromStores != null) {
     gameId = stateFromStores.gameId;
   }
-  const data = tmpResult.useGame(gameId).data;
+  const data = require("useGame").useGame(gameId).data;
   let officialApplicationId;
   if (data != null) {
     officialApplicationId = data.getOfficialApplicationId();
   }
-  tmpResult = tmp(7266);
-  const application = tmpResult.useApplication(officialApplicationId);
+  const tmpResult = require("useGame");
+  const application = require("ApplicationActionCreators").useApplication(officialApplicationId);
   closure_129_0 = application;
   const items1 = [application];
   return useMemo(() => {
@@ -234,15 +234,15 @@ export const useGameInvitesActiveAndArchivedThreads = function useGameInvitesAct
             continue;
           }
         }
-        arr = items.push(tmp11);
+        let arr2 = items.push(tmp11);
       }
-      let obj = { activeThreadIds: items, archivedThreadIds: null };
+      const obj2 = { activeThreadIds: items, archivedThreadIds: null };
       const items2 = [];
       HermesBuiltin.arraySpread(archivedThreadIds, HermesBuiltin.arraySpread(items1, 0));
-      obj.archivedThreadIds = items2;
-      return obj;
+      obj2.archivedThreadIds = items2;
+      return obj2;
     } else {
-      obj = { activeThreadIds, archivedThreadIds };
+      const obj = { activeThreadIds, archivedThreadIds };
       return obj;
     }
   }, items);

@@ -12,23 +12,23 @@ const result = size.fileFinishedImporting("modules/voice_panel/native/controls/b
 
 export const VoicePanelRiveMicButton = function VoicePanelRiveMicButton(arg0) {
   ({ color, muted } = arg0);
-  let obj = { style: { width: 24, height: 24, pointerEvents: "none" }, children: null };
-  obj = { dataBinding: { fill: color, on: !muted }, defaultViewModelInstance: null, fallback: null };
+  const obj = { style: { width: 24, height: 24, pointerEvents: "none" }, children: null };
+  const obj2 = { dataBinding: { fill: color, on: !muted }, defaultViewModelInstance: null, fallback: null };
   let str = "On";
   if (muted) {
     str = "Off";
   }
-  obj.defaultViewModelInstance = str;
+  obj2.defaultViewModelInstance = str;
   if (muted) {
     let MicrophoneIcon = MicrophoneSlashIcon.MicrophoneSlashIcon;
   } else {
     MicrophoneIcon = MicrophoneIcon2.MicrophoneIcon;
   }
-  obj.fallback = <MicrophoneIcon color={color} />;
+  obj2.fallback = <MicrophoneIcon color={color} />;
   obj.children = jsx(native.MicrophoneRive, {
     dataBinding: { fill: color, on: !muted },
     defaultViewModelInstance: null,
     fallback: null,
   });
-  return <View dataBinding={{ fill: color, on: !muted }} defaultViewModelInstance={null} fallback={null} />;
+  return <View style={{ width: 24, height: 24, pointerEvents: "none" }}>{null}</View>;
 };

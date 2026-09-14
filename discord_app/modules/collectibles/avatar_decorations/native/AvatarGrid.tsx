@@ -10,71 +10,68 @@ function GridAvatar(user) {
   user = user.user;
   ({ guildId, pendingAvatarSrc, pendingAvatarDecoration } = user);
   ({ size, showStatus } = user);
-  let obj = user(504);
+  const tmp = closure_7();
   const items = [PresenceStore];
-  const stateFromStores = obj.useStateFromStores(items, () => PresenceStore.getStatus(user.id));
-  let obj1 = user(504);
+  const stateFromStores = user(504).useStateFromStores(items, () => PresenceStore.getStatus(user.id));
+  const obj = user(504);
   const items1 = [AccessibilityStore];
-  const stateFromStores1 = obj1.useStateFromStores(items1, () => useReducedMotion.useReducedMotion);
+  const stateFromStores1 = user(504).useStateFromStores(items1, () => useReducedMotion.useReducedMotion);
   if (undefined === pendingAvatarDecoration) {
     pendingAvatarDecoration = user.avatarDecoration;
   }
-  obj = { avatarDecoration: pendingAvatarDecoration, status: null, statusStyle: null, size: null };
+  const obj3 = { avatarDecoration: pendingAvatarDecoration, status: null, statusStyle: null, size: null };
   let tmp6;
   if (showStatus) {
     tmp6 = stateFromStores;
   }
-  obj.status = tmp6;
-  obj.statusStyle = closure_7().avatarStatusStyle;
-  obj.size = size;
+  obj3.status = tmp6;
+  obj3.statusStyle = tmp.avatarStatusStyle;
+  obj3.size = size;
   if (undefined !== pendingAvatarSrc) {
-    obj = { source: null };
+    const obj4 = { source: null };
     const tmp2Result = tmp2(8363);
-    obj.source = tmp2Result.getAvatarSource(user, guildId, pendingAvatarSrc, stateFromStores1);
-    const merged = Object.assign(obj);
-    obj1 = obj;
+    obj4.source = tmp2Result.getAvatarSource(user, guildId, pendingAvatarSrc, stateFromStores1);
+    const merged = Object.assign(obj3);
+    let obj5 = obj4;
   } else {
-    obj1 = { user, guildId };
-    const merged1 = Object.assign(obj);
+    obj5 = { user, guildId };
+    const merged1 = Object.assign(obj3);
   }
-  return closure_5(user(1178).Avatar, obj1);
+  return closure_5(user(1176).Avatar, obj5);
 }
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-fn(4636);
-let createStyles = {
+const createStyles = fn(4636);
+let obj2 = {
   avatarRow: { flexDirection: "row", alignItems: "center", justifyContent: "space-around" },
-  avatarStatusStyle: null,
-  gridContainer: null,
+  avatarStatusStyle: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH },
+  gridContainer: { width: 108, height: 108, justifyContent: "space-around", marginLeft: 28 },
 };
-createStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
-createStyles.avatarStatusStyle = createStyles;
-createStyles.gridContainer = { width: 108, height: 108, justifyContent: "space-around", marginLeft: 28 };
-let closure_7 = createStyles.createStyles(createStyles);
+let closure_7 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/avatar_decorations/native/AvatarGrid.tsx");
 
 export default function AvatarGrid(arg0) {
   const tmp = closure_7();
-  let obj = { style: tmp.gridContainer, children: null };
-  obj = { style: tmp.avatarRow, children: null };
-  obj = { size: native.AvatarSizes.NORMAL };
+  const obj = { style: tmp.gridContainer, children: null };
+  const obj2 = { style: tmp.avatarRow, children: null };
   const merged = Object.assign(arg0);
-  const items = [hasOwnProperty(GridAvatar, obj)];
+  const items = [hasOwnProperty(GridAvatar, { size: native.AvatarSizes.NORMAL })];
+  const obj3 = { size: native.AvatarSizes.NORMAL };
   const merged1 = Object.assign(arg0);
   items[1] = hasOwnProperty(GridAvatar, { size: native.AvatarSizes.NORMAL, showStatus: true });
-  obj.children = items;
-  const items1 = [timestampProducer(View, obj)];
-  const obj2 = { style: tmp.avatarRow, children: null };
-  const obj1 = { size: native.AvatarSizes.NORMAL, showStatus: true };
+  obj2.children = items;
+  const items1 = [timestampProducer(View, obj2)];
+  const obj5 = { style: tmp.avatarRow, children: null };
+  const obj4 = { size: native.AvatarSizes.NORMAL, showStatus: true };
   const merged2 = Object.assign(arg0);
   const items2 = [hasOwnProperty(GridAvatar, { size: native.AvatarSizes.REFRESH_MEDIUM_32 })];
-  const obj3 = { size: native.AvatarSizes.REFRESH_MEDIUM_32 };
+  const obj6 = { size: native.AvatarSizes.REFRESH_MEDIUM_32 };
   const merged3 = Object.assign(arg0);
   items2[1] = hasOwnProperty(GridAvatar, { size: native.AvatarSizes.REFRESH_MEDIUM_32, showStatus: true });
-  obj2.children = items2;
-  items1[1] = timestampProducer(View, obj2);
+  obj5.children = items2;
+  items1[1] = timestampProducer(View, obj5);
   obj.children = items1;
   return timestampProducer(View, obj);
 }

@@ -18,12 +18,11 @@ export const captureMobileWebRedirectCheckoutSentryError = function captureMobil
   source,
   tags,
 ) {
-  let obj = { tags: null, extra: null };
-  obj = { app_context: mobile_web_redirect_checkout, source };
+  const obj2 = { tags: null, extra: null };
   const merged = Object.assign(tags.tags);
-  obj.tags = obj;
-  obj.extra = tags.extra;
-  obj.captureException(error, obj);
+  obj2.tags = { app_context: mobile_web_redirect_checkout, source };
+  obj2.extra = tags.extra;
+  SentryUtilsDefault.captureException(error, obj2);
 };
 export const isMobileWebRedirectCheckoutEnabled = function isMobileWebRedirectCheckoutEnabled() {
   return MetaQuestUtils.isMetaQuest();

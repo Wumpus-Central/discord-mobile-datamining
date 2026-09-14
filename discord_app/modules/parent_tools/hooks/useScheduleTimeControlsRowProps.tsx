@@ -10,17 +10,17 @@ const result = size.fileFinishedImporting("modules/parent_tools/hooks/useSchedul
 
 export default function useScheduleTimeControlsRowProps(arr) {
   if (0 === arr.length) {
-    let obj = { subLabel: null, trailing: "a" };
-    obj = { variant: "text-xs/medium", color: "text-muted", children: null };
+    const obj2 = { subLabel: null, trailing: "a" };
+    const obj3 = { variant: "text-xs/medium", color: "text-muted", children: null };
     const intl = util.intl;
-    obj.children = intl.string(_modDef2396.fOBIZH);
-    obj.subLabel = jsx(Text_Text.Text, { variant: "text-xs/medium", color: "text-muted", children: null });
-    return obj;
+    obj3.children = intl.string(_modDef2396.fOBIZH);
+    obj2.subLabel = jsx(Text_Text.Text, { variant: "text-xs/medium", color: "text-muted", children: null });
+    return obj2;
   } else {
-    const obj1 = { subLabel: null, trailing: null };
+    const obj4 = { subLabel: null, trailing: null };
     const intl2 = util.intl;
-    const obj2 = { count: arr.length };
-    obj1.subLabel = intl2.formatToPlainString(_modDef2396.XfwcpX, obj2);
+    const obj5 = { count: arr.length };
+    obj4.subLabel = intl2.formatToPlainString(_modDef2396.XfwcpX, obj5);
     const intl3 = util.intl;
     const string = intl3.string;
     const tmp11 = _modDef2396;
@@ -29,8 +29,8 @@ export default function useScheduleTimeControlsRowProps(arr) {
     } else {
       stringResult = string(tmp11["4z9fN+"]);
     }
-    obj = { variant: "text-sm/medium", color: "text-muted", children: stringResult };
-    obj1.trailing = jsx(Text_Text.Text, { variant: "text-sm/medium", color: "text-muted", children: stringResult });
-    return obj1;
+    const obj = { variant: "text-sm/medium", color: "text-muted", children: stringResult };
+    obj4.trailing = jsx(Text_Text.Text, { variant: "text-sm/medium", color: "text-muted", children: stringResult });
+    return obj4;
   }
 }

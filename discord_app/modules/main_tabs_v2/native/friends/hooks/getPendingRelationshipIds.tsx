@@ -28,21 +28,21 @@ export const getPendingRelationshipIds = function getPendingRelationshipIds(muta
       let arr = pendingIncomingIds.push(tmp3);
     }
     if (tmp5 === RelationshipTypes.PENDING_OUTGOING) {
-      arr = pendingOutgoingIds.push(tmp3);
+      let arr2 = pendingOutgoingIds.push(tmp3);
     }
     let isSpamResult = tmp5 === RelationshipTypes.PENDING_INCOMING;
     if (isSpamResult) {
       isSpamResult = RelationshipStore.isSpam(tmp3);
     }
     if (isSpamResult) {
-      let arr1 = spamIds.push(tmp3);
+      let arr3 = spamIds.push(tmp3);
     }
     let isIgnoredResult = tmp5 === RelationshipTypes.PENDING_INCOMING;
     if (isIgnoredResult) {
       isIgnoredResult = RelationshipStore.isIgnored(tmp3);
     }
     if (isIgnoredResult) {
-      let arr2 = ignoredUserIds.push(tmp3);
+      let arr4 = ignoredUserIds.push(tmp3);
     }
     continue;
   }

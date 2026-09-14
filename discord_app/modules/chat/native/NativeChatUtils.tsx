@@ -1,6 +1,6 @@
 // discord_app/modules/chat/native/NativeChatUtils.tsx
-import PlatformUtils from "../../../utils/PlatformUtils.tsx";
 import SentryUtilsDefault from "../../../utils/SentryUtils.native.tsx";
+import PlatformUtils from "../../../utils/PlatformUtils.tsx";
 import ChatNativeComponent from "../../../../discord_common/js/packages/rtn-codegen/js/ChatNativeComponent.tsx";
 import ChatChangesetUpdateTracker from "ChatChangesetUpdateTracker.tsx";
 import NativeChatModuleDefault from "../../../../discord_common/js/packages/rtn-codegen/js/NativeChatModule.tsx";
@@ -8,7 +8,7 @@ import get_ActivityIndicator from "../../../../_runtime/metro/00017__.js";
 import size from "../../../../_runtime/metro/00002__.js";
 
 ({ NativeModules: c3, findNodeHandle: closure_4 } = get_ActivityIndicator);
-let ChatScrollPosition = {
+const ChatScrollPosition = {
   TOP: 0,
   [0]: "TOP",
   MIDDLE: 1,
@@ -18,10 +18,12 @@ let ChatScrollPosition = {
   NONE: 3,
   [3]: "NONE",
 };
-ChatScrollPosition = {
+let result = size.fileFinishedImporting("modules/chat/native/NativeChatUtils.tsx");
+
+export default {
   scrollTo(arg0, arg1, arg2) {
     if (null != arg0) {
-      obj = arg2;
+      let obj = arg2;
       if (arg2 == null) {
         obj = {};
       }
@@ -85,7 +87,7 @@ ChatScrollPosition = {
   },
   scrollIntoView(arg0, arg1, arg2) {
     if (null != arg0) {
-      obj = arg2;
+      let obj = arg2;
       if (arg2 == null) {
         obj = {};
       }
@@ -107,18 +109,18 @@ ChatScrollPosition = {
   updateRows(arg0, rows) {
     if (null != arg0) {
       if (obj6.isIOS()) {
-        let tmp31Result = ChatChangesetUpdateTracker;
-        const andIncrementChangesetIdForChat = tmp31Result.getAndIncrementChangesetIdForChat(arg0);
+        const andIncrementChangesetIdForChat = ChatChangesetUpdateTracker.getAndIncrementChangesetIdForChat(arg0);
         ({ rows, forceReload } = rows);
         if (forceReload == null) {
           forceReload = false;
         }
-        let data = { category: "chat.dispatch", message: null, data: null };
+        const tmp31Result = ChatChangesetUpdateTracker;
+        const obj = { category: "chat.dispatch", message: null, data: null };
         const _HermesInternal = HermesInternal;
-        data.message = "updateRows dispatch id=" + andIncrementChangesetIdForChat + " ops=" + rows.length;
-        data = { changesetUpdateId: andIncrementChangesetIdForChat, opCount: rows.length, rows, forceReload };
-        data.data = data;
-        SentryUtilsDefault.addBreadcrumb(data);
+        obj.message = "updateRows dispatch id=" + andIncrementChangesetIdForChat + " ops=" + rows.length;
+        const obj2 = { changesetUpdateId: andIncrementChangesetIdForChat, opCount: rows.length, rows, forceReload };
+        obj.data = obj2;
+        SentryUtilsDefault.addBreadcrumb(obj);
         const Commands = ChatNativeComponent.Commands;
         const _JSON2 = JSON;
         const json = JSON.stringify(rows.rows);
@@ -153,8 +155,7 @@ ChatScrollPosition = {
             const _JSON = JSON;
             json2 = JSON.stringify(rows.scrollData);
           }
-          tmp31Result = ChatChangesetUpdateTracker;
-          const andIncrementChangesetIdForChat1 = tmp31Result.getAndIncrementChangesetIdForChat(arg0);
+          const andIncrementChangesetIdForChat1 = ChatChangesetUpdateTracker.getAndIncrementChangesetIdForChat(arg0);
           let flag = rows.HACK_iOSForceAnimations;
           if (flag == null) {
             flag = false;
@@ -168,6 +169,7 @@ ChatScrollPosition = {
             flag3 = true;
           }
           obj7.updateRows(tmp2, json1, isLoadingAtTop2, json2, andIncrementChangesetIdForChat1, flag, flag2, flag3);
+          const tmp31Result2 = ChatChangesetUpdateTracker;
         }
       }
       obj6 = PlatformUtils;
@@ -177,13 +179,14 @@ ChatScrollPosition = {
     if (null != arg0) {
       if (obj4.isIOS()) {
         const Commands = ChatNativeComponent.Commands;
-        let tmp6Result = ChatChangesetUpdateTracker;
-        Commands.clearRows(arg0, tmp6Result.getAndIncrementChangesetIdForChat(arg0));
+        Commands.clearRows(arg0, ChatChangesetUpdateTracker.getAndIncrementChangesetIdForChat(arg0));
+        const tmp6Result = ChatChangesetUpdateTracker;
       } else {
         const tmp2 = React4(arg0);
         if (null != tmp2) {
-          tmp6Result = ChatChangesetUpdateTracker;
-          NativeChatModuleDefault.clearRows(tmp2, tmp6Result.getAndIncrementChangesetIdForChat(arg0));
+          const obj = NativeChatModuleDefault;
+          obj.clearRows(tmp2, ChatChangesetUpdateTracker.getAndIncrementChangesetIdForChat(arg0));
+          const tmp6Result2 = ChatChangesetUpdateTracker;
         }
       }
       obj4 = PlatformUtils;
@@ -212,8 +215,5 @@ ChatScrollPosition = {
     obj = PlatformUtils;
   },
 };
-let result = size.fileFinishedImporting("modules/chat/native/NativeChatUtils.tsx");
-
-export default ChatScrollPosition;
 export { ChatScrollPosition };
 export const ChatScrollType = { SCROLL: 0, [0]: "SCROLL", FOCUS_ONLY: 1, [1]: "FOCUS_ONLY" };

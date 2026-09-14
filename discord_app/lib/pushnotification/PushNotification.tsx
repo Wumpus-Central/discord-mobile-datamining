@@ -6,13 +6,15 @@ import openNotificationSettingsDefault from "../../modules/native_permissions/mo
 import get_ActivityIndicator from "../../../_runtime/metro/00017__.js";
 import size from "../../../_runtime/metro/00002__.js";
 
+const require = globalThis.__r;
+
 const NativeModules = get_ActivityIndicator.NativeModules;
 const PushNotificationAndroid = NativeModules.PushNotificationAndroid;
-let tmp3 = null;
+let tmp32 = null;
 if (null != PushNotificationAndroid) {
-  tmp3 = new tmp3(NativeModules.PushNotificationAndroid);
+  tmp32 = new tmp3(NativeModules.PushNotificationAndroid);
 }
-let closure_5 = tmp3;
+let closure_5 = tmp32;
 let result = size.fileFinishedImporting("lib/pushnotification/PushNotification.tsx");
 
 export default {

@@ -3,7 +3,7 @@ import NativeDeviceLocaleModule from "../../discord_common/js/packages/rtn-codeg
 import intl_util from "util.tsx";
 import native from "../design/void/native.tsx";
 import migration from "native/migration.tsx";
-import _modDef14276 from "messages/international.messages.js";
+import _modDef14277 from "messages/international.messages.js";
 import noop from "../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -28,10 +28,10 @@ function getSystemLocale(arg0) {
   }
   return Language;
 }
-let util = fn(1116);
+const util = fn(1116);
 const normalizedLocale = util.getNormalizedLocale(str, "en-US");
-const module_1155 = fn(1155);
-obj = {
+const module_1153 = fn(1153);
+const reactFormatter = module_1153.makeReactFormatter({
   $i(children, key) {
     obj = { style: obj.italic, children };
     return jsx(native.LegacyText, { style: obj.italic, children }, key);
@@ -55,28 +55,25 @@ obj = {
     [tmp] = arg2;
     return jsx(migration.IntlLink, { target: tmp, children }, key);
   },
-};
-const reactFormatter = module_1155.makeReactFormatter(obj);
-obj = { initialLocale: normalizedLocale, defaultLocale: "en-US" };
-const intlManager = new fn(1155).IntlManager(obj);
-util = {
+});
+const intlManager = new fn(1153).IntlManager({ initialLocale: normalizedLocale, defaultLocale: "en-US" });
+const withFormattersResult = intlManager.withFormatters({
   format: reactFormatter,
-  formatToPlainString: fn(1155).stringFormatter,
-  formatToMarkdownString: fn(1155).markdownFormatter,
-  formatToParts: fn(1155).astFormatter,
-};
-util = intlManager.withFormatters(util);
+  formatToPlainString: fn(1153).stringFormatter,
+  formatToMarkdownString: fn(1153).markdownFormatter,
+  formatToParts: fn(1153).astFormatter,
+});
 const size = fn(2);
 const result = size.fileFinishedImporting("intl/index.native.tsx");
 
-export const intl = util;
+export const intl = withFormattersResult;
 export { getSystemLocale };
 export const getAvailableLocales = fn(1116).getAvailableLocales;
 export const getLanguages = fn(1116).getLanguages;
 export const useSyncMessages = function useSyncMessages(arg0) {
-  return intl_util.useSyncMessages(arg0, util);
+  return intl_util.useSyncMessages(arg0, withFormattersResult);
 };
-export const t = fn(14273)._defaultMessages;
-export const international = _modDef14276;
+export const t = fn(14274)._defaultMessages;
+export const international = _modDef14277;
 export const systemLocale = str;
 export const initialLocale = normalizedLocale;

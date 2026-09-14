@@ -1,6 +1,8 @@
 // discord_app/modules/game_claim/useGameClaimCoachmark.tsx
 import PermissionStore from "../../stores/PermissionStore.tsx";
 
+const require = globalThis.__r;
+
 const require = fn;
 const Permissions = fn(1074).Permissions;
 const size = fn(2);

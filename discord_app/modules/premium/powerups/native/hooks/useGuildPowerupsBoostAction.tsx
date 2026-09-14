@@ -40,8 +40,8 @@ export default function useGuildPowerupsBoostAction(arg0, arg1, arg2, arg3, arg4
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
-          let obj = { value, done: true };
-          return obj;
+          const obj4 = { value, done: true };
+          return obj4;
         } else {
           return { value: "HermesInternal", done: null };
         }
@@ -54,8 +54,8 @@ export default function useGuildPowerupsBoostAction(arg0, arg1, arg2, arg3, arg4
               throw value;
             } else if (arg0 === 2) {
               c3 = 3;
-              obj = { value, done: true };
-              return obj;
+              const obj7 = { value, done: true };
+              return obj7;
             } else {
               closure_128_0 = undefined;
               let availableGuildBoostSlots;
@@ -64,14 +64,13 @@ export default function useGuildPowerupsBoostAction(arg0, arg1, arg2, arg3, arg4
                 tmp15 = dependencyMap;
                 if (dependencyMap > 0) {
                   if (!handleMobileWebRedirectCheckout.hasFetched) {
-                    let obj1 = tmp2(7522);
-                    const items = [obj1.init()];
-                    let obj2 = tmp3(4534);
-                    items[1] = obj2.fetchGuildBoostSlots();
+                    const items = [tmp2(7522).init()];
+                    let obj2 = tmp2(7522);
+                    items[1] = tmp3(4534).fetchGuildBoostSlots();
                     dependencyMap = 1;
                     c3 = 1;
-                    obj1 = { value: Promise.all(items), done: false };
-                    return obj1;
+                    const obj8 = { value: Promise.all(items), done: false };
+                    return obj8;
                   }
                 }
               }
@@ -83,7 +82,7 @@ export default function useGuildPowerupsBoostAction(arg0, arg1, arg2, arg3, arg4
             throw value;
           } else if (arg0 === 2) {
             c3 = 3;
-            obj = { value, done: true };
+            let obj = { value, done: true };
             return obj;
           }
           tmp15 = undefined;
@@ -92,39 +91,39 @@ export default function useGuildPowerupsBoostAction(arg0, arg1, arg2, arg3, arg4
             PERK = constants.PERK;
           }
           closure_128_0 = PERK;
-          let obj4 = tmp3(4530);
-          availableGuildBoostSlots = obj4.getAvailableGuildBoostSlots(handleMobileWebRedirectCheckout.boostSlots);
+          availableGuildBoostSlots = tmp3(4530).getAvailableGuildBoostSlots(handleMobileWebRedirectCheckout.boostSlots);
           if (availableGuildBoostSlots.length >= closure_129_2) {
             tmp15 = tmp3(5515);
-            obj2 = {
+            const obj9 = {
               guildBoostSlots: availableGuildBoostSlots.slice(0, closure_129_2),
               guildId: closure_129_0,
               intent: closure_128_0,
             };
-            tmp15.openTransferModal(obj2);
+            tmp15.openTransferModal(obj9);
           } else if (!closure_129_4) {
-            const obj3 = { source: null, analyticsLocations: null, guildId: null, onPaymentSuccess: null };
-            obj4 = {};
+            const obj10 = { source: null, analyticsLocations: null, guildId: null, onPaymentSuccess: null };
+            const obj11 = {};
             const merged = Object.assign(closure_129_3);
-            obj4.object = constants3.BUTTON_CTA;
-            obj4.objectType = constants4.BUY;
-            obj3.source = obj4;
-            obj3.analyticsLocations = closure_129_6;
-            obj3.guildId = closure_129_0;
-            obj3.onPaymentSuccess = function onPaymentSuccess() {
-              let obj = guildId(dependencyMap[9]);
-              const availableGuildBoostSlots = obj.getAvailableGuildBoostSlots(
+            obj11.object = constants3.BUTTON_CTA;
+            obj11.objectType = constants4.BUY;
+            obj10.source = obj11;
+            obj10.analyticsLocations = closure_129_6;
+            obj10.guildId = closure_129_0;
+            obj10.onPaymentSuccess = function onPaymentSuccess() {
+              const availableGuildBoostSlots = guildId(dependencyMap[9]).getAvailableGuildBoostSlots(
                 handleMobileWebRedirectCheckout.boostSlots,
               );
               if (availableGuildBoostSlots.length >= c2) {
-                obj = { guildBoostSlots: availableGuildBoostSlots.slice(0, tmp3), guildId, intent };
-                guildId(dependencyMap[10]).openTransferModal(obj);
+                const obj2 = { guildBoostSlots: availableGuildBoostSlots.slice(0, tmp3), guildId, intent };
+                guildId(dependencyMap[10]).openTransferModal(obj2);
                 const tmpResult = guildId(dependencyMap[10]);
               }
+              const obj = guildId(dependencyMap[9]);
             };
-            const result = tmp3(7506).launchGuildBoostFlowOrAlert(obj3);
+            const result = tmp3(7506).launchGuildBoostFlowOrAlert(obj10);
             const obj6 = tmp3(7506);
           }
+          const obj5 = tmp3(4530);
         } catch (tmp50) {
           c3 = tmp;
           throw tmp50;

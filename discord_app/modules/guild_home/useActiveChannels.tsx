@@ -17,19 +17,19 @@ const result = size.fileFinishedImporting("modules/guild_home/useActiveChannels.
 export const getActiveTextChannels = function getActiveTextChannels(guildId) {
   let tmp = arg1;
   if (arg1 === undefined) {
-    let items = [ChannelStore, PermissionStore, ActiveChannelsStore, UserGuildSettingsStore];
+    const items = [ChannelStore, PermissionStore, ActiveChannelsStore, UserGuildSettingsStore];
     tmp = items;
   }
   [, , obj, obj2] = tmp;
   const activeChannelIds = obj.getActiveChannelIds(guildId);
   if (null != activeChannelIds) {
     const _Array = Array;
-    items = Array.from(activeChannelIds);
+    let arr = Array.from(activeChannelIds);
   } else {
-    items = [];
+    arr = [];
   }
   obj2.getMutedChannels(guildId);
-  const mapped = items.map((item) => require.getChannel(item));
+  const mapped = arr.map((item) => require.getChannel(item));
   const found = mapped.filter(GlobalUtils.isNotNullish);
   return found.filter((hasFlag) => {
     let hasFlagResult;

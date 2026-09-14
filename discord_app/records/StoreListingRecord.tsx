@@ -90,7 +90,7 @@ class StoreListingRecord extends tmp2 {
 }
 StoreListingRecord["createFromServer"] = function createFromServer(id) {
   const staff_notes = id.staff_notes;
-  let obj = {
+  const obj = {
     id: id.id,
     applicationId: id.sku.application_id,
     skuId: id.sku.id,
@@ -146,25 +146,25 @@ StoreListingRecord["createFromServer"] = function createFromServer(id) {
   obj.assets = mapped3;
   let tmp8 = null;
   if (null != staff_notes) {
-    obj = { content: staff_notes.content, user: null };
+    const obj2 = { content: staff_notes.content, user: null };
     let tmp9 = null;
     if (null != staff_notes.user) {
       tmp9 = new UserRecord(staff_notes.user);
     }
-    obj.user = tmp9;
-    tmp8 = obj;
+    obj2.user = tmp9;
+    tmp8 = obj2;
   }
   obj.staffNotes = tmp8;
   let tmp13 = null;
   if (null != id.guild) {
-    obj = {
+    const obj3 = {
       id: id.guild.id,
       name: id.guild.name,
       icon: id.guild.icon,
       approximateMemberCount: id.guild.approximate_member_count,
       approximatePresenceCount: id.guild.approximate_presence_count,
     };
-    tmp13 = obj;
+    tmp13 = obj3;
   }
   obj.guild = tmp13;
   let result = null;

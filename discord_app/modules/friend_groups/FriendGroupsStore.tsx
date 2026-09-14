@@ -156,8 +156,8 @@ const friendGroupsStore = new FriendGroupsStore(DispatcherDefault, {
     } else {
       const _Set = Set;
       set = new Set(userIds);
-      userIds = tmp3.userIds;
-      const found = userIds.filter((item) => !set.has(item));
+      const userIds1 = tmp3.userIds;
+      const found = userIds1.filter((item) => !set.has(item));
       let flag = found.length !== tmp3.userIds.length;
       if (flag) {
         const obj = {};

@@ -9,7 +9,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-let createStyles = fn(4636);
+const createStyles = fn(4636);
 let closure_6 = createStyles.createLegacyClassComponentStyles({
   progressCircle: { alignItems: "center", justifyContent: "center" },
   circle: { position: "absolute", width: "100%", height: "100%" },
@@ -24,11 +24,11 @@ prototype["renderCircle"] = function renderCircle() {
   const result = (size - strokeWidth) / 2;
   const result1 = result * Math.PI * 2;
   const bound = Math.min(Math.max(props.percent, 0), 100);
-  let obj = { viewBox: null, style: null, children: null };
+  const obj = { viewBox: null, style: null, children: null };
   const tmp = closure_6(this.context);
   obj.viewBox = "0 0 " + size + " " + size;
   obj.style = tmp.circle;
-  obj = {
+  const obj2 = {
     fill: "none",
     cx: size / 2,
     cy: size / 2,
@@ -37,33 +37,30 @@ prototype["renderCircle"] = function renderCircle() {
     strokeLinecap: "round",
     transform: "rotate(-90 " + size / 2 + " " + size / 2 + ")",
     stroke: props.color,
-    style: null,
+    style: { strokeDasharray: result1, strokeDashoffset: (1 - bound / 100) * result1 },
   };
-  obj = { strokeDasharray: result1, strokeDashoffset: (1 - bound / 100) * result1 };
-  obj.style = obj;
-  obj.children = React4(inlineStyles.Circle, obj);
+  obj.children = React4(inlineStyles.Circle, obj2);
   return React4(inlineStylesDefault, obj);
 };
 prototype["render"] = function render() {
   const tmp = closure_6(this.context);
   const props = this.props;
   const children = props.children;
-  let obj = { style: null, children: null };
+  const obj = { style: null, children: null };
   const items = [tmp.progressCircle, props.style];
   obj.style = items;
   const items1 = [this.renderCircle()];
   let tmp4 = null;
   if (null != children) {
-    obj = { style: tmp.circleOverlay, children };
-    tmp4 = React4(View, obj);
+    const obj2 = { style: tmp.circleOverlay, children };
+    tmp4 = React4(View, obj2);
   }
   items1[1] = tmp4;
   obj.children = items1;
   return hasOwnProperty(View, obj);
 };
 ProgressCircle.contextType = fn(4347).ThemeContext;
-createStyles = { size: 20, strokeWidth: 0.9, color: nativeDefault.unsafe_rawColors.GUILD_BOOSTING_PINK };
-ProgressCircle.defaultProps = createStyles;
+ProgressCircle.defaultProps = { size: 20, strokeWidth: 0.9, color: nativeDefault.unsafe_rawColors.GUILD_BOOSTING_PINK };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/premium/native/components/ProgressCircle.tsx");
 

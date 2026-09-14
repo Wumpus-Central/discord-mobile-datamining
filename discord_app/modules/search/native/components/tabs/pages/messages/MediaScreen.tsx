@@ -20,7 +20,7 @@ const SearchConstants = fn(7982);
   MEDIA_ITEM_GAP_WIDTH: c10,
   SearchMediaTypes: closure_11,
 } = SearchConstants);
-const EMPTY_MEDIA_RESULTS = fn(12482).EMPTY_MEDIA_RESULTS;
+const EMPTY_MEDIA_RESULTS = fn(12483).EMPTY_MEDIA_RESULTS;
 const MEDIA_MODAL_KEY = fn(1074).MEDIA_MODAL_KEY;
 const jsx = fn(21).jsx;
 let closure_15 = [];
@@ -33,12 +33,12 @@ export default noop.memo(function MediaScreen(searchContext) {
   let placeholderCount;
   let memo;
   ({ isFocused, width } = searchContext);
-  let obj = searchContext(16797);
-  const contentContainerStyles = obj.useContentContainerStyles();
-  let tmp2 = tab(16752)(width);
+  const contentContainerStyles = searchContext(16799).useContentContainerStyles();
+  let tmp2 = tab(16754)(width);
   dependencyMap = tmp2;
-  const searchMessages = searchContext(16805).useSearchMessages(searchContext, tab);
-  const obj2 = searchContext(16805);
+  let obj = searchContext(16799);
+  const searchMessages = searchContext(16807).useSearchMessages(searchContext, tab);
+  let obj2 = searchContext(16807);
   let items = [placeholderCount, memo];
   const items1 = [searchMessages];
   const stateFromStoresArray = searchContext(504).useStateFromStoresArray(
@@ -71,8 +71,12 @@ export default noop.memo(function MediaScreen(searchContext) {
     items1,
   );
   let obj3 = searchContext(504);
-  obj = { searchContext, tab, placeholderHeight: tmp2, numColumns };
-  const searchMessagesLoadingState = searchContext(16806).useSearchMessagesLoadingState(obj);
+  const searchMessagesLoadingState = searchContext(16808).useSearchMessagesLoadingState({
+    searchContext,
+    tab,
+    placeholderHeight: tmp2,
+    numColumns,
+  });
   placeholderCount = searchMessagesLoadingState.placeholderCount;
   const items2 = [searchMessages, searchContext, stateFromStoresArray];
   ({ isFirstPageLoading, isNextPageLoading } = searchMessagesLoadingState);
@@ -88,13 +92,12 @@ export default noop.memo(function MediaScreen(searchContext) {
   const callback = searchMessages.useCallback(() => {
     const nextMessages = SearchPlatformUtilsDefault.fetchNextMessages(searchContext, tab, () => {
       if (obj.isModalOpen(MEDIA_MODAL_KEY)) {
-        let tmpResult = searchContext(dependencyMap[16]);
+        const searchResultsQuery = callback1.getSearchResultsQuery(closure_1_0);
         const messages = onPressMediaItem.getMessages(
-          tmpResult.getSearchTabFetchId(closure_1_0, tab, callback1.getSearchResultsQuery(closure_1_0)),
+          searchContext(dependencyMap[16]).getSearchTabFetchId(closure_1_0, tab, searchResultsQuery),
         );
         if (null != messages) {
-          tmpResult = searchContext(dependencyMap[14]);
-          const media = tmpResult.getMedia(closure_1_0, messages);
+          const media = searchContext(dependencyMap[14]).getMedia(closure_1_0, messages);
           const items = [];
           const item = media.forEach((type) => {
             if (!tmp2) {
@@ -103,16 +106,18 @@ export default noop.memo(function MediaScreen(searchContext) {
             tmp2 =
               type.type !== constants.ATTACHMENT && type.type !== constants.EMBED && type.type !== constants.COMPONENT;
           });
+          const tmpResult3 = searchContext(dependencyMap[14]);
           const result = searchContext(dependencyMap[17]).updateMediaViewerSources(items);
-          const tmpResult1 = searchContext(dependencyMap[17]);
+          const tmpResult4 = searchContext(dependencyMap[17]);
         }
-        const searchResultsQuery = callback1.getSearchResultsQuery(closure_1_0);
+        const tmpResult = searchContext(dependencyMap[16]);
       }
       obj = searchContext(dependencyMap[15]);
     });
   }, items3);
-  let obj4 = searchContext(16806);
-  const onPressMediaItem = searchContext(16749).useOnPressMediaItem({
+  let obj4 = searchContext(16808);
+  let obj5 = { searchContext, tab, placeholderHeight: tmp2, numColumns };
+  const onPressMediaItem = searchContext(16751).useOnPressMediaItem({
     searchContext,
     allMediaResults: memo,
     onEndReached: callback,
@@ -125,18 +130,18 @@ export default noop.memo(function MediaScreen(searchContext) {
     if (searchMessages != null) {
       found = searchMessages.find((id) => id.id === media.messageId);
     }
-    let obj = ExplicitMediaRedactionNativeUtils;
     if (obj.shouldAgeVerifyForSearchMedia(media, found)) {
-      obj = { entryPoint: AgeVerificationAnalyticsUtils.AgeVerificationModalEntryPoint.SEARCH_MEDIA_PREVIEW };
-      const result = AgeVerificationActionCreatorsDefault.showAgeVerificationGetStartedModal(obj);
+      const obj2 = { entryPoint: AgeVerificationAnalyticsUtils.AgeVerificationModalEntryPoint.SEARCH_MEDIA_PREVIEW };
+      const result = AgeVerificationActionCreatorsDefault.showAgeVerificationGetStartedModal(obj2);
     } else {
-      obj = { searchContext, channelId: null, messageId: null, index: null };
+      const obj5 = { searchContext, channelId: null, messageId: null, index: null };
       ({ channelId: obj3.channelId, messageId: obj3.messageId } = media);
-      obj.index = index;
-      const result1 = BaseMessagesScreen.trackMessageItemPress(obj);
+      obj5.index = index;
+      const result1 = BaseMessagesScreen.trackMessageItemPress(obj5);
       onPressMediaItem(media, media.originView);
       const tmp2Result = BaseMessagesScreen;
     }
+    obj = ExplicitMediaRedactionNativeUtils;
   }, items4);
   const items5 = [callback1, memo, tmp2, placeholderCount];
   const memo1 = searchMessages.useMemo(() => {
@@ -144,16 +149,19 @@ export default noop.memo(function MediaScreen(searchContext) {
     const item = memo.forEach((media, itemIndex) => {
       closure_0 = itemIndex;
       const element = { type: constants.MEDIA, props: null };
-      let obj = {
+      const obj = {
         media,
         size,
         onPress(arg0) {
           return callback1(arg0, closure_0);
         },
-        containerStyle: null,
+        containerStyle: SearchPlatformUtils.getMediaGridItemStyles({
+          itemIndex,
+          numItems: memo.length,
+          numColumns,
+          spacing: closure_3_10 - 2,
+        }),
       };
-      obj = { itemIndex, numItems: memo.length, numColumns, spacing: closure_3_10 - 2 };
-      obj.containerStyle = SearchPlatformUtils.getMediaGridItemStyles(obj);
       element.props = obj;
       items.push(element);
     });
@@ -164,18 +172,18 @@ export default noop.memo(function MediaScreen(searchContext) {
         let element = { type: constants.MEDIA_PLACEHOLDER, key: null, props: null };
         let _HermesInternal = HermesInternal;
         element.key = "media-placeholder-" + length + num;
-        obj = { size, containerStyle: null };
+        let obj2 = { size, containerStyle: null };
         let obj3 = searchContext(size[14]);
-        let obj1 = { itemIndex: length + num, numItems: memo.length, numColumns, spacing: closure_1_10 - 2 };
-        obj.containerStyle = obj3.getMediaGridItemStyles(obj1);
-        element.props = obj;
+        let obj4 = { itemIndex: length + num, numItems: memo.length, numColumns, spacing: closure_1_10 - 2 };
+        obj2.containerStyle = obj3.getMediaGridItemStyles(obj4);
+        element.props = obj2;
         let arr = items.push(element);
       }
       const obj5 = searchContext(size[23]);
     }
     return items;
   }, items5);
-  obj = {
+  const obj7 = {
     data: memo1,
     searchContext,
     tab,
@@ -186,12 +194,12 @@ export default noop.memo(function MediaScreen(searchContext) {
     isFirstPageLoading: null,
     isNextPageLoading: null,
   };
-  const obj6 = searchContext(16749);
-  obj.ItemSeparatorComponent = searchContext(16756).MediaVerticalSeparator;
-  obj.numColumns = numColumns;
-  obj.isFirstPageLoading = isFirstPageLoading;
-  obj.isNextPageLoading = isNextPageLoading;
-  return jsx(tab(16807), {
+  const obj6 = searchContext(16751);
+  obj7.ItemSeparatorComponent = searchContext(16758).MediaVerticalSeparator;
+  obj7.numColumns = numColumns;
+  obj7.isFirstPageLoading = isFirstPageLoading;
+  obj7.isNextPageLoading = isNextPageLoading;
+  return jsx(tab(16809), {
     data: memo1,
     searchContext,
     tab,

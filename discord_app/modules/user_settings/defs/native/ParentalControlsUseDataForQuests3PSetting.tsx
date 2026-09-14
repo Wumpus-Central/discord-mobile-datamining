@@ -5,8 +5,8 @@ import ParentalControlledUserSettings from "../../family_center/ParentalControll
 import FamilyCenterStore from "../../../parent_tools/FamilyCenterStore.tsx";
 
 require = fn;
-fn(11601);
-let SettingBuilders = {
+const SettingBuilders = fn(11602);
+const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.CyLYKZ);
@@ -30,11 +30,10 @@ let SettingBuilders = {
     return ParentalControlledDropsOptedOut.useControlledSetting(selectedTeenId);
   },
   unsearchable: true,
-};
-SettingBuilders = SettingBuilders.createToggle(SettingBuilders);
+});
 const size = fn(2);
 let result = size.fileFinishedImporting(
   "modules/user_settings/defs/native/ParentalControlsUseDataForQuests3PSetting.tsx",
 );
 
-export default SettingBuilders;
+export default toggle;

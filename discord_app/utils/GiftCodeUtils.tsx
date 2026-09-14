@@ -11,6 +11,8 @@ import PremiumPaymentModalStore from "../stores/PremiumPaymentModalStore.tsx";
 import UserStore from "../stores/UserStore.tsx";
 import RegexUtils from "RegexUtils.tsx";
 
+const require = globalThis.__r;
+
 require = fn;
 let closure_18 = async function _resolveGiftCode(arg0) {
   if (c8 === 2) {
@@ -20,8 +22,8 @@ let closure_18 = async function _resolveGiftCode(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -34,8 +36,8 @@ let closure_18 = async function _resolveGiftCode(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c8 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj4 = { value, done: true };
+          return obj4;
         } else {
           closure_4 = tmp3;
           closure_3 = tmp7;
@@ -63,8 +65,8 @@ let closure_18 = async function _resolveGiftCode(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c8 = 3;
-          const obj1 = { value, done: true };
-          return obj1;
+          const obj5 = { value, done: true };
+          return obj5;
         } else {
           c6 = 1;
           const request = {
@@ -73,19 +75,18 @@ let closure_18 = async function _resolveGiftCode(arg0) {
             oldFormErrors: true,
             rejectWithError: false,
           };
-          let obj2 = { with_application: closure_131_1, with_subscription_plan: closure_131_2 };
-          request.query = obj2;
+          const obj6 = { with_application: closure_131_1, with_subscription_plan: closure_131_2 };
+          request.query = obj6;
           c7 = 3;
           c8 = 1;
-          const obj3 = { value: closure_132_0(closure_132_2[8]).httpGetWithCountryCodeQuery(request), done: false };
-          return obj3;
+          const obj7 = { value: closure_132_0(closure_132_2[8]).httpGetWithCountryCodeQuery(request), done: false };
+          return obj7;
         }
       } else if (2 === tmp7) {
         c6 = 0;
         closure_131_4 = closure_5;
-        obj2 = closure_132_1(closure_132_2[9]);
-        const obj4 = { resolved: false, gift_code: closure_131_0 };
-        obj2.track(closure_132_8.GIFT_CODE_RESOLVED, obj4);
+        const obj8 = { resolved: false, gift_code: closure_131_0 };
+        closure_132_1(closure_132_2[9]).track(closure_132_8.GIFT_CODE_RESOLVED, obj8);
         const tmp22 = new closure_132_1(closure_132_2[10])(closure_131_4);
         throw tmp22;
       } else if (arg0 === 1) {
@@ -94,11 +95,11 @@ let closure_18 = async function _resolveGiftCode(arg0) {
       } else if (arg0 === 2) {
         c6 = 0;
         c8 = 3;
-        const obj5 = { value, done: true };
-        return obj5;
+        const obj10 = { value, done: true };
+        return obj10;
       } else {
         body = value.body;
-        const obj6 = {
+        const obj12 = {
           resolved: true,
           gift_code: body.code,
           gift_code_max_uses: body.max_uses,
@@ -107,10 +108,10 @@ let closure_18 = async function _resolveGiftCode(arg0) {
           application_id: body.store_listing.sku.application_id,
           store_title: body.store_listing.sku.name,
         };
-        closure_132_1(closure_132_2[9]).track(closure_132_8.GIFT_CODE_RESOLVED, obj6, { flush: true });
+        closure_132_1(closure_132_2[9]).track(closure_132_8.GIFT_CODE_RESOLVED, obj12, { flush: true });
         c6 = 0;
         c8 = 3;
-        obj = { value: body, done: true };
+        const obj = { value: body, done: true };
         return obj;
       }
     } catch (tmp25) {
@@ -140,7 +141,6 @@ function getGiftCodeRedeemError(error, currentUser) {
     return intl8.string(util.t.roztIr);
   } else if (constants2.INVALID_GIFT_REDEMPTION_SUBSCRIPTION_INCOMPATIBLE === code) {
     const intl6 = util.intl;
-    let obj = PremiumUtils;
     const intl7 = util.intl;
     const string = intl7.string;
     const t = util.t;
@@ -149,8 +149,8 @@ function getGiftCodeRedeemError(error, currentUser) {
     } else {
       stringResult = string(t.FSOz78);
     }
-    obj = { planName: stringResult };
-    return intl6.formatToPlainString(util.t["4YTHKw"], obj);
+    const obj2 = { planName: stringResult };
+    return intl6.formatToPlainString(util.t["4YTHKw"], obj2);
   } else if (constants2.INVALID_GIFT_REDEMPTION_SUBSCRIPTION_MANAGED === code) {
     const intl5 = util.intl;
     return intl5.string(util.t["9i1J30"]);
@@ -360,10 +360,9 @@ export const resolveGiftCode = function resolveGiftCode() {
   return applyArgumentsResult;
 };
 export const trackGiftCodeCopy = function trackGiftCodeCopy(giftCode, sku) {
-  const obj = {};
   const merged = Object.assign(getAnalyticsDataForSKUDefault(sku, false, false));
   const merged1 = Object.assign(giftCode.analyticsData);
-  obj.track(constants.GIFT_CODE_COPIED, obj);
+  AnalyticsUtilsDefault.track(constants.GIFT_CODE_COPIED, {});
 };
 export const getStep = function getStep(arg0, isSubscription, error) {
   ({ accepted, accepting } = error);
@@ -396,8 +395,8 @@ export const getHeaderText = function getHeaderText(arg0, isSubscription, name) 
   } else if (constants3.SUCCESS === arg0) {
     const intl = util.intl;
     if (isSubscription.isSubscription) {
-      let obj = { skuName: name.name };
-      let formatToPlainStringResult = intl.formatToPlainString(util.t["1C2BG/"], obj);
+      const obj2 = { skuName: name.name };
+      let formatToPlainStringResult = intl.formatToPlainString(util.t["1C2BG/"], obj2);
     } else {
       formatToPlainStringResult = intl.string(util.t["+BNMcF"]);
     }
@@ -406,7 +405,7 @@ export const getHeaderText = function getHeaderText(arg0, isSubscription, name) 
     const CONFIRM = constants3.CONFIRM;
     const intl3 = util.intl;
     if (isSubscription.isSubscription) {
-      obj = { skuName: name.name };
+      const obj = { skuName: name.name };
       let formatToPlainStringResult1 = intl3.formatToPlainString(util.t["2VN4N9"], obj);
     } else {
       formatToPlainStringResult1 = intl3.string(util.t.RmamAI);
@@ -459,30 +458,30 @@ export const getButtonText = function getButtonText(arg0, giftStyle, isCustomGif
 export const getSubscriptionGiftSuccessText = function getSubscriptionGiftSuccessText(getOrFetchSubscriptionPlan) {
   _require = getOrFetchSubscriptionPlan;
   const match = require("module_4821").match(getOrFetchSubscriptionPlan);
-  let obj = { interval: constants6.MONTH, premiumSubscriptionType: closure_13.TIER_2 };
+  const obj = { interval: constants6.MONTH, premiumSubscriptionType: closure_13.TIER_2 };
   const str = require("module_4821");
-  obj = { interval: constants6.YEAR, premiumSubscriptionType: closure_13.TIER_2 };
-  const withResult = match.with(obj, () => {
+  const obj2 = { interval: constants6.YEAR, premiumSubscriptionType: closure_13.TIER_2 };
+  const withResult = match.with({ interval: constants6.MONTH, premiumSubscriptionType: closure_13.TIER_2 }, () => {
     const intl = util.intl;
     return intl.formatToPlainString(util.t.O2bEOt, { intervalCount: subscriptionPlan.intervalCount });
   });
-  const obj1 = { interval: constants6.MONTH, premiumSubscriptionType: closure_13.TIER_1 };
+  const obj3 = { interval: constants6.MONTH, premiumSubscriptionType: closure_13.TIER_1 };
   const withResult1 = match
-    .with(obj, () => {
+    .with({ interval: constants6.MONTH, premiumSubscriptionType: closure_13.TIER_2 }, () => {
       const intl = util.intl;
       return intl.formatToPlainString(util.t.O2bEOt, { intervalCount: subscriptionPlan.intervalCount });
     })
-    .with(obj, () => {
+    .with({ interval: constants6.YEAR, premiumSubscriptionType: closure_13.TIER_2 }, () => {
       const intl = util.intl;
       return intl.formatToPlainString(util.t["ZEvHF+"], { intervalCount: subscriptionPlan.intervalCount });
     });
-  const obj2 = { interval: constants6.YEAR, premiumSubscriptionType: closure_13.TIER_1 };
+  const obj4 = { interval: constants6.YEAR, premiumSubscriptionType: closure_13.TIER_1 };
   const withResult2 = match
-    .with(obj, () => {
+    .with({ interval: constants6.MONTH, premiumSubscriptionType: closure_13.TIER_2 }, () => {
       const intl = util.intl;
       return intl.formatToPlainString(util.t.O2bEOt, { intervalCount: subscriptionPlan.intervalCount });
     })
-    .with(obj, () => {
+    .with({ interval: constants6.YEAR, premiumSubscriptionType: closure_13.TIER_2 }, () => {
       const intl = util.intl;
       return intl.formatToPlainString(util.t["ZEvHF+"], { intervalCount: subscriptionPlan.intervalCount });
     })
@@ -491,11 +490,11 @@ export const getSubscriptionGiftSuccessText = function getSubscriptionGiftSucces
       return intl.formatToPlainString(util.t.gjKbF4, { intervalCount: subscriptionPlan.intervalCount });
     });
   return match
-    .with(obj, () => {
+    .with({ interval: constants6.MONTH, premiumSubscriptionType: closure_13.TIER_2 }, () => {
       const intl = util.intl;
       return intl.formatToPlainString(util.t.O2bEOt, { intervalCount: subscriptionPlan.intervalCount });
     })
-    .with(obj, () => {
+    .with({ interval: constants6.YEAR, premiumSubscriptionType: closure_13.TIER_2 }, () => {
       const intl = util.intl;
       return intl.formatToPlainString(util.t["ZEvHF+"], { intervalCount: subscriptionPlan.intervalCount });
     })
@@ -522,7 +521,7 @@ export const getSubscriptionGiftStartHeaderText = function getSubscriptionGiftSt
   if (null == name) {
     if (null != sender) {
       const intl2 = require("util").intl;
-      let obj = { sender };
+      const obj = { sender };
       let formatToPlainStringResult = intl2.formatToPlainString(require("util").t.td2m3W, obj);
     } else {
       let intl = require("util").intl;
@@ -533,19 +532,19 @@ export const getSubscriptionGiftStartHeaderText = function getSubscriptionGiftSt
     intervalCount = getOrFetchSubscriptionPlan.intervalCount;
     if (null != sender) {
       const match = require("module_4821").match(getOrFetchSubscriptionPlan);
-      obj = { interval: constants6.MONTH };
+      const obj2 = { interval: constants6.MONTH };
       const str = require("module_4821");
-      const obj1 = { interval: constants6.YEAR };
-      const withResult = match.with(obj, () => {
+      const obj3 = { interval: constants6.YEAR };
+      const withResult = match.with(obj2, () => {
         const intl = util.intl;
         return intl.formatToPlainString(util.t["/RDIEA"], { username: sender, skuName, intervalCount });
       });
       let otherwiseResult = match
-        .with(obj, () => {
+        .with(obj2, () => {
           const intl = util.intl;
           return intl.formatToPlainString(util.t["/RDIEA"], { username: sender, skuName, intervalCount });
         })
-        .with(obj1, () => {
+        .with(obj3, () => {
           const intl = util.intl;
           return intl.formatToPlainString(util.t["3CX6Ev"], { username: sender, skuName, intervalCount });
         })
@@ -554,29 +553,29 @@ export const getSubscriptionGiftStartHeaderText = function getSubscriptionGiftSt
           return intl.formatToPlainString(util.t.td2m3W, { sender });
         });
       const withResult1 = match
-        .with(obj, () => {
+        .with(obj2, () => {
           const intl = util.intl;
           return intl.formatToPlainString(util.t["/RDIEA"], { username: sender, skuName, intervalCount });
         })
-        .with(obj1, () => {
+        .with(obj3, () => {
           const intl = util.intl;
           return intl.formatToPlainString(util.t["3CX6Ev"], { username: sender, skuName, intervalCount });
         });
     } else {
       const match1 = require("module_4821").match(getOrFetchSubscriptionPlan);
-      const obj2 = { interval: constants6.MONTH };
+      const obj4 = { interval: constants6.MONTH };
       const str2 = require("module_4821");
-      const obj3 = { interval: constants6.YEAR };
-      const withResult2 = match1.with(obj2, () => {
+      const obj5 = { interval: constants6.YEAR };
+      const withResult2 = match1.with(obj4, () => {
         const intl = util.intl;
         return intl.formatToPlainString(util.t["2O4lo5"], { skuName, intervalCount });
       });
       otherwiseResult = match1
-        .with(obj2, () => {
+        .with(obj4, () => {
           const intl = util.intl;
           return intl.formatToPlainString(util.t["2O4lo5"], { skuName, intervalCount });
         })
-        .with(obj3, () => {
+        .with(obj5, () => {
           const intl = util.intl;
           return intl.formatToPlainString(util.t["+XjmsR"], { skuName, intervalCount });
         })
@@ -585,11 +584,11 @@ export const getSubscriptionGiftStartHeaderText = function getSubscriptionGiftSt
           return intl.string(sender(intervalCount[12]).t.hrnGng);
         });
       const withResult3 = match1
-        .with(obj2, () => {
+        .with(obj4, () => {
           const intl = util.intl;
           return intl.formatToPlainString(util.t["2O4lo5"], { skuName, intervalCount });
         })
-        .with(obj3, () => {
+        .with(obj5, () => {
           const intl = util.intl;
           return intl.formatToPlainString(util.t["+XjmsR"], { skuName, intervalCount });
         });
@@ -611,8 +610,8 @@ export const getBodyText = function getBodyText(arg0) {
       }
     }
     const intl4 = subscriptionPlan(1114).intl;
-    let obj = { onGoToLibrary };
-    let formatResult = intl4.format(subscriptionPlan(1114).t["5zyz9y"], obj);
+    const obj2 = { onGoToLibrary };
+    let formatResult = intl4.format(subscriptionPlan(1114).t["5zyz9y"], obj2);
     if (null == tmp17) {
       let tmp22 = null;
       if (null != error) {
@@ -624,51 +623,51 @@ export const getBodyText = function getBodyText(arg0) {
   } else if (constants3.SUCCESS === step) {
     if (null != subscriptionPlan) {
       const match = subscriptionPlan(4821).match(subscriptionPlan);
-      obj = { interval: constants6.MONTH, premiumSubscriptionType: closure_13.TIER_2 };
+      const obj3 = { interval: constants6.MONTH, premiumSubscriptionType: closure_13.TIER_2 };
       const str = subscriptionPlan(4821);
-      const obj1 = { interval: constants6.YEAR, premiumSubscriptionType: closure_13.TIER_2 };
-      const withResult = match.with(obj, () => {
+      const obj4 = { interval: constants6.YEAR, premiumSubscriptionType: closure_13.TIER_2 };
+      const withResult = match.with(obj3, () => {
         const intl = util.intl;
         return intl.formatToPlainString(util.t.O2bEOt, { intervalCount: subscriptionPlan.intervalCount });
       });
-      const obj2 = { interval: constants6.MONTH, premiumSubscriptionType: closure_13.TIER_1 };
+      const obj5 = { interval: constants6.MONTH, premiumSubscriptionType: closure_13.TIER_1 };
       const withResult1 = match
-        .with(obj, () => {
+        .with(obj3, () => {
           const intl = util.intl;
           return intl.formatToPlainString(util.t.O2bEOt, { intervalCount: subscriptionPlan.intervalCount });
         })
-        .with(obj1, () => {
+        .with(obj4, () => {
           const intl = util.intl;
           return intl.formatToPlainString(util.t["ZEvHF+"], { intervalCount: subscriptionPlan.intervalCount });
         });
-      const obj3 = { interval: constants6.YEAR, premiumSubscriptionType: closure_13.TIER_1 };
+      const obj6 = { interval: constants6.YEAR, premiumSubscriptionType: closure_13.TIER_1 };
       const withResult2 = match
-        .with(obj, () => {
+        .with(obj3, () => {
           const intl = util.intl;
           return intl.formatToPlainString(util.t.O2bEOt, { intervalCount: subscriptionPlan.intervalCount });
         })
-        .with(obj1, () => {
+        .with(obj4, () => {
           const intl = util.intl;
           return intl.formatToPlainString(util.t["ZEvHF+"], { intervalCount: subscriptionPlan.intervalCount });
         })
-        .with(obj2, () => {
+        .with(obj5, () => {
           const intl = util.intl;
           return intl.formatToPlainString(util.t.gjKbF4, { intervalCount: subscriptionPlan.intervalCount });
         });
       let otherwiseResult = match
-        .with(obj, () => {
+        .with(obj3, () => {
           const intl = util.intl;
           return intl.formatToPlainString(util.t.O2bEOt, { intervalCount: subscriptionPlan.intervalCount });
         })
-        .with(obj1, () => {
+        .with(obj4, () => {
           const intl = util.intl;
           return intl.formatToPlainString(util.t["ZEvHF+"], { intervalCount: subscriptionPlan.intervalCount });
         })
-        .with(obj2, () => {
+        .with(obj5, () => {
           const intl = util.intl;
           return intl.formatToPlainString(util.t.gjKbF4, { intervalCount: subscriptionPlan.intervalCount });
         })
-        .with(obj3, () => {
+        .with(obj6, () => {
           const intl = util.intl;
           return intl.formatToPlainString(util.t.GIe7Bw, { intervalCount: subscriptionPlan.intervalCount });
         })
@@ -677,26 +676,26 @@ export const getBodyText = function getBodyText(arg0) {
           return intl.string(subscriptionPlan(1114).t["5ayf7w"]);
         });
       const withResult3 = match
-        .with(obj, () => {
+        .with(obj3, () => {
           const intl = util.intl;
           return intl.formatToPlainString(util.t.O2bEOt, { intervalCount: subscriptionPlan.intervalCount });
         })
-        .with(obj1, () => {
+        .with(obj4, () => {
           const intl = util.intl;
           return intl.formatToPlainString(util.t["ZEvHF+"], { intervalCount: subscriptionPlan.intervalCount });
         })
-        .with(obj2, () => {
+        .with(obj5, () => {
           const intl = util.intl;
           return intl.formatToPlainString(util.t.gjKbF4, { intervalCount: subscriptionPlan.intervalCount });
         })
-        .with(obj3, () => {
+        .with(obj6, () => {
           const intl = util.intl;
           return intl.formatToPlainString(util.t.GIe7Bw, { intervalCount: subscriptionPlan.intervalCount });
         });
     } else {
       const intl3 = subscriptionPlan(1114).intl;
-      const obj4 = { skuName: sku.name };
-      otherwiseResult = intl3.formatToPlainString(subscriptionPlan(1114).t["3CPsbo"], obj4);
+      const obj7 = { skuName: sku.name };
+      otherwiseResult = intl3.formatToPlainString(subscriptionPlan(1114).t["3CPsbo"], obj7);
     }
     return otherwiseResult;
   } else {
@@ -710,11 +709,11 @@ export const getBodyText = function getBodyText(arg0) {
         d8rUdy = subscriptionPlan(1114).t.d8rUdy;
       }
       const intl2 = tmp5(1114).intl;
-      const obj5 = { skuName: sku.name, intervalCount: subscriptionPlan.intervalCount };
-      return intl2.format(d8rUdy, obj5);
+      const obj8 = { skuName: sku.name, intervalCount: subscriptionPlan.intervalCount };
+      return intl2.format(d8rUdy, obj8);
     } else {
       let intl = subscriptionPlan(1114).intl;
-      obj = { skuName: sku.name };
+      const obj = { skuName: sku.name };
       return intl.formatToPlainString(subscriptionPlan(1114).t.l6Ea4Z, obj);
     }
   }
@@ -764,7 +763,7 @@ export const processGiftCodeInput = function processGiftCodeInput(str) {
   if (null == match) {
     return null;
   } else {
-    [r10016, r10017, str3] = _slicedToArray(match, 3);
+    [r10016, r10017, str3] = match;
     let replaced = null;
     if (null != str3) {
       const _RegExp = RegExp;
@@ -799,7 +798,7 @@ export const useGetGiftCode = function useGetGiftCode(arg0, arg1) {
 export const trackStep = function trackStep(giftCode) {
   giftCode = giftCode.giftCode;
   ({ step, customMessage, emojiName, soundId, productLine } = giftCode);
-  const obj = {
+  const obj3 = {
     to_step: step,
     has_custom_message: null != giftCode.giftStyle,
     is_custom_message_edited: null,
@@ -814,11 +813,11 @@ export const trackStep = function trackStep(giftCode) {
     const intl = util.intl;
     tmp2 = customMessage !== intl.string(util.t.ZkOo1U);
   }
-  obj.is_custom_message_edited = tmp2;
+  obj3.is_custom_message_edited = tmp2;
   ({ giftStyle: obj2.gift_style, code: obj2.gift_code } = giftCode);
-  obj.emoji_name = emojiName;
-  obj.sound_id = soundId;
-  obj.product_line = productLine;
-  obj.track(constants.GIFT_ACCEPT_STEP, obj);
+  obj3.emoji_name = emojiName;
+  obj3.sound_id = soundId;
+  obj3.product_line = productLine;
+  AnalyticsUtilsDefault.track(constants.GIFT_ACCEPT_STEP, obj3);
 };
 export { getGiftCodeRedeemError };

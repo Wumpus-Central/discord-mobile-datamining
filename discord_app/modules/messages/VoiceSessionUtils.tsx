@@ -7,6 +7,8 @@ import UserAffinitiesV2Store from "../user_affinities/UserAffinitiesV2Store.tsx"
 import ChannelStore from "../../stores/ChannelStore.tsx";
 import UserStore from "../../stores/UserStore.tsx";
 
+const require = globalThis.__r;
+
 require = fn;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/messages/VoiceSessionUtils.tsx");
@@ -86,8 +88,7 @@ export const useSortedVoiceSessionParticipants = function useSortedVoiceSessionP
 export const getVoiceSessionMessageContent = function getVoiceSessionMessageContent(channel_id) {
   _require = ChannelStore.getChannel(channel_id.channel_id);
   let tmp2 = getHumanizedCallDurationDefault(channel_id);
-  let obj = require("useMessageAuthor");
-  const messageAuthor = obj.getMessageAuthor(channel_id);
+  const messageAuthor = require("useMessageAuthor").getMessageAuthor(channel_id);
   closure_129_0 = channel_id;
   const call = channel_id.call;
   let reduced;
@@ -111,6 +112,7 @@ export const getVoiceSessionMessageContent = function getVoiceSessionMessageCont
     reduced = [];
   }
   const userAffinitiesMap = UserAffinitiesV2Store.getUserAffinitiesMap();
+  let obj = require("useMessageAuthor");
   const result = require("maybeSortByProbability").maybeSortByProbability(
     reduced,
     userAffinitiesMap,
@@ -122,11 +124,11 @@ export const getVoiceSessionMessageContent = function getVoiceSessionMessageCont
   });
   if (null == tmp2) {
     const intl = tmp3(1114).intl;
-    obj = { username: messageAuthor.nick, usernameOnClick: tmp3(12).identity };
-    let formatToPlainStringResult = intl.formatToPlainString(tmp3(1114).t.HzBfIN, obj);
+    const obj2 = { username: messageAuthor.nick, usernameOnClick: tmp3(12).identity };
+    let formatToPlainStringResult = intl.formatToPlainString(tmp3(1114).t.HzBfIN, obj2);
   } else {
     const intl2 = tmp3(1114).intl;
-    obj = {
+    const obj3 = {
       userCount: mapped.length + 1,
       username: messageAuthor.nick,
       usernameOnClick: tmp3(12).identity,
@@ -142,17 +144,17 @@ export const getVoiceSessionMessageContent = function getVoiceSessionMessageCont
     if (first != null) {
       nick = first.messageAuthor.nick;
     }
-    obj.username2 = nick;
-    obj.username2OnClick = tmp3(12).identity;
+    obj3.username2 = nick;
+    obj3.username2OnClick = tmp3(12).identity;
     let nick1;
     if (mapped[1] != null) {
       nick1 = tmp7.messageAuthor.nick;
     }
-    obj.username3 = nick1;
-    obj.username3OnClick = tmp3(12).identity;
-    obj.otherCount = mapped.length - 1;
-    obj.duration = tmp2;
-    formatToPlainStringResult = intl2.formatToPlainString(tmp3(1114).t.atbXuX, obj);
+    obj3.username3 = nick1;
+    obj3.username3OnClick = tmp3(12).identity;
+    obj3.otherCount = mapped.length - 1;
+    obj3.duration = tmp2;
+    formatToPlainStringResult = intl2.formatToPlainString(tmp3(1114).t.atbXuX, obj3);
   }
   return formatToPlainStringResult;
 };

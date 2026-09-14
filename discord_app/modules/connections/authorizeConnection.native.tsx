@@ -85,11 +85,10 @@ export default function authorizeConnection(overrideUrl) {
             isFederated = value.isFederated;
           }
           if (true === isFederated) {
-            let tmp28Result = tmp28(4603);
-            tmp28Result.hideActionSheet();
-            tmp28Result = tmp28(4839);
-            obj = { platformType, location: _location, successRedirect };
-            tmp28Result.pushLazy(handleModalClose5(1896)(9412, dependencyMap.paths), obj);
+            tmp28(4603).hideActionSheet();
+            const tmp28Result = tmp28(4603);
+            const obj2 = { platformType, location: _location, successRedirect };
+            tmp28(4839).pushLazy(handleModalClose5(1896)(9412, dependencyMap.paths), obj2);
             if (null != onClose) {
               const handleModalClose2 = function handleModalClose() {
                 if (require != null) {
@@ -99,26 +98,27 @@ export default function authorizeConnection(overrideUrl) {
               };
               handleModalClose5 = handleModalClose2;
               const subscription3 = tmp28(573).subscribe("MODAL_POP", handleModalClose2);
-              const tmp28Result1 = tmp28(573);
+              const tmp28Result5 = tmp28(573);
             }
+            const tmp28Result4 = tmp28(4839);
           } else {
             if (null != overrideUrl) {
               if (platformType === closure_3) {
-                let obj2 = handleModalClose5(8488);
-                const obj1 = {
+                const obj4 = {
                   shouldConfirm: true,
                   href: overrideUrl,
                   onConfirm() {
                     LinkingDefault.openURL(overrideUrl);
                   },
                 };
-                obj2.handleClick(obj1);
+                handleModalClose5(8488).handleClick(obj4);
+                const obj3 = handleModalClose5(8488);
               }
             }
-            obj2 = { location: _location, successRedirect };
-            const tmp28Result2 = tmp28(5487);
+            const obj5 = { location: _location, successRedirect };
+            const tmp28Result6 = tmp28(5487);
             tmp28(5487)
-              .authorize(platformType, obj2)
+              .authorize(platformType, obj5)
               .then((body) => {
                 const url = body.body.url;
                 if (null != url) {
@@ -126,7 +126,7 @@ export default function authorizeConnection(overrideUrl) {
                   const obj = overrideUrl(4331);
                 }
               });
-            const authorizeResult = tmp28(5487).authorize(platformType, obj2);
+            const authorizeResult = tmp28(5487).authorize(platformType, obj5);
           }
           const obj18 = overrideUrl(5364);
         }

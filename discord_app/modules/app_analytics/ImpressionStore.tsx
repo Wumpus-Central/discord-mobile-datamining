@@ -1,7 +1,9 @@
 // discord_app/modules/app_analytics/ImpressionStore.tsx
 import discord_common_AnalyticsUtils from "../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
-import identity from "../../../_runtime/metro/01244__.js";
+import identity from "../../../_runtime/metro/01242__.js";
 import size from "../../../_runtime/metro/00002__.js";
+
+const require = globalThis.__r;
 
 let closure_2 = Object.freeze({ debugTrackedData: null, impressions: [] });
 const withEqualityFn = identity.createWithEqualityFn(() => closure_2);
@@ -35,10 +37,9 @@ export const setDebugTrackedData = function setDebugTrackedData(arg0, arg1) {
   dependencyMap = arg1;
   require("ReactBatchUpdates").batchUpdates(() => {
     withEqualityFn.setState(() => {
-      let obj = { debugTrackedData: null };
-      obj = { name };
+      const obj = { debugTrackedData: null };
       const merged = Object.assign(closure_1_1);
-      obj.debugTrackedData = obj;
+      obj.debugTrackedData = { name };
       return obj;
     });
   });

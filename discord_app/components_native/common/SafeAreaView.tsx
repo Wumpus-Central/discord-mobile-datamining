@@ -1,5 +1,5 @@
 // discord_app/components_native/common/SafeAreaView.tsx
-import _modDef1332 from "../../../_runtime/metro/01332__.js";
+import _modDef1330 from "../../../_runtime/metro/01330__.js";
 import useSafeAreaInsetsDefault from "../../modules/safe_area/useSafeAreaInsets.native.tsx";
 import useRefValueDefault from "../../hooks/useRefValue.tsx";
 import noop from "../../../_runtime/metro/00019__.js";
@@ -31,7 +31,6 @@ export const SafeAreaPaddingView = function SafeAreaPaddingView(top) {
   let current;
   closure_2 = undefined;
   const rect = useSafeAreaInsetsDefault();
-  let obj1 = noop;
   const ref = noop.useRef(null);
   if (style == null) {
     style = {};
@@ -39,37 +38,37 @@ export const SafeAreaPaddingView = function SafeAreaPaddingView(top) {
   let items = [style, , , ,];
   let tmp9;
   if (flag) {
-    let obj = { paddingTop: rect.top + tmp5 };
+    const obj = { paddingTop: rect.top + tmp5 };
     tmp9 = obj;
   }
   items[1] = tmp9;
   let tmp10;
   if (flag2) {
-    obj = { paddingBottom: rect.bottom + tmp6 };
-    tmp10 = obj;
+    const obj3 = { paddingBottom: rect.bottom + tmp6 };
+    tmp10 = obj3;
   }
   items[2] = tmp10;
   let tmp11;
   if (flag3) {
-    obj1 = { paddingLeft: rect.left + tmp7 };
-    tmp11 = obj1;
+    const obj4 = { paddingLeft: rect.left + tmp7 };
+    tmp11 = obj4;
   }
   items[3] = tmp11;
   let tmp12;
   if (flag4) {
-    const obj2 = { paddingRight: rect.right + tmp8 };
-    tmp12 = obj2;
+    const obj5 = { paddingRight: rect.right + tmp8 };
+    tmp12 = obj5;
   }
   items[4] = tmp12;
   current = items;
   const tmp13 = useRefValueDefault(ref);
-  const tmp14 = _modDef1332(items, tmp13);
+  const tmp14 = _modDef1330(items, tmp13);
   closure_2 = tmp14;
   if (tmp14) {
     current = tmp13;
     items = tmp13;
   }
-  const insertionEffect = obj1.useInsertionEffect(() => {
+  const insertionEffect = noop.useInsertionEffect(() => {
     if (!closure_2) {
       ref.current = current;
     }

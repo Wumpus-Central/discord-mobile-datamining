@@ -19,7 +19,7 @@ import _modDef8970 from "../../../../discord_assets/assets/orbs/orb_profile_badg
 import FractionalNitroCoinIllustration from "FractionalNitroCoinIllustration.tsx";
 import collectibles_CollectiblesUtils from "CollectiblesUtils.tsx";
 import getProductName from "../utils/getProductName.tsx";
-import _modDef11145 from "../../../../discord_assets/assets/collectibles/previews/sample_profile_small.png.js";
+import _modDef11146 from "../../../../discord_assets/assets/collectibles/previews/sample_profile_small.png.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -28,18 +28,18 @@ function ProfileEffectAssetPreview(item) {
   const tmp4 = useProfileEffectDefault(item.item.skuId);
   let tmp5 = null;
   if (null != tmp4) {
-    let obj = { style: tmp.profileEffectContainer, children: null };
-    obj = { source: null, alt: null, style: null, resizeMode: "cover" };
-    obj = { uri: _modDef11145 };
-    obj.source = obj;
-    obj.alt = tmp4.accessibilityLabel;
-    obj.style = tmp.profileEffect;
-    const items = [React5(FastImageDefault, obj)];
-    const obj1 = { style: tmp.profileEffect, source: null, alt: null, resizeMode: "cover" };
-    const obj2 = { uri: tmp4.thumbnailPreviewSrc };
-    obj1.source = obj2;
-    obj1.alt = tmp4.title;
-    items[1] = React5(FastImageDefault, obj1);
+    const obj = { style: tmp.profileEffectContainer, children: null };
+    const obj2 = { source: null, alt: null, style: null, resizeMode: "cover" };
+    const obj3 = { uri: _modDef11146 };
+    obj2.source = obj3;
+    obj2.alt = tmp4.accessibilityLabel;
+    obj2.style = tmp.profileEffect;
+    const items = [React5(FastImageDefault, obj2)];
+    const obj4 = { style: tmp.profileEffect, source: null, alt: null, resizeMode: "cover" };
+    const obj5 = { uri: tmp4.thumbnailPreviewSrc };
+    obj4.source = obj5;
+    obj4.alt = tmp4.title;
+    items[1] = React5(FastImageDefault, obj4);
     obj.children = items;
     tmp5 = React6(View, obj);
     const tmp2Result = FastImageDefault;
@@ -67,8 +67,7 @@ function BundleAssetPreview(height) {
   height = height.height;
   const tmp = closure_9();
   closure_2 = tmp;
-  let obj = useShopProductItems;
-  const shopProductItems = obj.useShopProductItems(product);
+  const shopProductItems = useShopProductItems.useShopProductItems(product);
   const bundleWidth = small.small.bundleWidth;
   const result = width / bundleWidth;
   c4 = result;
@@ -90,13 +89,13 @@ function BundleAssetPreview(height) {
     items[1] = size;
     return items;
   }, items1);
-  obj = { style: memo, children: null };
-  obj = { style: memo1, children: null };
+  const obj2 = { style: memo, children: null };
+  const obj3 = { style: memo1, children: null };
   const memo2 = noop.useMemo(() => {
     const size = { width, height };
     return size;
   }, items2);
-  obj.children = React5(BundleSampleV2Default, {
+  obj3.children = React5(BundleSampleV2Default, {
     deco: firstAvatarDecoration,
     pfx: firstProfileEffect,
     nameplate: firstNameplate,
@@ -105,14 +104,18 @@ function BundleAssetPreview(height) {
     size: "small",
     targetSize: memo2,
   });
-  obj.children = React5(View, obj);
-  return React5(View, obj);
+  obj2.children = React5(View, obj3);
+  return React5(View, obj2);
 }
 function NameplateAssetPreview(item) {
-  let obj = utils;
-  const nameplateData = obj.getNameplateData(item.item);
-  obj = { nameplate: nameplateData, fullOpacity: true, isSquarePreview: true, style: closure_12().nameplate };
-  return React5(NameplateDefault, obj);
+  const tmp = closure_12();
+  const nameplateData = utils.getNameplateData(item.item);
+  return React5(NameplateDefault, {
+    nameplate: nameplateData,
+    fullOpacity: true,
+    isSquarePreview: true,
+    style: tmp.nameplate,
+  });
 }
 function CollectibleProductPreview(arg0) {
   ({ product, recipientUser } = arg0);
@@ -149,27 +152,27 @@ function CollectibleProductPreviewContent(userAvatarSource) {
     };
     return React5(FractionalNitroCoinIllustration.FractionalNitroCoinIllustration, size);
   } else if (product.skuId === EXTERNAL_PRODUCT_SKU_IDS.ORB_PROFILE_BADGE) {
-    let obj = { source: null, style: null };
-    obj = { uri: _modDef8970 };
-    obj.source = obj;
+    const obj = { source: null, style: null };
+    const obj2 = { uri: _modDef8970 };
+    obj.source = obj2;
     obj.style = tmp.externalProductImage;
     return React5(FastImageDefault, obj);
   } else {
     const type = product.type;
     if (CollectiblesItemType.CollectiblesItemType.AVATAR_DECORATION === type) {
-      const obj1 = {
+      const obj3 = {
         item: product.items[0],
         size: width,
         avatarSource: userAvatarSource.userAvatarSource,
         animate: false,
       };
-      return React5(AvatarDecorationSampleV2Default, obj1);
+      return React5(AvatarDecorationSampleV2Default, obj3);
     } else if (CollectiblesItemType.CollectiblesItemType.PROFILE_EFFECT === type) {
-      const obj2 = { item: product.items[0] };
-      return React5(ProfileEffectAssetPreview, obj2);
+      const obj4 = { item: product.items[0] };
+      return React5(ProfileEffectAssetPreview, obj4);
     } else if (CollectiblesItemType.CollectiblesItemType.NAMEPLATE === type) {
-      const obj3 = { item: product.items[0] };
-      return React5(NameplateAssetPreview, obj3);
+      const obj5 = { item: product.items[0] };
+      return React5(NameplateAssetPreview, obj5);
     } else if (CollectiblesItemType.CollectiblesItemType.PROFILE_FRAME === type) {
       const size1 = { item: product.items[0], width, height };
       return React5(ProfileFrameAssetPreview, size1);
@@ -219,23 +222,23 @@ function ProductDetails(product) {
     }
   }, items);
   if (null == memo) {
-    let obj = { style: tmp.productDetails, children: null };
-    obj = { variant: "text-md/semibold", children: product.name };
-    obj.children = closure_7(Text_Text.Text, obj);
+    const obj = { style: tmp.productDetails, children: null };
+    const obj2 = { variant: "text-md/semibold", children: product.name };
+    obj.children = closure_7(Text_Text.Text, obj2);
     let tmp7 = closure_7(View, obj);
   } else {
-    obj = { style: tmp.productDetails, children: null };
-    const obj1 = { product, recipientUser: product.recipientUser };
-    const items1 = [closure_7(CollectibleProductPreview, obj1)];
-    const obj2 = { style: tmp.productDetailsTextContainer, children: null };
-    const obj3 = { variant: "text-md/semibold", children: product.name };
-    const items2 = [closure_7(Text_Text.Text, obj3)];
-    const obj4 = { variant: "text-sm/medium", children: memo };
-    items2[1] = closure_7(Text_Text.Text, obj4);
-    obj2.children = items2;
-    items1[1] = closure_8(View, obj2);
-    obj.children = items1;
-    tmp7 = closure_8(View, obj);
+    const obj3 = { style: tmp.productDetails, children: null };
+    const obj4 = { product, recipientUser: product.recipientUser };
+    const items1 = [closure_7(CollectibleProductPreview, obj4)];
+    const obj5 = { style: tmp.productDetailsTextContainer, children: null };
+    const obj6 = { variant: "text-md/semibold", children: product.name };
+    const items2 = [closure_7(Text_Text.Text, obj6)];
+    const obj7 = { variant: "text-sm/medium", children: memo };
+    items2[1] = closure_7(Text_Text.Text, obj7);
+    obj5.children = items2;
+    items1[1] = closure_8(View, obj5);
+    obj3.children = items1;
+    tmp7 = closure_8(View, obj3);
   }
   return tmp7;
 }
@@ -247,12 +250,16 @@ function ProductPriceAmountTag(product) {
   const items = [product, hasShopDiscount, useOrbPrice];
   const memo = noop.useMemo(() => {
     if (useOrbPrice) {
-      let tmpResult = CollectiblesProductUtils;
       const obj = { product, hasShopDiscount };
-      const orbPrice = tmpResult.getProductOrbPrice(obj);
+      const orbPrice = CollectiblesProductUtils.getProductOrbPrice(obj);
+      const tmpResult = CollectiblesProductUtils;
     } else {
-      tmpResult = collectibles_CollectiblesUtils;
-      const priceText = tmpResult.getFormattedPriceForCollectiblesProduct(product, hasShopDiscount, true);
+      const priceText = collectibles_CollectiblesUtils.getFormattedPriceForCollectiblesProduct(
+        product,
+        hasShopDiscount,
+        true,
+      );
+      const tmpResult2 = collectibles_CollectiblesUtils;
     }
     return { orbPrice, priceText };
   }, items);
@@ -262,11 +269,11 @@ function ProductPriceAmountTag(product) {
     if (orbPrice != null) {
       amount = orbPrice.amount;
     }
-    let obj = { orbAmount: amount };
-    let tmp3Result = closure_7(hasShopDiscount(useOrbPrice[25]), obj);
+    const obj2 = { orbAmount: amount };
+    let tmp3Result = closure_7(hasShopDiscount(useOrbPrice[25]), obj2);
     const tmp9 = hasShopDiscount(useOrbPrice[25]);
   } else {
-    obj = { variant: "text-md/semibold", children: tmp2 };
+    let obj = { variant: "text-md/semibold", children: tmp2 };
     tmp3Result = closure_7(require("Text/Text").Text, obj);
   }
   return tmp3Result;
@@ -277,11 +284,16 @@ const CollectiblesPreviewConstants = fn(8925);
 ({ BUNDLE_PREVIEW_CONFIG: metroRequire, SAMPLE_PROFILE_ASPECT_RATIO } = CollectiblesPreviewConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-fn(4636);
-let createStyles = {
+let createStyles = fn(4636);
+let obj2 = {
   externalProductImage: { width: 45, height: 45 },
-  bundlePreviewContainer: null,
-  bundlePreviewScale: null,
+  bundlePreviewContainer: {
+    alignItems: "center",
+    justifyContent: "center",
+    overflow: "hidden",
+    borderRadius: nativeDefault.radii.xs,
+  },
+  bundlePreviewScale: { overflow: "hidden", alignItems: "center", justifyContent: "center" },
   productContainer: null,
   productDetailsContainer: null,
   productPreviewContainer: null,
@@ -289,49 +301,37 @@ let createStyles = {
   productDetailsTextContainer: null,
   errorContainer: null,
 };
-createStyles = {
-  alignItems: "center",
-  justifyContent: "center",
-  overflow: "hidden",
-  borderRadius: nativeDefault.radii.xs,
-};
-createStyles.bundlePreviewContainer = createStyles;
-createStyles.bundlePreviewScale = { overflow: "hidden", alignItems: "center", justifyContent: "center" };
-createStyles.productContainer = {
+let obj3 = { alignItems: "center", justifyContent: "center", overflow: "hidden", borderRadius: nativeDefault.radii.xs };
+obj2.productContainer = {
   borderRadius: nativeDefault.radii.lg,
   flexDirection: "column",
   backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE,
 };
-let obj1 = {
+let obj4 = {
   borderRadius: nativeDefault.radii.lg,
   flexDirection: "column",
   backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE,
 };
-createStyles.productDetailsContainer = {
+obj2.productDetailsContainer = {
   flexDirection: "row",
   alignItems: "center",
   justifyContent: "space-between",
   paddingHorizontal: nativeDefault.space.PX_16,
   paddingVertical: nativeDefault.space.PX_16,
 };
-createStyles.productPreviewContainer = { justifyContent: "center", alignItems: "center" };
-let obj2 = {
+obj2.productPreviewContainer = { justifyContent: "center", alignItems: "center" };
+let obj5 = {
   flexDirection: "row",
   alignItems: "center",
   justifyContent: "space-between",
   paddingHorizontal: nativeDefault.space.PX_16,
   paddingVertical: nativeDefault.space.PX_16,
 };
-createStyles.productDetails = {
-  display: "flex",
-  flexDirection: "row",
-  alignItems: "center",
-  gap: nativeDefault.space.PX_12,
-};
-let obj3 = { display: "flex", flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_12 };
-createStyles.productDetailsTextContainer = { gap: nativeDefault.space.PX_4 };
-let obj4 = { gap: nativeDefault.space.PX_4 };
-createStyles.errorContainer = {
+obj2.productDetails = { display: "flex", flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_12 };
+let obj6 = { display: "flex", flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_12 };
+obj2.productDetailsTextContainer = { gap: nativeDefault.space.PX_4 };
+let obj7 = { gap: nativeDefault.space.PX_4 };
+obj2.errorContainer = {
   height: 36,
   backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
   justifyContent: "center",
@@ -339,7 +339,7 @@ createStyles.errorContainer = {
   borderBottomLeftRadius: nativeDefault.radii.lg,
   borderBottomRightRadius: nativeDefault.radii.lg,
 };
-let closure_9 = createStyles.createStyles(createStyles);
+let closure_9 = createStyles.createStyles(obj2);
 createStyles = fn(4636);
 let closure_10 = createStyles.createStyles((arg0) => {
   const colors = nativeDefault.colors;
@@ -350,18 +350,18 @@ let closure_10 = createStyles.createStyles((arg0) => {
     BORDER_FEEDBACK_CRITICAL = colors.BORDER_FEEDBACK_CRITICAL;
     tmp4 = importDefault;
   }
-  let obj = { giftProductContainer: null };
-  obj = {
-    borderWidth: 2,
-    borderColor: BORDER_FEEDBACK_CRITICAL,
-    marginHorizontal: tmp4(576).space.PX_16,
-    backgroundColor: "accessible",
+  const obj = {
+    giftProductContainer: {
+      borderWidth: 2,
+      borderColor: BORDER_FEEDBACK_CRITICAL,
+      marginHorizontal: tmp4(576).space.PX_16,
+      backgroundColor: "accessible",
+    },
   };
-  obj.giftProductContainer = obj;
   return obj;
 });
 createStyles = fn(4636);
-const obj6 = { profileEffectContainer: null, profileEffect: null };
+const obj11 = { profileEffectContainer: null, profileEffect: null };
 let size = {
   position: "relative",
   width: "100%",
@@ -369,14 +369,21 @@ let size = {
   borderRadius: nativeDefault.radii.xs,
   overflow: "hidden",
 };
-obj6.profileEffectContainer = size;
-obj6.profileEffect = { position: "absolute", width: "100%", aspectRatio: SAMPLE_PROFILE_ASPECT_RATIO, top: 0 };
-let closure_11 = createStyles.createStyles(obj6);
-fn(4636);
-const obj7 = { nameplate: null };
-createStyles = { borderRadius: nativeDefault.radii.xs };
-obj7.nameplate = createStyles;
-let closure_12 = createStyles.createStyles(obj7);
+obj11.profileEffectContainer = size;
+obj11.profileEffect = { position: "absolute", width: "100%", aspectRatio: SAMPLE_PROFILE_ASPECT_RATIO, top: 0 };
+let closure_11 = createStyles.createStyles(obj11);
+createStyles = fn(4636);
+const obj12 = { nameplate: null };
+const obj8 = {
+  height: 36,
+  backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
+  justifyContent: "center",
+  paddingHorizontal: nativeDefault.space.PX_16,
+  borderBottomLeftRadius: nativeDefault.radii.lg,
+  borderBottomRightRadius: nativeDefault.radii.lg,
+};
+obj12.nameplate = { borderRadius: nativeDefault.radii.xs };
+let closure_12 = createStyles.createStyles(obj12);
 size = fn(2);
 let result = size.fileFinishedImporting("modules/collectibles/native/CollectiblesShopCheckoutDetails.tsx");
 
@@ -396,22 +403,19 @@ export default function CollectiblesShopCheckoutDetails(recipientUser) {
     flag3 = false;
   }
   const tmp = closure_9();
-  let obj = useCurrentUser;
-  const currentUser = obj.useCurrentUser();
-  let obj1 = flag2(4294);
-  const canUseShopDiscountsResult = obj1.canUseShopDiscounts(currentUser);
+  const tmp2 = closure_10(flag);
+  const currentUser = useCurrentUser.useCurrentUser();
+  const canUseShopDiscountsResult = flag2(4294).canUseShopDiscounts(currentUser);
   dependencyMap = canUseShopDiscountsResult;
   const items = [product, flag2, canUseShopDiscountsResult];
   const items1 = [tmp.productContainer];
   let giftProductContainer = flag3;
   const memo = noop.useMemo(() => {
-    let obj = getProductName;
-    const productNameAndTypeLabel = obj.getProductNameAndTypeLabel(product);
+    const productNameAndTypeLabel = getProductName.getProductNameAndTypeLabel(product);
     if (flag2) {
       const intl = util.intl;
-      let tmpResult = CollectiblesProductUtils;
-      obj = { product, hasShopDiscount };
-      const productOrbPrice = tmpResult.getProductOrbPrice(obj);
+      const obj2 = { product, hasShopDiscount };
+      const productOrbPrice = CollectiblesProductUtils.getProductOrbPrice(obj2);
       let str2;
       if (productOrbPrice != null) {
         str2 = productOrbPrice.amount;
@@ -419,41 +423,42 @@ export default function CollectiblesShopCheckoutDetails(recipientUser) {
       if (str2 == null) {
         str2 = "";
       }
-      obj = { orbAmount: str2 };
-      let str = intl.formatToPlainString(util.t.W4DfeF, obj);
+      const obj3 = { orbAmount: str2 };
+      let str = intl.formatToPlainString(util.t.W4DfeF, obj3);
+      const tmpResult = CollectiblesProductUtils;
     } else {
-      tmpResult = collectibles_CollectiblesUtils;
-      str = tmpResult.getFormattedPriceForCollectiblesProduct(product, hasShopDiscount, true);
+      str = collectibles_CollectiblesUtils.getFormattedPriceForCollectiblesProduct(product, hasShopDiscount, true);
       if (str == null) {
         str = "";
       }
+      const tmpResult2 = collectibles_CollectiblesUtils;
     }
     return "" + productNameAndTypeLabel + ", " + str;
   }, items);
   if (flag3) {
     giftProductContainer = tmp2.giftProductContainer;
   }
-  obj = { style: items1, children: null };
+  let obj3 = { style: items1, children: null };
   items1[1] = giftProductContainer;
-  obj = { style: tmp.productDetailsContainer, accessibilityLabel: memo, accessible: true, children: null };
+  const obj4 = { style: tmp.productDetailsContainer, accessibilityLabel: memo, accessible: true, children: null };
   const items2 = [
     closure_7(ProductDetails, { product, recipientUser: recipientUser.recipientUser }),
     closure_7(ProductPriceAmountTag, { product, hasShopDiscount: canUseShopDiscountsResult, useOrbPrice: flag2 }),
   ];
-  obj.children = items2;
-  const items3 = [closure_8(View, obj)];
+  obj4.children = items2;
+  const items3 = [closure_8(View, obj4)];
   if (flag3) {
     flag3 = !flag;
   }
   if (flag3) {
-    obj1 = { style: tmp.errorContainer, children: null };
-    const obj2 = { variant: "text-xs/semibold", color: "text-feedback-critical", children: null };
+    const obj5 = { style: tmp.errorContainer, children: null };
+    const obj6 = { variant: "text-xs/semibold", color: "text-feedback-critical", children: null };
     let intl = tmp3(1114).intl;
-    obj2.children = intl.string(tmp3(1114).t["3YfczA"]);
-    obj1.children = closure_7(tmp3(4632).Text, obj2);
-    flag3 = closure_7(View, obj1);
+    obj6.children = intl.string(tmp3(1114).t["3YfczA"]);
+    obj5.children = closure_7(tmp3(4632).Text, obj6);
+    flag3 = closure_7(View, obj5);
   }
   items3[1] = flag3;
-  obj.children = items3;
-  return closure_8(View, obj);
+  obj3.children = items3;
+  return closure_8(View, obj3);
 }

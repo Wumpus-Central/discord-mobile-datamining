@@ -3,6 +3,8 @@ import PriceUtils from "../../../../utils/PriceUtils.tsx";
 import ProductIds from "../ProductIds.android.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
+const require = globalThis.__r;
+
 require = fn;
 const CurrencyCodes = fn(1085).CurrencyCodes;
 const size = fn(2);
@@ -10,11 +12,14 @@ let result = size.fileFinishedImporting("modules/premium/native/hooks/useDiscoun
 
 export const useDiscountedPremiumProductInfo = function useDiscountedPremiumProductInfo(premiumDiscountOffer, items3) {
   _require = premiumDiscountOffer;
-  let obj = require("useDiscountedPremiumPlan");
-  const discountedPremiumPlan = obj.useDiscountedPremiumPlan(premiumDiscountOffer, items3);
+  const discountedPremiumPlan = require("useDiscountedPremiumPlan").useDiscountedPremiumPlan(
+    premiumDiscountOffer,
+    items3,
+  );
   discountedProduct = discountedPremiumPlan.discountedProduct;
   const items = [premiumDiscountOffer, discountedProduct];
-  obj = {
+  const obj = require("useDiscountedPremiumPlan");
+  return {
     discountedPlan: discountedPremiumPlan.discountedPlan,
     discountedProduct,
     discountedPriceString: noop.useMemo(() => {
@@ -53,5 +58,4 @@ export const useDiscountedPremiumProductInfo = function useDiscountedPremiumProd
       return null;
     }, items),
   };
-  return obj;
 };

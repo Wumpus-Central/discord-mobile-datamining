@@ -3,6 +3,8 @@ import AudioActionCreatorsDefault from "../../actions/AudioActionCreators.tsx";
 import noop from "../../../_runtime/metro/00019__.js";
 import MediaEngineStore from "../../stores/MediaEngineStore.tsx";
 
+const require = globalThis.__r;
+
 const require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/media_engine/useMuteAwareLocalVolume.tsx");

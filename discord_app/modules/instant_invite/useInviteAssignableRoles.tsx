@@ -5,6 +5,8 @@ import GuildRoleStore from "../../stores/GuildRoleStore.tsx";
 import PermissionStore from "../../stores/PermissionStore.tsx";
 import UserStore from "../../stores/UserStore.tsx";
 
+const require = globalThis.__r;
+
 const require = fn;
 const isEveryoneRole = fn(2016).isEveryoneRole;
 const Permissions = fn(1074).Permissions;

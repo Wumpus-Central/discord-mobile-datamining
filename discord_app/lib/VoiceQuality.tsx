@@ -46,11 +46,12 @@ class VoiceQuality extends tmp2 {
               undefined === inputDeviceStats.timeFromConnectToFirstCallbackMs;
             tmp6 = 0 !== num && undefined === inputDeviceStats.timeToFirstCallbackMs;
           } else {
-            let bufferViolations = inputDeviceStats.bufferViolations;
-            if (bufferViolations == null) {
-              bufferViolations = { accumulated: 0, lastValue: 0 };
+            const bufferViolations = input.bufferViolations;
+            let bufferViolations1 = inputDeviceStats.bufferViolations;
+            if (bufferViolations1 == null) {
+              bufferViolations1 = { accumulated: 0, lastValue: 0 };
             }
-            ({ accumulated: accumulated2, lastValue: lastValue2 } = bufferViolations);
+            ({ accumulated: accumulated2, lastValue: lastValue2 } = bufferViolations1);
             if (lastValue2 > bufferViolations) {
               let sum = accumulated2 + bufferViolations;
             } else {
@@ -60,11 +61,12 @@ class VoiceQuality extends tmp2 {
             inputDeviceStats.bufferViolations = accumulated2;
           }
         } else {
-          let restartCount = inputDeviceStats.restartCount;
-          if (restartCount == null) {
-            restartCount = { accumulated: 0, lastValue: 0 };
+          const restartCount = input.restartCount;
+          let restartCount1 = inputDeviceStats.restartCount;
+          if (restartCount1 == null) {
+            restartCount1 = { accumulated: 0, lastValue: 0 };
           }
-          ({ accumulated, lastValue } = restartCount);
+          ({ accumulated, lastValue } = restartCount1);
           if (lastValue > restartCount) {
             let sum1 = accumulated + restartCount;
           } else {
@@ -107,7 +109,7 @@ class VoiceQuality extends tmp2 {
         systemResources.takeSample();
         const duration4 = outboundStats.duration;
         duration4.connected = duration4.connected + 1;
-        let obj2 = outboundStats(4665);
+        const obj2 = outboundStats(4665);
         let num = 0;
         const reduced = _modDef12.reduce(
           outboundStats.inboundStats,
@@ -198,7 +200,7 @@ class VoiceQuality extends tmp2 {
               if (num3 == null) {
                 num3 = 0;
               }
-              let current = {
+              const bufferStats = {
                 audioJitterBuffer: type.audioJitterBuffer,
                 audioJitterBufferHistogram: null,
                 audioJitterTarget: null,
@@ -215,8 +217,8 @@ class VoiceQuality extends tmp2 {
               if (prop == null) {
                 prop = new Histogram.Histogram();
               }
-              current.audioJitterBufferHistogram = prop;
-              current.audioJitterTarget = type.audioJitterTarget;
+              bufferStats.audioJitterBufferHistogram = prop;
+              bufferStats.audioJitterTarget = type.audioJitterTarget;
               let prop1;
               if (closure_0.inboundStats[closure_0] != null) {
                 prop1 = tmp38.bufferStats.audioJitterTargetHistogram;
@@ -224,8 +226,8 @@ class VoiceQuality extends tmp2 {
               if (prop1 == null) {
                 prop1 = new Histogram.Histogram();
               }
-              current.audioJitterTargetHistogram = prop1;
-              current.audioJitterDelay = type.audioJitterDelay;
+              bufferStats.audioJitterTargetHistogram = prop1;
+              bufferStats.audioJitterDelay = type.audioJitterDelay;
               let prop2;
               if (closure_0.inboundStats[closure_0] != null) {
                 prop2 = tmp38.bufferStats.audioJitterDelayHistogram;
@@ -233,28 +235,28 @@ class VoiceQuality extends tmp2 {
               if (prop2 == null) {
                 prop2 = new Histogram.Histogram();
               }
-              current.audioJitterDelayHistogram = prop2;
+              bufferStats.audioJitterDelayHistogram = prop2;
               ({ relativeReceptionDelay: obj.relativeReceptionDelay, relativePlayoutDelay: obj.relativePlayoutDelay } =
                 type);
-              const audioJitterBufferHistogram = current.audioJitterBufferHistogram;
+              const audioJitterBufferHistogram = bufferStats.audioJitterBufferHistogram;
               let prop3 = type.audioJitterBufferSamples;
               if (prop3 == null) {
                 prop3 = [];
               }
               audioJitterBufferHistogram.addSamples(prop3);
-              const audioJitterDelayHistogram = current.audioJitterDelayHistogram;
+              const audioJitterDelayHistogram = bufferStats.audioJitterDelayHistogram;
               let prop4 = type.audioJitterDelaySamples;
               if (prop4 == null) {
                 prop4 = [];
               }
               audioJitterDelayHistogram.addSamples(prop4);
-              const audioJitterTargetHistogram = current.audioJitterTargetHistogram;
+              const audioJitterTargetHistogram = bufferStats.audioJitterTargetHistogram;
               let prop5 = type.audioJitterTargetSamples;
               if (prop5 == null) {
                 prop5 = [];
               }
               audioJitterTargetHistogram.addSamples(prop5);
-              current = {
+              const obj3 = {
                 silent: null,
                 normal: null,
                 merged: null,
@@ -276,7 +278,7 @@ class VoiceQuality extends tmp2 {
               if (passthroughCount == null) {
                 passthroughCount = 0;
               }
-              current = {
+              const obj4 = {
                 passthroughCount,
                 decryptSuccessCount: null,
                 decryptFailureCount: null,
@@ -289,54 +291,53 @@ class VoiceQuality extends tmp2 {
               if (num4 == null) {
                 num4 = 0;
               }
-              current.decryptSuccessCount = num4;
+              obj4.decryptSuccessCount = num4;
               let num5 = type.decryptFailureCount;
               if (num5 == null) {
                 num5 = 0;
               }
-              current.decryptFailureCount = num5;
+              obj4.decryptFailureCount = num5;
               let num6 = type.decryptDuration;
               if (num6 == null) {
                 num6 = 0;
               }
-              current.decryptDuration = num6;
+              obj4.decryptDuration = num6;
               let num7 = type.decryptAttempts;
               if (num7 == null) {
                 num7 = 0;
               }
-              current.decryptAttempts = num7;
+              obj4.decryptAttempts = num7;
               let num8 = type.decryptMissingKeyCount;
               if (num8 == null) {
                 num8 = 0;
               }
-              current.decryptMissingKeyCount = num8;
+              obj4.decryptMissingKeyCount = num8;
               let num9 = type.decryptInvalidNonceCount;
               if (num9 == null) {
                 num9 = 0;
               }
-              current.decryptInvalidNonceCount = num9;
+              obj4.decryptInvalidNonceCount = num9;
               if (null != closure_0.inboundStats[closure_0]) {
                 const diff = packetsReceived - tmp38.packetsReceived;
                 const diff1 = packetsLost - tmp38.packetsLost;
                 ({ mosBuckets, decryptFailureBeforeSuccessCount } = tmp38);
                 if (decryptFailureBeforeSuccessCount == null) {
                   let decryptFailureCount;
-                  if (current.decryptSuccessCount > 0) {
-                    decryptFailureCount = current.decryptFailureCount;
+                  if (obj4.decryptSuccessCount > 0) {
+                    decryptFailureCount = obj4.decryptFailureCount;
                   }
                   decryptFailureBeforeSuccessCount = decryptFailureCount;
                 }
                 let num17 = 0;
                 if (tmp26) {
                   const sum = num + num3;
-                  let obj4 = _modDef12;
-                  const calculateMosResult = closure_0.calculateMos(sum, obj4.clamp(diff1 / (diff + diff1), 0, 1));
+                  const calculateMosResult = closure_0.calculateMos(sum, _modDef12.clamp(diff1 / (diff + diff1), 0, 1));
                   const _Math = Math;
                   const rounded = Math.floor(calculateMosResult);
                   mosBuckets[rounded] = mosBuckets[rounded] + 1;
                   num17 = calculateMosResult;
                 }
-                const obj1 = {
+                const obj6 = {
                   packetsReceived,
                   bytesReceived,
                   packetsLost,
@@ -354,23 +355,23 @@ class VoiceQuality extends tmp2 {
                 if (nackCount == null) {
                   nackCount = 0;
                 }
-                obj1.nackCount = nackCount;
-                obj1.fecPacketsReceived = fecPacketsReceived;
-                obj1.fecPacketsDiscarded = num2;
-                obj1.mos = num17;
-                obj1.mosSum = tmp38.mosSum + num17;
+                obj6.nackCount = nackCount;
+                obj6.fecPacketsReceived = fecPacketsReceived;
+                obj6.fecPacketsDiscarded = num2;
+                obj6.mos = num17;
+                obj6.mosSum = tmp38.mosSum + num17;
                 let num19 = 0;
                 if (num17 > 0) {
                   num19 = 1;
                 }
-                obj1.mosCount = tmp38.mosCount + num19;
-                obj1.mosBuckets = mosBuckets;
-                obj1.bufferStats = current;
-                obj1.frameOpStats = current;
-                obj1.decryptFailureBeforeSuccessCount = decryptFailureBeforeSuccessCount;
-                const merged = Object.assign(current);
-                closure_0.inboundStats[closure_0] = obj1;
-                const obj2 = {
+                obj6.mosCount = tmp38.mosCount + num19;
+                obj6.mosBuckets = mosBuckets;
+                obj6.bufferStats = bufferStats;
+                obj6.frameOpStats = obj3;
+                obj6.decryptFailureBeforeSuccessCount = decryptFailureBeforeSuccessCount;
+                const merged = Object.assign(obj4);
+                closure_0.inboundStats[closure_0] = obj6;
+                const obj7 = {
                   previousTimestampMs: closure_0.periodicInboundStats[closure_0].previousTimestampMs,
                   previous: closure_0.periodicInboundStats[closure_0].previous,
                   currentTimestampMs: null,
@@ -382,34 +383,34 @@ class VoiceQuality extends tmp2 {
                   numRateSamples: null,
                 };
                 const _performance3 = performance;
-                obj2.currentTimestampMs = performance.now();
-                obj2.current = current;
+                obj7.currentTimestampMs = performance.now();
+                obj7.current = obj3;
                 let num20 = type.accelerateRate;
                 if (num20 == null) {
                   num20 = 0;
                 }
-                obj2.accelerateRateSum = closure_0.periodicInboundStats[closure_0].accelerateRateSum + num20;
+                obj7.accelerateRateSum = closure_0.periodicInboundStats[closure_0].accelerateRateSum + num20;
                 let num21 = type.expandRate;
                 if (num21 == null) {
                   num21 = 0;
                 }
-                obj2.expandRateSum = closure_0.periodicInboundStats[closure_0].expandRateSum + num21;
+                obj7.expandRateSum = closure_0.periodicInboundStats[closure_0].expandRateSum + num21;
                 let num22 = type.preemptiveExpandRate;
                 if (num22 == null) {
                   num22 = 0;
                 }
-                obj2.preemptiveExpandRateSum =
+                obj7.preemptiveExpandRateSum =
                   closure_0.periodicInboundStats[closure_0].preemptiveExpandRateSum + num22;
                 let num23 = type.speechExpandRate;
                 if (num23 == null) {
                   num23 = 0;
                 }
-                obj2.speechExpandRateSum = closure_0.periodicInboundStats[closure_0].speechExpandRateSum + num23;
-                obj2.numRateSamples = closure_0.periodicInboundStats[closure_0].numRateSamples + 1;
-                closure_0.periodicInboundStats[closure_0] = obj2;
+                obj7.speechExpandRateSum = closure_0.periodicInboundStats[closure_0].speechExpandRateSum + num23;
+                obj7.numRateSamples = closure_0.periodicInboundStats[closure_0].numRateSamples + 1;
+                closure_0.periodicInboundStats[closure_0] = obj7;
                 tmp26 = diff > 0 && diff1 >= 0;
               } else {
-                const obj3 = {
+                const obj9 = {
                   packetsReceived,
                   bytesReceived,
                   packetsLost,
@@ -427,15 +428,15 @@ class VoiceQuality extends tmp2 {
                 if (nackCount == null) {
                   num10 = 0;
                 }
-                obj3.nackCount = num10;
-                obj3.fecPacketsReceived = fecPacketsReceived;
-                obj3.fecPacketsDiscarded = num2;
-                obj3.mosBuckets = [0, 0, 0, 0, 0];
-                obj3.bufferStats = current;
-                obj3.frameOpStats = current;
-                const merged1 = Object.assign(current);
-                closure_0.inboundStats[closure_0] = obj3;
-                obj4 = {
+                obj9.nackCount = num10;
+                obj9.fecPacketsReceived = fecPacketsReceived;
+                obj9.fecPacketsDiscarded = num2;
+                obj9.mosBuckets = [0, 0, 0, 0, 0];
+                obj9.bufferStats = bufferStats;
+                obj9.frameOpStats = obj3;
+                const merged1 = Object.assign(obj4);
+                closure_0.inboundStats[closure_0] = obj9;
+                const obj15 = {
                   previousTimestampMs: null,
                   previous: null,
                   currentTimestampMs: null,
@@ -447,32 +448,32 @@ class VoiceQuality extends tmp2 {
                   numRateSamples: 1,
                 };
                 const _performance = performance;
-                obj4.previousTimestampMs = performance.now();
-                obj4.previous = current;
+                obj15.previousTimestampMs = performance.now();
+                obj15.previous = obj3;
                 const _performance2 = performance;
-                obj4.currentTimestampMs = performance.now();
-                obj4.current = current;
+                obj15.currentTimestampMs = performance.now();
+                obj15.current = obj3;
                 let num11 = type.accelerateRate;
                 if (num11 == null) {
                   num11 = 0;
                 }
-                obj4.accelerateRateSum = num11;
+                obj15.accelerateRateSum = num11;
                 let num12 = type.expandRate;
                 if (num12 == null) {
                   num12 = 0;
                 }
-                obj4.expandRateSum = num12;
+                obj15.expandRateSum = num12;
                 let num13 = type.preemptiveExpandRate;
                 if (num13 == null) {
                   num13 = 0;
                 }
-                obj4.preemptiveExpandRateSum = num13;
+                obj15.preemptiveExpandRateSum = num13;
                 let num14 = type.speechExpandRate;
                 if (num14 == null) {
                   num14 = 0;
                 }
-                obj4.speechExpandRateSum = num14;
-                closure_0.periodicInboundStats[closure_0] = obj4;
+                obj15.speechExpandRateSum = num14;
+                closure_0.periodicInboundStats[closure_0] = obj15;
               }
             }
           });
@@ -702,26 +703,26 @@ prototype["getBufferStats"] = function getBufferStats() {
           relativePlayoutDelay = null;
         }
         obj.relative_playout_delay = relativePlayoutDelay;
-        obj = {};
+        const obj2 = {};
         for (const key10055 in obj) {
           let obj4 = obj[key10055];
           if (obj4 instanceof Histogram.Histogram) {
             let report = obj4.getReport([75, 95, 99]);
             let _Math = Math;
             let text = `${key10055}_mean`;
-            obj[`${key10055}_mean`] = Math.round(report.mean);
+            obj2[`${key10055}_mean`] = Math.round(report.mean);
             let _Math2 = Math;
             let text1 = `${key10055}_p75`;
-            obj[`${key10055}_p75`] = Math.round(report.percentiles[75]);
+            obj2[`${key10055}_p75`] = Math.round(report.percentiles[75]);
             let _Math3 = Math;
             let text2 = `${key10055}_p95`;
-            obj[`${key10055}_p95`] = Math.round(report.percentiles[95]);
+            obj2[`${key10055}_p95`] = Math.round(report.percentiles[95]);
             let _Math4 = Math;
             let text3 = `${key10055}_p99`;
-            obj[`${key10055}_p99`] = Math.round(report.percentiles[99]);
+            obj2[`${key10055}_p99`] = Math.round(report.percentiles[99]);
             let _Math5 = Math;
             let text4 = `${key10055}_max`;
-            obj[`${key10055}_max`] = Math.round(report.max);
+            obj2[`${key10055}_max`] = Math.round(report.max);
             continue;
           } else {
             let num4 = 0;
@@ -729,38 +730,38 @@ prototype["getBufferStats"] = function getBufferStats() {
             if (null != obj4) {
               num4 = obj4.mean;
             }
-            obj[text5] = num4;
+            obj2[text5] = num4;
             let num5 = 0;
             let text6 = `${key10055}_p75`;
             if (null != obj4) {
               num5 = obj4.p75;
             }
-            obj[text6] = num5;
+            obj2[text6] = num5;
             let num6 = 0;
             let text7 = `${key10055}_p95`;
             if (null != obj4) {
               num6 = obj4.p95;
             }
-            obj[text7] = num6;
+            obj2[text7] = num6;
             let num7 = 0;
             let text8 = `${key10055}_p99`;
             if (null != obj4) {
               num7 = obj4.p99;
             }
-            obj[text8] = num7;
+            obj2[text8] = num7;
             let num8 = 0;
             let text9 = `${key10055}_max`;
             if (null != obj4) {
               num8 = obj4.max;
             }
-            obj[text9] = num8;
+            obj2[text9] = num8;
             continue;
           }
           continue;
         }
-        obj = {};
-        const merged = Object.assign(obj);
-        return obj;
+        const obj3 = {};
+        const merged = Object.assign(obj2);
+        return obj3;
       } else {
         const audioJitterDelayHistogram = reduced.audioJitterDelayHistogram;
         if (audioJitterDelayHistogram.getSamples() > 0) {

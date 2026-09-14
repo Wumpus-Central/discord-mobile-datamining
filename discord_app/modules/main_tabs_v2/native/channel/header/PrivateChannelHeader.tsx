@@ -13,14 +13,15 @@ const Constants = fn(1074);
 ({ ChannelTypes: closure_9, StatusTypes: c10 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, Fragment: closure_12, jsxs: map1 } = jsxProd);
-let closure_14 = fn(1178).AVATAR_SIZE_MAP[fn(undefined, 1178).AvatarSizes.REFRESH_MEDIUM_32];
+let closure_14 = fn(1176).AVATAR_SIZE_MAP[fn(undefined, 1176).AvatarSizes.REFRESH_MEDIUM_32];
 let closure_15 = Object.freeze({ onlineCount: null, memberCount: null });
 const createStyles = fn(4636);
-let obj = { activityStatusText: null, groupDMIconAnchor: null };
-obj = { color: nativeDefault.colors.TEXT_MUTED };
-obj.activityStatusText = obj;
-obj.groupDMIconAnchor = { marginRight: 12, flexShrink: 0 };
+let obj = {
+  activityStatusText: { color: nativeDefault.colors.TEXT_MUTED },
+  groupDMIconAnchor: { marginRight: 12, flexShrink: 0 },
+};
 let closure_16 = createStyles.createStyles(obj);
+let obj3 = { color: nativeDefault.colors.TEXT_MUTED };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/main_tabs_v2/native/channel/header/PrivateChannelHeader.tsx");
 
@@ -30,12 +31,11 @@ export default noop.memo(function PrivateChannelHeader(channelId) {
   const pressable = channelId.pressable;
   let stateFromStores;
   const tmp = closure_16();
-  let obj = channelId(stateFromStores[11]);
   let items = [ChannelStore];
-  stateFromStores = obj.useStateFromStores(items, () => ChannelStore.getChannel(channelId));
-  let obj2 = channelId(stateFromStores[11]);
+  stateFromStores = channelId(stateFromStores[11]).useStateFromStores(items, () => ChannelStore.getChannel(channelId));
+  let obj = channelId(stateFromStores[11]);
   const items1 = [UserStore];
-  const stateFromStores1 = obj2.useStateFromStores(items1, () => {
+  const stateFromStores1 = channelId(stateFromStores[11]).useStateFromStores(items1, () => {
     let type;
     if (stateFromStores != null) {
       type = stateFromStores.type;
@@ -46,9 +46,9 @@ export default noop.memo(function PrivateChannelHeader(channelId) {
     }
     return user;
   });
-  let obj4 = channelId(stateFromStores[11]);
+  const obj3 = channelId(stateFromStores[11]);
   const items2 = [PresenceStore];
-  const stateFromStoresObject = obj4.useStateFromStoresObject(items2, () => {
+  const stateFromStoresObject = channelId(stateFromStores[11]).useStateFromStoresObject(items2, () => {
     let isMobileOnlineResult = null != stateFromStores1;
     if (isMobileOnlineResult) {
       isMobileOnlineResult = PresenceStore.isMobileOnline(stateFromStores1.id);
@@ -73,36 +73,37 @@ export default noop.memo(function PrivateChannelHeader(channelId) {
     const result = ChannelHeader.navigateToChannelDetails(channelId, screenIndex, "private-channel-header-title");
   }, items3);
   if (null != stateFromStores) {
-    let tmp2Result = tmp2(tmp3[13]);
-    let channelName = tmp2Result.computeChannelName(stateFromStores, UserStore, RelationshipStore);
+    let channelName = tmp2(tmp3[13]).computeChannelName(stateFromStores, UserStore, RelationshipStore);
+    const tmp2Result = tmp2(tmp3[13]);
   } else {
     const intl = tmp2(tmp3[14]).intl;
     channelName = intl.string(tmp2(tmp3[14]).t.ai6Lbr);
   }
   let result = null;
   if (null != stateFromStores1) {
-    obj = { userId: stateFromStores1.id, guildId: null, textStyle: null };
+    const obj2 = { userId: stateFromStores1.id, guildId: null, textStyle: null };
     let guild_id;
     if (stateFromStores != null) {
       guild_id = stateFromStores.guild_id;
     }
-    obj.guildId = guild_id;
-    obj.textStyle = tmp.activityStatusText;
-    result = closure_11(screenIndex(tmp3[15]), obj);
+    obj2.guildId = guild_id;
+    obj2.textStyle = tmp.activityStatusText;
+    result = closure_11(screenIndex(tmp3[15]), obj2);
     const tmp13 = screenIndex(tmp3[15]);
   }
   let id;
+  const obj5 = channelId(stateFromStores[11]);
+  const tmp15 = screenIndex;
   if (stateFromStores1 != null) {
     id = stateFromStores1.id;
   }
-  obj = { userId: id, guildId: null };
+  const obj4 = { userId: id, guildId: null };
   let guild_id1;
   if (stateFromStores != null) {
     guild_id1 = stateFromStores.guild_id;
   }
-  obj.guildId = guild_id1;
+  obj4.guildId = guild_id1;
   let isMultiUserDMResult;
-  const tmp15 = screenIndex;
   const tmp16 = screenIndex(stateFromStores[16]);
   if (stateFromStores != null) {
     isMultiUserDMResult = stateFromStores.isMultiUserDM();
@@ -112,10 +113,10 @@ export default noop.memo(function PrivateChannelHeader(channelId) {
     tmp21 = stateFromStores;
   }
   closure_129_0 = tmp21;
-  tmp2Result = tmp2(tmp3[11]);
+  const tmp16Result = screenIndex(stateFromStores[16])(obj4);
   const items4 = [UserStore, PresenceStore];
   const items5 = [tmp21];
-  const stateFromStoresObject1 = tmp2Result.useStateFromStoresObject(
+  const stateFromStoresObject1 = channelId(stateFromStores[11]).useStateFromStoresObject(
     items4,
     () => {
       const currentUser = UserStore.getCurrentUser();
@@ -150,7 +151,7 @@ export default noop.memo(function PrivateChannelHeader(channelId) {
     },
     items5,
   );
-  const tmp16Result = screenIndex(stateFromStores[16])(obj);
+  const tmp2Result10 = channelId(stateFromStores[11]);
   const shouldChannelShowLoadingIndicator = channelId(stateFromStores[17]).useShouldChannelShowLoadingIndicator(
     channelId,
   );
@@ -161,7 +162,7 @@ export default noop.memo(function PrivateChannelHeader(channelId) {
       stateFromStoresObject1.onlineCount,
       stateFromStoresObject1.memberCount,
     );
-    const tmp2Result2 = tmp2(tmp3[18]);
+    const tmp2Result12 = tmp2(tmp3[18]);
   }
   const intl2 = tmp2(tmp3[14]).intl;
   const formatToPlainStringResult = intl2.formatToPlainString(channelId(stateFromStores[14]).t.UbNmGc, { channelName });
@@ -170,9 +171,9 @@ export default noop.memo(function PrivateChannelHeader(channelId) {
   if (null != stateFromStores1) {
     humanizeStatusResult = null;
     if (!stateFromStores1.isSystemUser()) {
-      const obj1 = { isMobile: isMobileOnline, isVR: isVROnline };
-      humanizeStatusResult = tmp2(tmp3[19]).humanizeStatus(status, obj1);
-      const tmp2Result3 = tmp2(tmp3[19]);
+      const obj6 = { isMobile: isMobileOnline, isVR: isVROnline };
+      humanizeStatusResult = tmp2(tmp3[19]).humanizeStatus(status, obj6);
+      const tmp2Result13 = tmp2(tmp3[19]);
     }
   }
   items6[1] = humanizeStatusResult;
@@ -205,30 +206,30 @@ export default noop.memo(function PrivateChannelHeader(channelId) {
   const found = items6.filter((item) => null != item);
   const joined = found.join(", ");
   if (null != stateFromStores1) {
-    const tmp2Result4 = tmp2(tmp3[18]);
-    let renderUserAvatarResult = tmp2Result4.renderUserAvatar(stateFromStores1, status, isMobileOnline, isVROnline);
+    const tmp2Result14 = tmp2(tmp3[18]);
+    let renderUserAvatarResult = tmp2Result14.renderUserAvatar(stateFromStores1, status, isMobileOnline, isVROnline);
   } else {
     let isGroupDMResult;
     if (stateFromStores != null) {
       isGroupDMResult = stateFromStores.isGroupDM();
     }
     if (isGroupDMResult) {
-      obj2 = { style: tmp.groupDMIconAnchor, children: null };
-      const obj3 = { channelId, location: "GroupDMChannelHeader", children: null };
+      const obj7 = { style: tmp.groupDMIconAnchor, children: null };
+      const obj8 = { channelId, location: "GroupDMChannelHeader", children: null };
       const tmp15Result = tmp15(tmp3[20]);
-      obj3.children = tmp2(tmp3[18]).renderGroupDMIcon(stateFromStores);
-      obj2.children = closure_11(tmp15Result, obj3, channelId);
-      renderUserAvatarResult = closure_11(View, obj2);
-      const tmp2Result5 = tmp2(tmp3[18]);
+      obj8.children = tmp2(tmp3[18]).renderGroupDMIcon(stateFromStores);
+      obj7.children = closure_11(tmp15Result, obj8, channelId);
+      renderUserAvatarResult = closure_11(View, obj7);
+      const tmp2Result15 = tmp2(tmp3[18]);
     } else {
       renderUserAvatarResult = tmp2(tmp3[18]).renderEmptyIcon();
-      const tmp2Result6 = tmp2(tmp3[18]);
+      const tmp2Result16 = tmp2(tmp3[18]);
     }
   }
   const items7 = [renderUserAvatarResult];
   tmp24 = null != stateFromStoresObject1.onlineCount && null != stateFromStoresObject1.memberCount;
-  const tmp2Result1 = channelId(stateFromStores[17]);
-  obj4 = {
+  const tmp2Result11 = channelId(stateFromStores[17]);
+  const obj9 = {
     accessibleTitle: formatToPlainStringResult,
     subtitle: result,
     disableArrow: !pressable,
@@ -239,27 +240,27 @@ export default noop.memo(function PrivateChannelHeader(channelId) {
   if (stateFromStores1 != null) {
     id1 = stateFromStores1.id;
   }
-  obj4.userId = id1;
+  obj9.userId = id1;
   let guild_id2;
   if (stateFromStores != null) {
     guild_id2 = stateFromStores.guild_id;
   }
-  const obj5 = { children: null };
-  obj4.guildId = guild_id2;
-  items7[1] = channelId(stateFromStores[18]).renderChannelTitle(channelName, obj4);
-  obj5.children = items7;
-  const tmp33Result = closure_13(closure_12, obj5);
+  const obj10 = { children: null };
+  obj9.guildId = guild_id2;
+  items7[1] = channelId(stateFromStores[18]).renderChannelTitle(channelName, obj9);
+  obj10.children = items7;
+  const tmp33Result = closure_13(closure_12, obj10);
   if (pressable) {
     let num2 = 44;
     if (null == result) {
       num2 = closure_14;
     }
-    const obj6 = { children: null };
-    const tmp2Result8 = tmp2(tmp3[18]);
-    obj6.children = tmp2Result8.renderTitleWrapper(tmp33Result, callback, joined, num2);
-    return closure_11(closure_12, obj6);
+    const obj11 = { children: null };
+    const tmp2Result18 = tmp2(tmp3[18]);
+    obj11.children = tmp2Result18.renderTitleWrapper(tmp33Result, callback, joined, num2);
+    return closure_11(closure_12, obj11);
   } else {
     return tmp33Result;
   }
-  const tmp2Result7 = channelId(stateFromStores[18]);
+  const tmp2Result17 = channelId(stateFromStores[18]);
 });

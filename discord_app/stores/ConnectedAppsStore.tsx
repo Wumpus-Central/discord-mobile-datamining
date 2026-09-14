@@ -2,6 +2,8 @@
 import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../Dispatcher.tsx";
 
+const require = globalThis.__r;
+
 let obj = {};
 const Store = initializeDefault.Store;
 class ConnectedAppsStore extends Store {}

@@ -2,7 +2,7 @@
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../Dispatcher.tsx";
 
-let FetchState = {
+const FetchState = {
   NOT_FETCHED: 0,
   [0]: "NOT_FETCHED",
   FETCHING: 1,
@@ -33,7 +33,7 @@ prototype["getMediaPostEmbeds"] = function getMediaPostEmbeds() {
   return closure_1;
 };
 MediaPostEmbedStore.displayName = "MediaPostEmbedStore";
-FetchState = {
+const mediaPostEmbedStore = new MediaPostEmbedStore(DispatcherDefault, {
   CONNECTION_OPEN: function handleConnectionOpen() {
     closure_1 = {};
     closure_2 = {};
@@ -58,8 +58,7 @@ FetchState = {
       closure_2 = {};
     }
   },
-};
-const mediaPostEmbedStore = new MediaPostEmbedStore(DispatcherDefault, FetchState);
+});
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/media_channel/MediaPostEmbedStore.tsx");
 

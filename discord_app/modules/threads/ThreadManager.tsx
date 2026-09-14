@@ -27,8 +27,8 @@ prototype["handleChannelDelete"] = function handleChannelDelete(channel) {
       Emitter.batched(() => {
         for (const item10005 of allThreadsForParent) {
           let obj = DispatcherDefault;
-          obj = { type: "THREAD_DELETE", channel: item10005 };
-          let dispatchResult = obj.dispatch(obj);
+          let obj2 = { type: "THREAD_DELETE", channel: item10005 };
+          let dispatchResult = obj.dispatch(obj2);
           continue;
         }
       });
@@ -75,8 +75,8 @@ prototype["handleGuildDelete"] = function handleGuildDelete(guild) {
       Emitter.batched(() => {
         for (const item10005 of allThreadsForGuild) {
           let obj = DispatcherDefault;
-          obj = { type: "THREAD_DELETE", channel: item10005 };
-          let dispatchResult = obj.dispatch(obj);
+          let obj2 = { type: "THREAD_DELETE", channel: item10005 };
+          let dispatchResult = obj.dispatch(obj2);
           continue;
         }
       });

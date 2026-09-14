@@ -2,15 +2,15 @@
 import ApexExperiment from "../../modules/experiments/apex/index.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
-let obj = {
+const obj = {
   kind: "user",
   name: "2026-05-electron-multilang-spellcheck",
   defaultConfig: { enableElectronMultilangSpellcheck: false },
   variations: null,
 };
-obj = { 1: null };
-obj[1] = { enableElectronMultilangSpellcheck: true };
-obj.variations = obj;
+const obj2 = { 1: null };
+obj2[1] = { enableElectronMultilangSpellcheck: true };
+obj.variations = obj2;
 const apexExperiment = ApexExperiment.createApexExperiment(obj);
 const result = size.fileFinishedImporting("lib/spellcheck/SpellcheckExperiment.tsx");
 

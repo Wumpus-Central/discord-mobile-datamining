@@ -106,9 +106,8 @@ function FriendAnniversary() {
     obj.onPress = fn;
     return closure_1_17(closure_0(stateFromStores2[17]).TableRow, obj, "" + gen + "-" + userId);
   }
-  let obj = require("useStateFromStores");
   items = [PremiumGiftingIntentStore, map, closure_8];
-  const stateFromStores = obj.useStateFromStores(
+  const stateFromStores = require("useStateFromStores").useStateFromStores(
     items,
     () => {
       function buildRow(userId) {
@@ -148,12 +147,14 @@ function FriendAnniversary() {
     require("useStateFromStores").statesWillNeverBeEqual,
   );
   ({ selected: closure_0, highestAffinity, highAffinity } = stateFromStores);
-  let obj1 = require("useStateFromStores");
+  let obj = require("useStateFromStores");
   const items1 = [PremiumGiftingIntentStore];
-  let stateFromStores1 = obj1.useStateFromStores(items1, () => uiStore.getMessageGiftIntentLastShownMap());
+  let stateFromStores1 = require("useStateFromStores").useStateFromStores(items1, () =>
+    uiStore.getMessageGiftIntentLastShownMap(),
+  );
   let obj2 = require("useStateFromStores");
   const items2 = [map];
-  stateFromStores2 = obj2.useStateFromStores(items2, () => {
+  stateFromStores2 = require("useStateFromStores").useStateFromStores(items2, () => {
     const currentUser = map.getCurrentUser();
     let flag;
     if (currentUser != null) {
@@ -166,7 +167,7 @@ function FriendAnniversary() {
   });
   let obj3 = require("useStateFromStores");
   const items3 = [onPress];
-  const stateFromStores3 = obj3.useStateFromStores(items3, () => {
+  const stateFromStores3 = require("useStateFromStores").useStateFromStores(items3, () => {
     const userContent = callback.settings.userContent;
     let str;
     if (userContent != null) {
@@ -185,12 +186,11 @@ function FriendAnniversary() {
     }
     return tmp2;
   });
-  [arr5, _slicedToArray] = _slicedToArray(recipientUserId.useState([]), 2);
-  const tmp8 = _slicedToArray(recipientUserId.useState(false), 2);
-  recipientUserId = tmp8[0];
-  closure_6 = tmp8[1];
+  let obj4 = require("useStateFromStores");
+  [arr5, _slicedToArray] = recipientUserId.useState([]);
+  [recipientUserId, closure_6] = recipientUserId.useState(false);
   const tmp7 = _slicedToArray(recipientUserId.useState([]), 2);
-  [tmp11, PremiumGiftingIntentStore] = _slicedToArray(recipientUserId.useState(false), 2);
+  [tmp11, PremiumGiftingIntentStore] = recipientUserId.useState(false);
   const tmp12 = _slicedToArray(recipientUserId.useState(false), 2);
   closure_8 = tmp12[1];
   onPress = recipientUserId.useCallback(
@@ -202,8 +202,8 @@ function FriendAnniversary() {
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
-          let obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           return { value: "HermesInternal", done: null };
         }
@@ -216,8 +216,8 @@ function FriendAnniversary() {
               throw value;
             } else if (arg0 === 2) {
               c6 = 3;
-              obj = { value, done: true };
-              return obj;
+              const obj4 = { value, done: true };
+              return obj4;
             } else {
               stateFromStores1 = tmp8;
               let body;
@@ -227,11 +227,11 @@ function FriendAnniversary() {
               const HTTP = closure_0(tmp4[15]).HTTP;
               c5 = 3;
               c6 = 1;
-              let obj1 = {
+              const obj5 = {
                 value: HTTP.get({ url: "/users/@me/gift-intent-dismissals", rejectWithError: true }),
                 done: false,
               };
-              return obj1;
+              return obj5;
             }
           } else if (1 === tmp8) {
             c4 = 0;
@@ -246,9 +246,9 @@ function FriendAnniversary() {
               if (closure_129_1) {
                 closure_130_4([]);
               } else {
-                obj1 = stateFromStores1(tmp4[16]);
-                const obj2 = { key: "dev-tools-gift-intent-server", content: describeServerError(closure_129_2) };
-                obj1.open(obj2);
+                const obj6 = { key: "dev-tools-gift-intent-server", content: describeServerError(closure_129_2) };
+                stateFromStores1(tmp4[16]).open(obj6);
+                const obj2 = stateFromStores1(tmp4[16]);
               }
               c4 = 0;
               closure_130_7(false);
@@ -270,7 +270,7 @@ function FriendAnniversary() {
             c4 = 0;
             closure_130_7(false);
             c6 = 3;
-            obj = { value, done: true };
+            const obj = { value, done: true };
             return obj;
           }
         } catch (tmp52) {
@@ -300,8 +300,8 @@ function FriendAnniversary() {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj3 = { value, done: true };
+        return obj3;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -314,8 +314,8 @@ function FriendAnniversary() {
             throw value;
           } else if (arg0 === 2) {
             c7 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj4 = { value, done: true };
+            return obj4;
           } else {
             closure_3 = tmp4;
             closure_2 = tmp6;
@@ -324,8 +324,8 @@ function FriendAnniversary() {
             c5 = 2;
             c6 = 3;
             c7 = 1;
-            let obj1 = { value: closure_0(), done: false };
-            return obj1;
+            const obj5 = { value: closure_0(), done: false };
+            return obj5;
           }
         } else if (1 === tmp9) {
           c5 = 0;
@@ -335,12 +335,12 @@ function FriendAnniversary() {
           if (2 === tmp9) {
             c5 = 1;
             closure_130_1 = closure_4;
-            let obj5 = stateFromStores1(stateFromStores2[16]);
-            const obj2 = { key: "dev-tools-gift-intent-server", content: describeServerError(closure_130_1) };
-            obj5.open(obj2);
+            const obj7 = { key: "dev-tools-gift-intent-server", content: describeServerError(closure_130_1) };
+            stateFromStores1(stateFromStores2[16]).open(obj7);
             c5 = 0;
             closure_1_8(false);
             c7 = 3;
+            const obj6 = stateFromStores1(stateFromStores2[16]);
           } else if (3 === tmp9) {
             if (arg0 === 1) {
               c7 = 3;
@@ -349,16 +349,15 @@ function FriendAnniversary() {
               c5 = 0;
               closure_1_8(false);
               c7 = 3;
-              const obj3 = { value, done: true };
-              return obj3;
+              const obj8 = { value, done: true };
+              return obj8;
             } else {
-              obj1 = stateFromStores1(stateFromStores2[16]);
-              const obj4 = { key: "dev-tools-gift-intent-server", content: closure_130_0 };
-              obj1.open(obj4);
+              const obj9 = { key: "dev-tools-gift-intent-server", content: closure_130_0 };
+              stateFromStores1(stateFromStores2[16]).open(obj9);
               c6 = 4;
               c7 = 1;
-              obj5 = { value: onPress(), done: false };
-              return obj5;
+              const obj10 = { value: onPress(), done: false };
+              return obj10;
             }
           } else if (arg0 === 1) {
             c7 = 3;
@@ -369,7 +368,7 @@ function FriendAnniversary() {
           c5 = 0;
           closure_1_8(false);
           c7 = 3;
-          obj = { value, done: true };
+          const obj = { value, done: true };
           return obj;
         }
       } catch (tmp44) {
@@ -409,7 +408,7 @@ function FriendAnniversary() {
   new Set(highestAffinity.map((userId) => userId.userId));
   const items6 = [...highAffinity];
   const tmp10 = _slicedToArray(recipientUserId.useState(false), 2);
-  let arr = Array.from(
+  const arr = Array.from(
     new Map(
       items6.map((userId) => {
         items = [userId.userId, userId];
@@ -425,8 +424,8 @@ function FriendAnniversary() {
       return items;
     }),
   );
-  arr = Array.from(new Set(items7));
-  const found1 = arr.filter((item) => !set1.has(item));
+  const set2 = new Set(items7);
+  const found1 = Array.from(new Set(items7)).filter((item) => !set1.has(item));
   const found2 = items.find((value) => value.value === closure_0);
   let str;
   if (found2 != null) {
@@ -435,13 +434,109 @@ function FriendAnniversary() {
   if (str == null) {
     str = "None";
   }
-  obj = { title: "Friend Anniversary", hasIcons: false, children: null };
-  obj = {
+  let obj5 = { title: "Friend Anniversary", hasIcons: false, children: null };
+  const arr2 = Array.from(new Set(items7));
+  const items8 = [
+    closure_17(require("TableRow").TableRow, {
+      label: "Number of anniversaries",
+      subLabel: "Current: " + str,
+      trailing: closure_17(require("TableRowArrow").TableRowArrow, {}),
+      onPress() {
+        const obj = Sheet_showSimpleActionSheet;
+        const result = obj.showSimpleActionSheet({
+          key: "dev-tools-friend-anniversary-count",
+          header: { title: "Anniversaries to generate" },
+          options: items.map((item) => {
+            ({ label, value } = item);
+            closure_0 = value;
+            let combined = label;
+            if (value === closure_1_0) {
+              const _HermesInternal = HermesInternal;
+              combined = "" + label + "  (selected)";
+            }
+            return {
+              label: combined,
+              onPress() {
+                stateFromStores1(stateFromStores2[13]).dispatch({
+                  type: "DEV_TOOLS_SET_FRIEND_ANNIVERSARY_COUNT",
+                  total: value,
+                });
+              },
+            };
+          }),
+          hasIcons: false,
+        });
+      },
+    }),
+    closure_17(require("TableRow").TableRow, {
+      label: "Trigger Mobile FA message in current DM",
+      subLabel: "Sends an ephemeral GIFTING_PROMPT into the selected channel",
+      onPress() {
+        const channelId = first1.getChannelId();
+        if (null != channelId) {
+          channel = channel.getChannel(channelId);
+          recipientUserId = undefined;
+          if (channel != null) {
+            const recipients = channel.recipients;
+            if (recipients != null) {
+              recipientUserId = recipients[0];
+            }
+          }
+          if (null != recipientUserId) {
+            const obj4 = { giftIntentType: set1.FRIEND_ANNIVERSARY, recipientUserId };
+            const result = stateFromStores1(stateFromStores2[21]).sendGiftingPromptSystemMessage(channelId, obj4);
+            const obj3 = stateFromStores1(stateFromStores2[21]);
+            stateFromStores1(stateFromStores2[16]).open({
+              key: "dev-tools-gift-intent-triggered",
+              content: "Friendship anniversary card sent.",
+            });
+            const obj5 = stateFromStores1(stateFromStores2[16]);
+          } else {
+            stateFromStores1(stateFromStores2[16]).open({
+              key: "dev-tools-gift-intent-no-recipient",
+              content: "Selected channel has no other recipient.",
+            });
+            const obj2 = stateFromStores1(stateFromStores2[16]);
+          }
+        } else {
+          stateFromStores1(stateFromStores2[16]).open({
+            key: "dev-tools-gift-intent-no-channel",
+            content: "Open a DM first.",
+          });
+          const obj = stateFromStores1(stateFromStores2[16]);
+        }
+      },
+    }),
+    arr.map((userId) => {
+      userId = userId.userId;
+      const hasItem = set.has(userId);
+      return renderDismissalRow(userId, hasItem, "" + userId.affinity + " \u00B7 ", "gen");
+    }),
+  ];
+  obj5.children = items8;
+  const items9 = [closure_18(require("TableRowGroup").TableRowGroup, obj5), , ,];
+  let tmp19Result = found1.length > 0;
+  if (tmp19Result) {
+    let obj8 = { children: null };
+    let obj9 = { size: stateFromStores1(tmp2[23]).space.PX_16 };
+    const items10 = [closure_17(tmp(tmp2[22]).Spacer, obj9)];
+    let obj10 = {
+      title: "Other Dismissals (not generated)",
+      hasIcons: false,
+      children: found1.map((item) => renderDismissalRow(item, false, "", "other")),
+    };
+    items10[1] = closure_17(tmp(tmp2[19]).TableRowGroup, obj10);
+    obj8.children = items10;
+    tmp19Result = closure_18(closure_19, obj8);
+  }
+  items9[1] = tmp19Result;
+  let obj6 = {
     label: "Number of anniversaries",
     subLabel: "Current: " + str,
-    trailing: closure_17(tmp(tmp2[18]).TableRowArrow, {}),
+    trailing: closure_17(require("TableRowArrow").TableRowArrow, {}),
     onPress() {
-      let obj = {
+      const obj = Sheet_showSimpleActionSheet;
+      const result = obj.showSimpleActionSheet({
         key: "dev-tools-friend-anniversary-count",
         header: { title: "Anniversaries to generate" },
         options: items.map((item) => {
@@ -455,19 +550,18 @@ function FriendAnniversary() {
           return {
             label: combined,
             onPress() {
-              stateFromStores1(stateFromStores2[13]);
-              const obj = { type: "DEV_TOOLS_SET_FRIEND_ANNIVERSARY_COUNT", total: value };
-              obj.dispatch(obj);
+              stateFromStores1(stateFromStores2[13]).dispatch({
+                type: "DEV_TOOLS_SET_FRIEND_ANNIVERSARY_COUNT",
+                total: value,
+              });
             },
           };
         }),
         hasIcons: false,
-      };
-      const result = obj.showSimpleActionSheet(obj);
+      });
     },
   };
-  const items8 = [closure_17(require("TableRow").TableRow, obj), ,];
-  obj1 = {
+  let obj7 = {
     label: "Trigger Mobile FA message in current DM",
     subLabel: "Sends an ephemeral GIFTING_PROMPT into the selected channel",
     onPress() {
@@ -482,8 +576,8 @@ function FriendAnniversary() {
           }
         }
         if (null != recipientUserId) {
-          let obj = { giftIntentType: set1.FRIEND_ANNIVERSARY, recipientUserId };
-          const result = stateFromStores1(stateFromStores2[21]).sendGiftingPromptSystemMessage(channelId, obj);
+          const obj4 = { giftIntentType: set1.FRIEND_ANNIVERSARY, recipientUserId };
+          const result = stateFromStores1(stateFromStores2[21]).sendGiftingPromptSystemMessage(channelId, obj4);
           const obj3 = stateFromStores1(stateFromStores2[21]);
           stateFromStores1(stateFromStores2[16]).open({
             key: "dev-tools-gift-intent-triggered",
@@ -498,35 +592,14 @@ function FriendAnniversary() {
           const obj2 = stateFromStores1(stateFromStores2[16]);
         }
       } else {
-        obj = stateFromStores1(stateFromStores2[16]);
-        obj.open({ key: "dev-tools-gift-intent-no-channel", content: "Open a DM first." });
+        stateFromStores1(stateFromStores2[16]).open({
+          key: "dev-tools-gift-intent-no-channel",
+          content: "Open a DM first.",
+        });
+        const obj = stateFromStores1(stateFromStores2[16]);
       }
     },
   };
-  items8[1] = closure_17(require("TableRow").TableRow, obj1);
-  items8[2] = arr.map((userId) => {
-    userId = userId.userId;
-    const hasItem = set.has(userId);
-    return renderDismissalRow(userId, hasItem, "" + userId.affinity + " \u00B7 ", "gen");
-  });
-  obj.children = items8;
-  const items9 = [closure_18(require("TableRowGroup").TableRowGroup, obj), , ,];
-  let tmp19Result = found1.length > 0;
-  if (tmp19Result) {
-    obj2 = { children: null };
-    obj3 = { size: stateFromStores1(tmp2[23]).space.PX_16 };
-    const items10 = [closure_17(tmp(tmp2[22]).Spacer, obj3)];
-    let obj4 = {
-      title: "Other Dismissals (not generated)",
-      hasIcons: false,
-      children: found1.map((item) => renderDismissalRow(item, false, "", "other")),
-    };
-    items10[1] = closure_17(tmp(tmp2[19]).TableRowGroup, obj4);
-    obj2.children = items10;
-    tmp19Result = closure_18(closure_19, obj2);
-  }
-  items9[1] = tmp19Result;
-  const set2 = new Set(items7);
   items9[2] = closure_17(require("native").Spacer, { size: stateFromStores1(stateFromStores2[23]).space.PX_16 });
   let str2 = "ok";
   if (recipientUserId) {
@@ -536,7 +609,7 @@ function FriendAnniversary() {
   if (stateFromStores2) {
     str3 = "yes";
   }
-  let obj5 = { size: stateFromStores1(stateFromStores2[23]).space.PX_16 };
+  const obj11 = { size: stateFromStores1(stateFromStores2[23]).space.PX_16 };
   const items11 = [
     closure_17(require("TableRow").TableRow, {
       label: "Eligibility",
@@ -576,7 +649,7 @@ function FriendAnniversary() {
     disabled: first1,
     onPress,
   });
-  const obj8 = {
+  const obj14 = {
     label: "Dismiss a generated anniversary on the server",
     subLabel: "POST a server dismissal for a generated friend",
     trailing: closure_17(require("TableRowArrow").TableRowArrow, {}),
@@ -590,9 +663,10 @@ function FriendAnniversary() {
   if (!tmp29) {
     tmp29 = 0 === arr.length;
   }
-  obj8.disabled = tmp29;
-  obj8.onPress = function onPress() {
-    const obj = {
+  obj14.disabled = tmp29;
+  obj14.onPress = function onPress() {
+    const obj = Sheet_showSimpleActionSheet;
+    const result = obj.showSimpleActionSheet({
       key: "dev-tools-gift-intent-seed",
       header: { title: "Dismiss a generated anniversary on the server" },
       options: arr.map((label) => ({
@@ -613,10 +687,9 @@ function FriendAnniversary() {
         },
       })),
       hasIcons: false,
-    };
-    const result = obj.showSimpleActionSheet(obj);
+    });
   };
-  items11[4] = closure_17(require("TableRow").TableRow, obj8);
+  items11[4] = closure_17(require("TableRow").TableRow, obj14);
   if (!first1) {
     first1 = !stateFromStores2;
   }
@@ -626,8 +699,8 @@ function FriendAnniversary() {
   if (!first1) {
     first1 = 0 === map.size;
   }
-  const obj9 = { children: null };
-  const obj10 = { title: "Backend Dismissal Sync", hasIcons: false, children: null };
+  const obj16 = { children: null };
+  const obj17 = { title: "Backend Dismissal Sync", hasIcons: false, children: null };
   items11[5] = closure_17(require("TableRow").TableRow, {
     variant: "danger",
     label: "Clear all server dismissals (staff)",
@@ -653,53 +726,59 @@ function FriendAnniversary() {
       });
     },
   });
-  obj10.children = items11;
-  items9[3] = closure_18(require("TableRowGroup").TableRowGroup, obj10);
-  obj9.children = items9;
-  return closure_18(closure_19, obj9);
+  obj17.children = items11;
+  items9[3] = closure_18(require("TableRowGroup").TableRowGroup, obj17);
+  obj16.children = items9;
+  return closure_18(closure_19, obj16);
 }
 function TrialOfferSheetExample() {
-  let obj = premiumTrialOffer(7550);
-  premiumTrialOffer = obj.usePremiumTrialOffer();
-  obj = {
+  premiumTrialOffer = premiumTrialOffer(7550).usePremiumTrialOffer();
+  let obj2 = {
     label: "Trial Offer Nitro Basic",
-    subLabel: str2,
+    subLabel: "No trial offer in store",
     disabled: null == premiumTrialOffer,
     onPress() {
       if (null != premiumTrialOffer) {
-        const obj = {
+        const obj2 = {
           fallbackPremiumType: tmp,
           userTrialOffer: tmp2,
           markAsDismissed() {},
         };
-        obj.openLazy(asyncRequireImpl(15776, dependencyMap.paths), "PremiumTrialOfferActionSheet", obj);
+        ActionSheetActionCreatorsDefault.openLazy(
+          asyncRequireImpl(15778, dependencyMap.paths),
+          "PremiumTrialOfferActionSheet",
+          obj2,
+        );
       }
     },
   };
-  items = [closure_17(premiumTrialOffer(5686).TableRow, obj)];
-  obj = { title: "Trial Offers", hasIcons: false, children: null };
+  items = [closure_17(premiumTrialOffer(5686).TableRow, obj2)];
+  const obj3 = { title: "Trial Offers", hasIcons: false, children: null };
   items[1] = closure_17(premiumTrialOffer(5686).TableRow, {
     label: "Trial Offer Nitro",
     subLabel: "No trial offer in store",
     disabled: null == premiumTrialOffer,
     onPress() {
       if (null != premiumTrialOffer) {
-        const obj = {
+        const obj2 = {
           fallbackPremiumType: tmp,
           userTrialOffer: tmp2,
           markAsDismissed() {},
         };
-        obj.openLazy(asyncRequireImpl(15776, dependencyMap.paths), "PremiumTrialOfferActionSheet", obj);
+        ActionSheetActionCreatorsDefault.openLazy(
+          asyncRequireImpl(15778, dependencyMap.paths),
+          "PremiumTrialOfferActionSheet",
+          obj2,
+        );
       }
     },
   });
-  obj.children = items;
-  return closure_18(premiumTrialOffer(5768).TableRowGroup, obj);
+  obj3.children = items;
+  return closure_18(premiumTrialOffer(5768).TableRowGroup, obj3);
 }
 function PremiumToggles() {
-  let obj = useStateFromStores;
   items = [DevSettingsStore];
-  const stateFromStores = obj.useStateFromStores(
+  const stateFromStores = useStateFromStores.useStateFromStores(
     items,
     () =>
       DevSettingsStore.allByCategory(constants.PREMIUM).filter((item) => {
@@ -709,7 +788,7 @@ function PremiumToggles() {
     [],
     useStateFromStores.statesWillNeverBeEqual,
   );
-  obj = {
+  return closure_1_17(TableRowGroup.TableRowGroup, {
     title: "Premium Toggles",
     hasIcons: false,
     children: stateFromStores.map((item) => {
@@ -727,97 +806,104 @@ function PremiumToggles() {
         tmp,
       );
     }),
-  };
-  return closure_1_17(TableRowGroup.TableRowGroup, obj);
+  });
 }
 function ForceMockIAP() {
-  let obj = useStateFromStores;
   items = [DevSettingsStore];
-  const stateFromStores = obj.useStateFromStores(items, () => DevSettingsStore.get("force_mock_iap"));
+  const stateFromStores = useStateFromStores.useStateFromStores(items, () => DevSettingsStore.get("force_mock_iap"));
   let result = IAPUtils.shouldMockIAPForceEnable();
   let str = "Replaces StoreKit with hardcoded fixture data. App will restart when toggled.";
   if (result) {
     str = "Forced on - the current device can't fetch real StoreKit products.";
   }
-  obj = { label: "Force mock IAP products", subLabel: str, value: null, disabled: null, onValueChange: null };
+  const obj3 = { label: "Force mock IAP products", subLabel: str, value: null, disabled: null, onValueChange: null };
   let tmp4 = result;
   if (!result) {
     tmp4 = stateFromStores;
   }
-  obj = {
+  obj3.value = tmp4;
+  obj3.disabled = result;
+  obj3.onValueChange = function onValueChange(flag) {
+    require("DevSettingsActions").toggle("force_mock_iap", flag);
+    DevSettingsStore.persist();
+    const obj = require("DevSettingsActions");
+    const result = BundleUpdaterDefault.checkForUpdateAndReload();
+  };
+  return closure_1_17(TableRowGroup.TableRowGroup, {
     title: "iOS IAP Mock",
     hasIcons: false,
-    children: closure_1_17(TableSwitchRow.TableSwitchRow, obj),
-    value: tmp4,
-    disabled: result,
-    onValueChange(flag) {
-      require("DevSettingsActions").toggle("force_mock_iap", flag);
-      DevSettingsStore.persist();
-      const obj = require("DevSettingsActions");
-      const result = BundleUpdaterDefault.checkForUpdateAndReload();
-    },
-  };
-  return closure_1_17(TableRowGroup.TableRowGroup, obj);
+    children: closure_1_17(TableSwitchRow.TableSwitchRow, obj3),
+  });
 }
 function PaymentFlowTest() {
-  let obj = { title: "Payment Flow Test", hasIcons: false, children: null };
-  obj = {
-    label: "Test Payment Flow",
-    onPress() {
-      require("ModalActionCreators").pushLazy(require("asyncRequireImpl")(paths[35], paths.paths));
-    },
-    trailing: closure_1_17(TableRowArrow.TableRowArrow, {}),
+  const obj = {
+    title: "Payment Flow Test",
+    hasIcons: false,
+    children: closure_1_17(TableRow.TableRow, {
+      label: "Test Payment Flow",
+      onPress() {
+        require("ModalActionCreators").pushLazy(require("asyncRequireImpl")(paths[35], paths.paths));
+      },
+      trailing: closure_1_17(TableRowArrow.TableRowArrow, {}),
+    }),
   };
-  obj.children = closure_1_17(TableRow.TableRow, obj);
   return closure_1_17(TableRowGroup.TableRowGroup, obj);
 }
 function Orbs() {
-  let obj = { title: "Orbs", hasIcons: false, children: null };
-  obj = {
-    label: "Test Orbs Flow",
-    onPress() {
-      require("ModalActionCreators").pushLazy(require("asyncRequireImpl")(paths[36], paths.paths));
-    },
-    trailing: closure_1_17(TableRowArrow.TableRowArrow, {}),
+  const obj = {
+    title: "Orbs",
+    hasIcons: false,
+    children: closure_1_17(TableRow.TableRow, {
+      label: "Test Orbs Flow",
+      onPress() {
+        require("ModalActionCreators").pushLazy(require("asyncRequireImpl")(paths[36], paths.paths));
+      },
+      trailing: closure_1_17(TableRowArrow.TableRowArrow, {}),
+    }),
   };
-  obj.children = closure_1_17(TableRow.TableRow, obj);
   return closure_1_17(TableRowGroup.TableRowGroup, obj);
 }
 function RevenueSmokeTests() {
-  let obj = { title: "Revenue Smoke Tests", hasIcons: false, children: null };
-  obj = {
-    label: "Test all purchasing flows",
-    onPress() {
-      require("ModalActionCreators").pushLazy(require("asyncRequireImpl")(paths[37], paths.paths));
-    },
-    trailing: closure_1_17(TableRowArrow.TableRowArrow, {}),
+  const obj = {
+    title: "Revenue Smoke Tests",
+    hasIcons: false,
+    children: closure_1_17(TableRow.TableRow, {
+      label: "Test all purchasing flows",
+      onPress() {
+        require("ModalActionCreators").pushLazy(require("asyncRequireImpl")(paths[37], paths.paths));
+      },
+      trailing: closure_1_17(TableRowArrow.TableRowArrow, {}),
+    }),
   };
-  obj.children = closure_1_17(TableRow.TableRow, obj);
   return closure_1_17(TableRowGroup.TableRowGroup, obj);
 }
 function GuildPowerups() {
-  let obj = { title: "Guild Powerups", hasIcons: false, children: null };
-  obj = {
-    label: "Guild Powerups",
-    onPress() {
-      require("ModalActionCreators").pushLazy(require("asyncRequireImpl")(paths[38], paths.paths));
-    },
-    trailing: closure_1_17(TableRowArrow.TableRowArrow, {}),
+  const obj = {
+    title: "Guild Powerups",
+    hasIcons: false,
+    children: closure_1_17(TableRow.TableRow, {
+      label: "Guild Powerups",
+      onPress() {
+        require("ModalActionCreators").pushLazy(require("asyncRequireImpl")(paths[38], paths.paths));
+      },
+      trailing: closure_1_17(TableRowArrow.TableRowArrow, {}),
+    }),
   };
-  obj.children = closure_1_17(TableRow.TableRow, obj);
   return closure_1_17(TableRowGroup.TableRowGroup, obj);
 }
 function GuildTagBadges() {
-  let obj = { title: "Guild Tag Badges", hasIcons: false, children: null };
-  obj = {
-    label: "Badge gallery",
-    subLabel: "Preview all native badge kinds across sizes and tints",
-    onPress() {
-      require("ModalActionCreators").pushLazy(require("asyncRequireImpl")(paths[39], paths.paths));
-    },
-    trailing: closure_1_17(TableRowArrow.TableRowArrow, {}),
+  const obj = {
+    title: "Guild Tag Badges",
+    hasIcons: false,
+    children: closure_1_17(TableRow.TableRow, {
+      label: "Badge gallery",
+      subLabel: "Preview all native badge kinds across sizes and tints",
+      onPress() {
+        require("ModalActionCreators").pushLazy(require("asyncRequireImpl")(paths[39], paths.paths));
+      },
+      trailing: closure_1_17(TableRowArrow.TableRowArrow, {}),
+    }),
   };
-  obj.children = closure_1_17(TableRow.TableRow, obj);
   return closure_1_17(TableRowGroup.TableRowGroup, obj);
 }
 const ScrollView = fn(17).ScrollView;
@@ -838,12 +924,11 @@ let items = [
 ];
 let c21 = "/users/@me/gift-intents/dismissals";
 const FRIEND_ANNIVERSARY = "FRIEND_ANNIVERSARY";
-fn(4636);
-let createStyles = { container: null, scrollContainer: null };
-createStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 };
-createStyles.container = createStyles;
-createStyles.scrollContainer = { padding: nativeDefault.space.PX_16 };
-let closure_25 = createStyles.createStyles(createStyles);
+const createStyles = fn(4636);
+let obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 }, scrollContainer: null };
+let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 };
+obj2.scrollContainer = { padding: nativeDefault.space.PX_16 };
+let closure_25 = createStyles.createStyles(obj2);
 const size = fn(2);
 let result = size.fileFinishedImporting(
   "modules/devtools/native/components/screens/DevToolsRevenuePlaygroundScreen.tsx",
@@ -851,29 +936,44 @@ let result = size.fileFinishedImporting(
 
 export default function DevToolsRevenuePlaygroundScreen() {
   const tmp = closure_25();
-  let obj = { style: tmp.container, contentContainerStyle: tmp.scrollContainer, children: null };
-  items = [closure_1_17(TrialOfferSheetExample, {}), , , , , , , , , , , , , , , ,];
-  obj = { size: nativeDefault.space.PX_16 };
-  items[1] = closure_1_17(native.Spacer, obj);
-  items[2] = closure_1_17(PremiumToggles, {});
-  obj = { size: nativeDefault.space.PX_16 };
-  items[3] = closure_1_17(native.Spacer, obj);
+  const obj = { style: tmp.container, contentContainerStyle: tmp.scrollContainer, children: null };
+  items = [
+    closure_1_17(TrialOfferSheetExample, {}),
+    closure_1_17(native.Spacer, { size: nativeDefault.space.PX_16 }),
+    closure_1_17(PremiumToggles, {}),
+    ,
+    ,
+    ,
+    ,
+    ,
+    ,
+    ,
+    ,
+    ,
+    ,
+    ,
+    ,
+    ,
+  ];
+  const obj2 = { size: nativeDefault.space.PX_16 };
+  items[3] = closure_1_17(native.Spacer, { size: nativeDefault.space.PX_16 });
   items[4] = closure_1_17(ForceMockIAP, {});
+  const obj3 = { size: nativeDefault.space.PX_16 };
   items[5] = closure_1_17(native.Spacer, { size: nativeDefault.space.PX_16 });
   items[6] = closure_1_17(PaymentFlowTest, {});
-  const obj1 = { size: nativeDefault.space.PX_16 };
+  const obj4 = { size: nativeDefault.space.PX_16 };
   items[7] = closure_1_17(native.Spacer, { size: nativeDefault.space.PX_16 });
   items[8] = closure_1_17(Orbs, {});
-  const obj2 = { size: nativeDefault.space.PX_16 };
+  const obj5 = { size: nativeDefault.space.PX_16 };
   items[9] = closure_1_17(native.Spacer, { size: nativeDefault.space.PX_16 });
   items[10] = closure_1_17(RevenueSmokeTests, {});
-  const obj3 = { size: nativeDefault.space.PX_16 };
+  const obj6 = { size: nativeDefault.space.PX_16 };
   items[11] = closure_1_17(native.Spacer, { size: nativeDefault.space.PX_16 });
   items[12] = closure_1_17(GuildPowerups, {});
-  const obj4 = { size: nativeDefault.space.PX_16 };
+  const obj7 = { size: nativeDefault.space.PX_16 };
   items[13] = closure_1_17(native.Spacer, { size: nativeDefault.space.PX_16 });
   items[14] = closure_1_17(GuildTagBadges, {});
-  const obj5 = { size: nativeDefault.space.PX_16 };
+  const obj8 = { size: nativeDefault.space.PX_16 };
   items[15] = closure_1_17(native.Spacer, { size: nativeDefault.space.PX_16 });
   items[16] = closure_1_17(FriendAnniversary, {});
   obj.children = items;

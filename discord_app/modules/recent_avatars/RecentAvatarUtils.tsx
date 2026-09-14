@@ -33,7 +33,6 @@ function getArchivedAvatarURL(allowWebp) {
     flag = true;
   }
   if (flag2) {
-    let obj = AvatarUtils;
     if (obj.isAnimatedIconHash(storageHash)) {
       let str6 = "gif";
       if (flag) {
@@ -44,20 +43,21 @@ function getArchivedAvatarURL(allowWebp) {
       }
       let str2 = str6;
     }
-    obj = { size: null };
+    const obj2 = { size: null };
+    obj = AvatarUtils;
     const obj3 = ImageLoaderUtils;
-    obj.size = obj3.getBestMediaProxySize(allowWebp.size * ImageLoaderUtils.getDevicePixelRatio());
+    obj2.size = obj3.getBestMediaProxySize(allowWebp.size * ImageLoaderUtils.getDevicePixelRatio());
     let isAnimatedIconHashResult = "webp" === str2 && canAnimate;
     if (isAnimatedIconHashResult) {
       isAnimatedIconHashResult = AvatarUtils.isAnimatedIconHash(storageHash);
       const tmp6Result = AvatarUtils;
     }
     if (isAnimatedIconHashResult) {
-      obj.animated = true;
+      obj2.animated = true;
     }
     const ARCHIVED_AVATARResult = Endpoints.ARCHIVED_AVATAR(userId, avatarId, storageHash, str2);
     const _HermesInternal2 = HermesInternal;
-    return "" + combined + ARCHIVED_AVATARResult + "?" + _modDef1471.stringify(obj);
+    return "" + combined + ARCHIVED_AVATARResult + "?" + _modDef1471.stringify(obj2);
   }
   str2 = "jpg";
   if (null != window.GLOBAL_ENV.CDN_HOST) {
@@ -109,9 +109,9 @@ export const getImageFormat = function getImageFormat(canAnimate) {
   }
 };
 export { getArchivedAvatarURL };
-export const generateAvatarDescription = function generateAvatarDescription(time) {
-  let obj = time;
-  if (time == null) {
+export const generateAvatarDescription = function generateAvatarDescription(arg0) {
+  let obj = arg0;
+  if (arg0 == null) {
     obj = {};
   }
   ({ filename, assetOrigin } = obj);
@@ -131,7 +131,7 @@ export const generateAvatarDescription = function generateAvatarDescription(time
     } else {
       DYil93 = util.t.DYil93;
     }
-    obj = {
+    const obj2 = {
       name: filename,
       dateTime: date.toLocaleString(util.intl.currentLocale, {
         year: "numeric",
@@ -141,7 +141,7 @@ export const generateAvatarDescription = function generateAvatarDescription(time
         minute: "numeric",
       }),
     };
-    return intl2.formatToPlainString(DYil93, obj);
+    return intl2.formatToPlainString(DYil93, obj2);
   }
 };
 export const generateRecentAvatarFileDetails = function generateRecentAvatarFileDetails(storageHash, arg1) {
@@ -149,7 +149,6 @@ export const generateRecentAvatarFileDetails = function generateRecentAvatarFile
   if (flag === undefined) {
     flag = true;
   }
-  let tmpResult = AvatarUtils;
   if (tmpResult.isAnimatedIconHash(storageHash)) {
     let str5 = "gif";
     if (flag) {
@@ -189,8 +188,8 @@ export const generateRecentAvatarFileDetails = function generateRecentAvatarFile
   } else {
     str9 = "image/webp";
     if ("webp" !== str) {
-      tmpResult = GlobalUtils;
-      tmpResult.assertNever(str);
+      GlobalUtils.assertNever(str);
+      const tmpResult2 = GlobalUtils;
     }
   }
   obj.type = str9;

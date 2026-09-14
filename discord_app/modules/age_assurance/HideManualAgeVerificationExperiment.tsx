@@ -2,10 +2,10 @@
 import ApexExperiment from "../experiments/apex/index.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
-let obj = { kind: "user", name: "2025-11-hide-manual-link", defaultConfig: { isHidden: false }, variations: null };
-obj = { 1: null };
-obj[1] = { isHidden: true };
-obj.variations = obj;
+const obj = { kind: "user", name: "2025-11-hide-manual-link", defaultConfig: { isHidden: false }, variations: null };
+const obj2 = { 1: null };
+obj2[1] = { isHidden: true };
+obj.variations = obj2;
 let closure_0 = ApexExperiment.createApexExperiment(obj);
 const result = size.fileFinishedImporting("modules/age_assurance/HideManualAgeVerificationExperiment.tsx");
 

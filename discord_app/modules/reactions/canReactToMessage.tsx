@@ -7,6 +7,8 @@ import GuildVerificationStore from "../../stores/GuildVerificationStore.tsx";
 import PermissionStore from "../../stores/PermissionStore.tsx";
 import UserStore from "../../stores/UserStore.tsx";
 
+const require = globalThis.__r;
+
 require = fn;
 function canReactToMessageInternal(state, getGuildId, items) {
   [obj, obj2] = items;

@@ -29,21 +29,21 @@ function handleChange() {
   const result = ProximitySensorManager.setProximityMonitoringEnabled(tmp8);
   tmp4 = ApplicationStreamingStore.getAllActiveStreams().length > 0;
 }
-const PlatformUtils = fn(1150);
+const PlatformUtils = fn(1363);
 if (PlatformUtils.isIOS()) {
   let ProximitySensorManager = fn(17).NativeModules.ProximitySensorManager;
 } else {
   ProximitySensorManager = NativeProximitySensorManagerModuleDefault;
 }
-let prototype = function ProximitySensorManager() {
+const prototype = function ProximitySensorManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
   const result = new Map().set(AudioRouteStore, handleChange);
   applyArgumentsResult.stores = result.set(RTCConnectionStore, handleChange);
   return applyArgumentsResult;
 }.prototype;
 class prototype extends tmp2 {}
-prototype = new prototype();
+const prototype1 = new prototype();
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/voice_calls/native/ProximitySensorManager.tsx");
 
-export default prototype;
+export default prototype1;

@@ -5,6 +5,8 @@ import PresenceStore from "../../stores/PresenceStore.tsx";
 import UserStore from "../../stores/UserStore.tsx";
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore.tsx";
 
+const require = globalThis.__r;
+
 const require = fn;
 function useEmbeddedApps(arr, arg1) {
   _require = arr;
@@ -72,8 +74,8 @@ const NO_ACTIVITIES = fn(1956).NO_ACTIVITIES;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/activities/useEmbeddedAppsForChannel.tsx");
 
-export default function useEmbeddedAppsForChannel(arg0, arg1) {
-  _require = arg0;
+export default function useEmbeddedAppsForChannel(channel, arg1) {
+  _require = channel;
   const items = [EmbeddedActivitiesStore];
   return useEmbeddedApps(
     require("initialize").useStateFromStoresArray(items, () => {

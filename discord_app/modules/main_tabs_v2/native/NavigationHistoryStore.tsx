@@ -118,13 +118,11 @@ export const handleHistoryStoreNavigationChange = function handleHistoryStoreNav
     const currentRoute = rootNavigationRef.getCurrentRoute();
     if (null != currentRoute) {
       if (null != currentRoute.params) {
-        let tmpResult = NavigationRouteUtils;
-        const coerceChannelRouteResult = tmpResult.coerceChannelRoute(currentRoute);
+        const coerceChannelRouteResult = NavigationRouteUtils.coerceChannelRoute(currentRoute);
         if (null == coerceChannelRouteResult) {
-          tmpResult = NavigationRouteUtils;
-          const coerceGuildsRouteResult = tmpResult.coerceGuildsRoute(currentRoute);
+          const coerceGuildsRouteResult = NavigationRouteUtils.coerceGuildsRoute(currentRoute);
           if (null != coerceGuildsRouteResult) {
-            if (tmpResult1.getChatLayout().isChatLockedOpen) {
+            if (tmpResult4.getChatLayout().isChatLockedOpen) {
               const params = coerceGuildsRouteResult.params;
               let channelId;
               if (params != null) {
@@ -172,8 +170,9 @@ export const handleHistoryStoreNavigationChange = function handleHistoryStoreNav
               }
               navigationHistoryStore.emitChange();
             }
-            tmpResult1 = useChatLayout;
+            tmpResult4 = useChatLayout;
           }
+          const tmpResult3 = NavigationRouteUtils;
         } else {
           const _HermesInternal2 = HermesInternal;
           combined2 = "" + c3 + coerceChannelRouteResult.params.channelId;
@@ -191,6 +190,7 @@ export const handleHistoryStoreNavigationChange = function handleHistoryStoreNav
           }
           navigationHistoryStore.emitChange();
         }
+        const tmpResult = NavigationRouteUtils;
       }
     }
   }

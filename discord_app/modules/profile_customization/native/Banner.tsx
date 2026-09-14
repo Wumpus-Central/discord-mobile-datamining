@@ -23,15 +23,15 @@ export default function ProfileBanner(bannerHeight) {
     bannerHeight = BANNER_HEIGHT;
   }
   const tmp = closure_6();
-  let obj = { backgroundColor: utils_ColorUtils.int2hex(backgroundColor), height: bannerHeight + bannerSafeArea };
-  obj = { style: null, children: null };
+  const obj = { backgroundColor: utils_ColorUtils.int2hex(backgroundColor), height: bannerHeight + bannerSafeArea };
+  const obj3 = { style: null, children: null };
   const items = [tmp.root, obj, style];
-  obj.style = items;
+  obj3.style = items;
   let tmp3Result = null;
   if (null != bannerSource) {
-    obj = { style: tmp.image, source: bannerSource };
+    const obj4 = { style: tmp.image, source: bannerSource };
     tmp3Result = jsx(FastImageDefault, { style: tmp.image, source: bannerSource });
   }
-  obj.children = tmp3Result;
+  obj3.children = tmp3Result;
   return <View style={null}>{null}</View>;
 }

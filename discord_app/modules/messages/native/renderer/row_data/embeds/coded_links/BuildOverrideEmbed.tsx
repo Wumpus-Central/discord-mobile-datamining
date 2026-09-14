@@ -8,9 +8,9 @@ import RowGeneratorStyleSheet from "../../../RowGeneratorStyleSheet.tsx";
 import getEmbedThemeColorsDefault from "../getEmbedThemeColors.tsx";
 import BuildOverrideStore2 from "../../../../../../build_overrides/BuildOverrideStore.tsx";
 import build_overrides_BuildOverrideUtils from "../../../../../../build_overrides/native/BuildOverrideUtils.tsx";
-import _modDef11938 from "../../../../../../../../_runtime/metro/11938__.js";
 import _modDef11939 from "../../../../../../../../_runtime/metro/11939__.js";
-import _modDef13349 from "../../../../../../../../_runtime/metro/13349__.js";
+import _modDef11940 from "../../../../../../../../_runtime/metro/11940__.js";
+import _modDef13350 from "../../../../../../../../_runtime/metro/13350__.js";
 import validateBuildOverrideDefault from "../../../../../../build_overrides/validateBuildOverride.tsx";
 import size from "../../../../../../../../_runtime/metro/00002__.js";
 
@@ -28,11 +28,11 @@ export const createBuildOverrideEmbed = function createBuildOverrideEmbed(code, 
   const currentBuildOverride = BuildOverrideStore.getCurrentBuildOverride();
   const buildOverride = BuildOverrideStore.getBuildOverride(code);
   if (buildOverride.state === State.Resolving) {
-    let obj = { headerText: "RESOLVING", resolvingGradientEnd: null, resolvingGradientStart: null, type: null };
+    const obj2 = { headerText: "RESOLVING", resolvingGradientEnd: null, resolvingGradientStart: null, type: null };
     ({ resolvingGradientEnd: obj8.resolvingGradientEnd, resolvingGradientStart: obj8.resolvingGradientStart } = colors);
-    obj.type = InviteTypes.GUILD;
+    obj2.type = InviteTypes.GUILD;
     const merged = Object.assign(baseColors);
-    return obj;
+    return obj2;
   } else {
     const override2 = buildOverride.override;
     let id;
@@ -57,23 +57,22 @@ export const createBuildOverrideEmbed = function createBuildOverrideEmbed(code, 
       }
       tmp10 = id === id1;
     }
-    let tmpResult = validateBuildOverrideDefault;
-    obj = ClientInfoUtilsAll;
+    const tmpResult = validateBuildOverrideDefault;
     const tmpResultResult = tmpResult(
       buildOverride.override,
       ["discord_ios", "discord_android"],
-      obj.getConstants().Version,
+      ClientInfoUtilsAll.getConstants().Version,
     );
     if (currentBuildOverride.state !== State.Invalid) {
       if (buildOverride.state !== State.Invalid) {
         if (null != buildOverride.override) {
           if (null != id) {
             if (tmpResultResult.valid) {
-              obj = {};
+              const obj3 = {};
               const merged1 = Object.assign(baseColors);
               const intl3 = util.intl;
-              obj.headerText = intl3.string(util.t.Wj3LW4).toLocaleUpperCase();
-              obj.headerColor = colors.headerColor;
+              obj3.headerText = intl3.string(util.t.Wj3LW4).toLocaleUpperCase();
+              obj3.headerColor = colors.headerColor;
               const intl4 = util.intl;
               const override = buildOverride.override;
               let type;
@@ -91,16 +90,16 @@ export const createBuildOverrideEmbed = function createBuildOverrideEmbed(code, 
               } else {
                 RCYGot = util.t.RCYGot;
               }
-              obj.titleText = intl4.string(RCYGot);
-              obj.titleColor = colors.titleColor;
-              obj.subtitle = id;
-              obj.subtitleColor = colors.subtitleColor;
-              obj.thumbnailUrl = Image.resolveAssetSource(_modDef13349).uri;
+              obj3.titleText = intl4.string(RCYGot);
+              obj3.titleColor = colors.titleColor;
+              obj3.subtitle = id;
+              obj3.subtitleColor = colors.subtitleColor;
+              obj3.thumbnailUrl = Image.resolveAssetSource(_modDef13350).uri;
               let str2 = "primary";
               if (tmp10) {
                 str2 = "destructive";
               }
-              obj.acceptButtonVariant = str2;
+              obj3.acceptButtonVariant = str2;
               const intl5 = util.intl;
               const string = intl5.string;
               let tX4xrt = util.t;
@@ -110,44 +109,44 @@ export const createBuildOverrideEmbed = function createBuildOverrideEmbed(code, 
               } else {
                 stringResult1 = string(tX4xrt.nOunHC);
               }
-              obj.acceptLabelText = stringResult1;
-              obj.embedCanBeTapped = true;
-              obj.canBeAccepted = true;
-              obj.type = InviteTypes.GUILD;
+              obj3.acceptLabelText = stringResult1;
+              obj3.embedCanBeTapped = true;
+              obj3.canBeAccepted = true;
+              obj3.type = InviteTypes.GUILD;
               const stringResult = intl3.string(util.t.Wj3LW4);
             }
           }
         }
       }
     }
-    const obj1 = {};
+    const obj5 = {};
     const merged2 = Object.assign(baseColors);
     const intl = util.intl;
-    obj1.headerText = intl.string(util.t.d34xi4).toLocaleUpperCase();
+    obj5.headerText = intl.string(util.t.d34xi4).toLocaleUpperCase();
     const stringResult2 = intl.string(util.t.d34xi4);
-    obj1.titleColor = RowGeneratorStyleSheet.processColorOrThrow(nativeDefault.unsafe_rawColors.RED_400);
+    obj5.titleColor = RowGeneratorStyleSheet.processColorOrThrow(nativeDefault.unsafe_rawColors.RED_400);
     if (tmpResultResult.valid) {
       const intl2 = util.intl;
       let reason = intl2.string(util.t.ODXApH);
     } else {
       reason = tmpResultResult.reason;
     }
-    obj1.titleText = reason;
-    obj1.subtitle = id;
+    obj5.titleText = reason;
+    obj5.subtitle = id;
     let subtitleColor;
     if (null != id) {
       subtitleColor = colors.subtitleColor;
     }
-    obj1.subtitleColor = subtitleColor;
+    obj5.subtitleColor = subtitleColor;
     if (tmp20Result.isThemeDark(theme)) {
-      tmpResult = _modDef11938;
+      let tmpResult2 = _modDef11939;
     } else {
-      tmpResult = _modDef11939;
+      tmpResult2 = _modDef11940;
     }
-    obj1.thumbnailUrl = Image.resolveAssetSource(tmpResult).uri;
-    obj1.thumbnailBackgroundColor = colors.thumbnailBackgroundColor;
-    obj1.type = InviteTypes.GUILD;
-    return obj1;
+    obj5.thumbnailUrl = Image.resolveAssetSource(tmpResult2).uri;
+    obj5.thumbnailBackgroundColor = colors.thumbnailBackgroundColor;
+    obj5.type = InviteTypes.GUILD;
+    return obj5;
   }
   const tmp3 = getEmbedThemeColorsDefault(theme);
 };

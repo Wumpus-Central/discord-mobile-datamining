@@ -17,7 +17,7 @@ function WarningBox(application) {
   } else {
     let name = importDefault;
     let BMMo2K = dependencyMap;
-    let obj = { look: InfoBox.InfoBoxLooks.WARNING, style: tmp.warningBox, children: null };
+    const obj = { look: InfoBox.InfoBoxLooks.WARNING, style: tmp.warningBox, children: null };
     const intl = util.intl;
     if (mobileAccountLinkingDisabled) {
       BMMo2K = name(3460).BMMo2K;
@@ -26,18 +26,18 @@ function WarningBox(application) {
       if (!tmp2) {
         name = application.name;
       }
-      obj = { applicationName: name };
-      application = intl.formatToPlainString(BMMo2K, obj);
+      const obj2 = { applicationName: name };
+      application = intl.formatToPlainString(BMMo2K, obj2);
       obj.children = application;
       let tmp7 = obj;
     } else if (canStartAuthorization) {
-      obj = { skuName: sku.name, applicationName: null };
+      const obj3 = { skuName: sku.name, applicationName: null };
       let name1;
       if (application != tmp2) {
         name1 = application.name;
       }
-      obj.applicationName = name1;
-      obj.children = intl.formatToPlainString(util.t["EgCl+Q"], obj);
+      obj3.applicationName = name1;
+      obj.children = intl.formatToPlainString(util.t["EgCl+Q"], obj3);
       tmp7 = obj;
     } else {
       obj.children = intl.format(util.t["3T0cpx"], {});
@@ -67,21 +67,26 @@ export default function SlayerStorefrontGiftPreview(arg0) {
   const tmp = closure_6();
   let tmp3Result = null;
   if (null != sku) {
-    let obj = { style: tmp.container, children: null };
-    obj = { sku };
-    const items = [React4(SlayerStorefrontItemCardDefault, obj), ,];
-    obj = { variant: "heading-md/normal", color: "mobile-text-heading-primary", style: tmp.text, children: null };
+    const obj = { style: tmp.container, children: null };
+    const obj2 = { sku };
+    const items = [React4(SlayerStorefrontItemCardDefault, obj2), ,];
+    const obj3 = {
+      variant: "heading-md/normal",
+      color: "mobile-text-heading-primary",
+      style: tmp.text,
+      children: null,
+    };
     const intl = util.intl;
-    const obj1 = { sender, skuName: sku.name, applicationName: null };
+    const obj4 = { sender, skuName: sku.name, applicationName: null };
     let name;
     if (application != null) {
       name = application.name;
     }
-    obj1.applicationName = name;
-    obj.children = intl.formatToPlainString(util.t["2tBYtA"], obj1);
-    items[1] = React4(Text_Text.Text, obj);
-    const obj2 = { canStartAuthorization, hasAccountLinked, mobileAccountLinkingDisabled, sku, application };
-    items[2] = React4(WarningBox, obj2);
+    obj4.applicationName = name;
+    obj3.children = intl.formatToPlainString(util.t["2tBYtA"], obj4);
+    items[1] = React4(Text_Text.Text, obj3);
+    const obj5 = { canStartAuthorization, hasAccountLinked, mobileAccountLinkingDisabled, sku, application };
+    items[2] = React4(WarningBox, obj5);
     obj.children = items;
     tmp3Result = hasOwnProperty(View, obj);
   }

@@ -31,10 +31,11 @@ import _mod3296 from "../../../../_runtime/metro/03296__.js";
 import _mod3297 from "../../../../_runtime/metro/03297__.js";
 import _mod3298 from "../../../../_runtime/metro/03298__.js";
 import _mod3299 from "../../../../_runtime/metro/03299__.js";
-import 01155__ from "../../../../_runtime/metro/01155__.js";
+import module_1153_mod from "../../../../_runtime/metro/01153__.js";
 import size from "../../../../_runtime/metro/00002__.js";
 
-const loader = module_1155.createLoader({
+let module_1153 = module_1153_mod;
+const loader = module_1153.createLoader({
   bg() {
     const jsonAsset = AssetJsonUtils.loadJsonAsset(_mod3269);
     return jsonAsset.then((result) => ({ default: result }));
@@ -160,7 +161,8 @@ const loader = module_1155.createLoader({
     return jsonAsset.then((result) => ({ default: result }));
   }
 }, "en-US");
-const messagesProxy = module_1155.makeMessagesProxy(loader);
+let module_1153 = module_1153_mod;
+const messagesProxy = module_1153.makeMessagesProxy(loader);
 const result = size.fileFinishedImporting("modules/premium/call_of_duty_3pp/CallOfDuty3PP.messages.js");
 
 export default messagesProxy;

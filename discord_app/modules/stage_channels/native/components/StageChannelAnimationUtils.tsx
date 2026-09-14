@@ -3,9 +3,11 @@ import ReanimatedRexport from "../../../reanimated/ReanimatedRexport.tsx";
 import timing from "../../../../design/animation/reanimated/timing/timing.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
 
-let __closure = { duration: 250, easing: null };
+const require = globalThis.__r;
+
+let obj = { duration: 250, easing: null };
 const Easing = ReanimatedRexport.Easing;
-__closure.easing = Easing.bezier(0.66, 0, 0.2, 1);
+obj.easing = Easing.bezier(0.66, 0, 0.2, 1);
 let closure_4 = {
   code: "function StageChannelAnimationUtilsTsx1(){const{isInvited,actionBarHeight,ACTION_BAR_SAFE_AREA_PADDING,safeAreaTop,controlPadding}=this.__closure;return isInvited?actionBarHeight+ACTION_BAR_SAFE_AREA_PADDING+safeAreaTop:controlPadding;}",
 };
@@ -18,9 +20,9 @@ export const useStageActionBarAnimation = function useStageActionBarAnimation(ch
   _require = controlPadding;
   const tmp = require("useIsInvitedToSpeak")();
   importDefault = tmp;
-  __closure = require("StageChannelHeightHooks");
-  getActionBarHeight = __closure.useGetActionBarHeight(channelId);
+  getActionBarHeight = require("StageChannelHeightHooks").useGetActionBarHeight(channelId);
   const top = require("useSafeAreaInsets")().top;
+  obj = require("StageChannelHeightHooks");
   class A {
     constructor() {
       if (closure_1) {
@@ -49,9 +51,9 @@ export const useStageActionBarAnimation = function useStageActionBarAnimation(ch
     obj = { paddingTop: timing.withTiming(derivedValue.get(), obj) };
     return obj;
   };
-  __closure = { withTiming: require("timing").withTiming, paddingTop: derivedValue, TIMING_CONFIG: top };
-  fn.__closure = __closure;
+  const obj3 = require("ReanimatedRexport");
+  fn.__closure = { withTiming: require("timing").withTiming, paddingTop: derivedValue, TIMING_CONFIG: top };
   fn.__workletHash = 16816216105718;
   fn.__initData = __initData;
-  return require("ReanimatedRexport").useAnimatedStyle(fn);
+  return obj3.useAnimatedStyle(fn);
 };

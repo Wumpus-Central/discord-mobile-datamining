@@ -35,30 +35,30 @@ export const IconButton = noop.forwardRef((grow, ref) => {
   );
   const tmp2 = closure_5(grow.grow);
   if (null != label) {
-    let obj = { style: tmp2.labelPressable };
+    const obj2 = { style: tmp2.labelPressable };
     const merged1 = Object.assign(merged);
-    obj.variant = "none";
-    obj.accessibilityLabel = accessibilityLabel;
-    obj.accessibilityHint = accessibilityHint;
-    obj = { ref };
+    obj2.variant = "none";
+    obj2.accessibilityLabel = accessibilityLabel;
+    obj2.accessibilityHint = accessibilityHint;
+    const obj3 = { ref };
     const merged2 = Object.assign(merged);
-    obj.accessibilityRole = "none";
-    obj.accessibilityLabel = "";
-    obj.size = "lg";
-    obj.maxFontSizeMultiplier = maxFontSizeMultiplier;
-    const items = [React3(BaseIconButton.BaseIconButton, obj)];
-    const obj1 = {
+    obj3.accessibilityRole = "none";
+    obj3.accessibilityLabel = "";
+    obj3.size = "lg";
+    obj3.maxFontSizeMultiplier = maxFontSizeMultiplier;
+    const items = [React3(BaseIconButton.BaseIconButton, obj3)];
+    const obj4 = {
       style: tmp2.label,
       variant: "text-xs/medium",
       color: "interactive-text-default",
       maxFontSizeMultiplier,
       children: label,
     };
-    items[1] = React3(Text_Text.Text, obj1);
-    obj.children = items;
-    let tmp9 = React4(Button_BaseButton.BaseButton, obj);
+    items[1] = React3(Text_Text.Text, obj4);
+    obj2.children = items;
+    let tmp9 = React4(Button_BaseButton.BaseButton, obj2);
   } else {
-    obj = { ref };
+    const obj = { ref };
     const merged3 = Object.assign(merged);
     obj.accessibilityLabel = accessibilityLabel;
     obj.accessibilityHint = accessibilityHint;

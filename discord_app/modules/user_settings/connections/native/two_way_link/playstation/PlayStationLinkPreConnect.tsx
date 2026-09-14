@@ -14,8 +14,8 @@ const result = size.fileFinishedImporting(
 
 export const PlayStationLinkPreConnect = function PlayStationLinkPreConnect(platformType) {
   let navigation;
-  let obj = navigation(1483);
-  navigation = obj.useNavigation();
+  const tmp = closure_6();
+  navigation = navigation(1483).useNavigation();
   const items = [navigation];
   const items1 = [navigation];
   const callback = noop.useCallback((arg0) => {
@@ -25,25 +25,25 @@ export const PlayStationLinkPreConnect = function PlayStationLinkPreConnect(plat
     navigation.push(constants.ERROR, {});
   }, items1);
   const memo = noop.useMemo(() => ({ uri: _modDef9388 }), []);
-  obj = {
+  const obj2 = {
     platformType: platformType.platformType,
     onError: callback1,
     onNext: callback,
     img: memo,
-    imgStyle: closure_6().image,
+    imgStyle: tmp.image,
     title: null,
     body: null,
   };
   const intl = navigation(1114).intl;
-  obj.title = intl.string(navigation(1114).t["6n+UPR"]);
+  obj2.title = intl.string(navigation(1114).t["6n+UPR"]);
   const intl2 = navigation(1114).intl;
-  obj.body = intl2.string(navigation(1114).t.JaaqIf);
+  obj2.body = intl2.string(navigation(1114).t.JaaqIf);
   return jsx(navigation(9359).TwoWayLinkPreConnect, {
     platformType: platformType.platformType,
     onError: callback1,
     onNext: callback,
     img: memo,
-    imgStyle: closure_6().image,
+    imgStyle: tmp.image,
     title: null,
     body: null,
   });

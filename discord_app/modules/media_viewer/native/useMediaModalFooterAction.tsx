@@ -3,6 +3,8 @@ import ReactBatchUpdates from "../../../../discord_common/js/shared/utils/ReactB
 import 00560__ from "../../../../_runtime/metro/00560__.js";
 import size from "../../../../_runtime/metro/00002__.js";
 
+const require = globalThis.__r;
+
 const useMediaModalFooterActionStore = module_560.create(() => ({}));
 const result = size.fileFinishedImporting("modules/media_viewer/native/useMediaModalFooterAction.tsx");
 

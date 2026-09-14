@@ -21,8 +21,7 @@ export default function EmptyState(showsGenericMessage) {
     flag = false;
   }
   const tmp = closure_5();
-  let obj = flag(12180);
-  const logAppLauncherEmptyStateView = obj.useLogAppLauncherEmptyStateView(
+  const logAppLauncherEmptyStateView = flag(12181).useLogAppLauncherEmptyStateView(
     flag(9539).AppLauncherEmptyStateType.SEARCH_EMPTY,
     showsGenericMessage.query,
   );
@@ -39,9 +38,9 @@ export default function EmptyState(showsGenericMessage) {
     const AccessibilityAnnouncer = AccessibilityAnnouncer2.AccessibilityAnnouncer;
     AccessibilityAnnouncer.announce(stringResult, "polite");
   }, items);
-  obj = { style: tmp.container, children: null };
-  obj = { style: tmp.textContainer, children: null };
-  const obj1 = { style: tmp.text, variant: "text-sm/medium", color: "text-default", children: null };
+  const obj2 = { style: tmp.container, children: null };
+  const obj3 = { style: tmp.textContainer, children: null };
+  const obj4 = { style: tmp.text, variant: "text-sm/medium", color: "text-default", children: null };
   let intl = flag(1114).intl;
   let string = intl.string;
   let t = flag(1114).t;
@@ -50,13 +49,13 @@ export default function EmptyState(showsGenericMessage) {
   } else {
     stringResult = string(t.LSNOYf);
   }
-  obj1.children = stringResult;
-  obj.children = jsx(flag(4632).Text, {
+  obj4.children = stringResult;
+  obj3.children = jsx(flag(4632).Text, {
     style: tmp.text,
     variant: "text-sm/medium",
     color: "text-default",
     children: null,
   });
-  obj.children = <View style={tmp.textContainer}>{null}</View>;
-  return <View style={tmp.textContainer}>{null}</View>;
+  obj2.children = <View style={tmp.textContainer}>{null}</View>;
+  return <View style={tmp.container}>{null}</View>;
 }

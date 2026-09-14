@@ -7,6 +7,8 @@ import PermissionStore from "../../stores/PermissionStore.tsx";
 import SortedGuildStore from "../../stores/SortedGuildStore.tsx";
 import GuildDirectoryStore from "GuildDirectoryStore.tsx";
 
+const require = globalThis.__r;
+
 const require = fn;
 const Permissions = fn(1074).Permissions;
 const size = fn(2);
@@ -17,9 +19,11 @@ export default function useAvailableAndAddedGuilds(arg0, arg1) {
   importDefault = arg1;
   const tmp = _slicedToArray(noop.useState(false), 2);
   closure_2 = tmp[1];
-  let obj = require("initialize");
   let items = [GuildDirectoryStore];
-  stateFromStores = obj.useStateFromStores(items, () => GuildDirectoryStore.getAdminGuildEntryIds(closure_1));
+  stateFromStores = require("initialize").useStateFromStores(items, () =>
+    GuildDirectoryStore.getAdminGuildEntryIds(closure_1),
+  );
+  let obj = require("initialize");
   const items1 = [SortedGuildStore, GuildStore, PermissionStore];
   const items2 = [arg0];
   const stateFromStoresArray = require("initialize").useStateFromStoresArray(
@@ -53,8 +57,8 @@ export default function useAvailableAndAddedGuilds(arg0, arg1) {
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
-          let obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           return { value: "HermesInternal", done: null };
         }
@@ -67,27 +71,28 @@ export default function useAvailableAndAddedGuilds(arg0, arg1) {
               throw value;
             } else if (arg0 === 2) {
               v3 = 3;
-              obj = { value, done: true };
-              return obj;
+              const obj4 = { value, done: true };
+              return obj4;
             } else {
               closure_0 = tmp2;
               closure_2_2(true);
-              let obj1 = v3(stateFromStores[10]);
               c1 = 1;
               v3 = 1;
-              obj1 = { value: null, done: false };
-              obj1.value = obj1.fetchGuildEntriesForIds(
-                closure_2_1,
-                stateFromStoresArray.map((id) => id.id),
-              );
-              return obj1;
+              const obj5 = {
+                value: v3(stateFromStores[10]).fetchGuildEntriesForIds(
+                  closure_2_1,
+                  stateFromStoresArray.map((id) => id.id),
+                ),
+                done: false,
+              };
+              return obj5;
             }
           } else if (arg0 === 1) {
             v3 = 3;
             throw value;
           } else if (arg0 === 2) {
             v3 = 3;
-            obj = { value, done: true };
+            const obj = { value, done: true };
             return obj;
           } else {
             closure_128_2(false);
@@ -101,9 +106,9 @@ export default function useAvailableAndAddedGuilds(arg0, arg1) {
       }
     })();
   });
-  obj = { availableGuilds: null, addedGuilds: null, loading: tmp[0] };
+  let obj3 = { availableGuilds: null, addedGuilds: null, loading: tmp[0] };
   const items3 = [stateFromStoresArray, stateFromStores];
-  obj.availableGuilds = noop.useMemo(
+  obj3.availableGuilds = noop.useMemo(
     () =>
       stateFromStoresArray.filter((id) => {
         let hasItem;
@@ -115,7 +120,7 @@ export default function useAvailableAndAddedGuilds(arg0, arg1) {
     items3,
   );
   const items4 = [stateFromStoresArray, stateFromStores];
-  obj.addedGuilds = noop.useMemo(
+  obj3.addedGuilds = noop.useMemo(
     () =>
       stateFromStoresArray.filter((id) => {
         let hasItem;
@@ -126,5 +131,5 @@ export default function useAvailableAndAddedGuilds(arg0, arg1) {
       }),
     items4,
   );
-  return obj;
+  return obj3;
 }

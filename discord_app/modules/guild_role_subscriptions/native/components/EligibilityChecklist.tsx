@@ -4,8 +4,8 @@ import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
 import FormSeparatorDefault from "FormSeparator.tsx";
-import _modDef17808 from "../../../../../_runtime/metro/17808__.js";
 import _modDef17809 from "../../../../../_runtime/metro/17809__.js";
+import _modDef17810 from "../../../../../_runtime/metro/17810__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -17,17 +17,17 @@ function EligibilityChecklistRow(item) {
   if (eligibleRow) {
     eligibleRow = tmp.eligibleRow;
   }
-  let obj = { style: items, children: null };
+  const obj = { style: items, children: null };
   items[1] = eligibleRow;
-  obj = { style: tmp.rowStatusIcon, source: null };
+  const obj2 = { style: tmp.rowStatusIcon, source: null };
   if (item.checked) {
-    let tmp6Result = _modDef17808;
+    let tmp6Result = _modDef17809;
   } else {
-    tmp6Result = _modDef17809;
+    tmp6Result = _modDef17810;
   }
-  obj.source = tmp6Result;
-  const items1 = [React4(FastImageDefault, obj)];
-  obj = { style: tmp.rowTextColumn, children: null };
+  obj2.source = tmp6Result;
+  const items1 = [React4(FastImageDefault, obj2)];
+  const obj3 = { style: tmp.rowTextColumn, children: null };
   const items2 = [
     React4(Text_Text.Text, {
       style: tmp.rowLabel,
@@ -43,24 +43,24 @@ function EligibilityChecklistRow(item) {
   ];
   let tmp5Result = null != item.actionHandler && null != item.actionLabel;
   if (tmp5Result) {
-    const obj3 = { style: tmp.actionButtonWrapper, children: null };
+    const obj6 = { style: tmp.actionButtonWrapper, children: null };
     ({ actionLabel: obj7.text, actionHandler: obj7.onPress } = item);
-    obj3.children = React4(components_Button_Button.Button, { text: null, onPress: null, grow: true });
-    tmp5Result = React4(View, obj3);
-    const obj4 = { text: null, onPress: null, grow: true };
+    obj6.children = React4(components_Button_Button.Button, { text: null, onPress: null, grow: true });
+    tmp5Result = React4(View, obj6);
+    const obj8 = { text: null, onPress: null, grow: true };
   }
   items2[2] = tmp5Result;
-  obj.children = items2;
-  items1[1] = hasOwnProperty(View, obj);
+  obj3.children = items2;
+  items1[1] = hasOwnProperty(View, obj3);
   obj.children = items1;
   const children = [hasOwnProperty(View, obj)];
   if (item.isLast) {
-    tmp5Result = React4(native.Spacer, { size: 16 });
+    let tmp5Result2 = React4(native.Spacer, { size: 16 });
   } else {
-    const obj5 = { style: tmp.divider };
-    tmp5Result = React4(FormSeparatorDefault, obj5);
+    const obj15 = { style: tmp.divider };
+    tmp5Result2 = React4(FormSeparatorDefault, obj15);
   }
-  children[1] = tmp5Result;
+  children[1] = tmp5Result2;
   return hasOwnProperty(timestampProducer, { children });
 }
 const View = fn(17).View;

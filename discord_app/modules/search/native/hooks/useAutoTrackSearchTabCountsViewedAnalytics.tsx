@@ -38,7 +38,7 @@ export const useAutoTrackSearchTabCountsViewedAnalytics = function useAutoTrackS
         return acc + num;
       }, 0);
       if (reduced > 0) {
-        const obj = {
+        const obj2 = {
           searchContext,
           searchResultTotalCount: reduced,
           numMemberTabReturnedResults: null,
@@ -59,7 +59,7 @@ export const useAutoTrackSearchTabCountsViewedAnalytics = function useAutoTrackS
           }
           tmp4 = tmp3;
         }
-        obj.numMemberTabReturnedResults = tmp4;
+        obj2.numMemberTabReturnedResults = tmp4;
         const GUILD_CHANNELS = SearchTabs.GUILD_CHANNELS;
         let tmp5 = null;
         if (null != visibleTabCounts) {
@@ -70,7 +70,7 @@ export const useAutoTrackSearchTabCountsViewedAnalytics = function useAutoTrackS
           }
           tmp5 = tmp7;
         }
-        obj.numChannelTabReturnedResults = tmp5;
+        obj2.numChannelTabReturnedResults = tmp5;
         const PEOPLE = SearchTabs.PEOPLE;
         let tmp8 = null;
         if (null != visibleTabCounts) {
@@ -81,7 +81,7 @@ export const useAutoTrackSearchTabCountsViewedAnalytics = function useAutoTrackS
           }
           tmp8 = tmp10;
         }
-        obj.numPeopleTabReturnedResults = tmp8;
+        obj2.numPeopleTabReturnedResults = tmp8;
         const MESSAGES = SearchTabs.MESSAGES;
         let tmp11 = null;
         if (null != visibleTabCounts) {
@@ -92,7 +92,7 @@ export const useAutoTrackSearchTabCountsViewedAnalytics = function useAutoTrackS
           }
           tmp11 = tmp13;
         }
-        obj.numMessageTabReturnedResults = tmp11;
+        obj2.numMessageTabReturnedResults = tmp11;
         const MEDIA = SearchTabs.MEDIA;
         let tmp14 = null;
         if (null != visibleTabCounts) {
@@ -103,7 +103,7 @@ export const useAutoTrackSearchTabCountsViewedAnalytics = function useAutoTrackS
           }
           tmp14 = tmp16;
         }
-        obj.numMediaTabReturnedResults = tmp14;
+        obj2.numMediaTabReturnedResults = tmp14;
         const FILES = SearchTabs.FILES;
         let tmp17 = null;
         if (null != visibleTabCounts) {
@@ -114,7 +114,7 @@ export const useAutoTrackSearchTabCountsViewedAnalytics = function useAutoTrackS
           }
           tmp17 = tmp19;
         }
-        obj.numFileTabReturnedResults = tmp17;
+        obj2.numFileTabReturnedResults = tmp17;
         const LINKS = SearchTabs.LINKS;
         let tmp20 = null;
         if (null != visibleTabCounts) {
@@ -125,8 +125,8 @@ export const useAutoTrackSearchTabCountsViewedAnalytics = function useAutoTrackS
           }
           tmp20 = tmp22;
         }
-        obj.numLinkTabReturnedResults = tmp20;
-        const result = obj.trackSearchResultReturned(obj);
+        obj2.numLinkTabReturnedResults = tmp20;
+        const result = search_tracking_TrackingDefault.trackSearchResultReturned(obj2);
       }
     }
   }, items1);

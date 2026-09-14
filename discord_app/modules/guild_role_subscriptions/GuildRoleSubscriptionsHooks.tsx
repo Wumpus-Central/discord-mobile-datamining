@@ -9,6 +9,8 @@ import noop from "../../../_runtime/metro/00019__.js";
 import GatewayConnectionStore from "../gateway/GatewayConnectionStore.tsx";
 import GuildRoleSubscriptionsStore from "GuildRoleSubscriptionsStore.tsx";
 
+const require = globalThis.__r;
+
 require = fn;
 function useFetchListingsForGuild(guildId) {
   _require = guildId;
@@ -29,7 +31,7 @@ function useFetchListingsForGuild(guildId) {
   let ref;
   const items = [GatewayConnectionStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => connected.isConnected());
-  const obj2 = require("initialize");
+  let obj2 = require("initialize");
   const items1 = [GuildRoleSubscriptionsStore];
   const stateFromStores1 = require("initialize").useStateFromStores(items1, () => {
     if (null != closure_0) {
@@ -51,8 +53,9 @@ function useFetchListingsForGuild(guildId) {
           }
           if (tmp5) {
             ref.current = false;
-            const obj = { includeSoftDeleted: false, countryCode };
-            const allSubscriptionListingsDataForGuild = obj.fetchAllSubscriptionListingsDataForGuild(closure_0, obj);
+            const obj2 = { includeSoftDeleted: false, countryCode };
+            const allSubscriptionListingsDataForGuild =
+              GuildRoleSubscriptionsActionCreatorsAll.fetchAllSubscriptionListingsDataForGuild(closure_0, obj2);
           }
         }
       }
@@ -79,8 +82,8 @@ export const useCreateSubscriptionGroupListing = function useCreateSubscriptionG
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -93,17 +96,16 @@ export const useCreateSubscriptionGroupListing = function useCreateSubscriptionG
             throw value;
           } else if (arg0 === 2) {
             c6 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj4 = { value, done: true };
+            return obj4;
           } else {
             _require(true);
             importDefault(null);
             c5 = 2;
-            let obj2 = tmp4(c3[6]);
             c3 = 3;
             c6 = 1;
-            const obj1 = { value: obj2.createSubscriptionGroupListing(closure_0, closure_1), done: false };
-            return obj1;
+            const obj5 = { value: tmp4(c3[6]).createSubscriptionGroupListing(closure_0, closure_1), done: false };
+            return obj5;
           }
         } else if (1 === tmp8) {
           c5 = 0;
@@ -123,13 +125,13 @@ export const useCreateSubscriptionGroupListing = function useCreateSubscriptionG
           c5 = 0;
           closure_130_0(false);
           c6 = 3;
-          obj2 = { value, done: true };
-          return obj2;
+          const obj6 = { value, done: true };
+          return obj6;
         } else {
           c5 = 0;
           closure_130_0(false);
           c6 = 3;
-          obj = { value, done: true };
+          const obj = { value, done: true };
           return obj;
         }
       } catch (tmp36) {
@@ -176,8 +178,8 @@ export const useUpdateSubscriptionGroupListing = function useUpdateSubscriptionG
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -190,18 +192,24 @@ export const useUpdateSubscriptionGroupListing = function useUpdateSubscriptionG
             throw value;
           } else if (arg0 === 2) {
             c7 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj4 = { value, done: true };
+            return obj4;
           } else {
             closure_3 = tmp4;
             closure_0(true);
             closure_1(null);
             c6 = 2;
-            let obj2 = GuildRoleSubscriptionsActionCreatorsAll;
             c4 = 3;
             c7 = 1;
-            const obj1 = { value: obj2.updateSubscriptionGroupListing(closure_0, closure_1, closure_2), done: false };
-            return obj1;
+            const obj5 = {
+              value: GuildRoleSubscriptionsActionCreatorsAll.updateSubscriptionGroupListing(
+                closure_0,
+                closure_1,
+                closure_2,
+              ),
+              done: false,
+            };
+            return obj5;
           }
         } else if (1 === tmp8) {
           c6 = 0;
@@ -221,13 +229,13 @@ export const useUpdateSubscriptionGroupListing = function useUpdateSubscriptionG
           c6 = 0;
           closure_0(false);
           c7 = 3;
-          obj2 = { value, done: true };
-          return obj2;
+          const obj6 = { value, done: true };
+          return obj6;
         } else {
           c6 = 0;
           closure_0(false);
           c7 = 3;
-          obj = { value, done: true };
+          const obj = { value, done: true };
           return obj;
         }
       } catch (tmp37) {
@@ -370,9 +378,7 @@ export const useSubscriptionListingsForGuild = function useSubscriptionListingsF
 };
 export const useFetchListingsForSubscriptions = (arg0) => {
   _require = arg0;
-  let tmp = _slicedToArray(noop.useState(false), 2);
-  const loading = tmp[0];
-  closure_2 = tmp[1];
+  [loading, closure_2] = noop.useState(false);
   const items = [arg0];
   const memo = noop.useMemo(() => closure_0.map(subscriptionUtils.getRoleSubscriptionPlanId), items);
   const items1 = [GuildRoleSubscriptionsStore];
@@ -414,8 +420,8 @@ export const useDeleteSubscriptionListing = function useDeleteSubscriptionListin
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj3 = { value, done: true };
+        return obj3;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -428,18 +434,19 @@ export const useDeleteSubscriptionListing = function useDeleteSubscriptionListin
             throw value;
           } else if (arg0 === 2) {
             c7 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj4 = { value, done: true };
+            return obj4;
           } else {
             c6 = 2;
             _require(true);
             importDefault(null);
-            let obj1 = closure_2(tmp4[6]);
             c4 = 3;
             c7 = 1;
-            obj1 = { value: null, done: false };
-            obj1.value = obj1.deleteSubscriptionListing(closure_0, closure_1, closure_2);
-            return obj1;
+            const obj5 = {
+              value: closure_2(tmp4[6]).deleteSubscriptionListing(closure_0, closure_1, closure_2),
+              done: false,
+            };
+            return obj5;
           }
         } else if (1 === tmp8) {
           c6 = 0;
@@ -459,7 +466,7 @@ export const useDeleteSubscriptionListing = function useDeleteSubscriptionListin
           c6 = 0;
           closure_131_0(false);
           c7 = 3;
-          obj = { value, done: true };
+          const obj = { value, done: true };
           return obj;
         } else {
           c6 = 0;
@@ -512,8 +519,8 @@ export const usePublishSubscriptionListing = function usePublishSubscriptionList
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -526,8 +533,8 @@ export const usePublishSubscriptionListing = function usePublishSubscriptionList
             throw value;
           } else if (arg0 === 2) {
             c6 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
             closure_1 = tmp6;
             closure_129_0 = undefined;
@@ -544,13 +551,13 @@ export const usePublishSubscriptionListing = function usePublishSubscriptionList
             throw value;
           } else if (arg0 === 2) {
             c6 = 3;
-            const obj1 = { value, done: true };
-            return obj1;
+            const obj4 = { value, done: true };
+            return obj4;
           } else {
             c4 = 2;
             closure_130_0(true);
             closure_130_1(null);
-            const obj2 = {
+            const obj5 = {
               guildId: closure_129_0,
               groupListingId: closure_129_1,
               listingId: closure_129_2,
@@ -558,8 +565,8 @@ export const usePublishSubscriptionListing = function usePublishSubscriptionList
             };
             c5 = 4;
             c6 = 1;
-            const obj3 = { value: tmp4(tmp30[6]).updateSubscriptionListing(obj2), done: false };
-            return obj3;
+            const obj7 = { value: tmp4(tmp30[6]).updateSubscriptionListing(obj5), done: false };
+            return obj7;
           }
         } else if (2 === tmp9) {
           c4 = 0;
@@ -579,7 +586,7 @@ export const usePublishSubscriptionListing = function usePublishSubscriptionList
           c4 = 0;
           closure_130_0(false);
           c6 = 3;
-          obj = { value, done: true };
+          const obj = { value, done: true };
           return obj;
         } else {
           c4 = 0;
@@ -644,8 +651,8 @@ export const useUpdateSubscriptionsSettings = function useUpdateSubscriptionsSet
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj3 = { value, done: true };
+        return obj3;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -658,19 +665,20 @@ export const useUpdateSubscriptionsSettings = function useUpdateSubscriptionsSet
             throw value;
           } else if (arg0 === 2) {
             c6 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj4 = { value, done: true };
+            return obj4;
           } else {
             closure_2 = tmp4;
             closure_0(true);
             closure_1(null);
             c5 = 2;
-            let obj1 = GuildRoleSubscriptionsActionCreatorsAll;
             c3 = 3;
             c6 = 1;
-            obj1 = { value: null, done: false };
-            obj1.value = obj1.updateSubscriptionsSettings(closure_0, closure_1);
-            return obj1;
+            const obj5 = {
+              value: GuildRoleSubscriptionsActionCreatorsAll.updateSubscriptionsSettings(closure_0, closure_1),
+              done: false,
+            };
+            return obj5;
           }
         } else if (1 === tmp8) {
           c5 = 0;
@@ -692,7 +700,7 @@ export const useUpdateSubscriptionsSettings = function useUpdateSubscriptionsSet
           c5 = 0;
           closure_0(false);
           c6 = 3;
-          obj = { value, done: true };
+          const obj = { value, done: true };
           return obj;
         }
       } catch (tmp33) {
@@ -732,8 +740,8 @@ export const useDeleteSubscriptionGroupListing = function useDeleteSubscriptionG
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -746,17 +754,16 @@ export const useDeleteSubscriptionGroupListing = function useDeleteSubscriptionG
             throw value;
           } else if (arg0 === 2) {
             c6 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj4 = { value, done: true };
+            return obj4;
           } else {
             c5 = 2;
             _require(true);
             importDefault(null);
-            let obj2 = tmp4(c3[6]);
             c3 = 3;
             c6 = 1;
-            const obj1 = { value: obj2.deleteSubscriptionGroupListing(closure_0, closure_1), done: false };
-            return obj1;
+            const obj5 = { value: tmp4(c3[6]).deleteSubscriptionGroupListing(closure_0, closure_1), done: false };
+            return obj5;
           }
         } else if (1 === tmp8) {
           c5 = 0;
@@ -776,13 +783,13 @@ export const useDeleteSubscriptionGroupListing = function useDeleteSubscriptionG
           c5 = 0;
           closure_130_0(false);
           c6 = 3;
-          obj2 = { value, done: true };
-          return obj2;
+          const obj6 = { value, done: true };
+          return obj6;
         } else {
           c5 = 0;
           closure_130_0(false);
           c6 = 3;
-          obj = { value, done: true };
+          const obj = { value, done: true };
           return obj;
         }
       } catch (tmp36) {
@@ -829,8 +836,8 @@ export const useFetchSubscriptionsSettings = function useFetchSubscriptionsSetti
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj3 = { value, done: true };
+        return obj3;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -843,18 +850,19 @@ export const useFetchSubscriptionsSettings = function useFetchSubscriptionsSetti
             throw value;
           } else if (arg0 === 2) {
             c5 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj4 = { value, done: true };
+            return obj4;
           } else {
             closure_0(true);
             tmp4(null);
             c4 = 2;
-            let obj1 = GuildRoleSubscriptionsActionCreatorsAll;
             c2 = 3;
             c5 = 1;
-            obj1 = { value: null, done: false };
-            obj1.value = obj1.fetchSubscriptionsSettings(closure_0);
-            return obj1;
+            const obj5 = {
+              value: GuildRoleSubscriptionsActionCreatorsAll.fetchSubscriptionsSettings(closure_0),
+              done: false,
+            };
+            return obj5;
           }
         } else if (1 === tmp8) {
           c4 = 0;
@@ -876,7 +884,7 @@ export const useFetchSubscriptionsSettings = function useFetchSubscriptionsSetti
           c4 = 0;
           closure_0(false);
           c5 = 3;
-          obj = { value, done: true };
+          const obj = { value, done: true };
           return obj;
         }
       } catch (tmp32) {
@@ -919,8 +927,8 @@ export const useUpdateSubscriptionsTrial = function useUpdateSubscriptionsTrial(
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj3 = { value, done: true };
+        return obj3;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -933,19 +941,20 @@ export const useUpdateSubscriptionsTrial = function useUpdateSubscriptionsTrial(
             throw value;
           } else if (arg0 === 2) {
             c7 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj4 = { value, done: true };
+            return obj4;
           } else {
             closure_3 = tmp4;
             closure_0(true);
             closure_1(null);
             c6 = 2;
-            let obj1 = GuildRoleSubscriptionsActionCreatorsAll;
             c4 = 3;
             c7 = 1;
-            obj1 = { value: null, done: false };
-            obj1.value = obj1.updateSubscriptionTrial(closure_0, closure_1, closure_2);
-            return obj1;
+            const obj5 = {
+              value: GuildRoleSubscriptionsActionCreatorsAll.updateSubscriptionTrial(closure_0, closure_1, closure_2),
+              done: false,
+            };
+            return obj5;
           }
         } else if (1 === tmp8) {
           c6 = 0;
@@ -967,7 +976,7 @@ export const useUpdateSubscriptionsTrial = function useUpdateSubscriptionsTrial(
           c6 = 0;
           closure_0(false);
           c7 = 3;
-          obj = { value, done: true };
+          const obj = { value, done: true };
           return obj;
         }
       } catch (tmp34) {

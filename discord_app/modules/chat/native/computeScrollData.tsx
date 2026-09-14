@@ -25,7 +25,7 @@ export default function computeScrollData(shouldInitialScroll) {
         tmp3 = findIndexResult;
       }
       if (null != tmp3) {
-        let obj = {
+        const obj2 = {
           type: NativeChatUtils.ChatScrollType.SCROLL,
           index: tmp3,
           animate: null,
@@ -35,9 +35,9 @@ export default function computeScrollData(shouldInitialScroll) {
         if (animated) {
           animated = !AccessibilityStore.useReducedMotion;
         }
-        obj.animate = animated;
-        obj.position = NativeChatUtils.ChatScrollPosition.TOP;
-        return obj;
+        obj2.animate = animated;
+        obj2.position = NativeChatUtils.ChatScrollPosition.TOP;
+        return obj2;
       }
     }
   }
@@ -56,7 +56,7 @@ export default function computeScrollData(shouldInitialScroll) {
       tmp6 = findIndexResult1;
     }
     if (null != tmp6) {
-      obj = {
+      const obj = {
         type: NativeChatUtils.ChatScrollType.SCROLL,
         index: tmp6,
         animate: null,
@@ -92,8 +92,8 @@ export default function computeScrollData(shouldInitialScroll) {
         tmp13 = findIndexResult2;
       }
       if (null != tmp13) {
-        obj = { type: NativeChatUtils.ChatScrollType.FOCUS_ONLY, index: tmp13 };
-        tmp11 = obj;
+        const obj3 = { type: NativeChatUtils.ChatScrollType.FOCUS_ONLY, index: tmp13 };
+        tmp11 = obj3;
       }
     }
     tmp4 = tmp11;

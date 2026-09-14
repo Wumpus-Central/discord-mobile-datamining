@@ -22,38 +22,36 @@ const result = size.fileFinishedImporting(
 );
 
 export default function XboxLinkEducation(onClose) {
-  let obj = TwoWayLinkStyles;
-  const twoWayLinkStyles = obj.useTwoWayLinkStyles();
-  let obj1 = HelpdeskUtilsDefault;
-  const articleURL = obj1.getArticleURL(HelpdeskArticles.XBOX_CONNECTION);
-  obj = { style: twoWayLinkStyles.container, children: null };
-  obj = { style: twoWayLinkStyles.content, children: null };
-  obj1 = { source: noop.useMemo(() => ({ uri: _modDef9393 }), []), style: closure_9().image };
-  const items = [React5(React4, obj1), ,];
-  const obj2 = {
+  const tmp = closure_9();
+  const twoWayLinkStyles = TwoWayLinkStyles.useTwoWayLinkStyles();
+  const articleURL = HelpdeskUtilsDefault.getArticleURL(HelpdeskArticles.XBOX_CONNECTION);
+  const obj3 = { style: twoWayLinkStyles.container, children: null };
+  const obj4 = { style: twoWayLinkStyles.content, children: null };
+  const items = [React5(React4, { source: noop.useMemo(() => ({ uri: _modDef9393 }), []), style: tmp.image }), ,];
+  const obj6 = {
     variant: "heading-xl/bold",
     color: "mobile-text-heading-primary",
     style: twoWayLinkStyles.title,
     children: null,
   };
   const intl = util.intl;
-  obj2.children = intl.string(util.t.jHytat);
-  items[1] = React5(Text_Text.Text, obj2);
-  const obj3 = { variant: "text-md/medium", color: "text-default", style: twoWayLinkStyles.body, children: null };
+  obj6.children = intl.string(util.t.jHytat);
+  items[1] = React5(Text_Text.Text, obj6);
+  const obj7 = { variant: "text-md/medium", color: "text-default", style: twoWayLinkStyles.body, children: null };
   const intl2 = util.intl;
-  obj3.children = intl2.format(util.t.yhozpz, { helpdeskArticleUrl: articleURL });
-  items[2] = React5(Text_Text.Text, obj3);
-  obj.children = items;
-  const items1 = [React6(hasOwnProperty, obj)];
-  const obj4 = { bottom: true, style: twoWayLinkStyles.footerContainer, children: null };
-  const obj5 = { style: twoWayLinkStyles.footerButton, children: null };
-  const obj6 = { size: "lg", variant: "primary", text: null, onPress: null };
+  obj7.children = intl2.format(util.t.yhozpz, { helpdeskArticleUrl: articleURL });
+  items[2] = React5(Text_Text.Text, obj7);
+  obj4.children = items;
+  const items1 = [React6(hasOwnProperty, obj4)];
+  const obj8 = { bottom: true, style: twoWayLinkStyles.footerContainer, children: null };
+  const obj9 = { style: twoWayLinkStyles.footerButton, children: null };
+  const obj10 = { size: "lg", variant: "primary", text: null, onPress: null };
   const intl3 = util.intl;
-  obj6.text = intl3.string(util.t.i4jeWR);
-  obj6.onPress = onClose.onClose;
-  obj5.children = React5(components_Button_Button.Button, obj6);
-  obj4.children = React5(hasOwnProperty, obj5);
-  items1[1] = React5(common_SafeAreaView.SafeAreaPaddingView, obj4);
-  obj.children = items1;
-  return React6(hasOwnProperty, obj);
+  obj10.text = intl3.string(util.t.i4jeWR);
+  obj10.onPress = onClose.onClose;
+  obj9.children = React5(components_Button_Button.Button, obj10);
+  obj8.children = React5(hasOwnProperty, obj9);
+  items1[1] = React5(common_SafeAreaView.SafeAreaPaddingView, obj8);
+  obj3.children = items1;
+  return React6(hasOwnProperty, obj3);
 }

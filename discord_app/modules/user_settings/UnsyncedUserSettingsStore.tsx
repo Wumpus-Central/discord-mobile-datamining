@@ -381,7 +381,7 @@ const items = [
   },
 ];
 UnsyncedUserSettingsStore.migrations = items;
-obj = {
+const unsyncedUserSettingsStore = new UnsyncedUserSettingsStore(DispatcherDefault, {
   UNSYNCED_USER_SETTINGS_UPDATE: function handleUnsyncedUserSettingsUpdate(settings) {
     const merged = Object.assign(closure_12);
     const merged1 = Object.assign(settings.settings);
@@ -398,8 +398,7 @@ obj = {
   REGISTER_SUCCESS: function handleRegisterSuccess() {
     closure_12.useSystemTheme = SystemThemeState.ON;
   },
-};
-const unsyncedUserSettingsStore = new UnsyncedUserSettingsStore(DispatcherDefault, obj);
+});
 const result = size.fileFinishedImporting("modules/user_settings/UnsyncedUserSettingsStore.tsx");
 
 export default unsyncedUserSettingsStore;

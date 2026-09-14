@@ -22,7 +22,7 @@ const ChannelAutocompleteConstants = fn(5081);
   CHANNEL_SENTINEL: closure_14,
   COMMAND_SENTINEL: closure_15,
 } = ChannelAutocompleteConstants);
-const AutocompleteTypes = fn(10552).AutocompleteTypes;
+const AutocompleteTypes = fn(10553).AutocompleteTypes;
 const EmojiConstants = fn(1374);
 ({ EmojiIntention: closure_17, EMOJI_MAX_LENGTH: closure_18, EMOJI_URL_BASE_SIZE: closure_19 } = EmojiConstants);
 let c20 = false;
@@ -45,7 +45,7 @@ export const getAutocompleteOptions = function getAutocompleteOptions(channel, a
   let obj = {
     stores: null,
     queryResults(query, canMentionEveryone, request) {
-      const obj = {
+      const obj2 = {
         query,
         channel,
         canMentionEveryone: null,
@@ -61,40 +61,40 @@ export const getAutocompleteOptions = function getAutocompleteOptions(channel, a
       if (canMentionEveryone != null) {
         canMentionEveryone = canMentionEveryone.canMentionEveryone;
       }
-      obj.canMentionEveryone = canMentionEveryone;
+      obj2.canMentionEveryone = canMentionEveryone;
       let canMentionHere;
       if (canMentionEveryone != null) {
         canMentionHere = canMentionEveryone.canMentionHere;
       }
-      obj.canMentionHere = canMentionHere;
+      obj2.canMentionHere = canMentionHere;
       let canMentionUsers;
       if (canMentionEveryone != null) {
         canMentionUsers = canMentionEveryone.canMentionUsers;
       }
-      obj.canMentionUsers = canMentionUsers;
+      obj2.canMentionUsers = canMentionUsers;
       let canMentionRoles;
       if (canMentionEveryone != null) {
         canMentionRoles = canMentionEveryone.canMentionRoles;
       }
-      obj.canMentionRoles = canMentionRoles;
+      obj2.canMentionRoles = canMentionRoles;
       let prop;
       if (canMentionEveryone != null) {
         prop = canMentionEveryone.canMentionAnyGuildUser;
       }
-      obj.includeAllGuildUsers = prop;
+      obj2.includeAllGuildUsers = prop;
       let prop1;
       if (canMentionEveryone != null) {
         prop1 = canMentionEveryone.canMentionNonMentionableRoles;
       }
-      obj.includeNonMentionableRoles = prop1;
+      obj2.includeNonMentionableRoles = prop1;
       let prop2;
       if (canMentionEveryone != null) {
         prop2 = canMentionEveryone.canMentionOtherGlobals;
       }
-      obj.canMentionOtherGlobals = prop2;
-      obj.request = request;
-      ({ users, globals, roles } = obj.queryMentionResults(obj));
-      const queryMentionResultsResult = obj.queryMentionResults(obj);
+      obj2.canMentionOtherGlobals = prop2;
+      obj2.request = request;
+      ({ users, globals, roles } = AutocompleteUtilsDefault.queryMentionResults(obj2));
+      const queryMentionResultsResult = AutocompleteUtilsDefault.queryMentionResults(obj2);
       const items = [
         ...users.map((item) => {
           const merged = Object.assign(item);
@@ -118,7 +118,7 @@ export const getAutocompleteOptions = function getAutocompleteOptions(channel, a
   };
   let items = [GuildMemberStore, GameAutocompleteStore];
   obj.stores = items;
-  obj = {
+  let obj2 = {
     stores: null,
     queryResults(query) {
       const IncludeGameMentionsInAutocomplete = channel(flag2[15]).IncludeGameMentionsInAutocomplete;
@@ -140,34 +140,8 @@ export const getAutocompleteOptions = function getAutocompleteOptions(channel, a
     },
   };
   let items1 = [GameAutocompleteStore];
-  obj.stores = items1;
-  obj = {
-    queryResults(str) {
-      const TimestampAutocompleteMobileExperiment = channel(flag2[17]).TimestampAutocompleteMobileExperiment;
-      const items = [];
-      if (TimestampAutocompleteMobileExperiment.getConfig({ location: "timestamps autocomplete" }).enabled) {
-        const result = channel(flag2[18]).queryTimestampSuggestions(str.trim());
-        const iter = result[Symbol.iterator]();
-        const nextResult = iter.next();
-        while (iter !== undefined) {
-          let tmp10 = nextResult;
-          if (null != nextResult.mention) {
-            let obj = { type: constants.TIMESTAMP_MENTION, mention: null, description: null };
-            ({ mention: obj2.mention, description: obj2.description } = tmp10);
-            let arr = items.push(obj);
-          }
-          continue;
-        }
-        return items;
-      } else {
-        return items;
-      }
-    },
-    matches() {
-      return false;
-    },
-  };
-  const obj5 = {
+  obj2.stores = items1;
+  let obj8 = {
     stores: null,
     queryResults(query, option) {
       let autocomplete;
@@ -188,13 +162,13 @@ export const getAutocompleteOptions = function getAutocompleteOptions(channel, a
             optionValues = option.optionValues;
           }
           if (null != optionValues) {
-            let obj = { command: null, optionValues: null, context: null };
+            const obj2 = { command: null, optionValues: null, context: null };
             ({ activeCommand: obj3.command, optionValues: obj3.optionValues } = option);
-            obj = { channel, guild: GuildStore.getGuild(channel.guild_id), autocomplete: null };
-            const obj1 = { name: option.option.name, query };
-            obj.autocomplete = obj1;
-            obj.context = obj;
-            executeCommand(obj);
+            const obj4 = { channel, guild: GuildStore.getGuild(channel.guild_id), autocomplete: null };
+            const obj5 = { name: option.option.name, query };
+            obj4.autocomplete = obj5;
+            obj2.context = obj4;
+            executeCommand(obj2);
             const autocompleteChoices = ApplicationCommandAutocompleteStore.getAutocompleteChoices(
               channel.id,
               option.option.name,
@@ -203,13 +177,13 @@ export const getAutocompleteOptions = function getAutocompleteOptions(channel, a
             if (null == autocompleteChoices) {
               const _Array = Array;
               const array = new Array(4);
-              const obj2 = { type: constants.CHOICE_LOADING };
-              let fillResult = array.fill(obj2);
+              const obj6 = { type: constants.CHOICE_LOADING };
+              let fillResult = array.fill(obj6);
             } else if (0 === autocompleteChoices.length) {
-              const obj3 = { type: constants.LABEL, label: null };
+              const obj7 = { type: constants.LABEL, label: null };
               const intl = util.intl;
-              obj3.label = intl.string(util.t["41014u"]);
-              const items = [obj3];
+              obj7.label = intl.string(util.t["41014u"]);
+              const items = [obj7];
               fillResult = items;
             } else {
               fillResult = autocompleteChoices.map((choice) => ({ type: constants.CHOICE, choice }));
@@ -225,9 +199,8 @@ export const getAutocompleteOptions = function getAutocompleteOptions(channel, a
       if (null == choices) {
         let items1 = [];
       } else {
-        obj = AutocompleteUtilsDefault;
-        const obj4 = { query, choices };
-        const choices1 = obj.queryChoiceResults(obj4).choices;
+        const obj8 = { query, choices };
+        const choices1 = AutocompleteUtilsDefault.queryChoiceResults(obj8).choices;
         items1 = choices1.map((choice) => ({ type: constants.CHOICE, choice }));
       }
       return items1;
@@ -237,11 +210,36 @@ export const getAutocompleteOptions = function getAutocompleteOptions(channel, a
     },
   };
   let items2 = [ApplicationCommandStore, ApplicationCommandAutocompleteStore];
-  obj5.stores = items2;
+  obj8.stores = items2;
   return {
     [closure_16.MENTIONS]: obj,
-    [closure_16.GAME_MENTIONS]: obj,
-    [closure_16.TIMESTAMPS]: obj,
+    [closure_16.GAME_MENTIONS]: obj2,
+    [closure_16.TIMESTAMPS]: {
+      queryResults(str) {
+        const TimestampAutocompleteMobileExperiment = channel(flag2[17]).TimestampAutocompleteMobileExperiment;
+        const items = [];
+        if (TimestampAutocompleteMobileExperiment.getConfig({ location: "timestamps autocomplete" }).enabled) {
+          const result = channel(flag2[18]).queryTimestampSuggestions(str.trim());
+          const iter = result[Symbol.iterator]();
+          const nextResult = iter.next();
+          while (iter !== undefined) {
+            let tmp10 = nextResult;
+            if (null != nextResult.mention) {
+              let obj = { type: constants.TIMESTAMP_MENTION, mention: null, description: null };
+              ({ mention: obj2.mention, description: obj2.description } = tmp10);
+              let arr = items.push(obj);
+            }
+            continue;
+          }
+          return items;
+        } else {
+          return items;
+        }
+      },
+      matches() {
+        return false;
+      },
+    },
     [closure_16.CHANNELS]: {
       queryResults(query, channelTypes) {
         if (channelTypes != null) {
@@ -251,13 +249,13 @@ export const getAutocompleteOptions = function getAutocompleteOptions(channel, a
         if (channelTypes != null) {
           prop = channelTypes.isActiveApplicationCommand;
         }
-        let obj = AutocompleteUtilsDefault;
+        const obj = AutocompleteUtilsDefault;
         if (prop) {
-          obj = { query, channel, channelTypes };
-          let result = obj.queryApplicationCommandChannelResults(obj);
+          const obj2 = { query, channel, channelTypes };
+          let result = obj.queryApplicationCommandChannelResults(obj2);
         } else {
-          obj = { query, channel };
-          result = obj.queryChannelResults(obj);
+          const obj3 = { query, channel };
+          result = obj.queryChannelResults(obj3);
         }
         const channels = result.channels;
         return channels.map((channel) => ({
@@ -281,8 +279,12 @@ export const getAutocompleteOptions = function getAutocompleteOptions(channel, a
         if (flag2) {
           num = 0;
         }
-        let obj = { query, channel, intention: constants2.CHAT, maxCount: closure_2_11 + num };
-        const queryEmojiResultsResult = obj.queryEmojiResults(obj);
+        const queryEmojiResultsResult = AutocompleteUtilsDefault.queryEmojiResults({
+          query,
+          channel,
+          intention: constants2.CHAT,
+          maxCount: closure_2_11 + num,
+        });
         let prop;
         if (includeEmojiPremiumUpsell != null) {
           prop = includeEmojiPremiumUpsell.includeEmojiPremiumUpsell;
@@ -290,8 +292,8 @@ export const getAutocompleteOptions = function getAutocompleteOptions(channel, a
         if (prop) {
           if (queryEmojiResultsResult.emojis.locked.length > 0) {
             if (queryEmojiResultsResult.emojis.unlocked.length < 4) {
-              obj = { type: constants.EMOJI_PREMIUM_UPSELL, results: queryEmojiResultsResult.emojis.locked };
-              const items = [obj];
+              const obj3 = { type: constants.EMOJI_PREMIUM_UPSELL, results: queryEmojiResultsResult.emojis.locked };
+              const items = [obj3];
               let items5 = items;
             }
             let items1 = [];
@@ -311,23 +313,16 @@ export const getAutocompleteOptions = function getAutocompleteOptions(channel, a
             }
             const items4 = [];
             const unlocked = queryEmojiResultsResult.emojis.unlocked;
-            let arraySpreadResult = HermesBuiltin.arraySpread(
-              items1.map((sticker) => {
-                sticker = sticker.sticker;
-                return { type: constants.STICKER, name: sticker.name, sticker };
-              }),
-              0,
-            );
-            arraySpreadResult = HermesBuiltin.arraySpread(
+            HermesBuiltin.arraySpread(
               items5,
               HermesBuiltin.arraySpread(
                 unlocked.map((name) => {
-                  let obj = { type: constants.EMOJI, name: name.name, url: null, surrogates: null };
+                  const obj = { type: constants.EMOJI, name: name.name, url: null, surrogates: null };
                   if (null != name.id) {
-                    obj = { id: null, animated: null, size: null };
+                    const obj4 = { id: null, animated: null, size: null };
                     ({ id: obj3.id, animated: obj3.animated } = name);
-                    obj.size = size;
-                    let url = flag(1396).getEmojiURL(obj);
+                    obj4.size = size;
+                    let url = flag(1396).getEmojiURL(obj4);
                     const obj2 = flag(1396);
                   } else {
                     url = name.url;
@@ -340,13 +335,20 @@ export const getAutocompleteOptions = function getAutocompleteOptions(channel, a
                   obj.surrogates = surrogates;
                   return obj;
                 }),
-                arraySpreadResult,
+                HermesBuiltin.arraySpread(
+                  items1.map((sticker) => {
+                    sticker = sticker.sticker;
+                    return { type: constants.STICKER, name: sticker.name, sticker };
+                  }),
+                  0,
+                ),
               ),
             );
             return items4;
           }
         }
         items5 = [];
+        let obj2 = { query, channel, intention: constants2.CHAT, maxCount: closure_2_11 + num };
         tmp = flag2;
       },
       matches(arg0, arr) {
@@ -402,6 +404,6 @@ export const getAutocompleteOptions = function getAutocompleteOptions(channel, a
         return tmp;
       },
     },
-    [closure_16.CHOICES]: obj5,
+    [closure_16.CHOICES]: obj8,
   };
 };

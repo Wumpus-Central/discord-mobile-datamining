@@ -20,7 +20,7 @@ const prototype = function CollectiblesMarketingCoachmarkRecord(arg0) {
   return obj;
 }.prototype;
 prototype["fromServer"] = function fromServer(badge_countdown_ends_at) {
-  let obj = {};
+  const obj = {};
   const merged = Object.assign(badge_countdown_ends_at);
   ({
     asset_dark: obj.assetDark,
@@ -37,8 +37,8 @@ prototype["fromServer"] = function fromServer(badge_countdown_ends_at) {
   obj.badgeCountdownEndsAt = date;
   obj.buttonLabel = badge_countdown_ends_at.button_label;
   if (typeof prototype === "function") {
-    obj = Object.create(prototype.prototype);
-    obj.type = CollectiblesMarketingType.CollectiblesMarketingType.COACHMARK;
+    const obj2 = Object.create(prototype.prototype);
+    obj2.type = CollectiblesMarketingType.CollectiblesMarketingType.COACHMARK;
     ({
       title: tmp6.title,
       body: tmp6.body,
@@ -51,7 +51,7 @@ prototype["fromServer"] = function fromServer(badge_countdown_ends_at) {
       badgeCountdownEndsAt: tmp6.badgeCountdownEndsAt,
       buttonLabel: tmp6.buttonLabel,
     } = obj);
-    return obj;
+    return obj2;
   } else {
     throw new TypeError("Trying to call a non-function");
   }

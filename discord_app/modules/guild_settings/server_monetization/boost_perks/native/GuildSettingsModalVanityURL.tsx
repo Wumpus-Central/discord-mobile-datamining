@@ -7,7 +7,7 @@ import HeaderActionButton from "../../../../../design/components/Navigator/nativ
 import getInviteURLDefault from "../../../../instant_invite/getInviteURL.tsx";
 import GuildSettingsVanityURLUtils from "../GuildSettingsVanityURLUtils.tsx";
 import ChangeVanityURLActionCreatorsDefault from "../../../../../actions/ChangeVanityURLActionCreators.tsx";
-import _modDef17761 from "../../../../../../_runtime/metro/17761__.js";
+import _modDef17762 from "../../../../../../_runtime/metro/17762__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 import ChangeVanityURLModalStore from "../../../../../stores/ChangeVanityURLModalStore.tsx";
 import GuildStore from "../../../../../stores/GuildStore.tsx";
@@ -19,16 +19,21 @@ get_ActivityIndicator = fn(17);
 const GuildFeatures = fn(1074).GuildFeatures;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10, Fragment: closure_11 } = jsxProd);
-fn(4636);
-let createStyles = { wrapper: null, section: null, hints: null, center: null, image: null };
-createStyles = { flex: 1, justifyContent: "space-between", paddingTop: nativeDefault.space.PX_32 };
-createStyles.wrapper = createStyles;
-createStyles.section = { paddingHorizontal: nativeDefault.space.PX_12 };
-let obj1 = { paddingHorizontal: nativeDefault.space.PX_12 };
-createStyles.hints = { marginTop: nativeDefault.space.PX_8, gap: nativeDefault.space.PX_4 };
-createStyles.center = { alignItems: "center", flexDirection: "column" };
-createStyles.image = { width: 135, height: 183, marginBottom: 27 };
-let closure_12 = createStyles.createStyles(createStyles);
+const createStyles = fn(4636);
+let obj2 = {
+  wrapper: { flex: 1, justifyContent: "space-between", paddingTop: nativeDefault.space.PX_32 },
+  section: null,
+  hints: null,
+  center: null,
+  image: null,
+};
+let obj3 = { flex: 1, justifyContent: "space-between", paddingTop: nativeDefault.space.PX_32 };
+obj2.section = { paddingHorizontal: nativeDefault.space.PX_12 };
+let obj4 = { paddingHorizontal: nativeDefault.space.PX_12 };
+obj2.hints = { marginTop: nativeDefault.space.PX_8, gap: nativeDefault.space.PX_4 };
+obj2.center = { alignItems: "center", flexDirection: "column" };
+obj2.image = { width: 135, height: 183, marginBottom: 27 };
+let closure_12 = createStyles.createStyles(obj2);
 const PureComponent = noop.PureComponent;
 class GuildSettingsModalVanityURL extends PureComponent {
   constructor() {
@@ -97,10 +102,10 @@ prototype["updateNavigator"] = function updateNavigator(submitting, isEditing) {
     if (submitting) {
       let fn = () => null;
     } else if (isEditing) {
-      let setOptionsResult = self(5705);
-      fn = setOptionsResult.getHeaderConditionalBackButton(this.handleCancel);
+      fn = self(5705).getHeaderConditionalBackButton(this.handleCancel);
+      let obj = self(5705);
     }
-    setOptionsResult = { headerLeft: fn, headerRight: null };
+    let obj2 = { headerLeft: fn, headerRight: null };
     if (submitting) {
       let fn2 = () => closure_1_9(self(dependencyMap[9]).HeaderSubmittingIndicator, {});
     } else {
@@ -118,8 +123,8 @@ prototype["updateNavigator"] = function updateNavigator(submitting, isEditing) {
             return React7(HeaderActionButton.HeaderActionButton, obj);
           };
     }
-    setOptionsResult.headerRight = fn2;
-    setOptionsResult = navigation.setOptions(setOptionsResult);
+    obj2.headerRight = fn2;
+    obj2 = navigation.setOptions(obj2);
   }
 };
 prototype["componentWillUnmount"] = function componentWillUnmount() {
@@ -131,19 +136,18 @@ prototype["render"] = function render() {
   ({ isEditing, vanityURLCode } = this.state);
   if (null != vanityURLCode) {
     if ("" !== vanityURLCode) {
-      let obj = { variant: "text-sm/medium", color: "text-muted", children: null };
+      const obj2 = { variant: "text-sm/medium", color: "text-muted", children: null };
       const intl6 = util.intl;
-      obj = { url: getInviteURLDefault(vanityURLCode) };
-      obj.children = intl6.format(util.t.FcGpNU, obj);
+      const obj3 = { url: getInviteURLDefault(vanityURLCode) };
+      obj2.children = intl6.format(util.t.FcGpNU, obj3);
       const tmp24 = getInviteURLDefault(vanityURLCode);
-      const tmp = React7(Text_Text.Text, obj);
+      const tmp = React7(Text_Text.Text, obj2);
     }
   }
   if (isEditing) {
     let errorMessageFromErrorCode;
     if (null != errorDetails) {
-      obj = GuildSettingsVanityURLUtils;
-      errorMessageFromErrorCode = obj.getErrorMessageFromErrorCode(errorDetails.code);
+      errorMessageFromErrorCode = GuildSettingsVanityURLUtils.getErrorMessageFromErrorCode(errorDetails.code);
     }
     let hasItem;
     if (guild != null) {
@@ -159,49 +163,49 @@ prototype["render"] = function render() {
       }
       tmp17Result = true !== hasItem1;
     }
-    const obj1 = { style: null, children: null };
+    const obj4 = { style: null, children: null };
     const items = [styles.wrapper, self.props.contentContainerStyle];
-    obj1.style = items;
-    const obj2 = { style: styles.section, children: null };
-    const obj3 = {
+    obj4.style = items;
+    const obj5 = { style: styles.section, children: null };
+    const obj6 = {
       isDisabled: !isEditing,
       value: vanityURLCode,
       onChange: self.handleChange,
       autoFocus: isEditing,
       errorMessage: errorMessageFromErrorCode,
     };
-    const items1 = [React7(TextInput.TextInput, obj3)];
-    const obj4 = { style: styles.hints, children: null };
-    const obj5 = { variant: "text-sm/medium", color: "text-muted", children: null };
+    const items1 = [React7(TextInput.TextInput, obj6)];
+    const obj7 = { style: styles.hints, children: null };
+    const obj8 = { variant: "text-sm/medium", color: "text-muted", children: null };
     const intl2 = util.intl;
-    obj5.children = intl2.string(util.t.IhWDcu);
-    const items2 = [React7(Text_Text.Text, obj5), , , ,];
-    const obj6 = { variant: "text-sm/medium", color: "text-muted", children: null };
+    obj8.children = intl2.string(util.t.IhWDcu);
+    const items2 = [React7(Text_Text.Text, obj8), , , ,];
+    const obj9 = { variant: "text-sm/medium", color: "text-muted", children: null };
     const intl3 = util.intl;
-    obj6.children = intl3.string(util.t["1mRkFr"]);
-    items2[1] = React7(Text_Text.Text, obj6);
-    const obj7 = { variant: "text-sm/medium", color: "text-muted", children: null };
+    obj9.children = intl3.string(util.t["1mRkFr"]);
+    items2[1] = React7(Text_Text.Text, obj9);
+    const obj10 = { variant: "text-sm/medium", color: "text-muted", children: null };
     const intl4 = util.intl;
-    obj7.children = intl4.string(util.t["eH/HMz"]);
-    items2[2] = React7(Text_Text.Text, obj7);
+    obj10.children = intl4.string(util.t["eH/HMz"]);
+    items2[2] = React7(Text_Text.Text, obj10);
     if (tmp17Result) {
-      const obj8 = { variant: "text-sm/medium", color: "text-muted", children: null };
+      const obj11 = { variant: "text-sm/medium", color: "text-muted", children: null };
       const intl5 = util.intl;
-      obj8.children = intl5.string(util.t.o3kmm3);
-      tmp17Result = React7(Text_Text.Text, obj8);
+      obj11.children = intl5.string(util.t.o3kmm3);
+      tmp17Result = React7(Text_Text.Text, obj11);
     }
     items2[3] = tmp17Result;
     items2[4] = tmp;
-    obj4.children = items2;
-    items1[1] = closure_1_10(React3, obj4);
-    obj2.children = items1;
-    const items3 = [closure_1_10(React3, obj2)];
-    const obj9 = { style: styles.center, children: null };
-    const obj10 = { source: _modDef17761, style: styles.image, resizeMode: "contain" };
-    obj9.children = React7(React4, obj10);
-    items3[1] = React7(React3, obj9);
-    obj1.children = items3;
-    return closure_1_10(React3, obj1);
+    obj7.children = items2;
+    items1[1] = closure_1_10(React3, obj7);
+    obj5.children = items1;
+    const items3 = [closure_1_10(React3, obj5)];
+    const obj12 = { style: styles.center, children: null };
+    const obj13 = { source: _modDef17762, style: styles.image, resizeMode: "contain" };
+    obj12.children = React7(React4, obj13);
+    items3[1] = React7(React3, obj12);
+    obj4.children = items3;
+    return closure_1_10(React3, obj4);
   } else if ("" !== vanityURLCode) {
     const _HermesInternal = HermesInternal;
     let combined = "discord.gg/" + vanityURLCode;
@@ -217,10 +221,10 @@ const result = size.fileFinishedImporting(
 
 export default function ConnectedGuildSettingsModalVanityURL(guildId) {
   guildId = guildId.guildId;
-  let obj = guildId(1483);
-  const navigation = obj.useNavigation();
   const tmp = closure_12();
   const tmp2 = guildId;
+  const navigation = guildId(1483).useNavigation();
+  const obj = guildId(1483);
   const items = [GuildStore];
   const stateFromStores = guildId(504).useStateFromStores(items, () => GuildStore.getGuild(guildId));
   const obj2 = guildId(504);
@@ -234,8 +238,8 @@ export default function ConnectedGuildSettingsModalVanityURL(guildId) {
   });
   let tmp10 = null;
   if (null != stateFromStores) {
-    obj = { children: null };
-    obj = {
+    const obj5 = { children: null };
+    const obj6 = {
       guild: stateFromStores,
       vanityURLCode: stateFromStores1,
       submitting: tmp8,
@@ -244,9 +248,9 @@ export default function ConnectedGuildSettingsModalVanityURL(guildId) {
       styles: tmp,
       contentContainerStyle: guildId.contentContainerStyle,
     };
-    const items3 = [closure_9(GuildSettingsModalVanityURL, obj), closure_9(tmp2(7143).NavScrim, {})];
-    obj.children = items3;
-    tmp10 = closure_10(closure_11, obj);
+    const items3 = [closure_9(GuildSettingsModalVanityURL, obj6), closure_9(tmp2(7143).NavScrim, {})];
+    obj5.children = items3;
+    tmp10 = closure_10(closure_11, obj5);
   }
   return tmp10;
 }

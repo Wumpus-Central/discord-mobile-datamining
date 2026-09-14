@@ -3,7 +3,7 @@ import RTCConnectionStore from "../../stores/RTCConnectionStore.tsx";
 import VoicePanelStore from "VoicePanelStore.tsx";
 import AutomaticLifecycleManager from "../../lib/AutomaticLifecycleManager.tsx";
 
-let prototype = function VoicePanelManager() {
+const prototype = function VoicePanelManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
   applyArgumentsResult.actions = {
     VOICE_CHANNEL_SELECT() {
@@ -30,8 +30,8 @@ let prototype = function VoicePanelManager() {
   return applyArgumentsResult;
 }.prototype;
 class prototype extends tmp2 {}
-prototype = new prototype();
+const prototype1 = new prototype();
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_panel/VoicePanelManager.native.tsx");
 
-export default prototype;
+export default prototype1;

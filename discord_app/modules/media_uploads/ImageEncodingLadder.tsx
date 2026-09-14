@@ -46,8 +46,8 @@ function getAdaptiveImageCompressionQuality(size, ADAPTIVE_COMPRESSION_CONFIG) {
   }
 }
 const CompressionQuality = Constants.CompressionQuality;
-let obj = { SMALL: 921600, MEDIUM: 2073600, LARGE: 3686400, VERY_LARGE: 8294400 };
-obj = {
+const IMAGE_COMPRESSION_THRESHOLDS = { SMALL: 921600, MEDIUM: 2073600, LARGE: 3686400, VERY_LARGE: 8294400 };
+let obj2 = {
   useAdaptiveCompression: true,
   veryHighQuality: 0.8,
   highQuality: 0.7,
@@ -63,15 +63,16 @@ prototype["selectEncodingConfig"] = function selectEncodingConfig(size1) {
   ({ targetWidth, targetHeight } = prototype.clampDimensions(size1.width, size1.height, 3840, 2160));
   if (size1.width === targetWidth) {
     if (size1.height === targetHeight) {
-      obj = { compressionQuality: null, targetWidth: null, targetHeight: null };
+      obj2 = { compressionQuality: null, targetWidth: null, targetHeight: null };
       const size = { width: targetWidth, height: targetHeight };
-      obj.compressionQuality = 100 * getAdaptiveImageCompressionQuality(size, obj);
-      obj.targetWidth = targetWidth;
-      obj.targetHeight = targetHeight;
+      obj2.compressionQuality = 100 * getAdaptiveImageCompressionQuality(size, obj2);
+      obj2.targetWidth = targetWidth;
+      obj2.targetHeight = targetHeight;
+      let obj = obj2;
     }
     return obj;
   }
-  let num = obj.lowQuality;
+  let num = obj2.lowQuality;
   if (num == null) {
     num = 0.5;
   }
@@ -85,20 +86,19 @@ prototype["clampDimensions"] = function clampDimensions(width, height, arg2, arg
   const bound3 = Math.min(arg2, arg3);
   if (bound <= bound2) {
     if (bound1 <= bound3) {
-      obj = { targetWidth: width, targetHeight: height };
-      return obj;
+      obj2 = { targetWidth: width, targetHeight: height };
+      return obj2;
     }
   }
   const bound4 = Math.min(bound2 / bound, bound3 / bound1);
-  obj = {
+  return {
     targetWidth: Math.max(1, Math.round(width * bound4)),
     targetHeight: Math.max(1, Math.round(height * bound4)),
   };
-  return obj;
 };
 let result = size.fileFinishedImporting("modules/media_uploads/ImageEncodingLadder.tsx");
 
-export const IMAGE_COMPRESSION_THRESHOLDS = obj;
-export const ADAPTIVE_COMPRESSION_CONFIG = obj;
+export { IMAGE_COMPRESSION_THRESHOLDS };
+export const ADAPTIVE_COMPRESSION_CONFIG = obj2;
 export { getAdaptiveImageCompressionQuality };
 export const ImageEncodingLadder = prototype;

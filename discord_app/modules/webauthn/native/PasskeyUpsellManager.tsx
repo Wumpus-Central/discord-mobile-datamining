@@ -36,13 +36,11 @@ prototype["handlePasskeyUpsellShow"] = function handlePasskeyUpsellShow() {
     if (MFAUtils.hasWebAuthn) {
       if (AuthenticationStore.getLoginStatus() === LoginStates.NONE) {
         if (AuthenticationStore.attemptedPasswordLogin()) {
-          let tmpResult = DismissibleContentUnsafeUtils;
           if (
             !tmpResult.UNSAFE_isDismissibleContentDismissed(dismissible_content.DismissibleContent.PASSWORDLESS_UPSELL)
           ) {
             if (!WebAuthnStore.hasFetchedCredentials()) {
-              tmpResult = NavigationRouteUtils;
-              if (!tmpResult.isModalOpen()) {
+              if (!tmpResult3.isModalOpen()) {
                 const currentUser = UserStore.getCurrentUser();
                 if (tmp6) {
                   if (WebAuthnStore.hasFetchedCredentials()) {
@@ -50,13 +48,15 @@ prototype["handlePasskeyUpsellShow"] = function handlePasskeyUpsellShow() {
                   } else if (!c7) {
                     c7 = true;
                     const webAuthnCredentials = WebAuthnActionCreators.fetchWebAuthnCredentials();
-                    const tmpResult1 = WebAuthnActionCreators;
+                    const tmpResult4 = WebAuthnActionCreators;
                   }
                 }
                 tmp6 = undefined !== currentUser && currentUser.verified;
               }
+              tmpResult3 = NavigationRouteUtils;
             }
           }
+          tmpResult = DismissibleContentUnsafeUtils;
         }
       }
     }
@@ -70,8 +70,10 @@ prototype["handleLogout"] = function handleLogout() {
   c8 = false;
 };
 prototype["markDismissed"] = function markDismissed(USER_DISMISS) {
-  const obj = { dismissAction: USER_DISMISS, forceTrack: true };
-  return obj.UNSAFE_markDismissibleContentAsDismissed(dismissible_content.DismissibleContent.PASSWORDLESS_UPSELL, obj);
+  return DismissibleContentUnsafeUtils.UNSAFE_markDismissibleContentAsDismissed(
+    dismissible_content.DismissibleContent.PASSWORDLESS_UPSELL,
+    { dismissAction: USER_DISMISS, forceTrack: true },
+  );
 };
 const passkeyUpsellManager = new PasskeyUpsellManager();
 const size = fn(2);

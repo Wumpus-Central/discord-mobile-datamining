@@ -11,8 +11,8 @@ let closure_3 = async function _preloadAllIntlMessageFiles() {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -24,8 +24,8 @@ let closure_3 = async function _preloadAllIntlMessageFiles() {
         throw value;
       } else if (arg0 === 2) {
         c0 = 3;
-        obj = { value, done: true };
-        return obj;
+        const obj3 = { value, done: true };
+        return obj3;
       } else {
         const items = [
           asyncRequireImpl(dependencyMap[1], dependencyMap.paths),
@@ -92,7 +92,7 @@ let closure_3 = async function _preloadAllIntlMessageFiles() {
           asyncRequireImpl(dependencyMap[63], dependencyMap.paths),
         ];
         c0 = 3;
-        obj = { value: Promise.all(items), done: true };
+        const obj = { value: Promise.all(items), done: true };
         return obj;
       }
     } catch (tmp4) {

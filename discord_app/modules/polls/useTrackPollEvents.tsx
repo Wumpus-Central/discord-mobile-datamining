@@ -28,15 +28,15 @@ export const useTrackPollCreationEvents = function useTrackPollCreationEvents(an
         }
       }
     });
-    const obj = {
+    const obj = AppAnalyticsUtilsDefault;
+    obj.trackWithMetadata(AnalyticEvents.POLL_CREATION_CANCELLED, {
       answers_count: attachments_count.length,
       attachments_count,
       emojis_count: allowMultiSelect,
       stickers_count,
       allow_multiselect: allowMultiSelect,
       layout_type: PollLayoutTypes.PollLayoutTypes.DEFAULT,
-    };
-    obj.trackWithMetadata(AnalyticEvents.POLL_CREATION_CANCELLED, obj);
+    });
   }, items);
   return obj;
 };

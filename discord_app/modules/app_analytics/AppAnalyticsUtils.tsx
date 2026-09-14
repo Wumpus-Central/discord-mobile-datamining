@@ -1,7 +1,6 @@
 // discord_app/modules/app_analytics/AppAnalyticsUtils.tsx
 import BigFlagUtilsAll from "../../../discord_common/js/shared/utils/BigFlagUtils.tsx";
 import DurationsDefault from "../../utils/Durations.tsx";
-import AnalyticsUtilsDefault from "../../utils/AnalyticsUtils.tsx";
 import ChannelRecord from "../../records/ChannelRecord.tsx";
 import ChannelConstants from "../channel/ChannelConstants.tsx";
 import PermissionUtilsAll from "../../utils/PermissionUtils.tsx";
@@ -9,7 +8,7 @@ import notificationSettingsPresetUtils from "../notifications/settings/utils/not
 import hasPendingMemberAction from "../guild_onboarding_home/hasPendingMemberAction.tsx";
 import AuthenticationStore from "../../stores/AuthenticationStore.tsx";
 import ChannelStore from "../../stores/ChannelStore.tsx";
-import GuildChannelStore from "../../stores/GuildChannelStore.tsx";
+import GuildChannelStore_mod from "../../stores/GuildChannelStore.tsx";
 import GuildMemberCountStore from "../../stores/GuildMemberCountStore.tsx";
 import GuildMemberStore from "../../stores/GuildMemberStore.tsx";
 import GuildRoleStore from "../../stores/GuildRoleStore.tsx";
@@ -28,6 +27,7 @@ import VoiceStateStore from "../../stores/VoiceStateStore.tsx";
 import Constants from "../../Constants.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
+const AnalyticsUtilsDefault = track(1240);
 function collectGuildAnalyticsMetadata(guildId) {
   if (null == guildId) {
     return null;
@@ -87,7 +87,7 @@ function collectChannelAnalyticsMetadata(channel) {
   } else {
     const guildId = channel.getGuildId();
     if (null == guildId) {
-      let obj = {
+      const obj4 = {
         channel_id: null,
         channel_type: null,
         channel_size_total: null,
@@ -99,7 +99,7 @@ function collectChannelAnalyticsMetadata(channel) {
       if (channel.isPrivate()) {
         num = channel.recipients.length;
       }
-      obj.channel_size_total = num;
+      obj4.channel_size_total = num;
       if (null != guildId) {
         let NONE2 = PermissionStore.getChannelPermissions(channel);
         if (NONE2 == null) {
@@ -109,9 +109,9 @@ function collectChannelAnalyticsMetadata(channel) {
       } else {
         NONE = PermissionUtilsAll.NONE;
       }
-      obj.channel_member_perms = String(NONE);
-      obj.channel_hidden = false;
-      return obj;
+      obj4.channel_member_perms = String(NONE);
+      obj4.channel_hidden = false;
+      return obj4;
     } else {
       if (!THREAD_CHANNEL_TYPES.has(channel.type)) {
         let flag = false;
@@ -120,8 +120,7 @@ function collectChannelAnalyticsMetadata(channel) {
           if (null != channel) {
             let hasItem = null != tmp2;
             if (hasItem) {
-              obj = BigFlagUtilsAll;
-              hasItem = obj.has(tmp2.deny, constants3.VIEW_CHANNEL);
+              hasItem = BigFlagUtilsAll.has(tmp2.deny, constants3.VIEW_CHANNEL);
             }
             flag = hasItem;
           }
@@ -153,8 +152,7 @@ function trackWithMetadata(IAR_MODAL_OPEN) {
     flag = false;
   }
   let track = importDefault;
-  let obj1 = AnalyticsUtilsDefault;
-  if (!obj1.isThrottled(IAR_MODAL_OPEN)) {
+  if (!obj2.isThrottled(IAR_MODAL_OPEN)) {
     let tmp2 = !("location" in obj);
     if (!tmp2) {
       tmp2 = obj.location !== constants2.GUILD_CREATE_INVITE_SUGGESTION;
@@ -195,22 +193,23 @@ function trackWithMetadata(IAR_MODAL_OPEN) {
         tmp11 = guildId;
       }
     }
-    obj = {};
+    const obj3 = {};
     const merged = Object.assign(obj);
     const merged1 = Object.assign(collectGuildAnalyticsMetadata(tmp11));
     if (null != guild_id) {
       if (null != channel_id) {
         const merged2 = Object.assign(tmp22);
         track = AnalyticsUtilsDefault.track;
-        obj = { flush: flag };
-        track(IAR_MODAL_OPEN, obj, obj);
+        const obj4 = { flush: flag };
+        track(IAR_MODAL_OPEN, obj3, obj4);
         const trackResult = AnalyticsUtilsDefault;
       }
-      obj1 = { channel_static_route: channel_id, channel_hidden: false };
-      tmp22 = obj1;
+      const obj5 = { channel_static_route: channel_id, channel_hidden: false };
+      tmp22 = obj5;
     }
     tmp22 = collectChannelAnalyticsMetadata(channel);
   }
+  obj2 = AnalyticsUtilsDefault;
 }
 function getRecipientFriendCounts(recipients) {
   let num = 0;
@@ -229,16 +228,18 @@ function getVoiceStateMetadata(guildId, channelId, videoEnabled) {
   const found = obj(12)(VoiceStateStore.getVoiceStates(guildId)).filter((channelId) => channelId.channelId === id);
   const found1 = found.filter((userId) => userId.userId !== id.getId());
   const item = found1.forEach((selfVideo) => {
-    obj.voice_state_count = obj.voice_state_count + 1;
+    obj3.voice_state_count = obj3.voice_state_count + 1;
     if (tmp2) {
-      obj.video_stream_count = obj.video_stream_count + 1;
+      obj3.video_stream_count = obj3.video_stream_count + 1;
     }
     tmp2 = selfVideo.selfVideo || selfVideo.selfStream;
   });
   return obj;
 }
 const THREAD_CHANNEL_TYPES = ChannelRecord.THREAD_CHANNEL_TYPES;
+let GuildChannelStore = GuildChannelStore_mod;
 ({ GUILD_SELECTABLE_CHANNELS_KEY: closure_7, GUILD_VOCAL_CHANNELS_KEY: closure_8 } = GuildChannelStore);
+let GuildChannelStore = GuildChannelStore_mod;
 ({
   GuildFeatures: closure_25,
   AnalyticsLocations: closure_26,
@@ -274,27 +275,27 @@ export const collectVoiceAnalyticsMetadata = function collectVoiceAnalyticsMetad
     if (null == channel) {
       return null;
     } else {
-      let obj = { channel_id: null, channel_type: null, guild_id: null, media_session_id: null };
+      const obj = { channel_id: null, channel_type: null, guild_id: null, media_session_id: null };
       ({ id: obj2.channel_id, type: obj2.channel_type } = channel);
       const mediaSessionId = RTCConnectionStore.getMediaSessionId();
       obj.guild_id = channel.getGuildId();
       obj.media_session_id = mediaSessionId;
       id = channel.id;
-      obj = { voice_state_count: 0, video_stream_count: 0, video_enabled: MediaEngineStore.isVideoEnabled() };
+      const obj3 = { voice_state_count: 0, video_stream_count: 0, video_enabled: MediaEngineStore.isVideoEnabled() };
       const guildId = channel.getGuildId();
       const isVideoEnabledResult = MediaEngineStore.isVideoEnabled();
-      const tmp9 = obj(12);
-      const found = obj(12)(VoiceStateStore.getVoiceStates(guildId)).filter((channelId) => channelId.channelId === id);
+      const tmp9 = obj3(12);
+      const found = obj3(12)(VoiceStateStore.getVoiceStates(guildId)).filter((channelId) => channelId.channelId === id);
       const found1 = found.filter((userId) => userId.userId !== id.getId());
       const item = found1.forEach((selfVideo) => {
-        obj.voice_state_count = obj.voice_state_count + 1;
+        obj3.voice_state_count = obj3.voice_state_count + 1;
         if (tmp2) {
-          obj.video_stream_count = obj.video_stream_count + 1;
+          obj3.video_stream_count = obj3.video_stream_count + 1;
         }
         tmp2 = selfVideo.selfVideo || selfVideo.selfStream;
       });
-      const merged = Object.assign(obj);
-      const tmp9Result = obj(12)(VoiceStateStore.getVoiceStates(guildId));
+      const merged = Object.assign(obj3);
+      const tmp9Result = obj3(12)(VoiceStateStore.getVoiceStates(guildId));
       const merged1 = Object.assign(id(4819).getVoiceAnalyticsMetadataAdditional());
       return obj;
     }
@@ -303,13 +304,13 @@ export const collectVoiceAnalyticsMetadata = function collectVoiceAnalyticsMetad
 export { trackWithMetadata };
 export const getChannelOpenedMetadata = function getChannelOpenedMetadata(selectedChannelId) {
   if (isStaticChannelRoute(selectedChannelId)) {
-    let obj = { channel_static_route: selectedChannelId };
+    const obj = { channel_static_route: selectedChannelId };
     return obj;
   } else {
     const channel = ChannelStore.getChannel(selectedChannelId);
     if (null == channel) {
-      obj = { channel_id: selectedChannelId };
-      return obj;
+      const obj2 = { channel_id: selectedChannelId };
+      return obj2;
     } else {
       const guild = GuildStore.getGuild(channel.guild_id);
       if (null == guild) {
@@ -326,18 +327,18 @@ export const getChannelOpenedMetadata = function getChannelOpenedMetadata(select
         } else {
           tmp5 = null;
         }
-        const obj1 = { channel_id: selectedChannelId, is_app_dm: flag };
+        const obj4 = { channel_id: selectedChannelId, is_app_dm: flag };
         let tmp7 = null;
         if (null != tmp5) {
           ({ friendCount: obj3.friend_recipient_count, nonFriendCount: obj3.non_friend_recipient_count } = tmp5);
           tmp7 = { friend_recipient_count: null, non_friend_recipient_count: null };
-          const obj2 = { friend_recipient_count: null, non_friend_recipient_count: null };
+          const obj5 = { friend_recipient_count: null, non_friend_recipient_count: null };
         }
         const merged = Object.assign(tmp7);
-        return obj1;
+        return obj4;
       } else {
         const snapshot = ReadStateStore.getSnapshot(selectedChannelId, 10 * DurationsDefault.Millis.SECOND);
-        const obj3 = {
+        const obj14 = {
           channel_id: selectedChannelId,
           channel_was_unread: null,
           channel_mention_count: null,
@@ -359,31 +360,31 @@ export const getChannelOpenedMetadata = function getChannelOpenedMetadata(select
           is_app_dm: false,
         };
         ({ unread: obj6.channel_was_unread, mentionCount: obj6.channel_mention_count } = snapshot);
-        obj3.channel_is_muted = UserGuildSettingsStore.isChannelMuted(channel.guild_id, channel.id);
-        obj3.channel_is_nsfw = channel.isNSFW();
-        obj3.channel_is_spoiler = channel.isSpoilerChannel();
-        obj3.channel_resolved_unread_setting = UserGuildSettingsStore.resolveUnreadSetting(channel);
+        obj14.channel_is_muted = UserGuildSettingsStore.isChannelMuted(channel.guild_id, channel.id);
+        obj14.channel_is_nsfw = channel.isNSFW();
+        obj14.channel_is_spoiler = channel.isSpoilerChannel();
+        obj14.channel_resolved_unread_setting = UserGuildSettingsStore.resolveUnreadSetting(channel);
         const unreadSetting = UserGuildSettingsStore.resolveUnreadSetting(channel);
-        obj3.channel_preset = notificationSettingsPresetUtils.presetFromSettings(
+        obj14.channel_preset = notificationSettingsPresetUtils.presetFromSettings(
           unreadSetting,
           UserGuildSettingsStore.resolvedMessageNotifications(channel),
         );
-        obj3.guild_id = channel.guild_id;
+        obj14.guild_id = channel.guild_id;
         ({ guildUnread: obj6.guild_was_unread, guildMentionCount: obj6.guild_mention_count } = snapshot);
-        obj3.guild_is_muted = UserGuildSettingsStore.isMuted(channel.guild_id);
-        obj3.guild_resolved_unread_setting = UserGuildSettingsStore.resolveGuildUnreadSetting(guild);
+        obj14.guild_is_muted = UserGuildSettingsStore.isMuted(channel.guild_id);
+        obj14.guild_resolved_unread_setting = UserGuildSettingsStore.resolveGuildUnreadSetting(guild);
         const guildUnreadSetting = UserGuildSettingsStore.resolveGuildUnreadSetting(guild);
-        obj3.guild_preset = notificationSettingsPresetUtils.presetFromSettings(
+        obj14.guild_preset = notificationSettingsPresetUtils.presetFromSettings(
           guildUnreadSetting,
           UserGuildSettingsStore.getMessageNotifications(channel.guild_id),
         );
         ({ parent_id: obj6.parent_id, parentChannelThreadType: obj6.parent_channel_type } = channel);
-        obj3.has_pending_member_action = hasPendingMemberAction.hasPendingMemberAction(
+        obj14.has_pending_member_action = hasPendingMemberAction.hasPendingMemberAction(
           channel.guild_id,
           selectedChannelId,
         );
-        obj3.can_send_message = PermissionStore.can(constants3.SEND_MESSAGES, channel);
-        return obj3;
+        obj14.can_send_message = PermissionStore.can(constants3.SEND_MESSAGES, channel);
+        return obj14;
       }
     }
   }

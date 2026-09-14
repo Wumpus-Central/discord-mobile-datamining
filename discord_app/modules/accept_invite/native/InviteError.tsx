@@ -10,7 +10,7 @@ import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../design/components/Button/native/Button.native.tsx";
 import GuildIcon from "../../guild/native/GuildIcon.tsx";
 import InviteErrorUtils from "../../../utils/InviteErrorUtils.tsx";
-import _modDef12854 from "../../../../_runtime/metro/12854__.js";
+import _modDef12855 from "../../../../_runtime/metro/12855__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 const GuildIconDefault = GuildIcon;
@@ -19,8 +19,7 @@ require = fn;
 function InviteErrorBase(invite) {
   ({ onPressClose: require, inviteError } = invite);
   const tmp = closure_11();
-  let obj = shared;
-  const tmp4Result = importDefault(obj.isThemeDark(useThemeDefault()) ? 12851 : 12852);
+  const tmp4Result = importDefault(shared.isThemeDark(useThemeDefault()) ? 12852 : 12853);
   let code;
   if (inviteError != null) {
     code = inviteError.code;
@@ -39,9 +38,8 @@ function InviteErrorBase(invite) {
       stringResult = intl.string(util.t.FWkU6P);
     }
   }
-  obj = { style: tmp.expiredImage, source: tmp4Result };
-  const items = [React6(React3, obj), , ,];
-  obj = {
+  const items = [React6(React3, { style: tmp.expiredImage, source: tmp4Result }), , ,];
+  const obj3 = {
     style: tmp.expiredTitle,
     variant: "heading-xl/extrabold",
     color: "mobile-text-heading-primary",
@@ -55,25 +53,25 @@ function InviteErrorBase(invite) {
     const intl3 = util.intl;
     title = intl3.string(util.t.u9zxnX);
   }
-  const obj1 = { children: null };
-  obj.children = title;
+  const obj4 = { children: null };
+  obj3.children = title;
   function handlePressClose() {
     require();
   }
-  items[1] = React6(Text_Text.Text, obj);
+  items[1] = React6(Text_Text.Text, obj3);
   items[2] = React6(Text_Text.Text, {
     style: tmp.expiredBody,
     variant: "text-sm/medium",
     color: "text-default",
     children: stringResult,
   });
-  const obj3 = { variant: "primary", size: "lg", text: null, onPress: null };
+  const obj6 = { variant: "primary", size: "lg", text: null, onPress: null };
   const intl4 = util.intl;
-  obj3.text = intl4.string(util.t.wcqOoF);
-  obj3.onPress = handlePressClose;
-  items[3] = React6(components_Button_Button.Button, obj3);
-  obj1.children = items;
-  return closure_1_10(React7, obj1);
+  obj6.text = intl4.string(util.t.wcqOoF);
+  obj6.onPress = handlePressClose;
+  items[3] = React6(components_Button_Button.Button, obj6);
+  obj4.children = items;
+  return closure_1_10(React7, obj4);
 }
 function InviteDisabledError(onPressClose) {
   onPressClose = onPressClose.onPressClose;
@@ -85,39 +83,40 @@ function InviteDisabledError(onPressClose) {
     function handlePressClose() {
       onPressClose();
     }
-    let obj = { id: null, icon: null, size: 64, canAnimate: false };
     ({ id: obj2.id, icon: obj2.icon } = guild);
-    obj = { children: null };
-    const obj1 = { style: tmp.disabledView, children: null };
-    const guildIconURL = obj.getGuildIconURL(obj);
-    const obj2 = { style: tmp.disabledPauseIcon, source: _modDef12854 };
-    const items = [React6(native.Icon, obj2)];
-    const obj3 = { style: tmp.guildIcon, icon: guildIconURL, size: GuildIcon.GuildIconSizes.XLARGE };
-    items[1] = React6(GuildIconDefault, obj3);
-    obj1.children = items;
-    const items1 = [closure_1_10(React4, obj1), , ,];
-    const obj4 = {
+    const obj4 = { children: null };
+    const obj5 = { style: tmp.disabledView, children: null };
+    const guildIconURL = AvatarUtilsDefault.getGuildIconURL({ id: null, icon: null, size: 64, canAnimate: false });
+    const obj6 = { style: tmp.disabledPauseIcon, source: _modDef12855 };
+    const items = [React6(native.Icon, obj6)];
+    const obj7 = { style: tmp.guildIcon, icon: guildIconURL, size: null };
+    const obj3 = { id: null, icon: null, size: 64, canAnimate: false };
+    obj7.size = GuildIcon.GuildIconSizes.XLARGE;
+    items[1] = React6(GuildIconDefault, obj7);
+    obj5.children = items;
+    const items1 = [closure_1_10(React4, obj5), , ,];
+    const obj8 = {
       style: tmp.disabledTitle,
       variant: "heading-xl/semibold",
       color: "text-feedback-critical",
       children: null,
     };
     const intl = util.intl;
-    obj4.children = intl.string(util.t.jlLX2Z);
-    items1[1] = React6(Text_Text.Text, obj4);
-    const obj5 = { style: tmp.disabledBody, variant: "text-md/normal", color: "text-default", children: null };
+    obj8.children = intl.string(util.t.jlLX2Z);
+    items1[1] = React6(Text_Text.Text, obj8);
+    const obj9 = { style: tmp.disabledBody, variant: "text-md/normal", color: "text-default", children: null };
     const intl2 = util.intl;
-    const obj6 = { articleLink: null };
-    obj6.articleLink = HelpdeskUtilsDefault.getArticleURL(constants2.INVITE_DISABLED);
-    obj5.children = intl2.format(util.t.RXSeLl, obj6);
-    items1[2] = React6(Text_Text.Text, obj5);
-    const obj7 = { variant: "primary", size: "lg", text: null, onPress: null };
+    const obj11 = { articleLink: null };
+    obj11.articleLink = HelpdeskUtilsDefault.getArticleURL(constants2.INVITE_DISABLED);
+    obj9.children = intl2.format(util.t.RXSeLl, obj11);
+    items1[2] = React6(Text_Text.Text, obj9);
+    const obj20 = { variant: "primary", size: "lg", text: null, onPress: null };
     const intl3 = util.intl;
-    obj7.text = intl3.string(util.t["yD/zkn"]);
-    obj7.onPress = handlePressClose;
-    items1[3] = React6(components_Button_Button.Button, obj7);
-    obj.children = items1;
-    return closure_1_10(React7, obj);
+    obj20.text = intl3.string(util.t["yD/zkn"]);
+    obj20.onPress = handlePressClose;
+    items1[3] = React6(components_Button_Button.Button, obj20);
+    obj4.children = items1;
+    return closure_1_10(React7, obj4);
   }
 }
 get_ActivityIndicator = fn(17);
@@ -126,8 +125,8 @@ const Constants = fn(1074);
 ({ AbortCodes: hasOwnProperty, HelpdeskArticles: metroRequire, InviteStates: closure_7 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9, jsxs: c10 } = jsxProd);
-fn(4636);
-let createStyles = {
+const createStyles = fn(4636);
+let obj2 = {
   expiredImage: { marginTop: 32, marginBottom: 32 },
   expiredTitle: { marginBottom: 8, backgroundColor: "transparent", textAlign: "center" },
   expiredBody: { backgroundColor: "transparent", marginBottom: 24 },
@@ -138,27 +137,26 @@ let createStyles = {
   disabledBody: null,
 };
 let size = { position: "absolute", alignSelf: "center", tintColor: nativeDefault.colors.WHITE, width: 42, height: 42 };
-createStyles.disabledPauseIcon = size;
-createStyles = { borderRadius: nativeDefault.radii.lg, opacity: 0.2, zIndex: -999 };
-createStyles.guildIcon = createStyles;
-createStyles.disabledTitle = { marginTop: 16, marginBottom: 8, textAlign: "center" };
-createStyles.disabledBody = { textAlign: "center", marginBottom: 16 };
-let closure_11 = createStyles.createStyles(createStyles);
+obj2.disabledPauseIcon = size;
+obj2.guildIcon = { borderRadius: nativeDefault.radii.lg, opacity: 0.2, zIndex: -999 };
+obj2.disabledTitle = { marginTop: 16, marginBottom: 8, textAlign: "center" };
+obj2.disabledBody = { textAlign: "center", marginBottom: 16 };
+let closure_11 = createStyles.createStyles(obj2);
 size = fn(2);
 const result = size.fileFinishedImporting("modules/accept_invite/native/InviteError.tsx");
 
 export default function InviteError(inviteError) {
   inviteError = inviteError.inviteError;
   if (null == inviteError) {
-    let obj = {};
+    const obj2 = {};
     const merged = Object.assign(inviteError);
-    let tmp7 = React6(InviteErrorBase, obj);
+    let tmp7 = React6(InviteErrorBase, obj2);
   } else if (inviteError.code === constants.INVITES_DISABLED) {
-    obj = {};
+    const obj3 = {};
     const merged1 = Object.assign(inviteError);
-    tmp7 = React6(InviteDisabledError, obj);
+    tmp7 = React6(InviteDisabledError, obj3);
   } else {
-    obj = {};
+    const obj = {};
     const merged2 = Object.assign(inviteError);
     tmp7 = React6(InviteErrorBase, obj);
   }

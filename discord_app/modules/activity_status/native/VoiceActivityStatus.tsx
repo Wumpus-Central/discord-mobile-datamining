@@ -25,20 +25,20 @@ export default function VoiceActivityStatus(hideText) {
   if (!hideIcon) {
     let tmp5 = !hideIcon;
     if (!hideIcon) {
-      let obj = { channel, size: "xxs", color: "status-positive", style: null };
+      const obj = { channel, size: "xxs", color: "status-positive", style: null };
       const items = [tmp.icon, iconStyle];
       obj.style = items;
       tmp5 = React3(UserProfileVoiceActivityIconDefault, obj);
     }
     const items1 = [tmp5];
     if (flag) {
-      obj = { children: null };
+      const obj2 = { children: null };
       items1[1] = tmp9;
-      obj.children = items1;
-      let tmp3Result = hasOwnProperty(React4, obj);
+      obj2.children = items1;
+      let tmp3Result = hasOwnProperty(React4, obj2);
     } else {
       let v9FaEzi = dependencyMap;
-      obj = { style: textStyle, maxFontSizeMultiplier, children: null };
+      const obj3 = { style: textStyle, maxFontSizeMultiplier, children: null };
       if (!channel.isDM()) {
         if (!channel.isGroupDM()) {
           const intl = util.intl;
@@ -51,8 +51,8 @@ export default function VoiceActivityStatus(hideText) {
           }
           isGuildStageVoiceResult = channel.isGuildStageVoice();
         }
-        obj.children = stringResult;
-        React3(tmp13, obj);
+        obj3.children = stringResult;
+        React3(tmp13, obj3);
       }
       const intl2 = util.intl;
       v9FaEzi = util.t["9FaEzi"];

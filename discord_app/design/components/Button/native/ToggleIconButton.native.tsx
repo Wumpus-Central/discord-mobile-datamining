@@ -24,20 +24,21 @@ export const ToggleIconButton = noop.forwardRef((pressed, ref) => {
   }
   const icon = pressed.icon;
   const merged = Object.assign(pressed, Object.assign({ pressed: 0, selectedIcon: 0, variant: 0, icon: 0 }));
-  let obj = {};
+  const obj2 = {};
   const merged1 = Object.assign(merged);
   if (selectedIcon == null) {
     selectedIcon = icon;
   }
-  obj = { on: obj, off: null, icon: selectedIcon };
-  const obj1 = {};
+  const obj3 = { on: obj2, off: null };
+  obj2.icon = selectedIcon;
+  const obj4 = {};
   const merged2 = Object.assign(merged);
-  obj1.icon = icon;
-  obj.off = obj1;
-  const toggleIconButtonProps = obj.useToggleIconButtonProps(obj, flag);
-  const obj2 = {};
+  obj4.icon = icon;
+  obj3.off = obj4;
+  const toggleIconButtonProps = useToggleButtonProps.useToggleIconButtonProps(obj3, flag);
+  const obj5 = {};
   const merged3 = Object.assign(toggleIconButtonProps);
-  obj2.ref = ref;
-  obj2.variant = flag ? dependencyMap[variant].on : dependencyMap[variant].off;
+  obj5.ref = ref;
+  obj5.variant = flag ? dependencyMap[variant].on : dependencyMap[variant].off;
   return jsx(BaseIconButton.BaseIconButton, {});
 });

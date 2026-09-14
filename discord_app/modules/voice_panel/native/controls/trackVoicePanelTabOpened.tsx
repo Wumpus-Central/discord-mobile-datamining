@@ -7,13 +7,12 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_panel/native/controls/trackVoicePanelTabOpened.tsx");
 
 export default function trackVoicePanelTabOpened(arg0, tab, source) {
-  let obj = ReadStateStore;
   let hasUnreadResult = ReadStateStore.hasUnread(arg0);
   if (!hasUnreadResult) {
-    hasUnreadResult = obj.getMentionCount(arg0) > 0;
+    hasUnreadResult = ReadStateStore.getMentionCount(arg0) > 0;
   }
-  obj = { tab, source, is_chat_badged: hasUnreadResult };
-  AnalyticsUtilsDefault.track(AnalyticEvents.VOICE_PANEL_TAB_OPENED, obj);
+  AnalyticsUtilsDefault.track(AnalyticEvents.VOICE_PANEL_TAB_OPENED, { tab, source, is_chat_badged: hasUnreadResult });
+  const obj3 = { tab, source, is_chat_badged: hasUnreadResult };
 }
 export const VoicePanelTabAnalyticsSources = {
   STORE: "store",

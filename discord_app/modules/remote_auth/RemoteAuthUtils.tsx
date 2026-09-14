@@ -21,16 +21,14 @@ let closure_5 = async function _decodeEncodedUserRecord() {
   closure_130_4 = closure_130_2[2];
   closure_130_5 = closure_130_2[3];
   closure_130_6 = closure_130_2[4];
-  const obj3 = { id: closure_130_3, discriminator: closure_130_4, avatar: null, username: null };
+  const obj7 = { id: closure_130_3, discriminator: closure_130_4, avatar: null, username: null };
   let tmp7 = null;
-  let tmp41 = closure_131_4;
   if ("0" !== closure_130_5) {
     tmp7 = closure_130_5;
   }
-  obj3.avatar = tmp7;
-  obj3.username = closure_130_6;
-  tmp41 = new tmp41(obj3);
-  return tmp41;
+  obj7.avatar = tmp7;
+  obj7.username = closure_130_6;
+  return new closure_131_4(obj7);
 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/remote_auth/RemoteAuthUtils.tsx");

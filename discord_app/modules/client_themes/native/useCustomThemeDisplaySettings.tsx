@@ -9,41 +9,37 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/client_themes/native/useCustomThemeDisplaySettings.tsx");
 
 export const useCustomThemeDisplaySettings = function useCustomThemeDisplaySettings(stateFromStores) {
-  let obj = initialize;
   let items = [CustomThemeMobileStore];
-  [tmp4, tmp5, tmp6] = _slicedToArray(
-    obj.useStateFromStoresArray(items, () => {
-      const items = [
-        CustomThemeMobileStore.getCustomTheme(),
-        CustomThemeMobileStore.getBaseTheme(),
-        CustomThemeMobileStore.getPreviewTheme(),
-      ];
-      return items;
-    }),
-    3,
-  );
+  [tmp4, tmp5, tmp6] = initialize.useStateFromStoresArray(items, () => {
+    const items = [
+      CustomThemeMobileStore.getCustomTheme(),
+      CustomThemeMobileStore.getBaseTheme(),
+      CustomThemeMobileStore.getPreviewTheme(),
+    ];
+    return items;
+  });
   if (undefined !== tmp6) {
     return tmp6;
   } else {
     if (undefined !== tmp4) {
       if (undefined !== tmp5) {
-        obj = { baseTheme: tmp5, customTheme: tmp4 };
-        return obj;
+        const obj3 = { baseTheme: tmp5, customTheme: tmp4 };
+        return obj3;
       }
     }
     if (null != stateFromStores) {
-      obj = { colors: null, gradientAngle: null, baseMix: null, gradientColorStops: null };
+      const obj4 = { colors: null, gradientAngle: null, baseMix: null, gradientColorStops: null };
       ({ colors: obj2.colors, gradient_angle: obj2.gradientAngle, base_mix: obj2.baseMix } = stateFromStores);
-      obj.gradientColorStops = [];
-      const obj1 = {
+      obj4.gradientColorStops = [];
+      const obj5 = {
         baseTheme: ClientThemesUtils.getCustomThemeBaseTheme(stateFromStores.base_theme),
-        customTheme: obj,
+        customTheme: obj4,
       };
-      return obj1;
+      return obj5;
     }
   }
   const tmp3 = _slicedToArray(
-    obj.useStateFromStoresArray(items, () => {
+    initialize.useStateFromStoresArray(items, () => {
       const items = [
         CustomThemeMobileStore.getCustomTheme(),
         CustomThemeMobileStore.getBaseTheme(),

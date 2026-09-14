@@ -5,6 +5,8 @@ import ChannelStore from "../../stores/ChannelStore.tsx";
 import PermissionStore from "../../stores/PermissionStore.tsx";
 import StageInstanceStore from "StageInstanceStore.tsx";
 
+const require = globalThis.__r;
+
 require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/stage_channels/useLiveStageChannels.tsx");

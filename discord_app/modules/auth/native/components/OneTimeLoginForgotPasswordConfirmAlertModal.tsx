@@ -11,16 +11,16 @@ const result = size.fileFinishedImporting(
 );
 
 export default function OneTimeLoginForgotPasswordConfirmAlertModal() {
-  let obj = { title: null, content: null, actions: null };
+  const obj = { title: null, content: null, actions: null };
   const intl = util.intl;
   obj.title = intl.string(util.t["6Ecyts"]);
   const intl2 = util.intl;
   obj.content = intl2.string(util.t.iAcrqV);
-  obj = { children: null };
-  obj = { text: null };
+  const obj2 = { children: null };
+  const obj3 = { text: null };
   const intl3 = util.intl;
-  obj.text = intl3.string(util.t.BddRzS);
-  obj.children = jsx(AlertModal.AlertActionButton, { text: null }, "okay");
-  obj.actions = jsx(AlertModal.AlertActions, { text: null });
-  return jsx(AlertModal.AlertModal, { text: null });
+  obj3.text = intl3.string(util.t.BddRzS);
+  obj2.children = jsx(AlertModal.AlertActionButton, { text: null }, "okay");
+  obj.actions = jsx(AlertModal.AlertActions, { children: null });
+  return jsx(AlertModal.AlertModal, { title: null, content: null, actions: null });
 }

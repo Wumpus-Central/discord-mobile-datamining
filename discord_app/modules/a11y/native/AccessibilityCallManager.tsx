@@ -22,18 +22,17 @@ class AccessibilityCallManager extends tmp4 {
       const id = AuthenticationStore.getId();
       const result = map.set(channelId, tmp2);
       if (null != id && id in channelId.ongoingRings) {
-        let obj = set;
         if (!set.has(channelId)) {
           if (!obj2.isIOS()) {
             const channel = ChannelStore.getChannel(channelId);
             if (null != channel) {
               const channelName = useChannelName.computeChannelName(channel, UserStore, RelationshipStore);
               if (null != channelName) {
-                obj.add(channelId);
+                set.add(channelId);
                 const AccessibilityAnnouncer = shared.AccessibilityAnnouncer;
                 const intl = util.intl;
-                obj = { callLocation: channelName };
-                AccessibilityAnnouncer.announce(intl.formatToPlainString(util.t["Bm0A/p"], obj), "assertive");
+                const obj3 = { callLocation: channelName };
+                AccessibilityAnnouncer.announce(intl.formatToPlainString(util.t["Bm0A/p"], obj3), "assertive");
               }
               const tmp4Result = useChannelName;
             }
@@ -47,12 +46,11 @@ class AccessibilityCallManager extends tmp4 {
     applyArgumentsResult.handleCallUpdate = function handleCallUpdate(channelId) {
       channelId = channelId.channelId;
       const id = AuthenticationStore.getId();
-      let obj = map;
       let flag = map.get(channelId);
       if (flag == null) {
         flag = false;
       }
-      const result = obj.set(channelId, tmp2);
+      const result = map.set(channelId, tmp2);
       if (!flag) {
         if (tmp2) {
           if (!set.has(channelId)) {
@@ -64,8 +62,8 @@ class AccessibilityCallManager extends tmp4 {
                   set.add(channelId);
                   const AccessibilityAnnouncer = shared.AccessibilityAnnouncer;
                   const intl = util.intl;
-                  obj = { callLocation: channelName };
-                  AccessibilityAnnouncer.announce(intl.formatToPlainString(util.t["Bm0A/p"], obj), "assertive");
+                  const obj4 = { callLocation: channelName };
+                  AccessibilityAnnouncer.announce(intl.formatToPlainString(util.t["Bm0A/p"], obj4), "assertive");
                 }
                 const tmp4Result = useChannelName;
               }

@@ -2,7 +2,7 @@
 import initializeDefault from "../../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../../Dispatcher.tsx";
 
-let toggles = {
+const toggles = {
   enable_recently_active: "Enable recently active channels",
   theme_setting_in_account_sheet: "Show theme settings in the Account action sheet",
   nav_experiment_server_drawer_enabled: "[NavI] Enable expandable server drawer",
@@ -60,12 +60,11 @@ prototype["allWithDescriptions"] = function allWithDescriptions() {
 };
 DesignTogglesStore.displayName = "DevToolsDesignTogglesStore";
 DesignTogglesStore.persistKey = "DevToolsDesignTogglesStore";
-toggles = {
+const designTogglesStore = new DesignTogglesStore(DispatcherDefault, {
   DEV_TOOLS_DESIGN_TOGGLE_SET: function handleSet(toggle) {
     closure_1[toggle.toggle] = toggle.value;
   },
-};
-const designTogglesStore = new DesignTogglesStore(DispatcherDefault, toggles);
+});
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/devtools/design_toggles/DesignTogglesStore.tsx");
 

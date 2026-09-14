@@ -15,19 +15,19 @@ const result = size.fileFinishedImporting("modules/hub/native/components/HubEmai
 
 export default function HubEmailConnectionDescriptionActionsheet() {
   const tmp = closure_4();
-  let obj = { children: null };
-  obj = { title: null };
+  const obj = { children: null };
+  const obj2 = { title: null };
   const intl = util.intl;
-  obj.title = intl.string(util.t["48kg+O"]);
-  const items = [React2(BottomSheetTitleHeader.BottomSheetTitleHeader, obj), ,];
-  obj = { style: tmp.description, variant: "text-sm/medium", color: "text-default", children: null };
+  obj2.title = intl.string(util.t["48kg+O"]);
+  const items = [React2(BottomSheetTitleHeader.BottomSheetTitleHeader, obj2), ,];
+  const obj3 = { style: tmp.description, variant: "text-sm/medium", color: "text-default", children: null };
   const intl2 = util.intl;
-  obj.children = intl2.string(util.t.O1k9XX);
-  items[1] = React2(Text_Text.Text, obj);
-  const obj1 = { style: tmp.description, variant: "text-sm/medium", color: "text-default", children: null };
+  obj3.children = intl2.string(util.t.O1k9XX);
+  items[1] = React2(Text_Text.Text, obj3);
+  const obj4 = { style: tmp.description, variant: "text-sm/medium", color: "text-default", children: null };
   const intl3 = util.intl;
-  obj1.children = intl3.string(util.t.FV5dvh);
-  items[2] = React2(Text_Text.Text, obj1);
+  obj4.children = intl3.string(util.t.FV5dvh);
+  items[2] = React2(Text_Text.Text, obj4);
   obj.children = items;
   return React3(Sheet_BottomSheet.BottomSheet, obj);
 }

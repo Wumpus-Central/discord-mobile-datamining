@@ -4,6 +4,8 @@ import GuildDirectoryUtils from "../directory_channels/GuildDirectoryUtils.tsx";
 import GuildDirectoryStore from "../directory_channels/GuildDirectoryStore.tsx";
 import ReadStateStore from "../../stores/ReadStateStore.tsx";
 
+const require = globalThis.__r;
+
 require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/hub/HubUnreadUtils.tsx");

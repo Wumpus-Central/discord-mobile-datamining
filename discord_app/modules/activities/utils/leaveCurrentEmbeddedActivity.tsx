@@ -8,9 +8,9 @@ const result = size.fileFinishedImporting("modules/activities/utils/leaveCurrent
 export const leaveCurrentEmbeddedActivity = function leaveCurrentEmbeddedActivity() {
   const currentEmbeddedActivity = EmbeddedActivitiesStore.getCurrentEmbeddedActivity();
   if (null != currentEmbeddedActivity) {
-    getEmbeddedActivitiesManagerDefault();
-    const obj = { location: null, applicationId: null, showFeedback: false };
     ({ location: obj2.location, applicationId: obj2.applicationId } = currentEmbeddedActivity);
-    obj.leaveActivity(obj);
+    getEmbeddedActivitiesManagerDefault().leaveActivity({ location: null, applicationId: null, showFeedback: false });
+    const obj = getEmbeddedActivitiesManagerDefault();
+    const obj3 = { location: null, applicationId: null, showFeedback: false };
   }
 };

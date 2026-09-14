@@ -96,34 +96,34 @@ class BatchInvocationManager {
     if (fn === undefined) {
       obj = {};
     }
-    obj = Object.create(new.target.prototype);
-    closure_0 = obj;
+    obj1 = Object.create(new.target.prototype);
+    closure_0 = obj1;
     set = new Set();
-    obj._promises = set;
+    obj1._promises = set;
     set1 = new Set();
-    obj._pending = set1;
-    obj._activeInvocationCount = 0;
-    obj._flushReady = false;
-    obj.invoke = global;
-    obj.options = obj;
+    obj1._pending = set1;
+    obj1._activeInvocationCount = 0;
+    obj1._flushReady = false;
+    obj1.invoke = global;
+    obj1.options = obj;
     tmp4 = DelayedCall;
-    num = obj.options.delay;
+    num = obj1.options.delay;
     if (num == null) {
       num = 32;
     }
     if (typeof tmp4 === "function") {
       fn = () => {
-        obj._flushReady = true;
-        obj._flush();
+        obj3._flushReady = true;
+        obj3._flush();
       };
-      obj1 = Object.create(tmp4.prototype);
-      obj1._delay = num;
-      obj1._handler = fn;
+      obj2 = Object.create(tmp4.prototype);
+      obj2._delay = num;
+      obj2._handler = fn;
       tmp6 = new.target;
       if (typeof Timeout === "function") {
-        obj1._timeout = Object.create(Timeout.prototype);
-        obj._flushHandler = obj1;
-        return obj;
+        obj2._timeout = Object.create(Timeout.prototype);
+        obj1._flushHandler = obj2;
+        return obj1;
       } else {
         str2 = "Trying to call a non-function";
         throw new TypeError("Trying to call a non-function");
@@ -224,8 +224,8 @@ prototype5["_flush"] = function _flush() {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -238,8 +238,8 @@ prototype5["_flush"] = function _flush() {
             throw value;
           } else if (arg0 === 2) {
             c8 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
             closure_4 = tmp4;
             closure_3 = tmp8;
@@ -268,8 +268,8 @@ prototype5["_flush"] = function _flush() {
                   c6 = 2;
                   c7 = 3;
                   c8 = 1;
-                  const obj1 = { value: self.invoke(items), done: false };
-                  return obj1;
+                  const obj4 = { value: self.invoke(items), done: false };
+                  return obj4;
                 } else {
                   const item = items1.forEach((resolve) => resolve.resolve());
                 }
@@ -290,7 +290,7 @@ prototype5["_flush"] = function _flush() {
             closure_132_0._activeInvocationCount = closure_132_0._activeInvocationCount - 1;
             closure_132_0._flush();
             c8 = 3;
-            obj = { value, done: true };
+            const obj = { value, done: true };
             return obj;
           } else {
             const item2 = closure_131_0.forEach((resolve) => resolve.resolve());

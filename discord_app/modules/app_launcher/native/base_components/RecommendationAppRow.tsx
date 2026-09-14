@@ -21,8 +21,12 @@ export default function RecommendationAppRow(onPress) {
   if (showsPromoted === undefined) {
     showsPromoted = false;
   }
-  const obj = { id: application.id, icon: application.icon, bot: application.bot, botIconFirst: true };
-  const iconSource = obj.getApplicationIconSource(obj);
+  const iconSource = AvatarUtilsDefault.getApplicationIconSource({
+    id: application.id,
+    icon: application.icon,
+    bot: application.bot,
+    botIconFirst: true,
+  });
   return jsx(AppLauncherHomeScreen.BaseAppRow, {
     application,
     iconSource,

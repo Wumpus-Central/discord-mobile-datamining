@@ -160,17 +160,17 @@ const guildThemePreviewStore = new GuildThemePreviewStore(DispatcherDefault, {
     if (null == closure_5.guildId) {
       return false;
     } else {
-      let obj = { presetId: tmp, customUserThemeSettings: "a" };
-      const isEqualResult = _mod12.isEqual(closure_5.draft, obj);
+      const obj2 = { presetId: tmp, customUserThemeSettings: "a" };
+      const isEqualResult = _mod12.isEqual(closure_5.draft, obj2);
       let flag = !isEqualResult;
       if (isEqualResult) {
         flag = !closure_5.draftEnabled;
       }
       if (flag) {
         timeout.stop();
-        obj = {};
+        const obj = {};
         const merged = Object.assign(closure_5);
-        obj.draft = obj;
+        obj.draft = obj2;
         obj.draftEnabled = true;
         obj.isAwaitingGuildUpdate = false;
         obj.saveError = null;
@@ -185,25 +185,25 @@ const guildThemePreviewStore = new GuildThemePreviewStore(DispatcherDefault, {
     if (null == closure_5.guildId) {
       return false;
     } else {
-      let obj = { presetId: "Array", customUserThemeSettings: 0 };
-      obj = { colors: null, gradientColorStops: null, gradientAngle: null, baseMix: null };
+      const obj2 = { presetId: "Array", customUserThemeSettings: 0 };
+      const obj3 = { colors: null, gradientColorStops: null, gradientAngle: null, baseMix: null };
       const items = [];
       HermesBuiltin.arraySpread(colors, 0);
-      obj.colors = items;
-      obj.gradientColorStops = [];
-      obj.gradientAngle = tmp;
-      obj.baseMix = tmp2;
-      obj.customUserThemeSettings = obj;
-      const isEqualResult = _mod12.isEqual(closure_5.draft, obj);
+      obj3.colors = items;
+      obj3.gradientColorStops = [];
+      obj3.gradientAngle = tmp;
+      obj3.baseMix = tmp2;
+      obj2.customUserThemeSettings = obj3;
+      const isEqualResult = _mod12.isEqual(closure_5.draft, obj2);
       let flag = !isEqualResult;
       if (isEqualResult) {
         flag = !closure_5.draftEnabled;
       }
       if (flag) {
         timeout.stop();
-        obj = {};
+        const obj = {};
         const merged = Object.assign(closure_5);
-        obj.draft = obj;
+        obj.draft = obj2;
         obj.draftEnabled = true;
         obj.isAwaitingGuildUpdate = false;
         obj.saveError = null;

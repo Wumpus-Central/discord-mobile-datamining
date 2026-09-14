@@ -24,10 +24,10 @@ export default function formatClearAfterOption(type) {
       const data8 = intl9.data;
       let formatTimeResult = data8.formatTime(sum, { format: "short" });
     } else {
-      let obj = { time: null };
+      const obj3 = { time: null };
       const data7 = util.intl.data;
-      obj.time = data7.formatTime(sum, { format: "short" });
-      formatTimeResult = intl9.formatToPlainString(util.t.DN91Jz, obj);
+      obj3.time = data7.formatTime(sum, { format: "short" });
+      formatTimeResult = intl9.formatToPlainString(util.t.DN91Jz, obj3);
     }
     const _HermesInternal4 = HermesInternal;
     return "" + formatToPlainStringResult + " (" + formatTimeResult + ")";
@@ -46,10 +46,10 @@ export default function formatClearAfterOption(type) {
       const data6 = intl7.data;
       let formatTimeResult1 = data6.formatTime(sum1, { format: "short" });
     } else {
-      obj = { time: null };
+      const obj5 = { time: null };
       const data5 = util.intl.data;
-      obj.time = data5.formatTime(sum1, { format: "short" });
-      formatTimeResult1 = intl7.formatToPlainString(util.t.DN91Jz, obj);
+      obj5.time = data5.formatTime(sum1, { format: "short" });
+      formatTimeResult1 = intl7.formatToPlainString(util.t.DN91Jz, obj5);
     }
     const _HermesInternal3 = HermesInternal;
     return "" + formatToPlainStringResult1 + " (" + formatTimeResult1 + ")";
@@ -67,10 +67,10 @@ export default function formatClearAfterOption(type) {
       const data4 = intl5.data;
       let formatTimeResult2 = data4.formatTime(sum2, { format: "short" });
     } else {
-      let obj1 = { time: null };
+      const obj7 = { time: null };
       const data3 = util.intl.data;
-      obj1.time = data3.formatTime(sum2, { format: "short" });
-      formatTimeResult2 = intl5.formatToPlainString(util.t.DN91Jz, obj1);
+      obj7.time = data3.formatTime(sum2, { format: "short" });
+      formatTimeResult2 = intl5.formatToPlainString(util.t.DN91Jz, obj7);
     }
     const _HermesInternal2 = HermesInternal;
     return "" + formatToPlainStringResult2 + " (" + formatTimeResult2 + ")";
@@ -80,7 +80,6 @@ export default function formatClearAfterOption(type) {
     const _Date = Date;
     const result1 = 30 * DurationsDefault.Millis.MINUTE;
     const sum3 = Date.now() + result1;
-    obj1 = DateUtils;
     const _Date2 = Date;
     const date6 = new Date();
     const _Date3 = Date;
@@ -90,10 +89,10 @@ export default function formatClearAfterOption(type) {
       const data2 = intl3.data;
       let formatTimeResult3 = data2.formatTime(sum3, { format: "short" });
     } else {
-      const obj2 = { time: null };
+      const obj9 = { time: null };
       const data = util.intl.data;
-      obj2.time = data.formatTime(sum3, { format: "short" });
-      formatTimeResult3 = intl3.formatToPlainString(util.t.DN91Jz, obj2);
+      obj9.time = data.formatTime(sum3, { format: "short" });
+      formatTimeResult3 = intl3.formatToPlainString(util.t.DN91Jz, obj9);
     }
     const _HermesInternal = HermesInternal;
     return "" + formatToPlainStringResult3 + " (" + formatTimeResult3 + ")";
@@ -101,7 +100,6 @@ export default function formatClearAfterOption(type) {
     const intl = util.intl;
     return intl.string(util.t.bRn8cq);
   } else {
-    obj = GlobalUtils;
-    obj.assertNever(type);
+    GlobalUtils.assertNever(type);
   }
 }

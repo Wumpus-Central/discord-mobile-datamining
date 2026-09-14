@@ -1,6 +1,8 @@
 // discord_app/modules/channel/native/ScreenIndexFrozen.tsx
 import noop from "../../../../_runtime/metro/00019__.js";
 
+const require = globalThis.__r;
+
 const require = fn;
 const set = new Set();
 const set1 = new Set();

@@ -5,8 +5,8 @@ import GuildConfigGatesStore from "GuildConfigGatesStore.tsx";
 
 require = fn;
 const Endpoints = fn(1074).Endpoints;
-fn(504);
-const initialize = {
+const initialize = fn(504);
+let obj2 = {
   getQueryId(arg0) {
     let tmp = arg0;
     if (arg0 == null) {
@@ -35,8 +35,8 @@ let closure_3 = asyncGeneratorStep(async (arg0) => {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -49,8 +49,8 @@ let closure_3 = asyncGeneratorStep(async (arg0) => {
           throw value;
         } else if (arg0 === 2) {
           c6 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           closure_4 = tmp5;
           closure_3 = tmp2;
@@ -60,8 +60,8 @@ let closure_3 = asyncGeneratorStep(async (arg0) => {
             const HTTP = HTTPUtils.HTTP;
             c5 = 1;
             c6 = 1;
-            const obj1 = { value: HTTP.get(Endpoints.GUILD_CONFIG_GATES(tmp26)), done: false };
-            return obj1;
+            const obj4 = { value: HTTP.get(Endpoints.GUILD_CONFIG_GATES(tmp26)), done: false };
+            return obj4;
           } else {
             c6 = 3;
           }
@@ -71,7 +71,7 @@ let closure_3 = asyncGeneratorStep(async (arg0) => {
         throw value;
       } else if (arg0 !== 2) {
         body = value.body;
-        const obj2 = {
+        const obj6 = {
           type: "GUILD_CONFIG_GATES_FETCH_SUCCESS",
           guildId: closure_131_0,
           guildVerificationRoleEnabled: null,
@@ -82,18 +82,18 @@ let closure_3 = asyncGeneratorStep(async (arg0) => {
         if (guild_verification_role_enabled == null) {
           guildVerificationRoleEnabled = false;
         }
-        obj2.guildVerificationRoleEnabled = guildVerificationRoleEnabled;
+        obj6.guildVerificationRoleEnabled = guildVerificationRoleEnabled;
         const application_identity_linked_roles_enabled = body.application_identity_linked_roles_enabled;
         let applicationIdentityLinkedRolesEnabled = application_identity_linked_roles_enabled;
         if (application_identity_linked_roles_enabled == null) {
           applicationIdentityLinkedRolesEnabled = false;
         }
-        obj2.applicationIdentityLinkedRolesEnabled = applicationIdentityLinkedRolesEnabled;
-        closure_132_1(closure_132_2[5]).dispatch(obj2);
+        obj6.applicationIdentityLinkedRolesEnabled = applicationIdentityLinkedRolesEnabled;
+        closure_132_1(closure_132_2[5]).dispatch(obj6);
         const obj5 = closure_132_1(closure_132_2[5]);
       }
       c6 = 3;
-      obj = { value, done: true };
+      const obj = { value, done: true };
       return obj;
     } catch (tmp14) {
       c6 = tmp;
@@ -101,7 +101,7 @@ let closure_3 = asyncGeneratorStep(async (arg0) => {
     }
   }
 });
-initialize.load = function () {
+obj2.load = function () {
   const self = this;
   const apply = closure_3.apply;
   if (typeof apply === "unknown") {
@@ -111,7 +111,7 @@ initialize.load = function () {
   }
   return applyArgumentsResult;
 };
-let closure_6 = initialize.createFetchStore(GuildConfigGatesStore, initialize);
+let closure_6 = initialize.createFetchStore(GuildConfigGatesStore, obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_config_gates/GuildConfigGates.tsx");
 

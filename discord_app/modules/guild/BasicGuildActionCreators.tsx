@@ -18,8 +18,8 @@ let closure_8 = async function _fetchBasicGuild() {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -32,8 +32,8 @@ let closure_8 = async function _fetchBasicGuild() {
             throw value;
           } else if (arg0 === 2) {
             c6 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
             closure_2 = tmp4;
             closure_1 = tmp8;
@@ -42,17 +42,16 @@ let closure_8 = async function _fetchBasicGuild() {
             if (null == guild.getGuild(guildId)) {
               if (null == guildOrStatus.getGuildOrStatus(guildId)) {
                 if (!set.has(guildId)) {
-                  let obj5 = DispatcherDefault;
-                  const obj1 = { type: "BASIC_GUILD_FETCH", guildId };
-                  obj5.dispatch(obj1);
+                  const obj5 = { type: "BASIC_GUILD_FETCH", guildId };
+                  DispatcherDefault.dispatch(obj5);
                   set.add(guildId);
                   c4 = 2;
                   const HTTP = HTTPUtils.HTTP;
-                  const obj2 = { url: Endpoints.GUILD_BASIC(guildId), rejectWithError: true };
+                  const obj7 = { url: Endpoints.GUILD_BASIC(guildId), rejectWithError: true };
                   c5 = 3;
                   c6 = 1;
-                  let obj3 = { value: HTTP.get(obj2), done: false };
-                  return obj3;
+                  const obj8 = { value: HTTP.get(obj7), done: false };
+                  return obj8;
                 }
               }
             }
@@ -61,9 +60,9 @@ let closure_8 = async function _fetchBasicGuild() {
         } else if (1 !== tmp8) {
           if (2 === tmp8) {
             c4 = 1;
-            obj3 = closure_130_1(closure_130_2[4]);
-            const obj4 = { type: "BASIC_GUILD_FETCH_FAILURE", guildId: closure_129_0 };
-            obj3.dispatch(obj4);
+            const obj9 = { type: "BASIC_GUILD_FETCH_FAILURE", guildId: closure_129_0 };
+            closure_130_1(closure_130_2[4]).dispatch(obj9);
+            const obj4 = closure_130_1(closure_130_2[4]);
           } else if (arg0 === 1) {
             c6 = 3;
             throw value;
@@ -71,14 +70,14 @@ let closure_8 = async function _fetchBasicGuild() {
             c4 = 0;
             closure_130_7.delete(closure_129_0);
             c6 = 3;
-            obj5 = { value, done: true };
-            return obj5;
+            const obj10 = { value, done: true };
+            return obj10;
           } else {
             body = value.body;
-            obj = closure_130_1(closure_130_2[4]);
-            const obj6 = { type: "BASIC_GUILD_FETCH_SUCCESS", guildId: closure_129_0, guildInfo: body };
-            obj.dispatch(obj6);
+            const obj11 = { type: "BASIC_GUILD_FETCH_SUCCESS", guildId: closure_129_0, guildInfo: body };
+            closure_130_1(closure_130_2[4]).dispatch(obj11);
             c4 = 1;
+            const obj = closure_130_1(closure_130_2[4]);
           }
           c4 = 0;
           closure_130_7.delete(closure_129_0);

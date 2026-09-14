@@ -4,22 +4,22 @@ import router_utils from "../../../routing/router_utils.tsx";
 import asyncRequireImpl from "../../../../../_runtime/01896_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import BaseChannelItemDefault from "../../../guild_sidebar/native/BaseChannelItem.tsx";
-import _modDef12908 from "../../../../../_runtime/metro/12908__.js";
+import _modDef12909 from "../../../../../_runtime/metro/12909__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const Routes = fn(1074).Routes;
 const StaticChannelRoute = fn(1964).StaticChannelRoute;
 const jsx = fn(21).jsx;
-fn(4636);
-let createStyles = { container: null };
-createStyles = {
-  marginVertical: fn(10246).CHANNEL_MARGIN_VERTICAL,
-  marginHorizontal: 8,
-  borderRadius: nativeDefault.radii.md,
+const createStyles = fn(4636);
+let obj2 = {
+  container: {
+    marginVertical: fn(10246).CHANNEL_MARGIN_VERTICAL,
+    marginHorizontal: 8,
+    borderRadius: nativeDefault.radii.md,
+  },
 };
-createStyles.container = createStyles;
-let closure_7 = createStyles.createStyles(createStyles);
+let closure_7 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting(
   "modules/guild_role_subscriptions/native/guild_sidebar/GuildRoleSubscriptionsRow.tsx",
@@ -35,15 +35,14 @@ export default function GuildRoleSubscriptionsRow(selected) {
     router_utils.transitionTo(Routes.CHANNEL(id, StaticChannelRoute.ROLE_SUBSCRIPTIONS));
   }, items);
   const callback1 = noop.useCallback(() => {
-    const obj = {
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(16303, dependencyMap.paths), c1, {
       guildId: id,
       onClose() {
         c1(dependencyMap[8]).hideActionSheet(closure_1_1);
       },
-    };
-    obj.openLazy(asyncRequireImpl(16301, dependencyMap.paths), c1, obj);
+    });
   }, items1);
-  const ChannelModes = id(12508).ChannelModes;
+  const ChannelModes = id(12509).ChannelModes;
   if (selected) {
     let DEFAULT = ChannelModes.SELECTED;
     let tmp6 = tmp4;
@@ -51,7 +50,7 @@ export default function GuildRoleSubscriptionsRow(selected) {
     DEFAULT = ChannelModes.DEFAULT;
     tmp6 = tmp4;
   }
-  let obj = {
+  const obj = {
     onPress: callback,
     onLongPress: callback1,
     style: closure_7().container,
@@ -67,12 +66,23 @@ export default function GuildRoleSubscriptionsRow(selected) {
   obj.accessibilityLabel = intl.string(tmp6(1114).t["KzCF/6"]);
   obj.accessibilityState = { selected };
   obj.mode = DEFAULT;
-  obj = { name: null, mode: null };
+  const obj2 = { name: null, mode: null };
   const intl2 = tmp6(1114).intl;
-  obj.name = intl2.string(tmp6(1114).t["KzCF/6"]);
-  obj.mode = DEFAULT;
-  obj.name = jsx(tmp6(12508).BaseChannelName, { name: null, mode: null });
-  obj = { disableColor: true, mode: DEFAULT, source: _modDef12908 };
-  obj.icon = jsx(tmp6(12508).BaseChannelIcon, { disableColor: true, mode: DEFAULT, source: _modDef12908 });
-  return jsx(BaseChannelItemDefault, { disableColor: true, mode: DEFAULT, source: _modDef12908 });
+  obj2.name = intl2.string(tmp6(1114).t["KzCF/6"]);
+  obj2.mode = DEFAULT;
+  obj.name = jsx(tmp6(12509).BaseChannelName, { name: null, mode: null });
+  obj.icon = jsx(tmp6(12509).BaseChannelIcon, { disableColor: true, mode: DEFAULT, source: _modDef12909 });
+  return (
+    <tmp8
+      onPress={callback}
+      onLongPress={callback1}
+      style={closure_7().container}
+      accessible
+      accessibilityLabel={null}
+      accessibilityState={null}
+      mode={null}
+      name={null}
+      icon={null}
+    />
+  );
 }

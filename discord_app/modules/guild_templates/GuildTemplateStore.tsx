@@ -11,8 +11,9 @@ function handleGuildTemplateResolveSuccess(guildTemplate) {
   if (null != code) {
     value = map.get(code);
     if (null != value) {
-      let obj = {};
+      const obj2 = {};
       const merged = Object.assign(value);
+      let obj = obj2;
     } else {
       obj = { code, state: GuildTemplateStates.RESOLVING };
     }
@@ -31,8 +32,9 @@ function handleGuildTemplateResolveFailure(code) {
   if (null != code) {
     value = map.get(code);
     if (null != value) {
-      let obj = {};
+      const obj2 = {};
       const merged = Object.assign(value);
+      let obj = obj2;
     } else {
       obj = { code, state: GuildTemplateStates.RESOLVING };
     }
@@ -96,8 +98,9 @@ const guildTemplateStore = new GuildTemplateStore(DispatcherDefault, {
       if (null != code) {
         value = map.get(code);
         if (null != value) {
-          let obj = {};
+          const obj2 = {};
           const merged = Object.assign(value);
+          let obj = obj2;
         } else {
           obj = { code, state: constants.RESOLVING };
         }
@@ -119,8 +122,9 @@ const guildTemplateStore = new GuildTemplateStore(DispatcherDefault, {
     if (null != code) {
       value = map.get(code);
       if (null != value) {
-        let obj = {};
+        const obj2 = {};
         const merged = Object.assign(value);
+        let obj = obj2;
       } else {
         obj = { code, state: GuildTemplateStates.RESOLVING };
       }
@@ -136,8 +140,9 @@ const guildTemplateStore = new GuildTemplateStore(DispatcherDefault, {
     if (null != code) {
       value = map.get(code);
       if (null != value) {
-        let obj = {};
+        const obj2 = {};
         const merged = Object.assign(value);
+        let obj = obj2;
       } else {
         obj = { code, state: GuildTemplateStates.RESOLVING };
       }
@@ -157,8 +162,9 @@ const guildTemplateStore = new GuildTemplateStore(DispatcherDefault, {
     if (null != code) {
       value = map.get(code);
       if (null != value) {
-        let obj = {};
+        const obj2 = {};
         const merged = Object.assign(value);
+        let obj = obj2;
       } else {
         obj = { code, state: GuildTemplateStates.RESOLVING };
       }

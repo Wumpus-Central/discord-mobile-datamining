@@ -22,10 +22,9 @@ export const collectThreadMetadata = function collectThreadMetadata(channel, arg
     if (THREAD_CHANNEL_TYPES.has(channel.type)) {
       let lastRouteChangeSource;
       if (flag) {
-        let obj = router_utils;
-        lastRouteChangeSource = obj.getLastRouteChangeSource();
+        lastRouteChangeSource = router_utils.getLastRouteChangeSource();
       }
-      obj = {
+      const obj2 = {
         location: lastRouteChangeSource,
         thread_approximate_member_count: ThreadMembersStore.getMemberCount(channel.id),
         thread_approximate_message_count: ThreadMessageStore.getCount(channel.id),
@@ -41,7 +40,7 @@ export const collectThreadMetadata = function collectThreadMetadata(channel, arg
       if (threadMetadata != null) {
         archived = threadMetadata.archived;
       }
-      obj.thread_archived = true === archived;
+      obj2.thread_archived = true === archived;
       const threadMetadata2 = channel.threadMetadata;
       let flag3;
       if (threadMetadata2 != null) {
@@ -50,7 +49,7 @@ export const collectThreadMetadata = function collectThreadMetadata(channel, arg
       if (flag3 == null) {
         flag3 = false;
       }
-      obj.thread_locked = flag3;
+      obj2.thread_locked = flag3;
       const threadMetadata3 = channel.threadMetadata;
       let num;
       if (threadMetadata3 != null) {
@@ -59,11 +58,11 @@ export const collectThreadMetadata = function collectThreadMetadata(channel, arg
       if (num == null) {
         num = 0;
       }
-      obj.thread_auto_archive_duration_minutes = num;
-      obj.thread_approximate_creation_date = SnowflakeUtilsDefault.extractTimestamp(channel.id);
-      obj.can_send_message = PermissionStore.can(Permissions.SEND_MESSAGES, channel);
-      obj.parent_channel_type = channel.parentChannelThreadType;
-      tmp = obj;
+      obj2.thread_auto_archive_duration_minutes = num;
+      obj2.thread_approximate_creation_date = SnowflakeUtilsDefault.extractTimestamp(channel.id);
+      obj2.can_send_message = PermissionStore.can(Permissions.SEND_MESSAGES, channel);
+      obj2.parent_channel_type = channel.parentChannelThreadType;
+      tmp = obj2;
     }
   }
   return tmp;

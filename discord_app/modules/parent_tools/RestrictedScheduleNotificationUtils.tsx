@@ -28,7 +28,7 @@ function isOnlyDayLoss(label, label2) {
     obj2 = _modDef12;
   }
 }
-let RestrictedScheduleNotificationKind = {
+let obj = {
   Created: "created",
   Enabled: "enabled",
   Disabled: "disabled",
@@ -37,7 +37,7 @@ let RestrictedScheduleNotificationKind = {
   Multiple: "multiple",
 };
 let map = new Map();
-RestrictedScheduleNotificationKind = {
+let obj2 = {
   [Created]: _modDef2396["5V7eBH"],
   [Enabled]: _modDef2396.iefrVg,
   [Disabled]: _modDef2396["k+s9cM"],
@@ -45,10 +45,10 @@ RestrictedScheduleNotificationKind = {
   [Multiple]: _modDef2396.Nm6hZV,
   [Removed]: _modDef2396.jR6uOs,
 };
-({ Created, Enabled, Disabled, Updated, Multiple, Removed } = RestrictedScheduleNotificationKind);
+({ Created, Enabled, Disabled, Updated, Multiple, Removed } = obj);
 let result = size.fileFinishedImporting("modules/parent_tools/RestrictedScheduleNotificationUtils.tsx");
 
-export { RestrictedScheduleNotificationKind };
+export const RestrictedScheduleNotificationKind = obj;
 export const EMPTY_SCHEDULE_SNAPSHOT = map;
 export const toScheduleSnapshot = function toScheduleSnapshot(restrictedSchedule) {
   if (null != restrictedSchedule) {
@@ -101,14 +101,14 @@ export const diffSchedules = function diffSchedules(EMPTY_SCHEDULE_SNAPSHOT, toS
   const items1 = [...EMPTY_SCHEDULE_SNAPSHOT.keys(), ...toScheduleSnapshotResult.keys()];
   for (const item10030 of set) {
     value = arg0.get(item10030);
-    value = arg1.get(item10030);
-    let tmp4 = value;
-    if (null == value) {
-      let enabled;
+    value2 = arg1.get(item10030);
+    let tmp4 = value2;
+    if (null == value2) {
+      let enabled1;
       if (value != null) {
-        enabled = value.enabled;
+        enabled1 = value.enabled;
       }
-      if (enabled) {
+      if (enabled1) {
         let recordResult = record(rule.Removed, value);
       }
     } else if (null == value) {
@@ -123,13 +123,13 @@ export const diffSchedules = function diffSchedules(EMPTY_SCHEDULE_SNAPSHOT, toS
         Disabled = tmp34.Disabled;
       }
       if (tmp4.enabled) {
-        let tmp36 = value;
+        let tmp36 = value2;
       } else {
         tmp36 = value;
       }
       let recordResult2 = record(Disabled, tmp36);
     } else {
-      enabled = tmp4.enabled;
+      let enabled = tmp4.enabled;
       let tmp27 = !enabled;
       if (enabled) {
         let tmp6 = tmp4;
@@ -140,26 +140,26 @@ export const diffSchedules = function diffSchedules(EMPTY_SCHEDULE_SNAPSHOT, toS
           isEqualResult = obj.isEqual(tmp8.startTime, tmp6.startTime);
         }
         if (isEqualResult) {
-          let obj1 = _modDef12;
-          isEqualResult = obj1.isEqual(tmp8.endTime, tmp6.endTime);
+          obj2 = _modDef12;
+          isEqualResult = obj2.isEqual(tmp8.endTime, tmp6.endTime);
         }
         if (isEqualResult) {
-          let obj2 = _modDef12;
+          let obj3 = _modDef12;
           let items2 = [];
           let arraySpreadResult = HermesBuiltin.arraySpread(tmp8.days, 0);
           let items3 = [];
           let sorted = items2.sort();
-          arraySpreadResult = HermesBuiltin.arraySpread(tmp6.days, 0);
-          isEqualResult = obj2.isEqual(sorted, items3.sort());
+          let arraySpreadResult2 = HermesBuiltin.arraySpread(tmp6.days, 0);
+          isEqualResult = obj3.isEqual(sorted, items3.sort());
         }
         tmp27 = isEqualResult;
       }
       if (!tmp27) {
         let recordResult3 = record(rule.Updated, tmp4);
-        obj = { oldRule: null, newRule: null };
-        obj.oldRule = value;
-        obj.newRule = tmp4;
-        let arr = items.push(obj);
+        let obj4 = { oldRule: null, newRule: null };
+        obj4.oldRule = value;
+        obj4.newRule = tmp4;
+        let arr = items.push(obj4);
       }
     }
     continue;
@@ -170,8 +170,8 @@ export const diffSchedules = function diffSchedules(EMPTY_SCHEDULE_SNAPSHOT, toS
     if (1 === closure_6) {
       if (0 === closure_8) {
         if (tmp70) {
-          obj = { kind: rule.Created, rule: dependencyMap };
-          return obj;
+          const obj5 = { kind: rule.Created, rule: dependencyMap };
+          return obj5;
         }
       }
     }
@@ -179,8 +179,8 @@ export const diffSchedules = function diffSchedules(EMPTY_SCHEDULE_SNAPSHOT, toS
       if (0 === tmp71) {
         if (1 <= isOnlyDayLoss) {
           if (0 === closure_8) {
-            obj1 = { kind: rule.Updated, rule };
-            return obj1;
+            const obj6 = { kind: rule.Updated, rule };
+            return obj6;
           }
         }
       }
@@ -191,11 +191,11 @@ export const diffSchedules = function diffSchedules(EMPTY_SCHEDULE_SNAPSHOT, toS
           if (0 === closure_8) {
             [tmp53, tmp54] = items;
             if (isOnlyDayLoss(tmp53.oldRule, tmp53.newRule)) {
-              obj2 = { kind: rule.Updated, rule: tmp54.newRule };
-              return obj2;
+              const obj7 = { kind: rule.Updated, rule: tmp54.newRule };
+              return obj7;
             } else if (tmp55(tmp54.oldRule, tmp54.newRule)) {
-              const obj3 = { kind: rule.Updated, rule: tmp53.newRule };
-              return obj3;
+              const obj8 = { kind: rule.Updated, rule: tmp53.newRule };
+              return obj8;
             }
             tmp55 = isOnlyDayLoss;
           }
@@ -203,18 +203,18 @@ export const diffSchedules = function diffSchedules(EMPTY_SCHEDULE_SNAPSHOT, toS
       }
     }
     if (1 < closure_4) {
-      const obj4 = { kind: rule.Multiple, rule: null };
-      let obj5 = obj4;
+      const obj9 = { kind: rule.Multiple, rule: null };
+      let obj10 = obj9;
     } else {
-      obj5 = { kind: _require, rule: importDefault };
+      obj10 = { kind: _require, rule: importDefault };
     }
-    return obj5;
+    return obj10;
   }
   let set = new Set(items1);
 };
 export const getRestrictedScheduleNotificationTitle = function getRestrictedScheduleNotificationTitle(kind) {
   const intl = util.intl;
-  return intl.string(obj[kind]);
+  return intl.string(obj2[kind]);
 };
 export const getRestrictedScheduleNotificationSubtitle = function getRestrictedScheduleNotificationSubtitle(rule) {
   let result = null;

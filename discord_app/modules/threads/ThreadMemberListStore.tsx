@@ -123,7 +123,7 @@ prototype["updateUserId"] = function updateUserId(id) {
   if (allUserIds.has(id)) {
     const tmp2 = _slicedToArray(self.findOldState(id), 3);
     const first = tmp2[0];
-    [tmp6, tmp7, tmp8] = _slicedToArray(self.calculateNewState(id, ChannelStore.getChannel(self.parentId)), 3);
+    [tmp6, tmp7, tmp8] = self.calculateNewState(id, ChannelStore.getChannel(self.parentId));
     let flag2 = first !== tmp6 || tmp2[1] !== tmp7 || tmp2[2] !== tmp8;
     if (flag2) {
       self.removeUserId(id, first);
@@ -166,12 +166,12 @@ prototype["addUser"] = function addUser(userId, sectionId, displayName, canViewC
   if (null != user) {
     if ("" !== user.username) {
       if (!(sectionId in self.sections)) {
-        let obj = { sectionId, usersById: {}, userIds: [] };
+        const obj = { sectionId, usersById: {}, userIds: [] };
         self.sections[sectionId] = obj;
       }
       let sum = self.sections[sectionId];
-      obj = { userId, displayName, canViewChannel };
-      sum.usersById[userId] = obj;
+      const obj2 = { userId, displayName, canViewChannel };
+      sum.usersById[userId] = obj2;
       if (arg4) {
         const userIds = sum.userIds;
         userIds.push(userId);
@@ -261,8 +261,8 @@ prototype["calculateNewState"] = function calculateNewState(userId, channel) {
   }
   let canResult = null != user && null != channel;
   if (canResult) {
-    const obj = { permission: constants2.VIEW_CHANNEL, user, context: channel };
-    canResult = obj.can(obj);
+    const obj2 = { permission: constants2.VIEW_CHANNEL, user, context: channel };
+    canResult = PermissionUtilsAll.can(obj2);
   }
   let str = "offline";
   if (status !== constants.OFFLINE) {

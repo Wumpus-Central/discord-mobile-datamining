@@ -10,12 +10,11 @@ const result = size.fileFinishedImporting("modules/games/hooks/useResolveGame.ts
 export default function useResolveGame(arg0) {
   ({ applicationId, gameId } = arg0);
   let getOrFetchApplication;
-  let obj = useGetOrFetchApplications;
   let tmp3;
   if (null == gameId) {
     tmp3 = applicationId;
   }
-  getOrFetchApplication = obj.useGetOrFetchApplication(tmp3);
+  getOrFetchApplication = useGetOrFetchApplications.useGetOrFetchApplication(tmp3);
   const items = [gameId, getOrFetchApplication];
   const memo = noop.useMemo(() => {
     let tmp = gameId;
@@ -30,11 +29,11 @@ export default function useResolveGame(arg0) {
   }, items);
   const game = useGame.useGame(memo);
   let data = game.data;
-  obj = { gameId: memo, gameRecord: null, isLoading: null };
+  const obj2 = { gameId: memo, gameRecord: null, isLoading: null };
   if (data == null) {
     data = null;
   }
-  obj.gameRecord = data;
-  obj.isLoading = (null == gameId && null != applicationId && null == getOrFetchApplication) || game.isLoading;
-  return obj;
+  obj2.gameRecord = data;
+  obj2.isLoading = (null == gameId && null != applicationId && null == getOrFetchApplication) || game.isLoading;
+  return obj2;
 }

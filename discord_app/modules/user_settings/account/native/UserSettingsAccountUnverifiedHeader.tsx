@@ -16,13 +16,13 @@ function getBannerText(currentUser) {
   if (null == currentUser) {
     return null;
   } else if (null == currentUser.email) {
-    let obj = { title: null, button: null };
+    const obj2 = { title: null, button: null };
     const intl3 = util.intl;
-    obj.title = intl3.string(util.t["/yqgqs"]);
+    obj2.title = intl3.string(util.t["/yqgqs"]);
     const intl4 = util.intl;
-    obj.button = intl4.string(util.t.ydw5nX);
+    obj2.button = intl4.string(util.t.ydw5nX);
   } else if (!currentUser.verified) {
-    obj = { title: null, button: null };
+    const obj = { title: null, button: null };
     const intl = util.intl;
     obj.title = intl.string(util.t["3sWbf3"]);
     const intl2 = util.intl;
@@ -31,9 +31,20 @@ function getBannerText(currentUser) {
 }
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-fn(4636);
-let createStyles = { accountWarning: null, accountWarningText: null, accountWarningButton: null };
-createStyles = {
+const createStyles = fn(4636);
+let obj2 = {
+  accountWarning: {
+    backgroundColor: nativeDefault.unsafe_rawColors.RED_400,
+    height: 36,
+    alignItems: "center",
+    alignSelf: "stretch",
+    flexDirection: "row",
+    paddingHorizontal: 16,
+  },
+  accountWarningText: { flex: 1, lineHeight: 16 },
+  accountWarningButton: null,
+};
+let obj3 = {
   backgroundColor: nativeDefault.unsafe_rawColors.RED_400,
   height: 36,
   alignItems: "center",
@@ -41,16 +52,14 @@ createStyles = {
   flexDirection: "row",
   paddingHorizontal: 16,
 };
-createStyles.accountWarning = createStyles;
-createStyles.accountWarningText = { flex: 1, lineHeight: 16 };
-createStyles.accountWarningButton = {
+obj2.accountWarningButton = {
   borderWidth: 1,
   borderColor: nativeDefault.colors.WHITE,
   borderRadius: nativeDefault.radii.xs,
   paddingHorizontal: 8,
   paddingVertical: 4,
 };
-let closure_6 = createStyles.createStyles(createStyles);
+let closure_6 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting(
   "modules/user_settings/account/native/UserSettingsAccountUnverifiedHeader.tsx",
@@ -58,28 +67,32 @@ const result = size.fileFinishedImporting(
 
 export default function UserSettingsAccountUnverifiedHeader() {
   const tmp = closure_6();
-  let obj = initialize;
   const items = [UserStore];
-  const tmp4 = getBannerText(obj.useStateFromStores(items, () => currentUser.getCurrentUser()));
+  const tmp4 = getBannerText(initialize.useStateFromStores(items, () => currentUser.getCurrentUser()));
   let tmp5 = null;
   if (null != tmp4) {
-    obj = {
+    const obj2 = {
       accessibilityRole: "button",
       style: tmp.accountWarning,
       onPress: handleOpenEmailVerification,
       children: null,
     };
-    obj = { style: tmp.accountWarningText, variant: "text-xs/bold", color: "text-overlay-light", children: tmp4.title };
-    const items1 = [React4(Text_Text.Text, obj)];
-    const obj1 = {
+    const obj3 = {
+      style: tmp.accountWarningText,
+      variant: "text-xs/bold",
+      color: "text-overlay-light",
+      children: tmp4.title,
+    };
+    const items1 = [React4(Text_Text.Text, obj3)];
+    const obj4 = {
       style: tmp.accountWarningButton,
       variant: "text-xs/medium",
       color: "text-overlay-light",
       children: tmp4.button,
     };
-    items1[1] = React4(Text_Text.Text, obj1);
-    obj.children = items1;
-    tmp5 = hasOwnProperty(Pressables.PressableOpacity, obj);
+    items1[1] = React4(Text_Text.Text, obj4);
+    obj2.children = items1;
+    tmp5 = hasOwnProperty(Pressables.PressableOpacity, obj2);
   }
   return tmp5;
 }

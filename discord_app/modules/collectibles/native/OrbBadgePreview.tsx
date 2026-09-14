@@ -14,14 +14,14 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/native/OrbBadgePreview.tsx");
 
 export const OrbBadgePreview = function OrbBadgePreview() {
-  let obj = { style: closure_5().container, children: null };
-  const currentUser = obj.useCurrentUser();
-  obj = { compact: true, user: currentUser, additionalBadges: null, accessibilityLabel: null };
   const tmp = closure_5();
+  const obj2 = { style: tmp.container, children: null };
+  const currentUser = useCurrentUser.useCurrentUser();
+  const obj3 = { compact: true, user: currentUser, additionalBadges: null, accessibilityLabel: null };
   const items = [collectibles_CollectiblesUtils.createOrbProfileBadge()];
-  obj.additionalBadges = items;
+  obj3.additionalBadges = items;
   const intl = util.intl;
-  obj.accessibilityLabel = intl.string(util.t.bxcI6Y);
-  obj.children = <tmp3 compact user={currentUser} additionalBadges={null} accessibilityLabel={null} />;
-  return <View compact user={currentUser} additionalBadges={null} accessibilityLabel={null} />;
+  obj3.accessibilityLabel = intl.string(util.t.bxcI6Y);
+  obj2.children = <tmp3 compact user={currentUser} additionalBadges={null} accessibilityLabel={null} />;
+  return <View style={tmp.container}>{null}</View>;
 };

@@ -3,6 +3,8 @@ import _mod4259 from "../../../../../../_runtime/metro/04259__.js";
 import PushNotificationDefault from "../../../../../lib/pushnotification/PushNotification.tsx";
 import asyncGeneratorStep from "../../../../../../_runtime/00005_asyncGeneratorStep.js";
 
+const require = globalThis.__r;
+
 require = fn;
 let closure_5 = async function _initializeAndroidNotificationSettingsStore() {
   if (c4 === 2) {
@@ -12,8 +14,8 @@ let closure_5 = async function _initializeAndroidNotificationSettingsStore() {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -26,8 +28,8 @@ let closure_5 = async function _initializeAndroidNotificationSettingsStore() {
           throw value;
         } else if (arg0 === 2) {
           c4 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj4 = { value, done: true };
+          return obj4;
         } else {
           const isVibrationsEnabled = tmp3;
           const isLightsEnabled = tmp7;
@@ -39,8 +41,8 @@ let closure_5 = async function _initializeAndroidNotificationSettingsStore() {
             c2 = 1;
             c3 = 2;
             c4 = 1;
-            const obj1 = { value: PushNotificationDefault.getLightsEnabled(), done: false };
-            return obj1;
+            const obj5 = { value: PushNotificationDefault.getLightsEnabled(), done: false };
+            return obj5;
           }
           obj16 = require("PlatformUtils");
         }
@@ -54,15 +56,14 @@ let closure_5 = async function _initializeAndroidNotificationSettingsStore() {
           } else if (arg0 === 2) {
             c2 = 0;
             c4 = 3;
-            let obj2 = { value, done: true };
-            return obj2;
+            const obj7 = { value, done: true };
+            return obj7;
           } else {
             closure_128_0 = value;
-            let obj8 = closure_129_1(closure_129_2[3]);
             c3 = 3;
             c4 = 1;
-            const obj3 = { value: obj8.getVibrationsEnabled(), done: false };
-            return obj3;
+            const obj8 = { value: closure_129_1(closure_129_2[3]).getVibrationsEnabled(), done: false };
+            return obj8;
           }
         } else if (3 === tmp7) {
           if (arg0 === 1) {
@@ -71,16 +72,14 @@ let closure_5 = async function _initializeAndroidNotificationSettingsStore() {
           } else if (arg0 === 2) {
             c2 = 0;
             c4 = 3;
-            const obj4 = { value, done: true };
-            return obj4;
+            const obj10 = { value, done: true };
+            return obj10;
           } else {
             closure_128_1 = value;
-            let obj5 = closure_129_1(closure_129_2[3]);
             c3 = 4;
             c4 = 1;
-            obj5 = { value: null, done: false };
-            obj5.value = obj5.getSoundsEnabled();
-            return obj5;
+            const obj11 = { value: closure_129_1(closure_129_2[3]).getSoundsEnabled(), done: false };
+            return obj11;
           }
         } else if (4 === tmp7) {
           if (arg0 === 1) {
@@ -89,31 +88,30 @@ let closure_5 = async function _initializeAndroidNotificationSettingsStore() {
           } else if (arg0 === 2) {
             c2 = 0;
             c4 = 3;
-            const obj6 = { value, done: true };
-            return obj6;
+            const obj13 = { value, done: true };
+            return obj13;
           } else {
             closure_128_2 = value;
-            obj2 = closure_129_1(closure_129_2[3]);
             c3 = 5;
             c4 = 1;
-            const obj7 = { value: obj2.shouldAndroidNotifyEveryTime(), done: false };
-            return obj7;
+            const obj14 = { value: closure_129_1(closure_129_2[3]).shouldAndroidNotifyEveryTime(), done: false };
+            return obj14;
           }
         } else if (arg0 === 1) {
           c4 = 3;
           throw value;
         } else if (arg0 !== 2) {
           closure_128_3 = value;
-          obj = closure_129_0(closure_129_2[4]);
-          obj.batchUpdates(() => {
+          closure_129_0(closure_129_2[4]).batchUpdates(() => {
             state.setState({ isLightsEnabled, isVibrationsEnabled, isSoundsEnabled, isNotifyEveryTime });
           });
           c2 = 0;
+          const obj = closure_129_0(closure_129_2[4]);
         }
         c2 = 0;
         c4 = 3;
-        obj8 = { value, done: true };
-        return obj8;
+        const obj15 = { value, done: true };
+        return obj15;
       }
       c4 = 3;
     } catch (tmp27) {
@@ -126,12 +124,12 @@ let closure_5 = async function _initializeAndroidNotificationSettingsStore() {
     }
   }
 };
-const identity = fn(1244);
+const identity = fn(1242);
 let closure_4 = identity.createWithEqualityFn(() => ({
-  isLightsEnabled: "Array",
-  isVibrationsEnabled: "call",
-  isSoundsEnabled: "borderRadius",
-  isNotifyEveryTime: "assign",
+  isLightsEnabled: "r",
+  isVibrationsEnabled: "accessible",
+  isSoundsEnabled: "to",
+  isNotifyEveryTime: "variant",
 }));
 const size = fn(2);
 let result = size.fileFinishedImporting(

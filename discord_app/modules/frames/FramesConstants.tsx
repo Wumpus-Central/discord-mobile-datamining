@@ -3,21 +3,27 @@ import Constants from "../../Constants.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
 const ChannelTypes = Constants.ChannelTypes;
-let obj = { MAIN: 0, [0]: "MAIN", APP_CHANNEL: 1, [1]: "APP_CHANNEL", VOICE_CHANNEL: 2, [2]: "VOICE_CHANNEL" };
-obj = { type: obj.MAIN };
-obj = { MAIN: 0, [0]: "MAIN", INLINE: 1, [1]: "INLINE" };
+const EmbeddedSurfaceType = {
+  MAIN: 0,
+  [0]: "MAIN",
+  APP_CHANNEL: 1,
+  [1]: "APP_CHANNEL",
+  VOICE_CHANNEL: 2,
+  [2]: "VOICE_CHANNEL",
+};
+let obj3 = { MAIN: 0, [0]: "MAIN", INLINE: 1, [1]: "INLINE" };
 const result = size.fileFinishedImporting("modules/frames/FramesConstants.tsx");
 
 export const FrameLayoutModes = { FOCUSED: 0, [0]: "FOCUSED", PIP: 1, [1]: "PIP" };
-export const EmbeddedSurfaceType = obj;
-export const MAIN_SURFACE = obj;
-export const FrameIntent = obj;
+export { EmbeddedSurfaceType };
+export const MAIN_SURFACE = { type: EmbeddedSurfaceType.MAIN };
+export const FrameIntent = obj3;
 export const getFrameIntentForSurface = function getFrameIntentForSurface(type) {
   type = type.type;
   if (obj.MAIN === type) {
-    return obj.MAIN;
+    return obj3.MAIN;
   } else {
-    return obj.INLINE;
+    return obj3.INLINE;
   }
 };
 export const makeFrameId = function makeFrameId(arg0, type) {
@@ -36,10 +42,9 @@ export const makeFrameId = function makeFrameId(arg0, type) {
 export const getFrameSurfaceForChannel = function getFrameSurfaceForChannel(type) {
   type = type.type;
   if (ChannelTypes.GUILD_APP === type) {
-    obj = { type: null, channelId: null, guildId: null };
-    obj.type = obj.APP_CHANNEL;
+    obj3 = { type: obj.APP_CHANNEL, channelId: null, guildId: null };
     ({ id: obj2.channelId, guild_id: obj2.guildId } = type);
-    return obj;
+    return obj3;
   } else if (tmp.GUILD_VOICE === type) {
     obj = { type: null, channelId: null, guildId: null };
     obj.type = obj.VOICE_CHANNEL;

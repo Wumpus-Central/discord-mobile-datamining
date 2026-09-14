@@ -8,8 +8,8 @@ import WebAuthnStore from "../../../webauthn/WebAuthnStore.tsx";
 import UserStore from "../../../../stores/UserStore.tsx";
 
 require = fn;
-fn(11601);
-let SettingBuilders = {
+const SettingBuilders = fn(11602);
+const route = SettingBuilders.createRoute({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.y7SXYX);
@@ -26,12 +26,12 @@ let SettingBuilders = {
         flag = false;
       }
       if (!flag) {
-        const obj = { title: null, body: null };
+        const obj2 = { title: null, body: null };
         const intl = util.intl;
-        obj.title = intl.string(util.t.v740sh);
+        obj2.title = intl.string(util.t.v740sh);
         const intl2 = util.intl;
-        obj.body = intl2.string(util.t.uggF7o);
-        obj.show(obj);
+        obj2.body = intl2.string(util.t.uggF7o);
+        AlertActionCreatorsDefault.show(obj2);
       }
       return flag;
     }, []);
@@ -53,9 +53,8 @@ let SettingBuilders = {
       return require("UserSettingsWebAuthn").default;
     },
   },
-};
-SettingBuilders = SettingBuilders.createRoute(SettingBuilders);
+});
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/AccountWebAuthnViewSetting.tsx");
 
-export default SettingBuilders;
+export default route;

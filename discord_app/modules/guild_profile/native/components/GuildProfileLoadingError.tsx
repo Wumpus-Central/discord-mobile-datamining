@@ -18,32 +18,29 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_profile/native/components/GuildProfileLoadingError.tsx");
 
 export default function GuildProfileLoadingError(onPress) {
-  let obj = GuildProfileView;
-  const styles = obj.useStyles();
-  let obj1 = useToken;
-  obj = { style: styles.container, children: null };
-  const token = obj1.useToken(nativeDefault.colors.BACKGROUND_BASE_LOWEST);
-  obj = { style: styles.colorBanner, start: null, end: null, colors: null };
+  const styles = GuildProfileView.useStyles();
   const tmp2 = useThemeDefault();
-  obj.start = GuildProfileView.DiagonalGradient.START;
-  obj.end = GuildProfileView.DiagonalGradient.END;
-  let obj4 = GuildProfileView;
-  obj.colors = obj4.getBackgroundForProfile(tmp2, token);
-  const items = [React4(LinearGradientDefault, obj), ,];
-  obj1 = { style: styles.header, children: null };
-  const obj2 = { style: styles.avatarBackground, children: null };
-  const obj3 = { style: styles.avatarBackground, children: null };
-  obj4 = { size: "lg", color: nativeDefault.colors.TEXT_FEEDBACK_WARNING };
-  obj3.children = React4(WarningIcon.WarningIcon, obj4);
-  obj2.children = React4(View, obj3);
-  obj1.children = React4(View, obj2);
-  items[1] = React4(View, obj1);
-  const obj5 = { style: styles.body, children: null };
-  const obj6 = { variant: "heading-lg/semibold", color: "mobile-text-heading-primary", children: null };
+  const obj3 = { style: styles.container, children: null };
+  const token = useToken.useToken(nativeDefault.colors.BACKGROUND_BASE_LOWEST);
+  const obj4 = { style: styles.colorBanner, start: null, end: null, colors: null };
+  obj4.start = GuildProfileView.DiagonalGradient.START;
+  obj4.end = GuildProfileView.DiagonalGradient.END;
+  const tmp4 = LinearGradientDefault;
+  obj4.colors = GuildProfileView.getBackgroundForProfile(tmp2, token);
+  const items = [React4(tmp4, obj4), ,];
+  const obj6 = { style: styles.header, children: null };
+  const obj7 = { style: styles.avatarBackground, children: null };
+  const obj8 = { style: styles.avatarBackground, children: null };
+  obj8.children = React4(WarningIcon.WarningIcon, { size: "lg", color: nativeDefault.colors.TEXT_FEEDBACK_WARNING });
+  obj7.children = React4(View, obj8);
+  obj6.children = React4(View, obj7);
+  items[1] = React4(View, obj6);
+  const obj10 = { style: styles.body, children: null };
+  const obj11 = { variant: "heading-lg/semibold", color: "mobile-text-heading-primary", children: null };
   const intl = util.intl;
-  obj6.children = intl.string(util.t.DmIUGK);
-  const items1 = [React4(Text_Text.Text, obj6)];
-  const obj7 = {
+  obj11.children = intl.string(util.t.DmIUGK);
+  const items1 = [React4(Text_Text.Text, obj11)];
+  const obj12 = {
     style: styles.error,
     onPress: onPress.onRetry,
     accessibilityRole: "button",
@@ -51,16 +48,17 @@ export default function GuildProfileLoadingError(onPress) {
     children: null,
   };
   const intl2 = util.intl;
-  obj7.accessibilityLabel = intl2.string(util.t.s1fAEw);
+  obj12.accessibilityLabel = intl2.string(util.t.s1fAEw);
+  const obj9 = { size: "lg", color: nativeDefault.colors.TEXT_FEEDBACK_WARNING };
   const items2 = [React4(WarningIcon.WarningIcon, { size: "sm", color: nativeDefault.colors.TEXT_FEEDBACK_WARNING })];
-  const obj9 = { variant: "text-sm/normal", color: "text-feedback-warning", children: null };
+  const obj14 = { variant: "text-sm/normal", color: "text-feedback-warning", children: null };
   const intl3 = util.intl;
-  obj9.children = intl3.string(util.t.tmGHjc);
-  items2[1] = React4(Text_Text.Text, obj9);
-  obj7.children = items2;
-  items1[1] = hasOwnProperty(Pressables.PressableOpacity, obj7);
-  obj5.children = items1;
-  items[2] = hasOwnProperty(View, obj5);
-  obj.children = items;
-  return hasOwnProperty(View, obj);
+  obj14.children = intl3.string(util.t.tmGHjc);
+  items2[1] = React4(Text_Text.Text, obj14);
+  obj12.children = items2;
+  items1[1] = hasOwnProperty(Pressables.PressableOpacity, obj12);
+  obj10.children = items1;
+  items[2] = hasOwnProperty(View, obj10);
+  obj3.children = items;
+  return hasOwnProperty(View, obj3);
 }

@@ -17,14 +17,43 @@ export default function ExplicitMediaObscuredFalsePositiveActionSheet(channelId)
   channelId = channelId.channelId;
   const messageId = channelId.messageId;
   let reportFalsePositive;
-  let obj = channelId(563);
   const items = [reportFalsePositive];
-  const stateFromStores = obj.useStateFromStores(items, () => ExplicitMediaStore.getFpMessageInfo(messageId));
+  const stateFromStores = channelId(563).useStateFromStores(items, () =>
+    ExplicitMediaStore.getFpMessageInfo(messageId),
+  );
   const attachments = stateFromStores.attachments;
   dependencyMap = attachments.map((id) => id.id);
   const attachments1 = stateFromStores.attachments;
   noop = attachments1.map((filename) => filename.filename);
-  obj = {
+  let obj = channelId(563);
+  const explicitMediaActions = channelId(9529).useExplicitMediaActions({
+    onSuccess() {
+      ExplicitMediaFalsePositiveActionSheet.handleSuccess(closure_5);
+      const result = ExplicitMediaFalsePositiveActionCreatorsDefault.disableFalsePositiveButton(channelId, messageId);
+    },
+    onError() {
+      return channelId(closure_2[6]).handleError();
+    },
+    report() {
+      return ExplicitMediaRedactionActionCreators.reportFailedSendFalsePositive(
+        channelId,
+        messageId,
+        closure_2,
+        closure_3,
+      );
+    },
+  });
+  reportFalsePositive = explicitMediaActions.reportFalsePositive;
+  if (stateFromStores.attachments.length <= 0) {
+    messageId(4603).hideActionSheet();
+    const obj4 = messageId(4603);
+  }
+  const items1 = [reportFalsePositive];
+  const callback = noop.useCallback(() => {
+    reportFalsePositive();
+  }, items1);
+  const obj2 = channelId(9529);
+  const obj3 = {
     onSuccess() {
       ExplicitMediaFalsePositiveActionSheet.handleSuccess(closure_5);
       const result = ExplicitMediaFalsePositiveActionCreatorsDefault.disableFalsePositiveButton(channelId, messageId);
@@ -41,28 +70,11 @@ export default function ExplicitMediaObscuredFalsePositiveActionSheet(channelId)
       );
     },
   };
-  const explicitMediaActions = channelId(9529).useExplicitMediaActions(obj);
-  reportFalsePositive = explicitMediaActions.reportFalsePositive;
-  if (stateFromStores.attachments.length <= 0) {
-    messageId(4603).hideActionSheet();
-    const obj4 = messageId(4603);
-  }
-  const items1 = [reportFalsePositive];
-  const callback = noop.useCallback(() => {
-    reportFalsePositive();
-  }, items1);
-  obj = {
-    channelId,
-    messageId,
-    isReportFalsePositiveLoading: explicitMediaActions.isReportFalsePositiveLoading,
-    onConfirmPress: callback,
-    analyticsContext: tmp(7702).TrackMediaRedactionContext.EXPLICIT_MEDIA_SENDER_FALSE_POSITIVE_FLOW,
-  };
   return jsx(channelId(9530).ExplicitMediaFalsePositiveActionSheet, {
     channelId,
     messageId,
     isReportFalsePositiveLoading: explicitMediaActions.isReportFalsePositiveLoading,
     onConfirmPress: callback,
-    analyticsContext: tmp(7702).TrackMediaRedactionContext.EXPLICIT_MEDIA_SENDER_FALSE_POSITIVE_FLOW,
+    analyticsContext: channelId(7702).TrackMediaRedactionContext.EXPLICIT_MEDIA_SENDER_FALSE_POSITIVE_FLOW,
   });
 }

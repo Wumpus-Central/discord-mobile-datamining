@@ -34,8 +34,7 @@ function DiscoverabilityLandingScene() {
   allowEmail = tmp5;
   const items1 = [navigation, stateFromStores, allowEmail, allowPhone, tmp5];
   const onNext = allowEmail.useCallback(() => {
-    const obj = { phone: allowPhone, email: allowEmail };
-    const result = obj.updateDiscoverability(obj);
+    const result = ContactSyncActionCreatorsDefault.updateDiscoverability({ phone: allowPhone, email: allowEmail });
     if (allowEmail) {
       if (null != stateFromStores) {
         if (allowPhone) {
@@ -43,6 +42,7 @@ function DiscoverabilityLandingScene() {
         }
       }
     }
+    const obj2 = { phone: allowPhone, email: allowEmail };
     const result1 = NUFActionCreators.closeDiscoverabilityModal(false);
   }, items1);
   return jsx(stateFromStores(tmp[14]), { onNext });
@@ -58,25 +58,25 @@ function DiscoverabilityNameScene() {
   }, items);
   let obj = { style: tmp.container, children: null };
   const callback = noop.useCallback((arg0) => {
-    const result = allowPhone(12833).startContactSyncForDiscoverability(arg0);
-    const obj = allowPhone(12833);
-    const result1 = allowPhone(12833).closeDiscoverabilityModal(false);
+    const result = allowPhone(12834).startContactSyncForDiscoverability(arg0);
+    const obj = allowPhone(12834);
+    const result1 = allowPhone(12834).closeDiscoverabilityModal(false);
   }, []);
-  obj = { onNext: callback, loading: false, initialName: null };
+  const obj2 = { onNext: callback, loading: false, initialName: null };
   const tmp2 = useContactSyncModalStore();
   if (name == null) {
     name = "";
   }
-  obj.initialName = name;
+  obj2.initialName = name;
   obj.children = jsx(ContactSyncNameInputDefault, { onNext: callback, loading: false, initialName: null });
-  return <View onNext={callback} loading={false} initialName={null} />;
+  return <View style={tmp.container}>{null}</View>;
 }
 class DiscoverabilityModal {
   constructor() {
     obj = {
       screens: closure_3.useMemo(() => {
-        let obj = {};
-        obj = {
+        const obj = {};
+        obj[ConstantsIOS.DiscoverabilityScenes.LANDING] = {
           ignoreKeyboard: true,
           impressionName: discord_common_AnalyticsUtils.ImpressionNames.DISCOVERABILITY,
           fullscreen: true,
@@ -90,8 +90,21 @@ class DiscoverabilityModal {
             return closure_1_7(closure_1_9, {});
           },
         };
-        obj[ConstantsIOS.DiscoverabilityScenes.LANDING] = obj;
-        obj = {
+        const obj2 = {
+          ignoreKeyboard: true,
+          impressionName: discord_common_AnalyticsUtils.ImpressionNames.DISCOVERABILITY,
+          fullscreen: true,
+          headerLeft() {
+            return null;
+          },
+          headerTitle() {
+            return null;
+          },
+          render() {
+            return closure_1_7(closure_1_9, {});
+          },
+        };
+        obj[ConstantsIOS.DiscoverabilityScenes.NAME] = {
           ignoreKeyboard: true,
           impressionName: discord_common_AnalyticsUtils.ImpressionNames.DISCOVERABILITY,
           fullscreen: true,
@@ -102,7 +115,6 @@ class DiscoverabilityModal {
             return closure_1_7(closure_1_10, {});
           },
         };
-        obj[ConstantsIOS.DiscoverabilityScenes.NAME] = obj;
         return obj;
       }, []),
       initialRouteName: closure_0(closure_2[12]).DiscoverabilityScenes.LANDING,
@@ -114,19 +126,19 @@ class DiscoverabilityModal {
   }
 }
 const View = fn(17).View;
-const useContactSyncModalStore = fn(12806).useContactSyncModalStore;
+const useContactSyncModalStore = fn(12807).useContactSyncModalStore;
 const jsx = fn(21).jsx;
-fn(4636);
-let createStyles = { container: null };
-createStyles = {
-  flex: 1,
-  backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
-  justifyContent: "center",
-  paddingBottom: 44,
-  paddingTop: fn(5763).NAV_BAR_HEIGHT + 32,
+const createStyles = fn(4636);
+let obj2 = {
+  container: {
+    flex: 1,
+    backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
+    justifyContent: "center",
+    paddingBottom: 44,
+    paddingTop: fn(5763).NAV_BAR_HEIGHT + 32,
+  },
 };
-createStyles.container = createStyles;
-let closure_8 = createStyles.createStyles(createStyles);
+let closure_8 = createStyles.createStyles(obj2);
 DiscoverabilityModal.modalConfig = { animation: fn(1074).ModalAnimation.SLIDE_IN_OUT };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/nuf/native/components/DiscoverabilityModal.tsx");

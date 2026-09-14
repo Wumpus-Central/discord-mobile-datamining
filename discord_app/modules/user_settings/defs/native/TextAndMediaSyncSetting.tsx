@@ -5,8 +5,8 @@ import UserSettingsActionCreatorsDefault from "../../../../actions/UserSettingsA
 import SelectivelySyncedUserSettingsStore from "../../SelectivelySyncedUserSettingsStore.tsx";
 
 require = fn;
-fn(11601);
-let SettingBuilders = {
+const SettingBuilders = fn(11602);
+const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t["3340dY"]);
@@ -17,9 +17,8 @@ let SettingBuilders = {
     return initialize.useStateFromStores(items, () => SelectivelySyncedUserSettingsStore.shouldSync("text"));
   },
   onValueChange: UserSettingsActionCreatorsDefault.setShouldSyncTextSettings,
-};
-SettingBuilders = SettingBuilders.createToggle(SettingBuilders);
+});
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/TextAndMediaSyncSetting.tsx");
 
-export default SettingBuilders;
+export default toggle;

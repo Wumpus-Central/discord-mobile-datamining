@@ -27,9 +27,8 @@ export const fillChunk = function fillChunk(arg0, arg1, arg2) {
     } else {
       const items1 = [];
       const _Array = Array;
-      let arraySpreadResult = HermesBuiltin.arraySpread(item, 0);
       const array = new Array(tmp - item.length);
-      arraySpreadResult = HermesBuiltin.arraySpread(array.fill(null), arraySpreadResult);
+      HermesBuiltin.arraySpread(array.fill(null), HermesBuiltin.arraySpread(item, 0));
       const items2 = [];
       items2[HermesBuiltin.arraySpread(acc, 0)] = items1;
       return items2;
@@ -55,8 +54,8 @@ export const summarizeUsernamesParticipating = function summarizeUsernamesPartic
     intl2.formatToPlainString(util.t.chmM9N, obj);
   } else {
     const intl = util.intl;
-    obj = { name, count: length - 1 };
-    intl.formatToPlainString(util.t.GhkJ21, obj);
+    const obj3 = { name, count: length - 1 };
+    intl.formatToPlainString(util.t.GhkJ21, obj3);
   }
 };
 export const summarizeUsernamesParticipatingWithSpeakerNickname =
@@ -72,11 +71,11 @@ export const summarizeUsernamesParticipatingWithSpeakerNickname =
     }
     if (null == name) {
       const intl2 = util.intl;
-      let obj = { count: length };
-      intl2.formatToPlainString(util.t.chmM9N, obj);
+      const obj2 = { count: length };
+      intl2.formatToPlainString(util.t.chmM9N, obj2);
     } else {
       const intl = util.intl;
-      obj = { name, count: length - 1 };
+      const obj = { name, count: length - 1 };
       intl.formatToPlainString(util.t.GhkJ21, obj);
     }
   };
@@ -151,19 +150,19 @@ export const getParticipantNamesText = function getParticipantNamesText(channel,
     let stringResult = intl3.string(util.t.FUVhyC);
   } else if (1 === found.length) {
     const intl2 = util.intl;
-    let obj = { a: NicknameUtilsDefault.getName(channel.getGuildId(), channel.id, found[0].user) };
-    stringResult = intl2.formatToPlainString(util.t.EQwZlN, obj);
+    const obj4 = { a: NicknameUtilsDefault.getName(channel.getGuildId(), channel.id, found[0].user) };
+    stringResult = intl2.formatToPlainString(util.t.EQwZlN, obj4);
   } else if (2 === found.length) {
     const intl = util.intl;
-    obj = { a: NicknameUtilsDefault.getName(channel.getGuildId(), channel.id, found[0].user), b: null };
+    const obj = { a: NicknameUtilsDefault.getName(channel.getGuildId(), channel.id, found[0].user), b: null };
     obj.b = NicknameUtilsDefault.getName(channel.getGuildId(), channel.id, found[1].user);
     stringResult = intl.formatToPlainString(util.t.zBcKoA, obj);
   } else {
     const intl4 = util.intl;
-    obj = { a: NicknameUtilsDefault.getName(channel.getGuildId(), channel.id, found[0].user), b: null, n: null };
-    obj.b = NicknameUtilsDefault.getName(channel.getGuildId(), channel.id, found[1].user);
-    obj.n = found.length - 2;
-    stringResult = intl4.formatToPlainString(util.t["3AqFaG"], obj);
+    const obj6 = { a: NicknameUtilsDefault.getName(channel.getGuildId(), channel.id, found[0].user), b: null, n: null };
+    obj6.b = NicknameUtilsDefault.getName(channel.getGuildId(), channel.id, found[1].user);
+    obj6.n = found.length - 2;
+    stringResult = intl4.formatToPlainString(util.t["3AqFaG"], obj6);
   }
   return stringResult;
 };

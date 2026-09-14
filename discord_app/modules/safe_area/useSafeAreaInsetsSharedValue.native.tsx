@@ -3,17 +3,19 @@ import AppEntryKeyContext from "../window/native/AppEntryKeyContext.tsx";
 import AppEntryKey from "../window/native/AppEntryKey.tsx";
 import subscribeToSafeAreaInsetsDefault from "subscribeToSafeAreaInsets.native.tsx";
 import updateSharedValueIfChangedDefault from "../reanimated/utils/updateSharedValueIfChanged.native.tsx";
-import ReanimatedRexport from "../reanimated/ReanimatedRexport.tsx";
-import useSafeAreaInsets from "useSafeAreaInsets.native.tsx";
+import ReanimatedRexport_mod from "../reanimated/ReanimatedRexport.tsx";
+import useSafeAreaInsets_mod from "useSafeAreaInsets.native.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
 let obj = { main: null, share: null };
-obj = {};
+let ReanimatedRexport = ReanimatedRexport_mod;
+let useSafeAreaInsets = useSafeAreaInsets_mod;
 const merged = Object.assign(useSafeAreaInsets.getSafeAreaInsets("main"));
-obj.main = ReanimatedRexport.makeMutable(obj);
-obj = {};
+obj.main = ReanimatedRexport.makeMutable({});
+let ReanimatedRexport = ReanimatedRexport_mod;
+let useSafeAreaInsets = useSafeAreaInsets_mod;
 const merged1 = Object.assign(useSafeAreaInsets.getSafeAreaInsets("share"));
-obj.share = ReanimatedRexport.makeMutable(obj);
+obj.share = ReanimatedRexport.makeMutable({});
 function _loop(iter) {
   closure_0 = iter;
   subscribeToSafeAreaInsetsDefault((arg0) => {

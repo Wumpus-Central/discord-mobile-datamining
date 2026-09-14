@@ -7,11 +7,11 @@ import size from "../../_runtime/metro/00002__.js";
 
 function handleRequestSuccess(body) {
   if (tmp) {
-    let obj = { type: "UPDATE_CONSENTS", consents: null };
-    obj = {};
+    const obj2 = { type: "UPDATE_CONSENTS", consents: null };
+    const obj3 = {};
     const merged = Object.assign(body.body);
-    obj.consents = obj;
-    obj.dispatch(obj);
+    obj2.consents = obj3;
+    DispatcherDefault.dispatch(obj2);
   }
   return body.body;
 }

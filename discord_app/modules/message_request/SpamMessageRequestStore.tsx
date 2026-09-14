@@ -81,12 +81,12 @@ class SpamMessageRequestStore extends tmp4 {
       CHANNEL_DELETE: handleChannelDelete,
       MESSAGE_REQUEST_ACCEPT_OPTIMISTIC: handleSpamAcceptOptimistic,
     };
-    tmp = new tmp(obj, handleChannelDelete, new.target, tmp);
-    closure_0 = tmp;
-    return tmp;
+    tmp1 = new tmp(obj, handleChannelDelete, new.target, tmp);
+    closure_0 = tmp1;
+    return tmp1;
   }
 }
-let prototype = SpamMessageRequestStore.prototype;
+const prototype = SpamMessageRequestStore.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(ChannelStore);
 };
@@ -137,7 +137,7 @@ obj.CHANNEL_CREATE = handleChannelCreate;
 obj.CHANNEL_UPDATES = handleChannelUpdates;
 obj.CHANNEL_DELETE = handleChannelDelete;
 obj.MESSAGE_REQUEST_ACCEPT_OPTIMISTIC = handleSpamAcceptOptimistic;
-prototype = new prototype(
+const prototype1 = new prototype(
   obj,
   tmp2,
   tmp,
@@ -148,8 +148,8 @@ prototype = new prototype(
   handleChannelUpdates,
   handleChannelDelete,
 );
-closure_129_0 = prototype;
+closure_129_0 = prototype1;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/message_request/SpamMessageRequestStore.tsx");
 
-export default prototype;
+export default prototype1;

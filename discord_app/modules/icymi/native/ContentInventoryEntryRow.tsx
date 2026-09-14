@@ -16,7 +16,6 @@ export default function ContentInventoryEntryRow(content) {
     flag = false;
   }
   let flag2 = content.visible;
-  let obj = content(504);
   const items = [RelationshipStore];
   if (obj.useStateFromStores(items, () => RelationshipStore.isBlockedOrIgnored(content.author_id))) {
     return null;
@@ -25,18 +24,19 @@ export default function ContentInventoryEntryRow(content) {
     if (tmp(8247).ContentInventoryEntryType.TOP_GAME !== content_type) {
       if (tmp(8247).ContentInventoryEntryType.PLAYED_GAME !== content_type) {
         if (tmp(8247).ContentInventoryEntryType.CUSTOM_STATUS === content_type) {
-          obj = { content, renderForScreenshot: flag, visible: null };
+          const obj2 = { content, renderForScreenshot: flag, visible: null };
           if (flag2 == null) {
             flag2 = false;
           }
-          obj.visible = flag2;
+          obj2.visible = flag2;
           return jsx(CustomStatusEntryRowDefault, { content, renderForScreenshot: flag, visible: null });
         } else {
           return null;
         }
       }
     }
-    obj = { content, renderForScreenshot: flag };
+    const obj3 = { content, renderForScreenshot: flag };
     return jsx(GamingLikeEntryRowDefault, { content, renderForScreenshot: flag });
   }
+  obj = content(504);
 }

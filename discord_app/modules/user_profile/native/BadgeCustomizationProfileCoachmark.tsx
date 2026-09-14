@@ -19,7 +19,7 @@ export default function BadgeCustomizationProfileCoachmark(visible) {
   );
   const items1 = [stateFromStores, visible, markAsDismissed, onTryItOut];
   const memo = stateFromStores.useMemo(() => {
-    let obj = {
+    const obj = {
       title: null,
       description: null,
       visible: null,
@@ -37,10 +37,13 @@ export default function BadgeCustomizationProfileCoachmark(visible) {
     const t = util.t;
     obj.description = intl2.string(stateFromStores ? t.p82vky : t.IDh31t);
     obj.visible = visible;
-    obj = { type: "rive", rive: native.BadgesCoachmarkRive, aspectRatio: "16/9", riveProps: null };
-    obj = { dataBinding: { on: visible } };
-    obj.riveProps = obj;
-    obj.graphic = obj;
+    const obj2 = {
+      type: "rive",
+      rive: native.BadgesCoachmarkRive,
+      aspectRatio: "16/9",
+      riveProps: { dataBinding: { on: visible } },
+    };
+    obj.graphic = obj2;
     obj.onDismiss = function onDismiss() {
       return markAsDismissed(constants.USER_DISMISS);
     };

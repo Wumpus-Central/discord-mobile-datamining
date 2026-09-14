@@ -10,12 +10,12 @@ export const isShoppableCollectibleSku = function isShoppableCollectibleSku(stat
   if (null == stateFromStores) {
     return tmp;
   } else if (typeof type.isAvailable !== "function") {
-    let obj = { extra: null };
-    obj = { skuId: null, skuType: null };
+    const obj2 = { extra: null };
+    const obj5 = { skuId: null, skuType: null };
     ({ id: obj3.skuId, type } = type);
-    obj.skuType = type;
-    obj.extra = obj;
-    obj.captureMessage("isShoppableCollectibleSku: sku missing isAvailable()", obj);
+    obj5.skuType = type;
+    obj2.extra = obj5;
+    SentryUtilsDefault.captureMessage("isShoppableCollectibleSku: sku missing isAvailable()", obj2);
     let flag = false;
   } else {
     flag = type.isAvailable();

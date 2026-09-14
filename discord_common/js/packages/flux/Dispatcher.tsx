@@ -75,8 +75,7 @@ prototype["register"] = function register(name, obj, storeDidChange, band) {
     continue;
   }
   const _dependencyGraph = self._dependencyGraph;
-  obj = { name, band, actionHandler: obj, storeDidChange };
-  _dependencyGraph.addNode(token, obj);
+  _dependencyGraph.addNode(token, { name, band, actionHandler: obj, storeDidChange });
   self._addToBand(token, band);
   self._invalidateCaches();
   return token;
@@ -186,13 +185,13 @@ class Dispatcher {
       _currentDispatchActionType: null,
       _actionHandlers: null,
       _sentryUtils: "Array",
-      functionCache: "a",
+      functionCache: false,
     });
     merged[0] = [];
     merged[1] = {};
     merged[2] = [];
     if (typeof ActionHandlersGraph === "function") {
-      actionLogger = require;
+      actionLogger1 = require;
       tmp4 = importDefault;
       merged1 = Object.assign({
         _orderedActionHandlers: null,
@@ -216,9 +215,9 @@ class Dispatcher {
       if (null == require) {
         tmp13 = new.target;
         tmp14 = new.target;
-        actionLogger = new tmp6(tmp7[1]).ActionLogger();
+        actionLogger1 = new tmp6(tmp7[1]).ActionLogger();
       }
-      merged.actionLogger = actionLogger;
+      merged.actionLogger = actionLogger1;
       actionLogger = merged.actionLogger;
       str = "trace";
       onResult = actionLogger.on("trace", (arg0, arg1, arg2) => {
@@ -309,10 +308,10 @@ prototype2["flushWaitQueue"] = function flushWaitQueue() {
         logger.error("LastFewActions", serializeResult);
         const _sentryUtils = self._sentryUtils;
         if (_sentryUtils != null) {
-          obj = { message: "Dispatcher: Dispatch loop detected", data: null };
-          obj = { lastFewActions: serializeResult };
-          obj.data = obj;
-          _sentryUtils.addBreadcrumb(obj);
+          const obj2 = { message: "Dispatcher: Dispatch loop detected", data: null };
+          const obj3 = { lastFewActions: serializeResult };
+          obj2.data = obj3;
+          _sentryUtils.addBreadcrumb(obj2);
         }
         const _Error = Error;
         throw Error("Dispatch loop detected, aborting");

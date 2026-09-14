@@ -2,6 +2,8 @@
 import _mod12 from "../../_runtime/metro/00012__.js";
 import noop from "../../_runtime/metro/00019__.js";
 
+const require = globalThis.__r;
+
 require = fn;
 function throttleStateFn(arg0) {
   return arg0;

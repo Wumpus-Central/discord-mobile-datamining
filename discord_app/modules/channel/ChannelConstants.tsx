@@ -1,7 +1,7 @@
 // discord_app/modules/channel/ChannelConstants.tsx
 import size from "../../../_runtime/metro/00002__.js";
 
-let StaticChannelId = {
+const StaticChannelRoute = {
   VIBEGRATIONS: "conjuring",
   ROLE_SUBSCRIPTIONS: "role-subscriptions",
   SERVER_MONETIZATION_ONBOARDING: "server-monetization-onboarding",
@@ -19,8 +19,8 @@ let StaticChannelId = {
   GUILD_OFFICIAL_MESSAGES: "official-messages",
   GUILD_SPACE: "guild-space",
 };
-const set = new Set(Object.values(StaticChannelId));
-StaticChannelId = {
+const set = new Set(Object.values(StaticChannelRoute));
+const obj2 = {
   GUILD_HOME: "home",
   SERVER_GUIDE: "guide",
   CHANNEL_BROWSER: "browse",
@@ -50,7 +50,7 @@ const frozen = Object.freeze({
 });
 const result = size.fileFinishedImporting("modules/channel/ChannelConstants.tsx");
 
-export const StaticChannelRoute = StaticChannelId;
+export { StaticChannelRoute };
 export const StaticChannelRoutes = set;
 export const isStaticChannelRoute = function isStaticChannelRoute(channelId) {
   return set.has(channelId);
@@ -68,5 +68,5 @@ export const isGuildHomeChannel = function isGuildHomeChannel(channelId) {
 export const ChannelFlags = frozen;
 export const MAX_CHANNEL_TOPIC_LENGTH = 1024;
 export const MAX_FORUM_CHANNEL_TOPIC_LENGTH = 4096;
-export { StaticChannelId };
-export const StaticChannelIds = new Set(Object.values(StaticChannelId));
+export const StaticChannelId = obj2;
+export const StaticChannelIds = new Set(Object.values(obj2));

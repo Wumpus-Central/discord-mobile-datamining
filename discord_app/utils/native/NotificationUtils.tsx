@@ -4,9 +4,11 @@ import PushNotificationDefault from "../../lib/pushnotification/PushNotification
 import SoundUtils from "../../modules/sound_playback/SoundUtils.tsx";
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 
+const require = globalThis.__r;
+
 require = fn;
 const NativeModules = fn(17).NativeModules;
-const PermissionStateType = fn(12538).PermissionStateType;
+const PermissionStateType = fn(12539).PermissionStateType;
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const size = fn(2);
 let result = size.fileFinishedImporting("utils/native/NotificationUtils.tsx");
@@ -67,8 +69,8 @@ export default {
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
-          let obj = { value, done: true };
-          return obj;
+          const obj2 = { value, done: true };
+          return obj2;
         } else {
           return { value: "HermesInternal", done: null };
         }
@@ -80,7 +82,7 @@ export default {
             throw value;
           } else if (arg0 === 2) {
             c0 = 3;
-            obj = { value, done: true };
+            const obj = { value, done: true };
             return obj;
           } else {
             c0 = 3;

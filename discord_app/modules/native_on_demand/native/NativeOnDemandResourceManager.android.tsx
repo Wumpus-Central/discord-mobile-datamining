@@ -6,7 +6,7 @@ import AppStateStore from "../../../stores/native/AppStateStore.tsx";
 import AutomaticLifecycleManager from "../../../lib/AutomaticLifecycleManager.tsx";
 
 const AppStates = fn(1074).AppStates;
-let prototype = function NativeOnDemandResourceManager() {
+const prototype = function NativeOnDemandResourceManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
   importDefault = applyArgumentsResult;
   applyArgumentsResult.actions = {
@@ -39,14 +39,13 @@ let prototype = function NativeOnDemandResourceManager() {
             tmp.hasFetchedKrisp = true;
             mode = MediaEngineStore.getMode();
             const autoThreshold = MediaEngineStore.getModeOptions().autoThreshold;
-            let tmp9Result = applyArgumentsResult(dependencyMap[5]);
-            tmp9Result.setMode(mode, { autoThreshold: false });
-            tmp9Result = applyArgumentsResult(dependencyMap[4]);
-            if (tmp9Result != null) {
-              const onDemandResource = tmp9Result.fetchOnDemandResource("krisp");
+            applyArgumentsResult(dependencyMap[5]).setMode(mode, { autoThreshold: false });
+            const tmp9Result2 = applyArgumentsResult(dependencyMap[4]);
+            if (tmp9Result2 != null) {
+              const onDemandResource = tmp9Result2.fetchOnDemandResource("krisp");
               if (onDemandResource != null) {
                 onDemandResource.then((result) => {
-                  let obj = NativeOnDemandResourceModuleDefault;
+                  const obj = NativeOnDemandResourceModuleDefault;
                   if (obj != null) {
                     result = obj.isOnDemandResourcingAvailable();
                   }
@@ -55,12 +54,13 @@ let prototype = function NativeOnDemandResourceManager() {
                       applyArgumentsResult.hasFetchedKrisp = false;
                     }
                   }
-                  obj = { autoThreshold };
-                  AudioActionCreatorsDefault.setMode(mode, obj);
+                  AudioActionCreatorsDefault.setMode(mode, { autoThreshold });
+                  const obj2 = { autoThreshold };
                   const tmpResult = AudioActionCreatorsDefault;
                 });
               }
             }
+            const tmp9Result = applyArgumentsResult(dependencyMap[5]);
           }
         }
       }
@@ -69,8 +69,8 @@ let prototype = function NativeOnDemandResourceManager() {
   return applyArgumentsResult;
 }.prototype;
 class prototype extends tmp2 {}
-prototype = new prototype();
+const prototype1 = new prototype();
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/native_on_demand/native/NativeOnDemandResourceManager.android.tsx");
 
-export default prototype;
+export default prototype1;

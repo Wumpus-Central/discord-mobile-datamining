@@ -15,6 +15,8 @@ import PermissionStore from "../../../stores/PermissionStore.tsx";
 import SortedGuildStore from "../../../stores/SortedGuildStore.tsx";
 import UserStore from "../../../stores/UserStore.tsx";
 
+const require = globalThis.__r;
+
 require = fn;
 let closure_16 = async function _sendGuildInvite(arg0) {
   closure_4 = tmp3;
@@ -51,27 +53,26 @@ let closure_16 = async function _sendGuildInvite(arg0) {
     throw value;
   } else if (arg0 !== 2) {
     closure_131_3 = value;
-    closure_132_1(closure_132_2[22]);
-    const obj3 = {
+    const obj7 = {
       inviteKey: closure_131_3.code,
       type: closure_132_0(closure_132_2[22]).InvitePropertiesType.USER,
       user: closure_132_11.getUser(closure_131_0),
       location: closure_131_2,
       inviteAnalyticsMetadata: null,
     };
-    const obj4 = { source: closure_131_2 };
-    obj3.inviteAnalyticsMetadata = obj4;
-    obj4.enqueue(obj3, () => {
+    obj7.inviteAnalyticsMetadata = { source: closure_131_2 };
+    closure_132_1(closure_132_2[22]).enqueue(obj7, () => {
       closure_2_12(closure_1_0, closure_1_1, constants.SENT);
       const AccessibilityAnnouncer = closure_0(4348).AccessibilityAnnouncer;
       const intl = closure_0(1114).intl;
       AccessibilityAnnouncer.announce(intl.string(closure_0(1114).t.PuLLzP));
     });
     c5 = 0;
+    closure_132_1(closure_132_2[22]);
   }
   return value;
 };
-const setSendState = fn(13236).setSendState;
+const setSendState = fn(13237).setSendState;
 const InviteSendStates = fn(7838).InviteSendStates;
 const Constants = fn(1074);
 ({ Permissions: closure_14, AnalyticEvents: closure_15 } = Constants);
@@ -79,11 +80,13 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/instant_invite/native/GuildInviteUtils.tsx");
 
 export const showGuildInviteActionSheet = function showGuildInviteActionSheet(id, newestAnalyticsLocation) {
-  let obj = { type: "Invite to Guilds", source: newestAnalyticsLocation };
-  obj.track(constants2.OPEN_POPOUT, obj);
+  AnalyticsUtilsDefault.track(constants2.OPEN_POPOUT, { type: "Invite to Guilds", source: newestAnalyticsLocation });
+  const obj2 = { type: "Invite to Guilds", source: newestAnalyticsLocation };
   const obj3 = ActionSheetActionCreatorsDefault;
-  obj = { recipientId: id, source: newestAnalyticsLocation };
-  obj3.openLazy(asyncRequireImpl(13237, dependencyMap.paths), "invite-to-guilds-" + id, obj);
+  obj3.openLazy(asyncRequireImpl(13238, dependencyMap.paths), "invite-to-guilds-" + id, {
+    recipientId: id,
+    source: newestAnalyticsLocation,
+  });
 };
 export const useServerInviteRows = function useServerInviteRows(id, query) {
   _require = id;

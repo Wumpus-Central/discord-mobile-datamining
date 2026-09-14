@@ -25,19 +25,34 @@ const createChannelRecord = fn(1961).createChannelRecord;
 const ChannelTypes = fn(1074).ChannelTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10, Fragment: closure_11 } = jsxProd);
-fn(4636);
-let obj = { empty: null, messages: null, chat: null };
-obj = { flex: 1, borderTopWidth: fn(17).StyleSheet.hairlineWidth, borderTopColor: nativeDefault.colors.BORDER_SUBTLE };
-obj.empty = obj;
-obj.messages = { flex: 1, overflow: "hidden" };
-const createStyles = {
+const createStyles = fn(4636);
+let obj = {
+  empty: {
+    flex: 1,
+    borderTopWidth: fn(17).StyleSheet.hairlineWidth,
+    borderTopColor: nativeDefault.colors.BORDER_SUBTLE,
+  },
+  messages: { flex: 1, overflow: "hidden" },
+  chat: null,
+};
+let obj3 = {
+  flex: 1,
+  borderTopWidth: fn(17).StyleSheet.hairlineWidth,
+  borderTopColor: nativeDefault.colors.BORDER_SUBTLE,
+};
+obj.chat = {
   backgroundColor: nativeDefault.colors.CHANNEL_BACKGROUND_DEFAULT,
   justifyContent: "flex-start",
   overflow: "hidden",
   flex: 1,
 };
-obj.chat = createStyles;
 let closure_12 = createStyles.createStyles(obj);
+let obj4 = {
+  backgroundColor: nativeDefault.colors.CHANNEL_BACKGROUND_DEFAULT,
+  justifyContent: "flex-start",
+  overflow: "hidden",
+  flex: 1,
+};
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/chat/native/ChatView.tsx");
 
@@ -70,46 +85,43 @@ export default noop.memo(function ChatView(alwaysRespectKeyboard) {
   let scrollToNewMessages;
   let onJumpToPresent;
   let setInterstitial = ref();
-  let obj = noop;
   let items = [channelId, flag];
   const effect = noop.useEffect(() => {
     if (!flag) {
       ChatInputUtils.dismissKeyboard();
     }
   }, items);
-  let obj1 = flag(chatInputRef[11]);
   let items1 = [ChannelStore];
-  let stateFromStores = obj1.useStateFromStores(items1, () => ChannelStore.getChannel(channelId));
+  let stateFromStores = flag(chatInputRef[11]).useStateFromStores(items1, () => ChannelStore.getChannel(channelId));
   let items2 = [stateFromStores, channelId];
   const memo = noop.useMemo(() => {
     let tmp2 = stateFromStores;
     if (null == stateFromStores) {
-      let obj = { id: channelId, type: ChannelTypes.GUILD_TEXT, name: null };
+      const obj = { id: channelId, type: ChannelTypes.GUILD_TEXT, name: null };
       const intl = util.intl;
       obj.name = intl.string(util.t.ZTNur7);
       tmp2 = createChannelRecord(obj);
     }
-    obj = { channel: tmp2, channelIsLoading: null == stateFromStores };
-    return obj;
+    return { channel: tmp2, channelIsLoading: null == stateFromStores };
   }, items2);
   ({ channelIsLoading, channel } = memo);
-  let obj2 = flag(chatInputRef[13]);
-  const isChannelContentGated = obj2.useIsChannelContentGated(channel);
-  let obj3 = flag(chatInputRef[14]);
+  let obj2 = flag(chatInputRef[11]);
+  const isChannelContentGated = flag(chatInputRef[13]).useIsChannelContentGated(channel);
+  let obj3 = flag(chatInputRef[13]);
   if (stateFromStores == null) {
     stateFromStores = null;
   }
-  const getSpoilerGatingChannelId = obj3.useGetSpoilerGatingChannelId(stateFromStores);
-  closure_10 = obj.useRef(channelId);
-  obj.useRef(null);
-  ref = obj.useRef(null);
+  const getSpoilerGatingChannelId = flag(chatInputRef[14]).useGetSpoilerGatingChannelId(stateFromStores);
+  closure_10 = noop.useRef(channelId);
+  noop.useRef(null);
+  ref = noop.useRef(null);
   channelId(chatInputRef[15])(() => new channelId(chatInputRef[16])());
   const tmp10 = channelId(chatInputRef[17])(channelId);
   isResourceChannel = tmp10;
-  let tmp2Result = tmp2(tmp3[11]);
+  let obj4 = flag(chatInputRef[14]);
   const items3 = [setInterstitial];
   const items4 = [channelId, tmp10];
-  const stateFromStoresObject = tmp2Result.useStateFromStoresObject(
+  const stateFromStoresObject = flag(chatInputRef[11]).useStateFromStoresObject(
     items3,
     () => {
       const messages = MessageStore.getMessages(channelId);
@@ -130,67 +142,73 @@ export default noop.memo(function ChatView(alwaysRespectKeyboard) {
     items4,
   );
   ({ shouldRenderPlaceholder: c15, shouldRenderBegginingRow: c16 } = stateFromStoresObject);
-  onScroll = obj.useCallback((isFirstMessageVisible) => {
+  onScroll = noop.useCallback((isFirstMessageVisible) => {
     const current = ref.current;
     if (current != null) {
       current.onChatViewScrolled(isFirstMessageVisible);
     }
   }, []);
   const items5 = [chatInputRef];
-  onPressKey = obj.useCallback((arg0) => {
+  onPressKey = noop.useCallback((arg0) => {
     const current = chatInputRef.current;
     if (current != null) {
       current.handlePressKey(tmp);
     }
   }, items5);
   const items6 = [ref];
-  scrollToNewMessages = obj.useCallback(() => {
+  scrollToNewMessages = noop.useCallback(() => {
     const current = ref.current;
     if (current != null) {
       current.scrollToNewMessages();
     }
   }, items6);
   const items7 = [ref];
-  onJumpToPresent = obj.useCallback(() => {
+  onJumpToPresent = noop.useCallback(() => {
     const current = ref.current;
     if (current != null) {
       current.jumpToPresent();
     }
   }, items7);
-  const layoutEffect = obj.useLayoutEffect(() => flag(chatInputRef[18]).trackAppUIViewed(), []);
+  const layoutEffect = noop.useLayoutEffect(() => flag(chatInputRef[18]).trackAppUIViewed(), []);
   const items8 = [channelId];
-  const effect1 = obj.useEffect(() => {
+  const effect1 = noop.useEffect(() => {
     const thread = LazyLoadedThreadManagerDefault.loadThread(channelId);
     const summaries = SummaryActionCreators.fetchSummaries(channelId);
   }, items8);
   const items9 = [channel.id];
-  const effect2 = obj.useEffect(() => {
+  const effect2 = noop.useEffect(() => {
     closure_10.current = channel.id;
   }, items9);
-  const effect3 = obj.useEffect(
+  const effect3 = noop.useEffect(
     () => () => {
       const result = flag(chatInputRef[21]).clearOldestUnreadMessageId(ref.current);
     },
     [],
   );
-  obj = { profile: flag(chatInputRef[33]).Profiles.ChatView, children: null };
+  let obj5 = { profile: null, children: null };
+  const tmp16 = closure_10;
+  const tmp2Result = flag(chatInputRef[11]);
+  obj5.profile = flag(chatInputRef[33]).Profiles.ChatView;
   const items10 = [channel(channelId(chatInputRef[34]), { channelId, guildId }), ,];
   let tmp18Result = null;
   if (!flag2) {
     tmp18Result = tmp18(tmp9(tmp3[35]), { absolute: true });
   }
   items10[1] = tmp18Result;
-  tmp2Result = tmp2(tmp3[37]);
-  if (tmp2Result.shouldNSFWGateGuild(guildId)) {
-    tmp18Result = tmp18(tmp9(tmp3[38]), {});
-    let tmp9Result = tmp9(tmp3[36]);
-    tmp9Result.setInterstitial("NsfwGateChat");
+  const tmp17 = channelId(chatInputRef[33]);
+  if (tmp2Result2.shouldNSFWGateGuild(guildId)) {
+    let tmp18Result3 = tmp18(tmp9(tmp3[38]), {});
+    tmp9(tmp3[36]).setInterstitial("NsfwGateChat");
+    const tmp9Result = tmp9(tmp3[36]);
   } else {
     function renderMessagesWrapper() {
-      let obj = { style: setInterstitial.messages, channelId, stickyHeader: null, children: null };
-      obj = { channel, ref, scrollToNewMessages };
-      obj.stickyHeader = React7(ChatViewStickyHeaderDefault, obj);
-      obj = {
+      const obj = {
+        style: setInterstitial.messages,
+        channelId,
+        stickyHeader: React7(ChatViewStickyHeaderDefault, { channel, ref, scrollToNewMessages }),
+        children: null,
+      };
+      const obj3 = {
         alwaysRespectKeyboard: flag,
         channel,
         screenIndex,
@@ -204,6 +222,7 @@ export default noop.memo(function ChatView(alwaysRespectKeyboard) {
         visibleMessagesWindowHandler,
         children: null,
       };
+      const obj2 = { channel, ref, scrollToNewMessages };
       const tmp5 = ChatViewWrapperDefault;
       const items = [
         React7(ChatInputDefault, {
@@ -216,8 +235,8 @@ export default noop.memo(function ChatView(alwaysRespectKeyboard) {
           onJumpToPresent,
         }),
       ];
-      const obj2 = { channelId, guildId: null, shouldRender: null };
-      const obj1 = {
+      const obj5 = { channelId, guildId: null, shouldRender: null };
+      const obj4 = {
         ref: chatInputRef,
         channel,
         isResourceChannel,
@@ -227,85 +246,85 @@ export default noop.memo(function ChatView(alwaysRespectKeyboard) {
         onJumpToPresent,
       };
       const tmp9 = MessagesDefault;
-      obj2.guildId = channel.getGuildId();
-      obj2.shouldRender = shouldRender;
-      items[1] = React7(ChatBeginningRowDefault, obj2);
-      obj.children = items;
-      const items1 = [closure_2_10(tmp9, obj), , ,];
-      let obj5 = PlatformUtils;
+      obj5.guildId = channel.getGuildId();
+      obj5.shouldRender = shouldRender;
+      items[1] = React7(ChatBeginningRowDefault, obj5);
+      obj3.children = items;
+      const items1 = [closure_2_10(tmp9, obj3), , ,];
       let tmp7Result = null;
-      if (!obj5.isAndroid()) {
-        const obj3 = { channelId: channel.id, messagesRef: ref };
-        tmp7Result = React7(PortalKeyboardInlineComponentDefault, obj3);
+      if (!obj6.isAndroid()) {
+        const obj7 = { channelId: channel.id, messagesRef: ref };
+        tmp7Result = React7(PortalKeyboardInlineComponentDefault, obj7);
       }
       items1[1] = tmp7Result;
-      tmp7Result = null;
+      let tmp7Result3 = null;
       if (c15) {
-        const obj4 = { screenIndex };
-        tmp7Result = React7(ChatPlaceholderDefault, obj4);
+        const obj8 = { screenIndex };
+        tmp7Result3 = React7(ChatPlaceholderDefault, obj8);
       }
-      items1[2] = tmp7Result;
-      let tmp7Result1 = null;
+      items1[2] = tmp7Result3;
+      obj6 = PlatformUtils;
+      let tmp7Result4 = null;
       if (tmp14Result.isAndroid()) {
-        obj5 = { channelId, screenIndex, onJumpToPresent };
-        tmp7Result1 = React7(JumpToPresentButtonDefault, obj5);
+        const obj9 = { channelId, screenIndex, onJumpToPresent };
+        tmp7Result4 = React7(JumpToPresentButtonDefault, obj9);
       }
-      const obj6 = { children: null };
-      items1[3] = tmp7Result1;
+      const obj10 = { children: null };
+      items1[3] = tmp7Result4;
       obj.children = items1;
       const items2 = [
         closure_2_10(tmp5, obj),
         React7(ChannelSafeAreaBottomDefault, { channelId }),
         React7(VoiceMessageOverlayDefault, { channelId }),
       ];
-      obj6.children = items2;
-      return closure_2_10(closure_2_11, obj6);
+      obj10.children = items2;
+      return closure_2_10(closure_2_11, obj10);
     }
     if (channelIsLoading) {
       if (!GatewayConnectionStore.isConnected()) {
-        tmp18Result = renderMessagesWrapper();
+        tmp18Result3 = renderMessagesWrapper();
       }
     }
     if (channelIsLoading) {
-      obj = { style: setInterstitial.empty, title: null, body: null };
+      let obj6 = { style: setInterstitial.empty, title: null, body: null };
       let intl = tmp2(tmp3[12]).intl;
-      obj.title = intl.string(tmp2(tmp3[12]).t.ai6Lbr);
+      obj6.title = intl.string(tmp2(tmp3[12]).t.ai6Lbr);
       const intl2 = tmp2(tmp3[12]).intl;
-      obj.body = intl2.string(tmp2(tmp3[12]).t["LTr+x9"]);
-      let tmp18Result1 = tmp18(tmp2(tmp3[39]).EmptyState, obj);
-      tmp9Result = tmp9(tmp3[36]);
-      setInterstitial = tmp9Result.setInterstitial;
+      obj6.body = intl2.string(tmp2(tmp3[12]).t["LTr+x9"]);
+      let tmp18Result4 = tmp18(tmp2(tmp3[39]).EmptyState, obj6);
+      setInterstitial = tmp9(tmp3[36]).setInterstitial;
       setInterstitial("EmptyState");
+      const tmp9Result6 = tmp9(tmp3[36]);
     } else if (isChannelContentGated) {
-      obj1 = { guildId, channelId };
-      tmp18Result1 = tmp18(tmp9(tmp3[40]), obj1);
+      let obj7 = { guildId, channelId };
+      tmp18Result4 = tmp18(tmp9(tmp3[40]), obj7);
       tmp9(tmp3[36]).setInterstitial("GuildNSFW");
-      const tmp9Result1 = tmp9(tmp3[36]);
+      const tmp9Result7 = tmp9(tmp3[36]);
     } else {
       if (null != getSpoilerGatingChannelId) {
         if (null != getSpoilerGatingChannelId) {
-          obj2 = { guildId, channelId: getSpoilerGatingChannelId };
-          tmp18Result1 = tmp18(tmp9(tmp3[41]), obj2, channelId);
+          let obj8 = { guildId, channelId: getSpoilerGatingChannelId };
+          tmp18Result4 = tmp18(tmp9(tmp3[41]), obj8, channelId);
           tmp9(tmp3[36]).setInterstitial("ChannelSpoiler");
-          const tmp9Result2 = tmp9(tmp3[36]);
+          const tmp9Result8 = tmp9(tmp3[36]);
         }
       }
       if (channel.isDirectory()) {
-        obj3 = { channel, guildId };
-        tmp18Result1 = tmp18(tmp9(tmp3[42]), obj3);
+        let obj9 = { channel, guildId };
+        tmp18Result4 = tmp18(tmp9(tmp3[42]), obj9);
         tmp9(tmp3[36]).setInterstitial("GuildDirectory");
-        const tmp9Result3 = tmp9(tmp3[36]);
+        const tmp9Result9 = tmp9(tmp3[36]);
       } else if (channel.isForumLikeChannel()) {
-        let obj4 = { channel };
-        tmp18Result1 = tmp18(tmp9(tmp3[43]), obj4);
+        let obj10 = { channel };
+        tmp18Result4 = tmp18(tmp9(tmp3[43]), obj10);
         tmp9(tmp3[36]).setInterstitial("ForumChannel");
-        const tmp9Result4 = tmp9(tmp3[36]);
+        const tmp9Result10 = tmp9(tmp3[36]);
       } else {
-        tmp18Result1 = renderMessagesWrapper();
+        tmp18Result4 = renderMessagesWrapper();
       }
     }
   }
-  items10[2] = tmp18Result;
-  obj.children = items10;
-  return closure_10(channelId(chatInputRef[33]), obj);
+  items10[2] = tmp18Result3;
+  obj5.children = items10;
+  return tmp16(tmp17, obj5);
 });

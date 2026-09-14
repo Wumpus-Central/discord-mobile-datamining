@@ -25,7 +25,7 @@ export default function setCustomStatus(arg0) {
   if (trimmed.length > 0) {
     str = trimmed;
   }
-  let obj = { text: str, expiresAtMs: null, emojiId: null, emojiName: null, createdAtMs: null };
+  const obj = { text: str, expiresAtMs: null, emojiId: null, emojiName: null, createdAtMs: null };
   let str2 = "0";
   if (null != clearAfter) {
     str2 = "0";
@@ -62,7 +62,7 @@ export default function setCustomStatus(arg0) {
   if (null != analyticsContext) {
     _location = analyticsContext.location;
   }
-  obj = {
+  const obj3 = {
     location: _location,
     emoji_type: null,
     text_len: null,
@@ -78,20 +78,20 @@ export default function setCustomStatus(arg0) {
     }
     tmp11 = str6;
   }
-  obj.emoji_type = tmp11;
-  obj.text_len = trimmed.length;
+  obj3.emoji_type = tmp11;
+  obj3.text_len = trimmed.length;
   let combined = null;
   if (null != clearAfter) {
     const _HermesInternal = HermesInternal;
     combined = "" + clearAfter;
   }
-  obj.clear_after = combined;
+  obj3.clear_after = combined;
   value = undefined;
   if (_prompt != null) {
     value = _prompt.value;
   }
-  obj.prompt_type = value;
-  obj.location_stack = analyticsLocations;
-  AnalyticsUtilsDefault.track(AnalyticEvents.CUSTOM_STATUS_UPDATED, obj);
+  obj3.prompt_type = value;
+  obj3.location_stack = analyticsLocations;
+  AnalyticsUtilsDefault.track(AnalyticEvents.CUSTOM_STATUS_UPDATED, obj3);
   return updateSettingResult;
 }

@@ -11,8 +11,7 @@ const result = size.fileFinishedImporting("modules/user_profile/WidgetActionCrea
 
 export default {
   setPendingWidgets(items) {
-    const obj = { type: "WIDGET_PENDING_SET", widgets: items };
-    obj.dispatch(obj);
+    DispatcherDefault.dispatch({ type: "WIDGET_PENDING_SET", widgets: items });
   },
   savePendingWidgets(arg0) {
     closure_0 = arg0;
@@ -24,8 +23,8 @@ export default {
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
-          let obj = { value, done: true };
-          return obj;
+          const obj2 = { value, done: true };
+          return obj2;
         } else {
           return { value: "HermesInternal", done: null };
         }
@@ -38,8 +37,8 @@ export default {
               throw value;
             } else if (arg0 === 2) {
               constants = 3;
-              obj = { value, done: true };
-              return obj;
+              const obj3 = { value, done: true };
+              return obj3;
             } else {
               closure_128_0 = undefined;
               closure_128_1 = undefined;
@@ -50,8 +49,7 @@ export default {
               }
               closure_128_0 = id;
               if (null != id) {
-                let obj5 = tmp3(tmp34[3]);
-                obj5.dispatch({ type: "WIDGET_PENDING_SAVE_START" });
+                tmp3(tmp34[3]).dispatch({ type: "WIDGET_PENDING_SAVE_START" });
                 c3 = 1;
                 const mapped = tmp5.map((toSubmission) => toSubmission.toSubmission());
                 const HTTP = tmp5(tmp34[4]).HTTP;
@@ -61,12 +59,12 @@ export default {
                   oldFormErrors: true,
                   rejectWithError: true,
                 };
-                const obj1 = { widgets: mapped };
-                request.body = obj1;
+                const obj4 = { widgets: mapped };
+                request.body = obj4;
                 currentUser = 2;
                 constants = 1;
-                const obj2 = { value: HTTP.put(request), done: false };
-                return obj2;
+                const obj7 = { value: HTTP.put(request), done: false };
+                return obj7;
               } else {
                 constants = 3;
                 return { value: "HermesInternal", done: null };
@@ -75,8 +73,7 @@ export default {
           } else if (1 === tmp8) {
             c3 = 0;
             closure_128_2 = tmp34;
-            let obj4 = tmp3(tmp34[3]);
-            obj4.dispatch({ type: "WIDGET_PENDING_SAVE_FAILURE" });
+            tmp3(tmp34[3]).dispatch({ type: "WIDGET_PENDING_SAVE_FAILURE" });
             throw closure_128_2;
           } else if (arg0 === 1) {
             constants = 3;
@@ -84,17 +81,20 @@ export default {
           } else if (arg0 === 2) {
             c3 = 0;
             constants = 3;
-            const obj3 = { value, done: true };
-            return obj3;
+            const obj8 = { value, done: true };
+            return obj8;
           } else {
             closure_128_1 = value;
-            obj = tmp3(tmp34[3]);
-            obj4 = { type: "WIDGET_PENDING_SAVE_SUCCESS", userId: closure_128_0, widgets: closure_128_1.body.widgets };
-            obj.dispatch(obj4);
+            const obj9 = {
+              type: "WIDGET_PENDING_SAVE_SUCCESS",
+              userId: closure_128_0,
+              widgets: closure_128_1.body.widgets,
+            };
+            tmp3(tmp34[3]).dispatch(obj9);
             c3 = 0;
             constants = 3;
-            obj5 = { value: closure_128_1.body, done: true };
-            return obj5;
+            const obj10 = { value: closure_128_1.body, done: true };
+            return obj10;
           }
         } catch (tmp34) {
           if (tmp4 === c3) {
@@ -120,8 +120,8 @@ export default {
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
-          let obj = { value, done: true };
-          return obj;
+          const obj2 = { value, done: true };
+          return obj2;
         } else {
           return { value: "HermesInternal", done: null };
         }
@@ -134,8 +134,8 @@ export default {
               throw value;
             } else if (arg0 === 2) {
               c3 = 3;
-              obj = { value, done: true };
-              return obj;
+              const obj3 = { value, done: true };
+              return obj3;
             } else {
               closure_1 = tmp2;
               closure_0 = tmp5;
@@ -145,12 +145,12 @@ export default {
               closure_128_3 = undefined;
               const HTTP = closure_0(c2[4]).HTTP;
               const request = { url: constants.USER_PROFILE_WIDGET_ASSET_UPLOAD, body: null, rejectWithError: true };
-              const obj1 = { filename: closure_0.name, file_size: closure_0.size };
-              request.body = obj1;
+              const obj4 = { filename: closure_0.name, file_size: closure_0.size };
+              request.body = obj4;
               c2 = 1;
               c3 = 1;
-              const obj2 = { value: HTTP.post(request), done: false };
-              return obj2;
+              const obj5 = { value: HTTP.post(request), done: false };
+              return obj5;
             }
           } else if (1 === tmp5) {
             if (arg0 === 1) {
@@ -158,8 +158,8 @@ export default {
               throw value;
             } else if (arg0 === 2) {
               c3 = 3;
-              const obj3 = { value, done: true };
-              return obj3;
+              const obj6 = { value, done: true };
+              return obj6;
             } else {
               body = value.body;
               upload_url = body.upload_url;
@@ -169,25 +169,25 @@ export default {
               if ("" !== closure_129_0.type) {
                 str2 = closure_129_0.type;
               }
-              const obj4 = { "Content-Type": str2 };
-              request1.headers = obj4;
+              const obj7 = { "Content-Type": str2 };
+              request1.headers = obj7;
               c2 = 2;
               c3 = 1;
-              const obj5 = { value: fetch(upload_url, request1), done: false };
-              return obj5;
+              const obj8 = { value: fetch(upload_url, request1), done: false };
+              return obj8;
             }
           } else if (arg0 === 1) {
             c3 = 3;
             throw value;
           } else if (arg0 === 2) {
             c3 = 3;
-            const obj6 = { value, done: true };
-            return obj6;
+            const obj9 = { value, done: true };
+            return obj9;
           } else {
             closure_128_3 = value;
             if (closure_128_3.ok) {
               c3 = 3;
-              obj = { value: upload_filename, done: true };
+              const obj = { value: upload_filename, done: true };
               return obj;
             } else {
               const _Error = Error;
@@ -212,7 +212,7 @@ export default {
     ({ onProgress: importDefault, signal: dependencyMap } = obj);
     return (async () => {
       closure_1 = tmp2;
-      const HTTP2 = closure_0(1272).HTTP;
+      const HTTP2 = closure_0(1270).HTTP;
       const request = {
         url: constants.USER_PROFILE_WIDGET_CLIP_UPLOAD,
         body: { file_size: closure_0.size },
@@ -222,7 +222,7 @@ export default {
       const body = value.body;
       const upload_url = body.upload_url;
       const upload_filename = body.upload_filename;
-      const HTTP = closure_0(1272).HTTP;
+      const HTTP = closure_0(1270).HTTP;
       const request1 = {
         url: upload_url,
         body: closure_129_0,
@@ -254,8 +254,8 @@ export default {
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
-          let obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           return { value: "HermesInternal", done: null };
         }
@@ -268,8 +268,8 @@ export default {
               throw value;
             } else if (arg0 === 2) {
               c7 = 3;
-              obj = { value, done: true };
-              return obj;
+              const obj4 = { value, done: true };
+              return obj4;
             } else {
               closure_3 = tmp3;
               closure_2 = tmp7;
@@ -277,17 +277,17 @@ export default {
               DispatcherDefault.dispatch({ type: "WIDGET_SUGGESTED_FETCH_START" });
               c5 = 1;
               const HTTP = HTTPUtils.HTTP;
-              let obj1 = { url: constants.USER_PROFILE_SUGGESTED_GAMES, rejectWithError: true };
+              const obj7 = { url: constants.USER_PROFILE_SUGGESTED_GAMES, rejectWithError: true };
               c6 = 2;
               c7 = 1;
-              const obj2 = { value: HTTP.get(obj1), done: false };
-              return obj2;
+              const obj8 = { value: HTTP.get(obj7), done: false };
+              return obj8;
             }
           } else if (1 === tmp7) {
             c5 = 0;
             closure_130_1 = closure_4;
-            let obj4 = closure_131_1(closure_131_2[3]);
-            obj4.dispatch({ type: "WIDGET_SUGGESTED_FETCH_FAILURE" });
+            closure_131_1(closure_131_2[3]).dispatch({ type: "WIDGET_SUGGESTED_FETCH_FAILURE" });
+            const obj5 = closure_131_1(closure_131_2[3]);
             closure_131_1(closure_131_2[6]).captureException(closure_130_1);
             throw closure_130_1;
           } else if (arg0 === 1) {
@@ -296,8 +296,8 @@ export default {
           } else if (arg0 === 2) {
             c5 = 0;
             c7 = 3;
-            const obj3 = { value, done: true };
-            return obj3;
+            const obj9 = { value, done: true };
+            return obj9;
           } else {
             closure_130_0 = value;
             const body4 = closure_130_0.body;
@@ -315,10 +315,9 @@ export default {
               tmp9 = null != prop;
             }
             if (!tmp9) {
-              obj = closure_131_1(closure_131_2[6]);
-              obj.captureMessage("Suggested games or wishlist games not found");
+              closure_131_1(closure_131_2[6]).captureMessage("Suggested games or wishlist games not found");
+              const obj = closure_131_1(closure_131_2[6]);
             }
-            obj1 = closure_131_1(closure_131_2[3]);
             const body2 = closure_130_0.body;
             let suggested_games1;
             if (body2 != null) {
@@ -328,7 +327,11 @@ export default {
             if (suggested_games1 == null) {
               suggestedGamesIds = [];
             }
-            obj4 = { type: "WIDGET_SUGGESTED_FETCH_SUCCESS", suggestedGamesIds, suggestedWishlistGamesIds: null };
+            const obj11 = {
+              type: "WIDGET_SUGGESTED_FETCH_SUCCESS",
+              suggestedGamesIds,
+              suggestedWishlistGamesIds: null,
+            };
             const body3 = closure_130_0.body;
             let prop1;
             if (body3 != null) {
@@ -338,8 +341,8 @@ export default {
             if (prop1 == null) {
               suggestedWishlistGamesIds = [];
             }
-            obj4.suggestedWishlistGamesIds = suggestedWishlistGamesIds;
-            obj1.dispatch(obj4);
+            obj11.suggestedWishlistGamesIds = suggestedWishlistGamesIds;
+            closure_131_1(closure_131_2[3]).dispatch(obj11);
             c5 = 0;
             c7 = 3;
             return { value: "HermesInternal", done: null };
@@ -357,7 +360,6 @@ export default {
     })();
   },
   removeGameFromSuggestedGames(applicationId) {
-    const obj = { type: "WIDGET_SUGGESTED_REMOVE_GAME", applicationId };
-    obj.dispatch(obj);
+    DispatcherDefault.dispatch({ type: "WIDGET_SUGGESTED_REMOVE_GAME", applicationId });
   },
 };

@@ -11,7 +11,7 @@ export default function useFetchShareEmbed(arg0) {
   closure_0 = arg0;
   const embed = _slicedToArray(noop.useState(undefined), 2);
   closure_1 = embed[1];
-  [tmp3, dependencyMap] = _slicedToArray(noop.useState(false), 2);
+  [tmp3, dependencyMap] = noop.useState(false);
   const hasTriedResolving = _slicedToArray(noop.useState(false), 2);
   closure_3 = hasTriedResolving[1];
   _slicedToArray = noop.useRef(true);
@@ -29,8 +29,8 @@ export default function useFetchShareEmbed(arg0) {
           if (arg0 === 1) {
             throw value;
           } else if (arg0 === 2) {
-            let obj = { value, done: true };
-            return obj;
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
             return { value: "HermesInternal", done: null };
           }
@@ -43,8 +43,8 @@ export default function useFetchShareEmbed(arg0) {
                 throw value;
               } else if (arg0 === 2) {
                 c5 = 3;
-                obj = { value, done: true };
-                return obj;
+                const obj6 = { value, done: true };
+                return obj6;
               } else {
                 closure_0 = tmp6;
                 closure_128_0 = undefined;
@@ -59,8 +59,8 @@ export default function useFetchShareEmbed(arg0) {
                   const items = [current];
                   c4 = 3;
                   c5 = 1;
-                  let obj1 = { value: current(12005).unfurlEmbedUrl(items), done: false };
-                  return obj1;
+                  const obj10 = { value: current(12006).unfurlEmbedUrl(items), done: false };
+                  return obj10;
                 } else {
                   c5 = 3;
                 }
@@ -76,21 +76,20 @@ export default function useFetchShareEmbed(arg0) {
                 throw value;
               } else if (arg0 === 2) {
                 c3 = 0;
-                current(1249).batchUpdates(() => {
+                current(1247).batchUpdates(() => {
                   c3(true);
                   if (ref.current === closure_1_0) {
                     closure_2(false);
                   }
                 });
                 c5 = 3;
-                const obj2 = { value, done: true };
-                return obj2;
+                const obj11 = { value, done: true };
+                return obj11;
               } else {
                 closure_128_1 = value;
                 if (ref.current !== closure_128_0) {
                   c3 = 0;
-                  let obj3 = current(1249);
-                  obj3.batchUpdates(() => {
+                  current(1247).batchUpdates(() => {
                     c3(true);
                     if (ref.current === closure_1_0) {
                       closure_2(false);
@@ -101,33 +100,32 @@ export default function useFetchShareEmbed(arg0) {
                 } else if (0 === closure_128_1.embeds.length) {
                   tmp4(undefined);
                   c3 = 0;
-                  obj1 = current(1249);
-                  obj1.batchUpdates(() => {
+                  current(1247).batchUpdates(() => {
                     c3(true);
                     if (ref.current === closure_1_0) {
                       closure_2(false);
                     }
                   });
                   c5 = 3;
-                  obj3 = { value: undefined, done: true };
-                  return obj3;
+                  const obj12 = { value: undefined, done: true };
+                  return obj12;
                 } else {
-                  obj = { embed: closure_128_1.embeds[0], url: closure_129_0 };
+                  const obj = { embed: closure_128_1.embeds[0], url: closure_129_0 };
                   tmp4(obj);
                   c3 = 1;
                 }
               }
               c3 = 0;
-              current(1249).batchUpdates(() => {
+              current(1247).batchUpdates(() => {
                 c3(true);
                 if (ref.current === closure_1_0) {
                   closure_2(false);
                 }
               });
-              const obj7 = current(1249);
+              const obj7 = current(1247);
             }
             c3 = 0;
-            current(1249).batchUpdates(() => {
+            current(1247).batchUpdates(() => {
               c3(true);
               if (ref.current === closure_1_0) {
                 closure_2(false);

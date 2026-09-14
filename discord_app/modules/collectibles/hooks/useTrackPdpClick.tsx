@@ -21,26 +21,27 @@ export const useTrackPdpClick = function useTrackPdpClick(skuId) {
   }
   cardId = collectiblesAnalyticsContext.cardId;
   sessionId = collectiblesAnalyticsContext.sessionId;
-  let tmpResult = tmp(tmp2[3]);
-  const currentUserIfAvailable = tmpResult.useCurrentUserIfAvailable();
-  tmpResult = tmp(tmp2[4]);
-  shopDiscountSource = tmpResult.getShopDiscountSource(currentUserIfAvailable);
+  let obj = skuId(analyticsLocations[2]);
+  const currentUserIfAvailable = skuId(analyticsLocations[3]).useCurrentUserIfAvailable();
+  const tmpResult = skuId(analyticsLocations[3]);
+  shopDiscountSource = skuId(analyticsLocations[4]).getShopDiscountSource(currentUserIfAvailable);
   const items = [skuId, analyticsLocations, cardId, productSkuIds, sessionId, shopDiscountSource];
   return cardId.useCallback((cta, arg1) => {
     let tmp = arg1;
-    let obj = AnalyticsUtilsDefault;
     if (arg1 == null) {
       tmp = skuId;
     }
-    obj = {
+    const obj2 = {
       sku_id: tmp,
       cta,
       shop_session_id: sessionId,
       card_id: cardId,
       product_sku_ids: productSkuIds,
       location_stack: analyticsLocations,
-      discount_source: CollectiblesUtils.getAnalyticsShopDiscountSource(shopDiscountSource),
+      discount_source: null,
     };
-    obj.track(AnalyticEvents.SHOP_PRODUCT_DETAIL_PAGE_CLICKED, obj);
+    const obj = AnalyticsUtilsDefault;
+    obj2.discount_source = CollectiblesUtils.getAnalyticsShopDiscountSource(shopDiscountSource);
+    obj.track(AnalyticEvents.SHOP_PRODUCT_DETAIL_PAGE_CLICKED, obj2);
   }, items);
 };

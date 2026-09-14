@@ -16,8 +16,8 @@ let closure_12 = async function _createGroupFromStore(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -30,8 +30,8 @@ let closure_12 = async function _createGroupFromStore(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c6 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           closure_4 = tmp4;
           closure_132_0 = closure_0;
@@ -46,11 +46,11 @@ let closure_12 = async function _createGroupFromStore(arg0) {
           const groupDescription = state.groupDescription;
           closure_132_4 = groupDescription;
           if (null != groupCover) {
-            const obj1 = { description: groupDescription };
+            const obj4 = { description: groupDescription };
             c5 = 1;
             c6 = 1;
-            const obj2 = { value: importDefault(closure_0, obj1), done: false };
-            return obj2;
+            const obj5 = { value: importDefault(closure_0, obj4), done: false };
+            return obj5;
           }
         }
       } else if (1 === tmp4) {
@@ -59,16 +59,16 @@ let closure_12 = async function _createGroupFromStore(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c6 = 3;
-          const obj3 = { value, done: true };
-          return obj3;
+          const obj6 = { value, done: true };
+          return obj6;
         } else {
           closure_132_5 = value;
           if (null != closure_132_5) {
-            const obj4 = { cover_image: closure_132_3.uri, description: closure_132_4 };
+            const obj7 = { cover_image: closure_132_3.uri, description: closure_132_4 };
             c5 = 2;
             c6 = 1;
-            const obj5 = { value: closure_132_1(closure_132_0, obj4), done: false };
-            return obj5;
+            const obj8 = { value: closure_132_1(closure_132_0, obj7), done: false };
+            return obj8;
           }
         }
       } else if (arg0 === 1) {
@@ -76,12 +76,12 @@ let closure_12 = async function _createGroupFromStore(arg0) {
         throw value;
       } else if (arg0 === 2) {
         c6 = 3;
-        const obj6 = { value, done: true };
-        return obj6;
+        const obj9 = { value, done: true };
+        return obj9;
       } else {
         closure_132_2(closure_132_5);
         c6 = 3;
-        obj = { value: closure_132_5.id, done: true };
+        const obj = { value: closure_132_5.id, done: true };
         return obj;
       }
       c6 = 3;
@@ -114,8 +114,8 @@ class GuildRoleSubscriptionGroupSetupModal {
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
-          let obj = { value, done: true };
-          return obj;
+          const obj2 = { value, done: true };
+          return obj2;
         } else {
           return { value: "HermesInternal", done: null };
         }
@@ -128,8 +128,8 @@ class GuildRoleSubscriptionGroupSetupModal {
               throw value;
             } else if (arg0 === 2) {
               c5 = 3;
-              obj = { value, done: true };
-              return obj;
+              const obj3 = { value, done: true };
+              return obj3;
             } else {
               dependencyMap = tmp5;
               closure_2 = tmp2;
@@ -142,7 +142,7 @@ class GuildRoleSubscriptionGroupSetupModal {
               if (id == null) {
                 c4 = 1;
                 c5 = 1;
-                const obj1 = {
+                const obj4 = {
                   value: (function createGroupFromStore() {
                     const self = this;
                     const apply = closure_1_12.apply;
@@ -155,7 +155,7 @@ class GuildRoleSubscriptionGroupSetupModal {
                   })(guildId, _slicedToArray, asyncGeneratorStep, _undefined),
                   done: false,
                 };
-                return obj1;
+                return obj4;
               } else {
                 closure_130_0 = merged;
                 if (null != closure_130_0) {
@@ -169,7 +169,7 @@ class GuildRoleSubscriptionGroupSetupModal {
                     merged(4334).presentError(closure_1);
                     const obj8 = merged(4334);
                   }
-                  const obj2 = {
+                  const obj5 = {
                     guildId: closure_131_1,
                     editStateId: closure_131_6,
                     groupListingId: closure_130_0,
@@ -179,8 +179,8 @@ class GuildRoleSubscriptionGroupSetupModal {
                   };
                   c4 = 2;
                   c5 = 1;
-                  const obj3 = { value: closure_131_8(obj2), done: false };
-                  return obj3;
+                  const obj6 = { value: closure_131_8(obj5), done: false };
+                  return obj6;
                 } else {
                   c5 = 3;
                 }
@@ -192,8 +192,8 @@ class GuildRoleSubscriptionGroupSetupModal {
               throw value;
             } else if (arg0 === 2) {
               c5 = 3;
-              const obj4 = { value, done: true };
-              return obj4;
+              const obj7 = { value, done: true };
+              return obj7;
             } else {
               merged = value;
             }
@@ -206,7 +206,7 @@ class GuildRoleSubscriptionGroupSetupModal {
             }
           }
           c5 = 3;
-          obj = { value, done: true };
+          const obj = { value, done: true };
           return obj;
         } catch (tmp33) {
           c5 = tmp;
@@ -265,25 +265,32 @@ class GuildRoleSubscriptionGroupSetupModal {
     items1 = [];
     items1[0] = memo;
     memo1 = obj.useMemo(() => {
-      let obj = {};
-      obj = { impressionName: merged(_undefined[11]).ImpressionNames.ROLE_SUBSCRIPTION_INITIAL_SETUP_MODAL_LANDING };
-      obj[constants.GATING] = obj;
-      obj = { impressionName: merged(_undefined[11]).ImpressionNames.ROLE_SUBSCRIPTION_INITIAL_SETUP_MODAL_TIER_STEP };
-      obj[constants.DETAILS] = obj;
+      const obj = {};
+      obj[constants.GATING] = {
+        impressionName: merged(_undefined[11]).ImpressionNames.ROLE_SUBSCRIPTION_INITIAL_SETUP_MODAL_LANDING,
+      };
+      const obj2 = {
+        impressionName: merged(_undefined[11]).ImpressionNames.ROLE_SUBSCRIPTION_INITIAL_SETUP_MODAL_LANDING,
+      };
+      obj[constants.DETAILS] = {
+        impressionName: merged(_undefined[11]).ImpressionNames.ROLE_SUBSCRIPTION_INITIAL_SETUP_MODAL_TIER_STEP,
+      };
       return obj;
     }, []);
     callback = obj.useCallback((arg0) => {
       closure_0 = arg0;
-      const obj = { setup_modal_step: memo.findIndex((item) => item === closure_0) + 1 };
-      obj.trackWithMetadata(AnalyticEvents.GUILD_ROLE_SUBSCRIPTION_SETUP_MODAL_CLOSED, obj);
+      const findIndexResult = memo.findIndex((item) => item === closure_0);
+      AppAnalyticsUtilsDefault.trackWithMetadata(AnalyticEvents.GUILD_ROLE_SUBSCRIPTION_SETUP_MODAL_CLOSED, {
+        setup_modal_step: findIndexResult + 1,
+      });
     }, items1);
-    obj = { guildId, editStateId: first, groupListingId: null, children: null };
-    obj1 = { guildId, children: null };
-    obj2 = {};
+    obj1 = { guildId, editStateId: first, groupListingId: null, children: null };
+    obj8 = { guildId, children: null };
+    obj9 = {};
     tmp13 = guildId(tmp4[15]);
     merged1 = Object.assign(merged);
-    obj2.modalKey = c9;
-    obj2.onDone = function handleCreateGroupAndTier() {
+    obj9.modalKey = c9;
+    obj9.onDone = function handleCreateGroupAndTier() {
       const self = this;
       const apply = closure_10.apply;
       if (typeof apply === "unknown") {
@@ -293,16 +300,16 @@ class GuildRoleSubscriptionGroupSetupModal {
       }
       return applyArgumentsResult;
     };
-    obj2.steps = memo;
-    obj2.onClose = callback;
-    obj2.stepScreenPropsMap = memo1;
-    obj1.children = closure_11(tmp13, obj2);
-    obj.children = closure_11(tmp3(tmp4[14]).RoleSubscriptionSettingsDisabledContextProvider, obj1);
-    return closure_11(tmp3(tmp4[13]).EditStateContextProvider, obj);
+    obj9.steps = memo;
+    obj9.onClose = callback;
+    obj9.stepScreenPropsMap = memo1;
+    obj8.children = closure_11(tmp13, obj9);
+    obj1.children = closure_11(tmp3(tmp4[14]).RoleSubscriptionSettingsDisabledContextProvider, obj8);
+    return closure_11(tmp3(tmp4[13]).EditStateContextProvider, obj1);
   }
 }
-const useRoleTierEditStore = fn(17845).useRoleTierEditStore;
-const GuildRoleSubscriptionsConstants = fn(15288);
+const useRoleTierEditStore = fn(17846).useRoleTierEditStore;
+const GuildRoleSubscriptionsConstants = fn(15289);
 ({ GuildRoleSubscriptionsTierScenes: closure_8, GUILD_ROLE_SUBSCRIPTION_GROUP_SETUP_KEY: closure_9 } =
   GuildRoleSubscriptionsConstants);
 const AnalyticEvents = fn(1074).AnalyticEvents;

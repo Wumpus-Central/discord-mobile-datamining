@@ -7,10 +7,10 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-let obj = { UP: "UP", DOWN: "DOWN" };
-obj = { CENTER: "CENTER", RIGHT: "RIGHT", LEFT: "LEFT" };
-fn(4636);
-obj = {
+const TooltipArrowDirections = { UP: "UP", DOWN: "DOWN" };
+let obj2 = { CENTER: "CENTER", RIGHT: "RIGHT", LEFT: "LEFT" };
+const createStyles = fn(4636);
+let obj4 = {
   container: {
     padding: 10,
     borderRadius: nativeDefault.radii.xs,
@@ -23,9 +23,16 @@ obj = {
   title: null,
   arrow: null,
 };
-const createStyles = { fontFamily: fn(1074).Fonts.PRIMARY_MEDIUM, fontSize: 12, color: nativeDefault.colors.WHITE };
-obj.label = createStyles;
-obj.title = { marginBottom: 4 };
+let obj5 = {
+  padding: 10,
+  borderRadius: nativeDefault.radii.xs,
+  alignSelf: "flex-start",
+  minWidth: 60,
+  alignItems: "center",
+  backgroundColor: nativeDefault.colors.BACKGROUND_BRAND,
+};
+obj4.label = { fontFamily: fn(1074).Fonts.PRIMARY_MEDIUM, fontSize: 12, color: nativeDefault.colors.WHITE };
+obj4.title = { marginBottom: 4 };
 let size = {
   width: 0,
   height: 0,
@@ -35,8 +42,8 @@ let size = {
   borderTopColor: nativeDefault.colors.BACKGROUND_BRAND,
   borderBottomColor: nativeDefault.colors.BACKGROUND_BRAND,
 };
-obj.arrow = size;
-let closure_8 = createStyles.createStyles(obj);
+obj4.arrow = size;
+let closure_8 = createStyles.createStyles(obj4);
 size = fn(2);
 const result = size.fileFinishedImporting("design/void/Tooltip/native/Tooltip.tsx");
 
@@ -56,7 +63,7 @@ export default function Tooltip(arrowHeight) {
   }
   let LEFT = arrowHeight.arrowPosition;
   if (LEFT === undefined) {
-    LEFT = obj.LEFT;
+    LEFT = obj2.LEFT;
   }
   let UP = arrowHeight.arrowDirection;
   if (UP === undefined) {
@@ -65,67 +72,66 @@ export default function Tooltip(arrowHeight) {
   const tmp3 = closure_8();
   const items = [LEFT, num2];
   const memo = noop.useMemo(() => {
-    if (obj.LEFT === LEFT) {
-      obj = { alignSelf: "flex-start", left: num2 };
-      return obj;
+    if (obj2.LEFT === LEFT) {
+      obj2 = { alignSelf: "flex-start", left: num2 };
+      return obj2;
     } else if (tmp2.CENTER === LEFT) {
       return { alignSelf: "center" };
     } else if (tmp2.RIGHT === LEFT) {
-      obj = { alignSelf: "flex-end", right: num2 };
-      return obj;
+      const obj3 = { alignSelf: "flex-end", right: num2 };
+      return obj3;
     } else {
-      obj = GlobalUtils;
-      obj.assertNever(LEFT);
+      GlobalUtils.assertNever(LEFT);
     }
   }, items);
   obj = { style, children: null };
   let tmp8 = UP === obj.UP;
   if (tmp8) {
-    obj = { style: null };
+    obj2 = { style: null };
     const items1 = [tmp3.arrow, , ,];
-    obj = { borderLeftWidth: arrowWidth / 2, borderRightWidth: arrowWidth / 2, borderBottomWidth: num };
-    items1[1] = obj;
+    let obj3 = { borderLeftWidth: arrowWidth / 2, borderRightWidth: arrowWidth / 2, borderBottomWidth: num };
+    items1[1] = obj3;
     items1[2] = memo;
     items1[3] = arrowStyle;
-    obj.style = items1;
-    tmp8 = closure_4(View, obj);
+    obj2.style = items1;
+    tmp8 = closure_4(View, obj2);
   }
   const items2 = [tmp8, ,];
-  const obj1 = { onLayout: arrowHeight.onLayout, style: null, children: null };
+  const obj4 = { onLayout: arrowHeight.onLayout, style: null, children: null };
   const items3 = [tmp3.container, containerStyle];
-  obj1.style = items3;
+  obj4.style = items3;
   let tmp10 = null;
   if (null != title) {
-    const obj2 = { style: tmp3.title, variant: "text-md/semibold", color: "text-overlay-light", children: title };
-    tmp10 = closure_4(num2(LEFT[7]).Heading, obj2);
+    const obj5 = { style: tmp3.title, variant: "text-md/semibold", color: "text-overlay-light", children: title };
+    tmp10 = closure_4(num2(LEFT[7]).Heading, obj5);
   }
   const items4 = [tmp10, ,];
   let tmp14 = null;
   if (null != label) {
-    const obj3 = { style: null, children: null };
+    const obj6 = { style: null, children: null };
     const items5 = [tmp3.label, labelStyle];
-    obj3.style = items5;
-    obj3.children = label;
-    tmp14 = closure_4(num2(LEFT[8]).LegacyText, obj3);
+    obj6.style = items5;
+    obj6.children = label;
+    tmp14 = closure_4(num2(LEFT[8]).LegacyText, obj6);
   }
   items4[1] = tmp14;
   items4[2] = children;
-  obj1.children = items4;
-  items2[1] = closure_5(View, obj1);
+  obj4.children = items4;
+  items2[1] = closure_5(View, obj4);
   let tmp18 = UP === obj.DOWN;
   if (tmp18) {
-    const obj4 = { style: null };
+    const obj7 = { style: null };
     const items6 = [tmp3.arrow, , ,];
-    const obj5 = { borderLeftWidth: arrowWidth / 2, borderRightWidth: arrowWidth / 2, borderTopWidth: num };
-    items6[1] = obj5;
+    const obj8 = { borderLeftWidth: arrowWidth / 2, borderRightWidth: arrowWidth / 2, borderTopWidth: num };
+    items6[1] = obj8;
     items6[2] = memo;
     items6[3] = arrowStyle;
-    obj4.style = items6;
-    tmp18 = closure_4(View, obj4);
+    obj7.style = items6;
+    tmp18 = closure_4(View, obj7);
   }
   items2[2] = tmp18;
   obj.children = items2;
   return closure_5(View, obj);
 }
-export const TooltipArrowDirections = obj;
-export const TooltipArrowPositions = obj;
+export { TooltipArrowDirections };
+export const TooltipArrowPositions = obj2;

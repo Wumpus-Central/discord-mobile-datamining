@@ -38,8 +38,8 @@ let closure_11 = async function _fetchFeaturedWidgetConfigsFromApi() {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj4 = { value, done: true };
+      return obj4;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -52,8 +52,8 @@ let closure_11 = async function _fetchFeaturedWidgetConfigsFromApi() {
           throw value;
         } else if (arg0 === 2) {
           c5 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj5 = { value, done: true };
+          return obj5;
         } else {
           closure_1 = tmp3;
           closure_0 = tmp7;
@@ -61,24 +61,23 @@ let closure_11 = async function _fetchFeaturedWidgetConfigsFromApi() {
           Dispatcher.dispatch({ type: "APPLICATION_WIDGET_CONFIG_FEATURED_FETCH_START" });
           c3 = 1;
           const HTTP = HTTPUtils.HTTP;
-          let obj1 = { url: constants.WIDGET_CONFIGS_FEATURED, rejectWithError: true };
+          const obj6 = { url: constants.WIDGET_CONFIGS_FEATURED, rejectWithError: true };
           c4 = 2;
           c5 = 1;
-          let obj2 = { value: HTTP.get(obj1), done: false };
-          return obj2;
+          const obj8 = { value: HTTP.get(obj6), done: false };
+          return obj8;
         }
       } else if (1 === tmp7) {
         c3 = 0;
         closure_128_1 = closure_2;
-        obj1 = closure_129_1(closure_129_2[6]);
-        obj1.dispatch({ type: "APPLICATION_WIDGET_CONFIG_FEATURED_FETCH_FAILURE" });
+        closure_129_1(closure_129_2[6]).dispatch({ type: "APPLICATION_WIDGET_CONFIG_FEATURED_FETCH_FAILURE" });
         if (!closure_129_9.pending) {
           closure_129_9.fail(() => {
             closure_1_8.one(undefined, closure_1_10).catch(() => {});
           });
         }
-        obj2 = closure_129_1(closure_129_2[8]);
-        obj2.captureException(closure_128_1);
+        const obj2 = closure_129_1(closure_129_2[6]);
+        closure_129_1(closure_129_2[8]).captureException(closure_128_1);
         throw closure_128_1;
       } else if (arg0 === 1) {
         c5 = 3;
@@ -86,16 +85,16 @@ let closure_11 = async function _fetchFeaturedWidgetConfigsFromApi() {
       } else if (arg0 === 2) {
         c3 = 0;
         c5 = 3;
-        obj = { value, done: true };
+        const obj = { value, done: true };
         return obj;
       } else {
         closure_128_0 = value;
-        const obj3 = {
+        const obj10 = {
           type: "APPLICATION_WIDGET_CONFIG_FEATURED_FETCH_SUCCESS",
           applications: closure_128_0.body.applications,
           configs: closure_128_0.body.configs,
         };
-        closure_129_1(closure_129_2[6]).dispatch(obj3);
+        closure_129_1(closure_129_2[6]).dispatch(obj10);
         closure_129_9.succeed();
         c3 = 0;
         c5 = 3;
@@ -130,8 +129,8 @@ let closure_13 = async function _fetchDeveloperWidgetConfigsFromApi() {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -144,8 +143,8 @@ let closure_13 = async function _fetchDeveloperWidgetConfigsFromApi() {
           throw value;
         } else if (arg0 === 2) {
           c5 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           closure_1 = tmp3;
           closure_0 = tmp7;
@@ -153,19 +152,18 @@ let closure_13 = async function _fetchDeveloperWidgetConfigsFromApi() {
           Dispatcher.dispatch({ type: "APPLICATION_WIDGET_CONFIG_DEVELOPER_FETCH_START" });
           c3 = 1;
           const HTTP = HTTPUtils.HTTP;
-          const obj1 = { url: constants.WIDGET_CONFIGS_DEVELOPER, rejectWithError: true };
+          const obj6 = { url: constants.WIDGET_CONFIGS_DEVELOPER, rejectWithError: true };
           c4 = 2;
           c5 = 1;
-          const obj2 = { value: HTTP.get(obj1), done: false };
-          return obj2;
+          const obj7 = { value: HTTP.get(obj6), done: false };
+          return obj7;
         }
       } else if (1 === tmp7) {
         c3 = 0;
         closure_128_1 = closure_2;
-        let obj3 = closure_129_1(closure_129_2[6]);
-        obj3.dispatch({ type: "APPLICATION_WIDGET_CONFIG_DEVELOPER_FETCH_FAILURE" });
-        let obj4 = closure_129_1(closure_129_2[8]);
-        obj4.captureException(closure_128_1);
+        closure_129_1(closure_129_2[6]).dispatch({ type: "APPLICATION_WIDGET_CONFIG_DEVELOPER_FETCH_FAILURE" });
+        const obj4 = closure_129_1(closure_129_2[6]);
+        closure_129_1(closure_129_2[8]).captureException(closure_128_1);
         throw closure_128_1;
       } else if (arg0 === 1) {
         c5 = 3;
@@ -173,17 +171,16 @@ let closure_13 = async function _fetchDeveloperWidgetConfigsFromApi() {
       } else if (arg0 === 2) {
         c3 = 0;
         c5 = 3;
-        obj3 = { value, done: true };
-        return obj3;
+        const obj8 = { value, done: true };
+        return obj8;
       } else {
         closure_128_0 = value;
-        obj = closure_129_1(closure_129_2[6]);
-        obj4 = {
+        const obj10 = {
           type: "APPLICATION_WIDGET_CONFIG_DEVELOPER_FETCH_SUCCESS",
           applications: closure_128_0.body.applications,
           configs: closure_128_0.body.configs,
         };
-        obj.dispatch(obj4);
+        closure_129_1(closure_129_2[6]).dispatch(obj10);
         c3 = 0;
         c5 = 3;
         return { value: "HermesInternal", done: null };
@@ -211,8 +208,8 @@ let closure_15 = async function _fetchWidgetConfigsFromApi() {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -225,31 +222,30 @@ let closure_15 = async function _fetchWidgetConfigsFromApi() {
             throw value;
           } else if (arg0 === 2) {
             c6 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
             closure_2 = tmp3;
             closure_1 = tmp7;
             closure_129_0 = applicationId;
             let body;
-            const obj1 = { type: "APPLICATION_WIDGET_CONFIG_FETCH_START", applicationId };
-            Dispatcher.dispatch(obj1);
+            const obj5 = { type: "APPLICATION_WIDGET_CONFIG_FETCH_START", applicationId };
+            Dispatcher.dispatch(obj5);
             c4 = 1;
             const HTTP = HTTPUtils.HTTP;
-            const obj2 = { url: Endpoints.APPLICATION_WIDGET_CONFIGS(applicationId), rejectWithError: true };
+            const obj7 = { url: Endpoints.APPLICATION_WIDGET_CONFIGS(applicationId), rejectWithError: true };
             c5 = 2;
             c6 = 1;
-            let obj3 = { value: HTTP.get(obj2), done: false };
-            return obj3;
+            const obj8 = { value: HTTP.get(obj7), done: false };
+            return obj8;
           }
         } else if (1 === tmp7) {
           c4 = 0;
           closure_129_2 = closure_3;
-          obj3 = closure_130_1(closure_130_2[6]);
-          const obj4 = { type: "APPLICATION_WIDGET_CONFIG_FETCH_FAILURE", applicationId: closure_129_0 };
-          obj3.dispatch(obj4);
-          let obj5 = closure_130_1(closure_130_2[8]);
-          obj5.captureException(closure_129_2);
+          const obj9 = { type: "APPLICATION_WIDGET_CONFIG_FETCH_FAILURE", applicationId: closure_129_0 };
+          closure_130_1(closure_130_2[6]).dispatch(obj9);
+          const obj4 = closure_130_1(closure_130_2[6]);
+          closure_130_1(closure_130_2[8]).captureException(closure_129_2);
           throw closure_129_2;
         } else if (arg0 === 1) {
           c6 = 3;
@@ -257,18 +253,17 @@ let closure_15 = async function _fetchWidgetConfigsFromApi() {
         } else if (arg0 === 2) {
           c4 = 0;
           c6 = 3;
-          obj5 = { value, done: true };
-          return obj5;
+          const obj11 = { value, done: true };
+          return obj11;
         } else {
           body = value.body;
-          obj = closure_130_1(closure_130_2[6]);
-          const obj6 = {
+          const obj12 = {
             type: "APPLICATION_WIDGET_CONFIG_FETCH_SUCCESS",
             applicationId: closure_129_0,
             applications: closure_130_7(body),
             configs: body,
           };
-          obj.dispatch(obj6);
+          closure_130_1(closure_130_2[6]).dispatch(obj12);
           c4 = 0;
           c6 = 3;
           return { value: "HermesInternal", done: null };
@@ -287,11 +282,11 @@ let closure_15 = async function _fetchWidgetConfigsFromApi() {
 };
 const FetchState = fn(9155).FetchState;
 const Endpoints = fn(1074).Endpoints;
-new fn(9157).PromiseDeduper();
-Backoff = new Backoff(DurationsDefault.Millis.SECOND, DurationsDefault.Millis.MINUTE, true);
-const subscription = Dispatcher.subscribe("LOGOUT", () => Backoff.succeed());
 const promiseDeduper = new fn(9157).PromiseDeduper();
-const promiseDeduper1 = new fn(9157).PromiseDeduper();
+const importDefaultResult2 = new Backoff(DurationsDefault.Millis.SECOND, DurationsDefault.Millis.MINUTE, true);
+const subscription = Dispatcher.subscribe("LOGOUT", () => importDefaultResult2.succeed());
+const promiseDeduper3 = new fn(9157).PromiseDeduper();
+const promiseDeduper4 = new fn(9157).PromiseDeduper();
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/application_widget/ApplicationWidgetConfigActions.tsx");
 
@@ -305,7 +300,7 @@ export const fetchFeaturedWidgetConfigs = function fetchFeaturedWidgetConfigs() 
     force = false;
   }
   if (force) {
-    Backoff.succeed();
+    importDefaultResult2.succeed();
   } else {
     return Promise.resolve();
   }
@@ -326,7 +321,7 @@ export const fetchDeveloperWidgetConfigs = function fetchDeveloperWidgetConfigs(
     }
     return resolved;
   }
-  resolved = promiseDeduper.one(undefined, fetchDeveloperWidgetConfigsFromApi, { force: flag });
+  resolved = promiseDeduper3.one(undefined, fetchDeveloperWidgetConfigsFromApi, { force: flag });
 };
 export const fetchWidgetConfigs = function fetchWidgetConfigs(item10012, arg1) {
   closure_0 = item10012;
@@ -344,7 +339,7 @@ export const fetchWidgetConfigs = function fetchWidgetConfigs(item10012, arg1) {
     }
     return resolved;
   }
-  resolved = promiseDeduper1.one(
+  resolved = promiseDeduper4.one(
     item10012,
     () =>
       (function fetchWidgetConfigsFromApi() {

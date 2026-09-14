@@ -19,9 +19,8 @@ import GuildStore from "../../../../stores/GuildStore.tsx";
 require = fn;
 function GuildProfileBackground(guildProfile) {
   guildProfile = guildProfile.guildProfile;
-  let obj = guildProfile(504);
   const items = [GuildStore];
-  const stateFromStores = obj.useStateFromStores(items, () => {
+  const stateFromStores = guildProfile(504).useStateFromStores(items, () => {
     let guild = GuildStore.getGuild(guildProfile.id);
     if (guild == null) {
       guild = GuildRecordUtils.fromGuildProfile(guildProfile);
@@ -31,23 +30,21 @@ function GuildProfileBackground(guildProfile) {
   });
   if (stateFromStores) {
     if (null != guildProfile.customBanner) {
-      obj = { id: null, splash: null, size: null };
+      const obj2 = { id: null, splash: null, size: null };
       ({ id: obj3.id, customBanner: obj3.splash } = guildProfile);
-      obj.size = utils_getDevicePixelRatioDefault() * useWindowDimensionsDefault().width;
-      obj = { style: tmp4.imageBanner, source: null };
-      obj.source = AvatarUtilsDefault.getGuildDiscoverySplashSource(obj);
-      return closure_8(closure_5, obj);
+      obj2.size = utils_getDevicePixelRatioDefault() * useWindowDimensionsDefault().width;
+      const obj4 = { style: tmp4.imageBanner, source: AvatarUtilsDefault.getGuildDiscoverySplashSource(obj2) };
+      return closure_8(closure_5, obj4);
     }
   }
   return closure_8(GuildProfileGradient, { guildProfile });
 }
 function GuildProfileGradient(guildProfile) {
-  const tmp = createStyles();
-  let obj = useToken;
-  const token = obj.useToken(nativeDefault.colors.BACKGROUND_BASE_LOWEST);
+  const tmp = styles();
   const tmp2 = useThemeDefault();
+  const token = useToken.useToken(nativeDefault.colors.BACKGROUND_BASE_LOWEST);
   const profilePrimaryColor = guild_profile_GuildProfileUtils.useProfilePrimaryColor(guildProfile.guildProfile, token);
-  obj = { style: tmp.colorBanner, start: frozen.START, end: frozen.END, colors: null };
+  const obj3 = { style: tmp.colorBanner, start: frozen.START, end: frozen.END, colors: null };
   const items = [profilePrimaryColor];
   const tmp6 = LinearGradientDefault;
   const obj5 = native;
@@ -57,34 +54,26 @@ function GuildProfileGradient(guildProfile) {
     brightenColorResult = obj5.darkenColor(profilePrimaryColor, 0.8);
   }
   items[1] = brightenColorResult;
-  obj.colors = items;
-  return React6(tmp6, obj);
+  obj3.colors = items;
+  return React6(tmp6, obj3);
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, Image: hasOwnProperty } = get_ActivityIndicator);
 const GuildFeatures = fn(1074).GuildFeatures;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-fn(4636);
-let createStyles = {
-  container: null,
-  colorBanner: null,
-  imageBanner: null,
-  body: null,
-  error: null,
-  buttonContainer: null,
-  header: null,
+const createStyles = fn(4636);
+let obj2 = {
+  container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },
+  colorBanner: { height: 140, width: "100%" },
+  imageBanner: { height: 140, width: "100%", objectFit: "cover" },
+  body: { marginTop: 12, paddingHorizontal: 16, gap: 16 },
+  error: { display: "flex", flexDirection: "row", alignItems: "center", gap: 8 },
+  buttonContainer: { marginTop: 160 },
+  header: { paddingHorizontal: 16, marginTop: -32, display: "flex", flexDirection: "column", gap: 0 },
   avatarBackground: null,
   restrictedAcronym: null,
 };
-createStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
-createStyles.container = createStyles;
-createStyles.colorBanner = { height: 140, width: "100%" };
-createStyles.imageBanner = { height: 140, width: "100%", objectFit: "cover" };
-createStyles.body = { marginTop: 12, paddingHorizontal: 16, gap: 16 };
-createStyles.error = { display: "flex", flexDirection: "row", alignItems: "center", gap: 8 };
-createStyles.buttonContainer = { marginTop: 160 };
-createStyles.header = { paddingHorizontal: 16, marginTop: -32, display: "flex", flexDirection: "column", gap: 0 };
 let size = {
   width: 86,
   height: 86,
@@ -95,25 +84,29 @@ let size = {
   alignItems: "center",
   overflow: "hidden",
 };
-createStyles.avatarBackground = size;
-createStyles.restrictedAcronym = { fontSize: 24 };
-createStyles = createStyles.createStyles(createStyles);
+obj2.avatarBackground = size;
+obj2.restrictedAcronym = { fontSize: 24 };
+const styles = createStyles.createStyles(obj2);
 const frozen = Object.freeze({ START: { x: 0, y: 1 }, END: { x: 1.5, y: 0 } });
 size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_profile/native/components/GuildProfileView.tsx");
 
 export default function GuildProfileView(guildProfile) {
   guildProfile = guildProfile.guildProfile;
-  const tmp = createStyles();
+  const tmp = styles();
   const items = [guildProfile];
-  let obj = { style: tmp.container, children: null };
+  const obj = { style: tmp.container, children: null };
   const memo = noop.useMemo(() => {
     if (null == guildProfile) {
       return null;
     } else {
-      const obj = { id: null, icon: null, size: 96, canAnimate: true };
       ({ id: obj2.id, icon: obj2.icon } = guildProfile);
-      const guildIconSource = obj.getGuildIconSource(obj);
+      const guildIconSource = AvatarUtilsDefault.getGuildIconSource({
+        id: null,
+        icon: null,
+        size: 96,
+        canAnimate: true,
+      });
       let uri = null;
       if (typeof guildIconSource !== "number") {
         uri = guildIconSource.uri;
@@ -125,22 +118,22 @@ export default function GuildProfileView(guildProfile) {
     closure_8(GuildProfileBackground, { guildProfile }),
     closure_8(GuildProfileHeaderDefault, { profile: guildProfile, guildIconSource: memo }),
   ];
-  obj = { style: tmp.body, children: null };
+  const obj2 = { style: tmp.body, children: null };
   let tmp5Result = null != guildProfile.description;
   if (tmp5Result) {
     tmp5Result = guildProfile.description.length > 0;
   }
   if (tmp5Result) {
-    obj = { variant: "text-md/medium", color: "text-subtle", children: guildProfile.description };
-    tmp5Result = closure_8(guildProfile(4632).Text, obj);
+    const obj3 = { variant: "text-md/medium", color: "text-subtle", children: guildProfile.description };
+    tmp5Result = closure_8(guildProfile(4632).Text, obj3);
   }
   const items2 = [
     tmp5Result,
     closure_8(GuildProfileGamesDefault, { profile: guildProfile }),
     closure_8(GuildProfileTraitsDefault, { profile: guildProfile }),
   ];
-  obj.children = items2;
-  items1[2] = closure_9(closure_4, obj);
+  obj2.children = items2;
+  items1[2] = closure_9(closure_4, obj2);
   obj.children = items1;
   return closure_9(closure_4, obj);
 }
@@ -155,5 +148,5 @@ export const getBackgroundForProfile = function getBackgroundForProfile(theme, t
   items[1] = brightenColorResult;
   return items;
 };
-export const useStyles = createStyles;
+export const useStyles = styles;
 export const DiagonalGradient = frozen;

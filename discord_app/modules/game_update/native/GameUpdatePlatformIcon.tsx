@@ -20,22 +20,22 @@ export const GameUpdatePlatformIcon = function GameUpdatePlatformIcon(color) {
   }
   color = color.color;
   if (PlatformType.PlatformType.DESKTOP === platform) {
-    let obj = { size, color };
+    const obj2 = { size, color };
     return jsx(ScreenIcon.ScreenIcon, { size, color });
   } else if (PlatformType.PlatformType.XBOX === platform) {
-    obj = { size, color };
+    const obj3 = { size, color };
     return jsx(XboxNeutralIcon.XboxNeutralIcon, { size, color });
   } else if (PlatformType.PlatformType.PLAYSTATION === platform) {
-    const obj1 = { size, color };
+    const obj4 = { size, color };
     return jsx(PlaystationNeutralIcon.PlaystationNeutralIcon, { size, color });
   } else if (PlatformType.PlatformType.NINTENDO === platform) {
-    const obj2 = { size, color };
+    const obj5 = { size, color };
     return jsx(NintendoSwitchNeutralIcon.NintendoSwitchNeutralIcon, { size, color });
   } else if (PlatformType.PlatformType.ANDROID === platform) {
-    const obj3 = { size, color };
+    const obj6 = { size, color };
     return jsx(MobilePhoneIcon.MobilePhoneIcon, { size, color });
   } else if (PlatformType.PlatformType.IOS === platform) {
-    obj = { size, color };
+    const obj = { size, color };
     return jsx(AppleNeutralIcon.AppleNeutralIcon, { size, color });
   } else {
     return null;

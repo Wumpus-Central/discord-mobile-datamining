@@ -102,7 +102,7 @@ function computeGuildMediaState(guildId) {
           value = map.get(item10029.guildId);
           let arr = value;
           if (null != value) {
-            arr = arr.push(item10029.channelId);
+            let arr2 = arr.push(item10029.channelId);
           } else {
             let items = [item10029.channelId];
             let result = map.set(item10029.guildId, items);
@@ -112,7 +112,7 @@ function computeGuildMediaState(guildId) {
       continue;
     }
     obj = {
-      skipMutedVcs: guildId(13797).getIsDontBadgeMutedVcsEnabled("GuildMediaStateStore"),
+      skipMutedVcs: guildId(13798).getIsDontBadgeMutedVcsEnabled("GuildMediaStateStore"),
       currentUserId: id.getId(),
       selectedVoiceChannelId: voiceChannelId,
       selectedVoiceGuildId: null,
@@ -152,7 +152,7 @@ function computeGuildMediaState(guildId) {
   }
   const embeddedActivitiesForGuild = EmbeddedActivitiesStore.getEmbeddedActivitiesForGuild(guildId);
   if (tmp2.selectedVoiceGuildId === guildId) {
-    let obj = {
+    const obj2 = {
       audio: true,
       video: tmp2.selectedVoiceChannelHasVideo,
       screenshare: null != ApplicationStreamingStore.getActiveStreamForUser(tmp2.currentUserId, guildId),
@@ -166,9 +166,9 @@ function computeGuildMediaState(guildId) {
     if (guildActiveEvent != null) {
       channel_id = guildActiveEvent.channel_id;
     }
-    obj.activeEvent = channel_id === tmp2.selectedVoiceChannelId;
-    obj.activity = embeddedActivitiesForGuild.length > 0;
-    return obj;
+    obj2.activeEvent = channel_id === tmp2.selectedVoiceChannelId;
+    obj2.activity = embeddedActivitiesForGuild.length > 0;
+    return obj2;
   } else {
     let found = embeddedActivitiesForGuild;
     if (0 !== tmp2.blockedOrIgnoredUserIds.size) {
@@ -260,7 +260,7 @@ function computeGuildMediaState(guildId) {
             return tmp2;
           });
         }
-        obj = {
+        let obj4 = {
           audio: flag2,
           video: flag,
           screenshare: someResult,
@@ -269,10 +269,10 @@ function computeGuildMediaState(guildId) {
           activity: null,
           isCurrentUserConnected: false,
         };
-        tmp34Result = tmp34(9792);
-        obj.activeEvent = null != tmp34Result.getGuildActiveEvent(arg0);
-        obj.activity = someResult2;
-        return obj;
+        let tmp34Result2 = tmp34(9792);
+        obj4.activeEvent = null != tmp34Result2.getGuildActiveEvent(arg0);
+        obj4.activity = someResult2;
+        return obj4;
       }
       continue;
     }
@@ -340,7 +340,6 @@ prototype["initialize"] = function initialize() {
   this.syncWith(items, markAllStale);
 };
 prototype["getGuildMediaState"] = function getGuildMediaState(guildId) {
-  let obj = map;
   const iter = map.get(guildId);
   if (null != iter) {
     if (iter.version === version) {
@@ -355,8 +354,7 @@ prototype["getGuildMediaState"] = function getGuildMediaState(guildId) {
       value = iter.value;
     }
   }
-  obj = { value, version };
-  const result = obj.set(guildId, obj);
+  const result = map.set(guildId, { value, version });
   return value;
 };
 GuildMediaStateStore.displayName = "GuildMediaStateStore";

@@ -11,8 +11,11 @@ const result = size.fileFinishedImporting(
 
 export default {
   open(guild, toUser) {
-    const obj = { guild, toUser };
-    obj.pushLazy(asyncRequireImpl(11975, dependencyMap.paths), obj, TRANSFER_OWNERSHIP_MODAL_KEY);
+    ModalActionCreatorsDefault.pushLazy(
+      asyncRequireImpl(11976, dependencyMap.paths),
+      { guild, toUser },
+      TRANSFER_OWNERSHIP_MODAL_KEY,
+    );
   },
   close() {
     DispatcherDefault.wait(() => {

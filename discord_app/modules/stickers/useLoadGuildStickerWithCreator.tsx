@@ -5,16 +5,20 @@ import noop from "../../../_runtime/metro/00019__.js";
 import UserStore from "../../stores/UserStore.tsx";
 import GuildStickersStore from "GuildStickersStore.tsx";
 
+const require = globalThis.__r;
+
 const require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/stickers/useLoadGuildStickerWithCreator.tsx");
 
 export default function useLoadGuildStickersWithCreator(arg0) {
   _require = arg0;
-  [tmp2, dependencyMap] = _slicedToArray(noop.useState("loading"), 2);
-  let obj = require("initialize");
+  [tmp2, dependencyMap] = noop.useState("loading");
+  const tmp = _slicedToArray(noop.useState("loading"), 2);
   const items = [GuildStickersStore];
-  const stateFromStores = obj.useStateFromStores(items, () => GuildStickersStore.getStickersByGuildId(closure_0));
+  const stateFromStores = require("initialize").useStateFromStores(items, () =>
+    GuildStickersStore.getStickersByGuildId(closure_0),
+  );
   const items1 = [arg0];
   const effect = noop.useEffect(() => {
     closure_2 = async function _fetch() {
@@ -55,7 +59,7 @@ export default function useLoadGuildStickersWithCreator(arg0) {
     };
   }, items1);
   if ("success" === tmp2) {
-    obj = {
+    const obj2 = {
       status: tmp2,
       stickers: stateFromStores.map((user_id) => {
         user = user.getUser(user_id.user_id);
@@ -69,8 +73,9 @@ export default function useLoadGuildStickersWithCreator(arg0) {
         return tmp2;
       }),
     };
+    let obj3 = obj2;
   } else {
-    obj = { status: tmp2 };
+    obj3 = { status: tmp2 };
   }
-  return obj;
+  return obj3;
 }

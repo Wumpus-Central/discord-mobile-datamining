@@ -15,8 +15,8 @@ let closure_7 = async function _fetchVideoFilterAssets() {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -29,26 +29,25 @@ let closure_7 = async function _fetchVideoFilterAssets() {
           throw value;
         } else if (arg0 === 2) {
           c5 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           closure_1 = tmp3;
           closure_0 = tmp7;
           closure_128_0 = undefined;
           c3 = 1;
           const HTTP = HTTPUtils.HTTP;
-          const obj1 = { url: constants.VIDEO_FILTER_ASSETS, rejectWithError: false };
+          const obj4 = { url: constants.VIDEO_FILTER_ASSETS, rejectWithError: false };
           c4 = 2;
           c5 = 1;
-          const obj2 = { value: HTTP.get(obj1), done: false };
-          return obj2;
+          const obj6 = { value: HTTP.get(obj4), done: false };
+          return obj6;
         }
       } else if (1 === tmp7) {
         c3 = 0;
         closure_128_1 = closure_2;
-        let obj4 = closure_129_1(closure_129_2[5]);
-        const obj3 = { type: "VIDEO_FILTER_ASSETS_FETCH_FAILURE", error: closure_128_1 };
-        obj4.dispatch(obj3);
+        const obj7 = { type: "VIDEO_FILTER_ASSETS_FETCH_FAILURE", error: closure_128_1 };
+        closure_129_1(closure_129_2[5]).dispatch(obj7);
         throw closure_128_1;
       } else if (arg0 === 1) {
         c5 = 3;
@@ -56,17 +55,16 @@ let closure_7 = async function _fetchVideoFilterAssets() {
       } else if (arg0 === 2) {
         c3 = 0;
         c5 = 3;
-        obj4 = { value, done: true };
-        return obj4;
+        const obj8 = { value, done: true };
+        return obj8;
       } else {
         closure_128_0 = value;
-        obj = closure_129_1(closure_129_2[5]);
-        const obj5 = { type: "VIDEO_FILTER_ASSETS_FETCH_SUCCESS", assets: closure_128_0.body };
-        obj.dispatch(obj5);
+        const obj9 = { type: "VIDEO_FILTER_ASSETS_FETCH_SUCCESS", assets: closure_128_0.body };
+        closure_129_1(closure_129_2[5]).dispatch(obj9);
         c3 = 0;
         c5 = 3;
-        const obj6 = { value: closure_128_0, done: true };
-        return obj6;
+        const obj10 = { value: closure_128_0, done: true };
+        return obj10;
       }
     } catch (tmp26) {
       closure_2 = tmp26;
@@ -92,8 +90,8 @@ let closure_8 = async function _uploadVideoFilterAsset() {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -106,8 +104,8 @@ let closure_8 = async function _uploadVideoFilterAsset() {
             throw value;
           } else if (arg0 === 2) {
             c8 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
             closure_4 = tmp3;
             closure_3 = tmp7;
@@ -115,17 +113,17 @@ let closure_8 = async function _uploadVideoFilterAsset() {
             c6 = 1;
             const HTTP = HTTPUtils.HTTP;
             const request = { url: constants.VIDEO_FILTER_ASSETS, body: null, rejectWithError: false };
-            const obj1 = { type, asset, last_used: null };
+            const obj4 = { type, asset, last_used: null };
             let toISOStringResult;
             if (closure_2 != null) {
               toISOStringResult = closure_2.toISOString();
             }
-            obj1.last_used = toISOStringResult;
-            request.body = obj1;
+            obj4.last_used = toISOStringResult;
+            request.body = obj4;
             c7 = 2;
             c8 = 1;
-            const obj2 = { value: HTTP.post(request), done: false };
-            return obj2;
+            const obj5 = { value: HTTP.post(request), done: false };
+            return obj5;
           }
         } else if (1 === tmp7) {
           c6 = 0;
@@ -138,17 +136,16 @@ let closure_8 = async function _uploadVideoFilterAsset() {
         } else if (arg0 === 2) {
           c6 = 0;
           c8 = 3;
-          const obj3 = { value, done: true };
-          return obj3;
+          const obj6 = { value, done: true };
+          return obj6;
         } else {
           closure_131_0 = value;
-          obj = closure_132_1(closure_132_2[5]);
-          const obj4 = { type: "VIDEO_FILTER_ASSET_UPLOAD_SUCCESS", videoFilterAsset: closure_131_0.body };
-          obj.dispatch(obj4);
+          const obj7 = { type: "VIDEO_FILTER_ASSET_UPLOAD_SUCCESS", videoFilterAsset: closure_131_0.body };
+          closure_132_1(closure_132_2[5]).dispatch(obj7);
           c6 = 0;
           c8 = 3;
-          const obj5 = { value: closure_131_0.body, done: true };
-          return obj5;
+          const obj9 = { value: closure_131_0.body, done: true };
+          return obj9;
         }
       } catch (tmp27) {
         closure_5 = tmp27;
@@ -174,8 +171,8 @@ let closure_9 = async function _deleteVideoFilterAsset(arg0) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -188,31 +185,29 @@ let closure_9 = async function _deleteVideoFilterAsset(arg0) {
             throw value;
           } else if (arg0 === 2) {
             c4 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
             closure_2 = tmp2;
             closure_1 = tmp5;
             closure_129_0 = id;
             let lastUsedVideoBackgroundOption;
             const HTTP = HTTPUtils.HTTP;
-            const obj1 = { url: Endpoints.VIDEO_FILTER_ASSET(id.id), rejectWithError: false };
+            const obj4 = { url: Endpoints.VIDEO_FILTER_ASSET(id.id), rejectWithError: false };
             c3 = 1;
             c4 = 1;
-            const obj2 = { value: HTTP.del(obj1), done: false };
-            return obj2;
+            const obj5 = { value: HTTP.del(obj4), done: false };
+            return obj5;
           }
         } else if (arg0 === 1) {
           c4 = 3;
           throw value;
         } else if (arg0 === 2) {
           c4 = 3;
-          const obj3 = { value, done: true };
-          return obj3;
+          const obj6 = { value, done: true };
+          return obj6;
         } else {
-          lastUsedVideoBackgroundOption = closure_130_0(closure_130_2[7]).getLastUsedVideoBackgroundOption(
-            closure_130_5.getCurrentUser(),
-          );
+          lastUsedVideoBackgroundOption = closure_130_0(closure_130_2[7]).getLastUsedVideoBackgroundOption(closure_130_5.getCurrentUser());
           const obj7 = closure_130_0(closure_130_2[7]);
           let result = closure_130_0(closure_130_2[8]).isCustomBackgroundOption(lastUsedVideoBackgroundOption);
           if (result) {
@@ -221,9 +216,9 @@ let closure_9 = async function _deleteVideoFilterAsset(arg0) {
           if (result) {
             closure_130_10(null);
           }
-          obj = closure_130_1(closure_130_2[5]);
-          const obj4 = { type: "VIDEO_FILTER_ASSET_DELETE_SUCCESS", videoFilterAsset: closure_129_0 };
-          obj.dispatch(obj4);
+          const obj8 = closure_130_0(closure_130_2[8]);
+          const obj9 = { type: "VIDEO_FILTER_ASSET_DELETE_SUCCESS", videoFilterAsset: closure_129_0 };
+          closure_130_1(closure_130_2[5]).dispatch(obj9);
           c4 = 3;
           return { value: "HermesInternal", done: null };
         }
@@ -248,13 +243,9 @@ let closure_11 = async function _saveLastUsedBackgroundOption(arg0) {
   closure_2 = tmp2;
   closure_129_0 = closure_0;
   const PreloadedUserSettingsActionCreators = UserSettingsProtoActionCreators.PreloadedUserSettingsActionCreators;
-  await PreloadedUserSettingsActionCreators.updateAsync(
-    "voiceAndVideo",
-    async (arg0) => {
-      arg0.videoBackgroundFilterDesktop = closure_0(closure_2[8]).getVideoBackgroundProtoFromOption(closure_1_0);
-    },
-    UserSettingsProtoActionCreators.UserSettingsDelay.FREQUENT_USER_ACTION,
-  );
+  await PreloadedUserSettingsActionCreators.updateAsync("voiceAndVideo", async (arg0) => {
+    arg0.videoBackgroundFilterDesktop = closure_0(closure_2[8]).getVideoBackgroundProtoFromOption(closure_1_0);
+  }, UserSettingsProtoActionCreators.UserSettingsDelay.FREQUENT_USER_ACTION);
   if (1 === tmp5) {
     if (arg0 === 1) {
       c4 = 3;
@@ -265,14 +256,14 @@ let closure_11 = async function _saveLastUsedBackgroundOption(arg0) {
     } else {
       if (obj12.isCustomBackgroundOption(closure_129_0)) {
         const HTTP = closure_130_0(closure_130_2[4]).HTTP;
-        let obj3 = { url: closure_130_6.VIDEO_FILTER_ASSET_LAST_USED(closure_129_0.id), rejectWithError: false };
         c3 = 2;
         c4 = 1;
-        return { value: HTTP.post(obj3), done: false };
+        { url: closure_130_6.VIDEO_FILTER_ASSET_LAST_USED(closure_129_0.id), rejectWithError: false };
+        return { value: HTTP.post({ url: closure_130_6.VIDEO_FILTER_ASSET_LAST_USED(closure_129_0.id), rejectWithError: false }), done: false };
       } else {
-        obj3 = closure_130_1(closure_130_2[5]);
-        obj3.dispatch({ type: "VIDEO_SAVE_LAST_USED_BACKGROUND_OPTION", backgroundOption: closure_129_0 });
+        closure_130_1(closure_130_2[5]).dispatch({ type: "VIDEO_SAVE_LAST_USED_BACKGROUND_OPTION", backgroundOption: closure_129_0 });
         c4 = 3;
+        closure_130_1(closure_130_2[5]);
       }
       obj12 = closure_130_0(closure_130_2[8]);
     }
@@ -281,10 +272,7 @@ let closure_11 = async function _saveLastUsedBackgroundOption(arg0) {
     throw value;
   } else if (arg0 !== 2) {
     closure_129_1 = value;
-    closure_130_1(closure_130_2[5]).dispatch({
-      type: "VIDEO_SAVE_LAST_USED_BACKGROUND_OPTION",
-      backgroundOption: closure_129_1.body,
-    });
+    closure_130_1(closure_130_2[5]).dispatch({ type: "VIDEO_SAVE_LAST_USED_BACKGROUND_OPTION", backgroundOption: closure_129_1.body });
     closure_130_1(closure_130_2[5]);
   }
   return value;
@@ -326,8 +314,8 @@ export const deleteVideoFilterAsset = function deleteVideoFilterAsset() {
 export { saveLastUsedBackgroundOption };
 export const applyMediaFilterSettings = function applyMediaFilterSettings(settings) {
   if (MediaEngineStore.isSupported()) {
-    const obj = { type: "MEDIA_ENGINE_APPLY_MEDIA_FILTER_SETTINGS", settings };
-    obj.dispatch(obj);
+    const obj2 = { type: "MEDIA_ENGINE_APPLY_MEDIA_FILTER_SETTINGS", settings };
+    DispatcherDefault.dispatch(obj2);
   }
 };
 export const startApplyMediaFilterSettings = function startApplyMediaFilterSettings() {

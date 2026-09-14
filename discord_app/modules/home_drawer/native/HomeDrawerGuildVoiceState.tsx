@@ -14,6 +14,8 @@ import RelationshipStore from "../../../stores/RelationshipStore.tsx";
 import UserGuildSettingsStore from "../../../stores/UserGuildSettingsStore.tsx";
 import SortedVoiceStateStore from "../../../stores/views/SortedVoiceStateStore.tsx";
 
+const require = globalThis.__r;
+
 require = fn;
 function VoiceUsers(arg0) {
   ({ voiceUsers, guildId: require } = arg0);
@@ -23,8 +25,8 @@ function VoiceUsers(arg0) {
   }
   let tmp = null;
   if (0 !== voiceUsers.length) {
-    let obj = { style: { flexDirection: "row", alignItems: "center", gap: 4 }, children: null };
-    obj = {
+    const obj = { style: { flexDirection: "row", alignItems: "center", gap: 4 }, children: null };
+    const obj2 = {
       size: native.AvatarSizes.XSMALL,
       names: substr.map((username) => username.username),
       totalCount: substr.length,
@@ -32,23 +34,23 @@ function VoiceUsers(arg0) {
         closure_2_11(native.Avatar, { size: native.AvatarSizes.XSMALL, user, guildId, animate: false }, user.id),
       ),
     };
-    obj.children = closure_11(AvatarPile.AvatarPile, obj);
+    obj.children = closure_11(AvatarPile.AvatarPile, obj2);
     tmp = closure_11(View, obj);
   }
   return tmp;
 }
 function LiveTag() {
   const tmp = closure_15();
-  let obj = {
+  const obj = {
     style: tmp.tag,
     importantForAccessibility: "no-hide-descendants",
     accessibilityElementsHidden: true,
     children: null,
   };
-  obj = { variant: "text-xxs/bold", style: tmp.tagText, lineClamp: 1, children: null };
+  const obj2 = { variant: "text-xxs/bold", style: tmp.tagText, lineClamp: 1, children: null };
   const intl = util.intl;
-  obj.children = intl.string(util.t.dI3q4h).toUpperCase();
-  obj.children = closure_1_11(Text_Text.Text, obj);
+  obj2.children = intl.string(util.t.dI3q4h).toUpperCase();
+  obj.children = closure_1_11(Text_Text.Text, obj2);
   return closure_1_11(View, obj);
 }
 const View = fn(17).View;
@@ -56,8 +58,8 @@ const GUILD_VOCAL_CHANNELS_KEY = fn(2012).GUILD_VOCAL_CHANNELS_KEY;
 const ChannelTypes = fn(1074).ChannelTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-fn(4636);
-let createStyles = {
+let createStyles = fn(4636);
+let obj2 = {
   voiceContainer: { paddingRight: 8, height: 40, gap: 4, justifyContent: "center" },
   streamPreviewShadow: null,
   streamPreview: null,
@@ -65,13 +67,12 @@ let createStyles = {
   streamPreviewGradient: null,
   streamPreviewBorder: null,
 };
-createStyles = { borderRadius: nativeDefault.radii.sm };
 const merged = Object.assign(nativeDefault.shadows.SHADOW_MEDIUM);
-createStyles.streamPreviewShadow = createStyles;
+obj2.streamPreviewShadow = { borderRadius: nativeDefault.radii.sm };
 let size = { width: 72, height: 44, borderRadius: nativeDefault.radii.sm, overflow: "hidden" };
-createStyles.streamPreview = size;
-createStyles.streamPreviewDarkGradient = { position: "absolute", top: 0, left: 0, right: 0, bottom: 0, opacity: 0.8 };
-createStyles.streamPreviewGradient = { position: "absolute", top: 0, left: 0, right: 0, bottom: 0, opacity: 0.2 };
+obj2.streamPreview = size;
+obj2.streamPreviewDarkGradient = { position: "absolute", top: 0, left: 0, right: 0, bottom: 0, opacity: 0.8 };
+obj2.streamPreviewGradient = { position: "absolute", top: 0, left: 0, right: 0, bottom: 0, opacity: 0.2 };
 const rect = {
   position: "absolute",
   top: 0,
@@ -82,10 +83,10 @@ const rect = {
   borderColor: nativeDefault.colors.BORDER_SUBTLE,
   borderRadius: nativeDefault.radii.sm,
 };
-createStyles.streamPreviewBorder = rect;
-let closure_13 = createStyles.createStyles(createStyles);
+obj2.streamPreviewBorder = rect;
+let closure_13 = createStyles.createStyles(obj2);
 createStyles = fn(4636);
-let obj1 = { tag: null, tagText: null };
+let obj4 = { tag: null, tagText: null };
 const rect1 = {
   paddingHorizontal: 4,
   paddingVertical: 1,
@@ -98,9 +99,10 @@ const rect1 = {
   top: 0,
   left: 0,
 };
-obj1.tag = rect1;
-obj1.tagText = { textAlign: "center", color: nativeDefault.unsafe_rawColors.WHITE, includeFontPadding: false };
-let closure_15 = createStyles.createStyles(obj1);
+obj4.tag = rect1;
+let obj3 = { borderRadius: nativeDefault.radii.sm };
+obj4.tagText = { textAlign: "center", color: nativeDefault.unsafe_rawColors.WHITE, includeFontPadding: false };
+let closure_15 = createStyles.createStyles(obj4);
 size = fn(2);
 const result = size.fileFinishedImporting("modules/home_drawer/native/HomeDrawerGuildVoiceState.tsx");
 
@@ -120,53 +122,53 @@ export const GuildVoiceState = function GuildVoiceState(arg0) {
     if (null != streamingUser) {
       num = 48;
     }
-    let obj = { style: null, children: null };
-    obj = { height: num };
-    items[1] = obj;
+    const obj = { style: null, children: null };
+    const obj2 = { height: num };
+    items[1] = obj2;
     obj.style = items;
     if (null == previewUrl) {
-      obj = { voiceUsers, guildId };
-      let tmp7Result = closure_1_11(VoiceUsers, obj);
+      const obj3 = { voiceUsers, guildId };
+      let tmp7Result = closure_1_11(VoiceUsers, obj3);
     } else {
-      const obj1 = { style: tmp.streamPreviewShadow, children: null };
-      const obj2 = { style: tmp.streamPreview, children: null };
-      const obj3 = { style: tmp.streamPreview, source: null };
-      const obj4 = { uri: previewUrl };
-      obj3.source = obj4;
-      const items1 = [closure_1_11(FastImageDefault, obj3), , , ,];
-      const obj5 = {
+      const obj4 = { style: tmp.streamPreviewShadow, children: null };
+      const obj5 = { style: tmp.streamPreview, children: null };
+      const obj6 = { style: tmp.streamPreview, source: null };
+      const obj7 = { uri: previewUrl };
+      obj6.source = obj7;
+      const items1 = [closure_1_11(FastImageDefault, obj6), , , ,];
+      const obj8 = {
         colors: ["rgba(0, 0, 0, 1)", "rgba(0, 0, 0, 0)"],
         start: { x: 0, y: 0 },
         end: { x: 0, y: 1 },
         style: tmp.streamPreviewDarkGradient,
         pointerEvents: "none",
       };
-      items1[1] = closure_1_11(LinearGradientDefault, obj5);
-      const obj6 = {
+      items1[1] = closure_1_11(LinearGradientDefault, obj8);
+      const obj9 = {
         colors: ["rgba(255, 255, 255, 1)", "rgba(255, 255, 255, 0)"],
         start: { x: 0, y: 0 },
         end: { x: 1, y: 1 },
         style: tmp.streamPreviewGradient,
         pointerEvents: "none",
       };
-      items1[2] = closure_1_11(LinearGradientDefault, obj6);
-      const obj7 = { style: tmp.streamPreviewBorder, pointerEvents: "none" };
-      items1[3] = closure_1_11(View, obj7);
+      items1[2] = closure_1_11(LinearGradientDefault, obj9);
+      const obj10 = { style: tmp.streamPreviewBorder, pointerEvents: "none" };
+      items1[3] = closure_1_11(View, obj10);
       items1[4] = closure_1_11(LiveTag, {});
-      obj2.children = items1;
-      obj1.children = closure_1_12(View, obj2);
-      tmp7Result = closure_1_11(View, obj1);
+      obj5.children = items1;
+      obj4.children = closure_1_12(View, obj5);
+      tmp7Result = closure_1_11(View, obj4);
     }
     obj.children = tmp7Result;
-    tmp7Result = closure_1_11(View, obj);
+    closure_1_11(View, obj);
   }
   tmp2 = voiceUsers.length > 0;
 };
 export const useVoiceUsers = function useVoiceUsers(guild) {
   _require = guild;
   const id = guild.id;
-  let obj = require("isHomeDrawerChannelInChannelList");
-  isHomeDrawerChannelInChannelList = obj.useIsHomeDrawerChannelInChannelList();
+  isHomeDrawerChannelInChannelList = require("isHomeDrawerChannelInChannelList").useIsHomeDrawerChannelInChannelList();
+  const obj = require("isHomeDrawerChannelInChannelList");
   let items = [stateFromStores1, UserGuildSettingsStore];
   const items1 = [id, isHomeDrawerChannelInChannelList];
   const stateFromStoresArray = require("initialize").useStateFromStoresArray(
@@ -246,6 +248,5 @@ export const useVoiceUsers = function useVoiceUsers(guild) {
     });
     return { streamingUser: user, streamingChannelId };
   }, items6);
-  obj = { voiceUsers: memo, streamingUser: memo1.streamingUser, streamingChannelId: memo1.streamingChannelId };
-  return obj;
+  return { voiceUsers: memo, streamingUser: memo1.streamingUser, streamingChannelId: memo1.streamingChannelId };
 };

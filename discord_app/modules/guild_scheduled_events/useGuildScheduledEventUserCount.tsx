@@ -4,6 +4,8 @@ import GuildScheduledEventManagerDefault from "GuildScheduledEventManager.tsx";
 import GuildScheduledEventStore from "GuildScheduledEventStore.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
+const require = globalThis.__r;
+
 const useEffect = _mod19.useEffect;
 const result = size.fileFinishedImporting("modules/guild_scheduled_events/useGuildScheduledEventUserCount.tsx");
 

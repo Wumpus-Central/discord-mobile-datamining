@@ -26,27 +26,27 @@ prototype["parse"] = function parse(arg0, arg1) {
     (arr, matchFunction) =>
       arr.concat(
         matchFunction.matchFunction(matchFunction, closure_1).map((item) => {
-          let obj = matchFunction;
           if (typeof matchFunction.deleteNodeOnBackspace === "function") {
-            let deleteNodeOnBackspace = obj.deleteNodeOnBackspace(item);
+            let deleteNodeOnBackspace = matchFunction.deleteNodeOnBackspace(item);
           } else {
-            deleteNodeOnBackspace = obj.deleteNodeOnBackspace;
+            deleteNodeOnBackspace = matchFunction.deleteNodeOnBackspace;
           }
-          if (typeof obj.editDisabled === "function") {
-            let editDisabled = obj.editDisabled(item);
+          if (typeof matchFunction.editDisabled === "function") {
+            let editDisabled = matchFunction.editDisabled(item);
           } else {
-            editDisabled = obj.editDisabled;
+            editDisabled = matchFunction.editDisabled;
           }
-          obj = { type: obj.type, style: null, deleteNodeOnBackspace: null, editDisabled: null };
-          let style;
+          const obj2 = { type: matchFunction.type, style: null, deleteNodeOnBackspace: null, editDisabled: null };
+          const style = matchFunction.style;
+          let style1;
           if (style != null) {
-            style = style(item);
+            style1 = style(item);
           }
-          obj.style = style;
-          obj.deleteNodeOnBackspace = deleteNodeOnBackspace;
-          obj.editDisabled = editDisabled;
+          obj2.style = style1;
+          obj2.deleteNodeOnBackspace = deleteNodeOnBackspace;
+          obj2.editDisabled = editDisabled;
           const merged = Object.assign(item);
-          return obj;
+          return obj2;
         }),
       ),
     [],
@@ -61,13 +61,12 @@ export const convertToNativeStyle = (autocomplete) => {
   if (null != backgroundColor) {
     tmp2 = null;
     if (null != borderRadius) {
-      let obj = { backgroundColor: processColor(backgroundColor), cornerRadius: borderRadius };
+      const obj = { backgroundColor: processColor(backgroundColor), cornerRadius: borderRadius };
       tmp2 = obj;
     }
   }
-  obj = { color: processColor(autocomplete.color), backgroundStyle: tmp2 };
   const merged1 = Object.assign(merged);
-  return obj;
+  return { color: processColor(autocomplete.color), backgroundStyle: tmp2 };
 };
 export const ChatInputParseResultDataType = {
   COMMAND_OPTION: 0,

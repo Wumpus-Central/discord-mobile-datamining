@@ -16,8 +16,8 @@ const AppStates = fn(1074).AppStates;
 const NativePermissionTypes = fn(4846).NativePermissionTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-fn(4636);
-let createStyles = {
+const createStyles = fn(4636);
+let obj2 = {
   sensitivity: { position: "relative", height: 20 },
   sensitivityBar: { position: "absolute", top: 7, left: 0, right: 0, bottom: 7, flexDirection: "row" },
   sensitivityFill: null,
@@ -37,19 +37,19 @@ const rect = {
   right: 0,
   bottom: 7,
 };
-createStyles.sensitivityFill = rect;
-createStyles.sensitivityCommon = { height: 6, borderRadius: 3 };
-createStyles = { backgroundColor: nativeDefault.unsafe_rawColors.YELLOW_300 };
-createStyles.sensitivityMin = createStyles;
-createStyles.sensitivityMax = { backgroundColor: nativeDefault.unsafe_rawColors.GREEN_360 };
-let obj2 = { flex: 1, backgroundColor: null };
+obj2.sensitivityFill = rect;
+obj2.sensitivityCommon = { height: 6, borderRadius: 3 };
+obj2.sensitivityMin = { backgroundColor: nativeDefault.unsafe_rawColors.YELLOW_300 };
+let obj3 = { backgroundColor: nativeDefault.unsafe_rawColors.YELLOW_300 };
+obj2.sensitivityMax = { backgroundColor: nativeDefault.unsafe_rawColors.GREEN_360 };
+let obj5 = { flex: 1, backgroundColor: null };
 const ColorUtils = fn(4486);
-obj2.backgroundColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.PRIMARY_400, 0.6);
-createStyles.sensitivityDefault = obj2;
-let obj1 = { backgroundColor: nativeDefault.unsafe_rawColors.GREEN_360 };
-createStyles.sensitivitySpeaking = { flex: 1, backgroundColor: nativeDefault.unsafe_rawColors.GREEN_360 };
-createStyles.sensitivitySlider = { flex: 1, backgroundColor: "transparent", marginVertical: -10 };
-let closure_14 = createStyles.createStyles(createStyles);
+obj5.backgroundColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.PRIMARY_400, 0.6);
+obj2.sensitivityDefault = obj5;
+let obj4 = { backgroundColor: nativeDefault.unsafe_rawColors.GREEN_360 };
+obj2.sensitivitySpeaking = { flex: 1, backgroundColor: nativeDefault.unsafe_rawColors.GREEN_360 };
+obj2.sensitivitySlider = { flex: 1, backgroundColor: "transparent", marginVertical: -10 };
+let closure_14 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("components_native/common/VoiceSensitivity.tsx");
 
@@ -70,17 +70,17 @@ export default function VoiceSensitivity(auto) {
   const first = tmp6[0];
   closure_3 = tmp6[1];
   width = onThresholdChange(first[13])().width;
-  let obj = auto(first[14]);
+  const ref1 = stateFromStores.useRef(null);
+  const tmp8 = onThresholdChange;
   const items = [state];
-  stateFromStores = obj.useStateFromStores(items, () => state.getState(), []);
+  stateFromStores = auto(first[14]).useStateFromStores(items, () => state.getState(), []);
   const tmp12 = width(stateFromStores.useState(0), 2);
   const first1 = tmp12[0];
   closure_7 = tmp12[1];
   const tmp14 = width(stateFromStores.useState(sum), 2);
   first2 = tmp14[0];
   state = tmp14[1];
-  const ref1 = stateFromStores.useRef(null);
-  const tmp8 = onThresholdChange;
+  let obj = auto(first[14]);
   [tmp17, c10] = width(stateFromStores.useState(first2 / 100), 2);
   const tmp18 = width(stateFromStores.useState(width * (1 - first1 / -100)), 2);
   closure_11 = tmp18[1];
@@ -113,7 +113,7 @@ export default function VoiceSensitivity(auto) {
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
-          let obj = { value, done: true };
+          const obj = { value, done: true };
           return obj;
         } else {
           return { value: "HermesInternal", done: null };
@@ -127,26 +127,25 @@ export default function VoiceSensitivity(auto) {
               throw value;
             } else if (arg0 === 2) {
               c2 = 3;
-              obj = { value, done: true };
-              return obj;
+              const obj2 = { value, done: true };
+              return obj2;
             } else {
               closure_0 = tmp4;
-              let obj2 = onThresholdChange(5220);
               c1 = 1;
               c2 = 1;
-              const obj1 = {
-                value: obj2.hasPermission(constants.AUDIO, { showAuthorizationError: false }),
+              const obj4 = {
+                value: onThresholdChange(5220).hasPermission(constants.AUDIO, { showAuthorizationError: false }),
                 done: false,
               };
-              return obj1;
+              return obj4;
             }
           } else if (arg0 === 1) {
             c2 = 3;
             throw value;
           } else if (arg0 === 2) {
             c2 = 3;
-            obj2 = { value, done: true };
-            return obj2;
+            const obj5 = { value, done: true };
+            return obj5;
           } else {
             let tmp5 = value;
             if (value) {
@@ -226,7 +225,7 @@ export default function VoiceSensitivity(auto) {
     }
   }, items4);
   if (auto) {
-    obj = {
+    let obj2 = {
       accessible: true,
       role: "meter",
       "aria-label": null,
@@ -240,12 +239,12 @@ export default function VoiceSensitivity(auto) {
       children: null,
     };
     const intl2 = tmp10(tmp9[18]).intl;
-    obj["aria-label"] = intl2.string(tmp10(tmp9[18]).t.yZcOjo);
+    obj2["aria-label"] = intl2.string(tmp10(tmp9[18]).t.yZcOjo);
     let num = 0;
     if (first) {
       num = 100;
     }
-    obj["aria-valuenow"] = num;
+    obj2["aria-valuenow"] = num;
     const intl3 = tmp10(tmp9[18]).intl;
     const string = intl3.string;
     const t = tmp10(tmp9[18]).t;
@@ -254,61 +253,59 @@ export default function VoiceSensitivity(auto) {
     } else {
       stringResult = string(t.X2hJL7);
     }
-    obj = {
-      children: null,
-      "aria-valuetext": stringResult,
-      onAccessibilityFocus() {
-        closure_14.current = true;
-      },
-      onAccessibilityBlur() {
-        closure_14.current = false;
-        if (null != ref2.current) {
-          const _clearTimeout = clearTimeout;
-          clearTimeout(ref2.current);
-          ref2.current = null;
-        }
-      },
-      style: tmp.sensitivity,
+    const obj3 = { children: null };
+    obj2["aria-valuetext"] = stringResult;
+    obj2.onAccessibilityFocus = function onAccessibilityFocus() {
+      closure_14.current = true;
     };
-    let obj1 = { style: tmp.sensitivityBar, children: null };
-    let obj2 = { style: null };
+    obj2.onAccessibilityBlur = function onAccessibilityBlur() {
+      closure_14.current = false;
+      if (null != ref2.current) {
+        const _clearTimeout = clearTimeout;
+        clearTimeout(ref2.current);
+        ref2.current = null;
+      }
+    };
+    obj2.style = tmp.sensitivity;
+    let obj4 = { style: tmp.sensitivityBar, children: null };
+    let obj5 = { style: null };
     const items5 = [tmp.sensitivityCommon, first ? tmp.sensitivitySpeaking : tmp.sensitivityDefault];
-    obj2.style = items5;
-    obj1.children = callback(first1, obj2);
-    obj.children = callback(first1, obj1);
-    const items6 = [callback(tmp10(tmp9[19]).AccessibilityFocusView, obj)];
-    const obj3 = { inset: true, children: null };
+    obj5.style = items5;
+    obj4.children = callback(first1, obj5);
+    obj2.children = callback(first1, obj4);
+    const items6 = [callback(tmp10(tmp9[19]).AccessibilityFocusView, obj2)];
+    const obj6 = { inset: true, children: null };
     const intl4 = tmp10(tmp9[18]).intl;
-    obj3.children = intl4.string(tmp10(tmp9[18]).t.W3K5Im);
-    items6[1] = callback(tmp10(tmp9[20]).FormHint, obj3);
-    obj.children = items6;
-    return ref(first1, obj);
+    obj6.children = intl4.string(tmp10(tmp9[18]).t.W3K5Im);
+    items6[1] = callback(tmp10(tmp9[20]).FormHint, obj6);
+    obj3.children = items6;
+    return ref(first1, obj3);
   } else {
-    const obj4 = { style: tmp.sensitivity, children: null };
-    const obj5 = { style: tmp.sensitivityBar, children: null };
-    const obj6 = { ref, style: null };
+    const obj7 = { style: tmp.sensitivity, children: null };
+    const obj8 = { style: tmp.sensitivityBar, children: null };
+    const obj9 = { ref, style: null };
     const items7 = [, ,];
     ({ sensitivityCommon: arr6[0], sensitivityMin: arr6[1] } = tmp);
-    const obj7 = { flex: tmp17 };
-    items7[2] = obj7;
-    obj6.style = items7;
-    const items8 = [callback(first1, obj6)];
-    const obj8 = { ref: ref1, style: null };
+    const obj10 = { flex: tmp17 };
+    items7[2] = obj10;
+    obj9.style = items7;
+    const items8 = [callback(first1, obj9)];
+    const obj11 = { ref: ref1, style: null };
     const items9 = [, ,];
     ({ sensitivityCommon: arr8[0], sensitivityMax: arr8[1] } = tmp);
-    const obj9 = { flex: 1 - tmp17 };
-    items9[2] = obj9;
-    obj8.style = items9;
-    items8[1] = callback(first1, obj8);
-    obj5.children = items8;
-    const items10 = [ref(first1, obj5), ,];
-    const obj10 = { ref: ref2, style: null };
+    const obj12 = { flex: 1 - tmp17 };
+    items9[2] = obj12;
+    obj11.style = items9;
+    items8[1] = callback(first1, obj11);
+    obj8.children = items8;
+    const items10 = [ref(first1, obj8), ,];
+    const obj13 = { ref: ref2, style: null };
     const items11 = [tmp.sensitivityFill];
-    const obj11 = { left: tmp18[0] };
-    items11[1] = obj11;
-    obj10.style = items11;
-    items10[1] = callback(first1, obj10);
-    const obj12 = {
+    const obj14 = { left: tmp18[0] };
+    items11[1] = obj14;
+    obj13.style = items11;
+    items10[1] = callback(first1, obj13);
+    const obj15 = {
       style: tmp.sensitivitySlider,
       value: sum,
       minimumValue: 0,
@@ -321,9 +318,9 @@ export default function VoiceSensitivity(auto) {
       onResponderGrant: null,
     };
     let intl = tmp10(tmp9[18]).intl;
-    obj12.accessibilityLabel = intl.string(tmp10(tmp9[18]).t["sqUm+k"]);
-    obj12.onValueChange = callback1;
-    obj12.onSlidingComplete = function handleSlidingComplete(arg0) {
+    obj15.accessibilityLabel = intl.string(tmp10(tmp9[18]).t["sqUm+k"]);
+    obj15.onValueChange = callback1;
+    obj15.onSlidingComplete = function handleSlidingComplete(arg0) {
       onThresholdChange(-1 * (100 - arg0));
     };
     const tmp25 = ref;
@@ -334,10 +331,10 @@ export default function VoiceSensitivity(auto) {
     if (tmp10Result.isAndroid()) {
       fn = () => true;
     }
-    obj12.onResponderGrant = fn;
-    items10[2] = tmp27(tmp8Result, obj12);
-    obj4.children = items10;
-    return tmp25(tmp26, obj4);
+    obj15.onResponderGrant = fn;
+    items10[2] = tmp27(tmp8Result, obj15);
+    obj7.children = items10;
+    return tmp25(tmp26, obj7);
   }
   const tmp16 = width(stateFromStores.useState(first2 / 100), 2);
 }

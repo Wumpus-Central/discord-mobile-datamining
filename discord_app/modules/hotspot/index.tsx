@@ -1,6 +1,8 @@
 // discord_app/modules/hotspot/index.tsx
 import HotspotStore from "HotspotStore.tsx";
 
+const require = globalThis.__r;
+
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/hotspot/index.tsx");
 const Constants = fn(7318);

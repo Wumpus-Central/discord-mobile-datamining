@@ -189,19 +189,16 @@ prototype2["getQuality"] = function getQuality(arg0) {
   } else {
     goliveQuality = self.getVideoQuality(localWant);
   }
-  let tmp10 = goliveQuality;
+  let tmp102 = goliveQuality;
   if (null != self.qualityOverwrite) {
     const obj = {
-      encode: null,
-      capture: null,
+      encode: prototype.extend(goliveQuality.encode, self.qualityOverwrite.encode),
+      capture: prototype.extend(goliveQuality.capture, self.qualityOverwrite.capture),
       bitrateMin: null,
       bitrateMax: null,
       bitrateTarget: null,
       localWant: null,
     };
-    tmp10 = WantsVideoQuality;
-    obj.encode = prototype.extend(goliveQuality.encode, self.qualityOverwrite.encode);
-    obj.capture = prototype.extend(goliveQuality.capture, self.qualityOverwrite.capture);
     let bitrateMin = self.qualityOverwrite.bitrateMin;
     if (bitrateMin == null) {
       bitrateMin = goliveQuality.bitrateMin;
@@ -218,9 +215,9 @@ prototype2["getQuality"] = function getQuality(arg0) {
     }
     obj.bitrateTarget = bitrateTarget;
     obj.localWant = goliveQuality.localWant;
-    tmp10 = new tmp10(obj);
+    tmp102 = new WantsVideoQuality(obj);
   }
-  return tmp10;
+  return tmp102;
 };
 prototype2["applyQualityConstraints"] = function applyQualityConstraints(constraints, arg1) {
   const quality = this.getQuality(arg1);
@@ -281,13 +278,13 @@ prototype2["getVideoQuality"] = function getVideoQuality(localWant) {
   const self = this;
   const ladder = this.ladder;
   const resolution = ladder.getResolution(localWant);
-  let obj = { encode: null, capture: null, bitrateMin: null, bitrateMax: null, localWant: null };
-  obj = {};
+  const obj = { encode: null, capture: null, bitrateMin: null, bitrateMax: null, localWant: null };
+  const obj2 = {};
   const result = this.options.videoBitrate.min * resolution.budgetPortion;
   const result1 = this.options.videoBitrate.max * resolution.budgetPortion;
   const merged = Object.assign(resolution);
-  obj.framerate = this.isMuted ? resolution.mutedFramerate : resolution.framerate;
-  obj.encode = obj;
+  obj2.framerate = this.isMuted ? resolution.mutedFramerate : resolution.framerate;
+  obj.encode = obj2;
   obj.capture = {
     width: self.options.videoCapture.width,
     height: self.options.videoCapture.height,

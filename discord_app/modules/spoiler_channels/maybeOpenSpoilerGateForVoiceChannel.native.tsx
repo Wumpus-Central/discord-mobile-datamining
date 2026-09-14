@@ -15,12 +15,11 @@ export const maybeOpenSpoilerGateForVoiceChannel = function maybeOpenSpoilerGate
   const channel = ChannelStore.getChannel(id);
   let tmp2 = null == channel;
   if (!tmp2) {
-    let obj = SpoilerChannelUtils;
-    tmp2 = !obj.shouldShowSpoilerGateForChannelId(id);
+    tmp2 = !SpoilerChannelUtils.shouldShowSpoilerGateForChannelId(id);
   }
   let flag = !tmp2;
   if (!tmp2) {
-    obj = { channelId: channel.id };
+    const obj3 = { channelId: channel.id };
     useAlertStore.openAlert(
       VoicePanelSpoilerAlert.VOICE_PANEL_SPOILER_KEY,
       jsx(VoicePanelSpoilerAlertDefault, { channelId: channel.id }),

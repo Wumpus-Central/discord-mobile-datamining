@@ -28,7 +28,7 @@ function handleRelationshipUpdate() {
     items.items = items1.slice();
   });
 }
-let FetchState = {
+const FetchState = {
   LOADING: "LOADING",
   LOADED_HAS_MORE: "LOADED_HAS_MORE",
   LOADED_FINISHED: "LOADING_FINISHED",
@@ -45,7 +45,7 @@ prototype["getPins"] = function getPins(channelId) {
   return dependencyMap[channelId];
 };
 ChannelPinsStore.displayName = "ChannelPinsStore";
-FetchState = {
+const channelPinsStore = new ChannelPinsStore(DispatcherDefault, {
   CONNECTION_OPEN: function handleConnectionOpen() {
     closure_11 = {};
   },
@@ -133,11 +133,11 @@ FetchState = {
         const findIndexResult = _modDef12.findIndex(tmp20.items, (message) => message.message.id === id);
         if (-1 === findIndexResult) {
           const items1 = tmp20.items;
-          let obj = { message: MessageRecordUtils.createMessageRecord(message.message), pinnedAt: null };
+          const obj5 = { message: MessageRecordUtils.createMessageRecord(message.message), pinnedAt: null };
           const _Date = Date;
           const date = new Date();
-          obj.pinnedAt = date;
-          items1.unshift(obj);
+          obj5.pinnedAt = date;
+          items1.unshift(obj5);
         } else {
           tmp20.items[findIndexResult].message = MessageRecordUtils.updateMessageRecord(
             tmp20.items[findIndexResult].message,
@@ -159,13 +159,12 @@ FetchState = {
       const findIndexResult2 = _modDef12.findIndex(tmp20.items, (message) => message.message.id === id);
       if (-1 !== findIndexResult2) {
         message = tmp.message;
-        obj = MessageRecordUtils;
-        const updateMessageRecordResult = obj.updateMessageRecord(message, message.message);
+        const updateMessageRecordResult = MessageRecordUtils.updateMessageRecord(message, message.message);
         if (updateMessageRecordResult !== message) {
           const items4 = tmp20.items;
           const substr = items4.slice();
-          obj = { pinnedAt: tmp.pinnedAt, message: updateMessageRecordResult };
-          substr[findIndexResult2] = obj;
+          const obj8 = { pinnedAt: tmp.pinnedAt, message: updateMessageRecordResult };
+          substr[findIndexResult2] = obj8;
           dependencyMap[channel_id].items = substr;
         }
       }
@@ -191,8 +190,7 @@ FetchState = {
       }
     }
   },
-};
-const channelPinsStore = new ChannelPinsStore(DispatcherDefault, FetchState);
+});
 const size = fn(2);
 let result = size.fileFinishedImporting("stores/ChannelPinsStore.tsx");
 

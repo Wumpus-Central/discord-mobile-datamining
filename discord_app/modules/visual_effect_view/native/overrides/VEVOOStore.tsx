@@ -3,6 +3,8 @@ import ReactBatchUpdates from "../../../../../discord_common/js/shared/utils/Rea
 import 00560__ from "../../../../../_runtime/metro/00560__.js";
 import size from "../../../../../_runtime/metro/00002__.js";
 
+const require = globalThis.__r;
+
 let closure_2 = {};
 const state = module_560.create(() => closure_2);
 const result = size.fileFinishedImporting("modules/visual_effect_view/native/overrides/VEVOOStore.tsx");

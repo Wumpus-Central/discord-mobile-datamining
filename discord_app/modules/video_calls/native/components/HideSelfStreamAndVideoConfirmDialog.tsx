@@ -5,7 +5,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 const require = fn;
 const View = fn(17).View;
-const constants = fn(17320).SelfStreamAndVideoAlertType;
+const constants = fn(17322).SelfStreamAndVideoAlertType;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 const createStyles = fn(4636);
@@ -40,7 +40,7 @@ export default function HideSelfStreamAndVideoConfirmDialog(arg0) {
     const intl3 = tmp6(1114).intl;
     stringResult1 = intl3.string(tmp6(1114).t.oU1p9O);
   }
-  let obj = {};
+  const obj = {};
   const merged1 = Object.assign(merged);
   obj.title = stringResult;
   obj.style = tmp2.wrapper;
@@ -54,10 +54,11 @@ export default function HideSelfStreamAndVideoConfirmDialog(arg0) {
   const intl6 = tmp6(1114).intl;
   obj.confirmText = intl6.string(tmp6(1114).t["cY+Oob"]);
   obj.onConfirm = onConfirm;
-  obj = { style: tmp2.body, children: null };
-  obj = { style: tmp2.description, variant: "text-sm/medium", children: stringResult1 };
-  const items = [closure_5(tmp6(4632).Text, obj)];
-  const obj1 = {
+  const obj2 = { style: tmp2.body, children: null };
+  const items = [
+    closure_5(tmp6(4632).Text, { style: tmp2.description, variant: "text-sm/medium", children: stringResult1 }),
+  ];
+  const obj4 = {
     accessibilityRole: "link",
     style: null,
     onPress() {
@@ -71,11 +72,11 @@ export default function HideSelfStreamAndVideoConfirmDialog(arg0) {
   };
   const items1 = [,];
   ({ ctaLink: arr2[0], description: arr2[1] } = tmp2);
-  obj1.style = items1;
+  obj4.style = items1;
   const intl7 = tmp6(1114).intl;
-  obj1.children = intl7.string(tmp6(1114).t["JdIQ/Y"]);
-  items[1] = closure_5(tmp6(4632).Text, obj1);
-  obj.children = items;
-  obj.children = closure_6(View, obj);
+  obj4.children = intl7.string(tmp6(1114).t["JdIQ/Y"]);
+  items[1] = closure_5(tmp6(4632).Text, obj4);
+  obj2.children = items;
+  obj.children = closure_6(View, obj2);
   return closure_5(common_AlertDefault, obj);
 }

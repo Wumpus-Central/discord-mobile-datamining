@@ -18,18 +18,16 @@ export const trackUserAvatarUpdated = function trackUserAvatarUpdated(isGuildPro
   if (NEW_ASSET === undefined) {
     NEW_ASSET = ProfilePendingImageTypes.AssetOriginTypes.NEW_ASSET;
   }
-  const obj = {
-    animated: AvatarUtils.isAnimatedIconHash(avatarHash),
-    is_guild_profile: flag,
-    recent_avatar_id: null,
-    is_edited_recent_avatar: null,
-  };
+  const obj2 = { animated: null, is_guild_profile: null, recent_avatar_id: null, is_edited_recent_avatar: null };
+  const obj = AnalyticsUtilsDefault;
+  obj2.animated = AvatarUtils.isAnimatedIconHash(avatarHash);
+  obj2.is_guild_profile = flag;
   let NumberResult;
   if (NEW_ASSET === ProfilePendingImageTypes.AssetOriginTypes.ARCHIVED_ASSET) {
     const _Number = Number;
     NumberResult = Number(avatarId);
   }
-  obj.recent_avatar_id = NumberResult;
-  obj.is_edited_recent_avatar = NEW_ASSET === ProfilePendingImageTypes.AssetOriginTypes.EDITED_ARCHIVED_ASSET;
-  obj.track(AnalyticEvents.USER_AVATAR_UPDATED, obj);
+  obj2.recent_avatar_id = NumberResult;
+  obj2.is_edited_recent_avatar = NEW_ASSET === ProfilePendingImageTypes.AssetOriginTypes.EDITED_ARCHIVED_ASSET;
+  obj.track(AnalyticEvents.USER_AVATAR_UPDATED, obj2);
 };

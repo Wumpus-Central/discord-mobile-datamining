@@ -24,24 +24,24 @@ class ChatViewPopups {
     effect = closure_3.useEffect(() => {
       if (!ref.current) {
         if (closure_2) {
-          let obj = {
+          const obj2 = {
             guildId,
             onHide() {
               ref.current = false;
               return false;
             },
           };
-          GuildDirectoryNicknameUpsellModalActionCreatorsDefault.open(obj);
+          GuildDirectoryNicknameUpsellModalActionCreatorsDefault.open(obj2);
           ref.current = true;
         } else if (showWelcomeModal) {
-          obj = {
+          const obj4 = {
             guildId,
             onHide() {
               ref.current = false;
               return false;
             },
           };
-          const result = obj.openWelcomeActionSheet(obj);
+          const result = WelcomeScreenUtils.openWelcomeActionSheet(obj4);
           ref.current = true;
         }
       }

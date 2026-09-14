@@ -19,15 +19,15 @@ export default noop.memo(
     const optional = chatInputRef.optional;
     ref = undefined;
     dependencyMap = ref;
-    chatInputRef(16726);
-    let obj = { content: threadSettingsDraft.name };
+    let obj = chatInputRef(16728);
+    let obj2 = { content: threadSettingsDraft.name };
     ref = ref.useRef(threadSettingsDraft.name);
     const items = [threadSettingsDraft.parentChannelId];
     const items1 = [threadSettingsDraft];
     const callback = ref.useCallback((current) => {
       if (null != threadSettingsDraft.parentChannelId) {
-        const obj = { name: sanitizeThreadNameDefault(current, false) };
-        obj.changeThreadSettings(tmp.parentChannelId, obj);
+        const obj2 = { name: sanitizeThreadNameDefault(current, false) };
+        DraftActionCreatorsDefault.changeThreadSettings(tmp.parentChannelId, obj2);
         ref.current = current;
       }
     }, items);
@@ -45,9 +45,8 @@ export default noop.memo(
     }, items1);
     const items2 = [chatInputRef];
     const callback2 = ref.useCallback(() => {
-      chatInputRef(ref[7]);
-      const obj = { type: chatInputRef(ref[8]).KeyboardTypes.SYSTEM, context: { keyboardWillOpen: true } };
-      obj.setKeyboardType(obj);
+      const obj = chatInputRef(ref[7]);
+      obj.setKeyboardType({ type: chatInputRef(ref[8]).KeyboardTypes.SYSTEM, context: { keyboardWillOpen: true } });
     }, []);
     const items3 = [threadSettingsDraft.name, ref];
     const callback3 = ref.useCallback(() => {
@@ -70,7 +69,9 @@ export default noop.memo(
         }
       }
     }, items3);
-    const renderErrorResult = obj.renderError(chatInputRef.threadNameError, obj);
+    const renderErrorResult = chatInputRef(16728).renderError(chatInputRef.threadNameError, {
+      content: threadSettingsDraft.name,
+    });
     const items4 = [ChannelStore];
     const stateFromStores = chatInputRef(504).useStateFromStores(items4, () =>
       ChannelStore.getChannel(threadSettingsDraft.parentChannelId),
@@ -88,7 +89,7 @@ export default noop.memo(
     } else {
       stringResult = string(t.j3XWjD);
     }
-    obj = {
+    const obj4 = {
       defaultValue: threadSettingsDraft(5667)(ref),
       errorMessage: renderErrorResult,
       label: stringResult,
@@ -111,19 +112,19 @@ export default noop.memo(
       const intl2 = tmp(1114).intl;
       stringResult1 = intl2.string(tmp(1114).t["/+VEZN"]);
     }
-    obj.accessibilityHint = stringResult1;
-    obj.required = !optional;
-    obj.maxLength = MAX_CHANNEL_NAME_LENGTH;
-    obj.onSubmitEditing = callback3;
-    obj.onFocus = callback2;
-    obj.onBlur = callback1;
-    obj.onChange = callback;
+    obj4.accessibilityHint = stringResult1;
+    obj4.required = !optional;
+    obj4.maxLength = MAX_CHANNEL_NAME_LENGTH;
+    obj4.onSubmitEditing = callback3;
+    obj4.onFocus = callback2;
+    obj4.onBlur = callback1;
+    obj4.onChange = callback;
     if ("" === str) {
       const intl3 = tmp(1114).intl;
       str = intl3.string(tmp(1114).t["Nb2/RE"]);
     }
-    obj.placeholder = str;
-    obj.ref = ref;
+    obj4.placeholder = str;
+    obj4.ref = ref;
     return jsx(chatInputRef(6707).TextInput, {
       defaultValue: threadSettingsDraft(5667)(ref),
       errorMessage: renderErrorResult,

@@ -199,8 +199,8 @@ prototype["handlePostConnectionOpen"] = function handlePostConnectionOpen() {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        let obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -213,8 +213,8 @@ prototype["handlePostConnectionOpen"] = function handlePostConnectionOpen() {
             throw value;
           } else if (arg0 === 2) {
             c10 = 3;
-            obj = { value, done: true };
-            return obj;
+            let obj3 = { value, done: true };
+            return obj3;
           } else {
             closure_134_0 = undefined;
             closure_134_1 = undefined;
@@ -246,8 +246,8 @@ prototype["handlePostConnectionOpen"] = function handlePostConnectionOpen() {
                         if (arg0 === 1) {
                           throw value;
                         } else if (arg0 === 2) {
-                          let obj = { value, done: true };
-                          return obj;
+                          const obj2 = { value, done: true };
+                          return obj2;
                         } else {
                           return { value: "HermesInternal", done: null };
                         }
@@ -260,8 +260,8 @@ prototype["handlePostConnectionOpen"] = function handlePostConnectionOpen() {
                               throw value;
                             } else if (arg0 === 2) {
                               c6 = 3;
-                              obj = { value, done: true };
-                              return obj;
+                              const obj3 = { value, done: true };
+                              return obj3;
                             } else {
                               closure_2 = tmp3;
                               closure_1 = tmp7;
@@ -280,8 +280,8 @@ prototype["handlePostConnectionOpen"] = function handlePostConnectionOpen() {
                                       const items = [tmp34];
                                       c5 = 3;
                                       c6 = 1;
-                                      const obj1 = { value: closure_2_10.loadGuildIds(items), done: false };
-                                      return obj1;
+                                      const obj4 = { value: closure_2_10.loadGuildIds(items), done: false };
+                                      return obj4;
                                     }
                                   }
                                 }
@@ -295,16 +295,16 @@ prototype["handlePostConnectionOpen"] = function handlePostConnectionOpen() {
                             closure_129_1 = closure_3;
                             closure_2_15.warn("couldn't optimstically write basic_channel:", closure_129_1);
                             c6 = 3;
-                            const obj2 = { value: { v: "r" }, done: true };
-                            return obj2;
+                            const obj5 = { value: { v: "r" }, done: true };
+                            return obj5;
                           } else if (2 === tmp7) {
                             if (arg0 === 1) {
                               c6 = 3;
                               throw value;
                             } else if (arg0 === 2) {
                               c6 = 3;
-                              const obj3 = { value, done: true };
-                              return obj3;
+                              const obj6 = { value, done: true };
+                              return obj6;
                             } else {
                               c6 = 3;
                               return { value: "HermesInternal", done: null };
@@ -316,13 +316,13 @@ prototype["handlePostConnectionOpen"] = function handlePostConnectionOpen() {
                             } else if (arg0 === 2) {
                               c4 = 0;
                               c6 = 3;
-                              const obj4 = { value, done: true };
-                              return obj4;
+                              const obj7 = { value, done: true };
+                              return obj7;
                             } else {
                               c5 = 4;
                               c6 = 1;
-                              const obj5 = { value: closure_130_1.transaction((database) => closure_0.syncOne(synced, database), "handlePostConnectionOpen"), done: false };
-                              return obj5;
+                              const obj8 = { value: closure_130_1.transaction((database) => closure_0.syncOne(synced, database), "handlePostConnectionOpen"), done: false };
+                              return obj8;
                             }
                           } else if (arg0 === 1) {
                             c6 = 3;
@@ -330,14 +330,14 @@ prototype["handlePostConnectionOpen"] = function handlePostConnectionOpen() {
                           } else if (arg0 === 2) {
                             c4 = 0;
                             c6 = 3;
-                            const obj6 = { value, done: true };
-                            return obj6;
+                            const obj9 = { value, done: true };
+                            return obj9;
                           } else {
                             c4 = 0;
                             const promise = new Promise((arg0) => setTimeout(arg0, 1000));
                             c5 = 2;
                             c6 = 1;
-                            obj = { value: promise, done: false };
+                            const obj = { value: promise, done: false };
                             return obj;
                           }
                         } catch (tmp25) {
@@ -389,8 +389,8 @@ prototype["handlePostConnectionOpen"] = function handlePostConnectionOpen() {
                   c7 = 0;
                   synced.return();
                   c10 = 3;
-                  let obj1 = { value, done: true };
-                  return obj1;
+                  let obj4 = { value, done: true };
+                  return obj4;
                 } else {
                   const iter2 = method(closure_2);
                   HermesBuiltin.ensureObject("iterator.return() did not return an object");
@@ -398,7 +398,7 @@ prototype["handlePostConnectionOpen"] = function handlePostConnectionOpen() {
                     c7 = 0;
                     synced.return();
                     c10 = 3;
-                    obj = { value: iter2.value, done: true };
+                    let obj = { value: iter2.value, done: true };
                     return obj;
                   } else {
                     c9 = 2;
@@ -444,8 +444,8 @@ prototype["handlePostConnectionOpen"] = function handlePostConnectionOpen() {
                 c7 = 0;
                 synced.return();
                 c10 = 3;
-                let obj2 = { value: closure_134_2.v, done: true };
-                return obj2;
+                let obj5 = { value: closure_134_2.v, done: true };
+                return obj5;
               }
             }
             c7 = 0;
@@ -496,11 +496,11 @@ prototype["handleGuildDelete"] = function handleGuildDelete(guild, arg1) {
 };
 prototype["handleGuildRoleUpdate"] = function handleGuildRoleUpdate(role, iter) {
   role = role.role;
-  role = GuildRoleStore.getRole(role.guildId, role.id);
-  let equalsResult = null != role;
+  const role1 = GuildRoleStore.getRole(role.guildId, role.id);
+  let equalsResult = null != role1;
   if (equalsResult) {
     const deserializer = BigFlagUtilsAll;
-    equalsResult = BigFlagUtilsAll.equals(deserializer.deserialize(role.permissions), role.permissions);
+    equalsResult = BigFlagUtilsAll.equals(deserializer.deserialize(role.permissions), role1.permissions);
   }
   if (!equalsResult) {
     const self = this;
@@ -604,10 +604,10 @@ prototype["syncOne"] = function syncOne(id, database) {
   }
   return flag;
 };
-let size = Object.create(GuildBasicChannels.prototype);
-let closure_129_0 = size;
-size.synced = null;
-size.actions = {
+let obj2 = Object.create(GuildBasicChannels.prototype);
+let closure_129_0 = obj2;
+obj2.synced = null;
+obj2.actions = {
   BACKGROUND_SYNC(arg0, arg1) {
     return obj.handleBackgroundSync(arg0, arg1);
   },
@@ -645,7 +645,7 @@ size.actions = {
     return obj.handleWriteCaches(arg0, arg1);
   }
 };
-size = fn(2);
+const size = fn(2);
 let result = size.fileFinishedImporting("modules/app_database/modules/GuildBasicChannels.tsx");
 
-export default size;
+export default obj2;

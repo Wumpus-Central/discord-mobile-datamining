@@ -15,11 +15,9 @@ function ShopEmptyState() {
   return jsx(native.EmptyState, { style: { marginTop: 42 }, Illustration: generated_NoResults.NoResults, body: null });
 }
 const jsx = fn(21).jsx;
-fn(4636);
-let createStyles = { contentContainer: null };
-createStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
-createStyles.contentContainer = createStyles;
-let closure_4 = createStyles.createStyles(createStyles);
+const createStyles = fn(4636);
+const obj2 = { contentContainer: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST } };
+let closure_4 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/native/ShopFlashList.tsx");
 
@@ -27,28 +25,18 @@ export default function ShopFlashList(initialScrollIndex) {
   initialScrollIndex = initialScrollIndex.initialScrollIndex;
   ({ data, renderItem, getItemType } = initialScrollIndex);
   const ref = noop.useRef(null);
-  let obj = useScrollToInitialIndexOnce;
+  const tmp2 = closure_4();
   let tmp5 = null != initialScrollIndex;
   if (tmp5) {
     tmp5 = initialScrollIndex > 0;
   }
-  obj = {
+  const obj = useScrollToInitialIndexOnce;
+  const scrollToInitialIndexOnce = obj.useScrollToInitialIndexOnce({
     shouldScroll: tmp5,
     initialScrollIndex,
     flashListRef: ref,
     afterMs: useScrollToInitialIndexOnce.INITIAL_SCROLL_DELAY_MS,
-  };
-  const scrollToInitialIndexOnce = obj.useScrollToInitialIndexOnce(obj);
-  obj = {
-    ref,
-    data,
-    renderItem,
-    showsVerticalScrollIndicator: false,
-    ListEmptyComponent: ShopEmptyState,
-    initialScrollIndex,
-    getItemType,
-    contentContainerStyle: closure_4().contentContainer,
-  };
+  });
   return jsx(_mod9003.FlashList, {
     ref,
     data,
@@ -57,6 +45,6 @@ export default function ShopFlashList(initialScrollIndex) {
     ListEmptyComponent: ShopEmptyState,
     initialScrollIndex,
     getItemType,
-    contentContainerStyle: closure_4().contentContainer,
+    contentContainerStyle: tmp2.contentContainer,
   });
 }

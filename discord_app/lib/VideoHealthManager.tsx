@@ -85,11 +85,10 @@ prototype["updateFps"] = function updateFps(arg0, arg1, arg2) {
       if (calculateFpsResult >= 0) {
         const _Number = Number;
         if (Number.isFinite(calculateFpsResult)) {
-          let arr = self.perUserFpsWindow[arg0];
-          arr = arr.push(calculateFpsResult);
+          self.perUserFpsWindow[arg0].push(calculateFpsResult);
           if (self.perUserFpsWindow[arg0].length >= self.windowLength) {
             if (self.perUserFpsWindow[arg0].length > self.windowLength) {
-              arr = self.perUserFpsWindow[arg0].shift();
+              self.perUserFpsWindow[arg0].shift();
             }
             if (arr3.filter((item) => item < self.fpsThreshold).length >= self.fpsWindowBorderlineCount) {
               const logger = self.logger;
@@ -130,15 +129,15 @@ prototype["startReenableBackoffTimer"] = function startReenableBackoffTimer(arg0
     if (null !== lastBackoffTime) {
       num2 = 1;
       if (expBackoffFactor <= 16) {
-        let obj = TimeUtils;
         num2 = 1;
         if (self.elapsedSeconds(obj.now(), lastBackoffTime) <= 600) {
           num2 = expBackoffFactor * 2;
         }
+        obj = TimeUtils;
       }
     }
-    obj = { lastBackoffTime: TimeUtils.now(), expBackoffFactor: num2 };
-    self.retryBackoffCache[arg0] = obj;
+    const obj2 = { lastBackoffTime: TimeUtils.now(), expBackoffFactor: num2 };
+    self.retryBackoffCache[arg0] = obj2;
     const result = num2 * self.backoffTimeSec;
     const result1 = result * DurationsDefault.Millis.SECOND;
     const logger2 = self.logger;
@@ -160,13 +159,13 @@ prototype["tryReenableQueue"] = function tryReenableQueue() {
   if (!this.disabled) {
     if (null == self.probingUserId) {
       const enableQueue = self.enableQueue;
-      let arr = enableQueue.shift();
+      const arr = enableQueue.shift();
       if (null != arr) {
         if (!self.reenableVideo(arr)) {
           const enableQueue1 = self.enableQueue;
-          arr = enableQueue1.shift();
-          while (null != arr) {
-            if (self.reenableVideo(arr)) {
+          const arr2 = enableQueue1.shift();
+          while (null != arr2) {
+            if (self.reenableVideo(arr2)) {
               break;
             }
           }

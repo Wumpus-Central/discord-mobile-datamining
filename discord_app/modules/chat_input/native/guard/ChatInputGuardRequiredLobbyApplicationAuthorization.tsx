@@ -26,32 +26,32 @@ export default noop.memo(function ChatInputGuardRequiredLobbyApplicationAuthoriz
     if (null != requiredLinkedLobbyApplication) {
       const iconSource = requiredLinkedLobbyApplication.getIconSource(80);
       if (null != iconSource) {
-        let obj = { style: tmp.icon, source: iconSource };
+        const obj = { style: tmp.icon, source: iconSource };
         const tmp5 = <Image style={tmp.icon} source={iconSource} />;
       }
       if (shouldRelaunchLinkedLobbyApplication) {
-        obj = { type: "simple-action", icon: tmp5, message: null };
+        const obj2 = { type: "simple-action", icon: tmp5, message: null };
         const intl3 = connectionEntrypointUrl(1114).intl;
-        obj = { name: requiredLinkedLobbyApplication.name };
-        obj.message = intl3.format(connectionEntrypointUrl(1114).t["SU2mY/"], obj);
-        return jsx(ChatInputGuardDefault, { name: requiredLinkedLobbyApplication.name });
+        const obj3 = { name: requiredLinkedLobbyApplication.name };
+        obj2.message = intl3.format(connectionEntrypointUrl(1114).t["SU2mY/"], obj3);
+        return jsx(ChatInputGuardDefault, { type: "simple-action", icon: tmp5, message: null });
       } else {
         connectionEntrypointUrl = requiredLinkedLobbyApplication.connectionEntrypointUrl;
-        const obj1 = { type: "simple-action", icon: tmp5, message: null, actionLabel: null, actionOnPress: null };
+        const obj4 = { type: "simple-action", icon: tmp5, message: null, actionLabel: null, actionOnPress: null };
         const intl = connectionEntrypointUrl(1114).intl;
-        const obj2 = { name: requiredLinkedLobbyApplication.name };
-        obj1.message = intl.format(connectionEntrypointUrl(1114).t.EvDn1D, obj2);
+        const obj5 = { name: requiredLinkedLobbyApplication.name };
+        obj4.message = intl.format(connectionEntrypointUrl(1114).t.EvDn1D, obj5);
         let stringResult;
         if (null != connectionEntrypointUrl) {
           const intl2 = tmp10(1114).intl;
           stringResult = intl2.string(tmp10(1114).t.S0W8Z5);
         }
-        obj1.actionLabel = stringResult;
+        obj4.actionLabel = stringResult;
         let fn;
         if (null != connectionEntrypointUrl) {
           fn = () => LinkingDefault.openURLExternally(connectionEntrypointUrl);
         }
-        obj1.actionOnPress = fn;
+        obj4.actionOnPress = fn;
         return jsx(ChatInputGuardDefault, {
           type: "simple-action",
           icon: tmp5,

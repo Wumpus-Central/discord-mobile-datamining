@@ -35,10 +35,9 @@ export default AuthCommandsFactoryDefault(
       closure_1 = arg1;
       let tmp2;
       if (null != integrationType) {
-        let obj = importDefault;
         value = undefined;
         if (importDefault != null) {
-          value = obj.get(integrationType);
+          value = importDefault.get(integrationType);
         }
         tmp2 = value;
       }
@@ -49,7 +48,7 @@ export default AuthCommandsFactoryDefault(
       if (application == null) {
         application = ApplicationStore.getApplication(clientId);
       }
-      obj = {
+      const obj2 = {
         clientId,
         scopes: null,
         responseType: null,
@@ -72,22 +71,22 @@ export default AuthCommandsFactoryDefault(
       if (dependencyMap == null) {
         items = [];
       }
-      obj.scopes = items;
-      obj.responseType = responseType;
-      obj.redirectUri = redirectUri;
-      obj.codeChallenge = codeChallenge;
-      obj.codeChallengeMethod = codeChallengeMethod;
-      obj.state = state;
-      obj.guildId = guildId;
-      obj.channelId = channelId;
-      obj.permissions = permissions;
-      obj.prompt = _prompt;
+      obj2.scopes = items;
+      obj2.responseType = responseType;
+      obj2.redirectUri = redirectUri;
+      obj2.codeChallenge = codeChallenge;
+      obj2.codeChallengeMethod = codeChallengeMethod;
+      obj2.state = state;
+      obj2.guildId = guildId;
+      obj2.channelId = channelId;
+      obj2.permissions = permissions;
+      obj2.prompt = _prompt;
       let tmp8 = closure_1_12;
       if (typeof closure_1_12 !== "boolean") {
         tmp8 = "true" === tmp7;
       }
-      obj.disableGuildSelect = tmp8;
-      obj.callback = function callback(location) {
+      obj2.disableGuildSelect = tmp8;
+      obj2.callback = function callback(location) {
         if (null != location.location) {
           closure_0(location.location);
         } else {
@@ -96,11 +95,11 @@ export default AuthCommandsFactoryDefault(
           closure_1(tmp8);
         }
       };
-      obj.isEmbeddedFlow = ApplicationFlagUtils.hasApplicationFlag(application, constants.EMBEDDED);
-      obj.disclosures = disclosures;
-      obj.integrationType = integrationType;
+      obj2.isEmbeddedFlow = ApplicationFlagUtils.hasApplicationFlag(application, constants.EMBEDDED);
+      obj2.disclosures = disclosures;
+      obj2.integrationType = integrationType;
       const ComponentDispatch = ComponentDispatchUtils.ComponentDispatch;
-      ComponentDispatch.dispatch(SHOW_OAUTH2_MODAL.SHOW_OAUTH2_MODAL, obj);
+      ComponentDispatch.dispatch(SHOW_OAUTH2_MODAL.SHOW_OAUTH2_MODAL, obj2);
     });
   },
   function onAuthorizeValidationPassed() {},

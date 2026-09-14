@@ -1,8 +1,8 @@
 // discord_app/modules/mobile_native_updater/MobileNativeUpdateUtils.tsx
 import LoggerDefault from "../debug/Logger.tsx";
 import ConstantsIOS from "../../ConstantsIOS.tsx";
-import PlatformUtils from "../../utils/PlatformUtils.tsx";
 import HTTPUtils from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import PlatformUtils from "../../utils/PlatformUtils.tsx";
 import Linking from "../../lib/native/Linking.tsx";
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 
@@ -15,8 +15,8 @@ let closure_5 = async function _checkForNewerBuild() {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -29,8 +29,8 @@ let closure_5 = async function _checkForNewerBuild() {
           throw value;
         } else if (arg0 === 2) {
           c3 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           closure_1 = tmp2;
           closure_0 = tmp5;
@@ -43,15 +43,15 @@ let closure_5 = async function _checkForNewerBuild() {
             const _HermesInternal2 = HermesInternal;
             logger.info("Checking " + UPDATE_CONFIG.url + " for updates");
             const HTTP = HTTPUtils.HTTP;
-            const obj1 = {
+            const obj4 = {
               url: UPDATE_CONFIG.url.toString(),
               headers: { Accept: "application/json" },
               rejectWithError: false,
             };
             c2 = 1;
             c3 = 1;
-            const obj2 = { value: HTTP.get(obj1), done: false };
-            return obj2;
+            const obj5 = { value: HTTP.get(obj4), done: false };
+            return obj5;
           }
         }
       } else if (arg0 === 1) {
@@ -59,11 +59,11 @@ let closure_5 = async function _checkForNewerBuild() {
         throw value;
       } else if (arg0 === 2) {
         c3 = 3;
-        obj = { value, done: true };
+        const obj = { value, done: true };
         return obj;
       } else {
         closure_128_0 = value;
-        const obj3 = {
+        const obj6 = {
           build: closure_128_0.body.build,
           version: closure_128_0.body.version,
           buildTimestamp: null,
@@ -72,9 +72,9 @@ let closure_5 = async function _checkForNewerBuild() {
         let infoResult2 = globalThis;
         const _Date = Date;
         const date = new Date(closure_128_0.body.build_timestamp);
-        obj3.buildTimestamp = date;
-        obj3.urls = closure_128_0.body.urls;
-        closure_128_1 = obj3;
+        obj6.buildTimestamp = date;
+        obj6.urls = closure_128_0.body.urls;
+        closure_128_1 = obj6;
         if (closure_128_1.build <= closure_129_3.currentBuild) {
           const _HermesInternal = HermesInternal;
           closure_129_4.info("Update build " + closure_128_1.build + " is older than " + closure_129_3.currentBuild);

@@ -107,8 +107,8 @@ function useOnActivityItemSelected(arg0) {
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
-          let obj = { value, done: true };
-          return obj;
+          const obj2 = { value, done: true };
+          return obj2;
         } else {
           return { value: "HermesInternal", done: null };
         }
@@ -121,26 +121,25 @@ function useOnActivityItemSelected(arg0) {
               throw value;
             } else if (arg0 === 2) {
               c5 = 3;
-              obj = { value, done: true };
-              return obj;
+              const obj3 = { value, done: true };
+              return obj3;
             } else {
               closure_0 = tmp5;
               closure_128_0 = undefined;
               if (closure_15) {
                 c3 = 1;
-                let obj8 = tmp3(tmp44[18]);
-                const obj1 = { applicationId: str, surface, analyticsContext: null };
-                const obj2 = { isStart: true, analyticsLocations, source, channelId: null };
+                const obj4 = { applicationId: str, surface, analyticsContext: null };
+                const obj5 = { isStart: true, analyticsLocations, source, channelId: null };
                 let id;
                 if ("channel" === context.type) {
                   id = context.channel.id;
                 }
-                obj2.channelId = id;
-                obj1.analyticsContext = obj2;
+                obj5.channelId = id;
+                obj4.analyticsContext = obj5;
                 c4 = 2;
                 c5 = 1;
-                const obj3 = { value: obj8.launchFrame(obj1), done: false };
-                return obj3;
+                const obj7 = { value: tmp3(tmp44[18]).launchFrame(obj4), done: false };
+                return obj7;
               } else {
                 let id1;
                 if ("channel" === context.type) {
@@ -149,15 +148,13 @@ function useOnActivityItemSelected(arg0) {
                 closure_128_0 = id1;
                 if (null != require) {
                   c3 = 2;
-                  let obj5 = tmp3(tmp44[19]);
-                  const obj4 = { recipientIds: tmp18, navigateToChannel: true };
+                  const obj8 = { recipientIds: tmp18, navigateToChannel: true };
                   c4 = 5;
                   c5 = 1;
-                  obj5 = { value: null, done: false };
-                  obj5.value = obj5.openPrivateChannel(obj4);
-                  return obj5;
+                  const obj10 = { value: tmp3(tmp44[19]).openPrivateChannel(obj8), done: false };
+                  return obj10;
                 } else {
-                  const obj6 = {
+                  const obj11 = {
                     targetApplicationId: closure_129_12,
                     locationObject: closure_129_2,
                     channelId: closure_128_0,
@@ -170,7 +167,7 @@ function useOnActivityItemSelected(arg0) {
                     referrerId: closure_129_10,
                     onConfirmActivityLaunchChecksAlertOpen: closure_129_11,
                   };
-                  tmp3(tmp44[20])(obj6).then((result) => {
+                  tmp3(tmp44[20])(obj11).then((result) => {
                     let tmp = result;
                     if (result) {
                       let tmp2Result;
@@ -184,7 +181,7 @@ function useOnActivityItemSelected(arg0) {
                   });
                   c4 = 4;
                   c5 = 1;
-                  const promise = tmp3(tmp44[20])(obj6);
+                  const promise = tmp3(tmp44[20])(obj11);
                 }
               }
             }
@@ -200,12 +197,12 @@ function useOnActivityItemSelected(arg0) {
               } else if (arg0 === 2) {
                 c3 = 0;
                 c5 = 3;
-                const obj7 = { value, done: true };
-                return obj7;
+                const obj12 = { value, done: true };
+                return obj12;
               } else {
                 if (closure_129_4 != null) {
-                  obj8 = { applicationId: closure_129_12 };
-                  tmp12(obj8);
+                  const obj13 = { applicationId: closure_129_12 };
+                  tmp12(obj13);
                 }
                 c3 = 0;
               }
@@ -219,8 +216,8 @@ function useOnActivityItemSelected(arg0) {
                 throw value;
               } else if (arg0 === 2) {
                 c5 = 3;
-                const obj9 = { value, done: true };
-                return obj9;
+                const obj14 = { value, done: true };
+                return obj14;
               }
             } else if (arg0 === 1) {
               c5 = 3;
@@ -234,7 +231,7 @@ function useOnActivityItemSelected(arg0) {
           }
           c3 = 0;
           c5 = 3;
-          obj = { value, done: true };
+          let obj = { value, done: true };
           return obj;
         } catch (tmp44) {
           if (tmp4 === c3) {
@@ -257,8 +254,8 @@ function useOnActivityItemSelected(arg0) {
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
-          let obj = { value, done: true };
-          return obj;
+          const obj2 = { value, done: true };
+          return obj2;
         } else {
           return { value: "HermesInternal", done: null };
         }
@@ -271,10 +268,10 @@ function useOnActivityItemSelected(arg0) {
               throw value;
             } else if (arg0 === 2) {
               c0 = 3;
-              obj = { value, done: true };
-              return obj;
+              const obj3 = { value, done: true };
+              return obj3;
             } else if (!launchingActivity.isLaunchingActivity()) {
-              const obj1 = {
+              const obj4 = {
                 applicationId: str,
                 activityChannelId: null,
                 locationObject: null,
@@ -289,19 +286,19 @@ function useOnActivityItemSelected(arg0) {
               if ("channel" === context.type) {
                 id = context.channel.id;
               }
-              obj1.activityChannelId = id;
-              obj1.locationObject = locationObject;
-              obj1.analyticsLocations = analyticsLocations;
-              obj1.componentId = componentId;
-              obj1.sectionName = sectionName;
-              obj1.source = source;
-              obj1.customId = customId;
-              obj1.referrerId = referrerId;
+              obj4.activityChannelId = id;
+              obj4.locationObject = locationObject;
+              obj4.analyticsLocations = analyticsLocations;
+              obj4.componentId = componentId;
+              obj4.sectionName = sectionName;
+              obj4.source = source;
+              obj4.customId = customId;
+              obj4.referrerId = referrerId;
               const tmp7 = v1(locationObject[21]);
               v1 = 1;
               c0 = 1;
-              const obj2 = {
-                value: v1(locationObject[21])(obj1).then((result) => {
+              const obj5 = {
+                value: v1(locationObject[21])(obj4).then((result) => {
                   let tmp = result;
                   if (result) {
                     let tmp2Result;
@@ -315,14 +312,14 @@ function useOnActivityItemSelected(arg0) {
                 }),
                 done: false,
               };
-              return obj2;
+              return obj5;
             }
           } else if (arg0 === 1) {
             c0 = 3;
             throw value;
           } else if (arg0 === 2) {
             c0 = 3;
-            obj = { value, done: true };
+            let obj = { value, done: true };
             return obj;
           }
           c0 = 3;
@@ -338,12 +335,12 @@ function useOnActivityItemSelected(arg0) {
       ? () => {
           if (!EmbeddedActivitiesStore.isLaunchingActivity()) {
             if (null != closure_14) {
-              let obj = { location: tmp.location, applicationId: str };
+              const obj = { location: tmp.location, applicationId: str };
               asyncGeneratorStep.leaveActivity(obj);
             }
             if (closure_1_4 != null) {
-              obj = { applicationId: str };
-              tmp6(obj);
+              const obj2 = { applicationId: str };
+              tmp6(obj2);
             }
           }
         }
@@ -370,7 +367,7 @@ export default function useActivityShelfItem(backgroundResolution) {
   const application = activityItem.application;
   const activity = activityItem.activity;
   ({ launchingComponentId, commandOrigin, source } = backgroundResolution);
-  let obj = PlatformUtils;
+  const obj = PlatformUtils;
   const tmp5 = activity.client_platform_config[getPlatformDefault(undefined, obj.getOS(obj))];
   const timestamp = Date.now();
   let tmp7 = null != tmp5.label_until;
@@ -385,22 +382,27 @@ export default function useActivityShelfItem(backgroundResolution) {
     const _Date2 = Date;
     tmp7 = timestamp > Date.parse(tmp5.label_from);
   }
-  obj = { applicationId: application.id, size: num, names: assetNames, format: "webp" };
   let tmp9 = null;
+  const obj2 = { applicationId: application.id, size: num, names: assetNames, format: "webp" };
   if (null != activity.activity_preview_video_asset_id) {
     tmp9 = getPreviewVideoAssetUrlDefault(application.id, activity.activity_preview_video_asset_id);
   }
   let channel;
-  let tmpResult = useEmbeddedAppsForChannelDefault;
+  const tmp8 = useEmbeddedActivityBackgroundDefault({
+    applicationId: application.id,
+    size: num,
+    names: assetNames,
+    format: "webp",
+  });
   if ("channel" === context.type) {
     channel = context.channel;
   }
-  const tmp8 = useEmbeddedActivityBackgroundDefault(obj);
-  obj = { context, applicationId: application.id };
-  const found = tmpResult(channel).find(
+  const tmpResult = useEmbeddedAppsForChannelDefault;
+  const found = useEmbeddedAppsForChannelDefault(channel).find(
     (embeddedActivity) => application.id === embeddedActivity.embeddedActivity.applicationId,
   );
-  const obj1 = {
+  const obj3 = { context, applicationId: application.id };
+  const obj4 = {
     application: activityItem.application,
     context,
     locationObject,
@@ -410,29 +412,30 @@ export default function useActivityShelfItem(backgroundResolution) {
     commandOrigin,
     source,
   };
-  const tmpResultResult = tmpResult(channel);
-  const tmp13 = useActivityAction(obj);
-  let tmp4Result = ApplicationFlagUtils;
+  const tmpResultResult = useEmbeddedAppsForChannelDefault(channel);
+  const tmp13 = useActivityAction({ context, applicationId: application.id });
+  const tmp14 = useOnActivityItemSelected(obj4);
   if (tmp4Result.hasApplicationFlag(application, ApplicationFlags.EMBEDDED_RELEASED)) {
-    tmpResult = getPlatformDefault;
-    tmp4Result = PlatformUtils;
+    const tmp4Result3 = PlatformUtils;
     const str =
-      activityItem.activity.client_platform_config[tmpResult(undefined, tmp4Result.getOS(tmp4Result))].release_phase;
+      activityItem.activity.client_platform_config[getPlatformDefault(undefined, tmp4Result3.getOS(tmp4Result3))]
+        .release_phase;
     let replaced;
     if (STAFF_RELEASE_PHASES.includes(str)) {
       replaced = str.replace("_", " ").replace(/(^\w|\s\w)/g, (str) => str.toUpperCase());
       const str4 = str.replace("_", " ");
     }
     const tmp16 = replaced;
+    const tmpResult2 = getPlatformDefault;
   } else {
     ApplicationFlagUtils;
   }
-  const obj2 = {
+  const obj5 = {
     imageBackground: tmp8,
     videoUrl: tmp9,
     joinableEmbeddedApp: found,
     activityAction: tmp13,
-    onActivityItemSelected: useOnActivityItemSelected(obj1),
+    onActivityItemSelected: tmp14,
     labelType: null,
     staffReleasePhase: null,
   };
@@ -441,18 +444,18 @@ export default function useActivityShelfItem(backgroundResolution) {
   } else {
     NONE = Server.EmbeddedActivityLabelTypes.NONE;
   }
-  obj2.labelType = NONE;
-  obj2.staffReleasePhase = tmp16;
-  return obj2;
+  obj5.labelType = NONE;
+  obj5.staffReleasePhase = tmp16;
+  return obj5;
 }
 export { ActivityAction };
 export const getStaffReleasePhase = function getStaffReleasePhase(application, arg1) {
   if (!obj.hasApplicationFlag(application, ApplicationFlags.EMBEDDED_RELEASED)) {
-    let tmpResult = ApplicationFlagUtils;
+    ApplicationFlagUtils;
   }
   obj = ApplicationFlagUtils;
-  tmpResult = PlatformUtils;
-  const str = arg1.client_platform_config[getPlatformDefault(undefined, tmpResult.getOS(tmpResult))].release_phase;
+  const tmpResult2 = PlatformUtils;
+  const str = arg1.client_platform_config[getPlatformDefault(undefined, tmpResult2.getOS(tmpResult2))].release_phase;
   let replaced;
   if (STAFF_RELEASE_PHASES.includes(str)) {
     replaced = str.replace("_", " ").replace(/(^\w|\s\w)/g, (str) => str.toUpperCase());

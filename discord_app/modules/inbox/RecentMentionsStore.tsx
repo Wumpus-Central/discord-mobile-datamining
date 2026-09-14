@@ -37,24 +37,28 @@ function hasMentionNotificationEnabled(channel_id) {
   if (null != basicChannel) {
     const GUILD_TEXTUAL = constants4.GUILD_TEXTUAL;
     if (GUILD_TEXTUAL.has(basicChannel.type)) {
-      let obj = UserGuildSettingsStore;
       if (UserGuildSettingsStore.isGuildOrCategoryOrChannelMuted(basicChannel.guild_id, basicChannel.id)) {
         return false;
       } else {
         if (obj2.shouldShowAgeGateForChannelId(basicChannel.id)) {
           return false;
         } else {
-          const result = obj.resolvedMessageNotifications(basicChannel);
+          const result = UserGuildSettingsStore.resolvedMessageNotifications(basicChannel);
           if (constants3.ALL_MESSAGES === result) {
             return true;
           } else if (constants3.ONLY_MENTIONS === result) {
-            const result1 = obj.isSuppressEveryoneEnabled(basicChannel.guild_id);
-            const result2 = obj.isSuppressRolesEnabled(basicChannel.guild_id);
+            const result1 = UserGuildSettingsStore.isSuppressEveryoneEnabled(basicChannel.guild_id);
+            const result2 = UserGuildSettingsStore.isSuppressRolesEnabled(basicChannel.guild_id);
             const currentUser = UserStore.getCurrentUser();
             let tmp10 = null != currentUser;
             if (tmp10) {
-              obj = { message: channel_id, userId: currentUser.id, suppressEveryone: result1, suppressRoles: result2 };
-              tmp10 = isMessageMentionedDefault(obj);
+              const obj3 = {
+                message: channel_id,
+                userId: currentUser.id,
+                suppressEveryone: result1,
+                suppressRoles: result2,
+              };
+              tmp10 = isMessageMentionedDefault(obj3);
             }
             return tmp10;
           } else {
@@ -102,7 +106,7 @@ function parseMessage(message) {
             }
             tmp12 = message;
           }
-          let obj = {
+          const obj = {
             message: tmp12,
             userId: id,
             suppressEveryone: !closure_23.everyoneFilter,
@@ -115,13 +119,13 @@ function parseMessage(message) {
               tmp2ResultResult = ReadStateStore.ackMessageId(channel.id) !== tmp12.id;
             }
             if (tmp2ResultResult) {
-              obj = {
+              const obj3 = {
                 message: tmp12,
                 userId: id,
                 suppressEveryone: UserGuildSettingsStore.isSuppressEveryoneEnabled(channel.getGuildId()),
                 suppressRoles: UserGuildSettingsStore.isSuppressRolesEnabled(channel.getGuildId()),
               };
-              tmp2ResultResult = isMessageMentionedDefault(obj);
+              tmp2ResultResult = isMessageMentionedDefault(obj3);
               const tmp2Result = isMessageMentionedDefault;
             }
             tmp20 = tmp12;
@@ -318,8 +322,11 @@ let dependencyMap = {};
 let c21 = false;
 let c22 = true;
 let Storage = fn(510).Storage;
-let obj = { guildFilter: RecentMentionsFilters.ALL_SERVERS, everyoneFilter: true, roleFilter: true };
-let closure_23 = Storage.get("recentMentionFilterSettings", obj);
+let closure_23 = Storage.get("recentMentionFilterSettings", {
+  guildFilter: RecentMentionsFilters.ALL_SERVERS,
+  everyoneFilter: true,
+  roleFilter: true,
+});
 let c24 = false;
 let closure_25 = 0;
 let c26 = false;
@@ -419,7 +426,7 @@ prototype["getMentionCountForChannel"] = function getMentionCountForChannel(arg0
   return num;
 };
 RecentMentionsStore.displayName = "RecentMentionsStore";
-obj = {
+const recentMentionsStore = new RecentMentionsStore(DispatcherDefault, {
   LOAD_RECENT_MENTIONS: function handleLoadMentions(guildId) {
     c21 = true;
     let tmp = null == guildId.guildId;
@@ -571,8 +578,8 @@ obj = {
     message = message.message;
     const currentUser = UserStore.getCurrentUser();
     if (null != currentUser) {
-      let obj = { rawMessage: message, userId: currentUser.id, suppressRoles: false, suppressEveryone: false };
-      if (obj2.isRawMessageMentioned(obj)) {
+      const obj3 = { rawMessage: message, userId: currentUser.id, suppressRoles: false, suppressEveryone: false };
+      if (obj2.isRawMessageMentioned(obj3)) {
         const tmp3 = parseMessage(message, message.channelId);
         if (null == tmp3) {
           return false;
@@ -580,7 +587,7 @@ obj = {
           substr = substr.slice();
           substr.unshift(tmp3);
           closure_20[tmp3.id] = true;
-          obj = { addedMessages: null };
+          const obj = { addedMessages: null };
           const items = [tmp3];
           obj.addedMessages = items;
           ({ addedMessages, deletedMessages } = obj);
@@ -634,8 +641,7 @@ obj = {
   SET_RECENT_MENTIONS_STALE: function handleSetRecentMentionsStale() {
     c26 = true;
   },
-};
-const recentMentionsStore = new RecentMentionsStore(DispatcherDefault, obj);
+});
 let size = fn(2);
 let result = size.fileFinishedImporting("modules/inbox/RecentMentionsStore.tsx");
 

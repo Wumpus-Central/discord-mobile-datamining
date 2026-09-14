@@ -10,20 +10,19 @@ const result = size.fileFinishedImporting("modules/app_launcher/native/screens/h
 export default function TrackSectionHeader(viewed) {
   viewed = viewed.viewed;
   ({ sectionName, numItems, numVisibleItems, children } = viewed);
-  let obj = {
+  const obj = {
     type: discord_common_AnalyticsUtils.ImpressionTypes.VIEW,
     name: discord_common_AnalyticsUtils.ImpressionNames.APP_LAUNCHER_SECTION,
     properties: null,
   };
-  obj = {
+  const tmp = useTrackImpressionDefault;
+  obj.properties = {
     section_name: sectionName,
     num_items: numItems,
     num_visible_items: numVisibleItems,
     source: AppLauncherStore.entrypoint(),
   };
-  obj.properties = obj;
-  obj = { disableTrack: !viewed };
   const items = [viewed];
-  useTrackImpressionDefault(obj, obj, items);
+  tmp(obj, { disableTrack: !viewed }, items);
   return children;
 }

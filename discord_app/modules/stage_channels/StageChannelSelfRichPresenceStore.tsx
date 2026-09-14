@@ -1,7 +1,7 @@
 // discord_app/modules/stage_channels/StageChannelSelfRichPresenceStore.tsx
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../Dispatcher.tsx";
-import _modDef1332 from "../../../_runtime/metro/01332__.js";
+import _modDef1330 from "../../../_runtime/metro/01330__.js";
 import PermissionUtilsAll from "../../utils/PermissionUtils.tsx";
 import useChannelName from "../channel/useChannelName.tsx";
 import StageMediaHooks from "StageMediaHooks.tsx";
@@ -27,27 +27,25 @@ function handleUpdateActivity() {
       const channel = ChannelStore.getChannel(voiceChannelId);
       tmp2 = null;
       if (null != channel) {
-        let obj1 = PermissionUtilsAll;
         tmp2 = null;
-        if (obj1.canEveryone(constants2.VIEW_CHANNEL, channel)) {
+        if (obj2.canEveryone(constants2.VIEW_CHANNEL, channel)) {
           const guild = GuildStore.getGuild(channel.getGuildId());
           tmp2 = null;
           if (null != guild) {
             const features = guild.features;
             tmp2 = null;
             if (features.has(constants.DISCOVERABLE)) {
-              let obj2 = StageChannelRichPresenceUtils;
-              const result = obj2.packStageChannelPartyId(channel, stageInstanceByChannel);
+              const result = StageChannelRichPresenceUtils.packStageChannelPartyId(channel, stageInstanceByChannel);
               let id;
-              if (timestamps != null) {
-                const party = timestamps.party;
+              if (obj != null) {
+                const party = obj.party;
                 if (party != null) {
                   id = party.id;
                 }
               }
               let tmp15 = null;
               if (id === result) {
-                tmp15 = timestamps;
+                tmp15 = obj;
               }
               const mutableParticipants = StageChannelParticipantStore.getMutableParticipants(
                 channel.id,
@@ -69,7 +67,7 @@ function handleUpdateActivity() {
               if (null != size) {
                 num = tmp15.party.size[1];
               }
-              timestamps = {
+              obj = {
                 application_id: STAGE_APPLICATION_ID,
                 name: null,
                 type: null,
@@ -82,15 +80,14 @@ function handleUpdateActivity() {
                 topic = channel.topic;
               }
               if (topic == null) {
-                let tmp12Result = useChannelName;
-                topic = tmp12Result.computeChannelName(channel, UserStore, RelationshipStore);
+                topic = useChannelName.computeChannelName(channel, UserStore, RelationshipStore);
+                const tmp12Result = useChannelName;
               }
-              timestamps.name = topic;
-              tmp12Result = StageMediaHooks;
-              timestamps.type = tmp12Result.getStageHasMedia(channel.id) ? map1.WATCHING : map1.LISTENING;
+              obj.name = topic;
+              obj.type = StageMediaHooks.getStageHasMedia(channel.id) ? map1.WATCHING : map1.LISTENING;
               let start;
               if (tmp15 != null) {
-                timestamps = tmp15.timestamps;
+                const timestamps = tmp15.timestamps;
                 if (timestamps != null) {
                   start = timestamps.start;
                 }
@@ -100,28 +97,30 @@ function handleUpdateActivity() {
                 const date = new Date();
                 start = date.getTime();
               }
-              timestamps = { start };
-              timestamps.timestamps = timestamps;
+              const obj4 = { start };
+              obj.timestamps = obj4;
               const icon = guild.icon;
-              obj1 = { small_image: icon, small_text: guild.name };
-              timestamps.assets = obj1;
-              obj2 = { id: result, size: null };
+              const obj5 = { small_image: icon, small_text: guild.name };
+              obj.assets = obj5;
+              const obj6 = { id: result, size: null };
               const items = [diff];
               const _Math = Math;
               items[1] = Math.max(diff1, num);
-              obj2.size = items;
-              timestamps.party = obj2;
-              tmp2 = timestamps;
+              obj6.size = items;
+              obj.party = obj6;
+              tmp2 = obj;
+              const tmp12Result2 = StageMediaHooks;
             }
           }
         }
+        obj2 = PermissionUtilsAll;
       }
     }
   }
-  const tmp30 = _modDef1332(tmp2, timestamps);
+  const tmp30 = _modDef1330(tmp2, obj);
   let flag = !tmp30;
   if (!tmp30) {
-    timestamps = tmp2;
+    obj = tmp2;
     flag = true;
   }
   return flag;
@@ -134,7 +133,7 @@ const Constants = fn(1074);
   Permissions: closure_15,
   RTCConnectionStates: closure_16,
 } = Constants);
-let timestamps = null;
+let obj = null;
 const Store = initializeDefault.Store;
 class StageChannelSelfRichPresenceStore extends Store {}
 const prototype = StageChannelSelfRichPresenceStore.prototype;
@@ -152,7 +151,7 @@ prototype["getActivity"] = function getActivity() {
   return obj;
 };
 StageChannelSelfRichPresenceStore.displayName = "StageChannelSelfRichPresenceStore";
-timestamps = {
+obj = {
   CONNECTION_OPEN: handleUpdateActivity,
   STAGE_INSTANCE_CREATE: handleUpdateActivity,
   STAGE_INSTANCE_UPDATE: handleUpdateActivity,
@@ -196,7 +195,7 @@ timestamps = {
     }
   },
 };
-const stageChannelSelfRichPresenceStore = new StageChannelSelfRichPresenceStore(DispatcherDefault, timestamps);
+const stageChannelSelfRichPresenceStore = new StageChannelSelfRichPresenceStore(DispatcherDefault, obj);
 let size = fn(2);
 let result = size.fileFinishedImporting("modules/stage_channels/StageChannelSelfRichPresenceStore.tsx");
 

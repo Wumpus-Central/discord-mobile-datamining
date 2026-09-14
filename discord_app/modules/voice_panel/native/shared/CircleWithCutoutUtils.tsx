@@ -18,22 +18,22 @@ export default function CircleWithCutout(arg0) {
   const sum = circleRadius + circleRadius * Math.sin(cutoutPositionInDegrees * closure_5);
   const diff = circleRadius - circleRadius * Math.cos(cutoutPositionInDegrees * closure_5);
   const size = { height: result, width: result, children: null };
-  let obj = { children: null };
-  obj = { id: "mask", children: null };
+  const obj = { children: null };
+  const obj2 = { id: "mask", children: null };
   const items = [
     React3(inlineStyles.Rect, { width: result, height: result, fill: "white" }),
     React3(inlineStyles.Circle, { cx: sum, cy: diff, r: cutoutRadius, fill: "black" }),
   ];
-  obj.children = items;
-  obj.children = React4(inlineStyles.Mask, obj);
+  obj2.children = items;
+  obj.children = React4(inlineStyles.Mask, obj2);
   const items1 = [React3(inlineStyles.Defs, obj)];
-  const obj1 = { cx: circleRadius, cy: circleRadius, r: circleRadius, fill: circleFillColor, mask: null };
+  const obj3 = { cx: circleRadius, cy: circleRadius, r: circleRadius, fill: circleFillColor, mask: null };
   let str;
   if (enableCutout) {
     str = "url(#mask)";
   }
-  obj1.mask = str;
-  items1[1] = React3(inlineStyles.Circle, obj1);
+  obj3.mask = str;
+  items1[1] = React3(inlineStyles.Circle, obj3);
   size.children = items1;
   return React4(inlineStylesDefault, size);
 }

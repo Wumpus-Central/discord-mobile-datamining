@@ -44,21 +44,21 @@ prototype["handleVoiceStateUpdates"] = function handleVoiceStateUpdates() {
           isGuildStageVoiceResult = channel.isGuildStageVoice();
         }
         if (isGuildStageVoiceResult) {
-          let obj = StageMediaHooks;
           if (obj.getStageHasMedia(channel.id)) {
             if (tmp5Result.getChannelVideoLimit(channel).reachedLimit) {
               if (PermissionStore.can(StageChannelPermissions.MODERATE_STAGE_CHANNEL_PERMISSIONS, channel)) {
-                obj = { channel };
+                const obj2 = { channel };
                 ActionSheetActionCreatorsDefault.openLazy(
                   asyncRequireImpl(5511, dependencyMap.paths),
                   STAGE_BOOSTING_SHEET_KEY,
-                  obj,
+                  obj2,
                 );
                 c8 = true;
               }
             }
             tmp5Result = useChannelVideoLimit;
           }
+          obj = StageMediaHooks;
         }
       }
     }

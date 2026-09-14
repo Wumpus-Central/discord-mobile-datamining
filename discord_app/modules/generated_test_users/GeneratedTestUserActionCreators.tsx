@@ -21,16 +21,16 @@ let closure_8 = async function _getGeneratedPoolById() {
       body = body.body;
       if (body.ok) {
         const users = body.users;
-        let obj = { type: "GENERATED_POOL_BY_ID_FETCH_SUCCESS", pool: null, users: null };
-        const GeneratedTestPoolRecord = closure_0(15699).GeneratedTestPoolRecord;
+        const obj3 = { type: "GENERATED_POOL_BY_ID_FETCH_SUCCESS", pool: null, users: null };
+        const GeneratedTestPoolRecord = closure_0(15701).GeneratedTestPoolRecord;
         const obj2 = closure_1(573);
-        obj.pool = GeneratedTestPoolRecord.fromServer(body.generated_pool).setPassword(closure_0);
-        obj.users = users.map((item) => new closure_1_4(item));
-        obj2.dispatch(obj);
+        obj3.pool = GeneratedTestPoolRecord.fromServer(body.generated_pool).setPassword(closure_0);
+        obj3.users = users.map((item) => new closure_1_4(item));
+        obj2.dispatch(obj3);
         const fromServerResult = GeneratedTestPoolRecord.fromServer(body.generated_pool);
       } else {
-        obj = closure_1(8522);
-        obj.showFailedToast(constants.GENERIC_ERROR);
+        closure_1(8522).showFailedToast(constants.GENERIC_ERROR);
+        const obj = closure_1(8522);
       }
     })
     .catch(() => {
@@ -45,14 +45,13 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/generated_test_users/GeneratedTestUserActionCreators.tsx");
 
 export const loginAsGeneratedUser = function loginAsGeneratedUser(id, arg1) {
-  let obj = GeneratedTestUsersStore;
   const user = GeneratedTestUsersStore.getUser(arg1);
   if (null == user) {
     const _Error3 = Error;
     const error = new Error("User not found");
     throw error;
   } else {
-    const pool = obj.getPool(id);
+    const pool = GeneratedTestUsersStore.getPool(id);
     let password;
     if (pool != null) {
       password = pool.password;
@@ -66,8 +65,8 @@ export const loginAsGeneratedUser = function loginAsGeneratedUser(id, arg1) {
       const error2 = new Error("User email not found");
       throw error2;
     } else {
-      obj = { login: user.email, password, isMultiAccount: true, source: "generated_test_user" };
-      return AuthenticationActionCreatorsDefault.login(obj).catch(() => {
+      const obj3 = { login: user.email, password, isMultiAccount: true, source: "generated_test_user" };
+      return AuthenticationActionCreatorsDefault.login(obj3).catch(() => {
         SafetyToastsActionCreatorsDefault.showFailedToast(constants.GENERIC_ERROR);
         return null;
       });
@@ -85,6 +84,5 @@ export const getGeneratedPoolById = function getGeneratedPoolById() {
   return applyArgumentsResult;
 };
 export const removeGeneratedPoolFromList = function removeGeneratedPoolFromList(poolId) {
-  const obj = { type: "GENERATED_POOL_REMOVE_FROM_LIST", poolId };
-  obj.dispatch(obj);
+  DispatcherDefault.dispatch({ type: "GENERATED_POOL_REMOVE_FROM_LIST", poolId });
 };

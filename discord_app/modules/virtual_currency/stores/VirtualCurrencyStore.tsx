@@ -41,18 +41,18 @@ class VirtualCurrencyStore extends Store {
         const result = closure_0.setBalancePillOverlay(balancePillOverlay.balancePillOverlay);
       },
     };
-    tmp2 = new tmp2(closure_0(closure_1[1]), obj, new.target, tmp2, tmp, new.target, undefined);
-    closure_0 = tmp2;
-    tmp2._entitlements = null;
-    tmp2._redeemingSkuId = null;
-    tmp2._isRedeemingVirtualCurrency = false;
-    tmp2._redeemVirtualCurrencyError = null;
-    tmp2._balance = null;
-    tmp2._fetchBalanceError = null;
-    tmp2._isFetchingBalance = false;
-    tmp2._onboardingModalOpenedPrior = false;
-    tmp2._balancePillOverlay = false;
-    return tmp2;
+    tmp21 = new tmp2(closure_0(closure_1[1]), obj, new.target, tmp2, tmp, new.target, undefined);
+    closure_0 = tmp21;
+    tmp21._entitlements = null;
+    tmp21._redeemingSkuId = null;
+    tmp21._isRedeemingVirtualCurrency = false;
+    tmp21._redeemVirtualCurrencyError = null;
+    tmp21._balance = null;
+    tmp21._fetchBalanceError = null;
+    tmp21._isFetchingBalance = false;
+    tmp21._onboardingModalOpenedPrior = false;
+    tmp21._balancePillOverlay = false;
+    return tmp21;
   }
 }
 const prototype = VirtualCurrencyStore.prototype;

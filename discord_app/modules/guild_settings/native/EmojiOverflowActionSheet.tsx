@@ -3,6 +3,8 @@ import EmojiActionCreators from "../../../actions/EmojiActionCreators.tsx";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
+const require = globalThis.__r;
+
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Image: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
@@ -21,54 +23,52 @@ export default function EmojiOverflowActionSheet(emoji) {
   ({ guildId: importAll, onSelectRolesForEmoji } = emoji);
   ({ onEdit: asyncGeneratorStep, onClose } = emoji);
   const tmp = closure_8();
-  let obj = { style: tmp.header, children: null };
-  obj = { style: tmp.emojiImage, source: null };
-  obj = { uri: null };
-  let obj3 = require("AvatarUtils");
-  obj.uri = obj3.getEmojiURL({ id: emoji.id, animated: emoji.animated, size: 48 });
-  obj.source = obj;
-  const items = [
-    closure_6(onClose, obj),
-    closure_6(emoji(onSelectRolesForEmoji[7]).Text, {
-      variant: "text-md/semibold",
-      color: "mobile-text-heading-primary",
-      children: ":" + emoji.name + ":",
-    }),
-  ];
+  const obj = { style: tmp.header, children: null };
+  const obj2 = { style: tmp.emojiImage, source: null };
+  const obj3 = { uri: require("AvatarUtils").getEmojiURL({ id: emoji.id, animated: emoji.animated, size: 48 }) };
+  obj2.source = obj3;
+  const items = [closure_6(onClose, obj2)];
+  const obj4 = require("AvatarUtils");
+  const obj5 = { id: emoji.id, animated: emoji.animated, size: 48 };
+  items[1] = closure_6(emoji(onSelectRolesForEmoji[7]).Text, {
+    variant: "text-md/semibold",
+    color: "mobile-text-heading-primary",
+    children: ":" + emoji.name + ":",
+  });
   obj.children = items;
   const items1 = [closure_7(closure_5, obj)];
-  obj3 = {
+  const obj7 = {
     icon: closure_6(emoji(onSelectRolesForEmoji[10]).TrashIcon, { color: "text-feedback-critical" }),
     label: null,
     onPress: null,
   };
-  const obj4 = { variant: "text-md/semibold", color: "text-feedback-critical", children: null };
+  const obj8 = { variant: "text-md/semibold", color: "text-feedback-critical", children: null };
   let intl = emoji(onSelectRolesForEmoji[11]).intl;
-  obj4.children = intl.string(emoji(onSelectRolesForEmoji[11]).t.oyYWHE);
-  obj3.label = closure_6(emoji(onSelectRolesForEmoji[7]).Text, obj4);
-  obj3.onPress = function onPress() {
+  obj8.children = intl.string(emoji(onSelectRolesForEmoji[11]).t.oyYWHE);
+  obj7.label = closure_6(emoji(onSelectRolesForEmoji[7]).Text, obj8);
+  obj7.onPress = function onPress() {
     EmojiActionCreators.deleteEmoji(importAll, emoji.id);
     onClose();
   };
-  const items2 = [closure_6(emoji(onSelectRolesForEmoji[9]).TableRow, obj3), , ,];
-  const obj5 = { icon: closure_6(emoji(onSelectRolesForEmoji[13]).PencilIcon, {}), label: null, onPress: null };
-  const obj6 = { variant: "text-md/semibold", children: null };
+  const items2 = [closure_6(emoji(onSelectRolesForEmoji[9]).TableRow, obj7), , ,];
+  const obj9 = { icon: closure_6(emoji(onSelectRolesForEmoji[13]).PencilIcon, {}), label: null, onPress: null };
+  const obj10 = { variant: "text-md/semibold", children: null };
   const intl2 = emoji(onSelectRolesForEmoji[11]).intl;
-  obj6.children = intl2.string(emoji(onSelectRolesForEmoji[11]).t.bt75uw);
-  obj5.label = closure_6(emoji(onSelectRolesForEmoji[7]).Text, obj6);
-  obj5.onPress = function onPress() {
+  obj10.children = intl2.string(emoji(onSelectRolesForEmoji[11]).t.bt75uw);
+  obj9.label = closure_6(emoji(onSelectRolesForEmoji[7]).Text, obj10);
+  obj9.onPress = function onPress() {
     asyncGeneratorStep();
     onClose();
   };
-  items2[1] = closure_6(emoji(onSelectRolesForEmoji[9]).TableRow, obj5);
+  items2[1] = closure_6(emoji(onSelectRolesForEmoji[9]).TableRow, obj9);
   let tmp5Result = null;
   if (null != onSelectRolesForEmoji) {
-    const obj7 = { icon: closure_6(tmp3(onSelectRolesForEmoji[13]).PencilIcon, {}), label: null, onPress: null };
-    const obj8 = { variant: "text-md/semibold", children: null };
+    const obj11 = { icon: closure_6(tmp3(onSelectRolesForEmoji[13]).PencilIcon, {}), label: null, onPress: null };
+    const obj12 = { variant: "text-md/semibold", children: null };
     const intl3 = tmp3(onSelectRolesForEmoji[11]).intl;
-    obj8.children = intl3.string(tmp3(onSelectRolesForEmoji[11]).t["+riKdA"]);
-    obj7.label = closure_6(tmp3(onSelectRolesForEmoji[7]).Text, obj8);
-    obj7.onPress = asyncGeneratorStep(async () => {
+    obj12.children = intl3.string(tmp3(onSelectRolesForEmoji[11]).t["+riKdA"]);
+    obj11.label = closure_6(tmp3(onSelectRolesForEmoji[7]).Text, obj12);
+    obj11.onPress = asyncGeneratorStep(async () => {
       await onSelectRolesForEmoji(emoji);
       if (1 === tmp7) {
         c4 = 0;
@@ -97,7 +97,6 @@ export default function EmojiOverflowActionSheet(emoji) {
           closure_129_0 = value;
           c5 = 3;
           c6 = 1;
-          emoji(tmp3[12]);
           return {
             value: emoji(tmp3[12]).updateEmoji({
               guildId: closure_130_1,
@@ -115,20 +114,20 @@ export default function EmojiOverflowActionSheet(emoji) {
       }
       return value;
     });
-    tmp5Result = closure_6(tmp3(onSelectRolesForEmoji[9]).TableRow, obj7);
+    tmp5Result = closure_6(tmp3(onSelectRolesForEmoji[9]).TableRow, obj11);
   }
-  const obj9 = { children: null };
-  const obj10 = { hasIcons: true, children: null };
+  const obj13 = { children: null };
+  const obj14 = { hasIcons: true, children: null };
   items2[2] = tmp5Result;
-  const obj11 = { icon: closure_6(emoji(onSelectRolesForEmoji[16]).XSmallIcon, {}), label: null, onPress: null };
-  const obj12 = { variant: "text-md/semibold", children: null };
+  const obj15 = { icon: closure_6(emoji(onSelectRolesForEmoji[16]).XSmallIcon, {}), label: null, onPress: null };
+  const obj16 = { variant: "text-md/semibold", children: null };
   const intl4 = tmp3(onSelectRolesForEmoji[11]).intl;
-  obj12.children = intl4.string(emoji(onSelectRolesForEmoji[11]).t["ETE/oC"]);
-  obj11.label = closure_6(emoji(onSelectRolesForEmoji[7]).Text, obj12);
-  obj11.onPress = onClose;
-  items2[3] = closure_6(emoji(onSelectRolesForEmoji[9]).TableRow, obj11);
-  obj10.children = items2;
-  items1[1] = closure_7(emoji(onSelectRolesForEmoji[8]).TableRowGroup, obj10);
-  obj9.children = items1;
-  return closure_7(emoji(onSelectRolesForEmoji[5]).ActionSheet, obj9);
+  obj16.children = intl4.string(emoji(onSelectRolesForEmoji[11]).t["ETE/oC"]);
+  obj15.label = closure_6(emoji(onSelectRolesForEmoji[7]).Text, obj16);
+  obj15.onPress = onClose;
+  items2[3] = closure_6(emoji(onSelectRolesForEmoji[9]).TableRow, obj15);
+  obj14.children = items2;
+  items1[1] = closure_7(emoji(onSelectRolesForEmoji[8]).TableRowGroup, obj14);
+  obj13.children = items1;
+  return closure_7(emoji(onSelectRolesForEmoji[5]).ActionSheet, obj13);
 }

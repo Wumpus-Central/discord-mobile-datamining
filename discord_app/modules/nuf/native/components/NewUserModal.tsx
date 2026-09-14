@@ -4,21 +4,23 @@ import NewUserUtils from "../NewUserUtils.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
+const require = globalThis.__r;
+
 require = fn;
 const NativeModules = fn(17).NativeModules;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-let NativeStackNavigator = fn(8017);
+const NativeStackNavigator = fn(8017);
 const Navigator = NativeStackNavigator.createNativeStackNavigator();
 const createStyles = fn(4636);
-NativeStackNavigator = { header: null };
-NativeStackNavigator = {
-  borderBottomWidth: 0,
-  backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
-  shadowColor: "transparent",
+let obj3 = {
+  header: {
+    borderBottomWidth: 0,
+    backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
+    shadowColor: "transparent",
+  },
 };
-NativeStackNavigator.header = NativeStackNavigator;
-let closure_9 = createStyles.createStyles(NativeStackNavigator);
+let closure_9 = createStyles.createStyles(obj3);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/nuf/native/components/NewUserModal.tsx");
 
@@ -34,8 +36,7 @@ export default function NewUserModal(arg0) {
   first1 = tmp3[0];
   noop = tmp3[1];
   let MinimizeApp = noop.useRef(null);
-  let obj = require("Navigator");
-  closure_6 = obj.useAccessibilityNativeStackOptions();
+  closure_6 = require("Navigator").useAccessibilityNativeStackOptions();
   const items = [first1, first];
   const onComplete = noop.useCallback((flag) => {
     if (flag == null) {
@@ -49,21 +50,21 @@ export default function NewUserModal(arg0) {
       closure_1_4(lastShownStepIndex);
       if (continueNavigation) {
         if (null != ref.current) {
-          closure_0(17561).continueToNextStep(onboardingStepIndex, tmp3.current);
-          const obj2 = closure_0(17561);
+          closure_0(17562).continueToNextStep(onboardingStepIndex, tmp3.current);
+          const obj2 = closure_0(17562);
         }
       }
-      first(4839).popWithKey(closure_0(17562).NEW_USER_MODAL_KEY);
+      first(4839).popWithKey(closure_0(17563).NEW_USER_MODAL_KEY);
       const obj = first(4839);
     });
   }, items);
-  let obj1 = require("useNavigatorBackPressHandler");
-  obj1.useNavigatorBackPressHandler(() => {
+  let obj = require("Navigator");
+  require("useNavigatorBackPressHandler").useNavigatorBackPressHandler(() => {
     MinimizeApp = MinimizeApp.MinimizeApp;
     MinimizeApp.minimizeApp();
     return true;
   });
-  obj = {
+  const obj3 = {
     screenOptions(navigation) {
       closure_5.current = navigation.navigation;
       const obj = {
@@ -95,71 +96,67 @@ export default function NewUserModal(arg0) {
   if (initialRouteName == null) {
     initialRouteName = "choose-avatar";
   }
-  obj.initialRouteName = initialRouteName;
-  obj = {
-    name: "enable-notification",
-    getComponent() {
-      return closure_0(16094).RedesignNotificationScreen;
-    },
-    initialParams: { onComplete },
-  };
-  const items1 = [closure_6(Navigator.Screen, obj), , , ,];
-  obj1 = {
-    name: "choose-avatar",
-    getComponent() {
-      return closure_0(17565).default;
-    },
-    options() {
-      return {
-        headerRight(arg0) {
-          let obj = {};
-          const merged = Object.assign(arg0);
-          obj.onPress = function onPress() {
-            closure_0 = closure_1_7;
-            closure_2_0(4982);
-            const obj = {
-              onConfirm() {
-                return closure_0(true);
-              },
+  obj3.initialRouteName = initialRouteName;
+  const items1 = [
+    closure_6(Navigator.Screen, {
+      name: "enable-notification",
+      getComponent() {
+        return closure_0(16096).RedesignNotificationScreen;
+      },
+      initialParams: { onComplete },
+    }),
+    closure_6(Navigator.Screen, {
+      name: "choose-avatar",
+      getComponent() {
+        return closure_0(17566).default;
+      },
+      options() {
+        return {
+          headerRight(arg0) {
+            const obj = {};
+            const merged = Object.assign(arg0);
+            obj.onPress = function onPress() {
+              closure_0 = closure_1_7;
+              const lazyResult = React.lazy(() => closure_0(paths[8])(paths[7], paths.paths));
+              closure_2_0(4982).openAlert(
+                "skip-avatar-upload",
+                closure_2_6(lazyResult, {
+                  onConfirm() {
+                    return closure_0(true);
+                  },
+                }),
+              );
             };
-            obj.openAlert(
-              "skip-avatar-upload",
-              closure_2_6(
-                React.lazy(() => closure_0(paths[8])(paths[7], paths.paths)),
-                obj,
-              ),
-            );
-          };
-          return closure_6(first(12825), obj);
-        },
-      };
-    },
-    initialParams: { onComplete },
-  };
-  items1[1] = closure_6(Navigator.Screen, obj1);
-  items1[2] = closure_6(Navigator.Screen, {
-    name: "contact-sync",
-    options: { headerShown: false },
-    getComponent() {
-      return closure_0(12814).ContactSyncOnboardingModal;
-    },
-    initialParams: { onComplete },
-  });
-  items1[3] = closure_6(Navigator.Screen, {
-    name: "discoverability",
-    options: { headerShown: false },
-    getComponent() {
-      return closure_0(17566).default;
-    },
-    initialParams: { onComplete },
-  });
-  items1[4] = closure_6(Navigator.Screen, {
-    name: "connect-guardian",
-    getComponent() {
-      return closure_0(17568).default;
-    },
-    initialParams: { onComplete },
-  });
-  obj.children = items1;
-  return onComplete(Navigator.Navigator, obj);
+            return closure_6(first(12826), obj);
+          },
+        };
+      },
+      initialParams: { onComplete },
+    }),
+    closure_6(Navigator.Screen, {
+      name: "contact-sync",
+      options: { headerShown: false },
+      getComponent() {
+        return closure_0(12815).ContactSyncOnboardingModal;
+      },
+      initialParams: { onComplete },
+    }),
+    closure_6(Navigator.Screen, {
+      name: "discoverability",
+      options: { headerShown: false },
+      getComponent() {
+        return closure_0(17567).default;
+      },
+      initialParams: { onComplete },
+    }),
+    closure_6(Navigator.Screen, {
+      name: "connect-guardian",
+      getComponent() {
+        return closure_0(17569).default;
+      },
+      initialParams: { onComplete },
+    }),
+  ];
+  obj3.children = items1;
+  return onComplete(Navigator.Navigator, obj3);
 }

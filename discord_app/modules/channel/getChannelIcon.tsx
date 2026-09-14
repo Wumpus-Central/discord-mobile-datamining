@@ -25,11 +25,11 @@ export const getChannelIconURL = function getChannelIconURL(type) {
     }
     return avatarURL;
   } else if (tmp.GROUP_DM === type) {
-    const obj = { id: null, icon: null, applicationId: null, size: null };
+    const obj3 = { id: null, icon: null, applicationId: null, size: null };
     ({ id: obj2.id, icon: obj2.icon } = type);
-    obj.applicationId = type.getApplicationId();
-    obj.size = num;
-    return obj.getChannelIconURL(obj);
+    obj3.applicationId = type.getApplicationId();
+    obj3.size = num;
+    return AvatarUtilsDefault.getChannelIconURL(obj3);
   }
 };
 export const getChannelIconSource = function getChannelIconSource(type) {
@@ -44,9 +44,9 @@ export const getChannelIconSource = function getChannelIconSource(type) {
     }
     return avatarSource;
   } else if (tmp.GROUP_DM === type) {
-    const obj = { id: null, icon: null, applicationId: null, size: 128 };
+    const obj3 = { id: null, icon: null, applicationId: null, size: 128 };
     ({ id: obj2.id, icon: obj2.icon } = type);
-    obj.applicationId = type.getApplicationId();
-    return obj.getChannelIconSource(obj);
+    obj3.applicationId = type.getApplicationId();
+    return AvatarUtilsDefault.getChannelIconSource(obj3);
   }
 };

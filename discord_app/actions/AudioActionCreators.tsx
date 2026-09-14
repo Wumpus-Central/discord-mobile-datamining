@@ -32,7 +32,7 @@ function trackDeviceChanged(inputDevices, inputDeviceId, found, Video) {
     if (null != inputDevices[inputDeviceId]) {
       str2 = tmp6.name;
     }
-    const obj = {
+    obj = {
       device_from_name: CertifiedDeviceStore.getCertifiedDeviceName(inputDeviceId, str2),
       device_to_name: null,
       device_type: null,
@@ -65,29 +65,32 @@ const Constants = fn(1074);
 ({ InputModes: c10, AnalyticEvents: closure_11 } = Constants);
 const SoundOutputChannel = fn(9220).SoundOutputChannel;
 const MediaEngineContextTypes = fn(4661).MediaEngineContextTypes;
-let settings = new LoggerDefault("AudioActionCreators");
-settings.enableNativeLogger(true);
+let obj = new LoggerDefault("AudioActionCreators");
+obj.enableNativeLogger(true);
 let closure_15 = debounceDefault((target_user_id, context, volume) => {
-  const obj = {
+  obj = AnalyticsUtilsDefault;
+  obj.track(constants2.USER_VOLUME_SETTING_UPDATED, {
     target_user_id,
     context,
     volume,
     media_session_id: RTCConnectionStore.getMediaSessionId(),
     rtc_connection_id: RTCConnectionStore.getRTCConnectionId(),
-  };
-  obj.track(constants2.USER_VOLUME_SETTING_UPDATED, obj);
+  });
 }, 300);
 function isNotSupported() {
   return false;
 }
 function trackToggleSelfMute() {}
 function trackToggleSelfDeaf() {}
-settings = {
+const size = fn(2);
+let result = size.fileFinishedImporting("actions/AudioActionCreators.tsx");
+
+export default {
   enable() {
     return Promise.resolve(true);
   },
   toggleSelfMute(arg0) {
-    let obj = arg0;
+    obj = arg0;
     if (arg0 === undefined) {
       obj = {};
     }
@@ -119,8 +122,8 @@ settings = {
             obj.info("Toggling self mute");
           }
           if (MediaEngineStore.isEnabled()) {
-            obj = { type: "AUDIO_TOGGLE_SELF_MUTE", context: DEFAULT, syncRemote: flag, playSoundEffect: flag2 };
-            let dispatchResult = DispatcherDefault.dispatch(obj);
+            const obj2 = { type: "AUDIO_TOGGLE_SELF_MUTE", context: DEFAULT, syncRemote: flag, playSoundEffect: flag2 };
+            let dispatchResult = DispatcherDefault.dispatch(obj2);
           } else {
             const self = this;
             dispatchResult = this.enable(true);
@@ -174,7 +177,7 @@ settings = {
     }
   },
   toggleSelfDeaf(arg0) {
-    let obj = arg0;
+    obj = arg0;
     if (arg0 === undefined) {
       obj = {};
     }
@@ -190,8 +193,8 @@ settings = {
       const _location = obj.location;
       if (typeof isNotSupported === "function") {
         if (typeof trackToggleSelfDeaf === "function") {
-          obj = { type: "AUDIO_TOGGLE_SELF_DEAF", context: DEFAULT, syncRemote: flag };
-          DispatcherDefault.dispatch(obj);
+          const obj3 = { type: "AUDIO_TOGGLE_SELF_DEAF", context: DEFAULT, syncRemote: flag };
+          DispatcherDefault.dispatch(obj3);
         } else {
           throw new TypeError("Trying to call a non-function");
         }
@@ -206,8 +209,8 @@ settings = {
       DEFAULT = MediaEngineContextTypes.DEFAULT;
     }
     if (typeof isNotSupported === "function") {
-      const obj = { type: "AUDIO_TOGGLE_LOCAL_MUTE", context: DEFAULT, userId: id };
-      obj.dispatch(obj);
+      const obj2 = { type: "AUDIO_TOGGLE_LOCAL_MUTE", context: DEFAULT, userId: id };
+      DispatcherDefault.dispatch(obj2);
     } else {
       throw new TypeError("Trying to call a non-function");
     }
@@ -217,8 +220,8 @@ settings = {
     if (arg1 === undefined) {
       DEFAULT = MediaEngineContextTypes.DEFAULT;
     }
-    const obj = { type: "AUDIO_TOGGLE_LOCAL_SOUNDBOARD_MUTE", context: DEFAULT, userId: id };
-    obj.dispatch(obj);
+    DispatcherDefault.dispatch({ type: "AUDIO_TOGGLE_LOCAL_SOUNDBOARD_MUTE", context: DEFAULT, userId: id });
+    const obj2 = { type: "AUDIO_TOGGLE_LOCAL_SOUNDBOARD_MUTE", context: DEFAULT, userId: id };
   },
   setDisableLocalVideo(id, MANUAL_ENABLED) {
     if (DEFAULT === undefined) {
@@ -233,7 +236,7 @@ settings = {
       flag2 = false;
     }
     if (typeof isNotSupported === "function") {
-      const obj = {
+      const obj2 = {
         type: "AUDIO_SET_LOCAL_VIDEO_DISABLED",
         context: DEFAULT,
         userId: id,
@@ -241,7 +244,7 @@ settings = {
         persist: flag,
         isAutomatic: flag2,
       };
-      obj.dispatch(obj);
+      DispatcherDefault.dispatch(obj2);
     } else {
       throw new TypeError("Trying to call a non-function");
     }
@@ -250,30 +253,38 @@ settings = {
     if (DEFAULT === undefined) {
       DEFAULT = MediaEngineContextTypes.DEFAULT;
     }
-    let obj = AudioSettingsUtils;
-    const snapVolumeToDefaultResult = obj.snapVolumeToDefault(USER, DEFAULT);
-    obj = { type: "AUDIO_SET_LOCAL_VOLUME", context: DEFAULT, userId, volume: snapVolumeToDefaultResult };
-    DispatcherDefault.dispatch(obj);
+    const snapVolumeToDefaultResult = AudioSettingsUtils.snapVolumeToDefault(USER, DEFAULT);
+    DispatcherDefault.dispatch({
+      type: "AUDIO_SET_LOCAL_VOLUME",
+      context: DEFAULT,
+      userId,
+      volume: snapVolumeToDefaultResult,
+    });
     closure_15(userId, DEFAULT, snapVolumeToDefaultResult);
+    const obj3 = { type: "AUDIO_SET_LOCAL_VOLUME", context: DEFAULT, userId, volume: snapVolumeToDefaultResult };
   },
   setAudioMixerSettings(audioMixerSettings) {
     let DEFAULT = arg1;
     if (arg1 === undefined) {
       DEFAULT = MediaEngineContextTypes.DEFAULT;
     }
-    const obj = { type: "AUDIO_SET_AUDIO_MIXER_SETTINGS", context: DEFAULT, settings: audioMixerSettings };
-    obj.dispatch(obj);
+    DispatcherDefault.dispatch({
+      type: "AUDIO_SET_AUDIO_MIXER_SETTINGS",
+      context: DEFAULT,
+      settings: audioMixerSettings,
+    });
+    const obj2 = { type: "AUDIO_SET_AUDIO_MIXER_SETTINGS", context: DEFAULT, settings: audioMixerSettings };
   },
   setSpatialAudio(enabled, arg1) {
     if (typeof isNotSupported === "function") {
       const audioMixerSettings = MediaEngineStore.getAudioMixerSettings();
       trackVoiceAndVideoSettingsUpdateDefault("spatial_audio_enabled", enabled, audioMixerSettings.enabled, arg1);
-      settings = { type: "AUDIO_SET_AUDIO_MIXER_SETTINGS", context: MediaEngineContextTypes.DEFAULT, settings: null };
-      settings = {};
+      const obj2 = { type: "AUDIO_SET_AUDIO_MIXER_SETTINGS", context: MediaEngineContextTypes.DEFAULT, settings: null };
+      const obj3 = {};
       const merged = Object.assign(audioMixerSettings);
-      settings.enabled = enabled;
-      settings.settings = settings;
-      settings.dispatch(settings);
+      obj3.enabled = enabled;
+      obj2.settings = obj3;
+      DispatcherDefault.dispatch(obj2);
     } else {
       throw new TypeError("Trying to call a non-function");
     }
@@ -287,47 +298,44 @@ settings = {
     DispatcherDefault.dispatch(rect);
   },
   setMode(mode, arg1) {
-    let obj = arg1;
+    obj = arg1;
     if (arg1 === undefined) {
       obj = {};
     }
     if (DEFAULT === undefined) {
       DEFAULT = MediaEngineContextTypes.DEFAULT;
     }
-    obj = arg3;
+    let obj2 = arg3;
     if (arg3 === undefined) {
-      obj = {};
+      obj2 = {};
     }
-    const analyticsLocations = obj.analyticsLocations;
+    const analyticsLocations = obj2.analyticsLocations;
     if (typeof isNotSupported === "function") {
-      let obj2 = MediaEngineStore;
       mode = MediaEngineStore.getMode();
       const modeOptions = MediaEngineStore.getModeOptions(DEFAULT);
-      let obj3 = DispatcherDefault;
-      obj = { type: "AUDIO_SET_MODE", context: DEFAULT, mode, options: null };
-      const obj1 = {};
+      const obj5 = { type: "AUDIO_SET_MODE", context: DEFAULT, mode, options: null };
+      const obj6 = {};
       const merged = Object.assign(modeOptions);
       const merged1 = Object.assign(obj);
-      obj.options = obj1;
-      obj3.dispatch(obj);
+      obj5.options = obj6;
+      DispatcherDefault.dispatch(obj5);
       if (mode !== mode) {
-        const mediaEngine = obj2.getMediaEngine();
+        const mediaEngine = MediaEngineStore.getMediaEngine();
         const audioSubsystem = mediaEngine.getAudioSubsystem();
-        const mediaEngine1 = obj2.getMediaEngine();
+        const mediaEngine1 = MediaEngineStore.getMediaEngine();
         const audioLayer = mediaEngine1.getAudioLayer();
         const voiceChannelId = SelectedChannelStore.getVoiceChannelId();
         let channel = null;
         if (null != voiceChannelId) {
           channel = ChannelStore.getChannel(voiceChannelId);
         }
-        const inputDevices = obj2.getInputDevices();
-        const tmp29 = inputDevices[obj2.getInputDeviceId(obj2)];
+        const inputDevices = MediaEngineStore.getInputDevices();
+        const tmp29 = inputDevices[MediaEngineStore.getInputDeviceId(MediaEngineStore)];
         let str2 = "";
         if (null != tmp29) {
           str2 = tmp29.name;
         }
-        let tmp5Result = AnalyticsUtilsDefault;
-        obj2 = {
+        const obj7 = {
           mode,
           location_stack: analyticsLocations,
           voice_channel_type: null,
@@ -339,30 +347,30 @@ settings = {
         if (channel != null) {
           type = channel.type;
         }
-        obj2.voice_channel_type = type;
-        obj2.input_device_name = str2;
-        obj2.audio_subsystem = audioSubsystem;
-        obj2.audio_layer = audioLayer;
-        tmp5Result.track(constants2.VOICE_ACTIVATION_MODE_CHANGED, obj2);
+        obj7.voice_channel_type = type;
+        obj7.input_device_name = str2;
+        obj7.audio_subsystem = audioSubsystem;
+        obj7.audio_layer = audioLayer;
+        AnalyticsUtilsDefault.track(constants2.VOICE_ACTIVATION_MODE_CHANGED, obj7);
+        const tmp5Result = AnalyticsUtilsDefault;
       } else if (mode === constants.VOICE_ACTIVITY) {
         if (modeOptions !== obj) {
-          const mediaEngine2 = obj2.getMediaEngine();
+          const mediaEngine2 = MediaEngineStore.getMediaEngine();
           const audioSubsystem1 = mediaEngine2.getAudioSubsystem();
-          const mediaEngine3 = obj2.getMediaEngine();
+          const mediaEngine3 = MediaEngineStore.getMediaEngine();
           const audioLayer1 = mediaEngine3.getAudioLayer();
           const voiceChannelId1 = SelectedChannelStore.getVoiceChannelId();
           let channel1 = null;
           if (null != voiceChannelId1) {
             channel1 = ChannelStore.getChannel(voiceChannelId1);
           }
-          const inputDevices1 = obj2.getInputDevices();
-          const tmp17 = inputDevices1[obj2.getInputDeviceId(obj2)];
+          const inputDevices1 = MediaEngineStore.getInputDevices();
+          const tmp17 = inputDevices1[MediaEngineStore.getInputDeviceId(MediaEngineStore)];
           let str = "";
           if (null != tmp17) {
             str = tmp17.name;
           }
-          tmp5Result = AnalyticsUtilsDefault;
-          obj3 = {
+          const obj8 = {
             location_stack: analyticsLocations,
             voice_channel_type: null,
             input_device_name: null,
@@ -377,15 +385,16 @@ settings = {
           if (channel1 != null) {
             type1 = channel1.type;
           }
-          obj3.voice_channel_type = type1;
-          obj3.input_device_name = str;
-          obj3.audio_subsystem = audioSubsystem1;
-          obj3.audio_layer = audioLayer1;
-          obj3.old_threshold = modeOptions.threshold;
-          obj3.new_threshold = obj.threshold;
-          obj3.old_auto_threshold = modeOptions.autoThreshold;
-          obj3.new_auto_threshold = obj.autoThreshold;
-          tmp5Result.track(constants2.VOICE_ACTIVITY_THRESHOLD_CHANGED, obj3);
+          obj8.voice_channel_type = type1;
+          obj8.input_device_name = str;
+          obj8.audio_subsystem = audioSubsystem1;
+          obj8.audio_layer = audioLayer1;
+          obj8.old_threshold = modeOptions.threshold;
+          obj8.new_threshold = obj.threshold;
+          obj8.old_auto_threshold = modeOptions.autoThreshold;
+          obj8.new_auto_threshold = obj.autoThreshold;
+          AnalyticsUtilsDefault.track(constants2.VOICE_ACTIVITY_THRESHOLD_CHANGED, obj8);
+          const tmp5Result2 = AnalyticsUtilsDefault;
         }
       }
     } else {
@@ -394,62 +403,56 @@ settings = {
   },
   setBypassSystemInputProcessing(bypassEnabled, location) {
     if (typeof isNotSupported === "function") {
-      const obj = { type: "AUDIO_SET_BYPASS_SYSTEM_INPUT_PROCESSING", bypassEnabled, location };
-      obj.dispatch(obj);
+      const obj2 = { type: "AUDIO_SET_BYPASS_SYSTEM_INPUT_PROCESSING", bypassEnabled, location };
+      DispatcherDefault.dispatch(obj2);
     } else {
       throw new TypeError("Trying to call a non-function");
     }
   },
   setInputVolume(volume) {
-    if (arg1 === undefined) {
-      let obj = {};
-    }
     if (typeof isNotSupported === "function") {
-      obj = { type: "AUDIO_SET_INPUT_VOLUME", volume };
-      DispatcherDefault.dispatch(obj);
+      const obj3 = { type: "AUDIO_SET_INPUT_VOLUME", volume };
+      DispatcherDefault.dispatch(obj3);
       const voiceChannelId = SelectedChannelStore.getVoiceChannelId();
       let channel = null;
       if (null != voiceChannelId) {
         channel = ChannelStore.getChannel(voiceChannelId);
       }
-      obj = { volume, location_stack: tmp, voice_channel_type: null };
+      const obj4 = { volume, location_stack: tmp, voice_channel_type: null };
       let type;
       if (channel != null) {
         type = channel.type;
       }
-      obj.voice_channel_type = type;
-      AnalyticsUtilsDefault.track(constants2.MEDIA_INPUT_VOLUME_CHANGED, obj);
+      obj4.voice_channel_type = type;
+      AnalyticsUtilsDefault.track(constants2.MEDIA_INPUT_VOLUME_CHANGED, obj4);
       const tmp3Result = AnalyticsUtilsDefault;
     } else {
       throw new TypeError("Trying to call a non-function");
     }
   },
   setOutputVolume(volume) {
-    if (arg1 === undefined) {
-      let obj = {};
-    }
     if (typeof isNotSupported === "function") {
-      obj = { type: "AUDIO_SET_OUTPUT_VOLUME", volume };
-      DispatcherDefault.dispatch(obj);
+      const obj3 = { type: "AUDIO_SET_OUTPUT_VOLUME", volume };
+      DispatcherDefault.dispatch(obj3);
       const voiceChannelId = SelectedChannelStore.getVoiceChannelId();
       let channel = null;
       if (null != voiceChannelId) {
         channel = ChannelStore.getChannel(voiceChannelId);
       }
-      obj = { volume, location_stack: tmp, voice_channel_type: null };
+      const obj4 = { volume, location_stack: tmp, voice_channel_type: null };
       let type;
       if (channel != null) {
         type = channel.type;
       }
-      obj.voice_channel_type = type;
-      AnalyticsUtilsDefault.track(constants2.MEDIA_OUTPUT_VOLUME_CHANGED, obj);
+      obj4.voice_channel_type = type;
+      AnalyticsUtilsDefault.track(constants2.MEDIA_OUTPUT_VOLUME_CHANGED, obj4);
       const tmp3Result = AnalyticsUtilsDefault;
     } else {
       throw new TypeError("Trying to call a non-function");
     }
   },
   setInputDevice(id) {
-    let obj = arg1;
+    obj = arg1;
     if (arg1 === undefined) {
       obj = {};
     }
@@ -457,17 +460,17 @@ settings = {
     if (typeof isNotSupported === "function") {
       const inputDeviceId = MediaEngineStore.getInputDeviceId();
       if (null != _location) {
-        obj = { location: _location, analyticsLocations };
-        trackDeviceChanged(MediaEngineStore.getInputDevices(), inputDeviceId, id, "Audio Input", obj);
+        const obj3 = { location: _location, analyticsLocations };
+        trackDeviceChanged(MediaEngineStore.getInputDevices(), inputDeviceId, id, "Audio Input", obj3);
       }
-      obj = { type: "AUDIO_SET_INPUT_DEVICE", id, oldId: inputDeviceId };
-      DispatcherDefault.dispatch(obj);
+      const obj5 = { type: "AUDIO_SET_INPUT_DEVICE", id, oldId: inputDeviceId };
+      DispatcherDefault.dispatch(obj5);
     } else {
       throw new TypeError("Trying to call a non-function");
     }
   },
   setOutputDevice(id) {
-    let obj = arg1;
+    obj = arg1;
     if (arg1 === undefined) {
       obj = {};
     }
@@ -475,17 +478,17 @@ settings = {
     if (typeof isNotSupported === "function") {
       const outputDeviceId = MediaEngineStore.getOutputDeviceId();
       if (null != _location) {
-        obj = { location: _location, analyticsLocations };
-        trackDeviceChanged(MediaEngineStore.getOutputDevices(), outputDeviceId, id, "Audio Output", obj);
+        const obj3 = { location: _location, analyticsLocations };
+        trackDeviceChanged(MediaEngineStore.getOutputDevices(), outputDeviceId, id, "Audio Output", obj3);
       }
-      obj = { type: "AUDIO_SET_OUTPUT_DEVICE", id, oldId: outputDeviceId };
-      DispatcherDefault.dispatch(obj);
+      const obj5 = { type: "AUDIO_SET_OUTPUT_DEVICE", id, oldId: outputDeviceId };
+      DispatcherDefault.dispatch(obj5);
     } else {
       throw new TypeError("Trying to call a non-function");
     }
   },
   setVideoDevice(found) {
-    let obj = arg1;
+    obj = arg1;
     if (arg1 === undefined) {
       obj = {};
     }
@@ -493,17 +496,17 @@ settings = {
     if (typeof isNotSupported === "function") {
       const videoDeviceId = MediaEngineStore.getVideoDeviceId();
       if (null != _location) {
-        obj = { location: _location, analyticsLocations };
-        trackDeviceChanged(MediaEngineStore.getVideoDevices(), videoDeviceId, found, "Video", obj);
+        const obj3 = { location: _location, analyticsLocations };
+        trackDeviceChanged(MediaEngineStore.getVideoDevices(), videoDeviceId, found, "Video", obj3);
       }
-      obj = { type: "MEDIA_ENGINE_SET_VIDEO_DEVICE", id: found, oldId: videoDeviceId };
-      DispatcherDefault.dispatch(obj);
+      const obj5 = { type: "MEDIA_ENGINE_SET_VIDEO_DEVICE", id: found, oldId: videoDeviceId };
+      DispatcherDefault.dispatch(obj5);
     } else {
       throw new TypeError("Trying to call a non-function");
     }
   },
   setActiveInputProfile(inputProfile) {
-    let obj = arg1;
+    obj = arg1;
     if (arg1 === undefined) {
       obj = {};
     }
@@ -516,8 +519,8 @@ settings = {
         activeInputProfile,
         analyticsLocations,
       );
-      obj = { type: "AUDIO_SET_ACTIVE_INPUT_PROFILE", inputProfile };
-      DispatcherDefault.dispatch(obj);
+      const obj2 = { type: "AUDIO_SET_ACTIVE_INPUT_PROFILE", inputProfile };
+      DispatcherDefault.dispatch(obj2);
       const tmpResult = DispatcherDefault;
     } else {
       throw new TypeError("Trying to call a non-function");
@@ -525,14 +528,14 @@ settings = {
   },
   setEchoCancellation(enabled, location) {
     if (typeof isNotSupported === "function") {
-      const obj = { type: "AUDIO_SET_ECHO_CANCELLATION", enabled, location };
-      obj.dispatch(obj);
+      const obj2 = { type: "AUDIO_SET_ECHO_CANCELLATION", enabled, location };
+      DispatcherDefault.dispatch(obj2);
     } else {
       throw new TypeError("Trying to call a non-function");
     }
   },
   setSidechainCompression(enabled) {
-    let obj = arg1;
+    obj = arg1;
     if (arg1 === undefined) {
       obj = {};
     }
@@ -544,14 +547,14 @@ settings = {
         MediaEngineStore.getSidechainCompression(),
         analyticsLocations,
       );
-      obj = { type: "AUDIO_SET_SIDECHAIN_COMPRESSION", enabled };
-      DispatcherDefault.dispatch(obj);
+      const obj3 = { type: "AUDIO_SET_SIDECHAIN_COMPRESSION", enabled };
+      DispatcherDefault.dispatch(obj3);
     } else {
       throw new TypeError("Trying to call a non-function");
     }
   },
   setSidechainCompressionStrength(strength) {
-    let obj = arg1;
+    obj = arg1;
     if (arg1 === undefined) {
       obj = {};
     }
@@ -563,42 +566,42 @@ settings = {
         MediaEngineStore.getSidechainCompressionStrength(),
         analyticsLocations,
       );
-      obj = { type: "AUDIO_SET_SIDECHAIN_COMPRESSION_STRENGTH", strength };
-      DispatcherDefault.dispatch(obj);
+      const obj3 = { type: "AUDIO_SET_SIDECHAIN_COMPRESSION_STRENGTH", strength };
+      DispatcherDefault.dispatch(obj3);
     } else {
       throw new TypeError("Trying to call a non-function");
     }
   },
   setLoopback(loopbackReason, enabled) {
     if (typeof isNotSupported === "function") {
-      const obj = { type: "AUDIO_SET_LOOPBACK", loopbackReason, enabled };
-      obj.dispatch(obj);
+      const obj2 = { type: "AUDIO_SET_LOOPBACK", loopbackReason, enabled };
+      DispatcherDefault.dispatch(obj2);
     } else {
       throw new TypeError("Trying to call a non-function");
     }
   },
   setNoiseSuppression(enabled, location) {
     if (typeof isNotSupported === "function") {
-      const obj = { type: "AUDIO_SET_NOISE_SUPPRESSION", enabled, location };
-      obj.dispatch(obj);
+      const obj2 = { type: "AUDIO_SET_NOISE_SUPPRESSION", enabled, location };
+      DispatcherDefault.dispatch(obj2);
     } else {
       throw new TypeError("Trying to call a non-function");
     }
   },
   setNoiseCancellation(enabled, location) {
     if (typeof isNotSupported === "function") {
-      let obj = { type: "AUDIO_SET_NOISE_CANCELLATION", enabled, location };
-      obj.dispatch(obj);
-      obj = { type: "AUDIO_SET_NOISE_SUPPRESSION", enabled: !enabled, location };
-      DispatcherDefault.dispatch(obj);
+      const obj2 = { type: "AUDIO_SET_NOISE_CANCELLATION", enabled, location };
+      DispatcherDefault.dispatch(obj2);
+      const obj4 = { type: "AUDIO_SET_NOISE_SUPPRESSION", enabled: !enabled, location };
+      DispatcherDefault.dispatch(obj4);
     } else {
       throw new TypeError("Trying to call a non-function");
     }
   },
   setAutomaticGainControl(enabled, location) {
     if (typeof isNotSupported === "function") {
-      const obj = { type: "AUDIO_SET_AUTOMATIC_GAIN_CONTROL", enabled, location };
-      obj.dispatch(obj);
+      const obj2 = { type: "AUDIO_SET_AUTOMATIC_GAIN_CONTROL", enabled, location };
+      DispatcherDefault.dispatch(obj2);
     } else {
       throw new TypeError("Trying to call a non-function");
     }
@@ -623,13 +626,13 @@ settings = {
           attenuateWhileSpeakingOthers,
         );
       }
-      const obj = {
+      const obj2 = {
         type: "AUDIO_SET_ATTENUATION",
         attenuation,
         attenuateWhileSpeakingSelf,
         attenuateWhileSpeakingOthers,
       };
-      obj.dispatch(obj);
+      DispatcherDefault.dispatch(obj2);
     } else {
       throw new TypeError("Trying to call a non-function");
     }
@@ -637,8 +640,8 @@ settings = {
   setQoS(enabled) {
     if (typeof isNotSupported === "function") {
       trackVoiceAndVideoSettingsUpdateDefault("quality_of_service_packets_enabled", enabled, MediaEngineStore.getQoS());
-      const obj = { type: "AUDIO_SET_QOS", enabled };
-      obj.dispatch(obj);
+      const obj2 = { type: "AUDIO_SET_QOS", enabled };
+      DispatcherDefault.dispatch(obj2);
     } else {
       throw new TypeError("Trying to call a non-function");
     }
@@ -657,8 +660,8 @@ settings = {
         enabled,
         MediaEngineStore.getEnableSilenceWarning(),
       );
-      const obj = { type: "AUDIO_SET_DISPLAY_SILENCE_WARNING", enabled };
-      obj.dispatch(obj);
+      const obj2 = { type: "AUDIO_SET_DISPLAY_SILENCE_WARNING", enabled };
+      DispatcherDefault.dispatch(obj2);
     } else {
       throw new TypeError("Trying to call a non-function");
     }
@@ -673,8 +676,8 @@ settings = {
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
-          let obj = { value, done: true };
-          return obj;
+          const obj2 = { value, done: true };
+          return obj2;
         } else {
           return { value: "HermesInternal", done: null };
         }
@@ -687,30 +690,29 @@ settings = {
               throw value;
             } else if (arg0 === 2) {
               dependencyMap = 3;
-              obj = { value, done: true };
-              return obj;
+              const obj3 = { value, done: true };
+              return obj3;
             } else {
               closure_0 = tmp2;
               isNotSupported();
               v1 = 1;
               dependencyMap = 1;
-              const obj1 = {
+              const obj4 = {
                 value: v1(9223)("debug_logging_enabled", closure_0, debugLogging.getDebugLogging()),
                 done: false,
               };
-              return obj1;
+              return obj4;
             }
           } else if (arg0 === 1) {
             dependencyMap = 3;
             throw value;
           } else if (arg0 === 2) {
             dependencyMap = 3;
-            const obj2 = { value, done: true };
-            return obj2;
+            const obj5 = { value, done: true };
+            return obj5;
           } else {
-            obj = v1(573);
-            const obj3 = { type: "AUDIO_SET_DEBUG_LOGGING", enabled: closure_128_0 };
-            obj.dispatch(obj3);
+            const obj6 = { type: "AUDIO_SET_DEBUG_LOGGING", enabled: closure_128_0 };
+            v1(573).dispatch(obj6);
             dependencyMap = 3;
             return { value: "HermesInternal", done: null };
           }
@@ -724,8 +726,8 @@ settings = {
   setVideoHook(enabled) {
     if (typeof isNotSupported === "function") {
       trackVoiceAndVideoSettingsUpdateDefault("video_hook_enabled", enabled, MediaEngineStore.getVideoHook());
-      const obj = { type: "MEDIA_ENGINE_SET_VIDEO_HOOK", enabled };
-      obj.dispatch(obj);
+      const obj2 = { type: "MEDIA_ENGINE_SET_VIDEO_HOOK", enabled };
+      DispatcherDefault.dispatch(obj2);
     } else {
       throw new TypeError("Trying to call a non-function");
     }
@@ -737,8 +739,8 @@ settings = {
         enabled,
         MediaEngineStore.getExperimentalSoundshare(),
       );
-      const obj = { type: "MEDIA_ENGINE_SET_EXPERIMENTAL_SOUNDSHARE", enabled };
-      obj.dispatch(obj);
+      const obj2 = { type: "MEDIA_ENGINE_SET_EXPERIMENTAL_SOUNDSHARE", enabled };
+      DispatcherDefault.dispatch(obj2);
     } else {
       throw new TypeError("Trying to call a non-function");
     }
@@ -750,8 +752,8 @@ settings = {
         enabled,
         MediaEngineStore.getUseSystemScreensharePicker(),
       );
-      const obj = { type: "MEDIA_ENGINE_SET_USE_SYSTEM_SCREENSHARE_PICKER", enabled };
-      obj.dispatch(obj);
+      const obj2 = { type: "MEDIA_ENGINE_SET_USE_SYSTEM_SCREENSHARE_PICKER", enabled };
+      DispatcherDefault.dispatch(obj2);
     } else {
       throw new TypeError("Trying to call a non-function");
     }
@@ -766,8 +768,8 @@ settings = {
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
-          let obj = { value, done: true };
-          return obj;
+          const obj2 = { value, done: true };
+          return obj2;
         } else {
           return { value: "HermesInternal", done: null };
         }
@@ -780,30 +782,29 @@ settings = {
               throw value;
             } else if (arg0 === 2) {
               dependencyMap = 3;
-              obj = { value, done: true };
-              return obj;
+              const obj3 = { value, done: true };
+              return obj3;
             } else {
               closure_0 = tmp2;
               isNotSupported();
               v1 = 1;
               dependencyMap = 1;
-              const obj1 = {
+              const obj4 = {
                 value: v1(9223)("audio_subsystem", closure_0, audioSubsystem.getAudioSubsystem()),
                 done: false,
               };
-              return obj1;
+              return obj4;
             }
           } else if (arg0 === 1) {
             dependencyMap = 3;
             throw value;
           } else if (arg0 === 2) {
             dependencyMap = 3;
-            const obj2 = { value, done: true };
-            return obj2;
+            const obj5 = { value, done: true };
+            return obj5;
           } else {
-            obj = v1(573);
-            const obj3 = { type: "AUDIO_SET_SUBSYSTEM", subsystem: closure_128_0 };
-            obj.dispatch(obj3);
+            const obj6 = { type: "AUDIO_SET_SUBSYSTEM", subsystem: closure_128_0 };
+            v1(573).dispatch(obj6);
             dependencyMap = 3;
             return { value: "HermesInternal", done: null };
           }
@@ -815,10 +816,8 @@ settings = {
     })();
   },
   setVideoEnabled(enabled) {
-    let obj = applyBackgroundOption;
-    const result = obj.applyInitialVideoBackgroundOption();
-    obj = { type: "MEDIA_ENGINE_SET_VIDEO_ENABLED", enabled };
-    DispatcherDefault.dispatch(obj);
+    const result = applyBackgroundOption.applyInitialVideoBackgroundOption();
+    DispatcherDefault.dispatch({ type: "MEDIA_ENGINE_SET_VIDEO_ENABLED", enabled });
   },
   setGoLiveSource(qualityOptions) {
     qualityOptions = undefined;
@@ -826,7 +825,7 @@ settings = {
       qualityOptions = qualityOptions.qualityOptions;
     }
     if (null != qualityOptions) {
-      let obj = StreamQualityUtils;
+      obj = StreamQualityUtils;
       const preset = qualityOptions.qualityOptions.preset;
       const resolution = qualityOptions.qualityOptions.resolution;
       const frameRate = qualityOptions.qualityOptions.frameRate;
@@ -837,8 +836,8 @@ settings = {
       }
       const result = obj.trackStreamSettingsUpdate(preset, resolution, frameRate, sound);
     }
-    obj = { type: "MEDIA_ENGINE_SET_GO_LIVE_SOURCE", settings: qualityOptions };
-    DispatcherDefault.dispatch(obj);
+    DispatcherDefault.dispatch({ type: "MEDIA_ENGINE_SET_GO_LIVE_SOURCE", settings: qualityOptions });
+    const obj3 = { type: "MEDIA_ENGINE_SET_GO_LIVE_SOURCE", settings: qualityOptions };
   },
   setAecDump(enabled) {
     if (typeof isNotSupported === "function") {
@@ -847,8 +846,8 @@ settings = {
         enabled,
         MediaEngineStore.getAecDump(),
       );
-      const obj = { type: "MEDIA_ENGINE_SET_AEC_DUMP", enabled };
-      obj.dispatch(obj);
+      const obj2 = { type: "MEDIA_ENGINE_SET_AEC_DUMP", enabled };
+      DispatcherDefault.dispatch(obj2);
     } else {
       throw new TypeError("Trying to call a non-function");
     }
@@ -862,24 +861,24 @@ settings = {
   },
   setEnableHardwareMuteNotice(enabled) {
     if (typeof isNotSupported === "function") {
-      const obj = { type: "MEDIA_ENGINE_SET_ENABLE_HARDWARE_MUTE_NOTICE", enabled };
-      obj.dispatch(obj);
+      const obj2 = { type: "MEDIA_ENGINE_SET_ENABLE_HARDWARE_MUTE_NOTICE", enabled };
+      DispatcherDefault.dispatch(obj2);
     } else {
       throw new TypeError("Trying to call a non-function");
     }
   },
   setKrispSuppressionLevel(level) {
     if (typeof isNotSupported === "function") {
-      const obj = { type: "AUDIO_SET_KRISP_SUPPRESSION_LEVEL", level };
-      obj.dispatch(obj);
+      const obj2 = { type: "AUDIO_SET_KRISP_SUPPRESSION_LEVEL", level };
+      DispatcherDefault.dispatch(obj2);
     } else {
       throw new TypeError("Trying to call a non-function");
     }
   },
   setKrispModelOverride(model) {
     if (typeof isNotSupported === "function") {
-      const obj = { type: "AUDIO_SET_KRISP_MODEL_OVERRIDE", model };
-      obj.dispatch(obj);
+      const obj2 = { type: "AUDIO_SET_KRISP_MODEL_OVERRIDE", model };
+      DispatcherDefault.dispatch(obj2);
       if (MediaEngineStore.getNoiseCancellation()) {
         const self = this;
         this.setNoiseCancellation(false);
@@ -896,18 +895,13 @@ settings = {
   },
   setOpenH264Enabled(enabled) {
     if (typeof isNotSupported === "function") {
-      const obj = { type: "MEDIA_ENGINE_SET_OPENH264_ENABLED", enabled };
-      obj.dispatch(obj);
+      const obj2 = { type: "MEDIA_ENGINE_SET_OPENH264_ENABLED", enabled };
+      DispatcherDefault.dispatch(obj2);
     } else {
       throw new TypeError("Trying to call a non-function");
     }
   },
   resetMediaEngineSettings(overrides) {
-    const obj = { type: "MEDIA_ENGINE_RESET_SETTINGS", overrides };
-    return obj.dispatch(obj);
+    return DispatcherDefault.dispatch({ type: "MEDIA_ENGINE_RESET_SETTINGS", overrides });
   },
 };
-const size = fn(2);
-let result = size.fileFinishedImporting("actions/AudioActionCreators.tsx");
-
-export default settings;

@@ -45,7 +45,7 @@ export const usePrivateProfileCoachmarkProps = function usePrivateProfileCoachma
   stringResult1 = intl.string(tmp(prop[8]).t.bnNxW1);
   const items = [stringResult1, markAsDismissed, visibleContent];
   return stringResult1.useMemo(() => {
-    let obj = {
+    const obj = {
       title: null,
       description: null,
       position: "top",
@@ -70,9 +70,7 @@ export const usePrivateProfileCoachmarkProps = function usePrivateProfileCoachma
     obj.buttonLabel = intl2.string(util.t.eOoTMX);
     obj.onButtonPress = function onButtonPress() {
       closure_1_1(constants2.TAKE_ACTION);
-      visibleContent(markAsDismissed[12]);
-      const obj = { screen: constants.DATA_AND_PRIVACY };
-      obj.openUserSettings(obj);
+      visibleContent(markAsDismissed[12]).openUserSettings({ screen: constants.DATA_AND_PRIVACY });
     };
     return obj;
   }, items);

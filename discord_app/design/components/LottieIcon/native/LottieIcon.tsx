@@ -54,29 +54,28 @@ export const LottieIcon = noop.forwardRef((color, arg1) => {
     num3 = -1;
   }
   sum1 = num2 + num3;
-  let obj = noop;
   ref = noop.useRef(null);
   enabled = noop.useContext(AccessibilityPreferencesContext.AccessibilityPreferencesContext).reducedMotion.enabled;
   let tmp12 = tmp5;
   if ("custom" === size) {
     tmp12 = width;
   }
-  size = { width: tmp12, height: null };
+  const size1 = { width: tmp12, height: null };
   if ("custom" === size) {
     tmp5 = height;
   }
-  size.height = tmp5;
+  size1.height = tmp5;
   token = useToken.useToken(INTERACTIVE_TEXT_DEFAULT);
   const items = [token, layers];
   const items1 = [enabled, start, sum, num2, sum1];
-  const memo = obj.useMemo(() => {
+  const memo = noop.useMemo(() => {
     let mapped;
     if (null != token) {
       mapped = layers.map((keypath) => ({ keypath, color }));
     }
     return mapped;
   }, items);
-  callback = obj.useCallback(() => {
+  callback = noop.useCallback(() => {
     if (enabled) {
       const current3 = ref.current;
       if (current3 != null) {
@@ -98,7 +97,7 @@ export const LottieIcon = noop.forwardRef((color, arg1) => {
     }
   }, items1);
   const items2 = [callback];
-  const imperativeHandle = obj.useImperativeHandle(
+  const imperativeHandle = noop.useImperativeHandle(
     arg1,
     () => ({
       play() {
@@ -108,8 +107,8 @@ export const LottieIcon = noop.forwardRef((color, arg1) => {
     items2,
   );
   const items3 = [start, autoPlay, callback];
-  obj = { style: size, children: null };
-  const callback1 = obj.useCallback(() => {
+  const obj2 = { style: size1, children: null };
+  const callback1 = noop.useCallback(() => {
     if (autoPlay) {
       callback();
     } else {
@@ -119,7 +118,7 @@ export const LottieIcon = noop.forwardRef((color, arg1) => {
       }
     }
   }, items3);
-  obj = {
+  const obj3 = {
     ref,
     source: color.dotLottie,
     colorFilters: null,
@@ -134,11 +133,11 @@ export const LottieIcon = noop.forwardRef((color, arg1) => {
   if (!useLottieDefaultColors) {
     tmp21 = memo;
   }
-  obj.colorFilters = tmp21;
-  obj.onAnimationLoaded = callback1;
-  const items4 = [size, { opacity: num }];
-  obj.style = items4;
-  obj.children = jsx(_modDef5611, {
+  obj3.colorFilters = tmp21;
+  obj3.onAnimationLoaded = callback1;
+  const items4 = [size1, { opacity: num }];
+  obj3.style = items4;
+  obj2.children = jsx(_modDef5611, {
     ref,
     source: color.dotLottie,
     colorFilters: null,
@@ -148,16 +147,5 @@ export const LottieIcon = noop.forwardRef((color, arg1) => {
     resizeMode: "cover",
     style: null,
   });
-  return (
-    <View
-      ref={ref}
-      source={color.dotLottie}
-      colorFilters={null}
-      hardwareAccelerationAndroid
-      loop={false}
-      onAnimationLoaded={null}
-      resizeMode="cover"
-      style={null}
-    />
-  );
+  return <View style={size1}>{null}</View>;
 });

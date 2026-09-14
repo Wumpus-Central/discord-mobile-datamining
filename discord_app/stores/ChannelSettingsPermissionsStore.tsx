@@ -18,20 +18,19 @@ function init() {
   } else {
     const guildId = _null2.getGuildId();
     const guildId1 = _null2.getGuildId();
-    let obj = {};
+    const obj4 = {};
     const merged = Object.assign(_null2.permissionOverwrites);
     if (tmp) {
-      obj = PermissionUtilsAll;
-      obj[guildId1] = obj.makeEveryoneOverwrite(guildId1);
+      obj4[guildId1] = PermissionUtilsAll.makeEveryoneOverwrite(guildId1);
     }
-    c16 = obj;
-    c17 = obj;
-    if (null == obj[c20]) {
+    c16 = obj4;
+    c17 = obj4;
+    if (null == obj4[c20]) {
       c20 = guildId;
     }
     closure_5 = null != category;
     const obj2 = PermissionUtilsAll;
-    tmp = null != guildId1 && null == obj[guildId1];
+    tmp = null != guildId1 && null == obj4[guildId1];
     obj2.areChannelsLocked(_null2, category, AppChannelPermissionUtils.getAppChannelBotUserId(_null2));
     c21 = null;
     c15 = false;
@@ -52,34 +51,33 @@ function syncChannelUpdates(id) {
           return false;
         } else {
           const guildId1 = channel.getGuildId();
-          let obj = {};
+          const obj2 = {};
           const merged = Object.assign(channel.permissionOverwrites);
           if (tmp) {
-            obj = PermissionUtilsAll;
-            obj[guildId1] = obj.makeEveryoneOverwrite(guildId1);
+            obj2[guildId1] = PermissionUtilsAll.makeEveryoneOverwrite(guildId1);
           }
-          obj = {};
+          const obj4 = {};
           const item = set.forEach((item) => {
-            if (null != obj1) {
-              obj[item] = obj1[item];
+            if (null != obj7) {
+              obj4[item] = obj7[item];
             }
           });
-          let tmp6 = null == obj[guildId];
+          let tmp6 = null == obj4[guildId];
           if (tmp6) {
             tmp6 = null == channel.permissionOverwrites[guildId];
           }
           if (tmp6) {
-            obj[guildId] = PermissionUtilsAll.makeEveryoneOverwrite(guildId);
+            obj4[guildId] = PermissionUtilsAll.makeEveryoneOverwrite(guildId);
           }
-          const obj1 = {};
+          const obj7 = {};
           const merged1 = Object.assign(channel.permissionOverwrites);
-          const merged2 = Object.assign(obj);
-          if (null == obj1[closure_20]) {
+          const merged2 = Object.assign(obj4);
+          if (null == obj7[closure_20]) {
             closure_20 = guildId;
           } else {
             let tmp18 = null != c21;
             if (tmp18) {
-              tmp18 = null != obj1[c21];
+              tmp18 = null != obj7[c21];
             }
             if (tmp18) {
               closure_20 = c21;
@@ -87,8 +85,8 @@ function syncChannelUpdates(id) {
             }
           }
           const obj5 = PermissionUtilsAll;
-          tmp = null != guildId1 && null == obj[guildId1];
-          closure_4 = obj5.areChannelsLocked(channel, category, obj(11739).getAppChannelBotUserId(channel));
+          tmp = null != guildId1 && null == obj2[guildId1];
+          closure_4 = obj5.areChannelsLocked(channel, category, obj4(11740).getAppChannelBotUserId(channel));
           return true;
         }
       }
@@ -203,14 +201,14 @@ const channelSettingsPermissionsStore = new ChannelSettingsPermissionsStore(Disp
     }
     if (null != tmp) {
       if (null != c18) {
-        let obj = {};
+        const obj = {};
         const merged = Object.assign(tmp);
         obj.allow = allow;
         obj.deny = deny;
-        obj = {};
+        const obj2 = {};
         const merged1 = Object.assign(_null);
-        obj[id] = obj;
-        _null = obj;
+        obj2[id] = obj;
+        _null = obj2;
         set.add(id);
         CLOSED = FormStates.OPEN;
         c15 = !_modDef12.isEqual(_null, c17);

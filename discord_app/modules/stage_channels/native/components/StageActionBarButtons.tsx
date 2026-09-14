@@ -29,6 +29,7 @@ import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
 import ReadStateStore from "../../../../stores/ReadStateStore.tsx";
 import StageMusicStore from "../../StageMusicStore.tsx";
 
+const require = globalThis.__r;
 const ActionSheetActionCreatorsDefault = ActionSheetActionCreators;
 
 require = fn;
@@ -47,51 +48,55 @@ class AgeVerificationSpeakerActionSheet {
       header: null,
       children: null,
     };
-    obj = {
+    obj1 = {
       style: tmp.header,
       children: jsx(onClose(closure_3[37]).TrafficConeSpotIllustration, { width: 120, height: 120 }),
     };
-    obj.header = jsx(View, obj);
-    obj1 = { style: tmp.container, children: null };
-    obj2 = { style: tmp.content, children: null };
-    obj3 = { variant: "heading-lg/bold", color: "mobile-text-heading-primary", style: tmp.title, children: null };
+    obj.header = jsx(View, obj1);
+    obj10 = { style: tmp.container, children: null };
+    obj11 = { style: tmp.content, children: null };
+    obj12 = { variant: "heading-lg/bold", color: "mobile-text-heading-primary", style: tmp.title, children: null };
     intl = onClose(closure_3[12]).intl;
-    obj3.children = intl.string(onClose(closure_3[12]).t.zvubnM);
+    obj12.children = intl.string(onClose(closure_3[12]).t.zvubnM);
     items = [,];
-    items[0] = jsx(onClose(closure_3[38]).Text, obj3);
-    obj4 = { variant: "text-md/normal", color: "text-default", style: tmp.body, children: null };
+    items[0] = jsx(onClose(closure_3[38]).Text, obj12);
+    obj13 = { variant: "text-md/normal", color: "text-default", style: tmp.body, children: null };
     intl2 = onClose(closure_3[12]).intl;
-    obj4.children = intl2.string(onClose(closure_3[12]).t["/wx+J2"]);
-    items[1] = jsx(onClose(closure_3[38]).Text, obj4);
-    obj2.children = items;
+    obj13.children = intl2.string(onClose(closure_3[12]).t["/wx+J2"]);
+    items[1] = jsx(onClose(closure_3[38]).Text, obj13);
+    obj11.children = items;
     items1 = [,];
-    items1[0] = jsxs(View, obj2);
-    obj5 = { style: tmp.footer, children: null };
-    obj6 = {
+    items1[0] = jsxs(View, obj11);
+    obj14 = { style: tmp.footer, children: null };
+    obj15 = {
       size: "lg",
       onPress() {
-        const obj = {
+        const obj = AgeVerificationActionCreatorsDefault;
+        const result = obj.showAgeVerificationGetStartedModal({
+          entryPoint:
+            AgeVerificationAnalyticsUtils.AgeVerificationModalEntryPoint.STAGE_CHANNEL_AGE_VERIFICATION_PROMPT,
+        });
+        onClose();
+        const obj2 = {
           entryPoint:
             AgeVerificationAnalyticsUtils.AgeVerificationModalEntryPoint.STAGE_CHANNEL_AGE_VERIFICATION_PROMPT,
         };
-        const result = obj.showAgeVerificationGetStartedModal(obj);
-        onClose();
         ActionSheetActionCreatorsDefault.hideActionSheet();
       },
       text: null,
     };
     intl3 = onClose(closure_3[12]).intl;
-    obj6.text = intl3.string(onClose(closure_3[12]).t.KXVgjt);
+    obj15.text = intl3.string(onClose(closure_3[12]).t.KXVgjt);
     items2 = [,];
-    items2[0] = jsx(onClose(closure_3[39]).Button, obj6);
-    obj7 = { size: "lg", onPress: handleDismiss, text: null, variant: "secondary" };
+    items2[0] = jsx(onClose(closure_3[39]).Button, obj15);
+    obj16 = { size: "lg", onPress: handleDismiss, text: null, variant: "secondary" };
     intl4 = onClose(closure_3[12]).intl;
-    obj7.text = intl4.string(onClose(closure_3[12]).t.WAI6xu);
-    items2[1] = jsx(onClose(closure_3[39]).Button, obj7);
-    obj5.children = items2;
-    items1[1] = jsxs(View, obj5);
-    obj1.children = items1;
-    obj.children = jsxs(View, obj1);
+    obj16.text = intl4.string(onClose(closure_3[12]).t.WAI6xu);
+    items2[1] = jsx(onClose(closure_3[39]).Button, obj16);
+    obj14.children = items2;
+    items1[1] = jsxs(View, obj14);
+    obj10.children = items1;
+    obj.children = jsxs(View, obj10);
     return jsx(onClose(closure_3[36]).ActionSheet, obj);
   }
 }
@@ -106,21 +111,20 @@ class AnimatedPrompt {
     stateFromStores = obj.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
     obj2 = show(closure_3[53]);
     fn = function c() {
-      let obj = spring;
       let num = 20;
       if (show) {
         num = 0;
       }
-      obj = { marginTop: obj.withSpring(num, closure_17), opacity: null };
+      const obj2 = { marginTop: spring.withSpring(num, closure_17), opacity: null };
       let num2 = 0;
       if (show) {
         num2 = 1;
       }
-      obj.opacity = spring.withSpring(num2, closure_17);
-      return obj;
+      obj2.opacity = spring.withSpring(num2, closure_17);
+      return obj2;
     };
-    obj = { withSpring: show(closure_3[54]).withSpring, show, actionBarAnimationConfig: closure_17 };
-    fn.__closure = obj;
+    obj1 = { withSpring: show(closure_3[54]).withSpring, show, actionBarAnimationConfig: closure_17 };
+    fn.__closure = obj1;
     fn.__workletHash = 5255980384921;
     fn.__initData = closure_18;
     animatedStyle = obj2.useAnimatedStyle(fn);
@@ -167,47 +171,46 @@ let closure_10 = fn(5495).REQUEST_TO_SPEAK_SHEET_KEY;
 const NOOP = fn(1074).NOOP;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-fn(4636);
-let createStyles = {
+let createStyles = fn(4636);
+let obj2 = {
   actionBarCTAContainer: { position: "relative" },
-  imageStyle: null,
+  imageStyle: { tintColor: nativeDefault.colors.WHITE },
   iconStyle: null,
   iconContainerStyle: null,
   continueContainer: null,
   continueText: null,
   continueIcon: null,
 };
-createStyles = { tintColor: nativeDefault.colors.WHITE };
-createStyles.imageStyle = createStyles;
 let size = { tintColor: nativeDefault.colors.WHITE, width: 20, height: 20 };
-createStyles.iconStyle = size;
-createStyles.iconContainerStyle = {
+obj2.iconStyle = size;
+let obj3 = { tintColor: nativeDefault.colors.WHITE };
+obj2.iconContainerStyle = {
   backgroundColor: nativeDefault.unsafe_rawColors.GREEN_360,
   borderRadius: nativeDefault.radii.lg,
   padding: 4,
 };
-createStyles.continueContainer = { flexDirection: "row", alignItems: "center", justifyContent: "center", padding: 16 };
-let obj1 = {
+obj2.continueContainer = { flexDirection: "row", alignItems: "center", justifyContent: "center", padding: 16 };
+let obj4 = {
   backgroundColor: nativeDefault.unsafe_rawColors.GREEN_360,
   borderRadius: nativeDefault.radii.lg,
   padding: 4,
 };
-createStyles.continueText = { color: nativeDefault.unsafe_rawColors.BLUE_345, fontSize: 14, lineHeight: 18 };
-let obj2 = { color: nativeDefault.unsafe_rawColors.BLUE_345, fontSize: 14, lineHeight: 18 };
-createStyles.continueIcon = { tintColor: nativeDefault.unsafe_rawColors.BLUE_345 };
-const value = createStyles.createStyles(createStyles);
-fn(4636);
-let obj4 = { container: null, header: null, content: null, title: null, body: null, footer: null };
-let obj3 = { tintColor: nativeDefault.unsafe_rawColors.BLUE_345 };
-obj4.container = { paddingVertical: nativeDefault.space.PX_12, gap: nativeDefault.space.PX_24 };
-obj4.header = { alignItems: "center" };
-let obj5 = { paddingVertical: nativeDefault.space.PX_12, gap: nativeDefault.space.PX_24 };
-obj4.content = { gap: nativeDefault.space.PX_8 };
-obj4.title = { textAlign: "center" };
-obj4.body = { textAlign: "center" };
-createStyles = { gap: nativeDefault.space.PX_12 };
-obj4.footer = createStyles;
-const __initData = createStyles.createStyles(obj4);
+obj2.continueText = { color: nativeDefault.unsafe_rawColors.BLUE_345, fontSize: 14, lineHeight: 18 };
+let obj5 = { color: nativeDefault.unsafe_rawColors.BLUE_345, fontSize: 14, lineHeight: 18 };
+obj2.continueIcon = { tintColor: nativeDefault.unsafe_rawColors.BLUE_345 };
+const value = createStyles.createStyles(obj2);
+createStyles = fn(4636);
+let obj7 = { container: null, header: null, content: null, title: null, body: null, footer: null };
+let obj6 = { tintColor: nativeDefault.unsafe_rawColors.BLUE_345 };
+obj7.container = { paddingVertical: nativeDefault.space.PX_12, gap: nativeDefault.space.PX_24 };
+obj7.header = { alignItems: "center" };
+let obj9 = { paddingVertical: nativeDefault.space.PX_12, gap: nativeDefault.space.PX_24 };
+obj7.content = { gap: nativeDefault.space.PX_8 };
+obj7.title = { textAlign: "center" };
+obj7.body = { textAlign: "center" };
+const obj10 = { gap: nativeDefault.space.PX_8 };
+obj7.footer = { gap: nativeDefault.space.PX_12 };
+const __initData = createStyles.createStyles(obj7);
 const actionBarAnimationConfig = {
   mass: 1,
   stiffness: 100,
@@ -239,9 +242,9 @@ export const MusicMuteButton = function MusicMuteButton(arg0) {
   ({ channel, isSmallSize } = arg0);
   let imageStyle = closure_14();
   let tmpResult = dependencyMap;
-  let obj = stateFromStores(504);
   const items = [StageMusicStore];
-  stateFromStores = obj.useStateFromStores(items, () => muted.isMuted());
+  stateFromStores = stateFromStores(504).useStateFromStores(items, () => muted.isMuted());
+  const obj = stateFromStores(504);
   if (!obj2.useShowStageMusicMuteButton(channel.id)) {
     return null;
   } else {
@@ -253,7 +256,7 @@ export const MusicMuteButton = function MusicMuteButton(arg0) {
     } else {
       stringResult = string(t.zqxfrf);
     }
-    obj = {
+    const obj3 = {
       accessibilityLabel: stringResult,
       source: importDefault(stateFromStores ? 10037 : 10038),
       IconComponent: null,
@@ -267,14 +270,14 @@ export const MusicMuteButton = function MusicMuteButton(arg0) {
     } else {
       MusicIcon = tmp(10041).MusicIcon;
     }
-    obj.IconComponent = MusicIcon;
+    obj3.IconComponent = MusicIcon;
     imageStyle = imageStyle.imageStyle;
-    obj.imageStyle = imageStyle;
-    obj.onPress = function onPress() {
+    obj3.imageStyle = imageStyle;
+    obj3.onPress = function onPress() {
       return StageMusicActionCreators.updateStageMusicMuted(!stateFromStores);
     };
-    obj.isSmallSize = isSmallSize;
-    closure_12(CallBarActionAll.ActionButton, obj);
+    obj3.isSmallSize = isSmallSize;
+    closure_12(CallBarActionAll.ActionButton, obj3);
   }
   obj2 = stateFromStores(10031);
 };
@@ -287,11 +290,11 @@ export const DisconnectStageButton = function DisconnectStageButton(channel) {
   obj.IconComponent = channel(9202).DoorExitIcon;
   obj.onPress = function onPress() {
     if (shouldShowEndStageModalDefault(channel)) {
-      let tmp3Result = StageChannelActionCreatorExtras;
-      tmp3Result.openEndStageModal(channel);
+      StageChannelActionCreatorExtras.openEndStageModal(channel);
+      const tmp3Result = StageChannelActionCreatorExtras;
     } else {
-      tmp3Result = CallsUtils;
-      tmp3Result.handleDisconnect(channel);
+      CallsUtils.handleDisconnect(channel);
+      const tmp3Result2 = CallsUtils;
     }
   };
   obj.isSmallSize = channel.isSmallSize;
@@ -302,17 +305,18 @@ export const RequestToSpeakListButton = function RequestToSpeakListButton(channe
   const isSmallSize = channel.isSmallSize;
   let analyticsLocations;
   function handleOpenAudienceList() {
-    const obj = { channelId: channel.id, analyticsLocations };
-    obj.openLazy(asyncRequireImpl(10045, dependencyMap.paths), closure_10, obj);
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(10045, dependencyMap.paths), closure_10, {
+      channelId: channel.id,
+      analyticsLocations,
+    });
   }
   analyticsLocations = analyticsLocations(7265)().analyticsLocations;
-  let obj = channel(5512);
-  const stageParticipantsCount = obj.useStageParticipantsCount(
+  const stageParticipantsCount = channel(5512).useStageParticipantsCount(
     channel.id,
     channel(5506).StageChannelParticipantNamedIndex.REQUESTED_TO_SPEAK_ONLY,
   );
   if (stageParticipantsCount > 0) {
-    obj = {
+    const obj2 = {
       accessibilityLabel: null,
       source: null,
       imageStyle: null,
@@ -322,18 +326,18 @@ export const RequestToSpeakListButton = function RequestToSpeakListButton(channe
       isSmallSize: null,
     };
     const intl = tmp3(1114).intl;
-    obj = { count: stageParticipantsCount };
-    obj.accessibilityLabel = intl.formatToPlainString(tmp3(1114).t.OhK58v, obj);
-    obj.source = tmp(10057);
-    const obj1 = { tintColor: tmp(576).unsafe_rawColors.WHITE };
-    obj.imageStyle = obj1;
-    obj.IconComponent = tmp3(10058).HandRequestSpeakListIcon;
-    obj.onPress = handleOpenAudienceList;
-    obj.notifications = stageParticipantsCount;
-    obj.isSmallSize = isSmallSize;
-    let tmp7 = closure_12(CallBarActionAll.NotifiedActionButton, obj);
+    const obj3 = { count: stageParticipantsCount };
+    obj2.accessibilityLabel = intl.formatToPlainString(tmp3(1114).t.OhK58v, obj3);
+    obj2.source = tmp(10057);
+    const obj4 = { tintColor: tmp(576).unsafe_rawColors.WHITE };
+    obj2.imageStyle = obj4;
+    obj2.IconComponent = tmp3(10058).HandRequestSpeakListIcon;
+    obj2.onPress = handleOpenAudienceList;
+    obj2.notifications = stageParticipantsCount;
+    obj2.isSmallSize = isSmallSize;
+    let tmp7 = closure_12(CallBarActionAll.NotifiedActionButton, obj2);
   } else {
-    const obj2 = {
+    const obj5 = {
       accessibilityLabel: null,
       source: null,
       imageStyle: null,
@@ -342,14 +346,14 @@ export const RequestToSpeakListButton = function RequestToSpeakListButton(channe
       isSmallSize: null,
     };
     const intl2 = tmp3(1114).intl;
-    obj2.accessibilityLabel = intl2.string(tmp3(1114).t.KJnyvh);
-    obj2.source = tmp(10057);
-    const obj3 = { tintColor: tmp(576).unsafe_rawColors.WHITE };
-    obj2.imageStyle = obj3;
-    obj2.IconComponent = tmp3(10058).HandRequestSpeakListIcon;
-    obj2.onPress = handleOpenAudienceList;
-    obj2.isSmallSize = isSmallSize;
-    tmp7 = closure_12(CallBarActionAll.ActionButton, obj2);
+    obj5.accessibilityLabel = intl2.string(tmp3(1114).t.KJnyvh);
+    obj5.source = tmp(10057);
+    const obj6 = { tintColor: tmp(576).unsafe_rawColors.WHITE };
+    obj5.imageStyle = obj6;
+    obj5.IconComponent = tmp3(10058).HandRequestSpeakListIcon;
+    obj5.onPress = handleOpenAudienceList;
+    obj5.isSmallSize = isSmallSize;
+    tmp7 = closure_12(CallBarActionAll.ActionButton, obj5);
   }
   return tmp7;
 };
@@ -361,18 +365,18 @@ export const RequestToSpeakButton = function RequestToSpeakButton(channel) {
   let shouldAgeVerifyToSpeakForCurrentUser;
   let shouldShowAgeVerificationPopover;
   [tmp4, c0] = shouldShowAgeVerificationPopover(first(shouldAgeVerifyToSpeakForCurrentUser[42])(channel), 2);
-  let obj = require("useLocalStorageState");
+  let tmp = first;
+  const tmp3 = shouldShowAgeVerificationPopover(first(shouldAgeVerifyToSpeakForCurrentUser[42])(channel), 2);
   const tmp6 = shouldShowAgeVerificationPopover(
-    obj.useLocalStorageState("age-verification-stage-popover-dismissed", false),
+    require("useLocalStorageState").useLocalStorageState("age-verification-stage-popover-dismissed", false),
     2,
   );
   first = tmp6[0];
   importAll = tmp8;
-  let tmp = first;
-  const tmp3 = shouldShowAgeVerificationPopover(first(shouldAgeVerifyToSpeakForCurrentUser[42])(channel), 2);
+  let obj = require("useLocalStorageState");
   shouldAgeVerifyToSpeakForCurrentUser =
     require("useStageSpeakingForCurrentUser").useShouldAgeVerifyToSpeakForCurrentUser(channel.id);
-  const obj2 = require("useStageSpeakingForCurrentUser");
+  let obj2 = require("useStageSpeakingForCurrentUser");
   shouldShowAgeVerificationPopover = require("useStageSpeakingForCurrentUser").useShouldShowAgeVerificationPopover(
     channel.id,
   );
@@ -383,17 +387,17 @@ export const RequestToSpeakButton = function RequestToSpeakButton(channel) {
       tmp = !first;
     }
     if (tmp) {
-      let obj = { content: null, key: "AgeVerificationSpeakerActionSheet" };
-      obj = {
+      const obj2 = { content: null, key: "AgeVerificationSpeakerActionSheet" };
+      const obj3 = {
         onClose() {
           return closure_1_2(true);
         },
       };
-      obj.content = closure_2_12(AgeVerificationSpeakerActionSheet, obj);
-      obj.showActionSheet(obj);
+      obj2.content = closure_2_12(AgeVerificationSpeakerActionSheet, obj3);
+      ActionSheetActionCreators.showActionSheet(obj2);
     }
   }, items);
-  const obj3 = require("useStageSpeakingForCurrentUser");
+  let obj3 = require("useStageSpeakingForCurrentUser");
   const canRaiseHand = require("useCanRaiseHand").useCanRaiseHand(channel);
   let tmp13 = !canRaiseHand;
   if (!canRaiseHand) {
@@ -407,10 +411,10 @@ export const RequestToSpeakButton = function RequestToSpeakButton(channel) {
   } else {
     stringResult = string(t.hLbG5N);
   }
-  obj = {
+  const obj5 = {
     accessibilityLabel: stringResult,
     isActive: tmp4,
-    source: tmp(tmp2[46]),
+    source: tmp(shouldAgeVerifyToSpeakForCurrentUser[46]),
     IconComponent: null,
     onPress: null,
     appearsDisabled: null,
@@ -421,30 +425,29 @@ export const RequestToSpeakButton = function RequestToSpeakButton(channel) {
   } else {
     HandRequestSpeakIcon = tmp5(tmp2[48]).HandRequestSpeakIcon;
   }
-  obj.IconComponent = HandRequestSpeakIcon;
-  obj.onPress = tmp13
+  obj5.IconComponent = HandRequestSpeakIcon;
+  obj5.onPress = tmp13
     ? NOOP
     : () => {
         if (shouldAgeVerifyToSpeakForCurrentUser) {
-          const obj = {
+          const obj2 = {
             entryPoint: AgeVerificationAnalyticsUtils.AgeVerificationModalEntryPoint.STAGE_CHANNEL_RAISE_HAND,
           };
-          const result = obj.showAgeVerificationGetStartedModal(obj);
+          const result = AgeVerificationActionCreatorsDefault.showAgeVerificationGetStartedModal(obj2);
         } else {
           _undefined();
         }
       };
-  obj.appearsDisabled = tmp13;
-  obj.isSmallSize = channel.isSmallSize;
-  return closure_12(require("CallBarAction").ToggledActionButton, obj);
+  obj5.appearsDisabled = tmp13;
+  obj5.isSmallSize = channel.isSmallSize;
+  return closure_12(require("CallBarAction").ToggledActionButton, obj5);
 };
 export const ChatButton = function ChatButton(channel) {
   channel = channel.channel;
   const isSmallSize = channel.isSmallSize;
-  let obj = channel(504);
   const items = [ReadStateStore];
   const items1 = [channel.id];
-  const stateFromStoresObject = obj.useStateFromStoresObject(
+  const stateFromStoresObject = channel(504).useStateFromStoresObject(
     items,
     () => ({
       unreadCount: ReadStateStore.getUnreadCount(channel.id),
@@ -453,10 +456,10 @@ export const ChatButton = function ChatButton(channel) {
     items1,
   );
   ({ unreadCount, mentionCount } = stateFromStoresObject);
-  let obj1 = channel(10067);
-  const isVoiceChannelLocked = obj1.useIsVoiceChannelLocked(channel);
-  let obj2 = channel(9719);
-  const voiceChatNavigationContext = obj2.useVoiceChatNavigationContext();
+  const obj = channel(504);
+  const isVoiceChannelLocked = channel(10067).useIsVoiceChannelLocked(channel);
+  const obj2 = channel(10067);
+  const voiceChatNavigationContext = channel(9719).useVoiceChatNavigationContext();
   let openChat;
   if (voiceChatNavigationContext != null) {
     openChat = voiceChatNavigationContext.openChat;
@@ -470,7 +473,7 @@ export const ChatButton = function ChatButton(channel) {
   }
   if (mentionCount <= 0) {
     if (unreadCount <= 0) {
-      obj = {
+      const obj4 = {
         imageStyle: null,
         accessibilityLabel: null,
         IconComponent: null,
@@ -479,23 +482,23 @@ export const ChatButton = function ChatButton(channel) {
         appearsDisabled: null,
         isSmallSize: null,
       };
-      obj = { tintColor: isVoiceChannelLocked(576).unsafe_rawColors.WHITE };
-      obj.imageStyle = obj;
+      const obj5 = { tintColor: isVoiceChannelLocked(576).unsafe_rawColors.WHITE };
+      obj4.imageStyle = obj5;
       const intl2 = tmp(1114).intl;
-      obj.accessibilityLabel = intl2.string(tmp(1114).t.ZXxLQg);
-      obj.IconComponent = tmp(5152).ChatIcon;
-      obj.source = isVoiceChannelLocked(10068);
-      obj.onPress = onPress;
-      obj.appearsDisabled = isVoiceChannelLocked;
-      obj.isSmallSize = isSmallSize;
-      let tmp7Result = closure_12(openChat(9627).ActionButton, obj);
+      obj4.accessibilityLabel = intl2.string(tmp(1114).t.ZXxLQg);
+      obj4.IconComponent = tmp(5152).ChatIcon;
+      obj4.source = isVoiceChannelLocked(10068);
+      obj4.onPress = onPress;
+      obj4.appearsDisabled = isVoiceChannelLocked;
+      obj4.isSmallSize = isSmallSize;
+      let tmp7Result = closure_12(openChat(9627).ActionButton, obj4);
     }
     return tmp7Result;
   }
   if (mentionCount > 0) {
     unreadCount = mentionCount;
   }
-  obj1 = {
+  const obj6 = {
     notifications: unreadCount,
     isMentioned: mentionCount > 0,
     imageStyle: null,
@@ -506,31 +509,31 @@ export const ChatButton = function ChatButton(channel) {
     appearsDisabled: null,
     isSmallSize: null,
   };
-  obj2 = { tintColor: isVoiceChannelLocked(576).unsafe_rawColors.WHITE };
-  obj1.imageStyle = obj2;
+  const obj3 = channel(9719);
+  obj6.imageStyle = { tintColor: isVoiceChannelLocked(576).unsafe_rawColors.WHITE };
   const intl = tmp(1114).intl;
-  obj1.accessibilityLabel = intl.string(channel(1114).t.ZXxLQg);
-  obj1.IconComponent = channel(5152).ChatIcon;
-  obj1.source = isVoiceChannelLocked(10068);
-  obj1.onPress = onPress;
-  obj1.appearsDisabled = isVoiceChannelLocked;
-  obj1.isSmallSize = isSmallSize;
-  tmp7Result = closure_12(openChat(9627).NotifiedActionButton, obj1);
+  obj6.accessibilityLabel = intl.string(channel(1114).t.ZXxLQg);
+  obj6.IconComponent = channel(5152).ChatIcon;
+  obj6.source = isVoiceChannelLocked(10068);
+  obj6.onPress = onPress;
+  obj6.appearsDisabled = isVoiceChannelLocked;
+  obj6.isSmallSize = isSmallSize;
+  tmp7Result = closure_12(openChat(9627).NotifiedActionButton, obj6);
+  const obj7 = { tintColor: isVoiceChannelLocked(576).unsafe_rawColors.WHITE };
 };
 export { AnimatedPrompt };
 export const AnimatedStartStagePrompt = function AnimatedStartStagePrompt(channel) {
   channel = channel.channel;
-  let obj = useStageChannelConnectAction;
-  const isLive = obj.useStageChannelStartEvent(channel.id).isLive;
-  let tmp = _slicedToArray(noop.useState(false), 2);
-  const show = tmp[0];
-  closure_2 = tmp[1];
-  const tmp3 = _slicedToArray(noop.useState(false), 2);
-  const first1 = tmp3[0];
-  closure_4 = tmp3[1];
-  const tmp5 = _slicedToArray(noop.useState(isLive), 2);
-  const first2 = tmp5[0];
-  closure_6 = tmp5[1];
+  show = undefined;
+  closure_2 = undefined;
+  first1 = undefined;
+  closure_4 = undefined;
+  first2 = undefined;
+  closure_6 = undefined;
+  const isLive = useStageChannelConnectAction.useStageChannelStartEvent(channel.id).isLive;
+  [show, closure_2] = noop.useState(false);
+  [first1, closure_4] = noop.useState(false);
+  [first2, closure_6] = noop.useState(isLive);
   const items = [isLive, show, first1];
   const effect = noop.useEffect(() => {
     if (first1) {
@@ -574,10 +577,10 @@ export const AnimatedStartStagePrompt = function AnimatedStartStagePrompt(channe
   }, items1);
   let tmp10 = null;
   if (!first2) {
-    obj = { show, children: null };
-    obj = { channel, isLive, style: channel.style };
-    obj.children = closure_1_12(StartStagePrompt, obj);
-    tmp10 = closure_1_12(AnimatedPrompt, obj);
+    const obj2 = { show, children: null };
+    const obj3 = { channel, isLive, style: channel.style };
+    obj2.children = closure_1_12(StartStagePrompt, obj3);
+    tmp10 = closure_1_12(AnimatedPrompt, obj2);
   }
   return tmp10;
 };
@@ -604,15 +607,15 @@ export const JoinStagePrompt = function JoinStagePrompt(channel) {
 };
 export const ContinueToStagePrompt = function ContinueToStagePrompt(onContinue) {
   const tmp = closure_14();
-  let obj = { accessibilityRole: "button", onPress: onContinue.onContinue, children: null };
-  obj = { style: tmp.continueContainer, children: null };
-  obj = { children: null };
-  const obj1 = { style: tmp.continueText, children: null };
+  const obj = { accessibilityRole: "button", onPress: onContinue.onContinue, children: null };
+  const obj2 = { style: tmp.continueContainer, children: null };
+  const obj3 = { children: null };
+  const obj4 = { style: tmp.continueText, children: null };
   const intl = util.intl;
-  obj1.children = intl.string(util.t["jMLfp/"]);
-  obj.children = closure_1_12(native.LegacyText, obj1);
-  const items = [closure_1_12(View, obj)];
-  const obj2 = {
+  obj4.children = intl.string(util.t["jMLfp/"]);
+  obj3.children = closure_1_12(native.LegacyText, obj4);
+  const items = [closure_1_12(View, obj3)];
+  const obj5 = {
     children: closure_1_12(native.Icon, {
       style: tmp.continueIcon,
       source: _modDef10069,
@@ -620,8 +623,8 @@ export const ContinueToStagePrompt = function ContinueToStagePrompt(onContinue) 
       disableColor: true,
     }),
   };
-  items[1] = closure_1_12(View, obj2);
-  obj.children = items;
-  obj.children = map1(View, obj);
+  items[1] = closure_1_12(View, obj5);
+  obj2.children = items;
+  obj.children = map1(View, obj2);
   return closure_1_12(Pressables.PressableOpacity, obj);
 };

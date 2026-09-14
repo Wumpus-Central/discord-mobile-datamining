@@ -3,8 +3,10 @@ import Constants from "../../../Constants.tsx";
 import _mod4259 from "../../../../_runtime/metro/04259__.js";
 import timing from "../../../design/animation/reanimated/timing/timing.tsx";
 import HomeDrawerAnimations from "HomeDrawerAnimations.tsx";
-import identity from "../../../../_runtime/metro/01244__.js";
+import identity from "../../../../_runtime/metro/01242__.js";
 import size from "../../../../_runtime/metro/00002__.js";
+
+const require = globalThis.__r;
 
 const DM_WIDTH = Constants.DM_WIDTH;
 const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {

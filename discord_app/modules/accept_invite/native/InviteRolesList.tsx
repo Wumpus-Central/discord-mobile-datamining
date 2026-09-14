@@ -36,16 +36,16 @@ export default function InviteRolesList(invite) {
   if (null != guild) {
     tmp2 = null;
     if (0 !== memo.length) {
-      let obj = { spacing: 4, style: invite.style, children: null };
-      obj = { variant: "text-sm/semibold", color: "text-default", children: null };
+      const obj = { spacing: 4, style: invite.style, children: null };
+      const obj2 = { variant: "text-sm/semibold", color: "text-default", children: null };
       const intl = guild(1114).intl;
-      obj.children = intl.string(guild(1114).t.stcSfI);
-      const items1 = [closure_5(guild(4632).Text, obj)];
-      obj = {
+      obj2.children = intl.string(guild(1114).t.stcSfI);
+      const items1 = [closure_5(guild(4632).Text, obj2)];
+      const obj3 = {
         style: tmp.rolesRow,
         children: memo.map((role) => hasOwnProperty(RolePillDefault, { role, guildId: guild.id }, role.id)),
       };
-      items1[1] = closure_5(View, obj);
+      items1[1] = closure_5(View, obj3);
       obj.children = items1;
       tmp2 = closure_6(guild(5054).Stack, obj);
     }

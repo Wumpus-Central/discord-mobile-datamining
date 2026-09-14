@@ -13,7 +13,7 @@ import UserStore from "../../../../stores/UserStore.tsx";
 require = fn;
 const UserFlags = fn(1074).UserFlags;
 let closure_5 = fn(7146).PHONE_VERIFICATION_MODAL_KEY;
-let apply = fn(12);
+const apply = fn(12);
 let closure_6 = apply.debounce(function toggleSMS(user) {
   user = user.user;
   if (user.mfaSMSEnabled) {
@@ -21,12 +21,12 @@ let closure_6 = apply.debounce(function toggleSMS(user) {
     const formatted = intl2.string(util.t["CIGa+7"]).toUpperCase();
     const intl3 = util.intl;
     const str2 = intl2.string(util.t["CIGa+7"]);
-    let obj = { onSubmit: null, title: null, placeholder: null, closeOnSuccess: true };
+    const obj2 = { onSubmit: null, title: null, placeholder: null, closeOnSuccess: true };
     const formatted1 = intl3.string(util.t.wlfmlR).toUpperCase();
-    obj.onSubmit = MFAActionCreatorsDefault.disableSMS;
-    obj.title = formatted1;
-    obj.placeholder = formatted;
-    showUserSettingsInputAlertDefault(obj);
+    obj2.onSubmit = MFAActionCreatorsDefault.disableSMS;
+    obj2.title = formatted1;
+    obj2.placeholder = formatted;
+    showUserSettingsInputAlertDefault(obj2);
     const str3 = intl3.string(util.t.wlfmlR);
   } else {
     if (null != user) {
@@ -34,23 +34,24 @@ let closure_6 = apply.debounce(function toggleSMS(user) {
         const intl = util.intl;
         const formatted2 = intl.string(util.t.DZQe23).toUpperCase();
         const str = intl.string(util.t.DZQe23);
-        obj = { title: formatted2 };
-        actions_AlertActionCreatorsDefault.confirm(obj).then((result) => {
+        const obj4 = { title: formatted2 };
+        actions_AlertActionCreatorsDefault.confirm(obj4).then((result) => {
           if (result) {
             MFAActionCreatorsDefault.enableSMS();
           }
         });
-        const confirmResult = actions_AlertActionCreatorsDefault.confirm(obj);
+        const confirmResult = actions_AlertActionCreatorsDefault.confirm(obj4);
       }
     }
-    obj = ModalActionCreatorsDefault;
-    const obj1 = { reason: PhoneActionCreators.ChangePhoneReason.USER_SETTINGS_UPDATE };
-    obj.pushLazy(asyncRequireImpl(7145, dependencyMap.paths), obj1, closure_5);
+    const obj5 = { reason: null };
+    let obj = ModalActionCreatorsDefault;
+    obj5.reason = PhoneActionCreators.ChangePhoneReason.USER_SETTINGS_UPDATE;
+    obj.pushLazy(asyncRequireImpl(7145, dependencyMap.paths), obj5, closure_5);
     const tmp5 = asyncRequireImpl(7145, dependencyMap.paths);
   }
 }, 200);
-const SettingBuilders = fn(11601);
-apply = {
+const SettingBuilders = fn(11602);
+const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.uHAJ5v);
@@ -95,10 +96,9 @@ apply = {
     }
     return sMSBackupDisabledMessage;
   },
-  usePredicate: fn(14767).useIsTOTPEnabled,
-};
-apply = SettingBuilders.createToggle(apply);
+  usePredicate: fn(14768).useIsTOTPEnabled,
+});
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/AccountSmsBackupSetting.tsx");
 
-export default apply;
+export default toggle;

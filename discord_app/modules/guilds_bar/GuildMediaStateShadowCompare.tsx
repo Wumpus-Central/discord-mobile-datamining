@@ -54,7 +54,6 @@ export const compareGuildMediaState = function compareGuildMediaState(guildId, f
     }
     const _HermesInternal = HermesInternal;
     const combined = "" + str + ":" + joined + ":" + str4;
-    let obj = set;
     let flag = false;
     if (!set.has(combined)) {
       if (tmp) {
@@ -64,15 +63,14 @@ export const compareGuildMediaState = function compareGuildMediaState(guildId, f
       }
       flag = false;
       if (!tmp9) {
-        let obj1 = map;
         let num3 = map.get(str);
         if (num3 == null) {
           num3 = 0;
         }
         let num5 = num3 >= 3;
         if (!num5) {
-          obj.add(combined);
-          const result = obj1.set(str, num3 + 1);
+          set.add(combined);
+          const result = map.set(str, num3 + 1);
           if (!tmp) {
             closure_6 = closure_6 + 1;
             num5 = 0;
@@ -83,7 +81,7 @@ export const compareGuildMediaState = function compareGuildMediaState(guildId, f
       }
     }
     if (flag) {
-      obj = {
+      const obj3 = {
         guildId,
         lastAction: str,
         mismatchedFields: found,
@@ -91,27 +89,31 @@ export const compareGuildMediaState = function compareGuildMediaState(guildId, f
         fromStore: stateFromStores,
         isTransient: tmp,
       };
-      if (obj.isTransient) {
+      if (obj3.isTransient) {
         str3 = "transient";
       }
       const _HermesInternal2 = HermesInternal;
-      const mismatchedFields = obj.mismatchedFields;
+      const mismatchedFields = obj3.mismatchedFields;
       const combined1 =
-        "GuildMediaStateStore diverged from useGuildMediaState after " + obj.lastAction + " (" + str3 + "): ";
+        "GuildMediaStateStore diverged from useGuildMediaState after " + obj3.lastAction + " (" + str3 + "): ";
       const sum = combined1 + mismatchedFields.join(", ");
-      logger.warn(sum, obj);
-      obj = { tags: null, extra: null };
-      obj1 = { app_context: "guild_media_state_shadow", divergence_severity: str3, divergence_action: obj.lastAction };
-      obj.tags = obj1;
+      logger.warn(sum, obj3);
+      const obj5 = { tags: null, extra: null };
+      const obj6 = {
+        app_context: "guild_media_state_shadow",
+        divergence_severity: str3,
+        divergence_action: obj3.lastAction,
+      };
+      obj5.tags = obj6;
       ({
         guildId: obj7.guildId,
         mismatchedFields: obj7.mismatchedFields,
         fromHook: obj7.fromHook,
         fromStore: obj7.fromStore,
-      } = obj);
-      obj.extra = { guildId: null, mismatchedFields: null, fromHook: null, fromStore: null };
-      SentryUtilsDefault.captureMessage(sum, obj);
-      const obj2 = { guildId: null, mismatchedFields: null, fromHook: null, fromStore: null };
+      } = obj3);
+      obj5.extra = { guildId: null, mismatchedFields: null, fromHook: null, fromStore: null };
+      SentryUtilsDefault.captureMessage(sum, obj5);
+      const obj12 = { guildId: null, mismatchedFields: null, fromHook: null, fromStore: null };
     }
   }
 };

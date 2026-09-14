@@ -11,7 +11,9 @@ import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import GuildStore from "../../../stores/GuildStore.tsx";
 import GuildSettingsEmojiStore from "../GuildSettingsEmojiStore.tsx";
-import apply from "../../../../_runtime/metro/00012__.js";
+import apply_mod from "../../../../_runtime/metro/00012__.js";
+
+const require = globalThis.__r;
 
 require = fn;
 function computeEmojiItem(id) {
@@ -83,20 +85,25 @@ class ManageEmojisModal {
     length = undefined;
     callback = emojis.useCallback((arg0) => {
       ({ item, index } = arg0);
-      let type = item.type;
+      const type = item.type;
       if ("SECTION" === type) {
-        let obj = { style: closure_8.section, variant: "text-xs/bold", color: "text-default", children: item.section };
-        return React7(Text_Text.Text, obj);
+        const obj2 = {
+          style: closure_8.section,
+          variant: "text-xs/bold",
+          color: "text-default",
+          children: item.section,
+        };
+        return React7(Text_Text.Text, obj2);
       } else if ("EMOJI" === type) {
-        type = undefined;
-        if (emojiItems[index - 1] != null) {
-          type = tmp2.type;
-        }
         let type1;
-        if (emojiItems[index + 1] != null) {
-          type1 = tmp5.type;
+        if (emojiItems[index - 1] != null) {
+          type1 = tmp2.type;
         }
-        obj = {
+        let type2;
+        if (emojiItems[index + 1] != null) {
+          type2 = tmp5.type;
+        }
+        const obj = {
           emoji: item.emoji,
           guildId: guild.id,
           disabled: null,
@@ -113,8 +120,8 @@ class ManageEmojisModal {
         }
         obj.disabled = tmp12;
         obj.onSelectRolesForEmoji = onSelectRolesForEmoji;
-        obj.start = "SECTION" === type;
-        obj.end = "SECTION" === type1 || index === emojiItems.length - 1;
+        obj.start = "SECTION" === type1;
+        obj.end = "SECTION" === type2 || index === emojiItems.length - 1;
         return React7(GuildSettingsModalEmoji_EmojiRow.EmojiRow, obj);
       } else {
         return null;
@@ -160,18 +167,18 @@ class ManageEmojisModal {
     if (null == emojis) {
       tmp16 = jsxs;
       tmp17 = revision;
-      obj = { style: null, children: null };
-      obj.style = tmp5.loadingContainer;
+      obj1 = { style: null, children: null };
+      obj1.style = tmp5.loadingContainer;
       tmp18 = closure_9;
       items7 = [,];
       items7[0] = closure_9(tmp(tmp2[20]).ActivityIndicator, {});
       items7[1] = closure_9(tmp(tmp2[21]).NavScrim, {});
-      obj.children = items7;
-      tmp15 = jsxs(revision, obj);
+      obj1.children = items7;
+      tmp15 = jsxs(revision, obj1);
     } else {
       tmp13 = closure_9;
       tmp14 = canManageGuildExpression;
-      obj1 = {
+      obj6 = {
         initialNumToRender: 12,
         ListHeaderComponent: null,
         ListEmptyComponent: null,
@@ -181,16 +188,16 @@ class ManageEmojisModal {
         renderItem: null,
         contentContainerStyle: null,
       };
-      obj1.ListHeaderComponent = callback1;
-      obj1.ListEmptyComponent = callback2;
-      obj1.data = emojiItems;
-      obj1.keyExtractor = tmp12;
-      obj1.renderItem = callback;
+      obj6.ListHeaderComponent = callback1;
+      obj6.ListEmptyComponent = callback2;
+      obj6.data = emojiItems;
+      obj6.keyExtractor = tmp12;
+      obj6.renderItem = callback;
       items8 = [,];
       items8[0] = contentContainerStyle;
       items8[1] = tmp5.list;
-      obj1.contentContainerStyle = items8;
-      tmp15 = closure_9(canManageGuildExpression, obj1);
+      obj6.contentContainerStyle = items8;
+      tmp15 = closure_9(canManageGuildExpression, obj6);
     }
     return tmp15;
   }
@@ -199,21 +206,21 @@ get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, FlatList: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10, Fragment: closure_11 } = jsxProd);
-let closure_12 = apply.throttle(fn(10464).fetchEmoji, 1000);
-fn(4636);
+let apply = apply_mod;
+let closure_12 = apply.throttle(fn(10465).fetchEmoji, 1000);
+const createStyles = fn(4636);
 let obj = {
   loadingContainer: { flex: 1, paddingTop: 40 },
   emptyState: { paddingTop: 30 },
-  list: null,
+  list: { paddingHorizontal: nativeDefault.space.PX_12 },
   section: null,
   titleContainer: null,
 };
-obj = { paddingHorizontal: nativeDefault.space.PX_12 };
-obj.list = obj;
-const createStyles = { paddingVertical: nativeDefault.space.PX_16 };
-obj.section = createStyles;
+let obj3 = { paddingHorizontal: nativeDefault.space.PX_12 };
+obj.section = { paddingVertical: nativeDefault.space.PX_16 };
 obj.titleContainer = { paddingLeft: 16, paddingRight: 16 };
 createStyles.createStyles(obj);
+let apply = apply_mod;
 const computeEmojiItems = apply.memoize((arr, stateFromStores) => {
   _require = stateFromStores;
   const found = arr.filter((item) => !RoleSubscriptionEmojiUtils.isRoleSubscriptionEmoji(item, stateFromStores.id));
@@ -221,10 +228,7 @@ const computeEmojiItems = apply.memoize((arr, stateFromStores) => {
   const reversed = mapped.reverse();
   const maxEmojiSlots = require("GuildBoostingUtils").getMaxEmojiSlots(stateFromStores);
   const obj2 = require("GuildBoostingUtils");
-  [arr2, arr3] = _slicedToArray(
-    apply.partition(reversed, (emoji) => !emoji.emoji.animated),
-    2,
-  );
+  [arr2, arr3] = apply.partition(reversed, (emoji) => !emoji.emoji.animated);
   const intl = require("util").intl;
   const tmp3 = _slicedToArray(
     apply.partition(reversed, (emoji) => !emoji.emoji.animated),
@@ -276,11 +280,10 @@ const result = size.fileFinishedImporting("modules/guild_settings/native/GuildSe
 export default function GuildSettingsModalEmoji(contentContainerStyle) {
   ({ guildId: require, isLandingScreen } = contentContainerStyle);
   let stateFromStores;
-  let obj = require("initialize");
   const items = [GuildStore];
-  stateFromStores = obj.useStateFromStores(items, () => GuildStore.getGuild(_require));
-  let obj1 = require("useNavigation");
-  const navigation = obj1.useNavigation();
+  stateFromStores = require("initialize").useStateFromStores(items, () => GuildStore.getGuild(_require));
+  let obj = require("initialize");
+  const navigation = require("useNavigation").useNavigation();
   const tmp5 = closure_13();
   noop = tmp5;
   const items1 = [navigation, stateFromStores, isLandingScreen, tmp5];
@@ -292,9 +295,10 @@ export default function GuildSettingsModalEmoji(contentContainerStyle) {
     if (tmp) {
       let obj = {
         headerTitle() {
-          let obj = { style: titleContainer.titleContainer, children: null };
-          obj = { title: name.name };
-          obj.children = closure_2_9(require("NavigatorHeader").NavigatorHeader, obj);
+          const obj = {
+            style: titleContainer.titleContainer,
+            children: closure_2_9(require("NavigatorHeader").NavigatorHeader, { title: name.name }),
+          };
           return closure_2_9(closure_2_5, obj);
         },
       };
@@ -306,18 +310,19 @@ export default function GuildSettingsModalEmoji(contentContainerStyle) {
   } else {
     const maxEmojiSlots = require("GuildBoostingUtils").getMaxEmojiSlots(stateFromStores);
     const intl = require("util").intl;
-    obj = { count: maxEmojiSlots };
-    obj = { children: null };
-    obj1 = {
+    const obj3 = { count: maxEmojiSlots };
+    const obj4 = { children: null };
+    const obj5 = {
       guild: stateFromStores,
-      headerDescription: intl.formatToPlainString(require("util").t.TA1BR0, obj),
+      headerDescription: intl.formatToPlainString(require("util").t.TA1BR0, obj3),
       computeEmojiItems,
       contentContainerStyle: contentContainerStyle.contentContainerStyle,
     };
-    const items2 = [closure_9(ManageEmojisModal, obj1), closure_9(require("NavScrim").NavScrim, {})];
-    obj.children = items2;
-    return closure_10(closure_11, obj);
+    const items2 = [closure_9(ManageEmojisModal, obj5), closure_9(require("NavScrim").NavScrim, {})];
+    obj4.children = items2;
+    return closure_10(closure_11, obj4);
   }
+  const obj2 = require("useNavigation");
 }
 export const computeSectionItem = function computeSectionItem(intl, length, arg2) {
   const bound = Math.max(arg2 - length, 0);

@@ -25,8 +25,8 @@ function ActivityItemEmptyCard(activity) {
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
-          let obj = { value, done: true };
-          return obj;
+          const obj2 = { value, done: true };
+          return obj2;
         } else {
           return { value: "HermesInternal", done: null };
         }
@@ -39,10 +39,10 @@ function ActivityItemEmptyCard(activity) {
               throw value;
             } else if (arg0 === 2) {
               v3 = 3;
-              obj = { value, done: true };
-              return obj;
+              const obj3 = { value, done: true };
+              return obj3;
             } else {
-              const obj1 = {
+              const obj4 = {
                 channelId,
                 applicationId: application.id,
                 launchId: activity.launchId,
@@ -51,15 +51,15 @@ function ActivityItemEmptyCard(activity) {
               };
               c1 = 1;
               v3 = 1;
-              const obj2 = { value: v3(closure_1_2[8]).maybeJoinEmbeddedActivity(obj1), done: false };
-              return obj2;
+              const obj6 = { value: v3(closure_1_2[8]).maybeJoinEmbeddedActivity(obj4), done: false };
+              return obj6;
             }
           } else if (arg0 === 1) {
             v3 = 3;
             throw value;
           } else if (arg0 === 2) {
             v3 = 3;
-            obj = { value, done: true };
+            const obj = { value, done: true };
             return obj;
           } else {
             v3 = 3;
@@ -75,18 +75,29 @@ function ActivityItemEmptyCard(activity) {
   );
   let obj = { applicationId: activity.applicationId, size: width, names: ["embedded_background"] };
   const tmp = closure_8();
-  obj = { activeOpacity: 0.7, onPress: callback, style: tmp.disabledActivity, children: null };
-  obj = { imageBackground: application(channelId[9])(obj), aspectRatio: width / height };
+  let obj2 = { activeOpacity: 0.7, onPress: callback, style: tmp.disabledActivity, children: null };
+  const tmp5 = application(channelId[9])({
+    applicationId: activity.applicationId,
+    size: width,
+    names: ["embedded_background"],
+  });
   const items1 = [
-    closure_6(application(channelId[11]), obj),
+    closure_6(application(channelId[11]), {
+      imageBackground: application(channelId[9])({
+        applicationId: activity.applicationId,
+        size: width,
+        names: ["embedded_background"],
+      }),
+      aspectRatio: width / height,
+    }),
     closure_6(application(channelId[12]), {
       channelId,
       applicationId: application.id,
       applicationName: application.name,
     }),
   ];
-  obj.children = items1;
-  return closure_7(activity(channelId[10]).PressableOpacity, obj);
+  obj2.children = items1;
+  return closure_7(activity(channelId[10]).PressableOpacity, obj2);
 }
 const ActivityIndicator = fn(17).ActivityIndicator;
 const jsxProd = fn(21);
@@ -111,13 +122,13 @@ export default noop.memo(function ActivityItemMissingCard(arg0) {
   ({ activity, application } = arg0);
   if (null != activity) {
     if (null != application) {
-      let obj = { activity, application };
+      const obj = { activity, application };
       let tmp4 = timestampProducer(ActivityItemEmptyCard, obj);
     }
     return tmp4;
   }
-  obj = { style: closure_8().loadingActivity, children: null };
+  const obj2 = { style: closure_8().loadingActivity, children: null };
   const tmp = closure_8();
-  obj.children = timestampProducer(ActivityIndicator, { size: "large" });
-  tmp4 = timestampProducer(NativeViewDefault, obj);
+  obj2.children = timestampProducer(ActivityIndicator, { size: "large" });
+  tmp4 = timestampProducer(NativeViewDefault, obj2);
 });

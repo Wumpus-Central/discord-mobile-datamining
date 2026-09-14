@@ -38,12 +38,12 @@ export const getUserProfileStackedActivityCards = function getUserProfileStacked
   }
   const items = [];
   if (null != stream) {
-    let obj = { type: "stream", stream };
+    const obj = { type: "stream", stream };
     items.push(obj);
   }
   for (const item10015 of live) {
-    obj = { type: "live", activity: item10015 };
-    let arr = items.push(obj);
+    let obj2 = { type: "live", activity: item10015 };
+    let arr4 = items.push(obj2);
     continue;
   }
   if (!isPrivate) {
@@ -56,8 +56,8 @@ export const getUserProfileStackedActivityCards = function getUserProfileStacked
     isPrivate = null == voiceChannel;
   }
   if (!isPrivate) {
-    obj = { type: "voice", voiceChannel };
-    items.push(obj);
+    const obj3 = { type: "voice", voiceChannel };
+    items.push(obj3);
   }
   return items;
 };

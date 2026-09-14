@@ -4,7 +4,7 @@ import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import BoostGemDefault from "images/BoostGem.tsx";
 import createStyles from "../../../../design/components/Styles/native/createStyles.tsx";
-import size from "../../../../../_runtime/metro/00002__.js";
+import size_mod from "../../../../../_runtime/metro/00002__.js";
 
 const View = _mod17.View;
 const jsx = jsxProd.jsx;
@@ -20,6 +20,7 @@ let size = {
 };
 obj.boostGemContainer = size;
 let closure_4 = createStyles.createStyles(obj);
+let size = size_mod;
 const result = size.fileFinishedImporting("modules/premium/powerups/native/GuildPowerupsBoostGem.tsx");
 
 export default function GuildPowerupsBoostGem(arg0) {

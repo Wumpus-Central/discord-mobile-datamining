@@ -10,8 +10,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/webauthn/native/nav_steps/WebAuthnSuccessStep.tsx");
 
 export default function WebAuthnSuccessStep() {
-  let obj = navigation(1483);
-  navigation = obj.useNavigation();
+  navigation = navigation(1483).useNavigation();
   const items = [navigation];
   const layoutEffect = noop.useLayoutEffect(() => {
     const obj = {
@@ -22,8 +21,9 @@ export default function WebAuthnSuccessStep() {
     };
     navigation.setOptions(obj);
   }, items);
-  obj = { onGenerate: null, headerLabel: null };
+  const obj2 = { onGenerate: null, headerLabel: null };
+  let obj = navigation(1483);
   const intl = navigation(1114).intl;
-  obj.headerLabel = intl.format(navigation(1114).t.iVTs6i, {});
+  obj2.headerLabel = intl.format(navigation(1114).t.iVTs6i, {});
   return jsx(UserSettingsAccountBackupCodesDefault, { onGenerate: null, headerLabel: null });
 }

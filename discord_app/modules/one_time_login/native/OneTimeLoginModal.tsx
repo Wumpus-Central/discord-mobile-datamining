@@ -18,20 +18,28 @@ get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ActivityIndicator: metroRequire, Image: closure_7 } = get_ActivityIndicator);
 const Constants = fn(1074);
 ({ Routes: c10, AnalyticEvents: closure_11 } = Constants);
-let closure_12 = fn(1230).BACKGROUND_GRADIENT_PRESETS_MOBILE;
+let closure_12 = fn(1228).BACKGROUND_GRADIENT_PRESETS_MOBILE;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-fn(4636);
-let createStyles = {
-  container: null,
-  centerContent: null,
+const createStyles = fn(4636);
+let obj2 = {
+  container: {
+    padding: 24,
+    paddingTop: 128,
+    paddingBottom: 96,
+    borderRadius: nativeDefault.radii.md,
+    alignItems: "center",
+    flex: 1,
+    justifyContent: "space-between",
+  },
+  centerContent: { flex: 1, justifyContent: "center", alignItems: "center" },
   bottomContent: null,
   logo: null,
   loadingContainer: null,
   link: null,
   raisedIcon: null,
 };
-createStyles = {
+let obj3 = {
   padding: 24,
   paddingTop: 128,
   paddingBottom: 96,
@@ -40,30 +48,24 @@ createStyles = {
   flex: 1,
   justifyContent: "space-between",
 };
-createStyles.container = createStyles;
-createStyles.centerContent = { flex: 1, justifyContent: "center", alignItems: "center" };
-createStyles.bottomContent = { alignItems: "center", gap: nativeDefault.space.PX_8 };
-createStyles.logo = { width: 80, height: 80, alignSelf: "center" };
-let obj1 = { alignItems: "center", gap: nativeDefault.space.PX_8 };
-createStyles.loadingContainer = {
+obj2.bottomContent = { alignItems: "center", gap: nativeDefault.space.PX_8 };
+obj2.logo = { width: 80, height: 80, alignSelf: "center" };
+let obj4 = { alignItems: "center", gap: nativeDefault.space.PX_8 };
+obj2.loadingContainer = {
   display: "flex",
   flexDirection: "row",
   gap: nativeDefault.space.PX_8,
   alignItems: "center",
   marginBottom: 48,
 };
-let obj2 = {
+let obj5 = {
   display: "flex",
   flexDirection: "row",
   gap: nativeDefault.space.PX_8,
   alignItems: "center",
   marginBottom: 48,
 };
-createStyles.link = {
-  textDecorationLine: "underline",
-  textDecorationColor: nativeDefault.colors.TEXT_DEFAULT,
-  flexShrink: 1,
-};
+obj2.link = { textDecorationLine: "underline", textDecorationColor: nativeDefault.colors.TEXT_DEFAULT, flexShrink: 1 };
 let size = {
   width: 64,
   height: 64,
@@ -73,8 +75,8 @@ let size = {
   backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
   alignSelf: "center",
 };
-createStyles.raisedIcon = size;
-let closure_15 = createStyles.createStyles(createStyles);
+obj2.raisedIcon = size;
+let closure_15 = createStyles.createStyles(obj2);
 size = fn(2);
 const result = size.fileFinishedImporting("modules/one_time_login/native/OneTimeLoginModal.tsx");
 
@@ -96,8 +98,8 @@ export default function OneTimeLoginModal(token) {
     return { height };
   }, items);
   const effect = onPress.useEffect(() => {
-    const obj = { has_token: null != token };
-    obj.track(constants.ONE_TIME_LOGIN_MODAL_OPENED, obj);
+    AnalyticsUtilsDefault.track(constants.ONE_TIME_LOGIN_MODAL_OPENED, { has_token: null != token });
+    const obj2 = { has_token: null != token };
     AnalyticsUtilsDefault.track(constants.DEEP_LINK_CLICKED, {
       source: "native_modal",
       destination: "one_time_login_native_modal",
@@ -120,34 +122,34 @@ export default function OneTimeLoginModal(token) {
   }, []);
   const items2 = [onPress, tmp.raisedIcon];
   const callback2 = onPress.useCallback(() => {
-    let obj = { header: null, title: null, content: null, actions: null };
-    obj = {
+    const obj2 = { header: null, title: null, content: null, actions: null };
+    const obj = useAlertStore;
+    obj2.header = map1(hasOwnProperty, {
       style: closure_1.raisedIcon,
       children: map1(CircleErrorIcon.CircleErrorIcon, { size: "custom", style: { width: 40, height: 40 } }),
-    };
-    obj.header = map1(hasOwnProperty, obj);
+    });
     const intl = util.intl;
-    obj.title = intl.string(util.t.L6htwI);
+    obj2.title = intl.string(util.t.L6htwI);
     const intl2 = util.intl;
-    obj.content = intl2.string(util.t["4fnE/J"]);
-    const obj1 = { children: null };
-    const obj2 = { onPress, text: null };
+    obj2.content = intl2.string(util.t["4fnE/J"]);
+    const obj4 = { children: null };
+    const obj5 = { onPress, text: null };
     const intl3 = util.intl;
-    obj2.text = intl3.string(util.t["9vN0pz"]);
-    obj1.children = map1(AlertModal.AlertActionButton, obj2, "confirm");
-    obj.actions = map1(AlertModal.AlertActions, obj1);
-    obj.openAlert("invalid-login-alert", map1(AlertModal.AlertModal, obj));
+    obj5.text = intl3.string(util.t["9vN0pz"]);
+    obj4.children = map1(AlertModal.AlertActionButton, obj5, "confirm");
+    obj2.actions = map1(AlertModal.AlertActions, obj4);
+    obj.openAlert("invalid-login-alert", map1(AlertModal.AlertModal, obj2));
   }, items2);
   const items3 = [tmp.raisedIcon, callback1];
   const callback3 = onPress.useCallback(() => {
-    let obj = { header: null, title: null, content: null, actions: null };
-    obj = {
+    const obj2 = { header: null, title: null, content: null, actions: null };
+    const obj = useAlertStore;
+    obj2.header = map1(hasOwnProperty, {
       style: closure_1.raisedIcon,
       children: map1(CircleErrorIcon.CircleErrorIcon, { size: "custom", style: { width: 40, height: 40 } }),
-    };
-    obj.header = map1(hasOwnProperty, obj);
+    });
     const intl = util.intl;
-    obj.title = intl.string(util.t.MKW8z2);
+    obj2.title = intl.string(util.t.MKW8z2);
     const intl2 = util.intl;
     const currentUser = UserStore.getCurrentUser();
     let str;
@@ -157,14 +159,18 @@ export default function OneTimeLoginModal(token) {
     if (str == null) {
       str = "current user";
     }
-    obj.content = intl2.formatToPlainString(util.t.YOeM7B, { username: str });
-    const obj1 = { children: null };
-    const obj2 = { onPress: callback1, text: null };
+    obj2.content = intl2.formatToPlainString(util.t.YOeM7B, { username: str });
+    const obj4 = { children: null };
+    const obj5 = { onPress: callback1, text: null };
     const intl3 = util.intl;
-    obj2.text = intl3.string(util.t["3PatSz"]);
-    obj1.children = map1(AlertModal.AlertActionButton, obj2, "confirm");
-    obj.actions = map1(AlertModal.AlertActions, obj1);
-    obj.openAlert("already-logged-in-alert", map1(AlertModal.AlertModal, obj));
+    obj5.text = intl3.string(util.t["3PatSz"]);
+    obj4.children = map1(AlertModal.AlertActionButton, obj5, "confirm");
+    obj2.actions = map1(AlertModal.AlertActions, obj4);
+    obj.openAlert("already-logged-in-alert", map1(AlertModal.AlertModal, obj2));
+    const obj3 = {
+      style: closure_1.raisedIcon,
+      children: map1(CircleErrorIcon.CircleErrorIcon, { size: "custom", style: { width: 40, height: 40 } }),
+    };
   }, items3);
   const items4 = [token, callback2, callback3];
   const callback4 = onPress.useCallback(
@@ -182,8 +188,8 @@ export default function OneTimeLoginModal(token) {
         callback3();
         c3 = 0;
       }
-      let obj4 = tmp3(tmp44[13]);
-      obj4.track(constants.ONE_TIME_LOGIN_ATTEMPTED, { source: "native_modal" });
+      tmp3(tmp44[13]).track(constants.ONE_TIME_LOGIN_ATTEMPTED, { source: "native_modal" });
+      tmp3(tmp44[13]);
       yield tmp3(tmp44[22]).oneTimeLogin(tmp53);
       if (1 === tmp7) {
         c3 = 0;
@@ -194,8 +200,11 @@ export default function OneTimeLoginModal(token) {
           str = closure_128_1.message;
         }
         closure_128_0 = str;
-        obj4 = { source: "native_modal", error_reason: "api_error", error_message: closure_128_0 };
-        tmp3(tmp44[13]).track(constants.ONE_TIME_LOGIN_ERROR, obj4);
+        tmp3(tmp44[13]).track(constants.ONE_TIME_LOGIN_ERROR, {
+          source: "native_modal",
+          error_reason: "api_error",
+          error_message: closure_128_0,
+        });
         closure_129_6();
         c5 = 3;
         tmp3(tmp44[13]);
@@ -220,7 +229,7 @@ export default function OneTimeLoginModal(token) {
     callback4();
   }, items5);
   let obj = { style: memo, children: null };
-  obj = {
+  let obj2 = {
     absolute: true,
     wide: true,
     tall: true,
@@ -229,37 +238,37 @@ export default function OneTimeLoginModal(token) {
     angleOverride: 0,
     mixAmount: null,
   };
-  obj = { dark: token(4455).OverlayOpacity.LEVEL_1 };
-  obj.mixAmount = obj;
-  const items6 = [closure_13(ThemedGradientDefault, obj)];
-  let obj1 = { style: tmp.container, children: null };
-  let obj2 = { style: tmp.centerContent, children: null };
-  const items7 = [closure_13(callback3, { source: token(13950), style: tmp.logo })];
-  let obj4 = { style: tmp.loadingContainer, children: null };
+  let obj3 = { dark: token(4455).OverlayOpacity.LEVEL_1 };
+  obj2.mixAmount = obj3;
+  const items6 = [closure_13(ThemedGradientDefault, obj2)];
+  let obj4 = { style: tmp.container, children: null };
+  let obj5 = { style: tmp.centerContent, children: null };
+  const items7 = [closure_13(callback3, { source: token(13951), style: tmp.logo })];
+  const obj7 = { style: tmp.loadingContainer, children: null };
   const items8 = [closure_13(callback2, {})];
-  const obj5 = { variant: "text-lg/semibold", children: null };
+  const obj8 = { variant: "text-lg/semibold", children: null };
   let intl = token(1114).intl;
-  obj5.children = intl.string(token(1114).t.W9uNdG);
-  items8[1] = closure_13(token(4632).Text, obj5);
-  obj4.children = items8;
-  items7[1] = closure_14(callback1, obj4);
-  obj2.children = items7;
-  const items9 = [closure_14(callback1, obj2)];
-  const obj6 = { style: tmp.bottomContent, children: null };
-  const obj7 = { variant: "text-sm/normal", children: null };
+  obj8.children = intl.string(token(1114).t.W9uNdG);
+  items8[1] = closure_13(token(4632).Text, obj8);
+  obj7.children = items8;
+  items7[1] = closure_14(callback1, obj7);
+  obj5.children = items7;
+  const items9 = [closure_14(callback1, obj5)];
+  const obj9 = { style: tmp.bottomContent, children: null };
+  const obj10 = { variant: "text-sm/normal", children: null };
   let intl2 = token(1114).intl;
-  obj7.children = intl2.string(token(1114).t["ZXe5/Y"]);
-  const items10 = [closure_13(token(4632).Text, obj7)];
-  const obj8 = { textColor: "text-default", text: null, variant: "text-sm/medium", onPress: null, textStyle: null };
+  obj10.children = intl2.string(token(1114).t["ZXe5/Y"]);
+  const items10 = [closure_13(token(4632).Text, obj10)];
+  const obj11 = { textColor: "text-default", text: null, variant: "text-sm/medium", onPress: null, textStyle: null };
   let intl3 = token(1114).intl;
-  obj8.text = intl3.string(token(1114).t.FIEwfG);
-  obj8.onPress = onPress;
-  obj8.textStyle = tmp.link;
-  items10[1] = closure_13(token(7043).LinkButton, obj8);
-  obj6.children = items10;
-  items9[1] = closure_14(callback1, obj6);
-  obj1.children = items9;
-  items6[1] = closure_14(callback1, obj1);
+  obj11.text = intl3.string(token(1114).t.FIEwfG);
+  obj11.onPress = onPress;
+  obj11.textStyle = tmp.link;
+  items10[1] = closure_13(token(7043).LinkButton, obj11);
+  obj9.children = items10;
+  items9[1] = closure_14(callback1, obj9);
+  obj4.children = items9;
+  items6[1] = closure_14(callback1, obj4);
   obj.children = items6;
   return closure_14(callback1, obj);
 }

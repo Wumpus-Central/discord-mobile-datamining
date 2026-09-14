@@ -4,6 +4,8 @@ import noop from "../../../../_runtime/metro/00019__.js";
 import GuildStore from "../../../stores/GuildStore.tsx";
 import MemberVerificationFormStore from "../MemberVerificationFormStore.tsx";
 
+const require = globalThis.__r;
+
 const require = fn;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_member_verification/hooks/usePreviewDisabledGuild.tsx");

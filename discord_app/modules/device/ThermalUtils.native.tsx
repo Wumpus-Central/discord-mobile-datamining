@@ -4,6 +4,8 @@ import NativeDeviceThermalStateModuleDefault from "../../../discord_common/js/pa
 import 00560__ from "../../../_runtime/metro/00560__.js";
 import size from "../../../_runtime/metro/00002__.js";
 
+const require = globalThis.__r;
+
 const nativeEventEmitter = new _mod17.NativeEventEmitter(NativeDeviceThermalStateModuleDefault);
 let closure_4 = module_560.create((arg0) => {
   _require = arg0;

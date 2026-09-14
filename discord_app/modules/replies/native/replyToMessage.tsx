@@ -21,7 +21,7 @@ export default function longPressMessageHandleReply(arg0) {
   const editingMessage = EditMessageStore.getEditingMessage(channel.id);
   if (null != editingMessage) {
     const currentUser = UserStore.getCurrentUser();
-    let obj = {
+    const obj2 = {
       message_id: message.id,
       channel_id: null,
       guild_id: null,
@@ -31,20 +31,18 @@ export default function longPressMessageHandleReply(arg0) {
     };
     ({ id: obj11.channel_id, guild_id: obj11.guild_id } = channel);
     const obj10 = AnalyticsUtilsDefault;
-    obj.reason = LongPressMessageActionSheetUtils.getContextBarCancelReason("edit", actionSource);
-    obj.is_own_message = null != currentUser && currentUser.id === editingMessage.author.id;
-    obj10.track(AnalyticEvents.CHAT_CONTEXT_BAR_ACTION_CANCELED, obj);
+    obj2.reason = LongPressMessageActionSheetUtils.getContextBarCancelReason("edit", actionSource);
+    obj2.is_own_message = null != currentUser && currentUser.id === editingMessage.author.id;
+    obj10.track(AnalyticEvents.CHAT_CONTEXT_BAR_ACTION_CANCELED, obj2);
   }
-  obj = MessageActionCreatorsDefault;
-  obj.endEditMessage(channel.id);
+  MessageActionCreatorsDefault.endEditMessage(channel.id);
   const pendingReply = PendingReplyStore.getPendingReply(channel.id);
   if (invertible) {
     if ("message_swipe" === actionSource) {
       if (null != pendingReply) {
         if (pendingReply.message.id === message.id) {
           const currentUser1 = UserStore.getCurrentUser();
-          let tmp3Result = AnalyticsUtilsDefault;
-          obj = {
+          const obj3 = {
             message_id: message.id,
             channel_id: null,
             guild_id: null,
@@ -57,8 +55,9 @@ export default function longPressMessageHandleReply(arg0) {
           if (tmp18) {
             tmp18 = currentUser1.id === pendingReply.message.author.id;
           }
-          obj.is_own_message = tmp18;
-          tmp3Result.track(AnalyticEvents.CHAT_CONTEXT_BAR_ACTION_CANCELED, obj);
+          obj3.is_own_message = tmp18;
+          AnalyticsUtilsDefault.track(AnalyticEvents.CHAT_CONTEXT_BAR_ACTION_CANCELED, obj3);
+          const tmp3Result = AnalyticsUtilsDefault;
           PendingReplyActionCreators.deletePendingReply(channel.id);
           let text;
           if (chatInputRef != null) {
@@ -79,11 +78,11 @@ export default function longPressMessageHandleReply(arg0) {
       }
     }
   }
-  tmp3Result = AnalyticsUtilsDefault;
+  const obj6 = { source: actionSource };
+  const tmp3Result2 = AnalyticsUtilsDefault;
   const merged = Object.assign(AppAnalyticsUtils.collectGuildAnalyticsMetadata(channel.guild_id));
-  const obj1 = { source: actionSource };
   const merged1 = Object.assign(AppAnalyticsUtils.collectChannelAnalyticsMetadata(channel));
-  tmp3Result.track(AnalyticEvents.REPLY_MESSAGE_STARTED, obj1);
+  tmp3Result2.track(AnalyticEvents.REPLY_MESSAGE_STARTED, obj6);
   const currentUser2 = UserStore.getCurrentUser();
   const isDMResult = channel.isDM();
   let tmp13 = !isDMResult;

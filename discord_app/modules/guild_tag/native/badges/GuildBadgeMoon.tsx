@@ -26,19 +26,18 @@ export const GuildBadgeMoon = function GuildBadgeMoon(primaryTintColor) {
     num2 = 24;
   }
   const merged = Object.assign(primaryTintColor, Object.assign({ width: 0, height: 0, primaryTintColor: 0 }));
-  let obj = {
+  const primaryColorsTransformed = GuildBadgeUtils.getTransformedBadgeColors({
     primaryBaseColors,
     primaryTintColor: primaryTintColor.primaryTintColor,
     primaryTintLuminances,
     primaryLuminanceWeights: items,
-  };
-  const primaryColorsTransformed = obj.getTransformedBadgeColors(obj).primaryColorsTransformed;
-  obj = {};
+  }).primaryColorsTransformed;
+  const obj3 = {};
   const merged1 = Object.assign(merged);
-  obj.width = num;
-  obj.height = num2;
-  obj.viewBox = "0 0 16 16";
-  obj.fill = "none";
+  obj3.width = num;
+  obj3.height = num2;
+  obj3.viewBox = "0 0 16 16";
+  obj3.fill = "none";
   items = [
     React2(inlineStyles.Path, {
       d: "M14 5V3h-1V2h-1V1h-2v1h1v1h1v4h-1v1h-1v1H6V8H5V7H4V3h1V2h1V1H4v1H3v1H2v2H1v6h1v2h1v1h2v1h6v-1h2v-1h1v-2h1V5h-1Z",
@@ -62,6 +61,6 @@ export const GuildBadgeMoon = function GuildBadgeMoon(primaryTintColor) {
     }),
     React2(inlineStyles.Path, { d: "M5 2H4v1h1V2Z", fill: primaryColorsTransformed[1] }),
   ];
-  obj.children = items;
-  return React3(inlineStyles.Svg, obj);
+  obj3.children = items;
+  return React3(inlineStyles.Svg, obj3);
 };

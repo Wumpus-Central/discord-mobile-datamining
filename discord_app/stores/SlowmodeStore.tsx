@@ -15,32 +15,32 @@ function setCooldown(channel, SendMessage, cooldownMs) {
     const id = channel.id;
     delete tmp2[tmp];
   }
-  let obj = require("SlowmodeUtils");
   if (!obj.canBypassSlowmode(channel)) {
     if (cooldownMs > 0) {
       const _Date = Date;
       const sum = cooldownMs + Date.now();
       dependencyMap = sum;
-      obj = { rateLimitPerUser: channel.rateLimitPerUser, cooldownMs, cooldownEndTimestamp: sum, timer: null };
+      const obj2 = { rateLimitPerUser: channel.rateLimitPerUser, cooldownMs, cooldownEndTimestamp: sum, timer: null };
       const timeout = new tmp6(1952).Timeout();
-      obj.timer = timeout;
-      dependencyMap[SendMessage][channel.id] = obj;
+      obj2.timer = timeout;
+      dependencyMap[SendMessage][channel.id] = obj2;
       const timer2 = dependencyMap[SendMessage][channel.id].timer;
       timer2.start(
         1000,
         () => {
-          const obj = {
+          const obj = DispatcherDefault;
+          obj.dispatch({
             type: "SLOWMODE_SET_COOLDOWN",
             channelId: id.id,
             slowmodeType,
             cooldownMs: Math.max(sum - Date.now(), 0),
-          };
-          obj.dispatch(obj);
+          });
         },
         true,
       );
     }
   }
+  obj = require("SlowmodeUtils");
   tmp6 = _require;
 }
 function handleUploadCancel(channelId) {
@@ -50,7 +50,7 @@ function handleUploadCancel(channelId) {
   }
   return null != channel;
 }
-let SlowmodeType = { SendMessage: 0, [0]: "SendMessage", CreateThread: 1, [1]: "CreateThread" };
+const SlowmodeType = { SendMessage: 0, [0]: "SendMessage", CreateThread: 1, [1]: "CreateThread" };
 let dependencyMap = { [SlowmodeType.SendMessage]: {}, [SlowmodeType.CreateThread]: {} };
 const Store = initializeDefault.Store;
 class SlowmodeStore extends Store {}
@@ -73,7 +73,7 @@ prototype["isChannelOnCooldown"] = function isChannelOnCooldown(channel, CreateT
   return this.getSlowmodeCooldownGuess(channel.id, CreateThread) > 0 && channel.rateLimitPerUser > 0;
 };
 SlowmodeStore.displayName = "SlowmodeStore";
-SlowmodeType = {
+const slowmodeStore = new SlowmodeStore(DispatcherDefault, {
   SLOWMODE_RESET_COOLDOWN: function handleSlowmodeResetCooldown(channelId) {
     const channel = ChannelStore.getChannel(channelId.channelId);
     if (null != channel) {
@@ -151,8 +151,7 @@ SlowmodeType = {
       dependencyMap[item] = {};
     });
   },
-};
-const slowmodeStore = new SlowmodeStore(DispatcherDefault, SlowmodeType);
+});
 const size = fn(2);
 const result = size.fileFinishedImporting("stores/SlowmodeStore.tsx");
 

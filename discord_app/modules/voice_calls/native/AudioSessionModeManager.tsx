@@ -50,9 +50,9 @@ function handleAVAudioSessionMode() {
   }
 }
 const AppStates = fn(1074).AppStates;
-let PlatformUtils = fn(1150);
+const PlatformUtils = fn(1363);
 if (PlatformUtils.isAndroid()) {
-  PlatformUtils = {
+  let obj2 = {
     setAVAudioSessionMode() {},
     AVAudioSessionMode: {
       VOICE: "AVAudioSessionModeVoiceChat",
@@ -61,12 +61,12 @@ if (PlatformUtils.isAndroid()) {
       DEFAULT: "AVAudioSessionModeDefault",
     },
   };
-  let VoiceEngine = PlatformUtils;
+  let VoiceEngine = obj2;
 } else {
   VoiceEngine = fn(17).NativeModules.VoiceEngine;
 }
 let VIDEO = VoiceEngine.AVAudioSessionMode.VOICE;
-let prototype = function AudioSessionModeManager() {
+const prototype = function AudioSessionModeManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
   const result = new Map().set(ApplicationStreamingStore, handleAVAudioSessionMode);
   const result1 = result.set(VoiceStateStore, handleAVAudioSessionMode);
@@ -76,8 +76,8 @@ let prototype = function AudioSessionModeManager() {
   return applyArgumentsResult;
 }.prototype;
 class prototype extends tmp2 {}
-prototype = new prototype();
+const prototype1 = new prototype();
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/voice_calls/native/AudioSessionModeManager.tsx");
 
-export default prototype;
+export default prototype1;

@@ -24,8 +24,7 @@ export const AppStartInfo = {
   },
   getAppStartInfo() {
     return (async () => {
-      let obj5 = NativeTTIManagerModuleDefault;
-      await obj5.getAppStartedTimestamp();
+      await NativeTTIManagerModuleDefault.getAppStartedTimestamp();
       closure_128_0 = value;
       if (closure_128_0 <= 0) {
         const _Error = Error;
@@ -45,8 +44,7 @@ export const AppStartInfo = {
       closure_128_3 = closure_128_2[0];
       closure_128_4 = closure_128_2[1];
       closure_128_5 = closure_128_2[2];
-      obj5 = { app_start_type: closure_128_3, app_launch_scenario: closure_128_4 };
-      closure_128_6 = obj5;
+      closure_128_6 = { app_start_type: closure_128_3, app_launch_scenario: closure_128_4 };
       const mainActivityCreationTime = closure_129_0(closure_129_1[2]).getMainActivityCreationTime();
       if (null != mainActivityCreationTime) {
         closure_128_6.android_time_creation_to_create_main_activity = mainActivityCreationTime - closure_128_0;

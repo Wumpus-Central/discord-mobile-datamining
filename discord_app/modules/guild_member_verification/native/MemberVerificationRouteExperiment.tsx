@@ -1,15 +1,15 @@
 // discord_app/modules/guild_member_verification/native/MemberVerificationRouteExperiment.tsx
 import apex_ApexExperimentDefault from "../../experiments/apex/ApexExperiment.tsx";
 
-let obj = {
+const obj = {
   name: "2026-07-rm-member-verification-route",
   kind: "user",
   defaultConfig: { isDeprecated: false },
   variations: null,
 };
-obj = { 1: null };
-obj[1] = { isDeprecated: true };
-obj.variations = obj;
+const obj2 = { 1: null };
+obj2[1] = { isDeprecated: true };
+obj.variations = obj2;
 const tmp2 = apex_ApexExperimentDefault(obj);
 let closure_0 = tmp2;
 const size = fn(2);

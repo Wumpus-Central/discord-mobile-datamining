@@ -3,7 +3,7 @@ import util from "../../../../../intl/index.native.tsx";
 import AnalyticsUtilsDefault from "../../../../../utils/AnalyticsUtils.tsx";
 import HeaderShared from "../../shared_components/HeaderShared.tsx";
 import navigateToThreadCreation from "../../../../threads/native/navigateToThreadCreation.tsx";
-import _modDef12902 from "../../../../../../_runtime/metro/12902__.js";
+import _modDef12903 from "../../../../../../_runtime/metro/12903__.js";
 import ChannelSettingsModal from "../../../../../components_native/channel_settings/ChannelSettingsModal.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 import ChannelStore from "../../../../../stores/ChannelStore.tsx";
@@ -11,36 +11,34 @@ import ChannelStore from "../../../../../stores/ChannelStore.tsx";
 require = fn;
 function ConnectedCreateThreadHeaderButton(channelId) {
   channelId = channelId.channelId;
-  let obj = channelId(563);
   const items = [ChannelStore];
-  const stateFromStores = obj.useStateFromStores(items, () => ChannelStore.getChannel(channelId));
+  const stateFromStores = channelId(563).useStateFromStores(items, () => ChannelStore.getChannel(channelId));
   let tmp2 = null;
   if (null != stateFromStores) {
-    obj = { channel: stateFromStores };
-    tmp2 = closure_9(CreateThreadHeaderButton, obj);
+    const obj2 = { channel: stateFromStores };
+    tmp2 = closure_9(CreateThreadHeaderButton, obj2);
   }
   return tmp2;
 }
 function CreateThreadHeaderButton(channel) {
   channel = channel.channel;
-  let obj = channel(7372);
   [][0] = channel;
-  const canStartThread = obj.useCanStartThread(channel);
+  const canStartThread = channel(7372).useCanStartThread(channel);
   let tmp5 = null;
   if (canStartThread) {
-    obj = { accessibilityLabel: null, onPress: null, source: null };
+    const obj2 = { accessibilityLabel: null, onPress: null, source: null };
     const intl = tmp(1114).intl;
-    obj.accessibilityLabel = intl.string(tmp(1114).t.rBIGBL);
-    obj.onPress = tmp4;
-    obj.source = _modDef12902;
-    tmp5 = closure_9(tmp(7966).HeaderIconButton, obj);
+    obj2.accessibilityLabel = intl.string(tmp(1114).t.rBIGBL);
+    obj2.onPress = tmp4;
+    obj2.source = _modDef12903;
+    tmp5 = closure_9(tmp(7966).HeaderIconButton, obj2);
   }
   return tmp5;
 }
 const View = fn(17).View;
-const constants = fn(11047).ChannelDetailsNavigatorScreens;
+const constants = fn(11048).ChannelDetailsNavigatorScreens;
 const AnalyticEvents = fn(1074).AnalyticEvents;
-const SearchNavigatorScreens = fn(16750).SearchNavigatorScreens;
+const SearchNavigatorScreens = fn(16752).SearchNavigatorScreens;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
 let closure_11 = Object.freeze({});
@@ -60,7 +58,6 @@ export default noop.memo((navigation) => {
     DETAILS = constants.DETAILS;
   }
   let guildId;
-  let obj = DETAILS;
   const items = [channelId, DETAILS, source];
   const effect = DETAILS.useEffect(() => {
     const channel = ChannelStore.getChannel(channelId);
@@ -80,17 +77,15 @@ export default noop.memo((navigation) => {
     () => navigation.addListener("beforeRemove", () => channelId(source[15]).close()),
     items1,
   );
-  let obj1 = navigation(source[16]);
-  const channelSettingsScreensStyles = obj1.useChannelSettingsScreensStyles();
+  const channelSettingsScreensStyles = navigation(source[16]).useChannelSettingsScreensStyles();
   const items2 = [channelId];
   const memo = DETAILS.useMemo(() => {
-    let obj = { initialParams: null };
-    obj = { channelId };
-    obj.initialParams = obj;
+    const obj = { initialParams: { channelId } };
     return obj;
   }, items2);
-  let obj2 = navigation(source[17]);
-  const accessibilityNativeStackOptions = obj2.useAccessibilityNativeStackOptions();
+  let obj = DETAILS;
+  let obj2 = navigation(source[16]);
+  const accessibilityNativeStackOptions = navigation(source[17]).useAccessibilityNativeStackOptions();
   let channel = guildId.getChannel(channelId);
   guildId = undefined;
   if (channel != null) {
@@ -109,6 +104,7 @@ export default noop.memo((navigation) => {
     }
     return channelSettingsScreens;
   }, items3);
+  let obj3 = navigation(source[17]);
   navigation(source[18]).useNavigatorBackPressHandler(() => {
     const rootNavigationRef = navigation(source[19]).getRootNavigationRef();
     const tmp = null == rootNavigationRef || !rootNavigationRef.isReady();
@@ -124,35 +120,34 @@ export default noop.memo((navigation) => {
     return tmp2;
   });
   const rect = channelId(tmp5[20])();
-  obj = { style: null, children: null };
+  const obj4 = { style: null, children: null };
   const items4 = [channelSettingsScreensStyles.container, { paddingLeft: rect.left, paddingRight: rect.right }];
-  obj.style = items4;
-  obj = { id: "channel-details-navigator", screenOptions: null, initialRouteName: null, children: null };
-  obj1 = { headerTitle: tmp4(tmp5[11]).renderGenericTitle, headerTitleAlign: "center" };
+  obj4.style = items4;
+  const obj5 = { id: "channel-details-navigator", screenOptions: null, initialRouteName: null, children: null };
+  const tmp4Result = navigation(source[18]);
   let merged = Object.assign(accessibilityNativeStackOptions);
-  obj.screenOptions = obj1;
-  obj.initialRouteName = DETAILS;
-  obj2 = {
-    initialParams: { channelId, search, expandTopic },
-    name: constants.DETAILS,
-    options: { headerShown: false },
-    getComponent() {
-      return navigation(source[21]).default;
-    },
-  };
+  obj5.screenOptions = { headerTitle: navigation(source[11]).renderGenericTitle, headerTitleAlign: "center" };
+  obj5.initialRouteName = DETAILS;
   const items5 = [
-    closure_9(Screen.Screen, obj2),
+    closure_9(Screen.Screen, {
+      initialParams: { channelId, search, expandTopic },
+      name: constants.DETAILS,
+      options: { headerShown: false },
+      getComponent() {
+        return navigation(source[21]).default;
+      },
+    }),
     closure_9(Screen.Screen, {
       name: SearchNavigatorScreens.SEARCH_CHAT_PREVIEW,
       options(route) {
         route = route.route;
         let obj = {
           header(arg0) {
-            route(7966);
-            const obj = {};
+            const obj2 = {};
             const merged = Object.assign(arg0);
-            obj.shouldHandleSafeArea = route(1150).isAndroid();
-            return obj.renderHeader(obj);
+            const obj = route(7966);
+            obj2.shouldHandleSafeArea = route(1363).isAndroid();
+            return obj.renderHeader(obj2);
           },
           headerTitle() {
             return closure_2_9(channelId(source[23]), { channelId: route.params.channelId });
@@ -174,11 +169,11 @@ export default noop.memo((navigation) => {
         const intl = util.intl;
         obj.title = intl.string(util.t["mp1N/2"]);
         if (DETAILS === navigation.route.name) {
-          let tmpResult = HeaderShared;
-          let renderModalCloseImage = tmpResult.getRenderModalCloseImage(navigation);
+          let renderModalCloseImage = HeaderShared.getRenderModalCloseImage(navigation);
+          const tmpResult = HeaderShared;
         } else {
-          tmpResult = HeaderShared;
-          renderModalCloseImage = tmpResult.getRenderModalBackImage(navigation);
+          renderModalCloseImage = HeaderShared.getRenderModalBackImage(navigation);
+          const tmpResult2 = HeaderShared;
         }
         obj.headerLeft = renderModalCloseImage;
         return obj;
@@ -196,11 +191,11 @@ export default noop.memo((navigation) => {
         const intl = util.intl;
         obj.title = intl.string(util.t.w4m945);
         if (DETAILS === navigation.route.name) {
-          let tmpResult = HeaderShared;
-          let renderModalCloseImage = tmpResult.getRenderModalCloseImage(navigation);
+          let renderModalCloseImage = HeaderShared.getRenderModalCloseImage(navigation);
+          const tmpResult = HeaderShared;
         } else {
-          tmpResult = HeaderShared;
-          renderModalCloseImage = tmpResult.getRenderModalBackImage(navigation);
+          renderModalCloseImage = HeaderShared.getRenderModalBackImage(navigation);
+          const tmpResult2 = HeaderShared;
         }
         obj.headerLeft = renderModalCloseImage;
         return obj;
@@ -211,20 +206,20 @@ export default noop.memo((navigation) => {
     }),
     ,
   ];
-  const obj6 = {};
+  const obj11 = {};
   const merged1 = Object.assign(memo);
-  obj6.name = constants.THREADS;
-  obj6.options = function options(arg0) {
+  obj11.name = constants.THREADS;
+  obj11.options = function options(arg0) {
     ({ navigation, route } = arg0);
     const obj = { title: null, headerLeft: null, headerRight: null };
     const intl = util.intl;
     obj.title = intl.string(util.t.B2panI);
     if (DETAILS === route.name) {
-      let tmpResult = HeaderShared;
-      let renderModalCloseImage = tmpResult.getRenderModalCloseImage(navigation);
+      let renderModalCloseImage = HeaderShared.getRenderModalCloseImage(navigation);
+      const tmpResult = HeaderShared;
     } else {
-      tmpResult = HeaderShared;
-      renderModalCloseImage = tmpResult.getRenderModalBackImage(navigation);
+      renderModalCloseImage = HeaderShared.getRenderModalBackImage(navigation);
+      const tmpResult2 = HeaderShared;
     }
     obj.headerLeft = renderModalCloseImage;
     obj.headerRight = function headerRight() {
@@ -232,10 +227,10 @@ export default noop.memo((navigation) => {
     };
     return obj;
   };
-  obj6.getComponent = function getComponent() {
+  obj11.getComponent = function getComponent() {
     return navigation(source[27]).default;
   };
-  items5[4] = closure_9(Screen.Screen, obj6);
+  items5[4] = closure_9(Screen.Screen, obj11);
   const entries = Object.entries(memo1);
   items5[5] = entries.map((item) => {
     [tmp] = item;
@@ -265,7 +260,7 @@ export default noop.memo((navigation) => {
       tmp,
     );
   });
-  obj.children = items5;
-  obj.children = closure_10(Screen.Navigator, obj);
-  return closure_9(channelSettingsScreensStyles, obj);
+  obj5.children = items5;
+  obj4.children = closure_10(Screen.Navigator, obj5);
+  return closure_9(channelSettingsScreensStyles, obj4);
 });

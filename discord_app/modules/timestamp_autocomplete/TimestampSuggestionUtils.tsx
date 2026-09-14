@@ -1,7 +1,7 @@
 // discord_app/modules/timestamp_autocomplete/TimestampSuggestionUtils.tsx
 import util from "../../intl/index.native.tsx";
 import _modDef4228 from "../../../_runtime/metro/04228__.js";
-import _mod10554 from "../../../_runtime/metro/10554__.js";
+import _mod10555 from "../../../_runtime/metro/10555__.js";
 import _slicedToArray from "../../../_runtime/metro/00032__.js";
 import LocaleStore from "../user_settings/LocaleStore.tsx";
 
@@ -14,7 +14,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/timestamp_autocomplete/TimestampSuggestionUtils.tsx");
 
 export const preloadTimestampParser = function preloadTimestampParser() {
-  _mod10554;
+  _mod10555;
 };
 export const queryTimestampSuggestions = function queryTimestampSuggestions(arg0) {
   let obj = cloneResult1;
@@ -31,11 +31,11 @@ export const queryTimestampSuggestions = function queryTimestampSuggestions(arg0
       parsed = items;
     }
     const first = _slicedToArray(parsed, 1)[0];
-    let start;
+    let start1;
     if (first != null) {
-      start = first.start;
+      start1 = first.start;
     }
-    let tmp14 = null != start;
+    let tmp14 = null != start1;
     if (tmp14) {
       let end;
       if (first != null) {
@@ -46,16 +46,16 @@ export const queryTimestampSuggestions = function queryTimestampSuggestions(arg0
     if (tmp14) {
       tmp14 = first.text === arg0;
     }
-    let obj1 = _modDef4228;
+    const obj2 = _modDef4228;
     if (tmp14) {
-      start = first.start;
-      let invalidResult = obj1(start.date());
+      const start = first.start;
+      let invalidResult = obj2(start.date());
       let tmp20 = importDefault;
     } else if (tmp3) {
-      invalidResult = obj1.invalid();
+      invalidResult = obj2.invalid();
       tmp20 = importDefault;
     } else {
-      invalidResult = obj1(arg0, items1, true);
+      invalidResult = obj2(arg0, items1, true);
       tmp20 = importDefault;
     }
     let str6 = invalidResult.creationData().format;
@@ -67,14 +67,14 @@ export const queryTimestampSuggestions = function queryTimestampSuggestions(arg0
     items1 = [];
     if (cloneResult.isValid()) {
       if (tmp14) {
-        let obj4 = cloneResult;
+        let obj5 = cloneResult;
         if (tmp14) {
           const start2 = first.start;
-          obj4 = cloneResult;
+          obj5 = cloneResult;
           if (!start2.isCertain("hour")) {
             const _Math = Math;
             const result = Math.round(cloneResult.valueOf() / 900000) * 900000;
-            obj4 = tmp20(4228)(result);
+            obj5 = tmp20(4228)(result);
           }
         }
         if (tmp14) {
@@ -110,131 +110,131 @@ export const queryTimestampSuggestions = function queryTimestampSuggestions(arg0
         } else if (str6 != null) {
           isCertainResult3 = str6.includes("s");
         }
-        let str = obj4.unix().toString();
+        const str1 = obj5.unix().toString();
         let str19 = "s";
         if (isCertainResult3) {
           str19 = "S";
         }
         if (!hasItem) {
           if (!isCertainResult) {
-            obj = { timestamp: str, format: null };
+            const obj3 = { timestamp: str1, format: null };
             let str20 = "t";
             if (isCertainResult3) {
               str20 = "T";
             }
-            obj = { mention: null, description: null, format: str20 };
-            obj.mention = obj;
+            const obj4 = { mention: null, description: null };
+            obj3.format = str20;
+            obj4.mention = obj3;
             const intl = util.intl;
-            obj.description = intl.string(util.t.yHv4oJ);
-            items1.push(obj);
+            obj4.description = intl.string(util.t.yHv4oJ);
+            items1.push(obj4);
             items1.push({});
-            obj1 = {
+            let obj6 = {
               periodType: "day",
               previousName: util.t.ZdDLO0,
               currentName: util.t.mbs4NX,
               nextName: util.t["EqnX/z"],
             };
           }
-          if (null == obj1) {
-            let obj2 = {};
+          if (null == obj6) {
+            let obj7 = {};
           } else {
             cloneResult1 = obj.clone();
-            cloneResult1.subtract(1, obj1.periodType);
-            const cloneResult2 = obj4.clone();
-            cloneResult2.add(1, obj1.periodType);
-            if (obj4.isSame(obj, obj1.periodType)) {
+            cloneResult1.subtract(1, obj6.periodType);
+            const cloneResult2 = obj5.clone();
+            cloneResult2.add(1, obj6.periodType);
+            if (obj5.isSame(obj, obj6.periodType)) {
               const intl4 = util.intl;
-              const stringResult = intl4.string(obj1.currentName);
+              const stringResult = intl4.string(obj6.currentName);
               let stringResult2 = stringResult;
-              if (obj4.isSameOrBefore(obj)) {
+              if (obj5.isSameOrBefore(obj)) {
                 const intl5 = util.intl;
-                let stringResult1 = intl5.string(obj1.nextName);
+                let stringResult1 = intl5.string(obj6.nextName);
                 stringResult2 = stringResult;
               }
-            } else if (obj4.isSame(cloneResult1, obj1.periodType)) {
+            } else if (obj5.isSame(cloneResult1, obj6.periodType)) {
               const intl2 = util.intl;
-              stringResult2 = intl2.string(obj1.previousName);
+              stringResult2 = intl2.string(obj6.previousName);
               const intl3 = util.intl;
-              stringResult1 = intl3.string(obj1.currentName);
+              stringResult1 = intl3.string(obj6.currentName);
             }
-            let str1;
+            let str31;
             if (null != stringResult1) {
-              str1 = cloneResult2.unix().toString();
+              str31 = cloneResult2.unix().toString();
               const str21 = cloneResult2.unix();
             }
-            obj2 = {
-              adjustedTimestamp: str1,
+            obj7 = {
+              adjustedTimestamp: str31,
               adjustedDescription: stringResult1,
               unadjustedDescription: stringResult2,
             };
           }
-          ({ adjustedTimestamp, unadjustedDescription } = obj2);
+          ({ adjustedTimestamp, unadjustedDescription } = obj7);
           if (null != adjustedTimestamp) {
-            const obj3 = { mention: null, description: null };
-            obj4 = { timestamp: adjustedTimestamp, format: str19 };
-            obj3.mention = obj4;
-            obj3.description = tmp42;
-            items1.push(obj3);
-            const obj5 = { mention: null };
-            const obj6 = { timestamp: adjustedTimestamp, format: "f" };
-            obj5.mention = obj6;
-            items1.push(obj5);
-            const obj7 = { mention: null };
-            const obj8 = { timestamp: adjustedTimestamp, format: "F" };
-            obj7.mention = obj8;
-            items1.push(obj7);
-            const obj9 = { mention: null };
-            const obj10 = { timestamp: adjustedTimestamp, format: "R" };
-            obj9.mention = obj10;
-            items1.push(obj9);
+            const obj8 = { mention: null, description: null };
+            const obj9 = { timestamp: adjustedTimestamp, format: str19 };
+            obj8.mention = obj9;
+            obj8.description = tmp42;
+            items1.push(obj8);
+            const obj10 = { mention: null };
+            const obj11 = { timestamp: adjustedTimestamp, format: "f" };
+            obj10.mention = obj11;
+            items1.push(obj10);
+            const obj12 = { mention: null };
+            const obj13 = { timestamp: adjustedTimestamp, format: "F" };
+            obj12.mention = obj13;
+            items1.push(obj12);
+            const obj14 = { mention: null };
+            const obj15 = { timestamp: adjustedTimestamp, format: "R" };
+            obj14.mention = obj15;
+            items1.push(obj14);
             items1.push({});
           }
-          const obj11 = { mention: null, description: null };
-          const obj12 = { timestamp: str, format: str19 };
-          obj11.mention = obj12;
-          obj11.description = unadjustedDescription;
-          items1.push(obj11);
-          const obj13 = { mention: null };
-          const obj14 = { timestamp: str, format: "f" };
-          obj13.mention = obj14;
-          items1.push(obj13);
-          const obj15 = { mention: null };
-          const obj16 = { timestamp: str, format: "F" };
-          obj15.mention = obj16;
-          items1.push(obj15);
-          const obj17 = { mention: null };
-          const obj18 = { timestamp: str, format: "R" };
-          obj17.mention = obj18;
-          items1.push(obj17);
+          const obj16 = { mention: null, description: null };
+          const obj17 = { timestamp: str1, format: str19 };
+          obj16.mention = obj17;
+          obj16.description = unadjustedDescription;
+          items1.push(obj16);
+          const obj18 = { mention: null };
+          const obj19 = { timestamp: str1, format: "f" };
+          obj18.mention = obj19;
+          items1.push(obj18);
+          const obj20 = { mention: null };
+          const obj21 = { timestamp: str1, format: "F" };
+          obj20.mention = obj21;
+          items1.push(obj20);
+          const obj22 = { mention: null };
+          const obj23 = { timestamp: str1, format: "R" };
+          obj22.mention = obj23;
+          items1.push(obj22);
         }
         if (isCertainResult) {
           if (!hasItem) {
-            const obj19 = {
+            const obj24 = {
               periodType: "week",
               previousName: util.t["4uTwgO"],
               currentName: util.t["6YiNaP"],
               nextName: util.t.HE4jqH,
             };
-            obj1 = obj19;
+            obj6 = obj24;
           }
         }
         if (!isCertainResult2) {
-          const obj20 = {
+          const obj25 = {
             periodType: "year",
             previousName: util.t.R7VMEE,
             currentName: util.t["U8lK/J"],
             nextName: util.t.OppVVE,
           };
-          obj1 = obj20;
+          obj6 = obj25;
         }
-        const str18 = obj4.unix();
+        const str18 = obj5.unix();
       }
     }
     return items1;
   } else {
-    const tmp6 = _mod10554;
+    const tmp6 = _mod10555;
     locale = LocaleStore.locale;
-    str = "en-US";
     if ("en-US" === locale) {
       let en = tmp6.en;
     } else if ("en-GB" === locale) {

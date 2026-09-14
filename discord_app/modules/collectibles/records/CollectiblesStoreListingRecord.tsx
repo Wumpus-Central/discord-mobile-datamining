@@ -21,29 +21,29 @@ prototype["fromServer"] = function fromServer(styles) {
   ({ store_listing_id, sku_id } = styles);
   const merged = Object.assign({ store_listing_id: 0, sku_id: 0, styles: 0 });
   const merged1 = Object.assign(styles, merged);
-  let obj = {};
+  const obj = {};
   const merged2 = Object.assign(merged1);
   obj.storeListingId = store_listing_id;
   obj.skuId = sku_id;
   let tmp5 = styles;
   if (null != styles) {
-    obj = { backgroundColors: null, buttonColors: null, confettiColors: null };
+    const obj2 = { backgroundColors: null, buttonColors: null, confettiColors: null };
     const background_colors = styles.background_colors;
-    obj.backgroundColors = background_colors.map((item) => {
+    obj2.backgroundColors = background_colors.map((item) => {
       const tmp = tinycolorDefault;
       return tmp(utils_ColorUtils.int2hex(item));
     });
     const button_colors = styles.button_colors;
-    obj.buttonColors = button_colors.map((item) => {
+    obj2.buttonColors = button_colors.map((item) => {
       const tmp = tinycolorDefault;
       return tmp(utils_ColorUtils.int2hex(item));
     });
     const confetti_colors = styles.confetti_colors;
-    obj.confettiColors = confetti_colors.map((item) => {
+    obj2.confettiColors = confetti_colors.map((item) => {
       const tmp = tinycolorDefault;
       return tmp(utils_ColorUtils.int2hex(item));
     });
-    tmp5 = obj;
+    tmp5 = obj2;
   }
   obj.styles = tmp5;
   if (typeof prototype === "function") {

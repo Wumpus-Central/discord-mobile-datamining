@@ -9,7 +9,7 @@ let obj = {
   defaultConfig: { capSampleRate: false, capChannelCount: false, condition: "none" },
   variations: null,
 };
-obj = {
+let obj2 = {
   1: null,
   2: { capSampleRate: true, capChannelCount: false, condition: "krisp" },
   3: { capSampleRate: true, capChannelCount: false, condition: "noiseSuppression" },
@@ -19,8 +19,8 @@ obj = {
   7: { capSampleRate: true, capChannelCount: true, condition: "noiseSuppression" },
   8: { capSampleRate: true, capChannelCount: true, condition: "echoCancellation" },
 };
-obj[8] = { capSampleRate: true, capChannelCount: true, condition: "any" };
-obj.variations = obj;
+obj2[8] = { capSampleRate: true, capChannelCount: true, condition: "any" };
+obj.variations = obj2;
 let closure_2 = ApexExperiment.createApexExperiment(obj);
 const result = size.fileFinishedImporting("modules/media_engine/AudioFidelityExperiment.tsx");
 
@@ -36,7 +36,7 @@ export const getVoiceFidelityCaps = function getVoiceFidelityCaps(location, kris
     echoCancellationEnabled = krispEnabled.echoCancellationEnabled;
   }
   if (echoCancellationEnabled) {
-    let obj = { location: location.location };
+    const obj = { location: location.location };
     const config = closure_2.getConfig(obj);
     const condition = config.condition;
     if ("krisp" === condition) {
@@ -60,16 +60,17 @@ export const getVoiceFidelityCaps = function getVoiceFidelityCaps(location, kris
       if (config.capSampleRate) {
         num = 32000;
       }
-      obj = { maxSampleRateHz: num, maxChannelCount: null };
+      const obj3 = { maxSampleRateHz: num, maxChannelCount: null };
       let num2 = 0;
       if (config.capChannelCount) {
         num2 = 1;
       }
-      obj.maxChannelCount = num2;
+      obj3.maxChannelCount = num2;
+      let obj4 = obj3;
     } else {
-      obj = { maxSampleRateHz: 0, maxChannelCount: 0 };
+      obj4 = { maxSampleRateHz: 0, maxChannelCount: 0 };
     }
-    return obj;
+    return obj4;
   } else {
     return { maxSampleRateHz: 0, maxChannelCount: 0 };
   }

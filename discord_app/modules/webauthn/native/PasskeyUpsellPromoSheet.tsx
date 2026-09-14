@@ -4,6 +4,8 @@ import PasskeyUpsellManagerDefault from "PasskeyUpsellManager.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
+const require = globalThis.__r;
+
 const require = fn;
 const Image = fn(17).Image;
 const ContentDismissActionType = fn(1954).ContentDismissActionType;
@@ -19,18 +21,21 @@ export default function PasswordlessUpsellPromoSheet() {
     const result1 = setRegistering(onRegisterSuccess[6]).openPasskeyUpsellPromoModal(merged);
   }
   let obj = {
-    source: require("../../../../_runtime/metro/14753__.js"),
+    source: require("../../../../_runtime/metro/14754__.js"),
     style: { height: 190, width: 220, resizeMode: "contain" },
   };
-  const tmp4 = closure_7(Image, obj);
-  [r10018, require] = _slicedToArray(noop.useState(""), 2);
+  const tmp4 = closure_7(Image, {
+    source: require("../../../../_runtime/metro/14754__.js"),
+    style: { height: 190, width: 220, resizeMode: "contain" },
+  });
+  [r10018, require] = noop.useState("");
   const tmp5 = _slicedToArray(noop.useState(""), 2);
-  [tmp7, importDefault] = _slicedToArray(noop.useState(false), 2);
-  obj = { illustration: tmp4, title: null, description: null, onDismiss: null, actions: null };
+  [tmp7, importDefault] = noop.useState(false);
+  const obj2 = { illustration: tmp4, title: null, description: null, onDismiss: null, actions: null };
   const intl = require("util").intl;
-  obj.title = intl.string(require("util").t.CjleBl);
-  let obj2 = require("PlatformUtils");
+  obj2.title = intl.string(require("util").t.CjleBl);
   const tmp6 = _slicedToArray(noop.useState(false), 2);
+  const obj3 = require("PlatformUtils");
   const intl2 = require("util").intl;
   const string = intl2.string;
   const t = require("util").t;
@@ -39,17 +44,15 @@ export default function PasswordlessUpsellPromoSheet() {
   } else {
     stringResult = string(t.d6uxJy);
   }
-  obj.description = stringResult;
-  obj.onDismiss = function onDismiss() {
+  obj2.description = stringResult;
+  obj2.onDismiss = function onDismiss() {
     return setRegistering(onRegisterSuccess[10]).markDismissed(constants.USER_DISMISS);
   };
-  obj = {
+  const obj4 = {
     size: "lg",
     onPress() {
-      let obj = PasskeyUpsellManagerDefault;
-      obj.markDismissed(ContentDismissActionType.TAKE_ACTION);
-      obj = { setRegistering, setError, onRegisterSuccess };
-      NativeCeremoniesDefault.registerPasskey(obj);
+      PasskeyUpsellManagerDefault.markDismissed(ContentDismissActionType.TAKE_ACTION);
+      NativeCeremoniesDefault.registerPasskey({ setRegistering, setError, onRegisterSuccess });
     },
     text: null,
     loading: null,
@@ -63,11 +66,11 @@ export default function PasswordlessUpsellPromoSheet() {
   } else {
     string2Result = string2(t2.NIFmCJ);
   }
-  obj.text = string2Result;
-  obj.loading = tmp7;
-  obj.disabled = tmp7;
-  const items = [closure_7(require("components/Button/Button").Button, obj)];
-  const obj1 = {
+  obj4.text = string2Result;
+  obj4.loading = tmp7;
+  obj4.disabled = tmp7;
+  const items = [closure_7(require("components/Button/Button").Button, obj4)];
+  const obj5 = {
     size: "lg",
     variant: "secondary",
     onPress() {
@@ -86,12 +89,12 @@ export default function PasswordlessUpsellPromoSheet() {
   } else {
     string3Result = string3(t3["7J6/nG"]);
   }
-  obj2 = { children: null };
-  obj1.text = string3Result;
-  obj1.disabled = tmp7;
-  items[1] = closure_7(require("components/Button/Button").Button, obj1);
-  obj2.children = items;
-  obj.actions = closure_8(require("ButtonGroup").ButtonGroup, obj2);
-  return closure_7(require("PromoSheet").PromoSheet, obj);
+  const obj6 = { children: null };
+  obj5.text = string3Result;
+  obj5.disabled = tmp7;
+  items[1] = closure_7(require("components/Button/Button").Button, obj5);
+  obj6.children = items;
+  obj2.actions = closure_8(require("ButtonGroup").ButtonGroup, obj6);
+  return closure_7(require("PromoSheet").PromoSheet, obj2);
 }
 export const PASSWORDLESS_UPSELL_MODAL_KEY = "PASSWORDLESS_UPSELL_MODAL_KEY";

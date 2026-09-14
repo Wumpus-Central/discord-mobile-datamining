@@ -21,8 +21,7 @@ class InappropriateConversationBlockAndReportAlert {
     items[2] = senderId;
     items[3] = warningType;
     callback = senderId.useCallback((cta) => {
-      const obj = { channelId, warningId, senderId, warningType, cta };
-      obj.trackCtaEvent(obj);
+      SafetyWarningUtils.trackCtaEvent({ channelId, warningId, senderId, warningType, cta });
     }, items);
     closure_8 = callback;
     items1 = [,];

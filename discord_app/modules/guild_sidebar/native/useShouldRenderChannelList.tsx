@@ -13,9 +13,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_sidebar/native/useShouldRenderChannelList.tsx");
 
 export const useShouldRenderChannelList = function useShouldRenderChannelList() {
-  const tmp = _slicedToArray(noop.useState(c7), 2);
-  const first = tmp[0];
-  dependencyMap = tmp[1];
+  [first, dependencyMap] = noop.useState(c7);
   const items = [first];
   const effect = noop.useEffect(() => {
     function allowRender() {

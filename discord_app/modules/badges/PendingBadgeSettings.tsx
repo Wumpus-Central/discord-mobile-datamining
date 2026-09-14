@@ -84,7 +84,7 @@ function applyPendingBadgeSettingsToProfileBadges(items, arg1) {
       let profileBadgeId = obj.resolveProfileBadgeId(item10027.id);
       let tmp15 = profileBadgeId;
       if (null != profileBadgeId) {
-        let tmp12Result = tmp12(11332);
+        let tmp12Result = tmp12(11333);
         if (!tmp12Result.isPinnedBadge(tmp15)) {
           if (!map.has(tmp15)) {
             let result = map.set(tmp15, item10027);
@@ -98,7 +98,7 @@ function applyPendingBadgeSettingsToProfileBadges(items, arg1) {
     for (const item10058 of pendingBadgeDisplayOrder) {
       value = map.get(item10058);
       if (null != value) {
-        arr = items3.push(tmp27);
+        let arr2 = items3.push(tmp27);
         let deleteResult = map.delete(item10058);
       }
       continue;
@@ -183,15 +183,14 @@ export const setPendingBadgeVisibility = function setPendingBadgeVisibility(badg
       tmp6 = found.length === displayOrder.length && found.every((item, index) => item === hiddenBadges[index]);
       const tmp7 = found.length === displayOrder.length && found.every((item, index) => item === hiddenBadges[index]);
     }
-    let obj = DispatcherDefault;
     let tmp10;
     if (!tmp6) {
       const items1 = [];
       HermesBuiltin.arraySpread(found, 0);
       tmp10 = items1;
     }
-    obj = { type: "USER_PROFILE_SETTINGS_SET_PENDING_CHANGES", pendingBadgeDisplayOrder: tmp10 };
-    obj.dispatch(obj);
+    const obj2 = { type: "USER_PROFILE_SETTINGS_SET_PENDING_CHANGES", pendingBadgeDisplayOrder: tmp10 };
+    DispatcherDefault.dispatch(obj2);
   }
   if (hidden) {
     const items2 = [];
@@ -219,7 +218,7 @@ export const resetPendingBadgeSettings = function resetPendingBadgeSettings() {
   DispatcherDefault.dispatch({
     type: "USER_PROFILE_SETTINGS_SET_PENDING_CHANGES",
     pendingBadgeDisplayOrder: "call",
-    pendingBadgeHiddenBadges: "accessibilityLabel",
+    pendingBadgeHiddenBadges: "__esModule",
   });
 };
 export const hasPendingBadgeSettings = function hasPendingBadgeSettings(pendingBadgeDisplayOrder) {
@@ -237,17 +236,16 @@ export const applyPendingBadgeSettings = function applyPendingBadgeSettings(stat
   }
   if (null == set) {
     const items = [];
-    let arraySpreadResult = HermesBuiltin.arraySpread(stateFromStoresArray, 0);
+    HermesBuiltin.arraySpread(stateFromStoresArray, 0);
     let mapped = items;
   } else {
     mapped = stateFromStoresArray.map((badge_id) => {
-      let obj = BadgeUtils;
       let tmp = badge_id;
       if (!obj.isPinnedBadge(badge_id.badge_id)) {
-        obj = {};
+        const obj2 = {};
         const merged = Object.assign(badge_id);
-        obj.hidden = set.has(badge_id.badge_id);
-        tmp = obj;
+        obj2.hidden = set.has(badge_id.badge_id);
+        tmp = obj2;
       }
       return tmp;
     });
@@ -259,7 +257,7 @@ export const applyPendingBadgeSettings = function applyPendingBadgeSettings(stat
     const _Map = Map;
     const map = new Map();
     for (const item10026 of mapped) {
-      let obj = set(11332);
+      let obj = set(11333);
       if (obj.isPinnedBadge(item10026.badge_id)) {
         let arr = items1.push(item10026);
       } else {
@@ -271,14 +269,13 @@ export const applyPendingBadgeSettings = function applyPendingBadgeSettings(stat
     for (const item10048 of pendingBadgeDisplayOrder) {
       value = map.get(item10048);
       if (null != value) {
-        arr = items2.push(tmp22);
+        let arr2 = items2.push(tmp22);
         let deleteResult = map.delete(item10048);
       }
       continue;
     }
     const items3 = [];
-    arraySpreadResult = HermesBuiltin.arraySpread(items2, HermesBuiltin.arraySpread(items1, 0));
-    HermesBuiltin.arraySpread(map.values(), arraySpreadResult);
+    HermesBuiltin.arraySpread(map.values(), HermesBuiltin.arraySpread(items2, HermesBuiltin.arraySpread(items1, 0)));
     return items3;
   }
 };
@@ -318,10 +315,8 @@ export const getPendingProfileBadges = function getPendingProfileBadges(arr, sta
       return owned;
     });
     const mapped = found.map((badge_id) => {
-      let obj = set(set2[5]);
-      const result = obj.toProfileBadgeLegacyId(badge_id.badge_id);
-      obj = { id: result, icon: result, iconSrc: badge_id.simple_icon_raster_url, description: badge_id.name };
-      return obj;
+      const result = set(set2[5]).toProfileBadgeLegacyId(badge_id.badge_id);
+      return { id: result, icon: result, iconSrc: badge_id.simple_icon_raster_url, description: badge_id.name };
     });
     const items = [];
     HermesBuiltin.arraySpread(mapped, HermesBuiltin.arraySpread(arr, 0));

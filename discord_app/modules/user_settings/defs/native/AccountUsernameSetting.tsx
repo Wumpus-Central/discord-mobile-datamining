@@ -9,8 +9,8 @@ import UserStore from "../../../../stores/UserStore.tsx";
 
 require = fn;
 const jsx = fn(21).jsx;
-fn(11601);
-let SettingBuilders = {
+const SettingBuilders = fn(11602);
+const route = SettingBuilders.createRoute({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.IEpCBQ);
@@ -23,8 +23,7 @@ let SettingBuilders = {
     );
   },
   useDescription: function useAccountUsernameSettingDescription() {
-    let obj = AutomodQuarantineUtils;
-    const guildAutomodProfileQuarantineErrors = obj.useGuildAutomodProfileQuarantineErrors();
+    const guildAutomodProfileQuarantineErrors = AutomodQuarantineUtils.useGuildAutomodProfileQuarantineErrors();
     let first;
     if (guildAutomodProfileQuarantineErrors != null) {
       const nick = guildAutomodProfileQuarantineErrors.nick;
@@ -34,7 +33,7 @@ let SettingBuilders = {
     }
     let tmp5 = null;
     if (null != first) {
-      obj = { variant: "text-xs/medium", color: "text-feedback-warning", children: first };
+      const obj2 = { variant: "text-xs/medium", color: "text-feedback-warning", children: first };
       tmp5 = jsx(Text_Text.Text, { variant: "text-xs/medium", color: "text-feedback-warning", children: first });
     }
     return tmp5;
@@ -45,9 +44,8 @@ let SettingBuilders = {
       return require("UserSettingsChangeUsername").default;
     },
   },
-};
-SettingBuilders = SettingBuilders.createRoute(SettingBuilders);
+});
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/AccountUsernameSetting.tsx");
 
-export default SettingBuilders;
+export default route;

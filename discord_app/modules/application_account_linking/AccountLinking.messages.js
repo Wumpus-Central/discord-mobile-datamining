@@ -31,10 +31,11 @@ import _mod3134 from "../../../_runtime/metro/03134__.js";
 import _mod3135 from "../../../_runtime/metro/03135__.js";
 import _mod3136 from "../../../_runtime/metro/03136__.js";
 import _mod3137 from "../../../_runtime/metro/03137__.js";
-import 01155__ from "../../../_runtime/metro/01155__.js";
+import module_1153_mod from "../../../_runtime/metro/01153__.js";
 import size from "../../../_runtime/metro/00002__.js";
 
-const loader = module_1155.createLoader({
+let module_1153 = module_1153_mod;
+const loader = module_1153.createLoader({
   bg() {
     const jsonAsset = AssetJsonUtils.loadJsonAsset(_mod3107);
     return jsonAsset.then((result) => ({ default: result }));
@@ -160,7 +161,8 @@ const loader = module_1155.createLoader({
     return jsonAsset.then((result) => ({ default: result }));
   }
 }, "en-US");
-const messagesProxy = module_1155.makeMessagesProxy(loader);
+let module_1153 = module_1153_mod;
+const messagesProxy = module_1153.makeMessagesProxy(loader);
 const result = size.fileFinishedImporting("modules/application_account_linking/AccountLinking.messages.js");
 
 export default messagesProxy;

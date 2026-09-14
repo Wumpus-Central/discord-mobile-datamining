@@ -10,8 +10,7 @@ import priv from "../../_runtime/01437_priv.js";
 require = fn;
 function getGuildNameSuggestion(truncateUsername) {
   const currentUser = UserStore.getCurrentUser();
-  let obj = UserUtilsAll;
-  const name = obj.getName(currentUser);
+  const name = UserUtilsAll.getName(currentUser);
   let str = "";
   if (null != name) {
     str = "";
@@ -25,16 +24,19 @@ function getGuildNameSuggestion(truncateUsername) {
       if (truncateUsername) {
         substr = name.slice(0, 20);
       }
-      obj = { username: substr };
-      str = intl.formatToPlainString(util.t.Y6Qfju, obj);
+      const obj2 = { username: substr };
+      str = intl.formatToPlainString(util.t.Y6Qfju, obj2);
     }
   }
   return str;
 }
 let obj = { maxAge: null };
 obj.maxAge = DurationsDefault.Millis.MINUTE;
-priv = new priv(obj);
-obj = {
+const importDefaultResult1 = new priv(obj);
+const size = fn(2);
+let result = size.fileFinishedImporting("utils/GuildUtils.tsx");
+
+export default {
   getGuildNameSuggestion,
   requestMembers(arr, arg1) {
     closure_0 = arg1;
@@ -51,9 +53,9 @@ obj = {
           str = "";
         }
         const combined = "" + str + ":" + closure_0;
-        value = priv.get(combined);
+        value = importDefaultResult1.get(combined);
         if (null == value) {
-          const result = priv.set(combined, true);
+          const result = importDefaultResult1.set(combined, true);
         }
         if (null == value) {
           items.push(item);
@@ -67,9 +69,9 @@ obj = {
       }
       const _HermesInternal = HermesInternal;
       let combined = "" + str + ":" + arg1;
-      value = priv.get(combined);
+      value = importDefaultResult1.get(combined);
       if (null == value) {
-        let result = priv.set(combined, true);
+        let result = importDefaultResult1.set(combined, true);
       }
       flag2 = false;
       if (null == value) {
@@ -154,8 +156,4 @@ obj = {
     }
   },
 };
-const size = fn(2);
-let result = size.fileFinishedImporting("utils/GuildUtils.tsx");
-
-export default obj;
 export { getGuildNameSuggestion };

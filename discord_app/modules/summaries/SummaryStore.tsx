@@ -29,14 +29,14 @@ function handleQuickSwitcherUpdate() {
   });
   closure_24 = found.map((record) => record.record.id);
 }
-const SUMMARY_POLL_INTERVAL = fn(11479).SUMMARY_POLL_INTERVAL;
+const SUMMARY_POLL_INTERVAL = fn(11480).SUMMARY_POLL_INTERVAL;
 let obj = { FETCHING: "fetching", OK: "ok", ERROR: "error" };
 const dependencyMap2 = {};
 const dependencyMap3 = {};
 let closure_20 = {};
 let items = [];
 let reduced = {};
-obj = { status: obj.OK, lastRequest: null, lastResponse: null };
+let obj2 = { status: obj.OK, lastRequest: null, lastResponse: null };
 let closure_24 = [];
 let closure_25 = [];
 const PersistedStore = initializeDefault.PersistedStore;
@@ -203,15 +203,15 @@ prototype["channelAffinitiesById"] = function channelAffinitiesById() {
   return reduced;
 };
 prototype["channelAffinitiesStatus"] = function channelAffinitiesStatus() {
-  return obj;
+  return obj2;
 };
 prototype["shouldFetchChannelAffinities"] = function shouldFetchChannelAffinities() {
-  let tmp = obj.status !== obj.FETCHING;
+  let tmp = obj2.status !== obj.FETCHING;
   if (tmp) {
-    let tmp4 = null != obj.lastResponse;
+    let tmp4 = null != obj2.lastResponse;
     if (tmp4) {
       const _Date = Date;
-      const diff = Date.now() - obj.lastResponse;
+      const diff = Date.now() - obj2.lastResponse;
       tmp4 = diff < 30 * DurationsDefault.Millis.SECOND;
     }
     tmp = !tmp4;
@@ -257,7 +257,7 @@ prototype["visibleSummaryIndex"] = function visibleSummaryIndex() {
   return findIndexResult;
 };
 SummaryStore.persistKey = "SummaryStore";
-obj = {
+obj2 = {
   CONNECTION_OPEN() {
     return false;
   },
@@ -277,8 +277,7 @@ obj = {
     if (null != summary) {
       const _Object = Object;
       if (Object.keys(summary).length > 0) {
-        obj = Summary;
-        summaryFromServer = obj.createSummaryFromServer(summary, channelId);
+        summaryFromServer = Summary.createSummaryFromServer(summary, channelId);
         items = dependencyMap2[channelId];
         if (items == null) {
           items = [];
@@ -301,16 +300,16 @@ obj = {
         dependencyMap2[channelId] = items1;
       }
     }
-    obj = dependencyMap3[channelId];
-    if (obj == null) {
-      obj = { fetching: false };
+    obj2 = dependencyMap3[channelId];
+    if (obj2 == null) {
+      obj2 = { fetching: false };
     }
-    obj = {};
-    const merged = Object.assign(obj);
-    obj.summaryId = undefined;
-    obj.summaryIdLastReceivedAt = receivedAt;
-    obj.summaryIdError = error;
-    dependencyMap3[channelId] = obj;
+    const obj3 = {};
+    const merged = Object.assign(obj2);
+    obj3.summaryId = undefined;
+    obj3.summaryIdLastReceivedAt = receivedAt;
+    obj3.summaryIdError = error;
+    dependencyMap3[channelId] = obj3;
   },
   REQUEST_CHANNEL_SUMMARY(channelId) {
     channelId = channelId.channelId;
@@ -319,11 +318,11 @@ obj = {
     if (obj == null) {
       obj = { fetching: false };
     }
-    obj = {};
+    obj2 = {};
     const merged = Object.assign(obj);
-    obj.summaryId = summaryId;
-    obj.summaryIdLastRequestedAt = requestedAt;
-    dependencyMap3[channelId] = obj;
+    obj2.summaryId = summaryId;
+    obj2.summaryIdLastRequestedAt = requestedAt;
+    dependencyMap3[channelId] = obj2;
   },
   RECEIVE_CHANNEL_SUMMARIES(error) {
     ({ summaries, channelId } = error);
@@ -362,15 +361,15 @@ obj = {
     dependencyMap2[channelId] = obj
       .sortBy(mapped, (startId) => SnowflakeUtilsDefault.extractTimestamp(startId.startId))
       .reverse();
-    obj = {};
+    obj2 = {};
     const merged = Object.assign(dependencyMap3[channelId]);
-    obj.fetching = false;
-    obj.error = undefined;
-    obj.lastReceivedAt = error.receivedAt;
+    obj2.fetching = false;
+    obj2.error = undefined;
+    obj2.lastReceivedAt = error.receivedAt;
     if (null != error) {
-      obj.error = error;
+      obj2.error = error;
     }
-    dependencyMap3[channelId] = obj;
+    dependencyMap3[channelId] = obj2;
     const sortByResult = obj.sortBy(mapped, (startId) => SnowflakeUtilsDefault.extractTimestamp(startId.startId));
   },
   REQUEST_CHANNEL_SUMMARIES(requestedAt) {
@@ -378,11 +377,11 @@ obj = {
     if (obj == null) {
       obj = {};
     }
-    obj = {};
+    obj2 = {};
     const merged = Object.assign(obj);
-    obj.fetching = true;
-    obj.lastRequestedAt = requestedAt.requestedAt;
-    dependencyMap3[requestedAt.channelId] = obj;
+    obj2.fetching = true;
+    obj2.lastRequestedAt = requestedAt.requestedAt;
+    dependencyMap3[requestedAt.channelId] = obj2;
   },
   SET_HIGHLIGHTED_SUMMARY(channelId) {
     if (null == obj) {
@@ -395,11 +394,11 @@ obj = {
       channelId = obj.channelId;
     }
     if (channelId.channelId === channelId) {
-      summaryId = undefined;
+      let summaryId1;
       if (obj != null) {
-        summaryId = obj.summaryId;
+        summaryId1 = obj.summaryId;
       }
-      if (channelId.summaryId === summaryId) {
+      if (channelId.summaryId === summaryId1) {
         return false;
       }
     }
@@ -472,11 +471,11 @@ obj = {
     channelId = channelId.channelId;
     let tmp = null;
     if (null != channelId) {
-      channelId = undefined;
+      let channelId1;
       if (obj != null) {
-        channelId = obj.channelId;
+        channelId1 = obj.channelId;
       }
-      let tmp3 = channelId !== channelId;
+      let tmp3 = channelId !== channelId1;
       if (!tmp3) {
         let summaryId;
         if (obj != null) {
@@ -517,10 +516,11 @@ obj = {
       items = [];
       reduced = {};
       obj = {};
-      const merged = Object.assign(obj);
+      const merged = Object.assign(obj2);
       obj.status = obj.ERROR;
       const _Date2 = Date;
       obj.lastResponse = Date.now();
+      obj2 = obj;
     } else {
       items = affinities;
       if (affinities == null) {
@@ -536,11 +536,11 @@ obj = {
       if (reduced == null) {
         reduced = {};
       }
-      obj = {};
-      const merged1 = Object.assign(obj);
-      obj.status = obj.OK;
+      obj2 = {};
+      const merged1 = Object.assign(obj2);
+      obj2.status = obj.OK;
       const _Date = Date;
-      obj.lastResponse = Date.now();
+      obj2.lastResponse = Date.now();
     }
   },
   REQUEST_CHANNEL_SUMMARIES_BULK(arg0) {
@@ -550,12 +550,12 @@ obj = {
       if (obj == null) {
         obj = {};
       }
-      obj = {};
+      obj2 = {};
       const merged = Object.assign(obj);
-      obj.fetching = true;
-      obj.lastRequestedAt = lastRequestedAt;
-      obj.error = undefined;
-      acc[item] = obj;
+      obj2.fetching = true;
+      obj2.lastRequestedAt = lastRequestedAt;
+      obj2.error = undefined;
+      acc[item] = obj2;
       return acc;
     }, {});
     obj = {};
@@ -565,24 +565,23 @@ obj = {
   RECEIVE_CHANNEL_SUMMARIES_BULK(requestArgs) {
     ({ receivedAt: require, error: importDefault } = requestArgs);
     const channelIds = requestArgs.requestArgs.channelIds;
-    obj = _modDef12;
-    dependencyMap = obj.toPairs(requestArgs.summaries).reduce((acc, item) => {
+    dependencyMap = _modDef12.toPairs(requestArgs.summaries).reduce((acc, item) => {
       const tmp = closure_7(item, 2);
       const first = tmp[0];
       obj = error(12);
       const chainResult = error(12).chain(
-        tmp[1].map((item) => lastReceivedAt(11481).createSummaryFromServer(item, first)),
+        tmp[1].map((item) => lastReceivedAt(11482).createSummaryFromServer(item, first)),
       );
       const sortByResult = error(12)
-        .chain(tmp[1].map((item) => lastReceivedAt(11481).createSummaryFromServer(item, first)))
+        .chain(tmp[1].map((item) => lastReceivedAt(11482).createSummaryFromServer(item, first)))
         .sortBy((startId) => error(11).extractTimestamp(startId.startId));
       const reversed = error(12)
-        .chain(tmp[1].map((item) => lastReceivedAt(11481).createSummaryFromServer(item, first)))
+        .chain(tmp[1].map((item) => lastReceivedAt(11482).createSummaryFromServer(item, first)))
         .sortBy((startId) => error(11).extractTimestamp(startId.startId))
         .takeRight(75)
         .reverse();
       const takeRightResult = error(12)
-        .chain(tmp[1].map((item) => lastReceivedAt(11481).createSummaryFromServer(item, first)))
+        .chain(tmp[1].map((item) => lastReceivedAt(11482).createSummaryFromServer(item, first)))
         .sortBy((startId) => error(11).extractTimestamp(startId.startId))
         .takeRight(75);
       acc[first] = reversed.filter((item) => Object.keys(item).length > 0).value();
@@ -590,41 +589,40 @@ obj = {
     }, {});
     reduced = channelIds.reduce(
       (summariesByChannel, item) => {
-        obj = closure_19[item];
+        obj = obj3[item];
         if (obj == null) {
           obj = {};
         }
         if (null != dependencyMap[item]) {
           summariesByChannel.summariesByChannel[item] = tmp;
         }
-        obj = {};
+        obj2 = {};
         const merged = Object.assign(obj);
-        obj.fetching = false;
-        obj.error = error;
-        obj.lastReceivedAt = lastReceivedAt;
-        summariesByChannel.summaryFetchStatusByChannel[item] = obj;
+        obj2.fetching = false;
+        obj2.error = error;
+        obj2.lastReceivedAt = lastReceivedAt;
+        summariesByChannel.summaryFetchStatusByChannel[item] = obj2;
         return summariesByChannel;
       },
       { summariesByChannel: {}, summaryFetchStatusByChannel: {} },
     );
-    obj = {};
-    let merged = Object.assign(obj);
+    obj2 = {};
+    let merged = Object.assign(obj2);
     const merged1 = Object.assign(reduced.summariesByChannel);
-    obj = {};
-    const merged2 = Object.assign(obj);
+    const obj3 = {};
+    const merged2 = Object.assign(obj3);
     const merged3 = Object.assign(reduced.summaryFetchStatusByChannel);
   },
   CONVERSATION_SUMMARY_UPDATE(channel_id) {
     channel_id = channel_id.channel_id;
     const timestamp = Date.now();
-    obj = _modDef12;
-    const chainResult = obj.chain(channel_id.summaries);
-    const found = obj
+    const chainResult = _modDef12.chain(channel_id.summaries);
+    const found = _modDef12
       .chain(channel_id.summaries)
       .sortBy((start_id) => SnowflakeUtilsDefault.extractTimestamp(start_id.start_id))
       .filter((item) => Object.keys(item).length > 0);
     const mapped = found.map((item) => Summary.createSummaryFromServer(item, channel_id));
-    const sortByResult = obj
+    const sortByResult = _modDef12
       .chain(channel_id.summaries)
       .sortBy((start_id) => SnowflakeUtilsDefault.extractTimestamp(start_id.start_id));
     items = dependencyMap2[channel_id];
@@ -650,9 +648,9 @@ obj = {
       .uniqBy("id")
       .reverse()
       .value();
-    obj = {};
+    obj2 = {};
     const merged = Object.assign(dependencyMap3[channel_id]);
-    obj.error = undefined;
+    obj2.error = undefined;
     let flag;
     if (dependencyMap3[channel_id] != null) {
       flag = tmp7.fetching;
@@ -660,9 +658,9 @@ obj = {
     if (flag == null) {
       flag = false;
     }
-    obj.fetching = flag;
-    obj.lastReceivedAt = timestamp;
-    dependencyMap3[channel_id] = obj;
+    obj2.fetching = flag;
+    obj2.lastReceivedAt = timestamp;
+    dependencyMap3[channel_id] = obj2;
     const iter2 = combined
       .sortBy((startId) => SnowflakeUtilsDefault.extractTimestamp(startId.startId))
       .takeRight(75)
@@ -685,7 +683,7 @@ obj = {
     }
   },
 };
-const summaryStore = new SummaryStore(DispatcherDefault, obj);
+const summaryStore = new SummaryStore(DispatcherDefault, obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/summaries/SummaryStore.tsx");
 

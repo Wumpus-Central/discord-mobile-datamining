@@ -2,6 +2,8 @@
 import LocaleStore from "../user_settings/LocaleStore.tsx";
 import PermissionStore from "../../stores/PermissionStore.tsx";
 
+const require = globalThis.__r;
+
 const require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/app_channels/getCannotSwapApplicationText.tsx");

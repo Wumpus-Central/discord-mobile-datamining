@@ -12,14 +12,13 @@ const result = size.fileFinishedImporting(
 );
 
 export default function CollectiblesShopViewAllCategoryItemsScreen() {
-  let obj = useSettingNavigationRoute;
-  const settingNavigationRoute = obj.useSettingNavigationRoute();
+  const settingNavigationRoute = useSettingNavigationRoute.useSettingNavigationRoute();
   const stackNavigation = useNavigation.useStackNavigation();
   const items = [stackNavigation];
   const layoutEffect = noop.useLayoutEffect(() => {
     stackNavigation.setOptions({ headerShown: false });
   }, items);
-  obj = {};
+  const obj3 = {};
   const merged = Object.assign(settingNavigationRoute.params);
   return jsx(CollectiblesShopViewAllCategoryItemsDefault, {});
 }

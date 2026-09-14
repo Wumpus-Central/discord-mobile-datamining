@@ -6,6 +6,9 @@ import size from "../../../../_runtime/metro/00002__.js";
 const result = size.fileFinishedImporting("modules/quests/native/openQuestOrbMultiplierPerkInfoActionSheet.tsx");
 
 export default function openQuestOrbMultiplierPerkInfoActionSheet(multiplier, orbMultiplierEligibility) {
-  const obj = { multiplier, orbMultiplierEligibility };
-  obj.openLazy(asyncRequireImpl(15247, dependencyMap.paths), "QuestOrbMultiplierPerkInfoActionSheet", obj);
+  ActionSheetActionCreatorsDefault.openLazy(
+    asyncRequireImpl(15248, dependencyMap.paths),
+    "QuestOrbMultiplierPerkInfoActionSheet",
+    { multiplier, orbMultiplierEligibility },
+  );
 }

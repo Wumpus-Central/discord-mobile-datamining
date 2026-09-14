@@ -8,7 +8,7 @@ const result = size.fileFinishedImporting("modules/premium/powerups/native/utils
 
 export default function openGuildPowerupRollbackSheet(arg0) {
   ActionSheetActionCreatorsDefault.openLazy(
-    asyncRequireImpl(12644, dependencyMap.paths),
+    asyncRequireImpl(12645, dependencyMap.paths),
     GUILD_POWERUP_ROLLBACK_SHEET_KEY,
     arg0,
   );

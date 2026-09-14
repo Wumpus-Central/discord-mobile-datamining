@@ -12,8 +12,9 @@ class CollectiblesMarketingManager extends tmp2 {
     applyArgumentsResult.handlePostConnectionOpen = function handlePostConnectionOpen() {
       value = DevSettingsStore.get("shop_include_unpublished");
       const CollectiblesMarketingReleaseType = CollectiblesMarketingReleaseType2.CollectiblesMarketingReleaseType;
-      const obj = { release: value ? CollectiblesMarketingReleaseType.BETA : CollectiblesMarketingReleaseType.PROD };
-      const collectiblesMarketings = obj.fetchCollectiblesMarketings(obj);
+      const collectiblesMarketings = CollectiblesActionCreators.fetchCollectiblesMarketings({
+        release: value ? CollectiblesMarketingReleaseType.BETA : CollectiblesMarketingReleaseType.PROD,
+      });
     };
     return applyArgumentsResult;
   }

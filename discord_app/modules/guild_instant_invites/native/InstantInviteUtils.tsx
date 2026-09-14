@@ -3,7 +3,7 @@ import ToastUtils from "../../toast/native/ToastUtils.tsx";
 import ClipboardUtils from "../../../utils/ClipboardUtils.native.tsx";
 import getInviteURLDefault from "../../instant_invite/getInviteURL.tsx";
 import instant_invite_InstantInviteUtils from "../../instant_invite/native/InstantInviteUtils.tsx";
-import _modDef11075 from "../../../../_runtime/metro/11075__.js";
+import _modDef11076 from "../../../../_runtime/metro/11076__.js";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import ChannelStore from "../../../stores/ChannelStore.tsx";
 import UserStore from "../../../stores/UserStore.tsx";
@@ -24,18 +24,17 @@ export const useInviteActions = function useInviteActions(invite) {
     isPrivateResult = channel.isPrivate();
   }
   asyncGeneratorStep = isPrivateResult;
-  let obj = { label: null, iconSource: null, action: null };
+  const obj = { label: null, iconSource: null, action: null };
   let intl = invite(1114).intl;
   obj.label = intl.string(invite(1114).t.RDE0Sc);
-  obj.iconSource = onInviteRevoked(11068).share;
+  obj.iconSource = onInviteRevoked(11069).share;
   obj.action = function action() {
-    _modDef11075(() => {
-      let obj = invite(dependencyMap[7]);
+    _modDef11076(() => {
       let tmp4;
       if (!closure_1_3) {
         tmp4 = onInviteRevoked(dependencyMap[8])(closure_1_0.code);
       }
-      obj = { url: tmp4, message: null };
+      const obj2 = { url: tmp4, message: null };
       let formatToPlainStringResult;
       if (closure_1_3) {
         const intl = invite(dependencyMap[4]).intl;
@@ -47,45 +46,45 @@ export const useInviteActions = function useInviteActions(invite) {
         if (str == null) {
           str = "";
         }
-        obj = { username: str, link: onInviteRevoked(dependencyMap[8])(closure_1_0.code) };
-        formatToPlainStringResult = intl.formatToPlainString(invite(dependencyMap[4]).t["+zWvOQ"], obj);
+        const obj3 = { username: str, link: onInviteRevoked(dependencyMap[8])(closure_1_0.code) };
+        formatToPlainStringResult = intl.formatToPlainString(invite(dependencyMap[4]).t["+zWvOQ"], obj3);
       }
-      obj.message = formatToPlainStringResult;
+      obj2.message = formatToPlainStringResult;
       let str2 = "Guild Instant Invite";
       if (closure_1_3) {
         str2 = constants.GROUP_DM;
       }
-      return obj.showShareActionSheet(obj, str2);
+      return invite(dependencyMap[7]).showShareActionSheet(obj2, str2);
     });
   };
   const items = [obj, ,];
-  obj = { label: null, iconSource: null, action: null };
+  let obj2 = { label: null, iconSource: null, action: null };
   const intl2 = invite(1114).intl;
-  obj.label = intl2.string(invite(1114).t.OpuAlK);
-  obj.iconSource = onInviteRevoked(11068).copy;
-  obj.action = function action() {
+  obj2.label = intl2.string(invite(1114).t.OpuAlK);
+  obj2.iconSource = onInviteRevoked(11069).copy;
+  obj2.action = function action() {
     if (c3) {
-      let tmpResult = instant_invite_InstantInviteUtils;
+      const tmpResult = instant_invite_InstantInviteUtils;
       tmpResult.handleCopy(invite.code, invite.channel, InstantInviteSources.GROUP_DM, false);
     } else {
-      tmpResult = ClipboardUtils;
-      tmpResult.copy(getInviteURLDefault(invite.code));
+      ClipboardUtils.copy(getInviteURLDefault(invite.code));
+      const tmpResult2 = ClipboardUtils;
       const result = ToastUtils.presentCopiedToClipboard();
     }
   };
-  items[1] = obj;
-  const obj1 = { label: null, iconSource: null, variant: "destructive", action: null };
+  items[1] = obj2;
+  let obj3 = { label: null, iconSource: null, variant: "destructive", action: null };
   const intl3 = invite(1114).intl;
-  obj1.label = intl3.string(invite(1114).t.v6Yazx);
-  obj1.iconSource = onInviteRevoked(11068).revoke;
+  obj3.label = intl3.string(invite(1114).t.v6Yazx);
+  obj3.iconSource = onInviteRevoked(11069).revoke;
   dependencyMap = asyncGeneratorStep(async () => {
     await v2(tmp24[12]).revokeInvite(invite);
     if (1 === tmp7) {
       c3 = 0;
-      const obj2 = { key: "ERROR_ANOTHER_TRY", content: null };
+      const obj7 = { key: "ERROR_ANOTHER_TRY", content: null };
       const intl = tmp3(tmp24[4]).intl;
-      obj2.content = intl.string(tmp3(tmp24[4]).t.CKsXk3);
-      v2(tmp24[13]).open(obj2);
+      obj7.content = intl.string(tmp3(tmp24[4]).t.CKsXk3);
+      v2(tmp24[13]).open(obj7);
       c4 = 3;
       v2(tmp24[13]);
     } else if (arg0 === 1) {
@@ -99,7 +98,7 @@ export const useInviteActions = function useInviteActions(invite) {
     }
     return value;
   });
-  obj1.action = function () {
+  obj3.action = function () {
     const self = this;
     const apply = closure_2.apply;
     if (typeof apply === "unknown") {
@@ -109,6 +108,6 @@ export const useInviteActions = function useInviteActions(invite) {
     }
     return applyArgumentsResult;
   };
-  items[2] = obj1;
+  items[2] = obj3;
   return items;
 };

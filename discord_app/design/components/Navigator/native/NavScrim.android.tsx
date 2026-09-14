@@ -8,11 +8,11 @@ get_ActivityIndicator = fn(17);
 const jsx = fn(21).jsx;
 const createStyles = fn(4636);
 let obj = { androidNavScrim: null };
-obj = {};
+const obj3 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
-obj.backgroundColor = nativeDefault.colors.ANDROID_NAVIGATION_SCRIM_BACKGROUND;
-obj.top = undefined;
-obj.androidNavScrim = obj;
+obj3.backgroundColor = nativeDefault.colors.ANDROID_NAVIGATION_SCRIM_BACKGROUND;
+obj3.top = undefined;
+obj.androidNavScrim = obj3;
 let closure_4 = createStyles.createStyles(obj);
 const size = fn(2);
 const result = size.fileFinishedImporting("design/components/Navigator/native/NavScrim.android.tsx");
@@ -21,12 +21,12 @@ export const NavScrim = noop.memo(() => {
   const insets = useSafeAreaInsetsKeyboardAwareDefault({ includeCustomKeyboardHeight: false }).insets;
   let tmp2 = null;
   if (0 !== insets.bottom) {
-    let obj = { style: null, pointerEvents: "none" };
+    const obj = { style: null, pointerEvents: "none" };
     const items = [tmp.androidNavScrim];
-    obj = { height: insets.bottom };
-    items[1] = obj;
+    const obj2 = { height: insets.bottom };
+    items[1] = obj2;
     obj.style = items;
-    tmp2 = <React2 height={insets.bottom} />;
+    tmp2 = <React2 style={null} pointerEvents="none" />;
   }
   return tmp2;
 });

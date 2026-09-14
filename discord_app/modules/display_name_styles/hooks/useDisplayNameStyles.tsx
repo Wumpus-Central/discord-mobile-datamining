@@ -4,6 +4,8 @@ import GuildMemberStore from "../../../stores/GuildMemberStore.tsx";
 import UserStore from "../../../stores/UserStore.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
+const require = globalThis.__r;
+
 const useContext = _mod19.useContext;
 const result = size.fileFinishedImporting("modules/display_name_styles/hooks/useDisplayNameStyles.tsx");
 

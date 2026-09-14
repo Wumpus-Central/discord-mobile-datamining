@@ -31,7 +31,7 @@ prototype["isCollapsed"] = function isCollapsed(arg0) {
 };
 CollapsedVoiceChannelStore.displayName = "CollapsedVoiceChannelStore";
 CollapsedVoiceChannelStore.persistKey = "collapsedChannels";
-obj = {
+const collapsedVoiceChannelStore = new CollapsedVoiceChannelStore(DispatcherDefault, {
   CONNECTION_OPEN: handleConnectionOpen,
   OVERLAY_INITIALIZE: handleConnectionOpen,
   CHANNEL_COLLAPSE: function handleChannelCollapse(channelId) {
@@ -44,8 +44,7 @@ obj = {
     obj = {};
     const merged = Object.assign(obj);
   },
-};
-const collapsedVoiceChannelStore = new CollapsedVoiceChannelStore(DispatcherDefault, obj);
+});
 const size = fn(2);
 const result = size.fileFinishedImporting("stores/CollapsedVoiceChannelStore.tsx");
 

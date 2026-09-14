@@ -36,10 +36,10 @@ const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 const context = noop.createContext(null);
 let obj = { overlay: null };
-obj = {};
+let obj2 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
-obj.zIndex = 1;
-obj.overlay = obj;
+obj2.zIndex = 1;
+obj.overlay = obj2;
 const overlay = StyleSheet.create(obj);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/panels/SidebarCoachmarkOverlay.native.tsx");
@@ -55,12 +55,12 @@ export const SidebarCoachmarkOverlay = function SidebarCoachmarkOverlay(enabled)
   if (enabled) {
     tmp3 = tmp;
   }
-  let obj = { value: tmp3, children: null };
+  const obj = { value: tmp3, children: null };
   const items = [enabled.children];
   let tmp4 = null;
   if (enabled) {
-    obj = { manager: tmp };
-    tmp4 = React5(SidebarCoachmarkOverlayLayer, obj);
+    const obj2 = { manager: tmp };
+    tmp4 = React5(SidebarCoachmarkOverlayLayer, obj2);
   }
   items[1] = tmp4;
   obj.children = items;

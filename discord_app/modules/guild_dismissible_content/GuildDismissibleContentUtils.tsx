@@ -3,6 +3,8 @@ import AnalyticsUtilsDefault from "../../utils/AnalyticsUtils.tsx";
 import Uint8ArrayUtils from "../../utils/Uint8ArrayUtils.tsx";
 import UserSettingsProtoStore from "../user_settings/UserSettingsProtoStore.tsx";
 
+const require = globalThis.__r;
+
 require = fn;
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const ContentDismissActionType = fn(1954).ContentDismissActionType;
@@ -40,8 +42,7 @@ export const markContentAsDismissed = function markContentAsDismissed(
   _require = true;
   importDefault = GAME_SERVER_HOSTING_GUILD_ELIGIBLE_COACHMARK;
   dependencyMap = guildId;
-  let obj = require("UserSettingsProtoActionCreators");
-  const result = obj.updateUserGuildSettings(
+  const result = require("UserSettingsProtoActionCreators").updateUserGuildSettings(
     guildId,
     (dismissedGuildContent) => {
       dismissedGuildContent = UserSettingsProtoStore.getDismissedGuildContent(closure_2);
@@ -61,7 +62,7 @@ export const markContentAsDismissed = function markContentAsDismissed(
   );
   if (arg2) {
     let UNKNOWN = AUTO_DISMISS;
-    obj = {
+    const obj3 = {
       type: tmp(1943).DismissibleGuildContent[GAME_SERVER_HOSTING_GUILD_ELIGIBLE_COACHMARK],
       guild_id: guildId,
       action: null,
@@ -69,9 +70,10 @@ export const markContentAsDismissed = function markContentAsDismissed(
     if (AUTO_DISMISS == null) {
       UNKNOWN = ContentDismissActionType.UNKNOWN;
     }
-    obj.action = UNKNOWN;
-    AnalyticsUtilsDefault.track(AnalyticEvents.DISMISSIBLE_CONTENT_DISMISSED, obj);
+    obj3.action = UNKNOWN;
+    AnalyticsUtilsDefault.track(AnalyticEvents.DISMISSIBLE_CONTENT_DISMISSED, obj3);
   }
+  const obj = require("UserSettingsProtoActionCreators");
   tmp = _require;
 };
 export const unmarkContentAsDismissed = function unmarkContentAsDismissed(dc, guildId) {

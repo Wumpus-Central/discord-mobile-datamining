@@ -3,27 +3,28 @@ import nativeDefault from "../../../discord_common/js/packages/tokens/native.tsx
 import noop from "../../../_runtime/metro/00019__.js";
 import GuildMemberStore from "../../stores/GuildMemberStore.tsx";
 
+const require = globalThis.__r;
+
 const require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-fn(4636);
-let createStyles = {
+const createStyles = fn(4636);
+let obj2 = {
   container: { flexDirection: "row" },
   names: { marginStart: 4, paddingRight: 1 },
-  namesLegacy: null,
+  namesLegacy: { marginStart: 4, paddingRight: 1, color: nativeDefault.colors.TEXT_SUBTLE },
   plusCountContainer: null,
   cutout: null,
 };
-createStyles = { marginStart: 4, paddingRight: 1, color: nativeDefault.colors.TEXT_SUBTLE };
-createStyles.namesLegacy = createStyles;
-createStyles.plusCountContainer = {
+let obj3 = { marginStart: 4, paddingRight: 1, color: nativeDefault.colors.TEXT_SUBTLE };
+obj2.plusCountContainer = {
   backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST,
   marginStart: 2,
   alignItems: "center",
 };
-createStyles.cutout = { marginRight: -4 };
-let closure_6 = createStyles.createStyles(createStyles);
-let obj2 = { direction: fn(1178).CutoutDirection.RIGHT };
+obj2.cutout = { marginRight: -4 };
+let closure_6 = createStyles.createStyles(obj2);
+let obj5 = { direction: fn(1176).CutoutDirection.RIGHT };
 let size = fn(2);
 const result = size.fileFinishedImporting("components_native/common/UserSummaryItem.tsx");
 
@@ -46,15 +47,14 @@ export default function UserSummaryItem(users) {
   }
   ({ cutout, withPlusCount } = users);
   if (cutout === undefined) {
-    cutout = obj2;
+    cutout = obj5;
   }
   const tmp4 = closure_6();
   let tmp5 = renderedUsers.length > 0 ? renderedUsers.length : users.length;
   const bound = Math.min(tmp5, max);
   let obj = {};
-  let obj1 = require("initialize");
   const items = [GuildMemberStore];
-  const stateFromStores = obj1.useStateFromStores(items, () =>
+  const stateFromStores = require("initialize").useStateFromStores(items, () =>
     closure_0.forEach((id) => {
       let tmp2 = null != closure_1_1;
       if (tmp2) {
@@ -85,8 +85,8 @@ export default function UserSummaryItem(users) {
             id = "@" + num;
           }
           let tmp15 = avatarSize;
-          obj2 = require("AvatarUtils");
-          let fn = obj2.makeSource(null);
+          let obj3 = require("AvatarUtils");
+          let fn = obj3.makeSource(null);
           if (null != tmp12) {
             importDefault = obj[tmp12.id];
             fn = function u() {
@@ -115,10 +115,10 @@ export default function UserSummaryItem(users) {
             };
           }
           if (num < tmp8) {
-            obj = { size: avatarSize, source: fn, style: null, cutout: null };
+            let obj4 = { size: avatarSize, source: fn, style: null, cutout: null };
             let items2 = [tmp4.cutout, tmp3];
-            obj.style = items2;
-            obj.cutout = cutout;
+            obj4.style = items2;
+            obj4.cutout = cutout;
             let arr = items1.push(
               jsx(
                 require("native").CutoutableAvatarImage,
@@ -127,18 +127,17 @@ export default function UserSummaryItem(users) {
               ),
             );
           } else {
-            obj = { size: avatarSize, source: fn };
-            arr = items1.push(jsx(require("native").CutoutableAvatarImage, { size: avatarSize, source: fn }, id));
+            obj5 = { size: avatarSize, source: fn };
+            let arr2 = items1.push(jsx(require("native").CutoutableAvatarImage, { size: avatarSize, source: fn }, id));
           }
         } else {
-          let arr1 = items1.push(renderedUsers[num]);
+          let arr3 = items1.push(renderedUsers[num]);
         }
         num = num2 + 1;
         num2 = num;
       } while (num < bound);
     }
-    let obj5 = require("NicknameUtils");
-    const name = obj5.getName(guildId, channelId, users[0]);
+    const name = require("NicknameUtils").getName(guildId, channelId, users[0]);
     let tmp25 = withNames;
     if (withNames) {
       tmp25 = users.length > 1;
@@ -146,15 +145,15 @@ export default function UserSummaryItem(users) {
     let formatToPlainStringResult = name;
     if (tmp25) {
       const intl = require("util").intl;
-      obj1 = { name, count: users.length - 1 };
-      formatToPlainStringResult = intl.formatToPlainString(require("util").t.GhkJ21, obj1);
+      const obj7 = { name, count: users.length - 1 };
+      formatToPlainStringResult = intl.formatToPlainString(require("util").t.GhkJ21, obj7);
     }
     if (withNames) {
       if (null != users[0]) {
         const _HermesInternal3 = HermesInternal;
         const combined = "username-" + formatToPlainStringResult;
         if (null != namesVariant) {
-          obj2 = {
+          const obj8 = {
             variant: namesVariant,
             color: "redesign-channel-name-muted-text",
             style: null,
@@ -162,8 +161,8 @@ export default function UserSummaryItem(users) {
             children: null,
           };
           const items3 = [tmp4.names, namesStyle];
-          obj2.style = items3;
-          obj2.children = formatToPlainStringResult;
+          obj8.style = items3;
+          obj8.children = formatToPlainStringResult;
           items1.push(
             jsx(
               require("Text/Text").Text,
@@ -178,10 +177,10 @@ export default function UserSummaryItem(users) {
             ),
           );
         } else {
-          const obj3 = { style: null, numberOfLines: 1, children: null };
+          const obj9 = { style: null, numberOfLines: 1, children: null };
           const items4 = [tmp4.namesLegacy, namesStyle];
-          obj3.style = items4;
-          obj3.children = formatToPlainStringResult;
+          obj9.style = items4;
+          obj9.children = formatToPlainStringResult;
           items1.push(jsx(require("native").LegacyText, { style: null, numberOfLines: 1, children: null }, combined));
         }
       }
@@ -191,13 +190,13 @@ export default function UserSummaryItem(users) {
         items1.pop();
         const text = `+${tmp5 + 1 - max}`;
         const tmp37 = require("native").AVATAR_SIZE_MAP[avatarSize];
-        const obj4 = { style: null, children: null };
+        const obj10 = { style: null, children: null };
         const items5 = [tmp4.plusCountContainer];
         const size = { borderRadius: tmp37, width: tmp37, height: tmp37, padding: tmp37 / 8 };
         items5[1] = size;
-        obj4.style = items5;
-        obj5 = { variant: "text-xs/normal", color: "mobile-text-heading-primary", children: text };
-        obj4.children = jsx(require("Text/Text").Text, {
+        obj10.style = items5;
+        const obj11 = { variant: "text-xs/normal", color: "mobile-text-heading-primary", children: text };
+        obj10.children = jsx(require("Text/Text").Text, {
           variant: "text-xs/normal",
           color: "mobile-text-heading-primary",
           children: text,
@@ -210,10 +209,11 @@ export default function UserSummaryItem(users) {
         );
       }
     }
-    const obj6 = { style: null, children: null };
+    const obj12 = { style: null, children: null };
     const items6 = [users.style, tmp4.container];
-    obj6.style = items6;
-    obj6.children = items1;
+    obj12.style = items6;
+    obj12.children = items1;
     return <obj style={null}>{null}</obj>;
   }
+  const obj2 = require("initialize");
 }

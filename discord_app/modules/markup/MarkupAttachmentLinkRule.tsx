@@ -14,7 +14,8 @@ const regExp = new RegExp(
     ")/\\d+/\\d+/([A-Za-z0-9._-]*[A-Za-z0-9_-])(?:[?][a-zA-Z0-9?&=_-]*)?",
 );
 let obj = { attachmentLink: null };
-obj = {
+const arr = Array.from(AttachmentUrlConstants.ATTACHMENT_PATH_PREFIXES);
+obj.attachmentLink = {
   order: _modDef4333.defaultRules.url.order - 0.5,
   requiredFirstCharacters: ["h"],
   match(arg0) {
@@ -32,7 +33,6 @@ obj = {
     return obj;
   },
 };
-obj.attachmentLink = obj;
 const result = size.fileFinishedImporting("modules/markup/MarkupAttachmentLinkRule.tsx");
 
 export default obj;

@@ -1,7 +1,7 @@
 // discord_common/js/shared/constants/web/AvatarConstants.tsx
 import size from "../../../../../_runtime/metro/00002__.js";
 
-let obj = {
+const obj = {
   SIZE_16: "SIZE_16",
   SIZE_20: "SIZE_20",
   SIZE_24: "SIZE_24",
@@ -19,7 +19,7 @@ let obj = {
   DEPRECATED_SIZE_60: "DEPRECATED_SIZE_60",
   DEPRECATED_SIZE_100: "DEPRECATED_SIZE_100",
 };
-obj = {
+const frozen = Object.freeze({
   [obj.SIZE_16]: Object.freeze({ size: 16, status: 6, stroke: 2, offset: 0 }),
   [obj.SIZE_20]: Object.freeze({ size: 20, status: 6, stroke: 2, offset: 0 }),
   [obj.SIZE_24]: Object.freeze({ size: 24, status: 8, stroke: 3, offset: 0 }),
@@ -36,8 +36,7 @@ obj = {
   [obj.DEPRECATED_SIZE_30]: Object.freeze({ size: 30, status: 0, stroke: 0, offset: 0 }),
   [obj.DEPRECATED_SIZE_60]: Object.freeze({ size: 60, status: 0, stroke: 0, offset: 0 }),
   [obj.DEPRECATED_SIZE_100]: Object.freeze({ size: 100, status: 0, stroke: 0, offset: 0 }),
-};
-const frozen = Object.freeze(obj);
+});
 const result = size.fileFinishedImporting("../discord_common/js/shared/constants/web/AvatarConstants.tsx");
 
 export const MOBILE_HEIGHT_RATIO = 1.5;

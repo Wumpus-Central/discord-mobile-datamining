@@ -5,6 +5,8 @@ import ChannelSectionStore from "../../stores/ChannelSectionStore.tsx";
 import ChannelStore from "../../stores/ChannelStore.tsx";
 import SelectedChannelStore from "../../stores/SelectedChannelStore.tsx";
 
+const require = globalThis.__r;
+
 require = fn;
 const EMPTY_STRING_SNOWFLAKE_ID = fn(1074).EMPTY_STRING_SNOWFLAKE_ID;
 const ChannelFlags = fn(1964).ChannelFlags;

@@ -16,6 +16,11 @@ export default function restoreEventRecurrence(arg0, guild_id, id, event_excepti
     }
     return result;
   }
-  const obj = { scheduled_start_time, scheduled_end_time, is_canceled: false };
-  result = obj.updateGuildEventException(obj, guild_id, id, event_exception_id);
+  result = GuildScheduledEventsActionCreatorsDefault.updateGuildEventException(
+    { scheduled_start_time, scheduled_end_time, is_canceled: false },
+    guild_id,
+    id,
+    event_exception_id,
+  );
+  const obj2 = { scheduled_start_time, scheduled_end_time, is_canceled: false };
 }

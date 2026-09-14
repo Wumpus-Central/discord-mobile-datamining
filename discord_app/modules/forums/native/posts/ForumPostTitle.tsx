@@ -4,17 +4,16 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const jsx = fn(21).jsx;
-fn(4636);
-let PlatformUtils = fn(1151);
-let createStyles = null;
+const createStyles = fn(4636);
+const PlatformUtils = fn(1364);
+let obj3 = null;
 if (PlatformUtils.isIOS()) {
-  createStyles = { lineHeight: 22 };
+  obj3 = { lineHeight: 22 };
 }
-createStyles = { title: null };
-PlatformUtils = { marginBottom: 6 };
-createStyles = Object.assign(createStyles);
-createStyles.title = PlatformUtils;
-let closure_3 = createStyles.createStyles(createStyles);
+const obj4 = { title: null };
+const merged = Object.assign(obj3);
+obj4.title = { marginBottom: 6 };
+let closure_3 = createStyles.createStyles(obj4);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/forums/native/posts/ForumPostTitle.tsx");
 

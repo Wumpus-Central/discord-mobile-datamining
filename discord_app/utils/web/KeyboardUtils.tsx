@@ -1,10 +1,10 @@
 // discord_app/utils/web/KeyboardUtils.tsx
 import PlatformUtils2 from "../PlatformUtils.tsx";
 import GlobalUtils from "../GlobalUtils.tsx";
-import keyCodeDefault from "../../../_runtime/14152_keyCode.js";
+import keyCodeDefault from "../../../_runtime/14153_keyCode.js";
 import KeyboardLayoutMapUtils from "KeyboardLayoutMapUtils.tsx";
 import _slicedToArray from "../../../_runtime/metro/00032__.js";
-import apply from "../../../_runtime/metro/00012__.js";
+import apply_mod from "../../../_runtime/metro/00012__.js";
 
 require = fn;
 function getCodeToKeyLanguageCorrection(keyCode, key, arg2) {
@@ -15,8 +15,7 @@ function getCodeToKeyLanguageCorrection(keyCode, key, arg2) {
   }
   const BACKTICK_CODES = KeyboardLayoutMapUtils.BACKTICK_CODES;
   if (BACKTICK_CODES.has(keyCode)) {
-    let tmp2Result = KeyboardLayoutMapUtils;
-    const layoutMap = tmp2Result.getLayoutMap();
+    const layoutMap = KeyboardLayoutMapUtils.getLayoutMap();
     value = layoutMap.get("Backquote");
     if (key === value) {
       let str7 = "plus";
@@ -25,9 +24,8 @@ function getCodeToKeyLanguageCorrection(keyCode, key, arg2) {
       }
       return str7;
     } else {
-      tmp2Result = KeyboardLayoutMapUtils;
       const obj = { key: value, code: "Backquote", keyCode };
-      const exactKeyboardEventMatchFromAny = tmp2Result.getExactKeyboardEventMatchFromAny(obj);
+      const exactKeyboardEventMatchFromAny = KeyboardLayoutMapUtils.getExactKeyboardEventMatchFromAny(obj);
       if ("\\" === key) {
         let tmp6 = key;
         return tmp6;
@@ -45,7 +43,9 @@ function getCodeToKeyLanguageCorrection(keyCode, key, arg2) {
         str5 = key;
       }
       tmp6 = str5;
+      const tmp2Result2 = KeyboardLayoutMapUtils;
     }
+    const tmp2Result = KeyboardLayoutMapUtils;
   } else {
     return key;
   }
@@ -106,7 +106,7 @@ function keyToCode(codeToKeyLanguageCorrection) {
                 parsed = tmp39(str13);
                 const str8 = codeToKeyLanguageCorrection.replace(/^(right|left) (shift|meta|ctrl|alt)$/, "$2");
               } else if (tmp19 === true) {
-                parsed = PlatformUtils[codeToKeyLanguageCorrection];
+                parsed = obj5[codeToKeyLanguageCorrection];
               } else if ((KEYBOARD_KEY === constants.MOUSE_BUTTON) === true) {
                 const _parseInt2 = parseInt;
                 parsed = parseInt(codeToKeyLanguageCorrection.replace("MOUSE", ""), 10);
@@ -142,13 +142,13 @@ function keyToCode(codeToKeyLanguageCorrection) {
       if (obj4.isLinux()) {
         let MACOS2 = KeyboardEnvs.LINUX;
       } else {
-        let tmp8Result = PlatformUtils2;
         if (tmp8Result.isMac()) {
           MACOS2 = KeyboardEnvs.MACOS;
         } else {
-          tmp8Result = PlatformUtils2;
-          MACOS2 = tmp8Result.isWindows() ? KeyboardEnvs.WINDOWS : KeyboardEnvs.BROWSER;
+          MACOS2 = PlatformUtils2.isWindows() ? KeyboardEnvs.WINDOWS : KeyboardEnvs.BROWSER;
+          const tmp8Result2 = PlatformUtils2;
         }
+        tmp8Result = PlatformUtils2;
       }
       obj4 = PlatformUtils2;
     }
@@ -156,13 +156,13 @@ function keyToCode(codeToKeyLanguageCorrection) {
     if (obj.isLinux()) {
       let MACOS = KeyboardEnvs.LINUX;
     } else {
-      let tmpResult = PlatformUtils2;
       if (tmpResult.isMac()) {
         MACOS = KeyboardEnvs.MACOS;
       } else {
-        tmpResult = PlatformUtils2;
-        MACOS = tmpResult.isWindows() ? KeyboardEnvs.WINDOWS : KeyboardEnvs.BROWSER;
+        MACOS = PlatformUtils2.isWindows() ? KeyboardEnvs.WINDOWS : KeyboardEnvs.BROWSER;
+        const tmpResult2 = PlatformUtils2;
       }
+      tmpResult = PlatformUtils2;
     }
     obj = PlatformUtils2;
   }
@@ -196,47 +196,51 @@ const KeyboardConstants = fn(7607);
 const MacosKeyToCode = KeyboardConstants.MacosKeyToCode;
 const WindowsKeyToCode = KeyboardConstants.WindowsKeyToCode;
 const KeyboardEnvs = KeyboardConstants.KeyboardEnvs;
-fn(1150);
-let PlatformUtils = LinuxKeyToCode;
+let PlatformUtils = fn(1363);
+let obj5 = LinuxKeyToCode;
 if (!PlatformUtils.isLinux()) {
   let tmp3 = MacosKeyToCode;
   if (!obj3.isMac()) {
-    PlatformUtils = WindowsKeyToCode;
+    let obj2 = WindowsKeyToCode;
     if (!obj4.isWindows()) {
-      PlatformUtils = {};
+      obj2 = {};
     }
-    tmp3 = PlatformUtils;
-    obj4 = fn(1150);
+    tmp3 = obj2;
+    obj4 = fn(1363);
   }
-  PlatformUtils = tmp3;
-  obj3 = fn(1150);
+  obj5 = tmp3;
+  obj3 = fn(1363);
 }
+let apply = apply_mod;
 const invertResult = apply.invert(LinuxKeyToCode);
 invertResult[223] = "`";
 const frozen = Object.freeze(invertResult);
+let apply = apply_mod;
 let closure_12 = Object.freeze(apply.invert(MacosKeyToCode));
+let apply = apply_mod;
 const invertResult1 = apply.invert(WindowsKeyToCode);
 invertResult1[223] = "`";
 const frozen1 = Object.freeze(invertResult1);
-if (PlatformUtils == null) {
-  PlatformUtils = {};
+let apply = apply_mod;
+if (obj5 == null) {
+  obj5 = {};
 }
-apply.invert(PlatformUtils);
-PlatformUtils = fn(1150);
+const invertResult2 = apply.invert(obj5);
+PlatformUtils = fn(1363);
 if (!PlatformUtils.isMac()) {
-  PlatformUtils[223] = "`";
+  invertResult2[223] = "`";
 }
 function getEnv() {
   if (obj.isLinux()) {
     let MACOS = KeyboardEnvs.LINUX;
   } else {
-    let tmpResult = PlatformUtils2;
     if (tmpResult.isMac()) {
       MACOS = KeyboardEnvs.MACOS;
     } else {
-      tmpResult = PlatformUtils2;
-      MACOS = tmpResult.isWindows() ? KeyboardEnvs.WINDOWS : KeyboardEnvs.BROWSER;
+      MACOS = PlatformUtils2.isWindows() ? KeyboardEnvs.WINDOWS : KeyboardEnvs.BROWSER;
+      const tmpResult2 = PlatformUtils2;
     }
+    tmpResult = PlatformUtils2;
   }
   return MACOS;
 }
@@ -352,20 +356,20 @@ function toKeyNames(arr) {
       if (obj4.isLinux()) {
         let MACOS = constants2.LINUX;
       } else {
-        let tmp25Result = PlatformUtils2;
         if (tmp25Result.isMac()) {
           MACOS = constants2.MACOS;
         } else {
-          tmp25Result = PlatformUtils2;
-          MACOS = tmp25Result.isWindows() ? constants2.WINDOWS : constants2.BROWSER;
+          MACOS = PlatformUtils2.isWindows() ? constants2.WINDOWS : constants2.BROWSER;
+          const tmp25Result2 = PlatformUtils2;
         }
+        tmp25Result = PlatformUtils2;
       }
       obj4 = PlatformUtils2;
     }
   });
   return mapped.filter(GlobalUtils.isNotNullish);
 }
-PlatformUtils = Object.freeze(PlatformUtils);
+const frozen2 = Object.freeze(invertResult2);
 let items = [
   ["META", "\u2318"],
   ["CMD", "\u2318"],
@@ -401,20 +405,20 @@ export const getRawCodeFromKey = function getRawCodeFromKey(arg0) {
     if (arg1 === KeyboardEnvs.BROWSER) {
       let tmp10 = keyCodeDefault(arg0);
     } else {
-      tmp10 = PlatformUtils[arg0];
+      tmp10 = obj5[arg0];
     }
     return tmp10;
   } else {
     if (obj.isLinux()) {
       let MACOS = KeyboardEnvs.LINUX;
     } else {
-      let tmpResult = PlatformUtils2;
       if (tmpResult.isMac()) {
         MACOS = KeyboardEnvs.MACOS;
       } else {
-        tmpResult = PlatformUtils2;
-        MACOS = tmpResult.isWindows() ? KeyboardEnvs.WINDOWS : KeyboardEnvs.BROWSER;
+        MACOS = PlatformUtils2.isWindows() ? KeyboardEnvs.WINDOWS : KeyboardEnvs.BROWSER;
+        const tmpResult2 = PlatformUtils2;
       }
+      tmpResult = PlatformUtils2;
     }
     obj = PlatformUtils2;
   }
@@ -458,8 +462,7 @@ export const toBrowserEvents = function toBrowserEvents(arr) {
       if (null != tmp4) {
         let tmp8 = getCodeToKeyLanguageCorrection(tmp2, tmp4, tmp3);
       } else {
-        let obj = KeyboardLayoutMapUtils;
-        const keyboardEventShapeFromKeycode = obj.getKeyboardEventShapeFromKeycode(tmp2);
+        const keyboardEventShapeFromKeycode = KeyboardLayoutMapUtils.getKeyboardEventShapeFromKeycode(tmp2);
         tmp8 = null;
         if (null != keyboardEventShapeFromKeycode) {
           tmp8 = getCodeToKeyLanguageCorrection(
@@ -470,13 +473,13 @@ export const toBrowserEvents = function toBrowserEvents(arr) {
         }
       }
       closure_0 = tmp8;
-      obj = {};
+      const obj2 = {};
       const merged = Object.assign(closure_0);
       if (null == tmp8) {
-        obj = {};
-        const merged1 = Object.assign(obj);
-        obj.combo = combo;
-        arr = arr.push(obj);
+        const obj3 = {};
+        const merged1 = Object.assign(obj2);
+        obj3.combo = combo;
+        arr = arr.push(obj3);
         return arr;
       } else {
         if (re20.test(tmp8)) {
@@ -500,9 +503,9 @@ export const toBrowserEvents = function toBrowserEvents(arr) {
         }
         const tmp16 = keyToCode(tmp8, KeyboardEnvs.BROWSER);
         if (null != tmp16) {
-          obj.keyCode = tmp16;
+          obj2.keyCode = tmp16;
         }
-        arr = arr.push(obj);
+        arr.push(obj2);
         return arr;
       }
       tmp11 = closure_0;
@@ -522,7 +525,7 @@ export const toCombo = function toCombo(shortcut) {
     const parts = shortcut
       .replace(/numpad plus/i, "")
       .replace(/NUMPAD \+/i, "numpad plus")
-      .replace(/mod/i, KEYBOARD_KEY(14154).modKey)
+      .replace(/mod/i, KEYBOARD_KEY(14155).modKey)
       .split("+");
     const mapped = parts.map((item) => item.trim().replace("plus", "+"));
     return mapped.reduce((arr, item) => {
@@ -553,15 +556,15 @@ export const toCombo = function toCombo(shortcut) {
     if (obj.isLinux()) {
       let MACOS = KeyboardEnvs.LINUX;
     } else {
-      let tmpResult = tmp(1150);
       if (tmpResult.isMac()) {
         MACOS = KeyboardEnvs.MACOS;
       } else {
-        tmpResult = tmp(1150);
-        MACOS = tmpResult.isWindows() ? KeyboardEnvs.WINDOWS : KeyboardEnvs.BROWSER;
+        MACOS = tmp(1363).isWindows() ? KeyboardEnvs.WINDOWS : KeyboardEnvs.BROWSER;
+        const tmpResult2 = tmp(1363);
       }
+      tmpResult = tmp(1363);
     }
-    obj = KEYBOARD_KEY(1150);
+    obj = KEYBOARD_KEY(1363);
   }
 };
 export { toKeyNames };
@@ -640,13 +643,13 @@ export const toString = function toString(arr) {
       if (obj4.isLinux()) {
         let MACOS = constants2.LINUX;
       } else {
-        let tmp25Result = PlatformUtils2;
         if (tmp25Result.isMac()) {
           MACOS = constants2.MACOS;
         } else {
-          tmp25Result = PlatformUtils2;
-          MACOS = tmp25Result.isWindows() ? constants2.WINDOWS : constants2.BROWSER;
+          MACOS = PlatformUtils2.isWindows() ? constants2.WINDOWS : constants2.BROWSER;
+          const tmp25Result2 = PlatformUtils2;
         }
+        tmp25Result = PlatformUtils2;
       }
       obj4 = PlatformUtils2;
     }

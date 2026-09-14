@@ -31,9 +31,8 @@ export const SoundPlayer = SoundPlayerDefault;
 export const MainViewTooltipActionSheetsV2 = MainViewTooltipActionSheetsV2Default;
 export const ToastContainer = ToastContainerDefault;
 export const PictureInPictureGlobalContainer = function PictureInPictureGlobalContainer() {
-  let obj = initialize;
   const items = [ChannelStore, RTCConnectionStore];
-  const stateFromStores = obj.useStateFromStores(items, () => channel.getChannel(channelId.getChannelId()));
+  const stateFromStores = initialize.useStateFromStores(items, () => channel.getChannel(channelId.getChannelId()));
   const hasPipParticipant = usePipVideoOrStream.useHasPipParticipant({ isActivityViewFocused: false });
   const isModalOpen = NavigationRouteUtils.useIsModalOpen();
   VoicePanelUtils;
@@ -45,7 +44,7 @@ export const PictureInPictureGlobalContainer = function PictureInPictureGlobalCo
       if (!isModalOpen) {
         tmp7 = null;
         if (!tmp6) {
-          obj = { channel: stateFromStores };
+          const obj4 = { channel: stateFromStores };
           tmp7 = jsx(PictureInPictureGlobalDefault, { channel: stateFromStores });
         }
       }

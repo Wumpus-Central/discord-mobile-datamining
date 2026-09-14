@@ -4,6 +4,8 @@ import PermissionStore from "../../stores/PermissionStore.tsx";
 import UserGuildSettingsStore from "../../stores/UserGuildSettingsStore.tsx";
 import UserStore from "../../stores/UserStore.tsx";
 
+const require = globalThis.__r;
+
 const require = fn;
 const Constants = fn(1074);
 ({ GuildFeatures: metroRequire, Permissions: closure_7 } = Constants);

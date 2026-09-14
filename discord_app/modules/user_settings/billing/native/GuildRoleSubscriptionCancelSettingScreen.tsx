@@ -11,9 +11,8 @@ const result = size.fileFinishedImporting(
 );
 
 export default function GuildRoleSubscriptionCancelSettingScreen() {
-  let obj = useSettingNavigationRoute;
-  const settingNavigationRoute = obj.useSettingNavigationRoute();
-  obj = {};
+  const settingNavigationRoute = useSettingNavigationRoute.useSettingNavigationRoute();
+  const obj2 = {};
   const merged = Object.assign(settingNavigationRoute.params);
   return jsx(UserSettingsGuildRoleSubscriptionsCancelDefault, {});
 }

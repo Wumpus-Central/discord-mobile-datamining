@@ -19,7 +19,7 @@ export const usePremiumDiscountOffer = function usePremiumDiscountOffer() {
     isFetchingProducts: IAPStore.isFetchingProducts(),
     offerIds: IAPStore.getOfferIds(),
   })).offerIds;
-  let values = Object.values(ProductIds.DiscountIdToProductOfferId[React4]);
+  const values = Object.values(ProductIds.DiscountIdToProductOfferId[React4]);
   let tmp5 = null;
   if (0 !== values.length) {
     let tmp6 = null;
@@ -29,11 +29,11 @@ export const usePremiumDiscountOffer = function usePremiumDiscountOffer() {
     tmp5 = tmp6;
   }
   tmp4 = useDiscountOfferDefault(React4);
-  values = Object.values(ProductIds.DiscountIdToProductOfferId[hasOwnProperty]);
+  const values2 = Object.values(ProductIds.DiscountIdToProductOfferId[hasOwnProperty]);
   let tmp8 = null;
-  if (0 !== values.length) {
+  if (0 !== values2.length) {
     let tmp9 = null;
-    if (values.every((item) => offerIds.has(item))) {
+    if (values2.every((item) => offerIds.has(item))) {
       tmp9 = tmp7;
     }
     tmp8 = tmp9;

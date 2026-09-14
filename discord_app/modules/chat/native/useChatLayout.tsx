@@ -21,11 +21,9 @@ export default function useChatLayout() {
   );
 }
 export const getChatLayout = function getChatLayout() {
-  let obj = useWindowSizeClassifier;
-  const windowSizeClassifier = obj.getWindowSizeClassifier();
-  obj = {
+  const windowSizeClassifier = useWindowSizeClassifier.getWindowSizeClassifier();
+  return {
     isChatBesideChannelList: windowSizeClassifier >= useWindowSizeClassifier.WindowSizeClassifier.LARGE,
     isChatLockedOpen: windowSizeClassifier >= useWindowSizeClassifier.WindowSizeClassifier.XLARGE,
   };
-  return obj;
 };

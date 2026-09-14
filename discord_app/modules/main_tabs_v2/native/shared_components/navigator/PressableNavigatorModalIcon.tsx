@@ -19,7 +19,7 @@ export default function PressableNavigatorModalIcon(onPress) {
   if (str === undefined) {
     str = "back";
   }
-  let obj = { source: importDefault(tmp6 ? 7970 : 7974), onPress: goBack, accessibilityLabel: null };
+  const obj = { source: importDefault("back" === str ? 7970 : 7974), onPress: goBack, accessibilityLabel: null };
   const intl = util.intl;
   const string = intl.string;
   const t = util.t;
@@ -28,22 +28,14 @@ export default function PressableNavigatorModalIcon(onPress) {
   } else {
     stringResult = string(t.cpT0Cq);
   }
-  obj = {
-    isModal: true,
-    children: jsx(HeaderShared.HeaderIconButton, {
-      source: importDefault(tmp6 ? 7970 : 7974),
-      onPress: goBack,
-      accessibilityLabel: null,
-    }),
-    accessibilityLabel: stringResult,
-  };
-  return jsx(PressableNavigatorButtonWrapperDefault, {
-    isModal: true,
-    children: jsx(HeaderShared.HeaderIconButton, {
-      source: importDefault(tmp6 ? 7970 : 7974),
-      onPress: goBack,
-      accessibilityLabel: null,
-    }),
-    accessibilityLabel: stringResult,
-  });
+  obj.accessibilityLabel = stringResult;
+  return (
+    <tmp4 isModal>
+      {jsx(HeaderShared.HeaderIconButton, {
+        source: importDefault("back" === str ? 7970 : 7974),
+        onPress: goBack,
+        accessibilityLabel: null,
+      })}
+    </tmp4>
+  );
 }

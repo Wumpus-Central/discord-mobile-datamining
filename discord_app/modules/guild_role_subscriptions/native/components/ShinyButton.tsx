@@ -2,21 +2,27 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import native from "../../../../design/void/native.tsx";
 import BaseTextButton from "../../../../design/components/Button/native/BaseTextButton.native.tsx";
-import _modDef10430 from "../../../../../_runtime/metro/10430__.js";
+import _modDef10431 from "../../../../../_runtime/metro/10431__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const jsx = fn(21).jsx;
-fn(4636);
-let createStyles = { container: null, sparkleIcon: null, disabled: null };
-createStyles = {
+const createStyles = fn(4636);
+let obj2 = {
+  container: {
+    borderRadius: nativeDefault.radii.sm,
+    backgroundColor: nativeDefault.colors.CONTROL_PRIMARY_BACKGROUND_DEFAULT,
+  },
+  sparkleIcon: null,
+  disabled: null,
+};
+const obj3 = {
   borderRadius: nativeDefault.radii.sm,
   backgroundColor: nativeDefault.colors.CONTROL_PRIMARY_BACKGROUND_DEFAULT,
 };
-createStyles.container = createStyles;
-createStyles.sparkleIcon = { marginRight: 4, tintColor: nativeDefault.colors.WHITE };
-createStyles.disabled = { opacity: 0.5 };
-let closure_4 = createStyles.createStyles(createStyles);
+obj2.sparkleIcon = { marginRight: 4, tintColor: nativeDefault.colors.WHITE };
+obj2.disabled = { opacity: 0.5 };
+let closure_4 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/components/ShinyButton.tsx");
 
@@ -27,19 +33,19 @@ export default function ShinyButton(style) {
   }
   const merged = Object.assign(style, Object.assign({ style: 0, loading: 0, disabled: 0, onPress: 0 }));
   const tmp2 = closure_4();
-  let obj = { onPress, pillStyle: null, loading, disabled, icon: null };
+  const obj = { onPress, pillStyle: null, loading, disabled, icon: null };
   const items = [tmp2.container, style.style];
   obj.pillStyle = items;
   let tmp3Result;
   if (!loading) {
-    obj = { size: native.Icon.Sizes.REFRESH_SMALL_16, source: _modDef10430, style: null };
+    const obj2 = { size: native.Icon.Sizes.REFRESH_SMALL_16, source: _modDef10431, style: null };
     const items1 = [tmp2.sparkleIcon];
     if (disabled) {
       disabled = tmp2.disabled;
     }
     items1[1] = disabled;
-    obj.style = items1;
-    tmp3Result = jsx(native.Icon, { size: native.Icon.Sizes.REFRESH_SMALL_16, source: _modDef10430, style: null });
+    obj2.style = items1;
+    tmp3Result = jsx(native.Icon, { size: native.Icon.Sizes.REFRESH_SMALL_16, source: _modDef10431, style: null });
   }
   obj.icon = tmp3Result;
   const merged1 = Object.assign(merged);

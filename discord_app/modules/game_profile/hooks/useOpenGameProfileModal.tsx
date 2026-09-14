@@ -2,6 +2,8 @@
 import GameProfileActionCreatorsDefault from "../GameProfileActionCreators.native.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
+const require = globalThis.__r;
+
 const result = size.fileFinishedImporting("modules/game_profile/hooks/useOpenGameProfileModal.tsx");
 
 export default function useOpenGameProfileModal(arg0) {
@@ -24,11 +26,11 @@ export default function useOpenGameProfileModal(arg0) {
         if (stopPropagation != null) {
           stopPropagation.preventDefault();
         }
-        const obj = {};
+        const obj2 = {};
         const merged = Object.assign(closure_0);
-        obj.gameId = gameId;
-        obj.gameProfileModalChecks = gameProfileModalChecks;
-        obj.openGameProfileModal(obj);
+        obj2.gameId = gameId;
+        obj2.gameProfileModalChecks = gameProfileModalChecks;
+        GameProfileActionCreatorsDefault.openGameProfileModal(obj2);
         if (onOpened != null) {
           onOpened();
         }

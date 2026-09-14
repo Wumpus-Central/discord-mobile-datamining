@@ -13,8 +13,7 @@ export default noop.memo((searchContext) => {
   searchContext = searchContext.searchContext;
   let validOrderedFilterTokens;
   ({ onOpen, onClose } = searchContext);
-  let obj = searchContext(validOrderedFilterTokens[3]);
-  validOrderedFilterTokens = obj.useValidOrderedFilterTokens(searchContext);
+  validOrderedFilterTokens = searchContext(validOrderedFilterTokens[3]).useValidOrderedFilterTokens(searchContext);
   const items = [searchContext, validOrderedFilterTokens];
   const memo = noop.useMemo(
     () =>
@@ -36,7 +35,7 @@ export default noop.memo((searchContext) => {
       }),
     items,
   );
-  obj = {
+  let obj2 = {
     items: memo,
     align: "below",
     title: null,
@@ -46,10 +45,10 @@ export default noop.memo((searchContext) => {
     children: null,
   };
   let intl = searchContext(validOrderedFilterTokens[6]).intl;
-  obj.title = intl.string(searchContext(validOrderedFilterTokens[6]).t.oYEmhB);
-  obj.onOpen = onOpen;
-  obj.onClose = onClose;
-  obj.children = function children(ref) {
+  obj2.title = intl.string(searchContext(validOrderedFilterTokens[6]).t.oYEmhB);
+  obj2.onOpen = onOpen;
+  obj2.onClose = onClose;
+  obj2.children = function children(ref) {
     const merged = Object.assign(ref, Object.assign({ ref: 0 }));
     const obj = { ref: ref.ref };
     const merged1 = Object.assign(merged);

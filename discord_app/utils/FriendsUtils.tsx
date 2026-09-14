@@ -12,7 +12,7 @@ function validateDiscordTag(substr) {
     if (!substr.includes("#")) {
       const tmp4 = _slicedToArray(substr.split("#"), 2);
       let str2 = tmp4[1];
-      const obj = {
+      const obj2 = {
         reason: "Invalid Username",
         query: substr,
         discrim_len: null,
@@ -24,16 +24,17 @@ function validateDiscordTag(substr) {
       if (str2 == null) {
         str2 = "";
       }
-      obj.discrim_len = str2.length;
-      obj.username_len = tmp4[0].length;
-      let tmp5Result = ValidationUtilsDefault;
-      obj.is_email_like = tmp5Result.isEmail(substr);
-      tmp5Result = ValidationUtilsDefault;
-      obj.is_invite_like = tmp5Result.isInvite(substr);
-      obj.is_num_only = re6.test(substr);
-      obj.track(constants2.FRIEND_REQUEST_FAILED, obj);
+      obj2.discrim_len = str2.length;
+      obj2.username_len = tmp4[0].length;
+      const obj = AnalyticsUtilsDefault;
+      obj2.is_email_like = ValidationUtilsDefault.isEmail(substr);
+      const tmp5Result = ValidationUtilsDefault;
+      obj2.is_invite_like = ValidationUtilsDefault.isInvite(substr);
+      obj2.is_num_only = re6.test(substr);
+      obj.track(constants2.FRIEND_REQUEST_FAILED, obj2);
       const intl = util.intl;
       stringResult = intl.string(util.t.paDJBM);
+      const tmp5Result2 = ValidationUtilsDefault;
     } else {
       stringResult = null;
     }

@@ -7,22 +7,29 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-fn(4636);
-let createStyles = { wrapper: null, progress: null };
-createStyles = {
+const createStyles = fn(4636);
+const obj2 = {
+  wrapper: {
+    position: "relative",
+    backgroundColor: fn(12604).PROGRESS_BACKGROUND_COLOR,
+    borderRadius: nativeDefault.radii.xs,
+    height: 8,
+  },
+  progress: null,
+};
+let obj3 = {
   position: "relative",
-  backgroundColor: fn(12603).PROGRESS_BACKGROUND_COLOR,
+  backgroundColor: fn(12604).PROGRESS_BACKGROUND_COLOR,
   borderRadius: nativeDefault.radii.xs,
   height: 8,
 };
-createStyles.wrapper = createStyles;
-createStyles.progress = {
+obj2.progress = {
   position: "absolute",
   height: 8,
   backgroundColor: nativeDefault.colors.BACKGROUND_BRAND,
   borderRadius: nativeDefault.radii.xs,
 };
-let closure_6 = createStyles.createStyles(createStyles);
+let closure_6 = createStyles.createStyles(obj2);
 const __initData = {
   code: 'function GuildProgressBarTsx1(){const{percentWidth}=this.__closure;return{width:percentWidth.get()+"%"};}',
 };
@@ -32,25 +39,25 @@ let result = size.fileFinishedImporting("modules/guild_progress/native/component
 export default function GuildProgressBar(percent) {
   percent = percent.percent;
   const tmp = closure_6();
-  let obj = percent(4373);
-  const sharedValue = obj.useSharedValue(0);
+  const sharedValue = percent(4373).useSharedValue(0);
   const items = [percent, sharedValue];
   const effect = noop.useEffect(() => {
     const result = sharedValue.set(timing.withTiming(percent, timingPresets.timingSlow));
   }, items);
+  const obj = percent(4373);
   const fn = function h() {
     return { width: "" + sharedValue.get() + "%" };
   };
   fn.__closure = { percentWidth: sharedValue };
   fn.__workletHash = 14122394499539;
   fn.__initData = __initData;
-  obj = { style: null, children: null };
+  const obj3 = { style: null, children: null };
   const items1 = [tmp.wrapper, percent.style];
-  obj.style = items1;
+  obj3.style = items1;
   const animatedStyle = percent(4373).useAnimatedStyle(fn);
-  obj = { style: null };
+  const obj4 = { style: null };
   const items2 = [tmp.progress, animatedStyle];
-  obj.style = items2;
-  obj.children = jsx(sharedValue(4373).View, { style: null });
-  return <View style={null} />;
+  obj4.style = items2;
+  obj3.children = jsx(sharedValue(4373).View, { style: null });
+  return <View style={null}>{null}</View>;
 }

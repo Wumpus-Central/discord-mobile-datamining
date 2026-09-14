@@ -8,13 +8,12 @@ import MessageActivityInviteCoverImageStore from "../MessageActivityInviteCoverI
 require = fn;
 function _getPresenceActivityInviteCoverImageURL(messageId) {
   ({ presenceActivity, application } = messageId);
-  let obj = { messageId: messageId.messageId };
-  const coverImageURL = MessageActivityInviteCoverImageStore.getCoverImageURL(obj);
+  const coverImageURL = MessageActivityInviteCoverImageStore.getCoverImageURL({ messageId: messageId.messageId });
   if (null === coverImageURL) {
     return { cachedImageURL: null, imageURL: null };
   } else {
     const result = 600 * getDevicePixelRatioDefault();
-    obj = { cachedImageURL: coverImageURL, imageURL: null };
+    const obj3 = { cachedImageURL: coverImageURL, imageURL: null };
     let invite_cover_image;
     if (presenceActivity != null) {
       const assets = presenceActivity.assets;
@@ -39,9 +38,10 @@ function _getPresenceActivityInviteCoverImageURL(messageId) {
     if (assetImage == null) {
       assetImage = null;
     }
-    obj.imageURL = assetImage;
-    return obj;
+    obj3.imageURL = assetImage;
+    return obj3;
   }
+  const obj = { messageId: messageId.messageId };
 }
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/activities/utils/usePresenceActivityInviteCoverImageURL.tsx");
@@ -63,20 +63,23 @@ export const usePresenceActivityInviteCoverImageURL = (messageId) => {
   const items2 = [cachedImageURL, imageURL, messageId];
   const effect = imageURL.useEffect(() => {
     if (cachedImageURL !== imageURL) {
-      const obj = { messageId, coverImageURL: tmp };
-      obj.setCoverImageURL(obj);
+      const obj2 = { messageId, coverImageURL: tmp };
+      MessageActivityInviteCoverImageActionCreatorsAll.setCoverImageURL(obj2);
     }
   }, items2);
   return imageURL;
 };
 export const getPresenceActivityInviteCoverImageURL = function getPresenceActivityInviteCoverImageURL(messageId) {
   messageId = messageId.messageId;
-  let obj = { messageId, presenceActivity: messageId.presenceActivity, application: messageId.application };
-  const tmp = _getPresenceActivityInviteCoverImageURL(obj);
+  const tmp = _getPresenceActivityInviteCoverImageURL({
+    messageId,
+    presenceActivity: messageId.presenceActivity,
+    application: messageId.application,
+  });
   const imageURL = tmp.imageURL;
   if (tmp.cachedImageURL !== imageURL) {
-    obj = { messageId, coverImageURL: imageURL };
-    MessageActivityInviteCoverImageActionCreatorsAll.setCoverImageURL(obj);
+    const obj3 = { messageId, coverImageURL: imageURL };
+    MessageActivityInviteCoverImageActionCreatorsAll.setCoverImageURL(obj3);
   }
   return imageURL;
 };

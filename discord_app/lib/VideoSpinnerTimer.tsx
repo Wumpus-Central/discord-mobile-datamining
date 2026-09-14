@@ -36,8 +36,7 @@ prototype["trackSpinnerDuration"] = function trackSpinnerDuration(videoSpinnerCo
     }
     const sum = num + 1;
     const result = map.set(arg2, sum);
-    let obj = TimeUtils;
-    const diff = obj.now() - self.spinnerVisibleStart;
+    const diff = TimeUtils.now() - self.spinnerVisibleStart;
     self.spinnerVisibleStart = null;
     if (diff < 0) {
       const logger = self.logger;
@@ -76,7 +75,7 @@ prototype["trackSpinnerDuration"] = function trackSpinnerDuration(videoSpinnerCo
           }
         }
       }
-      obj = {
+      const obj3 = {
         video_spinner_context: videoSpinnerContext,
         duration_video_spinner_visible_ms: diff,
         rtc_connection_id: RTCConnectionStore.getRTCConnectionId(),
@@ -90,7 +89,7 @@ prototype["trackSpinnerDuration"] = function trackSpinnerDuration(videoSpinnerCo
         effective_connection_speed: NetworkStore.getEffectiveConnectionSpeed(),
         service_provider: NetworkStore.getServiceProvider(),
       };
-      AnalyticsUtilsDefault.track(AnalyticEvents.VIDEO_SPINNER_SHOWN_V2, obj);
+      AnalyticsUtilsDefault.track(AnalyticEvents.VIDEO_SPINNER_SHOWN_V2, obj3);
     }
   }
 };

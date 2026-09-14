@@ -54,17 +54,17 @@ const items = [
       obj = {};
     }
     const Storage2 = Storage4.Storage;
-    value = Storage2.get("UserSettingsStore");
-    if (value == null) {
-      value = {};
+    value2 = Storage2.get("UserSettingsStore");
+    if (value2 == null) {
+      value2 = {};
     }
     const Storage3 = Storage4.Storage;
     Storage3.remove("UserSettingsSync");
-    obj = {};
+    const obj2 = {};
     if (false === obj[UserSettingsSections.TEXT]) {
-      const obj1 = {
+      const obj3 = {
         shouldSync: false,
-        settings: _modDef12.pick(value, [
+        settings: _modDef12.pick(value2, [
           "inlineAttachmentMedia",
           "inlineEmbedMedia",
           "renderEmbeds",
@@ -75,16 +75,16 @@ const items = [
           "defaultReactionEmoji",
         ]),
       };
-      obj.text = obj1;
+      obj2.text = obj3;
     }
     if (false === obj[UserSettingsSections.APPEARANCE]) {
-      const obj2 = {
+      const obj4 = {
         shouldSync: false,
-        settings: _modDef12.pick(value, ["theme", "clientThemeSettings", "developerMode"]),
+        settings: _modDef12.pick(value2, ["theme", "clientThemeSettings", "developerMode"]),
       };
-      obj.appearance = obj2;
+      obj2.appearance = obj4;
     }
-    return obj;
+    return obj2;
   },
   (appearance) => {
     let theme;
@@ -98,15 +98,15 @@ const items = [
       }
     }
     if ("amoled" === theme) {
-      let obj = {};
+      const obj = {};
       const merged = Object.assign(appearance);
-      obj = {};
+      const obj2 = {};
       const merged1 = Object.assign(appearance.appearance);
-      obj = {};
+      const obj3 = {};
       const merged2 = Object.assign(appearance.appearance.settings);
-      obj.theme = "midnight";
-      obj.settings = obj;
-      obj.appearance = obj;
+      obj3.theme = "midnight";
+      obj2.settings = obj3;
+      obj.appearance = obj2;
       return obj;
     }
   },
@@ -123,11 +123,11 @@ const selectivelySyncedUserSettingsStore = new SelectivelySyncedUserSettingsStor
           closure_4[key10008] = obj;
         }
         let tmp7 = closure_4[key10008];
-        shouldSync = undefined;
+        let shouldSync1;
         if (tmp7 != null) {
-          shouldSync = tmp7.shouldSync;
+          shouldSync1 = tmp7.shouldSync;
         }
-        if (false !== shouldSync) {
+        if (false !== shouldSync1) {
           continue;
         } else {
           let keys = Object.keys();

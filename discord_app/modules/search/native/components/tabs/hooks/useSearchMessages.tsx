@@ -3,6 +3,8 @@ import SearchUtils from "../../../../SearchUtils.tsx";
 import SearchMessageStore from "../../../../SearchMessageStore.tsx";
 import SearchQueryStore from "../../../stores/SearchQueryStore.tsx";
 
+const require = globalThis.__r;
+
 require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/search/native/components/tabs/hooks/useSearchMessages.tsx");

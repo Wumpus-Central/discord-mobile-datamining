@@ -6,7 +6,7 @@ import CollectiblePreviewSession from "../CollectiblePreviewSession.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const RootNavigatorScreen = fn(11218).RootNavigatorScreen;
+const RootNavigatorScreen = fn(11219).RootNavigatorScreen;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/collectibles/native/useHandleUseNow.tsx");
 
@@ -32,17 +32,15 @@ export const useHandleUseNow = function useHandleUseNow(analyticsLocations) {
     }
   }, items);
   const callback1 = onSuccess.useCallback(() => {
-    onSuccess(stageCollectibleChangeForEditProfile[5]);
-    const obj = { key: "collectible shop apply error", content: null };
+    const obj2 = { key: "collectible shop apply error", content: null };
     const intl = product(stageCollectibleChangeForEditProfile[6]).intl;
-    obj.content = intl.string(product(stageCollectibleChangeForEditProfile[6]).t.CKsXk3);
-    obj.open(obj);
+    obj2.content = intl.string(product(stageCollectibleChangeForEditProfile[6]).t.CKsXk3);
+    onSuccess(stageCollectibleChangeForEditProfile[5]).open(obj2);
   }, []);
-  let obj = require("hooks/useHandleUseNow");
-  let handleUseNow = obj.useHandleUseNow({ product, onSuccess, onError: callback1 });
-  handleUseNow = handleUseNow.handleUseNow;
+  const handleUseNow1 = require("hooks/useHandleUseNow").useHandleUseNow({ product, onSuccess, onError: callback1 });
+  const handleUseNow = handleUseNow1.handleUseNow;
   const items1 = [stageCollectibleChangeForEditProfile, product, onSuccess, handleUseNow];
-  ({ isApplying, canUseNow } = handleUseNow);
+  ({ isApplying, canUseNow } = handleUseNow1);
   const callback2 = onSuccess.useCallback(() => {
     if (null != stageCollectibleChangeForEditProfile) {
       const result = CollectiblePreviewSession.commitCollectiblePreview();
@@ -56,9 +54,9 @@ export const useHandleUseNow = function useHandleUseNow(analyticsLocations) {
     analyticsLocations: analyticsLocations.analyticsLocations,
   });
   closure_5 = tmp5;
-  obj = { handleUseNow: callback2, isApplying, canUseNow, handleEditProfile: null };
+  let obj2 = { handleUseNow: callback2, isApplying, canUseNow, handleEditProfile: null };
   const items2 = [tmp5, onSuccess];
-  obj.handleEditProfile = onSuccess.useCallback(() => {
+  obj2.handleEditProfile = onSuccess.useCallback(() => {
     closure_5();
     if (null == onSuccess) {
       ActionSheetActionCreatorsDefault.hideAllActionSheets();
@@ -67,5 +65,5 @@ export const useHandleUseNow = function useHandleUseNow(analyticsLocations) {
       tmp2();
     }
   }, items2);
-  return obj;
+  return obj2;
 };

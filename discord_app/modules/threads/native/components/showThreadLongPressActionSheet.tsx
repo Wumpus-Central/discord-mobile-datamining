@@ -6,11 +6,14 @@ import size from "../../../../../_runtime/metro/00002__.js";
 const result = size.fileFinishedImporting("modules/threads/native/components/showThreadLongPressActionSheet.tsx");
 
 export default function showThreadLongPressActionSheet(channelId) {
-  const obj = {
-    channelId,
-    onClose() {
-      ActionSheetActionCreatorsDefault.hideActionSheet("ThreadLongPressActionSheet");
+  ActionSheetActionCreatorsDefault.openLazy(
+    asyncRequireImpl(16212, dependencyMap.paths),
+    "ThreadLongPressActionSheet",
+    {
+      channelId,
+      onClose() {
+        ActionSheetActionCreatorsDefault.hideActionSheet("ThreadLongPressActionSheet");
+      },
     },
-  };
-  obj.openLazy(asyncRequireImpl(16210, dependencyMap.paths), "ThreadLongPressActionSheet", obj);
+  );
 }

@@ -35,6 +35,7 @@ const prototype = KvCacheVersion.prototype;
 prototype["okAsync"] = function okAsync(databaseResult) {
   closure_0 = databaseResult;
   return (async () => {
+    tmp5(tmp2[3]);
     await tmp5(tmp2[3]).cache(tmp5).get(closure_1_7);
     closure_128_0 = value;
     let tmp8 = null;
@@ -55,25 +56,74 @@ prototype["canUseGuildVersions"] = function canUseGuildVersions() {
 };
 prototype["doesDatabaseVersionMatchJsConstants"] = function doesDatabaseVersionMatchJsConstants() {
   return (async () => {
-    closure_1 = tmp5;
-    closure_0 = tmp2;
-    const forceResyncVersionResult = DatabaseDaosDefault.forceResyncVersion();
-    if (null == forceResyncVersionResult) {
-      return false;
+    if (c3 === 2) {
+      c3 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp4 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        const obj2 = { value, done: true };
+        return obj2;
+      } else {
+        return { value: "HermesInternal", done: null };
+      }
+    } else {
+      try {
+        c3 = 2;
+        if (0 === c2) {
+          if (arg0 === 1) {
+            c3 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c3 = 3;
+            const obj4 = { value, done: true };
+            return obj4;
+          } else {
+            closure_1 = tmp5;
+            closure_0 = tmp2;
+            closure_128_0 = undefined;
+            closure_128_1 = undefined;
+            const forceResyncVersionResult = DatabaseDaosDefault.forceResyncVersion();
+            if (null == forceResyncVersionResult) {
+              c3 = 3;
+              return { value: false, done: true };
+            } else {
+              c2 = 1;
+              c3 = 1;
+              const obj5 = { value: forceResyncVersionResult.get(hasOwnProperty), done: false };
+              return obj5;
+            }
+          }
+        } else if (arg0 === 1) {
+          c3 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c3 = 3;
+          const obj6 = { value, done: true };
+          return obj6;
+        } else {
+          closure_128_0 = value;
+          version = undefined;
+          if (closure_128_0 != null) {
+            version = closure_128_0.version;
+          }
+          closure_128_1 = version;
+          let flag = closure_128_1 === closure_129_4;
+          if (!flag) {
+            const _HermesInternal = HermesInternal;
+            closure_129_8.info("KVStore version mismatch: " + closure_128_1 + " vs " + tmp10);
+            flag = false;
+          }
+          c3 = 3;
+          const obj = { value: flag, done: true };
+          return obj;
+        }
+      } catch (tmp19) {
+        c3 = tmp;
+        throw tmp19;
+      }
     }
-    await forceResyncVersionResult.get(closure_2_5);
-    closure_128_0 = value;
-    if (closure_128_0 != null) {
-      version = closure_128_0.version;
-    }
-    closure_128_1 = version;
-    let flag = closure_128_1 === closure_129_4;
-    if (!flag) {
-      const _HermesInternal = HermesInternal;
-      closure_129_8.info("KVStore version mismatch: " + closure_128_1 + " vs " + tmp10);
-      flag = false;
-    }
-    return flag;
   })();
 };
 prototype["handleClear"] = function handleClear() {
@@ -84,22 +134,20 @@ prototype["handleConnectionOpen"] = function handleConnectionOpen() {
 };
 prototype["handleWrite"] = function handleWrite(database) {
   this.hasSuccessfullyConnected = true;
-  let obj = DatabaseDaosDefault;
-  obj.cacheTransaction(database).put(React3, "\u{1F44B}");
-  const cacheTransactionResult = obj.cacheTransaction(database);
+  DatabaseDaosDefault.cacheTransaction(database).put(React3, "\u{1F44B}");
+  const cacheTransactionResult = DatabaseDaosDefault.cacheTransaction(database);
   DatabaseDaosDefault.cacheTransaction(database).put(React5, timestampProducer);
   const cacheTransactionResult1 = DatabaseDaosDefault.cacheTransaction(database);
   const result = DatabaseDaosDefault.forceResyncVersionTransaction(database);
-  obj = { version };
-  result.put(hasOwnProperty, obj);
+  result.put(hasOwnProperty, { version });
 };
 prototype["resetInMemoryState"] = function resetInMemoryState() {
   this.hasSuccessfullyConnected = false;
 };
-let size = Object.create(KvCacheVersion.prototype);
-let closure_129_0 = size;
-size.hasSuccessfullyConnected = false;
-size.actions = {
+let obj2 = Object.create(KvCacheVersion.prototype);
+let closure_129_0 = obj2;
+obj2.hasSuccessfullyConnected = false;
+obj2.actions = {
   BACKGROUND_SYNC(arg0, database) {
     return obj.handleWrite(database);
   },
@@ -110,7 +158,7 @@ size.actions = {
     return obj.handleWrite(database);
   },
 };
-size = fn(2);
+const size = fn(2);
 let result = size.fileFinishedImporting("modules/app_database/modules/KvCacheVersion.tsx");
 
-export default size;
+export default obj2;

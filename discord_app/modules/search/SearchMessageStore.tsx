@@ -13,7 +13,6 @@ function handleReaction(optimistic) {
   let colors = optimistic;
   ({ messageId, emoji } = optimistic);
   ({ type, userId, channelId } = optimistic);
-  let obj = ReactionUtils;
   if (obj.shouldApplyReaction(optimistic)) {
     const id = AuthenticationStore.getId();
     const basicChannel = ChannelStore.getBasicChannel(channelId);
@@ -28,12 +27,12 @@ function handleReaction(optimistic) {
       const reactionType = colors.reactionType;
       if ("MESSAGE_REACTION_ADD" === type) {
         addReaction = value.addReaction;
-        obj = { colors: null, reactionType: null, isDMChannel: null };
+        const obj2 = { colors: null, reactionType: null, isDMChannel: null };
         colors = colors.colors;
-        obj.colors = colors;
-        obj.reactionType = reactionType;
-        obj.isDMChannel = addReaction === DM;
-        let addReactionResult = addReaction(emoji, tmp8, obj);
+        obj2.colors = colors;
+        obj2.reactionType = reactionType;
+        obj2.isDMChannel = addReaction === DM;
+        let addReactionResult = addReaction(emoji, tmp8, obj2);
         const tmp10 = addReaction === DM;
       } else {
         addReactionResult = value.removeReaction(emoji, tmp8, reactionType);
@@ -44,6 +43,7 @@ function handleReaction(optimistic) {
   } else {
     return false;
   }
+  obj = ReactionUtils;
 }
 const ChannelTypes = fn(1074).ChannelTypes;
 class SearchState {

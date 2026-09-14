@@ -4,15 +4,15 @@ import util from "../../../intl/index.native.tsx";
 import user from "../../../../discord_common/js/packages/protos/discord_protos/users/v1/user.tsx";
 import _modDef3592 from "../intl/CustomTypingIndicator.messages.js";
 import CustomTypingIndicatorDynamicAssetDefault from "CustomTypingIndicatorDynamicAsset.tsx";
-import _modDef12103 from "../../../../discord_assets/assets/mana/asset-library/generated/EmojiDuckSweatExample-1x.png.js";
-import _modDef12104 from "../../../../discord_assets/assets/mana/asset-library/generated/EmojiEzExample-1x.png.js";
+import _modDef12104 from "../../../../discord_assets/assets/mana/asset-library/generated/EmojiDuckSweatExample-1x.png.js";
+import _modDef12105 from "../../../../discord_assets/assets/mana/asset-library/generated/EmojiEzExample-1x.png.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 function CoachmarkPreview() {
   const tmp = closure_8();
-  let obj = { style: tmp.coachmarkImageContainer, children: null };
-  obj = {
+  const obj = { style: tmp.coachmarkImageContainer, children: null };
+  const obj2 = {
     name: "Locke",
     suggestion: user.TypingSuggestion.YAPPING,
     emojiSize: 16,
@@ -23,8 +23,8 @@ function CoachmarkPreview() {
     textStyle: tmp.typingText,
     emojiSource: null,
   };
-  const items = [_modDef12103, _modDef12104, _modDef12103];
-  obj.emojiSource = items;
+  const items = [_modDef12104, _modDef12105, _modDef12104];
+  obj2.emojiSource = items;
   obj.children = jsx(CustomTypingIndicatorDynamicAssetDefault, {
     name: "Locke",
     suggestion: user.TypingSuggestion.YAPPING,
@@ -36,30 +36,18 @@ function CoachmarkPreview() {
     textStyle: tmp.typingText,
     emojiSource: null,
   });
-  return (
-    <View
-      name="Locke"
-      suggestion={user.TypingSuggestion.YAPPING}
-      emojiSize={16}
-      spacing={8}
-      emojiGap={4}
-      textVariant="text-xs/medium"
-      textColor="text-subtle"
-      textStyle={tmp.typingText}
-      emojiSource={null}
-    />
-  );
+  return <View style={tmp.coachmarkImageContainer}>{null}</View>;
 }
 const View = fn(17).View;
 const UserSettingsSections = fn(1074).UserSettingsSections;
 const ContentDismissActionType = fn(1954).ContentDismissActionType;
 const jsx = fn(21).jsx;
-fn(4636);
-let createStyles = { coachmarkImageContainer: null, typingText: null };
-createStyles = { alignItems: "center", justifyContent: "center", paddingTop: nativeDefault.space.PX_10 };
-createStyles.coachmarkImageContainer = createStyles;
-createStyles.typingText = { maxWidth: 100 };
-let closure_8 = createStyles.createStyles(createStyles);
+const createStyles = fn(4636);
+let obj2 = {
+  coachmarkImageContainer: { alignItems: "center", justifyContent: "center", paddingTop: nativeDefault.space.PX_10 },
+  typingText: { maxWidth: 100 },
+};
+let closure_8 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting(
   "modules/custom_typing_indicator/native/CustomTypingIndicatorProfileCoachmark.tsx",
@@ -83,7 +71,7 @@ export default function CustomTypingIndicatorProfileCoachmark(visible) {
   }, items);
   const items1 = [stringResult, stringResult1, visible, str, onDismiss, markAsDismissed];
   const memo = noop.useMemo(() => {
-    let obj = {
+    const obj = {
       title,
       description: stringResult1,
       visible,
@@ -107,11 +95,12 @@ export default function CustomTypingIndicatorProfileCoachmark(visible) {
     const intl = util.intl;
     obj.buttonLabel = intl.string(_modDef3592["6NP6ic"]);
     obj.onButtonPress = function onButtonPress() {
-      visible(str[9]);
-      const obj = { screen: callback.TYPING_INDICATOR, params: { source: "profile_coachmark" } };
-      obj.openUserSettings(obj, () => {
-        closure_1_1(constants.TAKE_ACTION);
-      });
+      visible(str[9]).openUserSettings(
+        { screen: callback.TYPING_INDICATOR, params: { source: "profile_coachmark" } },
+        () => {
+          closure_1_1(constants.TAKE_ACTION);
+        },
+      );
     };
     return obj;
   }, items1);

@@ -21,36 +21,37 @@ import DismissibleContentFrameworkStore from "../../../../dismissible_content/Di
 
 require = fn;
 function DismissableContentsEmpty() {
-  let obj = { style: closure_10().emptyState, children: null };
-  obj = { style: null, variant: "heading-lg/semibold", children: "No results found" };
-  obj = { marginBottom: nativeDefault.space.PX_16 };
-  obj.style = obj;
-  const items = [React5(Text_Text.Text, obj), React5(SearchEmpty.SearchEmpty, {})];
+  const obj = { style: closure_10().emptyState, children: null };
+  const obj2 = {
+    style: { marginBottom: nativeDefault.space.PX_16 },
+    variant: "heading-lg/semibold",
+    children: "No results found",
+  };
+  const items = [React5(Text_Text.Text, obj2), React5(SearchEmpty.SearchEmpty, {})];
   obj.children = items;
   return React6(View, obj);
 }
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
-fn(4636);
+const createStyles = fn(4636);
 let obj = {
-  container: null,
+  container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 },
   contentContainer: null,
   headerSection: null,
   search: null,
   sectionHeader: null,
   emptyState: null,
 };
-obj = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 };
-obj.container = obj;
-const createStyles = { padding: nativeDefault.space.PX_16 };
-obj.contentContainer = createStyles;
+let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 };
+obj.contentContainer = { padding: nativeDefault.space.PX_16 };
+let obj4 = { padding: nativeDefault.space.PX_16 };
 obj.headerSection = { paddingBottom: nativeDefault.space.PX_16 };
-let obj2 = { paddingBottom: nativeDefault.space.PX_16 };
+let obj5 = { paddingBottom: nativeDefault.space.PX_16 };
 obj.search = { paddingBottom: nativeDefault.space.PX_8 };
-let obj3 = { paddingBottom: nativeDefault.space.PX_8 };
+let obj6 = { paddingBottom: nativeDefault.space.PX_8 };
 obj.sectionHeader = { paddingBottom: nativeDefault.space.PX_8 };
-let obj4 = { paddingBottom: nativeDefault.space.PX_8 };
+let obj7 = { paddingBottom: nativeDefault.space.PX_8 };
 obj.emptyState = { marginVertical: nativeDefault.space.PX_32, justifyContent: "center", alignItems: "center" };
 let closure_10 = createStyles.createStyles(obj);
 let closure_11 = noop.memo((content) => {
@@ -64,9 +65,9 @@ let closure_11 = noop.memo((content) => {
 let closure_12 = noop.memo((arg0) => {
   ({ dailyCapOverridden, newUserMinAgeRequiredOverridden, initialSearchQuery, onSearchChange } = arg0);
   const tmp = closure_10();
-  let obj = { children: null };
-  obj = { style: tmp.headerSection, children: null };
-  obj = { title: "Global Overrides", hasIcons: false, children: null };
+  const obj = { children: null };
+  const obj2 = { style: tmp.headerSection, children: null };
+  const obj3 = { title: "Global Overrides", hasIcons: false, children: null };
   const items = [
     React5(TableSwitchRow.TableSwitchRow, {
       onValueChange: DismissibleContentFrameworkActionCreators.overrideDismissibleContentFramework,
@@ -75,7 +76,7 @@ let closure_12 = noop.memo((arg0) => {
       subLabel: "When enabled, bypass the daily limit of dismissible content shown",
     }),
   ];
-  const obj1 = {
+  const obj4 = {
     onValueChange: DismissibleContentFrameworkActionCreators.overrideDismissibleContentFramework,
     value: dailyCapOverridden,
     label: "Daily limit",
@@ -87,12 +88,12 @@ let closure_12 = noop.memo((arg0) => {
     label: "New user account minimum age",
     subLabel: "When enabled, bypass the minimum age requirement for new user accounts",
   });
-  obj.children = items;
-  obj.children = React6(TableRowGroup.TableRowGroup, obj);
-  const items1 = [React5(View, obj), , ,];
-  const obj3 = { style: tmp.headerSection, children: null };
-  const obj4 = { title: "Bulk actions", hasIcons: true, children: null };
-  const obj2 = {
+  obj3.children = items;
+  obj2.children = React6(TableRowGroup.TableRowGroup, obj3);
+  const items1 = [React5(View, obj2), , ,];
+  const obj6 = { style: tmp.headerSection, children: null };
+  const obj7 = { title: "Bulk actions", hasIcons: true, children: null };
+  const obj5 = {
     onValueChange: DismissibleContentFrameworkActionCreators.overrideNewUserMinAgeRequired,
     value: newUserMinAgeRequiredOverridden,
     label: "New user account minimum age",
@@ -107,7 +108,7 @@ let closure_12 = noop.memo((arg0) => {
     }),
     ,
   ];
-  const obj5 = {
+  const obj8 = {
     label: "Clear all dismissed dismissible contents",
     onPress: UserSettingsProtoActionCreators.clearDismissedContents,
     icon: React5(TrashIcon.TrashIcon, {}),
@@ -119,7 +120,7 @@ let closure_12 = noop.memo((arg0) => {
     icon: React5(TrashIcon.TrashIcon, {}),
     trailing: React5(TableRowArrow.TableRowArrow, {}),
   });
-  const obj6 = {
+  const obj9 = {
     label: "Clear all guild dismissed dismissible contents",
     onPress: UserSettingsProtoActionCreators.clearGuildDismissedContents,
     icon: React5(TrashIcon.TrashIcon, {}),
@@ -131,10 +132,10 @@ let closure_12 = noop.memo((arg0) => {
     icon: React5(DoubleCheckmarkIcon.DoubleCheckmarkIcon, {}),
     trailing: React5(TableRowArrow.TableRowArrow, {}),
   });
-  obj4.children = items2;
-  obj3.children = React6(TableRowGroup.TableRowGroup, obj4);
-  items1[1] = React5(View, obj3);
-  const obj7 = {
+  obj7.children = items2;
+  obj6.children = React6(TableRowGroup.TableRowGroup, obj7);
+  items1[1] = React5(View, obj6);
+  const obj10 = {
     label: "Dismiss all dismissible contents",
     onPress: UserSettingsProtoActionCreators.checkAllDismissedContents,
     icon: React5(DoubleCheckmarkIcon.DoubleCheckmarkIcon, {}),
@@ -166,9 +167,9 @@ export default function DevToolsDismissableContentsScreen() {
   const tmp = callback1();
   const ref = initialSearchQuery.useRef(null);
   importDefault = initialSearchQuery.useRef(0);
-  let obj = ref(10061);
   const tmp2 = useSafeAreaInsetsDefault();
-  [dependencyMap, tmp5] = _slicedToArray(obj.useLocalStorageState("devtools-dc-search", ""), 2);
+  let obj = ref(10061);
+  [dependencyMap, tmp5] = ref(10061).useLocalStorageState("devtools-dc-search", "");
   _slicedToArray = tmp5;
   initialSearchQuery = _slicedToArray(
     initialSearchQuery.useState(() => {
@@ -180,43 +181,38 @@ export default function DevToolsDismissableContentsScreen() {
     }),
     1,
   )[0];
-  const tmp7 = _slicedToArray(
-    initialSearchQuery.useState(() => {
-      let str = dependencyMap;
-      if (dependencyMap == null) {
-        str = "";
+  [first1, closure_6] = initialSearchQuery.useState(() => {
+    let str = dependencyMap;
+    if (dependencyMap == null) {
+      str = "";
+    }
+    const items = [];
+    for (const key10013 in dismissible_content.DismissibleContent) {
+      let isNaNResult = tmp;
+      if (!tmp) {
+        let tmp4 = fuzzysearchDefault;
+        let formatted = str.toLowerCase();
+        isNaNResult = tmp4(formatted, key10013.toLowerCase());
       }
-      const items = [];
-      for (const key10013 in dismissible_content.DismissibleContent) {
-        let isNaNResult = tmp;
-        if (!tmp) {
-          let tmp4 = fuzzysearchDefault;
-          let formatted = str.toLowerCase();
-          isNaNResult = tmp4(formatted, key10013.toLowerCase());
-        }
-        if (isNaNResult) {
-          let _isNaN = isNaN;
-          let _Number = Number;
-          isNaNResult = isNaN(Number(key10013));
-        }
-        if (!isNaNResult) {
-          continue;
-        } else {
-          let arr = items.push(key10013);
-          continue;
-        }
+      if (isNaNResult) {
+        let _isNaN = isNaN;
+        let _Number = Number;
+        isNaNResult = isNaN(Number(key10013));
+      }
+      if (!isNaNResult) {
+        continue;
+      } else {
+        let arr = items.push(key10013);
         continue;
       }
-      const sorted = items.sort((localeCompare, arg1) => localeCompare.localeCompare(arg1));
-      return items;
-    }),
-    2,
-  );
-  const first1 = tmp7[0];
-  closure_6 = tmp7[1];
-  let obj1 = ref(504);
+      continue;
+    }
+    const sorted = items.sort((localeCompare, arg1) => localeCompare.localeCompare(arg1));
+    return items;
+  });
+  let tmp4 = _slicedToArray(ref(10061).useLocalStorageState("devtools-dc-search", ""), 2);
   let items = [closure_6];
-  const stateFromStoresObject = obj1.useStateFromStoresObject(items, () => ({
+  const stateFromStoresObject = ref(504).useStateFromStoresObject(items, () => ({
     dailyCapOverridden: closure_6.dailyCapOverridden,
     newUserMinAgeRequiredOverridden: closure_6.newUserMinAgeRequiredOverridden,
   }));
@@ -275,12 +271,12 @@ export default function DevToolsDismissableContentsScreen() {
       }),
     items2,
   );
-  obj = { style: tmp.container, children: null };
+  const obj3 = { style: tmp.container, children: null };
   const callback3 = initialSearchQuery.useCallback((content) => {
     const index = content.index;
     return React5(closure_11, { content: content.item, start: 0 === index, end: index === first1.length - 1 });
   }, items3);
-  obj = {
+  const obj4 = {
     ref,
     data: first1,
     contentContainerStyle: null,
@@ -295,16 +291,16 @@ export default function DevToolsDismissableContentsScreen() {
     scrollEventThrottle: 16,
   };
   const items4 = [tmp.contentContainer];
-  obj1 = { paddingBottom: tmp2.bottom + nativeDefault.space.PX_16 };
-  items4[1] = obj1;
-  obj.contentContainerStyle = items4;
-  obj.ListHeaderComponent = memo;
-  obj.ListEmptyComponent = DismissableContentsEmpty;
-  obj.keyExtractor = function keyExtractor(arg0) {
+  const obj2 = ref(504);
+  items4[1] = { paddingBottom: tmp2.bottom + nativeDefault.space.PX_16 };
+  obj4.contentContainerStyle = items4;
+  obj4.ListHeaderComponent = memo;
+  obj4.ListEmptyComponent = DismissableContentsEmpty;
+  obj4.keyExtractor = function keyExtractor(arg0) {
     return arg0;
   };
-  obj.renderItem = callback3;
-  obj.onScroll = callback2;
-  obj.children = dailyCapOverridden(ref(9003).FlashList, obj);
-  return dailyCapOverridden(first1, obj);
+  obj4.renderItem = callback3;
+  obj4.onScroll = callback2;
+  obj3.children = dailyCapOverridden(ref(9003).FlashList, obj4);
+  return dailyCapOverridden(first1, obj3);
 }

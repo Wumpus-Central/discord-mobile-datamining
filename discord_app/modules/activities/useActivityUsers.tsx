@@ -2,6 +2,8 @@
 import UserStore from "../../stores/UserStore.tsx";
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore.tsx";
 
+const require = globalThis.__r;
+
 const require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/activities/useActivityUsers.tsx");

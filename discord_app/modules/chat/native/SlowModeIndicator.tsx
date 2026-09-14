@@ -10,10 +10,9 @@ require = fn;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 const createStyles = fn(4636);
-let obj = { container: { alignItems: "center", flexDirection: "row" }, icon: null };
-obj = { marginLeft: nativeDefault.space.PX_4 };
-obj.icon = obj;
+let obj = { container: { alignItems: "center", flexDirection: "row" }, icon: { marginLeft: nativeDefault.space.PX_4 } };
 let closure_7 = createStyles.createStyles(obj);
+let obj3 = { marginLeft: nativeDefault.space.PX_4 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/chat/native/SlowModeIndicator.tsx");
 
@@ -23,11 +22,11 @@ export default noop.memo(function SlowModeIndicator(channel) {
   const slowmodeType = channel.slowmodeType;
   let canBypassSlowmode;
   const tmp = closure_7();
-  let obj = channel(slowmodeType[5]);
   const items = [canBypassSlowmode];
-  const stateFromStores = obj.useStateFromStores(items, () =>
+  const stateFromStores = channel(slowmodeType[5]).useStateFromStores(items, () =>
     SlowmodeStore.getSlowmodeCooldownGuess(channel.id, slowmodeType),
   );
+  let obj = channel(slowmodeType[5]);
   canBypassSlowmode = channel(slowmodeType[6]).useCanBypassSlowmode(channel);
   const items1 = [hasTypingText, canBypassSlowmode, stateFromStores];
   const items2 = [channel.rateLimitPerUser];
@@ -41,14 +40,12 @@ export default noop.memo(function SlowModeIndicator(channel) {
     slowmodeIndicatorText = SlowmodeUtils.getSlowmodeIndicatorText(stateFromStores, canBypassSlowmode);
   }, items1);
   const callback = stateFromStores.useCallback(() => {
-    const obj = {
-      key: "CHANNEL_SLOWMODE_INFO",
-      IconComponent: TimerIcon.TimerIcon,
-      content: SlowmodeUtils.getSlowmodeDescription(channel.rateLimitPerUser),
-    };
-    obj.open(obj);
+    const obj2 = { key: "CHANNEL_SLOWMODE_INFO", IconComponent: TimerIcon.TimerIcon, content: null };
+    const obj = ToastActionCreatorsDefault;
+    obj2.content = SlowmodeUtils.getSlowmodeDescription(channel.rateLimitPerUser);
+    obj.open(obj2);
   }, items2);
-  obj = { onPress: callback, style: tmp.container, children: null };
+  const obj3 = { onPress: callback, style: tmp.container, children: null };
   const items3 = [
     closure_5(channel(slowmodeType[10]).Text, {
       lineClamp: 1,
@@ -57,9 +54,8 @@ export default noop.memo(function SlowModeIndicator(channel) {
       color: "interactive-text-default",
       children: memo,
     }),
+    closure_5(channel(slowmodeType[8]).TimerIcon, { style: tmp.icon, size: "xxs" }),
   ];
-  obj = { style: tmp.icon, size: "xxs" };
-  items3[1] = closure_5(channel(slowmodeType[8]).TimerIcon, obj);
-  obj.children = items3;
-  return closure_6(channel(slowmodeType[9]).PressableOpacity, obj);
+  obj3.children = items3;
+  return closure_6(channel(slowmodeType[9]).PressableOpacity, obj3);
 });

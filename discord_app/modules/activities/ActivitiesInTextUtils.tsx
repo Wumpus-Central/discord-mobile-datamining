@@ -3,6 +3,8 @@ import ChannelTypes from "../../../discord_common/js/shared/shared-constants/Cha
 import ChannelStore from "../../stores/ChannelStore.tsx";
 import PermissionStore from "../../stores/PermissionStore.tsx";
 
+const require = globalThis.__r;
+
 require = fn;
 function isActivityInTextSupportedForChannel(channel) {
   if (null == channel) {

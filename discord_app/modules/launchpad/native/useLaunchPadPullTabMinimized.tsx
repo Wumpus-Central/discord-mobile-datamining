@@ -4,11 +4,11 @@ import noop from "../../../../_runtime/metro/00019__.js";
 const require = fn;
 get_ActivityIndicator = fn(17);
 const DCDScrollTracker = get_ActivityIndicator.NativeModules.DCDScrollTracker;
-let tmp3;
+let tmp32;
 if (DCDScrollTracker) {
-  tmp3 = new tmp3(DCDScrollTracker);
+  tmp32 = new tmp3(DCDScrollTracker);
 }
-let closure_3 = tmp3;
+let closure_3 = tmp32;
 const __initData = {
   code: "function useLaunchPadPullTabMinimizedTsx1(){const{launchPadPullTabState,isVoicePanelOpen,launchPadSharedState,isMinimizedDuringScroll}=this.__closure;const isMinimized=(launchPadPullTabState.get().minimized||isVoicePanelOpen)&&launchPadSharedState.get()<=0;return isMinimized||isMinimizedDuringScroll.get();}",
 };

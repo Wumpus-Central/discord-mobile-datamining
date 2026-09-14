@@ -16,31 +16,31 @@ class CustomActivityLinkRecord {
     if (type == null) {
       type = null;
     }
-    obj = Object.create(new.target.prototype);
-    obj.type = type;
+    obj1 = Object.create(new.target.prototype);
+    obj1.type = type;
     ({ application_id: tmp3.applicationId, link_id: tmp3.linkId } = global);
     asset_id = undefined;
     if ("asset_id" in global) {
       asset_id = global.asset_id;
     }
-    obj.assetId = asset_id;
+    obj1.assetId = asset_id;
     asset_path = undefined;
     if ("asset_path" in global) {
       asset_path = global.asset_path;
     }
-    obj.assetPath = asset_path;
+    obj1.assetPath = asset_path;
     ({ title: tmp3.title, description: tmp3.description, custom_id: tmp3.customId } = global);
-    return obj;
+    return obj1;
   }
 }
 CustomActivityLinkRecord.prototype["getAssetURL"] = function getAssetURL() {
   const self = this;
   if (this.type === utils_CustomActivityLinkUtils.CustomLinkType.MANAGED) {
-    let tmpResult = ApplicationAssetUtils;
-    let assetImage = tmpResult.getAssetImage(self.applicationId, self.assetId, 512);
+    let assetImage = ApplicationAssetUtils.getAssetImage(self.applicationId, self.assetId, 512);
+    const tmpResult = ApplicationAssetUtils;
   } else if (self.type === utils_CustomActivityLinkUtils.CustomLinkType.QUICK) {
-    tmpResult = CustomActivityLinkUtils;
-    assetImage = tmpResult.getQuickLinkImage(self.assetPath);
+    assetImage = CustomActivityLinkUtils.getQuickLinkImage(self.assetPath);
+    const tmpResult2 = CustomActivityLinkUtils;
   }
   return assetImage;
 };

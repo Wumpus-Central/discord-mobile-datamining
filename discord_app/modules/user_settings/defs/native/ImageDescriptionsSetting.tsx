@@ -6,16 +6,15 @@ import UnsyncedUserSettingsStore from "../../UnsyncedUserSettingsStore.tsx";
 
 require = fn;
 function onImageDescriptionSettingValueChange(viewImageDescriptions) {
-  const obj = {
+  UserSettingsText.setImageDescriptions({
     videoUploadQuality: UnsyncedUserSettingsStore.videoUploadQuality,
     viewImageDescriptions,
     lowQualityImageMode: UnsyncedUserSettingsStore.lowQualityImageMode,
     dataSavingMode: UnsyncedUserSettingsStore.dataSavingMode,
-  };
-  obj.setImageDescriptions(obj);
+  });
 }
-fn(11601);
-let SettingBuilders = {
+const SettingBuilders = fn(11602);
+const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t["w8j+yW"]);
@@ -26,10 +25,9 @@ let SettingBuilders = {
     return ViewImageDescriptions.useSetting();
   },
   onValueChange: onImageDescriptionSettingValueChange,
-};
-SettingBuilders = SettingBuilders.createToggle(SettingBuilders);
+});
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/ImageDescriptionsSetting.tsx");
 
-export default SettingBuilders;
+export default toggle;
 export { onImageDescriptionSettingValueChange };

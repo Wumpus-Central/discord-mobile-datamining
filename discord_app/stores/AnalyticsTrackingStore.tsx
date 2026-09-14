@@ -6,8 +6,8 @@ import SessionHeartbeatScheduler from "../modules/analytics_sessions/SessionHear
 import AuthenticationStore from "AuthenticationStore.tsx";
 
 require = fn;
-fn(1250);
-let AnalyticsUtils = {
+const AnalyticsUtils = fn(1248);
+const obj2 = {
   dispatcher: DispatcherDefault,
   actionHandler: {
     CONNECTION_OPEN(arg0) {
@@ -52,9 +52,9 @@ let AnalyticsUtils = {
   sendUnloadRequest: fn(7576).sendUnloadRequest,
 };
 const items = [AuthenticationStore];
-AnalyticsUtils.waitFor = items;
-AnalyticsUtils = AnalyticsUtils.analyticsTrackingStoreMaker(AnalyticsUtils);
+obj2.waitFor = items;
+const result = AnalyticsUtils.analyticsTrackingStoreMaker(obj2);
 const size = fn(2);
 const result1 = size.fileFinishedImporting("stores/AnalyticsTrackingStore.tsx");
 
-export default AnalyticsUtils;
+export default result;

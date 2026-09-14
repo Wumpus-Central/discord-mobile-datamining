@@ -3,7 +3,7 @@ import _modDef12 from "../../_runtime/metro/00012__.js";
 import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../Dispatcher.tsx";
 import BigFlagUtilsAll from "../../discord_common/js/shared/utils/BigFlagUtils.tsx";
-import MurmurHashV3Default from "../../_runtime/01241_MurmurHashV3.js";
+import MurmurHashV3Default from "../../_runtime/01239_MurmurHashV3.js";
 import PermissionUtilsAll from "../utils/PermissionUtils.tsx";
 import ExperimentStore from "../modules/experiments/ExperimentStore.tsx";
 import ApplicationStreamingStore from "ApplicationStreamingStore.tsx";
@@ -35,16 +35,15 @@ function getMemberListId(arg0) {
         } else {
           if (tmpResult.has(deny, constants.VIEW_CHANNEL)) {
             const _HermesInternal = HermesInternal;
-            arr = arr.push("deny:" + id);
+            arr.push("deny:" + id);
           }
           tmpResult = BigFlagUtilsAll;
         }
         return arr;
       }, []);
       const sorted = reduced.sort();
-      let str = ",";
       let arr = _modDef12(channel.permissionOverwrites);
-      str = obj2.v3(sorted.join(",")).toString();
+      const str1 = obj2.v3(sorted.join(",")).toString();
       const str2 = obj2.v3(sorted.join(","));
     }
     obj = PermissionUtilsAll;
@@ -70,7 +69,7 @@ function handleLocalPresenceUpdate() {
 const Constants = fn(1074);
 ({ StatusTypes: closure_15, Permissions: closure_16 } = Constants);
 const everyone = "everyone";
-let MemberListRowTypes = { GROUP: "GROUP", MEMBER: "MEMBER", CONTENT_INVENTORY: "CONTENT_INVENTORY", CONTENT_INVENTORY_GROUP: "CONTENT_INVENTORY_GROUP", HIDDEN_CONTENT_INVENTORY: "HIDDEN_CONTENT_INVENTORY", CONTENT_INVENTORY_LEADERBOARD: "CONTENT_INVENTORY_LEADERBOARD" };
+const MemberListRowTypes = { GROUP: "GROUP", MEMBER: "MEMBER", CONTENT_INVENTORY: "CONTENT_INVENTORY", CONTENT_INVENTORY_GROUP: "CONTENT_INVENTORY_GROUP", HIDDEN_CONTENT_INVENTORY: "HIDDEN_CONTENT_INVENTORY", CONTENT_INVENTORY_LEADERBOARD: "CONTENT_INVENTORY_LEADERBOARD" };
 class MemberList {
   constructor(arg0, arg1) {
     merged = Object.assign({ rows: null, groups: null, members: null, version: 0 });
@@ -133,8 +132,8 @@ prototype["setGroups"] = function setGroups(groups) {
         return obj;
       }
     }
-    obj = { type: obj.GROUP, key: id, id };
-    Object.defineProperty(obj, "title", {
+    const obj2 = { type: obj.GROUP, key: id, id };
+    Object.defineProperty(obj2, "title", {
       get: () => {
         if (constants.ONLINE === id) {
           const intl3 = id(1114).intl;
@@ -149,8 +148,9 @@ prototype["setGroups"] = function setGroups(groups) {
       },
       set: undefined
     });
-    obj.count = bound;
-    obj.index = id;
+    obj2.count = bound;
+    obj2.index = id;
+    obj = obj2;
   });
   this.rows.length = _require;
 };
@@ -193,26 +193,20 @@ prototype["insert"] = function insert(arg0, arg1) {
           if (null != guild) {
             role = GuildRoleStore.getRole(guild.id, id);
           }
-          let obj = { type: null, key: null, id: null, title: null, count: null, index: "WireType" };
-          obj.type = obj.GROUP;
-          obj.key = id;
-          obj.id = id;
+          let obj2 = { type: obj.GROUP, key: id, id, title: null, count: null, index: "accessible" };
           let str = "";
           if (null != role) {
             str = role.name;
           }
-          obj.title = str;
-          obj.count = count;
+          obj2.title = str;
+          obj2.count = count;
         }
-        tmp15(arg0, 0, obj);
+        tmp15(arg0, 0, obj2);
       }
     }
-    obj = { type: null, key: null, id: null };
-    obj.type = obj.GROUP;
-    obj.key = id;
-    obj.id = id;
+    const obj3 = { type: obj.GROUP, key: id, id };
     id = "title";
-    Object.defineProperty(obj, "title", {
+    Object.defineProperty(obj3, "title", {
       get: () => {
           if (constants.ONLINE === id) {
             const intl3 = id(1114).intl;
@@ -227,8 +221,9 @@ prototype["insert"] = function insert(arg0, arg1) {
         },
       set: undefined
     });
-    obj.count = count;
-    obj.index = undefined;
+    obj3.count = count;
+    obj3.index = undefined;
+    obj2 = obj3;
   } else {
     if (null != member) {
       const guildId = self.guildId;
@@ -293,26 +288,20 @@ prototype["update"] = function update(arg0, arg1) {
           if (null != guild) {
             role = GuildRoleStore.getRole(guild.id, id2);
           }
-          obj = { type: null, key: null, id: null, title: null, count: null, index: "WireType" };
-          obj.type = obj.GROUP;
-          obj.key = id2;
-          obj.id = id2;
+          let obj2 = { type: obj.GROUP, key: id2, id: id2, title: null, count: null, index: "accessible" };
           let str = "";
           if (null != role) {
             str = role.name;
           }
-          obj.title = str;
-          obj.count = count;
+          obj2.title = str;
+          obj2.count = count;
         }
-        tmp19[arg0] = obj;
+        tmp19[arg0] = obj2;
       }
     }
-    obj = { type: null, key: null, id: null };
-    obj.type = obj.GROUP;
-    obj.key = id2;
-    obj.id = id2;
+    const obj3 = { type: obj.GROUP, key: id2, id: id2 };
     id2 = "title";
-    Object.defineProperty(obj, "title", {
+    Object.defineProperty(obj3, "title", {
       get: () => {
           if (constants.ONLINE === id) {
             const intl3 = id(1114).intl;
@@ -327,8 +316,9 @@ prototype["update"] = function update(arg0, arg1) {
         },
       set: undefined
     });
-    obj.count = count;
-    obj.index = undefined;
+    obj3.count = count;
+    obj3.index = undefined;
+    obj2 = obj3;
   } else {
     if (null != member) {
       const guildId = self.guildId;
@@ -464,12 +454,9 @@ prototype["rebuildGroup"] = function rebuildGroup(id) {
         self.version = self.version + 1;
       }
     }
-    obj = { type: null, key: null, id: null };
-    obj.type = obj.GROUP;
-    obj.key = str;
-    obj.id = str;
+    const obj2 = { type: obj.GROUP, key: str, id: str };
     str = "title";
-    Object.defineProperty(obj, "title", {
+    Object.defineProperty(obj2, "title", {
       get: () => {
           if (constants.ONLINE === id) {
             const intl3 = id(1114).intl;
@@ -484,8 +471,9 @@ prototype["rebuildGroup"] = function rebuildGroup(id) {
         },
       set: undefined
     });
-    obj.count = count;
-    obj.index = index;
+    obj2.count = count;
+    obj2.index = index;
+    obj = obj2;
   }
 };
 class MemberLists {
@@ -499,7 +487,7 @@ const prototype2 = MemberLists.prototype;
 prototype2["get"] = function get(guildId, listId) {
   let tmp = this._guildLists[guildId];
   if (null == tmp) {
-    let obj = {};
+    const obj = {};
     this._guildLists[guildId] = obj;
     tmp = obj;
   }
@@ -513,8 +501,8 @@ prototype2["get"] = function get(guildId, listId) {
       merged.guildId = guildId;
       merged.listId = listId;
       merged.updateOwnerId();
-      obj = { id: constants.UNKNOWN, count: 0 };
-      const items = [obj];
+      const obj2 = { id: constants.UNKNOWN, count: 0 };
+      const items = [obj2];
       merged.setGroups(items);
       tmp[listId] = merged;
       tmp2 = merged;
@@ -563,7 +551,7 @@ prototype3["getRows"] = function getRows(arg0, arg1) {
   return merged.get(arg0, getMemberListId(arg1)).rows;
 };
 ChannelMemberStore.displayName = "ChannelMemberStore";
-MemberListRowTypes = {
+const channelMemberStore = new ChannelMemberStore(DispatcherDefault, {
   CONNECTION_OPEN: handleConnectionOpen,
   OVERLAY_INITIALIZE: handleConnectionOpen,
   GUILD_MEMBER_LIST_UPDATE: function handleGuildMemberListUpdate(guildId) {
@@ -610,8 +598,7 @@ MemberListRowTypes = {
   CHANNEL_UPDATES: function handleChannelUpdates() {
     return true;
   }
-};
-const channelMemberStore = new ChannelMemberStore(DispatcherDefault, MemberListRowTypes);
+});
 const size = fn(2);
 const result = size.fileFinishedImporting("stores/ChannelMemberStore.tsx");
 

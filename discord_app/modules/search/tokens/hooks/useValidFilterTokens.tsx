@@ -2,6 +2,8 @@
 import SearchTokenStreamerModeUtils from "../SearchTokenStreamerModeUtils.tsx";
 import StreamerModeStore from "../../../../stores/StreamerModeStore.tsx";
 
+const require = globalThis.__r;
+
 require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/search/tokens/hooks/useValidFilterTokens.tsx");

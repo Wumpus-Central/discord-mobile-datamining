@@ -3,16 +3,16 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import openUserSettings from "../../../user_settings/core/native/openUserSettings.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
+const require = globalThis.__r;
+
 require = fn;
 const View = fn(17).View;
 const UserSettingsSections = fn(1074).UserSettingsSections;
 const ContentDismissActionType = fn(1954).ContentDismissActionType;
 const jsx = fn(21).jsx;
-fn(4636);
-let createStyles = { illustration: null };
-createStyles = { paddingTop: nativeDefault.space.PX_12 };
-createStyles.illustration = createStyles;
-let closure_8 = createStyles.createStyles(createStyles);
+const createStyles = fn(4636);
+let obj2 = { illustration: { paddingTop: nativeDefault.space.PX_12 } };
+let closure_8 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting(
   "modules/premium/file_upload/native/NitroFileUploadAnnouncementPromoSheet.tsx",
@@ -28,43 +28,36 @@ export default function NitroFileUploadAnnouncementPromoSheet(markAsDismissed) {
       markAsDismissed(arg0);
     }
   }, items);
-  let obj = markAsDismissed(callback[7]);
-  const unmountEffect = obj.useUnmountEffect(() => {
+  const tmp = closure_8();
+  const unmountEffect = markAsDismissed(callback[7]).useUnmountEffect(() => {
     callback(ContentDismissActionType.AUTO_DISMISS);
   });
   const items1 = [callback];
   const items2 = [callback];
   const callback1 = noop.useCallback(() => {
     callback(ContentDismissActionType.TAKE_ACTION);
-    const obj = { screen: UserSettingsSections.PREMIUM };
-    obj.openUserSettings(obj);
+    openUserSettings.openUserSettings({ screen: UserSettingsSections.PREMIUM });
   }, items1);
   const callback2 = noop.useCallback(() => {
     callback(ContentDismissActionType.USER_DISMISS);
   }, items2);
-  obj = { illustration: null, title: null, description: null, onDismiss: null, actions: null };
-  obj = {
-    style: closure_8().illustration,
-    children: jsx(markAsDismissed(callback[10]).FileUploadSpotIllustration, {
-      accessible: false,
-      resizeMode: "contain",
-    }),
-  };
-  obj.illustration = (
-    <View style={closure_8().illustration}>
+  const obj2 = { illustration: null, title: null, description: null, onDismiss: null, actions: null };
+  const obj = markAsDismissed(callback[7]);
+  obj2.illustration = (
+    <View style={tmp.illustration}>
       {jsx(markAsDismissed(callback[10]).FileUploadSpotIllustration, { accessible: false, resizeMode: "contain" })}
     </View>
   );
   const intl = markAsDismissed(callback[11]).intl;
-  obj.title = intl.string(require("../NitroFileUpload.messages.js").IyCdAU);
+  obj2.title = intl.string(require("../NitroFileUpload.messages.js").IyCdAU);
   const intl2 = markAsDismissed(callback[11]).intl;
-  obj.description = intl2.string(require("../NitroFileUpload.messages.js").LhfXZN);
-  obj.onDismiss = callback2;
-  const obj1 = { grow: true, size: "lg", variant: "primary", text: null, onPress: null };
+  obj2.description = intl2.string(require("../NitroFileUpload.messages.js").LhfXZN);
+  obj2.onDismiss = callback2;
+  const obj4 = { grow: true, size: "lg", variant: "primary", text: null, onPress: null };
   const intl3 = markAsDismissed(callback[11]).intl;
-  obj1.text = intl3.formatToPlainString(require("../NitroFileUpload.messages.js").Ocbn9P, { deepLinkToNitroHome: "" });
-  obj1.onPress = callback1;
-  obj.actions = jsx(markAsDismissed(callback[13]).Button, {
+  obj4.text = intl3.formatToPlainString(require("../NitroFileUpload.messages.js").Ocbn9P, { deepLinkToNitroHome: "" });
+  obj4.onPress = callback1;
+  obj2.actions = jsx(markAsDismissed(callback[13]).Button, {
     grow: true,
     size: "lg",
     variant: "primary",
@@ -72,10 +65,10 @@ export default function NitroFileUploadAnnouncementPromoSheet(markAsDismissed) {
     onPress: null,
   });
   return jsx(markAsDismissed(callback[9]).PromoSheet, {
-    style: closure_8().illustration,
-    children: jsx(markAsDismissed(callback[10]).FileUploadSpotIllustration, {
-      accessible: false,
-      resizeMode: "contain",
-    }),
+    illustration: null,
+    title: null,
+    description: null,
+    onDismiss: null,
+    actions: null,
   });
 }

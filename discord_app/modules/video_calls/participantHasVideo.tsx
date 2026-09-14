@@ -2,6 +2,8 @@
 import AuthenticationStore from "../../stores/AuthenticationStore.tsx";
 import MediaEngineStore from "../../stores/MediaEngineStore.tsx";
 
+const require = globalThis.__r;
+
 const require = fn;
 function canRenderParticipantVideo(participant) {
   let obj = MediaEngineStore;

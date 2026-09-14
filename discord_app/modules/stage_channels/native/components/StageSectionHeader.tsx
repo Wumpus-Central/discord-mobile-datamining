@@ -10,17 +10,16 @@ get_ActivityIndicator = fn(17);
 ({ TouchableOpacity: c3, View: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsxs: hasOwnProperty, jsx: metroRequire } = jsxProd);
-fn(4636);
-let createStyles = {
+const createStyles = fn(4636);
+let obj2 = {
   section: { height: 48, paddingHorizontal: 4 },
   children: { marginLeft: 12 },
   collapseButton: { marginLeft: "auto" },
-  collapseIcon: null,
+  collapseIcon: { tintColor: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY },
   audience: null,
 };
-createStyles = { tintColor: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
-createStyles.collapseIcon = createStyles;
-createStyles.audience = {
+let obj3 = { tintColor: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
+obj2.audience = {
   height: 48,
   flex: 1,
   flexDirection: "row",
@@ -30,7 +29,7 @@ createStyles.audience = {
   paddingHorizontal: 4,
   borderRadius: nativeDefault.radii.xs,
 };
-let closure_7 = createStyles.createStyles(createStyles);
+let closure_7 = createStyles.createStyles(obj2);
 const __initData = {
   code: "function StageSectionHeaderTsx1(){const{withTiming,collapsed}=this.__closure;return{transform:[{rotate:withTiming(collapsed?'180deg':'0deg',{duration:150})}]};}",
 };
@@ -42,49 +41,46 @@ export default function StageSectionHeader(collapsed) {
   const children = collapsed.children;
   ({ label, count, onToggleCollapse } = collapsed);
   const tmp = closure_7();
-  collapsed(4373);
   const fn = function y() {
-    let obj = timing;
     let str = "0deg";
     if (collapsed) {
       str = "180deg";
     }
-    obj = { transform: null };
-    obj = { rotate: obj.withTiming(str, { duration: 150 }) };
-    const items = [obj];
-    obj.transform = items;
-    return obj;
+    const obj2 = { transform: null };
+    const items = [{ rotate: timing.withTiming(str, { duration: 150 }) }];
+    obj2.transform = items;
+    return obj2;
   };
-  let obj = { withTiming: collapsed(4637).withTiming, collapsed };
-  fn.__closure = obj;
+  let obj = collapsed(4373);
+  const tmp2 = collapsed;
+  fn.__closure = { withTiming: collapsed(4637).withTiming, collapsed };
   fn.__workletHash = 13855092771739;
   fn.__initData = __initData;
-  obj = { style: tmp.section, children: null };
-  const obj1 = { style: tmp.audience, onPress: onToggleCollapse, children: null };
+  const obj3 = { style: tmp.section, children: null };
+  const obj4 = { style: tmp.audience, onPress: onToggleCollapse, children: null };
   const animatedStyle = obj.useAnimatedStyle(fn);
-  const obj2 = {
+  const obj5 = {
     variant: "text-md/semibold",
     color: "text-overlay-light",
     accessibilityRole: "header",
     children: null,
   };
   let items = [label, " \u2014 ", count];
-  obj2.children = items;
-  const items1 = [closure_5(collapsed(4632).Text, obj2), ,];
+  obj5.children = items;
+  const items1 = [closure_5(collapsed(4632).Text, obj5), ,];
   let tmp5Result = null != children;
   if (tmp5Result) {
-    const obj3 = { style: tmp.children, children };
-    tmp5Result = closure_6(closure_4, obj3);
+    const obj6 = { style: tmp.children, children };
+    tmp5Result = closure_6(closure_4, obj6);
   }
   items1[1] = tmp5Result;
-  const obj4 = { style: tmp.collapseButton, children: null };
-  const obj5 = {
-    style: animatedStyle,
-    children: closure_6(collapsed(1178).Icon, { source: _modDef7261, style: tmp.collapseIcon }),
-  };
-  obj4.children = closure_6(ReanimatedRexportDefault.View, obj5);
-  items1[2] = closure_6(closure_4, obj4);
-  obj1.children = items1;
-  obj.children = closure_5(closure_3, obj1);
-  return closure_6(closure_4, obj);
+  const obj7 = { style: tmp.collapseButton, children: null };
+  const obj8 = { style: animatedStyle, children: null };
+  let obj2 = { withTiming: collapsed(4637).withTiming, collapsed };
+  obj8.children = closure_6(tmp2(1176).Icon, { source: _modDef7261, style: tmp.collapseIcon });
+  obj7.children = closure_6(ReanimatedRexportDefault.View, obj8);
+  items1[2] = closure_6(closure_4, obj7);
+  obj4.children = items1;
+  obj3.children = closure_5(closure_3, obj4);
+  return closure_6(closure_4, obj3);
 }

@@ -19,11 +19,10 @@ const result = size.fileFinishedImporting(
 export const createGuildReportFalseAlarmSystemMessage = function createGuildReportFalseAlarmSystemMessage(roleStyle) {
   ({ message, theme } = roleStyle);
   const channel = ChannelStore.getChannel(message.channel_id);
-  let obj = useAuthorWithProcessedColor;
-  const messageAuthorWithProcessedColor = obj.getMessageAuthorWithProcessedColor(message);
   const tmp2 = resolveMessageContentColorsDefault(theme);
+  const messageAuthorWithProcessedColor = useAuthorWithProcessedColor.getMessageAuthorWithProcessedColor(message);
   let automodUsernameColor = GuildAlertModeSystemMessage.resolveAlertModeColors(theme).automodUsernameColor;
-  obj = {
+  const obj3 = {
     username: messageAuthorWithProcessedColor.nick,
     usernameOnClick: formatUsernameOnClickDefault({
       message,
@@ -31,19 +30,20 @@ export const createGuildReportFalseAlarmSystemMessage = function createGuildRepo
       roleStyle: roleStyle.roleStyle,
     }),
   };
-  obj = {};
+  const obj4 = {};
   const merged = Object.assign(createCommonMessageDefault(roleStyle));
   const intl = util.intl;
-  obj.content = intl.formatToParts(util.t["21+uW4"], obj);
+  obj4.content = intl.formatToParts(util.t["21+uW4"], obj3);
   const intl2 = util.intl;
-  obj.username = intl2.string(util.t.hG1StD);
+  obj4.username = intl2.string(util.t.hG1StD);
   if (automodUsernameColor == null) {
     automodUsernameColor = null;
   }
-  obj.usernameColor = automodUsernameColor;
-  const tmp4Result = AvatarUtils;
+  obj4.usernameColor = automodUsernameColor;
   const tmp7 = getTagPropertiesDefault({ message, channel, isSystemDM: true, colors: tmp2 });
-  obj.avatarURL = tmp4Result.ensureAvatarSource(tmp4Result.makeSource(utils_AvatarUtils.getAutomodAvatarURL())).uri;
+  const tmp4Result = utils_AvatarUtils;
+  const tmp4Result3 = AvatarUtils;
+  obj4.avatarURL = tmp4Result.ensureAvatarSource(tmp4Result3.makeSource(utils_AvatarUtils.getAutomodAvatarURL())).uri;
   const merged1 = Object.assign(tmp7);
-  return obj;
+  return obj4;
 };

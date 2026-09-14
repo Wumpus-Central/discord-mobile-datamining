@@ -5,8 +5,8 @@ import MediaEngineStore from "../../../../stores/MediaEngineStore.tsx";
 require = fn;
 const Constants = fn(1074);
 ({ InputModes: c3, UserSettingsSections } = Constants);
-fn(11601);
-let SettingBuilders = {
+const SettingBuilders = fn(11602);
+const route = SettingBuilders.createRoute({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.K3lovD);
@@ -35,9 +35,8 @@ let SettingBuilders = {
     const items = [intl.string(util.t.nuFtHH)];
     return items;
   },
-};
-SettingBuilders = SettingBuilders.createRoute(SettingBuilders);
+});
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/VoiceSetting.tsx");
 
-export default SettingBuilders;
+export default route;

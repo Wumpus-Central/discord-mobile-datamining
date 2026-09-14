@@ -6,6 +6,8 @@ import noop from "../../../_runtime/metro/00019__.js";
 import GuildRoleStore from "../../stores/GuildRoleStore.tsx";
 import ThreadMemberListStore from "ThreadMemberListStore.tsx";
 
+const require = globalThis.__r;
+
 require = fn;
 const StatusTypes = fn(1085).StatusTypes;
 let closure_7 = [];
@@ -55,10 +57,10 @@ export const useThreadMemberListSections = function useThreadMemberListSections(
       let obj = { id: StatusTypes.ONLINE, label: null };
       const intl = util.intl;
       obj.label = intl.string(util.t.WbGtnH);
-      obj = { id: StatusTypes.OFFLINE, label: null };
+      const obj2 = { id: StatusTypes.OFFLINE, label: null };
       const intl2 = util.intl;
-      obj.label = intl2.string(util.t.Vv0abJ);
-      mapped.push(obj, obj);
+      obj2.label = intl2.string(util.t.Vv0abJ);
+      mapped.push(obj, obj2);
       return mapped.map((id) => {
         id = id.id;
         const obj = { label: id.label, userIds: null, id: null, roleId: null };

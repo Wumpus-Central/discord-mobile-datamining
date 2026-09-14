@@ -6,11 +6,11 @@ import size from "../../../../_runtime/metro/00002__.js";
 
 const AbortCodes = Constants.AbortCodes;
 const prototype = function VibegrationsCreateError(reason, failureStatus) {
-  tmp = new tmp("vibegrations create failed: " + reason + " [" + failureStatus + "]", " [", failureStatus, "]");
-  tmp.name = "VibegrationsCreateError";
-  tmp.reason = reason;
-  tmp.status = failureStatus;
-  return tmp;
+  const tmp2 = new tmp("vibegrations create failed: " + reason + " [" + failureStatus + "]", " [", failureStatus, "]");
+  tmp2.name = "VibegrationsCreateError";
+  tmp2.reason = reason;
+  tmp2.status = failureStatus;
+  return tmp2;
 }.prototype;
 class prototype extends Error {}
 const result = size.fileFinishedImporting("modules/vibegrations/lib/VibegrationsCreateErrors.tsx");

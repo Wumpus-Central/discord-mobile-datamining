@@ -14,6 +14,8 @@ import RTCRegionStore from "../../../stores/RTCRegionStore.tsx";
 import SelectedChannelStore from "../../../stores/SelectedChannelStore.tsx";
 import StreamRTCConnectionStore from "../../../stores/StreamRTCConnectionStore.tsx";
 
+const require = globalThis.__r;
+
 require = fn;
 function getCurrentScreenshareCaptureMethod(mediaEngineConnectionId) {
   const connectionStats = MediaEngineStatsStore.getConnectionStats(mediaEngineConnectionId);
@@ -62,8 +64,7 @@ function getCurrentScreenshareCaptureMethod(mediaEngineConnectionId) {
       const entries = Object.entries(obj);
       const tmp16 = entries[Symbol.iterator]();
       while (tmp16 !== undefined) {
-        let tmp21 = _slicedToArray(tmp18, 2);
-        let tmp23 = tmp21[1];
+        [, tmp23] = tmp18;
         if (tmp23 > num3) {
           num3 = tmp23;
           tmp12 = tmp22;
@@ -164,8 +165,8 @@ export const sendAVErrorAnalyticsEvent = function sendAVErrorAnalyticsEvent(erro
   }
   let decodeStreamKeyResult = null;
   if (tmp6 != streamKey) {
-    let tmpResult = tmp(tmp2[13]);
-    decodeStreamKeyResult = tmpResult.decodeStreamKey(streamKey);
+    decodeStreamKeyResult = tmp(tmp2[13]).decodeStreamKey(streamKey);
+    const tmpResult = tmp(tmp2[13]);
   }
   let rTCConnection = null;
   if (tmp6 != streamKey) {
@@ -188,8 +189,8 @@ export const sendAVErrorAnalyticsEvent = function sendAVErrorAnalyticsEvent(erro
   }
   const state = underlyingError.getState();
   ({ resolution: closure_21, fps: closure_22 } = state);
-  tmpResult = tmp(tmp2[14]);
-  const runningGameAnalytics = tmpResult.getRunningGameAnalytics(tmp26);
+  let obj = require("AVError");
+  const runningGameAnalytics = require("GameAnalyticsUtils").getRunningGameAnalytics(tmp26);
   ({ gameName: closure_23, gameId: closure_24, exe: closure_25, distributor: closure_26 } = runningGameAnalytics);
   const isErrorOutbound = errorInfo.isErrorOutbound;
   if (mediaContext == tmp6) {
@@ -258,7 +259,7 @@ export const sendAVErrorAnalyticsEvent = function sendAVErrorAnalyticsEvent(erro
     }
   }
   inboundStats1 = tmp33;
-  let obj = require("AVError");
+  const tmpResult2 = require("GameAnalyticsUtils");
   mediaContext().then((cpu_brand) => {
     const obj = {
       error_name: error.valueOf(),
@@ -940,8 +941,8 @@ export const sendAVErrorAnalyticsEvent = function sendAVErrorAnalyticsEvent(erro
       currentCPUUsagePercent = null;
     }
     obj.cpu_usage = currentCPUUsagePercent;
-    let tmp115Result = ProcessUtilsDefault;
-    let currentMemoryUsageKB = tmp115Result.getCurrentMemoryUsageKB();
+    obj5 = rTCConnection1;
+    let currentMemoryUsageKB = ProcessUtilsDefault.getCurrentMemoryUsageKB();
     if (currentMemoryUsageKB == null) {
       currentMemoryUsageKB = null;
     }
@@ -1015,8 +1016,8 @@ export const sendAVErrorAnalyticsEvent = function sendAVErrorAnalyticsEvent(erro
     obj.output_volume = MediaEngineStore.getOutputVolume();
     obj.audio_input_device_count = Object.keys(MediaEngineStore.getInputDevices()).length;
     obj.audio_output_device_count = Object.keys(MediaEngineStore.getOutputDevices()).length;
-    tmp115Result = CrossPlatformNativeUtilsDefault;
-    obj.app_hardware_acceleration_enabled = tmp115Result.getAppHardwareAccelerationEnabled();
+    const tmp115Result = ProcessUtilsDefault;
+    obj.app_hardware_acceleration_enabled = CrossPlatformNativeUtilsDefault.getAppHardwareAccelerationEnabled();
     let inputDeviceOSMuted = MediaEngineStore.getInputDeviceOSMuted();
     if (inputDeviceOSMuted == null) {
       inputDeviceOSMuted = null;
@@ -1027,8 +1028,8 @@ export const sendAVErrorAnalyticsEvent = function sendAVErrorAnalyticsEvent(erro
       inputDeviceOSVolume = null;
     }
     obj.input_device_os_volume = inputDeviceOSVolume;
-    obj5 = rTCConnection1;
+    const tmp115Result3 = CrossPlatformNativeUtilsDefault;
     AnalyticsUtilsDefault.track(AnalyticEvents.AV_ERROR_REPORTED, obj);
-    const tmp115Result1 = AnalyticsUtilsDefault;
+    const tmp115Result4 = AnalyticsUtilsDefault;
   });
 };

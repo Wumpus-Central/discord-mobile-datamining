@@ -22,7 +22,6 @@ prototype["fromServer"] = function fromServer(arg0) {
   const merged = Object.assign({ inner_width: 0, overflow_top: 0, overflow_bottom: 0, overflow_horizontal: 0 });
   const merged1 = Object.assign(arg0, merged);
   const obj = {};
-  let tmp3 = prototype;
   const merged2 = Object.assign(super.fromServer(merged1));
   const merged3 = Object.assign(merged1);
   obj.innerWidth = inner_width;
@@ -30,8 +29,8 @@ prototype["fromServer"] = function fromServer(arg0) {
   obj.overflowBottom = overflow_bottom;
   obj.overflowHorizontal = overflow_horizontal;
   if (typeof prototype === "function") {
-    tmp3 = new tmp3(obj, merged1, merged, this);
-    tmp3.type = CollectiblesItemType.CollectiblesItemType.PROFILE_FRAME;
+    const tmp32 = new prototype(obj, merged1, merged, this);
+    tmp32.type = CollectiblesItemType.CollectiblesItemType.PROFILE_FRAME;
     ({
       label: tmp9.label,
       layers: tmp9.layers,
@@ -40,7 +39,7 @@ prototype["fromServer"] = function fromServer(arg0) {
       overflowBottom: tmp9.overflowBottom,
       overflowHorizontal: tmp9.overflowHorizontal,
     } = obj);
-    return tmp3;
+    return tmp32;
   } else {
     throw new TypeError("Trying to call a non-function");
   }

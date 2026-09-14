@@ -6,7 +6,7 @@ import SearchPlatformActionCreatorsDefault from "../SearchPlatformActionCreators
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-let closure_4 = fn(12482).SEARCH_TEXT_INPUT_DEBOUNCE_TIME;
+let closure_4 = fn(12483).SEARCH_TEXT_INPUT_DEBOUNCE_TIME;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/search/native/hooks/useAutoSearchGuildChannelTab.tsx");
 
@@ -14,11 +14,10 @@ export const useAutoSearchGuildChannelTab = function useAutoSearchGuildChannelTa
   closure_1 = arg1;
   const items = [searchContext];
   const callback = noop.useCallback((searchQueryString) => {
-    let obj = SearchUtils;
-    const guildIdFromSearchContext = obj.getGuildIdFromSearchContext(searchContext);
+    const guildIdFromSearchContext = SearchUtils.getGuildIdFromSearchContext(searchContext);
     if (null != guildIdFromSearchContext) {
-      obj = { searchContext, searchQueryString, guildId: guildIdFromSearchContext };
-      const result = SearchPlatformActionCreatorsDefault.searchGuildChannelTab(obj);
+      const obj3 = { searchContext, searchQueryString, guildId: guildIdFromSearchContext };
+      const result = SearchPlatformActionCreatorsDefault.searchGuildChannelTab(obj3);
     }
   }, items);
   const items1 = [arg1, callback];

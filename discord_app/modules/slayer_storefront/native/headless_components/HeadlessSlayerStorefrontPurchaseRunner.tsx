@@ -1,7 +1,9 @@
 // discord_app/modules/slayer_storefront/native/headless_components/HeadlessSlayerStorefrontPurchaseRunner.tsx
-import PlatformUtils from "../../../../utils/PlatformUtils.tsx";
 import AnalyticsUtilsDefault from "../../../../utils/AnalyticsUtils.tsx";
+import PlatformUtils from "../../../../utils/PlatformUtils.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
+
+const require = globalThis.__r;
 
 require = fn;
 let useNativeCheckoutStore = fn(7527).useNativeCheckoutStore;
@@ -36,7 +38,7 @@ export const HeadlessSlayerStorefrontPurchaseRunner = function HeadlessSlayerSto
     }
     onPurchaseError();
   }, items);
-  let obj = {
+  let obj2 = {
     skuId,
     sku,
     analyticsLoadId: tmp.load_id,
@@ -51,9 +53,9 @@ export const HeadlessSlayerStorefrontPurchaseRunner = function HeadlessSlayerSto
   if (tmp3 != null) {
     id = tmp3.id;
   }
-  obj.orderId = id;
-  obj.analyticsData = tmp;
-  obj.onPurchaseComplete = function onPurchaseComplete() {
+  obj2.orderId = id;
+  obj2.analyticsData = tmp;
+  obj2.onPurchaseComplete = function onPurchaseComplete() {
     closure_7.current = true;
     if (obj.isIOS()) {
       AnalyticsUtilsDefault.track(AnalyticEvents.PAYMENT_FLOW_SUCCEEDED, closure_3);
@@ -61,11 +63,11 @@ export const HeadlessSlayerStorefrontPurchaseRunner = function HeadlessSlayerSto
     closure_1_1();
     obj = PlatformUtils;
   };
-  obj.onPurchaseError = onPurchaseError;
-  obj.onPurchasePending = function onPurchasePending() {};
-  const tmp6Result = require("useMobileSocialLayerPurchaseSKU")(obj);
+  obj2.onPurchaseError = onPurchaseError;
+  obj2.onPurchasePending = function onPurchasePending() {};
+  const tmp6Result = require("useMobileSocialLayerPurchaseSKU")(obj2);
   closure_9 = tmp6Result;
-  obj.useRef(0);
+  noop.useRef(0);
   const items1 = [attempt, tmp6Result, onPurchaseError, tmp3, tmp4];
   const effect = obj.useEffect(() => {
     if (ref2.current !== attempt) {

@@ -5,8 +5,7 @@ import size from "../../_runtime/metro/00002__.js";
 const result = size.fileFinishedImporting("actions/LayerActionCreators.tsx");
 
 export const pushLayer = function pushLayer(component) {
-  const obj = { type: "LAYER_PUSH", component };
-  obj.dispatch(obj);
+  DispatcherDefault.dispatch({ type: "LAYER_PUSH", component });
 };
 export const popLayer = function popLayer() {
   DispatcherDefault.dispatch({ type: "LAYER_POP" });

@@ -80,8 +80,11 @@ export const trackAgeVerificationModalViewed = function trackAgeVerificationModa
   EXPRESSIVE_PRIMARY,
   entryPoint,
 ) {
-  const obj = { modal_session_id: memo, modal_version: EXPRESSIVE_PRIMARY, entry_point: entryPoint };
-  obj.track(AnalyticEvents.AGE_VERIFICATION_MODAL_VIEWED, obj);
+  AnalyticsUtilsDefault.track(AnalyticEvents.AGE_VERIFICATION_MODAL_VIEWED, {
+    modal_session_id: memo,
+    modal_version: EXPRESSIVE_PRIMARY,
+    entry_point: entryPoint,
+  });
 };
 export const trackAgeVerificationModalClicked = function trackAgeVerificationModalClicked(
   modalSessionId,
@@ -89,25 +92,29 @@ export const trackAgeVerificationModalClicked = function trackAgeVerificationMod
   METHOD_SELECT,
   GOOGLE_WALLET,
 ) {
-  const obj = {
+  AnalyticsUtilsDefault.track(AnalyticEvents.AGE_VERIFICATION_MODAL_CLICKED, {
     modal_session_id: modalSessionId,
     modal_version: EXPRESSIVE_V2,
     cta: METHOD_SELECT,
     method: GOOGLE_WALLET,
-  };
-  obj.track(AnalyticEvents.AGE_VERIFICATION_MODAL_CLICKED, obj);
+  });
 };
 export const trackAgeVerificationDmClicked = function trackAgeVerificationDmClicked(CONNECT_TO_TEEN, channelId) {
-  const obj = { cta: CONNECT_TO_TEEN, channel_id: channelId };
-  obj.track(AnalyticEvents.AGE_VERIFICATION_DM_CLICKED, obj);
+  AnalyticsUtilsDefault.track(AnalyticEvents.AGE_VERIFICATION_DM_CLICKED, {
+    cta: CONNECT_TO_TEEN,
+    channel_id: channelId,
+  });
 };
 export const trackNsfwSpaceWarningModalViewed = function trackNsfwSpaceWarningModalViewed(
   modalType,
   channelId,
   guildId,
 ) {
-  const obj = { channel_id: channelId, guild_id: guildId, modal_type: modalType };
-  obj.track(AnalyticEvents.NSFW_SPACE_WARNING_MODAL_VIEWED, obj);
+  AnalyticsUtilsDefault.track(AnalyticEvents.NSFW_SPACE_WARNING_MODAL_VIEWED, {
+    channel_id: channelId,
+    guild_id: guildId,
+    modal_type: modalType,
+  });
 };
 export const trackNsfwSpaceWarningModalClicked = function trackNsfwSpaceWarningModalClicked(
   NSFW_CHANNEL_AGREE_CTA,
@@ -127,14 +134,20 @@ export const trackNsfwSpaceWarningModalClicked = function trackNsfwSpaceWarningM
   if (tmp4) {
     tmp4 = "" !== channel.topic.trim();
   }
-  const obj = {
+  AnalyticsUtilsDefault.track(AnalyticEvents.NSFW_SPACE_WARNING_MODAL_CLICKED, {
+    cta: NSFW_CHANNEL_AGREE_CTA,
+    modal_type: modalType,
+    channel_id: channelId,
+    guild_id: guildId,
+    has_channel_topic: tmp4,
+  });
+  const obj2 = {
     cta: NSFW_CHANNEL_AGREE_CTA,
     modal_type: modalType,
     channel_id: channelId,
     guild_id: guildId,
     has_channel_topic: tmp4,
   };
-  obj.track(AnalyticEvents.NSFW_SPACE_WARNING_MODAL_CLICKED, obj);
 };
 export const AgeVerificationToastType = {
   VERIFIED_TEEN: "verified_teen",
@@ -145,6 +158,5 @@ export const AgeVerificationToastType = {
   UNDERAGE: "underage",
 };
 export const trackAgeVerificationToastViewed = function trackAgeVerificationToastViewed(toast_type) {
-  const obj = { toast_type };
-  obj.track(AnalyticEvents.AGE_VERIFICATION_TOAST_VIEWED, obj);
+  AnalyticsUtilsDefault.track(AnalyticEvents.AGE_VERIFICATION_TOAST_VIEWED, { toast_type });
 };

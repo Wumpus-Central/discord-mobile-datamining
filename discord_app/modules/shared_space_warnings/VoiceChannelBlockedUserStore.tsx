@@ -103,11 +103,11 @@ const voiceChannelBlockedUserStore = new VoiceChannelBlockedUserStore(Dispatcher
   OVERLAY_INITIALIZE: function handleOverlayInitialize() {
     init();
     let flag = false;
-    let values = Object.values(VoiceStateStore.getAllVoiceStates());
+    const values = Object.values(VoiceStateStore.getAllVoiceStates());
     while (tmp3 !== undefined) {
       let _Object = Object;
-      values = Object.values(tmp4);
-      for (const item10026 of values) {
+      let values2 = Object.values(tmp4);
+      for (const item10026 of values2) {
         if (null != item10026.channelId) {
           let tmp11 = processUserInChannel(item10026.channelId, item10026.userId);
           if (!tmp11) {

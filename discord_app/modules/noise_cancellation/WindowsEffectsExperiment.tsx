@@ -2,16 +2,16 @@
 import ApexExperimentStore from "../experiments/apex/ApexExperimentStore.tsx";
 
 const require = fn;
-let obj = { preferSystemEffects: false };
-fn(1433);
-obj = { name: "2025-12-windows-audio-effects", kind: "user", defaultConfig: obj, variations: null };
-obj = { 1: null };
-const ApexExperiment = {};
+const obj = { preferSystemEffects: false };
+const ApexExperiment = fn(1433);
+const obj3 = { name: "2025-12-windows-audio-effects", kind: "user", defaultConfig: obj, variations: null };
+const obj4 = { 1: null };
+const obj5 = {};
 const merged = Object.assign(obj);
-ApexExperiment.preferSystemEffects = true;
-obj[1] = ApexExperiment;
-obj.variations = obj;
-const config = ApexExperiment.createApexExperiment(obj);
+obj5.preferSystemEffects = true;
+obj4[1] = obj5;
+obj3.variations = obj4;
+const config = ApexExperiment.createApexExperiment(obj3);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/noise_cancellation/WindowsEffectsExperiment.tsx");
 

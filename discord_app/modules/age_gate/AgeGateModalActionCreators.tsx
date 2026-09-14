@@ -12,36 +12,32 @@ const AgeGateAnalyticAction = AgeGateConstants.AgeGateAnalyticAction;
 const result = size.fileFinishedImporting("modules/age_gate/AgeGateModalActionCreators.tsx");
 
 export const openAgeGateModal = function openAgeGateModal(JOIN_LARGE_GUILD_UNDERAGE) {
-  let obj = { type: "Enter Your Birthday", source: { section: JOIN_LARGE_GUILD_UNDERAGE } };
-  obj.track(constants2.OPEN_MODAL, obj);
-  obj = { type: "AGE_GATE_MODAL_OPEN", source: JOIN_LARGE_GUILD_UNDERAGE };
-  DispatcherDefault.dispatch(obj);
+  AnalyticsUtilsDefault.track(constants2.OPEN_MODAL, {
+    type: "Enter Your Birthday",
+    source: { section: JOIN_LARGE_GUILD_UNDERAGE },
+  });
+  const obj2 = { type: "Enter Your Birthday", source: { section: JOIN_LARGE_GUILD_UNDERAGE } };
+  DispatcherDefault.dispatch({ type: "AGE_GATE_MODAL_OPEN", source: JOIN_LARGE_GUILD_UNDERAGE });
 };
 export const closeAgeGateModal = function closeAgeGateModal(source) {
-  let obj = DispatcherDefault;
-  obj.wait(() => DispatcherDefault.dispatch({ type: "AGE_GATE_MODAL_CLOSE" }));
+  DispatcherDefault.wait(() => DispatcherDefault.dispatch({ type: "AGE_GATE_MODAL_CLOSE" }));
   if (undefined !== source) {
-    obj = { source, action: AgeGateAnalyticAction.AGE_GATE_CLOSE };
-    AnalyticsUtilsDefault.track(constants2.AGE_GATE_ACTION, obj);
+    const obj2 = { source, action: AgeGateAnalyticAction.AGE_GATE_CLOSE };
+    AnalyticsUtilsDefault.track(constants2.AGE_GATE_ACTION, obj2);
     const tmpResult = AnalyticsUtilsDefault;
   }
 };
 export const openSuccessAgeGateModal = function openSuccessAgeGateModal(source) {
-  let obj = DispatcherDefault;
-  obj.wait(() => {
+  DispatcherDefault.wait(() => {
     DispatcherDefault.dispatch({ type: "AGE_GATE_SUCCESS_MODAL_OPEN" });
   });
-  obj = { source, action: AgeGateAnalyticAction.AGE_GATE_SUCCESS };
-  AnalyticsUtilsDefault.track(constants2.AGE_GATE_ACTION, obj);
+  AnalyticsUtilsDefault.track(constants2.AGE_GATE_ACTION, { source, action: AgeGateAnalyticAction.AGE_GATE_SUCCESS });
 };
 export const openFailureAgeGateModal = function openFailureAgeGateModal(source, underageMessage) {
-  let obj = DispatcherDefault;
-  obj.wait(() => {
-    const obj = { type: "AGE_GATE_FAILURE_MODAL_OPEN", underageMessage };
-    obj.dispatch(obj);
+  DispatcherDefault.wait(() => {
+    DispatcherDefault.dispatch({ type: "AGE_GATE_FAILURE_MODAL_OPEN", underageMessage });
   });
-  obj = { source, action: AgeGateAnalyticAction.AGE_GATE_FAILURE };
-  AnalyticsUtilsDefault.track(constants2.AGE_GATE_ACTION, obj);
+  AnalyticsUtilsDefault.track(constants2.AGE_GATE_ACTION, { source, action: AgeGateAnalyticAction.AGE_GATE_FAILURE });
 };
 export const closeFailedAgeGate = function closeFailedAgeGate() {
   AuthenticationActionCreatorsDefault.logoutInternal();

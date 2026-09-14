@@ -16,32 +16,32 @@ function validateNumericOptionRange(NumberResult, minValue, _8Y5zsp, CyRLmH, VD3
   }
   if (null != minValue.maxValue) {
     if (null != minValue.minValue) {
-      let obj = { success: false, error: null };
+      const obj2 = { success: false, error: null };
       const intl3 = util.intl;
-      obj = { minimum: null, maximum: null };
+      const obj3 = { minimum: null, maximum: null };
       const minValue2 = minValue.minValue;
-      obj.minimum = minValue2.toLocaleString(util.intl.currentLocale, { useGrouping: false });
+      obj3.minimum = minValue2.toLocaleString(util.intl.currentLocale, { useGrouping: false });
       const maxValue2 = minValue.maxValue;
-      obj.maximum = maxValue2.toLocaleString(util.intl.currentLocale, { useGrouping: false });
-      obj.error = intl3.formatToPlainString(_8Y5zsp, obj);
-      return obj;
+      obj3.maximum = maxValue2.toLocaleString(util.intl.currentLocale, { useGrouping: false });
+      obj2.error = intl3.formatToPlainString(_8Y5zsp, obj3);
+      return obj2;
     }
   }
   if (null != minValue.minValue) {
-    const obj1 = { success: false, error: null };
+    const obj4 = { success: false, error: null };
     const intl2 = util.intl;
-    const obj2 = { minimum: null };
+    const obj5 = { minimum: null };
     minValue = minValue.minValue;
-    obj2.minimum = minValue.toLocaleString(util.intl.currentLocale, { useGrouping: false });
-    obj1.error = intl2.formatToPlainString(CyRLmH, obj2);
-    return obj1;
+    obj5.minimum = minValue.toLocaleString(util.intl.currentLocale, { useGrouping: false });
+    obj4.error = intl2.formatToPlainString(CyRLmH, obj5);
+    return obj4;
   } else if (null != minValue.maxValue) {
-    obj = { success: false, error: null };
+    const obj = { success: false, error: null };
     const intl = util.intl;
-    const obj3 = { maximum: null };
+    const obj6 = { maximum: null };
     const maxValue = minValue.maxValue;
-    obj3.maximum = maxValue.toLocaleString(util.intl.currentLocale, { useGrouping: false });
-    obj.error = intl.formatToPlainString(VD3Q_S, obj3);
+    obj6.maximum = maxValue.toLocaleString(util.intl.currentLocale, { useGrouping: false });
+    obj.error = intl.formatToPlainString(VD3Q_S, obj6);
     return obj;
   }
 }
@@ -72,16 +72,14 @@ export default {
       return { success: false };
     }
     if (null != type2.choices) {
-      let obj = { success: null };
-      let tmp3Result = ApplicationCommandChoiceUtils;
-      obj.success = null != tmp3Result.findChoiceStringValue(type2.choices, surrogate);
+      const obj = { success: null != ApplicationCommandChoiceUtils.findChoiceStringValue(type2.choices, surrogate) };
       return obj;
     } else {
       if (type2.autocomplete) {
-        tmp3Result = ApplicationCommandChoiceUtils;
-        if (null != tmp3Result.findAutocompleteChoiceStringValue(id, type2.name, surrogate)) {
+        if (null != tmp3Result2.findAutocompleteChoiceStringValue(id, type2.name, surrogate)) {
           return { success: true };
         }
+        tmp3Result2 = ApplicationCommandChoiceUtils;
       }
       if (undefined !== type2.minLength) {
         if (null == surrogate) {
@@ -89,54 +87,54 @@ export default {
         } else {
           if (undefined === type2.minLength) {
             if (undefined !== type2.maxLength) {
-              if (!obj.success) {
-                return obj;
+              if (!obj2.success) {
+                return obj2;
               }
             }
-            obj = { success: true };
+            obj2 = { success: true };
           }
           if (undefined !== type2.maxLength) {
             if (undefined !== type2.minLength) {
               if (type2.minLength === type2.maxLength) {
-                const obj1 = { success: false, error: null };
+                const obj3 = { success: false, error: null };
                 const intl4 = util.intl;
-                const obj2 = { value: null };
+                const obj4 = { value: null };
                 const minLength3 = type2.minLength;
-                obj2.value = minLength3.toLocaleString(util.intl.currentLocale, { useGrouping: false });
-                obj1.error = intl4.formatToPlainString(util.t["e+9/SY"], obj2);
-                obj = obj1;
+                obj4.value = minLength3.toLocaleString(util.intl.currentLocale, { useGrouping: false });
+                obj3.error = intl4.formatToPlainString(util.t["e+9/SY"], obj4);
+                obj2 = obj3;
               }
             }
           }
           if (undefined !== type2.maxLength) {
             if (undefined !== type2.minLength) {
-              const obj3 = { success: false, error: null };
+              const obj5 = { success: false, error: null };
               const intl3 = util.intl;
-              const obj4 = { minimum: null, maximum: null };
+              const obj6 = { minimum: null, maximum: null };
               const minLength2 = type2.minLength;
-              obj4.minimum = minLength2.toLocaleString(util.intl.currentLocale, { useGrouping: false });
+              obj6.minimum = minLength2.toLocaleString(util.intl.currentLocale, { useGrouping: false });
               const maxLength2 = type2.maxLength;
-              obj4.maximum = maxLength2.toLocaleString(util.intl.currentLocale, { useGrouping: false });
-              obj3.error = intl3.formatToPlainString(util.t.IE1sTh, obj4);
-              obj = obj3;
+              obj6.maximum = maxLength2.toLocaleString(util.intl.currentLocale, { useGrouping: false });
+              obj5.error = intl3.formatToPlainString(util.t.IE1sTh, obj6);
+              obj2 = obj5;
             }
           }
           if (undefined !== type2.minLength) {
-            const obj5 = { success: false, error: null };
-            const intl2 = util.intl;
-            const obj6 = { minimum: null };
-            const minLength = type2.minLength;
-            obj6.minimum = minLength.toLocaleString(util.intl.currentLocale, { useGrouping: false });
-            obj5.error = intl2.formatToPlainString(util.t.rXAFQD, obj6);
-            obj = obj5;
-          } else if (undefined !== type2.maxLength) {
             const obj7 = { success: false, error: null };
+            const intl2 = util.intl;
+            const obj8 = { minimum: null };
+            const minLength = type2.minLength;
+            obj8.minimum = minLength.toLocaleString(util.intl.currentLocale, { useGrouping: false });
+            obj7.error = intl2.formatToPlainString(util.t.rXAFQD, obj8);
+            obj2 = obj7;
+          } else if (undefined !== type2.maxLength) {
+            const obj9 = { success: false, error: null };
             const intl = util.intl;
-            const obj8 = { maximum: null };
+            const obj10 = { maximum: null };
             const maxLength = type2.maxLength;
-            obj8.maximum = maxLength.toLocaleString(util.intl.currentLocale, { useGrouping: false });
-            obj7.error = intl.formatToPlainString(util.t["ycEPx/"], obj8);
-            obj = obj7;
+            obj10.maximum = maxLength.toLocaleString(util.intl.currentLocale, { useGrouping: false });
+            obj9.error = intl.formatToPlainString(util.t["ycEPx/"], obj10);
+            obj2 = obj9;
           }
         }
       }
@@ -152,16 +150,14 @@ export default {
     if (null != trimmed) {
       if (0 !== trimmed.length) {
         if (null != type2.choices) {
-          let obj = { success: null };
-          let tmp3Result = ApplicationCommandChoiceUtils;
-          obj.success = null != tmp3Result.findChoiceNumberValue(type2.choices, trimmed);
+          const obj = { success: null != ApplicationCommandChoiceUtils.findChoiceNumberValue(type2.choices, trimmed) };
           return obj;
         } else {
           if (type2.autocomplete) {
-            tmp3Result = ApplicationCommandChoiceUtils;
-            if (null != tmp3Result.findAutocompleteChoiceNumberValue(id, type2.name, trimmed)) {
+            if (null != tmp3Result2.findAutocompleteChoiceNumberValue(id, type2.name, trimmed)) {
               return { success: true };
             }
+            tmp3Result2 = ApplicationCommandChoiceUtils;
           }
           const _Number = Number;
           const NumberResult = Number(
@@ -174,7 +170,7 @@ export default {
               if (Number.isInteger(NumberResult)) {
                 const _Number3 = Number;
                 if (Number.isSafeInteger(NumberResult)) {
-                  obj = validateNumericOptionRange(
+                  let obj3 = validateNumericOptionRange(
                     NumberResult,
                     type2,
                     util.t["8Y5zsp"],
@@ -182,11 +178,11 @@ export default {
                     util.t["VD3Q+S"],
                   );
                 }
-                return obj;
+                return obj3;
               }
             }
           }
-          obj = { success: false };
+          obj3 = { success: false };
         }
       }
     }
@@ -201,16 +197,14 @@ export default {
     if (null != trimmed) {
       if (0 !== trimmed.length) {
         if (null != type2.choices) {
-          let obj = { success: null };
-          let tmp3Result = ApplicationCommandChoiceUtils;
-          obj.success = null != tmp3Result.findChoiceNumberValue(type2.choices, trimmed);
+          const obj = { success: null != ApplicationCommandChoiceUtils.findChoiceNumberValue(type2.choices, trimmed) };
           return obj;
         } else {
           if (type2.autocomplete) {
-            tmp3Result = ApplicationCommandChoiceUtils;
-            if (null != tmp3Result.findAutocompleteChoiceNumberValue(id, type2.name, trimmed)) {
+            if (null != tmp3Result2.findAutocompleteChoiceNumberValue(id, type2.name, trimmed)) {
               return { success: true };
             }
+            tmp3Result2 = ApplicationCommandChoiceUtils;
           }
           const _Number = Number;
           const NumberResult = Number(
@@ -222,7 +216,7 @@ export default {
             if (NumberResult <= Number.MAX_SAFE_INTEGER) {
               const _Number3 = Number;
               if (NumberResult >= Number.MIN_SAFE_INTEGER) {
-                obj = validateNumericOptionRange(
+                let obj3 = validateNumericOptionRange(
                   NumberResult,
                   type2,
                   util.t["8Y5zsp"],
@@ -230,10 +224,10 @@ export default {
                   util.t["VD3Q+S"],
                 );
               }
-              return obj;
+              return obj3;
             }
           }
-          obj = { success: false };
+          obj3 = { success: false };
         }
       }
     }
@@ -252,12 +246,12 @@ export default {
         if (applicationCommandOption != null) {
           type = applicationCommandOption.type;
         }
-        let obj = { success: "userMention" === type };
-        return obj;
+        const obj3 = { success: "userMention" === type };
+        return obj3;
       }
       obj2 = ApplicationCommandUtils;
     } else {
-      obj = { success: "userMention" === type.type };
+      const obj = { success: "userMention" === type.type };
       return obj;
     }
   },
@@ -271,12 +265,12 @@ export default {
         if (applicationCommandOption != null) {
           type = applicationCommandOption.type;
         }
-        let obj = { success: "channelMention" === type };
-        return obj;
+        const obj3 = { success: "channelMention" === type };
+        return obj3;
       }
       obj2 = ApplicationCommandUtils;
     } else {
-      obj = { success: "channelMention" === type.type };
+      const obj = { success: "channelMention" === type.type };
       return obj;
     }
   },
@@ -293,8 +287,8 @@ export default {
         if (applicationCommandOption != null) {
           type = applicationCommandOption.type;
         }
-        let obj = { success: "roleMention" === type };
-        return obj;
+        const obj3 = { success: "roleMention" === type };
+        return obj3;
       }
       obj2 = ApplicationCommandUtils;
     } else {
@@ -306,7 +300,7 @@ export default {
         }
         tmp = tmp2;
       }
-      obj = { success: tmp };
+      const obj = { success: tmp };
       return obj;
     }
   },
@@ -332,8 +326,8 @@ export default {
           }
           tmp10 = tmp11;
         }
-        let obj = { success: tmp10 };
-        return obj;
+        const obj3 = { success: tmp10 };
+        return obj3;
       }
       obj2 = ApplicationCommandUtils;
     } else {
@@ -349,7 +343,7 @@ export default {
         }
         tmp = tmp2;
       }
-      obj = { success: tmp };
+      const obj = { success: tmp };
       return obj;
     }
   },
@@ -357,10 +351,13 @@ export default {
     if ("text" !== type.type) {
       return { success: false };
     } else {
-      let obj = ApplicationCommandUtils;
-      const upload = UploadAttachmentStore.getUpload(channelId, name.name, obj.getCommandAttachmentDraftType(arg4));
-      obj = { success: null != upload && upload.filename === type.text };
-      return obj;
+      const upload = UploadAttachmentStore.getUpload(
+        channelId,
+        name.name,
+        ApplicationCommandUtils.getCommandAttachmentDraftType(arg4),
+      );
+      const obj2 = { success: null != upload && upload.filename === type.text };
+      return obj2;
     }
   },
 };

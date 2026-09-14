@@ -14,11 +14,11 @@ const result = size.fileFinishedImporting("modules/people/strangers/AcceptFriend
 
 export const openAcceptFriendRequestConfirmModal = function openAcceptFriendRequestConfirmModal(arg0) {
   ({ onConfirm: require, onCancel: importDefault } = arg0);
-  let obj = { type };
-  obj.track(AnalyticEvents.OPEN_MODAL, obj);
-  obj = {
+  AnalyticsUtilsDefault.track(AnalyticEvents.OPEN_MODAL, { type });
+  const obj2 = { type };
+  actions_AlertActionCreatorsDefault.openLazy({
     importer() {
-      return asyncRequireImpl(11003, dependencyMap.paths).then((result) => {
+      return asyncRequireImpl(11004, dependencyMap.paths).then((result) => {
         closure_0 = result.default;
         return (View) => {
           const obj = {};
@@ -34,6 +34,5 @@ export const openAcceptFriendRequestConfirmModal = function openAcceptFriendRequ
         };
       });
     },
-  };
-  actions_AlertActionCreatorsDefault.openLazy(obj);
+  });
 };

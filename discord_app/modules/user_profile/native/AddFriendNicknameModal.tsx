@@ -15,18 +15,18 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-fn(4636);
-let createStyles = { container: null, title: null, description: null };
-createStyles = {
-  flex: 1,
-  backgroundColor: nativeDefault.colors.BACKGROUND_SCRIM,
-  justifyContent: "center",
-  alignItems: "center",
+const createStyles = fn(4636);
+let obj2 = {
+  container: {
+    flex: 1,
+    backgroundColor: nativeDefault.colors.BACKGROUND_SCRIM,
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  title: { textAlign: "center" },
+  description: { marginTop: 8, marginBottom: 16, textAlign: "center", lineHeight: 18 },
 };
-createStyles.container = createStyles;
-createStyles.title = { textAlign: "center" };
-createStyles.description = { marginTop: 8, marginBottom: 16, textAlign: "center", lineHeight: 18 };
-let closure_11 = createStyles.createStyles(createStyles);
+let closure_11 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/native/AddFriendNicknameModal.tsx");
 
@@ -34,7 +34,6 @@ export default function AddFriendNicknameModal(arg0) {
   ({ userId: require, showUserProfile } = arg0);
   dependencyMap = undefined;
   c3 = undefined;
-  _slicedToArray = undefined;
   noop = undefined;
   let callback1;
   closure_7 = async function _handleSubmit() {
@@ -45,8 +44,8 @@ export default function AddFriendNicknameModal(arg0) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -59,8 +58,8 @@ export default function AddFriendNicknameModal(arg0) {
             throw value;
           } else if (arg0 === 2) {
             c6 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
             showUserProfile = tmp7;
             closure_129_0 = undefined;
@@ -75,11 +74,10 @@ export default function AddFriendNicknameModal(arg0) {
               closure_129_0 = _var;
               asyncGeneratorStep(true);
               c4 = 1;
-              let obj3 = showUserProfile(tmp3[13]);
               c5 = 2;
               c6 = 1;
-              const obj1 = { value: obj3.updateRelationship(require, _var), done: false };
-              return obj1;
+              const obj5 = { value: showUserProfile(tmp3[13]).updateRelationship(require, _var), done: false };
+              return obj5;
             }
           }
         } else if (1 === tmp7) {
@@ -94,8 +92,8 @@ export default function AddFriendNicknameModal(arg0) {
             c4 = 0;
             closure_130_3(false);
             c6 = 3;
-            const obj2 = { value, done: true };
-            return obj2;
+            const obj6 = { value, done: true };
+            return obj6;
           } else {
             let tmp30 = closure_130_4;
             if (0 === closure_129_0.length) {
@@ -103,8 +101,8 @@ export default function AddFriendNicknameModal(arg0) {
               let stringResult = intl2.string(_var(tmp3[11]).t.O1Uqo3);
             } else {
               const intl = _var(tmp3[11]).intl;
-              obj3 = { nickname: closure_129_0 };
-              stringResult = intl.formatToPlainString(_var(tmp3[11]).t.l4ZOaw, obj3);
+              const obj7 = { nickname: closure_129_0 };
+              stringResult = intl.formatToPlainString(_var(tmp3[11]).t.l4ZOaw, obj7);
             }
             tmp30 = tmp30(stringResult);
             c5 = 3;
@@ -121,7 +119,7 @@ export default function AddFriendNicknameModal(arg0) {
         c4 = 0;
         closure_130_3(false);
         c6 = 3;
-        obj = { value, done: true };
+        const obj = { value, done: true };
         return obj;
       } catch (tmp46) {
         closure_3 = tmp46;
@@ -135,12 +133,11 @@ export default function AddFriendNicknameModal(arg0) {
     }
   };
   const tmp = closure_11();
-  let obj = noop;
-  [c2, c3] = _slicedToArray(noop.useState(false), 2);
-  _slicedToArray = showUserProfile(11058)();
-  let obj1 = initialize;
+  [c2, c3] = noop.useState(false);
+  _slicedToArray = showUserProfile(11059)();
+  const tmp2 = _slicedToArray(noop.useState(false), 2);
   const items = [closure_7];
-  const stateFromStores = obj1.useStateFromStores(items, () => RelationshipStore.getNickname(require));
+  const stateFromStores = initialize.useStateFromStores(items, () => RelationshipStore.getNickname(require));
   let tmp7 = stateFromStores;
   if (stateFromStores == null) {
     tmp7 = null;
@@ -149,7 +146,6 @@ export default function AddFriendNicknameModal(arg0) {
   const callback = obj.useCallback((current) => {
     closure_5.current = current;
   }, []);
-  const tmp2 = _slicedToArray(noop.useState(false), 2);
   const items1 = [UserStore];
   const stateFromStores1 = initialize.useStateFromStores(items1, () => UserStore.getUser(require));
   if (null == stateFromStores) {
@@ -161,20 +157,19 @@ export default function AddFriendNicknameModal(arg0) {
   }
   const items2 = [showUserProfile];
   callback1 = obj.useCallback(() => {
-    let arr = ModalActionCreatorsDefault;
-    arr = arr.pop();
+    ModalActionCreatorsDefault.pop();
     if (showUserProfile != null) {
       showUserProfile();
     }
   }, items2);
-  obj = { style: tmp.container, children: null };
-  obj = { children: null };
-  showUserProfile(5659);
-  obj1 = { confirmText: null, onConfirm: null, cancelText: null, onCancel: null, children: null };
-  const tmp3Result = showUserProfile(5075);
+  let obj3 = { style: tmp.container, children: null };
+  const obj4 = { children: null };
+  const tmp5Result = initialize;
+  let obj5 = { confirmText: null, onConfirm: null, cancelText: null, onCancel: null, children: null };
+  const tmp3Result = showUserProfile(5659);
   const intl3 = util.intl;
-  obj1.confirmText = intl3.string(util.t["R3BPH+"]);
-  obj1.onConfirm = function handleSubmit() {
+  obj5.confirmText = intl3.string(util.t["R3BPH+"]);
+  obj5.onConfirm = function handleSubmit() {
     const self = this;
     const apply = closure_7.apply;
     if (typeof apply === "unknown") {
@@ -185,8 +180,8 @@ export default function AddFriendNicknameModal(arg0) {
     return applyArgumentsResult;
   };
   const intl4 = util.intl;
-  obj1.cancelText = intl4.string(util.t["ETE/oC"]);
-  obj1.onCancel = callback1;
+  obj5.cancelText = intl4.string(util.t["ETE/oC"]);
+  obj5.onCancel = callback1;
   const items3 = [
     closure_9(Text_Text.Text, {
       style: tmp.title,
@@ -197,11 +192,11 @@ export default function AddFriendNicknameModal(arg0) {
     }),
     ,
   ];
-  let obj3 = { style: tmp.description, variant: "text-sm/medium", color: "text-default", children: null };
+  let obj7 = { style: tmp.description, variant: "text-sm/medium", color: "text-default", children: null };
   const intl5 = util.intl;
-  obj3.children = intl5.string(util.t["NdQ+lP"]);
-  items3[1] = closure_9(Text_Text.Text, obj3);
-  const obj4 = {
+  obj7.children = intl5.string(util.t["NdQ+lP"]);
+  items3[1] = closure_9(Text_Text.Text, obj7);
+  const obj8 = {
     onChange: callback,
     autoFocus: true,
     accessibilityLabel: null,
@@ -211,20 +206,20 @@ export default function AddFriendNicknameModal(arg0) {
     isClearable: true,
   };
   const intl6 = util.intl;
-  obj4.accessibilityLabel = intl6.string(util.t.pqG6GS);
-  let obj2 = {
+  obj8.accessibilityLabel = intl6.string(util.t.pqG6GS);
+  let obj6 = {
     style: tmp.title,
     accessibilityRole: "header",
     variant: "heading-lg/extrabold",
     color: "mobile-text-heading-primary",
     children: stringResult,
   };
-  const tmp5Result = initialize;
-  obj4.placeholder = showUserProfile(4481).getName(stateFromStores1);
-  obj4.defaultValue = stateFromStores;
-  items3[2] = closure_9(TextField.TextField, obj4);
-  obj1.children = items3;
-  obj.children = closure_10(tmp3Result, obj1);
-  obj.children = closure_9(tmp3Result, obj);
-  return closure_9(callback1, obj);
+  const tmp3Result3 = showUserProfile(5075);
+  obj8.placeholder = showUserProfile(4481).getName(stateFromStores1);
+  obj8.defaultValue = stateFromStores;
+  items3[2] = closure_9(TextField.TextField, obj8);
+  obj5.children = items3;
+  obj4.children = closure_10(tmp3Result3, obj5);
+  obj3.children = closure_9(tmp3Result, obj4);
+  return closure_9(callback1, obj3);
 }

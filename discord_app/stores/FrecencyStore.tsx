@@ -26,7 +26,7 @@ function handleChannelSelect(arg0) {
     if (isMatch) {
       closure_9.track(channelId);
       const pendingUsages = global.pendingUsages;
-      let obj = { key: channelId, timestamp: null };
+      const obj = { key: channelId, timestamp: null };
       const _Date = Date;
       obj.timestamp = Date.now();
       pendingUsages.push(obj);
@@ -48,10 +48,10 @@ function handleChannelSelect(arg0) {
     if (isMatch1) {
       closure_9.track(guildId);
       const pendingUsages1 = global.pendingUsages;
-      obj = { key: guildId, timestamp: null };
+      const obj2 = { key: guildId, timestamp: null };
       const _Date2 = Date;
-      obj.timestamp = Date.now();
-      pendingUsages1.push(obj);
+      obj2.timestamp = Date.now();
+      pendingUsages1.push(obj2);
       flag = true;
     }
     tmp10 = flag;
@@ -82,7 +82,7 @@ function initFrecency() {
 }
 const ID_REGEX = fn(1074).ID_REGEX;
 const UserSettingsTypes = fn(1084).UserSettingsTypes;
-let obj = {
+let closure_9 = new FrecencyDefault({
   computeBonus() {
     return 100;
   },
@@ -121,8 +121,7 @@ let obj = {
   afterCompute() {},
   numFrequentlyItems: 100,
   maxSamples: 10,
-};
-let closure_9 = new FrecencyDefault(obj);
+});
 let c10 = null;
 let c11 = null;
 let global = { pendingUsages: [] };
@@ -188,7 +187,7 @@ prototype["getVersion"] = function getVersion() {
 };
 FrecencyStore.displayName = "FrecencyStore";
 FrecencyStore.persistKey = "FrecencyStore";
-obj = {
+const frecencyStore = new FrecencyStore(DispatcherDefault, {
   CHANNEL_SELECT: handleChannelSelect,
   VOICE_CHANNEL_SELECT: handleChannelSelect,
   USER_SETTINGS_PROTO_UPDATE: function handleUserSettingsProtoUpdate(settings) {
@@ -199,8 +198,7 @@ obj = {
     }
     return flag;
   },
-};
-const frecencyStore = new FrecencyStore(DispatcherDefault, obj);
+});
 const size = fn(2);
 const result = size.fileFinishedImporting("stores/FrecencyStore.tsx");
 

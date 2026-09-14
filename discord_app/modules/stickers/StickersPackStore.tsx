@@ -19,13 +19,13 @@ function parseServerPackSticker(id) {
 }
 function deriveStickerMetadata(name, name2) {
   const items = [];
-  let obj = { type: StickersTypes.StickerMetadataTypes.STICKER_NAME, value: null };
+  const obj = { type: StickersTypes.StickerMetadataTypes.STICKER_NAME, value: null };
   const trimmed = name.name.trim();
   obj.value = trimmed.toLocaleLowerCase();
   items.push(obj);
   if (null != name2) {
-    obj = { type: StickersTypes.StickerMetadataTypes.PACK_NAME, value: name2.name };
-    items.push(obj);
+    const obj2 = { type: StickersTypes.StickerMetadataTypes.PACK_NAME, value: name2.name };
+    items.push(obj2);
   }
   return items;
 }

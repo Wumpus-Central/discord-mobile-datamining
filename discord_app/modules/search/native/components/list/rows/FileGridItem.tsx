@@ -24,10 +24,8 @@ export default noop.memo(function FileGridItem(containerStyle) {
   const tmp = closure_11();
   noop = tmp;
   const scale = stateFromStores().scale;
-  let obj = data(imageStyle[10]);
   let items = [fileName];
-  stateFromStores = obj.useStateFromStores(items, () => ChannelStore.getChannel(data.channelId));
-  let obj1 = noop;
+  stateFromStores = data(imageStyle[10]).useStateFromStores(items, () => ChannelStore.getChannel(data.channelId));
   const items1 = [data.author];
   let guild_id;
   if (stateFromStores != null) {
@@ -49,13 +47,13 @@ export default noop.memo(function FileGridItem(containerStyle) {
   ({ channelId: arr3[0], messageId: arr3[1] } = data);
   items2[2] = onPress;
   const items3 = [data, tmp7, imageStyle, scale, tmp.icon];
-  const callback = obj1.useCallback(() => {
+  const callback = obj2.useCallback(() => {
     onPress({ channelId: data.channelId, messageId: data.messageId });
   }, items2);
-  const memo1 = obj1.useMemo(() => {
+  const memo1 = obj2.useMemo(() => {
     const type = data.type;
     if (constants.MEDIA_ATTACHMENT === type) {
-      let obj = {
+      const obj4 = {
         containerStyle: imageStyle,
         attachment: null,
         channelId: null,
@@ -66,11 +64,11 @@ export default noop.memo(function FileGridItem(containerStyle) {
         renderFallback: null,
       };
       ({ attachment: obj3.attachment, channelId: obj3.channelId } = data);
-      obj.authorId = data.author.id;
-      obj.scale = scale;
-      obj.containerHeight = imageStyle.height + React5;
-      obj.containerWidth = imageStyle.width + React5;
-      obj.renderFallback = function renderFallback() {
+      obj4.authorId = data.author.id;
+      obj4.scale = scale;
+      obj4.containerHeight = imageStyle.height + React5;
+      obj4.containerWidth = imageStyle.width + React5;
+      obj4.renderFallback = function renderFallback() {
         const obj = { style: null, children: null };
         const items = [icon.icon, closure_1_2];
         obj.style = items;
@@ -88,7 +86,7 @@ export default noop.memo(function FileGridItem(containerStyle) {
         obj.children = tmpResult;
         return closure_2_9(scale, obj);
       };
-      return React7(SearchMediaImage.SearchAttachmentMediaImage, obj);
+      return React7(SearchMediaImage.SearchAttachmentMediaImage, obj4);
     } else if (constants.ATTACHMENT === type) {
       const size = { fileName, containerStyle: imageStyle, height: null, width: null };
       ({ height: obj2.height, width: obj2.width } = imageStyle);
@@ -99,18 +97,21 @@ export default noop.memo(function FileGridItem(containerStyle) {
       return React7(SearchMediaImage.SearchSoundMediaImage, size1);
     }
   }, items3);
-  obj = { containerStyle: containerStyle.containerStyle, onPress: callback, children: null };
+  const obj3 = { containerStyle: containerStyle.containerStyle, onPress: callback, children: null };
   const items4 = [closure_9(data(imageStyle[13]).SearchListCardThumbnail, { thumbnail: memo1 }), ,];
-  obj = { label: tmp7, subLabel: null };
+  let obj4 = { label: tmp7, subLabel: null };
   let sizeStringResult;
   if (size > 0) {
     sizeStringResult = tmp2(tmp3[14]).sizeString(size);
     const tmp2Result = tmp2(tmp3[14]);
   }
-  obj.subLabel = sizeStringResult;
-  items4[1] = closure_9(data(imageStyle[13]).SearchListCardContent, obj);
-  obj1 = { author: data.author, avatarSource: memo, channel: stateFromStores };
-  items4[2] = closure_9(data(imageStyle[13]).SearchListCardFooter, obj1);
-  obj.children = items4;
-  return closure_10(data(imageStyle[13]).SearchListCardContainer, obj);
+  obj4.subLabel = sizeStringResult;
+  items4[1] = closure_9(data(imageStyle[13]).SearchListCardContent, obj4);
+  items4[2] = closure_9(data(imageStyle[13]).SearchListCardFooter, {
+    author: data.author,
+    avatarSource: memo,
+    channel: stateFromStores,
+  });
+  obj3.children = items4;
+  return closure_10(data(imageStyle[13]).SearchListCardContainer, obj3);
 });

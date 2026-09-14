@@ -21,13 +21,12 @@ export default function collectCallFeedback(fn, arg1, arg2, videoEnabled) {
   if (null == arg1) {
     if (null != voiceChannelId) {
       if (null != channel) {
-        let obj1 = RTCConnectionStore;
         const rTCConnection = RTCConnectionStore.getRTCConnection();
         let voiceDurationStats;
         if (rTCConnection != null) {
           voiceDurationStats = rTCConnection.getVoiceDurationStats();
         }
-        let obj = {
+        const obj = {
           channel_id: null,
           channel_type: null,
           guild_id: null,
@@ -37,12 +36,12 @@ export default function collectCallFeedback(fn, arg1, arg2, videoEnabled) {
         };
         ({ id: obj4.channel_id, type: obj4.channel_type } = channel);
         obj.guild_id = channel.getGuildId();
-        obj.rtc_connection_id = obj1.getRTCConnectionId();
-        obj.duration = obj1.getDuration();
-        obj.media_session_id = obj1.getMediaSessionId();
-        const guildId = obj1.getGuildId();
+        obj.rtc_connection_id = RTCConnectionStore.getRTCConnectionId();
+        obj.duration = RTCConnectionStore.getDuration();
+        obj.media_session_id = RTCConnectionStore.getMediaSessionId();
+        const guildId = RTCConnectionStore.getGuildId();
         const merged = Object.assign(
-          AppAnalyticsUtils.getVoiceStateMetadata(guildId, obj1.getChannelId(), videoEnabled),
+          AppAnalyticsUtils.getVoiceStateMetadata(guildId, RTCConnectionStore.getChannelId(), videoEnabled),
         );
         let duration_muted_ms;
         if (voiceDurationStats != null) {
@@ -55,32 +54,34 @@ export default function collectCallFeedback(fn, arg1, arg2, videoEnabled) {
         obj.output_audio_route_type = AudioRouteStore.getCurrentRouteType();
         fn();
         if (VideoBackgroundStore.hasUsedBackgroundInCall) {
-          obj = {};
+          const obj3 = {};
           const merged1 = Object.assign(obj);
-          let tmp5Result = LastUsedVideoBackgroundOption;
-          const lastUsedVideoBackgroundOption = tmp5Result.getLastUsedVideoBackgroundOption(UserStore.getCurrentUser());
+          const lastUsedVideoBackgroundOption = LastUsedVideoBackgroundOption.getLastUsedVideoBackgroundOption(
+            UserStore.getCurrentUser(),
+          );
           const videoDevices = MediaEngineStore.getVideoDevices();
           const tmp22 = videoDevices[MediaEngineStore.getVideoDeviceId(MediaEngineStore)];
           let name;
           if (tmp22 != null) {
             name = tmp22.name;
           }
-          obj1 = {
+          const obj7 = {
             video_device_name: name,
             video_hardware_scaling_enabled: MediaEngineStore.getHardwareEncoding(),
             video_effect_type: null,
             video_effect_detail: null,
           };
-          tmp5Result = VideoBackgroundUtils;
-          obj1.video_effect_type = tmp5Result.getEffectAnalyticsType(lastUsedVideoBackgroundOption);
-          obj1.video_effect_detail = VideoBackgroundUtils.getEffectDetailAnalyticsName(lastUsedVideoBackgroundOption);
-          const merged2 = Object.assign(obj1);
-          const tmp5Result1 = VideoBackgroundUtils;
-          const obj2 = { type: "VIDEO_BACKGROUND_SHOW_FEEDBACK", analyticsData: obj };
-          DispatcherDefault.dispatch(obj2);
+          const tmp5Result = LastUsedVideoBackgroundOption;
+          obj7.video_effect_type = VideoBackgroundUtils.getEffectAnalyticsType(lastUsedVideoBackgroundOption);
+          const tmp5Result3 = VideoBackgroundUtils;
+          obj7.video_effect_detail = VideoBackgroundUtils.getEffectDetailAnalyticsName(lastUsedVideoBackgroundOption);
+          const merged2 = Object.assign(obj7);
+          const tmp5Result4 = VideoBackgroundUtils;
+          const obj8 = { type: "VIDEO_BACKGROUND_SHOW_FEEDBACK", analyticsData: obj3 };
+          DispatcherDefault.dispatch(obj8);
         } else {
-          const obj3 = { type: "VOICE_CHANNEL_SHOW_FEEDBACK", analyticsData: obj };
-          DispatcherDefault.dispatch(obj3);
+          const obj9 = { type: "VOICE_CHANNEL_SHOW_FEEDBACK", analyticsData: obj };
+          DispatcherDefault.dispatch(obj9);
         }
       }
     }

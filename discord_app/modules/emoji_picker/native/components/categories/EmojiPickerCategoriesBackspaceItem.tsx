@@ -46,7 +46,7 @@ export default function EmojiPickerCategoriesBackspaceItem(onBackspace) {
       current.cancel();
     };
   });
-  let obj = {
+  const obj = {
     hitSlop: null,
     style,
     accessibilityRole: "keyboardkey",
@@ -62,9 +62,21 @@ export default function EmojiPickerCategoriesBackspaceItem(onBackspace) {
   obj.accessibilityLabel = intl.string(util.t["4SnBzF"]);
   obj.onPressOut = callback1;
   obj.onLongPress = callback;
-  obj = { style: null };
+  const obj2 = { style: null };
   const items2 = [iconStyle, { opacity: 0.5 }];
-  obj.style = items2;
+  obj2.style = items2;
   obj.children = jsx(BackspaceIcon.BackspaceIcon, { style: null });
-  return <Pressable style={null} />;
+  return (
+    <Pressable
+      hitSlop={null}
+      style={style}
+      accessibilityRole="keyboardkey"
+      accessibilityLabel={null}
+      delayLongPress={500}
+      onPressOut={null}
+      onLongPress={null}
+    >
+      {null}
+    </Pressable>
+  );
 }

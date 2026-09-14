@@ -14,13 +14,13 @@ export default function SuperReactionLocalImageAnimation(arg0) {
   let tmp = null;
   ({ localImageSource, animationSource } = arg0);
   const merged = Object.assign(arg0, Object.assign({ localImageSource: 0, animationSource: 0 }));
-  let obj = burst_reactions_BurstReactionEffectUtils;
-  const superReactionAnimationSourceFromLocalImage = obj.useSuperReactionAnimationSourceFromLocalImage({
-    animationSource,
-    localImageSource,
-  });
+  const superReactionAnimationSourceFromLocalImage =
+    burst_reactions_BurstReactionEffectUtils.useSuperReactionAnimationSourceFromLocalImage({
+      animationSource,
+      localImageSource,
+    });
   if (null != superReactionAnimationSourceFromLocalImage) {
-    obj = { loop: true, source: superReactionAnimationSourceFromLocalImage };
+    const obj2 = { loop: true, source: superReactionAnimationSourceFromLocalImage };
     const merged1 = Object.assign(merged);
     tmp = jsx(FadeOutLottieAnimationDefault, { loop: true, source: superReactionAnimationSourceFromLocalImage });
   }

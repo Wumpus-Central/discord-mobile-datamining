@@ -40,9 +40,9 @@ prototype["values"] = function values() {
   return items.values();
 };
 prototype["ordered"] = function ordered() {
-  let items = this.items;
-  items = [...items.values()];
-  return items.reverse();
+  const items = this.items;
+  const items1 = [...items.values()];
+  return items1.reverse();
 };
 prototype["clear"] = function clear() {
   const items = this.items;
@@ -58,7 +58,7 @@ prototype["get"] = function get(arg0) {
 };
 prototype["put"] = function put(arg0, arg1) {
   const self = this;
-  let items = this.items;
+  const items = this.items;
   items.delete(arg0);
   const items2 = this.items;
   const result = items2.set(arg0, arg1);
@@ -67,8 +67,8 @@ prototype["put"] = function put(arg0, arg1) {
     ({ items: items3, items: items4 } = self);
     value = items3.get(oldestKeyResult);
     items4.delete(oldestKeyResult);
-    items = [oldestKeyResult, value];
-    return items;
+    const items1 = [oldestKeyResult, value];
+    return items1;
   }
 };
 prototype["delete"] = function delete(arg0) {

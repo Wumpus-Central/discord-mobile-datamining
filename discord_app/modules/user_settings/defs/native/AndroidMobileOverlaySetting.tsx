@@ -5,8 +5,8 @@ import MobileVoiceOverlayActionCreatorsDefault from "../../../voice_overlay/nati
 import MobileVoiceOverlayStore from "../../../../stores/native/MobileVoiceOverlayStore.tsx";
 
 require = fn;
-fn(11601);
-let SettingBuilders = {
+const SettingBuilders = fn(11602);
+const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t["9CSZJm"]);
@@ -22,9 +22,8 @@ let SettingBuilders = {
     return intl.string(util.t.Wfoivk);
   },
   usePredicate: fn(10109).isMobileOverlaySupported,
-};
-SettingBuilders = SettingBuilders.createToggle(SettingBuilders);
+});
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/AndroidMobileOverlaySetting.tsx");
 
-export default SettingBuilders;
+export default toggle;

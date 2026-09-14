@@ -42,28 +42,37 @@ const ChannelAutocompleteConstants = fn(5081);
   GAME_MENTION_RAW_RE_GLOBAL: closure_12,
   GAME_MENTION_SENTINEL: map1,
 } = ChannelAutocompleteConstants);
-fn(4636);
+const createStyles = fn(4636);
 let obj = {
-  commandOption: null,
+  commandOption: {
+    backgroundColor: nativeDefault.colors.KEYWORD_HIGHLIGHT_BACKGROUND,
+    color: nativeDefault.colors.TEXT_DEFAULT,
+    borderRadius: nativeDefault.radii.xs,
+    fontSize: 14,
+  },
   commandErrorOption: null,
   gameMention: null,
   timestampMention: null,
   autocomplete: null,
 };
-obj = {
+let obj3 = {
   backgroundColor: nativeDefault.colors.KEYWORD_HIGHLIGHT_BACKGROUND,
   color: nativeDefault.colors.TEXT_DEFAULT,
   borderRadius: nativeDefault.radii.xs,
   fontSize: 14,
 };
-obj.commandOption = obj;
-const createStyles = {
+obj.commandErrorOption = {
   backgroundColor: nativeDefault.colors.KEYWORD_HIGHLIGHT_BACKGROUND,
   color: nativeDefault.colors.TEXT_FEEDBACK_CRITICAL,
   borderRadius: nativeDefault.radii.xs,
   fontSize: 14,
 };
-obj.commandErrorOption = createStyles;
+let obj4 = {
+  backgroundColor: nativeDefault.colors.KEYWORD_HIGHLIGHT_BACKGROUND,
+  color: nativeDefault.colors.TEXT_FEEDBACK_CRITICAL,
+  borderRadius: nativeDefault.radii.xs,
+  fontSize: 14,
+};
 obj.gameMention = {
   backgroundColor: nativeDefault.colors.MENTION_BACKGROUND,
   color: nativeDefault.colors.MENTION_FOREGROUND,
@@ -71,7 +80,7 @@ obj.gameMention = {
   fontSize: 14,
   fontWeight: "bold",
 };
-let obj2 = {
+let obj5 = {
   backgroundColor: nativeDefault.colors.MENTION_BACKGROUND,
   color: nativeDefault.colors.MENTION_FOREGROUND,
   borderRadius: nativeDefault.radii.xs,
@@ -85,7 +94,7 @@ obj.timestampMention = {
   fontSize: 14,
   fontWeight: "bold",
 };
-let obj3 = {
+let obj6 = {
   backgroundColor: nativeDefault.colors.MENTION_BACKGROUND,
   color: nativeDefault.colors.MENTION_FOREGROUND,
   borderRadius: nativeDefault.radii.xs,
@@ -100,6 +109,7 @@ const forwardRefResult = noop.forwardRef((chatInputRef, arg1) => {
   const channel = chatInputRef.channel;
   const commandsDisabled = chatInputRef.commandsDisabled;
   let stateFromStores1;
+  first = undefined;
   let stateFromStores2;
   let callback1;
   let tmp = stateFromStores2();
@@ -117,23 +127,22 @@ const forwardRefResult = noop.forwardRef((chatInputRef, arg1) => {
   stateFromStores1 = chatInputRef(commandsDisabled[13]).useStateFromStores(items1, () =>
     ApplicationCommandAutocompleteStore.getLastResponseNonce(channel.id),
   );
-  const obj3 = chatInputRef(commandsDisabled[13]);
+  let obj3 = chatInputRef(commandsDisabled[13]);
   let text = chatInputRef(commandsDisabled[16]).getTextBeforeFirstOption(chatInputStateRef.current.text).text;
   let substr = text.slice(1);
   let ref = applicationCommandOptionValueParser.useRef(substr.trimEnd());
   const tmp6 = _slicedToArray(applicationCommandOptionValueParser.useState(ref.current), 2);
   closure_9 = tmp6[1];
-  const obj4 = chatInputRef(commandsDisabled[16]);
+  let obj4 = chatInputRef(commandsDisabled[16]);
   const commands = channel(commandsDisabled[17]).useCachedResults(
     { type: "channel", channel },
     chatInputRef(commandsDisabled[18]).ApplicationCommandType.CHAT,
     tmp6[0],
   ).commands;
   ref = applicationCommandOptionValueParser.useRef(undefined);
-  const tmp7 = _slicedToArray(applicationCommandOptionValueParser.useState([]), 2);
-  const first = tmp7[0];
+  closure_129_1 = undefined;
+  [first, closure_129_1] = applicationCommandOptionValueParser.useState([]);
   closure_129_0 = first;
-  closure_129_1 = tmp7[1];
   const callback = applicationCommandOptionValueParser.useCallback((arg0) => {
     closure_0 = closure_2_11(arg0);
     chatInputStateRef((arg0) => {
@@ -216,10 +225,10 @@ const forwardRefResult = noop.forwardRef((chatInputRef, arg1) => {
   ];
   callback1 = applicationCommandOptionValueParser.useCallback(() => {
     const current = chatInputStateRef.current;
-    let text = current.text;
+    const text = current.text;
     ({ editId, focused, selectionStart, selectionEnd } = current);
     callback(text);
-    let obj = {
+    const obj = {
       activeCommand: stateFromStores,
       channel,
       commandsDisabled,
@@ -232,12 +241,14 @@ const forwardRefResult = noop.forwardRef((chatInputRef, arg1) => {
       text,
     };
     if (null == ref.current) {
-      obj = { props: null, ref: null, optionValueParser: null, styles: null };
-      obj.props = obj;
-      obj.ref = chatInputRef;
-      obj.optionValueParser = applicationCommandOptionValueParser;
+      const obj2 = {
+        props: obj,
+        ref: chatInputRef,
+        optionValueParser: applicationCommandOptionValueParser,
+        styles: null,
+      };
       closure_0 = closure_4;
-      obj = {
+      const obj3 = {
         commandOption() {
           return chatInputRef(commandsDisabled[10]).convertToNativeStyle(closure_0.commandOption);
         },
@@ -261,16 +272,16 @@ const forwardRefResult = noop.forwardRef((chatInputRef, arg1) => {
           return chatInputRef(commandsDisabled[10]).convertToNativeStyle(autocomplete);
         },
       };
-      obj.styles = obj;
-      const tmp12 = new ApplicationCommandManagerDefault(obj);
+      obj2.styles = obj3;
+      const tmp12 = new ApplicationCommandManagerDefault(obj2);
       ref.current = tmp12;
     } else {
       const current2 = ref.current;
-      const obj1 = { newState: obj };
-      const result = current2.updateApplicationCommandManagerState(obj1);
+      const obj4 = { newState: obj };
+      const result = current2.updateApplicationCommandManagerState(obj4);
     }
-    text = ChatInputCommandOptionParser.getTextBeforeFirstOption(text).text;
-    const substr = text.slice(1);
+    const text1 = ChatInputCommandOptionParser.getTextBeforeFirstOption(text).text;
+    const substr = text1.slice(1);
     const trimEndResult = substr.trimEnd();
     if (ref.current !== trimEndResult) {
       closure_9(trimEndResult);
@@ -357,7 +368,7 @@ const forwardRefResult = noop.forwardRef((chatInputRef, arg1) => {
   return null;
 });
 forwardRefResult.displayName = "ChatInputAppCommandManager";
-let obj4 = { color: nativeDefault.colors.TEXT_BRAND, fontWeight: "bold" };
+let obj7 = { color: nativeDefault.colors.TEXT_BRAND, fontWeight: "bold" };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/chat_input/native/ChatInputAppCommandManager.tsx");
 

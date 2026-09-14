@@ -17,14 +17,14 @@ const result = size.fileFinishedImporting(
 
 export default function ContextMenuSubmenuActionSheetHeader(onBack) {
   let fn = onBack.onBack;
-  let obj = { style: closure_4().headerContainer, children: null };
-  obj = { label: null, onPress: null };
+  const obj = { style: closure_4().headerContainer, children: null };
+  const obj2 = { label: null, onPress: null };
   const intl = util.intl;
-  obj.label = intl.string(util.t["13/7kX"]);
+  obj2.label = intl.string(util.t["13/7kX"]);
   if (fn == null) {
     fn = () => {};
   }
-  obj.onPress = fn;
+  obj2.onPress = fn;
   obj.children = jsx(ActionSheetHeaderPressableText.ActionSheetHeaderPressableText, { label: null, onPress: null });
-  return <View label={null} onPress={null} />;
+  return <View style={closure_4().headerContainer}>{null}</View>;
 }

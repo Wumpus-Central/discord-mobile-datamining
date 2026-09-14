@@ -12,8 +12,8 @@ let closure_5 = async function _beginConsoleTransfer(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj3 = { value, done: true };
+      return obj3;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -26,8 +26,8 @@ let closure_5 = async function _beginConsoleTransfer(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c5 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj5 = { value, done: true };
+          return obj5;
         } else {
           closure_3 = tmp5;
           closure_2 = tmp2;
@@ -38,8 +38,8 @@ let closure_5 = async function _beginConsoleTransfer(arg0) {
           if (set.has(closure_1)) {
             c4 = 1;
             c5 = 1;
-            let obj1 = { value: GameConsoleActionCreators.fetchDevices(closure_1), done: false };
-            return obj1;
+            const obj6 = { value: GameConsoleActionCreators.fetchDevices(closure_1), done: false };
+            return obj6;
           } else {
             transferToXboxDefault(closure_0);
           }
@@ -50,36 +50,39 @@ let closure_5 = async function _beginConsoleTransfer(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c5 = 3;
-          const obj2 = { value, done: true };
-          return obj2;
+          const obj7 = { value, done: true };
+          return obj7;
         } else {
           closure_130_2 = value;
           if (1 !== closure_130_2.length) {
-            let obj3 = closure_131_1(closure_131_2[4]);
             const _HermesInternal = HermesInternal;
-            obj3 = { channel: closure_130_0, platform: closure_130_1, impressionName: null };
+            const obj4 = closure_131_1(closure_131_2[4]);
+            const obj9 = { channel: closure_130_0, platform: closure_130_1, impressionName: null };
             const combined = "GameConsoleDeviceListActionSheet" + closure_130_0.id;
-            obj3.impressionName = closure_131_0(closure_131_2[7]).ImpressionNames.GAME_CONSOLE_DEVICE_LIST;
+            obj9.impressionName = closure_131_0(closure_131_2[7]).ImpressionNames.GAME_CONSOLE_DEVICE_LIST;
             c5 = 3;
-            const obj4 = {
-              value: obj3.openLazy(
+            const obj10 = {
+              value: obj4.openLazy(
                 closure_131_0(closure_131_2[6])(closure_131_2[5], closure_131_2.paths),
                 combined,
-                obj3,
+                obj9,
               ),
               done: true,
             };
-            return obj4;
+            return obj10;
           } else {
             closure_130_3 = closure_130_2[0];
-            obj1 = closure_131_0(closure_131_2[3]);
             c4 = 2;
             c5 = 1;
-            const obj5 = {
-              value: obj1.transferToPlaystationWithAlert(closure_130_1, closure_130_3, closure_130_0),
+            const obj11 = {
+              value: closure_131_0(closure_131_2[3]).transferToPlaystationWithAlert(
+                closure_130_1,
+                closure_130_3,
+                closure_130_0,
+              ),
               done: false,
             };
-            return obj5;
+            return obj11;
           }
         }
       } else if (arg0 === 1) {
@@ -87,7 +90,7 @@ let closure_5 = async function _beginConsoleTransfer(arg0) {
         throw value;
       } else if (arg0 === 2) {
         c5 = 3;
-        obj = { value, done: true };
+        const obj = { value, done: true };
         return obj;
       }
       c5 = 3;

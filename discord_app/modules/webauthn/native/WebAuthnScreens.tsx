@@ -18,27 +18,23 @@ const result = size.fileFinishedImporting("modules/webauthn/native/WebAuthnScree
 
 export const getScreens = function getScreens(isModal) {
   isModal = isModal.isModal;
-  obj = { [closure_1_3.MODAL_UPSELL]: obj };
-  obj = {
-    title: "",
-    render() {
-      return jsx(PasskeyUpsellViewDefault, {});
-    },
-  };
-  obj = { title: null, render: null, headerLeft: null };
+  const obj = { [closure_1_3.MODAL_UPSELL]: obj2 };
+  const obj3 = { title: null, render: null, headerLeft: null };
   const intl = util.intl;
-  obj.title = intl.string(util.t["0N1s81"]);
-  obj.render = function render() {
+  obj3.title = intl.string(util.t["0N1s81"]);
+  obj3.render = function render() {
     return jsx(PasskeyInitStepDefault, {});
   };
   let headerCloseButton;
   if (isModal) {
-    let tmp2Result = NavigatorHeader;
-    headerCloseButton = tmp2Result.getHeaderCloseButton(PasskeyUpsellActionCreatorsDefault.closePasskeyUpsellModal);
+    headerCloseButton = NavigatorHeader.getHeaderCloseButton(
+      PasskeyUpsellActionCreatorsDefault.closePasskeyUpsellModal,
+    );
+    const tmp2Result = NavigatorHeader;
   }
-  obj.headerLeft = headerCloseButton;
-  obj[WebAuthnScreens.INIT] = obj;
-  const obj1 = {
+  obj3.headerLeft = headerCloseButton;
+  obj[WebAuthnScreens.INIT] = obj3;
+  const obj4 = {
     render(arg0) {
       const merged = Object.assign(arg0);
       return jsx(WebAuthnEditStepDefault, {});
@@ -46,18 +42,18 @@ export const getScreens = function getScreens(isModal) {
     title: null,
   };
   const intl2 = util.intl;
-  obj1.title = intl2.string(util.t.UBBwwF);
-  obj[WebAuthnScreens.EDIT] = obj1;
-  const obj2 = {
+  obj4.title = intl2.string(util.t.UBBwwF);
+  obj[WebAuthnScreens.EDIT] = obj4;
+  const obj5 = {
     render() {
       return jsx(WebAuthnRegisterStepDefault, {});
     },
     title: null,
   };
   const intl3 = util.intl;
-  obj2.title = intl3.string(util.t.vrOCCk);
-  obj[WebAuthnScreens.REGISTER] = obj2;
-  const obj3 = {
+  obj5.title = intl3.string(util.t.vrOCCk);
+  obj[WebAuthnScreens.REGISTER] = obj5;
+  const obj6 = {
     render(arg0) {
       const merged = Object.assign(arg0);
       return jsx(WebAuthnNameStepDefault, {});
@@ -66,22 +62,24 @@ export const getScreens = function getScreens(isModal) {
     headerLeft: null,
   };
   const intl4 = util.intl;
-  obj3.title = intl4.string(util.t["cY/IOu"]);
+  obj6.title = intl4.string(util.t["cY/IOu"]);
   let headerCloseButton1;
   if (isModal) {
-    tmp2Result = NavigatorHeader;
-    headerCloseButton1 = tmp2Result.getHeaderCloseButton(PasskeyUpsellActionCreatorsDefault.closePasskeyUpsellModal);
+    headerCloseButton1 = NavigatorHeader.getHeaderCloseButton(
+      PasskeyUpsellActionCreatorsDefault.closePasskeyUpsellModal,
+    );
+    const tmp2Result2 = NavigatorHeader;
   }
-  obj3.headerLeft = headerCloseButton1;
-  obj[WebAuthnScreens.NAME] = obj3;
-  const obj4 = {
+  obj6.headerLeft = headerCloseButton1;
+  obj[WebAuthnScreens.NAME] = obj6;
+  const obj7 = {
     render() {
       return jsx(WebAuthnSuccessStepDefault, {});
     },
     title: null,
   };
   const intl5 = util.intl;
-  obj4.title = intl5.string(util.t["7wPZln"]);
-  obj[WebAuthnScreens.SUCCESS] = obj4;
+  obj7.title = intl5.string(util.t["7wPZln"]);
+  obj[WebAuthnScreens.SUCCESS] = obj7;
   return obj;
 };

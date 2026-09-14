@@ -41,7 +41,7 @@ export const launchPremiumPlanSelect = function launchPremiumPlanSelect(isBoostP
   }
   const PREMIUM_PLAN_SELECT = UserSettingsSections.PREMIUM_PLAN_SELECT;
   if (null != navigation) {
-    let obj = {
+    const obj = {
       predicate: wrappedPredicate,
       analyticsLocation,
       analyticsLocations,
@@ -55,7 +55,7 @@ export const launchPremiumPlanSelect = function launchPremiumPlanSelect(isBoostP
     };
     navigation.push(PREMIUM_PLAN_SELECT, obj);
   } else {
-    obj = {
+    const obj4 = {
       initialRoute: PREMIUM_PLAN_SELECT,
       analyticsLocation,
       analyticsLocations,
@@ -70,7 +70,7 @@ export const launchPremiumPlanSelect = function launchPremiumPlanSelect(isBoostP
       onPaymentDismiss,
     };
     const obj3 = flag2(4839);
-    obj3.pushLazy(asyncRequireImpl(7515, dependencyMap.paths), obj, PremiumModal.PREMIUM_KEY);
+    obj3.pushLazy(asyncRequireImpl(7515, dependencyMap.paths), obj4, PremiumModal.PREMIUM_KEY);
     const tmp7 = asyncRequireImpl(7515, dependencyMap.paths);
   }
   let result = UserSettingsUtils.trackUserSettingsPaneViewed({ destinationPane: PREMIUM_PLAN_SELECT });

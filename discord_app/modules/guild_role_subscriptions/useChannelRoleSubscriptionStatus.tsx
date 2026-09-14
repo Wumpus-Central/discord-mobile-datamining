@@ -3,6 +3,8 @@ import GatedChannelStore from "../channel/GatedChannelStore.tsx";
 import ChannelStore from "../../stores/ChannelStore.tsx";
 import PermissionStore from "../../stores/PermissionStore.tsx";
 
+const require = globalThis.__r;
+
 const require = fn;
 function getChannelRoleSubscriptionStatus(id) {
   let obj = ChannelStore;
@@ -23,23 +25,23 @@ function getChannelRoleSubscriptionStatus(id) {
     result = channel.isRoleSubscriptionTemplatePreviewChannel();
   }
   if (result) {
-    obj = { isSubscriptionGated: true, needSubscriptionToAccess: true };
+    let obj3 = { isSubscriptionGated: true, needSubscriptionToAccess: true };
   } else {
     if (null != channel) {
       if (obj2.isChannelGated(channel.guild_id, channel.id)) {
         const can = tmp.can;
-        obj = Permissions;
+        let obj4 = Permissions;
         if (channel.isGuildVocal()) {
-          let tmp3 = !can(obj.CONNECT, channel);
+          let tmp3 = !can(obj4.CONNECT, channel);
         } else {
-          tmp3 = !can(obj.VIEW_CHANNEL, channel);
+          tmp3 = !can(obj4.VIEW_CHANNEL, channel);
         }
-        obj = { isSubscriptionGated: true, needSubscriptionToAccess: tmp3 };
+        obj4 = { isSubscriptionGated: true, needSubscriptionToAccess: tmp3 };
       }
     }
-    obj = closure_6;
+    obj3 = closure_6;
   }
-  return obj;
+  return obj3;
 }
 const Permissions = fn(1074).Permissions;
 let closure_6 = { needSubscriptionToAccess: false, isSubscriptionGated: false };

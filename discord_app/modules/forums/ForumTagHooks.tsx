@@ -5,6 +5,8 @@ import noop from "../../../_runtime/metro/00019__.js";
 import ChannelStore from "../../stores/ChannelStore.tsx";
 import PermissionStore from "../../stores/PermissionStore.tsx";
 
+const require = globalThis.__r;
+
 require = fn;
 const Permissions = fn(1085).Permissions;
 let closure_6 = [];

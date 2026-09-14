@@ -6,6 +6,8 @@ import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 import noop from "../../../_runtime/metro/00019__.js";
 import ChannelStore from "../../stores/ChannelStore.tsx";
 
+const require = globalThis.__r;
+
 require = fn;
 let closure_10 = async function _savedMessageJumpToMessage(arg0, arg1) {
   closure_0 = arg0;
@@ -21,8 +23,8 @@ let closure_10 = async function _savedMessageJumpToMessage(arg0, arg1) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj3 = { value, done: true };
+        return obj3;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -35,8 +37,8 @@ let closure_10 = async function _savedMessageJumpToMessage(arg0, arg1) {
             throw value;
           } else if (arg0 === 2) {
             c7 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj4 = { value, done: true };
+            return obj4;
           } else {
             closure_3 = tmp3;
             closure_2 = tmp5;
@@ -52,11 +54,11 @@ let closure_10 = async function _savedMessageJumpToMessage(arg0, arg1) {
                 c5 = 1;
                 c6 = 2;
                 c7 = 1;
-                let obj1 = {
+                const obj7 = {
                   value: ChannelActionCreatorsDefault.fetchChannel(closure_0.saveData.channelId),
                   done: false,
                 };
-                return obj1;
+                return obj7;
               }
             }
           }
@@ -69,8 +71,8 @@ let closure_10 = async function _savedMessageJumpToMessage(arg0, arg1) {
           } else if (arg0 === 2) {
             c5 = 0;
             c7 = 3;
-            const obj2 = { value, done: true };
-            return obj2;
+            const obj8 = { value, done: true };
+            return obj8;
           } else {
             closure_130_2 = value;
             if (null == closure_130_2.recipients) {
@@ -82,12 +84,14 @@ let closure_10 = async function _savedMessageJumpToMessage(arg0, arg1) {
               c7 = 3;
               return { value: "HermesInternal", done: null };
             } else {
-              obj1 = closure_131_1(closure_131_2[8]);
               const recipients = closure_130_2.recipients;
               c6 = 3;
               c7 = 1;
-              const obj3 = { value: obj1.ensurePrivateChannel(recipients.map((id) => id.id)), done: false };
-              return obj3;
+              const obj9 = {
+                value: closure_131_1(closure_131_2[8]).ensurePrivateChannel(recipients.map((id) => id.id)),
+                done: false,
+              };
+              return obj9;
             }
           }
         } else if (arg0 === 1) {
@@ -96,7 +100,7 @@ let closure_10 = async function _savedMessageJumpToMessage(arg0, arg1) {
         } else if (arg0 === 2) {
           c5 = 0;
           c7 = 3;
-          obj = { value, done: true };
+          const obj = { value, done: true };
           return obj;
         } else {
           c5 = 0;
@@ -153,11 +157,11 @@ export const useDueInString = function useDueInString(arg0) {
     }
     obj = { dueInText: null, isOverdue: null };
     const intl = tmp(1114).intl;
-    obj = { duration: null };
+    const obj2 = { duration: null };
     const time = dueAt.getTime();
     tmp9 = obj;
-    obj.duration = _modDef4228.duration(time - now.getTime(), "millisecond").humanize();
-    obj.dueInText = intl.formatToPlainString(H4gnX9, obj);
+    obj2.duration = _modDef4228.duration(time - now.getTime(), "millisecond").humanize();
+    obj.dueInText = intl.formatToPlainString(H4gnX9, obj2);
     obj.isOverdue = now > dueAt;
     return obj;
   }

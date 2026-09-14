@@ -5,6 +5,8 @@ import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import ExperimentStore from "../../experiments/ExperimentStore.tsx";
 import CollectiblesCategoryStore from "../CollectiblesCategoryStore.tsx";
 
+const require = globalThis.__r;
+
 require = fn;
 const noop = fn(19);
 ({ useEffect: c3, useCallback: closure_4 } = noop);
@@ -28,9 +30,12 @@ export const useMaybeFetchCollectiblesCategoriesShared = function useMaybeFetchC
   }
   let hasLoadedExperiments;
   let lastSuccessfulFetch;
-  let obj = require("initialize");
   let items = [hasLoadedExperiments];
-  const stateFromStores = obj.useStateFromStores(items, () => hasLoadedExperiments.hasLoadedExperiments);
+  const stateFromStores = require("initialize").useStateFromStores(
+    items,
+    () => hasLoadedExperiments.hasLoadedExperiments,
+  );
+  let obj = require("initialize");
   const items1 = [lastSuccessfulFetch];
   const tmp2 = _slicedToArray(
     require("initialize").useStateFromStoresArray(items1, () => {
@@ -95,10 +100,11 @@ export const useMaybeFetchCollectiblesCategoriesShared = function useMaybeFetchC
     }
   }, items2);
   const items3 = [arg0, arg2, tmp2[6]];
-  obj = {
+  let obj2 = require("initialize");
+  return {
     isFetching: tmp2[0],
     categories: tmp2[5],
-    fetchCategoriesError: tmp4,
+    fetchCategoriesError: tmp2[2],
     refreshCategories: stateFromStores(() => {
       const obj = {};
       const merged = Object.assign(closure_0);
@@ -108,5 +114,4 @@ export const useMaybeFetchCollectiblesCategoriesShared = function useMaybeFetchC
       const collectiblesCategories = CollectiblesActionCreators.fetchCollectiblesCategories(obj, undefined, closure_2);
     }, items3),
   };
-  return obj;
 };

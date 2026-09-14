@@ -19,14 +19,13 @@ function validateSavedTheme(colors) {
     }
     return tmp5;
   } catch (tmp8) {
-    let obj = SentryUtilsDefault;
-    obj = { tags: { app_context: "SavedCustomThemeStore" } };
-    obj.captureMessage("Invalid saved custom theme: " + tmp8, obj);
+    const obj2 = { tags: { app_context: "SavedCustomThemeStore" } };
+    SentryUtilsDefault.captureMessage("Invalid saved custom theme: " + tmp8, obj2);
     return false;
   }
 }
 ({ PROTO_THEME_MAP_MOBILE_REFRESH: c2, PROTO_THEME_MAP_WEB_REFRESH } = ThemeConstants);
-let FetchState = {
+const FetchState = {
   NOT_FETCHED: 0,
   [0]: "NOT_FETCHED",
   IS_FETCHING: 1,
@@ -89,7 +88,7 @@ prototype["hasError"] = function hasError() {
 };
 SavedCustomThemeStore.displayName = "SavedCustomThemeStore";
 SavedCustomThemeStore.persistKey = "SavedCustomThemeStore";
-FetchState = {
+const savedCustomThemeStore = new SavedCustomThemeStore(DispatcherDefault, {
   SAVED_CUSTOM_THEMES_FETCH_START: function handleCustomThemesFetchStart() {
     ERROR = obj.IS_FETCHING;
   },
@@ -109,8 +108,7 @@ FetchState = {
     obj = SentryUtilsDefault;
     obj.captureException(error.error, { tags: { app_context: "SavedCustomThemeStore" } });
   },
-};
-const savedCustomThemeStore = new SavedCustomThemeStore(DispatcherDefault, FetchState);
+});
 const result = size.fileFinishedImporting("modules/client_themes/SavedCustomThemeStore.tsx");
 
 export default savedCustomThemeStore;

@@ -7,33 +7,28 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_4, Image: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-fn(4636);
-let createStyles = {
+const createStyles = fn(4636);
+let obj2 = {
   container: { flex: 1, alignItems: "center", justifyContent: "center" },
   header: { marginBottom: 16 },
-  title: null,
-  description: null,
-  redesignButton: null,
+  title: {
+    fontFamily: fn(1074).Fonts.PRIMARY_BOLD,
+    color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY,
+    fontSize: 24,
+    textAlign: "center",
+    marginBottom: 8,
+  },
+  description: { textAlign: "center", marginBottom: 16 },
+  redesignButton: { paddingHorizontal: 16, width: "100%" },
 };
-createStyles = {
-  fontFamily: fn(1074).Fonts.PRIMARY_BOLD,
-  color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY,
-  fontSize: 24,
-  textAlign: "center",
-  marginBottom: 8,
-};
-createStyles.title = createStyles;
-createStyles.description = { textAlign: "center", marginBottom: 16 };
-createStyles.redesignButton = { paddingHorizontal: 16, width: "100%" };
-let closure_8 = createStyles.createStyles(createStyles);
+let closure_8 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/hub/native/components/HubEmailConnectionWaitlist.tsx");
 
 export default function HubEmailConnectionWaitlist(school) {
   const onClose = school.onClose;
   const tmp = closure_8();
-  let obj = onClose(1483);
-  const navigation = obj.useNavigation();
+  const navigation = onClose(1483).useNavigation();
   const items = [navigation, onClose];
   const layoutEffect = noop.useLayoutEffect(() => {
     navigation.setOptions({
@@ -46,24 +41,24 @@ export default function HubEmailConnectionWaitlist(school) {
       },
     });
   }, items);
-  obj = { style: tmp.container, children: null };
-  obj = { source: navigation(12864), style: tmp.header };
-  const items1 = [closure_6(closure_5, obj), , ,];
-  const obj1 = { style: tmp.title, accessibilityRole: "header", children: null };
+  const obj2 = { style: tmp.container, children: null };
+  let obj = onClose(1483);
+  const items1 = [closure_6(closure_5, { source: navigation(12865), style: tmp.header }), , ,];
+  const obj4 = { style: tmp.title, accessibilityRole: "header", children: null };
   let intl = onClose(1114).intl;
-  obj1.children = intl.string(onClose(1114).t.OaloU5);
-  items1[1] = closure_6(onClose(1178).LegacyText, obj1);
-  const obj2 = { style: tmp.description, variant: "text-sm/medium", color: "text-default", children: null };
+  obj4.children = intl.string(onClose(1114).t.OaloU5);
+  items1[1] = closure_6(onClose(1176).LegacyText, obj4);
+  const obj5 = { style: tmp.description, variant: "text-sm/medium", color: "text-default", children: null };
   const intl2 = onClose(1114).intl;
-  obj2.children = intl2.format(onClose(1114).t.Rs7MXJ, { school: school.school });
-  items1[2] = closure_6(onClose(4632).Text, obj2);
-  const obj3 = { style: tmp.redesignButton, children: null };
-  const obj4 = { size: "lg", text: null, onPress: null };
+  obj5.children = intl2.format(onClose(1114).t.Rs7MXJ, { school: school.school });
+  items1[2] = closure_6(onClose(4632).Text, obj5);
+  const obj6 = { style: tmp.redesignButton, children: null };
+  const obj7 = { size: "lg", text: null, onPress: null };
   const intl3 = onClose(1114).intl;
-  obj4.text = intl3.string(onClose(1114).t.i4jeWR);
-  obj4.onPress = onClose;
-  obj3.children = closure_6(onClose(5056).Button, obj4);
-  items1[3] = closure_6(closure_4, obj3);
-  obj.children = items1;
-  return closure_7(closure_4, obj);
+  obj7.text = intl3.string(onClose(1114).t.i4jeWR);
+  obj7.onPress = onClose;
+  obj6.children = closure_6(onClose(5056).Button, obj7);
+  items1[3] = closure_6(closure_4, obj6);
+  obj2.children = items1;
+  return closure_7(closure_4, obj2);
 }

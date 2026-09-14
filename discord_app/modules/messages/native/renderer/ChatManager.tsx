@@ -1,5 +1,5 @@
 // discord_app/modules/messages/native/renderer/ChatManager.tsx
-import _modDef1332 from "../../../../../_runtime/metro/01332__.js";
+import _modDef1330 from "../../../../../_runtime/metro/01330__.js";
 import getEmbeddedActivityKeyDefault from "../getEmbeddedActivityKey.tsx";
 import RowGeneratorConstants from "RowGeneratorConstants.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
@@ -158,7 +158,7 @@ prototype["determineChangeType"] = function determineChangeType(forceRender) {
             hasItem = updateMessageIds.has(message.id);
           }
           if (!hasItem) {
-            INSERT = _modDef1332(tmp, message) ? constants.NOOP : constants.UPDATE;
+            INSERT = _modDef1330(tmp, message) ? constants.NOOP : constants.UPDATE;
           }
         }
         INSERT = constants.UPDATE;
@@ -205,7 +205,7 @@ prototype["createChangeset"] = function createChangeset() {
                 if (tmp13.type !== constants2.LOADING) {
                   if (tmp13.changeType !== constants.NOOP) {
                     tmp13.index = num3 + num2;
-                    arr = items.push(tmp13);
+                    let arr7 = items.push(tmp13);
                     sum1 = num + 1;
                     sum = num3 + 1;
                     sum3 = num2;
@@ -226,7 +226,7 @@ prototype["createChangeset"] = function createChangeset() {
                     }
                     tmp13.changeType = constants.UPDATE;
                     tmp13.index = num3 + num2;
-                    let arr1 = items.push(tmp13);
+                    let arr8 = items.push(tmp13);
                     sum1 = num + 1;
                     sum = num3 + 1;
                     sum3 = num2;
@@ -234,10 +234,10 @@ prototype["createChangeset"] = function createChangeset() {
                 }
               }
             }
-            let obj = { changeType: constants.REMOVE, index: null };
+            let obj2 = { changeType: constants.REMOVE, index: null };
             let sum2 = num3 + num2;
-            obj.index = sum2;
-            let arr2 = items.push(obj);
+            obj2.index = sum2;
+            let arr9 = items.push(obj2);
             if (0 < sum2) {
               let tmp22 = items[sum2 - 1];
               let maybeRemove = tmp22.changeType !== constants.NOOP;
@@ -258,14 +258,14 @@ prototype["createChangeset"] = function createChangeset() {
             let tmp9 = self.rows[num3];
             tmp9.changeType = constants.INSERT;
             tmp9.index = num3 + num2;
-            let arr3 = items.push(tmp9);
+            let arr10 = items.push(tmp9);
             sum = num3 + 1;
             sum1 = num;
             sum3 = num2;
           }
         } else {
-          obj = { changeType: constants.REMOVE, index: num3 + num2 };
-          let arr4 = items.push(obj);
+          let obj = { changeType: constants.REMOVE, index: num3 + num2 };
+          let arr11 = items.push(obj);
           sum3 = num2 + 1;
           sum1 = num + 1;
           sum = num3;

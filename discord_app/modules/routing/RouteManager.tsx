@@ -2,7 +2,7 @@
 import GatewayConnectionStore from "../gateway/GatewayConnectionStore.tsx";
 import KeybindRouterStore from "KeybindRouterStore.tsx";
 
-let size = fn;
+let obj2 = fn;
 const Routes = fn(1074).Routes;
 class RouteManager {
   constructor() {
@@ -24,17 +24,17 @@ class RouteManager {
       obj.connected = isConnectedResult;
       if (tmp2) {
         obj.routeChangeCount = 0;
-        obj.executeRouteRewrites(size(1100).getHistory().location, "REPLACE");
-        const obj2 = size(1100);
+        obj2 = obj2(1100);
+        obj.executeRouteRewrites(obj2.getHistory().location, "REPLACE");
       }
     };
     obj.handleRouteChange = function handleRouteChange(pathname, REPLACE) {
       if ("POP" !== REPLACE) {
         if (!obj.executeRouteRewrites(pathname, REPLACE)) {
-          obj = size(12920);
+          obj = obj2(12921);
           if (!obj.convertRouteToNavigation(pathname)) {
-            size(1100).replaceWith(Routes.ME);
-            const tmp2Result = size(1100);
+            obj2(1100).replaceWith(Routes.ME);
+            const tmp2Result = obj2(1100);
           }
         }
       }
@@ -66,7 +66,7 @@ class RouteManager {
       clearTimeout(obj.timer);
       const state = KeybindRouterStore.getState();
       if (null != state.path) {
-        obj = size(1100);
+        obj = obj2(1100);
         obj.transitionTo(state.path);
       }
     };
@@ -76,11 +76,11 @@ class RouteManager {
 const prototype = RouteManager.prototype;
 prototype["initialize"] = function initialize() {
   this.cleanup();
-  const history = size(1100).getHistory();
+  const history = obj2(1100).getHistory();
   this.unlistenHistory = history.listen(this.handleRouteChange);
-  const obj = size(1100);
+  const obj = obj2(1100);
   const state = KeybindRouterStore.getState();
-  state.resetPath(size(1100).getHistory().location.pathname);
+  state.resetPath(obj2(1100).getHistory().location.pathname);
   this.unlistenKeyboardChange = KeybindRouterStore.subscribe(this.handleKeybindRouteChange);
   GatewayConnectionStore.addChangeListener(this.handleConnectionChange);
 };
@@ -88,18 +88,22 @@ prototype["executeRouteRewrites"] = function executeRouteRewrites(location, REPL
   this.routeChangeCount = this.routeChangeCount + 1;
   if (this.routeChangeCount < 10) {
     const rewrites = this.rewrites;
-    let obj = rewrites[Symbol.iterator]();
+    const obj = rewrites[Symbol.iterator]();
     while (obj !== undefined) {
-      let obj2 = size(1100);
+      let tmp11 = obj2;
+      obj2 = obj2(1100);
       let tmp9Result = tmp9(location, REPLACE);
       if (null != tmp9Result) {
-        let tmp11Result = size(12921);
-        obj = { message: "RouteManager.handleRouteChange: A route rewrite is replacing the current route", data: null };
-        obj = { replacePath: tmp9Result.path, previousPath: obj2.getHistory().location.pathname };
-        obj.data = obj;
-        let addBreadcrumbResult = tmp11Result.addBreadcrumb(obj);
-        tmp11Result = size(1100);
-        let replaceWithResult = tmp11Result.replaceWith(tmp9Result.path, tmp9Result.state);
+        let tmp11Result = tmp11(12922);
+        let obj3 = {
+          message: "RouteManager.handleRouteChange: A route rewrite is replacing the current route",
+          data: null,
+        };
+        let obj4 = { replacePath: tmp9Result.path, previousPath: obj2.getHistory().location.pathname };
+        obj3.data = obj4;
+        let addBreadcrumbResult = tmp11Result.addBreadcrumb(obj3);
+        let tmp11Result2 = tmp11(1100);
+        let replaceWithResult = tmp11Result2.replaceWith(tmp9Result.path, tmp9Result.state);
         obj.return();
         let flag = true;
         return true;
@@ -130,8 +134,8 @@ prototype["addRouteChangeListener"] = function addRouteChangeListener(hideLaunch
   const self = this;
   closure_0 = hideLaunchPad;
   if (null != this.unlistenHistory) {
-    hideLaunchPad(size(1100).getHistory().location, "REPLACE");
-    const obj = size(1100);
+    hideLaunchPad(obj2(1100).getHistory().location, "REPLACE");
+    const obj = obj2(1100);
   }
   const listeners = this.listeners;
   listeners.add(hideLaunchPad);
@@ -141,13 +145,14 @@ prototype["addRouteRewriter"] = function addRouteRewriter(voiceRouteRewriter) {
   const self = this;
   closure_0 = voiceRouteRewriter;
   if (null != this.unlistenHistory) {
-    const obj = size(1100);
-    const tmp3 = voiceRouteRewriter(obj.getHistory().location, size(1100).getHistory().action);
+    obj2 = obj2(1100);
+    const tmp3 = voiceRouteRewriter(obj2(1100).getHistory().location, obj2.getHistory().action);
     if (null != tmp3) {
-      size(1100).replaceWith(tmp3.path, tmp3.state);
-      const tmpResult = size(1100);
+      tmp(1100).replaceWith(tmp3.path, tmp3.state);
+      const tmpResult = tmp(1100);
     }
-    const obj2 = size(1100);
+    const obj = obj2(1100);
+    tmp = obj2;
   }
   const rewrites = this.rewrites;
   rewrites.add(voiceRouteRewriter);
@@ -162,16 +167,16 @@ prototype["removeRouteRewriter"] = function removeRouteRewriter(voiceRouteRewrit
   rewrites.delete(voiceRouteRewriter);
 };
 prototype["getHistory"] = function getHistory() {
-  return size(1100).getHistory();
+  return obj2(1100).getHistory();
 };
-size = Object.create(RouteManager.prototype);
-size.rewrites = new Set();
+obj2 = Object.create(RouteManager.prototype);
+obj2.rewrites = new Set();
 let set = new Set();
-size.listeners = new Set();
-size.routeChangeCount = 0;
-size.timer = -1;
-size.connected = false;
-size.handleConnectionChange = function handleConnectionChange() {
+obj2.listeners = new Set();
+obj2.routeChangeCount = 0;
+obj2.timer = -1;
+obj2.connected = false;
+obj2.handleConnectionChange = function handleConnectionChange() {
   const isConnectedResult = GatewayConnectionStore.isConnected();
   let tmp2 = isConnectedResult;
   if (isConnectedResult) {
@@ -180,17 +185,17 @@ size.handleConnectionChange = function handleConnectionChange() {
   obj.connected = isConnectedResult;
   if (tmp2) {
     obj.routeChangeCount = 0;
-    obj.executeRouteRewrites(size(1100).getHistory().location, "REPLACE");
-    const obj2 = size(1100);
+    obj2 = obj2(1100);
+    obj.executeRouteRewrites(obj2.getHistory().location, "REPLACE");
   }
 };
-size.handleRouteChange = function handleRouteChange(pathname, REPLACE) {
+obj2.handleRouteChange = function handleRouteChange(pathname, REPLACE) {
   if ("POP" !== REPLACE) {
     if (!obj.executeRouteRewrites(pathname, REPLACE)) {
-      obj = size(12920);
+      obj = obj2(12921);
       if (!obj.convertRouteToNavigation(pathname)) {
-        size(1100).replaceWith(Routes.ME);
-        const tmp2Result = size(1100);
+        obj2(1100).replaceWith(Routes.ME);
+        const tmp2Result = obj2(1100);
       }
     }
   }
@@ -208,7 +213,7 @@ size.handleRouteChange = function handleRouteChange(pathname, REPLACE) {
   }
   const nextResult = iter.next();
 };
-size.handleKeybindRouteChange = function handleKeybindRouteChange(path) {
+obj2.handleKeybindRouteChange = function handleKeybindRouteChange(path) {
   if (-1 !== obj.timer) {
     const _clearTimeout = clearTimeout;
     clearTimeout(obj.timer);
@@ -218,15 +223,15 @@ size.handleKeybindRouteChange = function handleKeybindRouteChange(path) {
     obj.timer = setTimeout(obj.flushRoute, 200);
   }
 };
-size.flushRoute = function flushRoute() {
+obj2.flushRoute = function flushRoute() {
   clearTimeout(obj.timer);
   const state = KeybindRouterStore.getState();
   if (null != state.path) {
-    obj = size(1100);
+    obj = obj2(1100);
     obj.transitionTo(state.path);
   }
 };
-size = fn(2);
+const size = fn(2);
 let result = size.fileFinishedImporting("modules/routing/RouteManager.tsx");
 
-export default size;
+export default obj2;

@@ -8,12 +8,12 @@ const result = size.fileFinishedImporting("modules/self_mod/shared/ShowSafetyToa
 
 export const showSafetyToast = function showSafetyToast(arg0) {
   ({ id, text } = arg0);
-  const obj = {
+  const obj = ToastActionCreatorsDefault;
+  obj.open({
     key: id,
     icon: _modDef9531,
     IconComponent: ShieldIcon.ShieldIcon,
     iconColor: "text-brand",
     content: text,
-  };
-  obj.open(obj);
+  });
 };

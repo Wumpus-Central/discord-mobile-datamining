@@ -67,7 +67,7 @@ export const useGuildSettingsPickerFeature = function useGuildSettingsPickerFeat
     first = {};
   }
   const merged1 = Object.assign(first);
-  obj = {
+  return {
     title: obj.title(),
     description: obj.description(),
     selectGuildCta: obj.selectGuildCta(),
@@ -86,5 +86,4 @@ export const useGuildSettingsPickerFeature = function useGuildSettingsPickerFeat
       return tmp;
     },
   };
-  return obj;
 };

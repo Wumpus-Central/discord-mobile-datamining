@@ -8,36 +8,42 @@ import TableRow from "../../../../../design/components/TableRow/native/TableRow.
 import native from "../../../../../design/assets/native.tsx";
 import showUserProfileActionSheetDefault from "../../../../user_profile/native/showUserProfileActionSheet.tsx";
 import NoResultsDefault from "../../shared_components/user_list/NoResults.tsx";
-import _modDef16539 from "../../../../../../_runtime/metro/16539__.js";
+import _modDef16541 from "../../../../../../_runtime/metro/16541__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 import GameRelationshipStore from "../../../../game_relationships/GameRelationshipStore.tsx";
 import RelationshipStore from "../../../../../stores/RelationshipStore.tsx";
+
+const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-fn(4636);
-let createStyles = { container: null, requestsButtonContainer: null, emptyContainer: null, buttonContainer: null };
-createStyles = { paddingTop: nativeDefault.space.PX_8, flex: 1 };
-createStyles.container = createStyles;
-createStyles.requestsButtonContainer = {
+const createStyles = fn(4636);
+let obj2 = {
+  container: { paddingTop: nativeDefault.space.PX_8, flex: 1 },
+  requestsButtonContainer: null,
+  emptyContainer: null,
+  buttonContainer: null,
+};
+let obj3 = { paddingTop: nativeDefault.space.PX_8, flex: 1 };
+obj2.requestsButtonContainer = {
   marginHorizontal: nativeDefault.space.PX_16,
   borderRadius: nativeDefault.radii.lg,
   overflow: "hidden",
 };
-createStyles.emptyContainer = { justifyContent: "center", flexGrow: 1 };
-let obj1 = { marginHorizontal: nativeDefault.space.PX_16, borderRadius: nativeDefault.radii.lg, overflow: "hidden" };
-createStyles.buttonContainer = { flexDirection: "row", marginBottom: nativeDefault.space.PX_16, width: "100%" };
-let closure_9 = createStyles.createStyles(createStyles);
+obj2.emptyContainer = { justifyContent: "center", flexGrow: 1 };
+let obj4 = { marginHorizontal: nativeDefault.space.PX_16, borderRadius: nativeDefault.radii.lg, overflow: "hidden" };
+obj2.buttonContainer = { flexDirection: "row", marginBottom: nativeDefault.space.PX_16, width: "100%" };
+let closure_9 = createStyles.createStyles(obj2);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/main_tabs_v2/native/friends/screens/FriendsScreen.tsx");
 
 export default function FriendsScreen() {
-  let obj = navigation(analyticsLocations[7]);
-  navigation = obj.useNavigation();
+  navigation = navigation(analyticsLocations[7]).useNavigation();
   let tmp2 = closure_9();
   importDefault = tmp2;
+  let obj = navigation(analyticsLocations[7]);
   analyticsLocations = require("useAnalyticsLocations")(require("AnalyticsLocation").FRIENDS_LIST).analyticsLocations;
   const bottom = require("useSafeAreaInsets")().bottom;
   const tmp3 = require("useAnalyticsLocations");
@@ -60,15 +66,14 @@ export default function FriendsScreen() {
   let items1 = [analyticsLocations];
   const items2 = [navigation];
   const callback = bottom.useCallback((id) => {
-    let obj = KeyboardManagerUtils;
-    const result = obj.dismissGlobalKeyboard();
-    obj = { userId: id.id, localUser: id, sourceAnalyticsLocations: analyticsLocations };
-    showUserProfileActionSheetDefault(obj);
+    const result = KeyboardManagerUtils.dismissGlobalKeyboard();
+    showUserProfileActionSheetDefault({ userId: id.id, localUser: id, sourceAnalyticsLocations: analyticsLocations });
   }, items1);
   const callback1 = bottom.useCallback((defaultSelectedUserId) => {
-    let obj = { screen: "new-message", params: null };
-    obj = { defaultSelectedUserId: defaultSelectedUserId.id, sourcePage: "Friends Screen" };
-    obj.params = obj;
+    const obj = {
+      screen: "new-message",
+      params: { defaultSelectedUserId: defaultSelectedUserId.id, sourcePage: "Friends Screen" },
+    };
     navigation.navigate("friends", obj);
   }, items2);
   const effect = bottom.useEffect(() => {
@@ -85,8 +90,8 @@ export default function FriendsScreen() {
     }
     const items = [];
     if (tmp2) {
-      let obj = {
-        icon: _modDef16539,
+      const obj = {
+        icon: _modDef16541,
         IconComponent: SendMessageIcon.SendMessageIcon,
         iconVariant: "default",
         label: null,
@@ -96,8 +101,8 @@ export default function FriendsScreen() {
       const intl = util.intl;
       obj.label = intl.string(util.t.fyA115);
       const intl2 = util.intl;
-      obj = { incoming: sum, outgoing };
-      obj.subLabel = intl2.formatToPlainString(util.t["1IEawz"], obj);
+      const obj2 = { incoming: sum, outgoing };
+      obj.subLabel = intl2.formatToPlainString(util.t["1IEawz"], obj2);
       obj.onPress = function onPress() {
         return navigation.navigate("friends", { screen: "requests" });
       };
@@ -106,64 +111,64 @@ export default function FriendsScreen() {
     return items;
   }, items3);
   const memo1 = bottom.useMemo(() => {
-    let obj = { style: closure_1.container, children: null };
+    const obj = { style: closure_1.container, children: null };
     if (incoming + outgoing + spam <= 0) {
       const items = [null];
-      obj = { title: null, fullHeight: true, containerStyle: null, illustration: null, children: null };
+      const obj2 = { title: null, fullHeight: true, containerStyle: null, illustration: null, children: null };
       const intl3 = util.intl;
-      obj.title = intl3.string(util.t["oi+B4p"]);
-      obj.containerStyle = closure_1.emptyContainer;
-      obj.illustration = native.WumpusCouchSpotIllustration;
-      obj = { style: null, children: null };
+      obj2.title = intl3.string(util.t["oi+B4p"]);
+      obj2.containerStyle = closure_1.emptyContainer;
+      obj2.illustration = native.WumpusCouchSpotIllustration;
+      const obj3 = { style: null, children: null };
       const items1 = [closure_1.buttonContainer];
-      const obj1 = { paddingBottom: bottom };
-      items1[1] = obj1;
-      obj.style = items1;
-      const obj2 = { text: null, size: "lg", onPress: null, grow: true };
+      const obj4 = { paddingBottom: bottom };
+      items1[1] = obj4;
+      obj3.style = items1;
+      const obj5 = { text: null, size: "lg", onPress: null, grow: true };
       const intl4 = util.intl;
-      obj2.text = intl4.string(util.t.zIJnA6);
-      obj2.onPress = function onPress() {
+      obj5.text = intl4.string(util.t.zIJnA6);
+      obj5.onPress = function onPress() {
         return navigation.navigate("friends", { screen: "add-friends", params: { sourcePage: "Friends Screen" } });
       };
-      obj.children = React5(components_Button_Button.Button, obj2);
-      obj.children = React5(View, obj);
-      items[1] = React5(NoResultsDefault, obj);
+      obj3.children = React5(components_Button_Button.Button, obj5);
+      obj2.children = React5(View, obj3);
+      items[1] = React5(NoResultsDefault, obj2);
       obj.children = items;
       return tmp(View, obj);
     } else {
-      const obj3 = { style: closure_1.requestsButtonContainer, children: null };
+      const obj6 = { style: closure_1.requestsButtonContainer, children: null };
       let v1IEawz = require;
-      let obj6 = dependencyMap;
-      let obj4 = { start: true, end: true, icon: null, trailing: null, label: null, subLabel: null, onPress: null };
-      const obj5 = { source: _modDef16539 };
-      obj4.icon = React5(TableRow.TableRow.Icon, obj5);
-      obj4.trailing = React5(TableRow.TableRow.Arrow, {});
+      let obj9 = dependencyMap;
+      let obj7 = { start: true, end: true, icon: null, trailing: null, label: null, subLabel: null, onPress: null };
+      const obj8 = { source: _modDef16541 };
+      obj7.icon = React5(TableRow.TableRow.Icon, obj8);
+      obj7.trailing = React5(TableRow.TableRow.Arrow, {});
       const intl5 = util.intl;
-      obj4.label = intl5.string(util.t.fyA115);
+      obj7.label = intl5.string(util.t.fyA115);
       if (incoming + outgoing > 0) {
         const intl2 = v1IEawz(1114).intl;
         v1IEawz = v1IEawz(1114).t["1IEawz"];
-        obj6 = { incoming, outgoing };
-        let formatToPlainStringResult = intl2.formatToPlainString(v1IEawz, obj6);
+        obj9 = { incoming, outgoing };
+        let formatToPlainStringResult = intl2.formatToPlainString(v1IEawz, obj9);
       } else {
         const intl = v1IEawz(1114).intl;
-        const obj7 = { spam: tmp6 };
-        formatToPlainStringResult = intl.formatToPlainString(v1IEawz(1114).t.e6BtLq, obj7);
+        const obj10 = { spam: tmp6 };
+        formatToPlainStringResult = intl.formatToPlainString(v1IEawz(1114).t.e6BtLq, obj10);
       }
-      obj4.subLabel = formatToPlainStringResult;
-      obj4.onPress = function onPress() {
+      obj7.subLabel = formatToPlainStringResult;
+      obj7.onPress = function onPress() {
         if (incoming + outgoing > 0) {
           navigation.navigate("friends", { screen: "requests" });
         } else {
           navigation.navigate("friends", { screen: "spam-requests" });
         }
       };
-      obj4 = React5(TableRow.TableRow, obj4);
-      obj3.children = obj4;
-      React5(View, obj3);
+      obj7 = React5(TableRow.TableRow, obj7);
+      obj6.children = obj7;
+      React5(View, obj6);
     }
   }, items4);
-  obj = { value: analyticsLocations, children: null };
+  let obj3 = { value: analyticsLocations, children: null };
   const items5 = [
     pendingIgnored(require("SearchableUserList"), {
       onSelectUser: callback,
@@ -177,6 +182,6 @@ export default function FriendsScreen() {
     }),
     pendingIgnored(navigation(analyticsLocations[25]).TTIFirstContentfulPaint, { label: "friends" }),
   ];
-  obj.children = items5;
-  return closure_8(navigation(analyticsLocations[8]).AnalyticsLocationProvider, obj);
+  obj3.children = items5;
+  return closure_8(navigation(analyticsLocations[8]).AnalyticsLocationProvider, obj3);
 }

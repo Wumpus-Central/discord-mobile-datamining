@@ -27,8 +27,10 @@ export const handleOpenAgeGatedContentArticle = function handleOpenAgeGatedConte
   obj.openUrl(HelpdeskUtilsDefault.getArticleURL(HelpdeskArticles.TIGGER_PAWTECT_LEARN_MORE));
 };
 export const handleShowAgeVerification = function handleShowAgeVerification() {
-  const obj = { entryPoint: AgeVerificationAnalyticsUtils.AgeVerificationModalEntryPoint.ACCOUNT_AGE_GROUP };
-  const result = obj.showAgeVerificationGetStartedModal(obj);
+  const obj = AgeVerificationActionCreatorsDefault;
+  const result = obj.showAgeVerificationGetStartedModal({
+    entryPoint: AgeVerificationAnalyticsUtils.AgeVerificationModalEntryPoint.ACCOUNT_AGE_GROUP,
+  });
 };
 export const useAgeGroupValueLabel = function useAgeGroupValueLabel() {
   const obj = AgeVerificationUtils;

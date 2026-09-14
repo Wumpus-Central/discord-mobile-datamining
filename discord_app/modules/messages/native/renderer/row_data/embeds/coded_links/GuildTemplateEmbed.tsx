@@ -6,9 +6,9 @@ import GuildTemplatesConstants from "../../../../../../guild_templates/GuildTemp
 import Constants from "../../../../../../instant_invite/Constants.tsx";
 import RowGeneratorStyleSheet from "../../../RowGeneratorStyleSheet.tsx";
 import getEmbedThemeColorsDefault from "../getEmbedThemeColors.tsx";
-import _modDef11938 from "../../../../../../../../_runtime/metro/11938__.js";
 import _modDef11939 from "../../../../../../../../_runtime/metro/11939__.js";
-import _modDef13349 from "../../../../../../../../_runtime/metro/13349__.js";
+import _modDef11940 from "../../../../../../../../_runtime/metro/11940__.js";
+import _modDef13350 from "../../../../../../../../_runtime/metro/13350__.js";
 import GuildTemplateStore from "../../../../../../guild_templates/GuildTemplateStore.tsx";
 import size from "../../../../../../../../_runtime/metro/00002__.js";
 
@@ -25,27 +25,26 @@ export const createGuildTemplateEmbed = function createGuildTemplateEmbed(code, 
   if (null == guildTemplate) {
     return null;
   } else if (guildTemplate.state === GuildTemplateStates.RESOLVING) {
-    let obj = { headerText: null, resolvingGradientEnd: null, resolvingGradientStart: null, type: null };
+    const obj5 = { headerText: null, resolvingGradientEnd: null, resolvingGradientStart: null, type: null };
     const intl3 = util.intl;
-    obj.headerText = intl3.string(util.t.Xj87Yf).toUpperCase();
+    obj5.headerText = intl3.string(util.t.Xj87Yf).toUpperCase();
     ({ resolvingGradientEnd: obj4.resolvingGradientEnd, resolvingGradientStart: obj4.resolvingGradientStart } = colors);
-    obj.type = InviteTypes.GUILD;
+    obj5.type = InviteTypes.GUILD;
     const merged = Object.assign(baseColors);
-    return obj;
+    return obj5;
   } else if (guildTemplate.state === tmp17.EXPIRED) {
-    obj = {};
+    const obj = {};
     const merged1 = Object.assign(baseColors);
     const intl = util.intl;
     obj.headerText = intl.string(util.t.C7ZRNw).toUpperCase();
-    let obj1 = RowGeneratorStyleSheet;
-    obj.titleColor = obj1.processColorOrThrow(nativeDefault.unsafe_rawColors.RED_400);
+    const str = intl.string(util.t.C7ZRNw);
+    obj.titleColor = RowGeneratorStyleSheet.processColorOrThrow(nativeDefault.unsafe_rawColors.RED_400);
     const intl2 = util.intl;
     obj.titleText = intl2.string(util.t.A6MwXE);
-    const str = intl.string(util.t.C7ZRNw);
     if (obj3.isThemeDark(theme)) {
-      let tmpResult = _modDef11938;
+      let tmpResult = _modDef11939;
     } else {
-      tmpResult = _modDef11939;
+      tmpResult = _modDef11940;
     }
     obj.thumbnailUrl = Image.resolveAssetSource(tmpResult).uri;
     obj.thumbnailBackgroundColor = colors.thumbnailBackgroundColor;
@@ -53,27 +52,27 @@ export const createGuildTemplateEmbed = function createGuildTemplateEmbed(code, 
     return obj;
   } else {
     const intl4 = util.intl;
-    obj = { usageCount: guildTemplate.usageCount.toString() };
-    obj1 = {};
+    const obj9 = { usageCount: guildTemplate.usageCount.toString() };
+    const obj10 = {};
     const merged2 = Object.assign(baseColors);
     const intl5 = util.intl;
-    const formatToPlainStringResult = intl4.formatToPlainString(util.t.L8Awgh, obj);
-    obj1.headerText = intl5.string(util.t.kAvFkO).toUpperCase();
-    obj1.headerColor = colors.headerColor;
-    obj1.titleText = guildTemplate.name;
-    obj1.titleColor = colors.titleColor;
-    obj1.subtitle = formatToPlainStringResult;
-    obj1.subtitleColor = colors.subtitleColor;
-    obj1.thumbnailUrl = Image.resolveAssetSource(_modDef13349).uri;
+    const formatToPlainStringResult = intl4.formatToPlainString(util.t.L8Awgh, obj9);
+    obj10.headerText = intl5.string(util.t.kAvFkO).toUpperCase();
+    obj10.headerColor = colors.headerColor;
+    obj10.titleText = guildTemplate.name;
+    obj10.titleColor = colors.titleColor;
+    obj10.subtitle = formatToPlainStringResult;
+    obj10.subtitleColor = colors.subtitleColor;
+    obj10.thumbnailUrl = Image.resolveAssetSource(_modDef13350).uri;
     ({
       acceptLabelGreenColor: obj6.acceptLabelColor,
       acceptLabelGreenBackgroundColor: obj6.acceptLabelBackgroundColor,
     } = colors);
     const intl6 = util.intl;
-    obj1.acceptLabelText = intl6.string(util.t["a3Gl+e"]);
-    obj1.embedCanBeTapped = true;
-    obj1.type = InviteTypes.GUILD;
-    return obj1;
+    obj10.acceptLabelText = intl6.string(util.t["a3Gl+e"]);
+    obj10.embedCanBeTapped = true;
+    obj10.type = InviteTypes.GUILD;
+    return obj10;
   }
   const tmp3 = getEmbedThemeColorsDefault(theme);
 };

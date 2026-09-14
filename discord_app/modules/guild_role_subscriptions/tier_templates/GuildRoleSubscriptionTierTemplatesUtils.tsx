@@ -7,11 +7,13 @@ import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js
 import ChannelStore from "../../../stores/ChannelStore.tsx";
 import GuildRoleSubscriptionsStore from "../GuildRoleSubscriptionsStore.tsx";
 import GuildRoleSubscriptionTierTemplatesStore from "GuildRoleSubscriptionTierTemplatesStore.tsx";
-import allSettled from "../../../../_runtime/04879_allSettled.js";
+import allSettled_mod from "../../../../_runtime/04879_allSettled.js";
+
+const require = globalThis.__r;
 
 require = fn;
 function getUsedTemplateChannelsForGuild(arg0) {
-  let arr = useEditStateStore.getState().editStateIdsForGroup[arg0];
+  const arr = useEditStateStore.getState().editStateIdsForGroup[arg0];
   const listings = useEditStateStore.getState().listings;
   const set = new Set();
   if (null != arr) {
@@ -35,7 +37,7 @@ function getUsedTemplateChannelsForGuild(arg0) {
     let channel = GuildRoleSubscriptionTierTemplatesStore.getChannel(tmp5);
     let obj = channel;
     if (null != channel) {
-      arr = items.push(obj.set("guild_id", arg0));
+      let arr2 = items.push(obj.set("guild_id", arg0));
     }
     continue;
   }
@@ -49,8 +51,8 @@ let closure_14 = async function _createChannelsFromTemplateTierBenefits(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -63,8 +65,8 @@ let closure_14 = async function _createChannelsFromTemplateTierBenefits(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c4 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           closure_2 = tmp2;
           closure_130_0 = closure_0;
@@ -85,8 +87,8 @@ let closure_14 = async function _createChannelsFromTemplateTierBenefits(arg0) {
           if (0 !== items.length) {
             c3 = 1;
             c4 = 1;
-            const obj1 = { value: Promise.allSettled(items), done: false };
-            return obj1;
+            const obj4 = { value: Promise.allSettled(items), done: false };
+            return obj4;
           } else {
             c4 = 3;
           }
@@ -127,7 +129,7 @@ let closure_14 = async function _createChannelsFromTemplateTierBenefits(arg0) {
         });
       }
       c4 = 3;
-      obj = { value, done: true };
+      let obj = { value, done: true };
       return obj;
     } catch (tmp9) {
       c4 = tmp;
@@ -136,9 +138,10 @@ let closure_14 = async function _createChannelsFromTemplateTierBenefits(arg0) {
   }
 };
 const useMemo = fn(19).useMemo;
-const useEditStateStore = fn(15311).useEditStateStore;
+const useEditStateStore = fn(15312).useEditStateStore;
 const GuildFeatures = fn(1074).GuildFeatures;
 const ChannelFlags = fn(1964).ChannelFlags;
+let allSettled = allSettled_mod;
 allSettled = allSettled.shim();
 let closure_12 = {};
 const size = fn(2);
@@ -152,7 +155,7 @@ export const useChannelWithTemplateFallback = function useChannelWithTemplateFal
   const stateFromStores = require("useStateFromStores").useStateFromStores(items, () =>
     ChannelStore.getChannel(closure_0),
   );
-  let obj = require("useStateFromStores");
+  const obj = require("useStateFromStores");
   const items1 = [GuildRoleSubscriptionTierTemplatesStore];
   let stateFromStores1 = require("useStateFromStores").useStateFromStores(items1, () =>
     GuildRoleSubscriptionTierTemplatesStore.getChannel(closure_0),
@@ -164,16 +167,17 @@ export const useChannelWithTemplateFallback = function useChannelWithTemplateFal
   );
   const items3 = [stateFromStores, stateFromStores2];
   let tmp3 = useMemo(() => {
-    let obj = stateFromStores;
     let mergeResult = null;
     if (null != stateFromStores) {
       mergeResult = null;
-      if (obj.isObfuscated()) {
+      if (stateFromStores.isObfuscated()) {
         mergeResult = null;
         if (null != stateFromStores2) {
-          obj = { name: tmp2.name, flags: null };
-          obj.flags = FlagUtilsAll.removeFlag(obj.flags, ChannelFlags.OBFUSCATED);
-          mergeResult = obj.merge(obj);
+          const obj2 = {
+            name: tmp2.name,
+            flags: FlagUtilsAll.removeFlag(stateFromStores.flags, ChannelFlags.OBFUSCATED),
+          };
+          mergeResult = stateFromStores.merge(obj2);
         }
       }
     }
@@ -267,8 +271,7 @@ export const announceDeleteTemplateChannels = function announceDeleteTemplateCha
     arr = getUsedTemplateChannelsForGuild(arg0);
   }
   const item = arr.forEach((channel) => {
-    const obj = { type: "CHANNEL_DELETE", channel };
-    obj.dispatch(obj);
+    DispatcherDefault.dispatch({ type: "CHANNEL_DELETE", channel });
   });
 };
 export const createChannelsFromTemplateTierBenefits = function createChannelsFromTemplateTierBenefits() {
@@ -347,8 +350,8 @@ export const getTemplateTierCreationAnalyticsContext = function getTemplateTierC
                           num4 = num4 + 1;
                         }
                       }
-                      let obj = { templateCategory: templateWithCategory.category, hasChangeFromTemplate: true };
-                      return obj;
+                      const obj2 = { templateCategory: templateWithCategory.category, hasChangeFromTemplate: true };
+                      return obj2;
                     }
                     let num = 0;
                     if (0 < first.additional_perks.length) {
@@ -361,22 +364,22 @@ export const getTemplateTierCreationAnalyticsContext = function getTemplateTierC
                           num = num + 1;
                         }
                       }
-                      obj = { templateCategory: templateWithCategory.category, hasChangeFromTemplate: true };
-                      return obj;
+                      const obj3 = { templateCategory: templateWithCategory.category, hasChangeFromTemplate: true };
+                      return obj3;
                     }
-                    obj = { templateCategory: templateWithCategory.category, hasChangeFromTemplate: false };
+                    const obj = { templateCategory: templateWithCategory.category, hasChangeFromTemplate: false };
                     return obj;
                   }
                 }
-                const obj1 = { templateCategory: templateWithCategory.category, hasChangeFromTemplate: true };
-                return obj1;
+                const obj4 = { templateCategory: templateWithCategory.category, hasChangeFromTemplate: true };
+                return obj4;
               }
             }
           }
         }
       }
-      const obj2 = { templateCategory: templateWithCategory.category, hasChangeFromTemplate: true };
-      return obj2;
+      const obj5 = { templateCategory: templateWithCategory.category, hasChangeFromTemplate: true };
+      return obj5;
     }
   }
 };

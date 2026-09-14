@@ -13,26 +13,33 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-fn(4636);
-let createStyles = { row: null, logOut: null };
-createStyles = {
+const createStyles = fn(4636);
+let obj2 = {
+  row: {
+    height: fn(5763).NAV_BAR_HEIGHT,
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "center",
+    paddingHorizontal: nativeDefault.space.PX_16,
+  },
+  logOut: null,
+};
+let obj3 = {
   height: fn(5763).NAV_BAR_HEIGHT,
   flexDirection: "row",
   alignItems: "center",
   justifyContent: "center",
   paddingHorizontal: nativeDefault.space.PX_16,
 };
-createStyles.row = createStyles;
-createStyles.logOut = { position: "absolute", left: nativeDefault.space.PX_16 };
-let closure_7 = createStyles.createStyles(createStyles);
+obj2.logOut = { position: "absolute", left: nativeDefault.space.PX_16 };
+let closure_7 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/safety_flows/native/tasks/ParentalConsentConnectionHeader.tsx");
 
 export const ParentalConsentConnectionNavbar = function ParentalConsentConnectionNavbar() {
   const tmp = closure_7();
-  let obj = initialize;
   const items = [UserStore];
-  const stateFromStores = obj.useStateFromStores(items, () => {
+  const stateFromStores = initialize.useStateFromStores(items, () => {
     currentUser = currentUser.getCurrentUser();
     let username;
     if (currentUser != null) {
@@ -40,9 +47,9 @@ export const ParentalConsentConnectionNavbar = function ParentalConsentConnectio
     }
     return username;
   });
-  obj = { style: { paddingTop: useSafeAreaInsetsDefault().top }, children: null };
-  obj = { style: tmp.row, children: null };
-  const obj1 = {
+  const obj2 = { style: { paddingTop: useSafeAreaInsetsDefault().top }, children: null };
+  const obj3 = { style: tmp.row, children: null };
+  const obj4 = {
     accessibilityRole: "button",
     variant: "text-md/medium",
     color: "text-link",
@@ -53,20 +60,20 @@ export const ParentalConsentConnectionNavbar = function ParentalConsentConnectio
     children: null,
   };
   const intl = util.intl;
-  obj1.children = intl.string(_modDef2690["3HuGuY"]);
-  const items1 = [hasOwnProperty(Text_Text.Text, obj1)];
+  obj4.children = intl.string(_modDef2690["3HuGuY"]);
+  const items1 = [hasOwnProperty(Text_Text.Text, obj4)];
   let tmp5Result = null != stateFromStores;
   if (tmp5Result) {
-    const obj2 = {
+    const obj5 = {
       accessibilityRole: "header",
       variant: "text-md/semibold",
       color: "mobile-text-heading-primary",
       children: stateFromStores,
     };
-    tmp5Result = hasOwnProperty(Text_Text.Text, obj2);
+    tmp5Result = hasOwnProperty(Text_Text.Text, obj5);
   }
   items1[1] = tmp5Result;
-  obj.children = items1;
-  obj.children = timestampProducer(View, obj);
-  return hasOwnProperty(View, obj);
+  obj3.children = items1;
+  obj2.children = timestampProducer(View, obj3);
+  return hasOwnProperty(View, obj2);
 };

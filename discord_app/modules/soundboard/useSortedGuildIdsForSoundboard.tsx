@@ -4,6 +4,8 @@ import PermissionStore from "../../stores/PermissionStore.tsx";
 import SortedGuildStore from "../../stores/SortedGuildStore.tsx";
 import UserStore from "../../stores/UserStore.tsx";
 
+const require = globalThis.__r;
+
 const require = fn;
 const EMPTY_STRING_SNOWFLAKE_ID = fn(1074).EMPTY_STRING_SNOWFLAKE_ID;
 const Permissions = fn(1085).Permissions;
@@ -22,12 +24,14 @@ export const useSortedGuildIdsForSoundboard = function useSortedGuildIdsForSound
   if (guild_id == null) {
     guild_id = EMPTY_STRING_SNOWFLAKE_ID;
   }
-  let tmpResult = tmp(tmp2[6]);
+  const obj = require("useStateFromStores");
   const items1 = [stateFromStores2];
-  const stateFromStores1 = tmpResult.useStateFromStores(items1, () => stateFromStores2.getFlattenedGuildIds());
-  tmpResult = tmp(tmp2[6]);
+  const stateFromStores1 = require("useStateFromStores").useStateFromStores(items1, () =>
+    stateFromStores2.getFlattenedGuildIds(),
+  );
+  const tmpResult = require("useStateFromStores");
   const items2 = [stateFromStores1];
-  stateFromStores2 = tmpResult.useStateFromStores(items2, () => {
+  stateFromStores2 = require("useStateFromStores").useStateFromStores(items2, () => {
     let canResult = null == guild_id || null == guild_id.guild_id;
     if (!canResult) {
       canResult = PermissionStore.can(Permissions.USE_EXTERNAL_SOUNDS, guild_id);

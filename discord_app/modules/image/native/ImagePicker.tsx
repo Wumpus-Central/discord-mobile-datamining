@@ -17,7 +17,7 @@ export default {
     if ("any" !== mediaType.mediaType) {
       let str = mediaType.mediaType;
     } else {
-      let obj = PlatformUtils;
+      PlatformUtils;
       str = "mixed";
     }
     let selections = mediaType.selections;
@@ -30,16 +30,17 @@ export default {
     }
     obj2 = PlatformUtils;
     const tmp3 = !mediaType.disableNewIOSPicker;
-    const tmp4Result = launchCamera;
-    obj = {};
+    const tmp4Result = ImagePickerUtils;
+    const tmp6 = !ImagePickerUtils.isActionPickSupported();
+    const obj3 = {};
     const merged = Object.assign(mediaType);
-    obj.mediaType = str;
-    obj.presentationStyle = str2;
-    obj.selection = selections;
-    obj.useNewIOSPicker = tmp3;
-    obj.forceGetContent = !tmp4Result.isActionPickSupported();
-    tmp4Result.launchImageLibrary(obj, fn);
-    const tmp6 = !tmp4Result.isActionPickSupported();
+    obj3.mediaType = str;
+    obj3.presentationStyle = str2;
+    obj3.selection = selections;
+    obj3.useNewIOSPicker = tmp3;
+    obj3.forceGetContent = tmp6;
+    launchCamera.launchImageLibrary(obj3, fn);
+    const tmp4Result2 = launchCamera;
   },
   launchImageLibraryAsync(arg0) {
     let mediaType = arg0;
@@ -48,7 +49,7 @@ export default {
       if ("any" !== mediaType.mediaType) {
         let str = tmp.mediaType;
       } else {
-        let obj = PlatformUtils;
+        PlatformUtils;
         str = "mixed";
       }
       let selections = tmp.selections;
@@ -64,16 +65,17 @@ export default {
       };
       obj2 = PlatformUtils;
       const tmp4 = !mediaType.disableNewIOSPicker;
-      const tmp5Result = launchCamera;
-      obj = {};
+      const tmp5Result = ImagePickerUtils;
+      const tmp7 = !ImagePickerUtils.isActionPickSupported();
+      const obj3 = {};
       const merged = Object.assign(tmp);
-      obj.mediaType = str;
-      obj.presentationStyle = str2;
-      obj.selection = selections;
-      obj.useNewIOSPicker = tmp4;
-      obj.forceGetContent = !tmp5Result.isActionPickSupported();
-      tmp5Result.launchImageLibrary(obj, fn);
-      const tmp7 = !tmp5Result.isActionPickSupported();
+      obj3.mediaType = str;
+      obj3.presentationStyle = str2;
+      obj3.selection = selections;
+      obj3.useNewIOSPicker = tmp4;
+      obj3.forceGetContent = tmp7;
+      launchCamera.launchImageLibrary(obj3, fn);
+      const tmp5Result2 = launchCamera;
     });
   },
   launchCamera(arg0, arg1) {

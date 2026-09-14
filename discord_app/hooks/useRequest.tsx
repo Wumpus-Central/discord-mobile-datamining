@@ -29,8 +29,8 @@ export default function useRequest(archiveSubscriptionListing) {
             if (arg0 === 1) {
               throw value;
             } else if (arg0 === 2) {
-              let obj = { value, done: true };
-              return obj;
+              const obj2 = { value, done: true };
+              return obj2;
             } else {
               return { value: "HermesInternal", done: null };
             }
@@ -43,8 +43,8 @@ export default function useRequest(archiveSubscriptionListing) {
                   throw value;
                 } else if (arg0 === 2) {
                   c6 = 3;
-                  obj = { value, done: true };
-                  return obj;
+                  const obj3 = { value, done: true };
+                  return obj3;
                 } else {
                   closure_129_0 = closure_0;
                   c5 = 1;
@@ -57,8 +57,8 @@ export default function useRequest(archiveSubscriptionListing) {
                   throw value;
                 } else if (arg0 === 2) {
                   c6 = 3;
-                  const obj1 = { value, done: true };
-                  return obj1;
+                  const obj4 = { value, done: true };
+                  return obj4;
                 } else {
                   c4 = 2;
                   closure_130_2(null);
@@ -67,8 +67,8 @@ export default function useRequest(archiveSubscriptionListing) {
                   HermesBuiltin.arraySpread(closure_129_0, 0);
                   c5 = 4;
                   c6 = 1;
-                  const obj2 = { value: HermesBuiltin.apply(items, undefined), done: false };
-                  return obj2;
+                  const obj5 = { value: HermesBuiltin.apply(items, undefined), done: false };
+                  return obj5;
                 }
               } else if (2 === tmp9) {
                 c4 = 0;
@@ -98,13 +98,13 @@ export default function useRequest(archiveSubscriptionListing) {
                 c4 = 0;
                 closure_130_1(false);
                 c6 = 3;
-                const obj3 = { value, done: true };
-                return obj3;
+                const obj6 = { value, done: true };
+                return obj6;
               } else {
                 c4 = 0;
                 closure_130_1(false);
                 c6 = 3;
-                obj = { value, done: true };
+                const obj = { value, done: true };
                 return obj;
               }
             } catch (tmp60) {

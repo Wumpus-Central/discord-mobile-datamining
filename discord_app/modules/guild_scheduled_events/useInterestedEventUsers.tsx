@@ -4,6 +4,8 @@ import GuildScheduledEventsConstants from "GuildScheduledEventsConstants.tsx";
 import GuildScheduledEventStore from "GuildScheduledEventStore.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
+const require = globalThis.__r;
+
 const useMemo = _mod19.useMemo;
 let closure_4 = GuildScheduledEventsConstants.GuildScheduledEventUserResponses;
 const result = size.fileFinishedImporting("modules/guild_scheduled_events/useInterestedEventUsers.tsx");

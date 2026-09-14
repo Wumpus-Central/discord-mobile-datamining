@@ -26,13 +26,13 @@ function getDefaultInviteExpiration(arg0) {
     if (id == null) {
       id = React4;
     }
-    let obj = { guildId: id, location: "getDefaultInviteExpiration" };
-    const currentConfig = createExperiment.getCurrentConfig(obj);
+    const obj = { guildId: id, location: "getDefaultInviteExpiration" };
+    const currentConfig = experiment.getCurrentConfig(obj);
     if (currentConfig.defaultMaxAge !== value) {
       let defaultMaxAge = currentConfig.defaultMaxAge;
     } else {
-      obj = { guildId: id, location: "getDefaultInviteExpiration" };
-      defaultMaxAge = createExperiment.getCurrentConfig(obj).defaultMaxAge;
+      const obj2 = { guildId: id, location: "getDefaultInviteExpiration" };
+      defaultMaxAge = experiment1.getCurrentConfig(obj2).defaultMaxAge;
       if (defaultMaxAge == null) {
         defaultMaxAge = tmp6;
       }
@@ -44,8 +44,8 @@ const Constants = fn(1074);
 ({ EMPTY_STRING_SNOWFLAKE_ID: closure_4, GuildFeatures: hasOwnProperty } = Constants);
 const value = InstantInviteUtilsDefault.INVITE_OPTIONS_7_DAYS.value;
 const metroRequire = value;
-fn(4550);
-let createExperiment = {
+let createExperiment = fn(4550);
+let obj2 = {
   kind: "guild",
   id: "2025-08_default_invite_expiration_guild",
   label: "Default Invite Expiration Guild",
@@ -57,10 +57,10 @@ let items = [
   { id: 2, label: "30 days", config: { defaultMaxAge: 2592000 } },
   { id: 3, label: "60 days", config: { defaultMaxAge: 5184000 } },
 ];
-createExperiment.treatments = items;
-createExperiment.createExperiment(createExperiment);
-fn(4550);
-createExperiment = {
+obj2.treatments = items;
+let experiment = createExperiment.createExperiment(obj2);
+createExperiment = fn(4550);
+const obj4 = {
   kind: "guild",
   id: "2026-05_default_invite_expiration_guild_web",
   label: "Default Invite Expiration Guild Web",
@@ -72,14 +72,14 @@ const items1 = [
   { id: 2, label: "30 days", config: { defaultMaxAge: 2592000 } },
   { id: 3, label: "60 days", config: { defaultMaxAge: 5184000 } },
 ];
-createExperiment.treatments = items1;
-createExperiment = createExperiment.createExperiment(createExperiment);
+obj4.treatments = items1;
+let experiment1 = createExperiment.createExperiment(obj4);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/instant_invite/DefaultInviteExpirationExperiments.tsx");
 
 export const DEFAULT_MAX_AGE = value;
-export const DefaultInviteExpirationGuildExperiment = createExperiment;
-export const DefaultInviteExpirationGuildWebExperiment = createExperiment;
+export const DefaultInviteExpirationGuildExperiment = experiment;
+export const DefaultInviteExpirationGuildWebExperiment = experiment1;
 export { getDefaultInviteExpiration };
 export const useDefaultInviteExpiration = function useDefaultInviteExpiration(guildId) {
   guildId = guildId.guildId;
@@ -88,8 +88,8 @@ export const useDefaultInviteExpiration = function useDefaultInviteExpiration(gu
   if (guildId == null) {
     tmp = closure_4;
   }
-  const experiment = createExperiment.useExperiment({ guildId: tmp, location: _location });
-  let experiment1 = createExperiment.useExperiment({ guildId: tmp, location: _location });
+  experiment = experiment.useExperiment({ guildId: tmp, location: _location });
+  experiment1 = experiment1.useExperiment({ guildId: tmp, location: _location });
   let defaultMaxAge;
   if (experiment != null) {
     defaultMaxAge = experiment.defaultMaxAge;
@@ -111,8 +111,8 @@ export const useMaxAgeOptions = function useMaxAgeOptions(arg0) {
   if (guildId == null) {
     guildId = React4;
   }
-  const experiment = createExperiment.useExperiment({ guildId, location: _location });
-  let experiment1 = createExperiment.useExperiment({ guildId, location: _location });
+  experiment = experiment.useExperiment({ guildId, location: _location });
+  experiment1 = experiment1.useExperiment({ guildId, location: _location });
   let defaultMaxAge;
   if (experiment != null) {
     defaultMaxAge = experiment.defaultMaxAge;
@@ -120,13 +120,12 @@ export const useMaxAgeOptions = function useMaxAgeOptions(arg0) {
   if (defaultMaxAge !== value) {
     experiment1 = experiment;
   }
-  let obj = InstantInviteUtilsDefault;
   let defaultMaxAge1;
   if (experiment1 != null) {
     defaultMaxAge1 = experiment1.defaultMaxAge;
   }
-  obj = { includeExperimentalValues: null };
+  const obj2 = { includeExperimentalValues: null };
   const items = [defaultMaxAge1];
-  obj.includeExperimentalValues = items;
-  return obj.getMaxAgeOptions(obj);
+  obj2.includeExperimentalValues = items;
+  return InstantInviteUtilsDefault.getMaxAgeOptions(obj2);
 };

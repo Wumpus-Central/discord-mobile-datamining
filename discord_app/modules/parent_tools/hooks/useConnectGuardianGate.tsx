@@ -5,19 +5,20 @@ import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import FamilyCenterStore from "../FamilyCenterStore.tsx";
 
+const require = globalThis.__r;
+
 require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/parent_tools/hooks/useConnectGuardianGate.tsx");
 
 export const useConnectGuardianGate = function useConnectGuardianGate() {
-  let obj = initialize;
   const items = [FamilyCenterStore];
-  const stateFromStoresObject = obj.useStateFromStoresObject(items, () => ({
+  const stateFromStoresObject = initialize.useStateFromStoresObject(items, () => ({
     linkCode: FamilyCenterStore.getLinkCode(),
     expiresAt: FamilyCenterStore.getLinkCodeExpiresAt(),
   }));
   ({ linkCode, expiresAt } = stateFromStoresObject);
-  [tmp3, require] = _slicedToArray(noop.useState(false), 2);
+  [tmp3, require] = noop.useState(false);
   const tmp4 = _slicedToArray(
     noop.useState(() => {
       const linkCodeExpiresAt = FamilyCenterStore.getLinkCodeExpiresAt();
@@ -63,15 +64,14 @@ export const useConnectGuardianGate = function useConnectGuardianGate() {
   }, []);
   useMountEffectDefault(callback);
   if (tmp3) {
-    obj = { state: "error" };
+    let obj2 = { state: "error" };
   } else if (tmp4[0]) {
     if (null == linkCode) {
-      obj = { state: "error" };
+      const obj3 = { state: "error" };
     }
-    const obj1 = { state: "gate", linkCode, expiresAt, refresh: callback };
-    obj = obj1;
+    const obj4 = { state: "gate", linkCode, expiresAt, refresh: callback };
   } else {
-    obj = { state: "loading" };
+    obj2 = { state: "loading" };
   }
-  return obj;
+  return obj2;
 };

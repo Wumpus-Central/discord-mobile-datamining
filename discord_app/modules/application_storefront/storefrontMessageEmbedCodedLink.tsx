@@ -13,7 +13,7 @@ export const parseStorefrontSkuCodedLink = function parseStorefrontSkuCodedLink(
     return null;
   } else {
     const obj = { applicationId: null, skuId: null };
-    [obj.applicationId, obj.skuId] = _slicedToArray(parts, 2);
+    [obj.applicationId, obj.skuId] = parts;
     return obj;
   }
 };

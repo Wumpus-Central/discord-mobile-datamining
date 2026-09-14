@@ -31,7 +31,7 @@ fn.prototype["now"] = function now() {
     throw new TypeError("Trying to call a non-function");
   }
 };
-let obj = Object.create(fn.prototype);
+let obj2 = Object.create(fn.prototype);
 let TimeSpan;
 class TimeSpan {
   constructor(arg0, arg1, arg2, arg3) {
@@ -92,7 +92,7 @@ prototype["isGreaterOrEqualTo"] = function isGreaterOrEqualTo(timeout) {
 TimeSpan.fromMilliseconds = function fromMilliseconds(timePassed) {
   if (typeof TimeSpan === "function") {
     let num = timePassed;
-    obj = Object.create(tmp.prototype);
+    const obj = Object.create(tmp.prototype);
     obj.milliseconds = 0;
     obj.asMilliseconds = function asMilliseconds() {
       return obj.milliseconds;
@@ -129,7 +129,7 @@ TimeSpan.fromMilliseconds = function fromMilliseconds(timePassed) {
 TimeSpan.fromSeconds = function fromSeconds(arg0) {
   if (typeof TimeSpan === "function") {
     let num = arg0;
-    obj = Object.create(tmp.prototype);
+    const obj = Object.create(tmp.prototype);
     obj.milliseconds = 0;
     obj.asMilliseconds = function asMilliseconds() {
       return obj.milliseconds;
@@ -167,7 +167,7 @@ TimeSpan.fromSeconds = function fromSeconds(arg0) {
 TimeSpan.fromMinutes = function fromMinutes(arg0) {
   if (typeof TimeSpan === "function") {
     let num = arg0;
-    obj = Object.create(tmp.prototype);
+    const obj = Object.create(tmp.prototype);
     obj.milliseconds = 0;
     obj.asMilliseconds = function asMilliseconds() {
       return obj.milliseconds;
@@ -204,7 +204,7 @@ TimeSpan.fromMinutes = function fromMinutes(arg0) {
 TimeSpan.fromHours = function fromHours(arg0) {
   if (typeof TimeSpan === "function") {
     let num = arg0;
-    obj = Object.create(tmp.prototype);
+    const obj = Object.create(tmp.prototype);
     obj.milliseconds = 0;
     obj.asMilliseconds = function asMilliseconds() {
       return obj.milliseconds;
@@ -315,7 +315,7 @@ prototype2["isRunning"] = function isRunning() {
 StopWatch["startNew"] = function startNew() {
   if (typeof StopWatch === "function") {
     const merged = Object.assign({ startTime: "ip", timePassed: false });
-    merged.timestampProducer = obj;
+    merged.timestampProducer = obj2;
     merged.start();
     return merged;
   } else {
@@ -362,7 +362,7 @@ TimeOut["startNew"] = function startNew(timeout) {
     if (typeof StopWatch === "function") {
       const merged = Object.assign({ watch: null });
       const merged1 = Object.assign({ startTime: "ip", timePassed: false });
-      merged1.timestampProducer = obj;
+      merged1.timestampProducer = obj2;
       merged[0] = merged1;
       merged.timeout = timeout;
       merged.start();
@@ -385,8 +385,8 @@ TimeOut["waitFor"] = function waitFor(arg0, arg1) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        obj = { value, done: true };
-        return obj;
+        obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -399,8 +399,8 @@ TimeOut["waitFor"] = function waitFor(arg0, arg1) {
             throw value;
           } else if (arg0 === 2) {
             c3 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
             closure_1 = tmp2;
             closure_0 = tmp5;
@@ -424,23 +424,23 @@ TimeOut["waitFor"] = function waitFor(arg0, arg1) {
             throw value;
           } else if (arg0 === 2) {
             c3 = 3;
-            const obj1 = { value, done: true };
-            return obj1;
+            const obj4 = { value, done: true };
+            return obj4;
           } else if (true === value) {
             c3 = 3;
             return { value: true, done: true };
           } else {
             c2 = 2;
             c3 = 1;
-            const obj2 = { value: closure_1_9(sleep), done: false };
-            return obj2;
+            const obj5 = { value: closure_1_9(sleep), done: false };
+            return obj5;
           }
         } else if (arg0 === 1) {
           c3 = 3;
           throw value;
         } else if (arg0 === 2) {
           c3 = 3;
-          obj = { value, done: true };
+          const obj = { value, done: true };
           return obj;
         } else if (closure_128_1.hasTimedOut()) {
           c3 = 3;
@@ -448,8 +448,8 @@ TimeOut["waitFor"] = function waitFor(arg0, arg1) {
         }
         c2 = 1;
         c3 = 1;
-        const obj3 = { value: closure_129_1(), done: false };
-        return obj3;
+        const obj6 = { value: closure_129_1(), done: false };
+        return obj6;
       } catch (tmp17) {
         c3 = tmp;
         throw tmp17;
@@ -457,7 +457,7 @@ TimeOut["waitFor"] = function waitFor(arg0, arg1) {
     }
   })();
 };
-obj = {
+const TimeUnits = {
   NONE: "NONE",
   SECONDS: "SECONDS",
   MINUTES: "MINUTES",
@@ -467,16 +467,15 @@ obj = {
   MONTHS: "MONTHS",
   YEARS: "YEARS",
 };
-obj = { unit: obj.NONE, max: 0 };
 const items = [
-  obj,
-  { unit: obj.SECONDS, max: 1 },
-  { unit: obj.MINUTES, max: 60 },
-  { unit: obj.HOURS, max: 1440 },
-  { unit: obj.DAYS, max: 44640 },
-  { unit: obj.WEEKS, max: 40320 },
-  { unit: obj.MONTHS, max: 525600 },
-  { unit: obj.YEARS, max: Infinity },
+  { unit: TimeUnits.NONE, max: 0 },
+  { unit: TimeUnits.SECONDS, max: 1 },
+  { unit: TimeUnits.MINUTES, max: 60 },
+  { unit: TimeUnits.HOURS, max: 1440 },
+  { unit: TimeUnits.DAYS, max: 44640 },
+  { unit: TimeUnits.WEEKS, max: 40320 },
+  { unit: TimeUnits.MONTHS, max: 525600 },
+  { unit: TimeUnits.YEARS, max: Infinity },
 ];
 const size = fn(2);
 const result = size.fileFinishedImporting("../discord_common/js/packages/time-utils/TimeUtils.tsx");
@@ -560,13 +559,13 @@ export const MS_PER_DAY = 86400000;
 export const MS_PER_WEEK = 604800000;
 export { now };
 export { ControllableTimeStampProducer };
-export const TimeStampProducer = obj;
+export const TimeStampProducer = obj2;
 export { TimeSpan };
 export { StopWatch };
 export { DurationEnabled };
 export { TimeOut };
 export { sleep };
-export const TimeUnits = obj;
+export { TimeUnits };
 export const convertMinutesToGivenTimeUnit = function convertMinutesToGivenTimeUnit(arg0, unit) {
   if (obj.NONE === unit) {
     return 0;
@@ -592,7 +591,7 @@ export const getTimeUnit = function getTimeUnit(arg0, arg1) {
   importDefault = arg1;
   const tmp2 = findLastIndexDefault(
     items,
-    (unit) => f78887(unit.unit),
+    (unit) => f78890(unit.unit),
     items.findIndex((max) => {
       max = max.max;
       let tmp = max.unit === obj.NONE;
@@ -608,7 +607,7 @@ export const getTimeUnit = function getTimeUnit(arg0, arg1) {
   if (null != tmp2) {
     return tmp2.unit;
   } else {
-    const found = items.find((unit) => f78887(unit.unit));
+    const found = items.find((unit) => f78890(unit.unit));
     let unit = null;
     if (null != found) {
       unit = found.unit;
@@ -630,15 +629,14 @@ export const getTimeUnit = function getTimeUnit(arg0, arg1) {
 export const getTimeAndUnit = function getTimeAndUnit(rounded, items) {
   closure_0 = items;
   if (null == rounded) {
-    obj = { unit: null, time: 0 };
-    obj.unit = obj.NONE;
-    return obj;
+    obj2 = { unit: obj.NONE, time: 0 };
+    return obj2;
   } else {
     closure_0 = rounded;
-    const f78887 = (dependencyMap) => closure_0.includes(dependencyMap);
-    const tmp12 = f78887(4667)(
+    const f78890 = (dependencyMap) => closure_0.includes(dependencyMap);
+    const tmp12 = f78890(4667)(
       items,
-      (unit) => f78887(unit.unit),
+      (unit) => f78890(unit.unit),
       items.findIndex((max) => {
         max = max.max;
         let tmp = max.unit === obj.NONE;
@@ -654,7 +652,7 @@ export const getTimeAndUnit = function getTimeAndUnit(rounded, items) {
     if (null != tmp12) {
       let unit = tmp12.unit;
     } else {
-      const found = items.find((unit) => f78887(unit.unit));
+      const found = items.find((unit) => f78890(unit.unit));
       unit = null;
       if (null != found) {
         unit = found.unit;

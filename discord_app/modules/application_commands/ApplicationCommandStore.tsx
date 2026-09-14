@@ -28,10 +28,10 @@ function getOrCreateChannelState(channelId) {
 }
 function handleSetActiveCommand(arg0) {
   ({ channelId, command, initialValues, source, commandOrigin } = arg0);
-  let optionStates;
+  let obj2;
   ({ section, location: _location, triggerSection, queryLength, sectionName, query, searchResultsPosition } = arg0);
   if (!(channelId in dependencyMap)) {
-    optionStates = {
+    const obj = {
       activeCommand: null,
       activeCommandSection: null,
       activeOptionName: null,
@@ -40,7 +40,7 @@ function handleSetActiveCommand(arg0) {
       initialValues: {},
       commandOrigin: null,
     };
-    dependencyMap[channelId] = optionStates;
+    dependencyMap[channelId] = obj;
   }
   let id;
   if (command != null) {
@@ -67,7 +67,7 @@ function handleSetActiveCommand(arg0) {
     }
     tmp2.commandOrigin = commandOrigin;
     tmp2.source = source;
-    optionStates = {};
+    obj2 = {};
     let options;
     if (command != null) {
       options = command.options;
@@ -75,12 +75,12 @@ function handleSetActiveCommand(arg0) {
     if (null != options) {
       const options1 = command.options;
       const item = options1.forEach((name) => {
-        obj[name.name] = { isActive: false, hasValue: false, lastValidationResult: null, optionValue: null };
+        obj2[name.name] = { isActive: false, hasValue: false, lastValidationResult: null, optionValue: null };
       });
     }
-    tmp2.optionStates = optionStates;
+    tmp2.optionStates = obj2;
     if (null != command) {
-      optionStates = {
+      const obj4 = {
         command,
         location: _location,
         triggerSection,
@@ -90,21 +90,19 @@ function handleSetActiveCommand(arg0) {
         searchResultsPosition,
         source,
       };
-      ApplicationCommandUtils.trackCommandSelected(optionStates);
+      ApplicationCommandUtils.trackCommandSelected(obj4);
     }
     return true;
   }
 }
 function handleUpdateOptionStates(channelId) {
   const tmp = getOrCreateChannelState(channelId.channelId);
-  let obj = {};
+  const obj = {};
   const merged = Object.assign(tmp.optionStates);
   const entries = Object.entries(channelId.changedOptionStates);
   while (tmp4 !== undefined) {
-    let tmp7 = _slicedToArray(tmp5, 2);
-    let first = tmp7[0];
+    [first, arr] = tmp5;
     let tmp9 = first;
-    let arr = tmp7[1];
     if (first in tmp.optionStates) {
       if (undefined !== arr.hasValue) {
         let hasValue = arr.hasValue;
@@ -118,29 +116,36 @@ function handleUpdateOptionStates(channelId) {
         } else {
           isActive = arr2.isActive;
         }
-        obj = { hasValue: true, isActive, lastValidationResult: null, optionValue: null, location: null, length: null };
+        let obj2 = {
+          hasValue: true,
+          isActive,
+          lastValidationResult: null,
+          optionValue: null,
+          location: null,
+          length: null,
+        };
         if (undefined !== arr.lastValidationResult) {
           let lastValidationResult = arr.lastValidationResult;
         } else {
           lastValidationResult = arr2.lastValidationResult;
         }
-        obj.lastValidationResult = lastValidationResult;
+        obj2.lastValidationResult = lastValidationResult;
         let optionValue = arr.optionValue;
         if (optionValue == null) {
           optionValue = arr2.optionValue;
         }
-        obj.optionValue = optionValue;
+        obj2.optionValue = optionValue;
         let _location = arr.location;
         if (_location == null) {
           _location = arr2.location;
         }
-        obj.location = _location;
+        obj2.location = _location;
         let length = arr.length;
         if (length == null) {
           length = arr2.length;
         }
-        obj.length = length;
-        obj[tmp9] = obj;
+        obj2.length = length;
+        obj[tmp9] = obj2;
         if (undefined !== arr.isActive) {
           if (arr.isActive) {
             let tmp29 = null != tmp.activeOptionName;
@@ -148,9 +153,9 @@ function handleUpdateOptionStates(channelId) {
               tmp29 = tmp.activeOptionName !== tmp9;
             }
             if (tmp29) {
-              obj = {};
+              let obj3 = {};
               let merged1 = Object.assign(obj[tmp.activeOptionName]);
-              obj[tmp.activeOptionName] = obj;
+              obj[tmp.activeOptionName] = obj3;
               obj[tmp.activeOptionName].isActive = false;
             }
             tmp.activeOptionName = tmp9;
@@ -379,7 +384,7 @@ prototype["getOption"] = function getOption(arg0, arg1) {
 };
 prototype["getState"] = function getState(arg0) {
   if (!(arg0 in dependencyMap)) {
-    let obj = {
+    const obj = {
       activeCommand: null,
       activeCommandSection: null,
       activeOptionName: null,
@@ -390,9 +395,8 @@ prototype["getState"] = function getState(arg0) {
     };
     dependencyMap[arg0] = obj;
   }
-  obj = {};
   const merged = Object.assign(dependencyMap[arg0]);
-  return obj;
+  return {};
 };
 ApplicationCommandStore.displayName = "ApplicationCommandStore";
 const applicationCommandStore = new ApplicationCommandStore(DispatcherDefault, {
@@ -442,16 +446,15 @@ const applicationCommandStore = new ApplicationCommandStore(DispatcherDefault, {
   APPLICATION_COMMAND_UPDATE_OPTIONS: handleUpdateOptionStates,
   APPLICATION_COMMAND_UPDATE_CHANNEL_STATE: function handleUpdateChannelState(changedOptionStates) {
     ({ channelId, preferredCommandId } = changedOptionStates);
-    let obj = {
+    let flag = handleSetActiveCommand({
       type: "APPLICATION_COMMAND_SET_ACTIVE_COMMAND",
       channelId,
       command: changedOptionStates.command,
       section: changedOptionStates.section,
       location: changedOptionStates.location,
-    };
-    let flag = handleSetActiveCommand(obj);
+    });
     if (!(channelId in dependencyMap)) {
-      obj = {
+      const obj2 = {
         activeCommand: null,
         activeCommandSection: null,
         activeOptionName: null,
@@ -460,7 +463,7 @@ const applicationCommandStore = new ApplicationCommandStore(DispatcherDefault, {
         initialValues: {},
         commandOrigin: null,
       };
-      dependencyMap[channelId] = obj;
+      dependencyMap[channelId] = obj2;
     }
     let flag2 = preferredCommandId !== tmp2.preferredCommandId;
     if (flag2) {

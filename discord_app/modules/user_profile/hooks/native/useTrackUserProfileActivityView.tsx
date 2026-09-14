@@ -2,6 +2,8 @@
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import ContentInventoryOutboxStore from "../../../content_inventory/ContentInventoryOutboxStore.tsx";
 
+const require = globalThis.__r;
+
 const require = fn;
 const noop = fn(19);
 ({ useEffect: c3, useState: closure_4 } = noop);

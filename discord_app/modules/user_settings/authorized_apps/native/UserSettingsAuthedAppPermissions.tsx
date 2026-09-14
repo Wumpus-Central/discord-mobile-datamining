@@ -46,36 +46,49 @@ export default function UserSettingsAuthedAppPermissions(oauth2Token) {
         }
         continue;
       }
-      obj = { variant: "heading-sm/semibold", color: "mobile-text-heading-primary", children: _undefined.name };
-      const children = [closure_1_5(items(_undefined2[7]).Text, obj), , ,];
-      obj = { variant: "heading-sm/semibold", color: "text-default", children: null };
+      const children = [
+        closure_1_5(items(_undefined2[7]).Text, {
+          variant: "heading-sm/semibold",
+          color: "mobile-text-heading-primary",
+          children: _undefined.name,
+        }),
+        ,
+        ,
+      ];
+      let obj3 = { variant: "heading-sm/semibold", color: "text-default", children: null };
       const intl2 = items(_undefined2[6]).intl;
-      obj.children = intl2.string(items(_undefined2[6]).t.xrmhRX);
-      children[1] = closure_1_5(items(_undefined2[7]).Text, obj);
+      obj3.children = intl2.string(items(_undefined2[6]).t.xrmhRX);
+      children[1] = closure_1_5(items(_undefined2[7]).Text, obj3);
       children[2] = items.map((children, index) => {
-        let obj = { style: items.permissionContainer, children: null };
-        obj = { style: items.permissionIcon, size: "xs", color: c1(576).colors.STATUS_POSITIVE };
+        const obj = { style: items.permissionContainer, children: null };
         items = [,];
-        items[0] = closure_2_5(items(4596).CircleCheckIcon, obj);
-        obj = { style: items.permissionText, variant: "text-sm/normal", color: "text-default", children };
-        items[1] = closure_2_5(items(4632).Text, obj);
+        items[0] = closure_2_5(items(4596).CircleCheckIcon, {
+          style: items.permissionIcon,
+          size: "xs",
+          color: c1(576).colors.STATUS_POSITIVE,
+        });
+        items[1] = closure_2_5(items(4632).Text, {
+          style: items.permissionText,
+          variant: "text-sm/normal",
+          color: "text-default",
+          children,
+        });
         obj.children = items;
         return closure_2_6(closure_2_4, obj, index);
       });
       let mapped;
       if (_undefined3 != null) {
         mapped = _undefined3.map((disclosure, index) => {
-          let obj = disclosures;
-          const textForDisclosure = obj.getTextForDisclosure(disclosure);
+          const textForDisclosure = disclosures.getTextForDisclosure(disclosure);
           let tmp4 = null;
           if (null != textForDisclosure) {
-            obj = { style: items.permissionContainer, children: null };
-            obj = { style: items.permissionIcon, disclosure };
-            items = [hasOwnProperty(UserSettingsAuthedApps.DisclosureIcon, obj)];
-            const obj1 = { style: items.permissionText, variant: "text-sm/normal", children: textForDisclosure };
-            items[1] = hasOwnProperty(Text_Text.Text, obj1);
-            obj.children = items;
-            tmp4 = timestampProducer(React4, obj, index + items.length);
+            const obj2 = { style: items.permissionContainer, children: null };
+            const obj3 = { style: items.permissionIcon, disclosure };
+            items = [hasOwnProperty(UserSettingsAuthedApps.DisclosureIcon, obj3)];
+            const obj4 = { style: items.permissionText, variant: "text-sm/normal", children: textForDisclosure };
+            items[1] = hasOwnProperty(Text_Text.Text, obj4);
+            obj2.children = items;
+            tmp4 = timestampProducer(React4, obj2, index + items.length);
           }
           return tmp4;
         });

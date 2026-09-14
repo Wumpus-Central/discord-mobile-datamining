@@ -12,14 +12,13 @@ import UserStore from "../../../../../../stores/UserStore.tsx";
 
 require = fn;
 const GiftIntentType = fn(1373).GiftIntentType;
-fn(4636);
-const createStyles = {
+const createStyles = fn(4636);
+let closure_6 = createStyles.createNativeStyleProperties({
   headerTextColor: nativeDefault.colors.TEXT_STRONG,
   subHeaderTextColor: nativeDefault.colors.TEXT_SUBTLE,
   backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST,
   borderColor: nativeDefault.colors.BORDER_MUTED,
-};
-let closure_6 = createStyles.createNativeStyleProperties(createStyles);
+});
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/messages/native/renderer/row_data/embeds/GiftIntentEmbed.tsx");
 
@@ -35,14 +34,14 @@ export const createGiftIntentEmbed = function createGiftIntentEmbed(message, the
     } else {
       const name = UserUtilsDefault.getName(user);
       if (GiftIntentType.FRIEND_ANNIVERSARY === giftIntentType) {
-        let obj = { headerText: null, subHeaderParts: null };
+        const obj = { headerText: null, subHeaderParts: null };
         const intl = util.intl;
         obj.headerText = intl.string(util.t.CeQIwZ);
-        obj = { text: null };
+        const obj2 = { text: null };
         const intl2 = util.intl;
-        obj = { numberOfYears: tmp12 };
-        obj.text = intl2.formatToPlainString(util.t.PpG27s, obj);
-        const items = [obj];
+        const obj3 = { numberOfYears: tmp12 };
+        obj2.text = intl2.formatToPlainString(util.t.PpG27s, obj3);
+        const items = [obj2];
         obj.subHeaderParts = items;
         let tmp = obj;
       } else {
@@ -63,7 +62,7 @@ export const createGiftIntentEmbed = function createGiftIntentEmbed(message, the
           const _HermesInternal = HermesInternal;
           combined1 = "" + currentUser.getAvatarURL(undefined, 40);
         }
-        const obj1 = {
+        const obj9 = {
           recipientAvatarUrl: combined,
           currentUserAvatarUrl: combined1,
           recipientName: name,
@@ -82,8 +81,8 @@ export const createGiftIntentEmbed = function createGiftIntentEmbed(message, the
           secondaryCtaAccessibilityLabel: null,
         };
         ({ headerText: obj4.headerText, subHeaderParts: obj4.subHeaderParts } = tmp);
-        obj1.recipientUserId = recipientUserId;
-        obj1.giftIntentType = giftIntentType;
+        obj9.recipientUserId = recipientUserId;
+        obj9.giftIntentType = giftIntentType;
         ({
           headerTextColor: obj4.headerTextColor,
           subHeaderTextColor: obj4.subHeaderTextColor,
@@ -91,14 +90,14 @@ export const createGiftIntentEmbed = function createGiftIntentEmbed(message, the
           borderColor: obj4.borderColor,
         } = closure_6(theme));
         const tmp6 = closure_6(theme);
-        obj1.subHeaderIconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef4572);
+        obj9.subHeaderIconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef4572);
         const intl3 = util.intl;
-        obj1.primaryCtaLabel = intl3.string(util.t.ilhtIa);
-        obj1.primaryCtaIconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef8188);
-        obj1.secondaryCtaIconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef8189);
+        obj9.primaryCtaLabel = intl3.string(util.t.ilhtIa);
+        obj9.primaryCtaIconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef8188);
+        obj9.secondaryCtaIconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef8189);
         const intl4 = util.intl;
-        obj1.secondaryCtaAccessibilityLabel = intl4.string(util.t.I5gL2H);
-        return obj1;
+        obj9.secondaryCtaAccessibilityLabel = intl4.string(util.t.I5gL2H);
+        return obj9;
       }
     }
   }

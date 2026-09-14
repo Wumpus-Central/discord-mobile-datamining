@@ -7,41 +7,42 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-fn(4636);
-let createStyles = { tag: null, tagText: null };
-createStyles = {
-  paddingHorizontal: 6,
-  paddingVertical: 2,
-  borderRadius: nativeDefault.radii.round,
-  overflow: "hidden",
-  justifyContent: "center",
-  alignItems: "center",
-  backgroundColor: nativeDefault.unsafe_rawColors.RED_400,
+const createStyles = fn(4636);
+let obj2 = {
+  tag: {
+    paddingHorizontal: 6,
+    paddingVertical: 2,
+    borderRadius: nativeDefault.radii.round,
+    overflow: "hidden",
+    justifyContent: "center",
+    alignItems: "center",
+    backgroundColor: nativeDefault.unsafe_rawColors.RED_400,
+  },
+  tagText: null,
 };
-createStyles.tag = createStyles;
-const obj1 = { textAlign: "center", color: nativeDefault.unsafe_rawColors.WHITE, marginTop: null };
-const PlatformUtils = fn(1150);
+const obj4 = { textAlign: "center", color: nativeDefault.unsafe_rawColors.WHITE, marginTop: null };
+const PlatformUtils = fn(1363);
 let num = 0;
 if (PlatformUtils.isAndroid()) {
   num = -2;
 }
-obj1.marginTop = num;
-createStyles.tagText = obj1;
-let closure_4 = createStyles.createStyles(createStyles);
+obj4.marginTop = num;
+obj2.tagText = obj4;
+let closure_4 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("design/void/LiveTag/native/LiveTag.tsx");
 
 export default function LiveTag(arg0) {
   ({ style, textStyle, allowFontScaling } = arg0);
   const tmp = closure_4();
-  let obj = { style: null, children: null };
+  const obj = { style: null, children: null };
   const items = [tmp.tag, style];
   obj.style = items;
-  obj = { variant: "text-xs/bold", style: null, lineClamp: 1, allowFontScaling, children: null };
+  const obj2 = { variant: "text-xs/bold", style: null, lineClamp: 1, allowFontScaling, children: null };
   const items1 = [tmp.tagText, textStyle];
-  obj.style = items1;
+  obj2.style = items1;
   const intl = util.intl;
-  obj.children = intl.string(util.t.dI3q4h).toUpperCase();
+  obj2.children = intl.string(util.t.dI3q4h).toUpperCase();
   obj.children = jsx(Text_Text.Text, {
     variant: "text-xs/bold",
     style: null,
@@ -49,9 +50,5 @@ export default function LiveTag(arg0) {
     allowFontScaling,
     children: null,
   });
-  return (
-    <View variant="text-xs/bold" style={null} lineClamp={1} allowFontScaling={allowFontScaling}>
-      {null}
-    </View>
-  );
+  return <View style={null}>{null}</View>;
 }

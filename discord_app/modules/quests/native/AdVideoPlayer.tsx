@@ -13,6 +13,8 @@ import noop from "../../../../_runtime/metro/00019__.js";
 import AppStateStore from "../../../stores/native/AppStateStore.tsx";
 import n from "../../../../_runtime/metro/00672__.js";
 
+const require = globalThis.__r;
+
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet, Pressable: metroRequire, ActivityIndicator: closure_7 } = get_ActivityIndicator);
@@ -55,7 +57,7 @@ canSeekForward.__workletHash = 14098132092693;
 canSeekForward.__initData = {
   code: "function canSeekForward_AdVideoPlayerTsx2(currentTime,maxTimestamp,videoDuration,allowUnrestrictedSeeking){const{hasVideoEnded}=this.__closure;return!hasVideoEnded(currentTime,videoDuration)&&(allowUnrestrictedSeeking||currentTime<=maxTimestamp-1);}",
 };
-fn(4636);
+const createStyles = fn(4636);
 let obj = {
   container: null,
   loadingContainer: null,
@@ -74,32 +76,32 @@ let obj = {
   iconDisabled: null,
   controlButton: null,
 };
-obj = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);
-obj.container = obj;
-let obj1 = {};
+obj.container = {};
+let obj4 = {};
 const merged1 = Object.assign(StyleSheet.absoluteFillObject);
-obj1.backgroundColor = nativeDefault.colors.BACKGROUND_BASE_LOWEST;
-obj1.justifyContent = "center";
-obj1.alignItems = "center";
-obj.loadingContainer = obj1;
+obj4.backgroundColor = nativeDefault.colors.BACKGROUND_BASE_LOWEST;
+obj4.justifyContent = "center";
+obj4.alignItems = "center";
+obj.loadingContainer = obj4;
 obj.bufferingSpinner = { position: "absolute" };
-const createStyles = {};
+let obj5 = {};
 const merged2 = Object.assign(StyleSheet.absoluteFillObject);
-createStyles.justifyContent = "center";
-createStyles.alignItems = "center";
-obj.bufferingSpinnerCentered = createStyles;
+obj5.justifyContent = "center";
+obj5.alignItems = "center";
+obj.bufferingSpinnerCentered = obj5;
 obj.video = { height: "100%", width: "100%" };
 obj.videoContainer = { position: "relative", height: "100%", width: "100%" };
-let obj3 = {};
+let obj6 = {};
 const merged3 = Object.assign(StyleSheet.absoluteFillObject);
 const importDefaultResultResult = n(nativeDefault.unsafe_rawColors.BLACK);
-obj3.backgroundColor = n(nativeDefault.unsafe_rawColors.BLACK).alpha(0.5).hex();
-obj3.justifyContent = "center";
-obj3.alignItems = "center";
-obj3.flexDirection = "column";
-obj.controls = obj3;
-const rect1 = {
+let obj2 = {};
+obj6.backgroundColor = n(nativeDefault.unsafe_rawColors.BLACK).alpha(0.5).hex();
+obj6.justifyContent = "center";
+obj6.alignItems = "center";
+obj6.flexDirection = "column";
+obj.controls = obj6;
+let rect1 = {
   flexDirection: "row",
   justifyContent: "flex-end",
   padding: nativeDefault.space.PX_8,
@@ -129,7 +131,7 @@ const rect2 = {
   overflow: "hidden",
 };
 obj.progressContainer = rect2;
-let obj4 = {
+let obj7 = {
   justifyContent: "center",
   alignItems: "center",
   flexGrow: 1,
@@ -146,7 +148,7 @@ obj.progress = {
   elevation: 5,
   shadowColor: nativeDefault.colors.WHITE,
 };
-let obj5 = {
+let obj8 = {
   height: 1,
   backgroundColor: nativeDefault.colors.WHITE,
   shadowOffset: { width: 0, height: 0 },
@@ -156,9 +158,9 @@ let obj5 = {
   shadowColor: nativeDefault.colors.WHITE,
 };
 obj.icon = { color: nativeDefault.colors.TEXT_DEFAULT };
-let obj6 = { color: nativeDefault.colors.TEXT_DEFAULT };
+let obj9 = { color: nativeDefault.colors.TEXT_DEFAULT };
 obj.iconDisabled = { color: nativeDefault.colors.TEXT_SUBTLE };
-let obj7 = { color: nativeDefault.colors.TEXT_SUBTLE };
+let obj10 = { color: nativeDefault.colors.TEXT_SUBTLE };
 obj.controlButton = { padding: nativeDefault.space.PX_8 };
 let closure_17 = createStyles.createStyles(obj);
 let closure_18 = {
@@ -170,7 +172,7 @@ let __initData = {
 let closure_20 = {
   code: "function AdVideoPlayerTsx5(){const{withTiming,progressSharedValue,timingFast}=this.__closure;return{width:withTiming(progressSharedValue.get()*100+\"%\",timingFast,'animate-always')};}",
 };
-let obj8 = { padding: nativeDefault.space.PX_8 };
+let obj11 = { padding: nativeDefault.space.PX_8 };
 let size = fn(2);
 let result = size.fileFinishedImporting("modules/quests/native/AdVideoPlayer.tsx");
 
@@ -275,28 +277,26 @@ export const AdVideoPlayer = noop.memo((initialProgress) => {
   closure_40 = undefined;
   let callback17;
   let tmp = closure_17();
-  let obj = onLoad;
   if (videoRef == null) {
     videoRef = onLoad.useRef(null);
   }
-  const tmp3 = onLoadStart(obj.useState(num), 2);
+  const tmp3 = onLoadStart(onLoad.useState(num), 2);
   first = tmp3[0];
   closure_17 = tmp3[1];
-  obj = {};
   let merged = Object.assign(initialProgress);
-  const tmp6 = onLoadStart(obj.useState(obj), 2);
+  const tmp6 = onLoadStart(onLoad.useState({}), 2);
   first1 = tmp6[0];
   __initData = tmp6[1];
   const tmp9 = flag2;
-  const tmp10 = onLoadStart(obj.useState(onBuffer(flag2[10]).PlayerState.LOADING), 2);
+  const tmp10 = onLoadStart(onLoad.useState(onBuffer(flag2[10]).PlayerState.LOADING), 2);
   first2 = tmp10[0];
   closure_21 = tmp10[1];
-  const tmp12 = onLoadStart(obj.useState(false), 2);
+  const tmp12 = onLoadStart(onLoad.useState(false), 2);
   first3 = tmp12[0];
   closure_23 = tmp12[1];
-  obj.useRef(null);
-  obj.useRef(0);
-  obj.useRef([]);
+  onLoad.useRef(null);
+  onLoad.useRef(0);
+  onLoad.useRef([]);
   let items = [onPlayerStateChange];
   callback = obj.useCallback((arg0) => {
     closure_21(arg0);
@@ -316,8 +316,7 @@ export const AdVideoPlayer = noop.memo((initialProgress) => {
     }
   }
   closure_28 = tmp15;
-  let tmp8Result = tmp8(tmp9[11]);
-  sharedValue = tmp8Result.useSharedValue(false);
+  sharedValue = onBuffer(tmp9[11]).useSharedValue(false);
   shouldShowControls = function shouldShowControls() {
     let tmp = first3;
     if (first3) {
@@ -341,18 +340,26 @@ export const AdVideoPlayer = noop.memo((initialProgress) => {
     }
     return tmp;
   };
-  obj = {
+  let obj2 = {};
+  const tmp8Result = onBuffer(tmp9[11]);
+  shouldShowControls.__closure = {
     hasLoaded: first3,
     hideControls: flag8,
     showControls: sharedValue,
     playerState: first2,
-    PlayerState: tmp8(tmp9[10]).PlayerState,
+    PlayerState: onBuffer(tmp9[10]).PlayerState,
     isVideoEnded: tmp15,
   };
-  shouldShowControls.__closure = obj;
   shouldShowControls.__workletHash = 8094403036162;
   shouldShowControls.__initData = first1;
-  tmp8Result = tmp8(tmp9[11]);
+  const obj3 = {
+    hasLoaded: first3,
+    hideControls: flag8,
+    showControls: sharedValue,
+    playerState: first2,
+    PlayerState: onBuffer(tmp9[10]).PlayerState,
+    isVideoEnded: tmp15,
+  };
   class Se {
     constructor() {
       tmp = shouldShowControls();
@@ -363,15 +370,16 @@ export const AdVideoPlayer = noop.memo((initialProgress) => {
       if (tmp) {
         num = 1;
       }
-      obj = { opacity: obj.withSpring(num, tmp2(tmp3[13]).SUBTLE_SPRING), pointerEvents: null };
+      obj1 = { opacity: obj.withSpring(num, tmp2(tmp3[13]).SUBTLE_SPRING), pointerEvents: null };
       str = "none";
       if (tmp) {
         str = "auto";
       }
-      obj.pointerEvents = str;
-      return obj;
+      obj1.pointerEvents = str;
+      return obj1;
     }
   }
+  const tmp8Result5 = onBuffer(tmp9[11]);
   Se.__closure = {
     shouldShowControls,
     withSpring: onBuffer(tmp9[12]).withSpring,
@@ -379,15 +387,15 @@ export const AdVideoPlayer = noop.memo((initialProgress) => {
   };
   Se.__workletHash = 311315682972;
   Se.__initData = __initData;
-  const animatedStyle = tmp8Result.useAnimatedStyle(Se);
-  const obj1 = {
+  const animatedStyle = tmp8Result5.useAnimatedStyle(Se);
+  const obj4 = {
     shouldShowControls,
     withSpring: onBuffer(tmp9[12]).withSpring,
     SUBTLE_SPRING: onBuffer(tmp9[13]).SUBTLE_SPRING,
   };
   const shouldShowControlsResult = shouldShowControls();
   sharedValue1 = onBuffer(tmp9[11]).useSharedValue(0);
-  const tmp8Result1 = onBuffer(tmp9[11]);
+  const tmp8Result6 = onBuffer(tmp9[11]);
   class Pe {
     constructor() {
       obj = { width: null };
@@ -397,7 +405,7 @@ export const AdVideoPlayer = noop.memo((initialProgress) => {
       return obj;
     }
   }
-  const tmp8Result2 = onBuffer(tmp9[11]);
+  const tmp8Result7 = onBuffer(tmp9[11]);
   Pe.__closure = {
     withTiming: onBuffer(tmp9[14]).withTiming,
     progressSharedValue: sharedValue1,
@@ -405,7 +413,7 @@ export const AdVideoPlayer = noop.memo((initialProgress) => {
   };
   Pe.__workletHash = 11793601648786;
   Pe.__initData = first2;
-  const animatedStyle1 = tmp8Result2.useAnimatedStyle(Pe);
+  const animatedStyle1 = tmp8Result7.useAnimatedStyle(Pe);
   closure_32 = obj.useRef(-1);
   let items1 = [sharedValue];
   const callback1 = obj.useCallback((arg0) => {
@@ -431,8 +439,12 @@ export const AdVideoPlayer = noop.memo((initialProgress) => {
       duration,
     }));
   }, []);
-  let tmp2Result = tmp2(obj.useState(false), 2);
-  [tmp27, c34] = tmp2Result;
+  const obj5 = {
+    withTiming: onBuffer(tmp9[14]).withTiming,
+    progressSharedValue: sharedValue1,
+    timingFast: onBuffer(tmp9[15]).timingFast,
+  };
+  [tmp27, c34] = onLoadStart(onLoad.useState(false), 2);
   const items2 = [onReadyForDisplay];
   const items3 = [flag, , ,];
   ({ duration: arr4[1], maxTimestampSec: arr4[2] } = first1);
@@ -548,7 +560,7 @@ export const AdVideoPlayer = noop.memo((initialProgress) => {
   }, items6);
   const items7 = [callback6];
   const callback7 = obj.useCallback(() => callback6(), items7);
-  obj.useRef(false);
+  onLoad.useRef(false);
   const items8 = [first2, callback, onPausePlayback];
   callback8 = obj.useCallback(() => {
     closure_37.current = false;
@@ -642,25 +654,21 @@ export const AdVideoPlayer = noop.memo((initialProgress) => {
       if (current == null) {
         current = sharedValue1.get() * first;
       }
-      current = ref4.current;
-      current.push(current);
+      const current1 = ref4.current;
+      current1.push(current);
       callback4(current + 10);
     }
   }, items13);
-  let obj2 = {
-    withTiming: onBuffer(tmp9[14]).withTiming,
-    progressSharedValue: sharedValue1,
-    timingFast: onBuffer(tmp9[15]).timingFast,
-  };
+  const tmp2Result = onLoadStart(onLoad.useState(false), 2);
   const items15 = [sharedValue1, callback2, onProgress];
   const callback1Result = callback1(
-    obj.useCallback(() => {
+    onLoad.useCallback(() => {
       let current = ref2.current;
       if (current == null) {
         current = sharedValue1.get() * first;
       }
-      current = ref4.current;
-      current.push(current);
+      const current1 = ref4.current;
+      current1.push(current);
       callback4(current - 10);
       if (first2 === AdsVideoTypes.PlayerState.ENDED) {
         callback(AdsVideoTypes.PlayerState.PLAYING);
@@ -739,8 +747,8 @@ export const AdVideoPlayer = noop.memo((initialProgress) => {
     tmp55 = externallyPaused;
   }
   importDefault = obj.useRef(false);
-  tmp2Result = tmp2(obj.useState(false), 2);
-  [tmp57, flag2] = tmp2Result;
+  const tmp8Result8 = onBuffer(tmp9[17]);
+  [tmp57, flag2] = onLoadStart(onLoad.useState(false), 2);
   const items21 = [onBuffer];
   callback17 = obj.useCallback((current) => {
     flag2(current);
@@ -785,17 +793,17 @@ export const AdVideoPlayer = noop.memo((initialProgress) => {
     tmp63 = null != rect;
   }
   if (tmp63) {
-    const obj3 = { paddingRight: null, paddingLeft: null };
+    const obj6 = { paddingRight: null, paddingLeft: null };
     let _Math = Math;
-    obj3.paddingRight = Math.max(rect.right, flag8.right);
+    obj6.paddingRight = Math.max(rect.right, flag8.right);
     let _Math2 = Math;
-    obj3.paddingLeft = Math.max(rect.left, flag8.left);
-    tmp63 = obj3;
+    obj6.paddingLeft = Math.max(rect.left, flag8.left);
+    tmp63 = obj6;
   }
-  const obj4 = { style: null, accessible: false, children: null };
+  const obj7 = { style: null, accessible: false, children: null };
   const items25 = [tmp.container, style];
-  obj4.style = items25;
-  const obj5 = {
+  obj7.style = items25;
+  const obj8 = {
     style: null,
     onPress: callback10,
     accessible: !shouldShowControlsResult,
@@ -803,13 +811,13 @@ export const AdVideoPlayer = noop.memo((initialProgress) => {
     children: null,
   };
   const items26 = [tmp.videoContainer];
-  obj5.style = items26;
+  obj8.style = items26;
   const intl = tmp8(tmp9[21]).intl;
   const t = tmp8(tmp9[21]).t;
-  obj5.accessibilityLabel = intl.string(tmp55 ? t.R3aFPe : t.fTMEUi);
+  obj8.accessibilityLabel = intl.string(tmp55 ? t.R3aFPe : t.fTMEUi);
   let tmp66Result = first2 !== tmp8(tmp9[10]).PlayerState.ERRORED;
   if (tmp66Result) {
-    const obj6 = {
+    const obj9 = {
       mixWithOthers: "inherit",
       httpEngine,
       automaticallyWaitsToMinimizeStalling,
@@ -838,7 +846,7 @@ export const AdVideoPlayer = noop.memo((initialProgress) => {
       onLayout: onVideoLayout,
       resizeMode: "contain",
     };
-    tmp66Result = tmp66(repeat, obj6);
+    tmp66Result = tmp66(repeat, obj9);
   }
   const items27 = [tmp66Result, , , , ,];
   let renderCaptionsResult;
@@ -848,29 +856,29 @@ export const AdVideoPlayer = noop.memo((initialProgress) => {
   items27[1] = renderCaptionsResult;
   if (!tmp57) {
     items27[2] = tmp57;
-    tmp66Result = !tmp27;
+    let tmp66Result6 = !tmp27;
     if (!tmp27) {
-      const obj7 = { style: tmp.loadingContainer, children: tmp66(onSeek, { animating: true }) };
-      tmp66Result = tmp66(tmp67, obj7);
+      const obj10 = { style: tmp.loadingContainer, children: tmp66(onSeek, { animating: true }) };
+      tmp66Result6 = tmp66(tmp67, obj10);
     }
-    items27[3] = tmp66Result;
-    const obj8 = { style: null, accessible: false, children: null };
+    items27[3] = tmp66Result6;
+    const obj11 = { style: null, accessible: false, children: null };
     const items28 = [tmp.controls, animatedStyle];
-    obj8.style = items28;
+    obj11.style = items28;
     let tmp68Result = flag3;
     if (!flag3) {
       tmp68Result = flag4;
     }
     if (tmp68Result) {
-      const obj9 = { style: null, children: null };
+      const obj12 = { style: null, children: null };
       const items29 = [, ,];
       ({ controlsTopBottom: arr31[0], controlsTop: arr31[1] } = tmp);
       items29[2] = tmp63;
-      obj9.style = items29;
+      obj12.style = items29;
       if (!flag3) {
         const items30 = [flag3];
         if (flag4) {
-          const obj10 = {
+          const obj13 = {
             accessibilityRole: "button",
             accessibilityLabel: null,
             onPress: null,
@@ -878,18 +886,18 @@ export const AdVideoPlayer = noop.memo((initialProgress) => {
             children: null,
           };
           const intl3 = tmp8(tmp9[21]).intl;
-          obj10.accessibilityLabel = intl3.string(tmp8(tmp9[21]).t.KCzjTi);
-          obj10.onPress = onOpenTranscript;
-          obj10.style = tmp.controlButton;
-          const obj11 = { color: tmp.iconDisabled.color };
-          obj10.children = tmp66(tmp8(tmp9[24]).TranscriptOutlineIcon, obj11);
-          flag4 = tmp66(tmp8(tmp9[22]).PressableOpacity, obj10);
+          obj13.accessibilityLabel = intl3.string(tmp8(tmp9[21]).t.KCzjTi);
+          obj13.onPress = onOpenTranscript;
+          obj13.style = tmp.controlButton;
+          const obj14 = { color: tmp.iconDisabled.color };
+          obj13.children = tmp66(tmp8(tmp9[24]).TranscriptOutlineIcon, obj14);
+          flag4 = tmp66(tmp8(tmp9[22]).PressableOpacity, obj13);
         }
         items30[1] = flag4;
-        obj9.children = items30;
-        tmp68Result = tmp68(tmp67, obj9);
+        obj12.children = items30;
+        tmp68Result = tmp68(tmp67, obj12);
       } else {
-        const obj12 = {
+        const obj15 = {
           accessibilityRole: "button",
           accessibilityLabel: null,
           onPress: null,
@@ -897,24 +905,24 @@ export const AdVideoPlayer = noop.memo((initialProgress) => {
           children: null,
         };
         const intl2 = tmp8(tmp9[21]).intl;
-        obj12.accessibilityLabel = intl2.string(tmp8(tmp9[21]).t.bDSZO1);
-        obj12.onPress = onToggleCaptions;
-        obj12.style = tmp.controlButton;
+        obj15.accessibilityLabel = intl2.string(tmp8(tmp9[21]).t.bDSZO1);
+        obj15.onPress = onToggleCaptions;
+        obj15.style = tmp.controlButton;
         if (captionsEnabled) {
           let color = tmp.icon.color;
         } else {
           color = tmp.iconDisabled.color;
         }
-        const obj13 = { color };
-        obj12.children = tmp66(tmp8(tmp9[23]).ClosedCaptionsOutlineIcon, obj13);
-        tmp66(tmp8(tmp9[22]).PressableOpacity, obj12);
+        const obj16 = { color };
+        obj15.children = tmp66(tmp8(tmp9[23]).ClosedCaptionsOutlineIcon, obj16);
+        tmp66(tmp8(tmp9[22]).PressableOpacity, obj15);
       }
     }
     const items31 = [tmp68Result, ,];
-    const obj14 = { style: tmp.controlsMiddle, children: null };
-    let tmp66Result2 = flag7;
+    const obj17 = { style: tmp.controlsMiddle, children: null };
+    let tmp66Result8 = flag7;
     if (flag7) {
-      const obj15 = {
+      const obj18 = {
         disabled: first2 === tmp8(tmp9[10]).PlayerState.ERRORED,
         accessibilityRole: "button",
         accessibilityLabel: null,
@@ -922,19 +930,19 @@ export const AdVideoPlayer = noop.memo((initialProgress) => {
         children: null,
       };
       const intl4 = tmp8(tmp9[21]).intl;
-      obj15.accessibilityLabel = intl4.string(tmp8(tmp9[21]).t.r9s3Uv);
-      obj15.onPress = callback1Result;
+      obj18.accessibilityLabel = intl4.string(tmp8(tmp9[21]).t.r9s3Uv);
+      obj18.onPress = callback1Result;
       const size = { color: tmp.icon.color, width: 16, height: 16 };
-      obj15.children = tmp66(tmp8(tmp9[26]).SkipBackwardIcon, size);
-      tmp66Result2 = tmp66(tmp8(tmp9[25]).VideoQuestPlayerControlButton, obj15);
+      obj18.children = tmp66(tmp8(tmp9[26]).SkipBackwardIcon, size);
+      tmp66Result8 = tmp66(tmp8(tmp9[25]).VideoQuestPlayerControlButton, obj18);
     }
-    const items32 = [tmp66Result2, ,];
+    const items32 = [tmp66Result8, ,];
     if (!tmp15) {
       if (first2 !== tmp8(tmp9[10]).PlayerState.ERRORED) {
         const t2 = tmp8(tmp9[21]).t;
         let K0e7M9 = tmp55 ? t2.R3aFPe : t2.fTMEUi;
       }
-      const obj16 = {
+      const obj19 = {
         accessibilityRole: "button",
         accessibilityLabel: tmp80(K0e7M9),
         onPress: callback7,
@@ -947,12 +955,12 @@ export const AdVideoPlayer = noop.memo((initialProgress) => {
           } else {
             PauseIcon = tmp8(tmp9[29]).PauseIcon;
           }
-          let tmp66Result3 = tmp66(PauseIcon, { size: "lg" });
+          let tmp66Result9 = tmp66(PauseIcon, { size: "lg" });
         }
-        obj16.children = tmp66Result3;
-        items32[1] = tmp66(tmp8(tmp9[25]).VideoQuestPlayerControlButton, obj16);
+        obj19.children = tmp66Result9;
+        items32[1] = tmp66(tmp8(tmp9[25]).VideoQuestPlayerControlButton, obj19);
         if (flag7) {
-          const obj17 = {
+          const obj20 = {
             disabled: tmp39,
             accessibilityRole: "button",
             accessibilityLabel: null,
@@ -960,22 +968,22 @@ export const AdVideoPlayer = noop.memo((initialProgress) => {
             children: null,
           };
           const intl5 = tmp8(tmp9[21]).intl;
-          obj17.accessibilityLabel = intl5.string(tmp8(tmp9[21]).t.zWDcNP);
-          obj17.onPress = callback1Result1;
+          obj20.accessibilityLabel = intl5.string(tmp8(tmp9[21]).t.zWDcNP);
+          obj20.onPress = callback1Result1;
           const size1 = { color: tmp.icon.color, width: 16, height: 16 };
-          obj17.children = tmp66(tmp8(tmp9[30]).SkipForwardIcon, size1);
-          flag7 = tmp66(tmp8(tmp9[25]).VideoQuestPlayerControlButton, obj17);
+          obj20.children = tmp66(tmp8(tmp9[30]).SkipForwardIcon, size1);
+          flag7 = tmp66(tmp8(tmp9[25]).VideoQuestPlayerControlButton, obj20);
         }
         items32[2] = flag7;
-        obj14.children = items32;
-        items31[1] = tmp68(tmp67, obj14);
+        obj17.children = items32;
+        items31[1] = tmp68(tmp67, obj17);
         if (flag5) {
-          const obj18 = { style: null, children: null };
+          const obj21 = { style: null, children: null };
           const items33 = [, ,];
           ({ controlsTopBottom: arr35[0], controlsBottom: arr35[1] } = tmp);
           items33[2] = tmp63;
-          obj18.style = items33;
-          const obj19 = {
+          obj21.style = items33;
+          const obj22 = {
             accessibilityRole: "button",
             accessibilityLabel: null,
             onPress: null,
@@ -983,30 +991,30 @@ export const AdVideoPlayer = noop.memo((initialProgress) => {
             children: null,
           };
           const intl6 = tmp8(tmp9[21]).intl;
-          obj19.accessibilityLabel = intl6.string(tmp8(tmp9[21]).t.vKZT5t);
-          obj19.onPress = onToggleFullscreen;
-          obj19.style = tmp.controlButton;
-          obj19.children = tmp66(tmp8(tmp9[31]).FullscreenEnterIcon, {});
-          obj18.children = tmp66(tmp8(tmp9[22]).PressableOpacity, obj19);
-          flag5 = tmp66(tmp67, obj18);
+          obj22.accessibilityLabel = intl6.string(tmp8(tmp9[21]).t.vKZT5t);
+          obj22.onPress = onToggleFullscreen;
+          obj22.style = tmp.controlButton;
+          obj22.children = tmp66(tmp8(tmp9[31]).FullscreenEnterIcon, {});
+          obj21.children = tmp66(tmp8(tmp9[22]).PressableOpacity, obj22);
+          flag5 = tmp66(tmp67, obj21);
         }
         items31[2] = flag5;
-        obj8.children = items31;
-        items27[4] = tmp68(tmp62(tmp9[11]).View, obj8);
+        obj11.children = items31;
+        items27[4] = tmp68(tmp62(tmp9[11]).View, obj11);
         if (flag6) {
-          const obj20 = { style: tmp.progressContainer, children: null };
-          const obj21 = { style: null };
+          const obj23 = { style: tmp.progressContainer, children: null };
+          const obj24 = { style: null };
           const items34 = [tmp.progress, animatedStyle1];
-          obj21.style = items34;
-          obj20.children = tmp66(tmp62(tmp9[11]).View, obj21);
-          flag6 = tmp66(tmp67, obj20);
+          obj24.style = items34;
+          obj23.children = tmp66(tmp62(tmp9[11]).View, obj24);
+          flag6 = tmp66(tmp67, obj23);
         }
         items27[5] = flag6;
-        obj5.children = items27;
-        obj4.children = tmp68(onProgress, obj5);
-        return tmp66(tmp67, obj4);
+        obj8.children = items27;
+        obj7.children = tmp68(onProgress, obj8);
+        return tmp66(tmp67, obj7);
       }
-      tmp66Result3 = tmp66(tmp8(tmp9[27]).RetryIcon, { size: "lg" });
+      tmp66Result9 = tmp66(tmp8(tmp9[27]).RetryIcon, { size: "lg" });
     }
     K0e7M9 = tmp8(tmp9[21]).t.K0e7M9;
   } else {
@@ -1020,7 +1028,7 @@ export const AdVideoPlayer = noop.memo((initialProgress) => {
         if (num4 == null) {
           num4 = 0;
         }
-        rect = { top: num4, left: null };
+        let rect1 = { top: num4, left: null };
         let num5;
         if (contentInsets != null) {
           num5 = contentInsets.left;
@@ -1028,15 +1036,15 @@ export const AdVideoPlayer = noop.memo((initialProgress) => {
         if (num5 == null) {
           num5 = 0;
         }
-        rect.left = num5;
+        rect1.left = num5;
       }
-      const obj22 = { animating: true, style: null, color: null };
-      items35[1] = rect;
-      obj22.style = items35;
+      const obj25 = { animating: true, style: null, color: null };
+      items35[1] = rect1;
+      obj25.style = items35;
       items35 = tmp62(tmp9[6]).unsafe_rawColors.WHITE;
-      obj22.color = items35;
-      tmp66(tmp73, obj22);
+      obj25.color = items35;
+      tmp66(tmp73, obj25);
     }
-    rect = tmp.bufferingSpinnerCentered;
+    rect1 = tmp.bufferingSpinnerCentered;
   }
 });

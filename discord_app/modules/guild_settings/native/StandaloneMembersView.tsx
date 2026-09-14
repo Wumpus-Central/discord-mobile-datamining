@@ -6,6 +6,8 @@ import BanConfirmDefault from "../../guild_moderation/native/BanConfirm.tsx";
 import GuildSettingsModalMembersWithTabsDefault from "GuildSettingsModalMembersWithTabs.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
+const require = globalThis.__r;
+
 require = fn;
 const jsx = fn(21).jsx;
 const constants = { MAIN: "MAIN", MEMBER_EDIT: "MEMBER_EDIT", MEMBER_KICK: "MEMBER_KICK", MEMBER_BAN: "MEMBER_BAN" };
@@ -14,66 +16,58 @@ const result = size.fileFinishedImporting("modules/guild_settings/native/Standal
 
 export default function StandaloneMembersView(guildId) {
   guildId = guildId.guildId;
-  let contentContainerStyle;
-  contentContainerStyle = guildId(contentContainerStyle[2]);
-  importDefault = contentContainerStyle.useNavigation();
+  let obj2;
+  importDefault = guildId(obj2[2]).useNavigation();
   const items = [guildId];
   const effect = noop.useEffect(() => {
     GuildSettingsActionCreatorsDefault.init(guildId);
   }, items);
-  contentContainerStyle = { contentContainerStyle: null };
-  contentContainerStyle = { paddingBottom: 16 + require("useSafeAreaInsets")().bottom };
-  contentContainerStyle.contentContainerStyle = contentContainerStyle;
-  const obj1 = {};
-  const obj2 = {
-    headerLeft: guildId(contentContainerStyle[5]).getHeaderCloseButton(() => navigation.goBack()),
-    headerTitle() {
-      const obj = { title: null };
-      const intl = guildId(obj[6]).intl;
-      obj.title = intl.string(guildId(obj[6]).t["9Oq93m"]);
-      return jsx(guildId(obj[5]).NavigatorHeader, { title: null });
-    },
-    render() {
-      return jsx(GuildSettingsModalMembersWithTabsDefault, { guildId });
-    },
+  obj2 = { contentContainerStyle: null };
+  let obj = guildId(obj2[2]);
+  obj2.contentContainerStyle = { paddingBottom: 16 + require("useSafeAreaInsets")().bottom };
+  const obj4 = {};
+  const obj5 = { headerLeft: null, headerTitle: null, render: null };
+  const obj3 = { paddingBottom: 16 + require("useSafeAreaInsets")().bottom };
+  obj5.headerLeft = guildId(obj2[5]).getHeaderCloseButton(() => navigation.goBack());
+  obj5.headerTitle = function headerTitle() {
+    const obj = { title: null };
+    const intl = guildId(obj2[6]).intl;
+    obj.title = intl.string(guildId(obj2[6]).t["9Oq93m"]);
+    return jsx(guildId(obj2[5]).NavigatorHeader, { title: null });
   };
-  obj1[constants.MAIN] = obj2;
-  obj1[constants.MEMBER_EDIT] = {
+  obj5.render = function render() {
+    return jsx(GuildSettingsModalMembersWithTabsDefault, { guildId });
+  };
+  obj4[constants.MAIN] = obj5;
+  obj4[constants.MEMBER_EDIT] = {
     render(arg0) {
-      const obj = { guildId };
       const merged = Object.assign(arg0);
-      const merged1 = Object.assign(obj);
+      const merged1 = Object.assign(obj2);
       return jsx(GuildSettingsModalMemberEdit.GuildSettingsModalMemberEditScene, { guildId });
     },
   };
-  obj1[constants.MEMBER_KICK] = {
+  obj4[constants.MEMBER_KICK] = {
     headerTitle() {
       return null;
     },
     render(arg0) {
-      const obj = { guildId };
       const merged = Object.assign(arg0);
-      const merged1 = Object.assign(obj);
+      const merged1 = Object.assign(obj2);
       return jsx(KickConfirmDefault, { guildId });
     },
   };
-  obj1[constants.MEMBER_BAN] = {
+  obj4[constants.MEMBER_BAN] = {
     headerTitle() {
       return null;
     },
     render(arg0) {
-      const obj = { guildId };
       const merged = Object.assign(arg0);
-      const merged1 = Object.assign(obj);
+      const merged1 = Object.assign(obj2);
       return jsx(BanConfirmDefault, { guildId });
     },
   };
-  const obj3 = { screens: obj1, initialRouteName: constants.MAIN, headerBackTitle: null };
-  let intl = guildId(contentContainerStyle[6]).intl;
-  obj3.headerBackTitle = intl.string(guildId(contentContainerStyle[6]).t["13/7kX"]);
-  return jsx(guildId(contentContainerStyle[11]).Navigator, {
-    screens: obj1,
-    initialRouteName: constants.MAIN,
-    headerBackTitle: null,
-  });
+  const obj7 = { screens: obj4, initialRouteName: constants.MAIN, headerBackTitle: null };
+  let intl = guildId(obj2[6]).intl;
+  obj7.headerBackTitle = intl.string(guildId(obj2[6]).t["13/7kX"]);
+  return jsx(guildId(obj2[11]).Navigator, { screens: obj4, initialRouteName: constants.MAIN, headerBackTitle: null });
 }

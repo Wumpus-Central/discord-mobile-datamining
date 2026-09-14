@@ -20,17 +20,17 @@ export const BackgroundBlurView = noop.forwardRef(function BackgroundBlurViewCom
     arg0,
     Object.assign({ children: 0, style: 0, blurTheme: 0, pressed: 0, android_blurTargetViewNativeId: 0 }),
   );
-  let obj = {};
+  const obj = {};
   const merged1 = Object.assign(merged);
   const items = [closure_5().container, style];
   obj.style = items;
   obj.ref = ref;
   if (null != pressed) {
-    obj = { blurTheme, pressed, android_blurTargetViewNativeId };
-    let tmp9 = React3(BackgroundBlurFill.BackgroundBlurFillWithPress, obj);
+    const obj2 = { blurTheme, pressed, android_blurTargetViewNativeId };
+    let tmp9 = React3(BackgroundBlurFill.BackgroundBlurFillWithPress, obj2);
   } else {
-    obj = { blurTheme, android_blurTargetViewNativeId };
-    tmp9 = React3(BackgroundBlurFill.BackgroundBlurFill, obj);
+    const obj3 = { blurTheme, android_blurTargetViewNativeId };
+    tmp9 = React3(BackgroundBlurFill.BackgroundBlurFill, obj3);
   }
   const items1 = [tmp9, children];
   obj.children = items1;

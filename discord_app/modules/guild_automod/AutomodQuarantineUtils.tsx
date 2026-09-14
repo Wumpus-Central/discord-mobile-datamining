@@ -11,6 +11,8 @@ import GuildStore from "../../stores/GuildStore.tsx";
 import PermissionStore from "../../stores/PermissionStore.tsx";
 import SelectedGuildStore from "../../stores/SelectedGuildStore.tsx";
 
+const require = globalThis.__r;
+
 require = fn;
 const Constants = fn(1074);
 ({ Permissions: closure_9, UserSettingsSections: c10 } = Constants);
@@ -47,7 +49,7 @@ export const useGuildAutomodProfileQuarantineErrors = function useGuildAutomodPr
       if (closure_0 == null) {
         guildId = SelectedGuildStore.getGuildId();
       }
-      let obj = { nick: "Array", bio: "PX_16" };
+      const obj = { nick: "Array", bio: "PX_16" };
       let guild = GuildStore.getGuild(guildId);
       if (null != guild) {
         if (null != guildId) {
@@ -71,8 +73,8 @@ export const useGuildAutomodProfileQuarantineErrors = function useGuildAutomodPr
                 if (str == null) {
                   str = "";
                 }
-                obj = { guildName: str };
-                guild = [intl2.formatToPlainString(util.t.WBUh3O, obj)];
+                const obj2 = { guildName: str };
+                guild = [intl2.formatToPlainString(util.t.WBUh3O, obj2)];
                 let items1 = guild;
               } else {
                 const intl = util.intl;
@@ -113,7 +115,7 @@ export const useOpenFixQuarantinedProfileModal = function useOpenFixQuarantinedP
     },
     items3,
   );
-  const obj2 = guildId(scrollPosition[10]);
+  let obj2 = guildId(scrollPosition[10]);
   const items4 = [
     stateFromStores1,
     scrollPosition,
@@ -127,18 +129,17 @@ export const useOpenFixQuarantinedProfileModal = function useOpenFixQuarantinedP
       if (null != stateFromStores) {
         let openUserSettings = constants.GUILD;
         if (stateFromStores1) {
-          let obj = GuildIdentityActionCreators;
-          const guildIdentitySettings = obj.initGuildIdentitySettings(setState.id);
+          const guildIdentitySettings = GuildIdentityActionCreators.initGuildIdentitySettings(setState.id);
           let USER_PROFILE = openUserSettings;
         } else {
           USER_PROFILE = tmp11.USER_PROFILE;
         }
         openUserSettings = openUserSettings2.openUserSettings;
         setState = ProfileCustomizationNavigationStore.setState;
-        obj = { subsection: USER_PROFILE, scrollPosition };
-        setState(obj);
-        obj = { screen: constants2.PROFILE_CUSTOMIZATION };
-        openUserSettings(obj);
+        const obj2 = { subsection: USER_PROFILE, scrollPosition };
+        setState(obj2);
+        const obj3 = { screen: constants2.PROFILE_CUSTOMIZATION };
+        openUserSettings(obj3);
       }
     }, items4),
     stateFromStores1,

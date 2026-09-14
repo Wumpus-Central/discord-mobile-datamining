@@ -6,6 +6,8 @@ import NotificationSettingsMessageUnreadActionSheetDefault from "NotificationSet
 import noop from "../../../../../_runtime/metro/00019__.js";
 import UserGuildSettingsStore from "../../../../stores/UserGuildSettingsStore.tsx";
 
+const require = globalThis.__r;
+
 require = fn;
 const UserNotificationSettings = fn(1074).UserNotificationSettings;
 const UnreadSetting = fn(4818).UnreadSetting;
@@ -18,52 +20,32 @@ let result = size.fileFinishedImporting(
 
 export default function NotificationSettingsMessageUnreadGuildActionSheet(guildId) {
   _require = guildId;
-  let obj = require("notificationSettingsGuildFlagUtils");
-  const guildPresetSettings = obj.useGuildPresetSettings(guildId.guildId);
+  const guildPresetSettings = require("notificationSettingsGuildFlagUtils").useGuildPresetSettings(guildId.guildId);
   ({ unread, notification } = guildPresetSettings);
   let stringResult;
+  let obj = require("notificationSettingsGuildFlagUtils");
   if (notification === UserNotificationSettings.ALL_MESSAGES) {
     const intl = tmp(1114).intl;
     stringResult = intl.string(tmp(1114).t.eP8yWU);
   }
-  obj = {
-    disabledMentionOnlyWithReason: stringResult,
-    value: unread,
-    onChange(toggleExpandedHistory) {
-      const guildFlags = UserGuildSettingsStore.getGuildFlags(guildId.guildId);
-      let obj = NotificationSettingsModalActionCreatorsDefault;
-      if (toggleExpandedHistory === UnreadSetting.ALL_MESSAGES) {
-        let UNREADS_ONLY_MENTIONS = constants.UNREADS_ALL_MESSAGES;
-      } else {
-        UNREADS_ONLY_MENTIONS = constants.UNREADS_ONLY_MENTIONS;
-      }
-      obj = { flags: notificationSettingsFlagUtils.withGuildUnreadFlags(guildFlags, UNREADS_ONLY_MENTIONS) };
-      const NotificationLabel = NotificationSettingsUtils.NotificationLabel;
-      const result = obj.updateGuildNotificationSettings(
-        guildId.guildId,
-        obj,
-        NotificationLabel.unreads(toggleExpandedHistory),
-      );
-    },
-  };
   return jsx(NotificationSettingsMessageUnreadActionSheetDefault, {
     disabledMentionOnlyWithReason: stringResult,
     value: unread,
     onChange(toggleExpandedHistory) {
       const guildFlags = UserGuildSettingsStore.getGuildFlags(guildId.guildId);
-      let obj = NotificationSettingsModalActionCreatorsDefault;
+      const obj = NotificationSettingsModalActionCreatorsDefault;
       if (toggleExpandedHistory === UnreadSetting.ALL_MESSAGES) {
         let UNREADS_ONLY_MENTIONS = constants.UNREADS_ALL_MESSAGES;
       } else {
         UNREADS_ONLY_MENTIONS = constants.UNREADS_ONLY_MENTIONS;
       }
-      obj = { flags: notificationSettingsFlagUtils.withGuildUnreadFlags(guildFlags, UNREADS_ONLY_MENTIONS) };
       const NotificationLabel = NotificationSettingsUtils.NotificationLabel;
       const result = obj.updateGuildNotificationSettings(
         guildId.guildId,
-        obj,
+        { flags: notificationSettingsFlagUtils.withGuildUnreadFlags(guildFlags, UNREADS_ONLY_MENTIONS) },
         NotificationLabel.unreads(toggleExpandedHistory),
       );
+      const obj3 = { flags: notificationSettingsFlagUtils.withGuildUnreadFlags(guildFlags, UNREADS_ONLY_MENTIONS) };
     },
   });
 }

@@ -9,8 +9,13 @@ const result = size.fileFinishedImporting("modules/headless_tasks/android/MarkAs
 export default (arg0) => {
   closure_0 = arg0;
   return new Promise((fn) => {
-    const obj = { object: constants2.MARK_CHANNEL_AS_READ_FROM_NOTIFICATION, objectType: constants.ACK_MANUAL };
-    obj.ack(closure_0.channelId, obj, true, true, closure_0.messageId);
+    ReadStateActionCreators.ack(
+      closure_0.channelId,
+      { object: constants2.MARK_CHANNEL_AS_READ_FROM_NOTIFICATION, objectType: constants.ACK_MANUAL },
+      true,
+      true,
+      closure_0.messageId,
+    );
     fn(true);
   });
 };

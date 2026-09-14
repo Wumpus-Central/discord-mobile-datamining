@@ -1,7 +1,6 @@
 // discord_app/modules/chat_input/native/accessories/ChatInputAccessibilityDivider.tsx
 import util from "../../../../intl/index.native.tsx";
 import PlatformUtils from "../../../../utils/PlatformUtils.tsx";
-import useIsScreenReaderEnabled from "../../../a11y/native/useIsScreenReaderEnabled.native.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -12,12 +11,11 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/chat_input/native/accessories/ChatInputAccessibilityDivider.tsx");
 
 export const ChatInputAccessibilityDivider = noop.memo(() => {
-  let obj = useIsScreenReaderEnabled;
   let tmp3 = null;
   if (obj.useIsScreenReaderEnabled()) {
     tmp3 = null;
     if (!tmpResult.isAndroid()) {
-      obj = {
+      const obj2 = {
         nativeID: "chat-input-accessibility-divider",
         accessible: true,
         accessibilityLabel: null,
@@ -25,9 +23,9 @@ export const ChatInputAccessibilityDivider = noop.memo(() => {
         style: null,
       };
       const intl = util.intl;
-      obj.accessibilityLabel = intl.string(util.t["uKZtC/"]);
+      obj2.accessibilityLabel = intl.string(util.t["uKZtC/"]);
       const items = [absoluteFill.absoluteFill, { height: 1 }];
-      obj.style = items;
+      obj2.style = items;
       tmp3 = (
         <React3
           nativeID="chat-input-accessibility-divider"

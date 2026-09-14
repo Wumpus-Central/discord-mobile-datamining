@@ -19,21 +19,21 @@ export default function FormRadioGroup(arg0) {
     Object.assign({ title: 0, hasIcons: 0, accessibilityLabel: 0, children: 0, value: 0, hint: 0, icon: 0 }),
   );
   if (noop.useContext(RedesignCompat.RedesignCompatContext)) {
-    let obj = { style: { marginBottom: 24, marginHorizontal: 12 }, children: null };
-    obj = { children: null };
-    const obj1 = { defaultValue: value, hasIcons, title, accessibilityLabel, children };
-    obj.children = hasOwnProperty(TableRadioGroup.TableRadioGroup, obj1);
-    const items = [hasOwnProperty(View, obj)];
+    const obj2 = { style: { marginBottom: 24, marginHorizontal: 12 }, children: null };
+    const obj3 = { children: null };
+    const obj4 = { defaultValue: value, hasIcons, title, accessibilityLabel, children };
+    obj3.children = hasOwnProperty(TableRadioGroup.TableRadioGroup, obj4);
+    const items = [hasOwnProperty(View, obj3)];
     let tmp13Result = null;
     if (null != hint) {
-      const obj2 = { style: { marginTop: 8 }, children: hint };
-      tmp13Result = hasOwnProperty(View, obj2);
+      const obj5 = { style: { marginTop: 8 }, children: hint };
+      tmp13Result = hasOwnProperty(View, obj5);
     }
     items[1] = tmp13Result;
-    obj.children = items;
-    let tmp11Result = timestampProducer(View, obj);
+    obj2.children = items;
+    let tmp11Result = timestampProducer(View, obj2);
   } else {
-    obj = { title, accessibilityRole: "radiogroup", accessibilityLabel: title, hint, icon };
+    const obj = { title, accessibilityRole: "radiogroup", accessibilityLabel: title, hint, icon };
     const merged1 = Object.assign(merged);
     obj.children = children;
     tmp11Result = hasOwnProperty(FormSectionDefault, obj);

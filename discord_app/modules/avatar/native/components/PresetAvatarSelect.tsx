@@ -14,6 +14,8 @@ import defaultAvatar7Default from "../../images/defaultAvatar7.tsx";
 import defaultAvatar8Default from "../../images/defaultAvatar8.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
+const require = globalThis.__r;
+
 require = fn;
 function DefaultAvatarButton(selected) {
   selected = selected.selected;
@@ -24,7 +26,7 @@ function DefaultAvatarButton(selected) {
   if (selected) {
     prop = tmp.defaultAvatarSelected;
   }
-  let obj = {
+  const obj = {
     style: items,
     accessibilityRole: "button",
     accessibilityLabel,
@@ -37,8 +39,7 @@ function DefaultAvatarButton(selected) {
   const intl = util.intl;
   obj.accessibilityHint = intl.string(util.t.vw2RsD);
   obj.onPress = onSelect;
-  obj = { style: tmp.defaultAvatarButton, source: { uri: source } };
-  obj.children = React4(FastImageDefault, obj);
+  obj.children = React4(FastImageDefault, { style: tmp.defaultAvatarButton, source: { uri: source } });
   return React4(Pressables.PressableOpacity, obj);
 }
 const View = fn(17).View;
@@ -54,6 +55,21 @@ let items = [
   defaultAvatar7Default,
   defaultAvatar8Default,
 ];
+let items1 = [
+  {
+    avatar: defaultAvatar1Default,
+    label() {
+      const intl = util.intl;
+      return intl.string(util.t["u/VENK"]);
+    },
+  },
+  ,
+  ,
+  ,
+  ,
+  ,
+  ,
+];
 let obj = {
   avatar: defaultAvatar1Default,
   label() {
@@ -61,23 +77,34 @@ let obj = {
     return intl.string(util.t["u/VENK"]);
   },
 };
-let items1 = [obj, , , , , , ,];
-obj = {
+items1[1] = {
   avatar: defaultAvatar2Default,
   label() {
     const intl = util.intl;
     return intl.string(util.t["pBx+d8"]);
   },
 };
-items1[1] = obj;
-obj = {
+let obj2 = {
+  avatar: defaultAvatar2Default,
+  label() {
+    const intl = util.intl;
+    return intl.string(util.t["pBx+d8"]);
+  },
+};
+items1[2] = {
   avatar: defaultAvatar3Default,
   label() {
     const intl = util.intl;
     return intl.string(util.t.vbERmz);
   },
 };
-items1[2] = obj;
+let obj3 = {
+  avatar: defaultAvatar3Default,
+  label() {
+    const intl = util.intl;
+    return intl.string(util.t.vbERmz);
+  },
+};
 items1[3] = {
   avatar: defaultAvatar4Default,
   label() {
@@ -85,7 +112,7 @@ items1[3] = {
     return intl.string(util.t.Ecxz3Z);
   },
 };
-let obj1 = {
+let obj4 = {
   avatar: defaultAvatar4Default,
   label() {
     const intl = util.intl;
@@ -99,7 +126,7 @@ items1[4] = {
     return intl.string(util.t.Jb8PYM);
   },
 };
-const obj2 = {
+const obj5 = {
   avatar: defaultAvatar5Default,
   label() {
     const intl = util.intl;
@@ -113,7 +140,7 @@ items1[5] = {
     return intl.string(util.t["3h0yoI"]);
   },
 };
-const obj3 = {
+const obj6 = {
   avatar: defaultAvatar6Default,
   label() {
     const intl = util.intl;
@@ -127,7 +154,7 @@ items1[6] = {
     return intl.string(util.t.frIpZ5);
   },
 };
-const obj4 = {
+const obj7 = {
   avatar: defaultAvatar7Default,
   label() {
     const intl = util.intl;
@@ -142,7 +169,7 @@ items1[7] = {
   },
 };
 const createStyles = fn(4636);
-const obj6 = {
+const obj10 = {
   container: { display: "flex", alignItems: "center", flex: 1 },
   buttonsContainer: { display: "flex", flexDirection: "row", marginTop: 20, justifyContent: "space-between" },
   defaultAvatarButton: null,
@@ -150,8 +177,8 @@ const obj6 = {
   defaultAvatarSelected: null,
 };
 let size = { height: 48, width: 48, borderRadius: nativeDefault.radii.xl };
-obj6.defaultAvatarButton = size;
-obj6.defaultAvatarContainer = {
+obj10.defaultAvatarButton = size;
+obj10.defaultAvatarContainer = {
   marginHorizontal: 8,
   width: 56,
   height: 56,
@@ -163,33 +190,32 @@ obj6.defaultAvatarContainer = {
   alignItems: "center",
   justifyContent: "center",
 };
-const obj5 = {
+const obj8 = {
   avatar: defaultAvatar8Default,
   label() {
     const intl = util.intl;
     return intl.string(util.t.zpfUeg);
   },
 };
-obj6.defaultAvatarSelected = { borderColor: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE };
-let closure_7 = createStyles.createStyles(obj6);
+obj10.defaultAvatarSelected = { borderColor: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE };
+let closure_7 = createStyles.createStyles(obj10);
 size = fn(2);
 const result = size.fileFinishedImporting("modules/avatar/native/components/PresetAvatarSelect.tsx");
 
 export default function PresetAvatarSelect(arg0) {
   ({ onAvatarSelect: require, selectedAvatar: importDefault } = arg0);
   const tmp = closure_7();
-  let obj = { style: tmp.container, accessibilityRole: "list", children: null };
-  obj = { variant: "text-sm/medium", color: "text-default", children: null };
+  const obj = { style: tmp.container, accessibilityRole: "list", children: null };
+  let obj2 = { variant: "text-sm/medium", color: "text-default", children: null };
   let intl = util.intl;
-  obj.children = intl.string(util.t.yP28YL);
-  const items = [closure_4(Text_Text.Text, obj), ,];
-  obj = { style: tmp.buttonsContainer, children: null };
+  obj2.children = intl.string(util.t.yP28YL);
+  const items = [closure_4(Text_Text.Text, obj2), ,];
+  const obj3 = { style: tmp.buttonsContainer, children: null };
   items1 = [0, 1, 2, 3];
-  obj.children = items1.map((item) => {
+  obj3.children = items1.map((item) => {
     closure_0 = item;
-    let obj = dependencyMap2[item];
-    obj = {
-      source: obj.avatar,
+    const obj2 = {
+      source: dependencyMap2[item].avatar,
       onSelect() {
         return require(closure_0);
       },
@@ -197,18 +223,19 @@ export default function PresetAvatarSelect(arg0) {
       accessibilityLabel: null,
     };
     const intl = util.intl;
-    obj = { index: item + 1, description: obj.label() };
-    obj.accessibilityLabel = intl.formatToPlainString(util.t["1K8jaQ"], obj);
-    return closure_1_4(DefaultAvatarButton, obj, item);
+    obj2.accessibilityLabel = intl.formatToPlainString(util.t["1K8jaQ"], {
+      index: item + 1,
+      description: dependencyMap2[item].label(),
+    });
+    return closure_1_4(DefaultAvatarButton, obj2, item);
   });
-  items[1] = closure_4(View, obj);
-  const obj1 = { style: tmp.buttonsContainer, children: null };
+  items[1] = closure_4(View, obj3);
+  const obj4 = { style: tmp.buttonsContainer, children: null };
   const items2 = [4, 5, 6, 7];
-  obj1.children = items2.map((item) => {
+  obj4.children = items2.map((item) => {
     closure_0 = item;
-    let obj = dependencyMap2[item];
-    obj = {
-      source: obj.avatar,
+    const obj2 = {
+      source: dependencyMap2[item].avatar,
       onSelect() {
         return require(closure_0);
       },
@@ -216,11 +243,13 @@ export default function PresetAvatarSelect(arg0) {
       accessibilityLabel: null,
     };
     const intl = util.intl;
-    obj = { index: item + 1, description: obj.label() };
-    obj.accessibilityLabel = intl.formatToPlainString(util.t["1K8jaQ"], obj);
-    return closure_1_4(DefaultAvatarButton, obj, item);
+    obj2.accessibilityLabel = intl.formatToPlainString(util.t["1K8jaQ"], {
+      index: item + 1,
+      description: dependencyMap2[item].label(),
+    });
+    return closure_1_4(DefaultAvatarButton, obj2, item);
   });
-  items[2] = closure_4(View, obj1);
+  items[2] = closure_4(View, obj4);
   obj.children = items;
   return closure_5(View, obj);
 }

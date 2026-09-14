@@ -9,12 +9,11 @@ export const handleMessagesLongPressChannel = function handleMessagesLongPressCh
   ({ guildId, channelId, messageId, originalLink } = data.data);
   if (null != channelId) {
     if (originalLink == null) {
-      let obj = ChannelUtils;
-      originalLink = obj.getChannelPermalink(guildId, channelId, messageId);
+      originalLink = ChannelUtils.getChannelPermalink(guildId, channelId, messageId);
     }
     if (null != originalLink) {
-      obj = { urlString: originalLink, guildId, channelId, messageId };
-      showLongPressURLActionSheetDefault(obj);
+      const obj2 = { urlString: originalLink, guildId, channelId, messageId };
+      showLongPressURLActionSheetDefault(obj2);
     }
   }
 };

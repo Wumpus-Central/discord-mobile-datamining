@@ -41,7 +41,7 @@ const items = [
     if (lastSeenTimeMs == null) {
       lastSeenTimeMs = null;
     }
-    triggeredOnboardingContentMetadata = { lastSeenTimeMs, triggeredOnboardingContentMetadata: null };
+    const obj = { lastSeenTimeMs, triggeredOnboardingContentMetadata: null };
     let canShowBotsBanner;
     if (lastSeenTimeMs != null) {
       triggeredOnboardingContentMetadata = lastSeenTimeMs.triggeredOnboardingContentMetadata;
@@ -50,9 +50,9 @@ const items = [
       }
     }
     if (canShowBotsBanner == null) {
-      canShowBotsBanner = triggeredOnboardingContentMetadata.canShowBotsBanner;
+      canShowBotsBanner = obj.canShowBotsBanner;
     }
-    triggeredOnboardingContentMetadata = {
+    const obj2 = {
       canShowBotsBanner,
       canShowAppsOrActivitiesBanner: null,
       willShowGlobalSearchOnboarding: null,
@@ -67,9 +67,9 @@ const items = [
       }
     }
     if (prop == null) {
-      prop = triggeredOnboardingContentMetadata.canShowAppsOrActivitiesBanner;
+      prop = obj.canShowAppsOrActivitiesBanner;
     }
-    triggeredOnboardingContentMetadata.canShowAppsOrActivitiesBanner = prop;
+    obj2.canShowAppsOrActivitiesBanner = prop;
     let prop1;
     if (lastSeenTimeMs != null) {
       const triggeredOnboardingContentMetadata3 = lastSeenTimeMs.triggeredOnboardingContentMetadata;
@@ -78,9 +78,9 @@ const items = [
       }
     }
     if (prop1 == null) {
-      prop1 = triggeredOnboardingContentMetadata.willShowGlobalSearchOnboarding;
+      prop1 = obj.willShowGlobalSearchOnboarding;
     }
-    triggeredOnboardingContentMetadata.willShowGlobalSearchOnboarding = prop1;
+    obj2.willShowGlobalSearchOnboarding = prop1;
     let timeMs;
     if (lastSeenTimeMs != null) {
       const triggeredOnboardingContentMetadata4 = lastSeenTimeMs.triggeredOnboardingContentMetadata;
@@ -89,9 +89,9 @@ const items = [
       }
     }
     if (timeMs == null) {
-      timeMs = triggeredOnboardingContentMetadata.timeMs;
+      timeMs = obj.timeMs;
     }
-    triggeredOnboardingContentMetadata.timeMs = timeMs;
+    obj2.timeMs = timeMs;
     let channelId;
     if (lastSeenTimeMs != null) {
       const triggeredOnboardingContentMetadata5 = lastSeenTimeMs.triggeredOnboardingContentMetadata;
@@ -100,15 +100,15 @@ const items = [
       }
     }
     if (channelId == null) {
-      channelId = triggeredOnboardingContentMetadata.channelId;
+      channelId = obj.channelId;
     }
-    triggeredOnboardingContentMetadata.channelId = channelId;
-    triggeredOnboardingContentMetadata.triggeredOnboardingContentMetadata = triggeredOnboardingContentMetadata;
-    return triggeredOnboardingContentMetadata;
+    obj2.channelId = channelId;
+    obj.triggeredOnboardingContentMetadata = obj2;
+    return obj;
   },
 ];
 AppLauncherOnboardingPersistedStore.migrations = items;
-triggeredOnboardingContentMetadata = {
+const appLauncherOnboardingPersistedStore = new AppLauncherOnboardingPersistedStore(DispatcherDefault, {
   APP_LAUNCHER_ONBOARDING_SET_LAST_SEEN_TIME_MS: function handleSetLastSeenTimeMs() {
     closure_1.lastSeenTimeMs = Date.now();
   },
@@ -117,11 +117,7 @@ triggeredOnboardingContentMetadata = {
       closure_1.triggeredOnboardingContentMetadata =
         triggeredOnboardingContentMetadata.triggeredOnboardingContentMetadata;
     },
-};
-const appLauncherOnboardingPersistedStore = new AppLauncherOnboardingPersistedStore(
-  DispatcherDefault,
-  triggeredOnboardingContentMetadata,
-);
+});
 const size = fn(2);
 const result = size.fileFinishedImporting(
   "modules/app_launcher/native/onboarding/stores/AppLauncherOnboardingPersistedStore.tsx",

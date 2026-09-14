@@ -12,15 +12,24 @@ const SearchMediaTypes = fn(7982).SearchMediaTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
 const createStyles = fn(4636);
-let obj = { container: null, avatar: null, card: null };
-obj = { borderRadius: nativeDefault.radii.xs, overflow: "hidden", backgroundColor: nativeDefault.colors.BORDER_SUBTLE };
-obj.container = obj;
-obj.avatar = { position: "absolute", top: 8, right: 8 };
-obj.card = { padding: 0 };
+let obj = {
+  container: {
+    borderRadius: nativeDefault.radii.xs,
+    overflow: "hidden",
+    backgroundColor: nativeDefault.colors.BORDER_SUBTLE,
+  },
+  avatar: { position: "absolute", top: 8, right: 8 },
+  card: { padding: 0 },
+};
 let closure_11 = createStyles.createStyles(obj);
 let closure_12 = { HIDDEN: 0, [0]: "HIDDEN", VISIBLE: 1, [1]: "VISIBLE" };
 const __initData = {
   code: "function MediaGridItemTsx1(){const{withTiming,opacity,timingStandard}=this.__closure;return{opacity:withTiming(opacity.get(),timingStandard)};}",
+};
+const obj3 = {
+  borderRadius: nativeDefault.radii.xs,
+  overflow: "hidden",
+  backgroundColor: nativeDefault.colors.BORDER_SUBTLE,
 };
 let size = fn(2);
 let result = size.fileFinishedImporting("modules/search/native/components/list/rows/MediaGridItem.tsx");
@@ -34,11 +43,9 @@ export default noop.memo(function MediaGridItem(media) {
   ({ containerStyle, animate } = media);
   const tmp = closure_11();
   const scale = closure_6().scale;
-  let obj = ref;
   ref = ref.useRef(null);
-  let obj1 = media(onPress[7]);
   const items = [ChannelStore];
-  const stateFromStores = obj1.useStateFromStores(items, () => ChannelStore.getChannel(media.channelId));
+  const stateFromStores = media(onPress[7]).useStateFromStores(items, () => ChannelStore.getChannel(media.channelId));
   const items1 = [media.author];
   let guild_id;
   if (stateFromStores != null) {
@@ -57,21 +64,25 @@ export default noop.memo(function MediaGridItem(media) {
   const callback = obj.useCallback(() => {
     onPress({ media, originView: ref.current });
   }, items2);
-  let tmp3Result = tmp3(tmp4[8]);
-  sharedValue = tmp3Result.useSharedValue(animate ? constants.HIDDEN : constants.VISIBLE);
-  tmp3Result = tmp3(tmp4[8]);
+  const obj2 = media(onPress[7]);
+  sharedValue = media(onPress[8]).useSharedValue(animate ? constants.HIDDEN : constants.VISIBLE);
+  const tmp3Result = media(onPress[8]);
   const fn = function f() {
     const obj = { opacity: null };
     value = sharedValue.get();
     obj.opacity = timing.withTiming(value, timingPresets.timingStandard);
     return obj;
   };
-  obj = { withTiming: tmp3(tmp4[9]).withTiming, opacity: sharedValue, timingStandard: tmp3(tmp4[10]).timingStandard };
-  fn.__closure = obj;
+  const tmp3Result2 = media(onPress[8]);
+  fn.__closure = {
+    withTiming: media(onPress[9]).withTiming,
+    opacity: sharedValue,
+    timingStandard: media(onPress[10]).timingStandard,
+  };
   fn.__workletHash = 9644750191833;
   fn.__initData = __initData;
   const items3 = [sharedValue];
-  const animatedStyle = tmp3Result.useAnimatedStyle(fn);
+  const animatedStyle = tmp3Result2.useAnimatedStyle(fn);
   const effect = obj.useEffect(() => {
     const result = sharedValue.set(constants.VISIBLE);
   }, items3);
@@ -80,13 +91,13 @@ export default noop.memo(function MediaGridItem(media) {
     size = { width: size, height: size };
     return size;
   }, items4);
-  obj = { style: null, children: null };
+  const obj4 = { style: null, children: null };
   const items5 = [tmp.container, containerStyle, memo1, animatedStyle];
-  obj.style = items5;
-  obj1 = { ref, style: memo1, accessibilityRole: "button", onPress: callback, children: null };
+  obj4.style = items5;
+  const obj5 = { ref, style: memo1, accessibilityRole: "button", onPress: callback, children: null };
   let tmp14Result = media.type === SearchMediaTypes.EMBED;
   if (tmp14Result) {
-    const obj2 = {
+    const obj6 = {
       sources: null,
       embed: null,
       messageId: null,
@@ -97,16 +108,16 @@ export default noop.memo(function MediaGridItem(media) {
       containerWidth: null,
     };
     ({ sources: obj8.sources, embed: obj8.embed, messageId: obj8.messageId, channelId: obj8.channelId } = media);
-    obj2.authorId = media.author.id;
-    obj2.scale = scale;
-    obj2.containerHeight = size;
-    obj2.containerWidth = size;
-    tmp14Result = closure_9(tmp3(tmp4[11]).SearchEmbedMediaImage, obj2);
+    obj6.authorId = media.author.id;
+    obj6.scale = scale;
+    obj6.containerHeight = size;
+    obj6.containerWidth = size;
+    tmp14Result = closure_9(tmp3(tmp4[11]).SearchEmbedMediaImage, obj6);
   }
   const items6 = [tmp14Result, , , ,];
-  tmp14Result = media.type === SearchMediaTypes.ATTACHMENT;
-  if (tmp14Result) {
-    const obj3 = {
+  let tmp14Result5 = media.type === SearchMediaTypes.ATTACHMENT;
+  if (tmp14Result5) {
+    const obj7 = {
       attachment: null,
       channelId: null,
       authorId: null,
@@ -115,24 +126,22 @@ export default noop.memo(function MediaGridItem(media) {
       containerWidth: null,
     };
     ({ attachment: obj9.attachment, channelId: obj9.channelId } = media);
-    obj3.authorId = media.author.id;
-    obj3.scale = scale;
-    obj3.containerHeight = size;
-    obj3.containerWidth = size;
-    tmp14Result = closure_9(tmp3(tmp4[11]).SearchAttachmentMediaImage, obj3);
+    obj7.authorId = media.author.id;
+    obj7.scale = scale;
+    obj7.containerHeight = size;
+    obj7.containerWidth = size;
+    tmp14Result5 = closure_9(tmp3(tmp4[11]).SearchAttachmentMediaImage, obj7);
   }
-  items6[1] = tmp14Result;
-  let tmp14Result1 = media.type === SearchMediaTypes.AUDIO;
-  if (tmp14Result1) {
-    size = { height: null, width: null };
-    size.height = size;
-    size.width = size;
-    tmp14Result1 = closure_9(tmp3(tmp4[11]).SearchSoundMediaImage, size);
+  items6[1] = tmp14Result5;
+  let tmp14Result6 = media.type === SearchMediaTypes.AUDIO;
+  if (tmp14Result6) {
+    const size1 = { height: size, width: size };
+    tmp14Result6 = closure_9(tmp3(tmp4[11]).SearchSoundMediaImage, size1);
   }
-  items6[2] = tmp14Result1;
-  let tmp14Result2 = media.type === SearchMediaTypes.COMPONENT;
-  if (tmp14Result2) {
-    const obj4 = {
+  items6[2] = tmp14Result6;
+  let tmp14Result7 = media.type === SearchMediaTypes.COMPONENT;
+  if (tmp14Result7) {
+    const obj10 = {
       unfurledMediaItem: null,
       sources: null,
       channelId: null,
@@ -143,29 +152,29 @@ export default noop.memo(function MediaGridItem(media) {
       containerWidth: null,
     };
     ({ unfurledMediaItem: obj11.unfurledMediaItem, sources: obj11.sources, channelId: obj11.channelId } = media);
-    obj4.authorId = media.author.id;
-    obj4.isBot = media.author.bot;
-    obj4.scale = scale;
-    obj4.containerHeight = size;
-    obj4.containerWidth = size;
-    tmp14Result2 = closure_9(tmp3(tmp4[11]).SearchComponentMediaImage, obj4);
+    obj10.authorId = media.author.id;
+    obj10.isBot = media.author.bot;
+    obj10.scale = scale;
+    obj10.containerHeight = size;
+    obj10.containerWidth = size;
+    tmp14Result7 = closure_9(tmp3(tmp4[11]).SearchComponentMediaImage, obj10);
   }
-  items6[3] = tmp14Result2;
-  let tmp14Result3 = null != memo;
-  if (tmp14Result3) {
-    const obj5 = { style: tmp.avatar, children: null };
-    const obj6 = { shadow: "low", style: tmp.card, children: null };
-    const obj7 = {
+  items6[3] = tmp14Result7;
+  let tmp14Result8 = null != memo;
+  if (tmp14Result8) {
+    const obj12 = { style: tmp.avatar, children: null };
+    const obj13 = { shadow: "low", style: tmp.card, children: null };
+    const obj14 = {
       source: memo,
       size: tmp3(tmp4[13]).AvatarSizes.XSMALL,
       avatarDecoration: media.author.avatarDecoration,
     };
-    obj6.children = closure_9(tmp3(tmp4[13]).Avatar, obj7);
-    obj5.children = closure_9(tmp3(tmp4[12]).Card, obj6);
-    tmp14Result3 = closure_9(stateFromStores, obj5);
+    obj13.children = closure_9(tmp3(tmp4[13]).Avatar, obj14);
+    obj12.children = closure_9(tmp3(tmp4[12]).Card, obj13);
+    tmp14Result8 = closure_9(stateFromStores, obj12);
   }
-  items6[4] = tmp14Result3;
-  obj1.children = items6;
-  obj.children = closure_10(sharedValue, obj1);
-  return closure_9(size(onPress[8]).View, obj);
+  items6[4] = tmp14Result8;
+  obj5.children = items6;
+  obj4.children = closure_10(sharedValue, obj5);
+  return closure_9(size(onPress[8]).View, obj4);
 });

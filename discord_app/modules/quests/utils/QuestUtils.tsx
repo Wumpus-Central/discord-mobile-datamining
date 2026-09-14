@@ -80,9 +80,9 @@ export const isStreamingAndCanWatch = function isStreamingAndCanWatch(arg0, stat
   return first;
 };
 export const getQuestType = function getQuestType(config) {
-  const obj = { config };
+  const obj2 = { config };
   const QuestType = QuestType2.QuestType;
-  return obj.hasWatchVideoTasks(obj) ? QuestType.VIDEO : QuestType.GAMEPLAY;
+  return QuestTaskUtils.hasWatchVideoTasks({ config }) ? QuestType.VIDEO : QuestType.GAMEPLAY;
 };
 export const isQuestFeaturedByHero = function isQuestFeaturedByHero(questHomeHero, id) {
   const questIds = questHomeHero.questIds;

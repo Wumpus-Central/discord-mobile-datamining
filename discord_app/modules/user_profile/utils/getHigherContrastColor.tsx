@@ -8,7 +8,7 @@ const result = size.fileFinishedImporting("modules/user_profile/utils/getHigherC
 
 export const getHigherContrastColor = function getHigherContrastColor(backgroundColor) {
   backgroundColor = backgroundColor.backgroundColor;
-  [tmp2, tmp3] = _slicedToArray(backgroundColor.colors, 2);
+  [tmp2, tmp3] = backgroundColor.colors;
   let hex2intResult = backgroundColor;
   if (typeof backgroundColor === "string") {
     hex2intResult = utils_ColorUtils.hex2int(backgroundColor);

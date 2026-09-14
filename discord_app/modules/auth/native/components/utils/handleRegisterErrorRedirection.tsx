@@ -54,14 +54,14 @@ export default function handleRegisterErrorRedirection(navigate, fn, code, step)
             let tmp17 = getRedirectStepForErrorKey(item10023);
             let tmp18 = tmp17;
             if (null != tmp17) {
-              let obj = { step: null, actionType: null, details: null };
-              obj.step = hasOwnProperty(tmp18);
-              obj.actionType = constants2.RESPONSE_ERROR;
+              let obj2 = { step: null, actionType: null, details: null };
+              obj2.step = hasOwnProperty(tmp18);
+              obj2.actionType = constants2.RESPONSE_ERROR;
               let items1 = [tmp14];
               let obj3 = RegistrationUtils;
               items1[1] = obj3.getCommonErrorDetails(arg2.error_code);
-              obj.details = items1;
-              let tmp25 = arg1(obj);
+              obj2.details = items1;
+              let tmp25 = arg1(obj2);
               let navigateResult = arg0.navigate(tmp18);
               obj.return();
               obj8.return();
@@ -72,15 +72,15 @@ export default function handleRegisterErrorRedirection(navigate, fn, code, step)
         continue;
       }
       if (tmp29) {
-        obj = { step, actionType: constants2.RESPONSE_ERROR, details: null };
+        const obj4 = { step, actionType: constants2.RESPONSE_ERROR, details: null };
         const items2 = [RegistrationUtils.getCommonErrorDetails(code.error_code)];
-        obj.details = items2;
-        fn(obj);
+        obj4.details = items2;
+        fn(obj4);
       }
       tmp29 = null != code.error_code && null != code.message;
     }
   }
   fn({ step: constants.AGE_GATE_UNDERAGE, actionType: constants2.VIEWED });
   navigate.push(ConstantsIOS.AuthStates.AGE_GATE_UNDERAGE, { fromRegister: true, disableSwipe: true });
-  const obj1 = { step: constants.AGE_GATE_UNDERAGE, actionType: constants2.VIEWED };
+  const obj6 = { step: constants.AGE_GATE_UNDERAGE, actionType: constants2.VIEWED };
 }

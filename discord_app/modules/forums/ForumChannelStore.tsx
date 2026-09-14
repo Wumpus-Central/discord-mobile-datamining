@@ -19,10 +19,9 @@ let closure_6 = function ForumChannelStoreState(set, get) {
     const channelState = channelStates.getChannelState(channelId);
     channelStates = {};
     const merged = Object.assign(value.channelStates);
-    channelStates = {};
     const merged1 = Object.assign(channelState);
     const merged2 = Object.assign(arg1);
-    channelStates[channelId] = channelStates;
+    channelStates[channelId] = {};
     channelStates(dependencyMap[4]).batchUpdates(() => {
       channelStates = { channelStates };
       return channelStates.set(channelStates);
@@ -90,10 +89,9 @@ let closure_7 = module_560.create((set, get) => {
       const channelState = channelStates.getChannelState(channelId);
       channelStates = {};
       const merged = Object.assign(value.channelStates);
-      channelStates = {};
       const merged1 = Object.assign(channelState);
       const merged2 = Object.assign(arg1);
-      channelStates[channelId] = channelStates;
+      channelStates[channelId] = {};
       channelStates(dependencyMap[4]).batchUpdates(() => {
         channelStates = { channelStates };
         return channelStates.set(channelStates);

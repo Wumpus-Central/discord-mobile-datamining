@@ -146,27 +146,27 @@ class GuildSettingsModalMemberEditScene {
         if (null != user) {
           tmp13 = jsxs;
           tmp14 = Fragment;
-          obj = { children: null };
+          obj1 = { children: null };
           tmp15 = jsx;
           tmp16 = GuildSettingsModalMemberEdit;
-          obj1 = {};
-          tmp17 = obj1;
+          obj10 = {};
+          tmp17 = obj10;
           tmp18 = stateFromStoresObject1;
           merged = Object.assign(stateFromStoresObject1);
-          obj1.onClose = onClose;
-          obj1.handleSuccessfulRemoval = tmp11;
-          obj1.guild = stateFromStores;
-          obj1.sortedGuildRoles = stateFromStores1;
-          obj1.roleStyle = stateFromStores2;
-          obj1.currentUser = currentUser;
-          obj1.user = user;
-          obj1.navigation = navigation;
-          obj1.contentContainerStyle = contentContainerStyle;
+          obj10.onClose = onClose;
+          obj10.handleSuccessfulRemoval = tmp11;
+          obj10.guild = stateFromStores;
+          obj10.sortedGuildRoles = stateFromStores1;
+          obj10.roleStyle = stateFromStores2;
+          obj10.currentUser = currentUser;
+          obj10.user = user;
+          obj10.navigation = navigation;
+          obj10.contentContainerStyle = contentContainerStyle;
           items6 = [,];
-          items6[0] = jsx(GuildSettingsModalMemberEdit, obj1);
+          items6[0] = jsx(GuildSettingsModalMemberEdit, obj10);
           items6[1] = jsx(tmp(tmp2[41]).NavScrim, {});
-          obj.children = items6;
-          tmp12 = jsxs(Fragment, obj);
+          obj1.children = items6;
+          tmp12 = jsxs(Fragment, obj1);
         }
       }
     }
@@ -182,29 +182,20 @@ const Constants = fn(1074);
 ({ Permissions: closure_16, GuildFeatures: closure_17, GuildSettingsSections: closure_18 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_19, jsxs: closure_20, Fragment: closure_21 } = jsxProd);
-fn(4636);
-let createStyles = {
+const createStyles = fn(4636);
+let obj2 = {
   form: { flex: 1 },
   formContent: { paddingTop: 16 },
-  stackPadding: null,
-  userInfo: null,
-  avatar: null,
-  rowLabel: null,
-  ctaButton: null,
-  actionButtonLeft: null,
-  actionButtonRight: null,
-  actionButtonContainer: null,
+  stackPadding: { paddingHorizontal: nativeDefault.modules.mobile.TABLE_ROW_PADDING },
+  userInfo: { height: 63 },
+  avatar: { width: 40, height: 40 },
+  rowLabel: { flexDirection: "row" },
+  ctaButton: { marginTop: 8, marginBottom: 8 },
+  actionButtonLeft: { marginRight: 0, marginLeft: 0, paddingRight: 0, paddingLeft: 16 },
+  actionButtonRight: { marginRight: 0, marginLeft: 0, paddingRight: 16, paddingLeft: 0 },
+  actionButtonContainer: { flexBasis: "auto" },
 };
-createStyles = { paddingHorizontal: nativeDefault.modules.mobile.TABLE_ROW_PADDING };
-createStyles.stackPadding = createStyles;
-createStyles.userInfo = { height: 63 };
-createStyles.avatar = { width: 40, height: 40 };
-createStyles.rowLabel = { flexDirection: "row" };
-createStyles.ctaButton = { marginTop: 8, marginBottom: 8 };
-createStyles.actionButtonLeft = { marginRight: 0, marginLeft: 0, paddingRight: 0, paddingLeft: 16 };
-createStyles.actionButtonRight = { marginRight: 0, marginLeft: 0, paddingRight: 16, paddingLeft: 0 };
-createStyles.actionButtonContainer = { flexBasis: "auto" };
-let closure_22 = createStyles.createLegacyClassComponentStyles(createStyles);
+let closure_22 = createStyles.createLegacyClassComponentStyles(obj2);
 const styles = StyleSheet.create({
   labelContainer: { flexDirection: "row", alignItems: "center" },
   roleDot: { marginEnd: 4 },
@@ -245,24 +236,24 @@ RolesList.prototype["render"] = function render() {
         const id = children;
         const tmp = -1 !== closure_1.indexOf(children.id);
         closure_1 = tmp;
-        let obj = { checked: tmp, label: null, onPress: null };
-        obj = { style: closure_1_23.labelContainer, children: null };
+        const obj = { checked: tmp, label: null, onPress: null };
+        const obj2 = { style: closure_1_23.labelContainer, children: null };
         let tmp2Result = "dot" === closure_2;
         if (tmp2Result) {
           tmp2Result = null != children.colorString;
         }
         if (tmp2Result) {
-          obj = { color: null, colors: null, containerStyles: null };
+          const obj4 = { color: null, colors: null, containerStyles: null };
           ({ colorString: obj3.color, colorStrings: obj3.colors } = children);
-          obj.containerStyles = closure_1_23.roleDot;
-          tmp2Result = closure_1_19(guild(currentUserId[18]).RoleDot, obj);
+          obj4.containerStyles = closure_1_23.roleDot;
+          tmp2Result = closure_1_19(guild(currentUserId[18]).RoleDot, obj4);
         }
         const items = [tmp2Result];
         let tmp11;
         if (null != children.colorString) {
           if ("username" === closure_2) {
-            const obj1 = { color: children.colorString };
-            tmp11 = obj1;
+            const obj5 = { color: children.colorString };
+            tmp11 = obj5;
           }
         }
         items[1] = closure_1_19(guild(currentUserId[19]).Text, {
@@ -270,8 +261,8 @@ RolesList.prototype["render"] = function render() {
           style: tmp11,
           children: children.name,
         });
-        obj.children = items;
-        obj.label = closure_1_20(closure_5, obj);
+        obj2.children = items;
+        obj.label = closure_1_20(closure_5, obj2);
         obj.onPress = function onPress() {
           return onToggleRole(id.id, !closure_1);
         };
@@ -283,24 +274,24 @@ RolesList.prototype["render"] = function render() {
       const id = children;
       const tmp = -1 !== closure_1.indexOf(children.id);
       closure_1 = tmp;
-      let obj = { checked: tmp, label: null, onPress: null };
-      obj = { style: closure_1_23.labelContainer, children: null };
+      const obj = { checked: tmp, label: null, onPress: null };
+      const obj2 = { style: closure_1_23.labelContainer, children: null };
       let tmp2Result = "dot" === closure_2;
       if (tmp2Result) {
         tmp2Result = null != children.colorString;
       }
       if (tmp2Result) {
-        obj = { color: null, colors: null, containerStyles: null };
+        const obj4 = { color: null, colors: null, containerStyles: null };
         ({ colorString: obj3.color, colorStrings: obj3.colors } = children);
-        obj.containerStyles = closure_1_23.roleDot;
-        tmp2Result = closure_1_19(guild(currentUserId[18]).RoleDot, obj);
+        obj4.containerStyles = closure_1_23.roleDot;
+        tmp2Result = closure_1_19(guild(currentUserId[18]).RoleDot, obj4);
       }
       const items = [tmp2Result];
       let tmp11;
       if (null != children.colorString) {
         if ("username" === closure_2) {
-          const obj1 = { color: children.colorString };
-          tmp11 = obj1;
+          const obj5 = { color: children.colorString };
+          tmp11 = obj5;
         }
       }
       items[1] = closure_1_19(guild(currentUserId[19]).Text, {
@@ -308,8 +299,8 @@ RolesList.prototype["render"] = function render() {
         style: tmp11,
         children: children.name,
       });
-      obj.children = items;
-      obj.label = closure_1_20(closure_5, obj);
+      obj2.children = items;
+      obj.label = closure_1_20(closure_5, obj2);
       obj.onPress = function onPress() {
         return onToggleRole(id.id, !closure_1);
       };
@@ -317,75 +308,76 @@ RolesList.prototype["render"] = function render() {
     });
   } else {
     tmp3 = currentUserId;
-    let arr = require("../../../../_runtime/metro/00012__.js")(sortedGuildRoles);
-    const found3 = arr.filter((id) => importDefault.includes(id.id));
-    valueResult = found3
+    const found3 = require("../../../../_runtime/metro/00012__.js")(sortedGuildRoles).filter((id) =>
+      importDefault.includes(id.id),
+    );
+    const arr = require("../../../../_runtime/metro/00012__.js")(sortedGuildRoles);
+    const valueResult2 = found3
       .map((children) => {
-        let obj = { style: closure_23.labelContainer, children: null };
+        const obj = { style: closure_23.labelContainer, children: null };
         let tmpResult = "dot" === importAll;
         if (tmpResult) {
           tmpResult = null != children.colorString;
         }
         if (tmpResult) {
-          obj = { color: null, colors: null, containerStyles: null };
+          const obj3 = { color: null, colors: null, containerStyles: null };
           ({ colorString: obj2.color, colorStrings: obj2.colors } = children);
-          obj.containerStyles = closure_23.roleDot;
-          tmpResult = closure_2_19(native.RoleDot, obj);
+          obj3.containerStyles = closure_23.roleDot;
+          tmpResult = closure_2_19(native.RoleDot, obj3);
         }
         const items = [tmpResult];
         let tmp10;
         if (null != children.colorString) {
           if ("username" === importAll) {
-            obj = { color: children.colorString };
-            tmp10 = obj;
+            const obj4 = { color: children.colorString };
+            tmp10 = obj4;
           }
         }
-        const obj1 = { label: null };
-        const obj2 = { variant: "text-md/semibold", style: tmp10, children: children.name };
-        items[1] = closure_2_19(Text_Text.Text, obj2);
+        const obj5 = { label: null };
+        items[1] = closure_2_19(Text_Text.Text, { variant: "text-md/semibold", style: tmp10, children: children.name });
         obj.children = items;
-        obj1.label = closure_2_20(hasOwnProperty, obj);
-        return closure_2_19(TableRow2.TableRow, obj1, children.id);
+        obj5.label = closure_2_20(hasOwnProperty, obj);
+        return closure_2_19(TableRow2.TableRow, obj5, children.id);
       })
       .value();
     let obj = { label: null, onPress: null };
     const intl = guild(currentUserId[21]).intl;
     obj.label = intl.string(guild(currentUserId[21]).t["+riKdA"]);
     obj.onPress = tmp;
-    arr = valueResult.push(closure_19(guild(currentUserId[20]).TableRow, obj, "addition"));
+    valueResult2.push(closure_19(guild(currentUserId[20]).TableRow, obj, "addition"));
+    valueResult = valueResult2;
     const iter = found3.map((children) => {
-      let obj = { style: closure_23.labelContainer, children: null };
+      const obj = { style: closure_23.labelContainer, children: null };
       let tmpResult = "dot" === importAll;
       if (tmpResult) {
         tmpResult = null != children.colorString;
       }
       if (tmpResult) {
-        obj = { color: null, colors: null, containerStyles: null };
+        const obj3 = { color: null, colors: null, containerStyles: null };
         ({ colorString: obj2.color, colorStrings: obj2.colors } = children);
-        obj.containerStyles = closure_23.roleDot;
-        tmpResult = closure_2_19(native.RoleDot, obj);
+        obj3.containerStyles = closure_23.roleDot;
+        tmpResult = closure_2_19(native.RoleDot, obj3);
       }
       const items = [tmpResult];
       let tmp10;
       if (null != children.colorString) {
         if ("username" === importAll) {
-          obj = { color: children.colorString };
-          tmp10 = obj;
+          const obj4 = { color: children.colorString };
+          tmp10 = obj4;
         }
       }
-      const obj1 = { label: null };
-      const obj2 = { variant: "text-md/semibold", style: tmp10, children: children.name };
-      items[1] = closure_2_19(Text_Text.Text, obj2);
+      const obj5 = { label: null };
+      items[1] = closure_2_19(Text_Text.Text, { variant: "text-md/semibold", style: tmp10, children: children.name });
       obj.children = items;
-      obj1.label = closure_2_20(hasOwnProperty, obj);
-      return closure_2_19(TableRow2.TableRow, obj1, children.id);
+      obj5.label = closure_2_20(hasOwnProperty, obj);
+      return closure_2_19(TableRow2.TableRow, obj5, children.id);
     });
   }
-  obj = { title: null, hasIcons: false, children: null };
+  let obj3 = { title: null, hasIcons: false, children: null };
   const intl2 = guild(tmp3[21]).intl;
-  obj.title = intl2.string(guild(tmp3[21]).t["LPJmL/"]);
-  obj.children = valueResult;
-  return closure_19(guild(tmp3[22]).TableRowGroup, obj);
+  obj3.title = intl2.string(guild(tmp3[21]).t["LPJmL/"]);
+  obj3.children = valueResult;
+  return closure_19(guild(tmp3[22]).TableRowGroup, obj3);
 };
 RolesList.defaultProps = { roles: [] };
 const PureComponent2 = noop.PureComponent;
@@ -426,13 +418,17 @@ class GuildSettingsModalMemberEdit extends PureComponent2 {
     };
     applyArgumentsResult.handleSetCommunicationDisabled = function handleSetCommunicationDisabled() {
       ({ guild, user } = applyArgumentsResult.props);
-      const obj = { guildId: guild.id, userId: user.id };
-      const result = obj.openDisableCommunication(obj);
+      const result = GuildDisableCommunicationActionCreators.openDisableCommunication({
+        guildId: guild.id,
+        userId: user.id,
+      });
     };
     applyArgumentsResult.handleClearCommunicationDisabled = function handleClearCommunicationDisabled() {
       ({ guild, user } = applyArgumentsResult.props);
-      const obj = { guildId: guild.id, userId: user.id };
-      const result = obj.openEnableCommunication(obj);
+      const result = GuildDisableCommunicationActionCreators.openEnableCommunication({
+        guildId: guild.id,
+        userId: user.id,
+      });
     };
     applyArgumentsResult.handleKick = function handleKick() {
       const props = applyArgumentsResult.props;
@@ -493,10 +489,10 @@ prototype["updateNavigator"] = function updateNavigator(submitting) {
         return closure_2_19(HeaderActionButton.HeaderActionButton, obj);
       };
     } else if (null != onClose) {
-      let setOptionsResult = self(5705);
-      fn = setOptionsResult.getHeaderCloseButton(onClose);
+      fn = self(5705).getHeaderCloseButton(onClose);
+      let obj = self(5705);
     }
-    setOptionsResult = { headerLeft: fn, headerRight: null, headerTitle: null };
+    let obj2 = { headerLeft: fn, headerRight: null, headerTitle: null };
     if (submitting) {
       let fn2 = () => closure_1_19(self(dependencyMap[25]).HeaderSubmittingIndicator, {});
     } else if (isEditing) {
@@ -508,15 +504,15 @@ prototype["updateNavigator"] = function updateNavigator(submitting) {
         return closure_2_19(HeaderActionButton.HeaderActionButton, obj);
       };
     }
-    setOptionsResult.headerRight = fn2;
-    setOptionsResult.headerTitle = function headerTitle() {
-      let obj = { title: null };
+    obj2.headerRight = fn2;
+    obj2.headerTitle = function headerTitle() {
+      const obj = { title: null };
       const intl = util.intl;
-      obj = { user: UserUtilsDefault.getName(self.props.user) };
-      obj.title = intl.formatToPlainString(util.t.v7odxj, obj);
+      const obj2 = { user: UserUtilsDefault.getName(self.props.user) };
+      obj.title = intl.formatToPlainString(util.t.v7odxj, obj2);
       return closure_2_19(NavigatorHeader.NavigatorHeader, obj);
     };
-    setOptionsResult = navigation.setOptions(setOptionsResult);
+    obj2 = navigation.setOptions(obj2);
   }
   tmp =
     null != submitting &&
@@ -544,18 +540,17 @@ prototype["render"] = function render() {
   if (null == member) {
     return null;
   } else {
-    let obj = { style: tmp.rowLabel, children: null };
-    obj = { variant: "text-sm/medium", children: UserUtilsDefault.getUserTag(user) };
-    const items = [closure_1_19(Text_Text.Text, obj)];
+    const obj2 = { style: tmp.rowLabel, children: null };
+    const obj3 = { variant: "text-sm/medium", children: UserUtilsDefault.getUserTag(user) };
+    const items = [closure_1_19(Text_Text.Text, obj3)];
     let tmp18Result = null;
     if (user.bot) {
-      obj = { verified: null };
-      let tmp21Result = BotTagDefault;
-      obj.verified = user.isVerifiedBot();
-      tmp18Result = closure_1_19(tmp21Result, obj);
+      const obj = { verified: user.isVerifiedBot() };
+      tmp18Result = closure_1_19(BotTagDefault, obj);
+      const tmp21Result = BotTagDefault;
     }
     items[1] = tmp18Result;
-    obj.children = items;
+    obj2.children = items;
     if (null == member) {
       let bot = React5(guild, user);
       if (!bot) {
@@ -564,32 +559,32 @@ prototype["render"] = function render() {
       if (!bot) {
         bot = user.bot;
       }
-      tmp18Result = undefined;
+      let tmp18Result3;
       if (!bot) {
-        const obj1 = { hasIcons: false, children: null };
-        const obj2 = { variant: "danger", label: null, onPress: null };
+        const obj4 = { hasIcons: false, children: null };
+        const obj5 = { variant: "danger", label: null, onPress: null };
         const intl2 = util.intl;
-        obj2.label = intl2.string(util.t.Z5s7PM);
-        obj2.onPress = self.handleTransferOwnership;
-        obj1.children = closure_1_19(TableRow2.TableRow, obj2);
-        tmp18Result = closure_1_19(TableRowGroup2.TableRowGroup, obj1);
+        obj5.label = intl2.string(util.t.Z5s7PM);
+        obj5.onPress = self.handleTransferOwnership;
+        obj4.children = closure_1_19(TableRow2.TableRow, obj5);
+        tmp18Result3 = closure_1_19(TableRowGroup2.TableRowGroup, obj4);
       }
-      const obj3 = { style: tmp.form, contentContainerStyle: null, children: null };
+      const obj6 = { style: tmp.form, contentContainerStyle: null, children: null };
       const items1 = [tmp.formContent, self.props.contentContainerStyle];
-      obj3.contentContainerStyle = items1;
-      const obj4 = { style: tmp.stackPadding, spacing: nativeDefault.space.PX_24, children: null };
-      const obj5 = { hasIcons: true, children: null };
-      const obj6 = { icon: null, label: null };
-      const obj7 = { style: tmp.avatar, user, guildId: guild.id };
-      obj6.icon = closure_1_19(native.Avatar, obj7);
-      obj6.label = tmp7;
-      obj5.children = closure_1_19(TableRow2.TableRow, obj6);
-      const items2 = [closure_1_19(TableRowGroup2.TableRowGroup, obj5), , , , , ,];
+      obj6.contentContainerStyle = items1;
+      const obj7 = { style: tmp.stackPadding, spacing: nativeDefault.space.PX_24, children: null };
+      const obj8 = { hasIcons: true, children: null };
+      const obj9 = { icon: null, label: null };
+      const obj10 = { style: tmp.avatar, user, guildId: guild.id };
+      obj9.icon = closure_1_19(native.Avatar, obj10);
+      obj9.label = tmp7;
+      obj8.children = closure_1_19(TableRow2.TableRow, obj9);
+      const items2 = [closure_1_19(TableRowGroup2.TableRowGroup, obj8), , , , , ,];
       if (!canChangeNick) {
         canChangeNick = currentUser.id === user.id;
       }
       if (canChangeNick) {
-        const obj8 = {
+        const obj11 = {
           label: null,
           value: null,
           placeholder: null,
@@ -599,20 +594,20 @@ prototype["render"] = function render() {
           errorMessage: null,
         };
         const intl3 = util.intl;
-        obj8.label = intl3.string(util.t["621LJD"]);
+        obj11.label = intl3.string(util.t["621LJD"]);
         if (str == null) {
           str = "";
         }
-        obj8.value = str;
+        obj11.value = str;
         const intl4 = util.intl;
-        obj8.placeholder = intl4.string(util.t.h7UKXj);
+        obj11.placeholder = intl4.string(util.t.h7UKXj);
         ({ handleChangeNickname: obj16.onChange, handleSaveNickname: obj16.onBlur } = self);
-        obj8.errorMessage = tmp3;
-        canChangeNick = closure_1_19(TextInput.TextInput, obj8);
+        obj11.errorMessage = tmp3;
+        canChangeNick = closure_1_19(TextInput.TextInput, obj11);
       }
       items2[1] = canChangeNick;
       if (canManageRoles) {
-        const obj9 = {
+        const obj12 = {
           guild,
           sortedGuildRoles: tmp2,
           roles: null,
@@ -628,12 +623,12 @@ prototype["render"] = function render() {
         if (editRoles == null) {
           editRoles = [];
         }
-        obj9.roles = editRoles;
-        obj9.roleStyle = tmp4;
-        obj9.currentUserId = currentUser.id;
-        obj9.isEditing = isEditing;
+        obj12.roles = editRoles;
+        obj12.roleStyle = tmp4;
+        obj12.currentUserId = currentUser.id;
+        obj12.isEditing = isEditing;
         ({ handleToggleRole: obj17.onToggleRole, handleStartEditingRoles: obj17.onStartEditing } = self);
-        canManageRoles = closure_1_19(RolesList, obj9);
+        canManageRoles = closure_1_19(RolesList, obj12);
       }
       items2[2] = canManageRoles;
       if (canDisableCommunication) {
@@ -641,59 +636,58 @@ prototype["render"] = function render() {
       }
       items2[3] = canDisableCommunication;
       if (canKick) {
-        const obj10 = { hasIcons: false, children: null };
-        const obj11 = { variant: "danger", label: null, onPress: null };
+        const obj13 = { hasIcons: false, children: null };
+        const obj14 = { variant: "danger", label: null, onPress: null };
         const intl5 = util.intl;
-        const obj12 = { user: null };
-        tmp21Result = UserUtilsDefault;
-        obj12.user = tmp21Result.getName(user);
-        obj11.label = intl5.formatToPlainString(util.t.yOiJHB, obj12);
-        obj11.onPress = self.handleKick;
-        obj10.children = closure_1_19(TableRow2.TableRow, obj11);
-        canKick = closure_1_19(TableRowGroup2.TableRowGroup, obj10);
+        const obj15 = { user: UserUtilsDefault.getName(user) };
+        obj14.label = intl5.formatToPlainString(util.t.yOiJHB, obj15);
+        obj14.onPress = self.handleKick;
+        obj13.children = closure_1_19(TableRow2.TableRow, obj14);
+        canKick = closure_1_19(TableRowGroup2.TableRowGroup, obj13);
+        const tmp21Result5 = UserUtilsDefault;
       }
       items2[4] = canKick;
       if (canBan) {
-        const obj13 = { hasIcons: false, children: null };
-        const obj14 = { variant: "danger", label: null, onPress: null };
+        const obj18 = { hasIcons: false, children: null };
+        const obj19 = { variant: "danger", label: null, onPress: null };
         const intl6 = util.intl;
-        const obj15 = { user: UserUtilsDefault.getName(user) };
-        obj14.label = intl6.formatToPlainString(util.t.TuAZuW, obj15);
-        obj14.onPress = self.handleBan;
-        obj13.children = closure_1_19(TableRow2.TableRow, obj14);
-        canBan = closure_1_19(TableRowGroup2.TableRowGroup, obj13);
-        const tmp21Result1 = UserUtilsDefault;
+        const obj20 = { user: UserUtilsDefault.getName(user) };
+        obj19.label = intl6.formatToPlainString(util.t.TuAZuW, obj20);
+        obj19.onPress = self.handleBan;
+        obj18.children = closure_1_19(TableRow2.TableRow, obj19);
+        canBan = closure_1_19(TableRowGroup2.TableRowGroup, obj18);
+        const tmp21Result6 = UserUtilsDefault;
       }
       items2[5] = canBan;
-      items2[6] = tmp18Result;
-      obj4.children = items2;
-      obj3.children = closure_1_20(Stack_Stack.Stack, obj4);
-      return closure_1_19(Form.Form, obj3);
+      items2[6] = tmp18Result3;
+      obj7.children = items2;
+      obj6.children = closure_1_20(Stack_Stack.Stack, obj7);
+      return closure_1_19(Form.Form, obj6);
     } else {
       const result = CommunicationDisabledUtils.isMemberCommunicationDisabled(member);
       const TableRowGroup = TableRowGroup2.TableRowGroup;
-      const obj16 = { hasIcons: false, children: null };
+      const obj21 = { hasIcons: false, children: null };
       const TableRow = TableRow2.TableRow;
-      let obj17 = { variant: "danger", label: null, onPress: null };
+      let obj22 = { variant: "danger", label: null, onPress: null };
       const intl = util.intl;
       const formatToPlainString = intl.formatToPlainString;
       let handleClearCommunicationDisabled = util.t;
       if (result) {
-        const obj18 = { user: UserUtilsDefault.getName(user) };
-        obj17.label = formatToPlainString(handleClearCommunicationDisabled.RuL6o7, obj18);
+        const obj23 = { user: UserUtilsDefault.getName(user) };
+        obj22.label = formatToPlainString(handleClearCommunicationDisabled.RuL6o7, obj23);
         handleClearCommunicationDisabled = self.handleClearCommunicationDisabled;
-        obj17.onPress = handleClearCommunicationDisabled;
-        obj17 = closure_1_19(TableRow, obj17);
-        obj16.children = obj17;
-        let tmp18Result1 = closure_1_19(TableRowGroup, obj16);
-        const tmp21Result2 = UserUtilsDefault;
+        obj22.onPress = handleClearCommunicationDisabled;
+        obj22 = closure_1_19(TableRow, obj22);
+        obj21.children = obj22;
+        let tmp18Result4 = closure_1_19(TableRowGroup, obj21);
+        const tmp21Result7 = UserUtilsDefault;
       } else {
-        const obj19 = { user: UserUtilsDefault.getName(user) };
-        obj17[1] = formatToPlainString(handleClearCommunicationDisabled.FN7NIS, obj19);
-        obj17[2] = self.handleSetCommunicationDisabled;
-        obj16.children = closure_1_19(TableRow, obj17);
-        tmp18Result1 = closure_1_19(TableRowGroup, obj16);
-        const tmp21Result3 = UserUtilsDefault;
+        const obj24 = { user: UserUtilsDefault.getName(user) };
+        obj22[1] = formatToPlainString(handleClearCommunicationDisabled.FN7NIS, obj24);
+        obj22[2] = self.handleSetCommunicationDisabled;
+        obj21.children = closure_1_19(TableRow, obj22);
+        tmp18Result4 = closure_1_19(TableRowGroup, obj21);
+        const tmp21Result8 = UserUtilsDefault;
       }
       const tmp19Result = CommunicationDisabledUtils;
     }
@@ -713,44 +707,44 @@ export default function MemberModalEdit(onClose) {
   const memo = noop.useMemo(() => {
     const guildId = closure_2;
     closure_2 = onRemove;
-    let obj = {
-      render(arg0) {
-        const obj = {};
-        const merged = Object.assign(arg0);
-        obj.onClose = onClose;
-        obj.guildId = guildId;
-        return closure_2_19(GuildSettingsModalMemberEditScene, obj);
+    return {
+      [closure_2_18.MEMBER_EDIT]: {
+        render(arg0) {
+          const obj = {};
+          const merged = Object.assign(arg0);
+          obj.onClose = onClose;
+          obj.guildId = guildId;
+          return closure_2_19(GuildSettingsModalMemberEditScene, obj);
+        },
+      },
+      [closure_2_18.MEMBER_KICK]: {
+        headerTitle() {
+          return null;
+        },
+        render(arg0) {
+          const obj = {};
+          const merged = Object.assign(arg0);
+          obj.guildId = guildId;
+          obj.onKick = onKick;
+          return closure_2_19(onRemove(11980), obj);
+        },
+      },
+      [closure_2_18.MEMBER_BAN]: {
+        headerTitle() {
+          return null;
+        },
+        render(arg0) {
+          const obj = {};
+          const merged = Object.assign(arg0);
+          obj.guildId = guildId;
+          obj.onBan = onBan;
+          return closure_2_19(onRemove(11982), obj);
+        },
       },
     };
-    obj = {
-      headerTitle() {
-        return null;
-      },
-      render(arg0) {
-        const obj = {};
-        const merged = Object.assign(arg0);
-        obj.guildId = guildId;
-        obj.onKick = onKick;
-        return closure_2_19(onRemove(11979), obj);
-      },
-    };
-    obj = {
-      headerTitle() {
-        return null;
-      },
-      render(arg0) {
-        const obj = {};
-        const merged = Object.assign(arg0);
-        obj.guildId = guildId;
-        obj.onBan = onBan;
-        return closure_2_19(onRemove(11981), obj);
-      },
-    };
-    return { [closure_2_18.MEMBER_EDIT]: obj, [closure_2_18.MEMBER_KICK]: obj, [closure_2_18.MEMBER_BAN]: obj };
   }, items);
   let obj = { screens: memo, initialRouteName: constants3.MEMBER_EDIT, initialRouteStack: null };
-  obj = { name: constants3.MEMBER_EDIT, params: { userId } };
-  const items1 = [obj];
+  const items1 = [{ name: constants3.MEMBER_EDIT, params: { userId } }];
   obj.initialRouteStack = items1;
   return closure_19(onClose(7103).Navigator, obj);
 }

@@ -10,8 +10,7 @@ const result = size.fileFinishedImporting("modules/premium/powerups/hooks/useMul
 
 export default function useMultiPerkStatusValues(powerups) {
   powerups = powerups.powerups;
-  let obj = usePowerupActiveStatus;
-  const powerupsActiveStatuses = obj.usePowerupsActiveStatuses(powerups.guildId, powerups);
+  const powerupsActiveStatuses = usePowerupActiveStatus.usePowerupsActiveStatuses(powerups.guildId, powerups);
   const someResult = powerupsActiveStatuses.some((type) => type.type !== constants.INACTIVE);
   if (powerups.length <= 0) {
     return null;
@@ -34,13 +33,13 @@ export default function useMultiPerkStatusValues(powerups) {
       return tmp2;
     }, undefined);
     if (null != reduced) {
-      obj = { type: "expiring", expiringAt: reduced };
-      let tmp4 = obj;
+      const obj2 = { type: "expiring", expiringAt: reduced };
+      let tmp4 = obj2;
     } else if (someResult) {
-      obj = { type: "active", statusText: null };
+      const obj3 = { type: "active", statusText: null };
       const intl = util.intl;
-      obj.statusText = intl.string(_modDef2428.FFLkmx);
-      tmp4 = obj;
+      obj3.statusText = intl.string(_modDef2428.FFLkmx);
+      tmp4 = obj3;
     }
     const reduced1 = powerupsActiveStatuses.reduce((acc, type) => {
       let sum = acc;
@@ -97,7 +96,7 @@ export default function useMultiPerkStatusValues(powerups) {
     if (someResult) {
       tmp10 = reduced1;
     }
-    const obj1 = {
+    const obj4 = {
       isActive: someResult,
       status: tmp4,
       cost: tmp10,
@@ -113,11 +112,11 @@ export default function useMultiPerkStatusValues(powerups) {
         str = "+";
       }
     }
-    obj1.costDecorator = str;
-    obj1.expiringAt = reduced;
-    obj1.activeCost = reduced1;
-    obj1.minCost = reduced2;
-    obj1.totalCost = reduced3;
-    return obj1;
+    obj4.costDecorator = str;
+    obj4.expiringAt = reduced;
+    obj4.activeCost = reduced1;
+    obj4.minCost = reduced2;
+    obj4.totalCost = reduced3;
+    return obj4;
   }
 }

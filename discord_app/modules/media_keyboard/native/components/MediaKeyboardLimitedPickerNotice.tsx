@@ -34,19 +34,19 @@ export default function MediaKeyboardLimitedPickerNotice(onHeightChange) {
   if (null != onHeightChange) {
     absoluteContainer = tmp.absoluteContainer;
   }
-  let obj = { style: items1, onLayout: callback, children: null };
+  const obj = { style: items1, onLayout: callback, children: null };
   items1[1] = absoluteContainer;
-  obj = { style: tmp.text, variant: "text-sm/normal", children: null };
+  const obj2 = { style: tmp.text, variant: "text-sm/normal", children: null };
   const intl = util.intl;
-  obj.children = intl.string(util.t["5g7NcN"]);
-  const items2 = [React4(Text_Text.Text, obj)];
-  obj = { style: tmp.button, children: null };
-  const obj1 = { size: "sm", variant: "tertiary", text: null, onPress: null };
+  obj2.children = intl.string(util.t["5g7NcN"]);
+  const items2 = [React4(Text_Text.Text, obj2)];
+  const obj3 = { style: tmp.button, children: null };
+  const obj4 = { size: "sm", variant: "tertiary", text: null, onPress: null };
   const intl2 = util.intl;
-  obj1.text = intl2.string(util.t.JuXTi6);
-  obj1.onPress = onHeightChange.onPress;
-  obj.children = React4(components_Button_Button.Button, obj1);
-  items2[1] = React4(View, obj);
+  obj4.text = intl2.string(util.t.JuXTi6);
+  obj4.onPress = onHeightChange.onPress;
+  obj3.children = React4(components_Button_Button.Button, obj4);
+  items2[1] = React4(View, obj3);
   obj.children = items2;
   return hasOwnProperty(View, obj);
 }

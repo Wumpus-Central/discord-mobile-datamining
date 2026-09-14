@@ -32,11 +32,11 @@ export const MenuItem = noop.forwardRef((action, ref) => {
   } else {
     tmp3 = null;
     if (null != iconSource) {
-      let obj = { source: iconSource, style: tmp.formIcon };
+      const obj = { source: iconSource, style: tmp.formIcon };
       tmp3 = jsx(IconDefault, { source: iconSource, style: tmp.formIcon });
     }
   }
-  obj = {
+  const obj2 = {
     ref,
     style,
     accessibilityRole: "menuitem",
@@ -53,7 +53,7 @@ export const MenuItem = noop.forwardRef((action, ref) => {
       tmp10 = tmp3;
     }
   }
-  obj.leading = tmp10;
+  obj2.leading = tmp10;
   let tmp11 = null;
   if (null != iconSource) {
     tmp11 = null;
@@ -61,14 +61,14 @@ export const MenuItem = noop.forwardRef((action, ref) => {
       tmp11 = tmp3;
     }
   }
-  obj.trailing = tmp11;
+  obj2.trailing = tmp11;
   let tmp7Result = label;
   if (typeof label === "string") {
-    obj = { text: label, style: tmp.formLabel };
+    const obj3 = { text: label, style: tmp.formLabel };
     tmp7Result = jsx(FormLabelDefault, { text: label, style: tmp.formLabel });
   }
-  obj.label = tmp7Result;
-  obj.onPress = function onPress() {
+  obj2.label = tmp7Result;
+  obj2.onPress = function onPress() {
     action();
     menuClose();
   };

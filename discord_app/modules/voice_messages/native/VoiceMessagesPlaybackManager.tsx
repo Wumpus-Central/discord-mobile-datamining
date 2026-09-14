@@ -31,7 +31,7 @@ class VoiceMessagesPlaybackManager extends tmp3 {
             const result1 = DCDAudioPlayerManager.handleVoiceMessageDeleted(id);
           }
         }
-        obj = applyArgumentsResult(1150);
+        obj = applyArgumentsResult(1363);
       }
     };
     applyArgumentsResult.handleLogout = function handleLogout() {
@@ -43,7 +43,7 @@ class VoiceMessagesPlaybackManager extends tmp3 {
           DCDAudioPlayerManager.pauseCurrentPlayer(false);
         }
       }
-      obj = applyArgumentsResult(1150);
+      obj = applyArgumentsResult(1363);
     };
     applyArgumentsResult.handleAppStateChanged = function handleAppStateChanged(state) {
       state = state.state;
@@ -52,7 +52,6 @@ class VoiceMessagesPlaybackManager extends tmp3 {
         applyArgumentsResult.appState = state;
         if ("active" === state) {
           if ("active" !== appState) {
-            let tmpResult = PlatformUtils;
             if (tmpResult.isAndroid()) {
               const result = NativeAudioPlayerModuleDefault.maybePlayCurrentPlayer();
             } else {
@@ -61,11 +60,11 @@ class VoiceMessagesPlaybackManager extends tmp3 {
                 const result1 = DCDAudioPlayerManager2.maybePlayCurrentPlayer();
               }
             }
+            tmpResult = PlatformUtils;
           }
         }
         if (tmp4) {
-          tmpResult = PlatformUtils;
-          if (tmpResult.isAndroid()) {
+          if (tmpResult2.isAndroid()) {
             NativeAudioPlayerModuleDefault.pauseCurrentPlayer(true);
           } else {
             const DCDAudioPlayerManager = React4.DCDAudioPlayerManager;
@@ -73,6 +72,7 @@ class VoiceMessagesPlaybackManager extends tmp3 {
               DCDAudioPlayerManager.pauseCurrentPlayer(true);
             }
           }
+          tmpResult2 = PlatformUtils;
         }
         tmp4 = "active" !== state && "active" === appState;
       }
@@ -89,19 +89,17 @@ prototype["_terminate"] = function _terminate() {
   DispatcherDefault.unsubscribe("ACCESSIBILITY_SET_PREFERS_REDUCED_MOTION", this.handleSetPrefersReducedMotion);
 };
 prototype["_initialize"] = function _initialize() {
-  let obj = DispatcherDefault;
-  const subscription = obj.subscribe("LOGOUT", this.handleLogout);
+  const subscription = DispatcherDefault.subscribe("LOGOUT", this.handleLogout);
   const subscription1 = DispatcherDefault.subscribe("MESSAGE_DELETE", this.handleMessageDelete);
   const subscription2 = DispatcherDefault.subscribe("APP_STATE_UPDATE", this.handleAppStateChanged);
   const subscription3 = DispatcherDefault.subscribe(
     "ACCESSIBILITY_SET_PREFERS_REDUCED_MOTION",
     this.handleSetPrefersReducedMotion,
   );
-  obj = {
+  const result = this.handleSetPrefersReducedMotion({
     type: "ACCESSIBILITY_SET_PREFERS_REDUCED_MOTION",
     prefersReducedMotion: AccessibilityStore.rawPrefersReducedMotion,
-  };
-  const result = this.handleSetPrefersReducedMotion(obj);
+  });
 };
 const voiceMessagesPlaybackManager = new VoiceMessagesPlaybackManager();
 let result = size.fileFinishedImporting("modules/voice_messages/native/VoiceMessagesPlaybackManager.tsx");

@@ -2,6 +2,8 @@
 import markup_MarkupParser from "native/MarkupParser.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
+const require = globalThis.__r;
+
 const result = size.fileFinishedImporting("../discord_common/js/packages/markup/MarkupParser.tsx");
 for (const key10026 in require("MarkupASTUtils")) {
   arg5[key10026] = require("MarkupASTUtils")[key10026];

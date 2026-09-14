@@ -10,14 +10,15 @@ import SelectedGuildStore from "../../stores/SelectedGuildStore.tsx";
 import UserStore from "../../stores/UserStore.tsx";
 import FavoriteStore from "FavoriteStore.tsx";
 
+const require = globalThis.__r;
+
 require = fn;
 function useFavoritesAccess() {
   let str = FavoritesGuildActionSheet;
   if (FavoritesGuildActionSheet === undefined) {
     str = "useFavoritesAccess";
   }
-  let obj = FavoritesGuildExperiment;
-  const favoritesGuildConfig = obj.useFavoritesGuildConfig({ location: str });
+  const favoritesGuildConfig = FavoritesGuildExperiment.useFavoritesGuildConfig({ location: str });
   ({ enabled, isFreemium } = favoritesGuildConfig);
   const items = [UserStore];
   const stateFromStores = initialize.useStateFromStores(items, () => currentUser.getCurrentUser());
@@ -31,15 +32,21 @@ function useFavoritesAccess() {
     tmp6 = tmp7;
   }
   if (!tmp6) {
-    obj = { hasAccess: tmp6, isExperimentEnabled: enabled, isFreemium, favoriteLimit: 0, canUpsellFavoriteLimit: null };
+    const obj4 = {
+      hasAccess: tmp6,
+      isExperimentEnabled: enabled,
+      isFreemium,
+      favoriteLimit: 0,
+      canUpsellFavoriteLimit: null,
+    };
     if (enabled) {
       enabled = isFreemium;
     }
     if (enabled) {
       enabled = !isPremiumExactlyResult;
     }
-    obj.canUpsellFavoriteLimit = enabled;
-    return obj;
+    obj4.canUpsellFavoriteLimit = enabled;
+    return obj4;
   } else if (isPremiumExactlyResult) {
   }
 }
@@ -50,8 +57,7 @@ let result = size.fileFinishedImporting("modules/favorites/FavoritesHooks.tsx");
 
 export { useFavoritesAccess };
 export const getFavoritesAccess = function getFavoritesAccess() {
-  let obj = FavoritesGuildExperiment;
-  const favoritesGuildConfig = obj.getFavoritesGuildConfig({ location: "getFavoritesAccess" });
+  const favoritesGuildConfig = FavoritesGuildExperiment.getFavoritesGuildConfig({ location: "getFavoritesAccess" });
   ({ enabled, isFreemium } = favoritesGuildConfig);
   const isPremiumExactlyResult = PremiumTypeUtilsDefault.isPremiumExactly(
     UserStore.getCurrentUser(),
@@ -66,35 +72,40 @@ export const getFavoritesAccess = function getFavoritesAccess() {
     tmp5 = tmp6;
   }
   if (!tmp5) {
-    obj = { hasAccess: tmp5, isExperimentEnabled: enabled, isFreemium, favoriteLimit: 0, canUpsellFavoriteLimit: null };
+    const obj3 = {
+      hasAccess: tmp5,
+      isExperimentEnabled: enabled,
+      isFreemium,
+      favoriteLimit: 0,
+      canUpsellFavoriteLimit: null,
+    };
     if (enabled) {
       enabled = isFreemium;
     }
     if (enabled) {
       enabled = !isPremiumExactlyResult;
     }
-    obj.canUpsellFavoriteLimit = enabled;
-    return obj;
+    obj3.canUpsellFavoriteLimit = enabled;
+    return obj3;
   } else if (isPremiumExactlyResult) {
   }
 };
 export const useFavoritesLimitUpsell = function useFavoritesLimitUpsell() {
   ({ canUpsellFavoriteLimit, favoriteLimit } = useFavoritesAccess("useFavoritesLimitUpsell"));
-  let obj = initialize;
+  const tmp = useFavoritesAccess("useFavoritesLimitUpsell");
   const items = [FavoriteStore];
-  const stateFromStores = obj.useStateFromStores(items, () =>
+  const stateFromStores = initialize.useStateFromStores(items, () =>
     favoritesCountAgainstLimit.getFavoritesCountAgainstLimit(),
   );
   if (canUpsellFavoriteLimit) {
     canUpsellFavoriteLimit = true;
   }
-  obj = {
+  return {
     shouldShowUpsell: canUpsellFavoriteLimit,
     favoriteCount: stateFromStores,
     favoriteLimit,
     isAtLimit: favoriteLimit > 0 && stateFromStores >= favoriteLimit,
   };
-  return obj;
 };
 export const useFavorites = function useFavorites() {
   const items = [FavoriteStore];

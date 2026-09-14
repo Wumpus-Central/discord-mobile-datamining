@@ -6,6 +6,8 @@ import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 import GuildRoleStore from "../../../../../stores/GuildRoleStore.tsx";
 
+const require = globalThis.__r;
+
 require = fn;
 const jsx = fn(21).jsx;
 const size = fn(2);
@@ -16,26 +18,22 @@ export default function AppLauncherRoleOption(option) {
   ({ initialValue: importDefault, onRolePress } = option);
   ({ onActionSheetDismiss: _slicedToArray, channel } = option);
   const onPress = option.onPress;
+  first = undefined;
+  closure_8 = undefined;
   const guild_id = channel.guild_id;
   ({ style, autoFocus, hasError } = option);
-  let tmp = _slicedToArray(
-    channel.useState(() => {
-      let roleId = null;
-      if (null != importDefault) {
-        roleId = null;
-        if ("roleMention" === importDefault.type) {
-          roleId = importDefault.roleId;
-        }
+  [first, closure_8] = channel.useState(() => {
+    let roleId = null;
+    if (null != importDefault) {
+      roleId = null;
+      if ("roleMention" === importDefault.type) {
+        roleId = importDefault.roleId;
       }
-      return roleId;
-    }),
-    2,
-  );
-  const first = tmp[0];
-  closure_8 = tmp[1];
-  let obj = option(onRolePress[4]);
+    }
+    return roleId;
+  });
   const items = [onPress];
-  const stateFromStores = obj.useStateFromStores(items, () => {
+  const stateFromStores = option(onRolePress[4]).useStateFromStores(items, () => {
     if (null != first) {
       let role;
       if (null != guild_id) {
@@ -54,7 +52,7 @@ export default function AppLauncherRoleOption(option) {
       onRolePress({ role: null });
     }
   }, items1);
-  obj = {
+  const obj2 = {
     style,
     option,
     hasError,
@@ -65,31 +63,34 @@ export default function AppLauncherRoleOption(option) {
     autoFocus: null,
   };
   let name;
+  let obj = option(onRolePress[4]);
+  const tmp3 = option;
+  const tmp4 = onRolePress;
   if (null != stateFromStores) {
     name = stateFromStores.name;
   }
-  obj.selectedItemName = name;
-  obj.onPress = function onPress() {
+  obj2.selectedItemName = name;
+  obj2.onPress = function onPress() {
     if (onPress != null) {
       tmp();
     }
-    const obj = {
-      option,
-      channel,
-      onRolePress(role) {
-        role = role.role;
-        closure_1_8(role.id);
-        onRolePress({ role });
-      },
-      onActionSheetDismiss,
-    };
+    const obj = ActionSheetActionCreatorsDefault;
     obj.openLazy(
-      asyncRequireImpl(12310, dependencyMap.paths),
+      asyncRequireImpl(12311, dependencyMap.paths),
       AppLauncherRoleListActionSheet.APP_LAUNCHER_ROLE_LIST_ACTION_SHEET_KEY,
-      obj,
+      {
+        option,
+        channel,
+        onRolePress(role) {
+          role = role.role;
+          closure_1_8(role.id);
+          onRolePress({ role });
+        },
+        onActionSheetDismiss,
+      },
     );
   };
-  obj.leading = guild_id(option(onRolePress[9]).RoleIcon, { role: stateFromStores });
-  obj.autoFocus = autoFocus;
-  return guild_id(require("AppLauncherSelectOptionFormRow"), obj);
+  obj2.leading = guild_id(tmp3(tmp4[9]).RoleIcon, { role: stateFromStores });
+  obj2.autoFocus = autoFocus;
+  return guild_id(require("AppLauncherSelectOptionFormRow"), obj2);
 }

@@ -6,6 +6,8 @@ import CreatorRevenueButton from "../components/CreatorRevenueButton.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import GuildStore from "../../../../stores/GuildStore.tsx";
 
+const require = globalThis.__r;
+
 require = fn;
 const StaticChannelRoute = fn(1964).StaticChannelRoute;
 const jsx = fn(21).jsx;
@@ -29,9 +31,8 @@ export default function RoleSubscriptionEmojiUpsellAlert(arg0) {
   }
   const size = onClose(stateFromStores[6])();
   const diff = Math.min(0.9 * Math.min(size.width, size.height), 500) - 32;
-  let obj = require("initialize");
   const items = [GuildStore];
-  stateFromStores = obj.useStateFromStores(items, () => {
+  stateFromStores = require("initialize").useStateFromStores(items, () => {
     let guild = null;
     if (null != require) {
       guild = GuildStore.getGuild(tmp);
@@ -55,17 +56,18 @@ export default function RoleSubscriptionEmojiUpsellAlert(arg0) {
     obj.description = intl2.formatToPlainString(util.t["h0u/Hi"], { serverName: name });
     return obj;
   }, items1);
-  obj = { cancelText: null, onClose: null, renderConfirmButton: null, children: null };
+  const obj2 = { cancelText: null, onClose: null, renderConfirmButton: null, children: null };
+  let obj = require("initialize");
   let intl = require("util").intl;
-  obj.cancelText = intl.string(require("util").t.cpT0Cq);
-  obj.onClose = onClose;
-  obj.renderConfirmButton = function renderConfirmButton() {
+  obj2.cancelText = intl.string(require("util").t.cpT0Cq);
+  obj2.onClose = onClose;
+  obj2.renderConfirmButton = function renderConfirmButton() {
     const obj = { onPress: handleConfirm, text: null };
     const intl = util.intl;
     obj.text = intl.string(util.t.p8FG1D);
     return jsx(CreatorRevenueButton.CreatorRevenueButton, { onPress: handleConfirm, text: null });
   };
-  obj.children = jsx(require("PremiumUpsellAlert").PremiumUpsellItem, { alertWidth: diff, upsellItem: memo });
+  obj2.children = jsx(require("PremiumUpsellAlert").PremiumUpsellItem, { alertWidth: diff, upsellItem: memo });
   return jsx(onClose(stateFromStores[9]), {
     cancelText: null,
     onClose: null,

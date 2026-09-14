@@ -11,8 +11,8 @@ let closure_9 = async function _handleEnableSystemNotification() {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      let obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -25,8 +25,8 @@ let closure_9 = async function _handleEnableSystemNotification() {
           throw value;
         } else if (arg0 === 2) {
           c3 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj5 = { value, done: true };
+          return obj5;
         } else {
           closure_1 = tmp2;
           closure_0 = tmp3;
@@ -34,43 +34,47 @@ let closure_9 = async function _handleEnableSystemNotification() {
           const NativePermissionManager = NativeModules.NativePermissionManager;
           c2 = 1;
           c3 = 1;
-          const obj1 = { value: NativePermissionManager.getNotificationAuthorizationStatus(), done: false };
-          return obj1;
+          const obj6 = { value: NativePermissionManager.getNotificationAuthorizationStatus(), done: false };
+          return obj6;
         }
       } else if (arg0 === 1) {
         c3 = 3;
         throw value;
       } else if (arg0 === 2) {
         c3 = 3;
-        let obj2 = { value, done: true };
-        return obj2;
+        const obj7 = { value, done: true };
+        return obj7;
       } else {
         closure_128_0 = value;
         if (closure_128_0 === closure_129_6.UNDETERMINED) {
-          let obj3 = closure_129_1(closure_129_2[6]);
-          const permission = obj3.requestPermission((permission_granted) => {
-            closure_1_1(dependencyMap[7]);
-            const obj = {
+          const permission = closure_129_1(closure_129_2[6]).requestPermission((permission_granted) => {
+            closure_1_1(dependencyMap[7]).track(constants.NOTIFICATION_PERMISSION_PREPROMPT_ACKED, {
               action_type: constants2.ALLOW_TO_REQUEST,
               action_location: constants3.NOTIFICATION_SETTING,
               permission_granted,
-            };
-            obj.track(constants.NOTIFICATION_PERMISSION_PREPROMPT_ACKED, obj);
+            });
             if (!permission_granted) {
               const result = closure_1_1(dependencyMap[8]).openNotificationSettings();
               const tmpResult = closure_1_1(dependencyMap[8]);
             }
+            const obj = closure_1_1(dependencyMap[7]);
+            const obj2 = {
+              action_type: constants2.ALLOW_TO_REQUEST,
+              action_location: constants3.NOTIFICATION_SETTING,
+              permission_granted,
+            };
           });
+          const obj4 = closure_129_1(closure_129_2[6]);
         } else {
-          obj = closure_129_1(closure_129_2[7]);
           let num3 = 0;
           if (closure_128_0 === closure_129_6.AUTHORIZED) {
             num3 = 1;
           }
-          obj3 = { setting_type: "os", current_status: num3 };
-          obj.track(closure_129_5.NOTIFICATION_SETTINGS_CLICKED, obj3);
-          obj2 = closure_129_1(closure_129_2[8]);
-          let result = obj2.openNotificationSettings();
+          const obj8 = { setting_type: "os", current_status: num3 };
+          closure_129_1(closure_129_2[7]).track(closure_129_5.NOTIFICATION_SETTINGS_CLICKED, obj8);
+          let obj = closure_129_1(closure_129_2[7]);
+          let result = closure_129_1(closure_129_2[8]).openNotificationSettings();
+          const obj3 = closure_129_1(closure_129_2[8]);
         }
         c3 = 3;
       }
@@ -83,10 +87,10 @@ let closure_9 = async function _handleEnableSystemNotification() {
 const NativeModules = fn(17).NativeModules;
 const AnalyticEvents = fn(1074).AnalyticEvents;
 let closure_6 = fn(4846).NotificationAuthorizationStatus;
-const NotificationPermissionConstants = fn(12539);
+const NotificationPermissionConstants = fn(12540);
 ({ EventActionType: closure_7, EventActionLocation: closure_8 } = NotificationPermissionConstants);
-fn(11601);
-let SettingBuilders = {
+const SettingBuilders = fn(11602);
+const pressable = SettingBuilders.createPressable({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.nl2Dqx);
@@ -103,9 +107,8 @@ let SettingBuilders = {
     return applyArgumentsResult;
   },
   withArrow: true,
-};
-SettingBuilders = SettingBuilders.createPressable(SettingBuilders);
+});
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_settings/defs/native/SystemNotificationsSetting.tsx");
 
-export default SettingBuilders;
+export default pressable;

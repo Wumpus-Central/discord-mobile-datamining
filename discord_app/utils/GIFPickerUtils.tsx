@@ -29,17 +29,18 @@ export const getGIFThumbnailForFavorite = function getGIFThumbnailForFavorite(pr
 };
 export const calculateAnalyticsMetadata = function calculateAnalyticsMetadata(analyticsID, TRENDING_GIFS, arg2) {
   if (null != TRENDING_GIFS) {
-    let obj = {};
-    obj[TRENDING_GIFS] = 1;
+    const obj2 = {};
+    obj2[TRENDING_GIFS] = 1;
+    let obj = obj2;
   } else {
     obj = {};
   }
-  obj = arg2;
+  let obj3 = arg2;
   if (arg2 == null) {
-    obj = {};
+    obj3 = {};
   }
-  ({ offset, limit, results } = obj);
-  const obj1 = {
+  ({ offset, limit, results } = obj3);
+  const obj4 = {
     search_type: SearchTypes.GIF,
     load_id: analyticsID,
     limit,
@@ -58,14 +59,14 @@ export const calculateAnalyticsMetadata = function calculateAnalyticsMetadata(an
       num2 = Math.floor(offset / limit) + 1;
     }
   }
-  obj1.page = num2;
-  obj1.total_results = obj.totalResults;
+  obj4.page = num2;
+  obj4.total_results = obj3.totalResults;
   let tmp2 = null;
   if (null != results) {
     tmp2 = results;
   }
-  obj1.page_results = tmp2;
-  obj1.num_modifiers = Object.keys(obj).length;
-  obj1.modifiers = obj;
-  return obj1;
+  obj4.page_results = tmp2;
+  obj4.num_modifiers = Object.keys(obj).length;
+  obj4.modifiers = obj;
+  return obj4;
 };

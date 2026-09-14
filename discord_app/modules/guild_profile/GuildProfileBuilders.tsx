@@ -42,9 +42,9 @@ function buildGuildProfileTraitsFromServer(guildId, traits) {
     }
     if (!tmp4) {
       let obj = { label: tmp3.label, emoji: null };
-      obj = { guildId, emojiId: null, emojiName: null };
+      let obj2 = { guildId, emojiId: null, emojiName: null };
       ({ emoji_id: obj3.emojiId, emoji_name: obj3.emojiName, position } = tmp3);
-      let tmp10 = getEmoji(obj);
+      let tmp10 = getEmoji(obj2);
       obj.emoji = tmp10;
       fillResult[position] = obj;
     }
@@ -53,7 +53,7 @@ function buildGuildProfileTraitsFromServer(guildId, traits) {
   return fillResult;
 }
 function buildGuildProfileFromServer(profile) {
-  let reduced = {
+  const obj = {
     id: profile.id,
     name: profile.name,
     description: null,
@@ -80,7 +80,7 @@ function buildGuildProfileFromServer(profile) {
   if (str == null) {
     str = "";
   }
-  reduced.description = str;
+  obj.description = str;
   ({
     icon_hash: obj.icon,
     custom_banner_hash: obj.customBanner,
@@ -95,35 +95,35 @@ function buildGuildProfileFromServer(profile) {
       tmp = brand_color_primary;
     }
   }
-  reduced.brandColorPrimary = tmp;
+  obj.brandColorPrimary = tmp;
   ({ visibility: obj.visibility, traits } = profile);
   if (traits == null) {
     traits = [];
   }
-  reduced.traits = buildGuildProfileTraitsFromServer(profile.id, traits);
+  obj.traits = buildGuildProfileTraitsFromServer(profile.id, traits);
   let game_application_ids = profile.game_application_ids;
   if (game_application_ids == null) {
     game_application_ids = [];
   }
-  reduced.gameApplicationIds = game_application_ids;
+  obj.gameApplicationIds = game_application_ids;
   const game_activity = profile.game_activity;
   if (null == game_activity) {
-    reduced = {};
+    let obj2 = {};
   } else {
     const _Object = Object;
     const entries = Object.entries(game_activity);
-    reduced = entries.reduce((acc, item) => {
+    obj2 = entries.reduce((acc, item) => {
       [tmp, tmp2] = item;
       acc[tmp] = { level: tmp2.activity_level, score: tmp2.activity_score };
       return acc;
     }, {});
   }
-  reduced.gameActivity = reduced;
+  obj.gameActivity = obj2;
   ({ games: obj.games, features } = profile);
   if (features == null) {
     features = [];
   }
-  reduced.features = features;
+  obj.features = features;
   ({
     tag: obj.tag,
     badge: obj.badge,
@@ -133,7 +133,7 @@ function buildGuildProfileFromServer(profile) {
     premium_subscription_count: obj.premiumSubscriberCount,
     premium_tier: obj.premiumTier,
   } = profile);
-  return reduced;
+  return obj;
 }
 const EmojiDisambiguations = EmojiStore.EmojiDisambiguations;
 let closure_5 = { label: "" };

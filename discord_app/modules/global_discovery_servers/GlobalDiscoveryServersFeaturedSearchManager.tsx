@@ -7,13 +7,13 @@ let require = fn;
 GlobalDiscoveryServersSearchResultsStoreDefault;
 let closure_6 = fn(9195).DISCOVERY_ALL_CATEGORIES_ID;
 const Endpoints = fn(1074).Endpoints;
-let prototype = function GlobalDiscoveryServersFeaturedSearchManager() {
+const prototype = function GlobalDiscoveryServersFeaturedSearchManager() {
   let applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
   require = applyArgumentsResult;
   applyArgumentsResult.actions = {
     POST_CONNECTION_OPEN() {
       return applyArgumentsResult.handleConnectionOpen();
-    },
+    }
   };
   applyArgumentsResult.queue = new Set();
   applyArgumentsResult.isFetchEnabled = false;
@@ -38,8 +38,8 @@ let prototype = function GlobalDiscoveryServersFeaturedSearchManager() {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj3 = { value, done: true };
+        return obj3;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -52,8 +52,8 @@ let prototype = function GlobalDiscoveryServersFeaturedSearchManager() {
             throw value;
           } else if (arg0 === 2) {
             constants = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj5 = { value, done: true };
+            return obj5;
           } else {
             closure_2 = tmp7;
             closure_130_0 = undefined;
@@ -68,32 +68,25 @@ let prototype = function GlobalDiscoveryServersFeaturedSearchManager() {
               if (forceRefresh == null) {
                 isFetchEnabled = false;
               }
-              let obj1 = { categoryId };
+              { categoryId: null }.categoryId = categoryId;
               if (!isFetchEnabled) {
-                let obj6 = applyArgumentsResult(tmp3[5]);
+                applyArgumentsResult(tmp3[5]);
               }
-              let obj7 = isFetchEnabled(tmp3[6]);
-              const obj2 = { type: "GLOBAL_DISCOVERY_SERVERS_SEARCH_START", categoryId, reset: true };
-              obj7.dispatch(obj2);
+              const obj9 = { type: "GLOBAL_DISCOVERY_SERVERS_SEARCH_START", categoryId, reset: true };
+              isFetchEnabled(tmp3[6]).dispatch(obj9);
               c5 = 1;
               const HTTP = applyArgumentsResult(tmp3[7]).HTTP;
-              const request = {
-                url: constants.GUILD_DISCOVERY,
-                query: null,
-                oldFormErrors: true,
-                rejectWithError: null,
-              };
-              let obj3 = {
-                offset: 0,
-                limit: applyArgumentsResult(tmp3[9]).GlobalDiscoveryServersLimits.FEATURED_DEFAULT_LIMIT,
-              };
-              request.query = isFetchEnabled(tmp3[8]).stringify(obj3);
+              const request = { url: constants.GUILD_DISCOVERY, query: null, oldFormErrors: true, rejectWithError: null };
+              const obj6 = { categoryId: null };
+              const obj8 = isFetchEnabled(tmp3[6]);
+              const obj10 = { offset: 0, limit: applyArgumentsResult(tmp3[9]).GlobalDiscoveryServersLimits.FEATURED_DEFAULT_LIMIT };
+              request.query = isFetchEnabled(tmp3[8]).stringify(obj10);
               const obj11 = isFetchEnabled(tmp3[8]);
               request.rejectWithError = applyArgumentsResult(tmp3[7]).rejectWithMigratedError();
               categoryId = 2;
               constants = 1;
-              const obj4 = { value: HTTP.get(request), done: false };
-              return obj4;
+              const obj12 = { value: HTTP.get(request), done: false };
+              return obj12;
             } else {
               const queue = tmp64.queue;
               queue.add(categoryId);
@@ -103,12 +96,12 @@ let prototype = function GlobalDiscoveryServersFeaturedSearchManager() {
           if (1 === tmp7) {
             c5 = 0;
             closure_130_3 = closure_4;
-            obj1 = isFetchEnabled(tmp3[6]);
-            const obj5 = { type: "GLOBAL_DISCOVERY_SERVERS_SEARCH_FAILURE", categoryId, error: closure_130_3 };
-            obj1.dispatch(obj5);
-            obj3 = closure_2(tmp3[10]);
-            obj6 = { categoryId };
-            const result = obj3.trackGuildDiscoveryGetFeaturedGuildsFailed(obj6);
+            const obj14 = { type: "GLOBAL_DISCOVERY_SERVERS_SEARCH_FAILURE", categoryId, error: closure_130_3 };
+            isFetchEnabled(tmp3[6]).dispatch(obj14);
+            const obj2 = isFetchEnabled(tmp3[6]);
+            const obj15 = { categoryId };
+            const result = closure_2(tmp3[10]).trackGuildDiscoveryGetFeaturedGuildsFailed(obj15);
+            const obj4 = closure_2(tmp3[10]);
           } else if (arg0 === 1) {
             constants = 3;
             throw value;
@@ -117,14 +110,14 @@ let prototype = function GlobalDiscoveryServersFeaturedSearchManager() {
             total = closure_130_0.body.total;
             const guilds = closure_130_0.body.guilds;
             closure_130_2 = guilds.map(applyArgumentsResult(tmp3[5]).fromDiscoverableGuildServer);
-            obj7 = { type: "GLOBAL_DISCOVERY_SERVERS_SEARCH_SUCCESS", categoryId, guilds: closure_130_2, total };
-            isFetchEnabled(tmp3[6]).dispatch(obj7);
+            const obj16 = { type: "GLOBAL_DISCOVERY_SERVERS_SEARCH_SUCCESS", categoryId, guilds: closure_130_2, total };
+            isFetchEnabled(tmp3[6]).dispatch(obj16);
             c5 = 0;
             const obj17 = isFetchEnabled(tmp3[6]);
           }
           c5 = 0;
           constants = 3;
-          obj = { value, done: true };
+          const obj = { value, done: true };
           return obj;
         }
         constants = 3;
@@ -139,7 +132,7 @@ let prototype = function GlobalDiscoveryServersFeaturedSearchManager() {
       }
     }
   });
-  applyArgumentsResult.fetchFeaturedGuilds = function () {
+  applyArgumentsResult.fetchFeaturedGuilds = function() {
     const self = this;
     const apply = applyArgumentsResult.apply;
     if (typeof apply === "unknown") {
@@ -158,8 +151,8 @@ let prototype = function GlobalDiscoveryServersFeaturedSearchManager() {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj3 = { value, done: true };
+        return obj3;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -172,8 +165,8 @@ let prototype = function GlobalDiscoveryServersFeaturedSearchManager() {
             throw value;
           } else if (arg0 === 2) {
             c6 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj5 = { value, done: true };
+            return obj5;
           } else {
             isFetchEnabled = tmp7;
             closure_129_0 = undefined;
@@ -198,35 +191,30 @@ let prototype = function GlobalDiscoveryServersFeaturedSearchManager() {
               throw value;
             } else if (arg0 === 2) {
               c6 = 3;
-              let obj1 = { value, done: true };
-              return obj1;
+              const obj6 = { value, done: true };
+              return obj6;
             } else if (closure_130_1.isFetchEnabled) {
-              const obj2 = { categoryId: closure_129_0 };
-              lastFetchTimestamp2 = lastFetchTimestamp.getLastFetchTimestamp(obj2);
+              const obj9 = { categoryId: closure_129_0 };
+              lastFetchTimestamp2 = lastFetchTimestamp.getLastFetchTimestamp(obj9);
               if (!closure_129_1) {
-                let obj6 = applyArgumentsResult(tmp49[5]);
+                applyArgumentsResult(tmp49[5]);
               }
-              let obj7 = isFetchEnabled(tmp49[6]);
-              let obj3 = { type: "GLOBAL_DISCOVERY_SERVERS_SEARCH_START", categoryId: closure_129_0, reset: true };
-              obj7.dispatch(obj3);
+              const obj10 = { type: "GLOBAL_DISCOVERY_SERVERS_SEARCH_START", categoryId: closure_129_0, reset: true };
+              isFetchEnabled(tmp49[6]).dispatch(obj10);
               c4 = 1;
               const HTTP = applyArgumentsResult(tmp49[7]).HTTP;
-              const request = {
-                url: constants.GUILD_DISCOVERY,
-                query: null,
-                oldFormErrors: true,
-                rejectWithError: null,
-              };
-              const obj4 = { categories: null };
+              const request = { url: constants.GUILD_DISCOVERY, query: null, oldFormErrors: true, rejectWithError: null };
+              const obj8 = isFetchEnabled(tmp49[6]);
+              const obj12 = { categories: null };
               const items = [closure_129_0];
-              obj4.categories = items;
-              request.query = isFetchEnabled(tmp49[8]).stringify(obj4);
+              obj12.categories = items;
+              request.query = isFetchEnabled(tmp49[8]).stringify(obj12);
               const obj11 = isFetchEnabled(tmp49[8]);
               request.rejectWithError = applyArgumentsResult(tmp49[7]).rejectWithMigratedError();
               lastFetchTimestamp = 3;
               c6 = 1;
-              const obj5 = { value: HTTP.get(request), done: false };
-              return obj5;
+              const obj14 = { value: HTTP.get(request), done: false };
+              return obj14;
             } else {
               const queue = closure_130_1.queue;
               queue.add(closure_129_0);
@@ -235,16 +223,12 @@ let prototype = function GlobalDiscoveryServersFeaturedSearchManager() {
             if (2 === tmp7) {
               c4 = 0;
               closure_129_6 = tmp49;
-              obj1 = isFetchEnabled(tmp49[6]);
-              obj6 = {
-                type: "GLOBAL_DISCOVERY_SERVERS_SEARCH_FAILURE",
-                categoryId: closure_129_0,
-                error: closure_129_6,
-              };
-              obj1.dispatch(obj6);
-              obj3 = tmp3(tmp49[10]);
-              obj7 = { categoryId: closure_129_0 };
-              const result = obj3.trackGuildDiscoveryGetFeaturedGuildsFailed(obj7);
+              const obj15 = { type: "GLOBAL_DISCOVERY_SERVERS_SEARCH_FAILURE", categoryId: closure_129_0, error: closure_129_6 };
+              isFetchEnabled(tmp49[6]).dispatch(obj15);
+              const obj2 = isFetchEnabled(tmp49[6]);
+              const obj16 = { categoryId: closure_129_0 };
+              const result = tmp3(tmp49[10]).trackGuildDiscoveryGetFeaturedGuildsFailed(obj16);
+              const obj4 = tmp3(tmp49[10]);
             } else if (arg0 === 1) {
               c6 = 3;
               throw value;
@@ -253,19 +237,14 @@ let prototype = function GlobalDiscoveryServersFeaturedSearchManager() {
               total = closure_129_3.body.total;
               const guilds = closure_129_3.body.guilds;
               closure_129_5 = guilds.map(applyArgumentsResult(tmp49[5]).fromDiscoverableGuildServer);
-              const obj8 = {
-                type: "GLOBAL_DISCOVERY_SERVERS_SEARCH_SUCCESS",
-                categoryId: closure_129_0,
-                guilds: closure_129_5,
-                total,
-              };
-              isFetchEnabled(tmp49[6]).dispatch(obj8);
+              const obj17 = { type: "GLOBAL_DISCOVERY_SERVERS_SEARCH_SUCCESS", categoryId: closure_129_0, guilds: closure_129_5, total };
+              isFetchEnabled(tmp49[6]).dispatch(obj17);
               c4 = 0;
               const obj18 = isFetchEnabled(tmp49[6]);
             }
             c4 = 0;
             c6 = 3;
-            obj = { value, done: true };
+            const obj = { value, done: true };
             return obj;
           }
           c6 = 3;
@@ -280,7 +259,7 @@ let prototype = function GlobalDiscoveryServersFeaturedSearchManager() {
       }
     }
   });
-  applyArgumentsResult.fetchCategoryFeaturedGuilds = function () {
+  applyArgumentsResult.fetchCategoryFeaturedGuilds = function() {
     const self = this;
     const apply = applyArgumentsResult.apply;
     if (typeof apply === "unknown") {
@@ -292,11 +271,10 @@ let prototype = function GlobalDiscoveryServersFeaturedSearchManager() {
   };
   return applyArgumentsResult;
 }.prototype;
-class prototype extends tmp2 {}
-prototype = new prototype();
+class prototype extends tmp2 {
+}
+const prototype1 = new prototype();
 const size = fn(2);
-let result = size.fileFinishedImporting(
-  "modules/global_discovery_servers/GlobalDiscoveryServersFeaturedSearchManager.tsx",
-);
+let result = size.fileFinishedImporting("modules/global_discovery_servers/GlobalDiscoveryServersFeaturedSearchManager.tsx");
 
-export default prototype;
+export default prototype1;

@@ -6,7 +6,7 @@ import SortedGuildStore from "../../../../stores/SortedGuildStore.tsx";
 import UserSettingSearchStore from "../../UserSettingSearchStore.tsx";
 
 require = fn;
-const UserSettingsSafetySelectedGuildStore = fn(15960);
+const UserSettingsSafetySelectedGuildStore = fn(15962);
 ({
   getSelectedGuildId: metroRequire,
   GUILD_SELECT_ALL_SERVERS_OPTION_ID: closure_7,
@@ -16,8 +16,8 @@ const UserSettingsSafetySelectedGuildStore = fn(15960);
 const MobileUserSettings = fn(8079).MobileUserSettings;
 let items = [,];
 ({ GUILD_SETTING_ACTIVITY_STATUS: arr[0], GUILD_SETTING_ACTIVITY_JOINING: arr[1] } = MobileUserSettings);
-fn(11601);
-let SettingBuilders = {
+const SettingBuilders = fn(11602);
+const guildSelector = SettingBuilders.createGuildSelector({
   unsearchable: true,
   useSelectedGuildId() {
     const field = UserSettingSearchStore.useField("selected");
@@ -40,14 +40,13 @@ let SettingBuilders = {
   parent: MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
   onPress: function onGuildSelectPress() {
     ActionSheetActionCreatorsDefault.openLazy(
-      asyncRequireImpl(15961, dependencyMap.paths),
+      asyncRequireImpl(15963, dependencyMap.paths),
       "SettingsPrivacyAndSafetyGuildSelectActionSheet",
     );
   },
-};
-SettingBuilders = SettingBuilders.createGuildSelector(SettingBuilders);
+});
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/SafetyGuildSettingGuildSelect.tsx");
 
-export default SettingBuilders;
+export default guildSelector;
 export const GUILD_SPECIFIC_SETTINGS = items;

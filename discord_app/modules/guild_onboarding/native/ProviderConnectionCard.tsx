@@ -52,8 +52,8 @@ export default function ProviderConnectionCard(connection) {
           if (arg0 === 1) {
             throw value;
           } else if (arg0 === 2) {
-            let obj = { value, done: true };
-            return obj;
+            const obj2 = { value, done: true };
+            return obj2;
           } else {
             return { value: "HermesInternal", done: null };
           }
@@ -66,31 +66,31 @@ export default function ProviderConnectionCard(connection) {
                 throw value;
               } else if (arg0 === 2) {
                 v3 = 3;
-                obj = { value, done: true };
-                return obj;
+                const obj3 = { value, done: true };
+                return obj3;
               } else {
-                const obj1 = {};
-                const obj5 = v3(1242);
+                const obj4 = {};
+                const obj5 = v3(1240);
                 const merged = Object.assign(provider_id(4816).collectGuildAnalyticsMetadata(guildId));
-                obj1.connection_type = "provider";
+                obj4.connection_type = "provider";
                 provider_id = connection.provider_id;
                 if (provider_id == null) {
                   provider_id = undefined;
                 }
-                obj1.provider_id = provider_id;
-                obj1.location = _location;
-                obj5.track(constants.GUILD_ONBOARDING_CONNECTION_CLICKED, obj1);
+                obj4.provider_id = provider_id;
+                obj4.location = _location;
+                obj5.track(constants.GUILD_ONBOARDING_CONNECTION_CLICKED, obj4);
                 dependencyMap = 1;
                 v3 = 1;
-                const obj2 = { value: startConnection("Guild Onboarding"), done: false };
-                return obj2;
+                const obj6 = { value: startConnection("Guild Onboarding"), done: false };
+                return obj6;
               }
             } else if (arg0 === 1) {
               v3 = 3;
               throw value;
             } else if (arg0 === 2) {
               v3 = 3;
-              obj = { value, done: true };
+              const obj = { value, done: true };
               return obj;
             } else {
               v3 = 3;
@@ -106,18 +106,17 @@ export default function ProviderConnectionCard(connection) {
     );
     const memo = startConnection.useMemo(() => {
       if (null != connection.provider_id) {
-        let obj = PlatformsDefault;
-        value = obj.get(tmp.provider_id);
-        let icon;
+        value = PlatformsDefault.get(tmp.provider_id);
+        let icon1;
         if (value != null) {
-          icon = value.icon;
+          icon1 = value.icon;
         }
-        if (null == icon) {
+        if (null == icon1) {
           const source = obj2.makeSource(null);
-          obj = { source, style: { width: 32, height: 32 }, disableColor: true };
+          const obj4 = { source, style: { width: 32, height: 32 }, disableColor: true };
           return jsx(native.Icon, { source, style: { width: 32, height: 32 }, disableColor: true });
         } else {
-          icon = value.icon;
+          const icon = value.icon;
           shared.isThemeDark(closure_3) ? icon.darkPNG : icon.lightPNG;
         }
         obj2 = AvatarUtils;

@@ -10,11 +10,16 @@ const Constants = fn(1074);
 ({ EMPTY_STRING_SNOWFLAKE_ID: closure_4, MAX_VISUAL_ROLE_LENGTH: hasOwnProperty } = Constants);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-fn(4636);
-let createStyles = { container: null, pill: null, bubble: null, verifiedContainer: null, roleIcon: null };
-createStyles = { marginRight: 4, marginBottom: 4, borderRadius: nativeDefault.radii.xs };
-createStyles.container = createStyles;
-createStyles.pill = {
+const createStyles = fn(4636);
+const obj2 = {
+  container: { marginRight: 4, marginBottom: 4, borderRadius: nativeDefault.radii.xs },
+  pill: null,
+  bubble: null,
+  verifiedContainer: null,
+  roleIcon: null,
+};
+let obj3 = { marginRight: 4, marginBottom: 4, borderRadius: nativeDefault.radii.xs };
+obj2.pill = {
   flexDirection: "row",
   alignItems: "center",
   paddingHorizontal: 8,
@@ -29,11 +34,11 @@ let size = {
   width: 12,
   backgroundColor: nativeDefault.colors.ICON_MUTED,
 };
-createStyles.bubble = size;
+obj2.bubble = size;
 const size1 = { marginRight: 8, borderRadius: nativeDefault.radii.sm, height: 12, width: 12 };
-createStyles.verifiedContainer = size1;
-createStyles.roleIcon = { paddingRight: 4 };
-let closure_8 = createStyles.createStyles(createStyles);
+obj2.verifiedContainer = size1;
+obj2.roleIcon = { paddingRight: 4 };
+let closure_8 = createStyles.createStyles(obj2);
 size = fn(2);
 const result = size.fileFinishedImporting("components_native/common/RolePill.tsx");
 
@@ -42,15 +47,13 @@ export default function RolePill(role) {
   ({ guildId, color } = role);
   const DeveloperMode = role(1935).DeveloperMode;
   const setting = DeveloperMode.useSetting();
-  role(7289);
-  let obj = { guildId, roleId: role.id, size: 12 };
-  const roleIconProps = obj.useRoleIconProps(obj);
+  const roleIconProps = role(7289).useRoleIconProps({ guildId, roleId: role.id, size: 12 });
   let name = role.name;
   let combined = name;
   if (role.name.length > closure_5) {
-    name = role.name;
+    const name1 = role.name;
     const _HermesInternal = HermesInternal;
-    combined = "" + name.slice(0, tmp5) + "...";
+    combined = "" + name1.slice(0, tmp5) + "...";
     name = combined;
   }
   if (color == null) {
@@ -66,7 +69,7 @@ export default function RolePill(role) {
   if (setting) {
     disableInteraction = role.disableInteraction;
   }
-  obj = {
+  const obj3 = {
     disabled: disableInteraction,
     style: tmp9.container,
     onPress: function handlePress() {
@@ -76,9 +79,9 @@ export default function RolePill(role) {
     accessible: false,
     children: null,
   };
-  const obj1 = { style: tmp9.pill, children: null };
+  const obj4 = { style: tmp9.pill, children: null };
   if (undefined !== guild_connections) {
-    const obj2 = {
+    const obj5 = {
       style: tmp9.verifiedContainer,
       roleId: role.id,
       guildId: null,
@@ -89,40 +92,40 @@ export default function RolePill(role) {
     if (guildId == null) {
       guildId = closure_4;
     }
-    obj2.guildId = guildId;
-    obj2.roleColor = color;
-    let tmp10Result = closure_6(combined(7306), obj2);
+    obj5.guildId = guildId;
+    obj5.roleColor = color;
+    let tmp10Result = closure_6(combined(7306), obj5);
     const tmp15 = combined(7306);
   } else {
     const items = [tmp9.bubble];
     if (null != color) {
-      const obj3 = { backgroundColor: color };
-      let obj4 = obj3;
+      const obj6 = { backgroundColor: color };
+      let obj7 = obj6;
     } else {
-      obj4 = {};
+      obj7 = {};
     }
-    const obj5 = { style: null };
-    items[1] = obj4;
-    obj5.style = items;
-    tmp10Result = closure_6(View, obj5);
+    const obj8 = { style: null };
+    items[1] = obj7;
+    obj8.style = items;
+    tmp10Result = closure_6(View, obj8);
   }
   const items1 = [tmp10Result, ,];
-  tmp10Result = null;
+  let tmp10Result2 = null;
   if (null != roleIconProps) {
-    const obj6 = { style: tmp9.roleIcon, children: null };
-    const obj7 = {};
+    const obj9 = { style: tmp9.roleIcon, children: null };
+    const obj10 = {};
     const merged = Object.assign(roleIconProps);
-    obj6.children = closure_6(combined(7308), obj7);
-    tmp10Result = closure_6(View, obj6);
+    obj9.children = closure_6(combined(7308), obj10);
+    tmp10Result2 = closure_6(View, obj9);
     const tmp18 = combined(7308);
   }
-  items1[1] = tmp10Result;
+  items1[1] = tmp10Result2;
   items1[2] = closure_6(role(4632).Text, {
     variant: "text-xs/semibold",
     color: "interactive-text-active",
     children: name,
   });
-  obj1.children = items1;
-  obj.children = closure_7(View, obj1);
-  return closure_6(role(5204).PressableHighlight, obj);
+  obj4.children = items1;
+  obj3.children = closure_7(View, obj4);
+  return closure_6(role(5204).PressableHighlight, obj3);
 }

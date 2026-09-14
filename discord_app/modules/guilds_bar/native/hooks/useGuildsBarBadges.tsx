@@ -12,6 +12,8 @@ import GuildStore from "../../../../stores/GuildStore.tsx";
 import PermissionStore from "../../../../stores/PermissionStore.tsx";
 import UserStore from "../../../../stores/UserStore.tsx";
 
+const require = globalThis.__r;
+
 require = fn;
 let closure_3 = ["guildActivityIndicatorSource"];
 const Constants = fn(1074);
@@ -28,9 +30,8 @@ export default function useGuildsBarBadges(arg0, mentionCount, isMentionLowImpor
   _require = arg0;
   const tmp = closure_15();
   importDefault = tmp;
-  let obj = require("initialize");
   let items = [GuildStore];
-  stateFromStores = obj.useStateFromStores(items, () => {
+  stateFromStores = require("initialize").useStateFromStores(items, () => {
     const guild = GuildStore.getGuild(closure_0);
     let flag;
     if (guild != null) {
@@ -42,6 +43,7 @@ export default function useGuildsBarBadges(arg0, mentionCount, isMentionLowImpor
     }
     return flag;
   });
+  const obj = require("initialize");
   const items1 = [cutoutTopRight, UserStore, cutout];
   const items2 = [arg0, stateFromStores];
   const stateFromStores1 = require("initialize").useStateFromStores(
@@ -109,9 +111,9 @@ export default function useGuildsBarBadges(arg0, mentionCount, isMentionLowImpor
   );
   const tmp5 = require("useGuildsBarGuildMediaState")(arg0);
   closure_3 = tmp5;
-  const obj3 = require("initialize");
+  let obj3 = require("initialize");
   const token = require("useToken").useToken(require("native").modules.mobile.GUILD_BAR_ITEM_SIZE);
-  const obj4 = require("useToken");
+  let obj4 = require("useToken");
   const token1 = require("useToken").useToken(require("native").modules.mobile.GUILD_BAR_ITEM_MARGIN);
   const items5 = [tmp.topRightBadge, token1];
   memo = token1.useMemo(() => {
@@ -120,8 +122,7 @@ export default function useGuildsBarBadges(arg0, mentionCount, isMentionLowImpor
   }, items5);
   const items6 = [tmp5, memo, token];
   const memo1 = token1.useMemo(() => {
-    let obj = GuildsBarActivityIndicator;
-    const mediaIcon = obj.getMediaIcon(closure_3);
+    const mediaIcon = GuildsBarActivityIndicator.getMediaIcon(closure_3);
     let source;
     if (mediaIcon != null) {
       source = mediaIcon.source;
@@ -129,45 +130,44 @@ export default function useGuildsBarBadges(arg0, mentionCount, isMentionLowImpor
     if (source == null) {
       source = null;
     }
-    obj = { guildActivityIndicatorSource: source, IconComponent: null, isCurrentUserConnected: null };
+    const obj2 = { guildActivityIndicatorSource: source, IconComponent: null, isCurrentUserConnected: null };
     let icon;
     if (mediaIcon != null) {
       icon = mediaIcon.icon;
     }
-    obj.IconComponent = icon;
-    obj.isCurrentUserConnected = closure_3.isCurrentUserConnected;
-    const guildActivityIndicatorSource = obj.guildActivityIndicatorSource;
-    const tmp7 = _objectWithoutProperties(obj, closure_3);
+    obj2.IconComponent = icon;
+    obj2.isCurrentUserConnected = closure_3.isCurrentUserConnected;
+    const guildActivityIndicatorSource = obj2.guildActivityIndicatorSource;
+    const tmp7 = _objectWithoutProperties(obj2, closure_3);
     let tmp8 = null;
     if (null != guildActivityIndicatorSource) {
-      obj = { style: memo, source: guildActivityIndicatorSource };
+      const obj3 = { style: memo, source: guildActivityIndicatorSource };
       const merged = Object.assign(tmp7);
       tmp8 = jsx(GuildsBarActivityIndicator.GuildsBarActivityIndicatorBase, {
         style: memo,
         source: guildActivityIndicatorSource,
       });
     }
-    const obj1 = { badgeTopRight: tmp8, cutoutTopRight: null };
+    const obj4 = { badgeTopRight: tmp8, cutoutTopRight: null };
     let tmp14;
     if (null != guildActivityIndicatorSource) {
-      const obj2 = { position: "top-right", containerSize: token };
-      tmp14 = computeGuildsBarCutoutDefault(obj2);
+      const obj5 = { position: "top-right", containerSize: token };
+      tmp14 = computeGuildsBarCutoutDefault(obj5);
     }
-    obj1.cutoutTopRight = tmp14;
-    return obj1;
+    obj4.cutoutTopRight = tmp14;
+    return obj4;
   }, items6);
   cutoutTopRight = memo1.cutoutTopRight;
-  obj = {
+  let tmp10 = require("useGuildsBarBottomRightBadge")({
     mentionCount,
     isMentionLowImportance,
     joinRequestState: stateFromStores1,
     shouldShowInvitesDisabled: stateFromStores2,
-  };
-  let tmp10 = require("useGuildsBarBottomRightBadge")(obj);
+  });
   cutout = tmp10.cutout;
-  obj = { badgeTopRight: memo1.badgeTopRight, badgeBottomRight: tmp10.badge, cutouts: null, mediaState: tmp5 };
+  const obj7 = { badgeTopRight: memo1.badgeTopRight, badgeBottomRight: tmp10.badge, cutouts: null, mediaState: tmp5 };
   const items7 = [cutoutTopRight, cutout];
-  obj.cutouts = token1.useMemo(() => {
+  obj7.cutouts = token1.useMemo(() => {
     const items = [];
     if (null != cutoutTopRight) {
       items.push(tmp);
@@ -177,5 +177,5 @@ export default function useGuildsBarBadges(arg0, mentionCount, isMentionLowImpor
     }
     return items;
   }, items7);
-  return obj;
+  return obj7;
 }

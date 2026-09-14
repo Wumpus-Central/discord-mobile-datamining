@@ -20,39 +20,42 @@ let closure_9 = createStyles.createStyles({
 });
 let closure_10 = noop.memo((applicationId) => {
   let heroMediaDimensions;
-  let obj = heroMediaDimensions(11348);
-  let obj1 = heroMediaDimensions(12213);
-  heroMediaDimensions = obj1.useHeroMediaDimensions({ width: obj.useRequiredAppLauncherContext().width });
-  obj = { applicationId: applicationId.applicationId, size: heroMediaDimensions.width, names: ["embedded_cover"] };
-  const tmp4 = useEmbeddedActivityBackgroundDefault(obj);
+  let obj = heroMediaDimensions(11349);
+  heroMediaDimensions = heroMediaDimensions(12214).useHeroMediaDimensions({
+    width: obj.useRequiredAppLauncherContext().width,
+  });
+  const tmp4 = useEmbeddedActivityBackgroundDefault({
+    applicationId: applicationId.applicationId,
+    size: heroMediaDimensions.width,
+    names: ["embedded_cover"],
+  });
   importDefault = tmp4;
   let items = [heroMediaDimensions, tmp4];
   const memo = noop.useMemo(() => {
-    let obj = { imageStyle: null, imageSource: null };
+    const obj = { imageStyle: null, imageSource: null };
     const size = {
       backgroundColor: "black",
       height: heroMediaDimensions.height,
       width: heroMediaDimensions.width,
       transform: null,
     };
-    obj = { translateY: (timestampProducer - heroMediaDimensions.height) / 2 };
-    const items = [obj];
+    const items = [{ translateY: (timestampProducer - heroMediaDimensions.height) / 2 }];
     size.transform = items;
     obj.imageStyle = size;
     let tmp2;
     if (null != url.url) {
-      obj = { uri: tmp.url };
-      tmp2 = obj;
+      const obj3 = { uri: tmp.url };
+      tmp2 = obj3;
     }
     obj.imageSource = tmp2;
     return obj;
   }, items);
   ({ imageStyle, imageSource } = memo);
   if (null != imageSource) {
-    obj = { style: imageStyle, source: imageSource, resizeMode: "cover" };
+    const obj4 = { style: imageStyle, source: imageSource, resizeMode: "cover" };
     let tmp8 = jsx(FastImageDefault, { style: imageStyle, source: imageSource, resizeMode: "cover" });
   } else {
-    obj1 = { style: imageStyle };
+    const obj5 = { style: imageStyle };
     tmp8 = <View style={imageStyle} />;
   }
   return tmp8;
@@ -81,8 +84,7 @@ export default noop.memo(function RecommendationBanner(arg0) {
   ({ applicationId, applicationBot, overrideImageUrl } = arg0);
   ({ applicationEmbedded, applicationIcon } = arg0);
   const tmp = closure_9();
-  let obj = AvatarUtilsDefault;
-  const applicationIconSource = obj.getApplicationIconSource({
+  const applicationIconSource = AvatarUtilsDefault.getApplicationIconSource({
     id: applicationId,
     icon: applicationIcon,
     bot: applicationBot,
@@ -96,22 +98,22 @@ export default noop.memo(function RecommendationBanner(arg0) {
     }
   }
   if (null != overrideImageUrl) {
-    obj = { style: tmp.imageContainer, children: null };
-    obj = { style: tmp.image, source: null, resizeMode: "cover" };
-    const obj1 = { uri: overrideImageUrl };
-    obj.source = obj1;
-    obj.children = jsx(FastImageDefault, { style: tmp.image, source: null, resizeMode: "cover" });
-    let tmp11 = <View style={tmp.image} source={null} resizeMode="cover" />;
+    const obj2 = { style: tmp.imageContainer, children: null };
+    const obj3 = { style: tmp.image, source: null, resizeMode: "cover" };
+    const obj4 = { uri: overrideImageUrl };
+    obj3.source = obj4;
+    obj2.children = jsx(FastImageDefault, { style: tmp.image, source: null, resizeMode: "cover" });
+    let tmp11 = <View style={tmp.imageContainer}>{null}</View>;
   } else if (applicationEmbedded) {
-    const obj2 = { applicationId };
+    const obj5 = { applicationId };
     tmp11 = <closure_10 applicationId={applicationId} />;
   } else if (null != applicationBot) {
-    const obj3 = { applicationBot };
+    const obj6 = { applicationBot };
     tmp11 = <closure_11 applicationBot={applicationBot} />;
   } else {
-    const obj4 = { style: null };
-    const obj5 = { backgroundColor: tmp8 };
-    obj4.style = obj5;
+    const obj7 = { style: null };
+    const obj8 = { backgroundColor: tmp8 };
+    obj7.style = obj8;
     tmp11 = <View style={null} />;
   }
   return tmp11;

@@ -16,9 +16,9 @@ let closure_8 = createStyles.createStyles({
 const memoResult = noop.memo((channelId) => {
   channelId = channelId.channelId;
   let route;
-  let obj = channelId(route[6]);
-  const navigation = obj.useNavigation();
   const tmp = closure_8();
+  const navigation = channelId(route[6]).useNavigation();
+  let obj = channelId(route[6]);
   route = channelId(route[6]).useRoute();
   let obj2 = channelId(route[6]);
   const items = [navigation, route];
@@ -34,17 +34,17 @@ const memoResult = noop.memo((channelId) => {
   );
   let tmp8 = null;
   if (canSearchForumPostsByChannelId) {
-    obj = { style: tmp.cancelButtonContainer, children: null };
-    obj = { variant: "tertiary", size: "sm", text: null, onPress: null };
+    const obj4 = { style: tmp.cancelButtonContainer, children: null };
+    const obj5 = { variant: "tertiary", size: "sm", text: null, onPress: null };
     const intl = tmp2(tmp3[10]).intl;
-    obj.text = intl.string(tmp2(tmp3[10]).t["ETE/oC"]);
-    obj.onPress = function onPress() {
+    obj5.text = intl.string(tmp2(tmp3[10]).t["ETE/oC"]);
+    obj5.onPress = function onPress() {
       if (null != channelId) {
         const result = ForumActionCreatorsDefault.updateForumSearchQuery(tmp, null);
       }
     };
-    obj.children = jsx(tmp2(tmp3[9]).Button, { variant: "tertiary", size: "sm", text: null, onPress: null });
-    tmp8 = <View variant="tertiary" size="sm" text={null} onPress={null} />;
+    obj4.children = jsx(tmp2(tmp3[9]).Button, { variant: "tertiary", size: "sm", text: null, onPress: null });
+    tmp8 = <View style={tmp.cancelButtonContainer}>{null}</View>;
   }
   return tmp8;
 });
@@ -55,9 +55,9 @@ export const ForumChannelCloseSearchButton = memoResult;
 export const ForumChannelSearchInput = noop.memo((channelId) => {
   channelId = channelId.channelId;
   ({ guildId: importDefault, placeholder } = channelId);
-  let obj = channelId(13389);
-  const canSearchForumPostsByChannelId = obj.useCanSearchForumPostsByChannelId(channelId);
   const tmp = closure_8();
+  const canSearchForumPostsByChannelId = channelId(13390).useCanSearchForumPostsByChannelId(channelId);
+  let obj = channelId(13390);
   const items = [ForumSearchStore];
   const items1 = [channelId];
   const stateFromStores = channelId(504).useStateFromStores(
@@ -77,8 +77,8 @@ export const ForumChannelSearchInput = noop.memo((channelId) => {
   if (canSearchForumPostsByChannelId) {
     tmp8Result = null;
     if (null != stateFromStores) {
-      obj = { style: tmp.inputContainer, children: null };
-      obj = {
+      let obj3 = { style: tmp.inputContainer, children: null };
+      const obj4 = {
         size: "sm",
         defaultValue: stateFromStores,
         onChange(query) {
@@ -92,23 +92,23 @@ export const ForumChannelSearchInput = noop.memo((channelId) => {
         grow: false,
       };
       if (null != placeholder) {
-        obj.placeholder = placeholder;
-        obj.autoFocus = 0 === stateFromStores.length;
-        obj.onClear = function onClear() {
+        obj4.placeholder = placeholder;
+        obj4.autoFocus = 0 === stateFromStores.length;
+        obj4.onClear = function onClear() {
           let tmp2 = null != guildId;
           if (tmp2) {
             tmp2 = null != channelId;
           }
           if (tmp2) {
-            const obj = { guildId, channelId };
-            const result = obj.trackForumSearchCleared(obj);
+            const obj2 = { guildId, channelId };
+            const result = tracking_Tracking.trackForumSearchCleared(obj2);
           }
           if (null != channelId) {
             const result1 = ForumActionCreatorsDefault.updateForumSearchQuery(tmp8, "");
           }
         };
-        obj.children = <tmp10 {...obj} />;
-        tmp8Result = <View {...obj} />;
+        obj3.children = <tmp10 {...obj4} />;
+        tmp8Result = <View {...obj3} />;
       } else {
         const intl = tmp2(1114).intl;
         const t = tmp2(1114).t;

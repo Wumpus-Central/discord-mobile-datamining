@@ -4,6 +4,8 @@ import StageInstanceStore from "../stage_channels/StageInstanceStore.tsx";
 import GuildChannelStore from "../../stores/GuildChannelStore.tsx";
 import PermissionStore from "../../stores/PermissionStore.tsx";
 
+const require = globalThis.__r;
+
 require = fn;
 function getEventChannelsByType(id, channelTypeFromEntity) {
   let tmp = items;

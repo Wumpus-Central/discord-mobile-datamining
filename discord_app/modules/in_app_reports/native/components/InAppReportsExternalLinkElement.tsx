@@ -13,9 +13,9 @@ function ExternalLinkItem(data) {
   const url = data.url;
   let tmp3 = null;
   if (data.is_localized) {
-    let obj = { label: tmp, subLabel: tmp2, trailing: null, onPress: null, arrow: false, accessibilityRole: "link" };
-    obj = { IconComponent: url(9207).LinkExternalMediumIcon };
-    obj.trailing = closure_4(url(5692).TableRowIcon, obj);
+    const obj = { label: tmp, subLabel: tmp2, trailing: null, onPress: null, arrow: false, accessibilityRole: "link" };
+    const obj2 = { IconComponent: url(9207).LinkExternalMediumIcon };
+    obj.trailing = closure_4(url(5692).TableRowIcon, obj2);
     obj.onPress = function onPress() {
       LinkingDefault.openURL(url);
     };
@@ -37,22 +37,21 @@ export default function ExternalLinksElement(elements) {
   elements = elements.elements;
   const tmp = closure_6();
   let hvVgAZ = dependencyMap;
-  let obj = useTypeConsolidationTextTransform;
-  const typeConsolidationEyebrow = obj.useTypeConsolidationEyebrow(
+  const typeConsolidationEyebrow = useTypeConsolidationTextTransform.useTypeConsolidationEyebrow(
     "InAppReportsExternalLink",
     "heading-deprecated-12/extrabold",
   );
   if (null != elements) {
     if (0 !== elements.length) {
       if (null != elements.find((data) => data.data.is_localized)) {
-        obj = { style: tmp.linksContainer, children: null };
+        const obj2 = { style: tmp.linksContainer, children: null };
         if (someResult) {
           const items = [
             tmp10,
             elements.map((data, index) => closure_1_4(ExternalLinkItem, { data: data.data }, "external-link-" + index)),
           ];
-          obj.children = items;
-          return tmp8(tmp9, obj);
+          obj2.children = items;
+          return tmp8(tmp9, obj2);
         } else {
           if (null != typeConsolidationEyebrow.style) {
             const items1 = [tmp.headerText, typeConsolidationEyebrow.style];
@@ -60,7 +59,7 @@ export default function ExternalLinksElement(elements) {
           } else {
             headerText = tmp.headerText;
           }
-          obj = {
+          const obj3 = {
             style: headerText,
             variant: typeConsolidationEyebrow.variant,
             color: "text-default",
@@ -76,8 +75,8 @@ export default function ExternalLinksElement(elements) {
             stringResult = intl.string(util.t.hvVgAZ).toUpperCase();
             const str = intl.string(util.t.hvVgAZ);
           }
-          obj.children = stringResult;
-          React4(Text_Text.Text, obj);
+          obj3.children = stringResult;
+          React4(Text_Text.Text, obj3);
         }
         someResult = elements.some((data) => data.data.is_header_hidden);
       }

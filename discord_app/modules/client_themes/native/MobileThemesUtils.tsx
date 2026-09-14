@@ -8,12 +8,14 @@ import ThemeStore from "../../user_settings/ThemeStore.tsx";
 import SavedCustomThemeStore from "../SavedCustomThemeStore.tsx";
 import CustomThemeMobileStore from "CustomThemeMobileStore.tsx";
 
+const require = globalThis.__r;
+
 require = fn;
 function getCustomThemesName() {
   const intl = util.intl;
   return intl.string(_modDef2626.yl1iMm);
 }
-const ClientThemesConstants = fn(1230);
+const ClientThemesConstants = fn(1228);
 ({ BACKGROUND_GRADIENT_PRESETS_MOBILE: metroRequire, REFRESH_STANDARD_BACKGROUND_THEMES: closure_7 } =
   ClientThemesConstants);
 const size = fn(2);
@@ -35,18 +37,17 @@ export const getCustomBackgroundGradient = function getCustomBackgroundGradient(
   return tmp2;
 };
 export const useCustomBackgroundGradient = function useCustomBackgroundGradient(stateFromStores) {
-  let obj = useCustomThemeDisplaySettings;
-  const customThemeDisplaySettings = obj.useCustomThemeDisplaySettings(stateFromStores);
+  const customThemeDisplaySettings = useCustomThemeDisplaySettings.useCustomThemeDisplaySettings(stateFromStores);
   let tmp4 = null;
   if (undefined !== customThemeDisplaySettings) {
-    obj = {
+    const obj3 = {
       type: ClientThemesTypes.ClientThemeType.CUSTOM_BACKGROUND_GRADIENT,
       getName: getCustomThemesName,
       theme: null,
       customThemeSettings: null,
     };
     ({ baseTheme: obj2.theme, customTheme: obj2.customThemeSettings } = customThemeDisplaySettings);
-    tmp4 = obj;
+    tmp4 = obj3;
   }
   return tmp4;
 };
@@ -94,9 +95,9 @@ export const getAllMobileThemes = function getAllMobileThemes() {
   }
   if (null != tmp2) {
     const items = [];
-    let arraySpreadResult = HermesBuiltin.arraySpread(React5, 0);
+    const arraySpreadResult = HermesBuiltin.arraySpread(React5, 0);
     items[arraySpreadResult] = tmp2;
-    arraySpreadResult = HermesBuiltin.arraySpread(timestampProducer, arraySpreadResult + 1);
+    HermesBuiltin.arraySpread(timestampProducer, arraySpreadResult + 1);
     let items1 = items;
   } else {
     items1 = [];
@@ -105,31 +106,30 @@ export const getAllMobileThemes = function getAllMobileThemes() {
   return items1;
 };
 export const useAllMobileThemes = function useAllMobileThemes(mode) {
-  let obj = require("initialize");
   const items = [SavedCustomThemeStore];
-  const stateFromStores = obj.useStateFromStores(items, () => savedCustomTheme.getSavedCustomTheme());
+  const stateFromStores = require("initialize").useStateFromStores(items, () => savedCustomTheme.getSavedCustomTheme());
   let tmp4 = null;
   if (null != stateFromStores) {
     tmp4 = stateFromStores;
   }
-  let tmpResult = tmp(4570);
-  const customThemeDisplaySettings = tmpResult.useCustomThemeDisplaySettings(tmp4);
+  let obj = require("initialize");
+  const customThemeDisplaySettings = require("useCustomThemeDisplaySettings").useCustomThemeDisplaySettings(tmp4);
   let stateFromStores1 = null;
   if (undefined !== customThemeDisplaySettings) {
-    obj = {
-      type: tmp(1231).ClientThemeType.CUSTOM_BACKGROUND_GRADIENT,
+    const obj2 = {
+      type: tmp(1229).ClientThemeType.CUSTOM_BACKGROUND_GRADIENT,
       getName: getCustomThemesName,
       theme: null,
       customThemeSettings: null,
     };
     ({ baseTheme: obj3.theme, customTheme: obj3.customThemeSettings } = customThemeDisplaySettings);
-    stateFromStores1 = obj;
+    stateFromStores1 = obj2;
   }
   _require = mode;
-  tmpResult = tmp(504);
+  const tmpResult = require("useCustomThemeDisplaySettings");
   const items1 = [ThemeStore];
   if (null != mode) {
-    stateFromStores1 = tmpResult.useStateFromStores(items1, () => {
+    stateFromStores1 = tmpResult2.useStateFromStores(items1, () => {
       if (null == closure_0) {
         return null;
       } else {
@@ -157,9 +157,9 @@ export const useAllMobileThemes = function useAllMobileThemes(mode) {
   }
   if (null != stateFromStores1) {
     const items2 = [];
-    let arraySpreadResult = HermesBuiltin.arraySpread(closure_7, 0);
+    const arraySpreadResult = HermesBuiltin.arraySpread(closure_7, 0);
     items2[arraySpreadResult] = stateFromStores1;
-    arraySpreadResult = HermesBuiltin.arraySpread(closure_6, arraySpreadResult + 1);
+    HermesBuiltin.arraySpread(closure_6, arraySpreadResult + 1);
     let items3 = items2;
   } else {
     items3 = [];

@@ -4,21 +4,20 @@ import BaseCollectiblesItemRecord from "BaseCollectiblesItemRecord.tsx";
 
 require = fn;
 const prototype = function UnknownCollectiblesItemRecord(arg0) {
-  tmp = new tmp(arg0, new.target, tmp, new.target);
-  tmp.type = CollectiblesItemType.CollectiblesItemType.NONE;
-  return tmp;
+  const tmp2 = new tmp(arg0, new.target, tmp, new.target);
+  tmp2.type = CollectiblesItemType.CollectiblesItemType.NONE;
+  return tmp2;
 }.prototype;
 class prototype extends tmp2 {}
 prototype["fromServer"] = function fromServer(arg0) {
   const obj = {};
-  let tmp2 = prototype;
   const fromServerResult = super.fromServer(arg0);
   const merged = Object.assign(fromServerResult);
   obj.type = CollectiblesItemType.CollectiblesItemType.NONE;
   if (typeof prototype === "function") {
-    tmp2 = new tmp2(obj, fromServerResult, this, prototype, obj);
-    tmp2.type = CollectiblesItemType.CollectiblesItemType.NONE;
-    return tmp2;
+    const tmp22 = new prototype(obj, fromServerResult, this, prototype, obj);
+    tmp22.type = CollectiblesItemType.CollectiblesItemType.NONE;
+    return tmp22;
   } else {
     throw new TypeError("Trying to call a non-function");
   }

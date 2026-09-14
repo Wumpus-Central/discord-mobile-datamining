@@ -8,10 +8,9 @@ const result = size.fileFinishedImporting("modules/telemetry_ring/trackZoomedInH
 
 export default function trackZoomedInHttpRequest(arg0) {
   try {
-    let obj = ZoomedInTelemetryDefault;
-    obj = {};
+    const obj2 = {};
     const merged = Object.assign(arg0);
-    obj.source = "zoomed_in";
-    obj.append(AnalyticEvents.HTTP_REQUEST, obj);
+    obj2.source = "zoomed_in";
+    ZoomedInTelemetryDefault.append(AnalyticEvents.HTTP_REQUEST, obj2);
   } catch (err) {}
 }

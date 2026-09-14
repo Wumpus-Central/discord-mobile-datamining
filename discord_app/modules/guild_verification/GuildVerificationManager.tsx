@@ -45,13 +45,13 @@ function handleInviteData(invite) {
   }
 }
 const GuildFeatures = Constants.GuildFeatures;
-let prototype = function GuildVerificationManager() {
+const prototype = function GuildVerificationManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
   applyArgumentsResult.actions = { INVITE_ACCEPT_SUCCESS: handleInviteData };
   return applyArgumentsResult;
 }.prototype;
 class prototype extends tmp2 {}
-prototype = new prototype();
+const prototype1 = new prototype();
 let result = size.fileFinishedImporting("modules/guild_verification/GuildVerificationManager.tsx");
 
-export default prototype;
+export default prototype1;

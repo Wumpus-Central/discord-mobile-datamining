@@ -2,7 +2,7 @@
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../Dispatcher.tsx";
 
-let FetchState = { NOT_FETCHED: "NOT_FETCHED", FETCHING: "FETCHING", FETCHED: "FETCHED" };
+const FetchState = { NOT_FETCHED: "NOT_FETCHED", FETCHING: "FETCHING", FETCHED: "FETCHED" };
 let closure_1 = {};
 let NOT_FETCHED = FetchState.NOT_FETCHED;
 const Store = initializeDefault.Store;
@@ -18,7 +18,7 @@ Object.defineProperty(prototype, "fetchState", {
   set: undefined,
 });
 CollectiblesMarketingsStore.displayName = "CollectiblesMarketingsStore";
-FetchState = {
+const collectiblesMarketingsStore = new CollectiblesMarketingsStore(DispatcherDefault, {
   COLLECTIBLES_MARKETING_FETCH: function handleFetchMarketing() {
     NOT_FETCHED = obj.FETCHING;
   },
@@ -30,8 +30,7 @@ FetchState = {
     closure_1 = {};
     NOT_FETCHED = obj.NOT_FETCHED;
   },
-};
-const collectiblesMarketingsStore = new CollectiblesMarketingsStore(DispatcherDefault, FetchState);
+});
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/CollectiblesMarketingsStore.tsx");
 

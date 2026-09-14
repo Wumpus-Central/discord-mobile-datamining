@@ -1,5 +1,5 @@
 // discord_app/modules/quests/lib/analytics/QuestHomeSearchSession.tsx
-import v1 from "../../../../../_runtime/01256_v1.js";
+import v1 from "../../../../../_runtime/01254_v1.js";
 import SessionUtils from "../../../analytics_sessions/SessionUtils.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
 
@@ -9,15 +9,16 @@ const result = size.fileFinishedImporting("modules/quests/lib/analytics/QuestHom
 export const getOrCreateQuestHomeSearchSession = function getOrCreateQuestHomeSearchSession() {
   const timestamp = Date.now();
   if (null == searchSession) {
-    let obj = { searchSession: null, isNew: true };
-    obj = {
+    const obj2 = { searchSession: null, isNew: true };
+    const obj3 = {
       uuid: v1.v4(),
       createdAtTimestamp: timestamp,
       lastUsedTimestamp: timestamp,
       version: SessionUtils.CLIENT_SESSION_STORAGE_VERSION,
     };
-    searchSession = obj;
-    obj.searchSession = obj;
+    searchSession = obj3;
+    obj2.searchSession = obj3;
+    let obj = obj2;
   } else {
     searchSession.lastUsedTimestamp = timestamp;
     obj = { searchSession, isNew: false };

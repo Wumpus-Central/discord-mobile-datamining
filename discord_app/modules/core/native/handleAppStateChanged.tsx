@@ -20,10 +20,8 @@ let result = size.fileFinishedImporting("modules/core/native/handleAppStateChang
 
 export default function handleAppStateChanged(state) {
   state = AppStateStore.getState();
-  let obj = AppStartPerformanceDefault;
-  obj.markAndLog(closure_7, "\u{1F3C3}", "AppState changing from " + state + " to " + state);
-  obj = { type: "APP_STATE_UPDATE", state };
-  DispatcherDefault.dispatch(obj);
+  AppStartPerformanceDefault.markAndLog(closure_7, "\u{1F3C3}", "AppState changing from " + state + " to " + state);
+  DispatcherDefault.dispatch({ type: "APP_STATE_UPDATE", state });
   let isAuthenticatedResult = state === constants2.BACKGROUND && state === constants2.ACTIVE;
   if (isAuthenticatedResult) {
     isAuthenticatedResult = AuthenticationStore.isAuthenticated();
@@ -33,18 +31,19 @@ export default function handleAppStateChanged(state) {
     const _default = RTCConnectionStore.default;
   }
   if (isAuthenticatedResult) {
-    let tmp2Result = BundleUpdaterActionCreatorsDefault;
-    tmp2Result.deferUpdate();
+    BundleUpdaterActionCreatorsDefault.deferUpdate();
+    const tmp2Result = BundleUpdaterActionCreatorsDefault;
   }
   if (state === constants2.ACTIVE) {
     TTIAnalyticsUtils.trackAppOpened("launcher");
     const result = ThemeActionCreators.setSystemThemeIfNeeded();
   }
-  tmp2Result = TTITrackerDefault;
-  tmp2Result.appStateChanged(state);
+  const obj3 = { type: "APP_STATE_UPDATE", state };
+  const tmp8 = state === constants2.ACTIVE && state !== constants2.ACTIVE;
+  TTITrackerDefault.appStateChanged(state);
   if (tmp8) {
     AnalyticsUtilsDefault.track(constants.APP_BACKGROUND, {});
-    const tmp2Result1 = AnalyticsUtilsDefault;
+    const tmp2Result4 = AnalyticsUtilsDefault;
   }
-  tmp8 = state === constants2.ACTIVE && state !== constants2.ACTIVE;
+  const tmp2Result3 = TTITrackerDefault;
 }

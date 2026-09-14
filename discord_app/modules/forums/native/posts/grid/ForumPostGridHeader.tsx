@@ -26,11 +26,11 @@ export default function ForumPostGridHeader(arg0) {
   ({ thread, hasUnreads, isNew } = arg0);
   const tmp = closure_8();
   let hasFlagResult = thread.hasFlag(ChannelFlags.PINNED);
-  let obj = { style: tmp.container, children: null };
-  obj = { style: tmp.details, children: null };
+  const obj = { style: tmp.container, children: null };
+  const obj2 = { style: tmp.details, children: null };
   if (hasFlagResult) {
-    obj = { containerStyle: tmp.pinIcon };
-    hasFlagResult = timestampProducer(ForumPostPinIconDefault, obj);
+    const obj3 = { containerStyle: tmp.pinIcon };
+    hasFlagResult = timestampProducer(ForumPostPinIconDefault, obj3);
   }
   const items = [
     hasFlagResult,
@@ -46,8 +46,8 @@ export default function ForumPostGridHeader(arg0) {
     isNew = timestampProducer(ForumPostNewTagDefault, {});
   }
   items[3] = isNew;
-  obj.children = items;
-  const items1 = [React5(View, obj), timestampProducer(ForumPostTitleDefault, { title: thread.name, hasUnreads })];
+  obj2.children = items;
+  const items1 = [React5(View, obj2), timestampProducer(ForumPostTitleDefault, { title: thread.name, hasUnreads })];
   obj.children = items1;
   return React5(View, obj);
 }

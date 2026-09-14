@@ -13,20 +13,25 @@ require = fn;
 function AddAppButton(application) {
   application = application.application;
   const guildId = application.guildId;
-  let obj = noop;
   let items = [, , , ,];
   ({ customInstallUrl: arr[0], id: arr[1], installParams: arr[2], integrationTypesConfig: arr[3] } = application);
   items[4] = guildId;
   [][0] = application;
   const callback = noop.useCallback(() => {
-    const obj = {
+    ApplicationUtils.installApplication({
+      applicationId: application.id,
+      customInstallUrl: application.customInstallUrl,
+      installParams: application.installParams,
+      integrationTypesConfig: application.integrationTypesConfig,
+      guildId,
+    });
+    const obj2 = {
       applicationId: application.id,
       customInstallUrl: application.customInstallUrl,
       installParams: application.installParams,
       integrationTypesConfig: application.integrationTypesConfig,
       guildId,
     };
-    obj.installApplication(obj);
     ActionSheetActionCreatorsDefault.hideActionSheet();
   }, items);
   const customInstallUrl = application.customInstallUrl;
@@ -36,21 +41,21 @@ function AddAppButton(application) {
       let tmp6 = application;
     }
     const items1 = [application];
-    const memo = obj.useMemo(() => {
+    const memo = noop.useMemo(() => {
       const obj = { name: "longpress", label: null };
       const intl = application(1114).intl;
       obj.label = intl.string(application(1114).t.XWDihq);
       const items = [obj];
       return items;
     }, []);
-    const callback1 = obj.useCallback((nativeEvent) => {
+    const callback1 = noop.useCallback((nativeEvent) => {
       if ("longPress" === nativeEvent.nativeEvent.actionName) {
         const obj = ClipboardUtils;
         obj.copy(getApplicationInstallURL.getApplicationInstallURL(application));
         ToastUtils.presentLinkCopied();
       }
     }, items1);
-    obj = {
+    let obj3 = {
       text: null,
       onPress: null,
       onLongPress: null,
@@ -59,14 +64,21 @@ function AddAppButton(application) {
       icon: null,
     };
     let intl = tmp6(1114).intl;
-    obj.text = intl.string(tmp6(1114).t.NgXl3C);
-    obj.onPress = callback;
-    obj.onLongPress = tmp2;
-    obj.accessibilityActions = memo;
-    obj.onAccessibilityAction = callback1;
-    obj = { size: "sm", color: guildId(576).colors.WHITE };
-    obj.icon = <PlusSmallIcon size="sm" color={guildId(576).colors.WHITE} />;
-    return jsx(tmp6(5056).Button, { size: "sm", color: guildId(576).colors.WHITE });
+    obj3.text = intl.string(tmp6(1114).t.NgXl3C);
+    obj3.onPress = callback;
+    obj3.onLongPress = tmp2;
+    obj3.accessibilityActions = memo;
+    obj3.onAccessibilityAction = callback1;
+    const obj4 = { size: "sm", color: guildId(576).colors.WHITE };
+    obj3.icon = <PlusSmallIcon size="sm" color={guildId(576).colors.WHITE} />;
+    return jsx(tmp6(5056).Button, {
+      text: null,
+      onPress: null,
+      onLongPress: null,
+      accessibilityActions: null,
+      onAccessibilityAction: null,
+      icon: null,
+    });
   }
   PlusSmallIcon = application(8992).PlusSmallIcon;
   tmp6 = application;
@@ -75,8 +87,8 @@ function OpenAppButton(profileApplication) {
   profileApplication = profileApplication.profileApplication;
   const botUserId = profileApplication.botUserId;
   const channel = profileApplication.channel;
-  const tmp = _slicedToArray(noop.useState(false), 2);
-  asyncGeneratorStep = tmp[1];
+  asyncGeneratorStep = undefined;
+  [obj.loading, asyncGeneratorStep] = noop.useState(false);
   const items = [botUserId, channel, profileApplication.id];
   const callback = noop.useCallback(
     asyncGeneratorStep(async () => {
@@ -87,8 +99,8 @@ function OpenAppButton(profileApplication) {
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
-          let obj = { value, done: true };
-          return obj;
+          let obj2 = { value, done: true };
+          return obj2;
         } else {
           return { value: "HermesInternal", done: null };
         }
@@ -101,14 +113,14 @@ function OpenAppButton(profileApplication) {
               throw value;
             } else if (arg0 === 2) {
               c4 = 3;
-              obj = { value, done: true };
-              return obj;
+              let obj3 = { value, done: true };
+              return obj3;
             } else {
               dependencyMap = 0;
               closure_129_0 = undefined;
               closure_129_1 = undefined;
-              const obj1 = { type: "channel", channel };
-              const tmp43 = getSection(obj1, profileApplication.id);
+              const obj4 = { type: "channel", channel };
+              const tmp43 = getSection(obj4, profileApplication.id);
               closure_129_0 = tmp43;
               const descriptor2 = tmp43.descriptor;
               let application;
@@ -127,20 +139,19 @@ function OpenAppButton(profileApplication) {
               if (application1 == null) {
                 c3 = 1;
                 c4 = 1;
-                const obj2 = { value: tmp2(7266).fetchApplication(profileApplication.id), done: false };
-                return obj2;
+                const obj7 = { value: tmp2(7266).fetchApplication(profileApplication.id), done: false };
+                return obj7;
               } else {
                 closure_129_1 = closure_0;
                 closure_130_3(false);
                 if (null != closure_129_0) {
-                  let obj4 = tmp2(4603);
-                  obj4.hideAllActionSheets();
-                  let obj5 = tmp2(4649);
-                  const obj3 = { recipientIds: closure_130_1 };
+                  tmp2(4603).hideAllActionSheets();
+                  const obj5 = tmp2(4603);
+                  const obj8 = { recipientIds: closure_130_1 };
                   c3 = 2;
                   c4 = 1;
-                  obj4 = { value: obj5.openPrivateChannel(obj3), done: false };
-                  return obj4;
+                  const obj10 = { value: tmp2(4649).openPrivateChannel(obj8), done: false };
+                  return obj10;
                 } else {
                   c4 = 3;
                 }
@@ -152,8 +163,8 @@ function OpenAppButton(profileApplication) {
               throw value;
             } else if (arg0 === 2) {
               c4 = 3;
-              obj5 = { value, done: true };
-              return obj5;
+              const obj11 = { value, done: true };
+              return obj11;
             } else {
               closure_0 = value;
             }
@@ -163,11 +174,10 @@ function OpenAppButton(profileApplication) {
           } else if (arg0 !== 2) {
             const _setTimeout = setTimeout;
             const timerId = setTimeout(() => {
-              let obj = closure_0(dependencyMap[21]);
-              const bestActiveInput = obj.getBestActiveInput();
+              const bestActiveInput = closure_0(dependencyMap[21]).getBestActiveInput();
               if (bestActiveInput != null) {
-                obj = { type: closure_0(dependencyMap[22]).KeyboardTypes.APP_LAUNCHER, context: null };
-                obj = {
+                const obj2 = { type: closure_0(dependencyMap[22]).KeyboardTypes.APP_LAUNCHER, context: null };
+                const obj3 = {
                   initialRouteName: constants2.APPLICATION_VIEW,
                   initiallyExpanded: true,
                   application,
@@ -178,18 +188,19 @@ function OpenAppButton(profileApplication) {
                 if (!isGuildInstalled) {
                   tmp5 = !closure_1_0.isUserInstalled;
                 }
-                obj.installOnDemand = tmp5;
-                obj.context = obj;
-                bestActiveInput.openCustomKeyboard(obj);
+                obj3.installOnDemand = tmp5;
+                obj2.context = obj3;
+                bestActiveInput.openCustomKeyboard(obj2);
               }
+              const obj = closure_0(dependencyMap[21]);
             }, 0);
-            obj = tmp2(1242);
-            const obj6 = { application_id: closure_129_1.id };
-            obj.track(constants.APP_PROFILE_OPEN_APP_BUTTON_CLICKED, obj6);
+            const obj12 = { application_id: closure_129_1.id };
+            tmp2(1240).track(constants.APP_PROFILE_OPEN_APP_BUTTON_CLICKED, obj12);
+            let obj = tmp2(1240);
           }
           c4 = 3;
-          const obj7 = { value, done: true };
-          return obj7;
+          const obj13 = { value, done: true };
+          return obj13;
         } catch (tmp35) {
           c4 = tmp;
           throw tmp35;
@@ -201,7 +212,6 @@ function OpenAppButton(profileApplication) {
   let obj = { text: null, loading: null, onPress: null };
   const intl = profileApplication(channel[16]).intl;
   obj.text = intl.string(profileApplication(channel[16]).t["Cia+A8"]);
-  obj.loading = tmp[0];
   obj.onPress = callback;
   return jsx(profileApplication(channel[17]).Button, { text: null, loading: null, onPress: null });
 }

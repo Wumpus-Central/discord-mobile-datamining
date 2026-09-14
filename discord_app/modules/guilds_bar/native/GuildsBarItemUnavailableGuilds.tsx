@@ -2,7 +2,7 @@
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
 import AlertActionCreatorsDefault from "../../../actions/AlertActionCreators.tsx";
-import _modDef16436 from "../../../../_runtime/metro/16436__.js";
+import _modDef16438 from "../../../../_runtime/metro/16438__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import GuildAvailabilityStore from "../../../stores/GuildAvailabilityStore.tsx";
 
@@ -11,46 +11,54 @@ get_ActivityIndicator = fn(17);
 ({ Image: c3, Pressable: closure_4 } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
 const createStyles = fn(4636);
-let obj = { unavailableGuilds: null, unavailableGuildsIcon: null };
-obj = {
-  marginTop: nativeDefault.modules.mobile.GUILD_BAR_ITEM_PADDING,
-  justifyContent: "center",
-  alignItems: "center",
+const obj = {
+  unavailableGuilds: {
+    marginTop: nativeDefault.modules.mobile.GUILD_BAR_ITEM_PADDING,
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  unavailableGuildsIcon: null,
 };
-obj.unavailableGuilds = obj;
 let size = {
   width: nativeDefault.modules.mobile.GUILD_BAR_ITEM_SIZE,
   height: nativeDefault.modules.mobile.GUILD_BAR_ITEM_SIZE,
 };
 obj.unavailableGuildsIcon = size;
 let closure_7 = createStyles.createStyles(obj);
+let obj3 = {
+  marginTop: nativeDefault.modules.mobile.GUILD_BAR_ITEM_PADDING,
+  justifyContent: "center",
+  alignItems: "center",
+};
 size = fn(2);
 const result = size.fileFinishedImporting("modules/guilds_bar/native/GuildsBarItemUnavailableGuilds.tsx");
 
 export default noop.memo(function GuildsBarItemUnavailableGuilds() {
   const tmp = closure_7();
-  let obj = stateFromStores(504);
   const items = [GuildAvailabilityStore];
-  stateFromStores = obj.useStateFromStores(items, () => GuildAvailabilityStore.totalUnavailableGuilds);
+  stateFromStores = stateFromStores(504).useStateFromStores(items, () => GuildAvailabilityStore.totalUnavailableGuilds);
   let tmp5 = null;
   if (stateFromStores > 0) {
-    obj = { accessibilityRole: "button", accessibilityLabel: null, onPress: null, style: null, children: null };
+    let obj2 = { accessibilityRole: "button", accessibilityLabel: null, onPress: null, style: null, children: null };
     let intl = tmp2(1114).intl;
-    obj = { count: stateFromStores };
-    obj.accessibilityLabel = intl.formatToPlainString(tmp2(1114).t["MEpX+2"], obj);
-    obj.onPress = function onPress() {
-      let obj = { title: null, body: null };
+    const obj3 = { count: stateFromStores };
+    obj2.accessibilityLabel = intl.formatToPlainString(tmp2(1114).t["MEpX+2"], obj3);
+    obj2.onPress = function onPress() {
+      const obj2 = { title: null, body: null };
       const intl = util.intl;
-      obj.title = intl.string(util.t.R0RpRX);
+      obj2.title = intl.string(util.t.R0RpRX);
       const intl2 = util.intl;
-      obj = { count: stateFromStores };
-      obj.body = intl2.format(util.t["TnH05/"], obj);
-      obj.show(obj);
+      obj2.body = intl2.format(util.t["TnH05/"], { count: stateFromStores });
+      AlertActionCreatorsDefault.show(obj2);
     };
-    obj.style = tmp.unavailableGuilds;
-    const obj1 = { style: tmp.unavailableGuildsIcon, source: _modDef16436 };
-    obj.children = <closure_3 style={tmp.unavailableGuildsIcon} source={_modDef16436} />;
-    tmp5 = <closure_4 count={stateFromStores} />;
+    obj2.style = tmp.unavailableGuilds;
+    const obj4 = { style: tmp.unavailableGuildsIcon, source: _modDef16438 };
+    obj2.children = <closure_3 style={tmp.unavailableGuildsIcon} source={_modDef16438} />;
+    tmp5 = (
+      <closure_4 accessibilityRole="button" accessibilityLabel={null} onPress={null} style={null}>
+        {null}
+      </closure_4>
+    );
   }
   return tmp5;
 });

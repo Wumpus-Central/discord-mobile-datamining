@@ -14,7 +14,6 @@ const result = size.fileFinishedImporting("modules/errors/av_errors/definitions/
 
 export const AVErrorCameraSendLowFPSDefinition = {
   getActiveErrors() {
-    let obj = RTCConnectionStore;
     const rTCConnection = RTCConnectionStore.getRTCConnection();
     if (null == rTCConnection) {
       return null;
@@ -23,7 +22,7 @@ export const AVErrorCameraSendLowFPSDefinition = {
       if (null == mediaEngineConnectionId) {
         return null;
       } else if (MediaEngineStore.isVideoEnabled()) {
-        const lastNonZeroRemoteVideoSinkWantsTime = obj.getLastNonZeroRemoteVideoSinkWantsTime();
+        const lastNonZeroRemoteVideoSinkWantsTime = RTCConnectionStore.getLastNonZeroRemoteVideoSinkWantsTime();
         if (null != lastNonZeroRemoteVideoSinkWantsTime) {
           const _performance = performance;
           if (performance.now() - lastNonZeroRemoteVideoSinkWantsTime < closure_5) {
@@ -38,9 +37,9 @@ export const AVErrorCameraSendLowFPSDefinition = {
           let tmp7 = null;
           if (null != accumulatedStatsWithMinDatapoints) {
             if (accumulatedStatsWithMinDatapoints.short.frameRate < 10) {
-              obj = { type: AVError.AVError.CAMERA_SEND_LOW_FPS, userId: AuthenticationStore.getId() };
+              const obj2 = { type: AVError.AVError.CAMERA_SEND_LOW_FPS, userId: AuthenticationStore.getId() };
               const merged = Object.assign(AVErrorContext.getVoiceChannelErrorContext());
-              const items = [obj];
+              const items = [obj2];
               const tmp4Result = AVErrorContext;
               const tmp8 = items;
             }

@@ -2,7 +2,7 @@
 import LoggerDefault from "../debug/Logger.tsx";
 import SnowflakeUtilsDefault from "../../utils/SnowflakeUtils.tsx";
 import util from "../../intl/index.native.tsx";
-import v1 from "../../../_runtime/01256_v1.js";
+import v1 from "../../../_runtime/01254_v1.js";
 import AvatarUtilsDefault from "../../utils/AvatarUtils.tsx";
 import Server from "../../flow/Server.tsx";
 import CheckpointConstants from "../checkpoint/CheckpointConstants.tsx";
@@ -11,6 +11,8 @@ import InteractionTypes from "../interactions/InteractionTypes.tsx";
 import MediaTypes from "../media/MediaTypes.tsx";
 import InteractionComponentTypes from "InteractionComponentTypes.tsx";
 import size from "../../../_runtime/metro/00002__.js";
+
+const require = globalThis.__r;
 
 function flattenComponents(components) {
   const map = new Map();
@@ -21446,73 +21448,70 @@ function transformComponent(accessory, items) {
         }
         return tmp2;
       });
-      let obj = { type: null, id: null, components: null };
+      const obj2 = { type: null, id: null, components: null };
       const found = mapped.filter(tmp(1369).isNotNullish);
-      obj.type = tmp(1894).ComponentType.ACTION_ROW;
-      let tmpResult = tmp(4868);
-      obj.id = tmpResult.asComponentId(items.join(","));
-      obj.components = found;
-      return obj;
+      obj2.type = tmp(1894).ComponentType.ACTION_ROW;
+      obj2.id = tmp(4868).asComponentId(items.join(","));
+      obj2.components = found;
+      return obj2;
     } else if (tmp(1894).ComponentType.BUTTON === type2) {
       let tmp45;
       if (null != accessory.emoji) {
         let emoji = accessory.emoji;
         if (typeof getEmoji === "function") {
-          obj = { id: null, name: null, animated: null, src: null };
+          const obj4 = { id: null, name: null, animated: null, src: null };
           ({ id: obj46.id, name: obj46.name, animated: obj46.animated } = emoji);
           let emojiURL;
           if (null != emoji.id) {
-            const obj1 = { id: null, animated: null, size: 48 };
+            let obj6 = { id: null, animated: null, size: 48 };
             ({ id: obj48.id, animated } = emoji);
             if (!animated) {
               animated = false;
             }
-            obj1.animated = animated;
-            emojiURL = AvatarUtilsDefault.getEmojiURL(obj1);
+            obj6.animated = animated;
+            emojiURL = AvatarUtilsDefault.getEmojiURL(obj6);
           }
-          obj.src = emojiURL;
-          tmp45 = obj;
+          obj4.src = emojiURL;
+          tmp45 = obj4;
         } else {
           throw new TypeError("Trying to call a non-function");
         }
       }
-      const obj2 = { type: tmp(1894).ComponentType.BUTTON, id: null, customId: null, style: null, disabled: null, url: null, label: null, emoji: null, skuId: null };
-      tmpResult = tmp(4868);
-      obj2.id = tmpResult.asComponentId(items.join(","));
+      let obj7 = { type: tmp(1894).ComponentType.BUTTON, id: tmp(4868).asComponentId(items.join(",")), customId: null, style: null, disabled: null, url: null, label: null, emoji: null, skuId: null };
       ({ custom_id: obj49.customId, style: obj49.style, disabled: obj49.disabled, url: obj49.url, label: obj49.label } = accessory);
-      obj2.emoji = tmp45;
-      obj2.skuId = accessory.sku_id;
-      return obj2;
+      obj7.emoji = tmp45;
+      obj7.skuId = accessory.sku_id;
+      return obj7;
     } else if (tmp(1894).ComponentType.STRING_SELECT === type2) {
-      let obj3 = { type: tmp(1894).ComponentType.STRING_SELECT, id: tmp(4868).asComponentId(items.join(",")), customId: null, disabled: null, required: null, options: null, placeholder: null, minValues: null, maxValues: null };
+      const obj9 = { type: tmp(1894).ComponentType.STRING_SELECT, id: tmp(4868).asComponentId(items.join(",")), customId: null, disabled: null, required: null, options: null, placeholder: null, minValues: null, maxValues: null };
       ({ custom_id: obj44.customId, disabled: obj44.disabled, required: required9 } = accessory);
       if (required9 == null) {
         required9 = false;
       }
-      obj3.required = required9;
+      obj9.required = required9;
       const options = accessory.options;
-      obj3.options = options.map((label) => {
-        let obj = { type: InteractionComponentTypes.SelectOptionType.STRING, label: label.label, value: label.value, default: label.default, description: label.description, emoji: null };
+      obj9.options = options.map((label) => {
+        const obj = { type: InteractionComponentTypes.SelectOptionType.STRING, label: label.label, value: label.value, default: label.default, description: label.description, emoji: null };
         let tmp2;
         if (null != label.emoji) {
           const emoji = label.emoji;
           if (typeof getEmoji === "function") {
-            obj = { id: null, name: null, animated: null, src: null };
+            const obj6 = { id: null, name: null, animated: null, src: null };
             ({ id: obj2.id, name: obj2.name, animated: obj2.animated } = emoji);
             let emojiURL;
             if (tmp4) {
               if (null != emoji.id) {
-                obj = { id: null, animated: null, size: 48 };
+                const obj7 = { id: null, animated: null, size: 48 };
                 ({ id: obj4.id, animated } = emoji);
                 if (!animated) {
                   animated = false;
                 }
-                obj.animated = animated;
-                emojiURL = AvatarUtilsDefault.getEmojiURL(obj);
+                obj7.animated = animated;
+                emojiURL = AvatarUtilsDefault.getEmojiURL(obj7);
               }
             }
-            obj.src = emojiURL;
-            tmp2 = obj;
+            obj6.src = emojiURL;
+            tmp2 = obj6;
           } else {
             throw new TypeError("Trying to call a non-function");
           }
@@ -21521,52 +21520,52 @@ function transformComponent(accessory, items) {
         return obj;
       });
       ({ placeholder: obj44.placeholder, min_values: obj44.minValues, max_values: obj44.maxValues } = accessory);
-      return obj3;
+      return obj9;
     } else if (tmp(1894).ComponentType.TEXT_INPUT === type2) {
-      const obj4 = { type: accessory.type, id: tmp(4868).asComponentId(items.join(",")), style: null, customId: null, label: null, value: null, placeholder: null, disabled: null, required: null, minLength: null, maxLength: null };
+      const obj10 = { type: accessory.type, id: tmp(4868).asComponentId(items.join(",")), style: null, customId: null, label: null, value: null, placeholder: null, disabled: null, required: null, minLength: null, maxLength: null };
       ({ style: obj42.style, custom_id: obj42.customId, label: obj42.label, value: obj42.value, placeholder: obj42.placeholder, disabled: obj42.disabled, required: required8 } = accessory);
       if (required8 == null) {
         required8 = false;
       }
-      obj4.required = required8;
+      obj10.required = required8;
       ({ min_length: obj42.minLength, max_length: obj42.maxLength } = accessory);
-      return obj4;
+      return obj10;
     } else if (tmp(1894).ComponentType.USER_SELECT === type2) {
-      const obj5 = { type: tmp(1894).ComponentType.USER_SELECT, id: tmp(4868).asComponentId(items.join(",")), customId: null, disabled: null, required: null, placeholder: null, minValues: null, maxValues: null, defaultValues: null };
+      const obj12 = { type: tmp(1894).ComponentType.USER_SELECT, id: tmp(4868).asComponentId(items.join(",")), customId: null, disabled: null, required: null, placeholder: null, minValues: null, maxValues: null, defaultValues: null };
       ({ custom_id: obj40.customId, disabled: obj40.disabled, required: required7 } = accessory);
       if (required7 == null) {
         required7 = false;
       }
-      obj5.required = required7;
+      obj12.required = required7;
       ({ placeholder: obj40.placeholder, min_values: obj40.minValues, max_values: obj40.maxValues, default_values: obj40.defaultValues } = accessory);
-      return obj5;
+      return obj12;
     } else if (tmp(1894).ComponentType.ROLE_SELECT === type2) {
-      const obj6 = { type: tmp(1894).ComponentType.ROLE_SELECT, id: tmp(4868).asComponentId(items.join(",")), customId: null, disabled: null, required: null, placeholder: null, minValues: null, maxValues: null, defaultValues: null };
+      const obj14 = { type: tmp(1894).ComponentType.ROLE_SELECT, id: tmp(4868).asComponentId(items.join(",")), customId: null, disabled: null, required: null, placeholder: null, minValues: null, maxValues: null, defaultValues: null };
       ({ custom_id: obj38.customId, disabled: obj38.disabled, required: required6 } = accessory);
       if (required6 == null) {
         required6 = false;
       }
-      obj6.required = required6;
+      obj14.required = required6;
       ({ placeholder: obj38.placeholder, min_values: obj38.minValues, max_values: obj38.maxValues, default_values: obj38.defaultValues } = accessory);
-      return obj6;
+      return obj14;
     } else if (tmp(1894).ComponentType.MENTIONABLE_SELECT === type2) {
-      let obj7 = { type: tmp(1894).ComponentType.MENTIONABLE_SELECT, id: tmp(4868).asComponentId(items.join(",")), customId: null, disabled: null, required: null, placeholder: null, minValues: null, maxValues: null, defaultValues: null };
+      const obj15 = { type: tmp(1894).ComponentType.MENTIONABLE_SELECT, id: tmp(4868).asComponentId(items.join(",")), customId: null, disabled: null, required: null, placeholder: null, minValues: null, maxValues: null, defaultValues: null };
       ({ custom_id: obj36.customId, disabled: obj36.disabled, required: required5 } = accessory);
       if (required5 == null) {
         required5 = false;
       }
-      obj7.required = required5;
+      obj15.required = required5;
       ({ placeholder: obj36.placeholder, min_values: obj36.minValues, max_values: obj36.maxValues, default_values: obj36.defaultValues } = accessory);
-      return obj7;
+      return obj15;
     } else if (tmp(1894).ComponentType.CHANNEL_SELECT === type2) {
-      const obj8 = { type: tmp(1894).ComponentType.CHANNEL_SELECT, id: tmp(4868).asComponentId(items.join(",")), customId: null, disabled: null, required: null, placeholder: null, minValues: null, maxValues: null, channelTypes: null, defaultValues: null };
+      const obj16 = { type: tmp(1894).ComponentType.CHANNEL_SELECT, id: tmp(4868).asComponentId(items.join(",")), customId: null, disabled: null, required: null, placeholder: null, minValues: null, maxValues: null, channelTypes: null, defaultValues: null };
       ({ custom_id: obj34.customId, disabled: obj34.disabled, required: required4 } = accessory);
       if (required4 == null) {
         required4 = false;
       }
-      obj8.required = required4;
+      obj16.required = required4;
       ({ placeholder: obj34.placeholder, min_values: obj34.minValues, max_values: obj34.maxValues, channel_types: obj34.channelTypes, default_values: obj34.defaultValues } = accessory);
-      return obj8;
+      return obj16;
     } else if (tmp(1894).ComponentType.SECTION === type2) {
       const components1 = accessory.components;
       const mapped1 = components1.map((item, index) => {
@@ -21591,55 +21590,55 @@ function transformComponent(accessory, items) {
       if (0 !== found1.length) {
         tmp37 = null;
         if (null != tmp36) {
-          const obj9 = { type: tmp(1894).ComponentType.SECTION, id: tmp(4868).asComponentId(items.join(",")), components: found1, accessory: tmp36 };
-          tmp37 = obj9;
-          const tmpResult7 = tmp(4868);
+          const obj17 = { type: tmp(1894).ComponentType.SECTION, id: tmp(4868).asComponentId(items.join(",")), components: found1, accessory: tmp36 };
+          tmp37 = obj17;
+          const tmpResult32 = tmp(4868);
         }
       }
       return tmp37;
     } else if (tmp(1894).ComponentType.TEXT_DISPLAY === type2) {
-      const obj10 = { type: tmp(1894).ComponentType.TEXT_DISPLAY, id: tmp(4868).asComponentId(items.join(",")), content: accessory.content };
-      return obj10;
+      const obj18 = { type: tmp(1894).ComponentType.TEXT_DISPLAY, id: tmp(4868).asComponentId(items.join(",")), content: accessory.content };
+      return obj18;
     } else if (tmp(1894).ComponentType.THUMBNAIL === type2) {
-      const obj11 = { type: tmp(1894).ComponentType.THUMBNAIL, id: tmp(4868).asComponentId(items.join(",")), media: null, description: null, spoiler: null };
-      const tmpResult9 = tmp(4868);
-      obj11.media = tmp(4867).toUnfurledMediaItem(accessory.media);
+      const obj19 = { type: tmp(1894).ComponentType.THUMBNAIL, id: tmp(4868).asComponentId(items.join(",")), media: null, description: null, spoiler: null };
+      const tmpResult34 = tmp(4868);
+      obj19.media = tmp(4867).toUnfurledMediaItem(accessory.media);
       ({ description: obj27.description, spoiler: obj27.spoiler } = accessory);
-      return obj11;
+      return obj19;
     } else if (tmp(1894).ComponentType.MEDIA_GALLERY === type2) {
-      const obj12 = { type: tmp(1894).ComponentType.MEDIA_GALLERY, id: tmp(4868).asComponentId(items.join(",")), items: null };
+      const obj20 = { type: tmp(1894).ComponentType.MEDIA_GALLERY, id: tmp(4868).asComponentId(items.join(",")), items: null };
       const items1 = accessory.items;
-      obj12.items = items1.map((media) => {
+      obj20.items = items1.map((media) => {
         const obj = { media: items(dependencyMap[7]).toUnfurledMediaItem(media.media), description: null, spoiler: null };
         ({ description: obj.description, spoiler: obj.spoiler } = media);
         return obj;
       });
-      return obj12;
+      return obj20;
     } else if (tmp(1894).ComponentType.FILE === type2) {
-      const obj13 = { type: tmp(1894).ComponentType.FILE, id: tmp(4868).asComponentId(items.join(",")), file: null, name: null, size: null, spoiler: null };
-      const tmpResult12 = tmp(4868);
-      obj13.file = tmp(4867).toUnfurledMediaItem(accessory.file);
+      const obj21 = { type: tmp(1894).ComponentType.FILE, id: tmp(4868).asComponentId(items.join(",")), file: null, name: null, size: null, spoiler: null };
+      const tmpResult37 = tmp(4868);
+      obj21.file = tmp(4867).toUnfurledMediaItem(accessory.file);
       ({ name: obj22.name, size: obj22.size, spoiler: obj22.spoiler } = accessory);
-      return obj13;
+      return obj21;
     } else if (tmp(1894).ComponentType.SEPARATOR === type2) {
-      const obj14 = { type: tmp(1894).ComponentType.SEPARATOR, id: tmp(4868).asComponentId(items.join(",")), divider: null, spacing: null };
+      const obj23 = { type: tmp(1894).ComponentType.SEPARATOR, id: tmp(4868).asComponentId(items.join(",")), divider: null, spacing: null };
       let flag3 = accessory.divider;
       if (flag3 == null) {
         flag3 = true;
       }
-      obj14.divider = flag3;
+      obj23.divider = flag3;
       let SMALL = accessory.spacing;
       if (SMALL == null) {
         SMALL = tmp(1894).SeparatorSpacingSize.SMALL;
       }
-      obj14.spacing = SMALL;
-      return obj14;
+      obj23.spacing = SMALL;
+      return obj23;
     } else if (tmp(1894).ComponentType.CONTENT_INVENTORY_ENTRY === type2) {
       let tmp29 = null;
       if (null != accessory.content_inventory_entry) {
-        const obj15 = { type: tmp(1894).ComponentType.CONTENT_INVENTORY_ENTRY, id: tmp(4868).asComponentId(items.join(",")), contentInventoryEntry: accessory.content_inventory_entry };
-        tmp29 = obj15;
-        const tmpResult15 = tmp(4868);
+        const obj24 = { type: tmp(1894).ComponentType.CONTENT_INVENTORY_ENTRY, id: tmp(4868).asComponentId(items.join(",")), contentInventoryEntry: accessory.content_inventory_entry };
+        tmp29 = obj24;
+        const tmpResult40 = tmp(4868);
       }
       return tmp29;
     } else if (tmp(1894).ComponentType.CONTAINER === type2) {
@@ -21654,19 +21653,19 @@ function transformComponent(accessory, items) {
         }
         return tmp2;
       });
-      const obj16 = { type: null, id: null, accentColor: null, spoiler: null, components: null };
+      const obj25 = { type: null, id: null, accentColor: null, spoiler: null, components: null };
       const found2 = mapped2.filter(tmp(1369).isNotNullish);
-      obj16.type = tmp(1894).ComponentType.CONTAINER;
-      obj16.id = tmp(4868).asComponentId(items.join(","));
+      obj25.type = tmp(1894).ComponentType.CONTAINER;
+      obj25.id = tmp(4868).asComponentId(items.join(","));
       let int2hslResult;
       if (null != accessory.accent_color) {
         int2hslResult = tmp(1091).int2hsl(accessory.accent_color, false);
-        const tmpResult17 = tmp(1091);
+        const tmpResult42 = tmp(1091);
       }
-      obj16.accentColor = int2hslResult;
-      obj16.spoiler = accessory.spoiler;
-      obj16.components = found2;
-      return obj16;
+      obj25.accentColor = int2hslResult;
+      obj25.spoiler = accessory.spoiler;
+      obj25.components = found2;
+      return obj25;
     } else if (tmp(1894).ComponentType.LABEL === type2) {
       const items2 = [];
       items2[HermesBuiltin.arraySpread(items, 0)] = 0;
@@ -21677,81 +21676,81 @@ function transformComponent(accessory, items) {
       }
       let tmp25 = null;
       if (null != tmp24) {
-        const obj17 = { type: tmp(1894).ComponentType.LABEL, id: tmp(4868).asComponentId(items.join(",")), label: null, description: null, component: null };
+        const obj26 = { type: tmp(1894).ComponentType.LABEL, id: tmp(4868).asComponentId(items.join(",")), label: null, description: null, component: null };
         ({ label: obj13.label, description: obj13.description } = accessory);
-        obj17.component = tmp24;
-        tmp25 = obj17;
-        const tmpResult18 = tmp(4868);
+        obj26.component = tmp24;
+        tmp25 = obj26;
+        const tmpResult43 = tmp(4868);
       }
       return tmp25;
     } else if (tmp(1894).ComponentType.FILE_UPLOAD === type2) {
-      const obj18 = { type: accessory.type, id: tmp(4868).asComponentId(items.join(",")), customId: null, disabled: null, required: null, minValues: null, maxValues: null, fileTypes: null };
+      const obj28 = { type: accessory.type, id: tmp(4868).asComponentId(items.join(",")), customId: null, disabled: null, required: null, minValues: null, maxValues: null, fileTypes: null };
       ({ custom_id: obj11.customId, disabled: obj11.disabled, required: required3 } = accessory);
       if (required3 == null) {
         required3 = false;
       }
-      obj18.required = required3;
+      obj28.required = required3;
       ({ min_values: obj11.minValues, max_values: obj11.maxValues, file_types: obj11.fileTypes } = accessory);
-      return obj18;
+      return obj28;
     } else if (tmp(1894).ComponentType.CHECKPOINT_CARD === type2) {
       const checkpoint_data = accessory.checkpoint_data;
       let tmp11 = null;
       if (checkpoint_data.version === CheckpointVersions.V2025) {
-        const obj19 = { type: accessory.type, id: tmp(4868).asComponentId(items.join(",")), checkpointData: null };
-        const obj20 = { version: null, cardId: null, powerLevel: null, powerLevelPercentile: null, numMessagesSent: null, totalVoiceMinutes: null, numEmojisSent: null, topGuild: null, topEmoji: null, topGame: null };
+        const obj29 = { type: accessory.type, id: tmp(4868).asComponentId(items.join(",")), checkpointData: null };
+        const obj30 = { version: null, cardId: null, powerLevel: null, powerLevelPercentile: null, numMessagesSent: null, totalVoiceMinutes: null, numEmojisSent: null, topGuild: null, topEmoji: null, topGame: null };
         ({ version: obj55.version, card_id: obj55.cardId, power_level: obj55.powerLevel, power_level_percentile: obj55.powerLevelPercentile, num_messages_sent: obj55.numMessagesSent, total_voice_minutes: obj55.totalVoiceMinutes, num_emojis_sent: obj55.numEmojisSent } = checkpoint_data);
         let tmp12;
         if (null != checkpoint_data.top_guild) {
-          const obj21 = { guildId: checkpoint_data.top_guild.guild_id, guildName: checkpoint_data.top_guild.guild_name, guildIcon: checkpoint_data.top_guild.guild_icon };
-          tmp12 = obj21;
+          const obj31 = { guildId: checkpoint_data.top_guild.guild_id, guildName: checkpoint_data.top_guild.guild_name, guildIcon: checkpoint_data.top_guild.guild_icon };
+          tmp12 = obj31;
         }
-        obj20.topGuild = tmp12;
+        obj30.topGuild = tmp12;
         let tmp13;
         if (null != checkpoint_data.top_emoji) {
-          obj7 = SnowflakeUtilsDefault;
           let emoji_id;
-          if (obj7.isProbablyAValidSnowflake(checkpoint_data.top_emoji.emoji_id)) {
+          if (obj8.isProbablyAValidSnowflake(checkpoint_data.top_emoji.emoji_id)) {
             emoji_id = checkpoint_data.top_emoji.emoji_id;
           }
-          const obj22 = { emojiId: emoji_id, emojiName: null };
+          const obj32 = { emojiId: emoji_id, emojiName: null };
           const top_emoji = checkpoint_data.top_emoji;
           let emoji_name;
           if (top_emoji != null) {
             emoji_name = top_emoji.emoji_name;
           }
-          obj22.emojiName = emoji_name;
-          tmp13 = obj22;
+          obj32.emojiName = emoji_name;
+          tmp13 = obj32;
+          obj8 = SnowflakeUtilsDefault;
         }
-        obj20.topEmoji = tmp13;
+        obj30.topEmoji = tmp13;
         let tmp17;
         if (null != checkpoint_data.top_game) {
-          const obj23 = { applicationId: checkpoint_data.top_game.application_id, applicationName: checkpoint_data.top_game.application_name, applicationImageId: checkpoint_data.top_game.application_image_id };
-          tmp17 = obj23;
+          const obj33 = { applicationId: checkpoint_data.top_game.application_id, applicationName: checkpoint_data.top_game.application_name, applicationImageId: checkpoint_data.top_game.application_image_id };
+          tmp17 = obj33;
         }
-        obj20.topGame = tmp17;
-        obj19.checkpointData = obj20;
-        tmp11 = obj19;
-        const tmpResult20 = tmp(4868);
+        obj30.topGame = tmp17;
+        obj29.checkpointData = obj30;
+        tmp11 = obj29;
+        const tmpResult45 = tmp(4868);
       }
       return tmp11;
     } else if (tmp(1894).ComponentType.RADIO_GROUP === type2) {
-      const obj24 = { type: accessory.type, id: tmp(4868).asComponentId(items.join(",")), customId: null, options: null, required: null };
+      const obj35 = { type: accessory.type, id: tmp(4868).asComponentId(items.join(",")), customId: null, options: null, required: null };
       ({ custom_id: obj5.customId, options: obj5.options, required: required2 } = accessory);
       if (required2 == null) {
         required2 = false;
       }
-      obj24.required = required2;
-      return obj24;
+      obj35.required = required2;
+      return obj35;
     } else if (tmp(1894).ComponentType.CHECKBOX_GROUP === type2) {
-      const obj25 = { type: accessory.type, id: tmp(4868).asComponentId(items.join(",")), customId: null, options: null, minValues: null, maxValues: null, required: null };
+      const obj37 = { type: accessory.type, id: tmp(4868).asComponentId(items.join(",")), customId: null, options: null, minValues: null, maxValues: null, required: null };
       ({ custom_id: obj3.customId, options: obj3.options, min_values: obj3.minValues, max_values: obj3.maxValues, required } = accessory);
       if (required == null) {
         required = false;
       }
-      obj25.required = required;
-      return obj25;
+      obj37.required = required;
+      return obj37;
     } else if (tmp(1894).ComponentType.CHECKBOX === type2) {
-      obj = { type: accessory.type, id: tmp(4868).asComponentId(items.join(",")), customId: null, default: null };
+      let obj = { type: accessory.type, id: tmp(4868).asComponentId(items.join(",")), customId: null, default: null };
       ({ custom_id: obj.customId, default: obj.default } = accessory);
       return obj;
     } else {
@@ -21852,8 +21851,7 @@ export const getAllTextDisplayContent = function getAllTextDisplayContent(compon
   return tmp2;
 };
 export const getFirstInteractionComponentMedia = function getFirstInteractionComponentMedia(components) {
-  let obj = flattenComponents(components);
-  const values = obj.values();
+  const values = flattenComponents(components).values();
   const iter = values[Symbol.iterator]();
   const nextResult = iter.next();
   while (iter !== undefined) {
@@ -21867,24 +21865,24 @@ export const getFirstInteractionComponentMedia = function getFirstInteractionCom
         let tmp4Result = MediaTypes;
         let unfurledMediaItemType = tmp4Result.getUnfurledMediaItemType(tmp14.media);
         if ("INVALID" !== unfurledMediaItemType) {
-          obj = {};
+          let obj2 = {};
           let merged = Object.assign(tmp14.media);
-          obj.type = tmp17;
-          obj.alt = tmp14.description;
+          obj2.type = tmp17;
+          obj2.alt = tmp14.description;
           iter.return();
-          return obj;
+          return obj2;
         }
       }
     } else if (tmp3.type === Server.ComponentType.THUMBNAIL) {
-      tmp4Result = MediaTypes;
-      let unfurledMediaItemType1 = tmp4Result.getUnfurledMediaItemType(tmp3.media);
+      let tmp4Result2 = MediaTypes;
+      let unfurledMediaItemType1 = tmp4Result2.getUnfurledMediaItemType(tmp3.media);
       if ("INVALID" !== unfurledMediaItemType1) {
-        obj = {};
+        let obj3 = {};
         let merged1 = Object.assign(tmp3.media);
-        obj.type = tmp25;
-        obj.alt = tmp3.description;
+        obj3.type = tmp25;
+        obj3.alt = tmp3.description;
         iter.return();
-        return obj;
+        return obj3;
       }
     }
     continue;
@@ -21911,7 +21909,7 @@ export const getParents = function getParents(components, value) {
         return items1;
       } else {
         let items2 = [tmp2];
-        arraySpreadResult = HermesBuiltin.arraySpread(items, 1);
+        let arraySpreadResult2 = HermesBuiltin.arraySpread(items, 1);
         let tmp11 = search(tmp4, items2);
         if (null != tmp11) {
           iter.return();
@@ -21962,31 +21960,31 @@ export const getFileUploadComponentSubtitle = function getFileUploadComponentSub
   if (null != types) {
     if (minValues <= 1) {
       const intl4 = util.intl;
-      let obj = { maxValues, types, maxSize: formatSizeResult };
-      intl4.format(util.t.QLrHJG, obj);
+      const obj2 = { maxValues, types, maxSize: formatSizeResult };
+      intl4.format(util.t.QLrHJG, obj2);
     }
     if (minValues === maxValues) {
       const intl6 = util.intl;
-      obj = { minValues, types, maxSize: formatSizeResult };
-      let formatResult1 = intl6.format(util.t.Xp4xMV, obj);
+      const obj3 = { minValues, types, maxSize: formatSizeResult };
+      let formatResult1 = intl6.format(util.t.Xp4xMV, obj3);
     } else {
       const intl5 = util.intl;
-      const obj1 = { minValues, maxValues, types, maxSize: formatSizeResult };
-      formatResult1 = intl5.format(util.t["05AyNA"], obj1);
+      const obj4 = { minValues, maxValues, types, maxSize: formatSizeResult };
+      formatResult1 = intl5.format(util.t["05AyNA"], obj4);
     }
   } else if (minValues > 1) {
     if (minValues === maxValues) {
       const intl3 = util.intl;
-      const obj2 = { minValues, maxSize: formatSizeResult };
-      let formatResult2 = intl3.format(util.t.SAr31z, obj2);
+      const obj5 = { minValues, maxSize: formatSizeResult };
+      let formatResult2 = intl3.format(util.t.SAr31z, obj5);
     } else {
       const intl2 = util.intl;
-      const obj3 = { minValues, maxValues, maxSize: formatSizeResult };
-      formatResult2 = intl2.format(util.t["ZG+3Ck"], obj3);
+      const obj6 = { minValues, maxValues, maxSize: formatSizeResult };
+      formatResult2 = intl2.format(util.t["ZG+3Ck"], obj6);
     }
   } else {
     const intl = util.intl;
-    obj = { maxValues, maxSize: formatSizeResult };
+    const obj = { maxValues, maxSize: formatSizeResult };
     return intl.format(util.t.tyxwW1, obj);
   }
 };

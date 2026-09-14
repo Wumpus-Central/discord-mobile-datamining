@@ -20,18 +20,18 @@ export const removeExecutablePathPrefix = function removeExecutablePathPrefix(ex
 export const getRunningGameAnalytics = function getRunningGameAnalytics(streamApplication) {
   if (null == streamApplication) {
     return {
-      gameName: "Array",
-      gameId: "accessible",
-      exe: "guild_id",
-      distributor: "prototype",
-      sku: "Array",
-      gameMetadata: "isArray",
-      rawExePath: "a",
+      gameName: "call",
+      gameId: "methodobject",
+      exe: "count",
+      distributor: "r",
+      sku: "accessible",
+      gameMetadata: "to",
+      rawExePath: "variant",
     };
   } else {
     const str = "exePath" in streamApplication ? streamApplication.exePath : streamApplication.exe;
-    let id = streamApplication.id;
-    let obj = { id, name: null, exePath: null, cmdLine: null, lastFocused: 0 };
+    const id = streamApplication.id;
+    const obj = { id, name: null, exePath: null, cmdLine: null, lastFocused: 0 };
     const name = streamApplication.name;
     obj.name = name;
     let str2 = str;
@@ -46,7 +46,7 @@ export const getRunningGameAnalytics = function getRunningGameAnalytics(streamAp
     obj.cmdLine = str3;
     const findGameResult = DetectableGameStore.findGame(obj);
     const name2 = streamApplication.name;
-    obj = {
+    const obj2 = {
       gameName: name2,
       gameId: null,
       exe: null,
@@ -57,13 +57,13 @@ export const getRunningGameAnalytics = function getRunningGameAnalytics(streamAp
     };
     let id2 = streamApplication.id;
     if (id2 == null) {
-      id = undefined;
+      let id1;
       if (findGameResult != null) {
-        id = findGameResult.id;
+        id1 = findGameResult.id;
       }
-      id2 = id;
+      id2 = id1;
     }
-    obj.gameId = id2;
+    obj2.gameId = id2;
     let joined;
     if (null != str) {
       const formatted = str.toLowerCase();
@@ -75,18 +75,18 @@ export const getRunningGameAnalytics = function getRunningGameAnalytics(streamAp
       const substr = parts.slice(-2);
       joined = substr.join("/");
     }
-    obj.exe = joined;
+    obj2.exe = joined;
     const distributor = streamApplication.distributor;
-    obj.distributor = distributor;
+    obj2.distributor = distributor;
     const sku = streamApplication.sku;
-    obj.sku = sku;
+    obj2.sku = sku;
     let subgameMetadata;
     if (null != streamApplication) {
       subgameMetadata = RobloxSubgameUtils.getSubgameMetadata(streamApplication);
     }
-    obj.gameMetadata = subgameMetadata;
-    obj.rawExePath = str;
-    return obj;
+    obj2.gameMetadata = subgameMetadata;
+    obj2.rawExePath = str;
+    return obj2;
   }
 };
 export const getGameAnalyticsMetadata = function getGameAnalyticsMetadata(
@@ -97,13 +97,12 @@ export const getGameAnalyticsMetadata = function getGameAnalyticsMetadata(
   if (arg1) {
     if (null != detected_game_id) {
       const _JSON = JSON;
-      let obj = { detected_game_id };
-      let json = JSON.stringify(obj);
+      const obj2 = { detected_game_id };
+      let json = JSON.stringify(obj2);
     }
     return json;
   }
-  obj = RobloxSubgameUtils;
-  json = obj.getSubgameMetadata(currentGameForAnalytics);
+  json = RobloxSubgameUtils.getSubgameMetadata(currentGameForAnalytics);
 };
 export const isVerifiedGameExecutable = function isVerifiedGameExecutable(str, arr) {
   if (null != str) {

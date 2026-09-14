@@ -10,27 +10,26 @@ let result = size.fileFinishedImporting("modules/game_profile/hooks/useResolveGa
 
 export default function useResolveGameForProfile(arg0) {
   ({ applicationId, gameId } = arg0);
-  let obj = useGetOrFetchApplications;
   let tmp3;
   if (null == gameId) {
     tmp3 = applicationId;
   }
-  const getOrFetchApplication = obj.useGetOrFetchApplication(tmp3);
+  const getOrFetchApplication = useGetOrFetchApplications.useGetOrFetchApplication(tmp3);
   let result = null != getOrFetchApplication;
   if (result) {
-    let tmpResult = RobloxSubgameUtils;
-    result = tmpResult.isRobloxSubgameApplication(getOrFetchApplication);
+    result = RobloxSubgameUtils.isRobloxSubgameApplication(getOrFetchApplication);
+    const tmpResult = RobloxSubgameUtils;
   }
-  obj = { applicationId, gameId: null };
+  const obj2 = { applicationId, gameId: null };
   if (result) {
     gameId = RobloxSubgameTypes.ROBLOX_GAME_ID;
   }
-  obj.gameId = gameId;
-  let tmp6Result = useResolveGameDefault(obj);
+  obj2.gameId = gameId;
+  let tmp6Result = useResolveGameDefault(obj2);
   let isRobloxSubgameGameResult = null != tmp6Result.gameRecord;
   if (isRobloxSubgameGameResult) {
-    tmpResult = RobloxSubgameUtils;
-    isRobloxSubgameGameResult = tmpResult.isRobloxSubgameGame(tmp6Result.gameRecord);
+    isRobloxSubgameGameResult = RobloxSubgameUtils.isRobloxSubgameGame(tmp6Result.gameRecord);
+    const tmpResult3 = RobloxSubgameUtils;
   }
   let ROBLOX_GAME_ID;
   if (isRobloxSubgameGameResult) {
@@ -39,13 +38,13 @@ export default function useResolveGameForProfile(arg0) {
   const game = useGame.useGame(ROBLOX_GAME_ID);
   let data = game.data;
   if (isRobloxSubgameGameResult) {
-    obj = { gameId: RobloxSubgameTypes.ROBLOX_GAME_ID, gameRecord: null, isLoading: null };
+    const obj3 = { gameId: RobloxSubgameTypes.ROBLOX_GAME_ID, gameRecord: null, isLoading: null };
     if (data == null) {
       data = null;
     }
-    obj.gameRecord = data;
-    obj.isLoading = tmp12;
-    tmp6Result = obj;
+    obj3.gameRecord = data;
+    obj3.isLoading = tmp12;
+    tmp6Result = obj3;
   }
   return tmp6Result;
 }

@@ -1,6 +1,6 @@
 // discord_common/js/packages/libdiscore/js_shim/js/initLibdiscore.native.tsx
 import asyncGeneratorStep from "../../../../../../_runtime/00005_asyncGeneratorStep.js";
-import timers from "../../mobile/js/timers.tsx";
+import timers_mod from "../../mobile/js/timers.tsx";
 
 let closure_2 = async function _initLibdiscore() {
   if (c0 === 2) {
@@ -10,8 +10,8 @@ let closure_2 = async function _initLibdiscore() {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -23,7 +23,7 @@ let closure_2 = async function _initLibdiscore() {
         throw value;
       } else if (arg0 === 2) {
         c0 = 3;
-        obj = { value, done: true };
+        const obj = { value, done: true };
         return obj;
       } else {
         c0 = 3;
@@ -36,6 +36,7 @@ let closure_2 = async function _initLibdiscore() {
   }
 };
 const NativeModules = fn(17).NativeModules;
+let timers = timers_mod;
 timers = timers.registerTimerPolyfills();
 const size = fn(2);
 const result1 = size.fileFinishedImporting(

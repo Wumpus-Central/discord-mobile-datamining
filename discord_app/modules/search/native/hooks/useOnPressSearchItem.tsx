@@ -39,8 +39,8 @@ let closure_18 = async function _handleVoiceOrStageChannelConnectPress(arg0) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -53,8 +53,8 @@ let closure_18 = async function _handleVoiceOrStageChannelConnectPress(arg0) {
             throw value;
           } else if (arg0 === 2) {
             c3 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
             closure_1 = tmp2;
             closure_129_0 = guildStageVoice;
@@ -62,13 +62,13 @@ let closure_18 = async function _handleVoiceOrStageChannelConnectPress(arg0) {
             if (isGuildStageVoiceResult) {
               c2 = 2;
               c3 = 1;
-              const obj1 = { value: tmp21(dependencyMap[24], dependencyMap.paths), done: false };
-              return obj1;
+              const obj4 = { value: tmp21(dependencyMap[24], dependencyMap.paths), done: false };
+              return obj4;
             } else {
               c2 = 1;
               c3 = 1;
-              const obj2 = { value: tmp21(dependencyMap[26], dependencyMap.paths), done: false };
-              return obj2;
+              const obj5 = { value: tmp21(dependencyMap[26], dependencyMap.paths), done: false };
+              return obj5;
             }
             isGuildStageVoiceResult = guildStageVoice.isGuildStageVoice();
           }
@@ -79,8 +79,8 @@ let closure_18 = async function _handleVoiceOrStageChannelConnectPress(arg0) {
               throw value;
             } else if (arg0 === 2) {
               c3 = 3;
-              const obj3 = { value, done: true };
-              return obj3;
+              const obj6 = { value, done: true };
+              return obj6;
             } else {
               value.openGuildVoiceModal(closure_129_0, "Channel List");
               c3 = 3;
@@ -92,7 +92,7 @@ let closure_18 = async function _handleVoiceOrStageChannelConnectPress(arg0) {
             value.connectAndOpen(closure_129_0);
           }
           c3 = 3;
-          obj = { value, done: true };
+          const obj = { value, done: true };
           return obj;
         }
       } catch (tmp12) {
@@ -104,7 +104,7 @@ let closure_18 = async function _handleVoiceOrStageChannelConnectPress(arg0) {
 };
 const SearchConstants = fn(7982);
 ({ SearchMediaTypes: closure_7, SearchHistoryItemTypes: closure_8, SearchQueryTagTypes: closure_9 } = SearchConstants);
-const SearchNavigatorScreens = fn(16750).SearchNavigatorScreens;
+const SearchNavigatorScreens = fn(16752).SearchNavigatorScreens;
 const SearchFilterAddLocations = fn(7981).SearchFilterAddLocations;
 const Constants = fn(1074);
 ({ Routes: closure_12, ComponentActions: map1, ME: closure_14, SearchTypes: closure_15 } = Constants);
@@ -117,7 +117,7 @@ export const useOnPressSearchLink = function useOnPressSearchLink(searchContext)
   return noop.useCallback((target, arg1) => {
     searchContext = arg1;
     const tags = SearchQueryStore.getTags(searchContext);
-    let obj = { type: constants2.TEXT, text: SearchQueryStore.getTextInputValue(searchContext), tags };
+    { type: constants2.TEXT, text: SearchQueryStore.getTextInputValue(searchContext), tags };
     const type = searchContext.type;
     if (constants3.DMS === type) {
       const result = SearchPlatformUtils.delayUntilNavigationComplete(() => {
@@ -131,17 +131,17 @@ export const useOnPressSearchLink = function useOnPressSearchLink(searchContext)
         if (null != url.hostname) {
           const formatResult = URLUtilsDefault.format(url);
           const tmp6Result = URLUtilsDefault;
-          obj = {
+          const obj5 = {
             href: formatResult,
             onConfirm() {
-              obj = LinkingDefault;
-              return obj.openURL(obj);
-            },
+                    obj = LinkingDefault;
+                    return obj.openURL(obj);
+                  },
             trusted() {
-              return closure_0;
-            },
+                    return closure_0;
+                  }
           };
-          MaskedLinkUtils.handleClick(obj);
+          MaskedLinkUtils.handleClick(obj5);
         }
       }
     }
@@ -160,44 +160,41 @@ export const useOnPressMessageItem = function useOnPressMessageItem(searchContex
     searchContext = channel;
     if (null != channel) {
       const tags = SearchQueryStore.getTags(searchContext);
-      let obj = { type: constants.TEXT, text: SearchQueryStore.getTextInputValue(searchContext), tags };
+      let obj4 = { type: constants.TEXT, text: SearchQueryStore.getTextInputValue(searchContext), tags };
       const type = searchContext.type;
       if (constants2.DMS === type) {
-        obj = searchContext(context[9]);
-        const result = obj.delayUntilNavigationComplete(() => {
+        const result = searchContext(context[9]).delayUntilNavigationComplete(() => {
           obj = SearchPlatformActionCreatorsDefault;
           return obj.addSearchHistoryItem(closure_0, obj);
         });
+        const obj = searchContext(context[9]);
       }
       const messages = navigation(context[18]).fetchMessages(arg0, arg1);
-      const obj2 = navigation(context[18]);
+      let obj2 = navigation(context[18]);
       const result1 = searchContext(context[9]).performKeyboardAwareNavigation(() => {
         closure_1 = context;
-        obj = { channelId: guildId.id, guildId: null, searchContext: null };
+        const obj2 = { channelId: guildId.id, guildId: null, searchContext: null };
         guildId = guildId.getGuildId();
         if (guildId == null) {
           guildId = closure_3_14;
         }
-        obj.guildId = guildId;
-        obj.searchContext = searchContext;
+        obj2.guildId = guildId;
+        obj2.searchContext = searchContext;
         if (null != context) {
-          obj = { screen: SearchNavigatorScreens.SEARCH_CHAT_PREVIEW, params: null };
-          const obj1 = {};
-          const merged = Object.assign(obj);
-          obj1.onBeforeJumpToMessage = function onBeforeJumpToMessage() {
+          const obj3 = { screen: SearchNavigatorScreens.SEARCH_CHAT_PREVIEW, params: null };
+          obj4 = {};
+          const merged = Object.assign(obj2);
+          obj4.onBeforeJumpToMessage = function onBeforeJumpToMessage() {
             const ComponentDispatch = closure_0(closure_2[19]).ComponentDispatch;
-            ComponentDispatch.dispatch(constants.HIDE_CHANNEL_DETAILS, {
-              channelId: closure_0.id,
-              screenIndex: screenIndex.screenIndex,
-            });
+            ComponentDispatch.dispatch(constants.HIDE_CHANNEL_DETAILS, { channelId: closure_0.id, screenIndex: screenIndex.screenIndex });
           };
-          obj.params = obj1;
-          obj.navigate("sidebar", obj);
+          obj3.params = obj4;
+          navigation.navigate("sidebar", obj3);
         } else {
-          obj.navigate(SearchNavigatorScreens.SEARCH_CHAT_PREVIEW, obj);
+          navigation.navigate(SearchNavigatorScreens.SEARCH_CHAT_PREVIEW, obj2);
         }
       });
-      const obj3 = searchContext(context[9]);
+      let obj3 = searchContext(context[9]);
     }
   }, items);
 };
@@ -212,15 +209,14 @@ export const useOnPressMediaItem = function useOnPressMediaItem(searchContext) {
   return navigation.useCallback((channelId, originViewOrOriginLayout) => {
     searchContext = channelId;
     const tags = SearchQueryStore.getTags(searchContext);
-    let obj = { type: constants2.TEXT, text: SearchQueryStore.getTextInputValue(searchContext), tags };
-    let channel = obj;
+    let channel = { type: constants2.TEXT, text: SearchQueryStore.getTextInputValue(searchContext), tags };
     const type = searchContext.type;
     if (constants3.DMS === type) {
       const result = searchContext(onEndReached[9]).delayUntilNavigationComplete(() => {
         obj = SearchPlatformActionCreatorsDefault;
         return obj.addSearchHistoryItem(closure_0, obj);
       });
-      const obj2 = searchContext(onEndReached[9]);
+      let obj2 = searchContext(onEndReached[9]);
     }
     channel = context.getChannel(channelId.channelId);
     const type2 = channelId.type;
@@ -231,28 +227,25 @@ export const useOnPressMediaItem = function useOnPressMediaItem(searchContext) {
         const result1 = searchContext(onEndReached[9]).performKeyboardAwareNavigation(() => {
           closure_0 = channel;
           closure_1 = context;
-          let obj = { channelId: channel.id, guildId: null, searchContext: null };
+          const obj2 = { channelId: channel.id, guildId: null, searchContext: null };
           let guildId = channel.getGuildId();
           if (guildId == null) {
             guildId = closure_3_14;
           }
-          obj.guildId = guildId;
-          obj.searchContext = searchContext;
+          obj2.guildId = guildId;
+          obj2.searchContext = searchContext;
           if (null != context) {
-            obj = { screen: SearchNavigatorScreens.SEARCH_CHAT_PREVIEW, params: null };
-            const obj1 = {};
-            const merged = Object.assign(obj);
-            obj1.onBeforeJumpToMessage = function onBeforeJumpToMessage() {
+            const obj3 = { screen: SearchNavigatorScreens.SEARCH_CHAT_PREVIEW, params: null };
+            const obj4 = {};
+            const merged = Object.assign(obj2);
+            obj4.onBeforeJumpToMessage = function onBeforeJumpToMessage() {
               const ComponentDispatch = closure_0(closure_2[19]).ComponentDispatch;
-              ComponentDispatch.dispatch(constants.HIDE_CHANNEL_DETAILS, {
-                channelId: closure_0.id,
-                screenIndex: screenIndex.screenIndex,
-              });
+              ComponentDispatch.dispatch(constants.HIDE_CHANNEL_DETAILS, { channelId: closure_0.id, screenIndex: screenIndex.screenIndex });
             };
-            obj.params = obj1;
-            obj.navigate("sidebar", obj);
+            obj3.params = obj4;
+            navigation.navigate("sidebar", obj3);
           } else {
-            obj.navigate(SearchNavigatorScreens.SEARCH_CHAT_PREVIEW, obj);
+            navigation.navigate(SearchNavigatorScreens.SEARCH_CHAT_PREVIEW, obj2);
           }
         });
         const obj9 = searchContext(onEndReached[9]);
@@ -265,28 +258,25 @@ export const useOnPressMediaItem = function useOnPressMediaItem(searchContext) {
           const result2 = tmp9(tmp10[9]).performKeyboardAwareNavigation(() => {
             closure_0 = channel;
             const screenIndex = context;
-            let obj = { channelId: channel.id, guildId: null, searchContext: null };
+            const obj2 = { channelId: channel.id, guildId: null, searchContext: null };
             let guildId = channel.getGuildId();
             if (guildId == null) {
               guildId = closure_3_14;
             }
-            obj.guildId = guildId;
-            obj.searchContext = searchContext;
+            obj2.guildId = guildId;
+            obj2.searchContext = searchContext;
             if (null != context) {
-              obj = { screen: SearchNavigatorScreens.SEARCH_CHAT_PREVIEW, params: null };
-              const obj1 = {};
-              const merged = Object.assign(obj);
-              obj1.onBeforeJumpToMessage = function onBeforeJumpToMessage() {
+              const obj3 = { screen: SearchNavigatorScreens.SEARCH_CHAT_PREVIEW, params: null };
+              const obj4 = {};
+              const merged = Object.assign(obj2);
+              obj4.onBeforeJumpToMessage = function onBeforeJumpToMessage() {
                 const ComponentDispatch = closure_0(closure_2[19]).ComponentDispatch;
-                ComponentDispatch.dispatch(constants.HIDE_CHANNEL_DETAILS, {
-                  channelId: closure_0.id,
-                  screenIndex: screenIndex.screenIndex,
-                });
+                ComponentDispatch.dispatch(constants.HIDE_CHANNEL_DETAILS, { channelId: closure_0.id, screenIndex: screenIndex.screenIndex });
               };
-              obj.params = obj1;
-              obj.navigate("sidebar", obj);
+              obj3.params = obj4;
+              navigation.navigate("sidebar", obj3);
             } else {
-              obj.navigate(SearchNavigatorScreens.SEARCH_CHAT_PREVIEW, obj);
+              navigation.navigate(SearchNavigatorScreens.SEARCH_CHAT_PREVIEW, obj2);
             }
           });
           const tmp9Result = tmp9(tmp10[9]);
@@ -308,17 +298,11 @@ export const useOnPressMediaItem = function useOnPressMediaItem(searchContext) {
         }
         tmp2 = type.type !== constants.ATTACHMENT && type.type !== constants.EMBED && type.type !== constants.COMPONENT;
       });
-      obj = {
-        initialSources: items,
-        initialIndex: onEndReachedThreshold,
-        onEndReached,
-        onEndReachedThreshold,
-        analyticsSource: "Search",
-        originViewOrOriginLayout,
-      };
-      searchContext(onEndReached[21]).openMediaModal(obj);
-      const obj4 = searchContext(onEndReached[21]);
+      const obj5 = { initialSources: items, initialIndex: onEndReachedThreshold, onEndReached, onEndReachedThreshold, analyticsSource: "Search", originViewOrOriginLayout };
+      searchContext(onEndReached[21]).openMediaModal(obj5);
+      let obj4 = searchContext(onEndReached[21]);
     }
+    const obj = { type: constants2.TEXT, text: SearchQueryStore.getTextInputValue(searchContext), tags };
   }, items);
 };
 export const useOnPressGroupDMItem = function useOnPressGroupDMItem(searchContext) {
@@ -377,20 +361,17 @@ export const useOnPressGuildTextChannel = function useOnPressGuildTextChannel(se
     if (null == channel) {
       return null;
     } else {
-      let obj = { type: constants2.GUILD_TEXT_CHANNEL, channelId: channel.id };
+      const obj4 = { type: constants2.GUILD_TEXT_CHANNEL, channelId: channel.id };
       id = searchContext;
       const type = searchContext.type;
       if (constants3.DMS === type) {
-        obj = SearchPlatformUtils;
-        const result = obj.delayUntilNavigationComplete(() => {
+        const result = SearchPlatformUtils.delayUntilNavigationComplete(() => {
           obj = SearchPlatformActionCreatorsDefault;
           return obj.addSearchHistoryItem(closure_0, obj);
         });
       }
       ChannelActionCreatorsDefault.preload(channel.guild_id, channel.id);
-      const result1 = SearchPlatformUtils.performKeyboardAwareNavigation(() =>
-        searchContext(dependencyMap[23]).transitionToChannel(id.id),
-      );
+      const result1 = SearchPlatformUtils.performKeyboardAwareNavigation(() => searchContext(dependencyMap[23]).transitionToChannel(id.id));
     }
   }, items);
 };
@@ -404,27 +385,27 @@ export const useOnPressGuildVoiceChannel = function useOnPressGuildVoiceChannel(
     let guild_id = searchContext;
     closure_129_0 = searchContext;
     if (!obj9.maybeOpenAgeGateForVoiceChannel(searchContext.id)) {
-      let tmp22Result = searchContext(tmp23[28]);
       if (!tmp22Result.maybeOpenSpoilerGateForVoiceChannel(guild_id.id)) {
-        tmp22Result = searchContext(tmp23[29]);
         const guildId = guild_id.getGuildId();
         closure_129_1 = guildId;
         if (null != guildId) {
-          if (tmp22Result1.shouldShowMembershipVerificationGate(guildId)) {
+          if (tmp22Result5.shouldShowMembershipVerificationGate(guildId)) {
             c2 = 1;
             c3 = 1;
             return { value: searchContext(tmp23[25])(tmp23[31], tmp23.paths), done: false };
           }
-          tmp22Result1 = searchContext(tmp23[30]);
+          tmp22Result5 = searchContext(tmp23[30]);
         }
-        if (tmp22Result.getChannelRoleSubscriptionStatus(guild_id.id).needSubscriptionToAccess) {
+        if (tmp22Result4.getChannelRoleSubscriptionStatus(guild_id.id).needSubscriptionToAccess) {
           guild_id = guild_id.guild_id;
           searchContext(tmp23[32]);
           searchContext(tmp23[32]).transitionTo(closure_1_12.CHANNEL(guild_id, constants.ROLE_SUBSCRIPTIONS));
         } else {
           handleVoiceOrStageChannelConnectPress(guild_id);
         }
+        tmp22Result4 = searchContext(tmp23[29]);
       }
+      tmp22Result = searchContext(tmp23[28]);
     }
     await "HermesInternal";
     if (arg0 !== 2) {
@@ -433,7 +414,7 @@ export const useOnPressGuildVoiceChannel = function useOnPressGuildVoiceChannel(
     }
     return value;
   });
-  callback = noop.useCallback(function () {
+  callback = noop.useCallback(function() {
     const self = this;
     const apply = searchContext.apply;
     if (typeof apply === "unknown") {
@@ -450,16 +431,16 @@ export const useOnPressGuildVoiceChannel = function useOnPressGuildVoiceChannel(
     if (null == channel) {
       return null;
     } else {
-      let obj = { type: constants.GUILD_VOICE_CHANNEL, channelId: channel.id };
+      const obj2 = { type: constants.GUILD_VOICE_CHANNEL, channelId: channel.id };
       const type = searchContext.type;
       if (constants2.DMS === type) {
-        obj = searchContext(callback[9]);
-        const result = obj.delayUntilNavigationComplete(() => {
+        const result = searchContext(callback[9]).delayUntilNavigationComplete(() => {
           obj = SearchPlatformActionCreatorsDefault;
           return obj.addSearchHistoryItem(closure_0, obj);
         });
+        const obj = searchContext(callback[9]);
       }
-      const parent = obj.getParent();
+      const parent = obj2.getParent();
       if (parent != null) {
         parent.goBack();
       }
@@ -475,11 +456,11 @@ export const useOnPressSearchHistoryText = function useOnPressSearchHistoryText(
     searchContext = text;
     const type = searchContext.type;
     if (constants4.DMS === type) {
-      const result = searchContext(12467).delayUntilNavigationComplete(() => {
+      const result = searchContext(12468).delayUntilNavigationComplete(() => {
         obj = SearchPlatformActionCreatorsDefault;
         return obj.addSearchHistoryItem(closure_0, obj);
       });
-      const obj2 = searchContext(12467);
+      let obj2 = searchContext(12468);
     }
     SearchPlatformActionCreatorsDefault.updateSearchQuery(searchContext, (setTags) => {
       if (null != obj) {
@@ -491,8 +472,8 @@ export const useOnPressSearchHistoryText = function useOnPressSearchHistoryText(
     if (tags != null) {
       const item = tags.forEach((type) => {
         if (type.type === constants2.COMPLETE) {
-          obj = { searchContext, searchTokenType: type.searchTokenType, location: constants3.SEARCH_HISTORY };
-          obj.trackSearchFilterAdd(obj);
+          const obj2 = { searchContext, searchTokenType: type.searchTokenType, location: constants3.SEARCH_HISTORY };
+          search_tracking_TrackingDefault.trackSearchFilterAdd(obj2);
         }
       });
     }

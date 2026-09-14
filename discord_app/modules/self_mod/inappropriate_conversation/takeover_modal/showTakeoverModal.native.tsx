@@ -12,9 +12,9 @@ const result = size.fileFinishedImporting(
 
 export const showTakeoverModal = function showTakeoverModal(arg0) {
   ({ warningId, warningType, senderId, channelId } = arg0);
-  let obj = SelfModInappropriateConversationExperiment;
   if (obj.isEligibleForInappropriateConversationWarning({ location: "takeover-modal" })) {
-    obj = { warningId, warningType, senderId, channelId };
-    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(15811, dependencyMap.paths), obj, TAKEOVER_MODAL_KEY);
+    const obj3 = { warningId, warningType, senderId, channelId };
+    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(15813, dependencyMap.paths), obj3, TAKEOVER_MODAL_KEY);
   }
+  obj = SelfModInappropriateConversationExperiment;
 };

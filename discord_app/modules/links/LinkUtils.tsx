@@ -35,21 +35,21 @@ export const tryParseChannelPath = function tryParseChannelPath(pathname) {
     const match = pathname.match(regExp1);
     if (null != match) {
       if (match.length > 3) {
-        let obj = { guildId: match[1], channelId: match[2], messageId: match[3] };
-        return obj;
+        const obj2 = { guildId: match[1], channelId: match[2], messageId: match[3] };
+        return obj2;
       }
     }
     const match1 = pathname.match(regExp2);
     if (null != match1) {
       if (match1.length > 4) {
-        obj = { guildId: match1[1], channelId: match1[2], threadId: match1[3], messageId: match1[4] };
-        return obj;
+        const obj3 = { guildId: match1[1], channelId: match1[2], threadId: match1[3], messageId: match1[4] };
+        return obj3;
       }
     }
     const match2 = pathname.match(regExp);
     if (null != match2) {
       if (match2.length > 1) {
-        obj = { guildId: match2[1], channelId: match2[2] };
+        const obj = { guildId: match2[1], channelId: match2[2] };
         let tmp5 = obj;
       }
       return tmp5;

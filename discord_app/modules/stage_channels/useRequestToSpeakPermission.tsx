@@ -4,6 +4,8 @@ import _slicedToArray from "../../../_runtime/metro/00032__.js";
 import noop from "../../../_runtime/metro/00019__.js";
 import ChannelStore from "../../stores/ChannelStore.tsx";
 
+const require = globalThis.__r;
+
 require = fn;
 const Permissions = fn(1074).Permissions;
 const size = fn(2);
@@ -21,7 +23,7 @@ export const useRequestToSpeakPermission = function useRequestToSpeakPermission(
   let obj = require("initialize");
   const canEveryoneRoleResult = stateFromStores(4280).canEveryoneRole(Permissions.REQUEST_TO_SPEAK, stateFromStores);
   const obj2 = stateFromStores(4280);
-  [tmp4, tmp5] = _slicedToArray(noop.useState(canEveryoneRoleResult), 2);
+  [tmp4, tmp5] = noop.useState(canEveryoneRoleResult);
   dependencyMap = tmp5;
   if (canEveryoneRoleResult !== tmp4) {
     tmp5(canEveryoneRoleResult);

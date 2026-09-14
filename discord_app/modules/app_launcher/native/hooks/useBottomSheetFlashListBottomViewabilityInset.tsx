@@ -16,14 +16,13 @@ const result = size.fileFinishedImporting(
 );
 
 export const useBottomSheetFlashListBottomViewabilityInset = function useBottomSheetFlashListBottomViewabilityInset() {
-  let obj = bottomVisibilityInsetRef;
-  const context = bottomVisibilityInsetRef.useContext(bottomSheetPosition(11348).AppLauncherContext);
+  const context = bottomVisibilityInsetRef.useContext(bottomSheetPosition(11349).AppLauncherContext);
   bottomSheetPosition = undefined;
   if (context != null) {
     bottomSheetPosition = context.bottomSheetPosition;
   }
   const flashListRef = obj.useRef(null);
-  const diff = flashListRef(1477)().height - flashListRef(11489)().maximum;
+  const diff = flashListRef(1477)().height - flashListRef(11490)().maximum;
   dependencyMap = diff;
   bottomVisibilityInsetRef = obj.useRef(9999);
   const memo = obj.useMemo(
@@ -54,14 +53,14 @@ export const useBottomSheetFlashListBottomViewabilityInset = function useBottomS
   const fn2 = function s(arg0) {
     ReanimatedRexport.runOnJS(memo)(arg0 - diff);
   };
-  obj = {
+  const tmp4Result = bottomSheetPosition(4373);
+  fn2.__closure = {
     distanceBetweenExpandedScreenTopAndSheetTop: diff,
-    runOnJS: tmp4(4373).runOnJS,
+    runOnJS: bottomSheetPosition(4373).runOnJS,
     handleBottomViewabilityInsetDebounced: memo,
   };
-  fn2.__closure = obj;
   fn2.__workletHash = 6025307858098;
   fn2.__initData = __initData;
-  const animatedReaction = bottomSheetPosition(4373).useAnimatedReaction(fn, fn2);
+  const animatedReaction = tmp4Result.useAnimatedReaction(fn, fn2);
   return { flashListRef, bottomVisibilityInsetRef };
 };

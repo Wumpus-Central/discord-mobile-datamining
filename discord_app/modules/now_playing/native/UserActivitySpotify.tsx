@@ -172,10 +172,11 @@ export const canOpenSpotifyUrl = function canOpenSpotifyUrl() {
   return React4.canOpenURL("" + timestampProducer + ":");
 };
 export const attributeInstall = function attributeInstall() {
-  let obj = ClientInfoUtilsAll;
   const HTTP = HTTPUtils.HTTP;
-  obj = { url: React5.INSTALL_ATTRIBUTION(obj.getConstants().Identifier), rejectWithError: true };
-  value = HTTP.get(obj);
+  value = HTTP.get({
+    url: React5.INSTALL_ATTRIBUTION(ClientInfoUtilsAll.getConstants().Identifier),
+    rejectWithError: true,
+  });
 };
 export const openUrl = function openUrl(arg0, ALBUM, album_id) {
   if (arg0) {
@@ -261,12 +262,16 @@ export const openAlbum = function openAlbum(activity, id) {
 export const SpotifyPlayButton = function SpotifyPlayButton(activity) {
   activity = activity.activity;
   let obj = { style: activity.style, children: null };
-  obj = { icon: null, text: null, size: "sm", onPress: null, grow: true };
-  obj = { source: _modDef8259 };
-  obj.icon = closure_9(activity(5056).Button.Icon, obj);
+  let obj2 = {
+    icon: closure_9(activity(5056).Button.Icon, { source: _modDef8259 }),
+    text: null,
+    size: "sm",
+    onPress: null,
+    grow: true,
+  };
   const intl = activity(1114).intl;
-  obj.text = intl.formatToPlainString(activity(1114).t.LEgD7t, { platform: activity.name });
-  obj.onPress = function onPress() {
+  obj2.text = intl.formatToPlainString(activity(1114).t.LEgD7t, { platform: activity.name });
+  obj2.onPress = function onPress() {
     const sync_id = activity.sync_id;
     const canOpenURLResult = React4.canOpenURL("" + timestampProducer + ":");
     React4.canOpenURL("" + timestampProducer + ":")
@@ -275,17 +280,19 @@ export const SpotifyPlayButton = function SpotifyPlayButton(activity) {
           let catchPromise = closure_2_4.openURL(closure_2_7.PLAYER_OPEN(constants.TRACK, sync_id)).catch(() => {});
           const openURLResult = closure_2_4.openURL(closure_2_7.PLAYER_OPEN(constants.TRACK, sync_id));
         } else {
-          const HTTP = activity(1272).HTTP;
-          const obj = { url: null, rejectWithError: true };
-          obj.url = closure_2_7.INSTALL_ATTRIBUTION(obj.getConstants().Identifier);
-          value = HTTP.get(obj);
+          const HTTP = activity(1270).HTTP;
+          const obj2 = {
+            url: closure_2_7.INSTALL_ATTRIBUTION(ClientInfoUtilsAll.getConstants().Identifier),
+            rejectWithError: true,
+          };
+          value = HTTP.get(obj2);
           catchPromise = LinkingDefault.openURL(closure_2_7.APP_STORE);
         }
         return catchPromise;
       })
       .catch(() => {});
   };
-  obj.children = closure_9(activity(5056).Button, obj);
+  obj.children = closure_9(activity(5056).Button, obj2);
   return closure_9(closure_5, obj);
 };
 export { SpotifyTrack };

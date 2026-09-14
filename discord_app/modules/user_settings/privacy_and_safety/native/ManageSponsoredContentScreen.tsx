@@ -13,7 +13,7 @@ function AdTopicRow(adTopic) {
   let AdTopicOptOuts = adTopic(1935).AdTopicOptOuts;
   const setting = AdTopicOptOuts.useSetting();
   const hasItem = setting.includes(adTopic);
-  const obj = { label: null, subLabel: null, value: null, onValueChange: null };
+  obj = { label: null, subLabel: null, value: null, onValueChange: null };
   const intl = adTopic(1114).intl;
   obj.label = intl.string(obj[adTopic]);
   const intl2 = adTopic(1114).intl;
@@ -38,36 +38,36 @@ const View = fn(17).View;
 const HelpdeskArticles = fn(1074).HelpdeskArticles;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-let content = {};
-content[fn(1187).AdTopic.REAL_MONEY_GAMING] = _modDef2070.pmIitA;
-const keys = Object.keys(content);
+let obj = {};
+obj[fn(1185).AdTopic.REAL_MONEY_GAMING] = _modDef2070.pmIitA;
+const keys = Object.keys(obj);
 let closure_8 = keys.map(Number);
 const createStyles = fn(4636);
-content = { content: null };
-content = {
-  paddingHorizontal: nativeDefault.space.PX_16,
-  paddingTop: nativeDefault.space.PX_16,
-  gap: nativeDefault.space.PX_16,
+let obj3 = {
+  content: {
+    paddingHorizontal: nativeDefault.space.PX_16,
+    paddingTop: nativeDefault.space.PX_16,
+    gap: nativeDefault.space.PX_16,
+  },
 };
-content.content = content;
-let closure_10 = createStyles.createStyles(content);
+let closure_10 = createStyles.createStyles(obj3);
 const size = fn(2);
 const result = size.fileFinishedImporting(
   "modules/user_settings/privacy_and_safety/native/ManageSponsoredContentScreen.tsx",
 );
 
 export default function ManageSponsoredContentScreen() {
-  let obj = { style: closure_10().content, children: null };
-  obj = { hasIcons: false, description: null };
+  obj = { style: closure_10().content, children: null };
+  const obj2 = { hasIcons: false, description: null };
   const intl = util.intl;
-  obj = { helpdeskArticle: HelpdeskUtilsDefault.getArticleURL(HelpdeskArticles.MANAGE_SPONSORED_CONTENT) };
-  obj.description = intl.format(_modDef2070["z/MfaY"], obj);
-  const items = [hasOwnProperty(TableRowGroup.TableRowGroup, obj)];
-  const obj1 = { hasIcons: false, title: null, children: null };
+  const obj3 = { helpdeskArticle: HelpdeskUtilsDefault.getArticleURL(HelpdeskArticles.MANAGE_SPONSORED_CONTENT) };
+  obj2.description = intl.format(_modDef2070["z/MfaY"], obj3);
+  const items = [hasOwnProperty(TableRowGroup.TableRowGroup, obj2)];
+  const obj5 = { hasIcons: false, title: null, children: null };
   const intl2 = util.intl;
-  obj1.title = intl2.string(_modDef2070.OkmBx0);
-  obj1.children = closure_8.map((adTopic) => closure_1_5(AdTopicRow, { adTopic }, adTopic));
-  items[1] = hasOwnProperty(TableRowGroup.TableRowGroup, obj1);
+  obj5.title = intl2.string(_modDef2070.OkmBx0);
+  obj5.children = closure_8.map((adTopic) => closure_1_5(AdTopicRow, { adTopic }, adTopic));
+  items[1] = hasOwnProperty(TableRowGroup.TableRowGroup, obj5);
   obj.children = items;
   return timestampProducer(View, obj);
 }

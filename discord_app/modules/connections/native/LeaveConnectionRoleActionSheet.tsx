@@ -20,23 +20,23 @@ const result = size.fileFinishedImporting("modules/connections/native/LeaveConne
 
 export default function LeaveConnectionRoleActionSheet(onLeaveRolePressed) {
   const tmp = closure_5();
-  let obj = { children: null };
-  obj = { style: tmp.container, children: null };
-  obj = { variant: "heading-lg/extrabold", color: "mobile-text-heading-primary", children: null };
+  const obj = { children: null };
+  const obj2 = { style: tmp.container, children: null };
+  const obj3 = { variant: "heading-lg/extrabold", color: "mobile-text-heading-primary", children: null };
   const intl = util.intl;
-  obj.children = intl.string(util.t.vytvJF);
-  const items = [React3(Text_Text.Text, obj), ,];
-  const obj1 = { style: tmp.marginTop, variant: "text-md/normal", color: "text-default", children: null };
+  obj3.children = intl.string(util.t.vytvJF);
+  const items = [React3(Text_Text.Text, obj3), ,];
+  const obj4 = { style: tmp.marginTop, variant: "text-md/normal", color: "text-default", children: null };
   const intl2 = util.intl;
-  obj1.children = intl2.string(util.t.caJwb5);
-  items[1] = React3(Text_Text.Text, obj1);
-  const obj2 = { style: tmp.button, children: null };
-  const obj3 = { variant: "destructive", onPress: onLeaveRolePressed.onLeaveRolePressed, text: null, grow: true };
+  obj4.children = intl2.string(util.t.caJwb5);
+  items[1] = React3(Text_Text.Text, obj4);
+  const obj5 = { style: tmp.button, children: null };
+  const obj6 = { variant: "destructive", onPress: onLeaveRolePressed.onLeaveRolePressed, text: null, grow: true };
   const intl3 = util.intl;
-  obj3.text = intl3.string(util.t["+Oi4XF"]);
-  obj2.children = React3(components_Button_Button.Button, obj3);
-  items[2] = React3(View, obj2);
-  obj.children = items;
-  obj.children = React4(View, obj);
+  obj6.text = intl3.string(util.t["+Oi4XF"]);
+  obj5.children = React3(components_Button_Button.Button, obj6);
+  items[2] = React3(View, obj5);
+  obj2.children = items;
+  obj.children = React4(View, obj2);
   return React3(Sheet_BottomSheet.BottomSheet, obj);
 }

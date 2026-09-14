@@ -20,7 +20,6 @@ export const createObservableLock = function createObservableLock(arg0) {
   function mutex(arg0, arg1) {
     let promise = arg0;
     closure_1 = arg1;
-    let arr = closure_1;
     if (closure_1.length > 0) {
       closure_3(arg1, arr);
       let timerId = true;
@@ -28,7 +27,7 @@ export const createObservableLock = function createObservableLock(arg0) {
       closure_4();
       timerId = false;
     }
-    arr = arr.push(arg1);
+    closure_1.push(arg1);
     timerId = null;
     if (null != closure_6) {
       timerId = null;

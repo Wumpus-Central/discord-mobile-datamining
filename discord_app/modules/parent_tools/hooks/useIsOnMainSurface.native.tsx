@@ -52,7 +52,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/parent_tools/hooks/useIsOnMainSurface.native.tsx");
 
 export const useIsOnMainSurface = function useIsOnMainSurface() {
-  [tmp2, require] = _slicedToArray(noop.useState(getIsOnMainSurface), 2);
+  [tmp2, require] = noop.useState(getIsOnMainSurface);
   const effect = noop.useEffect(() => {
     function handleNavigationChange() {
       return rootNavigationRef(getIsOnMainSurface());

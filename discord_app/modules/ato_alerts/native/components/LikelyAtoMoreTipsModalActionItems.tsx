@@ -10,20 +10,19 @@ const result = size.fileFinishedImporting("modules/ato_alerts/native/components/
 
 export default function LikelyAtoMoreTipsModalActionItems(senderId) {
   senderId = senderId.senderId;
-  let obj = senderId(504);
   const items = [UserStore];
   const items1 = [senderId];
-  const stateFromStores = obj.useStateFromStores(items, () => UserStore.getUser(senderId), items1);
+  const stateFromStores = senderId(504).useStateFromStores(items, () => UserStore.getUser(senderId), items1);
   const items2 = [stateFromStores];
   const memo = noop.useMemo(() => UserUtilsDefault.getName(stateFromStores), items2);
-  obj = { hasIcons: true, children: null };
-  obj = { label: null, subLabel: null, onPress: null, icon: null };
+  const obj2 = { hasIcons: true, children: null };
+  const obj3 = { label: null, subLabel: null, onPress: null, icon: null };
   const intl = senderId(1114).intl;
-  obj.label = intl.formatToPlainString(senderId(1114).t["F/ID+9"], { username: memo });
+  obj3.label = intl.formatToPlainString(senderId(1114).t["F/ID+9"], { username: memo });
   const intl2 = senderId(1114).intl;
-  obj.subLabel = intl2.string(senderId(1114).t.w2ve0t);
-  obj.onPress = senderId.handleMutePressed;
-  obj.icon = jsx(senderId(9188).BellSlashIcon, {});
-  obj.children = jsx(senderId(5686).TableRow, { label: null, subLabel: null, onPress: null, icon: null });
-  return jsx(senderId(5768).TableRowGroup, { label: null, subLabel: null, onPress: null, icon: null });
+  obj3.subLabel = intl2.string(senderId(1114).t.w2ve0t);
+  obj3.onPress = senderId.handleMutePressed;
+  obj3.icon = jsx(senderId(9188).BellSlashIcon, {});
+  obj2.children = jsx(senderId(5686).TableRow, { label: null, subLabel: null, onPress: null, icon: null });
+  return jsx(senderId(5768).TableRowGroup, { hasIcons: true, children: null });
 }

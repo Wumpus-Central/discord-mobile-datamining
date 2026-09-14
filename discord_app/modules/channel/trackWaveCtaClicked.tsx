@@ -15,12 +15,12 @@ export const getDmHasMessageHistory = function getDmHasMessageHistory(arg0) {
   return null != lastMessageId;
 };
 export const trackWaveCtaClicked = function trackWaveCtaClicked(channelId) {
-  const obj = { channel_id: channelId.channelId, source: channelId.source, dm_has_message_history: null };
+  const obj2 = { channel_id: channelId.channelId, source: channelId.source, dm_has_message_history: null };
   const channel = ChannelStore.getChannel(channelId.channelId);
   let lastMessageId;
   if (channel != null) {
     lastMessageId = channel.lastMessageId;
   }
-  obj.dm_has_message_history = null != lastMessageId;
-  obj.track(AnalyticEvents.WAVE_CTA_CLICKED, obj);
+  obj2.dm_has_message_history = null != lastMessageId;
+  AnalyticsUtilsDefault.track(AnalyticEvents.WAVE_CTA_CLICKED, obj2);
 };

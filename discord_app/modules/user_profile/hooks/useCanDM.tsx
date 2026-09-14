@@ -6,6 +6,8 @@ import AuthenticationStore from "../../../stores/AuthenticationStore.tsx";
 import GuildMemberStore from "../../../stores/GuildMemberStore.tsx";
 import RelationshipStore from "../../../stores/RelationshipStore.tsx";
 
+const require = globalThis.__r;
+
 require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/hooks/useCanDM.tsx");

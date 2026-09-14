@@ -1,5 +1,5 @@
 // discord_app/modules/activities/panel/native/MinimizeActivityButton.tsx
-import _modDef11288 from "../../../../../_runtime/metro/11288__.js";
+import _modDef11289 from "../../../../../_runtime/metro/11289__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const require = fn;
@@ -19,9 +19,9 @@ export default noop.memo(function MinimizeActivityButton(arg0) {
   }, items);
   if (undefined !== activityName) {
     if ("" !== activityName) {
-      let obj = { style: tmp2.buttonParent, children: null };
-      obj = {
-        icon: _modDef11288,
+      const obj2 = { style: tmp2.buttonParent, children: null };
+      const obj3 = {
+        icon: _modDef11289,
         accessibilityLabel: null,
         onPress: null,
         text: null,
@@ -31,11 +31,11 @@ export default noop.memo(function MinimizeActivityButton(arg0) {
         shrink: true,
       };
       const intl2 = setMode(1114).intl;
-      obj.accessibilityLabel = intl2.string(setMode(1114).t.brPQ5U);
-      obj.onPress = callback;
-      obj.text = activityName;
-      obj.children = jsx(setMode(5056).Button, {
-        icon: _modDef11288,
+      obj3.accessibilityLabel = intl2.string(setMode(1114).t.brPQ5U);
+      obj3.onPress = callback;
+      obj3.text = activityName;
+      obj2.children = jsx(setMode(5056).Button, {
+        icon: _modDef11289,
         accessibilityLabel: null,
         onPress: null,
         text: null,
@@ -44,23 +44,12 @@ export default noop.memo(function MinimizeActivityButton(arg0) {
         maxFontSizeMultiplier: 1,
         shrink: true,
       });
-      let tmp3 = (
-        <View
-          icon={_modDef11288}
-          accessibilityLabel={null}
-          onPress={null}
-          text={null}
-          size="sm"
-          variant="secondary-overlay"
-          maxFontSizeMultiplier={1}
-          shrink
-        />
-      );
+      let tmp3 = <View style={tmp2.buttonParent}>{null}</View>;
     }
     return tmp3;
   }
-  obj = {
-    icon: _modDef11288,
+  const obj = {
+    icon: _modDef11289,
     accessibilityLabel: null,
     onPress: null,
     size: "sm",
@@ -71,7 +60,7 @@ export default noop.memo(function MinimizeActivityButton(arg0) {
   obj.accessibilityLabel = intl.string(setMode(1114).t.brPQ5U);
   obj.onPress = callback;
   tmp3 = jsx(setMode(8202).IconButton, {
-    icon: _modDef11288,
+    icon: _modDef11289,
     accessibilityLabel: null,
     onPress: null,
     size: "sm",

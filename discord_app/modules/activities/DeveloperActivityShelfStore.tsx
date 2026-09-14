@@ -8,19 +8,19 @@ import size from "../../../_runtime/metro/00002__.js";
 
 const ApplicationFlags = Constants.ApplicationFlags;
 let closure_3 = { lastUsedObject: {}, useActivityUrlOverride: false, activityUrlOverride: null, filter: "" };
-let DevShelfFetchState = { INITIALIZED: "INITIALIZED", LOADING: "LOADING", LOADED: "LOADED", ERROR: "ERROR" };
+const DevShelfFetchState = { INITIALIZED: "INITIALIZED", LOADING: "LOADING", LOADED: "LOADED", ERROR: "ERROR" };
 let ERROR = DevShelfFetchState.INITIALIZED;
 let closure_6 = [];
 const PersistedStore = initializeDefault.PersistedStore;
 class DeveloperActivityShelfStore extends PersistedStore {}
 const prototype = DeveloperActivityShelfStore.prototype;
 prototype["initialize"] = function initialize(arg0) {
-  let obj = { lastUsedObject: {}, useActivityUrlOverride: false, activityUrlOverride: null, filter: "" };
+  let obj = arg0;
   if (arg0 == null) {
     obj = {};
   }
   const merged = Object.assign(obj);
-  closure_3 = obj;
+  closure_3 = { lastUsedObject: {}, useActivityUrlOverride: false, activityUrlOverride: null, filter: "" };
 };
 prototype["getState"] = function getState() {
   return closure_3;
@@ -81,7 +81,7 @@ const items = [
   },
 ];
 DeveloperActivityShelfStore.migrations = items;
-DevShelfFetchState = {
+const developerActivityShelfStore = new DeveloperActivityShelfStore(DispatcherDefault, {
   LOGOUT: function reset() {
     closure_3 = { lastUsedObject: {}, useActivityUrlOverride: false, activityUrlOverride: null, filter: "" };
     ERROR = obj.INITIALIZED;
@@ -118,8 +118,7 @@ DevShelfFetchState = {
     closure_3.filter = arg0.filter;
   },
   USER_SETTINGS_PROTO_UPDATE() {},
-};
-const developerActivityShelfStore = new DeveloperActivityShelfStore(DispatcherDefault, DevShelfFetchState);
+});
 const result = size.fileFinishedImporting("modules/activities/DeveloperActivityShelfStore.tsx");
 
 export default developerActivityShelfStore;

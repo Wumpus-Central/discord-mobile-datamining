@@ -9,6 +9,8 @@ import RelationshipStore from "../stores/RelationshipStore.tsx";
 import UserStore from "../stores/UserStore.tsx";
 import PrivateChannelSortStore from "../stores/views/PrivateChannelSortStore.tsx";
 
+const require = globalThis.__r;
+
 require = fn;
 function isGuildMember(dependencyMap, id) {
   let isMemberResult = null != dependencyMap;
@@ -47,10 +49,10 @@ function addDmUsers(arg0) {
       if (item.isPrivate()) {
         if (includeGroupDms) {
           if (item.type === ChannelTypes.GROUP_DM) {
-            item = { type: null, item: null, isSuggested: false };
-            item.type = item.GROUP_DM;
-            item.item = item;
-            let arr = rows.push(item);
+            let obj2 = { type: null, item: null, isSuggested: false };
+            obj2.type = item.GROUP_DM;
+            obj2.item = item;
+            let arr = rows.push(obj2);
             counts.numGroupDms = counts.numGroupDms + 1;
             num = num + 1;
           }
@@ -67,10 +69,10 @@ function addDmUsers(arg0) {
                   if (!tmp16.bot) {
                     if (!isGuildMember(omitGuildId, tmp16.id)) {
                       let addResult = shownUserIds.add(tmp16.id);
-                      item = { type: null, item: null, isSuggested: false };
-                      item.type = item.DM;
-                      item.item = tmp16;
-                      arr = rows.push(item);
+                      let obj3 = { type: null, item: null, isSuggested: false };
+                      obj3.type = item.DM;
+                      obj3.item = tmp16;
+                      let arr2 = rows.push(obj3);
                       counts.numDms = counts.numDms + 1;
                       num = num + 1;
                     }
@@ -89,7 +91,7 @@ function addDmUsers(arg0) {
 }
 const ChannelTypes = fn(1074).ChannelTypes;
 const InviteTargetTypes = fn(7838).InviteTargetTypes;
-let RowTypes = { GROUP_DM: "GROUP_DM", DM: "DM", FRIEND: "FRIEND", CHANNEL: "CHANNEL" };
+const RowTypes = { GROUP_DM: "GROUP_DM", DM: "DM", FRIEND: "FRIEND", CHANNEL: "CHANNEL" };
 const minutes = "minutes";
 const hours = "hours";
 const days = "days";
@@ -107,7 +109,10 @@ const dependencyMap = {
   [fn(9953).INVITE_OPTIONS_FOREVER.value]: { value: 0, type: "never" },
 };
 let items = [fn(9953).INVITE_OPTIONS_14_DAYS, fn(9953).INVITE_OPTIONS_30_DAYS, fn(9953).INVITE_OPTIONS_60_DAYS];
-RowTypes = {
+const size = fn(2);
+const result = size.fileFinishedImporting("utils/InstantInviteUtils.tsx");
+
+export default {
   getMaxAgeOptionByValue(label) {
     closure_0 = label;
     items = [...items];
@@ -155,10 +160,6 @@ RowTypes = {
   INVITE_OPTIONS_50_TIMES: fn(9953).INVITE_OPTIONS_50_TIMES,
   INVITE_OPTIONS_100_TIMES: fn(9953).INVITE_OPTIONS_100_TIMES,
 };
-const size = fn(2);
-const result = size.fileFinishedImporting("utils/InstantInviteUtils.tsx");
-
-export default RowTypes;
 export { RowTypes };
 export const generateRowsForQuery = function generateRowsForQuery(arg0) {
   ({ query, inviteTargetType, omitUserIds, suggestedUserIds, omitGuildId } = arg0);
@@ -169,14 +170,14 @@ export const generateRowsForQuery = function generateRowsForQuery(arg0) {
   if ("" === query) {
     obj = { omitUserIds, maxRowsWithoutQuery, omitGuildId, shownUserIds: set, rows, counts };
     if (inviteTargetType === InviteTargetTypes.EMBEDDED_APPLICATION) {
-      obj = {};
+      const obj3 = {};
       const merged = Object.assign(obj);
-      obj.includeGroupDms = false;
-      obj.limit = 1;
-      addDmUsers(obj);
-      let obj1 = {};
+      obj3.includeGroupDms = false;
+      obj3.limit = 1;
+      addDmUsers(obj3);
+      const obj4 = {};
       const merged1 = Object.assign(obj);
-      obj1.suggestedChannelIds = suggestedChannelIds;
+      obj4.suggestedChannelIds = suggestedChannelIds;
       (function addChannels(arg0) {
         ({ suggestedChannelIds, maxRowsWithoutQuery, rows, counts } = arg0);
         if (null != suggestedChannelIds) {
@@ -203,11 +204,11 @@ export const generateRowsForQuery = function generateRowsForQuery(arg0) {
             continue;
           }
         }
-      })(obj1);
+      })(obj4);
     }
-    const obj2 = {};
+    const obj5 = {};
     const merged2 = Object.assign(obj);
-    obj2.suggestedUserIds = suggestedUserIds;
+    obj5.suggestedUserIds = suggestedUserIds;
     (function addSuggestedUsers(arg0) {
       ({ omitUserIds, suggestedUserIds, maxRowsWithoutQuery, shownUserIds, rows, counts } = arg0);
       if (null != suggestedUserIds) {
@@ -243,11 +244,11 @@ export const generateRowsForQuery = function generateRowsForQuery(arg0) {
           continue;
         }
       }
-    })(obj2);
-    const obj3 = {};
+    })(obj5);
+    const obj7 = {};
     const merged3 = Object.assign(obj);
-    obj3.includeGroupDms = true;
-    addDmUsers(obj3);
+    obj7.includeGroupDms = true;
+    addDmUsers(obj7);
     (function addFriends(arg0) {
       ({ omitUserIds, maxRowsWithoutQuery, shownUserIds, rows, counts } = arg0);
       friendIDs = friendIDs.getFriendIDs();
@@ -283,31 +284,30 @@ export const generateRowsForQuery = function generateRowsForQuery(arg0) {
       }
     })(obj);
   } else {
-    const obj4 = { query, rows, counts };
+    const obj9 = { query, rows, counts };
     if (inviteTargetType === InviteTargetTypes.EMBEDDED_APPLICATION) {
-      let obj5 = {};
-      const merged4 = Object.assign(obj4);
-      obj5.inviteTargetType = inviteTargetType;
+      const obj10 = {};
+      const merged4 = Object.assign(obj9);
+      obj10.inviteTargetType = inviteTargetType;
       c0 = undefined;
       importDefault = undefined;
-      ({ rows: c0, counts: c1 } = obj5);
-      if (obj5.inviteTargetType === tmp40.EMBEDDED_APPLICATION) {
-        obj1 = AutocompleteUtilsDefault;
-        const obj6 = { query: tmp44, limit: 3, guildId: "w" };
-        let item = obj1.queryChannels(obj6).forEach((record) => {
+      ({ rows: c0, counts: c1 } = obj10);
+      if (obj10.inviteTargetType === tmp40.EMBEDDED_APPLICATION) {
+        const obj12 = { query: tmp44, limit: 3, guildId: "w" };
+        let item = AutocompleteUtilsDefault.queryChannels(obj12).forEach((record) => {
           obj = { type: obj.CHANNEL, item: record.record, isSuggested: false, score: record.score };
           _undefined.push(obj);
           _undefined2.numChannels = _undefined2.numChannels + 1;
         });
-        const queryChannelsResult = obj1.queryChannels(obj6);
+        const queryChannelsResult = AutocompleteUtilsDefault.queryChannels(obj12);
       }
     }
-    let obj7 = {};
-    const merged5 = Object.assign(obj4);
-    obj7.omitUserIds = omitUserIds;
-    obj7.omitGuildId = omitGuildId;
-    obj7.shownUserIds = set;
-    obj7.suggestedUserIds = suggestedUserIds;
+    const obj13 = {};
+    const merged5 = Object.assign(obj9);
+    obj13.omitUserIds = omitUserIds;
+    obj13.omitGuildId = omitGuildId;
+    obj13.shownUserIds = set;
+    obj13.suggestedUserIds = suggestedUserIds;
     (function addQueriedSuggestedUsers(suggestedUserIds) {
       ({ rows: c0, counts: c1, omitUserIds, omitGuildId: closure_2, shownUserIds } = suggestedUserIds);
       suggestedUserIds = suggestedUserIds.suggestedUserIds;
@@ -324,28 +324,30 @@ export const generateRowsForQuery = function generateRowsForQuery(arg0) {
           }
           continue;
         }
-        _undefined2(set[9]);
-        obj = { query: tmp, members: items, limit: 10 };
-        const item = obj.queryMemberList(obj).forEach((record) => {
-          record = record.record;
-          shownUserIds.add(record.id);
-          obj = { type: constants.FRIEND, item: record, isSuggested: true, score: record.score, isGuildMember: null };
-          let isMemberResult = null != set;
-          if (isMemberResult) {
-            isMemberResult = member.isMember(tmp3, tmp4);
-          }
-          obj.isGuildMember = isMemberResult;
-          _undefined.push(obj);
-          numFriends.numFriends = numFriends.numFriends + 1;
-        });
-        const queryMemberListResult = obj.queryMemberList(obj);
+        const obj2 = { query: tmp, members: items, limit: 10 };
+        obj = _undefined2(set[9]);
+        const item = _undefined2(set[9])
+          .queryMemberList(obj2)
+          .forEach((record) => {
+            record = record.record;
+            shownUserIds.add(record.id);
+            obj = { type: constants.FRIEND, item: record, isSuggested: true, score: record.score, isGuildMember: null };
+            let isMemberResult = null != set;
+            if (isMemberResult) {
+              isMemberResult = member.isMember(tmp3, tmp4);
+            }
+            obj.isGuildMember = isMemberResult;
+            _undefined.push(obj);
+            numFriends.numFriends = numFriends.numFriends + 1;
+          });
+        const queryMemberListResult = _undefined2(set[9]).queryMemberList(obj2);
       }
-    })(obj7);
-    const obj8 = {};
-    const merged6 = Object.assign(obj4);
-    obj8.omitUserIds = omitUserIds;
-    obj8.omitGuildId = omitGuildId;
-    obj8.shownUserIds = set;
+    })(obj13);
+    const obj14 = {};
+    const merged6 = Object.assign(obj9);
+    obj14.omitUserIds = omitUserIds;
+    obj14.omitGuildId = omitGuildId;
+    obj14.shownUserIds = set;
     closure_129_0 = undefined;
     closure_129_1 = undefined;
     closure_129_2 = undefined;
@@ -357,13 +359,11 @@ export const generateRowsForQuery = function generateRowsForQuery(arg0) {
       shownUserIds: closure_129_2,
       rows: closure_129_3,
       counts: closure_129_4,
-    } = obj8);
-    obj5 = AutocompleteUtilsDefault;
-    const obj9 = { query: obj8.query, limit: 50 };
-    const item1 = obj5.queryDMUsers(obj9).forEach((record) => {
+    } = obj14);
+    const obj15 = { query: obj14.query, limit: 50 };
+    const item1 = AutocompleteUtilsDefault.queryDMUsers(obj15).forEach((record) => {
       record = record.record;
       if (!_undefined.has(record.id)) {
-        obj = set;
         if (!set.has(record.id)) {
           const dMFromUserId = ChannelStore.getDMFromUserId(record.id);
           let tmp4 = null != dMFromUserId;
@@ -371,17 +371,14 @@ export const generateRowsForQuery = function generateRowsForQuery(arg0) {
             tmp4 = null != ReadStateStore.lastMessageId(dMFromUserId);
           }
           if (tmp4) {
-            obj.add(record.id);
-            obj = { type: null, item: null, isSuggested: false, score: null, isGuildMember: null };
-            obj.type = obj.DM;
-            obj.item = record;
-            obj.score = record.score;
+            set.add(record.id);
+            const obj2 = { type: set.DM, item: record, isSuggested: false, score: record.score, isGuildMember: null };
             let isMemberResult = null != c1;
             if (isMemberResult) {
               isMemberResult = GuildMemberStore.isMember(tmp9, tmp10);
             }
-            obj.isGuildMember = isMemberResult;
-            EmbeddedActivitiesStore.push(obj);
+            obj2.isGuildMember = isMemberResult;
+            EmbeddedActivitiesStore.push(obj2);
             set2.numDms = set2.numDms + 1;
           }
         }
@@ -389,20 +386,19 @@ export const generateRowsForQuery = function generateRowsForQuery(arg0) {
     });
     closure_130_0 = undefined;
     closure_130_1 = undefined;
-    ({ rows: closure_130_0, counts: closure_130_1, query: query2 } = obj4);
-    obj7 = AutocompleteUtilsDefault;
-    let obj10 = { query: query2, limit: 50, fuzzy: false };
-    const queryDMUsersResult = obj5.queryDMUsers(obj9);
-    const item2 = obj7.queryGroupDMs(obj10).forEach((record) => {
+    ({ rows: closure_130_0, counts: closure_130_1, query: query2 } = obj9);
+    const queryDMUsersResult = AutocompleteUtilsDefault.queryDMUsers(obj15);
+    const obj16 = { query: query2, limit: 50, fuzzy: false };
+    const item2 = AutocompleteUtilsDefault.queryGroupDMs(obj16).forEach((record) => {
       obj = { type: obj.GROUP_DM, item: record.record, isSuggested: false, score: record.score };
       _undefined.push(obj);
       _undefined2.numGroupDms = _undefined2.numGroupDms + 1;
     });
-    const obj11 = {};
-    const merged7 = Object.assign(obj4);
-    obj11.omitUserIds = omitUserIds;
-    obj11.omitGuildId = omitGuildId;
-    obj11.shownUserIds = set;
+    const obj17 = {};
+    const merged7 = Object.assign(obj9);
+    obj17.omitUserIds = omitUserIds;
+    obj17.omitGuildId = omitGuildId;
+    obj17.shownUserIds = set;
     closure_131_0 = undefined;
     closure_131_1 = undefined;
     closure_131_2 = undefined;
@@ -415,11 +411,10 @@ export const generateRowsForQuery = function generateRowsForQuery(arg0) {
       omitGuildId: closure_131_3,
       shownUserIds: closure_131_4,
       query: query3,
-    } = obj11);
-    obj10 = AutocompleteUtilsDefault;
-    const obj12 = { query: query3, limit: 500, _fuzzy: false };
-    const queryGroupDMsResult = obj7.queryGroupDMs(obj10);
-    const item3 = obj10.queryFriends(obj12).forEach((record) => {
+    } = obj17);
+    const queryGroupDMsResult = AutocompleteUtilsDefault.queryGroupDMs(obj16);
+    const obj18 = { query: query3, limit: 500, _fuzzy: false };
+    const item3 = AutocompleteUtilsDefault.queryFriends(obj18).forEach((record) => {
       record = record.record;
       let hasItem = set.has(record.id);
       if (!hasItem) {
@@ -440,7 +435,7 @@ export const generateRowsForQuery = function generateRowsForQuery(arg0) {
         _undefined2.numFriends = _undefined2.numFriends + 1;
       }
     });
-    const queryFriendsResult = obj10.queryFriends(obj12);
+    const queryFriendsResult = AutocompleteUtilsDefault.queryFriends(obj18);
   }
   return { rows, counts };
 };
@@ -461,9 +456,9 @@ export const groupInviteSuggestions = function groupInviteSuggestions(arg0, depe
       continue;
     }
     if (isGuildMember(dependencyMap, tmp2.item.id)) {
-      arr = items.push(tmp2);
+      let arr2 = items.push(tmp2);
     } else {
-      let arr1 = items1.push(tmp2);
+      let arr3 = items1.push(tmp2);
     }
   }
   const items2 = [items, items1];
@@ -532,8 +527,8 @@ export const maxAgeString = function maxAgeString(maxAge, maxUses) {
     if (tmp2) {
       let stringResult = intl4.string(util.t["/WbTXD"]);
     } else {
-      obj = { numUses: parsed };
-      stringResult = intl4.formatToPlainString(util.t.eDRWJK, obj);
+      const obj2 = { numUses: parsed };
+      stringResult = intl4.formatToPlainString(util.t.eDRWJK, obj2);
     }
     return stringResult;
   } else if (hours === type) {
@@ -541,11 +536,11 @@ export const maxAgeString = function maxAgeString(maxAge, maxUses) {
     const formatToPlainString2 = intl3.formatToPlainString;
     const t2 = util.t;
     if (tmp2) {
-      obj = { numHours: value };
-      let formatToPlainString2Result = formatToPlainString2(t2.ZVdJMy, obj);
+      const obj3 = { numHours: value };
+      let formatToPlainString2Result = formatToPlainString2(t2.ZVdJMy, obj3);
     } else {
-      const obj1 = { numHours: value, numUses: parsed };
-      formatToPlainString2Result = formatToPlainString2(t2.NgZgAB, obj1);
+      const obj4 = { numHours: value, numUses: parsed };
+      formatToPlainString2Result = formatToPlainString2(t2.NgZgAB, obj4);
     }
     return formatToPlainString2Result;
   } else if (days === type) {
@@ -553,11 +548,11 @@ export const maxAgeString = function maxAgeString(maxAge, maxUses) {
     const formatToPlainString = intl2.formatToPlainString;
     const t = util.t;
     if (tmp2) {
-      const obj2 = { numDays: value };
-      let formatToPlainStringResult = formatToPlainString(t.T96qss, obj2);
+      const obj5 = { numDays: value };
+      let formatToPlainStringResult = formatToPlainString(t.T96qss, obj5);
     } else {
-      const obj3 = { numDays: value, numUses: parsed };
-      formatToPlainStringResult = formatToPlainString(t.TfuB9B, obj3);
+      const obj6 = { numDays: value, numUses: parsed };
+      formatToPlainStringResult = formatToPlainString(t.TfuB9B, obj6);
     }
     return formatToPlainStringResult;
   } else if (never === type) {
@@ -576,23 +571,23 @@ export const maxAgeString = function maxAgeString(maxAge, maxUses) {
 export const urgentShareMessageString = function urgentShareMessageString(arg0, link) {
   if (null == arg0) {
     const intl5 = util.intl;
-    obj = { link };
-    return intl5.formatToPlainString(util.t.RHbY6K, obj);
+    const obj2 = { link };
+    return intl5.formatToPlainString(util.t.RHbY6K, obj2);
   } else {
     value = dependencyMap[arg0].value;
     const type = dependencyMap[arg0].type;
     if (minutes === type) {
       const intl4 = util.intl;
-      obj = { numMinutes: value, link };
-      return intl4.formatToPlainString(util.t.N3VHkw, obj);
+      const obj3 = { numMinutes: value, link };
+      return intl4.formatToPlainString(util.t.N3VHkw, obj3);
     } else if (hours === type) {
       const intl3 = util.intl;
-      const obj1 = { numHours: value, link };
-      return intl3.formatToPlainString(util.t["3d9BlG"], obj1);
+      const obj4 = { numHours: value, link };
+      return intl3.formatToPlainString(util.t["3d9BlG"], obj4);
     } else if (days === type) {
       const intl2 = util.intl;
-      const obj2 = { numDays: value, link };
-      return intl2.formatToPlainString(util.t.gLIlkb, obj2);
+      const obj5 = { numDays: value, link };
+      return intl2.formatToPlainString(util.t.gLIlkb, obj5);
     } else {
       const intl = util.intl;
       obj = { link };

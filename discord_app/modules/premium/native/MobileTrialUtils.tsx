@@ -42,8 +42,7 @@ export const usePremiumTrialOfferPremiumType = function usePremiumTrialOfferPrem
   return closure_2[skuId];
 };
 export const useNitroTrialCtaOverride = function useNitroTrialCtaOverride(user_profile_premium_upsell_card) {
-  let obj = usePremiumTrialOffer;
-  const premiumTrialOffer = obj.usePremiumTrialOffer();
+  const premiumTrialOffer = usePremiumTrialOffer.usePremiumTrialOffer();
   let subscriptionTrial;
   if (premiumTrialOffer != null) {
     subscriptionTrial = premiumTrialOffer.subscriptionTrial;
@@ -51,18 +50,16 @@ export const useNitroTrialCtaOverride = function useNitroTrialCtaOverride(user_p
   if (null == subscriptionTrial) {
     return null;
   } else {
-    let tmpResult = AndroidTwoWeekTrialsExperiment;
-    obj = { location: user_profile_premium_upsell_card };
-    if (tmpResult.isAndroidTwoWeekTrialsTrialCTAEnabled(obj)) {
-      tmpResult = PremiumUtils;
-      obj = { intervalType: null, intervalCount: null };
+    const obj2 = { location: user_profile_premium_upsell_card };
+    if (tmpResult.isAndroidTwoWeekTrialsTrialCTAEnabled(obj2)) {
       ({ interval: obj3.intervalType, intervalCount: obj3.intervalCount } = subscriptionTrial);
-      const result = tmpResult.formatIntervalDuration(obj);
+      const result = PremiumUtils.formatIntervalDuration({ intervalType: null, intervalCount: null });
       const intl = util.intl;
-      const obj1 = { duration: result };
-      return intl.formatToPlainString(util.t["6xpY54"], obj1);
+      const obj5 = { duration: result };
+      return intl.formatToPlainString(util.t["6xpY54"], obj5);
     } else {
       return null;
     }
+    tmpResult = AndroidTwoWeekTrialsExperiment;
   }
 };

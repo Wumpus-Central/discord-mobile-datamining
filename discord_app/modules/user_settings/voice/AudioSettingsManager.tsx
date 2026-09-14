@@ -10,7 +10,7 @@ import GameConsoleStore from "../../game_console/GameConsoleStore.tsx";
 import SoundboardStore from "../../soundboard/SoundboardStore.tsx";
 import AuthenticationStore from "../../../stores/AuthenticationStore.tsx";
 import MediaEngineStore from "../../../stores/MediaEngineStore.tsx";
-import apply from "../../../../_runtime/metro/00012__.js";
+import apply_mod from "../../../../_runtime/metro/00012__.js";
 import AutomaticLifecycleManager from "../../../lib/AutomaticLifecycleManager.tsx";
 
 require = fn;
@@ -26,10 +26,8 @@ function handleConnectionOpen() {
           let flag = false;
           const entries = Object.entries(state.getState().settingsByContext);
           while (tmp2 !== undefined) {
-            let tmp5 = _slicedToArray(tmp3, 2);
-            let first = tmp5[0];
+            [first, tmp8] = tmp3;
             let tmp7 = first;
-            let tmp8 = tmp5[1];
             let obj = AudioSettingsUtils;
             let result = obj.coerceAudioContextForProto(first);
             if (null != result) {
@@ -37,15 +35,15 @@ function handleConnectionOpen() {
               let _String = String;
               let _Date = Date;
               let StringResult = String(Date.now());
-              obj = {};
+              let obj2 = {};
               let _Object4 = Object;
               let entries1 = Object.entries(tmp8.localMutes);
               for (const item10044 of entries1) {
                 let tmp15 = _slicedToArray(item10044, 2);
-                obj = { muted: tmp15[1], volume: null, modifiedAt: null, soundboardMuted: false };
-                obj.volume = DEFAULT_VOLUME_FOR_CONTEXT(tmp7);
-                obj.modifiedAt = StringResult;
-                obj[tmp15[0]] = obj;
+                let obj3 = { muted: tmp15[1], volume: null, modifiedAt: null, soundboardMuted: false };
+                obj3.volume = DEFAULT_VOLUME_FOR_CONTEXT(tmp7);
+                obj3.modifiedAt = StringResult;
+                obj2[tmp15[0]] = obj3;
                 continue;
               }
               let _Object = Object;
@@ -53,18 +51,18 @@ function handleConnectionOpen() {
               for (const item10065 of entries2) {
                 let tmp25 = _slicedToArray(item10065, 2);
                 let first1 = tmp25[0];
-                let obj1 = { muted: false, modifiedAt: null };
-                obj1.modifiedAt = StringResult;
-                let merged = Object.assign(obj[first1]);
+                let obj5 = { muted: false, modifiedAt: null };
+                obj5.modifiedAt = StringResult;
+                let merged = Object.assign(obj2[first1]);
                 let obj4 = AudioSettingsUtils;
-                obj1.volume = obj4.snapVolumeToDefault(tmp25[1], tmp7);
-                obj[first1] = obj1;
+                obj5.volume = obj4.snapVolumeToDefault(tmp25[1], tmp7);
+                obj2[first1] = obj5;
                 continue;
               }
               let _Object2 = Object;
               let length = Object.keys(tmp53).length;
               let _Object3 = Object;
-              let entries3 = Object.entries(obj);
+              let entries3 = Object.entries(obj2);
               let entries4 = entries3.entries();
               for (const item10099 of entries4) {
                 let tmp40 = _slicedToArray(item10099, 2);
@@ -101,29 +99,29 @@ function handleSetLocalVolume(arg0) {
   if (userId !== AuthenticationStore.getId()) {
     const remoteSessionId = GameConsoleStore.getRemoteSessionId();
     if (null != remoteSessionId) {
-      let obj = { muted: MediaEngineStore.isLocalMute(userId, context), volume };
+      const obj = { muted: MediaEngineStore.isLocalMute(userId, context), volume };
       closure_13(remoteSessionId, userId, context, obj);
     }
-    obj = { volume };
-    const result = AudioSettingsPending.updatePendingSettings(context, userId, obj);
+    const obj3 = { volume };
+    const result = AudioSettingsPending.updatePendingSettings(context, userId, obj3);
     closure_12();
   }
 }
 function handleSetLocalMute(arg0) {
   ({ context, userId } = arg0);
   if (userId !== AuthenticationStore.getId()) {
-    const obj = { muted: MediaEngineStore.isLocalMute(userId, context) };
-    const result = obj.updatePendingSettings(context, userId, obj);
+    const isLocalMuteResult = MediaEngineStore.isLocalMute(userId, context);
+    const obj2 = { muted: isLocalMuteResult };
+    const result = AudioSettingsPending.updatePendingSettings(context, userId, obj2);
     closure_12.cancel();
     const PreloadedUserSettingsActionCreators = UserSettingsProtoActionCreators.PreloadedUserSettingsActionCreators;
     PreloadedUserSettingsActionCreators.updateAsync(
       "audioContextSettings",
       async (arg0) => {
         closure_0 = arg0;
-        let result = closure_0(14157).drainPendingAudioSettings((arg0, arg1, arg2) => {
+        let result = closure_0(14158).drainPendingAudioSettings((arg0, arg1, arg2) => {
           let diff;
-          let obj = AudioSettingsUtils;
-          const result = obj.coerceAudioContextForProto(arg0);
+          const result = AudioSettingsUtils.coerceAudioContextForProto(arg0);
           flag = false;
           if (null != result) {
             if (closure_0[result][arg1] != null) {
@@ -167,8 +165,8 @@ function handleSetLocalMute(arg0) {
               } else {
                 USER = AudioSettingsDefaultVolumes.AudioSettingsDefaultVolumes.USER;
               }
-              obj = { muted: false, volume: USER };
-              tmp11(obj);
+              const obj2 = { muted: false, volume: USER };
+              tmp11(obj2);
             } else {
               throw new TypeError("Trying to call a non-function");
             }
@@ -183,25 +181,23 @@ function handleSetLocalMute(arg0) {
       },
       UserSettingsProtoActionCreators.UserSettingsDelay.INFREQUENT_USER_ACTION,
     );
-    const isLocalMuteResult = MediaEngineStore.isLocalMute(userId, context);
   }
 }
 function handleSetLocalSoundboardMute(userId) {
   userId = userId.userId;
   if (userId !== AuthenticationStore.getId()) {
     const result = SoundboardStore.isLocalSoundboardMuted(userId);
-    const obj = { soundboardMuted: result };
-    const result1 = obj.updatePendingSettings(userId.context, userId, obj);
+    const obj2 = { soundboardMuted: result };
+    const result1 = AudioSettingsPending.updatePendingSettings(userId.context, userId, obj2);
     closure_12.cancel();
     const PreloadedUserSettingsActionCreators = UserSettingsProtoActionCreators.PreloadedUserSettingsActionCreators;
     PreloadedUserSettingsActionCreators.updateAsync(
       "audioContextSettings",
       async (arg0) => {
         closure_0 = arg0;
-        let result = closure_0(14157).drainPendingAudioSettings((arg0, arg1, arg2) => {
+        let result = closure_0(14158).drainPendingAudioSettings((arg0, arg1, arg2) => {
           let diff;
-          let obj = AudioSettingsUtils;
-          const result = obj.coerceAudioContextForProto(arg0);
+          const result = AudioSettingsUtils.coerceAudioContextForProto(arg0);
           flag = false;
           if (null != result) {
             if (closure_0[result][arg1] != null) {
@@ -245,8 +241,8 @@ function handleSetLocalSoundboardMute(userId) {
               } else {
                 USER = AudioSettingsDefaultVolumes.AudioSettingsDefaultVolumes.USER;
               }
-              obj = { muted: false, volume: USER };
-              tmp11(obj);
+              const obj2 = { muted: false, volume: USER };
+              tmp11(obj2);
             } else {
               throw new TypeError("Trying to call a non-function");
             }
@@ -290,16 +286,16 @@ function DEFAULT_VOLUME_FOR_CONTEXT(arg0) {
   }
   return USER;
 }
+let apply = apply_mod;
 let closure_12 = apply.debounce(() => {
   const PreloadedUserSettingsActionCreators = UserSettingsProtoActionCreators.PreloadedUserSettingsActionCreators;
   PreloadedUserSettingsActionCreators.updateAsync(
     "audioContextSettings",
     async (arg0) => {
       closure_0 = arg0;
-      let result = closure_0(14157).drainPendingAudioSettings((arg0, arg1, arg2) => {
+      let result = closure_0(14158).drainPendingAudioSettings((arg0, arg1, arg2) => {
         let diff;
-        let obj = AudioSettingsUtils;
-        const result = obj.coerceAudioContextForProto(arg0);
+        const result = AudioSettingsUtils.coerceAudioContextForProto(arg0);
         flag = false;
         if (null != result) {
           if (closure_0[result][arg1] != null) {
@@ -343,8 +339,8 @@ let closure_12 = apply.debounce(() => {
             } else {
               USER = AudioSettingsDefaultVolumes.AudioSettingsDefaultVolumes.USER;
             }
-            obj = { muted: false, volume: USER };
-            tmp11(obj);
+            const obj2 = { muted: false, volume: USER };
+            tmp11(obj2);
           } else {
             throw new TypeError("Trying to call a non-function");
           }
@@ -360,8 +356,9 @@ let closure_12 = apply.debounce(() => {
     UserSettingsProtoActionCreators.UserSettingsDelay.INFREQUENT_USER_ACTION,
   );
 }, 2000);
+let apply = apply_mod;
 let closure_13 = apply.debounce(fn(9578).remoteAudioSettingsUpdate, 500, { maxWait: 500 });
-let prototype = function AudioSettingsManager() {
+const prototype = function AudioSettingsManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
   applyArgumentsResult.actions = {
     POST_CONNECTION_OPEN: handleConnectionOpen,
@@ -373,8 +370,8 @@ let prototype = function AudioSettingsManager() {
   return applyArgumentsResult;
 }.prototype;
 class prototype extends tmp2 {}
-prototype = new prototype();
+const prototype1 = new prototype();
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_settings/voice/AudioSettingsManager.tsx");
 
-export default prototype;
+export default prototype1;

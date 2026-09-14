@@ -24,20 +24,20 @@ class StreamTextOverlay {
     tmp4 = jsx;
     tmp5 = closure_0;
     tmp6 = closure_2;
-    obj = {
+    obj1 = {
       style: tmp.screenMessageText,
       variant: "text-md/semibold",
       color: "text-overlay-light",
       children: global.title,
     };
     items = [,];
-    items[0] = jsx(closure_0(closure_2[10]).Text, obj);
+    items[0] = jsx(closure_0(closure_2[10]).Text, obj1);
     tmp4Result = null;
     if (null != subtext) {
-      obj1 = { style: null, children: null };
-      obj1.style = tmp.screenMessageSubtext;
-      obj1.children = subtext;
-      tmp4Result = tmp4(tmp5(tmp6[11]).LegacyText, obj1);
+      obj4 = { style: null, children: null };
+      obj4.style = tmp.screenMessageSubtext;
+      obj4.children = subtext;
+      tmp4Result = tmp4(tmp5(tmp6[11]).LegacyText, obj4);
     }
     items[1] = tmp4Result;
     obj.children = items;
@@ -50,16 +50,33 @@ const ApplicationStreamStates = fn(1074).ApplicationStreamStates;
 const MediaEngineContextTypes = fn(4661).MediaEngineContextTypes;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
-fn(4636);
+const createStyles = fn(4636);
 let obj = {
-  container: null,
+  container: {
+    flex: 1,
+    alignItems: "center",
+    justifyContent: "center",
+    overflow: "hidden",
+    width: "100%",
+    backgroundColor: nativeDefault.colors.BLACK,
+  },
   screenMessageContainer: null,
   screenMessageText: null,
   screenMessageSubtext: null,
   statusWrapper: null,
   liveTag: null,
 };
-obj = {
+let obj4 = {};
+const merged = Object.assign(StyleSheet.absoluteFillObject);
+obj4.flex = 1;
+obj4.padding = 8;
+obj4.alignItems = "center";
+obj4.justifyContent = "center";
+let ColorUtils = fn(4486);
+obj4.backgroundColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.BLACK, 0.7);
+obj.screenMessageContainer = obj4;
+obj.screenMessageText = { lineHeight: 18 };
+let obj3 = {
   flex: 1,
   alignItems: "center",
   justifyContent: "center",
@@ -67,17 +84,6 @@ obj = {
   width: "100%",
   backgroundColor: nativeDefault.colors.BLACK,
 };
-obj.container = obj;
-const createStyles = {};
-const merged = Object.assign(StyleSheet.absoluteFillObject);
-createStyles.flex = 1;
-createStyles.padding = 8;
-createStyles.alignItems = "center";
-createStyles.justifyContent = "center";
-let ColorUtils = fn(4486);
-createStyles.backgroundColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.BLACK, 0.7);
-obj.screenMessageContainer = createStyles;
-obj.screenMessageText = { lineHeight: 18 };
 obj.screenMessageSubtext = {
   color: nativeDefault.unsafe_rawColors.PRIMARY_300,
   fontSize: 14,
@@ -106,59 +112,52 @@ let closure_15 = noop.memo((participant) => {
   ({ user, removeEmptyStateButton, removeEmptyStateImage } = participant);
   ({ streamId, resizeMode, gestureEnabled } = participant);
   importDefault = closure_13();
-  let obj = participant(504);
   const items = [ApplicationStreamingStore];
-  const stateFromStores = obj.useStateFromStores(items, () =>
+  const stateFromStores = participant(504).useStateFromStores(items, () =>
     ApplicationStreamingStore.getActiveStreamForStreamKey(participant.id),
   );
   const tmp5 = useVideoStreamErrorDefault(MediaEngineContextTypes.STREAM, participant.user.id);
   if (null != stateFromStores) {
     const state = stateFromStores.state;
     if (ApplicationStreamStates.FAILED === state) {
-      obj = {
+      const obj2 = {
         stream: stateFromStores,
         removeCloseButton: removeEmptyStateButton,
         removeSplashImage: removeEmptyStateImage,
-        type: null,
-        style: null,
+        type: tmp(9727).VideoEmptyTypes.STREAM_FAILED,
+        style: StyleSheet.absoluteFill,
       };
-      let tmp4Result = tmp4(9727);
-      obj.type = tmp(9727).VideoEmptyTypes.STREAM_FAILED;
-      obj.style = StyleSheet.absoluteFill;
-      return closure_10(tmp4Result, obj);
+      return closure_10(tmp4(9727), obj2);
     } else if (ApplicationStreamStates.ENDED === state) {
-      obj = {
+      const obj3 = {
         stream: stateFromStores,
         removeCloseButton: removeEmptyStateButton,
         removeSplashImage: removeEmptyStateImage,
-        type: null,
-        style: null,
+        type: tmp(9727).VideoEmptyTypes.STREAM_ENDED,
+        style: StyleSheet.absoluteFill,
       };
-      tmp4Result = tmp4(9727);
-      obj.type = tmp(9727).VideoEmptyTypes.STREAM_ENDED;
-      obj.style = StyleSheet.absoluteFill;
-      return closure_10(tmp4Result, obj);
+      return closure_10(tmp4(9727), obj3);
     } else {
       if (ApplicationStreamStates.RECONNECTING === state) {
-        const obj1 = { title: null };
+        const obj4 = { title: null };
         const intl = tmp(1114).intl;
-        obj1.title = intl.string(tmp(1114).t["pdFFK+"]);
-        let tmp9 = closure_10(StreamTextOverlay, obj1);
+        obj4.title = intl.string(tmp(1114).t["pdFFK+"]);
+        let tmp9 = closure_10(StreamTextOverlay, obj4);
       } else {
         tmp9 = null;
         if (ApplicationStreamStates.PAUSED === state) {
-          const obj2 = { title: null, subtext: null };
+          const obj5 = { title: null, subtext: null };
           const intl2 = tmp(1114).intl;
-          obj2.title = intl2.string(tmp(1114).t["5q17w5"]);
+          obj5.title = intl2.string(tmp(1114).t["5q17w5"]);
           const intl3 = tmp(1114).intl;
-          const obj3 = { username: tmp4(4788).getName(stateFromStores.guildId, stateFromStores.channelId, user) };
-          obj2.subtext = intl3.formatToPlainString(tmp(1114).t.meVVlb, obj3);
-          tmp9 = closure_10(StreamTextOverlay, obj2);
-          const tmp4Result1 = tmp4(4788);
+          const obj6 = { username: tmp4(4788).getName(stateFromStores.guildId, stateFromStores.channelId, user) };
+          obj5.subtext = intl3.formatToPlainString(tmp(1114).t.meVVlb, obj6);
+          tmp9 = closure_10(StreamTextOverlay, obj5);
+          const tmp4Result6 = tmp4(4788);
         }
       }
       if (null != tmp5) {
-        const obj4 = {
+        const obj7 = {
           stream: stateFromStores,
           removeCloseButton: removeEmptyStateButton,
           removeSplashImage: removeEmptyStateImage,
@@ -166,10 +165,10 @@ let closure_15 = noop.memo((participant) => {
           style: StyleSheet.absoluteFill,
           avError: tmp5,
         };
-        return closure_10(tmp4(9727), obj4);
+        return closure_10(tmp4(9727), obj7);
       } else {
         const id = AuthenticationStore.getId();
-        const obj5 = {
+        const obj8 = {
           resizeMode,
           streamId,
           gestureEnabled,
@@ -185,22 +184,23 @@ let closure_15 = noop.memo((participant) => {
         } else {
           REMOTE_STREAM = tmp(9737).VideoSpinnerContext.REMOTE_STREAM;
         }
-        const obj6 = { children: null };
-        obj5.videoSpinnerContext = REMOTE_STREAM;
-        obj5.userId = user.id;
-        obj5.paused = stateFromStores.state === ApplicationStreamStates.PAUSED;
-        const items1 = [closure_10(tmp4(9734), obj5), tmp9];
-        obj6.children = items1;
-        return closure_11(closure_12, obj6);
+        const obj9 = { children: null };
+        obj8.videoSpinnerContext = REMOTE_STREAM;
+        obj8.userId = user.id;
+        obj8.paused = stateFromStores.state === ApplicationStreamStates.PAUSED;
+        const items1 = [closure_10(tmp4(9734), obj8), tmp9];
+        obj9.children = items1;
+        return closure_11(closure_12, obj9);
       }
     }
   } else {
     return null;
   }
+  const obj = participant(504);
 });
 let closure_16 = noop.memo((arg0) => {
   ({ onFullScreen, style } = arg0);
-  let obj = {
+  const obj = {
     accessibilityRole: "button",
     onPress: onFullScreen,
     style: null,
@@ -209,8 +209,12 @@ let closure_16 = noop.memo((arg0) => {
   };
   const items = [closure_13().statusWrapper, style];
   obj.style = items;
-  obj = { source: _modDef9751, size: native.Icon.Sizes.SMALL, color: nativeDefault.unsafe_rawColors.WHITE };
-  obj.children = closure_1_10(native.Icon, obj);
+  const tmp = closure_13();
+  obj.children = closure_1_10(native.Icon, {
+    source: _modDef9751,
+    size: native.Icon.Sizes.SMALL,
+    color: nativeDefault.unsafe_rawColors.WHITE,
+  });
   return closure_1_10(Pressables.PressableOpacity, obj);
 });
 size = fn(2);
@@ -244,13 +248,13 @@ export default function StreamTile(participant) {
   }, items1);
   const tmp3 = closure_13();
   ({ streamId, user } = participant);
-  let obj = {
+  const obj = {
     gesture: useParticipantTileTapGestureDefault({ onSingleTapStart: callback, onDoubleTapStart: callback1 }),
     children: null,
   };
-  obj = { style: null, children: null };
+  const obj2 = { style: null, children: null };
   const items2 = [tmp3.container, style];
-  obj.style = items2;
+  obj2.style = items2;
   const items3 = [
     closure_1_10(closure_15, {
       streamId,
@@ -264,12 +268,12 @@ export default function StreamTile(participant) {
   ];
   let tmp7Result = null != onFullScreen;
   if (tmp7Result) {
-    obj = { onFullScreen, style: fullscreenIconStyle };
-    tmp7Result = closure_1_10(closure_16, obj);
+    const obj3 = { onFullScreen, style: fullscreenIconStyle };
+    tmp7Result = closure_1_10(closure_16, obj3);
   }
   items3[1] = tmp7Result;
-  obj.children = items3;
-  obj.children = closure_1_11(React4, obj);
+  obj2.children = items3;
+  obj.children = closure_1_11(React4, obj2);
   return closure_1_10(LegacyBaseButton.GestureDetector, obj);
 }
 export { StreamTextOverlay };

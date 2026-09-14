@@ -6,17 +6,15 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const jsx = fn(21).jsx;
-fn(4636);
-let createStyles = {
+const createStyles = fn(4636);
+let obj2 = {
   maskStyle: { position: "relative", right: "HermesInternal" },
   unreadDot: { width: 0, height: 0 },
   badgeStyle: { flexGrow: 1, flexShrink: 0 },
   unreadBadge: { position: "relative", bottom: -3 },
-  lowPriorityBadge: null,
+  lowPriorityBadge: { backgroundColor: nativeDefault.unsafe_rawColors.PRIMARY_400 },
 };
-createStyles = { backgroundColor: nativeDefault.unsafe_rawColors.PRIMARY_400 };
-createStyles.lowPriorityBadge = createStyles;
-let closure_5 = createStyles.createStyles(createStyles);
+let closure_5 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/MaskedBadge.tsx");
 
@@ -27,10 +25,10 @@ export default function MaskedBadge(backgroundColor) {
   const tmp = closure_5();
   [][0] = backgroundColor;
   if (value > 0) {
-    let obj = { maskStyle: null, dotStyle: null, style: null, value: null, maxValue: null };
+    const obj2 = { maskStyle: null, dotStyle: null, style: null, value: null, maxValue: null };
     const items = [tmp2, tmp.maskStyle];
-    obj.maskStyle = items;
-    obj.dotStyle = tmp.unreadDot;
+    obj2.maskStyle = items;
+    obj2.dotStyle = tmp.unreadDot;
     const items1 = [tmp.badgeStyle, ,];
     let lowPriorityBadge = null;
     if (lowPriority) {
@@ -38,9 +36,9 @@ export default function MaskedBadge(backgroundColor) {
     }
     items1[1] = lowPriorityBadge;
     items1[2] = style;
-    obj.style = items1;
-    obj.value = value;
-    obj.maxValue = maxValue;
+    obj2.style = items1;
+    obj2.value = value;
+    obj2.maxValue = maxValue;
     let tmp7Result = jsx(native.MaskedBadge, {
       maskStyle: null,
       dotStyle: null,
@@ -51,7 +49,7 @@ export default function MaskedBadge(backgroundColor) {
   } else {
     tmp7Result = null;
     if (unread) {
-      obj = { size, maskColor: backgroundColor, style: tmp.unreadBadge };
+      const obj = { size, maskColor: backgroundColor, style: tmp.unreadBadge };
       tmp7Result = jsx(BadgeDefault, { size, maskColor: backgroundColor, style: tmp.unreadBadge });
     }
   }

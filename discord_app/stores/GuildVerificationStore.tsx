@@ -11,6 +11,8 @@ import UserStore from "UserStore.tsx";
 import Constants from "../Constants.tsx";
 import size from "../../_runtime/metro/00002__.js";
 
+const require = globalThis.__r;
+
 function recomputeGuild(guildId) {
   _require = guildId;
   clearGuild(guildId);
@@ -154,14 +156,11 @@ function recomputeGuild(guildId) {
               HermesBuiltin.arraySpread(items, 0);
               const _Math2 = Math;
               timerId = setTimeout(
-                () => {
-                  const obj = { type: "GUILD_VERIFICATION_CHECK", guildId };
-                  return obj.dispatch(obj);
-                },
+                () => DispatcherDefault.dispatch({ type: "GUILD_VERIFICATION_CHECK", guildId }),
                 HermesBuiltin.apply(items1, Math),
               );
             }
-            let obj = {
+            const obj = {
               notClaimed: flag6,
               notEmailVerified: flag5,
               notPhoneVerified: flag4,

@@ -9,6 +9,8 @@ import VEVOODefault from "../../../visual_effect_view/native/overrides/VEVOO.tsx
 import noop from "../../../../../_runtime/metro/00019__.js";
 import DevToolsSettingsStore from "../../DevToolsSettingsStore.tsx";
 
+const require = globalThis.__r;
+
 require = fn;
 function DraggableContainer(children) {
   const x = children.x;
@@ -22,11 +24,12 @@ function DraggableContainer(children) {
     num = 0;
   }
   const onChangePosition = children.onChangePosition;
+  closure_9 = undefined;
   let getClampedPosition;
+  const tmp = closure_9();
+  const sharedValue = require("ReanimatedRexport").useSharedValue(x.get());
   let obj = require("ReanimatedRexport");
-  const sharedValue = obj.useSharedValue(x.get());
-  let obj1 = require("ReanimatedRexport");
-  const sharedValue1 = obj1.useSharedValue(y.get());
+  const sharedValue1 = require("ReanimatedRexport").useSharedValue(y.get());
   const tmp4 = require("useSafeAreaInsetsSharedValue")();
   closure_8 = tmp4;
   const tmp5 = require("useWindowDimensionsSharedValue")();
@@ -44,7 +47,8 @@ function DraggableContainer(children) {
       return point;
     }
   }
-  obj = {
+  let obj2 = require("ReanimatedRexport");
+  P.__closure = {
     windowDimensionsSharedValue: tmp5,
     insetsSharedValue: tmp4,
     clamp: require("ReanimatedRexport").clamp,
@@ -52,13 +56,19 @@ function DraggableContainer(children) {
     contentWidth,
     contentHeight,
   };
-  P.__closure = obj;
   P.__workletHash = 729779775192;
   P.__initData = getClampedPosition;
   let items = [contentHeight, contentWidth, num, tmp4, tmp5];
   getClampedPosition = contentHeight.useCallback(P, items);
-  const tmp = closure_9();
-  obj = { onActivate: null, onUpdate: null, onDeactivate: null };
+  let obj3 = {
+    windowDimensionsSharedValue: tmp5,
+    insetsSharedValue: tmp4,
+    clamp: require("ReanimatedRexport").clamp,
+    dragBoundsPadding: num,
+    contentWidth,
+    contentHeight,
+  };
+  const obj5 = { onActivate: null, onUpdate: null, onDeactivate: null };
   class C {
     constructor() {
       result = closure_6.set(closure_0.get());
@@ -69,7 +79,7 @@ function DraggableContainer(children) {
   C.__closure = { originalX: sharedValue, x, originalY: sharedValue1, y };
   C.__workletHash = 11333606215108;
   C.__initData = __initData;
-  obj.onActivate = C;
+  obj5.onActivate = C;
   const fn = function f(translationX) {
     const sum = sharedValue.get() + translationX.translationX;
     const point = callback(sum, sharedValue1.get() + translationX.translationY);
@@ -79,7 +89,7 @@ function DraggableContainer(children) {
   fn.__closure = { getClampedPosition, originalX: sharedValue, originalY: sharedValue1, x, y };
   fn.__workletHash = 10056531764801;
   fn.__initData = __initData2;
-  obj.onUpdate = fn;
+  obj5.onUpdate = fn;
   class D {
     constructor() {
       obj = closure_0(closure_2[6]);
@@ -95,24 +105,24 @@ function DraggableContainer(children) {
   D.__closure = point;
   D.__workletHash = 10003102447058;
   D.__initData = __initData3;
-  obj.onDeactivate = D;
-  const panGesture = require("LegacyBaseButton").usePanGesture(obj);
-  const obj4 = require("LegacyBaseButton");
+  obj5.onDeactivate = D;
+  const panGesture = require("LegacyBaseButton").usePanGesture(obj5);
+  let obj4 = require("LegacyBaseButton");
   class W {
     constructor() {
       value = closure_0.get();
       tmp2 = closure_10(value, closure_1.get());
       obj = { transform: null };
-      obj = { translateX: null };
+      obj1 = { translateX: null };
       ({ x, y } = tmp2);
       obj3 = closure_0(closure_2[10]);
-      obj.translateX = obj3.withSpring(x, closure_0(closure_2[11]).springUnclamped);
+      obj1.translateX = obj3.withSpring(x, closure_0(closure_2[11]).springUnclamped);
       items = [,];
-      items[0] = obj;
-      obj1 = { translateY: null };
+      items[0] = obj1;
+      obj6 = { translateY: null };
       obj5 = closure_0(closure_2[10]);
-      obj1.translateY = obj5.withSpring(y, closure_0(closure_2[11]).springUnclamped);
-      items[1] = obj1;
+      obj6.translateY = obj5.withSpring(y, closure_0(closure_2[11]).springUnclamped);
+      items[1] = obj6;
       obj.transform = items;
       return obj;
     }
@@ -128,12 +138,12 @@ function DraggableContainer(children) {
   W.__workletHash = 6251354551691;
   W.__initData = __initData4;
   const animatedStyle = require("ReanimatedRexport").useAnimatedStyle(W);
-  obj1 = { gesture: panGesture, children: null };
-  let obj2 = { style: null, children: children.children };
+  const obj6 = { gesture: panGesture, children: null };
+  const obj8 = { style: null, children: children.children };
   const items1 = [tmp.widgetContainer, animatedStyle];
-  obj2.style = items1;
-  obj1.children = sharedValue(require("ReanimatedRexport").View, obj2);
-  return sharedValue(require("LegacyBaseButton").GestureDetector, obj1);
+  obj8.style = items1;
+  obj6.children = sharedValue(require("ReanimatedRexport").View, obj8);
+  return sharedValue(require("LegacyBaseButton").GestureDetector, obj6);
 }
 const DEV_WIDGET_SIZE = fn(574).DEV_WIDGET_SIZE;
 const jsxProd = fn(21);
@@ -182,10 +192,9 @@ size = fn(2);
 let result = size.fileFinishedImporting("modules/devtools/native/components/DevWidget.tsx");
 
 export default function DevWidget() {
-  let obj = ReanimatedRexport;
-  const sharedValue = obj.useSharedValue(DevToolsSettingsStore.devWidgetPosition.x);
+  const sharedValue = ReanimatedRexport.useSharedValue(DevToolsSettingsStore.devWidgetPosition.x);
   const sharedValue1 = ReanimatedRexport.useSharedValue(DevToolsSettingsStore.devWidgetPosition.y);
-  obj = { children: null };
+  const obj3 = { children: null };
   const items = [timestampProducer(VEVOODefault, { x: sharedValue, y: sharedValue1 })];
   const point = {
     x: sharedValue,
@@ -194,13 +203,11 @@ export default function DevWidget() {
     contentHeight: DEV_WIDGET_SIZE,
     dragBoundsPadding: nativeDefault.space.PX_4,
     onChangePosition(devWidgetPosition) {
-      require("DevToolsActionCreators");
-      const obj = { devWidgetPosition };
-      return obj.updateDevToolsSettings(obj);
+      return require("DevToolsActionCreators").updateDevToolsSettings({ devWidgetPosition });
     },
     children: timestampProducer(closure_16, {}),
   };
   items[1] = timestampProducer(DraggableContainer, point);
-  obj.children = items;
-  return React6(React5, obj);
+  obj3.children = items;
+  return React6(React5, obj3);
 }

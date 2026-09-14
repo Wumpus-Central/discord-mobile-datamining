@@ -36,9 +36,11 @@ export const useAlertIfSecureFramesKeyInconsistent = function useAlertIfSecureFr
         const _setTimeout = setTimeout;
         ref.current = setTimeout(() => {
           onAlertOpen();
-          channelId(userId[4]);
-          const obj = { userId, channelId: current, nickname };
-          const result = obj.showSecureFramesKeyInconsistentAlert(obj);
+          const result = channelId(userId[4]).showSecureFramesKeyInconsistentAlert({
+            userId,
+            channelId: current,
+            nickname,
+          });
         }, 1000);
         let tmp3 = ref;
       }

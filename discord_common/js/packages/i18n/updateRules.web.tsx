@@ -17,10 +17,10 @@ export default function updateRules(paragraph) {
     return <p key={key.key}>{fn(content.content, key)}</p>;
   };
   paragraph.paragraph = obj;
-  obj = {};
+  let obj2 = {};
   const merged1 = Object.assign(paragraph.link);
-  obj.react = function react(context, fn, key) {
-    let obj = {};
+  obj2.react = function react(context, fn, key) {
+    const obj = {};
     if (null != context.context) {
       if (context.context[context.target]) {
         if (tmp.onClick) {
@@ -34,12 +34,12 @@ export default function updateRules(paragraph) {
       obj.target = "_blank";
       const sanitizeUrlResult = _mod4333.sanitizeUrl(context.target);
     }
-    obj = { title: context.title };
+    const obj3 = { title: context.title };
     const merged = Object.assign(obj);
-    obj.rel = "noreferrer";
-    obj.children = fn(context.content, key);
+    obj3.rel = "noreferrer";
+    obj3.children = fn(context.content, key);
     return <a key={key.key} title={context.title} />;
   };
-  paragraph.link = obj;
+  paragraph.link = obj2;
   return paragraph;
 }

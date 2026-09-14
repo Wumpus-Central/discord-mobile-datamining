@@ -14,7 +14,7 @@ import GuildStore from "../../../../stores/GuildStore.tsx";
 require = fn;
 function showMessageRequestRestrictionModal(arg0) {
   _require = arg0;
-  const obj = {
+  const obj2 = {
     title: null,
     body: null,
     confirmText: null,
@@ -24,15 +24,15 @@ function showMessageRequestRestrictionModal(arg0) {
     onCancel: null,
   };
   const intl = require("util").intl;
-  obj.title = intl.string(require("util").t.yAfu1p);
+  obj2.title = intl.string(require("util").t.yAfu1p);
   const intl2 = require("util").intl;
-  obj.body = intl2.string(require("util").t.Ry2z74);
+  obj2.body = intl2.string(require("util").t.Ry2z74);
   const intl3 = require("util").intl;
-  obj.confirmText = intl3.string(require("util").t.p89ACt);
+  obj2.confirmText = intl3.string(require("util").t.p89ACt);
   const intl4 = require("util").intl;
-  obj.cancelText = intl4.string(require("util").t.gm1Vej);
-  obj.confirmColor = common_AlertDefault.Colors.RED;
-  obj.onConfirm = function onConfirm() {
+  obj2.cancelText = intl4.string(require("util").t.gm1Vej);
+  obj2.confirmColor = common_AlertDefault.Colors.RED;
+  obj2.onConfirm = function onConfirm() {
     const MessageRequestRestrictedDefault = UserSettings.MessageRequestRestrictedDefault;
     MessageRequestRestrictedDefault.updateSetting(closure_0);
     const MessageRequestRestrictedGuildIds = UserSettings.MessageRequestRestrictedGuildIds;
@@ -43,18 +43,18 @@ function showMessageRequestRestrictionModal(arg0) {
     }
     MessageRequestRestrictedGuildIds.updateSetting(guildIds);
   };
-  obj.onCancel = function onCancel() {
+  obj2.onCancel = function onCancel() {
     const MessageRequestRestrictedDefault = UserSettings.MessageRequestRestrictedDefault;
     MessageRequestRestrictedDefault.updateSetting(closure_0);
   };
-  obj.show(obj);
+  AlertActionCreatorsDefault.show(obj2);
 }
-const UserSettingsSafetySelectedGuildStore = fn(15960);
+const UserSettingsSafetySelectedGuildStore = fn(15962);
 ({ getSelectedGuildId: closure_4, useUserSafetySettingsSelectedGuildStore: hasOwnProperty } =
   UserSettingsSafetySelectedGuildStore);
-let closure_6 = fn(11602).GUILD_SELECT_ALL_SERVERS_OPTION_ID;
-fn(11601);
-let SettingBuilders = {
+let closure_6 = fn(11603).GUILD_SELECT_ALL_SERVERS_OPTION_ID;
+const SettingBuilders = fn(11602);
+const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t["3o2ojh"]);
@@ -113,11 +113,13 @@ let SettingBuilders = {
   },
   onValueChange: function onAllowMessageRequestsFromServerMembersValueChange(arg0) {
     if (!arg0) {
-      let obj = DefaultDMSettingsExperiment;
       if (obj.shouldAgeVerifyForDMDefaultOff()) {
-        obj = { entryPoint: AgeVerificationAnalyticsUtils.AgeVerificationModalEntryPoint.MESSAGE_REQUESTS_SETTINGS };
-        const result = AgeVerificationActionCreatorsDefault.showAgeVerificationGetStartedModal(obj);
+        const obj3 = {
+          entryPoint: AgeVerificationAnalyticsUtils.AgeVerificationModalEntryPoint.MESSAGE_REQUESTS_SETTINGS,
+        };
+        const result = AgeVerificationActionCreatorsDefault.showAgeVerificationGetStartedModal(obj3);
       }
+      obj = DefaultDMSettingsExperiment;
     }
     const tmp5 = React4();
     if (tmp5 === closure_6) {
@@ -134,10 +136,9 @@ let SettingBuilders = {
       MessageRequestRestrictedGuildIds.updateSetting(Array.from(sanitizedMessageRequestRestrictedGuilds));
     }
   },
-};
-SettingBuilders = SettingBuilders.createToggle(SettingBuilders);
+});
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_settings/defs/native/SafetyGuildSettingMessageRequests.tsx");
 
-export default SettingBuilders;
+export default toggle;
 export { showMessageRequestRestrictionModal };

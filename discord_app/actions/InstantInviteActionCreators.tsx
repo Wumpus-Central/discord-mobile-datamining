@@ -27,6 +27,8 @@ import RelationshipStore from "../stores/RelationshipStore.tsx";
 import SelectedGuildStore from "../stores/SelectedGuildStore.tsx";
 import UserStore from "../stores/UserStore.tsx";
 
+const require = globalThis.__r;
+
 require = fn;
 function generateAcceptInviteOptions(target_type) {
   const obj = {};
@@ -98,43 +100,42 @@ function transitionToInviteChannelSync(channel_id, arg1) {
   closure_0 = channel_id;
   const items = [];
   const result = ChannelStore.addConditionalChangeListener(() => {
-    let obj = channel;
     transitionTo = channel.getChannel(id);
     currentUser = currentUser.getCurrentUser();
     if (null == transitionTo || null == currentUser) {
       return tmp3;
     } else {
-      let guildScheduledEvent1 = transitionTo.nsfw && !currentUser.nsfwAllowed;
-      if (!guildScheduledEvent1) {
+      let guildScheduledEvent2 = transitionTo.nsfw && !currentUser.nsfwAllowed;
+      if (!guildScheduledEvent2) {
         let isGuildVocalOrThreadResult = transitionTo.isGuildVocalOrThread();
         if (isGuildVocalOrThreadResult) {
-          let obj2 = require("AgeGateUtils");
-          isGuildVocalOrThreadResult = obj2.maybeOpenAgeGateForVoiceChannel(tmp);
+          isGuildVocalOrThreadResult = require("AgeGateUtils").maybeOpenAgeGateForVoiceChannel(tmp);
+          let obj3 = require("AgeGateUtils");
         }
-        guildScheduledEvent1 = isGuildVocalOrThreadResult;
+        guildScheduledEvent2 = isGuildVocalOrThreadResult;
       }
-      if (!guildScheduledEvent1) {
+      if (!guildScheduledEvent2) {
         let isGuildVocalOrThreadResult1 = transitionTo.isGuildVocalOrThread();
         if (isGuildVocalOrThreadResult1) {
           isGuildVocalOrThreadResult1 = require("maybeOpenSpoilerGateForVoiceChannel").maybeOpenSpoilerGateForVoiceChannel(tmp);
           let obj4 = require("maybeOpenSpoilerGateForVoiceChannel");
         }
-        guildScheduledEvent1 = isGuildVocalOrThreadResult1;
+        guildScheduledEvent2 = isGuildVocalOrThreadResult1;
       }
-      let flag = !guildScheduledEvent1;
-      if (!guildScheduledEvent1) {
-        guildScheduledEvent = undefined;
+      let flag = !guildScheduledEvent2;
+      if (!guildScheduledEvent2) {
+        let guildScheduledEvent1;
         if (obj != null) {
-          guildScheduledEvent = tmp10.guildScheduledEvent;
-        }
-        if (null != guildScheduledEvent) {
           guildScheduledEvent1 = tmp10.guildScheduledEvent;
-          guildId = guildScheduledEvent1;
+        }
+        if (null != guildScheduledEvent1) {
+          guildScheduledEvent2 = tmp10.guildScheduledEvent;
+          guildId = guildScheduledEvent2;
           transitionTo = tmp10.welcomeModalChannelId;
           flag = false;
-          if (null != guildScheduledEvent1) {
+          if (null != guildScheduledEvent2) {
             addPostConnectionCallback(() => {
-              const obj = { guildScheduledEventId: guildId.id };
+              obj = { guildScheduledEventId: guildId.id };
               if (null != transitionTo) {
                 obj.welcomeModalChannelId = transitionTo;
               }
@@ -164,15 +165,15 @@ function transitionToInviteChannelSync(channel_id, arg1) {
             const features = guild.features;
             const hasItem = features.has(constants2.MEMBER_VERIFICATION_MANUAL_APPROVAL);
           }
-          obj = tmp10;
+          let obj2 = tmp10;
           if (tmp10 == null) {
-            obj = {};
+            obj2 = {};
           }
-          ({ targetUserId: c4, targetType } = obj);
-          targetApplicationId = obj.targetApplicationId;
-          isGuestInvite = obj.isGuestInvite;
+          ({ targetUserId: c4, targetType } = obj2);
+          targetApplicationId = obj2.targetApplicationId;
+          isGuestInvite = obj2.isGuestInvite;
           if (!isGuestInvite) {
-            if (!obj.isApplicationBypassInvite) {
+            if (!obj2.isApplicationBypassInvite) {
               let forceTransition;
               if (tmp10 != null) {
                 forceTransition = tmp10.forceTransition;
@@ -180,7 +181,7 @@ function transitionToInviteChannelSync(channel_id, arg1) {
               if (!forceTransition) {
                 if (hasItem) {
                   let CHANNELResult = guildId;
-                  guildScheduledEvent1 = guildId.getGuildId();
+                  guildScheduledEvent2 = guildId.getGuildId();
                   flag = false;
                 }
               }
@@ -239,8 +240,8 @@ function transitionToInviteChannelSync(channel_id, arg1) {
                             prop = closure_2_2.muteOnJoinVoiceChannel;
                           }
                           if (prop) {
-                            let obj = transitionTo(items[29]);
-                            obj.setSelfMute(guildId(items[30]).MediaEngineContextTypes.DEFAULT, true);
+                            transitionTo(items[29]).setSelfMute(guildId(items[30]).MediaEngineContextTypes.DEFAULT, true);
+                            obj = transitionTo(items[29]);
                           }
                           const voiceChannel = closure_0.selectVoiceChannel(GUILD_HOME);
                           let tmp14 = targetType === constants2.STREAM;
@@ -248,8 +249,8 @@ function transitionToInviteChannelSync(channel_id, arg1) {
                             tmp14 = null != ownerId;
                           }
                           if (tmp14) {
-                            obj = { streamType: constants.GUILD, ownerId, guildId, channelId: GUILD_HOME };
-                            const result = closure_2(items[31]).watchStreamAndTransitionToStream(obj);
+                            const obj3 = { streamType: constants.GUILD, ownerId, guildId, channelId: GUILD_HOME };
+                            const result = closure_2(items[31]).watchStreamAndTransitionToStream(obj3);
                             const obj2 = closure_2(items[31]);
                           }
                           let tmp22 = targetType === constants2.EMBEDDED_APPLICATION;
@@ -262,21 +263,21 @@ function transitionToInviteChannelSync(channel_id, arg1) {
                               tmp27 = closure_3_27;
                             }
                             guildId(items[25]).transitionTo(closure_3_26.CHANNEL(tmp27, GUILD_HOME));
-                            obj = { channelId: GUILD_HOME, applicationId, intent: null, inviterUserId: null, analyticsLocations: null, commandOrigin: null };
+                            const obj5 = { channelId: GUILD_HOME, applicationId, intent: null, inviterUserId: null, analyticsLocations: null, commandOrigin: null };
                             let intent;
                             const obj4 = guildId(items[25]);
                             if (closure_2_2 != null) {
                               intent = closure_2_2.intent;
                             }
-                            obj.intent = intent;
+                            obj5.intent = intent;
                             let inviterUserId;
                             if (closure_2_2 != null) {
                               inviterUserId = closure_2_2.inviterUserId;
                             }
-                            obj.inviterUserId = inviterUserId;
-                            obj.analyticsLocations = analyticsLocations;
-                            obj.commandOrigin = guildId(items[33]).CommandOrigin.CHAT;
-                            transitionTo(items[32])(obj);
+                            obj5.inviterUserId = inviterUserId;
+                            obj5.analyticsLocations = analyticsLocations;
+                            obj5.commandOrigin = guildId(items[33]).CommandOrigin.CHAT;
+                            transitionTo(items[32])(obj5);
                             const tmp31 = transitionTo(items[32]);
                           }
                         }
@@ -297,59 +298,59 @@ function transitionToInviteChannelSync(channel_id, arg1) {
                 if (tmp38) {
                   if (guildId !== closure_2_27) {
                     transitionTo = function runDeepLinkJump() {
-                      state = closure_2;
+                      obj = closure_2;
                       if (closure_2 == null) {
-                        state = {};
+                        obj = {};
                       }
-                      ({ transitionTo, welcomeModalChannelId, guildScheduledEvent } = state);
-                      state = { source: state(paths[24]).INVITE_ACCEPT, navigationReplace: true, openChannel: true };
+                      ({ transitionTo, welcomeModalChannelId, guildScheduledEvent } = obj);
+                      const obj2 = { source: obj(paths[24]).INVITE_ACCEPT, navigationReplace: true, openChannel: true };
                       if (null != welcomeModalChannelId) {
-                        state.welcomeModalChannelId = welcomeModalChannelId;
+                        obj2.welcomeModalChannelId = welcomeModalChannelId;
                       }
                       if (transitionTo.type === constants.GUILD_STAGE_VOICE) {
-                        state = { stageInviteKey };
-                        state.state = state;
+                        const obj3 = { stageInviteKey };
+                        obj2.state = obj3;
                       }
                       if (null != guildScheduledEvent) {
-                        state.guildScheduledEventId = guildScheduledEvent.id;
+                        obj2.guildScheduledEventId = guildScheduledEvent.id;
                       }
                       if (null != transitionTo) {
-                        let transitionToResult = transitionTo(c10, state);
+                        let transitionToResult = transitionTo(c10, obj2);
                       } else {
-                        transitionToResult = id(paths[25]).transitionTo(c10, state);
+                        transitionToResult = id(paths[25]).transitionTo(c10, obj2);
                         const obj4 = id(paths[25]);
                       }
                       return transitionToResult;
                     };
                     CHANNELResult = require("asyncRequireImpl")(paths[37], paths.paths);
-                    guildScheduledEvent1 = CHANNELResult.then((result) => result.default({ guildId }));
-                    guildScheduledEvent1.then(transitionTo, transitionTo);
+                    guildScheduledEvent2 = CHANNELResult.then((result) => result.default({ guildId }));
+                    guildScheduledEvent2.then(transitionTo, transitionTo);
                     flag = false;
                   }
-                  guildScheduledEvent1 = transitionTo(CHANNELResult, guildScheduledEvent1);
+                  guildScheduledEvent2 = transitionTo(CHANNELResult, guildScheduledEvent2);
                   flag = false;
                 }
-                obj = tmp10;
+                let obj5 = tmp10;
                 if (tmp10 == null) {
-                  obj = {};
+                  obj5 = {};
                 }
-                ({ transitionTo, welcomeModalChannelId, guildScheduledEvent } = obj);
-                guildScheduledEvent1 = { source: require("RoutingSources").INVITE_ACCEPT, navigationReplace: true };
+                ({ transitionTo, welcomeModalChannelId, guildScheduledEvent } = obj5);
+                guildScheduledEvent2 = { source: require("RoutingSources").INVITE_ACCEPT, navigationReplace: true };
                 if (tmp38) {
-                  guildScheduledEvent1.openChannel = true;
+                  guildScheduledEvent2.openChannel = true;
                 }
                 if (null != welcomeModalChannelId) {
-                  guildScheduledEvent1.welcomeModalChannelId = welcomeModalChannelId;
+                  guildScheduledEvent2.welcomeModalChannelId = welcomeModalChannelId;
                 }
                 if (transitionTo.type === constants.GUILD_STAGE_VOICE) {
-                  const obj1 = { stageInviteKey };
-                  guildScheduledEvent1.state = obj1;
+                  const obj9 = { stageInviteKey };
+                  guildScheduledEvent2.state = obj9;
                 }
                 if (null != guildScheduledEvent) {
-                  guildScheduledEvent1.guildScheduledEventId = guildScheduledEvent.id;
+                  guildScheduledEvent2.guildScheduledEventId = guildScheduledEvent.id;
                 }
                 if (null == transitionTo) {
-                  require("router_utils").transitionTo(CHANNELResult, guildScheduledEvent1);
+                  require("router_utils").transitionTo(CHANNELResult, guildScheduledEvent2);
                   flag = false;
                   const obj13 = require("router_utils");
                 }
@@ -368,30 +369,30 @@ function transitionToInviteChannelSync(channel_id, arg1) {
                 tmp47 = closure_2_27;
               }
               require("router_utils").transitionTo(closure_2_26.CHANNEL(tmp47, GUILD_HOME));
-              obj2 = { channelId: GUILD_HOME, applicationId: targetApplicationId, intent: null, inviterUserId: null, analyticsLocations: null, commandOrigin: null };
+              const obj10 = { channelId: GUILD_HOME, applicationId: targetApplicationId, intent: null, inviterUserId: null, analyticsLocations: null, commandOrigin: null };
               let intent;
               const tmp43Result = require("router_utils");
               if (tmp10 != null) {
                 intent = tmp10.intent;
               }
-              obj2.intent = intent;
+              obj10.intent = intent;
               let inviterUserId;
               if (tmp10 != null) {
                 inviterUserId = tmp10.inviterUserId;
               }
-              obj2.inviterUserId = inviterUserId;
-              obj2.analyticsLocations = items;
-              obj2.commandOrigin = require("ApplicationCommandTypes").CommandOrigin.CHAT;
-              require("deferJoinActivityInChannel")(obj2);
+              obj10.inviterUserId = inviterUserId;
+              obj10.analyticsLocations = items;
+              obj10.commandOrigin = require("ApplicationCommandTypes").CommandOrigin.CHAT;
+              require("deferJoinActivityInChannel")(obj10);
               const tmp50 = require("deferJoinActivityInChannel");
             }
             const obj8 = require("ActivitiesInTextUtils");
           }
-          targetType = undefined;
+          let targetType1;
           if (tmp10 != null) {
-            targetType = tmp10.targetType;
+            targetType1 = tmp10.targetType;
           }
-          if (null == targetType) {
+          if (null == targetType1) {
             if (!closure_2_9(transitionTo.type)) {
               if (obj6.canSeeOnboardingHome(guildId)) {
                 GUILD_HOME = constants4.GUILD_HOME;
@@ -425,8 +426,8 @@ let closure_43 = async function _transitionToGuildFromEventInvite(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj3 = { value, done: true };
+      return obj3;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -439,8 +440,8 @@ let closure_43 = async function _transitionToGuildFromEventInvite(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c1 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj4 = { value, done: true };
+          return obj4;
         } else {
           const channel_id = _require.channel_id;
           if (React5(_require)) {
@@ -448,19 +449,17 @@ let closure_43 = async function _transitionToGuildFromEventInvite(arg0) {
               transitionToInviteChannelSync(channel_id);
             }
           }
-          let obj1 = GuildActionCreatorsDefault;
           c2 = 1;
           c1 = 1;
-          obj1 = { value: null, done: false };
-          obj1.value = obj1.transitionToGuildSync(_require.guild_id);
-          return obj1;
+          const obj5 = { value: GuildActionCreatorsDefault.transitionToGuildSync(_require.guild_id), done: false };
+          return obj5;
         }
       } else if (arg0 === 1) {
         c1 = 3;
         throw value;
       } else if (arg0 === 2) {
         c1 = 3;
-        obj = { value, done: true };
+        const obj = { value, done: true };
         return obj;
       }
       c1 = 3;
@@ -473,12 +472,12 @@ let closure_43 = async function _transitionToGuildFromEventInvite(arg0) {
 };
 function trackInviteServerClicked(id5, accept, items2) {
   let tmp = items2;
-  const obj = { guild_id: id5, action: accept, location_stack: null };
+  const obj2 = { guild_id: id5, action: accept, location_stack: null };
   if (items2 == null) {
     tmp = null;
   }
-  obj.location_stack = tmp;
-  obj.track(constants3.INVITE_SERVER_CLICKED, obj);
+  obj2.location_stack = tmp;
+  AnalyticsUtilsDefault.track(constants3.INVITE_SERVER_CLICKED, obj2);
 }
 fn(5639).addPostConnectionCallback;
 let closure_7 = fn(7629).isGuildScheduledEventActive;
@@ -501,41 +500,36 @@ export default {
     closure_0 = code;
     importDefault = arg1;
     closure_2 = arg2;
-    let obj = DispatcherDefault;
     if (obj.isDispatching()) {
       const resolved = Promise.resolve();
       let nextPromise = resolved.then(() => {
         closure_0 = closure_1_0;
         closure_1 = closure_1_1;
         closure_2 = closure_1_2;
-        let obj = closure_2_1(closure_2_3[39]);
         if (obj.isDispatching()) {
           let resolved = Promise.resolve();
           let nextPromise = resolved.then(() => {
             closure_0 = closure_1_0;
             closure_1 = closure_1_1;
             closure_2 = closure_1_2;
-            let obj = closure_2_1(closure_2_3[39]);
             if (obj.isDispatching()) {
               let resolved = Promise.resolve();
               let nextPromise = resolved.then(() => {
                 closure_0 = closure_1_0;
                 closure_1 = closure_1_1;
                 closure_2 = closure_1_2;
-                let obj = closure_2_1(closure_2_3[39]);
                 if (obj.isDispatching()) {
                   let resolved = Promise.resolve();
                   let nextPromise = resolved.then(() => {
                     closure_0 = closure_1_0;
                     closure_1 = closure_1_1;
                     closure_2 = closure_1_2;
-                    let obj = closure_2_1(closure_2_3[39]);
                     if (obj.isDispatching()) {
                       let resolved = Promise.resolve();
                       let nextPromise = resolved.then(() => { ... });
                     } else {
-                      obj = { type: "INVITE_RESOLVE", code: closure_1_0 };
-                      closure_2_1(closure_2_3[39]).dispatch(obj);
+                      let obj2 = { type: "INVITE_RESOLVE", code: closure_1_0 };
+                      closure_2_1(closure_2_3[39]).dispatch(obj2);
                       let tmp4Result = closure_2_1(closure_2_3[39]);
                       nextPromise = closure_2_1(closure_2_3[40])(closure_1_0, closure_1_1, closure_1_2).then(() => { ... });
                       let promise = closure_2_1(closure_2_3[40])(closure_1_0, closure_1_1, closure_1_2);
@@ -543,19 +537,19 @@ export default {
                     return nextPromise;
                   });
                 } else {
-                  obj = { type: "INVITE_RESOLVE", code: closure_1_0 };
-                  closure_2_1(closure_2_3[39]).dispatch(obj);
+                  let obj2 = { type: "INVITE_RESOLVE", code: closure_1_0 };
+                  closure_2_1(closure_2_3[39]).dispatch(obj2);
                   let tmp4Result = closure_2_1(closure_2_3[39]);
                   nextPromise = closure_2_1(closure_2_3[40])(closure_1_0, closure_1_1, closure_1_2).then((result) => {
                     ({ invite, code } = result);
                     if (null != invite) {
-                      let obj = { type: "INVITE_RESOLVE_SUCCESS", invite, code };
-                      closure_1(dependencyMap[39]).dispatch(obj);
+                      const obj2 = { type: "INVITE_RESOLVE_SUCCESS", invite, code };
+                      closure_1(dependencyMap[39]).dispatch(obj2);
                       const obj3 = closure_1(dependencyMap[39]);
                     } else {
-                      closure_1(dependencyMap[39]);
-                      obj = { type: "INVITE_RESOLVE_FAILURE", code, banned: tmp };
-                      obj.dispatch(obj);
+                      const obj4 = { type: "INVITE_RESOLVE_FAILURE", code, banned: tmp };
+                      closure_1(dependencyMap[39]).dispatch(obj4);
+                      const obj = closure_1(dependencyMap[39]);
                     }
                     return { invite, code };
                   });
@@ -564,19 +558,19 @@ export default {
                 return nextPromise;
               });
             } else {
-              obj = { type: "INVITE_RESOLVE", code: closure_1_0 };
-              closure_2_1(closure_2_3[39]).dispatch(obj);
+              let obj2 = { type: "INVITE_RESOLVE", code: closure_1_0 };
+              closure_2_1(closure_2_3[39]).dispatch(obj2);
               let tmp4Result = closure_2_1(closure_2_3[39]);
               nextPromise = closure_2_1(closure_2_3[40])(closure_1_0, closure_1_1, closure_1_2).then((result) => {
                 ({ invite, code } = result);
                 if (null != invite) {
-                  let obj = { type: "INVITE_RESOLVE_SUCCESS", invite, code };
-                  closure_1(dependencyMap[39]).dispatch(obj);
+                  const obj2 = { type: "INVITE_RESOLVE_SUCCESS", invite, code };
+                  closure_1(dependencyMap[39]).dispatch(obj2);
                   const obj3 = closure_1(dependencyMap[39]);
                 } else {
-                  closure_1(dependencyMap[39]);
-                  obj = { type: "INVITE_RESOLVE_FAILURE", code, banned: tmp };
-                  obj.dispatch(obj);
+                  const obj4 = { type: "INVITE_RESOLVE_FAILURE", code, banned: tmp };
+                  closure_1(dependencyMap[39]).dispatch(obj4);
+                  const obj = closure_1(dependencyMap[39]);
                 }
                 return { invite, code };
               });
@@ -585,19 +579,19 @@ export default {
             return nextPromise;
           });
         } else {
-          obj = { type: "INVITE_RESOLVE", code: closure_1_0 };
-          closure_2_1(closure_2_3[39]).dispatch(obj);
+          let obj2 = { type: "INVITE_RESOLVE", code: closure_1_0 };
+          closure_2_1(closure_2_3[39]).dispatch(obj2);
           let tmp4Result = closure_2_1(closure_2_3[39]);
           nextPromise = closure_2_1(closure_2_3[40])(closure_1_0, closure_1_1, closure_1_2).then((result) => {
             ({ invite, code } = result);
             if (null != invite) {
-              let obj = { type: "INVITE_RESOLVE_SUCCESS", invite, code };
-              closure_1(dependencyMap[39]).dispatch(obj);
+              const obj2 = { type: "INVITE_RESOLVE_SUCCESS", invite, code };
+              closure_1(dependencyMap[39]).dispatch(obj2);
               const obj3 = closure_1(dependencyMap[39]);
             } else {
-              closure_1(dependencyMap[39]);
-              obj = { type: "INVITE_RESOLVE_FAILURE", code, banned: tmp };
-              obj.dispatch(obj);
+              const obj4 = { type: "INVITE_RESOLVE_FAILURE", code, banned: tmp };
+              closure_1(dependencyMap[39]).dispatch(obj4);
+              const obj = closure_1(dependencyMap[39]);
             }
             return { invite, code };
           });
@@ -606,23 +600,23 @@ export default {
         return nextPromise;
       });
     } else {
-      obj = { type: "INVITE_RESOLVE", code };
-      tmp(573).dispatch(obj);
+      const obj2 = { type: "INVITE_RESOLVE", code };
+      tmp(573).dispatch(obj2);
       const tmpResult = tmp(573);
-      nextPromise = tmp(13061)(code, arg1, arg2).then((result) => {
+      nextPromise = tmp(13062)(code, arg1, arg2).then((result) => {
         ({ invite, code } = result);
         if (null != invite) {
-          let obj = { type: "INVITE_RESOLVE_SUCCESS", invite, code };
-          closure_1(dependencyMap[39]).dispatch(obj);
+          const obj2 = { type: "INVITE_RESOLVE_SUCCESS", invite, code };
+          closure_1(dependencyMap[39]).dispatch(obj2);
           const obj3 = closure_1(dependencyMap[39]);
         } else {
-          closure_1(dependencyMap[39]);
-          obj = { type: "INVITE_RESOLVE_FAILURE", code, banned: tmp };
-          obj.dispatch(obj);
+          const obj4 = { type: "INVITE_RESOLVE_FAILURE", code, banned: tmp };
+          closure_1(dependencyMap[39]).dispatch(obj4);
+          const obj = closure_1(dependencyMap[39]);
         }
         return { invite, code };
       });
-      const promise = tmp(13061)(code, arg1, arg2);
+      const promise = tmp(13062)(code, arg1, arg2);
     }
     return nextPromise;
   },
@@ -671,8 +665,8 @@ export default {
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
-          obj = { value, done: true };
-          return obj;
+          const obj2 = { value, done: true };
+          return obj2;
         } else {
           return { value: "HermesInternal", done: null };
         }
@@ -685,15 +679,15 @@ export default {
               throw value;
             } else if (arg0 === 2) {
               c5 = 3;
-              obj = { value, done: true };
-              return obj;
+              const obj3 = { value, done: true };
+              return obj3;
             } else {
               closure_0 = tmp9;
               let body;
               dependencyMap = 1;
-              const obj1 = {};
+              const obj4 = {};
               const merged = Object.assign(obj);
-              const role_ids = obj1.role_ids;
+              const role_ids = obj4.role_ids;
               let length;
               if (role_ids != null) {
                 length = role_ids.length;
@@ -701,21 +695,20 @@ export default {
               if (0 === length) {
                 delete tmp6[tmp4];
               }
-              const HTTP = closure_0(1272).HTTP;
-              const request = { url: closure_1_24.INSTANT_INVITES(closure_0), body: obj1, context: null, rejectWithError: true };
-              const obj2 = { location: _location };
-              request.context = obj2;
+              const HTTP = closure_0(1270).HTTP;
+              const request = { url: closure_1_24.INSTANT_INVITES(closure_0), body: obj4, context: null, rejectWithError: true };
+              const obj6 = { location: _location };
+              request.context = obj6;
               c4 = 2;
               c5 = 1;
-              const obj3 = { value: HTTP.post(request), done: false };
-              return obj3;
+              const obj7 = { value: HTTP.post(request), done: false };
+              return obj7;
             }
           } else if (1 === tmp9) {
             dependencyMap = 0;
             closure_128_1 = _location;
-            let obj4 = tmp3(573);
-            obj4 = { type: "INSTANT_INVITE_CREATE_FAILURE", channelId: closure_129_0 };
-            obj4.dispatch(obj4);
+            const obj8 = { type: "INSTANT_INVITE_CREATE_FAILURE", channelId: closure_129_0 };
+            tmp3(573).dispatch(obj8);
             const tmp30 = new tmp3(4538)(closure_128_1);
             throw tmp30;
           } else if (arg0 === 1) {
@@ -724,17 +717,17 @@ export default {
           } else if (arg0 === 2) {
             dependencyMap = 0;
             c5 = 3;
-            const obj5 = { value, done: true };
-            return obj5;
+            const obj9 = { value, done: true };
+            return obj9;
           } else {
             body = value.body;
             obj = tmp3(573);
-            const obj6 = { type: "INSTANT_INVITE_CREATE_SUCCESS", channelId: closure_129_0, invite: body };
-            obj.dispatch(obj6);
+            const obj10 = { type: "INSTANT_INVITE_CREATE_SUCCESS", channelId: closure_129_0, invite: body };
+            obj.dispatch(obj10);
             dependencyMap = 0;
             c5 = 3;
-            const obj7 = { value: body, done: true };
-            return obj7;
+            const obj11 = { value: body, done: true };
+            return obj11;
           }
         } catch (tmp38) {
           _location = tmp38;
@@ -779,8 +772,8 @@ export default {
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
-          let obj = { value, done: true };
-          return obj;
+          const obj2 = { value, done: true };
+          return obj2;
         } else {
           return { value: "HermesInternal", done: null };
         }
@@ -793,8 +786,8 @@ export default {
               throw value;
             } else if (arg0 === 2) {
               dependencyMap = 3;
-              obj = { value, done: true };
-              return obj;
+              const obj3 = { value, done: true };
+              return obj3;
             } else {
               closure_1 = tmp5;
               let body;
@@ -804,8 +797,8 @@ export default {
               });
               c2 = 1;
               dependencyMap = 1;
-              const obj1 = { value: promise, done: false };
-              return obj1;
+              const obj4 = { value: promise, done: false };
+              return obj4;
             }
           } else if (1 === tmp5) {
             if (arg0 === 1) {
@@ -813,8 +806,8 @@ export default {
               throw value;
             } else if (arg0 === 2) {
               dependencyMap = 3;
-              const obj2 = { value, done: true };
-              return obj2;
+              const obj7 = { value, done: true };
+              return obj7;
             } else if (friendInvitesFetching.getFriendInvitesFetching()) {
               if (null != value) {
                 value.then((body) => body.body);
@@ -825,42 +818,41 @@ export default {
               }
               dependencyMap = 3;
             } else {
-              const HTTP = tmp2(1272).HTTP;
-              const obj3 = { url: constants.FRIEND_INVITES, context: null, rejectWithError: null };
-              let obj4 = { location: closure_129_0 };
-              obj3.context = obj4;
-              obj4 = tmp2(1272);
-              obj3.rejectWithError = obj4.rejectWithMigratedError();
-              value = HTTP.get(obj3);
-              let obj5 = closure_1(573);
-              obj5 = { type: "FRIEND_INVITES_FETCH_REQUEST", requestedAt: null };
+              const HTTP = tmp2(1270).HTTP;
+              const obj8 = { url: constants.FRIEND_INVITES, context: null, rejectWithError: null };
+              const obj9 = { location: closure_129_0 };
+              obj8.context = obj9;
+              obj8.rejectWithError = tmp2(1270).rejectWithMigratedError();
+              value = HTTP.get(obj8);
+              const obj5 = tmp2(1270);
+              const obj10 = { type: "FRIEND_INVITES_FETCH_REQUEST", requestedAt: null };
               const _Date = Date;
               const date = new Date();
-              obj5.requestedAt = date;
-              obj5.dispatch(obj5);
+              obj10.requestedAt = date;
+              closure_1(573).dispatch(obj10);
               c2 = 2;
               dependencyMap = 1;
-              const obj6 = { value, done: false };
-              return obj6;
+              const obj11 = { value, done: false };
+              return obj11;
             }
           } else if (arg0 === 1) {
             dependencyMap = 3;
             throw value;
           } else if (arg0 === 2) {
             dependencyMap = 3;
-            const obj7 = { value, done: true };
-            return obj7;
+            const obj12 = { value, done: true };
+            return obj12;
           } else {
             body = value.body;
             value = null;
-            const obj8 = { type: "FRIEND_INVITES_FETCH_RESPONSE", receivedAt: null, invites: null };
+            const obj14 = { type: "FRIEND_INVITES_FETCH_RESPONSE", receivedAt: null, invites: null };
             const _Date2 = Date;
             const date1 = new Date();
-            obj8.receivedAt = date1;
-            obj8.invites = body;
-            closure_1(573).dispatch(obj8);
+            obj14.receivedAt = date1;
+            obj14.invites = body;
+            closure_1(573).dispatch(obj14);
             dependencyMap = 3;
-            obj = { value: body, done: true };
+            const obj = { value: body, done: true };
             return obj;
           }
         } catch (tmp35) {
@@ -887,20 +879,17 @@ export default {
       DispatcherDefault.dispatch({ type: "FRIEND_INVITE_CREATE_SUCCESS", invite: body });
       return body;
     }, (error) => {
-      const obj = { type: "FRIEND_INVITE_CREATE_FAILURE", error };
-      obj.dispatch(obj);
+      DispatcherDefault.dispatch({ type: "FRIEND_INVITE_CREATE_FAILURE", error });
       throw error;
     });
   },
   revokeFriendInvites() {
-    let obj = DispatcherDefault;
-    obj.dispatch({ type: "FRIEND_INVITE_REVOKE_REQUEST" });
+    DispatcherDefault.dispatch({ type: "FRIEND_INVITE_REVOKE_REQUEST" });
     const HTTP = HTTPUtils.HTTP;
-    obj = { url: __initData4.FRIEND_INVITES, context: null, rejectWithError: null };
-    obj = { location: location };
-    obj.context = obj;
-    obj.rejectWithError = HTTPUtils.rejectWithMigratedError();
-    return HTTP.del(obj).then((invites) => {
+    const obj2 = { url: __initData4.FRIEND_INVITES, context: { location: location }, rejectWithError: null };
+    const obj3 = { location: location };
+    obj2.rejectWithError = HTTPUtils.rejectWithMigratedError();
+    return HTTP.del(obj2).then((invites) => {
       DispatcherDefault.dispatch({ type: "FRIEND_INVITE_REVOKE_SUCCESS", invites: invites.body });
     });
   },
@@ -915,10 +904,9 @@ export default {
       await tmp3(4829).get({
         url: closure_1_24.INVITE_FRIEND_MEMBERS(code),
         trackedActionData: {
-          event: code(1250).NetworkActionNames.INVITE_FRIEND_MEMBERS_FETCH,
+          event: code(1248).NetworkActionNames.INVITE_FRIEND_MEMBERS_FETCH,
           properties(body) {
-            code(c3[50]);
-            const obj = { code, friend_count: null };
+            const obj2 = { code, friend_count: null };
             let num;
             if (body != null) {
               body = body.body;
@@ -932,8 +920,8 @@ export default {
             if (num == null) {
               num = 0;
             }
-            obj.friend_count = num;
-            return obj.exact(obj);
+            obj2.friend_count = num;
+            return code(c3[50]).exact(obj2);
           }
         },
         rejectWithError: true
@@ -956,21 +944,19 @@ export default {
     })();
   },
   clearInviteFromStore(channelId) {
-    const obj = { type: "INSTANT_INVITE_CLEAR", channelId };
-    obj.dispatch(obj);
+    DispatcherDefault.dispatch({ type: "INSTANT_INVITE_CLEAR", channelId });
   },
   revokeInvite(invite) {
     const code = invite.code;
     const channel = invite.channel;
-    channel(4829);
-    let obj = { url: closure_24.INVITE(code), oldFormErrors: true, trackedActionData: null, rejectWithError: null };
-    obj = { event: code(1250).NetworkActionNames.INVITE_REVOKE, properties: { uses: invite.uses, max_uses: invite.maxUses, max_age: invite.maxAge, invite_type: invite.type } };
-    obj.trackedActionData = obj;
-    obj.rejectWithError = code(1272).rejectWithMigratedError();
-    const obj4 = code(1272);
-    return obj.delete(obj).then(() => {
-      const obj = { type: "INSTANT_INVITE_REVOKE_SUCCESS", code, channelId: channel.id };
-      obj.dispatch(obj);
+    const obj2 = { url: closure_24.INVITE(code), oldFormErrors: true, trackedActionData: null, rejectWithError: null };
+    const obj = channel(4829);
+    obj2.trackedActionData = { event: code(1248).NetworkActionNames.INVITE_REVOKE, properties: { uses: invite.uses, max_uses: invite.maxUses, max_age: invite.maxAge, invite_type: invite.type } };
+    const obj3 = { event: code(1248).NetworkActionNames.INVITE_REVOKE, properties: { uses: invite.uses, max_uses: invite.maxUses, max_age: invite.maxAge, invite_type: invite.type } };
+    obj2.rejectWithError = code(1270).rejectWithMigratedError();
+    const obj4 = code(1270);
+    return obj.delete(obj2).then(() => {
+      DispatcherDefault.dispatch({ type: "INSTANT_INVITE_REVOKE_SUCCESS", code, channelId: channel.id });
     });
   },
   acceptInvite(inviteKey) {
@@ -982,8 +968,7 @@ export default {
     target_message_id = undefined;
     let guildScheduledEventId;
     let self = this;
-    let obj = require("InviteCodeUtils");
-    let result = obj.parseInviteCodeFromInviteKey(inviteKey);
+    let result = require("InviteCodeUtils").parseInviteCodeFromInviteKey(inviteKey);
     c8 = result;
     const sessionId = AuthenticationStore.getSessionId();
     const receivedInstallationIdForInviteCode = InstantInviteStore.getReceivedInstallationIdForInviteCode(result);
@@ -999,14 +984,14 @@ export default {
       target_message_id = invite.target_message_id;
       const tmp8 = id;
     } else {
-      let tmpResult = tmp(tmp2[51]);
-      const result1 = tmpResult.parseExtraDataFromInviteKey(inviteKey);
+      const result1 = tmp(tmp2[51]).parseExtraDataFromInviteKey(inviteKey);
       guildScheduledEventId = result1.guildScheduledEventId;
       ({ targetChannelId: target_channel_id, targetMessageId: target_message_id } = result1);
+      const tmpResult = tmp(tmp2[51]);
     }
-    obj = {};
+    let obj2 = {};
     let merged = Object.assign(context);
-    obj.invite_guild_scheduled_event_id = tmp8;
+    obj2.invite_guild_scheduled_event_id = tmp8;
     const currentUser = UserStore.getCurrentUser();
     let hasFlagResult;
     if (currentUser != null) {
@@ -1014,20 +999,20 @@ export default {
     }
     if (hasFlagResult) {
       require("openQuarantineModeInfoModal")();
-      let nextPromise = new Promise((arg0, fn) => {
+      let promise = new Promise((arg0, fn) => {
         const error = new Error();
         return fn(error);
       });
     } else {
-      obj = { type: "INVITE_ACCEPT", code: inviteKey };
-      require("Dispatcher").dispatch(obj);
+      let obj3 = { type: "INVITE_ACCEPT", code: inviteKey };
+      require("Dispatcher").dispatch(obj3);
       const HTTP = tmp(tmp2[45]).HTTP;
-      const request = { url: closure_24.INVITE(result), context: obj, oldFormErrors: true, body: null, rejectWithError: null };
-      let obj1 = { session_id: sessionId, invite_instance_id: context.invite_instance_id, received_installation_id: receivedInstallationIdForInviteCode };
-      request.body = obj1;
-      tmpResult = tmp(tmp2[45]);
-      request.rejectWithError = tmpResult.rejectWithMigratedError();
+      const request = { url: closure_24.INVITE(result), context: obj2, oldFormErrors: true, body: null, rejectWithError: null };
+      let obj4 = { session_id: sessionId, invite_instance_id: context.invite_instance_id, received_installation_id: receivedInstallationIdForInviteCode };
+      request.body = obj4;
       const tmp13Result = require("Dispatcher");
+      request.rejectWithError = tmp(tmp2[45]).rejectWithMigratedError();
+      const tmpResult2 = tmp(tmp2[45]);
       _require = target_channel_id((code) => {
         c8 = 0;
         c9 = 0;
@@ -1039,8 +1024,8 @@ export default {
             if (arg0 === 1) {
               throw value;
             } else if (arg0 === 2) {
-              let obj = { value, done: true };
-              return obj;
+              const obj2 = { value, done: true };
+              return obj2;
             } else {
               return { value: "HermesInternal", done: null };
             }
@@ -1053,8 +1038,8 @@ export default {
                   throw value;
                 } else if (arg0 === 2) {
                   c9 = 3;
-                  obj = { value, done: true };
-                  return obj;
+                  const obj3 = { value, done: true };
+                  return obj3;
                 } else {
                   closure_7 = tmp5;
                   closure_6 = tmp2;
@@ -1065,58 +1050,58 @@ export default {
                   if (null != c9) {
                     const result = closure_7.clearReceivedInstallationIdForInviteCode(c8);
                   }
-                  let obj4 = require("Dispatcher");
-                  const obj1 = { type: "INVITE_ACCEPT_SUCCESS", invite: code.body, code };
-                  obj4.dispatch(obj1);
+                  const obj4 = { type: "INVITE_ACCEPT_SUCCESS", invite: code.body, code };
+                  require("Dispatcher").dispatch(obj4);
                   guild_scheduled_event = target_message_id;
                   if (target_message_id == null) {
                     guild_scheduled_event = guildScheduledEventId.getGuildScheduledEvent(closure_6);
                   }
-                  const obj2 = {};
+                  const obj6 = {};
                   const merged = Object.assign(code.body);
-                  obj2.guild_scheduled_event = guild_scheduled_event;
+                  obj6.guild_scheduled_event = guild_scheduled_event;
                   target_channel_id = code.body.target_channel_id;
                   if (target_channel_id == null) {
                     target_channel_id = id;
                   }
-                  obj2.target_channel_id = target_channel_id;
+                  obj6.target_channel_id = target_channel_id;
                   target_message_id = code.body.target_message_id;
                   if (target_message_id == null) {
                     target_message_id = c5;
                   }
-                  obj2.target_message_id = target_message_id;
-                  closure_134_1 = obj2;
-                  const guild_id = obj2.guild_id;
+                  obj6.target_message_id = target_message_id;
+                  closure_134_1 = obj6;
+                  const guild_id = obj6.guild_id;
                   id = guild_id;
                   if (guild_id == null) {
-                    const guild = obj2.guild;
+                    const guild = obj6.guild;
                     id = undefined;
                     if (guild != null) {
                       id = guild.id;
                     }
                   }
                   closure_134_2 = id;
-                  let obj7 = code(tmp13[21]);
-                  const flags = obj2.flags;
+                  const obj5 = require("Dispatcher");
+                  const tmp27 = id;
+                  const flags = obj6.flags;
                   c5 = flags;
                   if (flags == null) {
                     c5 = 0;
                   }
                   if (!target_channel_id) {
-                    if (!obj7.hasFlag(c5, code(tmp13[22]).GuildInviteFlags.IS_GUEST_INVITE)) {
+                    if (!obj8.hasFlag(c5, code(tmp13[22]).GuildInviteFlags.IS_GUEST_INVITE)) {
                       if (null != tmp27) {
-                        if (obj2.new_member) {
-                          if (!obj2.show_verification_form) {
+                        if (obj6.new_member) {
+                          if (!obj6.show_verification_form) {
                             c8 = 1;
                             c9 = 1;
-                            const obj3 = { value: code(tmp13[27])(tmp13[37], tmp13.paths), done: false };
-                            return obj3;
+                            const obj7 = { value: code(tmp13[27])(tmp13[37], tmp13.paths), done: false };
+                            return obj7;
                           }
                         }
                       }
                     }
                   }
-                  tmp27 = id;
+                  obj8 = code(guild_scheduled_event[21]);
                 }
               } else if (1 === tmp5) {
                 if (arg0 === 1) {
@@ -1124,30 +1109,30 @@ export default {
                   throw value;
                 } else if (arg0 === 2) {
                   c9 = 3;
-                  obj4 = { value, done: true };
-                  return obj4;
+                  const obj9 = { value, done: true };
+                  return obj9;
                 } else {
                   closure_134_3 = value.default;
-                  const obj5 = { guildId: closure_134_2 };
+                  const obj10 = { guildId: closure_134_2 };
                   c8 = 2;
                   c9 = 1;
-                  const obj6 = { value: closure_134_3(obj5), done: false };
-                  return obj6;
+                  const obj11 = { value: closure_134_3(obj10), done: false };
+                  return obj11;
                 }
               } else if (arg0 === 1) {
                 c9 = 3;
                 throw value;
               } else if (arg0 === 2) {
                 c9 = 3;
-                obj = { value, done: true };
+                const obj = { value, done: true };
                 return obj;
               }
               if (guild_scheduled_event != null) {
                 tmp32(closure_134_1);
               }
               c9 = 3;
-              obj7 = { value: closure_134_0.body, done: true };
-              return obj7;
+              const obj12 = { value: closure_134_0.body, done: true };
+              return obj12;
             } catch (tmp39) {
               c9 = tmp;
               throw tmp39;
@@ -1155,7 +1140,7 @@ export default {
           }
         })();
       });
-      nextPromise = HTTP.post(request).then(function() {
+      promise = HTTP.post(request).then(function() {
         self = this;
         const apply = closure_0.apply;
         if (typeof apply === "unknown") {
@@ -1171,29 +1156,28 @@ export default {
           code = body.code;
         }
         if (code === constants5.USER_GUILD_JOIN_LARGE_GUILD_UNDERAGE_DISALLOWED) {
-          let obj = AgeGateModalActionCreators;
-          obj.openAgeGateModal(AgeGateSource.JOIN_LARGE_GUILD_UNDERAGE);
+          AgeGateModalActionCreators.openAgeGateModal(AgeGateSource.JOIN_LARGE_GUILD_UNDERAGE);
         }
-        obj = { type: "INVITE_ACCEPT_FAILURE", code, error: null };
+        const obj3 = { type: "INVITE_ACCEPT_FAILURE", code, error: null };
         const body2 = body.body;
         let message;
         if (body2 != null) {
           message = body2.message;
         }
-        obj = { message, code: null };
+        const obj4 = { message, code: null };
         const body3 = body.body;
         let code1;
         if (body3 != null) {
           code1 = body3.code;
         }
-        obj.code = code1;
-        obj.error = obj;
-        DispatcherDefault.dispatch(obj);
+        obj4.code = code1;
+        obj3.error = obj4;
+        DispatcherDefault.dispatch(obj3);
         throw new errors_V6OrEarlierAPIErrorDefault(body);
       });
       const postResult = HTTP.post(request);
     }
-    return nextPromise;
+    return promise;
   },
   acceptInviteAndTransitionToInviteChannel(inviteKey) {
     ({ analyticsLocations: require, callback: importDefault, autoJoin: importAll } = inviteKey);
@@ -1203,9 +1187,9 @@ export default {
       skipOnboarding: inviteKey.skipOnboarding,
       callback(channel) {
         if (null != channel.channel) {
-          let state = {};
+          let obj = {};
           const merged = Object.assign(generateAcceptInviteOptions(channel));
-          state.autoJoin = autoJoin;
+          obj.autoJoin = autoJoin;
           let items = _require;
           if (_require == null) {
             items = [];
@@ -1215,43 +1199,42 @@ export default {
             items = [];
           }
           let result = ChannelStore.addConditionalChangeListener(() => {
-            let obj = channel;
             transitionTo = channel.getChannel(id);
             currentUser = currentUser.getCurrentUser();
             if (null == transitionTo || null == currentUser) {
               return tmp3;
             } else {
-              let guildScheduledEvent1 = transitionTo.nsfw && !currentUser.nsfwAllowed;
-              if (!guildScheduledEvent1) {
+              let guildScheduledEvent2 = transitionTo.nsfw && !currentUser.nsfwAllowed;
+              if (!guildScheduledEvent2) {
                 let isGuildVocalOrThreadResult = transitionTo.isGuildVocalOrThread();
                 if (isGuildVocalOrThreadResult) {
-                  let obj2 = require("AgeGateUtils");
-                  isGuildVocalOrThreadResult = obj2.maybeOpenAgeGateForVoiceChannel(tmp);
+                  isGuildVocalOrThreadResult = require("AgeGateUtils").maybeOpenAgeGateForVoiceChannel(tmp);
+                  let obj3 = require("AgeGateUtils");
                 }
-                guildScheduledEvent1 = isGuildVocalOrThreadResult;
+                guildScheduledEvent2 = isGuildVocalOrThreadResult;
               }
-              if (!guildScheduledEvent1) {
+              if (!guildScheduledEvent2) {
                 let isGuildVocalOrThreadResult1 = transitionTo.isGuildVocalOrThread();
                 if (isGuildVocalOrThreadResult1) {
                   isGuildVocalOrThreadResult1 = require("maybeOpenSpoilerGateForVoiceChannel").maybeOpenSpoilerGateForVoiceChannel(tmp);
                   let obj4 = require("maybeOpenSpoilerGateForVoiceChannel");
                 }
-                guildScheduledEvent1 = isGuildVocalOrThreadResult1;
+                guildScheduledEvent2 = isGuildVocalOrThreadResult1;
               }
-              let flag = !guildScheduledEvent1;
-              if (!guildScheduledEvent1) {
-                guildScheduledEvent = undefined;
+              let flag = !guildScheduledEvent2;
+              if (!guildScheduledEvent2) {
+                let guildScheduledEvent1;
                 if (obj != null) {
-                  guildScheduledEvent = tmp10.guildScheduledEvent;
-                }
-                if (null != guildScheduledEvent) {
                   guildScheduledEvent1 = tmp10.guildScheduledEvent;
-                  guildId = guildScheduledEvent1;
+                }
+                if (null != guildScheduledEvent1) {
+                  guildScheduledEvent2 = tmp10.guildScheduledEvent;
+                  guildId = guildScheduledEvent2;
                   transitionTo = tmp10.welcomeModalChannelId;
                   flag = false;
-                  if (null != guildScheduledEvent1) {
+                  if (null != guildScheduledEvent2) {
                     addPostConnectionCallback(() => {
-                      const obj = { guildScheduledEventId: guildId.id };
+                      obj = { guildScheduledEventId: guildId.id };
                       if (null != transitionTo) {
                         obj.welcomeModalChannelId = transitionTo;
                       }
@@ -1281,15 +1264,15 @@ export default {
                     const features = guild.features;
                     const hasItem = features.has(constants2.MEMBER_VERIFICATION_MANUAL_APPROVAL);
                   }
-                  obj = tmp10;
+                  let obj2 = tmp10;
                   if (tmp10 == null) {
-                    obj = {};
+                    obj2 = {};
                   }
-                  ({ targetUserId: c4, targetType } = obj);
-                  targetApplicationId = obj.targetApplicationId;
-                  isGuestInvite = obj.isGuestInvite;
+                  ({ targetUserId: c4, targetType } = obj2);
+                  targetApplicationId = obj2.targetApplicationId;
+                  isGuestInvite = obj2.isGuestInvite;
                   if (!isGuestInvite) {
-                    if (!obj.isApplicationBypassInvite) {
+                    if (!obj2.isApplicationBypassInvite) {
                       let forceTransition;
                       if (tmp10 != null) {
                         forceTransition = tmp10.forceTransition;
@@ -1297,7 +1280,7 @@ export default {
                       if (!forceTransition) {
                         if (hasItem) {
                           let CHANNELResult = guildId;
-                          guildScheduledEvent1 = guildId.getGuildId();
+                          guildScheduledEvent2 = guildId.getGuildId();
                           flag = false;
                         }
                       }
@@ -1356,59 +1339,59 @@ export default {
                         if (tmp38) {
                           if (guildId !== closure_2_27) {
                             transitionTo = function runDeepLinkJump() {
-                              state = closure_2;
+                              obj = closure_2;
                               if (closure_2 == null) {
-                                state = {};
+                                obj = {};
                               }
-                              ({ transitionTo, welcomeModalChannelId, guildScheduledEvent } = state);
-                              state = { source: state(paths[24]).INVITE_ACCEPT, navigationReplace: true, openChannel: true };
+                              ({ transitionTo, welcomeModalChannelId, guildScheduledEvent } = obj);
+                              const obj2 = { source: obj(paths[24]).INVITE_ACCEPT, navigationReplace: true, openChannel: true };
                               if (null != welcomeModalChannelId) {
-                                state.welcomeModalChannelId = welcomeModalChannelId;
+                                obj2.welcomeModalChannelId = welcomeModalChannelId;
                               }
                               if (transitionTo.type === constants.GUILD_STAGE_VOICE) {
-                                state = { stageInviteKey };
-                                state.state = state;
+                                const obj3 = { stageInviteKey };
+                                obj2.state = obj3;
                               }
                               if (null != guildScheduledEvent) {
-                                state.guildScheduledEventId = guildScheduledEvent.id;
+                                obj2.guildScheduledEventId = guildScheduledEvent.id;
                               }
                               if (null != transitionTo) {
-                                let transitionToResult = transitionTo(c10, state);
+                                let transitionToResult = transitionTo(c10, obj2);
                               } else {
-                                transitionToResult = id(paths[25]).transitionTo(c10, state);
+                                transitionToResult = id(paths[25]).transitionTo(c10, obj2);
                                 const obj4 = id(paths[25]);
                               }
                               return transitionToResult;
                             };
                             CHANNELResult = require("asyncRequireImpl")(paths[37], paths.paths);
-                            guildScheduledEvent1 = CHANNELResult.then((result) => result.default({ guildId }));
-                            guildScheduledEvent1.then(transitionTo, transitionTo);
+                            guildScheduledEvent2 = CHANNELResult.then((result) => result.default({ guildId }));
+                            guildScheduledEvent2.then(transitionTo, transitionTo);
                             flag = false;
                           }
-                          guildScheduledEvent1 = transitionTo(CHANNELResult, guildScheduledEvent1);
+                          guildScheduledEvent2 = transitionTo(CHANNELResult, guildScheduledEvent2);
                           flag = false;
                         }
-                        obj = tmp10;
+                        let obj5 = tmp10;
                         if (tmp10 == null) {
-                          obj = {};
+                          obj5 = {};
                         }
-                        ({ transitionTo, welcomeModalChannelId, guildScheduledEvent } = obj);
-                        guildScheduledEvent1 = { source: require("RoutingSources").INVITE_ACCEPT, navigationReplace: true };
+                        ({ transitionTo, welcomeModalChannelId, guildScheduledEvent } = obj5);
+                        guildScheduledEvent2 = { source: require("RoutingSources").INVITE_ACCEPT, navigationReplace: true };
                         if (tmp38) {
-                          guildScheduledEvent1.openChannel = true;
+                          guildScheduledEvent2.openChannel = true;
                         }
                         if (null != welcomeModalChannelId) {
-                          guildScheduledEvent1.welcomeModalChannelId = welcomeModalChannelId;
+                          guildScheduledEvent2.welcomeModalChannelId = welcomeModalChannelId;
                         }
                         if (transitionTo.type === constants.GUILD_STAGE_VOICE) {
-                          const obj1 = { stageInviteKey };
-                          guildScheduledEvent1.state = obj1;
+                          const obj9 = { stageInviteKey };
+                          guildScheduledEvent2.state = obj9;
                         }
                         if (null != guildScheduledEvent) {
-                          guildScheduledEvent1.guildScheduledEventId = guildScheduledEvent.id;
+                          guildScheduledEvent2.guildScheduledEventId = guildScheduledEvent.id;
                         }
                         if (null == transitionTo) {
-                          require("router_utils").transitionTo(CHANNELResult, guildScheduledEvent1);
+                          require("router_utils").transitionTo(CHANNELResult, guildScheduledEvent2);
                           flag = false;
                           const obj13 = require("router_utils");
                         }
@@ -1427,30 +1410,30 @@ export default {
                         tmp47 = closure_2_27;
                       }
                       require("router_utils").transitionTo(closure_2_26.CHANNEL(tmp47, GUILD_HOME));
-                      obj2 = { channelId: GUILD_HOME, applicationId: targetApplicationId, intent: null, inviterUserId: null, analyticsLocations: null, commandOrigin: null };
+                      const obj10 = { channelId: GUILD_HOME, applicationId: targetApplicationId, intent: null, inviterUserId: null, analyticsLocations: null, commandOrigin: null };
                       let intent;
                       const tmp43Result = require("router_utils");
                       if (tmp10 != null) {
                         intent = tmp10.intent;
                       }
-                      obj2.intent = intent;
+                      obj10.intent = intent;
                       let inviterUserId;
                       if (tmp10 != null) {
                         inviterUserId = tmp10.inviterUserId;
                       }
-                      obj2.inviterUserId = inviterUserId;
-                      obj2.analyticsLocations = items;
-                      obj2.commandOrigin = require("ApplicationCommandTypes").CommandOrigin.CHAT;
-                      require("deferJoinActivityInChannel")(obj2);
+                      obj10.inviterUserId = inviterUserId;
+                      obj10.analyticsLocations = items;
+                      obj10.commandOrigin = require("ApplicationCommandTypes").CommandOrigin.CHAT;
+                      require("deferJoinActivityInChannel")(obj10);
                       const tmp50 = require("deferJoinActivityInChannel");
                     }
                     const obj8 = require("ActivitiesInTextUtils");
                   }
-                  targetType = undefined;
+                  let targetType1;
                   if (tmp10 != null) {
-                    targetType = tmp10.targetType;
+                    targetType1 = tmp10.targetType;
                   }
-                  if (null == targetType) {
+                  if (null == targetType1) {
                     if (!closure_2_9(transitionTo.type)) {
                       if (obj6.canSeeOnboardingHome(guildId)) {
                         GUILD_HOME = constants4.GUILD_HOME;
@@ -1499,43 +1482,42 @@ export default {
           if (null != dMFromUserId) {
             closure_2 = [];
             const result = ChannelStore.addConditionalChangeListener(() => {
-              let obj = channel;
               transitionTo = channel.getChannel(id);
               currentUser = currentUser.getCurrentUser();
               if (null == transitionTo || null == currentUser) {
                 return tmp3;
               } else {
-                let guildScheduledEvent1 = transitionTo.nsfw && !currentUser.nsfwAllowed;
-                if (!guildScheduledEvent1) {
+                let guildScheduledEvent2 = transitionTo.nsfw && !currentUser.nsfwAllowed;
+                if (!guildScheduledEvent2) {
                   let isGuildVocalOrThreadResult = transitionTo.isGuildVocalOrThread();
                   if (isGuildVocalOrThreadResult) {
-                    let obj2 = require("AgeGateUtils");
-                    isGuildVocalOrThreadResult = obj2.maybeOpenAgeGateForVoiceChannel(tmp);
+                    isGuildVocalOrThreadResult = require("AgeGateUtils").maybeOpenAgeGateForVoiceChannel(tmp);
+                    let obj3 = require("AgeGateUtils");
                   }
-                  guildScheduledEvent1 = isGuildVocalOrThreadResult;
+                  guildScheduledEvent2 = isGuildVocalOrThreadResult;
                 }
-                if (!guildScheduledEvent1) {
+                if (!guildScheduledEvent2) {
                   let isGuildVocalOrThreadResult1 = transitionTo.isGuildVocalOrThread();
                   if (isGuildVocalOrThreadResult1) {
                     isGuildVocalOrThreadResult1 = require("maybeOpenSpoilerGateForVoiceChannel").maybeOpenSpoilerGateForVoiceChannel(tmp);
                     let obj4 = require("maybeOpenSpoilerGateForVoiceChannel");
                   }
-                  guildScheduledEvent1 = isGuildVocalOrThreadResult1;
+                  guildScheduledEvent2 = isGuildVocalOrThreadResult1;
                 }
-                let flag = !guildScheduledEvent1;
-                if (!guildScheduledEvent1) {
-                  guildScheduledEvent = undefined;
+                let flag = !guildScheduledEvent2;
+                if (!guildScheduledEvent2) {
+                  let guildScheduledEvent1;
                   if (obj != null) {
-                    guildScheduledEvent = tmp10.guildScheduledEvent;
-                  }
-                  if (null != guildScheduledEvent) {
                     guildScheduledEvent1 = tmp10.guildScheduledEvent;
-                    guildId = guildScheduledEvent1;
+                  }
+                  if (null != guildScheduledEvent1) {
+                    guildScheduledEvent2 = tmp10.guildScheduledEvent;
+                    guildId = guildScheduledEvent2;
                     transitionTo = tmp10.welcomeModalChannelId;
                     flag = false;
-                    if (null != guildScheduledEvent1) {
+                    if (null != guildScheduledEvent2) {
                       addPostConnectionCallback(() => {
-                        const obj = { guildScheduledEventId: guildId.id };
+                        obj = { guildScheduledEventId: guildId.id };
                         if (null != transitionTo) {
                           obj.welcomeModalChannelId = transitionTo;
                         }
@@ -1565,15 +1547,15 @@ export default {
                       const features = guild.features;
                       const hasItem = features.has(constants2.MEMBER_VERIFICATION_MANUAL_APPROVAL);
                     }
-                    obj = tmp10;
+                    let obj2 = tmp10;
                     if (tmp10 == null) {
-                      obj = {};
+                      obj2 = {};
                     }
-                    ({ targetUserId: c4, targetType } = obj);
-                    targetApplicationId = obj.targetApplicationId;
-                    isGuestInvite = obj.isGuestInvite;
+                    ({ targetUserId: c4, targetType } = obj2);
+                    targetApplicationId = obj2.targetApplicationId;
+                    isGuestInvite = obj2.isGuestInvite;
                     if (!isGuestInvite) {
-                      if (!obj.isApplicationBypassInvite) {
+                      if (!obj2.isApplicationBypassInvite) {
                         let forceTransition;
                         if (tmp10 != null) {
                           forceTransition = tmp10.forceTransition;
@@ -1581,7 +1563,7 @@ export default {
                         if (!forceTransition) {
                           if (hasItem) {
                             let CHANNELResult = guildId;
-                            guildScheduledEvent1 = guildId.getGuildId();
+                            guildScheduledEvent2 = guildId.getGuildId();
                             flag = false;
                           }
                         }
@@ -1640,8 +1622,8 @@ export default {
                                       prop = closure_2_2.muteOnJoinVoiceChannel;
                                     }
                                     if (prop) {
-                                      let obj = transitionTo(items[29]);
-                                      obj.setSelfMute(guildId(items[30]).MediaEngineContextTypes.DEFAULT, true);
+                                      transitionTo(items[29]).setSelfMute(guildId(items[30]).MediaEngineContextTypes.DEFAULT, true);
+                                      obj = transitionTo(items[29]);
                                     }
                                     const voiceChannel = closure_0.selectVoiceChannel(GUILD_HOME);
                                     let tmp14 = targetType === constants2.STREAM;
@@ -1649,8 +1631,8 @@ export default {
                                       tmp14 = null != ownerId;
                                     }
                                     if (tmp14) {
-                                      obj = { streamType: constants.GUILD, ownerId, guildId, channelId: GUILD_HOME };
-                                      const result = closure_2(items[31]).watchStreamAndTransitionToStream(obj);
+                                      const obj3 = { streamType: constants.GUILD, ownerId, guildId, channelId: GUILD_HOME };
+                                      const result = closure_2(items[31]).watchStreamAndTransitionToStream(obj3);
                                       const obj2 = closure_2(items[31]);
                                     }
                                     let tmp22 = targetType === constants2.EMBEDDED_APPLICATION;
@@ -1663,21 +1645,21 @@ export default {
                                         tmp27 = closure_3_27;
                                       }
                                       guildId(items[25]).transitionTo(closure_3_26.CHANNEL(tmp27, GUILD_HOME));
-                                      obj = { channelId: GUILD_HOME, applicationId, intent: null, inviterUserId: null, analyticsLocations: null, commandOrigin: null };
+                                      const obj5 = { channelId: GUILD_HOME, applicationId, intent: null, inviterUserId: null, analyticsLocations: null, commandOrigin: null };
                                       let intent;
                                       const obj4 = guildId(items[25]);
                                       if (closure_2_2 != null) {
                                         intent = closure_2_2.intent;
                                       }
-                                      obj.intent = intent;
+                                      obj5.intent = intent;
                                       let inviterUserId;
                                       if (closure_2_2 != null) {
                                         inviterUserId = closure_2_2.inviterUserId;
                                       }
-                                      obj.inviterUserId = inviterUserId;
-                                      obj.analyticsLocations = analyticsLocations;
-                                      obj.commandOrigin = guildId(items[33]).CommandOrigin.CHAT;
-                                      transitionTo(items[32])(obj);
+                                      obj5.inviterUserId = inviterUserId;
+                                      obj5.analyticsLocations = analyticsLocations;
+                                      obj5.commandOrigin = guildId(items[33]).CommandOrigin.CHAT;
+                                      transitionTo(items[32])(obj5);
                                       const tmp31 = transitionTo(items[32]);
                                     }
                                   }
@@ -1698,59 +1680,59 @@ export default {
                           if (tmp38) {
                             if (guildId !== closure_2_27) {
                               transitionTo = function runDeepLinkJump() {
-                                state = closure_2;
+                                obj = closure_2;
                                 if (closure_2 == null) {
-                                  state = {};
+                                  obj = {};
                                 }
-                                ({ transitionTo, welcomeModalChannelId, guildScheduledEvent } = state);
-                                state = { source: state(paths[24]).INVITE_ACCEPT, navigationReplace: true, openChannel: true };
+                                ({ transitionTo, welcomeModalChannelId, guildScheduledEvent } = obj);
+                                const obj2 = { source: obj(paths[24]).INVITE_ACCEPT, navigationReplace: true, openChannel: true };
                                 if (null != welcomeModalChannelId) {
-                                  state.welcomeModalChannelId = welcomeModalChannelId;
+                                  obj2.welcomeModalChannelId = welcomeModalChannelId;
                                 }
                                 if (transitionTo.type === constants.GUILD_STAGE_VOICE) {
-                                  state = { stageInviteKey };
-                                  state.state = state;
+                                  const obj3 = { stageInviteKey };
+                                  obj2.state = obj3;
                                 }
                                 if (null != guildScheduledEvent) {
-                                  state.guildScheduledEventId = guildScheduledEvent.id;
+                                  obj2.guildScheduledEventId = guildScheduledEvent.id;
                                 }
                                 if (null != transitionTo) {
-                                  let transitionToResult = transitionTo(c10, state);
+                                  let transitionToResult = transitionTo(c10, obj2);
                                 } else {
-                                  transitionToResult = id(paths[25]).transitionTo(c10, state);
+                                  transitionToResult = id(paths[25]).transitionTo(c10, obj2);
                                   const obj4 = id(paths[25]);
                                 }
                                 return transitionToResult;
                               };
                               CHANNELResult = require("asyncRequireImpl")(paths[37], paths.paths);
-                              guildScheduledEvent1 = CHANNELResult.then((result) => result.default({ guildId }));
-                              guildScheduledEvent1.then(transitionTo, transitionTo);
+                              guildScheduledEvent2 = CHANNELResult.then((result) => result.default({ guildId }));
+                              guildScheduledEvent2.then(transitionTo, transitionTo);
                               flag = false;
                             }
-                            guildScheduledEvent1 = transitionTo(CHANNELResult, guildScheduledEvent1);
+                            guildScheduledEvent2 = transitionTo(CHANNELResult, guildScheduledEvent2);
                             flag = false;
                           }
-                          obj = tmp10;
+                          let obj5 = tmp10;
                           if (tmp10 == null) {
-                            obj = {};
+                            obj5 = {};
                           }
-                          ({ transitionTo, welcomeModalChannelId, guildScheduledEvent } = obj);
-                          guildScheduledEvent1 = { source: require("RoutingSources").INVITE_ACCEPT, navigationReplace: true };
+                          ({ transitionTo, welcomeModalChannelId, guildScheduledEvent } = obj5);
+                          guildScheduledEvent2 = { source: require("RoutingSources").INVITE_ACCEPT, navigationReplace: true };
                           if (tmp38) {
-                            guildScheduledEvent1.openChannel = true;
+                            guildScheduledEvent2.openChannel = true;
                           }
                           if (null != welcomeModalChannelId) {
-                            guildScheduledEvent1.welcomeModalChannelId = welcomeModalChannelId;
+                            guildScheduledEvent2.welcomeModalChannelId = welcomeModalChannelId;
                           }
                           if (transitionTo.type === constants.GUILD_STAGE_VOICE) {
-                            const obj1 = { stageInviteKey };
-                            guildScheduledEvent1.state = obj1;
+                            const obj9 = { stageInviteKey };
+                            guildScheduledEvent2.state = obj9;
                           }
                           if (null != guildScheduledEvent) {
-                            guildScheduledEvent1.guildScheduledEventId = guildScheduledEvent.id;
+                            guildScheduledEvent2.guildScheduledEventId = guildScheduledEvent.id;
                           }
                           if (null == transitionTo) {
-                            require("router_utils").transitionTo(CHANNELResult, guildScheduledEvent1);
+                            require("router_utils").transitionTo(CHANNELResult, guildScheduledEvent2);
                             flag = false;
                             const obj13 = require("router_utils");
                           }
@@ -1769,30 +1751,30 @@ export default {
                           tmp47 = closure_2_27;
                         }
                         require("router_utils").transitionTo(closure_2_26.CHANNEL(tmp47, GUILD_HOME));
-                        obj2 = { channelId: GUILD_HOME, applicationId: targetApplicationId, intent: null, inviterUserId: null, analyticsLocations: null, commandOrigin: null };
+                        const obj10 = { channelId: GUILD_HOME, applicationId: targetApplicationId, intent: null, inviterUserId: null, analyticsLocations: null, commandOrigin: null };
                         let intent;
                         const tmp43Result = require("router_utils");
                         if (tmp10 != null) {
                           intent = tmp10.intent;
                         }
-                        obj2.intent = intent;
+                        obj10.intent = intent;
                         let inviterUserId;
                         if (tmp10 != null) {
                           inviterUserId = tmp10.inviterUserId;
                         }
-                        obj2.inviterUserId = inviterUserId;
-                        obj2.analyticsLocations = items;
-                        obj2.commandOrigin = require("ApplicationCommandTypes").CommandOrigin.CHAT;
-                        require("deferJoinActivityInChannel")(obj2);
+                        obj10.inviterUserId = inviterUserId;
+                        obj10.analyticsLocations = items;
+                        obj10.commandOrigin = require("ApplicationCommandTypes").CommandOrigin.CHAT;
+                        require("deferJoinActivityInChannel")(obj10);
                         const tmp50 = require("deferJoinActivityInChannel");
                       }
                       const obj8 = require("ActivitiesInTextUtils");
                     }
-                    targetType = undefined;
+                    let targetType1;
                     if (tmp10 != null) {
-                      targetType = tmp10.targetType;
+                      targetType1 = tmp10.targetType;
                     }
-                    if (null == targetType) {
+                    if (null == targetType1) {
                       if (!closure_2_9(transitionTo.type)) {
                         if (obj6.canSeeOnboardingHome(guildId)) {
                           GUILD_HOME = constants4.GUILD_HOME;
@@ -1828,8 +1810,8 @@ export default {
         hasItem = features.includes(constants2.HUB);
       }
       if (hasItem) {
-        obj(13064).onOpenHubInvite(flags);
-        const obj6 = obj(13064);
+        obj(13065).onOpenHubInvite(flags);
+        const obj6 = obj(13065);
       }
     }
     let num = flags.flags;
@@ -1838,17 +1820,17 @@ export default {
     }
     let hasFlagResult = dMFromUserId(1384).hasFlag(num, dMFromUserId(8510).GuildInviteFlags.IS_GUEST_INVITE);
     if (!hasFlagResult) {
-      let tmp6Result = tmp6(1384);
-      hasFlagResult = tmp6Result.hasFlag(num, tmp6(8510).GuildInviteFlags.IS_APPLICATION_BYPASS);
+      hasFlagResult = tmp6(1384).hasFlag(num, tmp6(8510).GuildInviteFlags.IS_APPLICATION_BYPASS);
+      const tmp6Result = tmp6(1384);
     }
     if (null != guild) {
       if (!hasFlagResult) {
         if (flags.new_member) {
-          tmp6Result = tmp6(13065);
-          if (tmp6Result.inviteGuildHasPendingMemberDisabledVerification(guild)) {
-            const result1 = tmp6(13065).openVerificationModalOrTransitionToApplication(guild.id);
-            const tmp6Result1 = tmp6(13065);
+          if (tmp6Result3.inviteGuildHasPendingMemberDisabledVerification(guild)) {
+            const result1 = tmp6(13066).openVerificationModalOrTransitionToApplication(guild.id);
+            const tmp6Result4 = tmp6(13066);
           }
+          tmp6Result3 = tmp6(13066);
         }
       }
     }
@@ -1870,43 +1852,42 @@ export default {
       closure_129_1 = tmp18;
       closure_129_2 = [];
       const result2 = ChannelStore.addConditionalChangeListener(() => {
-        let obj = channel;
         transitionTo = channel.getChannel(id);
         currentUser = currentUser.getCurrentUser();
         if (null == transitionTo || null == currentUser) {
           return tmp3;
         } else {
-          let guildScheduledEvent1 = transitionTo.nsfw && !currentUser.nsfwAllowed;
-          if (!guildScheduledEvent1) {
+          let guildScheduledEvent2 = transitionTo.nsfw && !currentUser.nsfwAllowed;
+          if (!guildScheduledEvent2) {
             let isGuildVocalOrThreadResult = transitionTo.isGuildVocalOrThread();
             if (isGuildVocalOrThreadResult) {
-              let obj2 = require("AgeGateUtils");
-              isGuildVocalOrThreadResult = obj2.maybeOpenAgeGateForVoiceChannel(tmp);
+              isGuildVocalOrThreadResult = require("AgeGateUtils").maybeOpenAgeGateForVoiceChannel(tmp);
+              let obj3 = require("AgeGateUtils");
             }
-            guildScheduledEvent1 = isGuildVocalOrThreadResult;
+            guildScheduledEvent2 = isGuildVocalOrThreadResult;
           }
-          if (!guildScheduledEvent1) {
+          if (!guildScheduledEvent2) {
             let isGuildVocalOrThreadResult1 = transitionTo.isGuildVocalOrThread();
             if (isGuildVocalOrThreadResult1) {
               isGuildVocalOrThreadResult1 = require("maybeOpenSpoilerGateForVoiceChannel").maybeOpenSpoilerGateForVoiceChannel(tmp);
               let obj4 = require("maybeOpenSpoilerGateForVoiceChannel");
             }
-            guildScheduledEvent1 = isGuildVocalOrThreadResult1;
+            guildScheduledEvent2 = isGuildVocalOrThreadResult1;
           }
-          let flag = !guildScheduledEvent1;
-          if (!guildScheduledEvent1) {
-            guildScheduledEvent = undefined;
+          let flag = !guildScheduledEvent2;
+          if (!guildScheduledEvent2) {
+            let guildScheduledEvent1;
             if (obj != null) {
-              guildScheduledEvent = tmp10.guildScheduledEvent;
-            }
-            if (null != guildScheduledEvent) {
               guildScheduledEvent1 = tmp10.guildScheduledEvent;
-              guildId = guildScheduledEvent1;
+            }
+            if (null != guildScheduledEvent1) {
+              guildScheduledEvent2 = tmp10.guildScheduledEvent;
+              guildId = guildScheduledEvent2;
               transitionTo = tmp10.welcomeModalChannelId;
               flag = false;
-              if (null != guildScheduledEvent1) {
+              if (null != guildScheduledEvent2) {
                 addPostConnectionCallback(() => {
-                  const obj = { guildScheduledEventId: guildId.id };
+                  obj = { guildScheduledEventId: guildId.id };
                   if (null != transitionTo) {
                     obj.welcomeModalChannelId = transitionTo;
                   }
@@ -1936,15 +1917,15 @@ export default {
                 const features = guild.features;
                 const hasItem = features.has(constants2.MEMBER_VERIFICATION_MANUAL_APPROVAL);
               }
-              obj = tmp10;
+              let obj2 = tmp10;
               if (tmp10 == null) {
-                obj = {};
+                obj2 = {};
               }
-              ({ targetUserId: c4, targetType } = obj);
-              targetApplicationId = obj.targetApplicationId;
-              isGuestInvite = obj.isGuestInvite;
+              ({ targetUserId: c4, targetType } = obj2);
+              targetApplicationId = obj2.targetApplicationId;
+              isGuestInvite = obj2.isGuestInvite;
               if (!isGuestInvite) {
-                if (!obj.isApplicationBypassInvite) {
+                if (!obj2.isApplicationBypassInvite) {
                   let forceTransition;
                   if (tmp10 != null) {
                     forceTransition = tmp10.forceTransition;
@@ -1952,7 +1933,7 @@ export default {
                   if (!forceTransition) {
                     if (hasItem) {
                       let CHANNELResult = guildId;
-                      guildScheduledEvent1 = guildId.getGuildId();
+                      guildScheduledEvent2 = guildId.getGuildId();
                       flag = false;
                     }
                   }
@@ -2011,8 +1992,8 @@ export default {
                                 prop = closure_2_2.muteOnJoinVoiceChannel;
                               }
                               if (prop) {
-                                let obj = transitionTo(items[29]);
-                                obj.setSelfMute(guildId(items[30]).MediaEngineContextTypes.DEFAULT, true);
+                                transitionTo(items[29]).setSelfMute(guildId(items[30]).MediaEngineContextTypes.DEFAULT, true);
+                                obj = transitionTo(items[29]);
                               }
                               const voiceChannel = closure_0.selectVoiceChannel(GUILD_HOME);
                               let tmp14 = targetType === constants2.STREAM;
@@ -2020,8 +2001,8 @@ export default {
                                 tmp14 = null != ownerId;
                               }
                               if (tmp14) {
-                                obj = { streamType: constants.GUILD, ownerId, guildId, channelId: GUILD_HOME };
-                                const result = closure_2(items[31]).watchStreamAndTransitionToStream(obj);
+                                const obj3 = { streamType: constants.GUILD, ownerId, guildId, channelId: GUILD_HOME };
+                                const result = closure_2(items[31]).watchStreamAndTransitionToStream(obj3);
                                 const obj2 = closure_2(items[31]);
                               }
                               let tmp22 = targetType === constants2.EMBEDDED_APPLICATION;
@@ -2034,21 +2015,21 @@ export default {
                                   tmp27 = closure_3_27;
                                 }
                                 guildId(items[25]).transitionTo(closure_3_26.CHANNEL(tmp27, GUILD_HOME));
-                                obj = { channelId: GUILD_HOME, applicationId, intent: null, inviterUserId: null, analyticsLocations: null, commandOrigin: null };
+                                const obj5 = { channelId: GUILD_HOME, applicationId, intent: null, inviterUserId: null, analyticsLocations: null, commandOrigin: null };
                                 let intent;
                                 const obj4 = guildId(items[25]);
                                 if (closure_2_2 != null) {
                                   intent = closure_2_2.intent;
                                 }
-                                obj.intent = intent;
+                                obj5.intent = intent;
                                 let inviterUserId;
                                 if (closure_2_2 != null) {
                                   inviterUserId = closure_2_2.inviterUserId;
                                 }
-                                obj.inviterUserId = inviterUserId;
-                                obj.analyticsLocations = analyticsLocations;
-                                obj.commandOrigin = guildId(items[33]).CommandOrigin.CHAT;
-                                transitionTo(items[32])(obj);
+                                obj5.inviterUserId = inviterUserId;
+                                obj5.analyticsLocations = analyticsLocations;
+                                obj5.commandOrigin = guildId(items[33]).CommandOrigin.CHAT;
+                                transitionTo(items[32])(obj5);
                                 const tmp31 = transitionTo(items[32]);
                               }
                             }
@@ -2069,59 +2050,59 @@ export default {
                     if (tmp38) {
                       if (guildId !== closure_2_27) {
                         transitionTo = function runDeepLinkJump() {
-                          state = closure_2;
+                          obj = closure_2;
                           if (closure_2 == null) {
-                            state = {};
+                            obj = {};
                           }
-                          ({ transitionTo, welcomeModalChannelId, guildScheduledEvent } = state);
-                          state = { source: state(paths[24]).INVITE_ACCEPT, navigationReplace: true, openChannel: true };
+                          ({ transitionTo, welcomeModalChannelId, guildScheduledEvent } = obj);
+                          const obj2 = { source: obj(paths[24]).INVITE_ACCEPT, navigationReplace: true, openChannel: true };
                           if (null != welcomeModalChannelId) {
-                            state.welcomeModalChannelId = welcomeModalChannelId;
+                            obj2.welcomeModalChannelId = welcomeModalChannelId;
                           }
                           if (transitionTo.type === constants.GUILD_STAGE_VOICE) {
-                            state = { stageInviteKey };
-                            state.state = state;
+                            const obj3 = { stageInviteKey };
+                            obj2.state = obj3;
                           }
                           if (null != guildScheduledEvent) {
-                            state.guildScheduledEventId = guildScheduledEvent.id;
+                            obj2.guildScheduledEventId = guildScheduledEvent.id;
                           }
                           if (null != transitionTo) {
-                            let transitionToResult = transitionTo(c10, state);
+                            let transitionToResult = transitionTo(c10, obj2);
                           } else {
-                            transitionToResult = id(paths[25]).transitionTo(c10, state);
+                            transitionToResult = id(paths[25]).transitionTo(c10, obj2);
                             const obj4 = id(paths[25]);
                           }
                           return transitionToResult;
                         };
                         CHANNELResult = require("asyncRequireImpl")(paths[37], paths.paths);
-                        guildScheduledEvent1 = CHANNELResult.then((result) => result.default({ guildId }));
-                        guildScheduledEvent1.then(transitionTo, transitionTo);
+                        guildScheduledEvent2 = CHANNELResult.then((result) => result.default({ guildId }));
+                        guildScheduledEvent2.then(transitionTo, transitionTo);
                         flag = false;
                       }
-                      guildScheduledEvent1 = transitionTo(CHANNELResult, guildScheduledEvent1);
+                      guildScheduledEvent2 = transitionTo(CHANNELResult, guildScheduledEvent2);
                       flag = false;
                     }
-                    obj = tmp10;
+                    let obj5 = tmp10;
                     if (tmp10 == null) {
-                      obj = {};
+                      obj5 = {};
                     }
-                    ({ transitionTo, welcomeModalChannelId, guildScheduledEvent } = obj);
-                    guildScheduledEvent1 = { source: require("RoutingSources").INVITE_ACCEPT, navigationReplace: true };
+                    ({ transitionTo, welcomeModalChannelId, guildScheduledEvent } = obj5);
+                    guildScheduledEvent2 = { source: require("RoutingSources").INVITE_ACCEPT, navigationReplace: true };
                     if (tmp38) {
-                      guildScheduledEvent1.openChannel = true;
+                      guildScheduledEvent2.openChannel = true;
                     }
                     if (null != welcomeModalChannelId) {
-                      guildScheduledEvent1.welcomeModalChannelId = welcomeModalChannelId;
+                      guildScheduledEvent2.welcomeModalChannelId = welcomeModalChannelId;
                     }
                     if (transitionTo.type === constants.GUILD_STAGE_VOICE) {
-                      const obj1 = { stageInviteKey };
-                      guildScheduledEvent1.state = obj1;
+                      const obj9 = { stageInviteKey };
+                      guildScheduledEvent2.state = obj9;
                     }
                     if (null != guildScheduledEvent) {
-                      guildScheduledEvent1.guildScheduledEventId = guildScheduledEvent.id;
+                      guildScheduledEvent2.guildScheduledEventId = guildScheduledEvent.id;
                     }
                     if (null == transitionTo) {
-                      require("router_utils").transitionTo(CHANNELResult, guildScheduledEvent1);
+                      require("router_utils").transitionTo(CHANNELResult, guildScheduledEvent2);
                       flag = false;
                       const obj13 = require("router_utils");
                     }
@@ -2140,30 +2121,30 @@ export default {
                     tmp47 = closure_2_27;
                   }
                   require("router_utils").transitionTo(closure_2_26.CHANNEL(tmp47, GUILD_HOME));
-                  obj2 = { channelId: GUILD_HOME, applicationId: targetApplicationId, intent: null, inviterUserId: null, analyticsLocations: null, commandOrigin: null };
+                  const obj10 = { channelId: GUILD_HOME, applicationId: targetApplicationId, intent: null, inviterUserId: null, analyticsLocations: null, commandOrigin: null };
                   let intent;
                   const tmp43Result = require("router_utils");
                   if (tmp10 != null) {
                     intent = tmp10.intent;
                   }
-                  obj2.intent = intent;
+                  obj10.intent = intent;
                   let inviterUserId;
                   if (tmp10 != null) {
                     inviterUserId = tmp10.inviterUserId;
                   }
-                  obj2.inviterUserId = inviterUserId;
-                  obj2.analyticsLocations = items;
-                  obj2.commandOrigin = require("ApplicationCommandTypes").CommandOrigin.CHAT;
-                  require("deferJoinActivityInChannel")(obj2);
+                  obj10.inviterUserId = inviterUserId;
+                  obj10.analyticsLocations = items;
+                  obj10.commandOrigin = require("ApplicationCommandTypes").CommandOrigin.CHAT;
+                  require("deferJoinActivityInChannel")(obj10);
                   const tmp50 = require("deferJoinActivityInChannel");
                 }
                 const obj8 = require("ActivitiesInTextUtils");
               }
-              targetType = undefined;
+              let targetType1;
               if (tmp10 != null) {
-                targetType = tmp10.targetType;
+                targetType1 = tmp10.targetType;
               }
-              if (null == targetType) {
+              if (null == targetType1) {
                 if (!closure_2_9(transitionTo.type)) {
                   if (obj6.canSeeOnboardingHome(guildId)) {
                     GUILD_HOME = constants4.GUILD_HOME;
@@ -2192,44 +2173,43 @@ export default {
     const obj2 = dMFromUserId(1384);
   },
   openNativeAppModal(inviteKey) {
-    let obj = InviteCodeUtils;
-    const result = obj.parseExtraDataFromInviteKey(inviteKey);
-    obj = { installationId: AuthenticationStore.getInstallationForTracking(), targetChannelId: result.targetChannelId, targetMessageId: result.targetMessageId, guildScheduledEventId: result.guildScheduledEventId };
-    CodedLinkActionCreatorsDefault.openNativeAppModal(result.baseCode, constants.INVITE_BROWSER, obj);
+    const result = InviteCodeUtils.parseExtraDataFromInviteKey(inviteKey);
+    const obj2 = { installationId: AuthenticationStore.getInstallationForTracking(), targetChannelId: result.targetChannelId, targetMessageId: result.targetMessageId, guildScheduledEventId: result.guildScheduledEventId };
+    CodedLinkActionCreatorsDefault.openNativeAppModal(result.baseCode, constants.INVITE_BROWSER, obj2);
   },
   transitionToInviteOnboarding(baseCode) {
-    let obj = guildScheduledEvent1;
-    if (guildScheduledEvent1 === undefined) {
+    let obj = arg1;
+    if (arg1 === undefined) {
       obj = {};
     }
     let transitionTo = obj.transitionTo;
     if (undefined === transitionTo) {
       transitionTo = router_utils.transitionTo;
     }
-    obj = { baseCode: baseCode.code, targetChannelId: null, targetMessageId: null, guildScheduledEventId: null };
+    const obj3 = { baseCode: baseCode.code, targetChannelId: null, targetMessageId: null, guildScheduledEventId: null };
     const target_channel_id = baseCode.target_channel_id;
-    obj.targetChannelId = target_channel_id;
+    obj3.targetChannelId = target_channel_id;
     const target_message_id = baseCode.target_message_id;
-    obj.targetMessageId = target_message_id;
+    obj3.targetMessageId = target_message_id;
     const guild_scheduled_event = baseCode.guild_scheduled_event;
     let id;
     if (guild_scheduled_event != null) {
       id = guild_scheduled_event.id;
     }
-    obj.guildScheduledEventId = id;
-    const inviteKeyFromExtraData = InviteCodeUtils.generateInviteKeyFromExtraData(obj);
-    obj = { search: null };
+    obj3.guildScheduledEventId = id;
+    const inviteKeyFromExtraData = InviteCodeUtils.generateInviteKeyFromExtraData(obj3);
+    const obj4 = { search: null };
     const result = dependencyMap.APP_WITH_INVITE_AND_GUILD_ONBOARDING(baseCode.code);
-    obj.search = InviteCodeUtils.getInviteKeySearchSuffix(inviteKeyFromExtraData);
-    transitionTo(result, obj);
+    obj4.search = InviteCodeUtils.getInviteKeySearchSuffix(inviteKeyFromExtraData);
+    transitionTo(result, obj4);
     const tmp3Result = InviteCodeUtils;
   },
   openApp(code, targetChannelId, fingerprint, username, inviteType) {
     _require = code;
     let result = null;
     if (null != code) {
+      result = require("InviteCodeUtils").parseExtraDataFromInviteKey(code);
       let obj = require("InviteCodeUtils");
-      result = obj.parseExtraDataFromInviteKey(code);
     }
     let baseCode;
     if (result != null) {
@@ -2243,15 +2223,13 @@ export default {
     if (result != null) {
       targetChannelId = result.targetChannelId;
     }
-    let obj1 = DispatcherDefault;
-    obj = { type: "INVITE_APP_OPENING", code };
-    obj1.dispatch(obj);
+    DispatcherDefault.dispatch({ type: "INVITE_APP_OPENING", code });
     if (null != _modDef4959.ua) {
       const formatted = _modDef4959.ua.toLowerCase();
       if (formatted.indexOf("googlebot") > -1) {
-        let tmp7Result = DispatcherDefault;
-        obj = { type: "INVITE_APP_NOT_OPENED", code };
-        tmp7Result.dispatch(obj);
+        const obj6 = { type: "INVITE_APP_NOT_OPENED", code };
+        DispatcherDefault.dispatch(obj6);
+        const tmp7Result = DispatcherDefault;
       }
     }
     const os = _modDef4959.os;
@@ -2282,16 +2260,16 @@ export default {
           const _HermesInternal = HermesInternal;
           let combined = "discord://" + substr;
         }
-        tmp7Result = ProtocolUtilsDefault;
-        tmp7Result.launch(combined, (arg0) => {
-          let obj = DispatcherDefault;
+        ProtocolUtilsDefault.launch(combined, (arg0) => {
           if (arg0) {
-            obj = { type: "INVITE_APP_OPENED", code };
+            const obj2 = { type: "INVITE_APP_OPENED", code };
+            let obj3 = obj2;
           } else {
-            obj = { type: "INVITE_APP_NOT_OPENED", code };
+            obj3 = { type: "INVITE_APP_NOT_OPENED", code };
           }
-          obj.dispatch(obj);
+          DispatcherDefault.dispatch(obj3);
         });
+        const tmp7Result4 = ProtocolUtilsDefault;
       }
     }
     if (null != baseCode) {
@@ -2303,9 +2281,10 @@ export default {
       inviteDynamicLinkTemplate = require("DynamicLinkTemplates").getDefaultDynamicLinkTemplate();
       const obj4 = require("DynamicLinkTemplates");
     }
-    let tmp18Result = tmp18(13067);
-    const attemptId = tmp18Result.generateAttemptId();
+    let obj3 = { type: "INVITE_APP_OPENING", code };
+    const attemptId = tmp18(13068).generateAttemptId();
     inviteType = undefined;
+    const tmp18Result = tmp18(13068);
     if (inviteType != null) {
       inviteType = inviteType.inviteType;
     }
@@ -2313,14 +2292,14 @@ export default {
     if (2 !== inviteType) {
       str7 = invite;
     }
-    obj1 = { utmSource: str7, fingerprint, installationId: AuthenticationStore.getInstallationForTracking(), username, attemptId, event: null, channel: null, message: null, didRegister: null, iosFallbackLink: null };
+    const obj7 = { utmSource: str7, fingerprint, installationId: AuthenticationStore.getInstallationForTracking(), username, attemptId, event: null, channel: null, message: null, didRegister: null, iosFallbackLink: null };
     let prop;
     if (result != null) {
       prop = result.guildScheduledEventId;
     }
-    obj1.event = prop;
-    obj1.channel = targetChannelId;
-    obj1.message = targetMessageId;
+    obj7.event = prop;
+    obj7.channel = targetChannelId;
+    obj7.message = targetMessageId;
     let didRegister;
     if (inviteType != null) {
       didRegister = inviteType.didRegister;
@@ -2329,26 +2308,24 @@ export default {
     if (true === didRegister) {
       str8 = "true";
     }
-    obj1.didRegister = str8;
-    obj1.iosFallbackLink = "https://discord.com/api/download/mobile?invite_code=" + baseCode;
-    combined = generateDynamicLinkDefault(inviteDynamicLinkTemplate, obj1);
-    const tmp7Result1 = generateDynamicLinkDefault;
-    const obj2 = { fingerprint: null, attempt_id: null, source: null, invite_code: null };
-    tmp18Result = tmp18(1255);
-    obj2.fingerprint = tmp18Result.maybeExtractId(fingerprint);
-    obj2.attempt_id = attemptId;
-    obj2.source = invite;
-    obj2.invite_code = baseCode;
-    AnalyticsUtilsDefault.track(constants3.DEEP_LINK_CLICKED, obj2);
-    const tmp7Result2 = AnalyticsUtilsDefault;
+    obj7.didRegister = str8;
+    obj7.iosFallbackLink = "https://discord.com/api/download/mobile?invite_code=" + baseCode;
+    combined = generateDynamicLinkDefault(inviteDynamicLinkTemplate, obj7);
+    const tmp7Result5 = generateDynamicLinkDefault;
+    const obj8 = { fingerprint: null, attempt_id: null, source: null, invite_code: null };
+    const tmp7Result6 = AnalyticsUtilsDefault;
+    obj8.fingerprint = tmp18(1253).maybeExtractId(fingerprint);
+    obj8.attempt_id = attemptId;
+    obj8.source = invite;
+    obj8.invite_code = baseCode;
+    tmp7Result6.track(constants3.DEEP_LINK_CLICKED, obj8);
+    const tmp18Result2 = tmp18(1253);
   },
   setReceivedInstallationIdForInviteCode(inviteCode, receivedInstallationId) {
-    const obj = { type: "INSTANT_INVITE_RECEIVED_INSTALLATION_ID_SET", inviteCode, receivedInstallationId };
-    obj.dispatch(obj);
+    DispatcherDefault.dispatch({ type: "INSTANT_INVITE_RECEIVED_INSTALLATION_ID_SET", inviteCode, receivedInstallationId });
   },
   clearReceivedInstallationIdForInviteCode(c8) {
-    const obj = { type: "INSTANT_INVITE_RECEIVED_INSTALLATION_ID_CLEAR", inviteCode };
-    obj.dispatch(obj);
+    DispatcherDefault.dispatch({ type: "INSTANT_INVITE_RECEIVED_INSTALLATION_ID_CLEAR", inviteCode });
   },
   trackInviteServerClicked
 };
@@ -2364,41 +2341,41 @@ export const transitionToGuildFromEventInvite = function transitionToGuildFromEv
 };
 export const trackInviteEmbedActioned = function trackInviteEmbedActioned(result8, items1) {
   ({ invite, inviter_id, invite_message_id, invite_instance_id, application_id, stream_key, number_of_users_in_channel } = result8);
-  const obj = { action: result8.action, invite_code: invite.code, invite_type: null, inviter_id: null, invite_message_id: null, invite_instance_id: null, application_id: null, stream_key: null, number_of_users_in_channel: null, location_stack: null };
-  let str;
-  if (str != null) {
-    str = str.toString();
+  const obj2 = { action: result8.action, invite_code: invite.code, invite_type: null, inviter_id: null, invite_message_id: null, invite_instance_id: null, application_id: null, stream_key: null, number_of_users_in_channel: null, location_stack: null };
+  let str1;
+  if (invite.type != null) {
+    str1 = str.toString();
   }
-  obj.invite_type = str;
+  obj2.invite_type = str1;
   if (inviter_id == null) {
     inviter_id = null;
   }
-  obj.inviter_id = inviter_id;
+  obj2.inviter_id = inviter_id;
   if (invite_message_id == null) {
     invite_message_id = null;
   }
-  obj.invite_message_id = invite_message_id;
+  obj2.invite_message_id = invite_message_id;
   if (invite_instance_id == null) {
     invite_instance_id = null;
   }
-  obj.invite_instance_id = invite_instance_id;
+  obj2.invite_instance_id = invite_instance_id;
   if (application_id == null) {
     application_id = null;
   }
-  obj.application_id = application_id;
+  obj2.application_id = application_id;
   if (stream_key == null) {
     stream_key = null;
   }
-  obj.stream_key = stream_key;
+  obj2.stream_key = stream_key;
   if (number_of_users_in_channel == null) {
     number_of_users_in_channel = null;
   }
   let tmp2 = items1;
-  obj.number_of_users_in_channel = number_of_users_in_channel;
+  obj2.number_of_users_in_channel = number_of_users_in_channel;
   if (items1 == null) {
     tmp2 = null;
   }
-  obj.location_stack = tmp2;
-  obj.track(constants3.INVITE_EMBED_ACTIONED, obj);
+  obj2.location_stack = tmp2;
+  AnalyticsUtilsDefault.track(constants3.INVITE_EMBED_ACTIONED, obj2);
 };
 export { trackInviteServerClicked };

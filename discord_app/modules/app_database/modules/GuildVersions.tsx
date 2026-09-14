@@ -70,8 +70,8 @@ prototype["getCommittedVersions"] = function getCommittedVersions() {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -84,25 +84,24 @@ prototype["getCommittedVersions"] = function getCommittedVersions() {
             throw value;
           } else if (arg0 === 2) {
             c6 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
             closure_2 = tmp3;
             closure_1 = tmp7;
             closure_129_0 = undefined;
             c4 = 1;
-            let obj3 = DatabaseDaosDefault;
-            const guildVersionsResult = obj3.guildVersions();
+            const guildVersionsResult = DatabaseDaosDefault.guildVersions();
             if (null == guildVersionsResult) {
               c4 = 0;
               c6 = 3;
-              const obj1 = { value: {}, done: true };
-              return obj1;
+              const obj5 = { value: {}, done: true };
+              return obj5;
             } else {
               c5 = 2;
               c6 = 1;
-              const obj2 = { value: guildVersionsResult.getMany(), done: false };
-              return obj2;
+              const obj6 = { value: guildVersionsResult.getMany(), done: false };
+              return obj6;
             }
           }
         } else if (1 === tmp7) {
@@ -110,16 +109,16 @@ prototype["getCommittedVersions"] = function getCommittedVersions() {
           closure_129_1 = closure_3;
           closure_130_6.warn("couldn't load guild versions", closure_129_1);
           c6 = 3;
-          obj3 = { value: {}, done: true };
-          return obj3;
+          const obj7 = { value: {}, done: true };
+          return obj7;
         } else if (arg0 === 1) {
           c6 = 3;
           throw value;
         } else if (arg0 === 2) {
           c4 = 0;
           c6 = 3;
-          const obj4 = { value, done: true };
-          return obj4;
+          const obj8 = { value, done: true };
+          return obj8;
         } else {
           closure_129_0 = value.map((item) => {
             const items = [,];
@@ -132,7 +131,7 @@ prototype["getCommittedVersions"] = function getCommittedVersions() {
           }
           c4 = 0;
           c6 = 3;
-          obj = { value: Object.fromEntries(closure_0), done: true };
+          const obj = { value: Object.fromEntries(closure_0), done: true };
           return obj;
         }
       } catch (tmp20) {
@@ -360,13 +359,13 @@ prototype["commit"] = function commit(database) {
     pending.clear();
   }
 };
-let size = Object.create(GuildVersions.prototype);
-let closure_129_0 = size;
+let obj2 = Object.create(GuildVersions.prototype);
+let closure_129_0 = obj2;
 let tmp2 = new LoggerDefault("GuildVersions");
-size.pending = new Map();
+obj2.pending = new Map();
 let map = new Map();
-size.committed = new Map();
-size.actions = {
+obj2.committed = new Map();
+obj2.actions = {
   BACKGROUND_SYNC(arg0, arg1) {
     return obj.handleBackgroundSync(arg0, arg1);
   },
@@ -407,8 +406,8 @@ size.actions = {
     return obj.handleGuildUpdate(arg0, arg1);
   },
 };
-size = fn(2);
+const size = fn(2);
 let result = size.fileFinishedImporting("modules/app_database/modules/GuildVersions.tsx");
 
-export default size;
+export default obj2;
 export { GuildVersions };

@@ -12,8 +12,7 @@ const result = size.fileFinishedImporting("modules/phone/PhoneActionCreators.tsx
 
 export default {
   setCountryCode(countryCode) {
-    const obj = { type: "PHONE_SET_COUNTRY_CODE", countryCode };
-    obj.dispatch(obj);
+    DispatcherDefault.dispatch({ type: "PHONE_SET_COUNTRY_CODE", countryCode });
   },
   removePhone(password, reason) {
     const HTTP = HTTPUtils.HTTP;
@@ -120,21 +119,25 @@ export default {
       if (tmp15) {
         tmp15 = "" !== fingerprint;
       }
-      const obj1 = {};
+      const obj4 = {};
       if (tmp15) {
-        obj1["X-Fingerprint"] = fingerprint;
+        obj4["X-Fingerprint"] = fingerprint;
       }
       if (flag2) {
-        obj1.authorization = "";
+        obj4.authorization = "";
       }
       const request = {
         url: constants.VERIFY_PHONE,
-        headers: obj1,
+        headers: obj4,
         body: { phone, code },
         oldFormErrors: true,
-        trackedActionData: { event: phone(1250).NetworkActionNames.USER_VERIFY_PHONE },
-        rejectWithError: phone(1272).rejectWithMigratedError(),
+        trackedActionData: { event: phone(1248).NetworkActionNames.USER_VERIFY_PHONE },
+        rejectWithError: null,
       };
+      {
+        event: phone(1248).NetworkActionNames.USER_VERIFY_PHONE;
+      }
+      request.rejectWithError = phone(1270).rejectWithMigratedError();
       yield code(4829).post(request);
       closure_128_0 = value;
       if (closure_129_2) {

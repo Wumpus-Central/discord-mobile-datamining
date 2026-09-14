@@ -7,8 +7,12 @@ import EmojiStore from "../../emojis/EmojiStore.tsx";
 const require = fn;
 function findWordSpan(text, selectionStart, selectionEnd) {
   if (selectionStart !== selectionEnd) {
-    let obj = { query: text.slice(selectionStart, selectionEnd), queryStart: selectionStart, queryEnd: selectionEnd };
-    return obj;
+    const obj2 = {
+      query: text.slice(selectionStart, selectionEnd),
+      queryStart: selectionStart,
+      queryEnd: selectionEnd,
+    };
+    return obj2;
   } else {
     const substr = text.slice(0, selectionStart);
     const substr1 = text.slice(selectionStart);
@@ -19,7 +23,7 @@ function findWordSpan(text, selectionStart, selectionEnd) {
         const match2 = re9.exec(substr);
         let tmp3 = null;
         if (null != match2) {
-          obj = { query: match2[1], queryStart: match2.index, queryEnd: selectionStart };
+          const obj = { query: match2[1], queryStart: match2.index, queryEnd: selectionStart };
           tmp3 = obj;
         }
         return tmp3;
@@ -39,8 +43,8 @@ function findWordSpan(text, selectionStart, selectionEnd) {
     if (str2 == null) {
       str2 = "";
     }
-    obj = { query: str + str2, queryStart: selectionStart - str.length, queryEnd: selectionStart + str2.length };
-    return obj;
+    const obj3 = { query: str + str2, queryStart: selectionStart - str.length, queryEnd: selectionStart + str2.length };
+    return obj3;
   }
 }
 const LoadState = fn(5540).LoadState;
@@ -59,9 +63,8 @@ export default function useEmojiSuggestions(channel) {
   const selectionEnd = channel.selectionEnd;
   const enabled = channel.enabled;
   const maxCount = channel.maxCount;
-  let obj = channel(selectionStart[5]);
   const items = [maxCount];
-  const stateFromStores = obj.useStateFromStores(items, () => maxCount.loadState);
+  const stateFromStores = channel(selectionStart[5]).useStateFromStores(items, () => maxCount.loadState);
   const items1 = [channel, stateFromStores, enabled, maxCount, selectionEnd, selectionStart, text];
   const memo = enabled.useMemo(() => {
     if (enabled) {
@@ -81,11 +84,11 @@ export default function useEmojiSuggestions(channel) {
         if (null == tmp3) {
           return closure_10;
         } else {
-          let obj = { query: tmp3.query, channel, intention: EmojiIntention.CHAT, maxCount };
-          const emojis = AutocompleteUtilsDefault.queryEmojiResults(obj).emojis;
+          const obj3 = { query: tmp3.query, channel, intention: EmojiIntention.CHAT, maxCount };
+          const emojis = AutocompleteUtilsDefault.queryEmojiResults(obj3).emojis;
           if (0 === emojis.unlocked.length) {
             if (0 === emojis.locked.length) {
-              obj = closure_10;
+              let obj = closure_10;
             }
             return obj;
           }
@@ -98,6 +101,7 @@ export default function useEmojiSuggestions(channel) {
     return closure_10;
   }, items1);
   let tmp3 = closure_10;
+  let obj = channel(selectionStart[5]);
   [tmp5, tmp6] = selectionEnd(enabled.useState(closure_10), 2);
   c7 = tmp6;
   if (enabled) {
@@ -120,11 +124,11 @@ export default function useEmojiSuggestions(channel) {
       if (enabled) {
         tmp3 = tmp5;
       }
-      obj = { unlockedEmojis: null, lockedEmojis: null, queryStart: null, queryEnd: null, clear: null };
+      const obj4 = { unlockedEmojis: null, lockedEmojis: null, queryStart: null, queryEnd: null, clear: null };
       ({ unlockedEmojis: obj3.unlockedEmojis, lockedEmojis: obj3.lockedEmojis } = tmp3);
       ({ queryStart: obj3.queryStart, queryEnd: obj3.queryEnd } = memo1);
-      obj.clear = callback;
-      return obj;
+      obj4.clear = callback;
+      return obj4;
     }
   }
   if (!enabled) {

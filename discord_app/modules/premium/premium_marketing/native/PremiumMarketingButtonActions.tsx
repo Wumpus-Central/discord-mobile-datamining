@@ -6,6 +6,8 @@ import navigateToSocialLayerStorefrontDefault from "../../../slayer_storefront/n
 import showMarketingMomentRewardScreen from "showMarketingMomentRewardScreen.tsx";
 import PromotionsStore from "../../promotions/PromotionsStore.tsx";
 
+const require = globalThis.__r;
+
 require = fn;
 const PremiumTypes = fn(1373).PremiumTypes;
 const Constants = fn(1074);
@@ -36,15 +38,18 @@ export const getButtonActionHandler = function getButtonActionHandler(arg0) {
     };
   } else if (cta_button.ButtonAction.OPEN_TIER_1_PAYMENT_MODAL === buttonAction) {
     return () => {
-      let obj = {
-        analyticsLocation: null,
+      const obj = {
+        analyticsLocation: {
+          page,
+          section: constants.FOOTER,
+          object: constants2.BUTTON_CTA,
+          objectType: React5.TIER_1,
+        },
         analyticsLocations,
         premiumType: PremiumTypes.TIER_1,
         onPaymentSuccess,
         onPaymentDismiss,
       };
-      obj = { page, section: constants.FOOTER, object: constants2.BUTTON_CTA, objectType: React5.TIER_1 };
-      obj.analyticsLocation = obj;
       return openPremiumPlanSelectionActionSheetDefault(obj);
     };
   } else {
@@ -52,25 +57,34 @@ export const getButtonActionHandler = function getButtonActionHandler(arg0) {
       if (cta_button.ButtonAction.OPEN_TIER_2_PAYMENT_MODAL_CUSTOM_CONFIRMATION_FOOTER !== buttonAction) {
         if (cta_button.ButtonAction.OPEN_PLAN_SELECTION_MODAL === buttonAction) {
           return () => {
-            let obj = { analyticsLocation: null, analyticsLocations, onPaymentSuccess, onPaymentDismiss };
-            obj = { page, section: constants.FOOTER, object: constants2.BUTTON_CTA, objectType: React5.BUY };
-            obj.analyticsLocation = obj;
+            const obj = {
+              analyticsLocation: {
+                page,
+                section: constants.FOOTER,
+                object: constants2.BUTTON_CTA,
+                objectType: React5.BUY,
+              },
+              analyticsLocations,
+              onPaymentSuccess,
+              onPaymentDismiss,
+            };
             return openPremiumPlanSelectionActionSheetDefault(obj);
           };
         } else {
           const OPEN_MARKETING_PAGE = cta_button.ButtonAction.OPEN_MARKETING_PAGE;
-          return () => {
-            require("openUserSettings");
-            const obj = { screen: constants3.PREMIUM };
-            return obj.openUserSettings(obj);
-          };
+          return () => require("openUserSettings").openUserSettings({ screen: constants3.PREMIUM });
         }
       }
     }
     return () => {
       onPaymentSuccess.getMarketingMomentRewardSkuIds();
       let obj = {
-        analyticsLocation: null,
+        analyticsLocation: {
+          page,
+          section: constants.FOOTER,
+          object: constants2.BUTTON_CTA,
+          objectType: TIER_2.TIER_2,
+        },
         analyticsLocations,
         premiumType: onPaymentDismiss.TIER_2,
         onPaymentSuccess,
@@ -95,8 +109,6 @@ export const getButtonActionHandler = function getButtonActionHandler(arg0) {
             productId === ProductIds.ProductIds.PREMIUM_TIER_2_YEARLY;
         },
       };
-      obj = { page, section: constants.FOOTER, object: constants2.BUTTON_CTA, objectType: TIER_2.TIER_2 };
-      obj.analyticsLocation = obj;
       analyticsLocations(page[5])(obj);
     };
   }

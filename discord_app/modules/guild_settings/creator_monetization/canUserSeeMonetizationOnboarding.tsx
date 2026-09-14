@@ -16,16 +16,18 @@ export const canUserSeeMonetizationOnboarding = function canUserSeeMonetizationO
   if (currentUser != null) {
     id = currentUser.id;
   }
-  const obj = {
+  const obj2 = {
     guild,
     isOwner: guild.ownerId === id,
-    canManageGuildRoleSubscriptions: GuildRoleSubscriptionSettingUtils.canManageGuildRoleSubscriptions(guild),
+    canManageGuildRoleSubscriptions: null,
     isUserInCreatorMonetizationEligibleCountry: null,
     shouldRestrictUpdatingRoleSubscriptionSettings: null,
   };
-  obj.isUserInCreatorMonetizationEligibleCountry =
+  const obj = GuildRoleSubscriptionSettingUtils;
+  obj2.canManageGuildRoleSubscriptions = GuildRoleSubscriptionSettingUtils.canManageGuildRoleSubscriptions(guild);
+  obj2.isUserInCreatorMonetizationEligibleCountry =
     CreatorMonetizationEligibilityExperimentUtils.isUserInCreatorMonetizationEligibleCountry();
-  obj.shouldRestrictUpdatingRoleSubscriptionSettings =
+  obj2.shouldRestrictUpdatingRoleSubscriptionSettings =
     CreatorMonetizationRestrictionsUtils.shouldRestrictUpdatingCreatorMonetizationSettings(guild.id);
-  return obj.canSeeGuildRoleSubscriptionSettings(obj);
+  return obj.canSeeGuildRoleSubscriptionSettings(obj2);
 };

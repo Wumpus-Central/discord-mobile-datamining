@@ -2,6 +2,8 @@
 import wrappers from "../../../../discord_common/js/packages/protos/google/protobuf/wrappers.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
+const require = globalThis.__r;
+
 const result = size.fileFinishedImporting(
   "modules/self_mod/inappropriate_conversation/updateDmSafetyAlertsSetting.tsx",
 );

@@ -1,6 +1,8 @@
 // discord_app/intl/util.tsx
-import _mod1155 from "../../_runtime/metro/01155__.js";
+import _mod1153 from "../../_runtime/metro/01153__.js";
 import noop from "../../_runtime/metro/00019__.js";
+
+const require = globalThis.__r;
 
 require = fn;
 const size = fn(2);
@@ -8,11 +10,11 @@ const result = size.fileFinishedImporting("intl/util.tsx");
 
 export const getAvailableLocales = function getAvailableLocales() {
   _require = require("messages/en-US.messages.js").default;
-  const found = require("../../_runtime/metro/01177__.js").filter((enabled) => enabled.enabled);
+  const found = require("../../_runtime/metro/01175__.js").filter((enabled) => enabled.enabled);
   const mapped = found.map((code) => {
     code = code.code;
     const obj = { value: code, name: code.name, localizedName: null };
-    const obj2 = _mod1155;
+    const obj2 = _mod1153;
     obj.localizedName = closure_0[obj2.runtimeHashMessageKey(obj2, code)];
     return obj;
   });
@@ -31,10 +33,10 @@ export const getAvailableLocales = function getAvailableLocales() {
   });
 };
 export const getLanguages = function getLanguages() {
-  return require("../../_runtime/metro/01177__.js");
+  return require("../../_runtime/metro/01175__.js");
 };
 export const getNormalizedLocale = function getNormalizedLocale(Language, arg1) {
-  const found = require("../../_runtime/metro/01177__.js").filter((enabled) => enabled.enabled);
+  const found = require("../../_runtime/metro/01175__.js").filter((enabled) => enabled.enabled);
   const mapped = found.map((code) => code.code);
   if (mapped.includes(Language)) {
     return Language;
@@ -62,11 +64,11 @@ export const getNormalizedLocale = function getNormalizedLocale(Language, arg1) 
     }
     return found2;
   }
-  const arr = require("../../_runtime/metro/01177__.js");
+  const arr = require("../../_runtime/metro/01175__.js");
 };
-export const useSyncMessages = function useSyncMessages(arg0, util) {
+export const useSyncMessages = function useSyncMessages(arg0, withFormattersResult) {
   closure_0 = arg0;
-  const currentLocale = util;
+  const currentLocale = withFormattersResult;
   const syncExternalStore = noop.useSyncExternalStore(
     (arg0) => closure_0.onChange(arg0),
     () => closure_0.isLocaleLoaded(currentLocale.currentLocale),

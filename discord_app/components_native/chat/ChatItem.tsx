@@ -16,21 +16,21 @@ function DCDChatItem(message) {
   message = message.message;
   const merged = Object.assign(message, Object.assign({ message: 0 }));
   if (message.type === MessageTypes.AUTO_MODERATION_ACTION) {
-    let obj = {};
+    const obj2 = {};
     const merged1 = Object.assign(merged);
-    let tmp3Result = closure_1_10(AutoModerationSystemMessageViewNativeComponent.default, obj);
+    let tmp3Result = closure_1_10(AutoModerationSystemMessageViewNativeComponent.default, obj2);
   } else {
     const AUTOMOD_INCIDENT_ACTIONS = MessageTypes2.MessageTypesSets.AUTOMOD_INCIDENT_ACTIONS;
     if (AUTOMOD_INCIDENT_ACTIONS.has(message.type)) {
-      obj = {};
+      const obj3 = {};
       const merged2 = Object.assign(merged);
-      tmp3Result = closure_1_10(MessageViewNativeComponent.default, obj);
+      tmp3Result = closure_1_10(MessageViewNativeComponent.default, obj3);
     } else if (isSystemMessageDefault(message)) {
-      const obj1 = {};
+      const obj4 = {};
       const merged3 = Object.assign(merged);
-      tmp3Result = closure_1_10(SystemMessageViewNativeComponent.default, obj1);
+      tmp3Result = closure_1_10(SystemMessageViewNativeComponent.default, obj4);
     } else {
-      obj = {};
+      const obj = {};
       const merged4 = Object.assign(merged);
       tmp3Result = closure_1_10(MessageViewNativeComponent.default, obj);
     }
@@ -46,16 +46,12 @@ const jsxProd = fn(21);
 const PX_4 = nativeDefault.space.PX_4;
 const createStyles = fn(4636);
 let closure_14 = createStyles.createStyles((marginLeft, marginTop, paddingTop) => {
-  let obj = {
-    container: null,
-    offset: null,
+  const obj = {
+    container: { position: "relative", overflow: "hidden", paddingTop },
+    offset: { marginTop: -marginTop, marginLeft: -marginLeft },
     gradient: { position: "absolute", bottom: 0, height: 24, width: "100%" },
     itemRow: { backgroundColor: "transparent" },
   };
-  obj = { position: "relative", overflow: "hidden", paddingTop };
-  obj.container = obj;
-  obj = { marginTop: -marginTop, marginLeft: -marginLeft };
-  obj.offset = obj;
   return obj;
 });
 const size = fn(2);
@@ -78,7 +74,6 @@ export default function _default(rowGenerator) {
   const gradientColors = rowGenerator.gradientColors;
   AccessibilityStore = undefined;
   let token;
-  let obj = messageSizeCacheRef;
   [tmp4, c6] = onLayout(messageSizeCacheRef.useState(0), 2);
   const tmp5 = onLayout(messageSizeCacheRef.useState(undefined), 2);
   const constrainedWidth = tmp5[0];
@@ -86,9 +81,8 @@ export default function _default(rowGenerator) {
   const roleStyle = AccessibilityStore.roleStyle;
   let items = [constrainedWidth, roleStyle, message, modifyRow, rowGenerator];
   const memo = messageSizeCacheRef.useMemo(() => {
-    let obj = { constrainedWidth };
-    rowGenerator.setOptions(obj);
-    obj = {
+    rowGenerator.setOptions({ constrainedWidth });
+    const generateResult = rowGenerator.generate({
       roleStyle,
       rowType: constants.MESSAGE,
       changeType: constants2.NOOP,
@@ -96,15 +90,14 @@ export default function _default(rowGenerator) {
       isFirst: true,
       canShowImages: true,
       canAddNewReactions: false,
-    };
-    const generateResult = rowGenerator.generate(obj);
+    });
     if (null != modifyRow) {
       tmp3(generateResult);
     }
-    obj = { rawRow: generateResult, row: null };
+    const obj3 = { rawRow: generateResult, row: null };
     const merged = Object.assign(generateResult);
-    obj.row = JSON.stringify({ index: 0 });
-    return obj;
+    obj3.row = JSON.stringify({ index: 0 });
+    return obj3;
   }, items);
   const rawRow = memo.rawRow;
   const items1 = [rawRow.contextType];
@@ -168,19 +161,21 @@ export default function _default(rowGenerator) {
         tmp23 = maxHeight;
       }
     }
-    obj = { style: tmp17.offset, onLayout: callback1, children: null };
-    obj = { message, row: memo.row, style: tmp17.itemRow };
-    obj.children = rawRow(DCDChatItem, obj);
-    let tmp9Result = tmp9(modifyRow[16]);
-    token = tmp9Result.useToken(backgroundColor);
+    const obj2 = { style: tmp17.offset, onLayout: callback1, children: null };
+    let obj3 = { message, row: memo.row, style: tmp17.itemRow };
+    obj2.children = rawRow(DCDChatItem, obj3);
+    const tmp24 = rawRow;
+    const tmp25 = gradientColors;
+    const tmp27 = rawRow(gradientColors, obj2);
+    token = tmp9(modifyRow[16]).useToken(backgroundColor);
     const items4 = [gradientColors, token];
-    const obj1 = { style: null, onLayout: null, pointerEvents: null, children: null };
+    const obj4 = { style: null, onLayout: null, pointerEvents: null, children: null };
     const items5 = [tmp17.container, rowGenerator.style];
-    const obj2 = { height: tmp23 };
-    items5[2] = obj2;
-    obj1.style = items5;
-    obj1.onLayout = callback;
-    obj1.pointerEvents = pointerEvents;
+    const obj5 = { height: tmp23 };
+    items5[2] = obj5;
+    obj4.style = items5;
+    obj4.onLayout = callback;
+    obj4.pointerEvents = pointerEvents;
     let tmp31 = null != constrainedWidth;
     const memo2 = obj.useMemo(() => {
       let tmp = gradientColors;
@@ -197,17 +192,17 @@ export default function _default(rowGenerator) {
     }
     const items6 = [tmp31];
     if (tmp24Result) {
-      const obj3 = { colors: memo2, style: null };
+      const obj6 = { colors: memo2, style: null };
       const items7 = [tmp17.gradient, rowGenerator.gradientStyles];
-      obj3.style = items7;
-      tmp24Result = rawRow(message(modifyRow[18]), obj3);
+      obj6.style = items7;
+      tmp24Result = tmp24(message(modifyRow[18]), obj6);
     }
     items6[1] = tmp24Result;
-    obj1.children = items6;
-    return token(gradientColors, obj1);
+    obj4.children = items6;
+    return token(tmp25, obj4);
   } else {
-    tmp9Result = tmp9(modifyRow[14]);
-    tmp9Result.isAndroid() ? PX_4 - 2 : PX_4;
+    tmp9(modifyRow[14]).isAndroid() ? PX_4 - 2 : PX_4;
+    const tmp9Result2 = tmp9(modifyRow[14]);
   }
   const tmp3 = onLayout(messageSizeCacheRef.useState(0), 2);
 }

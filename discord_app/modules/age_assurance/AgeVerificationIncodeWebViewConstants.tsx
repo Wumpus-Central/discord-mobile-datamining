@@ -89,8 +89,8 @@ export const parseIncodeWebViewMessage = function parseIncodeWebViewMessage(str)
       if (typeof parsed.interviewId === "string") {
         tmp10 = null;
         if (0 !== parsed.interviewId.length) {
-          let obj = { kind: "capture_complete", interviewId: parsed.interviewId };
-          tmp10 = obj;
+          const obj2 = { kind: "capture_complete", interviewId: parsed.interviewId };
+          tmp10 = obj2;
         }
       }
       return tmp10;
@@ -104,8 +104,8 @@ export const parseIncodeWebViewMessage = function parseIncodeWebViewMessage(str)
         if (typeof parsed.previousInterviewId === "string") {
           tmp9 = null;
           if (0 !== parsed.previousInterviewId.length) {
-            obj = { kind: "fallback_request", previousInterviewId: parsed.previousInterviewId };
-            tmp9 = obj;
+            const obj3 = { kind: "fallback_request", previousInterviewId: parsed.previousInterviewId };
+            tmp9 = obj3;
           }
         }
         return tmp9;

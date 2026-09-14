@@ -20,7 +20,7 @@ export const handleUploadMessageAttachmentsErrors = function handleUploadMessage
       location: "native.handleUploadMessageAttachmentsErrors",
     });
     const maxFileSizeResult = FileUtils.maxFileSize(guildId);
-    let obj = {
+    const obj4 = {
       file: tmp,
       maxSize: null,
       baseMaxSize: null,
@@ -29,50 +29,47 @@ export const handleUploadMessageAttachmentsErrors = function handleUploadMessage
       errorReason: null,
     };
     const tmp27 = showUploadFileSizeErrorDefault;
-    obj.maxSize = KestrelExperiment.getEffectiveKestrelLimit(kestrelConfig, maxFileSizeResult);
-    obj.baseMaxSize = maxFileSizeResult;
-    obj.guildId = guildId;
-    obj.analyticsLocations = tmp2;
+    obj4.maxSize = KestrelExperiment.getEffectiveKestrelLimit(kestrelConfig, maxFileSizeResult);
+    obj4.baseMaxSize = maxFileSizeResult;
+    obj4.guildId = guildId;
+    obj4.analyticsLocations = tmp2;
     let type;
     if (reason != null) {
       type = reason.type;
     }
-    obj.errorReason = type;
-    tmp27(obj);
+    obj4.errorReason = type;
+    tmp27(obj4);
     return true;
   } else if (code === constants.TOO_MANY_ATTACHMENTS) {
-    obj = { title: null, body: null };
+    const obj6 = { title: null, body: null };
     const intl5 = util.intl;
-    obj.title = intl5.string(util.t.wOr6hB);
+    obj6.title = intl5.string(util.t.wOr6hB);
     const intl6 = util.intl;
-    let obj1 = { limit };
-    obj.body = intl6.formatToPlainString(util.t["qqyp/e"], obj1);
-    AlertActionCreatorsDefault.show(obj);
+    const obj8 = { limit };
+    obj6.body = intl6.formatToPlainString(util.t["qqyp/e"], obj8);
+    AlertActionCreatorsDefault.show(obj6);
     return true;
   } else if (code === constants.ENTITY_EMPTY) {
-    let obj2 = { title: null, body: null };
+    const obj9 = { title: null, body: null };
     const intl3 = util.intl;
-    obj2.title = intl3.string(util.t.B3vFdU);
+    obj9.title = intl3.string(util.t.B3vFdU);
     const intl4 = util.intl;
-    obj2.body = intl4.string(util.t["9ZpT2C"]);
-    AlertActionCreatorsDefault.show(obj2);
+    obj9.body = intl4.string(util.t["9ZpT2C"]);
+    AlertActionCreatorsDefault.show(obj9);
     return true;
   } else if (code === constants.INVALID_FILE_ASSET) {
-    obj2 = AlertActionCreatorsDefault;
-    const obj3 = { title: null, body: null };
+    const obj12 = { title: null, body: null };
     const intl = util.intl;
-    obj3.title = intl.string(util.t.B3vFdU);
+    obj12.title = intl.string(util.t.B3vFdU);
     const intl2 = util.intl;
-    obj3.body = intl2.string(util.t.zMEjJg);
-    obj2.show(obj3);
+    obj12.body = intl2.string(util.t.zMEjJg);
+    AlertActionCreatorsDefault.show(obj12);
     return true;
   } else {
-    obj = getAttachmentUploadAbortAlert;
-    const attachmentUploadAbortAlertContent = obj.getAttachmentUploadAbortAlertContent(code);
+    const attachmentUploadAbortAlertContent = getAttachmentUploadAbortAlert.getAttachmentUploadAbortAlertContent(code);
     let flag = null != attachmentUploadAbortAlertContent;
     if (flag) {
-      obj1 = AlertActionCreatorsDefault;
-      obj1.show(attachmentUploadAbortAlertContent);
+      AlertActionCreatorsDefault.show(attachmentUploadAbortAlertContent);
       flag = true;
     }
     return flag;

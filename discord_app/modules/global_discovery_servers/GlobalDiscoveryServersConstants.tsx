@@ -13,7 +13,7 @@ let obj = {
   HUBS: "hubs",
 };
 const items = [obj.HUBS];
-obj = {
+const obj2 = {
   Clans: -3,
   [-3]: "Clans",
   Hub: -2,
@@ -32,7 +32,7 @@ obj = {
   [6]: "Education",
 };
 const items1 = [, , , ,];
-({ Activity: arr2[0], Music: arr2[1], Television: arr2[2], Science: arr2[3], Education: arr2[4] } = obj);
+({ Activity: arr2[0], Music: arr2[1], Television: arr2[2], Science: arr2[3], Education: arr2[4] } = obj2);
 let closure_2 = ["en-GB"];
 const result = 10 * DurationsDefault.Millis.MINUTE;
 const size = fn(2);
@@ -60,7 +60,7 @@ export const SEARCH_RESULTS_CATEGORY_PREFIX = "c";
 export const SEARCH_RESULTS_LANGUAGE_CODE_PREFIX = "l";
 export const FEATURED_GUILDS_CACHE_DURATION = result;
 export const FEATURED_GUILDS_SEARCH_OPTIONS = { categoryId: -1 };
-export const CategoryId = obj;
+export const CategoryId = obj2;
 export const DISCOVERY_SIDEBAR_CATEGORIES = items1;
 export const getLanguageOptions = function getLanguageOptions() {
   const languages = util.getLanguages();

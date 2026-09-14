@@ -9,14 +9,14 @@ function handleAppStateChanged(state) {
       DeclarativeSystemNotifPermissionActionCreators.refreshSystemNotifPermissionsAsync("app_state_active");
   }
 }
-let prototype = function DeclarativeSystemNotifPermissionManager() {
+const prototype = function DeclarativeSystemNotifPermissionManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
   applyArgumentsResult.actions = { APP_STATE_UPDATE: handleAppStateChanged };
   return applyArgumentsResult;
 }.prototype;
 class prototype extends tmp2 {}
-prototype = new prototype();
+const prototype1 = new prototype();
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/notifications/settings/DeclarativeSystemNotifPermissionManager.tsx");
 
-export default prototype;
+export default prototype1;

@@ -31,10 +31,9 @@ export const useShouldForcePipOrientation = function useShouldForcePipOrientatio
     }
     return tmp2;
   });
-  let obj = channel(504);
+  const obj = channel(504);
   const items1 = [EmbeddedActivitiesStore, ChannelRTCStore];
   const stateFromStoresObject = channel(504).useStateFromStoresObject(items1, () => {
-    let obj = EmbeddedActivitiesStore;
     const currentEmbeddedActivity = EmbeddedActivitiesStore.getCurrentEmbeddedActivity();
     const selectedParticipant = ChannelRTCStore.getSelectedParticipant(channel.id);
     let applicationId;
@@ -47,21 +46,23 @@ export const useShouldForcePipOrientation = function useShouldForcePipOrientatio
       if (selectedParticipant != null) {
         id = selectedParticipant.id;
       }
-      obj = { applicationId: null, instanceId: null };
       ({ applicationId: obj3.applicationId, compositeInstanceId: obj3.instanceId } = currentEmbeddedActivity);
       tmp4 = null;
-      if (id === obj2.getEmbeddedActivityParticipantId(obj)) {
+      if (id === obj2.getEmbeddedActivityParticipantId(obj4)) {
         tmp4 = selectedParticipant;
       }
       obj2 = ChannelRTCParticipants;
+      obj4 = { applicationId: null, instanceId: null };
     }
-    obj = { focusedEmbeddedActivityParticipant: tmp4, activityLockOrientation: null };
+    const obj6 = { focusedEmbeddedActivityParticipant: tmp4, activityLockOrientation: null };
     let pipOrientationLockStateForApp = null;
     if (null != currentEmbeddedActivity) {
-      pipOrientationLockStateForApp = obj.getPipOrientationLockStateForApp(currentEmbeddedActivity.applicationId);
+      pipOrientationLockStateForApp = EmbeddedActivitiesStore.getPipOrientationLockStateForApp(
+        currentEmbeddedActivity.applicationId,
+      );
     }
-    obj.activityLockOrientation = pipOrientationLockStateForApp;
-    return obj;
+    obj6.activityLockOrientation = pipOrientationLockStateForApp;
+    return obj6;
   });
   ({ focusedEmbeddedActivityParticipant, activityLockOrientation } = stateFromStoresObject);
   let tmp5 = null;

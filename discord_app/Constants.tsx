@@ -9,15 +9,16 @@ import MessageReferenceTypes from "../discord_common/js/shared/shared-constants/
 import SKUFlags from "../discord_common/js/shared/shared-constants/SKUFlags.tsx";
 import checkEnv from "utils/checkEnv.tsx";
 import RouteConstants from "modules/routing/RouteConstants.tsx";
-import Constants from "../discord_common/js/shared/Constants.tsx";
+import Constants_mod from "../discord_common/js/shared/Constants.tsx";
 import PathUtils from "../discord_common/js/shared/utils/PathUtils.tsx";
 import ColorUtils from "../discord_common/js/shared/utils/ColorUtils.tsx";
-import BigFlagUtils from "../discord_common/js/shared/utils/BigFlagUtils.tsx";
+import BigFlagUtils_mod from "../discord_common/js/shared/utils/BigFlagUtils.tsx";
 import size from "../_runtime/metro/00002__.js";
 import "Constants";
 
 const ME = RouteConstants.ME;
 ({ Routes, FAVORITES, NOTIFICATIONS_INBOX, EMPTY_NUX_SERVER, MOBILE_GUILD_UPSELL_LIST } = RouteConstants);
+let Constants = Constants_mod;
 const frozen = Object.freeze({
   SUPPRESS_JOIN_NOTIFICATIONS: 1,
   SUPPRESS_PREMIUM_SUBSCRIPTIONS: 2,
@@ -33,7 +34,7 @@ const items = [
   MessageTypes.MessageTypes.THREAD_STARTER_MESSAGE,
   MessageTypes.MessageTypes.CONTEXT_MENU_COMMAND,
 ];
-let ActivityActionTypes = {
+const ActivityActionTypes = {
   JOIN: 1,
   [1]: "JOIN",
   LISTEN: 3,
@@ -45,7 +46,8 @@ let ActivityActionTypes = {
   STREAM_REQUEST: 6,
   [6]: "STREAM_REQUEST",
 };
-ActivityActionTypes = {
+const frozen1 = Object.freeze({ ACCOUNT_AGE: 5, MEMBER_AGE: 10 });
+const frozen2 = Object.freeze({
   USER(userId) {
     return "/users/" + userId;
   },
@@ -789,8 +791,2029 @@ ActivityActionTypes = {
     }
     return str;
   },
-  DEBUG_LOG(ANDROID_APP, discord_app_logs) {
-    return "/debug-logs/" + ANDROID_APP + "/" + discord_app_logs;
+  DEBUG_LOG(ANDROID_APP, filename) {
+    return "/debug-logs/" + ANDROID_APP + "/" + filename;
+  },
+  DEBUG_LOGS(arg0) {
+    return "/debug-logs/multi/" + arg0;
+  },
+  REPORT_V2: "/reports",
+  STAGE_REPORT(arg0, arg1) {
+    return "/reports/channels/" + arg0 + "/messages/" + arg1;
+  },
+  REPORT_OPTIONS: "/report/options",
+  INTEGRATIONS: "/integrations",
+  INTEGRATION_JOIN(id) {
+    return "/integrations/" + id + "/join";
+  },
+  INTEGRATION_APPLICATION_IDS_FOR_MY_GUILDS: "/users/@me/guilds/integration-application-ids",
+  USER_GUILD_SETTINGS_BULK: "/users/@me/guilds/settings",
+  USER_GUILD_SETTINGS(arg0) {
+    return "/users/@me/guilds/" + arg0 + "/settings";
+  },
+  GAMES_DETECTABLE: "/games/detectable",
+  GAMES_BLOCKLIST: "/games/detectable/exclusions",
+  NON_GAMES_DETECTABLE: "/applications/non-games/detectable",
+  GAMES: "/games",
+  GAMES_AUTOCOMPLETE: "/games/autocomplete",
+  APPLICATION_ICON(arg0, arg1) {
+    return "/applications/" + arg0 + "/app-icons/" + arg1 + ".png";
+  },
+  APPLICATION_RPC(arg0) {
+    return "/oauth2/applications/" + arg0 + "/rpc";
+  },
+  APPLICATION_ASSETS(arg0) {
+    return "/oauth2/applications/" + arg0 + "/assets";
+  },
+  APPLICATION_EXTERNAL_ASSETS(arg0) {
+    return "/applications/" + arg0 + "/external-assets";
+  },
+  OWNED_APPLICATION_BRANCHES(arg0) {
+    return "/applications/" + arg0 + "/branches";
+  },
+  OAUTH2_AUTHORIZE: "/oauth2/authorize",
+  OAUTH2_AUTHORIZE_SAMSUNG: "/oauth2/samsung/authorize",
+  OAUTH2_AUTHORIZE_SAMSUNG_CALLBACK: "/oauth2/samsung/authorize/callback",
+  OAUTH2_AUTHORIZE_WEBHOOK_CHANNELS: "/oauth2/authorize/webhook-channels",
+  OAUTH2_CURRENT_AUTH: "/oauth2/@me",
+  OAUTH2_TOKENS: "/oauth2/tokens",
+  OAUTH2_TOKEN(arg0) {
+    return "/oauth2/tokens/" + arg0;
+  },
+  OAUTH2_WHITELIST_ACCEPT: "/oauth2/allowlist/accept",
+  OAUTH2_DEVICE_VERIFY: "/oauth2/device/verify",
+  OAUTH2_DEVICE_FINISH: "/oauth2/device/finish",
+  OAUTH2_ACCOUNT_LINKING_ACHIEVEMENT: "/oauth2/account-linking-achievement",
+  MFA_TOTP_ENABLE: "/users/@me/mfa/totp/enable",
+  MFA_TOTP_ENABLE_VERIFY: "/users/@me/mfa/totp/enable/verify",
+  MFA_TOTP_ENABLE_RESEND: "/users/@me/mfa/totp/enable/resend",
+  MFA_TOTP_DISABLE: "/users/@me/mfa/totp/disable",
+  MFA_SMS_ENABLE: "/users/@me/mfa/sms/enable",
+  MFA_SMS_DISABLE: "/users/@me/mfa/sms/disable",
+  MFA_CODES_VERIFICATION: "/users/@me/mfa/codes-verification",
+  MFA_SEND_VERIFICATION_KEY: "/auth/verify/view-backup-codes-challenge",
+  CALL(id) {
+    return "/channels/" + id + "/call";
+  },
+  CALL_RING(channelId) {
+    return "/channels/" + channelId + "/call/ring";
+  },
+  CALL_STOP_RINGING(channelId) {
+    return "/channels/" + channelId + "/call/stop-ringing";
+  },
+  DISABLE_EMAIL_NOTIFICATIONS: "/users/disable-email-notifications",
+  DISABLE_SERVER_HIGHLIGHT_NOTIFICATIONS: "/users/disable-server-highlight-notifications",
+  CHANNEL_WEBHOOKS(channelId) {
+    return "/channels/" + channelId + "/webhooks";
+  },
+  GUILD_WEBHOOKS(id) {
+    return "/guilds/" + id + "/webhooks";
+  },
+  WEBHOOK(webhookId) {
+    return "/webhooks/" + webhookId;
+  },
+  WEBHOOK_INTEGRATION(webhookId, token) {
+    return "/webhooks/" + webhookId + "/" + token;
+  },
+  REACTIONS(channelId, messageId, name) {
+    return "/channels/" + channelId + "/messages/" + messageId + "/reactions/" + name;
+  },
+  REMOVE_REACTIONS(arg0, arg1) {
+    return "/channels/" + arg0 + "/messages/" + arg1 + "/reactions";
+  },
+  REMOVE_EMOJI_REACTIONS(arg0, arg1, arg2) {
+    return "/channels/" + arg0 + "/messages/" + arg1 + "/reactions/" + arg2;
+  },
+  REACTION(channelId, messageId, name, userId) {
+    return "/channels/" + channelId + "/messages/" + messageId + "/reactions/" + name + "/" + userId;
+  },
+  REACTION_WITH_TYPE(channelId, messageId, name, userId, NORMAL) {
+    return "/channels/" + channelId + "/messages/" + messageId + "/reactions/" + name + "/" + NORMAL + "/" + userId;
+  },
+  SEARCH_GUILD(guildId) {
+    return "/guilds/" + guildId + "/messages/search";
+  },
+  SEARCH_TABS_GUILD(searchId) {
+    return "/guilds/" + searchId + "/messages/search/tabs";
+  },
+  SEARCH_TABS_DMS: "/users/@me/messages/search/tabs",
+  CHANGELOG_MESSAGES: "/changelogs/@me/messages",
+  GUILD_APPLICATIONS(arg0) {
+    return "/guilds/" + arg0 + "/applications";
+  },
+  GUILD_EMBEDDED_APPLICATIONS(arg0) {
+    return "/guilds/" + arg0 + "/embedded-applications";
+  },
+  APPLIED_GUILD_BOOSTS_FOR_GUILD(arg0) {
+    return "/guilds/" + arg0 + "/premium/subscriptions";
+  },
+  APPLIED_GUILD_BOOST(arg0, arg1) {
+    return "/guilds/" + arg0 + "/premium/subscriptions/" + arg1;
+  },
+  APPLIED_GUILD_BOOST_COOLDOWN: "/users/@me/guilds/premium/subscriptions/cooldown",
+  USER_APPLIED_GUILD_BOOSTS: "/users/@me/guilds/premium/subscriptions",
+  USER_GUILD_BOOST_SLOTS: "/users/@me/guilds/premium/subscription-slots",
+  USER_GUILD_BOOST_SLOT_CANCEL(arg0) {
+    return "/users/@me/guilds/premium/subscription-slots/" + arg0 + "/cancel";
+  },
+  USER_GUILD_BOOST_SLOT_UNCANCEL(arg0) {
+    return "/users/@me/guilds/premium/subscription-slots/" + arg0 + "/uncancel";
+  },
+  GUILD_POWERUPS(guildId) {
+    return "/guilds/" + guildId + "/powerups";
+  },
+  GUILD_POWERUP_TOGGLE(arg0, arg1) {
+    return "/guilds/" + arg0 + "/skus/" + arg1;
+  },
+  GUILD_POWERUP_UPDATE(arg0, arg1) {
+    return "/guilds/" + arg0 + "/entitlements/" + arg1;
+  },
+  GAME_SERVERS(guildId) {
+    return "/guilds/" + guildId + "/game-servers";
+  },
+  GAME_SERVER_REGIONS(arg0) {
+    return "/guilds/" + arg0 + "/game-server-regions";
+  },
+  GAME_SERVER_MY_REGIONS: "/users/@me/game-server-regions",
+  GAME_SERVERS_ME: "/users/@me/game-servers",
+  GAME_SERVER_ME(id) {
+    return "/users/@me/game-servers/" + id;
+  },
+  GAME_SERVER_ME_WAKE(arg0) {
+    return "/users/@me/game-servers/" + arg0 + "/wake";
+  },
+  GAME_SERVER_WAKE(guildId, arg1) {
+    return "/guilds/" + guildId + "/game-servers/" + arg1 + "/wake";
+  },
+  SEARCH_CHANNEL(searchId) {
+    return "/channels/" + searchId + "/messages/search";
+  },
+  SEARCH_TABS_CHANNEL(searchId) {
+    return "/channels/" + searchId + "/messages/search/tabs";
+  },
+  BILLING_STRIPE_SETUP_INTENT_SECRET: "/users/@me/billing/stripe/setup-intents",
+  BILLING_STRIPE_SETUP_INTENT_SECRET_FOR_PAYMENT_ELEMENTS: "/users/@me/billing/stripe/payment-elements/setup-intents",
+  BILLING_ADYEN_PAYMENT_METHODS: "/users/@me/billing/adyen/payment-methods",
+  BILLING_PAYMENT_SOURCES: "/users/@me/billing/payment-sources",
+  BILLING_PAYMENT_SOURCES_VALIDATE_BILLING_ADDRESS: "/users/@me/billing/payment-sources/validate-billing-address",
+  BILLING_PAYMENT_SOURCE(arg0) {
+    return "/users/@me/billing/payment-sources/" + arg0;
+  },
+  BILLING_WALLET_INFORMATION(paymentSourceId) {
+    return "/users/@me/billing/wallet/" + paymentSourceId + "/information";
+  },
+  BILLING_PAYMENTS: "/users/@me/billing/payments",
+  BILLING_PAYMENT(arg0) {
+    return "/users/@me/billing/payments/" + arg0;
+  },
+  BILLING_PAYMENTS_VOID(arg0) {
+    return "/users/@me/billing/payments/" + arg0 + "/void";
+  },
+  BILLING_INVOICE_PDF: "/users/@me/billing/invoice",
+  BILLING_INVOICE_BREAKDOWN: "/users/@me/billing/invoice/breakdown",
+  BILLING_STRIPE_PAYMENT_INTENTS(paymentId) {
+    return "/users/@me/billing/stripe/payment-intents/payments/" + paymentId;
+  },
+  BILLING_STRIPE_PAYMENT_INTENTS_VIA_ID(arg0) {
+    return "/users/@me/billing/stripe/payment-intents/" + arg0;
+  },
+  BILLING_STANDALONE_CHECKOUT_LOGIN_HANDOFF(arg0, arg1, arg2) {
+    return (
+      "" +
+      window.GLOBAL_ENV.WEBAPP_ENDPOINT +
+      "/billing/premium/subscribe/login-handoff?handoff_key=" +
+      arg0 +
+      "&handoff_token=" +
+      arg1 +
+      "&destination=" +
+      arg2
+    );
+  },
+  BILLING_PAYPAL_BILLING_AGREEMENT_TOKENS: "/users/@me/billing/paypal/billing-agreement-tokens",
+  BILLING_POPUP_BRIDGE(arg0) {
+    return "/billing/popup-bridge/" + arg0;
+  },
+  BILLING_POPUP_BRIDGE_CALLBACK(paymentSourceType) {
+    return "/billing/popup-bridge/" + paymentSourceType + "/callback";
+  },
+  BILLING_POPUP_BRIDGE_CALLBACK_REDIRECT_PREFIX(type, c0, success) {
+    let str = success;
+    if (success == null) {
+      str = "";
+    }
+    return "/billing/popup-bridge/" + type + "/callback/" + c0 + "/" + str;
+  },
+  BILLING_SUBSCRIPTIONS: "/users/@me/billing/subscriptions",
+  BILLING_PERKS_RELEVANCE: "/users/@me/billing/perks-relevance",
+  BILLING_NITRO_AFFINITY: "/users/@me/billing/nitro-affinity",
+  BILLING_SUBSCRIPTIONS_PREVIEW: "/users/@me/billing/subscriptions/preview",
+  BILLING_APPLY_APPLE_RECEIPT: "/billing/apple/apply-receipt",
+  BILLING_APPLE_SUBSCRIPTION(subscription_id) {
+    return "/billing/apple/subscriptions/" + subscription_id;
+  },
+  BILLING_GENERATE_APPLE_TRIAL_OFFER_SIGNATURE: "/users/@me/billing/apple/trial-offer-signature",
+  BILLING_CREATE_APPLE_IAP_JWT_TOKEN: "/billing/apple/jwt-token",
+  BILLING_ACOM_SUBSCRIPTION_MIGRATION: "/billing/apple/acom-subscriptions/migrate",
+  BILLING_SUBSCRIPTION(id) {
+    return "/users/@me/billing/subscriptions/" + id;
+  },
+  BILLING_SUBSCRIPTION_PREVIEW(arg0) {
+    return "/users/@me/billing/subscriptions/" + arg0 + "/preview";
+  },
+  BILLING_SUBSCRIPTION_INVOICE(arg0) {
+    return "/users/@me/billing/subscriptions/" + arg0 + "/invoices";
+  },
+  BILLING_INVOICE_MANUAL_PAYMENT(id, arg1) {
+    return "/users/@me/billing/subscriptions/" + id + "/invoices/" + arg1 + "/pay";
+  },
+  BILLING_SUBSCRIPTION_REWARDS(arg0) {
+    return "/users/@me/billing/subscriptions/" + arg0 + "/rewards";
+  },
+  BILLING_SUBSCRIPTION_PROMOTION_REWARD(arg0) {
+    return "/users/@me/billing/subscriptions/" + arg0 + "/promotion-reward";
+  },
+  Billing_SUBSCRIPTION_REWARD_ELIGIBILITY(arg0) {
+    return "/users/@me/billing/subscriptions/" + arg0 + "/reward-eligibility";
+  },
+  BILLING_SUBSCRIPTION_ELIGIBLE_USERS(arg0) {
+    return "/users/@me/billing/subscriptions/" + arg0 + "/eligible-users";
+  },
+  BILLING_SUBSCRIPTION_INVITES(arg0) {
+    return "/users/@me/billing/subscriptions/" + arg0 + "/invites";
+  },
+  BILLING_SUBSCRIPTION_INVITE(arg0, arg1) {
+    return "/users/@me/billing/subscriptions/" + arg0 + "/members/" + arg1 + "/invite";
+  },
+  BILLING_SUBSCRIPTION_REMOVE_USER(arg0, arg1) {
+    return "/users/@me/billing/subscriptions/" + arg0 + "/members/" + arg1;
+  },
+  BILLING_SUBSCRIPTION_MEMBERS(arg0) {
+    return "/users/@me/billing/subscriptions/" + arg0 + "/members";
+  },
+  BILLING_COUNTRY_CODE: "/users/@me/billing/country-code",
+  BILLING_PAYMENT_SOURCE_CREATION_CONTEXT: "/users/@me/billing/payment-source-creation-context",
+  BILLING_LOCATION: "/users/@me/billing/location-info",
+  BILLING_LOCALIZED_PROMO: "/users/@me/billing/localized-pricing-promo",
+  BILLING_GIFT_CARD_VIEW: "/billing/gift-card/view",
+  BILLING_GIFT_CARD_REDEEM: "/billing/gift-card/redeem",
+  BILLING_STORE_COUNTRY: "/billing/store-country",
+  PREMIUM_GROUP_MEMBERSHIP: "/users/@me/premium-group/membership",
+  PREMIUM_GROUP_INVITES: "/users/@me/premium-group/invites",
+  PREMIUM_GROUP_INVITE(subscriptionGroupMemberId) {
+    return "/users/@me/premium-group/invites/" + subscriptionGroupMemberId;
+  },
+  PROGRAM_REWARDS: "/users/@me/program-rewards",
+  VERIFY_PURCHASE: "/google-play/verify-purchase-token",
+  DOWNGRADE_SUBSCRIPTION: "/google-play/downgrade-subscription",
+  GOOGLE_PLAY_VALIDATE_PURCHASE: "/google-play/validate-purchase",
+  USER_AGREEMENTS: "/users/@me/agreements",
+  HANDOFF: "/auth/handoff",
+  HANDOFF_EXCHANGE: "/auth/handoff/exchange",
+  LIBRARY: "/users/@me/library",
+  LIBRARY_APPLICATION_BRANCH(arg0, arg1) {
+    return "/users/@me/library/" + arg0 + "/" + arg1;
+  },
+  LIBRARY_APPLICATION_DELETE(arg0) {
+    return "/users/@me/library/" + arg0;
+  },
+  AUTH_LOCATION_METADATA: "/auth/location-metadata",
+  USER_HARVEST: "/users/@me/harvest",
+  APPLICATION_LIVE_BUILD(arg0, arg1) {
+    return "/applications/" + arg0 + "/branches/" + arg1 + "/builds/live";
+  },
+  APPLICATION_BUILD_SIZE(arg0, arg1, arg2) {
+    return "/applications/" + arg0 + "/branches/" + arg1 + "/builds/" + arg2 + "/size";
+  },
+  APPLICATION_BRANCHES: "/branches",
+  APPLICATION_PUBLIC(applicationId) {
+    return "/applications/" + applicationId + "/public";
+  },
+  APPLICATIONS_PUBLIC: "/applications/public",
+  APPLICATIONS_TRENDING: "/applications/trending/global",
+  APPLICATION_BRANCH_LIST(arg0) {
+    return "/applications/" + arg0 + "/branches";
+  },
+  LIBRARY_APPLICATION_INSTALLED(arg0, arg1) {
+    return "/users/@me/library/" + arg0 + "/" + arg1 + "/installed";
+  },
+  STOREFRONT_PREMIUM_BUTTON(arg0) {
+    return "/applications/storefront/interactions/premium-button/" + arg0;
+  },
+  STOREFRONT_COLLECTIONS_WITH_PRODUCTS: "/storefront/collections",
+  STOREFRONT_COLLECTIONS_FOR_APPLICATION: "/storefront/collections/applications",
+  STOREFRONT_COLLECTION_WITH_PRODUCTS(GAME_SERVER_COLLECTION_ID) {
+    return "/storefront/collections/" + GAME_SERVER_COLLECTION_ID;
+  },
+  STOREFRONT_PRODUCTS_WITH_SKUS: "/storefront/products",
+  STOREFRONT_PRODUCTS_BY_SKU_IDS: "/storefront/products/skus",
+  STOREFRONT_PRODUCT_BY_SKU_ID(skuId) {
+    return "/storefront/products/sku/" + skuId;
+  },
+  STOREFRONT_PROMOTIONS: "/storefront/promotions",
+  STOREFRONT_PRICES: "/storefront/pricing",
+  STORE_DIRECTORY_LAYOUT(arg0) {
+    return "/store/directory-layouts/" + arg0;
+  },
+  STORE_DIRECTORY(arg0) {
+    return "/store/directory/" + arg0;
+  },
+  STORE_EMAIL_RESEND_PAYMENT_VERIFICATION: "/store/email/resend-payment-verification",
+  STORE_PUBLISHED_LISTINGS_APPLICATIONS: "/store/published-listings/applications",
+  STORE_PUBLISHED_LISTINGS_APPLICATION(arg0) {
+    return "/store/published-listings/applications/" + arg0;
+  },
+  STORE_PUBLISHED_LISTINGS_SKUS: "/store/published-listings/skus",
+  STORE_PUBLISHED_LISTINGS_SKU(skuId) {
+    return "/store/published-listings/skus/" + skuId;
+  },
+  STORE_PUBLISHED_LISTINGS_SKU_JOIN_GUILD(arg0) {
+    return "/store/published-listings/skus/" + arg0 + "/guild/join";
+  },
+  STORE_PUBLISHED_LISTINGS_SUBSCRIPTION_PLANS(skuId) {
+    return "/store/published-listings/skus/" + skuId + "/subscription-plans";
+  },
+  STORE_SKU(skuId) {
+    return "/store/skus/" + skuId;
+  },
+  STORE_SKU_PURCHASE(arg0) {
+    return "/store/skus/" + arg0 + "/purchase";
+  },
+  STORE_LISTING(arg0) {
+    return "/store/listings/" + arg0;
+  },
+  STORE_LISTINGS_SKU(skuId) {
+    return "/store/skus/" + skuId + "/listings";
+  },
+  SOCIAL_LAYER_APPLICATION_STOREFRONT(guildId) {
+    return "/partner-sdk/guilds/" + guildId + "/application-storefront";
+  },
+  SOCIAL_LAYER_STOREFRONT_BY_APPLICATION_ID(applicationId) {
+    return "/partner-sdk/applications/" + applicationId + "/application-storefront";
+  },
+  SOCIAL_LAYER_STOREFRONTS_ALL(applicationId) {
+    return "/partner-sdk/applications/" + applicationId + "/storefronts/preview";
+  },
+  SOCIAL_LAYER_STOREFRONT_BY_ID(arg0, storefrontId) {
+    return "/partner-sdk/applications/" + arg0 + "/storefront/" + storefrontId + "/preview";
+  },
+  SOCIAL_LAYER_APPLICATION_STOREFRONT_SKU_BY_APPLICATION_ID(applicationId, id) {
+    return "/partner-sdk/applications/" + applicationId + "/storefront/skus/" + id;
+  },
+  SOCIAL_LAYER_APPLICATION_STOREFRONT_SKU(arg0, id) {
+    return "/partner-sdk/guilds/" + arg0 + "/application-storefront/skus/" + id;
+  },
+  SOCIAL_LAYER_APPLICATION_STOREFRONT_SKU_ELIGIBILITY(arg0, skuId) {
+    return "/partner-sdk/applications/" + arg0 + "/storefront/skus/" + skuId + "/eligibility";
+  },
+  SOCIAL_LAYER_STOREFRONT_ANNOUNCEMENT(guildId) {
+    return "/partner-sdk/guilds/" + guildId + "/application-storefront/announcement";
+  },
+  SOCIAL_LAYER_STOREFRONT_CONFIG: "/partner-sdk/storefront-config",
+  SOCIAL_LAYER_STOREFRONT_LAUNCH_ANNOUNCEMENT: "/partner-sdk/storefront-launch-announcement",
+  ORDER_GET(arg0) {
+    return "/billing/orders/" + arg0;
+  },
+  ORDER_CREATE: "/billing/orders",
+  ORDER_LIST: "/billing/orders",
+  ORDER_PATCH_LINE_ITEM(arg0, arg1) {
+    return "/billing/orders/" + arg0 + "/line-items/" + arg1;
+  },
+  ORDER_UPDATE(arg0) {
+    return "/billing/orders/" + arg0;
+  },
+  ORDER_SIGN(arg0) {
+    return "/billing/orders/" + arg0 + "/sign";
+  },
+  ORDER_CANCEL_SIGNING(orderId) {
+    return "/billing/orders/" + orderId + "/cancel-signing";
+  },
+  ORDER_DISCARD(arg0) {
+    return "/billing/orders/" + arg0 + "/discard";
+  },
+  ORDER_ENTITLEMENTS(arg0) {
+    return "/billing/orders/" + arg0 + "/entitlements";
+  },
+  DEBUG_TEMPORAL_INFRA_PROOF_OF_CONCEPT: "/debug/temporal/infra-proof-of-concept",
+  APPLICATION_SKUS(arg0) {
+    return "/applications/" + arg0 + "/skus";
+  },
+  APPLICATION_MANAGED_ACTIVITY_LINK(arg0, decodedLinkId) {
+    return "/applications/" + arg0 + "/managed-links/" + decodedLinkId;
+  },
+  APPLICATION_QUICK_ACTIVITY_LINK(arg0, decodedLinkId) {
+    return "/applications/" + arg0 + "/quick-links/" + decodedLinkId;
+  },
+  STORE_EULA(arg0) {
+    return "/store/eulas/" + arg0;
+  },
+  ENTITLEMENTS_FOR_APPLICATION(id) {
+    return "/users/@me/applications/" + id + "/entitlements";
+  },
+  ENTITLEMENTS_FOR_USER: "/users/@me/entitlements",
+  USER_MEANINGFULLY_ONLINE: "/users/@me/meaningfully-online",
+  ENTITLEMENT_TICKET(arg0) {
+    return "/users/@me/applications/" + arg0 + "/entitlement-ticket";
+  },
+  APPLICATION_TICKET(id) {
+    return "/users/@me/applications/" + id + "/ticket";
+  },
+  ENTITLEMENTS_GIFTABLE: "/users/@me/entitlements/gifts",
+  STORE_ASSET(React5, banner_asset_id, mp4) {
+    return "/store/applications/" + React5 + "/assets/" + banner_asset_id + "." + mp4;
+  },
+  APPLICATION_ASSET(arg0, arg1, arg2) {
+    return "/applications/" + arg0 + "/app-assets/" + arg1 + "." + arg2;
+  },
+  APPLICATION_STORAGE(arg0, arg1) {
+    return "/applications/" + arg0 + "/branches/" + arg1 + "/storage";
+  },
+  APPLICATION_DISCLOSURES(arg0) {
+    return "/applications/" + arg0 + "/disclosures";
+  },
+  GIFS_SEARCH: "/gifs/search",
+  GIFS_TRENDING: "/gifs/trending",
+  GIFS_TRENDING_GIFS: "/gifs/trending-gifs",
+  GIFS_SELECT: "/gifs/select",
+  GIFS_SUGGEST: "/gifs/suggest",
+  GIFS_TRENDING_SEARCH: "/gifs/trending-search",
+  GIFT_CODE_RESOLVE(arg0) {
+    return "/entitlements/gift-codes/" + arg0;
+  },
+  GIFT_CODE_REDEEM(arg0) {
+    return "/entitlements/gift-codes/" + arg0 + "/redeem";
+  },
+  PARTNER_PROMOTIONS(arg0) {
+    return "/entitlements/partner-promotions/" + arg0;
+  },
+  USER_GIFT_CODE_CREATE: "/users/@me/entitlements/gift-codes",
+  USER_GIFT_CODE_DELIVERIES: "/users/@me/gift-code-deliveries",
+  USER_GIFT_CODE_REVOKE(code) {
+    return "/users/@me/entitlements/gift-codes/" + code;
+  },
+  USER_GIFT_CODES: "/users/@me/entitlements/gift-codes",
+  GIFT_INTENTS_DISMISS: "/users/@me/gift-intents/dismiss",
+  USER_TRIAL_OFFER: "/users/@me/billing/user-trial-offer",
+  USER_TRIAL_OFFER_ACKNOWLEDGED(id) {
+    return "/users/@me/billing/user-trial-offer/" + id + "/ack";
+  },
+  USER_OFFER: "/users/@me/billing/user-offer",
+  USER_OFFER_ACKNOWLEDGED: "/users/@me/billing/user-offer/ack",
+  CHURN_USER_OFFER: "/users/@me/billing/churn-user-offer",
+  USER_OFFER_REDEEM: "/users/@me/billing/user-offer/redeem",
+  REACTIVATION_OFFER_REDEEM(id, id2) {
+    return "/users/@me/billing/subscriptions/" + id + "/reactivation-offers/" + id2 + "/redeem";
+  },
+  USER_OFFER_TRIGGER: "/users/@me/billing/user-offer/trigger",
+  USER_PERKS_DEMOS: "/users/@me/perks-demos",
+  USER_PERKS_DEMOS_ACTIVATE(arg0) {
+    return "/users/@me/activate-perk-demo/" + arg0;
+  },
+  PARTNER_PERK(arg0) {
+    return "/users/@me/partner-perks/" + arg0;
+  },
+  PARTNER_PERK_ACTIVATION_STATUS(arg0) {
+    return "/users/@me/partner-perks/" + arg0 + "/activation-status";
+  },
+  GUILD_DISCOVERY: "/discoverable-guilds",
+  MOBILE_GAME_COMMUNITIES: "/discoverable-guilds/mobile-game-communities",
+  GUILD_DISCOVERY_SEARCH: "/discoverable-guilds/search",
+  GUILD_DISCOVERY_CATEGORIES: "/discovery/categories",
+  GUILD_DISCOVERY_SLUG(arg0) {
+    return "/discovery/" + arg0;
+  },
+  GUILD_DISCOVERY_METADATA(arg0) {
+    return "/guilds/" + arg0 + "/discovery-metadata";
+  },
+  GUILD_DISCOVERY_UPDATE_CATEGORY(guildId, categoryId) {
+    return "/guilds/" + guildId + "/discovery-categories/" + categoryId;
+  },
+  STREAM_PREVIEW(HTTPResult) {
+    return "/streams/" + HTTPResult + "/preview";
+  },
+  STREAM_NOTIFY(arg0) {
+    return "/streams/" + arg0 + "/notify";
+  },
+  STREAM(encodeStreamKeyResult) {
+    return "/streams/" + encodeStreamKeyResult + "/stream";
+  },
+  GUILD_PREVIEW(guildId) {
+    return "/guilds/" + guildId + "/preview";
+  },
+  USER_AFFINITIES: "/users/@me/affinities/users",
+  USER_AFFINITIES_V2: "/users/@me/affinities/v2/users",
+  GUILD_AFFINITIES: "/users/@me/affinities/guilds",
+  CHANNEL_AFFINITIES: "/users/@me/affinities/channels",
+  CHANNEL_AFFINITIES_V2: "/users/@me/affinities/v2/channels",
+  PARTNERS_CONNECTIONS: "/partners/connections",
+  PARTNERS_APPLY: "/partners/apply",
+  STICKER_PACK(arg0) {
+    return "/sticker-packs/" + arg0;
+  },
+  STORE_DIRECTORY_LAYOUT_STICKER_PACKS(arg0) {
+    return "/sticker-packs/directory-v2/" + arg0;
+  },
+  STICKER_ASSET(id, stickerExtensionFromFormatType) {
+    return "/stickers/" + id + "." + stickerExtensionFromFormatType;
+  },
+  STICKER(arg0) {
+    return "/stickers/" + arg0;
+  },
+  STICKER_PACKS: "/sticker-packs",
+  GUILD_STICKER_PACKS(guildId) {
+    return "/guilds/" + guildId + "/stickers";
+  },
+  GUILD_STICKER(guild_id, id) {
+    return "/guilds/" + guild_id + "/stickers/" + id;
+  },
+  STICKER_GUILD_DATA(arg0) {
+    return "/stickers/" + arg0 + "/guild";
+  },
+  INTERACTIONS: "/interactions",
+  MESSAGE_INTERACTION_DATA(arg0, arg1) {
+    return "/channels/" + arg0 + "/messages/" + arg1 + "/interaction-data";
+  },
+  ACTIVITY_SHELF: "/activities/shelf",
+  ACTIVITY_CHANNEL_LAUNCH(arg0, arg1) {
+    return "/activities/" + arg0 + "/" + arg1;
+  },
+  ACTIVITY_JOIN_INSTANCE(arg0, arg1) {
+    return "/activities/applications/" + arg0 + "/activity-instances/" + arg1 + "/join";
+  },
+  ACTIVITY_TEST_MODE(arg0) {
+    return "/activities/" + arg0 + "/test-mode";
+  },
+  ACTIVITY_LEAVE(arg0, id, arg2) {
+    return "/applications/" + arg0 + "/activities/" + id + "/instances/" + arg2 + "/leave";
+  },
+  ACTIVITIES_DISCORD_CONFIG(arg0) {
+    return "/activities/discord-config/" + arg0;
+  },
+  ACTIVITIES_TRUSTED_LINKS(arg0) {
+    return "/applications/" + arg0 + "/trusted-links/check";
+  },
+  APPLICATION_UPLOAD_ATTACHMENT(arg0) {
+    return "/applications/" + arg0 + "/attachment";
+  },
+  APPLICATION_PROXY_TICKET(arg0) {
+    return "/applications/" + arg0 + "/proxy-tickets";
+  },
+  CHANNEL_THREADS(id) {
+    return "/channels/" + id + "/threads";
+  },
+  CHANNEL_MESSAGE_THREADS(id, arg1) {
+    return "/channels/" + id + "/messages/" + arg1 + "/threads";
+  },
+  CHANNEL_LINKED_LOBBY(arg0) {
+    return "/channels/" + arg0 + "/linked-lobby";
+  },
+  APPLICATION_BOT_GUILD_COMMAND_PERMISSIONS(arg0, arg1, arg2) {
+    return "/applications/" + arg0 + "/guilds/" + arg1 + "/commands/" + arg2 + "/permissions";
+  },
+  UPDATE_VOICE_STATE(guildId) {
+    let str = id;
+    if (id === undefined) {
+      str = "@me";
+    }
+    return "/guilds/" + guildId + "/voice-states/" + str;
+  },
+  GET_REPORT_MENU(arg0) {
+    return "/reporting/menu/" + arg0;
+  },
+  GET_UNAUTHENTICATED_REPORT_MENU(arg0) {
+    return "/reporting/unauthenticated/menu/" + arg0;
+  },
+  SUBMIT_REPORT_MENU(name) {
+    return "/reporting/" + name;
+  },
+  SUBMIT_UNAUTHENTICATED_REPORT_MENU(name) {
+    return "/reporting/unauthenticated/" + name;
+  },
+  SEND_UNAUTHENTICATED_REPORT_PINCODE(name) {
+    return "/reporting/unauthenticated/" + name + "/code";
+  },
+  VERIFY_UNAUTHENTICATED_REPORT(name) {
+    return "/reporting/unauthenticated/" + name + "/verify";
+  },
+  SUBMIT_MODERATOR_MESSAGE_REPORT(channel_id, id) {
+    return "/channels/" + channel_id + "/" + id + "/mod-report";
+  },
+  MODERATOR_REPORT_CLOSE(arg0) {
+    return "/mod-report/" + arg0 + "/close";
+  },
+  REPORT_TO_MOD_REOPEN(arg0) {
+    return "/mod-report/" + arg0 + "/reopen";
+  },
+  DSA_EXPERIMENT_UNAUTHENTICATED: "/reporting/unauthenticated/experiment",
+  DSA_CAPABILITIES: "/reporting/unauthenticated/capabilities",
+  SUBMIT_REPORT_SECOND_LOOK: "/reporting/review",
+  STAGE_INSTANCES: "/stage-instances",
+  STAGE_INSTANCES_EXTRA: "/stage-instances/extra",
+  STAGE_INSTANCE(id) {
+    return "/stage-instances/" + id;
+  },
+  USER_SURVEY: "/users/@me/survey",
+  EMBEDDED_SURVEY(arg0) {
+    return "/users/@me/embedded-survey/" + arg0;
+  },
+  EMBEDDED_SURVEY_RESPONSE(arg0) {
+    return "/users/@me/embedded-surveys/" + arg0 + "/responses";
+  },
+  EMBEDDED_SURVEY_ACTION: "/users/@me/embedded-survey/action",
+  USER_SURVEY_SEEN(key) {
+    return "/users/@me/survey/" + key + "/seen";
+  },
+  GUILD_EVENTS: "/guild-events",
+  GUILD_EVENT(arg0, arg1) {
+    return "/guilds/" + arg0 + "/scheduled-events/" + arg1;
+  },
+  GUILD_EVENT_IMAGE(id, image, png) {
+    return "/guild-events/" + id + "/images/" + image + "." + png;
+  },
+  GUILD_EVENTS_FOR_GUILD(id) {
+    return "/guilds/" + id + "/scheduled-events";
+  },
+  GUILD_EVENT_USER_COUNTS(arg0, arg1) {
+    return "/guilds/" + arg0 + "/scheduled-events/" + arg1 + "/users/counts";
+  },
+  GUILD_EVENT_USERS(arg0, arg1, arg2) {
+    let str = "";
+    if (null != arg2) {
+      const _HermesInternal = HermesInternal;
+      str = "/" + arg2;
+    }
+    return "/guilds/" + arg0 + "/scheduled-events/" + arg1 + str + "/users";
+  },
+  USER_GUILD_EVENT(guildId, guildEventId, guildEventExceptionId) {
+    let str = "";
+    if (null != guildEventExceptionId) {
+      const _HermesInternal = HermesInternal;
+      str = "/" + guildEventExceptionId;
+    }
+    return "/guilds/" + guildId + "/scheduled-events/" + guildEventId + str + "/users/@me";
+  },
+  USER_GUILD_EVENTS: "/users/@me/scheduled-events",
+  GUILD_EVENT_EXCEPTIONS(guild_id, id) {
+    return "/guilds/" + guild_id + "/scheduled-events/" + id + "/exceptions";
+  },
+  GUILD_EVENT_EXCEPTION(guild_id, id, event_exception_id) {
+    return "/guilds/" + guild_id + "/scheduled-events/" + id + "/exceptions/" + event_exception_id;
+  },
+  MEMBER_SAFETY_SUPPLEMENTAL(arg0) {
+    return "/guilds/" + arg0 + "/members/supplemental";
+  },
+  GUILD_MEMBER_SEARCH(arg0) {
+    return "/guilds/" + arg0 + "/members-search";
+  },
+  GUILD_AUTOMOD_RULES(guildId) {
+    return "/guilds/" + guildId + "/auto-moderation/rules";
+  },
+  GUILD_AUTOMOD_RULE(guildId, id) {
+    return "/guilds/" + guildId + "/auto-moderation/rules/" + id;
+  },
+  GUILD_AUTOMOD_VALIDATE_RULE(guildId) {
+    return "/guilds/" + guildId + "/auto-moderation/rules/validate";
+  },
+  GUILD_AUTOMOD_CLEAR_MENTION_RAID(arg0) {
+    return "/guilds/" + arg0 + "/auto-moderation/clear-mention-raid";
+  },
+  GUILD_AUTOMOD_ALERT_ACTION(guild_id) {
+    return "/guilds/" + guild_id + "/auto-moderation/alert-action";
+  },
+  GUILD_INCIDENT_ACTIONS(arg0) {
+    return "/guilds/" + arg0 + "/incident-actions";
+  },
+  GUILD_INCIDENT_REPORT_FALSE_ALARM(arg0) {
+    return "/guilds/" + arg0 + "/auto-moderation/false-alarm";
+  },
+  GUILD_INCIDENT_REPORT_RAID(arg0) {
+    return "/guilds/" + arg0 + "/auto-moderation/report-raid";
+  },
+  DIRECTORY_CHANNEL_ENTRIES(arg0) {
+    return "/channels/" + arg0 + "/directory-entries";
+  },
+  DIRECTORY_CHANNEL_ENTRY(channelId, guildId) {
+    return "/channels/" + channelId + "/directory-entry/" + guildId;
+  },
+  DIRECTORY_ENTRIES_SEARCH(channelId) {
+    return "/channels/" + channelId + "/directory-entries/search";
+  },
+  DIRECTORY_CHANNEL_CATEGORY_COUNTS(arg0) {
+    return "/channels/" + arg0 + "/directory-entries/counts";
+  },
+  DIRECTORY_CHANNEL_LIST_BY_ID(arg0) {
+    return "/channels/" + arg0 + "/directory-entries/list";
+  },
+  DIRECTORY_ENTRIES_BROADCAST_INFO(arg0) {
+    return "/guilds/" + arg0 + "/directory-entries/broadcast";
+  },
+  PRICE_TIERS: "/store/price-tiers",
+  TEAMS: "/teams",
+  APPLICATIONS: "/applications",
+  APPLICATIONS_WITH_ASSETS: "/applications-with-assets",
+  APPLICATION_OWNER_TRANSFER(_require) {
+    return "/applications/" + _require + "/transfer";
+  },
+  HUB_WAITLIST_SIGNUP: "/hub-waitlist/signup",
+  HUB_EMAIL_VERIFY: "/guilds/automations/email-domain-lookup/verify",
+  HUB_EMAIL_VERIFY_CODE: "/guilds/automations/email-domain-lookup/verify-code",
+  PROMOTIONS: "/promotions",
+  BOGO_PROMOTIONS: "/bogo-promotions",
+  GIFTING_PROMOTION_SUMMER_2026_GOGO_CAMPAIGN_ELIGIBILITY:
+    "/users/@me/gifting-promotion-summer-2026-gogo-campaign-eligibility",
+  CLAIMED_OUTBOUND_PROMOTION_CODES: "/users/@me/outbound-promotions/codes",
+  CLAIM_OUTBOUND_PROMOTION_CODE(arg0) {
+    return "/outbound-promotions/" + arg0 + "/claim";
+  },
+  HUB_EMAIL_VERIFY_SEND: "/guilds/automations/email-domain-lookup",
+  GUILD_PRODUCT_CREATE_ATTACHMENT_UPLOAD(arg0) {
+    return "/guilds/" + arg0 + "/products/attachments";
+  },
+  GUILD_ROLE_SUBSCRIPTIONS_SETTINGS(arg0) {
+    return "/guilds/" + arg0 + "/role-subscriptions/settings";
+  },
+  GUILD_ROLE_SUBSCRIPTION_GROUP_LISTINGS(arg0, arg1) {
+    let str = "";
+    if (null != arg1) {
+      const _HermesInternal = HermesInternal;
+      str = "/" + arg1;
+    }
+    return "/guilds/" + arg0 + "/role-subscriptions/group-listings" + str;
+  },
+  GUILD_ROLE_SUBSCRIPTION_LISTINGS(arg0, arg1, arg2) {
+    let str = "";
+    if (null != arg2) {
+      const _HermesInternal = HermesInternal;
+      str = "/" + arg2;
+    }
+    return "/guilds/" + arg0 + "/role-subscriptions/group-listings/" + arg1 + "/subscription-listings" + str;
+  },
+  GUILD_ROLE_SUBSCRIPTION_GROUP_LISTING_ARCHIVE(arg0, arg1, arg2) {
+    return (
+      "/guilds/" + arg0 + "/role-subscriptions/group-listings/" + arg1 + "/subscription-listings/" + arg2 + "/archive"
+    );
+  },
+  GUILD_ROLE_SUBSCRIPTION_TRIALS(arg0) {
+    return "/guilds/" + arg0 + "/role-subscriptions/trials";
+  },
+  GUILD_ROLE_SUBSCRIPTION_LISTING_TRIAL(arg0, arg1) {
+    return "/guilds/" + arg0 + "/role-subscriptions/subscription-listings/" + arg1 + "/trial";
+  },
+  GUILD_ROLE_SUBSCRIPTION_LISTING_TEMPLATES(arg0) {
+    return "/guilds/" + arg0 + "/role-subscriptions/templates";
+  },
+  CREATOR_MONETIZATION_ENABLE_REQUESTS(arg0) {
+    return "/guilds/" + arg0 + "/creator-monetization/enable-requests";
+  },
+  CREATOR_MONETIZATION_ELIGIBILITY(arg0) {
+    return "/guilds/" + arg0 + "/creator-monetization/requirements";
+  },
+  CREATOR_MONETIZATION_ACCEPT_TERMS(arg0, arg1) {
+    return "/guilds/" + arg0 + "/creator-monetization/enable-requests/" + arg1 + "/accept-terms";
+  },
+  CREATOR_MONETIZATION_ACCEPT_TERMS_V2(arg0) {
+    return "/guilds/" + arg0 + "/creator-monetization/accept-terms";
+  },
+  CREATOR_MONETIZATION_RESTRICTIONS(arg0) {
+    return "/guilds/" + arg0 + "/creator-monetization/restrictions";
+  },
+  GUILD_ROLE_SUBSCRIPTION_TRIAL_ELIGIBILITY(arg0, arg1, arg2) {
+    return "/guilds/" + arg0 + "/role-subscriptions/subscription-listings/" + arg1 + "/trial/" + arg2 + "/eligibility";
+  },
+  CREATOR_MONETIZATION_MARKETING_ONBOARDING(arg0) {
+    return "/guilds/" + arg0 + "/creator-monetization/marketing/onboarding";
+  },
+  CREATOR_MONETIZATION_OWNERSHIP_TRANSFER_ONBOARD(arg0) {
+    return "/guilds/" + arg0 + "/creator-monetization/ownership-transfer/onboarding";
+  },
+  CREATOR_MONETIZATION_ACCEPT_NEW_TERMS(arg0) {
+    return "/guilds/" + arg0 + "/creator-monetization/accept-new-terms";
+  },
+  CREATOR_MONETIZATION_ACCEPT_NEW_TERMS_DEMONETIZED(arg0) {
+    return "/guilds/" + arg0 + "/creator-monetization/accept-new-terms-demonetized";
+  },
+  CREATOR_MONETIZATION_REMOVE_MONETIZATION(arg0) {
+    return "/guilds/" + arg0 + "/creator-monetization/remove-monetization";
+  },
+  SUBSCRIPTION_PLAN_GROUP_LISTING(arg0) {
+    return "/subscription-plans/" + arg0 + "/subscription-group-listing";
+  },
+  SUBSCRIPTION_PLAN_GUILD_ROLE_GROUP_LISTING(arg0) {
+    return "/subscription-plans/" + arg0 + "/guild-role-subscription-group-listing";
+  },
+  MEDIA_POST_RESHARE_GET_PREVIEW(threadId) {
+    return "/channels/" + threadId + "/media-post-preview";
+  },
+  UNFURL_EMBED_URLS: "/unfurler/embed-urls",
+  BUG_REPORTS: "/private/bug-reports",
+  CLIP_FEEDBACK: "/private/clip-feedback",
+  CLIPS_MODULE_ASSETS: "/clips/module-assets",
+  PAYMENT_PAYOUT_GROUPS(arg0) {
+    return "/applications/" + arg0 + "/payment-payout-groups";
+  },
+  GUILD_PRODUCTS(arg0) {
+    return "/guilds/" + arg0 + "/products";
+  },
+  GUILD_PRODUCT_LISTINGS(arg0, arg1) {
+    let str = "";
+    if (null != arg1) {
+      const _HermesInternal = HermesInternal;
+      str = "/" + arg1;
+    }
+    return "/guilds/" + arg0 + "/products/listings" + str;
+  },
+  GUILD_PRODUCT_ATTACHMENT_DOWNLOAD(arg0, arg1, arg2) {
+    return "/guilds/" + arg0 + "/products/listings/" + arg1 + "/attachments/" + arg2 + "/download";
+  },
+  GUILD_PROFILE(guildId) {
+    return "/guilds/" + guildId + "/profile";
+  },
+  GUILD_PROFILE_VISIBILITY(guildId) {
+    return "/guilds/" + guildId + "/profile/visibility";
+  },
+  GUILD_THEME(arg0) {
+    return "/guilds/" + arg0 + "/theme";
+  },
+  USER_SET_GUILD_IDENTITY: "/users/@me/clan",
+  TENOR_ASSET_PATH: "/tenor",
+  GIPHY_ASSET_PATH: "/giphy",
+  KLIPY_ASSET_PATH: "/klipy",
+  EMAIL_SETTINGS: "/users/@me/email-settings",
+  ACCOUNT_NOTIFICATION_SETTINGS: "/users/@me/notification-settings",
+  VIDEO_FILTER_ASSETS: "/users/@me/video-filters/assets",
+  VIDEO_FILTER_ASSET(id) {
+    return "/users/@me/video-filters/assets/" + id;
+  },
+  VIDEO_FILTER_ASSET_LAST_USED(id) {
+    return "/users/@me/video-filters/assets/" + id + "/last-used";
+  },
+  VIDEO_FILTER_ASSET_STORAGE(userId, assetId, assetHash, arg3) {
+    return "/users/" + userId + "/video-filter-assets/" + assetId + "/" + assetHash + "." + arg3;
+  },
+  GUILD_SOUNDBOARD_SOUNDS(arg0) {
+    return "/guilds/" + arg0 + "/soundboard-sounds";
+  },
+  GUILD_SOUNDBOARD_SOUND(arg0, arg1) {
+    return "/guilds/" + arg0 + "/soundboard-sounds/" + arg1;
+  },
+  TOP_SOUNDBOARD_SOUNDS_FOR_GUILD(id) {
+    return "/guilds/" + id + "/top-soundboard-sounds";
+  },
+  SOUNDBOARD_SOUND(arg0) {
+    return "/soundboard-sounds/" + arg0;
+  },
+  SOUNDBOARD_SOUND_GUILD_DATA(arg0, arg1) {
+    return "/soundboard-sounds/" + arg0 + "/guild/" + arg1;
+  },
+  SOUNDBOARD_DEFAULT_SOUNDS: "/soundboard-default-sounds",
+  SEND_SOUNDBOARD_SOUND(id) {
+    return "/channels/" + id + "/send-soundboard-sound";
+  },
+  SEND_CLIPS_REMOTE_TRIGGER(arg0) {
+    return "/channels/" + arg0 + "/clips-remote-trigger";
+  },
+  APPLICATION_COMMANDS_SEARCH(arg0) {
+    return "/channels/" + arg0 + "/application-commands/search";
+  },
+  APPLICATION_COMMAND_INDEX_CHANNEL(channelId) {
+    return "/channels/" + channelId + "/application-command-index";
+  },
+  APPLICATION_COMMAND_INDEX_GUILD(guildId) {
+    return "/guilds/" + guildId + "/application-command-index";
+  },
+  APPLICATION_COMMAND_INDEX_USER: "/users/@me/application-command-index",
+  APPLICATION_COMMAND_INDEX_APPLICATION(applicationId) {
+    return "/applications/" + applicationId + "/application-command-index";
+  },
+  GUILD_COMMANDS_FOR_APPLICATION(arg0, arg1) {
+    return "/guilds/" + arg0 + "/application-commands/" + arg1;
+  },
+  APPLICATION_DIRECTORY_APPLICATION(arg0) {
+    return "/application-directory-static/applications/" + arg0;
+  },
+  APPLICATION_DIRECTORY_EMBED_APPLICATION(applicationId) {
+    return "/application-directory/applications/" + applicationId + "/embed";
+  },
+  APPLICATION_DIRECTORY_CATEGORIES: "/application-directory-static/categories",
+  APPLICATION_DIRECTORY_SIMILAR(arg0) {
+    return "/application-directory-static/applications/" + arg0 + "/similar";
+  },
+  APPLICATION_DIRECTORY_SEARCH: "/application-directory-static/search",
+  APPLICATION_DIRECTORY_COLLECTIONS: "/application-directory-static/collections",
+  APPLICATION_DIRECTORY_COLLECTION_ITEM_IMAGE(itemId, hash, webp) {
+    return "/application-directory/collection-items/" + itemId + "/" + hash + "." + webp;
+  },
+  GUILD_FEED(arg0) {
+    return "/guilds/" + arg0 + "/guild-feed";
+  },
+  USER_EMAIL: "/users/@me/email",
+  USER_EMAIL_VERIFY_CODE: "/users/@me/email/verify-code",
+  PREMIUM_USAGE: "/users/@me/premium-usage",
+  ACTIVE_CHANNELS(arg0) {
+    return "/guilds/" + arg0 + "/active-channels";
+  },
+  NOTIF_CENTER_ITEMS(id) {
+    let str = "";
+    if (null != id) {
+      const _HermesInternal = HermesInternal;
+      str = "/" + id;
+    }
+    return "/users/@me/notification-center/items" + str;
+  },
+  NOTIF_CENTER_ITEMS_ACK(arg0) {
+    return "/users/@me/notification-center/items/" + arg0 + "/ack";
+  },
+  NOTIF_CENTER_ITEMS_BULK_ACK: "/users/@me/notification-center/items/bulk-ack",
+  NOTIFICATION_SNAPSHOTS: "/users/@me/notification-settings/snapshots",
+  NOTIFICATION_SNAPSHOT(arg0) {
+    return "/users/@me/notification-settings/snapshots/" + arg0;
+  },
+  RESTORE_NOTIFICATION_SNAPSHOT(arg0) {
+    return "/users/@me/notification-settings/snapshots/" + arg0 + "/restore-guilds";
+  },
+  GUILD_ADMIN_SERVER_ELIGIBILITY(arg0) {
+    return "/guilds/" + arg0 + "/admin-server-eligibility";
+  },
+  JOIN_ADMIN_SERVER(arg0) {
+    return "/guilds/" + arg0 + "/join-admin-server";
+  },
+  AUTH_SESSIONS: "/auth/sessions",
+  AUTH_SESSION_NOTIFICATIONS_DEBUG: "/auth/sessions/debug/notifications",
+  AUTH_SESSIONS_LOGOUT: "/auth/sessions/logout",
+  CUSTOM_CALL_SOUNDS(id) {
+    return "/channels/" + id + "/custom-call-sounds";
+  },
+  VOICE_CHANNEL_EFFECTS(arg0) {
+    return "/channels/" + arg0 + "/voice-channel-effects";
+  },
+  APPLICATION_SUBSCRIPTION_GROUP_LISTING(arg0, arg1) {
+    return "/applications/" + arg0 + "/subscription-group-listings/" + arg1;
+  },
+  GUILD_ENTITLEMENTS(arg0) {
+    return "/guilds/" + arg0 + "/entitlements";
+  },
+  GUILD_ROLE_CONNECTIONS_CONFIGURATION(guildId, id) {
+    return "/guilds/" + guildId + "/roles/" + id + "/connections/configuration";
+  },
+  MESSAGE_REQUESTS_SUPPLEMENTAL_DATA: "/users/@me/message-requests/supplemental-data",
+  CONNECT_REQUEST_CREATE: "/consoles/connect-request",
+  CONNECT_REQUEST(nonce) {
+    return "/consoles/connect-request/" + nonce;
+  },
+  CONSOLES_DEVICES(platform) {
+    return "/consoles/" + platform + "/devices";
+  },
+  CONSOLES_DEVICES_COMMANDS(platform, arg1) {
+    return "/consoles/" + platform + "/devices/" + arg1 + "/commands";
+  },
+  CONSOLES_DEVICES_COMMAND(platform, deviceId, commandId) {
+    return "/consoles/" + platform + "/devices/" + deviceId + "/commands/" + commandId;
+  },
+  ELIGIBLE_APPLICATION_SUBSCRIPTION_GUILDS: "/users/@me/billing/eligible-application-subscription-guilds",
+  APPLICATION_USER_ROLE_CONNECTIONS: "/users/@me/applications/role-connections",
+  GET_SAVED_MESSAGES: "/users/@me/saved-messages",
+  PUT_SAVED_MESSAGE(channelId, messageId) {
+    return "/users/@me/saved-messages/" + channelId + "/" + messageId;
+  },
+  DELETE_SAVED_MESSAGE(channelId, messageId) {
+    return "/users/@me/saved-messages/" + channelId + "/" + messageId;
+  },
+  GET_REFERRALS_REMAINING: "/users/@me/referrals/eligibility",
+  GET_REFERRAL_ELIGIBLE_USERS: "/users/@me/referrals/eligible-users",
+  CREATE_REFERRAL(arg0) {
+    return "/users/@me/referrals/" + arg0;
+  },
+  FAMILY_CENTER_TEEN_ACTIVITY(topUserActivities) {
+    return "/family-center/" + topUserActivities + "/activity";
+  },
+  FAMILY_CENTER_TEEN_ACTIVITY_ME: "/family-center/@me",
+  FAMILY_CENTER_TEEN_ACTIVITY_MORE(topUserActivities, topGuildActivities, arg2, arg3) {
+    return "/family-center/more-activity/" + topUserActivities + "/" + topGuildActivities + "/" + arg2 + "/" + arg3;
+  },
+  FAMILY_CENTER_LINKED_USERS: "/users/@me/linked-users",
+  FAMILY_CENTER_LINK_CODE: "/family-center/@me/link-code",
+  FAMILY_CENTER_CONNECTION_PREREQUISITES: "/family-center/connection-prerequisites",
+  FAMILY_CENTER_FETCH_TEEN_USER(arg0) {
+    return "/family-center/teen-user/" + arg0;
+  },
+  FAMILY_CENTER_TEEN_SETTINGS_AND_CONSENTS(id) {
+    return "/family-center/" + id + "/settings-and-consents";
+  },
+  FAMILY_CENTER_TEEN_SETTINGS(arg0) {
+    return "/family-center/" + arg0 + "/settings-proto";
+  },
+  FAMILY_CENTER_TEEN_CONSENTS(selectedTeenId) {
+    return "/family-center/" + selectedTeenId + "/consents";
+  },
+  FAMILY_CENTER_SHARE_IAR_WITH_PARENTS: "/family-center/share-iar-with-parents",
+  FAMILY_CENTER_RESTRICTED_SCHEDULE_RULE(arg0) {
+    return "/family-center/" + arg0 + "/restricted-schedule/rule";
+  },
+  FAMILY_CENTER_RESTRICTED_SCHEDULE_RULES(arg0, arg1) {
+    return "/family-center/" + arg0 + "/restricted-schedule/rules/" + arg1;
+  },
+  REFERRAL_OFFER_ID_RESOLVE(arg0) {
+    return "/referrals/" + arg0;
+  },
+  BADGE_ICON(icon) {
+    return "/badge-icons/" + icon + ".png";
+  },
+  FINISH_MFA_CHECK: "/mfa/finish",
+  CREATE_REVERSE_TRIAL: "/user-offers/reverse-trial",
+  CREATE_USER_OFFER(arg0, arg1) {
+    return "/user-offers/create/" + arg1 + "/" + arg0;
+  },
+  UPDATE_USER_OFFER(arg0, arg1) {
+    return "/user-offers/" + arg1 + "/" + arg0;
+  },
+  USER_OFFERS: "/user-offers",
+  USER_OFFER_IDS: "/user-offer-ids",
+  GUILD_MEMBERS_UNUSUAL_DM_ACTIVITY(arg0) {
+    return "/guilds/" + arg0 + "/members/unusual-dm-activity";
+  },
+  SAFETY_HUB: "/safety-hub/@me",
+  SAFETY_HUB_REQUEST_REVIEW(classificationId) {
+    return "/safety-hub/request-review/" + classificationId;
+  },
+  SAFETY_HUB_REQUEST_SUSPENDED_USER_REVIEW(classificationId) {
+    return "/safety-hub/suspended/request-review/" + classificationId;
+  },
+  SAFETY_HUB_SUSPENDED: "/safety-hub/suspended/@me",
+  SAFETY_HUB_REQUEST_SUSPENDED_AGE_VERIFICATION: "/safety-hub/suspended/request-verification",
+  SAFETY_HUB_REQUEST_SUSPENDED_AGE_VERIFICATION_V2: "/safety-hub/suspended/request-verification/v2",
+  SAFETY_HUB_CHECK_SUSPENDED_AGE_VERIFICATION: "/safety-hub/suspended/check-verification",
+  SAFETY_HUB_CHECK_SUSPENDED_AGE_VERIFICATION_V2: "/safety-hub/suspended/check-verification/v2",
+  SAFETY_HUB_GET_SUSPENDED_AGE_VERIFICATION_METHODS: "/age-verification/suspended/methods",
+  INITIATE_CHANNEL_PROMPTS: "/initiate-prompts",
+  FORCE_SEND_PROMPT(arg0) {
+    return "/" + arg0 + "/force-send-prompt";
+  },
+  EXPLICIT_MEDIA_REPORT_FALSE_POSITIVE: "/attachments/report-false-positive",
+  EXPLICIT_MEDIA_SENDER_REPORT_FALSE_POSITIVE: "/attachments/sender-report-false-positive",
+  BULK_GUILD_BAN(arg0) {
+    return "/guilds/" + arg0 + "/bulk-ban";
+  },
+  BULK_GUILD_BAN_V2(arg0) {
+    return "/guilds/" + arg0 + "/bulk-ban/v2";
+  },
+  EXPLICIT_MEDIA_SCAN_MESSAGES(channel_id) {
+    return "/channels/" + channel_id + "/explicit-media";
+  },
+  EXPLICIT_MEDIA_SCAN_MULTI_CHANNEL_MESSAGES: "/messages/explicit-media",
+  POLL_ANSWERS(arg0, arg1) {
+    return "/channels/" + arg0 + "/polls/" + arg1 + "/answers/@me";
+  },
+  POLL_EXPIRE(arg0, arg1) {
+    return "/channels/" + arg0 + "/polls/" + arg1 + "/expire";
+  },
+  POLL_ANSWER_VOTERS(arg0, arg1, name) {
+    return "/channels/" + arg0 + "/polls/" + arg1 + "/answers/" + name;
+  },
+  QUESTS_CURRENT_QUESTS: "/quests/@me",
+  QUESTS_CLAIMED_QUESTS: "/quests/@me/claimed",
+  QUEST(arg0) {
+    return "/quests/" + arg0;
+  },
+  QUEST_PREVIEW(arg0) {
+    return "/quests/" + arg0 + "/preview";
+  },
+  QUESTS_ENROLL(questId) {
+    return "/quests/" + questId + "/enroll";
+  },
+  QUEST_ON_CONSOLE_START(arg0) {
+    return "/quests/" + arg0 + "/console/start";
+  },
+  QUEST_ON_CONSOLE_STOP(arg0) {
+    return "/quests/" + arg0 + "/console/stop";
+  },
+  QUESTS_HEARTBEAT(arg0) {
+    return "/quests/" + arg0 + "/heartbeat";
+  },
+  QUESTS_VIDEO_PROGRESS(quest_id) {
+    return "/quests/" + quest_id + "/video-progress";
+  },
+  QUESTS_REWARD_CODE(questId) {
+    return "/quests/" + questId + "/reward-code";
+  },
+  QUESTS_CLAIM_REWARD(questId) {
+    return "/quests/" + questId + "/claim-reward";
+  },
+  QUESTS_DISMISS_CONTENT(questId, content) {
+    return "/quests/" + questId + "/dismissible-content/" + content + "/dismiss";
+  },
+  QUESTS_PREVIEW_STATUS(arg0) {
+    return "/quests/" + arg0 + "/preview/status";
+  },
+  QUESTS_PREVIEW_DISMISSIBILITY(arg0) {
+    return "/quests/" + arg0 + "/preview/dismissibility";
+  },
+  QUESTS_PREVIEW_COMPLETE(arg0) {
+    return "/quests/" + arg0 + "/preview/complete";
+  },
+  QUESTS_RESET_RECENT_QUEST_COMPLETIONS: "/quests/reset-recent-quest-completions",
+  ADS_IOS_ATTRIBUTION_SIGN_PAYLOAD: "/ads/ios-attributions/sign-payload",
+  QUEST_FETCH_QUEST_TO_DELIVER: "/quests/decision",
+  QUEST_EARNED_DECISION(arg0, arg1, uuid) {
+    let str = "";
+    if (null != uuid) {
+      const _HermesInternal = HermesInternal;
+      str = "&client_heartbeat_session_id=" + uuid;
+    }
+    return "/quests/earned-decision?quest_ids=" + arg0 + "&content=" + arg1 + str;
+  },
+  ATTACHMENTS_REFRESH_URLS: "/attachments/refresh-urls",
+  GAME_INVITE(arg0) {
+    return "/game-invite/@me/" + arg0;
+  },
+  GAME_INVITES: "/game-invite/@me",
+  ADD_SAFETY_WARNING(id) {
+    return "/channels/" + id + "/add-safety-warning";
+  },
+  DELETE_SAFETY_WARNINGS(arg0) {
+    return "/channels/" + arg0 + "/safety-warnings";
+  },
+  SAFETY_WARNING_FALSE_POSITIVE(channelId) {
+    return "/channels/" + channelId + "/safety-warning/report-false-positive";
+  },
+  MY_CONTENT_INVENTORY(arg0) {
+    let str = "";
+    if (null != arg0) {
+      const _HermesInternal = HermesInternal;
+      str = "?refresh_token=" + arg0;
+    }
+    return "/content-inventory/users/@me" + str;
+  },
+  CONTENT_INVENTORY_OUTBOX(userId) {
+    return "/content-inventory/users/" + userId + "/outbox";
+  },
+  DELETE_MY_CONTENT_INVENTORY_OUTBOX_ENTRY_HISTORY(id) {
+    return "/content-inventory/users/@me/outbox/entries/id/" + id + "/history";
+  },
+  MY_SPOTIFY_CONTENT_INVENTORY: "/content-inventory/users/@me/spotify",
+  MY_CONTENT_INVENTORY_APPLICATION(arg0) {
+    return "/content-inventory/users/@me/applications/" + arg0;
+  },
+  TENURE_REWARD_SYNC: "/users/@me/tenure-reward/sync",
+  STORE_LAYOUT(arg0) {
+    return "/applications/" + arg0 + "/store-layout";
+  },
+  CHECKOUT_RECOVERY: "/users/@me/billing/checkout-recovery",
+  CAMPAIGN_CONTEXT: "/users/@me/billing/campaign-context",
+  SIMILAR_GAMES(arg0) {
+    return "/content-inventory/users/@me/similar-games/" + arg0;
+  },
+  VOICE_PUBLIC_KEYS() {
+    return "/voice/public-keys";
+  },
+  VOICE_MATCH_PUBLIC_KEY(arg0) {
+    return "/voice/" + arg0 + "/match-public-key";
+  },
+  ACCOUNT_REVERT: "/auth/revert",
+  VIRTUAL_CURRENCY_SKU_REDEEM(arg0) {
+    return "/virtual-currency/skus/" + arg0 + "/redeem";
+  },
+  VIRTUAL_CURRENCY_USER_BALANCE: "/users/@me/virtual-currency/balance",
+  ORB_USER_CHALLENGES_LIST: "/users/@me/achievements/list?reward_type=orbs",
+  ORB_USER_CHALLENGE_CLAIM(arg0) {
+    return "/users/@me/achievements/" + arg0 + "/claim";
+  },
+  ORB_USER_CHALLENGES_UNREAD_STATE: "/users/@me/achievements/unread-state",
+  ORB_USER_CHALLENGES_UNREAD_STATE_ACK: "/users/@me/achievements/unread-ack",
+  IGNORE_USER(id) {
+    return "/users/@me/relationships/" + id + "/ignore";
+  },
+  SCHEDULED_MESSAGES: "/users/@me/scheduled-messages",
+  SCHEDULED_MESSAGE(scheduledMessageId) {
+    return "/users/@me/scheduled-messages/" + scheduledMessageId;
+  },
+  SCHEDULED_MESSAGE_SEND(scheduledMessageId) {
+    return "/users/@me/scheduled-messages/" + scheduledMessageId + "/send";
+  },
+  HOLIDAY_REDEEM_PRIZE: "/holidays/redeem-prize",
+  APPLIED_BOOST_MODIFY_END_DATE: "/debug/applied-boosts/ends-at",
+  SEND_POWERUPS_SYSTEM_MESSAGE(arg0) {
+    return "/guilds/" + arg0 + "/powerups-system-message";
+  },
+  SAFETY_FLOWS_TASK: "/safety-flows/task",
+  SAFETY_FLOWS_RESEND_VERIFICATION_CODE: "/safety-flows/resend/email/reverification/pincode",
+  APEX_EXPERIMENTS_METADATA: "/apex/experiments/metadata",
+  APEX_EXPERIMENTS: "/apex/experiments",
+  CONFERENCE_MODE_GUILDS: "/conference-mode/guilds",
+  CONFERENCE_MODE_VOICE_CHANNELS(arg0) {
+    return "/conference-mode/" + arg0 + "/channels";
+  },
+  CONFERENCE_MODE_VOICE_CHANNEL(arg0) {
+    return "/conference-mode/channels/" + arg0;
+  },
+  CONFERENCE_MODE_VOICE_CHANNEL_USERS(arg0) {
+    return "/conference-mode/channels/" + arg0 + "/users";
+  },
+  CONFERENCE_MODE_EVENTS: "/conference-mode/events",
+  CONFERENCE_MODE_CONFERENCES: "/conference-mode/conference",
+  GUILD_MIGRATE_PIN_PERMISSION(guildId) {
+    return "/guilds/" + guildId + "/migrate-pin-permission";
+  },
+  GUILD_MIGRATE_SLOWMODE_PERMISSION(guildId) {
+    return "/guilds/" + guildId + "/migrate-bypass-slowmode-permission";
+  },
+  QUESTS_GET_DECISIONS: "/quests/get-decisions",
+  QUESTS_CREATIVE_PREVIEW: "/quests/preview",
+  QUESTS_CREATIVES_CLAIM_REWARD(arg0) {
+    return "/quests/creatives/" + arg0 + "/claim-reward";
+  },
+  QUESTS_CREATIVES_DISMISS(adCreativeId) {
+    return "/quests/creatives/" + adCreativeId + "/dismiss";
+  },
+  QUESTS_APP_STORE_METADATA: "/quests/appstore-metadata",
+  GAME_ANNOUNCEMENTS(gameId) {
+    return "/games/" + gameId + "/announcements";
+  },
+  GUILD_ROOM(arg0, arg1) {
+    return "/guilds/" + arg0 + "/rooms/" + arg1;
+  },
+  GUILD_ROOM_CONNECT(arg0, arg1) {
+    return "/guilds/" + arg0 + "/rooms/" + arg1 + "/connect";
+  },
+  GUILD_ROOM_UPDATE(arg0, arg1) {
+    return "/guilds/" + arg0 + "/rooms/" + arg1 + "/update";
+  },
+  GUILD_ROOM_OBJECT_CREATE(arg0, arg1) {
+    return "/guilds/" + arg0 + "/rooms/" + arg1 + "/objects";
+  },
+  GUILD_ROOM_OBJECT_UPDATE(arg0, arg1, arg2) {
+    return "/guilds/" + arg0 + "/rooms/" + arg1 + "/objects/" + arg2 + "/update";
+  },
+  GUILD_ROOM_OBJECT_DELETE(arg0, arg1, arg2) {
+    return "/guilds/" + arg0 + "/rooms/" + arg1 + "/objects/" + arg2;
+  },
+  VIBEGRATIONS_PROJECTS: "/vibegrations/projects",
+  VIBEGRATIONS_PROJECT(arg0) {
+    return "/vibegrations/projects/" + arg0;
+  },
+  VIBEGRATIONS_PROJECT_WS_TICKET(projectId) {
+    return "/vibegrations/projects/" + projectId + "/ws-ticket";
+  },
+  VIBEGRATIONS_PROJECT_REMIX_TICKET(arg0) {
+    return "/vibegrations/projects/" + arg0 + "/remix-ticket";
+  },
+  VIBEGRATIONS_PROJECT_PUBLISH(arg0) {
+    return "/vibegrations/projects/" + arg0 + "/publish";
+  },
+  VIBEGRATIONS_PROJECT_PUBLISH_PREVIEW(arg0) {
+    return "/vibegrations/projects/" + arg0 + "/publish-preview";
+  },
+  GUILD_SPACE_IMAGE_TEXT_WIDGET_IMAGE(arg0, arg1, arg2, arg3) {
+    return "/guild-space/" + arg0 + "/image-text-widget/" + arg1 + "/" + arg2 + "." + arg3;
+  },
+  GUILD_SPACE_BANNER(arg0, arg1, arg2) {
+    return "/guild-space/" + arg0 + "/banner/" + arg1 + "." + arg2;
+  },
+});
+const obj2 = {
+  USER(userId) {
+    return "/users/" + userId;
+  },
+  USER_RELATIONSHIPS() {
+    let tmp = userId;
+    if (userId === undefined) {
+      tmp = ME;
+    }
+    return "/users/" + tmp + "/relationships";
+  },
+  USER_RELATIONSHIP(userId) {
+    return "/users/@me/relationships/" + userId;
+  },
+  USER_BULK_RELATIONSHIPS: "/users/@me/relationships/bulk",
+  USER_GAME_RELATIONSHIP(userId, applicationId) {
+    return "/users/@me/game-relationships/" + userId + "/" + applicationId;
+  },
+  USER_PROFILE(arg0) {
+    return "/users/" + arg0 + "/profile";
+  },
+  USER_BADGES(arg0) {
+    return "/users/" + arg0 + "/badges";
+  },
+  USER_BADGE(arg0, arg1) {
+    return "/users/" + arg0 + "/badges/" + arg1;
+  },
+  USER_BADGE_SETTINGS: "/users/@me/badges/settings",
+  USER_PROFILE_WIDGETS: "/users/@me/widgets",
+  USER_PROFILE_SUGGESTED_GAMES: "/users/@me/widgets/suggested-games",
+  USER_PROFILE_WIDGET_ASSET_UPLOAD: "/users/@me/widgets/assets/upload",
+  USER_PROFILE_WIDGET_CLIP_UPLOAD: "/users/@me/widgets/clips/upload",
+  WIDGET_CONFIGS_FEATURED: "/widget-configs/featured",
+  WIDGET_CONFIGS_DEVELOPER: "/widget-configs/developer",
+  APPLICATION_WIDGET_CONFIGS(applicationId) {
+    return "/applications/" + applicationId + "/widget-configs";
+  },
+  APPLICATION_WIDGET_REFRESH(arg0) {
+    return "/applications/" + arg0 + "/widget/refresh";
+  },
+  USER_GUILD_PROFILE(bannerSurface, arg1) {
+    return "/guilds/" + bannerSurface + "/profile/" + arg1;
+  },
+  USER_CHANNELS: "/users/@me/channels",
+  USER_CHANNELS_BULK_LEAVE: "/users/@me/channels/bulk-leave",
+  USER_GROUP_DM_SHELL: "/users/@me/channels/group-dm-shell",
+  USER_WISHLIST(wishlistId) {
+    return "/wishlists/" + wishlistId;
+  },
+  USER_WISHLIST_PATCH(arg0) {
+    return "/users/@me/wishlists/" + arg0;
+  },
+  USER_WISHLIST_ITEMS: "/users/@me/wishlist/items",
+  USER_WISHLIST_ITEM(wishlistId, skuId) {
+    return "/users/@me/wishlists/" + wishlistId + "/items/" + skuId;
+  },
+  USER_APPLICATION_IDENTITIES(arg0) {
+    return "/users/" + arg0 + "/application-identities";
+  },
+  USER_WISHLIST_RECOMMENDATIONS: "/wishlist/gift-recommendations",
+  GIFT_INTENT_DISMISSALS: "/users/@me/gift-intent-dismissals",
+  SELF_APPLICATION_IDENTITY_CONFIG(arg0, arg1) {
+    return "/users/@me/application-identities/" + arg0 + "/" + arg1 + "/config";
+  },
+  DM_CHANNEL(arg0) {
+    return "/users/@me/dms/" + arg0;
+  },
+  USER_SETTINGS_PROTO(type) {
+    return "/users/@me/settings-proto/" + type;
+  },
+  USER_ACTIVITY_METADATA(arg0, session_id, application_id) {
+    let num = application_id;
+    if (application_id == null) {
+      num = 0;
+    }
+    return "/users/" + arg0 + "/sessions/" + session_id + "/activities/" + num + "/metadata";
+  },
+  USER_ACTIVITY_JOIN(userId, sessionId, id) {
+    return "/users/" + userId + "/sessions/" + sessionId + "/activities/" + id + "/" + obj.JOIN;
+  },
+  USER_ACTIVITY_STATISTICS: "/users/@me/activities/statistics/applications",
+  USER_ACTIVITY_SUBSCRIBE: "/users/@me/activities/subscribe",
+  APPLICATION_ACTIVITY_STATISTICS(arg0) {
+    return "/activities/statistics/applications/" + arg0;
+  },
+  ACTIVITIES: "/activities",
+  NETWORKING_TOKEN: "/networking/token",
+  USER_GAMES_NOTIFICATIONS: "/users/@me/settings/game-notifications",
+  USER_GAMES_NOTIFICATIONS_OVERRIDES: "/users/@me/settings/game-notifications/overrides",
+  UNVERIFIED_APPLICATIONS: "/unverified-applications",
+  UNVERIFIED_APPLICATIONS_ICONS: "/unverified-applications/icons",
+  PLATFORM_APPLICATION: "/platform-application",
+  ROBLOX_APPLICATIONS_SUPPLEMENTAL_DATA: "/roblox-applications-supplemental-data",
+  GUILD_FEATURE_ACK(arg0, outgoingAck, type) {
+    return "/guilds/" + arg0 + "/ack/" + type + "/" + outgoingAck;
+  },
+  USER_NON_CHANNEL_ACK(outgoingAck, type) {
+    return "/users/@me/" + type + "/" + outgoingAck + "/ack";
+  },
+  BULK_ACK: "/read-states/ack-bulk",
+  DM_SETTINGS_UPSELL_ACK(guildId) {
+    return "/users/@me/guilds/" + guildId + "/member/ack-dm-upsell-settings";
+  },
+  GUILD_CHANNELS(guildId) {
+    return "/guilds/" + guildId + "/channels";
+  },
+  GUILD_MEMBERS(arg0) {
+    return "/guilds/" + arg0 + "/members";
+  },
+  GUILD_MEMBER(guildId, userId) {
+    return "/guilds/" + guildId + "/members/" + userId;
+  },
+  GUILD_MEMBER_NICK(guildId, arg1) {
+    return "/guilds/" + guildId + "/members/" + arg1 + "/nick";
+  },
+  GUILD_MEMBER_AVATAR(guildId, userId, avatar, webp) {
+    return "/guilds/" + guildId + "/users/" + userId + "/avatars/" + avatar + "." + webp;
+  },
+  SET_GUILD_MEMBER(guildId) {
+    return "/guilds/" + guildId + "/members/@me";
+  },
+  GAME_NOTIFICATION_SETTINGS: "/users/@me/notification-settings/muted-games",
+  GAME_NOTIFICATION_SETTING_UPDATE(arg0) {
+    return "/users/@me/notification-settings/muted-games/" + arg0;
+  },
+  GUILD_JOIN(arg0) {
+    return "/guilds/" + arg0 + "/members/@me";
+  },
+  GUILD_LEAVE(arg0) {
+    return "/users/@me/guilds/" + arg0;
+  },
+  GUILD_INTEGRATIONS(id) {
+    return "/guilds/" + id + "/integrations";
+  },
+  GUILD_INTEGRATION(guildId, id) {
+    return "/guilds/" + guildId + "/integrations/" + id;
+  },
+  GUILD_INTEGRATION_SYNC(guildId, id) {
+    return "/guilds/" + guildId + "/integrations/" + id + "/sync";
+  },
+  GUILD_MIGRATE_COMMAND_SCOPE(arg0) {
+    return "/guilds/" + arg0 + "/migrate-command-scope";
+  },
+  GUILD_BANS_SEARCH(guildId) {
+    return "/guilds/" + guildId + "/bans/search";
+  },
+  GUILD_BANS(guildId) {
+    return "/guilds/" + guildId + "/bans";
+  },
+  GUILD_BAN(id, id2) {
+    return "/guilds/" + id + "/bans/" + id2;
+  },
+  GUILD_ROLES(id) {
+    return "/guilds/" + id + "/roles";
+  },
+  GUILD_ROLE_MEMBER_COUNTS(guildId) {
+    return "/guilds/" + guildId + "/roles/member-counts";
+  },
+  GUILD_ROLE_CONNECTIONS_CONFIGURATIONS(arg0) {
+    return "/guilds/" + arg0 + "/roles/connections-configurations";
+  },
+  GUILD_ROLE_MEMBER_IDS(guildId, roleId) {
+    return "/guilds/" + guildId + "/roles/" + roleId + "/member-ids";
+  },
+  GUILD_ROLE(id, id2) {
+    return "/guilds/" + id + "/roles/" + id2;
+  },
+  GUILD_ROLE_MEMBERS(id, id2) {
+    return "/guilds/" + id + "/roles/" + id2 + "/members";
+  },
+  GUILD_ROLE_CONNECTIONS_ELIGIBILITY(guildId, id) {
+    return "/guilds/" + guildId + "/roles/" + id + "/connections/eligibility";
+  },
+  GUILD_ROLE_CONNECTIONS_ASSIGN(arg0, arg1) {
+    return "/guilds/" + arg0 + "/roles/" + arg1 + "/connections/assign";
+  },
+  GUILD_ROLE_CONNECTIONS_UNASSIGN(arg0, arg1) {
+    return "/guilds/" + arg0 + "/roles/" + arg1 + "/connections/unassign";
+  },
+  GUILD_ONBOARDING(guildId) {
+    return "/guilds/" + guildId + "/onboarding";
+  },
+  GUILD_ONBOARDING_ALLOWED_APPLICATIONS(arg0) {
+    return "/guilds/" + arg0 + "/onboarding/allowed-applications";
+  },
+  GUILD_ONBOARDING_PROMPT(arg0, arg1) {
+    return "/guilds/" + arg0 + "/onboarding-prompts/" + arg1;
+  },
+  GUILD_ONBOARDING_RESPONSES(guildId) {
+    return "/guilds/" + guildId + "/onboarding-responses";
+  },
+  ROLE_ICON(id, icon) {
+    return "/roles/" + id + "/icons/" + icon + ".png";
+  },
+  GUILD_INSTANT_INVITES(id) {
+    return "/guilds/" + id + "/invites";
+  },
+  GUILD_WIDGET(guildId) {
+    return "/guilds/" + guildId + "/widget";
+  },
+  GUILD_VANITY_URL(id) {
+    return "/guilds/" + id + "/vanity-url";
+  },
+  GUILD_MFA(guildId) {
+    return "/guilds/" + guildId + "/mfa";
+  },
+  GUILD_PRUNE(arg0) {
+    return "/guilds/" + arg0 + "/prune";
+  },
+  GUILD_PRUNE_V2(arg0) {
+    return "/guilds/" + arg0 + "/prune/v2";
+  },
+  GUILD_ICON(arg0, arg1) {
+    let str = arg2;
+    if (arg2 === undefined) {
+      str = "jpg";
+    }
+    return "/guilds/" + arg0 + "/icons/" + arg1 + "." + str;
+  },
+  GUILD_TEMPLATE_ICON(arg0, arg1) {
+    let str = arg2;
+    if (arg2 === undefined) {
+      str = "jpg";
+    }
+    return "/templates/" + arg0 + "/icons/" + arg1 + "." + str;
+  },
+  GUILD_DISCOVERY_CHECKLIST(arg0) {
+    return "/guilds/" + arg0 + "/discovery-checklist";
+  },
+  GUILD_DISCOVERY_REQUIREMENTS(arg0) {
+    return "/guilds/" + arg0 + "/discovery-requirements";
+  },
+  GUILD_EMOJIS(guildId) {
+    return "/guilds/" + guildId + "/emojis";
+  },
+  GUILD_OFFICIAL_MESSAGES(arg0) {
+    return "/guilds/" + arg0 + "/messages/official";
+  },
+  GUILD_EMOJI(guildId, id) {
+    return "/guilds/" + guildId + "/emojis/" + id;
+  },
+  GUILD_AUDIT_LOG(arg0) {
+    return "/guilds/" + arg0 + "/audit-logs";
+  },
+  GUILD_ANALYTICS_OVERVIEW(arg0) {
+    return "/guilds/" + arg0 + "/analytics/overview";
+  },
+  GUILD_ANALYTICS_ENGAGEMENT_OVERVIEW(arg0) {
+    return "/guilds/" + arg0 + "/analytics/engagement/overview";
+  },
+  GUILD_ANALYTICS_GROWTH_ACTIVATION_OVERVIEW(arg0) {
+    return "/guilds/" + arg0 + "/analytics/growth-activation/overview";
+  },
+  GUILD_ANALYTICS_GROWTH_ACTIVATION_RETENTION(arg0) {
+    return "/guilds/" + arg0 + "/analytics/growth-activation/retention";
+  },
+  GUILD_TOP_GAMES(arg0) {
+    return "/guilds/" + arg0 + "/top-games";
+  },
+  GUILD_TOP_READ_CHANNELS(arg0) {
+    return "/guilds/" + arg0 + "/top-read-channels";
+  },
+  EMOJI(id, webp) {
+    return "/emojis/" + id + "." + webp;
+  },
+  EMOJI_GUILD_DATA(arg0) {
+    return "/emojis/" + arg0 + "/guild";
+  },
+  EMOJI_SOURCE_DATA(arg0) {
+    return "/emojis/" + arg0 + "/source";
+  },
+  TOP_EMOJIS_FOR_GUILD(guildId) {
+    return "/guilds/" + guildId + "/top-emojis";
+  },
+  GUILD_SPLASH(id, splash) {
+    return "/guilds/" + id + "/splashes/" + splash + ".jpg";
+  },
+  GUILD_DISCOVERY_SPLASH(id, splash) {
+    return "/guilds/" + id + "/discovery-splashes/" + splash + ".jpg";
+  },
+  GUILD_BANNER(id, banner, webp) {
+    return "/guilds/" + id + "/banners/" + banner + "." + webp;
+  },
+  GUILD_HOME_SETTINGS(guildId) {
+    return "/guilds/" + guildId + "/new-member-welcome";
+  },
+  GUILD_CONFIG_GATES(arg0) {
+    return "/guilds/" + arg0 + "/config-gates";
+  },
+  RESOURCE_CHANNEL(arg0, arg1) {
+    return "/guilds/" + arg0 + "/resource-channels/" + arg1;
+  },
+  NEW_MEMBER_ACTION(arg0, arg1) {
+    return "/guilds/" + arg0 + "/new-member-actions/" + arg1;
+  },
+  GUILD_RESOURCE_CHANNELS_ICON(arg0, arg1) {
+    let str = arg2;
+    if (arg2 === undefined) {
+      str = "jpg";
+    }
+    return "/guilds/" + arg0 + "/avatars/" + arg1 + "." + str;
+  },
+  GUILD_NEW_MEMBER_ACTIONS_ICON(arg0, arg1) {
+    let str = arg2;
+    if (arg2 === undefined) {
+      str = "jpg";
+    }
+    return "/guilds/" + arg0 + "/avatars/" + arg1 + "." + str;
+  },
+  GUILD_MEMBER_ACTIONS(guildId) {
+    return "/guilds/" + guildId + "/new-member-actions";
+  },
+  GUILD_MEMBER_ACTION_UPDATE(guildId, channelId) {
+    return "/guilds/" + guildId + "/new-member-action/" + channelId;
+  },
+  GUILD_HOME_HEADER(id, homeHeader) {
+    return "/guilds/" + id + "/home-headers/" + homeHeader + ".jpg";
+  },
+  GUILD_WELCOME_SCREEN(arg0) {
+    return "/guilds/" + arg0 + "/welcome-screen";
+  },
+  GUILD_MEMBER_VERIFICATION(arg0) {
+    return "/guilds/" + arg0 + "/member-verification";
+  },
+  USER_JOIN_REQUEST_GUILDS: "/users/@me/join-request-guilds",
+  GUILD_MEMBER_REQUEST_TO_JOIN(arg0) {
+    return "/guilds/" + arg0 + "/requests/@me";
+  },
+  GUILD_JOIN_REQUESTS(arg0) {
+    return "/guilds/" + arg0 + "/requests";
+  },
+  GUILD_JOIN_REQUEST(arg0, arg1) {
+    return "/guilds/" + arg0 + "/requests/" + arg1;
+  },
+  GUILD_JOIN_REQUEST_ACK(arg0, arg1) {
+    return "/guilds/" + arg0 + "/requests/" + arg1 + "/ack";
+  },
+  GUILD_JOIN_REQUESTS_FOR_USER(arg0, arg1) {
+    return "/guilds/" + arg0 + "/requests/users/" + arg1;
+  },
+  JOIN_REQUEST(arg0) {
+    return "/join-requests/" + arg0;
+  },
+  JOIN_REQUEST_INTERVIEW(arg0) {
+    return "/join-requests/" + arg0 + "/interview";
+  },
+  GUILDS: "/guilds",
+  GUILD(id) {
+    return "/guilds/" + id;
+  },
+  GUILD_BASIC(guildId) {
+    return "/guilds/" + guildId + "/basic";
+  },
+  GUILD_SPACE(arg0) {
+    return "/guilds/" + arg0 + "/space";
+  },
+  GUILD_SPACE_WIDGETS_HYDRATE(arg0) {
+    return "/guilds/" + arg0 + "/space/widgets/hydrate";
+  },
+  GUILD_SPACE_WIDGETS_CATALOG(arg0) {
+    return "/guilds/" + arg0 + "/space/widgets/catalog";
+  },
+  GUILD_SPACE_SETTINGS(arg0) {
+    return "/guilds/" + arg0 + "/space/settings";
+  },
+  GUILD_PINCODE(id) {
+    return "/guilds/" + id + "/pincode";
+  },
+  GUILD_DELETE(arg0) {
+    return "/guilds/" + arg0 + "/delete";
+  },
+  CHANNELS: "/channels",
+  THREADS_BULK: "/threads/bulk",
+  CHANNEL(arg0) {
+    return "/channels/" + arg0;
+  },
+  THREAD_MEMBER(id, arg1) {
+    let tmp = arg1;
+    if (arg1 === undefined) {
+      tmp = ME;
+    }
+    return "/channels/" + id + "/thread-members/" + tmp;
+  },
+  THREAD_MEMBER_SETTINGS(id) {
+    return "/channels/" + id + "/thread-members/@me/settings";
+  },
+  ALL_ARCHIVED_THREADS(arg0, arg1) {
+    return "/channels/" + arg0 + "/threads/archived/" + arg1;
+  },
+  MY_ARCHIVED_THREADS(arg0) {
+    return "/channels/" + arg0 + "/users/@me/threads/archived/private";
+  },
+  THREAD_SEARCH(channelId) {
+    return "/channels/" + channelId + "/threads/search";
+  },
+  FORUM_POSTS(arg0) {
+    return "/channels/" + arg0 + "/post-data";
+  },
+  PARTNER_REQUIREMENTS(arg0) {
+    return "/partners/" + arg0 + "/requirements";
+  },
+  AVATAR(arg0, arg1) {
+    let str = arg2;
+    if (arg2 === undefined) {
+      str = "jpg";
+    }
+    return "/users/" + arg0 + "/avatars/" + arg1 + "." + str;
+  },
+  ARCHIVED_AVATAR(userId, avatarId, storageHash) {
+    let str = webp;
+    if (webp === undefined) {
+      str = "jpg";
+    }
+    return "/avatars/" + userId + "/archived/" + avatarId + "/" + storageHash + "." + str;
+  },
+  USER_BANNER(id, banner, webp) {
+    return "/users/" + id + "/banners/" + banner + "." + webp;
+  },
+  AVATAR_DECORATION_PRESETS(asset) {
+    let str = arg1;
+    if (arg1 === undefined) {
+      str = "png";
+    }
+    return "/avatar-decoration-presets/" + asset + "." + str;
+  },
+  LAYOUT_SYSTEM(arg0, arg1) {
+    return "/layouts/" + arg0 + "/" + arg1;
+  },
+  LAYOUT_SYSTEM_TEMPLATE(arg0, arg1) {
+    return "/templates/" + arg0 + "/" + arg1;
+  },
+  COLLECTIBLES_CATEGORIES: "/collectibles-categories",
+  COLLECTIBLES_CATEGORIES_V2: "/collectibles-categories/v2",
+  COLLECTIBLES_SEARCH: "/shop/search",
+  COLLECTIBLES_CLAIM: "/users/@me/claim-premium-collectibles-product",
+  COLLECTIBLES_CLAIM_CATEGORY_REWARD: "/users/@me/claim-reward-category-product",
+  COLLECTIBLES_PURCHASES: "/users/@me/collectibles-purchases",
+  COLLECTIBLES_PRODUCTS(skuId) {
+    return "/collectibles-products/" + skuId;
+  },
+  COLLECTIBLES_VALID_GIFT_RECIPIENT: "/users/@me/valid-collectibles-gift-recipient",
+  COLLECTIBLES_VALID_GIFT_RECIPIENTS_BATCH: "/users/@me/valid-collectibles-gift-recipients-batch",
+  COLLECTIBLES_MARKETING: "/users/@me/collectibles-marketing",
+  COLLECTIBLES_SHOP: "/collectibles-shop",
+  COLLECTIBLES_SHOP_TAB_LAYOUT(arg0) {
+    return "/collectibles-shop-tab-layouts/" + arg0;
+  },
+  GUILD_MEMBER_BANNER(guildId, id, banner) {
+    let str = webp;
+    if (webp === undefined) {
+      str = "png";
+    }
+    return "/guilds/" + guildId + "/users/" + id + "/banners/" + banner + "." + str;
+  },
+  CHANNEL_CONVERSATIONS(arg0) {
+    return "/channels/" + arg0 + "/conversations";
+  },
+  CHANNEL_CONVERSATION_MESSAGES(channelId, conversationId) {
+    return "/channels/" + channelId + "/conversations/" + conversationId + "/messages";
+  },
+  MESSAGES(channelId) {
+    return "/channels/" + channelId + "/messages";
+  },
+  MESSAGES_GREET(id) {
+    return "/channels/" + id + "/greet";
+  },
+  MESSAGES_ANNOUNCEMENT(channelId) {
+    return "/channels/" + channelId + "/messages/announcement";
+  },
+  MESSAGE(arg0, arg1) {
+    return "/channels/" + arg0 + "/messages/" + arg1;
+  },
+  MESSAGE_ACK(arg0, arg1) {
+    return "/channels/" + arg0 + "/messages/" + arg1 + "/ack";
+  },
+  MESSAGE_CREATE_ATTACHMENT_UPLOAD(arg0) {
+    return "/channels/" + arg0 + "/attachments";
+  },
+  UPDATE_VOICE_CHANNEL_STATUS(arg0) {
+    return "/channels/" + arg0 + "/voice-status";
+  },
+  CHANNEL_VOICE_HANGOUT(arg0) {
+    return "/channels/" + arg0 + "/voice-hangout";
+  },
+  VOICE_HANGOUT_BANNER(arg0, arg1) {
+    return "/voice-hangouts/" + arg0 + "/" + arg1;
+  },
+  GUILD_VOICE_HANGOUT_RECENT_IMAGES(arg0) {
+    return "/guilds/" + arg0 + "/voice-hangout/recent-images";
+  },
+  MESSAGE_DELETE_UPLOAD(arg0) {
+    return "/attachments/" + arg0;
+  },
+  MESSAGE_CROSSPOST(arg0, arg1) {
+    return "/channels/" + arg0 + "/messages/" + arg1 + "/crosspost";
+  },
+  AI_TITLE: "/ai/title",
+  AI_TRANSLATE: "/ai/translate",
+  AI_FIX_GRAMMAR: "/ai/fix-grammar",
+  AI_TEXT_TRANSFORM: "/ai/text-transform",
+  AI_SUMMARIZE_THREAD(id) {
+    return "/ai/summarize-thread/" + id;
+  },
+  MESSAGE_LOG_PRIVATE_CHANNELS: "/messages-log/private-channels/get",
+  MESSAGE_LOG_GUILD_CHANNELS: "/messages-log/guild-channels/get",
+  BACKGROUND_SYNC: "/users/@me/background-sync",
+  MESSAGE_PREVIEWS: "/channels/preload-messages",
+  PINS_ACK(channelId) {
+    return "/channels/" + channelId + "/pins/ack";
+  },
+  PINS(channelId) {
+    return "/channels/" + channelId + "/messages/pins";
+  },
+  PIN(id, arg1) {
+    return "/channels/" + id + "/messages/pins/" + arg1;
+  },
+  INSTANT_INVITES(id) {
+    return "/channels/" + id + "/invites";
+  },
+  TYPING(channelId) {
+    return "/channels/" + channelId + "/typing";
+  },
+  CHANNEL_PERMISSIONS_OVERWRITE(arg0, id) {
+    return "/channels/" + arg0 + "/permissions/" + id;
+  },
+  CHANNEL_RECIPIENTS(arg0) {
+    return "/channels/" + arg0 + "/recipients";
+  },
+  CHANNEL_RECIPIENT(arg0, arg1) {
+    return "/channels/" + arg0 + "/recipients/" + arg1;
+  },
+  CHANNEL_RECIPIENT_ME(id) {
+    return "/channels/" + id + "/recipients/@me";
+  },
+  CHANNEL_RECIPIENT_REJECT_BATCH() {
+    return "/channels/recipients/@me/batch-reject";
+  },
+  CHANNEL_ICON(arg0, arg1) {
+    return "/channels/" + arg0 + "/icons/" + arg1 + ".jpg";
+  },
+  CHANNEL_CONVERT(arg0) {
+    return "/channels/" + arg0 + "/convert";
+  },
+  CHANNEL_ACK(arg0) {
+    return "/channels/" + arg0 + "/messages/ack";
+  },
+  CHANNEL_STORE_LISTING(channelId) {
+    return "/channels/" + channelId + "/store-listing";
+  },
+  CHANNEL_STORE_LISTING_SKU(channelId, arg1) {
+    return "/channels/" + channelId + "/store-listings/" + arg1;
+  },
+  CHANNEL_ENTITLEMENT_GRANT(arg0) {
+    return "/channels/" + arg0 + "/store-listing/entitlement-grant";
+  },
+  CHANNEL_FOLLOWERS(arg0) {
+    return "/channels/" + arg0 + "/followers";
+  },
+  CHANNEL_FOLLOWER_STATS(channel_id) {
+    return "/channels/" + channel_id + "/follower-stats";
+  },
+  CHANNEL_FOLLOWER_MESSAGE_STATS(arg0) {
+    return "/channels/" + arg0 + "/follower-message-stats";
+  },
+  CHANNEL_INTEGRATION(arg0, arg1) {
+    return "/channels/" + arg0 + "/integrations/" + arg1;
+  },
+  CHANNEL_SAFETY_WARNINGS_ACK(channelId) {
+    return "/channels/" + channelId + "/safety-warnings/ack";
+  },
+  CHANNEL_BLOCKED_USER_WARNING_ACK(channelId) {
+    return "/channels/" + channelId + "/blocked-user-warning-dismissal";
+  },
+  CHANNEL_VOICE_HISTORY(arg0) {
+    return "/channels/" + arg0 + "/voice-history";
+  },
+  FORUM_TAGS(channelId) {
+    return "/channels/" + channelId + "/tags";
+  },
+  FORUM_TAG(channelId, id) {
+    return "/channels/" + channelId + "/tags/" + id;
+  },
+  FRIEND_FINDER: "/friend-finder/find-friends",
+  FRIEND_SUGGESTIONS: "/friend-suggestions",
+  FRIEND_SUGGESTION(id) {
+    return "/friend-suggestions/" + id;
+  },
+  TUTORIAL_INDICATORS: "/tutorial/indicators",
+  TUTORIAL_INDICATORS_SUPPRESS: "/tutorial/indicators/suppress",
+  TUTORIAL_INDICATOR(arg0) {
+    return "/tutorial/indicators/" + arg0;
+  },
+  USERS: "/users",
+  ME: "/users/@me",
+  GRAVITY_ATTACHMENTS: "/users/@me/gravity-attachments",
+  GRAVITY_ATTACHMENTS_UPLOAD: "/users/@me/gravity-attachments-upload",
+  GRAVITY_ITEMS_DEHYDRATED: "/users/@me/gravity-icymi",
+  GRAVITY_ITEMS_DEHYDRATED_LEGACY: "/users/@me/gravity-icymi-legacy",
+  GRAVITY_RECOMMENDED_GUILDS: "/gravity-recommended-guilds",
+  GRAVITY_ITEMS_HYDRATE: "/gravity-content",
+  GRAVITY_CUSTOM_GUILD_SCORES: "/gravity-custom-guild-score",
+  GRAVITY_CUSTOM_SCORES: "/gravity-custom-channel-scores",
+  GRAVITY_JOIN_GUILD: "/guilds/gravity-join",
+  GRAVITY_TOPIC_GUILDS: "/gravity-topic-guilds",
+  POMELO_SUGGESTIONS: "/users/@me/pomelo-suggestions",
+  POMELO_SUGGESTIONS_UNAUTHED: "/unique-username/username-suggestions-unauthed",
+  POMELO_ATTEMPT: "/users/@me/pomelo-attempt",
+  POMELO_ATTEMPT_UNAUTHED: "/unique-username/username-attempt-unauthed",
+  POMELO_CREATE: "/users/@me/pomelo",
+  DELETE_ACCOUNT: "/users/@me/delete",
+  DISABLE_ACCOUNT: "/users/@me/disable",
+  DEVICES: "/users/@me/devices",
+  DEVICES_SYNC_TOKEN: "/users/@me/devices/sync-token",
+  DEVICES_SYNC: "/users/@me/devices/sync",
+  SETTINGS: "/users/@me/settings",
+  SETTINGS_CONSENT: "/users/@me/consent",
+  PHONE: "/users/@me/phone",
+  PHONE_VERIFY_NO_PASSWORD: "/users/@me/phone/verify",
+  PHONE_REVERIFY: "/users/@me/phone/reverify",
+  FRIEND_INVITES: "/users/@me/invites",
+  VERIFY_PHONE: "/phone-verifications/verify",
+  VERIFY_PHONE_FOR_TICKET: "/phone-verifications/validate-support-ticket",
+  RESEND_PHONE: "/phone-verifications/resend",
+  RECENT_AVATARS: "/users/@me/avatars",
+  RECENT_AVATARS_DELETE(arg0) {
+    return "/users/@me/avatars/" + arg0;
+  },
+  UNCLAIMED_GAMES: "/users/@me/unclaimed-games",
+  USERS_ME_CUSTOM_THEMES: "/users/@me/custom-themes",
+  CONNECTIONS: "/users/@me/connections",
+  CONNECTIONS_AUTHORIZE(platform_type) {
+    return "/connections/" + platform_type + "/authorize";
+  },
+  CONNECTIONS_SESSION_HANDOFF(arg0) {
+    return "/connections/" + arg0 + "/callback/session-handoff";
+  },
+  CONNECTIONS_CALLBACK(arg0) {
+    return "/connections/" + arg0 + "/callback";
+  },
+  CONNECTION(arg0, arg1) {
+    return "/users/@me/connections/" + arg0 + "/" + escape(arg1);
+  },
+  CONNECTION_REFRESH(arg0, arg1) {
+    return "/users/@me/connections/" + arg0 + "/" + escape(arg1) + "/refresh";
+  },
+  CONNECTION_SYNC_CONTACTS: "/users/@me/connections/contacts/@me/external-friend-list-entries",
+  CONNECTION_ACCESS_TOKEN(SPOTIFY, id) {
+    return "/users/@me/connections/" + SPOTIFY + "/" + escape(id) + "/access-token";
+  },
+  CONNECTIONS_LINK_DISPATCH_AUTH_CALLBACK(arg0) {
+    return "/connections/" + arg0 + "/link-dispatch-auth-callback";
+  },
+  XBOX_HANDOFF: "/consoles/xbox-handoff",
+  NOTES: "/users/@me/notes",
+  NOTE(userId) {
+    return "/users/@me/notes/" + userId;
+  },
+  MENTIONS: "/users/@me/mentions",
+  MENTIONS_MESSAGE_ID(id) {
+    return "/users/@me/mentions/" + id;
+  },
+  CAPTCHA: "/users/@me/captcha/verify",
+  CAPTCHA_TEST: "/captcha/decider",
+  AGE_ASSURANCE_TEST: "/age-verification/test",
+  VERIFY_AGE: "/age-verification/verify",
+  VERIFY_AGE_V2: "/age-verification/verify/v2",
+  AGE_VERIFICATION_MANUAL_REVIEW: "/age-verification/manual-review",
+  AGE_VERIFICATION_SUSPENDED_MANUAL_REVIEW: "/age-verification/suspended/manual-review",
+  REGISTER_INCODE_INTERVIEW: "/age-verification/incode/interview",
+  CREATE_INCODE_SESSION: "/age-verification/incode/session",
+  AGE_VERIFICATION_METHODS: "/age-verification/methods",
+  AGE_VERIFICATION_METHODS_V2: "/age-verification/methods/v2",
+  AGE_VERIFICATION_SUSPENDED_METHODS_V2: "/age-verification/suspended/methods/v2",
+  GOOGLE_WALLET_REQUEST: "/age-verification/google-wallet/request",
+  GOOGLE_WALLET_VERIFY: "/age-verification/google-wallet/verify",
+  GOOGLE_WALLET_REQUEST_SUSPENDED_USER: "/age-verification/google-wallet/suspended/request",
+  GOOGLE_WALLET_VERIFY_SUSPENDED_USER: "/age-verification/google-wallet/suspended/verify",
+  AGE_SIGNAL: "/users/@me/age-signal",
+  AGE_SIGNAL_CHALLENGE: "/users/@me/age-signal/challenge",
+  AGE_VERIFICATION_REACTIVE_CHECK: "/users/@me/age-verification/check",
+  AGE_VERIFICATION_RESET: "/users/@me/age-verification/reset",
+  EXPERIMENTS: "/experiments",
+  LOGIN: "/auth/login",
+  LOGIN_GENERATED_USER(arg0) {
+    return "/auth/login/generated-user/" + arg0;
+  },
+  GENERATED_POOLS_FOR_CURRENT_USER: "/generated-pools/@me",
+  GENERATED_POOL_BY_ID(arg0) {
+    return "/generated-pools/" + arg0;
+  },
+  LOGIN_MFA(mfaType) {
+    return "/auth/mfa/" + mfaType;
+  },
+  LOGIN_SMS_SEND: "/auth/mfa/sms/send",
+  ONE_TIME_LOGIN: "/auth/one-time-login",
+  REMOTE_AUTH_INITIALIZE: "/users/@me/remote-auth",
+  REMOTE_AUTH_CANCEL: "/users/@me/remote-auth/cancel",
+  REMOTE_AUTH_LOGIN: "/users/@me/remote-auth/login",
+  REMOTE_AUTH_FINISH: "/users/@me/remote-auth/finish",
+  LOGOUT: "/auth/logout",
+  REGISTER: "/auth/register",
+  REGISTER_PHONE: "/auth/register/phone",
+  SCORE_PASSWORD: "/auth/password/validate",
+  MFA_WEBAUTHN_CREDENTIALS: "/users/@me/mfa/webauthn/credentials",
+  WEBAUTHN_CONDITIONAL_UI_CHALLENGE: "/auth/conditional/start",
+  WEBAUTHN_CONDITIONAL_UI_LOGIN: "/auth/conditional/finish",
+  WEBAUTHN_PASSWORDLESS_CHALLENGE: "/auth/passwordless/start",
+  MFA_WEBAUTHN_CREDENTIAL(id) {
+    return "/users/@me/mfa/webauthn/credentials/" + id;
+  },
+  INVITE(arg0) {
+    return "/invites/" + arg0;
+  },
+  INVITE_FRIEND_MEMBERS(code) {
+    return "/invites/" + code + "/friend-members";
+  },
+  UNRESOLVED_GUILD_TEMPLATE(code) {
+    return "/guilds/templates/" + code;
+  },
+  GUILD_TEMPLATES(arg0) {
+    return "/guilds/" + arg0 + "/templates";
+  },
+  GUILD_TEMPLATE(arg0, arg1) {
+    return "/guilds/" + arg0 + "/templates/" + arg1;
+  },
+  TRACK: "/science",
+  METRICS: "/metrics",
+  METRICS_V2: "/metrics/v2",
+  SSO: "/sso",
+  SSO_TOKEN: "/sso-token",
+  VERIFY: "/auth/verify",
+  AUTHORIZE_IP: "/auth/authorize-ip",
+  AUTHORIZE_PAYMENT: "/billing/verify-purchase-request",
+  VERIFY_RESEND: "/auth/verify/resend",
+  FORGOT_PASSWORD: "/auth/forgot",
+  RESET_PASSWORD: "/auth/reset",
+  REGIONS(id) {
+    let str = "/voice/regions";
+    if (null != id) {
+      const _HermesInternal = HermesInternal;
+      str = "/guilds/" + id + "/regions";
+    }
+    return str;
+  },
+  DEBUG_LOG(ANDROID_APP, filename) {
+    return "/debug-logs/" + ANDROID_APP + "/" + filename;
   },
   DEBUG_LOGS(arg0) {
     return "/debug-logs/multi/" + arg0;
@@ -2066,8 +4089,6 @@ ActivityActionTypes = {
     return "/guild-space/" + arg0 + "/banner/" + arg1 + "." + arg2;
   },
 };
-const frozen1 = Object.freeze({ ACCOUNT_AGE: 5, MEMBER_AGE: 10 });
-const frozen2 = Object.freeze(ActivityActionTypes);
 const set = new Set(items);
 const result = 6 * DurationsDefault.Seconds.HOUR;
 const items1 = [
@@ -2086,7 +4107,8 @@ const items1 = [
   2 * DurationsDefault.Seconds.HOUR,
   result,
 ];
-ActivityActionTypes = {
+const wrapPathsResult = PathUtils.wrapPaths(frozen2);
+const frozen3 = Object.freeze({
   API_DOCS: "" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/developers/docs/intro",
   API_DOCS_GAME_AND_SERVER_MANAGEMENT:
     "" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/developers/docs/game-and-server-management/alpha-and-beta-testing",
@@ -2150,9 +4172,8 @@ ActivityActionTypes = {
   },
   INVITES_HELP: "https://support.discord.com/hc/en-us/articles/208866998-Invites-101",
   SAFETY_CENTER: "" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/safetycenter",
-};
-const frozen3 = Object.freeze(ActivityActionTypes);
-const obj2 = {
+});
+const obj5 = {
   AUTH: "Auth",
   STORE_LISTING: "Store Listing",
   STORE_DIRECTORY_HOME: "Store Directory Home",
@@ -2241,7 +4262,7 @@ const obj2 = {
   BOGO_PROMOTION_MARKETING_PAGE_BANNER: "Bogo Promotion Marketing Page Banner",
   PREMIUM_MARKETING_MOMENT_ACTION_SHEET: "Premium Marketing Moment Action Sheet",
 };
-const obj3 = {
+const obj6 = {
   HERO: "Hero",
   BODY: "Body",
   NAVIGATION: "Navigation",
@@ -2637,7 +4658,7 @@ const obj3 = {
   NOTIFICATIONS_INBOX: "Notifications Inbox",
   IN_APP_NOTIFICATION: "In App Notification",
 };
-const obj4 = {
+const obj7 = {
   TOOLTIP: "Tooltip",
   CARD: "Card",
   CAROUSEL: "Carousel",
@@ -2847,7 +4868,7 @@ const obj4 = {
   QUEST_PREVIEW_TOOL_2: obj10.QUEST_PREVIEW_TOOL_2,
   SECURE_FRAMES: obj10.SECURE_FRAMES,
   SECURE_FRAMES_VERIFIED_DEVICES: obj10.SECURE_FRAMES_VERIFIED_DEVICES,
-} = obj3);
+} = obj6);
 const frozen4 = Object.freeze({
   DEVELOPER_PORTAL: "/developers",
   DEVELOPER_PORTAL_GUILD_ANALYTICS(arg0) {
@@ -2859,7 +4880,7 @@ const frozen4 = Object.freeze({
   },
   DEVELOPER_PORTAL_APPLICATIONS_GAME_IDENTITY: "/developers/applications/select/game-identity",
 });
-const obj7 = {
+const obj11 = {
   TWITCH: "twitch",
   YOUTUBE: "youtube",
   SKYPE: "skype",
@@ -2894,74 +4915,139 @@ const obj7 = {
   META_QUEST_OR_HORIZON: "meta_quest_or_horizon",
 };
 const frozen5 = Object.freeze({
-  TEXT_PLAYGROUND: obj3.SETTINGS_TEXT_PLAYGROUND,
-  DESIGN_SYSTEMS: obj3.DESIGN_SYSTEM,
-  DESIGN_SYSTEMS_COLORS: obj3.DESIGN_SYSTEM,
-  INTL_TESTING: obj3.SETTINGS_INTL_TESTING,
-  ANIMATION_TESTING: obj3.DESIGN_SYSTEM,
-  OVERVIEW: obj3.SETTINGS_OVERVIEW,
-  BROWSER: obj3.SETTINGS_BROWSER,
-  CHANGE_LOG: obj3.SETTINGS_CHANGELOG,
-  PREMIUM_GIFTING: obj3.SETTINGS_PREMIUM_GIFTING,
-  BLOCKED_USERS: obj3.SETTINGS_BLOCKED_USERS,
-  BLOCKED_USERS_V2: obj3.SETTINGS_BLOCKED_USERS_V2,
-  IGNORED_USERS: obj3.SETTINGS_IGNORED_USERS,
-  CUSTOM_STATUS: obj3.SETTINGS_CUSTOM_STATUS,
-  CUSTOM_STATUS_EMOJI_PICKER: obj3.SETTINGS_CUSTOM_STATUS_EMOJI_PICKER,
-  CHECK_NATIVE_UPDATE: obj3.SETTINGS_CHECK_NATIVE_UPDATE,
-  INSTALL_NATIVE_UPDATE: obj3.SETTINGS_INSTALL_NATIVE_UPDATE,
-  ACCOUNT: obj3.SETTINGS_ACCOUNT,
-  GAMES: obj3.SETTINGS_GAMES,
-  ACCOUNT_CHANGE_USERNAME: obj3.SETTINGS_CHANGE_USERNAME,
-  ACCOUNT_CHANGE_PASSWORD: obj3.SETTINGS_CHANGE_PASSWORD,
-  ACCOUNT_CONFIRM_PASSWORD: obj3.SETTINGS_CONFIRM_PASSWORD,
-  ACCOUNT_BACKUP_CODES: obj3.SETTINGS_BACKUP_CODES,
-  ACCOUNT_CONFIRM_VIEW_BACKUP_CODES: obj3.SETTINGS_BACKUP_CODES,
-  CONNECTIONS: obj3.SETTINGS_CONNECTIONS,
-  CONNECTIONS_XBOX: obj3.SETTINGS_CONNECTIONS_XBOX,
-  AUTHORIZED_APPS: obj3.SETTINGS_AUTHORIZED_APPS,
-  AUTHORIZED_APP: obj3.SETTINGS_AUTHORIZED_APP,
-  AUTHORIZED_APP_PERMISSIONS: obj3.SETTINGS_AUTHORIZED_APP_PERMISSIONS,
-  TEXT: obj3.SETTINGS_TEXT_AND_IMAGES,
-  VOICE: obj3.SETTINGS_VOICE_AND_VIDEO,
-  PRIVACY_AND_SAFETY: obj3.SETTINGS_PRIVACY_AND_SAFETY,
-  CONTENT_AND_SOCIAL: obj3.SETTINGS_CONTENT_AND_SOCIAL,
-  SENSITIVE_MEDIA_FILTERS: obj3.SETTINGS_SENSITIVE_MEDIA_FILTERS,
-  CONNECTED_GAMES: obj3.SETTINGS_CONNECTED_GAMES,
-  DATA_AND_PRIVACY: obj3.SETTINGS_DATA_AND_PRIVACY,
-  SPONSORED_CONTENT_PREFERENCES: obj3.SETTINGS_SPONSORED_CONTENT_PREFERENCES,
-  MANAGE_SPONSORED_CONTENT: obj3.SETTINGS_MANAGE_SPONSORED_CONTENT,
-  REQUEST_DATA: obj3.SETTINGS_REQUEST_DATA,
-  ACCOUNT_STANDING: obj3.SETTINGS_ACCOUNT_STANDING,
-  NOTIFICATIONS: obj3.SETTINGS_NOTIFICATIONS,
-  SOUNDS: obj3.SETTINGS_SOUNDS,
-  APP_ICONS: obj3.SETTINGS_APP_ICONS,
-  DATA: obj3.SETTINGS_DATA,
-  EMAILS: obj3.SETTINGS_EMAILS,
-  ACTIVITY_PRIVACY: obj3.SETTINGS_ACTIVITY_PRIVACY,
-  REGISTERED_GAMES: obj3.SETTINGS_GAME_ACTIVITY,
-  KEYBINDS: obj3.SETTINGS_KEYBINDS,
-  APPEARANCE: obj3.SETTINGS_APPEARANCE,
-  APPEARANCE_THEME_PICKER: obj3.SETTINGS_APPEARANCE_THEME_PICKER,
-  APPEARANCE_LIGHT_MODE_THEME_PICKER: obj3.SETTINGS_APPEARANCE_LIGHT_MODE_THEME_PICKER,
-  APPEARANCE_DARK_MODE_THEME_PICKER: obj3.SETTINGS_APPEARANCE_DARK_MODE_THEME_PICKER,
-  ACCESSIBILITY: obj3.SETTINGS_ACCESSIBILITY,
-  OVERLAY: obj3.SETTINGS_OVERLAY,
-  LANGUAGE: obj3.SETTINGS_LANGUAGE,
-  STREAMER_MODE: obj3.SETTINGS_STREAMER_MODE,
-  SUBSCRIPTIONS: obj3.SETTINGS_SUBSCRIPTIONS,
-  PREMIUM: obj3.SETTINGS_PREMIUM,
-  PREMIUM_PLAN_SELECT: obj3.SETTINGS_PREMIUM_PLAN_SELECT,
-  PREMIUM_MANAGE_PLAN: obj3.SETTINGS_PREMIUM_MANAGE_PLAN,
-  GUILD_ROLE_SUBSCRIPTIONS: obj3.GUILD_ROLE_SUBSCRIPTION,
-  GUILD_ROLE_SUBSCRIPTIONS_CANCEL: obj3.GUILD_ROLE_SUBSCRIPTION_CANCEL,
-  GUILD_BOOSTING: obj3.GUILD_BOOSTING,
-  WEBAUTHN_VIEW: obj3.SETTINGS_WEBAUTHN_VIEW,
+  TEXT_PLAYGROUND: obj6.SETTINGS_TEXT_PLAYGROUND,
+  DESIGN_SYSTEMS: obj6.DESIGN_SYSTEM,
+  DESIGN_SYSTEMS_COLORS: obj6.DESIGN_SYSTEM,
+  INTL_TESTING: obj6.SETTINGS_INTL_TESTING,
+  ANIMATION_TESTING: obj6.DESIGN_SYSTEM,
+  OVERVIEW: obj6.SETTINGS_OVERVIEW,
+  BROWSER: obj6.SETTINGS_BROWSER,
+  CHANGE_LOG: obj6.SETTINGS_CHANGELOG,
+  PREMIUM_GIFTING: obj6.SETTINGS_PREMIUM_GIFTING,
+  BLOCKED_USERS: obj6.SETTINGS_BLOCKED_USERS,
+  BLOCKED_USERS_V2: obj6.SETTINGS_BLOCKED_USERS_V2,
+  IGNORED_USERS: obj6.SETTINGS_IGNORED_USERS,
+  CUSTOM_STATUS: obj6.SETTINGS_CUSTOM_STATUS,
+  CUSTOM_STATUS_EMOJI_PICKER: obj6.SETTINGS_CUSTOM_STATUS_EMOJI_PICKER,
+  CHECK_NATIVE_UPDATE: obj6.SETTINGS_CHECK_NATIVE_UPDATE,
+  INSTALL_NATIVE_UPDATE: obj6.SETTINGS_INSTALL_NATIVE_UPDATE,
+  ACCOUNT: obj6.SETTINGS_ACCOUNT,
+  GAMES: obj6.SETTINGS_GAMES,
+  ACCOUNT_CHANGE_USERNAME: obj6.SETTINGS_CHANGE_USERNAME,
+  ACCOUNT_CHANGE_PASSWORD: obj6.SETTINGS_CHANGE_PASSWORD,
+  ACCOUNT_CONFIRM_PASSWORD: obj6.SETTINGS_CONFIRM_PASSWORD,
+  ACCOUNT_BACKUP_CODES: obj6.SETTINGS_BACKUP_CODES,
+  ACCOUNT_CONFIRM_VIEW_BACKUP_CODES: obj6.SETTINGS_BACKUP_CODES,
+  CONNECTIONS: obj6.SETTINGS_CONNECTIONS,
+  CONNECTIONS_XBOX: obj6.SETTINGS_CONNECTIONS_XBOX,
+  AUTHORIZED_APPS: obj6.SETTINGS_AUTHORIZED_APPS,
+  AUTHORIZED_APP: obj6.SETTINGS_AUTHORIZED_APP,
+  AUTHORIZED_APP_PERMISSIONS: obj6.SETTINGS_AUTHORIZED_APP_PERMISSIONS,
+  TEXT: obj6.SETTINGS_TEXT_AND_IMAGES,
+  VOICE: obj6.SETTINGS_VOICE_AND_VIDEO,
+  PRIVACY_AND_SAFETY: obj6.SETTINGS_PRIVACY_AND_SAFETY,
+  CONTENT_AND_SOCIAL: obj6.SETTINGS_CONTENT_AND_SOCIAL,
+  SENSITIVE_MEDIA_FILTERS: obj6.SETTINGS_SENSITIVE_MEDIA_FILTERS,
+  CONNECTED_GAMES: obj6.SETTINGS_CONNECTED_GAMES,
+  DATA_AND_PRIVACY: obj6.SETTINGS_DATA_AND_PRIVACY,
+  SPONSORED_CONTENT_PREFERENCES: obj6.SETTINGS_SPONSORED_CONTENT_PREFERENCES,
+  MANAGE_SPONSORED_CONTENT: obj6.SETTINGS_MANAGE_SPONSORED_CONTENT,
+  REQUEST_DATA: obj6.SETTINGS_REQUEST_DATA,
+  ACCOUNT_STANDING: obj6.SETTINGS_ACCOUNT_STANDING,
+  NOTIFICATIONS: obj6.SETTINGS_NOTIFICATIONS,
+  SOUNDS: obj6.SETTINGS_SOUNDS,
+  APP_ICONS: obj6.SETTINGS_APP_ICONS,
+  DATA: obj6.SETTINGS_DATA,
+  EMAILS: obj6.SETTINGS_EMAILS,
+  ACTIVITY_PRIVACY: obj6.SETTINGS_ACTIVITY_PRIVACY,
+  REGISTERED_GAMES: obj6.SETTINGS_GAME_ACTIVITY,
+  KEYBINDS: obj6.SETTINGS_KEYBINDS,
+  APPEARANCE: obj6.SETTINGS_APPEARANCE,
+  APPEARANCE_THEME_PICKER: obj6.SETTINGS_APPEARANCE_THEME_PICKER,
+  APPEARANCE_LIGHT_MODE_THEME_PICKER: obj6.SETTINGS_APPEARANCE_LIGHT_MODE_THEME_PICKER,
+  APPEARANCE_DARK_MODE_THEME_PICKER: obj6.SETTINGS_APPEARANCE_DARK_MODE_THEME_PICKER,
+  ACCESSIBILITY: obj6.SETTINGS_ACCESSIBILITY,
+  OVERLAY: obj6.SETTINGS_OVERLAY,
+  LANGUAGE: obj6.SETTINGS_LANGUAGE,
+  STREAMER_MODE: obj6.SETTINGS_STREAMER_MODE,
+  SUBSCRIPTIONS: obj6.SETTINGS_SUBSCRIPTIONS,
+  PREMIUM: obj6.SETTINGS_PREMIUM,
+  PREMIUM_PLAN_SELECT: obj6.SETTINGS_PREMIUM_PLAN_SELECT,
+  PREMIUM_MANAGE_PLAN: obj6.SETTINGS_PREMIUM_MANAGE_PLAN,
+  GUILD_ROLE_SUBSCRIPTIONS: obj6.GUILD_ROLE_SUBSCRIPTION,
+  GUILD_ROLE_SUBSCRIPTIONS_CANCEL: obj6.GUILD_ROLE_SUBSCRIPTION_CANCEL,
+  GUILD_BOOSTING: obj6.GUILD_BOOSTING,
+  WEBAUTHN_VIEW: obj6.SETTINGS_WEBAUTHN_VIEW,
 });
 const items2 = [,];
-({ FACEBOOK: arr3[0], CONTACTS: arr3[1] } = obj7);
+({ FACEBOOK: arr3[0], CONTACTS: arr3[1] } = obj11);
 const frozen6 = Object.freeze({ GAME_INVITE_FRAGMENT: "/_discord/join?secret=" });
-const obj1 = {
+const obj3 = {
+  API_DOCS: "" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/developers/docs/intro",
+  API_DOCS_GAME_AND_SERVER_MANAGEMENT:
+    "" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/developers/docs/game-and-server-management/alpha-and-beta-testing",
+  API_DOCS_APPLICATION_SKUS_INDEX(arg0) {
+    return "" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/developers/applications/" + arg0 + "/skus";
+  },
+  API_DOCS_NEWS_CHANNELS:
+    "" +
+    window.GLOBAL_ENV.MARKETING_ENDPOINT +
+    "/developers/docs/game-and-server-management/special-channels#news-channels",
+  API_DOCS_WEBHOOKS: "" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/developers/docs/resources/webhook",
+  DEVELOPER_PORTAL: "" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/developers",
+  DEVELOPER_PORTAL_TEAMS: "" + window.GLOBAL_ENV.DEVELOPERS_ENDPOINT + "/developers/teams",
+  DEVELOPER_PORTAL_APPLICATIONS_GAME_IDENTITY:
+    "" + window.GLOBAL_ENV.DEVELOPERS_ENDPOINT + "/developers/applications/select/game-identity",
+  DEVELOPER_PORTAL_PAYOUT_SETTINGS(arg0) {
+    return "" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/developers/teams/" + arg0 + "/payout-settings";
+  },
+  DEVELOPER_PORTAL_GUILD_ANALYTICS(arg0) {
+    return "" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/developers/servers/" + arg0;
+  },
+  DEVELOPER_PORTAL_LOGIN_HANDOFF(nonce, arg1, arg2) {
+    return (
+      "" +
+      window.GLOBAL_ENV.DEVELOPERS_ENDPOINT +
+      "/developers/handoff#handoff_key=" +
+      nonce +
+      "&handoff_token=" +
+      arg1 +
+      "&redirect_to=" +
+      encodeURIComponent(arg2)
+    );
+  },
+  DEVELOPER_PORTAL_GUILD_ANALYTICS_ROLE_SUBSCRIPTION(arg0) {
+    return "" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/developers/servers/" + arg0 + "/analytics/premium-membership";
+  },
+  COMPANY: "" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/company",
+  PARTNERS: "" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/partners",
+  TERMS: "" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/terms",
+  TERMS_SUMMARY: "" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/safety/important-policy-updates",
+  PAID_TERMS: "" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/terms/paid-services-terms",
+  PAID_TERMS_VIRTUAL_GOODS: "" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/terms/paid-services-terms#6",
+  PAID_TERMS_ORBS: "" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/terms/paid-services-terms#14",
+  GIFT_CARD_TERMS: "" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/terms/gift-card-terms",
+  WALLET_TERMS: "" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/terms/wallet-terms",
+  PRIVACY: "" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/privacy",
+  GUIDELINES: "" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/guidelines",
+  ACKNOWLEDGEMENTS: "" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/acknowledgements",
+  DOWNLOAD: "" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/download",
+  CONTACT: "http://dis.gd/contact",
+  KRISP: "https://api.krisp.ai/v2/resource/link/discord",
+  STREAMKIT: "" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/streamkit",
+  STAGES: "" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/stages",
+  SNOWSGIVING: "" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/snowsgiving",
+  TOS_UPDATE_FEB_2022: "http://dis.gd/importantupdates",
+  HARMFUL_LINKS: "https://dis.gd/phish",
+  SLASH_COMMANDS: "https://discord.com/blog/welcome-to-the-new-era-of-discord-apps",
+  GUILD_ONBOARDING_EXAMPLES: "https://support.discord.com/hc/en-us/articles/10394859532823",
+  ROLE_SUBSCRIPTION_STORE_PAGE(slug) {
+    return "https:" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/servers/" + slug;
+  },
+  INVITES_HELP: "https://support.discord.com/hc/en-us/articles/208866998-Invites-101",
+  SAFETY_CENTER: "" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/safetycenter",
+};
+const obj4 = {
   DEVELOPER_PORTAL: "/developers",
   DEVELOPER_PORTAL_GUILD_ANALYTICS(arg0) {
     return "/developers/servers/" + arg0;
@@ -2972,75 +5058,74 @@ const obj1 = {
   },
   DEVELOPER_PORTAL_APPLICATIONS_GAME_IDENTITY: "/developers/applications/select/game-identity",
 };
-const obj5 = { page: obj2.DIRECT, object: obj4.WEB_URL };
-const obj6 = {
-  TEXT_PLAYGROUND: obj3.SETTINGS_TEXT_PLAYGROUND,
-  DESIGN_SYSTEMS: obj3.DESIGN_SYSTEM,
-  DESIGN_SYSTEMS_COLORS: obj3.DESIGN_SYSTEM,
-  INTL_TESTING: obj3.SETTINGS_INTL_TESTING,
-  ANIMATION_TESTING: obj3.DESIGN_SYSTEM,
-  OVERVIEW: obj3.SETTINGS_OVERVIEW,
-  BROWSER: obj3.SETTINGS_BROWSER,
-  CHANGE_LOG: obj3.SETTINGS_CHANGELOG,
-  PREMIUM_GIFTING: obj3.SETTINGS_PREMIUM_GIFTING,
-  BLOCKED_USERS: obj3.SETTINGS_BLOCKED_USERS,
-  BLOCKED_USERS_V2: obj3.SETTINGS_BLOCKED_USERS_V2,
-  IGNORED_USERS: obj3.SETTINGS_IGNORED_USERS,
-  CUSTOM_STATUS: obj3.SETTINGS_CUSTOM_STATUS,
-  CUSTOM_STATUS_EMOJI_PICKER: obj3.SETTINGS_CUSTOM_STATUS_EMOJI_PICKER,
-  CHECK_NATIVE_UPDATE: obj3.SETTINGS_CHECK_NATIVE_UPDATE,
-  INSTALL_NATIVE_UPDATE: obj3.SETTINGS_INSTALL_NATIVE_UPDATE,
-  ACCOUNT: obj3.SETTINGS_ACCOUNT,
-  GAMES: obj3.SETTINGS_GAMES,
-  ACCOUNT_CHANGE_USERNAME: obj3.SETTINGS_CHANGE_USERNAME,
-  ACCOUNT_CHANGE_PASSWORD: obj3.SETTINGS_CHANGE_PASSWORD,
-  ACCOUNT_CONFIRM_PASSWORD: obj3.SETTINGS_CONFIRM_PASSWORD,
-  ACCOUNT_BACKUP_CODES: obj3.SETTINGS_BACKUP_CODES,
-  ACCOUNT_CONFIRM_VIEW_BACKUP_CODES: obj3.SETTINGS_BACKUP_CODES,
-  CONNECTIONS: obj3.SETTINGS_CONNECTIONS,
-  CONNECTIONS_XBOX: obj3.SETTINGS_CONNECTIONS_XBOX,
-  AUTHORIZED_APPS: obj3.SETTINGS_AUTHORIZED_APPS,
-  AUTHORIZED_APP: obj3.SETTINGS_AUTHORIZED_APP,
-  AUTHORIZED_APP_PERMISSIONS: obj3.SETTINGS_AUTHORIZED_APP_PERMISSIONS,
-  TEXT: obj3.SETTINGS_TEXT_AND_IMAGES,
-  VOICE: obj3.SETTINGS_VOICE_AND_VIDEO,
-  PRIVACY_AND_SAFETY: obj3.SETTINGS_PRIVACY_AND_SAFETY,
-  CONTENT_AND_SOCIAL: obj3.SETTINGS_CONTENT_AND_SOCIAL,
-  SENSITIVE_MEDIA_FILTERS: obj3.SETTINGS_SENSITIVE_MEDIA_FILTERS,
-  CONNECTED_GAMES: obj3.SETTINGS_CONNECTED_GAMES,
-  DATA_AND_PRIVACY: obj3.SETTINGS_DATA_AND_PRIVACY,
-  SPONSORED_CONTENT_PREFERENCES: obj3.SETTINGS_SPONSORED_CONTENT_PREFERENCES,
-  MANAGE_SPONSORED_CONTENT: obj3.SETTINGS_MANAGE_SPONSORED_CONTENT,
-  REQUEST_DATA: obj3.SETTINGS_REQUEST_DATA,
-  ACCOUNT_STANDING: obj3.SETTINGS_ACCOUNT_STANDING,
-  NOTIFICATIONS: obj3.SETTINGS_NOTIFICATIONS,
-  SOUNDS: obj3.SETTINGS_SOUNDS,
-  APP_ICONS: obj3.SETTINGS_APP_ICONS,
-  DATA: obj3.SETTINGS_DATA,
-  EMAILS: obj3.SETTINGS_EMAILS,
-  ACTIVITY_PRIVACY: obj3.SETTINGS_ACTIVITY_PRIVACY,
-  REGISTERED_GAMES: obj3.SETTINGS_GAME_ACTIVITY,
-  KEYBINDS: obj3.SETTINGS_KEYBINDS,
-  APPEARANCE: obj3.SETTINGS_APPEARANCE,
-  APPEARANCE_THEME_PICKER: obj3.SETTINGS_APPEARANCE_THEME_PICKER,
-  APPEARANCE_LIGHT_MODE_THEME_PICKER: obj3.SETTINGS_APPEARANCE_LIGHT_MODE_THEME_PICKER,
-  APPEARANCE_DARK_MODE_THEME_PICKER: obj3.SETTINGS_APPEARANCE_DARK_MODE_THEME_PICKER,
-  ACCESSIBILITY: obj3.SETTINGS_ACCESSIBILITY,
-  OVERLAY: obj3.SETTINGS_OVERLAY,
-  LANGUAGE: obj3.SETTINGS_LANGUAGE,
-  STREAMER_MODE: obj3.SETTINGS_STREAMER_MODE,
-  SUBSCRIPTIONS: obj3.SETTINGS_SUBSCRIPTIONS,
-  PREMIUM: obj3.SETTINGS_PREMIUM,
-  PREMIUM_PLAN_SELECT: obj3.SETTINGS_PREMIUM_PLAN_SELECT,
-  PREMIUM_MANAGE_PLAN: obj3.SETTINGS_PREMIUM_MANAGE_PLAN,
-  GUILD_ROLE_SUBSCRIPTIONS: obj3.GUILD_ROLE_SUBSCRIPTION,
-  GUILD_ROLE_SUBSCRIPTIONS_CANCEL: obj3.GUILD_ROLE_SUBSCRIPTION_CANCEL,
-  GUILD_BOOSTING: obj3.GUILD_BOOSTING,
-  WEBAUTHN_VIEW: obj3.SETTINGS_WEBAUTHN_VIEW,
+const obj8 = { page: obj5.DIRECT, object: obj7.WEB_URL };
+const obj9 = {
+  TEXT_PLAYGROUND: obj6.SETTINGS_TEXT_PLAYGROUND,
+  DESIGN_SYSTEMS: obj6.DESIGN_SYSTEM,
+  DESIGN_SYSTEMS_COLORS: obj6.DESIGN_SYSTEM,
+  INTL_TESTING: obj6.SETTINGS_INTL_TESTING,
+  ANIMATION_TESTING: obj6.DESIGN_SYSTEM,
+  OVERVIEW: obj6.SETTINGS_OVERVIEW,
+  BROWSER: obj6.SETTINGS_BROWSER,
+  CHANGE_LOG: obj6.SETTINGS_CHANGELOG,
+  PREMIUM_GIFTING: obj6.SETTINGS_PREMIUM_GIFTING,
+  BLOCKED_USERS: obj6.SETTINGS_BLOCKED_USERS,
+  BLOCKED_USERS_V2: obj6.SETTINGS_BLOCKED_USERS_V2,
+  IGNORED_USERS: obj6.SETTINGS_IGNORED_USERS,
+  CUSTOM_STATUS: obj6.SETTINGS_CUSTOM_STATUS,
+  CUSTOM_STATUS_EMOJI_PICKER: obj6.SETTINGS_CUSTOM_STATUS_EMOJI_PICKER,
+  CHECK_NATIVE_UPDATE: obj6.SETTINGS_CHECK_NATIVE_UPDATE,
+  INSTALL_NATIVE_UPDATE: obj6.SETTINGS_INSTALL_NATIVE_UPDATE,
+  ACCOUNT: obj6.SETTINGS_ACCOUNT,
+  GAMES: obj6.SETTINGS_GAMES,
+  ACCOUNT_CHANGE_USERNAME: obj6.SETTINGS_CHANGE_USERNAME,
+  ACCOUNT_CHANGE_PASSWORD: obj6.SETTINGS_CHANGE_PASSWORD,
+  ACCOUNT_CONFIRM_PASSWORD: obj6.SETTINGS_CONFIRM_PASSWORD,
+  ACCOUNT_BACKUP_CODES: obj6.SETTINGS_BACKUP_CODES,
+  ACCOUNT_CONFIRM_VIEW_BACKUP_CODES: obj6.SETTINGS_BACKUP_CODES,
+  CONNECTIONS: obj6.SETTINGS_CONNECTIONS,
+  CONNECTIONS_XBOX: obj6.SETTINGS_CONNECTIONS_XBOX,
+  AUTHORIZED_APPS: obj6.SETTINGS_AUTHORIZED_APPS,
+  AUTHORIZED_APP: obj6.SETTINGS_AUTHORIZED_APP,
+  AUTHORIZED_APP_PERMISSIONS: obj6.SETTINGS_AUTHORIZED_APP_PERMISSIONS,
+  TEXT: obj6.SETTINGS_TEXT_AND_IMAGES,
+  VOICE: obj6.SETTINGS_VOICE_AND_VIDEO,
+  PRIVACY_AND_SAFETY: obj6.SETTINGS_PRIVACY_AND_SAFETY,
+  CONTENT_AND_SOCIAL: obj6.SETTINGS_CONTENT_AND_SOCIAL,
+  SENSITIVE_MEDIA_FILTERS: obj6.SETTINGS_SENSITIVE_MEDIA_FILTERS,
+  CONNECTED_GAMES: obj6.SETTINGS_CONNECTED_GAMES,
+  DATA_AND_PRIVACY: obj6.SETTINGS_DATA_AND_PRIVACY,
+  SPONSORED_CONTENT_PREFERENCES: obj6.SETTINGS_SPONSORED_CONTENT_PREFERENCES,
+  MANAGE_SPONSORED_CONTENT: obj6.SETTINGS_MANAGE_SPONSORED_CONTENT,
+  REQUEST_DATA: obj6.SETTINGS_REQUEST_DATA,
+  ACCOUNT_STANDING: obj6.SETTINGS_ACCOUNT_STANDING,
+  NOTIFICATIONS: obj6.SETTINGS_NOTIFICATIONS,
+  SOUNDS: obj6.SETTINGS_SOUNDS,
+  APP_ICONS: obj6.SETTINGS_APP_ICONS,
+  DATA: obj6.SETTINGS_DATA,
+  EMAILS: obj6.SETTINGS_EMAILS,
+  ACTIVITY_PRIVACY: obj6.SETTINGS_ACTIVITY_PRIVACY,
+  REGISTERED_GAMES: obj6.SETTINGS_GAME_ACTIVITY,
+  KEYBINDS: obj6.SETTINGS_KEYBINDS,
+  APPEARANCE: obj6.SETTINGS_APPEARANCE,
+  APPEARANCE_THEME_PICKER: obj6.SETTINGS_APPEARANCE_THEME_PICKER,
+  APPEARANCE_LIGHT_MODE_THEME_PICKER: obj6.SETTINGS_APPEARANCE_LIGHT_MODE_THEME_PICKER,
+  APPEARANCE_DARK_MODE_THEME_PICKER: obj6.SETTINGS_APPEARANCE_DARK_MODE_THEME_PICKER,
+  ACCESSIBILITY: obj6.SETTINGS_ACCESSIBILITY,
+  OVERLAY: obj6.SETTINGS_OVERLAY,
+  LANGUAGE: obj6.SETTINGS_LANGUAGE,
+  STREAMER_MODE: obj6.SETTINGS_STREAMER_MODE,
+  SUBSCRIPTIONS: obj6.SETTINGS_SUBSCRIPTIONS,
+  PREMIUM: obj6.SETTINGS_PREMIUM,
+  PREMIUM_PLAN_SELECT: obj6.SETTINGS_PREMIUM_PLAN_SELECT,
+  PREMIUM_MANAGE_PLAN: obj6.SETTINGS_PREMIUM_MANAGE_PLAN,
+  GUILD_ROLE_SUBSCRIPTIONS: obj6.GUILD_ROLE_SUBSCRIPTION,
+  GUILD_ROLE_SUBSCRIPTIONS_CANCEL: obj6.GUILD_ROLE_SUBSCRIPTION_CANCEL,
+  GUILD_BOOSTING: obj6.GUILD_BOOSTING,
+  WEBAUTHN_VIEW: obj6.SETTINGS_WEBAUTHN_VIEW,
 };
-const wrapPathsResult = PathUtils.wrapPaths(frozen2);
 const items3 = [, , , ,];
-({ SPOTIFY: arr4[0], XBOX: arr4[1], PLAYSTATION: arr4[2], PLAYSTATION_STAGING: arr4[3], CRUNCHYROLL: arr4[4] } = obj7);
+({ SPOTIFY: arr4[0], XBOX: arr4[1], PLAYSTATION: arr4[2], PLAYSTATION_STAGING: arr4[3], CRUNCHYROLL: arr4[4] } = obj11);
 const set1 = new Set(items2);
 const set2 = new Set(items3);
 const frozen7 = Object.freeze({
@@ -3049,18 +5134,18 @@ const frozen7 = Object.freeze({
   ANDROID: "https://play.google.com/store/apps/details?id=com.discord",
   META_QUEST: "https://www.meta.com/experiences/discord/25956082250713643/",
 });
-const obj9 = { NONE: 0, [0]: "NONE", TIER_1: 1, [1]: "TIER_1", TIER_2: 2, [2]: "TIER_2", TIER_3: 3, [3]: "TIER_3" };
-const obj8 = {
+const obj13 = { NONE: 0, [0]: "NONE", TIER_1: 1, [1]: "TIER_1", TIER_2: 2, [2]: "TIER_2", TIER_3: 3, [3]: "TIER_3" };
+const obj12 = {
   DESKTOP: "" + location.protocol + window.GLOBAL_ENV.API_ENDPOINT + "/download",
   IOS: "https://itunes.apple.com/app/discord/id985746746",
   ANDROID: "https://play.google.com/store/apps/details?id=com.discord",
   META_QUEST: "https://www.meta.com/experiences/discord/25956082250713643/",
 };
-const obj10 = { fonts: null };
+const obj14 = { fonts: null };
 const items4 = [{ src: "url(https://cdn.discordapp.com/assets/stripe/ggsans-vf.woff2)", family: "gg sans" }];
-obj10.fonts = items4;
-const frozen8 = Object.freeze({ [obj9.NONE]: 0, [obj9.TIER_1]: 2, [obj9.TIER_2]: 7, [obj9.TIER_3]: 14 });
-const obj11 = {
+obj14.fonts = items4;
+const frozen8 = Object.freeze({ [obj13.NONE]: 0, [obj13.TIER_1]: 2, [obj13.TIER_2]: 7, [obj13.TIER_3]: 14 });
+const obj15 = {
   UNPAID: 0,
   [0]: "UNPAID",
   ACTIVE: 1,
@@ -3080,25 +5165,25 @@ const obj11 = {
   PAUSE_PENDING: 9,
   [9]: "PAUSE_PENDING",
 };
-const obj12 = { ALLOW_PERKS: null, ALL_PAUSE: null, ALL_PAUSEABLE: null, INACTIVE: null };
+const obj16 = { ALLOW_PERKS: null, ALL_PAUSE: null, ALL_PAUSEABLE: null, INACTIVE: null };
 const items5 = [, , ,];
-({ ACTIVE: arr6[0], PAST_DUE: arr6[1], CANCELED: arr6[2], PAUSE_PENDING: arr6[3] } = obj11);
-const frozen9 = Object.freeze(obj10);
+({ ACTIVE: arr6[0], PAST_DUE: arr6[1], CANCELED: arr6[2], PAUSE_PENDING: arr6[3] } = obj15);
+const frozen9 = Object.freeze(obj14);
 const int2hexResult = ColorUtils.int2hex(10070709);
-obj12.ALLOW_PERKS = new Set(items5);
+obj16.ALLOW_PERKS = new Set(items5);
 const items6 = [,];
-({ PAUSE_PENDING: arr7[0], PAUSED: arr7[1] } = obj11);
+({ PAUSE_PENDING: arr7[0], PAUSED: arr7[1] } = obj15);
 const set3 = new Set(items5);
-obj12.ALL_PAUSE = new Set(items6);
+obj16.ALL_PAUSE = new Set(items6);
 const items7 = [,];
-({ ACTIVE: arr8[0], PAUSED: arr8[1] } = obj11);
+({ ACTIVE: arr8[0], PAUSED: arr8[1] } = obj15);
 const set4 = new Set(items6);
-obj12.ALL_PAUSEABLE = new Set(items7);
+obj16.ALL_PAUSEABLE = new Set(items7);
 const items8 = [, , ,];
-({ UNPAID: arr9[0], ENDED: arr9[1], ACCOUNT_HOLD: arr9[2], BILLING_RETRY: arr9[3] } = obj11);
+({ UNPAID: arr9[0], ENDED: arr9[1], ACCOUNT_HOLD: arr9[2], BILLING_RETRY: arr9[3] } = obj15);
 const set5 = new Set(items7);
-obj12.INACTIVE = new Set(items8);
-const obj13 = { STAFF: 1, [1]: "STAFF" };
+obj16.INACTIVE = new Set(items8);
+const obj17 = { STAFF: 1, [1]: "STAFF" };
 const frozen10 = Object.freeze({
   FONT_SIZE_DEFAULT: 16,
   FONT_SIZE_MIN: 12,
@@ -3113,51 +5198,51 @@ const frozen10 = Object.freeze({
   ZOOM_SCALES: [50, 67, 75, 80, 90, 100, 110, 125, 150, 175, 200],
 });
 const powResult = Math.pow(2, 50);
-obj13.COLLABORATOR = powResult;
-obj13[powResult] = "COLLABORATOR";
+obj17.COLLABORATOR = powResult;
+obj17[powResult] = "COLLABORATOR";
 const powResult1 = Math.pow(2, 51);
-obj13.RESTRICTED_COLLABORATOR = powResult1;
-obj13[powResult1] = "RESTRICTED_COLLABORATOR";
-obj13.PARTNER = 2;
-obj13[2] = "PARTNER";
-obj13.HYPESQUAD = 4;
-obj13[4] = "HYPESQUAD";
-obj13.BUG_HUNTER_LEVEL_1 = 8;
-obj13[8] = "BUG_HUNTER_LEVEL_1";
-obj13.BUG_HUNTER_LEVEL_2 = 16384;
-obj13[16384] = "BUG_HUNTER_LEVEL_2";
-obj13.HYPESQUAD_ONLINE_HOUSE_1 = 64;
-obj13[64] = "HYPESQUAD_ONLINE_HOUSE_1";
-obj13.HYPESQUAD_ONLINE_HOUSE_2 = 128;
-obj13[128] = "HYPESQUAD_ONLINE_HOUSE_2";
-obj13.HYPESQUAD_ONLINE_HOUSE_3 = 256;
-obj13[256] = "HYPESQUAD_ONLINE_HOUSE_3";
-obj13.PREMIUM_EARLY_SUPPORTER = 512;
-obj13[512] = "PREMIUM_EARLY_SUPPORTER";
-obj13.VERIFIED_BOT = 65536;
-obj13[65536] = "VERIFIED_BOT";
-obj13.VERIFIED_DEVELOPER = 131072;
-obj13[131072] = "VERIFIED_DEVELOPER";
-obj13.CERTIFIED_MODERATOR = 262144;
-obj13[262144] = "CERTIFIED_MODERATOR";
-obj13.BOT_HTTP_INTERACTIONS = 524288;
-obj13[524288] = "BOT_HTTP_INTERACTIONS";
-obj13.SPAMMER = 1048576;
-obj13[1048576] = "SPAMMER";
-obj13.DISABLE_PREMIUM = 2097152;
-obj13[2097152] = "DISABLE_PREMIUM";
-obj13.PROVISIONAL_ACCOUNT = 8388608;
-obj13[8388608] = "PROVISIONAL_ACCOUNT";
-obj13.MFA_SMS = 16;
-obj13[16] = "MFA_SMS";
-obj13.PREMIUM_PROMO_DISMISSED = 32;
-obj13[32] = "PREMIUM_PROMO_DISMISSED";
-obj13.HAS_UNREAD_URGENT_MESSAGES = 8192;
-obj13[8192] = "HAS_UNREAD_URGENT_MESSAGES";
+obj17.RESTRICTED_COLLABORATOR = powResult1;
+obj17[powResult1] = "RESTRICTED_COLLABORATOR";
+obj17.PARTNER = 2;
+obj17[2] = "PARTNER";
+obj17.HYPESQUAD = 4;
+obj17[4] = "HYPESQUAD";
+obj17.BUG_HUNTER_LEVEL_1 = 8;
+obj17[8] = "BUG_HUNTER_LEVEL_1";
+obj17.BUG_HUNTER_LEVEL_2 = 16384;
+obj17[16384] = "BUG_HUNTER_LEVEL_2";
+obj17.HYPESQUAD_ONLINE_HOUSE_1 = 64;
+obj17[64] = "HYPESQUAD_ONLINE_HOUSE_1";
+obj17.HYPESQUAD_ONLINE_HOUSE_2 = 128;
+obj17[128] = "HYPESQUAD_ONLINE_HOUSE_2";
+obj17.HYPESQUAD_ONLINE_HOUSE_3 = 256;
+obj17[256] = "HYPESQUAD_ONLINE_HOUSE_3";
+obj17.PREMIUM_EARLY_SUPPORTER = 512;
+obj17[512] = "PREMIUM_EARLY_SUPPORTER";
+obj17.VERIFIED_BOT = 65536;
+obj17[65536] = "VERIFIED_BOT";
+obj17.VERIFIED_DEVELOPER = 131072;
+obj17[131072] = "VERIFIED_DEVELOPER";
+obj17.CERTIFIED_MODERATOR = 262144;
+obj17[262144] = "CERTIFIED_MODERATOR";
+obj17.BOT_HTTP_INTERACTIONS = 524288;
+obj17[524288] = "BOT_HTTP_INTERACTIONS";
+obj17.SPAMMER = 1048576;
+obj17[1048576] = "SPAMMER";
+obj17.DISABLE_PREMIUM = 2097152;
+obj17[2097152] = "DISABLE_PREMIUM";
+obj17.PROVISIONAL_ACCOUNT = 8388608;
+obj17[8388608] = "PROVISIONAL_ACCOUNT";
+obj17.MFA_SMS = 16;
+obj17[16] = "MFA_SMS";
+obj17.PREMIUM_PROMO_DISMISSED = 32;
+obj17[32] = "PREMIUM_PROMO_DISMISSED";
+obj17.HAS_UNREAD_URGENT_MESSAGES = 8192;
+obj17[8192] = "HAS_UNREAD_URGENT_MESSAGES";
 const powResult2 = Math.pow(2, 44);
-obj13.QUARANTINED = powResult2;
-obj13[powResult2] = "QUARANTINED";
-const obj14 = {
+obj17.QUARANTINED = powResult2;
+obj17[powResult2] = "QUARANTINED";
+const obj18 = {
   EMBEDDED_RELEASED: null,
   EMBEDDED_IAP: null,
   APPLICATION_AUTO_MODERATION_RULE_CREATE_BADGE: null,
@@ -3180,28 +5265,49 @@ const obj14 = {
   PARENT: null,
   DISABLE_RELATIONSHIPS_ACCESS: null,
 };
-obj14.EMBEDDED_RELEASED = BigFlagUtils.getFlag(1);
-obj14.EMBEDDED_IAP = BigFlagUtils.getFlag(3);
-obj14.APPLICATION_AUTO_MODERATION_RULE_CREATE_BADGE = BigFlagUtils.getFlag(6);
-obj14.GAME_PROFILE_DISABLED = BigFlagUtils.getFlag(7);
-obj14.CONTEXTLESS_ACTIVITY = BigFlagUtils.getFlag(9);
-obj14.SOCIAL_LAYER_INTEGRATION_LIMITED = BigFlagUtils.getFlag(10);
-obj14.CLOUD_GAMING_DEMO = BigFlagUtils.getFlag(11);
-obj14.GATEWAY_PRESENCE = BigFlagUtils.getFlag(12);
-obj14.GATEWAY_PRESENCE_LIMITED = BigFlagUtils.getFlag(13);
-obj14.GATEWAY_GUILD_MEMBERS = BigFlagUtils.getFlag(14);
-obj14.GATEWAY_GUILD_MEMBERS_LIMITED = BigFlagUtils.getFlag(15);
-obj14.EMBEDDED = BigFlagUtils.getFlag(17);
-obj14.GATEWAY_MESSAGE_CONTENT = BigFlagUtils.getFlag(18);
-obj14.GATEWAY_MESSAGE_CONTENT_LIMITED = BigFlagUtils.getFlag(19);
-obj14.EMBEDDED_FIRST_PARTY = BigFlagUtils.getFlag(20);
-obj14.APPLICATION_COMMAND_BADGE = BigFlagUtils.getFlag(23);
-obj14.SOCIAL_LAYER_INTEGRATION = BigFlagUtils.getFlag(27);
-obj14.PROMOTED = BigFlagUtils.getFlag(29);
-obj14.PARTNER = BigFlagUtils.getFlag(30);
-obj14.PARENT = BigFlagUtils.getFlag(33);
-obj14.DISABLE_RELATIONSHIPS_ACCESS = BigFlagUtils.getFlag(34);
-const frozen11 = Object.freeze(obj14);
+let BigFlagUtils = BigFlagUtils_mod;
+obj18.EMBEDDED_RELEASED = BigFlagUtils.getFlag(1);
+let BigFlagUtils = BigFlagUtils_mod;
+obj18.EMBEDDED_IAP = BigFlagUtils.getFlag(3);
+let BigFlagUtils = BigFlagUtils_mod;
+obj18.APPLICATION_AUTO_MODERATION_RULE_CREATE_BADGE = BigFlagUtils.getFlag(6);
+let BigFlagUtils = BigFlagUtils_mod;
+obj18.GAME_PROFILE_DISABLED = BigFlagUtils.getFlag(7);
+let BigFlagUtils = BigFlagUtils_mod;
+obj18.CONTEXTLESS_ACTIVITY = BigFlagUtils.getFlag(9);
+let BigFlagUtils = BigFlagUtils_mod;
+obj18.SOCIAL_LAYER_INTEGRATION_LIMITED = BigFlagUtils.getFlag(10);
+let BigFlagUtils = BigFlagUtils_mod;
+obj18.CLOUD_GAMING_DEMO = BigFlagUtils.getFlag(11);
+let BigFlagUtils = BigFlagUtils_mod;
+obj18.GATEWAY_PRESENCE = BigFlagUtils.getFlag(12);
+let BigFlagUtils = BigFlagUtils_mod;
+obj18.GATEWAY_PRESENCE_LIMITED = BigFlagUtils.getFlag(13);
+let BigFlagUtils = BigFlagUtils_mod;
+obj18.GATEWAY_GUILD_MEMBERS = BigFlagUtils.getFlag(14);
+let BigFlagUtils = BigFlagUtils_mod;
+obj18.GATEWAY_GUILD_MEMBERS_LIMITED = BigFlagUtils.getFlag(15);
+let BigFlagUtils = BigFlagUtils_mod;
+obj18.EMBEDDED = BigFlagUtils.getFlag(17);
+let BigFlagUtils = BigFlagUtils_mod;
+obj18.GATEWAY_MESSAGE_CONTENT = BigFlagUtils.getFlag(18);
+let BigFlagUtils = BigFlagUtils_mod;
+obj18.GATEWAY_MESSAGE_CONTENT_LIMITED = BigFlagUtils.getFlag(19);
+let BigFlagUtils = BigFlagUtils_mod;
+obj18.EMBEDDED_FIRST_PARTY = BigFlagUtils.getFlag(20);
+let BigFlagUtils = BigFlagUtils_mod;
+obj18.APPLICATION_COMMAND_BADGE = BigFlagUtils.getFlag(23);
+let BigFlagUtils = BigFlagUtils_mod;
+obj18.SOCIAL_LAYER_INTEGRATION = BigFlagUtils.getFlag(27);
+let BigFlagUtils = BigFlagUtils_mod;
+obj18.PROMOTED = BigFlagUtils.getFlag(29);
+let BigFlagUtils = BigFlagUtils_mod;
+obj18.PARTNER = BigFlagUtils.getFlag(30);
+let BigFlagUtils = BigFlagUtils_mod;
+obj18.PARENT = BigFlagUtils.getFlag(33);
+let BigFlagUtils = BigFlagUtils_mod;
+obj18.DISABLE_RELATIONSHIPS_ACCESS = BigFlagUtils.getFlag(34);
+const frozen11 = Object.freeze(obj18);
 const frozen12 = Object.freeze({
   STORAGE_MANIFEST(arg0, arg1) {
     return "" + arg0 + "/storage/" + arg1 + "/MANIFEST";
@@ -3216,7 +5322,7 @@ const frozen12 = Object.freeze({
   ROOT_ID: "sdk",
   ROOT_PLATFORMS: { macos: "macos", windows: "windows", linux: "linux" },
 });
-const obj16 = { GIF: "GIF", STICKER: "STICKER" };
+const obj20 = { GIF: "GIF", STICKER: "STICKER" };
 const frozen13 = Object.freeze({
   ALL: null,
   GUILD_UPDATE: 1,
@@ -3299,33 +5405,33 @@ const frozen13 = Object.freeze({
   GUILD_MIGRATE_PIN_PERMISSION: 212,
   GUILD_MIGRATE_BYPASS_SLOWMODE_PERMISSION: 213,
 });
-const obj18 = {};
-const frozen14 = Object.freeze({ GIF: { type: obj16.GIF, command: "gif", title: "Gif", commandId: "-16" } });
-obj18[ApplicationDistributors.ApplicationDistributors.DISCORD] = "Discord";
-obj18[ApplicationDistributors.ApplicationDistributors.STEAM] = "Steam";
-obj18[ApplicationDistributors.ApplicationDistributors.UPLAY] = "Uplay";
-obj18[ApplicationDistributors.ApplicationDistributors.BATTLENET] = "Battle.net";
-obj18[ApplicationDistributors.ApplicationDistributors.ORIGIN] = "Origin";
-obj18[ApplicationDistributors.ApplicationDistributors.EAPLAY] = "EA Play";
-obj18[ApplicationDistributors.ApplicationDistributors.GOG] = "GOG";
-obj18[ApplicationDistributors.ApplicationDistributors.GLYPH] = "Glyph";
-obj18[ApplicationDistributors.ApplicationDistributors.TWITCH] = "Twitch";
-obj18[ApplicationDistributors.ApplicationDistributors.EPIC] = "Epic";
-obj18[ApplicationDistributors.ApplicationDistributors.GOOGLE_PLAY] = "Google Play";
-obj18[ApplicationDistributors.ApplicationDistributors.APPLE_APP_STORE] = "App Store";
-obj18[ApplicationDistributors.ApplicationDistributors.SAMSUNG_GALAXY] = "Samsung Galaxy";
-obj18[ApplicationDistributors.ApplicationDistributors.MICROSOFT] = "Microsoft";
-obj18[ApplicationDistributors.ApplicationDistributors.PLAYSTATION] = "PlayStation";
-obj18[ApplicationDistributors.ApplicationDistributors.IGDB] = "IGDB";
-obj18[ApplicationDistributors.ApplicationDistributors.ROBLOX] = "Roblox";
-obj18[ApplicationDistributors.ApplicationDistributors.XBOX_STORE] = "Xbox Store";
-obj18[ApplicationDistributors.ApplicationDistributors.XBOX_TITLE] = "Xbox Title";
-obj18[ApplicationDistributors.ApplicationDistributors.XBOX_GAME_PASS] = "Xbox Game Pass";
-obj18[ApplicationDistributors.ApplicationDistributors.GOP] = "GOP";
-obj18[ApplicationDistributors.ApplicationDistributors.GDCO] = "GDCO";
-obj18[ApplicationDistributors.ApplicationDistributors.OPENCRITIC] = "OpenCritic";
-obj18[ApplicationDistributors.ApplicationDistributors.SENSORTOWER] = "SensorTower";
-const obj19 = {
+const obj22 = {};
+const frozen14 = Object.freeze({ GIF: { type: obj20.GIF, command: "gif", title: "Gif", commandId: "-16" } });
+obj22[ApplicationDistributors.ApplicationDistributors.DISCORD] = "Discord";
+obj22[ApplicationDistributors.ApplicationDistributors.STEAM] = "Steam";
+obj22[ApplicationDistributors.ApplicationDistributors.UPLAY] = "Uplay";
+obj22[ApplicationDistributors.ApplicationDistributors.BATTLENET] = "Battle.net";
+obj22[ApplicationDistributors.ApplicationDistributors.ORIGIN] = "Origin";
+obj22[ApplicationDistributors.ApplicationDistributors.EAPLAY] = "EA Play";
+obj22[ApplicationDistributors.ApplicationDistributors.GOG] = "GOG";
+obj22[ApplicationDistributors.ApplicationDistributors.GLYPH] = "Glyph";
+obj22[ApplicationDistributors.ApplicationDistributors.TWITCH] = "Twitch";
+obj22[ApplicationDistributors.ApplicationDistributors.EPIC] = "Epic";
+obj22[ApplicationDistributors.ApplicationDistributors.GOOGLE_PLAY] = "Google Play";
+obj22[ApplicationDistributors.ApplicationDistributors.APPLE_APP_STORE] = "App Store";
+obj22[ApplicationDistributors.ApplicationDistributors.SAMSUNG_GALAXY] = "Samsung Galaxy";
+obj22[ApplicationDistributors.ApplicationDistributors.MICROSOFT] = "Microsoft";
+obj22[ApplicationDistributors.ApplicationDistributors.PLAYSTATION] = "PlayStation";
+obj22[ApplicationDistributors.ApplicationDistributors.IGDB] = "IGDB";
+obj22[ApplicationDistributors.ApplicationDistributors.ROBLOX] = "Roblox";
+obj22[ApplicationDistributors.ApplicationDistributors.XBOX_STORE] = "Xbox Store";
+obj22[ApplicationDistributors.ApplicationDistributors.XBOX_TITLE] = "Xbox Title";
+obj22[ApplicationDistributors.ApplicationDistributors.XBOX_GAME_PASS] = "Xbox Game Pass";
+obj22[ApplicationDistributors.ApplicationDistributors.GOP] = "GOP";
+obj22[ApplicationDistributors.ApplicationDistributors.GDCO] = "GDCO";
+obj22[ApplicationDistributors.ApplicationDistributors.OPENCRITIC] = "OpenCritic";
+obj22[ApplicationDistributors.ApplicationDistributors.SENSORTOWER] = "SensorTower";
+const obj23 = {
   MUTUAL_FRIENDS: 2,
   [2]: "MUTUAL_FRIENDS",
   MUTUAL_GUILDS: 4,
@@ -3333,7 +5439,7 @@ const obj19 = {
   NO_RELATION: 8,
   [8]: "NO_RELATION",
 };
-const obj20 = { OVERLAY: "OVERLAY", APP: "APP", POPOUT: "POPOUT", CALL_TILE_POPOUT: "CALL_TILE_POPOUT" };
+const obj24 = { OVERLAY: "OVERLAY", APP: "APP", POPOUT: "POPOUT", CALL_TILE_POPOUT: "CALL_TILE_POPOUT" };
 const items9 = [, , , , , , , , ,];
 ({
   USD: arr10[0],
@@ -3347,8 +5453,8 @@ const items9 = [, , , , , , , , ,];
   KRW: arr10[8],
   IDR: arr10[9],
 } = Constants.CurrencyCodes);
-const frozen15 = Object.freeze(obj18);
-const obj15 = {
+const frozen15 = Object.freeze(obj22);
+const obj19 = {
   STORAGE_MANIFEST(arg0, arg1) {
     return "" + arg0 + "/storage/" + arg1 + "/MANIFEST";
   },
@@ -3362,10 +5468,10 @@ const obj15 = {
   ROOT_ID: "sdk",
   ROOT_PLATFORMS: { macos: "macos", windows: "windows", linux: "linux" },
 };
-const obj17 = { GIF: { type: obj16.GIF, command: "gif", title: "Gif", commandId: "-16" } };
+const obj21 = { GIF: { type: obj20.GIF, command: "gif", title: "Gif", commandId: "-16" } };
 const set6 = new Set(items8);
-const tmp35 = obj19.MUTUAL_FRIENDS | obj19.MUTUAL_GUILDS | obj19.NO_RELATION;
-const tmp36 = obj19.MUTUAL_FRIENDS | obj19.MUTUAL_GUILDS;
+const tmp35 = obj23.MUTUAL_FRIENDS | obj23.MUTUAL_GUILDS | obj23.NO_RELATION;
+const tmp36 = obj23.MUTUAL_FRIENDS | obj23.MUTUAL_GUILDS;
 const frozen16 = Object.freeze({
   APPLICATIONS(arg0) {
     let combined = null;
@@ -4838,10 +6944,10 @@ export const AnalyticsGameOpenTypes = {
   PLAY: "play",
 };
 export const AnalyticsUserStatusTypes = { ONLINE_DESKTOP: "online-desktop", ONLINE_MOBILE: "online-mobile-only" };
-export const AnalyticsPages = obj2;
+export const AnalyticsPages = obj5;
 export const HELP_CENTER_CTA_ANALYTICS_NAME = "help_center_cta";
-export const AnalyticsSections = obj3;
-export const AnalyticsObjects = obj4;
+export const AnalyticsSections = obj6;
+export const AnalyticsObjects = obj7;
 export const AnalyticsObjectTypes = {
   GIFT: "gift",
   BUY: "buy",
@@ -4866,7 +6972,7 @@ export const AnalyticsObjectTypes = {
   ACK_MANUAL: "ack_manual",
 };
 export const UpsellActionTypes = { PRIMARY: "primary", SECONDARY: "secondary", DISMISS: "dismiss" };
-export const DIRECT_ANALYTICS_LOCATION = obj5;
+export const DIRECT_ANALYTICS_LOCATION = obj8;
 export const UserSettingsSections = frozen5;
 export const JoinGuildSources = {
   APPLICATION_STORE: "Application Store Verified Guild Invite - Lurker",
@@ -5095,7 +7201,7 @@ export const ComponentActionsKeyed = {
   CLIP_SEEK_VIDEO: "CLIP_SEEK_VIDEO",
 };
 export const NAVIGATION_THROTTLE = 50;
-export const PlatformTypes = obj7;
+export const PlatformTypes = obj11;
 export const ActivityGamePlatforms = {
   DESKTOP: "desktop",
   XBOX: "xbox",
@@ -5159,7 +7265,7 @@ export const SearchAutocompleteGroups = { HISTORY: "HISTORY", DATES: "DATES" };
 export const SearchPopoutModes = { EMPTY: "EMPTY", FILTER: "FILTER", FILTER_ALL: "FILTER_ALL" };
 export const SEARCH_DATE_FORMAT = "YYYY-MM-DD";
 export const NEW_GROUP_DM_POPOUT_ID = "PrivateChannelRecipientsInvitePopout";
-export const BoostedGuildTiers = obj9;
+export const BoostedGuildTiers = obj13;
 export const AppliedGuildBoostsRequiredForBoostedGuildTier = frozen8;
 export const GUILD_BOOST_APPLY_COOLDOWN_DAYS = 7;
 export const PREMIUM_TYPE_NONE = 0;
@@ -5198,8 +7304,8 @@ export const PriceSetAssignmentPurchaseTypes = {
   [7]: "MOBILE_PREMIUM_TIER_2",
 };
 export const StripeElementsOptions = frozen9;
-export const SubscriptionStatusTypes = obj11;
-export const SubscriptionStatusTypesSets = obj12;
+export const SubscriptionStatusTypes = obj15;
+export const SubscriptionStatusTypesSets = obj16;
 export const InvoiceStatusTypes = {
   OPEN: 1,
   [1]: "OPEN",
@@ -6989,7 +9095,7 @@ export const AnalyticEvents = {
   VIBEGRATION_ERRORED: "vibegration_errored",
 };
 export const PublicReleaseChannels = { CANARY: "canary", PTB: "ptb", STABLE: "stable" };
-export const UserFlags = obj13;
+export const UserFlags = obj17;
 export const ApplicationFlags = frozen11;
 export const ChannelNoticeTypes = {
   MFA_WARNING: "MFA_WARNING",
@@ -7332,7 +9438,7 @@ export const PictureInPicturePositions = {
   BOTTOM_RIGHT: "bottom-right",
 };
 export const PictureInPictureComponents = { VIDEO: "VIDEO", ACTIVITY: "ACTIVITY", FRAME: "FRAME" };
-export const ChannelTextAreaIntegrationTypes = obj16;
+export const ChannelTextAreaIntegrationTypes = obj20;
 export const ChannelTextAreaIntegrations = frozen14;
 export const HelpdeskArticles = {
   ENABLE_MIC_FIREFOX: "204392448",
@@ -7576,7 +9682,7 @@ export const CloudSyncResultTypes = { PULL: "PULL", PUSH: "PUSH", CONFLICT: "CON
 export const Distributors = ApplicationDistributors.ApplicationDistributors;
 export const DistributorNames = frozen15;
 export const Consents = { USAGE_STATISTICS: "usage_statistics", PERSONALIZATION: "personalization" };
-export const FriendSourceFlags = obj19;
+export const FriendSourceFlags = obj23;
 export const AllFriendSourceFlags = tmp35;
 export const MutualsSourceFlag = tmp36;
 export const FriendDiscoveryFlags = {
@@ -7588,8 +9694,8 @@ export const FriendDiscoveryFlags = {
   [4]: "FIND_BY_EMAIL",
 };
 export const REQUEST_DATA_LIMIT_DAYS = 30;
-export const AppContext = obj20;
-export const CURRENT_APP_CONTEXT = obj20.APP;
+export const AppContext = obj24;
+export const CURRENT_APP_CONTEXT = obj24.APP;
 export const DispatchApplicationStates = { COMPLETE: "complete", TRANSITION: "transition" };
 export const DispatchApplicationStages = {
   QUEUED: "queued",

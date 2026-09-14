@@ -3,7 +3,7 @@ import ReanimatedRexport from "../../../../reanimated/ReanimatedRexport.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const PlatformUtils = fn(1150);
+const PlatformUtils = fn(1363);
 let closure_3 = PlatformUtils.isAndroid();
 let context = noop.createContext(null);
 let closure_5 = {
@@ -25,9 +25,9 @@ let size = fn(2);
 let result = size.fileFinishedImporting("modules/voice_panel/native/controls/utils/useAnimatedScrollLock.tsx");
 
 export const ControlsGestureScrollLock = context;
-export const useAnimatedScrollLock = function useAnimatedScrollLock() {
-  let obj = fn;
-  if (fn === undefined) {
+export const useAnimatedScrollLock = function useAnimatedScrollLock(arg0) {
+  let obj = arg0;
+  if (arg0 === undefined) {
     obj = {};
   }
   const onScrollHandler = obj.onScrollHandler;
@@ -37,11 +37,11 @@ export const useAnimatedScrollLock = function useAnimatedScrollLock() {
   let isDragScrolling;
   let animatedRef;
   context = scrollLocked.useContext(isDragScrolling);
-  let obj1 = onScrollHandler(onScrollHandlerWorkletized[2]);
-  const sharedValue = obj1.useSharedValue(false);
-  let obj2 = onScrollHandler(onScrollHandlerWorkletized[2]);
-  const sharedValue1 = obj2.useSharedValue(0);
   const ref = scrollLocked.useRef(undefined);
+  const sharedValue = onScrollHandler(onScrollHandlerWorkletized[2]).useSharedValue(false);
+  let obj2 = onScrollHandler(onScrollHandlerWorkletized[2]);
+  const sharedValue1 = onScrollHandler(onScrollHandlerWorkletized[2]).useSharedValue(0);
+  let obj3 = onScrollHandler(onScrollHandlerWorkletized[2]);
   let gestureRef;
   const sharedValue2 = onScrollHandler(onScrollHandlerWorkletized[2]).useSharedValue(false);
   if (context != null) {
@@ -71,11 +71,11 @@ export const useAnimatedScrollLock = function useAnimatedScrollLock() {
   if (isDragScrolling == null) {
     isDragScrolling = sharedValue2;
   }
-  let tmp3Result = tmp3(tmp4[2]);
-  animatedRef = tmp3Result.useAnimatedRef();
-  obj = { onScroll: null, animatedProps: null, scrollerRef: null, gestureRef: null };
-  tmp3Result = tmp3(tmp4[2]);
-  obj = { onBeginDrag: null, onEndDrag: null, onMomentumEnd: null, onScroll: null };
+  const obj4 = onScrollHandler(onScrollHandlerWorkletized[2]);
+  animatedRef = onScrollHandler(onScrollHandlerWorkletized[2]).useAnimatedRef();
+  const obj5 = { onScroll: null, animatedProps: null, scrollerRef: null, gestureRef: null };
+  const tmp3Result = onScrollHandler(onScrollHandlerWorkletized[2]);
+  const obj6 = { onBeginDrag: null, onEndDrag: null, onMomentumEnd: null, onScroll: null };
   class D {
     constructor(arg0, arg1) {
       arg1.momentumEndCount = 0;
@@ -86,8 +86,8 @@ export const useAnimatedScrollLock = function useAnimatedScrollLock() {
   D.__closure = { isDragScrolling };
   D.__workletHash = 5670175593964;
   D.__initData = animatedRef;
-  obj.onBeginDrag = D;
-  fn = function k(velocity) {
+  obj6.onBeginDrag = D;
+  const fn = function k(velocity) {
     const result = isDragScrolling.set(false);
     velocity = velocity.velocity;
     let num;
@@ -104,7 +104,7 @@ export const useAnimatedScrollLock = function useAnimatedScrollLock() {
   fn.__closure = { isDragScrolling, scrollLocked };
   fn.__workletHash = 5460992873286;
   fn.__initData = __initData;
-  obj.onEndDrag = fn;
+  obj6.onEndDrag = fn;
   const fn2 = function v(arg0, momentumEndCount) {
     if (closure_3) {
       let num;
@@ -124,14 +124,13 @@ export const useAnimatedScrollLock = function useAnimatedScrollLock() {
       const result1 = scrollLocked.set(false);
     }
   };
-  obj1 = { IS_ANDROID: scrollOffsetValue, scrollLocked };
-  fn2.__closure = obj1;
+  fn2.__closure = { IS_ANDROID: scrollOffsetValue, scrollLocked };
   fn2.__workletHash = 5278475045322;
   fn2.__initData = __initData2;
-  obj.onMomentumEnd = fn2;
+  obj6.onMomentumEnd = fn2;
   class S {
     constructor(arg0) {
-      y = fn.contentOffset.y;
+      y = arg0.contentOffset.y;
       if (true !== closure_4.get()) {
         tmp9 = closure_3;
         if (closure_3) {
@@ -179,8 +178,8 @@ export const useAnimatedScrollLock = function useAnimatedScrollLock() {
           result3 = obj6.set(y);
         }
       }
-      ({ width, height } = fn.layoutMeasurement);
-      ({ width: width2, height: height2 } = fn.contentSize);
+      ({ width, height } = arg0.layoutMeasurement);
+      ({ width: width2, height: height2 } = arg0.contentSize);
       if (null != onScrollHandler) {
         tmp18 = closure_0;
         tmp19 = closure_1;
@@ -205,23 +204,34 @@ export const useAnimatedScrollLock = function useAnimatedScrollLock() {
       return;
     }
   }
-  obj2 = {
+  const obj7 = { IS_ANDROID: scrollOffsetValue, scrollLocked };
+  const tmp3Result3 = onScrollHandler(onScrollHandlerWorkletized[2]);
+  S.__closure = {
     isDragScrolling,
     IS_ANDROID: scrollOffsetValue,
-    scrollTo: tmp3(tmp4[2]).scrollTo,
+    scrollTo: onScrollHandler(onScrollHandlerWorkletized[2]).scrollTo,
     scrollerRef: animatedRef,
     scrollOffsetValue,
     scrollLocked,
     onScrollHandler,
-    runOnJS: tmp3(tmp4[2]).runOnJS,
+    runOnJS: onScrollHandler(onScrollHandlerWorkletized[2]).runOnJS,
     onScrollHandlerWorkletized,
   };
-  S.__closure = obj2;
   S.__workletHash = 9155123629104;
   S.__initData = __initData3;
-  obj.onScroll = S;
-  obj.onScroll = tmp3Result.useAnimatedScrollHandler(obj);
-  const obj4 = onScrollHandler(onScrollHandlerWorkletized[2]);
+  obj6.onScroll = S;
+  obj5.onScroll = tmp3Result3.useAnimatedScrollHandler(obj6);
+  const obj8 = {
+    isDragScrolling,
+    IS_ANDROID: scrollOffsetValue,
+    scrollTo: onScrollHandler(onScrollHandlerWorkletized[2]).scrollTo,
+    scrollerRef: animatedRef,
+    scrollOffsetValue,
+    scrollLocked,
+    onScrollHandler,
+    runOnJS: onScrollHandler(onScrollHandlerWorkletized[2]).runOnJS,
+    onScrollHandlerWorkletized,
+  };
   class H {
     constructor() {
       obj = { showsVerticalScrollIndicator: !closure_2.get() };
@@ -231,8 +241,8 @@ export const useAnimatedScrollLock = function useAnimatedScrollLock() {
   H.__closure = { scrollLocked };
   H.__workletHash = 2902739817621;
   H.__initData = __initData4;
-  obj.animatedProps = onScrollHandler(onScrollHandlerWorkletized[2]).useAnimatedProps(H);
-  obj.scrollerRef = animatedRef;
-  obj.gestureRef = gestureRef;
-  return obj;
+  obj5.animatedProps = onScrollHandler(onScrollHandlerWorkletized[2]).useAnimatedProps(H);
+  obj5.scrollerRef = animatedRef;
+  obj5.gestureRef = gestureRef;
+  return obj5;
 };

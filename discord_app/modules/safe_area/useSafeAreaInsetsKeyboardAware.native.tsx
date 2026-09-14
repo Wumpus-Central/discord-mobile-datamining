@@ -41,21 +41,19 @@ export default function useSafeAreaInsetsKeyboardAware() {
   const appEntryKey = flag(flag3[6]).useAppEntryKey();
   const items = [appEntryKey, flag3, flag, flag2];
   callback = callback.useCallback(() => {
-    let obj = PlatformUtils;
     if (obj.isIOS()) {
       if (!flag) {
         return 0;
       }
     }
-    let tmpResult = PlatformUtils;
+    obj = PlatformUtils;
     if (tmpResult.isAndroid()) {
       if (!flag2) {
         return 0;
       }
     }
-    tmpResult = useSystemKeyboardHeight;
-    obj = { appEntryKey };
-    let systemKeyboardHeight = tmpResult.getSystemKeyboardHeight(obj);
+    tmpResult = PlatformUtils;
+    let systemKeyboardHeight = useSystemKeyboardHeight.getSystemKeyboardHeight({ appEntryKey });
     if (0 === systemKeyboardHeight) {
       const keyboardType = useKeyboardType.getKeyboardType(appEntryKey);
       let num3 = 0;
@@ -63,11 +61,11 @@ export default function useSafeAreaInsetsKeyboardAware() {
         num3 = 0;
         if (flag3) {
           num3 = useCustomKeyboardHeight.getCustomKeyboardHeight(appEntryKey);
-          const tmpResult2 = useCustomKeyboardHeight;
+          const tmpResult6 = useCustomKeyboardHeight;
         }
       }
       systemKeyboardHeight = num3;
-      const tmpResult1 = useKeyboardType;
+      const tmpResult5 = useKeyboardType;
     }
     return systemKeyboardHeight;
   }, items);
@@ -117,10 +115,10 @@ export default function useSafeAreaInsetsKeyboardAware() {
   }
   let insets = tmp2;
   if (tmp8 > 0) {
-    obj = {};
+    const obj4 = {};
     const merged = Object.assign(tmp2);
-    obj.bottom = num;
-    insets = obj;
+    obj4.bottom = num;
+    insets = obj4;
   }
   return { insets };
 }

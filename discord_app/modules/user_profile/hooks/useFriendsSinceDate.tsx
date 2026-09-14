@@ -2,6 +2,8 @@
 import LocaleStore from "../../user_settings/LocaleStore.tsx";
 import RelationshipStore from "../../../stores/RelationshipStore.tsx";
 
+const require = globalThis.__r;
+
 const require = fn;
 const RelationshipTypes = fn(1074).RelationshipTypes;
 const size = fn(2);

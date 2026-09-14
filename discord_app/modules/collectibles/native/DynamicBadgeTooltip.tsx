@@ -17,10 +17,10 @@ export const DynamicBadgeTooltip = function DynamicBadgeTooltip(tooltipPosition)
   if (str === undefined) {
     str = "bottom";
   }
+  visible = undefined;
+  closure_2 = undefined;
   const ref = noop.useRef(null);
-  const tmp2 = _slicedToArray(noop.useState(false), 2);
-  const visible = tmp2[0];
-  closure_2 = tmp2[1];
+  [visible, closure_2] = noop.useState(false);
   const intl = util.intl;
   const stringResult = intl.string(util.t.dCou7i);
   c3 = stringResult;
@@ -29,8 +29,7 @@ export const DynamicBadgeTooltip = function DynamicBadgeTooltip(tooltipPosition)
   }, []);
   const items = [str, stringResult, visible, onPress];
   const memo = noop.useMemo(() => ({ position: str, label, visible, onPress }), items);
-  let obj = useTooltip;
-  const tooltip = obj.useTooltip(ref, memo);
+  const tooltip = useTooltip.useTooltip(ref, memo);
   const items1 = [visible];
   const effect = noop.useEffect(() => {
     if (first) {
@@ -42,15 +41,6 @@ export const DynamicBadgeTooltip = function DynamicBadgeTooltip(tooltipPosition)
   const callback1 = noop.useCallback(() => {
     closure_2((arg0) => !arg0);
   }, []);
-  obj = {
-    ref,
-    onPress: callback1,
-    hitSlop,
-    accessibilityRole: "button",
-    accessibilityLabel,
-    accessibilityHint: stringResult,
-    children,
-  };
   return jsx(Pressables.PressableOpacity, {
     ref,
     onPress: callback1,

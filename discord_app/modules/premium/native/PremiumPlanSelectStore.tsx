@@ -2,6 +2,8 @@
 import 00560__ from "../../../../_runtime/metro/00560__.js";
 import size from "../../../../_runtime/metro/00002__.js";
 
+const require = globalThis.__r;
+
 const usePremiumPlanSelectStore = module_560.create(() => ({ isPurchasing: false, purchasingProductId: null }));
 const result = size.fileFinishedImporting("modules/premium/native/PremiumPlanSelectStore.tsx");
 

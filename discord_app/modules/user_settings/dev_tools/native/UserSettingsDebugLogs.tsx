@@ -8,14 +8,16 @@ import UserSettingsDebugLogsActionSheet from "UserSettingsDebugLogsActionSheet.t
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
+const require = globalThis.__r;
+
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ RefreshControl: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsxs: closure_7, jsx: closure_8 } = jsxProd);
-fn(4636);
-let createStyles = {
-  wrap: null,
+const createStyles = fn(4636);
+let obj2 = {
+  wrap: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 },
   searchWrap: null,
   searchField: null,
   shareButton: null,
@@ -23,10 +25,9 @@ let createStyles = {
   log: null,
   code: null,
 };
-createStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 };
-createStyles.wrap = createStyles;
-createStyles.searchWrap = { padding: nativeDefault.space.PX_16, flexDirection: "row", alignItems: "center" };
-createStyles.searchField = { flex: 1 };
+let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 };
+obj2.searchWrap = { padding: nativeDefault.space.PX_16, flexDirection: "row", alignItems: "center" };
+obj2.searchField = { flex: 1 };
 let size = {
   backgroundColor: nativeDefault.colors.INPUT_BACKGROUND_DEFAULT,
   marginLeft: nativeDefault.space.PX_8,
@@ -36,20 +37,19 @@ let size = {
   justifyContent: "center",
   alignItems: "center",
 };
-createStyles.shareButton = size;
-let obj1 = { padding: nativeDefault.space.PX_16, flexDirection: "row", alignItems: "center" };
-createStyles.list = { paddingHorizontal: nativeDefault.space.PX_16 };
-let obj2 = { paddingHorizontal: nativeDefault.space.PX_16 };
-createStyles.log = { paddingBottom: nativeDefault.space.PX_16 };
-createStyles.code = { fontFamily: fn(1074).Fonts.CODE_BOLD };
-let closure_9 = createStyles.createStyles(createStyles);
+obj2.shareButton = size;
+let obj4 = { padding: nativeDefault.space.PX_16, flexDirection: "row", alignItems: "center" };
+obj2.list = { paddingHorizontal: nativeDefault.space.PX_16 };
+let obj5 = { paddingHorizontal: nativeDefault.space.PX_16 };
+obj2.log = { paddingBottom: nativeDefault.space.PX_16 };
+obj2.code = { fontFamily: fn(1074).Fonts.CODE_BOLD };
+let closure_9 = createStyles.createStyles(obj2);
 size = fn(2);
 let result = size.fileFinishedImporting("modules/user_settings/dev_tools/native/UserSettingsDebugLogs.tsx");
 
 export default function UserSettingsDebugLogs() {
   const tmp = closure_9();
   _require = tmp;
-  let obj = noop;
   [tmp6, importDefault] = sortOrder(noop.useState(0), 2);
   const onRefresh = noop.useCallback(() => {
     closure_1_1((arg0) => arg0 + 1);
@@ -60,7 +60,7 @@ export default function UserSettingsDebugLogs() {
   if (str == null) {
     str = "oldest";
   }
-  let tmp4Result = tmp4(noop.useState(str), 2);
+  const tmp4Result = sortOrder(noop.useState(str), 2);
   sortOrder = tmp4Result[0];
   noop = tmp4Result[1];
   closure_5 = obj.useCallback((arg0) => {
@@ -70,8 +70,8 @@ export default function UserSettingsDebugLogs() {
   }, []);
   let items = [sortOrder, tmp6];
   const memo = obj.useMemo(() => LogAggregator.getAllForDebugPanel("newest" === first), items);
-  tmp4Result = tmp4(
-    obj.useState(() => {
+  const tmp4Result3 = sortOrder(
+    noop.useState(() => {
       const Storage = closure_0(callback[10]).Storage;
       let str = Storage.get("debug-log-query", "");
       if (str == null) {
@@ -81,9 +81,9 @@ export default function UserSettingsDebugLogs() {
     }),
     2,
   );
-  const first1 = tmp4Result[0];
-  const tmp4Result1 = sortOrder(obj.useState(memo), 2);
-  closure_8 = tmp4Result1[1];
+  const first1 = tmp4Result3[0];
+  const tmp4Result4 = sortOrder(noop.useState(memo), 2);
+  closure_8 = tmp4Result4[1];
   let items1 = [memo, first1];
   const effect = obj.useEffect(() => {
     if ("" !== first1) {
@@ -113,22 +113,22 @@ export default function UserSettingsDebugLogs() {
     }
   }, items1);
   let items2 = [tmp];
-  obj = { style: tmp.wrap, children: null };
-  obj = { style: tmp.searchWrap, children: null };
-  const obj1 = { style: tmp.searchField, children: null };
+  let obj2 = { style: tmp.wrap, children: null };
+  let obj3 = { style: tmp.searchWrap, children: null };
+  const obj4 = { style: tmp.searchField, children: null };
   const callback1 = obj.useCallback((item) => {
     item = item.item;
-    let obj = { style: closure_0.log, children: null };
-    obj = { style: closure_0.code, variant: "text-xs/normal", color: "text-muted", children: null };
+    const obj = { style: closure_0.log, children: null };
+    const obj2 = { style: closure_0.code, variant: "text-xs/normal", color: "text-muted", children: null };
     const items = [new Date(item.time).toISOString(), " "];
     let str = item.timing;
     if (str == null) {
       str = "";
     }
     items[2] = str;
-    obj.children = items;
-    const items1 = [React5(Text_Text.Text, obj)];
-    obj = { style: closure_0.code, variant: "text-sm/normal", children: null };
+    obj2.children = items;
+    const items1 = [React5(Text_Text.Text, obj2)];
+    const obj3 = { style: closure_0.code, variant: "text-sm/normal", children: null };
     const date = new Date(item.time);
     const items2 = [
       React6(Text_Text.Text, {
@@ -139,24 +139,24 @@ export default function UserSettingsDebugLogs() {
       }),
       item.message,
     ];
-    obj.children = items2;
-    items1[1] = React5(Text_Text.Text, obj);
+    obj3.children = items2;
+    items1[1] = React5(Text_Text.Text, obj3);
     obj.children = items1;
     return React5(timestampProducer, obj, item.index);
   }, items2);
-  const obj2 = {
+  const obj5 = {
     size: "md",
     placeholder: "Filter (regex)",
-    onChange: tmp4Result[1],
+    onChange: tmp4Result3[1],
     defaultValue: first1,
     trailingIcon: require("FiltersHorizontalIcon").FiltersHorizontalIcon,
     trailingPressableProps: null,
   };
-  const obj3 = { accessibilityLabel: null, onPress: null };
+  const obj6 = { accessibilityLabel: null, onPress: null };
   const intl = tmp8(tmp3[15]).intl;
-  obj3.accessibilityLabel = intl.string(require("util").t["+1H47t"]);
-  obj3.onPress = function onPress() {
-    const obj = {
+  obj6.accessibilityLabel = intl.string(require("util").t["+1H47t"]);
+  obj6.onPress = function onPress() {
+    const result = UserSettingsDebugLogsActionSheet.openUserSettingsDebugLogsFiltersActionSheet({
       sortOrder,
       onRefresh() {
         onRefresh();
@@ -166,25 +166,24 @@ export default function UserSettingsDebugLogs() {
         closure_1_5(arg0);
         require("ActionSheetActionCreators").hideActionSheet();
       },
-    };
-    const result = obj.openUserSettingsDebugLogsFiltersActionSheet(obj);
+    });
   };
-  obj2.trailingPressableProps = obj3;
-  obj1.children = closure_8(require("SearchField").SearchField, obj2);
-  const items3 = [closure_8(memo, obj1)];
+  obj5.trailingPressableProps = obj6;
+  obj4.children = closure_8(require("SearchField").SearchField, obj5);
+  const items3 = [closure_8(memo, obj4)];
   const tmp5 = sortOrder(noop.useState(0), 2);
   items3[1] = closure_8(memo, { style: tmp.shareButton, children: closure_8(require("ShareLogsButton"), {}) });
-  obj.children = items3;
-  const items4 = [first1(memo, obj)];
-  const obj5 = { contentContainerStyle: null, data: null, renderItem: null, refreshControl: null };
-  const obj6 = {};
+  obj3.children = items3;
+  const items4 = [first1(memo, obj3)];
+  const obj8 = { contentContainerStyle: null, data: null, renderItem: null, refreshControl: null };
+  const obj9 = {};
   const merged = Object.assign(tmp.list);
-  obj6.paddingBottom = require("useSafeAreaInsets")().bottom + require("native").space.PX_16;
-  obj5.contentContainerStyle = obj6;
-  obj5.data = tmp4Result1[0];
-  obj5.renderItem = callback1;
-  obj5.refreshControl = closure_8(closure_5, { refreshing: false, onRefresh });
-  items4[1] = closure_8(require("../../../../../discord_common/js/packages/flash-list/index.js").FlashList, obj5);
-  obj.children = items4;
-  return first1(memo, obj);
+  obj9.paddingBottom = require("useSafeAreaInsets")().bottom + require("native").space.PX_16;
+  obj8.contentContainerStyle = obj9;
+  obj8.data = tmp4Result4[0];
+  obj8.renderItem = callback1;
+  obj8.refreshControl = closure_8(closure_5, { refreshing: false, onRefresh });
+  items4[1] = closure_8(require("../../../../../discord_common/js/packages/flash-list/index.js").FlashList, obj8);
+  obj2.children = items4;
+  return first1(memo, obj2);
 }

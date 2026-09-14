@@ -3,6 +3,8 @@ import AuthenticationStore from "../../stores/AuthenticationStore.tsx";
 import SelectedChannelStore from "../../stores/SelectedChannelStore.tsx";
 import StageChannelRoleStore from "StageChannelRoleStore.tsx";
 
+const require = globalThis.__r;
+
 const require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/stage_channels/useMyCurrentStageChannelRole.tsx");

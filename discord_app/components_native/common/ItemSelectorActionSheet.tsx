@@ -13,34 +13,32 @@ export default function ItemSelectorActionSheet(arg0) {
   ({ title, items } = arg0);
   ({ selectedItem: importDefault, onItemSelect: dependencyMap, onClose } = arg0);
   ({ body, hasIcons } = arg0);
-  let obj = items(4338);
-  const token = obj.useToken(nativeDefault.modules.mobile.TABLE_ROW_PADDING);
+  const token = items(4338).useToken(nativeDefault.modules.mobile.TABLE_ROW_PADDING);
   const findIndexResult = items.findIndex((value) => value.value === importDefault);
-  obj = { title, trailing: null };
+  const obj2 = { title, trailing: null };
   let tmp6Result = null;
   if (null != onClose) {
-    obj = { onPress: onClose };
-    tmp6Result = closure_3(tmp(7301).ActionSheetCloseButton, obj);
+    const obj3 = { onPress: onClose };
+    tmp6Result = closure_3(items(7301).ActionSheetCloseButton, obj3);
   }
-  const obj1 = { scrollable: true, header: closure_3(items(7252).BottomSheetTitleHeader, obj), children: null };
-  obj.trailing = tmp6Result;
-  const obj2 = {
-    contentContainerStyle: {
-      paddingHorizontal: token,
-      paddingBottom: useSafeAreaInsetsDefault().bottom + nativeDefault.space.PX_16,
-    },
-    children: null,
+  const obj4 = { scrollable: true, header: closure_3(items(7252).BottomSheetTitleHeader, obj2), children: null };
+  obj2.trailing = tmp6Result;
+  const obj5 = { contentContainerStyle: null, children: null };
+  const obj = items(4338);
+  obj5.contentContainerStyle = {
+    paddingHorizontal: token,
+    paddingBottom: useSafeAreaInsetsDefault().bottom + nativeDefault.space.PX_16,
   };
-  items = [body];
+  const items1 = [body];
   let num = -1;
   if (findIndexResult >= 0) {
     num = findIndexResult;
   }
-  const obj3 = {
+  const obj6 = {
     paddingHorizontal: token,
     paddingBottom: useSafeAreaInsetsDefault().bottom + nativeDefault.space.PX_16,
   };
-  items[1] = closure_3(items(5766).TableRadioGroup, {
+  items1[1] = closure_3(items(5766).TableRadioGroup, {
     value: num,
     accessibilityLabel: title,
     hasIcons,
@@ -51,7 +49,7 @@ export default function ItemSelectorActionSheet(arg0) {
     },
     children: items.map((label, value) => closure_1_3(items(5769).TableRadioRow, { label: label.label, value }, value)),
   });
-  obj2.children = items;
-  obj1.children = closure_4(items(6728).BottomSheetScrollView, obj2);
-  return closure_3(items(7253).BottomSheet, obj1);
+  obj5.children = items1;
+  obj4.children = closure_4(items(6728).BottomSheetScrollView, obj5);
+  return closure_3(items(7253).BottomSheet, obj4);
 }

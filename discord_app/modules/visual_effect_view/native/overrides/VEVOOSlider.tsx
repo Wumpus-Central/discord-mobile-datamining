@@ -6,7 +6,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 const require = fn;
 const jsx = fn(21).jsx;
 const createStyles = fn(4636);
-const PlatformUtils = fn(1150);
+const PlatformUtils = fn(1363);
 let num = 0;
 if (PlatformUtils.isAndroid()) {
   num = nativeDefault.space.PX_8;

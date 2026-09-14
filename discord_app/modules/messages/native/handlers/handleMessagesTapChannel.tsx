@@ -32,8 +32,8 @@ let closure_20 = async function _maybeStartLurking(arg0, arg1) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj3 = { value, done: true };
+        return obj3;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -46,16 +46,15 @@ let closure_20 = async function _maybeStartLurking(arg0, arg1) {
             throw value;
           } else if (arg0 === 2) {
             c4 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj4 = { value, done: true };
+            return obj4;
           } else {
             c6 = 1;
-            let obj1 = GuildDiscoveryUtilsAll;
-            obj1 = { channelId, messageId };
+            const obj5 = { channelId, messageId };
             c5 = 2;
             c4 = 1;
-            const obj2 = { value: obj1.startLurking(closure_1, {}, obj1), done: false };
-            return obj2;
+            const obj6 = { value: GuildDiscoveryUtilsAll.startLurking(closure_1, {}, obj5), done: false };
+            return obj6;
           }
         } else if (1 === tmp6) {
           c6 = 0;
@@ -65,7 +64,7 @@ let closure_20 = async function _maybeStartLurking(arg0, arg1) {
         } else if (arg0 === 2) {
           c6 = 0;
           c4 = 3;
-          obj = { value, done: true };
+          const obj = { value, done: true };
           return obj;
         } else {
           c6 = 0;
@@ -92,8 +91,8 @@ let closure_21 = async function _handleMessagesTapChannel(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -106,8 +105,8 @@ let closure_21 = async function _handleMessagesTapChannel(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c4 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           closure_2 = tmp5;
           closure_1 = tmp2;
@@ -140,8 +139,8 @@ let closure_21 = async function _handleMessagesTapChannel(arg0) {
             throw value;
           } else if (arg0 === 2) {
             c4 = 3;
-            const obj1 = { value, done: true };
-            return obj1;
+            const obj4 = { value, done: true };
+            return obj4;
           } else {
             channelId = closure_129_0.channelId;
             guildId = closure_129_0.guildId;
@@ -152,23 +151,21 @@ let closure_21 = async function _handleMessagesTapChannel(arg0) {
             }
             closure_129_7 = channel;
             guild = closure_130_10.getGuild(guildId);
-            let obj4 = closure_130_1(closure_130_3[13]);
-            const obj2 = { guildId, channelId, messageId };
-            const result = obj4.trackDiscordLinkClicked(obj2);
+            const obj6 = { guildId, channelId, messageId };
+            const result = closure_130_1(closure_130_3[13]).trackDiscordLinkClicked(obj6);
             if (null != guildId) {
               if (null != channelId) {
-                let obj6 = closure_130_0(closure_130_3[14]);
-                if (obj6.isStaticRouteIconType(channelId)) {
+                if (obj7.isStaticRouteIconType(channelId)) {
                   if (null == guild) {
                     c4 = 3;
                     return { value: "HermesInternal", done: null };
                   } else if ("browse" === channelId) {
                     const features3 = guild.features;
                     if (features3.has(closure_130_13.COMMUNITY)) {
-                      const obj3 = { guildId, defaultTab: closure_130_17.BROWSE };
+                      const obj8 = { guildId, defaultTab: closure_130_17.BROWSE };
                       closure_130_1(closure_130_3[15]).pushLazy(
                         closure_130_0(closure_130_3[17])(closure_130_3[16], closure_130_3.paths),
-                        obj3,
+                        obj8,
                         closure_130_18,
                       );
                       const obj27 = closure_130_1(closure_130_3[15]);
@@ -179,10 +176,10 @@ let closure_21 = async function _handleMessagesTapChannel(arg0) {
                   } else if ("customize" === tmp273) {
                     const features2 = guild.features;
                     if (features2.has(closure_130_13.COMMUNITY)) {
-                      obj4 = { guildId, defaultTab: closure_130_17.CUSTOMIZE };
+                      const obj10 = { guildId, defaultTab: closure_130_17.CUSTOMIZE };
                       closure_130_1(closure_130_3[15]).pushLazy(
                         closure_130_0(closure_130_3[17])(closure_130_3[16], closure_130_3.paths),
-                        obj4,
+                        obj10,
                         closure_130_18,
                       );
                       const obj25 = closure_130_1(closure_130_3[15]);
@@ -207,11 +204,11 @@ let closure_21 = async function _handleMessagesTapChannel(arg0) {
                                 if (!roles.includes(role.id)) {
                                   const _HermesInternal = HermesInternal;
                                   const obj20 = closure_130_1(closure_130_3[19]);
-                                  const obj5 = { role, guildId };
+                                  const obj11 = { role, guildId };
                                   obj20.openLazy(
                                     closure_130_0(closure_130_3[17])(closure_130_3[20], closure_130_3.paths),
                                     "GuildRoleConnectionsConnectAccountsActionSheet-" + role.id,
-                                    obj5,
+                                    obj11,
                                   );
                                   const tmp202 = closure_130_0(closure_130_3[17])(
                                     closure_130_3[20],
@@ -219,33 +216,33 @@ let closure_21 = async function _handleMessagesTapChannel(arg0) {
                                   );
                                 }
                               }
-                              obj6 = { guildId };
+                              const obj13 = { guildId };
                               closure_130_1(closure_130_3[15]).pushLazy(
                                 closure_130_0(closure_130_3[17])(closure_130_3[21], closure_130_3.paths),
-                                obj6,
+                                obj13,
                               );
                               const obj22 = closure_130_1(closure_130_3[15]);
                             }
                           } else {
-                            let obj17 = closure_130_1(closure_130_3[15]);
-                            const obj7 = { guildId };
-                            obj17.pushLazy(
+                            const obj15 = { guildId };
+                            closure_130_1(closure_130_3[15]).pushLazy(
                               closure_130_0(closure_130_3[17])(closure_130_3[21], closure_130_3.paths),
-                              obj7,
+                              obj15,
                             );
+                            const obj18 = closure_130_1(closure_130_3[15]);
                           }
                         } else {
-                          let obj16 = closure_130_0(closure_130_3[22]);
-                          obj16.assertNever(channelId);
+                          closure_130_0(closure_130_3[22]).assertNever(channelId);
+                          const obj17 = closure_130_0(closure_130_3[22]);
                         }
                       }
                     }
                     const features = guild.features;
                     if (features.has(closure_130_13.COMMUNITY)) {
-                      let obj8 = { navigationReplace: closure_129_1, openChannel: true };
+                      const obj16 = { navigationReplace: closure_129_1, openChannel: true };
                       closure_130_1(closure_130_3[18])(
                         closure_130_15.CHANNEL(guildId, closure_130_16.GUILD_HOME),
-                        obj8,
+                        obj16,
                       );
                       const tmp225 = closure_130_1(closure_130_3[18]);
                     } else {
@@ -264,11 +261,11 @@ let closure_21 = async function _handleMessagesTapChannel(arg0) {
                 if (!closure_129_7.isPrivate()) {
                   c3 = 2;
                   c4 = 1;
-                  const obj9 = {
+                  const obj19 = {
                     value: closure_130_19(guild, closure_129_7.guild_id, closure_129_7.id, messageId),
                     done: false,
                   };
-                  return obj9;
+                  return obj19;
                 }
               }
             }
@@ -276,8 +273,7 @@ let closure_21 = async function _handleMessagesTapChannel(arg0) {
               if (null != guildId) {
                 if (closure_129_7.isPrivate()) {
                   if (closure_130_5(closure_129_7.type)) {
-                    let obj11 = closure_130_0(closure_130_3[23]);
-                    if (obj11.canViewChannel(closure_129_7)) {
+                    if (obj12.canViewChannel(closure_129_7)) {
                       if (closure_129_7.type === closure_130_12.GUILD_STAGE_VOICE) {
                         if (!closure_130_11.can(closure_130_14.CONNECT, closure_129_7)) {
                           c4 = 3;
@@ -290,21 +286,22 @@ let closure_21 = async function _handleMessagesTapChannel(arg0) {
                       if (closure_129_2 != null) {
                         closure_129_2();
                       }
-                      let obj13 = closure_130_0(closure_130_3[24]);
-                      obj13.openChannelCallModal(closure_129_7);
+                      closure_130_0(closure_130_3[24]).openChannelCallModal(closure_129_7);
+                      const obj14 = closure_130_0(closure_130_3[24]);
                     }
+                    obj12 = closure_130_0(closure_130_3[23]);
                   }
                   if (closure_129_2 != null) {
                     closure_129_2();
                   }
-                  const obj10 = { navigationReplace: closure_129_1, openChannel: true };
-                  closure_130_1(closure_130_3[18])(closure_130_15.CHANNEL(guildId, closure_129_7.id), obj10);
+                  const obj21 = { navigationReplace: closure_129_1, openChannel: true };
+                  closure_130_1(closure_130_3[18])(closure_130_15.CHANNEL(guildId, closure_129_7.id), obj21);
                   const tmp120 = closure_130_1(closure_130_3[18]);
                 } else {
                   c3 = 3;
                   c4 = 1;
-                  obj11 = { value: closure_130_19(guild, guildId, closure_129_7.id, messageId), done: false };
-                  return obj11;
+                  const obj23 = { value: closure_130_19(guild, guildId, closure_129_7.id, messageId), done: false };
+                  return obj23;
                 }
               }
             }
@@ -312,8 +309,8 @@ let closure_21 = async function _handleMessagesTapChannel(arg0) {
               if (null != guildId) {
                 c3 = 4;
                 c4 = 1;
-                const obj12 = { value: closure_130_19(guild, guildId, channelId, messageId), done: false };
-                return obj12;
+                const obj24 = { value: closure_130_19(guild, guildId, channelId, messageId), done: false };
+                return obj24;
               }
             }
             if (null != closure_129_7) {
@@ -324,8 +321,8 @@ let closure_21 = async function _handleMessagesTapChannel(arg0) {
                 if (closure_129_2 != null) {
                   closure_129_2();
                 }
-                obj8 = closure_130_1(closure_130_3[25]);
-                const voiceChannel = obj8.selectVoiceChannel(channelId);
+                const voiceChannel = closure_130_1(closure_130_3[25]).selectVoiceChannel(channelId);
+                const obj9 = closure_130_1(closure_130_3[25]);
               }
             }
             let tmp62 = null != channelId;
@@ -336,10 +333,11 @@ let closure_21 = async function _handleMessagesTapChannel(arg0) {
               if (closure_129_2 != null) {
                 closure_129_2();
               }
-              obj13 = { navigationReplace: closure_129_1, openChannel: true };
-              closure_130_1(closure_130_3[18])(closure_130_15.CHANNEL(guildId, channelId, messageId), obj13);
+              const obj26 = { navigationReplace: closure_129_1, openChannel: true };
+              closure_130_1(closure_130_3[18])(closure_130_15.CHANNEL(guildId, channelId, messageId), obj26);
               const tmp71 = closure_130_1(closure_130_3[18]);
             }
+            const obj5 = closure_130_1(closure_130_3[13]);
           }
         } else if (2 === tmp5) {
           if (arg0 === 1) {
@@ -347,8 +345,8 @@ let closure_21 = async function _handleMessagesTapChannel(arg0) {
             throw value;
           } else if (arg0 === 2) {
             c4 = 3;
-            const obj14 = { value, done: true };
-            return obj14;
+            const obj28 = { value, done: true };
+            return obj28;
           } else if (value) {
             c4 = 3;
             return { value: "HermesInternal", done: null };
@@ -359,8 +357,8 @@ let closure_21 = async function _handleMessagesTapChannel(arg0) {
             throw value;
           } else if (arg0 === 2) {
             c4 = 3;
-            const obj15 = { value, done: true };
-            return obj15;
+            const obj29 = { value, done: true };
+            return obj29;
           } else if (value) {
             c4 = 3;
             return { value: "HermesInternal", done: null };
@@ -370,23 +368,23 @@ let closure_21 = async function _handleMessagesTapChannel(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c4 = 3;
-          obj16 = { value, done: true };
-          return obj16;
+          const obj30 = { value, done: true };
+          return obj30;
         } else if (!value) {
           if (closure_129_2 != null) {
             tmp7();
           }
-          obj = { navigationReplace: closure_129_1, openChannel: true };
+          const obj = { navigationReplace: closure_129_1, openChannel: true };
           closure_130_1(closure_130_3[18])(closure_130_15.CHANNEL(guildId, channelId, messageId), obj);
           const tmp14 = closure_130_1(closure_130_3[18]);
         }
         if (closure_129_2 != null) {
           tmp156();
         }
-        obj17 = { navigationReplace: closure_129_1, openChannel: true };
+        const obj31 = { navigationReplace: closure_129_1, openChannel: true };
         closure_130_1(closure_130_3[18])(
           closure_130_15.CHANNEL(closure_129_7.guild_id, closure_129_7.id, messageId),
-          obj17,
+          obj31,
         );
         const tmp163 = closure_130_1(closure_130_3[18]);
       }

@@ -8,29 +8,23 @@ import ApexExperimentStore from "../../../experiments/apex/ApexExperimentStore.t
 
 require = fn;
 const jsx = fn(21).jsx;
-fn(11601);
-let SettingBuilders = {
+const SettingBuilders = fn(11602);
+const pressable = SettingBuilders.createPressable({
   useTitle() {
     return "Experiments Overrides Active";
   },
   parent: null,
-  IconComponent: fn(15670).BeakerIcon,
+  IconComponent: fn(15672).BeakerIcon,
   useDescription: function useExperimentOverrideActiveDescription() {
-    let obj = initialize;
     const items = [ExperimentStore];
-    const stateFromStores = obj.useStateFromStores(
+    const stateFromStores = initialize.useStateFromStores(
       items,
       () => Object.keys(allExperimentOverrideDescriptors.getAllExperimentOverrideDescriptors()).length,
     );
     const items1 = [ApexExperimentStore];
-    obj = {
-      label: "Experiments overridden: ",
-      value:
-        stateFromStores +
-        initialize
-          .useStateFromStores(items1, () => Object.keys(clientOverrides.getClientOverrides()).length)
-          .toString(),
-    };
+    const str =
+      stateFromStores +
+      initialize.useStateFromStores(items1, () => Object.keys(clientOverrides.getClientOverrides()).length);
     return jsx(DevToolsContent.DevToolsContentSubLabel, {
       label: "Experiments overridden: ",
       value:
@@ -59,9 +53,8 @@ let SettingBuilders = {
     DevToolsNavigator.navigateToDevTools({ screenKey: "experiments" });
   },
   withArrow: true,
-};
-SettingBuilders = SettingBuilders.createPressable(SettingBuilders);
+});
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/ExperimentOverrideActiveSetting.tsx");
 
-export default SettingBuilders;
+export default pressable;

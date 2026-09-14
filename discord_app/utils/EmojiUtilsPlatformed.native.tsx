@@ -34,8 +34,8 @@ let closure_9 = async function _getEmojiColors(arg0) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -48,8 +48,8 @@ let closure_9 = async function _getEmojiColors(arg0) {
             throw value;
           } else if (arg0 === 2) {
             c4 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
             closure_2 = tmp5;
             closure_1 = tmp2;
@@ -57,9 +57,8 @@ let closure_9 = async function _getEmojiColors(arg0) {
             closure_129_1 = undefined;
             id = id.id;
             if (null != id) {
-              let obj3 = AvatarUtilsDefault;
-              const obj1 = { id, size: 32, animated: false };
-              let emojiURL = obj3.getEmojiURL(obj1);
+              const obj5 = { id, size: 32, animated: false };
+              let emojiURL = AvatarUtilsDefault.getEmojiURL(obj5);
             } else {
               emojiURL = getURL(tmp31);
             }
@@ -68,14 +67,14 @@ let closure_9 = async function _getEmojiColors(arg0) {
               ImageManager = ImageManager.ImageManager;
               c3 = 1;
               c4 = 1;
-              const obj2 = {
+              const obj7 = {
                 value: ImageManager.getEmojiBase64(
                   tmp30.name,
                   burst_reactions_BurstReactionEffectUtils.EMOJI_IN_ANIMATION_SIZE,
                 ),
                 done: false,
               };
-              return obj2;
+              return obj7;
             } else {
               const paletteForAvatar = closure_130_0(closure_130_2[9]).getPaletteForAvatar(closure_129_0);
               c3 = 2;
@@ -97,8 +96,8 @@ let closure_9 = async function _getEmojiColors(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c4 = 3;
-          obj3 = { value, done: true };
-          return obj3;
+          const obj8 = { value, done: true };
+          return obj8;
         } else {
           closure_129_1 = value;
           let mapped;
@@ -110,12 +109,12 @@ let closure_9 = async function _getEmojiColors(arg0) {
             });
           }
           c4 = 3;
-          obj = { value: mapped, done: true };
+          const obj = { value: mapped, done: true };
           return obj;
         }
         c4 = 3;
-        const obj4 = { value, done: true };
-        return obj4;
+        const obj9 = { value, done: true };
+        return obj9;
       } catch (tmp25) {
         c4 = tmp;
         throw tmp25;
@@ -269,7 +268,7 @@ obj.applyPlatformToThemedEmojiColorPalette = function applyPlatformToThemedEmoji
       if (LIGHT != null) {
         accentColor = LIGHT.accentColor;
       }
-      let obj = {
+      const obj = {
         accentColor: timestampProducer(accentColor),
         backgroundColor: null,
         highlightColor: null,
@@ -289,13 +288,14 @@ obj.applyPlatformToThemedEmojiColorPalette = function applyPlatformToThemedEmoji
       if (LIGHT != null) {
         opacity = LIGHT.opacity;
       }
-      obj = { LIGHT: null, DARK: null, opacity };
-      obj.LIGHT = obj;
+      const obj2 = { LIGHT: null, DARK: null };
+      obj.opacity = opacity;
+      obj2.LIGHT = obj;
       let accentColor1;
       if (DARK != null) {
         accentColor1 = DARK.accentColor;
       }
-      obj = {
+      const obj3 = {
         accentColor: timestampProducer(accentColor1),
         backgroundColor: null,
         highlightColor: null,
@@ -305,19 +305,19 @@ obj.applyPlatformToThemedEmojiColorPalette = function applyPlatformToThemedEmoji
       if (DARK != null) {
         backgroundColor1 = DARK.backgroundColor;
       }
-      obj.backgroundColor = timestampProducer(backgroundColor1);
+      obj3.backgroundColor = timestampProducer(backgroundColor1);
       let highlightColor1;
       if (DARK != null) {
         highlightColor1 = DARK.highlightColor;
       }
-      obj.highlightColor = timestampProducer(highlightColor1);
+      obj3.highlightColor = timestampProducer(highlightColor1);
       let opacity1;
       if (DARK != null) {
         opacity1 = DARK.opacity;
       }
-      obj.opacity = opacity1;
-      obj.DARK = obj;
-      return obj;
+      obj3.opacity = opacity1;
+      obj2.DARK = obj3;
+      return obj2;
     }
   }
   return palette;

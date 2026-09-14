@@ -2,6 +2,8 @@
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import GuildMemberStore from "../../../stores/GuildMemberStore.tsx";
 
+const require = globalThis.__r;
+
 const require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/avatar_decorations/useAvatarDecoration.tsx");

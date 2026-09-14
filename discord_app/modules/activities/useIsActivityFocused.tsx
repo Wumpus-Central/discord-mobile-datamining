@@ -3,6 +3,8 @@ import ChannelRTCParticipants from "../calls/ChannelRTCParticipants.tsx";
 import ChannelRTCStore from "../calls/ChannelRTCStore.tsx";
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore.tsx";
 
+const require = globalThis.__r;
+
 require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/activities/useIsActivityFocused.tsx");
@@ -15,13 +17,13 @@ export default function useIsActivityFocused(arg0) {
     const currentEmbeddedActivity = EmbeddedActivitiesStore.getCurrentEmbeddedActivity();
     let tmp3 = null != selectedParticipant && null != currentEmbeddedActivity;
     if (tmp3) {
-      const obj = { applicationId: currentEmbeddedActivity.applicationId, instanceId: null };
+      const obj2 = { applicationId: currentEmbeddedActivity.applicationId, instanceId: null };
       let compositeInstanceId;
       if (currentEmbeddedActivity != null) {
         compositeInstanceId = currentEmbeddedActivity.compositeInstanceId;
       }
-      obj.instanceId = compositeInstanceId;
-      tmp3 = selectedParticipant.id === obj.getEmbeddedActivityParticipantId(obj);
+      obj2.instanceId = compositeInstanceId;
+      tmp3 = selectedParticipant.id === ChannelRTCParticipants.getEmbeddedActivityParticipantId(obj2);
     }
     return tmp3;
   });
@@ -32,13 +34,13 @@ export const isActivityFocused = function isActivityFocused(channelId) {
   const currentEmbeddedActivity = EmbeddedActivitiesStore.getCurrentEmbeddedActivity();
   let tmp3 = null != selectedParticipant && null != currentEmbeddedActivity;
   if (tmp3) {
-    const obj = { applicationId: currentEmbeddedActivity.applicationId, instanceId: null };
+    const obj2 = { applicationId: currentEmbeddedActivity.applicationId, instanceId: null };
     let compositeInstanceId;
     if (currentEmbeddedActivity != null) {
       compositeInstanceId = currentEmbeddedActivity.compositeInstanceId;
     }
-    obj.instanceId = compositeInstanceId;
-    tmp3 = selectedParticipant.id === obj.getEmbeddedActivityParticipantId(obj);
+    obj2.instanceId = compositeInstanceId;
+    tmp3 = selectedParticipant.id === ChannelRTCParticipants.getEmbeddedActivityParticipantId(obj2);
   }
   return tmp3;
 };

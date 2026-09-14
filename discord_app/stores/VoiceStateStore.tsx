@@ -15,7 +15,7 @@ function updateVoiceState(arg0, arg1, fn) {
   }
   let tmp8 = dependencyMap[tmp7];
   if (null == tmp8) {
-    let obj = {};
+    const obj = {};
     dependencyMap[tmp7] = obj;
     tmp8 = obj;
   }
@@ -29,21 +29,21 @@ function updateVoiceState(arg0, arg1, fn) {
       if (null != tmp9.channelId) {
         const channelId = tmp9.channelId;
         if (null == dependencyMap2[channelId]) {
-          obj = {};
-          tmp11[channelId] = obj;
+          const obj2 = {};
+          tmp11[channelId] = obj2;
         }
         delete tmp3[tmp2];
         const channelId2 = tmp9.channelId;
         if (null == dependencyMap3[channelId2]) {
-          obj = {};
-          tmp13[channelId2] = obj;
+          const obj3 = {};
+          tmp13[channelId2] = obj3;
         }
         delete tmp3[tmp2];
       }
       if (null != tmp9.sessionId) {
         if (null == dependencyMap4[arg1]) {
-          const obj1 = {};
-          tmp15[arg1] = obj1;
+          const obj4 = {};
+          tmp15[arg1] = obj4;
         }
         sessionId = tmp9.sessionId;
         delete tmp4[tmp3];
@@ -52,20 +52,19 @@ function updateVoiceState(arg0, arg1, fn) {
       if (tmp5 == null) {
         tmp17 = ME;
       }
-      let obj4 = map;
-      set = map.get(tmp17);
-      if (set == null) {
+      let set3 = map.get(tmp17);
+      if (set3 == null) {
         const _Set = Set;
-        set = new Set();
+        set3 = new Set();
       }
-      if (set.has(arg1)) {
+      if (set3.has(arg1)) {
         const _Set2 = Set;
         set = new Set(tmp21);
         set.delete(arg1);
         if (0 === set.size) {
-          obj4.delete(tmp17);
+          map.delete(tmp17);
         } else {
-          const result = obj4.set(tmp17, set);
+          const result = map.set(tmp17, set);
         }
       }
     }
@@ -75,26 +74,26 @@ function updateVoiceState(arg0, arg1, fn) {
         const channelId4 = tmp10.channelId;
         let tmp30 = dependencyMap2[channelId4];
         if (null == tmp30) {
-          const obj2 = {};
-          tmp48[channelId4] = obj2;
-          tmp30 = obj2;
+          const obj6 = {};
+          tmp48[channelId4] = obj6;
+          tmp30 = obj6;
         }
         tmp30[arg1] = tmp10;
         if (tmp10.selfVideo) {
           const channelId3 = tmp10.channelId;
           let tmp32 = dependencyMap3[channelId3];
           if (null == tmp32) {
-            const obj3 = {};
-            tmp31[channelId3] = obj3;
-            tmp32 = obj3;
+            const obj7 = {};
+            tmp31[channelId3] = obj7;
+            tmp32 = obj7;
           }
           tmp32[arg1] = tmp10;
           if (tmp5 == null) {
             tmp5 = ME;
           }
-          value = map.get(tmp5);
-          let set1 = value;
-          if (value == null) {
+          value2 = map.get(tmp5);
+          let set1 = value2;
+          if (value2 == null) {
             const _Set3 = Set;
             set1 = new Set();
           }
@@ -109,9 +108,9 @@ function updateVoiceState(arg0, arg1, fn) {
       if (null != tmp10.sessionId) {
         let tmp47 = dependencyMap4[arg1];
         if (null == tmp47) {
-          obj4 = {};
-          tmp46[arg1] = obj4;
-          tmp47 = obj4;
+          const obj8 = {};
+          tmp46[arg1] = obj8;
+          tmp47 = obj8;
         }
         tmp47[tmp10.sessionId] = tmp10;
       }

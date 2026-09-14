@@ -26,7 +26,7 @@ const items2 = [,];
 const items3 = [,];
 ({ XBOX: arr4[0], PS5: arr4[1] } = Constants.ActivityGamePlatforms);
 const set = new Set(items2);
-obj = {
+const obj2 = {
   CONSOLE_DEVICE_PASSCODE_UNLOCK_REQUIRED: 270000,
   [270000]: "CONSOLE_DEVICE_PASSCODE_UNLOCK_REQUIRED",
   CONSOLE_DEVICE_UNAVAILABLE: 270001,
@@ -44,7 +44,7 @@ obj = {
   CONSOLE_DEVICE_BAD_COMMAND: 270007,
   [270007]: "CONSOLE_DEVICE_BAD_COMMAND",
 };
-const items4 = [obj.CONSOLE_DEVICE_PASSCODE_UNLOCK_REQUIRED];
+const items4 = [obj2.CONSOLE_DEVICE_PASSCODE_UNLOCK_REQUIRED];
 const set1 = new Set(items3);
 const result = size.fileFinishedImporting("modules/game_console/GameConsoleConstants.tsx");
 
@@ -75,6 +75,6 @@ export const XBOX_HANDOFF_SEARCH_PARAMS = (channelid) => {
 export const GameConsoleTypes = obj;
 export const GAME_CONSOLE_SESSIONS = set;
 export const CONSOLE_VOICE_PLATFORMS = set1;
-export const GameConsoleCommandResultErrorCodes = obj;
+export const GameConsoleCommandResultErrorCodes = obj2;
 export const USER_ACTION_REQUIRED_ERROR_CODES = new Set(items4);
 export const GAME_CONSOLE_ALERT_MODAL_LOCATION = "console error alert";

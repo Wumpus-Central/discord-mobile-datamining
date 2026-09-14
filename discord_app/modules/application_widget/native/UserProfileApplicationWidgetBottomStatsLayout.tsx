@@ -8,17 +8,24 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-fn(4636);
-let createStyles = { statsGrid: null, stat: null };
-createStyles = {
+const createStyles = fn(4636);
+let obj2 = {
+  statsGrid: {
+    flexDirection: "row",
+    flexWrap: "wrap",
+    rowGap: nativeDefault.space.PX_16,
+    columnGap: nativeDefault.space.PX_12,
+  },
+  stat: null,
+};
+let obj3 = {
   flexDirection: "row",
   flexWrap: "wrap",
   rowGap: nativeDefault.space.PX_16,
   columnGap: nativeDefault.space.PX_12,
 };
-createStyles.statsGrid = createStyles;
-createStyles.stat = { width: "47%", gap: nativeDefault.space.PX_4 };
-let closure_5 = createStyles.createStyles(createStyles);
+obj2.stat = { width: "47%", gap: nativeDefault.space.PX_4 };
+let closure_5 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting(
   "modules/application_widget/native/UserProfileApplicationWidgetBottomStatsLayout.tsx",
@@ -45,16 +52,16 @@ export default function UserProfileApplicationWidgetBottomStatsLayout(arg0) {
       if (null == item) {
         return tmp;
       } else {
-        let obj = { style: stat.stat, children: null };
+        const obj = { style: stat.stat, children: null };
         let Text = require;
-        obj = { field: iter.value, variant: "text-sm/medium", color: "text-default", skeletonWidthChars: 8 };
-        const items = [React3(UserProfileApplicationWidgetFieldUtils.FieldText, obj)];
+        const obj2 = { field: iter.value, variant: "text-sm/medium", color: "text-default", skeletonWidthChars: 8 };
+        const items = [React3(UserProfileApplicationWidgetFieldUtils.FieldText, obj2)];
         if ("value" === iter.label.status) {
           Text = Text(4632).Text;
-          obj = { variant: "text-xs/normal", color: "text-muted", children: null };
+          const obj3 = { variant: "text-xs/normal", color: "text-muted", children: null };
           iter = iter.label.text;
-          obj.children = iter;
-          let tmp5Result = React3(Text, obj);
+          obj3.children = iter;
+          let tmp5Result = React3(Text, obj3);
         } else {
           tmp5Result = null;
           if ("skeleton" === iter.label.status) {

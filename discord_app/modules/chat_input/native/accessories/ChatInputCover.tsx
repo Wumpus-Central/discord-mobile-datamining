@@ -12,8 +12,7 @@ const forwardRefResult = noop.forwardRef((enabled, arg1) => {
   }
   const keyboardType = enabled.keyboardType;
   const onSelectKeyboard = enabled.onSelectKeyboard;
-  let obj = flag(keyboardType[3]);
-  const isScreenReaderEnabled = obj.useIsScreenReaderEnabled();
+  const isScreenReaderEnabled = flag(keyboardType[3]).useIsScreenReaderEnabled();
   const items = [flag, isScreenReaderEnabled, keyboardType, onSelectKeyboard];
   const memo = onSelectKeyboard.useMemo(
     () => ({
@@ -50,10 +49,14 @@ const forwardRefResult = noop.forwardRef((enabled, arg1) => {
     if (keyboardType !== flag(keyboardType[4]).KeyboardTypes.SYSTEM) {
       tmp6 = null;
       if (!isScreenReaderEnabled) {
-        obj = { accessible: false, accessibilityRole: "none", onPress: memo.openSystemKeyboard, children: null };
-        obj = { style: isScreenReaderEnabled.absoluteFill };
-        obj.children = <closure_5 style={isScreenReaderEnabled.absoluteFill} />;
-        tmp6 = <closure_4 style={isScreenReaderEnabled.absoluteFill} />;
+        const obj2 = { accessible: false, accessibilityRole: "none", onPress: memo.openSystemKeyboard, children: null };
+        const obj3 = { style: isScreenReaderEnabled.absoluteFill };
+        obj2.children = <closure_5 style={isScreenReaderEnabled.absoluteFill} />;
+        tmp6 = (
+          <closure_4 accessible={false} accessibilityRole="none" onPress={memo.openSystemKeyboard}>
+            {null}
+          </closure_4>
+        );
       }
     }
   }

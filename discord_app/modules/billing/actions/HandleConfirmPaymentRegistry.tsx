@@ -6,35 +6,15 @@ require = fn;
 const Constants = fn(1074);
 ({ Endpoints: closure_4, REDIRECTED_PAYMENT_SOURCES: hasOwnProperty } = Constants);
 const PaymentSourceTypes = fn(1085).PaymentSourceTypes;
-obj = {
-  [PaymentSourceTypes.GIROPAY]: obj,
-  [PaymentSourceTypes.SOFORT]: obj,
-  [PaymentSourceTypes.PRZELEWY24]: obj1,
-  [PaymentSourceTypes.BANCONTACT]: obj2,
-  [PaymentSourceTypes.EPS]: obj3,
-  [PaymentSourceTypes.IDEAL]: obj4,
+let obj = {
+  [PaymentSourceTypes.GIROPAY]: obj2,
+  [PaymentSourceTypes.SOFORT]: obj3,
+  [PaymentSourceTypes.PRZELEWY24]: obj4,
+  [PaymentSourceTypes.BANCONTACT]: obj5,
+  [PaymentSourceTypes.EPS]: obj6,
+  [PaymentSourceTypes.IDEAL]: obj7,
 };
-obj = {
-  confirmationType: "stripe_redirect_confirmation",
-  constructStripeConfirmPaymentHandler(name) {
-    let paymentMethod = { billing_details: { name: name.paymentSource.billingAddress.name } };
-    paymentMethod = { stripeConfirmPayment: name.stripe.confirmGiropayPayment, paymentMethod };
-    return paymentMethod;
-  },
-};
-obj = {
-  confirmationType: "stripe_redirect_confirmation",
-  constructStripeConfirmPaymentHandler(paymentSource) {
-    paymentSource = paymentSource.paymentSource;
-    let paymentMethod = {
-      sofort: { country: paymentSource.billingAddress.country },
-      billing_details: { name: paymentSource.billingAddress.name, email: paymentSource.email },
-    };
-    paymentMethod = { stripeConfirmPayment: paymentSource.stripe.confirmSofortPayment, paymentMethod };
-    return paymentMethod;
-  },
-};
-let obj5 = { [PaymentSourceTypes.SEPA_DEBIT]: obj6, [PaymentSourceTypes.PIX]: obj7 };
+let obj8 = { [PaymentSourceTypes.SEPA_DEBIT]: obj9, [PaymentSourceTypes.PIX]: obj10 };
 class PaymentConfirmationHandler {
   constructor(arg0, arg1) {
     obj = Object.create(new.target.prototype);
@@ -104,8 +84,8 @@ prototype["getStripe"] = function getStripe() {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        obj = { value, done: true };
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -118,14 +98,14 @@ prototype["getStripe"] = function getStripe() {
             throw value;
           } else if (arg0 === 2) {
             c3 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj5 = { value, done: true };
+            return obj5;
           } else if (null == self.stripe) {
             _self = self;
             dependencyMap = 1;
             c3 = 1;
-            const obj1 = { value: tmp4(4966).getStripe(), done: false };
-            return obj1;
+            const obj6 = { value: tmp4(4966).getStripe(), done: false };
+            return obj6;
           }
         } else if (arg0 === 1) {
           c3 = 3;
@@ -138,12 +118,11 @@ prototype["getStripe"] = function getStripe() {
           _self.stripe = value;
         }
         if (null == closure_129_0.stripe) {
-          let obj2 = _self(4961);
-          throw obj2.dispatchConfirmationError("Stripe cannot be null on a redirect.");
+          throw _self(4961).dispatchConfirmationError("Stripe cannot be null on a redirect.");
         } else {
           c3 = 3;
-          obj2 = { value: closure_129_0.stripe, done: true };
-          return obj2;
+          const obj7 = { value: closure_129_0.stripe, done: true };
+          return obj7;
         }
       } catch (tmp17) {
         c3 = tmp;
@@ -177,25 +156,27 @@ prototype["getStripeRedirect"] = function getStripeRedirect(arg0) {
     yield self.getStripe();
     closure_129_0 = value;
     const handlerRegistry = closure_130_3.handlerRegistry;
-    let obj3 = { stripe: closure_129_0, paymentSource: closure_130_3.paymentSource, paymentMethodId: closure_130_2 };
-    closure_129_1 = handlerRegistry.constructStripeConfirmPaymentHandler(obj3);
+    closure_129_1 = handlerRegistry.constructStripeConfirmPaymentHandler({
+      stripe: closure_129_0,
+      paymentSource: closure_130_3.paymentSource,
+      paymentMethodId: closure_130_2,
+    });
     const stripeConfirmPayment = closure_129_1.stripeConfirmPayment;
     const paymentMethod = closure_129_1.paymentMethod;
-    const obj4 = { payment_method: paymentMethod, return_url: null };
+    const obj10 = { payment_method: paymentMethod, return_url: null };
     let _var = closure_130_1;
-    const aPIBaseURL = _var(1272).getAPIBaseURL();
+    const aPIBaseURL = _var(1270).getAPIBaseURL();
     if (closure_130_1 == null) {
       _var = "";
     }
-    obj4.return_url =
+    obj10.return_url =
       aPIBaseURL + c4.BILLING_POPUP_BRIDGE_CALLBACK_REDIRECT_PREFIX(closure_130_3.paymentSourceType, _var, "success");
-    yield stripeConfirmPayment(closure_130_0, obj4, { handleActions: false });
+    yield stripeConfirmPayment(closure_130_0, obj10, { handleActions: false });
     closure_129_4 = value;
     const paymentIntent = closure_129_4.paymentIntent;
     const error = closure_129_4.error;
     if (null != error) {
-      obj3 = _var(4961);
-      throw obj3.dispatchConfirmationError(error);
+      throw _var(4961).dispatchConfirmationError(error);
     }
     if (null == paymentIntent) {
       throw _var(4961).dispatchConfirmationError("paymentIntent not available with successful api call");
@@ -224,8 +205,8 @@ prototype["confirmRedirectedPaymentSource"] = function confirmRedirectedPaymentS
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        obj = { value, done: true };
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -238,17 +219,16 @@ prototype["confirmRedirectedPaymentSource"] = function confirmRedirectedPaymentS
             throw value;
           } else if (arg0 === 2) {
             c3 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
             closure_1 = tmp5;
             closure_128_0 = undefined;
             closure_128_1 = undefined;
-            let obj4 = tmp2(_self[3]);
             _self = 1;
             c3 = 1;
-            const obj1 = { value: obj4.popupBridgeState(self.paymentSourceType), done: false };
-            return obj1;
+            const obj4 = { value: tmp2(_self[3]).popupBridgeState(self.paymentSourceType), done: false };
+            return obj4;
           }
         } else if (1 === tmp5) {
           if (arg0 === 1) {
@@ -256,15 +236,15 @@ prototype["confirmRedirectedPaymentSource"] = function confirmRedirectedPaymentS
             throw value;
           } else if (arg0 === 2) {
             c3 = 3;
-            const obj2 = { value, done: true };
-            return obj2;
+            const obj6 = { value, done: true };
+            return obj6;
           } else {
             closure_128_0 = value;
-            const obj3 = { clientSecret: closure_129_0, state: closure_128_0, paymentMethodId: closure_129_1 };
+            const obj7 = { clientSecret: closure_129_0, state: closure_128_0, paymentMethodId: closure_129_1 };
             _self = 2;
             c3 = 1;
-            obj4 = { value: closure_129_2.getStripeRedirect(obj3), done: false };
-            return obj4;
+            obj8 = { value: closure_129_2.getStripeRedirect(obj7), done: false };
+            return obj8;
           }
         } else if (arg0 === 1) {
           c3 = 3;
@@ -293,8 +273,11 @@ prototype["confirmDirectPaymentSource"] = function confirmDirectPaymentSource(ar
     await self.getStripe();
     closure_128_0 = value;
     const handlerRegistry = closure_129_2.handlerRegistry;
-    let obj3 = { stripe: closure_128_0, paymentSource: closure_129_2.paymentSource, paymentMethodId: closure_129_1 };
-    closure_128_1 = handlerRegistry.constructStripeConfirmPaymentHandler(obj3);
+    closure_128_1 = handlerRegistry.constructStripeConfirmPaymentHandler({
+      stripe: closure_128_0,
+      paymentSource: closure_129_2.paymentSource,
+      paymentMethodId: closure_129_1,
+    });
     const stripeConfirmPayment = closure_128_1.stripeConfirmPayment;
     const paymentMethod = closure_128_1.paymentMethod;
     closure_128_4 = closure_128_1.pendingCustomerAction;
@@ -303,8 +286,7 @@ prototype["confirmDirectPaymentSource"] = function confirmDirectPaymentSource(ar
     const paymentIntent = closure_128_5.paymentIntent;
     const error = closure_128_5.error;
     if (null != error) {
-      obj3 = tmp2(4961);
-      throw obj3.dispatchConfirmationError(error);
+      throw tmp2(4961).dispatchConfirmationError(error);
     }
     if (null == paymentIntent) {
       throw tmp2(4961).dispatchConfirmationError("paymentIntent not available with successful stripe call");
@@ -326,9 +308,8 @@ prototype["confirmPayment"] = function confirmPayment() {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        value = { value: null, done: true };
-        value.value = value;
-        return value;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -341,9 +322,8 @@ prototype["confirmPayment"] = function confirmPayment() {
             throw value;
           } else if (arg0 === 2) {
             c3 = 3;
-            value = { value: null, done: true };
-            value.value = value;
-            return value;
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
             closure_1 = tmp5;
             closure_0 = tmp2;
@@ -353,8 +333,8 @@ prototype["confirmPayment"] = function confirmPayment() {
             closure_128_3 = undefined;
             c2 = 1;
             c3 = 1;
-            const obj1 = { value: self.getPaymentIntentInfo(), done: false };
-            return obj1;
+            const obj4 = { value: self.getPaymentIntentInfo(), done: false };
+            return obj4;
           }
         } else if (1 === tmp5) {
           if (arg0 === 1) {
@@ -362,24 +342,24 @@ prototype["confirmPayment"] = function confirmPayment() {
             throw value;
           } else if (arg0 === 2) {
             c3 = 3;
-            const obj2 = { value, done: true };
-            return obj2;
+            const obj5 = { value, done: true };
+            return obj5;
           } else {
             closure_128_0 = value;
             clientSecret = closure_128_0.clientSecret;
             paymentMethodId = closure_128_0.paymentMethodId;
             if ("stripe_redirect_confirmation" === closure_129_0.handlerRegistry.confirmationType) {
-              const obj3 = { clientSecret, paymentMethodId };
+              const obj6 = { clientSecret, paymentMethodId };
               c2 = 2;
               c3 = 1;
-              const obj4 = { value: closure_129_0.confirmRedirectedPaymentSource(obj3), done: false };
-              return obj4;
+              const obj7 = { value: closure_129_0.confirmRedirectedPaymentSource(obj6), done: false };
+              return obj7;
             } else {
-              obj5 = { clientSecret, paymentMethodId };
+              obj8 = { clientSecret, paymentMethodId };
               c2 = 3;
               c3 = 1;
-              const obj6 = { value: closure_129_0.confirmDirectPaymentSource(obj5), done: false };
-              return obj6;
+              const obj9 = { value: closure_129_0.confirmDirectPaymentSource(obj8), done: false };
+              return obj9;
             }
           }
         } else if (2 === tmp5) {
@@ -388,20 +368,20 @@ prototype["confirmPayment"] = function confirmPayment() {
             throw value;
           } else if (arg0 === 2) {
             c3 = 3;
-            const obj7 = { value, done: true };
-            return obj7;
+            const obj10 = { value, done: true };
+            return obj10;
           } else {
             c3 = 3;
-            const obj8 = { value: { redirectConfirmation: true }, done: true };
-            return obj8;
+            const obj11 = { value: { redirectConfirmation: true }, done: true };
+            return obj11;
           }
         } else if (arg0 === 1) {
           c3 = 3;
           throw value;
         } else if (arg0 === 2) {
           c3 = 3;
-          const obj9 = { value, done: true };
-          return obj9;
+          const obj12 = { value, done: true };
+          return obj12;
         } else {
           closure_128_3 = value;
           value = {
@@ -410,8 +390,8 @@ prototype["confirmPayment"] = function confirmPayment() {
             customerActionCancelled: closure_128_3.customerActionCancelled,
           };
           c3 = 3;
-          const obj10 = { value, done: true };
-          return obj10;
+          const obj13 = { value, done: true };
+          return obj13;
         }
       } catch (tmp20) {
         c3 = tmp;
@@ -450,7 +430,8 @@ prototype2["handleAdyenConfirmation"] = function handleAdyenConfirmation() {
   } else {
     if (set.has(self.paymentSource.type)) {
       self.performRedirect(adyen_redirect_url);
-      obj = { redirectConfirmation: true, redirectURL: adyen_redirect_url };
+      const obj2 = { redirectConfirmation: true, redirectURL: adyen_redirect_url };
+      obj = obj2;
     } else {
       obj = { redirectConfirmation: false, redirectURL: adyen_redirect_url };
     }
@@ -469,9 +450,9 @@ export const getIsStripeRedirectedPaymentSource = function getIsStripeRedirected
   }
   return hasItem;
 };
-export const STRIPE_DIRECT_CONFIRM_PAYMENT_METHOD_REGISTRY = obj5;
+export const STRIPE_DIRECT_CONFIRM_PAYMENT_METHOD_REGISTRY = obj8;
 export const getIsStripeDirectConfirmationPaymentSource = function getIsStripeDirectConfirmationPaymentSource(arg0) {
-  return arg0 in obj5;
+  return arg0 in obj8;
 };
 export { StripePaymentConfirmationHandler };
 export { AdyenPaymentConfirmationHandler };

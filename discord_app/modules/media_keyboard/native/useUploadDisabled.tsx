@@ -6,6 +6,8 @@ import UploadAttachmentStore from "../../../stores/UploadAttachmentStore.tsx";
 import Constants from "../../../Constants.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
+const require = globalThis.__r;
+
 const DraftType = DraftStore.DraftType;
 ({ MAX_UPLOAD_COUNT: hasOwnProperty, Permissions: metroRequire } = Constants);
 const result = size.fileFinishedImporting("modules/media_keyboard/native/useUploadDisabled.tsx");

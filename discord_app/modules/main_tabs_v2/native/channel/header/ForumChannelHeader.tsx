@@ -1,6 +1,5 @@
 // discord_app/modules/main_tabs_v2/native/channel/header/ForumChannelHeader.tsx
 import ForumChannelSearch from "../../../../forums/native/ForumChannelSearch.tsx";
-import useIsForumChannelSearchActive from "../../../../forums/native/hooks/useIsForumChannelSearchActive.tsx";
 import GuildChannelHeaderDefault from "GuildChannelHeader.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
@@ -18,7 +17,7 @@ let closure_5 = createStyles.createStyles({
     height: fn(7967).MIN_HEADER_HEIGHT,
   },
 });
-let obj = {
+const obj = {
   search: {
     flex: 1,
     flexShrink: 1,
@@ -34,18 +33,18 @@ const result = size.fileFinishedImporting("modules/main_tabs_v2/native/channel/h
 export default noop.memo((arg0) => {
   ({ channelId, guildId } = arg0);
   ({ screenIndex, pressable, isGuildMemberCountVisible, isNavigationScreen, searchPlaceholder } = arg0);
-  let obj = useIsForumChannelSearchActive;
+  const tmp = closure_5();
   if (obj.useIsForumChannelSearchActive(channelId)) {
-    obj = { style: tmp.search, children: null };
-    obj = { channelId, guildId, placeholder: searchPlaceholder };
-    obj.children = jsx(ForumChannelSearch.ForumChannelSearchInput, {
+    const obj2 = { style: tmp.search, children: null };
+    const obj3 = { channelId, guildId, placeholder: searchPlaceholder };
+    obj2.children = jsx(ForumChannelSearch.ForumChannelSearchInput, {
       channelId,
       guildId,
       placeholder: searchPlaceholder,
     });
-    let tmp4Result = <View channelId={channelId} guildId={guildId} placeholder={searchPlaceholder} />;
+    let tmp4Result = <View style={tmp.search}>{null}</View>;
   } else {
-    const obj1 = { channelId, guildId, pressable, isGuildMemberCountVisible, isNavigationScreen, screenIndex };
+    const obj4 = { channelId, guildId, pressable, isGuildMemberCountVisible, isNavigationScreen, screenIndex };
     tmp4Result = jsx(GuildChannelHeaderDefault, {
       channelId,
       guildId,

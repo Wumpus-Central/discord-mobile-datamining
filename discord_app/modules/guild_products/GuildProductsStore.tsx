@@ -4,7 +4,7 @@ import initializeDefault from "../../../discord_common/js/packages/flux/index.ts
 import DispatcherDefault from "../../Dispatcher.tsx";
 import DurationsDefault from "../../utils/Durations.tsx";
 
-let FetchState = { NOT_FETCHED: 0, [0]: "NOT_FETCHED", FETCHING: 1, [1]: "FETCHING", FETCHED: 2, [2]: "FETCHED" };
+const FetchState = { NOT_FETCHED: 0, [0]: "NOT_FETCHED", FETCHING: 1, [1]: "FETCHING", FETCHED: 2, [2]: "FETCHED" };
 let closure_3 = {};
 let closure_4 = {};
 let closure_5 = {};
@@ -72,7 +72,7 @@ prototype["isGuildProductsCacheExpired"] = function isGuildProductsCacheExpired(
   return timestamp - num > closure_6;
 };
 GuildProductsStore.displayName = "GuildProductsStore";
-FetchState = {
+const guildProductsStore = new GuildProductsStore(DispatcherDefault, {
   CONNECTION_OPEN: function handleConnectionOpen() {
     secondaryIndexMap.clear();
     closure_3 = {};
@@ -125,8 +125,7 @@ FetchState = {
       secondaryIndexMap.delete(productId);
     }
   },
-};
-const guildProductsStore = new GuildProductsStore(DispatcherDefault, FetchState);
+});
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_products/GuildProductsStore.tsx");
 

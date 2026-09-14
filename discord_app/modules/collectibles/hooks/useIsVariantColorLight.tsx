@@ -12,7 +12,8 @@ export default function useIsVariantColorLight(variantValue) {
     let isValidHexResult = utils_ColorUtils.isValidHex(variantValue.variantValue);
     if (isValidHexResult) {
       const tmpResult = utils_ColorUtils;
-      isValidHexResult = tmpResult.getDarkness(tmpResult.hex2int(variantValue.variantValue)) < 0.3;
+      isValidHexResult = tmpResult.getDarkness(utils_ColorUtils.hex2int(variantValue.variantValue)) < 0.3;
+      const tmpResult2 = utils_ColorUtils;
     }
     return isValidHexResult;
   }, items);

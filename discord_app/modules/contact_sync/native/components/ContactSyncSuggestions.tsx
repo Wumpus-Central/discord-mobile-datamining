@@ -27,8 +27,7 @@ function SuggestionRow(suggestion) {
   if (first != null) {
     name = first.name;
   }
-  let obj = UserUtils;
-  const userTag = obj.getUserTag(suggestion.suggested_user);
+  const userTag = UserUtils.getUserTag(suggestion.suggested_user);
   let tmp6 = userTag;
   if (null != name) {
     tmp6 = userTag;
@@ -36,37 +35,40 @@ function SuggestionRow(suggestion) {
       tmp6 = name;
     }
   }
-  let obj1 = AvatarUtilsDefault;
-  const userAvatarSource = obj1.getUserAvatarSource(suggestion.suggested_user);
-  obj = { start, end, icon: null, checked: null, label: null, subLabel: null, onPress: null };
-  obj = { source: userAvatarSource, size: native.AvatarSizes.REFRESH_MEDIUM_32 };
-  obj.icon = React6(native.Avatar, obj);
-  obj.checked = selected;
-  obj.label = tmp6;
+  const userAvatarSource = AvatarUtilsDefault.getUserAvatarSource(suggestion.suggested_user);
+  const obj3 = { start, end, icon: null, checked: null, label: null, subLabel: null, onPress: null };
+  obj3.icon = React6(native.Avatar, { source: userAvatarSource, size: native.AvatarSizes.REFRESH_MEDIUM_32 });
+  obj3.checked = selected;
+  obj3.label = tmp6;
   const items = [React6(Text_Text.Text, { variant: "text-xs/medium", color: "text-muted", children: userTag })];
   let tmp8Result = null != suggestion.mutual_friends_count;
   if (tmp8Result) {
-    obj1 = { variant: "text-xs/medium", color: "text-muted", children: null };
+    const obj5 = { variant: "text-xs/medium", color: "text-muted", children: null };
     const intl = util.intl;
-    const obj2 = { count: suggestion.mutual_friends_count };
-    obj1.children = intl.format(util.t.z7y34b, obj2);
-    tmp8Result = React6(Text_Text.Text, obj1);
+    const obj6 = { count: suggestion.mutual_friends_count };
+    obj5.children = intl.format(util.t.z7y34b, obj6);
+    tmp8Result = React6(Text_Text.Text, obj5);
   }
   items[1] = tmp8Result;
-  obj.subLabel = closure_1_10(React7, { children: items });
-  obj.onPress = function onPress() {
+  obj3.subLabel = closure_1_10(React7, { children: items });
+  obj3.onPress = function onPress() {
     return onSelect(suggestion.suggested_user.id);
   };
-  return React6(TableCheckboxRow.TableCheckboxRow, obj);
+  return React6(TableCheckboxRow.TableCheckboxRow, obj3);
 }
 const View = fn(17).View;
 const AnalyticEvents = fn(1074).AnalyticEvents;
-const SuggestedFriendSource = fn(12828).SuggestedFriendSource;
+const SuggestedFriendSource = fn(12829).SuggestedFriendSource;
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9, jsxs: c10 } = jsxProd);
-fn(4636);
-let createStyles = {
-  container: null,
+const createStyles = fn(4636);
+let obj2 = {
+  container: {
+    flex: 1,
+    backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER,
+    paddingTop: fn(5763).NAV_BAR_HEIGHT + 32,
+    justifyContent: "center",
+  },
   header: null,
   title: null,
   subtitle: null,
@@ -76,47 +78,42 @@ let createStyles = {
   redesignButton: null,
   sectionHeader: null,
 };
-createStyles = {
+let obj3 = {
   flex: 1,
   backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER,
   paddingTop: fn(5763).NAV_BAR_HEIGHT + 32,
   justifyContent: "center",
 };
-createStyles.container = createStyles;
-createStyles.header = {
-  alignItems: "center",
-  paddingTop: nativeDefault.space.PX_16,
-  paddingBottom: nativeDefault.space.PX_24,
-};
-createStyles.title = { marginBottom: 8, textAlign: "center" };
-createStyles.subtitle = { lineHeight: 18, textAlign: "center" };
-let obj1 = { alignItems: "center", paddingTop: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_24 };
-createStyles.list = { flex: 1, marginTop: nativeDefault.space.PX_12 };
-let obj2 = { flex: 1, marginTop: nativeDefault.space.PX_12 };
-createStyles.divider = { backgroundColor: nativeDefault.colors.BORDER_SUBTLE };
-createStyles.linearGradient = { position: "absolute", width: "100%", bottom: 0, minHeight: 136 };
-let obj3 = { backgroundColor: nativeDefault.colors.BORDER_SUBTLE };
-createStyles.redesignButton = {
+obj2.header = { alignItems: "center", paddingTop: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_24 };
+obj2.title = { marginBottom: 8, textAlign: "center" };
+obj2.subtitle = { lineHeight: 18, textAlign: "center" };
+let obj4 = { alignItems: "center", paddingTop: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_24 };
+obj2.list = { flex: 1, marginTop: nativeDefault.space.PX_12 };
+let obj5 = { flex: 1, marginTop: nativeDefault.space.PX_12 };
+obj2.divider = { backgroundColor: nativeDefault.colors.BORDER_SUBTLE };
+obj2.linearGradient = { position: "absolute", width: "100%", bottom: 0, minHeight: 136 };
+let obj6 = { backgroundColor: nativeDefault.colors.BORDER_SUBTLE };
+obj2.redesignButton = {
   position: "absolute",
   width: "100%",
   bottom: 0,
   padding: nativeDefault.space.PX_16,
   paddingBottom: nativeDefault.space.PX_32,
 };
-let obj4 = {
+let obj7 = {
   position: "absolute",
   width: "100%",
   bottom: 0,
   padding: nativeDefault.space.PX_16,
   paddingBottom: nativeDefault.space.PX_32,
 };
-createStyles.sectionHeader = {
+obj2.sectionHeader = {
   marginBottom: nativeDefault.space.PX_8,
   flexDirection: "row",
   alignItems: "center",
   justifyContent: "space-between",
 };
-let closure_11 = createStyles.createStyles(createStyles);
+let closure_11 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/contact_sync/native/components/ContactSyncSuggestions.tsx");
 
@@ -131,17 +128,16 @@ export default function ContactSyncSuggestions(friendSuggestions) {
     acc[suggested_user.suggested_user.id] = true;
     return acc;
   }, {});
+  const token = friendSuggestions(4338).useToken(onSubmit(576).colors.BACKGROUND_BASE_LOW);
   let obj = friendSuggestions(4338);
-  const token = obj.useToken(onSubmit(576).colors.BACKGROUND_BASE_LOW);
-  let obj1 = friendSuggestions(4486);
-  let items = [obj1.hexOpacityToRgba(token, 0)];
+  let items = [friendSuggestions(4486).hexOpacityToRgba(token, 0)];
   let obj2 = friendSuggestions(4486);
-  items[1] = obj2.hexOpacityToRgba(token, 100);
+  items[1] = friendSuggestions(4486).hexOpacityToRgba(token, 100);
   const tmp4 = first(noop.useState(reduced), 2);
   first = tmp4[0];
   noop = tmp4[1];
-  let obj3 = friendSuggestions(5063);
-  const fontScale = obj3.useFontScale();
+  let obj3 = friendSuggestions(4486);
+  const fontScale = friendSuggestions(5063).useFontScale();
   const sum = onSubmit(576).space.PX_16 + onSubmit(576).space.PX_32 + 40;
   let items1 = [first];
   const sum1 = sum + Math.max(18 * Math.min(fontScale, 2) - 18, 0);
@@ -151,9 +147,10 @@ export default function ContactSyncSuggestions(friendSuggestions) {
     obj[arg0] = !first[arg0];
     closure_4(obj);
   }, items1);
-  let obj4 = onSubmit(11);
-  let keys = obj4.keys(first);
+  let obj4 = friendSuggestions(5063);
+  let keys = onSubmit(11).keys(first);
   let items2 = [friendSuggestions, first];
+  let obj5 = onSubmit(11);
   const items3 = [friendSuggestions.length, , , , ,];
   ({ divider: arr5[1], header: arr5[2], subtitle: arr5[3], title: arr5[4] } = tmp);
   items3[5] = onSelect;
@@ -169,16 +166,16 @@ export default function ContactSyncSuggestions(friendSuggestions) {
     });
     return items;
   }, items2);
-  obj = { style: null, children: null };
+  let obj6 = { style: null, children: null };
   const items4 = [,];
   ({ container: arr6[0], list: arr6[1] } = tmp);
-  obj.style = items4;
+  obj6.style = items4;
   const callback1 = noop.useCallback((arg0) => {
     ({ item, index } = arg0);
     if ("header" === item.type) {
-      let obj = { children: null };
-      obj = { style: closure_2.header, children: null };
-      const obj1 = {
+      const obj2 = { children: null };
+      const obj3 = { style: closure_2.header, children: null };
+      const obj4 = {
         style: closure_2.title,
         accessibilityRole: "header",
         variant: "heading-xl/extrabold",
@@ -186,74 +183,72 @@ export default function ContactSyncSuggestions(friendSuggestions) {
         children: null,
       };
       const intl = util.intl;
-      obj1.children = intl.string(util.t["7Fjv54"]);
-      const items = [React6(Text_Text.Text, obj1)];
-      const obj2 = { style: closure_2.subtitle, variant: "text-sm/medium", color: "text-default", children: null };
+      obj4.children = intl.string(util.t["7Fjv54"]);
+      const items = [React6(Text_Text.Text, obj4)];
+      const obj5 = { style: closure_2.subtitle, variant: "text-sm/medium", color: "text-default", children: null };
       const intl2 = util.intl;
-      obj2.children = intl2.string(util.t.ait1x0);
-      items[1] = React6(Text_Text.Text, obj2);
-      obj.children = items;
-      const items1 = [closure_2_10(View, obj)];
-      const obj3 = { label: null };
+      obj5.children = intl2.string(util.t.ait1x0);
+      items[1] = React6(Text_Text.Text, obj5);
+      obj3.children = items;
+      const items1 = [closure_2_10(View, obj3)];
+      const obj6 = { label: null };
       const intl3 = util.intl;
-      obj3.label = intl3.string(util.t["1uAmCw"]);
-      items1[1] = React6(SuggestedFriendsSectionHeader, obj3);
-      obj.children = items1;
-      return closure_2_10(React7, obj);
+      obj6.label = intl3.string(util.t["1uAmCw"]);
+      items1[1] = React6(SuggestedFriendsSectionHeader, obj6);
+      obj2.children = items1;
+      return closure_2_10(React7, obj2);
     } else {
       const friendSuggestion = item.props.friendSuggestion;
-      const obj4 = {
+      const obj7 = {
         start: 1 === index,
         end: index === friendSuggestions.length,
         suggestion: friendSuggestion,
         selected: item.props.selected,
         onSelect,
       };
-      const items2 = [React6(SuggestionRow, obj4)];
+      const items2 = [React6(SuggestionRow, obj7)];
       let tmp5 = null;
       if (index < friendSuggestions.length) {
-        obj = { iconPush: true, style: closure_2.divider };
+        const obj = { iconPush: true, style: closure_2.divider };
         tmp5 = React6(Form.FormDivider, obj);
       }
-      const obj5 = { children: null };
+      const obj8 = { children: null };
       items2[1] = tmp5;
-      obj5.children = items2;
-      return closure_2_10(noop.Fragment, obj5, friendSuggestion.suggested_user.id);
+      obj8.children = items2;
+      return closure_2_10(noop.Fragment, obj8, friendSuggestion.suggested_user.id);
     }
   }, items3);
-  obj = { contentContainerStyle: null, data: null, renderItem: null };
-  obj1 = { paddingHorizontal: onSubmit(576).space.PX_16, paddingBottom: sum1 };
-  obj.contentContainerStyle = obj1;
-  obj.data = memo;
-  obj.renderItem = callback1;
-  const items5 = [closure_8(friendSuggestions(9003).FlashList, obj), ,];
-  obj2 = { style: tmp.linearGradient, start: null, end: null, pointerEvents: "none", colors: null };
+  let obj7 = { contentContainerStyle: null, data: null, renderItem: null };
   const someResult = keys.some((item) => first[item]);
-  obj2.start = friendSuggestions(1093).VerticalGradient.START;
-  obj2.end = friendSuggestions(1093).VerticalGradient.END;
-  obj2.colors = items;
-  items5[1] = closure_8(onSubmit(5068), obj2);
-  obj3 = { style: tmp.redesignButton, children: null };
-  obj4 = { variant: "primary", size: "lg", text: null, onPress: null, disabled: null };
+  obj7.contentContainerStyle = { paddingHorizontal: onSubmit(576).space.PX_16, paddingBottom: sum1 };
+  obj7.data = memo;
+  obj7.renderItem = callback1;
+  const items5 = [closure_8(friendSuggestions(9003).FlashList, obj7), ,];
+  const obj9 = { style: tmp.linearGradient, start: null, end: null, pointerEvents: "none", colors: null };
+  let obj8 = { paddingHorizontal: onSubmit(576).space.PX_16, paddingBottom: sum1 };
+  obj9.start = friendSuggestions(1093).VerticalGradient.START;
+  obj9.end = friendSuggestions(1093).VerticalGradient.END;
+  obj9.colors = items;
+  items5[1] = closure_8(onSubmit(5068), obj9);
+  const obj10 = { style: tmp.redesignButton, children: null };
+  const obj11 = { variant: "primary", size: "lg", text: null, onPress: null, disabled: null };
   let intl = friendSuggestions(1114).intl;
-  obj4.text = intl.string(friendSuggestions(1114).t["J5/69j"]);
-  obj4.onPress = function onPress() {
+  obj11.text = intl.string(friendSuggestions(1114).t["J5/69j"]);
+  obj11.onPress = function onPress() {
     const keys = SnowflakeUtilsDefault.keys(first);
     const found = keys.filter((item) => first[item]);
     onSubmit(found);
     const item = found.forEach((suggested_user_id) => {
-      onSubmit(closure_1_2[24]);
-      const obj = {
+      onSubmit(closure_1_2[24]).track(constants.FRIEND_SUGGESTION_ADDED, {
         suggested_user_id,
         suggestion_source: constants2.USER_SUGGESTIONS,
         location: "Contact Sync Suggestions",
-      };
-      obj.track(constants.FRIEND_SUGGESTION_ADDED, obj);
+      });
     });
   };
-  obj4.disabled = !someResult;
-  obj3.children = closure_8(friendSuggestions(5056).Button, obj4);
-  items5[2] = closure_8(onSelect, obj3);
-  obj.children = items5;
-  return closure_10(onSelect, obj);
+  obj11.disabled = !someResult;
+  obj10.children = closure_8(friendSuggestions(5056).Button, obj11);
+  items5[2] = closure_8(onSelect, obj10);
+  obj6.children = items5;
+  return closure_10(onSelect, obj6);
 }

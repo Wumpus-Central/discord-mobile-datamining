@@ -119,9 +119,9 @@ prototype["updateActiveErrors"] = function updateActiveErrors() {
         const tmp47 = setDifference(set1, set);
         const tmp49 = tmp47[Symbol.iterator]();
         while (tmp49 !== undefined) {
-          value = activeErrors1.get(tmp34);
-          let tmp37 = value;
-          if (null != value) {
+          value2 = activeErrors1.get(tmp34);
+          let tmp37 = value2;
+          if (null != value2) {
             let _JSON = JSON;
             let _HermesInternal2 = HermesInternal;
             let infoResult = logger.info(
@@ -131,8 +131,8 @@ prototype["updateActiveErrors"] = function updateActiveErrors() {
           continue;
         }
       }
-      obj = { type: "ACTIVE_AV_ERRORS_CHANGED", activeErrors: map };
-      DispatcherDefault.dispatch(obj);
+      const obj2 = { type: "ACTIVE_AV_ERRORS_CHANGED", activeErrors: map };
+      DispatcherDefault.dispatch(obj2);
     }
   } else {
     const _Object = Object;

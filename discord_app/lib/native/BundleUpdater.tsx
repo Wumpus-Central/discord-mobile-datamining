@@ -1,7 +1,7 @@
 // discord_app/lib/native/BundleUpdater.tsx
 import LoggerDefault from "../../modules/debug/Logger.tsx";
-import PlatformUtils from "../../utils/PlatformUtils.tsx";
 import AnalyticsUtilsDefault from "../../utils/AnalyticsUtils.tsx";
+import PlatformUtils from "../../utils/PlatformUtils.tsx";
 import asyncRequireImpl from "../../../_runtime/01896_asyncRequireImpl.js";
 import _mod4821 from "module_4821" /* 4821 */;
 import MonitoringAgentDefault from "../../modules/monitoring/MonitoringAgent.tsx";
@@ -57,8 +57,8 @@ prototype["setupOTAAssetFallback"] = function setupOTAAssetFallback() {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj3 = { value, done: true };
+        return obj3;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -71,20 +71,20 @@ prototype["setupOTAAssetFallback"] = function setupOTAAssetFallback() {
             throw value;
           } else if (arg0 === 2) {
             c3 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj4 = { value, done: true };
+            return obj4;
           } else {
             closure_1 = tmp2;
             closure_129_0 = undefined;
-            let obj1 = PlatformUtils;
-            if (obj1.isIOS()) {
+            if (obj2.isIOS()) {
               c2 = 1;
               c3 = 1;
-              obj1 = { value: asyncRequireImpl(dependencyMap[5], dependencyMap.paths), done: false };
-              return obj1;
+              const obj5 = { value: asyncRequireImpl(dependencyMap[5], dependencyMap.paths), done: false };
+              return obj5;
             } else {
               c3 = 3;
             }
+            obj2 = PlatformUtils;
           }
         } else if (arg0 === 1) {
           c3 = 3;
@@ -113,7 +113,7 @@ prototype["setupOTAAssetFallback"] = function setupOTAAssetFallback() {
           });
         }
         c3 = 3;
-        obj = { value, done: true };
+        let obj = { value, done: true };
         return obj;
       } catch (tmp16) {
         c3 = tmp;
@@ -126,32 +126,52 @@ prototype["emitOtaMetric"] = function emitOtaMetric(item10010) {
   const match = _mod4821.match(item10010);
   const withResult = match.with({ type: "OtaCheckAttempt" }, (result) => {
     closure_1_5.verbose("OTA check attempt", result);
-    const obj = {
+    AnalyticsUtilsDefault.track(constants.MOBILE_OTA_CHECK_ATTEMPT, {
+      result: result.result,
+      duration_seconds: result.durationSeconds,
+      bytes_received: result.bytesReceived,
+      error: result.error,
+      used_streaming: result.usedStreaming,
+    });
+    const obj2 = {
       result: result.result,
       duration_seconds: result.durationSeconds,
       bytes_received: result.bytesReceived,
       error: result.error,
       used_streaming: result.usedStreaming,
     };
-    obj.track(constants.MOBILE_OTA_CHECK_ATTEMPT, obj);
     return MonitoringAgentDefault.increment(prototype.prepareOtaMetricForDatadog(result, ["result"]));
   });
   match
     .with({ type: "OtaCheckAttempt" }, (result) => {
       closure_1_5.verbose("OTA check attempt", result);
-      const obj = {
+      AnalyticsUtilsDefault.track(constants.MOBILE_OTA_CHECK_ATTEMPT, {
+        result: result.result,
+        duration_seconds: result.durationSeconds,
+        bytes_received: result.bytesReceived,
+        error: result.error,
+        used_streaming: result.usedStreaming,
+      });
+      const obj2 = {
         result: result.result,
         duration_seconds: result.durationSeconds,
         bytes_received: result.bytesReceived,
         error: result.error,
         used_streaming: result.usedStreaming,
       };
-      obj.track(constants.MOBILE_OTA_CHECK_ATTEMPT, obj);
       return MonitoringAgentDefault.increment(prototype.prepareOtaMetricForDatadog(result, ["result"]));
     })
     .with({ type: "OtaAssetDownloadAttempt" }, (result) => {
       closure_1_5.verbose("OTA asset download attempt", result);
-      const obj = {
+      AnalyticsUtilsDefault.track(constants.MOBILE_OTA_ASSET_DOWNLOAD_ATTEMPT, {
+        result: result.result,
+        duration_seconds: result.durationSeconds,
+        error: result.error,
+        url: result.url,
+        status_code: result.statusCode,
+        bytes_received: result.bytesReceived,
+      });
+      const obj2 = {
         result: result.result,
         duration_seconds: result.durationSeconds,
         error: result.error,
@@ -159,7 +179,6 @@ prototype["emitOtaMetric"] = function emitOtaMetric(item10010) {
         status_code: result.statusCode,
         bytes_received: result.bytesReceived,
       };
-      obj.track(constants.MOBILE_OTA_ASSET_DOWNLOAD_ATTEMPT, obj);
       return MonitoringAgentDefault.increment(prototype.prepareOtaMetricForDatadog(result, ["result", "statusCode"]));
     })
     .exhaustive();

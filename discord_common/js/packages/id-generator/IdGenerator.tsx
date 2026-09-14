@@ -1,6 +1,6 @@
 // discord_common/js/packages/id-generator/IdGenerator.tsx
 import IntegerDefault from "../../../../_runtime/00014_Integer.js";
-import Buffer from "../../../../_runtime/01253_Buffer.js";
+import Buffer from "../../../../_runtime/01251_Buffer.js";
 import size from "../../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("../discord_common/js/packages/id-generator/IdGenerator.tsx");

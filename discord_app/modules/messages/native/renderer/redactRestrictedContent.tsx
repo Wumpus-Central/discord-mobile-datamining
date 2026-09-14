@@ -33,24 +33,24 @@ function redactRestrictedContent(content) {
         if ("link" !== content.type) {
           if ("attachmentLink" !== content.type) {
             if ("customEmoji" === content.type) {
-              let obj = { type: "text", content: null };
+              const obj2 = { type: "text", content: null };
               const _HermesInternal = HermesInternal;
-              obj.content = ":" + content.alt + ":";
-              return obj;
+              obj2.content = ":" + content.alt + ":";
+              return obj2;
             } else {
               let tmp = content;
               if (null != content.content) {
-                obj = {};
+                const obj = {};
                 const merged = Object.assign(content);
                 obj.content = redactRestrictedContent(content.content);
                 tmp = obj;
               }
               let tmp6 = tmp;
               if (null != content.items) {
-                obj = {};
+                const obj3 = {};
                 const merged1 = Object.assign(tmp);
-                obj.items = redactRestrictedContent(content.items);
-                tmp6 = obj;
+                obj3.items = redactRestrictedContent(content.items);
+                tmp6 = obj3;
               }
               return tmp6;
             }
@@ -92,8 +92,8 @@ function redactRestrictedContent(content) {
             }
           }
         }
-        const obj1 = { type: "inlineCode", content: str4 };
-        return obj1;
+        const obj4 = { type: "inlineCode", content: str4 };
+        return obj4;
       }
     }
   }

@@ -3,13 +3,13 @@ import useIsStaffOrDeveloperSettingPredicate from "../../dev_tools/native/useIsS
 import MobileNativeUpdateStore from "../../../mobile_native_updater/MobileNativeUpdateStore.tsx";
 
 require = fn;
-fn(11601);
-let SettingBuilders = {
+const SettingBuilders = fn(11602);
+const obj2 = {
   useTitle() {
     return "Internal Build Active";
   },
   parent: null,
-  IconComponent: fn(15646).MobilePhoneSettingsIcon,
+  IconComponent: fn(15647).MobilePhoneSettingsIcon,
   useDescription: function useInternalBuildActiveDescription() {
     return "Build installed from builds.discord.tools";
   },
@@ -20,8 +20,22 @@ let SettingBuilders = {
     );
   },
 };
-SettingBuilders = SettingBuilders.createStatic(SettingBuilders);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/InternalBuildActiveSetting.tsx");
 
-export default SettingBuilders;
+export default SettingBuilders.createStatic({
+  useTitle() {
+    return "Internal Build Active";
+  },
+  parent: null,
+  IconComponent: fn(15647).MobilePhoneSettingsIcon,
+  useDescription: function useInternalBuildActiveDescription() {
+    return "Build installed from builds.discord.tools";
+  },
+  usePredicate: function useHasCheckNativeUpdateSetting() {
+    return (
+      MobileNativeUpdateStore.hasUpdatesConfigured &&
+      useIsStaffOrDeveloperSettingPredicate.useStaffOrDeveloperSettingPredicate()
+    );
+  },
+});

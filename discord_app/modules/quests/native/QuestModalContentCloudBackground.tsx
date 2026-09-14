@@ -12,38 +12,38 @@ const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 const createStyles = fn(4636);
 let closure_7 = createStyles.createStyles((arg0) => {
-  let obj = {};
+  const obj = {};
   const merged = Object.assign(absoluteFillObject.absoluteFillObject);
-  obj = { wrapper: null, cloudsImage: null, cloudsImageLight: null, gradient: null, solidBackground: null };
+  const obj2 = { wrapper: null, cloudsImage: null, cloudsImageLight: null, gradient: null, solidBackground: null };
   const merged1 = Object.assign(arg0 ? { top: "r" } : { bottom: "r" });
   obj.height = 380;
   obj.zIndex = 1;
-  obj.wrapper = obj;
-  obj = {};
+  obj2.wrapper = obj;
+  const obj3 = {};
   const merged2 = Object.assign(absoluteFillObject.absoluteFillObject);
   const merged3 = Object.assign(arg0 ? { top: "r" } : { bottom: "r" });
   if (arg0) {
-    let obj1 = {};
+    let obj4 = {};
   } else {
-    obj1 = { transform: null };
+    obj4 = { transform: null };
     items = [{ rotate: "180deg" }];
-    obj1.transform = items;
+    obj4.transform = items;
   }
-  const merged4 = Object.assign(obj1);
-  obj.width = "100%";
-  obj.cloudsImage = obj;
-  const obj2 = {};
+  const merged4 = Object.assign(obj4);
+  obj3.width = "100%";
+  obj2.cloudsImage = obj3;
+  const obj5 = {};
   const merged5 = Object.assign(absoluteFillObject.absoluteFillObject);
-  obj2.bottom = undefined;
-  obj2.width = "100%";
-  obj.cloudsImageLight = obj2;
-  const obj3 = {};
+  obj5.bottom = undefined;
+  obj5.width = "100%";
+  obj2.cloudsImageLight = obj5;
+  const obj6 = {};
   const merged6 = Object.assign(absoluteFillObject.absoluteFillObject);
-  obj3.opacity = 1;
-  obj.gradient = obj3;
+  obj6.opacity = 1;
+  obj2.gradient = obj6;
   const merged7 = Object.assign(absoluteFillObject.absoluteFillObject);
-  obj.solidBackground = {};
-  return obj;
+  obj2.solidBackground = {};
+  return obj2;
 });
 let items = ["#292252FF", "#1E1F2200"];
 const substr = items.slice();
@@ -64,25 +64,24 @@ export default function QuestModalContentCloudBackground(align) {
     str2 = resizeMode;
   }
   const tmp = closure_7("bottom" === str);
-  let obj = themes;
-  let obj1 = useTheme;
-  const isThemeDarkResult = obj.isThemeDark(obj1.useTheme());
-  obj = { style: null, children: null };
+  const obj = themes;
+  const isThemeDarkResult = obj.isThemeDark(useTheme.useTheme());
+  const obj3 = { style: null, children: null };
   items = [tmp.wrapper, style];
-  obj.style = items;
+  obj3.style = items;
   if (isThemeDarkResult) {
-    obj = { colors: "top" === str ? items : closure_9, style: tmp.gradient };
-    hasOwnProperty(LinearGradientDefault, obj);
+    const obj4 = { colors: "top" === str ? items : closure_9, style: tmp.gradient };
+    hasOwnProperty(LinearGradientDefault, obj4);
   } else {
-    obj1 = { style: tmp.solidBackground };
-    const items1 = [hasOwnProperty(React3, obj1)];
-    const obj2 = { style: null, source: null, resizeMode: null };
+    const obj5 = { style: tmp.solidBackground };
+    const items1 = [hasOwnProperty(React3, obj5)];
+    const obj6 = { style: null, source: null, resizeMode: null };
     const items2 = [isThemeDarkResult ? tmp.cloudsImage : tmp.cloudsImageLight, imgStyle];
-    obj2.style = items2;
-    obj2.source = importDefault(isThemeDarkResult ? 15208 : 15209);
-    obj2.resizeMode = str2;
-    items1[1] = hasOwnProperty(FastImageDefault, obj2);
-    obj.children = items1;
-    return tmp4(React3, obj);
+    obj6.style = items2;
+    obj6.source = importDefault(isThemeDarkResult ? 15209 : 15210);
+    obj6.resizeMode = str2;
+    items1[1] = hasOwnProperty(FastImageDefault, obj6);
+    obj3.children = items1;
+    return tmp4(React3, obj3);
   }
 }

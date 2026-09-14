@@ -1,6 +1,6 @@
 // discord_app/modules/global_discovery_servers/GlobalDiscoveryServersUtils.tsx
 import util from "../../intl/index.native.tsx";
-import v1 from "../../../_runtime/01256_v1.js";
+import v1 from "../../../_runtime/01254_v1.js";
 import GlobalUtils from "../../utils/GlobalUtils.tsx";
 import GlobalDiscoveryServersSearchResultsStoreDefault from "GlobalDiscoveryServersSearchResultsStore.tsx";
 import GlobalDiscoveryServersFeaturedSearchManagerDefault from "GlobalDiscoveryServersFeaturedSearchManager.tsx";
@@ -9,12 +9,11 @@ import LocaleStore from "../user_settings/LocaleStore.tsx";
 
 require = fn;
 let closure_15 = async function _navigateToGuild() {
-  const obj2 = {};
+  const obj6 = {};
   const merged = Object.assign(closure_129_5);
-  obj2.loadId = closure_129_0;
-  closure_129_6 = obj2;
+  obj6.loadId = closure_129_0;
+  closure_129_6 = obj6;
   await closure_130_2(closure_130_3[7]).startLurking(closure_129_1, closure_129_4, closure_129_6);
-  closure_130_2(closure_130_3[7]);
   closure_130_1(closure_130_3[8]).track(closure_130_14.GUILD_DISCOVERY_GUILD_SELECTED, {
     guild_id: closure_129_1,
     load_id: closure_129_0,
@@ -221,9 +220,9 @@ export const fromDiscoverableGuildSearchResult = function fromDiscoverableGuildS
     presenceCount: null,
     memberCount: null,
     premiumSubscriptionCount: "r",
-    preferredLocale: "ip",
-    discoverySplash: 0.000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001952597032753436,
-    emojis: 13336028937370364000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000,
+    preferredLocale: "channel",
+    discoverySplash: "md",
+    emojis: "onAcceptSuccess",
   };
   ({
     approximate_presence_count: obj.presenceCount,

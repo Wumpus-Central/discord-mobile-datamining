@@ -159,21 +159,21 @@ export const getSecurityActionDetailsString = function getSecurityActionDetailsS
     }
     if (tmp === true) {
       const intl3 = util.intl;
-      let obj = { guildName, time: null };
+      const obj2 = { guildName, time: null };
       const _Date3 = Date;
       date = new Date(invitesDisabledUntil);
-      obj.time = date.toLocaleString(util.intl.currentLocale, date);
-      return intl3.formatToPlainString(util.t.hCZitf, obj);
+      obj2.time = date.toLocaleString(util.intl.currentLocale, date);
+      return intl3.formatToPlainString(util.t.hCZitf, obj2);
     } else if (tmp27 === true) {
       const intl2 = util.intl;
-      obj = { guildName, time: null };
+      const obj3 = { guildName, time: null };
       const _Date2 = Date;
       const date1 = new Date(invitesDisabledUntil);
-      obj.time = date1.toLocaleString(util.intl.currentLocale, date);
-      return intl2.formatToPlainString(util.t["HNKxf+"], obj);
+      obj3.time = date1.toLocaleString(util.intl.currentLocale, date);
+      return intl2.formatToPlainString(util.t["HNKxf+"], obj3);
     } else if (tmp28 === true) {
       const intl = util.intl;
-      obj = { guildName, time: null };
+      const obj = { guildName, time: null };
       const _Date = Date;
       const date2 = new Date(invitesDisabledUntil);
       obj.time = date2.toLocaleString(util.intl.currentLocale, date);

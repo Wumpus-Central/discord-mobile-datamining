@@ -24,12 +24,11 @@ function MediaInfo(message) {
   noop = undefined;
   ({ isVoiceMessage, isControlVisible } = message);
   const tmp = closure_17();
+  const token = message(4338).useToken(first(576).colors.BACKGROUND_SURFACE_HIGH);
   let obj = message(4338);
-  const token = obj.useToken(first(576).colors.BACKGROUND_SURFACE_HIGH);
-  let obj1 = message(504);
   const items = [ChannelStore, UserStore, RelationshipStore];
   const items1 = [message];
-  const stateFromStores = obj1.useStateFromStores(
+  const stateFromStores = message(504).useStateFromStores(
     items,
     () => {
       let channel_id;
@@ -71,7 +70,7 @@ function MediaInfo(message) {
             }
           }
         }
-        obj = {
+        const obj3 = {
           variant: "text-md/semibold",
           lineClamp: 1,
           ellipsizeMode: "clip",
@@ -80,8 +79,8 @@ function MediaInfo(message) {
           },
           children: str2,
         };
-        const tmp14 = closure_15(tmp2(4632).Text, obj);
-        obj = {
+        const tmp14 = closure_15(tmp2(4632).Text, obj3);
+        const obj4 = {
           accessibilityElementsHidden: isControlVisible,
           style: tmp.infoContent,
           onLayout(nativeEvent) {
@@ -89,13 +88,13 @@ function MediaInfo(message) {
           },
           children: null,
         };
-        obj1 = { style: tmp.infoContainer, children: null };
+        const obj5 = { style: tmp.infoContainer, children: null };
         let tmp16Result = tmp14;
         if (memo) {
-          const obj2 = { style: { flex: 1 }, children: null };
-          const obj3 = { spacing: 20, speed: 0.2, children: tmp14 };
-          const items3 = [closure_15(tmp2(17335).Marquee, obj3)];
-          const obj4 = {
+          const obj6 = { style: { flex: 1 }, children: null };
+          const obj7 = { spacing: 20, speed: 0.2, children: tmp14 };
+          const items3 = [closure_15(tmp2(17337).Marquee, obj7)];
+          const obj8 = {
             start: { x: 0, y: 0 },
             end: { x: 1, y: 0 },
             locations: [0, 0.1, 0.2, 0.8, 0.9, 1],
@@ -103,22 +102,22 @@ function MediaInfo(message) {
             style: null,
           };
           const items4 = [token, `${tmp5}CC`, `${tmp5}00`, `${tmp5}00`, `${tmp5}CC`, token];
-          obj4.colors = items4;
-          obj4.style = tmp.infoContainerGradient;
-          items3[1] = closure_15(tmp4(5068), obj4);
-          obj2.children = items3;
-          tmp16Result = closure_16(closure_7, obj2);
+          obj8.colors = items4;
+          obj8.style = tmp.infoContainerGradient;
+          items3[1] = closure_15(tmp4(5068), obj8);
+          obj6.children = items3;
+          tmp16Result = closure_16(closure_7, obj6);
         }
         const items5 = [tmp16Result];
         let tmp13Result = null != stateFromStores;
         if (tmp13Result) {
-          const obj5 = { variant: "text-xs/medium", color: "text-subtle", lineClamp: 1, children: stateFromStores };
-          tmp13Result = closure_15(tmp2(4632).Text, obj5);
+          const obj9 = { variant: "text-xs/medium", color: "text-subtle", lineClamp: 1, children: stateFromStores };
+          tmp13Result = closure_15(tmp2(4632).Text, obj9);
         }
         items5[1] = tmp13Result;
-        obj1.children = items5;
-        obj.children = closure_16(closure_7, obj1);
-        return closure_15(closure_7, obj);
+        obj5.children = items5;
+        obj4.children = closure_16(closure_7, obj5);
+        return closure_15(closure_7, obj4);
       }
     }
   }
@@ -150,18 +149,15 @@ function PiPControls(message) {
       }
     }
   }, items);
-  message(4373);
   const fn = function c() {
-    let obj = timing;
     let num = 0;
     if (visible) {
       num = 1;
     }
-    obj = { opacity: obj.withTiming(num, { duration: 200 }) };
-    return obj;
+    return { opacity: timing.withTiming(num, { duration: 200 }) };
   };
-  let obj = { withTiming: message(4637).withTiming, visible };
-  fn.__closure = obj;
+  let obj = message(4373);
+  fn.__closure = { withTiming: message(4637).withTiming, visible };
   fn.__workletHash = 3641278982291;
   fn.__initData = __initData;
   const animatedStyle = obj.useAnimatedStyle(fn);
@@ -181,11 +177,11 @@ function PiPControls(message) {
   } else {
     string2Result = string2(t2.WAI6xu);
   }
-  obj = { style: null, children: null };
+  const obj3 = { style: null, children: null };
   const items1 = [tmp.pipControls, animatedStyle];
-  obj.style = items1;
+  obj3.style = items1;
   const items2 = [closure_15(message(9031).BackgroundBlurFill, { blurAmount: 0.05 }), ,];
-  const obj1 = {
+  const obj4 = {
     disabled: !visible,
     style: null,
     onPress: callback,
@@ -196,9 +192,9 @@ function PiPControls(message) {
   };
   const items3 = [,];
   ({ pipButton: arr4[0], backButton: arr4[1] } = tmp);
-  obj1.style = items3;
-  items2[1] = closure_15(closure_6, obj1);
-  const obj2 = {
+  obj4.style = items3;
+  items2[1] = closure_15(closure_6, obj4);
+  const obj5 = {
     disabled: !visible,
     style: null,
     onPress: message.handleClosePip,
@@ -209,20 +205,20 @@ function PiPControls(message) {
   };
   const items4 = [,];
   ({ pipButton: arr5[0], dismissButton: arr5[1] } = tmp);
-  obj2.style = items4;
-  items2[2] = closure_15(closure_6, obj2);
-  obj.children = items2;
-  return closure_16(visible(4373).View, obj);
+  obj5.style = items4;
+  items2[2] = closure_15(closure_6, obj5);
+  obj3.children = items2;
+  return closure_16(visible(4373).View, obj3);
 }
 get_ActivityIndicator = fn(17);
 ({ Easing: hasOwnProperty, StyleSheet, TouchableOpacity: metroRequire, View: closure_7 } = get_ActivityIndicator);
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_12, MessageFlags: map1, Routes: closure_14 } = Constants);
-const SquarePIPReferenceDimensions = fn(17197).SquarePIPReferenceDimensions;
+const SquarePIPReferenceDimensions = fn(17199).SquarePIPReferenceDimensions;
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16 } = jsxProd);
-fn(4636);
-let createStyles = {
+const createStyles = fn(4636);
+let obj2 = {
   container: {
     justifyContent: "center",
     alignItems: "center",
@@ -240,12 +236,12 @@ let createStyles = {
   playPauseButton: null,
   progressBar: null,
 };
-createStyles = {};
+let obj3 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
-createStyles.zIndex = 5;
-createStyles.pipControls = createStyles;
+obj3.zIndex = 5;
+obj2.pipControls = obj3;
 const merged1 = Object.assign(nativeDefault.shadows.SHADOW_LOW_HOVER);
-createStyles.pipButton = {
+obj2.pipButton = {
   position: "absolute",
   top: 8,
   padding: 8,
@@ -255,18 +251,13 @@ createStyles.pipButton = {
   tintColor: nativeDefault.colors.CONTROL_SECONDARY_TEXT_DEFAULT,
   backgroundColor: nativeDefault.colors.CONTROL_SECONDARY_BACKGROUND_DEFAULT,
 };
-createStyles.dismissButton = { right: 8 };
-createStyles.backButton = { left: 8 };
-createStyles.infoContainer = { justifyContent: "center", alignItems: "center", marginBottom: 8, height: 34 };
+obj2.dismissButton = { right: 8 };
+obj2.backButton = { left: 8 };
+obj2.infoContainer = { justifyContent: "center", alignItems: "center", marginBottom: 8, height: 34 };
 const merged2 = Object.assign(StyleSheet.absoluteFillObject);
-createStyles.infoContainerGradient = {};
-createStyles.infoContent = {
-  justifyContent: "center",
-  alignItems: "center",
-  alignSelf: "stretch",
-  marginHorizontal: 4,
-};
-createStyles.actionContainer = { justifyContent: "center", alignItems: "center", width: 48, height: 48, zIndex: 100 };
+obj2.infoContainerGradient = {};
+obj2.infoContent = { justifyContent: "center", alignItems: "center", alignSelf: "stretch", marginHorizontal: 4 };
+obj2.actionContainer = { justifyContent: "center", alignItems: "center", width: 48, height: 48, zIndex: 100 };
 let size = {
   justifyContent: "center",
   alignItems: "center",
@@ -276,13 +267,13 @@ let size = {
   borderRadius: nativeDefault.radii.round,
   backgroundColor: nativeDefault.colors.BACKGROUND_BRAND,
 };
-createStyles.playPauseButton = size;
-let obj3 = {};
+obj2.playPauseButton = size;
+let obj6 = {};
 const merged3 = Object.assign(StyleSheet.absoluteFillObject);
-obj3.justifyContent = "center";
-obj3.alignItems = "center";
-createStyles.progressBar = obj3;
-let closure_17 = createStyles.createStyles(createStyles);
+obj6.justifyContent = "center";
+obj6.alignItems = "center";
+obj2.progressBar = obj6;
+let closure_17 = createStyles.createStyles(obj2);
 const __initData = {
   code: "function MediaPlaybackPipTsx1(){const{withTiming,visible}=this.__closure;return{opacity:withTiming(visible?1:0,{duration:200})};}",
 };
@@ -291,11 +282,10 @@ let result = size.fileFinishedImporting("modules/media_panel/native/MediaPlaybac
 
 export default function MediaPlaybackPip() {
   let tmp = closure_17();
-  let obj = noop;
-  let obj1 = progress(closePip[28]);
-  let obj2 = progress(closePip[29]);
-  const mediaPlayerManagerStore = obj1.useMediaPlayerManagerStore(
-    obj2.useShallow((isPlaying) => ({
+  const ref = noop.useRef(null);
+  const obj2 = progress(closePip[28]);
+  const mediaPlayerManagerStore = obj2.useMediaPlayerManagerStore(
+    progress(closePip[29]).useShallow((isPlaying) => ({
       isPlaying: isPlaying.isPlaying,
       progress: isPlaying.progress,
       activeMediaPlayerSource: isPlaying.activeMediaPlayerSource,
@@ -308,7 +298,7 @@ export default function MediaPlaybackPip() {
   ({ progress, activeMediaPlayerSource } = mediaPlayerManagerStore);
   let callback = activeMediaPlayerSource;
   ({ mediaSourceMessage, closePip } = mediaPlayerManagerStore);
-  const ref = noop.useRef(null);
+  const obj3 = progress(closePip[29]);
   const items = [first];
   const items1 = [activeMediaPlayerSource];
   const stateFromStores = progress(closePip[13]).useStateFromStores(
@@ -460,7 +450,7 @@ export default function MediaPlaybackPip() {
       AnalyticsUtilsDefault.track(constants.MEDIA_PIP_ENDED, obj);
     };
   }, []);
-  const tmp12 = mediaSourceMessage(obj.useState(false), 2);
+  const tmp12 = mediaSourceMessage(noop.useState(false), 2);
   first = tmp12[0];
   closure_6 = tmp14;
   const items3 = [first, tmp12[1], isPlaying];
@@ -574,7 +564,7 @@ export default function MediaPlaybackPip() {
   if (null != progress) {
     num3 = progress.duration - progress.time;
   }
-  obj = {
+  let obj5 = {
     style: tmp.container,
     activeOpacity: 1,
     onPress() {
@@ -590,8 +580,8 @@ export default function MediaPlaybackPip() {
     children: null,
   };
   const items10 = [memo2, memo1];
-  obj = { style: tmp.actionContainer, children: null };
-  obj1 = {
+  const obj6 = { style: tmp.actionContainer, children: null };
+  const obj7 = {
     style: tmp.progressBar,
     size: 48,
     width: 2,
@@ -609,19 +599,20 @@ export default function MediaPlaybackPip() {
   if (isPlaying) {
     num4 = num3;
   }
-  obj1.duration = num4;
+  obj7.duration = num4;
   let num5 = 100;
   if (!isPlaying) {
     num5 = num;
   }
-  obj1.fill = num5;
-  obj1.ref = ref;
-  let tmp3Result = tmp3(closePip[12]);
-  obj1.tintColor = tmp3Result.useToken(callback(closePip[11]).colors.CONTROL_PRIMARY_BACKGROUND_DEFAULT);
-  tmp3Result = tmp3(closePip[12]);
-  obj1.backgroundColor = tmp3Result.useToken(callback(closePip[11]).colors.BACKGROUND_MOD_MUTED);
-  const items11 = [closure_15(progress(closePip[33]).AnimatedCircularProgress, obj1)];
-  obj2 = {
+  obj7.fill = num5;
+  obj7.ref = ref;
+  const obj4 = progress(closePip[13]);
+  const tmp29 = dismissPanel;
+  obj7.tintColor = progress(closePip[12]).useToken(callback(closePip[11]).colors.CONTROL_PRIMARY_BACKGROUND_DEFAULT);
+  const tmp3Result = progress(closePip[12]);
+  obj7.backgroundColor = progress(closePip[12]).useToken(callback(closePip[11]).colors.BACKGROUND_MOD_MUTED);
+  const items11 = [closure_15(progress(closePip[33]).AnimatedCircularProgress, obj7)];
+  const obj8 = {
     style: tmp.playPauseButton,
     onPress: callback1,
     accessibilityRole: "button",
@@ -631,11 +622,11 @@ export default function MediaPlaybackPip() {
   if (isPlaying) {
     stringResult = string2Result;
   }
-  obj2.accessibilityLabel = stringResult;
-  obj2.children = memo;
-  items11[1] = closure_15(closure_6, obj2);
-  obj.children = items11;
-  items10[2] = closure_16(dismissPanel, obj);
-  obj.children = items10;
-  return closure_16(closure_6, obj);
+  obj8.accessibilityLabel = stringResult;
+  obj8.children = memo;
+  items11[1] = closure_15(closure_6, obj8);
+  obj6.children = items11;
+  items10[2] = closure_16(tmp29, obj6);
+  obj5.children = items10;
+  return closure_16(closure_6, obj5);
 }

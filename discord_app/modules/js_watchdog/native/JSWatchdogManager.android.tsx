@@ -61,8 +61,8 @@ prototype["ping"] = function ping() {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj3 = { value, done: true };
+        return obj3;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -75,8 +75,8 @@ prototype["ping"] = function ping() {
             throw value;
           } else if (arg0 === 2) {
             c5 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj5 = { value, done: true };
+            return obj5;
           } else {
             closure_0 = tmp8;
             closure_128_0 = undefined;
@@ -85,8 +85,8 @@ prototype["ping"] = function ping() {
             c3 = 2;
             c4 = 3;
             c5 = 1;
-            let obj1 = { value: self.getCurrentSessionId(), done: false };
-            return obj1;
+            const obj6 = { value: self.getCurrentSessionId(), done: false };
+            return obj6;
           }
         } else if (1 === tmp8) {
           c3 = 0;
@@ -109,8 +109,8 @@ prototype["ping"] = function ping() {
               c3 = 0;
               closure_129_1._pingCompleted = true;
               c5 = 3;
-              const obj2 = { value, done: true };
-              return obj2;
+              const obj7 = { value, done: true };
+              return obj7;
             } else {
               closure_128_0 = value;
               if (null == closure_128_0) {
@@ -122,19 +122,19 @@ prototype["ping"] = function ping() {
                 c3 = 0;
                 closure_129_1._pingCompleted = true;
                 c5 = 3;
-                let obj3 = { value: undefined, done: true };
-                return obj3;
+                const obj9 = { value: undefined, done: true };
+                return obj9;
               } else {
-                obj3 = tmp4(tmp84[5]);
+                const obj4 = tmp4(tmp84[5]);
                 let pingResult;
-                if (obj3 != null) {
+                if (obj4 != null) {
                   const _Date = Date;
-                  pingResult = obj3.ping(Date.now(), closure_128_0, closure_129_0, false);
+                  pingResult = obj4.ping(Date.now(), closure_128_0, closure_129_0, false);
                 }
                 c4 = 4;
                 c5 = 1;
-                const obj4 = { value: pingResult, done: false };
-                return obj4;
+                const obj10 = { value: pingResult, done: false };
+                return obj10;
               }
             }
           } else if (arg0 === 1) {
@@ -142,7 +142,7 @@ prototype["ping"] = function ping() {
             throw value;
           } else if (arg0 !== 2) {
             if (value) {
-              obj = tmp4(tmp84[5]);
+              const obj = tmp4(tmp84[5]);
               let checkForStallReportResult;
               if (obj != null) {
                 checkForStallReportResult = obj.checkForStallReport();
@@ -164,9 +164,9 @@ prototype["ping"] = function ping() {
                 }
                 if (0 === closure_129_1._analyticsReportsRemaining) {
                   closure_129_1.stopWatchdog();
-                  obj1 = tmp4(tmp84[5]);
-                  if (obj1 != null) {
-                    obj1.disable();
+                  const obj2 = tmp4(tmp84[5]);
+                  if (obj2 != null) {
+                    obj2.disable();
                   }
                 }
               }
@@ -180,8 +180,8 @@ prototype["ping"] = function ping() {
           c3 = 0;
           closure_129_1._pingCompleted = true;
           c5 = 3;
-          const obj5 = { value, done: true };
-          return obj5;
+          const obj11 = { value, done: true };
+          return obj11;
         }
       } catch (tmp84) {
         if (tmp5 === c3) {
@@ -206,8 +206,8 @@ prototype["startWatchdog"] = function startWatchdog() {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -220,18 +220,18 @@ prototype["startWatchdog"] = function startWatchdog() {
             throw value;
           } else if (arg0 === 2) {
             c3 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
             c0 = 0;
             closure_128_0 = undefined;
             closure_128_1 = undefined;
             if (null == self._timeoutId) {
-              if (null != tmp2(17527)) {
+              if (null != tmp2(17528)) {
                 dependencyMap = 1;
                 c3 = 1;
-                const obj1 = { value: self.getCurrentSessionId(), done: false };
-                return obj1;
+                const obj4 = { value: self.getCurrentSessionId(), done: false };
+                return obj4;
               }
             }
             c3 = 3;
@@ -247,7 +247,7 @@ prototype["startWatchdog"] = function startWatchdog() {
               closure_129_0._enabled = true;
               if (closure_129_0._pingCompleted) {
                 let checkForStallReportResult;
-                obj = tmp2(17527);
+                const obj = tmp2(17528);
                 if (obj != null) {
                   checkForStallReportResult = obj.checkForStallReport();
                 }
@@ -261,8 +261,8 @@ prototype["startWatchdog"] = function startWatchdog() {
           }
         }
         c3 = 3;
-        const obj2 = { value, done: true };
-        return obj2;
+        const obj5 = { value, done: true };
+        return obj5;
       } catch (tmp32) {
         c3 = tmp;
         throw tmp32;
@@ -277,19 +277,20 @@ prototype["stopWatchdog"] = function stopWatchdog() {
   this._timeoutId = null;
 };
 prototype["reportStall"] = function reportStall(stallTime, arg1, is_previous, _analyticsReportsRemaining) {
-  const obj = {};
+  const obj2 = {};
+  const obj = AnalyticsUtilsDefault;
   const merged = Object.assign(TTIAnalyticsUtils.getDeviceMetadata());
-  obj.version = 1;
-  obj.stall_time = stallTime.stallTime;
-  obj.is_previous = is_previous;
-  obj.reports_remaining = _analyticsReportsRemaining;
+  obj2.version = 1;
+  obj2.stall_time = stallTime.stallTime;
+  obj2.is_previous = is_previous;
+  obj2.reports_remaining = _analyticsReportsRemaining;
   let sessionId = null;
   if (stallTime.sessionId !== arg1) {
     sessionId = stallTime.sessionId;
   }
-  obj.stall_session_id = sessionId;
-  obj.trace = null;
-  obj.track(constants2.APP_JS_STALLED, obj);
+  obj2.stall_session_id = sessionId;
+  obj2.trace = null;
+  obj.track(constants2.APP_JS_STALLED, obj2);
 };
 prototype["getCurrentSessionId"] = function getCurrentSessionId() {
   const self = this;
@@ -301,8 +302,8 @@ prototype["getCurrentSessionId"] = function getCurrentSessionId() {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj4 = { value, done: true };
+        return obj4;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -315,29 +316,29 @@ prototype["getCurrentSessionId"] = function getCurrentSessionId() {
             throw value;
           } else if (arg0 === 2) {
             c3 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj5 = { value, done: true };
+            return obj5;
           } else {
             closure_1 = tmp5;
             closure_128_0 = undefined;
             if (null != self._cachedSession) {
-              let obj1 = tmp2(7574);
-              if (!obj1.isSessionExpired(self._cachedSession)) {
+              if (!obj2.isSessionExpired(self._cachedSession)) {
                 const uuid = closure_129_0._cachedSession.uuid;
                 c3 = 3;
               }
+              obj2 = tmp2(7574);
             }
             dependencyMap = 1;
             c3 = 1;
-            obj1 = { value: tmp2(7564).getSession(), done: false };
-            return obj1;
+            const obj6 = { value: tmp2(7564).getSession(), done: false };
+            return obj6;
           }
         } else if (arg0 === 1) {
           c3 = 3;
           throw value;
         } else if (arg0 === 2) {
           c3 = 3;
-          obj = { value, done: true };
+          const obj = { value, done: true };
           return obj;
         } else {
           closure_128_0 = value;

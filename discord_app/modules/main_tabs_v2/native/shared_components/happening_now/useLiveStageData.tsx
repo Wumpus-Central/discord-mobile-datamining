@@ -5,6 +5,8 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 import StageChannelParticipantStore from "../../../../stage_channels/StageChannelParticipantStore.tsx";
 import ChannelStore from "../../../../../stores/ChannelStore.tsx";
 
+const require = globalThis.__r;
+
 require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting(
@@ -13,10 +15,9 @@ const result = size.fileFinishedImporting(
 
 export const useLiveStageData = function useLiveStageData(stage) {
   _require = stage;
-  let obj = require("useStateFromStores");
   let items = [memo1];
   const items1 = [stage.channel_id];
-  const stateFromStoresArray = obj.useStateFromStoresArray(
+  const stateFromStoresArray = require("useStateFromStores").useStateFromStoresArray(
     items,
     () => {
       const mutableParticipants = StageChannelParticipantStore.getMutableParticipants(
@@ -30,6 +31,7 @@ export const useLiveStageData = function useLiveStageData(stage) {
     },
     items1,
   );
+  const obj = require("useStateFromStores");
   const items2 = [memo1];
   const items3 = [stage.channel_id];
   stateFromStoresArray1 = require("useStateFromStores").useStateFromStoresArray(
@@ -86,7 +88,8 @@ export const useLiveStageData = function useLiveStageData(stage) {
   const obj3 = require("useStateFromStores");
   const items10 = [memo2];
   const items11 = [stage.channel_id];
-  obj = {
+  const obj4 = require("useStateFromStores");
+  return {
     friends: stateFromStoresArray,
     speakers: stateFromStoresArray1,
     audienceCount: stateFromStoresArray2.length,
@@ -99,5 +102,4 @@ export const useLiveStageData = function useLiveStageData(stage) {
       items11,
     ),
   };
-  return obj;
 };

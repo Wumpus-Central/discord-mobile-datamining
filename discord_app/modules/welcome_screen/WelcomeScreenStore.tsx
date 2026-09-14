@@ -22,7 +22,7 @@ function handleWelcomeScreenUpdate(welcomeScreen) {
   }
   closure_1[welcomeScreen.guildId] = welcomeScreen;
 }
-let NO_WELCOME_SCREEN = {};
+const NO_WELCOME_SCREEN = {};
 const dependencyMap = {};
 let closure_2 = {};
 let c3 = false;
@@ -66,7 +66,7 @@ prototype["isEmpty"] = function isEmpty(arg0) {
   }
 };
 WelcomeScreenStore.displayName = "WelcomeScreenStore";
-NO_WELCOME_SCREEN = {
+const welcomeScreenStore = new WelcomeScreenStore(DispatcherDefault, {
   INVITE_RESOLVE_SUCCESS: handleInviteData,
   INVITE_ACCEPT_SUCCESS: handleInviteData,
   WELCOME_SCREEN_SUBMIT_SUCCESS: handleWelcomeScreenUpdate,
@@ -100,8 +100,7 @@ NO_WELCOME_SCREEN = {
     c4 = false;
     c5 = true;
   },
-};
-const welcomeScreenStore = new WelcomeScreenStore(DispatcherDefault, NO_WELCOME_SCREEN);
+});
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/welcome_screen/WelcomeScreenStore.tsx");
 

@@ -1,6 +1,6 @@
 // discord_app/modules/video-qoe/integrations/MobileCustomMuxIntegration.tsx
 import logger_Logger from "../../../../discord_common/js/packages/logger/Logger.tsx";
-import UDefault from "../../../../_runtime/15220_U.js";
+import UDefault from "../../../../_runtime/15221_U.js";
 import size from "../../../../_runtime/metro/00002__.js";
 
 const logger = new logger_Logger.Logger("MobileCustomMuxIntegration");
@@ -10,25 +10,25 @@ let c6 = 1000;
 let result = size.fileFinishedImporting("modules/video-qoe/integrations/MobileCustomMuxIntegration.tsx");
 class MobileCustomMuxIntegration {
   constructor(arg0) {
-    obj = Object.create(new.target.prototype);
-    closure_0 = obj;
-    obj.isInitialized = false;
-    obj.viewInitEmitted = false;
-    obj.playerReadyEmitted = false;
-    obj.playStarted = false;
-    obj.playingEmitted = false;
-    obj.currentPlayheadTime = 0;
-    obj.currentRendition = null;
-    obj.getPlayheadTime = function getPlayheadTime() {
-      return obj.currentPlayheadTime * c6;
+    obj1 = Object.create(new.target.prototype);
+    closure_0 = obj1;
+    obj1.isInitialized = false;
+    obj1.viewInitEmitted = false;
+    obj1.playerReadyEmitted = false;
+    obj1.playStarted = false;
+    obj1.playingEmitted = false;
+    obj1.currentPlayheadTime = 0;
+    obj1.currentRendition = null;
+    obj1.getPlayheadTime = function getPlayheadTime() {
+      return obj2.currentPlayheadTime * c6;
     };
-    obj.getStateData = function getStateData() {
-      return obj.videoState;
+    obj1.getStateData = function getStateData() {
+      return obj2.videoState;
     };
-    obj.config = global;
+    obj1.config = global;
     SessionManager = closure_0(closure_2[1]).SessionManager;
-    obj.sessionId = SessionManager.generateSessionId();
-    obj.playerId = "discord-mobile-" + obj.sessionId;
+    obj1.sessionId = SessionManager.generateSessionId();
+    obj1.playerId = "discord-mobile-" + obj1.sessionId;
     obj = {
       player_is_paused: true,
       player_width: 0,
@@ -51,8 +51,8 @@ class MobileCustomMuxIntegration {
     }
     obj.video_source_mime_type = str;
     obj.video_source_duration = global.contentMetadata.durationMs;
-    obj.videoState = obj;
-    return obj;
+    obj1.videoState = obj;
+    return obj1;
   }
 }
 const prototype = MobileCustomMuxIntegration.prototype;
@@ -62,18 +62,17 @@ prototype["initialize"] = function initialize() {
   if (null != muxEnvKey) {
     if (0 !== muxEnvKey.length) {
       try {
-        let obj = UDefault;
         let flag = self.config.debug;
         if (flag == null) {
           flag = false;
         }
-        obj = { debug: flag, getPlayheadTime: null, getStateData: null, data: null };
+        const obj3 = { debug: flag, getPlayheadTime: null, getStateData: null, data: null };
         ({ getPlayheadTime: obj2.getPlayheadTime, getStateData: obj2.getStateData } = self);
-        obj.data = self.mapConfigToMuxData(muxEnvKey);
-        obj.init(self.playerId, obj);
+        obj3.data = self.mapConfigToMuxData(muxEnvKey);
+        UDefault.init(self.playerId, obj3);
         self.isInitialized = true;
-        obj = { playerId: self.playerId };
-        logger.info("Mux Data mobile integration initialized", obj);
+        const obj5 = { playerId: self.playerId };
+        logger.info("Mux Data mobile integration initialized", obj5);
       } catch (tmp8) {
         logger.error("Error initializing Mux mobile integration", tmp8);
         tmp.isInitialized = false;
@@ -265,9 +264,8 @@ prototype["emitTimeUpdate"] = function emitTimeUpdate() {
       if (playStarted) {
         self.emitPlaying();
       }
-      let obj = UDefault;
-      obj = { player_playhead_time: self.currentPlayheadTime * c6 };
-      obj.emit(self.playerId, "timeupdate", obj);
+      const obj2 = { player_playhead_time: self.currentPlayheadTime * c6 };
+      UDefault.emit(self.playerId, "timeupdate", obj2);
     } catch (tmp6) {
       logger.error("Error emitting timeupdate event", tmp6);
     }
@@ -292,11 +290,10 @@ prototype["destroy"] = function destroy() {
   if (this.isInitialized) {
     try {
       self.emitViewEnd();
-      let obj = UDefault;
-      obj.emit(self.playerId, "destroy");
+      UDefault.emit(self.playerId, "destroy");
       self.isInitialized = false;
-      obj = { playerId: self.playerId };
-      logger.info("Mux Data mobile integration destroyed", obj);
+      const obj2 = { playerId: self.playerId };
+      logger.info("Mux Data mobile integration destroyed", obj2);
     } catch (tmp7) {
       logger.error("Error destroying Mux mobile integration", tmp7);
     }

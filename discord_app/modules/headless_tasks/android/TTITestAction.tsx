@@ -10,6 +10,8 @@ import AuthenticationStore from "../../../stores/AuthenticationStore.tsx";
 import ChannelStore from "../../../stores/ChannelStore.tsx";
 import GuildStore from "../../../stores/GuildStore.tsx";
 
+const require = globalThis.__r;
+
 function sendReply(status, message, arg2) {
   const merged = Object.assign(arg2);
   const json = JSON.stringify({ type: "response", status, message });
@@ -67,8 +69,8 @@ let closure_17 = async function _setupTTITest(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -82,8 +84,8 @@ let closure_17 = async function _setupTTITest(arg0) {
             throw value;
           } else if (arg0 === 2) {
             c7 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
             closure_3 = tmp3;
             closure_2 = tmp7;
@@ -111,8 +113,8 @@ let closure_17 = async function _setupTTITest(arg0) {
             throw value;
           } else if (arg0 === 2) {
             c7 = 3;
-            const obj1 = { value, done: true };
-            return obj1;
+            const obj4 = { value, done: true };
+            return obj4;
           } else {
             if (null != closure_130_0.user) {
               email = closure_130_0.user.email;
@@ -127,11 +129,11 @@ let closure_17 = async function _setupTTITest(arg0) {
                 closure_131_14("Logging out old user");
                 c6 = 5;
                 c7 = 1;
-                const obj2 = { value: closure_131_1(closure_131_2[15]).logout("TTI_test"), done: false };
-                return obj2;
+                const obj5 = { value: closure_131_1(closure_131_2[15]).logout("TTI_test"), done: false };
+                return obj5;
               } else if (closure_131_8.getId() !== expectedId) {
                 closure_131_14("Logging in new user");
-                let promise = new Promise((arg0, arg1) => {
+                const promise = new Promise((arg0, arg1) => {
                   closure_0 = arg0;
                   closure_1 = arg1;
                   subscribeOnce = function subscribeOnce(LOGIN_SUCCESS, arg1) {
@@ -154,22 +156,21 @@ let closure_17 = async function _setupTTITest(arg0) {
                   subscribeOnce("LOGIN_SUCCESS", () => closure_0());
                 });
                 closure_130_5 = promise;
-                let obj23 = closure_131_1(closure_131_2[15]);
-                const obj3 = { login: email, password };
+                const obj6 = { login: email, password };
                 c6 = 4;
                 c7 = 1;
-                const obj4 = { value: obj23.login(obj3), done: false };
-                return obj4;
+                const obj8 = { value: closure_131_1(closure_131_2[15]).login(obj6), done: false };
+                return obj8;
               } else {
                 c5 = 0;
               }
             }
             closure_131_14("Waiting for socket connection");
-            promise = new Promise((arg0) => closure_1_7(arg0));
+            const promise7 = new Promise((arg0) => closure_1_7(arg0));
             c6 = 3;
             c7 = 1;
-            const obj5 = { value: promise, done: false };
-            return obj5;
+            const obj10 = { value: promise7, done: false };
+            return obj10;
           }
         break;
         case 2:
@@ -189,14 +190,14 @@ let closure_17 = async function _setupTTITest(arg0) {
             throw value;
           } else if (arg0 === 2) {
             c7 = 3;
-            let obj6 = { value, done: true };
-            return obj6;
+            const obj12 = { value, done: true };
+            return obj12;
           } else {
-            const promise1 = new Promise((arg0) => setTimeout(arg0, 1000));
+            const promise8 = new Promise((arg0) => setTimeout(arg0, 1000));
             c6 = 8;
             c7 = 1;
-            const obj7 = { value: promise1, done: false };
-            return obj7;
+            const obj13 = { value: promise8, done: false };
+            return obj13;
           }
         break;
         case 4:
@@ -206,13 +207,13 @@ let closure_17 = async function _setupTTITest(arg0) {
           } else if (arg0 === 2) {
             c5 = 0;
             c7 = 3;
-            let obj8 = { value, done: true };
-            return obj8;
+            const obj14 = { value, done: true };
+            return obj14;
           } else {
             c6 = 6;
             c7 = 1;
-            const obj9 = { value: closure_130_5, done: false };
-            return obj9;
+            const obj15 = { value: closure_130_5, done: false };
+            return obj15;
           }
         break;
         case 5:
@@ -222,8 +223,8 @@ let closure_17 = async function _setupTTITest(arg0) {
           } else if (arg0 === 2) {
             c5 = 0;
             c7 = 3;
-            let obj10 = { value, done: true };
-            return obj10;
+            const obj16 = { value, done: true };
+            return obj16;
           }
         break;
         case 6:
@@ -233,15 +234,15 @@ let closure_17 = async function _setupTTITest(arg0) {
           } else if (arg0 === 2) {
             c5 = 0;
             c7 = 3;
-            const obj11 = { value, done: true };
-            return obj11;
+            const obj17 = { value, done: true };
+            return obj17;
           } else {
             closure_131_14("Waiting for socket connection");
-            const promise2 = new Promise((arg0) => closure_1_7(arg0));
+            const promise9 = new Promise((arg0) => closure_1_7(arg0));
             c6 = 7;
             c7 = 1;
-            const obj12 = { value: promise2, done: false };
-            return obj12;
+            const obj18 = { value: promise9, done: false };
+            return obj18;
           }
         break;
         case 7:
@@ -251,8 +252,8 @@ let closure_17 = async function _setupTTITest(arg0) {
           } else if (arg0 === 2) {
             c5 = 0;
             c7 = 3;
-            const obj13 = { value, done: true };
-            return obj13;
+            const obj19 = { value, done: true };
+            return obj19;
           } else {
             id = closure_131_8.getId();
             if (id !== expectedId) {
@@ -269,8 +270,8 @@ let closure_17 = async function _setupTTITest(arg0) {
             throw value;
           } else if (arg0 === 2) {
             c7 = 3;
-            const obj14 = { value, done: true };
-            return obj14;
+            const obj20 = { value, done: true };
+            return obj20;
           } else {
             let tmp26 = null != closure_130_0.invite;
             if (tmp26) {
@@ -280,12 +281,11 @@ let closure_17 = async function _setupTTITest(arg0) {
               if (!closure_130_1) {
                 closure_131_14("Inviting to target guild");
               }
-              obj10 = closure_131_1(closure_131_2[16]);
-              const obj15 = { inviteKey: closure_130_0.invite.code, context: { location: "tti_tests" }, skipOnboarding: true };
+              const obj21 = { inviteKey: closure_130_0.invite.code, context: { location: "tti_tests" }, skipOnboarding: true };
               c6 = 9;
               c7 = 1;
-              const obj16 = { value: obj10.acceptInvite(obj15), done: false };
-              return obj16;
+              const obj22 = { value: closure_131_1(closure_131_2[16]).acceptInvite(obj21), done: false };
+              return obj22;
             } else if (null != closure_130_0.channelId) {
               if (null == closure_131_9.getChannel(closure_130_0.channelId)) {
                 const _Error = Error;
@@ -303,23 +303,21 @@ let closure_17 = async function _setupTTITest(arg0) {
                 if (!closure_130_1) {
                   closure_131_14("Switching to desired channel");
                 }
-                obj8 = closure_131_0(closure_131_2[17]);
-                obj8.transitionToChannel(closure_130_0.channelId);
-                const promise3 = new Promise((arg0) => setTimeout(arg0, 1000));
+                closure_131_0(closure_131_2[17]).transitionToChannel(closure_130_0.channelId);
+                const promise10 = new Promise((arg0) => setTimeout(arg0, 1000));
                 c6 = 11;
                 c7 = 1;
-                const obj17 = { value: promise3, done: false };
-                return obj17;
+                const obj23 = { value: promise10, done: false };
+                return obj23;
               }
             } else {
               if (!closure_130_1) {
                 closure_131_14("Writing caches");
               }
-              obj6 = closure_131_0(closure_131_2[18]);
               c6 = 12;
               c7 = 1;
-              const obj18 = { value: obj6.writeCaches(), done: false };
-              return obj18;
+              const obj25 = { value: closure_131_0(closure_131_2[18]).writeCaches(), done: false };
+              return obj25;
             }
           }
         break;
@@ -329,13 +327,13 @@ let closure_17 = async function _setupTTITest(arg0) {
             throw value;
           } else if (arg0 === 2) {
             c7 = 3;
-            const obj19 = { value, done: true };
-            return obj19;
+            const obj26 = { value, done: true };
+            return obj26;
           } else {
             if (!closure_130_1) {
               closure_131_14("Invite API call finished");
             }
-            const promise4 = new Promise((arg0, arg1) => {
+            const promise11 = new Promise((arg0, arg1) => {
               closure_0 = arg0;
               const timeout = setTimeout(arg1, 15000);
               const result = guild.addConditionalChangeListener(() => {
@@ -356,8 +354,8 @@ let closure_17 = async function _setupTTITest(arg0) {
             });
             c6 = 10;
             c7 = 1;
-            const obj20 = { value: promise4, done: false };
-            return obj20;
+            const obj28 = { value: promise11, done: false };
+            return obj28;
           }
         break;
         case 10:
@@ -366,8 +364,8 @@ let closure_17 = async function _setupTTITest(arg0) {
             throw value;
           } else if (arg0 === 2) {
             c7 = 3;
-            const obj21 = { value, done: true };
-            return obj21;
+            const obj29 = { value, done: true };
+            return obj29;
           }
         break;
         case 11:
@@ -376,8 +374,8 @@ let closure_17 = async function _setupTTITest(arg0) {
             throw value;
           } else if (arg0 === 2) {
             c7 = 3;
-            const obj22 = { value, done: true };
-            return obj22;
+            const obj30 = { value, done: true };
+            return obj30;
           }
         break;
         case 12:
@@ -386,13 +384,13 @@ let closure_17 = async function _setupTTITest(arg0) {
             throw value;
           } else if (arg0 === 2) {
             c7 = 3;
-            obj23 = { value, done: true };
-            return obj23;
+            const obj31 = { value, done: true };
+            return obj31;
           } else {
-            const promise5 = new Promise((arg0) => setTimeout(arg0, 1000));
+            const promise12 = new Promise((arg0) => setTimeout(arg0, 1000));
             c6 = 13;
             c7 = 1;
-            obj = { value: promise5, done: false };
+            obj = { value: promise12, done: false };
             return obj;
           }
         break;
@@ -402,8 +400,8 @@ let closure_17 = async function _setupTTITest(arg0) {
             throw value;
           } else if (arg0 === 2) {
             c7 = 3;
-            const obj24 = { value, done: true };
-            return obj24;
+            const obj32 = { value, done: true };
+            return obj32;
           } else {
             if (!closure_130_1) {
               closure_131_14("Sending reply");
@@ -442,8 +440,8 @@ let closure_19 = async function _apiLogin(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -456,8 +454,8 @@ let closure_19 = async function _apiLogin(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c7 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           closure_5 = tmp2;
           c4 = 0;
@@ -469,32 +467,31 @@ let closure_19 = async function _apiLogin(arg0) {
           if (authStore.getId() === closure_3) {
             if (null != closure_132_2) {
               c7 = 3;
-              const obj1 = { value: closure_132_2, done: true };
-              return obj1;
+              const obj4 = { value: closure_132_2, done: true };
+              return obj4;
             } else {
               const token = authStore.getToken();
               if (null != token) {
                 c7 = 3;
-                const obj2 = { value: token, done: true };
-                return obj2;
+                const obj5 = { value: token, done: true };
+                return obj5;
               }
             }
           }
           if (null != authStore.getId()) {
-            let obj16 = require("AuthenticationActionCreators");
             c6 = 3;
             c7 = 1;
-            const obj3 = { value: obj16.logout("TTI_test"), done: false };
-            return obj3;
+            const obj6 = { value: require("AuthenticationActionCreators").logout("TTI_test"), done: false };
+            return obj6;
           } else if (null != closure_132_2) {
             const _fetch = fetch;
-            const obj4 = { method: "HEAD", headers: null };
-            const obj5 = { Authorization: closure_132_2 };
-            obj4.headers = obj5;
+            const obj7 = { method: "HEAD", headers: null };
+            const obj9 = { Authorization: closure_132_2 };
+            obj7.headers = obj9;
             c6 = 2;
             c7 = 1;
-            const obj6 = { value: fetch("https://discord.com/api/users/@me/settings-proto/2", obj4), done: false };
-            return obj6;
+            const obj10 = { value: fetch("https://discord.com/api/users/@me/settings-proto/2", obj7), done: false };
+            return obj10;
           }
         }
       } else if (1 === tmp5) {
@@ -503,15 +500,15 @@ let closure_19 = async function _apiLogin(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c7 = 3;
-          let obj7 = { value, done: true };
-          return obj7;
+          const obj11 = { value, done: true };
+          return obj11;
         } else {
           closure_132_2 = value;
-          let promise = new Promise((arg0) => closure_1_7(arg0));
+          const promise = new Promise((arg0) => closure_1_7(arg0));
           c6 = 6;
           c7 = 1;
-          const obj8 = { value: promise, done: false };
-          return obj8;
+          const obj12 = { value: promise, done: false };
+          return obj12;
         }
       } else if (2 === tmp5) {
         if (arg0 === 1) {
@@ -519,14 +516,13 @@ let closure_19 = async function _apiLogin(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c7 = 3;
-          const obj9 = { value, done: true };
-          return obj9;
+          const obj13 = { value, done: true };
+          return obj13;
         } else if (value.ok) {
-          obj7 = closure_133_1(closure_133_2[15]);
           c6 = 4;
           c7 = 1;
-          const obj10 = { value: obj7.loginToken(closure_132_2, false), done: false };
-          return obj10;
+          const obj14 = { value: closure_133_1(closure_133_2[15]).loginToken(closure_132_2, false), done: false };
+          return obj14;
         }
       } else if (3 === tmp5) {
         if (arg0 === 1) {
@@ -534,8 +530,8 @@ let closure_19 = async function _apiLogin(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c7 = 3;
-          const obj11 = { value, done: true };
-          return obj11;
+          const obj15 = { value, done: true };
+          return obj15;
         }
       } else if (4 === tmp5) {
         if (arg0 === 1) {
@@ -543,14 +539,14 @@ let closure_19 = async function _apiLogin(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c7 = 3;
-          const obj12 = { value, done: true };
-          return obj12;
+          const obj16 = { value, done: true };
+          return obj16;
         } else {
-          promise = new Promise((arg0) => closure_1_7(arg0));
+          const promise3 = new Promise((arg0) => closure_1_7(arg0));
           c6 = 5;
           c7 = 1;
-          const obj13 = { value: promise, done: false };
-          return obj13;
+          const obj18 = { value: promise3, done: false };
+          return obj18;
         }
       } else if (5 === tmp5) {
         if (arg0 === 1) {
@@ -558,20 +554,20 @@ let closure_19 = async function _apiLogin(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c7 = 3;
-          const obj14 = { value, done: true };
-          return obj14;
+          const obj19 = { value, done: true };
+          return obj19;
         } else if (closure_133_8.getId() === closure_132_3) {
           c7 = 3;
-          const obj15 = { value: closure_132_2, done: true };
-          return obj15;
+          const obj20 = { value: closure_132_2, done: true };
+          return obj20;
         }
       } else if (arg0 === 1) {
         c7 = 3;
         throw value;
       } else if (arg0 === 2) {
         c7 = 3;
-        obj16 = { value, done: true };
-        return obj16;
+        const obj21 = { value, done: true };
+        return obj21;
       } else {
         id = closure_133_8.getId();
         if (id !== closure_132_3) {
@@ -585,19 +581,19 @@ let closure_19 = async function _apiLogin(arg0) {
           return obj;
         }
       }
-      const promise1 = new Promise((arg0, arg1) => {
+      const promise4 = new Promise((arg0, arg1) => {
         login = arg0;
         password = arg1;
         const items = ["LOGIN_FAILURE", "PASSWORDLESS_FAILURE", "LOGIN_ACCOUNT_SCHEDULED_FOR_DELETION", "LOGIN_ACCOUNT_DISABLED", "LOGIN_PHONE_IP_AUTHORIZATION_REQUIRED"];
         function _loop(iter) {
           obj = password(573);
-          const f126371 = () => {
+          const f126374 = () => {
             const error = new Error("Unable to login " + login + ". Login failed with action '" + obj + "'");
             iter(error);
           };
           function handler(arg0) {
             obj.unsubscribe(closure_1, handler);
-            return f126371(arg0);
+            return f126374(arg0);
           }
           const subscription = obj.subscribe(iter, handler);
         }
@@ -607,14 +603,12 @@ let closure_19 = async function _apiLogin(arg0) {
           continue;
         }
         closure_1_20(password(573), "LOGIN_SUCCESS", (token) => closure_0(token.token));
-        password(6694);
-        obj = { login, password };
-        obj.login(obj);
+        password(6694).login({ login, password });
       });
       c6 = 1;
       c7 = 1;
-      const obj17 = { value: promise1, done: false };
-      return obj17;
+      const obj22 = { value: promise4, done: false };
+      return obj22;
     } catch (tmp55) {
       c7 = tmp;
       throw tmp55;
@@ -627,11 +621,11 @@ function subscribeOnce(subscribe, arg1, arg2) {
   closure_2 = arg2;
   function handler(arg0) {
     obj.unsubscribe(closure_1, handler);
-    return f126371(arg0);
+    return f126374(arg0);
   }
   return subscribe.subscribe("LOGIN_SUCCESS", handler);
 }
-const applicationReady = fn(17340).applicationReady;
+const applicationReady = fn(17342).applicationReady;
 fn(5639).addPostConnectionCallback;
 const logger = new LoggerDefault("TTITestAction");
 let obj = {
@@ -641,35 +635,35 @@ let obj = {
     NativeTTIManagerModuleDefault.logToDevice(json);
   },
   () => {
-    obj = closure_0(10322);
-    const result = obj.resetComponentProfiler();
-    obj = { type: "response", status: "success", message: "reset-component-profiler" };
+    const result = closure_0(10322).resetComponentProfiler();
     const merged = Object.assign(undefined);
-    const json = JSON.stringify(obj);
+    const json = JSON.stringify({ type: "response", status: "success", message: "reset-component-profiler" });
+    obj = closure_0(10322);
+    const obj2 = { type: "response", status: "success", message: "reset-component-profiler" };
     NativeTTIManagerModuleDefault.logToDevice(json);
   },
   () => {
-    obj = closure_0(10322);
-    const result = obj.pauseComponentProfiler();
-    obj = { type: "response", status: "success", message: "pause-component-profiler" };
+    const result = closure_0(10322).pauseComponentProfiler();
     const merged = Object.assign(undefined);
-    const json = JSON.stringify(obj);
+    const json = JSON.stringify({ type: "response", status: "success", message: "pause-component-profiler" });
+    obj = closure_0(10322);
+    const obj2 = { type: "response", status: "success", message: "pause-component-profiler" };
     NativeTTIManagerModuleDefault.logToDevice(json);
   },
   () => {
-    obj = closure_0(10322);
-    const result = obj.resumeComponentProfiler();
-    obj = { type: "response", status: "success", message: "resume-component-profiler" };
+    const result = closure_0(10322).resumeComponentProfiler();
     const merged = Object.assign(undefined);
-    const json = JSON.stringify(obj);
+    const json = JSON.stringify({ type: "response", status: "success", message: "resume-component-profiler" });
+    obj = closure_0(10322);
+    const obj2 = { type: "response", status: "success", message: "resume-component-profiler" };
     NativeTTIManagerModuleDefault.logToDevice(json);
   },
   () => {
     obj = { stats: closure_0(10322).dumpStats() };
-    obj = { type: "response", status: "success", message: "dump-component-profiler-stats" };
     const merged = Object.assign(obj);
-    const json = JSON.stringify(obj);
+    const json = JSON.stringify({ type: "response", status: "success", message: "dump-component-profiler-stats" });
     const obj2 = closure_0(10322);
+    const obj3 = { type: "response", status: "success", message: "dump-component-profiler-stats" };
     NativeTTIManagerModuleDefault.logToDevice(json);
   },
   () => {
@@ -678,11 +672,11 @@ let obj = {
     if (obj != null) {
       report = obj.requestReport();
     }
-    obj = { report };
-    obj = { type: "response", status: "success", message: "dump-jank-stats" };
-    const merged = Object.assign(obj);
-    const json = JSON.stringify(obj);
+    const merged = Object.assign({ report });
+    const json = JSON.stringify({ type: "response", status: "success", message: "dump-jank-stats" });
     NativeTTIManagerModuleDefault.logToDevice(json);
+    const obj2 = { report };
+    const obj3 = { type: "response", status: "success", message: "dump-jank-stats" };
     const tmpResult = NativeTTIManagerModuleDefault;
   },
   (multiplier) => {
@@ -690,10 +684,10 @@ let obj = {
     if (obj != null) {
       const result = obj.setJankHeuristicMultiplier(multiplier.multiplier);
     }
-    obj = { type: "response", status: "success", message: "set-jank-multiplier" };
     const merged = Object.assign(undefined);
-    const json = JSON.stringify(obj);
+    const json = JSON.stringify({ type: "response", status: "success", message: "set-jank-multiplier" });
     NativeTTIManagerModuleDefault.logToDevice(json);
+    const obj2 = { type: "response", status: "success", message: "set-jank-multiplier" };
     const tmpResult = NativeTTIManagerModuleDefault;
   },
   () => {
@@ -701,33 +695,32 @@ let obj = {
     if (obj != null) {
       obj.startTracking();
     }
-    obj = { type: "response", status: "success", message: "start-jank-stats" };
     const merged = Object.assign(undefined);
-    const json = JSON.stringify(obj);
+    const json = JSON.stringify({ type: "response", status: "success", message: "start-jank-stats" });
     NativeTTIManagerModuleDefault.logToDevice(json);
+    const obj2 = { type: "response", status: "success", message: "start-jank-stats" };
     const tmpResult = NativeTTIManagerModuleDefault;
   },
   (action) => {
-    obj = DispatcherDefault;
-    obj.dispatch(action.action);
-    obj = { type: "response", status: "success", message: "flux-dispatch" };
+    DispatcherDefault.dispatch(action.action);
     const merged = Object.assign(undefined);
-    const json = JSON.stringify(obj);
+    const json = JSON.stringify({ type: "response", status: "success", message: "flux-dispatch" });
+    const obj2 = { type: "response", status: "success", message: "flux-dispatch" };
     NativeTTIManagerModuleDefault.logToDevice(json);
   },
   () => {
+    const merged = Object.assign({ token: AuthenticationStore.getToken() });
+    const json = JSON.stringify({ type: "response", status: "success", message: "get-token" });
     obj = { token: AuthenticationStore.getToken() };
-    obj = { type: "response", status: "success", message: "get-token" };
-    const merged = Object.assign(obj);
-    const json = JSON.stringify(obj);
+    const obj2 = { type: "response", status: "success", message: "get-token" };
     NativeTTIManagerModuleDefault.logToDevice(json);
   },
   () => {
     obj = { cumulativeCPU: ProcessUtilsDefault.getCumulativeCPUUsage(), currentMemoryUsage: null };
     obj.currentMemoryUsage = ProcessUtilsDefault.getCurrentMemoryUsageKB();
-    obj = { type: "response", status: "success", message: "get-resource-usage" };
     const merged = Object.assign(obj);
-    const json = JSON.stringify(obj);
+    const json = JSON.stringify({ type: "response", status: "success", message: "get-resource-usage" });
+    const obj4 = { type: "response", status: "success", message: "get-resource-usage" };
     NativeTTIManagerModuleDefault.logToDevice(json);
   },
   backchannel: null
@@ -740,8 +733,8 @@ let closure_3 = asyncGeneratorStep(async (arg0) => {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      obj = { value, done: true };
-      return obj;
+      let obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -754,8 +747,8 @@ let closure_3 = asyncGeneratorStep(async (arg0) => {
           throw value;
         } else if (arg0 === 2) {
           c12 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           closure_8 = tmp4;
           closure_7 = tmp6;
@@ -763,19 +756,19 @@ let closure_3 = asyncGeneratorStep(async (arg0) => {
           closure_135_1 = undefined;
           closure_135_2 = undefined;
           ({ reply: closure_135_0, args } = closure_0);
-          const obj1 = { ClientInfoUtils: null, ComponentProfiler: null, Dispatcher: null, ExperimentStore: null, NativeJankStats: null, ProcessUtils: null, AnalyticsUtils: null, TTITestAction: null };
-          const obj2 = { getConstants: closure_0(1364).getConstants };
-          obj1.ClientInfoUtils = obj2;
-          const obj3 = { resetComponentProfiler: closure_0(10322).resetComponentProfiler, resumeComponentProfiler: closure_0(10322).resumeComponentProfiler, pauseComponentProfiler: closure_0(10322).pauseComponentProfiler, dumpStats: closure_0(10322).dumpStats };
-          obj1.ComponentProfiler = obj3;
-          obj1.Dispatcher = DispatcherDefault;
-          obj1.ExperimentStore = ExperimentStore;
-          obj1.NativeJankStats = NativeJankStatsModuleDefault;
-          obj1.ProcessUtils = ProcessUtilsDefault;
-          const obj4 = { startRecordingAnalyticsEvents: closure_0(1242).startRecordingAnalyticsEvents, stopRecordingAnalyticsEvents: closure_0(1242).stopRecordingAnalyticsEvents, getAnalyticsEventsRecording: closure_0(1242).getAnalyticsEventsRecording, clearAnalyticsEventsRecording: closure_0(1242).clearAnalyticsEventsRecording };
-          obj1.AnalyticsUtils = obj4;
-          const obj5 = { apiLogin, setupTTITest };
-          obj1.TTITestAction = obj5;
+          const obj4 = { ClientInfoUtils: null, ComponentProfiler: null, Dispatcher: null, ExperimentStore: null, NativeJankStats: null, ProcessUtils: null, AnalyticsUtils: null, TTITestAction: null };
+          const obj5 = { getConstants: closure_0(1362).getConstants };
+          obj4.ClientInfoUtils = obj5;
+          const obj6 = { resetComponentProfiler: closure_0(10322).resetComponentProfiler, resumeComponentProfiler: closure_0(10322).resumeComponentProfiler, pauseComponentProfiler: closure_0(10322).pauseComponentProfiler, dumpStats: closure_0(10322).dumpStats };
+          obj4.ComponentProfiler = obj6;
+          obj4.Dispatcher = DispatcherDefault;
+          obj4.ExperimentStore = ExperimentStore;
+          obj4.NativeJankStats = NativeJankStatsModuleDefault;
+          obj4.ProcessUtils = ProcessUtilsDefault;
+          const obj7 = { startRecordingAnalyticsEvents: closure_0(1240).startRecordingAnalyticsEvents, stopRecordingAnalyticsEvents: closure_0(1240).stopRecordingAnalyticsEvents, getAnalyticsEventsRecording: closure_0(1240).getAnalyticsEventsRecording, clearAnalyticsEventsRecording: closure_0(1240).clearAnalyticsEventsRecording };
+          obj4.AnalyticsUtils = obj7;
+          const obj8 = { apiLogin, setupTTITest };
+          obj4.TTITestAction = obj8;
           const constructor = asyncGeneratorStep(async () => {
             if (c0 === 2) {
               c0 = 3;
@@ -784,8 +777,8 @@ let closure_3 = asyncGeneratorStep(async (arg0) => {
               if (arg0 === 1) {
                 throw value;
               } else if (arg0 === 2) {
-                obj = { value, done: true };
-                return obj;
+                const obj2 = { value, done: true };
+                return obj2;
               } else {
                 return { value: "HermesInternal", done: null };
               }
@@ -809,24 +802,24 @@ let closure_3 = asyncGeneratorStep(async (arg0) => {
               }
             }
           }).constructor;
-          const obj6 = {};
-          closure_135_1 = obj6;
+          const obj9 = {};
+          closure_135_1 = obj9;
           closure_1 = args;
           if (args == null) {
             closure_1 = {};
           }
           const _Object = Object;
-          const keys = Object.keys(obj1);
+          const keys = Object.keys(obj4);
           const _Object2 = Object;
-          let values = Object.values(obj1);
+          const values = Object.values(obj4);
           const _Object3 = Object;
           const keys1 = Object.keys(closure_1);
           const _Object4 = Object;
-          values = Object.values(closure_1);
+          const values2 = Object.values(closure_1);
           c9 = 2;
           closure_2 = 0;
           const items = [, ];
-          let arraySpreadResult = HermesBuiltin.arraySpread(keys, 0);
+          const arraySpreadResult = HermesBuiltin.arraySpread(keys, 0);
           closure_2 = arraySpreadResult;
           items[arraySpreadResult] = "imports";
           const sum = closure_2 + 1;
@@ -837,16 +830,16 @@ let closure_3 = asyncGeneratorStep(async (arg0) => {
           closure_2 = closure_2 + 1;
           closure_3 = 0;
           const items1 = [];
-          arraySpreadResult = HermesBuiltin.arraySpread(values, 0);
-          closure_3 = arraySpreadResult;
-          items1[arraySpreadResult] = keys;
+          const arraySpreadResult2 = HermesBuiltin.arraySpread(values, 0);
+          closure_3 = arraySpreadResult2;
+          items1[arraySpreadResult2] = keys;
           const sum1 = closure_3 + 1;
           closure_3 = sum1;
-          closure_3 = HermesBuiltin.arraySpread(values, sum1);
+          closure_3 = HermesBuiltin.arraySpread(values2, sum1);
           c11 = 3;
           c12 = 1;
-          const obj7 = { value: HermesBuiltin.apply(items1, undefined), done: false };
-          return obj7;
+          const obj10 = { value: HermesBuiltin.apply(items1, undefined), done: false };
+          return obj10;
         }
       } else {
         if (1 === tmp9) {
@@ -860,17 +853,17 @@ let closure_3 = asyncGeneratorStep(async (arg0) => {
             request.headers = { "Content-Type": "application/json" };
             c11 = 6;
             c12 = 1;
-            const obj8 = { value: fetch(closure_135_0, request), done: false };
-            return obj8;
+            const obj11 = { value: fetch(closure_135_0, request), done: false };
+            return obj11;
           }
         } else {
           if (2 === tmp9) {
             c9 = 1;
             closure_135_3 = closure_10;
-            const obj9 = { details: closure_136_15(closure_10), string: null };
+            const obj12 = { details: closure_136_15(closure_10), string: null };
             const _String = String;
-            obj9.string = String(closure_135_3);
-            closure_135_1.error = obj9;
+            obj12.string = String(closure_135_3);
+            closure_135_1.error = obj12;
           } else {
             if (3 === tmp9) {
               if (arg0 === 1) {
@@ -888,13 +881,13 @@ let closure_3 = asyncGeneratorStep(async (arg0) => {
                     request1.headers = { "Content-Type": "application/json" };
                     c11 = 4;
                     c12 = 1;
-                    const obj10 = { value: fetch(closure_135_0, request1), done: false };
-                    return obj10;
+                    const obj13 = { value: fetch(closure_135_0, request1), done: false };
+                    return obj13;
                   } else {
                     c12 = 3;
                   }
                 } else {
-                  obj6.result = value;
+                  obj9.result = value;
                   c9 = 1;
                 }
               }
@@ -904,13 +897,13 @@ let closure_3 = asyncGeneratorStep(async (arg0) => {
                 throw value;
               } else if (arg0 === 2) {
                 c12 = 3;
-                const obj11 = { value, done: true };
-                return obj11;
+                const obj14 = { value, done: true };
+                return obj14;
               } else {
                 closure_135_2 = value;
                 if (!closure_135_2.ok) {
-                  const obj12 = { status: closure_135_2.status };
-                  closure_136_13("error", "Failed to send backchannel reply", obj12);
+                  const obj15 = { status: closure_135_2.status };
+                  closure_136_13("error", "Failed to send backchannel reply", obj15);
                 }
               }
             } else if (5 === tmp9) {
@@ -919,15 +912,15 @@ let closure_3 = asyncGeneratorStep(async (arg0) => {
                 throw value;
               } else if (arg0 === 2) {
                 c12 = 3;
-                const obj13 = { value, done: true };
-                return obj13;
+                const obj16 = { value, done: true };
+                return obj16;
               } else {
                 closure_135_2 = value;
                 if (closure_135_2.ok) {
                   closure_136_13("success", "Backchannel reply sent");
                 } else {
-                  const obj14 = { status: closure_135_2.status };
-                  closure_136_13("error", "Failed to send backchannel reply", obj14);
+                  const obj17 = { status: closure_135_2.status };
+                  closure_136_13("error", "Failed to send backchannel reply", obj17);
                 }
                 c12 = 3;
               }
@@ -936,8 +929,8 @@ let closure_3 = asyncGeneratorStep(async (arg0) => {
               throw value;
             } else if (arg0 === 2) {
               c12 = 3;
-              const obj15 = { value, done: true };
-              return obj15;
+              const obj18 = { value, done: true };
+              return obj18;
             } else {
               closure_135_2 = value;
               if (closure_135_2.ok) {
@@ -958,8 +951,8 @@ let closure_3 = asyncGeneratorStep(async (arg0) => {
             request2.headers = { "Content-Type": "application/json" };
             c11 = 5;
             c12 = 1;
-            const obj16 = { value: fetch(closure_135_0, request2), done: false };
-            return obj16;
+            const obj19 = { value: fetch(closure_135_0, request2), done: false };
+            return obj19;
           }
         }
         throw closure_6;
@@ -994,10 +987,10 @@ let closure_0 = asyncGeneratorStep(async (arg0) => {
   const _JSON = JSON;
   const parsed = JSON.parse(decoder.decode(closure_0(tmp5[19]).base64decode(closure_0.actionData)));
   closure_129_0 = parsed;
-  const obj1 = {};
+  const obj4 = {};
   const merged = Object.assign(parsed);
-  obj1.user = "redacted";
-  logger.log("Received TTI Test Action", obj1);
+  obj4.user = "redacted";
+  logger.log("Received TTI Test Action", obj4);
   await promise.promise;
   dependencyMap[closure_129_0.type](closure_129_0);
   return Promise.resolve();

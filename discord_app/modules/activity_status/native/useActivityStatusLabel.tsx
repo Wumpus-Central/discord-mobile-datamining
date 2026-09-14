@@ -11,7 +11,7 @@ import RelationshipStore from "../../../stores/RelationshipStore.tsx";
 import VoiceStateStore from "../../../stores/VoiceStateStore.tsx";
 
 const util = v0wJXSh(1114);
-const VoiceActivityStatus = v0wJXSh(11021);
+const VoiceActivityStatus = v0wJXSh(11022);
 require = fn;
 const ActivityTypes = fn(1074).ActivityTypes;
 const size = fn(2);
@@ -73,14 +73,16 @@ export default function useActivityStatusLabel(userId) {
         const activities = PresenceStore.getActivities(userId);
       }
       let v0wJXSh = require;
+      let obj = dependencyMap;
       const items = [ApplicationStreamingStore, RelationshipStore];
       const discoverableApplicationStream = useDiscoverableApplicationStream.getDiscoverableApplicationStream(
         userId,
         items,
       );
-      let obj = { userId, guildId };
-      obj = { ChannelStore, PermissionStore, VoiceStateStore };
-      const voiceChannel = useUserVoiceActivity.getVisibleUserVoiceActivity(obj, obj).voiceChannel;
+      const voiceChannel = useUserVoiceActivity.getVisibleUserVoiceActivity(
+        { userId, guildId },
+        { ChannelStore, PermissionStore, VoiceStateStore },
+      ).voiceChannel;
       if (null != discoverableApplicationStream) {
         let name;
         if (activities != null) {
@@ -133,6 +135,8 @@ export default function useActivityStatusLabel(userId) {
         }
         return tmp17;
       }
+      const obj4 = { userId, guildId };
+      const obj5 = { ChannelStore, PermissionStore, VoiceStateStore };
     },
     items3,
   );

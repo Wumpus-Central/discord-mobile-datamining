@@ -18,7 +18,7 @@ import NotificationCenterStore from "../NotificationCenterStore.tsx";
 require = fn;
 const View = fn(17).View;
 const AnalyticEvents = fn(1074).AnalyticEvents;
-const MainTabsConstants = fn(11218);
+const MainTabsConstants = fn(11219);
 ({ RootNavigatorScreen, YouBarNavigatorScreens } = MainTabsConstants);
 const ReadStateTypes = fn(4818).ReadStateTypes;
 const jsx = fn(21).jsx;
@@ -38,13 +38,14 @@ export const NotificationCenterForYou = (panelVariant) => {
   let setting;
   let height;
   const merged = Object.assign(panelVariant, Object.assign({ panelVariant: 0 }));
+  isFocused = isFocused(setting[13]).useIsFocused();
   let obj = isFocused(setting[13]);
-  isFocused = obj.useIsFocused();
-  let obj1 = isFocused(setting[14]);
-  const currentNavigationRouteName = obj1.useCurrentNavigationRouteName();
+  const tmp2 = isFocused;
+  let tmp3 = setting;
+  const currentNavigationRouteName = isFocused(setting[14]).useCurrentNavigationRouteName();
   const NotificationCenterAckedBeforeId = isFocused(setting[15]).NotificationCenterAckedBeforeId;
   setting = NotificationCenterAckedBeforeId.useSetting();
-  let items = [currentNavigationRouteName, isFocused];
+  let items1 = [currentNavigationRouteName, isFocused];
   const memo = height.useMemo(() => {
     let tmp3 = !isFocused;
     const hasItem = set.has(currentNavigationRouteName);
@@ -55,22 +56,22 @@ export const NotificationCenterForYou = (panelVariant) => {
       tmp3 = hasItem;
     }
     return tmp3;
-  }, items);
+  }, items1);
   height = currentNavigationRouteName(setting[16])().height;
   const ChannelListLayoutSetting = isFocused(setting[15]).ChannelListLayoutSetting;
   const setting1 = ChannelListLayoutSetting.useSetting();
   const tmp9 = setting1 === isFocused(setting[17]).ChannelListLayoutTypes.COMPACT;
   closure_5 = tmp9;
-  let items1 = [tmp9, height];
+  let items2 = [tmp9, height];
   const memo1 = height.useMemo(() => {
     let num = 68;
     if (closure_5) {
       num = 48;
     }
     return Math.min(50, Math.max(8, Math.ceil(height / num)));
-  }, items1);
-  let obj2 = isFocused(setting[18]);
-  const notificationCenterItemsLoader = obj2.useNotificationCenterItemsLoader({
+  }, items2);
+  let obj2 = isFocused(setting[14]);
+  const notificationCenterItemsLoader = isFocused(setting[18]).useNotificationCenterItemsLoader({
     isFocused,
     navigatedAway: memo,
     withMentions: true,
@@ -78,28 +79,27 @@ export const NotificationCenterForYou = (panelVariant) => {
   });
   const initialized = notificationCenterItemsLoader.initialized;
   const hasMore = notificationCenterItemsLoader.hasMore;
-  items = notificationCenterItemsLoader.items;
+  let items = notificationCenterItemsLoader.items;
   const setReadNotifItemToAcked = notificationCenterItemsLoader.setReadNotifItemToAcked;
   const errored = notificationCenterItemsLoader.errored;
   ({ loadMore, loadingMore } = notificationCenterItemsLoader);
-  let obj3 = isFocused(setting[19]);
-  let items2 = [errored];
-  const stateFromStores = obj3.useStateFromStores(items2, () => errored.hasNewMentions());
-  let items3 = [setReadNotifItemToAcked];
+  let obj3 = isFocused(setting[18]);
+  let items3 = [errored];
+  const stateFromStores = isFocused(setting[19]).useStateFromStores(items3, () => errored.hasNewMentions());
+  let obj4 = isFocused(setting[19]);
+  let items4 = [setReadNotifItemToAcked];
   const stateFromStores1 = isFocused(setting[19]).useStateFromStores(
-    items3,
+    items4,
     () => setReadNotifItemToAcked.localItems,
     [],
   );
-  const obj5 = isFocused(setting[19]);
-  const tmp2 = isFocused;
-  let tmp3 = setting;
+  let obj5 = isFocused(setting[19]);
   const getOrFetchNotificationCenterItemsApplications = isFocused(
     setting[20],
   ).useGetOrFetchNotificationCenterItemsApplications(stateFromStores1);
-  const obj6 = isFocused(setting[20]);
-  let items4 = [items, hasMore];
-  const stateFromStores2 = isFocused(setting[19]).useStateFromStores(items4, () => {
+  let obj6 = isFocused(setting[20]);
+  let items5 = [items, hasMore];
+  const stateFromStores2 = isFocused(setting[19]).useStateFromStores(items5, () => {
     const currentUser = items.getCurrentUser();
     let ackMessageIdResult = null;
     if (null != currentUser) {
@@ -108,8 +108,8 @@ export const NotificationCenterForYou = (panelVariant) => {
     return ackMessageIdResult;
   });
   const obj7 = isFocused(setting[19]);
-  let items5 = [initialized];
-  const stateFromStores3 = isFocused(setting[19]).useStateFromStores(items5, () =>
+  let items6 = [initialized];
+  const stateFromStores3 = isFocused(setting[19]).useStateFromStores(items6, () =>
     initialized.getTotalNotificationsMentionCount(true),
   );
   const tmp17 = memo(height.useState(stateFromStores2), 2);
@@ -123,9 +123,9 @@ export const NotificationCenterForYou = (panelVariant) => {
   const tmp25 = memo(height.useState(new Set()), 2);
   const first2 = tmp25[0];
   closure_20 = tmp25[1];
-  let items6 = [first2];
   let items7 = [first2];
-  const callback = height.useCallback((arg0) => first2.has(arg0), items6);
+  let items8 = [first2];
+  const callback = height.useCallback((arg0) => first2.has(arg0), items7);
   const callback1 = height.useCallback((forceUnacked) => {
     if (!forceUnacked.forceUnacked) {
       if (!first2.has(forceUnacked.id)) {
@@ -135,7 +135,7 @@ export const NotificationCenterForYou = (panelVariant) => {
         closure_20(set);
       }
     }
-  }, items7);
+  }, items8);
   set = new Set();
   closure_21 = height.useRef(new Set());
   const set1 = new Set();
@@ -151,8 +151,8 @@ export const NotificationCenterForYou = (panelVariant) => {
   const tmp33 = currentNavigationRouteName(setting[21])();
   const setAdded = tmp33.setAdded;
   const friendSuggestions = tmp33.friendSuggestions;
-  let items8 = [setAdded];
   let items9 = [setAdded];
+  let items10 = [setAdded];
   const callback4 = height.useCallback((arg0) => {
     closure_0 = arg0;
     setAdded((arg0) => {
@@ -160,14 +160,14 @@ export const NotificationCenterForYou = (panelVariant) => {
       items[HermesBuiltin.arraySpread(arg0, 0)] = closure_0;
       return items;
     });
-  }, items8);
+  }, items9);
   const callback5 = height.useCallback((arg0) => {
     closure_0 = arg0;
     setAdded((arr) => arr.filter((user) => user.user.id !== user.user.id));
-  }, items9);
+  }, items10);
   const set2 = new Set();
   const shouldAgeVerifyForAgeGate = isFocused(setting[22]).useShouldAgeVerifyForAgeGate();
-  let items10 = [
+  const items11 = [
     items,
     hasMore,
     stateFromStores1,
@@ -183,7 +183,6 @@ export const NotificationCenterForYou = (panelVariant) => {
     shouldAgeVerifyForAgeGate,
   ];
   const memo2 = height.useMemo(() => {
-    let arr = items;
     let id;
     if (items.length > 0) {
       id = arr[arr.length - 1].id;
@@ -212,7 +211,6 @@ export const NotificationCenterForYou = (panelVariant) => {
         });
       }
       const items1 = [];
-      arr7 = items1;
       const items2 = [];
       const items3 = [];
       const item = found1.forEach((kind) => {
@@ -264,7 +262,7 @@ export const NotificationCenterForYou = (panelVariant) => {
           }
           const current2 = ref2.current;
           if (current2.has(addResult.id)) {
-            arr7.push(addResult);
+            arr8.push(addResult);
             addResult.acked = false;
             const current3 = ref.current;
             addResult = current3.add(addResult.id);
@@ -275,36 +273,36 @@ export const NotificationCenterForYou = (panelVariant) => {
               items3.push(addResult);
             }
           } else {
-            arr7.push(addResult);
+            arr8.push(addResult);
           }
           items2.push(addResult);
         }
       });
-      const sorted = items1.sort((id, id2) => -1 * arr7(items2[23]).compare(id.id, id2.id));
-      const sorted1 = items2.sort((id, id2) => -1 * arr7(items2[23]).compare(id.id, id2.id));
-      const sorted2 = items3.sort((id, id2) => -1 * arr7(items2[23]).compare(id.id, id2.id));
+      const sorted = items1.sort((id, id2) => -1 * arr8(items2[23]).compare(id.id, id2.id));
+      const sorted1 = items2.sort((id, id2) => -1 * arr8(items2[23]).compare(id.id, id2.id));
+      const sorted2 = items3.sort((id, id2) => -1 * arr8(items2[23]).compare(id.id, id2.id));
       let obj = currentNavigationRouteName(setting[27]);
       [arr7, arr8] = memo(
-        obj.partition(
+        currentNavigationRouteName(setting[27]).partition(
           items1,
           (type) => type.type === id(items2[12]).NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS && type.acked,
         ),
         2,
       );
       let arr9 = items1;
-      if (arr6.length > 3) {
-        obj = {
+      if (arr7.length > 3) {
+        let obj2 = {
           kind: "notification-center-item",
           type: isFocused(setting[12]).NotificationCenterLocalItems.FRIEND_REQUESTS_GROUPED,
-          id: arr6[0].id,
+          id: arr7[0].id,
           local_id: "friend_requests_grouped",
           acked: false,
-          other_user: arr6[0].other_user,
-          other_users: arr6.map((other_user) => other_user.other_user),
+          other_user: arr7[0].other_user,
+          other_users: arr7.map((other_user) => other_user.other_user),
           forceUnacked: true,
         };
-        arr = arr7.push(obj);
-        arr9 = arr7;
+        arr8.push(obj2);
+        arr9 = arr8;
       }
       const item1 = arr9.forEach((item) => {
         const tmp = !callback3(item);
@@ -313,8 +311,8 @@ export const NotificationCenterForYou = (panelVariant) => {
       });
       const items4 = [];
       if (friendSuggestions.length > 0) {
-        obj = { kind: "suggested-friends-header", id: "suggested-friends-header", showDivider: arr9.length > 0 };
-        arr = items4.push(obj);
+        let obj3 = { kind: "suggested-friends-header", id: "suggested-friends-header", showDivider: arr9.length > 0 };
+        items4.push(obj3);
         let num5 = 2;
         if (friendSuggestions.length <= 3) {
           num5 = friendSuggestions.length;
@@ -325,12 +323,12 @@ export const NotificationCenterForYou = (panelVariant) => {
           items4.push({ kind: "suggested-friends-row", id: id.user.id, suggestedFriend: id });
         });
         if (friendSuggestions.length > 3) {
-          const obj1 = {
+          let obj4 = {
             kind: "suggested-friends-show-all-row",
             id: "suggested-friends-show-all-row",
             suggestedFriends: friendSuggestions,
           };
-          items4.push(obj1);
+          items4.push(obj4);
         }
       }
       const items5 = [];
@@ -346,10 +344,10 @@ export const NotificationCenterForYou = (panelVariant) => {
           num7 = bound;
           if (0 < bound) {
             do {
-              let obj2 = { kind: "mentions-placeholder", id: null };
+              let obj5 = { kind: "mentions-placeholder", id: null };
               let _HermesInternal = HermesInternal;
-              obj2.id = "mp-" + num10;
-              let arr2 = items5.unshift(obj2);
+              obj5.id = "mp-" + num10;
+              let arr5 = items5.unshift(obj5);
               num10 = num10 + 1;
               num7 = bound;
             } while (num10 < bound);
@@ -362,7 +360,7 @@ export const NotificationCenterForYou = (panelVariant) => {
       if (arr9.length > 0) {
         arr9.unshift({ kind: "hoisted-items-header", id: "hoisted-items-header" });
       }
-      let obj3 = { kind: "recent-activity-section-header", id: "rash" };
+      const obj6 = { kind: "recent-activity-section-header", id: "rash" };
       const items6 = [];
       if (arr9.length > 0) {
         const spliceResult = items5.splice(0, 3);
@@ -371,7 +369,7 @@ export const NotificationCenterForYou = (panelVariant) => {
         HermesBuiltin.arraySpread(items4, HermesBuiltin.arraySpread(arr9, 0));
         HermesBuiltin.apply(items7, items6);
         if (tmp69) {
-          items6.push(obj3);
+          items6.push(obj6);
         }
         const push4 = items6.push;
         const items8 = [];
@@ -392,7 +390,7 @@ export const NotificationCenterForYou = (panelVariant) => {
         const spliceResult1 = items5.splice(0, num11);
         let flag = false;
         if (tmp40) {
-          arr6 = items6.push(obj3);
+          items6.push(obj6);
           flag = true;
         }
         const push = items6.push;
@@ -404,7 +402,7 @@ export const NotificationCenterForYou = (panelVariant) => {
           tmp51 = items5.length > 0;
         }
         if (tmp51) {
-          arr7 = items6.push(obj3);
+          items6.push(obj6);
         }
         const push2 = items6.push;
         const items10 = [];
@@ -415,17 +413,17 @@ export const NotificationCenterForYou = (panelVariant) => {
       return items6;
     }
     found = stateFromStores1;
-  }, items10);
-  const items11 = [initialized, first1];
+  }, items11);
+  const items12 = [initialized, first1];
   const layoutEffect = height.useLayoutEffect(() => {
     if (initialized) {
-      const obj = { version: "v2", load_start_timestamp: first1, tti_millis: null };
+      const obj2 = { version: "v2", load_start_timestamp: first1, tti_millis: null };
       const _Date = Date;
-      obj.tti_millis = Date.now() - first1;
-      obj.track(AnalyticEvents.NOTIFICATION_CENTER_LOADED, obj);
+      obj2.tti_millis = Date.now() - first1;
+      AnalyticsUtilsDefault.track(AnalyticEvents.NOTIFICATION_CENTER_LOADED, obj2);
     }
-  }, items11);
-  const items12 = [memo, stateFromStores2, first, memo2, setting, tmp17[1], callback3];
+  }, items12);
+  const items13 = [memo, stateFromStores2, first, memo2, setting, tmp17[1], callback3];
   const effect = height.useEffect(() => {
     if (memo) {
       const found = memo2.filter((kind) => "notification-center-item" === kind.kind);
@@ -453,32 +451,30 @@ export const NotificationCenterForYou = (panelVariant) => {
         const result2 = NotificationCenterStoreActions.clearNotificationGuildMentions();
       }
     }
-  }, items12);
-  const items13 = [isFocused, tmp20[1]];
+  }, items13);
+  const items14 = [isFocused, tmp20[1]];
   const effect1 = height.useEffect(() => {
     if (isFocused) {
       closure_17(false);
     }
     const result = NotificationCenterItemsActions.setNotificationCenterTabFocused(isFocused);
     return () => isFocused(setting[29]).setNotificationCenterTabFocused(false);
-  }, items13);
-  const items14 = [memo, tmp20[1]];
+  }, items14);
+  const items15 = [memo, tmp20[1]];
   const effect2 = height.useEffect(() => {
     if (memo) {
       closure_17(true);
     }
-  }, items14);
-  obj = { type: null, name: null, properties: null };
+  }, items15);
+  const obj10 = { type: null, name: null, properties: null };
   const obj9 = isFocused(setting[22]);
-  obj.type = isFocused(setting[32]).ImpressionTypes.VIEW;
-  obj.name = isFocused(setting[32]).ImpressionNames.NOTIFICATION_CENTER_LANDING;
-  obj = { empty: 0 === memo2.length };
-  obj.properties = obj;
-  obj1 = { disableTrack: !initialized };
-  const items15 = [initialized];
-  currentNavigationRouteName(setting[31])(obj, obj1, items15);
+  obj10.type = isFocused(setting[32]).ImpressionTypes.VIEW;
+  obj10.name = isFocused(setting[32]).ImpressionNames.NOTIFICATION_CENTER_LANDING;
+  obj10.properties = { empty: 0 === memo2.length };
+  const items16 = [initialized];
+  currentNavigationRouteName(setting[31])(obj10, { disableTrack: !initialized }, items16);
   if (initialized) {
-    obj2 = {
+    const obj13 = {
       items: memo2,
       loadingMore,
       loadMore,
@@ -492,16 +488,16 @@ export const NotificationCenterForYou = (panelVariant) => {
       onAddSuggestionAnimationFinish: callback5,
       panelVariant: flag,
     };
-    let tmp43Result = tmp43(tmp2(tmp3[34]).ForYouItems, obj2);
+    let tmp43Result = tmp43(tmp2(tmp3[34]).ForYouItems, obj13);
   } else {
-    obj3 = { children: null };
+    const obj14 = { children: null };
     const _Array = Array;
     const _Array2 = Array;
-    obj3.children = Array.from(Array(10)).map((item, index) =>
+    obj14.children = Array.from(Array(10)).map((item, index) =>
       stateFromStores3(isFocused(setting[33]).ForYouMentionPlaceholder, {}, index),
     );
-    tmp43Result = tmp43(closure_5, obj3);
-    let arr = Array.from(Array(10));
+    tmp43Result = tmp43(closure_5, obj14);
+    const arr = Array.from(Array(10));
   }
   return tmp43Result;
 };

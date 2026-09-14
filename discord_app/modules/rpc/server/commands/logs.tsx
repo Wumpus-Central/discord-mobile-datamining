@@ -12,15 +12,15 @@ let result = size.fileFinishedImporting("modules/rpc/server/commands/logs.tsx");
 export default {
   [RPCCommands.CAPTURE_LOG]: {
     validation(string) {
-      createRpcJoiSchemaObjectDefault(string);
-      const obj = { level: null, message: null };
-      const requiredResult = obj.required();
+      const obj = createRpcJoiSchemaObjectDefault(string);
+      const obj2 = { level: null, message: null };
+      const requiredResult = createRpcJoiSchemaObjectDefault(string).required();
       const stringResult = string.string();
-      obj.level = string.string().max(10).required();
+      obj2.level = string.string().max(10).required();
       const maxResult = string.string().max(10);
       const stringResult1 = string.string();
-      obj.message = string.string().max(1000).required();
-      return requiredResult.keys(obj);
+      obj2.message = string.string().max(1000).required();
+      return requiredResult.keys(obj2);
     },
     handler(arg0) {
       ({ socket, args } = arg0);

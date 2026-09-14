@@ -15,7 +15,7 @@ export const logMediaAttachmentPlaybackStarted = function logMediaAttachmentPlay
   id,
 ) {
   let tmp = totalDurationSecs;
-  const obj = {
+  const obj2 = {
     guild_id: messageChannel.guild_id,
     channel_id: messageChannel.id,
     channel_type: messageChannel.type,
@@ -31,9 +31,9 @@ export const logMediaAttachmentPlaybackStarted = function logMediaAttachmentPlay
   if (totalDurationSecs == null) {
     tmp = startDurationSecs;
   }
-  obj.start_duration_secs = Math.min(tmp, startDurationSecs);
-  obj.sender_user_id = id;
-  obj.track(AnalyticEvents.MEDIA_ATTACHMENT_PLAYBACK_STARTED, obj);
+  obj2.start_duration_secs = Math.min(tmp, startDurationSecs);
+  obj2.sender_user_id = id;
+  AnalyticsUtilsDefault.track(AnalyticEvents.MEDIA_ATTACHMENT_PLAYBACK_STARTED, obj2);
 };
 export const logMediaAttachmentPlaybackEnded = function logMediaAttachmentPlaybackEnded(
   messageId,
@@ -44,7 +44,7 @@ export const logMediaAttachmentPlaybackEnded = function logMediaAttachmentPlayba
   found,
 ) {
   let tmp = totalDurationSecs;
-  const obj = {
+  const obj2 = {
     message_id: messageId,
     total_duration_secs: totalDurationSecs,
     end_duration_secs: null,
@@ -55,9 +55,9 @@ export const logMediaAttachmentPlaybackEnded = function logMediaAttachmentPlayba
   if (totalDurationSecs == null) {
     tmp = endDurationSecs;
   }
-  obj.end_duration_secs = Math.min(tmp, endDurationSecs);
-  obj.sender_user_id = id;
-  obj.duration_listening_secs = durationListeningSecs;
-  obj.type = found.content_type;
-  obj.track(AnalyticEvents.MEDIA_ATTACHMENT_PLAYBACK_ENDED, obj);
+  obj2.end_duration_secs = Math.min(tmp, endDurationSecs);
+  obj2.sender_user_id = id;
+  obj2.duration_listening_secs = durationListeningSecs;
+  obj2.type = found.content_type;
+  AnalyticsUtilsDefault.track(AnalyticEvents.MEDIA_ATTACHMENT_PLAYBACK_ENDED, obj2);
 };

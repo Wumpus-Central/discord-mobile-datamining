@@ -81,7 +81,7 @@ function handleLoginSuccess() {
 function handleCacheLoadedLazyNoCache() {
   c9 = true;
 }
-let obj = null;
+let lastChannel = null;
 const bound = Math.max(25, 25, 1);
 let extendedMemoryLru = new fn(7583).ExtendedMemoryLru(750, 500);
 let global = extendedMemoryLru;
@@ -104,12 +104,12 @@ class SaveableChannelsStore extends tmp3 {
       THREAD_DELETE: handleThreadDelete,
       THREAD_UPDATE: handleThreadUpdate,
     };
-    tmp = new tmp(obj, handleThreadDelete, new.target, tmp);
-    closure_0 = tmp;
-    return tmp;
+    tmp1 = new tmp(obj, handleThreadDelete, new.target, tmp);
+    closure_0 = tmp1;
+    return tmp1;
   }
 }
-let prototype = SaveableChannelsStore.prototype;
+const prototype = SaveableChannelsStore.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(ChannelStore);
   this.waitFor(SelectedChannelStore);
@@ -160,25 +160,25 @@ prototype["getSaveableChannels"] = function getSaveableChannels() {
     let items1 = tmp9;
   } else {
     items1 = [];
-    let arraySpreadResult = HermesBuiltin.arraySpread(mapped, 0);
-    arraySpreadResult = HermesBuiltin.arraySpread(global.values(), arraySpreadResult);
+    HermesBuiltin.arraySpread(global.values(), HermesBuiltin.arraySpread(mapped, 0));
+    const arraySpreadResult = HermesBuiltin.arraySpread(mapped, 0);
   }
   return items1;
 };
 prototype["takeSnapshot"] = function takeSnapshot() {
-  let data = { version: SaveableChannelsStore.LATEST_SNAPSHOT_VERSION, data: null };
-  data = { channels: null, penalized: [...lru.keys()], lastChannel: data };
+  lastChannel = { version: SaveableChannelsStore.LATEST_SNAPSHOT_VERSION, data: null };
+  const obj2 = { channels: null, penalized: [...lru.keys()], lastChannel };
   const items = [...global.allValues()];
-  data.channels = items.filter((fallback) => !fallback.fallback);
-  data.data = data;
-  return data;
+  obj2.channels = items.filter((fallback) => !fallback.fallback);
+  lastChannel.data = obj2;
+  return lastChannel;
 };
 SaveableChannelsStore["mergeSnapshot"] = function mergeSnapshot(snapshot) {
-  obj = global;
+  let obj = global;
   const extendedMemoryLru = new ExtendedMemoryLru.ExtendedMemoryLru(global.primaryCapacity, global.extendedCapacity);
   global = extendedMemoryLru;
   lru = new Lru.Lru(lru.capacity);
-  let lastChannel = obj;
+  lastChannel = obj;
   if (obj == null) {
     lastChannel = snapshot.lastChannel;
   }
@@ -210,7 +210,7 @@ SaveableChannelsStore["recordChannel"] = function recordChannel(id) {
       if (guild_id == null) {
         guild_id = null;
       }
-      obj = { guildId: guild_id, channelId: id, channelType: basicChannel.type };
+      const obj = { guildId: guild_id, channelId: id, channelType: basicChannel.type };
       global.put(id, obj);
       if (tmp8Result.isLimitedChannel(basicChannel)) {
         if (null != lru.put(id, null)) {
@@ -238,7 +238,7 @@ SaveableChannelsStore["dropUnreachableChannels"] = function dropUnreachableChann
   const keys = global.keys();
   for (const item10008 of keys) {
     let basicChannel = ChannelStore.getBasicChannel(item10008);
-    obj = isReadableChannel;
+    let obj = isReadableChannel;
     if (!obj.isReadableChannel(basicChannel)) {
       let deleteChannelResult = SaveableChannelsStore.deleteChannel(item10008);
     }
@@ -250,7 +250,7 @@ SaveableChannelsStore["deleteUnreadableGuildChannels"] = function deleteUnreadab
   for (const item10009 of values) {
     let isReadableChannelIdResult = arg0 !== item10009.guildId;
     if (!isReadableChannelIdResult) {
-      obj = isReadableChannel;
+      let obj = isReadableChannel;
       isReadableChannelIdResult = obj.isReadableChannelId(item10009.channelId);
     }
     if (!isReadableChannelIdResult) {
@@ -265,7 +265,7 @@ SaveableChannelsStore["replaceLru"] = function replaceLru(arg0) {
 SaveableChannelsStore.displayName = "SaveableChannelsStore";
 SaveableChannelsStore.LATEST_SNAPSHOT_VERSION = 1;
 let closure_129_0;
-obj = {
+lastChannel = {
   CACHE_LOADED_LAZY_NO_CACHE: handleCacheLoadedLazyNoCache,
   CACHE_LOADED_LAZY: null,
   CHANNEL_DELETE: null,
@@ -281,16 +281,16 @@ class CACHE_LOADED_LAZY {
     return closure_0.loadCache();
   }
 }
-obj.CACHE_LOADED_LAZY = CACHE_LOADED_LAZY;
-obj.CHANNEL_DELETE = handleChannelDelete;
-obj.CHANNEL_UPDATES = handleChannelUpdates;
-obj.CONNECTION_OPEN_SUPPLEMENTAL = handleConnectionOpenSupplemental;
-obj.GUILD_DELETE = handleGuildDelete;
-obj.LOGIN_SUCCESS = handleLoginSuccess;
-obj.THREAD_DELETE = handleThreadDelete;
-obj.THREAD_UPDATE = handleThreadUpdate;
-prototype = new prototype(
-  obj,
+lastChannel.CACHE_LOADED_LAZY = CACHE_LOADED_LAZY;
+lastChannel.CHANNEL_DELETE = handleChannelDelete;
+lastChannel.CHANNEL_UPDATES = handleChannelUpdates;
+lastChannel.CONNECTION_OPEN_SUPPLEMENTAL = handleConnectionOpenSupplemental;
+lastChannel.GUILD_DELETE = handleGuildDelete;
+lastChannel.LOGIN_SUCCESS = handleLoginSuccess;
+lastChannel.THREAD_DELETE = handleThreadDelete;
+lastChannel.THREAD_UPDATE = handleThreadUpdate;
+const prototype1 = new prototype(
+  lastChannel,
   500,
   tmp,
   Object,
@@ -305,11 +305,11 @@ prototype = new prototype(
   prototype,
   new.target,
 );
-closure_129_0 = prototype;
+closure_129_0 = prototype1;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/app_database/modules/messages/SaveableChannelsStore.tsx");
 
-export default prototype;
+export default prototype1;
 export const MAXIMUM_MESSAGES_PER_CHANNEL_DM = 25;
 export const MAXIMUM_MESSAGES_PER_CHANNEL_NON_DM = 25;
 export const MAXIMUM_MESSAGES_PER_CHANNEL_DEFAULT = 1;

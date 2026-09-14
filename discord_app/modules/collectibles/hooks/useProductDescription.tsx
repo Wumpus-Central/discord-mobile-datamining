@@ -15,8 +15,8 @@ function getBundleDescription(bundledProducts) {
     if (bundledProducts != null) {
       length = bundledProducts.length;
     }
-    let obj = { num: length };
-    return intl5.formatToPlainString(util.t["/0Yndu"], obj);
+    const obj2 = { num: length };
+    return intl5.formatToPlainString(util.t["/0Yndu"], obj2);
   } else {
     let bundledProducts1 = bundledProducts.bundledProducts;
     if (bundledProducts1 == null) {
@@ -28,16 +28,16 @@ function getBundleDescription(bundledProducts) {
       let type = item10012.type;
       if (CollectiblesItemType.CollectiblesItemType.AVATAR_DECORATION === type) {
         let intl2 = util.intl;
-        obj = { itemName: item10012.name };
-        let arr = items.push(intl2.formatToPlainString(util.t.Ntv9Jt, obj));
+        let obj3 = { itemName: item10012.name };
+        let arr = items.push(intl2.formatToPlainString(util.t.Ntv9Jt, obj3));
       } else if (CollectiblesItemType.CollectiblesItemType.PROFILE_EFFECT === type) {
         let intl = util.intl;
-        obj = { itemName: item10012.name };
-        arr = items.push(intl.formatToPlainString(util.t["3Y8q7a"], obj));
+        let obj = { itemName: item10012.name };
+        let arr2 = items.push(intl.formatToPlainString(util.t["3Y8q7a"], obj));
       } else if (CollectiblesItemType.CollectiblesItemType.NAMEPLATE === type) {
         let intl6 = util.intl;
-        let obj1 = { itemName: item10012.name };
-        let arr1 = items.push(intl6.formatToPlainString(util.t["2keXky"], obj1));
+        let obj4 = { itemName: item10012.name };
+        let arr3 = items.push(intl6.formatToPlainString(util.t["2keXky"], obj4));
         flag2 = true;
       }
       continue;
@@ -46,13 +46,13 @@ function getBundleDescription(bundledProducts) {
     if (flag2) {
       const replaced = join(", ").replace(/, ([^,]*)$/, " & $1");
       const intl4 = util.intl;
-      const obj2 = { joinedItems: replaced };
-      return intl4.formatToPlainString(util.t.Ofrqj6, obj2);
+      const obj5 = { joinedItems: replaced };
+      return intl4.formatToPlainString(util.t.Ofrqj6, obj5);
     } else {
       const joined = join(" & ");
       const intl3 = util.intl;
-      const obj3 = { joinedItems: joined };
-      return intl3.formatToPlainString(util.t.Ofrqj6, obj3);
+      const obj6 = { joinedItems: joined };
+      return intl3.formatToPlainString(util.t.Ofrqj6, obj6);
     }
   }
 }

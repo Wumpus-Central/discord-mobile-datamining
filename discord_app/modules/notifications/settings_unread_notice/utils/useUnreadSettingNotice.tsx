@@ -3,6 +3,8 @@ import UnreadSettingNoticeStore2Default from "../UnreadSettingNoticeStore2.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
+const require = globalThis.__r;
+
 const require = fn;
 let closure_5 = fn(1961).CHANNEL_ELIGIBLE_FOR_UNREAD_SETTING;
 const size = fn(2);
@@ -12,15 +14,15 @@ const result = size.fileFinishedImporting(
 
 export default function useUnreadSettingNotice(id) {
   _require = id;
-  let obj = require("notifications/NotificationUtils");
-  const shouldUseNewNotificationSystem = obj.useShouldUseNewNotificationSystem("useShouldRenderBanner");
-  const tmp2 = _slicedToArray(noop.useState(""), 2);
-  first = tmp2[0];
-  _slicedToArray = tmp2[1];
+  const shouldUseNewNotificationSystem = require("notifications/NotificationUtils").useShouldUseNewNotificationSystem(
+    "useShouldRenderBanner",
+  );
+  [first, _slicedToArray] = noop.useState("");
   const items = [id.id];
   const effect = noop.useEffect(() => {
     closure_3("");
   }, items);
+  let obj = require("notifications/NotificationUtils");
   const items1 = [shouldUseNewNotificationSystem(first[5])];
   const items2 = [
     first,
@@ -43,6 +45,6 @@ export default function useUnreadSettingNotice(id) {
       closure_3(id.id);
     }
   }, items2);
-  obj = { showUnreadsNotice: first === id.id, clearUnreadsNotice: noop.useCallback(() => closure_3(""), []) };
-  return obj;
+  const obj2 = require("initialize");
+  return { showUnreadsNotice: first === id.id, clearUnreadsNotice: noop.useCallback(() => closure_3(""), []) };
 }

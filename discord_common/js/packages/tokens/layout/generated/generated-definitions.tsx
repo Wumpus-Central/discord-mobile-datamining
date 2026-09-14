@@ -1,7 +1,7 @@
 // discord_common/js/packages/tokens/layout/generated/generated-definitions.tsx
 import size from "../../../../../../_runtime/metro/00002__.js";
 
-let obj = {
+const obj = {
   SPACE_0: 0,
   SPACE_4: 4,
   SPACE_6: 6,
@@ -68,8 +68,13 @@ let obj = {
   BREAKPOINT_XXL: "var(--breakpoint-xxl)",
   BREAKPOINT_MAX: "var(--breakpoint-max)",
 };
-obj = {
-  SPACE_0: null,
+const obj2 = {
+  SPACE_0: {
+    css: "0px",
+    resolve() {
+      return 0;
+    },
+  },
   SPACE_4: {
     css: "4px",
     resolve() {
@@ -263,14 +268,7 @@ obj = {
     },
   },
 };
-obj = {
-  css: "0px",
-  resolve() {
-    return 0;
-  },
-};
-obj.SPACE_0 = obj;
-const obj1 = {
+const obj4 = {
   PX_0: 0,
   PX_4: 4,
   PX_6: 6,
@@ -297,6 +295,6 @@ const result = size.fileFinishedImporting(
 );
 
 export const Layout = obj;
-export const Space = obj;
-export const SpacePx = obj1;
-export const _private = { Layout: obj, Space: obj, SpacePx: obj1 };
+export const Space = obj2;
+export const SpacePx = obj4;
+export const _private = { Layout: obj, Space: obj2, SpacePx: obj4 };

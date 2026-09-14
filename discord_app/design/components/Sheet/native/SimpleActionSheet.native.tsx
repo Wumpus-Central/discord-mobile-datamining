@@ -19,42 +19,42 @@ class SimpleActionSheet {
       ({ icon: obj.leading, title: obj.title, subtitle: obj.subtitle } = header);
       tmp5Result = null;
       if (null != header.onClose) {
-        obj = { onPress: null };
-        obj.onPress = header.onClose;
-        tmp5Result = tmp5(tmp2(tmp3[4]).ActionSheetCloseButton, obj);
+        obj1 = { onPress: null };
+        obj1.onPress = header.onClose;
+        tmp5Result = tmp5(tmp2(tmp3[4]).ActionSheetCloseButton, obj1);
       }
       obj.trailing = tmp5Result;
       tmp5Result1 = tmp5(tmp2(tmp3[3]).BottomSheetTitleHeader, obj);
     }
-    obj1 = { children: null };
+    obj5 = { children: null };
     items = [,];
     items[0] = tmp5Result1;
-    obj2 = {
+    obj6 = {
       hasIcons: global.hasIcons,
       children: options.map((item, index) => {
         ({ icon, IconComponent, onPress: closure_0 } = item);
         ({ label, isDestructive } = item);
         if (null != icon) {
-          let obj = { source: icon, IconComponent };
+          const obj = { source: icon, IconComponent };
           const tmp = closure_1_2(ActionSheetRow.ActionSheetRow.Icon, obj);
         }
-        obj = { icon: tmp, variant: null, label: null, onPress: null };
+        const obj2 = { icon: tmp, variant: null, label: null, onPress: null };
         let str = "default";
         if (isDestructive) {
           str = "danger";
         }
-        obj.variant = str;
-        obj.label = label;
-        obj.onPress = function onPress() {
+        obj2.variant = str;
+        obj2.label = label;
+        obj2.onPress = function onPress() {
           require();
           closure_1_0();
         };
-        return closure_1_2(ActionSheetRow.ActionSheetRow, obj, index);
+        return closure_1_2(ActionSheetRow.ActionSheetRow, obj2, index);
       }),
     };
-    items[1] = jsx(tmp2(tmp3[5]).ActionSheetRow.Group, obj2);
-    obj1.children = items;
-    return tmp(hideActionSheet(closure_1[2]).ActionSheet, obj1);
+    items[1] = jsx(tmp2(tmp3[5]).ActionSheetRow.Group, obj6);
+    obj5.children = items;
+    return tmp(hideActionSheet(closure_1[2]).ActionSheet, obj5);
   }
 }
 const jsxProd = fn(21);

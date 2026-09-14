@@ -4,6 +4,8 @@ import noop from "../../../../_runtime/metro/00019__.js";
 import CollectiblesCategoryStore from "../CollectiblesCategoryStore.tsx";
 import CollectiblesPurchaseStore from "../CollectiblesPurchaseStore.tsx";
 
+const require = globalThis.__r;
+
 require = fn;
 const isProfileEffectRecord = fn(7651).isProfileEffectRecord;
 const size = fn(2);

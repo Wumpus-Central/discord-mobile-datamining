@@ -250,7 +250,7 @@ const items1 = [
 const regExp2 = new RegExp(items1.join("|"), "gu");
 obj.matcher = regExp2;
 const items2 = [obj, , , , ,];
-obj = { character: "t", matcher: null };
+const obj2 = { character: "t", matcher: null };
 const items3 = [
   "T",
   "\u{1D42D}",
@@ -268,9 +268,9 @@ const items3 = [
   "\u{1D69D}",
 ];
 const regExp3 = new RegExp(items3.join("|"), "gu");
-obj.matcher = regExp3;
-items2[1] = obj;
-obj = { character: "p", matcher: null };
+obj2.matcher = regExp3;
+items2[1] = obj2;
+const obj3 = { character: "p", matcher: null };
 const items4 = [
   "P",
   "\u03C1",
@@ -305,9 +305,9 @@ const items4 = [
   "\u048F",
 ];
 const regExp4 = new RegExp(items4.join("|"), "gu");
-obj.matcher = regExp4;
-items2[2] = obj;
-const obj1 = { character: "s", matcher: null };
+obj3.matcher = regExp4;
+items2[2] = obj3;
+const obj4 = { character: "s", matcher: null };
 const items5 = [
   "S",
   "\u01BD",
@@ -332,9 +332,9 @@ const items5 = [
   "\uFF53",
 ];
 const regExp5 = new RegExp(items5.join("|"), "gu");
-obj1.matcher = regExp5;
-items2[3] = obj1;
-const obj2 = { character: ":", matcher: null };
+obj4.matcher = regExp5;
+items2[3] = obj4;
+const obj5 = { character: ":", matcher: null };
 const items6 = [
   "\u02D0",
   "\u02F8",
@@ -357,9 +357,9 @@ const items6 = [
   "\u037E",
 ];
 const regExp6 = new RegExp(items6.join("|"), "gu");
-obj2.matcher = regExp6;
-items2[4] = obj2;
-const obj3 = { character: "/", matcher: null };
+obj5.matcher = regExp6;
+items2[4] = obj5;
+const obj6 = { character: "/", matcher: null };
 const items7 = [
   "\u1735",
   "\u2041",
@@ -377,8 +377,8 @@ const items7 = [
   "\u{1D23A}",
 ];
 const regExp7 = new RegExp(items7.join("|"), "gu");
-obj3.matcher = regExp7;
-items2[5] = obj3;
+obj6.matcher = regExp7;
+items2[5] = obj6;
 let closure_5 = [
   0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0,
   0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 0, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,

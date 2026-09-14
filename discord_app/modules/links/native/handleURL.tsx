@@ -19,8 +19,8 @@ let closure_9 = async function _handleURL(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      let obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -33,8 +33,8 @@ let closure_9 = async function _handleURL(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c8 = 3;
-          obj = { value, done: true };
-          return obj;
+          let obj3 = { value, done: true };
+          return obj3;
         } else {
           closure_4 = tmp3;
           closure_3 = tmp5;
@@ -42,16 +42,16 @@ let closure_9 = async function _handleURL(arg0) {
           closure_131_3 = undefined;
           closure_131_0 = closure_0;
           closure_131_1 = closure_1;
-          let obj1 = dependencyMap;
+          let obj4 = dependencyMap;
           if (dependencyMap === undefined) {
-            obj1 = {};
+            obj4 = {};
           }
-          let flag = obj1.allowExternal;
+          let flag = obj4.allowExternal;
           if (flag === undefined) {
             flag = true;
           }
           closure_131_2 = flag;
-          let flag2 = obj1.forceExternalBrowser;
+          let flag2 = obj4.forceExternalBrowser;
           if (flag2 === undefined) {
             flag2 = false;
           }
@@ -79,8 +79,8 @@ let closure_9 = async function _handleURL(arg0) {
                   if (browserManagerSelectedBrowser !== constants.IN_APP) {
                     SAFARI = browserManagerSelectedBrowser;
                   } else {
-                    closure_0(1150).isIOS() ? constants.SAFARI : constants.CHROME;
-                    const tmp8Result = closure_0(1150);
+                    closure_0(1363).isIOS() ? constants.SAFARI : constants.CHROME;
+                    const tmp8Result = closure_0(1363);
                   }
                 }
                 const obj3 = closure_0(4601);
@@ -94,7 +94,7 @@ let closure_9 = async function _handleURL(arg0) {
                   );
                 });
                 const obj7 = closure_0(4601);
-                let isIOSResult = closure_0(1150).isIOS();
+                let isIOSResult = closure_0(1363).isIOS();
                 if (isIOSResult) {
                   isIOSResult = open.isOpen();
                 }
@@ -102,7 +102,7 @@ let closure_9 = async function _handleURL(arg0) {
                   closure_1(4603).hideAllActionSheets();
                   const tmpResult = closure_1(4603);
                 }
-                const obj8 = closure_0(1150);
+                const obj8 = closure_0(1363);
               } else if (constants.CHROME === SAFARI) {
                 const result1 = closure_0(4601).browserManagerOpenUrl(closure_1_0, constants.CHROME);
                 result1.catch(() => {
@@ -135,34 +135,32 @@ let closure_9 = async function _handleURL(arg0) {
             throw value;
           } else if (arg0 === 2) {
             c8 = 3;
-            let obj2 = { value, done: true };
-            return obj2;
+            let obj5 = { value, done: true };
+            return obj5;
           } else if (closure_131_3) {
             closure_131_4();
           } else {
-            let obj5 = /^[a-zA-Z0-9+-.]+:/;
-            if (!obj5.test(closure_131_0)) {
+            if (!obj6.test(closure_131_0)) {
               closure_131_0 = "https://" + closure_131_0;
             }
-            let obj6 = /^https?:/i;
-            if (obj6.test(closure_131_0)) {
+            if (obj7.test(closure_131_0)) {
               c6 = 1;
-              let obj7 = closure_132_1(closure_132_2[15]);
-              closure_131_5 = obj7.parse(closure_131_0);
+              closure_131_5 = closure_132_1(closure_132_2[15]).parse(closure_131_0);
               closure_131_5.pathname = closure_132_8(closure_131_5.pathname);
               closure_131_5.search = closure_132_8(closure_131_5.search);
               closure_131_5.hash = closure_132_8(closure_131_5.hash);
               let obj8 = closure_132_1(closure_132_2[15]);
-              closure_131_0 = obj8.format(closure_131_5);
+              closure_131_0 = closure_132_1(closure_132_2[15]).format(closure_131_5);
               c6 = 0;
+              const obj9 = closure_132_1(closure_132_2[15]);
             }
             payload = closure_132_1(closure_132_2[16])(closure_131_0).payload;
-            let obj3 = { payload, safe: true };
-            if (!closure_132_1(closure_132_2[17])(obj3)) {
+            const obj10 = { payload, safe: true };
+            if (!closure_132_1(closure_132_2[17])(obj10)) {
               if (closure_131_2) {
                 c7 = 3;
                 c8 = 1;
-                const obj4 = {
+                const obj11 = {
                   value: (function tryHandleUniversalLink(arg0) {
                     closure_0 = arg0;
                     return new Promise((arg0) => {
@@ -182,9 +180,11 @@ let closure_9 = async function _handleURL(arg0) {
                   })(closure_131_0),
                   done: false,
                 };
-                return obj4;
+                return obj11;
               }
             }
+            obj6 = /^[a-zA-Z0-9+-.]+:/;
+            obj7 = /^https?:/i;
           }
         } else if (2 === tmp8) {
           c6 = 0;
@@ -197,14 +197,14 @@ let closure_9 = async function _handleURL(arg0) {
               throw value;
             } else if (arg0 === 2) {
               c8 = 3;
-              obj5 = { value, done: true };
-              return obj5;
+              const obj12 = { value, done: true };
+              return obj12;
             } else {
               closure_131_7 = value;
               if (!closure_131_7) {
                 c7 = 4;
                 c8 = 1;
-                obj6 = {
+                const obj13 = {
                   value: (function tryHandleCustomScheme(arg0) {
                     let arr = arg0;
                     closure_0 = arg0;
@@ -256,7 +256,7 @@ let closure_9 = async function _handleURL(arg0) {
                   })(closure_131_0),
                   done: false,
                 };
-                return obj6;
+                return obj13;
               }
             }
           } else if (4 === tmp8) {
@@ -265,14 +265,14 @@ let closure_9 = async function _handleURL(arg0) {
               throw value;
             } else if (arg0 === 2) {
               c8 = 3;
-              obj7 = { value, done: true };
-              return obj7;
+              const obj14 = { value, done: true };
+              return obj14;
             } else {
               closure_131_8 = value;
               if (!closure_131_8) {
                 c7 = 5;
                 c8 = 1;
-                obj8 = {
+                const obj15 = {
                   value: (function tryHandleWhitelistedURL(arg0) {
                     closure_0 = arg0;
                     function _loop(protocol) {
@@ -324,7 +324,7 @@ let closure_9 = async function _handleURL(arg0) {
                   })(closure_131_0),
                   done: false,
                 };
-                return obj8;
+                return obj15;
               }
             }
           } else if (arg0 === 1) {
@@ -337,7 +337,7 @@ let closure_9 = async function _handleURL(arg0) {
             }
           }
           c8 = 3;
-          obj = { value, done: true };
+          let obj = { value, done: true };
           return obj;
         }
         c8 = 3;

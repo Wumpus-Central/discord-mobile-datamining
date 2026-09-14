@@ -9,33 +9,33 @@ let obj = {
   FIRED_DUE_TO_MAX_TIMEOUT: "fired_due_to_max_timeout",
   SKIP_IDLE_CALLBACK_DUE_TO_BACKGROUNDED: "skip_idle_callback_due_to_backgrounded",
 };
-obj = {
+let obj2 = {
   TIME_TO_FIRE_IDLE_CALLBACK: "time_to_fire_idle_callback",
   TIME_TO_QUEUE_EMPTY: "time_to_flush_all_work",
   TIME_OVER_DEADLINE: "time_over_deadline",
   DEADLINE_INITIAL_TIME_REMAINING: "initial_time_of_deadline",
 };
-obj = {
+let obj3 = {
   COUNT_DISPATCHES_LEFT_AFTER_YIELD: "count_dispatches_left_after_yield",
   COUNT_FLUSH_BEFORE_QUEUE_EMPTY: "count_flush_before_queue_empty",
   COUNT_INITIAL_DISPATCHS_LENGTH: "count_initial_dispatches_length",
 };
 let closure_3 = Object.freeze({
-  [obj.TIME_TO_FIRE_IDLE_CALLBACK]: null,
-  [obj.TIME_TO_QUEUE_EMPTY]: null,
-  [obj.TIME_OVER_DEADLINE]: null,
-  [obj.DEADLINE_INITIAL_TIME_REMAINING]: null,
+  [obj2.TIME_TO_FIRE_IDLE_CALLBACK]: null,
+  [obj2.TIME_TO_QUEUE_EMPTY]: null,
+  [obj2.TIME_OVER_DEADLINE]: null,
+  [obj2.DEADLINE_INITIAL_TIME_REMAINING]: null,
 });
 let closure_4 = Object.freeze({
-  [obj.TIME_TO_FIRE_IDLE_CALLBACK]: [0, 0],
-  [obj.TIME_TO_QUEUE_EMPTY]: [0, 0],
-  [obj.TIME_OVER_DEADLINE]: [0, 0],
-  [obj.DEADLINE_INITIAL_TIME_REMAINING]: [0, 0],
+  [obj2.TIME_TO_FIRE_IDLE_CALLBACK]: [0, 0],
+  [obj2.TIME_TO_QUEUE_EMPTY]: [0, 0],
+  [obj2.TIME_OVER_DEADLINE]: [0, 0],
+  [obj2.DEADLINE_INITIAL_TIME_REMAINING]: [0, 0],
 });
 let closure_5 = Object.freeze({
-  [obj.COUNT_FLUSH_BEFORE_QUEUE_EMPTY]: [0, 0],
-  [obj.COUNT_DISPATCHES_LEFT_AFTER_YIELD]: [0, 0],
-  [obj.COUNT_INITIAL_DISPATCHS_LENGTH]: [0, 0],
+  [obj3.COUNT_FLUSH_BEFORE_QUEUE_EMPTY]: [0, 0],
+  [obj3.COUNT_DISPATCHES_LEFT_AFTER_YIELD]: [0, 0],
+  [obj3.COUNT_INITIAL_DISPATCHS_LENGTH]: [0, 0],
 });
 let closure_6 = Object.freeze({
   [obj.LONGER_DISPATCH]: 0,
@@ -155,6 +155,6 @@ prototype["generateTelemetry"] = function generateTelemetry() {
 };
 
 export const WorkSchedulerTelemetryEvent = obj;
-export const WorkSchedulerTelemetryTiming = obj;
-export const WorkSchedulerTelemetryMeasurement = obj;
+export const WorkSchedulerTelemetryTiming = obj2;
+export const WorkSchedulerTelemetryMeasurement = obj3;
 export { WorkSchedulerTelemetry };

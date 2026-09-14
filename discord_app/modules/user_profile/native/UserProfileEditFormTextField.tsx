@@ -19,7 +19,7 @@ export default function UserProfileEditFormTextField(inputRef) {
     inputRef,
     Object.assign({ label: 0, description: 0, errorMessage: 0, containerStyle: 0, numberOfLines: 0, inputRef: 0 }),
   );
-  let obj = { label, description, errorMessage, containerStyle, status: null };
+  const obj = { label, description, errorMessage, containerStyle, status: null };
   let str;
   if (null != errorMessage) {
     str = "error";
@@ -27,13 +27,13 @@ export default function UserProfileEditFormTextField(inputRef) {
   obj.status = str;
   const merged1 = Object.assign(merged);
   if (numberOfLines > 1) {
-    obj = { ref: inputRef };
+    const obj2 = { ref: inputRef };
     const merged2 = Object.assign(obj);
     let tmp9 = jsx(TextArea.TextArea, { ref: inputRef });
   } else {
-    obj = { ref: inputRef };
+    const obj3 = { ref: inputRef };
     const merged3 = Object.assign(obj);
-    obj.isClearable = true;
+    obj3.isClearable = true;
     tmp9 = jsx(TextInput.TextInput, { ref: inputRef });
   }
   return tmp9;

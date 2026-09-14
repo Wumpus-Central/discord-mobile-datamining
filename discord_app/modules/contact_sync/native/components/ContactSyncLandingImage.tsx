@@ -1,6 +1,6 @@
 // discord_app/modules/contact_sync/native/components/ContactSyncLandingImage.tsx
-import _modDef12819 from "../../../../../_runtime/metro/12819__.js";
 import _modDef12820 from "../../../../../_runtime/metro/12820__.js";
+import _modDef12821 from "../../../../../_runtime/metro/12821__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 get_ActivityIndicator = fn(17);
@@ -19,16 +19,16 @@ const result = size.fileFinishedImporting("modules/contact_sync/native/component
 
 export default function ContactSyncLandingImage() {
   const tmp = closure_7();
-  let obj = { children: null };
-  obj = { style: tmp.leftContainer, children: null };
-  obj = { resizeMode: "contain", style: tmp.landingImageLeft, source: _modDef12819 };
-  obj.children = React4(React2, obj);
-  const items = [React4(React3, obj)];
-  const obj1 = {
-    style: tmp.rightContainer,
-    children: React4(React2, { resizeMode: "contain", style: tmp.landingImageRight, source: _modDef12820 }),
+  const obj = { children: null };
+  const obj2 = {
+    style: tmp.leftContainer,
+    children: React4(React2, { resizeMode: "contain", style: tmp.landingImageLeft, source: _modDef12820 }),
   };
-  items[1] = React4(React3, obj1);
+  const items = [React4(React3, obj2)];
+  const obj4 = { style: tmp.rightContainer, children: null };
+  const obj3 = { resizeMode: "contain", style: tmp.landingImageLeft, source: _modDef12820 };
+  obj4.children = React4(React2, { resizeMode: "contain", style: tmp.landingImageRight, source: _modDef12821 });
+  items[1] = React4(React3, obj4);
   obj.children = items;
   return timestampProducer(hasOwnProperty, obj);
 }

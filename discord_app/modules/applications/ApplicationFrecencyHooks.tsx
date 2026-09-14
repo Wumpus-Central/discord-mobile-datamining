@@ -3,6 +3,8 @@ import SnowflakeUtilsDefault from "../../utils/SnowflakeUtils.tsx";
 import noop from "../../../_runtime/metro/00019__.js";
 import ApplicationFrecencyStore from "ApplicationFrecencyStore.tsx";
 
+const require = globalThis.__r;
+
 const require = fn;
 const UserSettingsTypes = fn(1084).UserSettingsTypes;
 const size = fn(2);
@@ -52,12 +54,12 @@ export const useSortApplicationsViaFrecency = function useSortApplicationsViaFre
   const memo2 = memo.useMemo(() => {
     if (memo1 != null) {
       const item = memo1.forEach((id) => {
-        let obj = closure_1(stateFromStores[5]);
+        const obj = closure_1(stateFromStores[5]);
         if (null == closure_1_2.getEntry(id.application.id)) {
-          obj = { timestamp: extractTimestampResult };
-          closure_1_2.track(id.application.id, obj);
+          const obj3 = { timestamp: extractTimestampResult };
+          closure_1_2.track(id.application.id, obj3);
         }
-        extractTimestampResult = obj.extractTimestamp(id.id);
+        extractTimestampResult = closure_1(stateFromStores[5]).extractTimestamp(id.id);
       });
     }
     stateFromStores.compute();

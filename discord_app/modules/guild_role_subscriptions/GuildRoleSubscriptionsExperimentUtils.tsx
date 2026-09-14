@@ -1,6 +1,8 @@
 // discord_app/modules/guild_role_subscriptions/GuildRoleSubscriptionsExperimentUtils.tsx
 import GuildStore from "../../stores/GuildStore.tsx";
 
+const require = globalThis.__r;
+
 const require = fn;
 const GuildFeatures = fn(1074).GuildFeatures;
 let items = [, ,];

@@ -1,5 +1,4 @@
 // discord_app/modules/auth/native/images/flags.tsx
-import _mod15510 from "../../../../../_runtime/metro/15510__.js";
 import _mod15511 from "../../../../../_runtime/metro/15511__.js";
 import _mod15512 from "../../../../../_runtime/metro/15512__.js";
 import _mod15513 from "../../../../../_runtime/metro/15513__.js";
@@ -30,40 +29,41 @@ import _mod15537 from "../../../../../_runtime/metro/15537__.js";
 import _mod15538 from "../../../../../_runtime/metro/15538__.js";
 import _mod15539 from "../../../../../_runtime/metro/15539__.js";
 import _mod15540 from "../../../../../_runtime/metro/15540__.js";
+import _mod15541 from "../../../../../_runtime/metro/15541__.js";
 import size from "../../../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/auth/native/images/flags.tsx");
 
 export const flags = {
-  bg: _mod15510,
-  cs: _mod15511,
-  da: _mod15512,
-  de: _mod15513,
-  el: _mod15514,
-  "en-GB": _mod15515,
-  "en-US": _mod15516,
-  "es-ES": _mod15517,
-  "es-419": _mod15518,
-  fi: _mod15519,
-  fr: _mod15520,
-  hi: _mod15521,
-  hr: _mod15522,
-  hu: _mod15523,
-  it: _mod15524,
-  ja: _mod15525,
-  ko: _mod15526,
-  lt: _mod15527,
-  nl: _mod15528,
-  no: _mod15529,
-  pl: _mod15530,
-  "pt-BR": _mod15531,
-  ro: _mod15532,
-  ru: _mod15533,
-  "sv-SE": _mod15534,
-  th: _mod15535,
-  tr: _mod15536,
-  uk: _mod15537,
-  vi: _mod15538,
-  "zh-CN": _mod15539,
-  "zh-TW": _mod15540,
+  bg: _mod15511,
+  cs: _mod15512,
+  da: _mod15513,
+  de: _mod15514,
+  el: _mod15515,
+  "en-GB": _mod15516,
+  "en-US": _mod15517,
+  "es-ES": _mod15518,
+  "es-419": _mod15519,
+  fi: _mod15520,
+  fr: _mod15521,
+  hi: _mod15522,
+  hr: _mod15523,
+  hu: _mod15524,
+  it: _mod15525,
+  ja: _mod15526,
+  ko: _mod15527,
+  lt: _mod15528,
+  nl: _mod15529,
+  no: _mod15530,
+  pl: _mod15531,
+  "pt-BR": _mod15532,
+  ro: _mod15533,
+  ru: _mod15534,
+  "sv-SE": _mod15535,
+  th: _mod15536,
+  tr: _mod15537,
+  uk: _mod15538,
+  vi: _mod15539,
+  "zh-CN": _mod15540,
+  "zh-TW": _mod15541,
 };

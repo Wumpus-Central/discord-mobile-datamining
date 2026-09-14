@@ -17,19 +17,18 @@ class GuildMemberSafetyPagination {
       if (null == acc[sum]) {
         acc[sum] = [];
       }
-      let arr = acc[sum];
-      arr = arr.push(userId);
+      acc[sum].push(userId);
       return acc;
     };
     obj.guildId = global;
-    obj = {
+    obj1 = {
       pageSize: closure_4[0],
       currentPage: 1,
       continuationToken: null,
       sort: closure_0(closure_1[2]).OrderBy.ORDER_BY_UNSPECIFIED,
       elasticSearchCursor: null,
     };
-    obj._paginationState = obj;
+    obj._paginationState = obj1;
     obj._version = 0;
     tmp = closure_2(obj._initPaginationFromRawMembers(fn), 2);
     [obj._sortedMemberIds, obj._cachedPaginationChunks] = tmp;
@@ -131,7 +130,7 @@ prototype["updatePaginationState"] = function updatePaginationState(pageSize) {
   return items;
 };
 prototype["updateSortedMembers"] = function updateSortedMembers(arr) {
-  [this._sortedMemberIds, this._cachedPaginationChunks] = _slicedToArray(this._initPaginationFromRawMembers(arr), 2);
+  [this._sortedMemberIds, this._cachedPaginationChunks] = this._initPaginationFromRawMembers(arr);
   this._version = this._version + 1;
   return true;
 };

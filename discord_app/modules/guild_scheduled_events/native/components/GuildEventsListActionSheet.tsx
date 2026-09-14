@@ -21,23 +21,22 @@ function GuildEventsListHeader(arg0) {
     const intl = guild(1114).intl;
     formatToPlainStringResult = intl.string(guild(1114).t.tlopTM);
   }
-  obj = { title: formatToPlainStringResult, trailing: null };
+  let obj2 = { title: formatToPlainStringResult, trailing: null };
   if (tmp3Result) {
-    obj = { accessibilityLabel: null, label: null, onPress: null };
+    let obj3 = { accessibilityLabel: null, label: null, onPress: null };
     const intl3 = guild(1114).intl;
-    obj.accessibilityLabel = intl3.string(guild(1114).t["60lJ0C"]);
+    obj3.accessibilityLabel = intl3.string(guild(1114).t["60lJ0C"]);
     const intl4 = guild(1114).intl;
-    obj.label = intl4.string(guild(1114).t.NzROFF);
-    obj.onPress = function onPress() {
+    obj3.label = intl4.string(guild(1114).t.NzROFF);
+    obj3.onPress = function onPress() {
       if (closure_1) {
-        let obj = GuildScheduledEventModalActionCreators;
-        let result = obj.closeGuildEventListActionSheet();
-        obj = {
+        let result = GuildScheduledEventModalActionCreators.closeGuildEventListActionSheet();
+        const obj3 = {
           onClose() {
             const result = guild(dependencyMap[12]).openGuildEventListActionSheet(closure_1_0);
           },
         };
-        const result1 = GuildScheduledEventModalActionCreators.openCreateOrEditGuildEventModal(guild, obj);
+        const result1 = GuildScheduledEventModalActionCreators.openCreateOrEditGuildEventModal(guild, obj3);
       }
     };
     tmp3Result = jsx(guild(9848).ActionSheetHeaderPressableText, {
@@ -46,7 +45,7 @@ function GuildEventsListHeader(arg0) {
       onPress: null,
     });
   }
-  obj.trailing = tmp3Result;
+  obj2.trailing = tmp3Result;
   return jsx(guild(7252).BottomSheetTitleHeader, { title: formatToPlainStringResult, trailing: null });
 }
 const View = fn(17).View;
@@ -76,19 +75,21 @@ export default function GuildEventsListActionSheet(guild) {
     const result = guild(9828).closeGuildEventListActionSheet();
   }, []);
   const callback1 = noop.useCallback((eventId, recurrenceId) => {
-    const obj = {
+    let result = guild_scheduled_events_GuildScheduledEventModalActionCreators.openGuildEventDetails({
       eventId: eventId.id,
       event: eventId,
       recurrenceId,
       onClose() {
         const result = guild(9828).openGuildEventListActionSheet(closure_1_0);
       },
-    };
-    let result = obj.openGuildEventDetails(obj);
+    });
   }, items1);
   events(5073)(() => {
-    const obj = { type, guild_id: guild.id, guild_events_count: arr.length };
-    obj.track(AnalyticEvents.OPEN_MODAL, obj);
+    AnalyticsUtilsDefault.track(AnalyticEvents.OPEN_MODAL, {
+      type,
+      guild_id: guild.id,
+      guild_events_count: arr.length,
+    });
   });
   const items2 = [guild.id];
   const effect1 = noop.useEffect(() => {
@@ -106,10 +107,9 @@ export default function GuildEventsListActionSheet(guild) {
   };
   const intl = guild(1114).intl;
   obj.dismissAccessibilityLabel = intl.string(guild(1114).t.VSlyAn);
-  obj = { eventCount: events.length, guild };
   obj.header = <GuildEventsListHeader eventCount={events.length} guild={guild} />;
-  obj = { style: tmp.container, children: null };
-  const obj1 = {
+  const obj3 = { style: tmp.container, children: null };
+  const obj4 = {
     inActionSheet: true,
     events,
     onPressEvent: callback1,
@@ -117,9 +117,10 @@ export default function GuildEventsListActionSheet(guild) {
     guild,
     lastAckedId: null,
   };
+  const obj2 = { eventCount: events.length, guild };
   const ref = noop.useRef(ReadStateStore.ackMessageId(guild.id, ReadStateTypes.GUILD_EVENT));
-  obj1.lastAckedId = events(5667)(ref);
-  obj.children = jsx(events(9936), {
+  obj4.lastAckedId = events(5667)(ref);
+  obj3.children = jsx(events(9936), {
     inActionSheet: true,
     events,
     onPressEvent: callback1,
@@ -128,5 +129,12 @@ export default function GuildEventsListActionSheet(guild) {
     lastAckedId: null,
   });
   obj.children = <View style={tmp.container}>{null}</View>;
-  return jsx(guild(7253).BottomSheet, { style: tmp.container, children: null });
+  return jsx(guild(7253).BottomSheet, {
+    showGradient: true,
+    scrollable: events.length > 0,
+    startExpanded: true,
+    dismissAccessibilityLabel: null,
+    header: null,
+    children: null,
+  });
 }

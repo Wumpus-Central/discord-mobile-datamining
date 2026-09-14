@@ -25,8 +25,7 @@ export default function createUploaderAttachments(uploaderFile) {
       if (str2 == null) {
         str2 = "";
       }
-      let obj = MediaFormatTesters;
-      const isImageFileResult = obj.isImageFile(str);
+      const isImageFileResult = MediaFormatTesters.isImageFile(str);
       const isVideoFileResult = MediaFormatTesters.isVideoFile(str);
       let num = item.progress;
       if (num == null) {
@@ -47,21 +46,21 @@ export default function createUploaderAttachments(uploaderFile) {
       if (!dependencyMap) {
         const tmp7 = rounded;
       }
-      obj = { url: str2, videoUrl: null };
+      const obj5 = { url: str2, videoUrl: null };
       let tmp8;
       if (isVideoFileResult) {
         tmp8 = str2;
       }
-      obj.videoUrl = tmp8;
+      obj5.videoUrl = tmp8;
       const isAudioFileResult = MediaFormatTesters.isAudioFile(str);
       const merged = Object.assign(ExplicitMediaUtils.getAttachmentObscurityDefaults());
-      obj.filename = str;
+      obj5.filename = str;
       let str3 = "";
       if (null != item.size) {
         str3 = item.size.toString();
       }
-      obj.size = str3;
-      obj.showDescription = false;
+      obj5.size = str3;
+      obj5.showDescription = false;
       let num5 = 0;
       if (closure_1_2) {
         num5 = 0;
@@ -69,7 +68,7 @@ export default function createUploaderAttachments(uploaderFile) {
           num5 = item.width;
         }
       }
-      obj.width = num5;
+      obj5.width = num5;
       let num6 = 0;
       if (closure_1_2) {
         num6 = 0;
@@ -77,7 +76,7 @@ export default function createUploaderAttachments(uploaderFile) {
           num6 = item.height;
         }
       }
-      obj.height = num6;
+      obj5.height = num6;
       const intl = util.intl;
       const string = intl.string;
       const t = util.t;
@@ -86,7 +85,7 @@ export default function createUploaderAttachments(uploaderFile) {
       } else {
         stringResult = string(t.IPzNKE);
       }
-      obj.hint = stringResult;
+      obj5.hint = stringResult;
       const intl2 = util.intl;
       const string2 = intl2.string;
       const t2 = util.t;
@@ -95,7 +94,7 @@ export default function createUploaderAttachments(uploaderFile) {
       } else {
         string2Result = string2(t2.fKyfca);
       }
-      obj.role = string2Result;
+      obj5.role = string2Result;
       if (isImageFileResult) {
         let VIDEO = AttachmentType.IMAGE;
       } else if (isVideoFileResult) {
@@ -103,21 +102,21 @@ export default function createUploaderAttachments(uploaderFile) {
       } else {
         VIDEO = isAudioFileResult ? AttachmentType.AUDIO : AttachmentType.OTHER;
       }
-      obj.attachmentType = VIDEO;
-      obj.progress = tmp7;
-      obj.uploaderId = uploaderFile.id;
+      obj5.attachmentType = VIDEO;
+      obj5.progress = tmp7;
+      obj5.uploaderId = uploaderFile.id;
       let str5 = filename.id;
       if (str5 == null) {
         str5 = "";
       }
-      obj.uploaderItemId = str5;
+      obj5.uploaderItemId = str5;
       ({ durationSecs: obj4.durationSecs, waveform: obj4.waveform } = item);
       let uniqueId;
       if (filename instanceof CloudUpload.CloudUpload) {
         uniqueId = filename.uniqueId;
       }
-      obj.id = uniqueId;
-      return obj;
+      obj5.id = uniqueId;
+      return obj5;
     });
   }
   if (mapped == null) {

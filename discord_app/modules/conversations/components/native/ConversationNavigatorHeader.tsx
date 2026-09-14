@@ -32,30 +32,23 @@ export default function ConversationNavigatorHeader(channelId) {
   if (flag === undefined) {
     flag = false;
   }
-  let obj = channelId(504);
+  const tmp = closure_6(flag);
   const items = [ChannelStore];
   const items1 = [channelId];
-  const stateFromStores = obj.useStateFromStores(items, () => ChannelStore.getChannel(channelId), items1);
-  const tmp = closure_6(flag);
-  obj = { style: tmp.container, children: null };
-  obj = {
+  const stateFromStores = channelId(504).useStateFromStores(items, () => ChannelStore.getChannel(channelId), items1);
+  const obj = channelId(504);
+  const obj2 = { style: tmp.container, children: null };
+  const obj3 = {
     title: channelId.title,
     subtitle: useChannelNameDefault(stateFromStores, true),
     variant: "heading-lg/semibold",
     subtitleColor: "text-muted",
   };
-  obj.children = jsx(channelId(7966).GenericHeaderTitle, {
+  obj2.children = jsx(channelId(7966).GenericHeaderTitle, {
     title: channelId.title,
     subtitle: useChannelNameDefault(stateFromStores, true),
     variant: "heading-lg/semibold",
     subtitleColor: "text-muted",
   });
-  return (
-    <View
-      title={channelId.title}
-      subtitle={useChannelNameDefault(stateFromStores, true)}
-      variant="heading-lg/semibold"
-      subtitleColor="text-muted"
-    />
-  );
+  return <View style={tmp.container}>{null}</View>;
 }

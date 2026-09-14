@@ -3,6 +3,8 @@ import AVError from "../av_errors/AVError.tsx";
 import AuthenticationStore from "../../../stores/AuthenticationStore.tsx";
 import AVErrorStore from "../av_errors/AVErrorStore.tsx";
 
+const require = globalThis.__r;
+
 require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/errors/hooks/useCameraEncodeError.tsx");

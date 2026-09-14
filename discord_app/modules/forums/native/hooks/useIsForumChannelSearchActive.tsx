@@ -1,6 +1,8 @@
 // discord_app/modules/forums/native/hooks/useIsForumChannelSearchActive.tsx
 import ForumSearchStore from "../../ForumSearchStore.tsx";
 
+const require = globalThis.__r;
+
 const require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/forums/native/hooks/useIsForumChannelSearchActive.tsx");

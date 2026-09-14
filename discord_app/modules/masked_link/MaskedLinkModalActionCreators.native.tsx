@@ -2,6 +2,8 @@
 import useAlertStore from "../../design/components/AlertModal/native/useAlertStore.native.tsx";
 import noop from "../../../_runtime/metro/00019__.js";
 
+const require = globalThis.__r;
+
 require = fn;
 const jsx = fn(21).jsx;
 const size = fn(2);

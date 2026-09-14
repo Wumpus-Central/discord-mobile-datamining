@@ -1,6 +1,6 @@
 // discord_app/modules/guild_role_subscriptions/edit_state/GuildRoleSubscriptionListingEditStateUtils.tsx
 import utils_ColorUtils from "../../../../discord_common/js/shared/utils/ColorUtils.tsx";
-import v1 from "../../../../_runtime/01256_v1.js";
+import v1 from "../../../../_runtime/01254_v1.js";
 import RolePermissionUtils from "../RolePermissionUtils.tsx";
 import StoreUtils from "../../../utils/StoreUtils.tsx";
 import GuildRoleSubscriptionsHooks from "../GuildRoleSubscriptionsHooks.tsx";
@@ -12,6 +12,8 @@ import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import EmojiStore from "../../emojis/EmojiStore.tsx";
 import GuildRoleSubscriptionsStore from "../GuildRoleSubscriptionsStore.tsx";
+
+const require = globalThis.__r;
 
 require = fn;
 function getRoleEmojis(arr, arg1) {
@@ -32,11 +34,11 @@ function clearEditState(NEW_LISTING_EDIT_STATE_ID) {
   _require = NEW_LISTING_EDIT_STATE_ID;
   require("ReactBatchUpdates").batchUpdates(() => {
     state.setState((listings) => {
-      let obj = { listings: null };
-      obj = {};
+      const obj = { listings: null };
+      const obj2 = {};
       const merged = Object.assign(listings.listings);
-      obj[closure_1_0] = listings.listings.nonexistantEditStateId;
-      obj.listings = obj;
+      obj2[closure_1_0] = listings.listings.nonexistantEditStateId;
+      obj.listings = obj2;
       return obj;
     });
   });
@@ -49,8 +51,8 @@ let closure_20 = async function _updateListingPeripheralsFromEditState(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      let obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -63,8 +65,8 @@ let closure_20 = async function _updateListingPeripheralsFromEditState(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c4 = 3;
-          obj = { value, done: true };
-          return obj;
+          let obj3 = { value, done: true };
+          return obj3;
         } else {
           closure_2 = tmp5;
           closure_1 = tmp2;
@@ -97,8 +99,8 @@ let closure_20 = async function _updateListingPeripheralsFromEditState(arg0) {
             throw value;
           } else if (arg0 === 2) {
             c4 = 3;
-            const obj1 = { value, done: true };
-            return obj1;
+            const obj5 = { value, done: true };
+            return obj5;
           } else {
             subscriptionListing = closure_130_8.getSubscriptionListing(closure_129_1);
             closure_130_1(closure_130_3[20])(null != subscriptionListing, "listing doesnt exist");
@@ -116,23 +118,24 @@ let closure_20 = async function _updateListingPeripheralsFromEditState(arg0) {
               tmp8 = undefined === roleIcon;
             }
             if (!tmp8) {
-              let obj3 = closure_130_1(closure_130_3[21]);
-              let obj2 = { color: roleColor, icon: null, unicodeEmoji: null };
+              const obj6 = { color: roleColor, icon: null, unicodeEmoji: null };
               let icon;
               if (roleIcon != null) {
                 icon = roleIcon.icon;
               }
-              obj2.icon = icon;
+              obj6.icon = icon;
               let unicodeEmoji;
               if (roleIcon != null) {
                 unicodeEmoji = roleIcon.unicodeEmoji;
               }
-              obj2.unicodeEmoji = unicodeEmoji;
+              obj6.unicodeEmoji = unicodeEmoji;
               c3 = 2;
               c4 = 1;
-              obj3 = { value: null, done: false };
-              obj3.value = obj3.updateRole(closure_129_0, role_id, obj2);
-              return obj3;
+              const obj9 = {
+                value: closure_130_1(closure_130_3[21]).updateRole(closure_129_0, role_id, obj6),
+                done: false,
+              };
+              return obj9;
             }
           }
         } else {
@@ -142,8 +145,8 @@ let closure_20 = async function _updateListingPeripheralsFromEditState(arg0) {
               throw value;
             } else if (arg0 === 2) {
               c4 = 3;
-              const obj4 = { value, done: true };
-              return obj4;
+              const obj11 = { value, done: true };
+              return obj11;
             }
           } else if (3 === tmp5) {
             if (arg0 === 1) {
@@ -151,8 +154,8 @@ let closure_20 = async function _updateListingPeripheralsFromEditState(arg0) {
               throw value;
             } else if (arg0 === 2) {
               c4 = 3;
-              const obj5 = { value, done: true };
-              return obj5;
+              const obj12 = { value, done: true };
+              return obj12;
             }
           } else if (arg0 === 1) {
             c4 = 3;
@@ -160,27 +163,25 @@ let closure_20 = async function _updateListingPeripheralsFromEditState(arg0) {
           } else if (arg0 !== 2) {
             if (undefined !== tierEmojiIds) {
               closure_129_12 = closure_130_18(closure_130_7.getGuildEmoji(closure_129_0), role_id);
-              let obj6 = closure_130_0(closure_130_3[23]);
               let items = [];
               HermesBuiltin.arraySpread(tierEmojiIds, 0);
               const items1 = [];
               HermesBuiltin.arraySpread(closure_129_12, 0);
-              closure_129_13 = obj6.difference(items, items1);
-              let obj7 = closure_130_0(closure_130_3[23]);
+              closure_129_13 = closure_130_0(closure_130_3[23]).difference(items, items1);
+              const obj7 = closure_130_0(closure_130_3[23]);
               const items2 = [];
               HermesBuiltin.arraySpread(closure_129_12, 0);
               const items3 = [];
               HermesBuiltin.arraySpread(tierEmojiIds, 0);
-              closure_129_14 = obj7.difference(items2, items3);
+              closure_129_14 = closure_130_0(closure_130_3[23]).difference(items2, items3);
               closure_129_15 = closure_129_13.map((item) => {
                 const customEmojiById = closure_2_7.getCustomEmojiById(item);
                 if (null != customEmojiById) {
-                  guildId(10464);
-                  const obj = { guildId, emojiId: customEmojiById.id, roles: null };
+                  const obj2 = { guildId, emojiId: customEmojiById.id, roles: null };
                   const items = [];
                   items[HermesBuiltin.arraySpread(customEmojiById.roles, 0)] = dependencyMap;
-                  obj.roles = items;
-                  return obj.updateEmoji(obj);
+                  obj2.roles = items;
+                  return guildId(10465).updateEmoji(obj2);
                 }
               });
               closure_129_16 = closure_129_14.map((item) => {
@@ -189,12 +190,12 @@ let closure_20 = async function _updateListingPeripheralsFromEditState(arg0) {
                   const roles = customEmojiById.roles;
                   const found = roles.filter((item) => item !== dependencyMap);
                   if (found.length > 0) {
-                    let obj = { guildId, emojiId: customEmojiById.id, roles: found };
-                    let updateEmojiResult = guildId(10464).updateEmoji(obj);
-                    const obj2 = guildId(10464);
+                    const obj3 = { guildId, emojiId: customEmojiById.id, roles: found };
+                    let updateEmojiResult = guildId(10465).updateEmoji(obj3);
+                    const obj2 = guildId(10465);
                   } else {
-                    obj = guildId(10464);
-                    updateEmojiResult = obj.deleteEmoji(guildId, customEmojiById.id);
+                    updateEmojiResult = guildId(10465).deleteEmoji(guildId, customEmojiById.id);
+                    const obj = guildId(10465);
                   }
                   return updateEmojiResult;
                 }
@@ -203,12 +204,12 @@ let closure_20 = async function _updateListingPeripheralsFromEditState(arg0) {
               HermesBuiltin.arraySpread(closure_129_16, HermesBuiltin.arraySpread(closure_129_15, 0));
               c3 = 3;
               c4 = 1;
-              obj6 = { value: Promise.all(items4), done: false };
-              return obj6;
+              const obj13 = { value: Promise.all(items4), done: false };
+              return obj13;
             }
           } else {
             c4 = 3;
-            obj = { value, done: true };
+            let obj = { value, done: true };
             return obj;
           }
           c4 = 3;
@@ -227,14 +228,14 @@ let closure_20 = async function _updateListingPeripheralsFromEditState(arg0) {
           tmp25 = tmp30;
         }
         if (tmp25) {
-          obj7 = { trial: trialInterval, max_num_active_trial_users: trialLimit };
+          const obj14 = { trial: trialInterval, max_num_active_trial_users: trialLimit };
           c3 = 4;
           c4 = 1;
-          const obj8 = {
-            value: closure_130_2(closure_130_3[22]).updateSubscriptionTrial(closure_129_0, id, obj7),
+          const obj15 = {
+            value: closure_130_2(closure_130_3[22]).updateSubscriptionTrial(closure_129_0, id, obj14),
             done: false,
           };
-          return obj8;
+          return obj15;
         }
       }
     } catch (tmp71) {
@@ -251,8 +252,8 @@ let closure_21 = async function _createListingFromEditState(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -265,8 +266,8 @@ let closure_21 = async function _createListingFromEditState(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c7 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj5 = { value, done: true };
+          return obj5;
         } else {
           closure_5 = tmp4;
           c4 = 0;
@@ -303,8 +304,8 @@ let closure_21 = async function _createListingFromEditState(arg0) {
             throw value;
           } else if (arg0 === 2) {
             c7 = 3;
-            const obj1 = { value, done: true };
-            return obj1;
+            const obj6 = { value, done: true };
+            return obj6;
           } else {
             closure_132_4 = closure_133_10.getState().listings[closure_132_1];
             closure_133_1(closure_133_3[20])(null != closure_132_4, "edit state does not exist");
@@ -324,25 +325,27 @@ let closure_21 = async function _createListingFromEditState(arg0) {
             if (null == id) {
               c6 = 2;
               c7 = 1;
-              let obj2 = {
+              const obj7 = {
                 value: closure_133_2(closure_133_3[22]).createSubscriptionGroupListing(closure_132_0, {}),
                 done: false,
               };
-              return obj2;
+              return obj7;
             } else {
               let tmp9 = null != channelBenefits;
               if (tmp9) {
                 tmp9 = channelBenefits.length > 0;
               }
               if (tmp9) {
-                let obj7 = closure_133_0(closure_133_3[25]);
                 c6 = 3;
                 c7 = 1;
-                let obj3 = {
-                  value: obj7.createChannelsFromTemplateTierBenefits(closure_132_0, channelBenefits),
+                const obj9 = {
+                  value: closure_133_0(closure_133_3[25]).createChannelsFromTemplateTierBenefits(
+                    closure_132_0,
+                    channelBenefits,
+                  ),
                   done: false,
                 };
-                return obj3;
+                return obj9;
               }
             }
           }
@@ -352,8 +355,8 @@ let closure_21 = async function _createListingFromEditState(arg0) {
             throw value;
           } else if (arg0 === 2) {
             c7 = 3;
-            const obj4 = { value, done: true };
-            return obj4;
+            const obj11 = { value, done: true };
+            return obj11;
           } else {
             id = value.id;
           }
@@ -362,7 +365,7 @@ let closure_21 = async function _createListingFromEditState(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c7 = 3;
-          obj = { value, done: true };
+          const obj = { value, done: true };
           return obj;
         }
         closure_1 = 0;
@@ -378,20 +381,19 @@ let closure_21 = async function _createListingFromEditState(arg0) {
         }
         closure_1 = HermesBuiltin.arraySpread(closure_3, closure_1);
         closure_132_14 = items;
-        obj2 = closure_133_0(closure_133_3[25]);
-        templateTierCreationAnalyticsContext = obj2.getTemplateTierCreationAnalyticsContext(
+        templateTierCreationAnalyticsContext = closure_133_0(closure_133_3[25]).getTemplateTierCreationAnalyticsContext(
           closure_132_1,
           closure_132_0,
         );
-        obj3 = closure_133_2(closure_133_3[22]);
-        const obj5 = {
+        const obj3 = closure_133_0(closure_133_3[25]);
+        const obj12 = {
           guildId: closure_132_0,
           groupListingId: id,
           data: null,
           analyticsContext: null,
           onBeforeDispatchNewListing: null,
         };
-        const obj6 = {
+        const obj13 = {
           can_access_all_channels: closure_132_12,
           image,
           name,
@@ -399,12 +401,12 @@ let closure_21 = async function _createListingFromEditState(arg0) {
           benefits: closure_132_14,
           priceTier,
         };
-        obj5.data = obj6;
-        obj5.analyticsContext = templateTierCreationAnalyticsContext;
-        obj5.onBeforeDispatchNewListing = closure_132_3;
+        obj12.data = obj13;
+        obj12.analyticsContext = templateTierCreationAnalyticsContext;
+        obj12.onBeforeDispatchNewListing = closure_132_3;
         c7 = 3;
-        obj7 = { value: obj3.createSubscriptionListing(obj5), done: true };
-        return obj7;
+        const obj14 = { value: closure_133_2(closure_133_3[22]).createSubscriptionListing(obj12), done: true };
+        return obj14;
       }
     } catch (tmp52) {
       c7 = tmp;
@@ -412,9 +414,9 @@ let closure_21 = async function _createListingFromEditState(arg0) {
     }
   }
 };
-const GuildRoleSubscriptionEditStore = fn(15311);
+const GuildRoleSubscriptionEditStore = fn(15312);
 ({ AllChannelAccessOptions: closure_9, useEditStateStore: c10 } = GuildRoleSubscriptionEditStore);
-let closure_11 = fn(15288).GuildRoleSubscriptionBenefitTypes;
+let closure_11 = fn(15289).GuildRoleSubscriptionBenefitTypes;
 const Constants = fn(1074);
 ({ CurrencyCodes: closure_12, DEFAULT_ROLE_COLOR: map1 } = Constants);
 const SubscriptionIntervalTypes = fn(1373).SubscriptionIntervalTypes;
@@ -474,11 +476,11 @@ export const useClearEditStateOnUnmount = function useClearEditStateOnUnmount(ar
       closure_0 = closure_1_0;
       closure_0(dependencyMap[19]).batchUpdates(() => {
         state.setState((listings) => {
-          let obj = { listings: null };
-          obj = {};
+          const obj = { listings: null };
+          const obj2 = {};
           const merged = Object.assign(listings.listings);
-          obj[closure_1_0] = listings.listings.nonexistantEditStateId;
-          obj.listings = obj;
+          obj2[closure_1_0] = listings.listings.nonexistantEditStateId;
+          obj.listings = obj2;
           return obj;
         });
       });
@@ -714,7 +716,7 @@ export const useImage = function useImage(editStateId, arg1) {
 };
 export const useApplicationId = function useApplicationId(listingId) {
   _require = listingId;
-  const f99745 = (application_id) => {
+  const f99748 = (application_id) => {
     application_id = undefined;
     if (application_id != null) {
       application_id = application_id.application_id;
@@ -725,7 +727,7 @@ export const useApplicationId = function useApplicationId(listingId) {
   const stateFromStores = require("initialize").useStateFromStores(items, () =>
     GuildRoleSubscriptionsStore.getSubscriptionListing(closure_0),
   );
-  const tmp2 = f99745(5679)(() => first);
+  const tmp2 = f99748(5679)(() => first);
   dependencyMap = tmp2;
   const items1 = [stateFromStores, tmp2];
   return noop.useMemo(() => closure_3(c2), items1);
@@ -831,7 +833,7 @@ export const useRole = function useRole(listingId, guildId) {
   }, items);
 };
 export const useRoleColor = function useRoleColor(editStateId, guildId) {
-  const tmp = roleColor(15312)(guildId, editStateId);
+  const tmp = roleColor(15313)(guildId, editStateId);
   editStateId = tmp;
   const items = [tmp];
   let memo = noop.useMemo(() => {
@@ -881,7 +883,7 @@ export const useRoleColor = function useRoleColor(editStateId, guildId) {
   return items2;
 };
 export const useChannelAccessFormat = function useChannelAccessFormat(editStateId, guildId) {
-  const tmp = channelAccessFormat(15312)(guildId, editStateId);
+  const tmp = channelAccessFormat(15313)(guildId, editStateId);
   const items = [tmp];
   let memo = noop.useMemo(() => {
     if (null == closure_0) {
@@ -1042,7 +1044,7 @@ export const useIntangibleBenefits = function useIntangibleBenefits(listingId) {
 };
 export const useTierEmojiIds = function useTierEmojiIds(listingId, guildId) {
   _require = guildId;
-  const tmp = tierEmojiIds(15312)(guildId, listingId);
+  const tmp = tierEmojiIds(15313)(guildId, listingId);
   const items = [EmojiStore];
   const items1 = [guildId];
   const stateFromStoresArray = require("initialize").useStateFromStoresArray(
@@ -1325,7 +1327,7 @@ export const useSubscriptionPlan = function useSubscriptionPlan(listingId) {
 };
 export { clearEditState };
 export const useCreateOrUpdateListingFromEditState = function useCreateOrUpdateListingFromEditState() {
-  [tmp2, closure_0] = _slicedToArray(noop.useState(false), 2);
+  [tmp2, closure_0] = noop.useState(false);
   const tmp3 = _slicedToArray(noop.useState(), 2);
   closure_1 = tmp3[1];
   closure_0 = asyncGeneratorStep(async (arg0) => {
@@ -1336,8 +1338,8 @@ export const useCreateOrUpdateListingFromEditState = function useCreateOrUpdateL
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        let obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -1350,8 +1352,8 @@ export const useCreateOrUpdateListingFromEditState = function useCreateOrUpdateL
             throw value;
           } else if (arg0 === 2) {
             c6 = 3;
-            obj = { value, done: true };
-            return obj;
+            let obj3 = { value, done: true };
+            return obj3;
           } else {
             closure_2 = tmp4;
             closure_1 = tmp8;
@@ -1380,8 +1382,8 @@ export const useCreateOrUpdateListingFromEditState = function useCreateOrUpdateL
             throw value;
           } else if (arg0 === 2) {
             c6 = 3;
-            const obj1 = { value, done: true };
-            return obj1;
+            let obj4 = { value, done: true };
+            return obj4;
           } else {
             closure_129_5 = closure_129_1;
             subscriptionListing2 = subscriptionListing.getSubscriptionListing(closure_129_5);
@@ -1390,10 +1392,10 @@ export const useCreateOrUpdateListingFromEditState = function useCreateOrUpdateL
             closure_1(undefined);
             if (null != subscriptionListing2) {
               closure_1(dependencyMap[20])(null != closure_129_2, "groupListingId is null");
-              const obj2 = { guildId: closure_129_0, editStateId: closure_129_5, groupListingId: closure_129_2 };
+              const obj5 = { guildId: closure_129_0, editStateId: closure_129_5, groupListingId: closure_129_2 };
               c5 = 4;
               c6 = 1;
-              let obj3 = {
+              const obj6 = {
                 value: (function updateListingFromEditState(editStateId) {
                   editStateId = editStateId.editStateId;
                   ({ guildId, groupListingId } = editStateId);
@@ -1403,7 +1405,7 @@ export const useCreateOrUpdateListingFromEditState = function useCreateOrUpdateL
                   closure_1_1(38)(null != tmp4, "edit state does not exist");
                   ({ name, description, channelBenefits, intangibleBenefits, priceTier, image, channelAccessFormat } =
                     tmp4);
-                  let obj = {};
+                  const obj = {};
                   if (name !== subscriptionListing.name) {
                     obj.name = name;
                   }
@@ -1427,32 +1429,31 @@ export const useCreateOrUpdateListingFromEditState = function useCreateOrUpdateL
                   if (null != channelBenefits) {
                     const benefits = subscriptionListing.role_benefits.benefits;
                     const benefits1 = subscriptionListing.role_benefits.benefits;
-                    const found = benefits.filter(closure_1_0(15314).isChannelBenefit);
-                    const found1 = benefits1.filter(closure_1_0(15314).isIntangibleBenefit);
+                    const found = benefits.filter(closure_1_0(15315).isChannelBenefit);
+                    const found1 = benefits1.filter(closure_1_0(15315).isIntangibleBenefit);
                     if (channelBenefits == null) {
                       channelBenefits = found;
                     }
                     const items = [];
-                    let arraySpreadResult = HermesBuiltin.arraySpread(channelBenefits, 0);
+                    const arraySpreadResult = HermesBuiltin.arraySpread(channelBenefits, 0);
                     if (intangibleBenefits == null) {
                       intangibleBenefits = found1;
                     }
-                    arraySpreadResult = HermesBuiltin.arraySpread(intangibleBenefits, arraySpreadResult);
+                    HermesBuiltin.arraySpread(intangibleBenefits, arraySpreadResult);
                     obj.benefits = items;
                   }
                   if (!obj2.isEmpty(obj)) {
-                    obj = { guildId, groupListingId, listingId: editStateId, data: null };
-                    obj.data = obj;
-                    subscriptionListing = closure_1_2(7358).updateSubscriptionListing(obj);
+                    const obj4 = { guildId, groupListingId, listingId: editStateId, data: obj };
+                    subscriptionListing = closure_1_2(7358).updateSubscriptionListing(obj4);
                     const obj3 = closure_1_2(7358);
                   }
                   return subscriptionListing;
-                })(obj2),
+                })(obj5),
                 done: false,
               };
-              return obj3;
+              return obj6;
             } else {
-              const obj4 = {
+              const obj7 = {
                 guildId: closure_129_0,
                 editStateId: closure_129_5,
                 groupListingId: closure_129_2,
@@ -1460,7 +1461,7 @@ export const useCreateOrUpdateListingFromEditState = function useCreateOrUpdateL
               };
               c5 = 5;
               c6 = 1;
-              const obj5 = {
+              const obj8 = {
                 value: (function createListingFromEditState() {
                   const self = this;
                   const apply = closure_1_21.apply;
@@ -1470,10 +1471,10 @@ export const useCreateOrUpdateListingFromEditState = function useCreateOrUpdateL
                     applyArgumentsResult = apply(self, arguments);
                   }
                   return applyArgumentsResult;
-                })(obj4),
+                })(obj7),
                 done: false,
               };
-              return obj5;
+              return obj8;
             }
           }
         } else if (2 === tmp8) {
@@ -1501,10 +1502,10 @@ export const useCreateOrUpdateListingFromEditState = function useCreateOrUpdateL
               c4 = 0;
               closure_0(false);
               c6 = 3;
-              const obj6 = { value, done: true };
-              return obj6;
+              const obj9 = { value, done: true };
+              return obj9;
             } else {
-              const obj7 = { guildId: closure_129_0, editStateId: closure_129_5 };
+              const obj10 = { guildId: closure_129_0, editStateId: closure_129_5 };
               (function updateListingPeripheralsFromEditState() {
                 const self = this;
                 const apply = closure_1_20.apply;
@@ -1514,7 +1515,7 @@ export const useCreateOrUpdateListingFromEditState = function useCreateOrUpdateL
                   applyArgumentsResult = apply(self, arguments);
                 }
                 return applyArgumentsResult;
-              })(obj7);
+              })(obj10);
               c5 = 6;
               c6 = 1;
             }
@@ -1529,14 +1530,14 @@ export const useCreateOrUpdateListingFromEditState = function useCreateOrUpdateL
               (function moveEditState(arg0, id) {
                 closure_0 = arg0;
                 closure_1 = id;
-                closure_0(1249).batchUpdates(() => {
+                closure_0(1247).batchUpdates(() => {
                   closure_2_10.setState((listings) => {
-                    let obj = { listings: null };
-                    obj = {};
+                    const obj = { listings: null };
+                    const obj2 = {};
                     const merged = Object.assign(listings.listings);
-                    obj[id] = listings.listings[closure_1_0];
-                    obj[closure_1_0] = undefined;
-                    obj.listings = obj;
+                    obj2[id] = listings.listings[closure_1_0];
+                    obj2[closure_1_0] = undefined;
+                    obj.listings = obj2;
                     return obj;
                   });
                 });
@@ -1552,7 +1553,7 @@ export const useCreateOrUpdateListingFromEditState = function useCreateOrUpdateL
             c4 = 0;
             closure_0(false);
             c6 = 3;
-            obj = { value, done: true };
+            let obj = { value, done: true };
             return obj;
           } else {
             clearEditState(closure_129_5);
@@ -1564,8 +1565,8 @@ export const useCreateOrUpdateListingFromEditState = function useCreateOrUpdateL
           c4 = 0;
           closure_0(false);
           c6 = 3;
-          const obj8 = { value, done: true };
-          return obj8;
+          const obj11 = { value, done: true };
+          return obj11;
         }
       } catch (tmp70) {
         dependencyMap = tmp70;
@@ -1612,9 +1613,14 @@ export const useEditStateIds = function useEditStateIds(groupListingId, guildId,
   dependencyMap = tmp3;
   const tmp4 = closure_10((setListing) => setListing.setListing);
   closure_4 = tmp4;
-  obj = { editStateIds: null, addNewEditStateId: null, addNewEditStateFromTemplate: null, removeEditStateId: null };
+  const obj3 = {
+    editStateIds: null,
+    addNewEditStateId: null,
+    addNewEditStateFromTemplate: null,
+    removeEditStateId: null,
+  };
   let items = [tmp2, subscriptionListingsForGroup];
-  obj.editStateIds = noop.useMemo(() => {
+  obj3.editStateIds = noop.useMemo(() => {
     const items = [...subscriptionListingsForGroup.map((id) => id.id)];
     let items1 = closure_2;
     if (closure_2 == null) {
@@ -1624,7 +1630,7 @@ export const useEditStateIds = function useEditStateIds(groupListingId, guildId,
     return items;
   }, items);
   let items1 = [guildId, tmp3];
-  obj.addNewEditStateId = noop.useCallback(() => {
+  obj3.addNewEditStateId = noop.useCallback(() => {
     closure_0 = v1.v4();
     dependencyMap(closure_0, (arg0) => {
       let items = arg0;
@@ -1637,9 +1643,9 @@ export const useEditStateIds = function useEditStateIds(groupListingId, guildId,
     });
   }, items1);
   const items2 = [guildId, tmp3, tmp4];
-  obj.addNewEditStateFromTemplate = noop.useCallback((listings) => {
+  obj3.addNewEditStateFromTemplate = noop.useCallback((listings) => {
     guildId = listings;
-    const v4Result = guildId(1256).v4();
+    const v4Result = guildId(1254).v4();
     subscriptionListingsForGroup = v4Result;
     dependencyMap(guildId, (arg0) => {
       let items = arg0;
@@ -1653,7 +1659,7 @@ export const useEditStateIds = function useEditStateIds(groupListingId, guildId,
     listings = listings.listings;
     const item = listings.forEach((item) => {
       closure_1_4(closure_1, () => {
-        let obj = {
+        const obj = {
           name: item.name,
           description: item.description,
           priceTier: item.price_tier,
@@ -1672,15 +1678,15 @@ export const useEditStateIds = function useEditStateIds(groupListingId, guildId,
           name: id.name,
           emoji_name: id.emoji_name,
         }));
-        obj = { unicodeEmoji: "Array", icon: item.image };
-        obj.roleIcon = obj;
+        const obj2 = { unicodeEmoji: "Array", icon: item.image };
+        obj.roleIcon = obj2;
         return obj;
       });
     });
     return v4Result;
   }, items2);
   const items3 = [guildId, tmp3];
-  obj.removeEditStateId = noop.useCallback((arg0) => {
+  obj3.removeEditStateId = noop.useCallback((arg0) => {
     closure_0 = arg0;
     dependencyMap(closure_0, (arg0) => {
       let items = arg0;
@@ -1690,5 +1696,5 @@ export const useEditStateIds = function useEditStateIds(groupListingId, guildId,
       return items.filter((item) => item !== closure_1_0);
     });
   }, items3);
-  return obj;
+  return obj3;
 };

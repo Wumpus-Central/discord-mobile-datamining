@@ -147,9 +147,9 @@ prototype["removeRemotelyDismissedGiftIntentCards"] = function removeRemotelyDis
             }
             if (tmp11) {
               let obj = DispatcherDefault;
-              obj = { type: "MESSAGE_DELETE", id: item10031.id, channelId: null };
-              obj.channelId = tmp25;
-              let dispatchResult = obj.dispatch(obj);
+              let obj2 = { type: "MESSAGE_DELETE", id: item10031.id, channelId: null };
+              obj2.channelId = tmp25;
+              let dispatchResult = obj.dispatch(obj2);
             }
             continue;
           }
@@ -192,8 +192,8 @@ prototype["trySendGiftingPromptSystemMessage"] = function trySendGiftingPromptSy
     this.heldGiftingPromptSystemMessage = true;
     let flag = false;
   } else {
-    const obj = { giftIntentType: FRIEND_ANNIVERSARY, recipientUserId, giftIntentSecondaryAction: SEND_MESSAGE };
-    const result = obj.sendGiftingPromptSystemMessage(id, obj);
+    const obj2 = { giftIntentType: FRIEND_ANNIVERSARY, recipientUserId, giftIntentSecondaryAction: SEND_MESSAGE };
+    const result = MessageActionCreatorsDefault.sendGiftingPromptSystemMessage(id, obj2);
     flag = true;
   }
   return flag;

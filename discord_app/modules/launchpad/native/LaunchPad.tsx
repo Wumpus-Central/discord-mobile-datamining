@@ -1,7 +1,7 @@
 // discord_app/modules/launchpad/native/LaunchPad.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import PlatformUtils from "../../../utils/PlatformUtils.tsx";
 import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
+import PlatformUtils from "../../../utils/PlatformUtils.tsx";
 import ReanimatedRexport from "../../reanimated/ReanimatedRexport.tsx";
 import ChatInputUtils from "../../../utils/native/ChatInputUtils.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
@@ -15,7 +15,7 @@ import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import ActionSheetStore from "../../action_sheet/native/ActionSheetStore.tsx";
 import ChannelListStore from "../../guild_sidebar/ChannelListStore.tsx";
-import NavigationHistoryStore from "../../main_tabs_v2/native/NavigationHistoryStore.tsx";
+import NavigationHistoryStore_mod from "../../main_tabs_v2/native/NavigationHistoryStore.tsx";
 import ActiveJoinedThreadsStore from "../../threads/ActiveJoinedThreadsStore.tsx";
 import AuthenticationStore from "../../../stores/AuthenticationStore.tsx";
 import ChannelStore from "../../../stores/ChannelStore.tsx";
@@ -27,6 +27,8 @@ import ReadStateStore from "../../../stores/ReadStateStore.tsx";
 import SortedGuildStore from "../../../stores/SortedGuildStore.tsx";
 import UserGuildSettingsStore from "../../../stores/UserGuildSettingsStore.tsx";
 import VoiceStateStore from "../../../stores/VoiceStateStore.tsx";
+
+const require = globalThis.__r;
 
 require = fn;
 function TabButton(selected) {
@@ -76,6 +78,7 @@ function createAndAppendChannel(item10022, set, items) {
 const View = fn(17).View;
 let NavigationHistoryStore = fn(7431);
 ({ CHANNEL_PREFIX: closure_8, getIdFromHistoryItem: closure_9, GUILD_PREFIX: c10 } = NavigationHistoryStore);
+let NavigationHistoryStore = NavigationHistoryStore_mod;
 const ChannelRecord = fn(1961);
 ({ isGuildSelectableChannelType: map1, isGuildVocalChannelType: closure_14 } = ChannelRecord);
 const Constants = fn(1074);
@@ -83,17 +86,35 @@ const Constants = fn(1074);
 const jsxProd = fn(21);
 ({ jsx: closure_27, jsxs: closure_28 } = jsxProd);
 const md = nativeDefault.radii.md;
-fn(4636);
+const createStyles = fn(4636);
 let obj = {
-  wrapper: null,
-  launchPadContent: null,
-  header: null,
-  subheader: null,
+  wrapper: {
+    flexGrow: 0,
+    marginHorizontal: 16,
+    marginBottom: 16,
+    flexShrink: 1,
+    borderRadius: 24,
+    backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
+    flexDirection: "column",
+    justifyContent: "flex-start",
+    alignItems: "stretch",
+    overflow: "hidden",
+  },
+  launchPadContent: { flex: -1, overflow: "hidden", borderBottomLeftRadius: 24, borderBottomRightRadius: 24 },
+  header: { paddingHorizontal: 16, paddingTop: 16, flexDirection: "row", flexShrink: 0, flexGrow: 0 },
+  subheader: {
+    flexGrow: 1,
+    flexShrink: 1,
+    flexDirection: "row",
+    alignItems: "center",
+    alignSelf: "center",
+    paddingStart: 8,
+  },
   tabs: null,
   tab: null,
   tabSelected: null,
 };
-obj = {
+let obj3 = {
   flexGrow: 0,
   marginHorizontal: 16,
   marginBottom: 16,
@@ -105,18 +126,7 @@ obj = {
   alignItems: "stretch",
   overflow: "hidden",
 };
-obj.wrapper = obj;
-obj.launchPadContent = { flex: -1, overflow: "hidden", borderBottomLeftRadius: 24, borderBottomRightRadius: 24 };
-obj.header = { paddingHorizontal: 16, paddingTop: 16, flexDirection: "row", flexShrink: 0, flexGrow: 0 };
-obj.subheader = {
-  flexGrow: 1,
-  flexShrink: 1,
-  flexDirection: "row",
-  alignItems: "center",
-  alignSelf: "center",
-  paddingStart: 8,
-};
-const createStyles = {
+obj.tabs = {
   marginStart: 8,
   flexDirection: "row",
   flexShrink: 0,
@@ -129,9 +139,21 @@ const createStyles = {
   borderWidth: 1,
   borderColor: nativeDefault.colors.INPUT_BORDER_DEFAULT,
 };
-obj.tabs = createStyles;
 let size = { width: 32, height: 32, borderRadius: md - 5, alignItems: "center", justifyContent: "center" };
 obj.tab = size;
+let obj4 = {
+  marginStart: 8,
+  flexDirection: "row",
+  flexShrink: 0,
+  backgroundColor: nativeDefault.colors.INPUT_BACKGROUND_DEFAULT,
+  borderRadius: md,
+  padding: 5,
+  alignItems: "stretch",
+  justifyContent: "center",
+  gap: 5,
+  borderWidth: 1,
+  borderColor: nativeDefault.colors.INPUT_BORDER_DEFAULT,
+};
 obj.tabSelected = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 let closure_29 = createStyles.createStyles(obj);
 const constants3 = {
@@ -154,12 +176,11 @@ let closure_35 = noop.memo((tab) => {
   const searchRef = tab.searchRef;
   noop = undefined;
   let tmp = closure_29();
-  let obj = tab(sharedState[24]);
   items = [DeveloperExperimentStore];
-  const stateFromStores = obj.useStateFromStores(items, () => isDeveloper.isDeveloper);
+  const stateFromStores = tab(sharedState[24]).useStateFromStores(items, () => isDeveloper.isDeveloper);
   noop = noop.useRef(false);
-  let obj1 = tab(sharedState[25]);
-  const sharedValue = obj1.useSharedValue(false);
+  let obj = tab(sharedState[24]);
+  const sharedValue = tab(sharedState[25]).useSharedValue(false);
   const ref2 = noop.useRef(tab);
   const effect = noop.useEffect(() => {
     closure_6.current = tab;
@@ -202,9 +223,9 @@ let closure_35 = noop.memo((tab) => {
       const result1 = sharedValue.set(false);
     }
   }, items1);
-  let obj2 = tab(sharedState[24]);
+  let obj2 = tab(sharedState[25]);
   const items2 = [ref2];
-  const stateFromStores1 = obj2.useStateFromStores(items2, () => ref2.isOpen());
+  const stateFromStores1 = tab(sharedState[24]).useStateFromStores(items2, () => ref2.isOpen());
   const items3 = [stateFromStores1, setFocused];
   const effect1 = noop.useEffect(() => {
     callback(!stateFromStores1, stateFromStores1);
@@ -219,7 +240,7 @@ let closure_35 = noop.memo((tab) => {
       callback(true);
     }
   }, items4);
-  let obj3 = tab(sharedState[25]);
+  let obj3 = tab(sharedState[24]);
   class T {
     constructor() {
       return sharedState.get();
@@ -242,14 +263,14 @@ let closure_35 = noop.memo((tab) => {
       ReanimatedRexport.runOnJS(callback)(false);
     }
   };
-  obj = { keyboardShown: sharedValue, runOnJS: tab(sharedState[25]).runOnJS, setFocused };
-  fn.__closure = obj;
+  const obj4 = tab(sharedState[25]);
+  fn.__closure = { keyboardShown: sharedValue, runOnJS: tab(sharedState[25]).runOnJS, setFocused };
   fn.__workletHash = 3784684686013;
   fn.__initData = __initData2;
-  const animatedReaction = obj3.useAnimatedReaction(T, fn);
-  obj = { style: tmp.header, children: null };
+  const animatedReaction = obj4.useAnimatedReaction(T, fn);
+  const obj6 = { style: tmp.header, children: null };
   if (tab === constants3.SEARCH) {
-    obj1 = {
+    const obj7 = {
       size: "md",
       returnKeyType: "done",
       ref: searchRef,
@@ -258,27 +279,27 @@ let closure_35 = noop.memo((tab) => {
       spellCheck: false,
       autoFocus: false,
     };
-    let tmp18 = closure_27(tmp2(sharedState[27]).SearchField, obj1);
+    let tmp18 = closure_27(tmp2(sharedState[27]).SearchField, obj7);
     let tmp17 = closure_27;
   } else if (tab === constants3.MEMBERS) {
-    obj2 = { text: null };
+    const obj8 = { text: null };
     const intl2 = tmp2(sharedState[28]).intl;
-    obj2.text = intl2.string(tmp2(sharedState[28]).t["9Oq93m"]);
-    tmp18 = closure_27(TabHeader, obj2);
+    obj8.text = intl2.string(tmp2(sharedState[28]).t["9Oq93m"]);
+    tmp18 = closure_27(TabHeader, obj8);
     tmp17 = closure_27;
   } else if (tab === constants3.NOTIFICATIONS) {
-    obj3 = { text: null };
+    const obj9 = { text: null };
     const intl = tmp2(sharedState[28]).intl;
-    obj3.text = intl.string(tmp2(sharedState[28]).t.HcoRu0);
-    tmp18 = closure_27(TabHeader, obj3);
+    obj9.text = intl.string(tmp2(sharedState[28]).t.HcoRu0);
+    tmp18 = closure_27(TabHeader, obj9);
     tmp17 = closure_27;
   } else {
     tmp17 = closure_27;
     tmp18 = closure_27(TabHeader, { text: "Dev Tools" });
   }
   const items5 = [tmp18];
-  const obj4 = { style: tmp.tabs, children: null };
-  const obj5 = {
+  const obj10 = { style: tmp.tabs, children: null };
+  const obj11 = {
     icon(color) {
       return closure_1_27(tab(sharedState[29]).FlashIcon, { size: "sm", color });
     },
@@ -287,17 +308,17 @@ let closure_35 = noop.memo((tab) => {
     selected: null,
   };
   const intl3 = tmp2(sharedState[28]).intl;
-  obj5.accessibilityLabel = intl3.string(tab(sharedState[28]).t.JqV7IC);
-  obj5.onPress = function onPress() {
+  obj11.accessibilityLabel = intl3.string(tab(sharedState[28]).t.JqV7IC);
+  obj11.onPress = function onPress() {
     importDefault(constants.SEARCH);
     const current = searchRef.current;
     if (current != null) {
       current.focus();
     }
   };
-  obj5.selected = tab === constants3.SEARCH;
-  const items6 = [tmp17(TabButton, obj5), ,];
-  const obj6 = {
+  obj11.selected = tab === constants3.SEARCH;
+  const items6 = [tmp17(TabButton, obj11), ,];
+  const obj12 = {
     icon(color) {
       return closure_1_27(tab(sharedState[30]).BellIcon, { size: "sm", color });
     },
@@ -306,19 +327,19 @@ let closure_35 = noop.memo((tab) => {
     selected: null,
   };
   const intl4 = tmp2(sharedState[28]).intl;
-  obj6.accessibilityLabel = intl4.string(tab(sharedState[28]).t.HcoRu0);
-  obj6.onPress = function onPress() {
+  obj12.accessibilityLabel = intl4.string(tab(sharedState[28]).t.HcoRu0);
+  obj12.onPress = function onPress() {
     importDefault(constants.NOTIFICATIONS);
     const current = searchRef.current;
     if (current != null) {
       current.blur();
     }
   };
-  obj6.selected = tab === constants3.NOTIFICATIONS;
-  items6[1] = tmp17(TabButton, obj6);
+  obj12.selected = tab === constants3.NOTIFICATIONS;
+  items6[1] = tmp17(TabButton, obj12);
   let tmp17Result = null;
   if (stateFromStores) {
-    const obj7 = {
+    const obj13 = {
       icon(color) {
         return closure_1_27(tab(sharedState[31]).StaffBadgeIcon, { size: "sm", color });
       },
@@ -339,13 +360,13 @@ let closure_35 = noop.memo((tab) => {
         obj = PlatformUtils;
       },
     };
-    tmp17Result = tmp17(TabButton, obj7);
+    tmp17Result = tmp17(TabButton, obj13);
   }
   items6[2] = tmp17Result;
-  obj4.children = items6;
-  items5[1] = closure_28(sharedValue, obj4);
-  obj.children = items5;
-  return closure_28(sharedValue, obj);
+  obj10.children = items6;
+  items5[1] = closure_28(sharedValue, obj10);
+  obj6.children = items5;
+  return closure_28(sharedValue, obj6);
 });
 const results = [];
 let items = [
@@ -361,7 +382,7 @@ const __initData3 = {
 const __initData4 = {
   code: "function LaunchPadTsx4(hidden,prevHidden){const{runOnJS,clearQuery,cancelTimeout}=this.__closure;if(hidden===prevHidden)return;if(hidden&&hidden!==prevHidden){runOnJS(clearQuery)();}else if(!hidden&&hidden!==prevHidden){runOnJS(cancelTimeout)();}}",
 };
-let obj2 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
+let obj5 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 size = fn(2);
 let result = size.fileFinishedImporting("modules/launchpad/native/LaunchPad.tsx");
 
@@ -434,11 +455,11 @@ export default noop.memo(function LaunchPad(arg0) {
   const tmp15 = str.trim().length > 0;
   closure_130_0 = tmp15;
   closure_130_1 = visible;
-  let obj = require("NavigationRouteUtils");
-  let selectedGuildFromRoute = obj.getSelectedGuildFromRoute();
+  let tmp8 = bottom(noop.useState(results), 2);
+  let selectedGuildFromRoute = require("NavigationRouteUtils").getSelectedGuildFromRoute();
   closure_130_2 = selectedGuildFromRoute;
-  let obj1 = require("NavigationRouteUtils");
-  const selectedChannelFromRoute = obj1.getSelectedChannelFromRoute();
+  let obj = require("NavigationRouteUtils");
+  const selectedChannelFromRoute = require("NavigationRouteUtils").getSelectedChannelFromRoute();
   closure_130_3 = selectedChannelFromRoute;
   const tmp20 = bottom(noop.useState(undefined), 2);
   const first1 = tmp20[0];
@@ -451,9 +472,9 @@ export default noop.memo(function LaunchPad(arg0) {
     }
   }, items4);
   closure_130_6 = noop.useRef([]);
-  let obj2 = require("initialize");
+  let obj2 = require("NavigationRouteUtils");
   let items5 = [PrivateChannelReadStateStore];
-  const stateFromStores = obj2.useStateFromStores(items5, () => {
+  const stateFromStores = require("initialize").useStateFromStores(items5, () => {
     if (height) {
       current = PrivateChannelReadStateStore.getUnreadPrivateChannelIds();
     } else {
@@ -469,7 +490,7 @@ export default noop.memo(function LaunchPad(arg0) {
   let obj3 = require("initialize");
   let items6 = [SortedGuildStore, GuildReadStateStore, GuildStore];
   const items7 = [visible, selectedGuildFromRoute];
-  const stateFromStoresArray = obj3.useStateFromStoresArray(
+  const stateFromStoresArray = require("initialize").useStateFromStoresArray(
     items6,
     () => {
       if (height) {
@@ -497,7 +518,7 @@ export default noop.memo(function LaunchPad(arg0) {
                 if (tmp31) {
                   let arr = items.push(tmp9);
                 } else {
-                  arr = items1.push(tmp9);
+                  let arr2 = items1.push(tmp9);
                 }
               }
             }
@@ -520,10 +541,10 @@ export default noop.memo(function LaunchPad(arg0) {
     ref2.current = current2;
   });
   closure_130_10 = noop.useRef([]);
-  let obj4 = require("initialize");
+  const obj4 = require("initialize");
   const items8 = [ChannelListStore, VoiceStateStore, ReadStateStore, UserGuildSettingsStore, ActiveJoinedThreadsStore];
   const items9 = [tmp15, selectedGuildFromRoute, visible, first1];
-  const stateFromStoresArray1 = obj4.useStateFromStoresArray(
+  const stateFromStoresArray1 = require("initialize").useStateFromStoresArray(
     items8,
     () => {
       let tmp = noop;
@@ -605,7 +626,7 @@ export default noop.memo(function LaunchPad(arg0) {
   const effect6 = noop.useEffect(() => {
     ref3.current = current3;
   });
-  let tmp8 = bottom(noop.useState(results), 2);
+  const obj5 = require("initialize");
   const items10 = [NavigationHistoryStore];
   const stateFromStores1 = require("initialize").useStateFromStores(items10, () => current3.getState().history);
   closure_130_12 = stateFromStores1;
@@ -809,20 +830,20 @@ export default noop.memo(function LaunchPad(arg0) {
       }
     }
   };
-  obj = { runOnJS: require("ReanimatedRexport").runOnJS, clearQuery: callback2, cancelTimeout: callback3 };
-  fn2.__closure = obj;
+  const obj7 = require("ReanimatedRexport");
+  fn2.__closure = { runOnJS: require("ReanimatedRexport").runOnJS, clearQuery: callback2, cancelTimeout: callback3 };
   fn2.__workletHash = 6379173436444;
   fn2.__initData = __initData4;
-  const animatedReaction = require("ReanimatedRexport").useAnimatedReaction(fn, fn2);
-  obj = { style: memo2, children: null };
-  const obj7 = require("ReanimatedRexport");
+  const animatedReaction = obj7.useAnimatedReaction(fn, fn2);
+  const obj9 = { style: memo2, children: null };
+  const obj8 = { runOnJS: require("ReanimatedRexport").runOnJS, clearQuery: callback2, cancelTimeout: callback3 };
   const items16 = [
     closure_27(closure_35, { tab: first3, setTab: tmp40[1], updateQuery: callback1, searchRef: ref, sharedState }),
     ,
   ];
   let tmp53Result = 0 === str.trim().length && first3 === constants3.SEARCH;
   if (tmp53Result) {
-    obj1 = {
+    const obj10 = {
       selectedGuildId: first1,
       setSelectedGuild: tmp22,
       unreadPrivateChannelIds: stateFromStores,
@@ -830,22 +851,22 @@ export default noop.memo(function LaunchPad(arg0) {
       guildHistory: memo,
       visible,
     };
-    tmp53Result = closure_27(tmp43(tmp17[44]), obj1);
+    tmp53Result = closure_27(tmp43(tmp17[44]), obj10);
   }
   items16[1] = tmp53Result;
-  obj2 = { style: tmp.launchPadContent, children: null };
+  const obj11 = { style: tmp.launchPadContent, children: null };
   if (first3 === constants3.SEARCH) {
     if (tmp50) {
-      obj3 = { results, query: str };
-      tmp53Result = closure_27(tmp16(tmp17[45]).SearchResults, obj3);
+      const obj12 = { results, query: str };
+      let tmp53Result2 = closure_27(tmp16(tmp17[45]).SearchResults, obj12);
     }
-    obj2.children = tmp53Result;
-    items16[2] = closure_27(View, obj2);
-    obj.children = items16;
-    return closure_28(View, obj);
+    obj11.children = tmp53Result2;
+    items16[2] = closure_27(View, obj11);
+    obj9.children = items16;
+    return closure_28(View, obj9);
   }
   if (first3 === constants3.SEARCH) {
-    obj4 = {
+    const obj13 = {
       selectedGuildId: first1,
       unreads: null,
       history: null,
@@ -859,7 +880,7 @@ export default noop.memo(function LaunchPad(arg0) {
     if (unreads == null) {
       unreads = results;
     }
-    obj4.unreads = unreads;
+    obj13.unreads = unreads;
     let channelHistory;
     if (deferredValue != null) {
       channelHistory = deferredValue.channelHistory;
@@ -867,16 +888,16 @@ export default noop.memo(function LaunchPad(arg0) {
     if (channelHistory == null) {
       channelHistory = results;
     }
-    obj4.history = channelHistory;
-    obj4.expandedHistory = tmp3;
-    obj4.toggleExpandedHistory = callback;
-    tmp53Result = closure_27(tmp16(tmp17[45]).InitialResults, obj4);
+    obj13.history = channelHistory;
+    obj13.expandedHistory = tmp3;
+    obj13.toggleExpandedHistory = callback;
+    tmp53Result2 = closure_27(tmp16(tmp17[45]).InitialResults, obj13);
   } else if (first3 === constants3.DEV_TOOLS) {
-    tmp53Result = closure_27(tmp43(tmp17[46]), {});
+    tmp53Result2 = closure_27(tmp43(tmp17[46]), {});
   } else if (first3 === constants3.MEMBERS) {
-    tmp53Result = closure_27(tmp43(tmp17[47]), {});
+    tmp53Result2 = closure_27(tmp43(tmp17[47]), {});
   } else {
-    tmp53Result = closure_27(tmp43(tmp17[48]), {});
+    tmp53Result2 = closure_27(tmp43(tmp17[48]), {});
   }
   tmp50 = str.trim().length > 0;
 });

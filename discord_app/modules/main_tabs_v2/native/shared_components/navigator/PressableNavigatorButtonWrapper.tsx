@@ -4,7 +4,7 @@ import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import MainTabsV2Constants from "../MainTabsV2Constants.tsx";
 import createStyles from "../../../../../design/components/Styles/native/createStyles.tsx";
-import size from "../../../../../../_runtime/metro/00002__.js";
+import size_mod from "../../../../../../_runtime/metro/00002__.js";
 
 const View = _mod17.View;
 const MIN_HEADER_HEIGHT = MainTabsV2Constants.MIN_HEADER_HEIGHT;
@@ -21,6 +21,7 @@ let size = {
 obj.buttonWrapper = size;
 obj.buttonWrapperModal = { marginLeft: -8 };
 let closure_2 = createStyles.createStyles(obj);
+let size = size_mod;
 const result = size.fileFinishedImporting(
   "modules/main_tabs_v2/native/shared_components/navigator/PressableNavigatorButtonWrapper.tsx",
 );

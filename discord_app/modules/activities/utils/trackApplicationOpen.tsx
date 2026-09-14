@@ -23,7 +23,7 @@ export default function trackApplicationOpen(partyId) {
     inviterUserId,
     remoteJoinPlatform,
   } = partyId);
-  const obj = {
+  const obj2 = {
     type,
     source,
     guild_id: guildId,
@@ -39,5 +39,5 @@ export default function trackApplicationOpen(partyId) {
     invite_inviter_id: inviterUserId,
     remote_join_platform: remoteJoinPlatform,
   };
-  obj.track(AnalyticEvents.APPLICATION_OPENED, obj);
+  AnalyticsUtilsDefault.track(AnalyticEvents.APPLICATION_OPENED, obj2);
 }

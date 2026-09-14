@@ -5,24 +5,27 @@ import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
+const require = globalThis.__r;
+
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsxs: metroRequire, jsx: closure_7 } = jsxProd);
-fn(4636);
-let createStyles = { container: { margin: 16, flex: 1, alignItems: "center", padding: 40 }, item: null };
-createStyles = {
-  backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST,
-  borderWidth: 2,
-  borderColor: nativeDefault.colors.BORDER_STRONG,
-  flex: 1,
-  alignItems: "center",
-  justifyContent: "center",
-  height: 400,
+const createStyles = fn(4636);
+let obj2 = {
+  container: { margin: 16, flex: 1, alignItems: "center", padding: 40 },
+  item: {
+    backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST,
+    borderWidth: 2,
+    borderColor: nativeDefault.colors.BORDER_STRONG,
+    flex: 1,
+    alignItems: "center",
+    justifyContent: "center",
+    height: 400,
+  },
 };
-createStyles.item = createStyles;
-let closure_8 = createStyles.createStyles(createStyles);
+let closure_8 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting(
   "modules/user_settings/design_system/native/UserSettingsDesignSystemSegmentedControl.tsx",
@@ -31,9 +34,7 @@ const result = size.fileFinishedImporting(
 export default function UserSettingsDesignSystemSegmentedControl() {
   const tmp = _slicedToArray(noop.useState(0), 2);
   _require = tmp[1];
-  const tmp2 = _slicedToArray(noop.useState(3), 2);
-  const first = tmp2[0];
-  _slicedToArray = tmp2[1];
+  [first, _slicedToArray] = noop.useState(3);
   closure_129_0 = first;
   const tmp5 = closure_8();
   closure_129_1 = tmp5;
@@ -50,34 +51,38 @@ export default function UserSettingsDesignSystemSegmentedControl() {
         obj.label = "Item " + sum;
         let _HermesInternal2 = HermesInternal;
         obj.id = "item-" + sum;
-        obj = { style: first.item, children: null };
-        obj = { variant: "heading-xxl/bold", children: null };
+        let obj2 = { style: first.item, children: null };
+        let obj3 = { variant: "heading-xxl/bold", children: null };
         let items1 = ["Item ", sum];
-        obj.children = items1;
-        obj.children = timestampProducer(Text_Text.Text, obj);
-        obj.page = React5(React4, obj);
+        obj3.children = items1;
+        obj2.children = timestampProducer(Text_Text.Text, obj3);
+        obj.page = React5(React4, obj2);
         let arr = items.push(obj);
         num = sum;
       } while (sum < closure_0);
     }
     return items;
   }, items);
-  let obj = require("SegmentedControlState");
-  const segmentedControlState = obj.useSegmentedControlState({ items: memo, pageWidth: tmp[0], defaultIndex: 1 });
-  obj = { children: null };
-  obj = {
-    style: closure_8().container,
+  const tmp4 = closure_8();
+  const segmentedControlState = require("SegmentedControlState").useSegmentedControlState({
+    items: memo,
+    pageWidth: tmp[0],
+    defaultIndex: 1,
+  });
+  let obj2 = { children: null };
+  let obj3 = {
+    style: tmp4.container,
     onLayout: noop.useCallback((nativeEvent) => {
       closure_0(nativeEvent.nativeEvent.layout.width);
     }, []),
     children: null,
   };
-  const obj1 = { spacing: 24, children: null };
+  const obj4 = { spacing: 24, children: null };
   let items1 = [
     closure_7(require("SegmentedControl").SegmentedControl, { state: segmentedControlState }),
     closure_7(require("SegmentedControlPages").SegmentedControlPages, { state: segmentedControlState }),
   ];
-  const obj2 = { spacing: 8, direction: "horizontal", children: null };
+  const obj5 = { spacing: 8, direction: "horizontal", children: null };
   const items2 = [
     closure_7(require("components/Button/Button").Button, {
       text: "Add Tab",
@@ -104,10 +109,10 @@ export default function UserSettingsDesignSystemSegmentedControl() {
       },
     }),
   ];
-  obj2.children = items2;
-  items1[2] = closure_6(require("Stack/Stack").Stack, obj2);
-  obj1.children = items1;
-  obj.children = closure_6(require("Stack/Stack").Stack, obj1);
-  obj.children = closure_7(closure_4, obj);
-  return closure_7(closure_5, obj);
+  obj5.children = items2;
+  items1[2] = closure_6(require("Stack/Stack").Stack, obj5);
+  obj4.children = items1;
+  obj3.children = closure_6(require("Stack/Stack").Stack, obj4);
+  obj2.children = closure_7(closure_4, obj3);
+  return closure_7(closure_5, obj2);
 }

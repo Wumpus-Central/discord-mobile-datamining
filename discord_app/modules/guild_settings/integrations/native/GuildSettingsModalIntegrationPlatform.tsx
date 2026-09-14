@@ -30,13 +30,13 @@ const Constants = fn(1074);
 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12, Fragment: map1 } = jsxProd);
-fn(4636);
-let createStyles = { form: null, trailingWrapper: null, platformIcon: null };
-createStyles = { paddingTop: nativeDefault.space.PX_16 };
-createStyles.form = createStyles;
-createStyles.trailingWrapper = { flexDirection: "row", alignItems: "center" };
-createStyles.platformIcon = { width: 24, height: 24 };
-let closure_14 = createStyles.createStyles(createStyles);
+const createStyles = fn(4636);
+let obj2 = {
+  form: { paddingTop: nativeDefault.space.PX_16 },
+  trailingWrapper: { flexDirection: "row", alignItems: "center" },
+  platformIcon: { width: 24, height: 24 },
+};
+let closure_14 = createStyles.createStyles(obj2);
 const Component = noop.Component;
 class IntegrationItem extends Component {
   constructor() {
@@ -51,7 +51,7 @@ class IntegrationItem extends Component {
         const setState = tmp.setState;
         if (integration.enabled) {
           setState({ enabled: false });
-          let showResult = {
+          let obj3 = {
             title: null,
             body: null,
             confirmText: null,
@@ -61,7 +61,7 @@ class IntegrationItem extends Component {
             confirmColor: null,
           };
           const intl = applyArgumentsResult(1114).intl;
-          showResult.title = intl.string(applyArgumentsResult(1114).t.emx3lN);
+          obj3.title = intl.string(applyArgumentsResult(1114).t.emx3lN);
           if ("youtube" === integration.type) {
             const intl3 = applyArgumentsResult(1114).intl;
             let stringResult = intl3.string(applyArgumentsResult(1114).t.anKQWU);
@@ -69,23 +69,22 @@ class IntegrationItem extends Component {
             const intl2 = applyArgumentsResult(1114).intl;
             stringResult = intl2.string(applyArgumentsResult(1114).t["BW/xtn"]);
           }
-          showResult.body = stringResult;
+          obj3.body = stringResult;
           const intl4 = applyArgumentsResult(1114).intl;
-          showResult.confirmText = intl4.string(applyArgumentsResult(1114).t.R9GHya);
+          obj3.confirmText = intl4.string(applyArgumentsResult(1114).t.R9GHya);
           const intl5 = applyArgumentsResult(1114).intl;
-          showResult.cancelText = intl5.string(applyArgumentsResult(1114).t["ETE/oC"]);
-          showResult.onConfirm = function onConfirm() {
+          obj3.cancelText = intl5.string(applyArgumentsResult(1114).t["ETE/oC"]);
+          obj3.onConfirm = function onConfirm() {
             return GuildSettingsActionCreatorsDefault.disableIntegration(guild.id, integration.id);
           };
-          showResult.onCancel = function onCancel() {
+          obj3.onCancel = function onCancel() {
             return guild.setState({ enabled: true });
           };
-          showResult.confirmColor = common_AlertDefault.Colors.RED;
-          showResult = actions_AlertActionCreatorsDefault.show(showResult);
+          obj3.confirmColor = common_AlertDefault.Colors.RED;
+          obj3 = actions_AlertActionCreatorsDefault.show(obj3);
         } else {
           setState({ enabled: true });
-          showResult = GuildSettingsActionCreatorsDefault;
-          showResult.enableIntegration(guild.id, integration.type, integration.id);
+          GuildSettingsActionCreatorsDefault.enableIntegration(guild.id, integration.type, integration.id);
         }
       }
       tmp = guild;
@@ -127,58 +126,65 @@ IntegrationItem.prototype["render"] = function render() {
       let combined = name;
     } else if (IntegrationTypes.IntegrationTypes.TWITCH === type) {
       const _HermesInternal = HermesInternal;
-      let str = "twitch.tv/";
       combined = "twitch.tv/" + integration.name;
     }
-    let obj = PlatformsDefault;
-    value = obj.get(integration.type);
+    value = PlatformsDefault.get(integration.type);
     if (null == value) {
-      str = undefined;
+      let str1;
       if (integration.user != null) {
-        str = str2.toString();
+        str1 = str2.toString();
       }
-      obj = { label: str, subLabel: combined, trailing: null, arrow: null, icon: null, disabled: null, onPress: null };
-      obj = { style: styles.trailingWrapper, children: null };
+      const obj2 = {
+        label: str1,
+        subLabel: combined,
+        trailing: null,
+        arrow: null,
+        icon: null,
+        disabled: null,
+        onPress: null,
+      };
+      const obj3 = { style: styles.trailingWrapper, children: null };
       let syncing = integration.syncing;
       if (syncing) {
         syncing = closure_1_11(React3, { animating: true, size: "small" });
       }
-      obj.children = syncing;
-      obj.trailing = closure_1_11(hasOwnProperty, obj);
-      obj.arrow = integration.enabled && !integration.syncing;
-      obj.icon = null;
+      obj3.children = syncing;
+      obj2.trailing = closure_1_11(hasOwnProperty, obj3);
+      obj2.arrow = integration.enabled && !integration.syncing;
+      obj2.icon = null;
       let enabled = integration.enabled;
       let syncing2 = !enabled;
       if (enabled) {
         syncing2 = integration.syncing;
       }
-      const obj1 = { hasIcons: true, children: null };
-      obj.disabled = syncing2;
-      obj.onPress = function onPress() {
+      const obj4 = { hasIcons: true, children: null };
+      obj2.disabled = syncing2;
+      obj2.onPress = function onPress() {
         let enabled = integration.enabled;
         if (enabled) {
           enabled = importDefault(tmp);
         }
         return enabled;
       };
-      const items = [closure_1_11(TableRow.TableRow, obj)];
-      const obj2 = { value: null, disabled: null, onValueChange: null, label: null };
+      const items = [closure_1_11(TableRow.TableRow, obj2)];
+      const obj5 = { value: null, disabled: null, onValueChange: null, label: null };
       const _Boolean = Boolean;
-      obj2.value = Boolean(self.state.enabled);
-      obj2.disabled = true === integration.syncing;
-      obj2.onValueChange = self.handleToggleEnabled;
+      obj5.value = Boolean(self.state.enabled);
+      obj5.disabled = true === integration.syncing;
+      obj5.onValueChange = self.handleToggleEnabled;
       const intl = util.intl;
-      obj2.label = intl.string(util.t.vQC6vR);
-      items[1] = closure_1_11(TableSwitchRow.TableSwitchRow, obj2);
-      obj1.children = items;
-      return closure_1_12(TableRowGroup.TableRowGroup, obj1);
+      obj5.label = intl.string(util.t.vQC6vR);
+      items[1] = closure_1_11(TableSwitchRow.TableSwitchRow, obj5);
+      obj4.children = items;
+      return closure_1_12(TableRowGroup.TableRowGroup, obj4);
     } else {
-      const tmpResult = shared;
+      const tmpResult = AvatarUtils;
+      const tmpResult2 = shared;
       const icon = { source: null, style: null };
-      icon.source = tmpResult.makeSource(tmpResult.isThemeDark(props.theme) ? icon.darkPNG : icon.lightPNG);
+      icon.source = tmpResult.makeSource(shared.isThemeDark(props.theme) ? icon.darkPNG : icon.lightPNG);
       icon.style = styles.platformIcon;
       closure_1_11(React4, icon);
-      const tmp14 = tmpResult.isThemeDark(props.theme) ? icon.darkPNG : icon.lightPNG;
+      const tmp14 = shared.isThemeDark(props.theme) ? icon.darkPNG : icon.lightPNG;
     }
   } else {
     return null;
@@ -196,19 +202,18 @@ export default function GuildSettingsModalIntegrationPlatform(platformType) {
   guild = undefined;
   function onSave() {
     if (null != guild) {
-      const obj = { features: guild.features };
-      obj.saveGuild(guild.id, obj);
+      const obj2 = { features: guild.features };
+      GuildSettingsActionCreatorsDefault.saveGuild(guild.id, obj2);
     }
   }
-  let obj = platformType(4338);
-  const token = obj.useToken(closeGuildSettings(576).modules.mobile.TABLE_ROW_PADDING);
+  const token = platformType(4338).useToken(closeGuildSettings(576).modules.mobile.TABLE_ROW_PADDING);
   const tmp5 = closure_14();
   dependencyMap = tmp5;
-  let obj1 = platformType(1483);
-  const navigation = obj1.useNavigation();
-  let obj3 = platformType(504);
+  let obj = platformType(4338);
+  const navigation = platformType(1483).useNavigation();
+  let obj2 = platformType(1483);
   const items = [guild];
-  const stateFromStoresObject = obj3.useStateFromStoresObject(items, () => ({
+  const stateFromStoresObject = platformType(504).useStateFromStoresObject(items, () => ({
     guild: guild.getGuild(),
     submitting: guild.isSubmitting(),
     hasChanges: guild.hasChanges(),
@@ -216,9 +221,9 @@ export default function GuildSettingsModalIntegrationPlatform(platformType) {
   const submitting = stateFromStoresObject.submitting;
   ({ hasChanges: c5, guild } = stateFromStoresObject);
   const theme = closeGuildSettings(4571)();
-  let obj4 = platformType(504);
+  const obj4 = platformType(504);
   const items1 = [guild];
-  const stateFromStores = obj4.useStateFromStores(items1, () => guild.getProps().integrations);
+  const stateFromStores = platformType(504).useStateFromStores(items1, () => guild.getProps().integrations);
   if (stateFromStores != null) {
     const found = stateFromStores.filter((type) => type.type === platformType);
   }
@@ -229,20 +234,18 @@ export default function GuildSettingsModalIntegrationPlatform(platformType) {
     if (submitting) {
       fn = () => null;
     }
-    obj = { headerLeft: fn, title: null, headerRight: null };
-    let tmp3Result = tmp3(5364);
-    value = tmp3Result.get(platformType);
+    const obj3 = { headerLeft: fn, title: null, headerRight: null };
+    value = tmp3(5364).get(platformType);
     let name;
     if (value != null) {
       name = value.name;
     }
     function onConectTap() {
       closeGuildSettings();
-      const obj = { screen: constants3.CONNECTIONS, isRootScreen: true };
-      obj.openUserSettings(obj);
+      openUserSettings.openUserSettings({ screen: constants3.CONNECTIONS, isRootScreen: true });
     }
-    obj.title = name;
-    obj.headerRight = function headerRight() {
+    obj3.title = name;
+    obj3.headerRight = function headerRight() {
       if (submitting) {
         let tmp2 = closure_2_11(NavigatorHeader.HeaderSubmittingIndicator, {});
       } else {
@@ -257,24 +260,26 @@ export default function GuildSettingsModalIntegrationPlatform(platformType) {
       }
       return tmp2;
     };
-    navigation.setOptions(obj);
+    navigation.setOptions(obj3);
     if (constants2.YOUTUBE === platformType) {
       let intl = tmp(1114).intl;
-      obj = { connectAction: onConectTap, helpdeskArticle: null };
-      tmp3Result = tmp3(2024);
-      obj.helpdeskArticle = tmp3Result.getArticleURL(onSave.YOUTUBE_INTEGRATION);
-      let formatResult = intl.format(tmp(1114).t["4OSAQ9"], obj);
+      const obj6 = {
+        connectAction: onConectTap,
+        helpdeskArticle: tmp3(2024).getArticleURL(onSave.YOUTUBE_INTEGRATION),
+      };
+      let formatResult = intl.format(tmp(1114).t["4OSAQ9"], obj6);
+      const tmp3Result3 = tmp3(2024);
     } else if (tmp10.TWITCH === platformType) {
       const intl2 = tmp(1114).intl;
-      obj1 = { connectAction: onConectTap, helpdeskArticle: tmp3(2024).getArticleURL(onSave.TWITCH_INTEGRATION) };
-      formatResult = intl2.format(tmp(1114).t.ro1jEN, obj1);
-      const tmp3Result1 = tmp3(2024);
+      const obj7 = { connectAction: onConectTap, helpdeskArticle: tmp3(2024).getArticleURL(onSave.TWITCH_INTEGRATION) };
+      formatResult = intl2.format(tmp(1114).t.ro1jEN, obj7);
+      const tmp3Result4 = tmp3(2024);
     }
-    const obj2 = { style: tmp5.form, contentContainerStyle: platformType.contentContainerStyle, children: null };
-    obj3 = { style: null, spacing: null, children: null };
-    obj4 = { paddingHorizontal: token };
-    obj3.style = obj4;
-    obj3.spacing = tmp3(576).space.PX_24;
+    const obj8 = { style: tmp5.form, contentContainerStyle: platformType.contentContainerStyle, children: null };
+    const obj9 = { style: null, spacing: null, children: null };
+    const obj10 = { paddingHorizontal: token };
+    obj9.style = obj10;
+    obj9.spacing = tmp3(576).space.PX_24;
     let mapped;
     if (found != null) {
       mapped = found.map((integration, index) => {
@@ -294,14 +299,15 @@ export default function GuildSettingsModalIntegrationPlatform(platformType) {
         );
       });
     }
-    const obj5 = { children: null };
+    const obj11 = { children: null };
     const items2 = [mapped];
-    const obj6 = { variant: "text-sm/medium", color: "text-muted", children: formatResult };
-    items2[1] = closure_11(tmp(4632).Text, obj6);
-    obj3.children = items2;
-    obj2.children = closure_12(tmp(5054).Stack, obj3);
-    const items3 = [closure_11(tmp(8716).Form, obj2), closure_11(tmp(7143).NavScrim, {})];
-    obj5.children = items3;
-    return closure_12(closure_13, obj5);
+    const obj12 = { variant: "text-sm/medium", color: "text-muted", children: formatResult };
+    items2[1] = closure_11(tmp(4632).Text, obj12);
+    obj9.children = items2;
+    obj8.children = closure_12(tmp(5054).Stack, obj9);
+    const items3 = [closure_11(tmp(8716).Form, obj8), closure_11(tmp(7143).NavScrim, {})];
+    obj11.children = items3;
+    return closure_12(closure_13, obj11);
   }
+  const obj5 = platformType(504);
 }

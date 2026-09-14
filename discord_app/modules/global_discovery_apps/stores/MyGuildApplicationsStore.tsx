@@ -14,7 +14,7 @@ function addToApplicationIdToGuildIds(applicationId) {
   closure_3.applicationIdToGuildIds[applicationId] = new Set(closure_3.applicationIdToGuildIds[applicationId]);
   const set1 = new Set(closure_3.applicationIdToGuildIds[applicationId]);
 }
-let FetchState = {
+const FetchState = {
   NOT_FETCHED: 0,
   [0]: "NOT_FETCHED",
   FETCHING: 1,
@@ -69,7 +69,7 @@ prototype["getFetchState"] = function getFetchState() {
 };
 MyGuildApplicationsStore.displayName = "MyGuildApplicationsStore";
 MyGuildApplicationsStore.persistKey = "MyGuildApplicationsStore";
-FetchState = {
+const myGuildApplicationsStore = new MyGuildApplicationsStore(DispatcherDefault, {
   LOGOUT: function handleLogout() {
     closure_3.applicationIdToGuildIds = {};
     closure_3.lastFetchTimeMs = null;
@@ -134,8 +134,7 @@ FetchState = {
       }
     }
   },
-};
-const myGuildApplicationsStore = new MyGuildApplicationsStore(DispatcherDefault, FetchState);
+});
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/global_discovery_apps/stores/MyGuildApplicationsStore.tsx");
 

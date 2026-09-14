@@ -8,27 +8,27 @@ import AutomaticLifecycleManager from "../../lib/AutomaticLifecycleManager.tsx";
 
 require = fn;
 function experimentStoreUpdateHandler() {
-  obj = js_shim_shim;
   if (obj.isLibdiscoreInitialized()) {
     if (!tmpResult.isExperimentSyncDisabled()) {
-      obj = {};
+      obj2 = {};
       const ALL_LIBDISCORE_EXPERIMENTS = libdiscoreExperiments.ALL_LIBDISCORE_EXPERIMENTS;
       for (const item10018 of ALL_LIBDISCORE_EXPERIMENTS) {
-        obj[item10018.id] = item10018.getCurrentConfig();
+        obj2[item10018.id] = item10018.getCurrentConfig();
         continue;
       }
-      let tmp7 = null != obj;
+      let tmp7 = null != obj2;
       if (tmp7) {
-        tmp7 = discord_common_shallowEqualDefault(obj, obj);
+        tmp7 = discord_common_shallowEqualDefault(obj2, obj2);
       }
       if (!tmp7) {
         const experimentCacher = js_shim_shim.getExperimentCacher();
         const _JSON = JSON;
-        experimentCacher.flushToCache(JSON.stringify(obj));
+        experimentCacher.flushToCache(JSON.stringify(obj2));
       }
     }
     tmpResult = libdiscoreExperiments;
   }
+  obj = js_shim_shim;
 }
 class LibdiscoreExperimentManager extends tmp2 {
   constructor() {
@@ -43,16 +43,16 @@ const prototype = LibdiscoreExperimentManager.prototype;
 prototype["_initialize"] = function _initialize() {
   const prop = libdiscoreExperiments.ALL_LIBDISCORE_EXPERIMENTS;
   const item = prop.forEach((id) => {
-    obj = { kind: "user", name: id.id, defaultConfig: { treatmentId: -1 }, variations: null };
+    obj2 = { kind: "user", name: id.id, defaultConfig: { treatmentId: -1 }, variations: null };
     const treatments = id.getTreatments();
-    obj.variations = Object.fromEntries(
+    obj2.variations = Object.fromEntries(
       treatments.map((treatmentId) => {
         treatmentId = treatmentId.treatmentId;
         const items = [treatmentId, { treatmentId }];
         return items;
       }),
     );
-    id.setExperiment(obj.createApexExperiment(obj));
+    id.setExperiment(ApexExperiment.createApexExperiment(obj2));
   });
 };
 prototype["_terminate"] = function _terminate() {};

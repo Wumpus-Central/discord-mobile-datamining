@@ -3,8 +3,13 @@ import nativeDefault from "../../../../../../discord_common/js/packages/tokens/n
 import createStyles from "../../../../../design/components/Styles/native/createStyles.tsx";
 import size from "../../../../../../_runtime/metro/00002__.js";
 
-let obj = {
-  container: null,
+const obj = {
+  container: {
+    flex: 1,
+    alignItems: "stretch",
+    justifyContent: "flex-start",
+    backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
+  },
   navHeader: null,
   content: null,
   title: null,
@@ -14,13 +19,12 @@ let obj = {
   footerContainer: null,
   footerButton: null,
 };
-obj = {
+const obj2 = {
   flex: 1,
   alignItems: "stretch",
   justifyContent: "flex-start",
   backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
 };
-obj.container = obj;
 obj.navHeader = {
   backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
   borderBottomColor: nativeDefault.colors.BORDER_SUBTLE,
@@ -38,7 +42,7 @@ obj.title = { textAlign: "center" };
 obj.stepHeader = { textTransform: "uppercase" };
 obj.body = { marginTop: 8, textAlign: "center" };
 obj.bodyContent = { flexDirection: "column", gap: 24, padding: 16 };
-const obj1 = {
+const obj3 = {
   backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
   borderBottomColor: nativeDefault.colors.BORDER_SUBTLE,
   shadowColor: "transparent",

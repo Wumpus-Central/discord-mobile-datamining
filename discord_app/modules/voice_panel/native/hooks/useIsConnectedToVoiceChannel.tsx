@@ -3,6 +3,8 @@ import AuthenticationStore from "../../../../stores/AuthenticationStore.tsx";
 import RTCConnectionStore from "../../../../stores/RTCConnectionStore.tsx";
 import VoiceStateStore from "../../../../stores/VoiceStateStore.tsx";
 
+const require = globalThis.__r;
+
 const require = fn;
 const RTCConnectionStates = fn(1074).RTCConnectionStates;
 const size = fn(2);

@@ -3,6 +3,8 @@ import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
+const require = globalThis.__r;
+
 const require = fn;
 const jsx = fn(21).jsx;
 const size = fn(2);
@@ -22,8 +24,7 @@ export default function VerifyPhone(phone) {
   ({ backgroundStyle, disableKeyboardAvoidingView } = phone);
   const tmp = _slicedToArray(onCodeEntered.useState(null), 2);
   asyncGeneratorStep = tmp[1];
-  const tmp2 = _slicedToArray(onCodeEntered.useState(false), 2);
-  _slicedToArray = tmp2[1];
+  [obj.disabled, _slicedToArray] = onCodeEntered.useState(false);
   asyncGeneratorStep(async (arg0) => {
     if (c6 === 2) {
       c6 = 3;
@@ -32,8 +33,8 @@ export default function VerifyPhone(phone) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -46,8 +47,8 @@ export default function VerifyPhone(phone) {
             throw value;
           } else if (arg0 === 2) {
             c6 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj4 = { value, done: true };
+            return obj4;
           } else {
             onCodeEnteredIntercept = tmp7;
             closure_129_0 = closure_0;
@@ -56,8 +57,8 @@ export default function VerifyPhone(phone) {
             if (null != onCodeEnteredIntercept) {
               c5 = 3;
               c6 = 1;
-              const obj1 = { value: onCodeEnteredIntercept(closure_0), done: false };
-              return obj1;
+              const obj5 = { value: onCodeEnteredIntercept(closure_0), done: false };
+              return obj5;
             }
           }
         } else {
@@ -85,7 +86,7 @@ export default function VerifyPhone(phone) {
           } else if (arg0 === 2) {
             c4 = 0;
             c6 = 3;
-            obj = { value, done: true };
+            const obj = { value, done: true };
             return obj;
           } else if (value) {
             c4 = 0;
@@ -94,14 +95,16 @@ export default function VerifyPhone(phone) {
           }
           c4 = 0;
           c6 = 3;
-          let obj2 = { value, done: true };
-          return obj2;
+          const obj6 = { value, done: true };
+          return obj6;
         }
-        obj2 = onCodeEnteredIntercept(onVerified[4]);
         c5 = 2;
         c6 = 1;
-        const obj3 = { value: obj2.verifyPhone(closure_0, closure_129_0, false), done: false };
-        return obj3;
+        const obj7 = {
+          value: onCodeEnteredIntercept(onVerified[4]).verifyPhone(closure_0, closure_129_0, false),
+          done: false,
+        };
+        return obj7;
       } catch (tmp25) {
         if (tmp4 === c4) {
           c6 = tmp2;
@@ -131,8 +134,8 @@ export default function VerifyPhone(phone) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -145,22 +148,22 @@ export default function VerifyPhone(phone) {
             throw value;
           } else if (arg0 === 2) {
             c3 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
             closure_1 = tmp4;
             closure_1_4(true);
             c2 = 1;
             c3 = 1;
-            const obj1 = { value: onCodeEntered(closure_0), done: false };
-            return obj1;
+            const obj4 = { value: onCodeEntered(closure_0), done: false };
+            return obj4;
           }
         } else if (arg0 === 1) {
           c3 = 3;
           throw value;
         } else if (arg0 === 2) {
           c3 = 3;
-          obj = { value, done: true };
+          const obj = { value, done: true };
           return obj;
         } else {
           closure_1_4(false);
@@ -208,7 +211,6 @@ export default function VerifyPhone(phone) {
   obj.loading = flag;
   obj.onCodeEntered = onCodeEntered;
   obj.codeType = require("CodeField").CodeType.NUMERIC;
-  obj.disabled = tmp2[0];
   obj.disableKeyboardAvoidingView = disableKeyboardAvoidingView;
   return jsx(onCodeEnteredIntercept(onVerified[6]), {
     title: null,

@@ -9,23 +9,23 @@ const result = size.fileFinishedImporting("modules/guild_member_verification/Gui
 
 export const trackMemberApplicationViewed = function trackMemberApplicationViewed(arg0) {
   ({ guildId, applicationUserId, applicationStatus } = arg0);
-  const obj = {
+  const obj = AnalyticsUtilsDefault;
+  obj.track(AnalyticEvents.GUILD_MEMBER_APPLICATION_VIEWED, {
     guild_id: guildId,
     viewing_user_id: AuthenticationStore.getId(),
     application_user_id: applicationUserId,
     application_status: applicationStatus,
-  };
-  obj.track(AnalyticEvents.GUILD_MEMBER_APPLICATION_VIEWED, obj);
+  });
 };
 export const trackMemberApplicationAction = function trackMemberApplicationAction(arg0) {
   ({ guildId, actionType, applicationUserId } = arg0);
-  const obj = {
+  const obj = AnalyticsUtilsDefault;
+  obj.track(AnalyticEvents.GUILD_MEMBER_APPLICATION_ACTION, {
     guild_id: guildId,
     action_type: actionType,
     application_user_id: applicationUserId,
     viewing_user_id: AuthenticationStore.getId(),
-  };
-  obj.track(AnalyticEvents.GUILD_MEMBER_APPLICATION_ACTION, obj);
+  });
 };
 export const trackMemberApplicationInterviewMessage = function trackMemberApplicationInterviewMessage(guildId) {
   guildId = guildId.guildId;
@@ -47,6 +47,5 @@ export const trackMemberApplicationInterviewMessage = function trackMemberApplic
   });
 };
 export const trackMemberVerificationApplicationViewed = function trackMemberVerificationApplicationViewed(guild_id) {
-  const obj = { guild_id };
-  obj.track(AnalyticEvents.MEMBER_VERIFICATION_APPLICATION_VIEWED, obj);
+  AnalyticsUtilsDefault.track(AnalyticEvents.MEMBER_VERIFICATION_APPLICATION_VIEWED, { guild_id });
 };

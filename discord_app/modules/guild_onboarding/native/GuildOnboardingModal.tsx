@@ -32,9 +32,8 @@ export default function GuildOnboardingModal(guildId) {
   const backShouldLeaveGuild = guildId.backShouldLeaveGuild;
   let stateFromStores;
   let callback;
-  let obj = guildId(onClose[16]);
   const items = [stateFromStores];
-  stateFromStores = obj.useStateFromStores(items, () => {
+  stateFromStores = guildId(onClose[16]).useStateFromStores(items, () => {
     const guild = GuildStore.getGuild(guildId);
     let tmp2 = null != guild;
     if (tmp2) {
@@ -48,6 +47,7 @@ export default function GuildOnboardingModal(guildId) {
     }
     return tmp2;
   });
+  let obj = guildId(onClose[16]);
   const items1 = [callback];
   const stateFromStoresArray = guildId(onClose[16]).useStateFromStoresArray(items1, () =>
     GuildOnboardingPromptsStore.getOnboardingPromptsForOnboarding(guildId),
@@ -87,11 +87,11 @@ export default function GuildOnboardingModal(guildId) {
     if (stateFromStores1.length > 0) {
       let PROMPT = callback1.CONNECTIONS;
     }
-    obj = { screens: tmp8, initialRouteName: PROMPT, headerBackTitle: null };
+    const obj4 = { screens: tmp8, initialRouteName: PROMPT, headerBackTitle: null };
     const intl = tmp(tmp2[20]).intl;
-    obj.headerBackTitle = intl.string(tmp(tmp2[20]).t["13/7kX"]);
+    obj4.headerBackTitle = intl.string(tmp(tmp2[20]).t["13/7kX"]);
     return jsx(tmp(tmp2[19]).Navigator, { screens: tmp8, initialRouteName: PROMPT, headerBackTitle: null });
   }
   PROMPT = callback1.PROMPT;
-  const obj3 = guildId(onClose[16]);
+  let obj3 = guildId(onClose[16]);
 }

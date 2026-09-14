@@ -1,6 +1,8 @@
 // discord_common/js/packages/design/components/Rive/native/generated/index.tsx
 import size from "../../../../../../../../_runtime/metro/00002__.js";
 
+const require = globalThis.__r;
+
 const result = size.fileFinishedImporting(
   "../discord_common/js/packages/design/components/Rive/native/generated/index.tsx",
 );

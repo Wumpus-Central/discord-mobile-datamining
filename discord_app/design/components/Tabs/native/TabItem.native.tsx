@@ -11,48 +11,53 @@ function TabItemCount(arg0) {
   ({ index, activeIndex, pressed } = arg0);
   let sharedValue;
   ({ count, variant } = arg0);
-  let obj = sharedValue(4373);
-  sharedValue = obj.useSharedValue(0);
+  const tmp = closure_9();
+  sharedValue = sharedValue(4373).useSharedValue(0);
   let items = [sharedValue];
   const layoutEffect = noop.useLayoutEffect(() => {
     const result = sharedValue.set(1);
   }, items);
-  let obj1 = sharedValue(4373);
+  let obj = sharedValue(4373);
   class T {
     constructor() {
       obj = { opacity: null, transform: null };
       obj2 = closure_0(closure_2[6]);
       obj.opacity = obj2.withSpring(closure_0.get(), closure_8);
-      obj = { translateX: null };
+      obj1 = { translateX: null };
       obj4 = closure_0(closure_2[6]);
       obj5 = closure_0(closure_2[3]);
-      obj.translateX = obj4.withSpring(obj5.interpolate(closure_0.get(), [0, 1], [-10, 0]), closure_8);
+      obj1.translateX = obj4.withSpring(obj5.interpolate(closure_0.get(), [0, 1], [-10, 0]), closure_8);
       items = [];
-      items[0] = obj;
+      items[0] = obj1;
       obj.transform = items;
       return obj;
     }
   }
-  obj = {
+  let obj2 = sharedValue(4373);
+  T.__closure = {
     withSpring: sharedValue(5055).withSpring,
     countAnimationState: sharedValue,
     COUNT_SPRING_CONFIG,
     interpolate: sharedValue(4373).interpolate,
   };
-  T.__closure = obj;
   T.__workletHash = 16666672974627;
   T.__initData = __initData2;
   closure_129_0 = index;
   closure_129_1 = activeIndex;
   closure_129_2 = pressed;
   closure_129_3 = undefined;
-  const animatedStyle = obj1.useAnimatedStyle(T);
+  const animatedStyle = obj2.useAnimatedStyle(T);
   let tmp7 = closure_10();
   if ("overlay" === variant) {
     tmp7 = closure_11();
   }
   closure_129_3 = tmp7;
-  const tmp = closure_9();
+  let obj3 = {
+    withSpring: sharedValue(5055).withSpring,
+    countAnimationState: sharedValue,
+    COUNT_SPRING_CONFIG,
+    interpolate: sharedValue(4373).interpolate,
+  };
   const fn = function c() {
     let active = inactive.inactive;
     value = setItemDimensions.get();
@@ -68,14 +73,21 @@ function TabItemCount(arg0) {
     obj.color = spring.withSpring(active, closure_7, "animate-always");
     return obj;
   };
-  obj = { colors: tmp7, pressed, index, activeIndex, withSpring: tmp2(5055).withSpring, TEXT_SPRING_CONFIG };
-  fn.__closure = obj;
+  const tmp2Result = sharedValue(4373);
+  fn.__closure = {
+    colors: tmp7,
+    pressed,
+    index,
+    activeIndex,
+    withSpring: sharedValue(5055).withSpring,
+    TEXT_SPRING_CONFIG,
+  };
   fn.__workletHash = 11643476765161;
   fn.__initData = __initData;
-  const animatedStyle1 = sharedValue(4373).useAnimatedStyle(fn);
-  obj1 = {
+  const animatedStyle1 = tmp2Result.useAnimatedStyle(fn);
+  const obj5 = {
     style: null,
-    children: closure_4(tmp2(4632).Text, {
+    children: closure_4(sharedValue(4632).Text, {
       animated: true,
       variant: "text-sm/medium",
       style: animatedStyle1,
@@ -84,8 +96,8 @@ function TabItemCount(arg0) {
     }),
   };
   const items1 = [tmp.count, animatedStyle];
-  obj1.style = items1;
-  return closure_4(ReanimatedRexport.View, obj1);
+  obj5.style = items1;
+  return closure_4(ReanimatedRexport.View, obj5);
 }
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
@@ -95,19 +107,22 @@ const COUNT_SPRING_CONFIG = { mass: 2, damping: 30, stiffness: 300, overshootCla
 let createStyles = fn(4636);
 let obj = {
   item: { flexShrink: 0, flexBasis: 0, paddingBottom: 14, flexDirection: "row", justifyContent: "center" },
-  count: null,
+  count: { marginLeft: nativeDefault.space.PX_8 },
 };
-obj = { marginLeft: nativeDefault.space.PX_8 };
-obj.count = obj;
 let closure_9 = createStyles.createStyles(obj);
-fn(4636);
-createStyles = {
+createStyles = fn(4636);
+let obj3 = { marginLeft: nativeDefault.space.PX_8 };
+let closure_10 = createStyles.createStyleProperties({
+  inactive: nativeDefault.colors.TEXT_MUTED,
+  active: nativeDefault.colors.TEXT_BRAND,
+  pressed: nativeDefault.colors.TEXT_BRAND,
+});
+createStyles = fn(4636);
+let obj4 = {
   inactive: nativeDefault.colors.TEXT_MUTED,
   active: nativeDefault.colors.TEXT_BRAND,
   pressed: nativeDefault.colors.TEXT_BRAND,
 };
-let closure_10 = createStyles.createStyleProperties(createStyles);
-createStyles = fn(4636);
 let closure_11 = createStyles.createStyleProperties({
   inactive: nativeDefault.colors.TEXT_MUTED,
   active: nativeDefault.colors.TEXT_STRONG,
@@ -135,11 +150,9 @@ export const TabItem = function TabItem(arg0) {
   );
   const activeIndex = state.activeIndex;
   const setItemDimensions = state.setItemDimensions;
-  let obj = index(setItemDimensions[3]);
+  let tmp2 = closure_9();
   const fn = function f() {
-    let obj = { accessibilityState: null };
-    obj = { selected: activeIndex.get() === index };
-    obj.accessibilityState = obj;
+    const obj = { accessibilityState: { selected: activeIndex.get() === index } };
     return obj;
   };
   fn.__closure = { activeIndex, index };
@@ -149,13 +162,13 @@ export const TabItem = function TabItem(arg0) {
   closure_129_1 = activeIndex;
   closure_129_2 = pressed;
   closure_129_3 = undefined;
-  const animatedProps = obj.useAnimatedProps(fn);
+  const animatedProps = index(setItemDimensions[3]).useAnimatedProps(fn);
   let tmp6 = closure_10();
   if ("overlay" === variant) {
     tmp6 = closure_11();
   }
   closure_129_3 = tmp6;
-  let tmp3Result = index(tmp4[3]);
+  let obj = index(setItemDimensions[3]);
   const fn2 = function c() {
     let active = inactive.inactive;
     value = setItemDimensions.get();
@@ -171,32 +184,46 @@ export const TabItem = function TabItem(arg0) {
     obj.color = spring.withSpring(active, closure_7, "animate-always");
     return obj;
   };
-  obj = { colors: tmp6, pressed, index, activeIndex, withSpring: index(tmp4[6]).withSpring, TEXT_SPRING_CONFIG };
-  fn2.__closure = obj;
+  const tmp3Result = index(setItemDimensions[3]);
+  fn2.__closure = {
+    colors: tmp6,
+    pressed,
+    index,
+    activeIndex,
+    withSpring: index(setItemDimensions[6]).withSpring,
+    TEXT_SPRING_CONFIG,
+  };
   fn2.__workletHash = 11643476765161;
   fn2.__initData = __initData;
-  const items = [closure_9().item];
+  const items = [tmp2.item];
   let num = 0;
   const animatedStyle = tmp3Result.useAnimatedStyle(fn2);
   if (grow) {
     num = 1;
   }
-  obj = { style: items };
+  const obj3 = { style: items };
   items[1] = { flexGrow: num };
   const merged1 = Object.assign(merged);
-  obj.onLayout = function onLayout(nativeEvent) {
+  obj3.onLayout = function onLayout(nativeEvent) {
     ReanimatedRexport2.runOnUI(setItemDimensions)(index, nativeEvent.nativeEvent.layout);
   };
-  obj.accessibilityRole = "tab";
-  tmp3Result = index(tmp4[8]);
+  obj3.accessibilityRole = "tab";
+  const obj2 = {
+    colors: tmp6,
+    pressed,
+    index,
+    activeIndex,
+    withSpring: index(setItemDimensions[6]).withSpring,
+    TEXT_SPRING_CONFIG,
+  };
   let formatToPlainStringResult;
-  if (tmp3Result.isAndroid()) {
+  if (tmp3Result2.isAndroid()) {
     const intl = index(tmp4[9]).intl;
-    const obj1 = { position: index + 1, tabCount: itemCount };
-    formatToPlainStringResult = intl.formatToPlainString(index(tmp4[9]).t["4EsQA1"], obj1);
+    const obj4 = { position: index + 1, tabCount: itemCount };
+    formatToPlainStringResult = intl.formatToPlainString(index(tmp4[9]).t["4EsQA1"], obj4);
   }
-  obj.accessibilityHint = formatToPlainStringResult;
-  obj.animatedProps = animatedProps;
+  obj3.accessibilityHint = formatToPlainStringResult;
+  obj3.animatedProps = animatedProps;
   const items1 = [
     closure_4(index(setItemDimensions[7]).Text, {
       animated: true,
@@ -208,10 +235,10 @@ export const TabItem = function TabItem(arg0) {
   ];
   let tmp12Result = null;
   if (null != count) {
-    const obj2 = { count, index, activeIndex, pressed, variant };
-    tmp12Result = closure_4(TabItemCount, obj2);
+    const obj5 = { count, index, activeIndex, pressed, variant };
+    tmp12Result = closure_4(TabItemCount, obj5);
   }
   items1[1] = tmp12Result;
-  obj.children = items1;
-  return closure_5(closure_6, obj);
+  obj3.children = items1;
+  return closure_5(closure_6, obj3);
 };

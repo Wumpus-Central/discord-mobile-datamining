@@ -1,6 +1,8 @@
 // discord_app/modules/devtools/design_toggles/useDesignToggle.tsx
 import DesignTogglesStore from "DesignTogglesStore.tsx";
 
+const require = globalThis.__r;
+
 const require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/devtools/design_toggles/useDesignToggle.tsx");

@@ -2,6 +2,8 @@
 import noop from "../../../../../_runtime/metro/00019__.js";
 import subscribeToKeyboardUIStore from "../../../../modules/keyboard/native/subscribeToKeyboardUIStore.tsx";
 
+const require = globalThis.__r;
+
 const require = fn;
 get_ActivityIndicator = fn(17);
 ({
@@ -64,8 +66,8 @@ export const NativeTextInput = noop.forwardRef((value, ref2) => {
       current.setNativeProps(obj);
     }
   }, items1);
-  let obj = ref(defaultValue[6]);
-  const mountLayoutEffect = obj.useMountLayoutEffect(() => {
+  const tmp4 = require("useBottomSheetKeyboardHandling")(value);
+  const mountLayoutEffect = ref(defaultValue[6]).useMountLayoutEffect(() => {
     const current = ref.current;
     if (current != null) {
       const obj = { text };
@@ -73,8 +75,8 @@ export const NativeTextInput = noop.forwardRef((value, ref2) => {
     }
   });
   closure_129_0 = ref;
-  let obj1 = ref(defaultValue[7]);
-  const isScreenReaderEnabled = obj1.useIsScreenReaderEnabled();
+  let obj = ref(defaultValue[6]);
+  const isScreenReaderEnabled = ref(defaultValue[7]).useIsScreenReaderEnabled();
   closure_129_1 = isScreenReaderEnabled;
   const items2 = [ref];
   const items3 = [isScreenReaderEnabled];
@@ -98,16 +100,15 @@ export const NativeTextInput = noop.forwardRef((value, ref2) => {
   }, items3);
   ref(defaultValue[9]);
   if (null != value.keyboardAppearance) {
-    obj = {};
-    obj = { value: "Array", defaultValue: "PX_16" };
-    let tmp6Result = tmp6(tmp3[10]);
-    let merged = Object.assign(tmp6Result.mergeProps(value, tmp4, obj));
-    tmp6Result = tmp6(tmp3[10]);
-    obj.ref = tmp6Result.mergeRefs(ref, ref2);
-    const tmp19 = closure_10(closure_5, obj);
+    const obj3 = {};
+    let merged = Object.assign(tmp6(tmp3[10]).mergeProps(value, tmp4, { value: "Array", defaultValue: "PX_16" }));
+    const obj4 = { value: "Array", defaultValue: "PX_16" };
+    const tmp6Result = tmp6(tmp3[10]);
+    obj3.ref = tmp6(tmp3[10]).mergeRefs(ref, ref2);
+    const tmp19 = closure_10(closure_5, obj3);
     let tmp21Result = tmp19;
     if (!value.multiline) {
-      obj1 = { style: { flexBasis: 0, flexGrow: 1 }, children: null };
+      const obj5 = { style: { flexBasis: 0, flexGrow: 1 }, children: null };
       const items4 = [tmp19];
       let current = ref.current;
       let isFocusedResult;
@@ -118,15 +119,15 @@ export const NativeTextInput = noop.forwardRef((value, ref2) => {
       if (isFocusedResult) {
         str = "none";
       }
-      const obj2 = { pointerEvents: str, onPress: callback, style: memo };
-      items4[1] = closure_10(closure_4, obj2);
-      obj1.children = items4;
-      tmp21Result = closure_11(closure_7, obj1);
+      const obj6 = { pointerEvents: str, onPress: callback, style: memo };
+      items4[1] = closure_10(closure_4, obj6);
+      obj5.children = items4;
+      tmp21Result = closure_11(closure_7, obj5);
     }
     return tmp21Result;
   } else {
     value.keyboardAppearance = tmp6(tmp3[10]).isThemeDark(tmp12) ? KeyboardThemes.DARK : KeyboardThemes.LIGHT;
-    const tmp6Result1 = tmp6(tmp3[10]);
+    const tmp6Result4 = tmp6(tmp3[10]);
   }
-  tmp4 = require("useBottomSheetKeyboardHandling")(value);
+  const obj2 = ref(defaultValue[7]);
 });

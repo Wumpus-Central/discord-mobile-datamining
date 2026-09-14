@@ -6,15 +6,15 @@ import TextStyles from "../../../../rebrand/native/TextStyles.tsx";
 
 require = fn;
 const jsx = fn(21).jsx;
-fn(4636);
-let createStyles = { header: null };
-createStyles = {};
+const createStyles = fn(4636);
+const obj2 = { header: null };
+const obj3 = {};
 const merged = Object.assign(
   TextStyles(fn(1074).Fonts.DISPLAY_EXTRABOLD, nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, 24),
 );
-createStyles.textAlign = "center";
-createStyles.header = createStyles;
-let closure_3 = createStyles.createStyles(createStyles);
+obj3.textAlign = "center";
+obj2.header = obj3;
+let closure_3 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/auth/native/components/atoms/AuthHeader.tsx");
 

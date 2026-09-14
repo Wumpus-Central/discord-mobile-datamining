@@ -3,6 +3,8 @@ import StageChannelParticipants from "StageChannelParticipants.tsx";
 import _slicedToArray from "../../../_runtime/metro/00032__.js";
 import StageChannelParticipantStore from "StageChannelParticipantStore.tsx";
 
+const require = globalThis.__r;
+
 require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/stage_channels/StageChannelParticipantStoreHooks.tsx");

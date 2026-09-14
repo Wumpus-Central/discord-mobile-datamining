@@ -6,8 +6,8 @@ import FamilyCenterControlledSettingsUtils from "../../../parent_tools/FamilyCen
 import FamilyCenterStore from "../../../parent_tools/FamilyCenterStore.tsx";
 
 require = fn;
-fn(11601);
-let SettingBuilders = {
+const SettingBuilders = fn(11602);
+const pressable = SettingBuilders.createPressable({
   useTitle: function getTitle() {
     const intl = util.intl;
     return intl.string(util.t["+uI23H"]);
@@ -29,29 +29,27 @@ let SettingBuilders = {
   onPress: function onGoreContentFriendsDmOnPress() {
     const selectedTeenId = FamilyCenterStore.getSelectedTeenId();
     if (null != selectedTeenId) {
-      selectedTeenId(14917);
-      let obj = { title: null, subtitle: null, handlePress: null, currentValue: null, excluded: null };
+      const obj = selectedTeenId(14918);
+      const obj3 = { title: null, subtitle: null, handlePress: null, currentValue: null, excluded: null };
       const intl = selectedTeenId(1114).intl;
-      obj.title = intl.string(selectedTeenId(1114).t["16/3Bi"]);
+      obj3.title = intl.string(selectedTeenId(1114).t["16/3Bi"]);
       const intl2 = selectedTeenId(1114).intl;
-      obj.subtitle = intl2.string(selectedTeenId(1114).t["+uI23H"]);
-      obj.handlePress = function handlePress(goreContentFriendDm) {
-        const obj = { goreContentFriendDm };
-        return obj.updateGoreContentSetting(selectedTeenId, obj);
+      obj3.subtitle = intl2.string(selectedTeenId(1114).t["+uI23H"]);
+      obj3.handlePress = function handlePress(goreContentFriendDm) {
+        return FamilyCenterControlledSettingsUtils.updateGoreContentSetting(selectedTeenId, { goreContentFriendDm });
       };
-      obj.currentValue = obj.getGoreContentSettingOrDefault(selectedTeenId).goreContentFriendDm;
-      const items = [selectedTeenId(1187).ExplicitContentRedaction.SHOW];
-      obj.excluded = items;
-      const result = selectedTeenId(14910).handleSensitiveMediaFilterPress(obj);
-      const obj2 = selectedTeenId(14910);
+      obj3.currentValue = obj.getGoreContentSettingOrDefault(selectedTeenId).goreContentFriendDm;
+      const items = [selectedTeenId(1185).ExplicitContentRedaction.SHOW];
+      obj3.excluded = items;
+      const result = selectedTeenId(14911).handleSensitiveMediaFilterPress(obj3);
+      const obj2 = selectedTeenId(14911);
     }
   },
   unsearchable: true,
-};
-SettingBuilders = SettingBuilders.createPressable(SettingBuilders);
+});
 const size = fn(2);
 let result = size.fileFinishedImporting(
   "modules/user_settings/defs/native/ParentalControlsGoreMediaFiltersFriendsDMsSetting.tsx",
 );
 
-export default SettingBuilders;
+export default pressable;

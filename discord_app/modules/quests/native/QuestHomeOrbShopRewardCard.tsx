@@ -12,20 +12,21 @@ get_ActivityIndicator = fn(17);
 const ShopCtaEnum = fn(1076).ShopCtaEnum;
 const jsxProd = fn(21);
 ({ jsx: closure_7, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
-fn(4636);
-let createStyles = { card: null, assetTile: null };
-createStyles = {
-  overflow: "hidden",
-  backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
-  borderWidth: 1,
-  borderColor: nativeDefault.colors.BORDER_SUBTLE,
-  borderRadius: nativeDefault.radii.sm,
-  position: "relative",
+const createStyles = fn(4636);
+let obj2 = {
+  card: {
+    overflow: "hidden",
+    backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
+    borderWidth: 1,
+    borderColor: nativeDefault.colors.BORDER_SUBTLE,
+    borderRadius: nativeDefault.radii.sm,
+    position: "relative",
+  },
+  assetTile: null,
 };
-createStyles.card = createStyles;
 const merged = Object.assign(StyleSheet.absoluteFillObject);
-createStyles.assetTile = {};
-let closure_10 = createStyles.createStyles(createStyles);
+obj2.assetTile = {};
+let closure_10 = createStyles.createStyles(obj2);
 let size = fn(2);
 let result = size.fileFinishedImporting("modules/quests/native/QuestHomeOrbShopRewardCard.tsx");
 
@@ -51,36 +52,35 @@ export default function QuestHomeOrbShopRewardCard(product) {
   defaultVariantIndex = undefined;
   let currentUser;
   const tmp5 = closure_10();
-  let obj = require("initialize");
   const items = [currentUser];
-  const stateFromStores = obj.useStateFromStores(items, () =>
+  const stateFromStores = require("initialize").useStateFromStores(items, () =>
     stateFromStores(defaultVariantIndex[9]).canUseShopDiscounts(currentUser.getCurrentUser()),
   );
-  let obj1 = require("useDefaultVariantIndex");
-  defaultVariantIndex = obj1.useDefaultVariantIndex(product);
+  let obj = require("initialize");
+  const tmp6 = require;
+  defaultVariantIndex = require("useDefaultVariantIndex").useDefaultVariantIndex(product);
   const analyticsLocations = stateFromStores(defaultVariantIndex[11])().analyticsLocations;
-  let obj2 = require("CollectiblesAnalyticsContext");
-  const collectiblesAnalyticsContext = obj2.useCollectiblesAnalyticsContext();
-  let obj3 = require("useTrackShopCardClick");
-  currentUser = obj3.useTrackShopCardClick({ product, analyticsLocations });
+  let obj2 = require("useDefaultVariantIndex");
+  const collectiblesAnalyticsContext = require("CollectiblesAnalyticsContext").useCollectiblesAnalyticsContext();
+  let obj3 = require("CollectiblesAnalyticsContext");
+  currentUser = require("useTrackShopCardClick").useTrackShopCardClick({ product, analyticsLocations });
   const items1 = [product, stateFromStores];
-  const memo = analyticsLocations.useMemo(() => {
-    const obj = { product, hasShopDiscount: stateFromStores };
-    return obj.getProductOrbPrice(obj);
-  }, items1);
-  let obj4 = require("getProductName");
-  const productName = obj4.getProductName(product);
+  const memo = analyticsLocations.useMemo(
+    () => CollectiblesProductUtils.getProductOrbPrice({ product, hasShopDiscount: stateFromStores }),
+    items1,
+  );
+  const obj4 = require("useTrackShopCardClick");
+  const productName = require("getProductName").getProductName(product);
   const items2 = [collectiblesAnalyticsContext, analyticsLocations, product, defaultVariantIndex];
   closure_6 = analyticsLocations.useCallback(() => {
-    let obj = ActionSheetActionCreatorsDefault;
-    obj.hideActionSheet();
-    obj = {
+    ActionSheetActionCreatorsDefault.hideActionSheet();
+    const obj3 = {
       product,
       initialVariantIndex: defaultVariantIndex,
       analyticsLocations,
       shopAnalyticsContext: collectiblesAnalyticsContext,
     };
-    const result = openProductDetailsActionSheet.openProductDetailsActionSheet(obj);
+    const result = openProductDetailsActionSheet.openProductDetailsActionSheet(obj3);
   }, items2);
   if (null == memo) {
     return null;
@@ -88,26 +88,26 @@ export default function QuestHomeOrbShopRewardCard(product) {
     const items3 = [tmp5.card];
     const size = { width: COLLECTIBLES_SHOP_CARD_WIDTH, height: COLLECTIBLES_SHOP_CARD_HEIGHT };
     items3[1] = size;
-    obj = { style: tmp5.assetTile, children: null };
-    obj = {
+    const obj6 = { style: tmp5.assetTile, children: null };
+    const obj7 = {
       product,
       cardWidth: COLLECTIBLES_SHOP_CARD_WIDTH,
       cardHeight: COLLECTIBLES_SHOP_CARD_HEIGHT,
       hideCardDetails: flag,
     };
-    obj.children = closure_7(tmp10(tmp7[18]), obj);
-    const items4 = [closure_7(collectiblesAnalyticsContext, obj)];
+    obj6.children = closure_7(tmp10(tmp7[18]), obj7);
+    const items4 = [closure_7(collectiblesAnalyticsContext, obj6)];
     let tmp19Result = !flag;
     if (!flag) {
-      obj1 = { product, collectibleProductState: null, hidePrice: true };
-      tmp19Result = closure_7(tmp10(tmp7[19]), obj1);
+      const obj8 = { product, collectibleProductState: null, hidePrice: true };
+      tmp19Result = closure_7(tmp10(tmp7[19]), obj8);
     }
-    obj2 = { children: null };
+    const obj9 = { children: null };
     items4[1] = tmp19Result;
-    obj2.children = items4;
-    const tmp17Result = closure_9(closure_8, obj2);
+    obj9.children = items4;
+    const tmp17Result = closure_9(closure_8, obj9);
     if (flag2) {
-      obj3 = {
+      const obj10 = {
         style: items3,
         onPress() {
           currentUser(ShopCtaEnum.OPEN_DETAILS);
@@ -118,20 +118,20 @@ export default function QuestHomeOrbShopRewardCard(product) {
         accessibilityLabel: productName,
         children: tmp17Result,
       };
-      tmp19Result = closure_7(tmp6(tmp7[20]).PressableOpacity, obj3);
+      let tmp19Result2 = closure_7(tmp6(tmp7[20]).PressableOpacity, obj10);
     } else {
-      obj4 = {
+      const obj11 = {
         style: items3,
         accessible: true,
         accessibilityRole: "text",
         accessibilityLabel: productName,
         children: tmp17Result,
       };
-      tmp19Result = closure_7(collectiblesAnalyticsContext, obj4);
+      tmp19Result2 = closure_7(collectiblesAnalyticsContext, obj11);
     }
-    return tmp19Result;
+    return tmp19Result2;
   }
-  tmp6 = require;
+  const obj5 = require("getProductName");
 }
 export const QUEST_HOME_REPLACE_MEDIA_CARD_WIDTH = 114;
 export const QUEST_HOME_REPLACE_MEDIA_CARD_HEIGHT = 123;

@@ -9,38 +9,38 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-fn(4636);
-let createStyles = { exclusiveBadge: null, exclusiveBadgeText: null };
-createStyles = {
-  flexDirection: "row",
-  alignItems: "center",
-  textAlignVertical: "center",
-  alignSelf: "flex-start",
-  gap: nativeDefault.space.PX_4,
-  borderRadius: nativeDefault.radii.round,
-  paddingHorizontal: nativeDefault.space.PX_8,
-  backgroundColor: nativeDefault.colors.BACKGROUND_BRAND,
+const createStyles = fn(4636);
+const obj2 = {
+  exclusiveBadge: {
+    flexDirection: "row",
+    alignItems: "center",
+    textAlignVertical: "center",
+    alignSelf: "flex-start",
+    gap: nativeDefault.space.PX_4,
+    borderRadius: nativeDefault.radii.round,
+    paddingHorizontal: nativeDefault.space.PX_8,
+    backgroundColor: nativeDefault.colors.BACKGROUND_BRAND,
+  },
+  exclusiveBadgeText: null,
 };
-createStyles.exclusiveBadge = createStyles;
-const obj1 = { textTransform: "uppercase", fontSize: nativeDefault.space.PX_12, lineHeight: null };
-let PlatformUtils = fn(1150);
+const obj4 = { textTransform: "uppercase", fontSize: nativeDefault.space.PX_12, lineHeight: null };
+let PlatformUtils = fn(1363);
 PlatformUtils = PlatformUtils.isAndroid();
 const space = nativeDefault.space;
-obj1.lineHeight = PlatformUtils ? space.PX_12 : space.PX_16;
-createStyles.exclusiveBadgeText = obj1;
-let closure_6 = createStyles.createStyles(createStyles);
+obj4.lineHeight = PlatformUtils ? space.PX_12 : space.PX_16;
+obj2.exclusiveBadgeText = obj4;
+let closure_6 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/slayer_storefront/native/SocialLayerStorefrontBadges.tsx");
 
 export const ExclusiveBadge = function ExclusiveBadge() {
   const tmp = closure_6();
-  let obj = { style: tmp.exclusiveBadge, children: null };
-  obj = { size: "xs", color: nativeDefault.colors.WHITE };
-  const items = [React4(ClydeIcon.ClydeIcon, obj)];
-  obj = { variant: "text-xs/bold", color: "text-overlay-light", style: tmp.exclusiveBadgeText, children: null };
+  const obj = { style: tmp.exclusiveBadge, children: null };
+  const items = [React4(ClydeIcon.ClydeIcon, { size: "xs", color: nativeDefault.colors.WHITE })];
+  const obj3 = { variant: "text-xs/bold", color: "text-overlay-light", style: tmp.exclusiveBadgeText, children: null };
   const intl = util.intl;
-  obj.children = intl.string(util.t.RiDMFz);
-  items[1] = React4(Text_Text.Text, obj);
+  obj3.children = intl.string(util.t.RiDMFz);
+  items[1] = React4(Text_Text.Text, obj3);
   obj.children = items;
   return hasOwnProperty(View, obj);
 };

@@ -17,10 +17,9 @@ export default function ApplicationConnectionCard(connection) {
   const _location = connection.location;
   let analyticsLocations;
   let startAuthorization;
-  let obj = connection(_location[4]);
   const items = [analyticsLocations];
   const items1 = [connection.application_id];
-  const stateFromStores = obj.useStateFromStores(
+  const stateFromStores = connection(_location[4]).useStateFromStores(
     items,
     () => {
       let application = null;
@@ -60,34 +59,28 @@ export default function ApplicationConnectionCard(connection) {
   const tmp7 = guildId(_location[8])(stateFromStores);
   startAuthorization = tmp7.startAuthorization;
   ({ hasAlreadyLinked, canStartAuthorization, fetched } = tmp7);
-  obj = { game: stateFromStores, size: connection(_location[9]).GameIconSizes.SMALL };
+  const obj3 = { game: stateFromStores, size: null };
+  let obj = connection(_location[4]);
+  let obj2 = stateFromStores;
+  obj3.size = connection(_location[9]).GameIconSizes.SMALL;
   const items3 = [startAuthorization, guildId, connection.application_id, _location, analyticsLocations];
-  const obj2 = stateFromStores;
   const tmp4Result = guildId(_location[9]);
   const callback = obj2.useCallback(() => {
-    let obj = {};
+    const obj2 = {};
+    const obj = AnalyticsUtilsDefault;
     const merged = Object.assign(AppAnalyticsUtils.collectGuildAnalyticsMetadata(guildId));
-    obj.connection_type = "application";
+    obj2.connection_type = "application";
     const application_id = connection.application_id;
-    obj.application_id = application_id;
-    obj.location = _location;
-    obj.track(AnalyticEvents.GUILD_ONBOARDING_CONNECTION_CLICKED, obj);
-    obj = { analyticsLocations };
-    startAuthorization(obj);
+    obj2.application_id = application_id;
+    obj2.location = _location;
+    obj.track(AnalyticEvents.GUILD_ONBOARDING_CONNECTION_CLICKED, obj2);
+    startAuthorization({ analyticsLocations });
   }, items3);
-  obj = {
-    displayName: name,
-    description: connection.description,
-    icon: jsx(guildId(_location[9]), { game: stateFromStores, size: connection(_location[9]).GameIconSizes.SMALL }),
-    isLoading: !fetched,
-    isConnected: hasAlreadyLinked,
-    canConnect: canStartAuthorization,
-    onConnect: callback,
-  };
+  const tmp9 = jsx(guildId(_location[9]), { game: stateFromStores, size: null });
   return jsx(guildId(_location[12]), {
     displayName: name,
     description: connection.description,
-    icon: jsx(guildId(_location[9]), { game: stateFromStores, size: connection(_location[9]).GameIconSizes.SMALL }),
+    icon: jsx(guildId(_location[9]), { game: stateFromStores, size: null }),
     isLoading: !fetched,
     isConnected: hasAlreadyLinked,
     canConnect: canStartAuthorization,

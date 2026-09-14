@@ -4,6 +4,8 @@ import UniqueUsernamesUtils from "UniqueUsernamesUtils.tsx";
 import noop from "../../../_runtime/metro/00019__.js";
 import UniqueUsernamesStore from "UniqueUsernamesStore.tsx";
 
+const require = globalThis.__r;
+
 require = fn;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/unique_usernames/useUsernameLiveCheck.tsx");

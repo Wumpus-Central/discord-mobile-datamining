@@ -1,6 +1,8 @@
 // discord_app/modules/stage_channels/useStateChannelIsLive.tsx
 import StageInstanceStore from "StageInstanceStore.tsx";
 
+const require = globalThis.__r;
+
 const require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/stage_channels/useStateChannelIsLive.tsx");

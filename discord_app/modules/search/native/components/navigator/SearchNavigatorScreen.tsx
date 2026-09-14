@@ -14,14 +14,13 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire, Fragment: closure_7 } = jsxProd);
-fn(4636);
-let createStyles = { wrapper: null, tabs: null, back: null };
-createStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 };
-createStyles.wrapper = createStyles;
-createStyles.tabs = { flex: 1, marginTop: nativeDefault.space.PX_16 };
-let obj1 = { flex: 1, marginTop: nativeDefault.space.PX_16 };
-createStyles.back = { marginLeft: nativeDefault.space.PX_16, marginRight: nativeDefault.space.PX_12 };
-let closure_8 = createStyles.createStyles(createStyles);
+const createStyles = fn(4636);
+let obj2 = { wrapper: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 }, tabs: null, back: null };
+let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 };
+obj2.tabs = { flex: 1, marginTop: nativeDefault.space.PX_16 };
+let obj4 = { flex: 1, marginTop: nativeDefault.space.PX_16 };
+obj2.back = { marginLeft: nativeDefault.space.PX_16, marginRight: nativeDefault.space.PX_12 };
+let closure_8 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/search/native/components/navigator/SearchNavigatorScreen.tsx");
 
@@ -30,27 +29,34 @@ export default function SearchNavigatorScreen(navigation) {
   const searchContext = navigation.route.params.searchContext;
   const tmp = closure_8();
   importDefault = tmp;
-  let obj = navigation(16732);
-  const searchSuggestionsGesture = obj.useSearchSuggestionsGesture(searchContext);
+  const searchSuggestionsGesture = navigation(16734).useSearchSuggestionsGesture(searchContext);
   ({ gesture, dismissed, setDismissed, onLayoutMeasure } = searchSuggestionsGesture);
   const items = [navigation.goBack, tmp.back];
-  obj = { children: null };
+  let obj = navigation(16734);
+  let obj2 = { children: null };
   const memo = noop.useMemo(() => {
-    let obj = { children: null };
-    obj = { style: back.back, accessibilityLabel: null, accessibilityRole: "button", onPress: null, children: null };
+    const obj = { children: null };
+    const obj2 = {
+      style: back.back,
+      accessibilityLabel: null,
+      accessibilityRole: "button",
+      onPress: null,
+      children: null,
+    };
     const intl = util.intl;
-    obj.accessibilityLabel = intl.string(util.t["13/7kX"]);
-    obj.onPress = navigation.goBack;
-    obj = { color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
-    obj.children = hasOwnProperty(ArrowLargeLeftIcon.ArrowLargeLeftIcon, obj);
-    obj.children = hasOwnProperty(Pressables.PressableOpacity, obj);
+    obj2.accessibilityLabel = intl.string(util.t["13/7kX"]);
+    obj2.onPress = navigation.goBack;
+    obj2.children = hasOwnProperty(ArrowLargeLeftIcon.ArrowLargeLeftIcon, {
+      color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT,
+    });
+    obj.children = hasOwnProperty(Pressables.PressableOpacity, obj2);
     return hasOwnProperty(View, obj);
   }, items);
   const items1 = [closure_5(ThemedGradientDefault, { absolute: true, wide: true, tall: true })];
-  obj = { gesture, children: null };
-  const obj1 = { style: null, children: null };
+  const obj3 = { gesture, children: null };
+  const obj4 = { style: null, children: null };
   const items2 = [tmp.wrapper, { paddingTop: useSearchLayoutInsetTopDefault() }];
-  obj1.style = items2;
+  obj4.style = items2;
   const items3 = [
     closure_5(SearchScreenSearchBarDefault, {
       searchContext,
@@ -68,9 +74,9 @@ export default function SearchNavigatorScreen(navigation) {
       width: useBaseAppContainerDimensionsDefault().width,
     }),
   });
-  obj1.children = items3;
-  obj.children = closure_6(View, obj1);
-  items1[1] = closure_5(navigation(16457).NonCollapsableGestureDetector, obj);
-  obj.children = items1;
-  return closure_6(closure_7, obj);
+  obj4.children = items3;
+  obj3.children = closure_6(View, obj4);
+  items1[1] = closure_5(navigation(16459).NonCollapsableGestureDetector, obj3);
+  obj2.children = items1;
+  return closure_6(closure_7, obj2);
 }

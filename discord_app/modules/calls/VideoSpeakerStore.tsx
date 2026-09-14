@@ -18,11 +18,10 @@ function updateSpeaker(arg0) {
   }
   let tmp2 = null;
   if (null != global) {
-    let obj = ChannelRTCStore;
     let selectedParticipantId = ChannelRTCStore.getSelectedParticipantId(global);
     let result = null != selectedParticipantId;
     if (result) {
-      result = obj.isParticipantPoppedOut(global, selectedParticipantId);
+      result = ChannelRTCStore.isParticipantPoppedOut(global, selectedParticipantId);
     }
     if (result) {
       selectedParticipantId = null;
@@ -30,7 +29,7 @@ function updateSpeaker(arg0) {
     const lastActiveStream = ApplicationStreamingStore.getLastActiveStream();
     let participant = null;
     if (null != selectedParticipantId) {
-      participant = obj.getParticipant(global, selectedParticipantId);
+      participant = ChannelRTCStore.getParticipant(global, selectedParticipantId);
     }
     let type;
     if (participant != null) {
@@ -61,14 +60,14 @@ function updateSpeaker(arg0) {
     if (null != lastActiveStream) {
       tmp21 = tmp20;
       if (null == tmp20) {
-        const participant1 = obj.getParticipant(global, StreamKeyUtils.encodeStreamKey(lastActiveStream));
+        const participant1 = ChannelRTCStore.getParticipant(global, StreamKeyUtils.encodeStreamKey(lastActiveStream));
         let id;
         if (participant1 != null) {
           id = participant1.id;
         }
         let result1 = null == id;
         if (!result1) {
-          result1 = obj.isParticipantPoppedOut(global, id);
+          result1 = ChannelRTCStore.isParticipantPoppedOut(global, id);
         }
         tmp21 = tmp20;
         if (!result1) {
@@ -83,7 +82,7 @@ function updateSpeaker(arg0) {
       const items = [];
       const items1 = [];
       const timestamp = Date.now();
-      const videoParticipants = obj.getVideoParticipants(global);
+      const videoParticipants = ChannelRTCStore.getVideoParticipants(global);
       const iter = videoParticipants[Symbol.iterator]();
       const nextResult = iter.next();
       while (iter !== undefined) {
@@ -94,10 +93,10 @@ function updateSpeaker(arg0) {
               let arr = items.push(tmp34.user.id);
               let speakingDuration = SpeakingStore.getSpeakingDuration(tmp34.user.id, timestamp);
               if (0 !== speakingDuration) {
-                obj = { userId: null, duration: null };
-                obj.userId = tmp34.user.id;
-                obj.duration = tmp43;
-                arr = items1.push(obj);
+                let obj3 = { userId: null, duration: null };
+                obj3.userId = tmp34.user.id;
+                obj3.duration = tmp43;
+                let arr2 = items1.push(obj3);
               }
             }
           }

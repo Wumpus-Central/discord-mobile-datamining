@@ -19,10 +19,10 @@ function withTiming(value, timingStandard, arg2) {
       if (timingStandard == null) {
         obj = {};
       }
-      obj = {};
+      const obj2 = {};
       const merged = Object.assign(obj);
-      obj.reduceMotion = ReanimatedRexport.ReduceMotion.Never;
-      tmp7 = obj;
+      obj2.reduceMotion = ReanimatedRexport.ReduceMotion.Never;
+      tmp7 = obj2;
     }
     let tmp5 = tmp7;
   } else {

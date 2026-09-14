@@ -12,6 +12,8 @@ import ChannelActionsDefault from "../channel/ChannelActions.tsx";
 import ChannelHeaderDefault from "../channel/header/ChannelHeader.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
+const require = globalThis.__r;
+
 require = fn;
 class GenericHeaderTitle {
   constructor(arg0) {
@@ -45,14 +47,14 @@ class GenericHeaderTitle {
     }
     renderTitleContainer = function renderTitleContainer(header) {
       if (null != dependencyMap) {
-        let obj = { accessible: true, accessibilityRole: header, style: closure_5.titleContainer, children: null };
+        const obj2 = { accessible: true, accessibilityRole: header, style: closure_5.titleContainer, children: null };
         const items = [tmp];
-        obj = { lineClamp: 1, variant, color, style: closure_5.headerText, maxFontSizeMultiplier, children };
-        items[1] = timestampProducer(Text_Text.Text, obj);
-        obj.children = items;
-        let tmp10 = React5(React4, obj);
+        const obj3 = { lineClamp: 1, variant, color, style: closure_5.headerText, maxFontSizeMultiplier, children };
+        items[1] = timestampProducer(Text_Text.Text, obj3);
+        obj2.children = items;
+        let tmp10 = React5(React4, obj2);
       } else {
-        obj = {
+        const obj = {
           accessibilityRole: header,
           lineClamp: 1,
           variant,
@@ -85,7 +87,7 @@ class GenericHeaderTitle {
     tmp9 = null;
     if (null != subtitle) {
       tmp10 = jsx;
-      obj = {
+      obj1 = {
         lineClamp: 1,
         variant: "text-xs/medium",
         color: null,
@@ -93,11 +95,11 @@ class GenericHeaderTitle {
         maxFontSizeMultiplier: null,
         children: null,
       };
-      obj.color = str;
-      obj.style = tmp5.subtitleText;
-      obj.maxFontSizeMultiplier = maxFontSizeMultiplier;
-      obj.children = subtitle;
-      tmp9 = jsx(tmp2(tmp3[6]).Text, obj);
+      obj1.color = str;
+      obj1.style = tmp5.subtitleText;
+      obj1.maxFontSizeMultiplier = maxFontSizeMultiplier;
+      obj1.children = subtitle;
+      tmp9 = jsx(tmp2(tmp3[6]).Text, obj1);
     }
     items[1] = tmp9;
     items[2] = tmp6;
@@ -142,18 +144,26 @@ get_ActivityIndicator = fn(17);
 const MIN_HEADER_HEIGHT = fn(7967).MIN_HEADER_HEIGHT;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-fn(4636);
+const createStyles = fn(4636);
 let obj = {
   headerRightContainer: { marginRight: 16 },
-  headerWrapper: null,
-  actionButtonPressable: null,
+  headerWrapper: {
+    backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
+    flexDirection: "row",
+    alignItems: "center",
+    flexShrink: 0,
+    flexGrow: 1,
+    borderColor: nativeDefault.colors.MOBILE_HEADER_BORDER,
+    borderBottomWidth: 1,
+  },
+  actionButtonPressable: { padding: 8, zIndex: 100, width: 40, height: 40, borderRadius: 20 },
   actionButtonIcon: null,
   headerText: null,
   subtitleText: null,
   backButtonLabel: null,
   titleContainer: null,
 };
-obj = {
+let obj3 = {
   backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
   flexDirection: "row",
   alignItems: "center",
@@ -162,16 +172,14 @@ obj = {
   borderColor: nativeDefault.colors.MOBILE_HEADER_BORDER,
   borderBottomWidth: 1,
 };
-obj.headerWrapper = obj;
-obj.actionButtonPressable = { padding: 8, zIndex: 100, width: 40, height: 40, borderRadius: 20 };
-const createStyles = { tintColor: nativeDefault.colors.MOBILE_HEADER_ICON_DEFAULT };
-obj.actionButtonIcon = createStyles;
+obj.actionButtonIcon = { tintColor: nativeDefault.colors.MOBILE_HEADER_ICON_DEFAULT };
 obj.headerText = { textAlign: "center", fontSize: 18 };
 obj.subtitleText = { textAlign: "center" };
-const obj2 = {};
+let obj5 = {};
 let merged = Object.assign(fn(4632).TextStyleSheet["text-md/semibold"]);
-obj2.color = nativeDefault.colors.TEXT_BRAND;
-obj.backButtonLabel = obj2;
+obj5.color = nativeDefault.colors.TEXT_BRAND;
+obj.backButtonLabel = obj5;
+let obj4 = { tintColor: nativeDefault.colors.MOBILE_HEADER_ICON_DEFAULT };
 obj.titleContainer = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 };
 const React6 = createStyles.createStyles(obj);
 const memoResult = noop.memo(
@@ -200,10 +208,10 @@ const memoResult = noop.memo(
       };
     }
     ({ headerTitle, headerRight } = options);
-    let obj = style(tmp3[14]);
-    const text = obj.useTheme().colors.text;
-    let obj1 = style(tmp3[15]);
-    gradientTop = obj1.useGradientTop();
+    const text = style(num[14]).useTheme().colors.text;
+    const obj = style(num[14]);
+    const tmp2 = importDefault;
+    gradientTop = style(num[15]).useGradientTop();
     let items = [num, gradientTop, tmp, style];
     const memo = gradientTop.useMemo(() => {
       const items = [
@@ -219,17 +227,19 @@ const memoResult = noop.memo(
     } else {
       tmp6 = headerTitle;
     }
-    const layoutEffect = gradientTop.useLayoutEffect(() => style(num[16]).DeprecatedLayoutAnimation({ duration: 0 }));
-    obj = { style: memo, children: null };
+    const obj2 = style(num[15]);
+    const obj3 = gradientTop;
+    const layoutEffect = obj3.useLayoutEffect(() => style(num[16]).DeprecatedLayoutAnimation({ duration: 0 }));
+    const obj4 = { style: memo, children: null };
     let title;
     if (back != null) {
       title = back.title;
     }
-    obj = { label: title, canGoBack: null, tintColor: null };
-    const tmp7 = require("HeaderDebugOverlay")("custom-drawn");
-    obj.canGoBack = navigation.isFocused() && navigation.canGoBack();
-    obj.tintColor = text;
-    const items1 = [fn(obj), , ,];
+    const obj5 = { label: title, canGoBack: null, tintColor: null };
+    const tmp7 = tmp2(num[8])("custom-drawn");
+    obj5.canGoBack = navigation.isFocused() && navigation.canGoBack();
+    obj5.tintColor = text;
+    const items1 = [fn(obj5), , ,];
     if (typeof headerTitle !== "string") {
       let name = options.title;
       if (name == null) {
@@ -240,14 +250,14 @@ const memoResult = noop.memo(
     items1[1] = tmp6({ children: headerTitle, tintColor: text });
     let headerRightResult;
     if (headerRight != null) {
-      obj1 = { canGoBack: navigation.isFocused() && navigation.canGoBack(), tintColor: text };
-      headerRightResult = headerRight(obj1);
+      const obj6 = { canGoBack: navigation.isFocused() && navigation.canGoBack(), tintColor: text };
+      headerRightResult = headerRight(obj6);
       const tmp14 = navigation.isFocused() && navigation.canGoBack();
     }
     items1[2] = headerRightResult;
     items1[3] = tmp7;
-    obj.children = items1;
-    return closure_7(closure_4, obj);
+    obj4.children = items1;
+    return closure_7(closure_4, obj4);
   },
   (back, back2) => {
     let tmpResultResult = discord_common_shallowEqualDefault(back, back2, ["back"]);

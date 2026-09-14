@@ -17,16 +17,16 @@ function useObscuredContentNonFriendsDmSettingValue() {
 }
 function onObscuredContentNonFriendsDmOnPress() {
   const intl = util.intl;
+  const obj = SensitiveMediaExplicitRedactionSettingsUtils;
   const stringResult = intl.string(util.t.GYpoAq);
-  let obj = { title: stringResult, subtitle: null, handlePress: null, currentValue: null };
+  const obj3 = { title: stringResult, subtitle: null, handlePress: null, currentValue: null };
   const intl2 = util.intl;
-  obj.subtitle = intl2.string(util.t["Yh+HX1"]);
-  obj.handlePress = function handlePress(explicitContentNonFriendDm) {
-    const obj = { explicitContentNonFriendDm };
-    return obj.updateExplicitContentSetting(obj);
+  obj3.subtitle = intl2.string(util.t["Yh+HX1"]);
+  obj3.handlePress = function handlePress(explicitContentNonFriendDm) {
+    return SensitiveMediaExplicitRedactionSettingsUtils.updateExplicitContentSetting({ explicitContentNonFriendDm });
   };
-  obj.currentValue = obj.getExplicitContentSettingOrDefault().explicitContentNonFriendDm;
-  const result = ExplicitMediaRedactionNativeUtils.handleSensitiveMediaFilterPress(obj);
+  obj3.currentValue = obj.getExplicitContentSettingOrDefault().explicitContentNonFriendDm;
+  const result = ExplicitMediaRedactionNativeUtils.handleSensitiveMediaFilterPress(obj3);
 }
 const MobileUserSettings = SettingsConstants.MobileUserSettings;
 const pressable = SettingBuilders.createPressable({

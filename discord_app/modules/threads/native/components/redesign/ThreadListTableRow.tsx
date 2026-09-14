@@ -11,15 +11,19 @@ function ThreadListTableRow(thread) {
   ({ start, end } = thread);
   const items = [onPress, thread.id];
   const memo = noop.useMemo(() => (null != onPress ? () => onPress(id.id) : undefined), items);
-  let obj = { label: thread.name, subLabel: null, onPress: null, start: null, end: null, arrow: true };
-  obj = { style: closure_6().subLabel, children: jsx(ThreadBrowserRowSubtext.ThreadSubtext, { thread }) };
+  const obj = { label: thread.name, subLabel: null, onPress: null, start: null, end: null, arrow: true };
+  const tmp = closure_6();
   obj.subLabel = <View style={closure_6().subLabel}>{jsx(ThreadBrowserRowSubtext.ThreadSubtext, { thread })}</View>;
   obj.onPress = memo;
   obj.start = start;
   obj.end = end;
   return jsx(TableRow.TableRow, {
-    style: closure_6().subLabel,
-    children: jsx(ThreadBrowserRowSubtext.ThreadSubtext, { thread }),
+    label: thread.name,
+    subLabel: null,
+    onPress: null,
+    start: null,
+    end: null,
+    arrow: true,
   });
 }
 const View = fn(17).View;
@@ -32,12 +36,11 @@ const result = size.fileFinishedImporting("modules/threads/native/components/red
 export default noop.memo((threadId) => {
   threadId = threadId.threadId;
   ({ onPress, start, end } = threadId);
-  let obj = threadId(504);
   const items = [ChannelStore];
-  const stateFromStores = obj.useStateFromStores(items, () => ChannelStore.getChannel(threadId));
+  const stateFromStores = threadId(504).useStateFromStores(items, () => ChannelStore.getChannel(threadId));
   let tmp2 = null;
   if (null != stateFromStores) {
-    obj = { thread: stateFromStores, start, end, onPress };
+    const obj2 = { thread: stateFromStores, start, end, onPress };
     tmp2 = <ThreadListTableRow thread={stateFromStores} start={start} end={end} onPress={onPress} />;
   }
   return tmp2;

@@ -1,6 +1,8 @@
 // discord_app/lib/spellcheck/LanguageDetector.tsx
 import size from "../../../_runtime/metro/00002__.js";
 
+const require = globalThis.__r;
+
 const result = size.fileFinishedImporting("lib/spellcheck/LanguageDetector.tsx");
 class LanguageDetector {
   constructor(arg0, arg1) {

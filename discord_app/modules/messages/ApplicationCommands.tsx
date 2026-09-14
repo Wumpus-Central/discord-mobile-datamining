@@ -10,7 +10,7 @@ export const getApplicationCommand = function getApplicationCommand(content) {
   if (null == match) {
     return null;
   } else {
-    [r10025, tmp7, tmp8, tmp9] = _slicedToArray(match, 4);
+    [r10025, tmp7, tmp8, tmp9] = match;
     let tmp2 = null;
     if (null != tmp7) {
       tmp2 = null;

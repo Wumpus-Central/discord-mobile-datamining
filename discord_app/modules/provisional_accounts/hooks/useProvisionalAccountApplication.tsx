@@ -1,6 +1,8 @@
 // discord_app/modules/provisional_accounts/hooks/useProvisionalAccountApplication.tsx
 import GameRelationshipStore from "../../game_relationships/GameRelationshipStore.tsx";
 
+const require = globalThis.__r;
+
 const require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/provisional_accounts/hooks/useProvisionalAccountApplication.tsx");

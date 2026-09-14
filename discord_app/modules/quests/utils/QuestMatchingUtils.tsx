@@ -107,17 +107,16 @@ export const allPlayOnDesktopQuestsByApplicationId = function allPlayOnDesktopQu
   closure_0 = arg1;
   arr = Array.from(arr.values());
   return arr.filter((quest) => {
-    let obj = QuestTaskUtils;
-    const allApplicationIds = obj.getAllApplicationIds(quest);
+    const allApplicationIds = QuestTaskUtils.getAllApplicationIds(quest);
     let hasPlayOnDesktopTaskResult = null != allApplicationIds && allApplicationIds.some((item) => item === closure_0);
     if (hasPlayOnDesktopTaskResult) {
-      let tmpResult = QuestDataUtils;
-      hasPlayOnDesktopTaskResult = !tmpResult.isQuestExpired(quest);
+      hasPlayOnDesktopTaskResult = !QuestDataUtils.isQuestExpired(quest);
+      const tmpResult = QuestDataUtils;
     }
     if (hasPlayOnDesktopTaskResult) {
-      tmpResult = QuestTaskUtils;
-      obj = { quest };
-      hasPlayOnDesktopTaskResult = tmpResult.hasPlayOnDesktopTask(obj);
+      const obj2 = { quest };
+      hasPlayOnDesktopTaskResult = QuestTaskUtils.hasPlayOnDesktopTask(obj2);
+      const tmpResult2 = QuestTaskUtils;
     }
     return hasPlayOnDesktopTaskResult;
   });
@@ -156,12 +155,12 @@ export const getEligibleQuestsForApplicationId = function getEligibleQuestsForAp
       const activityApplicationId = QuestTaskUtils.getActivityApplicationId(userStatus);
       let canLaunchActivityResult = null != userStatus;
       if (canLaunchActivityResult) {
-        let tmpResult = utils_QuestUtils;
-        canLaunchActivityResult = tmpResult.canLaunchActivity(userStatus);
+        canLaunchActivityResult = utils_QuestUtils.canLaunchActivity(userStatus);
+        const tmpResult = utils_QuestUtils;
       }
       if (canLaunchActivityResult) {
-        tmpResult = QuestDataUtils;
-        canLaunchActivityResult = !tmpResult.isQuestExpired(userStatus);
+        canLaunchActivityResult = !QuestDataUtils.isQuestExpired(userStatus);
+        const tmpResult2 = QuestDataUtils;
       }
       if (canLaunchActivityResult) {
         canLaunchActivityResult = activityApplicationId === closure_0;

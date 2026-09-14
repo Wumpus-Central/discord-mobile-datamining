@@ -23,8 +23,7 @@ function resolveMessageCodedLinks(content) {
     let item = arr.forEach((item) => {
       ({ type, code } = item);
       if (code(dependencyMap[5]).CodedLinkType.INVITE === type) {
-        let tmpResult = code(dependencyMap[6]);
-        const result = tmpResult.queueMessageLinkFetch(
+        const result = code(dependencyMap[6]).queueMessageLinkFetch(
           closure_3(function* () {
             if (c0 === 2) {
               c0 = 3;
@@ -33,8 +32,8 @@ function resolveMessageCodedLinks(content) {
               if (arg0 === 1) {
                 throw value;
               } else if (arg0 === 2) {
-                let obj = { value, done: true };
-                return obj;
+                const obj3 = { value, done: true };
+                return obj3;
               } else {
                 return { value: "HermesInternal", done: null };
               }
@@ -47,22 +46,20 @@ function resolveMessageCodedLinks(content) {
                     throw value;
                   } else if (arg0 === 2) {
                     c0 = 3;
-                    obj = { value, done: true };
-                    return obj;
+                    const obj4 = { value, done: true };
+                    return obj4;
                   } else if (null == invite.getInvite(code)) {
-                    let obj1 = v1(dependencyMap[7]);
                     v1 = 1;
                     c0 = 1;
-                    obj1 = { value: null, done: false };
-                    obj1.value = obj1.resolveInvite(code);
-                    return obj1;
+                    const obj5 = { value: v1(dependencyMap[7]).resolveInvite(code), done: false };
+                    return obj5;
                   }
                 } else if (arg0 === 1) {
                   c0 = 3;
                   throw value;
                 } else if (arg0 === 2) {
                   c0 = 3;
-                  obj = { value, done: true };
+                  const obj = { value, done: true };
                   return obj;
                 }
                 c0 = 3;
@@ -74,9 +71,9 @@ function resolveMessageCodedLinks(content) {
             }
           }),
         );
+        const tmpResult = code(dependencyMap[6]);
       } else if (code(dependencyMap[5]).CodedLinkType.TEMPLATE === type) {
-        tmpResult = code(dependencyMap[6]);
-        const result1 = tmpResult.queueMessageLinkFetch(
+        const result1 = code(dependencyMap[6]).queueMessageLinkFetch(
           closure_3(function* () {
             if (c0 === 2) {
               c0 = 3;
@@ -85,8 +82,8 @@ function resolveMessageCodedLinks(content) {
               if (arg0 === 1) {
                 throw value;
               } else if (arg0 === 2) {
-                let obj = { value, done: true };
-                return obj;
+                const obj3 = { value, done: true };
+                return obj3;
               } else {
                 return { value: "HermesInternal", done: null };
               }
@@ -99,22 +96,20 @@ function resolveMessageCodedLinks(content) {
                     throw value;
                   } else if (arg0 === 2) {
                     c0 = 3;
-                    obj = { value, done: true };
-                    return obj;
+                    const obj4 = { value, done: true };
+                    return obj4;
                   } else if (null == guildTemplate.getGuildTemplate(code)) {
-                    let obj1 = v1(dependencyMap[8]);
                     v1 = 1;
                     c0 = 1;
-                    obj1 = { value: null, done: false };
-                    obj1.value = obj1.resolveGuildTemplate(code);
-                    return obj1;
+                    const obj5 = { value: v1(dependencyMap[8]).resolveGuildTemplate(code), done: false };
+                    return obj5;
                   }
                 } else if (arg0 === 1) {
                   c0 = 3;
                   throw value;
                 } else if (arg0 === 2) {
                   c0 = 3;
-                  obj = { value, done: true };
+                  const obj = { value, done: true };
                   return obj;
                 }
                 c0 = 3;
@@ -126,6 +121,7 @@ function resolveMessageCodedLinks(content) {
             }
           }),
         );
+        const tmpResult3 = code(dependencyMap[6]);
       } else if (code(dependencyMap[5]).CodedLinkType.BUILD_OVERRIDE !== type) {
         if (code(dependencyMap[5]).CodedLinkType.MANUAL_BUILD_OVERRIDE !== type) {
           if (code(dependencyMap[5]).CodedLinkType.EVENT !== type) {
@@ -147,7 +143,7 @@ function resolveMessageCodedLinks(content) {
                                           if (code(dependencyMap[5]).CodedLinkType.USER_PROFILE !== type) {
                                             if (code(dependencyMap[5]).CodedLinkType.APP_DIRECTORY_PROFILE === type) {
                                               const embedApplication = code(dependencyMap[9]).getEmbedApplication(code);
-                                              const tmpResult1 = code(dependencyMap[9]);
+                                              const tmpResult4 = code(dependencyMap[9]);
                                             } else {
                                               const _Error = Error;
                                               const _HermesInternal = HermesInternal;
@@ -186,8 +182,7 @@ function resolveMessageCodedLinks(content) {
         const item = arr.forEach((item) => {
           ({ type, code } = item);
           if (code(dependencyMap[5]).CodedLinkType.INVITE === type) {
-            let tmpResult = code(dependencyMap[6]);
-            const result = tmpResult.queueMessageLinkFetch(
+            const result = code(dependencyMap[6]).queueMessageLinkFetch(
               closure_3(function* () {
                 if (c0 === 2) {
                   c0 = 3;
@@ -196,8 +191,8 @@ function resolveMessageCodedLinks(content) {
                   if (arg0 === 1) {
                     throw value;
                   } else if (arg0 === 2) {
-                    let obj = { value, done: true };
-                    return obj;
+                    const obj3 = { value, done: true };
+                    return obj3;
                   } else {
                     return { value: "HermesInternal", done: null };
                   }
@@ -210,22 +205,20 @@ function resolveMessageCodedLinks(content) {
                         throw value;
                       } else if (arg0 === 2) {
                         c0 = 3;
-                        obj = { value, done: true };
-                        return obj;
+                        const obj4 = { value, done: true };
+                        return obj4;
                       } else if (null == invite.getInvite(code)) {
-                        let obj1 = v1(dependencyMap[7]);
                         v1 = 1;
                         c0 = 1;
-                        obj1 = { value: null, done: false };
-                        obj1.value = obj1.resolveInvite(code);
-                        return obj1;
+                        const obj5 = { value: v1(dependencyMap[7]).resolveInvite(code), done: false };
+                        return obj5;
                       }
                     } else if (arg0 === 1) {
                       c0 = 3;
                       throw value;
                     } else if (arg0 === 2) {
                       c0 = 3;
-                      obj = { value, done: true };
+                      const obj = { value, done: true };
                       return obj;
                     }
                     c0 = 3;
@@ -237,9 +230,9 @@ function resolveMessageCodedLinks(content) {
                 }
               }),
             );
+            const tmpResult = code(dependencyMap[6]);
           } else if (code(dependencyMap[5]).CodedLinkType.TEMPLATE === type) {
-            tmpResult = code(dependencyMap[6]);
-            const result1 = tmpResult.queueMessageLinkFetch(
+            const result1 = code(dependencyMap[6]).queueMessageLinkFetch(
               closure_3(function* () {
                 if (c0 === 2) {
                   c0 = 3;
@@ -248,8 +241,8 @@ function resolveMessageCodedLinks(content) {
                   if (arg0 === 1) {
                     throw value;
                   } else if (arg0 === 2) {
-                    let obj = { value, done: true };
-                    return obj;
+                    const obj3 = { value, done: true };
+                    return obj3;
                   } else {
                     return { value: "HermesInternal", done: null };
                   }
@@ -262,22 +255,20 @@ function resolveMessageCodedLinks(content) {
                         throw value;
                       } else if (arg0 === 2) {
                         c0 = 3;
-                        obj = { value, done: true };
-                        return obj;
+                        const obj4 = { value, done: true };
+                        return obj4;
                       } else if (null == guildTemplate.getGuildTemplate(code)) {
-                        let obj1 = v1(dependencyMap[8]);
                         v1 = 1;
                         c0 = 1;
-                        obj1 = { value: null, done: false };
-                        obj1.value = obj1.resolveGuildTemplate(code);
-                        return obj1;
+                        const obj5 = { value: v1(dependencyMap[8]).resolveGuildTemplate(code), done: false };
+                        return obj5;
                       }
                     } else if (arg0 === 1) {
                       c0 = 3;
                       throw value;
                     } else if (arg0 === 2) {
                       c0 = 3;
-                      obj = { value, done: true };
+                      const obj = { value, done: true };
                       return obj;
                     }
                     c0 = 3;
@@ -289,6 +280,7 @@ function resolveMessageCodedLinks(content) {
                 }
               }),
             );
+            const tmpResult3 = code(dependencyMap[6]);
           } else if (code(dependencyMap[5]).CodedLinkType.BUILD_OVERRIDE !== type) {
             if (code(dependencyMap[5]).CodedLinkType.MANUAL_BUILD_OVERRIDE !== type) {
               if (code(dependencyMap[5]).CodedLinkType.EVENT !== type) {
@@ -314,7 +306,7 @@ function resolveMessageCodedLinks(content) {
                                                   const embedApplication = code(dependencyMap[9]).getEmbedApplication(
                                                     code,
                                                   );
-                                                  const tmpResult1 = code(dependencyMap[9]);
+                                                  const tmpResult4 = code(dependencyMap[9]);
                                                 } else {
                                                   const _Error = Error;
                                                   const _HermesInternal = HermesInternal;
@@ -351,9 +343,9 @@ class MessageCodedLinkManager extends tmp7 {
     return tmp3;
   }
 }
-tmp = new tmp(tmp4, tmp3, tmp2, Object, defineProperty, MessageCodedLinkManager, importDefault);
-setupLoadFromMessageManagerHandlersDefault(tmp, resolveMessageCodedLinks);
+const tmp5 = new tmp(tmp4, tmp3, tmp2, Object, defineProperty, MessageCodedLinkManager, importDefault);
+setupLoadFromMessageManagerHandlersDefault(tmp5, resolveMessageCodedLinks);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/coded_links/MessageCodedLinkManager.tsx");
 
-export default tmp;
+export default tmp5;

@@ -8,6 +8,8 @@ import RTCConnectionStore from "../../../../stores/RTCConnectionStore.tsx";
 import VoiceStateStore from "../../../../stores/VoiceStateStore.tsx";
 import SortedVoiceStateStore from "../../../../stores/views/SortedVoiceStateStore.tsx";
 
+const require = globalThis.__r;
+
 const require = fn;
 function getMemoizedParticipant(item10013, get) {
   const combined = "" + item10013.type + "-" + item10013.id;
@@ -18,7 +20,7 @@ function getMemoizedParticipant(item10013, get) {
   }
   return value;
 }
-const VoicePanelConstants = fn(12402);
+const VoicePanelConstants = fn(12403);
 ({ VoicePanelCardItemType: closure_11, VoicePanelCTACard: closure_12 } = VoicePanelConstants);
 const RTCConnectionStates = fn(1074).RTCConnectionStates;
 let closure_14 = [];
@@ -50,10 +52,10 @@ export default function useVoicePanelCards(arg0, arg1) {
     items1,
     () => state.getState() === constants2.RTC_CONNECTED,
   );
-  const obj2 = require("initialize");
+  let obj2 = require("initialize");
   desyncedChannelParticipants = require("RTCConnectionDesyncHooks").useDesyncedChannelParticipants(arg0);
   let obj = { items: null, isConnected: null };
-  const obj3 = require("RTCConnectionDesyncHooks");
+  let obj3 = require("RTCConnectionDesyncHooks");
   const items2 = [first, SortedVoiceStateStore];
   const items3 = [tmp2, desyncedChannelParticipants, arg0, arg1, first, flag, id, stateFromStores];
   obj.items = require("initialize").useStateFromStoresArray(
@@ -71,7 +73,7 @@ export default function useVoicePanelCards(arg0, arg1) {
         if (!voiceParticipantsHidden) {
           if (null != desyncedChannelParticipants) {
             for (const item10034 of tmp12) {
-              arr = items.push(item10034);
+              let arr2 = items.push(item10034);
               continue;
             }
           }
@@ -87,7 +89,7 @@ export default function useVoicePanelCards(arg0, arg1) {
               continue;
             }
           }
-          let arr1 = items1.push(tmp25);
+          let arr3 = items1.push(tmp25);
         }
         if (null != tmp) {
           items1.push(tmp);
@@ -100,15 +102,15 @@ export default function useVoicePanelCards(arg0, arg1) {
           tmp34 = 1 === items1.length;
         }
         if (tmp34) {
-          obj = { type: constants.CTA, id: constants2.CALLER_DISCONNECTED };
-          items1.push(getMemoizedParticipant(obj, first));
+          const obj2 = { type: constants.CTA, id: constants2.CALLER_DISCONNECTED };
+          items1.push(getMemoizedParticipant(obj2, first));
         }
         if (voiceParticipantsHidden) {
           voiceParticipantsHidden = 0 === items.length;
         }
         if (voiceParticipantsHidden) {
-          obj = { type: constants.CTA, id: constants2.NO_VIDEO_PARTICIPANTS };
-          items1.push(getMemoizedParticipant(obj, first));
+          const obj3 = { type: constants.CTA, id: constants2.NO_VIDEO_PARTICIPANTS };
+          items1.push(getMemoizedParticipant(obj3, first));
         }
         if (items1.length <= 0) {
           items1 = closure_14;

@@ -1,6 +1,7 @@
 // discord_app/modules/voice_calls/native/action_sheet/JoinVoiceChannelButton.tsx
 import KeyboardManagerUtilsAll from "../../../../utils/native/KeyboardManagerUtils.tsx";
 import SelectedChannelActionCreatorsDefault from "../../../../actions/SelectedChannelActionCreators.tsx";
+import useIsVoiceChannelFullDefault from "../../useIsVoiceChannelFull.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import PermissionStore from "../../../../stores/PermissionStore.tsx";
 
@@ -16,9 +17,12 @@ let result = size.fileFinishedImporting("modules/voice_calls/native/action_sheet
 export default function JoinVoiceChannelButton(channel) {
   channel = channel.channel;
   const tmp = closure_9();
-  let obj = channel(504);
+  const tmp3 = useIsVoiceChannelFullDefault(channel);
   const items = [PermissionStore];
-  const stateFromStores = obj.useStateFromStores(items, () => !PermissionStore.can(Permissions.CONNECT, channel));
+  const stateFromStores = channel(504).useStateFromStores(
+    items,
+    () => !PermissionStore.can(Permissions.CONNECT, channel),
+  );
   const intl = channel(1114).intl;
   let stringResult = intl.string(channel(1114).t.eIi3Om);
   if (tmp3) {
@@ -34,13 +38,13 @@ export default function JoinVoiceChannelButton(channel) {
     }
   }
   const items1 = [channel.id];
-  obj = { style: null, children: null };
+  const obj2 = { style: null, children: null };
   const items2 = [tmp.container, channel.style];
-  obj.style = items2;
+  obj2.style = items2;
   const callback = noop.useCallback(() => {
     const result = KeyboardManagerUtilsAll.dismissGlobalKeyboard();
     const voiceChannel = SelectedChannelActionCreatorsDefault.selectVoiceChannel(channel.id);
   }, items1);
-  obj.children = jsx(channel(5056).Button, { disabled: flag, text: stringResult, onPress: callback });
+  obj2.children = jsx(channel(5056).Button, { disabled: flag, text: stringResult, onPress: callback });
   return <View style={null}>{null}</View>;
 }

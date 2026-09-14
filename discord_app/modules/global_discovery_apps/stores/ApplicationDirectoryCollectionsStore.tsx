@@ -5,25 +5,25 @@ import DispatcherDefault from "../../../Dispatcher.tsx";
 
 let obj = { FETCHING: 0, [0]: "FETCHING", FETCHED: 1, [1]: "FETCHED", ERROR: 2, [2]: "ERROR" };
 let closure_3 = [];
-obj = {};
+let obj2 = {};
 obj = {};
 const Store = initializeDefault.Store;
 class ApplicationDirectoryCollectionsStore extends Store {}
 const prototype = ApplicationDirectoryCollectionsStore.prototype;
 prototype["getLastFetchTimeMs"] = function getLastFetchTimeMs(arg0) {
-  return obj1["surface:" + arg0.surface + " activeState:" + arg0.activeState];
+  return obj4["surface:" + arg0.surface + " activeState:" + arg0.activeState];
 };
 prototype["getFetchState"] = function getFetchState(arg0) {
   return obj["surface:" + arg0.surface + " activeState:" + arg0.activeState];
 };
 prototype["getCollections"] = function getCollections(arg0) {
-  let tmp = obj["surface:" + arg0.surface + " activeState:" + arg0.activeState];
+  let tmp = obj2["surface:" + arg0.surface + " activeState:" + arg0.activeState];
   if (tmp == null) {
     tmp = closure_3;
   }
   return tmp;
 };
-obj = {
+obj2 = {
   APPLICATION_DIRECTORY_FETCH_COLLECTIONS: function handleFetchAppDirectoryCollections(arg0) {
     obj = {};
     ({ surface, activeState } = arg0);
@@ -40,16 +40,18 @@ obj = {
       );
       return application_directory_collection_items;
     });
-    obj = {};
-    const merged = Object.assign(obj);
-    obj[combined] = obj.sortBy(mapped, ["position", "id"]);
-    obj = {};
+    obj = _modDef12;
+    obj2 = {};
+    const merged = Object.assign(obj2);
+    obj2[combined] = obj.sortBy(mapped, ["position", "id"]);
+    const obj3 = {};
     const merged1 = Object.assign(obj);
-    obj[combined] = obj.FETCHED;
-    obj1 = {};
+    obj3[combined] = obj.FETCHED;
+    obj = obj3;
+    obj4 = {};
     const timestamp = Date.now();
-    const merged2 = Object.assign(obj1);
-    obj1[combined] = timestamp;
+    const merged2 = Object.assign(obj4);
+    obj4[combined] = timestamp;
   },
   APPLICATION_DIRECTORY_FETCH_COLLECTIONS_FAILURE: function handleFetchAppDirectoryCollectionsFailure(arg0) {
     obj = {};
@@ -58,7 +60,7 @@ obj = {
     obj["surface:" + surface + " activeState:" + activeState] = obj.ERROR;
   },
 };
-const applicationDirectoryCollectionsStore = new ApplicationDirectoryCollectionsStore(DispatcherDefault, obj);
+const applicationDirectoryCollectionsStore = new ApplicationDirectoryCollectionsStore(DispatcherDefault, obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting(
   "modules/global_discovery_apps/stores/ApplicationDirectoryCollectionsStore.tsx",

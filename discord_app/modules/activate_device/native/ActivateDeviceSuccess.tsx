@@ -32,42 +32,42 @@ export const ActivateDeviceSuccess = function ActivateDeviceSuccess(onComplete) 
   }
   let tmp9 = null;
   if (null != successImage) {
-    let obj = { source: null, style: null, resizeMode: "contain" };
-    let obj1 = AvatarUtils;
-    obj.source = obj1.makeSource(successImage);
+    const obj = { source: null, style: null, resizeMode: "contain" };
+    const tmp13 = FastImageDefault;
+    obj.source = AvatarUtils.makeSource(successImage);
     obj.style = tmp.image;
-    tmp9 = React4(FastImageDefault, obj);
+    tmp9 = React4(tmp13, obj);
   }
   const items = [tmp9, ,];
-  obj = { style: ActivateDeviceSharedStylesDefault.innerContent, children: null };
-  obj = {
+  const obj3 = { style: ActivateDeviceSharedStylesDefault.innerContent, children: null };
+  const obj4 = {
     variant: "heading-lg/bold",
     color: "mobile-text-heading-primary",
     style: ActivateDeviceSharedStylesDefault.centerText,
     children: null,
   };
   const intl3 = util.intl;
-  obj.children = intl3.string(util.t.qDtJmD);
-  const items1 = [React4(Text_Text.Text, obj)];
+  obj4.children = intl3.string(util.t.qDtJmD);
+  const items1 = [React4(Text_Text.Text, obj4)];
   let tmp18Result = null;
   if (null != stringResult) {
-    obj1 = {
+    const obj5 = {
       variant: "text-md/medium",
       color: "text-default",
       style: ActivateDeviceSharedStylesDefault.centerText,
       children: stringResult,
     };
-    tmp18Result = React4(Text_Text.Text, obj1);
+    tmp18Result = React4(Text_Text.Text, obj5);
   }
-  const obj2 = { children: null };
+  const obj6 = { children: null };
   items1[1] = tmp18Result;
-  obj.children = items1;
-  items[1] = hasOwnProperty(View, obj);
-  const obj3 = { size: "lg", text: null, onPress: null, grow: true };
+  obj3.children = items1;
+  items[1] = hasOwnProperty(View, obj3);
+  const obj7 = { size: "lg", text: null, onPress: null, grow: true };
   const intl4 = util.intl;
-  obj3.text = intl4.string(util.t.cpT0Cq);
-  obj3.onPress = onComplete.onComplete;
-  items[2] = React4(components_Button_Button.Button, obj3);
-  obj2.children = items;
-  return hasOwnProperty(timestampProducer, obj2);
+  obj7.text = intl4.string(util.t.cpT0Cq);
+  obj7.onPress = onComplete.onComplete;
+  items[2] = React4(components_Button_Button.Button, obj7);
+  obj6.children = items;
+  return hasOwnProperty(timestampProducer, obj6);
 };

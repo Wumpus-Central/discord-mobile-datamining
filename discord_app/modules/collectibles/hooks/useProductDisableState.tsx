@@ -9,9 +9,8 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/hooks/useProductDisableState.tsx");
 
 export const useProductDisableState = function useProductDisableState(skuId) {
-  let obj = initialize;
   const items = [SubscriptionStore];
-  const stateFromStores = obj.useStateFromStores(items, () => {
+  const stateFromStores = initialize.useStateFromStores(items, () => {
     premiumSubscription = premiumSubscription.getPremiumSubscription();
     let prop;
     if (premiumSubscription != null) {
@@ -21,15 +20,16 @@ export const useProductDisableState = function useProductDisableState(skuId) {
   });
   const ALL = FractionalPremiumSKUs.FractionalPremiumSKUsSets.ALL;
   if (ALL.has(skuId)) {
-    obj = { isDisabled: stateFromStores, disabledReason: null };
+    const obj2 = { isDisabled: stateFromStores, disabledReason: null };
     let stringResult = null;
     if (stateFromStores) {
       const intl = util.intl;
       stringResult = intl.string(util.t.NbveHD);
     }
-    obj.disabledReason = stringResult;
+    obj2.disabledReason = stringResult;
+    let obj3 = obj2;
   } else {
-    obj = { isDisabled: false, disabledReason: null };
+    obj3 = { isDisabled: false, disabledReason: null };
   }
-  return obj;
+  return obj3;
 };

@@ -11,15 +11,13 @@ const result = size.fileFinishedImporting(
 );
 
 export const useIsMFAEnabled = function useIsMFAEnabled() {
-  let obj = useStateFromStores;
   const items = [UserStore];
-  const stateFromStores = obj.useStateFromStores(items, () => currentUser.getCurrentUser());
+  const stateFromStores = useStateFromStores.useStateFromStores(items, () => currentUser.getCurrentUser());
   const items1 = [GuildSettingsStore];
   let mfaEnabled;
   const stateFromStores1 = useStateFromStores.useStateFromStores(items1, () => props.getProps().mfaLevel);
   if (stateFromStores != null) {
     mfaEnabled = stateFromStores.mfaEnabled;
   }
-  obj = { isUserMFAEnabled: true === mfaEnabled, isModerationMFAEnabled: stateFromStores1 === MFALevels.ELEVATED };
-  return obj;
+  return { isUserMFAEnabled: true === mfaEnabled, isModerationMFAEnabled: stateFromStores1 === MFALevels.ELEVATED };
 };

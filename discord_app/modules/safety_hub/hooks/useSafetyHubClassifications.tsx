@@ -5,6 +5,8 @@ import SafetyHubActionCreatorsAll from "../SafetyHubActionCreators.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 import SafetyHubStore from "../SafetyHubStore.tsx";
 
+const require = globalThis.__r;
+
 require = fn;
 const ViolationType = fn(8537).ViolationType;
 const size = fn(2);
@@ -20,15 +22,17 @@ export const useSafetyHubClassifications = function useSafetyHubClassifications(
 };
 export const useSafetyHubClassification = function useSafetyHubClassification(classificationId) {
   _require = classificationId;
-  let obj = require("initialize");
   const items = [SafetyHubStore];
-  const stateFromStores = obj.useStateFromStores(items, () => SafetyHubStore.getClassification(closure_0));
+  const stateFromStores = require("initialize").useStateFromStores(items, () =>
+    SafetyHubStore.getClassification(closure_0),
+  );
+  let obj = require("initialize");
+  let tmp = _require;
   const items1 = [SafetyHubStore];
   const stateFromStores1 = require("initialize").useStateFromStores(items1, () =>
     SafetyHubStore.getClassificationRequestState(closure_0),
   );
   const obj2 = require("initialize");
-  let tmp = _require;
   const items2 = [SafetyHubStore];
   const stateFromStores2 = require("initialize").useStateFromStores(items2, () => SafetyHubStore.getIsDsaEligible());
   const obj3 = require("initialize");
@@ -57,7 +61,7 @@ export const useSafetyHubClassification = function useSafetyHubClassification(cl
         const safetyHubDataForClassification = SafetyHubActionCreatorsAll.getSafetyHubDataForClassification(closure_0);
       }
     }, items4);
-    obj = {
+    const obj6 = {
       classification: stateFromStores,
       classificationRequestState: stateFromStores1,
       isDsaEligible: stateFromStores2,
@@ -70,9 +74,9 @@ export const useSafetyHubClassification = function useSafetyHubClassification(cl
     if (stateFromStores3) {
       stateFromStores3 = null == stateFromStores.appeal_status;
     }
-    obj.isAppealEligible = stateFromStores3;
-    obj.violationType = ViolationType.USER;
-    return obj;
+    obj6.isAppealEligible = stateFromStores3;
+    obj6.violationType = ViolationType.USER;
+    return obj6;
   }
   obj5 = require("SafetyHubUtils");
 };

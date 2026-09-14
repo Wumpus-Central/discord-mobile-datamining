@@ -1,6 +1,6 @@
 // discord_app/modules/tti_analytics/native/navigation/NavigationSpanTracker.tsx
 import LoggerDefault from "../../../debug/Logger.tsx";
-import v1 from "../../../../../_runtime/01256_v1.js";
+import v1 from "../../../../../_runtime/01254_v1.js";
 import NavigationSpanTypes from "NavigationSpanTypes.tsx";
 
 require = fn;
@@ -105,7 +105,7 @@ prototype["recordComponentSpan"] = function recordComponentSpan(trace_id, endMon
       const _Math2 = Math;
       const bound = Math.max(0, Math.round(endMonotonicMs.endMonotonicMs - active.startMonotonicMs));
       const components = active.components;
-      let firstPaint = {
+      obj = {
         spanComponentName: active.definition.componentEventName,
         trace_id,
         span_id: v1.v4(),
@@ -116,10 +116,10 @@ prototype["recordComponentSpan"] = function recordComponentSpan(trace_id, endMon
         measurementSource: endMonotonicMs.measurementSource,
         lateLayoutMs: null,
       };
-      components.push(firstPaint);
+      components.push(obj);
       if (tmp6) {
-        firstPaint = { spanComponent: endMonotonicMs.spanComponent, atMs: bound };
-        active.firstPaint = firstPaint;
+        const obj3 = { spanComponent: endMonotonicMs.spanComponent, atMs: bound };
+        active.firstPaint = obj3;
       }
       return true;
     } else {
@@ -195,7 +195,7 @@ prototype["flush"] = function flush(arg0) {
     const bundle = self.buildBundle(active, true, INTERRUPTED);
     self.lastBundle = bundle;
     const spanTtiProperties = bundle.navigation.spanTtiProperties;
-    obj = {
+    const obj2 = {
       trace_id: bundle.navigation.spanTtiProperties.trace_id,
       first_paint_ms: spanTtiProperties.first_paint_ms,
       first_paint_component: null,
@@ -214,19 +214,19 @@ prototype["flush"] = function flush(arg0) {
     if (spanComponent == null) {
       spanComponent = null;
     }
-    obj.first_paint_component = spanComponent;
-    obj.to_channel_id = to_channel_id;
-    obj.end_ms = end_ms;
-    obj.span_status = span_status;
-    obj.warm_message_cache = warm_message_cache;
+    obj2.first_paint_component = spanComponent;
+    obj2.to_channel_id = to_channel_id;
+    obj2.end_ms = end_ms;
+    obj2.span_status = span_status;
+    obj2.warm_message_cache = warm_message_cache;
     const components = bundle.components;
-    obj.components = components.map((span_name) => ({
+    obj2.components = components.map((span_name) => ({
       span_name: span_name.span_name,
       end_ms: span_name.end_ms,
       measurement_source: span_name.measurementSource,
       late_layout_ms: span_name.lateLayoutMs,
     }));
-    obj.info(JSON.stringify(obj));
+    obj.info(JSON.stringify(obj2));
     if (flag) {
       self.notifySurface(active.definition, active.destinationKey);
     }
@@ -263,7 +263,7 @@ prototype["buildBundle"] = function buildBundle(active, settled, INTERRUPTED) {
   if (atMs == null) {
     atMs = null;
   }
-  let spanTtiProperties = {};
+  const spanTtiProperties = {};
   const merged = Object.assign(active.properties);
   spanTtiProperties.trace_id = traceId;
   spanTtiProperties.span_id = navigationSpanId;
@@ -277,15 +277,15 @@ prototype["buildBundle"] = function buildBundle(active, settled, INTERRUPTED) {
   spanTtiProperties.interactive_ms = null;
   spanTtiProperties.trace_start_timestamp_ms = startEpochMs;
   spanTtiProperties.span_status = INTERRUPTED;
-  spanTtiProperties = {
+  const obj2 = {
     navigation: { spanTtiName: definition.rootEventName, spanTtiProperties },
     components: null,
     firstPaint,
     settled,
   };
   const items = [...active.components];
-  spanTtiProperties.components = items;
-  return spanTtiProperties;
+  obj2.components = items;
+  return obj2;
 };
 let merged = Object.assign({ active: null, lastBundle: null, listenersBySurface: null });
 merged[2] = new Map();

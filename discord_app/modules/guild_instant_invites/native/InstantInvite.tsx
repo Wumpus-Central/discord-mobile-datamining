@@ -33,18 +33,17 @@ export default noop.memo((onInviteRevoked) => {
   }
   const items = [invite];
   const memo = noop.useMemo(() => closure_5(invite.channel), items);
-  let obj = invite(11074);
+  const tmp = closure_9();
   const items1 = [invite.roles];
-  const inviteActions = obj.useInviteActions({ invite, onInviteRevoked: onInviteRevoked.onInviteRevoked });
+  const inviteActions = invite(11075).useInviteActions({ invite, onInviteRevoked: onInviteRevoked.onInviteRevoked });
   const memo1 = noop.useMemo(() => {
     const roles = invite.roles;
     return roles.map((id) => id.id);
   }, items1);
   let tmp9Result = memo1.length > 0 && null != id;
-  obj = { direction: "horizontal", justify: "space-between", children: null };
-  obj = { variant: "text-lg/bold", tabularNumbers: true, children: invite.code };
+  const obj2 = { direction: "horizontal", justify: "space-between", children: null };
   const items2 = [
-    closure_7(invite(4632).Text, obj),
+    closure_7(invite(4632).Text, { variant: "text-lg/bold", tabularNumbers: true, children: invite.code }),
     closure_7(invite(8789).ContextMenu, {
       items: inviteActions,
       children(ref) {
@@ -64,9 +63,11 @@ export default noop.memo((onInviteRevoked) => {
       },
     }),
   ];
-  obj.children = items2;
-  const items3 = [closure_8(invite(5054).Stack, obj), , ,];
-  const obj1 = {
+  obj2.children = items2;
+  const items3 = [closure_8(invite(5054).Stack, obj2), , ,];
+  let obj = invite(11075);
+  const obj3 = { variant: "text-lg/bold", tabularNumbers: true, children: invite.code };
+  const obj4 = {
     items: inviteActions,
     children(ref) {
       const merged = Object.assign(ref, Object.assign({ ref: 0 }));
@@ -84,37 +85,36 @@ export default noop.memo((onInviteRevoked) => {
       return closure_1_7(invite(8202).IconButton, obj);
     },
   };
-  const tmp = closure_9();
-  items3[1] = closure_7(invite(11072).InstantInviteDetails, { channel: memo, expiresAt: invite.getExpiresAt() });
+  items3[1] = closure_7(invite(11073).InstantInviteDetails, { channel: memo, expiresAt: invite.getExpiresAt() });
   if (tmp9Result) {
-    const obj3 = { roleIds: memo1, guildId: id };
-    tmp9Result = closure_7(InviteRolesDisplayDefault, obj3);
+    const obj6 = { roleIds: memo1, guildId: id };
+    tmp9Result = closure_7(InviteRolesDisplayDefault, obj6);
   }
   items3[2] = tmp9Result;
-  const obj4 = { style: tmp.creatorWrapper, children: null };
+  const obj7 = { style: tmp.creatorWrapper, children: null };
   const inviter = invite.inviter;
   let id1;
   if (inviter != null) {
     id1 = inviter.id;
   }
-  tmp9Result = null;
+  let tmp9Result2 = null;
   if (null != id1) {
     const inviter2 = invite.inviter;
     let id2;
     if (inviter2 != null) {
       id2 = inviter2.id;
     }
-    const obj5 = { start: true, end: true, userId: id2, guildId: id };
-    tmp9Result = closure_7(DetailedGuildIdentityUserRowDefault, obj5);
+    const obj8 = { start: true, end: true, userId: id2, guildId: id };
+    tmp9Result2 = closure_7(DetailedGuildIdentityUserRowDefault, obj8);
   }
-  const obj6 = { children: null };
-  const obj7 = { direction: "horizontal", align: "flex-end", children: null };
-  obj4.children = tmp9Result;
-  const items4 = [closure_7(View, obj4), closure_7(InstantInviteUsesLabelDefault, { uses, maxUses })];
-  obj7.children = items4;
-  items3[3] = closure_8(invite(5054).Stack, obj7);
-  obj6.children = items3;
-  return closure_8(invite(5688).Card, obj6);
+  const obj9 = { children: null };
+  const obj10 = { direction: "horizontal", align: "flex-end", children: null };
+  obj7.children = tmp9Result2;
+  const items4 = [closure_7(View, obj7), closure_7(InstantInviteUsesLabelDefault, { uses, maxUses })];
+  obj10.children = items4;
+  items3[3] = closure_8(invite(5054).Stack, obj10);
+  obj9.children = items3;
+  return closure_8(invite(5688).Card, obj9);
 });
 export const LinkedChannelInvite = function LinkedChannelInvite(channel) {
   channel = channel.channel;
@@ -127,42 +127,42 @@ export const LinkedChannelInvite = function LinkedChannelInvite(channel) {
   if (linkedLobby != null) {
     linked_by = linkedLobby.linked_by;
   }
-  let obj = channel(7271);
   const linkedLobby2 = channel.linkedLobby;
   let application_id;
   if (linkedLobby2 != null) {
     application_id = linkedLobby2.application_id;
   }
-  const getOrFetchApplication = obj.useGetOrFetchApplication(application_id);
-  canUnlinkLobbyChannel = channel(11064).useCanUnlinkLobbyChannel(channel);
+  const getOrFetchApplication = channel(7271).useGetOrFetchApplication(application_id);
+  let obj = channel(7271);
+  canUnlinkLobbyChannel = channel(11065).useCanUnlinkLobbyChannel(channel);
   let str;
-  const tmp3Result = channel(11064);
+  const tmp3Result = channel(11065);
   if (getOrFetchApplication != null) {
     str = getOrFetchApplication.name;
   }
   if (str == null) {
     str = "";
   }
-  const tmp9Result = canUnlinkLobbyChannel(11065)(channel.id, str);
+  const tmp9Result = canUnlinkLobbyChannel(11066)(channel.id, str);
   dependencyMap = tmp9Result;
   let items = [canUnlinkLobbyChannel, tmp9Result];
   action = action.useCallback(() => {
     if (canUnlinkLobbyChannel) {
       dependencyMap();
     } else {
-      const obj = { title: null, body: null };
+      const obj2 = { title: null, body: null };
       const intl = util.intl;
-      obj.title = intl.string(util.t.JmUENg);
+      obj2.title = intl.string(util.t.JmUENg);
       const intl2 = util.intl;
-      obj.body = intl2.string(util.t.SrvsML);
-      obj.show(obj);
+      obj2.body = intl2.string(util.t.SrvsML);
+      actions_AlertActionCreatorsDefault.show(obj2);
     }
   }, items);
   const items1 = [, ,];
   ({ guild_id: arr2[0], id: arr2[1] } = channel);
   items1[2] = action;
   const memo = action.useMemo(() => {
-    let obj = { label: null, IconComponent: null, action: null };
+    const obj = { label: null, IconComponent: null, action: null };
     const intl = util.intl;
     obj.label = intl.string(util.t.aW2YlJ);
     obj.IconComponent = ArrowSmallRightIcon.ArrowSmallRightIcon;
@@ -170,30 +170,30 @@ export const LinkedChannelInvite = function LinkedChannelInvite(channel) {
       channel(closure_2[12]).transitionTo(Routes.CHANNEL(closure_1_0.guild_id, closure_1_0.id));
     };
     const items = [obj];
-    obj = { label: null, iconSource: null, variant: "destructive", action: null };
+    const obj2 = { label: null, iconSource: null, variant: "destructive", action: null };
     const intl2 = util.intl;
-    obj.label = intl2.string(util.t.JmUENg);
-    obj.iconSource = InstantInviteIconsDefault.revoke;
-    obj.action = action;
-    items[1] = obj;
+    obj2.label = intl2.string(util.t.JmUENg);
+    obj2.iconSource = InstantInviteIconsDefault.revoke;
+    obj2.action = action;
+    items[1] = obj2;
     return items;
   }, items1);
-  obj = { style: tmp.gameWrapper, children: null };
-  obj = { game: getOrFetchApplication, size: null };
-  const tmp9 = canUnlinkLobbyChannel(11065);
-  obj.size = channel(7275).GameIconSizes.SIZE_24;
-  const items2 = [closure_7(canUnlinkLobbyChannel(7275), obj)];
-  const obj1 = { ellipsizeMode: "tail", lineClamp: 1, variant: "text-lg/bold", style: tmp.gameText, children: null };
+  let obj2 = { style: tmp.gameWrapper, children: null };
+  const obj3 = { game: getOrFetchApplication, size: null };
+  const tmp9 = canUnlinkLobbyChannel(11066);
+  obj3.size = channel(7275).GameIconSizes.SIZE_24;
+  const items2 = [closure_7(canUnlinkLobbyChannel(7275), obj3)];
+  const obj4 = { ellipsizeMode: "tail", lineClamp: 1, variant: "text-lg/bold", style: tmp.gameText, children: null };
   let name;
   if (getOrFetchApplication != null) {
     name = getOrFetchApplication.name;
   }
-  const obj2 = { direction: "horizontal", justify: "space-between", children: null };
-  obj1.children = name;
-  items2[1] = closure_7(channel(4632).Text, obj1);
-  obj.children = items2;
+  const obj5 = { direction: "horizontal", justify: "space-between", children: null };
+  obj4.children = name;
+  items2[1] = closure_7(channel(4632).Text, obj4);
+  obj2.children = items2;
   const items3 = [
-    closure_8(View, obj),
+    closure_8(View, obj2),
     closure_7(channel(8789).ContextMenu, {
       items: memo,
       children(ref) {
@@ -201,7 +201,7 @@ export const LinkedChannelInvite = function LinkedChannelInvite(channel) {
         const obj = {
           size: "sm",
           variant: "secondary",
-          icon: canUnlinkLobbyChannel(11068).more,
+          icon: canUnlinkLobbyChannel(11069).more,
           accessibilityLabel: null,
           ref: null,
         };
@@ -213,23 +213,23 @@ export const LinkedChannelInvite = function LinkedChannelInvite(channel) {
       },
     }),
   ];
-  obj2.children = items3;
-  const items4 = [closure_8(channel(5054).Stack, obj2), closure_7(channel(11072).InstantInviteDetails, { channel })];
-  const obj4 = { style: tmp.creatorWrapper, children: null };
+  obj5.children = items3;
+  const items4 = [closure_8(channel(5054).Stack, obj5), closure_7(channel(11073).InstantInviteDetails, { channel })];
+  const obj7 = { style: tmp.creatorWrapper, children: null };
   let tmp15Result = null;
   if (null != linked_by) {
-    const obj5 = { start: true, end: true, userId: linked_by, guildId: channel.guild_id };
-    tmp15Result = closure_7(tmp8(11073), obj5);
+    const obj8 = { start: true, end: true, userId: linked_by, guildId: channel.guild_id };
+    tmp15Result = closure_7(tmp8(11074), obj8);
   }
-  const obj6 = { children: null };
-  const obj3 = {
+  const obj9 = { children: null };
+  const obj6 = {
     items: memo,
     children(ref) {
       const merged = Object.assign(ref, Object.assign({ ref: 0 }));
       const obj = {
         size: "sm",
         variant: "secondary",
-        icon: canUnlinkLobbyChannel(11068).more,
+        icon: canUnlinkLobbyChannel(11069).more,
         accessibilityLabel: null,
         ref: null,
       };
@@ -241,12 +241,12 @@ export const LinkedChannelInvite = function LinkedChannelInvite(channel) {
     },
   };
   const tmp8Result = canUnlinkLobbyChannel(7275);
-  obj4.children = tmp15Result;
+  obj7.children = tmp15Result;
   items4[2] = closure_7(channel(5054).Stack, {
     direction: "horizontal",
     align: "flex-end",
-    children: closure_7(View, obj4),
+    children: closure_7(View, obj7),
   });
-  obj6.children = items4;
-  return closure_8(channel(5688).Card, obj6);
+  obj9.children = items4;
+  return closure_8(channel(5688).Card, obj9);
 };

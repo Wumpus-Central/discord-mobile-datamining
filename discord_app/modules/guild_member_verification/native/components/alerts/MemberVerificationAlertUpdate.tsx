@@ -24,7 +24,7 @@ const result = size.fileFinishedImporting(
 
 export default function MemberVerificationAlertUpdate(onClose) {
   const tmp = closure_7();
-  let obj = {};
+  const obj = {};
   const merged = Object.assign(onClose);
   const intl = util.intl;
   obj.confirmText = intl.string(util.t.b8siyY);
@@ -34,16 +34,21 @@ export default function MemberVerificationAlertUpdate(onClose) {
     return LinkingDefault.openURL(constants.IOS);
   };
   obj.onCancel = onClose.onClose;
-  obj = { source: _modDef7194, style: tmp.headerImage };
-  const items = [hasOwnProperty(Image, obj), ,];
-  obj = { style: tmp.header, variant: "heading-lg/extrabold", color: "mobile-text-heading-primary", children: null };
+  const tmp2 = common_AlertDefault;
+  const items = [hasOwnProperty(Image, { source: _modDef7194, style: tmp.headerImage }), ,];
+  const obj3 = {
+    style: tmp.header,
+    variant: "heading-lg/extrabold",
+    color: "mobile-text-heading-primary",
+    children: null,
+  };
   const intl3 = util.intl;
-  obj.children = intl3.string(util.t.kkjNHU);
-  items[1] = hasOwnProperty(Text_Text.Text, obj);
-  const obj1 = { style: tmp.text, variant: "text-sm/medium", color: "text-default", children: null };
+  obj3.children = intl3.string(util.t.kkjNHU);
+  items[1] = hasOwnProperty(Text_Text.Text, obj3);
+  const obj4 = { style: tmp.text, variant: "text-sm/medium", color: "text-default", children: null };
   const intl4 = util.intl;
-  obj1.children = intl4.string(util.t.gnkqzQ);
-  items[2] = hasOwnProperty(Text_Text.Text, obj1);
+  obj4.children = intl4.string(util.t.gnkqzQ);
+  items[2] = hasOwnProperty(Text_Text.Text, obj4);
   obj.children = items;
-  return timestampProducer(common_AlertDefault, obj);
+  return timestampProducer(tmp2, obj);
 }

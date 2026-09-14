@@ -10,9 +10,10 @@ import size from "../../../../_runtime/metro/00002__.js";
 
 const View = _mod17.View;
 const jsx = jsxProd.jsx;
-let obj = { captionText: null, labelContainer: null };
-obj = { fontFamily: Constants.Fonts.PRIMARY_BOLD, color: nativeDefault.colors.WHITE, fontSize: 12 };
-obj.captionText = obj;
+let obj = {
+  captionText: { fontFamily: Constants.Fonts.PRIMARY_BOLD, color: nativeDefault.colors.WHITE, fontSize: 12 },
+  labelContainer: null,
+};
 const rect = {
   backgroundColor: null,
   borderRadius: null,
@@ -31,12 +32,12 @@ const result = size.fileFinishedImporting("modules/media/native/Caption.tsx");
 export const Caption = function Caption(arg0) {
   ({ label, style, textStyle } = arg0);
   const tmp = closure_4();
-  let obj = { style: null, children: null };
+  const obj = { style: null, children: null };
   const items = [tmp.labelContainer, style];
   obj.style = items;
-  obj = { style: null, children: label };
+  const obj2 = { style: null, children: label };
   const items1 = [tmp.captionText, textStyle];
-  obj.style = items1;
+  obj2.style = items1;
   obj.children = jsx(native.LegacyText, { style: null, children: label });
-  return <View style={null}>{label}</View>;
+  return <View style={null}>{null}</View>;
 };

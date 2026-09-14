@@ -159,8 +159,7 @@ const storefrontProductStore = new StorefrontProductStore(DispatcherDefault, {
           const items = [closure_1];
           acc[item] = items;
         } else {
-          let arr = acc[item];
-          arr = arr.push(closure_1);
+          acc[item].push(closure_1);
         }
       });
       return acc;

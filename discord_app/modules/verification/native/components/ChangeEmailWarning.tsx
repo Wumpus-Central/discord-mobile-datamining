@@ -12,38 +12,37 @@ const hcArticle = fn(5765).COMMON_SCAMS_EDUCATION_HC_ARTICLE;
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-fn(4636);
-let createStyles = { container: null, title: null, body: null, buttonContainer: null };
-createStyles = { flex: 1, padding: nativeDefault.space.PX_16, alignItems: "center", justifyContent: "center" };
-createStyles.container = createStyles;
-createStyles.title = { marginTop: nativeDefault.space.PX_16 };
-let obj1 = { marginTop: nativeDefault.space.PX_16 };
-createStyles.body = { marginTop: nativeDefault.space.PX_8, textAlign: "center" };
-let obj2 = { marginTop: nativeDefault.space.PX_8, textAlign: "center" };
-createStyles.buttonContainer = {
-  flexDirection: "row",
-  gap: nativeDefault.space.PX_8,
-  marginTop: nativeDefault.space.PX_16,
+const createStyles = fn(4636);
+const obj2 = {
+  container: { flex: 1, padding: nativeDefault.space.PX_16, alignItems: "center", justifyContent: "center" },
+  title: null,
+  body: null,
+  buttonContainer: null,
 };
-let closure_11 = createStyles.createStyles(createStyles);
+let obj3 = { flex: 1, padding: nativeDefault.space.PX_16, alignItems: "center", justifyContent: "center" };
+obj2.title = { marginTop: nativeDefault.space.PX_16 };
+let obj4 = { marginTop: nativeDefault.space.PX_16 };
+obj2.body = { marginTop: nativeDefault.space.PX_8, textAlign: "center" };
+let obj5 = { marginTop: nativeDefault.space.PX_8, textAlign: "center" };
+obj2.buttonContainer = { flexDirection: "row", gap: nativeDefault.space.PX_8, marginTop: nativeDefault.space.PX_16 };
+let closure_11 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/verification/native/components/ChangeEmailWarning.tsx");
 
 export default function ChangeEmailWarning(changeEmailReason) {
   changeEmailReason = changeEmailReason.changeEmailReason;
   const tmp = closure_11();
-  let obj = changeEmailReason(1483);
-  const navigation = obj.useNavigation();
-  let obj1 = changeEmailReason(504);
+  const navigation = changeEmailReason(1483).useNavigation();
+  const obj = changeEmailReason(1483);
   const items = [UserStore];
   const items1 = [navigation, changeEmailReason];
-  const stateFromStores = obj1.useStateFromStores(items, () => currentUser.getCurrentUser());
+  const stateFromStores = changeEmailReason(504).useStateFromStores(items, () => currentUser.getCurrentUser());
   let tmp7 = null;
   if (null != stateFromStores) {
-    obj = { keyboardShouldPersistTaps: "handled", alwaysBounceVertical: false, children: null };
-    obj = { style: tmp.container, children: null };
+    const obj3 = { keyboardShouldPersistTaps: "handled", alwaysBounceVertical: false, children: null };
+    const obj4 = { style: tmp.container, children: null };
     const items2 = [closure_9(tmp2(5773).TrafficConeSpotIllustration, {}), , ,];
-    obj1 = {
+    const obj5 = {
       style: tmp.title,
       accessibilityRole: "header",
       variant: "heading-xl/extrabold",
@@ -51,9 +50,9 @@ export default function ChangeEmailWarning(changeEmailReason) {
       children: null,
     };
     const intl = tmp2(1114).intl;
-    obj1.children = intl.string(tmp2(1114).t.hhR7gX);
-    items2[1] = closure_9(tmp2(4632).Text, obj1);
-    const obj2 = {
+    obj5.children = intl.string(tmp2(1114).t.hhR7gX);
+    items2[1] = closure_9(tmp2(4632).Text, obj5);
+    const obj6 = {
       style: tmp.body,
       accessibilityRole: "header",
       variant: "text-md/normal",
@@ -61,30 +60,30 @@ export default function ChangeEmailWarning(changeEmailReason) {
       children: null,
     };
     const intl2 = tmp2(1114).intl;
-    const obj3 = { hcArticle };
-    const items3 = [intl2.format(tmp2(1114).t.rqWXUf, obj3), "\n\n"];
+    const obj7 = { hcArticle };
+    const items3 = [intl2.format(tmp2(1114).t.rqWXUf, obj7), "\n\n"];
     const intl3 = tmp2(1114).intl;
     items3[2] = intl3.string(tmp2(1114).t["3LW10C"]);
-    obj2.children = items3;
-    items2[2] = closure_10(tmp2(4632).Text, obj2);
-    const obj4 = { style: tmp.buttonContainer, children: null };
-    const obj5 = { size: "md", variant: "tertiary", text: null, onPress: null, shrink: true };
+    obj6.children = items3;
+    items2[2] = closure_10(tmp2(4632).Text, obj6);
+    const obj8 = { style: tmp.buttonContainer, children: null };
+    const obj9 = { size: "md", variant: "tertiary", text: null, onPress: null, shrink: true };
     const intl4 = tmp2(1114).intl;
-    obj5.text = intl4.string(tmp2(1114).t.rwTBFs);
-    obj5.onPress = tmp6;
-    const items4 = [closure_9(tmp2(5056).Button, obj5)];
-    const obj6 = { size: "md", variant: "primary", text: null, onPress: null, shrink: true };
+    obj9.text = intl4.string(tmp2(1114).t.rwTBFs);
+    obj9.onPress = tmp6;
+    const items4 = [closure_9(tmp2(5056).Button, obj9)];
+    const obj10 = { size: "md", variant: "primary", text: null, onPress: null, shrink: true };
     const intl5 = tmp2(1114).intl;
-    obj6.text = intl5.string(tmp2(1114).t["ETE/oC"]);
-    obj6.onPress = function onPress() {
+    obj10.text = intl5.string(tmp2(1114).t["ETE/oC"]);
+    obj10.onPress = function onPress() {
       return navigation(dependencyMap[16]).close();
     };
-    items4[1] = closure_9(tmp2(5056).Button, obj6);
-    obj4.children = items4;
-    items2[3] = closure_10(closure_4, obj4);
-    obj.children = items2;
-    obj.children = closure_10(closure_4, obj);
-    tmp7 = closure_9(closure_5, obj);
+    items4[1] = closure_9(tmp2(5056).Button, obj10);
+    obj8.children = items4;
+    items2[3] = closure_10(closure_4, obj8);
+    obj4.children = items2;
+    obj3.children = closure_10(closure_4, obj4);
+    tmp7 = closure_9(closure_5, obj3);
   }
   return tmp7;
 }

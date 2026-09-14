@@ -1,6 +1,8 @@
 // discord_app/modules/calls/useCanSetVoiceChannelStatus.tsx
 import PermissionStore from "../../stores/PermissionStore.tsx";
 
+const require = globalThis.__r;
+
 const require = fn;
 const Permissions = fn(1085).Permissions;
 let items = [, ,];
@@ -25,12 +27,12 @@ export default function useCanSetVoiceChannelStatus(arg0) {
       return flag
         ? items1
         : items.every((permission) => {
-            if (null == closure_2) {
+            if (null == dependencyMap) {
               let canResult = closure_1.can(permission, context);
             } else {
-              flag(closure_2[2]);
-              const obj = { permission, user: tmp, context };
-              canResult = obj.can(obj);
+              const obj2 = { permission, user: tmp, context };
+              canResult = flag(dependencyMap[2]).can(obj2);
+              const obj = flag(dependencyMap[2]);
             }
             return canResult;
           });
@@ -45,12 +47,12 @@ export const _canSetVoiceChannelStatus = function _canSetVoiceChannelStatus(arg0
   return arg2
     ? items1
     : items.every((permission) => {
-        if (null == closure_2) {
+        if (null == dependencyMap) {
           let canResult = closure_1.can(permission, context);
         } else {
-          flag(closure_2[2]);
-          const obj = { permission, user: tmp, context };
-          canResult = obj.can(obj);
+          const obj2 = { permission, user: tmp, context };
+          canResult = flag(dependencyMap[2]).can(obj2);
+          const obj = flag(dependencyMap[2]);
         }
         return canResult;
       });
@@ -66,12 +68,12 @@ export const canSetVoiceChannelStatus = function canSetVoiceChannelStatus(arg0) 
   return flag
     ? items1
     : items.every((permission) => {
-        if (null == closure_2) {
+        if (null == dependencyMap) {
           let canResult = closure_1.can(permission, context);
         } else {
-          flag(closure_2[2]);
-          const obj = { permission, user: tmp, context };
-          canResult = obj.can(obj);
+          const obj2 = { permission, user: tmp, context };
+          canResult = flag(dependencyMap[2]).can(obj2);
+          const obj = flag(dependencyMap[2]);
         }
         return canResult;
       });

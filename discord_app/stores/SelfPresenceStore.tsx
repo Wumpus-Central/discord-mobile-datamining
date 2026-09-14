@@ -2,7 +2,7 @@
 import _modDef12 from "../../_runtime/metro/00012__.js";
 import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../Dispatcher.tsx";
-import _modDef1332 from "../../_runtime/metro/01332__.js";
+import _modDef1330 from "../../_runtime/metro/01330__.js";
 import FlagUtils from "../../discord_common/js/shared/utils/FlagUtils.tsx";
 import UserSettings from "../modules/user_settings/UserSettings.tsx";
 import LibraryApplicationUtils from "../utils/LibraryApplicationUtils.tsx";
@@ -30,7 +30,7 @@ function filterPlayingActivities(arg0) {
       if (nextResult.type === constants2.PLAYING) {
         let arr = items1.push(tmp4);
       } else {
-        arr = items.push(tmp4);
+        let arr2 = items.push(tmp4);
       }
       continue;
     }
@@ -62,18 +62,21 @@ function shouldShowActivity(flags) {
       } else {
         shouldShowActivityResult = null != flags.application_id;
         if (shouldShowActivityResult) {
-          let tmpResult = LibraryApplicationUtils;
-          shouldShowActivityResult = tmpResult.shouldShareApplicationActivity(
+          shouldShowActivityResult = LibraryApplicationUtils.shouldShareApplicationActivity(
             flags.application_id,
             LibraryApplicationStore,
           );
+          const tmpResult = LibraryApplicationUtils;
         }
       }
       return shouldShowActivityResult;
     } else if (constants2.PLAYING === type) {
       if (null != flags.application_id) {
-        tmpResult = LibraryApplicationUtils;
-        let result = tmpResult.shouldShareApplicationActivity(flags.application_id, LibraryApplicationStore);
+        let result = LibraryApplicationUtils.shouldShareApplicationActivity(
+          flags.application_id,
+          LibraryApplicationStore,
+        );
+        const tmpResult4 = LibraryApplicationUtils;
       } else {
         const searchGamesByNameResult = DetectableGameStore.searchGamesByName(flags.name);
         if (1 === searchGamesByNameResult.length) {
@@ -81,7 +84,7 @@ function shouldShowActivity(flags) {
             searchGamesByNameResult[0],
             LibraryApplicationStore,
           );
-          const tmpResult1 = LibraryApplicationUtils;
+          const tmpResult5 = LibraryApplicationUtils;
         } else {
           const ShowCurrentGame = UserSettings.ShowCurrentGame;
           result = ShowCurrentGame.getSetting();
@@ -95,7 +98,7 @@ function shouldShowActivity(flags) {
       let result1 = null == flags.application_id;
       if (!result1) {
         result1 = LibraryApplicationUtils.shouldShareApplicationActivity(flags.application_id, LibraryApplicationStore);
-        const tmpResult2 = LibraryApplicationUtils;
+        const tmpResult6 = LibraryApplicationUtils;
       }
       return result1;
     }
@@ -136,7 +139,7 @@ function handleUpdate() {
       found = activities.filter(shouldShowActivity);
     }
     let flag = false;
-    if (!_modDef1332(found, found)) {
+    if (!_modDef1330(found, found)) {
       closure_21 = filterPlayingActivities(found);
       flag = true;
     }
@@ -147,22 +150,22 @@ function handleUpdate() {
     hiddenActivities = SessionsStore.getHiddenActivities();
     if (flag) {
       const items = [];
-      let arraySpreadResult = HermesBuiltin.arraySpread(found, 0);
-      arraySpreadResult = HermesBuiltin.arraySpread(
-        remoteActivities.filter((type) => type.type !== constants.CUSTOM_STATUS),
-        arraySpreadResult,
-      );
       const tmp12Result = _modDef12;
-      const tmp12ResultResult = _modDef12(items.sort(sortActivity));
-      const iter = _modDef12(items.sort(sortActivity)).uniqBy(
+      HermesBuiltin.arraySpread(
+        remoteActivities.filter((type) => type.type !== constants.CUSTOM_STATUS),
+        HermesBuiltin.arraySpread(found, 0),
+      );
+      const arraySpreadResult = HermesBuiltin.arraySpread(found, 0);
+      const tmp12ResultResult = tmp12Result(items.sort(sortActivity));
+      const iter = tmp12Result(items.sort(sortActivity)).uniqBy(
         (type) => "" + type.type + ":" + type.application_id + ":" + type.name,
       );
       closure_27 = filterPlayingActivities(
-        _modDef12(items.sort(sortActivity))
+        tmp12Result(items.sort(sortActivity))
           .uniqBy((type) => "" + type.type + ":" + type.application_id + ":" + type.name)
           .value(),
       );
-      valueResult = _modDef12(items.sort(sortActivity))
+      valueResult = tmp12Result(items.sort(sortActivity))
         .uniqBy((type) => "" + type.type + ":" + type.application_id + ":" + type.name)
         .value();
     }

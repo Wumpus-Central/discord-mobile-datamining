@@ -25,17 +25,16 @@ export default function ForumPostList(arg0) {
   ({ messageContent, firstMessageLoaded, isNew, media, isEmbed, isLocalDeviceMedia, parentChannel, senderModifier } =
     arg0);
   const tmp = closure_9();
-  let obj = ForumTagHooks;
-  const tmp4 = _slicedToArray(obj.useSomeAppliedTags(thread, 2), 2);
+  const tmp4 = _slicedToArray(ForumTagHooks.useSomeAppliedTags(thread, 2), 2);
   const first = tmp4[0];
   const hasFlagResult = thread.hasFlag(ChannelFlags.PINNED);
-  obj = { style: tmp.content, children: null };
+  const obj2 = { style: tmp.content, children: null };
   let tmp6Result = hasFlagResult;
   if (!hasFlagResult) {
     tmp6Result = 0 !== first.length;
   }
   if (tmp6Result) {
-    obj = { style: tmp.header, children: null };
+    const obj3 = { style: tmp.header, children: null };
     let tmp10 = hasFlagResult;
     if (hasFlagResult) {
       tmp10 = timestampProducer(ForumPostPinIconDefault, {});
@@ -43,14 +42,14 @@ export default function ForumPostList(arg0) {
     const items = [tmp10];
     let tmp13 = 0 !== first.length;
     if (tmp13) {
-      const obj1 = { appliedTags: first, additionalTagsCount: tmp4[1], hasUnreads };
-      tmp13 = timestampProducer(ForumPostAppliedTags.ForumPostAppliedTagPills, obj1);
+      const obj4 = { appliedTags: first, additionalTagsCount: tmp4[1], hasUnreads };
+      tmp13 = timestampProducer(ForumPostAppliedTags.ForumPostAppliedTagPills, obj4);
     }
     items[1] = tmp13;
-    obj.children = items;
-    tmp6Result = React5(View, obj);
+    obj3.children = items;
+    tmp6Result = React5(View, obj3);
   }
-  const obj2 = { children: null };
+  const obj5 = { children: null };
   const items1 = [
     tmp6Result,
     timestampProducer(ForumPostListBodyDefault, {
@@ -66,11 +65,11 @@ export default function ForumPostList(arg0) {
       senderModifier,
     }),
   ];
-  obj.children = items1;
+  obj2.children = items1;
   const items2 = [
-    React5(View, obj),
+    React5(View, obj2),
     timestampProducer(ForumPostListFooterDefault, { thread, firstMessage, hasUnreads, parentChannel }),
   ];
-  obj2.children = items2;
-  return React5(React6, obj2);
+  obj5.children = items2;
+  return React5(React6, obj5);
 }

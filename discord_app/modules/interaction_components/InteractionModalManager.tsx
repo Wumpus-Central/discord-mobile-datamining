@@ -16,8 +16,8 @@ let closure_8 = async function _handleInteractionModalCreate(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -30,8 +30,8 @@ let closure_8 = async function _handleInteractionModalCreate(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c4 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           dependencyMap = tmp2;
           closure_1 = tmp3;
@@ -39,20 +39,20 @@ let closure_8 = async function _handleInteractionModalCreate(arg0) {
           closure_129_1 = undefined;
           c3 = 1;
           c4 = 1;
-          const obj1 = { value: require("asyncRequireImpl")(paths[5], paths.paths), done: false };
-          return obj1;
+          const obj4 = { value: require("asyncRequireImpl")(paths[5], paths.paths), done: false };
+          return obj4;
         }
       } else if (arg0 === 1) {
         c4 = 3;
         throw value;
       } else if (arg0 === 2) {
         c4 = 3;
-        const obj2 = { value, done: true };
-        return obj2;
+        const obj5 = { value, done: true };
+        return obj5;
       } else {
         value.openInteractionModal(closure_129_0);
-        const obj3 = { type: "interaction_modal", application_id: closure_129_0.application.id };
-        closure_130_1(closure_130_2[7]).track(closure_130_6.OPEN_MODAL, obj3);
+        const obj6 = { type: "interaction_modal", application_id: closure_129_0.application.id };
+        closure_130_1(closure_130_2[7]).track(closure_130_6.OPEN_MODAL, obj6);
         const AndroidPullModeRenderingExperiment = closure_130_0(closure_130_2[8]).AndroidPullModeRenderingExperiment;
         if (AndroidPullModeRenderingExperiment.getCurrentConfig().treatmentId >= 2) {
           closure_129_1 = (function getInteractionModalDebugData(interactionId) {
@@ -113,9 +113,9 @@ let closure_8 = async function _handleInteractionModalCreate(arg0) {
             obj.hasSourceComponentId = tmp11;
             return obj;
           })(closure_129_0);
-          obj = closure_130_1(closure_130_2[9]);
-          const obj4 = { category: "interaction_modal", message: "Interaction modal opened", data: closure_129_1 };
-          obj.addBreadcrumb(obj4);
+          const obj8 = { category: "interaction_modal", message: "Interaction modal opened", data: closure_129_1 };
+          closure_130_1(closure_130_2[9]).addBreadcrumb(obj8);
+          let obj = closure_130_1(closure_130_2[9]);
         }
         c4 = 3;
         return { value: "HermesInternal", done: null };
@@ -128,7 +128,7 @@ let closure_8 = async function _handleInteractionModalCreate(arg0) {
 };
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const interaction_iframe_modal = "interaction_iframe_modal";
-let prototype = function InteractionModalManager() {
+const prototype = function InteractionModalManager() {
   let applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
   require = applyArgumentsResult;
   applyArgumentsResult.iframeModalOpenTimeMs = undefined;
@@ -148,8 +148,10 @@ let prototype = function InteractionModalManager() {
     INTERACTION_IFRAME_MODAL_CREATE(application) {
       applyArgumentsResult.iframeModalOpenTimeMs = Date.now();
       openInteractionIframeModalDefault(application);
-      const obj = { type: interaction_iframe_modal, application_id: application.application.id };
-      obj.track(AnalyticEvents.OPEN_MODAL, obj);
+      AnalyticsUtilsDefault.track(AnalyticEvents.OPEN_MODAL, {
+        type: interaction_iframe_modal,
+        application_id: application.application.id,
+      });
     },
     INTERACTION_IFRAME_MODAL_CLOSE(applicationId) {
       const iframeModalOpenTimeMs = applyArgumentsResult.iframeModalOpenTimeMs;
@@ -158,13 +160,17 @@ let prototype = function InteractionModalManager() {
         const _Date = Date;
         diff = Date.now() - iframeModalOpenTimeMs;
       }
-      const obj = {
+      AnalyticsUtilsDefault.track(AnalyticEvents.MODAL_DISMISSED, {
+        type: interaction_iframe_modal,
+        application_id: applicationId.applicationId,
+        duration_open_ms: diff,
+      });
+      applyArgumentsResult.iframeModalOpenTimeMs = undefined;
+      const obj2 = {
         type: interaction_iframe_modal,
         application_id: applicationId.applicationId,
         duration_open_ms: diff,
       };
-      obj.track(AnalyticEvents.MODAL_DISMISSED, obj);
-      applyArgumentsResult.iframeModalOpenTimeMs = undefined;
     },
     RPC_APP_DISCONNECTED(application) {
       const iFrameModalApplicationId = uiStore.getIFrameModalApplicationId();
@@ -181,9 +187,9 @@ let prototype = function InteractionModalManager() {
   return applyArgumentsResult;
 }.prototype;
 class prototype extends tmp2 {}
-prototype = new prototype();
+const prototype1 = new prototype();
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/interaction_components/InteractionModalManager.tsx");
 
-export default prototype;
+export default prototype1;
 export const INTERACTION_IFRAME_MODAL_ANALYTICS_TYPE = "interaction_iframe_modal";

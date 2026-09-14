@@ -6,21 +6,21 @@ import noop from "../../../_runtime/metro/00019__.js";
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-fn(4636);
-let createStyles = { container: null, title: null, description: null, buttonGroup: null };
-createStyles = {
-  flex: 1,
-  padding: 20,
-  alignItems: "center",
-  justifyContent: "center",
-  backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
-  textAlign: "center",
+const createStyles = fn(4636);
+let obj2 = {
+  container: {
+    flex: 1,
+    padding: 20,
+    alignItems: "center",
+    justifyContent: "center",
+    backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
+    textAlign: "center",
+  },
+  title: { textAlign: "center" },
+  description: { textAlign: "center" },
+  buttonGroup: { width: "100%", maxWidth: 400 },
 };
-createStyles.container = createStyles;
-createStyles.title = { textAlign: "center" };
-createStyles.description = { textAlign: "center" };
-createStyles.buttonGroup = { width: "100%", maxWidth: 400 };
-let closure_5 = createStyles.createStyles(createStyles);
+let closure_5 = createStyles.createStyles(obj2);
 const size = fn(2);
 let result = size.fileFinishedImporting("components_native/warnings/GatedContent.tsx");
 
@@ -68,11 +68,15 @@ export default function GatedContent(onAgree) {
       onAgree();
     }
   }, items2);
-  let obj = { spacing: 16, style: tmp.container, children: null };
-  obj = { align: "center", children: null };
-  obj = { variant: "heading-xxl/bold", maxFontSizeMultiplier: 2, style: tmp.title, children: title };
+  const obj = { spacing: 16, style: tmp.container, children: null };
+  const obj2 = { align: "center", children: null };
   const items3 = [
-    channelId(onAgree(onDisagree[6]).Text, obj),
+    channelId(onAgree(onDisagree[6]).Text, {
+      variant: "heading-xxl/bold",
+      maxFontSizeMultiplier: 2,
+      style: tmp.title,
+      children: title,
+    }),
     subtitle,
     channelId(onAgree(onDisagree[6]).Text, {
       color: "text-muted",
@@ -82,16 +86,16 @@ export default function GatedContent(onAgree) {
       children: description,
     }),
   ];
-  obj.children = items3;
-  const items4 = [guildId(onAgree(onDisagree[5]).Stack, obj)];
-  const obj2 = { style: tmp.buttonGroup, children: null };
+  obj2.children = items3;
+  const items4 = [guildId(onAgree(onDisagree[5]).Stack, obj2)];
+  const obj5 = { style: tmp.buttonGroup, children: null };
   let tmp8Result = null != agreement;
   if (tmp8Result) {
     tmp8Result = null != onAgree;
   }
   if (tmp8Result) {
-    const obj3 = { variant: agreementButtonVariant, onPress: callback1, text: agreement };
-    tmp8Result = tmp8(tmp6(tmp7[8]).Button, obj3);
+    const obj6 = { variant: agreementButtonVariant, onPress: callback1, text: agreement };
+    tmp8Result = tmp8(tmp6(tmp7[8]).Button, obj6);
   }
   const items5 = [
     tmp8Result,
@@ -101,8 +105,8 @@ export default function GatedContent(onAgree) {
       onPress: callback,
     }),
   ];
-  obj2.children = items5;
-  items4[1] = guildId(onAgree(onDisagree[7]).ButtonGroup, obj2);
+  obj5.children = items5;
+  items4[1] = guildId(onAgree(onDisagree[7]).ButtonGroup, obj5);
   obj.children = items4;
   return guildId(onAgree(onDisagree[5]).Stack, obj);
 }

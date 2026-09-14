@@ -6,15 +6,14 @@ import UserStore from "../../../stores/UserStore.tsx";
 require = fn;
 function useEquippedCollectibleSkuIds(id, guildId) {
   _require = id;
-  let obj = require("initialize");
   let items = [skuId3];
   const items1 = [id];
-  const stateFromStores = obj.useStateFromStores(items, () => UserStore.getUser(closure_0), items1);
+  const stateFromStores = require("initialize").useStateFromStores(items, () => UserStore.getUser(closure_0), items1);
   const tmp2 = skuId(skuId1[3])(id, guildId);
+  const obj = require("initialize");
   const avatarDecoration = require("useAvatarDecoration").useAvatarDecoration(stateFromStores, guildId);
   const obj2 = require("useAvatarDecoration");
-  obj = { user: stateFromStores, guildId };
-  const nameplate = require("useNameplate").useNameplate(obj);
+  const nameplate = require("useNameplate").useNameplate({ user: stateFromStores, guildId });
   skuId = undefined;
   if (avatarDecoration != null) {
     skuId = avatarDecoration.skuId;
@@ -57,8 +56,8 @@ export default function useMaybeFetchEquippedCollectibleProducts(id, guildId, ar
       tmp = 0 !== skuIds.length;
     }
     if (tmp) {
-      const obj = { skuIds };
-      const result = obj.maybeFetchProductsBySkuIds(obj);
+      const obj2 = { skuIds };
+      const result = StorefrontProductActionCreators.maybeFetchProductsBySkuIds(obj2);
     }
   }, items);
 }

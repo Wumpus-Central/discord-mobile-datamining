@@ -13,9 +13,21 @@ get_ActivityIndicator = fn(17);
 ({ Image: c3, View: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-fn(4636);
-let createStyles = { container: null, inner: null, text: null, image: null };
-createStyles = {
+const createStyles = fn(4636);
+let obj2 = {
+  container: {
+    flex: 1,
+    backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER,
+    gap: 16,
+    paddingHorizontal: 16,
+    justifyContent: "center",
+    flexDirection: "column",
+  },
+  inner: { flex: 1, flexDirection: "column", alignItems: "center", justifyContent: "center" },
+  text: { marginTop: 24, textAlign: "center" },
+  image: null,
+};
+const obj3 = {
   flex: 1,
   backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER,
   gap: 16,
@@ -23,39 +35,35 @@ createStyles = {
   justifyContent: "center",
   flexDirection: "column",
 };
-createStyles.container = createStyles;
-createStyles.inner = { flex: 1, flexDirection: "column", alignItems: "center", justifyContent: "center" };
-createStyles.text = { marginTop: 24, textAlign: "center" };
-createStyles.image = { tintColor: nativeDefault.colors.TEXT_FEEDBACK_WARNING };
-let closure_7 = createStyles.createStyles(createStyles);
+obj2.image = { tintColor: nativeDefault.colors.TEXT_FEEDBACK_WARNING };
+let closure_7 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/oauth2/native/ErrorResult.tsx");
 
 export default function ErrorResult(error) {
   error = error.error;
   const tmp = closure_7();
-  let obj = { bottom: true, style: tmp.container, children: null };
-  obj = { style: tmp.inner, children: null };
-  obj = { source: _modDef9379, style: tmp.image };
-  const items = [hasOwnProperty(React3, obj)];
-  const obj1 = { style: tmp.text, variant: "text-md/medium", children: null };
+  const obj = { bottom: true, style: tmp.container, children: null };
+  const obj2 = { style: tmp.inner, children: null };
+  const items = [hasOwnProperty(React3, { source: _modDef9379, style: tmp.image })];
+  const obj4 = { style: tmp.text, variant: "text-md/medium", children: null };
   if (error == null) {
     const intl = util.intl;
     error = intl.string(util.t.mqn873);
   }
-  obj1.children = error;
-  items[1] = hasOwnProperty(Text_Text.Text, obj1);
-  obj.children = items;
-  const items1 = [timestampProducer(React4, obj)];
+  obj4.children = error;
+  items[1] = hasOwnProperty(Text_Text.Text, obj4);
+  obj2.children = items;
+  const items1 = [timestampProducer(React4, obj2)];
   let tmp6Result = null;
   if (!error.hideFooter) {
-    const obj2 = { size: "lg", text: null, onPress: null };
+    const obj5 = { size: "lg", text: null, onPress: null };
     const intl2 = util.intl;
-    obj2.text = intl2.string(util.t.cpT0Cq);
-    obj2.onPress = function onPress() {
+    obj5.text = intl2.string(util.t.cpT0Cq);
+    obj5.onPress = function onPress() {
       return ModalActionCreatorsDefault.pop();
     };
-    tmp6Result = hasOwnProperty(components_Button_Button.Button, obj2);
+    tmp6Result = hasOwnProperty(components_Button_Button.Button, obj5);
   }
   items1[1] = tmp6Result;
   obj.children = items1;

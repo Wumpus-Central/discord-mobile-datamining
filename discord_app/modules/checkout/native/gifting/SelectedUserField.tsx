@@ -9,15 +9,17 @@ import InputFieldContainer from "../../../../design/components/Input/native/Inpu
 import MagnifyingGlassIcon from "../../../../design/components/Icon/native/redesign/generated/MagnifyingGlassIcon.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
+const require = globalThis.__r;
+
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Pressable: c3, View: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-fn(4636);
-let createStyles = {
-  container: null,
-  content: null,
+const createStyles = fn(4636);
+let obj2 = {
+  container: { marginHorizontal: nativeDefault.space.PX_16 },
+  content: { flexDirection: "row", overflow: "hidden", alignItems: "center", display: "flex" },
   opener: null,
   openerWithClearButton: null,
   searchIcon: null,
@@ -25,27 +27,25 @@ let createStyles = {
   userPillText: null,
   clearButton: null,
 };
-createStyles = { marginHorizontal: nativeDefault.space.PX_16 };
-createStyles.container = createStyles;
-createStyles.content = { flexDirection: "row", overflow: "hidden", alignItems: "center", display: "flex" };
-createStyles.opener = {
+let obj3 = { marginHorizontal: nativeDefault.space.PX_16 };
+obj2.opener = {
   flexDirection: "row",
   alignItems: "center",
   flex: 1,
   paddingHorizontal: nativeDefault.space.PX_16,
   paddingVertical: 6,
 };
-createStyles.openerWithClearButton = { paddingRight: 0 };
-const obj1 = {
+obj2.openerWithClearButton = { paddingRight: 0 };
+let obj4 = {
   flexDirection: "row",
   alignItems: "center",
   flex: 1,
   paddingHorizontal: nativeDefault.space.PX_16,
   paddingVertical: 6,
 };
-createStyles.searchIcon = { marginRight: nativeDefault.space.PX_8 };
-let obj2 = { marginRight: nativeDefault.space.PX_8 };
-createStyles.userPill = {
+obj2.searchIcon = { marginRight: nativeDefault.space.PX_8 };
+const obj5 = { marginRight: nativeDefault.space.PX_8 };
+obj2.userPill = {
   flexDirection: "row",
   alignItems: "center",
   backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
@@ -53,8 +53,8 @@ createStyles.userPill = {
   paddingVertical: 6,
   paddingHorizontal: 6,
 };
-createStyles.userPillText = { marginLeft: 6 };
-let obj3 = {
+obj2.userPillText = { marginLeft: 6 };
+let obj6 = {
   flexDirection: "row",
   alignItems: "center",
   backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
@@ -62,7 +62,7 @@ let obj3 = {
   paddingVertical: 6,
   paddingHorizontal: 6,
 };
-createStyles.clearButton = {
+obj2.clearButton = {
   alignItems: "center",
   justifyContent: "center",
   minWidth: 44,
@@ -70,21 +70,21 @@ createStyles.clearButton = {
   paddingRight: nativeDefault.space.PX_16,
   paddingLeft: nativeDefault.space.PX_8,
 };
-let closure_7 = createStyles.createStyles(createStyles);
+let closure_7 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/checkout/native/gifting/SelectedUserField.tsx");
 
 export default function SelectedUserField(onPress) {
   ({ selectedUser, setSelectedUser: require } = onPress);
   const tmp = closure_7();
-  let obj = { style: tmp.container, children: null };
-  obj = { style: tmp.content, children: null };
+  const obj = { style: tmp.container, children: null };
+  const obj2 = { style: tmp.content, children: null };
   const items = [tmp.opener];
   let openerWithClearButton = null != selectedUser;
   if (openerWithClearButton) {
     openerWithClearButton = tmp.openerWithClearButton;
   }
-  obj = {
+  const obj3 = {
     style: items,
     onPress: onPress.onPress,
     accessibilityRole: "button",
@@ -94,10 +94,9 @@ export default function SelectedUserField(onPress) {
   items[1] = openerWithClearButton;
   if (null != selectedUser) {
     const intl3 = util.intl;
-    let obj3 = UserUtilsDefault;
-    const _HermesInternal2 = HermesInternal;
-    let combined = "" + intl3.string(util.t.xFn72s) + ", " + obj3.getName(selectedUser);
     const stringResult = intl3.string(util.t.xFn72s);
+    const _HermesInternal2 = HermesInternal;
+    let combined = "" + stringResult + ", " + UserUtilsDefault.getName(selectedUser);
   } else {
     const intl = util.intl;
     const intl2 = util.intl;
@@ -105,7 +104,7 @@ export default function SelectedUserField(onPress) {
     combined = "" + intl.string(util.t.xFn72s) + ", " + intl2.string(util.t.R0vK0N);
     const stringResult1 = intl.string(util.t.xFn72s);
   }
-  obj.accessibilityLabel = combined;
+  obj3.accessibilityLabel = combined;
   const items1 = [
     hasOwnProperty(MagnifyingGlassIcon.MagnifyingGlassIcon, {
       style: tmp.searchIcon,
@@ -114,29 +113,29 @@ export default function SelectedUserField(onPress) {
     }),
   ];
   if (null != selectedUser) {
-    const obj2 = { style: tmp.userPill, children: null };
-    obj3 = { user: selectedUser, guildId: "Array", size: native.AvatarSizes.XSMALL_20 };
-    const items2 = [hasOwnProperty(native.Avatar, obj3)];
-    const obj4 = {
+    const obj6 = { style: tmp.userPill, children: null };
+    const obj7 = { user: selectedUser, guildId: "Array", size: native.AvatarSizes.XSMALL_20 };
+    const items2 = [hasOwnProperty(native.Avatar, obj7)];
+    const obj8 = {
       variant: "text-md/medium",
       style: tmp.userPillText,
       children: UserUtilsDefault.getName(selectedUser),
     };
-    items2[1] = hasOwnProperty(Text_Text.Text, obj4);
-    obj2.children = items2;
-    let tmp2Result = timestampProducer(React4, obj2);
+    items2[1] = hasOwnProperty(Text_Text.Text, obj8);
+    obj6.children = items2;
+    let tmp2Result1 = timestampProducer(React4, obj6);
   } else {
-    const obj5 = { variant: "text-sm/semibold", color: "text-subtle", style: tmp.userPillText, children: null };
+    const obj9 = { variant: "text-sm/semibold", color: "text-subtle", style: tmp.userPillText, children: null };
     const intl4 = util.intl;
-    obj5.children = intl4.string(util.t.R0vK0N);
-    tmp2Result = hasOwnProperty(Text_Text.Text, obj5);
+    obj9.children = intl4.string(util.t.R0vK0N);
+    tmp2Result1 = hasOwnProperty(Text_Text.Text, obj9);
   }
-  items1[1] = tmp2Result;
-  obj.children = items1;
-  const items3 = [timestampProducer(React3, obj)];
-  tmp2Result = null;
+  items1[1] = tmp2Result1;
+  obj3.children = items1;
+  const items3 = [timestampProducer(React3, obj3)];
+  let tmp2Result = null;
   if (null != selectedUser) {
-    const obj6 = {
+    const obj11 = {
       style: tmp.clearButton,
       onPress() {
         return require(undefined);
@@ -146,13 +145,13 @@ export default function SelectedUserField(onPress) {
       children: null,
     };
     const intl5 = util.intl;
-    const obj7 = { text: UserUtilsDefault.getName(selectedUser) };
-    obj6.accessibilityLabel = intl5.formatToPlainString(util.t["0Vb9FQ"], obj7);
-    obj6.children = hasOwnProperty(CircleXIcon.CircleXIcon, { size: "xs" });
-    tmp2Result = hasOwnProperty(React3, obj6);
+    const obj12 = { text: UserUtilsDefault.getName(selectedUser) };
+    obj11.accessibilityLabel = intl5.formatToPlainString(util.t["0Vb9FQ"], obj12);
+    obj11.children = hasOwnProperty(CircleXIcon.CircleXIcon, { size: "xs" });
+    tmp2Result = hasOwnProperty(React3, obj11);
   }
   items3[1] = tmp2Result;
-  obj.children = items3;
-  obj.children = hasOwnProperty(InputFieldContainer.InputFieldContainer, { children: timestampProducer(React4, obj) });
+  obj2.children = items3;
+  obj.children = hasOwnProperty(InputFieldContainer.InputFieldContainer, { children: timestampProducer(React4, obj2) });
   return hasOwnProperty(React4, obj);
 }

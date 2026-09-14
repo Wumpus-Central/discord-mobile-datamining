@@ -22,15 +22,15 @@ function handleThreadCreateOrUpdate(channel) {
       if (obj == null) {
         obj = {};
       }
-      obj = {};
+      const obj2 = {};
       const merged = Object.assign(obj);
-      obj = {};
+      const obj3 = {};
       const merged1 = Object.assign(obj[channel.parent_id]);
       ({ id: obj4.id, parent_id: obj4.parentId } = channel);
-      obj[channel.id] = { id: null, parentId: null };
-      obj[channel.parent_id] = obj;
-      dependencyMap[channel.guild_id] = obj;
-      const obj1 = { id: null, parentId: null };
+      obj3[channel.id] = { id: null, parentId: null };
+      obj2[channel.parent_id] = obj3;
+      dependencyMap[channel.guild_id] = obj2;
+      const obj7 = { id: null, parentId: null };
     }
   } else {
     return false;
@@ -48,11 +48,11 @@ function deleteThread(channel) {
       let tmp9 = parent_id in dependencyMap[guild_id];
       if (tmp9) {
         if (channel.id in dependencyMap[guild_id][parent_id]) {
-          let obj = {};
+          const obj = {};
           const merged = Object.assign(dependencyMap[guild_id]);
-          obj = {};
+          const obj2 = {};
           const merged1 = Object.assign(dependencyMap[guild_id][parent_id]);
-          obj[parent_id] = obj;
+          obj[parent_id] = obj2;
           dependencyMap[guild_id] = obj;
           delete tmp[tmp4];
           if (obj3.isEmpty(dependencyMap[guild_id][parent_id])) {
@@ -197,13 +197,12 @@ const activeThreadsStore = new ActiveThreadsStore(DispatcherDefault, {
     if (null == guildId.channelIds) {
       set.add(guildId);
     }
-    let obj = {};
     const merged = Object.assign(dependencyMap[guildId]);
-    dependencyMap[guildId] = obj;
+    dependencyMap[guildId] = {};
     for (const key10016 in closure_5[guildId]) {
-      obj = {};
+      let obj2 = {};
       let merged1 = Object.assign(dependencyMap[guildId][key10016]);
-      dependencyMap[guildId][key10016] = obj;
+      dependencyMap[guildId][key10016] = obj2;
       continue;
     }
     const item = threads.forEach((id) => {
@@ -213,6 +212,7 @@ const activeThreadsStore = new ActiveThreadsStore(DispatcherDefault, {
       }
       dependencyMap[guildId][parent_id][id.id] = { id: id.id, parentId: id.parent_id };
     });
+    const obj = {};
   },
   THREAD_DELETE: function handleThreadDelete(channel) {
     return deleteThread(channel.channel);

@@ -60,7 +60,7 @@ let closure_9 = async function _getSubscriptionSkusViaListings() {
             }
             const found = closure_3_1.find((id) => id.id === price.sku_id);
             if (null != found) {
-              let obj = {
+              const obj = {
                 id: price.sku_id,
                 name: null,
                 type: null,
@@ -70,8 +70,8 @@ let closure_9 = async function _getSubscriptionSkusViaListings() {
                 release_date: null,
               };
               ({ name: obj.name, type: obj.type } = found);
-              obj = { amount: price, currency: constants.USD };
-              obj.price = obj;
+              const obj2 = { amount: price, currency: constants.USD };
+              obj.price = obj2;
               ({ application_id: obj.application_id, sku_flags: obj.flags } = price);
               let release_date = found.release_date;
               if (release_date == null) {
@@ -117,8 +117,8 @@ let closure_11 = async function _getSkusHandler(arg0) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -131,8 +131,8 @@ let closure_11 = async function _getSkusHandler(arg0) {
             throw value;
           } else if (arg0 === 2) {
             c7 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
             closure_5 = tmp2;
             closure_4 = tmp5;
@@ -152,28 +152,32 @@ let closure_11 = async function _getSkusHandler(arg0) {
             throw value;
           } else if (arg0 === 2) {
             c7 = 3;
-            const obj1 = { value, done: true };
-            return obj1;
+            const obj4 = { value, done: true };
+            return obj4;
           } else {
             const result = closure_133_0(closure_133_3[4]).validateTransportType(socket2.transport);
             id = socket2.application.id;
             if (null == id) {
-              const obj2 = { errorCode: closure_133_6.INVALID_COMMAND };
-              const tmp32 = new closure_133_1(closure_133_3[5])(obj2, "No application.");
+              const obj5 = { errorCode: closure_133_6.INVALID_COMMAND };
+              const tmp32 = new closure_133_1(closure_133_3[5])(obj5, "No application.");
               throw tmp32;
             } else {
               if (obj18.isTestModeForApplication(id)) {
-                let tmp64Result = closure_133_2(closure_133_3[7]);
                 c6 = 2;
                 c7 = 1;
-                const obj3 = { value: tmp64Result.fetchTestSKUsForApplication(id, false), done: false };
-                return obj3;
+                const obj6 = {
+                  value: closure_133_2(closure_133_3[7]).fetchTestSKUsForApplication(id, false),
+                  done: false,
+                };
+                return obj6;
               } else {
-                tmp64Result = closure_133_2(closure_133_3[8]);
                 c6 = 3;
                 c7 = 1;
-                const obj4 = { value: tmp64Result.fetchAllStoreListingsForApplication(id), done: false };
-                return obj4;
+                const obj7 = {
+                  value: closure_133_2(closure_133_3[8]).fetchAllStoreListingsForApplication(id),
+                  done: false,
+                };
+                return obj7;
               }
               obj18 = closure_133_0(closure_133_3[6]);
             }
@@ -185,14 +189,14 @@ let closure_11 = async function _getSkusHandler(arg0) {
             throw value;
           } else if (arg0 === 2) {
             c7 = 3;
-            const obj5 = { value, done: true };
-            return obj5;
+            const obj8 = { value, done: true };
+            return obj8;
           } else {
             closure_132_2 = value;
             c6 = 4;
             c7 = 1;
-            const obj6 = { value: closure_133_8(id, closure_132_2), done: false };
-            return obj6;
+            const obj9 = { value: closure_133_8(id, closure_132_2), done: false };
+            return obj9;
           }
         } else if (3 === tmp5) {
           if (arg0 === 1) {
@@ -200,8 +204,8 @@ let closure_11 = async function _getSkusHandler(arg0) {
             throw value;
           } else if (arg0 === 2) {
             c7 = 3;
-            const obj7 = { value, done: true };
-            return obj7;
+            const obj10 = { value, done: true };
+            return obj10;
           } else {
             closure_132_4 = value;
             closure_2 = 0;
@@ -214,14 +218,14 @@ let closure_11 = async function _getSkusHandler(arg0) {
             );
             c6 = 5;
             c7 = 1;
-            const obj8 = {
+            const obj11 = {
               value: closure_133_8(
                 id,
                 closure_132_4.map((sku) => sku.sku),
               ),
               done: false,
             };
-            return obj8;
+            return obj11;
           }
         } else if (4 === tmp5) {
           if (arg0 === 1) {
@@ -229,8 +233,8 @@ let closure_11 = async function _getSkusHandler(arg0) {
             throw value;
           } else if (arg0 === 2) {
             c7 = 3;
-            const obj9 = { value, done: true };
-            return obj9;
+            const obj12 = { value, done: true };
+            return obj12;
           } else {
             closure_132_3 = value;
             closure_1 = 0;
@@ -242,20 +246,20 @@ let closure_11 = async function _getSkusHandler(arg0) {
             closure_1 = arraySpreadResult;
             closure_1 = HermesBuiltin.arraySpread(closure_132_3, arraySpreadResult);
             c7 = 3;
-            const obj10 = { value: items1, done: true };
-            return obj10;
+            const obj13 = { value: items1, done: true };
+            return obj13;
           }
         } else if (arg0 === 1) {
           c7 = 3;
           throw value;
         } else if (arg0 === 2) {
           c7 = 3;
-          const obj11 = { value, done: true };
-          return obj11;
+          const obj14 = { value, done: true };
+          return obj14;
         } else {
           closure_2 = HermesBuiltin.arraySpread(value, closure_2);
           c7 = 3;
-          obj = { value: items, done: true };
+          const obj = { value: items, done: true };
           return obj;
         }
       } catch (tmp35) {
@@ -269,12 +273,11 @@ let closure_11 = async function _getSkusHandler(arg0) {
 };
 function getEntitlementsHandler(socket) {
   socket = socket.socket;
-  let obj = validateTransportType;
-  const result = obj.validateTransportType(socket.transport);
+  const result = validateTransportType.validateTransportType(socket.transport);
   const id = socket.application.id;
   if (null == id) {
-    obj = { errorCode: constants.INVALID_COMMAND };
-    const tmp9 = new RPCErrorDefault(obj, "No application.");
+    const obj3 = { errorCode: constants.INVALID_COMMAND };
+    const tmp9 = new RPCErrorDefault(obj3, "No application.");
     throw tmp9;
   } else {
     return EntitlementActionCreatorsAll.fetchUserEntitlementsForApplication(id);
@@ -286,38 +289,36 @@ Constants = fn(1074);
 ({ CurrencyCodes: hasOwnProperty, RPCCommands, RPCErrors: metroRequire, SKUTypes: closure_7 } = Constants);
 let items = [RPC_AUTHENTICATED_SCOPE, RPC_LOCAL_SCOPE];
 let items1 = [RPC_AUTHENTICATED_SCOPE, RPC_LOCAL_SCOPE];
-let obj = {
-  [RPC_SCOPE_CONFIG.ANY]: items2,
-  handler(arg0) {
-    closure_0 = arg0;
-    return (async () => {
-      value = {};
-      await closure_1_10(value);
-      value.skus = value;
-      return value;
-    })();
-  },
-};
-items2 = [RPC_AUTHENTICATED_SCOPE, RPC_LOCAL_SCOPE];
-obj = {
-  [RPC_SCOPE_CONFIG.ANY]: items3,
-  handler(arg0) {
-    closure_0 = arg0;
-    return (async () => {
-      value = {};
-      await closure_1_12(value);
-      value.entitlements = value;
-      return value;
-    })();
-  },
-};
-items3 = [RPC_AUTHENTICATED_SCOPE, RPC_LOCAL_SCOPE];
+const items2 = [RPC_AUTHENTICATED_SCOPE, RPC_LOCAL_SCOPE];
+const items3 = [RPC_AUTHENTICATED_SCOPE, RPC_LOCAL_SCOPE];
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/rpc/server/commands/store.tsx");
 
 export default {
   [RPCCommands.GET_SKUS]: { [RPC_SCOPE_CONFIG.ANY]: items, handler: getSkusHandler },
   [RPCCommands.GET_ENTITLEMENTS]: { [RPC_SCOPE_CONFIG.ANY]: items1, handler: getEntitlementsHandler },
-  [RPCCommands.GET_SKUS_EMBEDDED]: obj,
-  [RPCCommands.GET_ENTITLEMENTS_EMBEDDED]: obj,
+  [RPCCommands.GET_SKUS_EMBEDDED]: {
+    [RPC_SCOPE_CONFIG.ANY]: items2,
+    handler(arg0) {
+      closure_0 = arg0;
+      return (async () => {
+        value = {};
+        await closure_1_10(value);
+        value.skus = value;
+        return value;
+      })();
+    },
+  },
+  [RPCCommands.GET_ENTITLEMENTS_EMBEDDED]: {
+    [RPC_SCOPE_CONFIG.ANY]: items3,
+    handler(arg0) {
+      closure_0 = arg0;
+      return (async () => {
+        value = {};
+        await closure_1_12(value);
+        value.entitlements = value;
+        return value;
+      })();
+    },
+  },
 };

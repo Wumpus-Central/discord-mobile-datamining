@@ -4,13 +4,15 @@ import AuthenticationStore from "../../../stores/AuthenticationStore.tsx";
 import CallStore from "../../../stores/CallStore.tsx";
 import RTCConnectionStore from "../../../stores/RTCConnectionStore.tsx";
 
+const require = globalThis.__r;
+
 const require = fn;
 const Constants = fn(1074);
 ({ EMPTY_STRING_SNOWFLAKE_ID: closure_7, RTCConnectionStates: closure_8 } = Constants);
 const ParticipantTypes = fn(4657).ParticipantTypes;
 let obj = {};
 const merged = Object.assign({ initialized: false, callId: "PX_16" });
-obj = {
+let obj2 = {
   DISCONNECTED: "disconneted",
   DISCONNECTING: "disconnecting",
   CONNECTING: "connecting",
@@ -68,9 +70,9 @@ export default function _default() {
   });
   const tmp3 = id(9344)();
   dependencyMap = tmp3;
+  obj2 = require("initialize");
   const items2 = [RTCConnectionStore];
-  stateFromStores = require("initialize").useStateFromStores(items2, RTCConnectionStore.getRTCConnectionId, []);
-  const obj2 = require("initialize");
+  stateFromStores = obj2.useStateFromStores(items2, RTCConnectionStore.getRTCConnectionId, []);
   const items3 = [RTCConnectionStore];
   const items4 = [stateFromStores, tmp3, tmp];
   const stateFromStores1 = require("initialize").useStateFromStores(
@@ -104,7 +106,7 @@ export default function _default() {
     items4,
   );
   obj.initialized = obj.initialized || flag2;
-  let state = obj.CONNECTING;
+  let state = obj2.CONNECTING;
   let initialized = tmp6.initialized;
   if (flag) {
     state = tmp7.DISCONNECTING;
@@ -125,4 +127,4 @@ export default function _default() {
   }
   return { state, initialized };
 }
-export const CallStates = obj;
+export const CallStates = obj2;

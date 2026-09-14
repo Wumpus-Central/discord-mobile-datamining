@@ -7,10 +7,8 @@ import _slicedToArray from "../../_runtime/metro/00032__.js";
 
 require = fn;
 function hexToRgba(PRIMARY_760) {
-  let obj = _modDef672(PRIMARY_760);
-  const tmp = _slicedToArray(obj.rgba(), 4);
-  obj = { r: tmp[0], g: tmp[1], b: tmp[2], a: tmp[3] };
-  return obj;
+  const tmp = _slicedToArray(_modDef672(PRIMARY_760).rgba(), 4);
+  return { r: tmp[0], g: tmp[1], b: tmp[2], a: tmp[3] };
 }
 function rgbToHslObject(items, items2, items3) {
   const result = items / 255;
@@ -27,7 +25,7 @@ function rgbToHslObject(items, items2, items3) {
       sum = rounded + 360;
     }
     const result2 = (bound1 + bound) / 2;
-    const obj = { h: sum, s: null, l: null };
+    obj = { h: sum, s: null, l: null };
     let num7 = 0;
     if (!tmp6) {
       const _Math2 = Math;
@@ -52,20 +50,19 @@ function hslToHex(sum2, sum, sum1) {
   const result = sum1 / 100;
   const result1 = sum * Math.min(result, 1 - result) / 100;
   const result2 = sum2 / 30 % 12;
-  let str = Math.round(255 * (result - result1 * Math.max(Math.min(result2 - 3, 9 - result2, 1), -1)));
-  str = str.toString(16);
+  const str = Math.round(255 * (result - result1 * Math.max(Math.min(result2 - 3, 9 - result2, 1), -1)));
   const result3 = (8 + sum2 / 30) % 12;
-  let str2 = Math.round(255 * (result - result1 * Math.max(Math.min(result3 - 3, 9 - result3, 1), -1)));
-  const padStartResult = str.padStart(2, "0");
+  const str1 = Math.round(255 * (result - result1 * Math.max(Math.min(result2 - 3, 9 - result2, 1), -1))).toString(16);
+  const padStartResult = Math.round(255 * (result - result1 * Math.max(Math.min(result2 - 3, 9 - result2, 1), -1))).toString(16).padStart(2, "0");
+  const str2 = Math.round(255 * (result - result1 * Math.max(Math.min(result3 - 3, 9 - result3, 1), -1)));
   const result4 = (4 + sum2 / 30) % 12;
-  const str1 = str2.toString(16);
-  const padStartResult1 = str2.toString(16).padStart(2, "0");
-  str2 = Math.round(255 * (result - result1 * Math.max(Math.min(result4 - 3, 9 - result4, 1), -1))).toString(16);
-  return "#" + padStartResult + padStartResult1 + str2.padStart(2, "0");
+  const str4 = Math.round(255 * (result - result1 * Math.max(Math.min(result3 - 3, 9 - result3, 1), -1))).toString(16);
+  const padStartResult1 = Math.round(255 * (result - result1 * Math.max(Math.min(result3 - 3, 9 - result3, 1), -1))).toString(16).padStart(2, "0");
+  const str3 = Math.round(255 * (result - result1 * Math.max(Math.min(result4 - 3, 9 - result4, 1), -1)));
+  return "#" + padStartResult + padStartResult1 + Math.round(255 * (result - result1 * Math.max(Math.min(result4 - 3, 9 - result4, 1), -1))).toString(16).padStart(2, "0");
 }
 function hex2rgb2hsv(first4) {
-  let obj = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i;
-  const match = obj.exec(first4);
+  const match = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(first4);
   if (null == match) {
     return null;
   } else {
@@ -110,15 +107,16 @@ function hex2rgb2hsv(first4) {
         }
       }
     }
-    obj = { h: null, s: null, v: null };
+    const obj2 = { h: null, s: null, v: null };
     const _Math = Math;
-    obj.h = Math.round(360 * num6);
+    obj2.h = Math.round(360 * num6);
     const _Math2 = Math;
-    obj.s = Math.round(100 * (100 * num5)) / 100;
+    obj2.s = Math.round(100 * (100 * num5)) / 100;
     const _Math3 = Math;
-    obj.v = Math.round(100 * (100 * bound)) / 100;
-    return obj;
+    obj2.v = Math.round(100 * (100 * bound)) / 100;
+    return obj2;
   }
+  obj = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i;
 }
 function rawRgbToHsl(red, blue, blue2) {
   const result = red / 255;
@@ -161,13 +159,12 @@ function rawHslToRgb(hue, saturation, lightness) {
   const result = hue / 360;
   if (0 === saturation) {
     const _Math = Math;
-    let tmp23 = utils_ColorDefault;
     const rounded = Math.round(255 * lightness);
     const _Math2 = Math;
     const _Math3 = Math;
     const rounded1 = Math.round(255 * lightness);
-    tmp23 = new tmp23(rounded, rounded1, Math.round(255 * lightness), 1);
-    return tmp23;
+    const tmp232 = new utils_ColorDefault(rounded, rounded1, Math.round(255 * lightness), 1);
+    return tmp232;
   } else {
     if (lightness < 0.5) {
       let result1 = lightness * (1 + saturation);
@@ -246,8 +243,9 @@ function sortColors(hsv, hsv2) {
 }
 function hexWithOpacity(BLACK, c3) {
   if (7 === BLACK.length) {
-    let str = 255 * c3 | 0.toString(16);
-    return BLACK + str.padStart(2, "0").toUpperCase();
+    const str1 = 255 * c3 | 0.toString(16);
+    const str14 = 255 * c3 | 0;
+    return BLACK + 255 * c3 | 0.toString(16).padStart(2, "0").toUpperCase();
   } else {
     let substr = BLACK;
     if ("#" === BLACK.charAt(0)) {
@@ -260,8 +258,8 @@ function hexWithOpacity(BLACK, c3) {
       const sum = charAtResult + charAtResult;
       const sum1 = charAtResult1 + charAtResult1;
       const sum2 = charAtResult2 + charAtResult2;
-      const str1 = 255 * c3 | 0.toString(16);
       const str11 = 255 * c3 | 0;
+      const str18 = 255 * c3 | 0.toString(16);
       return "#" + sum + sum1 + sum2 + 255 * c3 | 0.toString(16).padStart(2, "0").toUpperCase();
     } else if (4 === length) {
       const charAtResult3 = substr.charAt(0);
@@ -272,24 +270,22 @@ function hexWithOpacity(BLACK, c3) {
       const sum3 = charAtResult3 + charAtResult3;
       const sum4 = charAtResult4 + charAtResult4;
       const sum5 = charAtResult5 + charAtResult5;
-      let str2 = 255 * (parseInt(charAtResult6 + charAtResult6, 16) / 255 * c3) | 0.toString(16);
       const str8 = 255 * (parseInt(charAtResult6 + charAtResult6, 16) / 255 * c3) | 0;
-      return "#" + sum3 + sum4 + sum5 + str2.padStart(2, "0").toUpperCase();
+      const str19 = 255 * (parseInt(charAtResult6 + charAtResult6, 16) / 255 * c3) | 0.toString(16);
+      return "#" + sum3 + sum4 + sum5 + 255 * (parseInt(charAtResult6 + charAtResult6, 16) / 255 * c3) | 0.toString(16).padStart(2, "0").toUpperCase();
     } else if (6 === length) {
       const text = `#${arr}`;
-      let str3 = 255 * c3 | 0.toString(16);
-      return `#${arr}` + str3.padStart(2, "0").toUpperCase();
+      const str20 = 255 * c3 | 0.toString(16);
+      const str5 = 255 * c3 | 0;
+      return `#${arr}` + 255 * c3 | 0.toString(16).padStart(2, "0").toUpperCase();
     } else if (8 === length) {
       const _parseInt = parseInt;
       const text1 = `#${arr.slice(0, 6)}`;
-      str2 = parseInt(substr.slice(6), 16) / 255 * c3 * 255 | 0;
-      let str4 = str2.toString(16);
-      str3 = "0";
-      str4 = str4.padStart(2, "0");
-      return `#${arr.slice(0, 6)}` + str4.toUpperCase();
+      const str2 = parseInt(substr.slice(6), 16) / 255 * c3 * 255 | 0;
+      const str21 = parseInt(substr.slice(6), 16) / 255 * c3 * 255 | 0.toString(16);
+      return `#${arr.slice(0, 6)}` + parseInt(substr.slice(6), 16) / 255 * c3 * 255 | 0.toString(16).padStart(2, "0").toUpperCase();
     } else {
       const _Error = Error;
-      str = "Invalid hex color format";
       const error = new Error("Invalid hex color format");
       throw error;
     }
@@ -310,8 +306,8 @@ function hexToRgbaString(colorHex, opacity) {
 hexToRgbaString.__closure = { hexToRgba };
 hexToRgbaString.__workletHash = 8956046161224;
 hexToRgbaString.__initData = { code: "function hexToRgbaString_ColorUtilsTsx2(hex,opacity){const{hexToRgba}=this.__closure;const{r:r,g:g,b:b,a:a}=hexToRgba(hex);return\"rgba(\"+r+\", \"+g+\", \"+b+\", \"+(opacity!==null&&opacity!==void 0?opacity:a)+\")\";}" };
-let hsv = {};
-hsv = {
+let obj = {};
+const merged = Object.assign({
   () => {
     const intl = util.intl;
     return intl.string(util.t.fBawRj);
@@ -396,9 +392,8 @@ hsv = {
     const intl = util.intl;
     return intl.string(util.t["/po5rJ"]);
   }
-};
-const merged = Object.assign(hsv);
-hsv["#5865f2"] = () => {
+});
+obj["#5865f2"] = () => {
   const intl = util.intl;
   return intl.string(util.t["Cn/LJ4"]);
 };
@@ -407,15 +402,13 @@ let result = size.fileFinishedImporting("utils/ColorUtils.tsx");
 
 export { hexWithOpacity };
 export const hexToRgb = function hexToRgb(PRIMARY_800) {
-  let obj = _modDef672(PRIMARY_800);
-  const tmp = _slicedToArray(obj.rgb(), 3);
-  obj = { r: tmp[0], g: tmp[1], b: tmp[2] };
-  return obj;
+  const tmp = _slicedToArray(_modDef672(PRIMARY_800).rgb(), 3);
+  return { r: tmp[0], g: tmp[1], b: tmp[2] };
 };
 export const hexToRgbArray = function hexToRgbArray(arg0) {
-  const obj = _modDef672(arg0);
+  obj = _modDef672(arg0);
   const items = [, , ];
-  [arr[0], arr[1], arr[2]] = _slicedToArray(_modDef672(arg0).rgb(), 3);
+  [arr[0], arr[1], arr[2]] = _modDef672(arg0).rgb();
   return items;
 };
 export { hexToRgba };
@@ -433,34 +426,28 @@ export const rgbToHsl = function rgbToHsl(items, items2, items3) {
   return "hsl(" + tmp.h + ", " + tmp.s + "%, " + tmp.l + "%)";
 };
 export const rgbToHex = function rgbToHex(hsvToRgbWorkletResult, hsvToRgbWorkletResult2, hsvToRgbWorkletResult3) {
-  let str = 16777216 + (hsvToRgbWorkletResult << 16) + (hsvToRgbWorkletResult2 << 8) + hsvToRgbWorkletResult3;
-  str = str.toString(16);
-  return "#" + str.slice(1);
+  return "#" + 16777216 + (hsvToRgbWorkletResult << 16) + (hsvToRgbWorkletResult2 << 8) + hsvToRgbWorkletResult3.toString(16).slice(1);
 };
 export const rgbaToHex = function rgbaToHex(arg0, arg1, arg2, arg3) {
-  let str = 256 + arg0;
-  str = str.toString(16);
-  let str2 = 256 + arg1;
+  256 + arg0.toString(16);
   const text = `#${arr.slice(1)}`;
-  str2.toString(16);
-  let str3 = 256 + arg2;
+  256 + arg1.toString(16);
   const text1 = `#${arr.slice(1)}${arr2.slice(1)}`;
-  str2 = str3.toString(16);
+  256 + arg2.toString(16);
   const text2 = `#${arr.slice(1)}${arr2.slice(1)}${arr3.slice(1)}`;
-  str3 = 256 + arg3.toString(16);
-  return `#${arr.slice(1)}${arr2.slice(1)}${arr3.slice(1)}` + str3.slice(1);
+  return `#${arr.slice(1)}${arr2.slice(1)}${arr3.slice(1)}` + 256 + arg3.toString(16).slice(1);
 };
 export { hslToHex };
-export const hexToColorName = function hexToColorName(tmp2Result, arg1) {
-  if (null == obj[tmp2Result]) {
+export const hexToColorName = function hexToColorName(tmp2Result4, arg1) {
+  if (null == obj[tmp2Result4]) {
     if (arg1) {
       const intl = util.intl;
-      obj = { color: tmp2Result };
-      let str4 = intl.formatToPlainString(util.t["7BFCRR"], obj);
+      const obj2 = { color: tmp2Result4 };
+      let str4 = intl.formatToPlainString(util.t["7BFCRR"], obj2);
     } else {
       obj = new LoggerDefault("ColorUtils");
       const _HermesInternal = HermesInternal;
-      obj.warn("Role color " + tmp2Result + " has not been localized!");
+      obj.warn("Role color " + tmp2Result4 + " has not been localized!");
       str4 = "undefined";
     }
   } else {
@@ -503,7 +490,7 @@ export const getComplimentaryPaletteForColor = function getComplimentaryPaletteF
         sum2 = diff1 + 360;
       }
       let tmp8 = hslToHex(sum2, sum, sum1);
-      let obj = _modDef672(tmp8);
+      obj = _modDef672(tmp8);
       let tmp12 = _slicedToArray(obj.rgb(), 3);
       let items1 = [, , ];
       [arr2[0], arr2[1], arr2[2]] = tmp12;
@@ -593,13 +580,13 @@ export const getAccessibleForegroundColor = function getAccessibleForegroundColo
 export const findColorByHsv = function findColorByHsv(colors) {
   const substr = colors.slice(0, 3);
   const mapped = substr.map((hex) => {
-    hsv = { hex, hsv: null };
-    hsv = hex2rgb2hsv(hex);
-    if (hsv == null) {
-      hsv = { h: 0, s: 0, v: 0 };
+    obj = { hex, hsv: null };
+    let obj2 = hex2rgb2hsv(hex);
+    if (obj2 == null) {
+      obj2 = { h: 0, s: 0, v: 0 };
     }
-    hsv.hsv = hsv;
-    return hsv;
+    obj.hsv = obj2;
+    return obj;
   });
   return mapped.sort(sortColors)[0].hex;
 };
@@ -611,9 +598,9 @@ export const getSaturatedColorHex = function getSaturatedColorHex(arg0) {
   if (null == colorRGB) {
     return colorRGB;
   } else {
-    colorRGB.get("rgb.r");
-    value = colorRGB.get("rgb.g");
-    const tmp4 = rawRgbToHsl(value, value, colorRGB.get("rgb.b"));
+    value = colorRGB.get("rgb.r");
+    value2 = colorRGB.get("rgb.g");
+    const tmp4 = rawRgbToHsl(value, value2, colorRGB.get("rgb.b"));
     return rawHslToRgb(tmp4.hue, tmp4.saturation * saturationFactor, tmp4.lightness).toHexString();
   }
 };
@@ -625,11 +612,11 @@ export const interpolateColor = function interpolateColor(str, str2, arg2) {
   const parsed4 = parseInt(str2.substring(3, 5), 16);
   const parsed5 = parseInt(str2.substring(5, 7), 16);
   str = Math.round(parsed + (parsed3 - parsed) * arg2);
-  str = str.toString(16);
+  const str1 = str.toString(16);
   str2 = Math.round(parsed1 + (parsed4 - parsed1) * arg2);
-  const padStartResult = str.padStart(2, "0");
-  const str1 = str2.toString(16);
+  const padStartResult = str.toString(16).padStart(2, "0");
+  const str4 = str2.toString(16);
   const padStartResult1 = str2.toString(16).padStart(2, "0");
-  str2 = Math.round(parsed2 + (parsed5 - parsed2) * arg2).toString(16);
-  return "#" + padStartResult + padStartResult1 + str2.padStart(2, "0");
+  const str3 = Math.round(parsed2 + (parsed5 - parsed2) * arg2);
+  return "#" + padStartResult + padStartResult1 + Math.round(parsed2 + (parsed5 - parsed2) * arg2).toString(16).padStart(2, "0");
 };

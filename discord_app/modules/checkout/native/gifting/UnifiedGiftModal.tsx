@@ -19,13 +19,11 @@ export default function UnifiedGiftModal(analyticsLocations) {
   closure_7 = tmp[1];
   const items = [onGiftModalDismiss];
   const callback = renderProductDetails.useCallback(() => {
-    let arr = ModalActionCreatorsDefault;
-    arr = arr.pop();
+    ModalActionCreatorsDefault.pop();
     if (onGiftModalDismiss != null) {
       onGiftModalDismiss();
     }
   }, items);
-  let obj = skuId(onGiftModalDismiss[4]);
   const items1 = [
     lockedRecipientUser,
     first,
@@ -35,13 +33,13 @@ export default function UnifiedGiftModal(analyticsLocations) {
     renderProductDetails,
     renderPurchaseSection,
   ];
-  const navigatorScreens = obj.useNavigatorScreens(() => {
-    let obj = {};
-    obj = { title: null, headerLeft: null, render: null };
+  const navigatorScreens = skuId(onGiftModalDismiss[4]).useNavigatorScreens(() => {
+    const obj = {};
+    const obj2 = { title: null, headerLeft: null, render: null };
     const intl = util.intl;
-    obj.title = intl.string(util.t["JCFN/y"]);
-    obj.headerLeft = NavigatorHeader.getHeaderCloseButton(callback);
-    obj.render = function render() {
+    obj2.title = intl.string(util.t["JCFN/y"]);
+    obj2.headerLeft = NavigatorHeader.getHeaderCloseButton(callback);
+    obj2.render = function render() {
       return renderPurchaseSection(lockedRecipientUser(onGiftModalDismiss[8]), {
         skuId,
         recipientUser,
@@ -52,22 +50,22 @@ export default function UnifiedGiftModal(analyticsLocations) {
         renderPurchaseSection,
       });
     };
-    obj[UnifiedGiftModalTypes.UnifiedGiftModalScreens.GIFT_DETAIL] = obj;
-    obj = { title: null, headerLeft: null, render: null };
+    obj[UnifiedGiftModalTypes.UnifiedGiftModalScreens.GIFT_DETAIL] = obj2;
+    const obj4 = { title: null, headerLeft: null, render: null };
     const intl2 = util.intl;
-    obj.title = intl2.string(util.t.R0vK0N);
-    obj.headerLeft = NavigatorHeader.getHeaderBackButton();
-    obj.render = function render() {
+    obj4.title = intl2.string(util.t.R0vK0N);
+    obj4.headerLeft = NavigatorHeader.getHeaderBackButton();
+    obj4.render = function render() {
       return renderPurchaseSection(lockedRecipientUser(onGiftModalDismiss[9]), { setRecipientUser });
     };
-    obj[UnifiedGiftModalTypes.UnifiedGiftModalScreens.RECIPENT_SELECT] = obj;
+    obj[UnifiedGiftModalTypes.UnifiedGiftModalScreens.RECIPENT_SELECT] = obj4;
     return obj;
   }, items1);
-  obj = { value: analyticsLocations.analyticsLocations, children: null };
-  obj = {
+  let obj2 = { value: analyticsLocations.analyticsLocations, children: null };
+  let obj = skuId(onGiftModalDismiss[4]);
+  obj2.children = renderPurchaseSection(skuId(onGiftModalDismiss[4]).Navigator, {
     initialRouteName: skuId(onGiftModalDismiss[5]).UnifiedGiftModalScreens.GIFT_DETAIL,
     screens: navigatorScreens,
-  };
-  obj.children = renderPurchaseSection(skuId(onGiftModalDismiss[4]).Navigator, obj);
-  return renderPurchaseSection(skuId(onGiftModalDismiss[10]).AnalyticsLocationProvider, obj);
+  });
+  return renderPurchaseSection(skuId(onGiftModalDismiss[10]).AnalyticsLocationProvider, obj2);
 }

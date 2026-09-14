@@ -184,37 +184,39 @@ function parseUserSearchResults(affinitySuggestionsLimit) {
   if (withFriends) {
     const mapped = _modDef12(tmp).map((items, title) => ({ title, items }));
     const arr12 = _modDef12(tmp);
-    items = mapped.sortBy((title) => title.title).value();
+    let items11 = mapped.sortBy((title) => title.title).value();
     const iter = mapped.sortBy((title) => title.title);
   } else {
-    items = [];
+    items11 = [];
   }
-  let obj = { title: null, items: items.flatMap((items) => items.items) };
-  let items9 = [obj];
-  obj = { title: null, items: null };
+  tmp = _objectWithoutProperties(data, items8.map(_toPropertyKey));
+  let items9 = [{ title: null, items: items11.flatMap((items) => items.items) }];
+  const obj2 = { title: null, items: null };
   const intl = util.intl;
-  obj.title = intl.string(util.t.HbJ7eD);
+  obj2.title = intl.string(util.t.HbJ7eD);
   if (withAffinitySuggestions) {
-    let obj3 = _modDef12(items);
-    const sortByResult = obj3.sortBy((affinity) => -affinity.affinity);
-    let valueResult = obj3
+    const obj4 = _modDef12(items);
+    const sortByResult = _modDef12(items).sortBy((affinity) => -affinity.affinity);
+    let valueResult2 = _modDef12(items)
       .sortBy((affinity) => -affinity.affinity)
       .slice(0, num)
       .value();
-    const iter2 = obj3.sortBy((affinity) => -affinity.affinity).slice(0, num);
+    const iter2 = _modDef12(items)
+      .sortBy((affinity) => -affinity.affinity)
+      .slice(0, num);
   } else {
-    valueResult = [];
+    valueResult2 = [];
   }
-  obj.items = valueResult;
-  const items10 = [obj, , , , , , ,];
-  const obj1 = { title: null, items: null };
+  obj2.items = valueResult2;
+  const items10 = [obj2, , , , , , ,];
+  const obj3 = { title: null, items: null };
   const intl2 = util.intl;
-  obj1.title = intl2.formatToPlainString(util.t.zsVtft, { pendingRequestNumber: items1.length });
+  obj3.title = intl2.formatToPlainString(util.t.zsVtft, { pendingRequestNumber: items1.length });
   if (!withFriendRequests) {
     items1 = [];
   }
-  obj1.items = items1;
-  items10[1] = obj1;
+  obj3.items = items1;
+  items10[1] = obj3;
   if (!withFriendRequestsIncoming) {
     items2 = [];
   }
@@ -227,32 +229,32 @@ function parseUserSearchResults(affinitySuggestionsLimit) {
     items4 = [];
   }
   items10[4] = { title: null, items: items4 };
-  obj3 = { title: null, items: null };
+  const obj6 = { title: null, items: null };
   const intl3 = util.intl;
-  obj3.title = intl3.formatToPlainString(util.t["DYMZ/p"], { count: items5.length });
+  obj6.title = intl3.formatToPlainString(util.t["DYMZ/p"], { count: items5.length });
   if (!withFriendSuggestions) {
     items5 = [];
   }
-  obj3.items = items5;
-  items10[5] = obj3;
-  const obj5 = { title: null, items: null };
+  obj6.items = items5;
+  items10[5] = obj6;
+  const obj8 = { title: null, items: null };
   const intl4 = util.intl;
-  obj5.title = intl4.string(util.t.TdEu5X);
+  obj8.title = intl4.string(util.t.TdEu5X);
   if (!withFriends) {
     items6 = [];
   }
-  obj5.items = items6;
-  items10[6] = obj5;
-  const obj6 = { title: null, items: null };
+  obj8.items = items6;
+  items10[6] = obj8;
+  const obj9 = { title: null, items: null };
   const intl5 = util.intl;
-  obj6.title = intl5.string(util.t.y29JXs);
+  obj9.title = intl5.string(util.t.y29JXs);
   if (!withGuildMembers) {
     found = [];
   }
-  obj6.items = found;
-  items10[7] = obj6;
+  obj9.items = found;
+  items10[7] = obj9;
   if (flag) {
-    items9 = items;
+    items9 = items11;
   }
   HermesBuiltin.arraySpread(items9, 8);
   return items10;
@@ -532,8 +534,7 @@ prototype["unsubscribe"] = function unsubscribe() {
 };
 prototype["fetch"] = function fetch(toLocaleLowerCase, arg1) {
   const self = this;
-  let obj = UserSearchUtils;
-  const cleanStringResult = obj.cleanString(toLocaleLowerCase);
+  const cleanStringResult = UserSearchUtils.cleanString(toLocaleLowerCase);
   if ("" === cleanStringResult) {
     const userSearchContext2 = self.userSearchContext;
     if (userSearchContext2 != null) {
@@ -545,29 +546,28 @@ prototype["fetch"] = function fetch(toLocaleLowerCase, arg1) {
     }
     const userSearchContext = self.userSearchContext;
     if (userSearchContext != null) {
-      obj = { query: cleanStringResult, boosters: self.affinities, boosterFallback: 0.002592 };
-      userSearchContext.setQuery(obj);
+      const obj3 = { query: cleanStringResult, boosters: self.affinities, boosterFallback: 0.002592 };
+      userSearchContext.setQuery(obj3);
     }
   }
 };
 prototype["filter"] = function filter(toLocaleLowerCase) {
   const self = this;
   _require = toLocaleLowerCase;
-  let obj = require("UserSearchUtils");
-  const cleanStringResult = obj.cleanString(toLocaleLowerCase);
+  const cleanStringResult = require("UserSearchUtils").cleanString(toLocaleLowerCase);
   _require = cleanStringResult;
   if (this.currentQuery === cleanStringResult) {
     if ("" === self.currentQuery) {
-      obj = {};
+      const obj2 = {};
       const indexMap2 = self.indexMap;
       let merged = Object.assign(indexMap2.indexes());
       const Friends = closure_16.Friends;
       delete tmp[tmp2];
-      return obj;
+      return obj2;
     } else {
-      obj = {};
+      const obj3 = {};
       const obj4 = self(12);
-      obj[closure_16.Friends] = obj4.sortBy(
+      obj3[closure_16.Friends] = obj4.sortBy(
         self(12).uniqBy(self.filteredFriends, (user) => user.user.id),
         (names) => {
           let num = 0;
@@ -580,7 +580,7 @@ prototype["filter"] = function filter(toLocaleLowerCase) {
       );
       const obj5 = self(12);
       const obj6 = self(12);
-      obj[closure_16.GuildMembers] = obj6.sortBy(
+      obj3[closure_16.GuildMembers] = obj6.sortBy(
         self(12).uniqBy(self.filteredGuildMembers, (user) => user.user.id),
         (names) => {
           let num = 0;
@@ -591,7 +591,7 @@ prototype["filter"] = function filter(toLocaleLowerCase) {
         },
         (affinity) => -affinity.affinity,
       );
-      return obj;
+      return obj3;
     }
   } else {
     if ("" === cleanStringResult) {
@@ -616,6 +616,7 @@ prototype["filter"] = function filter(toLocaleLowerCase) {
     }
     self.currentQuery = cleanStringResult;
   }
+  let obj = require("UserSearchUtils");
 };
 prototype["initializeUsersFromStores"] = function initializeUsersFromStores() {
   const self = this;
@@ -679,9 +680,9 @@ prototype["getItem"] = function getItem(id) {
     return null;
   } else {
     const self = this;
-    names = UserSearchUtils.getNames(user);
-    ({ nick, names } = names);
-    let obj = { user, names, affinity: null, firstMatch: null };
+    const names1 = UserSearchUtils.getNames(user);
+    ({ nick, names } = names1);
+    const obj = { user, names, affinity: null, firstMatch: null };
     let num = this.affinities[user.id];
     if (num == null) {
       num = 0;
@@ -695,16 +696,16 @@ prototype["getItem"] = function getItem(id) {
     if (relationshipType !== RelationshipTypes.FRIEND) {
       const gameFriendsForUser = GameRelationshipStore.getGameFriendsForUser(id);
       if (gameFriendsForUser.length > 0) {
-        obj = {};
+        const obj2 = {};
         const merged = Object.assign(obj);
-        obj.type = gameFriendsForUser[0].type;
-        return obj;
+        obj2.type = gameFriendsForUser[0].type;
+        return obj2;
       }
     }
-    const obj1 = {};
+    const obj3 = {};
     const merged1 = Object.assign(obj);
-    obj1.type = relationshipType;
-    return obj1;
+    obj3.type = relationshipType;
+    return obj3;
   }
 };
 prototype["updateUserCached"] = function updateUserCached(type) {

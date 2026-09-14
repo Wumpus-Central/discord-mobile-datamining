@@ -21,14 +21,14 @@ export default function UserSettingsFriendRequests() {
   const items = [setting];
   const memo = noop.useMemo(() => UserSettingsUtils.computeFlags(setting), items);
   let obj = { children: null };
-  obj = { title: null, hasIcons: false, children: null };
+  const obj2 = { title: null, hasIcons: false, children: null };
   const intl = setting(1114).intl;
-  obj.title = intl.string(setting(1114).t.vyodkM);
-  obj = { label: null, value: null, onValueChange: null };
+  obj2.title = intl.string(setting(1114).t.vyodkM);
+  const obj3 = { label: null, value: null, onValueChange: null };
   const intl2 = setting(1114).intl;
-  obj.label = intl2.string(setting(1114).t.mGr3CX);
-  obj.value = memo.all;
-  obj.onValueChange = function onValueChange(arg0) {
+  obj3.label = intl2.string(setting(1114).t.mGr3CX);
+  obj3.value = memo.all;
+  obj3.onValueChange = function onValueChange(arg0) {
     const FriendSourceFlagsSetting = setting(dependencyMap[4]).FriendSourceFlagsSetting;
     if (arg0) {
       let tmp3 = closure_1_5;
@@ -37,12 +37,12 @@ export default function UserSettingsFriendRequests() {
     }
     return FriendSourceFlagsSetting.updateSetting(tmp3);
   };
-  const items1 = [closure_7(setting(7303).TableSwitchRow, obj), ,];
-  const obj1 = { label: null, value: null, onValueChange: null };
+  const items1 = [closure_7(setting(7303).TableSwitchRow, obj3), ,];
+  const obj4 = { label: null, value: null, onValueChange: null };
   const intl3 = setting(1114).intl;
-  obj1.label = intl3.string(setting(1114).t.IqlCSq);
-  obj1.value = memo.mutualFriends;
-  obj1.onValueChange = function onValueChange(arg0) {
+  obj4.label = intl3.string(setting(1114).t.IqlCSq);
+  obj4.value = memo.mutualFriends;
+  obj4.onValueChange = function onValueChange(arg0) {
     const FriendSourceFlagsSetting = UserSettings.FriendSourceFlagsSetting;
     const obj = FlagUtilsAll;
     if (arg0) {
@@ -52,12 +52,12 @@ export default function UserSettingsFriendRequests() {
     }
     return FriendSourceFlagsSetting.updateSetting(addFlagResult);
   };
-  items1[1] = closure_7(setting(7303).TableSwitchRow, obj1);
-  const obj2 = { label: null, value: null, onValueChange: null };
+  items1[1] = closure_7(setting(7303).TableSwitchRow, obj4);
+  const obj5 = { label: null, value: null, onValueChange: null };
   const intl4 = setting(1114).intl;
-  obj2.label = intl4.string(setting(1114).t.mozb8f);
-  obj2.value = memo.mutualGuilds;
-  obj2.onValueChange = function onValueChange(arg0) {
+  obj5.label = intl4.string(setting(1114).t.mozb8f);
+  obj5.value = memo.mutualGuilds;
+  obj5.onValueChange = function onValueChange(arg0) {
     const FriendSourceFlagsSetting = UserSettings.FriendSourceFlagsSetting;
     const obj = FlagUtilsAll;
     if (arg0) {
@@ -67,8 +67,8 @@ export default function UserSettingsFriendRequests() {
     }
     return FriendSourceFlagsSetting.updateSetting(addFlagResult);
   };
-  items1[2] = closure_7(setting(7303).TableSwitchRow, obj2);
-  obj.children = items1;
-  obj.children = closure_8(setting(5768).TableRowGroup, obj);
+  items1[2] = closure_7(setting(7303).TableSwitchRow, obj5);
+  obj2.children = items1;
+  obj.children = closure_8(setting(5768).TableRowGroup, obj2);
   return closure_7(View, obj);
 }

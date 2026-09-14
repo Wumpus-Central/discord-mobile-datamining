@@ -50,7 +50,7 @@ class SquareIconButton {
     } else {
       REFRESH_SMALL_16 = tmp4(tmp5[6]).Icon.Sizes.REFRESH_SMALL_16;
     }
-    obj = { size: REFRESH_SMALL_16, style: null, disableColor: null, source: null };
+    obj1 = { size: REFRESH_SMALL_16, style: null, disableColor: null, source: null };
     icon = null;
     if (!disableColor) {
       icon = tmp.icon;
@@ -58,10 +58,10 @@ class SquareIconButton {
     items2 = [,];
     items2[0] = icon;
     items2[1] = iconStyle;
-    obj.style = items2;
-    obj.disableColor = disableColor;
-    obj.source = source;
-    obj.children = tmp3(tmp4(tmp5[6]).Icon, obj);
+    obj1.style = items2;
+    obj1.disableColor = disableColor;
+    obj1.source = source;
+    obj.children = tmp3(tmp4(tmp5[6]).Icon, obj1);
     return tmp3(size(closure_1[5]).PressableOpacity, obj);
   }
 }
@@ -92,34 +92,32 @@ class CircularIconButton {
   }
 }
 const jsx = fn(21).jsx;
-let Sizes = { SMALL_24: 24, [24]: "SMALL_24", MEDIUM_32: 32, [32]: "MEDIUM_32", LARGE_40: 40, [40]: "LARGE_40" };
-fn(4636);
-Sizes = {
-  container: null,
-  small: null,
-  medium: null,
-  large: null,
-  smallCircular: null,
-  mediumCircular: null,
-  largeCircular: null,
+const Sizes = { SMALL_24: 24, [24]: "SMALL_24", MEDIUM_32: 32, [32]: "MEDIUM_32", LARGE_40: 40, [40]: "LARGE_40" };
+const createStyles = fn(4636);
+const obj3 = {
+  container: {
+    borderRadius: nativeDefault.radii.xs,
+    alignItems: "center",
+    justifyContent: "center",
+    backgroundColor: fn(5522).DARK_PRIMARY_700_LIGHT_PRIMARY_230,
+  },
+  small: { height: Sizes.SMALL_24, width: Sizes.SMALL_24 },
+  medium: { height: Sizes.MEDIUM_32, width: Sizes.MEDIUM_32 },
+  large: { height: Sizes.LARGE_40, width: Sizes.LARGE_40 },
+  smallCircular: { borderRadius: Sizes.SMALL_24 / 2 },
+  mediumCircular: { borderRadius: Sizes.MEDIUM_32 / 2 },
+  largeCircular: { borderRadius: Sizes.LARGE_40 / 2 },
   icon: null,
 };
-Sizes = {
+const obj4 = {
   borderRadius: nativeDefault.radii.xs,
   alignItems: "center",
   justifyContent: "center",
   backgroundColor: fn(5522).DARK_PRIMARY_700_LIGHT_PRIMARY_230,
 };
-Sizes.container = Sizes;
-Sizes.small = { height: Sizes.SMALL_24, width: Sizes.SMALL_24 };
-Sizes.medium = { height: Sizes.MEDIUM_32, width: Sizes.MEDIUM_32 };
-Sizes.large = { height: Sizes.LARGE_40, width: Sizes.LARGE_40 };
-const createStyles = { borderRadius: Sizes.SMALL_24 / 2 };
-Sizes.smallCircular = createStyles;
-Sizes.mediumCircular = { borderRadius: Sizes.MEDIUM_32 / 2 };
-Sizes.largeCircular = { borderRadius: Sizes.LARGE_40 / 2 };
-Sizes.icon = { tintColor: fn(5522).DARK_PRIMARY_300_LIGHT_PRIMARY_500 };
-const hasOwnProperty = createStyles.createStyles(Sizes);
+const obj5 = { borderRadius: Sizes.SMALL_24 / 2 };
+obj3.icon = { tintColor: fn(5522).DARK_PRIMARY_300_LIGHT_PRIMARY_500 };
+const hasOwnProperty = createStyles.createStyles(obj3);
 SquareIconButton.Sizes = Sizes;
 CircularIconButton.Sizes = Sizes;
 let size = fn(2);

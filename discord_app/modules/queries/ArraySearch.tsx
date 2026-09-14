@@ -73,11 +73,11 @@ export const queryData = function queryData(apps, limit) {
               if (tmp3(item10021)) {
                 let arr = items2.push(item10021);
               } else {
-                arr = items1.push(item10021);
+                let arr2 = items1.push(item10021);
               }
               continue;
             }
-            let arr1 = items.push(items2);
+            let arr3 = items.push(items2);
             tmp = items1;
             if (items.reduce((acc, item) => item.length + acc, 0) >= limit) {
               iter.return();

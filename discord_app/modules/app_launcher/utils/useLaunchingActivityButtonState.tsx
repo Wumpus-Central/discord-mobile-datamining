@@ -3,6 +3,8 @@ import noop from "../../../../_runtime/metro/00019__.js";
 import EmbeddedActivitiesStore from "../../activities/EmbeddedActivitiesStore.tsx";
 import FramesStore from "../../frames/FramesStore.tsx";
 
+const require = globalThis.__r;
+
 const require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/app_launcher/utils/useLaunchingActivityButtonState.tsx");
@@ -11,8 +13,9 @@ export default function useLaunchingActivityButtonState(applicationId) {
   applicationId = applicationId.applicationId;
   ({ context: importDefault, onSubmissionComplete } = applicationId);
   closure_4 = undefined;
-  let obj = applicationId(onSubmissionComplete[3]);
-  const getOrFetchApplication = obj.useGetOrFetchApplication(applicationId);
+  const getOrFetchApplication = applicationId(onSubmissionComplete[3]).useGetOrFetchApplication(applicationId);
+  const obj = applicationId(onSubmissionComplete[3]);
+  let tmp = applicationId;
   const items = [closure_4];
   const stateFromStores = applicationId(onSubmissionComplete[4]).useStateFromStores(items, () => {
     let id;
@@ -22,7 +25,6 @@ export default function useLaunchingActivityButtonState(applicationId) {
     return EmbeddedActivitiesStore.getLaunchState(applicationId, id);
   });
   const obj2 = applicationId(onSubmissionComplete[4]);
-  let tmp = applicationId;
   const items1 = [FramesStore];
   let stateFromStores1 = applicationId(onSubmissionComplete[4]).useStateFromStores(items1, () => {
     const mainFrame = FramesStore.getMainFrame();
@@ -62,10 +64,10 @@ export default function useLaunchingActivityButtonState(applicationId) {
       }
     }
   }, items2);
-  obj = { submitting: stateFromStores1, wasSubmitting: null };
+  const obj4 = { submitting: stateFromStores1, wasSubmitting: null };
   if (tmp7 == null) {
     tmp7 = null;
   }
-  obj.wasSubmitting = tmp7;
-  return obj;
+  obj4.wasSubmitting = tmp7;
+  return obj4;
 }

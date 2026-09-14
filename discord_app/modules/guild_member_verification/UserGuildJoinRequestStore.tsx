@@ -9,7 +9,7 @@ require = fn;
 function handleGatewayJoinRequestUpdate(arg0) {
   ({ guildId, request } = arg0);
   if (null != request) {
-    let obj = {
+    const obj3 = {
       joinRequestId: null,
       guildId: null,
       userId: null,
@@ -39,19 +39,19 @@ function handleGatewayJoinRequestUpdate(arg0) {
     } = request);
     const currentUser = UserStore.getCurrentUser();
     if (null != currentUser) {
-      if (obj.userId !== currentUser.id) {
+      if (obj3.userId !== currentUser.id) {
         return false;
       }
     }
-    obj = GuildJoinRequestUtils;
-    if (obj.isApprovedAndAcked(obj)) {
+    if (obj.isApprovedAndAcked(obj3)) {
       delete tmp[tmp2];
       if (c3 === guildId) {
         c3 = null;
       }
     } else {
-      tmp5[guildId] = obj;
+      tmp5[guildId] = obj3;
     }
+    obj = GuildJoinRequestUtils;
   }
 }
 let c3 = null;
@@ -207,12 +207,12 @@ const userGuildJoinRequestStore = new UserGuildJoinRequestStore(DispatcherDefaul
   },
   MEMBER_VERIFICATION_FORM_UPDATE: function handleVerificationFormUpdate(form) {
     form = form.form;
-    let guild;
+    let guild1;
     if (form != null) {
-      guild = form.guild;
+      guild1 = form.guild;
     }
-    if (null != guild) {
-      guild = form.guild;
+    if (null != guild1) {
+      const guild = form.guild;
       let features = guild.features;
       const obj = { id: null, name: null, icon: null, features: null, splash: null };
       ({ id: obj.id, name: obj.name, icon: obj.icon, splash } = guild);
@@ -228,7 +228,7 @@ const userGuildJoinRequestStore = new UserGuildJoinRequestStore(DispatcherDefaul
     ({ guild, join_request } = invite.invite);
     if (null != guild) {
       if (null != join_request) {
-        let obj = {
+        const obj = {
           joinRequestId: null,
           guildId: null,
           userId: null,
@@ -258,14 +258,14 @@ const userGuildJoinRequestStore = new UserGuildJoinRequestStore(DispatcherDefaul
         } = join_request);
         closure_4[join_request.guild_id] = obj;
         ({ id, features } = guild);
-        obj = { id, name: null, icon: null, features: null, splash: null };
+        const obj3 = { id, name: null, icon: null, features: null, splash: null };
         ({ name: obj2.name, icon: obj2.icon, splash } = guild);
         if (features == null) {
           features = [];
         }
-        obj.features = features;
-        obj.splash = splash;
-        closure_6[id] = obj;
+        obj3.features = features;
+        obj3.splash = splash;
+        closure_6[id] = obj3;
       }
     }
   },

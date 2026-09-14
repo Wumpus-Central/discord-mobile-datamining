@@ -4,6 +4,8 @@ import AppLauncherContext from "../../AppLauncherContext.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 import ApplicationCommandIndexStore from "../../../../application_commands/ApplicationCommandIndexStore.tsx";
 
+const require = globalThis.__r;
+
 require = fn;
 function AppLauncherApplicationViewScreenInner(application) {
   application = application.application;
@@ -33,9 +35,10 @@ function AppLauncherApplicationViewScreenInner(application) {
   const items1 = [tmp5, initiallyExpanded, expandBottomSheet, bottomSheetExpandReasonRef];
   const onAauth2Cancel = chatInputRef.useCallback(() => {
     const current = chatInputRef.current;
-    let obj = { type: KeyboardTypes.KeyboardTypes.APP_LAUNCHER, context: null };
-    obj = { initialRouteName: constants.APPLICATION_VIEW, application };
-    obj.context = obj;
+    const obj = {
+      type: KeyboardTypes.KeyboardTypes.APP_LAUNCHER,
+      context: { initialRouteName: constants.APPLICATION_VIEW, application },
+    };
     current.openCustomKeyboard(obj);
   }, items);
   const effect = chatInputRef.useEffect(() => {
@@ -69,9 +72,8 @@ const AppLauncherNativeConstants = fn(1482);
 ({ AppLauncherRouteName: closure_7, SCREEN_BACKGROUND_COLOR } = AppLauncherNativeConstants);
 const BuiltInSectionId = fn(5080).BuiltInSectionId;
 const jsx = fn(21).jsx;
-fn(4636);
-const createStyles = { container: { backgroundColor: SCREEN_BACKGROUND_COLOR, flex: 1 } };
-let closure_10 = createStyles.createStyles(createStyles);
+const createStyles = fn(4636);
+let closure_10 = createStyles.createStyles({ container: { backgroundColor: SCREEN_BACKGROUND_COLOR, flex: 1 } });
 const size = fn(2);
 let result = size.fileFinishedImporting(
   "modules/app_launcher/native/screens/application_view/AppLauncherApplicationViewScreen.tsx",
@@ -85,23 +87,23 @@ export default function AppLauncherApplicationViewScreen(route) {
   c4 = undefined;
   c5 = undefined;
   ({ applicationId, initiallyExpanded, sectionName, expandBottomSheet, onCommandExecuted } = params);
-  let obj = require("AppLauncherContext");
-  const requiredAppLauncherContext = obj.useRequiredAppLauncherContext();
+  const requiredAppLauncherContext = require("AppLauncherContext").useRequiredAppLauncherContext();
   ({ chatInputRef: c4, keyboardCloseReasonRef: c5 } = requiredAppLauncherContext);
   ({ entrypoint, onActivityItemSelected } = requiredAppLauncherContext);
   let id;
+  const obj = require("AppLauncherContext");
   if (application != null) {
     id = application.id;
   }
   if (id == null) {
     id = applicationId;
   }
-  let tmpResult = require("useGetOrFetchApplications");
+  const tmp4 = closure_10();
   let tmp7 = null;
   if (id !== BuiltInSectionId.BUILT_IN) {
     tmp7 = id;
   }
-  const getOrFetchApplication = tmpResult.useGetOrFetchApplication(tmp7);
+  const getOrFetchApplication = require("useGetOrFetchApplications").useGetOrFetchApplication(tmp7);
   if (id === BuiltInSectionId.BUILT_IN) {
     let FAKE_BUILT_IN_APP = require("AppLauncherUtils").FAKE_BUILT_IN_APP;
   } else {
@@ -110,9 +112,9 @@ export default function AppLauncherApplicationViewScreen(route) {
       FAKE_BUILT_IN_APP = application;
     }
   }
-  tmpResult = require("ReanimatedRexport");
+  const tmpResult = require("useGetOrFetchApplications");
   const items = [id, context, installOnDemand];
-  const sharedValue = tmpResult.useSharedValue(0);
+  const sharedValue = require("ReanimatedRexport").useSharedValue(0);
   const effect = navigation.useEffect(() => {
     let tmp2 = null != id;
     if (tmp2) {
@@ -125,9 +127,9 @@ export default function AppLauncherApplicationViewScreen(route) {
       const result = ApplicationCommandIndexStore.queryInstallOnDemandApp(id, context.channel.id);
     }
   }, items);
-  obj = { style: closure_10().container, children: null };
+  const obj2 = { style: tmp4.container, children: null };
   if (null != FAKE_BUILT_IN_APP) {
-    obj = {
+    const obj3 = {
       context,
       application: FAKE_BUILT_IN_APP,
       lockableScrollableContentOffsetY: sharedValue,
@@ -138,9 +140,8 @@ export default function AppLauncherApplicationViewScreen(route) {
         if (closure_1_0 != null) {
           tmp();
         }
-        let arr = navigation;
         if (navigation.canGoBack()) {
-          arr = arr.pop();
+          navigation.pop();
         } else {
           c5.current = AppLauncherContext.AppLauncherKeyboardCloseReason.BACK;
           const current = _undefined.current;
@@ -166,9 +167,8 @@ export default function AppLauncherApplicationViewScreen(route) {
           if (closure_1_0 != null) {
             tmp();
           }
-          let arr = navigation;
           if (navigation.canGoBack()) {
-            arr = arr.pop();
+            navigation.pop();
           } else {
             c5.current = AppLauncherContext.AppLauncherKeyboardCloseReason.BACK;
             const current = _undefined.current;
@@ -184,12 +184,12 @@ export default function AppLauncherApplicationViewScreen(route) {
       />
     );
   } else {
-    const obj1 = { style: null, children: null };
-    const obj2 = { paddingTop: require("application_view/Header").EXPANDED_HEADER_HEIGHT };
-    obj1.style = obj2;
-    obj1.children = <c4 />;
+    const obj4 = { style: null, children: null };
+    const obj5 = { paddingTop: require("application_view/Header").EXPANDED_HEADER_HEIGHT };
+    obj4.style = obj5;
+    obj4.children = <c4 />;
     tmp11Result = <tmp12 style={null}>{null}</tmp12>;
   }
-  obj.children = tmp11Result;
-  return <c5 style={closure_10().container}>{null}</c5>;
+  obj2.children = tmp11Result;
+  return <c5 style={tmp4.container}>{null}</c5>;
 }

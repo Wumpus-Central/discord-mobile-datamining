@@ -2,6 +2,8 @@
 import CallStore from "../../../stores/CallStore.tsx";
 import ChannelRTCStore from "../ChannelRTCStore.tsx";
 
+const require = globalThis.__r;
+
 const require = fn;
 const ParticipantTypes = fn(4657).ParticipantTypes;
 const size = fn(2);

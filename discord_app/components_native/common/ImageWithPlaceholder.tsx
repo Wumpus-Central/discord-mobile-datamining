@@ -27,20 +27,20 @@ export const ImageWithPlaceholder = function ImageWithPlaceholder(arg0) {
   );
   if (null != placeholder) {
     if (placeholderVersion === obj.THUMBHASH) {
-      obj = {};
+      const obj2 = {};
       const merged1 = Object.assign(merged);
-      obj.style = style;
-      obj.uri = uri;
-      obj.placeholder = placeholder;
-      obj.placeholderVersion = placeholderVersion;
-      obj.alt = alt;
+      obj2.style = style;
+      obj2.uri = uri;
+      obj2.placeholder = placeholder;
+      obj2.placeholderVersion = placeholderVersion;
+      obj2.alt = alt;
       let tmp4 = <importDefaultResult />;
     }
     return tmp4;
   }
   obj = { style };
   const merged2 = Object.assign(merged);
-  obj = { style, resizeMode: "cover", source: { uri }, alt };
   obj.children = jsx(FastImageDefault, { style, resizeMode: "cover", source: { uri }, alt });
-  tmp4 = <React2 style={style} resizeMode="cover" source={{ uri }} alt={alt} />;
+  tmp4 = <React2 style={style} />;
+  const obj3 = { style, resizeMode: "cover", source: { uri }, alt };
 };

@@ -42,7 +42,7 @@ export default apply.throttle((arg0) => {
     confettiCount,
     confettiEnabledLocations,
   } = arg0);
-  const obj = {
+  const obj2 = {
     enabled,
     combos_enabled: combosEnabled,
     combos_required_count: combosRequiredCount,
@@ -59,22 +59,22 @@ export default apply.throttle((arg0) => {
     [, tmp] = item;
     return tmp;
   });
-  obj.screenshake_enabled_locations = found.map((item) => {
+  obj2.screenshake_enabled_locations = found.map((item) => {
     [tmp] = item;
     return closure_0(Number.parseInt(tmp));
   });
-  obj.confetti_enabled = confettiEnabled;
-  obj.confetti_size = confettiSize;
-  obj.confetti_count = confettiCount;
+  obj2.confetti_enabled = confettiEnabled;
+  obj2.confetti_size = confettiSize;
+  obj2.confetti_count = confettiCount;
   closure_0 = getConfettiLocationName;
   const entries1 = Object.entries(confettiEnabledLocations);
   const found1 = entries1.filter((item) => {
     [, tmp] = item;
     return tmp;
   });
-  obj.confetti_enabled_locations = found1.map((item) => {
+  obj2.confetti_enabled_locations = found1.map((item) => {
     [tmp] = item;
     return closure_0(Number.parseInt(tmp));
   });
-  obj.track(AnalyticEvents.POGGERMODE_SETTINGS_UPDATED, obj);
+  AnalyticsUtilsDefault.track(AnalyticEvents.POGGERMODE_SETTINGS_UPDATED, obj2);
 }, 5000);

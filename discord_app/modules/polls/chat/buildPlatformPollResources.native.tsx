@@ -7,7 +7,7 @@ import renderer_EmbedUtils from "../../messages/native/renderer/EmbedUtils.tsx";
 import apply from "../../../../_runtime/metro/00012__.js";
 
 require = fn;
-let closure_3 = apply.mapValues(fn(11848).pollStyleSets, (arg0) => {
+let closure_3 = apply.mapValues(fn(11849).pollStyleSets, (arg0) => {
   _require = arg0;
   closure_1 = require("createStyles").createNativeStyleProperties((arg0) => {
     let tmp = closure_0(nativeDefault, arg0);
@@ -21,10 +21,9 @@ let closure_3 = apply.mapValues(fn(11848).pollStyleSets, (arg0) => {
   });
   return (arg0, arg1) => {
     let tmp = closure_0(nativeDefault, arg1);
-    const obj = {};
     const merged = Object.assign(closure_1(arg0, arg1));
     const merged1 = Object.assign(
-      obj.pickBy(closure_0(nativeDefault, arg1), (num) => {
+      apply.pickBy(tmp, (num) => {
         let tmp = typeof num === "number";
         if (typeof num !== "number") {
           tmp = typeof num === "boolean";
@@ -32,7 +31,7 @@ let closure_3 = apply.mapValues(fn(11848).pollStyleSets, (arg0) => {
         return tmp;
       }),
     );
-    return obj;
+    return {};
   };
 });
 const size = fn(2);

@@ -79,8 +79,8 @@ export default {
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
-          let obj = { value, done: true };
-          return obj;
+          const obj2 = { value, done: true };
+          return obj2;
         } else {
           return { value: "HermesInternal", done: null };
         }
@@ -93,8 +93,8 @@ export default {
               throw value;
             } else if (arg0 === 2) {
               c6 = 3;
-              obj = { value, done: true };
-              return obj;
+              const obj4 = { value, done: true };
+              return obj4;
             } else {
               str = tmp7;
               closure_129_0 = undefined;
@@ -114,13 +114,13 @@ export default {
                 return stringResult;
               })(_undefined);
               if (null != tmp83) {
-                const obj1 = { reason: tmp83, username_error: true, location: str, one_click_flow: flag2 };
-                str(tmp3[5]).track(constants.POMELO_ERRORS, obj1);
+                const obj5 = { reason: tmp83, username_error: true, location: str, one_click_flow: flag2 };
+                str(tmp3[5]).track(constants.POMELO_ERRORS, obj5);
                 const obj14 = str(tmp3[5]);
-                let obj2 = { type: "UNIQUE_USERNAME_ATTEMPT_FAILURE", username: _undefined, error: tmp83 };
+                const obj7 = { type: "UNIQUE_USERNAME_ATTEMPT_FAILURE", username: _undefined, error: tmp83 };
                 c6 = 3;
-                const obj3 = { value: str(tmp3[3]).dispatch(obj2), done: true };
-                return obj3;
+                const obj9 = { value: str(tmp3[3]).dispatch(obj7), done: true };
+                return obj9;
               } else {
                 constants = 1;
                 let post = str(tmp3[6]).post;
@@ -131,12 +131,12 @@ export default {
                   POMELO_ATTEMPT = request.POMELO_ATTEMPT;
                 }
                 request = { url: POMELO_ATTEMPT, body: null, trackedActionData: null, rejectWithError: false };
-                const obj4 = { username: _undefined };
-                request.body = obj4;
-                let obj5 = { event: _undefined(tmp3[7]).NetworkActionNames.POMELO_ATTEMPT, properties: null };
-                const obj6 = { requested_username: _undefined };
-                obj5.properties = obj6;
-                request.trackedActionData = obj5;
+                const obj10 = { username: _undefined };
+                request.body = obj10;
+                const obj11 = { event: _undefined(tmp3[7]).NetworkActionNames.POMELO_ATTEMPT, properties: null };
+                const obj12 = { requested_username: _undefined };
+                obj11.properties = obj12;
+                request.trackedActionData = obj11;
                 post = post(request);
                 c5 = 2;
                 c6 = 1;
@@ -155,16 +155,15 @@ export default {
                 _undefined = undefined;
               }
               closure_129_2 = _undefined;
-              obj5 = str(tmp3[5]);
-              let obj7 = {
+              const obj13 = {
                 reason: closure_129_2,
                 username_error: true,
                 location: closure_130_1,
                 one_click_flow: closure_130_3,
               };
-              obj5.track(constants.POMELO_ERRORS, obj7);
-              obj7 = str(tmp3[3]);
-              const obj8 = {
+              str(tmp3[5]).track(constants.POMELO_ERRORS, obj13);
+              const obj6 = str(tmp3[5]);
+              const obj15 = {
                 username: closure_130_0,
                 type: "UNIQUE_USERNAME_ATTEMPT_FAILURE",
                 error: null,
@@ -179,39 +178,40 @@ export default {
                   }
                 }
               }
-              obj8.error = tmp49;
-              obj8.statusCode = closure_129_1.status;
-              obj8.retryAfter = closure_129_1.retryAfter;
-              obj7.dispatch(obj8);
+              obj15.error = tmp49;
+              obj15.statusCode = closure_129_1.status;
+              obj15.retryAfter = closure_129_1.retryAfter;
+              str(tmp3[3]).dispatch(obj15);
               c6 = 3;
+              const obj8 = str(tmp3[3]);
             } else if (arg0 === 1) {
               c6 = 3;
               throw value;
             } else if (arg0 !== 2) {
               closure_129_0 = value;
               if (closure_129_0.body.taken) {
-                obj = str(tmp3[5]);
-                const obj9 = {
+                const obj17 = {
                   reason: "already_taken",
                   username_error: true,
                   location: closure_130_1,
                   one_click_flow: closure_130_3,
                 };
-                obj.track(constants.POMELO_ERRORS, obj9);
+                str(tmp3[5]).track(constants.POMELO_ERRORS, obj17);
+                const obj = str(tmp3[5]);
               }
-              obj2 = str(tmp3[3]);
-              const obj10 = {
+              const obj18 = {
                 type: "UNIQUE_USERNAME_ATTEMPT_SUCCESS",
                 username: closure_130_0,
                 taken: closure_129_0.body.taken,
               };
-              obj2.dispatch(obj10);
+              str(tmp3[3]).dispatch(obj18);
               constants = 0;
+              const obj3 = str(tmp3[3]);
             }
             constants = 0;
             c6 = 3;
-            const obj11 = { value, done: true };
-            return obj11;
+            const obj19 = { value, done: true };
+            return obj19;
           }
         } catch (tmp72) {
           closure_3 = tmp72;

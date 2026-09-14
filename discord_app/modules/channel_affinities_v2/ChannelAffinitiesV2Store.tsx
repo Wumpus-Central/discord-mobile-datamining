@@ -54,10 +54,10 @@ prototype["compare"] = function compare(arg0, arg1) {
   if (num == null) {
     num = 0;
   }
-  value = map.get(arg0);
+  value2 = map.get(arg0);
   let num2;
-  if (value != null) {
-    num2 = value.score;
+  if (value2 != null) {
+    num2 = value2.score;
   }
   if (num2 == null) {
     num2 = 0;
@@ -69,7 +69,7 @@ prototype["getState"] = function getState() {
 };
 ChannelAffinitiesV2Store.displayName = "ChannelAffinitiesV2Store";
 ChannelAffinitiesV2Store.persistKey = "ChannelAffinitiesStoreV2";
-obj = {
+const channelAffinitiesV2Store = new ChannelAffinitiesV2Store(DispatcherDefault, {
   LOAD_CHANNEL_AFFINITIES_V2: function handleLoadChannelAffinities() {
     c2 = true;
   },
@@ -94,8 +94,7 @@ obj = {
     map = new Map();
     c2 = false;
   },
-};
-const channelAffinitiesV2Store = new ChannelAffinitiesV2Store(DispatcherDefault, obj);
+});
 const result = size.fileFinishedImporting("modules/channel_affinities_v2/ChannelAffinitiesV2Store.tsx");
 
 export default channelAffinitiesV2Store;

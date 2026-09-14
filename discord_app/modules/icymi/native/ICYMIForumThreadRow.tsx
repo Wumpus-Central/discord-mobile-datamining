@@ -61,9 +61,25 @@ class ICYMIForumThreadRow {
     items3[1] = stateFromStores;
     items3[2] = message.id;
     callback = obj3.useCallback(() => {
-      let obj = ICYMIActionCreatorsDefault;
-      obj.itemInteracted(message.id, "forum_thread", "press_forum_thread");
-      obj = {
+      ICYMIActionCreatorsDefault.itemInteracted(message.id, "forum_thread", "press_forum_thread");
+      ICYMIActionCreatorsDefault.feedItemActioned({
+        itemId: message.id,
+        itemType: "forum_thread",
+        actionParameters: {
+          actionGestureType: "press",
+          actionTargetElement: "item_container",
+          actionIntentType: "navigate",
+          actionDestinationType: "channel",
+        },
+      });
+      let tmp6 = null != channel;
+      if (tmp6) {
+        tmp6 = null != stateFromStores;
+      }
+      if (tmp6) {
+        ICYMIShared.navigateToPost(channel.id, stateFromStores.id, message.id);
+      }
+      const obj3 = {
         itemId: message.id,
         itemType: "forum_thread",
         actionParameters: {
@@ -73,23 +89,14 @@ class ICYMIForumThreadRow {
           actionDestinationType: "channel",
         },
       };
-      ICYMIActionCreatorsDefault.feedItemActioned(obj);
-      let tmp6 = null != channel;
-      if (tmp6) {
-        tmp6 = null != stateFromStores;
-      }
-      if (tmp6) {
-        ICYMIShared.navigateToPost(channel.id, stateFromStores.id, message.id);
-      }
     }, items3);
     items4 = [,];
     items4[0] = channel.parent_id;
     items4[1] = message.id;
     callback1 = obj3.useCallback(() => {
       if (null != channel.parent_id) {
-        let obj = ICYMIActionCreatorsDefault;
-        obj.itemInteracted(message.id, "forum_thread", "long_press_forum_thread");
-        obj = {
+        ICYMIActionCreatorsDefault.itemInteracted(message.id, "forum_thread", "long_press_forum_thread");
+        const obj3 = {
           itemId: message.id,
           itemType: "forum_thread",
           actionParameters: {
@@ -99,7 +106,7 @@ class ICYMIForumThreadRow {
             actionDestinationType: null,
           },
         };
-        ICYMIActionCreatorsDefault.feedItemActioned(obj);
+        ICYMIActionCreatorsDefault.feedItemActioned(obj3);
         const result = openChannelLongPressActionSheet.openChannelLongPressActionSheet(tmp.parent_id);
       }
     }, items4);
@@ -117,7 +124,7 @@ class ICYMIForumThreadRow {
             tmp13 = null;
             if (null != stateFromStores1) {
               tmp14 = jsxs;
-              obj = {
+              obj1 = {
                 actionLabel: null,
                 id: null,
                 interactionType: "forum_thread",
@@ -131,16 +138,16 @@ class ICYMIForumThreadRow {
               };
               tmp11Result = tmp11(tmp3[14]);
               intl = tmp2(tmp3[15]).intl;
-              obj.actionLabel = intl.string(tmp2(tmp3[15]).t.bYNuVx);
-              obj.id = gravityMessage.id;
-              obj.channelId = channel.parent_id;
+              obj1.actionLabel = intl.string(tmp2(tmp3[15]).t.bYNuVx);
+              obj1.id = gravityMessage.id;
+              obj1.channelId = channel.parent_id;
               tmp11Result1 = tmp11(tmp3[16]);
-              obj.timestamp = tmp11Result1.extractTimestamp(gravityMessage.id);
-              obj.onHeaderPress = callback;
-              obj.onHeaderLongPress = callback1;
-              obj.message = gravityMessage;
+              obj1.timestamp = tmp11Result1.extractTimestamp(gravityMessage.id);
+              obj1.onHeaderPress = callback;
+              obj1.onHeaderLongPress = callback1;
+              obj1.message = gravityMessage;
               tmp16 = jsx;
-              obj1 = {
+              obj16 = {
                 onPress: null,
                 onLongPress: null,
                 accessibilityRole: "button",
@@ -148,35 +155,35 @@ class ICYMIForumThreadRow {
                 style: null,
                 children: null,
               };
-              obj1.onPress = callback;
-              obj1.onLongPress = callback1;
-              obj1.style = tmp.pressable;
+              obj16.onPress = callback;
+              obj16.onLongPress = callback1;
+              obj16.style = tmp.pressable;
               tmp17 = View;
-              obj2 = { style: null, children: null };
-              obj2.style = tmp.container;
-              obj3 = { variant: "text-lg/semibold", color: "mobile-text-heading-primary", children: null };
-              obj3.children = tmp12;
+              obj17 = { style: null, children: null };
+              obj17.style = tmp.container;
+              obj18 = { variant: "text-lg/semibold", color: "mobile-text-heading-primary", children: null };
+              obj18.children = tmp12;
               items5 = [, ,];
-              items5[0] = jsx(tmp2(tmp3[18]).Text, obj3);
-              obj4 = { variant: "text-md/normal", color: "text-subtle", style: null, lineClamp: 5, children: null };
-              obj4.style = tmp.subtitle;
+              items5[0] = jsx(tmp2(tmp3[18]).Text, obj18);
+              obj19 = { variant: "text-md/normal", color: "text-subtle", style: null, lineClamp: 5, children: null };
+              obj19.style = tmp.subtitle;
               tmp11Result2 = tmp11(tmp3[19]);
               flag = true;
-              obj4.children = tmp11Result2.parseInlineReply(message.content, true);
-              items5[1] = jsx(tmp2(tmp3[18]).Text, obj4);
-              obj5 = { message: null, visible: null, itemType: "forum_thread" };
-              obj5.message = message;
-              obj5.visible = global.visible;
-              items5[2] = jsx(tmp11(tmp3[20]), obj5);
-              obj2.children = items5;
-              obj1.children = jsxs(View, obj2);
+              obj19.children = tmp11Result2.parseInlineReply(message.content, true);
+              items5[1] = jsx(tmp2(tmp3[18]).Text, obj19);
+              obj20 = { message: null, visible: null, itemType: "forum_thread" };
+              obj20.message = message;
+              obj20.visible = global.visible;
+              items5[2] = jsx(tmp11(tmp3[20]), obj20);
+              obj17.children = items5;
+              obj16.children = jsxs(View, obj17);
               items6 = [,];
-              items6[0] = jsx(tmp2(tmp3[17]).PressableHighlight, obj1);
-              obj6 = { style: null, children: null };
-              obj6.style = tmp.footer;
-              obj7 = { style: null, children: null };
-              obj7.style = tmp.ICYMICardInteractionRow;
-              obj8 = {
+              items6[0] = jsx(tmp2(tmp3[17]).PressableHighlight, obj16);
+              obj21 = { style: null, children: null };
+              obj21.style = tmp.footer;
+              obj22 = { style: null, children: null };
+              obj22.style = tmp.ICYMICardInteractionRow;
+              obj23 = {
                 message: null,
                 channel: null,
                 guild: null,
@@ -184,15 +191,15 @@ class ICYMIForumThreadRow {
                 id: null,
                 itemType: "forum_thread",
               };
-              obj8.message = gravityMessage;
-              obj8.channel = channel;
-              obj8.guild = stateFromStores;
-              obj8.id = gravityMessage.id;
-              obj7.children = jsx(tmp11(tmp3[21]), obj8);
-              obj6.children = jsx(View, obj7);
-              items6[1] = jsx(View, obj6);
-              obj.children = items6;
-              tmp13 = jsxs(tmp11Result, obj);
+              obj23.message = gravityMessage;
+              obj23.channel = channel;
+              obj23.guild = stateFromStores;
+              obj23.id = gravityMessage.id;
+              obj22.children = jsx(tmp11(tmp3[21]), obj23);
+              obj21.children = jsx(View, obj22);
+              items6[1] = jsx(View, obj21);
+              obj1.children = items6;
+              tmp13 = jsxs(tmp11Result, obj1);
             }
           }
         }
@@ -204,26 +211,21 @@ class ICYMIForumThreadRow {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createICYMIStyles = fn(16547);
+const createICYMIStyles = fn(16549);
 const React7 = createICYMIStyles.createICYMIStyles((marginHorizontal) => {
-  let obj = {
+  const obj = {
     pressable: { flex: 1, paddingLeft: marginHorizontal.inset },
     container: { marginHorizontal: marginHorizontal.margin },
-    subtitle: null,
-    footer: null,
-    threadAsComments: null,
-    ICYMICardInteractionRow: null,
+    subtitle: { marginTop: nativeDefault.space.PX_8, marginBottom: marginHorizontal.margin },
+    footer: {
+      justifyContent: "flex-end",
+      paddingLeft: marginHorizontal.inset,
+      marginTop: marginHorizontal.margin,
+      gap: marginHorizontal.margin,
+    },
+    threadAsComments: { marginHorizontal: marginHorizontal.margin },
+    ICYMICardInteractionRow: { marginHorizontal: marginHorizontal.margin, marginBottom: marginHorizontal.margin },
   };
-  obj = { marginTop: nativeDefault.space.PX_8, marginBottom: marginHorizontal.margin };
-  obj.subtitle = obj;
-  obj.footer = {
-    justifyContent: "flex-end",
-    paddingLeft: marginHorizontal.inset,
-    marginTop: marginHorizontal.margin,
-    gap: marginHorizontal.margin,
-  };
-  obj.threadAsComments = { marginHorizontal: marginHorizontal.margin };
-  obj.ICYMICardInteractionRow = { marginHorizontal: marginHorizontal.margin, marginBottom: marginHorizontal.margin };
   return obj;
 });
 const size = fn(2);

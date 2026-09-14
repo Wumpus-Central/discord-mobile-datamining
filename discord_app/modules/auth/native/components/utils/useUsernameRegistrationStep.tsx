@@ -7,9 +7,11 @@ import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 import UniqueUsernamesStore from "../../../../unique_usernames/UniqueUsernamesStore.tsx";
 
+const require = globalThis.__r;
+
 require = fn;
-const useRegistrationUIStore = fn(16041).useRegistrationUIStore;
-const RegistrationConstants = fn(16042);
+const useRegistrationUIStore = fn(16043).useRegistrationUIStore;
+const RegistrationConstants = fn(16044);
 ({ authStateToRegisterTransitionStep: closure_7, RegistrationTransitionActionTypes: closure_8 } =
   RegistrationConstants);
 const size = fn(2);
@@ -17,7 +19,7 @@ let result = size.fileFinishedImporting("modules/auth/native/components/utils/us
 
 export const useUsernameRegistrationStep = function useUsernameRegistrationStep(REGISTER_ACCOUNT_INFORMATION) {
   _require = REGISTER_ACCOUNT_INFORMATION;
-  const context = obj.useContext(require("Auth").TrackRegistrationContext);
+  const context = obj3.useContext(require("Auth").TrackRegistrationContext);
   navigation = require("useNavigation").useNavigation();
   let str = useRegistrationUIStore((registrationOptions) => registrationOptions.registrationOptions).username;
   if (str == null) {
@@ -26,47 +28,49 @@ export const useUsernameRegistrationStep = function useUsernameRegistrationStep(
   if (str == null) {
     str = "";
   }
-  const tmp7 = username(obj.useState(str), 2);
+  const tmp7 = username(obj3.useState(str), 2);
   username = tmp7[0];
-  const obj2 = require("useNavigation");
+  let obj2 = require("useNavigation");
   const tmp10 = context(navigation[7])(
     "username",
     useRegistrationUIStore((errors) => errors.errors),
   );
   const tmp5Result = useRegistrationUIStore((errors) => errors.errors);
   const usernameStatus = require("useUsernameStatus").useUsernameStatus(username, true, true);
-  obj = usernameStatus;
+  obj3 = usernameStatus;
   let tmp12 = usernameStatus;
   if (null != tmp10) {
-    obj = { type: tmp(tmp2[9]).NameValidationState.ERROR, message: tmp10 };
-    tmp12 = obj;
+    obj3 = { type: tmp(tmp2[9]).NameValidationState.ERROR, message: tmp10 };
+    tmp12 = obj3;
   }
   let items = [tmp12, navigation, context, REGISTER_ACCOUNT_INFORMATION];
   const items1 = [username, tmp12];
   const callback = obj.useCallback((arg0) => {
     let type;
-    if (obj != null) {
-      type = tmp.type;
+    if (obj3 != null) {
+      type = obj3.type;
     }
     if (type === UniqueUsernamesTypes.NameValidationState.ERROR) {
-      obj = { step: React5(closure_0), actionType: constants.INPUT_ERROR, details: null };
-      const items = [tmp.message];
+      const obj = { step: React5(closure_0), actionType: constants.INPUT_ERROR, details: null };
+      const items = [obj3.message];
       obj.details = items;
       context(obj);
     }
     if (arg0) {
-      let tmp3Result = RegistrationStepsUtils;
-      const result = tmp3Result.handleRegistrationSubmit(closure_0, navigation, context);
+      const result = RegistrationStepsUtils.handleRegistrationSubmit(closure_0, navigation, context);
+      const tmp3Result = RegistrationStepsUtils;
     } else {
-      obj = { step: React5(closure_0), toStep: null, actionType: null };
-      tmp3Result = RegistrationStepsUtils;
-      obj.toStep = tmp3Result.getNextRegistrationTransitionStep(closure_0);
-      obj.actionType = constants.SUCCESS;
-      context(obj);
+      const obj2 = {
+        step: React5(closure_0),
+        toStep: RegistrationStepsUtils.getNextRegistrationTransitionStep(closure_0),
+        actionType: constants.SUCCESS,
+      };
+      context(obj2);
+      const tmp3Result3 = RegistrationStepsUtils;
       const nextAuthState = RegistrationStepsUtils.getNextAuthState(closure_0);
       const StackActions = Link.StackActions;
       navigation.dispatch(StackActions.push(nextAuthState));
-      const tmp3Result1 = RegistrationStepsUtils;
+      const tmp3Result4 = RegistrationStepsUtils;
     }
   }, items);
   const items2 = [username, ,];
@@ -78,8 +82,8 @@ export const useUsernameRegistrationStep = function useUsernameRegistrationStep(
     }
     if (!tmp2) {
       let type;
-      if (obj != null) {
-        type = obj.type;
+      if (obj3 != null) {
+        type = obj3.type;
       }
       tmp2 = type === UniqueUsernamesTypes.NameValidationState.ERROR;
     }
@@ -94,22 +98,23 @@ export const useUsernameRegistrationStep = function useUsernameRegistrationStep(
     type = tmp12.type;
   }
   items2[2] = type;
-  obj = {
+  const tmpResult = require("useUsernameStatus");
+  return {
     username,
     setUsername: tmp7[1],
     usernameStatus: tmp12,
     transitionToNextStepOrSubmit: callback,
     preventSubmitUsername: memo,
-    validateUsername: obj.useCallback(() => {
+    validateUsername: obj3.useCallback(() => {
       if (null != first) {
         if ("" !== tmp) {
           let type;
-          if (obj != null) {
-            type = obj.type;
+          if (obj3 != null) {
+            type = obj3.type;
           }
           let message = null;
           if (type === UniqueUsernamesTypes.NameValidationState.ERROR) {
-            message = obj.message;
+            message = obj3.message;
           }
         }
         return message;
@@ -118,5 +123,4 @@ export const useUsernameRegistrationStep = function useUsernameRegistrationStep(
       message = intl.string(util.t.GPfy3L);
     }, items2),
   };
-  return obj;
 };

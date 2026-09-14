@@ -4,10 +4,10 @@ import asyncGeneratorStep from "../../_runtime/00005_asyncGeneratorStep.js";
 import ChannelPinsStore from "../stores/ChannelPinsStore.tsx";
 
 const require = fn;
-const FetchState = fn(11804).FetchState;
+const FetchState = fn(11805).FetchState;
 const Constants = fn(1074);
 ({ AbortCodes: metroRequire, Endpoints: closure_7, MAX_PINS_PER_CHANNEL: closure_8 } = Constants);
-let query = {
+let obj = {
   pinMessage(channel, id) {
     closure_0 = channel;
     closure_1 = id;
@@ -19,8 +19,8 @@ let query = {
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
-          let obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           return { value: "HermesInternal", done: null };
         }
@@ -33,18 +33,16 @@ let query = {
               throw value;
             } else if (arg0 === 2) {
               c3 = 3;
-              obj = { value, done: true };
-              return obj;
+              let obj4 = { value, done: true };
+              return obj4;
             } else {
               closure_128_0 = undefined;
               closure_128_1 = undefined;
               ({ id: closure_128_0, name: closure_128_1 } = tmp3);
-              let obj1 = tmp2(7867);
               dependencyMap = 1;
               c3 = 1;
-              obj1 = { value: null, done: false };
-              obj1.value = obj1.unarchiveThreadIfNecessary(tmp3.id);
-              return obj1;
+              const obj5 = { value: tmp2(7867).unarchiveThreadIfNecessary(tmp3.id), done: false };
+              return obj5;
             }
           } else if (arg0 === 1) {
             c3 = 3;
@@ -54,9 +52,9 @@ let query = {
             obj = { value, done: true };
             return obj;
           } else {
-            const HTTP = tmp3(1272).HTTP;
-            const obj2 = { url: closure_1_7.PIN(closure_128_0, closure_129_1), rejectWithError: true };
-            HTTP.put(obj2).catch((error) => {
+            const HTTP = tmp3(1270).HTTP;
+            const obj6 = { url: closure_1_7.PIN(closure_128_0, closure_129_1), rejectWithError: true };
+            HTTP.put(obj6).catch((error) => {
               const aPIError = new _private(4537).APIError(error);
               const code = aPIError.code;
               const intl = _private(1114).intl;
@@ -74,7 +72,7 @@ let query = {
                     t = { maxPins };
                     let formatToPlainStringResult = formatToPlainString(t.Q89oQU, t);
                   } else {
-                    let obj = { maxPins, channelName };
+                    obj = { maxPins, channelName };
                     formatToPlainStringResult = formatToPlainString(t.NnO1S5, obj);
                   }
                   isPrivateResult = _private.isPrivate();
@@ -116,10 +114,10 @@ let query = {
                 }
               }
               const stringResult = intl.string(_private(1114).t.j2d6Km);
-              obj = { title: stringResult3, body: stringResult1, confirmText: null };
+              const obj2 = { title: stringResult3, body: stringResult1, confirmText: null };
               const intl17 = _private(1114).intl;
-              obj.confirmText = intl17.string(_private(1114).t.BddRzS);
-              channelName(4980).show(obj);
+              obj2.confirmText = intl17.string(_private(1114).t.BddRzS);
+              channelName(4980).show(obj2);
               const obj4 = channelName(4980);
             });
             c3 = 3;
@@ -141,8 +139,8 @@ let query = {
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
-          let obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           return { value: "HermesInternal", done: null };
         }
@@ -155,17 +153,15 @@ let query = {
               throw value;
             } else if (arg0 === 2) {
               c3 = 3;
-              obj = { value, done: true };
-              return obj;
+              const obj4 = { value, done: true };
+              return obj4;
             } else {
               id = tmp4;
               channel = tmp4;
-              let obj1 = id(7867);
               dependencyMap = 1;
               c3 = 1;
-              obj1 = { value: null, done: false };
-              obj1.value = obj1.unarchiveThreadIfNecessary(channel.id);
-              return obj1;
+              const obj5 = { value: id(7867).unarchiveThreadIfNecessary(channel.id), done: false };
+              return obj5;
             }
           } else if (arg0 === 1) {
             c3 = 3;
@@ -175,26 +171,25 @@ let query = {
             obj = { value, done: true };
             return obj;
           } else {
-            const HTTP = channel(1272).HTTP;
-            const obj2 = {
+            const HTTP = channel(1270).HTTP;
+            const obj6 = {
               url: closure_1_7.PIN(closure_129_0.id, closure_129_1),
               oldFormErrors: true,
               rejectWithError: true,
             };
-            HTTP.del(obj2).catch(() => {
-              closure_1(4980);
-              const obj = { title: null, body: null, confirmText: null, cancelText: null, onConfirm: null };
+            HTTP.del(obj6).catch(() => {
+              const obj2 = { title: null, body: null, confirmText: null, cancelText: null, onConfirm: null };
               const intl = closure_0(1114).intl;
-              obj.title = intl.string(closure_0(1114).t.xFjByk);
+              obj2.title = intl.string(closure_0(1114).t.xFjByk);
               const intl2 = closure_0(1114).intl;
-              obj.body = intl2.string(closure_0(1114).t["0R/Toc"]);
+              obj2.body = intl2.string(closure_0(1114).t["0R/Toc"]);
               const intl3 = closure_0(1114).intl;
-              obj.confirmText = intl3.string(closure_0(1114).t["7NqTJn"]);
+              obj2.confirmText = intl3.string(closure_0(1114).t["7NqTJn"]);
               const intl4 = closure_0(1114).intl;
-              obj.cancelText = intl4.string(closure_0(1114).t["ETE/oC"]);
+              obj2.cancelText = intl4.string(closure_0(1114).t["ETE/oC"]);
               unpinMessage = unpinMessage.unpinMessage;
-              obj.onConfirm = unpinMessage.bind(unpinMessage, closure_1_0, closure_1_1);
-              return obj.show(obj);
+              obj2.onConfirm = unpinMessage.bind(unpinMessage, closure_1_0, closure_1_1);
+              return closure_1(4980).show(obj2);
             });
             c3 = 3;
             return { value: "HermesInternal", done: null };
@@ -207,8 +202,7 @@ let query = {
     })();
   },
   ackPins(channelId) {
-    const obj = { type: "CHANNEL_PINS_ACK", channelId };
-    obj.dispatch(obj);
+    DispatcherDefault.dispatch({ type: "CHANNEL_PINS_ACK", channelId });
   },
   fetchPins(channelId, reset) {
     _require = channelId;
@@ -257,8 +251,8 @@ let query = {
       tmp = flag2;
     }
     if (tmp) {
-      query = { type: "LOAD_PINNED_MESSAGES", channelId, reset: flag };
-      query.dispatch(query);
+      const obj2 = { type: "LOAD_PINNED_MESSAGES", channelId, reset: flag };
+      DispatcherDefault.dispatch(obj2);
       const HTTP = require("HTTPUtils").HTTP;
       const request = {
         url: closure_7.PINS(channelId),
@@ -267,27 +261,25 @@ let query = {
         oldFormErrors: true,
         rejectWithError: true,
       };
-      query = { limit: num, before: null };
+      const obj3 = { limit: num, before: null };
       let toISOStringResult;
       if (before != null) {
         toISOStringResult = before.toISOString();
       }
-      query.before = toISOStringResult;
-      request.query = query;
+      obj3.before = toISOStringResult;
+      request.query = obj3;
       value = HTTP.get(request);
       value.then(
         (body) => {
-          const obj = {
+          DispatcherDefault.dispatch({
             type: "LOAD_PINNED_MESSAGES_SUCCESS",
             pins: body.body.items,
             channelId,
             hasMore: body.body.has_more,
-          };
-          obj.dispatch(obj);
+          });
         },
         () => {
-          const obj = { type: "LOAD_PINNED_MESSAGES_FAILURE", channelId };
-          obj.dispatch(obj);
+          DispatcherDefault.dispatch({ type: "LOAD_PINNED_MESSAGES_FAILURE", channelId });
         },
       );
     }
@@ -296,4 +288,4 @@ let query = {
 const size = fn(2);
 const result = size.fileFinishedImporting("actions/ChannelPinActionCreators.tsx");
 
-export default query;
+export default obj;

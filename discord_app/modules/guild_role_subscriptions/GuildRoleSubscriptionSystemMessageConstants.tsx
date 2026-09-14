@@ -3,34 +3,54 @@ import util from "../../intl/index.native.tsx";
 import StickersTypes from "../stickers/StickersTypes.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
-let obj = {
+let items = [
+  {
+    id: "781323471249604648",
+    format_type: StickersTypes.StickerFormat.APNG,
+    description: "Cheerful Choco jumps out of gift box",
+    name: "Surprise",
+  },
+  ,
+  ,
+  ,
+];
+const obj = {
   id: "781323471249604648",
   format_type: StickersTypes.StickerFormat.APNG,
   description: "Cheerful Choco jumps out of gift box",
   name: "Surprise",
 };
-let items = [obj, , , ,];
-obj = {
+items[1] = {
   id: "781324642736144424",
   format_type: StickersTypes.StickerFormat.APNG,
   description: "Cheerful Choco preens against window",
   name: "Affection",
 };
-items[1] = obj;
-obj = {
+const obj2 = {
+  id: "781324642736144424",
+  format_type: StickersTypes.StickerFormat.APNG,
+  description: "Cheerful Choco preens against window",
+  name: "Affection",
+};
+items[2] = {
   id: "781323769960202280",
   format_type: StickersTypes.StickerFormat.APNG,
   description: "Cheerful Choco sparkles",
   name: "OMG",
 };
-items[2] = obj;
+const obj3 = {
+  id: "781323769960202280",
+  format_type: StickersTypes.StickerFormat.APNG,
+  description: "Cheerful Choco sparkles",
+  name: "OMG",
+};
 items[3] = {
   id: "781324722394103808",
   format_type: StickersTypes.StickerFormat.APNG,
   description: "Cheerful Choco cheers",
   name: "Cheer",
 };
-const obj1 = {
+const obj4 = {
   id: "781324722394103808",
   format_type: StickersTypes.StickerFormat.APNG,
   description: "Cheerful Choco cheers",

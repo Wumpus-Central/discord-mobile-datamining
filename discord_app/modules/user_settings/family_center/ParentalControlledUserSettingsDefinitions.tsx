@@ -34,7 +34,8 @@ export const defineParentalControlledSetting = function defineParentalControlled
     }
     return explicitContentFromProto(tmp3);
   }
-  obj = {
+  function S(arg0, arg1) {}
+  return {
     getControlledSetting,
     updateControlledSetting: (arg0, fn) => {
       let tmp = fn;
@@ -80,8 +81,6 @@ export const defineParentalControlledSetting = function defineParentalControlled
       );
     },
   };
-  function S(arg0, arg1) {}
-  return obj;
 };
 export const wrapParentalControlledSettingWithExperimentDefaults =
   function wrapParentalControlledSettingWithExperimentDefaults(arg0) {

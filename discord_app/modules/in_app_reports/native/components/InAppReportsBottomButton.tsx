@@ -11,23 +11,16 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-fn(4636);
-let createStyles = {
+const createStyles = fn(4636);
+let obj2 = {
   container: { flex: 0, alignSelf: "stretch", paddingBottom: 12 },
   paddingHorizontal: { paddingHorizontal: 16 },
-  divider: null,
-  descriptionText: null,
+  divider: { height: 1, alignSelf: "stretch", backgroundColor: nativeDefault.colors.BORDER_SUBTLE, marginBottom: 16 },
+  descriptionText: { lineHeight: 16, textAlign: "center", marginBottom: 12 },
   errorText: null,
 };
-createStyles = {
-  height: 1,
-  alignSelf: "stretch",
-  backgroundColor: nativeDefault.colors.BORDER_SUBTLE,
-  marginBottom: 16,
-};
-createStyles.divider = createStyles;
-createStyles.descriptionText = { lineHeight: 16, textAlign: "center", marginBottom: 12 };
-createStyles.errorText = {
+let obj3 = { height: 1, alignSelf: "stretch", backgroundColor: nativeDefault.colors.BORDER_SUBTLE, marginBottom: 16 };
+obj2.errorText = {
   color: nativeDefault.unsafe_rawColors.RED_400,
   fontSize: 12,
   lineHeight: 16,
@@ -35,7 +28,7 @@ createStyles.errorText = {
   textAlign: "center",
   marginTop: 12,
 };
-let closure_6 = createStyles.createStyles(createStyles);
+let closure_6 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/in_app_reports/native/components/InAppReportsBottomButton.tsx");
 
@@ -77,17 +70,17 @@ export default function InAppReportsBottomButton(button) {
       } else {
         string2Result = string2(util.t.h6D8Vy);
       }
-      let obj = { style: tmp.container, children: null };
-      obj = { style: tmp.divider };
-      const items = [React4(View, obj)];
-      obj = { style: tmp.paddingHorizontal, children: null };
+      const obj = { style: tmp.container, children: null };
+      const obj2 = { style: tmp.divider };
+      const items = [React4(View, obj2)];
+      const obj3 = { style: tmp.paddingHorizontal, children: null };
       let tmp14Result = null;
       if (null != tmp3) {
-        const obj1 = { style: tmp.descriptionText, variant: "text-xs/medium", color: "text-default", children: tmp3 };
-        tmp14Result = React4(Text_Text.Text, obj1);
+        const obj4 = { style: tmp.descriptionText, variant: "text-xs/medium", color: "text-default", children: tmp3 };
+        tmp14Result = React4(Text_Text.Text, obj4);
       }
       const items1 = [tmp14Result, ,];
-      const obj2 = {
+      const obj5 = {
         disabled,
         onPress() {
           return importDefault(button);
@@ -95,15 +88,15 @@ export default function InAppReportsBottomButton(button) {
         text: stringResult2,
         variant: str2,
       };
-      items1[1] = React4(components_Button_Button.Button, obj2);
-      tmp14Result = null;
+      items1[1] = React4(components_Button_Button.Button, obj5);
+      let tmp14Result2 = null;
       if (hasError) {
-        const obj3 = { style: tmp.errorText, children: string2Result };
-        tmp14Result = React4(native.LegacyText, obj3);
+        const obj6 = { style: tmp.errorText, children: string2Result };
+        tmp14Result2 = React4(native.LegacyText, obj6);
       }
-      items1[2] = tmp14Result;
-      obj.children = items1;
-      items[1] = hasOwnProperty(View, obj);
+      items1[2] = tmp14Result2;
+      obj3.children = items1;
+      items[1] = hasOwnProperty(View, obj3);
       obj.children = items;
       return hasOwnProperty(View, obj);
     }

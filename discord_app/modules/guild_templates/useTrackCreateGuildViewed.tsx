@@ -16,23 +16,28 @@ export default function useTrackCreateGuildViewed(arg0) {
       tmp2 = closure_0.state !== GuildTemplateStates.RESOLVING;
     }
     if (tmp2) {
-      let current = ref.current;
+      const current = ref.current;
       if (!current.includes(closure_0.code)) {
-        current = ref.current;
-        current.push(closure_0.code);
-        const obj = {
-          guild_template_code: null,
-          guild_template_name: null,
-          guild_template_description: null,
-          guild_template_guild_id: null,
-        };
+        const current1 = ref.current;
+        current1.push(closure_0.code);
         ({
           code: obj2.guild_template_code,
           name: obj2.guild_template_name,
           description: obj2.guild_template_description,
           sourceGuildId: obj2.guild_template_guild_id,
         } = closure_0);
-        obj.track(AnalyticEvents.CREATE_GUILD_VIEWED, obj);
+        AnalyticsUtilsDefault.track(AnalyticEvents.CREATE_GUILD_VIEWED, {
+          guild_template_code: null,
+          guild_template_name: null,
+          guild_template_description: null,
+          guild_template_guild_id: null,
+        });
+        const obj3 = {
+          guild_template_code: null,
+          guild_template_name: null,
+          guild_template_description: null,
+          guild_template_guild_id: null,
+        };
       }
     }
   });

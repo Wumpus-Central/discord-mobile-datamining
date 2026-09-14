@@ -2,7 +2,7 @@
 import LoggerDefault from "../debug/Logger.tsx";
 import HTTPUtils from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
-import BillingError from "../../errors/BillingError.tsx";
+import BillingError_mod from "../../errors/BillingError.tsx";
 
 require = fn;
 let closure_6 = async function _signOrder(arg0) {
@@ -13,8 +13,8 @@ let closure_6 = async function _signOrder(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -27,8 +27,8 @@ let closure_6 = async function _signOrder(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c6 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           closure_2 = tmp3;
           closure_1 = tmp7;
@@ -48,8 +48,8 @@ let closure_6 = async function _signOrder(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c6 = 3;
-          const obj1 = { value, done: true };
-          return obj1;
+          const obj4 = { value, done: true };
+          return obj4;
         } else {
           closure_129_4 = {};
           if (null != closure_129_1) {
@@ -66,15 +66,15 @@ let closure_6 = async function _signOrder(arg0) {
           let tmp45;
           if (null != closure_129_2) {
             if ("" !== closure_129_2) {
-              const obj2 = { load_id: closure_129_2 };
-              tmp45 = obj2;
+              const obj5 = { load_id: closure_129_2 };
+              tmp45 = obj5;
             }
           }
           request.context = tmp45;
           c5 = 3;
           c6 = 1;
-          const obj3 = { value: HTTP.post(request), done: false };
-          return obj3;
+          const obj6 = { value: HTTP.post(request), done: false };
+          return obj6;
         }
       } else if (2 === tmp7) {
         c4 = 0;
@@ -104,8 +104,8 @@ let closure_6 = async function _signOrder(arg0) {
       } else if (arg0 === 2) {
         c4 = 0;
         c6 = 3;
-        const obj4 = { value, done: true };
-        return obj4;
+        const obj7 = { value, done: true };
+        return obj7;
       } else {
         closure_129_3 = value;
         c4 = 0;
@@ -115,7 +115,7 @@ let closure_6 = async function _signOrder(arg0) {
           throw error;
         } else {
           c6 = 3;
-          obj = { value: closure_129_3.body, done: true };
+          const obj = { value: closure_129_3.body, done: true };
           return obj;
         }
       }
@@ -138,8 +138,8 @@ let closure_7 = async function _getOrder(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -152,30 +152,29 @@ let closure_7 = async function _getOrder(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c6 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           closure_2 = tmp3;
           closure_1 = tmp7;
           closure_129_0 = closure_0;
           c4 = 1;
           const HTTP = HTTPUtils.HTTP;
-          const obj1 = { url: Endpoints.ORDER_GET(closure_0), rejectWithError: true };
+          const obj5 = { url: Endpoints.ORDER_GET(closure_0), rejectWithError: true };
           c5 = 2;
           c6 = 1;
-          const obj2 = { value: HTTP.get(obj1), done: false };
-          return obj2;
+          const obj6 = { value: HTTP.get(obj5), done: false };
+          return obj6;
         }
       } else if (1 === tmp7) {
         c4 = 0;
         closure_129_1 = closure_3;
-        let obj3 = { error: closure_129_1, orderId: closure_129_0 };
-        closure_130_4.error("failed to fetch order", obj3);
-        obj3 = closure_130_0(closure_130_1[5]);
-        const obj4 = { tags: { source: "OrderActionCreators_getOrder" }, extra: null };
-        const obj5 = { orderId: closure_129_0 };
-        obj4.extra = obj5;
-        const result = obj3.captureBillingException(closure_129_1, obj4);
+        const obj7 = { error: closure_129_1, orderId: closure_129_0 };
+        closure_130_4.error("failed to fetch order", obj7);
+        const obj8 = { tags: { source: "OrderActionCreators_getOrder" }, extra: null };
+        const obj9 = { orderId: closure_129_0 };
+        obj8.extra = obj9;
+        const result = closure_130_0(closure_130_1[5]).captureBillingException(closure_129_1, obj8);
         c6 = 3;
         return { value: null, done: true };
       } else if (arg0 === 1) {
@@ -184,8 +183,8 @@ let closure_7 = async function _getOrder(arg0) {
       } else if (arg0 === 2) {
         c4 = 0;
         c6 = 3;
-        const obj6 = { value, done: true };
-        return obj6;
+        const obj10 = { value, done: true };
+        return obj10;
       } else {
         let body = value.body;
         if (!body) {
@@ -193,7 +192,7 @@ let closure_7 = async function _getOrder(arg0) {
         }
         c4 = 0;
         c6 = 3;
-        obj = { value: body, done: true };
+        const obj = { value: body, done: true };
         return obj;
       }
     } catch (tmp26) {
@@ -225,8 +224,8 @@ let closure_9 = async function _fetchOrderEntitlements(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -239,31 +238,31 @@ let closure_9 = async function _fetchOrderEntitlements(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c5 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           closure_1 = tmp6;
           closure_129_0 = undefined;
           c4 = 1;
           const HTTP = HTTPUtils.HTTP;
-          const obj1 = { url: Endpoints.ORDER_ENTITLEMENTS(closure_0), rejectWithError: false };
+          const obj4 = { url: Endpoints.ORDER_ENTITLEMENTS(closure_0), rejectWithError: false };
           c2 = 2;
           c5 = 1;
-          const obj2 = { value: HTTP.get(obj1), done: false };
-          return obj2;
+          const obj5 = { value: HTTP.get(obj4), done: false };
+          return obj5;
         }
       } else if (1 === tmp6) {
         c4 = 0;
         c5 = 3;
-        const obj3 = { value: [], done: true };
-        return obj3;
+        const obj6 = { value: [], done: true };
+        return obj6;
       } else if (arg0 === 1) {
         c5 = 3;
         throw value;
       } else if (arg0 === 2) {
         c4 = 0;
         c5 = 3;
-        obj = { value, done: true };
+        const obj = { value, done: true };
         return obj;
       } else {
         closure_129_0 = value;
@@ -294,8 +293,8 @@ let closure_11 = async function _fetchOrderEntitlementsWithRetry(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      let obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -308,8 +307,8 @@ let closure_11 = async function _fetchOrderEntitlementsWithRetry(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c12 = 3;
-          obj = { value, done: true };
-          return obj;
+          let obj3 = { value, done: true };
+          return obj3;
         } else {
           closure_8 = tmp4;
           closure_7 = tmp9;
@@ -319,8 +318,8 @@ let closure_11 = async function _fetchOrderEntitlementsWithRetry(arg0) {
           closure_135_3 = undefined;
           c11 = 1;
           c12 = 1;
-          let obj1 = { value: fetchOrderEntitlements(closure_0), done: false };
-          return obj1;
+          let obj4 = { value: fetchOrderEntitlements(closure_0), done: false };
+          return obj4;
         }
       } else {
         if (1 === tmp9) {
@@ -329,8 +328,8 @@ let closure_11 = async function _fetchOrderEntitlementsWithRetry(arg0) {
             throw value;
           } else if (arg0 === 2) {
             c12 = 3;
-            let obj2 = { value, done: true };
-            return obj2;
+            let obj5 = { value, done: true };
+            return obj5;
           } else {
             closure_135_1 = value;
             closure_135_2 = async function _loop(arg0) {
@@ -341,8 +340,8 @@ let closure_11 = async function _fetchOrderEntitlementsWithRetry(arg0) {
                 if (arg0 === 1) {
                   throw value;
                 } else if (arg0 === 2) {
-                  let obj = { value, done: true };
-                  return obj;
+                  const obj2 = { value, done: true };
+                  return obj2;
                 } else {
                   return { value: "HermesInternal", done: null };
                 }
@@ -355,8 +354,8 @@ let closure_11 = async function _fetchOrderEntitlementsWithRetry(arg0) {
                       throw value;
                     } else if (arg0 === 2) {
                       c3 = 3;
-                      obj = { value, done: true };
-                      return obj;
+                      const obj3 = { value, done: true };
+                      return obj3;
                     } else {
                       closure_1 = tmp4;
                       if (length.length > 0) {
@@ -366,8 +365,8 @@ let closure_11 = async function _fetchOrderEntitlementsWithRetry(arg0) {
                         const promise = new Promise((arg0) => setTimeout(arg0, closure_0));
                         c2 = 1;
                         c3 = 1;
-                        const obj1 = { value: promise, done: false };
-                        return obj1;
+                        const obj4 = { value: promise, done: false };
+                        return obj4;
                       }
                     }
                   } else if (1 === tmp4) {
@@ -376,20 +375,20 @@ let closure_11 = async function _fetchOrderEntitlementsWithRetry(arg0) {
                       throw value;
                     } else if (arg0 === 2) {
                       c3 = 3;
-                      const obj2 = { value, done: true };
-                      return obj2;
+                      const obj5 = { value, done: true };
+                      return obj5;
                     } else {
                       c2 = 2;
                       c3 = 1;
-                      const obj3 = { value: closure_1_8(closure_129_0), done: false };
-                      return obj3;
+                      const obj6 = { value: closure_1_8(closure_129_0), done: false };
+                      return obj6;
                     }
                   } else if (arg0 === 1) {
                     c3 = 3;
                     throw value;
                   } else if (arg0 === 2) {
                     c3 = 3;
-                    obj = { value, done: true };
+                    const obj = { value, done: true };
                     return obj;
                   } else {
                     closure_129_1 = value;
@@ -415,8 +414,8 @@ let closure_11 = async function _fetchOrderEntitlementsWithRetry(arg0) {
               const tmp60 = closure_135_2(closure_135_3);
             }
             c12 = 3;
-            let obj3 = { value: closure_135_1, done: true };
-            return obj3;
+            let obj6 = { value: closure_135_1, done: true };
+            return obj6;
           }
         } else if (2 === tmp9) {
           c9 = 0;
@@ -438,8 +437,8 @@ let closure_11 = async function _fetchOrderEntitlementsWithRetry(arg0) {
                   c9 = 0;
                   length.return();
                   c12 = 3;
-                  const obj4 = { value, done: true };
-                  return obj4;
+                  const obj7 = { value, done: true };
+                  return obj7;
                 } else {
                   const iter2 = method(closure_3);
                   HermesBuiltin.ensureObject("iterator.return() did not return an object");
@@ -447,7 +446,7 @@ let closure_11 = async function _fetchOrderEntitlementsWithRetry(arg0) {
                     c9 = 0;
                     length.return();
                     c12 = 3;
-                    obj = { value: iter2.value, done: true };
+                    let obj = { value: iter2.value, done: true };
                     return obj;
                   } else {
                     c11 = 3;
@@ -510,16 +509,17 @@ let closure_11 = async function _fetchOrderEntitlementsWithRetry(arg0) {
 };
 const Endpoints = fn(1074).Endpoints;
 let closure_4 = new LoggerDefault("OrderActionCreators");
+let BillingError = BillingError_mod;
 class OrderSigningFailedWithConstraintsError extends tmp3 {
   constructor(arg0) {
-    tmp = new tmp("Order signing failed due to unsatisfied constraints", new.target);
-    tmp.order = global;
-    return tmp;
+    tmp1 = new tmp("Order signing failed due to unsatisfied constraints", new.target);
+    tmp1.order = global;
+    return tmp1;
   }
 }
+let BillingError = BillingError_mod;
 const prototype = function OrderProcessingPendingError() {
-  tmp = new tmp("Order signed but entitlements not yet visible after polling", new.target);
-  return tmp;
+  return new tmp("Order signed but entitlements not yet visible after polling", new.target);
 }.prototype;
 class prototype extends tmp4 {}
 let closure_10 = [250, 500, 1000, 1500, 2500, 4250];

@@ -4,6 +4,8 @@ import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import SKUStore from "../../../stores/game_store/SKUStore.tsx";
 import CollectiblesCategoryStore from "../CollectiblesCategoryStore.tsx";
 
+const require = globalThis.__r;
+
 require = fn;
 const useEffect = fn(19).useEffect;
 let SKUProductLines = fn(1074).SKUProductLines;
@@ -13,9 +15,8 @@ const result = size.fileFinishedImporting("modules/collectibles/hooks/useFetchCo
 export const useFetchCollectiblesProduct = function useFetchCollectiblesProduct(skuId, includeBundles) {
   _require = skuId;
   dependencyMap = includeBundles;
-  let obj = require("useStateFromStores");
   let items = [state];
-  const stateFromStores = obj.useStateFromStores(items, () => {
+  const stateFromStores = require("useStateFromStores").useStateFromStores(items, () => {
     value = null;
     if (null != closure_0) {
       value = SKUStore.get(tmp);
@@ -27,10 +28,10 @@ export const useFetchCollectiblesProduct = function useFetchCollectiblesProduct(
     tmp4 = stateFromStores.productLine !== SKUProductLines.COLLECTIBLES;
   }
   _slicedToArray = tmp4;
-  let tmpResult = tmp(563);
+  let obj = require("useStateFromStores");
   const items1 = [stateFromStores1];
   const tmp6 = _slicedToArray(
-    tmpResult.useStateFromStoresArray(items1, () => {
+    require("useStateFromStores").useStateFromStoresArray(items1, () => {
       const items = [
         CollectiblesCategoryStore.getProduct(closure_0),
         CollectiblesCategoryStore.getProductFetch(closure_0),
@@ -41,9 +42,9 @@ export const useFetchCollectiblesProduct = function useFetchCollectiblesProduct(
   );
   const product = tmp6[0];
   state = tmp8;
-  tmpResult = tmp(563);
+  const tmpResult = require("useStateFromStores");
   const items2 = [stateFromStores1];
-  stateFromStores1 = tmpResult.useStateFromStores(items2, () =>
+  stateFromStores1 = require("useStateFromStores").useStateFromStores(items2, () =>
     CollectiblesCategoryStore.isProductFetchBackedOff(closure_0),
   );
   let tmp10 = true === includeBundles;
@@ -82,15 +83,15 @@ export const useFetchCollectiblesProduct = function useFetchCollectiblesProduct(
       tmp2 = stateFromStores1;
     }
     if (!tmp2) {
-      const obj = { includeBundles };
-      const collectiblesProduct = obj.fetchCollectiblesProduct(closure_0, obj);
+      const obj2 = { includeBundles };
+      const collectiblesProduct = CollectiblesActionCreators.fetchCollectiblesProduct(closure_0, obj2);
     }
   }, items3);
-  obj = { product, isFetching: null };
+  let obj2 = { product, isFetching: null };
   state = undefined;
   if (tmp6[1] != null) {
     state = tmp8.state;
   }
-  obj.isFetching = "fetching" === state;
-  return obj;
+  obj2.isFetching = "fetching" === state;
+  return obj2;
 };

@@ -7,12 +7,12 @@ const PersistedStore = initializeDefault.PersistedStore;
 class ActivityShelfStore extends PersistedStore {}
 const prototype = ActivityShelfStore.prototype;
 prototype["initialize"] = function initialize(arg0) {
-  let obj = { usageByApplicationId: {}, shelfOrder: [] };
+  let obj = arg0;
   if (arg0 == null) {
     obj = {};
   }
   const merged = Object.assign(obj);
-  closure_0 = obj;
+  closure_0 = { usageByApplicationId: {}, shelfOrder: [] };
 };
 prototype["getState"] = function getState() {
   return closure_0;

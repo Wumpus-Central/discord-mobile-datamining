@@ -137,11 +137,11 @@ function useShouldDisableInteractiveComponents(channel_id) {
   if (channel != null) {
     guild_id = channel.guild_id;
   }
-  let tmpResult = tmp(7372);
-  const isThreadModerator = tmpResult.useIsThreadModerator(channel);
-  tmpResult = tmp(7372);
+  const obj5 = channel(8081);
+  const isThreadModerator = channel(7372).useIsThreadModerator(channel);
+  const tmpResult = channel(7372);
   let tmp9 = !stateFromStores;
-  const canUnarchiveThread = tmpResult.useCanUnarchiveThread(channel);
+  const canUnarchiveThread = channel(7372).useCanUnarchiveThread(channel);
   if (stateFromStores) {
     tmp9 = stateFromStores1;
   }
@@ -175,11 +175,11 @@ function useShouldDisableInteractiveComponents(channel_id) {
 }
 function useComponentStateForMessage(channel_id, arg1, id) {
   _require = channel_id;
-  let obj = require("initialize");
   const items = [LocalInteractionComponentStateStore];
-  const stateFromStores = obj.useStateFromStores(items, () =>
+  const stateFromStores = require("initialize").useStateFromStores(items, () =>
     LocalInteractionComponentStateStore.getInteractionComponentState(channel_id.id, id.id),
   );
+  let obj = require("initialize");
   const items1 = [InteractionStore];
   const items2 = [channel_id];
   const stateFromStores1 = require("initialize").useStateFromStores(
@@ -240,13 +240,13 @@ function useComponentStateForMessage(channel_id, arg1, id) {
   if (id == null) {
     id = channel_id.author.id;
   }
-  obj = { state: stateFromStores, executeStateUpdate: null, isDisabled: null, visualState: null, error: null };
+  const obj4 = { state: stateFromStores, executeStateUpdate: null, isDisabled: null, visualState: null, error: null };
   const items5 = [, , , , , , ,];
   ({ channel_id: arr6[0], flags: arr6[1], id: arr6[2] } = channel_id);
   ({ customId: arr6[3], type: arr6[4], id: arr6[5] } = id);
   items5[6] = id;
   items5[7] = callback;
-  obj.executeStateUpdate = noop.useCallback((localState) => {
+  obj4.executeStateUpdate = noop.useCallback((localState) => {
     if (callback(localState)) {
       const channel = ChannelStore.getChannel(channel_id.channel_id);
       let tmp5 = null != channel;
@@ -254,7 +254,7 @@ function useComponentStateForMessage(channel_id, arg1, id) {
         tmp5 = null != id.customId;
       }
       if (tmp5) {
-        const obj = {
+        const obj3 = {
           componentType: id.type,
           messageId: null,
           messageFlags: null,
@@ -267,10 +267,10 @@ function useComponentStateForMessage(channel_id, arg1, id) {
         };
         ({ id: obj2.messageId, flags: obj2.messageFlags } = channel_id);
         ({ customId: obj2.customId, id: obj2.componentId } = id);
-        obj.applicationId = id;
+        obj3.applicationId = id;
         ({ id: obj2.channelId, guild_id: obj2.guildId } = channel);
-        obj.localState = localState;
-        const result = obj.executeMessageComponentInteraction(obj);
+        obj3.localState = localState;
+        const result = InteractionUtils.executeMessageComponentInteraction(obj3);
       }
       return true;
     } else {
@@ -281,18 +281,17 @@ function useComponentStateForMessage(channel_id, arg1, id) {
   if (tmp3) {
     tmp8 = isInteractionComponent(id);
   }
-  obj.isDisabled = tmp8;
-  obj.visualState = getActionComponentState(stateFromStores1, id, tmp3);
-  obj.error = tmp7;
-  return obj;
+  obj4.isDisabled = tmp8;
+  obj4.visualState = getActionComponentState(stateFromStores1, id, tmp3);
+  obj4.error = tmp7;
+  return obj4;
 }
 function useComponentStateForModal(customId, id, arg2) {
   _require = customId;
   importDefault = id;
   dependencyMap = arg2;
-  let obj = require("initialize");
   const items = [LocalInteractionComponentStateStore];
-  let stateFromStores = obj.useStateFromStores(items, () =>
+  let stateFromStores = require("initialize").useStateFromStores(items, () =>
     LocalInteractionComponentStateStore.getInteractionComponentState(customId.customId, id.id),
   );
   closure_129_0 = id;
@@ -347,13 +346,13 @@ function useComponentStateForModal(customId, id, arg2) {
   const callback1 = callback.useCallback((state) => {
     let tmp = null == state;
     if (!tmp) {
-      const obj = {
+      const obj2 = {
         type: "SET_INTERACTION_COMPONENT_STATE",
         rootContainerId: customId.customId,
         componentId: id.id,
         state,
       };
-      obj.dispatch(obj);
+      DispatcherDefault.dispatch(obj2);
       tmp = callback(state);
     }
     return tmp;
@@ -369,14 +368,14 @@ function useComponentStateForModal(customId, id, arg2) {
   if (stateFromStores == null) {
     stateFromStores = null;
   }
-  obj = {
+  let obj = require("initialize");
+  return {
     state: stateFromStores,
     executeStateUpdate: callback1,
     isDisabled: false,
     visualState: require("InteractionComponentTypes").ActionComponentState.NORMAL,
     error: tmp7,
   };
-  return obj;
 }
 const jsx = fn(21).jsx;
 const redux = noop.createContext(null);
@@ -401,7 +400,7 @@ export const ComponentStateContextProvider = function ComponentStateContextProvi
     <redux.Provider
       value={validationErrors.useMemo(() => {
         if (null != ApplicationWidget) {
-          let obj = {
+          const obj5 = {
             useComponentState: useComponentStateForMessage.bind(null, tmp, flag),
             channelId: null,
             containerId: null,
@@ -410,14 +409,14 @@ export const ComponentStateContextProvider = function ComponentStateContextProvi
             getParents: null,
           };
           ({ channel_id: obj3.channelId, id: obj3.containerId } = tmp);
-          obj.message = tmp;
-          obj.validators = validators;
-          obj.getParents = function getParents(arg0) {
+          obj5.message = tmp;
+          obj5.validators = validators;
+          obj5.getParents = function getParents(arg0) {
             return message(applicationWidget[20]).getParents(ApplicationWidget.components, arg0);
           };
-          return obj;
+          return obj5;
         } else if (null != modal) {
-          obj = {
+          const obj6 = {
             useComponentState: useComponentStateForModal.bind(null, modal),
             channelId: null,
             containerId: null,
@@ -428,16 +427,16 @@ export const ComponentStateContextProvider = function ComponentStateContextProvi
             getParents: null,
           };
           ({ channelId: obj2.channelId, customId: obj2.containerId } = modal);
-          obj.modal = modal;
-          obj.validators = validators;
-          obj.validationErrors = validationErrors;
-          obj.setValidationErrors = setValidationErrors;
-          obj.getParents = function getParents(arg0) {
+          obj6.modal = modal;
+          obj6.validators = validators;
+          obj6.validationErrors = validationErrors;
+          obj6.setValidationErrors = setValidationErrors;
+          obj6.getParents = function getParents(arg0) {
             return message(applicationWidget[20]).getParents(components.components, arg0);
           };
-          return obj;
+          return obj6;
         } else if (null != applicationWidget) {
-          obj = {
+          const obj = {
             useComponentState: null,
             containerId: null,
             applicationWidget: null,

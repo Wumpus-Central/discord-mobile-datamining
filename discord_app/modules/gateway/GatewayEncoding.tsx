@@ -1,8 +1,9 @@
 // discord_app/modules/gateway/GatewayEncoding.tsx
 import ProcessArgs2 from "../../utils/ProcessArgs.tsx";
-import GatewayEncodingErlpackEncoding from "GatewayEncodingErlpackEncoding.native.tsx";
+import GatewayEncodingErlpackEncoding_mod from "GatewayEncodingErlpackEncoding.native.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
+let GatewayEncodingErlpackEncoding = GatewayEncodingErlpackEncoding_mod;
 GatewayEncodingErlpackEncoding = GatewayEncodingErlpackEncoding.getErlpackEncoding();
 class JSONEncoding {}
 const prototype = JSONEncoding.prototype;

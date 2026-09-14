@@ -18,7 +18,7 @@ let result = size.fileFinishedImporting("modules/favorites/native/FavoritesGuild
 export default function FavoritesGuildUpsellSheet(limit) {
   let FREE_FAVORITE_LIMIT = limit.limit;
   if (FREE_FAVORITE_LIMIT === undefined) {
-    FREE_FAVORITE_LIMIT = analyticsLocations(10353).FREE_FAVORITE_LIMIT;
+    FREE_FAVORITE_LIMIT = analyticsLocations(10354).FREE_FAVORITE_LIMIT;
   }
   let str = limit.source;
   if (str === undefined) {
@@ -30,29 +30,29 @@ export default function FavoritesGuildUpsellSheet(limit) {
   }
   analyticsLocations = useTrackFavoritesGuildUpsellModalOpenedDefault(str).analyticsLocations;
   importDefault = noop.useCallback(() => {
-    closure_1(4603).hideActionSheet(analyticsLocations(10355).FAVORITES_UPSELL_SHEET_KEY);
+    closure_1(4603).hideActionSheet(analyticsLocations(10356).FAVORITES_UPSELL_SHEET_KEY);
   }, []);
   const intl = analyticsLocations(1114).intl;
   const tmp8 = _modDef3236;
   let obj = {
-    title: intl.string(tmp5 ? tmp8.hINqUs : tmp8.aA0vO8),
+    title: intl.string("limit_reached" === str2 ? tmp8.hINqUs : tmp8.aA0vO8),
     description: null,
     illustration: null,
     actions: null,
   };
   const intl2 = tmp7(1114).intl;
   if ("limit_reached" === str2) {
-    obj = { count: FREE_FAVORITE_LIMIT, maxCount: MAX_FAVORITE_CHANNELS };
-    let formatToPlainStringResult = intl2.formatToPlainString(tmp3(3236).D7S0Zo, obj);
+    const obj2 = { count: FREE_FAVORITE_LIMIT, maxCount: MAX_FAVORITE_CHANNELS };
+    let formatToPlainStringResult = intl2.formatToPlainString(tmp3(3236).D7S0Zo, obj2);
   } else {
     formatToPlainStringResult = intl2.string(tmp3(3236)["WaP/lz"]);
   }
   obj.description = formatToPlainStringResult;
   obj.illustration = closure_6(analyticsLocations(6090).FavoritesSpotIllustration, {});
-  obj = { size: "lg", variant: "primary", text: null, onPress: null };
+  const obj3 = { size: "lg", variant: "primary", text: null, onPress: null };
   const intl3 = tmp7(1114).intl;
-  obj.text = intl3.string(analyticsLocations(1114).t.pj0XBN);
-  obj.onPress = function onPress() {
+  obj3.text = intl3.string(analyticsLocations(1114).t.pj0XBN);
+  obj3.onPress = function onPress() {
     closure_1();
     const obj = {
       analyticsLocations,
@@ -60,10 +60,10 @@ export default function FavoritesGuildUpsellSheet(limit) {
     };
     openPremiumModalDefault(obj);
   };
-  const items = [closure_6(analyticsLocations(5056).Button, obj)];
+  const items = [closure_6(analyticsLocations(5056).Button, obj3)];
   const intl4 = tmp7(1114).intl;
   const tmp3Result = _modDef3236;
-  const obj1 = { children: null };
+  const obj4 = { children: null };
   items[1] = closure_6(analyticsLocations(5056).Button, {
     size: "lg",
     variant: "secondary",
@@ -74,7 +74,7 @@ export default function FavoritesGuildUpsellSheet(limit) {
       router_utils.transitionToGuild(FAVORITES);
     },
   });
-  obj1.children = items;
-  obj.actions = closure_7(analyticsLocations(5514).ButtonGroup, obj1);
-  return closure_6(analyticsLocations(10358).PromoSheet, obj);
+  obj4.children = items;
+  obj.actions = closure_7(analyticsLocations(5514).ButtonGroup, obj4);
+  return closure_6(analyticsLocations(10359).PromoSheet, obj);
 }

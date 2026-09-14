@@ -24,21 +24,20 @@ export const BaseIconImage = function BaseIconImage(size) {
   }
   const color = size.color;
   ({ resizeMode, style, accessible, accessibilityLabel } = size);
-  let obj = useToken;
-  const token = obj.useToken(color);
+  const token = useToken.useToken(color);
   if (null != token) {
-    obj = { tintColor: token };
-    let tmp3 = obj;
+    const obj2 = { tintColor: token };
+    let tmp3 = obj2;
   } else {
     if (tmp2) {
-      obj = { tintColor: color };
-      tmp3 = obj;
+      const obj3 = { tintColor: color };
+      tmp3 = obj3;
     }
     tmp2 = null != color && typeof color === "string";
   }
-  const obj1 = { fadeDuration: 0, source: size.source, resizeMode, style: null, accessible, accessibilityLabel };
+  const obj4 = { fadeDuration: 0, source: size.source, resizeMode, style: null, accessible, accessibilityLabel };
   const items = [closure_4[str], tmp3, style];
-  obj1.style = items;
+  obj4.style = items;
   return (
     <Image
       fadeDuration={0}

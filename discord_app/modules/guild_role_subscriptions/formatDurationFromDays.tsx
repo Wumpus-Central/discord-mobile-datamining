@@ -8,12 +8,12 @@ export default function formatDurationFromDays(days) {
   if (days > 0) {
     if (days % 7 === 0) {
       const intl2 = util.intl;
-      let obj = { weeks: days / 7 };
-      let formatToPlainStringResult = intl2.formatToPlainString(util.t.EmoBD2, obj);
+      const obj2 = { weeks: days / 7 };
+      let formatToPlainStringResult = intl2.formatToPlainString(util.t.EmoBD2, obj2);
     }
     return formatToPlainStringResult;
   }
   const intl = util.intl;
-  obj = { days };
-  formatToPlainStringResult = intl.formatToPlainString(util.t["k2UNz+"], obj);
+  formatToPlainStringResult = intl.formatToPlainString(util.t["k2UNz+"], { days });
+  const obj = { days };
 }

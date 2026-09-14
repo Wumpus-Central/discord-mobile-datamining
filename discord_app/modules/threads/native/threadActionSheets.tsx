@@ -6,6 +6,9 @@ import size from "../../../../_runtime/metro/00002__.js";
 const result = size.fileFinishedImporting("modules/threads/native/threadActionSheets.tsx");
 
 export const showThreadNotificationsBottomSheet = function showThreadNotificationsBottomSheet(channel) {
-  const obj = { channel };
-  obj.openLazy(asyncRequireImpl(11446, dependencyMap.paths), "ThreadNotificationsBottomSheet", obj);
+  ActionSheetActionCreatorsDefault.openLazy(
+    asyncRequireImpl(11447, dependencyMap.paths),
+    "ThreadNotificationsBottomSheet",
+    { channel },
+  );
 };

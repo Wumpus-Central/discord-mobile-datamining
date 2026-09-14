@@ -5,10 +5,10 @@ import size from "../../../../_runtime/metro/00002__.js";
 let result = size.fileFinishedImporting("modules/media_viewer/native/getMediaViewerStateForScreen.tsx");
 
 export default function getMediaViewerStateForScreen(width, height, arr) {
-  let size = MediaSourceUtil.flattenSource(arr, true);
+  const size = MediaSourceUtil.flattenSource(arr, true);
   if (null == size) {
-    size = { maximumZoomScale: 1, width, height };
-    return size;
+    const size1 = { maximumZoomScale: 1, width, height };
+    return size1;
   } else {
     const result = width / height;
     const result1 = size.width / size.height;
@@ -25,27 +25,27 @@ export default function getMediaViewerStateForScreen(width, height, arr) {
         if (0 !== bound) {
           num7 = 1 / bound;
         }
-        const size1 = { maximumZoomScale: num7, width: null, height: null };
+        const size2 = { maximumZoomScale: num7, width: null, height: null };
         ({ width: obj4.width, height: obj4.height } = size);
-        return size1;
+        return size2;
       }
     }
     if (result1 > result) {
       const result3 = width / size.width;
-      const size2 = { maximumZoomScale: 1 / result3 + 1, width: null, height: null };
+      const size3 = { maximumZoomScale: 1 / result3 + 1, width: null, height: null };
       const _Math3 = Math;
-      size2.width = Math.floor(width);
+      size3.width = Math.floor(width);
       const _Math4 = Math;
-      size2.height = Math.floor(size.height * result3);
-      return size2;
+      size3.height = Math.floor(size.height * result3);
+      return size3;
     } else {
       const result4 = height / size.height;
-      const size3 = { maximumZoomScale: 1 / result4 + 1, width: null, height: null };
+      const size4 = { maximumZoomScale: 1 / result4 + 1, width: null, height: null };
       const _Math = Math;
-      size3.width = Math.floor(size.width * result4);
+      size4.width = Math.floor(size.width * result4);
       const _Math2 = Math;
-      size3.height = Math.floor(height);
-      return size3;
+      size4.height = Math.floor(height);
+      return size4;
     }
   }
 }

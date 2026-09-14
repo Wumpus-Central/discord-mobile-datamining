@@ -18,22 +18,22 @@ import _modDef10193 from "../../../../../_runtime/metro/10193__.js";
 import VoicePanelStateContextDefault from "../VoicePanelStateContext.tsx";
 import useStableParticipant from "../utils/useStableParticipant.tsx";
 import useVoicePanelCardUserStateIcons from "../hooks/useVoicePanelCardUserStateIcons.tsx";
-import _modDef17217 from "../../../../../_runtime/metro/17217__.js";
+import _modDef17219 from "../../../../../_runtime/metro/17219__.js";
 import getRandomNumberInRangeDefault from "../utils/getRandomNumberInRange.tsx";
-import _modDef17262 from "../../../../../_runtime/metro/17262__.js";
-import _modDef17263 from "../../../../../_runtime/metro/17263__.js";
+import _modDef17264 from "../../../../../_runtime/metro/17264__.js";
+import _modDef17265 from "../../../../../_runtime/metro/17265__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
 import EmbeddedActivitiesStore from "../../../activities/EmbeddedActivitiesStore.tsx";
 import ApplicationStreamingStore from "../../../../stores/ApplicationStreamingStore.tsx";
 import RTCConnectionStore from "../../../../stores/RTCConnectionStore.tsx";
-import ReanimatedRexport from "../../../reanimated/ReanimatedRexport.tsx";
+import ReanimatedRexport_mod from "../../../reanimated/ReanimatedRexport.tsx";
 
 require = fn;
 function StreamIcon(voicePlatform) {
   voicePlatform = voicePlatform.voicePlatform;
   const controlsSpecs = noop.useContext(VoicePanelStateContextDefault).controlsSpecs;
-  controlsSpecs(4373);
+  let tmp = closure_22();
   const fn = function o() {
     const tmp = controlsSpecs.get().mode === VoicePanelControlsModes.HIDDEN;
     let num = 4;
@@ -48,33 +48,32 @@ function StreamIcon(voicePlatform) {
     obj.marginRight = num2;
     return obj;
   };
-  let obj = { controlsSpecs, VoicePanelControlsModes, GAP: 4 };
-  fn.__closure = obj;
+  fn.__closure = { controlsSpecs, VoicePanelControlsModes, GAP: 4 };
   fn.__workletHash = 3270040588948;
   fn.__initData = __initData;
-  const animatedStyle = obj.useAnimatedStyle(fn);
-  let tmp2Result = _modDef17217;
+  const animatedStyle = controlsSpecs(4373).useAnimatedStyle(fn);
+  let tmp2Result = _modDef17219;
   if (voicePlatform === constants2.XBOX) {
-    tmp2Result = _modDef17262;
+    tmp2Result = _modDef17264;
   } else if (voicePlatform === constants2.MOBILE) {
     tmp2Result = _modDef10193;
   } else if (voicePlatform === constants2.QUEST) {
-    tmp2Result = _modDef17263;
+    tmp2Result = _modDef17265;
   }
-  obj = { source: tmp2Result, style: null };
-  const items = [closure_22().iconWithoutBackground, animatedStyle];
-  obj.style = items;
-  return closure_16(closure_19, obj);
+  const obj3 = { source: tmp2Result, style: null };
+  const items = [tmp.iconWithoutBackground, animatedStyle];
+  obj3.style = items;
+  return closure_16(closure_19, obj3);
 }
 function AnimatedLabelIcon(icon) {
   icon = icon.icon;
   const tmp = closure_22();
   const type = icon.type;
   if (useVoicePanelCardUserStateIcons.VoicePanelCardUserStateIconType.STREAM_ICON === type) {
-    let obj = { voicePlatform: icon.voicePlatform };
-    return value2(StreamIcon, obj);
+    const obj2 = { voicePlatform: icon.voicePlatform };
+    return value2(StreamIcon, obj2);
   } else if (useVoicePanelCardUserStateIcons.VoicePanelCardUserStateIconType.SPEAKER_MUTE_ICON === type) {
-    obj = {
+    const obj3 = {
       style: tmp.speakerMuteIcon,
       hitSlop: 12,
       onPress: icon.onPress,
@@ -83,10 +82,10 @@ function AnimatedLabelIcon(icon) {
       children: null,
     };
     const intl4 = util.intl;
-    obj.accessibilityLabel = intl4.string(util.t.Q8Uzof);
-    const obj1 = { style: tmp.iconWithoutBackground };
-    obj.children = value2(VoiceXIcon.VoiceXIcon, obj1);
-    return value2(Pressable, obj);
+    obj3.accessibilityLabel = intl4.string(util.t.Q8Uzof);
+    const obj4 = { style: tmp.iconWithoutBackground };
+    obj3.children = value2(VoiceXIcon.VoiceXIcon, obj4);
+    return value2(Pressable, obj3);
   } else if (useVoicePanelCardUserStateIcons.VoicePanelCardUserStateIconType.USER_VIDEO_ICON === type) {
     if (icon.videoIconState === VoiceStateIconUtils.VideoIconState.VIDEO_DISABLED_LOCAL_AUTO) {
       const intl3 = util.intl;
@@ -96,43 +95,43 @@ function AnimatedLabelIcon(icon) {
       stringResult = intl2.string(util.t["PXMZ/+"]);
     }
     if (null != icon.onPress) {
-      const obj2 = {
+      const obj5 = {
         style: tmp.iconContainer,
         onPress: icon.onPress,
         accessibilityRole: "button",
         accessibilityLabel: stringResult,
         children: null,
       };
-      const obj3 = { style: tmp.icon, state: icon.videoIconState };
-      obj2.children = value2(VoiceStateIcons.VideoIcon, obj3);
-      let tmp16 = value2(Pressable, obj2);
+      const obj6 = { style: tmp.icon, state: icon.videoIconState };
+      obj5.children = value2(VoiceStateIcons.VideoIcon, obj6);
+      let tmp16 = value2(Pressable, obj5);
     } else {
-      const obj4 = {
+      const obj7 = {
         style: tmp.iconContainer,
         accessible: true,
         accessibilityRole: "image",
         accessibilityLabel: stringResult,
         children: null,
       };
-      const obj5 = { style: tmp.icon, state: icon.videoIconState };
-      obj4.children = value2(VoiceStateIcons.VideoIcon, obj5);
-      tmp16 = value2(NativeViewDefault, obj4);
+      const obj8 = { style: tmp.icon, state: icon.videoIconState };
+      obj7.children = value2(VoiceStateIcons.VideoIcon, obj8);
+      tmp16 = value2(NativeViewDefault, obj7);
     }
     return tmp16;
   } else if (useVoicePanelCardUserStateIcons.VoicePanelCardUserStateIconType.MUTE_DEAFEN_ICON === type) {
-    const obj6 = {
+    const obj9 = {
       style: tmp.iconContainer,
       accessibilityElementsHidden: true,
       importantForAccessibility: "no-hide-descendants",
       children: null,
     };
-    const obj7 = { onPress: icon.onPress, hitSlop: 12, children: null };
-    const obj8 = { style: tmp.icon, state: icon.muteDeafenIconState, alwaysWhite: true };
-    obj7.children = value2(VoiceStateIcons.MuteDeafenIcon, obj8);
-    obj6.children = value2(Pressable, obj7);
-    return value2(NativeViewDefault, obj6);
+    const obj10 = { onPress: icon.onPress, hitSlop: 12, children: null };
+    const obj11 = { style: tmp.icon, state: icon.muteDeafenIconState, alwaysWhite: true };
+    obj10.children = value2(VoiceStateIcons.MuteDeafenIcon, obj11);
+    obj9.children = value2(Pressable, obj10);
+    return value2(NativeViewDefault, obj9);
   } else if (useVoicePanelCardUserStateIcons.VoicePanelCardUserStateIconType.USER_DISCONNECTED_ICON === type) {
-    obj = {
+    const obj = {
       style: tmp.iconContainer,
       onPress: icon.onPress,
       accessibilityRole: "button",
@@ -141,28 +140,30 @@ function AnimatedLabelIcon(icon) {
     };
     const intl = util.intl;
     obj.accessibilityLabel = intl.string(util.t.HFwRpk);
-    const obj9 = { size: "xs", color: nativeDefault.colors.TEXT_FEEDBACK_WARNING };
-    obj.children = value2(CircleErrorIcon.CircleErrorIcon, obj9);
+    const obj12 = { size: "xs", color: nativeDefault.colors.TEXT_FEEDBACK_WARNING };
+    obj.children = value2(CircleErrorIcon.CircleErrorIcon, obj12);
     return value2(Pressable, obj);
   }
 }
 get_ActivityIndicator = fn(17);
 ({ Platform, Pressable } = get_ActivityIndicator);
-const VoicePanelConstants = fn(12402);
+const VoicePanelConstants = fn(12403);
 ({ MODE_CHANGE_PHYSICS: closure_9, VoicePanelModes: c10 } = VoicePanelConstants);
-const VoicePanelControlsModes = fn(12400).VoicePanelControlsModes;
-const VOICE_PANEL_CARD_INNER_PADDING = fn(12405).VOICE_PANEL_CARD_INNER_PADDING;
+const VoicePanelControlsModes = fn(12401).VoicePanelControlsModes;
+const VOICE_PANEL_CARD_INNER_PADDING = fn(12406).VOICE_PANEL_CARD_INNER_PADDING;
 const ThemeTypes = fn(1074).ThemeTypes;
 const CallConstants = fn(4657);
 ({ ParticipantTypes: closure_14, VoicePlatforms: closure_15 } = CallConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_16, jsxs: closure_17, Fragment: closure_18 } = jsxProd);
-let closure_19 = ReanimatedRexport.createAnimatedComponent(fn(1178).Icon);
+let ReanimatedRexport = ReanimatedRexport_mod;
+let closure_19 = ReanimatedRexport.createAnimatedComponent(fn(1176).Icon);
+let ReanimatedRexport = ReanimatedRexport_mod;
 let closure_20 = ReanimatedRexport.createAnimatedComponent(Pressable);
 let c21 = 28;
 const createStyles = fn(4636);
 let closure_22 = createStyles.createStyles(() => {
-  let obj = {
+  const obj = {
     labelPositionContainer: {
       position: "absolute",
       left: 8,
@@ -172,8 +173,19 @@ let closure_22 = createStyles.createStyles(() => {
       alignItems: "center",
       marginHorizontal: 8,
     },
-    labelOuterContainer: null,
-    initialIcons: null,
+    labelOuterContainer: {
+      display: "flex",
+      flexDirection: "row",
+      justifyContent: "flex-start",
+      alignItems: "center",
+      borderRadius: nativeDefault.radii.sm,
+      overflow: "hidden",
+      paddingHorizontal: 8,
+      backgroundColor: nativeDefault.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT,
+      height: v28,
+      gap: 4,
+    },
+    initialIcons: { display: "flex", flexDirection: "row", marginStart: -4, marginEnd: -4 },
     icon: null,
     iconWithoutBackground: null,
     iconContainer: null,
@@ -184,20 +196,6 @@ let closure_22 = createStyles.createStyles(() => {
     ringingIcon: null,
     secureFramesIcon: null,
   };
-  obj = {
-    display: "flex",
-    flexDirection: "row",
-    justifyContent: "flex-start",
-    alignItems: "center",
-    borderRadius: nativeDefault.radii.sm,
-    overflow: "hidden",
-    paddingHorizontal: 8,
-    backgroundColor: nativeDefault.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT,
-    height: v28,
-    gap: 4,
-  };
-  obj.labelOuterContainer = obj;
-  obj.initialIcons = { display: "flex", flexDirection: "row", marginStart: -4, marginEnd: -4 };
   const size = { width: 12, height: 12, tintColor: nativeDefault.colors.WHITE };
   obj.icon = size;
   const size1 = { width: 16, height: 16, tintColor: nativeDefault.colors.WHITE };
@@ -222,8 +220,19 @@ let closure_22 = createStyles.createStyles(() => {
     backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
   };
   obj.ringingIconContainer = rect;
-  obj = { tintColor: nativeDefault.colors.STATUS_POSITIVE };
-  obj.ringingIcon = obj;
+  const obj2 = {
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "flex-start",
+    alignItems: "center",
+    borderRadius: nativeDefault.radii.sm,
+    overflow: "hidden",
+    paddingHorizontal: 8,
+    backgroundColor: nativeDefault.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT,
+    height: v28,
+    gap: 4,
+  };
+  obj.ringingIcon = { tintColor: nativeDefault.colors.STATUS_POSITIVE };
   obj.secureFramesIcon = { marginEnd: -2 };
   return obj;
 });
@@ -238,9 +247,8 @@ let closure_27 = noop.memo((participant) => {
   const controlsHidden = participant.controlsHidden;
   let guildId;
   ({ isSelf, layout } = participant);
-  guildId = noop.useContext(guildId(12401)).guildId;
+  guildId = noop.useContext(guildId(12402)).guildId;
   closure_129_0 = controlsHidden;
-  participant(4373);
   const fn = function n() {
     value = participant.get();
     if (value) {
@@ -256,41 +264,53 @@ let closure_27 = noop.memo((participant) => {
     rect.opacity = spring.withSpring(num2, MODE_CHANGE_PHYSICS);
     return rect;
   };
-  let obj = {
+  let obj = participant(4373);
+  fn.__closure = {
     controlsHidden,
     FLOATING_BAR_HEIGHT: v28,
     VOICE_PANEL_CARD_INNER_PADDING,
     withSpring: participant(5055).withSpring,
     MODE_CHANGE_PHYSICS,
   };
-  fn.__closure = obj;
   fn.__workletHash = 4080439075039;
   fn.__initData = __initData2;
   const items = [guildId, participant];
   const animatedStyle = obj.useAnimatedStyle(fn);
   const callback = noop.useCallback(() => {
-    let obj = useStableParticipant;
     if (obj.isStableStreamParticipant(participant)) {
       const streamForUser = ApplicationStreamingStore.getStreamForUser(participant.user.id, guildId);
       if (null != streamForUser) {
-        const tmpResult = StreamKeyUtils;
-        tmpResult.stopStream(tmpResult.encodeStreamKey(streamForUser));
+        const tmpResult = StreamActionCreators;
+        tmpResult.stopStream(StreamKeyUtils.encodeStreamKey(streamForUser));
+        const tmpResult3 = StreamKeyUtils;
       }
     }
-    if (tmpResult1.isStableActivityParticipant(participant)) {
+    obj = useStableParticipant;
+    if (tmpResult4.isStableActivityParticipant(participant)) {
       const currentEmbeddedActivity = EmbeddedActivitiesStore.getCurrentEmbeddedActivity();
       let _location;
       if (currentEmbeddedActivity != null) {
         _location = currentEmbeddedActivity.location;
       }
-      obj = { location: _location, applicationId: participant.applicationId };
-      EmbeddedActivitiesNativeManagerDefault.leaveActivity(obj);
+      const obj2 = { location: _location, applicationId: participant.applicationId };
+      EmbeddedActivitiesNativeManagerDefault.leaveActivity(obj2);
     }
-    tmpResult1 = useStableParticipant;
+    tmpResult4 = useStableParticipant;
   }, items);
-  obj = { icon: guildId(17264), onPress: callback, style: animatedStyle, layout, accessibilityLabel: null };
-  const tmp4 = guildId(17144);
-  const result = participant(17213).isStableActivityParticipant(participant);
+  let obj3 = { icon: null, onPress: null, style: null, layout: null, accessibilityLabel: null };
+  let obj2 = {
+    controlsHidden,
+    FLOATING_BAR_HEIGHT: v28,
+    VOICE_PANEL_CARD_INNER_PADDING,
+    withSpring: participant(5055).withSpring,
+    MODE_CHANGE_PHYSICS,
+  };
+  obj3.icon = guildId(17266);
+  obj3.onPress = callback;
+  obj3.style = animatedStyle;
+  obj3.layout = layout;
+  const tmp4 = guildId(17146);
+  const result = participant(17215).isStableActivityParticipant(participant);
   const intl = participant(1114).intl;
   const string = intl.string;
   const t = participant(1114).t;
@@ -301,8 +321,8 @@ let closure_27 = noop.memo((participant) => {
   } else {
     stringResult = string(t.q3O3J8);
   }
-  obj.accessibilityLabel = stringResult;
-  return closure_16(tmp4, obj);
+  obj3.accessibilityLabel = stringResult;
+  return closure_16(tmp4, obj3);
 });
 const __initData3 = {
   code: "function VoicePanelCardFloatingControlsTsx3(){const{controlsHidden,mode,VoicePanelModes,FLOATING_BAR_HEIGHT,VOICE_PANEL_CARD_INNER_PADDING,withSpring,MODE_CHANGE_PHYSICS}=this.__closure;const hidden=controlsHidden.get()||mode.get()===VoicePanelModes.PIP;return{position:'absolute',top:hidden?-(FLOATING_BAR_HEIGHT+VOICE_PANEL_CARD_INNER_PADDING*2):VOICE_PANEL_CARD_INNER_PADDING,right:VOICE_PANEL_CARD_INNER_PADDING,opacity:withSpring(hidden?0:1,MODE_CHANGE_PHYSICS),zIndex:1};}",
@@ -321,7 +341,6 @@ let closure_29 = noop.memo((participantId) => {
   const callback = mode.useCallback(() => {
     setFocused(participantId);
   }, items);
-  participantId(setFocused[12]);
   const fn = function u() {
     value = controlsHidden.get();
     if (!value) {
@@ -340,7 +359,8 @@ let closure_29 = noop.memo((participantId) => {
     rect.opacity = spring.withSpring(num2, MODE_CHANGE_PHYSICS);
     return rect;
   };
-  let obj = {
+  const obj = participantId(setFocused[12]);
+  fn.__closure = {
     controlsHidden,
     mode,
     VoicePanelModes,
@@ -349,7 +369,6 @@ let closure_29 = noop.memo((participantId) => {
     withSpring: participantId(setFocused[28]).withSpring,
     MODE_CHANGE_PHYSICS,
   };
-  fn.__closure = obj;
   fn.__workletHash = 12421495364262;
   fn.__initData = __initData3;
   const animatedStyle = obj.useAnimatedStyle(fn);
@@ -358,20 +377,28 @@ let closure_29 = noop.memo((participantId) => {
     let stringResult = intl3.string(tmp5(tmp2[22]).t["3ejJer"]);
   } else if (null != targetName) {
     const intl2 = tmp5(tmp2[22]).intl;
-    obj = { targetName };
-    stringResult = intl2.formatToPlainString(tmp5(tmp2[22]).t.OervdV, obj);
+    const obj3 = { targetName };
+    stringResult = intl2.formatToPlainString(tmp5(tmp2[22]).t.OervdV, obj3);
   } else {
     const intl = tmp5(tmp2[22]).intl;
     stringResult = intl.string(tmp5(tmp2[22]).t["77cRN4"]);
   }
-  const obj1 = {
-    icon: controlsHidden(setFocused[35]),
-    onPress: callback,
-    style: animatedStyle,
-    layout,
-    accessibilityLabel: stringResult,
+  const obj4 = { icon: null, onPress: null, style: null, layout: null, accessibilityLabel: null };
+  const obj2 = {
+    controlsHidden,
+    mode,
+    VoicePanelModes,
+    FLOATING_BAR_HEIGHT: v28,
+    VOICE_PANEL_CARD_INNER_PADDING,
+    withSpring: participantId(setFocused[28]).withSpring,
+    MODE_CHANGE_PHYSICS,
   };
-  return closure_16(controlsHidden(setFocused[33]), obj1);
+  obj4.icon = controlsHidden(setFocused[35]);
+  obj4.onPress = callback;
+  obj4.style = animatedStyle;
+  obj4.layout = layout;
+  obj4.accessibilityLabel = stringResult;
+  return closure_16(controlsHidden(setFocused[33]), obj4);
 });
 const RING_PHYSICS = { mass: 0.1, stiffness: 400, overshootClamping: true };
 const __initData4 = {
@@ -396,14 +423,16 @@ let closure_37 = noop.memo((controlsHidden) => {
   controlsHidden = controlsHidden.controlsHidden;
   let sharedValue1;
   const tmp = closure_22();
+  const sharedValue = controlsHidden(sharedValue1[12]).useSharedValue(true);
   let obj = controlsHidden(sharedValue1[12]);
-  const sharedValue = obj.useSharedValue(true);
-  let obj1 = controlsHidden(sharedValue1[12]);
-  sharedValue1 = obj1.useSharedValue(0);
-  let obj2 = controlsHidden(sharedValue1[36]);
+  sharedValue1 = controlsHidden(sharedValue1[12]).useSharedValue(0);
+  let obj2 = controlsHidden(sharedValue1[12]);
   let items = [AccessibilityStore];
-  const stateFromStores = obj2.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
-  let obj3 = controlsHidden(sharedValue1[12]);
+  const stateFromStores = controlsHidden(sharedValue1[36]).useStateFromStores(
+    items,
+    () => useReducedMotion.useReducedMotion,
+  );
+  const obj3 = controlsHidden(sharedValue1[36]);
   let fn = function o() {
     return sharedValue.get();
   };
@@ -420,8 +449,8 @@ let closure_37 = noop.memo((controlsHidden) => {
           const result = sharedValue.set(!sharedValue.get());
         }
       };
-      let obj = { flip: sharedValue };
-      fn2.__closure = obj;
+      const obj2 = { flip: sharedValue };
+      fn2.__closure = obj2;
       fn2.__workletHash = 17264907521028;
       fn2.__initData = __initData;
       let result = set(withSpring(tmp3(35, 55), closure_30, "respect-motion-settings", fn2));
@@ -431,24 +460,32 @@ let closure_37 = noop.memo((controlsHidden) => {
           const result = sharedValue.set(!sharedValue.get());
         }
       };
-      obj = { flip: sharedValue };
+      const obj = { flip: sharedValue };
       fn.__closure = obj;
       fn.__workletHash = 1799436949573;
       fn.__initData = __initData2;
       const result1 = set(withSpring(tmp3(-10, 10), closure_30, "respect-motion-settings", fn));
     }
   };
-  obj = {
+  const obj4 = controlsHidden(sharedValue1[12]);
+  fn2.__closure = {
     angle: sharedValue1,
     withSpring: controlsHidden(sharedValue1[28]).withSpring,
     getRandomNumberInRange: sharedValue(sharedValue1[37]),
     RING_PHYSICS,
     flip: sharedValue,
   };
-  fn2.__closure = obj;
   fn2.__workletHash = 15646860695268;
   fn2.__initData = __initData5;
-  const animatedReaction = obj3.useAnimatedReaction(fn, fn2);
+  const animatedReaction = obj4.useAnimatedReaction(fn, fn2);
+  const obj5 = {
+    angle: sharedValue1,
+    withSpring: controlsHidden(sharedValue1[28]).withSpring,
+    getRandomNumberInRange: sharedValue(sharedValue1[37]),
+    RING_PHYSICS,
+    flip: sharedValue,
+  };
+  const tmp7 = sharedValue;
   class I {
     constructor() {
       top = 0;
@@ -461,17 +498,15 @@ let closure_37 = noop.memo((controlsHidden) => {
       return { top };
     }
   }
-  obj = { controlsHidden, FLOATING_BAR_HEIGHT: v28, VOICE_PANEL_CARD_INNER_PADDING };
-  I.__closure = obj;
+  I.__closure = { controlsHidden, FLOATING_BAR_HEIGHT: v28, VOICE_PANEL_CARD_INNER_PADDING };
   I.__workletHash = 726627995932;
   I.__initData = __initData6;
   const animatedStyle = controlsHidden(sharedValue1[12]).useAnimatedStyle(I);
   const obj6 = controlsHidden(sharedValue1[12]);
-  const tmp7 = sharedValue;
+  const obj7 = { controlsHidden, FLOATING_BAR_HEIGHT: v28, VOICE_PANEL_CARD_INNER_PADDING };
   const fn3 = function p() {
-    let obj = { transform: null };
-    obj = { rotate: "" + sharedValue1.get() + "deg" };
-    const items = [obj];
+    const obj = { transform: null };
+    const items = [{ rotate: "" + sharedValue1.get() + "deg" }];
     obj.transform = items;
     return obj;
   };
@@ -479,20 +514,24 @@ let closure_37 = noop.memo((controlsHidden) => {
   fn3.__workletHash = 791392364030;
   fn3.__initData = __initData7;
   const animatedStyle1 = controlsHidden(sharedValue1[12]).useAnimatedStyle(fn3);
-  obj1 = { style: null, children: null };
+  const obj9 = { style: null, children: null };
   const items1 = [animatedStyle, tmp.ringingIconContainer];
-  obj1.style = items1;
+  obj9.style = items1;
   const obj8 = controlsHidden(sharedValue1[12]);
   let tmp14 = !stateFromStores;
   const tmp12 = sharedValue(sharedValue1[38]);
   if (!stateFromStores) {
     tmp14 = animatedStyle1;
   }
-  obj2 = { style: tmp14, pointerEvents: "none", children: null };
-  obj3 = { source: tmp7(tmp3[39]), size: tmp2(tmp3[13]).IconSizes.SMALL_20, style: tmp.ringingIcon };
-  obj2.children = closure_16(controlsHidden(sharedValue1[13]).Icon, obj3);
-  obj1.children = closure_16(sharedValue(sharedValue1[38]), obj2);
-  return closure_16(tmp12, obj1);
+  const obj10 = { style: tmp14, pointerEvents: "none", children: null };
+  const tmp13 = sharedValue(sharedValue1[38]);
+  obj10.children = closure_16(controlsHidden(sharedValue1[13]).Icon, {
+    source: tmp7(sharedValue1[39]),
+    size: controlsHidden(sharedValue1[13]).IconSizes.SMALL_20,
+    style: tmp.ringingIcon,
+  });
+  obj9.children = closure_16(tmp13, obj10);
+  return closure_16(tmp12, obj9);
 });
 let closure_38 = noop.memo((controlsHidden) =>
   value2(native.ThemeContextProvider, {
@@ -505,10 +544,10 @@ let closure_39 = noop.memo((arg0) => {
   let gameRecord;
   dependencyMap = undefined;
   noop = undefined;
-  let obj = gameRecord(17267);
-  const showGameTag = obj.useConfig({ location: "VoicePanelCardFloatingControls" }).showGameTag;
+  const showGameTag = gameRecord(17269).useConfig({ location: "VoicePanelCardFloatingControls" }).showGameTag;
   const first = gameRecord(9308)(userId, arg0.guildId, showGameTag)[0];
   let tmp5;
+  let obj = gameRecord(17269);
   if (showGameTag) {
     let application_id;
     if (first != null) {
@@ -542,8 +581,8 @@ let closure_39 = noop.memo((arg0) => {
   if (showGameTag) {
     if (null != gameRecord) {
       if (!tmp8) {
-        obj = { game: gameRecord, userId, textColor };
-        let tmp12 = closure_16(tmp(17268), obj);
+        const obj2 = { game: gameRecord, userId, textColor };
+        let tmp12 = closure_16(tmp(17270), obj2);
       }
       return tmp12;
     }
@@ -577,19 +616,18 @@ let closure_45 = noop.memo((controlsHidden) => {
   VoicePanelModes = undefined;
   let derivedValue;
   let sharedValue;
-  let obj = focused;
   const context = focused.useContext(channelId(controlsSpecs[16]));
   ({ guildId, channelId } = context);
   controlsSpecs = context.controlsSpecs;
   focused = context.focused;
   const connected = context.connected;
   const mode = context.mode;
-  let obj1 = controlsHidden(controlsSpecs[49]);
-  const isScreenReaderEnabled = obj1.useIsScreenReaderEnabled();
+  const isScreenReaderEnabled = controlsHidden(controlsSpecs[49]).useIsScreenReaderEnabled();
   const tmp6 = closure_22();
-  let obj2 = controlsHidden(controlsSpecs[29]);
+  let obj = focused;
+  const obj2 = controlsHidden(controlsSpecs[49]);
   let id;
-  if (obj2.isStableParticipantWithUser(participant)) {
+  if (obj3.isStableParticipantWithUser(participant)) {
     id = participant.user.id;
   }
   analyticsLocations = tmp(tmp2[50])().analyticsLocations;
@@ -600,15 +638,19 @@ let closure_45 = noop.memo((controlsHidden) => {
       showUserProfileActionSheetDefault(obj);
     }
   }, items);
-  let tmp4Result = tmp4(tmp2[52]);
-  let isUserSecureFramesVerified = tmp4Result.useIsUserSecureFramesVerified({ userId: id, channelId });
-  let tmpResult = tmp(tmp2[21]);
-  tmp4Result = tmp4(tmp2[29]);
+  obj3 = controlsHidden(controlsSpecs[29]);
+  let isUserSecureFramesVerified = controlsHidden(controlsSpecs[52]).useIsUserSecureFramesVerified({
+    userId: id,
+    channelId,
+  });
+  const tmp4Result = controlsHidden(controlsSpecs[52]);
+  const tmpResult = channelId(controlsSpecs[21]);
   let id1;
-  if (tmp4Result.isStableParticipantWithUser(participant)) {
+  if (tmp4Result8.isStableParticipantWithUser(participant)) {
     id1 = participant.user.id;
   }
   const tmpResultResult = tmpResult(participant.type, id1, guildId, channelId);
+  tmp4Result8 = controlsHidden(controlsSpecs[29]);
   const tmp12 = channelId(controlsSpecs[53])({ userId: id, guildId });
   const displayNameStylesFont = controlsHidden(controlsSpecs[54]).useDisplayNameStylesFont({
     displayNameStyles: tmp12,
@@ -620,7 +662,7 @@ let closure_45 = noop.memo((controlsHidden) => {
       (type) => type.type !== controlsHidden(controlsSpecs[21]).VoicePanelCardUserStateIconType.STREAM_ICON,
     ).length >= 1;
   VoicePanelModes = tmp15;
-  const tmp4Result1 = controlsHidden(controlsSpecs[54]);
+  const tmp4Result9 = controlsHidden(controlsSpecs[54]);
   const fn = function c() {
     let tmp = closure_10;
     if (closure_10) {
@@ -632,25 +674,25 @@ let closure_45 = noop.memo((controlsHidden) => {
       tmp5 = mode.get() === VoicePanelModes.PIP;
     }
     if (!tmp5) {
-      value = !tmp;
+      value2 = !tmp;
       if (!tmp) {
-        value = controlsHidden.get();
+        value2 = controlsHidden.get();
       }
-      tmp5 = value;
+      tmp5 = value2;
     }
     return tmp5;
   };
-  obj = { hasHiddenVisibleIcon: tmp15, focused, connected, mode, VoicePanelModes, controlsHidden };
-  fn.__closure = obj;
+  fn.__closure = { hasHiddenVisibleIcon: tmp15, focused, connected, mode, VoicePanelModes, controlsHidden };
   fn.__workletHash = 14354852732719;
   fn.__initData = __initData8;
   derivedValue = controlsHidden(controlsSpecs[12]).useDerivedValue(fn);
-  const tmp4Result2 = controlsHidden(controlsSpecs[12]);
+  const obj4 = { hasHiddenVisibleIcon: tmp15, focused, connected, mode, VoicePanelModes, controlsHidden };
+  const tmp4Result10 = controlsHidden(controlsSpecs[12]);
   if (derivedValue.get()) {
     num = 0;
   }
   sharedValue = controlsHidden(controlsSpecs[12]).useSharedValue(num);
-  const tmp4Result3 = controlsHidden(controlsSpecs[12]);
+  const tmp4Result11 = controlsHidden(controlsSpecs[12]);
   const fn2 = function _() {
     return derivedValue.get();
   };
@@ -664,12 +706,20 @@ let closure_45 = noop.memo((controlsHidden) => {
     }
     const result = sharedValue.set(spring.withSpring(num, MODE_CHANGE_PHYSICS));
   };
-  obj = { pillOpacity: sharedValue, withSpring: tmp4(tmp2[28]).withSpring, MODE_CHANGE_PHYSICS };
-  fn3.__closure = obj;
+  const tmp4Result12 = controlsHidden(controlsSpecs[12]);
+  fn3.__closure = {
+    pillOpacity: sharedValue,
+    withSpring: controlsHidden(controlsSpecs[28]).withSpring,
+    MODE_CHANGE_PHYSICS,
+  };
   fn3.__workletHash = 158794425133;
   fn3.__initData = __initData10;
-  const animatedReaction = controlsHidden(controlsSpecs[12]).useAnimatedReaction(fn2, fn3);
-  const tmp4Result4 = controlsHidden(controlsSpecs[12]);
+  const animatedReaction = tmp4Result12.useAnimatedReaction(fn2, fn3);
+  const obj5 = {
+    pillOpacity: sharedValue,
+    withSpring: controlsHidden(controlsSpecs[28]).withSpring,
+    MODE_CHANGE_PHYSICS,
+  };
   const fn4 = function q() {
     const obj = { opacity: sharedValue.get(), top: null, height: null, pointerEvents: null };
     let num = 0;
@@ -685,17 +735,22 @@ let closure_45 = noop.memo((controlsHidden) => {
     obj.pointerEvents = str;
     return obj;
   };
-  obj1 = {
+  fn4.__closure = {
     pillOpacity: sharedValue,
     isPillHidden: derivedValue,
     FLOATING_BAR_HEIGHT: v28,
     VOICE_PANEL_CARD_INNER_PADDING: sharedValue,
   };
-  fn4.__closure = obj1;
   fn4.__workletHash = 12355778282621;
   fn4.__initData = __initData11;
   const animatedStyle = controlsHidden(controlsSpecs[12]).useAnimatedStyle(fn4);
-  const tmp4Result5 = controlsHidden(controlsSpecs[12]);
+  const obj6 = {
+    pillOpacity: sharedValue,
+    isPillHidden: derivedValue,
+    FLOATING_BAR_HEIGHT: v28,
+    VOICE_PANEL_CARD_INNER_PADDING: sharedValue,
+  };
+  const tmp4Result13 = controlsHidden(controlsSpecs[12]);
   class Z {
     constructor() {
       value = connected.get();
@@ -730,49 +785,56 @@ let closure_45 = noop.memo((controlsHidden) => {
       return obj;
     }
   }
-  obj2 = {
+  Z.__closure = {
     connected,
     isScreenReaderEnabled,
     controlsSpecs,
     VoicePanelControlsModes: derivedValue,
-    hasIcon: tmp14,
+    hasIcon: tmpResultResult.length >= 1,
     GAP: 4,
   };
-  Z.__closure = obj2;
   Z.__workletHash = 10013340978870;
   Z.__initData = __initData12;
   const items1 = [tmp6.labelPositionContainer];
   const animatedStyle1 = controlsHidden(controlsSpecs[12]).useAnimatedStyle(Z);
-  const obj3 = { style: items1, layout, pointerEvents: "box-none", children: null };
+  const obj8 = { style: items1, layout, pointerEvents: "box-none", children: null };
   let tmp24;
-  tmpResult = tmp(tmp2[38]);
+  const obj7 = {
+    connected,
+    isScreenReaderEnabled,
+    controlsSpecs,
+    VoicePanelControlsModes: derivedValue,
+    hasIcon: tmpResultResult.length >= 1,
+    GAP: 4,
+  };
+  const tmp4Result14 = controlsHidden(controlsSpecs[12]);
   if (null != id) {
     tmp24 = callback;
   }
-  const obj4 = { onPress: tmp24, style: null, layout, children: null };
+  const obj9 = { onPress: tmp24, style: null, layout, children: null };
   const items2 = [tmp6.labelOuterContainer, animatedStyle];
-  obj4.style = items2;
+  obj9.style = items2;
   let tmp20Result = tmpResultResult.length > 0;
   if (tmp20Result) {
-    const obj5 = {
+    const obj10 = {
       style: tmp6.initialIcons,
       children: tmpResultResult.map((icon) => closure_1_16(AnimatedLabelIcon, { icon }, icon.type)),
     };
-    tmp20Result = closure_16(tmp(tmp2[26]), obj5);
-    const tmpResult1 = tmp(tmp2[26]);
+    tmp20Result = closure_16(tmp(tmp2[26]), obj10);
+    const tmpResult5 = tmp(tmp2[26]);
   }
   const items3 = [tmp20Result];
-  const obj6 = { style: null, layout, children: null };
+  const obj11 = { style: null, layout, children: null };
   const items4 = [tmp6.floatingContainer, animatedStyle1];
-  obj6.style = items4;
-  const tmp4Result6 = controlsHidden(controlsSpecs[12]);
+  obj11.style = items4;
+  const tmpResult4 = channelId(controlsSpecs[38]);
   const items5 = [tmp6.floatingText];
   let tmp28 = null != displayNameStylesFont;
   if (tmp28) {
-    const obj7 = { fontFamily: displayNameStylesFont };
-    tmp28 = obj7;
+    const obj12 = { fontFamily: displayNameStylesFont };
+    tmp28 = obj12;
   }
-  const obj8 = {
+  const obj13 = {
     variant: "heading-sm/semibold",
     color: "text-overlay-light",
     lineClamp: 1,
@@ -789,8 +851,8 @@ let closure_45 = noop.memo((controlsHidden) => {
     )
   ) {
     const intl3 = tmp4(tmp2[22]).intl;
-    const obj9 = { username: label };
-    let formatToPlainStringResult = intl3.formatToPlainString(tmp4(tmp2[22]).t.I0mOAs, obj9);
+    const obj14 = { username: label };
+    let formatToPlainStringResult = intl3.formatToPlainString(tmp4(tmp2[22]).t.I0mOAs, obj14);
   } else {
     const found = tmpResultResult.find(
       (type) => type.type === controlsHidden(controlsSpecs[21]).VoicePanelCardUserStateIconType.MUTE_DEAFEN_ICON,
@@ -801,36 +863,36 @@ let closure_45 = noop.memo((controlsHidden) => {
       if (tmp4(tmp2[24]).MuteDeafenIconState.DEAFENED !== muteDeafenIconState) {
         if (tmp4(tmp2[24]).MuteDeafenIconState.DEAFENED_SERVER !== muteDeafenIconState) {
           const intl = tmp4(tmp2[22]).intl;
-          const obj10 = { username: label };
-          formatToPlainStringResult = intl.formatToPlainString(tmp4(tmp2[22]).t.Hd1oVG, obj10);
+          const obj15 = { username: label };
+          formatToPlainStringResult = intl.formatToPlainString(tmp4(tmp2[22]).t.Hd1oVG, obj15);
         }
       }
       const intl2 = tmp4(tmp2[22]).intl;
-      const obj11 = { username: label };
-      formatToPlainStringResult = intl2.formatToPlainString(tmp4(tmp2[22]).t["9hDjai"], obj11);
+      const obj16 = { username: label };
+      formatToPlainStringResult = intl2.formatToPlainString(tmp4(tmp2[22]).t["9hDjai"], obj16);
     }
   }
-  obj8.accessibilityLabel = formatToPlainStringResult;
-  obj8.children = label;
-  const items6 = [closure_16(controlsHidden(controlsSpecs[55]).Text, obj8), ,];
-  tmp20Result = participant.type === constants.USER;
-  if (tmp20Result) {
-    const obj12 = { userId: participant.user.id, guildId, textColor: "text-overlay-light" };
-    tmp20Result = closure_16(closure_39, obj12);
+  obj13.accessibilityLabel = formatToPlainStringResult;
+  obj13.children = label;
+  const items6 = [closure_16(controlsHidden(controlsSpecs[55]).Text, obj13), ,];
+  let tmp20Result2 = participant.type === constants.USER;
+  if (tmp20Result2) {
+    const obj17 = { userId: participant.user.id, guildId, textColor: "text-overlay-light" };
+    tmp20Result2 = closure_16(closure_39, obj17);
   }
-  items6[1] = tmp20Result;
+  items6[1] = tmp20Result2;
   if (isUserSecureFramesVerified) {
-    const obj13 = { style: tmp6.secureFramesIcon, size: "xs", accessibilityLabel: null };
+    const obj18 = { style: tmp6.secureFramesIcon, size: "xs", accessibilityLabel: null };
     const intl4 = tmp4(tmp2[22]).intl;
-    obj13.accessibilityLabel = intl4.string(tmp4(tmp2[22]).t.mR9cf3);
-    isUserSecureFramesVerified = closure_16(tmp4(tmp2[56]).ShieldLockIcon, obj13);
+    obj18.accessibilityLabel = intl4.string(tmp4(tmp2[22]).t.mR9cf3);
+    isUserSecureFramesVerified = closure_16(tmp4(tmp2[56]).ShieldLockIcon, obj18);
   }
   items6[2] = isUserSecureFramesVerified;
-  obj6.children = items6;
-  items3[1] = closure_17(channelId(controlsSpecs[38]), obj6);
-  obj4.children = items3;
-  obj3.children = closure_17(closure_20, obj4);
-  return closure_16(tmpResult, obj3);
+  obj11.children = items6;
+  items3[1] = closure_17(channelId(controlsSpecs[38]), obj11);
+  obj9.children = items3;
+  obj8.children = closure_17(closure_20, obj9);
+  return closure_16(tmpResult4, obj8);
 });
 const __initData13 = {
   code: "function VoicePanelCardFloatingControlsTsx15(){const{controlsSpecs,VoicePanelControlsModes,focused,mode,VoicePanelModes}=this.__closure;return controlsSpecs.get().mode===VoicePanelControlsModes.HIDDEN||focused.get()!=null||mode.get()===VoicePanelModes.PIP;}",
@@ -849,13 +911,14 @@ export default noop.memo(function FloatingControls(arg0) {
   controlsSpecs = context.controlsSpecs;
   focused = context.focused;
   const mode = context.mode;
-  let obj = participant(controlsSpecs[36]);
   const items = [RTCConnectionStore];
-  let stateFromStores = obj.useStateFromStores(items, () => connected.isConnected());
-  let obj1 = participant(controlsSpecs[29]);
-  let tmp4Result = participant(tmp2[36]);
+  let stateFromStores = participant(controlsSpecs[36]).useStateFromStores(items, () => connected.isConnected());
+  let obj = participant(controlsSpecs[36]);
+  let tmp = guildId;
+  const obj2 = participant(controlsSpecs[29]);
+  const tmp6 = participant(controlsSpecs[29]).isStableParticipantWithUser(participant) && participant.isSelf;
   const items1 = [EmbeddedActivitiesStore, ApplicationStreamingStore];
-  const stateFromStores1 = tmp4Result.useStateFromStores(items1, () => {
+  const stateFromStores1 = participant(controlsSpecs[36]).useStateFromStores(items1, () => {
     if (obj.isStableActivityParticipant(participant)) {
       const currentEmbeddedActivity = EmbeddedActivitiesStore.getCurrentEmbeddedActivity();
       let applicationId;
@@ -872,8 +935,8 @@ export default noop.memo(function FloatingControls(arg0) {
     }
     obj = useStableParticipant;
   });
-  const tmp6 = obj1.isStableParticipantWithUser(participant) && participant.isSelf;
-  tmp4Result = participant(tmp2[12]);
+  const tmp4Result = participant(controlsSpecs[36]);
+  const tmp8 = tmp(controlsSpecs[57])(guildId, context.channelId, participant.id);
   class I {
     constructor() {
       tmp = controlsSpecs.get().mode === VoicePanelControlsModes.HIDDEN;
@@ -890,19 +953,18 @@ export default noop.memo(function FloatingControls(arg0) {
       return tmp;
     }
   }
-  obj = { controlsSpecs, VoicePanelControlsModes, focused, mode, VoicePanelModes };
-  I.__closure = obj;
+  I.__closure = { controlsSpecs, VoicePanelControlsModes, focused, mode, VoicePanelModes };
   I.__workletHash = 8765031976276;
   I.__initData = __initData13;
-  const derivedValue = tmp4Result.useDerivedValue(I);
+  const derivedValue = participant(controlsSpecs[12]).useDerivedValue(I);
   let tmp10 = null != label;
   if (tmp10) {
-    obj = { controlsHidden: derivedValue, label, layout, participant };
-    tmp10 = closure_16(closure_45, obj);
+    const obj4 = { controlsHidden: derivedValue, label, layout, participant };
+    tmp10 = closure_16(closure_45, obj4);
   }
   if (isRinging) {
-    obj1 = { controlsHidden: derivedValue };
-    isRinging = closure_16(closure_38, obj1);
+    const obj5 = { controlsHidden: derivedValue };
+    isRinging = closure_16(closure_38, obj5);
   }
   const children = [isRinging, , ,];
   let tmp17 = stateFromStores;
@@ -910,23 +972,23 @@ export default noop.memo(function FloatingControls(arg0) {
     tmp17 = stateFromStores1;
   }
   if (tmp17) {
-    const obj2 = { controlsHidden: derivedValue, participant, isSelf: tmp6, layout };
-    tmp17 = closure_16(closure_27, obj2);
+    const obj6 = { controlsHidden: derivedValue, participant, isSelf: tmp6, layout };
+    tmp17 = closure_16(closure_27, obj6);
   }
   children[1] = tmp17;
   if (stateFromStores) {
     stateFromStores = tmp8;
   }
   if (stateFromStores) {
-    const obj3 = {
+    const obj7 = {
       controlsHidden: derivedValue,
       participantId: participant.id,
       targetName: label,
       isActivityParticipant: participant(tmp2[29]).isStableActivityParticipant(participant),
       layout,
     };
-    stateFromStores = closure_16(closure_29, obj3);
-    const tmp4Result1 = participant(tmp2[29]);
+    stateFromStores = closure_16(closure_29, obj7);
+    const tmp4Result4 = participant(tmp2[29]);
   }
   children[2] = stateFromStores;
   children[3] = tmp10;

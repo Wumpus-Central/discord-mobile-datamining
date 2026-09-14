@@ -38,9 +38,18 @@ let obj = {
     return arg0;
   },
   afterCompute() {},
-  numFrequentlyItems: fn(1350).FREQUENCY_ITEM_LIMIT,
+  numFrequentlyItems: fn(1348).FREQUENCY_ITEM_LIMIT,
 };
-let closure_7 = new FrecencyDefault(obj);
+let closure_7 = new FrecencyDefault({
+  computeBonus() {
+    return 1;
+  },
+  lookupKey(arg0) {
+    return arg0;
+  },
+  afterCompute() {},
+  numFrequentlyItems: fn(1348).FREQUENCY_ITEM_LIMIT,
+});
 const PersistedStore = initializeDefault.PersistedStore;
 class ApplicationCommandFrecencyStore extends PersistedStore {}
 const prototype = ApplicationCommandFrecencyStore.prototype;
@@ -87,7 +96,7 @@ prototype["getTopCommandsWithoutLoadingLatest"] = function getTopCommandsWithout
 };
 ApplicationCommandFrecencyStore.displayName = "ApplicationCommandFrecencyStore";
 ApplicationCommandFrecencyStore.persistKey = "ApplicationCommandFrecencyV2";
-obj = {
+const applicationCommandFrecencyStore = new ApplicationCommandFrecencyStore(DispatcherDefault, {
   APPLICATION_COMMAND_USED: function handleApplicationCommandUsed(arg0) {
     ({ command, context } = arg0);
     if (Number(command.id) < 0) {
@@ -118,8 +127,7 @@ obj = {
     }
     return false;
   },
-};
-const applicationCommandFrecencyStore = new ApplicationCommandFrecencyStore(DispatcherDefault, obj);
+});
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/application_commands/ApplicationCommandFrecencyStore.tsx");
 

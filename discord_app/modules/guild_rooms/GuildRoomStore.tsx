@@ -54,7 +54,7 @@ let closure_2 = ["users", "objects"];
 let closure_3 = ["users", "objects"];
 let closure_4 = ["users"];
 let map = new Map();
-let DEFAULT_ROOM = {};
+const DEFAULT_ROOM = {};
 let closure_11 = [];
 const map1 = new Map();
 const dependencyMap = {};
@@ -167,7 +167,7 @@ prototype["getRememberVideoOverlayVisibility"] = function getRememberVideoOverla
 };
 GuildRoomStore.displayName = "GuildRoomStore";
 GuildRoomStore.persistKey = "GuildRoomStore";
-DEFAULT_ROOM = {
+const guildRoomStore = new GuildRoomStore(DispatcherDefault, {
   GUILD_ROOM_CONNECT: function handleConnect(room) {
     room = room.room;
     const objects = room.objects;
@@ -245,10 +245,10 @@ DEFAULT_ROOM = {
     if (null == dependencyMap[originalRoom.roomId]) {
       return false;
     } else {
-      let obj = {};
+      const obj2 = {};
       const merged = Object.assign(tmp2);
-      obj.background = originalRoom.background;
-      tmp[originalRoom.roomId] = obj;
+      obj2.background = originalRoom.background;
+      tmp[originalRoom.roomId] = obj2;
       const id = AuthenticationStore.getId();
       value = originalRoomUsers.get(id);
       if (null == value) {
@@ -256,11 +256,8 @@ DEFAULT_ROOM = {
         map = new Map(dependencyMap2[originalRoom.roomId]);
         map.delete(id);
         dependencyMap2[originalRoom.roomId] = map;
-      } else {
-        obj = dependencyMap2[originalRoom.roomId];
-        if (obj != null) {
-          const result = obj.set(id, value);
-        }
+      } else if (dependencyMap2[originalRoom.roomId] != null) {
+        const result = obj.set(id, value);
       }
     }
   },
@@ -290,7 +287,7 @@ DEFAULT_ROOM = {
     } else {
       const id = AuthenticationStore.getId();
       if (null != background) {
-        let obj = {};
+        const obj = {};
         const merged = Object.assign(dependencyMap[roomId]);
         obj.background = background;
         dependencyMap[roomId] = obj;
@@ -299,25 +296,25 @@ DEFAULT_ROOM = {
       if (null != value) {
         const _Map = Map;
         map = new Map(dependencyMap2[roomId]);
-        obj = {};
+        const obj3 = {};
         const merged1 = Object.assign(value);
         if (position == null) {
           position = value.position;
         }
-        obj.position = position;
+        obj3.position = position;
         if (seat == null) {
           seat = value.seat;
         }
-        obj.seat = seat;
+        obj3.seat = seat;
         if (statusId == null) {
           statusId = value.statusId;
         }
-        obj.statusId = statusId;
+        obj3.statusId = statusId;
         if (statusText == null) {
           statusText = value.statusText;
         }
-        obj.statusText = statusText;
-        const result = map.set(id, obj);
+        obj3.statusText = statusText;
+        const result = map.set(id, obj3);
         dependencyMap2[roomId] = map;
       }
     }
@@ -381,8 +378,7 @@ DEFAULT_ROOM = {
   ) {
     closure_21 = rememberVideoOverlayVisibility.rememberVideoOverlayVisibility;
   },
-};
-const guildRoomStore = new GuildRoomStore(DispatcherDefault, DEFAULT_ROOM);
+});
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_rooms/GuildRoomStore.tsx");
 

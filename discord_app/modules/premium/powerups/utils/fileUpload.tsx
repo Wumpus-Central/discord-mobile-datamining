@@ -2,6 +2,8 @@
 import usePowerupActiveStatusDefault from "../hooks/usePowerupActiveStatus.tsx";
 import GuildPowerupsStore from "../GuildPowerupsStore.tsx";
 
+const require = globalThis.__r;
+
 const require = fn;
 const PowerupActiveStatusType = fn(4526).PowerupActiveStatusType;
 const size = fn(2);

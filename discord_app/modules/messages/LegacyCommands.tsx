@@ -8,16 +8,16 @@ import ChangeNicknameActionCreatorsDefault from "../../actions/ChangeNicknameAct
 import _slicedToArray from "../../../_runtime/metro/00032__.js";
 import EmojiStore from "../emojis/EmojiStore.tsx";
 import MessageStore from "../../stores/MessageStore.tsx";
-import t from "../../../_runtime/metro/04333__.js";
+import t_mod from "../../../_runtime/metro/04333__.js";
 
 require = fn;
 const Constants = fn(1074);
 ({ AnalyticEvents: metroRequire, MARKDOWN_SPOILER_WRAPPER: closure_7, ME: closure_8 } = Constants);
 const re9 = /\\([*?+/])/g;
-let COMMANDS = {
+const COMMANDS = {
   tts: {
     action() {
-      obj = { tts: null };
+      const obj = { tts: null };
       const EnableTTSCommand = UserSettings.EnableTTSCommand;
       obj.tts = EnableTTSCommand.getSetting();
       return obj;
@@ -30,19 +30,19 @@ let COMMANDS = {
   },
   tableflip: {
     action(arg0) {
-      obj = { content: "" + arg0 + " (\u256F\u00B0\u25A1\u00B0)\u256F\uFE35 \u253B\u2501\u253B".trim() };
+      const obj = { content: "" + arg0 + " (\u256F\u00B0\u25A1\u00B0)\u256F\uFE35 \u253B\u2501\u253B".trim() };
       return obj;
     },
   },
   unflip: {
     action(arg0) {
-      obj = { content: "" + arg0 + " \u252C\u2500\u252C\u30CE( \u00BA _ \u00BA\u30CE)".trim() };
+      const obj = { content: "" + arg0 + " \u252C\u2500\u252C\u30CE( \u00BA _ \u00BA\u30CE)".trim() };
       return obj;
     },
   },
   shrug: {
     action(arg0) {
-      obj = { content: "" + arg0 + " \u00AF\\_(\u30C4)_/\u00AF".trim() };
+      const obj = { content: "" + arg0 + " \u00AF\\_(\u30C4)_/\u00AF".trim() };
       return obj;
     },
   },
@@ -50,7 +50,7 @@ let COMMANDS = {
     action(arg0, channel) {
       channel = channel.channel;
       if (null != channel.guild_id) {
-        obj = ChangeNicknameActionCreatorsDefault;
+        const obj = ChangeNicknameActionCreatorsDefault;
         obj.changeNickname(channel.guild_id, channel.id, React6, arg0);
         return { content: "" };
       }
@@ -60,9 +60,10 @@ let COMMANDS = {
   searchReplace: null,
   spoiler: null,
 };
-COMMANDS = { match: null, action: null };
-COMMANDS.match = t.anyScopeRegex(/^\+:(.+?): *$/);
-COMMANDS.action = function action(str, channel) {
+let obj2 = { match: null, action: null };
+let t = t_mod;
+obj2.match = t.anyScopeRegex(/^\+:(.+?): *$/);
+obj2.action = function action(str, channel) {
   channel = channel.channel;
   if (!channel.isEdit) {
     if (MessageStore.hasPresent(channel.id)) {
@@ -83,10 +84,11 @@ COMMANDS.action = function action(str, channel) {
     }
   }
 };
-COMMANDS.reaction = COMMANDS;
-COMMANDS = { match: null, action: null };
-COMMANDS.match = t.anyScopeRegex(/^s\/([^\/\\]*(?:\\.[^\/\\]*)*)\/([^\/\\]*(?:\\.[^\/\\]*)*)(?:\/([g]*))?$/);
-COMMANDS.action = function action(str, channel) {
+COMMANDS.reaction = obj2;
+let obj3 = { match: null, action: null };
+let t = t_mod;
+obj3.match = t.anyScopeRegex(/^s\/([^\/\\]*(?:\\.[^\/\\]*)*)\/([^\/\\]*(?:\\.[^\/\\]*)*)(?:\/([g]*))?$/);
+obj3.action = function action(str, channel) {
   channel = channel.channel;
   if (!channel.isEdit) {
     const lastEditableMessage = MessageStore.getLastEditableMessage(channel.id);
@@ -97,7 +99,7 @@ COMMANDS.action = function action(str, channel) {
         if (match == null) {
           match = [];
         }
-        [r10014, str, str2, str3] = _slicedToArray(Array.from(match), 4);
+        [r10014, str, str2, str3] = Array.from(match);
         let parts;
         if (str3 != null) {
           parts = str3.split("");
@@ -114,14 +116,13 @@ COMMANDS.action = function action(str, channel) {
         }
         if (null == str7) {
           if (0 === lastEditableMessage.attachments.length) {
-            obj = MessageActionCreatorsDefault;
-            obj.deleteMessage(channel.id, lastEditableMessage.id);
+            MessageActionCreatorsDefault.deleteMessage(channel.id, lastEditableMessage.id);
           }
           return { content: "" };
         }
         if (str7 !== lastEditableMessage.content) {
-          obj = { content: str7 };
-          MessageActionCreatorsDefault.editMessage(channel.id, lastEditableMessage.id, obj);
+          const obj3 = { content: str7 };
+          MessageActionCreatorsDefault.editMessage(channel.id, lastEditableMessage.id, obj3);
         }
         const tmp5 = _slicedToArray(Array.from(match), 4);
       }
@@ -129,10 +130,10 @@ COMMANDS.action = function action(str, channel) {
     return { content: "" };
   }
 };
-COMMANDS.searchReplace = COMMANDS;
+COMMANDS.searchReplace = obj3;
 COMMANDS.spoiler = {
   action(arg0) {
-    obj = { content: React5(arg0).trim() };
+    const obj = { content: React5(arg0).trim() };
     return obj;
   },
 };
@@ -155,9 +156,9 @@ export const handleLegacyCommands = function handleLegacyCommands(text, arg1) {
       if (!isMatch) {
         continue;
       } else {
-        obj = AppAnalyticsUtilsDefault;
-        obj = { command: key10005 };
-        let trackWithMetadataResult = obj.trackWithMetadata(constants.SLASH_COMMAND_USED, obj);
+        let obj = AppAnalyticsUtilsDefault;
+        let obj2 = { command: key10005 };
+        let trackWithMetadataResult = obj.trackWithMetadata(constants.SLASH_COMMAND_USED, obj2);
         return str.action(arg0, arg1);
       }
     }

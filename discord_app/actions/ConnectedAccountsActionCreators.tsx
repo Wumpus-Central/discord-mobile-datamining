@@ -7,6 +7,8 @@ import TrackedHTTPUtilsDefault from "../utils/TrackedHTTPUtils.tsx";
 import asyncGeneratorStep from "../../_runtime/00005_asyncGeneratorStep.js";
 import ConnectedAccountsStore from "../stores/ConnectedAccountsStore.tsx";
 
+const require = globalThis.__r;
+
 require = fn;
 function callback(arg0, arg1) {
   let flag = arg2;
@@ -44,10 +46,8 @@ export default {
     const HTTP = HTTPUtils.HTTP;
     value = HTTP.get({ url: timestampProducer.CONNECTIONS, oldFormErrors: true, rejectWithError: true });
     return value.then(
-      (accounts) => {
-        const obj = { type: "USER_CONNECTIONS_UPDATE", local: true, accounts: accounts.body };
-        return obj.dispatch(obj);
-      },
+      (accounts) =>
+        DispatcherDefault.dispatch({ type: "USER_CONNECTIONS_UPDATE", local: true, accounts: accounts.body }),
       () => DispatcherDefault.dispatch({ type: "USER_CONNECTIONS_UPDATE", local: true, accounts: [] }),
     );
   },
@@ -89,11 +89,10 @@ export default {
       const text = `${tmp49}?`;
       const text1 = `${tmp49}?${str11.toString()}`;
       const HTTP = platform_type(tmp2[4]).HTTP;
-      await HTTP.get({
-        url: text1,
-        oldFormErrors: true,
-        rejectWithError: platform_type(tmp2[4]).rejectWithMigratedError(),
-      });
+      const obj6 = { url: text1, oldFormErrors: true, rejectWithError: null };
+      tmp5(tmp2[6]);
+      obj6.rejectWithError = platform_type(tmp2[4]).rejectWithMigratedError();
+      await HTTP.get(obj6);
       closure_129_0 = value;
       const url = closure_129_0.body.url;
       platform_type = url;
@@ -117,7 +116,7 @@ export default {
       trackedActionData: null,
       rejectWithError: null,
     };
-    let obj = { name, friend_sync: null };
+    const obj2 = { name, friend_sync: null };
     friend_sync = undefined;
     if (friend_sync != null) {
       friend_sync = friend_sync.friend_sync;
@@ -125,15 +124,14 @@ export default {
     if (friend_sync == null) {
       friend_sync = set.has(arg0);
     }
-    obj.friend_sync = friend_sync;
-    request.body = obj;
+    obj2.friend_sync = friend_sync;
+    request.body = obj2;
     request.context = { location };
-    obj = {
-      event: discord_common_AnalyticsUtils.NetworkActionNames.USER_CONNECTIONS_UPDATE,
-      properties: { name, friend_sync: set.has(arg0) },
-    };
-    request.trackedActionData = obj;
-    const obj1 = { name, friend_sync: set.has(arg0) };
+    const obj3 = { event: discord_common_AnalyticsUtils.NetworkActionNames.USER_CONNECTIONS_UPDATE, properties: null };
+    const obj = TrackedHTTPUtilsDefault;
+    obj3.properties = { name, friend_sync: set.has(arg0) };
+    request.trackedActionData = obj3;
+    const obj4 = { name, friend_sync: set.has(arg0) };
     request.rejectWithError = HTTPUtils.rejectWithMigratedError();
     return obj.put(request);
   },
@@ -175,41 +173,39 @@ export default {
       trackedActionData: null,
       rejectWithError: null,
     };
-    let obj = { event: discord_common_AnalyticsUtils.NetworkActionNames.USER_CONNECTIONS_UPDATE, properties: null };
-    obj = {};
+    const obj2 = { event: discord_common_AnalyticsUtils.NetworkActionNames.USER_CONNECTIONS_UPDATE, properties: null };
     const merged = Object.assign(body);
-    obj.properties = obj;
-    request.trackedActionData = obj;
+    obj2.properties = {};
+    request.trackedActionData = obj2;
+    const obj = TrackedHTTPUtilsDefault;
+    const obj3 = {};
     request.rejectWithError = HTTPUtils.rejectWithMigratedError();
     return obj.patch(request);
   },
   joinServer(id, arg1) {
     _require = id;
     importDefault = arg1;
-    let obj = { type: "USER_CONNECTIONS_INTEGRATION_JOINING", integrationId: id, joining: true };
-    obj.dispatch(obj);
+    DispatcherDefault.dispatch({ type: "USER_CONNECTIONS_INTEGRATION_JOINING", integrationId: id, joining: true });
     const HTTP = require("HTTPUtils").HTTP;
-    obj = {
-      url: closure_6.INTEGRATION_JOIN(id),
-      oldFormErrors: true,
-      rejectWithError: require("HTTPUtils").rejectWithMigratedError(),
-    };
-    HTTP.post(obj, (ok) => {
-      let obj = { type: "USER_CONNECTIONS_INTEGRATION_JOINING", integrationId, joining: false };
-      obj.dispatch(obj);
+    let obj3 = { url: closure_6.INTEGRATION_JOIN(id), oldFormErrors: true, rejectWithError: null };
+    let obj2 = { type: "USER_CONNECTIONS_INTEGRATION_JOINING", integrationId: id, joining: true };
+    obj3.rejectWithError = require("HTTPUtils").rejectWithMigratedError();
+    HTTP.post(obj3, (ok) => {
+      DispatcherDefault.dispatch({ type: "USER_CONNECTIONS_INTEGRATION_JOINING", integrationId, joining: false });
       if (!ok.ok) {
-        obj = { type: "USER_CONNECTIONS_INTEGRATION_JOINING_ERROR", integrationId, error: null };
+        const obj3 = { type: "USER_CONNECTIONS_INTEGRATION_JOINING_ERROR", integrationId, error: null };
         let message;
         if (!ok.hasErr) {
           message = ok.body.message;
         }
-        obj.error = message;
-        DispatcherDefault.dispatch(obj);
+        obj3.error = message;
+        DispatcherDefault.dispatch(obj3);
         if (closure_1 != null) {
           closure_1();
         }
         const tmpResult = DispatcherDefault;
       }
+      const obj2 = { type: "USER_CONNECTIONS_INTEGRATION_JOINING", integrationId, joining: false };
     });
   },
   refreshAccessToken(type, id) {
@@ -222,8 +218,8 @@ export default {
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
-          let obj = { value, done: true };
-          return obj;
+          const obj2 = { value, done: true };
+          return obj2;
         } else {
           return { value: "HermesInternal", done: null };
         }
@@ -236,35 +232,35 @@ export default {
               throw value;
             } else if (arg0 === 2) {
               constants = 3;
-              obj = { value, done: true };
-              return obj;
+              const obj3 = { value, done: true };
+              return obj3;
             } else {
               type = tmp7;
               let access_token;
               c3 = 1;
               const HTTP = type(tmp30[4]).HTTP;
-              const obj1 = {
+              const obj4 = {
                 url: closure_1_6.CONNECTION_ACCESS_TOKEN(type, tmp3),
                 oldFormErrors: true,
                 rejectWithError: type(tmp30[4]).rejectWithMigratedError(),
               };
               c4 = 2;
               constants = 1;
-              const obj2 = { value: HTTP.get(obj1), done: false };
-              return obj2;
+              const obj6 = { value: HTTP.get(obj4), done: false };
+              return obj6;
             }
           } else if (1 === tmp7) {
             c3 = 0;
             closure_128_1 = tmp30;
             if (closure_128_1.body.code === constants.CONNECTION_REVOKED) {
-              let obj4 = tmp3(tmp30[5]);
-              const obj3 = {
+              const obj7 = {
                 type: "USER_CONNECTION_UPDATE",
                 platformType: closure_129_0,
                 id: closure_129_1,
                 revoked: true,
               };
-              obj4.dispatch(obj3);
+              tmp3(tmp30[5]).dispatch(obj7);
+              const obj5 = tmp3(tmp30[5]);
             }
             throw closure_128_1;
           } else if (arg0 === 1) {
@@ -273,22 +269,21 @@ export default {
           } else if (arg0 === 2) {
             c3 = 0;
             constants = 3;
-            obj4 = { value, done: true };
-            return obj4;
+            const obj8 = { value, done: true };
+            return obj8;
           } else {
             access_token = value.body.access_token;
-            obj = tmp3(tmp30[5]);
-            const obj5 = {
+            const obj9 = {
               type: "USER_CONNECTION_UPDATE",
               platformType: closure_129_0,
               id: closure_129_1,
               accessToken: access_token,
             };
-            obj.dispatch(obj5);
+            tmp3(tmp30[5]).dispatch(obj9);
             c3 = 0;
             constants = 3;
-            const obj6 = { value: access_token, done: true };
-            return obj6;
+            const obj10 = { value: access_token, done: true };
+            return obj10;
           }
         } catch (tmp30) {
           if (tmp4 === c3) {
@@ -328,8 +323,8 @@ export default {
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
-          let obj = { value, done: true };
-          return obj;
+          const obj2 = { value, done: true };
+          return obj2;
         } else {
           return { value: "HermesInternal", done: null };
         }
@@ -342,24 +337,24 @@ export default {
               throw value;
             } else if (arg0 === 2) {
               v3 = 3;
-              obj = { value, done: true };
-              return obj;
+              const obj4 = { value, done: true };
+              return obj4;
             } else {
-              let obj3 = null;
+              let obj7 = null;
               if (null != closure_1) {
-                let obj2 = v3(code[7]);
-                const callbackParamsFromURL = obj2.getCallbackParamsFromURL(closure_1);
+                const callbackParamsFromURL = v3(code[7]).getCallbackParamsFromURL(closure_1);
                 const error = callbackParamsFromURL.error;
-                if (obj3 == error) {
-                  const obj1 = { code, state, two_way_link_code: tmp10, token_redirect_uri };
+                if (obj7 == error) {
+                  const obj5 = { code, state, two_way_link_code: tmp10, token_redirect_uri };
                   c1 = 1;
                   v3 = 1;
-                  obj2 = { value: callback(closure_0, obj1), done: false };
-                  return obj2;
+                  const obj6 = { value: callback(closure_0, obj5), done: false };
+                  return obj6;
                 } else {
-                  obj3 = { error, errorDescription: tmp11 };
-                  logger.error("Two-way link: missing authorize code", obj3);
+                  obj7 = { error, errorDescription: tmp11 };
+                  logger.error("Two-way link: missing authorize code", obj7);
                 }
+                const obj3 = v3(code[7]);
               } else {
                 logger.error("Two-way link: missing authorize location");
               }
@@ -370,11 +365,11 @@ export default {
             throw value;
           } else if (arg0 === 2) {
             v3 = 3;
-            const obj4 = { value, done: true };
-            return obj4;
+            const obj8 = { value, done: true };
+            return obj8;
           } else {
             v3 = 3;
-            obj = { value, done: true };
+            const obj = { value, done: true };
             return obj;
           }
         } catch (tmp20) {

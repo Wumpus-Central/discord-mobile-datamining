@@ -5,6 +5,8 @@ import noop from "../../../_runtime/metro/00019__.js";
 import GuildRoleSubscriptionsStore from "../guild_role_subscriptions/GuildRoleSubscriptionsStore.tsx";
 import GuildStore from "../../stores/GuildStore.tsx";
 
+const require = globalThis.__r;
+
 const require = fn;
 const FetchState = fn(4269).FetchState;
 const Constants = fn(1074);
@@ -14,10 +16,9 @@ let result = size.fileFinishedImporting("modules/creator_monetization_review/Cre
 
 export const useShouldHideGuildPurchaseEntryPoints = function useShouldHideGuildPurchaseEntryPoints(id2) {
   _require = id2;
-  let obj = require("initialize");
   const items = [GuildStore];
   const items1 = [id2];
-  let has = obj.useStateFromStores(items, () => GuildStore.getGuild(closure_0), items1);
+  let has = require("initialize").useStateFromStores(items, () => GuildStore.getGuild(closure_0), items1);
   closure_129_0 = has;
   closure_129_2 = undefined;
   const tmp3 = useUnmountAbortSignalDefault();
@@ -33,8 +34,11 @@ export const useShouldHideGuildPurchaseEntryPoints = function useShouldHideGuild
       hasItem = GuildRoleSubscriptionsStore.getMonetizationRestrictionsFetchState(id2.id) === FetchState.NOT_FETCHED;
     }
     if (hasItem) {
-      const obj = { signal };
-      const monetizationRestrictions = obj.fetchMonetizationRestrictions(id2.id, obj);
+      const obj2 = { signal };
+      const monetizationRestrictions = GuildRoleSubscriptionsActionCreatorsAll.fetchMonetizationRestrictions(
+        id2.id,
+        obj2,
+      );
     }
   }, items2);
   let id;
@@ -42,9 +46,9 @@ export const useShouldHideGuildPurchaseEntryPoints = function useShouldHideGuild
     id = has.id;
   }
   closure_129_2 = id;
-  let tmpResult = tmp(504);
+  const obj = require("initialize");
   const items3 = [GuildRoleSubscriptionsStore];
-  const stateFromStoresArray = tmpResult.useStateFromStoresArray(items3, () => {
+  const stateFromStoresArray = require("initialize").useStateFromStoresArray(items3, () => {
     let tmp2 = importAll;
     if (importAll == null) {
       tmp2 = React6;
@@ -55,9 +59,9 @@ export const useShouldHideGuildPurchaseEntryPoints = function useShouldHideGuild
     }
     return monetizationRestrictions;
   });
-  tmpResult = tmp(504);
+  const tmpResult = require("initialize");
   const items4 = [GuildRoleSubscriptionsStore];
-  const stateFromStores = tmpResult.useStateFromStores(items4, () => {
+  const stateFromStores = require("initialize").useStateFromStores(items4, () => {
     let tmp2 = importAll;
     if (importAll == null) {
       tmp2 = React6;
@@ -78,8 +82,8 @@ export const useShouldHideGuildPurchaseEntryPoints = function useShouldHideGuild
     hasItem = hasItem1;
   }
   if (!hasItem) {
-    obj = { shouldHideGuildPurchaseEntryPoints: tmp12, restrictionsLoading: stateFromStores };
-    return obj;
+    const obj2 = { shouldHideGuildPurchaseEntryPoints: tmp12, restrictionsLoading: stateFromStores };
+    return obj2;
   } else if (stateFromStores) {
     let flag;
     if (has != null) {
@@ -93,16 +97,20 @@ export const useShouldHideGuildPurchaseEntryPoints = function useShouldHideGuild
     let result = flag;
   } else {
     result = tmp(4268).isRestrictedFromShowingGuildPurchaseEntryPoints(stateFromStoresArray);
-    const tmpResult1 = tmp(4268);
+    const tmpResult4 = tmp(4268);
   }
+  const tmpResult3 = require("initialize");
 };
 export const useShouldRestrictUpdatingCreatorMonetizationSettings =
   function useShouldRestrictUpdatingCreatorMonetizationSettings(guildId) {
     _require = guildId;
-    let obj = require("initialize");
     const items = [GuildStore];
     const items1 = [guildId];
-    const stateFromStores = obj.useStateFromStores(items, () => GuildStore.getGuild(closure_0), items1);
+    const stateFromStores = require("initialize").useStateFromStores(
+      items,
+      () => GuildStore.getGuild(closure_0),
+      items1,
+    );
     closure_129_0 = stateFromStores;
     closure_129_2 = undefined;
     const tmp4 = useUnmountAbortSignalDefault();
@@ -118,8 +126,11 @@ export const useShouldRestrictUpdatingCreatorMonetizationSettings =
         hasItem = GuildRoleSubscriptionsStore.getMonetizationRestrictionsFetchState(id2.id) === FetchState.NOT_FETCHED;
       }
       if (hasItem) {
-        const obj = { signal };
-        const monetizationRestrictions = obj.fetchMonetizationRestrictions(id2.id, obj);
+        const obj2 = { signal };
+        const monetizationRestrictions = GuildRoleSubscriptionsActionCreatorsAll.fetchMonetizationRestrictions(
+          id2.id,
+          obj2,
+        );
       }
     }, items2);
     let id;
@@ -127,9 +138,9 @@ export const useShouldRestrictUpdatingCreatorMonetizationSettings =
       id = stateFromStores.id;
     }
     closure_129_2 = id;
-    let tmpResult = tmp(504);
+    const obj = require("initialize");
     const items3 = [GuildRoleSubscriptionsStore];
-    const stateFromStoresArray = tmpResult.useStateFromStoresArray(items3, () => {
+    const stateFromStoresArray = require("initialize").useStateFromStoresArray(items3, () => {
       let tmp2 = importAll;
       if (importAll == null) {
         tmp2 = React6;
@@ -140,9 +151,9 @@ export const useShouldRestrictUpdatingCreatorMonetizationSettings =
       }
       return monetizationRestrictions;
     });
-    tmpResult = tmp(504);
+    const tmpResult = require("initialize");
     const items4 = [GuildRoleSubscriptionsStore];
-    const stateFromStores1 = tmpResult.useStateFromStores(items4, () => {
+    const stateFromStores1 = require("initialize").useStateFromStores(items4, () => {
       let tmp2 = importAll;
       if (importAll == null) {
         tmp2 = React6;
@@ -161,7 +172,7 @@ export const useShouldRestrictUpdatingCreatorMonetizationSettings =
       let result = flag;
     } else {
       result = tmp(4268).isRestrictedFromUpdatingCreatorMonetizationSettings(stateFromStoresArray);
-      const tmpResult1 = tmp(4268);
+      const tmpResult4 = tmp(4268);
     }
     if (stateFromStores != null) {
       const features2 = stateFromStores.features;
@@ -171,19 +182,17 @@ export const useShouldRestrictUpdatingCreatorMonetizationSettings =
     if (!result) {
       tmp13 = hasItem;
     }
-    obj = {
+    return {
       shouldRestrictUpdatingCreatorMonetizationSettings: tmp13,
       allowSelfRemoveMonetization: !result,
       restrictionsLoading: stateFromStores1,
     };
-    return obj;
   };
 export const useIsMonetizationReapplicationDisabled = function useIsMonetizationReapplicationDisabled(id2) {
   _require = id2;
-  let obj = require("initialize");
   const items = [GuildStore];
   const items1 = [id2];
-  const stateFromStores = obj.useStateFromStores(items, () => GuildStore.getGuild(closure_0), items1);
+  const stateFromStores = require("initialize").useStateFromStores(items, () => GuildStore.getGuild(closure_0), items1);
   closure_129_0 = stateFromStores;
   closure_129_2 = undefined;
   const tmp4 = useUnmountAbortSignalDefault();
@@ -199,8 +208,11 @@ export const useIsMonetizationReapplicationDisabled = function useIsMonetization
       hasItem = GuildRoleSubscriptionsStore.getMonetizationRestrictionsFetchState(id2.id) === FetchState.NOT_FETCHED;
     }
     if (hasItem) {
-      const obj = { signal };
-      const monetizationRestrictions = obj.fetchMonetizationRestrictions(id2.id, obj);
+      const obj2 = { signal };
+      const monetizationRestrictions = GuildRoleSubscriptionsActionCreatorsAll.fetchMonetizationRestrictions(
+        id2.id,
+        obj2,
+      );
     }
   }, items2);
   let id;
@@ -208,9 +220,9 @@ export const useIsMonetizationReapplicationDisabled = function useIsMonetization
     id = stateFromStores.id;
   }
   closure_129_2 = id;
-  let tmpResult = tmp(504);
+  let obj = require("initialize");
   const items3 = [GuildRoleSubscriptionsStore];
-  const stateFromStoresArray = tmpResult.useStateFromStoresArray(items3, () => {
+  const stateFromStoresArray = require("initialize").useStateFromStoresArray(items3, () => {
     let tmp2 = importAll;
     if (importAll == null) {
       tmp2 = React6;
@@ -221,18 +233,19 @@ export const useIsMonetizationReapplicationDisabled = function useIsMonetization
     }
     return monetizationRestrictions;
   });
-  tmpResult = tmp(504);
+  const tmpResult = require("initialize");
   const items4 = [GuildRoleSubscriptionsStore];
-  obj = { isMonetizationReapplicationDisabled: null, restrictionsLoading: null };
-  const stateFromStores1 = tmpResult.useStateFromStores(items4, () => {
+  let obj2 = { isMonetizationReapplicationDisabled: null, restrictionsLoading: null };
+  const stateFromStores1 = require("initialize").useStateFromStores(items4, () => {
     let tmp2 = importAll;
     if (importAll == null) {
       tmp2 = React6;
     }
     return GuildRoleSubscriptionsStore.getMonetizationRestrictionsFetchState(tmp2) === FetchState.FETCHING;
   });
-  obj.isMonetizationReapplicationDisabled =
+  const tmpResult3 = require("initialize");
+  obj2.isMonetizationReapplicationDisabled =
     require("CreatorMonetizationRestrictionsUtils").isRestrictedFromMonetizationReapplication(stateFromStoresArray);
-  obj.restrictionsLoading = stateFromStores1;
-  return obj;
+  obj2.restrictionsLoading = stateFromStores1;
+  return obj2;
 };

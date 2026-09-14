@@ -7,6 +7,8 @@ import GuildStore from "../../../stores/GuildStore.tsx";
 import PermissionStore from "../../../stores/PermissionStore.tsx";
 import VoiceStateStore from "../../../stores/VoiceStateStore.tsx";
 
+const require = globalThis.__r;
+
 require = fn;
 function canStreamInChannel(channel, GuildStore, PermissionStore, arg3) {
   let flag = arg3;

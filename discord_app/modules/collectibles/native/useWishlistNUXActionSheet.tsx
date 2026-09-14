@@ -3,15 +3,17 @@ import noop from "../../../../_runtime/metro/00019__.js";
 import UserProfileStore from "../../user_profile/UserProfileStore.tsx";
 import AuthenticationStore from "../../../stores/AuthenticationStore.tsx";
 
+const require = globalThis.__r;
+
 const require = fn;
 const ContentDismissActionType = fn(1954).ContentDismissActionType;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/collectibles/native/useWishlistNUXActionSheet.tsx");
 
 export default function useWishlistNUXActionSheet() {
-  let obj = require("initialize");
   const items = [AuthenticationStore];
-  _require = obj.useStateFromStores(items, () => id.getId());
+  _require = require("initialize").useStateFromStores(items, () => id.getId());
+  let obj = require("initialize");
   const items1 = [UserProfileStore];
   const stateFromStores = require("initialize").useStateFromStores(items1, () =>
     UserProfileStore.getFirstWishlistId(closure_0),
@@ -29,35 +31,34 @@ export default function useWishlistNUXActionSheet() {
   if (stateFromStores1) {
     stateFromStores1 = null == stateFromStores;
   }
-  const obj3 = require("initialize");
+  let obj3 = require("initialize");
   if (stateFromStores1) {
     stateFromStores1 = !tmpResult.useIsDismissibleContentDismissed_UNSAFE(
       tmp(1943).DismissibleContent.WISHLIST_MOBILE_NUX_ACTION_SHEET,
     );
   }
-  obj = {
+  tmpResult = require("DismissibleContentUnsafeUtils");
+  return {
     shouldShowWishlistNUXActionSheet: stateFromStores1,
     showWishlistNUXActionSheet: noop.useCallback((product) => {
-      let obj = closure_0(paths[7]);
-      const result = obj.trackDismissibleContentShown(
+      const result = closure_0(paths[7]).trackDismissibleContentShown(
         closure_0(paths[6]).DismissibleContent.WISHLIST_MOBILE_NUX_ACTION_SHEET,
       );
-      obj = { product };
+      const obj = closure_0(paths[7]);
       require("ActionSheetActionCreators").openLazy(
         closure_0(paths[10])(paths[9], paths.paths),
         "WishlistNUXAddedItemActionSheet",
-        obj,
+        { product },
         "stack",
       );
       const obj2 = require("ActionSheetActionCreators");
-      obj = { dismissAction: constants.USER_DISMISS, forceTrack: true };
+      const obj3 = { product };
       const result1 = closure_0(paths[5]).UNSAFE_markDismissibleContentAsDismissed(
         closure_0(paths[6]).DismissibleContent.WISHLIST_MOBILE_NUX_ACTION_SHEET,
-        obj,
+        { dismissAction: constants.USER_DISMISS, forceTrack: true },
       );
     }, []),
   };
-  return obj;
 }
 export const useHasNeverWishlisted = function useHasNeverWishlisted() {
   const items = [AuthenticationStore];

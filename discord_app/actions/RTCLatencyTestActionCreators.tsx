@@ -14,6 +14,5 @@ export const fetchRTCLatencyTestRegions = function fetchRTCLatencyTestRegions(ar
   return HTTP.get(obj);
 };
 export const completeRTCLatencyTest = function completeRTCLatencyTest(latencyRankedRegions, mapped) {
-  const obj = { type: "RTC_LATENCY_TEST_COMPLETE", latencyRankedRegions, geoRankedRegions: mapped };
-  obj.dispatch(obj);
+  DispatcherDefault.dispatch({ type: "RTC_LATENCY_TEST_COMPLETE", latencyRankedRegions, geoRankedRegions: mapped });
 };

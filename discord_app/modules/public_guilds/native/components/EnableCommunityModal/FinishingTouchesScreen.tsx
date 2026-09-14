@@ -26,31 +26,29 @@ const result = size.fileFinishedImporting(
 );
 
 export default function FinishingTouchesScreen() {
-  let obj = noop;
   const ref = noop.useRef(null);
-  let obj1 = guild(4338);
-  const token = obj1.useToken(defaultMessageNotifications(576).modules.mobile.TABLE_ROW_PADDING);
-  let obj2 = guild(504);
+  const token = guild(4338).useToken(defaultMessageNotifications(576).modules.mobile.TABLE_ROW_PADDING);
+  let obj2 = guild(4338);
   let items = [GuildSettingsStore];
-  guild = obj2.useStateFromStoresObject(items, () => props.getProps()).guild;
+  guild = guild(504).useStateFromStoresObject(items, () => props.getProps()).guild;
   let prop;
   if (guild != null) {
     prop = guild.defaultMessageNotifications;
   }
   defaultMessageNotifications = _slicedToArray(noop.useState(prop), 1)[0];
-  const tmp9 = _slicedToArray(obj.useState(false), 2);
-  const first1 = tmp9[0];
+  [first1, obj19.onValueChange] = noop.useState(false);
+  let obj3 = guild(504);
   [tmp12, tmp13] = _slicedToArray(
-    obj.useState(!closure_11.some((item) => PermissionUtilsAll.canEveryone(item, guild))),
+    noop.useState(!closure_11.some((item) => PermissionUtilsAll.canEveryone(item, guild))),
     2,
   );
-  const first2 = _slicedToArray(obj.useState(tmp12), 1)[0];
+  const first2 = _slicedToArray(noop.useState(tmp12), 1)[0];
   let prop1;
   if (guild != null) {
     prop1 = guild.defaultMessageNotifications;
   }
   const items1 = [prop1, defaultMessageNotifications];
-  const callback = obj.useCallback((arg0) => {
+  const callback = noop.useCallback((arg0) => {
     let tmp = arg0;
     if (arg0) {
       let prop;
@@ -58,19 +56,19 @@ export default function FinishingTouchesScreen() {
         prop = guild.defaultMessageNotifications;
       }
       if (prop !== constants2.ONLY_MENTIONS) {
-        let obj = { defaultMessageNotifications: tmp4.ONLY_MENTIONS };
-        GuildSettingsActionCreatorsDefault.updateGuild(obj);
+        const obj2 = { defaultMessageNotifications: tmp4.ONLY_MENTIONS };
+        GuildSettingsActionCreatorsDefault.updateGuild(obj2);
       }
     }
     if (!tmp) {
       tmp = null == defaultMessageNotifications;
     }
     if (!tmp) {
-      obj = { defaultMessageNotifications };
-      obj.updateGuild(obj);
+      const obj4 = { defaultMessageNotifications };
+      GuildSettingsActionCreatorsDefault.updateGuild(obj4);
     }
   }, items1);
-  const callback1 = obj.useCallback((features) => {
+  const callback1 = noop.useCallback((features) => {
     everyoneRole = undefined;
     if (null != features) {
       everyoneRole = everyoneRole.getEveryoneRole(features);
@@ -80,10 +78,10 @@ export default function FinishingTouchesScreen() {
       const set = new Set(features.features);
       set.add(constants.COMMUNITY);
       const removeResult = BigFlagUtilsAll.remove(everyoneRole.permissions, closure_1_12);
-      let obj = {};
+      const obj2 = {};
       const merged = Object.assign(everyoneRole);
-      obj.permissions = removeResult;
-      obj = {
+      obj2.permissions = removeResult;
+      const obj4 = {
         features: set,
         rulesChannelId: null,
         safetyAlertsChannelId: null,
@@ -96,7 +94,7 @@ export default function FinishingTouchesScreen() {
       if (rulesChannelId == null) {
         rulesChannelId = closure_1_10;
       }
-      obj.rulesChannelId = rulesChannelId;
+      obj4.rulesChannelId = rulesChannelId;
       ({
         safetyAlertsChannelId: obj6.safetyAlertsChannelId,
         verificationLevel: obj6.verificationLevel,
@@ -106,66 +104,69 @@ export default function FinishingTouchesScreen() {
       if (publicUpdatesChannelId == null) {
         publicUpdatesChannelId = closure_1_10;
       }
-      obj.publicUpdatesChannelId = publicUpdatesChannelId;
-      obj.defaultMessageNotifications = features.defaultMessageNotifications;
-      first(9192).saveGuild(features.id, obj);
+      obj4.publicUpdatesChannelId = publicUpdatesChannelId;
+      obj4.defaultMessageNotifications = features.defaultMessageNotifications;
+      first(9192).saveGuild(features.id, obj4);
       if (removeResult !== everyoneRole.permissions) {
-        obj = guild(17738);
-        const items = [obj];
-        obj.saveRoleSettings(features.id, items);
+        const items = [obj2];
+        guild(17739).saveRoleSettings(features.id, items);
+        const obj = guild(17739);
       }
       const obj5 = first(9192);
     }
   }, []);
   const tmp11 = _slicedToArray(
-    obj.useState(!closure_11.some((item) => PermissionUtilsAll.canEveryone(item, guild))),
+    noop.useState(!closure_11.some((item) => PermissionUtilsAll.canEveryone(item, guild))),
     2,
   );
-  const tmp19 = defaultMessageNotifications(17782)();
-  const enableCommunitySharedStyles = guild(17781).useEnableCommunitySharedStyles();
-  obj = {
+  const tmp19 = defaultMessageNotifications(17783)();
+  const enableCommunitySharedStyles = guild(17782).useEnableCommunitySharedStyles();
+  let obj4 = {
     headerRef: ref,
-    currentStep: tmp2(17779).EnableCommunityModalSteps.STEP_3,
+    currentStep: guild(17780).EnableCommunityModalSteps.STEP_3,
     onSuccess: callback1,
     disableNextStep: !first1,
     buttonText: null,
     children: null,
   };
   const intl = tmp2(1114).intl;
-  obj.buttonText = intl.string(guild(1114).t.XGl4ba);
-  obj = { style: enableCommunitySharedStyles.content, children: null };
-  obj1 = { ref, accessibilityRole: "header", variant: "text-md/semibold", color: "text-subtle", children: null };
+  obj4.buttonText = intl.string(guild(1114).t.XGl4ba);
+  let obj5 = { style: enableCommunitySharedStyles.content, children: null };
+  const obj6 = { ref, accessibilityRole: "header", variant: "text-md/semibold", color: "text-subtle", children: null };
   const intl2 = tmp2(1114).intl;
-  obj1.children = intl2.formatToPlainString(guild(1114).t.tInpJj, { number: 3, total: 3 });
-  const items2 = [closure_16(guild(4632).Text, obj1), , ,];
-  obj2 = { resizeMode: "contain", source: tmp19.finishingTouches };
-  items2[1] = closure_16(closure_6, obj2);
-  let obj3 = {
+  obj6.children = intl2.formatToPlainString(guild(1114).t.tInpJj, { number: 3, total: 3 });
+  const items2 = [
+    closure_16(guild(4632).Text, obj6),
+    closure_16(closure_6, { resizeMode: "contain", source: tmp19.finishingTouches }),
+    ,
+  ];
+  const obj8 = {
     style: enableCommunitySharedStyles.header,
     variant: "heading-xl/extrabold",
     color: "mobile-text-heading-primary",
     children: null,
   };
   const intl3 = tmp2(1114).intl;
-  obj3.children = intl3.string(guild(1114).t["Pj/s/a"]);
-  items2[2] = closure_16(guild(4632).Heading, obj3);
-  const obj4 = {
+  obj8.children = intl3.string(guild(1114).t["Pj/s/a"]);
+  items2[2] = closure_16(guild(4632).Heading, obj8);
+  const obj9 = {
     style: enableCommunitySharedStyles.description,
     variant: "text-md/medium",
     color: "text-subtle",
     children: null,
   };
   const intl4 = tmp2(1114).intl;
-  obj4.children = intl4.string(guild(1114).t["IL7/no"]);
-  items2[3] = closure_16(guild(4632).Text, obj4);
-  obj.children = items2;
-  const items3 = [closure_17(closure_7, obj), ,];
-  let obj5 = { spacing: 24, style: { paddingHorizontal: token }, children: null };
-  const obj6 = { formSwitchDisabled: defaultMessageNotifications === constants2.ONLY_MENTIONS, children: null };
-  let tmp4Result = tmp4(17791);
-  const obj7 = { label: null, value: null, disabled: null, onValueChange: null };
+  obj9.children = intl4.string(guild(1114).t["IL7/no"]);
+  items2[3] = closure_16(guild(4632).Text, obj9);
+  obj5.children = items2;
+  const items3 = [closure_17(closure_7, obj5), ,];
+  const obj10 = { spacing: 24, style: { paddingHorizontal: token }, children: null };
+  const obj11 = { formSwitchDisabled: defaultMessageNotifications === constants2.ONLY_MENTIONS, children: null };
+  const obj7 = { resizeMode: "contain", source: tmp19.finishingTouches };
+  const tmp2Result = guild(17782);
+  const obj12 = { label: null, value: null, disabled: null, onValueChange: null };
   const intl5 = tmp2(1114).intl;
-  obj7.label = intl5.format(guild(1114).t.K8Eg4P, {
+  obj12.label = intl5.format(guild(1114).t.K8Eg4P, {
     infoHook() {
       return null;
     },
@@ -174,66 +175,65 @@ export default function FinishingTouchesScreen() {
   if (guild != null) {
     prop2 = guild.defaultMessageNotifications;
   }
-  const obj9 = { hasIcons: false, children: null };
-  obj7.value = prop2 === constants2.ONLY_MENTIONS;
-  obj7.disabled = defaultMessageNotifications === constants2.ONLY_MENTIONS;
-  obj7.onValueChange = callback;
-  obj6.children = closure_16(guild(7303).TableSwitchRow, obj7);
-  const items4 = [closure_16(tmp4Result, obj6)];
-  const obj10 = { formSwitchDisabled: first2, children: null };
-  tmp4Result = tmp4(17791);
-  const obj11 = { label: null, value: null, disabled: null, onValueChange: null };
+  const obj14 = { hasIcons: false, children: null };
+  obj12.value = prop2 === constants2.ONLY_MENTIONS;
+  obj12.disabled = defaultMessageNotifications === constants2.ONLY_MENTIONS;
+  obj12.onValueChange = callback;
+  obj11.children = closure_16(guild(7303).TableSwitchRow, obj12);
+  const items4 = [closure_16(defaultMessageNotifications(17792), obj11)];
+  const obj15 = { formSwitchDisabled: first2, children: null };
+  const obj13 = {
+    infoHook() {
+      return null;
+    },
+  };
+  const tmp4Result = defaultMessageNotifications(17792);
+  const obj16 = { label: null, value: null, disabled: null, onValueChange: null };
   const intl6 = tmp2(1114).intl;
-  obj11.label = intl6.format(guild(1114).t.v8qCoG, {
+  obj16.label = intl6.format(guild(1114).t.v8qCoG, {
     infoHook() {
       return null;
     },
   });
-  obj11.value = tmp12;
-  obj11.disabled = first2;
-  obj11.onValueChange = tmp13;
-  obj10.children = closure_16(guild(7303).TableSwitchRow, obj11);
-  items4[1] = closure_16(tmp4Result, obj10);
-  obj9.children = items4;
-  const items5 = [closure_17(guild(5768).TableRowGroup, obj9)];
-  const obj13 = { title: null, hasIcons: false, children: null };
+  obj16.value = tmp12;
+  obj16.disabled = first2;
+  obj16.onValueChange = tmp13;
+  obj15.children = closure_16(guild(7303).TableSwitchRow, obj16);
+  items4[1] = closure_16(defaultMessageNotifications(17792), obj15);
+  obj14.children = items4;
+  const items5 = [closure_17(guild(5768).TableRowGroup, obj14)];
+  const obj18 = { title: null, hasIcons: false, children: null };
   const intl7 = tmp2(1114).intl;
-  obj13.title = intl7.string(guild(1114).t["k+b2Cf"]);
-  const obj14 = { label: null, value: null, onValueChange: null };
+  obj18.title = intl7.string(guild(1114).t["k+b2Cf"]);
+  const obj19 = { label: null, value: null, onValueChange: null };
   const intl8 = tmp2(1114).intl;
-  obj14.label = intl8.string(guild(1114).t["9AG3wI"]);
-  obj14.value = first1;
-  obj14.onValueChange = tmp9[1];
-  obj13.children = closure_16(guild(7303).TableSwitchRow, obj14);
-  items5[1] = closure_16(guild(5768).TableRowGroup, obj13);
-  obj5.children = items5;
-  items3[1] = closure_17(guild(5054).Stack, obj5);
-  const obj15 = {
+  obj19.label = intl8.string(guild(1114).t["9AG3wI"]);
+  obj19.value = first1;
+  obj18.children = closure_16(guild(7303).TableSwitchRow, obj19);
+  items5[1] = closure_16(guild(5768).TableRowGroup, obj18);
+  obj10.children = items5;
+  items3[1] = closure_17(guild(5054).Stack, obj10);
+  const obj20 = {
     style: enableCommunitySharedStyles.formHint,
     variant: "text-xs/medium",
     color: "text-subtle",
     children: null,
   };
   const intl9 = tmp2(1114).intl;
-  const obj16 = { communityGuidelines: null, typesOfGuilds: null };
-  const obj12 = {
+  const obj21 = { communityGuidelines: null, typesOfGuilds: null };
+  const obj17 = {
     infoHook() {
       return null;
     },
   };
-  const obj8 = {
-    infoHook() {
-      return null;
-    },
-  };
-  const tmp2Result = guild(17781);
-  obj16.communityGuidelines = defaultMessageNotifications(2024).getArticleURL(constants.PUBLIC_GUILD_GUILDLINES);
-  const tmp4Result1 = defaultMessageNotifications(2024);
-  obj16.typesOfGuilds = defaultMessageNotifications(2024).getArticleURL(
+  const tmp4Result4 = defaultMessageNotifications(17792);
+  obj21.communityGuidelines = defaultMessageNotifications(2024).getArticleURL(constants.PUBLIC_GUILD_GUILDLINES);
+  const tmp4Result5 = defaultMessageNotifications(2024);
+  obj21.typesOfGuilds = defaultMessageNotifications(2024).getArticleURL(
     constants.FRIEND_COMMUNITY_DISCOVERABLE_GUILD_TYPES,
   );
-  obj15.children = intl9.format(guild(1114).t["BwbW/Q"], obj16);
-  items3[2] = closure_16(guild(4632).Text, obj15);
-  obj.children = items3;
-  return closure_17(guild(17779).EnableCommunityModalScreen, obj);
+  obj20.children = intl9.format(guild(1114).t["BwbW/Q"], obj21);
+  items3[2] = closure_16(guild(4632).Text, obj20);
+  obj4.children = items3;
+  return closure_17(guild(17780).EnableCommunityModalScreen, obj4);
 }

@@ -3,6 +3,8 @@ import shared from "../../../../../shared.tsx";
 import _mod8349 from "../../index.tsx";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 
+const require = globalThis.__r;
+
 require = fn;
 const Image = fn(17).Image;
 const jsx = fn(21).jsx;
@@ -10,7 +12,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("design/components/Illustration/native/redesign/generated/NoResultsAlt.tsx");
 
 export const getNoResultsAltSource = function getNoResultsAltSource(theme) {
-  const obj = {
+  return _mod8349.getIllustrationSource(theme, {
     dark() {
       return require("../../../../../../../_runtime/metro/09891__.js");
     },
@@ -20,11 +22,11 @@ export const getNoResultsAltSource = function getNoResultsAltSource(theme) {
     light() {
       return require("../../../../../../../_runtime/metro/07157__.js");
     },
-  };
-  return obj.getIllustrationSource(theme, obj);
+  });
 };
 export const useNoResultsAltSource = function useNoResultsAltSource() {
-  const obj = {
+  const obj = shared;
+  return _mod8349.getIllustrationSource(obj.useThemeContext().theme, {
     dark() {
       return require("../../../../../../../_runtime/metro/09891__.js");
     },
@@ -34,11 +36,12 @@ export const useNoResultsAltSource = function useNoResultsAltSource() {
     light() {
       return require("../../../../../../../_runtime/metro/07157__.js");
     },
-  };
-  return _mod8349.getIllustrationSource(obj.useThemeContext().theme, obj);
+  });
 };
 export const NoResultsAlt = function NoResultsAlt(arg0) {
-  let obj = {
+  const obj = shared;
+  const obj4 = {};
+  const illustrationSource = _mod8349.getIllustrationSource(obj.useThemeContext().theme, {
     dark() {
       return require("../../../../../../../_runtime/metro/09891__.js");
     },
@@ -48,10 +51,8 @@ export const NoResultsAlt = function NoResultsAlt(arg0) {
     light() {
       return require("../../../../../../../_runtime/metro/07157__.js");
     },
-  };
-  obj = {};
-  const illustrationSource = _mod8349.getIllustrationSource(obj.useThemeContext().theme, obj);
+  });
   const merged = Object.assign(arg0);
-  obj.source = illustrationSource;
+  obj4.source = illustrationSource;
   return <Image />;
 };

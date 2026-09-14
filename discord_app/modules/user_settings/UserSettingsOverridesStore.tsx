@@ -16,21 +16,21 @@ function updateExistingSettings() {
   }
   obj = { gifAutoPlay: value, animateEmoji: null, animateStickers: null };
   const textAndImages2 = settings.textAndImages;
-  value = undefined;
+  let value3;
   if (textAndImages2 != null) {
     if (textAndImages2.animateEmoji != null) {
-      value = iter2.value;
+      value3 = iter2.value;
     }
   }
-  obj.animateEmoji = value;
+  obj.animateEmoji = value3;
   const textAndImages3 = settings.textAndImages;
-  let value1;
+  let value4;
   if (textAndImages3 != null) {
     if (textAndImages3.animateStickers != null) {
-      value1 = iter3.value;
+      value4 = iter3.value;
     }
   }
-  obj.animateStickers = value1;
+  obj.animateStickers = value4;
   return false;
 }
 const dependencyMap = {};
@@ -87,21 +87,21 @@ obj = {
     }
     obj = { gifAutoPlay: value, animateEmoji: null, animateStickers: null };
     const textAndImages2 = settings.textAndImages;
-    value = undefined;
+    let value3;
     if (textAndImages2 != null) {
       if (textAndImages2.animateEmoji != null) {
-        value = iter2.value;
+        value3 = iter2.value;
       }
     }
-    obj.animateEmoji = value;
+    obj.animateEmoji = value3;
     const textAndImages3 = settings.textAndImages;
-    let value1;
+    let value4;
     if (textAndImages3 != null) {
       if (textAndImages3.animateStickers != null) {
-        value1 = iter3.value;
+        value4 = iter3.value;
       }
     }
-    obj.animateStickers = value1;
+    obj.animateStickers = value4;
     let flag = false;
     let flag2 = false;
     const keys = Object.keys();

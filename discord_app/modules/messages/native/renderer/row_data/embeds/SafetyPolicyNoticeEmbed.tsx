@@ -52,7 +52,7 @@ export const createSafetyPolicyNoticeEmbed = function createSafetyPolicyNoticeEm
         }
         if (null != rawValue) {
           if (null != parsed) {
-            let obj = {
+            const obj = {
               titleText: null,
               titleIcon: null,
               subtitleText: null,
@@ -64,10 +64,10 @@ export const createSafetyPolicyNoticeEmbed = function createSafetyPolicyNoticeEm
             obj.titleText = intl.string(util.t["4CxGXi"]);
             obj.titleIcon = renderer_EmbedUtils.getAssetUriForEmbed(Image.resolveAssetSource(_modDef8712));
             const intl2 = util.intl;
-            obj = { daysAgo: null };
+            const obj3 = { daysAgo: null };
             const obj4 = _modDef4228();
-            obj.daysAgo = obj4.diff(_modDef4228.unix(parsed), "days");
-            obj.subtitleText = intl2.formatToPlainString(util.t.eevFb6, obj);
+            obj3.daysAgo = obj4.diff(_modDef4228.unix(parsed), "days");
+            obj.subtitleText = intl2.formatToPlainString(util.t.eevFb6, obj3);
             const intl3 = util.intl;
             obj.descriptionText = intl3.string(util.t["5CLb0A"]);
             const intl4 = util.intl;

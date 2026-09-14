@@ -5,7 +5,7 @@ import timingPresets from "../../../../design/animation/reanimated/timing/timing
 import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
 
 require = fn;
-let obj = { duration: 1300, easing: fn(1178).STANDARD_EASING };
+let TIMING_CONFIG = { duration: 1300, easing: fn(1176).STANDARD_EASING };
 const __initData = {
   code: "function useChatPlaceholderAnimatedStylesTsx1(){const{visible,animated,useReducedMotion,withRepeat,withSequence,withTiming,timingNone,TIMING_CONFIG}=this.__closure;if(!visible){return{opacity:0};}else if(!animated||useReducedMotion){return{opacity:0.7};}return{opacity:withRepeat(withSequence(withTiming(0.3,timingNone),withTiming(0.7,TIMING_CONFIG),withTiming(0.3,TIMING_CONFIG)),-1)};}",
 };
@@ -16,14 +16,14 @@ export default function useChatPlaceholderAnimatedStyles(visible) {
   visible = visible.visible;
   const animated = visible.animated;
   let stateFromStores;
-  let __closure = visible(animated[2]);
+  TIMING_CONFIG = visible(animated[2]);
   const items = [stateFromStores];
-  stateFromStores = __closure.useStateFromStores(items, () => stateFromStores.useReducedMotion);
+  stateFromStores = TIMING_CONFIG.useStateFromStores(items, () => stateFromStores.useReducedMotion);
   const fn = function c() {
     if (visible) {
       if (animated) {
         if (!stateFromStores) {
-          obj = { opacity: null };
+          let obj = { opacity: null };
           const obj2 = ReanimatedRexport;
           const obj3 = ReanimatedRexport;
           const withTimingResult = timing.withTiming(0.3, timingPresets.timingNone);
@@ -39,7 +39,8 @@ export default function useChatPlaceholderAnimatedStyles(visible) {
       return { opacity: 0 };
     }
   };
-  __closure = {
+  let obj2 = visible(animated[3]);
+  fn.__closure = {
     visible,
     animated,
     useReducedMotion: stateFromStores,
@@ -47,10 +48,9 @@ export default function useChatPlaceholderAnimatedStyles(visible) {
     withSequence: visible(animated[3]).withSequence,
     withTiming: visible(animated[4]).withTiming,
     timingNone: visible(animated[5]).timingNone,
-    TIMING_CONFIG: __closure,
+    TIMING_CONFIG,
   };
-  fn.__closure = __closure;
   fn.__workletHash = 3375288363194;
   fn.__initData = __initData;
-  return visible(animated[3]).useAnimatedStyle(fn);
+  return obj2.useAnimatedStyle(fn);
 }

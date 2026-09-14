@@ -71,10 +71,10 @@ obj = {
           obj = {};
           const joined = items.join(",");
           const merged = Object.assign(obj);
-          obj = { state: "success", data: tmp, fetchedAt: null };
+          const obj2 = { state: "success", data: tmp, fetchedAt: null };
           const _Date = Date;
-          obj.fetchedAt = Date.now();
-          obj[joined] = obj;
+          obj2.fetchedAt = Date.now();
+          obj[joined] = obj2;
         }
       }
     }
@@ -101,10 +101,10 @@ obj = {
           } else {
             obj = {};
             const merged = Object.assign(obj);
-            obj = { state: "error", fetchedAt: null };
+            const obj2 = { state: "error", fetchedAt: null };
             const _Date = Date;
-            obj.fetchedAt = Date.now();
-            obj[joined] = obj;
+            obj2.fetchedAt = Date.now();
+            obj[joined] = obj2;
           }
         }
       }

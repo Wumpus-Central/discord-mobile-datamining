@@ -37,13 +37,13 @@ export const useToken = function useToken(BACKGROUND_BASE_LOW, DARK) {
             if (enabledExperiments == tmp3) {
               enabledExperiments = [];
             }
-            obj = { enabledExperiments, density: null };
+            const obj3 = { enabledExperiments, density: null };
             let str2 = themeContext.density;
             if (str2 == tmp3) {
               str2 = "compact";
             }
-            obj.density = str2;
-            let resolveResult = BACKGROUND_BASE_LOW.resolve(obj);
+            obj3.density = str2;
+            let resolveResult = BACKGROUND_BASE_LOW.resolve(obj3);
           }
         }
       }

@@ -24,14 +24,14 @@ export default function usePIPAvoidanceSpecs(mode) {
   mode = mode.mode;
   const controlsSpecs = mode.controlsSpecs;
   const safeArea = mode.safeArea;
-  let obj = mode(safeArea[3]);
-  const sharedValue = obj.useSharedValue({ top: 0, bottom: 0 });
+  const sharedValue = mode(safeArea[3]).useSharedValue({ top: 0, bottom: 0 });
   const tmp2 = controlsSpecs(safeArea[4])();
   VoicePanelControlsModes = tmp2;
   const tmp3 = controlsSpecs(safeArea[5])();
   PIP_WINDOW_OFFSET = tmp3;
+  let obj = mode(safeArea[3]);
   const token = mode(safeArea[6]).useToken(controlsSpecs(safeArea[7]).modules.mobile.VOICE_PANEL_GUTTER);
-  const obj2 = mode(safeArea[6]);
+  let obj2 = mode(safeArea[6]);
   const fn = function p() {
     return {
       mode: mode.get(),
@@ -45,7 +45,6 @@ export default function usePIPAvoidanceSpecs(mode) {
   fn.__workletHash = 17017598468922;
   fn.__initData = token;
   const fn2 = function u(safeAreaState, current) {
-    let obj = cheapWorkletShallowEqual;
     if (!obj.cheapWorkletShallowEqual(safeAreaState, tmp)) {
       ({ mode, controlsSpecs, keyboardHeight, safeArea } = safeAreaState);
       if (mode !== VoicePanelModes.PIP) {
@@ -60,8 +59,8 @@ export default function usePIPAvoidanceSpecs(mode) {
       } else {
         tmp6 = getPIPBottomOffsetForPIPModeDefault(tmp3);
       }
-      obj = { screenBottomOffset: tmp6, safeAreaBottom: safeArea.bottom, keyboardHeight };
-      const bottomOffset = getAdjustedBottomOffsetsDefault(obj).bottomOffset;
+      const obj2 = { screenBottomOffset: tmp6, safeAreaBottom: safeArea.bottom, keyboardHeight };
+      const bottomOffset = getAdjustedBottomOffsetsDefault(obj2).bottomOffset;
       let tmp10 = keyboardHeight <= 0 && mode === VoicePanelModes.PANEL;
       if (tmp10) {
         tmp10 = controlsSpecs.mode === VoicePanelControlsModes.FLOATING_DEFAULT;
@@ -81,9 +80,11 @@ export default function usePIPAvoidanceSpecs(mode) {
       updateSharedValueIfChangedDefault(sharedValue, rect);
       const tmp9Result = updateSharedValueIfChangedDefault;
     }
+    obj = cheapWorkletShallowEqual;
     tmp = current;
   };
-  obj = {
+  const obj3 = mode(safeArea[3]);
+  fn2.__closure = {
     cheapWorkletShallowEqual: mode(safeArea[8]).cheapWorkletShallowEqual,
     VoicePanelModes: sharedValue,
     VoicePanelControlsModes,
@@ -96,9 +97,8 @@ export default function usePIPAvoidanceSpecs(mode) {
     updateSharedValueIfChanged: controlsSpecs(safeArea[12]),
     pipAvoidanceSpecs: sharedValue,
   };
-  fn2.__closure = obj;
   fn2.__workletHash = 13029906729161;
   fn2.__initData = __initData;
-  const animatedReaction = mode(safeArea[3]).useAnimatedReaction(fn, fn2);
+  const animatedReaction = obj3.useAnimatedReaction(fn, fn2);
   return sharedValue;
 }

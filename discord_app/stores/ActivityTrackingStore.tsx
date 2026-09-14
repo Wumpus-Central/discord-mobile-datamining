@@ -49,7 +49,7 @@ function updateActivity(applicationId) {
   const voiceChannelId = SelectedChannelStore.getVoiceChannelId();
   const sessionId = AuthenticationStore.getSessionId();
   const mediaSessionId = RTCConnectionStore.getMediaSessionId();
-  obj = {
+  const obj3 = {
     applicationId: applicationId.applicationId,
     distributor: null,
     shareActivity: null,
@@ -66,16 +66,16 @@ function updateActivity(applicationId) {
   } else {
     distributor = applicationId.distributor;
   }
-  obj.distributor = distributor;
-  obj.shareActivity = result;
-  obj.token = applicationId.token;
-  obj.duration = Math.floor(num / 1000);
-  obj.closed = flag;
-  obj.exePath = applicationId.exePath;
-  obj.voiceChannelId = voiceChannelId;
-  obj.sessionId = sessionId;
-  obj.mediaSessionId = mediaSessionId;
-  ActivitiesActionCreatorsDefault.updateActivity(obj);
+  obj3.distributor = distributor;
+  obj3.shareActivity = result;
+  obj3.token = applicationId.token;
+  obj3.duration = Math.floor(num / 1000);
+  obj3.closed = flag;
+  obj3.exePath = applicationId.exePath;
+  obj3.voiceChannelId = voiceChannelId;
+  obj3.sessionId = sessionId;
+  obj3.mediaSessionId = mediaSessionId;
+  ActivitiesActionCreatorsDefault.updateActivity(obj3);
   applicationId.updatedAt = timestamp;
   if (null == dependencyMap[applicationId.applicationId]) {
     const interval = new tmp3(1952).Interval();
@@ -169,7 +169,7 @@ prototype["getActivities"] = function getActivities() {
   return obj;
 };
 ActivityTrackingStore.displayName = "ActivityTrackingStore";
-obj = {
+const activityTrackingStore = new ActivityTrackingStore(DispatcherDefault, {
   RUNNING_GAMES_CHANGE() {
     handleRunningGamesChange();
   },
@@ -213,8 +213,7 @@ obj = {
       const result = Storage.set(ActivityTrackingStore, tmp);
     }
   },
-};
-const activityTrackingStore = new ActivityTrackingStore(DispatcherDefault, obj);
+});
 const size = fn(2);
 let result = size.fileFinishedImporting("stores/ActivityTrackingStore.tsx");
 

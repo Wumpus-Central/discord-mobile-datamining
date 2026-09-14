@@ -3,6 +3,8 @@ import _slicedToArray from "../../../_runtime/metro/00032__.js";
 import noop from "../../../_runtime/metro/00019__.js";
 import DismissibleContentShownStateStore from "../dismissible_content/DismissibleContentShownStateStore.tsx";
 
+const require = globalThis.__r;
+
 const require = fn;
 const NOOP = fn(1074).NOOP;
 const ContentDismissActionType = fn(1954).ContentDismissActionType;
@@ -26,9 +28,9 @@ export const setFavoritesGuildSuggestions = function setFavoritesGuildSuggestion
   state.setState({ suggestions });
 };
 export const useFavoritesGuildSuggestionsVisibility = function useFavoritesGuildSuggestionsVisibility() {
-  let obj = require("FavoritesHooks");
-  const favoritesAccess = obj.useFavoritesAccess();
+  const favoritesAccess = require("FavoritesHooks").useFavoritesAccess();
   let isFreemium = favoritesAccess.hasAccess;
+  const obj = require("FavoritesHooks");
   if (isFreemium) {
     isFreemium = favoritesAccess.isFreemium;
   }
@@ -54,8 +56,11 @@ export const useFavoritesGuildSuggestionsVisibility = function useFavoritesGuild
     });
   }, items2);
   const layoutEffect1 = noop.useLayoutEffect(() => () => state.setState({ dismiss }), []);
-  obj = { isEligible: isFreemium, isSelected: tmp5[0] === tmp(1943).DismissibleContent.FAVORITES_GUILD_SUGGESTIONS };
-  return obj;
+  const tmpResult = require("useSelectedDismissibleContent");
+  return {
+    isEligible: isFreemium,
+    isSelected: tmp5[0] === require("dismissible_content").DismissibleContent.FAVORITES_GUILD_SUGGESTIONS,
+  };
 };
 export const useFavoritesGuildSuggestionsDismissal = function useFavoritesGuildSuggestionsDismissal() {
   return state((dismiss) => dismiss.dismiss);

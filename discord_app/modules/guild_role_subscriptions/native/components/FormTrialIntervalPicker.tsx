@@ -5,6 +5,8 @@ import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/Actio
 import FormDropdownDefault from "FormDropdown.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
+const require = globalThis.__r;
+
 require = fn;
 const jsx = fn(21).jsx;
 const GuildRoleSubscriptionTrialIntervalSelect = "GuildRoleSubscriptionTrialIntervalSelect";
@@ -20,40 +22,18 @@ export default function FormTrialIntervalPicker(disabled) {
     let intl = interval(1114).intl;
     let stringResult = intl.string(interval(1114).t.WZG1BU);
   } else {
-    let obj = interval(15314);
-    stringResult = obj.formatPlanIntervalDuration(interval);
+    stringResult = interval(15315).formatPlanIntervalDuration(interval);
+    let obj = interval(15315);
   }
-  obj = {
-    label: stringResult,
-    onPress() {
-      const obj = { title: null, items: null, onItemSelect: null, selectedItem: null, hasIcons: false };
-      const intl = util.intl;
-      obj.title = intl.string(util.t.m1KuWd);
-      obj.items = items;
-      obj.onItemSelect = function onItemSelect(arg0) {
-        if (closure_1_1 != null) {
-          tmp(arg0);
-        }
-        require("ActionSheetActionCreators").hideActionSheet(GuildRoleSubscriptionTrialIntervalSelect);
-      };
-      let tmp3 = interval;
-      if (interval == null) {
-        tmp3 = null;
-      }
-      obj.selectedItem = tmp3;
-      obj.openLazy(asyncRequireImpl(9556, dependencyMap.paths), GuildRoleSubscriptionTrialIntervalSelect, obj);
-      const tmp = asyncRequireImpl(9556, dependencyMap.paths);
-    },
-    disabled: disabled.disabled,
-  };
   return jsx(FormDropdownDefault, {
     label: stringResult,
     onPress() {
-      const obj = { title: null, items: null, onItemSelect: null, selectedItem: null, hasIcons: false };
+      const obj2 = { title: null, items: null, onItemSelect: null, selectedItem: null, hasIcons: false };
+      const obj = ActionSheetActionCreatorsDefault;
       const intl = util.intl;
-      obj.title = intl.string(util.t.m1KuWd);
-      obj.items = items;
-      obj.onItemSelect = function onItemSelect(arg0) {
+      obj2.title = intl.string(util.t.m1KuWd);
+      obj2.items = items;
+      obj2.onItemSelect = function onItemSelect(arg0) {
         if (closure_1_1 != null) {
           tmp(arg0);
         }
@@ -63,8 +43,8 @@ export default function FormTrialIntervalPicker(disabled) {
       if (interval == null) {
         tmp3 = null;
       }
-      obj.selectedItem = tmp3;
-      obj.openLazy(asyncRequireImpl(9556, dependencyMap.paths), GuildRoleSubscriptionTrialIntervalSelect, obj);
+      obj2.selectedItem = tmp3;
+      obj.openLazy(asyncRequireImpl(9556, dependencyMap.paths), GuildRoleSubscriptionTrialIntervalSelect, obj2);
       const tmp = asyncRequireImpl(9556, dependencyMap.paths);
     },
     disabled: disabled.disabled,

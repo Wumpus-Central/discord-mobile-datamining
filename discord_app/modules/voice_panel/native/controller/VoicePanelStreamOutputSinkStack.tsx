@@ -39,7 +39,7 @@ prototype["logSinks"] = function logSinks() {
     let str = "[Stream:";
     let str2 = ", Locks:[";
     let str3 = "]]";
-    arr = items.push("[Stream:" + first + ", Locks:[" + arr.join(",") + "]]");
+    let arr3 = items.push("[Stream:" + first + ", Locks:[" + arr.join(",") + "]]");
     continue;
   }
   tmp = this.activeSinks[Symbol.iterator]();

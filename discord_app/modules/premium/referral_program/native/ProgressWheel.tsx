@@ -4,8 +4,8 @@ import useToken from "../../../../design/tokens/native/useToken.tsx";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
 import inlineStyles from "../../../../../_runtime/08574_inlineStyles.js";
 import useReferralProgramBannerDetails from "../hooks/useReferralProgramBannerDetails.tsx";
-import _modDef13532 from "../../../../../_runtime/metro/13532__.js";
-import _modDef13533 from "../../../../../discord_assets/assets/premium/referral_program/referralTrial.png.js";
+import _modDef13533 from "../../../../../_runtime/metro/13533__.js";
+import _modDef13534 from "../../../../../discord_assets/assets/premium/referral_program/referralTrial.png.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const inlineStylesDefault = inlineStyles;
@@ -28,24 +28,36 @@ const result = size.fileFinishedImporting("modules/premium/referral_program/nati
 export default function ProgressWheel(arg0) {
   ({ nReferralsSent, altImage } = arg0);
   const tmp = closure_8();
-  let obj = useToken;
-  const token = obj.useToken(nativeDefault.colors.BACKGROUND_MOD_STRONG);
-  let obj1 = useToken;
-  obj = { style: tmp.progressCircleContainer, children: null };
-  const token1 = obj1.useToken(nativeDefault.colors.BACKGROUND_SURFACE_HIGH);
+  const token = useToken.useToken(nativeDefault.colors.BACKGROUND_MOD_STRONG);
+  const obj3 = { style: tmp.progressCircleContainer, children: null };
+  const token1 = useToken.useToken(nativeDefault.colors.BACKGROUND_SURFACE_HIGH);
   let tmp9 = nReferralsSent === useReferralProgramBannerDetails.MAX_REFERRALS_SENT;
   if (tmp9) {
-    obj = { source: null, style: null };
-    let tmp4Result = FastImageDefault;
-    obj.source = _modDef13532;
-    obj.style = tmp.glowImage;
-    tmp9 = React4(tmp4Result, obj);
+    const obj4 = { source: _modDef13533, style: tmp.glowImage };
+    tmp9 = React4(FastImageDefault, obj4);
+    const tmp4Result = FastImageDefault;
   }
   const items = [tmp9, ,];
   const size = { width: v160, height: v160, children: null };
-  tmp4Result = inlineStylesDefault;
-  const items1 = [React4(inlineStyles.Circle, { cx: 80, cy: 80, r: 77, stroke: token, strokeWidth: 6, fill: token1 })];
-  obj1 = {
+  const items1 = [
+    React4(inlineStyles.Circle, { cx: 80, cy: 80, r: 77, stroke: token, strokeWidth: 6, fill: token1 }),
+    React4(inlineStyles.Circle, {
+      cx: 80,
+      cy: 80,
+      r: 77,
+      stroke: "#53ac66",
+      strokeWidth: 6,
+      fill: "transparent",
+      strokeDasharray,
+      strokeDashoffset: strokeDasharray * (1 - (33.3 * nReferralsSent) / 100),
+      strokeLinecap: "round",
+      rotation: -90,
+      origin: "80, 80",
+    }),
+  ];
+  size.children = items1;
+  items[1] = hasOwnProperty(inlineStylesDefault, size);
+  const obj5 = {
     cx: 80,
     cy: 80,
     r: 77,
@@ -58,13 +70,11 @@ export default function ProgressWheel(arg0) {
     rotation: -90,
     origin: "80, 80",
   };
-  items1[1] = React4(inlineStyles.Circle, obj1);
-  size.children = items1;
-  items[1] = hasOwnProperty(tmp4Result, size);
+  const tmp4Result3 = inlineStylesDefault;
   if (altImage == null) {
-    altImage = _modDef13533;
+    altImage = _modDef13534;
   }
   items[2] = React4(FastImageDefault, { source: { uri: altImage }, style: tmp.progressCircleImage });
-  obj.children = items;
-  return hasOwnProperty(View, obj);
+  obj3.children = items;
+  return hasOwnProperty(View, obj3);
 }

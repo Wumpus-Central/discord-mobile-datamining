@@ -15,13 +15,13 @@ function AddDescription(id) {
   noop = undefined;
   let navigation;
   const tmp = closure_12();
-  let obj = channelId(stateFromStores[8]);
   const items = [UploadAttachmentStore];
-  stateFromStores = obj.useStateFromStores(items, () =>
+  stateFromStores = channelId(stateFromStores[8]).useStateFromStores(items, () =>
     UploadAttachmentStore.getUpload(channelId, id, DraftType.ChannelMessage),
   );
   ({ width, height } = source);
   let num = 1;
+  let obj = channelId(stateFromStores[8]);
   if (null != width) {
     num = 1;
     if (null != height) {
@@ -34,7 +34,6 @@ function AddDescription(id) {
       }
     }
   }
-  let obj1 = noop;
   let str;
   if (stateFromStores != null) {
     str = stateFromStores.description;
@@ -44,53 +43,54 @@ function AddDescription(id) {
   }
   const tmp7 = value(noop.useState(str), 2);
   value = tmp7[0];
-  noop = obj1.useRef(value);
-  const ref = obj1.useRef(null);
-  const ref1 = obj1.useRef(null);
+  noop = obj2.useRef(value);
+  const ref = noop.useRef(null);
+  const ref1 = noop.useRef(null);
   const tmp6 = id(stateFromStores[9])({ ignoreKeyboard: true });
   navigation = channelId(stateFromStores[10]).useNavigation();
   const insets = tmp5(tmp3[11])({ includeKeyboardHeight: true }).insets;
-  obj = { insets, inputs: null, scrollViewRef: ref1 };
+  const obj3 = { insets, inputs: null, scrollViewRef: ref1 };
   const items1 = [{ ref, offset: { type: "toBottom" } }];
-  obj.inputs = items1;
-  id(stateFromStores[12])(obj);
+  obj3.inputs = items1;
+  id(stateFromStores[12])(obj3);
   const items2 = [value];
-  const effect = obj1.useEffect(() => {
+  const effect = obj2.useEffect(() => {
     closure_4.current = current;
   }, items2);
   const items3 = [channelId, id, stateFromStores, navigation];
-  const effect1 = obj1.useEffect(() => {
+  const effect1 = obj2.useEffect(() => {
     navigation.setOptions({
       headerRight(arg0) {
-        channelId(stateFromStores[13]);
         const intl = channelId(stateFromStores[14]).intl;
-        let obj = {};
-        const renderHeaderTextButton = obj.getRenderHeaderTextButton(
+        const renderHeaderTextButton = channelId(stateFromStores[13]).getRenderHeaderTextButton(
           intl.string(channelId(stateFromStores[14]).t["R3BPH+"]),
           () => {
-            id(9436);
-            const obj = {};
+            const obj2 = {};
             const merged = Object.assign(dependencyMap);
-            obj.description = ref.current;
-            obj.update(closure_1_0, closure_1_1, ChannelMessage.ChannelMessage, obj);
-            id(11372).close();
+            obj2.description = ref.current;
+            id(9436).update(closure_1_0, closure_1_1, ChannelMessage.ChannelMessage, obj2);
+            const obj = id(9436);
+            id(11373).close();
           },
         );
         let merged = Object.assign(arg0);
-        return renderHeaderTextButton(obj);
+        return renderHeaderTextButton({});
       },
     });
   }, items3);
-  obj = { ref: ref1, style: tmp.contentContainer, contentContainerStyle: null, children: null };
-  obj1 = { padding: tmp5(tmp3[7]).space.PX_16, paddingBottom: insets.bottom + tmp5(tmp3[7]).space.PX_16 };
-  obj.contentContainerStyle = obj1;
-  const obj2 = { style: tmp.imageContainer, children: null };
-  const obj3 = { style: null, source };
+  const obj4 = { ref: ref1, style: tmp.contentContainer, contentContainerStyle: null, children: null };
+  const tmp2Result = channelId(stateFromStores[10]);
+  obj4.contentContainerStyle = {
+    padding: id(stateFromStores[7]).space.PX_16,
+    paddingBottom: insets.bottom + id(stateFromStores[7]).space.PX_16,
+  };
+  const obj6 = { style: tmp.imageContainer, children: null };
+  const obj7 = { style: null, source };
   const items4 = [tmp.image, { aspectRatio: num, maxHeight: tmp6.height / 2 }];
-  obj3.style = items4;
-  obj2.children = closure_10(closure_6, obj3);
-  const items5 = [closure_10(navigation, obj2)];
-  const obj4 = {
+  obj7.style = items4;
+  obj6.children = closure_10(closure_6, obj7);
+  const items5 = [closure_10(navigation, obj6)];
+  const obj8 = {
     ref,
     containerStyle: null,
     label: null,
@@ -101,34 +101,41 @@ function AddDescription(id) {
     maxLength: 1000,
     autoFocus: true,
   };
-  const tmp2Result = channelId(stateFromStores[10]);
-  obj4.containerStyle = { paddingTop: id(stateFromStores[7]).space.PX_16 };
+  const obj5 = {
+    padding: id(stateFromStores[7]).space.PX_16,
+    paddingBottom: insets.bottom + id(stateFromStores[7]).space.PX_16,
+  };
+  obj8.containerStyle = { paddingTop: id(stateFromStores[7]).space.PX_16 };
   let intl = tmp2(tmp3[14]).intl;
-  obj4.label = intl.string(channelId(stateFromStores[14]).t.eOB2eR);
+  obj8.label = intl.string(channelId(stateFromStores[14]).t.eOB2eR);
   const intl2 = tmp2(tmp3[14]).intl;
-  obj4.placeholder = intl2.string(channelId(stateFromStores[14]).t.RNH1jn);
-  obj4.value = value;
-  obj4.onChange = tmp7[1];
-  obj4.placeholderTextColor = tmp.placeholderText.color;
-  items5[1] = closure_10(channelId(stateFromStores[17]).TextArea, obj4);
-  obj.children = items5;
-  return closure_11(closure_7, obj);
+  obj8.placeholder = intl2.string(channelId(stateFromStores[14]).t.RNH1jn);
+  obj8.value = value;
+  obj8.onChange = tmp7[1];
+  obj8.placeholderTextColor = tmp.placeholderText.color;
+  items5[1] = closure_10(channelId(stateFromStores[17]).TextArea, obj8);
+  obj4.children = items5;
+  return closure_11(closure_7, obj4);
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Image: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
 const DraftType = fn(4977).DraftType;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-fn(4636);
-let createStyles = { contentContainer: null, imageContainer: null, image: null, placeholderText: null };
-createStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
-createStyles.contentContainer = createStyles;
-createStyles.imageContainer = { alignItems: "center", borderRadius: nativeDefault.radii.sm };
+const createStyles = fn(4636);
+let obj2 = {
+  contentContainer: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },
+  imageContainer: null,
+  image: null,
+  placeholderText: null,
+};
+let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
+obj2.imageContainer = { alignItems: "center", borderRadius: nativeDefault.radii.sm };
 let size = { width: "100%", resizeMode: "contain", height: "Array", borderRadius: nativeDefault.radii.sm };
-createStyles.image = size;
-let obj1 = { alignItems: "center", borderRadius: nativeDefault.radii.sm };
-createStyles.placeholderText = { color: nativeDefault.colors.TEXT_MUTED };
-let closure_12 = createStyles.createStyles(createStyles);
+obj2.image = size;
+let obj4 = { alignItems: "center", borderRadius: nativeDefault.radii.sm };
+obj2.placeholderText = { color: nativeDefault.colors.TEXT_MUTED };
+let closure_12 = createStyles.createStyles(obj2);
 size = fn(2);
 const result = size.fileFinishedImporting("modules/image_upload/native/AddImageDescriptionModal.tsx");
 

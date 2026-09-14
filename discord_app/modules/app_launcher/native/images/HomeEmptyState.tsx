@@ -152,8 +152,16 @@ export default function SvgComponent(arg0) {
       d: "M74.806 113.601l-.42-.094c-2.99-.706-4.998.612-6.165 3.953-.14.423-.234.799-.374 1.082-.327.988-.514 1.506-.794 3.105-.187.941 0 1.741.42 2.306h-1.587c-.327-.753-.42-1.647-.234-2.588.327-1.694.514-2.259.84-3.294.094-.282.234-.659.374-1.082 1.495-4.235 4.11-5.223 6.446-5.082l1.447 1.694h.047z",
     }),
   ];
-  let obj = { children: null };
-  obj = { id: "a", x1: 54.35, x2: 54.35, y1: 76.145, y2: 113.601, gradientUnits: "userSpaceOnUse", children: null };
+  const obj = { children: null };
+  const obj2 = {
+    id: "a",
+    x1: 54.35,
+    x2: 54.35,
+    y1: 76.145,
+    y2: 113.601,
+    gradientUnits: "userSpaceOnUse",
+    children: null,
+  };
   const items1 = [
     React3(inlineStyles.Stop, { offset: 0.2, stopColor: "#E8E8E8" }),
     React3(inlineStyles.Stop, { offset: 0.6, stopColor: "#E6E6E7" }),
@@ -162,9 +170,9 @@ export default function SvgComponent(arg0) {
     React3(inlineStyles.Stop, { offset: 0.9, stopColor: "#C2CBE1" }),
     React3(inlineStyles.Stop, { offset: 1, stopColor: "#ABB9DD" }),
   ];
-  obj.children = items1;
-  const items2 = [React4(inlineStyles.LinearGradient, obj), , , , , ,];
-  const obj1 = {
+  obj2.children = items1;
+  const items2 = [React4(inlineStyles.LinearGradient, obj2), , , , , ,];
+  const obj3 = {
     id: "b",
     x1: 48.605,
     x2: 55.288,
@@ -181,9 +189,9 @@ export default function SvgComponent(arg0) {
     React3(inlineStyles.Stop, { offset: 0.9, stopColor: "#C2CBE1" }),
     React3(inlineStyles.Stop, { offset: 1, stopColor: "#ABB9DD" }),
   ];
-  obj1.children = items3;
-  items2[1] = React4(inlineStyles.LinearGradient, obj1);
-  const obj2 = {
+  obj3.children = items3;
+  items2[1] = React4(inlineStyles.LinearGradient, obj3);
+  const obj4 = {
     id: "c",
     x1: 111.499,
     x2: 89.676,
@@ -198,9 +206,9 @@ export default function SvgComponent(arg0) {
     React3(inlineStyles.Stop, { offset: 0.7, stopColor: "#DD2B90" }),
     React3(inlineStyles.Stop, { offset: 1, stopColor: "#D11583" }),
   ];
-  obj2.children = items4;
-  items2[2] = React4(inlineStyles.LinearGradient, obj2);
-  const obj3 = {
+  obj4.children = items4;
+  items2[2] = React4(inlineStyles.LinearGradient, obj4);
+  const obj5 = {
     id: "d",
     x1: 90.254,
     x2: 60.843,
@@ -214,9 +222,9 @@ export default function SvgComponent(arg0) {
     React3(inlineStyles.Stop, { offset: 0.5, stopColor: "#433D84", stopOpacity: 0.8 }),
     React3(inlineStyles.Stop, { offset: 0.8, stopColor: "#433D84" }),
   ];
-  obj3.children = items5;
-  items2[3] = React4(inlineStyles.LinearGradient, obj3);
-  const obj4 = {
+  obj5.children = items5;
+  items2[3] = React4(inlineStyles.LinearGradient, obj5);
+  const obj6 = {
     id: "e",
     x1: 70.532,
     x2: 80.882,
@@ -229,9 +237,9 @@ export default function SvgComponent(arg0) {
     React3(inlineStyles.Stop, { stopColor: "#EB459F" }),
     React3(inlineStyles.Stop, { offset: 1, stopColor: "#FF78B9" }),
   ];
-  obj4.children = items6;
-  items2[4] = React4(inlineStyles.LinearGradient, obj4);
-  const obj5 = {
+  obj6.children = items6;
+  items2[4] = React4(inlineStyles.LinearGradient, obj6);
+  const obj7 = {
     id: "f",
     x1: 72.64,
     x2: 77.637,
@@ -244,9 +252,9 @@ export default function SvgComponent(arg0) {
     React3(inlineStyles.Stop, { stopColor: "#EB459F" }),
     React3(inlineStyles.Stop, { offset: 1, stopColor: "#FF78B9" }),
   ];
-  obj5.children = items7;
-  items2[5] = React4(inlineStyles.LinearGradient, obj5);
-  const obj6 = {
+  obj7.children = items7;
+  items2[5] = React4(inlineStyles.LinearGradient, obj7);
+  const obj8 = {
     id: "g",
     x1: 84.614,
     x2: 90.428,
@@ -259,8 +267,8 @@ export default function SvgComponent(arg0) {
     React3(inlineStyles.Stop, { stopColor: "#29CC7A" }),
     React3(inlineStyles.Stop, { offset: 0.5, stopColor: "#57F287" }),
   ];
-  obj6.children = items8;
-  items2[6] = React4(inlineStyles.LinearGradient, obj6);
+  obj8.children = items8;
+  items2[6] = React4(inlineStyles.LinearGradient, obj8);
   obj.children = items2;
   items[34] = React4(inlineStyles.Defs, obj);
   size.children = items;

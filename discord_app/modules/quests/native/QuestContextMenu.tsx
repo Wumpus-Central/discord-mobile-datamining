@@ -7,7 +7,6 @@ import CheckmarkLargeIcon2 from "../../../design/components/Icon/native/redesign
 import parseURLDefault from "../../../utils/native/parseURL.tsx";
 import QuestTypes from "../QuestTypes.tsx";
 import AdCreativeType from "../../../../discord_common/js/shared/shared-constants/AdCreativeType.tsx";
-import QuestTaskUtils from "../utils/QuestTaskUtils.tsx";
 import AnalyticsTypes from "../lib/analytics/AnalyticsTypes.tsx";
 import IconButton from "../../../design/components/Button/native/IconButton.native.tsx";
 import LinkExternalSmallIcon from "../../../design/components/Icon/native/redesign/generated/LinkExternalSmallIcon.tsx";
@@ -20,7 +19,7 @@ import QuestCopyUtils from "../utils/QuestCopyUtils.tsx";
 import QuestPlatformUtils from "../utils/QuestPlatformUtils.tsx";
 import QuestUtils from "QuestUtils.native.tsx";
 import QuestDisclosureModalActionCreatorsDefault from "QuestDisclosureModal/QuestDisclosureModalActionCreators.tsx";
-import _modDef15232 from "../../../../_runtime/metro/15232__.js";
+import _modDef15233 from "../../../../_runtime/metro/15233__.js";
 import _objectWithoutProperties from "../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import QuestStore from "../QuestStore.tsx";
@@ -83,49 +82,54 @@ export default noop.memo((children) => {
     () => handleResetStatusClick.getQuestPreviewOverride(quest(sourceQuestContent[10]).QuestContent.QUEST_BAR_MOBILE),
     [],
   );
-  const obj2 = quest(sourceQuestContent[9]);
+  let obj2 = quest(sourceQuestContent[9]);
   const trackQuestContentClickedWithImpression = quest(
     sourceQuestContent[11],
   ).useTrackQuestContentClickedWithImpression();
-  const obj3 = quest(sourceQuestContent[11]);
+  let obj3 = quest(sourceQuestContent[11]);
   const questImpressionId = quest(sourceQuestContent[12]).useQuestImpressionId();
   const obj4 = quest(sourceQuestContent[12]);
   const externalCtaLabel = quest(sourceQuestContent[13]).getExternalCtaLabel(quest);
   if (flag) {
+    flag = tmp(tmp2[14]).isShareableQuest(quest.config);
     let tmpResult = tmp(tmp2[14]);
-    flag = tmpResult.isShareableQuest(quest.config);
   }
   let items1 = [quest, questImpressionId, sourceQuestContent];
   action = handleResetDismissibilityClick.useCallback(() => {
-    let obj = PlatformUtils;
-    let isIOSResult = obj.isIOS();
+    let isIOSResult = PlatformUtils.isIOS();
     if (isIOSResult) {
-      let tmpResult = QuestCopyUtils;
-      isIOSResult = parseURLDefault(tmpResult.getCtaLink(quest.config)).payload.type === LinkingTypes.INVITE;
+      const tmp5 = parseURLDefault;
+      isIOSResult = tmp5(QuestCopyUtils.getCtaLink(quest.config)).payload.type === LinkingTypes.INVITE;
+      const tmpResult = QuestCopyUtils;
     }
     if (isIOSResult) {
-      tmpResult = QuestUtils;
-      const result = tmpResult.dismissOverlayScreens();
+      const result = QuestUtils.dismissOverlayScreens();
+      const tmpResult3 = QuestUtils;
     }
-    obj = {
+    const tmpResult4 = QuestPlatformUtils;
+    tmpResult4.openGameLinkDirectly(quest, {
+      content: QuestTypes.QuestContent.QUEST_HOME_MOBILE,
+      ctaContent: AnalyticsTypes.QuestContentCTA.CONTEXT_MENU_OPEN_GAME_LINK,
+      impressionId: questImpressionId,
+      sourceQuestContent,
+    });
+    const obj2 = {
       content: QuestTypes.QuestContent.QUEST_HOME_MOBILE,
       ctaContent: AnalyticsTypes.QuestContentCTA.CONTEXT_MENU_OPEN_GAME_LINK,
       impressionId: questImpressionId,
       sourceQuestContent,
     };
-    QuestPlatformUtils.openGameLinkDirectly(quest, obj);
-    const tmpResult1 = QuestPlatformUtils;
   }, items1);
   let items2 = [flag, quest.id, questImpressionId, sourceQuestContent];
   callback1 = handleResetDismissibilityClick.useCallback(() => {
     if (flag) {
-      const obj = {
+      const obj2 = {
         content: QuestTypes.QuestContent.QUEST_HOME_MOBILE,
         ctaContent: AnalyticsTypes.QuestContentCTA.CONTEXT_MENU_COPY_LINK,
         impressionId: questImpressionId,
         sourceQuestContent,
       };
-      obj.copyShareLink(quest.id, obj);
+      QuestCopyUtils.copyShareLink(quest.id, obj2);
       const AccessibilityAnnouncer = AccessibilityAnnouncer2.AccessibilityAnnouncer;
       const intl = util.intl;
       AccessibilityAnnouncer.announce(intl.string(util.t["+5kSoW"]));
@@ -133,15 +137,16 @@ export default noop.memo((children) => {
   }, items2);
   let items3 = [quest, sourceQuestContent];
   callback2 = handleResetDismissibilityClick.useCallback(() => {
-    let obj = { creative: null, isTargetedDisclosure: false, trackingCtx: null };
-    obj = { type: AdCreativeType.AdCreativeType.QUEST, quest };
-    obj.creative = obj;
-    obj.trackingCtx = {
+    const obj2 = { creative: null, isTargetedDisclosure: false, trackingCtx: null };
+    const obj = QuestDisclosureModalActionCreatorsDefault;
+    obj2.creative = { type: AdCreativeType.AdCreativeType.QUEST, quest };
+    const obj3 = { type: AdCreativeType.AdCreativeType.QUEST, quest };
+    obj2.trackingCtx = {
       content: QuestTypes.QuestContent.QUEST_HOME_MOBILE,
       ctaContent: AnalyticsTypes.QuestContentCTA.CONTEXT_MENU_OPEN_DISCLOSURE,
       sourceQuestContent,
     };
-    obj.showModal(obj);
+    obj.showModal(obj2);
   }, items3);
   const items4 = [quest.id];
   callback3 = handleResetDismissibilityClick.useCallback(
@@ -155,26 +160,27 @@ export default noop.memo((children) => {
   );
   const items6 = [externalCtaLabel, action, callback2, flag, callback1];
   memo = handleResetDismissibilityClick.useMemo(() => {
-    let obj = {
-      label: externalCtaLabel,
-      IconComponent: LinkExternalSmallIcon.LinkExternalSmallIcon,
-      action,
-      accessibilityRole: "link",
-    };
-    const items = [obj];
-    obj = { label: null, action: null, iconSource: null };
+    const items = [
+      {
+        label: externalCtaLabel,
+        IconComponent: LinkExternalSmallIcon.LinkExternalSmallIcon,
+        action,
+        accessibilityRole: "link",
+      },
+    ];
+    const obj2 = { label: null, action: null, iconSource: null };
     const intl = util.intl;
-    obj.label = intl.string(util.t.GcsZKJ);
-    obj.action = callback2;
-    obj.iconSource = _modDef15232;
-    items[1] = obj;
+    obj2.label = intl.string(util.t.GcsZKJ);
+    obj2.action = callback2;
+    obj2.iconSource = _modDef15233;
+    items[1] = obj2;
     if (flag) {
-      obj = { label: null, IconComponent: null, action: null };
+      const obj3 = { label: null, IconComponent: null, action: null };
       const intl2 = util.intl;
-      obj.label = intl2.string(util.t.WqhZss);
-      obj.IconComponent = CopyIcon.CopyIcon;
-      obj.action = callback1;
-      const items1 = [obj];
+      obj3.label = intl2.string(util.t.WqhZss);
+      obj3.IconComponent = CopyIcon.CopyIcon;
+      obj3.action = callback1;
+      const items1 = [obj3];
       let items2 = items1;
     } else {
       items2 = [];
@@ -184,12 +190,11 @@ export default noop.memo((children) => {
   }, items6);
   const items7 = [quest, callback3, callback4];
   memo1 = handleResetDismissibilityClick.useMemo(() => {
-    let obj = QuestTaskUtils;
     if (obj.isConsoleQuest(quest)) {
-      obj = { label: "Start Console Heartbeat", action: callback3 };
-      const items = [obj];
-      obj = { label: "Stop Console Heartbeat", action: callback4 };
-      items[1] = obj;
+      const obj2 = { label: "Start Console Heartbeat", action: callback3 };
+      const items = [obj2];
+      const obj3 = { label: "Stop Console Heartbeat", action: callback4 };
+      items[1] = obj3;
       let items1 = items;
     } else {
       items1 = [];
@@ -206,19 +211,18 @@ export default noop.memo((children) => {
     quest.id,
   ];
   memo2 = handleResetDismissibilityClick.useMemo(() => {
-    let obj = {
-      label: "Set Random Quest Progress",
-      action() {
-        return handleProgress(0.9 * Math.random() + 0.03);
+    const items = [
+      {
+        label: "Set Random Quest Progress",
+        action() {
+          return handleProgress(0.9 * Math.random() + 0.03);
+        },
       },
-    };
-    const items = [obj, , , , ,];
-    obj = { label: "Complete Quest", action: handleComplete };
-    items[1] = obj;
-    obj = { label: "Reset Quest", action: handleResetStatusClick };
-    items[2] = obj;
-    items[3] = { label: "Reset Dismissibility", action: handleResetDismissibilityClick };
-    items[4] = { label: "Reset Quest Seen", action: handleResetHasBeenSeenClick };
+      { label: "Complete Quest", action: handleComplete },
+      { label: "Reset Quest", action: handleResetStatusClick },
+      { label: "Reset Dismissibility", action: handleResetDismissibilityClick },
+      { label: "Reset Quest Seen", action: handleResetHasBeenSeenClick },
+    ];
     items[HermesBuiltin.arraySpread(memo1, 5)] = {
       label: "Copy Quest ID",
       action() {
@@ -227,8 +231,8 @@ export default noop.memo((children) => {
     };
     return items;
   }, items8);
-  tmpResult = tmp(tmp2[8]);
-  shouldShowQuestPreviewOverrides = tmpResult.useShouldShowQuestPreviewOverrides(quest);
+  const obj5 = quest(sourceQuestContent[13]);
+  shouldShowQuestPreviewOverrides = quest(sourceQuestContent[8]).useShouldShowQuestPreviewOverrides(quest);
   const items9 = [handleOverridePreviewClick, quest.id];
   let id;
   if (stateFromStores != null) {
@@ -256,7 +260,7 @@ export default noop.memo((children) => {
   }, items9);
   const items10 = [memo, memo2, quest.preview, shouldShowQuestPreviewOverrides, memo3, additionalItems];
   const items11 = [quest.id, trackQuestContentClickedWithImpression, questImpressionId, sourceQuestContent];
-  items = obj7.useMemo(() => {
+  const items12 = obj7.useMemo(() => {
     if (null != additionalItems) {
       const items = [memo, tmp];
       let items1 = items;
@@ -276,14 +280,13 @@ export default noop.memo((children) => {
     return tmp6;
   }, items10);
   const onOpen = obj7.useCallback(() => {
-    let obj = AdAnalyticsInterfaceExperiment;
     if (
       obj.shouldMigrateToAdAnalyticsInterface(
         AdAnalyticsInterfaceExperiment.AdAnalyticsInterfaceExperimentStep.STEP_2_CLICKED_INTERNAL,
         "quest_context_menu",
       )
     ) {
-      obj = {
+      const obj2 = {
         type: captureAdUserActionTypes.AdUserActionType.CLICK_INTERNAL,
         adCreativeType: AdCreativeType.AdCreativeType.QUEST,
         adCreativeId: quest.id,
@@ -292,20 +295,21 @@ export default noop.memo((children) => {
         sourceQuestContent,
         impressionId: questImpressionId,
       };
-      captureAdUserAction.captureAdUserAction(obj);
+      captureAdUserAction.captureAdUserAction(obj2);
       const tmpResult = captureAdUserAction;
     } else {
-      obj = {
+      const obj3 = {
         questId: quest.id,
         questContent: QuestTypes.QuestContent.QUEST_HOME_MOBILE,
         questContentCTA: AnalyticsTypes.QuestContentCTA.OPEN_CONTEXT_MENU,
         sourceQuestContent,
       };
-      trackQuestContentClickedWithImpression(obj);
+      trackQuestContentClickedWithImpression(obj3);
     }
+    obj = AdAnalyticsInterfaceExperiment;
   }, items11);
   return handleResetHasBeenSeenClick(quest(sourceQuestContent[33]).ContextMenu, {
-    items,
+    items: items12,
     onOpen,
     triggerOnTap: true,
     children,

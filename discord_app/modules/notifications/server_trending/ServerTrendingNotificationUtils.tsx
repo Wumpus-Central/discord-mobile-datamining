@@ -14,6 +14,8 @@ export const onServerTrendingNotificationSettingsChanged = function onServerTren
 ) {
   const EnableServerTrendingNotifications = UserSettings.EnableServerTrendingNotifications;
   EnableServerTrendingNotifications.updateSetting(server_trending_notifications);
-  const obj = { update_type: constants.ACCOUNT, server_trending_notifications };
-  obj.track(AnalyticEvents.NOTIFICATION_SETTINGS_UPDATED, obj);
+  AnalyticsUtilsDefault.track(AnalyticEvents.NOTIFICATION_SETTINGS_UPDATED, {
+    update_type: constants.ACCOUNT,
+    server_trending_notifications,
+  });
 };

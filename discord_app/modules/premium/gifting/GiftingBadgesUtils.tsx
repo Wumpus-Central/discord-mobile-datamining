@@ -36,24 +36,23 @@ export const getGiftingBadgeProgressPercent = function getGiftingBadgeProgressPe
 };
 export const useIsGiftingBadgesDesktopEnabled = function useIsGiftingBadgesDesktopEnabled(location) {
   const GiftingBadgeExperiment = GiftingBadgeExperiment2.GiftingBadgeExperiment;
-  let obj = { location };
-  const enabled = GiftingBadgeExperiment.useConfig(obj).enabled;
+  const enabled = GiftingBadgeExperiment.useConfig({ location }).enabled;
   const GiftingBadgeDesktopExperiment = GiftingBadgeDesktopExperiment2.GiftingBadgeDesktopExperiment;
   let str = "-DISABLED";
   if (enabled) {
     str = "";
   }
-  obj = { location: "" + location + str };
-  return GiftingBadgeDesktopExperiment.useConfig(obj).enabled && enabled;
+  const obj = { location };
+  const obj2 = { location: "" + location + str };
+  return GiftingBadgeDesktopExperiment.useConfig({ location: "" + location + str }).enabled && enabled;
 };
 export const getIsGiftingBadgesDesktopEnabled = function getIsGiftingBadgesDesktopEnabled(location) {
   const GiftingBadgeExperiment = GiftingBadgeExperiment2.GiftingBadgeExperiment;
-  let obj = { location };
-  let enabled = GiftingBadgeExperiment.getConfig(obj).enabled;
+  let enabled = GiftingBadgeExperiment.getConfig({ location }).enabled;
   if (enabled) {
     const GiftingBadgeDesktopExperiment = GiftingBadgeDesktopExperiment2.GiftingBadgeDesktopExperiment;
-    obj = { location };
-    enabled = GiftingBadgeDesktopExperiment.getConfig(obj).enabled;
+    const obj2 = { location };
+    enabled = GiftingBadgeDesktopExperiment.getConfig(obj2).enabled;
   }
   return enabled;
 };
@@ -68,13 +67,13 @@ export const getGiftingBadgeTierIconUrl = function getGiftingBadgeTierIconUrl(co
       prop = complex_icon_static_url.complex_icon_static_url;
     }
     if (prop == null) {
-      let simple_icon_url;
+      let simple_icon_url1;
       if (complex_icon_static_url != null) {
-        simple_icon_url = complex_icon_static_url.simple_icon_url;
+        simple_icon_url1 = complex_icon_static_url.simple_icon_url;
       }
-      prop = simple_icon_url;
+      prop = simple_icon_url1;
     }
-    simple_icon_url = prop;
+    let simple_icon_url = prop;
   } else if (!tmp) {
     simple_icon_url = complex_icon_static_url.simple_icon_url;
   }
@@ -97,9 +96,9 @@ export const useIsEligibleToShowGiftingBadgeCoachmark = function useIsEligibleTo
     }
     tmp4 = enabled2;
   }
-  let tmpResult = initialize;
+  const obj = { location: "" + _location + str };
   const items = [UserStore];
-  const stateFromStores = tmpResult.useStateFromStores(items, () => {
+  const stateFromStores = initialize.useStateFromStores(items, () => {
     currentUser = currentUser.getCurrentUser();
     let flag;
     if (currentUser != null) {
@@ -110,8 +109,8 @@ export const useIsEligibleToShowGiftingBadgeCoachmark = function useIsEligibleTo
     }
     return flag;
   });
-  tmpResult = DismissibleContentUnsafeUtils;
-  const result = tmpResult.useIsDismissibleContentDismissed_UNSAFE(
+  const tmpResult = initialize;
+  const result = DismissibleContentUnsafeUtils.useIsDismissibleContentDismissed_UNSAFE(
     dismissible_content.DismissibleContent.NEW_GIFTING_BADGES_COACHMARK,
   );
   if (tmp4) {

@@ -21,8 +21,8 @@ export const useInviteMembersCallback = function useInviteMembersCallback(channe
       id = id.id;
       let result = openGroupDMAddMembersDefault(id, constants.CHANNEL_CALL);
     } else {
-      const obj = { source: constants2.VOICE_CHANNEL };
-      result = obj.showInstantInviteActionSheet(id, obj);
+      const obj2 = { source: constants2.VOICE_CHANNEL };
+      result = instant_invite_InstantInviteUtils.showInstantInviteActionSheet(id, obj2);
     }
   }, items);
 };

@@ -6,8 +6,8 @@ import MobileAudioOutputExperimentDefault from "../../../media_engine/MobileAudi
 import MediaEngineStore from "../../../../stores/MediaEngineStore.tsx";
 
 require = fn;
-fn(11601);
-let SettingBuilders = {
+const SettingBuilders = fn(11602);
+const volumeSlider = SettingBuilders.createVolumeSlider({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.xPHVBs);
@@ -29,9 +29,8 @@ let SettingBuilders = {
   usePredicate() {
     return MobileAudioOutputExperimentDefault.useConfig({ location: "OutputVolumeSetting" }).audioOutputPresent;
   },
-};
-SettingBuilders = SettingBuilders.createVolumeSlider(SettingBuilders);
+});
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/OutputVolumeSetting.tsx");
 
-export default SettingBuilders;
+export default volumeSlider;

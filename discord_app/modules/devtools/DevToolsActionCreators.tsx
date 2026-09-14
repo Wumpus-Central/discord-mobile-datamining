@@ -6,8 +6,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/devtools/DevToolsActionCreators.tsx");
 
 export const updateDevToolsSettings = function updateDevToolsSettings(settings) {
-  const obj = { type: "DEV_TOOLS_SETTINGS_UPDATE", settings };
-  obj.dispatch(obj);
+  DispatcherDefault.dispatch({ type: "DEV_TOOLS_SETTINGS_UPDATE", settings });
 };
 export const toggleDisplayDevTools = function toggleDisplayDevTools() {
   DispatcherDefault.dispatch({

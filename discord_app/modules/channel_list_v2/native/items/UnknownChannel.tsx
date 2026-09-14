@@ -10,19 +10,28 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 function handlePress() {
-  const obj = { key: "UNKNOWN_CHANNEL_UPDATE_DISCORD", content: null, IconComponent: null };
+  const obj2 = { key: "UNKNOWN_CHANNEL_UPDATE_DISCORD", content: null, IconComponent: null };
   const intl = util.intl;
-  obj.content = intl.string(util.t["/ZjyYE"]);
-  obj.IconComponent = CircleInformationIcon.CircleInformationIcon;
-  obj.open(obj);
+  obj2.content = intl.string(util.t["/ZjyYE"]);
+  obj2.IconComponent = CircleInformationIcon.CircleInformationIcon;
+  ToastActionCreatorsDefault.open(obj2);
 }
 const UnreadSetting = fn(4818).UnreadSetting;
 const jsx = fn(21).jsx;
 const createStyles = fn(4636);
-let obj = { container: null };
-obj = { marginVertical: fn(10246).CHANNEL_MARGIN_VERTICAL, marginHorizontal: 8, borderRadius: nativeDefault.radii.md };
-obj.container = obj;
+let obj = {
+  container: {
+    marginVertical: fn(10246).CHANNEL_MARGIN_VERTICAL,
+    marginHorizontal: 8,
+    borderRadius: nativeDefault.radii.md,
+  },
+};
 let closure_6 = createStyles.createStyles(obj);
+const obj3 = {
+  marginVertical: fn(10246).CHANNEL_MARGIN_VERTICAL,
+  marginHorizontal: 8,
+  borderRadius: nativeDefault.radii.md,
+};
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/channel_list_v2/native/items/UnknownChannel.tsx");
 

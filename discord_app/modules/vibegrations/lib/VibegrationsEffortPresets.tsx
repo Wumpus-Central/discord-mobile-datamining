@@ -4,17 +4,16 @@ import _modDef3590 from "../intl/VibegrationsUntranslated.messages.js";
 import VibegrationsModelLabels from "VibegrationsModelLabels.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
-let obj = {
-  model: "gpt-5.6-luna",
-  thinking: "high",
-  fast: true,
-  summary() {
-    const intl = util.intl;
-    return intl.string(_modDef3590.Mo0a1m);
-  },
-};
 const items = [
-  obj,
+  {
+    model: "gpt-5.6-luna",
+    thinking: "high",
+    fast: true,
+    summary() {
+      const intl = util.intl;
+      return intl.string(_modDef3590.Mo0a1m);
+    },
+  },
   {
     model: "gpt-5.6-sol",
     thinking: "high",
@@ -34,41 +33,39 @@ const items = [
 ];
 let tmp2 = items[1];
 if (tmp2 == null) {
-  obj = {
+  const obj2 = {
     model: "gpt-5.6-sol",
     thinking: "high",
     summary() {
       return "";
     },
   };
-  tmp2 = obj;
+  tmp2 = obj2;
 }
-obj = { model: tmp2.model, thinking: tmp2.thinking };
+const obj3 = { model: tmp2.model, thinking: tmp2.thinking };
 function vibegrationsPresetTier(model) {
   const merged = Object.assign(true === model.fast ? { fast: true } : {});
   return { model: model.model, thinking: model.thinking };
 }
 function vibegrationsSettingsForTier(arg0) {
-  let obj = { main: null, subagent: null };
-  obj = {};
+  const obj = { main: null, subagent: null };
   const merged = Object.assign(arg0);
-  obj.main = obj;
-  obj = {};
+  obj.main = {};
   const merged1 = Object.assign(arg0);
-  obj.subagent = obj;
+  obj.subagent = {};
   return obj;
 }
 let merged = Object.assign(true === tmp2.fast ? { fast: true } : {});
-const obj1 = { main: null, subagent: null };
-let merged1 = Object.assign(obj);
-obj1.main = {};
-const merged2 = Object.assign(obj);
-obj1.subagent = {};
+const obj4 = { main: null, subagent: null };
+let merged1 = Object.assign(obj3);
+obj4.main = {};
+const merged2 = Object.assign(obj3);
+obj4.subagent = {};
 const result = size.fileFinishedImporting("modules/vibegrations/lib/VibegrationsEffortPresets.tsx");
 
 export const VIBEGRATIONS_EFFORT_PRESETS = items;
 export { vibegrationsPresetTier };
-export const VIBEGRATIONS_DEFAULT_MODEL_SETTINGS = obj1;
+export const VIBEGRATIONS_DEFAULT_MODEL_SETTINGS = obj4;
 export const matchVibegrationsEffortPreset = function matchVibegrationsEffortPreset(arg0, arg1) {
   let main = arg0;
   closure_1 = arg1;

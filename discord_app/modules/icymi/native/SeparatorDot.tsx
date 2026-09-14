@@ -4,16 +4,16 @@ import noop from "../../../../_runtime/metro/00019__.js";
 
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-fn(4636);
-const createStyles = { separatorDot: null };
+const createStyles = fn(4636);
+const obj2 = { separatorDot: null };
 let size = {
   width: 4,
   height: 4,
   borderRadius: nativeDefault.radii.round,
   backgroundColor: nativeDefault.colors.BACKGROUND_MOD_STRONG,
 };
-createStyles.separatorDot = size;
-let closure_2 = createStyles.createStyles(createStyles);
+obj2.separatorDot = size;
+let closure_2 = createStyles.createStyles(obj2);
 size = fn(2);
 const result = size.fileFinishedImporting("modules/icymi/native/SeparatorDot.tsx");
 

@@ -18,7 +18,7 @@ export const IgnoreThermalStateAlert = function IgnoreThermalStateAlert(onConfir
   onConfirm = onConfirm.onConfirm;
   const merged = Object.assign(onConfirm, Object.assign({ onConfirm: 0 }));
   const tmp2 = closure_5();
-  let obj = {};
+  const obj = {};
   const merged1 = Object.assign(merged);
   const intl = onConfirm(1114).intl;
   obj.cancelText = intl.string(onConfirm(1114).t["1fRDnT"]);
@@ -30,14 +30,19 @@ export const IgnoreThermalStateAlert = function IgnoreThermalStateAlert(onConfir
   };
   const intl2 = onConfirm(1114).intl;
   obj.confirmText = intl2.string(onConfirm(1114).t.oEAioF);
-  obj = { style: tmp2.header, variant: "heading-lg/extrabold", color: "mobile-text-heading-primary", children: null };
+  const obj2 = {
+    style: tmp2.header,
+    variant: "heading-lg/extrabold",
+    color: "mobile-text-heading-primary",
+    children: null,
+  };
   const intl3 = onConfirm(1114).intl;
-  obj.children = intl3.string(onConfirm(1114).t.v5X4fZ);
-  const items = [closure_3(onConfirm(4632).Text, obj)];
-  obj = { style: tmp2.text, variant: "text-md/medium", children: null };
+  obj2.children = intl3.string(onConfirm(1114).t.v5X4fZ);
+  const items = [closure_3(onConfirm(4632).Text, obj2)];
+  const obj3 = { style: tmp2.text, variant: "text-md/medium", children: null };
   const intl4 = onConfirm(1114).intl;
-  obj.children = intl4.string(onConfirm(1114).t.VOgTjy);
-  items[1] = closure_3(onConfirm(4632).Text, obj);
+  obj3.children = intl4.string(onConfirm(1114).t.VOgTjy);
+  items[1] = closure_3(onConfirm(4632).Text, obj3);
   obj.children = items;
   return closure_4(common_AlertDefault, obj);
 };

@@ -3,6 +3,8 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
 import ProfileCustomizationNavigationStore from "../../../profile_customization/ProfileCustomizationNavigationStore.tsx";
 
+const require = globalThis.__r;
+
 const require = fn;
 const findNodeHandle = fn(17).findNodeHandle;
 const size = fn(2);

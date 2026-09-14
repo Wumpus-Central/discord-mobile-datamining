@@ -8,6 +8,8 @@ import EmbeddedActivitiesStore from "../../../../activities/EmbeddedActivitiesSt
 import ApplicationStreamingStore from "../../../../../stores/ApplicationStreamingStore.tsx";
 import RelationshipStore from "../../../../../stores/RelationshipStore.tsx";
 
+const require = globalThis.__r;
+
 const require = fn;
 const jsx = fn(21).jsx;
 const size = fn(2);
@@ -22,10 +24,9 @@ export default function HappeningNowCardUnifiedVC(arg0) {
     panelVariant = false;
   }
   const channelId = voiceState.channelId;
-  let obj = channelId(563);
   const items = [EmbeddedActivitiesStore, ApplicationStreamingStore, RelationshipStore];
   const items1 = [channelId];
-  const stateFromStoresObject = obj.useStateFromStoresObject(
+  const stateFromStoresObject = channelId(563).useStateFromStoresObject(
     items,
     () => {
       if (null == channelId) {
@@ -35,17 +36,18 @@ export default function HappeningNowCardUnifiedVC(arg0) {
         if (allApplicationStreamsForChannel.length > 0) {
           const found = allApplicationStreamsForChannel.find((ownerId) => friend.isFriend(ownerId.ownerId));
           if (null != found) {
-            let obj = { stream: found };
-            return obj;
+            const obj2 = { stream: found };
+            return obj2;
           }
         }
         const embeddedActivitiesForChannel = EmbeddedActivitiesStore.getEmbeddedActivitiesForChannel(channelId);
         const tmp7 = findActivityWithMostParticipantsDefault(embeddedActivitiesForChannel);
         if (null != tmp7) {
-          obj = { activity: tmp7 };
+          const obj3 = { activity: tmp7 };
+          let obj = obj3;
         } else if (tmp9) {
-          const obj1 = { stream: allApplicationStreamsForChannel[0] };
-          obj = obj1;
+          const obj4 = { stream: allApplicationStreamsForChannel[0] };
+          obj = obj4;
         } else {
           obj = {};
         }
@@ -56,7 +58,7 @@ export default function HappeningNowCardUnifiedVC(arg0) {
   );
   ({ stream, activity } = stateFromStoresObject);
   if (null != stream) {
-    obj = { index, userId: stream.ownerId, guildId, stream, fullwidth, panelVariant };
+    let obj2 = { index, userId: stream.ownerId, guildId, stream, fullwidth, panelVariant };
     let tmp5 = jsx(HappeningNowCardActivityDefault, {
       index,
       userId: stream.ownerId,
@@ -66,7 +68,7 @@ export default function HappeningNowCardUnifiedVC(arg0) {
       panelVariant,
     });
   } else if (null != activity) {
-    obj = { index, voiceState, fullwidth, guildId, activity, userId, cardKey, panelVariant };
+    let obj3 = { index, voiceState, fullwidth, guildId, activity, userId, cardKey, panelVariant };
     tmp5 = jsx(HappeningNowCardEmbeddedActivityDefault, {
       index,
       voiceState,
@@ -78,7 +80,7 @@ export default function HappeningNowCardUnifiedVC(arg0) {
       panelVariant,
     });
   } else {
-    let obj1 = { index, voiceState, fullwidth, guildId, panelVariant };
+    let obj4 = { index, voiceState, fullwidth, guildId, panelVariant };
     tmp5 = jsx(HappeningNowCardVoiceDefault, { index, voiceState, fullwidth, guildId, panelVariant });
   }
   return tmp5;
@@ -97,17 +99,18 @@ export const useCallActivityData = function useCallActivityData(channel_id) {
         if (allApplicationStreamsForChannel.length > 0) {
           const found = allApplicationStreamsForChannel.find((ownerId) => friend.isFriend(ownerId.ownerId));
           if (null != found) {
-            let obj = { stream: found };
-            return obj;
+            const obj2 = { stream: found };
+            return obj2;
           }
         }
         const embeddedActivitiesForChannel = EmbeddedActivitiesStore.getEmbeddedActivitiesForChannel(channelId);
         const tmp7 = findActivityWithMostParticipantsDefault(embeddedActivitiesForChannel);
         if (null != tmp7) {
-          obj = { activity: tmp7 };
+          const obj3 = { activity: tmp7 };
+          let obj = obj3;
         } else if (tmp9) {
-          const obj1 = { stream: allApplicationStreamsForChannel[0] };
-          obj = obj1;
+          const obj4 = { stream: allApplicationStreamsForChannel[0] };
+          obj = obj4;
         } else {
           obj = {};
         }

@@ -104,8 +104,8 @@ let closure_7 = async function _saveRoleSettings(arg0) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -119,8 +119,8 @@ let closure_7 = async function _saveRoleSettings(arg0) {
               throw value;
             } else if (arg0 === 2) {
               c21 = 3;
-              obj = { value, done: true };
-              return obj;
+              const obj3 = { value, done: true };
+              return obj3;
             } else {
               closure_16 = tmp4;
               closure_17 = tmp17;
@@ -130,11 +130,11 @@ let closure_7 = async function _saveRoleSettings(arg0) {
               closure_145_2 = closure_2;
               closure_145_3 = closure_3;
               closure_145_4 = closure_4;
-              let obj1 = closure_5;
+              let obj4 = closure_5;
               if (closure_5 === undefined) {
-                obj1 = {};
+                obj4 = {};
               }
-              closure_145_5 = obj1;
+              closure_145_5 = obj4;
               closure_145_6 = undefined;
               closure_145_7 = undefined;
               closure_145_8 = undefined;
@@ -155,8 +155,8 @@ let closure_7 = async function _saveRoleSettings(arg0) {
               throw value;
             } else if (arg0 === 2) {
               c21 = 3;
-              const obj2 = { value, done: true };
-              return obj2;
+              const obj5 = { value, done: true };
+              return obj5;
             } else {
               closure_144_1(closure_144_2[2]).dispatch({ type: "GUILD_SETTINGS_ROLES_SUBMITTING" });
               c18 = 1;
@@ -165,11 +165,13 @@ let closure_7 = async function _saveRoleSettings(arg0) {
                 tmp135 = closure_145_2.length > 0;
               }
               if (tmp135) {
-                let obj22 = closure_144_1(closure_144_2[3]);
                 c20 = 3;
                 c21 = 1;
-                const obj3 = { value: obj22.batchRoleUpdate(closure_145_0, closure_145_2), done: false };
-                return obj3;
+                const obj6 = {
+                  value: closure_144_1(closure_144_2[3]).batchRoleUpdate(closure_145_0, closure_145_2),
+                  done: false,
+                };
+                return obj6;
               } else {
                 if (null != closure_145_1) {
                   const items = [];
@@ -191,7 +193,6 @@ let closure_7 = async function _saveRoleSettings(arg0) {
           case 2:
             c18 = 0;
             closure_145_15 = closure_19;
-            let obj17 = closure_144_1(closure_144_2[2]);
             const body = closure_145_15.body;
             let message;
             if (body != null) {
@@ -206,8 +207,8 @@ let closure_7 = async function _saveRoleSettings(arg0) {
                 first1 = first[0];
               }
             }
-            const obj4 = { type: "GUILD_SETTINGS_ROLES_SAVE_FAIL", message: first1 };
-            obj17.dispatch(obj4);
+            const obj7 = { type: "GUILD_SETTINGS_ROLES_SAVE_FAIL", message: first1 };
+            closure_144_1(closure_144_2[2]).dispatch(obj7);
             const ComponentDispatch = closure_144_0(closure_144_2[5]).ComponentDispatch;
             ComponentDispatch.dispatch(closure_144_4.EMPHASIZE_NOTICE);
             if (!closure_145_5.throwErr) {
@@ -216,6 +217,7 @@ let closure_7 = async function _saveRoleSettings(arg0) {
             } else {
               throw closure_145_15;
             }
+            const obj18 = closure_144_1(closure_144_2[2]);
             break;
           case 3:
             if (arg0 === 1) {
@@ -224,8 +226,8 @@ let closure_7 = async function _saveRoleSettings(arg0) {
             } else if (arg0 === 2) {
               c18 = 0;
               c21 = 3;
-              const obj5 = { value, done: true };
-              return obj5;
+              const obj8 = { value, done: true };
+              return obj8;
             }
             break;
           case 4:
@@ -241,8 +243,8 @@ let closure_7 = async function _saveRoleSettings(arg0) {
               closure_7.return();
               c18 = 0;
               c21 = 3;
-              const obj6 = { value, done: true };
-              return obj6;
+              const obj9 = { value, done: true };
+              return obj9;
             } else {
               c18 = 1;
               if (closure_7 === undefined) {
@@ -270,12 +272,11 @@ let closure_7 = async function _saveRoleSettings(arg0) {
                           let tmp5 = arg0[str];
                           if (null != tmp5) {
                             let call = tmp5.call;
-                            let tmp10 = first1;
                             let tmp11 = typeof call === "unknown" ? tmp5() : call(arg0);
                             let tmp12 = new.target;
                             let tmp13 = new.target;
-                            tmp10 = new tmp10(tmp11);
-                            return tmp10;
+                            let tmp102 = new first1(tmp11);
+                            return tmp102;
                           }
                         }
                         num = num - 1;
@@ -297,17 +298,17 @@ let closure_7 = async function _saveRoleSettings(arg0) {
                     })(closure_145_3);
                     c20 = 9;
                     c21 = 1;
-                    const obj7 = { value: closure_145_12.next(), done: false };
-                    return obj7;
+                    const obj11 = { value: closure_145_12.next(), done: false };
+                    return obj11;
                   }
                 }
-                let obj20 = closure_144_1(closure_144_2[2]);
-                obj20.dispatch({ type: "GUILD_SETTINGS_ROLES_SAVE_SUCCESS" });
+                closure_144_1(closure_144_2[2]).dispatch({ type: "GUILD_SETTINGS_ROLES_SAVE_SUCCESS" });
                 c18 = 0;
+                const obj21 = closure_144_1(closure_144_2[2]);
               } else {
                 c18 = 2;
                 closure_145_7 = tmp147;
-                const obj8 = {
+                const obj12 = {
                   name: closure_145_7.name,
                   description: null,
                   permissions: null,
@@ -322,25 +323,25 @@ let closure_7 = async function _saveRoleSettings(arg0) {
                 if (description == null) {
                   description = undefined;
                 }
-                obj8.description = description;
-                obj8.permissions = closure_145_7.permissions;
-                obj8.color = closure_145_7.color;
+                obj12.description = description;
+                obj12.permissions = closure_145_7.permissions;
+                obj12.color = closure_145_7.color;
                 colors = closure_145_7.colors;
                 if (colors == null) {
                   colors = undefined;
                 }
-                obj8.colors = colors;
-                obj8.hoist = closure_145_7.hoist;
-                obj8.mentionable = closure_145_7.mentionable;
-                obj8.icon = closure_145_7.icon;
-                obj8.unicodeEmoji = closure_145_7.unicodeEmoji;
+                obj12.colors = colors;
+                obj12.hoist = closure_145_7.hoist;
+                obj12.mentionable = closure_145_7.mentionable;
+                obj12.icon = closure_145_7.icon;
+                obj12.unicodeEmoji = closure_145_7.unicodeEmoji;
                 c20 = 5;
                 c21 = 1;
-                let obj9 = {
-                  value: closure_144_1(closure_144_2[3]).updateRole(closure_145_0, closure_145_7.id, obj8),
+                const obj13 = {
+                  value: closure_144_1(closure_144_2[3]).updateRole(closure_145_0, closure_145_7.id, obj12),
                   done: false,
                 };
-                return obj9;
+                return obj13;
               }
             }
             break;
@@ -361,8 +362,8 @@ let closure_7 = async function _saveRoleSettings(arg0) {
             } else {
               c20 = 20;
               c21 = 1;
-              const obj10 = { value: closure_145_12.return(), done: false };
-              return obj10;
+              const obj14 = { value: closure_145_12.return(), done: false };
+              return obj14;
             }
             break;
           case 7:
@@ -385,8 +386,8 @@ let closure_7 = async function _saveRoleSettings(arg0) {
             if (tmp87) {
               c20 = 19;
               c21 = 1;
-              const obj11 = { value: closure_145_12.return(), done: false };
-              return obj11;
+              const obj15 = { value: closure_145_12.return(), done: false };
+              return obj15;
             } else {
               c18 = 1;
               if (closure_145_10) {
@@ -409,8 +410,8 @@ let closure_7 = async function _saveRoleSettings(arg0) {
                 if (tmp75) {
                   c20 = 12;
                   c21 = 1;
-                  const obj12 = { value: closure_145_12.return(), done: false };
-                  return obj12;
+                  const obj16 = { value: closure_145_12.return(), done: false };
+                  return obj16;
                 } else {
                   c18 = 1;
                   if (closure_145_10) {
@@ -418,8 +419,8 @@ let closure_7 = async function _saveRoleSettings(arg0) {
                   } else {
                     c18 = 0;
                     c21 = 3;
-                    const obj13 = { value: value3, done: true };
-                    return obj13;
+                    const obj17 = { value: value3, done: true };
+                    return obj17;
                   }
                 }
               } else {
@@ -431,18 +432,21 @@ let closure_7 = async function _saveRoleSettings(arg0) {
                 } else {
                   value4 = closure_145_11.value;
                   closure_145_14 = closure_145_4.get(value4);
-                  obj9 = closure_144_0(closure_144_2[4]);
                   closure_11 = closure_145_14;
                   if (closure_145_14 == null) {
                     closure_11 = [];
                   }
                   c20 = 15;
                   c21 = 1;
-                  const obj14 = {
-                    value: obj9.putRoleConnectionsConfigurations(closure_145_0, value4, closure_11),
+                  const obj19 = {
+                    value: closure_144_0(closure_144_2[4]).putRoleConnectionsConfigurations(
+                      closure_145_0,
+                      value4,
+                      closure_11,
+                    ),
                     done: false,
                   };
-                  return obj14;
+                  return obj19;
                 }
               }
             }
@@ -462,8 +466,8 @@ let closure_7 = async function _saveRoleSettings(arg0) {
                 if (tmp55) {
                   c20 = 14;
                   c21 = 1;
-                  const obj15 = { value: closure_145_12.return(), done: false };
-                  return obj15;
+                  const obj20 = { value: closure_145_12.return(), done: false };
+                  return obj20;
                 } else {
                   c18 = 1;
                   if (closure_145_10) {
@@ -471,8 +475,8 @@ let closure_7 = async function _saveRoleSettings(arg0) {
                   } else {
                     c18 = 0;
                     c21 = 3;
-                    const obj16 = { value: value2, done: true };
-                    return obj16;
+                    const obj22 = { value: value2, done: true };
+                    return obj22;
                   }
                 }
               } else {
@@ -501,8 +505,8 @@ let closure_7 = async function _saveRoleSettings(arg0) {
               } else {
                 c18 = 0;
                 c21 = 3;
-                obj17 = { value, done: true };
-                return obj17;
+                const obj24 = { value, done: true };
+                return obj24;
               }
             }
             break;
@@ -525,8 +529,8 @@ let closure_7 = async function _saveRoleSettings(arg0) {
               } else {
                 c18 = 0;
                 c21 = 3;
-                const obj18 = { value, done: true };
-                return obj18;
+                const obj25 = { value, done: true };
+                return obj25;
               }
             }
             break;
@@ -543,8 +547,8 @@ let closure_7 = async function _saveRoleSettings(arg0) {
               if (tmp33) {
                 c20 = 17;
                 c21 = 1;
-                const obj19 = { value: closure_145_12.return(), done: false };
-                return obj19;
+                const obj26 = { value: closure_145_12.return(), done: false };
+                return obj26;
               } else {
                 c18 = 1;
                 if (closure_145_10) {
@@ -552,16 +556,16 @@ let closure_7 = async function _saveRoleSettings(arg0) {
                 } else {
                   c18 = 0;
                   c21 = 3;
-                  obj20 = { value, done: true };
-                  return obj20;
+                  const obj27 = { value, done: true };
+                  return obj27;
                 }
               }
             } else {
               closure_145_9 = false;
               c20 = 10;
               c21 = 1;
-              const obj21 = { value: closure_145_12.next(), done: false };
-              return obj21;
+              const obj28 = { value: closure_145_12.next(), done: false };
+              return obj28;
             }
             break;
           case 16:
@@ -583,8 +587,8 @@ let closure_7 = async function _saveRoleSettings(arg0) {
               } else {
                 c18 = 0;
                 c21 = 3;
-                obj22 = { value, done: true };
-                return obj22;
+                const obj29 = { value, done: true };
+                return obj29;
               }
             }
             break;
@@ -607,7 +611,7 @@ let closure_7 = async function _saveRoleSettings(arg0) {
               } else {
                 c18 = 0;
                 c21 = 3;
-                obj = { value, done: true };
+                const obj = { value, done: true };
                 return obj;
               }
             }
@@ -623,8 +627,8 @@ let closure_7 = async function _saveRoleSettings(arg0) {
               } else {
                 c18 = 0;
                 c21 = 3;
-                const obj23 = { value, done: true };
-                return obj23;
+                const obj32 = { value, done: true };
+                return obj32;
               }
             }
         }
@@ -664,43 +668,34 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_settings/roles/GuildSettingsRolesActionCreators.tsx");
 
 export const updateRoleSort = function updateRoleSort(roles) {
-  const obj = { type: "GUILD_SETTINGS_ROLES_SORT_UPDATE", roles };
-  obj.dispatch(obj);
+  DispatcherDefault.dispatch({ type: "GUILD_SETTINGS_ROLES_SORT_UPDATE", roles });
 };
 export const init = function init() {
   DispatcherDefault.dispatch({ type: "GUILD_SETTINGS_ROLES_INIT" });
 };
 export const discardSectionChanges = function discardSectionChanges(id, effectiveSection) {
-  const obj = { type: "GUILD_SETTINGS_ROLES_DISCARD_SECTION_CHANGES", id, section: effectiveSection };
-  obj.dispatch(obj);
+  DispatcherDefault.dispatch({ type: "GUILD_SETTINGS_ROLES_DISCARD_SECTION_CHANGES", id, section: effectiveSection });
 };
 export const discardConnectionsChanges = function discardConnectionsChanges(id) {
-  const obj = { type: "GUILD_SETTINGS_ROLES_DISCARD_CONNECTIONS_CHANGES", id };
-  obj.dispatch(obj);
+  DispatcherDefault.dispatch({ type: "GUILD_SETTINGS_ROLES_DISCARD_CONNECTIONS_CHANGES", id });
 };
 export const commitSectionChanges = function commitSectionChanges(id, effectiveSection) {
-  const obj = { type: "GUILD_SETTINGS_ROLES_COMMIT_SECTION_CHANGES", id, section: effectiveSection };
-  obj.dispatch(obj);
+  DispatcherDefault.dispatch({ type: "GUILD_SETTINGS_ROLES_COMMIT_SECTION_CHANGES", id, section: effectiveSection });
 };
 export const updateRolePermissions = function updateRolePermissions(id, flag, allow) {
-  const obj = { type: "GUILD_SETTINGS_ROLES_UPDATE_PERMISSIONS", id, flag, allow };
-  obj.dispatch(obj);
+  DispatcherDefault.dispatch({ type: "GUILD_SETTINGS_ROLES_UPDATE_PERMISSIONS", id, flag, allow });
 };
 export const updateRolePermissionSet = function updateRolePermissionSet(id, permissions) {
-  const obj = { type: "GUILD_SETTINGS_ROLES_UPDATE_PERMISSION_SET", id, permissions };
-  obj.dispatch(obj);
+  DispatcherDefault.dispatch({ type: "GUILD_SETTINGS_ROLES_UPDATE_PERMISSION_SET", id, permissions });
 };
 export const clearRolePermissions = function clearRolePermissions(id) {
-  const obj = { type: "GUILD_SETTINGS_ROLES_CLEAR_PERMISSIONS", id };
-  obj.dispatch(obj);
+  DispatcherDefault.dispatch({ type: "GUILD_SETTINGS_ROLES_CLEAR_PERMISSIONS", id });
 };
 export const updateRoleName = function updateRoleName(id, name) {
-  const obj = { type: "GUILD_SETTINGS_ROLES_UPDATE_NAME", id, name };
-  obj.dispatch(obj);
+  DispatcherDefault.dispatch({ type: "GUILD_SETTINGS_ROLES_UPDATE_NAME", id, name });
 };
 export const updateRoleDescription = function updateRoleDescription(id, description) {
-  const obj = { type: "GUILD_SETTINGS_ROLES_UPDATE_DESCRIPTION", id, description };
-  obj.dispatch(obj);
+  DispatcherDefault.dispatch({ type: "GUILD_SETTINGS_ROLES_UPDATE_DESCRIPTION", id, description });
 };
 export const updateRoleColor = function updateRoleColor(color, arg1) {
   let tmp = color.color === arg1;
@@ -712,41 +707,36 @@ export const updateRoleColor = function updateRoleColor(color, arg1) {
     tmp = tmp3;
   }
   if (!tmp) {
-    const obj = { type: "GUILD_SETTINGS_ROLES_UPDATE_COLOR", id: color.id, color: null };
+    const obj2 = { type: "GUILD_SETTINGS_ROLES_UPDATE_COLOR", id: color.id, color: null };
     let num2 = 0;
     if (arg1 !== hasOwnProperty) {
       num2 = arg1;
     }
-    obj.color = num2;
-    obj.dispatch(obj);
+    obj2.color = num2;
+    DispatcherDefault.dispatch(obj2);
   }
 };
 export const updateRoleColors = function updateRoleColors(id, colors, GRADIENT) {
-  const obj = { type: "GUILD_SETTINGS_ROLES_UPDATE_COLORS", id, colors, currentStyle: GRADIENT };
-  obj.dispatch(obj);
+  DispatcherDefault.dispatch({ type: "GUILD_SETTINGS_ROLES_UPDATE_COLORS", id, colors, currentStyle: GRADIENT });
 };
 export const updateRoleStyles = function updateRoleStyles(id, currentStyle) {
-  const obj = { type: "GUILD_SETTINGS_ROLES_ROLE_STYLE_UPDATE", id, currentStyle };
-  obj.dispatch(obj);
+  DispatcherDefault.dispatch({ type: "GUILD_SETTINGS_ROLES_ROLE_STYLE_UPDATE", id, currentStyle });
 };
 export const toggleRoleSettings = function toggleRoleSettings(id, hoist, mentionable) {
-  const obj = { type: "GUILD_SETTINGS_ROLES_UPDATE_SETTINGS", id, hoist, mentionable };
-  obj.dispatch(obj);
+  DispatcherDefault.dispatch({ type: "GUILD_SETTINGS_ROLES_UPDATE_SETTINGS", id, hoist, mentionable });
 };
 export const updateRoleIcon = function updateRoleIcon(roleId, icon, unicodeEmoji) {
-  const obj = { type: "GUILD_SETTINGS_ROLES_UPDATE_ROLE_ICON", id: roleId, icon, unicodeEmoji };
-  obj.dispatch(obj);
+  DispatcherDefault.dispatch({ type: "GUILD_SETTINGS_ROLES_UPDATE_ROLE_ICON", id: roleId, icon, unicodeEmoji });
 };
 export const updateRoleConnectionConfigurations = function updateRoleConnectionConfigurations(
   id,
   roleConnectionConfigurations,
 ) {
-  const obj = {
+  DispatcherDefault.dispatch({
     type: "GUILD_SETTINGS_ROLES_UPDATE_ROLE_CONNECTION_CONFIGURATIONS",
     roleId: id,
     roleConnectionConfigurations,
-  };
-  obj.dispatch(obj);
+  });
 };
 export const saveRoleSettings = function saveRoleSettings() {
   const self = this;

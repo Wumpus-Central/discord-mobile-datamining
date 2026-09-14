@@ -2,6 +2,8 @@
 import CollectiblesCategoryStore from "../../CollectiblesCategoryStore.tsx";
 import CollectiblesPurchaseStore from "../../CollectiblesPurchaseStore.tsx";
 
+const require = globalThis.__r;
+
 const require = fn;
 const isProfileFrameRecord = fn(7652).isProfileFrameRecord;
 const size = fn(2);

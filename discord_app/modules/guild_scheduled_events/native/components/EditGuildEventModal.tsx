@@ -12,17 +12,18 @@ import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
+const require = globalThis.__r;
+
 require = fn;
 const View = fn(17).View;
 let closure_8 = fn(1963).GuildScheduledEventEntityTypes;
 const jsx = fn(21).jsx;
-fn(4636);
-let obj = { container: null, cardStyle: null };
-obj = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
-obj.container = obj;
-const createStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
-obj.cardStyle = createStyles;
+const createStyles = fn(4636);
+let obj = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, cardStyle: null };
+let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
+obj.cardStyle = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 let closure_10 = createStyles.createStyles(obj);
+let obj4 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_scheduled_events/native/components/EditGuildEventModal.tsx");
 
@@ -41,8 +42,8 @@ export default noop.memo((guild) => {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -55,20 +56,20 @@ export default noop.memo((guild) => {
             throw value;
           } else if (arg0 === 2) {
             c2 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
             c1 = 1;
             c2 = 1;
-            const obj1 = { value: noop(), done: false };
-            return obj1;
+            const obj4 = { value: noop(), done: false };
+            return obj4;
           }
         } else if (arg0 === 1) {
           c2 = 3;
           throw value;
         } else if (arg0 === 2) {
           c2 = 3;
-          obj = { value, done: true };
+          const obj = { value, done: true };
           return obj;
         } else if (null == value) {
           c2 = 3;
@@ -97,13 +98,16 @@ export default noop.memo((guild) => {
   };
   const tmp = closure_10();
   ({ left, right } = require("useSafeAreaInsets")());
-  let obj = PREVIEW(guildEvent[9]);
-  let tmp3 = first1(noop.useState(obj.getInitialGuildEventData(initialGuildEvent, guild.targetChannel)), 2);
+  const tmp2 = require("useSafeAreaInsets")();
+  let tmp3 = first1(
+    noop.useState(PREVIEW(guildEvent[9]).getInitialGuildEventData(initialGuildEvent, guild.targetChannel)),
+    2,
+  );
   guildEvent = tmp3[0];
   closure_4 = tmp3[1];
-  let obj1 = PREVIEW(guildEvent[9]);
-  first1 = first1(noop.useState(obj1.isEditingEvent(initialGuildEvent)), 1)[0];
-  const tmp2 = require("useSafeAreaInsets")();
+  let obj = PREVIEW(guildEvent[9]);
+  first1 = first1(noop.useState(PREVIEW(guildEvent[9]).isEditingEvent(initialGuildEvent)), 1)[0];
+  let obj2 = PREVIEW(guildEvent[9]);
   [c6, tmp7] = first1(
     require("LazyAPIPromise")(() => {
       const result = KeyboardManagerUtilsAll.dismissGlobalKeyboard();
@@ -173,14 +177,14 @@ export default noop.memo((guild) => {
       });
     },
   };
-  obj = {};
-  obj = { title: "", customNavbar: null, headerLeft: null, render: null, fullscreen: true };
+  let obj3 = {};
+  let obj4 = { title: "", customNavbar: null, headerLeft: null, render: null, fullscreen: true };
   PREVIEW = PREVIEW(guildEvent[9]).EditGuildEventScreens.CHANNEL_SELECTOR;
-  obj.customNavbar = () => closure_9(closure_1(guildEvent[17]), { screen: PREVIEW, onClose: importDefault });
-  obj.headerLeft = function headerLeft() {
+  obj4.customNavbar = () => closure_9(closure_1(guildEvent[17]), { screen: PREVIEW, onClose: importDefault });
+  obj4.headerLeft = function headerLeft() {
     return null;
   };
-  obj.render = function render() {
+  obj4.render = function render() {
     const obj = {};
     const merged = Object.assign(closure_8);
     let id;
@@ -190,26 +194,26 @@ export default noop.memo((guild) => {
     obj.guildEventId = id;
     return jsx(EditGuildEventWhereDefault, {});
   };
-  obj[PREVIEW(guildEvent[9]).EditGuildEventScreens.CHANNEL_SELECTOR] = obj;
-  obj1 = { title: "", customNavbar: null, render: null, fullscreen: true };
+  obj3[PREVIEW(guildEvent[9]).EditGuildEventScreens.CHANNEL_SELECTOR] = obj4;
+  const obj5 = { title: "", customNavbar: null, render: null, fullscreen: true };
   PREVIEW = PREVIEW(guildEvent[9]).EditGuildEventScreens.DETAILS;
-  obj1.customNavbar = () => closure_9(closure_1(guildEvent[17]), { screen: PREVIEW, onClose: importDefault });
-  obj1.render = function render() {
+  obj5.customNavbar = () => closure_9(closure_1(guildEvent[17]), { screen: PREVIEW, onClose: importDefault });
+  obj5.render = function render() {
     const merged = Object.assign(closure_8);
     return jsx(EditGuildEventDetailsDefault, {});
   };
-  obj[PREVIEW(guildEvent[9]).EditGuildEventScreens.DETAILS] = obj1;
-  let obj2 = { title: "", customNavbar: null, render: null, fullscreen: true };
+  obj3[PREVIEW(guildEvent[9]).EditGuildEventScreens.DETAILS] = obj5;
+  const obj6 = { title: "", customNavbar: null, render: null, fullscreen: true };
   PREVIEW = PREVIEW(guildEvent[9]).EditGuildEventScreens.PREVIEW;
-  obj2.customNavbar = () => closure_9(closure_1(guildEvent[17]), { screen: PREVIEW, onClose: importDefault });
-  obj2.render = function render() {
+  obj6.customNavbar = () => closure_9(closure_1(guildEvent[17]), { screen: PREVIEW, onClose: importDefault });
+  obj6.render = function render() {
     const merged = Object.assign(closure_8);
     return jsx(EditGuildEventPreviewDefault, {});
   };
-  obj[PREVIEW(guildEvent[9]).EditGuildEventScreens.PREVIEW] = obj2;
-  let obj3 = { style: null, children: null };
+  obj3[PREVIEW(guildEvent[9]).EditGuildEventScreens.PREVIEW] = obj6;
+  const obj7 = { style: null, children: null };
   let items = [tmp.container, { paddingLeft: left, paddingRight: right }];
-  obj3.style = items;
+  obj7.style = items;
   const tmp6 = first1(
     require("LazyAPIPromise")(() => {
       const result = KeyboardManagerUtilsAll.dismissGlobalKeyboard();
@@ -231,16 +235,16 @@ export default noop.memo((guild) => {
     }),
     2,
   );
-  obj3.children = jsx(PREVIEW(guildEvent[21]).Navigator, {
-    screens: obj,
+  obj7.children = jsx(PREVIEW(guildEvent[21]).Navigator, {
+    screens: obj3,
     initialRouteName: PREVIEW(guildEvent[9]).EditGuildEventScreens.CHANNEL_SELECTOR,
     initialRouteStack: first1(
       noop.useState(() => {
-        let obj = { name: EditGuildEventUtils.EditGuildEventScreens.CHANNEL_SELECTOR };
+        const obj = { name: EditGuildEventUtils.EditGuildEventScreens.CHANNEL_SELECTOR };
         if (first1) {
           const items = [obj];
-          obj = { name: EditGuildEventUtils.EditGuildEventScreens.DETAILS };
-          items[1] = obj;
+          const obj2 = { name: EditGuildEventUtils.EditGuildEventScreens.DETAILS };
+          items[1] = obj2;
           let items1 = items;
         } else {
           items1 = [obj];

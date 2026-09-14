@@ -2,7 +2,7 @@
 import DurationsDefault from "../../utils/Durations.tsx";
 import util from "../../intl/index.native.tsx";
 import AnalyticsUtilsDefault from "../../utils/AnalyticsUtils.tsx";
-import v1 from "../../../_runtime/01256_v1.js";
+import v1 from "../../../_runtime/01254_v1.js";
 import UnicodeEmojisDefault from "../emojis/UnicodeEmojis.tsx";
 import EmojiUtilsDefault from "../../utils/EmojiUtils.tsx";
 import AppAnalyticsUtilsDefault from "../app_analytics/AppAnalyticsUtils.tsx";
@@ -12,6 +12,8 @@ import EmojiStore from "../emojis/EmojiStore.tsx";
 import GuildStore from "../../stores/GuildStore.tsx";
 import SortedGuildStore from "../../stores/SortedGuildStore.tsx";
 import UserStore from "../../stores/UserStore.tsx";
+
+const require = globalThis.__r;
 
 require = fn;
 const EmojiPickerConstants = fn(5544);
@@ -30,7 +32,7 @@ const EmojiConstants = fn(1374);
   EmojiDisabledReasons: closure_17,
   EmojiIntention: closure_18,
 } = EmojiConstants);
-const ExpressionPickerViewType = fn(1219).ExpressionPickerViewType;
+const ExpressionPickerViewType = fn(1217).ExpressionPickerViewType;
 const PremiumUpsellTypes = fn(1373).PremiumUpsellTypes;
 const re21 = /-/g;
 const apply = fn(12);
@@ -95,7 +97,7 @@ export const useEmojiCategories = function useEmojiCategories(CHAT, channel) {
     const FrecencyUserSettingsActionCreators = CHAT(guildId[25]).FrecencyUserSettingsActionCreators;
     const ifNecessary = FrecencyUserSettingsActionCreators.loadIfNecessary();
   }, []);
-  let obj2 = require("initialize");
+  const obj2 = require("initialize");
   let items1 = [flag2];
   const stateFromStoresArray1 = require("initialize").useStateFromStoresArray(items1, () => {
     const disambiguatedEmojiContext = EmojiStore.getDisambiguatedEmojiContext(closure_0);
@@ -123,7 +125,7 @@ export const useEmojiCategories = function useEmojiCategories(CHAT, channel) {
     () => EmojiStore.getDisambiguatedEmojiContext(guildId),
     items4,
   );
-  let obj5 = require("initialize");
+  const obj5 = require("initialize");
   const items5 = [closure_5];
   const stateFromStores1 = require("initialize").useStateFromStores(items5, () => {
     const guild = GuildStore.getGuild(guildId);
@@ -133,12 +135,12 @@ export const useEmojiCategories = function useEmojiCategories(CHAT, channel) {
     }
     return name;
   });
-  const obj6 = require("initialize");
+  let obj6 = require("initialize");
   const items6 = [stateFromStoresArray1];
   const stateFromStores2 = require("initialize").useStateFromStores(items6, () =>
     stateFromStoresArray1.getCurrentUser(),
   );
-  const obj7 = require("initialize");
+  let obj7 = require("initialize");
   const isPremiumResult = require("PremiumTypeUtils").isPremium(stateFromStores2);
   c12 = isPremiumResult;
   const obj8 = require("PremiumTypeUtils");
@@ -162,15 +164,13 @@ export const useEmojiCategories = function useEmojiCategories(CHAT, channel) {
   ];
   return flag.useMemo(() => {
     function getEmojiUnavailableReasons(categoryEmojis) {
-      channel(guildId[20]);
-      const obj = {
+      return channel(guildId[20]).getEmojiUnavailableReasons({
         categoryEmojis,
         channel,
         guildId: getEmojiUnavailableReasons,
         intention,
         bypassPremiumEmojiEntitlement,
-      };
-      return obj.getEmojiUnavailableReasons(obj);
+      });
     }
     CHAT = stateFromStores.getGroupedCustomEmoji();
     channel = [];
@@ -221,9 +221,9 @@ export const useEmojiCategories = function useEmojiCategories(CHAT, channel) {
                 }
                 if (null != tmp16) {
                   if (guild.id === guildId) {
-                    arr = channel.unshift(tmp16);
+                    let arr3 = channel.unshift(tmp16);
                   } else {
-                    arr = channel.push(tmp16);
+                    let arr4 = channel.push(tmp16);
                   }
                 }
               }
@@ -240,12 +240,12 @@ export const useEmojiCategories = function useEmojiCategories(CHAT, channel) {
       }
       return tmp3((arr, id) => {
         if (id === constants.TOP_GUILD_EMOJI) {
-          let obj = { categoryEmojis: allEmojis, channel, guildId, intention, bypassPremiumEmojiEntitlement: flag2 };
-          const emojiUnavailableReasons = EmojiUtilsDefault.getEmojiUnavailableReasons(obj);
+          const obj3 = { categoryEmojis: allEmojis, channel, guildId, intention, bypassPremiumEmojiEntitlement: flag2 };
+          const emojiUnavailableReasons = EmojiUtilsDefault.getEmojiUnavailableReasons(obj3);
           const emojisUnfiltered = emojiUnavailableReasons.emojisUnfiltered;
           if (null != emojisUnfiltered) {
             if (0 !== emojisUnfiltered.length) {
-              obj = {
+              const obj4 = {
                 type: constants2.TOP_GUILD_EMOJI,
                 id,
                 name: null,
@@ -254,30 +254,24 @@ export const useEmojiCategories = function useEmojiCategories(CHAT, channel) {
                 emojisDisabled: null,
               };
               const intl3 = util.intl;
-              let obj1 = { guildName: stateFromStores1 };
-              obj.name = intl3.formatToPlainString(util.t.W6Wi1X, obj1);
-              obj.emojis = emojisUnfiltered;
-              obj.emojisDisabled = tmp49;
-              arr = arr.push(obj);
+              const obj6 = { guildName: stateFromStores1 };
+              obj4.name = intl3.formatToPlainString(util.t.W6Wi1X, obj6);
+              obj4.emojis = emojisUnfiltered;
+              obj4.emojisDisabled = tmp49;
+              arr.push(obj4);
             }
           }
           return arr;
         } else if (id === constants.RECENT) {
           const items = [,];
           ({ REACTION: arr4[0], DEFAULT_REACT_EMOJI: arr4[1] } = constants8);
-          let obj4 = EmojiUtilsDefault;
-          const obj2 = {
-            categoryEmojis: items.includes(intention) ? stateFromStoresArray1 : stateFromStoresArray,
-            channel,
-            guildId,
-            intention,
-            bypassPremiumEmojiEntitlement: flag2,
-          };
-          const emojiUnavailableReasons1 = obj4.getEmojiUnavailableReasons(obj2);
+          const tmp28 = items.includes(intention) ? stateFromStoresArray1 : stateFromStoresArray;
+          const obj7 = { categoryEmojis: tmp28, channel, guildId, intention, bypassPremiumEmojiEntitlement: flag2 };
+          const emojiUnavailableReasons1 = EmojiUtilsDefault.getEmojiUnavailableReasons(obj7);
           const emojisUnfiltered1 = emojiUnavailableReasons1.emojisUnfiltered;
           if (null != emojisUnfiltered1) {
             if (0 !== emojisUnfiltered1.length) {
-              const obj3 = {
+              const obj9 = {
                 type: constants2.RECENT,
                 id,
                 name: null,
@@ -286,27 +280,26 @@ export const useEmojiCategories = function useEmojiCategories(CHAT, channel) {
                 emojisDisabled: null,
               };
               const intl2 = util.intl;
-              obj3.name = intl2.string(util.t["5TvaSm"]);
-              obj3.emojis = emojisUnfiltered1;
-              obj3.emojisDisabled = tmp36;
-              arr = arr.push(obj3);
+              obj9.name = intl2.string(util.t["5TvaSm"]);
+              obj9.emojis = emojisUnfiltered1;
+              obj9.emojisDisabled = tmp36;
+              arr.push(obj9);
             }
           }
           return arr;
         } else if (id === constants.FAVORITES) {
-          obj1 = EmojiUtilsDefault;
-          obj4 = {
+          const obj10 = {
             categoryEmojis: stateFromStoresArray2,
             channel,
             guildId,
             intention,
             bypassPremiumEmojiEntitlement: flag2,
           };
-          const emojiUnavailableReasons2 = obj1.getEmojiUnavailableReasons(obj4);
+          const emojiUnavailableReasons2 = EmojiUtilsDefault.getEmojiUnavailableReasons(obj10);
           const emojisUnfiltered2 = emojiUnavailableReasons2.emojisUnfiltered;
           if (null != emojisUnfiltered2) {
             if (0 !== emojisUnfiltered2.length) {
-              const obj5 = {
+              const obj11 = {
                 type: constants2.FAVORITES,
                 id,
                 name: null,
@@ -315,18 +308,17 @@ export const useEmojiCategories = function useEmojiCategories(CHAT, channel) {
                 emojisDisabled: null,
               };
               const intl = util.intl;
-              obj5.name = intl.string(util.t.y3LQCG);
-              obj5.emojis = emojisUnfiltered2;
-              obj5.emojisDisabled = tmp21;
-              arr.push(obj5);
+              obj11.name = intl.string(util.t.y3LQCG);
+              obj11.emojis = emojisUnfiltered2;
+              obj11.emojisDisabled = tmp21;
+              arr.push(obj11);
             }
           }
           return arr;
         } else if (id === constants.CUSTOM) {
-          arr = channel;
           let found = channel;
           if (!closure_5) {
-            found = arr.filter((type) => {
+            found = channel.filter((type) => {
               if (type.type === constants.GUILD) {
                 flag = type.guild.id === getEmojiUnavailableReasons;
               } else {
@@ -341,7 +333,7 @@ export const useEmojiCategories = function useEmojiCategories(CHAT, channel) {
           HermesBuiltin.arraySpread(found, 0);
           HermesBuiltin.apply(items1, arr);
         } else {
-          obj = { type: constants2.UNICODE, id, name: id, isNitroLocked: false };
+          const obj = { type: constants2.UNICODE, id, name: id, isNitroLocked: false };
           arr.push(obj);
         }
         return arr;
@@ -358,7 +350,7 @@ export const trackPremiumSettingsPaneOpened = function trackPremiumSettingsPaneO
   if (getGuildId != null) {
     guildId = getGuildId.getGuildId();
   }
-  const obj = {
+  const obj2 = {
     location_page: null != guildId ? constants.GUILD_CHANNEL : constants.DM_CHANNEL,
     location_section: null,
   };
@@ -367,12 +359,11 @@ export const trackPremiumSettingsPaneOpened = function trackPremiumSettingsPaneO
   } else {
     CUSTOM_STATUS_MODAL = constants5.CUSTOM_STATUS_MODAL;
   }
-  obj.location_section = CUSTOM_STATUS_MODAL;
-  obj.track(constants4.PREMIUM_PROMOTION_OPENED, obj);
+  obj2.location_section = CUSTOM_STATUS_MODAL;
+  AnalyticsUtilsDefault.track(constants4.PREMIUM_PROMOTION_OPENED, obj2);
   const tmp2 = null != guildId;
 };
 export const trackEmojiSearchStart = function trackEmojiSearchStart(location, arg1) {
-  let obj = AppAnalyticsUtilsDefault;
   if (constants8.REACTION === arg1) {
     let EMOJI = constants7.EMOJI_REACTION;
   } else if (tmp2.AUTO_SUGGESTION === arg1) {
@@ -380,23 +371,23 @@ export const trackEmojiSearchStart = function trackEmojiSearchStart(location, ar
   } else {
     EMOJI = constants7.EMOJI;
   }
-  obj = { search_type: EMOJI, location };
+  const obj2 = { search_type: EMOJI, location };
   const EmojiPickerStore = ExpressionPickerGridStores.EmojiPickerStore;
   const analyticsId = EmojiPickerStore.getAnalyticsId();
   if (null != analyticsId) {
     if ("" !== analyticsId) {
-      obj = { load_id: analyticsId };
-      let obj1 = obj;
+      const obj3 = { load_id: analyticsId };
+      let obj4 = obj3;
     }
-    const merged = Object.assign(obj1);
-    obj.trackWithMetadata(constants4.SEARCH_STARTED, obj);
+    const merged = Object.assign(obj4);
+    obj.trackWithMetadata(constants4.SEARCH_STARTED, obj2);
   }
-  obj1 = {};
+  obj4 = {};
+  obj = AppAnalyticsUtilsDefault;
 };
 export const trackEmojiSearchResultsViewed = function trackEmojiSearchResultsViewed(arg0) {
   ({ intention, loadId } = arg0);
   ({ totalResults, numEmojiLocked, location: _location, searchQuery } = arg0);
-  let obj = AppAnalyticsUtilsDefault;
   if (constants8.REACTION === intention) {
     let EMOJI = constants7.EMOJI_REACTION;
   } else if (tmp.AUTO_SUGGESTION === intention) {
@@ -404,7 +395,7 @@ export const trackEmojiSearchResultsViewed = function trackEmojiSearchResultsVie
   } else {
     EMOJI = constants7.EMOJI;
   }
-  obj = {
+  const obj2 = {
     search_type: EMOJI,
     total_results: totalResults,
     num_results_locked: numEmojiLocked,
@@ -413,18 +404,19 @@ export const trackEmojiSearchResultsViewed = function trackEmojiSearchResultsVie
   };
   if (null != loadId) {
     if ("" !== loadId) {
-      obj = { load_id: loadId };
-      let obj1 = obj;
+      const obj3 = { load_id: loadId };
+      let obj4 = obj3;
     }
-    const merged = Object.assign(obj1);
-    obj.trackWithMetadata(constants4.SEARCH_RESULT_VIEWED, obj);
+    const merged = Object.assign(obj4);
+    obj.trackWithMetadata(constants4.SEARCH_RESULT_VIEWED, obj2);
   }
-  obj1 = {};
+  obj4 = {};
+  obj = AppAnalyticsUtilsDefault;
 };
-export const trackEmojiSearchSelect = function trackEmojiSearchSelect(tmp2Result) {
-  ({ emoji, emojiSuggestions, intention } = tmp2Result);
+export const trackEmojiSearchSelect = function trackEmojiSearchSelect(tmp2Result2) {
+  ({ emoji, emojiSuggestions, intention } = tmp2Result2);
   let name = emoji.uniqueName;
-  ({ searchQuery, isLocked, location: _location, index, messageId } = tmp2Result);
+  ({ searchQuery, isLocked, location: _location, index, messageId } = tmp2Result2);
   if (name == null) {
     name = emoji.name;
   }
@@ -435,7 +427,7 @@ export const trackEmojiSearchSelect = function trackEmojiSearchSelect(tmp2Result
   } else {
     EMOJI = constants7.EMOJI;
   }
-  let obj = {
+  const obj2 = {
     search_type: EMOJI,
     location: _location,
     expression_guild_id: emoji.guildId,
@@ -457,10 +449,10 @@ export const trackEmojiSearchSelect = function trackEmojiSearchSelect(tmp2Result
   }
   if (null != loadId) {
     if ("" !== loadId) {
-      obj = { load_id: loadId };
-      let obj1 = obj;
+      const obj3 = { load_id: loadId };
+      let obj4 = obj3;
     }
-    const merged = Object.assign(obj1);
+    const merged = Object.assign(obj4);
     let length;
     if (emojiSuggestions != null) {
       const results = emojiSuggestions.results;
@@ -468,7 +460,7 @@ export const trackEmojiSearchSelect = function trackEmojiSearchSelect(tmp2Result
         length = results.length;
       }
     }
-    obj.total_results = length;
+    obj2.total_results = length;
     let found;
     if (emojiSuggestions != null) {
       const results1 = emojiSuggestions.results;
@@ -477,16 +469,16 @@ export const trackEmojiSearchSelect = function trackEmojiSearchSelect(tmp2Result
         found = mapped.filter((item) => null != item);
       }
     }
-    obj.emoji_suggestion_ids = found;
-    obj.message_id = messageId;
-    obj.trackWithMetadata(constants4.SEARCH_RESULT_SELECTED, obj);
+    obj2.emoji_suggestion_ids = found;
+    obj2.message_id = messageId;
+    obj.trackWithMetadata(constants4.SEARCH_RESULT_SELECTED, obj2);
   }
-  obj1 = {};
+  obj4 = {};
+  obj = AppAnalyticsUtilsDefault;
 };
 export const trackEmojiSearchEmpty = function trackEmojiSearchEmpty(arg0) {
   ({ intention, loadId } = arg0);
   ({ location: _location, searchQuery } = arg0);
-  let obj = AppAnalyticsUtilsDefault;
   if (constants8.REACTION === intention) {
     let EMOJI = constants7.EMOJI_REACTION;
   } else if (tmp.AUTO_SUGGESTION === intention) {
@@ -494,34 +486,33 @@ export const trackEmojiSearchEmpty = function trackEmojiSearchEmpty(arg0) {
   } else {
     EMOJI = constants7.EMOJI;
   }
-  obj = { search_type: EMOJI, query: searchQuery, location: _location };
+  const obj2 = { search_type: EMOJI, query: searchQuery, location: _location };
   if (null != loadId) {
     if ("" !== loadId) {
-      obj = { load_id: loadId };
-      let obj1 = obj;
+      const obj3 = { load_id: loadId };
+      let obj4 = obj3;
     }
-    const merged = Object.assign(obj1);
-    obj.trackWithMetadata(constants4.SEARCH_RESULT_EMPTY, obj);
+    const merged = Object.assign(obj4);
+    obj.trackWithMetadata(constants4.SEARCH_RESULT_EMPTY, obj2);
   }
-  obj1 = {};
+  obj4 = {};
+  obj = AppAnalyticsUtilsDefault;
 };
 export const trackEmojiFocus = function trackEmojiFocus(arg0) {
   ({ emoji, subCategory } = arg0);
   ({ position, newlyAddedHighlight } = arg0);
-  let obj = AppAnalyticsUtilsDefault;
   let str;
   if (subCategory != null) {
     str = subCategory.toString();
   }
-  obj = {
+  AppAnalyticsUtilsDefault.trackWithMetadata(constants4.EXPRESSION_PICKER_EXPRESSION_FOCUS, {
     expression_section: str,
     newly_added_highlight: newlyAddedHighlight,
     emoji_id: emoji.id,
     emoji_name: emoji.name,
     emoji_animated: emoji.animated,
     emoji_position: position,
-  };
-  obj.trackWithMetadata(constants4.EXPRESSION_PICKER_EXPRESSION_FOCUS, obj);
+  });
 };
 export const trackEmojiSelect = function trackEmojiSelect(arg0) {
   ({ emoji, pickerIntention, subCategory } = arg0);
@@ -540,13 +531,12 @@ export const trackEmojiSelect = function trackEmojiSelect(arg0) {
     if (name == null) {
       name = emoji.name;
     }
-    let obj = AppAnalyticsUtilsDefault;
     if (null != lockedReason) {
       let EXPRESSION_PICKER_EXPRESSION_SELECTED = constants4.EXPRESSION_PICKER_LOCKED_EXPRESSION_SELECTED;
     } else {
       EXPRESSION_PICKER_EXPRESSION_SELECTED = constants4.EXPRESSION_PICKER_EXPRESSION_SELECTED;
     }
-    obj = {
+    const obj2 = {
       type: EMOJI_PICKER_EMOJI_CLICKED,
       location: _location,
       expression_id: emoji.id,
@@ -565,18 +555,18 @@ export const trackEmojiSelect = function trackEmojiSelect(arg0) {
     if (subCategory != null) {
       str = subCategory.toString();
     }
-    obj.expression_section = str;
-    obj.emoji_position = tmp2;
-    obj.newly_added_highlight = tmp3;
-    obj.is_burst = isBurstReaction;
-    obj.message_id = tmp4;
+    obj2.expression_section = str;
+    obj2.emoji_position = tmp2;
+    obj2.newly_added_highlight = tmp3;
+    obj2.is_burst = isBurstReaction;
+    obj2.message_id = tmp4;
     let tmp17 = null != lockedReason;
     if (tmp17) {
-      obj = { locked_reason: closure_1_17[lockedReason], visible_row_index: tmp5 };
-      tmp17 = obj;
+      const obj3 = { locked_reason: closure_1_17[lockedReason], visible_row_index: tmp5 };
+      tmp17 = obj3;
     }
     const merged = Object.assign(tmp17);
-    obj.trackWithMetadata(EXPRESSION_PICKER_EXPRESSION_SELECTED, obj);
+    AppAnalyticsUtilsDefault.trackWithMetadata(EXPRESSION_PICKER_EXPRESSION_SELECTED, obj2);
   }
 };
 export const trackEmojiFavorited = function trackEmojiFavorited(emoji) {
@@ -585,7 +575,7 @@ export const trackEmojiFavorited = function trackEmojiFavorited(emoji) {
   if (name == null) {
     name = emoji.name;
   }
-  const obj = {
+  AppAnalyticsUtilsDefault.trackWithMetadata(constants4.EXPRESSION_FAVORITED, {
     location: emoji.location,
     expression_type: ExpressionPickerViewType.EMOJI,
     expression_id: emoji.id,
@@ -593,13 +583,12 @@ export const trackEmojiFavorited = function trackEmojiFavorited(emoji) {
     expression_guild_id: emoji.guildId,
     is_custom: null != emoji.id,
     is_animated: emoji.animated,
-  };
-  obj.trackWithMetadata(constants4.EXPRESSION_FAVORITED, obj);
+  });
 };
 export const throttledTrackEmojiAutoSuggestDisplayed = apply.throttle(
   (emojiSuggestions) => {
     emojiSuggestions = emojiSuggestions.emojiSuggestions;
-    const obj = {
+    const obj2 = {
       suggestion_type: constants6.EMOJI,
       suggestion_quantity: emojiSuggestions.results.length,
       custom_quantity: null,
@@ -607,8 +596,8 @@ export const throttledTrackEmojiAutoSuggestDisplayed = apply.throttle(
       location: emojiSuggestions.analyticsLocation,
     };
     const results = emojiSuggestions.results;
-    obj.custom_quantity = results.filter((emoji) => null != emoji.emoji.id).length;
-    obj.trackWithMetadata(constants4.AUTO_SUGGEST_DISPLAYED, obj);
+    obj2.custom_quantity = results.filter((emoji) => null != emoji.emoji.id).length;
+    AppAnalyticsUtilsDefault.trackWithMetadata(constants4.AUTO_SUGGEST_DISPLAYED, obj2);
   },
   DurationsDefault.Millis.HALF_SECOND,
   { leading: false, trailing: true },

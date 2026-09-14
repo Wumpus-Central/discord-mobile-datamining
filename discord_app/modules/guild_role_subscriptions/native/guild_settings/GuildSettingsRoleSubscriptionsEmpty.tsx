@@ -8,8 +8,7 @@ import GuildStore from "../../../../stores/GuildStore.tsx";
 require = fn;
 function GuildSettingsRoleSubscriptionsEmptyContent(guild) {
   guild = guild.guild;
-  let obj = useNavigation;
-  const str = obj.useNavigation();
+  const str = useNavigation.useNavigation();
   if (tmp3.loading) {
     let tmp7 = jsx(PlaceholderDefault, {});
   } else {
@@ -17,7 +16,7 @@ function GuildSettingsRoleSubscriptionsEmptyContent(guild) {
     if (!features.has(constants.CREATOR_MONETIZABLE)) {
       const features2 = guild.features;
       if (!features2.has(constants.CREATOR_MONETIZABLE_PROVISIONAL)) {
-        obj = { guild };
+        const obj2 = { guild };
         tmp7 = jsx(GuildSettingsRoleSubscriptionWelcomeViewDefault, { guild });
       }
     }
@@ -33,7 +32,7 @@ function GuildSettingsRoleSubscriptionsEmptyContent(guild) {
 }
 const Constants = fn(1074);
 ({ GuildFeatures: closure_4, GuildSettingsSections: hasOwnProperty } = Constants);
-const ApplicationTypes = fn(1350).ApplicationTypes;
+const ApplicationTypes = fn(1348).ApplicationTypes;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting(
@@ -42,13 +41,12 @@ const result = size.fileFinishedImporting(
 
 export default function GuildSettingsRoleSubscriptionsEmpty(guildId) {
   guildId = guildId.guildId;
-  let obj = guildId(504);
   const items = [GuildStore];
-  const stateFromStores = obj.useStateFromStores(items, () => GuildStore.getGuild(guildId));
+  const stateFromStores = guildId(504).useStateFromStores(items, () => GuildStore.getGuild(guildId));
   if (null == stateFromStores) {
     let tmp5 = jsx(PlaceholderDefault, {});
   } else {
-    obj = { guild: stateFromStores };
+    const obj2 = { guild: stateFromStores };
     tmp5 = <GuildSettingsRoleSubscriptionsEmptyContent guild={stateFromStores} />;
   }
   return tmp5;

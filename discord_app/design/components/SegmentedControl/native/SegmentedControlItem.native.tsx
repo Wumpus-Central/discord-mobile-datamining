@@ -24,13 +24,12 @@ let closure_8 = createStyles.createStyles((arg0) => {
   item.paddingVertical = num;
   return { item, label: { flexDirection: "column", alignItems: "center", gap: 8 } };
 });
-fn(4636);
-createStyles = {
+createStyles = fn(4636);
+let closure_9 = createStyles.createStyleProperties({
   inactive: nativeDefault.colors.TEXT_MUTED,
   active: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE,
   pressed: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE,
-};
-let closure_9 = createStyles.createStyleProperties(createStyles);
+});
 const __initData = {
   code: "function SegmentedControlItemNativeTsx1(){const{colors,pressed,index,activeIndex,withSpring,SPRING_CONFIG}=this.__closure;let color=colors.inactive;const isPressActive=pressed.get()>=0;const isPressed=pressed.get()===index;const isActive=Math.round(activeIndex.get())===index;if(isPressed){color=colors.pressed;}else if(isPressActive){color=colors.inactive;}else if(isActive){color=colors.active;}return{color:withSpring(color,SPRING_CONFIG,'animate-always')};}",
 };
@@ -46,11 +45,10 @@ export const SegmentedControlItem = function SegmentedControlItem(index) {
   const tmp = closure_8(variant);
   let tmp2 = closure_9();
   const inactive = tmp2;
-  let obj = index(activeIndex[5]);
-  const derivedStateFromSharedValue = obj.useDerivedStateFromSharedValue(activeIndex, (arg0) => ({
+  const derivedStateFromSharedValue = index(activeIndex[5]).useDerivedStateFromSharedValue(activeIndex, (arg0) => ({
     selected: arg0 === index,
   }));
-  let obj1 = index(activeIndex[6]);
+  let obj = index(activeIndex[5]);
   const fn = function b() {
     let active = inactive.inactive;
     value = pressed.get();
@@ -66,11 +64,18 @@ export const SegmentedControlItem = function SegmentedControlItem(index) {
     obj.color = spring.withSpring(active, closure_7, "animate-always");
     return obj;
   };
-  obj = { colors: tmp2, pressed, index, activeIndex, withSpring: index(activeIndex[7]).withSpring, SPRING_CONFIG };
-  fn.__closure = obj;
+  const obj2 = index(activeIndex[6]);
+  fn.__closure = {
+    colors: tmp2,
+    pressed,
+    index,
+    activeIndex,
+    withSpring: index(activeIndex[7]).withSpring,
+    SPRING_CONFIG,
+  };
   fn.__workletHash = 9369301431547;
   fn.__initData = __initData;
-  obj = {
+  const obj4 = {
     style: null,
     onPress,
     onPressIn,
@@ -81,18 +86,27 @@ export const SegmentedControlItem = function SegmentedControlItem(index) {
     children: null,
   };
   const items = [tmp.item, style];
-  obj.style = items;
-  const animatedStyle = obj1.useAnimatedStyle(fn);
+  obj4.style = items;
+  const animatedStyle = obj2.useAnimatedStyle(fn);
+  const obj3 = {
+    colors: tmp2,
+    pressed,
+    index,
+    activeIndex,
+    withSpring: index(activeIndex[7]).withSpring,
+    SPRING_CONFIG,
+  };
+  const tmp8 = inactive;
   let formatToPlainStringResult;
   if (obj5.isAndroid()) {
     const intl = tmp3(tmp4[9]).intl;
-    obj1 = { position: index + 1, tabCount: itemCount };
-    formatToPlainStringResult = intl.formatToPlainString(tmp3(tmp4[9]).t["4EsQA1"], obj1);
+    const obj6 = { position: index + 1, tabCount: itemCount };
+    formatToPlainStringResult = intl.formatToPlainString(tmp3(tmp4[9]).t["4EsQA1"], obj6);
   }
-  obj.accessibilityHint = formatToPlainStringResult;
-  const obj2 = { style: tmp.label, children: null };
+  obj4.accessibilityHint = formatToPlainStringResult;
+  const obj7 = { style: tmp.label, children: null };
   const items1 = [icon];
-  const obj3 = {
+  const obj8 = {
     animated: true,
     variant: "text-sm/semibold",
     style: animatedStyle,
@@ -104,10 +118,10 @@ export const SegmentedControlItem = function SegmentedControlItem(index) {
   if ("experimental_Large" === variant) {
     num2 = 1.5;
   }
-  obj3.maxFontSizeMultiplier = num2;
-  obj3.children = label;
-  items1[1] = closure_5(index(activeIndex[10]).Text, obj3);
-  obj2.children = items1;
-  obj.children = closure_6(closure_4, obj2);
-  return closure_5(inactive, obj);
+  obj8.maxFontSizeMultiplier = num2;
+  obj8.children = label;
+  items1[1] = closure_5(index(activeIndex[10]).Text, obj8);
+  obj7.children = items1;
+  obj4.children = closure_6(closure_4, obj7);
+  return closure_5(tmp8, obj4);
 };

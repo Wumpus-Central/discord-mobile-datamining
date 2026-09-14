@@ -10,21 +10,32 @@ import createStyles from "../../../../design/components/Styles/native/createStyl
 import size from "../../../../../_runtime/metro/00002__.js";
 
 function handlePress() {
-  const obj = { aboutText: null };
+  const obj2 = { aboutText: null };
+  const obj = ActionSheetActionCreatorsDefault;
   const intl = util.intl;
-  obj.aboutText = intl.string(util.t["07lzz7"]);
-  obj.openLazy(asyncRequireImpl(13604, dependencyMap.paths), "NitroCreditEducationActionSheet", obj);
+  obj2.aboutText = intl.string(util.t["07lzz7"]);
+  obj.openLazy(asyncRequireImpl(13605, dependencyMap.paths), "NitroCreditEducationActionSheet", obj2);
 }
 ({ TouchableOpacity: c3, View: closure_4 } = get_ActivityIndicator);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 let obj = {
-  fractionalPremiumBanner: null,
+  fractionalPremiumBanner: {
+    backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
+    flexDirection: "row",
+    gap: 12,
+    padding: 12,
+    justifyContent: "center",
+    borderColor: nativeDefault.colors.STATUS_WARNING,
+    borderWidth: 1,
+    borderRadius: nativeDefault.radii.lg,
+    marginBottom: 12,
+  },
   fpDurationPill: null,
   fpDurationText: null,
   fpUnavailable: null,
   fpUnavailableTextNoCountdown: null,
 };
-obj = {
+let obj2 = {
   backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
   flexDirection: "row",
   gap: 12,
@@ -35,7 +46,6 @@ obj = {
   borderRadius: nativeDefault.radii.lg,
   marginBottom: 12,
 };
-obj.fractionalPremiumBanner = obj;
 obj.fpDurationPill = {
   flex: 1,
   paddingVertical: 12,
@@ -57,29 +67,29 @@ export default function BoostingCountDownPill(style) {
   if (!isInReverseTrial) {
     tmp4 = handlePress;
   }
-  let obj = { activeOpacity: 0.7, onPress: tmp4, children: null };
-  obj = { style: null, children: null };
+  const obj = { activeOpacity: 0.7, onPress: tmp4, children: null };
+  const obj2 = { style: null, children: null };
   const items = [tmp.fractionalPremiumBanner, style.style];
-  obj.style = items;
+  obj2.style = items;
   let tmp2Result = !isInReverseTrial;
   if (!isInReverseTrial) {
-    obj = { style: tmp.fpDurationPill, children: null };
-    const obj1 = { variant: "text-sm/bold", style: tmp.fpDurationText, children: fpDurationText.toUpperCase() };
-    obj.children = hasOwnProperty(Text_Text.Text, obj1);
-    tmp2Result = hasOwnProperty(React4, obj);
+    const obj3 = { style: tmp.fpDurationPill, children: null };
+    const obj4 = { variant: "text-sm/bold", style: tmp.fpDurationText, children: fpDurationText.toUpperCase() };
+    obj3.children = hasOwnProperty(Text_Text.Text, obj4);
+    tmp2Result = hasOwnProperty(React4, obj3);
   }
   const items1 = [tmp2Result];
-  const obj2 = { style: tmp.fpUnavailable, children: null };
+  const obj5 = { style: tmp.fpUnavailable, children: null };
   let prop;
   if (isInReverseTrial) {
     prop = tmp.fpUnavailableTextNoCountdown;
   }
-  const obj3 = { variant: "text-md/normal", color: "interactive-text-active", style: prop, children: null };
+  const obj6 = { variant: "text-md/normal", color: "interactive-text-active", style: prop, children: null };
   const intl = util.intl;
-  obj3.children = intl.string(util.t["5nrJDO"]);
-  obj2.children = hasOwnProperty(Text_Text.Text, obj3);
-  items1[1] = hasOwnProperty(React4, obj2);
-  obj.children = items1;
-  obj.children = timestampProducer(React4, obj);
+  obj6.children = intl.string(util.t["5nrJDO"]);
+  obj5.children = hasOwnProperty(Text_Text.Text, obj6);
+  items1[1] = hasOwnProperty(React4, obj5);
+  obj2.children = items1;
+  obj.children = timestampProducer(React4, obj2);
   return hasOwnProperty(React3, obj);
 }

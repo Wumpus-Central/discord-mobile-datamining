@@ -3,10 +3,10 @@ import LoggerDefault from "../debug/Logger.tsx";
 import ComponentDispatchUtils from "../../utils/ComponentDispatchUtils.tsx";
 import RoutingSources from "RoutingSources.tsx";
 import Constants from "../../Constants.tsx";
-import _extends from "../../../_runtime/metro/01101__.js";
+import _extends_mod from "../../../_runtime/metro/01101__.js";
 import size from "../../../_runtime/metro/00002__.js";
 
-function transitionTo(CHANNELResult, guildScheduledEvent1) {
+function transitionTo(CHANNELResult, guildScheduledEvent2) {
   closure_0 = CHANNELResult;
   let tmp = typeof CHANNELResult !== "string";
   if (typeof CHANNELResult === "string") {
@@ -22,7 +22,7 @@ function transitionTo(CHANNELResult, guildScheduledEvent1) {
     window.dispatchEvent(event);
     const _window2 = window;
     const _location = window.location;
-    let obj = _location.assign(CHANNELResult);
+    _location.assign(CHANNELResult);
     flag = true;
   }
   if (!flag) {
@@ -30,16 +30,16 @@ function transitionTo(CHANNELResult, guildScheduledEvent1) {
     const _window3 = window;
     const _HermesInternal2 = HermesInternal;
     const uRL = new URL(CHANNELResult, "https:" + window.GLOBAL_ENV.WEBAPP_ENDPOINT);
-    obj = { pathname: null, search: null, hash: null };
+    const obj = { pathname: null, search: null, hash: null };
     ({ pathname: obj.pathname, search: obj.search, hash: obj.hash } = uRL);
-    const merged = Object.assign(guildScheduledEvent1);
+    const merged = Object.assign(guildScheduledEvent2);
     const _HermesInternal3 = HermesInternal;
     logger.log("transitionTo - Transitioning to " + CHANNELResult);
-    if (guildScheduledEvent1 != null) {
-      const source = guildScheduledEvent1.source;
+    if (guildScheduledEvent2 != null) {
+      const source = guildScheduledEvent2.source;
     }
-    if (guildScheduledEvent1 != null) {
-      sourceLocationStack = guildScheduledEvent1.sourceLocationStack;
+    if (guildScheduledEvent2 != null) {
+      sourceLocationStack = guildScheduledEvent2.sourceLocationStack;
     }
     const _location2 = _extends.location;
     let tmp24 = _location2.pathname === obj.pathname;
@@ -82,7 +82,7 @@ function transitionTo(CHANNELResult, guildScheduledEvent1) {
     if (tmp24) {
       const replaced = _extends.replace(obj);
       c3 = source;
-    } else if (null != guildScheduledEvent1) {
+    } else if (null != guildScheduledEvent2) {
       _extends.push(obj);
     }
     _extends.push(CHANNELResult);
@@ -91,6 +91,7 @@ function transitionTo(CHANNELResult, guildScheduledEvent1) {
 ({ Routes: hasOwnProperty, PageAnalyticsLocations: metroRequire, ComponentActions: closure_7 } = Constants);
 const logger = new LoggerDefault("Routing/Utils");
 const items = [Constants.RelativeMarketingURLs.DEVELOPER_PORTAL];
+let _extends = _extends_mod;
 _extends = _extends.createMemoryHistory();
 let closure_10 = _extends.listen((arg0, arg1) => {
   if ("REPLACE" !== arg1) {
@@ -104,9 +105,9 @@ export const shouldNavigate = function shouldNavigate() {
   return !ComponentDispatch.hasSubscribers(constants2.MODAL_CLOSE);
 };
 export { transitionTo };
-export const transitionToGuild = function transitionToGuild(guildId, channelId, messageId, guildScheduledEvent1) {
+export const transitionToGuild = function transitionToGuild(guildId, channelId, messageId, guildScheduledEvent2) {
   logger.log("transitionToGuild - Transitioning to " + JSON.stringify({ guildId, channelId, messageId }));
-  transitionTo(hasOwnProperty.CHANNEL(guildId, channelId, messageId), guildScheduledEvent1);
+  transitionTo(hasOwnProperty.CHANNEL(guildId, channelId, messageId), guildScheduledEvent2);
 };
 export const currentRouteHasBackNavigation = function currentRouteHasBackNavigation() {
   let hasItem = null != c3;

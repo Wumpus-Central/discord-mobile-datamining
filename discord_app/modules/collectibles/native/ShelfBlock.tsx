@@ -20,9 +20,9 @@ let closure_7 = fn(1076).CollectiblesMobileShopScreen;
 const UserSettingsSections = fn(1074).UserSettingsSections;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-fn(4636);
-let createStyles = {
-  container: null,
+const createStyles = fn(4636);
+let obj2 = {
+  container: { width: "100%", paddingTop: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16 },
   containerWithBackground: null,
   backgroundImage: null,
   header: null,
@@ -30,15 +30,14 @@ let createStyles = {
   listEdgeSpacer: null,
   listItemSeparator: null,
 };
-createStyles = { width: "100%", paddingTop: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16 };
-createStyles.container = createStyles;
-createStyles.containerWithBackground = {
+let obj3 = { width: "100%", paddingTop: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16 };
+obj2.containerWithBackground = {
   marginTop: nativeDefault.space.PX_24,
   paddingTop: nativeDefault.space.PX_24,
   paddingBottom: nativeDefault.space.PX_24,
   overflow: "hidden",
 };
-createStyles.backgroundImage = {
+obj2.backgroundImage = {
   position: "absolute",
   top: 0,
   left: 0,
@@ -47,13 +46,13 @@ createStyles.backgroundImage = {
   aspectRatio: 2.5,
   resizeMode: "cover",
 };
-let obj1 = {
+let obj4 = {
   marginTop: nativeDefault.space.PX_24,
   paddingTop: nativeDefault.space.PX_24,
   paddingBottom: nativeDefault.space.PX_24,
   overflow: "hidden",
 };
-createStyles.header = {
+obj2.header = {
   flexDirection: "row",
   alignItems: "center",
   justifyContent: "space-between",
@@ -62,8 +61,8 @@ createStyles.header = {
   marginBottom: nativeDefault.space.PX_16,
   zIndex: 1,
 };
-createStyles.headingWrapper = { flexShrink: 1 };
-let obj2 = {
+obj2.headingWrapper = { flexShrink: 1 };
+let obj5 = {
   flexDirection: "row",
   alignItems: "center",
   justifyContent: "space-between",
@@ -72,10 +71,10 @@ let obj2 = {
   marginBottom: nativeDefault.space.PX_16,
   zIndex: 1,
 };
-createStyles.listEdgeSpacer = { width: nativeDefault.space.PX_16 };
-let obj3 = { width: nativeDefault.space.PX_16 };
-createStyles.listItemSeparator = { width: nativeDefault.space.PX_12 };
-let closure_11 = createStyles.createStyles(createStyles);
+obj2.listEdgeSpacer = { width: nativeDefault.space.PX_16 };
+let obj6 = { width: nativeDefault.space.PX_16 };
+obj2.listItemSeparator = { width: nativeDefault.space.PX_12 };
+let closure_11 = createStyles.createStyles(obj2);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/collectibles/native/ShelfBlock.tsx");
 
@@ -84,14 +83,15 @@ export default function _default(block) {
   const preferVCPrice = block.preferVCPrice;
   let navigation;
   const tmp = closure_11();
+  navigation = block(navigation[8]).useNavigation();
   let obj = block(navigation[8]);
-  navigation = obj.useNavigation();
-  let obj1 = block(navigation[9]);
-  const collectiblesAnalyticsContext = obj1.useCollectiblesAnalyticsContext();
-  let obj2 = block(navigation[10]);
-  let obj3 = block(navigation[13]);
+  const collectiblesAnalyticsContext = block(navigation[9]).useCollectiblesAnalyticsContext();
+  let obj2 = block(navigation[9]);
+  let obj3 = block(navigation[10]);
+  const tmp6 = preferVCPrice;
+  const tmp7 = preferVCPrice(navigation[11]);
   let items = [CollectiblesCategoryStore];
-  const stateFromStores = obj3.useStateFromStores(items, () => {
+  const stateFromStores = block(navigation[13]).useStateFromStores(items, () => {
     let category;
     if (null != block.categorySkuId) {
       category = CollectiblesCategoryStore.getCategory(tmp.categorySkuId);
@@ -102,32 +102,31 @@ export default function _default(block) {
   closure_5 = tmp9;
   const items1 = [block.rankedSkuIds, tmp9];
   const memo = collectiblesAnalyticsContext.useMemo(() => closure_5(block.rankedSkuIds), items1);
-  let obj4 = block(navigation[15]);
-  const filteredAndSortedProducts = obj4.useFilteredAndSortedProducts({ products: memo });
+  const obj4 = block(navigation[13]);
+  const filteredAndSortedProducts = block(navigation[15]).useFilteredAndSortedProducts({ products: memo });
   const items2 = [stateFromStores, navigation, collectiblesAnalyticsContext];
   const items3 = [block.name, preferVCPrice];
   const callback = collectiblesAnalyticsContext.useCallback(() => {
     if (null != stateFromStores) {
       if (stateFromStores.isOrbsExclusive) {
-        let obj = { analyticsLocations: null, analyticsSource: null, screen: null };
+        const obj3 = { analyticsLocations: null, analyticsSource: null, screen: null };
         const items = [AnalyticsLocationDefault.COLLECTIBLES_SHOP];
-        obj.analyticsLocations = items;
-        obj.analyticsSource = AnalyticsLocationDefault.COLLECTIBLES_SHOP;
-        obj.screen = constants.ORBS;
-        const result = CollectiblesActionCreators.openCollectiblesShopMobile(obj);
+        obj3.analyticsLocations = items;
+        obj3.analyticsSource = AnalyticsLocationDefault.COLLECTIBLES_SHOP;
+        obj3.screen = constants.ORBS;
+        const result = CollectiblesActionCreators.openCollectiblesShopMobile(obj3);
       } else {
-        obj = { category: stateFromStores, analyticsContext: collectiblesAnalyticsContext };
+        const obj = { category: stateFromStores, analyticsContext: collectiblesAnalyticsContext };
         navigation.navigate(UserSettingsSections.COLLECTIBLES_SHOP_VIEW_ALL_CATEGORY_ITEMS, obj);
       }
     }
   }, items2);
   const callback1 = collectiblesAnalyticsContext.useCallback((arg0) => {
     ({ item, index } = arg0);
-    let obj = { newValue: null, children: null };
-    obj = { tilePosition: index, pageSection: block.name };
-    obj.newValue = obj;
-    obj = { product: item, preferVCPrice };
-    obj.children = React7(CollectiblesShopCardV2Default, obj);
+    const obj = {
+      newValue: { tilePosition: index, pageSection: block.name },
+      children: React7(CollectiblesShopCardV2Default, { product: item, preferVCPrice }),
+    };
     return React7(CollectiblesAnalyticsContext.CollectiblesAnalyticsProvider, obj);
   }, items3);
   if (0 === filteredAndSortedProducts.length) {
@@ -139,56 +138,59 @@ export default function _default(block) {
       containerWithBackground = tmp.containerWithBackground;
     }
     items4[1] = containerWithBackground;
-    obj = { value: tmp7(preferVCPrice(navigation[12]).COLLECTIBLES_SHOP_SHELF).analyticsLocations, children: null };
-    obj = { style: items4, children: null };
+    const obj6 = {
+      value: tmp7(preferVCPrice(navigation[12]).COLLECTIBLES_SHOP_SHELF).analyticsLocations,
+      children: null,
+    };
+    const obj7 = { style: items4, children: null };
     let tmp14Result = tmp25;
     if (null != block.mobileBackgroundImage) {
       tmp14Result = null != block.mobileBackgroundImage;
     }
     if (tmp14Result) {
-      obj1 = { style: tmp.backgroundImage, source: null };
-      obj2 = { uri: block.mobileBackgroundImage };
-      obj1.source = obj2;
-      tmp14Result = closure_9(stateFromStores, obj1);
+      const obj8 = { style: tmp.backgroundImage, source: null };
+      const obj9 = { uri: block.mobileBackgroundImage };
+      obj8.source = obj9;
+      tmp14Result = closure_9(stateFromStores, obj8);
     }
     const items5 = [tmp14Result, ,];
-    obj3 = { style: tmp.header, children: null };
-    obj4 = { style: tmp.headingWrapper, children: null };
+    const obj10 = { style: tmp.header, children: null };
+    const obj11 = { style: tmp.headingWrapper, children: null };
     let tmp19;
     if (null != block.mobileBackgroundImage) {
       let str = block.titleColor;
       if (str == null) {
         str = "#ffffff";
       }
-      const obj5 = { color: str };
-      tmp19 = obj5;
+      const obj12 = { color: str };
+      tmp19 = obj12;
     }
-    const obj6 = { variant: "text-md/semibold", style: tmp19, children: block.name };
-    obj4.children = closure_9(tmp2(tmp3[18]).Heading, obj6);
-    const items6 = [closure_9(closure_5, obj4)];
-    tmp14Result = block.showButton && null != stateFromStores;
-    if (tmp14Result) {
+    const obj13 = { variant: "text-md/semibold", style: tmp19, children: block.name };
+    obj11.children = closure_9(tmp2(tmp3[18]).Heading, obj13);
+    const items6 = [closure_9(closure_5, obj11)];
+    let tmp14Result2 = block.showButton && null != stateFromStores;
+    if (tmp14Result2) {
       let str2 = "secondary";
       if (tmp25) {
         str2 = "primary-overlay";
       }
-      const obj7 = { variant: str2, size: "sm", shrink: true, grow: false, text: null, onPress: null };
+      const obj14 = { variant: str2, size: "sm", shrink: true, grow: false, text: null, onPress: null };
       const intl = tmp2(tmp3[20]).intl;
-      obj7.text = intl.string(tmp2(tmp3[20]).t.xFcotU);
-      obj7.onPress = callback;
-      tmp14Result = closure_9(tmp2(tmp3[19]).Button, obj7);
+      obj14.text = intl.string(tmp2(tmp3[20]).t.xFcotU);
+      obj14.onPress = callback;
+      tmp14Result2 = closure_9(tmp2(tmp3[19]).Button, obj14);
     }
-    items6[1] = tmp14Result;
-    obj3.children = items6;
-    items5[1] = closure_10(closure_5, obj3);
-    const obj8 = { children: null };
-    const obj9 = {
+    items6[1] = tmp14Result2;
+    obj10.children = items6;
+    items5[1] = closure_10(closure_5, obj10);
+    const obj15 = { children: null };
+    const obj16 = {
       horizontal: true,
       accessibilityRole: "list",
       accessibilityLabel: block.name,
       data: filteredAndSortedProducts,
       keyExtractor: tmp13,
-      onScroll: obj2.useCollectiblesCoachmarkScrollDismissContext().handleDismissCoachmarkOnScroll,
+      onScroll: obj3.useCollectiblesCoachmarkScrollDismissContext().handleDismissCoachmarkOnScroll,
       renderItem: callback1,
       decelerationRate: "fast",
       snapToInterval: tmp2(tmp3[17]).COLLECTIBLES_SHOP_CARD_WIDTH + tmp6(tmp3[7]).space.PX_12,
@@ -197,12 +199,11 @@ export default function _default(block) {
       ListFooterComponent: ListEdgeSpacer,
       ItemSeparatorComponent: ListItemSeparator,
     };
-    obj8.children = closure_9(tmp2(tmp3[22]).FlashList, obj9);
-    items5[2] = closure_9(tmp2(tmp3[21]).LayerScope, obj8);
-    obj.children = items5;
-    obj.children = closure_10(closure_5, obj);
-    return closure_9(tmp2(tmp3[11]).AnalyticsLocationProvider, obj);
+    obj15.children = closure_9(tmp2(tmp3[22]).FlashList, obj16);
+    items5[2] = closure_9(tmp2(tmp3[21]).LayerScope, obj15);
+    obj7.children = items5;
+    obj6.children = closure_10(closure_5, obj7);
+    return closure_9(tmp2(tmp3[11]).AnalyticsLocationProvider, obj6);
   }
-  tmp6 = preferVCPrice;
-  tmp7 = preferVCPrice(navigation[11]);
+  const obj5 = block(navigation[15]);
 }

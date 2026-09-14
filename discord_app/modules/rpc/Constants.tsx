@@ -1,7 +1,7 @@
 // discord_app/modules/rpc/Constants.tsx
 import size from "../../../_runtime/metro/00002__.js";
 
-let obj = {
+const RPCDeepLinks = {
   USER_SETTINGS: "USER_SETTINGS",
   CHANGELOG: "CHANGELOG",
   LIBRARY: "LIBRARY",
@@ -20,7 +20,7 @@ let obj = {
   ONE_TIME_LOGIN: "ONE_TIME_LOGIN",
   PLAYGROUND: "PLAYGROUND",
 };
-obj = {
+const obj2 = {
   SETTINGS: "settings",
   CHANGELOG: "changelog",
   LIBRARY: "library",
@@ -43,40 +43,40 @@ export const RPC_PRIVATE_LIMITED_SCOPE = "RPC_PRIVATE_LIMITED_SCOPE";
 export const RPC_LOCAL_SCOPE = "RPC_LOCAL_SCOPE";
 export const RPC_AUTHENTICATED_SCOPE = "RPC_AUTHENTICATED_SCOPE";
 export const RPC_EMBEDDED_APP_SCOPE = "RPC_EMBEDDED_APP_SCOPE";
-export const RPCDeepLinks = obj;
-export const DynamicLinkType = obj;
+export { RPCDeepLinks };
+export const DynamicLinkType = obj2;
 export const getDynamicLinkType = function getDynamicLinkType(arg0) {
   if (obj.USER_SETTINGS === arg0) {
-    return obj.SETTINGS;
+    return obj2.SETTINGS;
   } else if (obj.CHANGELOG === arg0) {
-    return obj.CHANGELOG;
+    return obj2.CHANGELOG;
   } else if (obj.LIBRARY === arg0) {
-    return obj.LIBRARY;
+    return obj2.LIBRARY;
   } else {
     if (obj.STORE_HOME !== arg0) {
       if (obj.STORE_LISTING !== arg0) {
         if (obj.CHANNEL === arg0) {
-          return obj.CHANNEL;
+          return obj2.CHANNEL;
         } else if (obj.PICK_GUILD_SETTINGS === arg0) {
-          return obj.GUILD_SETTINGS;
+          return obj2.GUILD_SETTINGS;
         } else if (obj.QUEST_HOME === arg0) {
-          return obj.QUEST_HOME;
+          return obj2.QUEST_HOME;
         } else if (obj.QUEST_PREVIEW_TOOL === arg0) {
-          return obj.QUEST_PREVIEW_TOOL;
+          return obj2.QUEST_PREVIEW_TOOL;
         } else if (obj.DISCOVERY_GAME_RESULTS === arg0) {
-          return obj.DISCOVERY_GAME;
+          return obj2.DISCOVERY_GAME;
         } else if (obj.SHOP === arg0) {
-          return obj.SHOP;
+          return obj2.SHOP;
         } else if (obj.ACTIVITIES === arg0) {
-          return obj.ACTIVITIES;
+          return obj2.ACTIVITIES;
         } else if (obj.PLAYGROUND === arg0) {
-          return obj.PLAYGROUND;
+          return obj2.PLAYGROUND;
         } else {
           return arg0;
         }
       }
     }
-    return obj.STORE;
+    return obj2.STORE;
   }
 };
 export const DispatchErrorCodes = {

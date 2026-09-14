@@ -4,6 +4,8 @@ import GuildMemberStore from "../../../stores/GuildMemberStore.tsx";
 import GuildStore from "../../../stores/GuildStore.tsx";
 import UserStore from "../../../stores/UserStore.tsx";
 
+const require = globalThis.__r;
+
 require = fn;
 function shouldShowMembershipVerificationGate(guildId) {
   let tmp = items;

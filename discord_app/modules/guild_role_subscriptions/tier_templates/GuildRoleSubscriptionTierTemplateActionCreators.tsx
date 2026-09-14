@@ -12,8 +12,8 @@ let closure_5 = async function _getTemplates(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -26,40 +26,40 @@ let closure_5 = async function _getTemplates(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c4 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           closure_2 = tmp2;
           closure_1 = tmp5;
           closure_129_0 = closure_0;
           let body;
           const HTTP = HTTPUtils.HTTP;
-          const obj1 = {
+          const obj4 = {
             url: Endpoints.GUILD_ROLE_SUBSCRIPTION_LISTING_TEMPLATES(closure_0),
             rejectWithError: HTTPUtils.rejectWithMigratedError(),
           };
           c3 = 1;
           c4 = 1;
-          const obj2 = { value: HTTP.get(obj1), done: false };
-          return obj2;
+          const obj5 = { value: HTTP.get(obj4), done: false };
+          return obj5;
         }
       } else if (arg0 === 1) {
         c4 = 3;
         throw value;
       } else if (arg0 === 2) {
         c4 = 3;
-        const obj3 = { value, done: true };
-        return obj3;
+        const obj6 = { value, done: true };
+        return obj6;
       } else {
         body = value.body;
         if (null != body.templates) {
-          obj = closure_130_1(closure_130_2[2]);
-          const obj4 = {
+          const obj7 = {
             type: "GUILD_ROLE_SUBSCRIPTIONS_FETCH_TEMPLATES",
             templates: body.templates,
             guildId: closure_129_0,
           };
-          obj.dispatch(obj4);
+          closure_130_1(closure_130_2[2]).dispatch(obj7);
+          const obj = closure_130_1(closure_130_2[2]);
         }
         c4 = 3;
         return { value: "HermesInternal", done: null };
@@ -77,8 +77,7 @@ const result = size.fileFinishedImporting(
 );
 
 export const stashTemplateChannels = function stashTemplateChannels(selectedTemplate, guildId) {
-  const obj = { type: "GUILD_ROLE_SUBSCRIPTIONS_STASH_TEMPLATE_CHANNELS", selectedTemplate, guildId };
-  obj.dispatch(obj);
+  DispatcherDefault.dispatch({ type: "GUILD_ROLE_SUBSCRIPTIONS_STASH_TEMPLATE_CHANNELS", selectedTemplate, guildId });
 };
 export const getTemplates = function getTemplates() {
   const self = this;

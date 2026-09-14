@@ -16,11 +16,17 @@ let closure_7 = fn(1389).DISPLAY_NAME_STYLES_GUMMY_PRESETS;
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-let DisplayNameStylesUtils = fn(1388);
+const DisplayNameStylesUtils = fn(1388);
 let closure_11 = DisplayNameStylesUtils.hueToGummyColor(0);
-fn(4636);
-DisplayNameStylesUtils = {
-  body: null,
+const createStyles = fn(4636);
+let obj3 = {
+  body: {
+    paddingHorizontal: nativeDefault.space.PX_16,
+    paddingTop: nativeDefault.space.PX_12,
+    paddingBottom: nativeDefault.space.PX_16,
+    gap: nativeDefault.space.PX_16,
+    alignItems: "center",
+  },
   colorRowInset: null,
   optionContainer: null,
   swatchWrapper: null,
@@ -30,19 +36,18 @@ DisplayNameStylesUtils = {
   customIconOverlay: null,
   customIconScrim: null,
 };
-DisplayNameStylesUtils = {
+let obj4 = {
   paddingHorizontal: nativeDefault.space.PX_16,
   paddingTop: nativeDefault.space.PX_12,
   paddingBottom: nativeDefault.space.PX_16,
   gap: nativeDefault.space.PX_16,
   alignItems: "center",
 };
-DisplayNameStylesUtils.body = DisplayNameStylesUtils;
-const createStyles = { paddingHorizontal: nativeDefault.space.PX_4, alignSelf: "stretch" };
-DisplayNameStylesUtils.colorRowInset = createStyles;
-DisplayNameStylesUtils.optionContainer = { flexDirection: "row", flexWrap: "wrap" };
-DisplayNameStylesUtils.swatchWrapper = { width: "25%", padding: 2 };
-DisplayNameStylesUtils.swatch = {
+obj3.colorRowInset = { paddingHorizontal: nativeDefault.space.PX_4, alignSelf: "stretch" };
+obj3.optionContainer = { flexDirection: "row", flexWrap: "wrap" };
+obj3.swatchWrapper = { width: "25%", padding: 2 };
+let obj5 = { paddingHorizontal: nativeDefault.space.PX_4, alignSelf: "stretch" };
+obj3.swatch = {
   height: 40,
   flexDirection: "row",
   borderRadius: nativeDefault.radii.sm,
@@ -50,7 +55,7 @@ DisplayNameStylesUtils.swatch = {
   borderWidth: 2,
   borderColor: "transparent",
 };
-let obj2 = {
+let obj6 = {
   height: 40,
   flexDirection: "row",
   borderRadius: nativeDefault.radii.sm,
@@ -58,19 +63,19 @@ let obj2 = {
   borderWidth: 2,
   borderColor: "transparent",
 };
-DisplayNameStylesUtils.swatchSelected = { borderColor: nativeDefault.colors.BACKGROUND_BRAND };
-let obj3 = { borderColor: nativeDefault.colors.BACKGROUND_BRAND };
-DisplayNameStylesUtils.customSwatchEmpty = {
+obj3.swatchSelected = { borderColor: nativeDefault.colors.BACKGROUND_BRAND };
+let obj7 = { borderColor: nativeDefault.colors.BACKGROUND_BRAND };
+obj3.customSwatchEmpty = {
   flex: 1,
   backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE,
   borderWidth: 1,
   borderColor: nativeDefault.colors.BORDER_NORMAL,
 };
-let obj5 = {};
+let obj9 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
-obj5.alignItems = "center";
-obj5.justifyContent = "center";
-DisplayNameStylesUtils.customIconOverlay = obj5;
+obj9.alignItems = "center";
+obj9.justifyContent = "center";
+obj3.customIconOverlay = obj9;
 let size = {
   width: 28,
   height: 28,
@@ -79,8 +84,8 @@ let size = {
   alignItems: "center",
   justifyContent: "center",
 };
-DisplayNameStylesUtils.customIconScrim = size;
-let closure_12 = createStyles.createStyles(DisplayNameStylesUtils);
+obj3.customIconScrim = size;
+let closure_12 = createStyles.createStyles(obj3);
 size = fn(2);
 let result = size.fileFinishedImporting(
   "modules/display_name_styles/native/DisplayNameStylesGummyColorPickerSheet.tsx",
@@ -90,64 +95,53 @@ export default function DisplayNameStylesGummyColorPickerSheet(selectedColors) {
   selectedColors = selectedColors.selectedColors;
   const onSelectColors = selectedColors.onSelectColors;
   _slicedToArray = undefined;
-  let initialColor;
+  initialColor = undefined;
   closure_5 = undefined;
-  let first1;
+  first1 = undefined;
   c8 = undefined;
   closure_9 = undefined;
   const tmp = closure_12();
   dependencyMap = tmp;
-  let obj = selectedColors(11030);
   let tmp5 = selectedColors.length > 0;
-  const displayNameStylesEffectConfig = obj.useDisplayNameStylesEffectConfig(
+  const displayNameStylesEffectConfig = selectedColors(11031).useDisplayNameStylesEffectConfig(
     selectedColors(1390).DisplayNameEffect.GUMMY,
   );
   if (tmp5) {
     tmp5 = !dependencyMap.some((item) => discord_common_shallowEqual.areArraysShallowEqual(item, selectedColors));
   }
   _slicedToArray = tmp5;
-  const tmp7 = _slicedToArray(
-    initialColor.useState(() => {
-      if (closure_3) {
-        let result = DisplayNameStylesUtils2.rebuildGummySourceColor(selectedColors);
-      } else {
-        result = closure_11;
-      }
-      return result;
-    }),
-    2,
-  );
-  initialColor = tmp7[0];
-  closure_5 = tmp7[1];
-  const tmp9 = _slicedToArray(
-    initialColor.useState(() => {
-      let gummyColors = selectedColors;
-      if (selectedColors.length <= 0) {
-        gummyColors = DisplayNameStylesUtils2.buildGummyColors(closure_11);
-      }
-      return gummyColors;
-    }),
-    2,
-  );
-  first1 = tmp9[0];
-  dependencyMap = tmp9[1];
-  const tmp12Result = onSelectColors(15430)(selectedColors(1390).DisplayNameEffect.GUMMY);
+  [initialColor, closure_5] = initialColor.useState(() => {
+    if (closure_3) {
+      let result = DisplayNameStylesUtils2.rebuildGummySourceColor(selectedColors);
+    } else {
+      result = closure_11;
+    }
+    return result;
+  });
+  [first1, dependencyMap] = initialColor.useState(() => {
+    let gummyColors = selectedColors;
+    if (selectedColors.length <= 0) {
+      gummyColors = DisplayNameStylesUtils2.buildGummyColors(closure_11);
+    }
+    return gummyColors;
+  });
+  let obj = selectedColors(11031);
+  const tmp11 = onSelectColors;
+  const tmp12Result = onSelectColors(15431)(selectedColors(1390).DisplayNameEffect.GUMMY);
   const findIndexResult = tmp12Result.findIndex((colors) =>
     discord_common_shallowEqual.areArraysShallowEqual(colors.colors, first1),
   );
   c8 = findIndexResult;
   let items = [initialColor];
   const callback = initialColor.useCallback(() => {
-    let obj = HapticUtils;
-    const result = obj.triggerHapticFeedback(HapticUtils.HapticFeedbackTypes.IMPACT_LIGHT);
-    obj = {
+    const result = HapticUtils.triggerHapticFeedback(HapticUtils.HapticFeedbackTypes.IMPACT_LIGHT);
+    showGummyCustomColorSheetDefault({
       initialColor,
       onSelect(color) {
         closure_1_5(color);
         dependencyMap(selectedColors(closure_2[6]).buildGummyColors(color));
       },
-    };
-    showGummyCustomColorSheetDefault(obj);
+    });
   }, items);
   closure_9 = initialColor.useCallback((arg0) => {
     const items = [...arg0];
@@ -160,33 +154,32 @@ export default function DisplayNameStylesGummyColorPickerSheet(selectedColors) {
     closure_5(closure_11);
   }, []);
   const callback2 = initialColor.useCallback(() => {
-    let obj = HapticUtils;
-    const result = obj.triggerHapticFeedback(HapticUtils.HapticFeedbackTypes.IMPACT_MEDIUM);
+    const result = HapticUtils.triggerHapticFeedback(HapticUtils.HapticFeedbackTypes.IMPACT_MEDIUM);
     onSelectColors(first1);
-    obj = { default: false, colors: first1 };
-    AnalyticsUtilsDefault.track(AnalyticEvents.DISPLAY_NAME_STYLES_COLOR_SELECTED, obj);
+    AnalyticsUtilsDefault.track(AnalyticEvents.DISPLAY_NAME_STYLES_COLOR_SELECTED, { default: false, colors: first1 });
+    const obj3 = { default: false, colors: first1 };
     ActionSheetActionCreatorsDefault.hideActionSheet();
   }, items1);
-  obj = { header: null, children: null };
-  obj = { title: displayNameStylesEffectConfig.name, trailing: null };
-  const obj1 = { variant: "primary", size: "sm", text: null, onPress: null };
+  let obj2 = { header: null, children: null };
+  let obj3 = { title: displayNameStylesEffectConfig.name, trailing: null };
+  const obj4 = { variant: "primary", size: "sm", text: null, onPress: null };
   const intl = tmp2(1114).intl;
-  obj1.text = intl.string(selectedColors(1114).t.XqMe3N);
-  obj1.onPress = callback2;
-  obj.trailing = closure_9(selectedColors(5056).Button, obj1);
-  obj.header = closure_9(selectedColors(7252).BottomSheetTitleHeader, obj);
-  let obj2 = { style: tmp.body, children: null };
-  const obj3 = { style: null, children: null };
+  obj4.text = intl.string(selectedColors(1114).t.XqMe3N);
+  obj4.onPress = callback2;
+  obj3.trailing = closure_9(selectedColors(5056).Button, obj4);
+  obj2.header = closure_9(selectedColors(7252).BottomSheetTitleHeader, obj3);
+  const obj5 = { style: tmp.body, children: null };
+  const obj6 = { style: null, children: null };
   const items2 = [,];
   ({ colorRowInset: arr5[0], optionContainer: arr5[1] } = tmp);
-  obj3.style = items2;
-  const obj4 = { style: tmp.swatchWrapper, children: null };
+  obj6.style = items2;
+  const obj7 = { style: tmp.swatchWrapper, children: null };
   const items3 = [tmp.swatch];
   let swatchSelected = tmp22;
   if (findIndexResult < 0) {
     swatchSelected = tmp.swatchSelected;
   }
-  const obj5 = {
+  const obj8 = {
     style: items3,
     onPress: callback,
     accessibilityRole: "button",
@@ -196,59 +189,57 @@ export default function DisplayNameStylesGummyColorPickerSheet(selectedColors) {
   };
   items3[1] = swatchSelected;
   const intl2 = tmp2(1114).intl;
-  obj5.accessibilityLabel = intl2.string(selectedColors(1114).t["FHBa/1"]);
+  obj8.accessibilityLabel = intl2.string(selectedColors(1114).t["FHBa/1"]);
   if (findIndexResult >= 0) {
-    const obj6 = { style: tmp.customSwatchEmpty };
-    let tmp18Result = tmp18(tmp20, obj6);
+    const obj9 = { style: tmp.customSwatchEmpty };
+    let tmp18Result = tmp18(tmp20, obj9);
   } else {
-    const obj7 = { colors: first1 };
-    tmp18Result = tmp18(tmp11(14704), obj7);
+    const obj10 = { colors: first1 };
+    tmp18Result = tmp18(tmp11(14705), obj10);
   }
   const items4 = [tmp18Result];
-  const obj8 = { style: tmp.customIconOverlay, pointerEvents: "none", children: null };
-  tmp11 = onSelectColors;
-  const tmp12 = onSelectColors(15430);
+  const obj11 = { style: tmp.customIconOverlay, pointerEvents: "none", children: null };
+  const tmp12 = onSelectColors(15431);
   const tmp21 = first1;
-  obj8.children = closure_9(closure_5, {
+  obj11.children = closure_9(closure_5, {
     style: tmp.customIconScrim,
-    children: closure_9(selectedColors(10378).PencilIcon, { color: "white", size: "sm" }),
+    children: closure_9(selectedColors(10379).PencilIcon, { color: "white", size: "sm" }),
   });
-  items4[1] = closure_9(closure_5, obj8);
-  obj5.children = items4;
-  obj4.children = closure_10(tmp21, obj5);
+  items4[1] = closure_9(closure_5, obj11);
+  obj8.children = items4;
+  obj7.children = closure_10(tmp21, obj8);
   const items5 = [
-    closure_9(closure_5, obj4),
+    closure_9(closure_5, obj7),
     tmp12Result.map((accessibilityLabel, index) => {
       const colors = accessibilityLabel.colors;
-      let obj = { style: closure_2.swatchWrapper, children: null };
+      const obj = { style: closure_2.swatchWrapper, children: null };
       const items = [closure_2.swatch];
       let swatchSelected = tmp;
       if (c8 === index) {
         swatchSelected = closure_2.swatchSelected;
       }
-      obj = {
+      items[1] = swatchSelected;
+      obj.children = closure_9(first1, {
         style: items,
         onPress() {
           return closure_9(colors);
         },
         accessibilityRole: "button",
-        accessibilityState: { selected: tmp },
+        accessibilityState: { selected: c8 === index },
         accessibilityLabel: accessibilityLabel.a11yLabel,
         children: closure_9(onSelectColors(closure_2[21]), { colors }),
-      };
-      items[1] = swatchSelected;
-      obj.children = closure_9(first1, obj);
+      });
       return closure_9(closure_5, obj, index);
     }),
   ];
-  obj3.children = items5;
-  const items6 = [closure_10(closure_5, obj3)];
-  const obj10 = { text: null, onPress: null, variant: "secondary" };
+  obj6.children = items5;
+  const items6 = [closure_10(closure_5, obj6)];
+  const obj13 = { text: null, onPress: null, variant: "secondary" };
   const intl3 = tmp2(1114).intl;
-  obj10.text = intl3.string(selectedColors(1114).t.yBZMsQ);
-  obj10.onPress = callback1;
-  items6[1] = closure_9(selectedColors(5056).Button, obj10);
-  obj2.children = items6;
-  obj.children = closure_10(closure_5, obj2);
-  return closure_9(selectedColors(7253).BottomSheet, obj);
+  obj13.text = intl3.string(selectedColors(1114).t.yBZMsQ);
+  obj13.onPress = callback1;
+  items6[1] = closure_9(selectedColors(5056).Button, obj13);
+  obj5.children = items6;
+  obj2.children = closure_10(closure_5, obj5);
+  return closure_9(selectedColors(7253).BottomSheet, obj2);
 }

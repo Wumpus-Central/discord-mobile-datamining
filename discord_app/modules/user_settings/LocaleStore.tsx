@@ -14,8 +14,8 @@ let closure_6 = async function _getSystemLocale() {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -28,8 +28,8 @@ let closure_6 = async function _getSystemLocale() {
           throw value;
         } else if (arg0 === 2) {
           c3 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           closure_1 = tmp2;
           closure_0 = tmp3;
@@ -47,8 +47,8 @@ let closure_6 = async function _getSystemLocale() {
             const preferredSystemLanguages = app2.getPreferredSystemLanguages();
             c2 = 1;
             c3 = 1;
-            const obj1 = { value: preferredSystemLanguages.then((result) => result[0]), done: false };
-            return obj1;
+            const obj4 = { value: preferredSystemLanguages.then((result) => result[0]), done: false };
+            return obj4;
           }
         }
       } else if (arg0 === 1) {
@@ -56,21 +56,21 @@ let closure_6 = async function _getSystemLocale() {
         throw value;
       } else if (arg0 === 2) {
         c3 = 3;
-        const obj2 = { value, done: true };
-        return obj2;
+        const obj5 = { value, done: true };
+        return obj5;
       } else {
         closure_128_0 = value;
         if (null != closure_128_0) {
           if ("" !== closure_128_0) {
             c3 = 3;
-            obj = { value: closure_128_0, done: true };
+            const obj = { value: closure_128_0, done: true };
             return obj;
           }
         }
       }
       c3 = 3;
-      const obj3 = { value: closure_129_0(closure_129_2[4]).systemLocale, done: true };
-      return obj3;
+      const obj6 = { value: closure_129_0(closure_129_2[4]).systemLocale, done: true };
+      return obj6;
     } catch (tmp15) {
       c3 = tmp;
       throw tmp15;

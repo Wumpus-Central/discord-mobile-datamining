@@ -13,48 +13,42 @@ import size from "../../../../../_runtime/metro/00002__.js";
 const View = _mod17.View;
 const jsx = jsxProd.jsx;
 let closure_6 = createStyles.createStyles({ slider: { marginTop: 8 } });
-let obj = {
+const obj = {
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t["sqUm+k"]);
   },
   parent: SettingsConstants.MobileUserSettings.VOICE,
   useDescription: function useVoiceSensitivitySettingDescription() {
-    let obj = inputMode(504);
+    const tmp = closure_6();
     const items = [MediaEngineStore];
-    const stateFromStoresObject = obj.useStateFromStoresObject(items, () => ({
+    const stateFromStoresObject = inputMode(504).useStateFromStoresObject(items, () => ({
       inputMode: MediaEngineStore.getMode(),
       vadThreshold: MediaEngineStore.getModeOptions().threshold,
       vadAutoThreshold: MediaEngineStore.getModeOptions().autoThreshold,
     }));
     inputMode = stateFromStoresObject.inputMode;
-    obj = { style: closure_6().slider, children: null };
-    ({ vadThreshold, vadAutoThreshold } = stateFromStoresObject);
-    obj = {
-      auto: vadAutoThreshold,
-      threshold: vadThreshold,
-      onThresholdChange(threshold) {
-        const obj = { threshold };
-        return obj.setMode(inputMode, obj);
-      },
+    const obj2 = {
+      style: tmp.slider,
+      children: jsx(VoiceSensitivityDefault, {
+        auto: vadAutoThreshold,
+        threshold: vadThreshold,
+        onThresholdChange(threshold) {
+          return AudioActionCreatorsDefault.setMode(inputMode, { threshold });
+        },
+      }),
     };
-    obj.children = jsx(VoiceSensitivityDefault, {
-      auto: vadAutoThreshold,
-      threshold: vadThreshold,
-      onThresholdChange(threshold) {
-        const obj = { threshold };
-        return obj.setMode(inputMode, obj);
-      },
-    });
+    ({ vadThreshold, vadAutoThreshold } = stateFromStoresObject);
     return (
-      <View
-        auto={vadAutoThreshold}
-        threshold={vadThreshold}
-        onThresholdChange={function onThresholdChange(threshold) {
-          const obj = { threshold };
-          return obj.setMode(inputMode, obj);
-        }}
-      />
+      <View style={tmp.slider}>
+        {jsx(VoiceSensitivityDefault, {
+          auto: vadAutoThreshold,
+          threshold: vadThreshold,
+          onThresholdChange(threshold) {
+            return AudioActionCreatorsDefault.setMode(inputMode, { threshold });
+          },
+        })}
+      </View>
     );
   },
   useSearchTerms() {
@@ -72,41 +66,35 @@ export default SettingBuilders.createStatic({
   },
   parent: SettingsConstants.MobileUserSettings.VOICE,
   useDescription: function useVoiceSensitivitySettingDescription() {
-    let obj = inputMode(504);
+    const tmp = closure_6();
     const items = [MediaEngineStore];
-    const stateFromStoresObject = obj.useStateFromStoresObject(items, () => ({
+    const stateFromStoresObject = inputMode(504).useStateFromStoresObject(items, () => ({
       inputMode: MediaEngineStore.getMode(),
       vadThreshold: MediaEngineStore.getModeOptions().threshold,
       vadAutoThreshold: MediaEngineStore.getModeOptions().autoThreshold,
     }));
     inputMode = stateFromStoresObject.inputMode;
-    obj = { style: closure_6().slider, children: null };
-    ({ vadThreshold, vadAutoThreshold } = stateFromStoresObject);
-    obj = {
-      auto: vadAutoThreshold,
-      threshold: vadThreshold,
-      onThresholdChange(threshold) {
-        const obj = { threshold };
-        return obj.setMode(inputMode, obj);
-      },
+    const obj2 = {
+      style: tmp.slider,
+      children: jsx(VoiceSensitivityDefault, {
+        auto: vadAutoThreshold,
+        threshold: vadThreshold,
+        onThresholdChange(threshold) {
+          return AudioActionCreatorsDefault.setMode(inputMode, { threshold });
+        },
+      }),
     };
-    obj.children = jsx(VoiceSensitivityDefault, {
-      auto: vadAutoThreshold,
-      threshold: vadThreshold,
-      onThresholdChange(threshold) {
-        const obj = { threshold };
-        return obj.setMode(inputMode, obj);
-      },
-    });
+    ({ vadThreshold, vadAutoThreshold } = stateFromStoresObject);
     return (
-      <View
-        auto={vadAutoThreshold}
-        threshold={vadThreshold}
-        onThresholdChange={function onThresholdChange(threshold) {
-          const obj = { threshold };
-          return obj.setMode(inputMode, obj);
-        }}
-      />
+      <View style={tmp.slider}>
+        {jsx(VoiceSensitivityDefault, {
+          auto: vadAutoThreshold,
+          threshold: vadThreshold,
+          onThresholdChange(threshold) {
+            return AudioActionCreatorsDefault.setMode(inputMode, { threshold });
+          },
+        })}
+      </View>
     );
   },
   useSearchTerms() {

@@ -41,7 +41,7 @@ Object.defineProperty(prototype, "submitting", {
 prototype["getUpdates"] = function getUpdates() {
   if (null != c9) {
     if (null != _null2) {
-      const obj = {
+      const obj2 = {
         oldOrdering: GuildRoleStore.getSortedRoles(_null2.id),
         newOrdering: GuildRoleStore.getManyRoles(_null2.id, c9),
         idGetter(id) {
@@ -52,7 +52,7 @@ prototype["getUpdates"] = function getUpdates() {
         },
         ascending: false,
       };
-      const result = obj.calculatePositionDeltas(obj);
+      const result = DragAndDropUtilsDefault.calculatePositionDeltas(obj2);
     }
     return [];
   }

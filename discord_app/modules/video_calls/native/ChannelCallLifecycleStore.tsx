@@ -1,7 +1,7 @@
 // discord_app/modules/video_calls/native/ChannelCallLifecycleStore.tsx
 import initializeDefault from "../../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../../Dispatcher.tsx";
-import _modDef1332 from "../../../../_runtime/metro/01332__.js";
+import _modDef1330 from "../../../../_runtime/metro/01330__.js";
 import SelectedChannelStore from "../../../stores/SelectedChannelStore.tsx";
 
 const VoiceCallOverlayType = fn(9598).VoiceCallOverlayType;
@@ -66,7 +66,7 @@ prototype["isPipEnabledWhileFocusedOnActivityOrStream"] = function isPipEnabledW
   return c10;
 };
 ChannelCallLifecycleStore.displayName = "ChannelCallLifecycleStore";
-obj = {
+const channelCallLifecycleStore = new ChannelCallLifecycleStore(DispatcherDefault, {
   VOICE_CHANNEL_SELECT: function handleVoiceChannelSelect(arg0) {
     if (arg0 == null) {
       throw new TypeError("Cannot destructure 'undefined' or 'null'.");
@@ -130,8 +130,7 @@ obj = {
       c10 = true;
     }
   },
-};
-const channelCallLifecycleStore = new ChannelCallLifecycleStore(DispatcherDefault, obj);
+});
 size = fn(2);
 const result = size.fileFinishedImporting("modules/video_calls/native/ChannelCallLifecycleStore.tsx");
 

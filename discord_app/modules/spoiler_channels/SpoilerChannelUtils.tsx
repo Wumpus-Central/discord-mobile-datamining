@@ -2,6 +2,8 @@
 import ChannelStore from "../../stores/ChannelStore.tsx";
 import ChannelSpoilerAgreeStore from "ChannelSpoilerAgreeStore.tsx";
 
+const require = globalThis.__r;
+
 const require = fn;
 function isChannelSpoilerGated(channel) {
   let obj = ChannelSpoilerAgreeStore;

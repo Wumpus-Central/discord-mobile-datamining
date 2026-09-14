@@ -139,12 +139,10 @@ export const getSearchTokenPressHandler = function getSearchTokenPressHandler(ar
             }
             return () => {
               let result = SearchPlatformUtils.performKeyboardAwareNavigation(() => {
-                searchTokenType(paths[15]);
-                let obj = {
+                searchTokenType(paths[15]).openLazy(searchContext(paths[17])(paths[16], paths.paths), "DatePicker", {
                   onSubmit(format) {
                     searchContext = format.format(closure_1_6);
-                    let obj = searchTokenType(_location[13]);
-                    obj.updateSearchQuery(searchContext, (setTextInputValue) => {
+                    searchTokenType(_location[13]).updateSearchQuery(searchContext, (setTextInputValue) => {
                       if (_location === constants2.SEARCH_INPUT_DROPDOWN) {
                         setTextInputValue.setTextInputValue(closure_3_3);
                       }
@@ -168,13 +166,17 @@ export const getSearchTokenPressHandler = function getSearchTokenPressHandler(ar
                       obj.location = _location;
                       setTextInputValue.addTag(obj);
                     });
-                    obj = { searchContext, searchTokenType, location: _location };
-                    searchTokenType(_location[18]).trackSearchFilterAdd(obj);
+                    let obj = searchTokenType(_location[13]);
+                    searchTokenType(_location[18]).trackSearchFilterAdd({
+                      searchContext,
+                      searchTokenType,
+                      location: _location,
+                    });
                     let obj2 = searchTokenType(_location[18]);
+                    const obj3 = { searchContext, searchTokenType, location: _location };
                     const initialMessages = searchTokenType(_location[14]).fetchInitialMessages(searchContext);
                   },
-                };
-                obj.openLazy(searchContext(paths[17])(paths[16], paths.paths), "DatePicker", obj);
+                });
               });
             };
           }
@@ -213,9 +215,8 @@ export const getSearchTokenPressHandler = function getSearchTokenPressHandler(ar
 export const getSearchFilterSuggestions = function getSearchFilterSuggestions(textInputValue) {
   closure_0 = textInputValue;
   const items = [];
-  const keys = Object.keys(items(12470));
+  const keys = Object.keys(items(12471));
   const item = keys.forEach((token) => {
-    let obj = SearchTokens;
     if (obj.isSearchFilterTokenType(token)) {
       const plainText = SearchTokensDefault[token].plainText;
       if (null != plainText) {
@@ -223,11 +224,12 @@ export const getSearchFilterSuggestions = function getSearchFilterSuggestions(te
         const _HermesInternal = HermesInternal;
         const regExp = new RegExp("^" + plainText + "(?:: ?)?$", "i");
         if (regExp.test(closure_0)) {
-          obj = { token, text: plainText };
-          items.push(obj);
+          const obj2 = { token, text: plainText };
+          items.push(obj2);
         }
       }
     }
+    obj = SearchTokens;
   });
   return items;
 };

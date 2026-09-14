@@ -2,7 +2,7 @@
 import ApexExperiment from "../../experiments/apex/index.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
-let obj = {
+const obj = {
   CONTROL: 0,
   [0]: "CONTROL",
   DUAL_READ_RETURN_OLD: 1,
@@ -10,13 +10,12 @@ let obj = {
   DUAL_READ_RETURN_NEW: 2,
   [2]: "DUAL_READ_RETURN_NEW",
 };
-obj = {
+const apexExperiment = ApexExperiment.createApexExperiment({
   name: "2026-03-denormalized-perks-access-read",
   kind: "user",
   defaultConfig: obj.CONTROL,
   variations: { 0: obj.CONTROL, 1: obj.DUAL_READ_RETURN_OLD, 2: obj.DUAL_READ_RETURN_NEW },
-};
-const apexExperiment = ApexExperiment.createApexExperiment(obj);
+});
 const result = size.fileFinishedImporting("modules/premium/experiments/DenormalizedPerksReadExperiment.tsx");
 
 export default apexExperiment;

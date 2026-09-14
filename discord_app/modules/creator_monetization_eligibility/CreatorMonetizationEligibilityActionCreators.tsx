@@ -11,8 +11,8 @@ let closure_6 = async function _createCreatorMonetizationEnableRequest(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -25,25 +25,25 @@ let closure_6 = async function _createCreatorMonetizationEnableRequest(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c1 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           const HTTP = HTTPUtils.HTTP;
-          const obj1 = {
+          const obj4 = {
             url: Endpoints.CREATOR_MONETIZATION_ENABLE_REQUESTS(closure_0),
             rejectWithError: HTTPUtils.rejectWithMigratedError(),
           };
           c2 = 1;
           c1 = 1;
-          const obj2 = { value: HTTP.post(obj1), done: false };
-          return obj2;
+          const obj5 = { value: HTTP.post(obj4), done: false };
+          return obj5;
         }
       } else if (arg0 === 1) {
         c1 = 3;
         throw value;
       } else if (arg0 === 2) {
         c1 = 3;
-        obj = { value, done: true };
+        const obj = { value, done: true };
         return obj;
       } else {
         c1 = 3;
@@ -71,8 +71,8 @@ let closure_8 = async function _acceptCreatorMonetizationTerms(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -85,25 +85,25 @@ let closure_8 = async function _acceptCreatorMonetizationTerms(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c2 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           const HTTP = HTTPUtils.HTTP;
-          const obj1 = {
+          const obj4 = {
             url: Endpoints.CREATOR_MONETIZATION_ACCEPT_TERMS(closure_0, closure_1),
             rejectWithError: HTTPUtils.rejectWithMigratedError(),
           };
           c3 = 1;
           c2 = 1;
-          const obj2 = { value: HTTP.post(obj1), done: false };
-          return obj2;
+          const obj5 = { value: HTTP.post(obj4), done: false };
+          return obj5;
         }
       } else if (arg0 === 1) {
         c2 = 3;
         throw value;
       } else if (arg0 === 2) {
         c2 = 3;
-        obj = { value, done: true };
+        const obj = { value, done: true };
         return obj;
       } else {
         c2 = 3;
@@ -123,8 +123,8 @@ let closure_9 = async function _acceptCreatorMonetizationTermsV(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -137,25 +137,25 @@ let closure_9 = async function _acceptCreatorMonetizationTermsV(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c1 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           const HTTP = HTTPUtils.HTTP;
-          const obj1 = {
+          const obj4 = {
             url: Endpoints.CREATOR_MONETIZATION_ACCEPT_TERMS_V2(closure_0),
             rejectWithError: HTTPUtils.rejectWithMigratedError(),
           };
           c2 = 1;
           c1 = 1;
-          const obj2 = { value: HTTP.post(obj1), done: false };
-          return obj2;
+          const obj5 = { value: HTTP.post(obj4), done: false };
+          return obj5;
         }
       } else if (arg0 === 1) {
         c1 = 3;
         throw value;
       } else if (arg0 === 2) {
         c1 = 3;
-        obj = { value, done: true };
+        const obj = { value, done: true };
         return obj;
       } else {
         c1 = 3;
@@ -205,8 +205,8 @@ let closure_12 = async function _requestRemoveMonetization(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -219,8 +219,8 @@ let closure_12 = async function _requestRemoveMonetization(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c1 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           const HTTP = HTTPUtils.HTTP;
           const request = {
@@ -230,15 +230,15 @@ let closure_12 = async function _requestRemoveMonetization(arg0) {
           };
           c2 = 1;
           c1 = 1;
-          const obj1 = { value: HTTP.post(request), done: false };
-          return obj1;
+          const obj4 = { value: HTTP.post(request), done: false };
+          return obj4;
         }
       } else if (arg0 === 1) {
         c1 = 3;
         throw value;
       } else if (arg0 === 2) {
         c1 = 3;
-        obj = { value, done: true };
+        const obj = { value, done: true };
         return obj;
       } else {
         c1 = 3;
@@ -270,7 +270,7 @@ let closure_13 = async function _removeMonetization() {
   return value;
 };
 const Endpoints = fn(1074).Endpoints;
-const ApplicationTypes = fn(1350).ApplicationTypes;
+const ApplicationTypes = fn(1348).ApplicationTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting(
   "modules/creator_monetization_eligibility/CreatorMonetizationEligibilityActionCreators.tsx",

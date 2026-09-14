@@ -52,7 +52,7 @@ export const useBountiesRecapOrbCount = function useBountiesRecapOrbCount(scroll
   const callback1 = targetOrbAmount.useCallback(() => {
     _undefined(0);
   }, []);
-  scrollY(lastBountyScrollOffset[2]);
+  let tmp = recapRevealHeight(targetOrbAmount.useState(0), 2);
   const fn = function b() {
     if (enabled) {
       if (recapRevealHeight > 0) {
@@ -80,7 +80,8 @@ export const useBountiesRecapOrbCount = function useBountiesRecapOrbCount(scroll
     }
     return { count: 0, revealed: false };
   };
-  let obj = {
+  let obj = scrollY(lastBountyScrollOffset[2]);
+  fn.__closure = {
     enabled,
     recapRevealHeight,
     getRevealProgress: scrollY(lastBountyScrollOffset[3]).getRevealProgress,
@@ -90,7 +91,6 @@ export const useBountiesRecapOrbCount = function useBountiesRecapOrbCount(scroll
     getRecapOrbCountFromPullProgress: enabled,
     targetOrbAmount,
   };
-  fn.__closure = obj;
   fn.__workletHash = 2855285055570;
   fn.__initData = __initData;
   const fn2 = function p(arg0) {
@@ -102,12 +102,21 @@ export const useBountiesRecapOrbCount = function useBountiesRecapOrbCount(scroll
       runOnJS(callback1)();
     }
   };
-  obj = {
+  const obj2 = {
+    enabled,
+    recapRevealHeight,
+    getRevealProgress: scrollY(lastBountyScrollOffset[3]).getRevealProgress,
+    scrollY,
+    lastBountyScrollOffset,
+    RECAP_ORB_COUNT_REACHES_TARGET_AT_PROGRESS: 0.95,
+    getRecapOrbCountFromPullProgress: enabled,
+    targetOrbAmount,
+  };
+  fn2.__closure = {
     runOnJS: scrollY(lastBountyScrollOffset[2]).runOnJS,
     resetDisplayCount: callback1,
     setDisplayCountMonotonic: __initData,
   };
-  fn2.__closure = obj;
   fn2.__workletHash = 12006414940221;
   fn2.__initData = __initData;
   const animatedReaction = obj.useAnimatedReaction(fn, fn2);

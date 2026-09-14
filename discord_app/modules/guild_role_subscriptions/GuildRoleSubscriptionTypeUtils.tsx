@@ -36,21 +36,21 @@ export const formatPlanIntervalDuration = function formatPlanIntervalDuration(in
     if (interval_count > 0) {
       if (interval_count % 7 === 0) {
         const intl4 = util.intl;
-        let obj = { weeks: interval_count / 7 };
-        let formatToPlainStringResult = intl4.formatToPlainString(util.t.iVZYyl, obj);
+        const obj2 = { weeks: interval_count / 7 };
+        let formatToPlainStringResult = intl4.formatToPlainString(util.t.iVZYyl, obj2);
       }
       return formatToPlainStringResult;
     }
     const intl3 = util.intl;
-    obj = { days: interval_count };
-    formatToPlainStringResult = intl3.formatToPlainString(util.t.jzH70Z, obj);
+    const obj3 = { days: interval_count };
+    formatToPlainStringResult = intl3.formatToPlainString(util.t.jzH70Z, obj3);
   } else if (SubscriptionIntervalTypes.MONTH === interval) {
     const intl2 = util.intl;
-    const obj1 = { months: interval_count };
-    return intl2.formatToPlainString(util.t.erUSmA, obj1);
+    const obj4 = { months: interval_count };
+    return intl2.formatToPlainString(util.t.erUSmA, obj4);
   } else if (SubscriptionIntervalTypes.YEAR === interval) {
     const intl = util.intl;
-    obj = { years: interval_count };
+    const obj = { years: interval_count };
     return intl.formatToPlainString(util.t.IfYQVC, obj);
   }
 };

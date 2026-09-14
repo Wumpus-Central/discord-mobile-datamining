@@ -9,13 +9,12 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_profile/native/components/GameProfileHorizontalScrollView.tsx");
 
 export default noop.forwardRef((arg0, ref) => {
-  let obj = LegacyBaseButton;
-  const nativeGesture = obj.useNativeGesture({ disallowInterruption: true });
-  obj = { gesture: nativeGesture, children: null };
-  obj = { ref };
+  const nativeGesture = LegacyBaseButton.useNativeGesture({ disallowInterruption: true });
+  const obj2 = { gesture: nativeGesture, children: null };
+  const obj3 = { ref };
   const merged = Object.assign(arg0);
-  obj.horizontal = true;
-  obj.nestedScrollEnabled = true;
-  obj.children = <ScrollView ref={ref} />;
-  return jsx(LegacyBaseButton.GestureDetector, { ref });
+  obj3.horizontal = true;
+  obj3.nestedScrollEnabled = true;
+  obj2.children = <ScrollView ref={ref} />;
+  return jsx(LegacyBaseButton.GestureDetector, { gesture: nativeGesture, children: null });
 });

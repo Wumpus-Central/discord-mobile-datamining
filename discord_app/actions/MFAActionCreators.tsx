@@ -3,6 +3,8 @@ import DispatcherDefault from "../Dispatcher.tsx";
 import HTTPUtils from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import MFAStore from "../stores/MFAStore.tsx";
 
+const require = globalThis.__r;
+
 require = fn;
 const Endpoints = fn(1074).Endpoints;
 const size = fn(2);
@@ -18,10 +20,9 @@ export default {
       oldFormErrors: true,
       rejectWithError: HTTPUtils.rejectWithMigratedError(),
     };
-    return HTTP.post(request).then((body) => {
-      const obj = { type: "MFA_ENABLE_SUCCESS", token: body.body.token, codes: body.body.backup_codes };
-      return obj.dispatch(obj);
-    });
+    return HTTP.post(request).then((body) =>
+      DispatcherDefault.dispatch({ type: "MFA_ENABLE_SUCCESS", token: body.body.token, codes: body.body.backup_codes }),
+    );
   },
   disable() {
     const HTTP = HTTPUtils.HTTP;
@@ -35,11 +36,11 @@ export default {
     );
   },
   enableSMS() {
-    let obj = DispatcherDefault;
-    obj.dispatch({ type: "MFA_SMS_TOGGLE" });
+    DispatcherDefault.dispatch({ type: "MFA_SMS_TOGGLE" });
     const HTTP = HTTPUtils.HTTP;
-    obj = { url: Endpoints.MFA_SMS_ENABLE, oldFormErrors: true, rejectWithError: HTTPUtils.rejectWithMigratedError() };
-    return HTTP.post(obj).then(
+    const obj2 = { url: Endpoints.MFA_SMS_ENABLE, oldFormErrors: true, rejectWithError: null };
+    obj2.rejectWithError = HTTPUtils.rejectWithMigratedError();
+    return HTTP.post(obj2).then(
       (result) => {
         DispatcherDefault.dispatch({ type: "MFA_SMS_TOGGLE_COMPLETE" });
         return result;
@@ -51,17 +52,11 @@ export default {
     );
   },
   disableSMS(password) {
-    let obj = DispatcherDefault;
-    obj.dispatch({ type: "MFA_SMS_TOGGLE" });
+    DispatcherDefault.dispatch({ type: "MFA_SMS_TOGGLE" });
     const HTTP = HTTPUtils.HTTP;
-    const request = {
-      url: Endpoints.MFA_SMS_DISABLE,
-      body: null,
-      oldFormErrors: true,
-      rejectWithError: HTTPUtils.rejectWithMigratedError(),
-    };
-    obj = { password };
-    request.body = obj;
+    const request = { url: Endpoints.MFA_SMS_DISABLE, body: { password }, oldFormErrors: true, rejectWithError: null };
+    const obj2 = { password };
+    request.rejectWithError = HTTPUtils.rejectWithMigratedError();
     return HTTP.post(request).then(
       (result) => {
         DispatcherDefault.dispatch({ type: "MFA_SMS_TOGGLE_COMPLETE" });
@@ -81,15 +76,13 @@ export default {
       oldFormErrors: true,
       rejectWithError: HTTPUtils.rejectWithMigratedError(),
     };
-    let obj = { password };
+    const obj = { password };
     return HTTP.post(request).then(
-      (viewNonce) => {
-        const obj = {
+      (viewNonce) =>
+        DispatcherDefault.dispatch({
           type: "MFA_SEND_VERIFICATION_KEY",
           nonces: { viewNonce: viewNonce.body.nonce, regenerateNonce: viewNonce.body.regenerate_nonce },
-        };
-        return obj.dispatch(obj);
-      },
+        }),
       (arg0) => {
         throw arg0;
       },
@@ -111,10 +104,7 @@ export default {
     };
     const obj2 = require("HTTPUtils");
     return HTTP.post(request).then(
-      (body) => {
-        const obj = { type: "MFA_VIEW_BACKUP_CODES", codes: body.body.backup_codes, key };
-        return obj.dispatch(obj);
-      },
+      (body) => DispatcherDefault.dispatch({ type: "MFA_VIEW_BACKUP_CODES", codes: body.body.backup_codes, key }),
       (arg0) => {
         throw arg0;
       },

@@ -25,26 +25,28 @@ export default noop.memo(function ThemedHeaderBackgroundGradient(baseColor) {
     num = 16;
   }
   const tmp3 = closure_6();
-  let obj = useToken;
-  const token = obj.useToken(BACKGROUND_BASE_LOWEST);
-  let obj1 = utils_ColorUtils;
-  let str = obj1.hex2rgb(token, 0);
+  const tmp6 = useSafeAreaInsetsDefault();
+  const token = useToken.useToken(BACKGROUND_BASE_LOWEST);
+  let str = utils_ColorUtils.hex2rgb(token, 0);
   if (str == null) {
     str = "transparent";
   }
-  obj = { style: null, pointerEvents: "none", children: null };
+  const obj3 = { style: null, pointerEvents: "none", children: null };
   const items = [tmp3.container];
-  obj = { height: Math.max(useSafeAreaInsetsDefault().top, num) };
-  items[1] = obj;
-  obj.style = items;
-  obj1 = { style: absoluteFill.absoluteFill, colors: null, start: { x: 0, y: 0 }, end: { x: 0, y: 1 } };
+  items[1] = { height: Math.max(tmp6.top, num) };
+  obj3.style = items;
+  const obj5 = { style: absoluteFill.absoluteFill, colors: null, start: { x: 0, y: 0 }, end: { x: 0, y: 1 } };
   const items1 = [token, str];
-  obj1.colors = items1;
-  obj.children = jsx(LinearGradientDefault, {
+  obj5.colors = items1;
+  obj3.children = jsx(LinearGradientDefault, {
     style: absoluteFill.absoluteFill,
     colors: null,
     start: { x: 0, y: 0 },
     end: { x: 0, y: 1 },
   });
-  return <React4 height={Math.max(useSafeAreaInsetsDefault().top, num)} />;
+  return (
+    <React4 style={null} pointerEvents="none">
+      {null}
+    </React4>
+  );
 });

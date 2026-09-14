@@ -42,65 +42,63 @@ export const MediaModalOverlayHeader = function MediaModalOverlayHeader(arg0) {
   let isModalOpen;
   ({ onClose, disableDownload, disableMediaOverlayButton, shareable, animationDriver, channelId } = arg0);
   const tmp = closure_8();
-  let obj = isModalOpen(13092);
-  const headerLayoutAnimation = obj.useHeaderLayoutAnimation(animationDriver);
-  let obj1 = isModalOpen(8452);
-  const mediaShareActions = obj1.useMediaShareActions({ source, disableDownload, shareable });
+  const headerLayoutAnimation = isModalOpen(13093).useHeaderLayoutAnimation(animationDriver);
+  let obj = isModalOpen(13093);
+  const mediaShareActions = isModalOpen(8452).useMediaShareActions({ source, disableDownload, shareable });
   const tmp7 = useShouldHideMediaOptionsDefault(channelId);
-  let obj2 = isModalOpen(4494);
-  isModalOpen = obj2.useIsModalOpen(SHARE_PREPARING_MODAL_KEY);
-  let obj3 = isModalOpen(4373);
+  const obj2 = isModalOpen(8452);
+  isModalOpen = isModalOpen(4494).useIsModalOpen(SHARE_PREPARING_MODAL_KEY);
+  const obj3 = isModalOpen(4494);
   const fn = function w() {
-    let obj = timing;
     let num = 1;
     if (isModalOpen) {
       num = 0;
     }
-    obj = { opacity: obj.withTiming(num) };
-    return obj;
+    return { opacity: timing.withTiming(num) };
   };
-  obj = { withTiming: isModalOpen(4637).withTiming, isPreparing: isModalOpen };
-  fn.__closure = obj;
+  const obj4 = isModalOpen(4373);
+  fn.__closure = { withTiming: isModalOpen(4637).withTiming, isPreparing: isModalOpen };
   fn.__workletHash = 13276839935975;
   fn.__initData = __initData;
-  const animatedStyle = obj3.useAnimatedStyle(fn);
-  obj = { style: null, children: null };
-  obj1 = {};
+  const animatedStyle = obj4.useAnimatedStyle(fn);
+  const obj6 = { style: null, children: null };
+  const obj7 = {};
   let merged = Object.assign(absoluteFillObject.absoluteFillObject);
-  obj1.bottom = undefined;
-  const items = [obj1, headerLayoutAnimation];
-  obj.style = items;
-  obj2 = { style: animatedStyle, pointerEvents: null, children: null };
+  obj7.bottom = undefined;
+  const items = [obj7, headerLayoutAnimation];
+  obj6.style = items;
+  const obj8 = { style: animatedStyle, pointerEvents: null, children: null };
   let str = "box-none";
   if (isModalOpen) {
     str = "none";
   }
-  obj2.pointerEvents = str;
-  obj3 = { style: tmp.navbarInner, children: null };
-  const obj4 = { style: tmp.navbarLeft, children: null };
-  const obj5 = { accessibilityLabel: null, icon: null, onPress: null };
+  obj8.pointerEvents = str;
+  const obj9 = { style: tmp.navbarInner, children: null };
+  const obj10 = { style: tmp.navbarLeft, children: null };
+  const obj11 = { accessibilityLabel: null, icon: null, onPress: null };
+  const obj5 = { withTiming: isModalOpen(4637).withTiming, isPreparing: isModalOpen };
   let intl = tmp2(1114).intl;
-  obj5.accessibilityLabel = intl.string(isModalOpen(1114).t.cpT0Cq);
-  obj5.icon = closure_6(isModalOpen(5761).XSmallIcon, { size: "md", color: "interactive-text-active" });
-  obj5.onPress = onClose;
-  const items1 = [closure_6(MediaViewerOverlayButtonDefault, obj5)];
-  let tmp10Result = null != contextName;
-  if (tmp10Result) {
-    const obj6 = { style: tmp.navbarName, children: null };
-    const obj7 = { style: tmp.navbarNameInner, children: null };
-    tmp10Result = null != contextIcon;
+  obj11.accessibilityLabel = intl.string(isModalOpen(1114).t.cpT0Cq);
+  obj11.icon = closure_6(isModalOpen(5761).XSmallIcon, { size: "md", color: "interactive-text-active" });
+  obj11.onPress = onClose;
+  const items1 = [closure_6(MediaViewerOverlayButtonDefault, obj11)];
+  let tmp10Result3 = null != contextName;
+  if (tmp10Result3) {
+    const obj12 = { style: tmp.navbarName, children: null };
+    const obj13 = { style: tmp.navbarNameInner, children: null };
+    let tmp10Result = null != contextIcon;
     if (tmp10Result) {
-      const obj8 = {
+      const obj14 = {
         source: contextIcon,
         color: nativeDefault.unsafe_rawColors.PRIMARY_345,
-        size: tmp2(1178).Icon.Sizes.CUSTOM,
+        size: tmp2(1176).Icon.Sizes.CUSTOM,
         style: tmp.contextIcon,
       };
-      tmp10Result = closure_6(tmp2(1178).Icon, obj8);
+      tmp10Result = closure_6(tmp2(1176).Icon, obj14);
     }
     const items2 = [tmp10Result];
-    const obj9 = { style: tmp.navbarNameShrinkWrapper, children: null };
-    const obj10 = {
+    const obj15 = { style: tmp.navbarNameShrinkWrapper, children: null };
+    const obj16 = {
       accessibilityRole: "header",
       variant: "heading-md/medium",
       lineClamp: 1,
@@ -108,23 +106,23 @@ export const MediaModalOverlayHeader = function MediaModalOverlayHeader(arg0) {
       color: "text-overlay-light",
       children: contextName,
     };
-    obj9.children = closure_6(tmp2(4632).Text, obj10);
-    items2[1] = closure_6(closure_4, obj9);
-    obj7.children = items2;
-    obj6.children = closure_7(closure_4, obj7);
-    tmp10Result = closure_6(closure_4, obj6);
+    obj15.children = closure_6(tmp2(4632).Text, obj16);
+    items2[1] = closure_6(closure_4, obj15);
+    obj13.children = items2;
+    obj12.children = closure_7(closure_4, obj13);
+    tmp10Result3 = closure_6(closure_4, obj12);
   }
-  items1[1] = tmp10Result;
-  obj4.children = items1;
-  const items3 = [closure_7(closure_4, obj4)];
+  items1[1] = tmp10Result3;
+  obj10.children = items1;
+  const items3 = [closure_7(closure_4, obj10)];
   let tmp12Result = !tmp7;
   if (!tmp7) {
-    const obj11 = { style: tmp.navbarRight, children: null };
-    const obj12 = { source };
-    const items4 = [closure_6(MediaViewerOverlayButtonFavoriteGIFDefault, obj12)];
-    let tmp10Result1 = null;
+    const obj17 = { style: tmp.navbarRight, children: null };
+    const obj18 = { source };
+    const items4 = [closure_6(MediaViewerOverlayButtonFavoriteGIFDefault, obj18)];
+    let tmp10Result4 = null;
     if (!disableMediaOverlayButton) {
-      const obj13 = {
+      const obj19 = {
         items: mediaShareActions,
         children(ref) {
           const merged = Object.assign(ref, Object.assign({ ref: 0 }));
@@ -133,7 +131,7 @@ export const MediaModalOverlayHeader = function MediaModalOverlayHeader(arg0) {
           obj.accessibilityLabel = intl.string(isModalOpen(1114).t.PdRCRg);
           const tmp4 = MediaViewerOverlayButtonDefault;
           if (obj2.isAndroid()) {
-            let tmp2Result = closure_1_6(isModalOpen(13097).MoreVerticalIcon, {
+            let tmp2Result = closure_1_6(isModalOpen(13098).MoreVerticalIcon, {
               size: "md",
               color: "interactive-text-active",
             });
@@ -149,15 +147,15 @@ export const MediaModalOverlayHeader = function MediaModalOverlayHeader(arg0) {
           return closure_1_6(tmp4, obj);
         },
       };
-      tmp10Result1 = closure_6(tmp2(8789).ContextMenu, obj13);
+      tmp10Result4 = closure_6(tmp2(8789).ContextMenu, obj19);
     }
-    items4[1] = tmp10Result1;
-    obj11.children = items4;
-    tmp12Result = closure_7(closure_4, obj11);
+    items4[1] = tmp10Result4;
+    obj17.children = items4;
+    tmp12Result = closure_7(closure_4, obj17);
   }
   items3[1] = tmp12Result;
-  obj3.children = items3;
-  obj2.children = closure_7(isModalOpen(8486).MediaModalOverlayHeaderWrapper, obj3);
-  obj.children = closure_6(ReanimatedRexportDefault.View, obj2);
-  return closure_6(ReanimatedRexportDefault.View, obj);
+  obj9.children = items3;
+  obj8.children = closure_7(isModalOpen(8486).MediaModalOverlayHeaderWrapper, obj9);
+  obj6.children = closure_6(ReanimatedRexportDefault.View, obj8);
+  return closure_6(ReanimatedRexportDefault.View, obj6);
 };

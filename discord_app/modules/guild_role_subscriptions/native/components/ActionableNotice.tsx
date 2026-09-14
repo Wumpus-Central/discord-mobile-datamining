@@ -23,20 +23,21 @@ export default function ActionableNotice(arg0) {
     disabled = false;
   }
   const tmp = closure_5();
-  let obj = { style: null, children: null };
+  const obj = { style: null, children: null };
   const items = [style, tmp.container];
   obj.style = items;
-  obj = { style: tmp.message, variant: "text-sm/medium", color: "text-default", children: message };
-  const items1 = [React3(Text_Text.Text, obj)];
-  obj = { style: tmp.actionButton, children: null };
-  const obj1 = { size: "sm", onPress: onClick, disabled: null, text: null };
+  const items1 = [
+    React3(Text_Text.Text, { style: tmp.message, variant: "text-sm/medium", color: "text-default", children: message }),
+  ];
+  const obj3 = { style: tmp.actionButton, children: null };
+  const obj4 = { size: "sm", onPress: onClick, disabled: null, text: null };
   if (!submitting) {
     submitting = disabled;
   }
-  obj1.disabled = submitting;
-  obj1.text = ctaMessage;
-  obj.children = React3(components_Button_Button.Button, obj1);
-  items1[1] = React3(View, obj);
+  obj4.disabled = submitting;
+  obj4.text = ctaMessage;
+  obj3.children = React3(components_Button_Button.Button, obj4);
+  items1[1] = React3(View, obj3);
   obj.children = items1;
   return React4(View, obj);
 }

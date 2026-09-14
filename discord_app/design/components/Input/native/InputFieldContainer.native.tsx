@@ -6,6 +6,8 @@ import spring from "../../../animation/reanimated/spring/spring.tsx";
 import InputTypes from "InputTypes.native.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
+const require = globalThis.__r;
+
 require = fn;
 function useInputStyles(size) {
   let str = size.size;
@@ -32,7 +34,6 @@ function useInputStyles(size) {
     INPUT_FIELD_RADIUS_LG = nativeDefault.modules.mobile.INPUT_FIELD_RADIUS_LG;
   }
   let token = useToken.useToken(INPUT_FIELD_RADIUS_LG);
-  let tmpResult = useToken;
   if (flag) {
     token = tmpResult.useToken(nativeDefault.modules.mobile.INPUT_FIELD_ROUND_RADIUS);
   }
@@ -44,7 +45,8 @@ function useInputStyles(size) {
   } else if ("lg" === str) {
     INPUT_FIELD_TEXT_STYLE_LG = nativeDefault.modules.mobile.INPUT_FIELD_TEXT_STYLE_LG;
   }
-  const token1 = tmpResult.useToken(INPUT_FIELD_TEXT_STYLE_LG);
+  const token1 = useToken.useToken(INPUT_FIELD_TEXT_STYLE_LG);
+  const tmpResult3 = useToken;
   return closure_9(
     str,
     flag2,
@@ -81,34 +83,33 @@ let closure_9 = createStyles.createStyles(() => {
   if (arg4 === undefined) {
     str2 = "text-md/medium";
   }
-  let obj = { sm: InputTypes.InputHeights.SM, md: InputTypes.InputHeights.MD, lg: InputTypes.InputHeights.LG };
-  obj = { sm: nativeDefault.space.PX_8, md: nativeDefault.space.PX_12, lg: nativeDefault.space.PX_16 };
-  obj = { sm: nativeDefault.space.PX_4, md: nativeDefault.space.PX_8, lg: nativeDefault.space.PX_8 };
-  const obj1 = {
-    sm: { paddingHorizontal: nativeDefault.space.PX_8, paddingVertical: nativeDefault.space.PX_4 },
-    md: null,
-    lg: null,
-  };
-  const obj2 = { paddingHorizontal: nativeDefault.space.PX_8, paddingVertical: nativeDefault.space.PX_4 };
-  obj1.md = { paddingHorizontal: nativeDefault.space.PX_12, paddingVertical: nativeDefault.space.PX_8 };
-  const obj3 = { paddingHorizontal: nativeDefault.space.PX_12, paddingVertical: nativeDefault.space.PX_8 };
-  obj1.lg = { paddingHorizontal: nativeDefault.space.PX_16, paddingVertical: nativeDefault.space.PX_8 + 2 };
+  const obj = { sm: InputTypes.InputHeights.SM, md: InputTypes.InputHeights.MD, lg: InputTypes.InputHeights.LG };
+  const tmp4 = { sm: nativeDefault.space.PX_8, md: nativeDefault.space.PX_12, lg: nativeDefault.space.PX_16 }[str];
+  const obj2 = { sm: nativeDefault.space.PX_8, md: nativeDefault.space.PX_12, lg: nativeDefault.space.PX_16 };
+  const tmp5 = { sm: nativeDefault.space.PX_4, md: nativeDefault.space.PX_8, lg: nativeDefault.space.PX_8 }[str];
+  const obj4 = { sm: null, md: null, lg: null };
+  const obj3 = { sm: nativeDefault.space.PX_4, md: nativeDefault.space.PX_8, lg: nativeDefault.space.PX_8 };
+  obj4.sm = { paddingHorizontal: nativeDefault.space.PX_8, paddingVertical: nativeDefault.space.PX_4 };
+  const obj5 = { paddingHorizontal: nativeDefault.space.PX_8, paddingVertical: nativeDefault.space.PX_4 };
+  obj4.md = { paddingHorizontal: nativeDefault.space.PX_12, paddingVertical: nativeDefault.space.PX_8 };
+  const obj6 = { paddingHorizontal: nativeDefault.space.PX_12, paddingVertical: nativeDefault.space.PX_8 };
+  obj4.lg = { paddingHorizontal: nativeDefault.space.PX_16, paddingVertical: nativeDefault.space.PX_8 + 2 };
   let num2 = 1;
   if (flag) {
     num2 = 0.5;
   }
-  const obj5 = { opacity: num2, pointerEvents: null, flexDirection: "row", flexGrow: null, alignItems: "center" };
+  const obj8 = { opacity: num2, pointerEvents: null, flexDirection: "row", flexGrow: null, alignItems: "center" };
   let str3 = "auto";
   if (flag) {
     str3 = "none";
   }
-  obj5.pointerEvents = str3;
+  obj8.pointerEvents = str3;
   let num3 = 0;
   if (flag2) {
     num3 = 1;
   }
-  const obj6 = {
-    container: obj5,
+  const obj9 = {
+    container: obj8,
     background: null,
     placeholderText: null,
     minHeight: null,
@@ -121,81 +122,80 @@ let closure_9 = createStyles.createStyles(() => {
     trailingIcon: null,
     splitBorder: null,
   };
-  obj5.flexGrow = num3;
-  const obj4 = { paddingHorizontal: nativeDefault.space.PX_16, paddingVertical: nativeDefault.space.PX_8 + 2 };
-  obj6.background = {
+  obj8.flexGrow = num3;
+  const obj7 = { paddingHorizontal: nativeDefault.space.PX_16, paddingVertical: nativeDefault.space.PX_8 + 2 };
+  obj9.background = {
     backgroundColor: nativeDefault.colors.INPUT_BACKGROUND_DEFAULT,
     borderWidth: nativeDefault.modules.mobile.INPUT_FIELD_BORDER_WIDTH,
     borderColor: nativeDefault.colors.INPUT_BORDER_DEFAULT,
   };
-  const obj7 = {
+  const obj10 = {
     backgroundColor: nativeDefault.colors.INPUT_BACKGROUND_DEFAULT,
     borderWidth: nativeDefault.modules.mobile.INPUT_FIELD_BORDER_WIDTH,
     borderColor: nativeDefault.colors.INPUT_BORDER_DEFAULT,
   };
-  obj6.placeholderText = { color: nativeDefault.colors.INPUT_PLACEHOLDER_TEXT_DEFAULT };
-  obj6.minHeight = { minHeight: obj[str] };
-  obj6.radius = { borderRadius: num };
-  obj6.padding = obj1[str];
-  const obj9 = {};
+  obj9.placeholderText = { color: nativeDefault.colors.INPUT_PLACEHOLDER_TEXT_DEFAULT };
+  obj9.minHeight = { minHeight: obj[str] };
+  obj9.radius = { borderRadius: num };
+  obj9.padding = obj4[str];
+  const obj12 = {};
   const merged = Object.assign(Text_Text.TextStyleSheet[str2]);
-  obj9.lineHeight = undefined;
+  obj12.lineHeight = undefined;
   const colors = nativeDefault.colors;
-  obj9.color = flag ? colors.TEXT_MUTED : colors.TEXT_DEFAULT;
-  obj9.flexGrow = 1;
-  obj6.text = obj9;
-  const obj10 = { position: "absolute", left: 0 };
+  obj12.color = flag ? colors.TEXT_MUTED : colors.TEXT_DEFAULT;
+  obj12.flexGrow = 1;
+  obj9.text = obj12;
+  const obj13 = { position: "absolute", left: 0 };
   const merged1 = Object.assign(tmp6);
-  obj10.paddingEnd = obj[str];
-  obj10.zIndex = 1;
-  obj10.pointerEvents = "none";
-  obj6.leadingText = obj10;
-  const obj11 = { position: "absolute", right: 0 };
+  obj13.paddingEnd = tmp5;
+  obj13.zIndex = 1;
+  obj13.pointerEvents = "none";
+  obj9.leadingText = obj13;
+  const obj14 = { position: "absolute", right: 0 };
   const merged2 = Object.assign(tmp6);
-  obj11.paddingStart = obj[str];
-  obj11.zIndex = 1;
-  obj11.pointerEvents = "none";
-  obj6.trailingText = obj11;
-  obj6.leadingIcon = {
+  obj14.paddingStart = tmp5;
+  obj14.zIndex = 1;
+  obj14.pointerEvents = "none";
+  obj9.trailingText = obj14;
+  obj9.leadingIcon = {
     position: "absolute",
     left: 0,
     top: 0,
     bottom: 0,
-    paddingTop: obj[str],
-    paddingBottom: obj[str],
-    paddingStart: obj[str],
-    paddingEnd: obj[str],
+    paddingTop: tmp4,
+    paddingBottom: tmp4,
+    paddingStart: tmp4,
+    paddingEnd: tmp5,
     justifyContent: "center",
     zIndex: 1,
     pointerEvents: "none",
   };
-  obj6.trailingIcon = {
+  obj9.trailingIcon = {
     position: "absolute",
     right: 0,
     top: 0,
     bottom: 0,
-    paddingTop: obj[str],
-    paddingBottom: obj[str],
-    paddingStart: obj[str],
-    paddingEnd: obj[str],
+    paddingTop: tmp4,
+    paddingBottom: tmp4,
+    paddingStart: tmp5,
+    paddingEnd: tmp4,
     justifyContent: "center",
     zIndex: 1,
     pointerEvents: "none",
   };
-  const obj12 = {};
+  const obj15 = {};
   const merged3 = Object.assign(tmp6);
-  obj12.borderRightWidth = 1;
-  obj12.borderRightColor = nativeDefault.colors.BORDER_STRONG;
-  obj6.splitBorder = obj12;
-  return obj6;
+  obj15.borderRightWidth = 1;
+  obj15.borderRightColor = nativeDefault.colors.BORDER_STRONG;
+  obj9.splitBorder = obj15;
+  return obj9;
 });
-fn(4636);
-createStyles = {
+createStyles = fn(4636);
+let closure_10 = createStyles.createStyleProperties({
   error: nativeDefault.colors.INPUT_BORDER_ERROR_DEFAULT,
   default: "transparent",
   focused: nativeDefault.colors.INPUT_BORDER_ACTIVE,
-};
-let closure_10 = createStyles.createStyleProperties(createStyles);
+});
 const __initData = {
   code: "function InputFieldContainerNativeTsx1(){const{status,ringColors,isFocused,withSpring,RING_SPRING_CONFIG}=this.__closure;let borderWidth=0;let borderColor='transparent';if(status!=='default'){borderWidth=2;borderColor=ringColors.error;}else if(isFocused){borderWidth=1;borderColor=ringColors.focused;}return{borderWidth:withSpring(borderWidth,RING_SPRING_CONFIG),borderColor:withSpring(borderColor,RING_SPRING_CONFIG),left:-borderWidth,right:-borderWidth,top:-borderWidth,bottom:-borderWidth};}",
 };
@@ -213,15 +213,13 @@ export const InputFieldContainer = function InputFieldContainer(isFocused) {
   if (undefined !== status) {
     str = status;
   }
-  let obj = {
+  const tmp3 = useInputStyles({
     size: isFocused.size,
     isRound: isFocused.isRound,
     isDisabled: isFocused.isDisabled,
     grow: isFocused.grow,
     hasLeadingIcon: null != isFocused.leadingIcon,
-  };
-  const tmp3 = useInputStyles(obj);
-  let obj1 = require("ReanimatedRexport");
+  });
   const fn = function s() {
     if ("default" !== str) {
       str = closure_0.error;
@@ -249,19 +247,32 @@ export const InputFieldContainer = function InputFieldContainer(isFocused) {
     rect.bottom = -num;
     return rect;
   };
-  obj = { status: str, ringColors: tmp, isFocused: tmp2, withSpring: require("spring").withSpring, RING_SPRING_CONFIG };
-  fn.__closure = obj;
+  const obj = {
+    size: isFocused.size,
+    isRound: isFocused.isRound,
+    isDisabled: isFocused.isDisabled,
+    grow: isFocused.grow,
+    hasLeadingIcon: null != isFocused.leadingIcon,
+  };
+  let obj2 = require("ReanimatedRexport");
+  fn.__closure = {
+    status: str,
+    ringColors: tmp,
+    isFocused: undefined !== isFocused && isFocused,
+    withSpring: require("spring").withSpring,
+    RING_SPRING_CONFIG,
+  };
   fn.__workletHash = 1037178877006;
   fn.__initData = __initData;
-  obj = { style: null, children: null };
+  const obj4 = { style: null, children: null };
   const items = [, , ,];
   ({ container: arr[0], background: arr[1], radius: arr[2], minHeight: arr[3] } = tmp3);
-  obj.style = items;
-  const animatedStyle = obj1.useAnimatedStyle(fn);
-  obj1 = { style: null };
+  obj4.style = items;
+  const animatedStyle = obj2.useAnimatedStyle(fn);
+  const obj5 = { style: null };
   const items1 = [absoluteFill.absoluteFill, tmp3.radius, animatedStyle];
-  obj1.style = items1;
-  const items2 = [closure_5(require("ReanimatedRexport").View, obj1), isFocused.children];
-  obj.children = items2;
-  return closure_6(closure_4, obj);
+  obj5.style = items1;
+  const items2 = [closure_5(require("ReanimatedRexport").View, obj5), isFocused.children];
+  obj4.children = items2;
+  return closure_6(closure_4, obj4);
 };

@@ -86,7 +86,7 @@ function useFetchCollectiblesCategoriesAndPurchases(paymentGateway, arg1) {
   if (paymentGateway != null) {
     paymentGateway = paymentGateway.paymentGateway;
   }
-  let obj = { paymentGateway, noOp: null, logPerf: null, countryCode: null, skipFetch: null };
+  const obj = { paymentGateway, noOp: null, logPerf: null, countryCode: null, skipFetch: null };
   let noOp;
   if (paymentGateway != null) {
     noOp = paymentGateway.noOp;
@@ -121,7 +121,7 @@ function useFetchCollectiblesCategoriesAndPurchases(paymentGateway, arg1) {
   if (!isFetching) {
     tmp11 = isFetching2;
   }
-  obj = {
+  return {
     isFetching: tmp11,
     isFetchingCategories: isFetching,
     isFetchingPurchases: isFetching2,
@@ -134,7 +134,6 @@ function useFetchCollectiblesCategoriesAndPurchases(paymentGateway, arg1) {
     refreshCategories,
     hasPreviouslyFetched: tmp8Result.hasPreviouslyFetched,
   };
-  return obj;
 }
 const noop = fn(19);
 ({ useEffect: closure_4, useRef: hasOwnProperty } = noop);
@@ -158,14 +157,14 @@ export const useGetOrFetchPurchase = function useGetOrFetchPurchase(selectedGift
   return value;
 };
 export const useGetOrFetchCollectiblesCategoriesAndPurchases = function useGetOrFetchCollectiblesCategoriesAndPurchases(
-  paymentGateway,
+  arg0,
 ) {
-  let obj = paymentGateway;
-  if (paymentGateway == null) {
+  let obj = arg0;
+  if (arg0 == null) {
     obj = {};
   }
-  obj = {};
+  const obj2 = {};
   const merged = Object.assign(obj);
-  obj.stalePurchasesOK = true;
-  return useFetchCollectiblesCategoriesAndPurchases(obj);
+  obj2.stalePurchasesOK = true;
+  return useFetchCollectiblesCategoriesAndPurchases(obj2);
 };

@@ -3,6 +3,8 @@ import _mod19 from "../../_runtime/metro/00019__.js";
 import DateUtils from "../utils/DateUtils.tsx";
 import size from "../../_runtime/metro/00002__.js";
 
+const require = globalThis.__r;
+
 _mod19.useCallback;
 const result = size.fileFinishedImporting("hooks/useCountdown.tsx");
 

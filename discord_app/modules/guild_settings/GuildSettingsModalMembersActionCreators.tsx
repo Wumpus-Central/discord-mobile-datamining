@@ -5,36 +5,34 @@ import HTTPUtils from "../../../discord_common/js/packages/http-utils/HTTPUtils.
 import Constants from "../../Constants.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
+const require = globalThis.__r;
+
 ({ Endpoints: c3, ME: closure_4 } = Constants);
 const result = size.fileFinishedImporting("modules/guild_settings/GuildSettingsModalMembersActionCreators.tsx");
 
 export default {
   startEditingRoles(id, id2) {
-    const obj = { type: "GUILD_SETTINGS_MODAL_MEMBERS_START_EDITING", guildId: id, userId: id2 };
-    obj.dispatch(obj);
+    DispatcherDefault.dispatch({ type: "GUILD_SETTINGS_MODAL_MEMBERS_START_EDITING", guildId: id, userId: id2 });
   },
   stopEditingRoles() {
     DispatcherDefault.dispatch({ type: "GUILD_SETTINGS_MODAL_MEMBERS_STOP_EDITING" });
   },
   toggleRole(roleId, state) {
-    const obj = { type: "GUILD_SETTINGS_MODAL_MEMBERS_TOGGLE_ROLE", roleId, state };
-    obj.dispatch(obj);
+    DispatcherDefault.dispatch({ type: "GUILD_SETTINGS_MODAL_MEMBERS_TOGGLE_ROLE", roleId, state });
   },
   updateMemberRoles(guildId, userId, roles) {
     function onEnd() {
       return DispatcherDefault.dispatch({ type: "GUILD_SETTINGS_MODAL_MEMBERS_ROLES_SAVE_COMPLETE" });
     }
-    let obj = DispatcherDefault;
-    obj.dispatch({ type: "GUILD_SETTINGS_MODAL_MEMBERS_ROLES_SAVE" });
+    DispatcherDefault.dispatch({ type: "GUILD_SETTINGS_MODAL_MEMBERS_ROLES_SAVE" });
     const HTTP = HTTPUtils.HTTP;
     const request = {
       url: React3.GUILD_MEMBER(guildId, userId),
-      body: null,
+      body: { roles },
       oldFormErrors: true,
       rejectWithError: true,
     };
-    obj = { roles };
-    request.body = obj;
+    const obj2 = { roles };
     HTTP.patch(request).then(onEnd, onEnd);
   },
   startEditingNickname() {

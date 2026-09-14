@@ -14,14 +14,13 @@ export const useHandleClaim = function useHandleClaim(product) {
   const items = [product, stageCollectibleChangeForEditProfile];
   obj.handleClaim = noop.useCallback(
     asyncGeneratorStep(async () => {
-      let obj3 = tmp3(tmp20[2]);
-      await obj3.claimPremiumCollectiblesProduct(product.skuId);
+      await tmp3(tmp20[2]).claimPremiumCollectiblesProduct(product.skuId);
       if (1 === tmp7) {
         c3 = 0;
-        const obj2 = { key: "collectible shop claim error", content: null };
+        const obj7 = { key: "collectible shop claim error", content: null };
         const intl = tmp3(tmp20[6]).intl;
-        obj2.content = intl.string(tmp3(tmp20[6]).t.CKsXk3);
-        v2(tmp20[5]).open(obj2);
+        obj7.content = intl.string(tmp3(tmp20[6]).t.CKsXk3);
+        v2(tmp20[5]).open(obj7);
         c4 = 3;
         v2(tmp20[5]);
       } else if (arg0 === 1) {
@@ -30,8 +29,11 @@ export const useHandleClaim = function useHandleClaim(product) {
       } else if (arg0 !== 2) {
         v2(tmp20[3]).hideAllActionSheets();
         v2(tmp20[3]);
-        obj3 = { product: closure_128_0, useCategoryImage: true, stageCollectibleChangeForEditProfile: closure_128_1 };
-        v2(tmp20[4]).open(obj3);
+        v2(tmp20[4]).open({
+          product: closure_128_0,
+          useCategoryImage: true,
+          stageCollectibleChangeForEditProfile: closure_128_1,
+        });
         v2(tmp20[4]);
         const collectiblesPurchases = tmp3(tmp20[2]).fetchCollectiblesPurchases();
         c3 = 0;

@@ -12,16 +12,12 @@ import MessageStore from "../../stores/MessageStore.tsx";
 require = fn;
 function handleMessageSendFailedAutomod(messageData) {
   messageData = messageData.messageData;
-  let obj = MessageQueue;
-  const failedMessageId = obj.getFailedMessageId(messageData);
-  obj = {
-    id: failedMessageId,
-    isBlockedEdit: MessageQueue.isMessageDataEdit(messageData),
-    messageData,
-    errorMessage: null,
-  };
-  obj.errorMessage = AutomodErrorUtils.getAutomodErrorMessage(messageData, messageData.errorResponseBody);
-  closure_8[failedMessageId] = obj;
+  const failedMessageId = MessageQueue.getFailedMessageId(messageData);
+  const obj2 = { id: failedMessageId, isBlockedEdit: null, messageData: null, errorMessage: null };
+  obj2.isBlockedEdit = MessageQueue.isMessageDataEdit(messageData);
+  obj2.messageData = messageData;
+  obj2.errorMessage = AutomodErrorUtils.getAutomodErrorMessage(messageData, messageData.errorResponseBody);
+  closure_8[failedMessageId] = obj2;
   closure_9 = closure_9 + 1;
   return true;
 }

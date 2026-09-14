@@ -2,13 +2,13 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import native from "../../../../design/void/native.tsx";
 import NativeViewDefault from "../../../core/native/NativeView.tsx";
-import _modDef17298 from "../../../../../_runtime/metro/17298__.js";
+import _modDef17300 from "../../../../../_runtime/metro/17300__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const jsx = fn(21).jsx;
-fn(4636);
-const createStyles = { container: null, icon: null };
+const createStyles = fn(4636);
+const obj2 = { container: null, icon: null };
 let size = {
   alignItems: "center",
   justifyContent: "center",
@@ -18,16 +18,15 @@ let size = {
   backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
   borderRadius: nativeDefault.radii.round,
 };
-createStyles.container = size;
-createStyles.icon = {};
-let closure_4 = createStyles.createStyles(createStyles);
+obj2.container = size;
+obj2.icon = {};
+let closure_4 = createStyles.createStyles(obj2);
 size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_panel/native/alerts/VoicePanelLockedIcon.tsx");
 
 export default function VoicePanelLockedIcon() {
   const tmp = closure_4();
-  let obj = { style: tmp.container, children: null };
-  obj = { style: tmp.icon, source: _modDef17298, size: native.IconSizes.LARGE };
-  obj.children = jsx(native.Icon, { style: tmp.icon, source: _modDef17298, size: native.IconSizes.LARGE });
-  return jsx(NativeViewDefault, { style: tmp.icon, source: _modDef17298, size: native.IconSizes.LARGE });
+  const obj = { style: tmp.container, children: null };
+  obj.children = jsx(native.Icon, { style: tmp.icon, source: _modDef17300, size: native.IconSizes.LARGE });
+  return <tmp2 style={tmp.container}>{null}</tmp2>;
 }

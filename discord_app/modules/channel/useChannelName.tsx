@@ -7,6 +7,8 @@ import ExperimentStore from "../experiments/ExperimentStore.tsx";
 import RelationshipStore from "../../stores/RelationshipStore.tsx";
 import UserStore from "../../stores/UserStore.tsx";
 
+const require = globalThis.__r;
+
 require = fn;
 function computeChannelName(channel, UserStore, RelationshipStore) {
   if (flag === undefined) {
@@ -211,7 +213,6 @@ export const useComputedGroupDmName = function useComputedGroupDmName(stateFromS
   _require = stateFromStores;
   const items = [UserStore, RelationshipStore];
   return require("initialize").useStateFromStores(items, () => {
-    let obj = nickname;
     let tmp = null;
     if (null != nickname) {
       tmp = null;
@@ -231,8 +232,8 @@ export const useComputedGroupDmName = function useComputedGroupDmName(stateFromS
           let joined = mapped1.join(", ");
         } else {
           const intl = util.intl;
-          obj = { name: UserUtilsDefault.getName(UserStore.getCurrentUser()) };
-          joined = intl.formatToPlainString(util.t["9Uk8PF"], obj);
+          const obj3 = { name: UserUtilsDefault.getName(UserStore.getCurrentUser()) };
+          joined = intl.formatToPlainString(util.t["9Uk8PF"], obj3);
         }
       }
     }

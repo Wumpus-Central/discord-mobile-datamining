@@ -61,7 +61,6 @@ function upsertSavedMessage(saveData) {
 }
 function nullifyMessageObject(channelId) {
   const combined = "" + channelId.channelId + "-" + channelId.messageId;
-  let obj = secondaryIndexMap;
   value = secondaryIndexMap.get(combined);
   let message;
   if (value != null) {
@@ -70,10 +69,10 @@ function nullifyMessageObject(channelId) {
   if (null == message) {
     return false;
   } else {
-    obj = {};
+    const obj2 = {};
     const merged = Object.assign(value);
-    obj.message = null;
-    const result = obj.set(combined, obj);
+    obj2.message = null;
+    const result = secondaryIndexMap.set(combined, obj2);
     return true;
   }
 }
@@ -204,9 +203,9 @@ const savedMessagesStore = new SavedMessagesStore(DispatcherDefault, {
     if (null != value) {
       secondaryIndexMap.delete(combined);
       const messageId = savedMessageData.messageId;
-      value = map.get(value.saveData.channelId);
-      if (value != null) {
-        value.delete(messageId);
+      value2 = map.get(value.saveData.channelId);
+      if (value2 != null) {
+        value2.delete(messageId);
       }
       set1.delete(messageId);
       set.delete(messageId);
@@ -217,7 +216,6 @@ const savedMessagesStore = new SavedMessagesStore(DispatcherDefault, {
   },
   MESSAGE_DELETE: function handleMessageDelete(channelId) {
     const combined = "" + channelId.channelId + "-" + channelId.id;
-    let obj = secondaryIndexMap;
     value = secondaryIndexMap.get(combined);
     let message;
     if (value != null) {
@@ -225,10 +223,10 @@ const savedMessagesStore = new SavedMessagesStore(DispatcherDefault, {
     }
     let flag = false;
     if (null != message) {
-      obj = {};
+      const obj2 = {};
       const merged = Object.assign(value);
-      obj.message = null;
-      const result = obj.set(combined, obj);
+      obj2.message = null;
+      const result = secondaryIndexMap.set(combined, obj2);
       flag = true;
     }
     return flag;
@@ -248,11 +246,11 @@ const savedMessagesStore = new SavedMessagesStore(DispatcherDefault, {
         const _HermesInternal = HermesInternal;
         const combined = "" + message.channel_id + "-" + message.id;
         value = secondaryIndexMap.get(combined);
-        message = undefined;
+        let message1;
         if (value != null) {
-          message = value.message;
+          message1 = value.message;
         }
-        if (null == message) {
+        if (null == message1) {
           return false;
         } else {
           const obj = {};

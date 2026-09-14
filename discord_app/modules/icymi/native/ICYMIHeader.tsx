@@ -8,11 +8,12 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, Fragment: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createICYMIStyles = fn(16547);
+const createICYMIStyles = fn(16549);
 let closure_7 = createICYMIStyles.createICYMIStyles((margin) => {
-  let obj = { text: null, separator: null };
-  obj = { flexDirection: "row", justifyContent: "space-between", marginHorizontal: margin.margin };
-  obj.text = obj;
+  const obj = {
+    text: { flexDirection: "row", justifyContent: "space-between", marginHorizontal: margin.margin },
+    separator: null,
+  };
   const size = {
     height: 1,
     width: "100%",
@@ -27,13 +28,17 @@ const result = size.fileFinishedImporting("modules/icymi/native/ICYMIHeader.tsx"
 
 export default function ICYMIHeader() {
   const tmp = closure_7();
-  let obj = { children: null };
-  obj = { style: tmp.separator };
-  const items = [React4(View, obj)];
-  obj = { style: tmp.text, variant: "heading-md/semibold", color: "mobile-text-heading-primary", children: null };
+  const obj = { children: null };
+  const items = [React4(View, { style: tmp.separator })];
+  const obj3 = {
+    style: tmp.text,
+    variant: "heading-md/semibold",
+    color: "mobile-text-heading-primary",
+    children: null,
+  };
   const intl = util.intl;
-  obj.children = intl.string(util.t["jnXV/V"]);
-  items[1] = React4(Text_Text.Text, obj);
+  obj3.children = intl.string(util.t["jnXV/V"]);
+  items[1] = React4(Text_Text.Text, obj3);
   obj.children = items;
   return timestampProducer(hasOwnProperty, obj);
 }

@@ -39,8 +39,8 @@ prototype["onPostConnectionOpen"] = function onPostConnectionOpen() {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -53,8 +53,8 @@ prototype["onPostConnectionOpen"] = function onPostConnectionOpen() {
             throw value;
           } else if (arg0 === 2) {
             v3 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj4 = { value, done: true };
+            return obj4;
           } else {
             if (obj7.isIOS()) {
               if (tmp14Result.isIOSAppTransactionIdTrackingEnabled("IOSUserIdentifiersManager")) {
@@ -66,8 +66,8 @@ prototype["onPostConnectionOpen"] = function onPostConnectionOpen() {
                     syncedUserIds2.add(currentUser.id);
                     c1 = 1;
                     v3 = 1;
-                    const obj1 = { value: self.syncAppTransactionId(), done: false };
-                    return obj1;
+                    const obj5 = { value: self.syncAppTransactionId(), done: false };
+                    return obj5;
                   }
                 }
               }
@@ -81,7 +81,7 @@ prototype["onPostConnectionOpen"] = function onPostConnectionOpen() {
           throw value;
         } else if (arg0 === 2) {
           v3 = 3;
-          obj = { value, done: true };
+          const obj = { value, done: true };
           return obj;
         }
         v3 = 3;
@@ -103,8 +103,8 @@ prototype["syncAppTransactionId"] = function syncAppTransactionId() {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -117,8 +117,8 @@ prototype["syncAppTransactionId"] = function syncAppTransactionId() {
             throw value;
           } else if (arg0 === 2) {
             c5 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
             closure_1 = tmp3;
             _self = tmp7;
@@ -129,8 +129,8 @@ prototype["syncAppTransactionId"] = function syncAppTransactionId() {
             const DCDAppTransactionManager = c4.DCDAppTransactionManager;
             c4 = 2;
             c5 = 1;
-            const obj1 = { value: DCDAppTransactionManager.getAppTransactionId(), done: false };
-            return obj1;
+            const obj4 = { value: DCDAppTransactionManager.getAppTransactionId(), done: false };
+            return obj4;
           }
         } else if (1 === tmp7) {
           c3 = 0;
@@ -154,8 +154,8 @@ prototype["syncAppTransactionId"] = function syncAppTransactionId() {
             closure_128_3,
           );
           c5 = 3;
-          const obj2 = { value: undefined, done: true };
-          return obj2;
+          const obj5 = { value: undefined, done: true };
+          return obj5;
         } else {
           if (2 === tmp7) {
             if (arg0 === 1) {
@@ -164,8 +164,8 @@ prototype["syncAppTransactionId"] = function syncAppTransactionId() {
             } else if (arg0 === 2) {
               c3 = 0;
               c5 = 3;
-              const obj3 = { value, done: true };
-              return obj3;
+              const obj6 = { value, done: true };
+              return obj6;
             } else {
               closure_128_2 = value;
               appTransactionId = closure_128_2.appTransactionId;
@@ -176,12 +176,12 @@ prototype["syncAppTransactionId"] = function syncAppTransactionId() {
                   c3 = 2;
                   const HTTP = _self(tmp41[7]).HTTP;
                   const request = { url: "/users/@me/app-transaction-ids", body: null, rejectWithError: true };
-                  const obj4 = { app_transaction_id: appTransactionId };
-                  request.body = obj4;
+                  const obj7 = { app_transaction_id: appTransactionId };
+                  request.body = obj7;
                   c4 = 4;
                   c5 = 1;
-                  const obj5 = { value: HTTP.post(request), done: false };
-                  return obj5;
+                  const obj8 = { value: HTTP.post(request), done: false };
+                  return obj8;
                 }
               }
               closure_129_0.trackSync("empty_id", null, verified);
@@ -192,8 +192,8 @@ prototype["syncAppTransactionId"] = function syncAppTransactionId() {
             closure_128_4 = tmp41;
             closure_129_0.trackSync("http_error", closure_128_4, verified);
             c5 = 3;
-            const obj6 = { value: undefined, done: true };
-            return obj6;
+            const obj9 = { value: undefined, done: true };
+            return obj9;
           } else if (arg0 === 1) {
             c5 = 3;
             throw value;
@@ -203,7 +203,7 @@ prototype["syncAppTransactionId"] = function syncAppTransactionId() {
           }
           c3 = 0;
           c5 = 3;
-          obj = { value, done: true };
+          const obj = { value, done: true };
           return obj;
         }
       } catch (tmp41) {
@@ -221,17 +221,17 @@ prototype["syncAppTransactionId"] = function syncAppTransactionId() {
 };
 prototype["trackSync"] = function trackSync(empty_id, arg1, verified) {
   if (null != arg1) {
-    let obj = { tags: null };
-    obj = { source: "ios_user_identifiers_manager", step: "sync_app_transaction_id", reason: empty_id };
-    obj.tags = obj;
-    obj.captureException(arg1, obj);
+    const obj2 = { tags: null };
+    const obj3 = { source: "ios_user_identifiers_manager", step: "sync_app_transaction_id", reason: empty_id };
+    obj2.tags = obj3;
+    SentryUtilsDefault.captureException(arg1, obj2);
   }
   AnalyticsUtilsDefault.track(AnalyticEvents.APP_TRANSACTION_ID_SYNCED, {
     success: "synced" === empty_id,
     reason: empty_id,
     verified,
   });
-  const obj1 = { success: "synced" === empty_id, reason: empty_id, verified };
+  const obj5 = { success: "synced" === empty_id, reason: empty_id, verified };
 };
 const iOSUserIdentifiersManager = new IOSUserIdentifiersManager();
 const size = fn(2);

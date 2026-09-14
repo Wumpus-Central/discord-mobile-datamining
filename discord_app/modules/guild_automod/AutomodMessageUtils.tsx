@@ -16,6 +16,8 @@ import PermissionStore from "../../stores/PermissionStore.tsx";
 import RelationshipStore from "../../stores/RelationshipStore.tsx";
 import UserStore from "../../stores/UserStore.tsx";
 
+const require = globalThis.__r;
+
 const AutomodInteractionCallbackTypeEmbedKeys = prop(7616);
 const AutomodDecisionOutcomeEmbedKeys = prop(7617);
 require = fn;
@@ -590,14 +592,17 @@ export default function useAutomodMessageFields(arg0) {
   _require = arg0;
   const items = [arg0];
   const memo = noop.useMemo(() => extractAutomodMessageFields(closure_0), items);
-  require("initialize");
   const items1 = [ChannelStore];
   const items2 = [memo.embedChannelId];
-  const obj = {};
-  const stateFromStores = obj.useStateFromStores(items1, () => ChannelStore.getChannel(memo.embedChannelId), items2);
+  const obj2 = {};
+  const stateFromStores = require("initialize").useStateFromStores(
+    items1,
+    () => ChannelStore.getChannel(memo.embedChannelId),
+    items2,
+  );
   const merged = Object.assign(memo);
-  obj.embedChannel = stateFromStores;
-  return obj;
+  obj2.embedChannel = stateFromStores;
+  return obj2;
 }
 export const isAutomodMessageRecord = function isAutomodMessageRecord(message) {
   return message.type === constants2.AUTO_MODERATION_ACTION;
@@ -683,19 +688,23 @@ export const getActionHeaderTextMobile = function getActionHeaderTextMobile(mess
           let formatToPlainStringResult = intl6.formatToPlainString(prop, obj);
         } else {
           const intl5 = util.intl;
-          obj = { applicationName: tmp16, interactionUser: username2.username, integrationOwner: username.username };
-          formatToPlainStringResult = intl5.formatToPlainString(util.t["MCK/t7"], obj);
+          const obj2 = {
+            applicationName: tmp16,
+            interactionUser: username2.username,
+            integrationOwner: username.username,
+          };
+          formatToPlainStringResult = intl5.formatToPlainString(util.t["MCK/t7"], obj2);
         }
       }
     }
     if (tmp6 !== AutomodDecisionOutcomeEmbedKeys.AutomodDecisionOutcomeEmbedKeys.BLOCKED) {
       const intl4 = util.intl;
-      obj = { applicationName: tmp16, integrationOwner: username.username };
-      let formatToPlainStringResult1 = intl4.formatToPlainString(util.t["0Kmtr7"], obj);
+      const obj3 = { applicationName: tmp16, integrationOwner: username.username };
+      let formatToPlainStringResult1 = intl4.formatToPlainString(util.t["0Kmtr7"], obj3);
     } else {
       const intl3 = util.intl;
-      const obj1 = { applicationName: tmp16, integrationOwner: username.username };
-      formatToPlainStringResult1 = intl3.formatToPlainString(util.t.I0FiWp, obj1);
+      const obj4 = { applicationName: tmp16, integrationOwner: username.username };
+      formatToPlainStringResult1 = intl3.formatToPlainString(util.t.I0FiWp, obj4);
     }
     return formatToPlainStringResult1;
   } else {
@@ -716,18 +725,17 @@ export const getActionHeaderText = function getActionHeaderText(embeds, channel,
     intl = closure_1_10;
   }
   if (null != channel) {
-    let obj2 = useChannelName;
-    let channelName = obj2.computeChannelName(channel, UserStore, RelationshipStore);
+    let channelName = useChannelName.computeChannelName(channel, UserStore, RelationshipStore);
     let obj = dependencyMap;
     let format = require;
-    let obj3 = dependencyMap;
+    let obj7 = dependencyMap;
     let v4xL9Sk = require;
   } else {
     const intl2 = util.intl;
     channelName = intl2.string(util.t.J90oLW);
     obj = dependencyMap;
     format = require;
-    obj3 = dependencyMap;
+    obj7 = dependencyMap;
     v4xL9Sk = require;
   }
   const tmp9 = getProfileUpdateTypeFromMessage(embeds);
@@ -844,23 +852,23 @@ export const getActionHeaderText = function getActionHeaderText(embeds, channel,
           if (null == tmp22) {
             if (tmp13 !== v4xL9Sk(7617).AutomodDecisionOutcomeEmbedKeys.BLOCKED) {
               intl = v4xL9Sk(1114).intl;
-              obj = { channelName, channelHook: tmp30 };
-              let formatResult = intl.format(v4xL9Sk(1114).t.IZg0VQ, obj);
+              const obj2 = { channelName, channelHook: tmp30 };
+              let formatResult = intl.format(v4xL9Sk(1114).t.IZg0VQ, obj2);
             } else {
               const intl5 = v4xL9Sk(1114).intl;
-              obj = { channelName, channelHook: tmp30 };
-              formatResult = intl5.format(v4xL9Sk(1114).t.lOIOSK, obj);
+              const obj4 = { channelName, channelHook: tmp30 };
+              formatResult = intl5.format(v4xL9Sk(1114).t.lOIOSK, obj4);
             }
           }
           if (tmp16 !== v4xL9Sk(7616).AutomodInteractionCallbackTypeEmbedKeys.MODAL) {
             if (tmp13 !== v4xL9Sk(7617).AutomodDecisionOutcomeEmbedKeys.BLOCKED) {
               const intl7 = v4xL9Sk(1114).intl;
-              const obj1 = { applicationName: tmp22, channelName, channelHook: tmp30, integrationOwnerHook };
-              let formatResult1 = intl7.format(v4xL9Sk(1114).t.AXQufN, obj1);
+              const obj5 = { applicationName: tmp22, channelName, channelHook: tmp30, integrationOwnerHook };
+              let formatResult1 = intl7.format(v4xL9Sk(1114).t.AXQufN, obj5);
             } else {
               const intl6 = v4xL9Sk(1114).intl;
-              obj2 = { applicationName: tmp22, channelName, channelHook: tmp30, integrationOwnerHook };
-              formatResult1 = intl6.format(v4xL9Sk(1114).t.s3tjMN, obj2);
+              const obj6 = { applicationName: tmp22, channelName, channelHook: tmp30, integrationOwnerHook };
+              formatResult1 = intl6.format(v4xL9Sk(1114).t.s3tjMN, obj6);
             }
           } else {
             intl = arg4;
@@ -868,12 +876,12 @@ export const getActionHeaderText = function getActionHeaderText(embeds, channel,
           if (tmp13 !== v4xL9Sk(7617).AutomodDecisionOutcomeEmbedKeys.BLOCKED) {
             const intl9 = v4xL9Sk(1114).intl;
             v4xL9Sk = v4xL9Sk(1114).t["4xL9Sk"];
-            obj3 = { applicationName: tmp22, interactionUserHook: intl, integrationOwnerHook };
-            let formatResult2 = intl9.format(v4xL9Sk, obj3);
+            obj7 = { applicationName: tmp22, interactionUserHook: intl, integrationOwnerHook };
+            let formatResult2 = intl9.format(v4xL9Sk, obj7);
           } else {
             const intl8 = v4xL9Sk(1114).intl;
-            const obj4 = { applicationName: tmp22, interactionUserHook: intl, integrationOwnerHook };
-            formatResult2 = intl8.format(v4xL9Sk(1114).t.S3lNIT, obj4);
+            const obj8 = { applicationName: tmp22, interactionUserHook: intl, integrationOwnerHook };
+            formatResult2 = intl8.format(v4xL9Sk(1114).t.S3lNIT, obj8);
           }
         }
       } else {
@@ -895,8 +903,8 @@ export const getActionHeaderText = function getActionHeaderText(embeds, channel,
       bma6cs = format(1114).t.bma6cs;
     }
     const intl3 = format(1114).intl;
-    const obj5 = { channelName, channelHook: intl };
-    intl3.format(bma6cs, obj5);
+    const obj9 = { channelName, channelHook: intl };
+    intl3.format(bma6cs, obj9);
   }
   tmp12 = getQuarantineTypeFromMessage(embeds);
 };

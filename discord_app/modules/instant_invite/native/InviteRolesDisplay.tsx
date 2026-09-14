@@ -20,10 +20,9 @@ export default function InviteRolesDisplay(roleIds) {
   roleIds = roleIds.roleIds;
   const guildId = roleIds.guildId;
   const tmp = closure_7();
-  let obj = roleIds(504);
   const items = [GuildRoleStore];
   const items1 = [roleIds, guildId];
-  const stateFromStoresArray = obj.useStateFromStoresArray(
+  const stateFromStoresArray = roleIds(504).useStateFromStoresArray(
     items,
     () => {
       const mapped = roleIds.map((item) => role.getRole(guildId, item));
@@ -33,18 +32,18 @@ export default function InviteRolesDisplay(roleIds) {
   );
   let tmp4 = null;
   if (0 !== stateFromStoresArray.length) {
-    obj = { style: tmp.container, children: null };
-    obj = { variant: "text-xs/semibold", color: "text-muted", style: tmp.label, children: null };
+    const obj2 = { style: tmp.container, children: null };
+    const obj3 = { variant: "text-xs/semibold", color: "text-muted", style: tmp.label, children: null };
     const intl = tmp2(1114).intl;
-    obj.children = intl.string(tmp2(1114).t.stcSfI);
-    const items2 = [closure_5(tmp2(4632).Text, obj)];
-    const obj1 = {
+    obj3.children = intl.string(tmp2(1114).t.stcSfI);
+    const items2 = [closure_5(tmp2(4632).Text, obj3)];
+    const obj4 = {
       style: tmp.rolesRow,
       children: stateFromStoresArray.map((role) => hasOwnProperty(RolePillDefault, { role, guildId }, role.id)),
     };
-    items2[1] = closure_5(View, obj1);
-    obj.children = items2;
-    tmp4 = closure_6(View, obj);
+    items2[1] = closure_5(View, obj4);
+    obj2.children = items2;
+    tmp4 = closure_6(View, obj2);
   }
   return tmp4;
 }

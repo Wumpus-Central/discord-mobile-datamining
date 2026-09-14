@@ -39,12 +39,12 @@ export default function useUserProfileActivityTabContent(userId) {
   voiceActivity = tmp3.voiceActivity;
   const items1 = [recent];
   const memo = voiceActivity.useMemo(() => recent.filter(ContentInventoryTypes.isRecentActivityEntry), items1);
-  let obj = userId(voiceChannel[12]);
   const items2 = [closure_4];
   closure_4 = tmp5;
-  const stateFromStores = obj.useStateFromStores(items2, () =>
+  const stateFromStores = userId(voiceChannel[12]).useStateFromStores(items2, () =>
     ContentInventoryOutboxStore.isFetchingUserOutbox(userId),
   );
+  const obj = userId(voiceChannel[12]);
   const items3 = [SelfPresenceStore, PresenceStore];
   const stateFromStores1 = userId(voiceChannel[12]).useStateFromStores(items3, () => {
     if (closure_4) {
@@ -116,12 +116,11 @@ export default function useUserProfileActivityTabContent(userId) {
     }
     tmp10 = tmp11;
   }
-  obj = {
+  return {
     recent: memo,
     isFetching: stateFromStores,
-    isCurrentUser: tmp5,
+    isCurrentUser: userId === currentUserId,
     hasCurrentActivity: tmp10,
     hasRecentActivity: memo.length > 0,
   };
-  return obj;
 }

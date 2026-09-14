@@ -5,8 +5,8 @@ import UserSettings from "../../UserSettings.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-fn(11601);
-let SettingBuilders = {
+const SettingBuilders = fn(11602);
+const radio = SettingBuilders.createRadio({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t["ms+Tme"]);
@@ -14,27 +14,27 @@ let SettingBuilders = {
   parent: fn(8079).MobileUserSettings.CONNECTED_GAMES,
   useOptions: function useInGameDMsSettingOptions() {
     return noop.useMemo(() => {
-      let obj = {
+      const obj = {
         value: preloaded_user_settings.SlayerSDKReceiveInGameDMs.SLAYER_SDK_RECEIVE_IN_GAME_DMS_ALL,
         label: null,
       };
       const intl = util.intl;
       obj.label = intl.string(util.t.JIFnN9);
       const items = [obj, ,];
-      obj = {
+      const obj2 = {
         value: preloaded_user_settings.SlayerSDKReceiveInGameDMs.SLAYER_SDK_RECEIVE_IN_GAME_DMS_USERS_WITH_GAME,
         label: null,
       };
       const intl2 = util.intl;
-      obj.label = intl2.string(util.t.rRdsk1);
-      items[1] = obj;
-      obj = {
+      obj2.label = intl2.string(util.t.rRdsk1);
+      items[1] = obj2;
+      const obj3 = {
         value: preloaded_user_settings.SlayerSDKReceiveInGameDMs.SLAYER_SDK_RECEIVE_IN_GAME_DMS_NONE,
         label: null,
       };
       const intl3 = util.intl;
-      obj.label = intl3.string(util.t.AolKwN);
-      items[2] = obj;
+      obj3.label = intl3.string(util.t.AolKwN);
+      items[2] = obj3;
       return items;
     }, []);
   },
@@ -59,9 +59,8 @@ let SettingBuilders = {
     const items = [intl.string(util.t.XpBObB)];
     return items;
   },
-};
-SettingBuilders = SettingBuilders.createRadio(SettingBuilders);
+});
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/InGameDMsSetting.tsx");
 
-export default SettingBuilders;
+export default radio;

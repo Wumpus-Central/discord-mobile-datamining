@@ -4,6 +4,8 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 import GameServerStore from "../../../game_server/GameServerStore.tsx";
 import GuildPowerupsStore from "../GuildPowerupsStore.tsx";
 
+const require = globalThis.__r;
+
 require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/powerups/hooks/useFeaturedExpiringPowerup.tsx");
@@ -34,7 +36,7 @@ export default function useFeaturedExpiringPowerup(arg0) {
         unlockedPowerups = {};
       }
       const items = [];
-      let arraySpreadResult = HermesBuiltin.arraySpread(Object.values(unlockedPowerups), 0);
+      const arraySpreadResult = HermesBuiltin.arraySpread(Object.values(unlockedPowerups), 0);
       let entitlements;
       if (stateFromStores1 != null) {
         entitlements = stateFromStores1.entitlements;
@@ -42,7 +44,7 @@ export default function useFeaturedExpiringPowerup(arg0) {
       if (entitlements == null) {
         entitlements = {};
       }
-      arraySpreadResult = HermesBuiltin.arraySpread(Object.values(entitlements), arraySpreadResult);
+      HermesBuiltin.arraySpread(Object.values(entitlements), arraySpreadResult);
       const found = items.filter((ends_at) => {
         let tmp = null != ends_at.ends_at;
         if (tmp) {

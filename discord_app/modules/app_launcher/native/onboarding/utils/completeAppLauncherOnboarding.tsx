@@ -8,16 +8,16 @@ let result = size.fileFinishedImporting(
 );
 
 export default function completeAppLauncherOnboarding(dismissAction) {
-  let obj = { dismissAction };
-  const result = obj.UNSAFE_markDismissibleContentAsDismissed(
+  const result = DismissibleContentUnsafeUtils.UNSAFE_markDismissibleContentAsDismissed(
     dismissible_content.DismissibleContent.APP_LAUNCHER_ONBOARDING_ACTIVITIES_BANNER,
-    obj,
+    { dismissAction },
   );
-  obj = { dismissAction };
+  const obj2 = { dismissAction };
   const result1 = DismissibleContentUnsafeUtils.UNSAFE_markDismissibleContentAsDismissed(
     dismissible_content.DismissibleContent.APP_LAUNCHER_ONBOARDING_BOTS_BANNER,
-    obj,
+    { dismissAction },
   );
+  const obj4 = { dismissAction };
   const result2 = DismissibleContentUnsafeUtils.UNSAFE_markDismissibleContentAsDismissed(
     dismissible_content.DismissibleContent.APP_LAUNCHER_ONBOARDING_APPS_BANNER,
     { dismissAction },

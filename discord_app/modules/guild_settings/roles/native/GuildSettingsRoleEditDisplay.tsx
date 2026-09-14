@@ -8,38 +8,36 @@ import GuildSettingsRolesStore from "../GuildSettingsRolesStore.tsx";
 require = fn;
 const View = fn(17).View;
 const isEveryoneRole = fn(2016).isEveryoneRole;
-const RoleColorsStyle = fn(17724).RoleColorsStyle;
-const STYLE_CONFIGS = fn(17723).STYLE_CONFIGS;
+const RoleColorsStyle = fn(17725).RoleColorsStyle;
+const STYLE_CONFIGS = fn(17724).STYLE_CONFIGS;
 const Constants = fn(1074);
 ({ DEFAULT_ROLE_COLOR: closure_9, MAX_ROLE_LENGTH: c10 } = Constants);
-let closure_11 = fn(17726).DEFAULT_GRADIENT_ROLE_COLORS;
+let closure_11 = fn(17727).DEFAULT_GRADIENT_ROLE_COLORS;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
-fn(4636);
-let createStyles = {
+const createStyles = fn(4636);
+let obj2 = {
   roleIcon: { paddingTop: 2 },
   roleIconPlaceholder: { opacity: 0.5 },
   trailingColorContainer: { flexDirection: "row", alignItems: "center", justifyContent: "center" },
   colorBlock: { marginHorizontal: 0, marginVertical: 0, marginRight: 8, minWidth: 24, height: 24, borderRadius: 3 },
-  holographicInfo: null,
+  holographicInfo: {
+    backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_INFO,
+    padding: nativeDefault.space.PX_8,
+    marginHorizontal: nativeDefault.space.PX_12,
+    marginTop: -1 * nativeDefault.space.PX_12,
+    marginBottom: nativeDefault.space.PX_12,
+    display: "flex",
+    flexDirection: "row",
+    gap: nativeDefault.space.PX_8,
+    justifyContent: "center",
+    alignItems: "center",
+    borderRadius: nativeDefault.radii.sm,
+    borderWidth: 1,
+    borderColor: nativeDefault.colors.ICON_FEEDBACK_INFO,
+  },
 };
-createStyles = {
-  backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_INFO,
-  padding: nativeDefault.space.PX_8,
-  marginHorizontal: nativeDefault.space.PX_12,
-  marginTop: -1 * nativeDefault.space.PX_12,
-  marginBottom: nativeDefault.space.PX_12,
-  display: "flex",
-  flexDirection: "row",
-  gap: nativeDefault.space.PX_8,
-  justifyContent: "center",
-  alignItems: "center",
-  borderRadius: nativeDefault.radii.sm,
-  borderWidth: 1,
-  borderColor: nativeDefault.colors.ICON_FEEDBACK_INFO,
-};
-createStyles.holographicInfo = createStyles;
-let closure_15 = createStyles.createStyles(createStyles);
+let closure_15 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_settings/roles/native/GuildSettingsRoleEditDisplay.tsx");
 
@@ -68,11 +66,12 @@ export default function GuildSettingsRoleEditDisplay(guild) {
     tmp3 = locked;
   }
   id = role.id;
+  const hasEnhancedRoleColorsForRole = guild(id[10]).useHasEnhancedRoleColorsForRole(guild.id, role);
   let obj = guild(id[10]);
-  const hasEnhancedRoleColorsForRole = obj.useHasEnhancedRoleColorsForRole(guild.id, role);
-  let obj1 = guild(id[11]);
   const items = [GuildSettingsRolesStore];
-  const stateFromStores = obj1.useStateFromStores(items, () => GuildSettingsRolesStore.getRoleStyleData(role.id));
+  const stateFromStores = guild(id[11]).useStateFromStores(items, () =>
+    GuildSettingsRolesStore.getRoleStyleData(role.id),
+  );
   if (null != stateFromStores) {
     if (hasEnhancedRoleColorsForRole) {
       SOLID = stateFromStores.currentStyle;
@@ -100,61 +99,74 @@ export default function GuildSettingsRoleEditDisplay(guild) {
         secondary_color = concat.secondary_color;
       }
     }
-    tmp4(tmp5[12]);
-    const tmp4Result = tmp4(tmp5[13]);
-    obj = { guildId: guild.id, roleId: role.id, role, size: 26 };
-    const roleIconProps = tmp4Result.useRoleIconProps(obj);
+    const tmp4Result = tmp4(tmp5[12]);
+    const canGuildUseRoleIconsResult = tmp4(tmp5[12]).canGuildUseRoleIcons(guild, role);
+    let obj3 = { guildId: guild.id, roleId: role.id, role, size: 26 };
+    const roleIconProps = tmp4(tmp5[13]).useRoleIconProps(obj3);
     if (null != roleIconProps) {
-      obj = {};
+      let obj4 = {};
       const merged = Object.assign(roleIconProps);
-      let tmp17 = closure_12(role(tmp5[14]), obj);
+      let tmp17 = closure_12(role(tmp5[14]), obj4);
       let tmp18 = role;
       let tmp19 = closure_12;
       const tmp22 = role(tmp5[14]);
     } else {
-      obj1 = { source: role(tmp5[16]), size: tmp4(tmp5[15]).IconSizes.MEDIUM };
-      tmp17 = closure_12(tmp4(tmp5[15]).Icon, obj1);
+      const obj5 = { source: role(tmp5[16]), size: tmp4(tmp5[15]).IconSizes.MEDIUM };
+      tmp17 = closure_12(tmp4(tmp5[15]).Icon, obj5);
       tmp18 = role;
       tmp19 = closure_12;
     }
     const items1 = [guild.id, id];
     const items2 = [role, id, concat, primary_color, SOLID];
     const callback = SOLID.useCallback(() => {
-      const obj = { guildId: guild.id, roleId: id };
-      obj.openLazy(asyncRequireImpl(17741, dependencyMap.paths), "RoleIcon", obj);
+      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(17742, dependencyMap.paths), "RoleIcon", {
+        guildId: guild.id,
+        roleId: id,
+      });
     }, items1);
     const items3 = [guild.id, role, id, SOLID];
     const callback1 = SOLID.useCallback(() => {
       if (SOLID === RoleColorsStyle.SOLID) {
-        let obj = {
+        const obj2 = {
           color: primary_color,
           onSelect(arg0) {
             guild(id[21]).updateRoleColor(role, arg0);
           },
         };
-        obj.openLazy(asyncRequireImpl(16386, dependencyMap.paths), "RoleColorPicker", obj);
+        ActionSheetActionCreatorsDefault.openLazy(
+          asyncRequireImpl(16388, dependencyMap.paths),
+          "RoleColorPicker",
+          obj2,
+        );
       } else if (tmp === tmp2.GRADIENT) {
-        obj = {
+        const obj4 = {
           colors: concat,
           onSelect(colors) {
             guild(id[21]).updateRoleColors(closure_1_2, colors, constants.GRADIENT);
           },
         };
-        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(17743, dependencyMap.paths), "RoleColorPicker", obj);
+        ActionSheetActionCreatorsDefault.openLazy(
+          asyncRequireImpl(17744, dependencyMap.paths),
+          "RoleColorPicker",
+          obj4,
+        );
       }
     }, items2);
     const callback2 = SOLID.useCallback(() => {
-      const obj = {
-        guildId: guild.id,
-        role,
-        roleStyle: SOLID,
-        onStyleChanged(currentStyle) {
-          guild(id[21]).updateRoleStyles(closure_1_2, currentStyle);
+      ActionSheetActionCreatorsDefault.openLazy(
+        asyncRequireImpl(17745, dependencyMap.paths),
+        "EnhancedRoleColorsSelectStyleModal",
+        {
+          guildId: guild.id,
+          role,
+          roleStyle: SOLID,
+          onStyleChanged(currentStyle) {
+            guild(id[21]).updateRoleStyles(closure_1_2, currentStyle);
+          },
         },
-      };
-      obj.openLazy(asyncRequireImpl(17744, dependencyMap.paths), "EnhancedRoleColorsSelectStyleModal", obj);
+      );
     }, items3);
-    const obj2 = {
+    const obj6 = {
       label: null,
       value: null,
       isDisabled: null,
@@ -164,25 +176,25 @@ export default function GuildSettingsRoleEditDisplay(guild) {
       errorMessage: null,
     };
     const intl = tmp4(tmp5[25]).intl;
-    obj2.label = intl.string(tmp4(tmp5[25]).t.dLbkBk);
-    obj2.value = name;
-    obj2.isDisabled = tmp3;
-    obj2.onChange = onNameChanged;
-    obj2.maxLength = maxLength;
-    obj2.autoFocus = autoFocusInput;
+    obj6.label = intl.string(tmp4(tmp5[25]).t.dLbkBk);
+    obj6.value = name;
+    obj6.isDisabled = tmp3;
+    obj6.onChange = onNameChanged;
+    obj6.maxLength = maxLength;
+    obj6.autoFocus = autoFocusInput;
     const name2 = formErrors.name;
     let first;
     if (name2 != null) {
       first = name2[0];
     }
-    obj2.errorMessage = first;
-    const items4 = [tmp19(tmp4(tmp5[24]).TextInput, obj2), , , , ,];
-    let obj3 = { role };
-    items4[1] = tmp19(tmp18(tmp5[26]), obj3);
-    const obj4 = { label: null, onPress: null, arrow: true, subLabel: null, disabled: null };
+    obj6.errorMessage = first;
+    const items4 = [tmp19(tmp4(tmp5[24]).TextInput, obj6), , , , ,];
+    const obj7 = { role };
+    items4[1] = tmp19(tmp18(tmp5[26]), obj7);
+    const obj8 = { label: null, onPress: null, arrow: true, subLabel: null, disabled: null };
     const intl2 = tmp4(tmp5[25]).intl;
-    obj4.label = intl2.string(tmp4(tmp5[25]).t["9wVJRB"]);
-    obj4.onPress = callback2;
+    obj8.label = intl2.string(tmp4(tmp5[25]).t["9wVJRB"]);
+    obj8.onPress = callback2;
     let labelString;
     if (found != null) {
       labelString = found.labelString;
@@ -192,81 +204,81 @@ export default function GuildSettingsRoleEditDisplay(guild) {
       const intl3 = tmp4(tmp5[25]).intl;
       str = intl3.string(found.labelString);
     }
-    obj4.subLabel = str;
-    obj4.disabled = tmp3;
-    const items5 = [tmp19(tmp4(tmp5[28]).TableRow, obj4)];
+    obj8.subLabel = str;
+    obj8.disabled = tmp3;
+    const items5 = [tmp19(tmp4(tmp5[28]).TableRow, obj8)];
     if (SOLID === RoleColorsStyle.HOLOGRAPHIC) {
-      const obj5 = { hasIcons: false, children: null };
+      const obj9 = { hasIcons: false, children: null };
       items5[1] = tmp36;
-      obj5.children = items5;
-      items4[2] = closure_13(tmp4(tmp5[27]).TableRowGroup, obj5);
+      obj9.children = items5;
+      items4[2] = closure_13(tmp4(tmp5[27]).TableRowGroup, obj9);
       let tmp30Result = SOLID === RoleColorsStyle.HOLOGRAPHIC;
       if (tmp30Result) {
-        const obj6 = { style: tmp.holographicInfo, children: null };
-        const obj7 = { size: "sm", color: tmp18(tmp5[9]).colors.ICON_FEEDBACK_INFO };
-        const items6 = [tmp19(tmp4(tmp5[33]).CircleInformationIcon, obj7)];
-        const obj8 = { variant: "text-sm/normal", children: null };
+        const obj10 = { style: tmp.holographicInfo, children: null };
+        const obj11 = { size: "sm", color: tmp18(tmp5[9]).colors.ICON_FEEDBACK_INFO };
+        const items6 = [tmp19(tmp4(tmp5[33]).CircleInformationIcon, obj11)];
+        const obj12 = { variant: "text-sm/normal", children: null };
         const intl5 = tmp4(tmp5[25]).intl;
-        obj8.children = intl5.string(tmp18(tmp5[35]).tBhCyr);
-        items6[1] = tmp19(tmp4(tmp5[34]).Text, obj8);
-        obj6.children = items6;
-        tmp30Result = closure_13(primary_color, obj6);
+        obj12.children = intl5.string(tmp18(tmp5[35]).tBhCyr);
+        items6[1] = tmp19(tmp4(tmp5[34]).Text, obj12);
+        obj10.children = items6;
+        tmp30Result = closure_13(primary_color, obj10);
       }
       items4[3] = tmp30Result;
       let tmp19Result = null;
       if (canGuildUseRoleIconsResult) {
-        const obj9 = { disabled: tmp3, label: null, onPress: null, arrow: true, trailing: null };
+        const obj13 = { disabled: tmp3, label: null, onPress: null, arrow: true, trailing: null };
         const intl6 = tmp4(tmp5[25]).intl;
-        obj9.label = intl6.string(tmp4(tmp5[25]).t.B9grJw);
-        obj9.onPress = callback;
+        obj13.label = intl6.string(tmp4(tmp5[25]).t.B9grJw);
+        obj13.onPress = callback;
         const items7 = [tmp.roleIcon];
         let roleIconPlaceholder = null == roleIconProps;
         if (roleIconPlaceholder) {
           roleIconPlaceholder = tmp.roleIconPlaceholder;
         }
-        const obj10 = { hasIcons: false, children: null };
-        const obj11 = { style: null, children: null };
+        const obj14 = { hasIcons: false, children: null };
+        const obj15 = { style: null, children: null };
         items7[1] = roleIconPlaceholder;
-        obj11.style = items7;
-        obj11.children = tmp17;
-        obj9.trailing = tmp19(primary_color, obj11);
-        obj10.children = tmp19(tmp4(tmp5[28]).TableRow, obj9);
-        tmp19Result = tmp19(tmp4(tmp5[27]).TableRowGroup, obj10);
+        obj15.style = items7;
+        obj15.children = tmp17;
+        obj13.trailing = tmp19(primary_color, obj15);
+        obj14.children = tmp19(tmp4(tmp5[28]).TableRow, obj13);
+        tmp19Result = tmp19(tmp4(tmp5[27]).TableRowGroup, obj14);
       }
       items4[4] = tmp19Result;
       let tmp52 = tmp3;
       if (!tmp3) {
         tmp52 = tmp2;
       }
-      const obj12 = { disabled: tmp52, label: null, value: null, onValueChange: null, subLabel: null };
+      const obj16 = { disabled: tmp52, label: null, value: null, onValueChange: null, subLabel: null };
       const intl7 = tmp4(tmp5[25]).intl;
-      obj12.label = intl7.string(tmp4(tmp5[25]).t.iVW5w4);
-      obj12.value = hoist;
-      obj12.onValueChange = onHoistChanged;
+      obj16.label = intl7.string(tmp4(tmp5[25]).t.iVW5w4);
+      obj16.value = hoist;
+      obj16.onValueChange = onHoistChanged;
       const intl8 = tmp4(tmp5[25]).intl;
-      obj12.subLabel = intl8.string(tmp4(tmp5[25]).t.vceJPk);
-      const items8 = [tmp19(tmp4(tmp5[36]).TableSwitchRow, obj12)];
+      obj16.subLabel = intl8.string(tmp4(tmp5[25]).t.vceJPk);
+      const items8 = [tmp19(tmp4(tmp5[36]).TableSwitchRow, obj16)];
       if (!tmp3) {
         tmp3 = tmp2;
       }
-      const obj13 = { children: null };
-      const obj14 = { hasIcons: false, children: null };
-      const obj15 = { disabled: tmp3, label: null, value: null, onValueChange: null };
+      const obj17 = { children: null };
+      const obj18 = { hasIcons: false, children: null };
+      const obj19 = { disabled: tmp3, label: null, value: null, onValueChange: null };
       const intl9 = tmp4(tmp5[25]).intl;
-      obj15.label = intl9.format(tmp4(tmp5[25]).t.DTXoJQ, {});
-      obj15.value = mentionable;
-      obj15.onValueChange = onMentionableChanged;
-      items8[1] = tmp19(tmp4(tmp5[36]).TableSwitchRow, obj15);
-      obj14.children = items8;
-      items4[5] = closure_13(tmp4(tmp5[27]).TableRowGroup, obj14);
-      obj13.children = items4;
-      return closure_13(closure_14, obj13);
+      obj19.label = intl9.format(tmp4(tmp5[25]).t.DTXoJQ, {});
+      obj19.value = mentionable;
+      obj19.onValueChange = onMentionableChanged;
+      items8[1] = tmp19(tmp4(tmp5[36]).TableSwitchRow, obj19);
+      obj18.children = items8;
+      items4[5] = closure_13(tmp4(tmp5[27]).TableRowGroup, obj18);
+      obj17.children = items4;
+      return closure_13(closure_14, obj17);
     } else {
-      const obj16 = { label: null, onPress: null, arrow: true, trailing: null, subLabel: null, disabled: null };
+      const obj20 = { label: null, onPress: null, arrow: true, trailing: null, subLabel: null, disabled: null };
       const intl4 = tmp4(tmp5[25]).intl;
-      obj16.label = intl4.string(tmp4(tmp5[25]).t["5NC5YW"]);
-      obj16.onPress = callback1;
-      const obj17 = { style: tmp.trailingColorContainer, children: null };
+      obj20.label = intl4.string(tmp4(tmp5[25]).t["5NC5YW"]);
+      obj20.onPress = callback1;
+      const obj21 = { style: tmp.trailingColorContainer, children: null };
       if (SOLID === RoleColorsStyle.GRADIENT) {
         let primary_color1;
         if (concat != null) {
@@ -282,21 +294,21 @@ export default function GuildSettingsRoleEditDisplay(guild) {
         if (concat != null) {
           tertiary_color = concat.tertiary_color;
         }
-        const obj18 = { colors: null, start: null, end: null, style: null };
+        const obj22 = { colors: null, start: null, end: null, style: null };
         items9[2] = tertiary_color;
         const found1 = items9.filter(tmp4(tmp5[30]).isNotNullish);
-        obj18.colors = found1.map((item) => guild(id[31]).int2hex(item));
-        obj18.start = { x: 0, y: 0 };
-        obj18.end = { x: 1, y: 0 };
-        obj18.style = tmp.colorBlock;
-        tmp19Result = tmp19(tmp18(tmp5[29]), obj18);
+        obj22.colors = found1.map((item) => guild(id[31]).int2hex(item));
+        obj22.start = { x: 0, y: 0 };
+        obj22.end = { x: 1, y: 0 };
+        obj22.style = tmp.colorBlock;
+        let tmp19Result3 = tmp19(tmp18(tmp5[29]), obj22);
         const tmp18Result = tmp18(tmp5[29]);
       } else {
-        const obj19 = { color: primary_color, style: tmp.colorBlock };
-        tmp19Result = tmp19(tmp18(tmp5[32]), obj19);
+        const obj23 = { color: primary_color, style: tmp.colorBlock };
+        tmp19Result3 = tmp19(tmp18(tmp5[32]), obj23);
       }
-      obj17.children = tmp19Result;
-      obj16.trailing = tmp19(primary_color, obj17);
+      obj21.children = tmp19Result3;
+      obj20.trailing = tmp19(primary_color, obj21);
       if (SOLID === RoleColorsStyle.GRADIENT) {
         let num2;
         if (concat != null) {
@@ -306,7 +318,7 @@ export default function GuildSettingsRoleEditDisplay(guild) {
           num2 = 0;
         }
         const int2hexResult = tmp4(tmp5[31]).int2hex(num2);
-        const tmp4Result1 = tmp4(tmp5[31]);
+        const tmp4Result6 = tmp4(tmp5[31]);
         let num3;
         if (concat != null) {
           num3 = concat.secondary_color;
@@ -317,16 +329,17 @@ export default function GuildSettingsRoleEditDisplay(guild) {
         const _HermesInternal = HermesInternal;
         concat = HermesInternal.concat;
         let combined = concat(int2hexResult, ", ", tmp4(tmp5[31]).int2hex(num3), "]");
-        const tmp4Result2 = tmp4(tmp5[31]);
+        const tmp4Result7 = tmp4(tmp5[31]);
       } else {
         combined = tmp4(tmp5[31]).int2hex(primary_color);
-        const tmp4Result3 = tmp4(tmp5[31]);
+        const tmp4Result8 = tmp4(tmp5[31]);
       }
-      obj16.subLabel = combined;
-      obj16.disabled = tmp3;
-      tmp19(tmp4(tmp5[28]).TableRow, obj16);
+      obj20.subLabel = combined;
+      obj20.disabled = tmp3;
+      tmp19(tmp4(tmp5[28]).TableRow, obj20);
     }
-    canGuildUseRoleIconsResult = tmp4Result.canGuildUseRoleIcons(guild, role);
+    const tmp4Result5 = tmp4(tmp5[13]);
   }
   SOLID = RoleColorsStyle.SOLID;
+  let obj2 = guild(id[11]);
 }

@@ -24,13 +24,13 @@ function Text(arg0) {
 }
 function Section(arg0) {
   ({ title, children } = arg0);
-  let obj = { children: null };
-  obj = { children: null };
+  const obj = { children: null };
+  const obj2 = { children: null };
   const items = [title, ":"];
-  obj.children = items;
-  const items1 = [__initData(Text, obj)];
-  obj = { style: closure_18().indent, children };
-  items1[1] = closure_1_14(hasOwnProperty, obj);
+  obj2.children = items;
+  const items1 = [__initData(Text, obj2)];
+  const tmp = closure_18();
+  items1[1] = closure_1_14(hasOwnProperty, { style: closure_18().indent, children });
   obj.children = items1;
   return __initData(value2, obj);
 }
@@ -42,67 +42,67 @@ function ObjectKV(obj) {
     value = obj;
     if (Array.isArray(obj)) {
       const iter = obj.at(-1);
-      value = undefined;
+      value2 = undefined;
       if (iter != null) {
-        value = iter.value;
+        value2 = iter.value;
       }
       value = obj;
-      if (typeof value === "number") {
+      if (typeof value2 === "number") {
         value = obj.at(-1).value;
       }
     }
     if (null != value) {
       if (typeof value === "object") {
-        obj = { title: tmp, children: null };
-        obj = { obj: value };
-        obj.children = closure_2_14(ObjectKV, obj);
-        let tmp4Result = closure_2_14(Section, obj, tmp);
+        const obj2 = { title: tmp, children: null };
+        const obj3 = { obj: value };
+        obj2.children = closure_2_14(ObjectKV, obj3);
+        let tmp4Result = closure_2_14(Section, obj2, tmp);
       }
       return tmp4Result;
     }
-    const obj1 = { style: row.row, children: null };
+    const obj4 = { style: row.row, children: null };
     const items = [tmp, ": "];
     if (typeof asString === "function") {
-      const obj2 = { children: null };
+      const obj5 = { children: null };
       items[2] = "" + value;
-      obj2.children = items;
-      obj1.children = tmp6(tmp7, obj2);
-      tmp4Result = tmp4(tmp5, obj1, tmp);
+      obj5.children = items;
+      obj4.children = tmp6(tmp7, obj5);
+      tmp4Result = tmp4(tmp5, obj4, tmp);
     } else {
       throw new TypeError("Trying to call a non-function");
     }
   });
 }
 function RTCDebugGeneral() {
-  let obj = guildId(504);
   const items = [RTCConnectionStore];
-  const stateFromStoresObject = obj.useStateFromStoresObject(
+  const stateFromStoresObject = guildId(504).useStateFromStoresObject(
     items,
     () => ({ guildId: RTCConnectionStore.getGuildId(), channelId: RTCConnectionStore.getChannelId() }),
     [],
   );
   guildId = stateFromStoresObject.guildId;
   const channelId = stateFromStoresObject.channelId;
-  let obj1 = guildId(504);
+  const obj = guildId(504);
   const items1 = [GuildStore];
   const items2 = [guildId];
-  const stateFromStores = obj1.useStateFromStores(items1, () => GuildStore.getGuild(guildId), items2);
-  let obj2 = guildId(504);
+  const stateFromStores = guildId(504).useStateFromStores(items1, () => GuildStore.getGuild(guildId), items2);
+  const obj2 = guildId(504);
   const items3 = [ChannelStore];
   const items4 = [channelId];
-  const stateFromStores1 = obj2.useStateFromStores(items3, () => ChannelStore.getChannel(channelId), items4);
-  obj = { id: guildId, name: null };
+  const stateFromStores1 = guildId(504).useStateFromStores(items3, () => ChannelStore.getChannel(channelId), items4);
+  const obj4 = { id: guildId, name: null };
   let name = null;
+  const obj3 = guildId(504);
   if (null != stateFromStores) {
     name = stateFromStores.name;
   }
-  obj = { title: "general", children: null };
-  obj1 = { obj: null };
-  obj2 = { guild: obj, channel: { id: channelId, name: channelId(4789)(stateFromStores1) } };
-  obj.name = name;
-  obj1.obj = obj2;
-  obj.children = closure_14(ObjectKV, obj1);
-  return closure_14(Section, obj);
+  const obj5 = { title: "general", children: null };
+  const obj6 = { obj: null };
+  const tmp4 = channelId(4789)(stateFromStores1);
+  obj4.name = name;
+  obj6.obj = { guild: obj4, channel: { id: channelId, name: channelId(4789)(stateFromStores1) } };
+  obj5.children = closure_14(ObjectKV, obj6);
+  return closure_14(Section, obj5);
 }
 function RTCDebugContext(context) {
   context = context.context;
@@ -114,16 +114,17 @@ function RTCDebugContext(context) {
     mapped = null;
     if (0 !== stateFromStores.length) {
       mapped = stateFromStores.map((mediaEngineConnectionId) => {
-        let obj = { title: "" + context + " - " + mediaEngineConnectionId.mediaEngineConnectionId, children: null };
+        const obj = { title: "" + context + " - " + mediaEngineConnectionId.mediaEngineConnectionId, children: null };
         let tmp4 = null;
         if (null != closure_25[context]) {
           tmp4 = closure_2_14(tmp3, {});
         }
         const items = [tmp4, , ,];
-        obj = { title: "transport", children: null };
-        obj = { obj: mediaEngineConnectionId.transport };
-        obj.children = closure_2_14(ObjectKV, obj);
-        items[1] = closure_2_14(Section, obj);
+        const obj2 = {
+          title: "transport",
+          children: closure_2_14(ObjectKV, { obj: mediaEngineConnectionId.transport }),
+        };
+        items[1] = closure_2_14(Section, obj2);
         const outbound = mediaEngineConnectionId.rtp.outbound;
         items[2] = closure_2_14(Section, {
           title: "outbound",
@@ -133,11 +134,11 @@ function RTCDebugContext(context) {
         const keys = Object.keys(inbound);
         let tmp6Result = null;
         if (0 !== keys.length) {
-          const obj2 = {
+          const obj5 = {
             title: "inbound",
             children: keys.map((userId) => closure_2_14(closure_2_23, { userId, data: inbound[userId] }, userId)),
           };
-          tmp6Result = closure_2_14(Section, obj2);
+          tmp6Result = closure_2_14(Section, obj5);
         }
         items[3] = tmp6Result;
         obj.children = items;
@@ -153,49 +154,50 @@ const MediaEngineContextTypes = fn(4661).MediaEngineContextTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15, Fragment: closure_16 } = jsxProd);
 function asString(arg0) {}
-fn(4636);
+const createStyles = fn(4636);
 let obj = { container: null, scroller: null, indent: null, row: null, text: null, buttonClose: null };
-obj = {};
+let obj3 = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);
 const ColorUtils = fn(4486);
-obj.backgroundColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.BLACK, 0.7);
-obj.container = obj;
+obj3.backgroundColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.BLACK, 0.7);
+obj.container = obj3;
 obj.scroller = { flex: 1, margin: 8 };
 obj.indent = { marginLeft: 16 };
 obj.row = { flexDirection: "row" };
-const createStyles = { color: nativeDefault.unsafe_rawColors.WHITE, fontSize: 14 };
-obj.text = createStyles;
+obj.text = { color: nativeDefault.unsafe_rawColors.WHITE, fontSize: 14 };
 obj.buttonClose = { flexGrow: 0, margin: 8 };
 let closure_18 = createStyles.createStyles(obj);
 let closure_22 = noop.memo((data) => {
   data = data.data;
-  let obj = { title: data.type, children: null };
-  obj = { obj: Object.assign(data, Object.assign({ type: 0 })) };
-  obj.children = closure_1_14(ObjectKV, obj);
+  const obj = {
+    title: data.type,
+    children: closure_1_14(ObjectKV, { obj: Object.assign(data, Object.assign({ type: 0 })) }),
+  };
   return closure_1_14(Section, obj);
 });
 let closure_23 = noop.memo((userId) => {
   userId = userId.userId;
   const data = userId.data;
-  let obj = userId(504);
   const items = [UserStore];
   const items1 = [userId];
-  const str = obj.useStateFromStores(items, () => UserStore.getUser(userId), items1);
+  const str = userId(504).useStateFromStores(items, () => UserStore.getUser(userId), items1);
   const combined = "" + userId;
   let sum = combined;
   if (null != str) {
     const _HermesInternal = HermesInternal;
     sum = combined + " (" + str.toString() + ")";
   }
-  obj = { title: sum, children: data.map((data, index) => closure_1_14(closure_1_22, { data }, index)) };
-  return closure_14(Section, obj);
+  const obj = userId(504);
+  return closure_14(Section, {
+    title: sum,
+    children: data.map((data, index) => closure_1_14(closure_1_22, { data }, index)),
+  });
 });
 let closure_25 = {
   [MediaEngineContextTypes.DEFAULT]: function DefaultContextInfo() {
-    let obj = initialize;
     const items = [RTCConnectionStore];
-    obj = {
-      obj: obj.useStateFromStoresObject(items, () => {
+    return closure_1_14(ObjectKV, {
+      obj: initialize.useStateFromStoresObject(items, () => {
         const obj = {
           mediaSessionId: RTCConnectionStore.getMediaSessionId(),
           state: RTCConnectionStore.getState(),
@@ -208,16 +210,15 @@ let closure_25 = {
         };
         return obj;
       }, []),
-    };
-    return closure_1_14(ObjectKV, obj);
+    });
   },
   [MediaEngineContextTypes.STREAM]: function StreamContextInfo() {
     const first = StreamRTCConnectionStore.getAllActiveStreamKeys()[0];
-    let obj = first(504);
     const items = [StreamRTCConnectionStore];
     const items1 = [first];
-    obj = {
-      obj: obj.useStateFromStoresObject(
+    let obj = first(504);
+    return closure_14(ObjectKV, {
+      obj: first(504).useStateFromStoresObject(
         items,
         () => {
           const obj = {
@@ -229,8 +230,7 @@ let closure_25 = {
         },
         items1,
       ),
-    };
-    return closure_14(ObjectKV, obj);
+    });
   },
 };
 const size = fn(2);
@@ -246,19 +246,19 @@ export default function RTCDebugOverlay(arg0) {
   const rect = { top: true, left: true, right: true, bottom: true, style: null, children: null };
   const items = [tmp.container, style];
   rect.style = items;
-  let obj = { style: tmp.scroller, indicatorStyle: "white", children: null };
+  const obj = { style: tmp.scroller, indicatorStyle: "white", children: null };
   const items1 = [closure_1_14(RTCDebugGeneral, {})];
   const values = Object.values(MediaEngineContextTypes);
   items1[1] = values.map((context) => closure_1_14(RTCDebugContext, { context }, context));
   obj.children = items1;
   const items2 = [__initData(timestampProducer, obj)];
-  obj = { style: tmp.buttonClose, children: null };
-  const obj1 = { text: null, onPress: null };
+  const obj2 = { style: tmp.buttonClose, children: null };
+  const obj3 = { text: null, onPress: null };
   const intl = util.intl;
-  obj1.text = intl.string(util.t.cpT0Cq);
-  obj1.onPress = onClose;
-  obj.children = closure_1_14(components_Button_Button.Button, obj1);
-  items2[1] = closure_1_14(hasOwnProperty, obj);
+  obj3.text = intl.string(util.t.cpT0Cq);
+  obj3.onPress = onClose;
+  obj2.children = closure_1_14(components_Button_Button.Button, obj3);
+  items2[1] = closure_1_14(hasOwnProperty, obj2);
   rect.children = items2;
   return __initData(common_SafeAreaView.SafeAreaPaddingView, rect);
 }

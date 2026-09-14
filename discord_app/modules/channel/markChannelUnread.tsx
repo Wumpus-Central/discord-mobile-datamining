@@ -2,6 +2,8 @@
 import markUnreadDefault from "../messages/markUnread.tsx";
 import ReadStateStore from "../../stores/ReadStateStore.tsx";
 
+const require = globalThis.__r;
+
 const require = fn;
 const ReadState = fn(4651).ReadState;
 const size = fn(2);

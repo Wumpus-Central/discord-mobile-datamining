@@ -29,24 +29,24 @@ prototype["maybeSendCard"] = function maybeSendCard(id, found) {
           if (
             self.trySendGiftingPromptSystemMessage(id, constants2.FRIEND_ANNIVERSARY, found, constants.SEND_MESSAGE)
           ) {
-            let tmpResult = tmp(10872);
-            const result = tmpResult.logMessageGiftIntentShown(found);
+            const result = tmp(10873).logMessageGiftIntentShown(found);
             const userAffinity = self.getUserAffinity(found);
-            tmpResult = tmp(8894);
-            let obj = {
-              name: tmp(1250).ImpressionNames.GIFT_INTENT_UNREAD_NOTIFICATION,
-              type: tmp(1250).ImpressionTypes.VIEW,
+            const tmpResult = tmp(10873);
+            const obj = {
+              name: tmp(1248).ImpressionNames.GIFT_INTENT_UNREAD_NOTIFICATION,
+              type: tmp(1248).ImpressionTypes.VIEW,
               properties: null,
             };
-            obj = { gift_intent_type: constants2.FRIEND_ANNIVERSARY, dm_affinity: null, channel_id: null };
+            const obj2 = { gift_intent_type: constants2.FRIEND_ANNIVERSARY, dm_affinity: null, channel_id: null };
             let dmProbability;
             if (userAffinity != null) {
               dmProbability = userAffinity.dmProbability;
             }
-            obj.dm_affinity = dmProbability;
-            obj.channel_id = id;
-            obj.properties = obj;
-            tmpResult.trackImpression(obj);
+            obj2.dm_affinity = dmProbability;
+            obj2.channel_id = id;
+            obj.properties = obj2;
+            tmp(8894).trackImpression(obj);
+            const tmpResult2 = tmp(8894);
           }
         } else {
           MessageStore.whenReady(id, () => {

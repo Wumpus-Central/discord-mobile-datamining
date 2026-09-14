@@ -18,8 +18,8 @@ let closure_5 = async function _createGatewayCheckoutContext(arg0) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj3 = { value, done: true };
+        return obj3;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -32,20 +32,18 @@ let closure_5 = async function _createGatewayCheckoutContext(arg0) {
             throw value;
           } else if (arg0 === 2) {
             c3 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj4 = { value, done: true };
+            return obj4;
           } else {
             closure_1 = tmp2;
             closure_129_1 = undefined;
             closure_129_0 = null;
             if (null != paymentGateway) {
               if (paymentGateway.paymentGateway === constants.BRAINTREE) {
-                let obj1 = BraintreeUtils;
                 c2 = 1;
                 c3 = 1;
-                obj1 = { value: null, done: false };
-                obj1.value = obj1.collectDeviceData();
-                return obj1;
+                const obj5 = { value: BraintreeUtils.collectDeviceData(), done: false };
+                return obj5;
               }
             }
             c3 = 3;
@@ -56,12 +54,12 @@ let closure_5 = async function _createGatewayCheckoutContext(arg0) {
         } else if (arg0 !== 2) {
           closure_129_1 = value;
           if (null != closure_129_1) {
-            const obj2 = { braintree_device_data: closure_129_1 };
-            closure_129_0 = obj2;
+            const obj6 = { braintree_device_data: closure_129_1 };
+            closure_129_0 = obj6;
           }
         }
         c3 = 3;
-        obj = { value, done: true };
+        const obj = { value, done: true };
         return obj;
       } catch (tmp14) {
         c3 = tmp;
@@ -90,17 +88,17 @@ export const createGatewayCheckoutContext = function createGatewayCheckoutContex
   return applyArgumentsResult;
 };
 export const captureBillingException = function captureBillingException(error, tags) {
-  let obj = {};
+  const obj2 = {};
   const merged = Object.assign(tags);
   tags = undefined;
   if (tags != null) {
     tags = tags.tags;
   }
-  obj = {};
+  const obj3 = {};
   const merged1 = Object.assign(tags);
-  obj.app_context = "billing";
-  obj.tags = obj;
-  obj.captureException(error, obj);
+  obj3.app_context = "billing";
+  obj2.tags = obj3;
+  SentryUtilsDefault.captureException(error, obj2);
 };
 export const isExpectedHttpClientError = function isExpectedHttpClientError(status) {
   let tmp2 = status instanceof HTTPUtils.HTTPResponseError;
@@ -126,17 +124,17 @@ export const isExpectedHttpClientError = function isExpectedHttpClientError(stat
   return tmp2;
 };
 export const captureBillingMessage = function captureBillingMessage(arg0, tags) {
-  let obj = {};
+  const obj2 = {};
   const merged = Object.assign(tags);
   tags = undefined;
   if (tags != null) {
     tags = tags.tags;
   }
-  obj = {};
+  const obj3 = {};
   const merged1 = Object.assign(tags);
-  obj.app_context = "billing";
-  obj.tags = obj;
-  obj.captureMessage(arg0, obj);
+  obj3.app_context = "billing";
+  obj2.tags = obj3;
+  SentryUtilsDefault.captureMessage(arg0, obj2);
 };
 export function calculateStandardizedUnits(billingPeriod, billingPeriod2) {
   let tmp = "P1M" === billingPeriod;

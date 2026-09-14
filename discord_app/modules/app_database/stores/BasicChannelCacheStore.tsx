@@ -24,13 +24,13 @@ class BasicChannelCacheStore extends Store {
             return closure_0.handleLogout(arg0);
           }
     };
-    tmp2 = new tmp2(closure_0(closure_1[4]), obj, new.target, tmp2, tmp, new.target);
-    closure_0 = tmp2;
+    tmp21 = new tmp2(closure_0(closure_1[4]), obj, new.target, tmp2, tmp, new.target);
+    closure_0 = tmp21;
     map = new Map();
-    tmp2.channels = map;
+    tmp21.channels = map;
     map1 = new Map();
-    tmp2.guilds = map1;
-    return tmp2;
+    tmp21.guilds = map1;
+    return tmp21;
   }
 }
 const prototype = BasicChannelCacheStore.prototype;

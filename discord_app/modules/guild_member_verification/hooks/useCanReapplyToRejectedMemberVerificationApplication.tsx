@@ -5,6 +5,8 @@ import noop from "../../../../_runtime/metro/00019__.js";
 import InviteStore from "../../../stores/InviteStore.tsx";
 import UserGuildJoinRequestStore from "../UserGuildJoinRequestStore.tsx";
 
+const require = globalThis.__r;
+
 const require = fn;
 const GuildFeatures = fn(1074).GuildFeatures;
 const size = fn(2);
@@ -33,8 +35,8 @@ export const useCanReapplyToRejectedMemberVerificationApplication =
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
-          let obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           return { value: "HermesInternal", done: null };
         }
@@ -47,18 +49,19 @@ export const useCanReapplyToRejectedMemberVerificationApplication =
               throw value;
             } else if (arg0 === 2) {
               c5 = 3;
-              obj = { value, done: true };
-              return obj;
+              const obj4 = { value, done: true };
+              return obj4;
             } else {
               c4 = 1;
               inviteKeyForGuildId = inviteKeyForGuildId.getInviteKeyForGuildId(closure_0);
               if (null != inviteKeyForGuildId) {
-                let obj1 = tmp3(callback[7]);
                 c2 = 2;
                 c5 = 1;
-                obj1 = { value: null, done: false };
-                obj1.value = obj1.fetchVerificationForm(closure_0, inviteKeyForGuildId);
-                return obj1;
+                const obj5 = {
+                  value: tmp3(callback[7]).fetchVerificationForm(closure_0, inviteKeyForGuildId),
+                  done: false,
+                };
+                return obj5;
               }
             }
           } else if (1 === tmp7) {
@@ -72,7 +75,7 @@ export const useCanReapplyToRejectedMemberVerificationApplication =
             c4 = 0;
             tmp3(false);
             c5 = 3;
-            obj = { value, done: true };
+            const obj = { value, done: true };
             return obj;
           }
           c4 = 0;

@@ -4,9 +4,11 @@ import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
+const require = globalThis.__r;
+
 const require = fn;
-let closure_6 = fn(16041).doesRegistrationHaveIdentityType;
-const RegistrationConstants = fn(16042);
+let closure_6 = fn(16043).doesRegistrationHaveIdentityType;
+const RegistrationConstants = fn(16044);
 ({
   authStateToRegisterTransitionStep: closure_7,
   RegisterTransitionSteps: closure_8,
@@ -26,15 +28,14 @@ export default function VerifyPhone(phone) {
   noop = undefined;
   c6 = undefined;
   ({ title, description, sourceState } = phone);
-  const tmp = _slicedToArray(noop.useState(false), 2);
-  _slicedToArray = tmp[1];
+  [obj.loading, _slicedToArray] = noop.useState(false);
   [tmp3, c5] = _slicedToArray(noop.useState(null), 2);
   let tmp2 = _slicedToArray(noop.useState(null), 2);
   [tmp5, c6] = _slicedToArray(noop.useState(false), 2);
   closure_7 = noop.useRef(false);
   const context = noop.useContext(require("Auth").TrackRegistrationContext);
   const tmp4 = _slicedToArray(noop.useState(false), 2);
-  onPhoneTokenReceived(16057)(closure_7(sourceState));
+  onPhoneTokenReceived(16059)(closure_7(sourceState));
   const items = [context];
   const effect = noop.useEffect(() => {
     if (_undefined()) {
@@ -56,8 +57,7 @@ export default function VerifyPhone(phone) {
     if (v3()) {
       context({ step: context.PHONE_VERIFICATION, actionType: callback.SUBMITTED });
     }
-    let obj4 = onPhoneTokenReceived(7148);
-    yield obj4.verifyPhone(closure_0, closure_0, false);
+    yield onPhoneTokenReceived(7148).verifyPhone(closure_0, closure_0, false);
     if (1 === tmp7) {
       v0 = 0;
       closure_129_1 = closure_3;
@@ -72,8 +72,7 @@ export default function VerifyPhone(phone) {
       }
       if (!message) {
         const intl = closure_0(1114).intl;
-        obj4 = { statusPageURL: constants.STATUS };
-        message = intl.format(closure_0(1114).t.aTVNes, obj4);
+        message = intl.format(closure_0(1114).t.aTVNes, { statusPageURL: constants.STATUS });
       }
       _undefined(message);
       v3 = 3;
@@ -108,8 +107,8 @@ export default function VerifyPhone(phone) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -122,22 +121,22 @@ export default function VerifyPhone(phone) {
             throw value;
           } else if (arg0 === 2) {
             c3 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
             closure_1 = tmp4;
             _undefined(true);
             c2 = 1;
             c3 = 1;
-            const obj1 = { value: onCodeEntered(closure_0), done: false };
-            return obj1;
+            const obj4 = { value: onCodeEntered(closure_0), done: false };
+            return obj4;
           }
         } else if (arg0 === 1) {
           c3 = 3;
           throw value;
         } else if (arg0 === 2) {
           c3 = 3;
-          obj = { value, done: true };
+          const obj = { value, done: true };
           return obj;
         } else {
           _undefined(false);
@@ -182,11 +181,10 @@ export default function VerifyPhone(phone) {
     loading: null,
     disableKeyboardAvoidingView: true,
   };
-  const tmp7 = onPhoneTokenReceived(16057);
+  const tmp7 = onPhoneTokenReceived(16059);
   obj.codeType = require("CodeField").CodeType.NUMERIC;
   obj.footer = memo;
   obj.disabled = tmp5;
-  obj.loading = tmp[0];
   return jsx(onPhoneTokenReceived(7183), {
     title,
     description,

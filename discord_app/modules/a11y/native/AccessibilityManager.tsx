@@ -13,7 +13,7 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ AccessibilityInfo: closure_4, Appearance: hasOwnProperty } = get_ActivityIndicator);
 const AnalyticEvents = fn(1074).AnalyticEvents;
-const SystemTheme = fn(1186).SystemTheme;
+const SystemTheme = fn(1184).SystemTheme;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/a11y/native/AccessibilityManager.tsx");
 
@@ -31,8 +31,9 @@ export default {
       const result = self.updateScreenReaderEnabled(event);
     });
     const subscription1 = DispatcherDefault.subscribe("ACCESSIBILITY_COLORBLIND_TOGGLE", () => {
-      const obj = { colorblind_enabled: colorblindMode.colorblindMode };
-      obj.track(constants.LOCAL_SETTINGS_UPDATED, obj);
+      AnalyticsUtilsDefault.track(constants.LOCAL_SETTINGS_UPDATED, {
+        colorblind_enabled: colorblindMode.colorblindMode,
+      });
     });
     let result = this.startAnnouncementQueue();
   },
@@ -55,8 +56,8 @@ export default {
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
-          let obj = { value, done: true };
-          return obj;
+          const obj2 = { value, done: true };
+          return obj2;
         } else {
           return { value: "HermesInternal", done: null };
         }
@@ -69,23 +70,23 @@ export default {
               throw value;
             } else if (arg0 === 2) {
               c3 = 3;
-              obj = { value, done: true };
-              return obj;
+              const obj3 = { value, done: true };
+              return obj3;
             } else {
               closure_1 = tmp5;
               closure_0 = tmp2;
               closure_128_0 = undefined;
               c2 = 1;
               c3 = 1;
-              const obj1 = { value: screenReaderEnabled.isScreenReaderEnabled(), done: false };
-              return obj1;
+              const obj4 = { value: screenReaderEnabled.isScreenReaderEnabled(), done: false };
+              return obj4;
             }
           } else if (arg0 === 1) {
             c3 = 3;
             throw value;
           } else if (arg0 === 2) {
             c3 = 3;
-            obj = { value, done: true };
+            const obj = { value, done: true };
             return obj;
           } else {
             closure_128_0 = value;

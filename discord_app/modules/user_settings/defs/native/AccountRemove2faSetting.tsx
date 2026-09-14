@@ -15,17 +15,17 @@ const pressable = SettingBuilders.createPressable({
   },
   parent: SettingsConstants.MobileUserSettings.ACCOUNT,
   onPress: function remove2FA() {
-    const obj = { title: null, body: null, cancelText: null, onConfirm: null };
+    const obj2 = { title: null, body: null, cancelText: null, onConfirm: null };
     const intl = util.intl;
-    obj.title = intl.string(util.t["D+aE7g"]);
+    obj2.title = intl.string(util.t["D+aE7g"]);
     const intl2 = util.intl;
-    obj.body = intl2.string(util.t.EA4ZEk);
+    obj2.body = intl2.string(util.t.EA4ZEk);
     const intl3 = util.intl;
-    obj.cancelText = intl3.string(util.t["ETE/oC"]);
-    obj.onConfirm = function onConfirm() {
+    obj2.cancelText = intl3.string(util.t["ETE/oC"]);
+    obj2.onConfirm = function onConfirm() {
       return MFAActionCreatorsDefault.disable();
     };
-    obj.show(obj);
+    AlertActionCreatorsDefault.show(obj2);
   },
   useIsDisabled() {
     return null !== account_MFAUtils.use2FARemoveDisableReason();

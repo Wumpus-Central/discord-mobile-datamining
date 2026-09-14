@@ -18,7 +18,7 @@ function handleProjectUpsert(project) {
   project = project.project;
   const result = map.set(project.id, project);
 }
-function pickNumbers(value2, arg1) {
+function pickNumbers(value7, arg1) {
   obj = {};
   const entries = Object.entries(arg1);
   while (tmp2 !== undefined) {
@@ -26,8 +26,8 @@ function pickNumbers(value2, arg1) {
     [tmp6, tmp7] = tmp5;
     if (tmp7 == null) {
       let tmp8;
-      if (value2 != null) {
-        tmp8 = value2[tmp6];
+      if (value7 != null) {
+        tmp8 = value7[tmp6];
       }
       tmp7 = tmp8;
     }
@@ -152,15 +152,15 @@ prototype["getTrace"] = function getTrace(arg0) {
   return value;
 };
 prototype["getHistoryState"] = function getHistoryState(arg0, arg1) {
-  map9.get(arg0);
-  value = undefined;
+  value = map9.get(arg0);
+  value2 = undefined;
   if (value != null) {
-    value = value.get(arg1);
+    value2 = value.get(arg1);
   }
-  if (value == null) {
-    value = closure_19;
+  if (value2 == null) {
+    value2 = closure_19;
   }
-  return value;
+  return value2;
 };
 prototype["getProjectsFetchState"] = function getProjectsFetchState() {
   return obj;
@@ -348,9 +348,9 @@ obj = {
     }
     if ("failed" !== status) {
       if (null != value) {
-        value = map7.get(projectId);
-        if (null != value) {
-          const result = map7.set(projectId, value.filter((kind) => {
+        const value6 = map7.get(projectId);
+        if (null != value6) {
+          const result = map7.set(projectId, value6.filter((kind) => {
             const snapshot = _undefined.snapshot;
             const hasItem = snapshot.has("" + kind.kind + ":" + kind.id);
             let hasItem1 = !hasItem;
@@ -363,70 +363,69 @@ obj = {
           }));
         }
       }
-      obj = { status: "loaded", truncated, count };
-      let value1 = map9.get(projectId);
-      if (null == value1) {
+      const obj2 = { status: "loaded", truncated, count };
+      let value7 = map9.get(projectId);
+      if (null == value7) {
         const _Map2 = Map;
         map = new Map();
         const result1 = map9.set(projectId, map);
-        value1 = map;
+        value7 = map;
       }
-      const result2 = value1.set(scope, obj);
+      const result2 = value7.set(scope, obj2);
     } else {
-      value2 = map9.get(projectId);
-      let value3;
-      if (value2 != null) {
-        value3 = value2.get(scope);
+      const value8 = map9.get(projectId);
+      let value9;
+      if (value8 != null) {
+        value9 = value8.get(scope);
       }
       let flag;
-      if (value3 != null) {
-        flag = value3.truncated;
+      if (value9 != null) {
+        flag = value9.truncated;
       }
       if (flag == null) {
         flag = false;
       }
       obj = { status: "failed", truncated: flag, count: null };
       let num;
-      if (value3 != null) {
-        num = value3.count;
+      if (value9 != null) {
+        num = value9.count;
       }
       if (num == null) {
         num = 0;
       }
       obj.count = num;
-      let value4 = map9.get(projectId);
-      if (null == value4) {
+      let value10 = map9.get(projectId);
+      if (null == value10) {
         const _Map = Map;
         map1 = new Map();
         const result3 = map9.set(projectId, map1);
-        value4 = map1;
+        value10 = map1;
       }
-      const result4 = value4.set(scope, obj);
+      const result4 = value10.set(scope, obj);
     }
   },
   VIBEGRATIONS_LOG_APPEND: function handleLogAppend(arg0) {
     ({ projectId, log } = arg0);
     const seq = log.seq;
     if (null != seq) {
-      obj = map5;
       value = map5.get(projectId);
       if (null != value) {
         if (seq <= value) {
           return false;
         }
       }
-      const result = obj.set(projectId, seq);
+      const result = map5.set(projectId, seq);
     }
-    obj = { key: null, log };
+    const obj2 = { key: null, log };
     const sum = c13 + 1;
     c13 = sum;
-    obj.key = sum;
-    value = map4.get(projectId);
-    if (null == value) {
-      const items = [obj];
+    obj2.key = sum;
+    value2 = map4.get(projectId);
+    if (null == value2) {
+      const items = [obj2];
       let combined = items;
     } else {
-      combined = value.concat(obj);
+      combined = value2.concat(obj2);
     }
     let substr = combined;
     if (combined.length > 500) {
@@ -465,23 +464,23 @@ obj = {
     const entry_id = toolCall.entry_id;
     let tmp5 = null != entry_id;
     if (tmp5) {
-      value = map8.get(projectId);
-      let value1;
-      if (value != null) {
-        value1 = value.get(entry_id);
+      const value5 = map8.get(projectId);
+      let value6;
+      if (value5 != null) {
+        value6 = value5.get(entry_id);
       }
-      tmp5 = value1 === tmp4;
+      tmp5 = value6 === tmp4;
     }
     if (tmp5) {
       return false;
     } else {
-      value2 = map7.get(projectId);
-      if (value2 == null) {
-        value2 = closure_16;
+      let value7 = map7.get(projectId);
+      if (value7 == null) {
+        value7 = closure_16;
       }
       const tool = "tool";
       const id = toolCall.id;
-      const findIndexResult = value2.findIndex((kind) => {
+      const findIndexResult = value7.findIndex((kind) => {
         let tmp = kind.kind === model;
         if (tmp) {
           tmp = kind.id === id;
@@ -490,28 +489,31 @@ obj = {
       });
       let tmp11 = null;
       if (-1 !== findIndexResult) {
-        tmp11 = value2[findIndexResult];
+        tmp11 = value7[findIndexResult];
       }
       let summary = toolCall.summary;
       if (summary == null) {
-        summary = undefined;
+        let summary1;
         if (tmp11 != null) {
-          summary = tmp11.summary;
+          summary1 = tmp11.summary;
         }
+        summary = summary1;
       }
       let fields = toolCall.fields;
       if (fields == null) {
-        fields = undefined;
+        let fields1;
         if (tmp11 != null) {
-          fields = tmp11.fields;
+          fields1 = tmp11.fields;
         }
+        fields = fields1;
       }
       let schema = toolCall.schema;
       if (schema == null) {
-        schema = undefined;
+        let schema1;
         if (tmp11 != null) {
-          schema = tmp11.schema;
+          schema1 = tmp11.schema;
         }
+        schema = schema1;
       }
       let detail_id = toolCall.detail_id;
       if (detail_id == null) {
@@ -539,85 +541,85 @@ obj = {
       }
       obj = { kind: "tool", id: toolCall.id };
       if (null != turn_id) {
-        obj = { turnId: turn_id };
-        let obj1 = obj;
+        const obj3 = { turnId: turn_id };
+        let obj4 = obj3;
       } else {
-        obj1 = {};
+        obj4 = {};
       }
-      const merged = Object.assign(obj1);
+      const merged = Object.assign(obj4);
       if (null != parent_id) {
-        const obj2 = { parentId: parent_id };
-        let obj3 = obj2;
+        const obj5 = { parentId: parent_id };
+        let obj6 = obj5;
       } else {
-        obj3 = {};
+        obj6 = {};
       }
-      const merged1 = Object.assign(obj3);
+      const merged1 = Object.assign(obj6);
       ({ agent: obj2.agent, tool: obj2.tool, status: obj2.status } = toolCall);
       if (null != summary) {
-        const obj4 = { summary };
-        let obj5 = obj4;
+        const obj7 = { summary };
+        let obj8 = obj7;
       } else {
-        obj5 = {};
+        obj8 = {};
       }
-      const merged2 = Object.assign(obj5);
+      const merged2 = Object.assign(obj8);
       if (null != fields) {
-        const obj6 = { fields };
-        let obj7 = obj6;
+        const obj9 = { fields };
+        let obj10 = obj9;
       } else {
-        obj7 = {};
+        obj10 = {};
       }
-      const merged3 = Object.assign(obj7);
+      const merged3 = Object.assign(obj10);
       if (null != schema) {
-        const obj8 = { schema };
-        let obj9 = obj8;
+        const obj11 = { schema };
+        let obj12 = obj11;
       } else {
-        obj9 = {};
+        obj12 = {};
       }
-      const merged4 = Object.assign(obj9);
+      const merged4 = Object.assign(obj12);
       if (null != detail_id) {
-        const obj10 = { detailId: detail_id };
-        let obj11 = obj10;
+        const obj13 = { detailId: detail_id };
+        let obj14 = obj13;
       } else {
-        obj11 = {};
+        obj14 = {};
       }
-      const merged5 = Object.assign(obj11);
+      const merged5 = Object.assign(obj14);
       if (null != toolCall.duration_ms) {
-        const obj12 = { durationMs: toolCall.duration_ms };
-        let obj13 = obj12;
+        const obj15 = { durationMs: toolCall.duration_ms };
+        let obj16 = obj15;
       } else {
-        obj13 = {};
+        obj16 = {};
       }
-      const merged6 = Object.assign(obj13);
+      const merged6 = Object.assign(obj16);
       if (null != toolCall.result_chars) {
-        const obj14 = { resultChars: toolCall.result_chars };
-        let obj15 = obj14;
+        const obj17 = { resultChars: toolCall.result_chars };
+        let obj18 = obj17;
       } else {
-        obj15 = {};
+        obj18 = {};
       }
-      const merged7 = Object.assign(obj15);
+      const merged7 = Object.assign(obj18);
       const tmp42 = true === toolCall.result_truncated ? { resultTruncated: true } : {};
       const merged8 = Object.assign(tmp42);
       if (null != toolCall.result_added) {
-        const obj16 = { resultAdded: toolCall.result_added };
-        let obj17 = obj16;
+        const obj19 = { resultAdded: toolCall.result_added };
+        let obj20 = obj19;
       } else {
-        obj17 = {};
+        obj20 = {};
       }
-      const merged9 = Object.assign(obj17);
+      const merged9 = Object.assign(obj20);
       if (null != toolCall.result_removed) {
-        const obj18 = { resultRemoved: toolCall.result_removed };
-        let obj19 = obj18;
+        const obj21 = { resultRemoved: toolCall.result_removed };
+        let obj22 = obj21;
       } else {
-        obj19 = {};
+        obj22 = {};
       }
-      const merged10 = Object.assign(obj19);
+      const merged10 = Object.assign(obj22);
       if (null != toolCall.error) {
-        const obj20 = { error: toolCall.error };
-        let obj21 = obj20;
+        const obj23 = { error: toolCall.error };
+        let obj24 = obj23;
       } else {
-        obj21 = {};
+        obj24 = {};
       }
-      const merged11 = Object.assign(obj21);
+      const merged11 = Object.assign(obj24);
       let startedAt;
       if (tmp11 != null) {
         startedAt = tmp11.startedAt;
@@ -628,34 +630,34 @@ obj = {
       obj.startedAt = startedAt;
       const entry_id2 = toolCall.entry_id;
       if (null != entry_id2) {
-        let value3 = map8.get(projectId);
-        if (null == value3) {
+        let value8 = map8.get(projectId);
+        if (null == value8) {
           const _Map = Map;
           map = new Map();
           const result = map8.set(projectId, map);
-          value3 = map;
+          value8 = map;
         }
-        const result1 = value3.set(entry_id2, tmp56);
-        if (value3.size > 800) {
-          const iter2 = value3.keys().next();
+        const result1 = value8.set(entry_id2, tmp56);
+        if (value8.size > 800) {
+          const iter2 = value8.keys().next();
           while (true !== iter2.done) {
-            let deleteResult = value3.delete(iter2.value);
-            if (value3.size <= 800) {
+            let deleteResult = value8.delete(iter2.value);
+            if (value8.size <= 800) {
               break;
             }
           }
-          const iter = value3.keys();
+          const iter = value8.keys();
         }
       }
       if (null == tmp11) {
-        const combined = value2.concat(obj);
+        const combined = value7.concat(obj);
         let substr = combined;
         if (combined.length > 400) {
           substr = combined.slice(-400);
         }
         const result2 = map7.set(projectId, substr);
       } else {
-        const substr1 = value2.slice();
+        const substr1 = value7.slice();
         substr1[findIndexResult] = obj;
         const result3 = map7.set(projectId, substr1);
       }
@@ -672,23 +674,23 @@ obj = {
     const entry_id = modelCall.entry_id;
     let tmp5 = null != entry_id;
     if (tmp5) {
-      value = map8.get(projectId);
-      let value1;
-      if (value != null) {
-        value1 = value.get(entry_id);
+      const value5 = map8.get(projectId);
+      let value6;
+      if (value5 != null) {
+        value6 = value5.get(entry_id);
       }
-      tmp5 = value1 === tmp4;
+      tmp5 = value6 === tmp4;
     }
     if (tmp5) {
       return false;
     } else {
-      value2 = map7.get(projectId);
-      if (value2 == null) {
-        value2 = closure_16;
+      let value7 = map7.get(projectId);
+      if (value7 == null) {
+        value7 = closure_16;
       }
       const model = "model";
       const id = modelCall.id;
-      const findIndexResult = value2.findIndex((kind) => {
+      const findIndexResult = value7.findIndex((kind) => {
         let tmp = kind.kind === model;
         if (tmp) {
           tmp = kind.id === id;
@@ -697,7 +699,7 @@ obj = {
       });
       let tmp11 = null;
       if (-1 !== findIndexResult) {
-        tmp11 = value2[findIndexResult];
+        tmp11 = value7[findIndexResult];
       }
       obj = { kind: "model", id: null };
       ({ id: obj2.id, turn_id } = modelCall);
@@ -717,39 +719,39 @@ obj = {
           }
           turn_id2 = turnId1;
         }
-        obj = { turnId: turn_id2 };
-        let obj1 = obj;
-      } else {
-        obj1 = {};
-      }
-      const merged = Object.assign(obj1);
-      ({ agent: obj2.agent, model: obj2.model, status: obj2.status } = modelCall);
-      const obj2 = { promptTokens: null, systemTokens: null, toolsTokens: null, messagesTokens: null, tools: null, messages: null, durationMs: null, inputTokens: null, outputTokens: null, cacheReadTokens: null, cacheWriteTokens: null, costUsd: null };
-      ({ prompt_tokens: obj5.promptTokens, system_tokens: obj5.systemTokens, tools_tokens: obj5.toolsTokens, messages_tokens: obj5.messagesTokens, tools: obj5.tools, messages: obj5.messages, duration_ms: obj5.durationMs, input_tokens: obj5.inputTokens, output_tokens: obj5.outputTokens, cache_read_tokens: obj5.cacheReadTokens, cache_write_tokens: obj5.cacheWriteTokens, cost_usd: obj5.costUsd } = modelCall);
-      const merged1 = Object.assign(pickNumbers(tmp11, obj2));
-      let estimated = modelCall.estimated;
-      if (estimated == null) {
-        estimated = undefined;
-        if (tmp11 != null) {
-          estimated = tmp11.estimated;
-        }
-      }
-      const tmp21 = true === estimated ? { estimated: true } : {};
-      const merged2 = Object.assign(tmp21);
-      if (null != modelCall.stop_reason) {
-        const obj3 = { stopReason: modelCall.stop_reason };
+        const obj3 = { turnId: turn_id2 };
         let obj4 = obj3;
       } else {
         obj4 = {};
       }
-      const merged3 = Object.assign(obj4);
-      if (null != modelCall.error) {
-        const obj5 = { error: modelCall.error };
-        let obj6 = obj5;
-      } else {
-        obj6 = {};
+      const merged = Object.assign(obj4);
+      ({ agent: obj2.agent, model: obj2.model, status: obj2.status } = modelCall);
+      ({ prompt_tokens: obj5.promptTokens, system_tokens: obj5.systemTokens, tools_tokens: obj5.toolsTokens, messages_tokens: obj5.messagesTokens, tools: obj5.tools, messages: obj5.messages, duration_ms: obj5.durationMs, input_tokens: obj5.inputTokens, output_tokens: obj5.outputTokens, cache_read_tokens: obj5.cacheReadTokens, cache_write_tokens: obj5.cacheWriteTokens, cost_usd: obj5.costUsd } = modelCall);
+      const merged1 = Object.assign(pickNumbers(tmp11, { promptTokens: null, systemTokens: null, toolsTokens: null, messagesTokens: null, tools: null, messages: null, durationMs: null, inputTokens: null, outputTokens: null, cacheReadTokens: null, cacheWriteTokens: null, costUsd: null }));
+      let estimated = modelCall.estimated;
+      if (estimated == null) {
+        let estimated1;
+        if (tmp11 != null) {
+          estimated1 = tmp11.estimated;
+        }
+        estimated = estimated1;
       }
-      const merged4 = Object.assign(obj6);
+      const tmp21 = true === estimated ? { estimated: true } : {};
+      const merged2 = Object.assign(tmp21);
+      if (null != modelCall.stop_reason) {
+        const obj7 = { stopReason: modelCall.stop_reason };
+        let obj8 = obj7;
+      } else {
+        obj8 = {};
+      }
+      const merged3 = Object.assign(obj8);
+      if (null != modelCall.error) {
+        const obj9 = { error: modelCall.error };
+        let obj10 = obj9;
+      } else {
+        obj10 = {};
+      }
+      const merged4 = Object.assign(obj10);
       let startedAt;
       if (tmp11 != null) {
         startedAt = tmp11.startedAt;
@@ -760,37 +762,38 @@ obj = {
       obj.startedAt = startedAt;
       const entry_id2 = modelCall.entry_id;
       if (null != entry_id2) {
-        let value3 = map8.get(projectId);
-        if (null == value3) {
+        let value8 = map8.get(projectId);
+        if (null == value8) {
           const _Map = Map;
           map = new Map();
           const result = map8.set(projectId, map);
-          value3 = map;
+          value8 = map;
         }
-        const result1 = value3.set(entry_id2, tmp32);
-        if (value3.size > 800) {
-          const iter2 = value3.keys().next();
+        const result1 = value8.set(entry_id2, tmp32);
+        if (value8.size > 800) {
+          const iter2 = value8.keys().next();
           while (true !== iter2.done) {
-            let deleteResult = value3.delete(iter2.value);
-            if (value3.size <= 800) {
+            let deleteResult = value8.delete(iter2.value);
+            if (value8.size <= 800) {
               break;
             }
           }
-          const iter = value3.keys();
+          const iter = value8.keys();
         }
       }
       if (null == tmp11) {
-        const combined = value2.concat(obj);
+        const combined = value7.concat(obj);
         let substr = combined;
         if (combined.length > 400) {
           substr = combined.slice(-400);
         }
         const result2 = map7.set(projectId, substr);
       } else {
-        const substr1 = value2.slice();
+        const substr1 = value7.slice();
         substr1[findIndexResult] = obj;
         const result3 = map7.set(projectId, substr1);
       }
+      const obj6 = { promptTokens: null, systemTokens: null, toolsTokens: null, messagesTokens: null, tools: null, messages: null, durationMs: null, inputTokens: null, outputTokens: null, cacheReadTokens: null, cacheWriteTokens: null, costUsd: null };
     }
   }
 };

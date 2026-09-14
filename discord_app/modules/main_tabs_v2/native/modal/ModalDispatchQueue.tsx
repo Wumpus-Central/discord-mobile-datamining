@@ -20,7 +20,7 @@ prototype["flush"] = function flush() {
       let queue = self.queue;
       let arr = queue.shift();
       if (arr != null) {
-        let arrResult = arr();
+        let arr1Result = arr();
       }
     } while (self.queue.length > 0);
   }

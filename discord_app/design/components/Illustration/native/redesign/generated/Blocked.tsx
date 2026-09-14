@@ -3,6 +3,8 @@ import shared from "../../../../../shared.tsx";
 import _mod8349 from "../../index.tsx";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 
+const require = globalThis.__r;
+
 require = fn;
 const Image = fn(17).Image;
 const jsx = fn(21).jsx;
@@ -10,48 +12,47 @@ const size = fn(2);
 const result = size.fileFinishedImporting("design/components/Illustration/native/redesign/generated/Blocked.tsx");
 
 export const getBlockedSource = function getBlockedSource(theme) {
-  const obj = {
+  return _mod8349.getIllustrationSource(theme, {
     dark() {
-      return require("../../../../../../../_runtime/metro/14891__.js");
-    },
-    darker() {
       return require("../../../../../../../_runtime/metro/14892__.js");
     },
-    light() {
+    darker() {
       return require("../../../../../../../_runtime/metro/14893__.js");
     },
-  };
-  return obj.getIllustrationSource(theme, obj);
+    light() {
+      return require("../../../../../../../_runtime/metro/14894__.js");
+    },
+  });
 };
 export const useBlockedSource = function useBlockedSource() {
-  const obj = {
+  const obj = shared;
+  return _mod8349.getIllustrationSource(obj.useThemeContext().theme, {
     dark() {
-      return require("../../../../../../../_runtime/metro/14891__.js");
-    },
-    darker() {
       return require("../../../../../../../_runtime/metro/14892__.js");
     },
-    light() {
+    darker() {
       return require("../../../../../../../_runtime/metro/14893__.js");
     },
-  };
-  return _mod8349.getIllustrationSource(obj.useThemeContext().theme, obj);
+    light() {
+      return require("../../../../../../../_runtime/metro/14894__.js");
+    },
+  });
 };
 export const Blocked = function Blocked(arg0) {
-  let obj = {
+  const obj = shared;
+  const obj4 = {};
+  const illustrationSource = _mod8349.getIllustrationSource(obj.useThemeContext().theme, {
     dark() {
-      return require("../../../../../../../_runtime/metro/14891__.js");
-    },
-    darker() {
       return require("../../../../../../../_runtime/metro/14892__.js");
     },
-    light() {
+    darker() {
       return require("../../../../../../../_runtime/metro/14893__.js");
     },
-  };
-  obj = {};
-  const illustrationSource = _mod8349.getIllustrationSource(obj.useThemeContext().theme, obj);
+    light() {
+      return require("../../../../../../../_runtime/metro/14894__.js");
+    },
+  });
   const merged = Object.assign(arg0);
-  obj.source = illustrationSource;
+  obj4.source = illustrationSource;
   return <Image />;
 };

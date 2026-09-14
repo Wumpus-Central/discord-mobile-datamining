@@ -62,15 +62,15 @@ prototype["getAdDecisionByPlacementAndAdCreativeId"] = function getAdDecisionByP
   questPlacementFromQuestContent,
   bountyId,
 ) {
-  map.get(questPlacementFromQuestContent);
-  value = undefined;
+  value = map.get(questPlacementFromQuestContent);
+  value2 = undefined;
   if (value != null) {
-    value = value.get(bountyId);
+    value2 = value.get(bountyId);
   }
-  if (value == null) {
-    value = null;
+  if (value2 == null) {
+    value2 = null;
   }
-  return value;
+  return value2;
 };
 prototype["getBountyVideoProgress"] = function getBountyVideoProgress(bountyId) {
   value = map.get(bountyId);

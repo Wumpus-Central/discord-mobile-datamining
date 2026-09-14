@@ -14,12 +14,12 @@ class SectionTitle {
     tmp = closure_9();
     obj = closure_0(closure_3[6]);
     typeConsolidationEyebrow = obj.useTypeConsolidationEyebrow("GuildRoleSubscriptionCard", "text-xs/bold");
-    obj = { variant: typeConsolidationEyebrow.variant, color: "text-default", style: null, children: global.children };
+    obj1 = { variant: typeConsolidationEyebrow.variant, color: "text-default", style: null, children: global.children };
     items = [,];
     items[0] = tmp.sectionTitle;
     items[1] = typeConsolidationEyebrow.style;
-    obj.style = items;
-    return jsx(closure_0(closure_3[7]).Text, obj);
+    obj1.style = items;
+    return jsx(closure_0(closure_3[7]).Text, obj1);
   }
 }
 class Separator {
@@ -31,11 +31,11 @@ class Separator {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, Fragment: closure_7, jsxs: closure_8 } = jsxProd);
-fn(4636);
-const createStyles = { sectionTitle: { textTransform: "uppercase" }, separator: null };
+const createStyles = fn(4636);
+let obj2 = { sectionTitle: { textTransform: "uppercase" }, separator: null };
 let size = { width: "100%", height: 1, backgroundColor: nativeDefault.colors.BORDER_SUBTLE, marginVertical: 24 };
-createStyles.separator = size;
-const React7 = createStyles.createStyles(createStyles);
+obj2.separator = size;
+const React7 = createStyles.createStyles(obj2);
 size = fn(2);
 const result = size.fileFinishedImporting(
   "modules/guild_role_subscriptions/native/components/listing_elements/GuildRoleSubscriptionCard.tsx",
@@ -45,87 +45,83 @@ export { SectionTitle };
 export { Separator };
 export const Content = function Content(arg0) {
   ({ listingId, guildId } = arg0);
-  let obj = GuildRoleSubscriptionListingEditStateUtilsAll;
-  const first = _slicedToArray(obj.useTierEmojiIds(listingId, guildId), 1)[0];
-  let obj1 = GuildRoleSubscriptionListingEditStateUtilsAll;
-  const first1 = _slicedToArray(obj1.useChannelBenefits(listingId), 1)[0];
-  let obj2 = GuildRoleSubscriptionListingEditStateUtilsAll;
-  const first2 = _slicedToArray(obj2.useIntangibleBenefits(listingId), 1)[0];
-  let obj3 = GuildRoleSubscriptionListingEditStateUtilsAll;
-  const role = obj3.useRole(listingId, guildId);
-  obj = {
+  const first = _slicedToArray(GuildRoleSubscriptionListingEditStateUtilsAll.useTierEmojiIds(listingId, guildId), 1)[0];
+  const first1 = _slicedToArray(GuildRoleSubscriptionListingEditStateUtilsAll.useChannelBenefits(listingId), 1)[0];
+  const first2 = _slicedToArray(GuildRoleSubscriptionListingEditStateUtilsAll.useIntangibleBenefits(listingId), 1)[0];
+  const role = GuildRoleSubscriptionListingEditStateUtilsAll.useRole(listingId, guildId);
+  const obj5 = {
     renderGap() {
       return closure_1_6(Separator, {});
     },
     children: null,
   };
-  obj = { children: null };
-  obj1 = { children: null };
+  const obj6 = { children: null };
+  const obj7 = { children: null };
   const intl = guildId(1114).intl;
-  obj1.children = intl.string(guildId(1114).t["DJ+bGu"]);
+  obj7.children = intl.string(guildId(1114).t["DJ+bGu"]);
   const items = [
-    closure_6(SectionTitle, obj1),
-    closure_6(guildId(1178).Spacer, { size: 8 }),
-    closure_6(guildId(15321).GuildRoleSubscriptionMemberPreview, { guildId, role }),
+    closure_6(SectionTitle, obj7),
+    closure_6(guildId(1176).Spacer, { size: 8 }),
+    closure_6(guildId(15322).GuildRoleSubscriptionMemberPreview, { guildId, role }),
   ];
-  obj.children = items;
-  const items1 = [closure_8(closure_7, obj), , ,];
+  obj6.children = items;
+  const items1 = [closure_8(closure_7, obj6), , ,];
   let tmp4Result = null;
   if (first.size > 0) {
-    obj2 = { children: null };
-    obj3 = { children: null };
+    const obj8 = { children: null };
+    const obj9 = { children: null };
     const intl2 = guildId(1114).intl;
-    const obj4 = { numEmojis: first.size };
-    obj3.children = intl2.format(guildId(1114).t.oDeFmv, obj4);
-    const items2 = [closure_6(SectionTitle, obj3), closure_6(guildId(1178).Spacer, { size: 14 })];
-    const obj5 = { emojiIds: null, guildId: null };
+    const obj10 = { numEmojis: first.size };
+    obj9.children = intl2.format(guildId(1114).t.oDeFmv, obj10);
+    const items2 = [closure_6(SectionTitle, obj9), closure_6(guildId(1176).Spacer, { size: 14 })];
+    const obj11 = { emojiIds: null, guildId: null };
     const items3 = [];
     HermesBuiltin.arraySpread(first, 0);
-    obj5.emojiIds = items3;
-    obj5.guildId = guildId;
-    items2[2] = closure_6(GuildRoleSubscriptionEmojiGalleryDefault, obj5);
-    obj2.children = items2;
-    tmp4Result = closure_8(closure_7, obj2);
+    obj11.emojiIds = items3;
+    obj11.guildId = guildId;
+    items2[2] = closure_6(GuildRoleSubscriptionEmojiGalleryDefault, obj11);
+    obj8.children = items2;
+    tmp4Result = closure_8(closure_7, obj8);
   }
   items1[1] = tmp4Result;
-  tmp4Result = null;
+  let tmp4Result3 = null;
   if (first1.length > 0) {
-    const obj6 = { children: null };
-    const obj7 = { children: null };
+    const obj12 = { children: null };
+    const obj13 = { children: null };
     const intl3 = guildId(1114).intl;
-    const obj8 = { numChannels: length };
-    obj7.children = intl3.format(guildId(1114).t.l40GUu, obj8);
-    const items4 = [closure_6(SectionTitle, obj7), closure_6(guildId(1178).Spacer, { size: 14 })];
-    const obj9 = {
+    const obj14 = { numChannels: length };
+    obj13.children = intl3.format(guildId(1114).t.l40GUu, obj14);
+    const items4 = [closure_6(SectionTitle, obj13), closure_6(guildId(1176).Spacer, { size: 14 })];
+    const obj15 = {
       gap: 14,
       children: first1.map((benefit) =>
         timestampProducer(GuildRoleSubscriptionBenefitRow.ChannelBenefitRow, { benefit, guildId }, benefit.ref_id),
       ),
     };
-    items4[2] = closure_6(guildId(10474).GappedList, obj9);
-    obj6.children = items4;
-    tmp4Result = closure_8(closure_7, obj6);
+    items4[2] = closure_6(guildId(10475).GappedList, obj15);
+    obj12.children = items4;
+    tmp4Result3 = closure_8(closure_7, obj12);
   }
-  items1[2] = tmp4Result;
-  let tmp4Result1 = null;
+  items1[2] = tmp4Result3;
+  let tmp4Result4 = null;
   if (first2.length > 0) {
-    const obj10 = { children: null };
-    const obj11 = { children: null };
+    const obj16 = { children: null };
+    const obj17 = { children: null };
     const intl4 = guildId(1114).intl;
-    const obj12 = { numIntangibles: length2 };
-    obj11.children = intl4.format(guildId(1114).t["4V/Mfi"], obj12);
-    const items5 = [closure_6(SectionTitle, obj11), closure_6(guildId(1178).Spacer, { size: 14 })];
-    const obj13 = {
+    const obj18 = { numIntangibles: length2 };
+    obj17.children = intl4.format(guildId(1114).t["4V/Mfi"], obj18);
+    const items5 = [closure_6(SectionTitle, obj17), closure_6(guildId(1176).Spacer, { size: 14 })];
+    const obj19 = {
       gap: 14,
       children: first2.map((benefit, index) =>
         timestampProducer(GuildRoleSubscriptionBenefitRow.IntangibleBenefitRow, { benefit, guildId }, index),
       ),
     };
-    items5[2] = closure_6(guildId(10474).GappedList, obj13);
-    obj10.children = items5;
-    tmp4Result1 = closure_8(closure_7, obj10);
+    items5[2] = closure_6(guildId(10475).GappedList, obj19);
+    obj16.children = items5;
+    tmp4Result4 = closure_8(closure_7, obj16);
   }
-  items1[3] = tmp4Result1;
-  obj.children = items1;
-  return closure_8(guildId(10474).GappedList, obj);
+  items1[3] = tmp4Result4;
+  obj5.children = items1;
+  return closure_8(guildId(10475).GappedList, obj5);
 };

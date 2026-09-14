@@ -2,6 +2,8 @@
 import ManagerRegistryShared from "ManagerRegistryShared.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
+const require = globalThis.__r;
+
 const obj = {
   AcceptInviteManager: {
     actions: ["DISPLAYED_INVITE_SHOW", "DISPLAYED_INVITE_CLEAR", "DEFERRED_INVITE_SHOW", "REGISTER_SUCCESS"],

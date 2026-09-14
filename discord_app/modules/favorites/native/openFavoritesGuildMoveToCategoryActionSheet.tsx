@@ -3,11 +3,14 @@ import FolderIcon2 from "../../../design/components/Icon/native/redesign/generat
 import Sheet_showSimpleActionSheet from "../../../design/components/Sheet/native/showSimpleActionSheet.native.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
+const require = globalThis.__r;
+
 let result = size.fileFinishedImporting("modules/favorites/native/openFavoritesGuildMoveToCategoryActionSheet.tsx");
 
 export default function openFavoritesGuildMoveToCategoryActionSheet(arg0, title) {
   ({ destinations, perform: require } = title);
-  let obj = {
+  let obj = Sheet_showSimpleActionSheet;
+  const result = obj.showSimpleActionSheet({
     key: "FavoritesGuildMoveToCategory-" + arg0,
     header: { title: title.label },
     hasIcons: true,
@@ -23,6 +26,5 @@ export default function openFavoritesGuildMoveToCategoryActionSheet(arg0, title)
       };
       return obj;
     }),
-  };
-  const result = obj.showSimpleActionSheet(obj);
+  });
 }

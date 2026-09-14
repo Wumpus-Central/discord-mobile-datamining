@@ -6,6 +6,8 @@ import ShowShareActionSheetUtils from "ShowShareActionSheetUtils.tsx";
 import PlatformUtils from "../../../../discord_common/js/shared/utils/PlatformUtils.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
+const require = globalThis.__r;
+
 if (PlatformUtils.isAndroid()) {
   const nativeEventEmitter = new _mod17.NativeEventEmitter(NativeShareManagerModuleDefault);
   nativeEventEmitter.addListener("share-broadcast-receiver-app-clicked", (arg0) => {
@@ -97,13 +99,11 @@ export const showShareActionSheet = function showShareActionSheet(source, PREMIU
       }
     })
     .catch((error) => {
-      let obj = SentryUtilsDefault;
       let str = closure_1;
       if (closure_1 == null) {
         str = "";
       }
-      obj = { tags: { location: str } };
-      obj.captureException(error, obj);
+      SentryUtilsDefault.captureException(error, { tags: { location: str } });
       if (source.iOSOnlyShareCallback != null) {
         iOSOnlyShareCallback(false, null);
       }

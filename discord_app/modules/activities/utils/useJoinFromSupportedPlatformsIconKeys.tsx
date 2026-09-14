@@ -42,7 +42,7 @@ function getJoinFromSupportedPlatformsIconKeys(isGameLaunchable) {
   tmp15 = closure_3;
 }
 const ActivityGamePlatforms = fn(1074).ActivityGamePlatforms;
-let ACTIVITY_GAME_PLATFORM_TO_ICON_KEY = {
+const IconKey = {
   DESKTOP: "desktop",
   MOBILE: "mobile",
   ANDROID: "android",
@@ -51,23 +51,22 @@ let ACTIVITY_GAME_PLATFORM_TO_ICON_KEY = {
   XBOX: "xbox",
   VR: "vr",
 };
-ACTIVITY_GAME_PLATFORM_TO_ICON_KEY = {
-  [ActivityGamePlatforms.DESKTOP]: ACTIVITY_GAME_PLATFORM_TO_ICON_KEY.DESKTOP,
-  [ActivityGamePlatforms.ANDROID]: ACTIVITY_GAME_PLATFORM_TO_ICON_KEY.ANDROID,
-  [ActivityGamePlatforms.IOS]: ACTIVITY_GAME_PLATFORM_TO_ICON_KEY.IOS,
-  [ActivityGamePlatforms.XBOX]: ACTIVITY_GAME_PLATFORM_TO_ICON_KEY.XBOX,
-  [ActivityGamePlatforms.PS4]: ACTIVITY_GAME_PLATFORM_TO_ICON_KEY.PLAYSTATION,
-  [ActivityGamePlatforms.PS5]: ACTIVITY_GAME_PLATFORM_TO_ICON_KEY.PLAYSTATION,
-  [ActivityGamePlatforms.SAMSUNG]: null,
-  [ActivityGamePlatforms.EMBEDDED]: null,
-  [ActivityGamePlatforms.META_QUEST]: ACTIVITY_GAME_PLATFORM_TO_ICON_KEY.VR,
-};
 let closure_3 = [];
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/activities/utils/useJoinFromSupportedPlatformsIconKeys.tsx");
 
-export const IconKey = ACTIVITY_GAME_PLATFORM_TO_ICON_KEY;
-export { ACTIVITY_GAME_PLATFORM_TO_ICON_KEY };
+export { IconKey };
+export const ACTIVITY_GAME_PLATFORM_TO_ICON_KEY = {
+  [ActivityGamePlatforms.DESKTOP]: IconKey.DESKTOP,
+  [ActivityGamePlatforms.ANDROID]: IconKey.ANDROID,
+  [ActivityGamePlatforms.IOS]: IconKey.IOS,
+  [ActivityGamePlatforms.XBOX]: IconKey.XBOX,
+  [ActivityGamePlatforms.PS4]: IconKey.PLAYSTATION,
+  [ActivityGamePlatforms.PS5]: IconKey.PLAYSTATION,
+  [ActivityGamePlatforms.SAMSUNG]: null,
+  [ActivityGamePlatforms.EMBEDDED]: null,
+  [ActivityGamePlatforms.META_QUEST]: IconKey.VR,
+};
 export { getJoinFromSupportedPlatformsIconKeys };
 export const useJoinFromSupportedPlatformsIconKeys = function useJoinFromSupportedPlatformsIconKeys(platforms) {
   platforms = platforms.platforms;

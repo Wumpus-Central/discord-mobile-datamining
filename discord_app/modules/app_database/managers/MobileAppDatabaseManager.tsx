@@ -2,6 +2,8 @@
 import AppDatabaseManager from "../system/AppDatabaseManager.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
+const require = globalThis.__r;
+
 const items = [
   {
     name: "Channels",

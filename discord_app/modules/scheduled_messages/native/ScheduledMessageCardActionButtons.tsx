@@ -24,34 +24,34 @@ export default function ScheduledMessageCardActionButtons(arg0) {
     return ScheduledMessagesUtils.sendScheduledMessageNow(closure_1_0.scheduledMessageId);
   };
   const items = [obj, , ,];
-  obj = { label: null, IconComponent: null, action: null };
+  const obj2 = { label: null, IconComponent: null, action: null };
   const intl2 = util.intl;
-  obj.label = intl2.string(util.t.ZXE1s4);
-  obj.IconComponent = PencilIcon.PencilIcon;
-  obj.action = function action() {
+  obj2.label = intl2.string(util.t.ZXE1s4);
+  obj2.IconComponent = PencilIcon.PencilIcon;
+  obj2.action = function action() {
     return ScheduledMessagesUtils.openScheduledMessageEditContentModal(closure_1_0);
   };
-  items[1] = obj;
-  obj = { label: null, IconComponent: null, action: null };
+  items[1] = obj2;
+  const obj3 = { label: null, IconComponent: null, action: null };
   const intl3 = util.intl;
-  obj.label = intl3.string(util.t.SBcdAN);
-  obj.IconComponent = ClockIcon.ClockIcon;
-  obj.action = function action() {
+  obj3.label = intl3.string(util.t.SBcdAN);
+  obj3.IconComponent = ClockIcon.ClockIcon;
+  obj3.action = function action() {
     return ScheduledMessagesUtils.openRescheduleMessageActionSheet(
       closure_1_0.scheduledMessageId,
       closure_1_0.sendAtTimestamp,
       closure_1_0.createArgs.channelId,
     );
   };
-  items[2] = obj;
-  const obj1 = { label: null, IconComponent: null, action: null, variant: "destructive" };
+  items[2] = obj3;
+  const obj4 = { label: null, IconComponent: null, action: null, variant: "destructive" };
   const intl4 = util.intl;
-  obj1.label = intl4.string(util.t.O3sL8F);
-  obj1.IconComponent = CircleXIcon.CircleXIcon;
-  obj1.action = function action() {
+  obj4.label = intl4.string(util.t.O3sL8F);
+  obj4.IconComponent = CircleXIcon.CircleXIcon;
+  obj4.action = function action() {
     return ScheduledMessagesUtils.cancelScheduledMessage(closure_1_0.scheduledMessageId);
   };
-  items[3] = obj1;
+  items[3] = obj4;
   return jsx(ContextMenu.ContextMenu, {
     items,
     keyboardShouldPersistTaps: "handled",

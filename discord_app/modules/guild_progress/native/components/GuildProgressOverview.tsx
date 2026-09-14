@@ -24,27 +24,27 @@ class GuildProgressOverviewView {
       onLongPress,
       children: null,
     };
-    obj = { style: tmp.horizontal, children: null };
-    obj1 = { children: null };
-    obj2 = { style: null, children: title };
+    obj1 = { style: tmp.horizontal, children: null };
+    obj8 = { children: null };
+    obj9 = { style: null, children: title };
     items = [,];
     items[0] = tmp.title;
     items[1] = titleStyle;
-    obj2.style = items;
+    obj9.style = items;
     items1 = [,];
-    items1[0] = jsx(closure_0(closure_2[11]).LegacyText, obj2);
-    obj3 = { style: tmp.step, variant: "text-xs/medium", color: "text-default", children: subtitle };
-    items1[1] = jsx(closure_0(closure_2[12]).Text, obj3);
-    obj1.children = items1;
+    items1[0] = jsx(closure_0(closure_2[11]).LegacyText, obj9);
+    obj10 = { style: tmp.step, variant: "text-xs/medium", color: "text-default", children: subtitle };
+    items1[1] = jsx(closure_0(closure_2[12]).Text, obj10);
+    obj8.children = items1;
     items2 = [,];
-    items2[0] = jsxs(View, obj1);
-    obj4 = { source: closure_1(closure_2[13]) };
-    items2[1] = jsx(closure_0(closure_2[11]).Icon, obj4);
-    obj.children = items2;
+    items2[0] = jsxs(View, obj8);
+    obj11 = { source: closure_1(closure_2[13]) };
+    items2[1] = jsx(closure_0(closure_2[11]).Icon, obj11);
+    obj1.children = items2;
     items3 = [,];
-    items3[0] = jsxs(View, obj);
-    obj5 = { style: tmp.progressBar, percent: percentComplete };
-    items3[1] = jsx(closure_1(closure_2[14]), obj5);
+    items3[0] = jsxs(View, obj1);
+    obj12 = { style: tmp.progressBar, percent: percentComplete };
+    items3[1] = jsx(closure_1(closure_2[14]), obj12);
     obj.children = items3;
     return jsxs(closure_0(closure_2[10]).PressableOpacity, obj);
   }
@@ -52,25 +52,21 @@ class GuildProgressOverviewView {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-fn(4636);
-let createStyles = {
+const createStyles = fn(4636);
+let obj2 = {
   container: { padding: 16 },
   horizontal: { flexDirection: "row", justifyContent: "space-between", alignItems: "center" },
-  title: null,
-  step: null,
-  progressBar: null,
+  title: {
+    fontSize: 16,
+    lineHeight: 20,
+    fontFamily: fn(1074).Fonts.PRIMARY_SEMIBOLD,
+    color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY,
+    marginBottom: 2,
+  },
+  step: { lineHeight: 16 },
+  progressBar: { marginTop: 8 },
 };
-createStyles = {
-  fontSize: 16,
-  lineHeight: 20,
-  fontFamily: fn(1074).Fonts.PRIMARY_SEMIBOLD,
-  color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY,
-  marginBottom: 2,
-};
-createStyles.title = createStyles;
-createStyles.step = { lineHeight: 16 };
-createStyles.progressBar = { marginTop: 8 };
-const React5 = createStyles.createStyles(createStyles);
+const React5 = createStyles.createStyles(obj2);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_progress/native/components/GuildProgressOverview.tsx");
 
@@ -85,8 +81,7 @@ export default function GuildProgressOverview(guild) {
     flag2 = false;
   }
   let completed;
-  let obj = guild(completed[6]);
-  const guildProgressStep = obj.useGuildProgressStep(guild);
+  const guildProgressStep = guild(completed[6]).useGuildProgressStep(guild);
   completed = guildProgressStep.completed;
   let items = [completed, guild.id];
   ({ percentComplete, subtitle } = guildProgressStep);
@@ -95,7 +90,7 @@ export default function GuildProgressOverview(guild) {
       const result = GuildProgressActionCreatorsDefault.markCompletedProgressSeen(guild.id);
     }
   }, items);
-  obj = {
+  let obj2 = {
     titleStyle: guild.titleStyle,
     onPress() {
       if (!completed) {
@@ -105,16 +100,16 @@ export default function GuildProgressOverview(guild) {
     },
     onLongPress() {
       if (!flag) {
-        let obj = { key: "GuildProgressOverviewLongPress", options: null, hasIcons: false };
-        obj = { label: null, onPress: null };
+        const obj2 = { key: "GuildProgressOverviewLongPress", options: null, hasIcons: false };
+        const obj3 = { label: null, onPress: null };
         const intl = util.intl;
-        obj.label = intl.string(util.t.PbNxaW);
-        obj.onPress = function onPress() {
+        obj3.label = intl.string(util.t.PbNxaW);
+        obj3.onPress = function onPress() {
           flag(completed[7]).dismissProgress(id.id);
         };
-        const items = [obj];
-        obj.options = items;
-        const result = obj.showSimpleActionSheet(obj);
+        const items = [obj3];
+        obj2.options = items;
+        const result = showSimpleActionSheet.showSimpleActionSheet(obj2);
       }
     },
     title: null,
@@ -129,9 +124,9 @@ export default function GuildProgressOverview(guild) {
   } else {
     stringResult = string(t.o3HK3d);
   }
-  obj.title = stringResult;
-  obj.subtitle = subtitle;
-  obj.percentComplete = percentComplete;
-  return closure_5(GuildProgressOverviewView, obj);
+  obj2.title = stringResult;
+  obj2.subtitle = subtitle;
+  obj2.percentComplete = percentComplete;
+  return closure_5(GuildProgressOverviewView, obj2);
 }
 export { GuildProgressOverviewView };

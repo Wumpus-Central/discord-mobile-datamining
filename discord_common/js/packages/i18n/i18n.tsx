@@ -1,13 +1,11 @@
 // discord_common/js/packages/i18n/i18n.tsx
 import getSystemLocale from "getSystemLocale.tsx";
-import _modDef17344 from "../../../../_runtime/metro/17344__.js";
-import _mod17385 from "../../../../_runtime/metro/17385__.js";
+import _modDef17346 from "../../../../_runtime/metro/17346__.js";
+import _mod17387 from "../../../../_runtime/metro/17387__.js";
 import parse from "parse.tsx";
 
 require = fn;
-global.IntlMessageFormat = _modDef17344;
-const module_17353 = fn(17353);
-const module_17354 = fn(17354);
+global.IntlMessageFormat = _modDef17346;
 const module_17355 = fn(17355);
 const module_17356 = fn(17356);
 const module_17357 = fn(17357);
@@ -34,9 +32,11 @@ const module_17377 = fn(17377);
 const module_17378 = fn(17378);
 const module_17379 = fn(17379);
 const module_17380 = fn(17380);
+const module_17381 = fn(17381);
+const module_17382 = fn(17382);
 delete tmp2[tmp];
 if (typeof Intl === "undefined") {
-  fn(17381);
+  fn(17383);
 }
 const React2 = "en-US";
 class Provider {
@@ -91,9 +91,9 @@ LazyPropertyProvider.prototype["refresh"] = function refresh(_context) {
 };
 class ProxyProvider extends Provider {
   constructor(arg0) {
-    tmp = new tmp(global, new.target);
-    closure_0 = tmp;
-    tmp._createProxy = function _createProxy() {
+    tmp1 = new tmp(global, new.target);
+    closure_0 = tmp1;
+    tmp1._createProxy = function _createProxy() {
       if (_context === undefined) {
         _context = _context._context;
       }
@@ -113,8 +113,8 @@ class ProxyProvider extends Provider {
       );
       return proxy;
     };
-    tmp._parsedMessages = tmp._createProxy(tmp._context);
-    return tmp;
+    tmp1._parsedMessages = tmp1._createProxy(tmp1._context);
+    return tmp1;
   }
 }
 ProxyProvider.prototype["refresh"] = function refresh(arg0) {
@@ -135,15 +135,14 @@ _instance_members_initializer_I18N_ = function () {
   this._getParsedMessages = function _getParsedMessages(_context, arg1, _createProxy) {
     ({ defaultMessages, locale } = _context);
     if (typeof _context.messages[arg1] || defaultMessages[arg1] === "object") {
-      let obj = { messages: tmp4, defaultMessages: defaultMessages[arg1], locale };
-      return _createProxy(obj);
+      const obj3 = { messages: tmp4, defaultMessages: defaultMessages[arg1], locale };
+      return _createProxy(obj3);
     } else {
       try {
-        obj = self(17386);
-        return obj.getMessage(tmp4, locale);
+        return self(17388).getMessage(tmp4, locale);
       } catch (err) {
         if (typeof tmp3[tmp2] === "string") {
-          return self(17386).getMessage(tmp7, tmp);
+          return self(17388).getMessage(tmp7, tmp);
         } else {
           return "";
         }
@@ -343,5 +342,5 @@ prototype["_fetchMessages"] = function _fetchMessages(c2) {
 const size = fn(2);
 let result = size.fileFinishedImporting("../discord_common/js/packages/i18n/i18n.tsx");
 
-export const getSystemLocale = fn(1338).getSystemLocale;
+export const getSystemLocale = fn(1336).getSystemLocale;
 export { I18N };

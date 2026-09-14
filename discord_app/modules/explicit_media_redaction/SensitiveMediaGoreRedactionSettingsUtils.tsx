@@ -136,7 +136,7 @@ export const updateGoreContentSetting = function updateGoreContentSetting(arg0) 
   if (setting != null) {
     goreContentGuilds = setting.goreContentGuilds;
   }
-  let obj = {
+  const obj = {
     goreContentGuilds: resolveGoreSettingWithDefaults({ setting: goreContentGuilds }),
     goreContentNonFriendDm: null,
     goreContentFriendDm: null,
@@ -156,10 +156,10 @@ export const updateGoreContentSetting = function updateGoreContentSetting(arg0) 
     isFriend: true,
   });
   const GoreContentSettings2 = UserSettings.GoreContentSettings;
-  obj = {};
   const merged = Object.assign(obj);
   const merged1 = Object.assign(arg0);
-  GoreContentSettings2.updateSetting(obj);
+  GoreContentSettings2.updateSetting({});
+  const obj2 = {};
 };
 export const useSensitiveContentFilterHelpArticle = function useSensitiveContentFilterHelpArticle() {
   return noop.useMemo(() => constants.EXPLICIT_MEDIA_REDACTION, []);

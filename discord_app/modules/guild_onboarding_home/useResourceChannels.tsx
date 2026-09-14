@@ -2,6 +2,8 @@
 import ChannelStore from "../../stores/ChannelStore.tsx";
 import GuildOnboardingHomeSettingsStore from "GuildOnboardingHomeSettingsStore.tsx";
 
+const require = globalThis.__r;
+
 const require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_onboarding_home/useResourceChannels.tsx");

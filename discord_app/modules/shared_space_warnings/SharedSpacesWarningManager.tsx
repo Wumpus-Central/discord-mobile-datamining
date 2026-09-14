@@ -31,8 +31,8 @@ function handleChannelSelect(channelId) {
             blockedUserWarningDismissed = num2 > Date.now() - closure_11;
           }
           if (!blockedUserWarningDismissed) {
-            const obj = { channelId, blockedUserIds: found, ignoredUserIds: found1 };
-            const result = obj.showGdmBlockedUserModal(obj);
+            const obj2 = { channelId, blockedUserIds: found, ignoredUserIds: found1 };
+            const result = showGdmBlockedUserModal.showGdmBlockedUserModal(obj2);
           }
         }
         tmp = found.length > 0 || found1.length > 0;
@@ -94,7 +94,7 @@ function handleAppStateChanged(state) {
     }
   }
 }
-const SharedSpacesWarningStore = fn(13823);
+const SharedSpacesWarningStore = fn(13824);
 ({
   getChannelDismissTimestamp: hasOwnProperty,
   getUserDismissTimestamp: metroRequire,

@@ -32,6 +32,7 @@ import SelectedChannelStore from "../../../stores/SelectedChannelStore.tsx";
 import SelfPresenceStore from "../../../stores/SelfPresenceStore.tsx";
 import VoiceStateStore from "../../../stores/VoiceStateStore.tsx";
 
+const require = globalThis.__r;
 const getActivityJoinabilityDefault = getActivityJoinability;
 
 require = fn;
@@ -40,11 +41,9 @@ const Constants = fn(1074);
 const SpotifyConstants = fn(8458);
 ({ SpotifyEndpoints: closure_17, SpotifyResourceTypes: closure_18 } = SpotifyConstants);
 const jsx = fn(21).jsx;
-fn(4636);
-let createStyles = { icon: null };
-createStyles = { tintColor: nativeDefault.colors.CONTROL_SECONDARY_TEXT_DEFAULT };
-createStyles.icon = createStyles;
-let closure_20 = createStyles.createStyles(createStyles);
+const createStyles = fn(4636);
+let obj2 = { icon: { tintColor: nativeDefault.colors.CONTROL_SECONDARY_TEXT_DEFAULT } };
+let closure_20 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/native/UserProfileActivityButtons.tsx");
 
@@ -62,17 +61,17 @@ export const JoinActivityButton = function JoinActivityButton(user) {
     id = application.id;
   }
   const embeddedActivityForUserId = onAction.getEmbeddedActivityForUserId(user.id, id);
-  let obj = user(JOINED[19]);
   let _location;
   if (embeddedActivityForUserId != null) {
     _location = embeddedActivityForUserId.location;
   }
-  channelId = obj.getEmbeddedActivityLocationChannelId(_location);
-  let tmp5Result = tmp5(JOINED[20]);
-  closure_7 = tmp5Result.useStateFromStores([], () =>
+  channelId = user(JOINED[19]).getEmbeddedActivityLocationChannelId(_location);
+  const obj = user(JOINED[19]);
+  const tmp2 = onAction;
+  closure_7 = user(JOINED[20]).useStateFromStores([], () =>
     getActivityChannelIdDefault({ channelId, userId: user.id, activity }),
   );
-  tmp5Result = tmp5(JOINED[20]);
+  const tmp5Result = user(JOINED[20]);
   const items = [
     analyticsLocations,
     GuildStore,
@@ -83,9 +82,9 @@ export const JoinActivityButton = function JoinActivityButton(user) {
     PermissionStore,
     LocalActivityStore,
     SelfPresenceStore,
-    onAction,
+    tmp2,
   ];
-  const stateFromStores = tmp5Result.useStateFromStores(items, () =>
+  const stateFromStores = user(JOINED[20]).useStateFromStores(items, () =>
     getActivityJoinabilityDefault({
       isEmbedded: true,
       user,
@@ -118,7 +117,7 @@ export const JoinActivityButton = function JoinActivityButton(user) {
           const intl = tmp5(JOINED[25]).intl;
           stringResult = intl.string(tmp5(JOINED[25]).t["4i2vj+"]);
         }
-        obj = {
+        const obj2 = {
           text: stringResult,
           icon: jsx(tmp5(JOINED[26]).AppsIcon, { size: "sm", color: "white" }),
           variant: "active",
@@ -126,8 +125,8 @@ export const JoinActivityButton = function JoinActivityButton(user) {
           onPress: null,
         };
         JOINED = tmp5(JOINED[22]).ActivityJoinability.JOINED;
-        obj.disabled = stateFromStores === JOINED;
-        obj.onPress = function onPress() {
+        obj2.disabled = stateFromStores === JOINED;
+        obj2.onPress = function onPress() {
           onAction({ action: "PRESS_JOIN_BUTTON" });
           handleJoinEmbeddedActivityDefault({
             applicationId: application.id,
@@ -156,7 +155,6 @@ export const JoinGameActivityButton = function JoinGameActivityButton(onAction) 
   let JOINED = dependencyMap;
   const analyticsLocations = useAnalyticsLocationsDefault().analyticsLocations;
   application = { id: application.id, deeplink_uri: application.deepLinkUri };
-  let obj = useStateFromStores;
   const items = [
     analyticsLocations,
     GuildStore,
@@ -169,7 +167,7 @@ export const JoinGameActivityButton = function JoinGameActivityButton(onAction) 
     SelfPresenceStore,
     onAction,
   ];
-  const stateFromStores = obj.useStateFromStores(items, () =>
+  const stateFromStores = useStateFromStores.useStateFromStores(items, () =>
     getActivityJoinabilityDefault({
       user,
       currentUser,
@@ -200,12 +198,22 @@ export const JoinGameActivityButton = function JoinGameActivityButton(onAction) 
         const intl = util.intl;
         stringResult = intl.string(util.t.VJlc0S);
       }
-      obj = { text: stringResult, variant: "active", disabled: null, onPress: null };
+      let obj2 = { text: stringResult, variant: "active", disabled: null, onPress: null };
       JOINED = getActivityJoinability.ActivityJoinability.JOINED;
-      obj.disabled = stateFromStores === JOINED;
-      obj.onPress = function onPress() {
+      obj2.disabled = stateFromStores === JOINED;
+      obj2.onPress = function onPress() {
         onAction({ action: "PRESS_JOIN_BUTTON" });
-        const obj = {
+        const joined = GamesActionCreatorsDefault.join({
+          userId: user.id,
+          sessionId: session_id.session_id,
+          application,
+          channelId: null,
+          messageId: null,
+          applicationActivity: session_id,
+          source: "UserProfile",
+          analyticsLocations,
+        });
+        const obj2 = {
           userId: user.id,
           sessionId: session_id.session_id,
           application,
@@ -215,7 +223,6 @@ export const JoinGameActivityButton = function JoinGameActivityButton(onAction) 
           source: "UserProfile",
           analyticsLocations,
         };
-        const joined = obj.join(obj);
         ActionSheetActionCreatorsDefault.hideAllActionSheets();
       };
       jsx(components_Button_Button.Button, { text: stringResult, variant: "active", disabled: null, onPress: null });
@@ -227,14 +234,14 @@ export const PlayOnSpotifyButton = function PlayOnSpotifyButton(arg0) {
   ({ activity, onAction: require } = arg0);
   const sync_id = activity.sync_id;
   let tmp4 = null;
-  if (sync_id(11019)(activity)) {
+  if (sync_id(11020)(activity)) {
     tmp4 = null;
     if (null != sync_id) {
       let obj = { text: null, icon: null, variant: "secondary", onPress: null };
       const intl = util.intl;
-      obj = { platform: activity.name };
-      obj.text = intl.formatToPlainString(util.t.LEgD7t, obj);
-      obj = { size: native.Icon.Sizes.SMALL, source: sync_id(8259), disableColor: true, style: tmp.icon };
+      let obj2 = { platform: activity.name };
+      obj.text = intl.formatToPlainString(util.t.LEgD7t, obj2);
+      const obj3 = { size: native.Icon.Sizes.SMALL, source: sync_id(8259), disableColor: true, style: tmp.icon };
       obj.icon = jsx(native.Icon, {
         size: native.Icon.Sizes.SMALL,
         source: sync_id(8259),
@@ -249,8 +256,8 @@ export const PlayOnSpotifyButton = function PlayOnSpotifyButton(arg0) {
           if (arg0 === 1) {
             throw value;
           } else if (arg0 === 2) {
-            let obj = { value, done: true };
-            return obj;
+            const obj2 = { value, done: true };
+            return obj2;
           } else {
             return { value: "HermesInternal", done: null };
           }
@@ -263,18 +270,17 @@ export const PlayOnSpotifyButton = function PlayOnSpotifyButton(arg0) {
                 throw value;
               } else if (arg0 === 2) {
                 c5 = 3;
-                obj = { value, done: true };
-                return obj;
+                const obj4 = { value, done: true };
+                return obj4;
               } else {
                 closure_0 = tmp7;
                 closure_128_0 = undefined;
                 require({ action: "PRESS_PLAY_ON_SPOTIFY_BUTTON" });
                 c3 = 1;
-                let obj2 = closure_0(tmp22[33]);
                 c4 = 2;
                 c5 = 1;
-                const obj1 = { value: obj2.canOpenSpotifyUrl(), done: false };
-                return obj1;
+                const obj5 = { value: closure_0(tmp22[33]).canOpenSpotifyUrl(), done: false };
+                return obj5;
               }
             } else if (1 === tmp7) {
               c3 = 0;
@@ -286,8 +292,8 @@ export const PlayOnSpotifyButton = function PlayOnSpotifyButton(arg0) {
             } else if (arg0 === 2) {
               c3 = 0;
               c5 = 3;
-              obj2 = { value, done: true };
-              return obj2;
+              const obj6 = { value, done: true };
+              return obj6;
             } else {
               closure_128_0 = value;
               const obj7 = closure_0(tmp22[33]);
@@ -295,8 +301,8 @@ export const PlayOnSpotifyButton = function PlayOnSpotifyButton(arg0) {
                 obj7.openUrl(closure_128_0, constants2.TRACK, closure_129_1);
               } else {
                 obj7.attributeInstall();
-                obj = tmp3(tmp22[34]);
-                obj.openURL(constants.APP_STORE);
+                tmp3(tmp22[34]).openURL(constants.APP_STORE);
+                const obj = tmp3(tmp22[34]);
               }
               c3 = 0;
               c5 = 3;
@@ -311,12 +317,7 @@ export const PlayOnSpotifyButton = function PlayOnSpotifyButton(arg0) {
           }
         }
       });
-      tmp4 = jsx(components_Button_Button.Button, {
-        size: native.Icon.Sizes.SMALL,
-        source: sync_id(8259),
-        disableColor: true,
-        style: tmp.icon,
-      });
+      tmp4 = jsx(components_Button_Button.Button, { text: null, icon: null, variant: "secondary", onPress: null });
     }
   }
   return tmp4;
@@ -406,11 +407,11 @@ export const VoiceChannelButtons = function VoiceChannelButtons(channel) {
           rootNavigationRef.goBack();
         }
         if (c3) {
-          let tmp5Result = StageChannelModalActionCreators;
-          tmp5Result.connectAndOpen(channel);
+          StageChannelModalActionCreators.connectAndOpen(channel);
+          const tmp5Result = StageChannelModalActionCreators;
         } else {
-          tmp5Result = PrivateChannelCallUtils;
-          tmp5Result.openGuildVoiceModal(channel, newestAnalyticsLocation);
+          PrivateChannelCallUtils.openGuildVoiceModal(channel, newestAnalyticsLocation);
+          const tmp5Result2 = PrivateChannelCallUtils;
         }
       };
       return jsx(channel(newestAnalyticsLocation[24]).Button, {
@@ -430,28 +431,29 @@ export const ConnectPlatformButton = function ConnectPlatformButton(type) {
   let newestAnalyticsLocation;
   c3 = undefined;
   newestAnalyticsLocation = onAction(newestAnalyticsLocation[18])().newestAnalyticsLocation;
-  let obj = type(newestAnalyticsLocation[20]);
+  const tmp = closure_20();
+  const tmp2 = onAction;
   const items = [ConnectedAccountsStore];
   if (obj.useStateFromStores(items, () => null != ConnectedAccountsStore.getAccount(null, type))) {
     return null;
   } else {
     value = tmp2(tmp3[41]).get(type);
     c3 = value;
-    obj = { text: null, icon: null, variant: "secondary", onPress: null };
+    const obj2 = { text: null, icon: null, variant: "secondary", onPress: null };
     const intl = tmp4(tmp3[25]).intl;
-    obj = { platform: value.name };
-    obj.text = intl.formatToPlainString(tmp4(tmp3[25]).t.XWSHTb, obj);
-    const obj1 = { size: tmp4(tmp3[31]).Icon.Sizes.SMALL, source: null, disableColor: true, style: null };
+    const obj3 = { platform: value.name };
+    obj2.text = intl.formatToPlainString(tmp4(tmp3[25]).t.XWSHTb, obj3);
+    const obj4 = { size: tmp4(tmp3[31]).Icon.Sizes.SMALL, source: null, disableColor: true, style: null };
     const tmp2Result = tmp2(tmp3[41]);
-    obj1.source = tmp4(tmp3[42]).makeSource(value.icon.whitePNG);
-    obj1.style = tmp.icon;
-    obj.icon = jsx(tmp4(tmp3[31]).Icon, {
+    obj4.source = tmp4(tmp3[42]).makeSource(value.icon.whitePNG);
+    obj4.style = tmp.icon;
+    obj2.icon = jsx(tmp4(tmp3[31]).Icon, {
       size: tmp4(tmp3[31]).Icon.Sizes.SMALL,
       source: null,
       disableColor: true,
       style: null,
     });
-    obj.onPress = function onPress() {
+    obj2.onPress = function onPress() {
       let str = "PRESS_CONNECT_XBOX_BUTTON";
       if (type === constants.PLAYSTATION) {
         str = "PRESS_CONNECT_PLAYSTATION_BUTTON";
@@ -461,25 +463,20 @@ export const ConnectPlatformButton = function ConnectPlatformButton(type) {
         platformType: _undefined.type,
         location: newestAnalyticsLocation,
         onClose() {
-          type(newestAnalyticsLocation[44]);
-          const obj = { screen: constants.CONNECTIONS };
-          return obj.openUserSettings(obj);
+          return type(newestAnalyticsLocation[44]).openUserSettings({ screen: constants.CONNECTIONS });
         },
       });
-      let obj = {
+      const obj = {
         platformType: _undefined.type,
         location: newestAnalyticsLocation,
         onClose() {
-          type(newestAnalyticsLocation[44]);
-          const obj = { screen: constants.CONNECTIONS };
-          return obj.openUserSettings(obj);
+          return type(newestAnalyticsLocation[44]).openUserSettings({ screen: constants.CONNECTIONS });
         },
       };
     };
-    return jsx(tmp4(tmp3[24]).Button, { platform: value.name });
+    return jsx(tmp4(tmp3[24]).Button, { text: null, icon: null, variant: "secondary", onPress: null });
   }
-  tmp = closure_20();
-  tmp2 = onAction;
+  obj = type(newestAnalyticsLocation[20]);
 };
 export const CustomActivityButton = function CustomActivityButton(index) {
   ({ user: require, activity } = index);
@@ -507,8 +504,8 @@ export const CustomActivityButton = function CustomActivityButton(index) {
             if (arg0 === 1) {
               throw value;
             } else if (arg0 === 2) {
-              let obj = { value, done: true };
-              return obj;
+              const obj3 = { value, done: true };
+              return obj3;
             } else {
               return { value: "HermesInternal", done: null };
             }
@@ -521,8 +518,8 @@ export const CustomActivityButton = function CustomActivityButton(index) {
                   throw value;
                 } else if (arg0 === 2) {
                   c5 = 3;
-                  obj = { value, done: true };
-                  return obj;
+                  const obj4 = { value, done: true };
+                  return obj4;
                 } else {
                   id = tmp7;
                   closure_128_0 = undefined;
@@ -533,8 +530,8 @@ export const CustomActivityButton = function CustomActivityButton(index) {
                   c3 = 1;
                   c4 = 2;
                   c5 = 1;
-                  let obj1 = { value: id(tmp20[46]).getMetadata(activity, id.id), done: false };
-                  return obj1;
+                  const obj5 = { value: id(tmp20[46]).getMetadata(activity, id.id), done: false };
+                  return obj5;
                 }
               } else {
                 if (1 === tmp7) {
@@ -546,8 +543,8 @@ export const CustomActivityButton = function CustomActivityButton(index) {
                 } else if (arg0 === 2) {
                   c3 = 0;
                   c5 = 3;
-                  const obj2 = { value, done: true };
-                  return obj2;
+                  const obj6 = { value, done: true };
+                  return obj6;
                 } else {
                   closure_128_0 = value;
                   if (closure_128_0.button_urls.length <= closure_129_2) {
@@ -572,18 +569,18 @@ export const CustomActivityButton = function CustomActivityButton(index) {
                           hostname = closure_128_2.hostname;
                         }
                         if (null != hostname) {
-                          obj = tmp3(tmp20[47]);
-                          closure_128_3 = obj.format(closure_128_2);
-                          obj1 = id(tmp20[48]);
-                          const obj3 = {
+                          closure_128_3 = tmp3(tmp20[47]).format(closure_128_2);
+                          const obj = tmp3(tmp20[47]);
+                          const obj7 = {
                             href: closure_128_3,
                             onConfirm() {
                               return closure_1(closure_2[34]).openURL(closure_1_3);
                             },
                             trusted: false,
                           };
-                          obj1.handleClick(obj3);
+                          id(tmp20[48]).handleClick(obj7);
                           c3 = 0;
+                          const obj2 = id(tmp20[48]);
                         }
                       }
                       const obj8 = tmp3(tmp20[47]);
@@ -616,8 +613,8 @@ export const CustomActivityButton = function CustomActivityButton(index) {
             if (arg0 === 1) {
               throw value;
             } else if (arg0 === 2) {
-              let obj = { value, done: true };
-              return obj;
+              const obj3 = { value, done: true };
+              return obj3;
             } else {
               return { value: "HermesInternal", done: null };
             }
@@ -630,8 +627,8 @@ export const CustomActivityButton = function CustomActivityButton(index) {
                   throw value;
                 } else if (arg0 === 2) {
                   c5 = 3;
-                  obj = { value, done: true };
-                  return obj;
+                  const obj4 = { value, done: true };
+                  return obj4;
                 } else {
                   id = tmp7;
                   closure_128_0 = undefined;
@@ -642,8 +639,8 @@ export const CustomActivityButton = function CustomActivityButton(index) {
                   c3 = 1;
                   c4 = 2;
                   c5 = 1;
-                  let obj1 = { value: id(tmp20[46]).getMetadata(activity, id.id), done: false };
-                  return obj1;
+                  const obj5 = { value: id(tmp20[46]).getMetadata(activity, id.id), done: false };
+                  return obj5;
                 }
               } else {
                 if (1 === tmp7) {
@@ -655,8 +652,8 @@ export const CustomActivityButton = function CustomActivityButton(index) {
                 } else if (arg0 === 2) {
                   c3 = 0;
                   c5 = 3;
-                  const obj2 = { value, done: true };
-                  return obj2;
+                  const obj6 = { value, done: true };
+                  return obj6;
                 } else {
                   closure_128_0 = value;
                   if (closure_128_0.button_urls.length <= closure_129_2) {
@@ -681,18 +678,18 @@ export const CustomActivityButton = function CustomActivityButton(index) {
                           hostname = closure_128_2.hostname;
                         }
                         if (null != hostname) {
-                          obj = tmp3(tmp20[47]);
-                          closure_128_3 = obj.format(closure_128_2);
-                          obj1 = id(tmp20[48]);
-                          const obj3 = {
+                          closure_128_3 = tmp3(tmp20[47]).format(closure_128_2);
+                          const obj = tmp3(tmp20[47]);
+                          const obj7 = {
                             href: closure_128_3,
                             onConfirm() {
                               return closure_1(closure_2[34]).openURL(closure_1_3);
                             },
                             trusted: false,
                           };
-                          obj1.handleClick(obj3);
+                          id(tmp20[48]).handleClick(obj7);
                           c3 = 0;
+                          const obj2 = id(tmp20[48]);
                         }
                       }
                       const obj8 = tmp3(tmp20[47]);

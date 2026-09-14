@@ -18,9 +18,9 @@ const result = size.fileFinishedImporting(
 );
 
 export default function UserSettingsDesignSystemRowButton() {
-  let obj = { children: null };
-  obj = { title: "Row Buttons", description: null, children: null };
-  obj = { style: { padding: nativeDefault.space.PX_16 }, children: null };
+  const obj = { children: null };
+  const obj2 = { title: "Row Buttons", description: null, children: null };
+  const obj3 = { style: { padding: nativeDefault.space.PX_16 }, children: null };
   const items = [
     hasOwnProperty(Text_Text.Text, {
       variant: "text-sm/normal",
@@ -31,13 +31,13 @@ export default function UserSettingsDesignSystemRowButton() {
       children: "Only stack up to 2 Row Buttons in a row to to prevent decision fatigue.",
     }),
   ];
-  obj.children = items;
-  obj.description = timestampProducer(Stack_Stack.Stack, obj);
-  obj.children = hasOwnProperty(React3, {});
-  const items1 = [hasOwnProperty(Form.FormSection, obj)];
-  const obj2 = { style: { padding: 16 }, children: null };
-  const obj3 = { children: null };
-  const obj1 = { padding: nativeDefault.space.PX_16 };
+  obj3.children = items;
+  obj2.description = timestampProducer(Stack_Stack.Stack, obj3);
+  obj2.children = hasOwnProperty(React3, {});
+  const items1 = [hasOwnProperty(Form.FormSection, obj2)];
+  const obj5 = { style: { padding: 16 }, children: null };
+  const obj6 = { children: null };
+  const obj4 = { padding: nativeDefault.space.PX_16 };
   const items2 = [
     hasOwnProperty(RowButton.RowButton, {
       variant: "primary",
@@ -51,7 +51,7 @@ export default function UserSettingsDesignSystemRowButton() {
     ,
     ,
   ];
-  const obj4 = {
+  const obj7 = {
     variant: "primary",
     icon: _modDef7484,
     label: "Primary Row Button",
@@ -64,7 +64,7 @@ export default function UserSettingsDesignSystemRowButton() {
     subLabel: "I am a high emphasis button with a subLabel",
     onPress() {},
   });
-  const obj5 = {
+  const obj8 = {
     variant: "primary",
     icon: _modDef7484,
     label: "Primary Row Button",
@@ -77,7 +77,7 @@ export default function UserSettingsDesignSystemRowButton() {
     label: "Secondary Row Button",
     onPress() {},
   });
-  const obj6 = {
+  const obj9 = {
     variant: "secondary",
     icon: _modDef7484,
     label: "Secondary Row Button",
@@ -89,7 +89,7 @@ export default function UserSettingsDesignSystemRowButton() {
     subLabel: "I am a high emphasis button with a subLabel",
     onPress() {},
   });
-  const obj7 = {
+  const obj10 = {
     icon: _modDef7484,
     label: "Secondary Row Button",
     subLabel: "I am a high emphasis button with a subLabel",
@@ -102,18 +102,18 @@ export default function UserSettingsDesignSystemRowButton() {
       "I am a high-emphasis button with more text. You can fit quite a lot of text in a row button. The text will continue to wrap",
     onPress() {},
   });
-  const obj9 = { icon: null, label: "Row Button", subLabel: "With a custom RowButton.Icon", onPress: null };
-  const obj8 = {
+  const obj12 = { icon: null, label: "Row Button", subLabel: "With a custom RowButton.Icon", onPress: null };
+  const obj11 = {
     icon: _modDef7484,
     label: "Secondary Row Button",
     subLabel:
       "I am a high-emphasis button with more text. You can fit quite a lot of text in a row button. The text will continue to wrap",
     onPress() {},
   };
-  obj9.icon = hasOwnProperty(RowButton.RowButton.Icon, { source: _modDef7484 });
-  obj9.onPress = function onPress() {};
-  items2[5] = hasOwnProperty(RowButton.RowButton, obj9);
-  const obj10 = { source: _modDef7484 };
+  obj12.icon = hasOwnProperty(RowButton.RowButton.Icon, { source: _modDef7484 });
+  obj12.onPress = function onPress() {};
+  items2[5] = hasOwnProperty(RowButton.RowButton, obj12);
+  const obj13 = { source: _modDef7484 };
   items2[6] = hasOwnProperty(RowButton.RowButton, {
     icon: _modDef7484,
     label: "Row Button",
@@ -121,9 +121,9 @@ export default function UserSettingsDesignSystemRowButton() {
     onPress() {},
     disabled: true,
   });
-  obj3.children = items2;
-  obj2.children = timestampProducer(Stack_Stack.Stack, obj3);
-  items1[1] = hasOwnProperty(React3, obj2);
+  obj6.children = items2;
+  obj5.children = timestampProducer(Stack_Stack.Stack, obj6);
+  items1[1] = hasOwnProperty(React3, obj5);
   obj.children = items1;
   return timestampProducer(React4, obj);
 }

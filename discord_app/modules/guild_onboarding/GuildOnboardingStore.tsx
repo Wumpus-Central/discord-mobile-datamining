@@ -6,7 +6,7 @@ import FavoritesUtils from "../favorites/FavoritesUtils.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
 const ME = Constants.ME;
-let GuildOnboardingStatus = {
+const GuildOnboardingStatus = {
   STARTED: "started",
   READY: "ready",
   COMPLETED: "completed",
@@ -49,7 +49,7 @@ prototype["getCurrentOnboardingStep"] = function getCurrentOnboardingStep(arg0) 
   return str;
 };
 GuildOnboardingStore.displayName = "GuildOnboardingStore";
-GuildOnboardingStatus = {
+const guildOnboardingStore = new GuildOnboardingStore(DispatcherDefault, {
   LOGOUT: function handleReset() {
     closure_4 = {};
     closure_5 = {};
@@ -82,8 +82,7 @@ GuildOnboardingStatus = {
   CONNECTION_OPEN: function handleResetOnboardingStep() {
     closure_5 = {};
   },
-};
-const guildOnboardingStore = new GuildOnboardingStore(DispatcherDefault, GuildOnboardingStatus);
+});
 const result = size.fileFinishedImporting("modules/guild_onboarding/GuildOnboardingStore.tsx");
 
 export default guildOnboardingStore;

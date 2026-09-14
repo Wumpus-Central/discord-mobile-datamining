@@ -11,35 +11,33 @@ import ThemeContextProvider_RootThemeContextProvider from "../../../../design/co
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
+const require = globalThis.__r;
+
 require = fn;
 function ModeratorViewOverlay(channel) {
   channel = channel.channel;
-  let first;
+  first = undefined;
   let first1;
   _slicedToArray = undefined;
-  let obj = first(first1[5]);
-  const tmp2 = _slicedToArray(obj.useModeratorOverlayChannelState(channel.id), 2);
-  first = tmp2[0];
+  [first, [][0]] = first(first1[5]).useModeratorOverlayChannelState(channel.id);
   importDefault = tmp4;
   const tmp5 = _slicedToArray(noop.useState(first), 2);
   first1 = tmp5[0];
   _slicedToArray = tmp5[1];
-  let obj1 = first(first1[6]);
+  let obj = first(first1[5]);
   const fn = function s() {
-    let obj = spring;
     let num = 0;
     if (first1) {
       num = 1;
     }
-    obj = { opacity: obj.withSpring(num, closure_11) };
-    return obj;
+    return { opacity: spring.withSpring(num, closure_11) };
   };
-  obj = { withSpring: first(first1[7]).withSpring, showStartStageView: first1, viewAnimationConfig };
-  fn.__closure = obj;
+  const obj2 = first(first1[6]);
+  fn.__closure = { withSpring: first(first1[7]).withSpring, showStartStageView: first1, viewAnimationConfig };
   fn.__workletHash = 3663814804791;
   fn.__initData = __initData;
   const items = [first];
-  const animatedStyle = obj1.useAnimatedStyle(fn);
+  const animatedStyle = obj2.useAnimatedStyle(fn);
   const effect = noop.useEffect(() => {
     const timeout = setTimeout(() => {
       if (!closure_0) {
@@ -50,37 +48,33 @@ function ModeratorViewOverlay(channel) {
       clearTimeout(closure_0);
     };
   }, items);
-  [][0] = tmp2[1];
   let tmp10 = null;
   if (first1) {
-    obj = { style: null, children: null };
+    const obj4 = { style: null, children: null };
     const items1 = [closure_5.absoluteFill, ,];
-    obj1 = { backgroundColor: require("native").unsafe_rawColors.PRIMARY_800 };
-    items1[1] = obj1;
+    const obj5 = { backgroundColor: require("native").unsafe_rawColors.PRIMARY_800 };
+    items1[1] = obj5;
     items1[2] = animatedStyle;
-    obj.style = items1;
-    const obj2 = { channel, onSkip: tmp9 };
-    obj.children = closure_8(require("ModeratorStartStageView"), obj2);
-    tmp10 = closure_8(require("ReanimatedRexport").View, obj);
+    obj4.style = items1;
+    const obj6 = { channel, onSkip: tmp9 };
+    obj4.children = closure_8(require("ModeratorStartStageView"), obj6);
+    tmp10 = closure_8(require("ReanimatedRexport").View, obj4);
   }
   return tmp10;
 }
 function JoinStageOverlay(channel) {
-  const tmp = _slicedToArray(noop.useState(false), 2);
-  const showOverlay = tmp[0];
-  importDefault = tmp[1];
-  showOverlay(4373);
+  showOverlay = undefined;
+  importDefault = undefined;
+  [showOverlay, importDefault] = noop.useState(false);
   const fn = function s() {
-    let obj = spring;
     let num = 0;
     if (first) {
       num = 1;
     }
-    obj = { opacity: obj.withSpring(num, closure_11) };
-    return obj;
+    return { opacity: spring.withSpring(num, closure_11) };
   };
-  let obj = { withSpring: showOverlay(5055).withSpring, showOverlay, viewAnimationConfig };
-  fn.__closure = obj;
+  let obj = showOverlay(4373);
+  fn.__closure = { withSpring: showOverlay(5055).withSpring, showOverlay, viewAnimationConfig };
   fn.__workletHash = 1929951426580;
   fn.__initData = __initData2;
   const animatedStyle = obj.useAnimatedStyle(fn);
@@ -92,15 +86,14 @@ function JoinStageOverlay(channel) {
       clearTimeout(closure_0);
     };
   }, []);
-  obj = { style: null, children: null };
-  const items = [
-    closure_5.absoluteFill,
-    { backgroundColor: nativeDefault.unsafe_rawColors.PRIMARY_800 },
-    animatedStyle,
-  ];
-  obj.style = items;
-  obj.children = closure_8(JoinStageViewDefault, { channel: channel.channel });
-  return closure_8(ReanimatedRexportDefault.View, obj);
+  const obj3 = { style: null, children: null };
+  const items = [closure_5.absoluteFill, ,];
+  const obj2 = { withSpring: showOverlay(5055).withSpring, showOverlay, viewAnimationConfig };
+  items[1] = { backgroundColor: nativeDefault.unsafe_rawColors.PRIMARY_800 };
+  items[2] = animatedStyle;
+  obj3.style = items;
+  obj3.children = closure_8(JoinStageViewDefault, { channel: channel.channel });
+  return closure_8(ReanimatedRexportDefault.View, obj3);
 }
 function StagePromptWrapper(channel) {
   return React6(ThemeContextProvider_RootThemeContextProvider.DisableCustomTheme, {
@@ -134,11 +127,9 @@ const __initData = {
 const __initData2 = {
   code: "function StageChannelCallNavigatorTsx2(){const{withSpring,showOverlay,viewAnimationConfig}=this.__closure;return{opacity:withSpring(showOverlay?1:0,viewAnimationConfig)};}",
 };
-fn(4636);
-let createStyles = { startStagePrompt: null };
-createStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
-createStyles.startStagePrompt = createStyles;
-let closure_17 = createStyles.createStyles(createStyles);
+const createStyles = fn(4636);
+let obj2 = { startStagePrompt: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH } };
+let closure_17 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/stage_channels/native/components/StageChannelCallNavigator.tsx");
 
@@ -150,36 +141,34 @@ export default function StageChannelCallNavigator(channel) {
   noop = undefined;
   c5 = undefined;
   let ref;
-  let obj = channel(first[11]);
-  const stageChannelStartEvent = obj.useStageChannelStartEvent(channel.id);
+  const stageChannelStartEvent = channel(first[11]).useStageChannelStartEvent(channel.id);
   ({ isModerator, isLive } = stageChannelStartEvent);
-  let obj1 = noop;
-  let obj2 = channel(first[12]);
+  let obj = channel(first[11]);
   let tmp6 = isModerator;
-  const isConnectedToVoiceChannel = obj2.useIsConnectedToVoiceChannel(channel);
+  const isConnectedToVoiceChannel = channel(first[12]).useIsConnectedToVoiceChannel(channel);
   if (isModerator) {
     tmp6 = !isLive;
   }
   importDefault = tmp6;
-  let tmp4Result = tmp4(channel(first[5]).useModeratorOverlayChannelState(channel.id), 2);
+  const obj3 = channel(first[12]);
+  const tmp4Result = _slicedToArray(channel(first[5]).useModeratorOverlayChannelState(channel.id), 2);
   first = tmp4Result[0];
   _slicedToArray = tmp9;
   const tmp11 = require("useSelectedParticipant")(channel);
   noop = tmp11;
-  tmp4Result = tmp4(obj1.useState(false), 2);
-  [tmp13, c5] = tmp4Result;
+  const tmpResult = channel(first[5]);
+  [tmp13, c5] = noop.useState(false);
   const items = [,];
   ({ id: arr[0], guild_id: arr[1] } = channel);
-  const effect = obj1.useEffect(() => {
-    const obj = { guildId: channel.guild_id, channelId: channel.id };
-    const messages = obj.fetchMessages(obj);
+  const effect = obj2.useEffect(() => {
+    const messages = MessageManagerDefault.fetchMessages({ guildId: channel.guild_id, channelId: channel.id });
   }, items);
-  ref = obj1.useRef(channel.id);
-  const effect1 = obj1.useEffect(() => {
+  ref = obj2.useRef(channel.id);
+  const effect1 = obj2.useEffect(() => {
     closure_6.current = channel.id;
   });
   const items1 = [tmp11];
-  const effect2 = obj1.useEffect(() => {
+  const effect2 = obj2.useEffect(() => {
     let tmp2 = null == closure_4;
     if (!tmp2) {
       tmp2 = participantHasVideoDefault(tmp);
@@ -189,7 +178,7 @@ export default function StageChannelCallNavigator(channel) {
     }
   }, items1);
   const items2 = [tmp6, tmp4Result[1], first];
-  const effect3 = obj1.useEffect(() => {
+  const effect3 = obj2.useEffect(() => {
     let tmp = first;
     if (first) {
       tmp = !closure_1;
@@ -198,67 +187,68 @@ export default function StageChannelCallNavigator(channel) {
       closure_3();
     }
   }, items2);
-  obj = {
+  const obj4 = {
     actionBar: closure_8(require("StageActionBar"), { channel }),
     expandedControls: closure_8(require("StageChannelExpandedControls"), { channel }),
     isTouchingLeftScreenEdge: true,
     channel,
   };
-  obj = { theme: ThemeTypes.DARK, children: null };
+  const obj5 = { theme: ThemeTypes.DARK, children: null };
   if (null != tmp11) {
-    obj1 = { style: fullScreen.fullScreen, children: null };
-    obj2 = { channel, children: null };
-    tmp10(tmp2[20]);
-    const obj3 = { children: null };
-    const tmp10Result = tmp10(tmp2[21]);
-    const obj4 = { channel, selectedParticipant: tmp11 };
-    obj3.children = closure_8(tmp(tmp2[22]).ChannelCallSingleController, obj4);
-    const items3 = [closure_8(tmp10Result, obj3), ,];
-    const obj5 = { header: null };
-    const obj6 = {
+    const obj6 = { style: fullScreen.fullScreen, children: null };
+    const obj7 = { channel, children: null };
+    const obj8 = { children: null };
+    const tmp10Result = tmp10(tmp2[20]);
+    const tmp26 = ref;
+    const obj9 = { channel, selectedParticipant: tmp11 };
+    obj8.children = closure_8(tmp(tmp2[22]).ChannelCallSingleController, obj9);
+    const items3 = [closure_8(tmp10(tmp2[21]), obj8), ,];
+    const obj10 = { header: null };
+    const tmp10Result5 = tmp10(tmp2[21]);
+    const obj11 = {
       channel,
       fullscreenStream: true,
       onOpenRTCDebugOverlay() {
         return _undefined(true);
       },
     };
-    obj5.header = closure_8(tmp10(tmp2[24]), obj6);
-    const merged = Object.assign(obj);
-    items3[1] = closure_8(tmp10(tmp2[23]), obj5);
+    obj10.header = closure_8(tmp10(tmp2[24]), obj11);
+    const merged = Object.assign(obj4);
+    items3[1] = closure_8(tmp10(tmp2[23]), obj10);
     if (tmp18Result) {
-      const obj7 = {
+      const obj12 = {
         onClose() {
           return _undefined(false);
         },
       };
-      tmp18Result = closure_8(tmp10(tmp2[25]), obj7);
+      tmp18Result = closure_8(tmp10(tmp2[25]), obj12);
     }
     items3[2] = tmp18Result;
-    obj2.children = items3;
-    obj1.children = closure_9(tmp10Result, obj2);
-    tmp18Result = closure_8(ref, obj1);
-    const tmp10Result1 = tmp10(tmp2[23]);
+    obj7.children = items3;
+    obj6.children = closure_9(tmp10Result, obj7);
+    let tmp18Result2 = closure_8(tmp26, obj6);
+    const tmp10Result6 = tmp10(tmp2[23]);
   } else {
     if (first) {
-      let tmp10Result2 = ModeratorViewOverlay;
+      let tmp10Result7 = ModeratorViewOverlay;
     } else {
       if (isLive) {
         if (!isConnectedToVoiceChannel) {
           if (!first) {
-            tmp10Result2 = JoinStageOverlay;
+            tmp10Result7 = JoinStageOverlay;
           }
         }
       }
-      tmp10Result2 = tmp10(tmp2[26]);
+      tmp10Result7 = tmp10(tmp2[26]);
     }
-    const obj8 = { channel };
-    const items4 = [closure_8(tmp10Result2, obj8)];
-    const obj9 = { header: null };
-    const obj10 = { channel };
-    obj9.header = closure_8(tmp10(first ? tmp2[27] : tmp2[24]), obj10);
-    const merged1 = Object.assign(obj);
-    const obj11 = { channel };
-    const items5 = [closure_8(tmp10(tmp2[28]), obj11)];
+    const obj13 = { channel };
+    const items4 = [closure_8(tmp10Result7, obj13)];
+    const obj14 = { header: null };
+    const obj15 = { channel };
+    obj14.header = closure_8(tmp10(first ? tmp2[27] : tmp2[24]), obj15);
+    const merged1 = Object.assign(obj4);
+    const obj16 = { channel };
+    const items5 = [closure_8(tmp10(tmp2[28]), obj16)];
     if (isModerator) {
       isModerator = !_slicedToArray(noop.useState(isLive), 1)[0];
     }
@@ -266,17 +256,17 @@ export default function StageChannelCallNavigator(channel) {
       isModerator = !first;
     }
     if (isModerator) {
-      const obj12 = { channel };
-      isModerator = closure_8(StagePromptWrapper, obj12);
+      const obj17 = { channel };
+      isModerator = closure_8(StagePromptWrapper, obj17);
     }
-    const obj13 = { children: null };
+    const obj18 = { children: null };
     items5[1] = isModerator;
-    obj9.children = items5;
-    items4[1] = closure_9(tmp10(tmp2[23]), obj9);
-    obj13.children = items4;
-    tmp18Result = closure_9(closure_10, obj13);
-    const tmp10Result3 = tmp10(tmp2[23]);
+    obj14.children = items5;
+    items4[1] = closure_9(tmp10(tmp2[23]), obj14);
+    obj18.children = items4;
+    tmp18Result2 = closure_9(closure_10, obj18);
+    const tmp10Result8 = tmp10(tmp2[23]);
   }
-  obj.children = tmp18Result;
-  return closure_8(channel(first[19]).ThemeContextProvider, obj);
+  obj5.children = tmp18Result2;
+  return closure_8(channel(first[19]).ThemeContextProvider, obj5);
 }

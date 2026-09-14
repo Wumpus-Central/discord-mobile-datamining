@@ -23,25 +23,26 @@ function useObscuredContentNonFriendsDmSettingValue() {
 function onObscuredContentNonFriendsDmOnPress() {
   const selectedTeenId = FamilyCenterStore.getSelectedTeenId();
   if (null != selectedTeenId) {
-    selectedTeenId(14917);
     const intl = selectedTeenId(1114).intl;
+    const obj = selectedTeenId(14918);
     const stringResult = intl.string(selectedTeenId(1114).t.GYpoAq);
-    let obj = { title: stringResult, subtitle: null, excluded: null, handlePress: null, currentValue: null };
+    const obj3 = { title: stringResult, subtitle: null, excluded: null, handlePress: null, currentValue: null };
     const intl2 = selectedTeenId(1114).intl;
-    obj.subtitle = intl2.string(selectedTeenId(1114).t["Yh+HX1"]);
-    const items = [selectedTeenId(1187).ExplicitContentRedaction.SHOW];
-    obj.excluded = items;
-    obj.handlePress = function handlePress(explicitContentNonFriendDm) {
-      const obj = { explicitContentNonFriendDm };
-      const result = obj.updateExplicitContentSetting(selectedTeenId, obj);
+    obj3.subtitle = intl2.string(selectedTeenId(1114).t["Yh+HX1"]);
+    const items = [selectedTeenId(1185).ExplicitContentRedaction.SHOW];
+    obj3.excluded = items;
+    obj3.handlePress = function handlePress(explicitContentNonFriendDm) {
+      const result = FamilyCenterControlledSettingsUtils.updateExplicitContentSetting(selectedTeenId, {
+        explicitContentNonFriendDm,
+      });
     };
-    obj.currentValue = obj.getExplicitContentSettingOrDefault(selectedTeenId).explicitContentNonFriendDm;
-    let result = selectedTeenId(14910).handleSensitiveMediaFilterPress(obj);
-    const obj2 = selectedTeenId(14910);
+    obj3.currentValue = obj.getExplicitContentSettingOrDefault(selectedTeenId).explicitContentNonFriendDm;
+    let result = selectedTeenId(14911).handleSensitiveMediaFilterPress(obj3);
+    const obj2 = selectedTeenId(14911);
   }
 }
-fn(11601);
-let SettingBuilders = {
+const SettingBuilders = fn(11602);
+const pressable = SettingBuilders.createPressable({
   useTitle: function getTitle() {
     const intl = util.intl;
     return intl.string(util.t["Yh+HX1"]);
@@ -50,13 +51,12 @@ let SettingBuilders = {
   useTrailing: useObscuredContentNonFriendsDmSettingValue,
   onPress: onObscuredContentNonFriendsDmOnPress,
   unsearchable: true,
-};
-SettingBuilders = SettingBuilders.createPressable(SettingBuilders);
+});
 const size = fn(2);
 let result = size.fileFinishedImporting(
   "modules/user_settings/defs/native/ParentalControlsExplicitMediaFiltersNonFriendsDMsSetting.tsx",
 );
 
-export default SettingBuilders;
+export default pressable;
 export { useObscuredContentNonFriendsDmSettingValue };
 export { onObscuredContentNonFriendsDmOnPress };

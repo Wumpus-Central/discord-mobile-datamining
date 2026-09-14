@@ -17,14 +17,14 @@ let closure_4 = async function _transferToPlaystationWithAlert(arg0, arg1, arg2)
     await GameConsoleActionCreators.transferToPlayStation(closure_0, id.id, closure_2);
     if (1 === tmp8) {
       c6 = 0;
-      const obj2 = { title: null, body: null };
+      const obj7 = { title: null, body: null };
       const intl = closure_132_0(closure_132_2[3]).intl;
-      obj2.title = intl.string(closure_132_0(closure_132_2[3]).t.QL1y93);
+      obj7.title = intl.string(closure_132_0(closure_132_2[3]).t.QL1y93);
       const intl2 = closure_132_0(closure_132_2[3]).intl;
-      obj2.body = intl2.formatToPlainString(closure_132_0(closure_132_2[3]).t["6ZyNH/"], {
+      obj7.body = intl2.formatToPlainString(closure_132_0(closure_132_2[3]).t["6ZyNH/"], {
         deviceName: closure_131_0.name,
       });
-      closure_132_1(closure_132_2[2]).show(obj2);
+      closure_132_1(closure_132_2[2]).show(obj7);
       c8 = 3;
       closure_132_1(closure_132_2[2]);
     } else if (arg0 === 1) {

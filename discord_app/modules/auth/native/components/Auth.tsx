@@ -11,7 +11,7 @@ import StackNavigator from "../../../../../_runtime/07105_StackNavigator.js";
 import RegistrationHandoff from "../RegistrationHandoff.tsx";
 import RegistrationUtils from "../RegistrationUtils.tsx";
 import useIsHCaptchaModalOpenTracking from "utils/useIsHCaptchaModalOpenTracking.tsx";
-import _mod16091 from "../../../../../_runtime/metro/16091__.js";
+import _mod16093 from "../../../../../_runtime/metro/16093__.js";
 import AuthManagerDefault from "../AuthManager.tsx";
 import useOrientationLockDefault from "../useOrientationLock.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
@@ -20,16 +20,15 @@ import MultiAccountStore from "../../../multi_account/MultiAccountStore.tsx";
 
 require = fn;
 function getInitialAuthRouteStack() {
-  obj = RegistrationHandoff;
   if (!obj.hasRegistrationHandoff()) {
-    obj = { name: AuthStates.WELCOME };
-    const items = [obj];
+    const obj3 = { name: AuthStates.WELCOME };
+    const items = [obj3];
     let items1 = items;
   } else {
-    obj = { name: AuthStates.WELCOME };
-    items1 = [obj];
-    const obj1 = { name: AuthStates.LOGIN };
-    items1[1] = obj1;
+    const obj4 = { name: AuthStates.WELCOME };
+    items1 = [obj4];
+    const obj5 = { name: AuthStates.LOGIN };
+    items1[1] = obj5;
   }
   return items1;
 }
@@ -39,14 +38,14 @@ function NavigatorWithCaptchaHook() {
   const tmp6 = closure_16();
   const first = _slicedToArray(noop.useState(getInitialAuthRouteStack), 1)[0];
   const tmp5 = useWideAuthViewDefault();
-  [tmp8, require] = _slicedToArray(noop.useState(first[first.length - 1].name), 2);
+  [tmp8, require] = noop.useState(first[first.length - 1].name);
   const effect = noop.useEffect(() => {
     const result = RegistrationHandoff.clearRegistrationHandoff();
   }, []);
   const tmp10 = _slicedToArray(noop.useState(false), 2);
   importDefault = tmp11;
-  let obj1 = KeyboardChatScrollView;
-  const keyboardState = obj1.useKeyboardState((height) => height.height);
+  const tmp7 = _slicedToArray(noop.useState(first[first.length - 1].name), 2);
+  const keyboardState = KeyboardChatScrollView.useKeyboardState((height) => height.height);
   const callback = noop.useCallback((arg0) => {
     let name;
     if (arg0 != null) {
@@ -60,21 +59,20 @@ function NavigatorWithCaptchaHook() {
     require(name);
     closure_1(false);
   }, []);
-  obj = { backgroundImageSource: null, backgroundImageCover: true };
-  const tmp7 = _slicedToArray(noop.useState(first[first.length - 1].name), 2);
-  obj.backgroundImageSource = _mod16091;
-  const children = [closure_9(BackgroundImageDefault, obj)];
+  const obj3 = { backgroundImageSource: null, backgroundImageCover: true };
+  obj3.backgroundImageSource = _mod16093;
+  const children = [closure_9(BackgroundImageDefault, obj3)];
   if (tmp5) {
-    obj = { value: tmp11, children: null };
+    const obj5 = { value: tmp11, children: null };
     const items1 = [tmp6.wideOuterContainer];
     let tmp24 = null;
     if (tmp13) {
-      obj1 = { paddingBottom: keyboardState };
-      tmp24 = obj1;
+      const obj6 = { paddingBottom: keyboardState };
+      tmp24 = obj6;
     }
-    const obj2 = { style: null, children: null };
+    const obj7 = { style: null, children: null };
     items1[1] = tmp24;
-    obj2.style = items1;
+    obj7.style = items1;
     const items2 = [tmp6.wideCard, ,];
     let tmp25 = null;
     if (null != tmp8) {
@@ -82,13 +80,13 @@ function NavigatorWithCaptchaHook() {
       if (num == null) {
         num = 520;
       }
-      const obj3 = { height: num };
-      tmp25 = obj3;
+      const obj8 = { height: num };
+      tmp25 = obj8;
     }
     items2[1] = tmp25;
-    let obj4 = null;
+    let obj9 = null;
     if (tmp13) {
-      obj4 = {
+      obj9 = {
         maxHeight: "100%",
         height: "100%",
         marginTop: 32,
@@ -96,10 +94,10 @@ function NavigatorWithCaptchaHook() {
         borderBottomRightRadius: 0,
       };
     }
-    const obj5 = { style: null, children: null };
-    items2[2] = obj4;
-    obj5.style = items2;
-    const obj6 = {
+    const obj10 = { style: null, children: null };
+    items2[2] = obj9;
+    obj10.style = items2;
+    const obj11 = {
       screens,
       containerStyle: tmp6.cardContainer,
       viewStyle: null,
@@ -117,24 +115,24 @@ function NavigatorWithCaptchaHook() {
     if (tmp8 === AuthStates.WELCOME) {
       transparent = tmp6.transparent;
     }
-    obj6.viewStyle = transparent;
-    obj6.initialRouteStack = first;
-    obj6.onWillFocus = closure_5.dismiss;
-    obj6.onStateChange = callback;
-    obj6.headerStyle = tmp10[0] ? tmp6.wideHeader : tmp6.wideHeaderFlat;
+    obj11.viewStyle = transparent;
+    obj11.initialRouteStack = first;
+    obj11.onWillFocus = closure_5.dismiss;
+    obj11.onStateChange = callback;
+    obj11.headerStyle = tmp10[0] ? tmp6.wideHeader : tmp6.wideHeaderFlat;
     let num2 = 20;
     if (tmpResult.isAndroid()) {
       num2 = tmp4(576).space.PX_12;
     }
-    const obj7 = { paddingLeft: num2, paddingTop: tmp4(576).space.PX_24, paddingBottom: tmp4(576).space.PX_16 };
-    obj6.headerLeftContainerStyle = obj7;
-    obj5.children = closure_9(Navigator.Navigator, obj6);
-    obj2.children = closure_9(closure_6, obj5);
-    obj.children = closure_9(closure_6, obj2);
-    let tmp17Result = closure_9(WideAuthScrollContext.WideAuthScrollContext.Provider, obj);
+    const obj12 = { paddingLeft: num2, paddingTop: tmp4(576).space.PX_24, paddingBottom: tmp4(576).space.PX_16 };
+    obj11.headerLeftContainerStyle = obj12;
+    obj10.children = closure_9(Navigator.Navigator, obj11);
+    obj7.children = closure_9(closure_6, obj10);
+    obj5.children = closure_9(closure_6, obj7);
+    let tmp17Result = closure_9(WideAuthScrollContext.WideAuthScrollContext.Provider, obj5);
     tmpResult = utils_PlatformUtils;
   } else {
-    const obj8 = {
+    const obj13 = {
       screens: RegistrationStepsUtils,
       viewStyle: null,
       containerStyle: null,
@@ -145,11 +143,11 @@ function NavigatorWithCaptchaHook() {
     };
     ({ transparent: obj4.viewStyle, transparent: obj4.containerStyle } = tmp6);
     const intl = util.intl;
-    obj8.headerBackTitle = intl.string(util.t["13/7kX"]);
-    obj8.initialRouteStack = first;
-    obj8.onWillFocus = closure_5.dismiss;
-    obj8.headerStyle = { borderBottomWidth: 0 };
-    tmp17Result = closure_9(Navigator.Navigator, obj8);
+    obj13.headerBackTitle = intl.string(util.t["13/7kX"]);
+    obj13.initialRouteStack = first;
+    obj13.onWillFocus = closure_5.dismiss;
+    obj13.headerStyle = { borderBottomWidth: 0 };
+    tmp17Result = closure_9(Navigator.Navigator, obj13);
   }
   children[1] = tmp17Result;
   return closure_11(closure_10, { children });
@@ -159,7 +157,7 @@ get_ActivityIndicator = fn(17);
 const AuthStates = fn(1074).AuthStates;
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: c10, jsxs: closure_11 } = jsxProd);
-let RegistrationStepsUtils = fn(16040);
+let RegistrationStepsUtils = fn(16042);
 RegistrationStepsUtils = RegistrationStepsUtils.getAllAuthScreens();
 RegistrationStepsUtils = Object.entries(RegistrationStepsUtils);
 const screens = Object.fromEntries(
@@ -169,36 +167,35 @@ const screens = Object.fromEntries(
     obj = {};
     let merged = Object.assign(tmp2);
     obj.headerMode = "screen";
-    obj = null;
+    let obj2 = null;
     if (tmp2.fullscreen) {
-      obj = { fullscreen: false, headerTransparent: false };
+      obj2 = { fullscreen: false, headerTransparent: false };
     }
-    let merged1 = Object.assign(obj);
+    let merged1 = Object.assign(obj2);
     let tmp6 = null;
     if (tmp !== AuthStates.MFA) {
       tmp6 = null;
       if (tmp !== AuthStates.WELCOME) {
-        obj = {
+        let obj3 = {
           headerLeft(arg0) {
             function backImage() {
               return closure_1_9(headerLeft(closure_1_2[8]).HeaderBackImage, {});
             }
-            obj = headerLeft;
             if (null != headerLeft.headerLeft) {
-              obj = {};
+              const obj2 = {};
               const merged = Object.assign(arg0);
-              obj.backImage = backImage;
-              let headerLeftResult = obj.headerLeft(obj);
+              obj2.backImage = backImage;
+              let headerLeftResult = headerLeft.headerLeft(obj2);
             } else {
-              obj = {};
+              const obj3 = {};
               const merged1 = Object.assign(arg0);
-              obj.backImage = backImage;
-              headerLeftResult = React7(RegistrationUtils.BackButtonWithTracking, obj);
+              obj3.backImage = backImage;
+              headerLeftResult = React7(RegistrationUtils.BackButtonWithTracking, obj3);
             }
             return headerLeftResult;
           },
         };
-        tmp6 = obj;
+        tmp6 = obj3;
       }
     }
     const merged2 = Object.assign(tmp6);
@@ -206,8 +203,8 @@ const screens = Object.fromEntries(
     ({ REGISTER_IDENTITY: arr2[0], LOGIN: arr2[1], AGE_GATE_UNDERAGE: arr2[2] } = AuthStates);
     let tmp8 = null;
     if (set.has(tmp)) {
-      const obj1 = { cardStyleInterpolator: StackNavigator.CardStyleInterpolators.forFadeFromCenter };
-      tmp8 = obj1;
+      const obj4 = { cardStyleInterpolator: StackNavigator.CardStyleInterpolators.forFadeFromCenter };
+      tmp8 = obj4;
     }
     const merged3 = Object.assign(tmp8);
     items[1] = obj;
@@ -222,7 +219,7 @@ let obj = {};
 obj[AuthStates.LOGIN] = num;
 obj[AuthStates.MFA] = 600;
 const createStyles = fn(4636);
-obj = {
+let obj3 = {
   transparent: { backgroundColor: "transparent" },
   cardContainer: { flex: 1, position: "relative", backgroundColor: "transparent" },
   wideOuterContainer: { flex: 1, justifyContent: "center" },
@@ -240,17 +237,17 @@ let size = {
   overflow: "hidden",
   height: 520,
 };
-obj.wideCard = size;
-RegistrationStepsUtils = { borderBottomWidth: 0, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
-obj.wideHeaderFlat = RegistrationStepsUtils;
-obj.wideHeader = {
+obj3.wideCard = size;
+obj3.wideHeaderFlat = { borderBottomWidth: 0, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
+let obj5 = { borderBottomWidth: 0, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
+obj3.wideHeader = {
   borderBottomWidth: StyleSheet.hairlineWidth,
   borderBottomColor: nativeDefault.colors.BORDER_SUBTLE,
   backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
 };
-let closure_16 = createStyles.createStyles(obj);
+let closure_16 = createStyles.createStyles(obj3);
 const context = noop.createContext(() => {});
-let obj2 = {
+let obj6 = {
   borderBottomWidth: StyleSheet.hairlineWidth,
   borderBottomColor: nativeDefault.colors.BORDER_SUBTLE,
   backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,

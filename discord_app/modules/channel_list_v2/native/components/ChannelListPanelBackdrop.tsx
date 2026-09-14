@@ -5,24 +5,22 @@ import QuestHooks from "../../../quests/native/QuestHooks.native.tsx";
 import useHomeDrawerGesture from "../../../home_drawer/native/useHomeDrawerGesture.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
+const require = globalThis.__r;
+
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet } = get_ActivityIndicator);
 const DM_WIDTH = fn(1074).DM_WIDTH;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-fn(4636);
-let createStyles = {
-  container: { flex: 1, position: "relative", overflow: "hidden" },
-  panelTint: null,
-  listWrapper: null,
-};
-createStyles = {};
+const createStyles = fn(4636);
+let obj2 = { container: { flex: 1, position: "relative", overflow: "hidden" }, panelTint: null, listWrapper: null };
+let obj3 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
-createStyles.backgroundColor = nativeDefault.colors.PANEL_BG;
-createStyles.panelTint = createStyles;
-createStyles.listWrapper = { flex: 1 };
-let closure_8 = createStyles.createStyles(createStyles);
+obj3.backgroundColor = nativeDefault.colors.PANEL_BG;
+obj2.panelTint = obj3;
+obj2.listWrapper = { flex: 1 };
+let closure_8 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/channel_list_v2/native/components/ChannelListPanelBackdrop.tsx");
 
@@ -31,12 +29,10 @@ export default function ChannelListPanelBackdrop(children) {
   const contentInset = children.contentInset;
   const tmp = closure_8();
   const container = tmp;
-  let obj = useHomeDrawerGesture;
-  const isHomeDrawerEnabled = obj.useIsHomeDrawerEnabled();
-  let obj1 = QuestHooks;
-  const mobileQuestDockHeight = obj1.useMobileQuestDockHeight();
+  const isHomeDrawerEnabled = useHomeDrawerGesture.useIsHomeDrawerEnabled();
+  const mobileQuestDockHeight = QuestHooks.useMobileQuestDockHeight();
   let items = [tmp, contentInset, mobileQuestDockHeight, style];
-  obj = {
+  const obj3 = {
     style: noop.useMemo(() => {
       const items = [container.container, ,];
       const rect = contentInset;
@@ -83,11 +79,14 @@ export default function ChannelListPanelBackdrop(children) {
   } else {
     ScreenAlignedThemedGradientSliding = importDefault(tmp9);
   }
-  obj = { offsetX: DM_WIDTH, offsetY: useSafeAreaInsetsDefault().top };
-  const items1 = [timestampProducer(ScreenAlignedThemedGradientSliding, obj), ,];
-  obj1 = { pointerEvents: "none", style: tmp.panelTint };
-  items1[1] = timestampProducer(React4, obj1);
-  items1[2] = timestampProducer(React4, { style: tmp.listWrapper, children: children.children });
-  obj.children = items1;
-  return React5(React4, obj);
+  const items1 = [
+    timestampProducer(ScreenAlignedThemedGradientSliding, {
+      offsetX: DM_WIDTH,
+      offsetY: useSafeAreaInsetsDefault().top,
+    }),
+    timestampProducer(React4, { pointerEvents: "none", style: tmp.panelTint }),
+    timestampProducer(React4, { style: tmp.listWrapper, children: children.children }),
+  ];
+  obj3.children = items1;
+  return React5(React4, obj3);
 }

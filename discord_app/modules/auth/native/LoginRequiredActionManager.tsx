@@ -22,7 +22,7 @@ LoginRequiredActionManager.prototype["handleConnectionOpen"] = function handleCo
     const result1 = LoginRequiredActionStore.requiredActionsIncludes(currentUser.id, items);
     if (result) {
       if (result1) {
-        let obj = {
+        const obj3 = {
           screen: constants3.ACCOUNT_CHANGE_PASSWORD,
           params: { isLoginRequiredAction: true },
           onClose() {
@@ -32,13 +32,12 @@ LoginRequiredActionManager.prototype["handleConnectionOpen"] = function handleCo
             }
           },
         };
-        currentUser(7485).openUserSettings(obj);
+        currentUser(7485).openUserSettings(obj3);
         const obj2 = currentUser(7485);
       }
     }
     if (result1) {
-      obj = AuthenticationActionCreatorsDefault;
-      obj.logout("login_required_account_manager", constants2.LOGIN);
+      AuthenticationActionCreatorsDefault.logout("login_required_account_manager", constants2.LOGIN);
     }
   }
 };

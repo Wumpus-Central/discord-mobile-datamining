@@ -10,8 +10,8 @@ import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import APNGDecorationNativeComponentDefault from "../../../../discord_common/js/packages/rtn-codegen/js/APNGDecorationNativeComponent.tsx";
 import PromoSheet from "../../../design/components/Sheet/native/PromoSheet.native.tsx";
 import WindowLaunchIcon from "../../../design/components/Icon/native/redesign/generated/WindowLaunchIcon.tsx";
-import _modDef15923 from "../../../../discord_assets/assets/orbs/orb_coachmark_asset_2x.png.js";
-import _modDef15924 from "../../../../discord_assets/assets/orbs/orb_coachmark_asset_2x_animated.png.js";
+import _modDef15925 from "../../../../discord_assets/assets/orbs/orb_coachmark_asset_2x.png.js";
+import _modDef15926 from "../../../../discord_assets/assets/orbs/orb_coachmark_asset_2x_animated.png.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../a11y/AccessibilityStore.tsx";
 
@@ -26,60 +26,58 @@ const result = size.fileFinishedImporting(
 );
 
 export default function IncentivizedAccountLinkConfirmationBottomSheet() {
-  let obj = initialize;
   const items = [AccessibilityStore];
   if (obj.useStateFromStores(items, () => useReducedMotion.useReducedMotion)) {
-    obj = { source: null, style: null };
-    obj = { uri: _modDef15923 };
-    obj.source = obj;
+    let obj2 = { source: null, style: null };
+    const obj3 = { uri: _modDef15925 };
+    obj2.source = obj3;
     const size = { width: v150, height: v150 };
-    obj.style = size;
-    let tmp3Result = <Image uri={_modDef15923} />;
+    obj2.style = size;
+    let tmp3Result = <Image source={null} style={null} />;
     let tmp8 = importDefault;
     let tmp9 = jsx;
   } else {
     if (tmpResult.isAndroid()) {
-      const obj1 = { url: null, style: null };
-      let tmp4Result = APNGDecorationNativeComponentDefault;
-      obj1.url = _modDef15924;
+      const obj4 = { url: _modDef15926, style: null };
       const size1 = { width: v150, height: v150 };
-      obj1.style = size1;
-      tmp3Result = <tmp4Result url={null} style={null} />;
+      obj4.style = size1;
+      tmp3Result = jsx(APNGDecorationNativeComponentDefault, { url: _modDef15926, style: null });
       tmp8 = importDefault;
       tmp9 = jsx;
+      const tmp4Result = APNGDecorationNativeComponentDefault;
     } else {
-      let obj2 = { source: null, resizeMode: "contain", style: null };
-      const obj3 = { uri: null };
-      tmp4Result = FastImageDefault;
-      obj3.uri = _modDef15924;
-      obj2.source = obj3;
+      const obj5 = { source: null, resizeMode: "contain", style: null };
+      const obj6 = { uri: _modDef15926 };
+      obj5.source = obj6;
       const size2 = { width: v150, height: v150 };
-      obj2.style = size2;
-      tmp3Result = <tmp4Result source={null} resizeMode="contain" style={null} />;
+      obj5.style = size2;
+      tmp3Result = jsx(FastImageDefault, { source: null, resizeMode: "contain", style: null });
       tmp8 = importDefault;
       tmp9 = jsx;
+      const tmp4Result2 = FastImageDefault;
     }
     tmpResult = PlatformUtils;
   }
-  const obj4 = { text: null, icon: null, iconPosition: "end", size: "lg", onPress: null };
+  const obj7 = { text: null, icon: null, iconPosition: "end", size: "lg", onPress: null };
   const intl = util.intl;
-  obj4.text = intl.string(util.t.aRIFWD);
-  obj4.icon = tmp9(WindowLaunchIcon.WindowLaunchIcon, { size: "sm", color: tmp8(576).colors.WHITE });
-  obj4.onPress = function onPress() {
+  obj7.text = intl.string(util.t.aRIFWD);
+  obj = initialize;
+  obj7.icon = tmp9(WindowLaunchIcon.WindowLaunchIcon, { size: "sm", color: tmp8(576).colors.WHITE });
+  obj7.onPress = function onPress() {
     ActionSheetActionCreatorsDefault.hideActionSheet();
     const obj2 = LinkingDefault;
     obj2.openURL(HelpdeskUtilsDefault.getArticleURL(constants.IN_GAME_FEATURES));
   };
-  const obj5 = { size: "sm", color: tmp8(576).colors.WHITE };
-  const obj6 = { title: null, description: null, actions: null, illustration: null, onDismiss: null };
+  const obj8 = { size: "sm", color: tmp8(576).colors.WHITE };
+  const obj9 = { title: null, description: null, actions: null, illustration: null, onDismiss: null };
   const intl2 = util.intl;
-  obj6.title = intl2.string(tmp8(3138).ublzTG);
+  obj9.title = intl2.string(tmp8(3138).ublzTG);
   const intl3 = util.intl;
-  obj6.description = intl3.string(tmp8(3138).JgM2xu);
-  obj6.actions = tmp9(components_Button_Button.Button, obj4);
-  obj6.illustration = tmp3Result;
-  obj6.onDismiss = function onDismiss() {
+  obj9.description = intl3.string(tmp8(3138).JgM2xu);
+  obj9.actions = tmp9(components_Button_Button.Button, obj7);
+  obj9.illustration = tmp3Result;
+  obj9.onDismiss = function onDismiss() {
     ActionSheetActionCreatorsDefault.hideActionSheet();
   };
-  return tmp9(PromoSheet.PromoSheet, obj6);
+  return tmp9(PromoSheet.PromoSheet, obj9);
 }

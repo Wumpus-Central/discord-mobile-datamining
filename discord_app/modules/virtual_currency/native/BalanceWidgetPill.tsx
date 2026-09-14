@@ -11,30 +11,25 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-fn(4636);
-let createStyles = { container: null, orbsLottieContainer: null, balanceCounterContainer: null, balanceText: null };
-createStyles = {
-  minHeight: fn(5061).SMALL_BUTTON_HEIGHT,
-  borderRadius: nativeDefault.radii.round,
-  justifyContent: "center",
-  alignItems: "center",
-  flexDirection: "row",
-  paddingHorizontal: nativeDefault.space.PX_12,
-  paddingVertical: nativeDefault.space.PX_4,
-  backgroundColor: nativeDefault.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT,
-  gap: 4,
+const createStyles = fn(4636);
+let obj2 = {
+  container: {
+    minHeight: fn(5061).SMALL_BUTTON_HEIGHT,
+    borderRadius: nativeDefault.radii.round,
+    justifyContent: "center",
+    alignItems: "center",
+    flexDirection: "row",
+    paddingHorizontal: nativeDefault.space.PX_12,
+    paddingVertical: nativeDefault.space.PX_4,
+    backgroundColor: nativeDefault.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT,
+    gap: 4,
+  },
+  orbsLottieContainer: { position: "relative", height: 18, width: 18, justifyContent: "center", alignItems: "center" },
+  balanceCounterContainer: { justifyContent: "center", alignItems: "flex-end" },
+  balanceText: null,
 };
-createStyles.container = createStyles;
-createStyles.orbsLottieContainer = {
-  position: "relative",
-  height: 18,
-  width: 18,
-  justifyContent: "center",
-  alignItems: "center",
-};
-createStyles.balanceCounterContainer = { justifyContent: "center", alignItems: "flex-end" };
-let obj1 = { color: nativeDefault.colors.CONTROL_OVERLAY_SECONDARY_TEXT_DEFAULT, textAlign: "right", lineHeight: null };
-const PlatformUtils = fn(1150);
+let obj4 = { color: nativeDefault.colors.CONTROL_OVERLAY_SECONDARY_TEXT_DEFAULT, textAlign: "right", lineHeight: null };
+const PlatformUtils = fn(1363);
 let num;
 if (PlatformUtils.isAndroid()) {
   num = 14;
@@ -61,49 +56,49 @@ class BalanceWidgetPill {
       virtualCurrencyBalanceAnimationData);
     tmp6 = closure_5();
     tmp8 = View;
-    obj = { style: null, accessibilityLabel: null, accessibilityState: null, accessible: true, children: null };
+    obj1 = { style: null, accessibilityLabel: null, accessibilityState: null, accessible: true, children: null };
     items = [,];
     items[0] = tmp6.container;
     items[1] = global.style;
-    obj.style = items;
+    obj1.style = items;
     tmp7 = jsxs;
     intl = closure_0(closure_1[8]).intl;
     if (tmp2) {
       stringResult = intl.string(tmp3(tmp4[8]).t.y0WGqP);
     } else {
-      obj1 = { balance: null };
-      obj1.balance = balance;
-      stringResult = intl.formatToPlainString(tmp3(tmp4[8]).t.zPaLL9, obj1);
+      obj7 = { balance: null };
+      obj7.balance = balance;
+      stringResult = intl.formatToPlainString(tmp3(tmp4[8]).t.zPaLL9, obj7);
     }
-    obj.accessibilityLabel = stringResult;
-    obj.accessibilityState = { busy: tmp2 };
+    obj1.accessibilityLabel = stringResult;
+    obj1.accessibilityState = { busy: tmp2 };
     tmp10 = jsx;
-    obj2 = {
+    obj8 = {
       style: tmp6.orbsLottieContainer,
       children: jsx(tmp3(tmp4[9]).OrbLottieAnimation, { ref: lottieRef, animationType: currentAnimationType }),
     };
     items1 = [,];
-    items1[0] = jsx(tmp8, obj2);
-    obj3 = { style: tmp6.balanceCounterContainer, children: null };
+    items1[0] = jsx(tmp8, obj8);
+    obj9 = { style: tmp6.balanceCounterContainer, children: null };
     if (showInitialRenderedBalance) {
       balance = prop;
     }
-    obj4 = {
+    obj10 = {
       value: balance,
       onValueChange,
       onValueReached,
       targetTotalCounterTime: tmp3(tmp4[11]).EXPECTED_ORB_LOTTIE_ANIMATION_DURATION_MS,
       style: tmp6.balanceText,
     };
-    obj3.children = tmp10(tmp3(tmp4[10]).BalanceCounter, obj4);
-    items1[1] = tmp10(tmp8, obj3);
-    obj.children = items1;
-    return tmp7(tmp8, obj);
+    obj9.children = tmp10(tmp3(tmp4[10]).BalanceCounter, obj10);
+    items1[1] = tmp10(tmp8, obj9);
+    obj1.children = items1;
+    return tmp7(tmp8, obj1);
   }
 }
-obj1.lineHeight = num;
-createStyles.balanceText = obj1;
-const hasOwnProperty = createStyles.createStyles(createStyles);
+obj4.lineHeight = num;
+obj2.balanceText = obj4;
+const hasOwnProperty = createStyles.createStyles(obj2);
 BalanceWidgetPill.displayName = "BalanceWidgetPill";
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/virtual_currency/native/BalanceWidgetPill.tsx");

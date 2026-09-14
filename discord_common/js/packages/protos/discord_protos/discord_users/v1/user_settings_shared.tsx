@@ -1,28 +1,27 @@
 // discord_common/js/packages/protos/discord_protos/discord_users/v1/user_settings_shared.tsx
-import _mod1188 from "../../../../../../../_runtime/metro/01188__.js";
+import _mod1186 from "../../../../../../../_runtime/metro/01186__.js";
 import _slicedToArray from "../../../../../../../_runtime/metro/00032__.js";
 
 require = fn;
-const MessageType = fn(1188).MessageType;
+const MessageType = fn(1186).MessageType;
 class Versions$Type extends MessageType {
   constructor() {
     items = [, ,];
     items[0] = { no: 1, name: "client_version", kind: "scalar", T: 13 };
     items[1] = { no: 2, name: "server_version", kind: "scalar", T: 13 };
     items[2] = { no: 3, name: "data_version", kind: "scalar", T: 13 };
-    tmp = new tmp("discord_protos.discord_users.v1.Versions", items, new.target);
-    return tmp;
+    tmp1 = new tmp("discord_protos.discord_users.v1.Versions", items, new.target);
+    return tmp1;
   }
 }
-let prototype = Versions$Type.prototype;
+const prototype = Versions$Type.prototype;
 prototype["create"] = function create(arr) {
-  let obj = { clientVersion: 0, serverVersion: 0, dataVersion: 0 };
+  const obj = { clientVersion: 0, serverVersion: 0, dataVersion: 0 };
   const _Object = Object;
-  obj = { enumerable: false, value: this };
-  _Object.defineProperty(obj, _mod1188.MESSAGE_TYPE, obj);
+  _Object.defineProperty(obj, _mod1186.MESSAGE_TYPE, { enumerable: false, value: this });
   if (undefined !== arr) {
-    const result = _mod1188.reflectionMergePartial(this, obj, arr);
-    const tmpResult = _mod1188;
+    const result = _mod1186.reflectionMergePartial(this, obj, arr);
+    const tmpResult = _mod1186;
   }
   return obj;
 };
@@ -60,7 +59,7 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnk
           let skipResult = pos.skip(tmp6);
           if (false !== onRead) {
             if (true === onRead) {
-              onRead = _mod1188.UnknownFieldHandler.onRead;
+              onRead = _mod1186.UnknownFieldHandler.onRead;
             }
             let onReadResult = onRead(self.typeName, obj, tmp5, tmp6, skipResult);
           }
@@ -72,21 +71,21 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnk
 };
 prototype["internalBinaryWrite"] = function internalBinaryWrite(clientVersion, tag, writeUnknownFields) {
   if (0 !== clientVersion.clientVersion) {
-    tag.tag(1, _mod1188.WireType.Varint).uint32(clientVersion.clientVersion);
-    const tagResult = tag.tag(1, _mod1188.WireType.Varint);
+    tag.tag(1, _mod1186.WireType.Varint).uint32(clientVersion.clientVersion);
+    const tagResult = tag.tag(1, _mod1186.WireType.Varint);
   }
   if (0 !== clientVersion.serverVersion) {
-    tag.tag(2, _mod1188.WireType.Varint).uint32(clientVersion.serverVersion);
-    const tagResult1 = tag.tag(2, _mod1188.WireType.Varint);
+    tag.tag(2, _mod1186.WireType.Varint).uint32(clientVersion.serverVersion);
+    const tagResult1 = tag.tag(2, _mod1186.WireType.Varint);
   }
   if (0 !== clientVersion.dataVersion) {
-    tag.tag(3, _mod1188.WireType.Varint).uint32(clientVersion.dataVersion);
-    const tagResult2 = tag.tag(3, _mod1188.WireType.Varint);
+    tag.tag(3, _mod1186.WireType.Varint).uint32(clientVersion.dataVersion);
+    const tagResult2 = tag.tag(3, _mod1186.WireType.Varint);
   }
   let onWrite = writeUnknownFields.writeUnknownFields;
   if (false !== onWrite) {
     if (1 == onWrite) {
-      onWrite = _mod1188.UnknownFieldHandler.onWrite;
+      onWrite = _mod1186.UnknownFieldHandler.onWrite;
     }
     const self = this;
     onWrite(this.typeName, clientVersion, tag);
@@ -98,10 +97,18 @@ let items = [
   { no: 2, name: "server_version", kind: "scalar", T: 13 },
   { no: 3, name: "data_version", kind: "scalar", T: 13 },
 ];
-prototype = new prototype("discord_protos.discord_users.v1.Versions", items, tmp, Versions$Type, prototype, items, fn);
+const prototype1 = new prototype(
+  "discord_protos.discord_users.v1.Versions",
+  items,
+  tmp,
+  Versions$Type,
+  prototype,
+  items,
+  fn,
+);
 const size = fn(2);
 let result = size.fileFinishedImporting(
   "../discord_common/js/packages/protos/discord_protos/discord_users/v1/user_settings_shared.tsx",
 );
 
-export const Versions = prototype;
+export const Versions = prototype1;

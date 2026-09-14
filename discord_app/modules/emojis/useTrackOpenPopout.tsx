@@ -23,8 +23,7 @@ export const useTrackOpenPopout = (emojiId) => {
   );
   current = current.useRef({ guild_id: currentGuildId, emoji_id: emojiId.emojiId }).current;
   useMountEffectDefault(() => {
-    let obj = emojis_EmojiActionCreators;
-    const result = obj.initiateEmojiInteraction(EmojiInteractionPoint.TrackOpenPopoutUsed);
+    const result = emojis_EmojiActionCreators.initiateEmojiInteraction(EmojiInteractionPoint.TrackOpenPopoutUsed);
     if (!dependencyMap) {
       let str;
       if (analyticsType != null) {
@@ -33,9 +32,9 @@ export const useTrackOpenPopout = (emojiId) => {
       if (str == null) {
         str = "Standard Emoji Popout";
       }
-      obj = { type: str, nonce };
+      const obj3 = { type: str, nonce };
       const merged = Object.assign(current);
-      AnalyticsUtilsDefault.track(AnalyticEvents.OPEN_POPOUT, obj);
+      AnalyticsUtilsDefault.track(AnalyticEvents.OPEN_POPOUT, obj3);
     }
   });
   return current;

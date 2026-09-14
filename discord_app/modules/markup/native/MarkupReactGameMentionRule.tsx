@@ -38,65 +38,65 @@ class MarkupGameMention {
       if (state != null) {
         textColor = state.textColor;
       }
-      obj = { color: null, children: null };
-      obj.color = textColor;
+      obj1 = { color: null, children: null };
+      obj1.color = textColor;
       items = ["@"];
       items[1] = stringResult;
-      obj.children = items;
-      return tmp15(tmp2(tmp3[7]).MarkupText, obj, state.key);
+      obj1.children = items;
+      return tmp15(tmp2(tmp3[7]).MarkupText, obj1, state.key);
     } else {
       tmp17 = jsx;
-      obj1 = { size: "sm", style: null };
-      obj1.style = tmp.icon;
+      obj8 = { size: "sm", style: null };
+      obj8.style = tmp.icon;
       tmp11 = null != tmp8Result;
-      tmp18 = jsx(tmp2(tmp3[8]).UnknownGameIcon, obj1);
+      tmp18 = jsx(tmp2(tmp3[8]).UnknownGameIcon, obj8);
       if (tmp11) {
         str = "";
         tmp11 = "" !== tmp8Result;
       }
       tmp17Result = tmp18;
       if (tmp11) {
-        obj2 = { style: null, source: null };
-        obj2.style = tmp.icon;
-        obj3 = { uri: null };
-        obj3.uri = tmp8Result;
-        obj2.source = obj3;
-        tmp17Result = tmp17(tmp7(tmp3[9]), obj2);
+        obj9 = { style: null, source: null };
+        obj9.style = tmp.icon;
+        obj10 = { uri: null };
+        obj10.uri = tmp8Result;
+        obj9.source = obj10;
+        tmp17Result = tmp17(tmp7(tmp3[9]), obj9);
       }
       tmp13 = jsxs;
       str2 = "button";
       if (state.noStyleAndInteraction) {
         str2 = "text";
       }
-      obj4 = { accessibilityRole: null, style: null, color: null, onPress: null, children: null };
-      obj4.accessibilityRole = str2;
-      obj4.style = tmp.chip;
+      obj11 = { accessibilityRole: null, style: null, color: null, onPress: null, children: null };
+      obj11.accessibilityRole = str2;
+      obj11.style = tmp.chip;
       textColor1 = undefined;
       if (state != null) {
         textColor1 = state.textColor;
       }
-      obj4.color = textColor1;
+      obj11.color = textColor1;
       fn = undefined;
       if (!state.noStyleAndInteraction) {
         fn = () => {
-          const obj = {
+          const obj = GameProfileActionCreatorsDefault;
+          obj.openGameProfileModal({
             gameId,
             gameProfileModalChecks: { shouldOpenGameProfile: true, gameId },
             source: GameProfileAnalyticUtils.GameProfileSources.GameMention,
             sourceUserId: state.authorId,
-          };
-          obj.openGameProfileModal(obj);
+          });
         };
       }
-      obj4.onPress = fn;
+      obj11.onPress = fn;
       items1 = [,];
       items1[0] = tmp17Result;
-      obj5 = { variant: "text-sm/medium", style: null, children: null };
-      obj5.style = tmp.chipText;
-      obj5.children = gameName;
-      items1[1] = tmp17(tmp2(tmp3[12]).Text, obj5);
-      obj4.children = items1;
-      return tmp13(tmp2(tmp3[7]).MarkupText, obj4, state.key);
+      obj12 = { variant: "text-sm/medium", style: null, children: null };
+      obj12.style = tmp.chipText;
+      obj12.children = gameName;
+      items1[1] = tmp17(tmp2(tmp3[12]).Text, obj12);
+      obj11.children = items1;
+      return tmp13(tmp2(tmp3[7]).MarkupText, obj11, state.key);
     }
   }
 }
@@ -107,18 +107,22 @@ function FetchingGameMention(state) {
 }
 const jsxProd = fn(21);
 ({ jsxs: c3, jsx: closure_4 } = jsxProd);
-fn(4636);
-let createStyles = { icon: null, chip: null, chipText: null };
+const createStyles = fn(4636);
+let obj2 = { icon: null, chip: null, chipText: null };
 let size = { width: 16, height: 16, borderRadius: nativeDefault.radii.xs, marginRight: 2 };
-createStyles.icon = size;
-createStyles = {
+obj2.icon = size;
+obj2.chip = {
   backgroundColor: nativeDefault.colors.BORDER_SUBTLE,
   borderRadius: nativeDefault.radii.xs,
   paddingHorizontal: 2,
 };
-createStyles.chip = createStyles;
-createStyles.chipText = { color: nativeDefault.unsafe_rawColors.BRAND_500 };
-const hasOwnProperty = createStyles.createStyles(createStyles);
+let obj3 = {
+  backgroundColor: nativeDefault.colors.BORDER_SUBTLE,
+  borderRadius: nativeDefault.radii.xs,
+  paddingHorizontal: 2,
+};
+obj2.chipText = { color: nativeDefault.unsafe_rawColors.BRAND_500 };
+const hasOwnProperty = createStyles.createStyles(obj2);
 size = fn(2);
 const result = size.fileFinishedImporting("modules/markup/native/MarkupReactGameMentionRule.tsx");
 

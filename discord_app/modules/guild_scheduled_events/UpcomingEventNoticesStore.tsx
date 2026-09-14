@@ -9,8 +9,7 @@ require = fn;
 const GuildScheduledEventsConstants = fn(1963);
 ({ GuildScheduledEventStatus: closure_4, UpcomingGuildEventNoticeTypes: hasOwnProperty } =
   GuildScheduledEventsConstants);
-let obj = {};
-obj = {};
+let upcomingEventSeenTimestamps = {};
 const PersistedStore = initializeDefault.PersistedStore;
 class UpcomingEventNoticesStore extends PersistedStore {}
 const prototype = UpcomingEventNoticesStore.prototype;
@@ -28,10 +27,10 @@ prototype["initialize"] = function initialize(upcomingEventDismissals) {
   }
 };
 prototype["getGuildEventNoticeDismissalTime"] = function getGuildEventNoticeDismissalTime(arg0) {
-  return obj[arg0];
+  return obj2[arg0];
 };
 prototype["getAllEventDismissals"] = function getAllEventDismissals() {
-  return obj;
+  return obj2;
 };
 prototype["getUpcomingNoticeSeenTime"] = function getUpcomingNoticeSeenTime(arg0) {
   return obj[arg0];
@@ -40,14 +39,14 @@ prototype["getAllUpcomingNoticeSeenTimes"] = function getAllUpcomingNoticeSeenTi
   return obj;
 };
 prototype["getState"] = function getState() {
-  obj = { upcomingEventDismissals: obj, upcomingEventSeenTimestamps: obj };
-  return obj;
+  upcomingEventSeenTimestamps = { upcomingEventDismissals: obj2, upcomingEventSeenTimestamps };
+  return upcomingEventSeenTimestamps;
 };
 UpcomingEventNoticesStore.displayName = "UpcomingEventNoticesStore";
 UpcomingEventNoticesStore.persistKey = "UpcomingEventNotices";
-obj = {
+upcomingEventSeenTimestamps = {
   UPCOMING_GUILD_EVENT_NOTICE_HIDE: function handleHideNotice(eventId) {
-    obj = {};
+    const obj = {};
     const merged = Object.assign(obj);
     obj[eventId.eventId] = Date.now();
   },
@@ -55,21 +54,23 @@ obj = {
     guildScheduledEvent = guildScheduledEvent.guildScheduledEvent;
     if (!tmp4) {
       const id = guildScheduledEvent.id;
-      obj = {};
-      const merged = Object.assign(obj);
+      let obj = {};
+      const merged = Object.assign(obj2);
       delete tmp[tmp2];
-      obj = {};
+      obj2 = {};
       const merged1 = Object.assign(obj);
       delete tmp[tmp2];
+      obj = obj2;
     }
   },
   GUILD_SCHEDULED_EVENT_DELETE: function handleEventDelete(arg0) {
-    obj = {};
-    const merged = Object.assign(obj);
+    let obj = {};
+    const merged = Object.assign(obj2);
     delete tmp[tmp2];
-    obj = {};
+    obj2 = {};
     const merged1 = Object.assign(obj);
     delete tmp[tmp2];
+    obj = obj2;
   },
   GUILD_SCHEDULED_EVENT_USER_ADD: function handleMaybeHideNewEventNotice(guildEventId) {
     guildEventId = guildEventId.guildEventId;
@@ -77,16 +78,16 @@ obj = {
       const guildScheduledEvent = GuildScheduledEventStore.getGuildScheduledEvent(guildEventId);
       if (null != guildScheduledEvent) {
         if (guildScheduledEvent.status === constants.SCHEDULED) {
-          if (null == obj[guildEventId]) {
-            obj = GuildScheduledEventUtils;
+          if (null == obj2[guildEventId]) {
+            const obj = GuildScheduledEventUtils;
             if (
               obj.getNextShownUpcomingEventNoticeType(guildScheduledEvent, undefined, obj[guildEventId], false) ===
               constants2.NEW_EVENT
             ) {
-              obj = {};
-              const merged = Object.assign(obj);
+              obj2 = {};
+              const merged = Object.assign(obj2);
               const _Date = Date;
-              obj[guildEventId] = Date.now();
+              obj2[guildEventId] = Date.now();
             }
           }
         }
@@ -94,12 +95,12 @@ obj = {
     }
   },
   UPCOMING_GUILD_EVENT_NOTICE_SEEN: function handleMarkUpcomingNoticeAsSeen(guildEventId) {
-    obj = {};
+    const obj = {};
     const merged = Object.assign(obj);
     obj[guildEventId.guildEventId] = Date.now();
   },
 };
-const upcomingEventNoticesStore = new UpcomingEventNoticesStore(DispatcherDefault, obj);
+const upcomingEventNoticesStore = new UpcomingEventNoticesStore(DispatcherDefault, upcomingEventSeenTimestamps);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_scheduled_events/UpcomingEventNoticesStore.tsx");
 

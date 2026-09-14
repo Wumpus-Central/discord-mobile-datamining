@@ -13,8 +13,8 @@ export default {
   acceptGuildTemplate(code, name, first1) {
     importDefault = name;
     dependencyMap = first1;
-    let obj = { type: "GUILD_TEMPLATE_ACCEPT", code };
-    obj.dispatch(obj);
+    DispatcherDefault.dispatch({ type: "GUILD_TEMPLATE_ACCEPT", code });
+    let obj2 = { type: "GUILD_TEMPLATE_ACCEPT", code };
     return new Promise((code, arg1) => {
       name = arg1;
       const HTTP = code(icon[4]).HTTP;
@@ -29,9 +29,7 @@ export default {
       HTTP.post(request).then(
         (body) => {
           body = body.body;
-          closure_1(dependencyMap[3]);
-          const obj = { type: "GUILD_TEMPLATE_ACCEPT_SUCCESS", code, guild: body };
-          obj.dispatch(obj);
+          closure_1(dependencyMap[3]).dispatch({ type: "GUILD_TEMPLATE_ACCEPT_SUCCESS", code, guild: body });
           if (connected.isConnected()) {
             const result = GuildStore.addConditionalChangeListener(() => {
               if (null != GuildStore.getGuild(body.id)) {
@@ -45,10 +43,11 @@ export default {
             body(body);
             const obj3 = code(dependencyMap[5]);
           }
+          const obj = closure_1(dependencyMap[3]);
+          const obj2 = { type: "GUILD_TEMPLATE_ACCEPT_SUCCESS", code, guild: body };
         },
         (body) => {
-          const obj = { type: "GUILD_TEMPLATE_ACCEPT_FAILURE", code };
-          obj.dispatch(obj);
+          DispatcherDefault.dispatch({ type: "GUILD_TEMPLATE_ACCEPT_FAILURE", code });
           closure_1(body.body);
         },
       );

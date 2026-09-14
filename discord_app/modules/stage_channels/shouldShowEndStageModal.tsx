@@ -4,6 +4,8 @@ import StageChannelParticipantStore from "StageChannelParticipantStore.tsx";
 import StageChannelRoleStore from "StageChannelRoleStore.tsx";
 import StageInstanceStore from "StageInstanceStore.tsx";
 
+const require = globalThis.__r;
+
 const require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/stage_channels/shouldShowEndStageModal.tsx");

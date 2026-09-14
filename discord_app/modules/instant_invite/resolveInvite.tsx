@@ -5,6 +5,8 @@ import InviteTypeUtils from "InviteTypeUtils.tsx";
 import AuthenticationStore from "../../stores/AuthenticationStore.tsx";
 import GuildStore from "../../stores/GuildStore.tsx";
 
+const require = globalThis.__r;
+
 const TrackedHTTPUtilsDefault = tmp4(4829);
 require = fn;
 let Constants = fn(7838);
@@ -19,18 +21,18 @@ export default function resolveInvite(inviteKey, _location, inviteInstanceId) {
   _require = inviteKey;
   importDefault = _location;
   dependencyMap = inviteInstanceId;
-  let obj = require("InviteCodeUtils");
-  const result = obj.parseExtraDataFromInviteKey(inviteKey);
+  const result = require("InviteCodeUtils").parseExtraDataFromInviteKey(inviteKey);
   const baseCode = result.baseCode;
   ({ targetChannelId, targetMessageId, guildScheduledEventId } = result);
-  let obj1 = AnalyticsUtilsDefault;
-  obj = { invite_code: baseCode, invite_instance_id: null };
+  let obj = require("InviteCodeUtils");
+  let tmp = _require;
+  let obj3 = { invite_code: baseCode, invite_instance_id: null };
   inviteInstanceId = undefined;
   if (inviteInstanceId != null) {
     inviteInstanceId = inviteInstanceId.inviteInstanceId;
   }
-  obj.invite_instance_id = inviteInstanceId;
-  obj1.track(constants3.INVITE_OPENED, obj);
+  obj3.invite_instance_id = inviteInstanceId;
+  AnalyticsUtilsDefault.track(constants3.INVITE_OPENED, obj3);
   if (map.has(inviteKey)) {
     return map.get(inviteKey);
   } else {
@@ -38,7 +40,7 @@ export default function resolveInvite(inviteKey, _location, inviteInstanceId) {
     if (inviteInstanceId != null) {
       inputValue = inviteInstanceId.inputValue;
     }
-    obj = {
+    const obj5 = {
       inputValue,
       with_counts: true,
       with_expiration: true,
@@ -53,32 +55,32 @@ export default function resolveInvite(inviteKey, _location, inviteInstanceId) {
     if (inviteInstanceId != null) {
       withGames = inviteInstanceId.withGames;
     }
-    obj.with_games = withGames || undefined;
+    obj5.with_games = withGames || undefined;
     let withGuildExperiments;
     if (inviteInstanceId != null) {
       withGuildExperiments = inviteInstanceId.withGuildExperiments;
     }
-    obj.with_guild_experiments = withGuildExperiments || undefined;
+    obj5.with_guild_experiments = withGuildExperiments || undefined;
     const request = {
       url: closure_7.INVITE(baseCode),
-      query: obj,
+      query: obj5,
       oldFormErrors: true,
       trackedActionData: null,
       rejectWithError: false,
     };
-    obj1 = {
-      event: tmp(1250).NetworkActionNames.INVITE_RESOLVE,
+    const obj6 = {
+      event: tmp(1248).NetworkActionNames.INVITE_RESOLVE,
       properties(ok) {
-        let body = null;
+        let body1 = null;
         if (ok.ok) {
-          body = ok.body;
+          body1 = ok.body;
         }
-        body = ok.body;
+        const body = ok.body;
         code = undefined;
         if (body != null) {
           code = body.code;
         }
-        const obj = {
+        const obj2 = {
           resolved: ok.ok,
           guild_id: null,
           channel_id: null,
@@ -96,71 +98,71 @@ export default function resolveInvite(inviteKey, _location, inviteInstanceId) {
           user_is_member: null,
         };
         let id;
-        if (body != null) {
-          const guild = body.guild;
+        if (body1 != null) {
+          const guild = body1.guild;
           if (guild != null) {
             id = guild.id;
           }
         }
-        obj.guild_id = id;
+        obj2.guild_id = id;
         let id1;
-        if (body != null) {
-          const channel = body.channel;
+        if (body1 != null) {
+          const channel = body1.channel;
           if (channel != null) {
             id1 = channel.id;
           }
         }
-        obj.channel_id = id1;
+        obj2.channel_id = id1;
         let type;
-        if (body != null) {
-          const channel2 = body.channel;
+        if (body1 != null) {
+          const channel2 = body1.channel;
           if (channel2 != null) {
             type = channel2.type;
           }
         }
-        obj.channel_type = type;
+        obj2.channel_type = type;
         let id2;
-        if (body != null) {
-          const inviter = body.inviter;
+        if (body1 != null) {
+          const inviter = body1.inviter;
           if (inviter != null) {
             id2 = inviter.id;
           }
         }
-        obj.inviter_id = id2;
-        obj.code = baseCode;
+        obj2.inviter_id = id2;
+        obj2.code = baseCode;
         let inputValue;
         if (inviteInstanceId != null) {
           inputValue = inviteInstanceId.inputValue;
         }
-        obj.input_value = inputValue;
-        obj.location = _location;
-        obj.authenticated = AuthenticationStore.isAuthenticated();
+        obj2.input_value = inputValue;
+        obj2.location = _location;
+        obj2.authenticated = AuthenticationStore.isAuthenticated();
         let prop;
-        if (body != null) {
-          prop = body.approximate_member_count;
+        if (body1 != null) {
+          prop = body1.approximate_member_count;
         }
-        obj.size_total = prop;
+        obj2.size_total = prop;
         let prop1;
-        if (body != null) {
-          prop1 = body.approximate_presence_count;
+        if (body1 != null) {
+          prop1 = body1.approximate_presence_count;
         }
-        obj.size_online = prop1;
+        obj2.size_online = prop1;
         let id3;
-        if (body != null) {
-          const target_user = body.target_user;
+        if (body1 != null) {
+          const target_user = body1.target_user;
           if (target_user != null) {
             id3 = target_user.id;
           }
         }
-        obj.destination_user_id = id3;
+        obj2.destination_user_id = id3;
         let STREAM = null;
-        if (null != body) {
-          if (body.target_type === constants.STREAM) {
+        if (null != body1) {
+          if (body1.target_type === constants.STREAM) {
             STREAM = constants4.STREAM;
-          } else if (body.target_type === tmp14.EMBEDDED_APPLICATION) {
+          } else if (body1.target_type === tmp14.EMBEDDED_APPLICATION) {
             STREAM = constants4.APPLICATION;
           } else {
-            const inviteType = InviteTypeUtils.getInviteType(body);
+            const inviteType = InviteTypeUtils.getInviteType(body1);
             if (constants2.FRIEND === inviteType) {
               STREAM = constants4.FRIEND_INVITE;
             } else if (constants2.GROUP_DM === inviteType) {
@@ -174,20 +176,20 @@ export default function resolveInvite(inviteKey, _location, inviteInstanceId) {
             const tmp3Result = InviteTypeUtils;
           }
         }
-        obj.invite_type = STREAM;
-        obj.user_banned = code === constants5.USER_BANNED;
+        obj2.invite_type = STREAM;
+        obj2.user_banned = code === constants5.USER_BANNED;
         let id4;
-        if (body != null) {
-          const guild2 = body.guild;
+        if (body1 != null) {
+          const guild2 = body1.guild;
           if (guild2 != null) {
             id4 = guild2.id;
           }
         }
-        obj.user_is_member = null != GuildStore.getGuild(id4);
-        return obj.exact(obj);
+        obj2.user_is_member = null != GuildStore.getGuild(id4);
+        return TypeUtils.exact(obj2);
       },
     };
-    request.trackedActionData = obj1;
+    request.trackedActionData = obj6;
     value = TrackedHTTPUtilsDefault.get(request);
     const tmp4Result = TrackedHTTPUtilsDefault;
     const cleanupPromise = value
@@ -199,7 +201,7 @@ export default function resolveInvite(inviteKey, _location, inviteInstanceId) {
             if (null != body.guild) {
               id = body.guild.id;
             }
-            let obj = {
+            const obj = {
               resolved: true,
               guild_id: id,
               channel_id: null,
@@ -284,8 +286,7 @@ export default function resolveInvite(inviteKey, _location, inviteInstanceId) {
             obj.invite_instance_id = inviteInstanceId;
             AnalyticsUtilsDefault.track(constants3.INVITE_RESOLVED, obj, { flush: true });
           }
-          obj = { invite: body, code };
-          return obj;
+          return { invite: body, code };
         },
         (body) => {
           let tmp = null != body.body;
@@ -293,7 +294,7 @@ export default function resolveInvite(inviteKey, _location, inviteInstanceId) {
             tmp = body.body.code === constants5.USER_BANNED;
           }
           if (null != closure_1) {
-            let obj = {
+            const obj3 = {
               resolved: false,
               code: baseCode,
               input_value: null,
@@ -307,26 +308,25 @@ export default function resolveInvite(inviteKey, _location, inviteInstanceId) {
             if (inviteInstanceId != null) {
               inputValue = inviteInstanceId.inputValue;
             }
-            obj.input_value = inputValue;
-            obj.location = tmp3;
-            obj.authenticated = AuthenticationStore.isAuthenticated();
-            obj.user_banned = tmp;
+            obj3.input_value = inputValue;
+            obj3.location = tmp3;
+            obj3.authenticated = AuthenticationStore.isAuthenticated();
+            obj3.user_banned = tmp;
             body = body.body;
             code = undefined;
             if (body != null) {
               code = body.code;
             }
-            obj.error_code = code;
+            obj3.error_code = code;
             const body2 = body.body;
             let message;
             if (body2 != null) {
               message = body2.message;
             }
-            obj.error_message = message;
-            AnalyticsUtilsDefault.track(constants3.INVITE_RESOLVED, obj, { flush: true });
+            obj3.error_message = message;
+            AnalyticsUtilsDefault.track(constants3.INVITE_RESOLVED, obj3, { flush: true });
           }
-          obj = { invite: null, code, banned: tmp };
-          return obj;
+          return { invite: null, code, banned: tmp };
         },
       )
       .finally(() => {
@@ -335,5 +335,4 @@ export default function resolveInvite(inviteKey, _location, inviteInstanceId) {
     const result1 = map.set(inviteKey, cleanupPromise);
     return cleanupPromise;
   }
-  tmp = _require;
 }

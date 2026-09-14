@@ -44,7 +44,7 @@ function ensureGuildLoaded(guild_id, Full, getBasicChannel) {
                 "load returned null; early returning (guild: " + guild_id + ", database: " + databaseResult + ")",
               );
             } else {
-              [arr, tmp41] = _slicedToArray(result, 2);
+              [arr, tmp41] = result;
               tmp4(2008)(arr);
               if (Full !== tmp2.Basic) {
                 closure_34 = closure_34 + 1;
@@ -188,21 +188,21 @@ function setChannel(isPrivate) {
     if (dependencyMap2[isPrivate.parent_id] != null) {
       nsfw = tmp13.nsfw;
     }
-    let obj = { nsfw: true === nsfw, parentChannelThreadType: null };
+    const obj2 = { nsfw: true === nsfw, parentChannelThreadType: null };
     let type;
     if (dependencyMap2[isPrivate.parent_id] != null) {
       type = tmp13.type;
     }
-    obj.parentChannelThreadType = type;
-    closure_23[id2] = merge(obj);
+    obj2.parentChannelThreadType = type;
+    closure_23[id2] = merge(obj2);
     if (isPrivate.isScheduledForDeletion()) {
-      obj = { type: "THREAD_DELETE", channel: isPrivate };
-      DispatcherDefault.dispatch(obj);
+      const obj3 = { type: "THREAD_DELETE", channel: isPrivate };
+      DispatcherDefault.dispatch(obj3);
     }
   } else if (set.has(isPrivate.type)) {
     ({ id, guild_id } = isPrivate);
     dependencyMap2[id] = isPrivate;
-    obj = dependencyMap3[guild_id];
+    let obj = dependencyMap3[guild_id];
     if (obj == null) {
       obj = {};
     }
@@ -214,11 +214,11 @@ function setChannel(isPrivate) {
     }
     dependencyMap8[guild_id] = num + 1;
     if (null != isPrivate.linkedLobby) {
-      let obj1 = dependencyMap6[guild_id];
-      if (obj1 == null) {
-        obj1 = {};
+      let obj5 = dependencyMap6[guild_id];
+      if (obj5 == null) {
+        obj5 = {};
       }
-      dependencyMap6[guild_id] = obj1;
+      dependencyMap6[guild_id] = obj5;
       dependencyMap6[guild_id][id] = isPrivate;
     } else if (dependencyMap6[guild_id] != null) {
       delete tmp[tmp2];
@@ -243,7 +243,7 @@ function setThread(isScheduledForDeletion) {
   if (dependencyMap2[isScheduledForDeletion.parent_id] != null) {
     nsfw = tmp.nsfw;
   }
-  let obj = { nsfw: true === nsfw, parentChannelThreadType: null };
+  const obj = { nsfw: true === nsfw, parentChannelThreadType: null };
   let type;
   if (dependencyMap2[isScheduledForDeletion.parent_id] != null) {
     type = tmp.type;
@@ -251,8 +251,8 @@ function setThread(isScheduledForDeletion) {
   obj.parentChannelThreadType = type;
   closure_23[id] = merge(obj);
   if (isScheduledForDeletion.isScheduledForDeletion()) {
-    obj = { type: "THREAD_DELETE", channel: isScheduledForDeletion };
-    DispatcherDefault.dispatch(obj);
+    const obj3 = { type: "THREAD_DELETE", channel: isScheduledForDeletion };
+    DispatcherDefault.dispatch(obj3);
   }
 }
 function setGuildChannel(item10028) {
@@ -270,11 +270,11 @@ function setGuildChannel(item10028) {
   }
   dependencyMap8[guild_id] = num + 1;
   if (null != item10028.linkedLobby) {
-    obj = dependencyMap6[guild_id];
-    if (obj == null) {
-      obj = {};
+    let obj2 = dependencyMap6[guild_id];
+    if (obj2 == null) {
+      obj2 = {};
     }
-    dependencyMap6[guild_id] = obj;
+    dependencyMap6[guild_id] = obj2;
     dependencyMap6[guild_id][id] = item10028;
   } else if (dependencyMap6[guild_id] != null) {
     delete tmp2[tmp];
@@ -320,19 +320,19 @@ function handleOneGuildCreate(arg0) {
 }
 function handleThreadCreateOrUpdate(channel) {
   if (set3.has(channel.channel.type)) {
-    let obj = getChannel(channel.channel.id);
+    const obj = getChannel(channel.channel.id);
     if (null == obj) {
       let channel2 = channel.channel;
     } else {
-      obj = {};
+      const obj2 = {};
       channel = channel.channel;
       const merged = Object.assign(channel.toJS());
       let bitrate = channel.channel.bitrate;
       if (bitrate == null) {
         bitrate = obj.bitrate;
       }
-      obj.bitrate = bitrate;
-      channel2 = obj.merge(obj);
+      obj2.bitrate = bitrate;
+      channel2 = obj.merge(obj2);
     }
     setChannel(channel2);
   } else {
@@ -466,23 +466,22 @@ function addThreadIfMissing(id) {
     hasItem = set3.has(id.type);
   }
   if (hasItem) {
-    let obj = React5(id);
+    const obj = React5(id);
     let nsfw;
     ({ id, merge } = obj);
     if (dependencyMap2[obj.parent_id] != null) {
       nsfw = tmp6.nsfw;
     }
-    obj = { nsfw: true === nsfw, parentChannelThreadType: null };
+    const obj2 = { nsfw: true === nsfw, parentChannelThreadType: null };
     let type;
     if (dependencyMap2[obj.parent_id] != null) {
       type = tmp6.type;
     }
-    obj.parentChannelThreadType = type;
-    closure_23[id] = merge(obj);
+    obj2.parentChannelThreadType = type;
+    closure_23[id] = merge(obj2);
     if (obj.isScheduledForDeletion()) {
-      obj = { type: "THREAD_DELETE", channel: null };
-      obj.channel = obj;
-      DispatcherDefault.dispatch(obj);
+      const obj4 = { type: "THREAD_DELETE", channel: obj };
+      DispatcherDefault.dispatch(obj4);
     }
   }
 }
@@ -576,8 +575,8 @@ prototype["loadGuildIds"] = function loadGuildIds(items) {
             if (arg0 === 1) {
               throw value;
             } else if (arg0 === 2) {
-              let obj = { value, done: true };
-              return obj;
+              const obj3 = { value, done: true };
+              return obj3;
             } else {
               return { value: "HermesInternal", done: null };
             }
@@ -591,8 +590,8 @@ prototype["loadGuildIds"] = function loadGuildIds(items) {
                   throw value;
                 } else if (arg0 === 2) {
                   c7 = 3;
-                  obj = { value, done: true };
-                  return obj;
+                  let obj4 = { value, done: true };
+                  return obj4;
                 } else {
                   closure_3 = tmp;
                   dependencyMap = tmp6;
@@ -607,15 +606,14 @@ prototype["loadGuildIds"] = function loadGuildIds(items) {
                       closure_2_17.fileOnly("Skipping loading " + guildId + " because a load is pending");
                       return null;
                     } else {
-                      let obj = closure_1(closure_2[13]);
-                      const async = obj.getAsync(closure_1_1, guildId);
+                      const async = closure_1(closure_2[13]).getAsync(closure_1_1, guildId);
                       const nextPromise = async.then((channels) => {
                         closure_2_17.fileOnly("Lazy loaded channels for " + guildId + " #:" + channels.length);
                         return { guildId, channels };
                       });
                       closure_2_30[guildId] = nextPromise;
-                      obj = { guildId, promise: nextPromise };
-                      return obj;
+                      const obj2 = { guildId, promise: nextPromise };
+                      return obj2;
                     }
                   });
                   found = mapped.filter(closure_0(1369).isNotNullish);
@@ -624,8 +622,8 @@ prototype["loadGuildIds"] = function loadGuildIds(items) {
                   let _Promise = Promise;
                   c6 = 2;
                   c7 = 1;
-                  let obj1 = { value: Promise.all(found.map((promise) => promise.promise)), done: false };
-                  return obj1;
+                  let obj5 = { value: Promise.all(found.map((promise) => promise.promise)), done: false };
+                  return obj5;
                 }
               } else if (1 === tmp6) {
                 c5 = 0;
@@ -652,8 +650,8 @@ prototype["loadGuildIds"] = function loadGuildIds(items) {
                 } else if (arg0 === 2) {
                   c5 = 0;
                   c7 = 3;
-                  let obj2 = { value, done: true };
-                  return obj2;
+                  let obj6 = { value, done: true };
+                  return obj6;
                 } else {
                   closure_130_1 = value;
                   if (closure_1_31 !== closure_131_2) {
@@ -665,13 +663,13 @@ prototype["loadGuildIds"] = function loadGuildIds(items) {
                     return { value: null, done: true };
                   } else {
                     closure_130_2 = closure_130_1.filter((guildId) => !set.has(guildId.guildId));
-                    obj1 = databaseResult(573);
-                    let obj3 = { type: "LOAD_CHANNELS", channels: null };
-                    obj3.channels = closure_130_2;
+                    let obj2 = databaseResult(573);
+                    let obj7 = { type: "LOAD_CHANNELS", channels: null };
+                    obj7.channels = closure_130_2;
                     c6 = 3;
                     c7 = 1;
-                    let obj4 = { value: obj1.dispatch(obj3), done: false };
-                    return obj4;
+                    let obj8 = { value: obj2.dispatch(obj7), done: false };
+                    return obj8;
                   }
                 }
               } else if (3 === tmp6) {
@@ -681,7 +679,7 @@ prototype["loadGuildIds"] = function loadGuildIds(items) {
                 } else if (arg0 === 2) {
                   c5 = 0;
                   c7 = 3;
-                  obj = { value, done: true };
+                  let obj = { value, done: true };
                   return obj;
                 } else {
                   c5 = 0;
@@ -913,11 +911,11 @@ const channelStore = new ChannelStore(DispatcherDefault, {
             }
             dependencyMap3[guild_id] = num + 1;
             if (null != tmp3.linkedLobby) {
-              obj = dependencyMap2[guild_id];
-              if (obj == null) {
-                obj = {};
+              let obj2 = dependencyMap2[guild_id];
+              if (obj2 == null) {
+                obj2 = {};
               }
-              dependencyMap2[guild_id] = obj;
+              dependencyMap2[guild_id] = obj2;
               dependencyMap2[guild_id][id] = tmp3;
             } else if (dependencyMap2[guild_id] != null) {
               delete tmp2[tmp];
@@ -947,11 +945,11 @@ const channelStore = new ChannelStore(DispatcherDefault, {
           }
           dependencyMap3[guild_id] = num + 1;
           if (null != tmp3.linkedLobby) {
-            obj = dependencyMap2[guild_id];
-            if (obj == null) {
-              obj = {};
+            let obj2 = dependencyMap2[guild_id];
+            if (obj2 == null) {
+              obj2 = {};
             }
-            dependencyMap2[guild_id] = obj;
+            dependencyMap2[guild_id] = obj2;
             dependencyMap2[guild_id][id] = tmp3;
           } else if (dependencyMap2[guild_id] != null) {
             delete tmp2[tmp];
@@ -1105,25 +1103,25 @@ const channelStore = new ChannelStore(DispatcherDefault, {
   },
   CHANNEL_PERMISSIONS_PUT_OVERWRITE_SUCCESS: function handlePutOverwriteSuccess(overwrite) {
     overwrite = overwrite.overwrite;
-    let obj = getChannel(overwrite.channelId);
+    const obj = getChannel(overwrite.channelId);
     if (null == obj) {
       return false;
     } else {
-      obj = {};
+      const obj2 = {};
       const merged = Object.assign(obj.permissionOverwrites);
-      obj[overwrite.id] = overwrite;
-      setChannel(obj.set("permissionOverwrites", obj));
+      obj2[overwrite.id] = overwrite;
+      setChannel(obj.set("permissionOverwrites", obj2));
     }
   },
   CHANNEL_PERMISSIONS_DELETE_OVERWRITE_SUCCESS: function handleDeleteOverwriteSuccess(channelId) {
-    let obj = getChannel(channelId.channelId);
+    const obj = getChannel(channelId.channelId);
     if (null == obj) {
       return false;
     } else {
-      obj = {};
+      const obj2 = {};
       const merged = Object.assign(obj.permissionOverwrites);
       delete tmp2[tmp];
-      setChannel(obj.set("permissionOverwrites", obj));
+      setChannel(obj.set("permissionOverwrites", obj2));
     }
   },
   GUILD_CREATE: function handleCreateGuild(guild) {

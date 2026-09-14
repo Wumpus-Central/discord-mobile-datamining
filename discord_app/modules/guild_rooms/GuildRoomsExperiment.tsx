@@ -1,9 +1,11 @@
 // discord_app/modules/guild_rooms/GuildRoomsExperiment.tsx
 import GuildMemberStore from "../../stores/GuildMemberStore.tsx";
 
+const require = globalThis.__r;
+
 const require = fn;
-fn(4550);
-const createExperiment = {
+const createExperiment = fn(4550);
+let obj2 = {
   kind: "guild",
   id: "2026-06_guild_rooms",
   label: "Guild Rooms",
@@ -37,8 +39,8 @@ let items = [
     config: { enabled: true, interactionsEnabled: true, multipleRoomsEnabled: true, posturesEnabled: true },
   },
 ];
-createExperiment.treatments = items;
-let closure_3 = createExperiment.createExperiment(createExperiment);
+obj2.treatments = items;
+let closure_3 = createExperiment.createExperiment(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_rooms/GuildRoomsExperiment.tsx");
 
@@ -66,11 +68,10 @@ export const getGuildRoomsConfig = function getGuildRoomsConfig(guildId, disable
 };
 export const useGuildRoomsExperiment = function useGuildRoomsExperiment(guildId, arg1) {
   _require = guildId;
-  require("initialize");
   const items = [GuildMemberStore];
   const items1 = [guildId.guildId];
-  const obj = { autoTrackExposure: true };
-  const stateFromStores = obj.useStateFromStores(
+  const obj2 = { autoTrackExposure: true };
+  const stateFromStores = require("initialize").useStateFromStores(
     items,
     () => {
       let tmp2 = null != guildId.guildId;
@@ -92,6 +93,6 @@ export const useGuildRoomsExperiment = function useGuildRoomsExperiment(guildId,
   if (!flag) {
     flag = !stateFromStores;
   }
-  obj.disable = flag;
-  return closure_3.useExperiment(guildId, obj);
+  obj2.disable = flag;
+  return closure_3.useExperiment(guildId, obj2);
 };

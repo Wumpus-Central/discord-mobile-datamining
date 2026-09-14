@@ -11,16 +11,17 @@ function AnimatedStripe(hue) {
   const lightness = hue.lightness;
   let stripeOverlap = hue.overlap;
   const tmp = closure_6();
-  hue(saturation[5]);
   const fn = function c() {
     const result = (hue.get() + shift) % 360;
-    let obj = { h: (result + 360) % 360, s: saturation, l: lightness };
-    const tmp2 = _slicedToArray(obj.hslToRgbWorklet(obj), 3);
-    obj = { backgroundColor: "rgb(" + tmp2[0] + ", " + tmp2[1] + ", " + tmp2[2] + ")" };
-    return obj;
+    const tmp2 = _slicedToArray(
+      ColorPickerUtils.hslToRgbWorklet({ h: (result + 360) % 360, s: saturation, l: lightness }),
+      3,
+    );
+    const obj2 = { h: (result + 360) % 360, s: saturation, l: lightness };
+    return { backgroundColor: "rgb(" + tmp2[0] + ", " + tmp2[1] + ", " + tmp2[2] + ")" };
   };
-  let obj = { hue, shift, hslToRgbWorklet: hue(saturation[6]).hslToRgbWorklet, saturation, lightness };
-  fn.__closure = obj;
+  let obj = hue(saturation[5]);
+  fn.__closure = { hue, shift, hslToRgbWorklet: hue(saturation[6]).hslToRgbWorklet, saturation, lightness };
   fn.__workletHash = 8497009401863;
   fn.__initData = __initData;
   const animatedStyle = obj.useAnimatedStyle(fn);

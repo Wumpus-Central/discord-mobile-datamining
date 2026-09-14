@@ -18,19 +18,18 @@ export default function useExternalPIPEnabler(disabled) {
       const channelId = RTCConnectionStore.getChannelId();
       if (null != channelId) {
         if (!disabled) {
-          let obj = ChannelRTCStore;
           const videoParticipants = ChannelRTCStore.getVideoParticipants(channelId);
           let tmp2 =
             videoParticipants.filter((localVideoDisabled) => !localVideoDisabled.localVideoDisabled).length > 0;
           if (!tmp2) {
-            const streamParticipants = obj.getStreamParticipants(channelId);
+            const streamParticipants = ChannelRTCStore.getStreamParticipants(channelId);
             const found = streamParticipants.filter((user) => user.user.id !== id.getId());
             tmp2 = null != found.find((streamId) => null != streamId.streamId);
           }
-          obj = {};
+          const obj2 = {};
           const merged = Object.assign(ExternalPipEnablerState.DEFAULT_STATE);
-          obj.externalPipEnabled = tmp2;
-          return obj;
+          obj2.externalPipEnabled = tmp2;
+          return obj2;
         }
       }
       return ExternalPipEnablerState.DEFAULT_STATE;

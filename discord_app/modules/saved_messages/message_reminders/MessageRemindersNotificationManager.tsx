@@ -22,17 +22,17 @@ function scheduleNextNotification() {
       }
       return tmp;
     });
-    let dueAt;
+    let dueAt1;
     if (found != null) {
       const saveData = found.saveData;
       if (saveData != null) {
-        dueAt = saveData.dueAt;
+        dueAt1 = saveData.dueAt;
       }
     }
-    if (null != dueAt) {
+    if (null != dueAt1) {
       let _Date = Date;
       const timestamp = Date.now();
-      dueAt = found.saveData.dueAt;
+      const dueAt = found.saveData.dueAt;
       const sum = timestamp + DurationsDefault.Millis.WEEK;
       if (dueAt.getTime() <= sum) {
         const dueAt2 = found.saveData.dueAt;
@@ -40,12 +40,12 @@ function scheduleNextNotification() {
         const time = dueAt2.getTime();
         const _setTimeout = setTimeout;
         timeout = setTimeout(() => {
-          let obj = ForLaterExperiment;
           if (obj.isForLaterExperimentOn("MessageRemindersNotificationManager")) {
-            obj = { type: "MESSAGE_REMINDER_DUE", savedMessage: found };
-            DispatcherDefault.dispatch(obj);
+            const obj3 = { type: "MESSAGE_REMINDER_DUE", savedMessage: found };
+            DispatcherDefault.dispatch(obj3);
             scheduleNextNotification();
           }
+          obj = ForLaterExperiment;
         }, time - Date.now());
       }
     } else {
@@ -55,7 +55,7 @@ function scheduleNextNotification() {
   obj = found(7957);
 }
 let c4 = null;
-let prototype = function MessageRemindersNotificationManager() {
+const prototype = function MessageRemindersNotificationManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
   require = applyArgumentsResult;
   applyArgumentsResult.actions = {
@@ -75,10 +75,10 @@ let prototype = function MessageRemindersNotificationManager() {
   return applyArgumentsResult;
 }.prototype;
 class prototype extends tmp2 {}
-prototype = new prototype();
+const prototype1 = new prototype();
 const size = fn(2);
 const result = size.fileFinishedImporting(
   "modules/saved_messages/message_reminders/MessageRemindersNotificationManager.tsx",
 );
 
-export default prototype;
+export default prototype1;

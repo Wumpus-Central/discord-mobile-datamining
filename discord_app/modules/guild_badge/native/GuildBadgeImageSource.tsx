@@ -12,25 +12,25 @@ import _modDef8874 from "../../../../_runtime/metro/08874__.js";
 import _modDef8875 from "../../../../_runtime/metro/08875__.js";
 
 require = fn;
-let badgeVariants = {};
-badgeVariants = { imageSource: _modDef5672 };
-badgeVariants[fn(8868).BadgeCategory.STAFF] = badgeVariants;
-badgeVariants = { imageSource: _modDef5673 };
-badgeVariants[fn(8868).BadgeCategory.PARTNERED] = badgeVariants;
+const badgeVariants = {};
+badgeVariants[fn(8868).BadgeCategory.STAFF] = { imageSource: _modDef5672 };
+let obj2 = { imageSource: _modDef5672 };
+badgeVariants[fn(8868).BadgeCategory.PARTNERED] = { imageSource: _modDef5673 };
+const obj3 = { imageSource: _modDef5673 };
 badgeVariants[fn(8868).BadgeCategory.VERIFIED] = { imageSource: _modDef5672 };
-const obj1 = { imageSource: _modDef5672 };
+const obj4 = { imageSource: _modDef5672 };
 badgeVariants[fn(8868).BadgeCategory.COMMUNITY] = {
   imageSource: _modDef8870,
   imageSourceLight: _modDef8871,
   premiumImageSource: _modDef8872,
 };
-let obj2 = { imageSource: _modDef8870, imageSourceLight: _modDef8871, premiumImageSource: _modDef8872 };
+const obj5 = { imageSource: _modDef8870, imageSourceLight: _modDef8871, premiumImageSource: _modDef8872 };
 badgeVariants[fn(8868).BadgeCategory.DISCOVERABLE] = {
   imageSource: _modDef8873,
   imageSourceLight: _modDef8874,
   premiumImageSource: _modDef8875,
 };
-const obj3 = { imageSource: _modDef8873, imageSourceLight: _modDef8874, premiumImageSource: _modDef8875 };
+const obj6 = { imageSource: _modDef8873, imageSourceLight: _modDef8874, premiumImageSource: _modDef8875 };
 badgeVariants[fn(8868).BadgeCategory.VERIFIED_AND_PARTNERED] = { imageSource: _modDef5672 };
 badgeVariants[fn(8868).BadgeCategory.NONE] = {};
 const size = fn(2);

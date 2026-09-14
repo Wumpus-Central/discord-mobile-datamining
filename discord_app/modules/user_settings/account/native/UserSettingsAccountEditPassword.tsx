@@ -12,7 +12,7 @@ import UserSettingsAccountActionCreatorsAll from "../../../../actions/UserSettin
 import UserSettingsModalActionCreatorsDefault from "../../../../actions/UserSettingsModalActionCreators.tsx";
 import showInvalidUsernameToastNative from "showInvalidUsernameToastNative.tsx";
 import UserSettingsAccountUnverifiedHeader from "UserSettingsAccountUnverifiedHeader.tsx";
-import _modDef14866 from "../../../../../_runtime/metro/14866__.js";
+import _modDef14867 from "../../../../../_runtime/metro/14867__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import LoginRequiredActionStore from "../../../auth/LoginRequiredActionStore.tsx";
 import UserSettingsAccountStore from "../../../../stores/UserSettingsAccountStore.tsx";
@@ -27,25 +27,18 @@ const Constants = fn(1074);
 ({ AnalyticEvents: c10, LoginRequiredActions: closure_11 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const state = { newPassword: "call", password: 17091393 };
-fn(4636);
-let createStyles = {
+const state = { newPassword: "call", password: 17088577 };
+const createStyles = fn(4636);
+let obj2 = {
   onePass: { width: 20, height: 20 },
-  unverifiedWrapper: null,
-  container: null,
-  header: null,
-  requiredActionsSubtitle: null,
-  requiredActionsTitle: null,
-  image: null,
+  unverifiedWrapper: { overflow: "hidden", borderRadius: nativeDefault.radii.xs, marginVertical: 16 },
+  container: { padding: 16 },
+  header: { marginBottom: 20 },
+  requiredActionsSubtitle: { textAlign: "center", marginTop: 8 },
+  requiredActionsTitle: { flex: 1, textAlign: "center" },
+  image: { marginTop: 12, marginBottom: 16, alignSelf: "center" },
 };
-createStyles = { overflow: "hidden", borderRadius: nativeDefault.radii.xs, marginVertical: 16 };
-createStyles.unverifiedWrapper = createStyles;
-createStyles.container = { padding: 16 };
-createStyles.header = { marginBottom: 20 };
-createStyles.requiredActionsSubtitle = { textAlign: "center", marginTop: 8 };
-createStyles.requiredActionsTitle = { flex: 1, textAlign: "center" };
-createStyles.image = { marginTop: 12, marginBottom: 16, alignSelf: "center" };
-let closure_15 = createStyles.createLegacyClassComponentStyles(createStyles);
+let closure_15 = createStyles.createLegacyClassComponentStyles(obj2);
 const Component = noop.Component;
 class EditPassword extends Component {
   constructor() {
@@ -55,10 +48,8 @@ class EditPassword extends Component {
     applyArgumentsResult.newPasswordRef = null;
     applyArgumentsResult.passwordManagerRef = null;
     applyArgumentsResult.handlePasswordChange = function handlePasswordChange(password) {
-      let obj = { password };
-      applyArgumentsResult.setState(obj);
-      obj = { password };
-      UserSettingsAccountActionCreatorsAll.updateAccount(obj);
+      applyArgumentsResult.setState({ password });
+      UserSettingsAccountActionCreatorsAll.updateAccount({ password });
     };
     applyArgumentsResult.handleSetNewPasswordRef = function handleSetNewPasswordRef(newPasswordRef) {
       applyArgumentsResult.newPasswordRef = newPasswordRef;
@@ -154,65 +145,68 @@ prototype["render"] = function render() {
   ({ password, newPassword } = this.state);
   const props = this.props;
   ({ showForcedPasswordUpdate, submitting, hasBannerText } = props);
-  let obj = { style: tmp.container, children: null };
+  const obj = { style: tmp.container, children: null };
   ({ passwordLabel, newPasswordLabel } = props);
   if (hasBannerText) {
-    obj = { style: tmp.unverifiedWrapper, children: closure_1_12(UserSettingsAccountUnverifiedHeaderDefault, {}) };
-    hasBannerText = closure_1_12(hasOwnProperty, obj);
+    const obj2 = {
+      style: tmp.unverifiedWrapper,
+      children: closure_1_12(UserSettingsAccountUnverifiedHeaderDefault, {}),
+    };
+    hasBannerText = closure_1_12(hasOwnProperty, obj2);
   }
   const items = [hasBannerText, , ,];
   let tmp4Result = showForcedPasswordUpdate;
   if (showForcedPasswordUpdate) {
-    obj = { style: tmp.header, children: null };
-    const obj1 = { source: _modDef14866, style: tmp.image };
-    const items1 = [closure_1_12(React4, obj1), ,];
-    const obj2 = {
-      style: tmp.requiredActionsTitle,
-      variant: "heading-xl/extrabold",
-      color: "mobile-text-heading-primary",
-      children: null,
-    };
-    const intl = util.intl;
-    obj2.children = intl.string(util.t.geta79);
-    items1[1] = closure_1_12(Text_Text.Text, obj2);
-    const obj3 = {
-      style: tmp.requiredActionsSubtitle,
-      variant: "text-sm/medium",
-      color: "text-default",
-      children: null,
-    };
-    const intl2 = util.intl;
-    obj3.children = intl2.string(util.t["37iHbZ"]);
-    items1[2] = closure_1_12(Text_Text.Text, obj3);
-    obj.children = items1;
-    tmp4Result = map1(hasOwnProperty, obj);
-  }
-  items[1] = tmp4Result;
-  tmp4Result = !showForcedPasswordUpdate;
-  if (!showForcedPasswordUpdate) {
-    const obj4 = { style: tmp.header, children: null };
+    const obj3 = { style: tmp.header, children: null };
+    const obj4 = { source: _modDef14867, style: tmp.image };
+    const items1 = [closure_1_12(React4, obj4), ,];
     const obj5 = {
       style: tmp.requiredActionsTitle,
       variant: "heading-xl/extrabold",
       color: "mobile-text-heading-primary",
       children: null,
     };
-    const intl3 = util.intl;
-    obj5.children = intl3.string(util.t.geta79);
-    const items2 = [closure_1_12(Text_Text.Text, obj5)];
+    const intl = util.intl;
+    obj5.children = intl.string(util.t.geta79);
+    items1[1] = closure_1_12(Text_Text.Text, obj5);
     const obj6 = {
       style: tmp.requiredActionsSubtitle,
       variant: "text-sm/medium",
       color: "text-default",
       children: null,
     };
-    const intl4 = util.intl;
-    obj6.children = intl4.string(util.t.x5tG4V);
-    items2[1] = closure_1_12(Text_Text.Text, obj6);
-    obj4.children = items2;
-    tmp4Result = map1(hasOwnProperty, obj4);
+    const intl2 = util.intl;
+    obj6.children = intl2.string(util.t["37iHbZ"]);
+    items1[2] = closure_1_12(Text_Text.Text, obj6);
+    obj3.children = items1;
+    tmp4Result = map1(hasOwnProperty, obj3);
   }
-  items[2] = tmp4Result;
+  items[1] = tmp4Result;
+  let tmp4Result2 = !showForcedPasswordUpdate;
+  if (!showForcedPasswordUpdate) {
+    const obj7 = { style: tmp.header, children: null };
+    const obj8 = {
+      style: tmp.requiredActionsTitle,
+      variant: "heading-xl/extrabold",
+      color: "mobile-text-heading-primary",
+      children: null,
+    };
+    const intl3 = util.intl;
+    obj8.children = intl3.string(util.t.geta79);
+    const items2 = [closure_1_12(Text_Text.Text, obj8)];
+    const obj9 = {
+      style: tmp.requiredActionsSubtitle,
+      variant: "text-sm/medium",
+      color: "text-default",
+      children: null,
+    };
+    const intl4 = util.intl;
+    obj9.children = intl4.string(util.t.x5tG4V);
+    items2[1] = closure_1_12(Text_Text.Text, obj9);
+    obj7.children = items2;
+    tmp4Result2 = map1(hasOwnProperty, obj7);
+  }
+  items[2] = tmp4Result2;
   const items3 = [
     closure_1_12(TextInput.TextInput, {
       label: passwordLabel,
@@ -227,7 +221,7 @@ prototype["render"] = function render() {
     }),
     ,
   ];
-  const obj8 = {
+  const obj11 = {
     label: newPasswordLabel,
     ref: self.handleSetNewPasswordRef,
     secureTextEntry: true,
@@ -243,36 +237,35 @@ prototype["render"] = function render() {
   if (self.canSubmit()) {
     handleSubmit = self.handleSubmit;
   }
-  obj8.onSubmitEditing = handleSubmit;
-  items3[1] = closure_1_12(TextInput.TextInput, obj8);
-  const obj9 = { text: null, onPress: null, loading: null, disabled: null };
+  obj11.onSubmitEditing = handleSubmit;
+  items3[1] = closure_1_12(TextInput.TextInput, obj11);
+  const obj12 = { text: null, onPress: null, loading: null, disabled: null };
   const intl5 = util.intl;
-  obj9.text = intl5.string(util.t["FRep5/"]);
-  obj9.onPress = self.handleSubmit;
-  obj9.loading = submitting;
+  obj12.text = intl5.string(util.t["FRep5/"]);
+  obj12.onPress = self.handleSubmit;
+  obj12.loading = submitting;
   if (!submitting) {
     submitting = null == password;
   }
   if (!submitting) {
     submitting = null == newPassword;
   }
-  const obj10 = { children: null };
-  const obj11 = { spacing: 24, children: null };
-  obj9.disabled = submitting;
-  items3[2] = closure_1_12(components_Button_Button.Button, obj9);
-  obj11.children = items3;
-  items[3] = map1(Stack_Stack.Stack, obj11);
+  const obj13 = { children: null };
+  const obj14 = { spacing: 24, children: null };
+  obj12.disabled = submitting;
+  items3[2] = closure_1_12(components_Button_Button.Button, obj12);
+  obj14.children = items3;
+  items[3] = map1(Stack_Stack.Stack, obj14);
   obj.children = items;
-  obj10.children = map1(hasOwnProperty, obj);
-  return closure_1_12(timestampProducer, obj10);
+  obj13.children = map1(hasOwnProperty, obj);
+  return closure_1_12(timestampProducer, obj13);
 };
 EditPassword.contextType = fn(4347).ThemeContext;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_settings/account/native/UserSettingsAccountEditPassword.tsx");
 
 export default function EditPasswordWrapper() {
-  let obj = flag(7097);
-  const params = obj.useSettingNavigationRoute().params;
+  const params = flag(7097).useSettingNavigationRoute().params;
   flag = undefined;
   if (params != null) {
     flag = params.isLoginRequiredAction;
@@ -280,11 +273,10 @@ export default function EditPasswordWrapper() {
   if (flag == null) {
     flag = false;
   }
-  let tmpResult = tmp(504);
+  let obj = flag(7097);
   let items = [UserStore, UserSettingsAccountStore, LoginRequiredActionStore];
-  const stateFromStoresObject = tmpResult.useStateFromStoresObject(items, () => {
+  const stateFromStoresObject = flag(504).useStateFromStoresObject(items, () => {
     const currentUser = UserStore.getCurrentUser();
-    let obj = UserSettingsAccountUnverifiedHeader;
     const errors = UserSettingsAccountStore.getErrors();
     const submitting = UserSettingsAccountStore.getSubmitting();
     const settings = UserSettingsAccountStore.getSettings();
@@ -300,7 +292,7 @@ export default function EditPasswordWrapper() {
       const items = [constants2.UPDATE_PASSWORD];
       result = LoginRequiredActionStore.requiredActionsIncludes(id, items);
     }
-    obj = {
+    const obj2 = {
       errors,
       submitting,
       settings,
@@ -318,20 +310,20 @@ export default function EditPasswordWrapper() {
     if (flag == null) {
       flag = false;
     }
-    obj.verified = flag;
+    obj2.verified = flag;
     const intl = util.intl;
-    obj.passwordLabel = intl.string(util.t.WBqMRQ);
+    obj2.passwordLabel = intl.string(util.t.WBqMRQ);
     const intl2 = util.intl;
-    obj.newPasswordLabel = intl2.string(util.t["8dM4FO"]);
+    obj2.newPasswordLabel = intl2.string(util.t["8dM4FO"]);
     if (result) {
       result = flag;
     }
-    obj.showForcedPasswordUpdate = result;
-    obj.hasBannerText = null != obj.getBannerText(currentUser);
-    return obj;
+    obj2.showForcedPasswordUpdate = result;
+    obj2.hasBannerText = null != UserSettingsAccountUnverifiedHeader.getBannerText(currentUser);
+    return obj2;
   });
-  tmpResult = tmp(1483);
-  obj = { navigation: tmpResult.useNavigation() };
+  const tmpResult = flag(504);
+  const tmpResult2 = flag(1483);
   const merged = Object.assign(stateFromStoresObject);
-  return closure_12(EditPassword, obj);
+  return closure_12(EditPassword, { navigation: flag(1483).useNavigation() });
 }

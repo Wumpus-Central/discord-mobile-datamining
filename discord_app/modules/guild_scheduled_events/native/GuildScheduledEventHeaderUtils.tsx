@@ -3,7 +3,6 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import util from "../../../intl/index.native.tsx";
 import GuildScheduledEventsConstants from "../GuildScheduledEventsConstants.tsx";
 import _modDef8745 from "../../../../_runtime/metro/08745__.js";
-import ScheduleUtils from "../utils/ScheduleUtils.tsx";
 import _modDef9913 from "../../../../_runtime/metro/09913__.js";
 import _modDef9914 from "../../../../_runtime/metro/09914__.js";
 import GuildScheduledEventStore from "../GuildScheduledEventStore.tsx";
@@ -17,7 +16,6 @@ export const getGuildScheduledEventHeaderProps = function getGuildScheduledEvent
   ({ startDateTimeString, diffMinutes, currentOrPastEvent, upcomingEvent } = eventTimeData.eventTimeData);
   ({ event, recurrenceId } = eventTimeData);
   ({ isStage, theme, isCanceled } = eventTimeData);
-  let obj = ScheduleUtils;
   if (null != recurrenceId) {
     let tmp5 = obj.getNextRecurrenceIdInEvent(event) === recurrenceId;
     if (tmp5) {
@@ -46,39 +44,41 @@ export const getGuildScheduledEventHeaderProps = function getGuildScheduledEvent
     }
     let ICON_FEEDBACK_CRITICAL = nativeDefault.colors.ICON_FEEDBACK_POSITIVE;
     let stringResult1 = stringResult;
+    let tmp8Result3 = tmp8Result;
   } else if (tmp7) {
-    tmp8Result = _modDef9914;
+    tmp8Result3 = _modDef9914;
     stringResult1 = startDateTimeString;
     ICON_FEEDBACK_CRITICAL = ICON_SUBTLE;
   } else if (currentOrPastEvent) {
-    tmp8Result = _modDef9914;
+    tmp8Result3 = _modDef9914;
     const intl3 = util.intl;
     stringResult1 = intl3.string(util.t.WINqKV);
     ICON_FEEDBACK_CRITICAL = ICON_SUBTLE;
   } else {
+    tmp8Result3 = tmp8Result;
     stringResult1 = startDateTimeString;
     ICON_FEEDBACK_CRITICAL = ICON_SUBTLE;
     if (upcomingEvent) {
       if (diffMinutes > 0) {
         const intl2 = util.intl;
-        obj = { minutes: diffMinutes };
-        let formatToPlainStringResult = intl2.formatToPlainString(util.t.PQlCWk, obj);
+        const obj2 = { minutes: diffMinutes };
+        let formatToPlainStringResult = intl2.formatToPlainString(util.t.PQlCWk, obj2);
       } else {
         const intl = util.intl;
         formatToPlainStringResult = intl.string(util.t.WINqKV);
       }
       stringResult1 = formatToPlainStringResult;
-      tmp8Result = _modDef9914;
+      tmp8Result3 = _modDef9914;
       ICON_FEEDBACK_CRITICAL = ICON_SUBTLE;
-      const tmp8Result1 = _modDef9914;
+      const tmp8Result4 = _modDef9914;
     }
   }
   if (isCanceled) {
     ICON_FEEDBACK_CRITICAL = nativeDefault.colors.ICON_FEEDBACK_CRITICAL;
   }
-  obj = { icon: tmp8Result, text: stringResult1, color: null, shouldChangeTextColor: null };
+  const obj3 = { icon: tmp8Result3, text: stringResult1, color: null, shouldChangeTextColor: null };
   const internal = nativeDefault.internal;
-  obj.color = internal.resolveSemanticColor(theme, ICON_FEEDBACK_CRITICAL);
+  obj3.color = internal.resolveSemanticColor(theme, ICON_FEEDBACK_CRITICAL);
   let tmp17 = !tmp7;
   if (!tmp7) {
     if (!tmp4) {
@@ -89,6 +89,6 @@ export const getGuildScheduledEventHeaderProps = function getGuildScheduledEvent
     }
     tmp17 = tmp4;
   }
-  obj.shouldChangeTextColor = tmp17;
-  return obj;
+  obj3.shouldChangeTextColor = tmp17;
+  return obj3;
 };

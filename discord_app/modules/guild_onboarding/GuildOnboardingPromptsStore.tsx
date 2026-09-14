@@ -58,7 +58,7 @@ function handleUpdate(arg0) {
         if (tmp4) {
           flag3 = true;
         }
-        obj = {};
+        let obj = {};
         let merged = Object.assign(tmp3);
         obj.isUnseen = tmp4;
         let arr = items.push(obj);
@@ -67,12 +67,12 @@ function handleUpdate(arg0) {
         flag2 = flag3;
       } while (num < options.options.length);
     }
-    obj = {};
+    obj2 = {};
     const merged1 = Object.assign(options);
-    obj.options = items;
-    obj.hasNewAnswers = flag2;
-    obj.isNew = null == prompts_seen[options.id];
-    return obj;
+    obj2.options = items;
+    obj2.hasNewAnswers = flag2;
+    obj2.isNew = null == prompts_seen[options.id];
+    return obj2;
   });
   const merged = Object.assign(dependencyMap[guildId]);
   const merged1 = Object.assign(updates);
@@ -159,18 +159,18 @@ prototype["getOnboardingResponsesForPrompt"] = function getOnboardingResponsesFo
 };
 prototype["getEnabledOnboardingPrompts"] = function getEnabledOnboardingPrompts(item) {
   if (ImpersonateStore.isFullServerPreview(item)) {
-    let prompts;
+    let prompts1;
     if (tmp != null) {
-      prompts = tmp.prompts;
+      prompts1 = tmp.prompts;
     }
-    if (prompts == null) {
-      prompts = closure_12;
+    if (prompts1 == null) {
+      prompts1 = closure_12;
     }
-    let tmp2 = prompts;
+    let tmp2 = prompts1;
   } else {
     if (null != tmp) {
       if (tmp.enabled) {
-        prompts = tmp.prompts;
+        let prompts = tmp.prompts;
         if (prompts == null) {
           prompts = closure_12;
         }
@@ -288,12 +288,12 @@ prototype["getOnboardingConnections"] = function getOnboardingConnections(guildI
       }
       let items = connections;
     } else {
-      connections = tmp.connections;
-      if (connections == null) {
-        connections = [];
+      let connections1 = tmp.connections;
+      if (connections1 == null) {
+        connections1 = [];
       }
       items = [];
-      HermesBuiltin.arraySpread(prop, HermesBuiltin.arraySpread(connections, 0));
+      HermesBuiltin.arraySpread(prop, HermesBuiltin.arraySpread(connections1, 0));
     }
     return items;
   }
@@ -341,7 +341,7 @@ const guildOnboardingPromptsStore = new GuildOnboardingPromptsStore(DispatcherDe
           if (tmp4) {
             flag3 = true;
           }
-          obj = {};
+          let obj = {};
           let merged = Object.assign(tmp3);
           obj.isUnseen = tmp4;
           let arr = items.push(obj);
@@ -350,14 +350,14 @@ const guildOnboardingPromptsStore = new GuildOnboardingPromptsStore(DispatcherDe
           flag2 = flag3;
         } while (num < options.options.length);
       }
-      obj = {};
+      obj2 = {};
       const merged1 = Object.assign(options);
-      obj.options = items;
-      obj.hasNewAnswers = flag2;
-      obj.isNew = null == prompts_seen[options.id];
-      return obj;
+      obj2.options = items;
+      obj2.hasNewAnswers = flag2;
+      obj2.isNew = null == prompts_seen[options.id];
+      return obj2;
     });
-    let obj = {
+    const obj = {
       enabled,
       mode,
       belowRequirements,
@@ -392,14 +392,14 @@ const guildOnboardingPromptsStore = new GuildOnboardingPromptsStore(DispatcherDe
       closure_129_0 = guildId;
       closure_129_1 = responses;
       if (null != dependencyMap2[guildId]) {
-        obj = {};
-        closure_129_2 = obj;
+        const obj2 = {};
+        closure_129_2 = obj2;
         const _Object = Object;
         const keys = Object.keys(dependencyMap2[guildId]);
         const item = keys.forEach((item) => {
           if (!options_seen.includes(item)) {
             if (dependencyMap[prompts_seen][item]) {
-              options_seen[item] = true;
+              obj2[item] = true;
             }
           }
           let hasItem = options_seen.includes(item);
@@ -407,22 +407,22 @@ const guildOnboardingPromptsStore = new GuildOnboardingPromptsStore(DispatcherDe
             hasItem = false === dependencyMap[prompts_seen][item];
           }
           if (hasItem) {
-            options_seen[item] = false;
+            obj2[item] = false;
           }
         });
-        dependencyMap2[guildId] = obj;
+        dependencyMap2[guildId] = obj2;
         const found = responses.filter((item) => {
-          let tmp = null == obj[item];
+          let tmp = null == obj2[item];
           if (!tmp) {
-            tmp = true === obj[item];
+            tmp = true === obj2[item];
           }
           return tmp;
         });
         closure_129_3 = found;
         const _Object2 = Object;
-        const keys1 = Object.keys(obj);
+        const keys1 = Object.keys(obj2);
         const item1 = keys1.forEach((item) => {
-          let hasItem = true !== obj[item];
+          let hasItem = true !== obj2[item];
           if (!hasItem) {
             hasItem = options_seen.includes(item);
           }
@@ -430,10 +430,10 @@ const guildOnboardingPromptsStore = new GuildOnboardingPromptsStore(DispatcherDe
             found.push(item);
           }
         });
-        obj = {};
+        const obj3 = {};
         const merged = Object.assign(dependencyMap[guildId]);
-        obj.responses = found;
-        dependencyMap[guildId] = obj;
+        obj3.responses = found;
+        dependencyMap[guildId] = obj3;
       }
     }
     closure_10[guildId] = Date.now();
@@ -453,8 +453,7 @@ const guildOnboardingPromptsStore = new GuildOnboardingPromptsStore(DispatcherDe
           tmp4 = removedOptionIds.length > 0;
         }
         if (tmp4) {
-          let obj = _modDef12;
-          obj.pullAll(dependencyMap[guildId].responses, removedOptionIds);
+          _modDef12.pullAll(dependencyMap[guildId].responses, removedOptionIds);
         }
         if (selected) {
           const responses = dependencyMap[guildId].responses;
@@ -472,9 +471,9 @@ const guildOnboardingPromptsStore = new GuildOnboardingPromptsStore(DispatcherDe
             return false;
           });
         }
-        obj = {};
+        const obj3 = {};
         const merged = Object.assign(dependencyMap2[guildId]);
-        dependencyMap2[guildId] = obj;
+        dependencyMap2[guildId] = obj3;
         flag = true;
       }
       isFullServerPreviewResult = flag;
@@ -485,16 +484,16 @@ const guildOnboardingPromptsStore = new GuildOnboardingPromptsStore(DispatcherDe
     ({ guildId, options, prompts_seen, options_seen } = arg0);
     prompts_seen = guildId;
     options_seen = options;
-    let obj;
+    let obj2;
     let found;
     if (null != dependencyMap2[guildId]) {
-      obj = {};
+      obj2 = {};
       const _Object = Object;
       const keys = Object.keys(dependencyMap2[guildId]);
       const item = keys.forEach((item) => {
         if (!options_seen.includes(item)) {
           if (dependencyMap[prompts_seen][item]) {
-            options_seen[item] = true;
+            obj2[item] = true;
           }
         }
         let hasItem = options_seen.includes(item);
@@ -502,21 +501,21 @@ const guildOnboardingPromptsStore = new GuildOnboardingPromptsStore(DispatcherDe
           hasItem = false === dependencyMap[prompts_seen][item];
         }
         if (hasItem) {
-          options_seen[item] = false;
+          obj2[item] = false;
         }
       });
-      dependencyMap2[guildId] = obj;
+      dependencyMap2[guildId] = obj2;
       found = options.filter((item) => {
-        let tmp = null == obj[item];
+        let tmp = null == obj2[item];
         if (!tmp) {
-          tmp = true === obj[item];
+          tmp = true === obj2[item];
         }
         return tmp;
       });
       const _Object2 = Object;
-      const keys1 = Object.keys(obj);
+      const keys1 = Object.keys(obj2);
       const item1 = keys1.forEach((item) => {
-        let hasItem = true !== obj[item];
+        let hasItem = true !== obj2[item];
         if (!hasItem) {
           hasItem = options_seen.includes(item);
         }
@@ -524,10 +523,10 @@ const guildOnboardingPromptsStore = new GuildOnboardingPromptsStore(DispatcherDe
           found.push(item);
         }
       });
-      obj = {};
+      const obj3 = {};
       let merged = Object.assign(dependencyMap[guildId]);
-      obj.responses = found;
-      dependencyMap[guildId] = obj;
+      obj3.responses = found;
+      dependencyMap[guildId] = obj3;
     }
     if (null == dependencyMap[guildId]) {
       return false;
@@ -546,7 +545,7 @@ const guildOnboardingPromptsStore = new GuildOnboardingPromptsStore(DispatcherDe
             if (tmp4) {
               flag3 = true;
             }
-            obj = {};
+            let obj = {};
             let merged = Object.assign(tmp3);
             obj.isUnseen = tmp4;
             let arr = items.push(obj);
@@ -555,14 +554,14 @@ const guildOnboardingPromptsStore = new GuildOnboardingPromptsStore(DispatcherDe
             flag2 = flag3;
           } while (num < options.options.length);
         }
-        obj = {};
+        obj2 = {};
         const merged1 = Object.assign(options);
-        obj.options = items;
-        obj.hasNewAnswers = flag2;
-        obj.isNew = null == prompts_seen[options.id];
-        return obj;
+        obj2.options = items;
+        obj2.hasNewAnswers = flag2;
+        obj2.isNew = null == prompts_seen[options.id];
+        return obj2;
       });
-      obj = {};
+      let obj = {};
       let merged1 = Object.assign(tmp2);
       obj.prompts = mapped;
       obj.onboardingPrompts = mapped.filter((inOnboarding) => inOnboarding.inOnboarding);

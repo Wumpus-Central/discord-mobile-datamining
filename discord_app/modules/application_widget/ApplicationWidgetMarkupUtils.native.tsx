@@ -4,7 +4,7 @@ import MarkupRulesDefault from "../markup/MarkupRules.tsx";
 import MarkupLiteralImageRuleDefault from "../markup/MarkupLiteralImageRule.tsx";
 import combineMarkupRules from "../markup/combineMarkupRules.tsx";
 import apply from "../../../_runtime/metro/00012__.js";
-import MarkupParser from "../../../discord_common/js/packages/markup/MarkupParser.tsx";
+import MarkupParser_mod from "../../../discord_common/js/packages/markup/MarkupParser.tsx";
 
 const items = ["text", "link", "emoji"];
 const items1 = [
@@ -13,7 +13,9 @@ const items1 = [
   MarkupReactRulesDefault(),
 ];
 const importDefaultResultResult = combineMarkupRules(items1);
+let MarkupParser = MarkupParser_mod;
 let closure_0 = MarkupParser.reactParserFor(importDefaultResultResult);
+let MarkupParser = MarkupParser_mod;
 let closure_1 = MarkupParser.astParserFor(importDefaultResultResult);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/application_widget/ApplicationWidgetMarkupUtils.native.tsx");

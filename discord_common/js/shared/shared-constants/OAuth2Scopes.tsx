@@ -1,7 +1,7 @@
 // discord_common/js/shared/shared-constants/OAuth2Scopes.tsx
 import size from "../../../../_runtime/metro/00002__.js";
 
-let obj = {
+const obj = {
   PUBLIC: new Set([
     "applications.builds.read",
     "applications.builds.upload",
@@ -211,9 +211,9 @@ const set13 = new Set([
 obj.SLAYER_INTEGRATION_PROVISIONAL_ACCOUNT = new Set(["account.global_name.update", "openid", "sdk.social_layer"]);
 const set14 = new Set(["account.global_name.update", "openid", "sdk.social_layer"]);
 obj.UMBRELLA = new Set(["sdk.social_layer", "sdk.social_layer_presence"]);
-obj = { "sdk.social_layer_presence": null, "sdk.social_layer": null };
+const obj2 = { "sdk.social_layer_presence": null, "sdk.social_layer": null };
 const set15 = new Set(["sdk.social_layer", "sdk.social_layer_presence"]);
-obj["sdk.social_layer_presence"] = new Set([
+obj2["sdk.social_layer_presence"] = new Set([
   "activities.invites.write",
   "activities.read",
   "activities.write",
@@ -235,7 +235,7 @@ const set16 = new Set([
   "relationships.read",
   "relationships.write",
 ]);
-obj["sdk.social_layer"] = new Set([
+obj2["sdk.social_layer"] = new Set([
   "activities.invites.write",
   "activities.read",
   "activities.write",
@@ -252,7 +252,7 @@ obj["sdk.social_layer"] = new Set([
   "relationships.read",
   "relationships.write",
 ]);
-obj.UMBRELLA_PERMISSIBLE_SCOPES = obj;
+obj.UMBRELLA_PERMISSIBLE_SCOPES = obj2;
 const set17 = new Set([
   "activities.invites.write",
   "activities.read",

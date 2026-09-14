@@ -33,11 +33,10 @@ function handleEdit(id, isForumPost, current, source) {
     flag = false;
   }
   if (isForumPost.isForumPost()) {
-    let obj = SnowflakeUtilsDefault;
     if (isForumPost.id === obj.castMessageIdAsChannelId(id.id)) {
       if (null != isForumPost.parent_id) {
         PendingReplyActionCreators.deletePendingReply(isForumPost.id);
-        obj = {
+        const obj6 = {
           guildId: null,
           parentChannelId: null,
           threadId: null,
@@ -47,24 +46,25 @@ function handleEdit(id, isForumPost, current, source) {
           analyticsLocationObject: null,
         };
         ({ guild_id: obj9.guildId, parent_id: obj9.parentChannelId, id: obj9.threadId } = isForumPost);
-        obj.messageId = id.id;
+        obj6.messageId = id.id;
         const items = [AnalyticsLocationDefault.FORUM_CHANNEL, AnalyticsLocationDefault.GUILD_CHANNEL];
-        obj.analyticsLocations = items;
-        obj = {
+        obj6.analyticsLocations = items;
+        const obj10 = {
           page: constants3.GUILD_CHANNEL,
           section: constants4.FORUM_POST_HEADER,
           object: constants2.CONTEXT_MENU,
         };
-        obj.analyticsLocationObject = obj;
-        const result = ForumComposerModalActionCreators.openCreateForumPostModal(obj);
+        obj6.analyticsLocationObject = obj10;
+        const result = ForumComposerModalActionCreators.openCreateForumPostModal(obj6);
       }
     }
+    obj = SnowflakeUtilsDefault;
   }
   if (flag) {
     if ("message_swipe" === source) {
       if (EditMessageStore.isEditing(isForumPost.id, id.id)) {
         const currentUser = UserStore.getCurrentUser();
-        let obj1 = {
+        const obj16 = {
           message_id: id.id,
           channel_id: null,
           guild_id: null,
@@ -77,8 +77,8 @@ function handleEdit(id, isForumPost, current, source) {
         if (tmp15) {
           tmp15 = currentUser.id === id.author.id;
         }
-        obj1.is_own_message = tmp15;
-        AnalyticsUtilsDefault.track(constants.CHAT_CONTEXT_BAR_ACTION_CANCELED, obj1);
+        obj16.is_own_message = tmp15;
+        AnalyticsUtilsDefault.track(constants.CHAT_CONTEXT_BAR_ACTION_CANCELED, obj16);
         MessageActionCreatorsDefault.endEditMessage(isForumPost.id);
         if (current != null) {
           const current2 = current.current;
@@ -93,7 +93,7 @@ function handleEdit(id, isForumPost, current, source) {
   const pendingReply = PendingReplyStore.getPendingReply(isForumPost.id);
   if (null != pendingReply) {
     const currentUser1 = UserStore.getCurrentUser();
-    let obj2 = {
+    const obj17 = {
       message_id: id.id,
       channel_id: null,
       guild_id: null,
@@ -109,14 +109,12 @@ function handleEdit(id, isForumPost, current, source) {
     } else {
       str3 = "pressed_cancel";
     }
-    obj2.reason = str3;
-    obj2.is_own_message = null != currentUser1 && currentUser1.id === pendingReply.message.author.id;
-    AnalyticsUtilsDefault.track(constants.CHAT_CONTEXT_BAR_ACTION_CANCELED, obj2);
+    obj17.reason = str3;
+    obj17.is_own_message = null != currentUser1 && currentUser1.id === pendingReply.message.author.id;
+    AnalyticsUtilsDefault.track(constants.CHAT_CONTEXT_BAR_ACTION_CANCELED, obj17);
   }
-  obj1 = PendingReplyActionCreators;
-  obj1.deletePendingReply(isForumPost.id);
-  obj2 = MessageActionCreatorsDefault;
-  const result1 = obj2.startEditMessageRecord(isForumPost.id, id, source);
+  PendingReplyActionCreators.deletePendingReply(isForumPost.id);
+  const result1 = MessageActionCreatorsDefault.startEditMessageRecord(isForumPost.id, id, source);
   if (current != null) {
     current = current.current;
     if (current != null) {
@@ -173,23 +171,25 @@ export const handleCreateThread = function handleCreateThread(guild_id, id) {
   const result = ThreadActionCreatorsDefault.openThreadCreationForMobile(guild_id, id, str);
   let result1 = null == id;
   if (!result1) {
-    let tmpResult = SnowflakeUtilsDefault;
-    result1 = NavigationRouteUtils.navigateToCreateThread(guild_id.guild_id, tmpResult.castMessageIdAsChannelId(id.id));
+    const obj2 = NavigationRouteUtils;
+    result1 = obj2.navigateToCreateThread(guild_id.guild_id, SnowflakeUtilsDefault.castMessageIdAsChannelId(id.id));
+    const tmpResult = SnowflakeUtilsDefault;
   }
   if (!result1) {
-    tmpResult = SnowflakeUtilsDefault;
-    router_utils.transitionToGuild(guild_id.guild_id, tmpResult.castMessageIdAsChannelId(id.id));
+    const obj4 = router_utils;
+    obj4.transitionToGuild(guild_id.guild_id, SnowflakeUtilsDefault.castMessageIdAsChannelId(id.id));
+    const tmpResult2 = SnowflakeUtilsDefault;
   }
 };
 export const handleCopyMessageLink = function handleCopyMessageLink(channel, message_id) {
-  const obj = { message_id, channel: channel.id };
-  obj.track(constants.MESSAGE_LINK_COPIED, obj);
+  AnalyticsUtilsDefault.track(constants.MESSAGE_LINK_COPIED, { message_id, channel: channel.id });
+  const obj2 = { message_id, channel: channel.id };
   const channelPermalink = ChannelUtils.getChannelPermalink(channel.guild_id, channel.id, message_id);
   if (null != channelPermalink) {
-    let tmp3Result = ClipboardUtils;
-    tmp3Result.copy(channelPermalink);
-    tmp3Result = ToastUtils;
-    tmp3Result.presentLinkCopied();
+    ClipboardUtils.copy(channelPermalink);
+    const tmp3Result = ClipboardUtils;
+    ToastUtils.presentLinkCopied();
+    const tmp3Result2 = ToastUtils;
   }
 };
 export const handleCopyId = function handleCopyId(id) {
@@ -204,12 +204,12 @@ export const longPressMessageOptionHandler = function longPressMessageOptionHand
   }
   id = undefined;
   ({ guild_id, id } = channel);
-  let id2 = message.id;
+  const id2 = message.id;
   if (!disabled) {
     let intl = channel(1114).intl;
     if (label !== intl.string(channel(1114).t.PHjkRE)) {
+      id(4603).hideActionSheet();
       let obj = id(4603);
-      obj.hideActionSheet();
     }
     let intl2 = channel(1114).intl;
     if (intl2.string(channel(1114).t["+78Pfm"]) !== label) {
@@ -217,11 +217,11 @@ export const longPressMessageOptionHandler = function longPressMessageOptionHand
       if (intl26.string(channel(1114).t.n5EBAJ) !== label) {
         const intl27 = channel(1114).intl;
         if (intl27.string(id(2528)["1D+vqy"]) === label) {
-          let tmpResult = channel(7379);
           if (tmpResult.canReportMessageToMods(message)) {
-            tmpResult = channel(8752);
-            let result = tmpResult.showReportToModMessageModal(message);
+            let result = channel(8752).showReportToModMessageModal(message);
+            const tmpResult34 = channel(8752);
           }
+          tmpResult = channel(7379);
         } else {
           const intl28 = channel(1114).intl;
           if (intl28.string(channel(1114).t.k5WiPf) === label) {
@@ -230,7 +230,7 @@ export const longPressMessageOptionHandler = function longPressMessageOptionHand
                 const guild_id2 = message.messageReference.guild_id;
                 if (null != guild_id2) {
                   channel(1100).transitionToGuild(guild_id2, tmp146, tmp145);
-                  const tmpResult1 = channel(1100);
+                  const tmpResult35 = channel(1100);
                 }
               }
             }
@@ -238,14 +238,14 @@ export const longPressMessageOptionHandler = function longPressMessageOptionHand
             const intl29 = channel(1114).intl;
             if (intl29.string(channel(1114).t["+TSRGD"]) === label) {
               channel(4647).transitionToMessage(channel.id, message.id);
-              const tmpResult2 = channel(4647);
+              const tmpResult36 = channel(4647);
             } else {
               const intl30 = channel(1114).intl;
               if (intl30.string(channel(1114).t.zBoHlf) === label) {
                 channel(7292).copy(id2);
-                const tmpResult3 = channel(7292);
+                const tmpResult37 = channel(7292);
                 const result1 = channel(4334).presentMessageIdCopied();
-                const tmpResult4 = channel(4334);
+                const tmpResult38 = channel(4334);
               } else {
                 const intl31 = channel(1114).intl;
                 if (intl31.string(channel(1114).t.P8tvKG) === label) {
@@ -254,9 +254,9 @@ export const longPressMessageOptionHandler = function longPressMessageOptionHand
                     if (chatInputRef != null) {
                       const current7 = chatInputRef.current;
                       if (current7 != null) {
-                        let tmp130Result = tmp130(4481);
                         const _HermesInternal = HermesInternal;
-                        current7.insertText("@" + tmp130Result.getUserTag(user, { decoration: "never" }), null, true);
+                        current7.insertText("@" + tmp130(4481).getUserTag(user, { decoration: "never" }), null, true);
+                        const tmp130Result = tmp130(4481);
                       }
                     }
                     if (chatInputRef != null) {
@@ -275,13 +275,13 @@ export const longPressMessageOptionHandler = function longPressMessageOptionHand
                 } else {
                   const intl32 = channel(1114).intl;
                   if (intl32.string(channel(1114).t.cduTBL) === label) {
-                    obj = {
+                    let obj2 = {
                       userId: message.author.id,
                       channelId: id,
                       messageId: message.id,
                       sourceAnalyticsLocations: analyticsLocations.analyticsLocations,
                     };
-                    tmp130(8296)(obj);
+                    tmp130(8296)(obj2);
                   } else {
                     const intl33 = channel(1114).intl;
                     if (intl33.string(channel(1114).t.fsBWmS) === label) {
@@ -297,20 +297,26 @@ export const longPressMessageOptionHandler = function longPressMessageOptionHand
                             current6.dismissKeyboard();
                           }
                         }
-                        tmp130Result = tmp130(4980);
-                        obj = { title: null, children: null, cancelText: null, confirmText: null, onConfirm: null };
+                        let obj3 = {
+                          title: null,
+                          children: null,
+                          cancelText: null,
+                          confirmText: null,
+                          onConfirm: null,
+                        };
                         const intl23 = channel(1114).intl;
-                        obj.title = intl23.string(channel(1114).t.aIz1oV);
-                        let obj1 = { channelId: id };
-                        obj.children = jsx(tmp130(11799), { channelId: id });
+                        obj3.title = intl23.string(channel(1114).t.aIz1oV);
+                        let obj4 = { channelId: id };
+                        obj3.children = jsx(tmp130(11800), { channelId: id });
                         const intl24 = channel(1114).intl;
-                        obj.cancelText = intl24.string(channel(1114).t["ETE/oC"]);
+                        obj3.cancelText = intl24.string(channel(1114).t["ETE/oC"]);
                         const intl25 = channel(1114).intl;
-                        obj.confirmText = intl25.string(channel(1114).t["cY+Oob"]);
-                        obj.onConfirm = function onConfirm() {
+                        obj3.confirmText = intl25.string(channel(1114).t["cY+Oob"]);
+                        obj3.onConfirm = function onConfirm() {
                           return MessageActionCreatorsDefault.crosspostMessage(channel, id);
                         };
-                        tmp130Result.show(obj);
+                        tmp130(4980).show(obj3);
+                        const tmp130Result29 = tmp130(4980);
                       } else {
                         const intl35 = channel(1114).intl;
                         if (intl35.string(channel(1114).t.CvQ18w) === label) {
@@ -322,7 +328,7 @@ export const longPressMessageOptionHandler = function longPressMessageOptionHand
                               current5.dismissKeyboard();
                             }
                           }
-                          let obj2 = {
+                          let obj5 = {
                             title: null,
                             body: null,
                             children: null,
@@ -331,23 +337,23 @@ export const longPressMessageOptionHandler = function longPressMessageOptionHand
                             onConfirm: null,
                           };
                           const intl19 = channel(1114).intl;
-                          obj2.title = intl19.string(channel(1114).t.CvQ18w);
+                          obj5.title = intl19.string(channel(1114).t.CvQ18w);
                           const intl20 = channel(1114).intl;
-                          obj2.body = intl20.string(channel(1114).t.WG5dyo);
-                          let obj3 = { message };
-                          obj2.children = jsx(tmp130(11802), { message });
+                          obj5.body = intl20.string(channel(1114).t.WG5dyo);
+                          const obj6 = { message };
+                          obj5.children = jsx(tmp130(11803), { message });
                           const intl21 = channel(1114).intl;
-                          obj2.cancelText = intl21.string(channel(1114).t.gm1Vej);
+                          obj5.cancelText = intl21.string(channel(1114).t.gm1Vej);
                           const intl22 = channel(1114).intl;
-                          obj2.confirmText = intl22.string(channel(1114).t.p89ACt);
-                          obj2.onConfirm = function onConfirm() {
+                          obj5.confirmText = intl22.string(channel(1114).t.p89ACt);
+                          obj5.onConfirm = function onConfirm() {
                             ChannelPinActionCreatorsDefault.pinMessage(channel, id.id);
                             const AccessibilityAnnouncer = AccessibilityAnnouncer2.AccessibilityAnnouncer;
                             const intl = util.intl;
                             AccessibilityAnnouncer.announce(intl.string(util.t.sCfDDl));
                           };
-                          tmp130(4980).show(obj2);
-                          const tmp130Result1 = tmp130(4980);
+                          tmp130(4980).show(obj5);
+                          const tmp130Result30 = tmp130(4980);
                         } else {
                           const intl36 = channel(1114).intl;
                           if (intl36.string(channel(1114).t["Bse+F/"]) === label) {
@@ -359,7 +365,7 @@ export const longPressMessageOptionHandler = function longPressMessageOptionHand
                                 current4.dismissKeyboard();
                               }
                             }
-                            const obj4 = {
+                            const obj7 = {
                               title: null,
                               body: null,
                               children: null,
@@ -368,41 +374,41 @@ export const longPressMessageOptionHandler = function longPressMessageOptionHand
                               onConfirm: null,
                             };
                             const intl15 = channel(1114).intl;
-                            obj4.title = intl15.string(channel(1114).t["Bse+F/"]);
+                            obj7.title = intl15.string(channel(1114).t["Bse+F/"]);
                             const intl16 = channel(1114).intl;
-                            obj4.body = intl16.string(channel(1114).t.NjEPp7);
-                            const obj5 = { message };
-                            obj4.children = jsx(tmp130(11802), { message });
+                            obj7.body = intl16.string(channel(1114).t.NjEPp7);
+                            const obj8 = { message };
+                            obj7.children = jsx(tmp130(11803), { message });
                             const intl17 = channel(1114).intl;
-                            obj4.cancelText = intl17.string(channel(1114).t.gm1Vej);
+                            obj7.cancelText = intl17.string(channel(1114).t.gm1Vej);
                             const intl18 = channel(1114).intl;
-                            obj4.confirmText = intl18.string(channel(1114).t.p89ACt);
-                            obj4.onConfirm = function onConfirm() {
+                            obj7.confirmText = intl18.string(channel(1114).t.p89ACt);
+                            obj7.onConfirm = function onConfirm() {
                               return ChannelPinActionCreatorsDefault.unpinMessage(channel, id.id);
                             };
-                            tmp130(4980).show(obj4);
-                            const tmp130Result2 = tmp130(4980);
+                            tmp130(4980).show(obj7);
+                            const tmp130Result31 = tmp130(4980);
                           } else {
                             const intl37 = channel(1114).intl;
                             if (intl37.string(channel(1114).t["lE/PG3"]) === label) {
                               const result2 = tmp130(7559).patchMessageGuildOfficial(id, id2, true);
-                              const tmp130Result3 = tmp130(7559);
+                              const tmp130Result32 = tmp130(7559);
                             } else {
                               const intl38 = channel(1114).intl;
                               if (intl38.string(channel(1114).t["2km5Gf"]) === label) {
                                 const result3 = tmp130(7559).patchMessageGuildOfficial(id, id2, false);
-                                const tmp130Result4 = tmp130(7559);
+                                const tmp130Result33 = tmp130(7559);
                               } else {
                                 const intl39 = channel(1114).intl;
                                 if (intl39.string(channel(1114).t.xwMqD7) === label) {
                                   if (message.state === constants7.SENDING) {
                                     tmp130(7936).cancelRequest(id2);
-                                    const tmp130Result5 = tmp130(7936);
+                                    const tmp130Result34 = tmp130(7936);
                                     tmp130(7559).deleteMessage(id, id2, true);
-                                    const tmp130Result6 = tmp130(7559);
+                                    const tmp130Result35 = tmp130(7559);
                                   } else if (message.state === tmp86.SEND_FAILED) {
                                     tmp130(7559).deleteMessage(id, id2, true);
-                                    const tmp130Result7 = tmp130(7559);
+                                    const tmp130Result36 = tmp130(7559);
                                   } else {
                                     closure_132_0 = id;
                                     closure_132_1 = message;
@@ -412,7 +418,7 @@ export const longPressMessageOptionHandler = function longPressMessageOptionHand
                                         current3.dismissKeyboard();
                                       }
                                     }
-                                    const obj6 = {
+                                    const obj10 = {
                                       title: null,
                                       body: null,
                                       children: null,
@@ -421,29 +427,29 @@ export const longPressMessageOptionHandler = function longPressMessageOptionHand
                                       onConfirm: null,
                                     };
                                     const intl11 = channel(1114).intl;
-                                    obj6.title = intl11.string(channel(1114).t.MWMcg7);
+                                    obj10.title = intl11.string(channel(1114).t.MWMcg7);
                                     const intl12 = channel(1114).intl;
-                                    obj6.body = intl12.string(channel(1114).t.AMvpS4);
-                                    const obj7 = { message };
-                                    obj6.children = jsx(tmp130(11802), { message });
+                                    obj10.body = intl12.string(channel(1114).t.AMvpS4);
+                                    const obj11 = { message };
+                                    obj10.children = jsx(tmp130(11803), { message });
                                     const intl13 = channel(1114).intl;
-                                    obj6.cancelText = intl13.string(channel(1114).t.gm1Vej);
+                                    obj10.cancelText = intl13.string(channel(1114).t.gm1Vej);
                                     const intl14 = channel(1114).intl;
-                                    obj6.confirmText = intl14.string(channel(1114).t.p89ACt);
-                                    obj6.onConfirm = function onConfirm() {
+                                    obj10.confirmText = intl14.string(channel(1114).t.p89ACt);
+                                    obj10.onConfirm = function onConfirm() {
                                       MessageActionCreatorsDefault.deleteMessage(channel, id.id, false);
                                     };
-                                    tmp130(4980).show(obj6);
-                                    const tmp130Result8 = tmp130(4980);
+                                    tmp130(4980).show(obj10);
+                                    const tmp130Result37 = tmp130(4980);
                                   }
-                                  const obj8 = {
+                                  const obj13 = {
                                     channel_id: id,
                                     guild_id,
                                     action_sheet_option: "delete",
                                     message_state: message.state,
                                   };
-                                  tmp130(4816).trackWithMetadata(constants.MESSAGE_ACTION_SHEET_OPTION_PRESSED, obj8);
-                                  const tmp130Result9 = tmp130(4816);
+                                  tmp130(4816).trackWithMetadata(constants.MESSAGE_ACTION_SHEET_OPTION_PRESSED, obj13);
+                                  const tmp130Result38 = tmp130(4816);
                                 } else {
                                   const intl40 = channel(1114).intl;
                                   if (intl40.string(channel(1114).t["5911Lb"]) === label) {
@@ -454,21 +460,24 @@ export const longPressMessageOptionHandler = function longPressMessageOptionHand
                                     if (uploaderFileForMessageId != null) {
                                       items = uploaderFileForMessageId.items;
                                     }
-                                    tmp130(11805)(
+                                    tmp130(11806)(
                                       channel,
                                       message,
                                       items,
                                       SendMessageOptionsStore.getOptions(message.id),
                                     );
-                                    const tmp130Result10 = tmp130(11805);
-                                    const obj9 = {
+                                    const tmp130Result39 = tmp130(11806);
+                                    const obj15 = {
                                       channel_id: id,
                                       guild_id,
                                       action_sheet_option: "retry",
                                       message_state: message.state,
                                     };
-                                    tmp130(4816).trackWithMetadata(constants.MESSAGE_ACTION_SHEET_OPTION_PRESSED, obj9);
-                                    const tmp130Result11 = tmp130(4816);
+                                    tmp130(4816).trackWithMetadata(
+                                      constants.MESSAGE_ACTION_SHEET_OPTION_PRESSED,
+                                      obj15,
+                                    );
+                                    const tmp130Result40 = tmp130(4816);
                                   } else {
                                     const intl41 = channel(1114).intl;
                                     if (intl41.string(channel(1114).t.JrGD7E) === label) {
@@ -479,50 +488,50 @@ export const longPressMessageOptionHandler = function longPressMessageOptionHand
                                         );
                                         if (null != allTextDisplayContent) {
                                           channel(7292).copy(allTextDisplayContent);
-                                          const tmpResult6 = channel(7292);
+                                          const tmpResult40 = channel(7292);
                                         }
-                                        const tmpResult5 = channel(4861);
+                                        const tmpResult39 = channel(4861);
                                       } else {
                                         channel(7292).copy(contentMessage.content);
-                                        const tmpResult7 = channel(7292);
+                                        const tmpResult41 = channel(7292);
                                       }
                                       channel(4334).presentMessageCopied();
-                                      const tmpResult8 = channel(4334);
+                                      const tmpResult42 = channel(4334);
                                     } else {
                                       const intl42 = channel(1114).intl;
                                       if (intl42.string(channel(1114).t.lfIHs4) === label) {
-                                        const result4 = channel(11387).handleAddNewReactions(channel, id2);
-                                        const tmpResult9 = channel(11387);
+                                        const result4 = channel(11388).handleAddNewReactions(channel, id2);
+                                        const tmpResult43 = channel(11388);
                                       } else {
                                         const intl43 = channel(1114).intl;
                                         if (intl43.string(channel(1114).t.gHp0C4) === label) {
                                           if ("Preview" === actionSheetSource) {
-                                            const result5 = channel(11387).handleViewPreviewReactions(id2, id);
-                                            const tmpResult10 = channel(11387);
+                                            const result5 = channel(11388).handleViewPreviewReactions(id2, id);
+                                            const tmpResult44 = channel(11388);
                                           } else {
-                                            const obj10 = { messageId: id2, channelId: id, location: null };
-                                            const obj11 = { object: constants2.MESSAGE_ACTION_SHEET };
-                                            obj10.location = obj11;
-                                            channel(11387).handleViewReactions(obj10);
-                                            const tmpResult11 = channel(11387);
+                                            const obj17 = { messageId: id2, channelId: id, location: null };
+                                            const obj18 = { object: constants2.MESSAGE_ACTION_SHEET };
+                                            obj17.location = obj18;
+                                            channel(11388).handleViewReactions(obj17);
+                                            const tmpResult45 = channel(11388);
                                           }
                                         } else {
                                           const intl44 = channel(1114).intl;
                                           if (intl44.string(channel(1114).t.ZbtGBm) === label) {
-                                            const result6 = channel(11387).handleRemoveAllReactions(id, id2);
-                                            const tmpResult12 = channel(11387);
+                                            const result6 = channel(11388).handleRemoveAllReactions(id, id2);
+                                            const tmpResult46 = channel(11388);
                                           } else {
                                             const intl45 = channel(1114).intl;
                                             if (intl45.string(channel(1114).t["g33r/P"]) === label) {
-                                              const obj12 = { recipientIds: message.author.id };
-                                              tmp130(4649).openPrivateChannel(obj12);
-                                              const tmp130Result12 = tmp130(4649);
+                                              const obj19 = { recipientIds: message.author.id };
+                                              tmp130(4649).openPrivateChannel(obj19);
+                                              const tmp130Result41 = tmp130(4649);
                                             } else {
                                               const intl46 = channel(1114).intl;
                                               if (intl46.string(channel(1114).t.Xrt5Po) === label) {
-                                                const obj13 = { message_id: id2, channel: channel.id };
-                                                tmp130(1242).track(constants.MESSAGE_LINK_COPIED, obj13);
-                                                const tmp130Result13 = tmp130(1242);
+                                                const obj20 = { message_id: id2, channel: channel.id };
+                                                tmp130(1240).track(constants.MESSAGE_LINK_COPIED, obj20);
+                                                const tmp130Result42 = tmp130(1240);
                                                 const channelPermalink = channel(4781).getChannelPermalink(
                                                   channel.guild_id,
                                                   channel.id,
@@ -530,15 +539,15 @@ export const longPressMessageOptionHandler = function longPressMessageOptionHand
                                                 );
                                                 if (null != channelPermalink) {
                                                   channel(7292).copy(channelPermalink);
-                                                  const tmpResult14 = channel(7292);
+                                                  const tmpResult48 = channel(7292);
                                                   channel(4334).presentLinkCopied();
-                                                  const tmpResult15 = channel(4334);
+                                                  const tmpResult49 = channel(4334);
                                                 }
-                                                const tmpResult13 = channel(4781);
+                                                const tmpResult47 = channel(4781);
                                               } else {
                                                 const intl47 = channel(1114).intl;
                                                 if (intl47.string(channel(1114).t.RpE9k7) === label) {
-                                                  tmp130(10375)(id, id2);
+                                                  tmp130(10376)(id, id2);
                                                 } else {
                                                   const intl48 = channel(1114).intl;
                                                   if (intl48.string(channel(1114).t["S/xNKV"]) === label) {
@@ -553,7 +562,7 @@ export const longPressMessageOptionHandler = function longPressMessageOptionHand
                                                         selectedMedia.mediaUrl,
                                                         closure_15,
                                                       );
-                                                      const tmpResult16 = channel(4786);
+                                                      const tmpResult50 = channel(4786);
                                                       const toURLSafeResult = tmp130(1365).toURLSafe(
                                                         selectedMedia.mediaUrl,
                                                       );
@@ -576,7 +585,7 @@ export const longPressMessageOptionHandler = function longPressMessageOptionHand
                                                           )
                                                           .then(
                                                             () => {
-                                                              let obj = ToastUtils;
+                                                              const obj = ToastUtils;
                                                               if (id2) {
                                                                 obj.presentGifSaved();
                                                               } else {
@@ -587,46 +596,53 @@ export const longPressMessageOptionHandler = function longPressMessageOptionHand
                                                               if (!tmp4) {
                                                                 tmp5 = id;
                                                               }
-                                                              obj = { channel_id: tmp5, channel_static_route: null };
+                                                              const obj3 = {
+                                                                channel_id: tmp5,
+                                                                channel_static_route: null,
+                                                              };
                                                               let tmp6;
                                                               if (tmp4) {
                                                                 tmp6 = id;
                                                               }
-                                                              obj = { channel_static_route: tmp6 };
-                                                              const merged = Object.assign(obj);
+                                                              obj3.channel_static_route = tmp6;
+                                                              const merged = Object.assign(obj3);
                                                               AnalyticsUtilsDefault.track(
                                                                 constants.CONTEXT_MENU_IMAGE_SAVED,
-                                                                obj,
+                                                                {},
                                                               );
+                                                              const obj4 = {};
                                                             },
                                                             () => {
-                                                              let obj = {
+                                                              const obj2 = {
                                                                 title: null,
                                                                 body: null,
                                                                 isDismissable: true,
                                                               };
                                                               const intl = util.intl;
-                                                              obj.title = intl.string(util.t.cV3alD);
+                                                              obj2.title = intl.string(util.t.cV3alD);
                                                               const intl2 = util.intl;
-                                                              obj.body = intl2.string(util.t.r4Zjzv);
-                                                              obj.show(obj);
+                                                              obj2.body = intl2.string(util.t.r4Zjzv);
+                                                              AlertActionCreatorsDefault.show(obj2);
                                                               const tmp3 = isStaticChannelRoute(id);
                                                               let tmp4;
                                                               if (!tmp3) {
                                                                 tmp4 = id;
                                                               }
-                                                              obj = { channel_id: tmp4, channel_static_route: null };
+                                                              const obj4 = {
+                                                                channel_id: tmp4,
+                                                                channel_static_route: null,
+                                                              };
                                                               let tmp5;
                                                               if (tmp3) {
                                                                 tmp5 = id;
                                                               }
-                                                              obj.channel_static_route = tmp5;
-                                                              const merged = Object.assign(obj);
+                                                              obj4.channel_static_route = tmp5;
+                                                              const merged = Object.assign(obj4);
                                                               AnalyticsUtilsDefault.track(
                                                                 constants.CONTEXT_MENU_IMAGE_SAVE_FAILED,
                                                                 {},
                                                               );
-                                                              const obj1 = {};
+                                                              const obj5 = {};
                                                             },
                                                           );
                                                         const nextPromise = result7.then((result) =>
@@ -638,7 +654,7 @@ export const longPressMessageOptionHandler = function longPressMessageOptionHand
                                                         );
                                                       }
                                                       result7 = Promise.resolve(selectedMedia.mediaUrl);
-                                                      const tmp130Result14 = tmp130(1365);
+                                                      const tmp130Result43 = tmp130(1365);
                                                     }
                                                   } else {
                                                     const intl49 = channel(1114).intl;
@@ -658,20 +674,19 @@ export const longPressMessageOptionHandler = function longPressMessageOptionHand
                                                             channel(4334).presentVideoSaved();
                                                           },
                                                           () => {
-                                                            id(4980);
-                                                            const obj = {
+                                                            const obj2 = {
                                                               title: null,
                                                               body: null,
                                                               isDismissable: true,
                                                             };
                                                             const intl = channel(1114).intl;
-                                                            obj.title = intl.string(channel(1114).t.cV3alD);
+                                                            obj2.title = intl.string(channel(1114).t.cV3alD);
                                                             const intl2 = channel(1114).intl;
-                                                            obj.body = intl2.string(channel(1114).t.r4Zjzv);
-                                                            obj.show(obj);
+                                                            obj2.body = intl2.string(channel(1114).t.r4Zjzv);
+                                                            id(4980).show(obj2);
                                                           },
                                                         );
-                                                        const tmpResult17 = channel(8383);
+                                                        const tmpResult51 = channel(8383);
                                                       }
                                                     } else {
                                                       const intl50 = channel(1114).intl;
@@ -681,9 +696,9 @@ export const longPressMessageOptionHandler = function longPressMessageOptionHand
                                                           mediaUrl2 = selectedMedia.mediaUrl;
                                                         }
                                                         if (null != mediaUrl2) {
-                                                          const obj14 = { href: mediaUrl2 };
-                                                          channel(8488).handleClick(obj14);
-                                                          const tmpResult18 = channel(8488);
+                                                          const obj21 = { href: mediaUrl2 };
+                                                          channel(8488).handleClick(obj21);
+                                                          const tmpResult52 = channel(8488);
                                                         }
                                                       } else {
                                                         const intl51 = channel(1114).intl;
@@ -692,13 +707,13 @@ export const longPressMessageOptionHandler = function longPressMessageOptionHand
                                                           if (intl52.string(channel(1114).t["8xHmxo"]) !== label) {
                                                             const intl53 = channel(1114).intl;
                                                             if (intl53.string(channel(1114).t["5IEsGx"]) === label) {
-                                                              const obj15 = {
+                                                              const obj22 = {
                                                                 message,
                                                                 channel,
                                                                 chatInputRef,
                                                                 actionSource: "action_sheet",
                                                               };
-                                                              tmp130(11808)(obj15);
+                                                              tmp130(11809)(obj22);
                                                               if ("Preview" === actionSheetSource) {
                                                                 channel(4647).transitionToMessage(
                                                                   channel.id,
@@ -713,61 +728,65 @@ export const longPressMessageOptionHandler = function longPressMessageOptionHand
                                                                     { channelId: channel.id },
                                                                   );
                                                                 }, 500);
-                                                                const tmpResult19 = channel(4647);
+                                                                const tmpResult53 = channel(4647);
                                                               }
                                                             } else {
                                                               const intl54 = channel(1114).intl;
                                                               if (intl54.string(channel(1114).t.I3ltXO) === label) {
-                                                                const obj16 = { message, source: "long-press-sheet" };
-                                                                channel(11809).openForwardModal(obj16);
-                                                                const tmpResult20 = channel(11809);
+                                                                const obj23 = { message, source: "long-press-sheet" };
+                                                                channel(11810).openForwardModal(obj23);
+                                                                const tmpResult54 = channel(11810);
                                                               } else {
                                                                 const intl55 = channel(1114).intl;
                                                                 if (intl55.string(channel(1114).t.rBIGBL) === label) {
-                                                                  id = undefined;
+                                                                  let id1;
                                                                   if (message != null) {
-                                                                    id = message.id;
+                                                                    id1 = message.id;
                                                                   }
                                                                   const result9 = tmp130(
                                                                     7867,
-                                                                  ).openThreadCreationForMobile(channel, id, "Message");
+                                                                  ).openThreadCreationForMobile(
+                                                                    channel,
+                                                                    id1,
+                                                                    "Message",
+                                                                  );
                                                                   let result10 = null == message;
                                                                   if (!result10) {
-                                                                    const tmpResult21 = channel(4494);
-                                                                    result10 = tmpResult21.navigateToCreateThread(
+                                                                    const tmpResult55 = channel(4494);
+                                                                    result10 = tmpResult55.navigateToCreateThread(
                                                                       channel.guild_id,
                                                                       tmp130(11).castMessageIdAsChannelId(message.id),
                                                                     );
-                                                                    const tmp130Result16 = tmp130(11);
+                                                                    const tmp130Result45 = tmp130(11);
                                                                   }
                                                                   if (!result10) {
-                                                                    const tmpResult22 = channel(1100);
-                                                                    tmpResult22.transitionToGuild(
+                                                                    const tmpResult56 = channel(1100);
+                                                                    tmpResult56.transitionToGuild(
                                                                       channel.guild_id,
                                                                       tmp130(11).castMessageIdAsChannelId(message.id),
                                                                     );
-                                                                    const tmp130Result17 = tmp130(11);
+                                                                    const tmp130Result46 = tmp130(11);
                                                                   }
-                                                                  const tmp130Result15 = tmp130(7867);
+                                                                  const tmp130Result44 = tmp130(7867);
                                                                 } else {
                                                                   const intl56 = channel(1114).intl;
                                                                   if (
                                                                     intl56.string(channel(1114).t["39d0Wj"]) === label
                                                                   ) {
-                                                                    const tmpResult23 = channel(1100);
-                                                                    tmpResult23.transitionToGuild(
+                                                                    const tmpResult57 = channel(1100);
+                                                                    tmpResult57.transitionToGuild(
                                                                       channel.guild_id,
                                                                       tmp130(11).castMessageIdAsChannelId(message.id),
                                                                     );
-                                                                    const tmp130Result18 = tmp130(11);
+                                                                    const tmp130Result47 = tmp130(11);
                                                                   } else {
                                                                     const intl57 = channel(1114).intl;
                                                                     if (
                                                                       intl57.string(channel(1114).t.PHjkRE) === label
                                                                     ) {
                                                                       tmp130(4603).hideActionSheet();
-                                                                      const tmp130Result19 = tmp130(4603);
-                                                                      const obj17 = {
+                                                                      const tmp130Result48 = tmp130(4603);
+                                                                      const obj24 = {
                                                                         channel,
                                                                         commandType:
                                                                           channel(1894).ApplicationCommandType.MESSAGE,
@@ -775,47 +794,48 @@ export const longPressMessageOptionHandler = function longPressMessageOptionHand
                                                                       };
                                                                       const result11 =
                                                                         channel(4494).navigateToContextMenuCommands(
-                                                                          obj17,
+                                                                          obj24,
                                                                         );
-                                                                      const tmpResult24 = channel(4494);
+                                                                      const tmpResult58 = channel(4494);
                                                                     } else {
                                                                       const intl58 = channel(1114).intl;
                                                                       if (
                                                                         intl58.string(channel(1114).t.tpxJto) === label
                                                                       ) {
-                                                                        const obj18 = {
+                                                                        const obj25 = {
                                                                           channelId: id,
                                                                           messageId: id2,
                                                                           displayToast: true,
                                                                           source:
-                                                                            channel(11838).SavedMessageSources
+                                                                            channel(11839).SavedMessageSources
                                                                               .LONG_PRESS_ACTION_SHEET,
                                                                         };
                                                                         const result12 =
-                                                                          channel(11833).addOrUpdateSavedMessage(obj18);
-                                                                        const tmpResult25 = channel(11833);
+                                                                          channel(11834).addOrUpdateSavedMessage(obj25);
+                                                                        const tmpResult59 = channel(11834);
                                                                       } else {
                                                                         const intl59 = channel(1114).intl;
                                                                         if (
                                                                           intl59.string(channel(1114).t.SvXS1Z) ===
                                                                           label
                                                                         ) {
-                                                                          const obj19 = {
+                                                                          const obj26 = {
                                                                             channelId: id,
                                                                             messageId: id2,
                                                                             displayToast: true,
                                                                           };
-                                                                          channel(11833).removeSavedMessage(obj19);
-                                                                          const tmpResult26 = channel(11833);
+                                                                          channel(11834).removeSavedMessage(obj26);
+                                                                          const tmpResult60 = channel(11834);
                                                                         } else {
                                                                           const intl60 = channel(1114).intl;
                                                                           if (
                                                                             intl60.string(channel(1114).t.mJ3P0N) ===
                                                                             label
                                                                           ) {
-                                                                            const obj20 = {
+                                                                            const obj27 = {
                                                                               createReminder(dueAt) {
-                                                                                const obj = {
+                                                                                const obj = SavedMessageHelpers;
+                                                                                return obj.addOrUpdateSavedMessage({
                                                                                   channelId: id,
                                                                                   messageId: id2,
                                                                                   dueAt,
@@ -824,8 +844,7 @@ export const longPressMessageOptionHandler = function longPressMessageOptionHand
                                                                                     SavedMessageSources
                                                                                       .SavedMessageSources
                                                                                       .LONG_PRESS_ACTION_SHEET,
-                                                                                };
-                                                                                return obj.addOrUpdateSavedMessage(obj);
+                                                                                });
                                                                               },
                                                                               channelId: null,
                                                                               messageId: null,
@@ -835,22 +854,23 @@ export const longPressMessageOptionHandler = function longPressMessageOptionHand
                                                                               channel_id: obj16.channelId,
                                                                               id: obj16.messageId,
                                                                             } = message);
-                                                                            obj20.onBack = onBack;
+                                                                            obj27.onBack = onBack;
                                                                             tmp130(4603).openLazy(
-                                                                              channel(1896)(11839, dependencyMap.paths),
+                                                                              channel(1896)(11840, dependencyMap.paths),
                                                                               "MessageReminderDurationActionSheet",
-                                                                              obj20,
+                                                                              obj27,
                                                                             );
-                                                                            const tmp130Result20 = tmp130(4603);
+                                                                            const tmp130Result49 = tmp130(4603);
                                                                           } else {
                                                                             const intl61 = channel(1114).intl;
                                                                             if (
                                                                               intl61.string(channel(1114).t.vrbqs1) ===
                                                                               label
                                                                             ) {
-                                                                              const obj21 = {
+                                                                              const obj28 = {
                                                                                 createReminder(dueAt) {
-                                                                                  const obj = {
+                                                                                  const obj = SavedMessageHelpers;
+                                                                                  return obj.addOrUpdateSavedMessage({
                                                                                     channelId: id,
                                                                                     messageId: id2,
                                                                                     dueAt,
@@ -859,19 +879,17 @@ export const longPressMessageOptionHandler = function longPressMessageOptionHand
                                                                                       SavedMessageSources
                                                                                         .SavedMessageSources
                                                                                         .LONG_PRESS_ACTION_SHEET,
-                                                                                  };
-                                                                                  return obj.addOrUpdateSavedMessage(
-                                                                                    obj,
-                                                                                  );
+                                                                                  });
                                                                                 },
                                                                                 removeReminder() {
-                                                                                  const obj = {
-                                                                                    channelId: id,
-                                                                                    messageId: id2,
-                                                                                    displayToast: true,
-                                                                                    isReminder: true,
-                                                                                  };
-                                                                                  return obj.removeSavedMessage(obj);
+                                                                                  return SavedMessageHelpers.removeSavedMessage(
+                                                                                    {
+                                                                                      channelId: id,
+                                                                                      messageId: id2,
+                                                                                      displayToast: true,
+                                                                                      isReminder: true,
+                                                                                    },
+                                                                                  );
                                                                                 },
                                                                                 channelId: null,
                                                                                 messageId: null,
@@ -881,16 +899,16 @@ export const longPressMessageOptionHandler = function longPressMessageOptionHand
                                                                                 channel_id: obj14.channelId,
                                                                                 id: obj14.messageId,
                                                                               } = message);
-                                                                              obj21.onBack = onBack;
+                                                                              obj28.onBack = onBack;
                                                                               tmp130(4603).openLazy(
                                                                                 channel(1896)(
-                                                                                  11839,
+                                                                                  11840,
                                                                                   dependencyMap.paths,
                                                                                 ),
                                                                                 "MessageReminderDurationActionSheet",
-                                                                                obj21,
+                                                                                obj28,
                                                                               );
-                                                                              const tmp130Result21 = tmp130(4603);
+                                                                              const tmp130Result50 = tmp130(4603);
                                                                             } else {
                                                                               const intl62 = channel(1114).intl;
                                                                               if (
@@ -899,22 +917,22 @@ export const longPressMessageOptionHandler = function longPressMessageOptionHand
                                                                                 ) === label
                                                                               ) {
                                                                                 if (null != selectedMedia) {
-                                                                                  let id1;
+                                                                                  let id3;
                                                                                   if (
                                                                                     "embed" === selectedMedia.sourceType
                                                                                   ) {
-                                                                                    id1 = selectedMedia.source.id;
+                                                                                    id3 = selectedMedia.source.id;
                                                                                   }
-                                                                                  id2 = undefined;
+                                                                                  let id4;
                                                                                   if (
                                                                                     "attachment" ===
                                                                                     selectedMedia.sourceType
                                                                                   ) {
-                                                                                    id2 = selectedMedia.source.id;
+                                                                                    id4 = selectedMedia.source.id;
                                                                                   }
                                                                                   let result13 =
-                                                                                    undefined !== id1 ||
-                                                                                    undefined !== id2;
+                                                                                    undefined !== id3 ||
+                                                                                    undefined !== id4;
                                                                                   if (!result13) {
                                                                                     result13 =
                                                                                       channel(
@@ -922,10 +940,10 @@ export const longPressMessageOptionHandler = function longPressMessageOptionHand
                                                                                       ).messageHasObscurableMedia(
                                                                                         message,
                                                                                       );
-                                                                                    const tmpResult27 = channel(7395);
+                                                                                    const tmpResult61 = channel(7395);
                                                                                   }
                                                                                   if (result13) {
-                                                                                    const obj22 = {
+                                                                                    const obj29 = {
                                                                                       channelId: null,
                                                                                       messageId: null,
                                                                                       attachmentId: null,
@@ -935,17 +953,17 @@ export const longPressMessageOptionHandler = function longPressMessageOptionHand
                                                                                       channel_id: obj12.channelId,
                                                                                       id: obj12.messageId,
                                                                                     } = message);
-                                                                                    obj22.attachmentId = id2;
-                                                                                    obj22.embedId = id1;
+                                                                                    obj29.attachmentId = id4;
+                                                                                    obj29.embedId = id3;
                                                                                     tmp130(4603).openLazy(
                                                                                       channel(1896)(
-                                                                                        11806,
+                                                                                        11807,
                                                                                         dependencyMap.paths,
                                                                                       ),
                                                                                       closure_20,
-                                                                                      obj22,
+                                                                                      obj29,
                                                                                     );
-                                                                                    const tmp130Result22 = tmp130(4603);
+                                                                                    const tmp130Result51 = tmp130(4603);
                                                                                   }
                                                                                 }
                                                                               } else {
@@ -959,15 +977,15 @@ export const longPressMessageOptionHandler = function longPressMessageOptionHand
                                                                                     channel_id: obj9.channelId,
                                                                                     id: obj9.messageId,
                                                                                   } = message);
-                                                                                  tmp130(11843).endPollEarly({
+                                                                                  tmp130(11844).endPollEarly({
                                                                                     channelId: null,
                                                                                     messageId: null,
                                                                                   });
-                                                                                  const obj23 = {
+                                                                                  const obj30 = {
                                                                                     channelId: null,
                                                                                     messageId: null,
                                                                                   };
-                                                                                  const tmp130Result23 = tmp130(11843);
+                                                                                  const tmp130Result52 = tmp130(11844);
                                                                                 } else {
                                                                                   const intl64 = channel(1114).intl;
                                                                                   if (
@@ -975,20 +993,20 @@ export const longPressMessageOptionHandler = function longPressMessageOptionHand
                                                                                       channel(1114).t.Rjezbz,
                                                                                     ) === label
                                                                                   ) {
-                                                                                    const obj24 = {
+                                                                                    const obj31 = {
                                                                                       message,
                                                                                       guildId: guild_id,
                                                                                       onBack,
                                                                                     };
                                                                                     tmp130(4603).openLazy(
                                                                                       channel(1896)(
-                                                                                        11856,
+                                                                                        11857,
                                                                                         dependencyMap.paths,
                                                                                       ),
                                                                                       "AppInteractionInfoActionSheet",
-                                                                                      obj24,
+                                                                                      obj31,
                                                                                     );
-                                                                                    const tmp130Result24 = tmp130(4603);
+                                                                                    const tmp130Result53 = tmp130(4603);
                                                                                   } else {
                                                                                     const intl65 = channel(1114).intl;
                                                                                     if (
@@ -1027,7 +1045,7 @@ export const longPressMessageOptionHandler = function longPressMessageOptionHand
                                                                                                 current.dismissKeyboard();
                                                                                               }
                                                                                             }
-                                                                                            const obj25 = {
+                                                                                            const obj32 = {
                                                                                               title: null,
                                                                                               body: null,
                                                                                               cancelText: null,
@@ -1036,17 +1054,17 @@ export const longPressMessageOptionHandler = function longPressMessageOptionHand
                                                                                             };
                                                                                             const intl3 =
                                                                                               channel(1114).intl;
-                                                                                            obj25.title = intl3.string(
+                                                                                            obj32.title = intl3.string(
                                                                                               channel(1114).t.CbTIEo,
                                                                                             );
                                                                                             const intl4 =
                                                                                               channel(1114).intl;
-                                                                                            obj25.body = intl4.string(
+                                                                                            obj32.body = intl4.string(
                                                                                               channel(1114).t.faHmO3,
                                                                                             );
                                                                                             const intl5 =
                                                                                               channel(1114).intl;
-                                                                                            obj25.cancelText =
+                                                                                            obj32.cancelText =
                                                                                               intl5.string(
                                                                                                 channel(1114).t[
                                                                                                   "ETE/oC"
@@ -1054,11 +1072,11 @@ export const longPressMessageOptionHandler = function longPressMessageOptionHand
                                                                                               );
                                                                                             const intl6 =
                                                                                               channel(1114).intl;
-                                                                                            obj25.confirmText =
+                                                                                            obj32.confirmText =
                                                                                               intl6.string(
                                                                                                 channel(1114).t.kFwAsa,
                                                                                               );
-                                                                                            obj25.onConfirm =
+                                                                                            obj32.onConfirm =
                                                                                               function onConfirm() {
                                                                                                 id = id2.source.id;
                                                                                                 const attachments =
@@ -1075,8 +1093,8 @@ export const longPressMessageOptionHandler = function longPressMessageOptionHand
                                                                                                     found,
                                                                                                   );
                                                                                               };
-                                                                                            tmp130(4980).show(obj25);
-                                                                                            const tmp130Result25 =
+                                                                                            tmp130(4980).show(obj32);
+                                                                                            const tmp130Result54 =
                                                                                               tmp130(4980);
                                                                                           }
                                                                                         }
@@ -1091,7 +1109,7 @@ export const longPressMessageOptionHandler = function longPressMessageOptionHand
                                                                                         current2.dismissKeyboard();
                                                                                       }
                                                                                     }
-                                                                                    const obj26 = {
+                                                                                    const obj33 = {
                                                                                       title: null,
                                                                                       body: null,
                                                                                       cancelText: null,
@@ -1099,30 +1117,30 @@ export const longPressMessageOptionHandler = function longPressMessageOptionHand
                                                                                       onConfirm: null,
                                                                                     };
                                                                                     const intl7 = channel(1114).intl;
-                                                                                    obj26.title = intl7.string(
+                                                                                    obj33.title = intl7.string(
                                                                                       channel(1114).t.VL1KOk,
                                                                                     );
                                                                                     const intl8 = channel(1114).intl;
-                                                                                    obj26.body = intl8.string(
+                                                                                    obj33.body = intl8.string(
                                                                                       channel(1114).t["vXZ+Fo"],
                                                                                     );
                                                                                     const intl9 = channel(1114).intl;
-                                                                                    obj26.cancelText = intl9.string(
+                                                                                    obj33.cancelText = intl9.string(
                                                                                       channel(1114).t["ETE/oC"],
                                                                                     );
                                                                                     const intl10 = channel(1114).intl;
-                                                                                    obj26.confirmText = intl10.string(
+                                                                                    obj33.confirmText = intl10.string(
                                                                                       channel(1114).t.YEHppG,
                                                                                     );
-                                                                                    obj26.onConfirm =
+                                                                                    obj33.onConfirm =
                                                                                       function onConfirm() {
                                                                                         MessageActionCreatorsDefault.suppressEmbeds(
                                                                                           channel,
                                                                                           id,
                                                                                         );
                                                                                       };
-                                                                                    tmp130(4980).show(obj26);
-                                                                                    const tmp130Result26 = tmp130(4980);
+                                                                                    tmp130(4980).show(obj33);
+                                                                                    const tmp130Result55 = tmp130(4980);
                                                                                   }
                                                                                 }
                                                                               }
@@ -1144,24 +1162,24 @@ export const longPressMessageOptionHandler = function longPressMessageOptionHand
                                                         let flag = null != mediaUrl3;
                                                         if (flag) {
                                                           channel(7292).copy(mediaUrl3);
-                                                          const tmpResult28 = channel(7292);
+                                                          const tmpResult62 = channel(7292);
                                                           channel(4334).presentLinkCopied();
                                                           flag = true;
-                                                          const tmpResult29 = channel(4334);
+                                                          const tmpResult63 = channel(4334);
                                                         }
                                                         if (flag) {
                                                           let hostname;
                                                           if (null != mediaUrl3) {
                                                             hostname = channel(8491).getHostname(mediaUrl3);
-                                                            const tmpResult30 = channel(8491);
+                                                            const tmpResult64 = channel(8491);
                                                           }
-                                                          const obj27 = { hostname };
+                                                          const obj34 = { hostname };
                                                           const tmp40 = isStaticChannelRoute(id);
                                                           let tmp41;
                                                           if (!tmp40) {
                                                             tmp41 = id;
                                                           }
-                                                          const obj28 = {
+                                                          const obj35 = {
                                                             channel_id: tmp41,
                                                             channel_static_route: null,
                                                           };
@@ -1169,13 +1187,13 @@ export const longPressMessageOptionHandler = function longPressMessageOptionHand
                                                           if (tmp40) {
                                                             tmp42 = id;
                                                           }
-                                                          obj28.channel_static_route = tmp42;
-                                                          let merged = Object.assign(obj28);
-                                                          tmp130(1242).track(
+                                                          obj35.channel_static_route = tmp42;
+                                                          let merged = Object.assign(obj35);
+                                                          tmp130(1240).track(
                                                             constants.CONTEXT_MENU_MEDIA_LINK_COPIED,
-                                                            obj27,
+                                                            obj34,
                                                           );
-                                                          const tmp130Result27 = tmp130(1242);
+                                                          const tmp130Result56 = tmp130(1240);
                                                         }
                                                       }
                                                     }
@@ -1206,10 +1224,10 @@ export const longPressMessageOptionHandler = function longPressMessageOptionHand
         onActionExecuted(label);
       }
     }
-    if (tmpResult31.canReportMessage(message)) {
+    if (tmpResult65.canReportMessage(message)) {
       const result14 = channel(8752).showReportModalForMessage(message, "mobile_message_action_sheet");
-      const tmpResult32 = channel(8752);
+      const tmpResult66 = channel(8752);
     }
-    tmpResult31 = channel(7392);
+    tmpResult65 = channel(7392);
   }
 };

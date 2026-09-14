@@ -5,6 +5,8 @@ import GameStore from "../../games/GameStore.tsx";
 import GameAutocompleteStore from "../../games/autocomplete/GameAutocompleteStore.tsx";
 import UserStore from "../../../stores/UserStore.tsx";
 
+const require = globalThis.__r;
+
 require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_mentions/hooks/useGameMentionData.tsx");
@@ -19,18 +21,18 @@ export const getGameMentionData = function getGameMentionData(gameId) {
       nsfwAllowed = currentUser.nsfwAllowed;
     }
     if (!obj2.isGameProfileObscured(game, nsfwAllowed)) {
-      let obj = { gameId, gameName: null, gameIcon: null };
+      const obj4 = { gameId, gameName: null, gameIcon: null };
       ({ name: obj3.gameName, media } = game);
       let icon;
       if (media != null) {
         icon = media.icon;
       }
-      obj.gameIcon = icon;
-      let tmp4 = obj;
+      obj4.gameIcon = icon;
+      let tmp4 = obj4;
     }
     obj2 = useGameProfileObscured;
   } else if (null != gameById) {
-    obj = { gameId, gameName: null, gameIcon: null };
+    const obj = { gameId, gameName: null, gameIcon: null };
     ({ name: obj.gameName, icon: obj.gameIcon } = gameById);
     tmp4 = obj;
   }
@@ -52,18 +54,18 @@ export const useGameMentionData = function useGameMentionData(gameId) {
           nsfwAllowed = currentUser.nsfwAllowed;
         }
         if (!obj2.isGameProfileObscured(game, nsfwAllowed)) {
-          let obj = { gameId, gameName: null, gameIcon: null };
+          const obj4 = { gameId, gameName: null, gameIcon: null };
           ({ name: obj3.gameName, media } = game);
           let icon;
           if (media != null) {
             icon = media.icon;
           }
-          obj.gameIcon = icon;
-          let tmp5 = obj;
+          obj4.gameIcon = icon;
+          let tmp5 = obj4;
         }
         obj2 = useGameProfileObscured;
       } else if (null != gameById) {
-        obj = { gameId, gameName: null, gameIcon: null };
+        const obj = { gameId, gameName: null, gameIcon: null };
         ({ name: obj.gameName, icon: obj.gameIcon } = gameById);
         tmp5 = obj;
       }

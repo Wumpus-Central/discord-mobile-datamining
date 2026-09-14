@@ -2,6 +2,8 @@
 import FlagUtils from "../../../discord_common/js/shared/utils/FlagUtils.tsx";
 import GuildStore from "../../stores/GuildStore.tsx";
 
+const require = globalThis.__r;
+
 require = fn;
 const HUB_PROGRESS_STEP_ORDER = fn(9961).HUB_PROGRESS_STEP_ORDER;
 const GuildFeatures = fn(1074).GuildFeatures;

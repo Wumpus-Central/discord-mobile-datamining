@@ -13,16 +13,14 @@ const result = size.fileFinishedImporting(
 );
 
 export const showOverdueRemindersToast = function showOverdueRemindersToast() {
-  let obj = ForLaterExperiment;
   if (obj.isForLaterExperimentOn("showOverdueRemindersToast")) {
     const overdueMessageReminderCount = SavedMessagesStore.getOverdueMessageReminderCount();
     if (0 !== overdueMessageReminderCount) {
       const mostRecentOverdueDueAt = SavedMessagesStore.getMostRecentOverdueDueAt();
-      let tmpResult = MessageRemindersSeenStorage;
       if (mostRecentOverdueDueAt > tmpResult.getRemindersLastSeenAt()) {
-        tmpResult = MessageRemindersSeenStorage;
-        tmpResult.markRemindersSeen();
-        obj = {
+        MessageRemindersSeenStorage.markRemindersSeen();
+        const tmpResult2 = MessageRemindersSeenStorage;
+        const obj3 = {
           key: "overdue-message-reminders",
           IconComponent: ClockIcon.ClockIcon,
           content: null,
@@ -30,10 +28,12 @@ export const showOverdueRemindersToast = function showOverdueRemindersToast() {
           toastDurationMs: 5000,
         };
         const intl = util.intl;
-        obj = { count: overdueMessageReminderCount };
-        obj.content = intl.formatToPlainString(util.t.yBmFPA, obj);
-        ToastActionCreatorsDefault.open(obj);
+        const obj4 = { count: overdueMessageReminderCount };
+        obj3.content = intl.formatToPlainString(util.t.yBmFPA, obj4);
+        ToastActionCreatorsDefault.open(obj3);
       }
+      tmpResult = MessageRemindersSeenStorage;
     }
   }
+  obj = ForLaterExperiment;
 };

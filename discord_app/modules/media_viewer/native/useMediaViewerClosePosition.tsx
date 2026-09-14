@@ -49,7 +49,6 @@ export default function useMediaViewerClosePosition(index) {
     }
     closure_5((windowHeight + obj.height) / 2);
   }, items);
-  index(windowHeight[5]);
   const fn = function h() {
     return index.get();
   };
@@ -59,8 +58,8 @@ export default function useMediaViewerClosePosition(index) {
   const fn2 = function f(arg0) {
     ReanimatedRexport.runOnJS(callback)(arg0);
   };
-  let obj = { runOnJS: index(windowHeight[5]).runOnJS, setClosePosition };
-  fn2.__closure = obj;
+  let obj = index(windowHeight[5]);
+  fn2.__closure = { runOnJS: index(windowHeight[5]).runOnJS, setClosePosition };
   fn2.__workletHash = 2709880768438;
   fn2.__initData = __initData;
   const animatedReaction = obj.useAnimatedReaction(fn, fn2);

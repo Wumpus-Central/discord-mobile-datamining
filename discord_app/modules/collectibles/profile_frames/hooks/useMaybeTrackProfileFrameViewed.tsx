@@ -51,7 +51,7 @@ export default function useMaybeTrackProfileFrameViewed(skuId) {
         }
         if (!current) {
           ref4.current = true;
-          const obj = {
+          const obj2 = {
             profileUi: "PROFILE_FRAME",
             timeToInteractiveMs: ref.current,
             timeToLoadMs: timestamp - openedAt,
@@ -66,12 +66,12 @@ export default function useMaybeTrackProfileFrameViewed(skuId) {
               diff = stateFromStores.endedAt - stateFromStores.startedAt;
             }
           }
-          obj.timeToFetchMs = diff;
-          obj.viewStartedAt = openedAt;
-          obj.fetchStartedAt = stateFromStores.startedAt;
-          obj.analyticsLocations = analyticsLocations;
+          obj2.timeToFetchMs = diff;
+          obj2.viewStartedAt = openedAt;
+          obj2.fetchStartedAt = stateFromStores.startedAt;
+          obj2.analyticsLocations = analyticsLocations;
           const merged = Object.assign(closure_1_2);
-          const result = obj.maybeTrackUserProfileUiViewed(obj);
+          const result = UserProfileAnalyticsUtils.maybeTrackUserProfileUiViewed(obj2);
         }
       }
     }

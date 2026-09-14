@@ -16,14 +16,14 @@ import size from "../../../_runtime/metro/00002__.js";
   MAX_STAGE_VIDEO_USER_LIMIT_TIER2,
   MAX_STAGE_VIDEO_USER_LIMIT_TIER3,
 } = Constants);
-let obj = { TIER_1: 1, [1]: "TIER_1", TIER_2: 2, [2]: "TIER_2", TIER_0: 3, [3]: "TIER_0" };
+const obj = { TIER_1: 1, [1]: "TIER_1", TIER_2: 2, [2]: "TIER_2", TIER_0: 3, [3]: "TIER_0" };
 const items = [
   { id: "non-nitro", value: null, label: "Non-Nitro" },
   { id: "tier-0", value: obj.TIER_0, label: "Basic" },
   { id: "tier-1", value: obj.TIER_1, label: "Classic" },
   { id: "tier-2", value: obj.TIER_2, label: "Standard" },
 ];
-obj = {
+const obj2 = {
   NONE: "628379670982688768",
   TIER_0: "978380684370378762",
   TIER_1: "521846918637420545",
@@ -32,19 +32,18 @@ obj = {
   LEGACY: "521842865731534868",
 };
 const items1 = [,];
-({ TIER_0: arr2[0], TIER_2: arr2[1] } = obj);
+({ TIER_0: arr2[0], TIER_2: arr2[1] } = obj2);
 const items2 = [, , , ,];
-({ NONE: arr3[0], TIER_0: arr3[1], TIER_1: arr3[2], TIER_2: arr3[3], GUILD: arr3[4] } = obj);
-obj = {
-  [obj.TIER_0]: obj.TIER_0,
-  [obj.TIER_1]: obj.TIER_1,
-  [obj.TIER_2]: obj.TIER_2,
-  [obj.NONE]: obj.TIER_2,
-  [obj.LEGACY]: obj.TIER_2,
-};
+({ NONE: arr3[0], TIER_0: arr3[1], TIER_1: arr3[2], TIER_2: arr3[3], GUILD: arr3[4] } = obj2);
 const frozen = Object.freeze({ [obj.TIER_0]: 0, [obj.TIER_1]: 1, [obj.TIER_2]: 2 });
-const frozen1 = Object.freeze(obj);
-const obj2 = {
+const frozen1 = Object.freeze({
+  [obj2.TIER_0]: obj.TIER_0,
+  [obj2.TIER_1]: obj.TIER_1,
+  [obj2.TIER_2]: obj.TIER_2,
+  [obj2.NONE]: obj.TIER_2,
+  [obj2.LEGACY]: obj.TIER_2,
+});
+const obj5 = {
   NONE_MONTH: "628379151761408000",
   NONE_YEAR: "628381571568631808",
   PREMIUM_MONTH_TIER_0: "978380692553465866",
@@ -78,16 +77,23 @@ const items3 = [, , , , , , , , , ,];
   PREMIUM_GROUP_MONTH: arr4[8],
   PREMIUM_MONTH_LEGACY: arr4[9],
   PREMIUM_YEAR_LEGACY: arr4[10],
-} = obj2);
-const frozen2 = Object.freeze({ [obj.TIER_0]: obj.TIER_0, [obj.TIER_1]: obj.TIER_1, [obj.TIER_2]: obj.TIER_2 });
+} = obj5);
+const frozen2 = Object.freeze({ [obj.TIER_0]: obj2.TIER_0, [obj.TIER_1]: obj2.TIER_1, [obj.TIER_2]: obj2.TIER_2 });
 const items4 = [, , ,];
 ({
   PREMIUM_MONTH_TIER_2: arr5[0],
   PREMIUM_3_MONTH_TIER_2: arr5[1],
   PREMIUM_6_MONTH_TIER_2: arr5[2],
   PREMIUM_YEAR_TIER_2: arr5[3],
-} = obj2);
-const obj1 = { [obj.TIER_0]: obj.TIER_0, [obj.TIER_1]: obj.TIER_1, [obj.TIER_2]: obj.TIER_2 };
+} = obj5);
+const obj3 = {
+  [obj2.TIER_0]: obj.TIER_0,
+  [obj2.TIER_1]: obj.TIER_1,
+  [obj2.TIER_2]: obj.TIER_2,
+  [obj2.NONE]: obj.TIER_2,
+  [obj2.LEGACY]: obj.TIER_2,
+};
+const obj4 = { [obj.TIER_0]: obj2.TIER_0, [obj.TIER_1]: obj2.TIER_1, [obj.TIER_2]: obj2.TIER_2 };
 const set = new Set(items3);
 const items5 = [, , ,];
 ({
@@ -95,324 +101,330 @@ const items5 = [, , ,];
   PREMIUM_3_MONTH_GUILD: arr6[1],
   PREMIUM_6_MONTH_GUILD: arr6[2],
   PREMIUM_YEAR_GUILD: arr6[3],
-} = obj2);
+} = obj5);
 const set1 = new Set(items4);
 const items6 = [, ,];
-({ PREMIUM_MONTH_TIER_0: arr7[0], PREMIUM_MONTH_TIER_1: arr7[1], PREMIUM_MONTH_TIER_2: arr7[2] } = obj2);
+({ PREMIUM_MONTH_TIER_0: arr7[0], PREMIUM_MONTH_TIER_1: arr7[1], PREMIUM_MONTH_TIER_2: arr7[2] } = obj5);
 const set2 = new Set(items5);
 const items7 = [, , ,];
-({ NONE_MONTH: arr8[0], NONE_3_MONTH: arr8[1], NONE_6_MONTH: arr8[2], NONE_YEAR: arr8[3] } = obj2);
+({ NONE_MONTH: arr8[0], NONE_3_MONTH: arr8[1], NONE_6_MONTH: arr8[2], NONE_YEAR: arr8[3] } = obj5);
 const set3 = new Set(items6);
 const frozen3 = Object.freeze({
-  [obj.TIER_0]: obj2.PREMIUM_MONTH_TIER_0,
-  [obj.TIER_1]: obj2.PREMIUM_MONTH_TIER_1,
-  [obj.TIER_2]: obj2.PREMIUM_MONTH_TIER_2,
-  [obj.NONE]: undefined,
-  [obj.GUILD]: undefined,
-  [obj.LEGACY]: undefined,
+  [obj2.TIER_0]: obj5.PREMIUM_MONTH_TIER_0,
+  [obj2.TIER_1]: obj5.PREMIUM_MONTH_TIER_1,
+  [obj2.TIER_2]: obj5.PREMIUM_MONTH_TIER_2,
+  [obj2.NONE]: undefined,
+  [obj2.GUILD]: undefined,
+  [obj2.LEGACY]: undefined,
 });
-const obj5 = { MONTH: 1, [1]: "MONTH", YEAR: 2, [2]: "YEAR", DAY: 3, [3]: "DAY" };
-const obj6 = {};
+const obj8 = { MONTH: 1, [1]: "MONTH", YEAR: 2, [2]: "YEAR", DAY: 3, [3]: "DAY" };
+const obj9 = {};
 const frozen4 = Object.freeze({
-  [obj.TIER_0]: obj2.PREMIUM_YEAR_TIER_0,
-  [obj.TIER_1]: obj2.PREMIUM_YEAR_TIER_1,
-  [obj.TIER_2]: obj2.PREMIUM_YEAR_TIER_2,
-  [obj.NONE]: undefined,
-  [obj.GUILD]: undefined,
-  [obj.LEGACY]: undefined,
+  [obj2.TIER_0]: obj5.PREMIUM_YEAR_TIER_0,
+  [obj2.TIER_1]: obj5.PREMIUM_YEAR_TIER_1,
+  [obj2.TIER_2]: obj5.PREMIUM_YEAR_TIER_2,
+  [obj2.NONE]: undefined,
+  [obj2.GUILD]: undefined,
+  [obj2.LEGACY]: undefined,
 });
-obj6[obj.TIER_0] = util.t["t9uG/o"];
-obj6[obj.TIER_1] = util.t.FSOz78;
-obj6[obj.TIER_2] = util.t.lG6a5x;
-const frozen5 = Object.freeze(obj6);
-const items8 = [obj2.PREMIUM_MONTH_TIER_2];
+obj9[obj.TIER_0] = util.t["t9uG/o"];
+obj9[obj.TIER_1] = util.t.FSOz78;
+obj9[obj.TIER_2] = util.t.lG6a5x;
+const frozen5 = Object.freeze(obj9);
+const items8 = [obj5.PREMIUM_MONTH_TIER_2];
 const frozen6 = Object.freeze({
-  [obj2.NONE_MONTH]: {
-    id: obj2.NONE_MONTH,
+  [obj5.NONE_MONTH]: {
+    id: obj5.NONE_MONTH,
     name: "None Monthly",
-    skuId: obj.NONE,
-    interval: obj5.MONTH,
+    skuId: obj2.NONE,
+    interval: obj8.MONTH,
     intervalCount: 1,
   },
-  [obj2.NONE_YEAR]: { id: obj2.NONE_YEAR, name: "None Yearly", skuId: obj.NONE, interval: obj5.YEAR, intervalCount: 1 },
-  [obj2.PREMIUM_MONTH_TIER_0]: {
-    id: obj2.PREMIUM_MONTH_TIER_0,
+  [obj5.NONE_YEAR]: {
+    id: obj5.NONE_YEAR,
+    name: "None Yearly",
+    skuId: obj2.NONE,
+    interval: obj8.YEAR,
+    intervalCount: 1,
+  },
+  [obj5.PREMIUM_MONTH_TIER_0]: {
+    id: obj5.PREMIUM_MONTH_TIER_0,
     name: "Nitro Basic Monthly",
     premiumType: obj.TIER_0,
-    skuId: obj.TIER_0,
-    interval: obj5.MONTH,
+    skuId: obj2.TIER_0,
+    interval: obj8.MONTH,
     intervalCount: 1,
   },
-  [obj2.PREMIUM_YEAR_TIER_0]: {
-    id: obj2.PREMIUM_YEAR_TIER_0,
+  [obj5.PREMIUM_YEAR_TIER_0]: {
+    id: obj5.PREMIUM_YEAR_TIER_0,
     name: "Nitro Basic Yearly",
     premiumType: obj.TIER_0,
-    skuId: obj.TIER_0,
-    interval: obj5.YEAR,
+    skuId: obj2.TIER_0,
+    interval: obj8.YEAR,
     intervalCount: 1,
   },
-  [obj2.PREMIUM_MONTH_TIER_1]: {
-    id: obj2.PREMIUM_MONTH_TIER_1,
+  [obj5.PREMIUM_MONTH_TIER_1]: {
+    id: obj5.PREMIUM_MONTH_TIER_1,
     name: "Nitro Classic Monthly",
     premiumType: obj.TIER_1,
-    skuId: obj.TIER_1,
-    interval: obj5.MONTH,
+    skuId: obj2.TIER_1,
+    interval: obj8.MONTH,
     intervalCount: 1,
   },
-  [obj2.PREMIUM_YEAR_TIER_1]: {
-    id: obj2.PREMIUM_YEAR_TIER_1,
+  [obj5.PREMIUM_YEAR_TIER_1]: {
+    id: obj5.PREMIUM_YEAR_TIER_1,
     name: "Nitro Classic Yearly",
     premiumType: obj.TIER_1,
-    skuId: obj.TIER_1,
-    interval: obj5.YEAR,
+    skuId: obj2.TIER_1,
+    interval: obj8.YEAR,
     intervalCount: 1,
   },
-  [obj2.PREMIUM_MONTH_TIER_2]: {
-    id: obj2.PREMIUM_MONTH_TIER_2,
+  [obj5.PREMIUM_MONTH_TIER_2]: {
+    id: obj5.PREMIUM_MONTH_TIER_2,
     name: "Nitro Monthly",
     premiumType: obj.TIER_2,
-    skuId: obj.TIER_2,
-    interval: obj5.MONTH,
+    skuId: obj2.TIER_2,
+    interval: obj8.MONTH,
     intervalCount: 1,
   },
-  [obj2.PREMIUM_YEAR_TIER_2]: {
-    id: obj2.PREMIUM_YEAR_TIER_2,
+  [obj5.PREMIUM_YEAR_TIER_2]: {
+    id: obj5.PREMIUM_YEAR_TIER_2,
     name: "Nitro Yearly",
     premiumType: obj.TIER_2,
-    skuId: obj.TIER_2,
-    interval: obj5.YEAR,
+    skuId: obj2.TIER_2,
+    interval: obj8.YEAR,
     intervalCount: 1,
   },
-  [obj2.PREMIUM_MONTH_GUILD]: {
-    id: obj2.PREMIUM_MONTH_GUILD,
+  [obj5.PREMIUM_MONTH_GUILD]: {
+    id: obj5.PREMIUM_MONTH_GUILD,
     name: "Nitro Server Boost Monthly",
-    skuId: obj.GUILD,
-    interval: obj5.MONTH,
+    skuId: obj2.GUILD,
+    interval: obj8.MONTH,
     intervalCount: 1,
   },
-  [obj2.PREMIUM_YEAR_GUILD]: {
-    id: obj2.PREMIUM_YEAR_GUILD,
+  [obj5.PREMIUM_YEAR_GUILD]: {
+    id: obj5.PREMIUM_YEAR_GUILD,
     name: "Nitro Server Boost Yearly",
-    skuId: obj.GUILD,
-    interval: obj5.YEAR,
+    skuId: obj2.GUILD,
+    interval: obj8.YEAR,
     intervalCount: 1,
   },
-  [obj2.PREMIUM_3_MONTH_TIER_2]: {
-    id: obj2.PREMIUM_3_MONTH_TIER_2,
+  [obj5.PREMIUM_3_MONTH_TIER_2]: {
+    id: obj5.PREMIUM_3_MONTH_TIER_2,
     name: "Nitro Three Month",
     premiumType: obj.TIER_2,
-    skuId: obj.TIER_2,
-    interval: obj5.MONTH,
+    skuId: obj2.TIER_2,
+    interval: obj8.MONTH,
     intervalCount: 3,
   },
-  [obj2.PREMIUM_6_MONTH_TIER_2]: {
-    id: obj2.PREMIUM_6_MONTH_TIER_2,
+  [obj5.PREMIUM_6_MONTH_TIER_2]: {
+    id: obj5.PREMIUM_6_MONTH_TIER_2,
     name: "Nitro Six Month",
     premiumType: obj.TIER_2,
-    skuId: obj.TIER_2,
-    interval: obj5.MONTH,
+    skuId: obj2.TIER_2,
+    interval: obj8.MONTH,
     intervalCount: 6,
   },
-  [obj2.PREMIUM_3_MONTH_GUILD]: {
-    id: obj2.PREMIUM_3_MONTH_GUILD,
+  [obj5.PREMIUM_3_MONTH_GUILD]: {
+    id: obj5.PREMIUM_3_MONTH_GUILD,
     name: "Nitro Server Boost Three Month",
-    skuId: obj.GUILD,
-    interval: obj5.MONTH,
+    skuId: obj2.GUILD,
+    interval: obj8.MONTH,
     intervalCount: 3,
   },
-  [obj2.PREMIUM_6_MONTH_GUILD]: {
-    id: obj2.PREMIUM_6_MONTH_GUILD,
+  [obj5.PREMIUM_6_MONTH_GUILD]: {
+    id: obj5.PREMIUM_6_MONTH_GUILD,
     name: "Nitro Server Boost Six Month",
-    skuId: obj.GUILD,
-    interval: obj5.MONTH,
+    skuId: obj2.GUILD,
+    interval: obj8.MONTH,
     intervalCount: 6,
   },
-  [obj2.NONE_3_MONTH]: {
-    id: obj2.NONE_3_MONTH,
+  [obj5.NONE_3_MONTH]: {
+    id: obj5.NONE_3_MONTH,
     name: "None Three Month",
-    skuId: obj.NONE,
-    interval: obj5.MONTH,
+    skuId: obj2.NONE,
+    interval: obj8.MONTH,
     intervalCount: 3,
   },
-  [obj2.NONE_6_MONTH]: {
-    id: obj2.NONE_6_MONTH,
+  [obj5.NONE_6_MONTH]: {
+    id: obj5.NONE_6_MONTH,
     name: "None Six Month",
-    skuId: obj.NONE,
-    interval: obj5.MONTH,
+    skuId: obj2.NONE,
+    interval: obj8.MONTH,
     intervalCount: 6,
   },
-  [obj2.PREMIUM_MONTH_LEGACY]: {
-    id: obj2.PREMIUM_MONTH_LEGACY,
+  [obj5.PREMIUM_MONTH_LEGACY]: {
+    id: obj5.PREMIUM_MONTH_LEGACY,
     name: "Nitro Monthly (Legacy)",
     premiumType: obj.TIER_2,
-    skuId: obj.LEGACY,
-    interval: obj5.MONTH,
+    skuId: obj2.LEGACY,
+    interval: obj8.MONTH,
     intervalCount: 1,
   },
-  [obj2.PREMIUM_YEAR_LEGACY]: {
-    id: obj2.PREMIUM_YEAR_LEGACY,
+  [obj5.PREMIUM_YEAR_LEGACY]: {
+    id: obj5.PREMIUM_YEAR_LEGACY,
     name: "Nitro Classic Yearly (Legacy)",
     premiumType: obj.TIER_2,
-    skuId: obj.LEGACY,
-    interval: obj5.YEAR,
+    skuId: obj2.LEGACY,
+    interval: obj8.YEAR,
     intervalCount: 1,
   },
-  [obj2.PREMIUM_GROUP_MONTH]: {
-    id: obj2.PREMIUM_GROUP_MONTH,
+  [obj5.PREMIUM_GROUP_MONTH]: {
+    id: obj5.PREMIUM_GROUP_MONTH,
     name: "Nitro Squad Monthly",
     premiumType: obj.TIER_2,
-    skuId: obj.TIER_2,
-    interval: obj5.MONTH,
+    skuId: obj2.TIER_2,
+    interval: obj8.MONTH,
     intervalCount: 1,
   },
 });
-const obj10 = {
-  id: obj2.PREMIUM_YEAR_TIER_0,
-  name: "Nitro Basic Yearly",
-  premiumType: obj.TIER_0,
-  skuId: obj.TIER_0,
-  interval: obj5.YEAR,
-  intervalCount: 1,
-};
-const obj11 = {
-  id: obj2.PREMIUM_MONTH_TIER_1,
-  name: "Nitro Classic Monthly",
-  premiumType: obj.TIER_1,
-  skuId: obj.TIER_1,
-  interval: obj5.MONTH,
-  intervalCount: 1,
-};
+const obj10 = { id: obj5.NONE_MONTH, name: "None Monthly", skuId: obj2.NONE, interval: obj8.MONTH, intervalCount: 1 };
+const obj11 = { id: obj5.NONE_YEAR, name: "None Yearly", skuId: obj2.NONE, interval: obj8.YEAR, intervalCount: 1 };
 const obj12 = {
-  id: obj2.PREMIUM_YEAR_TIER_1,
-  name: "Nitro Classic Yearly",
-  premiumType: obj.TIER_1,
-  skuId: obj.TIER_1,
-  interval: obj5.YEAR,
+  id: obj5.PREMIUM_MONTH_TIER_0,
+  name: "Nitro Basic Monthly",
+  premiumType: obj.TIER_0,
+  skuId: obj2.TIER_0,
+  interval: obj8.MONTH,
   intervalCount: 1,
 };
 const obj13 = {
-  id: obj2.PREMIUM_MONTH_TIER_2,
-  name: "Nitro Monthly",
-  premiumType: obj.TIER_2,
-  skuId: obj.TIER_2,
-  interval: obj5.MONTH,
+  id: obj5.PREMIUM_YEAR_TIER_0,
+  name: "Nitro Basic Yearly",
+  premiumType: obj.TIER_0,
+  skuId: obj2.TIER_0,
+  interval: obj8.YEAR,
   intervalCount: 1,
 };
 const obj14 = {
-  id: obj2.PREMIUM_YEAR_TIER_2,
-  name: "Nitro Yearly",
-  premiumType: obj.TIER_2,
-  skuId: obj.TIER_2,
-  interval: obj5.YEAR,
+  id: obj5.PREMIUM_MONTH_TIER_1,
+  name: "Nitro Classic Monthly",
+  premiumType: obj.TIER_1,
+  skuId: obj2.TIER_1,
+  interval: obj8.MONTH,
   intervalCount: 1,
 };
 const obj15 = {
-  id: obj2.PREMIUM_MONTH_GUILD,
-  name: "Nitro Server Boost Monthly",
-  skuId: obj.GUILD,
-  interval: obj5.MONTH,
+  id: obj5.PREMIUM_YEAR_TIER_1,
+  name: "Nitro Classic Yearly",
+  premiumType: obj.TIER_1,
+  skuId: obj2.TIER_1,
+  interval: obj8.YEAR,
   intervalCount: 1,
 };
 const obj16 = {
-  id: obj2.PREMIUM_YEAR_GUILD,
-  name: "Nitro Server Boost Yearly",
-  skuId: obj.GUILD,
-  interval: obj5.YEAR,
+  id: obj5.PREMIUM_MONTH_TIER_2,
+  name: "Nitro Monthly",
+  premiumType: obj.TIER_2,
+  skuId: obj2.TIER_2,
+  interval: obj8.MONTH,
   intervalCount: 1,
 };
 const obj17 = {
-  id: obj2.PREMIUM_3_MONTH_TIER_2,
-  name: "Nitro Three Month",
+  id: obj5.PREMIUM_YEAR_TIER_2,
+  name: "Nitro Yearly",
   premiumType: obj.TIER_2,
-  skuId: obj.TIER_2,
-  interval: obj5.MONTH,
-  intervalCount: 3,
+  skuId: obj2.TIER_2,
+  interval: obj8.YEAR,
+  intervalCount: 1,
 };
 const obj18 = {
-  id: obj2.PREMIUM_6_MONTH_TIER_2,
-  name: "Nitro Six Month",
-  premiumType: obj.TIER_2,
-  skuId: obj.TIER_2,
-  interval: obj5.MONTH,
-  intervalCount: 6,
+  id: obj5.PREMIUM_MONTH_GUILD,
+  name: "Nitro Server Boost Monthly",
+  skuId: obj2.GUILD,
+  interval: obj8.MONTH,
+  intervalCount: 1,
 };
 const obj19 = {
-  id: obj2.PREMIUM_3_MONTH_GUILD,
-  name: "Nitro Server Boost Three Month",
-  skuId: obj.GUILD,
-  interval: obj5.MONTH,
-  intervalCount: 3,
+  id: obj5.PREMIUM_YEAR_GUILD,
+  name: "Nitro Server Boost Yearly",
+  skuId: obj2.GUILD,
+  interval: obj8.YEAR,
+  intervalCount: 1,
 };
 const obj20 = {
-  id: obj2.PREMIUM_6_MONTH_GUILD,
-  name: "Nitro Server Boost Six Month",
-  skuId: obj.GUILD,
-  interval: obj5.MONTH,
-  intervalCount: 6,
-};
-const obj21 = {
-  id: obj2.NONE_3_MONTH,
-  name: "None Three Month",
-  skuId: obj.NONE,
-  interval: obj5.MONTH,
+  id: obj5.PREMIUM_3_MONTH_TIER_2,
+  name: "Nitro Three Month",
+  premiumType: obj.TIER_2,
+  skuId: obj2.TIER_2,
+  interval: obj8.MONTH,
   intervalCount: 3,
 };
-const obj22 = {
-  id: obj2.NONE_6_MONTH,
-  name: "None Six Month",
-  skuId: obj.NONE,
-  interval: obj5.MONTH,
+const obj21 = {
+  id: obj5.PREMIUM_6_MONTH_TIER_2,
+  name: "Nitro Six Month",
+  premiumType: obj.TIER_2,
+  skuId: obj2.TIER_2,
+  interval: obj8.MONTH,
   intervalCount: 6,
 };
+const obj22 = {
+  id: obj5.PREMIUM_3_MONTH_GUILD,
+  name: "Nitro Server Boost Three Month",
+  skuId: obj2.GUILD,
+  interval: obj8.MONTH,
+  intervalCount: 3,
+};
 const obj23 = {
-  id: obj2.PREMIUM_MONTH_LEGACY,
-  name: "Nitro Monthly (Legacy)",
-  premiumType: obj.TIER_2,
-  skuId: obj.LEGACY,
-  interval: obj5.MONTH,
-  intervalCount: 1,
+  id: obj5.PREMIUM_6_MONTH_GUILD,
+  name: "Nitro Server Boost Six Month",
+  skuId: obj2.GUILD,
+  interval: obj8.MONTH,
+  intervalCount: 6,
 };
 const obj24 = {
-  id: obj2.PREMIUM_YEAR_LEGACY,
-  name: "Nitro Classic Yearly (Legacy)",
-  premiumType: obj.TIER_2,
-  skuId: obj.LEGACY,
-  interval: obj5.YEAR,
-  intervalCount: 1,
+  id: obj5.NONE_3_MONTH,
+  name: "None Three Month",
+  skuId: obj2.NONE,
+  interval: obj8.MONTH,
+  intervalCount: 3,
 };
 const obj25 = {
-  id: obj2.PREMIUM_GROUP_MONTH,
+  id: obj5.NONE_6_MONTH,
+  name: "None Six Month",
+  skuId: obj2.NONE,
+  interval: obj8.MONTH,
+  intervalCount: 6,
+};
+const obj26 = {
+  id: obj5.PREMIUM_MONTH_LEGACY,
+  name: "Nitro Monthly (Legacy)",
+  premiumType: obj.TIER_2,
+  skuId: obj2.LEGACY,
+  interval: obj8.MONTH,
+  intervalCount: 1,
+};
+const obj27 = {
+  id: obj5.PREMIUM_YEAR_LEGACY,
+  name: "Nitro Classic Yearly (Legacy)",
+  premiumType: obj.TIER_2,
+  skuId: obj2.LEGACY,
+  interval: obj8.YEAR,
+  intervalCount: 1,
+};
+const obj28 = {
+  id: obj5.PREMIUM_GROUP_MONTH,
   name: "Nitro Squad Monthly",
   premiumType: obj.TIER_2,
-  skuId: obj.TIER_2,
-  interval: obj5.MONTH,
+  skuId: obj2.TIER_2,
+  interval: obj8.MONTH,
   intervalCount: 1,
 };
-const obj3 = {
-  [obj.TIER_0]: obj2.PREMIUM_MONTH_TIER_0,
-  [obj.TIER_1]: obj2.PREMIUM_MONTH_TIER_1,
-  [obj.TIER_2]: obj2.PREMIUM_MONTH_TIER_2,
-  [obj.NONE]: undefined,
-  [obj.GUILD]: undefined,
-  [obj.LEGACY]: undefined,
+const obj6 = {
+  [obj2.TIER_0]: obj5.PREMIUM_MONTH_TIER_0,
+  [obj2.TIER_1]: obj5.PREMIUM_MONTH_TIER_1,
+  [obj2.TIER_2]: obj5.PREMIUM_MONTH_TIER_2,
+  [obj2.NONE]: undefined,
+  [obj2.GUILD]: undefined,
+  [obj2.LEGACY]: undefined,
 };
-const obj4 = {
-  [obj.TIER_0]: obj2.PREMIUM_YEAR_TIER_0,
-  [obj.TIER_1]: obj2.PREMIUM_YEAR_TIER_1,
-  [obj.TIER_2]: obj2.PREMIUM_YEAR_TIER_2,
-  [obj.NONE]: undefined,
-  [obj.GUILD]: undefined,
-  [obj.LEGACY]: undefined,
-};
-const obj7 = { id: obj2.NONE_MONTH, name: "None Monthly", skuId: obj.NONE, interval: obj5.MONTH, intervalCount: 1 };
-const obj8 = { id: obj2.NONE_YEAR, name: "None Yearly", skuId: obj.NONE, interval: obj5.YEAR, intervalCount: 1 };
-const obj9 = {
-  id: obj2.PREMIUM_MONTH_TIER_0,
-  name: "Nitro Basic Monthly",
-  premiumType: obj.TIER_0,
-  skuId: obj.TIER_0,
-  interval: obj5.MONTH,
-  intervalCount: 1,
+const obj7 = {
+  [obj2.TIER_0]: obj5.PREMIUM_YEAR_TIER_0,
+  [obj2.TIER_1]: obj5.PREMIUM_YEAR_TIER_1,
+  [obj2.TIER_2]: obj5.PREMIUM_YEAR_TIER_2,
+  [obj2.NONE]: undefined,
+  [obj2.GUILD]: undefined,
+  [obj2.LEGACY]: undefined,
 };
 const set4 = new Set(items7);
 const items9 = [
@@ -433,7 +445,7 @@ const items9 = [
 const items10 = ["1223319122125783040", "1223380890109870080"];
 const items11 = ["1503844767820152833", "1503844767820152834"];
 const items12 = ["1161363847311785984"];
-const obj26 = {
+const obj29 = {
   "520373071933079552": null,
   "902329034132684800": null,
   "983601860436819968": null,
@@ -445,47 +457,47 @@ const obj26 = {
   "1268347360493174784": null,
   "1161363847311785984": null,
 };
-const obj27 = { id: "520373071933079552", skus: null };
-const items13 = [obj.TIER_2];
-obj27.skus = items13;
-obj26["520373071933079552"] = obj27;
-const obj28 = { id: "902329034132684800", skus: null };
-const items14 = [obj.TIER_2];
-obj28.skus = items14;
-obj26["902329034132684800"] = obj28;
-const obj29 = { id: "983601860436819968", skus: null };
-const items15 = [obj.TIER_2];
-obj29.skus = items15;
-obj26["983601860436819968"] = obj29;
-const obj30 = { id: "983601860436819969", skus: null };
-const items16 = [obj.TIER_2];
-obj30.skus = items16;
-obj26["983601860436819969"] = obj30;
-const obj31 = { id: "984244797441048577", skus: null };
-const items17 = [obj.TIER_2];
-obj31.skus = items17;
-obj26["984244797441048577"] = obj31;
-const obj32 = { id: "1004850445463584768", skus: null };
-const items18 = [obj.TIER_2];
-obj32.skus = items18;
-obj26["1004850445463584768"] = obj32;
-const obj33 = { id: "1070132870233980928", skus: null };
-const items19 = [obj.TIER_0];
-obj33.skus = items19;
-obj26["1070132870233980928"] = obj33;
-const obj34 = { id: "1073698058383917056", skus: null };
-const items20 = [obj.TIER_2];
-obj34.skus = items20;
-obj26["1073698058383917056"] = obj34;
-const obj35 = { id: "1268347360493174784", skus: null };
-const items21 = [obj.TIER_2];
-obj35.skus = items21;
-obj26["1268347360493174784"] = obj35;
-const obj36 = { id: "1161363847311785984", skus: null };
-const items22 = [obj.TIER_2];
-obj36.skus = items22;
-obj26["1161363847311785984"] = obj36;
-const obj37 = {
+const obj30 = { id: "520373071933079552", skus: null };
+const items13 = [obj2.TIER_2];
+obj30.skus = items13;
+obj29["520373071933079552"] = obj30;
+const obj31 = { id: "902329034132684800", skus: null };
+const items14 = [obj2.TIER_2];
+obj31.skus = items14;
+obj29["902329034132684800"] = obj31;
+const obj32 = { id: "983601860436819968", skus: null };
+const items15 = [obj2.TIER_2];
+obj32.skus = items15;
+obj29["983601860436819968"] = obj32;
+const obj33 = { id: "983601860436819969", skus: null };
+const items16 = [obj2.TIER_2];
+obj33.skus = items16;
+obj29["983601860436819969"] = obj33;
+const obj34 = { id: "984244797441048577", skus: null };
+const items17 = [obj2.TIER_2];
+obj34.skus = items17;
+obj29["984244797441048577"] = obj34;
+const obj35 = { id: "1004850445463584768", skus: null };
+const items18 = [obj2.TIER_2];
+obj35.skus = items18;
+obj29["1004850445463584768"] = obj35;
+const obj36 = { id: "1070132870233980928", skus: null };
+const items19 = [obj2.TIER_0];
+obj36.skus = items19;
+obj29["1070132870233980928"] = obj36;
+const obj37 = { id: "1073698058383917056", skus: null };
+const items20 = [obj2.TIER_2];
+obj37.skus = items20;
+obj29["1073698058383917056"] = obj37;
+const obj38 = { id: "1268347360493174784", skus: null };
+const items21 = [obj2.TIER_2];
+obj38.skus = items21;
+obj29["1268347360493174784"] = obj38;
+const obj39 = { id: "1161363847311785984", skus: null };
+const items22 = [obj2.TIER_2];
+obj39.skus = items22;
+obj29["1161363847311785984"] = obj39;
+const obj40 = {
   PREMIUM_TIER_1: 1,
   [1]: "PREMIUM_TIER_1",
   PREMIUM_TIER_2: 2,
@@ -495,38 +507,38 @@ const obj37 = {
   PREMIUM_TIER_0: 8,
   [8]: "PREMIUM_TIER_0",
 };
-const frozen7 = Object.freeze(obj26);
-const obj39 = {
+const frozen7 = Object.freeze(obj29);
+const obj42 = {
   [BoostedGuildTiers.NONE]: 5,
   [BoostedGuildTiers.TIER_1]: 10,
   [BoostedGuildTiers.TIER_2]: 15,
   [BoostedGuildTiers.TIER_3]: 30,
 };
-const obj40 = {
-  [BoostedGuildTiers.NONE]: obj39[BoostedGuildTiers.NONE],
-  [BoostedGuildTiers.TIER_1]: obj39[BoostedGuildTiers.NONE] + obj39[BoostedGuildTiers.TIER_1],
+const obj43 = {
+  [BoostedGuildTiers.NONE]: obj42[BoostedGuildTiers.NONE],
+  [BoostedGuildTiers.TIER_1]: obj42[BoostedGuildTiers.NONE] + obj42[BoostedGuildTiers.TIER_1],
   [BoostedGuildTiers.TIER_2]:
-    obj39[BoostedGuildTiers.NONE] + obj39[BoostedGuildTiers.TIER_1] + obj39[BoostedGuildTiers.TIER_2],
+    obj42[BoostedGuildTiers.NONE] + obj42[BoostedGuildTiers.TIER_1] + obj42[BoostedGuildTiers.TIER_2],
   [BoostedGuildTiers.TIER_3]:
-    obj39[BoostedGuildTiers.NONE] +
-    obj39[BoostedGuildTiers.TIER_1] +
-    obj39[BoostedGuildTiers.TIER_2] +
-    obj39[BoostedGuildTiers.TIER_3],
+    obj42[BoostedGuildTiers.NONE] +
+    obj42[BoostedGuildTiers.TIER_1] +
+    obj42[BoostedGuildTiers.TIER_2] +
+    obj42[BoostedGuildTiers.TIER_3],
 };
-const obj41 = {
+const obj44 = {
   [BoostedGuildTiers.NONE]: 8,
   [BoostedGuildTiers.TIER_1]: 24,
   [BoostedGuildTiers.TIER_2]: 36,
   [BoostedGuildTiers.TIER_3]: 48,
 };
-const obj38 = {
-  [obj.TIER_0]: obj37.PREMIUM_TIER_0,
-  [obj.TIER_1]: obj37.PREMIUM_TIER_1,
-  [obj.TIER_2]: obj37.PREMIUM_TIER_2,
-  [obj.GUILD]: obj37.GUILD_BOOST,
+const obj41 = {
+  [obj2.TIER_0]: obj40.PREMIUM_TIER_0,
+  [obj2.TIER_1]: obj40.PREMIUM_TIER_1,
+  [obj2.TIER_2]: obj40.PREMIUM_TIER_2,
+  [obj2.GUILD]: obj40.GUILD_BOOST,
 };
 const set5 = new Set(items8);
-const obj43 = {
+const obj46 = {
   features: null,
   limits: {
     emoji: 100,
@@ -534,15 +546,15 @@ const obj43 = {
     fileSize: MAX_ATTACHMENT_SIZE,
     screenShareQualityFramerate: 60,
     screenShareQualityResolution: "720p",
-    soundboardSounds: obj41[BoostedGuildTiers.TIER_1],
-    stickers: obj40[BoostedGuildTiers.TIER_1],
+    soundboardSounds: obj44[BoostedGuildTiers.TIER_1],
+    stickers: obj43[BoostedGuildTiers.TIER_1],
     stageVideoUsers: MAX_STAGE_VIDEO_USER_LIMIT_TIER01,
   },
 };
 const items23 = [,];
 ({ INVITE_SPLASH: arr24[0], ANIMATED_ICON: arr24[1] } = GuildFeatures);
-obj43.features = items23;
-const obj44 = {
+obj46.features = items23;
+const obj47 = {
   features: null,
   limits: {
     emoji: 150,
@@ -550,15 +562,15 @@ const obj44 = {
     fileSize: 52428800,
     screenShareQualityFramerate: 60,
     screenShareQualityResolution: "1080p",
-    soundboardSounds: obj41[BoostedGuildTiers.TIER_2],
-    stickers: obj40[BoostedGuildTiers.TIER_2],
+    soundboardSounds: obj44[BoostedGuildTiers.TIER_2],
+    stickers: obj43[BoostedGuildTiers.TIER_2],
     stageVideoUsers: MAX_STAGE_VIDEO_USER_LIMIT_TIER2,
   },
 };
 const items24 = [, , ,];
 ({ INVITE_SPLASH: arr25[0], ANIMATED_ICON: arr25[1], BANNER: arr25[2], ROLE_ICONS: arr25[3] } = GuildFeatures);
-obj44.features = items24;
-const obj45 = {
+obj47.features = items24;
+const obj48 = {
   features: null,
   limits: {
     emoji: 250,
@@ -566,8 +578,8 @@ const obj45 = {
     fileSize: 104857600,
     screenShareQualityFramerate: 60,
     screenShareQualityResolution: "1080p",
-    soundboardSounds: obj41[BoostedGuildTiers.TIER_3],
-    stickers: obj40[BoostedGuildTiers.TIER_3],
+    soundboardSounds: obj44[BoostedGuildTiers.TIER_3],
+    stickers: obj43[BoostedGuildTiers.TIER_3],
     stageVideoUsers: MAX_STAGE_VIDEO_USER_LIMIT_TIER3,
   },
 };
@@ -580,8 +592,8 @@ const items25 = [, , , , ,];
   VANITY_URL: arr26[4],
   ROLE_ICONS: arr26[5],
 } = GuildFeatures);
-obj45.features = items25;
-const frozen8 = Object.freeze(obj38);
+obj48.features = items25;
+const frozen8 = Object.freeze(obj41);
 const items26 = [, , , , , , , ,];
 ({
   PREMIUM_MONTH_TIER_0: arr27[0],
@@ -593,15 +605,15 @@ const items26 = [, , , , , , , ,];
   PREMIUM_6_MONTH_TIER_2: arr27[6],
   PREMIUM_YEAR_TIER_2: arr27[7],
   PREMIUM_GROUP_MONTH: arr27[8],
-} = obj2);
+} = obj5);
 const items27 = [, , ,];
 ({
   PREMIUM_MONTH_GUILD: arr28[0],
   PREMIUM_3_MONTH_GUILD: arr28[1],
   PREMIUM_6_MONTH_GUILD: arr28[2],
   PREMIUM_YEAR_GUILD: arr28[3],
-} = obj2);
-const obj46 = { HIGH_STREAMING_QUALITY: "high_streaming_quality", MID_STREAMING_QUALITY: "mid_streaming_quality" };
+} = obj5);
+const obj49 = { HIGH_STREAMING_QUALITY: "high_streaming_quality", MID_STREAMING_QUALITY: "mid_streaming_quality" };
 const frozen9 = Object.freeze({
   [BoostedGuildTiers.NONE]: {
     features: [],
@@ -611,16 +623,16 @@ const frozen9 = Object.freeze({
       fileSize: MAX_ATTACHMENT_SIZE,
       screenShareQualityFramerate: 30,
       screenShareQualityResolution: "720p",
-      soundboardSounds: obj41[BoostedGuildTiers.NONE],
-      stickers: obj40[BoostedGuildTiers.NONE],
+      soundboardSounds: obj44[BoostedGuildTiers.NONE],
+      stickers: obj43[BoostedGuildTiers.NONE],
       stageVideoUsers: MAX_STAGE_VIDEO_USER_LIMIT_TIER01,
     },
   },
-  [BoostedGuildTiers.TIER_1]: obj43,
-  [BoostedGuildTiers.TIER_2]: obj44,
-  [BoostedGuildTiers.TIER_3]: obj45,
+  [BoostedGuildTiers.TIER_1]: obj46,
+  [BoostedGuildTiers.TIER_2]: obj47,
+  [BoostedGuildTiers.TIER_3]: obj48,
 });
-const obj48 = {
+const obj51 = {
   SNOWGLOBE: 1,
   [1]: "SNOWGLOBE",
   BOX: 2,
@@ -647,8 +659,8 @@ const obj48 = {
   [12]: "NITROWEEN_STANDARD",
 };
 const frozen10 = Object.freeze({
-  [obj46.HIGH_STREAMING_QUALITY]: obj.TIER_2,
-  [obj46.MID_STREAMING_QUALITY]: obj.TIER_1,
+  [obj49.HIGH_STREAMING_QUALITY]: obj.TIER_2,
+  [obj49.MID_STREAMING_QUALITY]: obj.TIER_1,
 });
 const frozen11 = Object.freeze({
   IS_BLOCKED_IOS: 32,
@@ -660,7 +672,7 @@ const frozen12 = Object.freeze({
   [obj.TIER_1]: { fileSize: 52428800 },
   [obj.TIER_2]: { fileSize: 524288000 },
 });
-const obj42 = {
+const obj45 = {
   features: [],
   limits: {
     emoji: EmojiConstants.DEFAULT_EMOJI_SLOTS,
@@ -668,26 +680,26 @@ const obj42 = {
     fileSize: MAX_ATTACHMENT_SIZE,
     screenShareQualityFramerate: 30,
     screenShareQualityResolution: "720p",
-    soundboardSounds: obj41[BoostedGuildTiers.NONE],
-    stickers: obj40[BoostedGuildTiers.NONE],
+    soundboardSounds: obj44[BoostedGuildTiers.NONE],
+    stickers: obj43[BoostedGuildTiers.NONE],
     stageVideoUsers: MAX_STAGE_VIDEO_USER_LIMIT_TIER01,
   },
 };
-const obj47 = { [obj46.HIGH_STREAMING_QUALITY]: obj.TIER_2, [obj46.MID_STREAMING_QUALITY]: obj.TIER_1 };
+const obj50 = { [obj49.HIGH_STREAMING_QUALITY]: obj.TIER_2, [obj49.MID_STREAMING_QUALITY]: obj.TIER_1 };
 const items28 = [, ,];
-({ SNOWGLOBE: arr29[0], BOX: arr29[1], CUP: arr29[2] } = obj48);
+({ SNOWGLOBE: arr29[0], BOX: arr29[1], CUP: arr29[2] } = obj51);
 const items29 = [, , ,];
-({ STANDARD_BOX: arr30[0], CAKE: arr30[1], COFFEE: arr30[2], CHEST: arr30[3] } = obj48);
+({ STANDARD_BOX: arr30[0], CAKE: arr30[1], COFFEE: arr30[2], CHEST: arr30[3] } = obj51);
 const items30 = [, , ,];
-({ NITROWEEN_STANDARD: arr31[0], CAKE: arr31[1], COFFEE: arr31[2], CHEST: arr31[3] } = obj48);
+({ NITROWEEN_STANDARD: arr31[0], CAKE: arr31[1], COFFEE: arr31[2], CHEST: arr31[3] } = obj51);
 const items31 = [, , ,];
 ({
   SEASONAL_STANDARD_BOX: arr32[0],
   SEASONAL_CAKE: arr32[1],
   SEASONAL_COFFEE: arr32[2],
   SEASONAL_CHEST: arr32[3],
-} = obj48);
-const obj49 = {
+} = obj51);
+const obj52 = {
   PREMIUM_TENURE_1_MONTH: "premium_tenure_1_month_v2",
   PREMIUM_TENURE_3_MONTH: "premium_tenure_3_month_v2",
   PREMIUM_TENURE_6_MONTH: "premium_tenure_6_month_v2",
@@ -707,10 +719,10 @@ const items32 = [, , , , , , ,];
   PREMIUM_TENURE_36_MONTH: arr33[5],
   PREMIUM_TENURE_60_MONTH: arr33[6],
   PREMIUM_TENURE_72_MONTH: arr33[7],
-} = obj49);
-const obj50 = {};
-const obj51 = {
-  id: obj49.PREMIUM_TENURE_1_MONTH,
+} = obj52);
+const obj53 = {};
+const obj54 = {
+  id: obj52.PREMIUM_TENURE_1_MONTH,
   nameUnformatted: null,
   nameUnformattedNitro: null,
   tenureReqNumMonths: 1,
@@ -719,76 +731,67 @@ const obj51 = {
   rarity: null,
 };
 const combined = items31.concat(items28);
-obj51.nameUnformatted = util.t.LR1C0a;
-obj51.nameUnformattedNitro = util.t.tx9Fvw;
-obj51.rarity = BadgeRarity.BadgeRarity.COMMON;
-obj50[obj49.PREMIUM_TENURE_1_MONTH] = obj51;
+obj54.nameUnformatted = util.t.LR1C0a;
+obj54.nameUnformattedNitro = util.t.tx9Fvw;
+obj54.rarity = BadgeRarity.BadgeRarity.COMMON;
+obj53[obj52.PREMIUM_TENURE_1_MONTH] = obj54;
 const set6 = new Set(["PL", "TR"]);
-obj50[obj49.PREMIUM_TENURE_3_MONTH] = {
-  id: obj49.PREMIUM_TENURE_3_MONTH,
+obj53[obj52.PREMIUM_TENURE_3_MONTH] = {
+  id: obj52.PREMIUM_TENURE_3_MONTH,
   nameUnformatted: util.t["rI1/3H"],
   nameUnformattedNitro: util.t.xJNb5C,
   tenureReqNumMonths: 3,
   hasWideArt: false,
   glowColor: "#9e9e9e",
   rarity: BadgeRarity.BadgeRarity.COMMON,
-};
-const obj52 = {
-  id: obj49.PREMIUM_TENURE_3_MONTH,
-  nameUnformatted: util.t["rI1/3H"],
-  nameUnformattedNitro: util.t.xJNb5C,
-  tenureReqNumMonths: 3,
-  hasWideArt: false,
-  glowColor: "#9e9e9e",
-  rarity: BadgeRarity.BadgeRarity.COMMON,
-};
-obj50[obj49.PREMIUM_TENURE_6_MONTH] = {
-  id: obj49.PREMIUM_TENURE_6_MONTH,
-  nameUnformatted: util.t.VkhVKS,
-  nameUnformattedNitro: util.t["4scBFY"],
-  tenureReqNumMonths: 6,
-  hasWideArt: false,
-  glowColor: "#ffa813",
-  rarity: BadgeRarity.BadgeRarity.RARE,
-};
-const obj53 = {
-  id: obj49.PREMIUM_TENURE_6_MONTH,
-  nameUnformatted: util.t.VkhVKS,
-  nameUnformattedNitro: util.t["4scBFY"],
-  tenureReqNumMonths: 6,
-  hasWideArt: false,
-  glowColor: "#ffa813",
-  rarity: BadgeRarity.BadgeRarity.RARE,
-};
-obj50[obj49.PREMIUM_TENURE_12_MONTH] = {
-  id: obj49.PREMIUM_TENURE_12_MONTH,
-  nameUnformatted: util.t.gzUfNS,
-  nameUnformattedNitro: util.t["83Jw2B"],
-  tenureReqNumMonths: 12,
-  hasWideArt: false,
-  glowColor: "#5eacc2",
-  rarity: BadgeRarity.BadgeRarity.RARE,
-};
-const obj54 = {
-  id: obj49.PREMIUM_TENURE_12_MONTH,
-  nameUnformatted: util.t.gzUfNS,
-  nameUnformattedNitro: util.t["83Jw2B"],
-  tenureReqNumMonths: 12,
-  hasWideArt: false,
-  glowColor: "#5eacc2",
-  rarity: BadgeRarity.BadgeRarity.RARE,
-};
-obj50[obj49.PREMIUM_TENURE_24_MONTH] = {
-  id: obj49.PREMIUM_TENURE_24_MONTH,
-  nameUnformatted: util.t.fuwTPm,
-  nameUnformattedNitro: util.t.vRSCKv,
-  tenureReqNumMonths: 24,
-  hasWideArt: false,
-  glowColor: "#6d5cf2",
-  rarity: BadgeRarity.BadgeRarity.EPIC,
 };
 const obj55 = {
-  id: obj49.PREMIUM_TENURE_24_MONTH,
+  id: obj52.PREMIUM_TENURE_3_MONTH,
+  nameUnformatted: util.t["rI1/3H"],
+  nameUnformattedNitro: util.t.xJNb5C,
+  tenureReqNumMonths: 3,
+  hasWideArt: false,
+  glowColor: "#9e9e9e",
+  rarity: BadgeRarity.BadgeRarity.COMMON,
+};
+obj53[obj52.PREMIUM_TENURE_6_MONTH] = {
+  id: obj52.PREMIUM_TENURE_6_MONTH,
+  nameUnformatted: util.t.VkhVKS,
+  nameUnformattedNitro: util.t["4scBFY"],
+  tenureReqNumMonths: 6,
+  hasWideArt: false,
+  glowColor: "#ffa813",
+  rarity: BadgeRarity.BadgeRarity.RARE,
+};
+const obj56 = {
+  id: obj52.PREMIUM_TENURE_6_MONTH,
+  nameUnformatted: util.t.VkhVKS,
+  nameUnformattedNitro: util.t["4scBFY"],
+  tenureReqNumMonths: 6,
+  hasWideArt: false,
+  glowColor: "#ffa813",
+  rarity: BadgeRarity.BadgeRarity.RARE,
+};
+obj53[obj52.PREMIUM_TENURE_12_MONTH] = {
+  id: obj52.PREMIUM_TENURE_12_MONTH,
+  nameUnformatted: util.t.gzUfNS,
+  nameUnformattedNitro: util.t["83Jw2B"],
+  tenureReqNumMonths: 12,
+  hasWideArt: false,
+  glowColor: "#5eacc2",
+  rarity: BadgeRarity.BadgeRarity.RARE,
+};
+const obj57 = {
+  id: obj52.PREMIUM_TENURE_12_MONTH,
+  nameUnformatted: util.t.gzUfNS,
+  nameUnformattedNitro: util.t["83Jw2B"],
+  tenureReqNumMonths: 12,
+  hasWideArt: false,
+  glowColor: "#5eacc2",
+  rarity: BadgeRarity.BadgeRarity.RARE,
+};
+obj53[obj52.PREMIUM_TENURE_24_MONTH] = {
+  id: obj52.PREMIUM_TENURE_24_MONTH,
   nameUnformatted: util.t.fuwTPm,
   nameUnformattedNitro: util.t.vRSCKv,
   tenureReqNumMonths: 24,
@@ -796,8 +799,17 @@ const obj55 = {
   glowColor: "#6d5cf2",
   rarity: BadgeRarity.BadgeRarity.EPIC,
 };
-obj50[obj49.PREMIUM_TENURE_36_MONTH] = {
-  id: obj49.PREMIUM_TENURE_36_MONTH,
+const obj58 = {
+  id: obj52.PREMIUM_TENURE_24_MONTH,
+  nameUnformatted: util.t.fuwTPm,
+  nameUnformattedNitro: util.t.vRSCKv,
+  tenureReqNumMonths: 24,
+  hasWideArt: false,
+  glowColor: "#6d5cf2",
+  rarity: BadgeRarity.BadgeRarity.EPIC,
+};
+obj53[obj52.PREMIUM_TENURE_36_MONTH] = {
+  id: obj52.PREMIUM_TENURE_36_MONTH,
   nameUnformatted: util.t.qNhNk4,
   nameUnformattedNitro: util.t.mV86tk,
   tenureReqNumMonths: 36,
@@ -805,8 +817,8 @@ obj50[obj49.PREMIUM_TENURE_36_MONTH] = {
   glowColor: "#32c102",
   rarity: BadgeRarity.BadgeRarity.EPIC,
 };
-const obj56 = {
-  id: obj49.PREMIUM_TENURE_36_MONTH,
+const obj59 = {
+  id: obj52.PREMIUM_TENURE_36_MONTH,
   nameUnformatted: util.t.qNhNk4,
   nameUnformattedNitro: util.t.mV86tk,
   tenureReqNumMonths: 36,
@@ -814,8 +826,8 @@ const obj56 = {
   glowColor: "#32c102",
   rarity: BadgeRarity.BadgeRarity.EPIC,
 };
-obj50[obj49.PREMIUM_TENURE_60_MONTH] = {
-  id: obj49.PREMIUM_TENURE_60_MONTH,
+obj53[obj52.PREMIUM_TENURE_60_MONTH] = {
+  id: obj52.PREMIUM_TENURE_60_MONTH,
   nameUnformatted: util.t["wvX+eD"],
   nameUnformattedNitro: util.t.WcsLxW,
   tenureReqNumMonths: 60,
@@ -823,8 +835,8 @@ obj50[obj49.PREMIUM_TENURE_60_MONTH] = {
   glowColor: "#f29cc3",
   rarity: BadgeRarity.BadgeRarity.MYTHIC,
 };
-const obj57 = {
-  id: obj49.PREMIUM_TENURE_60_MONTH,
+const obj60 = {
+  id: obj52.PREMIUM_TENURE_60_MONTH,
   nameUnformatted: util.t["wvX+eD"],
   nameUnformattedNitro: util.t.WcsLxW,
   tenureReqNumMonths: 60,
@@ -832,8 +844,8 @@ const obj57 = {
   glowColor: "#f29cc3",
   rarity: BadgeRarity.BadgeRarity.MYTHIC,
 };
-obj50[obj49.PREMIUM_TENURE_72_MONTH] = {
-  id: obj49.PREMIUM_TENURE_72_MONTH,
+obj53[obj52.PREMIUM_TENURE_72_MONTH] = {
+  id: obj52.PREMIUM_TENURE_72_MONTH,
   nameUnformatted: util.t["/menIw"],
   nameUnformattedNitro: util.t["Z/qgMK"],
   tenureReqNumMonths: 72,
@@ -841,10 +853,10 @@ obj50[obj49.PREMIUM_TENURE_72_MONTH] = {
   glowColor: "#078292",
   rarity: BadgeRarity.BadgeRarity.MYTHIC,
 };
-const obj59 = { HOUR: 1, [1]: "HOUR", DAY: 2, [2]: "DAY" };
-const items33 = [obj59.HOUR, 1];
-const items34 = [obj59.DAY, 1];
-const items35 = [obj59.DAY, 3];
+const obj62 = { HOUR: 1, [1]: "HOUR", DAY: 2, [2]: "DAY" };
+const items33 = [obj62.HOUR, 1];
+const items34 = [obj62.DAY, 1];
+const items35 = [obj62.DAY, 3];
 const result = size.fileFinishedImporting("modules/premium/PremiumConstants.tsx");
 
 export const GiftIntentType = gift_intent_type.GiftIntentType;
@@ -858,12 +870,12 @@ export const PremiumTypes = obj;
 export const PREMIUM_TYPE_OVERRIDE_OPTIONS = items;
 export const PremiumTypeOrder = frozen;
 export const PREMIUM_SUBSCRIPTION_APPLICATION = "521842831262875670";
-export const PremiumSubscriptionSKUs = obj;
+export const PremiumSubscriptionSKUs = obj2;
 export const ACTIVE_MARKETING_PREMIUM_SKUS = items1;
 export const ACTIVE_PREMIUM_SKUS = items2;
 export const PremiumSubscriptionSKUToPremiumType = frozen1;
 export const PremiumTypeToActivePremiumSubscriptionSKU = frozen2;
-export const SubscriptionPlans = obj2;
+export const SubscriptionPlans = obj5;
 export const PREMIUM_PLANS = set;
 export const PREMIUM_TIER_2_PLANS = set1;
 export const PREMIUM_GUILD_SUBSCRIPTION_PLANS = set2;
@@ -871,7 +883,7 @@ export const PREMIUM_MONTHLY_PLANS = set3;
 export const NONE_PLANS = set4;
 export const PREMIUM_SKU_TO_MONTHLY_PLAN = frozen3;
 export const PREMIUM_SKU_TO_YEARLY_PLAN = frozen4;
-export const SubscriptionIntervalTypes = obj5;
+export const SubscriptionIntervalTypes = obj8;
 export const DiscountUserUsageLimitIntervalTypes = {
   DAY: 1,
   [1]: "DAY",
@@ -1044,7 +1056,7 @@ export const PremiumUpsellTypes = {
   APP_ICON_INLINE_UPSELL: "app_icons_inline_upsell",
   STREAM_QUALITY_UPSELL: "stream_quality_upsell",
 };
-export const PurchasedFlags = obj37;
+export const PurchasedFlags = obj40;
 export const SKU_ID_PURCHASED_FLAGS = frozen8;
 export const MAX_PREMIUM_TIER_0_ATTACHMENT_SIZE = 52428800;
 export const MAX_PREMIUM_TIER_1_ATTACHMENT_SIZE = 52428800;
@@ -1056,9 +1068,9 @@ export const MAX_GUILD_FILE_SIZE_50_MB = 52428800;
 export const MAX_GUILD_FILE_SIZE_100_MB = 104857600;
 export const MAX_GUILD_FILE_SIZE_250_MB = 262144000;
 export const DEFAULT_STICKER_SLOTS = 5;
-export const IncrementalStickerCountsByTier = obj39;
-export const TotalStickerCountsByTier = obj40;
-export const TotalSoundboardSoundCountsByTier = obj41;
+export const IncrementalStickerCountsByTier = obj42;
+export const TotalStickerCountsByTier = obj43;
+export const TotalSoundboardSoundCountsByTier = obj44;
 export const BoostedGuildFeatures = frozen9;
 export const ORDERED_PREMIUM_SUBSCRIPTION_PLANS = items26;
 export const ORDERED_PREMIUM_GUILD_SUBSCRIPTION_PLANS = items27;
@@ -1076,13 +1088,13 @@ export const AnalyticsPremiumFeatureNames = {
 };
 export const AnalyticsPremiumFeatureTiers = { FREE: "free", PREMIUM_STANDARD: "premium-standard" };
 export const DISCOUNTS = {
-  [obj2.PREMIUM_YEAR_TIER_0]: 16,
-  [obj2.PREMIUM_YEAR_TIER_1]: 16,
-  [obj2.PREMIUM_YEAR_TIER_2]: 16,
-  [obj2.PREMIUM_6_MONTH_TIER_2]: 8,
-  [obj2.PREMIUM_3_MONTH_TIER_2]: 5,
+  [obj5.PREMIUM_YEAR_TIER_0]: 16,
+  [obj5.PREMIUM_YEAR_TIER_1]: 16,
+  [obj5.PREMIUM_YEAR_TIER_2]: 16,
+  [obj5.PREMIUM_6_MONTH_TIER_2]: 8,
+  [obj5.PREMIUM_3_MONTH_TIER_2]: 5,
 };
-export const StreamQualities = obj46;
+export const StreamQualities = obj49;
 export const StreamQualitiesToPremiumType = frozen10;
 export const PremiumMarketingEntrypoints = {
   UserSettings: 0,
@@ -1090,7 +1102,7 @@ export const PremiumMarketingEntrypoints = {
   ApplicationStoreHome: 1,
   [1]: "ApplicationStoreHome",
 };
-export const PremiumGiftStyles = obj48;
+export const PremiumGiftStyles = obj51;
 export const InboundPromotionErrorCodes = {
   USER_NOT_VERIFIED: "user_not_verified",
   NO_CODE_BODY: "no_code_body",
@@ -1159,9 +1171,9 @@ export const DISCOUNT_DURATION_FALLBACK = 1;
 export const DISCOUNT_PERCENTAGE_FALLBACK = 30;
 export const ANNUAL_DISCOUNT_PERCENTAGE_FALLBACK = 20;
 export const PRICE_PLACEHOLDER = "$...";
-export const TieredTenureBadge = obj49;
+export const TieredTenureBadge = obj52;
 export const TIERED_TENURE_BADGE_ORDER = items32;
-export const TENURE_BADGES = obj50;
+export const TENURE_BADGES = obj53;
 export const FractionalPremiumStates = {
   NONE: 0,
   [0]: "NONE",
@@ -1170,7 +1182,7 @@ export const FractionalPremiumStates = {
   FP_SUB_PAUSED: 2,
   [2]: "FP_SUB_PAUSED",
 };
-export const FractionalPremiumIntervalTypes = obj59;
+export const FractionalPremiumIntervalTypes = obj62;
 export const FRACTIONAL_PREMIUM_SKU_INTERVAL_COUNTS = {
   [FractionalPremiumSKUs.FractionalPremiumSKUs.PREMIUM_TIER_2_1_HOUR]: items33,
   [FractionalPremiumSKUs.FractionalPremiumSKUs.PREMIUM_TIER_2_1_DAY]: items34,

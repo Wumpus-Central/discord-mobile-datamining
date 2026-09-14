@@ -10,8 +10,8 @@ import UserSettingsProtoStore from "../../UserSettingsProtoStore.tsx";
 
 require = fn;
 const AnalyticEvents = fn(1074).AnalyticEvents;
-fn(11601);
-let SettingBuilders = {
+const SettingBuilders = fn(11602);
+const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t["3340dY"]);
@@ -45,17 +45,22 @@ let SettingBuilders = {
         prop = clientThemeSettings.customUserThemeSettings;
       }
     }
-    const obj = { is_sync_enabled, base_theme: ThemeStore.theme, client_theme: id, has_custom_theme: null != prop };
-    obj.track(AnalyticEvents.SYNC_ACROSS_CLIENTS_TOGGLED, obj);
+    actions_AnalyticsTrackingActionCreators.track(AnalyticEvents.SYNC_ACROSS_CLIENTS_TOGGLED, {
+      is_sync_enabled,
+      base_theme: ThemeStore.theme,
+      client_theme: id,
+      has_custom_theme: null != prop,
+    });
+    const obj2 = { is_sync_enabled, base_theme: ThemeStore.theme, client_theme: id, has_custom_theme: null != prop };
+    const tmp3 = null != prop;
     const result = UserSettingsActionCreatorsDefault.setShouldSyncAppearanceSettings(is_sync_enabled);
   },
   useDescription: function useSyncThemeAcrossClientsDescription() {
     const intl = util.intl;
     return intl.string(util.t.CRtkeH).trim();
   },
-};
-SettingBuilders = SettingBuilders.createToggle(SettingBuilders);
+});
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_settings/defs/native/SyncThemeSetting.tsx");
 
-export default SettingBuilders;
+export default toggle;

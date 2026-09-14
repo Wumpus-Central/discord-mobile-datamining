@@ -9,7 +9,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 function ClearButton(onPress) {
-  let obj = {
+  const obj = {
     style: { borderRadius: 20, padding: 8 },
     accessibilityRole: "button",
     accessibilityLabel: null,
@@ -21,17 +21,38 @@ function ClearButton(onPress) {
   obj.accessibilityLabel = intl.string(util.t.VkKicb);
   obj.onPress = onPress.onPress;
   obj.hitSlop = { top: 8, bottom: 8, right: 8 };
-  obj = { source: _modDef7041, style: closure_9().closeIcon, size: native.Icon.Sizes.MEDIUM };
-  obj.children = React5(native.Icon, obj);
+  const tmp = closure_9();
+  obj.children = React5(native.Icon, {
+    source: _modDef7041,
+    style: closure_9().closeIcon,
+    size: native.Icon.Sizes.MEDIUM,
+  });
   return React5(Pressables.PressableOpacity, obj);
 }
 get_ActivityIndicator = fn(17);
 ({ TouchableWithoutFeedback: closure_4, View: hasOwnProperty, TouchableOpacity: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-fn(4636);
-let obj = { container: null, onPress: null, input: null, error: null, closeIcon: null, placeholder: null };
-obj = {
+const createStyles = fn(4636);
+let obj = {
+  container: {
+    backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST,
+    height: 48,
+    borderWidth: 1,
+    borderColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST,
+    borderRadius: nativeDefault.radii.xs,
+    paddingRight: 6,
+    paddingLeft: 12,
+    flexDirection: "row",
+    alignItems: "center",
+  },
+  onPress: { flexDirection: "row" },
+  input: null,
+  error: null,
+  closeIcon: null,
+  placeholder: null,
+};
+let obj3 = {
   backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST,
   height: 48,
   borderWidth: 1,
@@ -42,17 +63,15 @@ obj = {
   flexDirection: "row",
   alignItems: "center",
 };
-obj.container = obj;
-obj.onPress = { flexDirection: "row" };
-const createStyles = { flex: 1, color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
-obj.input = createStyles;
+obj.input = { flex: 1, color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
+let obj4 = { flex: 1, color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
 obj.error = { borderColor: nativeDefault.unsafe_rawColors.RED_400 };
-let obj2 = { borderColor: nativeDefault.unsafe_rawColors.RED_400 };
+let obj5 = { borderColor: nativeDefault.unsafe_rawColors.RED_400 };
 obj.closeIcon = { tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT, marginLeft: 8, flexShrink: 0 };
-const obj3 = { tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT, marginLeft: 8, flexShrink: 0 };
+const obj6 = { tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT, marginLeft: 8, flexShrink: 0 };
 obj.placeholder = { color: nativeDefault.colors.TEXT_MUTED };
 let closure_9 = createStyles.createStyles(obj);
-const obj4 = { color: nativeDefault.colors.TEXT_MUTED };
+const obj7 = { color: nativeDefault.colors.TEXT_MUTED };
 const size = fn(2);
 let result = size.fileFinishedImporting("design/void/Form/native/FreeFormTextInput.tsx");
 
@@ -113,13 +132,13 @@ export default noop.forwardRef((editable, arg1) => {
   }
   _modDef38(!tmp11, "Cannot have an editable input w/ onPress handler");
   let items = [tmp4.container, ,];
-  error = null;
+  let error1 = null;
   if (error) {
-    error = tmp4.error;
+    error1 = tmp4.error;
   }
-  items[1] = error;
+  items[1] = error1;
   items[2] = style;
-  let obj = {
+  const obj = {
     onPress() {
       if (flag) {
         const current = ref.current;
@@ -157,8 +176,8 @@ export default noop.forwardRef((editable, arg1) => {
   obj.accessibilityLabel = tmp18;
   let tmp19;
   if (forceAccessibleContainer) {
-    obj = { text: value };
-    tmp19 = obj;
+    const obj2 = { text: value };
+    tmp19 = obj2;
   }
   obj.accessibilityValue = tmp19;
   let tmp20;
@@ -169,7 +188,7 @@ export default noop.forwardRef((editable, arg1) => {
   if (null != onPress) {
     items = tmp4.onPress;
   }
-  obj = { style: items, children: null };
+  const obj3 = { style: items, children: null };
   let result;
   if (renderLeadingComponent != null) {
     result = renderLeadingComponent();
@@ -179,7 +198,7 @@ export default noop.forwardRef((editable, arg1) => {
   if (null != onPress) {
     str3 = "none";
   }
-  const obj1 = {
+  const obj4 = {
     pointerEvents: str3,
     accessibilityRole,
     accessibilityLabel,
@@ -208,9 +227,9 @@ export default noop.forwardRef((editable, arg1) => {
   if (flag) {
     str4 = "yes";
   }
-  obj1.importantForAccessibility = str4;
-  obj1.accessibilityElementsHidden = !flag;
-  items1[1] = React5(native.TextInput, obj1);
+  obj4.importantForAccessibility = str4;
+  obj4.accessibilityElementsHidden = !flag;
+  items1[1] = React5(native.TextInput, obj4);
   let result1;
   if (renderTrailingComponent != null) {
     result1 = renderTrailingComponent();
@@ -218,7 +237,7 @@ export default noop.forwardRef((editable, arg1) => {
   items1[2] = result1;
   let tmp15Result = null;
   if (flag2) {
-    const obj2 = {
+    const obj5 = {
       onPress() {
         let tmpResult;
         if (onChangeText != null) {
@@ -227,10 +246,10 @@ export default noop.forwardRef((editable, arg1) => {
         return tmpResult;
       },
     };
-    tmp15Result = React5(ClearButton, obj2);
+    tmp15Result = React5(ClearButton, obj5);
   }
   items1[3] = tmp15Result;
-  obj.children = items1;
-  obj.children = React6(hasOwnProperty, obj);
+  obj3.children = items1;
+  obj.children = React6(hasOwnProperty, obj3);
   return React5(null != onPress ? timestampProducer : React4, obj);
 });

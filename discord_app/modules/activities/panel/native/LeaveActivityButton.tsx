@@ -36,18 +36,17 @@ export default noop.memo(function LeaveActivityButton(arg0) {
       onPress={function onPress() {
         importDefault(ActivityPanelModes.DISCONNECTED);
         const timerId = setTimeout(() => {
-          let obj = EmbeddedActivitiesNativeManagerDefault;
           let _location;
           if (closure_1_0 != null) {
             _location = closure_1_0.location;
           }
-          obj = { location: _location, applicationId: null };
+          const obj2 = { location: _location, applicationId: null };
           let applicationId;
           if (closure_1_0 != null) {
             applicationId = closure_1_0.applicationId;
           }
-          obj.applicationId = applicationId;
-          obj.leaveActivity(obj);
+          obj2.applicationId = applicationId;
+          EmbeddedActivitiesNativeManagerDefault.leaveActivity(obj2);
         }, 400);
       }}
     />

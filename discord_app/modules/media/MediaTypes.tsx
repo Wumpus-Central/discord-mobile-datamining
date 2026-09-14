@@ -7,7 +7,7 @@ import MediaFormatTesters from "../messages/MediaFormatTesters.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
 function messageAttachmentToUnfurledMediaItem(flags) {
-  obj = FlagUtils;
+  const obj = FlagUtils;
   let num = flags.flags;
   if (num == null) {
     num = 0;
@@ -22,7 +22,7 @@ function messageAttachmentToUnfurledMediaItem(flags) {
   }
   let num4 = 0;
   if (tmpResult.hasFlag(num3, MessageAttachmentFlags.IS_ANIMATED)) {
-    num4 = obj.IS_ANIMATED | 0;
+    num4 = obj2.IS_ANIMATED | 0;
   }
   const size = {
     url: flags.url,
@@ -39,19 +39,19 @@ function messageAttachmentToUnfurledMediaItem(flags) {
   };
   let tmp6;
   if (null != flags.content_scan_version) {
-    obj = { version: flags.content_scan_version, flags: num2 };
-    tmp6 = obj;
+    obj2 = { version: flags.content_scan_version, flags: num2 };
+    tmp6 = obj2;
   }
   size.contentScanMetadata = tmp6;
   size.flags = num4;
   return size;
 }
 const MessageAttachmentFlags = Constants.MessageAttachmentFlags;
-let obj = { EXPLICIT: 1, [1]: "EXPLICIT", GORE: 2, [2]: "GORE", SELF_HARM: 4, [4]: "SELF_HARM" };
-obj = { IS_ANIMATED: 1, [1]: "IS_ANIMATED" };
+const ContentScanFlags = { EXPLICIT: 1, [1]: "EXPLICIT", GORE: 2, [2]: "GORE", SELF_HARM: 4, [4]: "SELF_HARM" };
+let obj2 = { IS_ANIMATED: 1, [1]: "IS_ANIMATED" };
 const result = size.fileFinishedImporting("modules/media/MediaTypes.tsx");
 
-export const ContentScanFlags = obj;
+export { ContentScanFlags };
 export const ImageEncoder = {
   NATIVE: "native",
   JPEGLI: "jpegli",
@@ -65,7 +65,7 @@ export const ImageEncoder = {
 export const toContentScanMetadata = function toContentScanMetadata(version) {
   return { version: version.version, flags: version.flags };
 };
-export const UnfurledMediaItemFlags = obj;
+export const UnfurledMediaItemFlags = obj2;
 export const toUnfurledMediaItem = function toUnfurledMediaItem(media) {
   const size = {
     url: media.url,
@@ -84,7 +84,7 @@ export const toUnfurledMediaItem = function toUnfurledMediaItem(media) {
   if (null != media.content_scan_metadata) {
     ({ version: obj2.version, flags: obj2.flags } = media.content_scan_metadata);
     tmp = { version: null, flags: null };
-    obj = { version: null, flags: null };
+    const obj = { version: null, flags: null };
   }
   size.contentScanMetadata = tmp;
   let num = media.flags;
@@ -115,7 +115,7 @@ export const getUnfurledMediaItemType = function getUnfurledMediaItemType(conten
   return str;
 };
 export const messageAttachmentToMediaItem = function messageAttachmentToMediaItem(found2, tmp2Result) {
-  obj = {};
+  const obj = {};
   const merged = Object.assign(messageAttachmentToUnfurledMediaItem(found2));
   let str = "IMAGE";
   if (!obj2.isImageFile(found2.filename)) {
@@ -128,7 +128,7 @@ export const messageAttachmentToMediaItem = function messageAttachmentToMediaIte
   }
   obj.type = str;
   obj.alt = found2.description;
-  obj = {
+  obj.sourceMetadata = {
     message: tmp2Result,
     identifier: {
       type: "attachment",
@@ -138,7 +138,6 @@ export const messageAttachmentToMediaItem = function messageAttachmentToMediaIte
       size: found2.size,
     },
   };
-  obj.sourceMetadata = obj;
   return obj;
 };
 export const embedMediaToMediaItem = function embedMediaToMediaItem(thumbnail, sourceMetadata, IMAGE) {
@@ -174,14 +173,14 @@ export const getMediaItemDisplayUrl = function getMediaItemDisplayUrl(type) {
   } else {
     if ("VIDEO" === type.type) {
       if (null != type.proxyUrl) {
-        URLUtilsDefault.toURLSafe(type.proxyUrl);
-        let str = null;
+        const str = URLUtilsDefault.toURLSafe(type.proxyUrl);
+        let str1 = null;
         if (null != str) {
           const searchParams = str.searchParams;
           searchParams.append("format", "webp");
-          str = str.toString();
+          str1 = str.toString();
         }
-        return str;
+        return str1;
       }
     }
     let proxyUrl = type.proxyUrl;

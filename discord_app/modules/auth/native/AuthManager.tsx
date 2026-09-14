@@ -10,10 +10,10 @@ import LifecycleManager from "../../../lib/LifecycleManager.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ NativeModules: closure_4, Keyboard: hasOwnProperty } = get_ActivityIndicator);
-const PermissionStateType = fn(12538).PermissionStateType;
+const PermissionStateType = fn(12539).PermissionStateType;
 const ME = fn(1074).ME;
 let closure_8 = fn(4846).NotificationAuthorizationStatus;
-const NewUserTypes = fn(12834).NewUserTypes;
+const NewUserTypes = fn(12835).NewUserTypes;
 let closure_10 = { REGISTER: "register", LOGIN: "login" };
 let c11 = null;
 class AuthManager extends tmp3 {
@@ -35,8 +35,8 @@ class AuthManager extends tmp3 {
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
-          let obj = { value, done: true };
-          return obj;
+          const obj2 = { value, done: true };
+          return obj2;
         } else {
           return { value: "HermesInternal", done: null };
         }
@@ -49,8 +49,8 @@ class AuthManager extends tmp3 {
               throw value;
             } else if (arg0 === 2) {
               DCDShortcutManager = 3;
-              obj = { value, done: true };
-              return obj;
+              const obj3 = { value, done: true };
+              return obj3;
             } else {
               dependencyMap = 0;
               closure_129_0 = applyArgumentsResult;
@@ -62,8 +62,8 @@ class AuthManager extends tmp3 {
                 const NativePermissionManager = DCDShortcutManager.NativePermissionManager;
                 c3 = 1;
                 DCDShortcutManager = 1;
-                const obj1 = { value: NativePermissionManager.getNotificationAuthorizationStatus(), done: false };
-                return obj1;
+                const obj4 = { value: NativePermissionManager.getNotificationAuthorizationStatus(), done: false };
+                return obj4;
               }
             }
           } else if (arg0 === 1) {
@@ -71,14 +71,14 @@ class AuthManager extends tmp3 {
             throw value;
           } else if (arg0 === 2) {
             DCDShortcutManager = 3;
-            const obj2 = { value, done: true };
-            return obj2;
+            const obj5 = { value, done: true };
+            return obj5;
           } else if (value !== constants.UNDETERMINED) {
             closure_129_0();
           }
-          obj = applyArgumentsResult(16093);
-          const obj3 = { onComplete: closure_129_0 };
-          const result = obj.showPushNotificationPromptModal(obj3);
+          const obj6 = { onComplete: closure_129_0 };
+          const result = applyArgumentsResult(16095).showPushNotificationPromptModal(obj6);
+          const obj = applyArgumentsResult(16095);
         } catch (tmp19) {
           DCDShortcutManager = tmp;
           throw tmp19;
@@ -105,12 +105,12 @@ class AuthManager extends tmp3 {
     };
     applyArgumentsResult.handleRegisterComplete = function handleRegisterComplete() {
       if (!obj.hasDeferredInvite()) {
-        let tmpResult = applyArgumentsResult(12875);
-        tmpResult.setNewUser(constants.ORGANIC_REGISTERED);
+        applyArgumentsResult(12876).setNewUser(constants.ORGANIC_REGISTERED);
+        const tmpResult = applyArgumentsResult(12876);
       }
-      tmpResult = applyArgumentsResult(12833);
-      tmpResult.startOnboarding();
       obj = applyArgumentsResult(9950);
+      applyArgumentsResult(12834).startOnboarding();
+      const tmpResult2 = applyArgumentsResult(12834);
     };
     applyArgumentsResult.handleLoginWithConnection = function handleLoginWithConnection() {
       const result = applyArgumentsResult.handlePushNotificationOptIn(() => {

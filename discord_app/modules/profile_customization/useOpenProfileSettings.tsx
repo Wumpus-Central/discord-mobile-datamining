@@ -29,17 +29,16 @@ export default function useOpenProfileSettings() {
   ];
   return useCallback(() => {
     if (null != guild) {
-      let obj = GuildIdentityActionCreators;
-      const guildIdentitySettings = obj.initGuildIdentitySettings(guild.id);
+      const guildIdentitySettings = GuildIdentityActionCreators.initGuildIdentitySettings(guild.id);
     }
     if (null != guild) {
       let USER_PROFILE = constants.GUILD;
     } else {
       USER_PROFILE = constants.USER_PROFILE;
     }
-    obj = { subsection: USER_PROFILE, scrollPosition };
-    ProfileCustomizationNavigationStore.setState(obj);
-    obj = { screen: UserSettingsSections.PROFILE_CUSTOMIZATION };
-    openUserSettings.openUserSettings(obj);
+    ProfileCustomizationNavigationStore.setState({ subsection: USER_PROFILE, scrollPosition });
+    openUserSettings.openUserSettings({ screen: UserSettingsSections.PROFILE_CUSTOMIZATION });
+    const obj2 = { subsection: USER_PROFILE, scrollPosition };
+    const obj3 = { screen: UserSettingsSections.PROFILE_CUSTOMIZATION };
   }, items);
 }

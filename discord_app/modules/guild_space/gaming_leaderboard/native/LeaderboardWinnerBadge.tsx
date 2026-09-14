@@ -13,10 +13,10 @@ const result = size.fileFinishedImporting("modules/guild_space/gaming_leaderboar
 export default function LeaderboardWinnerBadge(guildId) {
   guildId = guildId.guildId;
   const userId = guildId.userId;
-  let obj = guildId(504);
+  const tmp = closure_6();
   const items = [GuildMemberStore];
   const items1 = [guildId, userId];
-  const stateFromStores = obj.useStateFromStores(
+  const stateFromStores = guildId(504).useStateFromStores(
     items,
     () => {
       const member = GuildMemberStore.getMember(guildId, userId);
@@ -30,16 +30,24 @@ export default function LeaderboardWinnerBadge(guildId) {
   );
   let tmp5 = null;
   if (null != stateFromStores) {
-    obj = {
+    const obj2 = {
       style: tmp.container,
       accessible: true,
-      accessibilityLabel: tmp2(11037).getLeaderboardWinnerBadgeText(stateFromStores),
+      accessibilityLabel: tmp2(11038).getLeaderboardWinnerBadgeText(stateFromStores),
       children: null,
     };
-    obj = { size: "xs", color: userId(576).colors.TEXT_FEEDBACK_WARNING };
-    obj.children = jsx(tmp2(8842).TrophyIcon, { size: "xs", color: userId(576).colors.TEXT_FEEDBACK_WARNING });
-    tmp5 = <View size="xs" color={userId(576).colors.TEXT_FEEDBACK_WARNING} />;
-    const tmp2Result = tmp2(11037);
+    const obj3 = { size: "xs", color: userId(576).colors.TEXT_FEEDBACK_WARNING };
+    obj2.children = jsx(tmp2(8842).TrophyIcon, { size: "xs", color: userId(576).colors.TEXT_FEEDBACK_WARNING });
+    tmp5 = (
+      <View
+        style={tmp.container}
+        accessible
+        accessibilityLabel={tmp2(11038).getLeaderboardWinnerBadgeText(stateFromStores)}
+      >
+        {null}
+      </View>
+    );
+    const tmp2Result = tmp2(11038);
   }
   return tmp5;
 }

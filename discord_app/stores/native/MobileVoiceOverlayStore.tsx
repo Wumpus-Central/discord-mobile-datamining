@@ -2,8 +2,8 @@
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../Dispatcher.tsx";
 import Constants from "../../Constants.tsx";
-import PlatformUtils from "../../utils/PlatformUtils.tsx";
 import AnalyticsUtilsDefault from "../../utils/AnalyticsUtils.tsx";
+import PlatformUtils from "../../utils/PlatformUtils.tsx";
 import MetaQuestUtils from "../../modules/device/MetaQuestUtils.android.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
@@ -40,8 +40,7 @@ MobileVoiceOverlayStore.displayName = "MobileVoiceOverlayStore";
 MobileVoiceOverlayStore.persistKey = "MobileVoiceOverlayStore";
 const mobileVoiceOverlayStore = new MobileVoiceOverlayStore(DispatcherDefault, {
   MOBILE_VOICE_OVERLAY_STATE_CHANGED: function handleMobileVoiceOverlayStateChanged(enabled) {
-    const obj = { enabled: enabled.enabled };
-    obj.track(AnalyticEvents.MOBILE_OVERLAY_TOGGLED, obj);
+    AnalyticsUtilsDefault.track(AnalyticEvents.MOBILE_OVERLAY_TOGGLED, { enabled: enabled.enabled });
     enabled = enabled.enabled;
   },
 });

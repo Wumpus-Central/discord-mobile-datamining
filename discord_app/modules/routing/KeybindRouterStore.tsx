@@ -2,49 +2,48 @@
 import matchPathCompat from "matchPathCompat.tsx";
 import RouteUtils from "RouteUtils.tsx";
 import Constants from "../../Constants.tsx";
-import identity from "../../../_runtime/metro/01244__.js";
+import identity from "../../../_runtime/metro/01242__.js";
 import size from "../../../_runtime/metro/00002__.js";
 
 function getMatchData(pathname) {
   let str = pathname;
-  let obj = matchPathCompat;
   let str2 = pathname;
   if (pathname == null) {
     str2 = "";
   }
-  obj = { path: null };
-  let obj2 = React2;
+  const obj2 = { path: null };
   const RouteParam = RouteUtils.RouteParam;
+  const obj = matchPathCompat;
   const RouteParam2 = RouteUtils.RouteParam;
-  obj.path = React2.CHANNEL(RouteParam.guildId(), RouteParam2.channelId({ optional: true }), ":messageId?");
-  const matchPathResult = obj.matchPath(str2, obj);
+  obj2.path = React2.CHANNEL(RouteParam.guildId(), RouteParam2.channelId({ optional: true }), ":messageId?");
+  const matchPathResult = obj.matchPath(str2, obj2);
   if (null != matchPathResult) {
     ({ guildId, channelId } = matchPathResult.params);
     let tmp7 = null;
     if (guildId !== React3) {
       tmp7 = guildId;
     }
-    obj = { guildId: tmp7, channelId: null };
+    const obj4 = { guildId: tmp7, channelId: null };
     if (channelId == null) {
       channelId = null;
     }
-    obj.channelId = channelId;
-    return obj;
+    obj4.channelId = channelId;
+    return obj4;
   } else {
     if (str == null) {
       str = "";
     }
-    const obj1 = { path: null };
+    const obj5 = { path: null };
     const RouteParam3 = RouteUtils.RouteParam;
-    obj1.path = obj2.GUILD_BOOSTING_MARKETING(RouteParam3.guildId());
-    const matchPathResult1 = matchPathCompat.matchPath(str, obj1);
+    obj5.path = React2.GUILD_BOOSTING_MARKETING(RouteParam3.guildId());
+    const matchPathResult1 = matchPathCompat.matchPath(str, obj5);
     if (null != matchPathResult1) {
-      obj2 = { guildId: matchPathResult1.params.guildId, channelId: null };
-      let obj3 = obj2;
+      const obj6 = { guildId: matchPathResult1.params.guildId, channelId: null };
+      let obj7 = obj6;
     } else {
-      obj3 = { guildId: null, channelId: null };
+      obj7 = { guildId: null, channelId: null };
     }
-    return obj3;
+    return obj7;
   }
   const guildIdResult = RouteParam.guildId();
 }
@@ -59,13 +58,13 @@ const withEqualityFn = identity.createWithEqualityFn((arg0) => {
     updatePath(path) {
       ({ guildId: closure_1, channelId: closure_2 } = getMatchData(path));
       const tmp = getMatchData(path);
-      path(1249).batchUpdates(() => path({ path, guildId, channelId }));
+      path(1247).batchUpdates(() => path({ path, guildId, channelId }));
     },
     resetPath(pathname) {
       const basePath = pathname;
       ({ guildId: closure_1, channelId: closure_2 } = getMatchData(pathname));
       const tmp = getMatchData(pathname);
-      basePath(1249).batchUpdates(() => basePath({ path: null, guildId, channelId, basePath }));
+      basePath(1247).batchUpdates(() => basePath({ path: null, guildId, channelId, basePath }));
     },
   };
 });

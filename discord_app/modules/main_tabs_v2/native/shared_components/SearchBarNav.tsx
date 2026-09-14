@@ -13,9 +13,22 @@ get_ActivityIndicator = fn(17);
 ({ View: c2, StyleSheet } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-fn(4636);
-let obj = { container: null, cancelText: null, cancelIcon: null, flex: null };
-obj = {
+const createStyles = fn(4636);
+let obj = {
+  container: {
+    flexDirection: "row",
+    alignItems: "center",
+    height: fn(5763).NAV_BAR_HEIGHT,
+    paddingHorizontal: nativeDefault.space.PX_16,
+    backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
+    borderBottomWidth: StyleSheet.hairlineWidth,
+    borderColor: nativeDefault.colors.BORDER_STRONG,
+  },
+  cancelText: null,
+  cancelIcon: null,
+  flex: null,
+};
+let obj3 = {
   flexDirection: "row",
   alignItems: "center",
   height: fn(5763).NAV_BAR_HEIGHT,
@@ -24,30 +37,28 @@ obj = {
   borderBottomWidth: StyleSheet.hairlineWidth,
   borderColor: nativeDefault.colors.BORDER_STRONG,
 };
-obj.container = obj;
-const createStyles = { paddingLeft: nativeDefault.space.PX_16 };
-obj.cancelText = createStyles;
+obj.cancelText = { paddingLeft: nativeDefault.space.PX_16 };
+let obj4 = { paddingLeft: nativeDefault.space.PX_16 };
 obj.cancelIcon = { marginRight: nativeDefault.space.PX_16 };
 obj.flex = { flex: 1 };
 let closure_5 = createStyles.createStyles(obj);
-let obj2 = { marginRight: nativeDefault.space.PX_16 };
+let obj5 = { marginRight: nativeDefault.space.PX_16 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/SearchBarNav.tsx");
 
 export default noop.forwardRef((onClose, ref) => {
   const merged = Object.assign(onClose, Object.assign({ onClose: 0 }));
   const tmp2 = closure_5();
-  let obj = { accessibilityRole: "button", accessibilityLabel: null, onPress: null, hitSlop: null, children: null };
+  const obj = { accessibilityRole: "button", accessibilityLabel: null, onPress: null, hitSlop: null, children: null };
   const intl = util.intl;
   obj.accessibilityLabel = intl.string(util.t["ETE/oC"]);
   obj.onPress = onClose.onClose;
   obj.hitSlop = { top: 8, right: 8, bottom: 8, left: 8 };
-  let obj1 = PlatformUtils;
-  if (obj1.isAndroid()) {
-    obj = { style: tmp2.cancelIcon };
-    let tmp3Result = React3(ArrowLargeLeftIcon.ArrowLargeLeftIcon, obj);
+  if (obj2.isAndroid()) {
+    const obj3 = { style: tmp2.cancelIcon };
+    let tmp3Result = React3(ArrowLargeLeftIcon.ArrowLargeLeftIcon, obj3);
   } else {
-    obj = {
+    const obj4 = {
       style: tmp2.cancelText,
       maxFontSizeMultiplier: 2,
       variant: "text-md/semibold",
@@ -55,30 +66,31 @@ export default noop.forwardRef((onClose, ref) => {
       children: null,
     };
     const intl2 = util.intl;
-    obj.children = intl2.string(util.t["ETE/oC"]);
-    tmp3Result = React3(Text_Text.Text, obj);
+    obj4.children = intl2.string(util.t["ETE/oC"]);
+    tmp3Result = React3(Text_Text.Text, obj4);
   }
   obj.children = tmp3Result;
-  tmp3Result = React3(Pressables.PressableOpacity, obj);
-  obj1 = { style: tmp2.container, children: null };
-  let tmp4Result = PlatformUtils;
+  const tmp3Result2 = React3(Pressables.PressableOpacity, obj);
+  const obj5 = { style: tmp2.container, children: null };
+  obj2 = PlatformUtils;
   let tmp10 = null;
   if (tmp4Result.isAndroid()) {
-    tmp10 = tmp3Result;
+    tmp10 = tmp3Result2;
   }
   const items = [tmp10, ,];
-  const obj2 = { style: tmp2.flex, children: null };
-  const obj3 = { children: null };
+  const obj6 = { style: tmp2.flex, children: null };
+  const obj7 = { children: null };
   const merged1 = Object.assign(merged);
-  obj3.children = React3(SearchField.SearchField, { size: "md", isRound: true, ref });
-  obj2.children = React3(React2, obj3);
-  items[1] = React3(React2, obj2);
+  obj7.children = React3(SearchField.SearchField, { size: "md", isRound: true, ref });
+  obj6.children = React3(React2, obj7);
+  items[1] = React3(React2, obj6);
+  const obj8 = { size: "md", isRound: true, ref };
   tmp4Result = PlatformUtils;
   let tmp12 = null;
-  if (!tmp4Result.isAndroid()) {
-    tmp12 = tmp3Result;
+  if (!tmp4Result2.isAndroid()) {
+    tmp12 = tmp3Result2;
   }
   items[2] = tmp12;
-  obj1.children = items;
-  return React4(React2, obj1);
+  obj5.children = items;
+  return React4(React2, obj5);
 });

@@ -12,8 +12,8 @@ let closure_6 = async function _installApplicationOnDemandIfNeeded(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -26,8 +26,8 @@ let closure_6 = async function _installApplicationOnDemandIfNeeded(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c4 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj4 = { value, done: true };
+          return obj4;
         } else {
           closure_2 = tmp5;
           dependencyMap = tmp2;
@@ -56,23 +56,26 @@ let closure_6 = async function _installApplicationOnDemandIfNeeded(arg0) {
             throw value;
           } else if (arg0 === 2) {
             c4 = 3;
-            const obj1 = { value, done: true };
-            return obj1;
+            const obj5 = { value, done: true };
+            return obj5;
           } else {
-            let obj2 = { applicationId: closure_129_0, channel: closure_129_1, commandIntegrationTypes: closure_129_2 };
-            if (obj11.shouldInstallApplicationOnDemand(obj2)) {
+            const obj7 = {
+              applicationId: closure_129_0,
+              channel: closure_129_1,
+              commandIntegrationTypes: closure_129_2,
+            };
+            if (obj11.shouldInstallApplicationOnDemand(obj7)) {
               application = closure_130_4.getApplication(closure_129_0);
               if (null == application) {
-                let obj5 = closure_130_0(closure_130_1[5]);
                 c3 = 2;
                 c4 = 1;
-                const obj3 = { value: obj5.fetchApplication(closure_129_0), done: false };
-                return obj3;
+                const obj8 = { value: closure_130_0(closure_130_1[5]).fetchApplication(closure_129_0), done: false };
+                return obj8;
               }
             } else {
               c4 = 3;
-              const obj4 = { value: Promise.resolve({ isAuthorized: true }), done: true };
-              return obj4;
+              const obj9 = { value: Promise.resolve({ isAuthorized: true }), done: true };
+              return obj9;
             }
             obj11 = closure_130_0(closure_130_1[4]);
           }
@@ -81,7 +84,7 @@ let closure_6 = async function _installApplicationOnDemandIfNeeded(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c4 = 3;
-          obj = { value, done: true };
+          let obj = { value, done: true };
           return obj;
         } else {
           closure_129_5 = value;
@@ -102,42 +105,44 @@ let closure_6 = async function _installApplicationOnDemandIfNeeded(arg0) {
         }
         closure_129_7 = scopes;
         if (null != closure_129_3) {
-          obj2 = closure_130_0(closure_130_1[7]);
-          obj5 = {
+          const obj10 = {
             application_id: closure_129_0,
             location: closure_129_3.location,
             section_name: closure_129_3.sectionName,
             source: closure_129_3.entrypoint,
           };
-          obj2.trackWithMetadata(closure_130_5.APP_LAUNCHER_OAUTH2_AUTHORIZE_OPENED, obj5);
+          closure_130_0(closure_130_1[7]).trackWithMetadata(closure_130_5.APP_LAUNCHER_OAUTH2_AUTHORIZE_OPENED, obj10);
+          let obj3 = closure_130_0(closure_130_1[7]);
         }
         const promise = new Promise((arg0) => {
           const clientId = arg0;
+          closure_1_0(4502).dismissKeyboard();
           let obj = closure_1_0(4502);
-          obj.dismissKeyboard();
-          obj = {
+          closure_1_0(9703).openOAuth2Modal({
             clientId,
             integrationType,
             scopes,
             callback(location) {
               if (null != location.location) {
                 if (null != closure_2_3) {
-                  closure_0(closure_1[7]);
-                  const obj = { application_id, location: null, section_name: null, source: null };
+                  const obj3 = { application_id, location: null, section_name: null, source: null };
                   ({ location: obj2.location, sectionName: obj2.section_name, entrypoint: obj2.source } = closure_2_3);
-                  obj.trackWithMetadata(closure_3_5.APP_LAUNCHER_OAUTH2_AUTHORIZE_SUCCEEDED, obj);
+                  closure_0(dependencyMap[7]).trackWithMetadata(
+                    closure_3_5.APP_LAUNCHER_OAUTH2_AUTHORIZE_SUCCEEDED,
+                    obj3,
+                  );
+                  const obj = closure_0(dependencyMap[7]);
                 }
                 closure_0({ isAuthorized: true });
               } else {
                 closure_0({ isAuthorized: false });
               }
             },
-          };
-          closure_1_0(9703).openOAuth2Modal(obj);
+          });
         });
         c4 = 3;
-        const obj6 = { value: promise, done: true };
-        return obj6;
+        const obj12 = { value: promise, done: true };
+        return obj12;
       }
     } catch (tmp50) {
       c4 = tmp;

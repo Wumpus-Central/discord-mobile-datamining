@@ -12,12 +12,12 @@ export default {
     closure_0 = arg0;
     asyncGeneratorStep = arg2;
     return (async () => {
-      const HTTP = v3(1272).HTTP;
+      const HTTP = v3(1270).HTTP;
       const request = {
         url: Endpoints.GUILD_PRUNE(closure_0),
         query: { days: num, include_roles },
         oldFormErrors: true,
-        rejectWithError: v3(1272).rejectWithMigratedError(),
+        rejectWithError: v3(1270).rejectWithMigratedError(),
       };
       await HTTP.get(request);
       return value.body.pruned;
@@ -34,8 +34,8 @@ export default {
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
-          let obj = { value, done: true };
-          return obj;
+          const obj2 = { value, done: true };
+          return obj2;
         } else {
           return { value: "HermesInternal", done: null };
         }
@@ -48,30 +48,30 @@ export default {
               throw value;
             } else if (arg0 === 2) {
               v3 = 3;
-              obj = { value, done: true };
-              return obj;
+              const obj3 = { value, done: true };
+              return obj3;
             } else {
-              const HTTP = v3(1272).HTTP;
+              const HTTP = v3(1270).HTTP;
               const request = {
                 url: Endpoints.GUILD_PRUNE_V2(closure_0),
                 query: null,
                 oldFormErrors: true,
                 rejectWithError: null,
               };
-              const obj1 = { days: num, include_roles };
-              request.query = obj1;
-              request.rejectWithError = v3(1272).rejectWithMigratedError();
+              const obj4 = { days: num, include_roles };
+              request.query = obj4;
+              request.rejectWithError = v3(1270).rejectWithMigratedError();
               dependencyMap = 1;
               v3 = 1;
-              const obj2 = { value: HTTP.get(request), done: false };
-              return obj2;
+              const obj5 = { value: HTTP.get(request), done: false };
+              return obj5;
             }
           } else if (arg0 === 1) {
             v3 = 3;
             throw value;
           } else if (arg0 === 2) {
             v3 = 3;
-            obj = { value, done: true };
+            const obj = { value, done: true };
             return obj;
           } else {
             v3 = 3;

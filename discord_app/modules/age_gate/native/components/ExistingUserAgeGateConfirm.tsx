@@ -43,26 +43,31 @@ export default function ExistingUserAgeGateConfirm(age) {
     return value;
   };
   const tmp = closure_10();
-  let obj = onConfirm(1483);
-  importDefault = obj.useNavigation();
-  [tmp3, c2] = _slicedToArray(noop.useState(false), 2);
-  obj = { top: true, style: tmp.container, children: null };
-  obj = { style: tmp.header, variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
+  importDefault = onConfirm(1483).useNavigation();
+  const obj = onConfirm(1483);
+  [tmp3, c2] = noop.useState(false);
+  const obj2 = { top: true, style: tmp.container, children: null };
+  const obj3 = {
+    style: tmp.header,
+    variant: "heading-xl/extrabold",
+    color: "mobile-text-heading-primary",
+    children: null,
+  };
   const intl = onConfirm(1114).intl;
-  obj.children = intl.format(onConfirm(1114).t.wumolR, { age: age.age });
-  const items = [closure_8(onConfirm(4632).Text, obj), ,];
-  const obj1 = { style: tmp.body, variant: "text-md/medium", color: "interactive-text-default", children: null };
+  obj3.children = intl.format(onConfirm(1114).t.wumolR, { age: age.age });
+  const items = [closure_8(onConfirm(4632).Text, obj3), ,];
+  const obj4 = { style: tmp.body, variant: "text-md/medium", color: "interactive-text-default", children: null };
   const intl2 = onConfirm(1114).intl;
-  const obj2 = { helpURL: null };
+  const obj5 = { helpURL: null };
   const tmp2 = _slicedToArray(noop.useState(false), 2);
-  obj2.helpURL = HelpdeskUtilsDefault.getArticleURL(HelpdeskArticles.AGE_GATE);
-  obj1.children = intl2.format(onConfirm(1114).t.n3QjDE, obj2);
-  items[1] = closure_8(onConfirm(4632).Text, obj1);
-  const obj3 = { style: tmp.buttonWrapper, children: null };
-  const obj4 = { loading: tmp3, disabled: tmp3, text: null, onPress: null, grow: true };
+  obj5.helpURL = HelpdeskUtilsDefault.getArticleURL(HelpdeskArticles.AGE_GATE);
+  obj4.children = intl2.format(onConfirm(1114).t.n3QjDE, obj5);
+  items[1] = closure_8(onConfirm(4632).Text, obj4);
+  const obj7 = { style: tmp.buttonWrapper, children: null };
+  const obj8 = { loading: tmp3, disabled: tmp3, text: null, onPress: null, grow: true };
   const intl3 = onConfirm(1114).intl;
-  obj4.text = intl3.string(onConfirm(1114).t["6tahin"]);
-  obj4.onPress = function handleConfirm() {
+  obj8.text = intl3.string(onConfirm(1114).t["6tahin"]);
+  obj8.onPress = function handleConfirm() {
     const self = this;
     const apply = closure_3.apply;
     if (typeof apply === "unknown") {
@@ -72,8 +77,8 @@ export default function ExistingUserAgeGateConfirm(age) {
     }
     return applyArgumentsResult;
   };
-  obj3.children = closure_8(onConfirm(5056).Button, obj4);
-  items[2] = closure_8(View, obj3);
-  obj.children = items;
-  return closure_9(onConfirm(7226).SafeAreaPaddingView, obj);
+  obj7.children = closure_8(onConfirm(5056).Button, obj8);
+  items[2] = closure_8(View, obj7);
+  obj2.children = items;
+  return closure_9(onConfirm(7226).SafeAreaPaddingView, obj2);
 }

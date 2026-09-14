@@ -18,8 +18,7 @@ const items = [TimeUtils.TimeUnits.HOURS, TimeUtils.TimeUnits.MINUTES];
 const result = size.fileFinishedImporting("modules/checkpoint/CheckpointUtils.tsx");
 
 export const getVoiceDurationString = function getVoiceDurationString(totalVoiceMinutes) {
-  let obj = TimeUtils;
-  const timeAndUnit = obj.getTimeAndUnit(totalVoiceMinutes, items);
+  const timeAndUnit = TimeUtils.getTimeAndUnit(totalVoiceMinutes, items);
   ({ time, unit } = timeAndUnit);
   const time2 = notification_center_getTimestampString.getAbbreviatedFormatter();
   if (null == time) {
@@ -30,12 +29,12 @@ export const getVoiceDurationString = function getVoiceDurationString(totalVoice
     const rounded = Math.round(time);
     if (unit === TimeUtils.TimeUnits.HOURS) {
       const intl2 = util.intl;
-      obj = { hours: rounded };
-      let formatToPlainStringResult = intl2.formatToPlainString(time2.hours, obj);
+      const obj3 = { hours: rounded };
+      let formatToPlainStringResult = intl2.formatToPlainString(time2.hours, obj3);
     } else {
       const intl = util.intl;
-      obj = { minutes: rounded };
-      formatToPlainStringResult = intl.formatToPlainString(time2.minutes, obj);
+      const obj4 = { minutes: rounded };
+      formatToPlainStringResult = intl.formatToPlainString(time2.minutes, obj4);
     }
     return formatToPlainStringResult;
   }

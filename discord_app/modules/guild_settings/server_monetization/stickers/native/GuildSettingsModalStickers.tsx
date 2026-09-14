@@ -11,6 +11,8 @@ import GuildStore from "../../../../../stores/GuildStore.tsx";
 import PermissionStore from "../../../../../stores/PermissionStore.tsx";
 import UserStore from "../../../../../stores/UserStore.tsx";
 
+const require = globalThis.__r;
+
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ScrollView: c3, View: closure_4 } = get_ActivityIndicator);
@@ -24,28 +26,33 @@ let obj = { tier: BoostedGuildTiers.NONE, title: null, IconComponent: "Array" };
 let intl = fn(1114).intl;
 obj.title = intl.string(fn(1114).t.tfVXhP);
 let items = [obj, , ,];
-obj = { tier: BoostedGuildTiers.TIER_1, title: null, IconComponent: null };
+let obj2 = { tier: BoostedGuildTiers.TIER_1, title: null, IconComponent: null };
 let intl2 = fn(1114).intl;
-obj.title = intl2.string(fn(1114).t.nzXtaS);
-obj.IconComponent = fn(17688).BoostGemOutlineIcon;
-items[1] = obj;
-let obj1 = { tier: BoostedGuildTiers.TIER_2, title: null, IconComponent: null };
+obj2.title = intl2.string(fn(1114).t.nzXtaS);
+obj2.IconComponent = fn(17689).BoostGemOutlineIcon;
+items[1] = obj2;
+let obj3 = { tier: BoostedGuildTiers.TIER_2, title: null, IconComponent: null };
 let intl3 = fn(1114).intl;
-obj1.title = intl3.string(fn(1114).t["h33/uW"]);
-obj1.IconComponent = fn(9505).BoostGemIcon;
-items[2] = obj1;
-let obj2 = { tier: BoostedGuildTiers.TIER_3, title: null, IconComponent: null };
+obj3.title = intl3.string(fn(1114).t["h33/uW"]);
+obj3.IconComponent = fn(9505).BoostGemIcon;
+items[2] = obj3;
+let obj4 = { tier: BoostedGuildTiers.TIER_3, title: null, IconComponent: null };
 const intl4 = fn(1114).intl;
-obj2.title = intl4.string(fn(1114).t.BfF6ED);
-obj2.IconComponent = fn(13611).BoostTier3Icon;
-items[3] = obj2;
+obj4.title = intl4.string(fn(1114).t.BfF6ED);
+obj4.IconComponent = fn(13612).BoostTier3Icon;
+items[3] = obj4;
 const createStyles = fn(4636);
 let closure_15 = createStyles.createStyles((arg0) => {
-  let obj = { container: null, label: null, divider: null, stickerSlot: null, userRow: null };
-  obj = { padding: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16 + arg0 };
-  obj.container = obj;
-  obj = { marginBottom: nativeDefault.space.PX_8 };
-  obj.label = obj;
+  const obj = {
+    container: { padding: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16 + arg0 },
+    label: null,
+    divider: null,
+    stickerSlot: null,
+    userRow: null,
+  };
+  const obj2 = { padding: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16 + arg0 };
+  obj.label = { marginBottom: nativeDefault.space.PX_8 };
+  const obj3 = { marginBottom: nativeDefault.space.PX_8 };
   obj.divider = { marginTop: nativeDefault.space.PX_16, marginBottom: nativeDefault.space.PX_16 };
   const size = {
     backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST,
@@ -57,7 +64,7 @@ let closure_15 = createStyles.createStyles((arg0) => {
     justifyContent: "center",
   };
   obj.stickerSlot = size;
-  const obj1 = { marginTop: nativeDefault.space.PX_16, marginBottom: nativeDefault.space.PX_16 };
+  const obj4 = { marginTop: nativeDefault.space.PX_16, marginBottom: nativeDefault.space.PX_16 };
   obj.userRow = { gap: nativeDefault.space.PX_8, flexDirection: "row", alignItems: "center" };
   return obj;
 });
@@ -75,10 +82,9 @@ export default noop.memo(function GuildSettingsModalStickers(guildId) {
   c6 = undefined;
   const tmp3 = closure_15(require("useSafeAreaInsets")().bottom);
   importDefault = tmp3;
-  let obj = guildId(guild[15]);
   items = [stickers];
   let items1 = [guildId];
-  const stateFromStoresObject = obj.useStateFromStoresObject(
+  const stateFromStoresObject = guildId(guild[15]).useStateFromStoresObject(
     items,
     () => {
       guild = GuildStore.getGuild(guildId);
@@ -105,8 +111,9 @@ export default noop.memo(function GuildSettingsModalStickers(guildId) {
   );
   guild = stateFromStoresObject.guild;
   let guildTier = stateFromStoresObject.guildTier;
-  let obj1 = guildId(guild[16]);
-  const manageResourcePermissions = obj1.getManageResourcePermissions(guild, c6, UserStore);
+  let obj = guildId(guild[15]);
+  const tmp = importDefault;
+  const manageResourcePermissions = guildId(guild[16]).getManageResourcePermissions(guild, c6, UserStore);
   ({ canCreateExpressions, canManageGuildExpression: c4 } = manageResourcePermissions);
   const tmp7 = require("useLoadGuildStickerWithCreator")(guildId);
   if ("success" !== tmp7.status) {
@@ -117,16 +124,16 @@ export default noop.memo(function GuildSettingsModalStickers(guildId) {
       canCreateExpressions = stickers.length < tmp14;
     }
     c6 = 0;
-    obj = { contentContainerStyle: tmp3.container, children: null };
-    obj = { variant: "heading-md/semibold", style: tmp3.label, children: null };
+    let obj3 = { contentContainerStyle: tmp3.container, children: null };
+    let obj4 = { variant: "heading-md/semibold", style: tmp3.label, children: null };
     let intl = tmp4(tmp2[8]).intl;
-    obj.children = intl.string(tmp4(tmp2[8]).t.yxVsBJ);
-    const items2 = [closure_12(tmp4(tmp2[20]).Text, obj), , , ,];
-    obj1 = { variant: "text-sm/medium", color: "text-muted", style: tmp3.label, children: null };
+    obj4.children = intl.string(tmp4(tmp2[8]).t.yxVsBJ);
+    const items2 = [closure_12(tmp4(tmp2[20]).Text, obj4), , , ,];
+    let obj5 = { variant: "text-sm/medium", color: "text-muted", style: tmp3.label, children: null };
     const intl2 = tmp4(tmp2[8]).intl;
-    let obj2 = { fileSize: tmp4(tmp2[21]).formatKbSize(MAX_STICKER_FILE_SIZE, { useKibibytes: true }) };
-    obj1.children = intl2.format(tmp4(tmp2[8]).t.kpcMft, obj2);
-    items2[1] = closure_12(tmp4(tmp2[20]).Text, obj1);
+    let obj6 = { fileSize: tmp4(tmp2[21]).formatKbSize(MAX_STICKER_FILE_SIZE, { useKibibytes: true }) };
+    obj5.children = intl2.format(tmp4(tmp2[8]).t.kpcMft, obj6);
+    items2[1] = closure_12(tmp4(tmp2[20]).Text, obj5);
     const intl3 = tmp4(tmp2[8]).intl;
     const string = intl3.string;
     let t = tmp4(tmp2[8]).t;
@@ -135,117 +142,114 @@ export default noop.memo(function GuildSettingsModalStickers(guildId) {
     } else {
       stringResult = string(t["IuvV5+"]);
     }
-    let obj3 = {
+    let obj7 = {
       text: stringResult,
       onPress() {
         showGuildSettingsStickerCreateModalDefault({ guildId });
       },
       disabled: !canCreateExpressions,
     };
-    items2[2] = closure_12(tmp4(tmp2[22]).Button, obj3);
-    let obj4 = { outer: true, style: tmp3.divider };
-    items2[3] = closure_12(tmp4(tmp2[24]).FormDivider, obj4);
-    let obj5 = {
+    items2[2] = closure_12(tmp4(tmp2[22]).Button, obj7);
+    let obj8 = { outer: true, style: tmp3.divider };
+    items2[3] = closure_12(tmp4(tmp2[24]).FormDivider, obj8);
+    const obj9 = {
       spacing: tmp(tmp2[13]).space.PX_16,
       children: items.map((label) => {
         ({ tier, IconComponent } = label);
-        let obj = GuildBoostingUtils;
-        const incrementalStickerCountForTier = obj.getIncrementalStickerCountForTier(tier);
-        let obj1 = GuildBoostingUtils;
-        const availableStickerSlotCount = obj1.getAvailableStickerSlotCount(stickers, tier);
+        const incrementalStickerCountForTier = GuildBoostingUtils.getIncrementalStickerCountForTier(tier);
+        const availableStickerSlotCount = GuildBoostingUtils.getAvailableStickerSlotCount(stickers, tier);
         let tmp7Result;
         if (null != IconComponent) {
           let str = "premium-nitro-pink-text";
           if (tmp) {
             str = "icon-muted";
           }
-          obj = { color: str };
-          tmp7Result = closure_2_12(IconComponent, obj);
+          let obj3 = { color: str };
+          tmp7Result = closure_2_12(IconComponent, obj3);
         }
-        obj = { icon: tmp7Result, label: label.title, subLabel: null, trailing: null };
+        let obj4 = { icon: tmp7Result, label: label.title, subLabel: null, trailing: null };
         const intl = util.intl;
         const format = intl.format;
         const t = util.t;
         if (guildTier < tier) {
-          obj1 = { required: React6[tier], decorator: "" };
-          let formatResult = format(t.t2Wbo1, obj1);
+          let obj5 = { required: React6[tier], decorator: "" };
+          let formatResult = format(t.t2Wbo1, obj5);
         } else {
-          let obj2 = { numTotal: incrementalStickerCountForTier, numAvailable: availableStickerSlotCount };
-          formatResult = format(t.ZLoNtm, obj2);
+          let obj6 = { numTotal: incrementalStickerCountForTier, numAvailable: availableStickerSlotCount };
+          formatResult = format(t.ZLoNtm, obj6);
         }
-        obj.subLabel = formatResult;
-        tmp7Result = undefined;
+        obj4.subLabel = formatResult;
+        let tmp7Result2;
         if (guildTier < tier) {
-          tmp7Result = closure_2_12(LockIcon.LockIcon, { color: "icon-muted" });
+          tmp7Result2 = closure_2_12(LockIcon.LockIcon, { color: "icon-muted" });
         }
-        let obj3 = { hasIcons: true, children: null };
-        obj.trailing = tmp7Result;
-        items = [
-          closure_2_12(TableRow.TableRow, obj),
-          Array.from({ length: incrementalStickerCountForTier }).map((item, index) => {
-            closure_6 = tmp + 1;
-            guildId = tmp2;
-            if (null == closure_5[+closure_6]) {
-              return null;
-            } else {
-              const tmp8 = closure_4(tmp2);
-              const user = tmp2.user;
-              let obj = { icon: null, label: null, trailing: null, onPress: null };
-              obj = { style: closure_1.stickerSlot, children: null };
-              const obj1 = { sticker: tmp2, size: closure_1_1(576).space.PX_48, animated: true };
-              obj.children = closure_1_12(closure_1_1(10304), obj1);
-              obj.icon = closure_1_12(closure_1_4, obj);
-              const obj2 = {
-                variant: "heading-sm/semibold",
-                color: "text-strong",
-                style: closure_1.label,
-                children: tmp2.name,
+        let obj7 = { hasIcons: true, children: null };
+        obj4.trailing = tmp7Result2;
+        items = [closure_2_12(TableRow.TableRow, obj4)];
+        items[1] = Array.from({ length: incrementalStickerCountForTier }).map((item, index) => {
+          closure_6 = tmp + 1;
+          guildId = tmp2;
+          if (null == closure_5[+closure_6]) {
+            return null;
+          } else {
+            const tmp8 = closure_4(tmp2);
+            const user = tmp2.user;
+            const obj2 = { icon: null, label: null, trailing: null, onPress: null };
+            const obj3 = { style: closure_1.stickerSlot, children: null };
+            const obj4 = { sticker: tmp2, size: closure_1_1(576).space.PX_48, animated: true };
+            obj3.children = closure_1_12(closure_1_1(10304), obj4);
+            obj2.icon = closure_1_12(closure_1_4, obj3);
+            const obj5 = {
+              variant: "heading-sm/semibold",
+              color: "text-strong",
+              style: closure_1.label,
+              children: tmp2.name,
+            };
+            items = [closure_1_12(guildId(4632).Text, obj5)];
+            let tmp16Result = null;
+            if (null != user) {
+              const obj = { style: closure_1.userRow, children: null };
+              const obj6 = { user, size: tmp10(1176).AvatarSizes.XSMALL_20, guildId };
+              const items1 = [closure_1_12(tmp10(1176).Avatar, obj6)];
+              const obj7 = {
+                variant: "text-sm/medium",
+                color: "text-subtle",
+                children: closure_1_1(4481).getName(user),
               };
-              items = [closure_1_12(guildId(4632).Text, obj2)];
-              let tmp16Result = null;
-              if (null != user) {
-                obj = { style: closure_1.userRow, children: null };
-                const obj3 = { user, size: tmp10(1178).AvatarSizes.XSMALL_20, guildId };
-                const items1 = [closure_1_12(tmp10(1178).Avatar, obj3)];
-                const obj4 = {
-                  variant: "text-sm/medium",
-                  color: "text-subtle",
-                  children: closure_1_1(4481).getName(user),
-                };
-                items1[1] = closure_1_12(tmp10(4632).Text, obj4);
-                obj.children = items1;
-                tmp16Result = closure_1_13(closure_1_4, obj);
-                const tmp14Result = closure_1_1(4481);
-              }
-              const obj5 = { children: null };
-              items[1] = tmp16Result;
-              obj5.children = items;
-              obj.label = closure_1_13(closure_1_4, obj5);
-              let tmp9Result;
-              if (tmp8) {
-                tmp9Result = closure_1_12(tmp10(5693).TableRowArrow, {});
-              }
-              obj.trailing = tmp9Result;
-              let fn;
-              if (tmp8) {
-                fn = () => {
-                  guildId(guild[33]);
-                  const obj = { guildId, stickerId: id.id };
-                  const result = obj.showGuildSettingsModalStickerInfoActionSheet(obj);
-                };
-              }
-              obj.onPress = fn;
-              return closure_1_12(guildId(5686).TableRow, obj, index);
+              items1[1] = closure_1_12(tmp10(4632).Text, obj7);
+              obj.children = items1;
+              tmp16Result = closure_1_13(closure_1_4, obj);
+              const tmp14Result = closure_1_1(4481);
             }
-          }),
-        ];
-        obj3.children = items;
-        return map1(TableRowGroup.TableRowGroup, obj3, tier);
+            const obj8 = { children: null };
+            items[1] = tmp16Result;
+            obj8.children = items;
+            obj2.label = closure_1_13(closure_1_4, obj8);
+            let tmp9Result;
+            if (tmp8) {
+              tmp9Result = closure_1_12(tmp10(5693).TableRowArrow, {});
+            }
+            obj2.trailing = tmp9Result;
+            let fn;
+            if (tmp8) {
+              fn = () => {
+                const result = guildId(guild[33]).showGuildSettingsModalStickerInfoActionSheet({
+                  guildId,
+                  stickerId: id.id,
+                });
+              };
+            }
+            obj2.onPress = fn;
+            return closure_1_12(guildId(5686).TableRow, obj2, index);
+          }
+        });
+        obj7.children = items;
+        return map1(TableRowGroup.TableRowGroup, obj7, tier);
       }),
     };
-    items2[4] = closure_12(tmp4(tmp2[25]).Stack, obj5);
-    obj.children = items2;
-    return closure_13(guildTier, obj);
+    items2[4] = closure_12(tmp4(tmp2[25]).Stack, obj9);
+    obj3.children = items2;
+    return closure_13(guildTier, obj3);
   }
-  tmp = importDefault;
+  let obj2 = guildId(guild[16]);
 });

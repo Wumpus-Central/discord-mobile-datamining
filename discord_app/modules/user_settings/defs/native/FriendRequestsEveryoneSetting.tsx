@@ -8,8 +8,8 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 const Constants = fn(1074);
 ({ AllFriendSourceFlags: c3, FriendSourceFlags: closure_4 } = Constants);
-fn(11601);
-let SettingBuilders = {
+const SettingBuilders = fn(11602);
+const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.mGr3CX);
@@ -33,9 +33,8 @@ let SettingBuilders = {
   useIsDisabled() {
     return useParentalControlSettings.useIsParentallyControlled();
   },
-};
-SettingBuilders = SettingBuilders.createToggle(SettingBuilders);
+});
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/FriendRequestsEveryoneSetting.tsx");
 
-export default SettingBuilders;
+export default toggle;

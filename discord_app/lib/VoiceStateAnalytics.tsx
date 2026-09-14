@@ -69,10 +69,11 @@ prototype["getUserVoiceSettingsStats"] = function getUserVoiceSettingsStats(arg0
   set1.delete(this.userId);
   set.delete(this.userId);
   const obj = { num_local_voice_user_mutes: null, num_local_voice_volumes: null };
-  let arr = Array.from(set);
-  obj.num_local_voice_user_mutes = _mod12.intersection(arr, Array.from(this.totalParticipants)).length;
-  arr = Array.from(set1);
-  obj.num_local_voice_volumes = _mod12.intersection(arr, Array.from(this.totalParticipants)).length;
+  const obj4 = _mod12;
+  obj.num_local_voice_user_mutes = obj4.intersection(Array.from(set), Array.from(this.totalParticipants)).length;
+  const arr = Array.from(set);
+  const obj5 = _mod12;
+  obj.num_local_voice_volumes = obj5.intersection(Array.from(set1), Array.from(this.totalParticipants)).length;
   return obj;
 };
 prototype["setSpeaking"] = function setSpeaking(userId, speaking) {
@@ -84,7 +85,7 @@ prototype["setSpeaking"] = function setSpeaking(userId, speaking) {
         if (!voiceStateForChannel.mute) {
           self.totalSpeakers[userId] = speaking;
           const _Object = Object;
-          let values = Object.values(self.totalSpeakers);
+          const values = Object.values(self.totalSpeakers);
           const _Math = Math;
           self.maxSpeakerCount = Math.max(
             self.maxSpeakerCount,
@@ -100,8 +101,8 @@ prototype["setSpeaking"] = function setSpeaking(userId, speaking) {
     if (speaking !== self.speaking) {
       if (speaking !== SpeakingFlags.NONE) {
         const _Object2 = Object;
-        values = Object.values(VoiceStateStore.getVoiceStatesForChannel(self.channelId));
-        const found = values.filter((selfDeaf) => {
+        const values2 = Object.values(VoiceStateStore.getVoiceStatesForChannel(self.channelId));
+        const found = values2.filter((selfDeaf) => {
           selfDeaf = selfDeaf.selfDeaf;
           let tmp = !selfDeaf;
           if (!selfDeaf) {

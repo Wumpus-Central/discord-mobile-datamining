@@ -2,17 +2,17 @@
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import MemberVerificationTypes from "../../guild_member_verification/MemberVerificationTypes.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
-import _modDef12418 from "../../../../_runtime/metro/12418__.js";
-import _modDef16395 from "../../../../_runtime/metro/16395__.js";
-import _modDef16396 from "../../../../_runtime/metro/16396__.js";
+import _modDef12419 from "../../../../_runtime/metro/12419__.js";
 import _modDef16397 from "../../../../_runtime/metro/16397__.js";
+import _modDef16398 from "../../../../_runtime/metro/16398__.js";
+import _modDef16399 from "../../../../_runtime/metro/16399__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-fn(4636);
-const createStyles = { badgeImageContainer: null, badgeImage: null };
+const createStyles = fn(4636);
+let obj2 = { badgeImageContainer: null, badgeImage: null };
 let size = {
   position: "absolute",
   bottom: -3,
@@ -26,10 +26,10 @@ let size = {
   alignItems: "center",
   overflow: "hidden",
 };
-createStyles.badgeImageContainer = size;
+obj2.badgeImageContainer = size;
 const size1 = { height: 16, width: 16, opacity: fn(5522).DARK_1_LIGHT_08 };
-createStyles.badgeImage = size1;
-let closure_5 = createStyles.createStyles(createStyles);
+obj2.badgeImage = size1;
+let closure_5 = createStyles.createStyles(obj2);
 size = fn(2);
 const result = size.fileFinishedImporting("modules/guilds_bar/native/GuildsBarGuildJoinRequestBadge.tsx");
 
@@ -37,25 +37,29 @@ export default function GuildsBarGuildJoinRequestBadge(joinRequestState) {
   joinRequestState = joinRequestState.joinRequestState;
   const tmp = closure_5();
   if (MemberVerificationTypes.GuildJoinRequestApplicationStatuses.REJECTED === joinRequestState) {
-    let tmp4 = _modDef16395;
+    let tmp4 = _modDef16397;
   } else if (MemberVerificationTypes.GuildJoinRequestApplicationStatuses.SUBMITTED === joinRequestState) {
-    tmp4 = _modDef16396;
+    tmp4 = _modDef16398;
   } else if (MemberVerificationTypes.GuildJoinRequestApplicationStatuses.STARTED === joinRequestState) {
-    tmp4 = _modDef16397;
+    tmp4 = _modDef16399;
   } else {
     tmp4 = null;
     if (MemberVerificationTypes.GuildJoinRequestApplicationStatuses.APPROVED === joinRequestState) {
-      tmp4 = _modDef12418;
+      tmp4 = _modDef12419;
     }
   }
   let tmp9 = null;
   if (null != tmp4) {
-    let obj = { pointerEvents: "none", style: null, children: null };
+    const obj = { pointerEvents: "none", style: null, children: null };
     const items = [tmp.badgeImageContainer, joinRequestState.style];
     obj.style = items;
-    obj = { source: tmp4, style: tmp.badgeImage };
+    const obj2 = { source: tmp4, style: tmp.badgeImage };
     obj.children = jsx(FastImageDefault, { source: tmp4, style: tmp.badgeImage });
-    tmp9 = <View source={tmp4} style={tmp.badgeImage} />;
+    tmp9 = (
+      <View pointerEvents="none" style={null}>
+        {null}
+      </View>
+    );
   }
   return tmp9;
 }

@@ -15,8 +15,9 @@ export default function useHasNewAdContent() {
   const MobileQuestHomeRedDotNotificationExperiment = enabled(
     stateFromStoresArray[5],
   ).MobileQuestHomeRedDotNotificationExperiment;
-  let obj = { location: QuestsExperimentLocations.YOU_TAB_PROFILE_HEADER };
-  enabled = MobileQuestHomeRedDotNotificationExperiment.useConfig(obj).enabled;
+  enabled = MobileQuestHomeRedDotNotificationExperiment.useConfig({
+    location: QuestsExperimentLocations.YOU_TAB_PROFILE_HEADER,
+  }).enabled;
   const items = [QuestStore];
   const items1 = [enabled];
   stateFromStoresArray = enabled(stateFromStoresArray[6]).useStateFromStoresArray(
@@ -37,6 +38,7 @@ export default function useHasNewAdContent() {
     },
     items1,
   );
+  const obj = { location: QuestsExperimentLocations.YOU_TAB_PROFILE_HEADER };
   const obj2 = enabled(stateFromStoresArray[6]);
   const tmp = enabled;
   const tmp2 = stateFromStoresArray;
@@ -66,11 +68,14 @@ export default function useHasNewAdContent() {
       prop = tmp(tmp2[10]).DismissibleContent.QUEST_HOME_NEW_QUEST_BADGE;
     }
   }
-  obj = { cooldownDurationMs: DAY };
   const tmp6 = _slicedToArray(
-    enabled(stateFromStoresArray[9]).useSelectedTimeRecurringDismissibleContent(prop, obj, undefined, true),
+    enabled(stateFromStoresArray[9]).useSelectedTimeRecurringDismissibleContent(
+      prop,
+      { cooldownDurationMs: DAY },
+      undefined,
+      true,
+    ),
     2,
   );
-  obj = { showBadge: null != tmp6[0], dismissBadge: tmp6[1] };
-  return obj;
+  return { showBadge: null != tmp6[0], dismissBadge: tmp6[1] };
 }

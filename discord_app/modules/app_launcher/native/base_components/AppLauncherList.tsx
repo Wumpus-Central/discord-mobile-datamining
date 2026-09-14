@@ -3,8 +3,10 @@ import util from "../../../../intl/index.native.tsx";
 import native from "../../../../design/void/native.tsx";
 import mergeProps from "../../../../design/utils/native/mergeProps.native.tsx";
 import SearchField from "../../../../design/components/TextField/native/SearchField.native.tsx";
-import _modDef12297 from "../../../../../_runtime/metro/12297__.js";
+import _modDef12298 from "../../../../../_runtime/metro/12298__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
+
+const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
@@ -21,20 +23,20 @@ const result = size.fileFinishedImporting("modules/app_launcher/native/base_comp
 export const AppLauncherList = noop.forwardRef((contentContainerStyle, arg1) => {
   _require = arg1;
   const bottom = appLauncherFlashListProps(1611)().bottom;
-  let obj = require("AppLauncherFlashList");
-  appLauncherFlashListProps = obj.useAppLauncherFlashListProps();
+  appLauncherFlashListProps = require("AppLauncherFlashList").useAppLauncherFlashListProps();
   const items = [appLauncherFlashListProps.scrollerRef, arg1];
   const memo = noop.useMemo(() => mergeProps.mergeRefs(appLauncherFlashListProps.scrollerRef, closure_0), items);
-  obj = { contentContainerStyle: null, scrollIndicatorInsets: { bottom }, ref: memo };
+  const obj3 = { contentContainerStyle: null, scrollIndicatorInsets: { bottom }, ref: memo };
   const items1 = [{ paddingBottom: bottom }, contentContainerStyle.contentContainerStyle];
-  obj.contentContainerStyle = items1;
+  obj3.contentContainerStyle = items1;
+  const obj = require("AppLauncherFlashList");
   const merged = Object.assign(contentContainerStyle);
   ({
     onScroll: obj2.animatedOnScroll,
     gestureRef: obj2.simultaneousHandlers,
     animatedProps: obj2.animatedProps,
   } = appLauncherFlashListProps);
-  return jsx(appLauncherFlashListProps(12231), {
+  return jsx(appLauncherFlashListProps(12232), {
     contentContainerStyle: null,
     scrollIndicatorInsets: { bottom },
     ref: memo,
@@ -45,8 +47,8 @@ export const AppLauncherListEmptyState = function AppLauncherListEmptyState() {
   const obj = {
     style: tmp.emptyState,
     imageStyle: tmp.emptyStateImage,
-    lightSource: _modDef12297,
-    darkSource: _modDef12297,
+    lightSource: _modDef12298,
+    darkSource: _modDef12298,
     title: null,
     body: null,
   };
@@ -57,16 +59,15 @@ export const AppLauncherListEmptyState = function AppLauncherListEmptyState() {
   return jsx(native.EmptyState, {
     style: tmp.emptyState,
     imageStyle: tmp.emptyStateImage,
-    lightSource: _modDef12297,
-    darkSource: _modDef12297,
+    lightSource: _modDef12298,
+    darkSource: _modDef12298,
     title: null,
     body: null,
   });
 };
 export const AppLauncherListSearchBar = function AppLauncherListSearchBar(arg0) {
-  let obj = { style: closure_6().searchBarContainer, children: null };
-  obj = { size: "md" };
+  const obj = { style: closure_6().searchBarContainer, children: null };
   const merged = Object.assign(arg0);
   obj.children = jsx(SearchField.SearchField, { size: "md" });
-  return <View size="md" />;
+  return <View style={closure_6().searchBarContainer}>{null}</View>;
 };

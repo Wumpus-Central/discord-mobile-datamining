@@ -4,6 +4,8 @@ import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import UserProfileStore from "../../user_profile/UserProfileStore.tsx";
 
+const require = globalThis.__r;
+
 const require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/hooks/useWishlistButtonState.tsx");
@@ -20,19 +22,21 @@ export const useWishlistButtonState = function useWishlistButtonState(onRemoveSu
   let isBusy;
   closure_10 = undefined;
   let isSkuInWishlist;
-  let obj = require("StringUtils");
+  const tmp2 = skuId(onAddSuccess[4]);
   if (obj.isNullOrEmpty(_location)) {
     let items = [];
   } else {
     items = [_location];
   }
-  analyticsLocations = skuId(onAddSuccess[4])(items).analyticsLocations;
-  let tmp3Result = require("initialize");
+  analyticsLocations = tmp2(items).analyticsLocations;
+  obj = require("StringUtils");
   const items1 = [analyticsLocations];
-  stateFromStores = tmp3Result.useStateFromStores(items1, () => UserProfileStore.getFirstWishlistId(require));
-  tmp3Result = require("useWishlistHooks");
-  isSkuInWishlist = tmp3Result.useIsSkuInWishlist(stateFromStores, skuId);
-  const tmp2 = skuId(onAddSuccess[4]);
+  stateFromStores = require("initialize").useStateFromStores(items1, () =>
+    UserProfileStore.getFirstWishlistId(require),
+  );
+  const tmp3Result = require("initialize");
+  isSkuInWishlist = require("useWishlistHooks").useIsSkuInWishlist(stateFromStores, skuId);
+  const tmp3Result2 = require("useWishlistHooks");
   [tmp7, c8] = onError(skipAddAnnouncement.useState(null), 2);
   const tmp8 = onError(skipAddAnnouncement.useState(false), 2);
   isBusy = tmp8[0];
@@ -56,10 +60,11 @@ export const useWishlistButtonState = function useWishlistButtonState(onRemoveSu
     onError,
     skipAddAnnouncement,
   ];
-  obj = {
+  const tmp6 = onError(skipAddAnnouncement.useState(null), 2);
+  return {
     isWishlisted: isSkuInWishlist,
     isBusy,
-    handleToggle: obj4.useCallback(
+    handleToggle: skipAddAnnouncement.useCallback(
       onRemoveSuccess(function* () {
         if (c5 === 2) {
           c5 = 3;
@@ -68,8 +73,8 @@ export const useWishlistButtonState = function useWishlistButtonState(onRemoveSu
           if (arg0 === 1) {
             throw value;
           } else if (arg0 === 2) {
-            let obj = { value, done: true };
-            return obj;
+            const obj2 = { value, done: true };
+            return obj2;
           } else {
             return { value: "HermesInternal", done: null };
           }
@@ -82,8 +87,8 @@ export const useWishlistButtonState = function useWishlistButtonState(onRemoveSu
                 throw value;
               } else if (arg0 === 2) {
                 c5 = 3;
-                obj = { value, done: true };
-                return obj;
+                const obj4 = { value, done: true };
+                return obj4;
               } else {
                 closure_0 = tmp9;
                 if (first) {
@@ -96,8 +101,8 @@ export const useWishlistButtonState = function useWishlistButtonState(onRemoveSu
                     closure_129_8(null);
                     closure_129_10(false);
                     c5 = 3;
-                    const obj1 = { value, done: true };
-                    return obj1;
+                    const obj6 = { value, done: true };
+                    return obj6;
                   } else {
                     const AccessibilityAnnouncer2 = closure_0(tmp86[9]).AccessibilityAnnouncer;
                     const intl2 = closure_0(tmp86[10]).intl;
@@ -115,20 +120,19 @@ export const useWishlistButtonState = function useWishlistButtonState(onRemoveSu
                       c3 = 3;
                       c4 = 4;
                       c5 = 1;
-                      let obj2 = {
+                      const obj7 = {
                         value: tmp4(tmp86[8]).removeSkuFromWishlist(tmp73, skuId, analyticsLocations),
                         done: false,
                       };
-                      return obj2;
+                      return obj7;
                     }
                   }
                   _undefined(true);
                   c3 = 4;
-                  obj2 = tmp4(tmp86[8]);
                   c4 = 6;
                   c5 = 1;
-                  const obj3 = { value: obj2.addSkuToWishlist(skuId, analyticsLocations), done: false };
-                  return obj3;
+                  const obj8 = { value: tmp4(tmp86[8]).addSkuToWishlist(skuId, analyticsLocations), done: false };
+                  return obj8;
                 }
               }
             } else if (1 === tmp9) {
@@ -162,7 +166,7 @@ export const useWishlistButtonState = function useWishlistButtonState(onRemoveSu
                 closure_129_8(null);
                 closure_129_10(false);
                 c5 = 3;
-                obj = { value, done: true };
+                const obj = { value, done: true };
                 return obj;
               } else {
                 if (!closure_129_5) {
@@ -201,5 +205,4 @@ export const useWishlistButtonState = function useWishlistButtonState(onRemoveSu
       items3,
     ),
   };
-  return obj;
 };

@@ -13,7 +13,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 const GuildIconDefault = GuildIcon;
 
 require = fn;
-const GUILD_ITEM_BADGE_SIZE = fn(16377).GUILD_ITEM_BADGE_SIZE;
+const GUILD_ITEM_BADGE_SIZE = fn(16379).GUILD_ITEM_BADGE_SIZE;
 const jsx = fn(21).jsx;
 const createStyles = fn(4636);
 let obj = { guildIcon: null, geoRestrictedBadge: null };
@@ -37,18 +37,18 @@ const result = size.fileFinishedImporting("modules/guilds_bar/native/GuildsBarGe
 export default noop.memo(function GuildsBarGeoRestrictedGuild(restrictedGuild) {
   restrictedGuild = restrictedGuild.restrictedGuild;
   const tmp = closure_5();
-  let obj = restrictedGuild(16389);
   let animatableSourceWithFallback = null;
+  let obj = restrictedGuild(16391);
+  const tmp2 = restrictedGuild;
   if (null != restrictedGuild.icon) {
-    let obj1 = AvatarUtilsDefault;
-    animatableSourceWithFallback = obj1.getAnimatableSourceWithFallback(false, (canAnimate) => {
-      const obj = {
+    animatableSourceWithFallback = AvatarUtilsDefault.getAnimatableSourceWithFallback(false, (canAnimate) => {
+      const obj = AvatarUtilsDefault;
+      return obj.getGuildIconSource({
         id: restrictedGuild.id,
         size: GuildIcon.ImageSizes[GuildIcon.GuildIconSizes.LARGE],
         icon: restrictedGuild.icon,
         canAnimate,
-      };
-      return obj.getGuildIconSource(obj);
+      });
     });
   }
   items = [,];
@@ -56,27 +56,29 @@ export default noop.memo(function GuildsBarGeoRestrictedGuild(restrictedGuild) {
   const memo = noop.useMemo(
     () => ({
       onPress() {
-        let obj = { title: null, body: null, cancelText: null, onCancel: null };
+        const obj2 = { title: null, body: null, cancelText: null, onCancel: null };
         const intl = restrictedGuild(1114).intl;
-        obj.title = intl.string(restrictedGuild(1114).t.aCAiGl);
+        obj2.title = intl.string(restrictedGuild(1114).t.aCAiGl);
         const intl2 = restrictedGuild(1114).intl;
-        obj = { serverName: name.name };
-        obj.body = intl2.format(restrictedGuild(1114).t["4cJV9S"], obj);
+        obj2.body = intl2.format(restrictedGuild(1114).t["4cJV9S"], { serverName: name.name });
         const intl3 = restrictedGuild(1114).intl;
-        obj.cancelText = intl3.string(restrictedGuild(1114).t.J2TBi3);
-        obj.onCancel = function onCancel() {
+        obj2.cancelText = intl3.string(restrictedGuild(1114).t.J2TBi3);
+        obj2.onCancel = function onCancel() {
           closure_2_1(dependencyMap[11]).leaveGuild(id.id);
         };
-        obj.show(obj);
+        AlertActionCreatorsDefault.show(obj2);
       },
     }),
     items,
   );
-  obj = {
+  const obj3 = {
     selected: false,
     unread: false,
     circle: false,
-    styles: obj.useGuildsBarAnimatedWrapperStyles({ disableSelectedColor: true, disableBGColor: true }),
+    styles: restrictedGuild(16391).useGuildsBarAnimatedWrapperStyles({
+      disableSelectedColor: true,
+      disableBGColor: true,
+    }),
     label: restrictedGuild.name,
     isDragTarget: false,
     config: memo,
@@ -89,24 +91,21 @@ export default noop.memo(function GuildsBarGeoRestrictedGuild(restrictedGuild) {
     children:
       "function pnpm_useGestureHandlerTs3(event){const{gestureSource,source,state,GESTURE_SOURCE,onEnd}=this.__closure;if(gestureSource.value!==source){return;}state.value=event.state;gestureSource.value=GESTURE_SOURCE.UNDETERMINED;onEnd(source,event);}",
   };
-  const guildsBarAnimatedWrapperStyles = obj.useGuildsBarAnimatedWrapperStyles({
+  const guildsBarAnimatedWrapperStyles = restrictedGuild(16391).useGuildsBarAnimatedWrapperStyles({
     disableSelectedColor: true,
     disableBGColor: true,
   });
-  const tmp2 = restrictedGuild;
-  obj = { style: tmp.geoRestrictedBadge };
-  obj.externalChildren = jsx(GuildsBarGeoRestrictedBadgeDefault, { style: tmp.geoRestrictedBadge });
-  obj1 = { guildId: restrictedGuild.id };
-  obj.expandedChildren = jsx(HomeDrawerGuildRowDefault, { guildId: restrictedGuild.id });
+  obj3.externalChildren = jsx(GuildsBarGeoRestrictedBadgeDefault, { style: tmp.geoRestrictedBadge });
+  obj3.expandedChildren = jsx(HomeDrawerGuildRowDefault, { guildId: restrictedGuild.id });
   if (null != animatableSourceWithFallback) {
-    const obj2 = { source: animatableSourceWithFallback, style: tmp.guildIcon, fadeDuration: 0 };
+    const obj6 = { source: animatableSourceWithFallback, style: tmp.guildIcon, fadeDuration: 0 };
     let tmp8Result = jsx(FastImageDefault, {
       source: animatableSourceWithFallback,
       style: tmp.guildIcon,
       fadeDuration: 0,
     });
   } else {
-    const obj3 = {
+    const obj7 = {
       value: restrictedGuild.name,
       selected: false,
       animate: false,
@@ -120,6 +119,25 @@ export default noop.memo(function GuildsBarGeoRestrictedGuild(restrictedGuild) {
     });
     const tmp9Result = GuildIconDefault;
   }
-  obj.children = tmp8Result;
-  return jsx(GuildsBarAnimatedItemWrapperDefault, { style: tmp.geoRestrictedBadge });
+  obj3.children = tmp8Result;
+  return jsx(GuildsBarAnimatedItemWrapperDefault, {
+    selected: false,
+    unread: false,
+    circle: false,
+    styles: restrictedGuild(16391).useGuildsBarAnimatedWrapperStyles({
+      disableSelectedColor: true,
+      disableBGColor: true,
+    }),
+    label: restrictedGuild.name,
+    isDragTarget: false,
+    config: memo,
+    cutouts: items,
+    overState: "a",
+    externalChildren:
+      "function pnpm_useGestureHandlerTs1(event){const{state,State,gestureSource,source,onStart}=this.__closure;state.value=State.BEGAN;gestureSource.value=source;onStart(source,event);return;}",
+    expandedChildren:
+      "function pnpm_useGestureHandlerTs2(event){const{gestureSource,source,state,onChange}=this.__closure;if(gestureSource.value!==source){return;}state.value=event.state;onChange(source,event);}",
+    children:
+      "function pnpm_useGestureHandlerTs3(event){const{gestureSource,source,state,GESTURE_SOURCE,onEnd}=this.__closure;if(gestureSource.value!==source){return;}state.value=event.state;gestureSource.value=GESTURE_SOURCE.UNDETERMINED;onEnd(source,event);}",
+  });
 });

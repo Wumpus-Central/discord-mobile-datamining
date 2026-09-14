@@ -15,6 +15,8 @@ import ArchivedThreadsStore from "ArchivedThreadsStore.tsx";
 import JoinedThreadsStore from "JoinedThreadsStore.tsx";
 import ThreadSummaryStore from "ThreadSummaryStore.tsx";
 
+const require = globalThis.__r;
+
 require = fn;
 function patchThread(id, body) {
   _require = id;
@@ -26,29 +28,29 @@ function patchThread(id, body) {
   };
   const obj2 = require("HTTPUtils");
   return HTTP.patch(request).then((body) => {
-    let obj = { type: "THREAD_UPDATE", channel: closure_4(body.body) };
-    obj.dispatch(obj);
+    const obj = DispatcherDefault;
+    obj.dispatch({ type: "THREAD_UPDATE", channel: closure_4(body.body) });
     let isForumPostResult = forumPost.isForumPost();
     if (isForumPostResult) {
       isForumPostResult = null != forumPost.parent_id;
     }
     if (isForumPostResult) {
-      obj = { type: "RESORT_THREADS", channelId: forumPost.parent_id };
-      DispatcherDefault.dispatch(obj);
+      const obj3 = { type: "RESORT_THREADS", channelId: forumPost.parent_id };
+      DispatcherDefault.dispatch(obj3);
       const tmpResult = DispatcherDefault;
     }
     return body;
   });
 }
 function dispatchThreadMemberLocalUpdate(id, isJoining) {
-  const obj = {
+  const obj = DispatcherDefault;
+  obj.dispatch({
     type: "THREAD_MEMBER_LOCAL_UPDATE",
     id: id.id,
     guildId: id.getGuildId(),
     userId: AuthenticationStore.getId(),
     isJoining,
-  };
-  obj.dispatch(obj);
+  });
 }
 let closure_4 = fn(1961).createChannelRecordFromServer;
 const PAGE_SIZE = fn(7868).PAGE_SIZE;
@@ -73,15 +75,15 @@ export default {
     };
     const obj3 = require("HTTPUtils");
     return HTTP.patch(request).then((body) => {
-      let obj = { type: "THREAD_UPDATE", channel: closure_4(body.body) };
-      obj.dispatch(obj);
+      const obj = DispatcherDefault;
+      obj.dispatch({ type: "THREAD_UPDATE", channel: closure_4(body.body) });
       let isForumPostResult = forumPost.isForumPost();
       if (isForumPostResult) {
         isForumPostResult = null != forumPost.parent_id;
       }
       if (isForumPostResult) {
-        obj = { type: "RESORT_THREADS", channelId: forumPost.parent_id };
-        DispatcherDefault.dispatch(obj);
+        const obj3 = { type: "RESORT_THREADS", channelId: forumPost.parent_id };
+        DispatcherDefault.dispatch(obj3);
         const tmpResult = DispatcherDefault;
       }
       return body;
@@ -98,8 +100,8 @@ export default {
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
-          let obj = { value, done: true };
-          return obj;
+          const obj2 = { value, done: true };
+          return obj2;
         } else {
           return { value: "HermesInternal", done: null };
         }
@@ -112,8 +114,8 @@ export default {
               throw value;
             } else if (arg0 === 2) {
               c3 = 3;
-              obj = { value, done: true };
-              return obj;
+              const obj3 = { value, done: true };
+              return obj3;
             } else {
               closure_1 = tmp2;
               closure_128_0 = undefined;
@@ -122,8 +124,8 @@ export default {
               if (isArchivedThreadResult) {
                 c2 = 1;
                 c3 = 1;
-                const obj1 = { value: self.unarchiveThread(tmp3, false), done: false };
-                return obj1;
+                const obj4 = { value: self.unarchiveThread(tmp3, false), done: false };
+                return obj4;
               }
             }
           } else if (arg0 === 1) {
@@ -131,13 +133,13 @@ export default {
             throw value;
           } else if (arg0 === 2) {
             c3 = 3;
-            obj = { value, done: true };
+            const obj = { value, done: true };
             return obj;
           }
-          const obj2 = { locked: true, archived: closure_128_0 };
+          const obj5 = { locked: true, archived: closure_128_0 };
           c3 = 3;
-          const obj3 = { value: patchThread(closure_129_0, obj2), done: true };
-          return obj3;
+          const obj6 = { value: patchThread(closure_129_0, obj5), done: true };
+          return obj6;
         } catch (tmp14) {
           c3 = tmp;
           throw tmp14;
@@ -156,8 +158,8 @@ export default {
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
-          let obj = { value, done: true };
-          return obj;
+          const obj2 = { value, done: true };
+          return obj2;
         } else {
           return { value: "HermesInternal", done: null };
         }
@@ -170,8 +172,8 @@ export default {
               throw value;
             } else if (arg0 === 2) {
               c3 = 3;
-              obj = { value, done: true };
-              return obj;
+              const obj3 = { value, done: true };
+              return obj3;
             } else {
               closure_1 = tmp2;
               closure_128_0 = undefined;
@@ -180,8 +182,8 @@ export default {
               if (isArchivedThreadResult) {
                 c2 = 1;
                 c3 = 1;
-                const obj1 = { value: self.unarchiveThread(tmp3, true), done: false };
-                return obj1;
+                const obj4 = { value: self.unarchiveThread(tmp3, true), done: false };
+                return obj4;
               }
             }
           } else if (arg0 === 1) {
@@ -189,13 +191,13 @@ export default {
             throw value;
           } else if (arg0 === 2) {
             c3 = 3;
-            obj = { value, done: true };
+            const obj = { value, done: true };
             return obj;
           }
-          const obj2 = { locked: false, archived: closure_128_0 };
+          const obj5 = { locked: false, archived: closure_128_0 };
           c3 = 3;
-          const obj3 = { value: patchThread(closure_129_0, obj2), done: true };
-          return obj3;
+          const obj6 = { value: patchThread(closure_129_0, obj5), done: true };
+          return obj6;
         } catch (tmp14) {
           c3 = tmp;
           throw tmp14;
@@ -214,8 +216,8 @@ export default {
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
-          let obj = { value, done: true };
-          return obj;
+          const obj2 = { value, done: true };
+          return obj2;
         } else {
           return { value: "HermesInternal", done: null };
         }
@@ -228,20 +230,20 @@ export default {
               throw value;
             } else if (arg0 === 2) {
               c5 = 3;
-              obj = { value, done: true };
-              return obj;
+              const obj4 = { value, done: true };
+              return obj4;
             } else {
               closure_128_0 = undefined;
-              const obj1 = { archived: false };
+              const obj6 = { archived: false };
               closure_128_0 = tmp5.isForumPost();
               if (tmp3) {
-                obj1.locked = false;
+                obj6.locked = false;
               }
               c3 = 1;
               c4 = 2;
               c5 = 1;
-              let obj2 = { value: patchThread(tmp5, obj1), done: false };
-              return obj2;
+              const obj8 = { value: patchThread(tmp5, obj6), done: false };
+              return obj8;
             }
           } else if (1 === tmp8) {
             c3 = 0;
@@ -252,7 +254,6 @@ export default {
               code = body.code;
             }
             if (code === constants.TOO_MANY_THREADS) {
-              let obj8 = tmp3(tmp92[12]);
               const intl7 = tmp5(tmp92[13]).intl;
               const string4 = intl7.string;
               const t4 = tmp5(tmp92[13]).t;
@@ -261,7 +262,7 @@ export default {
               } else {
                 string4Result = string4(t4["PeIE/r"]);
               }
-              let obj3 = { title: string4Result, body: null };
+              let obj10 = { title: string4Result, body: null };
               const intl8 = tmp5(tmp92[13]).intl;
               const string5 = intl8.string;
               let KGaiEK = tmp5(tmp92[13]).t;
@@ -271,8 +272,9 @@ export default {
               } else {
                 string5Result = string5(KGaiEK.P0wT5S);
               }
-              obj3.body = string5Result;
-              obj3 = obj8.show(obj3);
+              obj10.body = string5Result;
+              obj10 = tmp3(tmp92[12]).show(obj10);
+              const obj9 = tmp3(tmp92[12]);
             } else {
               const body2 = closure_128_1.body;
               let code1;
@@ -280,15 +282,14 @@ export default {
                 code1 = body2.code;
               }
               if (code1 === constants.TOO_MANY_ANNOUNCEMENT_THREADS) {
-                let obj6 = tmp3(tmp92[12]);
-                let obj4 = { title: null, body: null };
+                const obj11 = { title: null, body: null };
                 const intl5 = tmp5(tmp92[13]).intl;
-                obj4.title = intl5.string(tmp5(tmp92[13]).t["PeIE/r"]);
+                obj11.title = intl5.string(tmp5(tmp92[13]).t["PeIE/r"]);
                 const intl6 = tmp5(tmp92[13]).intl;
-                obj4.body = intl6.string(tmp5(tmp92[13]).t.jDMxz2);
-                obj6.show(obj4);
+                obj11.body = intl6.string(tmp5(tmp92[13]).t.jDMxz2);
+                tmp3(tmp92[12]).show(obj11);
+                const obj7 = tmp3(tmp92[12]);
               } else if (429 === closure_128_1.status) {
-                obj4 = tmp3(tmp92[12]);
                 const intl3 = tmp5(tmp92[13]).intl;
                 const string3 = intl3.string;
                 const t3 = tmp5(tmp92[13]).t;
@@ -297,12 +298,12 @@ export default {
                 } else {
                   string3Result = string3(t3["PeIE/r"]);
                 }
-                const obj5 = { title: string3Result, body: null };
+                const obj12 = { title: string3Result, body: null };
                 const intl4 = tmp5(tmp92[13]).intl;
-                obj5.body = intl4.string(tmp5(tmp92[13]).t.Whhv4w);
-                obj4.show(obj5);
+                obj12.body = intl4.string(tmp5(tmp92[13]).t.Whhv4w);
+                tmp3(tmp92[12]).show(obj12);
+                const obj5 = tmp3(tmp92[12]);
               } else if (403 === closure_128_1.status) {
-                obj2 = tmp3(tmp92[12]);
                 const intl = tmp5(tmp92[13]).intl;
                 const string = intl.string;
                 const t = tmp5(tmp92[13]).t;
@@ -311,7 +312,7 @@ export default {
                 } else {
                   stringResult = string(t["PeIE/r"]);
                 }
-                obj6 = { title: stringResult, body: null };
+                const obj13 = { title: stringResult, body: null };
                 const intl2 = tmp5(tmp92[13]).intl;
                 const string2 = intl2.string;
                 const t2 = tmp5(tmp92[13]).t;
@@ -320,15 +321,16 @@ export default {
                 } else {
                   string2Result = string2(t2["96UEzi"]);
                 }
-                obj6.body = string2Result;
-                obj2.show(obj6);
+                obj13.body = string2Result;
+                tmp3(tmp92[12]).show(obj13);
+                const obj3 = tmp3(tmp92[12]);
               } else {
-                const obj7 = { title: null, body: null };
+                const obj14 = { title: null, body: null };
                 const intl9 = tmp5(tmp92[13]).intl;
-                obj7.title = intl9.string(tmp5(tmp92[13]).t.j2d6Km);
+                obj14.title = intl9.string(tmp5(tmp92[13]).t.j2d6Km);
                 const intl10 = tmp5(tmp92[13]).intl;
-                obj7.body = intl10.string(tmp5(tmp92[13]).t.fEptJP);
-                tmp3(tmp92[12]).show(obj7);
+                obj14.body = intl10.string(tmp5(tmp92[13]).t.fEptJP);
+                tmp3(tmp92[12]).show(obj14);
                 const obj15 = tmp3(tmp92[12]);
               }
               throw closure_128_1;
@@ -339,12 +341,12 @@ export default {
           } else if (arg0 === 2) {
             c3 = 0;
             c5 = 3;
-            obj8 = { value, done: true };
-            return obj8;
+            const obj16 = { value, done: true };
+            return obj16;
           } else {
             c3 = 0;
             c5 = 3;
-            obj = { value, done: true };
+            const obj = { value, done: true };
             return obj;
           }
         } catch (tmp92) {
@@ -369,8 +371,8 @@ export default {
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
-          let obj = { value, done: true };
-          return obj;
+          const obj2 = { value, done: true };
+          return obj2;
         } else {
           return { value: "HermesInternal", done: null };
         }
@@ -383,8 +385,8 @@ export default {
               throw value;
             } else if (arg0 === 2) {
               c0 = 3;
-              obj = { value, done: true };
-              return obj;
+              const obj3 = { value, done: true };
+              return obj3;
             } else {
               channel = channel.getChannel(closure_0);
               let canResult = PermissionStore.can(constants.MANAGE_THREADS, channel);
@@ -406,8 +408,8 @@ export default {
               if (isArchivedThreadResult) {
                 c1 = 1;
                 c0 = 1;
-                const obj1 = { value: self.unarchiveThread(channel, false), done: false };
-                return obj1;
+                const obj4 = { value: self.unarchiveThread(channel, false), done: false };
+                return obj4;
               }
             }
           } else if (arg0 === 1) {
@@ -415,7 +417,7 @@ export default {
             throw value;
           } else if (arg0 === 2) {
             c0 = 3;
-            obj = { value, done: true };
+            const obj = { value, done: true };
             return obj;
           }
           c0 = 3;
@@ -436,17 +438,17 @@ export default {
       rejectWithError: require("HTTPUtils").rejectWithMigratedError(),
     };
     let obj = { invitable };
-    const obj3 = require("HTTPUtils");
+    let obj3 = require("HTTPUtils");
     return HTTP.patch(request).then((body) => {
-      let obj = { type: "THREAD_UPDATE", channel: closure_4(body.body) };
-      obj.dispatch(obj);
+      const obj = DispatcherDefault;
+      obj.dispatch({ type: "THREAD_UPDATE", channel: closure_4(body.body) });
       let isForumPostResult = forumPost.isForumPost();
       if (isForumPostResult) {
         isForumPostResult = null != forumPost.parent_id;
       }
       if (isForumPostResult) {
-        obj = { type: "RESORT_THREADS", channelId: forumPost.parent_id };
-        DispatcherDefault.dispatch(obj);
+        const obj3 = { type: "RESORT_THREADS", channelId: forumPost.parent_id };
+        DispatcherDefault.dispatch(obj3);
         const tmpResult = DispatcherDefault;
       }
       return body;
@@ -463,8 +465,8 @@ export default {
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
-          let obj = { value, done: true };
-          return obj;
+          const obj2 = { value, done: true };
+          return obj2;
         } else {
           return { value: "HermesInternal", done: null };
         }
@@ -477,8 +479,8 @@ export default {
               throw value;
             } else if (arg0 === 2) {
               c5 = 3;
-              obj = { value, done: true };
-              return obj;
+              const obj4 = { value, done: true };
+              return obj4;
             } else {
               const _location = tmp3;
               const forumPost = tmp7;
@@ -489,13 +491,13 @@ export default {
               c3 = 1;
               const HTTP = forumPost(tmp49[10]).HTTP;
               const request = { url: closure_1_12.THREAD_MEMBER(forumPost.id), query: null, rejectWithError: null };
-              const obj1 = { location: _location };
-              request.query = obj1;
+              const obj5 = { location: _location };
+              request.query = obj5;
               request.rejectWithError = forumPost(tmp49[10]).rejectWithMigratedError();
               c4 = 2;
               c5 = 1;
-              let obj2 = { value: HTTP.post(request), done: false };
-              return obj2;
+              const obj6 = { value: HTTP.post(request), done: false };
+              return obj6;
             }
           } else if (1 === tmp7) {
             c3 = 0;
@@ -506,7 +508,6 @@ export default {
             }
             if (code === constants.TOO_MANY_THREAD_MEMBERS) {
               closure_128_0 = closure_129_0.isForumPost();
-              obj2 = _location(tmp49[12]);
               const intl = forumPost(tmp49[13]).intl;
               const string = intl.string;
               const t = forumPost(tmp49[13]).t;
@@ -515,7 +516,7 @@ export default {
               } else {
                 stringResult = string(t.gtdVcs);
               }
-              let obj3 = { title: stringResult, body: null };
+              let obj8 = { title: stringResult, body: null };
               const intl2 = forumPost(tmp49[13]).intl;
               const string2 = intl2.string;
               let QYyad3 = forumPost(tmp49[13]).t;
@@ -525,15 +526,16 @@ export default {
               } else {
                 string2Result = string2(QYyad3.abMwgm);
               }
-              obj3.body = string2Result;
-              obj3 = obj2.show(obj3);
+              obj8.body = string2Result;
+              obj8 = _location(tmp49[12]).show(obj8);
+              const obj3 = _location(tmp49[12]);
             } else {
-              const obj4 = { title: null, body: null };
+              const obj9 = { title: null, body: null };
               const intl3 = forumPost(tmp49[13]).intl;
-              obj4.title = intl3.string(forumPost(tmp49[13]).t.j2d6Km);
+              obj9.title = intl3.string(forumPost(tmp49[13]).t.j2d6Km);
               const intl4 = forumPost(tmp49[13]).intl;
-              obj4.body = intl4.string(forumPost(tmp49[13]).t.fEptJP);
-              _location(tmp49[12]).show(obj4);
+              obj9.body = intl4.string(forumPost(tmp49[13]).t.fEptJP);
+              _location(tmp49[12]).show(obj9);
               if (closure_129_0.isForumPost()) {
                 dispatchThreadMemberLocalUpdate(closure_129_0, false);
               }
@@ -546,12 +548,12 @@ export default {
           } else if (arg0 === 2) {
             c3 = 0;
             c5 = 3;
-            const obj5 = { value, done: true };
-            return obj5;
+            const obj10 = { value, done: true };
+            return obj10;
           } else {
             c3 = 0;
             c5 = 3;
-            obj = { value, done: true };
+            const obj = { value, done: true };
             return obj;
           }
         } catch (tmp49) {
@@ -577,8 +579,8 @@ export default {
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
-          let obj = { value, done: true };
-          return obj;
+          const obj2 = { value, done: true };
+          return obj2;
         } else {
           return { value: "HermesInternal", done: null };
         }
@@ -591,8 +593,8 @@ export default {
               throw value;
             } else if (arg0 === 2) {
               c5 = 3;
-              obj = { value, done: true };
-              return obj;
+              const obj4 = { value, done: true };
+              return obj4;
             } else {
               closure_0 = tmp7;
               closure_128_0 = undefined;
@@ -603,13 +605,13 @@ export default {
                 query: null,
                 rejectWithError: null,
               };
-              const obj1 = { location: _location };
-              request.query = obj1;
+              const obj5 = { location: _location };
+              request.query = obj5;
               request.rejectWithError = closure_0(_location[10]).rejectWithMigratedError();
               c4 = 2;
               c5 = 1;
-              let obj2 = { value: HTTP.post(request), done: false };
-              return obj2;
+              const obj6 = { value: HTTP.post(request), done: false };
+              return obj6;
             }
           } else if (1 === tmp7) {
             c3 = 0;
@@ -619,17 +621,16 @@ export default {
               code = body.code;
             }
             if (code !== constants.TOO_MANY_THREAD_MEMBERS) {
-              const obj3 = { title: null, body: null };
+              const obj7 = { title: null, body: null };
               const intl3 = closure_0(_location[13]).intl;
-              obj3.title = intl3.string(closure_0(_location[13]).t.j2d6Km);
+              obj7.title = intl3.string(closure_0(_location[13]).t.j2d6Km);
               const intl4 = closure_0(_location[13]).intl;
-              obj3.body = intl4.string(closure_0(_location[13]).t.fEptJP);
-              tmp3(_location[12]).show(obj3);
+              obj7.body = intl4.string(closure_0(_location[13]).t.fEptJP);
+              tmp3(_location[12]).show(obj7);
               c5 = 3;
               const obj8 = tmp3(_location[12]);
             }
             closure_128_0 = closure_129_0.isForumPost();
-            obj2 = tmp3(_location[12]);
             const intl = closure_0(_location[13]).intl;
             const string = intl.string;
             const t = closure_0(_location[13]).t;
@@ -638,7 +639,7 @@ export default {
             } else {
               stringResult = string(t.YErysD);
             }
-            let obj4 = { title: stringResult, body: null };
+            let obj9 = { title: stringResult, body: null };
             const intl2 = closure_0(_location[13]).intl;
             const string2 = intl2.string;
             let QYyad3 = closure_0(_location[13]).t;
@@ -648,20 +649,21 @@ export default {
             } else {
               string2Result = string2(QYyad3.abMwgm);
             }
-            obj4.body = string2Result;
-            obj4 = obj2.show(obj4);
+            obj9.body = string2Result;
+            obj9 = tmp3(_location[12]).show(obj9);
+            const obj3 = tmp3(_location[12]);
           } else if (arg0 === 1) {
             c5 = 3;
             throw value;
           } else if (arg0 === 2) {
             c3 = 0;
             c5 = 3;
-            const obj5 = { value, done: true };
-            return obj5;
+            const obj10 = { value, done: true };
+            return obj10;
           } else {
             c3 = 0;
             c5 = 3;
-            obj = { value, done: true };
+            const obj = { value, done: true };
             return obj;
           }
         } catch (tmp33) {
@@ -678,14 +680,14 @@ export default {
   },
   leaveThread(channel, location) {
     if (channel.isForumPost()) {
-      const obj = {
+      const obj2 = {
         type: "THREAD_MEMBER_LOCAL_UPDATE",
         id: channel.id,
         guildId: channel.getGuildId(),
         userId: AuthenticationStore.getId(),
         isJoining: false,
       };
-      obj.dispatch(obj);
+      DispatcherDefault.dispatch(obj2);
     }
     const HTTP = HTTPUtils.HTTP;
     const request = {
@@ -727,20 +729,19 @@ export default {
       flag = false;
     }
     return (async () => {
-      let obj1 = { type: "THREAD_UPDATE", channel: tmp3.merge({ flags }) };
-      flags(573).dispatch(obj1);
-      const obj3 = { flags };
+      flags(573).dispatch({ type: "THREAD_UPDATE", channel: tmp3.merge({ flags }) });
+      const obj7 = { flags };
       if (flag) {
-        obj3.archived = false;
+        obj7.archived = false;
       }
-      const HTTP = tmp3(1272).HTTP;
-      const request = { url: closure_1_12.CHANNEL(tmp3.id), body: obj3, rejectWithError: true };
+      const HTTP = tmp3(1270).HTTP;
+      const request = { url: closure_1_12.CHANNEL(tmp3.id), body: obj7, rejectWithError: true };
       await HTTP.patch(request);
       if (1 === tmp7) {
         dependencyMap = 0;
-        obj1 = flags(573);
-        obj1.dispatch({ type: "THREAD_UPDATE", channel: closure_128_0 });
+        flags(573).dispatch({ type: "THREAD_UPDATE", channel: closure_128_0 });
         c3 = 3;
+        flags(573);
       } else if (arg0 === 1) {
         c3 = 3;
         throw value;
@@ -762,8 +763,8 @@ export default {
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
-          let obj = { value, done: true };
-          return obj;
+          const obj2 = { value, done: true };
+          return obj2;
         } else {
           return { value: "HermesInternal", done: null };
         }
@@ -776,22 +777,22 @@ export default {
               throw value;
             } else if (arg0 === 2) {
               c3 = 3;
-              obj = { value, done: true };
-              return obj;
+              const obj3 = { value, done: true };
+              return obj3;
             } else {
-              const obj1 = { flags: tmp3.flags & ~constants.PINNED };
-              const obj2 = { flags: v6.flags | constants.PINNED };
-              const mergeResult = tmp3.merge(obj1);
-              const mergeResult1 = v6.merge(obj2);
-              let obj3 = { type: "THREAD_UPDATE", channel: mergeResult };
-              v6(573).dispatch(obj3);
+              const obj5 = { flags: tmp3.flags & ~constants.PINNED };
+              const obj7 = { flags: v6.flags | constants.PINNED };
+              const mergeResult = tmp3.merge(obj5);
+              const mergeResult1 = v6.merge(obj7);
+              const obj9 = { type: "THREAD_UPDATE", channel: mergeResult };
+              v6(573).dispatch(obj9);
               const obj24 = v6(573);
-              const obj4 = { type: "THREAD_UPDATE", channel: mergeResult1 };
-              v6(573).dispatch(obj4);
+              const obj10 = { type: "THREAD_UPDATE", channel: mergeResult1 };
+              v6(573).dispatch(obj10);
               v6 = 1;
               c3 = 1;
-              let obj5 = { value: self.unarchiveThreadIfNecessary(tmp3.id), done: false };
-              return obj5;
+              const obj11 = { value: self.unarchiveThreadIfNecessary(tmp3.id), done: false };
+              return obj11;
             }
           } else if (1 === tmp8) {
             if (arg0 === 1) {
@@ -799,13 +800,13 @@ export default {
               throw value;
             } else if (arg0 === 2) {
               c3 = 3;
-              const obj6 = { value, done: true };
-              return obj6;
+              const obj12 = { value, done: true };
+              return obj12;
             } else {
               v6 = 2;
               c3 = 1;
-              let obj7 = { value: closure_128_2.unarchiveThreadIfNecessary(closure_128_1.id), done: false };
-              return obj7;
+              const obj13 = { value: closure_128_2.unarchiveThreadIfNecessary(closure_128_1.id), done: false };
+              return obj13;
             }
           } else if (2 === tmp8) {
             if (arg0 === 1) {
@@ -813,37 +814,36 @@ export default {
               throw value;
             } else if (arg0 === 2) {
               c3 = 3;
-              const obj8 = { value, done: true };
-              return obj8;
+              const obj14 = { value, done: true };
+              return obj14;
             } else {
               dependencyMap = 1;
-              const HTTP2 = tmp3(1272).HTTP;
+              const HTTP2 = tmp3(1270).HTTP;
               const request = { url: closure_1_12.CHANNEL(closure_128_0.id), body: null, rejectWithError: true };
-              const obj9 = { flags: closure_128_0.flags & ~constants.PINNED };
-              request.body = obj9;
+              const obj15 = { flags: closure_128_0.flags & ~constants.PINNED };
+              request.body = obj15;
               v6 = 5;
               c3 = 1;
-              const obj10 = { value: HTTP2.patch(request), done: false };
-              return obj10;
+              const obj16 = { value: HTTP2.patch(request), done: false };
+              return obj16;
             }
           } else if (3 === tmp8) {
             dependencyMap = 0;
-            obj5 = v6(573);
-            const obj11 = { type: "THREAD_UPDATE", channel: closure_128_0 };
-            obj5.dispatch(obj11);
-            obj7 = v6(573);
-            const obj12 = { type: "THREAD_UPDATE", channel: closure_128_1 };
-            obj7.dispatch(obj12);
+            const obj17 = { type: "THREAD_UPDATE", channel: closure_128_0 };
+            v6(573).dispatch(obj17);
+            const obj6 = v6(573);
+            const obj18 = { type: "THREAD_UPDATE", channel: closure_128_1 };
+            v6(573).dispatch(obj18);
             c3 = 3;
-            const obj13 = { value: undefined, done: true };
-            return obj13;
+            const obj19 = { value: undefined, done: true };
+            return obj19;
           } else {
             if (4 === tmp8) {
               dependencyMap = 0;
-              obj3 = v6(573);
-              const obj14 = { type: "THREAD_UPDATE", channel: closure_128_1 };
-              obj3.dispatch(obj14);
+              const obj20 = { type: "THREAD_UPDATE", channel: closure_128_1 };
+              v6(573).dispatch(obj20);
               c3 = 3;
+              const obj4 = v6(573);
             } else if (5 === tmp8) {
               if (arg0 === 1) {
                 c3 = 3;
@@ -851,18 +851,18 @@ export default {
               } else if (arg0 === 2) {
                 dependencyMap = 0;
                 c3 = 3;
-                const obj15 = { value, done: true };
-                return obj15;
+                const obj21 = { value, done: true };
+                return obj21;
               } else {
                 dependencyMap = 2;
-                const HTTP = tmp3(1272).HTTP;
+                const HTTP = tmp3(1270).HTTP;
                 const request1 = { url: closure_1_12.CHANNEL(closure_128_1.id), body: null, rejectWithError: true };
-                const obj16 = { flags: closure_128_1.flags | constants.PINNED };
-                request1.body = obj16;
+                const obj22 = { flags: closure_128_1.flags | constants.PINNED };
+                request1.body = obj22;
                 v6 = 6;
                 c3 = 1;
-                const obj17 = { value: HTTP.patch(request1), done: false };
-                return obj17;
+                const obj23 = { value: HTTP.patch(request1), done: false };
+                return obj23;
               }
             } else if (arg0 === 1) {
               c3 = 3;
@@ -872,7 +872,7 @@ export default {
             }
             dependencyMap = 0;
             c3 = 3;
-            obj = { value, done: true };
+            const obj = { value, done: true };
             return obj;
           }
         } catch (tmp26) {
@@ -889,15 +889,23 @@ export default {
     })();
   },
   openThreadCreationForMobile(channel, id, Message) {
-    let obj = { location: Message, channel_id: channel.id, guild_id: channel.guild_id };
-    obj.trackWithMetadata(constants.THREAD_CREATION_STARTED, obj);
-    obj = { parentMessageId: id, isPrivate: false, location: Message };
-    DraftActionCreatorsDefault.changeThreadSettings(channel.id, obj);
+    AppAnalyticsUtils.trackWithMetadata(constants.THREAD_CREATION_STARTED, {
+      location: Message,
+      channel_id: channel.id,
+      guild_id: channel.guild_id,
+    });
+    const obj2 = { location: Message, channel_id: channel.id, guild_id: channel.guild_id };
+    DraftActionCreatorsDefault.changeThreadSettings(channel.id, {
+      parentMessageId: id,
+      isPrivate: false,
+      location: Message,
+    });
     if (null == id) {
-      const obj1 = { channelId: channel.id, command: null, section: null };
-      ApplicationCommandActionCreators.setActiveCommand(obj1);
+      const obj5 = { channelId: channel.id, command: null, section: null };
+      ApplicationCommandActionCreators.setActiveCommand(obj5);
       const tmpResult = ApplicationCommandActionCreators;
     }
+    const obj4 = { parentMessageId: id, isPrivate: false, location: Message };
   },
   setNotificationSettings(channel, muteSettings) {
     closure_0 = channel;
@@ -911,8 +919,8 @@ export default {
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
-          let obj = { value, done: true };
-          return obj;
+          const obj2 = { value, done: true };
+          return obj2;
         } else {
           return { value: "HermesInternal", done: null };
         }
@@ -925,15 +933,15 @@ export default {
               throw value;
             } else if (arg0 === 2) {
               dependencyMap = 3;
-              obj = { value, done: true };
-              return obj;
+              const obj3 = { value, done: true };
+              return obj3;
             } else {
               const result = tmp4(7883).trackThreadNotificationSettingsUpdated(tmp4, closure_1);
               if (!JoinedThreadsStore.hasJoined(tmp4.id)) {
                 c1 = 1;
                 dependencyMap = 1;
-                const obj1 = { value: self.joinThread(tmp4, "Change Notification Settings"), done: false };
-                return obj1;
+                const obj5 = { value: self.joinThread(tmp4, "Change Notification Settings"), done: false };
+                return obj5;
               }
               const obj8 = tmp4(7883);
             }
@@ -942,18 +950,18 @@ export default {
             throw value;
           } else if (arg0 === 2) {
             dependencyMap = 3;
-            obj = { value, done: true };
+            const obj = { value, done: true };
             return obj;
           }
-          const HTTP = tmp4(1272).HTTP;
+          const HTTP = tmp4(1270).HTTP;
           const request = {
             url: closure_1_12.THREAD_MEMBER_SETTINGS(closure_128_0.id),
             body: closure_128_1,
-            rejectWithError: tmp4(1272).rejectWithMigratedError(),
+            rejectWithError: tmp4(1270).rejectWithMigratedError(),
           };
           dependencyMap = 3;
-          const obj2 = { value: HTTP.patch(request), done: true };
-          return obj2;
+          const obj6 = { value: HTTP.patch(request), done: true };
+          return obj6;
         } catch (tmp15) {
           dependencyMap = tmp;
           throw tmp15;
@@ -968,12 +976,11 @@ export default {
     const tagSetting = sortOrder.tagSetting;
     const offset = sortOrder.offset;
     if (!ArchivedThreadsStore.isLoading(channelId, sortOrder, tagFilter, tagSetting)) {
-      channelId(sortOrder[11]);
-      let obj = { type: "LOAD_ARCHIVED_THREADS", channelId, sortOrder, tagFilter, tagSetting };
-      obj.dispatch(obj);
+      let obj2 = { type: "LOAD_ARCHIVED_THREADS", channelId, sortOrder, tagFilter, tagSetting };
+      channelId(sortOrder[11]).dispatch(obj2);
       const HTTP = require("HTTPUtils").HTTP;
       const request = { url: closure_12.THREAD_SEARCH(channelId), query: null, retries: 2, rejectWithError: true };
-      obj = {
+      let obj3 = {
         archived: true,
         sort_by: "last_message_time",
         sort_order: "desc",
@@ -988,19 +995,19 @@ export default {
         joined = Array.from(tagFilter).join(",");
         const arr = Array.from(tagFilter);
       }
-      obj.tag = joined;
-      obj.tag_setting = tagSetting;
-      obj.offset = offset;
-      request.query = obj;
+      obj3.tag = joined;
+      obj3.tag_setting = tagSetting;
+      obj3.offset = offset;
+      request.query = obj3;
       value = HTTP.get(request);
       value.then(
         (body) => {
           ({ threads, members } = body.body);
           if (null == threads) {
-            let obj = { type: "LOAD_ARCHIVED_THREADS_FAIL", channelId, sortOrder, tagFilter, tagSetting };
-            obj.dispatch(obj);
+            const obj2 = { type: "LOAD_ARCHIVED_THREADS_FAIL", channelId, sortOrder, tagFilter, tagSetting };
+            DispatcherDefault.dispatch(obj2);
           } else {
-            obj = {
+            const obj4 = {
               type: "LOAD_ARCHIVED_THREADS_SUCCESS",
               guildId,
               channelId,
@@ -1018,18 +1025,24 @@ export default {
             if (members == null) {
               members = [];
             }
-            obj.members = members.map((item) => channelId(sortOrder[18])(item));
+            obj4.members = members.map((item) => channelId(sortOrder[18])(item));
             const mapped = threads.map((owner) => owner.owner);
-            obj.owners = mapped.filter(GlobalUtils.isNotNullish);
-            obj.hasMore = tmp;
-            DispatcherDefault.dispatch(obj);
+            obj4.owners = mapped.filter(GlobalUtils.isNotNullish);
+            obj4.hasMore = tmp;
+            DispatcherDefault.dispatch(obj4);
           }
         },
         () => {
-          const obj = { type: "LOAD_ARCHIVED_THREADS_FAIL", channelId, sortOrder, tagFilter, tagSetting };
-          obj.dispatch(obj);
+          DispatcherDefault.dispatch({
+            type: "LOAD_ARCHIVED_THREADS_FAIL",
+            channelId,
+            sortOrder,
+            tagFilter,
+            tagSetting,
+          });
         },
       );
+      let obj = channelId(sortOrder[11]);
     }
   },
   searchThreads(arg0, channelId, arg2, arg3, arg4) {
@@ -1077,32 +1090,30 @@ export default {
     if (isThread.isThread()) {
       if (!ThreadSummaryStore.isInProgress()) {
         let flag = arg1;
-        let obj = DispatcherDefault;
-        obj.dispatch({ type: "SUMMARIZE_THREAD_START" });
+        DispatcherDefault.dispatch({ type: "SUMMARIZE_THREAD_START" });
         const HTTP = require("HTTPUtils").HTTP;
         const request = { url: closure_12.AI_SUMMARIZE_THREAD(isThread.id), body: null, rejectWithError: null };
         if (arg1 == null) {
           flag = true;
         }
-        obj = { ephemeral: flag };
-        request.body = obj;
+        let obj2 = { ephemeral: flag };
+        request.body = obj2;
         request.rejectWithError = require("HTTPUtils").rejectWithMigratedError();
         const tmp5Result = require("HTTPUtils");
         const postResult = HTTP.post(request);
         return HTTP.post(request)
           .then(() => {
-            const obj = { type: "SUMMARIZE_THREAD_SUCCESS", channelId: isThread.id };
-            obj.dispatch(obj);
+            DispatcherDefault.dispatch({ type: "SUMMARIZE_THREAD_SUCCESS", channelId: isThread.id });
           })
           .catch(() => {
-            let obj = { type: "SUMMARIZE_THREAD_FAILURE", channelId: isThread.id };
-            obj.dispatch(obj);
-            obj = { title: null, body: null };
+            DispatcherDefault.dispatch({ type: "SUMMARIZE_THREAD_FAILURE", channelId: isThread.id });
+            const obj2 = { type: "SUMMARIZE_THREAD_FAILURE", channelId: isThread.id };
+            const obj4 = { title: null, body: null };
             const intl = util.intl;
-            obj.title = intl.string(util.t.j2d6Km);
+            obj4.title = intl.string(util.t.j2d6Km);
             const intl2 = util.intl;
-            obj.body = intl2.string(util.t.fEptJP);
-            AlertActionCreatorsDefault.show(obj);
+            obj4.body = intl2.string(util.t.fEptJP);
+            AlertActionCreatorsDefault.show(obj4);
           });
       }
     }

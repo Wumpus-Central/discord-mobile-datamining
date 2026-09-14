@@ -23,12 +23,13 @@ export default function usePressUnderlayColor(arr) {
   if (null != substr) {
     hexWithOpacityResult = token;
     if (arr !== closure_3) {
-      const tmp3Result = shared;
+      const tmp3Result = ColorUtils;
       let num3 = 0.08;
-      if (tmp3Result.isThemeDark(tmp2)) {
+      if (tmp3Result2.isThemeDark(tmp2)) {
         num3 = 0.12;
       }
       hexWithOpacityResult = tmp3Result.hexWithOpacity(substr, num3);
+      tmp3Result2 = shared;
     }
   }
   return hexWithOpacityResult;

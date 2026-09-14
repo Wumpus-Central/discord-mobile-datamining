@@ -4,7 +4,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 import SettingBlocklistStore from "stores/SettingBlocklistStore.tsx";
 
 const require = fn;
-const NodeType = fn(11602).NodeType;
+const NodeType = fn(11603).NodeType;
 let closure_6 = [];
 const map = new Map();
 const map1 = new Map();
@@ -53,7 +53,7 @@ export default noop.memo(function SettingHookHarness() {
         hasItem = field.has(tmp3);
       }
       if (hasItem) {
-        arr = items1.push(tmp3);
+        let arr2 = items1.push(tmp3);
       }
     }
   }

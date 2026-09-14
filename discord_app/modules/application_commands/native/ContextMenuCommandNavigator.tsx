@@ -4,17 +4,17 @@ import useSafeAreaInsetsDefault from "../../safe_area/useSafeAreaInsets.native.t
 import HeaderShared from "../../main_tabs_v2/native/shared_components/HeaderShared.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
+const require = globalThis.__r;
+
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-let NativeStackNavigator = fn(8017);
+const NativeStackNavigator = fn(8017);
 const Screen = NativeStackNavigator.createNativeStackNavigator();
 const createStyles = fn(4636);
-NativeStackNavigator = { container: { flex: 1 }, content: null };
-NativeStackNavigator = { backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
-NativeStackNavigator.content = NativeStackNavigator;
-let closure_8 = createStyles.createStyles(NativeStackNavigator);
+let obj3 = { container: { flex: 1 }, content: { backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND } };
+let closure_8 = createStyles.createStyles(obj3);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/application_commands/native/ContextMenuCommandNavigator.tsx");
 
@@ -22,13 +22,12 @@ export default function ContextMenuCommandNavigator() {
   const tmp = closure_8();
   _require = tmp;
   const layoutEffect = noop.useLayoutEffect(() => closure_0(7578).trackAppUIViewed(), []);
-  let obj = require("Navigator");
-  importDefault = obj.useAccessibilityNativeStackOptions();
+  importDefault = require("Navigator").useAccessibilityNativeStackOptions();
   const rect = useSafeAreaInsetsDefault();
-  obj = { style: null, children: null };
+  let obj2 = { style: null, children: null };
   const items = [tmp.container, { paddingLeft: rect.left, paddingRight: rect.right }];
-  obj.style = items;
-  obj = {
+  obj2.style = items;
+  let obj3 = {
     screenOptions(navigation) {
       navigation = navigation.navigation;
       const obj = {
@@ -53,17 +52,17 @@ export default function ContextMenuCommandNavigator() {
     },
     children: null,
   };
-  const obj1 = { name: "root", options: null, getComponent: null };
-  let obj2 = { title: null };
+  const obj4 = { name: "root", options: null, getComponent: null };
+  const obj5 = { title: null };
   ({ Navigator, Screen } = Screen);
   const intl = require("util").intl;
-  obj2.title = intl.string(require("util").t.PHjkRE);
-  obj1.options = obj2;
-  obj1.getComponent = function getComponent() {
-    return closure_0(16981).default;
+  obj5.title = intl.string(require("util").t.PHjkRE);
+  obj4.options = obj5;
+  obj4.getComponent = function getComponent() {
+    return closure_0(16983).default;
   };
   const items1 = [
-    closure_5(Screen, obj1),
+    closure_5(Screen, obj4),
     closure_5(Screen.Screen, {
       name: "app",
       options(route) {
@@ -75,11 +74,11 @@ export default function ContextMenuCommandNavigator() {
         return { title };
       },
       getComponent() {
-        return closure_0(16983).default;
+        return closure_0(16985).default;
       },
     }),
   ];
-  obj.children = items1;
-  obj.children = closure_6(Navigator, obj);
-  return closure_5(View, obj);
+  obj3.children = items1;
+  obj2.children = closure_6(Navigator, obj3);
+  return closure_5(View, obj2);
 }

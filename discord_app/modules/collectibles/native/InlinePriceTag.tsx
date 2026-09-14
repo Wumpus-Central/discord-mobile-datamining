@@ -31,9 +31,9 @@ function PriceTag(accessibilityLabel) {
   if (variant === undefined) {
     variant = "text-md/medium";
   }
-  let obj = { children: null };
+  const obj = { children: null };
   const items = [icon];
-  obj = {
+  const obj2 = {
     variant,
     style: null,
     color: str,
@@ -41,8 +41,8 @@ function PriceTag(accessibilityLabel) {
     children: priceFormatted,
   };
   const items1 = [closure_12().priceTag, style];
-  obj.style = items1;
-  items[1] = React7(Text_Text.Text, obj);
+  obj2.style = items1;
+  items[1] = React7(Text_Text.Text, obj2);
   obj.children = items;
   return closure_1_11(closure_1_10, obj);
 }
@@ -55,11 +55,14 @@ function OrbsPriceTag(arg0) {
   } else {
     let result = product.type === CollectiblesItemType.CollectiblesItemType.BUNDLE;
     if (result) {
-      let tmp16Result = CollectiblesProductUtils;
-      result = tmp16Result.isOrbsExclusiveProduct(product);
+      result = CollectiblesProductUtils.isOrbsExclusiveProduct(product);
+      const tmp16Result = CollectiblesProductUtils;
     }
-    tmp16Result = CollectiblesUtils;
-    const productDiscount = tmp16Result.getProductDiscount(product, eligibleForShopDiscount, constants2.DISCORD_ORB);
+    const productDiscount = CollectiblesUtils.getProductDiscount(
+      product,
+      eligibleForShopDiscount,
+      constants2.DISCORD_ORB,
+    );
     ({ original, discountPercentage } = productDiscount);
     if (result) {
       result = discountPercentage >= CollectiblesUtils.DISCOUNT_DISPLAY_MINIMUM_THRESHOLD;
@@ -73,27 +76,27 @@ function OrbsPriceTag(arg0) {
     if (disabled) {
       disabled = tmp.disabled;
     }
-    let obj = { style: null, children: null };
+    const obj = { style: null, children: null };
     items[1] = disabled;
     obj.style = items;
     let tmp7 = result;
     if (result) {
-      obj = {
+      const obj2 = {
         priceFormatted: original.toString(),
         variant: "text-md/medium",
         style: tmp.strikedOrbPrice,
         icon: null,
         accessibilityLabel: null,
       };
-      const obj1 = { color: "interactive-text-active", size: "sm", style: tmp.orbsIcon };
-      obj.icon = React7(OrbsIcon.OrbsIcon, obj1);
+      const obj3 = { color: "interactive-text-active", size: "sm", style: tmp.orbsIcon };
+      obj2.icon = React7(OrbsIcon.OrbsIcon, obj3);
       const intl = util.intl;
-      const obj2 = { orbAmount: original.toString() };
-      obj.accessibilityLabel = intl.formatToPlainString(util.t.QfcKZ5, obj2);
-      tmp7 = React7(PriceTag, obj);
+      const obj4 = { orbAmount: original.toString() };
+      obj2.accessibilityLabel = intl.formatToPlainString(util.t.QfcKZ5, obj4);
+      tmp7 = React7(PriceTag, obj2);
     }
     const items1 = [tmp7, ,];
-    const obj3 = {
+    const obj5 = {
       priceFormatted: vcData.price.amount.toString(),
       variant: "text-md/semibold",
       icon: null,
@@ -101,28 +104,28 @@ function OrbsPriceTag(arg0) {
     };
     let tmp10Result;
     if (!result) {
-      const obj4 = { color: "interactive-text-active", size: "sm", style: tmp.orbsIcon };
-      tmp10Result = React7(OrbsIcon.OrbsIcon, obj4);
+      const obj6 = { color: "interactive-text-active", size: "sm", style: tmp.orbsIcon };
+      tmp10Result = React7(OrbsIcon.OrbsIcon, obj6);
     }
-    obj3.icon = tmp10Result;
+    obj5.icon = tmp10Result;
     const intl2 = util.intl;
     const formatToPlainString = intl2.formatToPlainString;
     const t = util.t;
     if (result) {
-      const obj5 = { orbAmount: vcData.price.amount.toString(), discountPercentage };
-      let formatToPlainStringResult = formatToPlainString(t.ckguyq, obj5);
+      const obj7 = { orbAmount: vcData.price.amount.toString(), discountPercentage };
+      let formatToPlainStringResult = formatToPlainString(t.ckguyq, obj7);
     } else {
-      const obj6 = { orbAmount: vcData.price.amount.toString() };
-      formatToPlainStringResult = formatToPlainString(t["a/Y8PK"], obj6);
+      const obj8 = { orbAmount: vcData.price.amount.toString() };
+      formatToPlainStringResult = formatToPlainString(t["a/Y8PK"], obj8);
     }
-    obj3.accessibilityLabel = formatToPlainStringResult;
-    items1[1] = React7(PriceTag, obj3);
-    tmp10Result = null;
+    obj5.accessibilityLabel = formatToPlainStringResult;
+    items1[1] = React7(PriceTag, obj5);
+    let tmp10Result2 = null;
     if (result) {
-      const obj7 = { discountPercentage };
-      tmp10Result = React7(BundleDiscountV2, obj7);
+      const obj9 = { discountPercentage };
+      tmp10Result2 = React7(BundleDiscountV2, obj9);
     }
-    items1[2] = tmp10Result;
+    items1[2] = tmp10Result2;
     obj.children = items1;
     return closure_1_11(React4, obj);
   }
@@ -131,11 +134,11 @@ function BundleDiscountV2(discountPercentage) {
   discountPercentage = discountPercentage.discountPercentage;
   let tmp4 = null;
   if (discountPercentage >= CollectiblesUtils.DISCOUNT_DISPLAY_MINIMUM_THRESHOLD) {
-    let obj = { style: tmp.discount, children: null };
-    obj = { variant: "text-md/normal", color: "text-feedback-positive", children: null };
+    const obj = { style: tmp.discount, children: null };
+    const obj2 = { variant: "text-md/normal", color: "text-feedback-positive", children: null };
     const items = ["-", discountPercentage, "%"];
-    obj.children = items;
-    obj.children = closure_1_11(Text_Text.Text, obj);
+    obj2.children = items;
+    obj.children = closure_1_11(Text_Text.Text, obj2);
     tmp4 = React7(React4, obj);
   }
   return tmp4;
@@ -147,8 +150,8 @@ const Constants = fn(1074);
 ({ AnalyticsSections: closure_7, CurrencyCodes: closure_8 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: c10, jsxs: closure_11 } = jsxProd);
-fn(4636);
-let createStyles = {
+let createStyles = fn(4636);
+let obj2 = {
   priceTag: { flexDirection: "row", alignItems: "center" },
   strikedPrice: { textDecorationLine: "line-through", textDecorationStyle: "solid", opacity: 0.7 },
   strikedOrbPrice: { textDecorationLine: "line-through", textDecorationStyle: "solid", opacity: 0.7, marginRight: 4 },
@@ -159,17 +162,17 @@ let createStyles = {
   priceTagRow: { flexDirection: "row", alignItems: "center" },
   priceTagColumn: { flexDirection: "column", alignItems: "flex-start", flexShrink: 1 },
   underline: { textDecorationLine: "underline" },
-  subscribeNowPressable: null,
-  androidTextPadding: null,
-  orbsIcon: null,
-  disabled: null,
+  subscribeNowPressable: {
+    marginBottom: -2,
+    marginTop: nativeDefault.space.PX_8,
+    flexDirection: "row",
+    alignItems: "center",
+  },
+  androidTextPadding: { paddingBottom: 2 },
+  orbsIcon: { marginRight: 4 },
+  disabled: { opacity: 0.5 },
 };
-createStyles = { marginBottom: -2, marginTop: nativeDefault.space.PX_8, flexDirection: "row", alignItems: "center" };
-createStyles.subscribeNowPressable = createStyles;
-createStyles.androidTextPadding = { paddingBottom: 2 };
-createStyles.orbsIcon = { marginRight: 4 };
-createStyles.disabled = { opacity: 0.5 };
-let closure_12 = createStyles.createStyles(createStyles);
+let closure_12 = createStyles.createStyles(obj2);
 createStyles = fn(4636);
 let closure_15 = createStyles.createStyles(() => {
   const discount = {
@@ -202,22 +205,19 @@ export default function InlinePriceTag(arg0) {
   ({ product, onTrackPress: require } = arg0);
   const tmp = closure_12();
   importDefault = tmp;
-  let obj = useCurrentUser;
-  const currentUser = obj.useCurrentUser();
-  let obj1 = CollectiblesUtils;
-  const shopDiscountSource = obj1.getShopDiscountSource(currentUser);
-  let obj2 = PremiumUtilsDefault;
-  const canUseShopDiscountsResult = obj2.canUseShopDiscounts(currentUser);
+  const currentUser = useCurrentUser.useCurrentUser();
+  const shopDiscountSource = CollectiblesUtils.getShopDiscountSource(currentUser);
+  const canUseShopDiscountsResult = PremiumUtilsDefault.canUseShopDiscounts(currentUser);
   dependencyMap = useOpenNitroSubscribeActionSheetDefault(constants.SHOP_PRODUCT_DETAILS);
-  let obj3 = useProductDisableState;
-  const isDisabled = obj3.useProductDisableState(product.skuId).isDisabled;
-  let obj4 = collectibles_CollectiblesUtils;
-  const formattedPriceForCollectiblesProduct = obj4.getFormattedPriceForCollectiblesProduct(product, false, true);
-  let obj5 = useVirtualCurrencyData;
-  const virtualCurrencyData = obj5.useVirtualCurrencyData(product, canUseShopDiscountsResult);
-  let obj6 = initialize;
+  const isDisabled = useProductDisableState.useProductDisableState(product.skuId).isDisabled;
+  const formattedPriceForCollectiblesProduct = collectibles_CollectiblesUtils.getFormattedPriceForCollectiblesProduct(
+    product,
+    false,
+    true,
+  );
+  const virtualCurrencyData = useVirtualCurrencyData.useVirtualCurrencyData(product, canUseShopDiscountsResult);
   const items = [IAPStore];
-  if (obj6.useStateFromStores(items, () => fetchingGoogleSkus.isFetchingGoogleSkus())) {
+  if (obj7.useStateFromStores(items, () => fetchingGoogleSkus.isFetchingGoogleSkus())) {
     if (null == formattedPriceForCollectiblesProduct) {
       return closure_9(CollectiblesShopPricePlaceholder.CollectiblesShopPricePlaceholder, {});
     }
@@ -225,27 +225,23 @@ export default function InlinePriceTag(arg0) {
   if (null == formattedPriceForCollectiblesProduct) {
     let tmp21 = null;
     if (null != virtualCurrencyData.price) {
-      obj = {
+      const obj8 = {
         vcData: virtualCurrencyData,
         isProductDisabled: isDisabled,
         product,
         eligibleForShopDiscount: canUseShopDiscountsResult,
       };
-      tmp21 = closure_9(OrbsPriceTag, obj);
+      tmp21 = closure_9(OrbsPriceTag, obj8);
     }
     return tmp21;
   } else {
-    let tmp2Result = collectibles_CollectiblesUtils;
-    const formattedPriceForCollectiblesProduct1 = tmp2Result.getFormattedPriceForCollectiblesProduct(
-      product,
-      true,
-      true,
-    );
-    tmp2Result = CollectiblesUtils;
-    obj = { style: tmp.container, children: null };
-    obj1 = { style: tmp.priceTagColumn, children: null };
-    obj2 = { style: tmp.priceTagRow, children: null };
-    obj3 = {
+    const formattedPriceForCollectiblesProduct1 =
+      collectibles_CollectiblesUtils.getFormattedPriceForCollectiblesProduct(product, true, true);
+    const tmp2Result = collectibles_CollectiblesUtils;
+    const obj9 = { style: tmp.container, children: null };
+    const obj10 = { style: tmp.priceTagColumn, children: null };
+    const obj11 = { style: tmp.priceTagRow, children: null };
+    const obj12 = {
       priceFormatted: formattedPriceForCollectiblesProduct,
       variant: "heading-md/semibold",
       style: canUseShopDiscountsResult ? tmp.strikedPrice : tmp.regularPrice,
@@ -253,28 +249,28 @@ export default function InlinePriceTag(arg0) {
       accessibilityLabel: null,
     };
     const intl = util.intl;
-    obj4 = { price: formattedPriceForCollectiblesProduct };
-    obj3.accessibilityLabel = intl.formatToPlainString(util.t.sPvyr8, obj4);
-    const items1 = [closure_9(PriceTag, obj3), ,];
+    const obj13 = { price: formattedPriceForCollectiblesProduct };
+    obj12.accessibilityLabel = intl.formatToPlainString(util.t.sPvyr8, obj13);
+    const items1 = [closure_9(PriceTag, obj12), ,];
     let tmp28Result = null;
     if (product.type === CollectiblesItemType.CollectiblesItemType.BUNDLE) {
       tmp28Result = null;
       if (!canUseShopDiscountsResult) {
-        obj5 = {
-          discountPercentage: tmp2Result.getProductDiscount(product, canUseShopDiscountsResult).discountPercentage,
+        const obj14 = {
+          discountPercentage: tmp2Result4.getProductDiscount(product, canUseShopDiscountsResult).discountPercentage,
         };
-        tmp28Result = closure_9(BundleDiscountV2, obj5);
+        tmp28Result = closure_9(BundleDiscountV2, obj14);
       }
     }
     items1[1] = tmp28Result;
     if (!(null != formattedPriceForCollectiblesProduct1 && canUseShopDiscountsResult)) {
       items1[2] = tmp12;
-      obj2.children = items1;
-      const items2 = [closure_11(closure_4, obj2)];
-      tmp28Result = null != formattedPriceForCollectiblesProduct1 && !canUseShopDiscountsResult;
-      if (tmp28Result) {
-        obj6 = { style: tmp.priceTagRow, children: null };
-        const obj7 = {
+      obj11.children = items1;
+      const items2 = [closure_11(closure_4, obj11)];
+      let tmp28Result5 = null != formattedPriceForCollectiblesProduct1 && !canUseShopDiscountsResult;
+      if (tmp28Result5) {
+        const obj15 = { style: tmp.priceTagRow, children: null };
+        const obj16 = {
           onPress() {
             if (require != null) {
               tmp(ShopCtaEnum.SUBSCRIBE_NOW);
@@ -285,53 +281,53 @@ export default function InlinePriceTag(arg0) {
           accessibilityRole: "button",
           children: null,
         };
-        const obj8 = { color: "interactive-text-default", style: null };
+        const obj17 = { color: "interactive-text-default", style: null };
         const items3 = [,];
         ({ nitroIcon: arr4[0], nitroIconSubscribeNow: arr4[1] } = tmp);
-        obj8.style = items3;
-        const items4 = [closure_9(NitroWheelIcon.NitroWheelIcon, obj8)];
+        obj17.style = items3;
+        const items4 = [closure_9(NitroWheelIcon.NitroWheelIcon, obj17)];
         let androidTextPadding;
-        if (tmp2Result1.isAndroid()) {
+        if (tmp2Result5.isAndroid()) {
           androidTextPadding = tmp.androidTextPadding;
         }
-        const obj9 = {
+        const obj18 = {
           variant: "text-md/normal",
           color: "interactive-text-default",
           style: androidTextPadding,
           children: null,
         };
         const intl3 = util.intl;
-        const obj10 = {
+        const obj19 = {
           price: formattedPriceForCollectiblesProduct1,
           subscribeNowHook(children, arg1) {
             return React7(Text_Text.Text, { variant: "text-md/normal", style: underline.underline, children }, arg1);
           },
         };
-        obj9.children = intl3.format(util.t.Kxw2LT, obj10);
-        items4[1] = closure_9(Text_Text.Text, obj9);
-        obj7.children = items4;
-        obj6.children = closure_11(closure_3, obj7);
-        tmp28Result = closure_9(closure_4, obj6);
-        tmp2Result1 = PlatformUtils;
+        obj18.children = intl3.format(util.t.Kxw2LT, obj19);
+        items4[1] = closure_9(Text_Text.Text, obj18);
+        obj16.children = items4;
+        obj15.children = closure_11(closure_3, obj16);
+        tmp28Result5 = closure_9(closure_4, obj15);
+        tmp2Result5 = PlatformUtils;
       }
-      items2[1] = tmp28Result;
-      obj1.children = items2;
-      const items5 = [closure_11(closure_4, obj1)];
-      let tmp28Result1 = null != virtualCurrencyData.price;
-      if (tmp28Result1) {
-        const obj11 = {
+      items2[1] = tmp28Result5;
+      obj10.children = items2;
+      const items5 = [closure_11(closure_4, obj10)];
+      let tmp28Result6 = null != virtualCurrencyData.price;
+      if (tmp28Result6) {
+        const obj20 = {
           vcData: virtualCurrencyData,
           isProductDisabled: isDisabled,
           product,
           eligibleForShopDiscount: canUseShopDiscountsResult,
         };
-        tmp28Result1 = closure_9(OrbsPriceTag, obj11);
+        tmp28Result6 = closure_9(OrbsPriceTag, obj20);
       }
-      items5[1] = tmp28Result1;
-      obj.children = items5;
-      return closure_11(closure_4, obj);
+      items5[1] = tmp28Result6;
+      obj9.children = items5;
+      return closure_11(closure_4, obj9);
     } else {
-      const obj12 = {
+      const obj21 = {
         priceFormatted: formattedPriceForCollectiblesProduct1,
         variant: "text-md/medium",
         color: "interactive-text-active",
@@ -340,23 +336,25 @@ export default function InlinePriceTag(arg0) {
         icon: null,
       };
       const intl2 = util.intl;
-      const obj13 = { price: formattedPriceForCollectiblesProduct1 };
-      obj12.accessibilityLabel = intl2.formatToPlainString(util.t.kWkpdG, obj13);
+      const obj22 = { price: formattedPriceForCollectiblesProduct1 };
+      obj21.accessibilityLabel = intl2.formatToPlainString(util.t.kWkpdG, obj22);
       let androidTextPadding1;
-      if (tmp2Result2.isAndroid()) {
+      if (tmp2Result6.isAndroid()) {
         androidTextPadding1 = tmp.androidTextPadding;
       }
-      obj12.style = androidTextPadding1;
+      obj21.style = androidTextPadding1;
       if (shopDiscountSource === CollectiblesUtils.ShopDiscountSource.THIRDPARTY) {
-        const obj14 = { color: "interactive-text-active", style: tmp.nitroIcon };
-        let tmp28Result2 = closure_9(TagIcon.TagIcon, obj14);
+        const obj23 = { color: "interactive-text-active", style: tmp.nitroIcon };
+        let tmp28Result7 = closure_9(TagIcon.TagIcon, obj23);
       } else {
-        const obj15 = { color: "interactive-text-active", style: tmp.nitroIcon };
-        tmp28Result2 = closure_9(NitroWheelIcon.NitroWheelIcon, obj15);
+        const obj24 = { color: "interactive-text-active", style: tmp.nitroIcon };
+        tmp28Result7 = closure_9(NitroWheelIcon.NitroWheelIcon, obj24);
       }
-      obj12.icon = tmp28Result2;
-      closure_9(PriceTag, obj12);
-      tmp2Result2 = PlatformUtils;
+      obj21.icon = tmp28Result7;
+      closure_9(PriceTag, obj21);
+      tmp2Result6 = PlatformUtils;
     }
+    tmp2Result4 = CollectiblesUtils;
   }
+  obj7 = initialize;
 }

@@ -6,12 +6,12 @@ get_ActivityIndicator = fn(17);
 let View = get_ActivityIndicator.View;
 const StyleSheet = get_ActivityIndicator.StyleSheet;
 const jsx = fn(21).jsx;
-let PlatformUtils = fn(1150);
+let PlatformUtils = fn(1363);
 let FullWindowOverlay = View;
 if (PlatformUtils.isIOS()) {
   FullWindowOverlay = fn(4988).FullWindowOverlay;
 }
-PlatformUtils = fn(1150);
+PlatformUtils = fn(1363);
 if (PlatformUtils.isIOS()) {
   View = _modDef5037;
 }
@@ -26,12 +26,12 @@ export const TransitionGroupOverlayView = function TransitionGroupOverlayView(ch
   if (Array.isArray(children)) {
     tmp2 = null;
     if (children.length > 0) {
-      let obj = { style: StyleSheet.absoluteFill, children: null };
-      obj = {};
+      const obj = { style: StyleSheet.absoluteFill, children: null };
+      const obj2 = {};
       const merged1 = Object.assign(merged);
-      obj.children = children;
+      obj2.children = children;
       obj.children = <View />;
-      tmp2 = <FullWindowOverlay />;
+      tmp2 = <FullWindowOverlay style={StyleSheet.absoluteFill}>{null}</FullWindowOverlay>;
     }
   }
   return tmp2;

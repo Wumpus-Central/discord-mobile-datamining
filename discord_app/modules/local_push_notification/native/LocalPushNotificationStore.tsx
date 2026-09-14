@@ -8,7 +8,7 @@ import GuildStore from "../../../stores/GuildStore.tsx";
 import GuildVerificationStore from "../../../stores/GuildVerificationStore.tsx";
 
 require = fn;
-const Constants = fn(13805);
+const Constants = fn(13806);
 ({ LocalNotificationTypes: hasOwnProperty, FIRE_DATE_FORMAT: metroRequire } = Constants);
 const VerificationLevels = fn(1074).VerificationLevels;
 const set = new Set();
@@ -65,15 +65,18 @@ const localPushNotificationStore = new LocalPushNotificationStore(DispatcherDefa
           }
           if (null != obj) {
             if (!obj.isSameOrBefore(_modDef4228(), "minute")) {
-              obj = { type: constants.GUILD_VERIFICATION, guildId: guild.id };
-              set.add(obj);
-              obj = { userInfo: null, fireDate: null, alertTitle: null, alertBody: null, category: "local" };
-              obj.userInfo = obj;
-              obj.fireDate = obj.format(timestampProducer);
-              obj.alertTitle = guild.name;
+              const obj2 = { type: constants.GUILD_VERIFICATION, guildId: guild.id };
+              set.add(obj2);
+              const obj3 = {
+                userInfo: obj2,
+                fireDate: obj.format(timestampProducer),
+                alertTitle: guild.name,
+                alertBody: null,
+                category: "local",
+              };
               const intl = util.intl;
-              obj.alertBody = intl.string(util.t["hrDBa+"]);
-              const result = PushNotificationDefault.scheduleLocalNotification(obj);
+              obj3.alertBody = intl.string(util.t["hrDBa+"]);
+              const result = PushNotificationDefault.scheduleLocalNotification(obj3);
               const tmp15Result = PushNotificationDefault;
             }
           }

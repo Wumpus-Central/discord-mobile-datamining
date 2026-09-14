@@ -101,9 +101,9 @@ function openContextMenu(stopPropagation, render, enableSpellCheck, renderLazy) 
     if (APP == null) {
       APP = AppContext.APP;
     }
-    contextMenu = { context: APP };
+    const obj2 = { context: APP };
     const merged = Object.assign(enableSpellCheck);
-    contextMenu.config = contextMenu;
+    contextMenu.config = obj2;
     let nativeEvent = stopPropagation;
     if ("nativeEvent" in stopPropagation) {
       nativeEvent = stopPropagation.nativeEvent;
@@ -113,23 +113,22 @@ function openContextMenu(stopPropagation, render, enableSpellCheck, renderLazy) 
       enableSpellCheck = enableSpellCheck.enableSpellCheck;
     }
     if (enableSpellCheck) {
-      let tmp16Result = tmp16(1150);
       if (tmp16Result.isDesktop()) {
         if (nativeEvent.isTrusted) {
-          tmp16Result = tmp16(5638);
-          importDefault = tmp16Result.addResultListener(() => {
+          importDefault = tmp16(5638).addResultListener(() => {
             closure_1();
-            let contextMenu = DispatcherDefault;
-            contextMenu = { type: "CONTEXT_MENU_OPEN", contextMenu };
-            contextMenu.dispatch(contextMenu);
+            contextMenu = DispatcherDefault;
+            contextMenu.dispatch({ type: "CONTEXT_MENU_OPEN", contextMenu });
           });
+          const tmp16Result2 = tmp16(5638);
         }
       }
+      tmp16Result = tmp16(1363);
     }
     stopPropagation.preventDefault();
     const obj3 = contextMenu(5635);
-    const obj1 = { type: "CONTEXT_MENU_OPEN", contextMenu };
-    DispatcherDefault.dispatch(obj1);
+    const obj4 = { type: "CONTEXT_MENU_OPEN", contextMenu };
+    DispatcherDefault.dispatch(obj4);
   } else {
     const currentTarget = stopPropagation.currentTarget;
   }

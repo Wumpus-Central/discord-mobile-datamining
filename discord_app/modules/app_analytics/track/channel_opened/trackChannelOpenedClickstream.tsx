@@ -24,7 +24,7 @@ export default function trackChannelOpenedClickstream(channelId) {
                   if (StaticChannelRoute.MEMBER_SAFETY !== channelId) {
                     if (StaticChannelRoute.GUILD_ONBOARDING !== channelId) {
                       if (StaticChannelRoute.GUILD_BOOSTS !== channelId) {
-                        const obj = { channel_id: channelId, channel_type: null };
+                        const obj2 = { channel_id: channelId, channel_type: null };
                         const channel = ChannelStore.getChannel(channelId);
                         let type;
                         if (channel != null) {
@@ -33,8 +33,8 @@ export default function trackChannelOpenedClickstream(channelId) {
                         if (type == null) {
                           type = constants.UNKNOWN;
                         }
-                        obj.channel_type = type;
-                        obj.trackClickstream(constants2.CHANNEL_OPENED_CLICKSTREAM, obj);
+                        obj2.channel_type = type;
+                        Clickstream.trackClickstream(constants2.CHANNEL_OPENED_CLICKSTREAM, obj2);
                       }
                     }
                   }

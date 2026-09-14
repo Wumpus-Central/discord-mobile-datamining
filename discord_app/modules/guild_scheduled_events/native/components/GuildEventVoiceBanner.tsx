@@ -12,8 +12,20 @@ let closure_6 = fn(7629).isGuildScheduledEventActive;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 const createStyles = fn(4636);
-let obj = { header: null, descriptionContainerStyle: null, buttonContainer: null };
-obj = {
+let obj = {
+  header: {
+    margin: 12,
+    padding: 12,
+    borderRadius: nativeDefault.radii.sm,
+    borderColor: nativeDefault.colors.BORDER_SUBTLE,
+    borderWidth: 1,
+    backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
+  },
+  descriptionContainerStyle: { paddingTop: 4 },
+  buttonContainer: { marginTop: 12 },
+};
+let closure_9 = createStyles.createStyles(obj);
+let obj3 = {
   margin: 12,
   padding: 12,
   borderRadius: nativeDefault.radii.sm,
@@ -21,10 +33,6 @@ obj = {
   borderWidth: 1,
   backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
 };
-obj.header = obj;
-obj.descriptionContainerStyle = { paddingTop: 4 };
-obj.buttonContainer = { marginTop: 12 };
-let closure_9 = createStyles.createStyles(obj);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_scheduled_events/native/components/GuildEventVoiceBanner.tsx");
 
@@ -33,14 +41,13 @@ export default noop.memo((channel) => {
   let event;
   let nextRecurrenceIdInEvent;
   let tmp = closure_9();
+  const activeEvent = channel(event[7]).useActiveEvent(channel.id);
   let obj = channel(event[7]);
-  const activeEvent = obj.useActiveEvent(channel.id);
-  let obj1 = channel(event[7]);
-  const imminentUpcomingGuildEvents = obj1.useImminentUpcomingGuildEvents(channel.id);
-  let obj2 = channel(event[8]);
+  const imminentUpcomingGuildEvents = channel(event[7]).useImminentUpcomingGuildEvents(channel.id);
+  let obj2 = channel(event[7]);
   const items = [SelectedChannelStore];
   let tmp7 = activeEvent;
-  const stateFromStores = obj2.useStateFromStores(items, () => voiceChannelId.getVoiceChannelId());
+  const stateFromStores = channel(event[8]).useStateFromStores(items, () => voiceChannelId.getVoiceChannelId());
   if (activeEvent == null) {
     event = undefined;
     if (imminentUpcomingGuildEvents != null) {
@@ -49,9 +56,10 @@ export default noop.memo((channel) => {
     tmp7 = event;
   }
   event = tmp7;
-  tmp2(tmp3[9]);
-  const tmp2Result = tmp2(tmp3[10]);
-  nextRecurrenceIdInEvent = tmp2Result.getNextRecurrenceIdInEvent(tmp7);
+  let obj3 = channel(event[8]);
+  const tmp2Result = channel(event[9]);
+  const canManageGuildEventResult = channel(event[9]).useManageResourcePermissions(channel).canManageGuildEvent(tmp7);
+  nextRecurrenceIdInEvent = channel(event[10]).getNextRecurrenceIdInEvent(tmp7);
   const items1 = [tmp7, channel, activeEvent, nextRecurrenceIdInEvent];
   [][0] = tmp7;
   const callback = nextRecurrenceIdInEvent.useCallback(() => {
@@ -74,11 +82,11 @@ export default noop.memo((channel) => {
     return null;
   } else {
     let tmp18Result = stateFromStores === channel.id;
-    obj = { accessibilityRole: "button", onPress: tmp12, style: tmp.header, children: null };
-    obj = { event: tmp7, showUserCount: false };
-    const items2 = [closure_7(tmp2(tmp3[16]).GuildEventCardHeader, obj), ,];
-    obj1 = { event: tmp7, descriptionContainerStyle: tmp.descriptionContainerStyle, condensed: tmp18Result };
-    items2[1] = closure_7(tmp2(tmp3[16]).GuildEventCardMetaInfo, obj1);
+    const obj4 = { accessibilityRole: "button", onPress: tmp12, style: tmp.header, children: null };
+    const obj5 = { event: tmp7, showUserCount: false };
+    const items2 = [closure_7(tmp2(tmp3[16]).GuildEventCardHeader, obj5), ,];
+    const obj6 = { event: tmp7, descriptionContainerStyle: tmp.descriptionContainerStyle, condensed: tmp18Result };
+    items2[1] = closure_7(tmp2(tmp3[16]).GuildEventCardMetaInfo, obj6);
     if (tmp18Result) {
       tmp18Result = canManageGuildEventResult;
     }
@@ -86,17 +94,17 @@ export default noop.memo((channel) => {
       tmp18Result = !tmp16;
     }
     if (tmp18Result) {
-      obj2 = { style: tmp.buttonContainer, children: null };
-      const obj3 = { text: null, onPress: null, variant: "active", size: "sm", grow: true };
+      const obj7 = { style: tmp.buttonContainer, children: null };
+      const obj8 = { text: null, onPress: null, variant: "active", size: "sm", grow: true };
       const intl = tmp2(tmp3[18]).intl;
-      obj3.text = intl.string(tmp2(tmp3[18]).t.cK1GGY);
-      obj3.onPress = callback;
-      obj2.children = closure_7(tmp2(tmp3[17]).Button, obj3);
-      tmp18Result = closure_7(View, obj2);
+      obj8.text = intl.string(tmp2(tmp3[18]).t.cK1GGY);
+      obj8.onPress = callback;
+      obj7.children = closure_7(tmp2(tmp3[17]).Button, obj8);
+      tmp18Result = closure_7(View, obj7);
     }
     items2[2] = tmp18Result;
-    obj.children = items2;
-    return closure_8(tmp2(tmp3[15]).PressableOpacity, obj);
+    obj4.children = items2;
+    return closure_8(tmp2(tmp3[15]).PressableOpacity, obj4);
   }
-  canManageGuildEventResult = tmp2Result.useManageResourcePermissions(channel).canManageGuildEvent(tmp7);
+  const tmp2Result2 = channel(event[10]);
 });

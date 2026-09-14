@@ -12,7 +12,6 @@ export const useLogPowerupModalOpened = function useLogPowerupModalOpened(guildI
   noop = DEACTIVATE;
   const items = [DEACTIVATE, guildId, powerup.skuId];
   const effect = noop.useEffect(() => {
-    const obj = { type, sku_id: powerup.skuId, guild_id };
-    obj.track(AnalyticEvents.OPEN_MODAL, obj);
+    AnalyticsUtilsDefault.track(AnalyticEvents.OPEN_MODAL, { type, sku_id: powerup.skuId, guild_id });
   }, items);
 };

@@ -1,7 +1,7 @@
 // discord_app/modules/rpc/server/RPCServerManager.tsx
 import DispatcherDefault from "../../../Dispatcher.tsx";
-import PlatformUtils from "../../../utils/PlatformUtils.tsx";
 import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
+import PlatformUtils from "../../../utils/PlatformUtils.tsx";
 import GlobalUtils from "../../../utils/GlobalUtils.tsx";
 import QuestTaskUtils from "../../quests/utils/QuestTaskUtils.tsx";
 import RPCHelpers from "../RPCHelpers.tsx";
@@ -73,9 +73,9 @@ class RPCServerManager {
         }
         if (null != channelId) {
           const rpcServer = obj.rpcServer;
-          obj = { channel_id: channelId };
-          obj = { channel_id: channelId, message: RPCHelpers.transformInternalTextMessage(message) };
-          const result1 = rpcServer.dispatchToSubscriptions(MESSAGE_UPDATE, obj, obj, combined);
+          const obj3 = { channel_id: channelId };
+          const obj4 = { channel_id: channelId, message: RPCHelpers.transformInternalTextMessage(message) };
+          const result1 = rpcServer.dispatchToSubscriptions(MESSAGE_UPDATE, obj3, obj4, combined);
         }
       }
     };
@@ -94,9 +94,9 @@ class RPCServerManager {
               const voiceState = VoiceStateStore.getVoiceState(channel.getGuildId(), speakingFlags.userId);
               if (null != voiceState) {
                 const rpcServer = tmp2.rpcServer;
-                obj = { channel_id: voiceState.channelId };
-                obj = { channel_id: voiceState.channelId, user_id: speakingFlags.userId };
-                const result = rpcServer.dispatchToSubscriptions(SPEAKING_STOP, obj, obj);
+                const obj2 = { channel_id: voiceState.channelId };
+                const obj3 = { channel_id: voiceState.channelId, user_id: speakingFlags.userId };
+                const result = rpcServer.dispatchToSubscriptions(SPEAKING_STOP, obj2, obj3);
                 if (null != voiceState.channelId) {
                   obj = VibegrationsVoiceSessionCoordinatorDefault;
                   let activeSessionIdsForChannel = obj.getActiveSessionIdsForChannel(voiceState.channelId);
@@ -121,8 +121,8 @@ class RPCServerManager {
       obj.releaseUnlessChannel(channelId);
       if (0 !== obj.rpcServer.subscriptions.length) {
         const rpcServer = obj.rpcServer;
-        obj = { channel_id: channelId, guild_id: channelId.guildId };
-        const result = rpcServer.dispatchToSubscriptions(constants3.VOICE_CHANNEL_SELECT, {}, obj);
+        const obj2 = { channel_id: channelId, guild_id: channelId.guildId };
+        const result = rpcServer.dispatchToSubscriptions(constants3.VOICE_CHANNEL_SELECT, {}, obj2);
       }
     };
     obj.handleNotificationCreate = function handleNotificationCreate(icon) {
@@ -186,18 +186,18 @@ class RPCServerManager {
           (socket) => socket.socket.application.id === obj,
           obj,
         );
-        obj = { layout_mode: layoutMode };
+        const obj2 = { layout_mode: layoutMode };
         const rpcServer2 = tmp.rpcServer;
         const result1 = rpcServer2.dispatchToSubscriptions(
           constants3.ACTIVITY_LAYOUT_MODE_UPDATE,
           (socket) => socket.socket.application.id === obj,
-          obj,
+          obj2,
         );
         const rpcServer3 = tmp.rpcServer;
         const result2 = rpcServer3.dispatchToSubscriptions(
           constants3.FRAME_LAYOUT_MODE_UPDATE,
           (socket) => socket.socket.application.id === obj,
-          obj,
+          obj2,
         );
       }
     };
@@ -227,12 +227,12 @@ class RPCServerManager {
         const rpcServer = dispatchToSubscriptions.rpcServer;
         obj = { is_pip_mode: FOCUSED !== tmp2.FOCUSED };
         const result = rpcServer.dispatchToSubscriptions(constants3.ACTIVITY_PIP_MODE_UPDATE, targetsFrame, obj);
-        obj = { layout_mode: FOCUSED };
+        const obj2 = { layout_mode: FOCUSED };
         const rpcServer2 = dispatchToSubscriptions.rpcServer;
-        const result1 = rpcServer2.dispatchToSubscriptions(constants3.ACTIVITY_LAYOUT_MODE_UPDATE, targetsFrame, obj);
+        const result1 = rpcServer2.dispatchToSubscriptions(constants3.ACTIVITY_LAYOUT_MODE_UPDATE, targetsFrame, obj2);
         const rpcServer3 = dispatchToSubscriptions.rpcServer;
         dispatchToSubscriptions = rpcServer3.dispatchToSubscriptions;
-        const result2 = dispatchToSubscriptions(constants3.FRAME_LAYOUT_MODE_UPDATE, targetsFrame, obj);
+        const result2 = dispatchToSubscriptions(constants3.FRAME_LAYOUT_MODE_UPDATE, targetsFrame, obj2);
       }
     };
     obj.handleThermalStateChange = function handleThermalStateChange(applicationId) {
@@ -311,7 +311,7 @@ class RPCServerManager {
                             );
                           } else if (constants.JOIN_REQUEST === type) {
                             const rpcServer2 = tmp.rpcServer;
-                            obj = {
+                            const obj3 = {
                               user: transformUserDefault(user),
                               activity: applicationActivity,
                               type: activity.type,
@@ -321,7 +321,7 @@ class RPCServerManager {
                             const result1 = rpcServer2.dispatchToSubscriptions(
                               constants3.ACTIVITY_JOIN_REQUEST,
                               (socket) => socket.socket.application.id === application_id,
-                              obj,
+                              obj3,
                             );
                           }
                         }
@@ -534,7 +534,7 @@ class RPCServerManager {
           activityApplicationId = obj.getActivityApplicationId(quest);
           if (null != activityApplicationId) {
             const rpcServer = tmp.rpcServer;
-            obj = {
+            const obj2 = {
               quest_id: questId,
               is_enrolled: null != enrolledQuestUserStatus.enrolledAt,
               enrolled_at: enrolledQuestUserStatus.enrolledAt,
@@ -553,7 +553,7 @@ class RPCServerManager {
                 }
                 return tmp;
               },
-              obj,
+              obj2,
             );
           }
         }
@@ -601,21 +601,32 @@ prototype["init"] = function init() {
   const self = this;
   this.rpcServer.getCurrentUser = () => currentUser.getCurrentUser();
   this.rpcServer.onConnect = (app_id) => {
-    let obj = {
+    DispatcherDefault.dispatch({
+      type: "RPC_APP_CONNECTED",
+      socketId: app_id.id,
+      application: app_id.application,
+      source: app_id.source,
+    });
+    const obj2 = {
       type: "RPC_APP_CONNECTED",
       socketId: app_id.id,
       application: app_id.application,
       source: app_id.source,
     };
-    obj.dispatch(obj);
-    obj = { app_id: app_id.application.id, transport: app_id.transport };
-    AnalyticsUtilsDefault.track(constants.AUTHORIZED_APP_CONNECTED, obj);
+    AnalyticsUtilsDefault.track(constants.AUTHORIZED_APP_CONNECTED, {
+      app_id: app_id.application.id,
+      transport: app_id.transport,
+    });
   };
   this.rpcServer.onDisconnect = (id, reason) => {
-    let obj = VibegrationsVoiceSessionCoordinatorDefault;
-    obj.releaseSocket(id.id);
-    obj = { type: "RPC_APP_DISCONNECTED", socketId: id.id, application: id.application, source: id.source, reason };
-    DispatcherDefault.dispatch(obj);
+    VibegrationsVoiceSessionCoordinatorDefault.releaseSocket(id.id);
+    DispatcherDefault.dispatch({
+      type: "RPC_APP_DISCONNECTED",
+      socketId: id.id,
+      application: id.application,
+      source: id.source,
+      reason,
+    });
   };
   const items = [ChannelStore, GuildMemberStore, PresenceStore, VoiceStateStore, MediaEngineStore, RTCConnectionStore];
   const batchedStoreListener = new self(504).BatchedStoreListener(items.concat(this.stores), () => {

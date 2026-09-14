@@ -8,11 +8,7 @@ let closure_6 = async function _upsertSavedMessage() {
   closure_2 = tmp2;
   closure_1 = tmp5;
   const HTTP = HTTPUtils.HTTP;
-  const request = {
-    url: Endpoints.PUT_SAVED_MESSAGE(_require.channelId, _require.messageId),
-    body: { due_at: null, source: null },
-    rejectWithError: HTTPUtils.rejectWithMigratedError(),
-  };
+  const request = { url: Endpoints.PUT_SAVED_MESSAGE(_require.channelId, _require.messageId), body: { due_at: null, source: null }, rejectWithError: HTTPUtils.rejectWithMigratedError() };
   ({ dueAt: obj8.due_at, source: obj8.source } = _require);
   await HTTP.put(request);
   closure_129_0 = value;
@@ -20,10 +16,7 @@ let closure_6 = async function _upsertSavedMessage() {
 };
 let closure_7 = async function _deleteSavedMessage() {
   const HTTP = HTTPUtils.HTTP;
-  await HTTP.del({
-    url: Endpoints.DELETE_SAVED_MESSAGE(closure_0.channelId, closure_0.messageId),
-    rejectWithError: HTTPUtils.rejectWithMigratedError(),
-  });
+  await HTTP.del({ url: Endpoints.DELETE_SAVED_MESSAGE(closure_0.channelId, closure_0.messageId), rejectWithError: HTTPUtils.rejectWithMigratedError() });
   return true;
 };
 let closure_8 = async function _fetchAndUpdateSavedMessages() {
@@ -32,10 +25,7 @@ let closure_8 = async function _fetchAndUpdateSavedMessages() {
     return Promise.resolve();
   }
   const HTTP = HTTPUtils.HTTP;
-  const obj1 = { url: constants.GET_SAVED_MESSAGES, rejectWithError: null };
-  let obj10 = HTTPUtils;
-  obj1.rejectWithError = obj10.rejectWithMigratedError();
-  await HTTP.get(obj1);
+  await HTTP.get({ url: constants.GET_SAVED_MESSAGES, rejectWithError: HTTPUtils.rejectWithMigratedError() });
   await closure_129_1(closure_129_2[5]).dispatch({ type: "SAVED_MESSAGES_UPDATE", savedMessages: [] });
   await "HermesInternal";
   closure_128_0 = value;
@@ -43,15 +33,14 @@ let closure_8 = async function _fetchAndUpdateSavedMessages() {
   closure_128_1 = results.map((message) => {
     let messageRecord = null;
     if (null != message.message) {
-      let obj = closure_1_0(4859);
-      messageRecord = obj.createMessageRecord(message.message);
+      messageRecord = closure_1_0(4859).createMessageRecord(message.message);
+      const obj = closure_1_0(4859);
     }
-    obj = { message: messageRecord, saveData: closure_1_0(7963).savedMessageDataToClient(message.save_data) };
-    return obj;
+    const obj2 = { message: messageRecord, saveData: closure_1_0(7963).savedMessageDataToClient(message.save_data) };
+    return obj2;
   });
-  obj10 = { type: "SAVED_MESSAGES_UPDATE", savedMessages: closure_128_1 };
-  await closure_129_1(closure_129_2[5]).dispatch(obj10);
-  closure_129_1(closure_129_2[5]);
+  await closure_129_1(closure_129_2[5]).dispatch({ type: "SAVED_MESSAGES_UPDATE", savedMessages: closure_128_1 });
+  { url: constants.GET_SAVED_MESSAGES, rejectWithError: HTTPUtils.rejectWithMigratedError() };
 };
 const Endpoints = fn(1074).Endpoints;
 const size = fn(2);

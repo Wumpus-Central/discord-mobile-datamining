@@ -28,19 +28,28 @@ get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ActivityIndicator: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-fn(4636);
-let createStyles = { loadingContainer: null, scrollView: null, stickyHeader: null };
-createStyles = {
+const createStyles = fn(4636);
+let obj2 = {
+  loadingContainer: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+    minHeight: 300,
+    backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST,
+  },
+  scrollView: null,
+  stickyHeader: null,
+};
+let obj3 = {
   flex: 1,
   justifyContent: "center",
   alignItems: "center",
   minHeight: 300,
   backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST,
 };
-createStyles.loadingContainer = createStyles;
-createStyles.scrollView = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
-createStyles.stickyHeader = { position: "absolute", top: 0, left: 0, right: 0 };
-let closure_10 = createStyles.createStyles(createStyles);
+obj2.scrollView = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
+obj2.stickyHeader = { position: "absolute", top: 0, left: 0, right: 0 };
+let closure_10 = createStyles.createStyles(obj2);
 let closure_12 = {
   code: "function GameProfileScreenTsx1(){const{heroHeaderHeight,scrollY,STICKY_HEADER_HEIGHT}=this.__closure;return heroHeaderHeight.get()>0&&scrollY.get()>=heroHeaderHeight.get()-STICKY_HEADER_HEIGHT;}",
 };
@@ -79,33 +88,32 @@ export default function GameProfileScreen(gameId) {
   let callback1;
   let callback2;
   let tmp = ref();
+  const bottomSheetRef1 = gameId(sourceUserId[9]).useBottomSheetRef();
+  ({ bottomSheetRef, bottomSheetClose } = bottomSheetRef1);
   let obj = gameId(sourceUserId[9]);
-  bottomSheetRef = obj.useBottomSheetRef();
-  ({ bottomSheetRef, bottomSheetClose } = bottomSheetRef);
   const tmp6Result = source(sourceUserId[10])(source(sourceUserId[11]).openURL);
   noop = tmp6Result;
-  let obj1 = noop;
   const viewId = num(
     noop.useState(() => gameId(sourceUserId[12]).generateViewId()),
     1,
   )[0];
   ref = noop.useRef(null);
-  let obj2 = gameId(sourceUserId[13]);
-  const game = obj2.useGame(gameId);
-  ({ data, isLoading } = game);
   const tmp6 = source(sourceUserId[10]);
   const tmp8 = num;
+  const game = gameId(sourceUserId[13]).useGame(gameId);
+  ({ data, isLoading } = game);
+  let obj3 = gameId(sourceUserId[13]);
   let tmp13 = num(noop.useState(null), 2);
   const first1 = tmp13[0];
   let name;
   if (data != null) {
     name = data.name;
   }
-  let tmp2Result = tmp2(tmp3[15]);
-  sharedValue = tmp2Result.useSharedValue(0);
-  ref = obj1.useRef(false);
+  const tmp12 = source(sourceUserId[14])(data);
+  sharedValue = gameId(sourceUserId[15]).useSharedValue(0);
+  ref = obj2.useRef(false);
   let items = [num];
-  const callback = obj1.useCallback(() => {
+  const callback = obj2.useCallback(() => {
     let tmp2 = num > 0;
     if (tmp2) {
       tmp2 = !ref.current;
@@ -120,16 +128,16 @@ export default function GameProfileScreen(gameId) {
     }
   }, items);
   let id;
-  let tmp5Result = tmp5(tmp3[16]);
+  const tmp2Result = gameId(sourceUserId[15]);
   if (data != null) {
     id = data.id;
   }
-  tmp5Result({ gameId: id, scrollY: sharedValue });
-  tmp2Result = tmp2(tmp3[15]);
-  sharedValue1 = tmp2Result.useSharedValue(0);
-  const tmp12 = source(sourceUserId[14])(data);
+  source(sourceUserId[16])({ gameId: id, scrollY: sharedValue });
+  const tmp5Result = source(sourceUserId[16]);
+  sharedValue1 = gameId(sourceUserId[15]).useSharedValue(0);
+  const tmp2Result8 = gameId(sourceUserId[15]);
   sharedValue2 = gameId(sourceUserId[15]).useSharedValue(0);
-  const tmp2Result1 = gameId(sourceUserId[15]);
+  const tmp2Result9 = gameId(sourceUserId[15]);
   let fn = function j() {
     let tmp = sharedValue1.get() > 0;
     if (tmp) {
@@ -157,35 +165,43 @@ export default function GameProfileScreen(gameId) {
       return;
     }
   }
-  obj = { stickyHeaderVisible: sharedValue2, withTiming: tmp2(tmp3[17]).withTiming };
-  M.__closure = obj;
+  const tmp2Result10 = gameId(sourceUserId[15]);
+  M.__closure = { stickyHeaderVisible: sharedValue2, withTiming: gameId(sourceUserId[17]).withTiming };
   M.__workletHash = 3161097061646;
   M.__initData = sharedValue3;
-  const animatedReaction = gameId(sourceUserId[15]).useAnimatedReaction(fn, M);
-  const tmp2Result2 = gameId(sourceUserId[15]);
+  const animatedReaction = tmp2Result10.useAnimatedReaction(fn, M);
+  const obj4 = { stickyHeaderVisible: sharedValue2, withTiming: gameId(sourceUserId[17]).withTiming };
   class W {
     constructor() {
       obj = { transform: null };
-      obj = { translateY: null };
+      obj1 = { translateY: null };
       obj3 = closure_0(closure_2[15]);
-      obj.translateY = obj3.interpolate(closure_12.get(), [0, 1], [-56, 0]);
+      obj1.translateY = obj3.interpolate(closure_12.get(), [0, 1], [-56, 0]);
       items = [];
-      items[0] = obj;
+      items[0] = obj1;
       obj.transform = items;
       return obj;
     }
   }
-  obj = { interpolate: tmp2(tmp3[15]).interpolate, stickyHeaderVisible: sharedValue2, STICKY_HEADER_HEIGHT: 56 };
-  W.__closure = obj;
+  const tmp2Result11 = gameId(sourceUserId[15]);
+  W.__closure = {
+    interpolate: gameId(sourceUserId[15]).interpolate,
+    stickyHeaderVisible: sharedValue2,
+    STICKY_HEADER_HEIGHT: 56,
+  };
   W.__workletHash = 16452163547712;
   W.__initData = first2;
-  const animatedStyle = gameId(sourceUserId[15]).useAnimatedStyle(W);
-  const tmp2Result3 = gameId(sourceUserId[15]);
+  const animatedStyle = tmp2Result11.useAnimatedStyle(W);
+  const obj5 = {
+    interpolate: gameId(sourceUserId[15]).interpolate,
+    stickyHeaderVisible: sharedValue2,
+    STICKY_HEADER_HEIGHT: 56,
+  };
   sharedValue3 = gameId(sourceUserId[15]).useSharedValue(Infinity);
-  const tmp8Result = tmp8(obj1.useState(false), 2);
+  const tmp8Result = tmp8(noop.useState(false), 2);
   first2 = tmp8Result[0];
   __initData = tmp28;
-  const tmp2Result4 = gameId(sourceUserId[15]);
+  const tmp2Result12 = gameId(sourceUserId[15]);
   class Q {
     constructor() {
       value = closure_9.get();
@@ -200,77 +216,84 @@ export default function GameProfileScreen(gameId) {
       ReanimatedRexport.runOnJS(closure_15)(arg0);
     }
   };
-  obj1 = { runOnJS: tmp2(tmp3[15]).runOnJS, setShowGetButton: tmp28 };
-  fn2.__closure = obj1;
+  const tmp2Result13 = gameId(sourceUserId[15]);
+  fn2.__closure = { runOnJS: gameId(sourceUserId[15]).runOnJS, setShowGetButton: tmp8Result[1] };
   fn2.__workletHash = 15045914286853;
   fn2.__initData = gameProfileStoreWebsites;
-  const animatedReaction1 = gameId(sourceUserId[15]).useAnimatedReaction(Q, fn2);
-  const tmp2Result5 = gameId(sourceUserId[15]);
+  const animatedReaction1 = tmp2Result13.useAnimatedReaction(Q, fn2);
+  const obj6 = { runOnJS: gameId(sourceUserId[15]).runOnJS, setShowGetButton: tmp8Result[1] };
   gameProfileStoreWebsites = gameId(sourceUserId[18]).useGameProfileStoreWebsites(data);
   const items1 = [gameProfileStoreWebsites];
-  memo = obj1.useMemo(() => {
+  memo = obj2.useMemo(() => {
     const mapped = gameProfileStoreWebsites.map(getGameProfileStoreWebsiteDataDefault);
     return mapped.filter((item) => null != item);
   }, items1);
-  obj1.useRef(undefined);
-  obj1.useRef(null);
+  noop.useRef(undefined);
+  noop.useRef(null);
   const items2 = [name];
-  const effect = obj1.useEffect(() => {
+  const effect = obj2.useEffect(() => {
     closure_18.current = name;
   }, items2);
   const items3 = [first1];
-  const effect1 = obj1.useEffect(() => {
+  const effect1 = obj2.useEffect(() => {
     closure_19.current = first1;
   }, items3);
   const items4 = [gameId, viewId, source];
-  callback1 = obj1.useCallback((action, similarGameId) => {
-    let obj = GameProfileAnalyticUtils;
-    const guildIdAndVerifiedFromInvite = obj.getGuildIdAndVerifiedFromInvite(ref3.current);
+  callback1 = obj2.useCallback((action, similarGameId) => {
+    const guildIdAndVerifiedFromInvite = GameProfileAnalyticUtils.getGuildIdAndVerifiedFromInvite(ref3.current);
     ({ guildId, isVerified } = guildIdAndVerifiedFromInvite);
     let str = ref2.current;
     if (str == null) {
       str = "";
     }
-    obj = { gameName: str, gameId, action, similarGameId, viewId, guildId, isVerified, source };
-    const result = GameProfileAnalyticUtils.trackGameProfileAction(obj);
+    const result = GameProfileAnalyticUtils.trackGameProfileAction({
+      gameName: str,
+      gameId,
+      action,
+      similarGameId,
+      viewId,
+      guildId,
+      isVerified,
+      source,
+    });
   }, items4);
   const items5 = [memo, callback1, tmp6Result];
-  callback2 = obj1.useCallback(() => {
+  callback2 = obj2.useCallback(() => {
     if (1 === memo.length) {
       const first = _slicedToArray(memo, 1)[0];
       callback1(first.action);
       closure_4(first.url);
     } else if (memo.length > 1) {
-      let obj = { key: GameProfileStoreLinksActionSheet.ACTION_SHEET_KEY, content: null, stackingBehavior: "stack" };
+      const obj3 = { key: GameProfileStoreLinksActionSheet.ACTION_SHEET_KEY, content: null, stackingBehavior: "stack" };
       let str = ref2.current;
       const obj2 = ActionSheetActionCreators;
       if (str == null) {
         str = "";
       }
-      obj = { gameName: str, websiteButtons: memo, trackAction: callback1 };
-      obj.content = React6(GameProfileStoreLinksActionSheetDefault, obj);
-      obj2.showActionSheet(obj);
+      const obj = { gameName: str, websiteButtons: memo, trackAction: callback1 };
+      obj3.content = React6(GameProfileStoreLinksActionSheetDefault, obj);
+      obj2.showActionSheet(obj3);
     }
   }, items5);
   const items6 = [gameId, source, sourceUserId, viewId];
-  const effect2 = obj1.useEffect(() => {
-    const obj = { source, viewId, gameId, gameName: null, authorId: null, profileType: null };
+  const effect2 = obj2.useEffect(() => {
+    const obj2 = { source, viewId, gameId, gameName: null, authorId: null, profileType: null };
     let str = ref2.current;
     if (str == null) {
       str = "";
     }
-    obj.gameName = str;
-    obj.authorId = sourceUserId;
-    obj.profileType = GameProfileAnalyticUtils.GameProfileTypes.FullProfile;
-    obj.trackGameProfileOpen(obj);
+    obj2.gameName = str;
+    obj2.authorId = sourceUserId;
+    obj2.profileType = GameProfileAnalyticUtils.GameProfileTypes.FullProfile;
+    GameProfileAnalyticUtils.trackGameProfileOpen(obj2);
   }, items6);
   const items7 = [gameId, source, sourceUserId, viewId];
-  const effect3 = obj1.useEffect(
+  const effect3 = obj2.useEffect(
     () => () => {
-      let obj = gameId(sourceUserId[12]);
-      const guildIdAndVerifiedFromInvite = obj.getGuildIdAndVerifiedFromInvite(ref2.current);
+      const guildIdAndVerifiedFromInvite = gameId(sourceUserId[12]).getGuildIdAndVerifiedFromInvite(ref2.current);
       ({ guildId, isVerified } = guildIdAndVerifiedFromInvite);
-      obj = {
+      const obj = gameId(sourceUserId[12]);
+      const obj3 = {
         viewId,
         gameId,
         gameName: null,
@@ -284,31 +307,31 @@ export default function GameProfileScreen(gameId) {
       if (str == null) {
         str = "";
       }
-      obj.gameName = str;
-      obj.playedFriendIds = [];
-      obj.playedFriendsData = [];
+      obj3.gameName = str;
+      obj3.playedFriendIds = [];
+      obj3.playedFriendsData = [];
       let similarGames = first1.getSimilarGames(gameId);
       if (similarGames == null) {
         similarGames = [];
       }
-      obj.similarGames = similarGames;
-      obj.guildId = guildId;
-      obj.isVerified = isVerified;
-      const result = gameId(sourceUserId[12]).trackGameProfileClose(obj);
+      obj3.similarGames = similarGames;
+      obj3.guildId = guildId;
+      obj3.isVerified = isVerified;
+      const result = gameId(sourceUserId[12]).trackGameProfileClose(obj3);
       const obj2 = gameId(sourceUserId[12]);
     },
     items7,
   );
   const items8 = [sharedValue1];
   const items9 = [sharedValue3];
-  const callback3 = obj1.useCallback((arg0) => {
+  const callback3 = obj2.useCallback((arg0) => {
     const result = sharedValue1.set(arg0);
   }, items8);
   const items10 = [memo, first2, callback2];
-  const callback4 = obj1.useCallback((arg0) => {
+  const callback4 = obj2.useCallback((arg0) => {
     const result = sharedValue3.set(arg0);
   }, items9);
-  const memo1 = obj1.useMemo(() => {
+  const memo1 = obj2.useMemo(() => {
     let fn;
     if (memo.length > 0) {
       if (first2) {
@@ -317,7 +340,7 @@ export default function GameProfileScreen(gameId) {
     }
     return fn;
   }, items10);
-  obj2 = {
+  const obj7 = {
     ref: bottomSheetRef,
     startExpanded: true,
     scrollable: true,
@@ -328,10 +351,9 @@ export default function GameProfileScreen(gameId) {
   if (!isLoading) {
     if (null != data) {
       let tmp44 = name;
-      const obj3 = { ref, style: tmp.scrollView, lockableScrollableContentOffsetY: sharedValue, children: null };
-      const obj4 = { obscured: tmp12, children: null };
-      tmp5Result = tmp5(tmp3[24]);
-      const obj5 = {
+      const obj8 = { ref, style: tmp.scrollView, lockableScrollableContentOffsetY: sharedValue, children: null };
+      const obj9 = { obscured: tmp12, children: null };
+      const obj10 = {
         game: data,
         invite: first1,
         viewId,
@@ -346,23 +368,24 @@ export default function GameProfileScreen(gameId) {
         onStoreLinksMeasured: callback4,
         onHeaderHeightMeasured: callback3,
       };
-      obj4.children = name(tmp5(tmp3[25]), obj5);
-      obj3.children = name(tmp5Result, obj4);
-      let tmp43 = name(tmp2(tmp3[23]).BottomSheetScrollView, obj3);
+      obj9.children = name(tmp5(tmp3[25]), obj10);
+      obj8.children = name(tmp5(tmp3[24]), obj9);
+      let tmp43 = name(tmp2(tmp3[23]).BottomSheetScrollView, obj8);
+      const tmp5Result2 = tmp5(tmp3[24]);
     }
     const items11 = [tmp43, ,];
-    const obj6 = { style: null, pointerEvents: "box-none", children: null };
+    const obj11 = { style: null, pointerEvents: "box-none", children: null };
     const items12 = [tmp.stickyHeader, animatedStyle];
-    obj6.style = items12;
-    const obj7 = { game: data, headerRight: memo1 };
-    obj6.children = tmp44(tmp5(tmp3[26]), obj7);
-    items11[1] = tmp44(tmp5(tmp3[15]).View, obj6);
-    const obj8 = { variant: "overlay", onPress: bottomSheetClose };
-    items11[2] = tmp44(tmp2(tmp3[27]).ActionSheetHeaderBar, obj8);
-    obj2.children = items11;
-    return tmp41(tmp42, obj2);
+    obj11.style = items12;
+    const obj12 = { game: data, headerRight: memo1 };
+    obj11.children = tmp44(tmp5(tmp3[26]), obj12);
+    items11[1] = tmp44(tmp5(tmp3[15]).View, obj11);
+    const obj13 = { variant: "overlay", onPress: bottomSheetClose };
+    items11[2] = tmp44(tmp2(tmp3[27]).ActionSheetHeaderBar, obj13);
+    obj7.children = items11;
+    return tmp41(tmp42, obj7);
   }
-  const tmp2Result6 = gameId(sourceUserId[18]);
+  const tmp2Result14 = gameId(sourceUserId[18]);
   tmp41 = sharedValue;
   tmp43 = name(viewId, { style: tmp.loadingContainer, children: name(ref, { animating: true, size: "large" }) });
   tmp44 = name;

@@ -11,8 +11,8 @@ let closure_4 = async function _tryLoadAsync(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -25,16 +25,16 @@ let closure_4 = async function _tryLoadAsync(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c6 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           closure_2 = tmp3;
           closure_1 = tmp7;
           c4 = 1;
           c5 = 2;
           c6 = 1;
-          const obj1 = { value: importDefault(), done: false };
-          return obj1;
+          const obj4 = { value: importDefault(), done: false };
+          return obj4;
         }
       } else if (1 === tmp7) {
         c4 = 0;
@@ -48,12 +48,12 @@ let closure_4 = async function _tryLoadAsync(arg0) {
       } else if (arg0 === 2) {
         c4 = 0;
         c6 = 3;
-        const obj2 = { value, done: true };
-        return obj2;
+        const obj5 = { value, done: true };
+        return obj5;
       } else {
         c4 = 0;
         c6 = 3;
-        obj = { value, done: true };
+        const obj = { value, done: true };
         return obj;
       }
     } catch (tmp16) {
@@ -75,8 +75,8 @@ let closure_5 = async function _tryLoadOrResetCacheGatewayAsync(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -89,8 +89,8 @@ let closure_5 = async function _tryLoadOrResetCacheGatewayAsync(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c9 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj4 = { value, done: true };
+          return obj4;
         } else {
           closure_5 = tmp3;
           closure_4 = tmp5;
@@ -99,8 +99,8 @@ let closure_5 = async function _tryLoadOrResetCacheGatewayAsync(arg0) {
           c7 = 1;
           c8 = 2;
           c9 = 1;
-          const obj1 = { value: dependencyMap(), done: false };
-          return obj1;
+          const obj5 = { value: dependencyMap(), done: false };
+          return obj5;
         }
       } else if (1 === tmp8) {
         c7 = 0;
@@ -111,19 +111,18 @@ let closure_5 = async function _tryLoadOrResetCacheGatewayAsync(arg0) {
           closure_132_2,
           closure_132_2.stack,
         );
-        let obj2 = closure_133_0(closure_133_1[2]);
-        obj2 = { error: closure_132_2, action: null, metricAction: null };
+        const obj6 = { error: closure_132_2, action: null, metricAction: null };
         const _HermesInternal2 = HermesInternal;
-        obj2.action = "tryLoadOrResetCacheGatewayAsync (" + closure_132_0 + ")";
+        obj6.action = "tryLoadOrResetCacheGatewayAsync (" + closure_132_0 + ")";
         closure_3 = closure_132_1;
         if (closure_132_1 == null) {
           closure_3 = closure_132_0;
         }
-        const obj3 = { type: "RESET_SOCKET", args: null };
+        const obj7 = { type: "RESET_SOCKET", args: null };
         const _HermesInternal3 = HermesInternal;
-        obj2.metricAction = "tryLoadOrResetCacheGatewayAsync (" + closure_3 + ")";
-        obj3.args = obj2;
-        obj2.dispatch(obj3);
+        obj6.metricAction = "tryLoadOrResetCacheGatewayAsync (" + closure_3 + ")";
+        obj7.args = obj6;
+        closure_133_0(closure_133_1[2]).dispatch(obj7);
         c9 = 3;
         return { value: null, done: true };
       } else if (arg0 === 1) {
@@ -132,12 +131,12 @@ let closure_5 = async function _tryLoadOrResetCacheGatewayAsync(arg0) {
       } else if (arg0 === 2) {
         c7 = 0;
         c9 = 3;
-        const obj4 = { value, done: true };
-        return obj4;
+        const obj8 = { value, done: true };
+        return obj8;
       } else {
         c7 = 0;
         c9 = 3;
-        obj = { value, done: true };
+        const obj = { value, done: true };
         return obj;
       }
     } catch (tmp29) {
@@ -180,18 +179,17 @@ export const tryLoadOrResetCacheGateway = function tryLoadOrResetCacheGateway(ar
     let tmp4 = ensureGuildLoaded;
     const _HermesInternal = HermesInternal;
     logger.log("" + arg0 + ": exception thrown, resetting socket.", tmp2, tmp2.stack);
-    let obj = DispatcherDefault;
-    obj = { error: tmp2, action: null, metricAction: null };
+    const obj2 = { error: tmp2, action: null, metricAction: null };
     const _HermesInternal2 = HermesInternal;
-    obj.action = "tryLoadOrResetCacheGateway (" + arg0 + ")";
+    obj2.action = "tryLoadOrResetCacheGateway (" + arg0 + ")";
     if (ensureGuildLoaded == null) {
       tmp4 = arg0;
     }
-    obj = { type: "RESET_SOCKET", args: null };
+    const obj3 = { type: "RESET_SOCKET", args: null };
     const _HermesInternal3 = HermesInternal;
-    obj.metricAction = "tryLoadOrResetCacheGateway (" + tmp4 + ")";
-    obj.args = obj;
-    obj.dispatch(obj);
+    obj2.metricAction = "tryLoadOrResetCacheGateway (" + tmp4 + ")";
+    obj3.args = obj2;
+    DispatcherDefault.dispatch(obj3);
     return null;
   }
 };

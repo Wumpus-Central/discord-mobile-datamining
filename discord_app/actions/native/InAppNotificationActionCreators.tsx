@@ -6,8 +6,7 @@ const result = size.fileFinishedImporting("actions/native/InAppNotificationActio
 
 export default {
   enqueueNotification(buildResult) {
-    const obj = { type: "ENQUEUE_IN_APP_NOTIFICATION", notification: buildResult };
-    obj.dispatch(obj);
+    DispatcherDefault.dispatch({ type: "ENQUEUE_IN_APP_NOTIFICATION", notification: buildResult });
   },
   clearNotification() {
     DispatcherDefault.wait(() => {

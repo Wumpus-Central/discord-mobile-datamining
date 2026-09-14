@@ -86,7 +86,7 @@ let items = [
   },
 ];
 DisplayNameStylesSeenStore.migrations = items;
-obj = {
+const displayNameStylesSeenStore = new DisplayNameStylesSeenStore(DispatcherDefault, {
   DISPLAY_NAME_STYLES_MARK_FONT_SEEN: function handleMarkFontSeen(fontId) {
     fontId = fontId.fontId;
     const seenFontIds = obj.seenFontIds;
@@ -135,8 +135,7 @@ obj = {
       obj.newEffectsBadgeDismissed = true;
     }
   },
-};
-const displayNameStylesSeenStore = new DisplayNameStylesSeenStore(DispatcherDefault, obj);
+});
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/display_name_styles/DisplayNameStylesSeenStore.tsx");
 

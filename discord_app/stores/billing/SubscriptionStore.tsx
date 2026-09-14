@@ -37,7 +37,7 @@ prototype["initialize"] = function initialize() {
   this.waitFor(AuthenticationStore, OverridePremiumTypeStore);
 };
 prototype["hasFetchedSubscriptions"] = function hasFetchedSubscriptions() {
-  return null != obj;
+  return null != obj2;
 };
 prototype["hasFetchedMostRecentPremiumTypeSubscription"] = function hasFetchedMostRecentPremiumTypeSubscription() {
   return c11;
@@ -55,7 +55,7 @@ prototype["getPremiumSubscription"] = function getPremiumSubscription(arg0) {
     flag = true;
   }
   if (PREMIUM !== constants2.PREMIUM) {
-    const tmp5 = flag ? obj : obj;
+    const tmp5 = flag ? obj : obj2;
     let tmp4 = null;
     if (null != tmp5) {
       tmp4 = null;
@@ -98,7 +98,7 @@ prototype["getPremiumTypeSubscription"] = function getPremiumTypeSubscription(ar
     flag = true;
   }
   if (PREMIUM !== constants2.PREMIUM) {
-    const tmp5 = flag ? obj : obj;
+    const tmp5 = flag ? obj : obj2;
     let tmp4 = null;
     if (null != tmp5) {
       tmp4 = null;
@@ -129,11 +129,11 @@ prototype["getSubscriptions"] = function getSubscriptions() {
   if (arg0 === undefined) {
     flag = true;
   }
-  return flag ? obj : obj;
+  return flag ? obj : obj2;
 };
 prototype["getSubscriptionById"] = function getSubscriptionById(subscription_id) {
   let tmp2;
-  if (obj != null) {
+  if (obj2 != null) {
     tmp2 = tmp[subscription_id];
   }
   return tmp2;
@@ -150,7 +150,7 @@ prototype["getSubscriptionForPlanIds"] = function getSubscriptionForPlanIds(item
     flag = true;
   }
   const set = new Set(items);
-  const tmp2 = flag ? obj : obj;
+  const tmp2 = flag ? obj : obj2;
   let tmp3 = null;
   if (null != tmp2) {
     const _Object = Object;
@@ -223,7 +223,7 @@ obj = {
   BILLING_SUBSCRIPTION_FETCH_SUCCESS: function handleSubscriptionsFetch(subscriptions) {
     subscriptions = subscriptions.subscriptions;
     obj = {};
-    obj = {};
+    obj2 = {};
     const items = [];
     items1 = [];
     const id = items1.getId();
@@ -232,7 +232,7 @@ obj = {
         const fromServer = SubscriptionRecord.createFromServer(user_id);
         obj[fromServer.id] = fromServer;
         if (fromServer.status !== constants.UNPAID) {
-          obj[fromServer.id] = fromServer;
+          obj2[fromServer.id] = fromServer;
           let tmp3 = fromServer.type === constants2.GUILD;
           if (tmp3) {
             tmp3 = fromServer.status !== constants.ENDED;
@@ -253,9 +253,9 @@ obj = {
     subscription = subscription.subscription;
     if (subscription.user_id === AuthenticationStore.getId()) {
       const fromServer = SubscriptionRecord.createFromServer(subscription);
-      obj = {};
-      const merged = Object.assign(obj);
-      obj[fromServer.id] = fromServer;
+      obj2 = {};
+      const merged = Object.assign(obj2);
+      obj2[fromServer.id] = fromServer;
       if (fromServer.status !== constants.UNPAID) {
         obj = {};
         const merged1 = Object.assign(obj);
@@ -373,7 +373,7 @@ export const getSubscriptionOfType = function getSubscriptionOfType(arg0, fn) {
       return null;
     }
   }
-  const tmp3 = flag ? obj : obj;
+  const tmp3 = flag ? obj : obj2;
   if (null == tmp3) {
     return null;
   } else {

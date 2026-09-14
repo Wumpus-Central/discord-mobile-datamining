@@ -15,12 +15,14 @@ const result = size.fileFinishedImporting(
 
 export default {
   openMemberVerificationModal(guildId, connect) {
-    let obj = MemberVerificationActionCreatorsDefault;
-    const verificationForm = obj.fetchVerificationForm(guildId);
-    obj = { type, guild_id: guildId };
-    AnalyticsUtilsDefault.track(AnalyticEvents.OPEN_MODAL, obj);
-    obj = { guildId, onClose: connect };
-    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(5652, dependencyMap.paths), obj, React4);
+    const verificationForm = MemberVerificationActionCreatorsDefault.fetchVerificationForm(guildId);
+    AnalyticsUtilsDefault.track(AnalyticEvents.OPEN_MODAL, { type, guild_id: guildId });
+    const obj3 = { type, guild_id: guildId };
+    ModalActionCreatorsDefault.pushLazy(
+      asyncRequireImpl(5652, dependencyMap.paths),
+      { guildId, onClose: connect },
+      React4,
+    );
   },
   closeMemberVerificationModal() {
     let flag = arg0;
@@ -28,8 +30,8 @@ export default {
       flag = false;
     }
     if (!flag) {
-      const obj = { type };
-      obj.track(AnalyticEvents.MODAL_DISMISSED, obj);
+      const obj2 = { type };
+      AnalyticsUtilsDefault.track(AnalyticEvents.MODAL_DISMISSED, obj2);
     }
     ModalActionCreatorsDefault.popWithKey(React4);
   },

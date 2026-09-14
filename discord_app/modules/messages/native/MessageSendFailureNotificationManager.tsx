@@ -14,18 +14,18 @@ function handleMessageSendFailure(shouldNotify) {
   ({ channelId, messageId } = shouldNotify);
   if (shouldNotify.shouldNotify) {
     if ("active" !== AppStateStore.getState()) {
-      let obj = { category: "local", alertTitle: null, alertBody: null, userInfo: null };
+      const obj2 = { category: "local", alertTitle: null, alertBody: null, userInfo: null };
       const intl = util.intl;
-      obj.alertTitle = intl.string(util.t.LdlH2M);
+      obj2.alertTitle = intl.string(util.t.LdlH2M);
       const intl2 = util.intl;
-      obj.alertBody = intl2.string(util.t.xxRPOT);
-      obj = { channelId, messageId, type: LocalNotificationTypes.MESSAGE_SEND_FAILED };
-      obj.userInfo = obj;
-      const result = obj.presentLocalNotification(obj);
+      obj2.alertBody = intl2.string(util.t.xxRPOT);
+      const obj3 = { channelId, messageId, type: LocalNotificationTypes.MESSAGE_SEND_FAILED };
+      obj2.userInfo = obj3;
+      const result = PushNotificationDefault.presentLocalNotification(obj2);
     } else if (channelId !== SelectedChannelStore.getChannelId(SelectedGuildStore.getGuildId())) {
       const MESSAGE_FAILED_TO_SEND = constants.MESSAGE_FAILED_TO_SEND;
       const notificationDuration = InAppNotificationUtils.getNotificationDuration(MESSAGE_FAILED_TO_SEND);
-      const obj1 = {
+      const obj6 = {
         type: MESSAGE_FAILED_TO_SEND,
         channelId,
         messageId,
@@ -37,8 +37,8 @@ function handleMessageSendFailure(shouldNotify) {
         inAppNotificationId: null,
       };
       const obj5 = InAppNotificationActionCreatorsDefault;
-      obj1.inAppNotificationId = InAppNotificationUtils.generateInAppNotificationId();
-      obj5.enqueueNotification(obj1);
+      obj6.inAppNotificationId = InAppNotificationUtils.generateInAppNotificationId();
+      obj5.enqueueNotification(obj6);
     }
   }
 }
@@ -74,15 +74,15 @@ function handleMessageCreate(message) {
 }
 const Constants = fn(1074);
 ({ InAppNotificationTypes: closure_7, MessageStates: closure_8 } = Constants);
-const LocalNotificationTypes = fn(13805).LocalNotificationTypes;
-let prototype = function MessageSendFailureNotificationManager() {
+const LocalNotificationTypes = fn(13806).LocalNotificationTypes;
+const prototype = function MessageSendFailureNotificationManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
   applyArgumentsResult.actions = { MESSAGE_CREATE: handleMessageCreate, MESSAGE_SEND_FAILED: handleMessageSendFailure };
   return applyArgumentsResult;
 }.prototype;
 class prototype extends tmp3 {}
-prototype = new prototype();
+const prototype1 = new prototype();
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/messages/native/MessageSendFailureNotificationManager.tsx");
 
-export default prototype;
+export default prototype1;

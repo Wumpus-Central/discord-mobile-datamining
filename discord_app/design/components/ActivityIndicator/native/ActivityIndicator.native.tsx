@@ -2,7 +2,6 @@
 import _mod17 from "../../../../../_runtime/metro/00017__.js";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import useToken from "../../../tokens/native/useToken.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
 
 const ActivityIndicator = _mod17.ActivityIndicator;
@@ -19,15 +18,14 @@ export const ActivityIndicator = function ActivityIndicator(size) {
     flag = true;
   }
   const merged = Object.assign(size, Object.assign({ size: 0, animating: 0 }));
-  let obj = useToken;
   let color = merged.color;
   if (color == null) {
     color = obj.useToken(nativeDefault.colors.BACKGROUND_BRAND);
   }
-  obj = {};
+  const obj2 = {};
   const merged1 = Object.assign(merged);
-  obj.size = str;
-  obj.animating = flag;
-  obj.color = color;
+  obj2.size = str;
+  obj2.animating = flag;
+  obj2.color = color;
   return <ActivityIndicator />;
 };

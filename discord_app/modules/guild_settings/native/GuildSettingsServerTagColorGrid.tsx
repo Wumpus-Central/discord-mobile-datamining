@@ -12,14 +12,11 @@ const GuildTagConstants = fn(8048);
 } = GuildTagConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-fn(4636);
-const createStyles = {
-  grid: { flexDirection: "row", flexWrap: "wrap", gap: nativeDefault.space.PX_8 },
-  defaultIcon: null,
-};
+const createStyles = fn(4636);
+let obj2 = { grid: { flexDirection: "row", flexWrap: "wrap", gap: nativeDefault.space.PX_8 }, defaultIcon: null };
 const rect = { position: "absolute", right: nativeDefault.space.PX_4, bottom: nativeDefault.space.PX_4 };
-createStyles.defaultIcon = rect;
-let closure_9 = createStyles.createStyles(createStyles);
+obj2.defaultIcon = rect;
+let closure_9 = createStyles.createStyles(obj2);
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_settings/native/GuildSettingsServerTagColorGrid.tsx");
 
@@ -59,12 +56,12 @@ export default function GuildSettingsServerTagColorGrid(badge) {
     if (primary == null) {
       primary = cellSize[0].primary;
     }
-    let obj = { primaryColor: primary, secondaryColor: null };
+    let obj2 = { primaryColor: primary, secondaryColor: null };
     if (secondary == null) {
       secondary = cellSize[0].secondary;
     }
-    obj.secondaryColor = secondary;
-    let formatToPlainStringResult = formatToPlainString(t.hr4D2X, obj);
+    obj2.secondaryColor = secondary;
+    let formatToPlainStringResult = formatToPlainString(t.hr4D2X, obj2);
     let tmp11 = tmp8;
     let tmp12 = tmp7;
   } else {
@@ -72,17 +69,17 @@ export default function GuildSettingsServerTagColorGrid(badge) {
     if (primary == null) {
       primary2 = cellSize[0].primary;
     }
-    obj = { color: primary2 };
+    let obj = { color: primary2 };
     formatToPlainStringResult = formatToPlainString(t["7BFCRR"], obj);
     tmp11 = tmp8;
     tmp12 = tmp7;
   }
-  obj = { spacing: primary(tmp11[4]).space.PX_8, children: null };
-  const obj1 = { variant: "text-md/medium", color: "text-subtle", accessibilityRole: "header", children: null };
+  const obj3 = { spacing: primary(tmp11[4]).space.PX_8, children: null };
+  const obj4 = { variant: "text-md/medium", color: "text-subtle", accessibilityRole: "header", children: null };
   const intl2 = tmp12(tmp11[6]).intl;
-  obj1.children = intl2.string(tmp12(tmp11[6]).t["Fg/TNW"]);
-  const items = [closure_7(tmp12(tmp11[8]).Text, obj1)];
-  let obj2 = { accessibilityRole: "radiogroup", style: tmp.grid, children: null };
+  obj4.children = intl2.string(tmp12(tmp11[6]).t["Fg/TNW"]);
+  const items = [closure_7(tmp12(tmp11[8]).Text, obj4)];
+  const obj5 = { accessibilityRole: "radiogroup", style: tmp.grid, children: null };
   const items1 = [
     cellSize.map((primary) => {
       badge = primary;
@@ -127,10 +124,10 @@ export default function GuildSettingsServerTagColorGrid(badge) {
     }),
     ,
   ];
-  const obj3 = { size: cellSize, selected: tmp3, accessibilityLabel: null, onPress: null, children: null };
+  const obj6 = { size: cellSize, selected: tmp3, accessibilityLabel: null, onPress: null, children: null };
   const intl3 = tmp12(tmp11[6]).intl;
-  obj3.accessibilityLabel = intl3.string(tmp12(tmp11[6]).t.S6N0gC);
-  obj3.onPress = function onPress() {
+  obj6.accessibilityLabel = intl3.string(tmp12(tmp11[6]).t.S6N0gC);
+  obj6.onPress = function onPress() {
     return View(null, null);
   };
   let size = { badge, width: closure_6.SIZE_32, height: closure_6.SIZE_32 };
@@ -141,9 +138,9 @@ export default function GuildSettingsServerTagColorGrid(badge) {
     color: primary(tmp11[4]).colors.ICON_DEFAULT,
     style: tmp.defaultIcon,
   });
-  obj3.children = items2;
-  items1[1] = closure_8(tmp15, obj3);
-  const obj5 = {
+  obj6.children = items2;
+  items1[1] = closure_8(tmp15, obj6);
+  const obj8 = {
     size: cellSize,
     selected: everyResult,
     accessibilityRole: "button",
@@ -151,15 +148,15 @@ export default function GuildSettingsServerTagColorGrid(badge) {
     onPress: badge.onPressEyedropper,
     children: null,
   };
-  const obj4 = { size: "xs", color: primary(tmp11[4]).colors.ICON_DEFAULT, style: tmp.defaultIcon };
+  const obj7 = { size: "xs", color: primary(tmp11[4]).colors.ICON_DEFAULT, style: tmp.defaultIcon };
   const tmp16 = primary(tmp11[9]);
-  obj5.children = closure_7(tmp12(tmp11[13]).EyeDropperIcon, {
+  obj8.children = closure_7(tmp12(tmp11[13]).EyeDropperIcon, {
     size: "sm",
     color: primary(tmp11[4]).colors.ICON_DEFAULT,
   });
-  items1[2] = closure_7(tmp16, obj5);
-  obj2.children = items1;
-  items[1] = closure_8(View, obj2);
-  obj.children = items;
-  return closure_8(tmp12(tmp11[7]).Stack, obj);
+  items1[2] = closure_7(tmp16, obj8);
+  obj5.children = items1;
+  items[1] = closure_8(View, obj5);
+  obj3.children = items;
+  return closure_8(tmp12(tmp11[7]).Stack, obj3);
 }

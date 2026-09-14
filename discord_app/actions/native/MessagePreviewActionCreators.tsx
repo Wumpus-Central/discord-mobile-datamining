@@ -3,6 +3,8 @@ import DispatcherDefault from "../../Dispatcher.tsx";
 import Constants from "../../Constants.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
+const require = globalThis.__r;
+
 ({ Endpoints: c3, MAX_MESSAGES_PER_CHANNEL: closure_4 } = Constants);
 const result = size.fileFinishedImporting("actions/native/MessagePreviewActionCreators.tsx");
 
@@ -19,8 +21,7 @@ export default {
     };
     value = HTTP.get(request);
     value.then((body) => {
-      const obj = { type: "LOAD_MESSAGES_AROUND_SUCCESS", channelId, messages: body.body, around };
-      obj.dispatch(obj);
+      DispatcherDefault.dispatch({ type: "LOAD_MESSAGES_AROUND_SUCCESS", channelId, messages: body.body, around });
     });
   },
   clearMessages() {

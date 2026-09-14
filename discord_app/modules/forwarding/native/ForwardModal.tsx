@@ -21,17 +21,19 @@ import ChannelStore from "../../../stores/ChannelStore.tsx";
 import MessageStore from "../../../stores/MessageStore.tsx";
 import MessagePreviewStore from "../../../stores/native/MessagePreviewStore.tsx";
 
+const require = globalThis.__r;
+
 require = fn;
 const View = fn(17).View;
-const MAX_DESTINATION_COUNT = fn(11812).MAX_DESTINATION_COUNT;
-let UserRowModes = fn(10988).UserRowModes;
+const MAX_DESTINATION_COUNT = fn(11813).MAX_DESTINATION_COUNT;
+let UserRowModes = fn(10989).UserRowModes;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-fn(4636);
-let createStyles = { container: null };
-createStyles = { flex: 1, display: "flex", backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
-createStyles.container = createStyles;
-let closure_16 = createStyles.createStyles(createStyles);
+const createStyles = fn(4636);
+let obj2 = {
+  container: { flex: 1, display: "flex", backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND },
+};
+let closure_16 = createStyles.createStyles(obj2);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/forwarding/native/ForwardModal.tsx");
 
@@ -62,15 +64,14 @@ export default function ForwardModal(message) {
   let tmp = closure_16();
   let height = forwardOptions(source[14])({ ignoreKeyboard: true }).height;
   const channel_id = message.channel_id;
-  let id = message.id;
-  let obj = channel_id;
+  const id = message.id;
   const items = [channel_id];
   const memo = channel_id.useMemo(() => formatResults.getDestinationIdFromChannelId(channel_id), items);
   [tmp7, c7] = height(channel_id.useState(false), 2);
-  let obj1 = require("initialize");
+  const tmp6 = height(channel_id.useState(false), 2);
   const items1 = [closure_10, stateFromStores, trackForwardAddRecipientOnce, c7];
   const items2 = [channel_id, id, source, message];
-  stateFromStores = obj1.useStateFromStores(
+  stateFromStores = require("initialize").useStateFromStores(
     items1,
     () => {
       if ("checkpoint" === source) {
@@ -94,22 +95,26 @@ export default function ForwardModal(message) {
   let obj2 = require("initialize");
   const items3 = [stateFromStores1];
   const items4 = [channel_id];
-  stateFromStores1 = obj2.useStateFromStores(items3, () => ChannelStore.getChannel(channel_id), items4);
-  id = undefined;
+  stateFromStores1 = require("initialize").useStateFromStores(
+    items3,
+    () => ChannelStore.getChannel(channel_id),
+    items4,
+  );
+  let id1;
   if (stateFromStores != null) {
-    id = stateFromStores.id;
+    id1 = stateFromStores.id;
   }
-  closure_10 = null != id;
-  let tmp8Result = tmp8(tmp3[17]);
-  trackForwardAddRecipientOnce = tmp8Result.useTrackForwardAddRecipientOnce();
-  tmp8Result = tmp8(tmp3[17]);
-  trackForwardEditSearchOnce = tmp8Result.useTrackForwardEditSearchOnce();
+  closure_10 = null != id1;
+  let obj3 = require("initialize");
+  trackForwardAddRecipientOnce = require("ForwardingAnalyticsUtils").useTrackForwardAddRecipientOnce();
+  const tmp8Result = require("ForwardingAnalyticsUtils");
+  trackForwardEditSearchOnce = require("ForwardingAnalyticsUtils").useTrackForwardEditSearchOnce();
   UserRowModes = obj.useRef(0);
   ref2 = obj.useRef(0);
-  let tmp5Result = tmp5(obj.useState(""), 2);
+  const tmp5Result = height(channel_id.useState(""), 2);
   first = tmp5Result[0];
   closure_16 = tmp5Result[1];
-  obj.useRef("");
+  channel_id.useRef("");
   const items5 = [channel_id, id, trackForwardEditSearchOnce];
   const callback = obj.useCallback((current) => {
     closure_16(current);
@@ -121,9 +126,9 @@ export default function ForwardModal(message) {
     }
     ref3.current = current;
   }, items5);
-  tmp5Result = tmp5(obj.useState(prop), 2);
-  first1 = tmp5Result[0];
-  closure_19 = tmp5Result[1];
+  const tmp5Result2 = height(channel_id.useState(prop), 2);
+  first1 = tmp5Result2[0];
+  closure_19 = tmp5Result2[1];
   const items6 = [first1, channel_id, id, first, trackForwardAddRecipientOnce];
   const effect = obj.useEffect(() => {
     if (first1.length > 0) {
@@ -136,25 +141,29 @@ export default function ForwardModal(message) {
     ref.current = ref.current + 1;
   }, []);
   const callback2 = obj.useCallback(() => {
-    const obj = {
+    ForwardingAnalyticsUtils.trackForwardCancel({
+      channelId: channel_id,
+      messageId: id,
+      numDestinationChanges: ref.current,
+      numQueryChanges: ref2.current,
+    });
+    const obj2 = {
       channelId: channel_id,
       messageId: id,
       numDestinationChanges: ref.current,
       numQueryChanges: ref2.current,
     };
-    obj.trackForwardCancel(obj);
     ForwardModalUtils.closeForwardModal();
   }, items7);
   const tmp18 = trackForwardEditSearchOnce;
-  const tmp6 = height(channel_id.useState(false), 2);
+  const tmp8Result3 = require("ForwardingAnalyticsUtils");
   require("useNavigatorBackPressHandler").useNavigatorBackPressHandler(() => {
-    const obj = {
+    ForwardingAnalyticsUtils.trackForwardCancel({
       channelId: channel_id,
       messageId: id,
       numDestinationChanges: ref.current,
       numQueryChanges: ref2.current,
-    };
-    obj.trackForwardCancel(obj);
+    });
     return false;
   });
   const items8 = [stateFromStores, stateFromStores1];
@@ -175,8 +184,8 @@ export default function ForwardModal(message) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj3 = { value, done: true };
+        return obj3;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -189,8 +198,8 @@ export default function ForwardModal(message) {
             throw value;
           } else if (arg0 === 2) {
             c4 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj4 = { value, done: true };
+            return obj4;
           } else {
             source = tmp2;
             forwardOptions = tmp3;
@@ -203,24 +212,24 @@ export default function ForwardModal(message) {
                 _undefined(true);
                 c3 = 2;
                 c4 = 1;
-                let obj1 = {
+                const obj6 = {
                   value: Promise.all(first1.map(closure_0(source[15]).getOrResolveChannelIdFromDestinationId)),
                   done: false,
                 };
-                return obj1;
+                return obj6;
               } else {
-                const obj2 = { key: "FORWARD_ERROR", content: null };
+                const obj7 = { key: "FORWARD_ERROR", content: null };
                 const intl2 = closure_0(source[22]).intl;
-                obj2.content = intl2.string(closure_0(source[22]).t.R0RpRX);
-                forwardOptions(source[21]).open(obj2);
+                obj7.content = intl2.string(closure_0(source[22]).t.R0RpRX);
+                forwardOptions(source[21]).open(obj7);
                 const obj28 = forwardOptions(source[21]);
               }
             } else {
-              const obj3 = { withMessage: tmp118 };
+              const obj8 = { withMessage: tmp118 };
               c3 = 1;
               c4 = 1;
-              let obj4 = { value: tmp119(first1, obj3, _undefined), done: false };
-              return obj4;
+              const obj10 = { value: tmp119(first1, obj8, _undefined), done: false };
+              return obj10;
             }
           }
         } else {
@@ -230,8 +239,8 @@ export default function ForwardModal(message) {
               throw value;
             } else if (arg0 === 2) {
               c4 = 3;
-              const obj5 = { value, done: true };
-              return obj5;
+              const obj11 = { value, done: true };
+              return obj11;
             }
           } else {
             if (2 === tmp6) {
@@ -240,28 +249,29 @@ export default function ForwardModal(message) {
                 throw value;
               } else if (arg0 === 2) {
                 c4 = 3;
-                const obj6 = { value, done: true };
-                return obj6;
+                const obj12 = { value, done: true };
+                return obj12;
               } else {
                 closure_129_1 = value.filter(closure_0(source[23]).isNotNullish);
                 if (forwardOptions(source[24])(message, closure_129_1)) {
                   const promise = new Promise((arg0) => {
                     closure_0 = arg0;
-                    closure_1_0(4982);
-                    const obj = {
-                      onConfirm() {
-                        return closure_0(true);
-                      },
-                      onBack() {
-                        return closure_0(false);
-                      },
-                    };
-                    obj.openAlert("staff-to-non-staff-forward", ref2(forwardOptions(11815), obj));
+                    closure_1_0(4982).openAlert(
+                      "staff-to-non-staff-forward",
+                      ref2(forwardOptions(11816), {
+                        onConfirm() {
+                          return closure_0(true);
+                        },
+                        onBack() {
+                          return closure_0(false);
+                        },
+                      }),
+                    );
                   });
                   c3 = 3;
                   c4 = 1;
-                  const obj7 = { value: promise, done: false };
-                  return obj7;
+                  const obj15 = { value: promise, done: false };
+                  return obj15;
                 }
               }
             } else {
@@ -271,44 +281,44 @@ export default function ForwardModal(message) {
                   throw value;
                 } else if (arg0 === 2) {
                   c4 = 3;
-                  let obj8 = { value, done: true };
-                  return obj8;
+                  const obj17 = { value, done: true };
+                  return obj17;
                 } else if (!value) {
                   _undefined(false);
                   c4 = 3;
-                  const obj9 = { value: undefined, done: true };
-                  return obj9;
+                  const obj18 = { value: undefined, done: true };
+                  return obj18;
                 }
               } else if (4 === tmp6) {
                 if (arg0 === 1) {
                   c4 = 3;
                   throw value;
                 } else if (arg0 !== 2) {
-                  obj8 = closure_0(source[28]);
-                  obj8.transitionToChannel(closure_129_1[0], {
+                  closure_0(source[28]).transitionToChannel(closure_129_1[0], {
                     navigationReplace: true,
                     openTextInVoiceIfVoiceChannel: true,
                   });
-                  let obj13 = forwardOptions(source[29]);
-                  const obj10 = {};
+                  const obj9 = closure_0(source[28]);
+                  const obj19 = {};
                   const merged = Object.assign(forwardOptions);
-                  obj10.withMessage = closure_129_0;
-                  obj13.sendForwards(message, closure_129_1, obj10);
+                  obj19.withMessage = closure_129_0;
+                  forwardOptions(source[29]).sendForwards(message, closure_129_1, obj19);
                   c3 = 5;
                   c4 = 1;
+                  const obj14 = forwardOptions(source[29]);
                 }
               } else if (arg0 === 1) {
                 c4 = 3;
                 throw value;
               } else if (arg0 === 2) {
                 c4 = 3;
-                const obj11 = { value, done: true };
-                return obj11;
+                const obj20 = { value, done: true };
+                return obj20;
               } else {
                 closure_129_2 = value;
                 const everyResult = closure_129_2.every((status) => "fulfilled" === status.status);
                 if (!everyResult) {
-                  obj = {
+                  const obj = {
                     channelId,
                     messageId,
                     hasError: true,
@@ -327,29 +337,27 @@ export default function ForwardModal(message) {
                   obj.numQueryChanges = ref2.current;
                   obj27.trackForwardSent(obj);
                   closure_129_3 = first1.filter((item, index) => "rejected" === dependencyMap[index].status);
-                  obj1 = closure_0(source[18]);
-                  let obj12 = { message, failedDestinations: closure_129_3, forwardOptions };
-                  const result = obj1.showForwardFailedAlertModal(obj12);
+                  const obj21 = { message, failedDestinations: closure_129_3, forwardOptions };
+                  const result = closure_0(source[18]).showForwardFailedAlertModal(obj21);
+                  const obj2 = closure_0(source[18]);
                 }
                 obj27 = closure_0(source[17]);
               }
               c4 = 3;
-              obj13 = { value, done: true };
-              return obj13;
+              const obj22 = { value, done: true };
+              return obj22;
             }
-            obj12 = closure_0(source[18]);
-            obj12.closeForwardModal();
+            closure_0(source[18]).closeForwardModal();
             if (1 === closure_129_1.length) {
-              let obj15 = forwardOptions(source[27]);
-              const obj14 = { channelId: closure_129_1[0] };
+              const obj23 = { channelId: closure_129_1[0] };
               c3 = 4;
               c4 = 1;
-              obj15 = { value: null, done: false };
-              obj15.value = obj15.fetchMessages(obj14);
-              return obj15;
+              const obj24 = { value: forwardOptions(source[27]).fetchMessages(obj23), done: false };
+              return obj24;
             }
+            const obj13 = closure_0(source[18]);
           }
-          const obj16 = {
+          const obj25 = {
             channelId,
             messageId,
             hasError: false,
@@ -363,20 +371,19 @@ export default function ForwardModal(message) {
           if (tmp31) {
             tmp31 = "" !== closure_129_0;
           }
-          obj16.hasContextMessage = tmp31;
-          obj16.numDestinations = closure_129_1.length;
-          obj16.numDestinationChanges = ref.current;
-          obj16.numQueryChanges = ref2.current;
-          obj16.source = source;
-          tmp109(obj16);
-          obj4 = forwardOptions(source[21]);
-          const obj17 = { key: "FORWARD_SUCCESS", IconComponent: forwardOptions(source[30]), content: null };
+          obj25.hasContextMessage = tmp31;
+          obj25.numDestinations = closure_129_1.length;
+          obj25.numDestinationChanges = ref.current;
+          obj25.numQueryChanges = ref2.current;
+          obj25.source = source;
+          tmp109(obj25);
+          const obj26 = { key: "FORWARD_SUCCESS", IconComponent: forwardOptions(source[30]), content: null };
           const intl = closure_0(source[22]).intl;
-          obj17.content = intl.string(closure_0(source[22]).t.kwmYkt);
-          obj4.open(obj17);
+          obj26.content = intl.string(closure_0(source[22]).t.kwmYkt);
+          forwardOptions(source[21]).open(obj26);
           c4 = 3;
-          const obj18 = { value: undefined, done: true };
-          return obj18;
+          const obj29 = { value: undefined, done: true };
+          return obj29;
         }
         c4 = 3;
       } catch (tmp96) {
@@ -423,22 +430,22 @@ export default function ForwardModal(message) {
     let stringResult = intl2.string(tmp8(tmp3[22]).t.TXNS7S);
   } else {
     let intl = tmp8(tmp3[22]).intl;
-    obj = { count: length };
-    stringResult = intl.formatToPlainString(tmp8(tmp3[22]).t.jWtYUm, obj);
+    let obj4 = { count: length };
+    stringResult = intl.formatToPlainString(tmp8(tmp3[22]).t.jWtYUm, obj4);
   }
-  obj = { style: memo1, children: null };
-  obj1 = { title: null, subtitleColor: "text-feedback-warning", subtitle: null, headerRight: null, onClose: null };
-  const tmp8Result1 = require("useNavigatorBackPressHandler");
+  let obj5 = { style: memo1, children: null };
+  let obj6 = { title: null, subtitleColor: "text-feedback-warning", subtitle: null, headerRight: null, onClose: null };
+  const tmp8Result4 = require("useNavigatorBackPressHandler");
   const intl3 = tmp8(tmp3[22]).intl;
-  obj1.title = intl3.string(require("util").t["+SkRRj"]);
+  obj6.title = intl3.string(require("util").t["+SkRRj"]);
   let formatToPlainStringResult;
   if (first1.length >= trackForwardEditSearchOnce) {
     const intl4 = tmp8(tmp3[22]).intl;
-    obj2 = { count: tmp18 };
-    formatToPlainStringResult = intl4.formatToPlainString(tmp8(tmp3[22]).t["3Fbkir"], obj2);
+    let obj7 = { count: tmp18 };
+    formatToPlainStringResult = intl4.formatToPlainString(tmp8(tmp3[22]).t["3Fbkir"], obj7);
   }
-  obj1.subtitle = formatToPlainStringResult;
-  obj1.headerRight = function headerRight(arg0) {
+  obj6.subtitle = formatToPlainStringResult;
+  obj6.headerRight = function headerRight(arg0) {
     let tmp = null;
     if (closure_10) {
       const obj = {};
@@ -451,9 +458,9 @@ export default function ForwardModal(message) {
     }
     return tmp;
   };
-  obj1.onClose = callback2;
-  const items13 = [ref2(forwardOptions(source[37]), obj1)];
-  let obj3 = { style: tmp.container, children: null };
+  obj6.onClose = callback2;
+  const items13 = [ref2(forwardOptions(source[37]), obj6)];
+  let obj8 = { style: tmp.container, children: null };
   const items14 = [
     ref2(forwardOptions(source[40]), { absolute: true }),
     ref2(forwardOptions(source[41]), {
@@ -470,7 +477,7 @@ export default function ForwardModal(message) {
     }),
   ];
   if (null != stateFromStores) {
-    let obj5 = {
+    let obj10 = {
       message: stateFromStores,
       forwardOptions,
       sendLabel: stringResult,
@@ -479,9 +486,9 @@ export default function ForwardModal(message) {
       isSending: tmp7,
       onSend: callback4,
     };
-    let tmp31Result = tmp31(tmp8(tmp3[42]).ForwardMessageFooter, obj5);
+    let tmp31Result = tmp31(tmp8(tmp3[42]).ForwardMessageFooter, obj10);
   } else {
-    let obj6 = {
+    let obj11 = {
       isVisible: length > 0,
       floatingBackgroundColor: tmp.container.backgroundColor,
       text: null,
@@ -493,21 +500,21 @@ export default function ForwardModal(message) {
       let stringResult1 = intl6.string(tmp8(tmp3[22]).t.TXNS7S);
     } else {
       const intl5 = tmp8(tmp3[22]).intl;
-      let obj7 = { count: length };
-      stringResult1 = intl5.formatToPlainString(tmp8(tmp3[22]).t.jWtYUm, obj7);
+      let obj12 = { count: length };
+      stringResult1 = intl5.formatToPlainString(tmp8(tmp3[22]).t.jWtYUm, obj12);
     }
-    obj6.text = stringResult1;
+    obj11.text = stringResult1;
     let tmp35;
     if (!tmp7) {
       tmp35 = callback5;
     }
-    obj6.onPress = tmp35;
-    obj6.loading = tmp7;
-    tmp31Result = tmp31(tmp8(tmp3[43]).ModalFloatingAction, obj6);
+    obj11.onPress = tmp35;
+    obj11.loading = tmp7;
+    tmp31Result = tmp31(tmp8(tmp3[43]).ModalFloatingAction, obj11);
   }
   items14[2] = tmp31Result;
-  obj3.children = items14;
-  items13[1] = first(id, obj3);
-  obj.children = items13;
-  return first(id, obj);
+  obj8.children = items14;
+  items13[1] = first(id, obj8);
+  obj5.children = items13;
+  return first(id, obj5);
 }

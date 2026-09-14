@@ -14,9 +14,8 @@ const result = size.fileFinishedImporting("modules/frames/panel/native/FramePane
 
 export default function FramePanelController(children) {
   let mainFrameId;
-  let obj = mainFrameId(504);
   const items = [FramesStore, ApplicationStore];
-  const stateFromStoresObject = obj.useStateFromStoresObject(items, () => {
+  const stateFromStoresObject = mainFrameId(504).useStateFromStoresObject(items, () => {
     const tmp = asLaunched(mainFrame.getMainFrame());
     let mode;
     if (tmp != null) {
@@ -51,17 +50,8 @@ export default function FramePanelController(children) {
       FramesActionCreatorsDefault.updateFramePanelMode(tmp, PIP);
     }
   }, items1);
-  obj = {
-    context: FramePanelStateContextDefault,
-    orientationLockStateForApp,
-    mode,
-    hasConnectedActivity: null != mainFrameId,
-    connectedActivityAppId,
-    currentApp,
-    updateActivityPanelMode: callback,
-    children: children.children,
-  };
-  return jsx(mainFrameId(17116).BaseActivityPanelController, {
+  let obj = mainFrameId(504);
+  return jsx(mainFrameId(17118).BaseActivityPanelController, {
     context: FramePanelStateContextDefault,
     orientationLockStateForApp,
     mode,

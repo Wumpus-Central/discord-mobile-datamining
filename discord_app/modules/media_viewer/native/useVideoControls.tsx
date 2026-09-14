@@ -6,10 +6,12 @@ import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../a11y/AccessibilityStore.tsx";
 
+const require = globalThis.__r;
+
 require = fn;
 const jsx = fn(21).jsx;
-let module_560 = fn(560);
-module_560 = module_560.create(() => ({ controls: "PX_16", paused: true }));
+const module_560 = fn(560);
+let obj4 = module_560.create(() => ({ controls: "PX_16", paused: true }));
 const createStyles = fn(4636);
 let closure_8 = createStyles.createStyles({ slider: { marginBottom: 8 } });
 const size = fn(2);
@@ -18,14 +20,14 @@ let result = size.fileFinishedImporting("modules/media_viewer/native/useVideoCon
 export default function useVideoControls(index, portal, controls) {
   _require = index;
   importDefault = controls;
-  let obj = require("initialize");
-  const items = [useReducedMotion];
-  stateFromStores = obj.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
-  const tmp5 = _slicedToArray(mediaItemHasSpoiler.useState(false), 2);
-  _slicedToArray = tmp6;
-  const obj2 = mediaItemHasSpoiler;
   const tmp = closure_8();
   const tmp2 = _require;
+  const items = [useReducedMotion];
+  stateFromStores = require("initialize").useStateFromStores(items, () => useReducedMotion.useReducedMotion);
+  const tmp5 = _slicedToArray(mediaItemHasSpoiler.useState(false), 2);
+  _slicedToArray = tmp6;
+  const obj = require("initialize");
+  const obj2 = mediaItemHasSpoiler;
   mediaItemHasSpoiler = require("useMediaItemHasSpoiler").useMediaItemHasSpoiler(index);
   const tmp9 = require("usePrevious")(index);
   useReducedMotion = tmp9;
@@ -60,12 +62,12 @@ export default function useVideoControls(index, portal, controls) {
   }, items1);
   [][0] = index;
   if (result) {
-    obj = { style: tmp.slider, controls, paused: tmp5[0], setPaused: tmp6, onPlayPress: tmp13 };
-    return videoURI(tmp8(tmp3[13]), obj, videoURI);
+    obj4 = { style: tmp.slider, controls, paused: tmp5[0], setPaused: tmp6, onPlayPress: tmp13 };
+    return videoURI(tmp8(tmp3[13]), obj4, videoURI);
   }
   const obj3 = require("useMediaItemHasSpoiler");
 }
-export const useVideoStateStore = module_560;
+export const useVideoStateStore = obj4;
 export const initVideoStateStore = function initVideoStateStore() {
   ReactBatchUpdates.batchUpdates(() => {
     state.setState({ controls: "PX_16", paused: true });
@@ -86,21 +88,21 @@ export const toggleMuted = function toggleMuted() {
 };
 export const setVideoStateControls = function setVideoStateControls(videoControls) {
   _require = videoControls;
-  require("ReactBatchUpdates").batchUpdates(() => module_560.setState({ controls }));
+  require("ReactBatchUpdates").batchUpdates(() => obj4.setState({ controls }));
 };
 export const setPausedState = function setPausedState(paused) {
   _require = paused;
-  require("ReactBatchUpdates").batchUpdates(() => module_560.setState({ paused }));
+  require("ReactBatchUpdates").batchUpdates(() => obj4.setState({ paused }));
 };
 export const tryPauseCurrentVideo = function tryPauseCurrentVideo() {
-  const controls = module_560.getState().controls;
+  const controls = obj4.getState().controls;
   if (controls != null) {
     controls.pause(true);
   }
 };
 export const unpauseCurrentVideoIfNeeded = function unpauseCurrentVideoIfNeeded() {
-  if (!module_560.getState().paused) {
-    const controls = module_560.getState().controls;
+  if (!obj4.getState().paused) {
+    const controls = obj4.getState().controls;
     if (controls != null) {
       controls.pause(false);
     }

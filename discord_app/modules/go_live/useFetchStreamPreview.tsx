@@ -6,6 +6,8 @@ import ChannelStore from "../../stores/ChannelStore.tsx";
 import PermissionStore from "../../stores/PermissionStore.tsx";
 import SelectedChannelStore from "../../stores/SelectedChannelStore.tsx";
 
+const require = globalThis.__r;
+
 require = fn;
 const BasicPermissions = fn(1085).BasicPermissions;
 const size = fn(2);
@@ -16,9 +18,9 @@ export default function useFetchStreamPreview(guildId, channelId, id) {
   dependencyMap = channelId;
   noop = id;
   closure_3 = tmp;
-  let obj = require("initialize");
   const items = [closure_4];
-  closure_4 = obj.useStateFromStores(items, () => ChannelStore.getChannel(closure_1));
+  closure_4 = require("initialize").useStateFromStores(items, () => ChannelStore.getChannel(closure_1));
+  let obj = require("initialize");
   const items1 = [shouldFetchPreview];
   let stateFromStores = require("initialize").useStateFromStores(items1, () => {
     let canBasicChannelResult = null != closure_4;
@@ -73,9 +75,9 @@ export default function useFetchStreamPreview(guildId, channelId, id) {
   }, items4);
   if (!(null == channelId || null == id)) {
     if (stateFromStores) {
-      obj = { previewUrl, isLoading };
+      let obj5 = { previewUrl, isLoading };
     }
-    return obj;
+    return obj5;
   }
-  obj = { previewUrl: "PX_16", isLoading: true };
+  obj5 = { previewUrl: "PX_16", isLoading: true };
 }

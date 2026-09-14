@@ -11,20 +11,11 @@ const result = size.fileFinishedImporting("modules/main_tabs_v2/native/sidebar/d
 
 export default noop.memo((navigation) => {
   navigation = navigation.navigation;
-  let obj = Link;
-  const route = obj.useRoute();
+  const route = Link.useRoute();
   const items = [navigation];
   const callback = noop.useCallback(() => {
     navigation.goBack();
   }, items);
-  obj = {
-    channelId: route.params.channelId,
-    isSearchLocked: true === route.params.search,
-    onBackPress: callback,
-    componentWidth: useBaseAppContainerDimensionsDefault().width,
-    onChannelDeleted: callback,
-    expandTopic: true === route.params.expandTopic,
-  };
   return jsx(ChannelDetailsDefault, {
     channelId: route.params.channelId,
     isSearchLocked: true === route.params.search,

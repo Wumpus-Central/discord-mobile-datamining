@@ -12,6 +12,8 @@ import RTCConnectionStore from "../../stores/RTCConnectionStore.tsx";
 import UserStore from "../../stores/UserStore.tsx";
 import VoiceStateStore from "../../stores/VoiceStateStore.tsx";
 
+const require = globalThis.__r;
+
 require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_calls/RTCConnectionDesyncHooks.tsx");

@@ -19,8 +19,8 @@ let closure_5 = async function _addChannelToFavorites(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -33,25 +33,25 @@ let closure_5 = async function _addChannelToFavorites(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c3 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           closure_1 = tmp2;
           closure_129_0 = closure_0;
           c2 = 1;
           c3 = 1;
-          const obj1 = { value: require("asyncRequireImpl")(paths[2], paths.paths), done: false };
-          return obj1;
+          const obj4 = { value: require("asyncRequireImpl")(paths[2], paths.paths), done: false };
+          return obj4;
         }
       } else if (arg0 === 1) {
         c3 = 3;
         throw value;
       } else if (arg0 === 2) {
         c3 = 3;
-        const obj2 = { value, done: true };
-        return obj2;
+        const obj5 = { value, done: true };
+        return obj5;
       } else {
-        obj = { channelIds: null, source: "channel_context_menu" };
+        const obj = { channelIds: null, source: "channel_context_menu" };
         const items = [closure_129_0];
         obj.channelIds = items;
         value.addFavoriteChannels(obj);
@@ -72,8 +72,8 @@ let closure_6 = async function _removeChannelFromFavorites(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -86,22 +86,22 @@ let closure_6 = async function _removeChannelFromFavorites(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c3 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           closure_1 = tmp2;
           closure_129_0 = closure_0;
           c2 = 1;
           c3 = 1;
-          const obj1 = { value: require("asyncRequireImpl")(paths[2], paths.paths), done: false };
-          return obj1;
+          const obj4 = { value: require("asyncRequireImpl")(paths[2], paths.paths), done: false };
+          return obj4;
         }
       } else if (arg0 === 1) {
         c3 = 3;
         throw value;
       } else if (arg0 === 2) {
         c3 = 3;
-        obj = { value, done: true };
+        const obj = { value, done: true };
         return obj;
       } else {
         const result = value.removeFavoriteChannel(closure_129_0);
@@ -116,7 +116,7 @@ let closure_6 = async function _removeChannelFromFavorites(arg0) {
 };
 function openNoAccessUpsell() {
   const obj = ActionSheetActionCreatorsDefault;
-  obj.openLazy(asyncRequireImpl(10356, dependencyMap.paths), openFavoritesGuildLimitUpsell.FAVORITES_UPSELL_SHEET_KEY, {
+  obj.openLazy(asyncRequireImpl(10357, dependencyMap.paths), openFavoritesGuildLimitUpsell.FAVORITES_UPSELL_SHEET_KEY, {
     source: "channel_context_menu",
   });
 }
@@ -131,18 +131,18 @@ export default function buildFavoritesSectionButtons(isExperimentEnabled) {
     tmp6 = null;
     if (tmp2) {
       if (!tmp) {
-        let obj = { label: null, IconComponent: null, onPress: null };
+        const obj = { label: null, IconComponent: null, onPress: null };
         const intl = util.intl;
         obj.label = intl.string(_modDef3236.G9fGlP);
         obj.IconComponent = NitroWheelIcon.NitroWheelIcon;
         obj.onPress = openNoAccessUpsell;
       }
       if (tmp3) {
-        obj = { label: null, IconComponent: null, isDestructive: true, onPress: null };
+        const obj2 = { label: null, IconComponent: null, isDestructive: true, onPress: null };
         const intl3 = util.intl;
-        obj.label = intl3.string(_modDef3236.TN4nAX);
-        obj.IconComponent = StarIcon.StarIcon;
-        obj.onPress = function onPress() {
+        obj2.label = intl3.string(_modDef3236.TN4nAX);
+        obj2.IconComponent = StarIcon.StarIcon;
+        obj2.onPress = function onPress() {
           return (function removeChannelFromFavorites() {
             const self = this;
             const apply = closure_1_6.apply;
@@ -155,17 +155,17 @@ export default function buildFavoritesSectionButtons(isExperimentEnabled) {
           })(require);
         };
       } else if (!tmp4) {
-        obj = { label: null, IconComponent: null, trailing: null, onPress: null };
+        const obj3 = { label: null, IconComponent: null, trailing: null, onPress: null };
         const intl2 = util.intl;
-        obj.label = intl2.string(_modDef3236.G9fGlP);
-        obj.IconComponent = StarOutlineIcon.StarOutlineIcon;
+        obj3.label = intl2.string(_modDef3236.G9fGlP);
+        obj3.IconComponent = StarOutlineIcon.StarOutlineIcon;
         let tmp15;
         if (tmp5) {
-          const obj1 = { size: native.BetaSizes.SMALL };
+          const obj4 = { size: native.BetaSizes.SMALL };
           tmp15 = jsx(native.BetaTag, { size: native.BetaSizes.SMALL });
         }
-        obj.trailing = tmp15;
-        obj.onPress = function onPress() {
+        obj3.trailing = tmp15;
+        obj3.onPress = function onPress() {
           importDefault();
           (function addChannelToFavorites() {
             const self = this;

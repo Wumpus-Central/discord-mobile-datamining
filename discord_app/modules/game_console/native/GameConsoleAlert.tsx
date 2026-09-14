@@ -21,9 +21,10 @@ export const SelfDismissibleAlertBody = function SelfDismissibleAlertBody(errorC
   errorCodeMessage = errorCodeMessage.errorCodeMessage;
   let stateFromStores;
   const tmp = closure_7();
-  let obj = dismissCallback(stateFromStores[5]);
   const items = [GameConsoleStore];
-  stateFromStores = obj.useStateFromStores(items, () => remoteSessionId.getRemoteSessionId());
+  stateFromStores = dismissCallback(stateFromStores[5]).useStateFromStores(items, () =>
+    remoteSessionId.getRemoteSessionId(),
+  );
   const items1 = [stateFromStores, dismissCallback];
   const effect = noop.useEffect(() => {
     if (null != stateFromStores) {
@@ -32,21 +33,21 @@ export const SelfDismissibleAlertBody = function SelfDismissibleAlertBody(errorC
   }, items1);
   let tmp6 = body;
   if (null != errorCodeMessage) {
-    obj = { style: tmp.container, children: null };
-    obj = { maxFontSizeMultiplier: 1, variant: "text-md/normal", style: null, children: null };
+    const obj2 = { style: tmp.container, children: null };
+    const obj3 = { maxFontSizeMultiplier: 1, variant: "text-md/normal", style: null, children: null };
     const items2 = [,];
     ({ body: arr3[0], alertBody: arr3[1] } = tmp);
-    obj.style = items2;
-    obj.children = body;
-    const items3 = [closure_5(dismissCallback(tmp3[6]).Text, obj)];
-    const obj1 = { maxFontSizeMultiplier: 1, variant: "text-md/normal", style: null, children: null };
+    obj3.style = items2;
+    obj3.children = body;
+    const items3 = [closure_5(dismissCallback(tmp3[6]).Text, obj3)];
+    const obj4 = { maxFontSizeMultiplier: 1, variant: "text-md/normal", style: null, children: null };
     const items4 = [,];
     ({ body: arr5[0], errorCodeText: arr5[1] } = tmp);
-    obj1.style = items4;
-    obj1.children = errorCodeMessage;
-    items3[1] = closure_5(dismissCallback(tmp3[6]).Text, obj1);
-    obj.children = items3;
-    tmp6 = closure_6(View, obj);
+    obj4.style = items4;
+    obj4.children = errorCodeMessage;
+    items3[1] = closure_5(dismissCallback(tmp3[6]).Text, obj4);
+    obj2.children = items3;
+    tmp6 = closure_6(View, obj2);
   }
   return tmp6;
 };

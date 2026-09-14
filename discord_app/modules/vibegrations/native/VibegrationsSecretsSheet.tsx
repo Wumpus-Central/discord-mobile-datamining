@@ -4,20 +4,25 @@ import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
+const require = globalThis.__r;
+
 const require = fn;
 const View = fn(17).View;
-const VibegrationsConnectionStore = fn(16690);
+const VibegrationsConnectionStore = fn(16692);
 ({ sendUserMessage: closure_7, submitProjectSecrets: closure_8 } = VibegrationsConnectionStore);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
 const VibegrationsSecretsSheet = "VibegrationsSecretsSheet";
 const createStyles = fn(4636);
 let closure_12 = createStyles.createStyles((paddingBottom) => {
-  let obj = { container: null, copyRow: null, copyInfo: null };
-  obj = { gap: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16, paddingBottom };
-  obj.container = obj;
-  obj = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 };
-  obj.copyRow = obj;
+  const obj = {
+    container: { gap: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16, paddingBottom },
+    copyRow: null,
+    copyInfo: null,
+  };
+  const obj2 = { gap: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16, paddingBottom };
+  obj.copyRow = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 };
+  const obj3 = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 };
   obj.copyInfo = { flex: 1, gap: nativeDefault.space.PX_4 };
   return obj;
 });
@@ -81,8 +86,8 @@ export default function VibegrationsSecretsSheet(projectId) {
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
-          let obj = { value, done: true };
-          return obj;
+          const obj2 = { value, done: true };
+          return obj2;
         } else {
           return { value: "HermesInternal", done: null };
         }
@@ -95,17 +100,17 @@ export default function VibegrationsSecretsSheet(projectId) {
               throw value;
             } else if (arg0 === 2) {
               c4 = 3;
-              obj = { value, done: true };
-              return obj;
+              const obj3 = { value, done: true };
+              return obj3;
             } else {
               if (closure_12) {
                 if (!first1) {
                   closure_5(true);
                   closure_6(false);
                   c3 = 2;
-                  const obj1 = { secrets: null };
+                  const obj4 = { secrets: null };
                   const _Object = Object;
-                  obj1.secrets = Object.fromEntries(
+                  obj4.secrets = Object.fromEntries(
                     found.map((item) => {
                       const items = [item, closure_1_2[item].trim()];
                       return items;
@@ -113,8 +118,8 @@ export default function VibegrationsSecretsSheet(projectId) {
                   );
                   v3 = 3;
                   c4 = 1;
-                  const obj2 = { value: _undefined2(projectId, obj1), done: false };
-                  return obj2;
+                  const obj5 = { value: _undefined2(projectId, obj4), done: false };
+                  return obj5;
                 }
               }
               c4 = 3;
@@ -130,8 +135,8 @@ export default function VibegrationsSecretsSheet(projectId) {
               c3 = 0;
               closure_128_5(false);
               c4 = 3;
-              const obj3 = { value, done: true };
-              return obj3;
+              const obj6 = { value, done: true };
+              return obj6;
             } else {
               const intl = tmp4(tmp37[10]).intl;
               const tmp54 = v3(tmp37[11]);
@@ -141,9 +146,9 @@ export default function VibegrationsSecretsSheet(projectId) {
                 lM98yZ = tmp54.lM98yZ;
               }
               _undefined(closure_128_0, intl.string(lM98yZ));
-              obj = v3(tmp37[12]);
-              obj.hideActionSheet(closure_1_11);
+              v3(tmp37[12]).hideActionSheet(closure_1_11);
               c3 = 1;
+              const obj = v3(tmp37[12]);
             }
             c3 = 0;
             closure_128_5(false);
@@ -166,51 +171,54 @@ export default function VibegrationsSecretsSheet(projectId) {
     items,
   );
   let obj = { startExpanded: true, header: null, children: null };
-  obj = { title: null };
+  let obj2 = { title: null };
   let intl = projectId(first[10]).intl;
-  obj.title = intl.string(require("../intl/VibegrationsUntranslated.messages.js").ACvhVC);
-  obj.header = closure_9(projectId(first[14]).BottomSheetTitleHeader, obj);
-  obj = { style: tmp3.container, children: null };
+  obj2.title = intl.string(require("../intl/VibegrationsUntranslated.messages.js").ACvhVC);
+  obj.header = closure_9(projectId(first[14]).BottomSheetTitleHeader, obj2);
+  let obj3 = { style: tmp3.container, children: null };
   let tmp13Result = null;
   if (null != request.note) {
     tmp13Result = null;
     if ("" !== request.note) {
-      let obj1 = { variant: "text-sm/normal", color: "text-default", children: request.note };
-      tmp13Result = tmp13(tmp14(tmp2[15]).Text, obj1);
+      let obj4 = { variant: "text-sm/normal", color: "text-default", children: request.note };
+      tmp13Result = tmp13(tmp14(tmp2[15]).Text, obj4);
     }
   }
   let items1 = [tmp13Result, , , , , ,];
-  let obj2 = { variant: "text-xs/normal", color: "text-muted", children: null };
+  let obj5 = { variant: "text-xs/normal", color: "text-muted", children: null };
   const intl2 = tmp14(tmp2[10]).intl;
-  obj2.children = intl2.string(require("../intl/VibegrationsUntranslated.messages.js").p0Ay4J);
-  items1[1] = closure_9(projectId(first[15]).Text, obj2);
-  tmp13Result = null;
+  obj5.children = intl2.string(require("../intl/VibegrationsUntranslated.messages.js").p0Ay4J);
+  items1[1] = closure_9(projectId(first[15]).Text, obj5);
+  let tmp13Result3 = null;
   if (request.fields.length > 1) {
-    let obj3 = { variant: "text-xs/normal", color: "text-muted", children: null };
+    let obj6 = { variant: "text-xs/normal", color: "text-muted", children: null };
     const intl3 = tmp14(tmp2[10]).intl;
-    obj3.children = intl3.string(tmp(tmp2[11]).LpnmXm);
-    tmp13Result = tmp13(tmp14(tmp2[15]).Text, obj3);
+    obj6.children = intl3.string(tmp(tmp2[11]).LpnmXm);
+    tmp13Result3 = tmp13(tmp14(tmp2[15]).Text, obj6);
   }
-  items1[2] = tmp13Result;
+  items1[2] = tmp13Result3;
   let copy_values = request.copy_values;
   if (copy_values == null) {
     copy_values = [];
   }
   items1[3] = copy_values.map((children) => {
     value = children;
-    let obj = { style: closure_1.copyRow, children: null };
-    obj = { style: closure_1.copyInfo, children: null };
-    obj = { variant: "text-xs/semibold", color: "text-muted", children: children.label };
+    const obj = { style: closure_1.copyRow, children: null };
+    const obj2 = { style: closure_1.copyInfo, children: null };
     const items = [
-      closure_9(projectId(first[15]).Text, obj),
+      closure_9(projectId(first[15]).Text, {
+        variant: "text-xs/semibold",
+        color: "text-muted",
+        children: children.label,
+      }),
       closure_9(projectId(first[15]).Text, {
         variant: "text-xs/normal",
         color: "text-default",
         children: children.value,
       }),
     ];
-    obj.children = items;
-    const items1 = [closure_10(closure_6, obj)];
+    obj2.children = items;
+    const items1 = [closure_10(closure_6, obj2)];
     const intl = projectId(first[10]).intl;
     if (c7 === children.value) {
       let OpuAlK = projectId(first[10]).t.t5VZ88;
@@ -259,23 +267,23 @@ export default function VibegrationsSecretsSheet(projectId) {
     obj.isDisabled = first1;
     return closure_9(projectId(first[17]).TextInput, obj, label.name);
   });
-  let tmp13Result1 = null;
+  let tmp13Result4 = null;
   if (tmp8[0]) {
-    const obj4 = { variant: "text-xs/normal", color: "text-feedback-critical", children: null };
+    const obj7 = { variant: "text-xs/normal", color: "text-feedback-critical", children: null };
     const intl4 = tmp14(tmp2[10]).intl;
-    obj4.children = intl4.string(tmp(tmp2[11])["4nT7Lo"]);
-    tmp13Result1 = tmp13(tmp14(tmp2[15]).Text, obj4);
+    obj7.children = intl4.string(tmp(tmp2[11])["4nT7Lo"]);
+    tmp13Result4 = tmp13(tmp14(tmp2[15]).Text, obj7);
   }
-  items1[5] = tmp13Result1;
-  const obj5 = { text: null, variant: "primary", loading: null, disabled: null, onPress: null };
+  items1[5] = tmp13Result4;
+  const obj8 = { text: null, variant: "primary", loading: null, disabled: null, onPress: null };
   const intl5 = tmp14(tmp2[10]).intl;
-  obj5.text = intl5.string(require("../intl/VibegrationsUntranslated.messages.js")["8SWZaW"]);
-  obj5.loading = first1;
-  obj5.disabled = found.length <= 0;
-  obj5.onPress = callback;
-  items1[6] = closure_9(projectId(first[16]).Button, obj5);
-  obj.children = items1;
-  obj.children = closure_10(closure_6, obj);
+  obj8.text = intl5.string(require("../intl/VibegrationsUntranslated.messages.js")["8SWZaW"]);
+  obj8.loading = first1;
+  obj8.disabled = found.length <= 0;
+  obj8.onPress = callback;
+  items1[6] = closure_9(projectId(first[16]).Button, obj8);
+  obj3.children = items1;
+  obj.children = closure_10(closure_6, obj3);
   return closure_9(projectId(first[13]).ActionSheet, obj);
 }
 export const VIBEGRATIONS_SECRETS_SHEET_KEY = "VibegrationsSecretsSheet";

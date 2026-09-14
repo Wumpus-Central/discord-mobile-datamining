@@ -27,7 +27,7 @@ export default function useRefocusOrLaunchActivity(applicationId) {
   stateFromStores1 = applicationId(runBeforeLaunchAttempt[6]).useStateFromStores(items1, () =>
     stateFromStores.getMainFrame(),
   );
-  let obj3 = applicationId(runBeforeLaunchAttempt[6]);
+  const obj3 = applicationId(runBeforeLaunchAttempt[6]);
   const canLaunchFrameResult = applicationId(runBeforeLaunchAttempt[7]).canLaunchFrame(data);
   c7 = canLaunchFrameResult;
   const items2 = [
@@ -49,8 +49,8 @@ export default function useRefocusOrLaunchActivity(applicationId) {
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
-          let obj = { value, done: true };
-          return obj;
+          const obj2 = { value, done: true };
+          return obj2;
         } else {
           return { value: "HermesInternal", done: null };
         }
@@ -63,8 +63,8 @@ export default function useRefocusOrLaunchActivity(applicationId) {
               throw value;
             } else if (arg0 === 2) {
               c5 = 3;
-              obj = { value, done: true };
-              return obj;
+              const obj4 = { value, done: true };
+              return obj4;
             } else {
               if (null != applicationId) {
                 if (null != data) {
@@ -74,8 +74,8 @@ export default function useRefocusOrLaunchActivity(applicationId) {
                   }
                   if (null != stateFromStores1) {
                     if (stateFromStores1.applicationId === applicationId) {
-                      const obj1 = { frameId: stateFromStores1.id, layoutMode: constants.FOCUSED };
-                      const result = tmp3(9637).updateFrameLayoutMode(obj1);
+                      const obj5 = { frameId: stateFromStores1.id, layoutMode: constants.FOCUSED };
+                      const result = tmp3(9637).updateFrameLayoutMode(obj5);
                       const obj10 = tmp3(9637);
                     }
                   }
@@ -93,14 +93,13 @@ export default function useRefocusOrLaunchActivity(applicationId) {
                     }
                     c4 = 1;
                     if (c7) {
-                      let obj5 = tmp3(9637);
-                      let obj2 = { applicationId, surface, analyticsContext: null };
-                      const obj3 = { isStart: true, analyticsLocations };
-                      obj2.analyticsContext = obj3;
+                      const obj7 = { applicationId, surface, analyticsContext: null };
+                      const obj8 = { isStart: true, analyticsLocations };
+                      obj7.analyticsContext = obj8;
                       dependencyMap = 2;
                       c5 = 1;
-                      const obj4 = { value: obj5.launchFrame(obj2), done: false };
-                      return obj4;
+                      const obj9 = { value: tmp3(9637).launchFrame(obj7), done: false };
+                      return obj9;
                     } else {
                       let id;
                       if (data != null) {
@@ -114,8 +113,7 @@ export default function useRefocusOrLaunchActivity(applicationId) {
                       }
                     }
                   }
-                  obj2 = analyticsLocations(11652);
-                  obj5 = { appId: applicationId, botId: null, analyticsLocations: null };
+                  const obj11 = { appId: applicationId, botId: null, analyticsLocations: null };
                   let id1;
                   if (data != null) {
                     const bot2 = data.bot;
@@ -123,15 +121,15 @@ export default function useRefocusOrLaunchActivity(applicationId) {
                       id1 = bot2.id;
                     }
                   }
-                  obj5.botId = id1;
+                  obj11.botId = id1;
                   if (analyticsLocations == null) {
                     analyticsLocations = [];
                   }
-                  obj5.analyticsLocations = analyticsLocations;
+                  obj11.analyticsLocations = analyticsLocations;
                   dependencyMap = 3;
                   c5 = 1;
-                  const obj6 = { value: obj2.launchActivityInBotDM(obj5), done: false };
-                  return obj6;
+                  const obj12 = { value: analyticsLocations(11653).launchActivityInBotDM(obj11), done: false };
+                  return obj12;
                 }
               }
               c5 = 3;
@@ -145,8 +143,8 @@ export default function useRefocusOrLaunchActivity(applicationId) {
             } else if (arg0 === 2) {
               c4 = 0;
               c5 = 3;
-              const obj7 = { value, done: true };
-              return obj7;
+              const obj13 = { value, done: true };
+              return obj13;
             }
           } else if (arg0 === 1) {
             c5 = 3;
@@ -154,7 +152,7 @@ export default function useRefocusOrLaunchActivity(applicationId) {
           } else if (arg0 === 2) {
             c4 = 0;
             c5 = 3;
-            obj = { value, done: true };
+            const obj = { value, done: true };
             return obj;
           }
           if (closure_129_3 != null) {

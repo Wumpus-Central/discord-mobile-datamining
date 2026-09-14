@@ -7,6 +7,8 @@ import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import UploadAttachmentStore from "../../../stores/UploadAttachmentStore.tsx";
 
+const require = globalThis.__r;
+
 require = fn;
 const ActivityIndicator = fn(17).ActivityIndicator;
 const DraftType = fn(4977).DraftType;
@@ -21,9 +23,8 @@ export default function useRenderPollAnswerImage(arg0, arg1, mediaAttachmentStat
   dependencyMap = mediaAttachmentState;
   _slicedToArray = arg3;
   noop = arg4;
-  let obj = require("initialize");
   const items = [closure_7];
-  const stateFromStores = obj.useStateFromStores(items, () =>
+  const stateFromStores = require("initialize").useStateFromStores(items, () =>
     UploadAttachmentStore.getUpload(closure_0, closure_1, DraftType.Poll),
   );
   const tmp4 = _slicedToArray(noop.useState(), 2);
@@ -37,9 +38,9 @@ export default function useRenderPollAnswerImage(arg0, arg1, mediaAttachmentStat
   }
   const tmp7 = status === require("PollTypes").PollMediaUploadAttachmentStatus.PREPARING;
   closure_7 = tmp7;
-  obj = { renderImage: null, upload: stateFromStores, setUploadSize: tmp4[1] };
+  let obj3 = { renderImage: null, upload: stateFromStores, setUploadSize: tmp4[1] };
   const items1 = [mediaAttachmentState, arg4, arg3, stateFromStores, tmp7, first];
-  obj.renderImage = noop.useMemo(() => {
+  obj3.renderImage = noop.useMemo(() => {
     if (closure_7) {
       return <ActivityIndicator />;
     } else if (null != stateFromStores) {
@@ -47,24 +48,24 @@ export default function useRenderPollAnswerImage(arg0, arg1, mediaAttachmentStat
       if (closure_3 == null) {
         tmp14 = first;
       }
-      let obj = { style: null, source: null };
+      const obj2 = { style: null, source: null };
       const size = { width: tmp14, height: tmp14 };
-      obj.style = size;
-      obj = { uri: stateFromStores.item.uri };
-      obj.source = obj;
-      return jsx(FastImageDefault, { uri: stateFromStores.item.uri });
+      obj2.style = size;
+      const obj3 = { uri: stateFromStores.item.uri };
+      obj2.source = obj3;
+      return jsx(FastImageDefault, { style: null, source: null });
     } else {
-      let emoji;
+      let emoji1;
       if (mediaAttachmentState != null) {
-        emoji = mediaAttachmentState.emoji;
+        emoji1 = mediaAttachmentState.emoji;
       }
-      if (null != emoji) {
-        emoji = mediaAttachmentState.emoji;
-        obj = { fastImageStyle: null, textEmojiStyle: null, name: null, src: null };
+      if (null != emoji1) {
+        const emoji = mediaAttachmentState.emoji;
+        const obj = { fastImageStyle: null, textEmojiStyle: null, name: null, src: null };
         const size1 = { width: fontSize, height: fontSize };
         obj.fastImageStyle = size1;
-        const obj1 = { fontSize };
-        obj.textEmojiStyle = obj1;
+        const obj6 = { fontSize };
+        obj.textEmojiStyle = obj6;
         let str = emoji.type === EmojiTypes.EmojiTypes.UNICODE ? emoji.surrogates : emoji.name;
         if (str == null) {
           str = "";
@@ -72,15 +73,15 @@ export default function useRenderPollAnswerImage(arg0, arg1, mediaAttachmentStat
         obj.name = str;
         let emojiURL;
         if (null != emoji.id) {
-          const obj2 = { id: null, animated: null, size: null };
+          const obj7 = { id: null, animated: null, size: null };
           ({ id: obj5.id, animated: obj5.animated } = emoji);
-          obj2.size = EMOJI_URL_BASE_SIZE;
-          emojiURL = AvatarUtilsDefault.getEmojiURL(obj2);
+          obj7.size = EMOJI_URL_BASE_SIZE;
+          emojiURL = AvatarUtilsDefault.getEmojiURL(obj7);
         }
         obj.src = emojiURL;
         return jsx(EmojiDefault, { fastImageStyle: null, textEmojiStyle: null, name: null, src: null });
       }
     }
   }, items1);
-  return obj;
+  return obj3;
 }

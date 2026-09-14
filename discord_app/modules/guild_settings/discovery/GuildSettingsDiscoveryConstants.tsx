@@ -667,11 +667,12 @@ export const calculateLocaleOptions = function calculateLocaleOptions() {
   const mapped = availableLocales.map((value) => {
     value = value.value;
     if ("en-US" === value) {
-      let obj = { id: value, value, label: null, image: "a" };
+      const obj2 = { id: value, value, label: null, image: "Array" };
       const intl = util.intl;
-      obj.label = intl.string(util.t.WKEPHR);
+      obj2.label = intl.string(util.t.WKEPHR);
+      let obj = obj2;
     } else {
-      obj = { id: value, value, label: tmp, image: "a" };
+      obj = { id: value, value, label: tmp, image: "Array" };
     }
     return obj;
   });

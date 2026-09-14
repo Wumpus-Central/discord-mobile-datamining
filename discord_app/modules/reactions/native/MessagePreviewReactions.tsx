@@ -11,10 +11,9 @@ const result = size.fileFinishedImporting("modules/reactions/native/MessagePrevi
 
 export default function MessagePreviewReactions(emoji) {
   ({ channelId, messageId } = emoji);
-  let obj = channelId(504);
   const items = [MessagePreviewStore, ConversationsStore];
   const items1 = [channelId, messageId];
-  const stateFromStores = obj.useStateFromStores(
+  const stateFromStores = channelId(504).useStateFromStores(
     items,
     () => {
       let message = MessagePreviewStore.getMessage(messageId);
@@ -25,19 +24,20 @@ export default function MessagePreviewReactions(emoji) {
     },
     items1,
   );
-  obj = { value: messageId(7265)(messageId(7285).MESSAGE_PREVIEW_REACTIONS).analyticsLocations, children: null };
+  const obj = channelId(504);
+  const obj2 = { value: messageId(7265)(messageId(7285).MESSAGE_PREVIEW_REACTIONS).analyticsLocations, children: null };
   if (stateFromStores.length > 0) {
-    obj = { channelId, messageId, emoji: emoji.emoji, reactions: stateFromStores };
-    let tmp4Result = jsx(channelId(11389).MessageReactionsContent, {
+    const obj3 = { channelId, messageId, emoji: emoji.emoji, reactions: stateFromStores };
+    let tmp4Result = jsx(channelId(11390).MessageReactionsContent, {
       channelId,
       messageId,
       emoji: emoji.emoji,
       reactions: stateFromStores,
     });
   } else {
-    tmp4Result = jsx(channelId(11389).MessageReactionsEmpty, {});
+    tmp4Result = jsx(channelId(11390).MessageReactionsEmpty, {});
   }
-  obj.children = tmp4Result;
+  obj2.children = tmp4Result;
   return jsx(channelId(7265).AnalyticsLocationProvider, {
     value: messageId(7265)(messageId(7285).MESSAGE_PREVIEW_REACTIONS).analyticsLocations,
     children: null,

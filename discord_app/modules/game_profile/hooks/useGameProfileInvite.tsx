@@ -7,6 +7,8 @@ import GameStore from "../../games/GameStore.tsx";
 import GuildMembershipStore from "../../../stores/GuildMembershipStore.tsx";
 import InviteStore from "../../../stores/InviteStore.tsx";
 
+const require = globalThis.__r;
+
 const require = fn;
 function isUsableGameProfileInvite(state) {
   let tmp = null != state;
@@ -32,8 +34,8 @@ function isUsableGameProfileInvite(state) {
 }
 const Constants = fn(1074);
 ({ InviteStates: closure_7, QueryIds } = Constants);
-fn(504);
-const initialize = {
+const initialize = fn(504);
+const obj2 = {
   getQueryId: QueryIds.GAME_PROFILE_INVITE,
   staleAfter: 5 * DurationsDefault.Seconds.MINUTE,
   failureStaleAfter: 5 * DurationsDefault.Seconds.MINUTE,
@@ -78,8 +80,8 @@ let closure_9 = asyncGeneratorStep(async (arg0) => {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj3 = { value, done: true };
+      return obj3;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -92,19 +94,20 @@ let closure_9 = asyncGeneratorStep(async (arg0) => {
           throw value;
         } else if (arg0 === 2) {
           c4 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj4 = { value, done: true };
+          return obj4;
         } else {
           closure_2 = tmp2;
           c1 = 0;
           closure_129_0 = closure_0;
           if (null != closure_0) {
-            let obj1 = InstantInviteActionCreatorsDefault;
             c3 = 1;
             c4 = 1;
-            obj1 = { value: null, done: false };
-            obj1.value = obj1.resolveInvite(tmp18, "game_profile");
-            return obj1;
+            const obj5 = {
+              value: InstantInviteActionCreatorsDefault.resolveInvite(tmp18, "game_profile"),
+              done: false,
+            };
+            return obj5;
           }
         }
       } else if (arg0 === 1) {
@@ -112,7 +115,7 @@ let closure_9 = asyncGeneratorStep(async (arg0) => {
         throw value;
       } else if (arg0 === 2) {
         c4 = 3;
-        obj = { value, done: true };
+        const obj = { value, done: true };
         return obj;
       } else if (!closure_130_8(closure_130_6.getInvite(closure_129_0))) {
         const _Error = Error;
@@ -128,7 +131,7 @@ let closure_9 = asyncGeneratorStep(async (arg0) => {
     }
   }
 });
-initialize.load = function () {
+obj2.load = function () {
   const self = this;
   const apply = closure_9.apply;
   if (typeof apply === "unknown") {
@@ -138,13 +141,12 @@ initialize.load = function () {
   }
   return applyArgumentsResult;
 };
-let closure_10 = initialize.createFetchStore(InviteStore, initialize);
+let closure_10 = initialize.createFetchStore(InviteStore, obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_profile/hooks/useGameProfileInvite.tsx");
 
 export default function useGameProfileInvite(websites, current) {
   _require = current;
-  let obj = noop;
   noop.useRef(current);
   const items = [current];
   const effect = noop.useEffect(() => {
@@ -198,7 +200,7 @@ export default function useGameProfileInvite(websites, current) {
     }
     return isMemberResult;
   });
-  const effect1 = obj.useEffect(() => {
+  const effect1 = noop.useEffect(() => {
     if (null != data) {
       current = ref.current;
       if (current != null) {
@@ -206,7 +208,7 @@ export default function useGameProfileInvite(websites, current) {
       }
     }
   }, items2);
-  obj = { invite: data, isMember: stateFromStores, isResolving: null };
+  const obj3 = { invite: data, isMember: stateFromStores, isResolving: null };
   let tmp8 = null != tmp4 && null == data;
   if (tmp8) {
     if (!isLoading) {
@@ -214,8 +216,8 @@ export default function useGameProfileInvite(websites, current) {
     }
     tmp8 = isLoading;
   }
-  obj.isResolving = tmp8;
-  return obj;
+  obj3.isResolving = tmp8;
+  return obj3;
 }
 export const hasGameProfileDiscordWebsite = function hasGameProfileDiscordWebsite(game) {
   let flag;

@@ -25,28 +25,26 @@ let result = size.fileFinishedImporting("modules/user_settings/profiles/native/G
 export default function GuildProfileEmptyState() {
   const tmp = closure_8();
   let obj = { contentContainerStyle: tmp.container, children: null };
-  obj = { style: tmp.image, children: null };
-  obj = { style: tmp.image };
-  obj.children = timestampProducer(GuildProfileEmptyStateSvgDefault, obj);
-  const items = [timestampProducer(hasOwnProperty, obj), , , ,];
-  let obj1 = {
+  let obj2 = { style: tmp.image, children: timestampProducer(GuildProfileEmptyStateSvgDefault, { style: tmp.image }) };
+  const items = [timestampProducer(hasOwnProperty, obj2), , , ,];
+  let obj4 = {
     style: tmp.header,
     variant: "heading-xl/semibold",
     color: "mobile-text-heading-primary",
     children: null,
   };
   const intl = util.intl;
-  obj1.children = intl.string(util.t.Z1OZCV);
-  items[1] = timestampProducer(Text_Text.Text, obj1);
-  const obj2 = { style: tmp.header, variant: "text-sm/normal", color: "text-default", children: null };
+  obj4.children = intl.string(util.t.Z1OZCV);
+  items[1] = timestampProducer(Text_Text.Text, obj4);
+  const obj5 = { style: tmp.header, variant: "text-sm/normal", color: "text-default", children: null };
   const intl2 = util.intl;
-  obj2.children = intl2.string(util.t.UEmBq7);
-  items[2] = timestampProducer(Text_Text.Text, obj2);
-  const obj3 = { style: tmp.createButton, children: null };
-  const obj4 = { text: null, onPress: null };
+  obj5.children = intl2.string(util.t.UEmBq7);
+  items[2] = timestampProducer(Text_Text.Text, obj5);
+  const obj6 = { style: tmp.createButton, children: null };
+  const obj7 = { text: null, onPress: null };
   const intl3 = util.intl;
-  obj4.text = intl3.string(util.t["6dIB4R"]);
-  obj4.onPress = asyncGeneratorStep(async () => {
+  obj7.text = intl3.string(util.t["6dIB4R"]);
+  obj7.onPress = asyncGeneratorStep(async () => {
     if (c0 === 2) {
       c0 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -54,8 +52,8 @@ export default function GuildProfileEmptyState() {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -68,20 +66,20 @@ export default function GuildProfileEmptyState() {
             throw value;
           } else if (arg0 === 2) {
             c0 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
             c1 = 1;
             c0 = 1;
-            const obj1 = { value: asyncRequireImpl(dependencyMap[9], dependencyMap.paths), done: false };
-            return obj1;
+            const obj4 = { value: asyncRequireImpl(dependencyMap[9], dependencyMap.paths), done: false };
+            return obj4;
           }
         } else if (arg0 === 1) {
           c0 = 3;
           throw value;
         } else if (arg0 === 2) {
           c0 = 3;
-          obj = { value, done: true };
+          const obj = { value, done: true };
           return obj;
         } else {
           value.default.openCreateGuildModal();
@@ -94,12 +92,12 @@ export default function GuildProfileEmptyState() {
       }
     }
   });
-  obj3.children = timestampProducer(components_Button_Button.Button, obj4);
-  items[3] = timestampProducer(hasOwnProperty, obj3);
-  const obj5 = { text: null, variant: "secondary", onPress: null };
+  obj6.children = timestampProducer(components_Button_Button.Button, obj7);
+  items[3] = timestampProducer(hasOwnProperty, obj6);
+  const obj8 = { text: null, variant: "secondary", onPress: null };
   const intl4 = util.intl;
-  obj5.text = intl4.string(util.t.yRjK4p);
-  obj5.onPress = asyncGeneratorStep(async () => {
+  obj8.text = intl4.string(util.t.yRjK4p);
+  obj8.onPress = asyncGeneratorStep(async () => {
     if (c0 === 2) {
       c0 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -107,8 +105,8 @@ export default function GuildProfileEmptyState() {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -121,20 +119,20 @@ export default function GuildProfileEmptyState() {
             throw value;
           } else if (arg0 === 2) {
             c0 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
             c1 = 1;
             c0 = 1;
-            const obj1 = { value: asyncRequireImpl(dependencyMap[9], dependencyMap.paths), done: false };
-            return obj1;
+            const obj4 = { value: asyncRequireImpl(dependencyMap[9], dependencyMap.paths), done: false };
+            return obj4;
           }
         } else if (arg0 === 1) {
           c0 = 3;
           throw value;
         } else if (arg0 === 2) {
           c0 = 3;
-          obj = { value, done: true };
+          const obj = { value, done: true };
           return obj;
         } else {
           const result = value.default.openGuildJoinServerScreen();
@@ -147,7 +145,7 @@ export default function GuildProfileEmptyState() {
       }
     }
   });
-  items[4] = timestampProducer(components_Button_Button.Button, obj5);
+  items[4] = timestampProducer(components_Button_Button.Button, obj8);
   obj.children = items;
   return React5(React4, obj);
 }

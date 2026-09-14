@@ -38,25 +38,24 @@ export default function CustomTypingIndicatorDisplay(showName) {
   if (flag) {
     if (null != username) {
       const intl2 = util.intl;
-      let obj1 = CustomTypingIndicatorUtils;
-      let obj = { name: username };
+      const obj3 = { name: username };
       let formatResult = intl2.format(
-        obj1.getCustomTypingIndicatorSuggestionWithNameMessage(config.typingSuggestion),
-        obj,
+        CustomTypingIndicatorUtils.getCustomTypingIndicatorSuggestionWithNameMessage(config.typingSuggestion),
+        obj3,
       );
     }
     let str = "flex-start";
     if (flag2) {
       str = "center";
     }
-    obj = { direction: "horizontal", spacing: 8, align: "center", justify: str, children: null };
+    const obj4 = { direction: "horizontal", spacing: 8, align: "center", justify: str, children: null };
     let tmp10 = null;
     if (showEmojis) {
-      obj1 = { config, size: num };
-      tmp10 = React3(CustomTypingIndicatorGlyphDefault, obj1);
+      const obj5 = { config, size: num };
+      tmp10 = React3(CustomTypingIndicatorGlyphDefault, obj5);
     }
     const items = [tmp10];
-    const obj2 = {
+    const obj6 = {
       style: tmp.text,
       variant: "text-xs/medium",
       color: "interactive-text-default",
@@ -66,23 +65,24 @@ export default function CustomTypingIndicatorDisplay(showName) {
       ellipsizeMode: "tail",
       children: formatResult,
     };
-    items[1] = React3(Text_Text.Text, obj2);
-    obj.children = items;
-    const tmp8Result = React4(Stack_Stack.Stack, obj);
+    items[1] = React3(Text_Text.Text, obj6);
+    obj4.children = items;
+    const tmp8Result = React4(Stack_Stack.Stack, obj4);
     let tmp13Result = tmp8Result;
     if (null != onPress) {
-      const obj3 = {
+      const obj7 = {
         style: tmp.pressable,
         hitSlop: nativeDefault.space.PX_8,
         onPress,
         accessibilityRole: "button",
         children: tmp8Result,
       };
-      tmp13Result = React3(Pressables.PressableOpacity, obj3);
+      tmp13Result = React3(Pressables.PressableOpacity, obj7);
     }
     return tmp13Result;
   }
   const intl = util.intl;
-  obj = CustomTypingIndicatorUtils;
-  formatResult = intl.string(obj.getCustomTypingIndicatorSuggestionMessage(config.typingSuggestion));
+  formatResult = intl.string(
+    CustomTypingIndicatorUtils.getCustomTypingIndicatorSuggestionMessage(config.typingSuggestion),
+  );
 }

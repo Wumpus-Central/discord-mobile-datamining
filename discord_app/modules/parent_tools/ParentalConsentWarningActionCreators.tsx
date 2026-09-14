@@ -27,8 +27,8 @@ function fetchWarning() {
           if (arg0 === 1) {
             throw value;
           } else if (arg0 === 2) {
-            let obj = { value, done: true };
-            return obj;
+            const obj2 = { value, done: true };
+            return obj2;
           } else {
             return { value: "HermesInternal", done: null };
           }
@@ -41,8 +41,8 @@ function fetchWarning() {
                 throw value;
               } else if (arg0 === 2) {
                 logger = 3;
-                obj = { value, done: true };
-                return obj;
+                const obj3 = { value, done: true };
+                return obj3;
               } else {
                 closure_0 = tmp8;
                 closure_128_0 = undefined;
@@ -51,11 +51,11 @@ function fetchWarning() {
                 const HTTP = closure_0(tmp41[6]).HTTP;
                 c4 = 3;
                 logger = 1;
-                const obj1 = {
+                const obj4 = {
                   value: HTTP.get({ url: "/users/@me/parental-consent/warning", rejectWithError: true }),
                   done: false,
                 };
-                return obj1;
+                return obj4;
               }
             } else if (1 === tmp8) {
               c3 = 0;
@@ -76,8 +76,8 @@ function fetchWarning() {
                   return { value: "HermesInternal", done: null };
                 } else {
                   logger.error("Failed to fetch parental-consent warning", closure_128_2);
-                  const obj2 = { tags: { source: "parental_consent_warning", step: "fetch_warning" } };
-                  tmp4(tmp41[8]).captureException(closure_128_2, obj2);
+                  const obj5 = { tags: { source: "parental_consent_warning", step: "fetch_warning" } };
+                  tmp4(tmp41[8]).captureException(closure_128_2, obj5);
                   (function scheduleRetry() {
                     if (null == timeout) {
                       const _setTimeout = setTimeout;
@@ -98,8 +98,8 @@ function fetchWarning() {
                   c7 = null;
                 }
                 logger = 3;
-                const obj3 = { value, done: true };
-                return obj3;
+                const obj6 = { value, done: true };
+                return obj6;
               } else {
                 closure_128_0 = value;
                 if (closure_129_0 !== closure_1_9) {
@@ -120,12 +120,12 @@ function fetchWarning() {
                     obj.surfaces = Array.isArray(body.surfaces) ? body.surfaces : [];
                     return obj;
                   })(closure_128_0.body);
-                  Backoff.succeed();
+                  importDefaultResult1.succeed();
                   clearPendingRetry();
-                  obj = tmp4(tmp41[7]);
-                  const obj4 = { type: "PARENTAL_CONSENT_WARNING_FETCH_SUCCESS", warning: closure_128_1 };
-                  obj.dispatch(obj4);
+                  const obj8 = { type: "PARENTAL_CONSENT_WARNING_FETCH_SUCCESS", warning: closure_128_1 };
+                  tmp4(tmp41[7]).dispatch(obj8);
                   c3 = 1;
+                  let obj = tmp4(tmp41[7]);
                 }
               }
               c3 = 0;
@@ -173,8 +173,8 @@ let closure_13 = async function _maybeFetchWarning() {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -187,8 +187,8 @@ let closure_13 = async function _maybeFetchWarning() {
           throw value;
         } else if (arg0 === 2) {
           c0 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           let shouldFetchTodayResult = null == React5;
           if (shouldFetchTodayResult) {
@@ -200,8 +200,8 @@ let closure_13 = async function _maybeFetchWarning() {
           if (shouldFetchTodayResult) {
             c1 = 1;
             c0 = 1;
-            const obj1 = { value: fetchWarning(), done: false };
-            return obj1;
+            const obj4 = { value: fetchWarning(), done: false };
+            return obj4;
           }
         }
       } else if (arg0 === 1) {
@@ -209,7 +209,7 @@ let closure_13 = async function _maybeFetchWarning() {
         throw value;
       } else if (arg0 === 2) {
         c0 = 3;
-        obj = { value, done: true };
+        const obj = { value, done: true };
         return obj;
       }
       c0 = 3;
@@ -228,8 +228,8 @@ let closure_14 = async function _forceFetchWarning() {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -242,8 +242,8 @@ let closure_14 = async function _forceFetchWarning() {
           throw value;
         } else if (arg0 === 2) {
           c0 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           clearPendingRetry();
           if (null != c7) {
@@ -252,15 +252,15 @@ let closure_14 = async function _forceFetchWarning() {
           }
           c1 = 1;
           c0 = 1;
-          const obj1 = { value: fetchWarning(), done: false };
-          return obj1;
+          const obj4 = { value: fetchWarning(), done: false };
+          return obj4;
         }
       } else if (arg0 === 1) {
         c0 = 3;
         throw value;
       } else if (arg0 === 2) {
         c0 = 3;
-        obj = { value, done: true };
+        const obj = { value, done: true };
         return obj;
       } else {
         c0 = 3;
@@ -274,7 +274,7 @@ let closure_14 = async function _forceFetchWarning() {
 };
 let logger = new fn(4).Logger("ParentalConsentWarning");
 const result = 5 * DurationsDefault.Millis.SECOND;
-Backoff = new Backoff(result, 5 * DurationsDefault.Millis.MINUTE, true);
+const importDefaultResult1 = new Backoff(result, 5 * DurationsDefault.Millis.MINUTE, true);
 let c7 = null;
 let c8 = null;
 let closure_9 = 0;
@@ -300,7 +300,7 @@ export const resetFetchState = function resetFetchState() {
     c8 = null;
   }
   c7 = null;
-  Backoff.succeed();
+  importDefaultResult1.succeed();
 };
 export const clearWarning = function clearWarning() {
   DispatcherDefault.dispatch({ type: "PARENTAL_CONSENT_WARNING_CLEARED" });

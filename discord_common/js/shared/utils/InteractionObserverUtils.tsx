@@ -4,15 +4,15 @@ import size from "../../../../_runtime/metro/00002__.js";
 function __handleIntersections(arr, arg1) {
   closure_0 = arg1;
   const item = arr.forEach((target) => {
-    weakMap1.get(closure_0);
-    value = undefined;
+    value = weakMap1.get(closure_0);
+    value2 = undefined;
     if (value != null) {
-      value = value.get(target.target);
+      value2 = value.get(target.target);
     }
-    if (null != value) {
-      const call = value.call;
+    if (null != value2) {
+      const call = value2.call;
       if (typeof call === "unknown") {
-        value(target);
+        value2(target);
       } else {
         call(null, target);
       }

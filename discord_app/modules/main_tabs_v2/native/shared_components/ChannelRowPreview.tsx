@@ -22,40 +22,42 @@ import ChannelListLayout from "guild_channels/layouts/ChannelListLayout.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import RelationshipStore from "../../../../stores/RelationshipStore.tsx";
 
+const require = globalThis.__r;
+
 require = fn;
 function PreviewIcon(icon) {
   icon = icon.icon;
   const merged = Object.assign(icon, Object.assign({ icon: 0 }));
   if ("image" === icon) {
-    let obj = {};
-    const merged1 = Object.assign(merged);
-    return timestampProducer(ImageIcon.ImageIcon, obj);
-  } else if ("video" === icon) {
-    obj = {};
-    const merged2 = Object.assign(merged);
-    return timestampProducer(VideoIcon.VideoIcon, obj);
-  } else if ("audio" === icon) {
-    const obj1 = {};
-    const merged3 = Object.assign(merged);
-    return timestampProducer(MusicIcon.MusicIcon, obj1);
-  } else if ("attachment" === icon) {
     const obj2 = {};
-    const merged4 = Object.assign(merged);
-    return timestampProducer(AttachmentIcon.AttachmentIcon, obj2);
-  } else if ("link" === icon) {
+    const merged1 = Object.assign(merged);
+    return timestampProducer(ImageIcon.ImageIcon, obj2);
+  } else if ("video" === icon) {
     const obj3 = {};
-    const merged5 = Object.assign(merged);
-    return timestampProducer(LinkIcon.LinkIcon, obj3);
-  } else if ("sticker" === icon) {
+    const merged2 = Object.assign(merged);
+    return timestampProducer(VideoIcon.VideoIcon, obj3);
+  } else if ("audio" === icon) {
     const obj4 = {};
-    const merged6 = Object.assign(merged);
-    return timestampProducer(StickerIcon.StickerIcon, obj4);
-  } else if ("call-active" === icon) {
+    const merged3 = Object.assign(merged);
+    return timestampProducer(MusicIcon.MusicIcon, obj4);
+  } else if ("attachment" === icon) {
     const obj5 = {};
+    const merged4 = Object.assign(merged);
+    return timestampProducer(AttachmentIcon.AttachmentIcon, obj5);
+  } else if ("link" === icon) {
+    const obj6 = {};
+    const merged5 = Object.assign(merged);
+    return timestampProducer(LinkIcon.LinkIcon, obj6);
+  } else if ("sticker" === icon) {
+    const obj7 = {};
+    const merged6 = Object.assign(merged);
+    return timestampProducer(StickerIcon.StickerIcon, obj7);
+  } else if ("call-active" === icon) {
+    const obj8 = {};
     const merged7 = Object.assign(merged);
-    return timestampProducer(PhoneCallIcon.PhoneCallIcon, obj5);
+    return timestampProducer(PhoneCallIcon.PhoneCallIcon, obj8);
   } else if ("call-ended" === icon) {
-    obj = {};
+    const obj = {};
     const merged8 = Object.assign(merged);
     return timestampProducer(PhoneHangUpIcon.PhoneHangUpIcon, obj);
   }
@@ -97,32 +99,32 @@ class ChannelRowPreview {
           } else {
             content = formattedMessagePreview.message.content;
           }
-          obj = { markup: null, channelId: null, guildId: null, muted: null, layout: null, color: null };
-          obj.markup = content;
-          obj.channelId = message.channel_id;
-          obj.guildId = channel.guild_id;
-          obj.muted = muted;
-          obj.layout = layout;
-          obj.color = color;
-          text = tmp8(tmp9, obj);
+          obj1 = { markup: null, channelId: null, guildId: null, muted: null, layout: null, color: null };
+          obj1.markup = content;
+          obj1.channelId = message.channel_id;
+          obj1.guildId = channel.guild_id;
+          obj1.muted = muted;
+          obj1.layout = layout;
+          obj1.color = color;
+          text = tmp8(tmp9, obj1);
         } else {
           str3 = "message";
         }
       }
       tmp10 = jsxs;
-      obj1 = { style: null, children: null };
-      obj2 = { flexDirection: "row", alignItems: "center", minHeight: null };
-      obj2.minHeight = tmp7;
-      obj1.style = obj2;
+      obj9 = { style: null, children: null };
+      obj10 = { flexDirection: "row", alignItems: "center", minHeight: null };
+      obj10.minHeight = tmp7;
+      obj9.style = obj10;
       tmp11 = View;
-      obj3 = { lineClamp: null, variant: null, maxFontSizeMultiplier: 1.75, color: null, style: null, children: null };
-      obj3.lineClamp = lineClamp;
+      obj11 = { lineClamp: null, variant: null, maxFontSizeMultiplier: 1.75, color: null, style: null, children: null };
+      obj11.lineClamp = lineClamp;
       if (variant == null) {
         variant = "text-sm/normal";
       }
-      obj3.variant = variant;
-      obj3.color = color;
-      obj3.style = { paddingBottom: 2, flexShrink: 1 };
+      obj11.variant = variant;
+      obj11.color = color;
+      obj11.style = { paddingBottom: 2, flexShrink: 1 };
       combined = null != authorLabel;
       if (combined) {
         tmp13 = globalThis;
@@ -134,23 +136,23 @@ class ChannelRowPreview {
       items = [,];
       items[0] = combined;
       items[1] = text;
-      obj3.children = items;
+      obj11.children = items;
       items1 = [,];
-      items1[0] = tmp10(tmp(tmp2[17]).Text, obj3);
+      items1[0] = tmp10(tmp(tmp2[17]).Text, obj11);
       tmp14 = null != trailingIcon;
       if (tmp14) {
         tmp15 = jsx;
         tmp16 = PreviewIcon;
-        obj4 = { icon: null, size: null, color: null, style: null };
-        obj4.icon = trailingIcon;
-        obj4.size = layoutStyles.messagePreview.messageTypeIconSizeNew;
-        obj4.color = color;
-        obj4.style = { marginLeft: 4 };
-        tmp14 = jsx(PreviewIcon, obj4);
+        obj12 = { icon: null, size: null, color: null, style: null };
+        obj12.icon = trailingIcon;
+        obj12.size = layoutStyles.messagePreview.messageTypeIconSizeNew;
+        obj12.color = color;
+        obj12.style = { marginLeft: 4 };
+        tmp14 = jsx(PreviewIcon, obj12);
       }
       items1[1] = tmp14;
-      obj1.children = items1;
-      return tmp10(tmp11, obj1);
+      obj9.children = items1;
+      return tmp10(tmp11, obj9);
     }
   }
 }
@@ -170,8 +172,8 @@ class NativeChannelRowPreview {
     ({ textColor, gradientStyles, gradientColors } = global);
     tmp = c1(closure_2[18])();
     obj = lineClamp(closure_2[19]);
-    obj = { seeMoreLabelColor: c1(closure_2[20]).colors.TEXT_DEFAULT };
-    closure_2 = obj.createNativeStyleProperties(obj)(tmp);
+    obj1 = { seeMoreLabelColor: c1(closure_2[20]).colors.TEXT_DEFAULT };
+    closure_2 = obj.createNativeStyleProperties(obj1)(tmp);
     obj3 = lineClamp(closure_2[21]);
     closure_3 = obj3.useToken(textColor);
     RenderEmbeds = lineClamp(closure_2[22]).RenderEmbeds;
@@ -189,8 +191,8 @@ class NativeChannelRowPreview {
     items[2] = setting2;
     items[3] = gifAutoPlay;
     memo = closure_3.useMemo(() => {
-      new RowGeneratorDefault();
-      const obj = {
+      const obj = new RowGeneratorDefault();
+      obj.setOptions({
         renderEmbeds: setting,
         inlineEmbedMedia: setting1,
         inlineAttachmentMedia: setting2,
@@ -207,11 +209,10 @@ class NativeChannelRowPreview {
         enableSwipeActions: false,
         renderExecutedCommands: false,
         useAlternateEmbedColors: true,
-      };
-      obj.setOptions(obj);
+      });
       return obj;
     }, items);
-    obj1 = {
+    obj5 = {
       pointerEvents: "none",
       horizontalOffset: 0,
       modifyRow(message) {
@@ -242,7 +243,7 @@ class NativeChannelRowPreview {
       gradientStyles,
       gradientColors,
     };
-    return closure_6(c1(closure_2[24]), obj1);
+    return closure_6(c1(closure_2[24]), obj5);
   }
 }
 const View = fn(17).View;
@@ -268,24 +269,24 @@ export { ChannelRowPreview };
 export { NativeChannelRowPreview };
 export const NativeMessageChannelRowPreview = noop.memo((message) => {
   _require = message;
-  let obj = require("initialize");
   const items = [RelationshipStore];
   const items1 = [message.message.author.id];
-  const stateFromStores = obj.useStateFromStores(
+  const stateFromStores = require("initialize").useStateFromStores(
     items,
     () => RelationshipStore.isBlockedOrIgnored(message.message.author.id),
     items1,
   );
+  const obj = require("initialize");
   if (obj2.isMessageContentPreviewable(message.message)) {
     if (!stateFromStores) {
-      obj = {};
+      const obj3 = {};
       const merged = Object.assign(message);
-      let tmp7 = closure_6(NativeChannelRowPreview, obj);
+      let tmp7 = closure_6(NativeChannelRowPreview, obj3);
     }
     return tmp7;
   }
-  obj = {};
   const merged1 = Object.assign(message);
-  tmp7 = closure_6(ChannelRowPreview, obj);
+  tmp7 = closure_6(ChannelRowPreview, {});
   obj2 = require("useFormattedMessagePreview");
+  const obj4 = {};
 });

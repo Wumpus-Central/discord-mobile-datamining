@@ -17,14 +17,17 @@ require = fn;
 const View = fn(17).View;
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const ContentDismissActionType = fn(1954).ContentDismissActionType;
-const KEYBOARD_ANIMATION_CONFIG = fn(12165).KEYBOARD_ANIMATION_CONFIG;
+const KEYBOARD_ANIMATION_CONFIG = fn(12166).KEYBOARD_ANIMATION_CONFIG;
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9, jsxs: c10 } = jsxProd);
-fn(4636);
-let obj = { onboardingRoundingView: null, onboardingHeader: null, onboardingNavigatorContent: null };
-obj = { borderTopLeftRadius: nativeDefault.radii.sm, borderTopRightRadius: nativeDefault.radii.sm };
-obj.onboardingRoundingView = obj;
-const createStyles = {
+const createStyles = fn(4636);
+let obj = {
+  onboardingRoundingView: { borderTopLeftRadius: nativeDefault.radii.sm, borderTopRightRadius: nativeDefault.radii.sm },
+  onboardingHeader: null,
+  onboardingNavigatorContent: null,
+};
+let obj3 = { borderTopLeftRadius: nativeDefault.radii.sm, borderTopRightRadius: nativeDefault.radii.sm };
+obj.onboardingHeader = {
   borderWidth: 2,
   borderBottomWidth: 0,
   borderColor: nativeDefault.colors.BACKGROUND_BRAND,
@@ -32,7 +35,14 @@ const createStyles = {
   borderTopLeftRadius: nativeDefault.radii.sm,
   borderTopRightRadius: nativeDefault.radii.sm,
 };
-obj.onboardingHeader = createStyles;
+let obj4 = {
+  borderWidth: 2,
+  borderBottomWidth: 0,
+  borderColor: nativeDefault.colors.BACKGROUND_BRAND,
+  borderBottomColor: "transparent",
+  borderTopLeftRadius: nativeDefault.radii.sm,
+  borderTopRightRadius: nativeDefault.radii.sm,
+};
 obj.onboardingNavigatorContent = {
   borderWidth: 2,
   borderColor: nativeDefault.colors.BACKGROUND_BRAND,
@@ -47,7 +57,7 @@ let closure_13 = {
 let closure_14 = {
   code: "function AppLauncherKeyboardTsx2(i,prev){const{runOnJS,handleOnboardingParamChange,showOnboarding}=this.__closure;if(i===prev)return;runOnJS(handleOnboardingParamChange)(i,showOnboarding);}",
 };
-let obj2 = {
+let obj5 = {
   borderWidth: 2,
   borderColor: nativeDefault.colors.BACKGROUND_BRAND,
   borderTopLeftRadius: nativeDefault.radii.sm,
@@ -63,8 +73,7 @@ export default noop.memo(function AppLauncherKeyboard(context) {
   const transitionState = context.transitionState;
   const entrypoint = context.entrypoint;
   let onboardingNavigatorContent;
-  let obj = context(onClose[8]);
-  const defaultAppLauncherWidth = obj.useDefaultAppLauncherWidth(entrypoint);
+  const defaultAppLauncherWidth = context(onClose[8]).useDefaultAppLauncherWidth(entrypoint);
   const ref = transitionState.useRef(context(onClose[9]).AppLauncherKeyboardCloseReason.DISMISSED);
   const ref1 = transitionState.useRef(undefined);
   const tmp6 = onboardingNavigatorContent();
@@ -72,13 +81,15 @@ export default noop.memo(function AppLauncherKeyboard(context) {
   const minimum = tmp8.minimum;
   animationConfigs = transitionState.useRef(Date.now());
   transitionState.useRef(false);
-  let obj1 = context(onClose[11]);
-  let isScreenReaderEnabled = obj1.useIsScreenReaderEnabled();
-  obj = { channelId: context.channel.id };
-  const visibleContent = chatInputRef(onClose[12])(obj).visibleContent;
+  let obj = context(onClose[8]);
+  const tmp7 = chatInputRef;
+  let isScreenReaderEnabled = context(onClose[11]).useIsScreenReaderEnabled();
+  const visibleContent = chatInputRef(onClose[12])({ channelId: context.channel.id }).visibleContent;
   onboardingNavigatorContent = null != visibleContent;
-  let obj3 = context(onClose[13]);
-  const sharedValue = obj3.useSharedValue(-1);
+  let obj2 = context(onClose[11]);
+  let obj3 = { channelId: context.channel.id };
+  const sharedValue = context(onClose[13]).useSharedValue(-1);
+  let obj4 = context(onClose[13]);
   const sharedValue1 = context(onClose[13]).useSharedValue(0);
   const ref2 = transitionState.useRef(null);
   const items = [ref2];
@@ -103,8 +114,7 @@ export default noop.memo(function AppLauncherKeyboard(context) {
   const effect = transitionState.useEffect(() => {
     callback1(sharedValue.get(), onboardingNavigatorContent);
   }, items1);
-  const obj5 = context(onClose[13]);
-  const tmp7 = chatInputRef;
+  let obj5 = context(onClose[13]);
   class O {
     constructor() {
       return closure_12.get();
@@ -118,15 +128,15 @@ export default noop.memo(function AppLauncherKeyboard(context) {
       ReanimatedRexport.runOnJS(callback1)(arg0, onboardingNavigatorContent);
     }
   };
-  obj = {
+  let obj6 = context(onClose[13]);
+  fn.__closure = {
     runOnJS: context(onClose[13]).runOnJS,
     handleOnboardingParamChange: callback1,
     showOnboarding: onboardingNavigatorContent,
   };
-  fn.__closure = obj;
   fn.__workletHash = 14003176039781;
   fn.__initData = callback1;
-  const animatedReaction = context(onClose[13]).useAnimatedReaction(O, fn);
+  const animatedReaction = obj6.useAnimatedReaction(O, fn);
   const items2 = [transitionState];
   const layoutEffect = transitionState.useLayoutEffect(() => {
     if (transitionState === native.TransitionStates.YEETED) {
@@ -136,20 +146,20 @@ export default noop.memo(function AppLauncherKeyboard(context) {
   const items3 = [visibleContent, context, minimum, onboardingNavigatorContent];
   const items4 = [ref1];
   const callback2 = transitionState.useCallback((arg0) => {
-    let obj = {};
+    const obj = {};
     const merged = Object.assign(arg0);
     obj.pressBehavior = "collapse";
     const children = [React6(BottomSheetModal.BottomSheetBackdrop, obj)];
     let tmp3Result = onboardingNavigatorContent;
     if (onboardingNavigatorContent) {
-      obj = { context, visibleContent, bottomOffset: null };
+      const obj2 = { context, visibleContent, bottomOffset: null };
       const tmp9 = AppLauncherOnboardingLayerDefault;
       let num = 0;
       if (!tmp4Result.isAndroid()) {
         num = minimum;
       }
-      obj.bottomOffset = num;
-      tmp3Result = React6(tmp9, obj);
+      obj2.bottomOffset = num;
+      tmp3Result = React6(tmp9, obj2);
       tmp4Result = PlatformUtils;
     }
     children[1] = tmp3Result;
@@ -162,11 +172,11 @@ export default noop.memo(function AppLauncherKeyboard(context) {
         let trackWithMetadata = require;
         let APP_LAUNCHER_EXPANDED = dependencyMap;
         if (arg2 === BottomSheetModal.ANIMATION_SOURCE.KEYBOARD) {
-          let current = trackWithMetadata(11348).AppLauncherBottomSheetExpandReason.KEYBOARD;
+          let current = trackWithMetadata(11349).AppLauncherBottomSheetExpandReason.KEYBOARD;
         } else if (arg2 === trackWithMetadata(6728).ANIMATION_SOURCE.GESTURE) {
-          current = trackWithMetadata(11348).AppLauncherBottomSheetExpandReason.GESTURE;
+          current = trackWithMetadata(11349).AppLauncherBottomSheetExpandReason.GESTURE;
         } else if (arg2 !== trackWithMetadata(6728).ANIMATION_SOURCE.USER) {
-          current = trackWithMetadata(11348).AppLauncherBottomSheetExpandReason.OTHER;
+          current = trackWithMetadata(11349).AppLauncherBottomSheetExpandReason.OTHER;
         } else {
           current = ref1.current;
         }
@@ -181,11 +191,11 @@ export default noop.memo(function AppLauncherKeyboard(context) {
   }, items4);
   const callback4 = transitionState.useCallback(() => {
     if (!ref2.current) {
-      let obj = { time_spent: null, reason: null };
+      const obj2 = { time_spent: null, reason: null };
       const _Date = Date;
-      obj.time_spent = Date.now() - ref.current;
-      obj.reason = ref.current;
-      obj.trackWithMetadata(AnalyticEvents.APP_LAUNCHER_CLOSED, obj);
+      obj2.time_spent = Date.now() - ref.current;
+      obj2.reason = ref.current;
+      AppAnalyticsUtils.trackWithMetadata(AnalyticEvents.APP_LAUNCHER_CLOSED, obj2);
     }
     ref2.current = true;
     completeAppLauncherOnboardingDefault(ContentDismissActionType.USER_DISMISS);
@@ -193,26 +203,26 @@ export default noop.memo(function AppLauncherKeyboard(context) {
       onClose();
     }
     if (obj3.isMetaQuest()) {
-      let current = chatInputRef.current;
+      const current = chatInputRef.current;
       if (current != null) {
         current.closeCustomKeyboard();
       }
     }
     if (isScreenReaderEnabled) {
-      obj = { type: KeyboardTypes.KeyboardTypes.SYSTEM };
-      KeyboardUIStore.setKeyboardType(obj);
-      current = undefined;
+      const obj5 = { type: KeyboardTypes.KeyboardTypes.SYSTEM };
+      KeyboardUIStore.setKeyboardType(obj5);
+      let current1;
       if (ref3 != null) {
-        current = ref3.current;
+        current1 = ref3.current;
       }
-      if (null != current) {
-        const obj1 = { ref: ref3 };
-        const result = setAccessibilityFocus.setAccessibilityFocus(obj1);
+      if (null != current1) {
+        const obj7 = { ref: ref3 };
+        const result = setAccessibilityFocus.setAccessibilityFocus(obj7);
       }
     }
     obj3 = MetaQuestUtils;
   }, items5);
-  obj1 = {
+  const obj8 = {
     ref: ref2,
     animationConfigs,
     animatedIndex: sharedValue,
@@ -232,37 +242,41 @@ export default noop.memo(function AppLauncherKeyboard(context) {
     width: null,
     children: null,
   };
-  let obj6 = context(onClose[13]);
+  let obj7 = {
+    runOnJS: context(onClose[13]).runOnJS,
+    handleOnboardingParamChange: callback1,
+    showOnboarding: onboardingNavigatorContent,
+  };
   if (!isScreenReaderEnabled) {
-    let tmpResult = tmp(tmp2[20]);
-    isScreenReaderEnabled = tmpResult.isMetaQuest();
+    isScreenReaderEnabled = tmp(tmp2[20]).isMetaQuest();
+    const tmpResult = tmp(tmp2[20]);
   }
-  obj1.forceMaxHeight = isScreenReaderEnabled;
-  tmpResult = tmp(tmp2[20]);
-  obj1.enablePanDownToClose = tmpResult.isMetaQuest();
-  obj1.onAnimate = callback3;
-  obj1.onClose = callback4;
-  obj1.transitionState = transitionState;
-  obj1.backdropComponent = callback2;
+  obj8.forceMaxHeight = isScreenReaderEnabled;
+  const tmp22 = chatInputRef(onClose[24]);
+  obj8.enablePanDownToClose = context(onClose[20]).isMetaQuest();
+  obj8.onAnimate = callback3;
+  obj8.onClose = callback4;
+  obj8.transitionState = transitionState;
+  obj8.backdropComponent = callback2;
   let tmp23 = onboardingNavigatorContent;
   if (!onboardingNavigatorContent) {
     tmp23 = entrypoint === tmp(tmp2[25]).AppLauncherEntrypoint.VOICE;
   }
-  obj1.disableHeaderRoundingAnimation = tmp23;
+  obj8.disableHeaderRoundingAnimation = tmp23;
   let onboardingRoundingView = onboardingNavigatorContent;
   if (onboardingNavigatorContent) {
     onboardingRoundingView = tmp6.onboardingRoundingView;
   }
-  obj1.roundingViewStyle = onboardingRoundingView;
+  obj8.roundingViewStyle = onboardingRoundingView;
   let onboardingHeader = onboardingNavigatorContent;
   if (onboardingNavigatorContent) {
     onboardingHeader = tmp6.onboardingHeader;
   }
-  obj1.headerStyle = onboardingHeader;
-  obj1.rendersHandle = entrypoint !== context(onClose[25]).AppLauncherEntrypoint.VOICE;
-  obj1.width = defaultAppLauncherWidth;
-  const obj2 = { style: { position: "relative", height: tmp8.maximum }, children: null };
-  obj3 = {
+  obj8.headerStyle = onboardingHeader;
+  obj8.rendersHandle = entrypoint !== context(onClose[25]).AppLauncherEntrypoint.VOICE;
+  obj8.width = defaultAppLauncherWidth;
+  const obj9 = { style: { position: "relative", height: tmp8.maximum }, children: null };
+  const obj10 = {
     bottomSheetExpandReasonRef: ref1,
     bottomSheetIndex: sharedValue,
     bottomSheetPosition: sharedValue1,
@@ -274,19 +288,19 @@ export default noop.memo(function AppLauncherKeyboard(context) {
     keyboardCloseReasonRef: null,
     width: null,
   };
-  const tmp22 = chatInputRef(onClose[24]);
   const tmp24 = ref;
+  const tmpResult2 = context(onClose[20]);
   if (onboardingNavigatorContent) {
     onboardingNavigatorContent = tmp6.onboardingNavigatorContent;
   }
-  obj3.contentStyle = onboardingNavigatorContent;
-  obj3.entrypoint = entrypoint;
-  obj3.expandBottomSheet = callback;
-  obj3.keyboardCloseReasonRef = ref;
-  obj3.width = defaultAppLauncherWidth;
-  obj2.children = ref2(tmp7(onClose[26]), obj3);
-  obj1.children = ref2(tmp24, obj2);
-  return ref2(tmp22, obj1);
+  obj10.contentStyle = onboardingNavigatorContent;
+  obj10.entrypoint = entrypoint;
+  obj10.expandBottomSheet = callback;
+  obj10.keyboardCloseReasonRef = ref;
+  obj10.width = defaultAppLauncherWidth;
+  obj9.children = ref2(tmp7(onClose[26]), obj10);
+  obj8.children = ref2(tmp24, obj9);
+  return ref2(tmp22, obj8);
 });
 export function setAppLauncherA11yFocusReturnRef(current2) {
   c12 = current2;

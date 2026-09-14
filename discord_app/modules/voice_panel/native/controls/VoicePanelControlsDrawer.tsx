@@ -14,28 +14,27 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 function renderChat(shown) {
-  let obj = { collapsable: false, style: absoluteFill.absoluteFill, children: null };
-  obj = { shown };
-  obj.children = React7(VoicePanelChatViewDefault, obj);
+  const obj = {
+    collapsable: false,
+    style: absoluteFill.absoluteFill,
+    children: React7(VoicePanelChatViewDefault, { shown }),
+  };
   return React7(timestampProducer, obj);
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const VoicePanelConstants = fn(12402);
+const VoicePanelConstants = fn(12403);
 ({ MODE_CHANGE_PHYSICS: closure_7, VoicePanelModes: closure_8 } = VoicePanelConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
 const createStyles = fn(4636);
-let obj = { drawer: null };
-obj = { flex: 1, zIndex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
-obj.drawer = obj;
+let obj = { drawer: { flex: 1, zIndex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER } };
 let closure_11 = createStyles.createStyles(obj);
 const memoResult = noop.memo((shown) => {
   shown = shown.shown;
   const renderContent = shown.renderContent;
   let ref;
-  let obj = noop;
-  [tmp2, tmp3] = _slicedToArray(noop.useState(!shown), 2);
+  [tmp2, tmp3] = noop.useState(!shown);
   c2 = tmp3;
   let tmp4 = shown;
   if (shown) {
@@ -44,8 +43,8 @@ const memoResult = noop.memo((shown) => {
   if (tmp4) {
     tmp3(false);
   }
-  ref = obj.useRef(shown);
-  const effect = obj.useEffect(() => {
+  ref = noop.useRef(shown);
+  const effect = noop.useEffect(() => {
     let current = ref.current;
     if (!current) {
       current = shown;
@@ -53,16 +52,16 @@ const memoResult = noop.memo((shown) => {
     ref.current = current;
   });
   const items = [shown];
-  const effect1 = obj.useEffect(() => {
+  const effect1 = noop.useEffect(() => {
     if (!shown) {
       _undefined(true);
     }
   }, items);
   const items1 = [renderContent, shown];
-  const memo = obj.useMemo(() => renderContent(shown), items1);
+  const memo = noop.useMemo(() => renderContent(shown), items1);
   if (useRefValueDefault(ref)) {
-    obj = { freeze: tmp2, children: memo };
-    let tmp11 = React7(Suspender.Freeze, obj);
+    const obj2 = { freeze: tmp2, children: memo };
+    let tmp11 = React7(Suspender.Freeze, obj2);
   } else {
     tmp11 = null;
   }
@@ -77,6 +76,7 @@ const __initData2 = {
 const __initData3 = {
   code: "function VoicePanelControlsDrawerTsx3(props,previous){const{cheapWorkletArrayShallowEqual,VoicePanelModes,runOnJS,setFreeze}=this.__closure;if(cheapWorkletArrayShallowEqual(props,previous!==null&&previous!==void 0?previous:undefined))return;const[isDrawer,mode]=props;if(previous!=null&&isDrawer===previous[0]&&mode===previous[1]){return;}if(mode!==VoicePanelModes.PANEL||!isDrawer){runOnJS(setFreeze)(true);}else{runOnJS(setFreeze)(false);}}",
 };
+let obj3 = { flex: 1, zIndex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_panel/native/controls/VoicePanelControlsDrawer.tsx");
 
@@ -85,7 +85,6 @@ export default noop.memo(function VoicePanelControlsDrawer(gestureSpecs) {
   gestureSpecs = gestureSpecs.gestureSpecs;
   const openTab = gestureSpecs.openTab;
   let windowDimensions;
-  let obj = windowDimensions;
   const context = windowDimensions.useContext(gestureSpecs(openTab[10]));
   const mode = context.mode;
   windowDimensions = context.windowDimensions;
@@ -98,7 +97,7 @@ export default noop.memo(function VoicePanelControlsDrawer(gestureSpecs) {
   if (tmp8) {
     tmp7(false);
   }
-  let obj1 = wrapperSpecs(tmp2[11]);
+  tmp8 = tab !== sharedTab.get() && tmp6;
   const fn = function b() {
     const obj = {
       width: VoicePanelControlsUtils.getControlsDrawerOpenWidth(
@@ -115,20 +114,28 @@ export default noop.memo(function VoicePanelControlsDrawer(gestureSpecs) {
     obj.opacity = spring.withSpring(num, MODE_CHANGE_PHYSICS);
     return obj;
   };
-  obj = {
-    getControlsDrawerOpenWidth: wrapperSpecs(tmp2[12]).getControlsDrawerOpenWidth,
+  let obj2 = wrapperSpecs(openTab[11]);
+  fn.__closure = {
+    getControlsDrawerOpenWidth: wrapperSpecs(openTab[12]).getControlsDrawerOpenWidth,
     windowDimensions,
     safeArea,
-    withSpring: wrapperSpecs(tmp2[13]).withSpring,
+    withSpring: wrapperSpecs(openTab[13]).withSpring,
     wrapperSpecs,
     TRANSITIONAL_HEIGHT: 200,
     MODE_CHANGE_PHYSICS,
   };
-  fn.__closure = obj;
   fn.__workletHash = 8777106499672;
   fn.__initData = __initData;
-  const animatedStyle = obj1.useAnimatedStyle(fn);
-  tmp8 = tab !== sharedTab.get() && tmp6;
+  const animatedStyle = obj2.useAnimatedStyle(fn);
+  const obj3 = {
+    getControlsDrawerOpenWidth: wrapperSpecs(openTab[12]).getControlsDrawerOpenWidth,
+    windowDimensions,
+    safeArea,
+    withSpring: wrapperSpecs(openTab[13]).withSpring,
+    wrapperSpecs,
+    TRANSITIONAL_HEIGHT: 200,
+    MODE_CHANGE_PHYSICS,
+  };
   class V {
     constructor() {
       items = [,];
@@ -171,16 +178,16 @@ export default noop.memo(function VoicePanelControlsDrawer(gestureSpecs) {
       return;
     }
   }
-  obj = {
-    cheapWorkletArrayShallowEqual: wrapperSpecs(tmp2[14]).cheapWorkletArrayShallowEqual,
+  const obj4 = wrapperSpecs(openTab[11]);
+  M.__closure = {
+    cheapWorkletArrayShallowEqual: wrapperSpecs(openTab[14]).cheapWorkletArrayShallowEqual,
     VoicePanelModes,
-    runOnJS: wrapperSpecs(tmp2[11]).runOnJS,
+    runOnJS: wrapperSpecs(openTab[11]).runOnJS,
     setFreeze: tmp7,
   };
-  M.__closure = obj;
   M.__workletHash = 10375596551326;
   M.__initData = __initData3;
-  const animatedReaction = wrapperSpecs(openTab[11]).useAnimatedReaction(V, M);
+  const animatedReaction = obj4.useAnimatedReaction(V, M);
   let items = [openTab];
   const items1 = [gestureSpecs];
   const callback = obj.useCallback(
@@ -188,9 +195,9 @@ export default noop.memo(function VoicePanelControlsDrawer(gestureSpecs) {
     items,
   );
   const callback1 = obj.useCallback(() => React7(VoicePanelControlsAppLauncherDefault, { gestureSpecs }), items1);
-  obj1 = { style: null, children: null };
+  const obj6 = { style: null, children: null };
   const items2 = [tmp4.drawer, animatedStyle];
-  obj1.style = items2;
+  obj6.style = items2;
   let tmp17 = !tmp6;
   if (!tmp6) {
     tmp17 = "chat" === tab;
@@ -206,7 +213,7 @@ export default noop.memo(function VoicePanelControlsDrawer(gestureSpecs) {
     tmp19 = "app_launcher" === tab;
   }
   items3[2] = closure_9(closure_12, { shown: tmp19, renderContent: callback1 });
-  obj1.children = items3;
-  return closure_10(tmp(openTab[11]).View, obj1);
+  obj6.children = items3;
+  return closure_10(tmp(openTab[11]).View, obj6);
 });
 export const LazyContentFreezer = memoResult;

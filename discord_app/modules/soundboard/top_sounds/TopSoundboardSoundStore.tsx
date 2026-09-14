@@ -2,7 +2,7 @@
 import initializeDefault from "../../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../../Dispatcher.tsx";
 
-let obj = { topSoundboardSoundsByGuildId: {} };
+const obj = { topSoundboardSoundsByGuildId: {} };
 let closure_1 = obj;
 let closure_2 = {};
 const PersistedStore = initializeDefault.PersistedStore;
@@ -26,7 +26,7 @@ prototype["getIsFetching"] = function getIsFetching(arg0) {
 };
 TopSoundboardSoundStore.displayName = "TopSoundboardSoundStore";
 TopSoundboardSoundStore.persistKey = "TopSoundboardSoundStore";
-obj = {
+const topSoundboardSoundStore = new TopSoundboardSoundStore(DispatcherDefault, {
   LOGOUT: function handleLogout() {
     closure_1 = obj;
     closure_2 = {};
@@ -42,8 +42,7 @@ obj = {
   TOP_SOUNDBOARD_SOUNDS_FETCH_FAILURE: function handleTopSoundboardSoundsFetchFailure(guildId) {
     closure_2[guildId.guildId] = false;
   },
-};
-const topSoundboardSoundStore = new TopSoundboardSoundStore(DispatcherDefault, obj);
+});
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/soundboard/top_sounds/TopSoundboardSoundStore.tsx");
 

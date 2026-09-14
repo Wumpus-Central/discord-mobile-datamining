@@ -7,7 +7,7 @@ import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const KEYBOARD_ANIMATION_CONFIG = fn(12165).KEYBOARD_ANIMATION_CONFIG;
+const KEYBOARD_ANIMATION_CONFIG = fn(12166).KEYBOARD_ANIMATION_CONFIG;
 const jsx = fn(21).jsx;
 let __initData = {
   code: "function ExpressionPickerKeyboardTsx1(){const{bottomSheetIndex}=this.__closure;return Math.max(bottomSheetIndex.get(),0)>0;}",
@@ -23,8 +23,8 @@ export default noop.memo(function ExpressionPickerKeyboard(channel) {
   const onClose = channel.onClose;
   const transitionState = channel.transitionState;
   let ref;
+  const sharedValue = chatInputRef(transitionState[4]).useSharedValue(-1);
   let obj = chatInputRef(transitionState[4]);
-  const sharedValue = obj.useSharedValue(-1);
   const sharedValue1 = chatInputRef(transitionState[4]).useSharedValue(0);
   ref = ref.useRef(null);
   const obj2 = chatInputRef(transitionState[4]);
@@ -37,11 +37,9 @@ export default noop.memo(function ExpressionPickerKeyboard(channel) {
   const callback = ref.useCallback((arg0) => {
     const current = chatInputRef.current;
     current.insertText(getEmojiTextDefault(arg0), null, true);
-    let obj = KeyboardManagerUtils;
-    const result = obj.dismissGlobalKeyboard();
+    const result = KeyboardManagerUtils.dismissGlobalKeyboard();
     const current2 = chatInputRef.current;
-    obj = { type: KeyboardTypes.KeyboardTypes.EXPRESSION };
-    current2.openCustomKeyboard(obj);
+    current2.openCustomKeyboard({ type: KeyboardTypes.KeyboardTypes.EXPRESSION });
     const current3 = ref.current;
     if (current3 != null) {
       current3.snapToIndex(0);
@@ -113,7 +111,7 @@ export default noop.memo(function ExpressionPickerKeyboard(channel) {
       }
     }
   }, items5);
-  obj = {
+  const obj7 = {
     ref,
     animatedIndex: sharedValue,
     animatedPosition: sharedValue1,
@@ -126,7 +124,8 @@ export default noop.memo(function ExpressionPickerKeyboard(channel) {
     children: null,
   };
   const obj6 = chatInputRef(transitionState[4]);
-  obj = {
+  const tmp17 = onClose(transitionState[12]);
+  obj7.children = first(onClose(transitionState[4]).View, {
     nativeID: "expression-picker-sheet",
     style: animatedStyle,
     children: first(onClose(transitionState[13]), {
@@ -140,7 +139,6 @@ export default noop.memo(function ExpressionPickerKeyboard(channel) {
       expressionType: keyboardContextForType,
       inPortalKeyboard: true,
     }),
-  };
-  obj.children = first(onClose(transitionState[4]).View, obj);
-  return first(onClose(transitionState[12]), obj, "expression-picker-" + isScreenReaderEnabled);
+  });
+  return first(tmp17, obj7, "expression-picker-" + isScreenReaderEnabled);
 });

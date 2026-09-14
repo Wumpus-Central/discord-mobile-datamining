@@ -15,8 +15,8 @@ export default noop.forwardRef((duration, arg1) => {
   let ref;
   noop = undefined;
   ({ children, style } = duration);
+  const sharedValue = duration(ref[2]).useSharedValue(0);
   let obj = duration(ref[2]);
-  const sharedValue = obj.useSharedValue(0);
   let fn = function h() {
     return { opacity: sharedValue.get() };
   };
@@ -34,34 +34,29 @@ export default noop.forwardRef((duration, arg1) => {
   }, items);
   const imperativeHandle = noop.useImperativeHandle(arg1, () => ({
     componentDidAppear() {
-      duration(ref[3]);
-      const obj = { duration };
-      const result = sharedValue.set(obj.withTiming(1, obj));
+      const result = sharedValue.set(duration(ref[3]).withTiming(1, { duration }));
     },
     componentDidEnter() {
-      duration(ref[3]);
-      const obj = { duration };
-      const result = sharedValue.set(obj.withTiming(1, obj));
+      const result = sharedValue.set(duration(ref[3]).withTiming(1, { duration }));
     },
     componentWillLeave(current) {
       closure_1_2.current = current;
-      duration(ref[3]);
-      let obj = { duration };
       const fn = function t(arg0) {
         if (arg0) {
           duration(ref[2]).runOnJS(handleTransitionFinished)();
           const obj = duration(ref[2]);
         }
       };
-      obj = { runOnJS: duration(ref[2]).runOnJS, handleTransitionFinished };
-      fn.__closure = obj;
+      let obj = duration(ref[3]);
+      const obj2 = { duration };
+      fn.__closure = { runOnJS: duration(ref[2]).runOnJS, handleTransitionFinished };
       fn.__workletHash = 7644958904451;
       fn.__initData = __initData;
-      const result = sharedValue.set(obj.withTiming(0, obj, "respect-motion-settings", fn));
+      const result = sharedValue.set(obj.withTiming(0, obj2, "respect-motion-settings", fn));
     },
   }));
-  obj = { style: null, children };
+  const obj3 = { style: null, children };
   const items1 = [style, animatedStyle];
-  obj.style = items1;
+  obj3.style = items1;
   return jsx(sharedValue(ref[2]).View, { style: null, children });
 });

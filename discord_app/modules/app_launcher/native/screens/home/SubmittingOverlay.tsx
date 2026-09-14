@@ -8,9 +8,9 @@ import createStyles from "../../../../../design/components/Styles/native/createS
 import size from "../../../../../../_runtime/metro/00002__.js";
 
 const jsx = jsxProd.jsx;
-let obj = { ellipsis: null };
-obj = { backgroundColor: nativeDefault.colors.BACKGROUND_SCRIM, justifyContent: "center", alignItems: "center" };
-obj.ellipsis = obj;
+let obj = {
+  ellipsis: { backgroundColor: nativeDefault.colors.BACKGROUND_SCRIM, justifyContent: "center", alignItems: "center" },
+};
 let closure_4 = createStyles.createStyles(obj);
 const __initData = {
   code: "function SubmittingOverlayTsx1(){const{withSpring,submitting,SUBTLE_SPRING}=this.__closure;return{opacity:withSpring(submitting?1:0,SUBTLE_SPRING,'animate-always')};}",
@@ -19,7 +19,8 @@ const result = size.fileFinishedImporting("modules/app_launcher/native/screens/h
 
 export const SubmittingOverlay = function SubmittingOverlay(submitting) {
   submitting = submitting.submitting;
-  let obj = submitting(4373);
+  const tmp = closure_4();
+  const tmp2 = submitting;
   class S {
     constructor() {
       tmp = closure_0;
@@ -29,21 +30,21 @@ export const SubmittingOverlay = function SubmittingOverlay(submitting) {
       if (submitting) {
         num = 1;
       }
-      obj = { opacity: obj.withSpring(num, tmp(tmp2[5]).SUBTLE_SPRING, "animate-always") };
-      return obj;
+      obj1 = { opacity: obj.withSpring(num, tmp(tmp2[5]).SUBTLE_SPRING, "animate-always") };
+      return obj1;
     }
   }
-  obj = { withSpring: submitting(5055).withSpring, submitting, SUBTLE_SPRING: submitting(5059).SUBTLE_SPRING };
-  S.__closure = obj;
+  let obj = submitting(4373);
+  S.__closure = { withSpring: submitting(5055).withSpring, submitting, SUBTLE_SPRING: submitting(5059).SUBTLE_SPRING };
   S.__workletHash = 492443733468;
   S.__initData = __initData;
   const animatedStyle = obj.useAnimatedStyle(S);
-  obj = { style: null, children: null };
-  const items = [submitting.style, closure_4().ellipsis, animatedStyle];
-  obj.style = items;
+  const obj3 = { style: null, children: null };
+  const items = [submitting.style, tmp.ellipsis, animatedStyle];
+  obj3.style = items;
   if (submitting) {
-    submitting = jsx(submitting(5072).Ellipsis, { variant: "active", size: "md" });
+    submitting = jsx(tmp2(5072).Ellipsis, { variant: "active", size: "md" });
   }
-  obj.children = submitting;
+  obj3.children = submitting;
   return jsx(ReanimatedRexportDefault.View, { style: null, children: null });
 };

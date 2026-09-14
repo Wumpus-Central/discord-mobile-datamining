@@ -48,33 +48,32 @@ let obj = {
   attachmentLink: null,
   silentPrefix: null,
 };
-obj = {};
+let obj2 = {};
 let merged = Object.assign(_modDef4333.defaultRules.escape);
-obj.requiredFirstCharacters = undefined;
-obj.match = function match(arg0) {
+obj2.requiredFirstCharacters = undefined;
+obj2.match = function match(arg0) {
   const INVISIBLE_CHAR_REGEX = MarkupInvisibleUnicode.INVISIBLE_CHAR_REGEX;
   return INVISIBLE_CHAR_REGEX.exec(arg0);
 };
-obj.parse = function parse() {
+obj2.parse = function parse() {
   return { type: "text", content: "" };
 };
-obj.invisibleUnicode = obj;
+obj.invisibleUnicode = obj2;
 obj.text = {
   parse(arg0, fn, nested) {
     if (nested.nested) {
-      let obj = { content: arg0[0] };
-      return obj;
+      const obj2 = { content: arg0[0] };
+      return obj2;
     } else {
-      obj = UnicodeEmojisDefault;
-      const result = obj.maybeTranslateSurrogatesToInlineEmoji(arg0[0]);
+      const result = UnicodeEmojisDefault.maybeTranslateSurrogatesToInlineEmoji(arg0[0]);
       if (null == result) {
-        obj = { content: arg0[0] };
-        let tmp9 = obj;
+        const obj3 = { content: arg0[0] };
+        let tmp9 = obj3;
       } else {
-        const obj1 = {};
+        const obj4 = {};
         const merged = Object.assign(nested);
-        obj1.nested = true;
-        tmp9 = fn(result, obj1);
+        obj4.nested = true;
+        tmp9 = fn(result, obj4);
       }
       return tmp9;
     }
@@ -82,12 +81,10 @@ obj.text = {
 };
 obj.emoji = {
   parse(content) {
-    let obj = UnicodeEmojisDefault;
-    obj = { type: "emoji", content: content[0], surrogate: obj.convertNameToSurrogate(content[1]) };
-    return obj;
+    return { type: "emoji", content: content[0], surrogate: UnicodeEmojisDefault.convertNameToSurrogate(content[1]) };
   },
 };
-obj = {
+obj.customEmoji = {
   order: MarkupTextRuleDefault.order,
   requiredFirstCharacters: ["<"],
   match(arg0) {
@@ -99,19 +96,18 @@ obj = {
     if (flag === undefined) {
       flag = false;
     }
-    let obj = { id: tmp3, animated: "a" === tmp, size: 48 };
-    let emojiURL = obj.getEmojiURL(obj);
+    let emojiURL = AvatarUtilsDefault.getEmojiURL({ id: tmp3, animated: "a" === tmp, size: 48 });
+    const obj2 = { id: tmp3, animated: "a" === tmp, size: 48 };
     const emojiURL1 = AvatarUtilsDefault.getEmojiURL({ id: tmp3, animated: false, size: 48 });
-    obj = { id: tmp3, alt: tmp2, src: null, frozenSrc: null };
+    const obj4 = { id: tmp3, alt: tmp2, src: null, frozenSrc: null };
     if (flag) {
       emojiURL = emojiURL1;
     }
-    obj.src = emojiURL;
-    obj.frozenSrc = emojiURL1;
-    return obj;
+    obj4.src = emojiURL;
+    obj4.frozenSrc = emojiURL1;
+    return obj4;
   },
 };
-obj.customEmoji = obj;
 obj.channelMention = {
   parse(arg0, arg1, arg2) {
     const channelMention = MarkupChannelMentionRuleDefault.channelMention;
@@ -181,17 +177,16 @@ obj.channelMention = {
 };
 obj.gameMention = {
   parse(gameId, arg1, channelId) {
-    let obj = useGameMentionData;
-    const gameMentionData = obj.getGameMentionData(tmp);
+    const gameMentionData = useGameMentionData.getGameMentionData(tmp);
     let gameIcon;
     if (gameMentionData != null) {
       gameIcon = gameMentionData.gameIcon;
     }
-    obj = {
+    const obj2 = {
       type: "gameMention",
-      gameId: tmp,
+      gameId: gameId[1],
       channelId: channelId.channelId,
-      icon: getGameMediaRefURLDefault(tmp, gameIcon, { size: 32 }),
+      icon: getGameMediaRefURLDefault(gameId[1], gameIcon, { size: 32 }),
       displayName: null,
     };
     let gameName;
@@ -202,8 +197,8 @@ obj.gameMention = {
       const intl = util.intl;
       gameName = intl.string(util.t["11pdXZ"]);
     }
-    obj.displayName = gameName;
-    return obj;
+    obj2.displayName = gameName;
+    return obj2;
   },
 };
 obj.channelOrMessageUrl = {
@@ -346,6 +341,30 @@ obj.attachmentLink = {
     return attachmentLink.parse(arg0, arg1, arg2);
   },
 };
+let obj3 = {
+  order: MarkupTextRuleDefault.order,
+  requiredFirstCharacters: ["<"],
+  match(arg0) {
+    return /^<(a)?:(\w+):(\d+)>/.exec(arg0);
+  },
+  parse(arg0, arg1, disableAnimatedEmoji) {
+    [, tmp, tmp2, tmp3] = arg0;
+    let flag = disableAnimatedEmoji.disableAnimatedEmoji;
+    if (flag === undefined) {
+      flag = false;
+    }
+    let emojiURL = AvatarUtilsDefault.getEmojiURL({ id: tmp3, animated: "a" === tmp, size: 48 });
+    const obj2 = { id: tmp3, animated: "a" === tmp, size: 48 };
+    const emojiURL1 = AvatarUtilsDefault.getEmojiURL({ id: tmp3, animated: false, size: 48 });
+    const obj4 = { id: tmp3, alt: tmp2, src: null, frozenSrc: null };
+    if (flag) {
+      emojiURL = emojiURL1;
+    }
+    obj4.src = emojiURL;
+    obj4.frozenSrc = emojiURL1;
+    return obj4;
+  },
+};
 obj.silentPrefix = {
   order: MarkupTextRuleDefault.order,
   requiredFirstCharacters: ["@"],
@@ -390,13 +409,12 @@ export const decorateWithIcon = function decorateWithIcon(content) {
   return mapped;
 };
 export const hydrateGameMention = function hydrateGameMention(gameId, channelId) {
-  let obj = useGameMentionData;
-  const gameMentionData = obj.getGameMentionData(gameId);
+  const gameMentionData = useGameMentionData.getGameMentionData(gameId);
   let gameIcon;
   if (gameMentionData != null) {
     gameIcon = gameMentionData.gameIcon;
   }
-  obj = {
+  const obj2 = {
     type: "gameMention",
     gameId,
     channelId: channelId.channelId,
@@ -411,6 +429,6 @@ export const hydrateGameMention = function hydrateGameMention(gameId, channelId)
     const intl = util.intl;
     gameName = intl.string(util.t["11pdXZ"]);
   }
-  obj.displayName = gameName;
-  return obj;
+  obj2.displayName = gameName;
+  return obj2;
 };

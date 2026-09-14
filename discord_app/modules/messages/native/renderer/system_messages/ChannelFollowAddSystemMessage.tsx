@@ -11,11 +11,10 @@ const result = size.fileFinishedImporting(
 
 export const createChannelFollowAddSystemMessage = function createChannelFollowAddSystemMessage(roleStyle) {
   const message = roleStyle.message;
-  let obj = useAuthorWithProcessedColor;
-  const messageAuthorWithProcessedColor = obj.getMessageAuthorWithProcessedColor(message);
-  obj = { content: null };
+  const messageAuthorWithProcessedColor = useAuthorWithProcessedColor.getMessageAuthorWithProcessedColor(message);
+  const obj2 = { content: null };
   const intl = util.intl;
-  obj = {
+  obj2.content = intl.formatToParts(util.t.xH8qGO, {
     username: messageAuthorWithProcessedColor.nick,
     usernameOnClick: formatUsernameOnClickDefault({
       message,
@@ -24,8 +23,7 @@ export const createChannelFollowAddSystemMessage = function createChannelFollowA
     }),
     webhookName: message.content,
     webhookNameOnClick: { action: "bindGuildMenu", messageReference: message.messageReference, medium: true },
-  };
-  obj.content = intl.formatToParts(util.t.xH8qGO, obj);
+  });
   const merged = Object.assign(createCommonMessageDefault(roleStyle));
-  return obj;
+  return obj2;
 };

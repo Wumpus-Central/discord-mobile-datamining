@@ -17,7 +17,7 @@ export default module_560.create((arg0) => {
           if (closure_1_1) {
             let tmp12 = lockKeys;
             if (!hasItem) {
-              let obj = {};
+              const obj = {};
               const merged = Object.assign(lockKeys);
               const _Set2 = Set;
               const items = [closure_1_0];
@@ -32,10 +32,10 @@ export default module_560.create((arg0) => {
             const _Set = Set;
             const set1 = new Set(lockKeys);
             set1.delete(closure_1_0);
-            obj = {};
+            const obj2 = {};
             const merged1 = Object.assign(lockKeys);
-            obj.lockKeys = set1;
-            return obj;
+            obj2.lockKeys = set1;
+            return obj2;
           } else {
             return lockKeys;
           }

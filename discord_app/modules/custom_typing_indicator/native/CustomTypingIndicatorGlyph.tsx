@@ -27,8 +27,8 @@ export default function CustomTypingIndicatorGlyph(config) {
       PX_4 = size / 4;
     }
     obj = { style: null, children: null };
-    obj = { gap: PX_4 };
-    items[1] = obj;
+    const obj4 = { gap: PX_4 };
+    items[1] = obj4;
     obj.style = items;
     items = map.emojis;
     map = items.map;
@@ -39,9 +39,9 @@ export default function CustomTypingIndicatorGlyph(config) {
         index,
       ),
     );
-    <View gap={PX_4} />;
+    <View style={null}>{null}</View>;
   } else {
-    return jsx(tmp2(1178).Ellipsis, {});
+    return jsx(tmp2(1176).Ellipsis, {});
   }
   obj3 = map(1392);
 }

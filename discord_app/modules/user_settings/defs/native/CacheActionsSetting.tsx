@@ -10,32 +10,39 @@ import ActionSheetRow from "../../../../design/components/Sheet/native/ActionShe
 import FileUpIcon from "../../../../design/components/Icon/native/redesign/generated/FileUpIcon.tsx";
 import CacheActionCreators from "../../../cache/CacheActionCreators.tsx";
 import FileWarningIcon from "../../../../design/components/Icon/native/redesign/generated/FileWarningIcon.tsx";
+import DiskUsageManagerDefault from "../../../install/native/DiskUsageManager.android.tsx";
 import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 import GatewayConnectionStore from "../../../gateway/GatewayConnectionStore.tsx";
 
 require = fn;
 function handleCacheActionPress(key) {
-  const obj = {
+  ToastActionCreatorsDefault.open({
+    key,
+    icon() {
+      return closure_1_5(closure_1_0(dependencyMap[5]).CircleInformationIcon, {});
+    },
+    content: key,
+  });
+  const obj2 = {
     key,
     icon() {
       return closure_1_5(closure_1_0(dependencyMap[5]).CircleInformationIcon, {});
     },
     content: key,
   };
-  obj.open(obj);
   ActionSheetActionCreatorsDefault.hideActionSheet(CacheActionsActionSheet);
 }
 function CacheActionsActionSheet() {
   let obj = { header: null, children: null };
-  obj = { title: null };
+  let obj2 = { title: null };
   let intl = util.intl;
-  obj.title = intl.string(util.t.ZVZVwR);
-  obj.header = hasOwnProperty(BottomSheetTitleHeader.BottomSheetTitleHeader, obj);
-  obj = { hasIcons: true, children: null };
-  let obj1 = { icon: hasOwnProperty(FileUpIcon.FileUpIcon, {}), label: null, onPress: null };
+  obj2.title = intl.string(util.t.ZVZVwR);
+  obj.header = hasOwnProperty(BottomSheetTitleHeader.BottomSheetTitleHeader, obj2);
+  let obj3 = { hasIcons: true, children: null };
+  let obj4 = { icon: hasOwnProperty(FileUpIcon.FileUpIcon, {}), label: null, onPress: null };
   const intl2 = util.intl;
-  obj1.label = intl2.string(util.t["/GUaXh"]);
-  obj1.onPress = asyncGeneratorStep(async () => {
+  obj4.label = intl2.string(util.t["/GUaXh"]);
+  obj4.onPress = asyncGeneratorStep(async () => {
     if (c2 === 2) {
       c2 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -43,8 +50,8 @@ function CacheActionsActionSheet() {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj3 = { value, done: true };
+        return obj3;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -57,23 +64,21 @@ function CacheActionsActionSheet() {
             throw value;
           } else if (arg0 === 2) {
             c2 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj4 = { value, done: true };
+            return obj4;
           } else {
             closure_0 = tmp2;
-            let obj1 = CacheActionCreators;
             c1 = 1;
             c2 = 1;
-            obj1 = { value: null, done: false };
-            obj1.value = obj1.writeCaches();
-            return obj1;
+            const obj5 = { value: CacheActionCreators.writeCaches(), done: false };
+            return obj5;
           }
         } else if (arg0 === 1) {
           c2 = 3;
           throw value;
         } else if (arg0 === 2) {
           c2 = 3;
-          obj = { value, done: true };
+          const obj = { value, done: true };
           return obj;
         } else {
           const intl = closure_128_0(closure_128_2[6]).intl;
@@ -87,49 +92,57 @@ function CacheActionsActionSheet() {
       }
     }
   });
-  const items = [hasOwnProperty(ActionSheetRow.ActionSheetRow, obj1)];
-  let obj2 = {
+  const items = [hasOwnProperty(ActionSheetRow.ActionSheetRow, obj4)];
+  let obj5 = {
     variant: "danger",
     icon: hasOwnProperty(FileWarningIcon.FileWarningIcon, { color: "text-feedback-critical" }),
     label: null,
     onPress: null,
   };
   const intl3 = util.intl;
-  obj2.label = intl3.string(util.t.tgwiMO);
-  obj2.onPress = function onPress() {
-    let obj = CacheActionCreators;
-    obj.clearCaches();
+  obj5.label = intl3.string(util.t.tgwiMO);
+  obj5.onPress = function onPress() {
+    DiskUsageManagerDefault.clearCaches();
+    CacheActionCreators.clearCaches();
     const intl = util.intl;
     const stringResult = intl.string(util.t["23xR5w"]);
-    obj = {
+    ToastActionCreatorsDefault.open({
+      key: stringResult,
+      icon() {
+        return closure_1_5(closure_1_0(dependencyMap[5]).CircleInformationIcon, {});
+      },
+      content: stringResult,
+    });
+    const obj4 = {
       key: stringResult,
       icon() {
         return closure_1_5(closure_1_0(dependencyMap[5]).CircleInformationIcon, {});
       },
       content: stringResult,
     };
-    ToastActionCreatorsDefault.open(obj);
     ActionSheetActionCreatorsDefault.hideActionSheet(CacheActionsActionSheet);
   };
-  items[1] = hasOwnProperty(ActionSheetRow.ActionSheetRow, obj2);
-  obj.children = items;
-  obj.children = timestampProducer(ActionSheetRow.ActionSheetRow.Group, obj);
+  items[1] = hasOwnProperty(ActionSheetRow.ActionSheetRow, obj5);
+  obj3.children = items;
+  obj.children = timestampProducer(ActionSheetRow.ActionSheetRow.Group, obj3);
   return hasOwnProperty(ActionSheet.ActionSheet, obj);
 }
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 CacheActionsActionSheet = "CacheActionsActionSheet";
-fn(11601);
-let SettingBuilders = {
+const SettingBuilders = fn(11602);
+const pressable = SettingBuilders.createPressable({
   useTitle: function useCacheActionsTitle() {
     const intl = util.intl;
     return intl.string(util.t.ZVZVwR);
   },
   parent: null,
-  IconComponent: fn(15658).FileWarningIcon,
+  IconComponent: fn(15659).FileWarningIcon,
   onPress: function handleCacheActionsPress() {
-    const obj = { default: CacheActionsActionSheet };
-    obj.openLazy(Promise.resolve(obj), CacheActionsActionSheet);
+    ActionSheetActionCreatorsDefault.openLazy(
+      Promise.resolve({ default: CacheActionsActionSheet }),
+      CacheActionsActionSheet,
+    );
   },
   usePredicate: function useCacheActionsPredicate() {
     const items = [GatewayConnectionStore];
@@ -138,9 +151,8 @@ let SettingBuilders = {
     return DeveloperMode.useSetting() && stateFromStores;
   },
   withArrow: true,
-};
-SettingBuilders = SettingBuilders.createPressable(SettingBuilders);
+});
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/CacheActionsSetting.tsx");
 
-export default SettingBuilders;
+export default pressable;

@@ -34,14 +34,14 @@ prototype["fromServer"] = function fromServer(arg0) {
   const merged2 = Object.assign(merged1);
   obj.userId = user_id;
   obj.items = mapped;
-  applications = merged1.applications;
+  const applications1 = merged1.applications;
   let mapped1;
-  if (applications != null) {
-    mapped1 = applications.map((item) => ApplicationRecord.createFromServer(item));
+  if (applications1 != null) {
+    mapped1 = applications1.map((item) => ApplicationRecord.createFromServer(item));
   }
   obj.applications = mapped1;
   if (typeof prototype === "function") {
-    const tmp10 = new prototype(obj, merged1, merged, applications, user_id);
+    const tmp10 = new prototype(obj, merged1, merged, applications1, user_id);
     ({ id: tmp10.id, userId: tmp10.userId, items: tmp10.items, applications } = obj);
     tmp10.applications = applications;
     return tmp10;

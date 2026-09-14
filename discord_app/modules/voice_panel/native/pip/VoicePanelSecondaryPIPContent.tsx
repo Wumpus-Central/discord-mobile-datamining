@@ -24,38 +24,40 @@ export default function VoicePanelSecondaryPIPContent() {
   let tmp = size;
   let obj = connectedEmbeddedActivityChannelId;
   const windowDimensions = width.useContext(size(connectedEmbeddedActivityChannelId[9])).windowDimensions;
-  let obj1 = windowDimensions(connectedEmbeddedActivityChannelId[10]);
-  size = obj1.usePIPState();
-  let obj2 = windowDimensions(connectedEmbeddedActivityChannelId[11]);
-  const items = [height];
-  const stateFromStoresObject = obj2.useStateFromStoresObject(items, () => {
-    let obj = height;
-    const connectedActivityLocation = height.getConnectedActivityLocation();
-    const selfEmbeddedActivityForLocation = height.getSelfEmbeddedActivityForLocation(connectedActivityLocation);
-    let applicationId;
-    if (selfEmbeddedActivityForLocation != null) {
-      applicationId = selfEmbeddedActivityForLocation.applicationId;
-    }
-    obj = {
-      connectedEmbeddedActivityChannelId: windowDimensions(
-        connectedEmbeddedActivityChannelId[12],
-      ).getEmbeddedActivityLocationChannelId(connectedActivityLocation),
-      connectedEmbeddedActivity: selfEmbeddedActivityForLocation,
-      pipOrientationLockState: null,
-      panelMode: null,
-    };
-    let pipOrientationLockStateForApp;
-    if (null != applicationId) {
-      pipOrientationLockStateForApp = obj.getPipOrientationLockStateForApp(applicationId);
-    }
-    obj.pipOrientationLockState = pipOrientationLockStateForApp;
-    obj.panelMode = obj.getActivityPanelMode();
-    return obj;
-  });
-  connectedEmbeddedActivityChannelId = stateFromStoresObject.connectedEmbeddedActivityChannelId;
-  ({ pipOrientationLockState, connectedEmbeddedActivity, panelMode } = stateFromStoresObject);
+  size = windowDimensions(connectedEmbeddedActivityChannelId[10]).usePIPState();
+  let obj2 = windowDimensions(connectedEmbeddedActivityChannelId[10]);
   const tmp2 = windowDimensions;
   const tmp3 = closure_13();
+  const items = [height];
+  const stateFromStoresObject = windowDimensions(connectedEmbeddedActivityChannelId[11]).useStateFromStoresObject(
+    items,
+    () => {
+      const connectedActivityLocation = height.getConnectedActivityLocation();
+      const selfEmbeddedActivityForLocation = height.getSelfEmbeddedActivityForLocation(connectedActivityLocation);
+      let applicationId;
+      if (selfEmbeddedActivityForLocation != null) {
+        applicationId = selfEmbeddedActivityForLocation.applicationId;
+      }
+      const obj2 = {
+        connectedEmbeddedActivityChannelId: windowDimensions(
+          connectedEmbeddedActivityChannelId[12],
+        ).getEmbeddedActivityLocationChannelId(connectedActivityLocation),
+        connectedEmbeddedActivity: selfEmbeddedActivityForLocation,
+        pipOrientationLockState: null,
+        panelMode: null,
+      };
+      let pipOrientationLockStateForApp;
+      if (null != applicationId) {
+        pipOrientationLockStateForApp = height.getPipOrientationLockStateForApp(applicationId);
+      }
+      obj2.pipOrientationLockState = pipOrientationLockStateForApp;
+      obj2.panelMode = height.getActivityPanelMode();
+      return obj2;
+    },
+  );
+  connectedEmbeddedActivityChannelId = stateFromStoresObject.connectedEmbeddedActivityChannelId;
+  ({ pipOrientationLockState, connectedEmbeddedActivity, panelMode } = stateFromStoresObject);
+  const obj3 = windowDimensions(connectedEmbeddedActivityChannelId[11]);
   const items1 = [pipOrientationLockState];
   const stateFromStoresObject1 = windowDimensions(connectedEmbeddedActivityChannelId[11]).useStateFromStoresObject(
     items1,
@@ -117,56 +119,59 @@ export default function VoicePanelSecondaryPIPContent() {
       isLandscape: windowDimensions.get().landscape,
     };
     size = getActivityContainerPIPStylesSpecDefault(obj);
-    size = { width: size.width, height: size.height, left: null, top: null, marginLeft: null, marginTop: null };
+    const size1 = { width: size.width, height: size.height, left: null, top: null, marginLeft: null, marginTop: null };
     let str = "0%";
     let str2 = "0%";
     if (size.shouldHorizontallyCenter) {
       str2 = "50%";
     }
-    size.left = str2;
+    size1.left = str2;
     if (size.shouldVerticallyCenter) {
       str = "50%";
     }
-    size.top = str;
+    size1.top = str;
     ({ marginLeft: obj2.marginLeft, marginTop: obj2.marginTop } = size);
-    return size;
+    return size1;
   };
-  obj = {
+  const tmp2Result = tmp2(obj[15]);
+  fn.__closure = {
     getActivityContainerPipStylesSpec: tmp(obj[16]),
     pipState: size,
     activePipOrientationLockState: pipOrientationLockState,
     windowDimensions,
   };
-  fn.__closure = obj;
   fn.__workletHash = 12186082276755;
   fn.__initData = __initData;
-  const animatedStyle = tmp2(obj[15]).useAnimatedStyle(fn);
+  const animatedStyle = tmp2Result.useAnimatedStyle(fn);
   if (!tmp8) {
     if (!hasLaunchedFrame) {
       return null;
     }
   }
-  obj = { style: memo, pointerEvents: "none", children: null };
-  tmp(obj[17]);
-  obj1 = { style: null, children: null };
+  const obj7 = { style: memo, pointerEvents: "none", children: null };
+  const obj6 = {
+    getActivityContainerPipStylesSpec: tmp(obj[16]),
+    pipState: size,
+    activePipOrientationLockState: pipOrientationLockState,
+    windowDimensions,
+  };
+  let obj8 = { style: null, children: null };
   const items4 = [tmp3.activityContainer, animatedStyle];
-  obj1.style = items4;
-  const tmpResult = tmp(obj[18]);
+  obj8.style = items4;
+  const tmpResult = tmp(obj[17]);
   if (hasLaunchedFrame) {
     tmp = tmp(obj[19]);
     obj = { layoutMode: constants.PIP };
     let tmp13Result = <tmp layoutMode={constants.PIP} />;
   } else {
-    obj2 = { channel: stateFromStores, layoutMode: ActivityLayoutMode.PIP };
+    const obj9 = { channel: stateFromStores, layoutMode: ActivityLayoutMode.PIP };
     tmp13Result = jsx(tmp(obj[20]), { channel: stateFromStores, layoutMode: ActivityLayoutMode.PIP });
   }
-  obj1.children = tmp13Result;
-  obj1 = <tmpResult style={null}>{null}</tmpResult>;
-  obj.children = obj1;
-  tmp13Result = (
-    <tmpResult style={memo} pointerEvents="none">
-      {null}
-    </tmpResult>
-  );
-  const tmp2Result = tmp2(obj[15]);
+  obj8.children = tmp13Result;
+  obj8 = jsx(tmp(obj[18]), { style: null, children: null });
+  obj7.children = obj8;
+  <tmpResult style={memo} pointerEvents="none">
+    {null}
+  </tmpResult>;
+  const tmpResult2 = tmp(obj[18]);
 }

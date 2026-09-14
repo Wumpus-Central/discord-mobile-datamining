@@ -5,6 +5,8 @@ import DisplayNameEffect from "../../../discord_common/js/shared/shared-constant
 import DisplayNameFont from "../../../discord_common/js/shared/shared-constants/DisplayNameFont.tsx";
 import _slicedToArray from "../../../_runtime/metro/00032__.js";
 
+const require = globalThis.__r;
+
 require = fn;
 const DisplayNameStylesConstants = fn(1389);
 ({
@@ -45,11 +47,10 @@ export const doesEffectImpactLayout = function doesEffectImpactLayout(effectId) 
   return set.has(effectId);
 };
 export const generateColorVariants = function generateColorVariants(displayNameStylesAccessibleColors) {
-  let obj = _modDef672(displayNameStylesAccessibleColors);
-  const alphaResult = obj.alpha(1);
+  const alphaResult = _modDef672(displayNameStylesAccessibleColors).alpha(1);
   value = alphaResult.get("hsl.l");
   const bound = Math.min(1, 1.2 * alphaResult.get("hsl.s"));
-  obj = {
+  const obj2 = {
     main: displayNameStylesAccessibleColors,
     light1: null,
     light2: null,
@@ -60,19 +61,19 @@ export const generateColorVariants = function generateColorVariants(displayNameS
   };
   const bound1 = Math.min(0.6, value + 0.1);
   const result = alphaResult.set("hsl.l", Math.min(1, 1.2 * value));
-  obj.light1 = result.hex();
+  obj2.light1 = result.hex();
   const result1 = alphaResult.set("hsl.l", Math.min(1, 1.6 * value));
-  obj.light2 = result1.hex();
+  obj2.light2 = result1.hex();
   const result2 = alphaResult.set("hsl.l", Math.max(0, 0.6 * value));
-  obj.dark1 = result2.hex();
+  obj2.dark1 = result2.hex();
   const result3 = alphaResult.set("hsl.l", Math.max(0, 0.2 * value));
-  obj.dark2 = result3.hex();
+  obj2.dark2 = result3.hex();
   const result4 = alphaResult.set("hsl.l", Math.max(0.12, 0.4 * value));
-  obj.toonStroke = result4.hex();
+  obj2.toonStroke = result4.hex();
   const result5 = alphaResult.set("hsl.s", bound);
   const result6 = result5.set("hsl.l", bound1);
-  obj.neonStroke = result6.hex();
-  return obj;
+  obj2.neonStroke = result6.hex();
+  return obj2;
 };
 export const wrapHue = function wrapHue(h) {
   return ((h % 360) + 360) % 360;

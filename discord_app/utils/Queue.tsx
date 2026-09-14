@@ -106,7 +106,7 @@ prototype["remove"] = function remove(fn) {
       let queue = self.queue;
       let arr = queue.shift();
       if (!fn(arr.message)) {
-        arr = items.push(arr);
+        let arr2 = items.push(arr);
       }
     } while (self.queue.length > 0);
   }

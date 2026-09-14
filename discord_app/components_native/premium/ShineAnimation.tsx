@@ -4,23 +4,23 @@ import ReanimatedRexport from "../../modules/reanimated/ReanimatedRexport.tsx";
 import timing from "../../design/animation/reanimated/timing/timing.tsx";
 import noop from "../../../_runtime/metro/00019__.js";
 
+const require = globalThis.__r;
+
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Image: closure_4, View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 const ShineAnimationConfig = Object.freeze({ FLASH_TIME_PERCENT: 0.72, FLASH_DURATION_PERCENT: 0.08 });
-fn(4636);
+const createStyles = fn(4636);
 let obj = { container: { overflow: "hidden" }, shineContainer: null, shine: null, shineInner: null };
-obj = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
-obj.shineContainer = obj;
+obj.shineContainer = {};
 let size = { transform: null, width: 56, flex: 0, height: "300%", top: "-10%" };
 let items = [{ rotate: "30deg" }];
 size.transform = items;
 obj.shine = size;
-const createStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL, flex: 1 };
-obj.shineInner = createStyles;
+obj.shineInner = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL, flex: 1 };
 let closure_9 = createStyles.createStyles(obj);
 const __initData = {
   code: 'function ShineAnimationTsx1(){const{interpolate,progress}=this.__closure;const widthPercent=interpolate(progress.get(),[0,1],[20,160]);return{width:widthPercent+"%"};}',
@@ -28,6 +28,8 @@ const __initData = {
 const __initData2 = {
   code: "function ShineAnimationTsx2(){const{ShineAnimationConfig,interpolateColor,progress,flashStartColor,flashEndColor}=this.__closure;const startTime=ShineAnimationConfig.FLASH_TIME_PERCENT;const duration=ShineAnimationConfig.FLASH_DURATION_PERCENT;return{backgroundColor:interpolateColor(progress.get(),[0,startTime,startTime,startTime+duration,1],[flashStartColor,flashStartColor,flashEndColor,flashEndColor,flashStartColor])};}",
 };
+let obj3 = {};
+const obj4 = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL, flex: 1 };
 size = fn(2);
 let result = size.fileFinishedImporting("components_native/premium/ShineAnimation.tsx");
 
@@ -37,8 +39,7 @@ export default noop.memo(function ShineAnimation(arg0) {
   let hexResult1;
   ({ source, style } = arg0);
   const tmp = closure_9();
-  let obj = sharedValue(hexResult1[5]);
-  sharedValue = obj.useSharedValue(0);
+  sharedValue = sharedValue(hexResult1[5]).useSharedValue(0);
   let items = [sharedValue];
   const effect = noop.useEffect(() => {
     const obj = ReanimatedRexport;
@@ -47,7 +48,7 @@ export default noop.memo(function ShineAnimation(arg0) {
       obj.withDelay(400, obj2.withRepeat(timing.withTiming(1, { duration: 1000 }), -1, false)),
     );
   }, items);
-  let obj1 = sharedValue(hexResult1[5]);
+  let obj = sharedValue(hexResult1[5]);
   class A {
     constructor() {
       obj = { width: null };
@@ -56,11 +57,12 @@ export default noop.memo(function ShineAnimation(arg0) {
       return obj;
     }
   }
-  obj = { interpolate: sharedValue(hexResult1[5]).interpolate, progress: sharedValue };
-  A.__closure = obj;
+  let obj2 = sharedValue(hexResult1[5]);
+  A.__closure = { interpolate: sharedValue(hexResult1[5]).interpolate, progress: sharedValue };
   A.__workletHash = 4072719467417;
   A.__initData = __initData;
-  const animatedStyle = obj1.useAnimatedStyle(A);
+  const animatedStyle = obj2.useAnimatedStyle(A);
+  const obj3 = { interpolate: sharedValue(hexResult1[5]).interpolate, progress: sharedValue };
   const tmp5 = require("../../../_runtime/metro/00672__.js");
   const tmp5Result = require("../../../_runtime/metro/00672__.js")(require("native").unsafe_rawColors.BRAND_360);
   const hexResult = require("../../../_runtime/metro/00672__.js")(require("native").unsafe_rawColors.BRAND_360)
@@ -98,26 +100,26 @@ export default noop.memo(function ShineAnimation(arg0) {
       return obj;
     }
   }
-  obj = {
+  const obj8 = sharedValue(hexResult1[5]);
+  E.__closure = {
     ShineAnimationConfig,
     interpolateColor: sharedValue(hexResult1[5]).interpolateColor,
     progress: sharedValue,
     flashStartColor: hexResult,
     flashEndColor: hexResult1,
   };
-  E.__closure = obj;
   E.__workletHash = 9845866779228;
   E.__initData = __initData2;
-  const animatedStyle1 = sharedValue(hexResult1[5]).useAnimatedStyle(E);
-  obj1 = { style: null, children: null };
+  const animatedStyle1 = obj8.useAnimatedStyle(E);
+  const obj5 = { style: null, children: null };
   let items1 = [tmp.container, style, animatedStyle1];
-  obj1.style = items1;
-  let obj2 = { style: tmp.shineContainer, children: null };
+  obj5.style = items1;
+  const obj6 = { style: tmp.shineContainer, children: null };
   const items2 = [closure_6(require("ReanimatedRexport").View, { style: animatedStyle })];
-  const obj3 = { style: tmp.shine, children: closure_6(closure_5, { style: tmp.shineInner }) };
-  items2[1] = closure_6(closure_5, obj3);
-  obj2.children = items2;
-  const items3 = [closure_7(closure_5, obj2), closure_6(closure_4, { source })];
-  obj1.children = items3;
-  return closure_7(require("ReanimatedRexport").View, obj1);
+  const obj7 = { style: tmp.shine, children: closure_6(closure_5, { style: tmp.shineInner }) };
+  items2[1] = closure_6(closure_5, obj7);
+  obj6.children = items2;
+  const items3 = [closure_7(closure_5, obj6), closure_6(closure_4, { source })];
+  obj5.children = items3;
+  return closure_7(require("ReanimatedRexport").View, obj5);
 });

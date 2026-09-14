@@ -9,6 +9,8 @@ import AuthenticationStore from "../../../stores/AuthenticationStore.tsx";
 import UserStore from "../../../stores/UserStore.tsx";
 import WishlistStore from "../WishlistStore.tsx";
 
+const require = globalThis.__r;
+
 require = fn;
 function getUserWishlistKey(userId, arg1) {
   if (null != arg1) {
@@ -99,14 +101,14 @@ function useFetchWishlist(wishlistId) {
       }
     }
   }, items3);
-  obj = { wishlist, isFetching: "fetching" === tmp4, wasFetched: null, error: null };
+  const obj4 = { wishlist, isFetching: "fetching" === tmp2[1], wasFetched: null, error: null };
   let tmp11 = "success" === tmp4;
   if (!tmp11) {
     tmp11 = "error" === tmp4;
   }
-  obj.wasFetched = tmp11;
-  obj.error = tmp2[2];
-  return obj;
+  obj4.wasFetched = tmp11;
+  obj4.error = tmp2[2];
+  return obj4;
 }
 let useEffect = fn(19).useEffect;
 const getWishlistSkuIds = fn(8904).getWishlistSkuIds;
@@ -265,7 +267,6 @@ export const useShouldShowWishlistInDMGifting = function useShouldShowWishlistIn
     flag = true;
   }
   let wishlistGiftableItems;
-  let obj = wishlistGiftableItems;
   let id;
   if (giftRecipient != null) {
     id = giftRecipient.id;
@@ -285,6 +286,7 @@ export const useShouldShowWishlistInDMGifting = function useShouldShowWishlistIn
     id1 = giftRecipient.id;
   }
   const tmp4Result = giftRecipient(flag[12])({ userId: id1 });
+  const obj = wishlistGiftableItems;
   const tmp4 = giftRecipient(flag[12]);
   const tmp7 = isGift;
   const items1 = [UserProfileStore];
@@ -309,14 +311,14 @@ export const useShouldShowWishlistInDMGifting = function useShouldShowWishlistIn
       }
     }
   }
-  obj = { wishlistId: tmp10, userId: null };
+  const obj3 = { wishlistId: tmp10, userId: null };
   let id2;
   if (giftRecipient != null) {
     id2 = giftRecipient.id;
   }
-  obj.userId = id2;
+  obj3.userId = id2;
   const obj2 = isGift(flag[7]);
-  wishlistGiftableItems = tmp7(flag[13]).useWishlistGiftableItems(useFetchWishlist(obj).wishlist);
+  wishlistGiftableItems = tmp7(flag[13]).useWishlistGiftableItems(useFetchWishlist(obj3).wishlist);
   const items2 = [isGift, giftRecipient, wishlistGiftableItems, tmp4Result, flag];
   return obj.useMemo(() => {
     let tmp = true === isGift;
@@ -338,10 +340,10 @@ export const useShouldShowWishlistInDMGifting = function useShouldShowWishlistIn
   }, items2);
 };
 export const useCurrentUserWishlist = function useCurrentUserWishlist() {
-  let obj = stateFromStores(userProfile[7]);
   const items = [AuthenticationStore];
-  stateFromStores = obj.useStateFromStores(items, () => id.getId());
+  stateFromStores = stateFromStores(userProfile[7]).useStateFromStores(items, () => id.getId());
   userProfile = undefined;
+  let obj = stateFromStores(userProfile[7]);
   const items1 = [UserStore];
   const stateFromStores1 = stateFromStores(userProfile[7]).useStateFromStores(items1, () =>
     UserStore.getUser(stateFromStores),
@@ -384,17 +386,17 @@ export const useCurrentUserWishlist = function useCurrentUserWishlist() {
       maybeFetchUserProfileDefault(stateFromStores1.id, stateFromStores1.getAvatarURL(null, 80));
     }
   }, items4);
-  obj = {};
+  const obj4 = {};
   const merged = Object.assign(useFetchWishlist({ wishlistId, userId: stateFromStores }));
-  obj.wishlistId = wishlistId;
-  obj.userProfile = userProfile;
-  return obj;
+  obj4.wishlistId = wishlistId;
+  obj4.userProfile = userProfile;
+  return obj4;
 };
 export const useFetchWishlistAndProfileInfoForUser = function useFetchWishlistAndProfileInfoForUser(recipientUserId) {
   _require = recipientUserId;
-  let obj = require("initialize");
   const items = [UserStore];
-  const stateFromStores = obj.useStateFromStores(items, () => UserStore.getUser(stateFromStores));
+  const stateFromStores = require("initialize").useStateFromStores(items, () => UserStore.getUser(stateFromStores));
+  const obj = require("initialize");
   const items1 = [UserProfileStore];
   const items2 = [recipientUserId];
   const stateFromStoresObject = require("initialize").useStateFromStoresObject(
@@ -432,10 +434,9 @@ export const useFetchWishlistAndProfileInfoForUser = function useFetchWishlistAn
       maybeFetchUserProfileDefault(stateFromStores1.id, stateFromStores1.getAvatarURL(null, 80));
     }
   }, items3);
-  obj = {};
-  obj = { wishlistId, userId: recipientUserId };
-  const merged = Object.assign(useFetchWishlist(obj));
-  obj.wishlistId = wishlistId;
-  obj.userProfile = userProfile;
-  return obj;
+  const obj3 = {};
+  const merged = Object.assign(useFetchWishlist({ wishlistId, userId: recipientUserId }));
+  obj3.wishlistId = wishlistId;
+  obj3.userProfile = userProfile;
+  return obj3;
 };

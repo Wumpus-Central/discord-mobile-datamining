@@ -8,6 +8,8 @@ import AuthenticationStore from "../../../../stores/AuthenticationStore.tsx";
 import MediaEngineStore from "../../../../stores/MediaEngineStore.tsx";
 import UserStore from "../../../../stores/UserStore.tsx";
 
+const require = globalThis.__r;
+
 require = fn;
 function areStableParticipantsEqual(arg0, arg1) {
   let tmp = arg0 === arg1;
@@ -38,7 +40,7 @@ export default function useStableParticipant(id, arg1, arg2) {
         if (null == participant) {
           const user = UserStore.getUser(id);
           if (null != user) {
-            let obj = {
+            const obj3 = {
               type: ParticipantTypes.USER,
               id,
               user,
@@ -48,26 +50,26 @@ export default function useStableParticipant(id, arg1, arg2) {
               userAvatarDecoration: null,
               streamId: "flex",
               ringing: null,
-              hasVideo: 0.833,
-              isSelf: 0.709,
+              hasVideo: 0.959,
+              isSelf: 0.978,
             };
             id = AuthenticationStore.getId();
-            obj.userNick = NicknameUtils.getName(closure_2, closure_1, user);
-            obj.userAvatarDecoration = useAvatarDecoration.getAvatarDecoration(user, closure_2);
-            obj.isSelf = user.id === id;
-            return obj;
+            obj3.userNick = NicknameUtils.getName(closure_2, closure_1, user);
+            obj3.userAvatarDecoration = useAvatarDecoration.getAvatarDecoration(user, closure_2);
+            obj3.isSelf = user.id === id;
+            return obj3;
           }
         } else {
           const tmp15 = participantHasVideoDefault(participant);
           const type = participant.type;
           if (ParticipantTypes.ACTIVITY === type) {
-            obj = { type: participant.type, id, applicationId: participant.applicationId };
-            return obj;
+            const obj4 = { type: participant.type, id, applicationId: participant.applicationId };
+            return obj4;
           } else {
             if (ParticipantTypes.STREAM !== type) {
               if (ParticipantTypes.HIDDEN_STREAM !== type) {
                 if (ParticipantTypes.USER === type) {
-                  obj = {
+                  const obj = {
                     type: participant.type,
                     id,
                     user: null,
@@ -104,7 +106,7 @@ export default function useStableParticipant(id, arg1, arg2) {
                 }
               }
             }
-            const obj1 = {
+            const obj9 = {
               type: participant.type,
               id,
               user: null,
@@ -116,12 +118,12 @@ export default function useStableParticipant(id, arg1, arg2) {
             };
             ({ user: obj2.user, userNick: obj2.userNick, streamId: streamId2 } = participant);
             const id2 = AuthenticationStore.getId();
-            obj1.streamId = streamId2;
+            obj9.streamId = streamId2;
             const guildId = participant.stream.guildId;
-            obj1.streamGuildId = guildId;
-            obj1.hasVideo = tmp15;
-            obj1.isSelf = participant.user.id === id2;
-            return obj1;
+            obj9.streamGuildId = guildId;
+            obj9.hasVideo = tmp15;
+            obj9.isSelf = participant.user.id === id2;
+            return obj9;
           }
         }
       }

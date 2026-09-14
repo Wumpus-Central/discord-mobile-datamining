@@ -32,21 +32,18 @@ export const BaseRive = noop.forwardRef(function BaseRiveInner(renderDataBinding
   renderDataBinding = renderDataBinding.renderDataBinding;
   let play;
   let pause;
-  let obj = DataBindByName;
   let tmp3;
   if (null != referencedAssets) {
-    obj = { referencedAssets };
-    tmp3 = obj;
+    const obj2 = { referencedAssets };
+    tmp3 = obj2;
   }
-  let riveFile = obj.useRiveFile(src, tmp3).riveFile;
-  let tmpResult = DataBindByName;
-  const rive = tmpResult.useRive();
+  let riveFile = DataBindByName.useRiveFile(src, tmp3).riveFile;
+  const rive = DataBindByName.useRive();
   const riveViewRef = rive.riveViewRef;
-  let obj3 = noop;
   const enabled = noop.useContext(AccessibilityPreferencesContext.AccessibilityPreferencesContext).reducedMotion
     .enabled;
-  tmpResult = ManaContext;
-  const experiments = tmpResult.useManaContext().experiments;
+  const tmpResult = DataBindByName;
+  const experiments = ManaContext.useManaContext().experiments;
   let flag;
   if (experiments != null) {
     const enabledExperiments = experiments.enabledExperiments;
@@ -64,7 +61,8 @@ export const BaseRive = noop.forwardRef(function BaseRiveInner(renderDataBinding
   if (items == null) {
     items = [];
   }
-  const memo = obj3.useMemo(() => require, []);
+  const memo = noop.useMemo(() => require, []);
+  const tmpResult4 = ManaContext;
   if (null != memo) {
     let tmp12 = riveFile;
     if (riveFile == null) {
@@ -84,8 +82,8 @@ export const BaseRive = noop.forwardRef(function BaseRiveInner(renderDataBinding
     reducedMotion = tmp14.reducedMotion;
   }
   const tmp16 = null != reducedMotion;
-  const tmpResult1 = DataBindByName;
-  obj = { isReady: tmp6, appStatePlaybackEnabled: flag, shouldShortLoopForReducedMotion: null };
+  const tmpResult5 = DataBindByName;
+  const obj3 = { isReady: null != riveViewRef, appStatePlaybackEnabled: flag, shouldShortLoopForReducedMotion: null };
   let tmp17 = enabled;
   if (enabled) {
     tmp17 = !tmp16;
@@ -93,18 +91,18 @@ export const BaseRive = noop.forwardRef(function BaseRiveInner(renderDataBinding
   if (tmp17) {
     tmp17 = "play" !== withReducedMotion;
   }
-  obj.shouldShortLoopForReducedMotion = tmp17;
-  const rivePlayback = useRivePlayback.useRivePlayback(riveViewRef, obj);
+  obj3.shouldShortLoopForReducedMotion = tmp17;
+  const rivePlayback = useRivePlayback.useRivePlayback(riveViewRef, obj3);
   play = rivePlayback.play;
   pause = rivePlayback.pause;
   const items1 = [play, pause];
-  const imperativeHandle = obj3.useImperativeHandle(arg1, () => ({ play, pause }), items1);
+  const imperativeHandle = noop.useImperativeHandle(arg1, () => ({ play, pause }), items1);
   const items2 = [container.container];
   let hidden;
   if (null == riveViewRef) {
     hidden = container.hidden;
   }
-  const obj1 = { style: items2, children: null };
+  const obj5 = { style: items2, children: null };
   items2[1] = hidden;
   if (null == riveFile) {
     const items3 = [tmp24];
@@ -113,20 +111,20 @@ export const BaseRive = noop.forwardRef(function BaseRiveInner(renderDataBinding
       if (instance == null) {
         instance = null;
       }
-      const obj2 = { instance, file: null, reducedMotionEnabled: null, playIfNeeded: null };
+      const obj6 = { instance, file: null, reducedMotionEnabled: null, playIfNeeded: null };
       if (riveFile == null) {
         riveFile = null;
       }
-      obj2.file = riveFile;
-      obj2.reducedMotionEnabled = enabled;
-      obj2.playIfNeeded = rivePlayback.playIfNeeded;
-      renderDataBindingResult = renderDataBinding(obj2);
+      obj6.file = riveFile;
+      obj6.reducedMotionEnabled = enabled;
+      obj6.playIfNeeded = rivePlayback.playIfNeeded;
+      renderDataBindingResult = renderDataBinding(obj6);
     }
     items3[1] = renderDataBindingResult;
-    obj1.children = items3;
-    return React5(React3, obj1);
+    obj5.children = items3;
+    return React5(React3, obj5);
   } else {
-    obj3 = {
+    const obj7 = {
       file: riveFile,
       hybridRef: rive.setHybridRef,
       artboardName: artboard,
@@ -135,38 +133,38 @@ export const BaseRive = noop.forwardRef(function BaseRiveInner(renderDataBinding
       style: null,
     };
     const items4 = [container.fill, style];
-    obj3.style = items4;
+    obj7.style = items4;
     if (null != stateMachine) {
-      const obj4 = { stateMachineName: stateMachine };
-      let obj5 = obj4;
-    } else {
-      obj5 = {};
-    }
-    const merged = Object.assign(obj5);
-    if (null != fit) {
-      const obj6 = { fit: RiveTypes.FIT_MAP[fit] };
-      let obj7 = obj6;
-    } else {
-      obj7 = {};
-    }
-    const merged1 = Object.assign(obj7);
-    if (null != alignment) {
-      const obj8 = { alignment: RiveTypes.ALIGNMENT_MAP[alignment] };
+      const obj8 = { stateMachineName: stateMachine };
       let obj9 = obj8;
     } else {
       obj9 = {};
     }
-    const merged2 = Object.assign(obj9);
-    if (null != value) {
-      const obj10 = { layoutScaleFactor: value };
+    const merged = Object.assign(obj9);
+    if (null != fit) {
+      const obj10 = { fit: RiveTypes.FIT_MAP[fit] };
       let obj11 = obj10;
     } else {
       obj11 = {};
     }
-    const merged3 = Object.assign(obj11);
-    timestampProducer(DataBindByName.RiveView, obj3);
+    const merged1 = Object.assign(obj11);
+    if (null != alignment) {
+      const obj12 = { alignment: RiveTypes.ALIGNMENT_MAP[alignment] };
+      let obj13 = obj12;
+    } else {
+      obj13 = {};
+    }
+    const merged2 = Object.assign(obj13);
+    if (null != value) {
+      const obj14 = { layoutScaleFactor: value };
+      let obj15 = obj14;
+    } else {
+      obj15 = {};
+    }
+    const merged3 = Object.assign(obj15);
+    timestampProducer(DataBindByName.RiveView, obj7);
   }
-  const tmpResult2 = useRivePlayback;
+  const tmpResult6 = useRivePlayback;
 });
 export const useNumberBinding = function useNumberBinding(
   AnimationState,
@@ -351,13 +349,12 @@ export const useTriggerBinding = function useTriggerBinding(
   playIfNeeded,
 ) {
   closure_0 = startAnimation2;
-  let obj = DataBindByName;
   let tmp;
   if (null != startAnimation1) {
-    obj = { onTrigger: startAnimation1 };
-    tmp = obj;
+    const obj2 = { onTrigger: startAnimation1 };
+    tmp = obj2;
   }
-  const trigger = obj.useRiveTrigger(startAnimation, instance, tmp).trigger;
+  const trigger = DataBindByName.useRiveTrigger(startAnimation, instance, tmp).trigger;
   const items = [startAnimation2, trigger, playIfNeeded];
   const effect = noop.useEffect(() => {
     let tmp2 = closure_0;

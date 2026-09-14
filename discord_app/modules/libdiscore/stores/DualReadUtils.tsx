@@ -106,7 +106,11 @@ function deepEqual(getTime, getTime2) {
 }
 function doDualReadValidation(items, derived, derived2) {
   if (derived.derived.length !== derived2.derived.length) {
-    let obj = { type: "length-mismatch", primaryLength: derived.derived.length, shadowLength: derived2.derived.length };
+    const obj = {
+      type: "length-mismatch",
+      primaryLength: derived.derived.length,
+      shadowLength: derived2.derived.length,
+    };
     items.push(obj);
   }
   const keys = Object.keys(derived.root);
@@ -122,12 +126,12 @@ function doDualReadValidation(items, derived, derived2) {
     if (typeof call === "unknown" ? hasOwnProperty(nextResult) : call(root, nextResult)) {
       let tmp10 = validateRecord(tmp5, derived.root[tmp5], derived2.root[tmp5]);
       if (null != tmp10) {
-        let arr = items.push(tmp11);
+        let arr4 = items.push(tmp11);
       }
     } else {
-      obj = { type: "missing-record", key: null };
-      obj.key = tmp5;
-      let arr1 = items.push(obj);
+      let obj2 = { type: "missing-record", key: null };
+      obj2.key = tmp5;
+      let arr5 = items.push(obj2);
     }
     continue;
   }
@@ -141,8 +145,8 @@ function doDualReadValidation(items, derived, derived2) {
       hasOwnProperty2Result = call2(root2, item10060);
     }
     if (!hasOwnProperty2Result) {
-      obj = { type: "extra-record", key: item10060 };
-      let arr2 = arg0.push(obj);
+      let obj3 = { type: "extra-record", key: item10060 };
+      let arr6 = arg0.push(obj3);
     }
     continue;
   }
@@ -179,14 +183,14 @@ function validateRecord(key, primaryRecord, shadowRecord) {
         if (deepEqualImpl(tmp2, tmp5, map, true)) {
           continue;
         } else {
-          let obj = { type: "value-mismatch", field: key10007, primaryValue: tmp2, shadowValue: tmp5 };
-          let arr = items.push(obj);
+          let obj2 = { type: "value-mismatch", field: key10007, primaryValue: tmp2, shadowValue: tmp5 };
+          let arr = items.push(obj2);
           continue;
         }
         continue;
       } else {
-        obj = { type: "field-missing", field: key10007 };
-        arr = items.push(obj);
+        let obj = { type: "field-missing", field: key10007 };
+        let arr3 = items.push(obj);
         continue;
       }
       continue;
@@ -194,8 +198,8 @@ function validateRecord(key, primaryRecord, shadowRecord) {
     continue;
   }
   if (items.length > 0) {
-    obj = { type: "record-mismatch", key, primaryRecord, shadowRecord, mismatches: items };
-    return obj;
+    const obj3 = { type: "record-mismatch", key, primaryRecord, shadowRecord, mismatches: items };
+    return obj3;
   }
 }
 function isPlainObject(obj) {
@@ -314,26 +318,26 @@ function logErrorsToAnalytics(store_name, items) {
                     let tmp24 = appendMismatch(obj);
                   }
                 } else {
-                  obj = { fieldName: null, primaryType: null, shadowType: "missing" };
-                  obj.fieldName = combined;
-                  obj.primaryType = getType(tmp8);
-                  let tmp13 = appendMismatch(obj);
+                  let obj2 = { fieldName: null, primaryType: null, shadowType: "missing" };
+                  obj2.fieldName = combined;
+                  obj2.primaryType = getType(tmp8);
+                  let tmp13 = appendMismatch(obj2);
                 }
                 continue;
               }
             }
             function appendArrayMismatches(combined, primaryValue, shadowValue) {
-              obj = discord_common_shallowEqual;
               if (!obj.areArraysShallowEqual(primaryValue, shadowValue)) {
-                obj = {
+                const obj2 = {
                   fieldName: combined,
                   primaryType: "array",
                   shadowType: "array",
                   primaryArrayLength: primaryValue.length,
                   secondaryArrayLength: shadowValue.length,
                 };
-                appendMismatch(obj);
+                appendMismatch(obj2);
               }
+              obj = discord_common_shallowEqual;
             }
             let obj = { numExtraKeys: 0, numMissingKeys: 0, mismatchedFields: [] };
             let iter = items[Symbol.iterator]();
@@ -356,14 +360,14 @@ function logErrorsToAnalytics(store_name, items) {
                     let mismatches = tmp2.mismatches;
                     for (const item10034 of mismatches) {
                       let str = item10034.field;
-                      str = str.toString();
+                      let str1 = str.toString();
                       let type2 = item10034.type;
                       if ("field-missing" === type2) {
                         let mismatchedFields = obj.mismatchedFields;
-                        obj = { fieldName: null, primaryType: null, shadowType: "missing" };
-                        obj.fieldName = str;
-                        obj.primaryType = closure_12(tmp2.primaryRecord[item10034.field]);
-                        let arr = mismatchedFields.push(obj);
+                        let obj2 = { fieldName: null, primaryType: null, shadowType: "missing" };
+                        obj2.fieldName = str1;
+                        obj2.primaryType = closure_12(tmp2.primaryRecord[item10034.field]);
+                        let arr = mismatchedFields.push(obj2);
                       } else if ("value-mismatch" === type2) {
                         if (null !== item10034.primaryValue) {
                           if (null !== item10034.shadowValue) {
@@ -374,14 +378,14 @@ function logErrorsToAnalytics(store_name, items) {
                                   let _Array2 = Array;
                                   if (Array.isArray(item10034.shadowValue)) {
                                     let result = appendArrayMismatches(
-                                      str,
+                                      str1,
                                       item10034.primaryValue,
                                       item10034.shadowValue,
                                     );
                                   }
                                 }
                                 let appendDeepMismatchesResult = appendDeepMismatches(
-                                  str,
+                                  str1,
                                   item10034.primaryValue,
                                   item10034.shadowValue,
                                 );
@@ -389,11 +393,11 @@ function logErrorsToAnalytics(store_name, items) {
                             }
                           }
                         }
-                        obj = { fieldName: null, primaryType: null, shadowType: null };
-                        obj.fieldName = str;
-                        obj.primaryType = closure_12(item10034.primaryValue);
-                        obj.shadowType = closure_12(item10034.shadowValue);
-                        let appendMismatchResult = appendMismatch(obj);
+                        let obj3 = { fieldName: null, primaryType: null, shadowType: null };
+                        obj3.fieldName = str1;
+                        obj3.primaryType = closure_12(item10034.primaryValue);
+                        obj3.shadowType = closure_12(item10034.shadowValue);
+                        let appendMismatchResult = appendMismatch(obj3);
                       }
                       continue;
                     }
@@ -413,7 +417,7 @@ function logErrorsToAnalytics(store_name, items) {
             const mismatchesByLastAction2 = value.mismatchesByLastAction;
             const result1 = mismatchesByLastAction2.set(lastResult, num2 + 1);
             value.mismatchesReported = value.mismatchesReported + 1;
-            obj = {
+            const obj6 = {
               store_name,
               action_type: lastResult,
               num_missing_keys: null,
@@ -422,8 +426,8 @@ function logErrorsToAnalytics(store_name, items) {
             };
             ({ numMissingKeys: obj5.num_missing_keys, numExtraKeys: obj5.num_extra_keys } = tmp21);
             const _JSON = JSON;
-            obj.mismatched_fields = JSON.stringify(tmp21.mismatchedFields);
-            AnalyticsUtilsDefault.track(AnalyticEvents.LIBDISCORE_KV_DUAL_READ_ERROR, obj);
+            obj6.mismatched_fields = JSON.stringify(tmp21.mismatchedFields);
+            AnalyticsUtilsDefault.track(AnalyticEvents.LIBDISCORE_KV_DUAL_READ_ERROR, obj6);
           }
         }
       }

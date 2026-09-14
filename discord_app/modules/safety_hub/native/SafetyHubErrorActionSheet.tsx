@@ -13,18 +13,20 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-fn(4636);
-let createStyles = { errorContainer: null, redesignErrorIconContainer: null, redesignErrorIcon: null };
-createStyles = {
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "center",
-  paddingTop: nativeDefault.space.PX_8,
-  paddingBottom: nativeDefault.space.PX_24,
-  gap: nativeDefault.space.PX_16,
-  minHeight: 120,
+const createStyles = fn(4636);
+let obj2 = {
+  errorContainer: {
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    paddingTop: nativeDefault.space.PX_8,
+    paddingBottom: nativeDefault.space.PX_24,
+    gap: nativeDefault.space.PX_16,
+    minHeight: 120,
+  },
+  redesignErrorIconContainer: null,
+  redesignErrorIcon: null,
 };
-createStyles.errorContainer = createStyles;
 let size = {
   display: "flex",
   justifyContent: "center",
@@ -34,9 +36,9 @@ let size = {
   borderRadius: nativeDefault.radii.round,
   backgroundColor: nativeDefault.colors.WHITE,
 };
-createStyles.redesignErrorIconContainer = size;
-createStyles.redesignErrorIcon = { height: 50, width: 50 };
-let closure_7 = createStyles.createStyles(createStyles);
+obj2.redesignErrorIconContainer = size;
+obj2.redesignErrorIcon = { height: 50, width: 50 };
+let closure_7 = createStyles.createStyles(obj2);
 size = fn(2);
 const result = size.fileFinishedImporting("modules/safety_hub/native/SafetyHubErrorActionSheet.tsx");
 
@@ -46,29 +48,29 @@ export default function SafetyHubErrorActionSheet(arg0) {
   } else {
     const tmp2 = closure_7();
     const tmp5 = useSafetyHubLoadingDefault();
-    let obj = { children: null };
-    obj = { style: null, children: null };
+    const obj = { children: null };
+    const obj2 = { style: null, children: null };
     const items = [tmp2.errorContainer];
-    obj.style = items;
-    obj = { style: null, children: null };
+    obj2.style = items;
+    const obj3 = { style: null, children: null };
     const items1 = [tmp2.redesignErrorIconContainer];
-    obj.style = items1;
-    const obj1 = {
+    obj3.style = items1;
+    const obj4 = {
       size: "custom",
       color: nativeDefault.colors.CONTROL_CRITICAL_PRIMARY_BACKGROUND_DEFAULT,
       style: null,
     };
     const items2 = [tmp2.redesignErrorIcon];
-    obj1.style = items2;
-    obj.children = hasOwnProperty(CircleXIcon.CircleXIcon, obj1);
-    const items3 = [hasOwnProperty(View, obj)];
-    const obj2 = { variant: "heading-lg/normal", children: null };
+    obj4.style = items2;
+    obj3.children = hasOwnProperty(CircleXIcon.CircleXIcon, obj4);
+    const items3 = [hasOwnProperty(View, obj3)];
+    const obj5 = { variant: "heading-lg/normal", children: null };
     const intl = util.intl;
-    obj2.children = intl.string(util.t.TDRvqs);
-    items3[1] = hasOwnProperty(Text_Text.Text, obj2);
-    obj.children = items3;
-    const items4 = [timestampProducer(View, obj)];
-    const obj3 = {
+    obj5.children = intl.string(util.t.TDRvqs);
+    items3[1] = hasOwnProperty(Text_Text.Text, obj5);
+    obj2.children = items3;
+    const items4 = [timestampProducer(View, obj2)];
+    const obj6 = {
       onPress() {
         return SafetyHubActionCreatorsAll.getSafetyHubData();
       },
@@ -77,10 +79,10 @@ export default function SafetyHubErrorActionSheet(arg0) {
       disabled: null,
     };
     const intl2 = util.intl;
-    obj3.text = intl2.string(util.t.R1AN4F);
-    obj3.loading = tmp5;
-    obj3.disabled = tmp5;
-    items4[1] = hasOwnProperty(components_Button_Button.Button, obj3);
+    obj6.text = intl2.string(util.t.R1AN4F);
+    obj6.loading = tmp5;
+    obj6.disabled = tmp5;
+    items4[1] = hasOwnProperty(components_Button_Button.Button, obj6);
     obj.children = items4;
     return timestampProducer(Sheet_BottomSheet.BottomSheet, obj);
   }

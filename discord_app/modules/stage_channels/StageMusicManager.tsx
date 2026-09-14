@@ -9,6 +9,8 @@ import StageInstanceStore from "StageInstanceStore.tsx";
 import StageMusicStore from "StageMusicStore.tsx";
 import AutomaticLifecycleManager from "../../lib/AutomaticLifecycleManager.tsx";
 
+const require = globalThis.__r;
+
 require = fn;
 function checkVoiceStates() {
   const voiceChannelId = SelectedChannelStore.getVoiceChannelId();

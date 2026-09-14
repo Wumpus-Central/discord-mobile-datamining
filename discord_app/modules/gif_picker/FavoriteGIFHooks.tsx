@@ -3,6 +3,8 @@ import _modDef12 from "../../../_runtime/metro/00012__.js";
 import FrecencyUserSettingsHooks from "../user_settings/FrecencyUserSettingsHooks.tsx";
 import noop from "../../../_runtime/metro/00019__.js";
 
+const require = globalThis.__r;
+
 require = fn;
 let closure_4 = {};
 const size = fn(2);

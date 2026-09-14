@@ -14,19 +14,19 @@ class GuildSubscriptions {
   constructor(arg0) {
     obj = Object.create(new.target.prototype);
     closure_0 = obj;
-    tmp2 = new closure_1(closure_2[2])((guildId, members) => {
+    tmp2 = new closure_1(closure_2[2])((guildId1, members) => {
       obj = { members };
-      return obj._enqueue(guildId, obj);
+      return obj._enqueue(guildId1, obj);
     });
     obj._members = tmp2;
-    tmp3 = new closure_1(closure_2[3])((guildId, channels) => {
+    tmp3 = new closure_1(closure_2[3])((guildId1, channels) => {
       obj = { channels };
-      return obj._enqueue(guildId, obj);
+      return obj._enqueue(guildId1, obj);
     });
     obj._channels = tmp3;
-    tmp4 = new closure_1(closure_2[4])((guildId, thread_member_lists) => {
+    tmp4 = new closure_1(closure_2[4])((guildId1, thread_member_lists) => {
       obj = { thread_member_lists };
-      return obj._enqueue(guildId, obj);
+      return obj._enqueue(guildId1, obj);
     });
     obj._threadMemberLists = tmp4;
     set = new Set();
@@ -47,10 +47,10 @@ class GuildSubscriptions {
   }
 }
 const prototype = GuildSubscriptions.prototype;
-prototype["_enqueue"] = function _enqueue(guildId, arg1) {
-  const merged = Object.assign(this._pending[guildId]);
+prototype["_enqueue"] = function _enqueue(guildId1, arg1) {
+  const merged = Object.assign(this._pending[guildId1]);
   const merged1 = Object.assign(arg1);
-  this._pending[guildId] = {};
+  this._pending[guildId1] = {};
   const _flush = this._flush;
   _flush.delay();
 };
@@ -270,25 +270,25 @@ prototype["unsubscribeFromMemberUpdates"] = function unsubscribeFromMemberUpdate
     return false;
   }
 };
-prototype["subscribeThreadMemberList"] = function subscribeThreadMemberList(guildId, channelId, channelId2) {
-  let tmp = null != guildId;
+prototype["subscribeThreadMemberList"] = function subscribeThreadMemberList(guildId1, channelId, channelId2) {
+  let tmp = null != guildId1;
   if (tmp) {
-    tmp = "null" !== guildId;
+    tmp = "null" !== guildId1;
   }
   if (tmp) {
-    tmp = guildId !== ME;
+    tmp = guildId1 !== ME;
   }
   if (tmp) {
-    tmp = "undefined" !== guildId;
+    tmp = "undefined" !== guildId1;
   }
   if (tmp) {
-    tmp = !FavoritesUtils.isFavoritesGuildId(guildId);
+    tmp = !FavoritesUtils.isFavoritesGuildId(guildId1);
   }
   let subscription = tmp;
   if (subscription) {
     const self = this;
     const _threadMemberLists = this._threadMemberLists;
-    subscription = _threadMemberLists.subscribe(guildId, channelId, channelId2);
+    subscription = _threadMemberLists.subscribe(guildId1, channelId, channelId2);
   }
   return subscription;
 };
@@ -314,30 +314,30 @@ prototype["unsubscribeThreadMemberList"] = function unsubscribeThreadMemberList(
   }
   return unsubscribeResult;
 };
-prototype["subscribeToGuild"] = function subscribeToGuild(guildId) {
-  this._subscribeToFeature(guildId, this._typing, { typing: true });
-  this._subscribeToFeature(guildId, this._activities, { activities: true });
-  this._subscribeToFeature(guildId, this._threads, { threads: true });
+prototype["subscribeToGuild"] = function subscribeToGuild(guildId1) {
+  this._subscribeToFeature(guildId1, this._typing, { typing: true });
+  this._subscribeToFeature(guildId1, this._activities, { activities: true });
+  this._subscribeToFeature(guildId1, this._threads, { threads: true });
 };
-prototype["_subscribeToFeature"] = function _subscribeToFeature(guildId, _activities, arg2) {
-  let tmp = null != guildId;
+prototype["_subscribeToFeature"] = function _subscribeToFeature(guildId1, _activities, arg2) {
+  let tmp = null != guildId1;
   if (tmp) {
-    tmp = "null" !== guildId;
+    tmp = "null" !== guildId1;
   }
   if (tmp) {
-    tmp = guildId !== ME;
+    tmp = guildId1 !== ME;
   }
   if (tmp) {
-    tmp = "undefined" !== guildId;
+    tmp = "undefined" !== guildId1;
   }
   if (tmp) {
-    tmp = !FavoritesUtils.isFavoritesGuildId(guildId);
+    tmp = !FavoritesUtils.isFavoritesGuildId(guildId1);
   }
   if (tmp) {
-    if (!_activities.has(guildId)) {
+    if (!_activities.has(guildId1)) {
       const self = this;
-      _activities.add(guildId);
-      this._enqueue(guildId, arg2);
+      _activities.add(guildId1);
+      this._enqueue(guildId1, arg2);
     }
   }
 };

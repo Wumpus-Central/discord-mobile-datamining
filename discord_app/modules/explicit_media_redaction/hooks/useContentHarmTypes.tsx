@@ -75,14 +75,9 @@ const result = size.fileFinishedImporting("modules/explicit_media_redaction/hook
 export { useEnabledHarmTypesBitmaskForChannelAndAuthorId };
 export const useEnabledHarmTypesBitmaskForMessage = function useEnabledHarmTypesBitmaskForMessage(stateFromStores) {
   if (null == stateFromStores) {
-    let channelIdAndAuthorIdFromMessage = {};
+    let obj2 = {};
   } else {
-    channelIdAndAuthorIdFromMessage = ObscuredMediaUtils;
-    channelIdAndAuthorIdFromMessage =
-      channelIdAndAuthorIdFromMessage.getChannelIdAndAuthorIdFromMessage(stateFromStores);
+    obj2 = ObscuredMediaUtils.getChannelIdAndAuthorIdFromMessage(stateFromStores);
   }
-  return useEnabledHarmTypesBitmaskForChannelAndAuthorId(
-    channelIdAndAuthorIdFromMessage.channelId,
-    channelIdAndAuthorIdFromMessage.authorId,
-  );
+  return useEnabledHarmTypesBitmaskForChannelAndAuthorId(obj2.channelId, obj2.authorId);
 };

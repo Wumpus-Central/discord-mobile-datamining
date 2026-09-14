@@ -4,43 +4,40 @@ import SafetyHubUtils from "../safety_hub/SafetyHubUtils.tsx";
 import SafetyHubStore from "../safety_hub/SafetyHubStore.tsx";
 
 require = fn;
-fn(1433);
-let ApexExperiment = {
+const ApexExperiment = fn(1433);
+let obj2 = {
   kind: "user",
   name: "2026-08-show-expressive-modal-subtitle-alt",
   defaultConfig: { enabled: false },
   variations: null,
 };
-ApexExperiment = { 1: null };
-ApexExperiment[1] = { enabled: true };
-ApexExperiment.variations = ApexExperiment;
-let closure_3 = ApexExperiment.createApexExperiment(ApexExperiment);
+const obj3 = { 1: null };
+obj3[1] = { enabled: true };
+obj2.variations = obj3;
+let closure_3 = ApexExperiment.createApexExperiment(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/age_assurance/ShowExpressiveModalSubtitleAltFlag.tsx");
 
 export const useShouldShowExpressiveModalSubtitleAlt = function useShouldShowExpressiveModalSubtitleAlt(
   age_verification_expressive_v2_modal,
 ) {
-  let obj = SafetyHubUtils;
-  const isSuspendedUser = obj.useIsSuspendedUser();
+  const isSuspendedUser = SafetyHubUtils.useIsSuspendedUser();
   const items = [SafetyHubStore];
-  obj = { location: age_verification_expressive_v2_modal };
   const stateFromStores = initialize.useStateFromStores(items, () =>
     showExpressiveModalSubtitleAlt.getShowExpressiveModalSubtitleAlt(),
   );
-  let enabled = closure_3.useConfig(obj).enabled;
+  let enabled = closure_3.useConfig({ location: age_verification_expressive_v2_modal }).enabled;
   if (isSuspendedUser) {
     enabled = stateFromStores;
   }
   return enabled;
 };
 export const shouldShowExpressiveModalSubtitleAlt = function shouldShowExpressiveModalSubtitleAlt(location) {
-  let obj = SafetyHubUtils;
   if (obj.isCurrentUserSuspended()) {
     let enabled = SafetyHubStore.getShowExpressiveModalSubtitleAlt();
   } else {
-    obj = { location };
-    enabled = closure_3.getConfig(obj).enabled;
+    const obj2 = { location };
+    enabled = closure_3.getConfig(obj2).enabled;
   }
   return enabled;
 };

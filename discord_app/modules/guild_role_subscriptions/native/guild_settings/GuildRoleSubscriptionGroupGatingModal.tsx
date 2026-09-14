@@ -7,7 +7,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 import RoleTierEditStore from "../RoleTierEditStore.tsx";
 
 require = fn;
-const constants = fn(15288).GuildRoleSubscriptionsTierScenes;
+const constants = fn(15289).GuildRoleSubscriptionsTierScenes;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting(
@@ -15,7 +15,7 @@ const result = size.fileFinishedImporting(
 );
 
 export default function GuildRoleSubscriptionGroupGatingModal(arg0) {
-  [tmp2, tmp3] = _slicedToArray(RoleTierEditStore.useGroupIsFullGateState(), 2);
+  [tmp2, tmp3] = RoleTierEditStore.useGroupIsFullGateState();
   const obj = { title: null, description: null, canProceedToNextStep: true, nextStep: null };
   const tmp = _slicedToArray(RoleTierEditStore.useGroupIsFullGateState(), 2);
   const intl = util.intl;

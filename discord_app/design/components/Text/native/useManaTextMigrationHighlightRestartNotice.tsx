@@ -3,6 +3,8 @@ import actions_AlertActionCreatorsDefault from "../../../../actions/native/Alert
 import noop from "../../../../../_runtime/metro/00019__.js";
 import DevSettingsStore from "../../../../modules/devtools/dev_settings/DevSettingsStore.tsx";
 
+const require = globalThis.__r;
+
 const require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting(

@@ -41,17 +41,16 @@ export default {
       if (value === undefined) {
         str = "";
       }
-      let obj = inline;
-      if (inline === undefined) {
+      let obj = arg2;
+      if (arg2 === undefined) {
         obj = {};
       }
       let tmp = arg3;
       if (arg3 === undefined) {
         tmp = null;
       }
-      obj = { inline };
       const merged = Object.assign(obj);
-      const tmp3 = saferParse(closure_0, str, obj, tmp, !inline);
+      const tmp3 = saferParse(closure_0, str, { inline }, tmp, !inline);
       let result = tmp3;
       if (!obj.formatInline) {
         const _Array = Array;
@@ -65,7 +64,7 @@ export default {
   },
   reactParserFor(importDefaultResultResult) {
     closure_0 = _modDef4333.parserFor(importDefaultResultResult);
-    const obj2 = _modDef4333;
+    let obj2 = _modDef4333;
     importDefault = obj2.reactFor(_modDef4333.ruleOutput(importDefaultResultResult, "react"));
     return () => {
       let str = value;
@@ -76,8 +75,8 @@ export default {
       if (arg1 === undefined) {
         flag = true;
       }
-      let obj = inline;
-      if (inline === undefined) {
+      let obj = arg2;
+      if (arg2 === undefined) {
         obj = {};
       }
       let tmp = arg3;
@@ -85,11 +84,11 @@ export default {
         tmp = null;
       }
       if (str.trim()) {
-        obj = { inline: flag };
+        const obj2 = { inline: flag };
         const merged = Object.assign(obj);
-        return ((arg0, inline) => {
+        return ((arg0, arg1) => {
           try {
-            return closure_1_1(arg0, inline);
+            return closure_1_1(arg0, arg1);
           } catch (tmp4) {
             const message = tmp4.message;
             let hasItem;
@@ -103,7 +102,7 @@ export default {
               throw tmp4;
             }
           }
-        })(saferParse(closure_0, str, obj, tmp, !flag), obj);
+        })(saferParse(closure_0, str, obj2, tmp, !flag), obj2);
       } else {
         return null;
       }

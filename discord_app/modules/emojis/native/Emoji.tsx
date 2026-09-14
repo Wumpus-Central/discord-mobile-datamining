@@ -1,6 +1,6 @@
 // discord_app/modules/emojis/native/Emoji.tsx
-import PlatformUtils from "../../../utils/PlatformUtils.tsx";
 import native from "../../../design/void/native.tsx";
+import PlatformUtils from "../../../utils/PlatformUtils.tsx";
 import EmojiUtilsDefault from "../../../utils/EmojiUtils.tsx";
 import shared from "../../../design/shared.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
@@ -18,36 +18,34 @@ const result = size.fileFinishedImporting("modules/emojis/native/Emoji.tsx");
 export default function Emoji(arg0) {
   ({ src, name } = arg0);
   ({ style, textEmojiStyle, fastImageStyle, forceTextEmoji, adjustsFontSizeToFit, onError } = arg0);
-  let obj = PlatformUtils;
   let uRL = src;
   if (obj.isAndroid()) {
     uRL = src;
     if (null == src) {
-      let obj1 = EmojiUtilsDefault;
-      uRL = obj1.getURL(name);
+      uRL = EmojiUtilsDefault.getURL(name);
     }
   }
-  obj = { style, children: null };
+  const obj3 = { style, children: null };
   if (!forceTextEmoji) {
     if (null != uRL) {
       if ("" !== uRL) {
-        obj = { resizeMode: "contain", style: fastImageStyle, placeholder: null, source: null, onError: null };
+        const obj4 = { resizeMode: "contain", style: fastImageStyle, placeholder: null, source: null, onError: null };
         if (tmpResult.isThemeDark(ThemeStore.theme)) {
           let tmp9Result = _modDef7234;
         } else {
           tmp9Result = _modDef7235;
         }
-        obj.placeholder = tmp9Result;
-        obj1 = { uri: uRL };
-        obj.source = obj1;
-        obj.onError = onError;
+        obj4.placeholder = tmp9Result;
+        const obj5 = { uri: uRL };
+        obj4.source = obj5;
+        obj4.onError = onError;
         let tmp6Result = (
           <tmp10 resizeMode="contain" style={fastImageStyle} placeholder={null} source={null} onError={null} />
         );
         tmpResult = shared;
       }
-      obj.children = tmp6Result;
-      return <tmp7 {...obj} />;
+      obj3.children = tmp6Result;
+      return <tmp7 {...obj3} />;
     }
   }
   tmp6Result = jsx(native.LegacyText, {
@@ -56,4 +54,5 @@ export default function Emoji(arg0) {
     adjustsFontSizeToFit,
     children: name,
   });
+  obj = PlatformUtils;
 }

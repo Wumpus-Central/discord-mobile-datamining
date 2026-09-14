@@ -28,8 +28,7 @@ export default noop.memo(function ChannelUnreadBadge(panelVariant) {
     flag = false;
   }
   const tmp = closure_7();
-  let obj = ChannelListLayout;
-  const layoutStyles = obj.getLayoutStyles(layout, launchpad);
+  const layoutStyles = ChannelListLayout.getLayoutStyles(layout, launchpad);
   useFontScale;
   let tmp8Result = null;
   if (unread) {
@@ -40,24 +39,24 @@ export default noop.memo(function ChannelUnreadBadge(panelVariant) {
     }
     items[1] = unreadBadgePanel;
     const unreadBadge = layoutStyles.unreadBadge;
-    obj = { style: null, children: null };
+    const obj2 = { style: null, children: null };
     items[2] = isThread ? unreadBadge.positionThread : unreadBadge.position;
     items[3] = ChannelListLayout.makeSizeStyle(layoutStyles.unreadBadge.size);
-    obj.style = items;
-    obj = { classic: flag, size: null, badgeStyle: null };
+    obj2.style = items;
+    const obj3 = { classic: flag, size: null, badgeStyle: null };
     const tmp2Result = ChannelListLayout;
     const _Math = Math;
-    obj.size = Badge.CHANNEL_BADGE_SIZE * Math.max(tmp6, 1);
+    obj3.size = Badge.CHANNEL_BADGE_SIZE * Math.max(tmp6, 1);
     if (resolvedUnreadSetting !== UnreadSetting.ALL_MESSAGES) {
       let num2 = MUTED_OPACITY_CONTENT;
     } else {
       num2 = 1;
     }
-    const obj1 = { opacity: num2 };
-    const items1 = [obj1];
-    obj.badgeStyle = items1;
-    obj.children = jsx(BadgeDefault, { classic: flag, size: null, badgeStyle: null });
-    tmp8Result = <View classic={flag} size={null} badgeStyle={null} />;
+    const obj4 = { opacity: num2 };
+    const items1 = [obj4];
+    obj3.badgeStyle = items1;
+    obj2.children = jsx(BadgeDefault, { classic: flag, size: null, badgeStyle: null });
+    tmp8Result = <View style={null}>{null}</View>;
   }
   return tmp8Result;
 });

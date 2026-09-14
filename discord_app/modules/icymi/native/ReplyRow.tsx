@@ -9,9 +9,9 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createICYMIStyles = fn(16547);
+const createICYMIStyles = fn(16549);
 let closure_6 = createICYMIStyles.createICYMIStyles((marginLeft) => {
-  let obj = {
+  const obj = {
     separator: null,
     container: null,
     buttonContainer: null,
@@ -31,7 +31,7 @@ let closure_6 = createICYMIStyles.createICYMIStyles((marginLeft) => {
     width: "100%",
   };
   obj.separator = size;
-  obj = {
+  obj.container = {
     flex: 1,
     alignItems: "center",
     justifyContent: "center",
@@ -40,9 +40,17 @@ let closure_6 = createICYMIStyles.createICYMIStyles((marginLeft) => {
     marginBottom: marginLeft.margin,
     gap: nativeDefault.space.PX_12,
   };
-  obj.container = obj;
-  obj = { flexGrow: 1, flexBasis: 0, height: nativeDefault.space.PX_40 };
-  obj.buttonContainer = obj;
+  const obj2 = {
+    flex: 1,
+    alignItems: "center",
+    justifyContent: "center",
+    flexDirection: "row",
+    marginHorizontal: marginLeft.margin,
+    marginBottom: marginLeft.margin,
+    gap: nativeDefault.space.PX_12,
+  };
+  obj.buttonContainer = { flexGrow: 1, flexBasis: 0, height: nativeDefault.space.PX_40 };
+  const obj3 = { flexGrow: 1, flexBasis: 0, height: nativeDefault.space.PX_40 };
   obj.feedbackContainer = {
     flexDirection: "row",
     alignItems: "center",
@@ -51,7 +59,7 @@ let closure_6 = createICYMIStyles.createICYMIStyles((marginLeft) => {
     height: nativeDefault.space.PX_40,
   };
   obj.icon = { width: 20, height: 20 };
-  const obj1 = {
+  const obj4 = {
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "space-between",
@@ -59,9 +67,9 @@ let closure_6 = createICYMIStyles.createICYMIStyles((marginLeft) => {
     height: nativeDefault.space.PX_40,
   };
   obj.feedbackButtonIcon = { tintColor: nativeDefault.colors.BUTTON_OUTLINE_PRIMARY_TEXT };
-  const obj2 = { tintColor: nativeDefault.colors.BUTTON_OUTLINE_PRIMARY_TEXT };
+  const obj5 = { tintColor: nativeDefault.colors.BUTTON_OUTLINE_PRIMARY_TEXT };
   obj.input = { flex: 1, borderRadius: nativeDefault.radii.round };
-  const obj3 = { flex: 1, borderRadius: nativeDefault.radii.round };
+  const obj6 = { flex: 1, borderRadius: nativeDefault.radii.round };
   obj.contentInventoryPressable = {
     borderRadius: 20,
     width: "100%",
@@ -69,7 +77,7 @@ let closure_6 = createICYMIStyles.createICYMIStyles((marginLeft) => {
     backgroundColor: nativeDefault.colors.REDESIGN_CHAT_INPUT_BACKGROUND,
     justifyContent: "center",
   };
-  const obj4 = {
+  const obj7 = {
     borderRadius: 20,
     width: "100%",
     minHeight: 40,
@@ -99,8 +107,8 @@ const result = size.fileFinishedImporting("modules/icymi/native/ReplyRow.tsx");
 export const ContentInventoryReplyRow = function ContentInventoryReplyRow(onPress) {
   const reactText = onPress.reactText;
   const tmp = closure_6();
-  let obj = { style: tmp.replyContainer, children: null };
-  obj = {
+  const obj = { style: tmp.replyContainer, children: null };
+  const obj2 = {
     accessibilityRole: "button",
     onPress: onPress.onReply,
     style: tmp.contentInventoryPressable,
@@ -108,7 +116,7 @@ export const ContentInventoryReplyRow = function ContentInventoryReplyRow(onPres
     pointerEvents: "box-only",
     children: null,
   };
-  obj = { style: tmp.contentInventoryContainer, children: null };
+  const obj3 = { style: tmp.contentInventoryContainer, children: null };
   const items = [
     React4(Text_Text.Text, {
       variant: "text-md/medium",
@@ -119,8 +127,8 @@ export const ContentInventoryReplyRow = function ContentInventoryReplyRow(onPres
     }),
     React4(ReactionIcon.ReactionIcon, { style: tmp.icon, size: "custom" }),
   ];
-  obj.children = items;
-  obj.children = hasOwnProperty(View, obj);
-  obj.children = React4(Pressables.PressableOpacity, obj);
+  obj3.children = items;
+  obj2.children = hasOwnProperty(View, obj3);
+  obj.children = React4(Pressables.PressableOpacity, obj2);
   return React4(View, obj);
 };

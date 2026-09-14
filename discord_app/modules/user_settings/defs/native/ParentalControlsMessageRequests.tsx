@@ -10,8 +10,8 @@ import DefaultDMSettingsExperiment from "../../content_and_social/DefaultDMSetti
 import FamilyCenterStore from "../../../parent_tools/FamilyCenterStore.tsx";
 
 require = fn;
-fn(11601);
-let SettingBuilders = {
+const SettingBuilders = fn(11602);
+const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t["3o2ojh"]);
@@ -39,11 +39,13 @@ let SettingBuilders = {
     const selectedTeenId = FamilyCenterStore.getSelectedTeenId();
     if (null != selectedTeenId) {
       if (!arg0) {
-        let obj = DefaultDMSettingsExperiment;
         if (obj.shouldAgeVerifyForDMDefaultOff()) {
-          obj = { entryPoint: AgeVerificationAnalyticsUtils.AgeVerificationModalEntryPoint.MESSAGE_REQUESTS_SETTINGS };
-          const result = AgeVerificationActionCreatorsDefault.showAgeVerificationGetStartedModal(obj);
+          const obj3 = {
+            entryPoint: AgeVerificationAnalyticsUtils.AgeVerificationModalEntryPoint.MESSAGE_REQUESTS_SETTINGS,
+          };
+          const result = AgeVerificationActionCreatorsDefault.showAgeVerificationGetStartedModal(obj3);
         }
+        obj = DefaultDMSettingsExperiment;
       }
       const ParentalControlledDefaultMessageRequestRestricted =
         ParentalControlledUserSettings.ParentalControlledDefaultMessageRequestRestricted;
@@ -51,9 +53,8 @@ let SettingBuilders = {
     }
   },
   unsearchable: true,
-};
-SettingBuilders = SettingBuilders.createToggle(SettingBuilders);
+});
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_settings/defs/native/ParentalControlsMessageRequests.tsx");
 
-export default SettingBuilders;
+export default toggle;

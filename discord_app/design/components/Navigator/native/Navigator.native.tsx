@@ -33,10 +33,10 @@ function NavigationStack(screens) {
   ({ initialRouteName, detachInactiveScreens } = screens);
   const tmp = cardShadowEnabled();
   closure_18 = tmp;
+  const styles = screens(onDidFocus[7]).useStyles();
   let obj = screens(onDidFocus[7]);
-  const styles = obj.useStyles();
   const token = screens(onDidFocus[8]).useToken(onWillFocus(onDidFocus[5]).colors.NAVIGATOR_HEADER_TINT);
-  const obj2 = screens(onDidFocus[8]);
+  let obj2 = screens(onDidFocus[8]);
   const navigatorShouldCrossfade = screens(onDidFocus[6]).useNavigatorShouldCrossfade();
   const first = gestureResponseDistance(
     gestureDirection.useState(() => screens(onDidFocus[9]).createStackNavigator()),
@@ -80,7 +80,7 @@ function NavigationStack(screens) {
   items1[19] = headerStatusBarHeight;
   items1[20] = top;
   items1[21] = disableHeaderAnimation;
-  obj = {
+  const obj4 = {
     detachInactiveScreens,
     initialRouteName,
     screenOptions: gestureDirection.useCallback((navigation) => {
@@ -161,11 +161,11 @@ function NavigationStack(screens) {
       obj.headerStatusBarHeight = tmp7;
       if (navigatorShouldCrossfade) {
         let fn2 = (current) => {
-          let obj = { cardStyle: null };
-          obj = { opacity: null };
+          const obj = { cardStyle: null };
+          const obj2 = { opacity: null };
           const progress = current.current.progress;
-          obj.opacity = progress.interpolate({ inputRange: [0, 1], outputRange: [0, 1] });
-          obj.cardStyle = obj;
+          obj2.opacity = progress.interpolate({ inputRange: [0, 1], outputRange: [0, 1] });
+          obj.cardStyle = obj2;
           return obj;
         };
       } else {
@@ -193,8 +193,8 @@ function NavigationStack(screens) {
   };
   const obj3 = screens(onDidFocus[6]);
   const keys = onWillFocus(onDidFocus[12]).keys(screens);
-  obj.children = keys.map((name) => {
-    let options = {};
+  obj4.children = keys.map((name) => {
+    const options = {};
     let merged = Object.assign(options[name]);
     let fullscreen = options.fullscreen;
     if (!fullscreen) {
@@ -209,21 +209,24 @@ function NavigationStack(screens) {
       const items = [options.headerStyle, { backgroundColor: "transparent" }];
       options.headerStyle = items;
     }
-    options = {
-      name,
-      initialParams: options.initialParams,
-      listeners,
-      options,
-      children(arg0) {
-        screen = { screen };
-        const merged = Object.assign(arg0);
-        screen.viewStyle = viewStyle;
-        return jsx(NavigatorScreen.NavigatorScreen, { screen });
+    return cardOverlayEnabled(
+      first.Screen,
+      {
+        name,
+        initialParams: options.initialParams,
+        listeners,
+        options,
+        children(arg0) {
+          screen = { screen };
+          const merged = Object.assign(arg0);
+          screen.viewStyle = viewStyle;
+          return jsx(NavigatorScreen.NavigatorScreen, { screen });
+        },
       },
-    };
-    return cardOverlayEnabled(first.Screen, options, name);
+      name,
+    );
   });
-  return cardOverlayEnabled(first.Navigator, obj);
+  return cardOverlayEnabled(first.Navigator, obj4);
 }
 function WrappedNavigationStack(arg0) {
   ({ initialRouteStack: require, initialRouteState, navigationTheme } = arg0);
@@ -238,8 +241,7 @@ function WrappedNavigationStack(arg0) {
       navigationTheme: 0,
     }),
   );
-  let obj = Link;
-  const navigationContainerRef = obj.createNavigationContainerRef();
+  const navigationContainerRef = Link.createNavigationContainerRef();
   const first = _slicedToArray(
     noop.useState(() => {
       let tmp2;
@@ -251,16 +253,20 @@ function WrappedNavigationStack(arg0) {
     }),
     1,
   )[0];
-  let obj1 = useNavigationTheme;
-  navigationTheme = obj1.useNavigationTheme(navigationContainerRef(4571)());
-  obj = {
+  const tmp4 = navigationContainerRef(4571)();
+  let navigationTheme1 = useNavigationTheme.useNavigationTheme(tmp4);
+  const obj3 = {
     ref: navigationContainerRef,
-    theme: navigationTheme,
+    theme: null,
     initialState: null,
     onReady: null,
     onStateChange: null,
     children: null,
   };
+  if (null != navigationTheme) {
+    navigationTheme1 = navigationTheme;
+  }
+  obj3.theme = navigationTheme1;
   if (null == initialRouteState) {
     let tmp7;
     if (null != first) {
@@ -268,55 +274,43 @@ function WrappedNavigationStack(arg0) {
     }
     initialRouteState = tmp7;
   }
-  obj = {
-    children: null,
-    initialState: initialRouteState,
-    onReady() {
-      const routingInstrumentation = SentryInitUtils.routingInstrumentation;
-      const result = routingInstrumentation.registerNavigationContainer(navigationContainerRef);
-    },
-    onStateChange,
+  const obj4 = { children: null };
+  obj3.initialState = initialRouteState;
+  obj3.onReady = function onReady() {
+    const routingInstrumentation = SentryInitUtils.routingInstrumentation;
+    const result = routingInstrumentation.registerNavigationContainer(navigationContainerRef);
   };
-  obj1 = { initialRouteName };
+  obj3.onStateChange = onStateChange;
   const merged1 = Object.assign(merged);
-  obj.children = <NavigationStack initialRouteName={initialRouteName} />;
-  obj.children = jsx(Link.NavigationContainer, {
+  obj3.children = <NavigationStack initialRouteName={initialRouteName} />;
+  obj4.children = jsx(Link.NavigationContainer, {
+    ref: navigationContainerRef,
+    theme: null,
+    initialState: null,
+    onReady: null,
+    onStateChange: null,
     children: null,
-    initialState: initialRouteState,
-    onReady() {
-      const routingInstrumentation = SentryInitUtils.routingInstrumentation;
-      const result = routingInstrumentation.registerNavigationContainer(navigationContainerRef);
-    },
-    onStateChange,
   });
-  return jsx(Link.NavigationIndependentTree, {
-    children: null,
-    initialState: initialRouteState,
-    onReady() {
-      const routingInstrumentation = SentryInitUtils.routingInstrumentation;
-      const result = routingInstrumentation.registerNavigationContainer(navigationContainerRef);
-    },
-    onStateChange,
-  });
+  return jsx(Link.NavigationIndependentTree, { children: null });
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet, View: hasOwnProperty } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-fn(4636);
-let createStyles = { container: null, navbar: null, headerLeftContainerStyle: null, headerRightContainerStyle: null };
-createStyles = {};
+const createStyles = fn(4636);
+let obj2 = { container: null, navbar: null, headerLeftContainerStyle: null, headerRightContainerStyle: null };
+let obj3 = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);
-createStyles.backgroundColor = nativeDefault.colors.BACKGROUND_BASE_LOW;
-createStyles.container = createStyles;
-createStyles.navbar = {
+obj3.backgroundColor = nativeDefault.colors.BACKGROUND_BASE_LOW;
+obj2.container = obj3;
+obj2.navbar = {
   borderBottomWidth: StyleSheet.hairlineWidth,
   backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
   borderBottomColor: nativeDefault.colors.BORDER_SUBTLE,
   shadowColor: "transparent",
 };
-createStyles.headerLeftContainerStyle = { paddingLeft: 16, marginRight: -16 };
-createStyles.headerRightContainerStyle = { paddingRight: 16, marginLeft: -16 };
-let closure_7 = createStyles.createStyles(createStyles);
+obj2.headerLeftContainerStyle = { paddingLeft: 16, marginRight: -16 };
+obj2.headerRightContainerStyle = { paddingRight: 16, marginLeft: -16 };
+let closure_7 = createStyles.createStyles(obj2);
 const size = fn(2);
 let result = size.fileFinishedImporting("design/components/Navigator/native/Navigator.native.tsx");
 
@@ -340,11 +334,10 @@ export const Navigator = function Navigator(useContainer) {
     flag = true;
   }
   const merged = Object.assign(useContainer, Object.assign({ useContainer: 0, containerStyle: 0 }));
-  let obj = { style: null, children: null };
+  const obj = { style: null, children: null };
   const items = [closure_7().container, useContainer.containerStyle];
   obj.style = items;
-  obj = {};
   const merged1 = Object.assign(merged);
   obj.children = jsx(flag ? WrappedNavigationStack : NavigationStack, {});
-  return <hasOwnProperty />;
+  return <hasOwnProperty style={null}>{null}</hasOwnProperty>;
 };

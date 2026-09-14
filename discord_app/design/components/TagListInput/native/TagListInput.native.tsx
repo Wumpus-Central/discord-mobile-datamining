@@ -18,8 +18,8 @@ const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 let createStyles = fn(4636);
 let closure_10 = createStyles.createStyles(() => {
-  let obj = {
-    placeholder: null,
+  const obj = {
+    placeholder: { color: nativeDefault.colors.INPUT_PLACEHOLDER_TEXT_DEFAULT },
     iconContainer: null,
     iconLeft: null,
     scrollViewContent: null,
@@ -29,14 +29,13 @@ let closure_10 = createStyles.createStyles(() => {
     searchInput: null,
     horizontalSearchInput: null,
   };
-  obj = { color: nativeDefault.colors.INPUT_PLACEHOLDER_TEXT_DEFAULT };
-  obj.placeholder = obj;
-  obj = { paddingHorizontal: nativeDefault.space.PX_12 };
-  obj.iconContainer = obj;
+  const obj2 = { color: nativeDefault.colors.INPUT_PLACEHOLDER_TEXT_DEFAULT };
+  obj.iconContainer = { paddingHorizontal: nativeDefault.space.PX_12 };
+  const obj3 = { paddingHorizontal: nativeDefault.space.PX_12 };
   obj.iconLeft = { marginLeft: nativeDefault.space.PX_12 };
   obj.scrollViewContent = { paddingVertical: 5 };
   obj.horizontalScrollViewContent = { flexGrow: 1 };
-  const obj1 = { marginLeft: nativeDefault.space.PX_12 };
+  const obj4 = { marginLeft: nativeDefault.space.PX_12 };
   obj.inputInner = {
     marginHorizontal: nativeDefault.space.PX_4,
     alignItems: "center",
@@ -45,17 +44,17 @@ let closure_10 = createStyles.createStyles(() => {
     flex: 1,
   };
   obj.horizontalInputInner = { flexWrap: "nowrap" };
-  const obj3 = {
+  const obj6 = {
     flex: 1,
     minHeight: nativeDefault.space.PX_24,
     minWidth: nativeDefault.space.PX_48,
     color: nativeDefault.colors.TEXT_DEFAULT,
   };
   const merged = Object.assign(Text_Text.TextStyleSheet["text-sm/medium"]);
-  obj3.paddingVertical = 0;
-  obj3.marginVertical = 2;
-  obj.searchInput = obj3;
-  const obj2 = {
+  obj6.paddingVertical = 0;
+  obj6.marginVertical = 2;
+  obj.searchInput = obj6;
+  const obj5 = {
     marginHorizontal: nativeDefault.space.PX_4,
     alignItems: "center",
     flexDirection: "row",
@@ -70,16 +69,16 @@ let closure_12 = { x: 1, y: 0.5 };
 let closure_13 = ["transparent", "black"];
 createStyles = fn(4636);
 let closure_14 = createStyles.createStyles(() => {
-  let obj = { fill: { flex: 1 }, mask: null, leadingFade: null, leadingCover: null, maskRemainder: null };
-  obj = {};
+  const obj = { fill: { flex: 1 }, mask: null, leadingFade: null, leadingCover: null, maskRemainder: null };
+  const obj2 = {};
   const merged = Object.assign(React5.absoluteFillObject);
-  obj.flexDirection = "row";
-  obj.mask = obj;
+  obj2.flexDirection = "row";
+  obj.mask = obj2;
   obj.leadingFade = { width: 32 };
-  obj = {};
+  const obj3 = {};
   const merged1 = Object.assign(React5.absoluteFillObject);
-  obj.backgroundColor = "black";
-  obj.leadingCover = obj;
+  obj3.backgroundColor = "black";
+  obj.leadingCover = obj3;
   obj.maskRemainder = { flex: 1, backgroundColor: "black" };
   return obj;
 });
@@ -129,12 +128,10 @@ export default noop.memo(function TagListInput(accessibilityHint) {
   c14 = undefined;
   c17 = undefined;
   let tmp = c10();
-  let obj = onChangeText(ref1[13]);
-  const bound = Math.min(2, obj.useFontScale());
+  const bound = Math.min(2, onChangeText(ref1[13]).useFontScale());
   ref = undefined;
   ref1 = undefined;
   onChangeText = undefined;
-  let obj1 = ref;
   let result = onChangeText(ref1[14]).InputHeights.MD * bound;
   ref = ref.useRef(null);
   ref.useRef("");
@@ -224,33 +221,35 @@ export default noop.memo(function TagListInput(accessibilityHint) {
   }));
   let items1 = [first, onChangeText];
   const memo = ref.useMemo(() => {
-    let obj = { clearProps: { isClearable: true }, clearState: null };
-    obj = {
-      hasValue: ref,
-      clear() {
-        return onChangeText("", true);
-      },
-      setTextValue(text) {
-        return onChangeText(text, true);
+    const obj = {
+      clearProps: { isClearable: true },
+      clearState: {
+        hasValue: ref,
+        clear() {
+          return onChangeText("", true);
+        },
+        setTextValue(text) {
+          return onChangeText(text, true);
+        },
       },
     };
-    obj.clearState = obj;
     return obj;
   }, items1);
   ({ clearProps, clearState } = memo);
-  let obj2 = onChangeText(ref1[12]);
-  const inputClearButton = obj2.useInputClearButton(clearProps, clearState);
+  let obj = onChangeText(ref1[13]);
+  const tmp9 = ref2;
+  const inputClearButton = onChangeText(ref1[12]).useInputClearButton(clearProps, clearState);
   ref = ref.useRef({ start: 0, end: 0 });
-  let obj3 = onChangeText(ref1[15]);
-  const keyboardBlurring = obj3.useKeyboardBlurring(ref);
-  let obj4 = onChangeText(ref1[16]);
-  const focus = obj4.useFocus();
+  let obj3 = onChangeText(ref1[12]);
+  const keyboardBlurring = onChangeText(ref1[15]).useKeyboardBlurring(ref);
+  let obj4 = onChangeText(ref1[15]);
+  const focus = onChangeText(ref1[16]).useFocus();
   ({ focusProps: c8, isFocused } = focus);
+  let obj5 = onChangeText(ref1[16]);
+  const tmp18 = ref;
   ({ onFocus: c9, onBlur: c10 } = ref(ref1[17])({ onFocus, onBlur }));
   const ref3 = ref.useRef(null);
-  const tmp18 = ref;
   const tmp19 = ref(ref1[17])({ onFocus, onBlur });
-  const tmp9 = ref2;
   [c12, c13] = ref2(ref.useState(null), 2);
   const tmp21 = ref2(ref.useState(null), 2);
   [tmp23, c14] = ref2(ref.useState(false), 2);
@@ -315,8 +314,8 @@ export default noop.memo(function TagListInput(accessibilityHint) {
   }
   const result1 = 33 * bound;
   const tmp22 = ref2(ref.useState(false), 2);
-  [tmp30, c17] = tmp9(obj1.useState(0), 2);
-  const callback1 = obj1.useCallback((nativeEvent) => {
+  [tmp30, c17] = tmp9(ref.useState(0), 2);
+  const callback1 = obj2.useCallback((nativeEvent) => {
     _undefined3(nativeEvent.nativeEvent.layout.width);
   }, []);
   if (placeholder == null) {
@@ -335,11 +334,11 @@ export default noop.memo(function TagListInput(accessibilityHint) {
     tmp34 = flag2;
   }
   closure_129_2 = tmp34;
-  let tmp2Result = tmp2(tmp3[7]);
-  const sharedValue = tmp2Result.useSharedValue(false);
+  const tmp9Result = tmp9(ref.useState(0), 2);
+  const sharedValue = onChangeText(ref1[7]).useSharedValue(false);
   closure_129_3 = sharedValue;
   const items4 = [tmp34, onScroll, sharedValue];
-  const callback2 = obj1.useCallback((nativeEvent) => {
+  const callback2 = obj2.useCallback((nativeEvent) => {
     if (ref1) {
       const result = ref2.set(nativeEvent.nativeEvent.contentOffset.x > 1);
     }
@@ -347,42 +346,44 @@ export default noop.memo(function TagListInput(accessibilityHint) {
       tmp3(nativeEvent);
     }
   }, items4);
-  tmp2Result = tmp2(tmp3[7]);
+  const tmp2Result = onChangeText(ref1[7]);
   const fn = function u() {
-    let obj = spring;
     let num = 1;
     if (ref2.get()) {
       num = 0;
     }
-    obj = { opacity: obj.withSpring(num, springPresets.springStandard, "animate-always") };
-    return obj;
+    return { opacity: spring.withSpring(num, springPresets.springStandard, "animate-always") };
   };
-  obj = { withSpring: tmp2(tmp3[8]).withSpring, scrolled: sharedValue, springStandard: tmp2(tmp3[9]).springStandard };
-  fn.__closure = obj;
+  const tmp2Result2 = onChangeText(ref1[7]);
+  fn.__closure = {
+    withSpring: onChangeText(ref1[8]).withSpring,
+    scrolled: sharedValue,
+    springStandard: onChangeText(ref1[9]).springStandard,
+  };
   fn.__workletHash = 11561232362008;
   fn.__initData = __initData;
-  const animatedStyle = tmp2Result.useAnimatedStyle(fn);
+  const animatedStyle = tmp2Result2.useAnimatedStyle(fn);
   closure_129_4 = animatedStyle;
   const items5 = [tmp34, tmp33, animatedStyle];
   let tmp39 = tmp34;
-  const callback3 = obj1.useCallback((children) => {
+  const callback3 = obj2.useCallback((children) => {
     let tmp = children;
     if (ref1) {
-      let obj = { style: ref.fill, androidRenderingMode: "software", maskElement: null, children: null };
-      obj = { style: ref.mask, children: null };
-      obj = { style: ref.leadingFade, children: null };
-      const obj1 = { start, end, colors, style: React5.absoluteFill };
-      const items = [React6(LinearGradientDefault, obj1)];
-      const obj2 = { style: null };
+      const obj = { style: ref.fill, androidRenderingMode: "software", maskElement: null, children: null };
+      const obj2 = { style: ref.mask, children: null };
+      const obj3 = { style: ref.leadingFade, children: null };
+      const obj4 = { start, end, colors, style: React5.absoluteFill };
+      const items = [React6(LinearGradientDefault, obj4)];
+      const obj5 = { style: null };
       const items1 = [ref.leadingCover, ref];
-      obj2.style = items1;
-      items[1] = React6(ReanimatedRexportDefault.View, obj2);
-      obj.children = items;
-      const items2 = [React7(hasOwnProperty, obj)];
-      const obj3 = { style: ref.maskRemainder };
-      items2[1] = React6(hasOwnProperty, obj3);
-      obj.children = items2;
-      obj.maskElement = React7(hasOwnProperty, obj);
+      obj5.style = items1;
+      items[1] = React6(ReanimatedRexportDefault.View, obj5);
+      obj3.children = items;
+      const items2 = [React7(hasOwnProperty, obj3)];
+      const obj6 = { style: ref.maskRemainder };
+      items2[1] = React6(hasOwnProperty, obj6);
+      obj2.children = items2;
+      obj.maskElement = React7(hasOwnProperty, obj2);
       obj.children = children;
       tmp = React6(_modDef5745, obj);
     }
@@ -395,19 +396,19 @@ export default noop.memo(function TagListInput(accessibilityHint) {
   if (tmp39) {
     tmp40 = callback2;
   }
-  obj = { onScroll: tmp40, scrollEventThrottle: null, scrollerStyle: null, wrap: null };
+  const obj7 = { onScroll: tmp40, scrollEventThrottle: null, scrollerStyle: null, wrap: null };
   let num;
   if (tmp39) {
     num = 16;
   }
-  obj.scrollEventThrottle = num;
+  obj7.scrollEventThrottle = num;
   let fill;
   if (tmp34) {
     fill = tmp33.fill;
   }
-  obj.scrollerStyle = fill;
-  obj.wrap = callback3;
-  obj1 = {
+  obj7.scrollerStyle = fill;
+  obj7.wrap = callback3;
+  const obj8 = {
     style: null,
     contentContainerStyle: null,
     ref: null,
@@ -421,32 +422,31 @@ export default noop.memo(function TagListInput(accessibilityHint) {
     keyboardShouldPersistTaps: "handled",
     children: null,
   };
-  obj2 = { maxHeight: 3 * result1 };
-  const items6 = [obj2, obj.scrollerStyle];
-  obj1.style = items6;
+  const items6 = [{ maxHeight: 3 * result1 }, obj7.scrollerStyle];
+  obj8.style = items6;
   const items7 = [tmp.scrollViewContent];
   let prop;
   if (flag) {
     prop = tmp.horizontalScrollViewContent;
   }
   items7[1] = prop;
-  obj1.contentContainerStyle = items7;
-  obj1.ref = ref3;
-  obj1.onScroll = obj.onScroll;
+  obj8.contentContainerStyle = items7;
+  obj8.ref = ref3;
+  obj8.onScroll = obj7.onScroll;
   let tmp44;
   if (flag) {
     tmp44 = callback1;
   }
-  obj1.onLayout = tmp44;
-  obj1.scrollEventThrottle = obj.scrollEventThrottle;
-  obj1.horizontal = flag;
-  obj1.snapToInterval = result1;
+  obj8.onLayout = tmp44;
+  obj8.scrollEventThrottle = obj7.scrollEventThrottle;
+  obj8.horizontal = flag;
+  obj8.snapToInterval = result1;
   const items8 = [tmp.inputInner];
   let horizontalInputInner = flag;
   if (flag) {
     horizontalInputInner = tmp.horizontalInputInner;
   }
-  obj3 = { style: items8, children: null };
+  const obj10 = { style: items8, children: null };
   items8[1] = horizontalInputInner;
   const items9 = [
     tags.map((tag, index) => {
@@ -484,7 +484,7 @@ export default noop.memo(function TagListInput(accessibilityHint) {
       );
     }),
   ];
-  obj4 = {
+  const obj11 = {
     ref,
     accessibilityHint: accessibilityHint.accessibilityHint,
     accessibilityRole: "search",
@@ -511,7 +511,7 @@ export default noop.memo(function TagListInput(accessibilityHint) {
   if (ref2.current) {
     defaultValue = ref1.current;
   }
-  obj4.defaultValue = defaultValue;
+  obj11.defaultValue = defaultValue;
   const items10 = [tmp.searchInput, ,];
   let horizontalSearchInput = flag;
   if (flag) {
@@ -521,14 +521,14 @@ export default noop.memo(function TagListInput(accessibilityHint) {
   let tmp47;
   if (flag) {
     if (tmp32) {
-      const obj5 = { maxWidth: tmp30 - 16 };
-      tmp47 = obj5;
+      const obj12 = { maxWidth: tmp30 - 16 };
+      tmp47 = obj12;
     }
   }
   items10[2] = tmp47;
-  obj4.style = items10;
-  obj4.onChangeText = onChangeText;
-  obj4.onKeyPress = function onKeyPress(nativeEvent) {
+  obj11.style = items10;
+  obj11.onChangeText = onChangeText;
+  obj11.onKeyPress = function onKeyPress(nativeEvent) {
     _undefined2(false);
     let tmp4 = 0 === ref.current.start;
     if (tmp4) {
@@ -577,64 +577,69 @@ export default noop.memo(function TagListInput(accessibilityHint) {
       }
     }
   };
-  obj4.onFocus = function onFocus(arg0) {
+  obj11.onFocus = function onFocus(arg0) {
     _undefined.onFocus();
     if (c9 != null) {
       tmp2(arg0);
     }
   };
-  obj4.onBlur = function onBlur(arg0) {
+  obj11.onBlur = function onBlur(arg0) {
     _undefined.onBlur();
     if (c10 != null) {
       tmp2(arg0);
     }
   };
-  obj4.onPressIn = function onPressIn() {
+  obj11.onPressIn = function onPressIn() {
     _undefined2(false);
     colors(null);
   };
-  obj4["aria-label"] = accessibilityLabel;
+  obj11["aria-label"] = accessibilityLabel;
   let tmp48;
   if (0 === tags.length) {
     if (tmp32) {
       tmp48 = placeholder;
     }
   }
-  obj4.placeholder = tmp48;
-  obj4.placeholderTextColor = tmp.placeholder.color;
-  obj4.autoFocus = autoFocus;
-  obj4.returnKeyType = returnKeyType;
-  obj4.accessibilityLabel = accessibilityLabel;
-  obj4.caretHidden = tmp23;
-  obj4.onSubmitEditing = onSubmitEditing;
-  obj4.onSelectionChange = function onSelectionChange(nativeEvent) {
+  obj11.placeholder = tmp48;
+  obj11.placeholderTextColor = tmp.placeholder.color;
+  obj11.autoFocus = autoFocus;
+  obj11.returnKeyType = returnKeyType;
+  obj11.accessibilityLabel = accessibilityLabel;
+  obj11.caretHidden = tmp23;
+  obj11.onSubmitEditing = onSubmitEditing;
+  obj11.onSelectionChange = function onSelectionChange(nativeEvent) {
     const selection = nativeEvent.nativeEvent.selection;
     closure_7.current = selection;
     return selection;
   };
-  items9[1] = c8(BottomSheetTextInput, obj4);
-  obj3.children = items9;
-  obj1.children = c9(ref1, obj3);
-  const obj6 = { style: null, children: null };
+  items9[1] = c8(BottomSheetTextInput, obj11);
+  obj10.children = items9;
+  obj8.children = c9(ref1, obj10);
+  const obj13 = { style: null, children: null };
   const items11 = [{ minHeight: result, overflow: "hidden" }, style];
-  obj6.style = items11;
-  let tmp42Result = tmp42(BottomSheetScrollView, obj1);
-  const obj7 = { size: "sm", isDisabled: disabled, isFocused, children: null };
+  obj13.style = items11;
+  let obj6 = {
+    withSpring: onChangeText(ref1[8]).withSpring,
+    scrolled: sharedValue,
+    springStandard: onChangeText(ref1[9]).springStandard,
+  };
+  const obj9 = { maxHeight: 3 * result1 };
+  const obj14 = { size: "sm", isDisabled: disabled, isFocused, children: null };
   if (null == icon) {
-    const obj8 = { style: tmp.iconLeft, size: "xs", color: "interactive-text-default" };
-    icon = tmp42(tmp2(tmp3[26]).MagnifyingGlassIcon, obj8);
+    const obj15 = { style: tmp.iconLeft, size: "xs", color: "interactive-text-default" };
+    icon = tmp42(tmp2(tmp3[26]).MagnifyingGlassIcon, obj15);
   }
-  const items12 = [icon, obj.wrap(tmp42Result)];
+  const items12 = [icon, obj7.wrap(c8(BottomSheetScrollView, obj8))];
   if (null == footer) {
-    tmp42Result = null;
+    let tmp42Result2 = null;
     if (null != inputClearButton) {
-      const obj9 = { style: tmp.iconContainer, children: inputClearButton };
-      tmp42Result = tmp42(tmp46, obj9);
+      const obj16 = { style: tmp.iconContainer, children: inputClearButton };
+      tmp42Result2 = tmp42(tmp46, obj16);
     }
-    footer = tmp42Result;
+    footer = tmp42Result2;
   }
   items12[2] = footer;
-  obj7.children = items12;
-  obj6.children = c9(onChangeText(ref1[25]).InputFieldContainer, obj7);
-  return c8(ref1, obj6);
+  obj14.children = items12;
+  obj13.children = c9(onChangeText(ref1[25]).InputFieldContainer, obj14);
+  return c8(ref1, obj13);
 });

@@ -2,6 +2,8 @@
 import noop from "../../../_runtime/metro/00019__.js";
 import size from "../../../_runtime/metro/00002__.js";
 
+const require = globalThis.__r;
+
 ({ useEffect: c2, useRef: c3 } = noop);
 let result = size.fileFinishedImporting(
   "modules/guild_communication_disabled/useCommunicationDisabledCountdownCleanup.tsx",

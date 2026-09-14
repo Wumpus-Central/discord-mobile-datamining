@@ -12,10 +12,10 @@ const View = fn(17).View;
 const PremiumTypes = fn(1373).PremiumTypes;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-fn(4636);
-let createStyles = {
+const createStyles = fn(4636);
+let obj2 = {
   badgeTextUppercase: { textTransform: "uppercase" },
-  badgeSurfaceDarkMode: null,
+  badgeSurfaceDarkMode: { backgroundColor: nativeDefault.colors.WHITE },
   badgeSurfaceLightMode: null,
   newIconBadge: null,
   limitedTimeBadge: null,
@@ -24,75 +24,74 @@ let createStyles = {
   badgePill: null,
   iconTextBadge: null,
 };
-createStyles = { backgroundColor: nativeDefault.colors.WHITE };
-createStyles.badgeSurfaceDarkMode = createStyles;
-createStyles.badgeSurfaceLightMode = { backgroundColor: nativeDefault.colors.BADGE_BACKGROUND_BRAND };
-let obj1 = { backgroundColor: nativeDefault.colors.BADGE_BACKGROUND_BRAND };
-createStyles.newIconBadge = {
+let obj3 = { backgroundColor: nativeDefault.colors.WHITE };
+obj2.badgeSurfaceLightMode = { backgroundColor: nativeDefault.colors.BADGE_BACKGROUND_BRAND };
+let obj4 = { backgroundColor: nativeDefault.colors.BADGE_BACKGROUND_BRAND };
+obj2.newIconBadge = {
   backgroundColor: nativeDefault.colors.BACKGROUND_BRAND,
   borderRadius: nativeDefault.radii.round,
   paddingHorizontal: 6,
   paddingVertical: 2,
 };
-let obj2 = {
+let obj5 = {
   backgroundColor: nativeDefault.colors.BACKGROUND_BRAND,
   borderRadius: nativeDefault.radii.round,
   paddingHorizontal: 6,
   paddingVertical: 2,
 };
-createStyles.limitedTimeBadge = {
+obj2.limitedTimeBadge = {
   backgroundColor: nativeDefault.colors.WHITE,
   borderRadius: nativeDefault.radii.md,
   paddingHorizontal: nativeDefault.space.PX_8,
   paddingVertical: nativeDefault.space.PX_4,
-};
-const obj3 = {
-  backgroundColor: nativeDefault.colors.WHITE,
-  borderRadius: nativeDefault.radii.md,
-  paddingHorizontal: nativeDefault.space.PX_8,
-  paddingVertical: nativeDefault.space.PX_4,
-};
-createStyles.lockIconBadge = {
-  backgroundColor: nativeDefault.colors.ICON_OVERLAY_DARK,
-  padding: 5,
-  borderRadius: nativeDefault.radii.round,
-};
-const obj4 = {
-  backgroundColor: nativeDefault.colors.ICON_OVERLAY_DARK,
-  padding: 5,
-  borderRadius: nativeDefault.radii.round,
-};
-createStyles.newLockIconBadge = {
-  backgroundColor: nativeDefault.unsafe_rawColors.PREMIUM_TIER_2_PINK_FOR_GRADIENTS_2,
-  flexDirection: "row",
-  paddingHorizontal: 5,
-  paddingVertical: 3,
-  borderRadius: nativeDefault.radii.round,
-  alignItems: "center",
-  gap: 2,
-};
-const obj5 = {
-  backgroundColor: nativeDefault.unsafe_rawColors.PREMIUM_TIER_2_PINK_FOR_GRADIENTS_2,
-  flexDirection: "row",
-  paddingHorizontal: 5,
-  paddingVertical: 3,
-  borderRadius: nativeDefault.radii.round,
-  alignItems: "center",
-  gap: 2,
-};
-createStyles.badgePill = {
-  paddingHorizontal: nativeDefault.space.PX_4,
-  paddingVertical: 1.5,
-  borderRadius: nativeDefault.radii.round,
-  flexShrink: 1,
 };
 const obj6 = {
+  backgroundColor: nativeDefault.colors.WHITE,
+  borderRadius: nativeDefault.radii.md,
+  paddingHorizontal: nativeDefault.space.PX_8,
+  paddingVertical: nativeDefault.space.PX_4,
+};
+obj2.lockIconBadge = {
+  backgroundColor: nativeDefault.colors.ICON_OVERLAY_DARK,
+  padding: 5,
+  borderRadius: nativeDefault.radii.round,
+};
+const obj7 = {
+  backgroundColor: nativeDefault.colors.ICON_OVERLAY_DARK,
+  padding: 5,
+  borderRadius: nativeDefault.radii.round,
+};
+obj2.newLockIconBadge = {
+  backgroundColor: nativeDefault.unsafe_rawColors.PREMIUM_TIER_2_PINK_FOR_GRADIENTS_2,
+  flexDirection: "row",
+  paddingHorizontal: 5,
+  paddingVertical: 3,
+  borderRadius: nativeDefault.radii.round,
+  alignItems: "center",
+  gap: 2,
+};
+const obj8 = {
+  backgroundColor: nativeDefault.unsafe_rawColors.PREMIUM_TIER_2_PINK_FOR_GRADIENTS_2,
+  flexDirection: "row",
+  paddingHorizontal: 5,
+  paddingVertical: 3,
+  borderRadius: nativeDefault.radii.round,
+  alignItems: "center",
+  gap: 2,
+};
+obj2.badgePill = {
   paddingHorizontal: nativeDefault.space.PX_4,
   paddingVertical: 1.5,
   borderRadius: nativeDefault.radii.round,
   flexShrink: 1,
 };
-createStyles.iconTextBadge = {
+const obj9 = {
+  paddingHorizontal: nativeDefault.space.PX_4,
+  paddingVertical: 1.5,
+  borderRadius: nativeDefault.radii.round,
+  flexShrink: 1,
+};
+obj2.iconTextBadge = {
   flexDirection: "row",
   alignItems: "center",
   gap: 4,
@@ -100,19 +99,19 @@ createStyles.iconTextBadge = {
   paddingVertical: 2,
   borderRadius: nativeDefault.radii.round,
 };
-let closure_7 = createStyles.createStyles(createStyles);
+let closure_7 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/native/CollectiblesBadges.tsx");
 
 export const NewBadge = function NewBadge(style) {
   const tmp = closure_7();
-  let obj = { style: null, children: null };
+  const obj = { style: null, children: null };
   const items = [tmp.newIconBadge, style.style];
   obj.style = items;
-  obj = { variant: "text-sm/bold", color: "text-overlay-light", style: tmp.badgeTextUppercase, children: null };
+  const obj2 = { variant: "text-sm/bold", color: "text-overlay-light", style: tmp.badgeTextUppercase, children: null };
   const intl = util.intl;
-  obj.children = intl.string(util.t.y2b7CA);
-  obj.children = hasOwnProperty(Text_Text.Text, obj);
+  obj2.children = intl.string(util.t.y2b7CA);
+  obj.children = hasOwnProperty(Text_Text.Text, obj2);
   return hasOwnProperty(View, obj);
 };
 export const LockBadge = function LockBadge(isNew) {
@@ -123,28 +122,28 @@ export const LockBadge = function LockBadge(isNew) {
   const style = isNew.style;
   const tmp = closure_7();
   if (flag) {
-    let obj = { premiumType: PremiumTypes.TIER_2, style: null, children: null };
+    const obj2 = { premiumType: PremiumTypes.TIER_2, style: null, children: null };
     const items = [tmp.newLockIconBadge, style];
-    obj.style = items;
-    obj = { size: "xxs", color: nativeDefault.colors.WHITE };
-    const items1 = [hasOwnProperty(LockIcon.LockIcon, obj)];
-    const obj1 = {
+    obj2.style = items;
+    const obj3 = { size: "xxs", color: nativeDefault.colors.WHITE };
+    const items1 = [hasOwnProperty(LockIcon.LockIcon, obj3)];
+    const obj4 = {
       variant: "text-xs/bold",
       color: "text-overlay-light",
       style: tmp.badgeTextUppercase,
       children: null,
     };
     const intl = util.intl;
-    obj1.children = intl.string(util.t.y2b7CA);
-    items1[1] = hasOwnProperty(Text_Text.Text, obj1);
-    obj.children = items1;
-    let tmp7 = timestampProducer(PremiumFeaturesBackgroundDefault, obj);
+    obj4.children = intl.string(util.t.y2b7CA);
+    items1[1] = hasOwnProperty(Text_Text.Text, obj4);
+    obj2.children = items1;
+    let tmp7 = timestampProducer(PremiumFeaturesBackgroundDefault, obj2);
   } else {
-    obj = { style: null, children: null };
+    const obj = { style: null, children: null };
     const items2 = [tmp.lockIconBadge, style];
     obj.style = items2;
-    const obj2 = { size: "sm", color: nativeDefault.colors.WHITE };
-    obj.children = hasOwnProperty(LockIcon.LockIcon, obj2);
+    const obj5 = { size: "sm", color: nativeDefault.colors.WHITE };
+    obj.children = hasOwnProperty(LockIcon.LockIcon, obj5);
     tmp7 = hasOwnProperty(View, obj);
   }
   return tmp7;
@@ -157,41 +156,41 @@ export const PremiumBadge = function PremiumBadge(isNew) {
   const style = isNew.style;
   const tmp = closure_7();
   if (flag) {
-    let obj = { premiumType: PremiumTypes.TIER_2, style: null, children: null };
+    const obj2 = { premiumType: PremiumTypes.TIER_2, style: null, children: null };
     const items = [tmp.newLockIconBadge, style];
-    obj.style = items;
-    obj = { size: "xxs", color: nativeDefault.colors.WHITE };
-    const items1 = [hasOwnProperty(NitroWheelIcon.NitroWheelIcon, obj)];
-    const obj1 = {
+    obj2.style = items;
+    const obj3 = { size: "xxs", color: nativeDefault.colors.WHITE };
+    const items1 = [hasOwnProperty(NitroWheelIcon.NitroWheelIcon, obj3)];
+    const obj4 = {
       variant: "text-xs/bold",
       color: "text-overlay-light",
       style: tmp.badgeTextUppercase,
       children: null,
     };
     const intl = util.intl;
-    obj1.children = intl.string(util.t.y2b7CA);
-    items1[1] = hasOwnProperty(Text_Text.Text, obj1);
-    obj.children = items1;
-    let tmp7 = timestampProducer(PremiumFeaturesBackgroundDefault, obj);
+    obj4.children = intl.string(util.t.y2b7CA);
+    items1[1] = hasOwnProperty(Text_Text.Text, obj4);
+    obj2.children = items1;
+    let tmp7 = timestampProducer(PremiumFeaturesBackgroundDefault, obj2);
   } else {
-    obj = { style: null, children: null };
+    const obj = { style: null, children: null };
     const items2 = [tmp.lockIconBadge, style];
     obj.style = items2;
-    const obj2 = { size: "sm", color: nativeDefault.colors.WHITE };
-    obj.children = hasOwnProperty(NitroWheelIcon.NitroWheelIcon, obj2);
+    const obj5 = { size: "sm", color: nativeDefault.colors.WHITE };
+    obj.children = hasOwnProperty(NitroWheelIcon.NitroWheelIcon, obj5);
     tmp7 = hasOwnProperty(View, obj);
   }
   return tmp7;
 };
 export const LimitedTimeBadge = function LimitedTimeBadge(style) {
   const tmp = closure_7();
-  let obj = { style: null, children: null };
+  const obj = { style: null, children: null };
   const items = [tmp.limitedTimeBadge, style.style];
   obj.style = items;
-  obj = { variant: "text-xs/bold", color: "text-overlay-dark", style: tmp.badgeTextUppercase, children: null };
+  const obj2 = { variant: "text-xs/bold", color: "text-overlay-dark", style: tmp.badgeTextUppercase, children: null };
   const intl = util.intl;
-  obj.children = intl.string(util.t["h/uBCR"]);
-  obj.children = hasOwnProperty(Text_Text.Text, obj);
+  obj2.children = intl.string(util.t["h/uBCR"]);
+  obj.children = hasOwnProperty(Text_Text.Text, obj2);
   return hasOwnProperty(View, obj);
 };
 export const IconBadgePill = function IconBadgePill(isDark) {
@@ -213,7 +212,7 @@ export const IconTextBadge = function IconTextBadge(isDark) {
   ({ icon, label } = isDark);
   const tmp = closure_7();
   const items = [tmp.iconTextBadge];
-  let obj = { style: items, children: null };
+  const obj = { style: items, children: null };
   items[1] = isDark ? tmp.badgeSurfaceDarkMode : tmp.badgeSurfaceLightMode;
   let str = "white";
   if (isDark) {
@@ -224,8 +223,12 @@ export const IconTextBadge = function IconTextBadge(isDark) {
   if (isDark) {
     str2 = "text-overlay-dark";
   }
-  obj = { variant: "text-xs/bold", color: str2, style: tmp.badgeTextUppercase, children: label };
-  items1[1] = hasOwnProperty(Text_Text.Text, obj);
+  items1[1] = hasOwnProperty(Text_Text.Text, {
+    variant: "text-xs/bold",
+    color: str2,
+    style: tmp.badgeTextUppercase,
+    children: label,
+  });
   obj.children = items1;
   return timestampProducer(View, obj);
 };

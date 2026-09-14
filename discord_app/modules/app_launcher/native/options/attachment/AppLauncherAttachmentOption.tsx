@@ -32,8 +32,8 @@ function AttachmentPreviewAppLauncher(arg0) {
 const View = fn(17).View;
 const DraftType = fn(4977).DraftType;
 const jsx = fn(21).jsx;
-fn(4636);
-const createStyles = { imageIconWrapper: null, selectedImage: null };
+const createStyles = fn(4636);
+let obj2 = { imageIconWrapper: null, selectedImage: null };
 let size = {
   justifyContent: "center",
   alignItems: "center",
@@ -42,10 +42,10 @@ let size = {
   height: 32,
   borderRadius: nativeDefault.radii.lg,
 };
-createStyles.imageIconWrapper = size;
+obj2.imageIconWrapper = size;
 const size1 = { width: 32, height: 32, borderRadius: nativeDefault.radii.sm };
-createStyles.selectedImage = size1;
-let closure_8 = createStyles.createStyles(createStyles);
+obj2.selectedImage = size1;
+let closure_8 = createStyles.createStyles(obj2);
 size = fn(2);
 const result = size.fileFinishedImporting(
   "modules/app_launcher/native/options/attachment/AppLauncherAttachmentOption.tsx",
@@ -62,11 +62,11 @@ export default function AppLauncherAttachmentOption(option) {
   if (option.type === option(onSelectAttachment[9]).ApplicationCommandOptionType.ATTACHMENT) {
     fileTypes = option.fileTypes;
   }
-  let tmp2Result = tmp2(tmp3[10]);
-  const fileTypesFormattedString = tmp2Result.useFileTypesFormattedString(fileTypes);
-  tmp2Result = tmp2(tmp3[11]);
+  const tmp = closure_8();
+  const fileTypesFormattedString = option(onSelectAttachment[10]).useFileTypesFormattedString(fileTypes);
+  const tmp2Result = option(onSelectAttachment[10]);
   const items = [UploadAttachmentStore];
-  stateFromStores = tmp2Result.useStateFromStores(items, () =>
+  stateFromStores = option(onSelectAttachment[11]).useStateFromStores(items, () =>
     UploadAttachmentStore.getUpload(channel.id, option.name, DraftType.ApplicationLauncherCommand),
   );
   const items1 = [channel.id, option.name];
@@ -95,7 +95,7 @@ export default function AppLauncherAttachmentOption(option) {
       }
     }
   }, items2);
-  let obj = {
+  const obj = {
     style,
     hasError,
     option,
@@ -107,7 +107,7 @@ export default function AppLauncherAttachmentOption(option) {
     autoFocus: null,
   };
   let filename1;
-  const tmp = closure_8();
+  const tmp2Result2 = option(onSelectAttachment[11]);
   if (null != stateFromStores) {
     filename1 = stateFromStores.filename;
   }
@@ -115,13 +115,13 @@ export default function AppLauncherAttachmentOption(option) {
   let formatResult;
   if (null != fileTypesFormattedString) {
     const intl = tmp2(tmp3[14]).intl;
-    obj = { types: fileTypesFormattedString };
-    formatResult = intl.format(tmp2(tmp3[14]).t.NRRxmz, obj);
+    const obj2 = { types: fileTypesFormattedString };
+    formatResult = intl.format(tmp2(tmp3[14]).t.NRRxmz, obj2);
   }
   obj.unselectedSubLabel = formatResult;
   if (null != stateFromStores) {
     if (stateFromStores.item.platform === tmp2(tmp3[15]).UploadPlatform.REACT_NATIVE) {
-      const obj1 = { uri: stateFromStores.item.uri, isImage: null, isVideo: null };
+      const obj3 = { uri: stateFromStores.item.uri, isImage: null, isVideo: null };
       ({ isImage: obj6.isImage, isVideo: obj6.isVideo } = stateFromStores);
       let tmp12Result = <AttachmentPreviewAppLauncher uri={stateFromStores.item.uri} isImage={null} isVideo={null} />;
     }
@@ -136,7 +136,7 @@ export default function AppLauncherAttachmentOption(option) {
       {jsx(option(onSelectAttachment[16]).ImageFileIcon, { size: "sm", color: "interactive-text-default" })}
     </ref>
   );
-  const obj2 = {
+  const obj4 = {
     style: tmp.imageIconWrapper,
     children: jsx(option(onSelectAttachment[16]).ImageFileIcon, { size: "sm", color: "interactive-text-default" }),
   };

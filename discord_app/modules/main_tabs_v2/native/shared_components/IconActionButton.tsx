@@ -1,7 +1,7 @@
 // discord_app/modules/main_tabs_v2/native/shared_components/IconActionButton.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import PlatformUtils from "../../../../utils/PlatformUtils.tsx";
 import native from "../../../../design/void/native.tsx";
+import PlatformUtils from "../../../../utils/PlatformUtils.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import useFontScale from "../../../screen/native/useFontScale.tsx";
 import Pressables from "../../../../design/void/Pressables/native/Pressables.tsx";
@@ -29,7 +29,7 @@ const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
 const createStyles = fn(4636);
 const timestampProducer = createStyles.createStyles(() => {
-  let obj = {
+  const obj = {
     actionIconButtonPressable: {
       minWidth: 32,
       minHeight: 32,
@@ -53,16 +53,20 @@ const timestampProducer = createStyles.createStyles(() => {
     unreadBadgeMask: null,
     countStyle: null,
   };
-  obj = {
+  const merged = Object.assign(nativeDefault.shadows.SHADOW_LOW);
+  obj.outlined = {
     backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
     borderWidth: 1,
     borderColor: nativeDefault.colors.INPUT_BACKGROUND_DEFAULT,
   };
-  const merged = Object.assign(nativeDefault.shadows.SHADOW_LOW);
-  obj.outlined = obj;
   obj.roundButton = { maxWidth: 32, maxHeight: 32 };
-  obj = { tintColor: nativeDefault.colors.ICON_SUBTLE };
-  obj.actionIcon = obj;
+  const obj2 = {
+    backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
+    borderWidth: 1,
+    borderColor: nativeDefault.colors.INPUT_BACKGROUND_DEFAULT,
+  };
+  obj.actionIcon = { tintColor: nativeDefault.colors.ICON_SUBTLE };
+  const obj3 = { tintColor: nativeDefault.colors.ICON_SUBTLE };
   let num = 0;
   if (obj4.isAndroid()) {
     num = -2;
@@ -72,7 +76,7 @@ const timestampProducer = createStyles.createStyles(() => {
   obj.unreadBadgeRight = { position: "absolute", right: -2, top: -1 };
   obj4 = PlatformUtils;
   obj.unreadBadgeMask = { color: nativeDefault.colors.BACKGROUND_BASE_LOW };
-  const obj1 = { color: nativeDefault.colors.BACKGROUND_BASE_LOW };
+  const obj5 = { color: nativeDefault.colors.BACKGROUND_BASE_LOW };
   obj.countStyle = { position: "relative", marginLeft: nativeDefault.space.PX_8 };
   return obj;
 });
@@ -114,7 +118,7 @@ export default function IconActionButton(variant) {
   if (tmp10Result) {
     tmp10Result = tmp5 <= 1.2;
   }
-  let obj = {
+  const obj = {
     hitSlop,
     onPress,
     onLongPress,
@@ -139,19 +143,19 @@ export default function IconActionButton(variant) {
   obj.style = items;
   const items1 = [React4(closure_7, { IconComponent, color, source }), , ,];
   if (tmp10Result) {
-    obj = { variant: "text-sm/bold", color: buttonTextColor, style: tmp.actionText, children: buttonText };
-    tmp10Result = React4(Text_Text.Text, obj);
+    const obj2 = { variant: "text-sm/bold", color: buttonTextColor, style: tmp.actionText, children: buttonText };
+    tmp10Result = React4(Text_Text.Text, obj2);
   }
   items1[1] = tmp10Result;
-  tmp10Result = null;
+  let tmp10Result2 = null;
   if (num > 0) {
-    obj = { style: tmp.countStyle, value: num };
-    tmp10Result = React4(native.Badge, obj);
+    const obj3 = { style: tmp.countStyle, value: num };
+    tmp10Result2 = React4(native.Badge, obj3);
   }
-  items1[2] = tmp10Result;
+  items1[2] = tmp10Result2;
   if (badge) {
-    const obj1 = { badgePosition };
-    badge = React4(ButtonBadge, obj1);
+    const obj4 = { badgePosition };
+    badge = React4(ButtonBadge, obj4);
   }
   items1[3] = badge;
   obj.children = items1;

@@ -4,7 +4,7 @@ import util from "../../../../intl/index.native.tsx";
 import native from "../../../../design/void/native.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import common_AlertDefault from "../../../../components_native/common/Alert.tsx";
-import _modDef15302 from "../../../../../_runtime/metro/15302__.js";
+import _modDef15303 from "../../../../../_runtime/metro/15303__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -12,14 +12,14 @@ get_ActivityIndicator = fn(17);
 ({ View: c3, Image: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-fn(4636);
-let createStyles = { container: null, body: null, centerText: null, headerImage: null };
-createStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL };
-createStyles.container = createStyles;
-createStyles.body = { alignItems: "center", textAlign: "center" };
-createStyles.centerText = { textAlign: "center" };
-createStyles.headerImage = { width: 87, height: 87 };
-let closure_7 = createStyles.createStyles(createStyles);
+const createStyles = fn(4636);
+let obj2 = {
+  container: { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL },
+  body: { alignItems: "center", textAlign: "center" },
+  centerText: { textAlign: "center" },
+  headerImage: { width: 87, height: 87 },
+};
+let closure_7 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting(
   "modules/guild_role_subscriptions/native/manage_subscriptions/ResubscribedAlert.tsx",
@@ -27,34 +27,39 @@ const result = size.fileFinishedImporting(
 
 export default function ResubscribedAlert(onClose) {
   const tmp = closure_7();
-  let obj = { confirmText: null, onConfirm: null, style: null, children: null };
+  const obj = { confirmText: null, onConfirm: null, style: null, children: null };
   const intl = util.intl;
   obj.confirmText = intl.string(util.t["NX+WJN"]);
   obj.onConfirm = onClose.onClose;
   obj.style = tmp.container;
-  obj = { style: tmp.body, children: null };
-  obj = { source: _modDef15302, style: tmp.headerImage };
-  const items = [hasOwnProperty(React4, obj), hasOwnProperty(native.Spacer, { size: 27 }), , ,];
-  const obj1 = {
+  const obj2 = { style: tmp.body, children: null };
+  const tmp2 = common_AlertDefault;
+  const items = [
+    hasOwnProperty(React4, { source: _modDef15303, style: tmp.headerImage }),
+    hasOwnProperty(native.Spacer, { size: 27 }),
+    ,
+    ,
+  ];
+  const obj4 = {
     variant: "text-lg/semibold",
     color: "mobile-text-heading-primary",
     style: tmp.centerText,
     children: null,
   };
   const intl2 = util.intl;
-  obj1.children = intl2.string(util.t.oPV2cy);
-  items[2] = hasOwnProperty(Text_Text.Text, obj1);
+  obj4.children = intl2.string(util.t.oPV2cy);
+  items[2] = hasOwnProperty(Text_Text.Text, obj4);
   items[3] = hasOwnProperty(native.Spacer, { size: 12 });
-  const obj2 = {
+  const obj5 = {
     variant: "text-md/normal",
     color: "mobile-text-heading-primary",
     style: tmp.centerText,
     children: null,
   };
   const intl3 = util.intl;
-  obj2.children = intl3.string(util.t.DdRizV);
-  items[4] = hasOwnProperty(Text_Text.Text, obj2);
-  obj.children = items;
-  obj.children = timestampProducer(React3, obj);
-  return hasOwnProperty(common_AlertDefault, obj);
+  obj5.children = intl3.string(util.t.DdRizV);
+  items[4] = hasOwnProperty(Text_Text.Text, obj5);
+  obj2.children = items;
+  obj.children = timestampProducer(React3, obj2);
+  return hasOwnProperty(tmp2, obj);
 }

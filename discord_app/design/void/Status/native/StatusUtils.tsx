@@ -18,9 +18,9 @@ export const getMobileStatusContainerRect = function getMobileStatusContainerRec
   return size;
 };
 export const getVRStatusContainerRect = function getVRStatusContainerRect(items) {
-  let size = getStatusContainerStyleDefault(items, false, true);
-  size = { width: size.width, height: size.height, cornerRadius: size.borderRadius };
-  return size;
+  const size = getStatusContainerStyleDefault(items, false, true);
+  const size1 = { width: size.width, height: size.height, cornerRadius: size.borderRadius };
+  return size1;
 };
 export const getStatusTypingDimensions = function getStatusTypingDimensions(items) {
   if (constants.SMALL !== items) {

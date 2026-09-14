@@ -1,12 +1,11 @@
 // discord_app/modules/media/native/AttachmentPreview.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import PlatformUtils from "../../../utils/PlatformUtils.tsx";
 import native from "../../../design/void/native.tsx";
+import PlatformUtils from "../../../utils/PlatformUtils.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import FileUtils from "../../../utils/FileUtils.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import common_Video from "../../../components_native/common/Video.tsx";
-import _modDef10325 from "../../../../_runtime/metro/10325__.js";
 import _modDef10326 from "../../../../_runtime/metro/10326__.js";
 import _modDef10327 from "../../../../_runtime/metro/10327__.js";
 import _modDef10328 from "../../../../_runtime/metro/10328__.js";
@@ -20,6 +19,7 @@ import _modDef10335 from "../../../../_runtime/metro/10335__.js";
 import _modDef10336 from "../../../../_runtime/metro/10336__.js";
 import _modDef10337 from "../../../../_runtime/metro/10337__.js";
 import _modDef10338 from "../../../../_runtime/metro/10338__.js";
+import _modDef10339 from "../../../../_runtime/metro/10339__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -37,9 +37,9 @@ class AttachmentIcon {
         if (fileName == null) {
           str = "";
         }
-        let tmp2 = createStyles[obj.classifyFileName(obj, str)];
+        let tmp2 = obj4[obj.classifyFileName(obj, str)];
         if (tmp2 == null) {
-          tmp2 = _modDef10336;
+          tmp2 = _modDef10337;
         }
         return tmp2;
       }, items),
@@ -50,18 +50,17 @@ class AttachmentIcon {
 function FilenameText(fileName) {
   fileName = fileName.fileName;
   const tmp = closure_8();
-  let obj = /(?:\.([^.]+))?$/;
   let str = fileName;
   if (fileName == null) {
     str = "";
   }
-  const match = obj.exec(str);
+  const match = /(?:\.([^.]+))?$/.exec(str);
   let tmp5 = null != fileName;
   if (tmp5) {
     tmp5 = "" !== fileName;
   }
   if (tmp5) {
-    obj = {
+    const obj2 = {
       style: tmp.attachmentFileName,
       ellipsizeMode: "middle",
       lineClamp: 1,
@@ -69,10 +68,16 @@ function FilenameText(fileName) {
       color: "mobile-text-heading-primary",
       children: fileName,
     };
-    tmp5 = timestampProducer(Text_Text.Text, obj);
+    tmp5 = timestampProducer(Text_Text.Text, obj2);
   }
   const items = [tmp5];
-  obj = { style: tmp.attachmentFileName, lineClamp: 1, variant: "text-xs/medium", color: "text-muted", children: null };
+  const obj3 = {
+    style: tmp.attachmentFileName,
+    lineClamp: 1,
+    variant: "text-xs/medium",
+    color: "text-muted",
+    children: null,
+  };
   let str3 = "UNKNOWN";
   if (null != match) {
     str3 = "UNKNOWN";
@@ -80,11 +85,11 @@ function FilenameText(fileName) {
       str3 = match[1].toUpperCase();
     }
   }
-  const obj1 = { children: null };
-  obj.children = str3;
-  items[1] = timestampProducer(Text_Text.Text, obj);
-  obj1.children = items;
-  return React5(hasOwnProperty, obj1);
+  obj4 = { children: null };
+  obj3.children = str3;
+  items[1] = timestampProducer(Text_Text.Text, obj3);
+  obj4.children = items;
+  return React5(hasOwnProperty, obj4);
 }
 function DefaultAttachmentPreview(fileName) {
   fileName = fileName.fileName;
@@ -100,46 +105,46 @@ get_ActivityIndicator = fn(17);
 ({ Image: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-let createStyles = fn(4636);
-let obj = { fileInfoAttachmentPreviewFile: null, attachmentFileIcon: null, attachmentFileName: null, videoIcon: null };
-obj = {
-  flexDirection: "row",
-  alignItems: "center",
-  overflow: "hidden",
-  borderRadius: nativeDefault.radii.sm,
-  height: 75,
-  padding: 12,
-  flex: 1,
-  gap: nativeDefault.space.PX_8,
-};
-obj.fileInfoAttachmentPreviewFile = obj;
-obj.attachmentFileIcon = { height: 32, width: 24 };
-obj.attachmentFileName = { paddingRight: 4, paddingLeft: 4, maxWidth: 136 };
-obj.videoIcon = {
-  position: "absolute",
-  top: 0,
-  left: 0,
-  right: 0,
-  bottom: 0,
-  alignItems: "center",
-  justifyContent: "center",
+const createStyles = fn(4636);
+let obj = {
+  fileInfoAttachmentPreviewFile: {
+    flexDirection: "row",
+    alignItems: "center",
+    overflow: "hidden",
+    borderRadius: nativeDefault.radii.sm,
+    height: 75,
+    padding: 12,
+    flex: 1,
+    gap: nativeDefault.space.PX_8,
+  },
+  attachmentFileIcon: { height: 32, width: 24 },
+  attachmentFileName: { paddingRight: 4, paddingLeft: 4, maxWidth: 136 },
+  videoIcon: {
+    position: "absolute",
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0,
+    alignItems: "center",
+    justifyContent: "center",
+  },
 };
 const React6 = createStyles.createStyles(obj);
-createStyles = {
-  archive: _modDef10325,
-  acrobat: _modDef10326,
-  ae: _modDef10327,
-  ai: _modDef10328,
-  audio: _modDef10329,
-  code: _modDef10330,
-  document: _modDef10331,
-  image: _modDef10332,
-  photoshop: _modDef10333,
-  sketch: _modDef10334,
-  spreadsheet: _modDef10335,
-  unknown: _modDef10336,
-  video: _modDef10337,
-  webcode: _modDef10338,
+let obj4 = {
+  archive: _modDef10326,
+  acrobat: _modDef10327,
+  ae: _modDef10328,
+  ai: _modDef10329,
+  audio: _modDef10330,
+  code: _modDef10331,
+  document: _modDef10332,
+  image: _modDef10333,
+  photoshop: _modDef10334,
+  sketch: _modDef10335,
+  spreadsheet: _modDef10336,
+  unknown: _modDef10337,
+  video: _modDef10338,
+  webcode: _modDef10339,
 };
 let closure_13 = noop.memo((borderRadius) => {
   ({ uri, width, height, style, fileName } = borderRadius);
@@ -168,23 +173,23 @@ let closure_13 = noop.memo((borderRadius) => {
     }
     isMatch = isIOSResult;
   }
-  let obj = { style: null, children: null };
+  const obj = { style: null, children: null };
   const items = [size1, style, { overflow: "hidden" }];
   obj.style = items;
   if (isMatch) {
-    obj = { style: null, source: null, resizeMode: "cover", enableAnimation: true };
+    const obj2 = { style: null, source: null, resizeMode: "cover", enableAnimation: true };
     const items1 = [size1, style];
-    obj.style = items1;
-    obj.source = size;
-    obj.children = timestampProducer(FastImageDefault, obj);
+    obj2.style = items1;
+    obj2.source = size;
+    obj.children = timestampProducer(FastImageDefault, obj2);
     let tmp10 = obj;
   } else {
-    const obj1 = { style: null, source: null, localImageSource: null };
+    const obj5 = { style: null, source: null, localImageSource: null };
     const items2 = [size1, style];
-    obj1.style = items2;
-    obj1.source = size;
-    obj1.localImageSource = size;
-    obj.children = timestampProducer(native.ThumbnailImage, obj1);
+    obj5.style = items2;
+    obj5.source = size;
+    obj5.localImageSource = size;
+    obj.children = timestampProducer(native.ThumbnailImage, obj5);
     tmp10 = obj;
   }
   return timestampProducer(hasOwnProperty, tmp10);
@@ -211,7 +216,7 @@ export default function AttachmentPreview(height) {
   }
   let defaultPreview = height.defaultPreview;
   if (defaultPreview === undefined) {
-    let obj = { fileName, maxFileWidth, borderRadius };
+    const obj = { fileName, maxFileWidth, borderRadius };
     defaultPreview = timestampProducer(DefaultAttachmentPreview, obj);
   }
   const style = height.style;
@@ -221,8 +226,7 @@ export default function AttachmentPreview(height) {
     let tmp9 = timestampProducer(closure_13, size);
   } else {
     if (!isVideo) {
-      let obj2 = PlatformUtils;
-      if (obj2.isIOS()) {
+      if (obj3.isIOS()) {
         let tmp6 = dependencyMap;
         let CirclePlayIcon = require;
       }
@@ -230,8 +234,8 @@ export default function AttachmentPreview(height) {
       if (isVideo) {
         tmp9 = defaultPreview;
         if (tmp7Result.isIOS()) {
-          obj = { style, children: null };
-          obj = {
+          obj4 = { style, children: null };
+          const obj5 = {
             style: null,
             source: null,
             muted: true,
@@ -240,32 +244,33 @@ export default function AttachmentPreview(height) {
             preventsDisplaySleepDuringVideoPlayback: false,
           };
           const size1 = { height: num, width };
-          obj.style = size1;
-          let obj1 = { uri };
-          obj.source = obj1;
-          obj.children = timestampProducer(common_Video.VideoComponent, obj);
-          tmp9 = timestampProducer(hasOwnProperty, obj);
+          obj5.style = size1;
+          const obj6 = { uri };
+          obj5.source = obj6;
+          obj4.children = timestampProducer(common_Video.VideoComponent, obj5);
+          tmp9 = timestampProducer(hasOwnProperty, obj4);
         }
         tmp7Result = PlatformUtils;
       }
+      obj3 = PlatformUtils;
     } else {
       tmp6 = dependencyMap;
-      obj1 = PlatformUtils;
+      PlatformUtils;
       CirclePlayIcon = require;
     }
     if (flag) {
-      obj2 = { style, children: null };
+      const obj7 = { style, children: null };
       const size2 = { uri, width, height: num, borderRadius, style, fileName };
       const items = [timestampProducer(closure_13, size2)];
-      const obj3 = { style: null, children: null };
+      const obj8 = { style: null, children: null };
       videoIcon = videoIcon.videoIcon;
-      obj3.style = videoIcon;
+      obj8.style = videoIcon;
       CirclePlayIcon = CirclePlayIcon(10260).CirclePlayIcon;
       tmp6 = timestampProducer(CirclePlayIcon, { size: "md", color: "white", secondaryColor: "black" });
-      obj3.children = tmp6;
-      items[1] = timestampProducer(hasOwnProperty, obj3);
-      obj2.children = items;
-      let tmp14 = React5(hasOwnProperty, obj2);
+      obj8.children = tmp6;
+      items[1] = timestampProducer(hasOwnProperty, obj8);
+      obj7.children = items;
+      let tmp14 = React5(hasOwnProperty, obj7);
     } else {
       const size3 = { uri, width, height: num, borderRadius, style, fileName };
       tmp14 = timestampProducer(closure_13, size3);

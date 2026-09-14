@@ -14,14 +14,11 @@ export default noop.memo((style) => {
   const visible = style.visible;
   ({ source, controls } = style);
   const merged = Object.assign(style, Object.assign({ visible: 0, style: 0, source: 0, controls: 0 }));
-  let playerState;
+  playerState = undefined;
   _slicedToArray = undefined;
   noop = undefined;
   let mediaPlayerMutedStore;
-  let obj = noop;
-  const tmp4 = _slicedToArray(noop.useState(visible(playerState[3]).PlayerState.UNREADY), 2);
-  playerState = tmp4[0];
-  _slicedToArray = tmp4[1];
+  [playerState, _slicedToArray] = noop.useState(visible(playerState[3]).PlayerState.UNREADY);
   const tmp7 = controls(playerState[4])(playerState);
   noop = tmp7;
   const tmp8 = controls(playerState[4])(visible);
@@ -37,11 +34,11 @@ export default noop.memo((style) => {
     const MediaViewerAnalytics = visible(first[5]).MediaViewerAnalytics;
     const result = MediaViewerAnalytics.trackMessageEmbedsActionCompleted({ platform: "file", action: "attempted" });
   }, []);
-  props = undefined;
+  let props1;
   if (controls != null) {
-    props = controls.props;
+    props1 = controls.props;
   }
-  const items = [props];
+  const items = [props1];
   const callback = obj.useCallback((arg0) => {
     const iter = ((arg0) => {
       try {
@@ -154,16 +151,16 @@ export default noop.memo((style) => {
   mediaPlayerMutedStore = visible(playerState[6]).useMediaPlayerMutedStore((isMuted) => isMuted.isMuted);
   const items1 = [ref, visible, tmp8, tmp7, playerState, mediaPlayerMutedStore];
   const effect1 = obj.useEffect(() => {
-    let current;
+    let current1;
     if (ref != null) {
-      current = ref.current;
+      current1 = ref.current;
     }
-    let tmp3 = null != current;
+    let tmp3 = null != current1;
     if (tmp3) {
       tmp3 = first !== MediaModalWebView.PlayerState.UNREADY;
     }
     if (tmp3) {
-      current = ref.current;
+      const current = ref.current;
       const _JSON = JSON;
       const _HermesInternal = HermesInternal;
       current.injectJavaScript("window.player.muted = " + JSON.stringify(mediaPlayerMutedStore) + "; true;");
@@ -202,21 +199,33 @@ export default noop.memo((style) => {
     JSON.stringify(source.uri) +
     ";\n  document.body.appendChild(player);\n  player.load();\n  window.ReactNativeWebView.postMessage(JSON.stringify({type: 'loaded'}));\n}\nwindow.addEventListener('load', onReady);\n" +
     "</script>\n  </head>\n  <body>\n  </body>\n</html>\n";
-  obj = {
+  const obj2 = {
     ref,
     style: style.style,
-    source: null,
+    source: { html: combined, baseUrl: ref },
     baseURL: ref,
     playerState,
     onDataReceived: callback,
     javaScriptEnabled: true,
     javaScriptCanOpenWindowsAutomatically: true,
   };
-  obj = { html: combined, baseUrl: ref };
-  obj.source = obj;
+  const obj3 = { html: combined, baseUrl: ref };
   const tmp2Result = visible(playerState[6]);
   const merged1 = Object.assign(merged);
-  return jsx(controls(playerState[3]), { html: combined, baseUrl: ref }, source.uri);
+  return jsx(
+    controls(playerState[3]),
+    {
+      ref,
+      style: style.style,
+      source: { html: combined, baseUrl: ref },
+      baseURL: ref,
+      playerState,
+      onDataReceived: callback,
+      javaScriptEnabled: true,
+      javaScriptCanOpenWindowsAutomatically: true,
+    },
+    source.uri,
+  );
 });
 export const createWebFileVideoControls = function createWebFileVideoControls() {
   const ref = noop.createRef();

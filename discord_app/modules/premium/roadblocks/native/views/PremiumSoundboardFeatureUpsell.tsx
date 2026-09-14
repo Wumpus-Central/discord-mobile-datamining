@@ -26,11 +26,11 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/roadblocks/native/views/PremiumSoundboardFeatureUpsell.tsx");
 
 export default function PremiumSoundboardFeatureUpsell(shouldShow) {
-  let obj = {
+  const obj = {
     style: closure_5(ConstantsIOS.EXPRESSION_FOOTER_HEIGHT + useSafeAreaInsetsDefault().bottom).container,
     children: null,
   };
-  obj = {
+  const obj2 = {
     shouldShow: shouldShow.shouldShow,
     featureName: EntitlementFeatureNames.EntitlementFeatureNames.SOUNDBOARD_EVERYWHERE,
   };
@@ -39,9 +39,8 @@ export default function PremiumSoundboardFeatureUpsell(shouldShow) {
     featureName: EntitlementFeatureNames.EntitlementFeatureNames.SOUNDBOARD_EVERYWHERE,
   });
   return (
-    <View
-      shouldShow={shouldShow.shouldShow}
-      featureName={EntitlementFeatureNames.EntitlementFeatureNames.SOUNDBOARD_EVERYWHERE}
-    />
+    <View style={closure_5(ConstantsIOS.EXPRESSION_FOOTER_HEIGHT + useSafeAreaInsetsDefault().bottom).container}>
+      {null}
+    </View>
   );
 }

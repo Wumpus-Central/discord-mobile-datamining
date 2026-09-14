@@ -7,6 +7,8 @@ import ShopIcon from "../../../../design/components/Icon/native/redesign/generat
 import SettingBuilders from "../../../settings/native/renderer/SettingBuilders.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
 
+const require = globalThis.__r;
+
 const route = SettingBuilders.createRoute({
   useTitle() {
     const intl = util.intl;
@@ -22,11 +24,11 @@ const route = SettingBuilders.createRoute({
   },
   usePreNavigationAction() {
     return () => {
-      const obj = { analyticsLocations: null, analyticsSource: null };
+      const obj2 = { analyticsLocations: null, analyticsSource: null };
       const items = [AnalyticsLocationDefault.USER_SETTINGS];
-      obj.analyticsLocations = items;
-      obj.analyticsSource = AnalyticsLocationDefault.USER_SETTINGS;
-      const result = obj.openCollectiblesShopMobile(obj);
+      obj2.analyticsLocations = items;
+      obj2.analyticsSource = AnalyticsLocationDefault.USER_SETTINGS;
+      const result = CollectiblesActionCreators.openCollectiblesShopMobile(obj2);
       return false;
     };
   },

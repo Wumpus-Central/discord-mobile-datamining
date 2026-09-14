@@ -16,7 +16,7 @@ const result = size.fileFinishedImporting(
 
 export const createPremiumGroupInviteEmbed = function createPremiumGroupInviteEmbed(message, theme, id, channel) {
   if (null != message.author) {
-    let obj = {
+    const obj2 = {
       headerTextColor: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY,
       bodyTextColor: nativeDefault.colors.TEXT_DEFAULT,
       linkTextColor: nativeDefault.colors.TEXT_LINK,
@@ -25,19 +25,19 @@ export const createPremiumGroupInviteEmbed = function createPremiumGroupInviteEm
       betaPillBackgroundColor: nativeDefault.colors.WHITE,
     };
     ({ backgroundColor, headerTextColor, bodyTextColor, linkTextColor, betaPillTextColor, betaPillBackgroundColor } =
-      createStyles.createNativeStyleProperties(obj)(theme));
-    const tmp9 = createStyles.createNativeStyleProperties(obj)(theme);
+      createStyles.createNativeStyleProperties(obj2)(theme));
+    const tmp9 = createStyles.createNativeStyleProperties(obj2)(theme);
     const author = message.author;
     const assetUriForEmbed = renderer_EmbedUtils.getAssetUriForEmbed(_modDef8153);
-    obj = { sender: author, channel, isSender: id === author.id, inviteState: constants.UNKNOWN };
-    const premiumGroupInviteEmbedText = PremiumGroupUtils.getPremiumGroupInviteEmbedText(obj);
+    const obj3 = { sender: author, channel, isSender: id === author.id, inviteState: constants.UNKNOWN };
+    const premiumGroupInviteEmbedText = PremiumGroupUtils.getPremiumGroupInviteEmbedText(obj3);
     if (null != premiumGroupInviteEmbedText) {
       ({ header, body } = premiumGroupInviteEmbedText);
       const intl = util.intl;
-      obj = { learnMoreLinkOnClick: null };
-      const obj1 = { action: "bindOpenUrl", url, linkColor: linkTextColor };
-      obj.learnMoreLinkOnClick = obj1;
-      const obj2 = {
+      const obj = { learnMoreLinkOnClick: null };
+      const obj5 = { action: "bindOpenUrl", url, linkColor: linkTextColor };
+      obj.learnMoreLinkOnClick = obj5;
+      const obj8 = {
         headerText: header,
         headerColor: headerTextColor,
         backgroundColor,
@@ -52,13 +52,13 @@ export const createPremiumGroupInviteEmbed = function createPremiumGroupInviteEm
       };
       const intl2 = util.intl;
       const formatToPartsResult = intl.formatToParts(_modDef3074["9VTnfI"], obj);
-      obj2.betaPillText = intl2.string(util.t.oW0eUd).toUpperCase();
-      obj2.betaPillTextColor = betaPillTextColor;
-      obj2.betaPillBackgroundColor = betaPillBackgroundColor;
-      obj2.bodyText = body;
-      obj2.bodyTextColor = bodyTextColor;
-      obj2.learnMoreLink = formatToPartsResult;
-      return obj2;
+      obj8.betaPillText = intl2.string(util.t.oW0eUd).toUpperCase();
+      obj8.betaPillTextColor = betaPillTextColor;
+      obj8.betaPillBackgroundColor = betaPillBackgroundColor;
+      obj8.bodyText = body;
+      obj8.bodyTextColor = bodyTextColor;
+      obj8.learnMoreLink = formatToPartsResult;
+      return obj8;
     }
   }
 };

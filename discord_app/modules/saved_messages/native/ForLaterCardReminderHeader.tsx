@@ -11,16 +11,15 @@ const result = size.fileFinishedImporting("modules/saved_messages/native/ForLate
 export const ForLaterCardReminderHeader = function ForLaterCardReminderHeader(savedMessage) {
   savedMessage = savedMessage.savedMessage;
   ({ throttledNow, actions } = savedMessage);
-  let obj = SavedMessageUtils;
   let dueAt;
   if (savedMessage != null) {
     dueAt = savedMessage.saveData.dueAt;
   }
-  obj = { dueAt, now: throttledNow, type: SavedMessageUtils.DueInStringTypes.SHORT };
-  const dueInString = obj.useDueInString(obj);
+  const obj = SavedMessageUtils;
+  const dueInString = obj.useDueInString({ dueAt, now: throttledNow, type: SavedMessageUtils.DueInStringTypes.SHORT });
   let tmp7 = null;
   if (null != savedMessage.saveData.dueAt) {
-    obj = { IconComponent: ClockIcon.ClockIcon, label: tmp5, isCritical: tmp6, actions };
+    const obj3 = { IconComponent: ClockIcon.ClockIcon, label: tmp5, isCritical: tmp6, actions };
     tmp7 = jsx(ForLaterCardStatusHeader.ForLaterCardStatusHeader, {
       IconComponent: ClockIcon.ClockIcon,
       label: tmp5,

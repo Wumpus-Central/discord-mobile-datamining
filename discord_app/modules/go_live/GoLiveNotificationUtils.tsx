@@ -12,6 +12,8 @@ const result = size.fileFinishedImporting("modules/go_live/GoLiveNotificationUti
 export const onGoLiveNotificationSettingsChanged = function onGoLiveNotificationSettingsChanged(go_live_notifications) {
   const StreamNotificationsEnabled = UserSettings.StreamNotificationsEnabled;
   StreamNotificationsEnabled.updateSetting(go_live_notifications);
-  const obj = { update_type: constants.ACCOUNT, go_live_notifications };
-  obj.track(AnalyticEvents.NOTIFICATION_SETTINGS_UPDATED, obj);
+  AnalyticsUtilsDefault.track(AnalyticEvents.NOTIFICATION_SETTINGS_UPDATED, {
+    update_type: constants.ACCOUNT,
+    go_live_notifications,
+  });
 };

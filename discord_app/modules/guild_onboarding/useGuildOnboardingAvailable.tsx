@@ -1,6 +1,8 @@
 // discord_app/modules/guild_onboarding/useGuildOnboardingAvailable.tsx
 import ImpersonateStore from "../impersonate/ImpersonateStore.tsx";
 
+const require = globalThis.__r;
+
 const require = fn;
 const GuildFeatures = fn(1074).GuildFeatures;
 const size = fn(2);

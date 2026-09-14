@@ -1,7 +1,7 @@
 // discord_app/modules/premium/native/gifting/PremiumGiftAnalytics.tsx
 import util from "../../../../intl/index.native.tsx";
-import PlatformUtils from "../../../../utils/PlatformUtils.tsx";
 import AnalyticsUtilsDefault from "../../../../utils/AnalyticsUtils.tsx";
+import PlatformUtils from "../../../../utils/PlatformUtils.tsx";
 import PremiumAnalyticsUtils from "../PremiumAnalyticsUtils.tsx";
 import PaymentFlowStartedTriggerPoint from "../../../experiments/trigger_points/PaymentFlowStartedTriggerPoint.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -30,23 +30,23 @@ export default function PremiumGiftAnalytics(currentStep) {
       if (null != ref.current) {
         let isIOSResult = currentStep === PremiumAnalyticsUtils.PaymentFlowStep.CONFIRM;
         if (isIOSResult) {
-          let obj = PlatformUtils;
-          isIOSResult = obj.isIOS();
+          isIOSResult = PlatformUtils.isIOS();
         }
         if (isIOSResult) {
-          let obj1 = AnalyticsUtilsDefault;
-          obj = {};
-          let obj3 = PremiumAnalyticsUtils;
-          obj = { subscription_plan_gateway_plan_id: productId };
-          const merged = Object.assign(obj3.getPaymentFlowStepAnalyticsFields(basePurchaseAnalytics, obj));
+          const obj3 = {};
+          const obj2 = AnalyticsUtilsDefault;
+          const obj5 = { subscription_plan_gateway_plan_id: productId };
+          const merged = Object.assign(
+            PremiumAnalyticsUtils.getPaymentFlowStepAnalyticsFields(basePurchaseAnalytics, obj5),
+          );
           const intl = util.intl;
-          obj.is_custom_message_edited = customGiftMessage !== intl.string(util.t.ZkOo1U);
-          obj.is_custom_emoji_sound_available = false;
-          obj1.track(AnalyticEvents.PAYMENT_FLOW_SUCCEEDED, obj);
+          obj3.is_custom_message_edited = customGiftMessage !== intl.string(util.t.ZkOo1U);
+          obj3.is_custom_emoji_sound_available = false;
+          obj2.track(AnalyticEvents.PAYMENT_FLOW_SUCCEEDED, obj3);
         }
-        obj1 = {};
+        const obj7 = {};
         const obj6 = AnalyticsUtilsDefault;
-        const obj2 = {
+        const obj9 = {
           from_step: ref.current,
           to_step: currentStep,
           step_duration_ms: timestamp - ref2.current,
@@ -54,18 +54,18 @@ export default function PremiumGiftAnalytics(currentStep) {
           subscription_plan_gateway_plan_id: productId,
         };
         const merged1 = Object.assign(
-          PremiumAnalyticsUtils.getPaymentFlowStepAnalyticsFields(basePurchaseAnalytics, obj2),
+          PremiumAnalyticsUtils.getPaymentFlowStepAnalyticsFields(basePurchaseAnalytics, obj9),
         );
-        obj6.track(AnalyticEvents.PAYMENT_FLOW_STEP, obj1);
+        obj6.track(AnalyticEvents.PAYMENT_FLOW_STEP, obj7);
       } else {
         const result = PaymentFlowStartedTriggerPoint.trackPaymentFlowStartedAnalyticsAndCTP(basePurchaseAnalytics);
-        obj3 = {};
+        const obj12 = {};
         const obj11 = AnalyticsUtilsDefault;
-        const obj4 = { initial_step: currentStep };
+        const obj14 = { initial_step: currentStep };
         const merged2 = Object.assign(
-          PremiumAnalyticsUtils.getPaymentFlowStepAnalyticsFields(basePurchaseAnalytics, obj4),
+          PremiumAnalyticsUtils.getPaymentFlowStepAnalyticsFields(basePurchaseAnalytics, obj14),
         );
-        obj11.track(AnalyticEvents.PAYMENT_FLOW_LOADED, obj3);
+        obj11.track(AnalyticEvents.PAYMENT_FLOW_LOADED, obj12);
       }
       ref.current = currentStep;
       ref2.current = timestamp;

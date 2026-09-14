@@ -6,48 +6,42 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const UserRowModes = fn(10988).UserRowModes;
+const UserRowModes = fn(10989).UserRowModes;
 const jsx = fn(21).jsx;
-fn(4636);
-let createStyles = { container: null };
-createStyles = { flex: 1, paddingTop: 16, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
-createStyles.container = createStyles;
-let closure_6 = createStyles.createStyles(createStyles);
+const createStyles = fn(4636);
+let obj2 = {
+  container: { flex: 1, paddingTop: 16, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND },
+};
+let closure_6 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/checkout/native/gifting/UnifiedGiftModalRecipientSelectScreen.tsx");
 
 export default function UnifiedGiftModalRecipientSelectScreen(setRecipientUser) {
   setRecipientUser = setRecipientUser.setRecipientUser;
-  let obj = setRecipientUser(1483);
-  importDefault = obj.useNavigation();
-  obj = { style: closure_6().container, children: null };
-  obj = {
-    onSelectUser(user) {
-      setRecipientUser(user);
-      navigation.navigate(UnifiedGiftModalTypes.UnifiedGiftModalScreens.GIFT_DETAIL);
-    },
-    rowMode: UserRowModes.NONE,
-    disableGradient: true,
-    disableThemedGradient: true,
-  };
-  obj.children = jsx(SearchableUserListDefault, {
-    onSelectUser(user) {
-      setRecipientUser(user);
-      navigation.navigate(UnifiedGiftModalTypes.UnifiedGiftModalScreens.GIFT_DETAIL);
-    },
-    rowMode: UserRowModes.NONE,
-    disableGradient: true,
-    disableThemedGradient: true,
-  });
-  return (
-    <View
-      onSelectUser={function onSelectUser(user) {
+  importDefault = setRecipientUser(1483).useNavigation();
+  const obj2 = {
+    style: closure_6().container,
+    children: jsx(SearchableUserListDefault, {
+      onSelectUser(user) {
         setRecipientUser(user);
         navigation.navigate(UnifiedGiftModalTypes.UnifiedGiftModalScreens.GIFT_DETAIL);
-      }}
-      rowMode={UserRowModes.NONE}
-      disableGradient
-      disableThemedGradient
-    />
+      },
+      rowMode: UserRowModes.NONE,
+      disableGradient: true,
+      disableThemedGradient: true,
+    }),
+  };
+  return (
+    <View style={closure_6().container}>
+      {jsx(SearchableUserListDefault, {
+        onSelectUser(user) {
+          setRecipientUser(user);
+          navigation.navigate(UnifiedGiftModalTypes.UnifiedGiftModalScreens.GIFT_DETAIL);
+        },
+        rowMode: UserRowModes.NONE,
+        disableGradient: true,
+        disableThemedGradient: true,
+      })}
+    </View>
   );
 }

@@ -2,15 +2,15 @@
 import ApexExperiment from "../../../../experiments/apex/index.tsx";
 import size from "../../../../../../_runtime/metro/00002__.js";
 
-let obj = {
+const obj = {
   kind: "user",
   name: "2026-06-messages-list-impl",
   defaultConfig: { list: "fastest", recycleItems: false },
   variations: null,
 };
-obj = { 1: null, 2: { list: "flash", recycleItems: false }, 3: { list: "legend", recycleItems: false } };
-obj[3] = { list: "legend", recycleItems: true };
-obj.variations = obj;
+const obj2 = { 1: null, 2: { list: "flash", recycleItems: false }, 3: { list: "legend", recycleItems: false } };
+obj2[3] = { list: "legend", recycleItems: true };
+obj.variations = obj2;
 const apexExperiment = ApexExperiment.createApexExperiment(obj);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/tabs/messages/MessagesListImplExperiment.tsx");
 

@@ -11,9 +11,9 @@ const View = fn(17).View;
 let closure_6 = fn(7641).FAMILY_CENTER_REQUEST_QR_CODE_URL;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-fn(4636);
-let createStyles = {
-  container: null,
+const createStyles = fn(4636);
+let obj2 = {
+  container: { paddingHorizontal: nativeDefault.space.PX_16 },
   compactContainer: null,
   card: null,
   countdown: null,
@@ -23,33 +23,32 @@ let createStyles = {
   dividerText: null,
   buttonGroup: null,
 };
-createStyles = { paddingHorizontal: nativeDefault.space.PX_16 };
-createStyles.container = createStyles;
-createStyles.compactContainer = { alignSelf: "center", gap: nativeDefault.space.PX_16 };
-let obj1 = { alignSelf: "center", gap: nativeDefault.space.PX_16 };
-createStyles.card = {
+let obj3 = { paddingHorizontal: nativeDefault.space.PX_16 };
+obj2.compactContainer = { alignSelf: "center", gap: nativeDefault.space.PX_16 };
+let obj4 = { alignSelf: "center", gap: nativeDefault.space.PX_16 };
+obj2.card = {
   alignSelf: "center",
   padding: nativeDefault.space.PX_12,
   borderWidth: 1,
   borderRadius: nativeDefault.radii.lg,
   borderColor: nativeDefault.colors.BORDER_NORMAL,
 };
-createStyles.countdown = { textAlign: "center" };
-let obj2 = {
+obj2.countdown = { textAlign: "center" };
+let obj5 = {
   alignSelf: "center",
   padding: nativeDefault.space.PX_12,
   borderWidth: 1,
   borderRadius: nativeDefault.radii.lg,
   borderColor: nativeDefault.colors.BORDER_NORMAL,
 };
-createStyles.divider = { flexDirection: "row", alignItems: "center", paddingHorizontal: nativeDefault.space.PX_8 };
-createStyles.compactDividerFlush = { paddingHorizontal: 0 };
-let obj3 = { flexDirection: "row", alignItems: "center", paddingHorizontal: nativeDefault.space.PX_8 };
-createStyles.dividerLine = { flex: 1, height: 1, backgroundColor: nativeDefault.colors.BORDER_NORMAL };
-let obj4 = { flex: 1, height: 1, backgroundColor: nativeDefault.colors.BORDER_NORMAL };
-createStyles.dividerText = { marginHorizontal: nativeDefault.space.PX_8 };
-createStyles.buttonGroup = { paddingTop: 0 };
-let closure_9 = createStyles.createStyles(createStyles);
+obj2.divider = { flexDirection: "row", alignItems: "center", paddingHorizontal: nativeDefault.space.PX_8 };
+obj2.compactDividerFlush = { paddingHorizontal: 0 };
+let obj6 = { flexDirection: "row", alignItems: "center", paddingHorizontal: nativeDefault.space.PX_8 };
+obj2.dividerLine = { flex: 1, height: 1, backgroundColor: nativeDefault.colors.BORDER_NORMAL };
+let obj7 = { flex: 1, height: 1, backgroundColor: nativeDefault.colors.BORDER_NORMAL };
+obj2.dividerText = { marginHorizontal: nativeDefault.space.PX_8 };
+obj2.buttonGroup = { paddingTop: 0 };
+let closure_9 = createStyles.createStyles(obj2);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/parent_tools/native/ConnectGuardianCard.tsx");
 
@@ -61,13 +60,13 @@ export const ConnectGuardianCard = function ConnectGuardianCard(linkCode) {
   }
   let id;
   const tmp = closure_9();
-  let obj = linkCode(id[7]);
   const items = [UserStore];
-  const stateFromStores = obj.useStateFromStores(items, () => currentUser.getCurrentUser());
+  const stateFromStores = linkCode(id[7]).useStateFromStores(items, () => currentUser.getCurrentUser());
   id = undefined;
   if (stateFromStores != null) {
     id = stateFromStores.id;
   }
+  let obj = linkCode(id[7]);
   ({ days, hours, minutes, seconds } = stateFromStores(id[8])(expiresAt));
   stateFromStores(id[9])(expiresAt, linkCode.onRefresh);
   const items1 = [stateFromStores, linkCode];
@@ -85,20 +84,20 @@ export const ConnectGuardianCard = function ConnectGuardianCard(linkCode) {
     return null;
   } else {
     const intl5 = tmp2(tmp3[13]).intl;
-    obj = { style: tmp.card, children: null };
+    const obj2 = { style: tmp.card, children: null };
     const tmp16 = closure_6(id, linkCode);
-    obj = { align: "center", spacing: tmp6(tmp3[6]).space.PX_8, children: null };
-    const obj1 = { size: 160, text: tmp16 };
-    const items3 = [closure_7(tmp2(tmp3[16]).QRCodeWithOverlay, obj1)];
-    const obj2 = { style: tmp.countdown, variant: "text-xs/normal", children: null };
+    const obj3 = { align: "center", spacing: tmp6(tmp3[6]).space.PX_8, children: null };
+    const obj4 = { size: 160, text: tmp16 };
+    const items3 = [closure_7(tmp2(tmp3[16]).QRCodeWithOverlay, obj4)];
+    const obj5 = { style: tmp.countdown, variant: "text-xs/normal", children: null };
     const stringResult = intl5.string(tmp6(tmp3[14]).RfkLDs);
     const _HermesInternal = HermesInternal;
-    obj2.children =
+    obj5.children =
       "" + stringResult + " " + tmp2(tmp3[18]).getTimeFormat(86400 * days + 3600 * hours + 60 * minutes + seconds);
-    items3[1] = closure_7(tmp2(tmp3[17]).Text, obj2);
-    obj.children = items3;
-    obj.children = closure_8(tmp2(tmp3[15]).Stack, obj);
-    const tmp22 = closure_7(View, obj);
+    items3[1] = closure_7(tmp2(tmp3[17]).Text, obj5);
+    obj3.children = items3;
+    obj2.children = closure_8(tmp2(tmp3[15]).Stack, obj3);
+    const tmp22 = closure_7(View, obj2);
     if ("none" === shareActions) {
       return tmp22;
     } else {
@@ -107,55 +106,55 @@ export const ConnectGuardianCard = function ConnectGuardianCard(linkCode) {
       if ("compact" === shareActions) {
         compactDividerFlush = tmp.compactDividerFlush;
       }
-      const obj3 = { style: null, children: null };
+      const obj6 = { style: null, children: null };
       items4[1] = compactDividerFlush;
-      obj3.style = items4;
-      const obj4 = { style: tmp.dividerLine };
-      const items5 = [closure_7(View, obj4), ,];
-      const obj5 = { style: tmp.dividerText, variant: "text-sm/medium", color: "text-muted", children: null };
+      obj6.style = items4;
+      const obj7 = { style: tmp.dividerLine };
+      const items5 = [closure_7(View, obj7), ,];
+      const obj8 = { style: tmp.dividerText, variant: "text-sm/medium", color: "text-muted", children: null };
       const intl = tmp2(tmp3[13]).intl;
       const tmp6Result = tmp6(tmp3[14]);
-      obj5.children = intl.string("compact" === shareActions ? tmp6Result.XhROZk : tmp6Result.lggBOi);
-      items5[1] = closure_7(tmp2(tmp3[17]).Text, obj5);
-      const obj6 = { style: tmp.dividerLine };
-      items5[2] = closure_7(View, obj6);
-      obj3.children = items5;
-      let tmp20Result = closure_8(View, obj3);
+      obj8.children = intl.string("compact" === shareActions ? tmp6Result.XhROZk : tmp6Result.lggBOi);
+      items5[1] = closure_7(tmp2(tmp3[17]).Text, obj8);
+      const obj9 = { style: tmp.dividerLine };
+      items5[2] = closure_7(View, obj9);
+      obj6.children = items5;
+      const tmp20Result = closure_8(View, obj6);
       if ("compact" === shareActions) {
-        const obj7 = { style: tmp.compactContainer, children: null };
+        const obj10 = { style: tmp.compactContainer, children: null };
         const items6 = [tmp22, tmp20Result];
-        const obj8 = { variant: "secondary", size: "md", text: null, icon: null, disabled: null, onPress: null };
+        const obj11 = { variant: "secondary", size: "md", text: null, icon: null, disabled: null, onPress: null };
         const intl4 = tmp2(tmp3[13]).intl;
-        obj8.text = intl4.string(tmp2(tmp3[13]).t.Ej3B3Y);
-        const obj9 = { size: "md", color: tmp6(tmp3[6]).colors.CONTROL_SECONDARY_TEXT_DEFAULT };
-        obj8.icon = closure_7(tmp2(tmp3[20]).ShareIcon, obj9);
-        obj8.disabled = "" === linkCode;
-        obj8.onPress = callback;
-        items6[2] = closure_7(tmp2(tmp3[19]).Button, obj8);
-        obj7.children = items6;
-        tmp20Result = closure_8(View, obj7);
+        obj11.text = intl4.string(tmp2(tmp3[13]).t.Ej3B3Y);
+        const obj12 = { size: "md", color: tmp6(tmp3[6]).colors.CONTROL_SECONDARY_TEXT_DEFAULT };
+        obj11.icon = closure_7(tmp2(tmp3[20]).ShareIcon, obj12);
+        obj11.disabled = "" === linkCode;
+        obj11.onPress = callback;
+        items6[2] = closure_7(tmp2(tmp3[19]).Button, obj11);
+        obj10.children = items6;
+        let tmp20Result2 = closure_8(View, obj10);
       } else {
-        const obj10 = { spacing: tmp6(tmp3[6]).space.PX_32, style: tmp.container, children: null };
+        const obj13 = { spacing: tmp6(tmp3[6]).space.PX_32, style: tmp.container, children: null };
         const items7 = [tmp22, tmp20Result];
-        const obj11 = { style: tmp.buttonGroup, children: null };
-        const obj12 = { variant: "secondary", size: "md", text: null, disabled: null, onPress: null };
+        const obj14 = { style: tmp.buttonGroup, children: null };
+        const obj15 = { variant: "secondary", size: "md", text: null, disabled: null, onPress: null };
         const intl2 = tmp2(tmp3[13]).intl;
-        obj12.text = intl2.string(tmp2(tmp3[13]).t.Ej3B3Y);
-        obj12.disabled = "" === linkCode;
-        obj12.onPress = callback;
-        const items8 = [closure_7(tmp2(tmp3[19]).Button, obj12)];
-        const obj13 = { variant: "secondary", size: "md", text: null, disabled: null, onPress: null };
+        obj15.text = intl2.string(tmp2(tmp3[13]).t.Ej3B3Y);
+        obj15.disabled = "" === linkCode;
+        obj15.onPress = callback;
+        const items8 = [closure_7(tmp2(tmp3[19]).Button, obj15)];
+        const obj16 = { variant: "secondary", size: "md", text: null, disabled: null, onPress: null };
         const intl3 = tmp2(tmp3[13]).intl;
-        obj13.text = intl3.string(tmp2(tmp3[13]).t.WqhZss);
-        obj13.disabled = "" === linkCode;
-        obj13.onPress = tmp10;
-        items8[1] = closure_7(tmp2(tmp3[19]).Button, obj13);
-        obj11.children = items8;
-        items7[2] = closure_8(tmp2(tmp3[21]).ButtonGroup, obj11);
-        obj10.children = items7;
-        tmp20Result = closure_8(tmp2(tmp3[15]).Stack, obj10);
+        obj16.text = intl3.string(tmp2(tmp3[13]).t.WqhZss);
+        obj16.disabled = "" === linkCode;
+        obj16.onPress = tmp10;
+        items8[1] = closure_7(tmp2(tmp3[19]).Button, obj16);
+        obj14.children = items8;
+        items7[2] = closure_8(tmp2(tmp3[21]).ButtonGroup, obj14);
+        obj13.children = items7;
+        tmp20Result2 = closure_8(tmp2(tmp3[15]).Stack, obj13);
       }
-      return tmp20Result;
+      return tmp20Result2;
     }
     const tmp2Result = tmp2(tmp3[18]);
   }

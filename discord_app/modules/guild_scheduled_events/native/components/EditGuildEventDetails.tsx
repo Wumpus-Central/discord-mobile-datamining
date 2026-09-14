@@ -7,6 +7,8 @@ import EditGuildEventUtils from "../../utils/EditGuildEventUtils.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
+const require = globalThis.__r;
+
 require = fn;
 let closure_6 = fn(7629).isGuildScheduledEventActive;
 let constants = fn(1963).GuildScheduledEventEntityTypes;
@@ -66,19 +68,19 @@ export default function EditGuildEventDetails(guildEvent) {
     2,
   );
   [tmp12, c11] = recurrenceRule(memo.useState(null), 2);
-  let obj = guildEvent(scheduledEndTime[9]);
-  const navigation = obj.useNavigation();
+  const tmp11 = recurrenceRule(memo.useState(null), 2);
+  const navigation = guildEvent(scheduledEndTime[9]).useNavigation();
   let tmp17 = null;
   if (null != tmp12) {
-    obj = { style: tmp.error, variant: "text-sm/normal", color: "text-feedback-critical", children: tmp12 };
-    tmp17 = c8(tmp13(tmp14[10]).Text, obj);
+    let obj2 = { style: tmp.error, variant: "text-sm/normal", color: "text-feedback-critical", children: tmp12 };
+    tmp17 = c8(tmp13(tmp14[10]).Text, obj2);
   }
-  obj = { children: null };
+  const obj3 = { children: null };
   const items3 = [tmp17];
-  const obj1 = { text: null, variant: "primary", onPress: null, disabled: null };
+  let obj4 = { text: null, variant: "primary", onPress: null, disabled: null };
   let intl = tmp13(tmp14[6]).intl;
-  obj1.text = intl.string(guildEvent(scheduledEndTime[6]).t.PDTjLN);
-  obj1.onPress = function onPress() {
+  obj4.text = intl.string(guildEvent(scheduledEndTime[6]).t.PDTjLN);
+  obj4.onPress = function onPress() {
     const result = KeyboardManagerUtilsAll.dismissGlobalKeyboard();
     try {
       _undefined2(null);
@@ -97,20 +99,20 @@ export default function EditGuildEventDetails(guildEvent) {
       AccessibilityAnnouncer.announce(tmp13.message);
     }
   };
-  obj1.disabled = null != tmp12;
-  items3[1] = c8(guildEvent(scheduledEndTime[11]).Button, obj1);
-  obj.children = items3;
-  const tmp11 = recurrenceRule(memo.useState(null), 2);
-  let obj2 = { action: closure_10(ref, obj), ref, children: null };
-  const tmp15Result = closure_10(ref, obj);
-  const obj3 = { title: null, subtitle: null };
+  obj4.disabled = null != tmp12;
+  items3[1] = c8(guildEvent(scheduledEndTime[11]).Button, obj4);
+  obj3.children = items3;
+  let obj = guildEvent(scheduledEndTime[9]);
+  const obj5 = { action: closure_10(ref, obj3), ref, children: null };
+  const tmp15Result = closure_10(ref, obj3);
+  const obj6 = { title: null, subtitle: null };
   const tmp21 = onChange(scheduledEndTime[15]);
   const intl2 = tmp13(tmp14[6]).intl;
-  obj3.title = intl2.string(guildEvent(scheduledEndTime[6]).t.GG6vbr);
+  obj6.title = intl2.string(guildEvent(scheduledEndTime[6]).t.GG6vbr);
   const intl3 = tmp13(tmp14[6]).intl;
-  obj3.subtitle = intl3.string(guildEvent(scheduledEndTime[6]).t.q5lgwV);
+  obj6.subtitle = intl3.string(guildEvent(scheduledEndTime[6]).t.q5lgwV);
   const items4 = [
-    c8(onChange(scheduledEndTime[16]), obj3),
+    c8(onChange(scheduledEndTime[16]), obj6),
     c8(guildEvent(scheduledEndTime[17]).GuildEventTopic, {
       topic: name,
       onChange(name) {
@@ -122,7 +124,7 @@ export default function EditGuildEventDetails(guildEvent) {
     ,
     ,
   ];
-  const obj5 = {
+  const obj8 = {
     date: memo,
     onChange(toISOString) {
       if (closure_10) {
@@ -157,13 +159,13 @@ export default function EditGuildEventDetails(guildEvent) {
     timeLabel: null,
   };
   const intl4 = tmp13(tmp14[6]).intl;
-  obj5.dateLabel = intl4.string(guildEvent(scheduledEndTime[6]).t.kKOIwJ);
+  obj8.dateLabel = intl4.string(guildEvent(scheduledEndTime[6]).t.kKOIwJ);
   const intl5 = tmp13(tmp14[6]).intl;
-  obj5.timeLabel = intl5.string(guildEvent(scheduledEndTime[6]).t["6dGmCD"]);
-  items4[2] = c8(guildEvent(scheduledEndTime[17]).GuildEventDatetime, obj5);
+  obj8.timeLabel = intl5.string(guildEvent(scheduledEndTime[6]).t["6dGmCD"]);
+  items4[2] = c8(guildEvent(scheduledEndTime[17]).GuildEventDatetime, obj8);
   let tmp19Result = entityType === constants.EXTERNAL;
   if (tmp19Result) {
-    const obj6 = {
+    const obj9 = {
       date: memo1,
       onChange(toISOString) {
         _undefined2(null);
@@ -175,10 +177,10 @@ export default function EditGuildEventDetails(guildEvent) {
       timeLabel: null,
     };
     const intl6 = tmp13(tmp14[6]).intl;
-    obj6.dateLabel = intl6.string(tmp13(tmp14[6]).t.CTLgZJ);
+    obj9.dateLabel = intl6.string(tmp13(tmp14[6]).t.CTLgZJ);
     const intl7 = tmp13(tmp14[6]).intl;
-    obj6.timeLabel = intl7.string(tmp13(tmp14[6]).t.j2RuXF);
-    tmp19Result = tmp19(tmp13(tmp14[17]).GuildEventDatetime, obj6);
+    obj9.timeLabel = intl7.string(tmp13(tmp14[6]).t.j2RuXF);
+    tmp19Result = tmp19(tmp13(tmp14[17]).GuildEventDatetime, obj9);
   }
   items4[3] = tmp19Result;
   items4[4] = c8(guildEvent(scheduledEndTime[17]).GuildEventRecurrence, {
@@ -186,9 +188,8 @@ export default function EditGuildEventDetails(guildEvent) {
     recurrenceRule,
     onRecurrenceChange(c7) {
       if (null != memo) {
-        const obj = { recurrenceRule: null };
-        obj.recurrenceRule = obj.recurrenceOptionToRecurrenceRule(c7, tmp);
-        onChange(obj);
+        const obj2 = { recurrenceRule: ScheduleUtils.recurrenceOptionToRecurrenceRule(c7, tmp) };
+        onChange(obj2);
         _undefined(c7);
       }
     },
@@ -211,6 +212,6 @@ export default function EditGuildEventDetails(guildEvent) {
       }, 100);
     },
   });
-  obj2.children = items4;
-  return closure_10(tmp21, obj2);
+  obj5.children = items4;
+  return closure_10(tmp21, obj5);
 }

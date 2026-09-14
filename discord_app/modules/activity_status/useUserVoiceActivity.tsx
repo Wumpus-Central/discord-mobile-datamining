@@ -85,11 +85,11 @@ export default function useUserVoiceActivity(userId) {
   const items1 = [guildId, userId, includeNonDiscoverable];
   return userId(guildId[4]).useStateFromStoresObject(
     items,
-    () => {
-      let obj = { userId, guildId, includeNonDiscoverable };
-      obj = { ChannelStore, PermissionStore, VoiceStateStore };
-      return getVisibleUserVoiceActivity(obj, obj);
-    },
+    () =>
+      getVisibleUserVoiceActivity(
+        { userId, guildId, includeNonDiscoverable },
+        { ChannelStore, PermissionStore, VoiceStateStore },
+      ),
     items1,
   );
 }

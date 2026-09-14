@@ -13,9 +13,10 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-fn(4636);
-let createStyles = { container: null, iconContainer: null };
-createStyles = {
+const createStyles = fn(4636);
+let obj2 = { container: null, iconContainer: null };
+const merged = Object.assign(nativeDefault.shadows.SHADOW_LOW);
+obj2.container = {
   flexDirection: "row",
   alignItems: "center",
   padding: nativeDefault.space.PX_8,
@@ -25,15 +26,23 @@ createStyles = {
   borderStyle: "solid",
   borderColor: nativeDefault.colors.BORDER_MUTED,
 };
-const merged = Object.assign(nativeDefault.shadows.SHADOW_LOW);
-createStyles.container = createStyles;
-createStyles.iconContainer = {
+let obj3 = {
+  flexDirection: "row",
+  alignItems: "center",
+  padding: nativeDefault.space.PX_8,
+  backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
+  borderRadius: nativeDefault.radii.sm,
+  borderWidth: 1,
+  borderStyle: "solid",
+  borderColor: nativeDefault.colors.BORDER_MUTED,
+};
+obj2.iconContainer = {
   alignItems: "center",
   justifyContent: "center",
   padding: nativeDefault.space.PX_8,
   marginInlineEnd: nativeDefault.space.PX_8,
 };
-let closure_6 = createStyles.createStyles(createStyles);
+let closure_6 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/gifting/native/views/GiftingBadgeProgressBanner.tsx");
 
@@ -46,7 +55,7 @@ export default function GiftingBadgeProgressBanner(arg0) {
   } else {
     items1 = [];
   }
-  let obj = { name: null, type: null, properties: null };
+  const obj = { name: null, type: null, properties: null };
   const tmp4 = useAnalyticsLocationsDefault;
   obj.name = discord_common_AnalyticsUtils.ImpressionNames.GIFTING_BADGE_PROGRESS_BANNER;
   obj.type = discord_common_AnalyticsUtils.ImpressionTypes.VIEW;
@@ -56,22 +65,22 @@ export default function GiftingBadgeProgressBanner(arg0) {
     location_stack: tmp4(...items1).analyticsLocations,
   };
   useTrackImpressionDefault(obj, { trackOnInitialLoad: true });
-  obj = { style: tmp.container, children: null };
-  obj = { style: tmp.iconContainer, children: null };
+  const obj2 = { style: tmp.container, children: null };
+  const obj3 = { style: tmp.iconContainer, children: null };
   let tmp10Result = null != nextTierIcon;
   if (tmp10Result) {
-    const obj1 = { icon: nextTierIcon, size: 24 };
-    tmp10Result = React4(GiftingBadgeIconDefault, obj1);
+    const obj4 = { icon: nextTierIcon, size: 24 };
+    tmp10Result = React4(GiftingBadgeIconDefault, obj4);
   }
-  obj.children = tmp10Result;
-  const items2 = [React4(View, obj)];
-  const obj2 = { variant: "text-md/semibold", children: null };
+  obj3.children = tmp10Result;
+  const items2 = [React4(View, obj3)];
+  const obj5 = { variant: "text-md/semibold", children: null };
   const intl = util.intl;
-  obj2.children = intl.formatToPlainString(_modDef2492["0+xfd9"], {
+  obj5.children = intl.formatToPlainString(_modDef2492["0+xfd9"], {
     giftsRemaining: giftsToNextTier,
     nextTier: nextTierName,
   });
-  items2[1] = React4(Text_Text.Text, obj2);
-  obj.children = items2;
-  return hasOwnProperty(View, obj);
+  items2[1] = React4(Text_Text.Text, obj5);
+  obj2.children = items2;
+  return hasOwnProperty(View, obj2);
 }

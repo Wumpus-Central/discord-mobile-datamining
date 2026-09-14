@@ -41,18 +41,19 @@ function MotionOptionButton(isSelected) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-fn(4636);
-let createStyles = { content: null, previewRow: null, optionCard: null, optionCardSelected: null };
-createStyles = { paddingHorizontal: nativeDefault.space.PX_16 };
-createStyles.content = createStyles;
-createStyles.previewRow = { alignSelf: "center", paddingVertical: nativeDefault.space.PX_24 };
-createStyles.optionCard = { flex: 1, height: 64, alignItems: "center", justifyContent: "center" };
-let obj1 = { alignSelf: "center", paddingVertical: nativeDefault.space.PX_24 };
-createStyles.optionCardSelected = {
-  borderColor: nativeDefault.colors.BUTTON_OUTLINE_BRAND_BORDER_ACTIVE,
-  borderWidth: 2,
+const createStyles = fn(4636);
+let obj2 = {
+  content: { paddingHorizontal: nativeDefault.space.PX_16 },
+  previewRow: null,
+  optionCard: null,
+  optionCardSelected: null,
 };
-let closure_8 = createStyles.createStyles(createStyles);
+let obj3 = { paddingHorizontal: nativeDefault.space.PX_16 };
+obj2.previewRow = { alignSelf: "center", paddingVertical: nativeDefault.space.PX_24 };
+obj2.optionCard = { flex: 1, height: 64, alignItems: "center", justifyContent: "center" };
+let obj4 = { alignSelf: "center", paddingVertical: nativeDefault.space.PX_24 };
+obj2.optionCardSelected = { borderColor: nativeDefault.colors.BUTTON_OUTLINE_BRAND_BORDER_ACTIVE, borderWidth: 2 };
+let closure_8 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting(
   "modules/custom_typing_indicator/native/CustomTypingIndicatorAnimationPickerSheet.tsx",
@@ -60,39 +61,39 @@ const result = size.fileFinishedImporting(
 
 export default function CustomTypingIndicatorAnimationPickerSheet(onChange) {
   onChange = onChange.onChange;
+  animation = undefined;
+  dependencyMap = undefined;
   ({ emojis, initialAnimation } = onChange);
   const tmp = closure_8();
-  const tmp2 = _slicedToArray(noop.useState(initialAnimation), 2);
-  const animation = tmp2[0];
-  dependencyMap = tmp2[1];
-  let obj = { value: onChange(1379).TypingIndicatorAnimation.UNSPECIFIED, label: null };
+  [animation, dependencyMap] = noop.useState(initialAnimation);
+  const obj = { value: onChange(1379).TypingIndicatorAnimation.UNSPECIFIED, label: null };
   const intl = onChange(1114).intl;
   obj.label = intl.string(onChange(1114).t.PoWNfe);
   const items = [obj, , ,];
-  obj = { value: onChange(1379).TypingIndicatorAnimation.PULSE, label: null };
+  const obj2 = { value: onChange(1379).TypingIndicatorAnimation.PULSE, label: null };
   const intl2 = onChange(1114).intl;
-  obj.label = intl2.string(animation(3592)["gyL/ce"]);
-  items[1] = obj;
-  obj = { value: onChange(1379).TypingIndicatorAnimation.RING, label: null };
+  obj2.label = intl2.string(animation(3592)["gyL/ce"]);
+  items[1] = obj2;
+  const obj3 = { value: onChange(1379).TypingIndicatorAnimation.RING, label: null };
   const intl3 = onChange(1114).intl;
-  obj.label = intl3.string(animation(3592).EgekTm);
-  items[2] = obj;
-  const obj1 = { value: onChange(1379).TypingIndicatorAnimation.WAVE, label: null };
+  obj3.label = intl3.string(animation(3592).EgekTm);
+  items[2] = obj3;
+  const obj4 = { value: onChange(1379).TypingIndicatorAnimation.WAVE, label: null };
   const intl4 = onChange(1114).intl;
-  obj1.label = intl4.string(animation(3592)["8t5EiI"]);
-  items[3] = obj1;
-  const obj2 = { contentStyles: tmp.content, dismissAccessibilityLabel: null, children: null };
+  obj4.label = intl4.string(animation(3592)["8t5EiI"]);
+  items[3] = obj4;
+  const obj5 = { contentStyles: tmp.content, dismissAccessibilityLabel: null, children: null };
   const intl5 = onChange(1114).intl;
-  obj2.dismissAccessibilityLabel = intl5.string(animation(3592)["q+qHax"]);
-  const obj3 = { style: tmp.previewRow, children: null };
-  const obj4 = { config: null, size: 54 };
-  const obj5 = { emojis, animation, typingSuggestion: onChange(1379).TypingSuggestion.UNSPECIFIED };
-  obj4.config = obj5;
-  obj3.children = closure_6(animation(12110), obj4);
-  const items1 = [closure_6(View, obj3)];
-  const obj6 = { spacing: 8, children: null };
+  obj5.dismissAccessibilityLabel = intl5.string(animation(3592)["q+qHax"]);
+  const obj6 = { style: tmp.previewRow, children: null };
+  const obj7 = { config: null, size: 54 };
+  const obj8 = { emojis, animation, typingSuggestion: onChange(1379).TypingSuggestion.UNSPECIFIED };
+  obj7.config = obj8;
+  obj6.children = closure_6(animation(12111), obj7);
+  const items1 = [closure_6(View, obj6)];
+  const obj9 = { spacing: 8, children: null };
   const items2 = [items.slice(0, 2), items.slice(2, 4)];
-  obj6.children = items2.map((arr, index) =>
+  obj9.children = items2.map((arr, index) =>
     timestampProducer(
       Stack_Stack.Stack,
       {
@@ -117,7 +118,7 @@ export default function CustomTypingIndicatorAnimationPickerSheet(onChange) {
       index,
     ),
   );
-  items1[1] = closure_6(onChange(5054).Stack, obj6);
-  obj2.children = items1;
-  return closure_7(onChange(7300).ActionSheet, obj2);
+  items1[1] = closure_6(onChange(5054).Stack, obj9);
+  obj5.children = items1;
+  return closure_7(onChange(7300).ActionSheet, obj5);
 }

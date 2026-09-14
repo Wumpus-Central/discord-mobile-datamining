@@ -10,7 +10,12 @@ import GuildScheduledEventStore from "GuildScheduledEventStore.tsx";
 
 require = fn;
 const GuildScheduledEventsConstants = fn(1963);
-({ ENTITY_TYPES_REQUIRED_CHANNEL_ID: metroRequire, ENTITY_TYPES_REQUIRED_ENTITY_METADATA: closure_7, GuildScheduledEventStatus: closure_8, MAX_RSVP_USER_DISPLAY_COUNT: closure_9 } = GuildScheduledEventsConstants);
+({
+  ENTITY_TYPES_REQUIRED_CHANNEL_ID: metroRequire,
+  ENTITY_TYPES_REQUIRED_ENTITY_METADATA: closure_7,
+  GuildScheduledEventStatus: closure_8,
+  MAX_RSVP_USER_DISPLAY_COUNT: closure_9,
+} = GuildScheduledEventsConstants);
 const Constants = fn(1074);
 ({ Endpoints: c10, Routes: closure_11 } = Constants);
 const size = fn(2);
@@ -19,12 +24,20 @@ const result = size.fileFinishedImporting("modules/guild_scheduled_events/GuildS
 export default {
   startEvent(arg0, arg1) {
     const HTTP = HTTPUtils.HTTP;
-    const request = { url: closure_1_10.GUILD_EVENT(arg1, arg0), body: { status: constants.ACTIVE }, rejectWithError: HTTPUtils.rejectWithMigratedError() };
+    const request = {
+      url: closure_1_10.GUILD_EVENT(arg1, arg0),
+      body: { status: constants.ACTIVE },
+      rejectWithError: HTTPUtils.rejectWithMigratedError(),
+    };
     return HTTP.patch(request);
   },
   endEvent(arg0, arg1) {
     const HTTP = HTTPUtils.HTTP;
-    const request = { url: closure_1_10.GUILD_EVENT(arg1, arg0), body: { status: constants.COMPLETED }, rejectWithError: HTTPUtils.rejectWithMigratedError() };
+    const request = {
+      url: closure_1_10.GUILD_EVENT(arg1, arg0),
+      body: { status: constants.COMPLETED },
+      rejectWithError: HTTPUtils.rejectWithMigratedError(),
+    };
     return HTTP.patch(request);
   },
   joinVoiceEvent(arg0, id) {
@@ -43,16 +56,38 @@ export default {
     if (null == entityType.image) {
       const image = entityType.image;
     } else {
-      let obj = /^data:/;
+      const obj = /^data:/;
     }
-    obj = { name: entityType.name, description: entityType.description, image, privacy_level: entityType.privacyLevel, scheduled_start_time: entityType.scheduledStartTime, scheduled_end_time: entityType.scheduledEndTime, entity_type: entityType.entityType, channel_id: channelId, entity_metadata: entityMetadata, recurrence_rule: EditGuildEventUtils.recurrenceRuleToServer(entityType.recurrenceRule) };
+    const obj2 = {
+      name: entityType.name,
+      description: entityType.description,
+      image,
+      privacy_level: entityType.privacyLevel,
+      scheduled_start_time: entityType.scheduledStartTime,
+      scheduled_end_time: entityType.scheduledEndTime,
+      entity_type: entityType.entityType,
+      channel_id: channelId,
+      entity_metadata: entityMetadata,
+      recurrence_rule: EditGuildEventUtils.recurrenceRuleToServer(entityType.recurrenceRule),
+    };
     const HTTP = HTTPUtils.HTTP;
-    const request = { url: closure_1_10.GUILD_EVENT(arg2, arg0), body: obj, rejectWithError: null };
+    const request = { url: closure_1_10.GUILD_EVENT(arg2, arg0), body: obj2, rejectWithError: null };
     request.rejectWithError = HTTPUtils.rejectWithMigratedError();
     return HTTP.patch(request);
   },
   createGuildEvent(name, id) {
-    const obj = { name: name.name, description: name.description, image: name.image, privacy_level: name.privacyLevel, scheduled_start_time: name.scheduledStartTime, scheduled_end_time: name.scheduledEndTime, entity_type: name.entityType, channel_id: name.channelId, entity_metadata: name.entityMetadata, recurrence_rule: EditGuildEventUtils.recurrenceRuleToServer(name.recurrenceRule) };
+    const obj = {
+      name: name.name,
+      description: name.description,
+      image: name.image,
+      privacy_level: name.privacyLevel,
+      scheduled_start_time: name.scheduledStartTime,
+      scheduled_end_time: name.scheduledEndTime,
+      entity_type: name.entityType,
+      channel_id: name.channelId,
+      entity_metadata: name.entityMetadata,
+      recurrence_rule: EditGuildEventUtils.recurrenceRuleToServer(name.recurrenceRule),
+    };
     const HTTP = HTTPUtils.HTTP;
     const request = { url: closure_1_10.GUILD_EVENTS_FOR_GUILD(id), body: obj, rejectWithError: null };
     request.rejectWithError = HTTPUtils.rejectWithMigratedError();
@@ -62,7 +97,10 @@ export default {
     closure_0 = arg0;
     closure_1 = arg1;
     return (async () => {
-      await tmp5(4878).httpGetWithCountryCodeQuery({ url: closure_1_10.GUILD_EVENT(tmp5, tmp2), rejectWithError: tmp5(1272).rejectWithMigratedError() });
+      await tmp5(4878).httpGetWithCountryCodeQuery({
+        url: closure_1_10.GUILD_EVENT(tmp5, tmp2),
+        rejectWithError: tmp5(1270).rejectWithMigratedError(),
+      });
       const body = value.body;
       tmp2(573).dispatch({ type: "FETCH_GUILD_EVENT", guildScheduledEvent: body });
       return body;
@@ -71,9 +109,11 @@ export default {
   fetchGuildEventsForGuild(guild_id) {
     closure_0 = guild_id;
     return (async () => {
-      await tmp5(4878).httpGetWithCountryCodeQuery({ url: closure_1_10.GUILD_EVENTS_FOR_GUILD(tmp5), rejectWithError: tmp5(1272).rejectWithMigratedError() });
+      await tmp5(4878).httpGetWithCountryCodeQuery({
+        url: closure_1_10.GUILD_EVENTS_FOR_GUILD(tmp5),
+        rejectWithError: tmp5(1270).rejectWithMigratedError(),
+      });
       const body = value.body;
-      { url: closure_1_10.GUILD_EVENTS_FOR_GUILD(tmp5), rejectWithError: tmp5(1272).rejectWithMigratedError() };
       tmp2(573).dispatch({ type: "FETCH_GUILD_EVENTS_FOR_GUILD", guildId: closure_129_0, guildScheduledEvents: body });
       return body;
     })();
@@ -83,18 +123,34 @@ export default {
     closure_1 = arg1;
     closure_2 = found;
     return (async () => {
-      const request = { url: closure_1_10.GUILD_EVENT_USER_COUNTS(tmp5, tmp2), query: { guild_scheduled_event_exception_ids }, rejectWithError: tmp5(guild_scheduled_event_exception_ids[5]).rejectWithMigratedError() };
+      const request = {
+        url: closure_1_10.GUILD_EVENT_USER_COUNTS(tmp5, tmp2),
+        query: { guild_scheduled_event_exception_ids },
+        rejectWithError: tmp5(guild_scheduled_event_exception_ids[5]).rejectWithMigratedError(),
+      };
       const HTTP = tmp5(guild_scheduled_event_exception_ids[5]).HTTP;
       await HTTP.get(request);
       const body = value.body;
-      closure_128_1 = { eventCount: body.guild_scheduled_event_count, recurrenceCounts: body.guild_scheduled_event_exception_counts };
-      tmp2(guild_scheduled_event_exception_ids[10]).dispatch({ type: "GUILD_SCHEDULED_EVENT_USER_COUNTS_FETCH_SUCCESS", guildId: closure_129_0, eventId: closure_129_1, counts: closure_128_1 });
+      closure_128_1 = {
+        eventCount: body.guild_scheduled_event_count,
+        recurrenceCounts: body.guild_scheduled_event_exception_counts,
+      };
+      tmp2(guild_scheduled_event_exception_ids[10]).dispatch({
+        type: "GUILD_SCHEDULED_EVENT_USER_COUNTS_FETCH_SUCCESS",
+        guildId: closure_129_0,
+        eventId: closure_129_1,
+        counts: closure_128_1,
+      });
       return closure_128_1;
     })();
   },
   cancelGuildEvent(arg0, arg1) {
     const HTTP = HTTPUtils.HTTP;
-    const request = { url: closure_1_10.GUILD_EVENT(arg1, arg0), body: { status: constants.CANCELED }, rejectWithError: HTTPUtils.rejectWithMigratedError() };
+    const request = {
+      url: closure_1_10.GUILD_EVENT(arg1, arg0),
+      body: { status: constants.CANCELED },
+      rejectWithError: HTTPUtils.rejectWithMigratedError(),
+    };
     return HTTP.patch(request);
   },
   deleteGuildEvent(arg0, arg1) {
@@ -112,8 +168,8 @@ export default {
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
-          let obj = { value, done: true };
-          return obj;
+          const obj2 = { value, done: true };
+          return obj2;
         } else {
           return { value: "HermesInternal", done: null };
         }
@@ -126,34 +182,37 @@ export default {
               throw value;
             } else if (arg0 === 2) {
               c3 = 3;
-              obj = { value, done: true };
-              return obj;
+              const obj3 = { value, done: true };
+              return obj3;
             } else {
               let body;
-              const HTTP = tmp5(1272).HTTP;
+              const HTTP = tmp5(1270).HTTP;
               const request = { url: constants.USER_GUILD_EVENTS, query: null, rejectWithError: null };
-              const obj1 = { guild_ids: null };
+              const obj4 = { guild_ids: null };
               const items = [tmp5];
-              obj1.guild_ids = items;
-              request.query = obj1;
-              request.rejectWithError = tmp5(1272).rejectWithMigratedError();
+              obj4.guild_ids = items;
+              request.query = obj4;
+              request.rejectWithError = tmp5(1270).rejectWithMigratedError();
               dependencyMap = 1;
               c3 = 1;
-              const obj2 = { value: HTTP.get(request), done: false };
-              return obj2;
+              const obj5 = { value: HTTP.get(request), done: false };
+              return obj5;
             }
           } else if (arg0 === 1) {
             c3 = 3;
             throw value;
           } else if (arg0 === 2) {
             c3 = 3;
-            const obj3 = { value, done: true };
-            return obj3;
+            const obj6 = { value, done: true };
+            return obj6;
           } else {
             body = value.body;
-            obj = tmp2(573);
-            const obj4 = { type: "GUILD_SCHEDULED_EVENT_RSVPS_FETCH_SUCESS", guildScheduledEventUsers: body, guildId: closure_129_0 };
-            obj.dispatch(obj4);
+            const obj7 = {
+              type: "GUILD_SCHEDULED_EVENT_RSVPS_FETCH_SUCESS",
+              guildScheduledEventUsers: body,
+              guildId: closure_129_0,
+            };
+            tmp2(573).dispatch(obj7);
             c3 = 3;
             return { value: "HermesInternal", done: null };
           }
@@ -177,8 +236,8 @@ export default {
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
-          let obj = { value, done: true };
-          return obj;
+          const obj2 = { value, done: true };
+          return obj2;
         } else {
           return { value: "HermesInternal", done: null };
         }
@@ -191,8 +250,8 @@ export default {
               throw value;
             } else if (arg0 === 2) {
               c5 = 3;
-              obj = { value, done: true };
-              return obj;
+              const obj4 = { value, done: true };
+              return obj4;
             } else {
               const guildEventExceptionId = tmp3;
               const guildEventId = tmp7;
@@ -200,25 +259,42 @@ export default {
               id = id.getId();
               closure_128_0 = id;
               c3 = 1;
-              const obj1 = { type: "GUILD_SCHEDULED_EVENT_USER_ADD", userId: id, guildId, guildEventId, guildEventExceptionId, response };
-              guildEventExceptionId(guildId[10]).dispatch(obj1);
+              const obj5 = {
+                type: "GUILD_SCHEDULED_EVENT_USER_ADD",
+                userId: id,
+                guildId,
+                guildEventId,
+                guildEventExceptionId,
+                response,
+              };
+              guildEventExceptionId(guildId[10]).dispatch(obj5);
               const HTTP = guildEventId(guildId[5]).HTTP;
-              const request = { url: closure_1_10.USER_GUILD_EVENT(guildId, guildEventId, guildEventExceptionId), body: null, rejectWithError: null };
-              let obj2 = { response };
-              request.body = obj2;
+              const request = {
+                url: closure_1_10.USER_GUILD_EVENT(guildId, guildEventId, guildEventExceptionId),
+                body: null,
+                rejectWithError: null,
+              };
+              const obj6 = { response };
+              request.body = obj6;
               const obj8 = guildEventExceptionId(guildId[10]);
               request.rejectWithError = guildEventId(guildId[5]).rejectWithMigratedError();
               id = 2;
               c5 = 1;
-              const obj3 = { value: HTTP.put(request), done: false };
-              return obj3;
+              const obj7 = { value: HTTP.put(request), done: false };
+              return obj7;
             }
           } else if (1 === tmp7) {
             c3 = 0;
             closure_128_1 = guildId;
-            obj2 = guildEventExceptionId(guildId[10]);
-            const obj4 = { type: "GUILD_SCHEDULED_EVENT_USER_REMOVE", userId: closure_128_0, guildId: closure_129_2, guildEventId: closure_129_0, guildEventExceptionId: closure_129_1, response: closure_129_3 };
-            obj2.dispatch(obj4);
+            const obj9 = {
+              type: "GUILD_SCHEDULED_EVENT_USER_REMOVE",
+              userId: closure_128_0,
+              guildId: closure_129_2,
+              guildEventId: closure_129_0,
+              guildEventExceptionId: closure_129_1,
+              response: closure_129_3,
+            };
+            guildEventExceptionId(guildId[10]).dispatch(obj9);
             throw closure_128_1;
           } else if (arg0 === 1) {
             c5 = 3;
@@ -226,12 +302,12 @@ export default {
           } else if (arg0 === 2) {
             c3 = 0;
             c5 = 3;
-            const obj5 = { value, done: true };
-            return obj5;
+            const obj10 = { value, done: true };
+            return obj10;
           } else {
             c3 = 0;
             c5 = 3;
-            obj = { value, done: true };
+            const obj = { value, done: true };
             return obj;
           }
         } catch (tmp21) {
@@ -258,8 +334,8 @@ export default {
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
-          let obj = { value, done: true };
-          return obj;
+          const obj2 = { value, done: true };
+          return obj2;
         } else {
           return { value: "HermesInternal", done: null };
         }
@@ -272,8 +348,8 @@ export default {
               throw value;
             } else if (arg0 === 2) {
               rsvp = 3;
-              obj = { value, done: true };
-              return obj;
+              const obj4 = { value, done: true };
+              return obj4;
             } else {
               const guildEventExceptionId = tmp3;
               const guildEventId = tmp7;
@@ -285,15 +361,26 @@ export default {
               closure_128_1 = rsvp;
               if (null != rsvp) {
                 c3 = 1;
-                let obj4 = guildEventExceptionId(guildId[10]);
-                const obj1 = { type: "GUILD_SCHEDULED_EVENT_USER_REMOVE", userId: id, guildId, guildEventId, guildEventExceptionId, response: rsvp.response };
-                obj4.dispatch(obj1);
+                const obj6 = {
+                  type: "GUILD_SCHEDULED_EVENT_USER_REMOVE",
+                  userId: id,
+                  guildId,
+                  guildEventId,
+                  guildEventExceptionId,
+                  response: rsvp.response,
+                };
+                guildEventExceptionId(guildId[10]).dispatch(obj6);
                 const HTTP = guildEventId(guildId[5]).HTTP;
-                let obj2 = { url: closure_1_10.USER_GUILD_EVENT(guildId, guildEventId, guildEventExceptionId), rejectWithError: guildEventId(guildId[5]).rejectWithMigratedError() };
+                const obj7 = {
+                  url: closure_1_10.USER_GUILD_EVENT(guildId, guildEventId, guildEventExceptionId),
+                  rejectWithError: null,
+                };
+                const obj5 = guildEventExceptionId(guildId[10]);
+                obj7.rejectWithError = guildEventId(guildId[5]).rejectWithMigratedError();
                 id = 2;
                 rsvp = 1;
-                const obj3 = { value: HTTP.del(obj2), done: false };
-                return obj3;
+                const obj9 = { value: HTTP.del(obj7), done: false };
+                return obj9;
               } else {
                 rsvp = 3;
                 return { value: "HermesInternal", done: null };
@@ -302,9 +389,15 @@ export default {
           } else if (1 === tmp7) {
             c3 = 0;
             closure_128_2 = guildId;
-            obj2 = guildEventExceptionId(guildId[10]);
-            obj4 = { type: "GUILD_SCHEDULED_EVENT_USER_ADD", userId: closure_128_0, guildId: closure_129_2, guildEventId: closure_129_0, guildEventExceptionId: closure_129_1, response: closure_128_1.response };
-            obj2.dispatch(obj4);
+            const obj10 = {
+              type: "GUILD_SCHEDULED_EVENT_USER_ADD",
+              userId: closure_128_0,
+              guildId: closure_129_2,
+              guildEventId: closure_129_0,
+              guildEventExceptionId: closure_129_1,
+              response: closure_128_1.response,
+            };
+            guildEventExceptionId(guildId[10]).dispatch(obj10);
             throw closure_128_2;
           } else if (arg0 === 1) {
             rsvp = 3;
@@ -312,12 +405,12 @@ export default {
           } else if (arg0 === 2) {
             c3 = 0;
             rsvp = 3;
-            const obj5 = { value, done: true };
-            return obj5;
+            const obj11 = { value, done: true };
+            return obj11;
           } else {
             c3 = 0;
             rsvp = 3;
-            obj = { value, done: true };
+            const obj = { value, done: true };
             return obj;
           }
         } catch (tmp34) {
@@ -347,8 +440,8 @@ export default {
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
-          let obj = { value, done: true };
-          return obj;
+          const obj2 = { value, done: true };
+          return obj2;
         } else {
           return { value: "HermesInternal", done: null };
         }
@@ -361,8 +454,8 @@ export default {
               throw value;
             } else if (arg0 === 2) {
               c5 = 3;
-              obj = { value, done: true };
-              return obj;
+              const obj3 = { value, done: true };
+              return obj3;
             } else {
               closure_1 = tmp4;
               closure_0 = tmp8;
@@ -370,14 +463,14 @@ export default {
                 c3 = 1;
                 c4 = 3;
                 c5 = 1;
-                const obj1 = { value: self.deleteRsvpForGuildEvent(tmp47, tmp48, tmp37), done: false };
-                return obj1;
+                const obj4 = { value: self.deleteRsvpForGuildEvent(tmp47, tmp48, tmp37), done: false };
+                return obj4;
               } else {
                 c3 = 2;
                 c4 = 4;
                 c5 = 1;
-                const obj2 = { value: self.createRsvpForGuildEvent(tmp47, tmp48, tmp37, closure_3), done: false };
-                return obj2;
+                const obj5 = { value: self.createRsvpForGuildEvent(tmp47, tmp48, tmp37, closure_3), done: false };
+                return obj5;
               }
               obj7 = closure_0(tmp37[11]);
             }
@@ -402,8 +495,8 @@ export default {
                 } else if (arg0 === 2) {
                   c3 = 0;
                   c5 = 3;
-                  const obj3 = { value, done: true };
-                  return obj3;
+                  const obj6 = { value, done: true };
+                  return obj6;
                 } else {
                   if (closure_129_4 != null) {
                     closure_129_4();
@@ -421,7 +514,7 @@ export default {
               }
               c3 = 0;
               c5 = 3;
-              obj = { value, done: true };
+              const obj = { value, done: true };
               return obj;
             }
             c5 = 3;
@@ -456,8 +549,8 @@ export default {
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
-          let obj = { value, done: true };
-          return obj;
+          const obj2 = { value, done: true };
+          return obj2;
         } else {
           return { value: "HermesInternal", done: null };
         }
@@ -470,40 +563,50 @@ export default {
               throw value;
             } else if (arg0 === 2) {
               c3 = 3;
-              obj = { value, done: true };
-              return obj;
+              const obj3 = { value, done: true };
+              return obj3;
             } else {
               closure_128_0 = undefined;
               if (null != tmp5) {
                 if (null != closure_2) {
-                  const HTTP = tmp5(1272).HTTP;
-                  const request = { url: closure_1_10.GUILD_EVENT_USERS(closure_2, tmp5, tmp2), query: null, rejectWithError: null };
-                  const obj1 = { limit, with_member: true };
-                  request.query = obj1;
-                  request.rejectWithError = tmp5(1272).rejectWithMigratedError();
+                  const HTTP = tmp5(1270).HTTP;
+                  const request = {
+                    url: closure_1_10.GUILD_EVENT_USERS(closure_2, tmp5, tmp2),
+                    query: null,
+                    rejectWithError: null,
+                  };
+                  const obj4 = { limit, with_member: true };
+                  request.query = obj4;
+                  request.rejectWithError = tmp5(1270).rejectWithMigratedError();
                   dependencyMap = 1;
                   c3 = 1;
-                  const obj2 = { value: HTTP.get(request), done: false };
-                  return obj2;
+                  const obj5 = { value: HTTP.get(request), done: false };
+                  return obj5;
                 }
               }
               c3 = 3;
-              const obj3 = { value: [], done: true };
-              return obj3;
+              const obj6 = { value: [], done: true };
+              return obj6;
             }
           } else if (arg0 === 1) {
             c3 = 3;
             throw value;
           } else if (arg0 === 2) {
             c3 = 3;
-            const obj4 = { value, done: true };
-            return obj4;
+            const obj8 = { value, done: true };
+            return obj8;
           } else {
             closure_128_0 = value;
-            const obj5 = { type: "GUILD_SCHEDULED_EVENT_USERS_FETCH_SUCCESS", guildEventId: closure_129_0, guildScheduledEventUsers: closure_128_0.body, guildId: closure_129_2, guildEventExceptionId: closure_129_1 };
-            tmp2(573).dispatch(obj5);
+            const obj9 = {
+              type: "GUILD_SCHEDULED_EVENT_USERS_FETCH_SUCCESS",
+              guildEventId: closure_129_0,
+              guildScheduledEventUsers: closure_128_0.body,
+              guildId: closure_129_2,
+              guildEventExceptionId: closure_129_1,
+            };
+            tmp2(573).dispatch(obj9);
             c3 = 3;
-            obj = { value: closure_128_0.body.users, done: true };
+            const obj = { value: closure_128_0.body.users, done: true };
             return obj;
           }
         } catch (tmp6) {
@@ -516,32 +619,44 @@ export default {
   createGuildEventException(arg0, guild_id, id) {
     ({ original_scheduled_start_time, scheduled_start_time, scheduled_end_time, is_canceled } = arg0);
     const HTTP = HTTPUtils.HTTP;
-    const request = { url: closure_1_10.GUILD_EVENT_EXCEPTIONS(guild_id, id), body: { original_scheduled_start_time, scheduled_start_time, scheduled_end_time, is_canceled }, rejectWithError: HTTPUtils.rejectWithMigratedError() };
+    const request = {
+      url: closure_1_10.GUILD_EVENT_EXCEPTIONS(guild_id, id),
+      body: { original_scheduled_start_time, scheduled_start_time, scheduled_end_time, is_canceled },
+      rejectWithError: HTTPUtils.rejectWithMigratedError(),
+    };
     return HTTP.post(request);
   },
   updateGuildEventException(arg0, guild_id, id, event_exception_id) {
     ({ scheduled_start_time, scheduled_end_time, is_canceled } = arg0);
     const HTTP = HTTPUtils.HTTP;
-    const request = { url: closure_1_10.GUILD_EVENT_EXCEPTION(guild_id, id, event_exception_id), body: { scheduled_start_time, scheduled_end_time, is_canceled }, rejectWithError: HTTPUtils.rejectWithMigratedError() };
+    const request = {
+      url: closure_1_10.GUILD_EVENT_EXCEPTION(guild_id, id, event_exception_id),
+      body: { scheduled_start_time, scheduled_end_time, is_canceled },
+      rejectWithError: HTTPUtils.rejectWithMigratedError(),
+    };
     return HTTP.patch(request);
   },
   deleteGuildEventException(guild_id, id, event_exception_id) {
     const HTTP = HTTPUtils.HTTP;
-    const obj = { url: closure_1_10.GUILD_EVENT_EXCEPTION(guild_id, id, event_exception_id), rejectWithError: HTTPUtils.rejectWithMigratedError() };
+    const obj = {
+      url: closure_1_10.GUILD_EVENT_EXCEPTION(guild_id, id, event_exception_id),
+      rejectWithError: HTTPUtils.rejectWithMigratedError(),
+    };
     return HTTP.del(obj);
   },
   deleteRecurrence(guild_id, id, event_exception_id, eventException) {
     const self = this;
     if (null != eventException) {
-      let obj = { scheduled_start_time: null, scheduled_end_time: null, is_canceled: true };
-      ({ scheduled_start_time: obj4.scheduled_start_time, scheduled_end_time: obj4.scheduled_end_time } = eventException);
-      return self.updateGuildEventException(obj, guild_id, id, event_exception_id);
+      const obj2 = { scheduled_start_time: null, scheduled_end_time: null, is_canceled: true };
+      ({ scheduled_start_time: obj4.scheduled_start_time, scheduled_end_time: obj4.scheduled_end_time } =
+        eventException);
+      return self.updateGuildEventException(obj2, guild_id, id, event_exception_id);
     } else {
-      obj = { original_scheduled_start_time: null, is_canceled: true };
+      const obj3 = { original_scheduled_start_time: null, is_canceled: true };
       const _Date = Date;
-      const date = new Date(obj.extractTimestamp(event_exception_id));
-      obj.original_scheduled_start_time = date.toISOString();
-      return self.createGuildEventException(obj, guild_id, id);
+      const date = new Date(SnowflakeUtilsDefault.extractTimestamp(event_exception_id));
+      obj3.original_scheduled_start_time = date.toISOString();
+      return self.createGuildEventException(obj3, guild_id, id);
     }
-  }
+  },
 };

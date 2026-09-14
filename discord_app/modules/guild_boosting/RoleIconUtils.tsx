@@ -53,8 +53,8 @@ export const getRoleIconData = function getRoleIconData(role, size) {
       const byName = obj2.getByName(UnicodeEmojisDefault.convertSurrogateToName(role.unicodeEmoji, false));
     }
     if (null != combined) {
-      obj = { customIconSrc: combined, unicodeEmoji: byName };
-      let tmp23 = obj;
+      const obj4 = { customIconSrc: combined, unicodeEmoji: byName };
+      let tmp23 = obj4;
     } else {
       tmp23 = null;
     }

@@ -46,7 +46,7 @@ function getStatusSize(arg0) {
 }
 const View = fn(17).View;
 const StatusTypes = fn(1074).StatusTypes;
-const StatusConstants = fn(1179);
+const StatusConstants = fn(1177);
 ({ STATUS_PADDING: metroRequire, StatusSizes: closure_7 } = StatusConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
@@ -155,7 +155,7 @@ export default noop.memo((isMobileOnline) => {
             const statusTypingDimensions = Status_StatusUtils.getStatusTypingDimensions(items);
             ({ width: width3, height: height3 } = statusTypingDimensions);
             const sum = height3 + 2 * timestampProducer;
-            let obj = { nativeCutouts: null };
+            const obj2 = { nativeCutouts: null };
             const size = { shape: null, x: null, y: null, width: null, height: null, cornerRadius: null };
             size.shape = ClipView.CutoutShape.RoundedRect;
             const diff = diff1 - width3 - timestampProducer;
@@ -168,12 +168,12 @@ export default noop.memo((isMobileOnline) => {
             result = sum / 2;
             size.cornerRadius = result;
             items = [size];
-            obj.nativeCutouts = items;
+            obj2.nativeCutouts = items;
           } else {
             if (flag2) {
               const vRStatusContainerRect = Status_StatusUtils.getVRStatusContainerRect(items);
               ({ width: width2, height: height2 } = vRStatusContainerRect);
-              obj = { nativeCutouts: null };
+              const obj4 = { nativeCutouts: null };
               const size1 = {
                 shape: ClipView.CutoutShape.RoundedRect,
                 x: diff1 - width2 + result,
@@ -188,19 +188,18 @@ export default noop.memo((isMobileOnline) => {
               size1.height = height2;
               size1.cornerRadius = vRStatusContainerRect.cornerRadius;
               const items1 = [size1];
-              obj.nativeCutouts = items1;
+              obj4.nativeCutouts = items1;
             } else if (!flag) {
               const sum1 = items / 2 + tmp4;
               const diff2 = diff1 - sum1 - 2 * result;
-              obj = { nativeCutouts: null };
+              const obj = { nativeCutouts: null };
               const point = { shape: ClipView.CutoutShape.Circle, x: diff2, y: diff2, size: 2 * sum1 };
               const items2 = [point];
               obj.nativeCutouts = items2;
             }
-            let obj2 = Status_StatusUtils;
-            const mobileStatusContainerRect = obj2.getMobileStatusContainerRect(items);
+            const mobileStatusContainerRect = Status_StatusUtils.getMobileStatusContainerRect(items);
             ({ width, height } = mobileStatusContainerRect);
-            const obj1 = { nativeCutouts: null };
+            const obj5 = { nativeCutouts: null };
             const size2 = {
               shape: ClipView.CutoutShape.RoundedRect,
               x: diff1 - width + result,
@@ -210,22 +209,22 @@ export default noop.memo((isMobileOnline) => {
               cornerRadius: mobileStatusContainerRect.cornerRadius,
             };
             const items3 = [size2];
-            obj1.nativeCutouts = items3;
+            obj5.nativeCutouts = items3;
           }
         }
       }
     } else {
-      obj2 = {
+      const obj7 = {
         cutout,
         decorationCutout: avatar_decorations_AvatarDecorationUtils.getDecorationCutoutForAvatarCutout(
           cutout,
           -decoration.decoration.top,
         ),
       };
-      return obj2;
+      return obj7;
     }
   }, items);
-  let merged = {
+  let obj = {
     style: null,
     needsOffscreenAlphaCompositing: null,
     accessible: null,
@@ -235,27 +234,27 @@ export default noop.memo((isMobileOnline) => {
   let StatusWithTyping = flag;
   ({ cutout: cutout2, decorationCutout } = memo);
   let items1 = [flag(status[7]).styles[NORMAL], tmp3.container, style];
-  merged.style = items1;
-  merged.needsOffscreenAlphaCompositing = needsOffscreenAlphaCompositing;
-  merged.accessible = accessible;
-  merged.accessibilityLabel = accessibilityLabel;
+  obj.style = items1;
+  obj.needsOffscreenAlphaCompositing = needsOffscreenAlphaCompositing;
+  obj.accessible = accessible;
+  obj.accessibilityLabel = accessibilityLabel;
   if (!flag4) {
     let items2 = [null, , , ,];
-    merged = { disablePlaceholder, style: avatarStyle, cutout: cutout2 };
+    let obj2 = { disablePlaceholder, style: avatarStyle, cutout: cutout2 };
     if (null == source) {
       if (null == user) {
         if (null == channel) {
           items2[1] = null;
           let tmp33 = null;
           if (null != avatarDecoration) {
-            let obj = { size: null, avatarDecoration: null, decorationStyle: null, animate: null, cutout: null };
+            let obj3 = { size: null, avatarDecoration: null, decorationStyle: null, animate: null, cutout: null };
             const tmp36 = flag2(tmp7[13]);
-            obj.size = StatusWithTyping(tmp7[11]).getDecorationSizeForAvatarSize(NORMAL);
-            obj.avatarDecoration = avatarDecoration;
-            obj.decorationStyle = tmp3.decoration;
-            obj.animate = flag3;
-            obj.cutout = decorationCutout;
-            tmp33 = decoration(tmp36, obj, avatarDecoration.asset);
+            obj3.size = StatusWithTyping(tmp7[11]).getDecorationSizeForAvatarSize(NORMAL);
+            obj3.avatarDecoration = avatarDecoration;
+            obj3.decorationStyle = tmp3.decoration;
+            obj3.animate = flag3;
+            obj3.cutout = decorationCutout;
+            tmp33 = decoration(tmp36, obj3, avatarDecoration.asset);
             const StatusWithTypingResult = StatusWithTyping(tmp7[11]);
           }
           items2[2] = tmp33;
@@ -268,7 +267,7 @@ export default noop.memo((isMobileOnline) => {
               }
               let merged1 = null;
               if (null != statusSizeOverride) {
-                let obj1 = {
+                let obj4 = {
                   size: statusSizeOverride,
                   isMobileOnline: flag,
                   isVROnline: flag2,
@@ -277,95 +276,95 @@ export default noop.memo((isMobileOnline) => {
                   style: null,
                 };
                 let items3 = [tmp3.status, statusStyle];
-                obj1.style = items3;
-                merged1 = obj1;
+                obj4.style = items3;
+                merged1 = obj4;
               }
               if (null == merged1) {
                 tmp37 = null;
               } else {
                 if (!typing) {
-                  let obj2 = {};
-                  merged = Object.assign(merged1);
-                  let tmp48 = decoration(flag2(tmp7[14]), obj2);
+                  let obj5 = {};
+                  const merged = Object.assign(merged1);
+                  let tmp48 = decoration(flag2(tmp7[14]), obj5);
                   const tmp44 = flag2(tmp7[14]);
                 }
                 StatusWithTyping = StatusWithTyping(tmp7[14]).StatusWithTyping;
-                const obj3 = {};
+                let obj6 = {};
                 merged1 = Object.assign(merged1);
-                obj3.typing = typing;
+                obj6.typing = typing;
                 user = user.id;
-                obj3.userId = user;
-                tmp48 = decoration(StatusWithTyping, obj3);
+                obj6.userId = user;
+                tmp48 = decoration(StatusWithTyping, obj6);
               }
             }
           }
           items2[3] = tmp37;
           if (deaf) {
-            const obj4 = { style: null, children: null };
+            let obj7 = { style: null, children: null };
             const items4 = [,];
             ({ status: arr8[0], voiceStatus: arr8[1] } = tmp3);
-            obj4.style = items4;
-            const obj5 = {
+            obj7.style = items4;
+            const obj8 = {
               size: flag2(tmp7[15]).Sizes.REFRESH_SMALL_16,
               source: flag2(tmp7[16]),
               color: flag2(tmp7[6]).unsafe_rawColors.WHITE,
             };
-            obj4.children = decoration(flag2(tmp7[15]), obj5);
-            let tmp53 = decoration(cutout, obj4);
+            obj7.children = decoration(flag2(tmp7[15]), obj8);
+            let tmp53 = decoration(cutout, obj7);
             const tmp59 = flag2(tmp7[15]);
           } else if (mute) {
-            let obj6 = { style: null, children: null };
+            let obj9 = { style: null, children: null };
             const items5 = [,];
             ({ status: arr7[0], voiceStatus: arr7[1] } = tmp3);
-            obj6.style = items5;
-            const obj7 = {
+            obj9.style = items5;
+            const obj10 = {
               size: flag2(tmp7[15]).Sizes.REFRESH_SMALL_16,
               source: flag2(tmp7[17]),
               color: flag2(tmp7[6]).unsafe_rawColors.WHITE,
             };
-            obj6.children = decoration(flag2(tmp7[15]), obj7);
-            tmp53 = decoration(cutout, obj6);
+            obj9.children = decoration(flag2(tmp7[15]), obj10);
+            tmp53 = decoration(cutout, obj9);
             const tmp56 = flag2(tmp7[15]);
           }
           items2[4] = tmp53;
-          merged.children = items2;
-          return closure_9(cutout, merged);
+          obj.children = items2;
+          return closure_9(cutout, obj);
         }
       }
     }
     if (null != source) {
-      const obj8 = { source, size: NORMAL, animate: flag3 };
-      merged = Object.assign(merged);
-      let tmp14 = decoration(flag2(tmp7[7]), obj8);
+      const obj11 = { source, size: NORMAL, animate: flag3 };
+      obj2 = Object.assign(obj2);
+      let tmp14 = decoration(flag2(tmp7[7]), obj11);
       let tmp29 = flag2(tmp7[7]);
     } else if (null != user) {
-      let obj9 = { user, guildId, size: NORMAL, animate: flag3 };
-      const merged2 = Object.assign(merged);
-      tmp14 = decoration(flag2(tmp7[7]), obj9);
+      let obj12 = { user, guildId, size: NORMAL, animate: flag3 };
+      const merged2 = Object.assign(obj2);
+      tmp14 = decoration(flag2(tmp7[7]), obj12);
       const tmp23 = flag2(tmp7[7]);
     } else if (null != channel) {
-      const obj10 = { channel, size: NORMAL, animate: flag3 };
-      const merged3 = Object.assign(merged);
-      tmp14 = decoration(flag2(tmp7[7]), obj10);
+      const obj13 = { channel, size: NORMAL, animate: flag3 };
+      const merged3 = Object.assign(obj2);
+      tmp14 = decoration(flag2(tmp7[7]), obj13);
       const tmp17 = flag2(tmp7[7]);
     }
   } else {
     let sum = StatusWithTyping(tmp7[7]).AVATAR_SIZE_MAP[NORMAL] + 4;
-    const obj11 = { style: null };
+    const obj14 = { style: null };
     if (isStageCall) {
       const items6 = [tmp3.stageSpeaking];
       let size = { width: sum, height: sum, borderRadius: sum / 2 };
       items6[1] = size;
-      obj11.style = items6;
-      let tmp9Result = tmp9(flag2(tmp7[12]), obj11);
+      obj14.style = items6;
+      let tmp9Result = tmp9(flag2(tmp7[12]), obj14);
     } else {
       const items7 = [tmp3.speaking];
       let size1 = { width: sum, height: sum, borderRadius: sum / 2 };
       items7[1] = size1;
-      obj11.style = items7;
-      tmp9Result = tmp9(cutout, obj11);
+      obj14.style = items7;
+      tmp9Result = tmp9(cutout, obj14);
     }
   }
 });
-export const AvatarSizes = fn(13158).AvatarSizes;
+export const AvatarSizes = fn(13159).AvatarSizes;
 export { getStatusSize };

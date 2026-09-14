@@ -18,9 +18,9 @@ class NativePermissionStore extends DeviceSettingsStore {
         return closure_0.handleSetNativePermission(arg0);
       },
     };
-    tmp2 = new tmp2(closure_0(closure_1[3]), obj, new.target, tmp2, tmp, new.target);
-    closure_0 = tmp2;
-    return tmp2;
+    tmp21 = new tmp2(closure_0(closure_1[3]), obj, new.target, tmp2, tmp, new.target);
+    closure_0 = tmp21;
+    return tmp21;
   }
 }
 const prototype = NativePermissionStore.prototype;
@@ -47,12 +47,12 @@ prototype["handleSetNativePermission"] = function handleSetNativePermission(arg0
   let NONE = permissionStates[permissionType];
   permissionStates[permissionType] = state;
   if (NONE !== state) {
-    const obj = { type: permissionType, action: state, previous_action: null };
+    const obj2 = { type: permissionType, action: state, previous_action: null };
     if (NONE == null) {
       NONE = NativePermissionStates.NONE;
     }
-    obj.previous_action = NONE;
-    obj.track(AnalyticEvents.PERMISSIONS_ACKED, obj);
+    obj2.previous_action = NONE;
+    AnalyticsUtilsDefault.track(AnalyticEvents.PERMISSIONS_ACKED, obj2);
   }
 };
 NativePermissionStore.displayName = "NativePermissionStore";

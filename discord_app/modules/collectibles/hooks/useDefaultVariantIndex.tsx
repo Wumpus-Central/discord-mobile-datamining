@@ -1,6 +1,8 @@
 // discord_app/modules/collectibles/hooks/useDefaultVariantIndex.tsx
 import CollectiblesPurchaseStore from "../CollectiblesPurchaseStore.tsx";
 
+const require = globalThis.__r;
+
 const require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/hooks/useDefaultVariantIndex.tsx");

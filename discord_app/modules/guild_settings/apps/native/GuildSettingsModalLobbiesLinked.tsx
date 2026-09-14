@@ -3,12 +3,15 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 import RelationshipStore from "../../../../stores/RelationshipStore.tsx";
 import UserStore from "../../../../stores/UserStore.tsx";
 
+const require = globalThis.__r;
+
 const require = fn;
 function SyncingToGamesItem(channels) {
   channels = channels.channels;
   const isOnlySection = channels.isOnlySection;
+  dependencyMap = channels(1483).useNavigation();
   let obj = channels(1483);
-  dependencyMap = obj.useNavigation();
+  const tmp = channels;
   const getOrFetchApplication = channels(7271).useGetOrFetchApplication(channels.applicationId);
   let tmp5Result = null;
   if (0 !== channels.length) {
@@ -16,7 +19,7 @@ function SyncingToGamesItem(channels) {
     if (getOrFetchApplication != null) {
       name = getOrFetchApplication.name;
     }
-    obj = {
+    let obj3 = {
       title: name,
       hasIcons: true,
       children: channels.map((id) => {
@@ -27,10 +30,10 @@ function SyncingToGamesItem(channels) {
           arrow: true,
           onPress: null,
         };
-        obj = { IconComponent: null };
+        const obj3 = { IconComponent: null };
         const obj2 = channels(4789);
-        obj.IconComponent = channels(5109).getChannelIconComponent(id);
-        obj.icon = closure_1_6(channels(5686).TableRow.Icon, obj);
+        obj3.IconComponent = channels(5109).getChannelIconComponent(id);
+        obj.icon = closure_1_6(channels(5686).TableRow.Icon, obj3);
         obj.onPress = function onPress() {
           const obj = { channel, numScreensToPop: null };
           let num = 1;
@@ -46,7 +49,7 @@ function SyncingToGamesItem(channels) {
         return closure_1_6(channels(5686).TableRow, obj, id.id);
       }),
     };
-    tmp5Result = closure_6(channels(5768).TableRowGroup, obj);
+    tmp5Result = closure_6(tmp(5768).TableRowGroup, obj3);
   }
   return tmp5Result;
 }
@@ -60,12 +63,11 @@ export default function GuildSettingsModalLobbiesLinked(arg0) {
   _require = undefined;
   let keys;
   ({ contentContainerStyle, guildId } = arg0);
-  let obj = require("useToken");
-  const token = obj.useToken(keys(576).modules.mobile.TABLE_ROW_PADDING);
-  let obj1 = require("useChannelsAllowedToUnlink");
-  const channelsAllowedToUnlink = obj1.useChannelsAllowedToUnlink(guildId);
-  let obj2 = keys(12);
-  const groupByResult = obj2.groupBy(channelsAllowedToUnlink, (linkedLobby) => {
+  const token = require("useToken").useToken(keys(576).modules.mobile.TABLE_ROW_PADDING);
+  const obj = require("useToken");
+  const channelsAllowedToUnlink = require("useChannelsAllowedToUnlink").useChannelsAllowedToUnlink(guildId);
+  const obj2 = require("useChannelsAllowedToUnlink");
+  const groupByResult = keys(12).groupBy(channelsAllowedToUnlink, (linkedLobby) => {
     linkedLobby = linkedLobby.linkedLobby;
     let application_id;
     if (linkedLobby != null) {
@@ -75,12 +77,13 @@ export default function GuildSettingsModalLobbiesLinked(arg0) {
   });
   _require = groupByResult;
   keys = Object.keys(groupByResult);
-  obj = { children: null };
-  obj = { contentContainerStyle: null, children: null };
-  obj1 = { paddingTop: keys(576).space.PX_16 };
-  const items = [obj1, contentContainerStyle];
-  obj.contentContainerStyle = items;
-  obj2 = {
+  const obj4 = { children: null };
+  const obj5 = { contentContainerStyle: null, children: null };
+  const obj3 = keys(12);
+  const items = [{ paddingTop: keys(576).space.PX_16 }, contentContainerStyle];
+  obj5.contentContainerStyle = items;
+  const obj6 = { paddingTop: keys(576).space.PX_16 };
+  obj5.children = closure_6(require("Stack/Stack").Stack, {
     style: { paddingHorizontal: token },
     spacing: keys(576).space.PX_24,
     children: keys.map((applicationId) =>
@@ -90,9 +93,8 @@ export default function GuildSettingsModalLobbiesLinked(arg0) {
         applicationId,
       ),
     ),
-  };
-  obj.children = closure_6(require("Stack/Stack").Stack, obj2);
-  const items1 = [closure_6(require("Form").Form, obj), closure_6(require("NavScrim").NavScrim, {})];
-  obj.children = items1;
-  return closure_8(closure_7, obj);
+  });
+  const items1 = [closure_6(require("Form").Form, obj5), closure_6(require("NavScrim").NavScrim, {})];
+  obj4.children = items1;
+  return closure_8(closure_7, obj4);
 }

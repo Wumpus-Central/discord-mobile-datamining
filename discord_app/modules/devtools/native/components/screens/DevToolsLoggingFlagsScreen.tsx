@@ -12,33 +12,30 @@ import size from "../../../../../../_runtime/metro/00002__.js";
 
 const ScrollView = _mod17.ScrollView;
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-let obj = { container: null, content: null };
-obj = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
-obj.container = obj;
+const obj = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, content: null };
+let obj2 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj.content = { padding: nativeDefault.space.PX_16 };
 let closure_6 = createStyles.createStyles(obj);
 const result = size.fileFinishedImporting("modules/devtools/native/components/screens/DevToolsLoggingFlagsScreen.tsx");
 
 export default function DevToolsLoggingFlagsScreen() {
   const tmp = closure_6();
-  let obj = initialize;
   const items = [DeveloperOptionsStore];
-  const stateFromStoresObject = obj.useStateFromStoresObject(items, () => ({
+  const stateFromStoresObject = initialize.useStateFromStoresObject(items, () => ({
     isLoggingGatewayEvents: DeveloperOptionsStore.isLoggingGatewayEvents,
     isLoggingAnalyticsEvents: DeveloperOptionsStore.isLoggingAnalyticsEvents,
     isTracingRequests: DeveloperOptionsStore.isTracingRequests,
   }));
-  obj = { style: tmp.container, contentContainerStyle: tmp.content, children: null };
+  const obj2 = { style: tmp.container, contentContainerStyle: tmp.content, children: null };
   ({ isLoggingGatewayEvents, isLoggingAnalyticsEvents, isTracingRequests } = stateFromStoresObject);
-  obj = { title: "Logging", hasIcons: false, children: null };
+  const obj3 = { title: "Logging", hasIcons: false, children: null };
   const items1 = [
     React4(TableSwitchRow.TableSwitchRow, {
       label: "Gateway Events",
       subLabel: "Logs all gateway events to console, including content. Enable verbose logs to see them.",
       value: isLoggingGatewayEvents,
       onValueChange(logGatewayEvents) {
-        const obj = { logGatewayEvents };
-        return obj.setDeveloperOptionSettings(obj);
+        return DeveloperOptionsActionCreators.setDeveloperOptionSettings({ logGatewayEvents });
       },
     }),
     React4(TableSwitchRow.TableSwitchRow, {
@@ -46,8 +43,7 @@ export default function DevToolsLoggingFlagsScreen() {
       subLabel: "Logs all analytics events to the developer console.",
       value: isLoggingAnalyticsEvents,
       onValueChange(logAnalyticsEvents) {
-        const obj = { logAnalyticsEvents };
-        return obj.setDeveloperOptionSettings(obj);
+        return DeveloperOptionsActionCreators.setDeveloperOptionSettings({ logAnalyticsEvents });
       },
     }),
     React4(TableSwitchRow.TableSwitchRow, {
@@ -55,12 +51,11 @@ export default function DevToolsLoggingFlagsScreen() {
       subLabel: "Force trace all client requests with APM.",
       value: isTracingRequests,
       onValueChange(trace) {
-        const obj = { trace };
-        return obj.setDeveloperOptionSettings(obj);
+        return DeveloperOptionsActionCreators.setDeveloperOptionSettings({ trace });
       },
     }),
   ];
-  obj.children = items1;
-  obj.children = hasOwnProperty(TableRowGroup.TableRowGroup, obj);
-  return React4(ScrollView, obj);
+  obj3.children = items1;
+  obj2.children = hasOwnProperty(TableRowGroup.TableRowGroup, obj3);
+  return React4(ScrollView, obj2);
 }

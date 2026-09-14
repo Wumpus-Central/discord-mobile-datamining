@@ -11,8 +11,8 @@ let closure_5 = async function _bulkClearRecents(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -25,8 +25,8 @@ let closure_5 = async function _bulkClearRecents(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c5 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           closure_3 = tmp5;
           closure_2 = tmp2;
@@ -34,7 +34,7 @@ let closure_5 = async function _bulkClearRecents(arg0) {
           closure_130_1 = closure_1;
           c4 = 1;
           c5 = 1;
-          const obj1 = {
+          const obj4 = {
             value: UserSettingsProtoActionCreators.updateUserGuildSettings(
               closure_0,
               (arg0) => {
@@ -46,18 +46,18 @@ let closure_5 = async function _bulkClearRecents(arg0) {
             ),
             done: false,
           };
-          return obj1;
+          return obj4;
         }
       } else if (arg0 === 1) {
         c5 = 3;
         throw value;
       } else if (arg0 === 2) {
         c5 = 3;
-        obj = { value, done: true };
+        const obj = { value, done: true };
         return obj;
       } else {
-        const obj2 = { type: "BULK_CLEAR_RECENTS", guildId: closure_130_0, channelIds: closure_130_1 };
-        closure_131_1(closure_131_2[4]).dispatch(obj2);
+        const obj6 = { type: "BULK_CLEAR_RECENTS", guildId: closure_130_0, channelIds: closure_130_1 };
+        closure_131_1(closure_131_2[4]).dispatch(obj6);
         const obj5 = closure_131_1(closure_131_2[4]);
         closure_131_1(closure_131_2[5]).track(closure_131_4.CHANNEL_LIST_UPDATED, { action_type: "recents_dismissed" });
         c5 = 3;

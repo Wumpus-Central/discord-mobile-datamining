@@ -9,6 +9,8 @@ import Pressables from "../../../../design/void/Pressables/native/Pressables.tsx
 import XSmallIcon from "../../../../design/components/Icon/native/redesign/generated/XSmallIcon.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
+const require = globalThis.__r;
+
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: c3, View: closure_4 } = get_ActivityIndicator);
@@ -16,23 +18,21 @@ const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 const createStyles = fn(4636);
 let closure_7 = createStyles.createStyles((height) => {
-  let obj = {
-    headerBar: null,
+  const obj = {
+    headerBar: { height, flexDirection: "row", alignItems: "center" },
     headerBarContent: { flexDirection: "row", alignItems: "center", flex: 1 },
-    headerBarText: null,
+    headerBarText: { marginHorizontal: nativeDefault.space.PX_16 },
     headerBarSeparator: null,
     button: null,
   };
-  obj = { height, flexDirection: "row", alignItems: "center" };
-  obj.headerBar = obj;
-  obj = { marginHorizontal: nativeDefault.space.PX_16 };
-  obj.headerBarText = obj;
-  const obj1 = {};
+  const obj4 = {};
   const merged = Object.assign(React3.absoluteFillObject);
-  obj1.height = React3.hairlineWidth;
-  obj1.backgroundColor = nativeDefault.colors.BORDER_SUBTLE;
-  obj1.top = undefined;
-  obj.headerBarSeparator = obj1;
+  obj4.height = React3.hairlineWidth;
+  obj4.backgroundColor = nativeDefault.colors.BORDER_SUBTLE;
+  obj4.top = undefined;
+  obj.headerBarSeparator = obj4;
+  const obj2 = { height, flexDirection: "row", alignItems: "center" };
+  const obj3 = { marginHorizontal: nativeDefault.space.PX_16 };
   obj.button = { paddingHorizontal: nativeDefault.space.PX_16 };
   return obj;
 });
@@ -43,8 +43,8 @@ export default function ForumComposerHeader(height) {
   ({ title, channel, onClose: require } = height);
   ({ submitting, onGuidelinesPress } = height);
   const tmp = closure_7(height.height);
-  let obj = { style: tmp.headerBar, children: null };
-  obj = {
+  const obj = { style: tmp.headerBar, children: null };
+  const obj2 = {
     style: tmp.button,
     accessibilityRole: "button",
     accessibilityLabel: null,
@@ -53,16 +53,16 @@ export default function ForumComposerHeader(height) {
     children: null,
   };
   const intl = util.intl;
-  obj.accessibilityLabel = intl.string(util.t.cpT0Cq);
-  obj.disabled = submitting;
-  obj.onPress = function onPress() {
+  obj2.accessibilityLabel = intl.string(util.t.cpT0Cq);
+  obj2.disabled = submitting;
+  obj2.onPress = function onPress() {
     return require(false);
   };
-  obj.children = hasOwnProperty(XSmallIcon.XSmallIcon, {});
-  const items = [hasOwnProperty(Pressables.PressableOpacity, obj), , ,];
-  obj = { style: tmp.headerBarContent, children: null };
+  obj2.children = hasOwnProperty(XSmallIcon.XSmallIcon, {});
+  const items = [hasOwnProperty(Pressables.PressableOpacity, obj2), , ,];
+  const obj3 = { style: tmp.headerBarContent, children: null };
   const items1 = [hasOwnProperty(ForumIcon.ForumIcon, { size: "sm" })];
-  const obj1 = { style: tmp.headerBarText, children: null };
+  const obj4 = { style: tmp.headerBarText, children: null };
   if ("" === title) {
     const intl2 = util.intl;
     title = intl2.string(util.t["7EjFCk"]);
@@ -81,23 +81,23 @@ export default function ForumComposerHeader(height) {
       children: useChannelNameDefault(channel),
     }),
   ];
-  obj1.children = items2;
-  items1[1] = timestampProducer(React4, obj1);
-  obj.children = items1;
-  items[1] = timestampProducer(React4, obj);
+  obj4.children = items2;
+  items1[1] = timestampProducer(React4, obj4);
+  obj3.children = items1;
+  items[1] = timestampProducer(React4, obj3);
   let length;
   if (channel != null) {
     length = channel.topic.length;
   }
   let tmp6Result = null;
   if (length > 0) {
-    const obj2 = { accessibilityRole: "button", accessibilityLabel: null, style: null, onPress: null, children: null };
+    const obj5 = { accessibilityRole: "button", accessibilityLabel: null, style: null, onPress: null, children: null };
     const intl3 = util.intl;
-    obj2.accessibilityLabel = intl3.string(util.t.yR6HwZ);
-    obj2.style = tmp.button;
-    obj2.onPress = onGuidelinesPress;
-    obj2.children = hasOwnProperty(BookCheckIcon.BookCheckIcon, {});
-    tmp6Result = hasOwnProperty(Pressables.PressableOpacity, obj2);
+    obj5.accessibilityLabel = intl3.string(util.t.yR6HwZ);
+    obj5.style = tmp.button;
+    obj5.onPress = onGuidelinesPress;
+    obj5.children = hasOwnProperty(BookCheckIcon.BookCheckIcon, {});
+    tmp6Result = hasOwnProperty(Pressables.PressableOpacity, obj5);
   }
   items[2] = tmp6Result;
   items[3] = hasOwnProperty(React4, { style: tmp.headerBarSeparator });

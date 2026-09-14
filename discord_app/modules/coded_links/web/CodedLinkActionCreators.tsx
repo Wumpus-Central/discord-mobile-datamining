@@ -9,11 +9,9 @@ const result = size.fileFinishedImporting("modules/coded_links/web/CodedLinkActi
 export default {
   openNativeAppModal(arg0, arg1) {},
   nativeModalOpened(code) {
-    const obj = { type: "NATIVE_APP_MODAL_OPENED", code };
-    obj.dispatch(obj);
+    DispatcherDefault.dispatch({ type: "NATIVE_APP_MODAL_OPENED", code });
   },
   nativeModalOpenFailed(code) {
-    const obj = { type: "NATIVE_APP_MODAL_OPEN_FAILED", code };
-    obj.dispatch(obj);
+    DispatcherDefault.dispatch({ type: "NATIVE_APP_MODAL_OPEN_FAILED", code });
   },
 };

@@ -5,16 +5,18 @@ import useStateFromStores from "useStateFromStores.tsx";
 import BatchedStoreListener from "BatchedStoreListener.tsx";
 import connectStoresDefault from "connectStores.tsx";
 import flux_Dispatcher from "Dispatcher.tsx";
-import PersistedStore from "PersistedStore.tsx";
-import createFetchStore from "createFetchStore.tsx";
+import PersistedStore_mod from "PersistedStore.tsx";
+import createFetchStore_mod from "createFetchStore.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
 function initialize() {
   Store.initialize();
 }
+let PersistedStore = PersistedStore_mod;
 PersistedStore = PersistedStore.PersistedStore;
 ({ DeviceSettingsStore, OfflineCacheStore } = PersistedStore);
 const Store = Store2.Store;
+let createFetchStore = createFetchStore_mod;
 const obj = {
   Emitter: flux_EmitterDefault,
   Store,

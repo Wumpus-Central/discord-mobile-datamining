@@ -11,8 +11,8 @@ import Pressables from "../../../design/void/Pressables/native/Pressables.tsx";
 import GuildIconDefault from "../../guild/native/GuildIcon.tsx";
 import TrophyIcon from "../../../design/components/Icon/native/redesign/generated/TrophyIcon.tsx";
 import PremiumFeatureUpsellUtils from "../../premium/roadblocks/native/utils/PremiumFeatureUpsellUtils.tsx";
-import _modDef10519 from "../../../../_runtime/metro/10519__.js";
-import _modDef17186 from "../../../../_runtime/metro/17186__.js";
+import _modDef10520 from "../../../../_runtime/metro/10520__.js";
+import _modDef17188 from "../../../../_runtime/metro/17188__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import UserStore from "../../../stores/UserStore.tsx";
 
@@ -27,33 +27,33 @@ function SoundCategoryItem(style) {
   if (SoundboardTypes.SoundboardSoundGridSectionType.GUILD === type) {
     const guild = category.categoryInfo.guild;
     let name = guild.name;
-    let obj = { guild, style: tmp.guildItem };
-    let tmp14Result = closure_1_10(GuildIconDefault, obj);
+    const obj2 = { guild, style: tmp.guildItem };
+    let tmp14Result = closure_1_10(GuildIconDefault, obj2);
     let tmp6 = null;
     let tmp7 = null;
   } else if (SoundboardTypes.SoundboardSoundGridSectionType.FAVORITES === type) {
     const intl4 = util.intl;
     name = intl4.string(util.t.y3LQCG);
-    tmp6 = _modDef10519;
+    tmp6 = _modDef10520;
     tmp7 = null;
     tmp14Result = null;
   } else if (SoundboardTypes.SoundboardSoundGridSectionType.FREQUENTLY_USED === type) {
     const intl3 = util.intl;
     name = intl3.string(util.t["+cGVV6"]);
-    obj = { style: tmp.keyboardItem };
+    const obj = { style: tmp.keyboardItem };
     tmp7 = closure_1_10(ClockIcon.ClockIcon, obj);
     tmp6 = null;
     tmp14Result = null;
   } else if (SoundboardTypes.SoundboardSoundGridSectionType.DEFAULTS === type) {
     const intl2 = util.intl;
     name = intl2.string(util.t.Rtvk9X);
-    tmp6 = _modDef17186;
+    tmp6 = _modDef17188;
     tmp7 = null;
     tmp14Result = null;
   } else if (SoundboardTypes.SoundboardSoundGridSectionType.SEARCH === type) {
     const intl = util.intl;
     name = intl.string(util.t.sKt3xS);
-    tmp6 = _modDef17186;
+    tmp6 = _modDef17188;
     tmp7 = null;
     tmp14Result = null;
   } else {
@@ -63,15 +63,15 @@ function SoundCategoryItem(style) {
     name = null;
     if (SoundboardTypes.SoundboardSoundGridSectionType.TOP_SOUNDS === type) {
       const intl5 = util.intl;
-      obj = { guildName: category.categoryInfo.guild.name };
-      name = intl5.formatToPlainString(util.t.GXs41w, obj);
-      const obj1 = { style: tmp.keyboardItem };
-      tmp7 = closure_1_10(TrophyIcon.TrophyIcon, obj1);
+      const obj3 = { guildName: category.categoryInfo.guild.name };
+      name = intl5.formatToPlainString(util.t.GXs41w, obj3);
+      const obj4 = { style: tmp.keyboardItem };
+      tmp7 = closure_1_10(TrophyIcon.TrophyIcon, obj4);
       tmp6 = null;
       tmp14Result = null;
     }
   }
-  const obj2 = {
+  const obj5 = {
     onPress() {
       return require(importDefault);
     },
@@ -79,27 +79,27 @@ function SoundCategoryItem(style) {
     accessibilityLabel: name,
     children: null,
   };
-  const obj3 = { style: null, children: null };
+  const obj6 = { style: null, children: null };
   const items = [tmp.item, style.style];
-  obj3.style = items;
+  obj6.style = items;
   if (tmp14Result == null) {
     tmp14Result = tmp7;
   }
   if (tmp14Result == null) {
-    const obj4 = { style: tmp.keyboardItem, source: tmp6 };
-    tmp14Result = closure_1_10(native.Icon, obj4);
+    const obj7 = { style: tmp.keyboardItem, source: tmp6 };
+    tmp14Result = closure_1_10(native.Icon, obj7);
   }
   const items1 = [tmp14Result];
   if (locked) {
-    const obj5 = { style: tmp.lockContainer, children: null };
-    const obj6 = { style: tmp.lock };
-    obj5.children = closure_1_10(LockIcon.LockIcon, obj6);
-    locked = closure_1_10(hasOwnProperty, obj5);
+    const obj8 = { style: tmp.lockContainer, children: null };
+    const obj9 = { style: tmp.lock };
+    obj8.children = closure_1_10(LockIcon.LockIcon, obj9);
+    locked = closure_1_10(hasOwnProperty, obj8);
   }
   items1[1] = locked;
-  obj3.children = items1;
-  obj2.children = closure_1_11(hasOwnProperty, obj3);
-  return closure_1_10(Pressables.PressableOpacity, obj2, name);
+  obj6.children = items1;
+  obj5.children = closure_1_11(hasOwnProperty, obj6);
+  return closure_1_10(Pressables.PressableOpacity, obj5, name);
 }
 function getItemLayout(arg0, index) {
   return { length: React7, offset: React7 * index, index };
@@ -107,31 +107,29 @@ function getItemLayout(arg0, index) {
 get_ActivityIndicator = fn(17);
 const StyleSheet = get_ActivityIndicator.StyleSheet;
 ({ View: hasOwnProperty, FlatList: metroRequire } = get_ActivityIndicator);
-const setSearchQuery = fn(17170).setSearchQuery;
+const setSearchQuery = fn(17172).setSearchQuery;
 const Constants = fn(1074);
 ({ CATEGORY_ICON_SIZE, EXPRESSION_FOOTER_HEIGHT: closure_9, NODE_SIZE, NODE_MARGIN } = Constants);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-fn(4636);
+const createStyles = fn(4636);
 let obj = {
-  container: null,
+  container: {
+    borderTopWidth: StyleSheet.hairlineWidth,
+    paddingHorizontal: 8,
+    flexDirection: "row",
+    alignItems: "center",
+    backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
+    borderTopColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST,
+  },
   item: null,
-  fadedItem: null,
+  fadedItem: { opacity: 0.5 },
   activeItem: null,
   guildItem: null,
   keyboardItem: null,
   lockContainer: null,
   lock: null,
 };
-obj = {
-  borderTopWidth: StyleSheet.hairlineWidth,
-  paddingHorizontal: 8,
-  flexDirection: "row",
-  alignItems: "center",
-  backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
-  borderTopColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST,
-};
-obj.container = obj;
 let size = {
   margin: NODE_MARGIN,
   height: NODE_SIZE,
@@ -141,9 +139,15 @@ let size = {
   justifyContent: "center",
 };
 obj.item = size;
-obj.fadedItem = { opacity: 0.5 };
-const createStyles = { opacity: 1, backgroundColor: nativeDefault.colors.INTERACTIVE_BACKGROUND_ACTIVE };
-obj.activeItem = createStyles;
+let obj3 = {
+  borderTopWidth: StyleSheet.hairlineWidth,
+  paddingHorizontal: 8,
+  flexDirection: "row",
+  alignItems: "center",
+  backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
+  borderTopColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST,
+};
+obj.activeItem = { opacity: 1, backgroundColor: nativeDefault.colors.INTERACTIVE_BACKGROUND_ACTIVE };
 obj.guildItem = { height: CATEGORY_ICON_SIZE, width: CATEGORY_ICON_SIZE, borderRadius: CATEGORY_ICON_SIZE / 2 };
 obj.keyboardItem = { height: CATEGORY_ICON_SIZE, width: CATEGORY_ICON_SIZE };
 const size1 = {
@@ -169,6 +173,7 @@ let closure_14 = noop.memo(
     return closure_1_10(timestampProducer, obj);
   }),
 );
+let obj4 = { opacity: 1, backgroundColor: nativeDefault.colors.INTERACTIVE_BACKGROUND_ACTIVE };
 size = fn(2);
 let result = size.fileFinishedImporting("modules/soundboard/native/SoundboardSoundPickerCategories.tsx");
 
@@ -213,21 +218,20 @@ export default noop.memo(function SoundboardSoundPickerCategories(guildId) {
   const callback2 = noop.useCallback((section) => {
     callback2("");
     setImmediate(() => {
-      let current;
+      let current1;
       if (listRef != null) {
-        current = listRef.current;
+        current1 = listRef.current;
       }
-      if (null != current) {
-        current = listRef.current;
+      if (null != current1) {
+        const current = listRef.current;
         const obj = { section, item: 0 };
         current.scrollToLocation(obj);
         const result = HapticUtils.triggerHapticFeedback(haptics_HapticFeedbackTypesDefault.IMPACT_LIGHT);
       }
     });
   }, items1);
-  let obj = guildId(listRef[20]);
   const items2 = [stateFromStores];
-  stateFromStores = obj.useStateFromStores(items2, () =>
+  stateFromStores = guildId(listRef[20]).useStateFromStores(items2, () =>
     categoryIndex(listRef[21]).canUseSoundboardEverywhere(stateFromStores.getCurrentUser()),
   );
   const items3 = [stateFromStores, guildId, callback2, categoryIndex, ,];
@@ -236,18 +240,17 @@ export default noop.memo(function SoundboardSoundPickerCategories(guildId) {
     ({ item, index } = arg0);
     let result = !stateFromStores;
     if (!stateFromStores) {
-      let obj = PremiumFeatureUpsellUtils;
-      result = obj.isSoundboardSectionNitroLocked(guildId, item.categoryInfo);
+      result = PremiumFeatureUpsellUtils.isSoundboardSectionNitroLocked(guildId, item.categoryInfo);
     }
-    obj = { category: item, index, style: null, handlePressCategory: null, locked: null };
+    const obj2 = { category: item, index, style: null, handlePressCategory: null, locked: null };
     if (null != categoryIndex) {
       if (index === categoryIndex) {
         let fadedItem = closure_3.activeItem;
       }
-      obj.style = fadedItem;
-      obj.handlePressCategory = callback2;
-      obj.locked = result;
-      return tmp5(tmp6, obj);
+      obj2.style = fadedItem;
+      obj2.handlePressCategory = callback2;
+      obj2.locked = result;
+      return tmp5(tmp6, obj2);
     }
     fadedItem = closure_3.fadedItem;
   }, items3);
@@ -255,12 +258,12 @@ export default noop.memo(function SoundboardSoundPickerCategories(guildId) {
     const Gesture = guildId(listRef[24]).Gesture;
     return Gesture.Native().disallowInterruption(true);
   }, []);
-  obj = { hostName: "soundboard-footer", children: null };
-  obj = { style: null, children: null };
+  let obj2 = { hostName: "soundboard-footer", children: null };
+  const obj3 = { style: null, children: null };
   const items4 = [tmp.container, { paddingBottom: categoryIndex(listRef[23])().bottom }, style];
-  obj.style = items4;
+  obj3.style = items4;
   const items5 = [closure_10(categoryIndex(listRef[26]), { style: ref.absoluteFill })];
-  let obj2 = {
+  const obj5 = {
     gesture: memo,
     children: closure_10(closure_14, {
       ref,
@@ -277,8 +280,8 @@ export default noop.memo(function SoundboardSoundPickerCategories(guildId) {
       showsHorizontalScrollIndicator: false,
     }),
   };
-  items5[1] = closure_10(guildId(listRef[24]).GestureDetector, obj2);
-  obj.children = items5;
-  obj.children = closure_11(ref, obj);
-  return closure_10(guildId(listRef[25]).Portal, obj);
+  items5[1] = closure_10(guildId(listRef[24]).GestureDetector, obj5);
+  obj3.children = items5;
+  obj2.children = closure_11(ref, obj3);
+  return closure_10(guildId(listRef[25]).Portal, obj2);
 });

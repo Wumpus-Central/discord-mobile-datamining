@@ -3,6 +3,8 @@ import ModalActionCreatorsDefault from "../../../../actions/ModalActionCreators.
 import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
+const require = globalThis.__r;
+
 const require = fn;
 const jsx = fn(21).jsx;
 const size = fn(2);

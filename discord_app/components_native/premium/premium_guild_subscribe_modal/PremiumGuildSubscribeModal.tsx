@@ -20,38 +20,37 @@ let result = size.fileFinishedImporting(
 
 export default function PremiumGuildSubscribeModal(arg0) {
   ({ guildId: require, guildBoostSlots: importDefault, intent: dependencyMap, onResult: _slicedToArray } = arg0);
-  let first;
+  first = undefined;
+  closure_5 = undefined;
   let tmp = useInitialValueDefault(() => {
     const items = [];
     if (null != guildId) {
-      let arr1 = guildBoostSlots;
       if (null != guildBoostSlots) {
-        if (arr1.length > 0) {
-          let obj = { name: constants.CONFIRMATION, params: null };
-          obj = { guildId, guildBoostSlots: arr1, intent, onResult };
-          obj.params = obj;
-          items.push(obj);
+        if (guildBoostSlots.length > 0) {
+          let obj2 = { name: constants.CONFIRMATION, params: null };
+          let obj3 = { guildId, guildBoostSlots, intent, onResult };
+          obj2.params = obj3;
+          items.push(obj2);
         }
-        const obj1 = { initialStack: items, screens: null };
-        const obj2 = {};
-        let obj3 = {
+        const obj4 = { initialStack: items, screens: null };
+        const obj5 = {};
+        const obj6 = {
           headerShown: false,
           render(arg0) {
             const merged = Object.assign(arg0);
             return closure_1_8(guildBoostSlots(5518), {});
           },
         };
-        obj2[constants.GUILD_SELECT] = obj3;
-        const obj4 = {
+        obj5[constants.GUILD_SELECT] = obj6;
+        const obj7 = {
           headerLeft: NavigatorHeader.getHeaderCloseButton(actions_BoostingActionCreators.closeApplyBoostModal),
           headerRight() {
-            let obj = guildId(4488);
             if (obj.isThemeDark(theme.theme)) {
               let tmp4Result = guildBoostSlots(7481);
             } else {
               tmp4Result = guildBoostSlots(7482);
             }
-            obj = {
+            let obj2 = {
               source: tmp4Result,
               IconComponent: guildId(7483).SettingsIcon,
               accessibilityLabel: null,
@@ -59,29 +58,30 @@ export default function PremiumGuildSubscribeModal(arg0) {
               onPress: null,
             };
             const intl = guildId(1114).intl;
-            obj.accessibilityLabel = intl.string(guildId(1114).t["3D5yo/"]);
+            obj2.accessibilityLabel = intl.string(guildId(1114).t["3D5yo/"]);
             const intl2 = guildId(1114).intl;
-            obj.accessibilityHint = intl2.string(guildId(1114).t["+CbP2v"]);
-            obj.onPress = function onPress() {
-              closure_1_0(7098);
-              let obj = { destinationPane: constants.GUILD_BOOSTING };
-              const result = obj.trackUserSettingsPaneViewed(obj);
+            obj2.accessibilityHint = intl2.string(guildId(1114).t["+CbP2v"]);
+            obj2.onPress = function onPress() {
+              const result = closure_1_0(7098).trackUserSettingsPaneViewed({
+                destinationPane: constants.GUILD_BOOSTING,
+              });
+              const obj = closure_1_0(7098);
+              const obj2 = { destinationPane: constants.GUILD_BOOSTING };
               closure_1_0(5515).closeApplyBoostModal();
               const obj3 = closure_1_0(5515);
-              obj = { screen: constants.GUILD_BOOSTING };
-              closure_1_0(7485).openUserSettings(obj);
+              closure_1_0(7485).openUserSettings({ screen: constants.GUILD_BOOSTING });
             };
-            return closure_1_8(guildId(7480).HeaderActionButton, obj);
+            return closure_1_8(guildId(7480).HeaderActionButton, obj2);
           },
           headerTitle(children) {
             children = children.children;
-            let obj = { title: null, subtitle: null };
+            const obj = { title: null, subtitle: null };
             const intl = guildId(1114).intl;
             obj.title = intl.string(guildId(1114).t.VJEVbu);
             let tmpResult = null;
             if (children.length > 0) {
-              obj = { children };
-              tmpResult = closure_1_8(guildId(1178).LegacyText, obj);
+              const obj2 = { children };
+              tmpResult = closure_1_8(guildId(1176).LegacyText, obj2);
             }
             obj.subtitle = tmpResult;
             return closure_1_8(guildId(5705).NavigatorHeader, obj);
@@ -91,36 +91,34 @@ export default function PremiumGuildSubscribeModal(arg0) {
             return closure_1_8(guildBoostSlots(7487), {});
           },
         };
-        obj2[constants.OVERVIEW] = obj4;
-        const obj5 = { headerLeft: null, headerTitle: null, render: null };
-        obj5.headerLeft = NavigatorHeader.getHeaderCloseButton(actions_BoostingActionCreators.closeApplyBoostModal);
+        obj5[constants.OVERVIEW] = obj7;
+        const obj8 = { headerLeft: null, headerTitle: null, render: null };
+        obj8.headerLeft = NavigatorHeader.getHeaderCloseButton(actions_BoostingActionCreators.closeApplyBoostModal);
         let intl = util.intl;
-        obj5.headerTitle = intl.string(util.t.VJEVbu);
-        obj5.render = function render(arg0) {
+        obj8.headerTitle = intl.string(util.t.VJEVbu);
+        obj8.render = function render(arg0) {
           const merged = Object.assign(arg0);
-          return closure_1_8(guildBoostSlots(13695), {});
+          return closure_1_8(guildBoostSlots(13696), {});
         };
-        obj2[constants.CONFIRMATION] = obj5;
-        obj1.screens = obj2;
-        return obj1;
+        obj5[constants.CONFIRMATION] = obj8;
+        obj4.screens = obj5;
+        return obj4;
       }
     }
     if (null != guildId) {
-      const obj6 = { name: constants.OVERVIEW, params: null };
-      const obj7 = { guildId, guildBoostSlots, intent, onResult };
-      obj6.params = obj7;
-      items.push(obj6);
+      const obj9 = { name: constants.OVERVIEW, params: null };
+      const obj10 = { guildId, guildBoostSlots, intent, onResult };
+      obj9.params = obj10;
+      items.push(obj9);
     } else {
-      obj = { name: constants.GUILD_SELECT, params: null };
-      const obj8 = { guildBoostSlots, intent, onResult };
-      obj.params = obj8;
-      arr1 = items.push(obj);
+      let obj = { name: constants.GUILD_SELECT, params: null };
+      const obj12 = { guildBoostSlots, intent, onResult };
+      obj.params = obj12;
+      items.push(obj);
     }
   });
   const initialStack = tmp.initialStack;
-  const tmp2 = _slicedToArray(first.useState(initialStack[0].name), 2);
-  first = tmp2[0];
-  closure_5 = tmp2[1];
+  [first, closure_5] = first.useState(initialStack[0].name);
   let items = [first];
   useBackPressHandlerDefault(
     first.useCallback(() => {

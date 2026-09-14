@@ -8,8 +8,7 @@ export const updateGuildPremiumSubscriptionCount = function updateGuildPremiumSu
   importDefault = guildId;
   dependencyMap = premiumCount;
   DispatcherDefault.wait(() => {
-    const obj = { type: "APPLIED_GUILD_BOOST_COUNT_UPDATE", guildId, premiumCount };
-    obj.dispatch(obj);
+    DispatcherDefault.dispatch({ type: "APPLIED_GUILD_BOOST_COUNT_UPDATE", guildId, premiumCount });
   });
 };
 export const resetGuildPremiumSubscriptionCount = function resetGuildPremiumSubscriptionCount() {

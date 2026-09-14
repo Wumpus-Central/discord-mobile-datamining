@@ -1,10 +1,13 @@
 // discord_app/modules/application_commands/ApplicationCommandFrecencyHooks.tsx
 import noop from "../../../_runtime/metro/00019__.js";
-import ApplicationCommandFrecencyStore from "ApplicationCommandFrecencyStore.tsx";
+import ApplicationCommandFrecencyStore_mod from "ApplicationCommandFrecencyStore.tsx";
+
+const require = globalThis.__r;
 
 const require = fn;
 let ApplicationCommandFrecencyStore = fn(9421);
 ({ getFilteredTopCommands: c3, getTopRealCommands: closure_4 } = ApplicationCommandFrecencyStore);
+let ApplicationCommandFrecencyStore = ApplicationCommandFrecencyStore_mod;
 const UserSettingsTypes = fn(1084).UserSettingsTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/application_commands/ApplicationCommandFrecencyHooks.tsx");

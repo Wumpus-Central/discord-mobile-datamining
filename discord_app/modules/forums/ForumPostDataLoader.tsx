@@ -6,6 +6,8 @@ import ChannelStore from "../../stores/ChannelStore.tsx";
 import ForumPostMessagesStore from "ForumPostMessagesStore.tsx";
 import ForumPostRecentMessageStore from "ForumPostRecentMessageStore.tsx";
 
+const require = globalThis.__r;
+
 const require = fn;
 function loadForumPostData() {
   const self = this;
@@ -25,8 +27,8 @@ let closure_13 = async function _loadForumPostData() {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -39,16 +41,16 @@ let closure_13 = async function _loadForumPostData() {
           throw value;
         } else if (arg0 === 2) {
           c4 = 3;
-          obj = { value, done: true };
-          return obj;
+          obj3 = { value, done: true };
+          return obj3;
         } else {
           closure_0 = tmp3;
           c3 = 1;
-          if (size.hasNext()) {
+          if (closure_2_10.hasNext()) {
             c1 = 2;
             c4 = 1;
-            const obj1 = { value: closure_128_14(closure_128_10.next()), done: false };
-            return obj1;
+            const obj4 = { value: closure_128_14(closure_128_10.next()), done: false };
+            return obj4;
           } else {
             c3 = 0;
             closure_128_11 = null;
@@ -66,7 +68,7 @@ let closure_13 = async function _loadForumPostData() {
       c3 = 0;
       closure_128_11 = null;
       c4 = 3;
-      obj = { value, done: true };
+      const obj = { value, done: true };
       return obj;
     } catch (tmp19) {
       closure_2 = tmp19;
@@ -97,8 +99,8 @@ let closure_15 = async function _loadForumPostDataForChannelId(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -111,8 +113,8 @@ let closure_15 = async function _loadForumPostDataForChannelId(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c6 = 3;
-          obj = { value, done: true };
-          return obj;
+          obj3 = { value, done: true };
+          return obj3;
         } else {
           closure_2 = tmp4;
           closure_1 = tmp6;
@@ -120,12 +122,12 @@ let closure_15 = async function _loadForumPostDataForChannelId(arg0) {
           closure_129_1 = undefined;
           closure_129_2 = undefined;
           let threads;
-          const nextBatch = size.getNextBatch(closure_0, 10);
+          const nextBatch = closure_2_10.getNextBatch(closure_0, 10);
           closure_129_1 = nextBatch;
           c4 = 2;
           if (0 === nextBatch.length) {
             c4 = 0;
-            size.finishRequesting(closure_0, nextBatch);
+            closure_2_10.finishRequesting(closure_0, nextBatch);
             c6 = 3;
             return { value: "HermesInternal", done: null };
           } else {
@@ -137,18 +139,18 @@ let closure_15 = async function _loadForumPostDataForChannelId(arg0) {
             closure_129_2 = guild_id;
             if (null == guild_id) {
               c4 = 0;
-              size.finishRequesting(closure_0, nextBatch);
+              closure_2_10.finishRequesting(closure_0, nextBatch);
               c6 = 3;
               return { value: "HermesInternal", done: null };
             } else {
               const HTTP = require("HTTPUtils").HTTP;
               const request = { url: Endpoints.FORUM_POSTS(closure_0), body: null, rejectWithError: true };
-              const obj1 = { thread_ids: nextBatch };
-              request.body = obj1;
+              const obj4 = { thread_ids: nextBatch };
+              request.body = obj4;
               c5 = 3;
               c6 = 1;
-              const obj2 = { value: HTTP.post(request), done: false };
-              return obj2;
+              const obj5 = { value: HTTP.post(request), done: false };
+              return obj5;
             }
           }
         }
@@ -167,16 +169,16 @@ let closure_15 = async function _loadForumPostDataForChannelId(arg0) {
           throw value;
         } else if (arg0 !== 2) {
           threads = value.body.threads;
-          obj = closure_130_1(closure_130_2[10]);
-          const obj3 = { type: "LOAD_FORUM_POSTS", guildId: closure_129_2, threads };
-          obj.dispatch(obj3);
+          const obj6 = { type: "LOAD_FORUM_POSTS", guildId: closure_129_2, threads };
+          closure_130_1(closure_130_2[10]).dispatch(obj6);
           c4 = 1;
+          const obj = closure_130_1(closure_130_2[10]);
         }
         c4 = 0;
         closure_130_10.finishRequesting(closure_129_0, closure_129_1);
         c6 = 3;
-        const obj4 = { value, done: true };
-        return obj4;
+        const obj7 = { value, done: true };
+        return obj7;
       }
     } catch (tmp46) {
       closure_3 = tmp46;
@@ -250,7 +252,7 @@ prototype2["finishRequesting"] = function finishRequesting(arg0, nextBatch) {
   const requested = this.requested;
   requested.get(arg0);
   const item = nextBatch.forEach((item) => set.delete(item));
-  size.compact(arg0);
+  obj3.compact(arg0);
 };
 prototype2["getRequested"] = function getRequested(arg0) {
   const requested = this.requested;
@@ -274,13 +276,13 @@ prototype2["compact"] = function compact(arg0) {
     requested2.delete(arg0);
   }
 };
-Object.create(RequestQueue.prototype);
-let size = Object.create(DefaultDict.prototype);
-size._set = {};
-size._defaultValueFunc = () => new Set();
-size.requested = size;
+let obj3 = Object.create(RequestQueue.prototype);
+let obj4 = Object.create(DefaultDict.prototype);
+obj4._set = {};
+obj4._defaultValueFunc = () => new Set();
+obj3.requested = obj4;
 let c11 = null;
-size = fn(2);
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/forums/ForumPostDataLoader.tsx");
 
 export const BATCH_SIZE = 10;
@@ -301,9 +303,9 @@ export const useFirstForumPostMessage = function useFirstForumPostMessage(stateF
   const items = [ForumPostMessagesStore];
   const stateFromStoresObject = require("initialize").useStateFromStoresObject(items, () => ForumPostMessagesStore.getMessage(stateFromStores.id));
   ({ loaded, firstMessage } = stateFromStoresObject);
-  const obj2 = require("initialize");
+  obj3 = require("initialize");
   const items1 = [ChannelStore];
-  stateFromStores = require("initialize").useStateFromStores(items1, () => ChannelStore.getChannel(stateFromStores.parent_id));
+  stateFromStores = obj3.useStateFromStores(items1, () => ChannelStore.getChannel(stateFromStores.parent_id));
   let tmp3 = flag;
   if (flag) {
     tmp3 = null != stateFromStores;
@@ -329,7 +331,7 @@ export const useFirstForumPostMessage = function useFirstForumPostMessage(stateF
           tmp3 = null == tmp2;
         }
         if (tmp3) {
-          size.request(id.id, item);
+          obj3.request(id.id, item);
           c1 = true;
         }
       });
@@ -344,11 +346,11 @@ export const useFirstForumPostMessage = function useFirstForumPostMessage(stateF
     } else {
       closure_129_0 = stateFromStores;
       closure_129_1 = id;
-      if (!size.hasRequested(stateFromStores.id, id)) {
+      if (!obj3.hasRequested(stateFromStores.id, id)) {
         const arr3 = computeThreadIdsSnapshot(stateFromStores.id);
         const findIndexResult = arr3.findIndex((item) => item === importDefault);
         const substr = arr3.slice(findIndexResult, findIndexResult + 5);
-        const found = substr.filter((item) => !size.hasRequested(stateFromStores.id, item));
+        const found = substr.filter((item) => !obj3.hasRequested(stateFromStores.id, item));
         closure_130_0 = stateFromStores;
         closure_130_1 = false;
         const item1 = found.forEach((item) => {
@@ -359,7 +361,7 @@ export const useFirstForumPostMessage = function useFirstForumPostMessage(stateF
             tmp3 = null == tmp2;
           }
           if (tmp3) {
-            size.request(id.id, item);
+            obj3.request(id.id, item);
             c1 = true;
           }
         });
@@ -374,21 +376,19 @@ export const useFirstForumPostMessage = function useFirstForumPostMessage(stateF
       }
     }
   }
-  obj = { loaded, firstMessage: null };
+  const obj4 = { loaded, firstMessage: null };
   let tmp22 = null;
   if (flag) {
     tmp22 = firstMessage;
   }
-  obj.firstMessage = tmp22;
-  return obj;
+  obj4.firstMessage = tmp22;
+  return obj4;
 };
 export const useMostRecentForumMessage = function useMostRecentForumMessage(arg0, arg1) {
   _require = arg1;
-  let obj = require("initialize");
   const items = [ForumPostRecentMessageStore];
-  const stateFromStoresObject = obj.useStateFromStoresObject(items, () => ForumPostRecentMessageStore.getMessageState(id.id));
-  obj = { loaded: stateFromStoresObject.loaded, mostRecentMessage: stateFromStoresObject.message };
-  return obj;
+  const stateFromStoresObject = require("initialize").useStateFromStoresObject(items, () => ForumPostRecentMessageStore.getMessageState(id.id));
+  return { loaded: stateFromStoresObject.loaded, mostRecentMessage: stateFromStoresObject.message };
 };
 export const preloadForumThreads = function preloadForumThreads(channel) {
   const substr = computeThreadIdsSnapshot(channel.id).slice(0, 10);
@@ -402,7 +402,7 @@ export const preloadForumThreads = function preloadForumThreads(channel) {
       tmp3 = null == tmp2;
     }
     if (tmp3) {
-      size.request(id.id, item);
+      obj3.request(id.id, item);
       c1 = true;
     }
   });

@@ -6,6 +6,8 @@ import FavoriteStore from "../favorites/FavoriteStore.tsx";
 import ChannelStore from "../../stores/ChannelStore.tsx";
 import StageChannelParticipantStore from "StageChannelParticipantStore.tsx";
 
+const require = globalThis.__r;
+
 require = fn;
 function transformParticipantToSortedVoiceState(user) {
   ({ voiceState, userNick } = user);

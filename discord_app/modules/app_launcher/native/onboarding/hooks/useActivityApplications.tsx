@@ -10,11 +10,11 @@ export const useActivityApplications = function useActivityApplications(guildId)
   guildId = guildId.guildId;
   const fetchesShelf = guildId.fetchesShelf;
   const items = [fetchesShelf, guildId];
-  const mapped = fetchesShelf(12168)({ guildId }).map((application) => application.application);
+  const mapped = fetchesShelf(12169)({ guildId }).map((application) => application.application);
   const effect = noop.useEffect(() => {
     if (fetchesShelf) {
-      const obj = { guildId };
-      const shelf = obj.fetchShelf(obj);
+      const obj2 = { guildId };
+      const shelf = EmbeddedActivitiesActionCreators.fetchShelf(obj2);
     }
   }, items);
   return mapped;

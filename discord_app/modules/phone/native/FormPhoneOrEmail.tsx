@@ -5,6 +5,8 @@ import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import Pressables from "../../../design/void/Pressables/native/Pressables.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
+const require = globalThis.__r;
+
 require = fn;
 function CountryCodeSelector(alpha2) {
   let str = alpha2.alpha2;
@@ -16,9 +18,9 @@ function CountryCodeSelector(alpha2) {
   const combined = "" + str + " " + countryCode;
   let tmp3 = null;
   if (show) {
-    let obj = { style: tmp.selectorOuterContainer, children: null };
-    obj = { style: tmp.selectorContainer, children: null };
-    obj = {
+    const obj = { style: tmp.selectorOuterContainer, children: null };
+    const obj2 = { style: tmp.selectorContainer, children: null };
+    const obj3 = {
       onPress,
       style: tmp.selectorPressable,
       androidRippleConfig: { borderless: true },
@@ -28,19 +30,19 @@ function CountryCodeSelector(alpha2) {
       children: null,
     };
     const intl = util.intl;
-    obj.accessibilityHint = intl.string(util.t.GwAW3k);
-    const obj1 = {
+    obj3.accessibilityHint = intl.string(util.t.GwAW3k);
+    const obj4 = {
       style: tmp.selectorText,
       variant: "text-md/medium",
       color: "mobile-text-heading-primary",
       children: combined,
     };
-    obj.children = hasOwnProperty(Text_Text.Text, obj1);
-    const items = [hasOwnProperty(Pressables.PressableOpacity, obj)];
-    const obj2 = { style: tmp.separator };
-    items[1] = hasOwnProperty(View, obj2);
-    obj.children = items;
-    obj.children = timestampProducer(View, obj);
+    obj3.children = hasOwnProperty(Text_Text.Text, obj4);
+    const items = [hasOwnProperty(Pressables.PressableOpacity, obj3)];
+    const obj5 = { style: tmp.separator };
+    items[1] = hasOwnProperty(View, obj5);
+    obj2.children = items;
+    obj.children = timestampProducer(View, obj2);
     tmp3 = hasOwnProperty(View, obj);
   }
   return tmp3;
@@ -58,16 +60,20 @@ let obj = {
   selectorContainer: { flex: 1, flexDirection: "row" },
   selectorPressable: { justifyContent: "center" },
   selectorText: { alignSelf: "center" },
-  separator: null,
+  separator: {
+    borderLeftWidth: 1,
+    borderLeftColor: nativeDefault.colors.INTERACTIVE_BACKGROUND_SELECTED,
+    marginHorizontal: 12,
+    marginVertical: -4,
+  },
 };
-obj = {
+let closure_7 = createStyles.createStyles(obj);
+let obj3 = {
   borderLeftWidth: 1,
   borderLeftColor: nativeDefault.colors.INTERACTIVE_BACKGROUND_SELECTED,
   marginHorizontal: 12,
   marginVertical: -4,
 };
-obj.separator = obj;
-let closure_7 = createStyles.createStyles(obj);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/phone/native/FormPhoneOrEmail.tsx");
 
@@ -102,60 +108,61 @@ export default noop.forwardRef((arg0, ref) => {
     }
   }
   const tmp2 = ref();
-  let current = require("PhoneOrEmailUtils");
-  const show = current.shouldShowCountryCodeSelector(forceMode, value);
-  current = { handleChangeText, value };
-  ref = noop.useRef(current);
+  const show = require("PhoneOrEmailUtils").shouldShowCountryCodeSelector(forceMode, value);
+  const obj2 = { handleChangeText, value };
+  ref = noop.useRef(obj2);
   const effect = noop.useEffect(() => {
-    closure_7.current = current;
+    closure_7.current = obj2;
   });
   const items = [countryCode];
   const effect1 = noop.useEffect(() => {
     ref.current.handleChangeText(ref.current.value);
   }, items);
-  current = { style, children: null };
+  const obj3 = { style, children: null };
   let tmp9 = null;
   if (null != label) {
-    const obj1 = { style: tmp2.label, children: label };
-    tmp9 = show(require("FreeFormLabel"), obj1);
+    const obj4 = { style: tmp2.label, children: label };
+    tmp9 = show(require("FreeFormLabel"), obj4);
   }
   const items1 = [tmp9, , ,];
-  const obj2 = {};
+  const obj5 = {};
+  const obj = require("PhoneOrEmailUtils");
+  const tmp7 = obj2;
   const merged1 = Object.assign(merged);
-  obj2.renderLeadingComponent = function renderLeadingComponent() {
+  obj5.renderLeadingComponent = function renderLeadingComponent() {
     return hasOwnProperty(CountryCodeSelector, { show, alpha2, countryCode, onPress });
   };
-  obj2.error = null != error;
-  obj2.ref = ref;
-  obj2.value = value;
+  obj5.error = null != error;
+  obj5.ref = ref;
+  obj5.value = value;
   const items2 = [tmp2.input, textInputStyle];
-  obj2.style = items2;
-  obj2.onChangeText = handleChangeText;
+  obj5.style = items2;
+  obj5.onChangeText = handleChangeText;
   let str = "emailAddress";
   if (forceMode === require("PhoneOrEmailUtils").PhoneOrEmailSelectorForceMode.PHONE) {
     str = "telephoneNumber";
   }
-  obj2.textContentType = str;
+  obj5.textContentType = str;
   let str2 = "email-address";
   if (forceMode === require("PhoneOrEmailUtils").PhoneOrEmailSelectorForceMode.PHONE) {
     str2 = "phone-pad";
   }
-  obj2.keyboardType = str2;
-  obj2.accessibilityLabel = label;
-  obj2.accessibilityHint = hint;
-  items1[1] = show(require("FreeFormTextInput"), obj2);
+  obj5.keyboardType = str2;
+  obj5.accessibilityLabel = label;
+  obj5.accessibilityHint = hint;
+  items1[1] = show(require("FreeFormTextInput"), obj5);
   let tmp12Result = null;
   if (null != error) {
-    const obj3 = { style: tmp2.error, children: error };
-    tmp12Result = tmp12(require("FreeFormErrorLabel"), obj3);
+    const obj6 = { style: tmp2.error, children: error };
+    tmp12Result = tmp12(require("FreeFormErrorLabel"), obj6);
   }
   items1[2] = tmp12Result;
-  tmp12Result = null;
+  let tmp12Result2 = null;
   if (null != hint) {
-    const obj4 = { style: tmp2.hint, variant: "text-xs/medium", color: "text-muted", children: hint };
-    tmp12Result = tmp12(require("Text/Text").Text, obj4);
+    const obj7 = { style: tmp2.hint, variant: "text-xs/medium", color: "text-muted", children: hint };
+    tmp12Result2 = tmp12(require("Text/Text").Text, obj7);
   }
-  items1[3] = tmp12Result;
-  current.children = items1;
-  return current(forceMode, current);
+  items1[3] = tmp12Result2;
+  obj3.children = items1;
+  return tmp7(forceMode, obj3);
 });

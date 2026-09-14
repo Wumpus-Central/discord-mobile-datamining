@@ -8,6 +8,8 @@ import PermissionStore from "../../../stores/PermissionStore.tsx";
 import ReadStateStore from "../../../stores/ReadStateStore.tsx";
 import UserGuildSettingsStore from "../../../stores/UserGuildSettingsStore.tsx";
 
+const require = globalThis.__r;
+
 const require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/favorites/hooks/useFavoritesGuildUnreads.tsx");

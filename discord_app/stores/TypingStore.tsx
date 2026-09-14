@@ -13,12 +13,11 @@ function handleTypingStart(arg0) {
   if (tmp == null) {
     tmp = closure_13;
   }
-  let obj = {};
+  const obj = {};
   const merged = Object.assign(tmp);
   clearTimeout(obj[userId]);
   const timerId = setTimeout(() => {
-    const obj = { type: "TYPING_STOP", channelId, userId, guildId };
-    obj.dispatch(obj);
+    DispatcherDefault.dispatch({ type: "TYPING_STOP", channelId, userId, guildId });
   }, closure_8);
   obj[userId] = timerId;
   dependencyMap[channelId] = obj;
@@ -27,60 +26,60 @@ function handleTypingStart(arg0) {
     if (tmp6 == null) {
       tmp6 = closure_14;
     }
-    obj = {};
+    const obj2 = {};
     const merged1 = Object.assign(tmp6);
-    let tmp10 = obj[channelId];
+    let tmp10 = obj2[channelId];
     if (tmp10 == null) {
       tmp10 = closure_13;
     }
-    obj = {};
+    const obj3 = {};
     const merged2 = Object.assign(tmp10);
     const _clearTimeout = clearTimeout;
-    clearTimeout(obj[userId]);
-    obj[userId] = timerId;
-    obj[channelId] = obj;
-    dependencyMap2[guildId] = obj;
+    clearTimeout(obj3[userId]);
+    obj3[userId] = timerId;
+    obj2[channelId] = obj3;
+    dependencyMap2[guildId] = obj2;
   }
   let tmp16 = undefined !== customTypingIndicatorConfig;
   if (tmp16) {
-    tmp16 = obj1[userId] !== customTypingIndicatorConfig;
+    tmp16 = obj4[userId] !== customTypingIndicatorConfig;
   }
   if (tmp16) {
-    obj1 = {};
-    const merged3 = Object.assign(obj1);
-    obj1[userId] = customTypingIndicatorConfig;
+    obj4 = {};
+    const merged3 = Object.assign(obj4);
+    obj4[userId] = customTypingIndicatorConfig;
   }
 }
 function handleTypingStop(arg0) {
   ({ channelId, userId, guildId } = arg0);
   if (null != dependencyMap[channelId]) {
     if (null != tmp6[userId]) {
-      let obj = {};
+      const obj2 = {};
       const merged = Object.assign(tmp6);
       const _clearTimeout = clearTimeout;
-      clearTimeout(obj[userId]);
+      clearTimeout(obj2[userId]);
       delete tmp5[tmp2];
-      dependencyMap[channelId] = obj;
+      dependencyMap[channelId] = obj2;
       if (null != guildId) {
         if (null != dependencyMap2[guildId]) {
           if (null != tmp27[channelId]) {
             if (null != tmp28[userId]) {
-              obj = {};
+              const obj = {};
               const merged1 = Object.assign(tmp28);
               delete tmp5[tmp2];
-              obj = {};
+              const obj3 = {};
               const merged2 = Object.assign(tmp27);
               const _Object = Object;
               if (0 === Object.keys(obj).length) {
                 delete tmp4[tmp];
               } else {
-                obj[channelId] = obj;
+                obj3[channelId] = obj;
               }
               const _Object2 = Object;
-              if (0 === Object.keys(obj).length) {
+              if (0 === Object.keys(obj3).length) {
                 delete tmp[tmp3];
               } else {
-                dependencyMap2[guildId] = obj;
+                dependencyMap2[guildId] = obj3;
               }
             }
           }
@@ -90,10 +89,10 @@ function handleTypingStop(arg0) {
         const _Object3 = Object;
         const values = Object.values(dependencyMap);
         if (!values.some((item) => userId in item)) {
-          const obj1 = {};
+          const obj4 = {};
           const merged3 = Object.assign(closure_12);
           delete tmp[tmp2];
-          closure_12 = obj1;
+          closure_12 = obj4;
         }
       }
     }
@@ -221,23 +220,23 @@ const typingStore = new TypingStore(DispatcherDefault, {
                     num2 = 0;
                   }
                   if (num > 0) {
-                    id(573);
-                    obj = {
+                    const obj2 = {
                       type: "SLOWMODE_SET_COOLDOWN",
                       channelId,
                       slowmodeType: SlowmodeType.SendMessage,
                       cooldownMs: num,
                     };
-                    obj.dispatch(obj);
+                    id(573).dispatch(obj2);
+                    obj = id(573);
                   }
                   if (num2 > 0) {
-                    obj = {
+                    const obj4 = {
                       type: "SLOWMODE_SET_COOLDOWN",
                       channelId,
                       slowmodeType: SlowmodeType.CreateThread,
                       cooldownMs: num2,
                     };
-                    id(573).dispatch(obj);
+                    id(573).dispatch(obj4);
                     const obj3 = id(573);
                   }
                 }
@@ -248,14 +247,14 @@ const typingStore = new TypingStore(DispatcherDefault, {
         }, num3),
         prevSend: timestamp,
       };
-      obj = { channelId, userId: id, guildId: null };
+      let obj2 = { channelId, userId: id, guildId: null };
       const channel = ChannelStore.getChannel(channelId);
       let guildId;
       if (channel != null) {
         guildId = channel.getGuildId();
       }
-      obj.guildId = guildId;
-      handleTypingStart(obj);
+      obj2.guildId = guildId;
+      handleTypingStart(obj2);
     }
   },
   TYPING_STOP_LOCAL: function handleTypingStopLocal(channelId) {
@@ -308,10 +307,11 @@ const typingStore = new TypingStore(DispatcherDefault, {
       const obj = { channelId, userId: author.id, guildId: null };
       if (guildId == null) {
         const channel = ChannelStore.getChannel(channelId);
-        guildId = undefined;
+        let guildId1;
         if (channel != null) {
-          guildId = channel.getGuildId();
+          guildId1 = channel.getGuildId();
         }
+        guildId = guildId1;
       }
       obj.guildId = guildId;
       tmp9Result = handleTypingStop(obj);

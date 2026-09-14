@@ -44,14 +44,17 @@ export const useBountyVideoProgressPersistence = function useBountyVideoProgress
     closure_5.current = current2;
     if (current3 >= ref.current) {
       tmp.current = current3 + 1;
-      const obj = { timestampSec: current3, maxTimestampSec: current, duration: current2 };
-      const result = obj.setBountyVideoProgress(bountyId, obj);
+      const obj2 = { timestampSec: current3, maxTimestampSec: current, duration: current2 };
+      const result = BountyActionCreators.setBountyVideoProgress(bountyId, obj2);
     }
   }, items);
   const items1 = [bountyId];
   obj.flushProgress = noop.useCallback(() => {
-    const obj = { timestampSec: ref2.current, maxTimestampSec: ref3.current, duration: ref4.current };
-    const result = obj.setBountyVideoProgress(bountyId, obj);
+    const result = BountyActionCreators.setBountyVideoProgress(bountyId, {
+      timestampSec: ref2.current,
+      maxTimestampSec: ref3.current,
+      duration: ref4.current,
+    });
   }, items1);
   return obj;
 };

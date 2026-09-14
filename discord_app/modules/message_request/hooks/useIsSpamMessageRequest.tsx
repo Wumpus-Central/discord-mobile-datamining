@@ -1,6 +1,8 @@
 // discord_app/modules/message_request/hooks/useIsSpamMessageRequest.tsx
 import SpamMessageRequestStore from "../SpamMessageRequestStore.tsx";
 
+const require = globalThis.__r;
+
 const require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/message_request/hooks/useIsSpamMessageRequest.tsx");

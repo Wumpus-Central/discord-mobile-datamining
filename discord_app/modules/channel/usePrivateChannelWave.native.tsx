@@ -3,6 +3,8 @@ import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 import _slicedToArray from "../../../_runtime/metro/00032__.js";
 import noop from "../../../_runtime/metro/00019__.js";
 
+const require = globalThis.__r;
+
 const require = fn;
 const Constants = fn(1074);
 ({ ME: metroRequire, Routes: closure_7 } = Constants);
@@ -12,9 +14,7 @@ const result = size.fileFinishedImporting("modules/channel/usePrivateChannelWave
 
 export default function usePrivateChannelWave(id, arg1) {
   _require = id;
-  const tmp = _slicedToArray(noop.useState(false), 2);
-  const first = tmp[0];
-  dependencyMap = tmp[1];
+  [first, dependencyMap] = noop.useState(false);
   const items = [id.id, first];
   let obj = { waveShouldShow: null, wavePressed: null };
   const callback = noop.useCallback(
@@ -26,8 +26,8 @@ export default function usePrivateChannelWave(id, arg1) {
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
-          let obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           return { value: "HermesInternal", done: null };
         }
@@ -41,24 +41,24 @@ export default function usePrivateChannelWave(id, arg1) {
               throw value;
             } else if (arg0 === 2) {
               c5 = 3;
-              obj = { value, done: true };
-              return obj;
+              const obj5 = { value, done: true };
+              return obj5;
             } else {
               id = tmp7;
               tmp7 = first;
               if (!first) {
                 tmp42(true);
-                let obj3 = id(tmp42[5]);
-                let obj1 = { channelId: id.id, source: "Messages Tab" };
-                obj3.trackWaveCtaClicked(obj1);
+                const obj8 = { channelId: id.id, source: "Messages Tab" };
+                id(tmp42[5]).trackWaveCtaClicked(obj8);
+                const obj4 = id(tmp42[5]);
                 id(tmp42[6]).transitionTo(closure_1_7.CHANNEL(closure_1_6, id.id));
                 c3 = 1;
                 const obj7 = tmp3(tmp42[7]);
-                const obj2 = { location: constants.SEND_WAVE };
+                const obj9 = { location: constants.SEND_WAVE };
                 c4 = 2;
                 c5 = 1;
-                obj3 = { value: obj7.sendStickers(id.id, ["749054660769218631"], "", obj2), done: false };
-                return obj3;
+                const obj10 = { value: obj7.sendStickers(id.id, ["749054660769218631"], "", obj9), done: false };
+                return obj10;
               }
             }
           } else {
@@ -70,12 +70,12 @@ export default function usePrivateChannelWave(id, arg1) {
                 ok = 429 !== closure_128_0.status;
               }
               if (!ok) {
-                obj1 = tmp3(tmp42[8]);
-                const obj4 = { key: "HANDLE_WAVE_PRESS_TOAST", content: null, icon: null };
+                const obj11 = { key: "HANDLE_WAVE_PRESS_TOAST", content: null, icon: null };
                 const intl = id(tmp42[9]).intl;
-                obj4.content = intl.string(id(tmp42[9]).t.Whhv4w);
-                obj4.icon = tmp3(tmp42[10]);
-                obj1.open(obj4);
+                obj11.content = intl.string(id(tmp42[9]).t.Whhv4w);
+                obj11.icon = tmp3(tmp42[10]);
+                tmp3(tmp42[8]).open(obj11);
+                const obj2 = tmp3(tmp42[8]);
               }
             } else if (arg0 === 1) {
               c5 = 3;
@@ -83,7 +83,7 @@ export default function usePrivateChannelWave(id, arg1) {
             } else if (arg0 === 2) {
               c3 = 0;
               c5 = 3;
-              obj = { value, done: true };
+              const obj = { value, done: true };
               return obj;
             } else {
               c3 = 0;

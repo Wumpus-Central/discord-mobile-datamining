@@ -15,11 +15,11 @@ export default noop.memo((visible) => {
   visible = visible.visible;
   const source = visible.source;
   const merged = Object.assign(visible, Object.assign({ visible: 0, style: 0, source: 0 }));
+  playerState = undefined;
+  dependencyMap = undefined;
   _slicedToArray = undefined;
   noop = undefined;
-  let tmp4 = _slicedToArray(noop.useState(visible(8415).PlayerState.UNREADY), 2);
-  const playerState = tmp4[0];
-  dependencyMap = tmp4[1];
+  [playerState, dependencyMap] = noop.useState(visible(8415).PlayerState.UNREADY);
   const tmp6 = _slicedToArray(noop.useState(undefined), 2);
   _slicedToArray = tmp6[1];
   const tmp8 = playerState(8390)(playerState);
@@ -43,22 +43,21 @@ export default noop.memo((visible) => {
       }
       dependencyMap(READY);
     } else if ("onError" === type) {
-      let str = value;
+      let str1 = value;
       if (typeof value === "number") {
-        str = value.toString();
+        str1 = value.toString();
       }
-      str = "2";
-      if ("2" === str) {
+      if ("2" === str1) {
         let str6 = "invalid_parameter";
-      } else if ("5" === str) {
+      } else if ("5" === str1) {
         str6 = "html5_error";
-      } else if ("100" === str) {
+      } else if ("100" === str1) {
         str6 = "video_not_found";
       } else {
         str6 = "embed_not_allowed";
-        if ("101" !== str) {
+        if ("101" !== str1) {
           str6 = "embed_not_allowed";
-          if ("150" !== str) {
+          if ("150" !== str1) {
             str6 = "unknown";
           }
         }
@@ -66,16 +65,16 @@ export default noop.memo((visible) => {
       dependencyMap(MediaModalWebView.PlayerState.ERRORED);
       closure_3(str6);
       const MediaViewerAnalytics = MediaViewerAnalyticsManager.MediaViewerAnalytics;
-      let obj = { platform: "youtube", action: "errored", error: str6 };
+      const obj = { platform: "youtube", action: "errored", error: str6 };
       const result = MediaViewerAnalytics.trackMessageEmbedsActionCompleted(obj);
     } else if ("onStateChange" === type) {
-      obj = { "-1": null, 0: null, 1: null, 2: null, 3: null, 5: null };
-      obj[0] = MediaModalWebView.PlayerState.UNSTARTED;
-      obj[0] = MediaModalWebView.PlayerState.ENDED;
-      obj[1] = MediaModalWebView.PlayerState.PLAYING;
-      obj[2] = MediaModalWebView.PlayerState.PAUSED;
-      obj[3] = MediaModalWebView.PlayerState.BUFFERING;
-      obj[5] = MediaModalWebView.PlayerState.VIDEO_CUED;
+      const obj2 = { "-1": null, 0: null, 1: null, 2: null, 3: null, 5: null };
+      obj2[0] = MediaModalWebView.PlayerState.UNSTARTED;
+      obj2[0] = MediaModalWebView.PlayerState.ENDED;
+      obj2[1] = MediaModalWebView.PlayerState.PLAYING;
+      obj2[2] = MediaModalWebView.PlayerState.PAUSED;
+      obj2[3] = MediaModalWebView.PlayerState.BUFFERING;
+      obj2[5] = MediaModalWebView.PlayerState.VIDEO_CUED;
       let tmp4 = null != tmp35;
       if (tmp4) {
         tmp4 = tmp35 in MediaModalWebView.PlayerState;
@@ -120,23 +119,21 @@ export default noop.memo((visible) => {
       }
     }
   }, items);
-  let obj = visible(8383);
-  let youtubeVideoIdFromURI = obj.getYoutubeVideoIdFromURI(source.uri);
+  let youtubeVideoIdFromURI = visible(8383).getYoutubeVideoIdFromURI(source.uri);
   if (youtubeVideoIdFromURI == null) {
-    let tmp2Result = tmp2(8383);
-    youtubeVideoIdFromURI = tmp2Result.getYoutubeClipVideoIdFromURI(source.uri);
+    youtubeVideoIdFromURI = tmp2(8383).getYoutubeClipVideoIdFromURI(source.uri);
+    const tmp2Result = tmp2(8383);
   }
   if (null == youtubeVideoIdFromURI) {
     return null;
   } else {
     if (playerState === tmp2(8415).PlayerState.ERRORED) {
       if ("embed_not_allowed" === tmp6[0]) {
-        obj = { videoId: youtubeVideoIdFromURI.videoId };
-        return ref(tmp7(13107), obj);
+        let obj2 = { videoId: youtubeVideoIdFromURI.videoId };
+        return ref(tmp7(13108), obj2);
       }
     }
-    tmp2Result = tmp2(1150);
-    let tmp15 = tmp2Result.isAndroid()
+    let tmp15 = tmp2(1363).isAndroid()
       ? {
           nestedScrollEnabled: true,
           overScrollMode: "never",
@@ -144,7 +141,7 @@ export default noop.memo((visible) => {
           mixedContentMode: "compatibility",
         }
       : {};
-    obj = {
+    const obj3 = {
       ref,
       style: visible.style,
       source: null,
@@ -156,6 +153,8 @@ export default noop.memo((visible) => {
     };
     let str2 = "";
     let str3 = "";
+    const tmp16 = ref;
+    const tmp2Result2 = tmp2(1363);
     if (null != youtubeVideoIdFromURI.start) {
       const _HermesInternal = HermesInternal;
       str3 = "'start': " + youtubeVideoIdFromURI.start + ",";
@@ -169,10 +168,10 @@ export default noop.memo((visible) => {
       const _HermesInternal3 = HermesInternal;
       str2 = "'clipt': '" + youtubeVideoIdFromURI.clipt + "',";
     }
-    const obj1 = { html: null, baseUrl: null };
+    const obj4 = { html: null, baseUrl: null };
     const _HermesInternal4 = HermesInternal;
     const _HermesInternal5 = HermesInternal;
-    obj1.html =
+    obj4.html =
       '\n<html>\n  <head>\n    <meta name="viewport" content="initial-scale=1">\n    <style>\n      * {\n        margin: 0;\n        padding: 0;\n        background-color: #000;\n      }\n    </style>\n    <script>' +
       "\nconst tag = document.createElement('script');\ntag.setAttribute('src', \"https://www.youtube.com/iframe_api\");\ndocument.head.appendChild(tag);\n\nfunction onYouTubeIframeAPIReady() {\n  window.player = new YT.Player('player', {\n    height:     '100%',\n    width:      '100%',\n    videoId:    '" +
       youtubeVideoIdFromURI.videoId +
@@ -186,13 +185,14 @@ export default noop.memo((visible) => {
       str3 +
       "\n    },\n    events: {\n      'onReady': (e) => {\n        window.ReactNativeWebView.postMessage(\n          JSON.stringify({type: 'onReady', value: window.player.getPlayerState()})\n        );\n      },\n      'onError': (e) => {\n        window.ReactNativeWebView.postMessage(\n          JSON.stringify({type: 'onError', value: e.data})\n        );\n      },\n      'onStateChange': (e) => {\n        window.ReactNativeWebView.postMessage(\n          JSON.stringify({type: 'onStateChange', value: e.data})\n        );\n      }\n    }\n  });\n}\n" +
       '</script>\n  </head>\n  <body>\n    <div id="player"></div>\n  </body>\n</html>\n';
-    obj1.baseUrl = baseURL;
-    obj.source = obj1;
-    obj.baseURL = baseURL;
-    obj.playerState = playerState;
-    obj.onDataReceived = callback;
+    obj4.baseUrl = baseURL;
+    obj3.source = obj4;
+    obj3.baseURL = baseURL;
+    obj3.playerState = playerState;
+    obj3.onDataReceived = callback;
     const merged1 = Object.assign(tmp15);
     const merged2 = Object.assign(merged);
-    return ref(tmp7(8415), obj, youtubeVideoIdFromURI.videoId);
+    return tmp16(tmp7(8415), obj3, youtubeVideoIdFromURI.videoId);
   }
+  let obj = visible(8383);
 });

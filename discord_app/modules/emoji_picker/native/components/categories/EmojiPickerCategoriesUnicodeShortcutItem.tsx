@@ -9,8 +9,8 @@ const View = fn(17).View;
 const Constants = fn(1074);
 ({ EXPRESSION_FOOTER_HEIGHT: metroRequire, NODE_SIZE } = Constants);
 const jsx = fn(21).jsx;
-fn(4636);
-const createStyles = { itemInner: null, fadedItemOpacity: { opacity: 0.5 } };
+const createStyles = fn(4636);
+let obj2 = { itemInner: null, fadedItemOpacity: { opacity: 0.5 } };
 let size = {
   justifyContent: "center",
   alignItems: "center",
@@ -18,8 +18,8 @@ let size = {
   width: NODE_SIZE,
   borderRadius: NODE_SIZE / 2,
 };
-createStyles.itemInner = size;
-let closure_8 = createStyles.createStyles(createStyles);
+obj2.itemInner = size;
+let closure_8 = createStyles.createStyles(obj2);
 const __initData = {
   code: "function EmojiPickerCategoriesUnicodeShortcutItemTsx1(){const{blockRef}=this.__closure;return blockRef.get();}",
 };
@@ -40,7 +40,6 @@ export default function EmojiPickerCategoriesUnicodeShortcutItem(blockRef) {
   let tmp = onPress(unicodeShortcutVisible.useState(false), 2);
   unicodeShortcutVisible = tmp[0];
   closure_5 = tmp3;
-  blockRef(categoryIndex[6]);
   const fn = function f() {
     return blockRef.get();
   };
@@ -63,22 +62,30 @@ export default function EmojiPickerCategoriesUnicodeShortcutItem(blockRef) {
       tmp = current;
     }
   };
-  let obj = {
+  let obj = blockRef(categoryIndex[6]);
+  fn2.__closure = {
     cheapWorkletShallowEqual: blockRef(categoryIndex[7]).cheapWorkletShallowEqual,
     categoryIndex,
     EXPRESSION_FOOTER_HEIGHT,
     unicodeShortcutVisible,
     runOnJS: blockRef(categoryIndex[6]).runOnJS,
-    setUnicodeShortcutVisible: tmp3,
+    setUnicodeShortcutVisible: tmp[1],
   };
-  fn2.__closure = obj;
   fn2.__workletHash = 4994136030029;
   fn2.__initData = __initData2;
   const animatedReaction = obj.useAnimatedReaction(fn, fn2);
+  const obj2 = {
+    cheapWorkletShallowEqual: blockRef(categoryIndex[7]).cheapWorkletShallowEqual,
+    categoryIndex,
+    EXPRESSION_FOOTER_HEIGHT,
+    unicodeShortcutVisible,
+    runOnJS: blockRef(categoryIndex[6]).runOnJS,
+    setUnicodeShortcutVisible: tmp[1],
+  };
   const items = [categoryIndex, category, onPress];
   let tmp9 = null;
   if (unicodeShortcutVisible) {
-    obj = {
+    const obj3 = {
       style: blockRef.style,
       onPress: tmp8,
       accessibilityRole: "button",
@@ -86,14 +93,14 @@ export default function EmojiPickerCategoriesUnicodeShortcutItem(blockRef) {
       children: null,
     };
     const intl = tmp4(tmp5[9]).intl;
-    obj.accessibilityLabel = intl.string(tmp4(tmp5[9]).t.gg3lOG);
-    const obj1 = { style: null, children: null };
+    obj3.accessibilityLabel = intl.string(tmp4(tmp5[9]).t.gg3lOG);
+    const obj4 = { style: null, children: null };
     const items1 = [,];
     ({ itemInner: arr2[0], fadedItemOpacity: arr2[1] } = tmp7);
-    obj1.style = items1;
-    const obj2 = { id: category.id };
-    obj1.children = jsx(category(tmp5[10]), { id: category.id });
-    obj.children = <closure_5 style={null}>{null}</closure_5>;
+    obj4.style = items1;
+    const obj5 = { id: category.id };
+    obj4.children = jsx(category(tmp5[10]), { id: category.id });
+    obj3.children = <closure_5 style={null}>{null}</closure_5>;
     tmp9 = jsx(tmp4(tmp5[8]).PressableOpacity, {
       style: blockRef.style,
       onPress: tmp8,

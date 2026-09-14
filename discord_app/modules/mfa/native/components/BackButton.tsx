@@ -9,12 +9,12 @@ const result = size.fileFinishedImporting("modules/mfa/native/components/BackBut
 
 export default function BackButton(props) {
   props = props.props;
-  let obj = props(1483);
-  importDefault = obj.useNavigation();
-  obj = { variant: "secondary", text: null, onPress: null };
+  importDefault = props(1483).useNavigation();
+  const obj2 = { variant: "secondary", text: null, onPress: null };
+  const obj = props(1483);
   const intl = props(1114).intl;
-  obj.text = intl.string(props(1114).t.Tot4EC);
-  obj.onPress = function onPress() {
+  obj2.text = intl.string(props(1114).t.Tot4EC);
+  obj2.onPress = function onPress() {
     closure_1.push(MfaStepsTypes.MfaScreens.SELECT, props);
   };
   return jsx(buttonDefault, { variant: "secondary", text: null, onPress: null });

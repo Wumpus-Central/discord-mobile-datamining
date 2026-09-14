@@ -9,11 +9,11 @@ export const getApplicationSubscriptionSystemMessageASTContent =
     ({ application, username, usernameOnClick } = arg0);
     if (null != application) {
       const intl2 = util.intl;
-      let obj = { username, applicationName: application.name, usernameOnClick };
-      let formatToPartsResult = intl2.formatToParts(util.t.Tes5Ou, obj);
+      const obj2 = { username, applicationName: application.name, usernameOnClick };
+      let formatToPartsResult = intl2.formatToParts(util.t.Tes5Ou, obj2);
     } else {
       const intl = util.intl;
-      obj = { username, usernameOnClick };
+      const obj = { username, usernameOnClick };
       formatToPartsResult = intl.formatToParts(util.t.PUJtgi, obj);
     }
     return formatToPartsResult;

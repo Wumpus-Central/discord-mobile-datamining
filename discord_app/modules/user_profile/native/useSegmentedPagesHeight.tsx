@@ -5,6 +5,8 @@ import ReanimatedRexport from "../../reanimated/ReanimatedRexport.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
+const require = globalThis.__r;
+
 require = fn;
 const __initData = {
   code: "function useSegmentedPagesHeightTsx1(){const{pageHeights,visiblePageRange,fillHeight}=this.__closure;var _heights$lo,_heights$hi;const heights=pageHeights.get();const[lo,hi]=visiblePageRange.get();const contentHeight=Math.max((_heights$lo=heights[lo])!==null&&_heights$lo!==void 0?_heights$lo:0,(_heights$hi=heights[hi])!==null&&_heights$hi!==void 0?_heights$hi:0);const height=Math.max(contentHeight,fillHeight);return height>0?{height:height}:{};}",
@@ -13,11 +15,10 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_profile/native/useSegmentedPagesHeight.tsx");
 
 export const usePageHeights = function usePageHeights() {
-  let obj = ReanimatedRexport;
-  const sharedValue = obj.useSharedValue([]);
+  const sharedValue = ReanimatedRexport.useSharedValue([]);
   noop.useRef([]);
   let items = [sharedValue];
-  obj = {
+  return {
     pageHeights: sharedValue,
     handlePageContentSize: noop.useCallback((arg0, arg1, arg2) => {
       let tmp = arg2 <= 0;
@@ -32,7 +33,6 @@ export const usePageHeights = function usePageHeights() {
       }
     }, items),
   };
-  return obj;
 };
 export const usePagerFillHeight = function usePagerFillHeight() {
   const height = useWindowDimensionsDefault().height;
@@ -79,7 +79,8 @@ export const usePagesHeightStyle = function usePagesHeightStyle(segmentedControl
     }
     const bound = Math.max(Math.max(num, num2), num);
     if (bound > 0) {
-      let obj = { height: bound };
+      const obj2 = { height: bound };
+      let obj = obj2;
     } else {
       obj = {};
     }

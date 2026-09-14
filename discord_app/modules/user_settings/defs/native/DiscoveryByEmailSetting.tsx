@@ -27,10 +27,8 @@ const toggle = SettingBuilders.createToggle({
   onValueChange: function onDiscoveryByEmailSettingValueChange(email) {
     const FriendDiscoverySettings = UserSettings.FriendDiscoverySettings;
     const setting = FriendDiscoverySettings.getSetting();
-    let obj = FlagUtils;
-    const hasFlagResult = obj.hasFlag(setting, FriendDiscoveryFlags.FIND_BY_PHONE);
-    obj = { phone: hasFlagResult, email };
-    const result = ContactSyncActionCreatorsDefault.updateDiscoverability(obj);
+    const hasFlagResult = FlagUtils.hasFlag(setting, FriendDiscoveryFlags.FIND_BY_PHONE);
+    const result = ContactSyncActionCreatorsDefault.updateDiscoverability({ phone: hasFlagResult, email });
   },
 });
 let result = size.fileFinishedImporting("modules/user_settings/defs/native/DiscoveryByEmailSetting.tsx");

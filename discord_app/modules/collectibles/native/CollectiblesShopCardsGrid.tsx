@@ -27,11 +27,9 @@ function ShopCardGridItem(index) {
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-fn(4636);
-let createStyles = { rowContainer: null };
-createStyles = { flexDirection: "row", gap: fn(8890).COLLECTIBLES_SHOP_CARD_GAP };
-createStyles.rowContainer = createStyles;
-let closure_8 = createStyles.createStyles(createStyles);
+const createStyles = fn(4636);
+let obj2 = { rowContainer: { flexDirection: "row", gap: fn(8890).COLLECTIBLES_SHOP_CARD_GAP } };
+let closure_8 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/native/CollectiblesShopCardsGrid.tsx");
 
@@ -44,13 +42,12 @@ export default function CollectiblesShopCardsGrid(accessibilityLabel) {
   ({ disableBundleStaticBackground: noop, muteBundleStaticBackground: closure_4 } = accessibilityLabel);
   ({ onScroll, paddingTop, paddingBottom } = accessibilityLabel);
   const rowContainer = closure_8();
-  let obj = products(15916);
-  const cardLayout = obj.useCardLayout();
+  const cardLayout = products(15918).useCardLayout();
   const columns = cardLayout.columns;
   const cardWidth = cardLayout.cardWidth;
   const items = [products, columns];
   const memo = noop.useMemo(() => _modDef12.chunk(products, columns), items);
-  obj = {
+  const obj2 = {
     accessibilityLabel: accessibilityLabel.accessibilityLabel,
     accessibilityRole: "list",
     scrollEnabled,
@@ -59,15 +56,15 @@ export default function CollectiblesShopCardsGrid(accessibilityLabel) {
     contentContainerStyle: null,
     children: null,
   };
-  obj = {
+  let obj = products(15918);
+  obj2.contentContainerStyle = {
     gap: products(8890).COLLECTIBLES_SHOP_CARD_GAP,
     paddingTop,
     paddingBottom,
     width: cardLayout.rowWidth,
     alignSelf: "center",
   };
-  obj.contentContainerStyle = obj;
-  obj.children = memo.map((arr, index) => {
+  obj2.children = memo.map((arr, index) => {
     closure_0 = index;
     return cardWidth(
       muteBundleStaticBackground,
@@ -112,5 +109,5 @@ export default function CollectiblesShopCardsGrid(accessibilityLabel) {
       index,
     );
   });
-  return cardWidth(rowContainer, obj);
+  return cardWidth(rowContainer, obj2);
 }

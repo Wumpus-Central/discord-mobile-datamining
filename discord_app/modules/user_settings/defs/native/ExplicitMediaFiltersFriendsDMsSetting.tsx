@@ -26,16 +26,16 @@ const pressable = SettingBuilders.createPressable({
   },
   onPress: function onObscuredContentFriendsDmOnPress() {
     const intl = util.intl;
+    const obj = SensitiveMediaExplicitRedactionSettingsUtils;
     const stringResult = intl.string(util.t.GYpoAq);
-    let obj = { title: stringResult, subtitle: null, handlePress: null, currentValue: null };
+    const obj3 = { title: stringResult, subtitle: null, handlePress: null, currentValue: null };
     const intl2 = util.intl;
-    obj.subtitle = intl2.string(util.t["+uI23H"]);
-    obj.handlePress = function handlePress(explicitContentFriendDm) {
-      const obj = { explicitContentFriendDm };
-      return obj.updateExplicitContentSetting(obj);
+    obj3.subtitle = intl2.string(util.t["+uI23H"]);
+    obj3.handlePress = function handlePress(explicitContentFriendDm) {
+      return SensitiveMediaExplicitRedactionSettingsUtils.updateExplicitContentSetting({ explicitContentFriendDm });
     };
-    obj.currentValue = obj.getExplicitContentSettingOrDefault().explicitContentFriendDm;
-    const result = ExplicitMediaRedactionNativeUtils.handleSensitiveMediaFilterPress(obj);
+    obj3.currentValue = obj.getExplicitContentSettingOrDefault().explicitContentFriendDm;
+    const result = ExplicitMediaRedactionNativeUtils.handleSensitiveMediaFilterPress(obj3);
   },
   useSearchTerms: function getSearchTerms() {
     const intl = util.intl;

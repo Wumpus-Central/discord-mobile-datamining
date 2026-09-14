@@ -28,16 +28,16 @@ export const useCanGiftProduct = function useCanGiftProduct(product) {
     result = product.type === CollectiblesItemType.CollectiblesItemType.EXTERNAL_SKU;
   }
   if (!result) {
-    let tmpResult = CollectiblesUtils;
     let currency;
     if (result3 != null) {
       currency = result3.currency;
     }
-    result = tmpResult.shouldHideGiftingForCurrency(currency);
+    result = CollectiblesUtils.shouldHideGiftingForCurrency(currency);
+    const tmpResult = CollectiblesUtils;
   }
   if (!result) {
-    tmpResult = BillingPlatformUtils;
-    result = !tmpResult.isCollectibleGiftingSupported();
+    result = !BillingPlatformUtils.isCollectibleGiftingSupported();
+    const tmpResult2 = BillingPlatformUtils;
   }
   return !result;
 };

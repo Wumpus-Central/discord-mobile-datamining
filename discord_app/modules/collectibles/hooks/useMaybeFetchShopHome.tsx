@@ -6,6 +6,8 @@ import ExperimentStore from "../../experiments/ExperimentStore.tsx";
 import CollectiblesCategoryStore from "../CollectiblesCategoryStore.tsx";
 import CollectiblesShopHomeStore from "../CollectiblesShopHomeStore.tsx";
 
+const require = globalThis.__r;
+
 require = fn;
 const noop = fn(19);
 ({ useEffect: c3, useCallback: closure_4, useMemo: hasOwnProperty } = noop);
@@ -27,9 +29,12 @@ export const useMaybeFetchCollectiblesShopHome = function useMaybeFetchCollectib
   closure_8 = undefined;
   let hasExpiredShopBlocks;
   closure_15 = undefined;
-  let obj = require("initialize");
   let items = [hasLoadedExperiments];
-  const stateFromStores = obj.useStateFromStores(items, () => hasLoadedExperiments.hasLoadedExperiments);
+  const stateFromStores = require("initialize").useStateFromStores(
+    items,
+    () => hasLoadedExperiments.hasLoadedExperiments,
+  );
+  let obj = require("initialize");
   const items1 = [skipNumCategories];
   const stateFromStores1 = require("initialize").useStateFromStores(items1, () => skipNumCategories.skipNumCategories);
   const obj2 = require("initialize");
@@ -122,9 +127,10 @@ export const useMaybeFetchCollectiblesShopHome = function useMaybeFetchCollectib
     }
   }, items6);
   const items7 = [HOME, tmp13, memo];
-  obj = {
-    isFetchingShopHome: tmp9,
-    fetchShopHomeError: tmp8,
+  const obj4 = require("useHasExpiredShopBlocks");
+  return {
+    isFetchingShopHome: tmp3[5],
+    fetchShopHomeError: tmp3[4],
     shopBlocks: tmp4,
     refreshShopHome: stateFromStores1(() => {
       const collectiblesShopHome = CollectiblesActionCreators.fetchCollectiblesShopHome(
@@ -134,5 +140,4 @@ export const useMaybeFetchCollectiblesShopHome = function useMaybeFetchCollectib
       );
     }, items7),
   };
-  return obj;
 };

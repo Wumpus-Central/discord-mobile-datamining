@@ -31,10 +31,11 @@ import _mod3620 from "../../../../_runtime/metro/03620__.js";
 import _mod3621 from "../../../../_runtime/metro/03621__.js";
 import _mod3622 from "../../../../_runtime/metro/03622__.js";
 import _mod3623 from "../../../../_runtime/metro/03623__.js";
-import 01155__ from "../../../../_runtime/metro/01155__.js";
+import module_1153_mod from "../../../../_runtime/metro/01153__.js";
 import size from "../../../../_runtime/metro/00002__.js";
 
-const loader = module_1155.createLoader({
+let module_1153 = module_1153_mod;
+const loader = module_1153.createLoader({
   bg() {
     const jsonAsset = AssetJsonUtils.loadJsonAsset(_mod3593);
     return jsonAsset.then((result) => ({ default: result }));
@@ -160,7 +161,8 @@ const loader = module_1155.createLoader({
     return jsonAsset.then((result) => ({ default: result }));
   }
 }, "en-US");
-const messagesProxy = module_1155.makeMessagesProxy(loader);
+let module_1153 = module_1153_mod;
+const messagesProxy = module_1153.makeMessagesProxy(loader);
 const result = size.fileFinishedImporting("modules/custom_typing_indicator/intl/CustomTypingIndicator.messages.js");
 
 export default messagesProxy;

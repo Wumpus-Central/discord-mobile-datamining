@@ -4,8 +4,10 @@ import useKeyboardIsOpen from "../../keyboard/native/useKeyboardIsOpen.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 import subscribeToKeyboardUIStore from "../../keyboard/native/subscribeToKeyboardUIStore.tsx";
 
+const require = globalThis.__r;
+
 require = fn;
-const VoiceMessagesUIStore = fn(12089);
+const VoiceMessagesUIStore = fn(12090);
 ({
   hideVoiceMessagesTooltip: closure_4,
   showVoiceMessagesTooltip: hasOwnProperty,
@@ -46,8 +48,6 @@ export default function useVoiceMessageTooltip() {
       };
     }
   }, items1);
-  let obj = require("useTooltip");
-  const tooltip = obj.useTooltip(ref, memo);
-  obj = { tooltipTargetRef: ref, showVoiceMessagesTooltip };
-  return obj;
+  const tooltip = require("useTooltip").useTooltip(ref, memo);
+  return { tooltipTargetRef: ref, showVoiceMessagesTooltip };
 }

@@ -27,23 +27,23 @@ function productSK2ToIAPProduct(subscription) {
     const _Number = Number;
     const price = subscription.price;
     const NumberResult = Number(price.toFixed(utils_PriceUtils.CurrencyExponents[subscription.currency.toLowerCase(subscription.currency)]));
-    let obj = { identifier: null, price: null, currencySymbol: null, currencyCode: null, priceString: null, countryCode: "", downloadable: false, description: null, title: null, discounts: null };
+    const obj3 = { identifier: null, price: null, currencySymbol: null, currencyCode: null, priceString: null, countryCode: "", downloadable: false, description: null, title: null, discounts: null };
     const _String = String;
-    obj.identifier = String(subscription.id);
-    obj.price = NumberResult;
-    obj.currencySymbol = subscription.displayPrice.split(/[0-9]/)[0];
-    obj.currencyCode = subscription.currency.toLowerCase();
+    obj3.identifier = String(subscription.id);
+    obj3.price = NumberResult;
+    obj3.currencySymbol = subscription.displayPrice.split(/[0-9]/)[0];
+    obj3.currencyCode = subscription.currency.toLowerCase();
     const _String2 = String;
-    obj.priceString = String(NumberResult);
+    obj3.priceString = String(NumberResult);
     ({ description: obj2.description, displayName: obj2.title } = subscription);
-    obj.discounts = items;
-    return obj;
+    obj3.discounts = items;
+    return obj3;
   } else {
     let introductoryOffer = subscription.subscription.introductoryOffer;
     let paymentMode = introductoryOffer.paymentMode;
     if ("freeTrial" === paymentMode) {
       let str2 = "FREETRIAL";
-      obj = { identifier: introductoryOffer.id, type: "SUBSCRIPTION", numberOfPeriods: introductoryOffer.period.value.toString(), price: introductoryOffer.price.toString(), localizedPrice: introductoryOffer.displayPrice, paymentMode: str2, subscriptionPeriod: null };
+      let obj = { identifier: introductoryOffer.id, type: "SUBSCRIPTION", numberOfPeriods: introductoryOffer.period.value.toString(), price: introductoryOffer.price.toString(), localizedPrice: introductoryOffer.displayPrice, paymentMode: str2, subscriptionPeriod: null };
       introductoryOffer = introductoryOffer.period.unit.toUpperCase();
       obj.subscriptionPeriod = introductoryOffer;
       tmp6(obj);
@@ -103,9 +103,7 @@ prototype["fetchProducts"] = function fetchProducts(arg0) {
     _self = arg1;
     const _queue = _self._queue;
     _queue.push(asyncGeneratorStep(async () => {
-      skus(tmp3[4]);
-      const obj1 = { skus };
-      const products = obj1.getProducts(obj1);
+      const products = skus(tmp3[4]).getProducts({ skus });
       await products.then((arr) => {
         const found = arr.filter((type) => "iap" === type.type);
         return found.map((item) => (function mapToIAPProduct() { ... })(item));
@@ -136,8 +134,8 @@ prototype["processQueue"] = function processQueue() {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -150,8 +148,8 @@ prototype["processQueue"] = function processQueue() {
             throw value;
           } else if (arg0 === 2) {
             c5 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
             closure_1 = tmp3;
             closure_0 = tmp7;
@@ -178,15 +176,15 @@ prototype["processQueue"] = function processQueue() {
           c3 = 0;
           closure_129_0._processingQueue = false;
           c5 = 3;
-          obj = { value, done: true };
+          const obj = { value, done: true };
           return obj;
         }
         const _queue = closure_129_0._queue;
         closure_128_0 = _queue.shift();
         c4 = 2;
         c5 = 1;
-        const obj1 = { value: closure_128_0(), done: false };
-        return obj1;
+        const obj4 = { value: closure_128_0(), done: false };
+        return obj4;
       } catch (tmp24) {
         closure_2 = tmp24;
         if (tmp4 === c3) {

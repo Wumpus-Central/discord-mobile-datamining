@@ -1,6 +1,8 @@
 // discord_app/modules/guild_scheduled_events/useEventException.tsx
 import GuildScheduledEventStore from "GuildScheduledEventStore.tsx";
 
+const require = globalThis.__r;
+
 const require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_scheduled_events/useEventException.tsx");

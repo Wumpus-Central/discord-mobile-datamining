@@ -20,10 +20,10 @@ function DraggableContainer(children) {
   }
   const onChangePosition = children.onChangePosition;
   let getClampedPosition;
+  const tmp = closure_11();
+  const sharedValue = require("ReanimatedRexport").useSharedValue(x.get());
   let obj = require("ReanimatedRexport");
-  const sharedValue = obj.useSharedValue(x.get());
-  let obj1 = require("ReanimatedRexport");
-  const sharedValue1 = obj1.useSharedValue(y.get());
+  const sharedValue1 = require("ReanimatedRexport").useSharedValue(y.get());
   const tmp4 = require("useSafeAreaInsetsSharedValue")();
   closure_8 = tmp4;
   const tmp5 = require("useWindowDimensionsSharedValue")();
@@ -41,7 +41,8 @@ function DraggableContainer(children) {
       return point;
     }
   }
-  obj = {
+  let obj2 = require("ReanimatedRexport");
+  C.__closure = {
     windowDimensionsSharedValue: tmp5,
     insetsSharedValue: tmp4,
     clamp: require("ReanimatedRexport").clamp,
@@ -49,13 +50,19 @@ function DraggableContainer(children) {
     contentWidth,
     contentHeight,
   };
-  C.__closure = obj;
   C.__workletHash = 5314404716267;
   C.__initData = __initData;
   let items = [contentHeight, contentWidth, num, tmp4, tmp5];
   getClampedPosition = num.useCallback(C, items);
-  const tmp = closure_11();
-  obj = { onActivate: null, onUpdate: null, onDeactivate: null };
+  let obj3 = {
+    windowDimensionsSharedValue: tmp5,
+    insetsSharedValue: tmp4,
+    clamp: require("ReanimatedRexport").clamp,
+    dragBoundsPadding: num,
+    contentWidth,
+    contentHeight,
+  };
+  const obj5 = { onActivate: null, onUpdate: null, onDeactivate: null };
   const fn = function b() {
     const result = sharedValue.set(closure_0.get());
     const result1 = sharedValue1.set(closure_1.get());
@@ -63,7 +70,7 @@ function DraggableContainer(children) {
   fn.__closure = { originalX: sharedValue, x, originalY: sharedValue1, y };
   fn.__workletHash = 13009482509687;
   fn.__initData = __initData2;
-  obj.onActivate = fn;
+  obj5.onActivate = fn;
   const fn2 = function v(translationX) {
     const sum = sharedValue.get() + translationX.translationX;
     const point = callback(sum, sharedValue1.get() + translationX.translationY);
@@ -73,7 +80,7 @@ function DraggableContainer(children) {
   fn2.__closure = { getClampedPosition, originalX: sharedValue, originalY: sharedValue1, x, y };
   fn2.__workletHash = 3428194988690;
   fn2.__initData = __initData3;
-  obj.onUpdate = fn2;
+  obj5.onUpdate = fn2;
   const fn3 = function f() {
     const point = { x: null, y: null };
     point.x = closure_0.get();
@@ -84,24 +91,24 @@ function DraggableContainer(children) {
   fn3.__closure = point;
   fn3.__workletHash = 15302036225057;
   fn3.__initData = __initData4;
-  obj.onDeactivate = fn3;
-  const panGesture = require("LegacyBaseButton").usePanGesture(obj);
-  const obj4 = require("LegacyBaseButton");
+  obj5.onDeactivate = fn3;
+  const panGesture = require("LegacyBaseButton").usePanGesture(obj5);
+  let obj4 = require("LegacyBaseButton");
   class X {
     constructor() {
       value = closure_0.get();
       tmp2 = closure_10(value, closure_1.get());
       obj = { transform: null };
-      obj = { translateX: null };
+      obj1 = { translateX: null };
       ({ x, y } = tmp2);
       obj3 = closure_0(closure_2[11]);
-      obj.translateX = obj3.withSpring(x, closure_0(closure_2[12]).springUnclamped);
+      obj1.translateX = obj3.withSpring(x, closure_0(closure_2[12]).springUnclamped);
       items = [,];
-      items[0] = obj;
-      obj1 = { translateY: null };
+      items[0] = obj1;
+      obj6 = { translateY: null };
       obj5 = closure_0(closure_2[11]);
-      obj1.translateY = obj5.withSpring(y, closure_0(closure_2[12]).springUnclamped);
-      items[1] = obj1;
+      obj6.translateY = obj5.withSpring(y, closure_0(closure_2[12]).springUnclamped);
+      items[1] = obj6;
       obj.transform = items;
       return obj;
     }
@@ -117,12 +124,12 @@ function DraggableContainer(children) {
   X.__workletHash = 5273315246744;
   X.__initData = __initData5;
   const animatedStyle = require("ReanimatedRexport").useAnimatedStyle(X);
-  obj1 = { gesture: panGesture, children: null };
-  let obj2 = { style: null, children: children.children };
+  const obj6 = { gesture: panGesture, children: null };
+  const obj8 = { style: null, children: children.children };
   const items1 = [tmp.widgetContainer, animatedStyle];
-  obj2.style = items1;
-  obj1.children = sharedValue1(require("ReanimatedRexport").View, obj2);
-  return sharedValue1(require("LegacyBaseButton").GestureDetector, obj1);
+  obj8.style = items1;
+  obj6.children = sharedValue1(require("ReanimatedRexport").View, obj8);
+  return sharedValue1(require("LegacyBaseButton").GestureDetector, obj6);
 }
 function ScreenRecordingPip(surveyConfig) {
   surveyConfig = surveyConfig.surveyConfig;
@@ -131,7 +138,7 @@ function ScreenRecordingPip(surveyConfig) {
   let sharedValue;
   let sharedValue1;
   const tmp = closure_11();
-  let tmp14Result = point;
+  let obj = point;
   const tmp3 = require("useWindowDimensionsSharedValue")();
   _require = tmp3;
   const tmp4 = require("useSafeAreaInsetsSharedValue")();
@@ -155,10 +162,10 @@ function ScreenRecordingPip(surveyConfig) {
   );
   point = tmp9[0];
   let Button = _require;
-  let obj1 = require("ReanimatedRexport");
-  sharedValue = obj1.useSharedValue(point.x);
-  let obj2 = require("ReanimatedRexport");
-  sharedValue1 = obj2.useSharedValue(point.y);
+  const tmp5 = useScreenRecordingStore((isRecording) => isRecording.isRecording);
+  sharedValue = require("ReanimatedRexport").useSharedValue(point.x);
+  const obj2 = require("ReanimatedRexport");
+  sharedValue1 = require("ReanimatedRexport").useSharedValue(point.y);
   const items1 = [, , ,];
   ({ x: arr2[0], y: arr2[1] } = point);
   items1[2] = sharedValue;
@@ -170,72 +177,66 @@ function ScreenRecordingPip(surveyConfig) {
   if (!tmp5) {
     return null;
   } else {
-    point = { x: sharedValue, y: sharedValue1 };
-    const items2 = [closure_7(tmp2(tmp14Result[16]), point)];
-    let point1 = {
+    const point1 = { x: sharedValue, y: sharedValue1 };
+    const items2 = [closure_7(tmp2(obj[16]), point1)];
+    let point2 = {
       x: sharedValue,
       y: sharedValue1,
       contentWidth: v100,
       contentHeight: v100,
-      dragBoundsPadding: tmp2(tmp14Result[6]).space.PX_4,
+      dragBoundsPadding: tmp2(obj[6]).space.PX_4,
       onChangePosition: tmp9[1],
       children: null,
     };
-    tmp14Result = {
-      style: tmp.widget,
-      accessibilityRole: "button",
-      onPress: tmp13,
-      activeOpacity: 0.5,
-      children: null,
-    };
-    const obj = { variant: "text-xs/semibold", color: "text-overlay-light", style: tmp.stepText, children: null };
+    let obj4 = { style: tmp.widget, accessibilityRole: "button", onPress: tmp13, activeOpacity: 0.5, children: null };
+    const obj5 = { variant: "text-xs/semibold", color: "text-overlay-light", style: tmp.stepText, children: null };
     let str = "Uploading...";
     if (!tmp7) {
       const _HermesInternal = HermesInternal;
       str = "Step " + tmp6 + 1;
     }
-    obj.children = str;
-    const items3 = [closure_7(Button(tmp14Result[18]).Text, obj)];
+    obj5.children = str;
+    const items3 = [closure_7(Button(obj[18]).Text, obj5)];
     if (tmp7) {
-      Button = Button(tmp14Result[19]).Button;
-      obj1 = {
+      Button = Button(obj[19]).Button;
+      const obj6 = {
         loading: true,
         text: "",
         onPress() {},
       };
-      let tmp16Result = closure_7(Button, obj1);
+      let tmp16Result = closure_7(Button, obj6);
     } else {
-      obj2 = { style: null, children: null };
+      const obj7 = { style: null, children: null };
       if (isStepCompleted) {
-        obj2.style = tmp.doneButton;
-        obj2.children = closure_7(Button(tmp14Result[20]).CheckmarkLargeIcon, { size: "md", color: "status-positive" });
-        let tmp21 = obj2;
+        obj7.style = tmp.doneButton;
+        obj7.children = closure_7(Button(obj[20]).CheckmarkLargeIcon, { size: "md", color: "status-positive" });
+        let tmp21 = obj7;
       } else {
-        obj2.style = tmp.stopButton;
-        obj2.children = closure_7(Button(tmp14Result[21]).StopIcon, { size: "md", color: "text-feedback-critical" });
-        tmp21 = obj2;
+        obj7.style = tmp.stopButton;
+        obj7.children = closure_7(Button(obj[21]).StopIcon, { size: "md", color: "text-feedback-critical" });
+        tmp21 = obj7;
       }
       tmp16Result = closure_7(View, tmp21);
     }
-    tmp14Result = { children: null };
+    obj = { children: null };
     items3[1] = tmp16Result;
-    tmp14Result.children = items3;
-    tmp14Result = closure_8(Button(tmp14Result[17]).PressableOpacity, tmp14Result);
-    point1.children = tmp14Result;
-    point1 = closure_7(DraggableContainer, point1);
-    items2[1] = point1;
-    tmp14Result.children = items2;
-    tmp14Result = closure_8(closure_9, tmp14Result);
+    obj4.children = items3;
+    obj4 = closure_8(Button(obj[17]).PressableOpacity, obj4);
+    point2.children = obj4;
+    point2 = closure_7(DraggableContainer, point2);
+    items2[1] = point2;
+    obj.children = items2;
+    closure_8(closure_9, obj);
   }
-  tmp5 = useScreenRecordingStore((isRecording) => isRecording.isRecording);
+  const obj3 = require("ReanimatedRexport");
 }
 const View = fn(17).View;
-const useScreenRecordingStore = fn(16027).useScreenRecordingStore;
+const useScreenRecordingStore = fn(16029).useScreenRecordingStore;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
 let c10 = 100;
-fn(4636);
-let createStyles = {
+const createStyles = fn(4636);
+let obj2 = {
   widgetContainer: { position: "absolute" },
   widget: null,
   stepText: null,
@@ -253,17 +254,22 @@ let size = {
   borderRadius: nativeDefault.radii.xl,
 };
 const merged = Object.assign(nativeDefault.shadows.SHADOW_MOBILE_NAVIGATOR_X);
-createStyles.widget = size;
-createStyles.stepText = { textAlign: "center", maxWidth: 68 };
-createStyles = {
+obj2.widget = size;
+obj2.stepText = { textAlign: "center", maxWidth: 68 };
+obj2.stopButton = {
   padding: nativeDefault.space.PX_8,
   borderWidth: 1,
   borderColor: nativeDefault.colors.WHITE,
   borderRadius: nativeDefault.radii.round,
 };
-createStyles.stopButton = createStyles;
-createStyles.doneButton = { padding: nativeDefault.space.PX_8 };
-let closure_11 = createStyles.createStyles(createStyles);
+let obj3 = {
+  padding: nativeDefault.space.PX_8,
+  borderWidth: 1,
+  borderColor: nativeDefault.colors.WHITE,
+  borderRadius: nativeDefault.radii.round,
+};
+obj2.doneButton = { padding: nativeDefault.space.PX_8 };
+let closure_11 = createStyles.createStyles(obj2);
 const __initData = {
   code: "function ScreenRecordingPipTsx1(x,y){const{windowDimensionsSharedValue,insetsSharedValue,clamp,dragBoundsPadding,contentWidth,contentHeight}=this.__closure;const{width:windowWidth,height:windowHeight}=windowDimensionsSharedValue.get();const insets=insetsSharedValue.get();return{x:clamp(x,insets.left+dragBoundsPadding,windowWidth-insets.right-contentWidth-dragBoundsPadding),y:clamp(y,insets.top+dragBoundsPadding,windowHeight-insets.bottom-contentHeight-dragBoundsPadding)};}",
 };

@@ -8,16 +8,24 @@ let c3 = "create-forum-post";
 let result = size.fileFinishedImporting("modules/forums/native/composer/ForumComposerModalActionCreators.tsx");
 
 export const openCreateForumPostModal = function openCreateForumPostModal(guildId) {
-  let obj = { guildId: guildId.guildId, channelId: guildId.parentChannelId, location: guildId.analyticsLocationObject };
-  const result = obj.trackMobileForumComposerOpened(obj);
+  const result = tracking_Tracking.trackMobileForumComposerOpened({
+    guildId: guildId.guildId,
+    channelId: guildId.parentChannelId,
+    location: guildId.analyticsLocationObject,
+  });
   if (!tmp4) {
-    obj = { guildId: null, channelId: null };
     ({ guildId: obj4.guildId, parentChannelId: obj4.channelId } = guildId);
-    const result1 = tracking_Tracking.trackForumCreateNewPostStarted(obj);
+    const result1 = tracking_Tracking.trackForumCreateNewPostStarted({ guildId: null, channelId: null });
+    const obj3 = { guildId: null, channelId: null };
     const tmpResult = tracking_Tracking;
   }
-  ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(10380, dependencyMap.paths), guildId, c3);
+  const obj2 = {
+    guildId: guildId.guildId,
+    channelId: guildId.parentChannelId,
+    location: guildId.analyticsLocationObject,
+  };
   tmp4 = null != guildId.isEdit && guildId.isEdit;
+  ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(10381, dependencyMap.paths), guildId, c3);
 };
 export const closeCreateForumPostModal = function closeCreateForumPostModal() {
   let flag = arg0;

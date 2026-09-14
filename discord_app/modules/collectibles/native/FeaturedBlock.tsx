@@ -13,17 +13,20 @@ function Subblocks(style) {
   style = style.style;
   const subblocks = style.featuredBlock.subblocks;
   return subblocks.map((subblock, tilePosition) => {
-    let obj = { newValue: { tilePosition }, children: null };
-    obj = { style, children: <View newValue={{ tilePosition }}>{null}</View> };
-    obj = { subblock };
-    obj.children = jsx(FeaturedCategorySubblockDefault, { subblock });
-    return jsx(CollectiblesAnalyticsContext.CollectiblesAnalyticsProvider, { subblock }, tilePosition);
+    const obj = { newValue: { tilePosition }, children: null };
+    const obj2 = { style, children: jsx(FeaturedCategorySubblockDefault, { subblock }) };
+    obj.children = <View style={style}>{jsx(FeaturedCategorySubblockDefault, { subblock })}</View>;
+    return jsx(
+      CollectiblesAnalyticsContext.CollectiblesAnalyticsProvider,
+      { newValue: { tilePosition }, children: null },
+      tilePosition,
+    );
   });
 }
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-fn(4636);
-const createStyles = {
+const createStyles = fn(4636);
+let closure_5 = createStyles.createStyles({
   container: {
     display: "flex",
     width: "100%",
@@ -33,33 +36,27 @@ const createStyles = {
     paddingHorizontal: nativeDefault.space.PX_16,
   },
   featuredSubblock: { flex: 1, flexBasis: 400, maxWidth: "100%" },
-};
-let closure_5 = createStyles.createStyles(createStyles);
+});
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/native/FeaturedBlock.tsx");
 
 export default function FeaturedBlock(featuredBlock) {
   const tmp = closure_5();
-  let obj = {
+  const obj = {
     value: useAnalyticsLocationsDefault(AnalyticsLocationDefault.COLLECTIBLES_SHOP_FEATURED_BLOCK).analyticsLocations,
     children: null,
   };
-  obj = {
+  const obj2 = {
     style: tmp.container,
-    children: (
-      <View
-        value={
-          useAnalyticsLocationsDefault(AnalyticsLocationDefault.COLLECTIBLES_SHOP_FEATURED_BLOCK).analyticsLocations
-        }
-      >
-        {null}
-      </View>
-    ),
+    children: <Subblocks featuredBlock={featuredBlock.featuredBlock} style={tmp.featuredSubblock} />,
   };
-  obj = { featuredBlock: featuredBlock.featuredBlock, style: tmp.featuredSubblock };
-  obj.children = <Subblocks featuredBlock={featuredBlock.featuredBlock} style={tmp.featuredSubblock} />;
+  obj.children = (
+    <View style={tmp.container}>
+      <Subblocks featuredBlock={featuredBlock.featuredBlock} style={tmp.featuredSubblock} />
+    </View>
+  );
   return jsx(useAnalyticsLocations.AnalyticsLocationProvider, {
-    featuredBlock: featuredBlock.featuredBlock,
-    style: tmp.featuredSubblock,
+    value: useAnalyticsLocationsDefault(AnalyticsLocationDefault.COLLECTIBLES_SHOP_FEATURED_BLOCK).analyticsLocations,
+    children: null,
   });
 }

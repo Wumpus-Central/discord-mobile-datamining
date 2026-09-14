@@ -1,6 +1,8 @@
 // discord_app/modules/billing/native/subscription/BillingInformation.tsx
 import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 
+const require = globalThis.__r;
+
 const require = fn;
 const SubscriptionStatusTypes = fn(1074).SubscriptionStatusTypes;
 const size = fn(2);
@@ -18,21 +20,21 @@ export const getBillingInformationStringNative = function getBillingInformationS
     flag = false;
   }
   _require = undefined;
-  let obj = require("PremiumUtils");
-  let billingInformationString = obj.getBillingInformationString(
+  let billingInformationString = require("PremiumUtils").getBillingInformationString(
     subscription,
     subscriptionPeriodStart,
     tmp,
     flag,
     fractionalPremiumInfo,
   );
+  let obj = require("PremiumUtils");
   let tmp5 = require("utils/PlatformUtils").isIOS() && subscription.isPurchasedViaApple;
   if (tmp5) {
     tmp5 = subscription.status === SubscriptionStatusTypes.ACTIVE;
   }
   if (tmp5) {
     const intl = tmp2(1114).intl;
-    obj = { renewalDate: subscriptionPeriodStart.subscriptionPeriodStart, onSubscriptionManagementClick: null };
+    let obj3 = { renewalDate: subscriptionPeriodStart.subscriptionPeriodStart, onSubscriptionManagementClick: null };
     _require = asyncGeneratorStep(async () => {
       if (v3 === 2) {
         v3 = 3;
@@ -41,8 +43,8 @@ export const getBillingInformationStringNative = function getBillingInformationS
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
-          let obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           return { value: "HermesInternal", done: null };
         }
@@ -55,22 +57,20 @@ export const getBillingInformationStringNative = function getBillingInformationS
               throw value;
             } else if (arg0 === 2) {
               v3 = 3;
-              obj = { value, done: true };
-              return obj;
+              const obj4 = { value, done: true };
+              return obj4;
             } else {
-              let obj1 = v3(c1[5]);
               c1 = 1;
               v3 = 1;
-              obj1 = { value: null, done: false };
-              obj1.value = obj1.manageSubscription();
-              return obj1;
+              const obj5 = { value: v3(c1[5]).manageSubscription(), done: false };
+              return obj5;
             }
           } else if (arg0 === 1) {
             v3 = 3;
             throw value;
           } else if (arg0 === 2) {
             v3 = 3;
-            obj = { value, done: true };
+            const obj = { value, done: true };
             return obj;
           } else {
             v3 = 3;
@@ -82,7 +82,7 @@ export const getBillingInformationStringNative = function getBillingInformationS
         }
       }
     });
-    obj.onSubscriptionManagementClick = function () {
+    obj3.onSubscriptionManagementClick = function () {
       const self = this;
       const apply = closure_0.apply;
       if (typeof apply === "unknown") {
@@ -92,7 +92,7 @@ export const getBillingInformationStringNative = function getBillingInformationS
       }
       return applyArgumentsResult;
     };
-    billingInformationString = intl.format(tmp2(1114).t.gknRR3, obj);
+    billingInformationString = intl.format(tmp2(1114).t.gknRR3, obj3);
   }
   return billingInformationString;
 };

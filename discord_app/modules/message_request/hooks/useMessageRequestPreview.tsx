@@ -25,8 +25,8 @@ let closure_11 = async function _loadMessageRequestData() {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -39,8 +39,8 @@ let closure_11 = async function _loadMessageRequestData() {
           throw value;
         } else if (arg0 === 2) {
           c4 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj4 = { value, done: true };
+          return obj4;
         } else {
           closure_0 = tmp3;
           c3 = 1;
@@ -64,13 +64,13 @@ let closure_11 = async function _loadMessageRequestData() {
         c4 = 3;
         throw value;
       } else if (arg0 !== 2) {
-        obj = closure_128_1(closure_128_2[6]);
+        closure_128_1(closure_128_2[6]);
       }
       c3 = 0;
       closure_128_9 = null;
       c4 = 3;
-      const obj1 = { value, done: true };
-      return obj1;
+      const obj5 = { value, done: true };
+      return obj5;
     } catch (tmp23) {
       closure_2 = tmp23;
       if (tmp4 === c3) {
@@ -100,8 +100,8 @@ let closure_13 = async function _loadMessageRequestDataHelper() {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -115,8 +115,8 @@ let closure_13 = async function _loadMessageRequestDataHelper() {
           throw value;
         } else if (arg0 === 2) {
           c11 = 3;
-          obj = { value, done: true };
-          return obj;
+          let obj3 = { value, done: true };
+          return obj3;
         } else {
           closure_7 = tmp;
           closure_6 = tmp4;
@@ -129,12 +129,12 @@ let closure_13 = async function _loadMessageRequestDataHelper() {
           c9 = 2;
           let HTTP = HTTPUtils.HTTP;
           let request = { url: constants.MESSAGE_REQUESTS_SUPPLEMENTAL_DATA, query: null, rejectWithError: true };
-          let obj1 = { channel_ids: substr };
-          request.query = obj1;
+          let obj5 = { channel_ids: substr };
+          request.query = obj5;
           c10 = 3;
           c11 = 1;
-          let obj2 = { value: HTTP.get(request), done: false };
-          return obj2;
+          let obj6 = { value: HTTP.get(request), done: false };
+          return obj6;
         }
       } else if (1 === tmp4) {
         c9 = 0;
@@ -149,10 +149,10 @@ let closure_13 = async function _loadMessageRequestDataHelper() {
         throw closure_1_8;
       } else {
         if (2 === tmp4) {
-          closure_135_1(closure_135_2[8]);
-          let obj3 = { type: "LOAD_MESSAGE_REQUESTS_SUPPLEMENTAL_DATA_ERROR", requestedChannelIds: null };
-          obj3.requestedChannelIds = closure_134_0;
-          let dispatchResult = obj3.dispatch(obj3);
+          let obj4 = closure_135_1(closure_135_2[8]);
+          let obj7 = { type: "LOAD_MESSAGE_REQUESTS_SUPPLEMENTAL_DATA_ERROR", requestedChannelIds: null };
+          obj7.requestedChannelIds = closure_134_0;
+          let dispatchResult = obj4.dispatch(obj7);
           c9 = 0;
           closure_5 = closure_134_0;
           MessageStore = closure_134_0[Symbol.iterator]();
@@ -162,15 +162,15 @@ let closure_13 = async function _loadMessageRequestDataHelper() {
             throw value;
           } else if (arg0 !== 2) {
             closure_134_1 = value;
-            obj = closure_135_1(closure_135_2[8]);
-            let obj4 = {
+            let obj = closure_135_1(closure_135_2[8]);
+            let obj8 = {
               type: "LOAD_MESSAGE_REQUESTS_SUPPLEMENTAL_DATA_SUCCESS",
               requestedChannelIds: null,
               supplementalData: null,
             };
-            obj4.requestedChannelIds = closure_134_0;
-            obj4.supplementalData = closure_134_1.body;
-            let dispatchResult1 = obj.dispatch(obj4);
+            obj8.requestedChannelIds = closure_134_0;
+            obj8.supplementalData = closure_134_1.body;
+            let dispatchResult1 = obj.dispatch(obj8);
             c9 = 1;
           }
         } else if (4 === tmp4) {
@@ -196,8 +196,8 @@ let closure_13 = async function _loadMessageRequestDataHelper() {
           continue;
         }
         c11 = 3;
-        let obj5 = { value, done: true };
-        return obj5;
+        let obj9 = { value, done: true };
+        return obj9;
       }
     }
   }

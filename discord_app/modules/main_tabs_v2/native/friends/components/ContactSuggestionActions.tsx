@@ -13,21 +13,21 @@ const jsxProd = fn(21);
 let obj = { duration: 200, easing: null };
 const Easing = fn(4373).Easing;
 obj.easing = Easing.in(fn(4373).Easing.quad);
-obj = { duration: 250, easing: null };
+let obj2 = { duration: 250, easing: null };
 const Easing2 = fn(4373).Easing;
-obj.easing = Easing2.in(fn(4373).Easing.quad);
-obj = { duration: 250, easing: null };
+obj2.easing = Easing2.in(fn(4373).Easing.quad);
+let obj3 = { duration: 250, easing: null };
 const Easing3 = fn(4373).Easing;
-obj.easing = Easing3.in(fn(4373).Easing.quad);
-let obj1 = { duration: 250, easing: null };
+obj3.easing = Easing3.in(fn(4373).Easing.quad);
+let obj4 = { duration: 250, easing: null };
 const Easing4 = fn(4373).Easing;
-obj1.easing = Easing4.out(fn(4373).Easing.quad);
+obj4.easing = Easing4.out(fn(4373).Easing.quad);
 const SPRING_CONFIG = { mass: 1, stiffness: 172, damping: 17.3 };
 const createStyles = fn(4636);
-let obj2 = {
+let obj6 = {
   icon: { position: "absolute", top: 4, zIndex: 2, color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT, opacity: 0 },
 };
-let closure_12 = createStyles.createStyles(obj2);
+let closure_12 = createStyles.createStyles(obj6);
 const __initData = {
   code: "function ContactSuggestionActionsTsx1(){const{right,opacity,scale}=this.__closure;return{right:right.get(),opacity:opacity.get(),transform:[{scale:scale.get()}]};}",
 };
@@ -60,14 +60,13 @@ export const ContactSuggestionActions = function ContactSuggestionActions(user) 
   }
   const animate = user.animate;
   const tmp = closure_12();
-  let __closure = user(onAddSuggestion[3]);
-  const sharedValue = __closure.useSharedValue(30);
-  let obj1 = user(onAddSuggestion[3]);
-  const sharedValue1 = obj1.useSharedValue(0.5);
+  const sharedValue = user(onAddSuggestion[3]).useSharedValue(30);
+  let obj = user(onAddSuggestion[3]);
+  const sharedValue1 = user(onAddSuggestion[3]).useSharedValue(0.5);
   let obj2 = user(onAddSuggestion[3]);
-  const sharedValue2 = obj2.useSharedValue(0);
-  let obj3 = user(onAddSuggestion[3]);
-  const sharedValue3 = obj3.useSharedValue(1);
+  const sharedValue2 = user(onAddSuggestion[3]).useSharedValue(0);
+  let obj4 = user(onAddSuggestion[3]);
+  const sharedValue3 = obj4.useSharedValue(1);
   let items = [onFinishAnimation, user];
   const SCALE_CONFIG = onFinishAnimation.useCallback(() => {
     if (null != onFinishAnimation) {
@@ -77,18 +76,18 @@ export const ContactSuggestionActions = function ContactSuggestionActions(user) 
       }, 1000);
     }
   }, items);
-  let obj4 = user(onAddSuggestion[3]);
+  obj3 = user(onAddSuggestion[3]);
   let fn = function b() {
-    obj = { right: sharedValue.get(), opacity: sharedValue2.get(), transform: null };
-    obj = { scale: sharedValue1.get() };
-    const items = [obj];
+    const obj = { right: sharedValue.get(), opacity: sharedValue2.get(), transform: null };
+    const items = [{ scale: sharedValue1.get() }];
     obj.transform = items;
     return obj;
   };
   fn.__closure = { right: sharedValue, opacity: sharedValue2, scale: sharedValue1 };
   fn.__workletHash = 13774422449074;
   fn.__initData = __initData;
-  const animatedStyle = obj4.useAnimatedStyle(fn);
+  const animatedStyle = user(onAddSuggestion[3]).useAnimatedStyle(fn);
+  let obj5 = user(onAddSuggestion[3]);
   class E {
     constructor() {
       obj = { opacity: closure_8.get() };
@@ -149,12 +148,12 @@ export const ContactSuggestionActions = function ContactSuggestionActions(user) 
           tmp31 = closure_11;
           fn = function n(arg0) {
             if (arg0) {
-              let __closure = user(onAddSuggestion[3]);
+              let obj = user(onAddSuggestion[3]);
               const result = sharedValue2.set(
-                __closure.withDelay(1000, user(onAddSuggestion[7]).withTiming(0, sharedValue3)),
+                obj.withDelay(1000, user(onAddSuggestion[7]).withTiming(0, sharedValue3)),
               );
               const obj2 = user(onAddSuggestion[7]);
-              const obj3 = user(onAddSuggestion[3]);
+              obj3 = user(onAddSuggestion[3]);
               const result1 = sharedValue1.set(
                 obj3.withDelay(1000, user(onAddSuggestion[7]).withTiming(0.5, callback)),
               );
@@ -163,11 +162,11 @@ export const ContactSuggestionActions = function ContactSuggestionActions(user) 
               const fn = function n(arg0) {
                 if (arg0) {
                   user(onAddSuggestion[3]).runOnJS(finishAnimationCallback)();
-                  obj = user(onAddSuggestion[3]);
+                  const obj = user(onAddSuggestion[3]);
                 }
               };
-              __closure = { runOnJS: user(onAddSuggestion[3]).runOnJS, finishAnimationCallback };
-              fn.__closure = __closure;
+              const obj7 = { runOnJS: user(onAddSuggestion[3]).runOnJS, finishAnimationCallback };
+              fn.__closure = obj7;
               fn.__workletHash = 5242616772399;
               fn.__initData = __initData2;
               const result2 = sharedValue.set(
@@ -179,7 +178,7 @@ export const ContactSuggestionActions = function ContactSuggestionActions(user) 
               const obj5 = user(onAddSuggestion[3]);
             }
           };
-          obj = {
+          obj1 = {
             opacity: null,
             withDelay: null,
             withTiming: null,
@@ -191,26 +190,26 @@ export const ContactSuggestionActions = function ContactSuggestionActions(user) 
             runOnJS: null,
             finishAnimationCallback: null,
           };
-          obj.opacity = closure_7;
+          obj1.opacity = closure_7;
           tmp32 = closure_0;
           tmp33 = closure_2;
-          obj.withDelay = closure_0(closure_2[3]).withDelay;
+          obj1.withDelay = closure_0(closure_2[3]).withDelay;
           tmp34 = closure_0;
           tmp35 = closure_2;
-          obj.withTiming = closure_0(closure_2[7]).withTiming;
+          obj1.withTiming = closure_0(closure_2[7]).withTiming;
           tmp36 = closure_8;
-          obj.OPACITY_OUT_CONFIG = closure_8;
-          obj.scale = closure_6;
-          obj.SCALE_CONFIG = closure_9;
-          obj.right = closure_5;
+          obj1.OPACITY_OUT_CONFIG = closure_8;
+          obj1.scale = closure_6;
+          obj1.SCALE_CONFIG = closure_9;
+          obj1.right = closure_5;
           tmp37 = closure_10;
-          obj.TRANSLATE_OUT_CONFIG = closure_10;
+          obj1.TRANSLATE_OUT_CONFIG = closure_10;
           tmp38 = closure_0;
           tmp39 = closure_2;
-          obj.runOnJS = closure_0(closure_2[3]).runOnJS;
+          obj1.runOnJS = closure_0(closure_2[3]).runOnJS;
           tmp40 = closure_9;
-          obj.finishAnimationCallback = closure_9;
-          fn.__closure = obj;
+          obj1.finishAnimationCallback = closure_9;
+          fn.__closure = obj1;
           num7 = 9570116008915;
           fn.__workletHash = 9570116008915;
           tmp41 = closure_17;
@@ -244,7 +243,8 @@ export const ContactSuggestionActions = function ContactSuggestionActions(user) 
       return;
     }
   }
-  __closure = {
+  let obj7 = user(onAddSuggestion[3]);
+  D.__closure = {
     animate,
     runOnJS: user(onAddSuggestion[3]).runOnJS,
     finishAnimationCallback: SCALE_CONFIG,
@@ -259,26 +259,44 @@ export const ContactSuggestionActions = function ContactSuggestionActions(user) 
     SPRING_CONFIG,
     withDelay: user(onAddSuggestion[3]).withDelay,
     OPACITY_OUT_CONFIG: sharedValue3,
-    TRANSLATE_OUT_CONFIG: obj1,
+    TRANSLATE_OUT_CONFIG: obj4,
   };
-  D.__closure = __closure;
   D.__workletHash = 6602847520399;
   D.__initData = __initData4;
-  const animatedReaction = user(onAddSuggestion[3]).useAnimatedReaction(fn2, D);
-  __closure = { children: null };
-  obj1 = { pointerEvents: "none", style: null, children: null };
+  const animatedReaction = obj7.useAnimatedReaction(fn2, D);
+  const obj9 = { children: null };
+  const obj10 = { pointerEvents: "none", style: null, children: null };
   const items2 = [tmp.icon, animatedStyle];
-  obj1.style = items2;
-  obj2 = { source: added(onAddSuggestion[10]), color: tmp.icon.color };
-  obj1.children = sharedValue(user(onAddSuggestion[9]).Icon, obj2);
-  const items3 = [sharedValue(added(onAddSuggestion[3]).View, obj1)];
-  obj3 = { style: animatedStyle1, children: null };
-  obj4 = { variant: "secondary", size: str, grow: false, text: null, onPress: null };
+  obj10.style = items2;
+  const obj8 = {
+    animate,
+    runOnJS: user(onAddSuggestion[3]).runOnJS,
+    finishAnimationCallback: SCALE_CONFIG,
+    scale: sharedValue1,
+    withTiming: user(onAddSuggestion[7]).withTiming,
+    SCALE_CONFIG,
+    opacity: sharedValue2,
+    OPACITY_CONFIG: sharedValue2,
+    buttonOpacity: sharedValue3,
+    right: sharedValue,
+    withSpring: user(onAddSuggestion[8]).withSpring,
+    SPRING_CONFIG,
+    withDelay: user(onAddSuggestion[3]).withDelay,
+    OPACITY_OUT_CONFIG: sharedValue3,
+    TRANSLATE_OUT_CONFIG: obj4,
+  };
+  obj10.children = sharedValue(user(onAddSuggestion[9]).Icon, {
+    source: added(onAddSuggestion[10]),
+    color: tmp.icon.color,
+  });
+  const items3 = [sharedValue(added(onAddSuggestion[3]).View, obj10)];
+  const obj12 = { style: animatedStyle1, children: null };
+  const obj13 = { variant: "secondary", size: str, grow: false, text: null, onPress: null };
   const intl = user(onAddSuggestion[12]).intl;
-  obj4.text = intl.string(user(onAddSuggestion[12]).t.OYkgVk);
-  obj4.onPress = callback1;
-  obj3.children = sharedValue(user(onAddSuggestion[11]).Button, obj4);
-  items3[1] = sharedValue(added(onAddSuggestion[3]).View, obj3);
-  __closure.children = items3;
-  return sharedValue1(animate, __closure);
+  obj13.text = intl.string(user(onAddSuggestion[12]).t.OYkgVk);
+  obj13.onPress = callback1;
+  obj12.children = sharedValue(user(onAddSuggestion[11]).Button, obj13);
+  items3[1] = sharedValue(added(onAddSuggestion[3]).View, obj12);
+  obj9.children = items3;
+  return sharedValue1(animate, obj9);
 };

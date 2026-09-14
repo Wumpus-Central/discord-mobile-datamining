@@ -45,7 +45,7 @@ export const IntlLink = function IntlLink(children) {
   }
   const tmp = target;
   const tmp3 = closure_5(noop.useContext(target(4357).AccessibilityPreferencesContext).alwaysShowLinkDecorations);
-  return jsx(tmp(1178).LegacyText, {
+  return jsx(tmp(1176).LegacyText, {
     accessible: true,
     accessibilityRole: str,
     onPress: fn,

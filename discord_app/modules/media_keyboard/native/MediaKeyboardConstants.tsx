@@ -4,15 +4,16 @@ import MetaQuestUtils from "../../device/MetaQuestUtils.android.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
 if (MetaQuestUtils.isMetaQuest()) {
-  let obj = {
+  const obj = {
     slotHeight: 24,
     barColor: nativeDefault.colors.BACKGROUND_MOD_STRONG,
     barWidth: nativeDefault.space.PX_64,
     barHeight: nativeDefault.space.PX_8,
     barMarginTop: nativeDefault.space.PX_16,
   };
+  let obj2 = obj;
 } else {
-  obj = {
+  obj2 = {
     slotHeight: 16,
     barColor: nativeDefault.colors.BACKGROUND_MOD_MUTED,
     barWidth: nativeDefault.space.PX_32,
@@ -22,8 +23,8 @@ if (MetaQuestUtils.isMetaQuest()) {
 }
 const result = size.fileFinishedImporting("modules/media_keyboard/native/MediaKeyboardConstants.tsx");
 
-export const DRAG_HANDLE = obj;
-export const HEADER_HANDLE_HEIGHT = obj.slotHeight;
+export const DRAG_HANDLE = obj2;
+export const HEADER_HANDLE_HEIGHT = obj2.slotHeight;
 export const MediaKeyboardTarget = {
   CHAT: 0,
   [0]: "CHAT",

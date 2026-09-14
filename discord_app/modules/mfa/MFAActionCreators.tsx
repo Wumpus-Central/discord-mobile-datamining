@@ -3,6 +3,8 @@ import MFAConstants from "MFAConstants.tsx";
 import MFA from "../../../discord_common/js/shared/MFA.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
+const require = globalThis.__r;
+
 const SELECT_NAMES = MFAConstants.SELECT_NAMES;
 const result = size.fileFinishedImporting("modules/mfa/MFAActionCreators.tsx");
 

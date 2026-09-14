@@ -6,6 +6,8 @@ import noop from "../../../_runtime/metro/00019__.js";
 import FamilyCenterStore from "../parent_tools/FamilyCenterStore.tsx";
 import UserStore from "../../stores/UserStore.tsx";
 
+const require = globalThis.__r;
+
 require = fn;
 const UserLinkStatus = fn(7641).UserLinkStatus;
 const size = fn(2);
@@ -101,11 +103,10 @@ export const usePendingRequestListController = function usePendingRequestListCon
   c6 = undefined;
   c7 = undefined;
   let callback;
-  let obj = useUserLinks;
-  const hasMaxConnections = obj.useHasMaxConnections();
-  [tmp4, c2] = _slicedToArray(noop.useState(null), 2);
+  const hasMaxConnections = useUserLinks.useHasMaxConnections();
+  [tmp4, c2] = noop.useState(null);
   const tmp3 = _slicedToArray(noop.useState(null), 2);
-  obj = {
+  const familyCenterActions = useFamilyCenterActions.useFamilyCenterActions({
     onSuccess() {
       return _undefined(null);
     },
@@ -113,8 +114,7 @@ export const usePendingRequestListController = function usePendingRequestListCon
       _undefined(null);
       dependencyMap();
     },
-  };
-  const familyCenterActions = useFamilyCenterActions.useFamilyCenterActions(obj);
+  });
   const acceptLinkRequest = familyCenterActions.acceptLinkRequest;
   const declineLinkRequest = familyCenterActions.declineLinkRequest;
   ({ isAcceptLoading, isDeclineLoading } = familyCenterActions);
@@ -123,11 +123,16 @@ export const usePendingRequestListController = function usePendingRequestListCon
     tmp6 = isDeclineLoading;
   }
   isDeclineLoading = tmp6;
-  let tmp2Result = _slicedToArray(
-    noop.useState(() => new Set()),
-    2,
-  );
-  [c6, c7] = tmp2Result;
+  const obj4 = {
+    onSuccess() {
+      return _undefined(null);
+    },
+    onError() {
+      _undefined(null);
+      dependencyMap();
+    },
+  };
+  [c6, c7] = noop.useState(() => new Set());
   callback = noop.useCallback((arg0) => {
     closure_0 = arg0;
     _undefined3((has) => {
@@ -157,12 +162,16 @@ export const usePendingRequestListController = function usePendingRequestListCon
       declineLinkRequest(arg0);
     }
   }, items1);
-  tmp2Result = _slicedToArray(noop.useState(pendingRequests), 2);
-  [tmp12, tmp13] = tmp2Result;
-  [tmp15, tmp16] = _slicedToArray(noop.useState(pendingRequests), 2);
-  const tmp2Result1 = _slicedToArray(noop.useState(pendingRequests), 2);
+  const tmp2Result = _slicedToArray(
+    noop.useState(() => new Set()),
+    2,
+  );
+  [tmp12, tmp13] = noop.useState(pendingRequests);
+  const tmp2Result4 = _slicedToArray(noop.useState(pendingRequests), 2);
+  [tmp15, tmp16] = noop.useState(pendingRequests);
+  const tmp2Result5 = _slicedToArray(noop.useState(pendingRequests), 2);
   if (linkedUsersProcessed) {
-    if (!tmp2Result2[0]) {
+    if (!tmp2Result6[0]) {
       tmp18(true);
       tmp16(pendingRequests);
       tmp13((arg0) => {
@@ -183,7 +192,7 @@ export const usePendingRequestListController = function usePendingRequestListCon
         return Array.from(map.values());
       });
     }
-    obj = {
+    const obj5 = {
       seenRequests: tmp12,
       hasMaxConnections,
       actioningUserId: tmp4,
@@ -193,7 +202,7 @@ export const usePendingRequestListController = function usePendingRequestListCon
       handleAccept: callback1,
       handleDecline: callback2,
     };
-    return obj;
+    return obj5;
   }
   if (pendingRequests !== tmp15) {
     tmp16(pendingRequests);
@@ -211,13 +220,12 @@ export const usePendingRequestListController = function usePendingRequestListCon
       return Array.from(map.values());
     });
   }
-  tmp2Result2 = _slicedToArray(noop.useState(linkedUsersProcessed), 2);
+  tmp2Result6 = _slicedToArray(noop.useState(linkedUsersProcessed), 2);
 };
 export const usePendingRequestResolution = function usePendingRequestResolution(parent_id) {
   _require = parent_id;
-  let obj = require("initialize");
   const items = [FamilyCenterStore];
-  stateFromStores = obj.useStateFromStores(items, () => {
+  stateFromStores = require("initialize").useStateFromStores(items, () => {
     const tmp = FamilyCenterStore.getLinkedUsers()[closure_0];
     let link_status;
     if (tmp != null) {
@@ -225,21 +233,19 @@ export const usePendingRequestResolution = function usePendingRequestResolution(
     }
     return link_status;
   });
-  [tmp3, tmp4] = _slicedToArray(
-    noop.useState(() => {
-      let str = "connected";
-      if (stateFromStores !== UserLinkStatus.ACTIVE) {
-        if (null == stateFromStores) {
-          let str2 = null;
-        } else {
-          str2 = "declined";
-        }
-        str = str2;
+  const obj = require("initialize");
+  [tmp3, tmp4] = noop.useState(() => {
+    let str = "connected";
+    if (stateFromStores !== UserLinkStatus.ACTIVE) {
+      if (null == stateFromStores) {
+        let str2 = null;
+      } else {
+        str2 = "declined";
       }
-      return str;
-    }),
-    2,
-  );
+      str = str2;
+    }
+    return str;
+  });
   const tmp5 = _slicedToArray(noop.useState(stateFromStores), 2);
   const first = tmp5[0];
   if (stateFromStores !== first) {
@@ -260,10 +266,10 @@ export const usePendingRequestResolution = function usePendingRequestResolution(
     }
   }
   let tmp16 = "connected" === tmp3;
-  obj = { isConnected: tmp16, isDeclined: tmp17, isResolved: null };
+  const obj2 = { isConnected: tmp16, isDeclined: "declined" === tmp3, isResolved: null };
   if (!tmp16) {
     tmp16 = tmp17;
   }
-  obj.isResolved = tmp16;
-  return obj;
+  obj2.isResolved = tmp16;
+  return obj2;
 };

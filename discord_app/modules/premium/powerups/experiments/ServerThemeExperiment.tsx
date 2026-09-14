@@ -5,7 +5,7 @@ import createExperiment from "../../../experiments/index.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
 
 const EMPTY_STRING_SNOWFLAKE_ID = Constants.EMPTY_STRING_SNOWFLAKE_ID;
-let obj = {
+const obj = {
   kind: "guild",
   id: "2026-04_server_theme",
   label: "Server Theme",
@@ -22,13 +22,15 @@ const result = size.fileFinishedImporting("modules/premium/powerups/experiments/
 
 export const ServerThemeExperiment = experiment;
 export const getServerThemeEnabled = function getServerThemeEnabled(guildId, GuildPowerupsConstants) {
-  let obj = { guildId, location: GuildPowerupsConstants };
-  const currentConfig = experiment.getCurrentConfig(obj, { autoTrackExposure: false });
+  const currentConfig = experiment.getCurrentConfig(
+    { guildId, location: GuildPowerupsConstants },
+    { autoTrackExposure: false },
+  );
   let enabled = currentConfig.enabled;
   if (null != guildId) {
     const ServerThemeApexShadowExperiment = ServerThemeApexShadowExperiment2.ServerThemeApexShadowExperiment;
-    obj = { guildId, location: GuildPowerupsConstants };
-    let config = ServerThemeApexShadowExperiment.getConfig(obj);
+    const obj2 = { guildId, location: GuildPowerupsConstants };
+    let config = ServerThemeApexShadowExperiment.getConfig(obj2);
   } else {
     config = { enabled: false, gatesApex: false };
   }
@@ -39,16 +41,20 @@ export const getServerThemeEnabled = function getServerThemeEnabled(guildId, Gui
   return enabled;
 };
 export const useServerThemeEnabled = function useServerThemeEnabled(guildId, useGuildPowerupNewPerkMarketingVersion) {
-  let obj = { guildId, location: useGuildPowerupNewPerkMarketingVersion };
-  experiment = experiment.useExperiment(obj, { autoTrackExposure: false });
+  experiment = experiment.useExperiment(
+    { guildId, location: useGuildPowerupNewPerkMarketingVersion },
+    { autoTrackExposure: false },
+  );
   let enabled = experiment.enabled;
   const ServerThemeApexShadowExperiment = ServerThemeApexShadowExperiment2.ServerThemeApexShadowExperiment;
   let tmp2 = guildId;
   if (guildId == null) {
     tmp2 = EMPTY_STRING_SNOWFLAKE_ID;
   }
-  obj = { guildId: tmp2, location: useGuildPowerupNewPerkMarketingVersion };
-  const config = ServerThemeApexShadowExperiment.useConfig(obj);
+  const config = ServerThemeApexShadowExperiment.useConfig({
+    guildId: tmp2,
+    location: useGuildPowerupNewPerkMarketingVersion,
+  });
   if (!experiment.inExperiment) {
     let tmp6 = null != guildId;
     if (tmp6) {

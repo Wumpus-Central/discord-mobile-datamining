@@ -41,11 +41,10 @@ export default function ChannelSelectComponentActionSheet(guildId) {
         return null;
       } else {
         const guild = GuildStore.getGuild(guildId);
-        let obj = NativeSearchableSelectActionComponentUtils;
-        const channelIconData = obj.getChannelIconData(channel, guild);
+        const channelIconData = NativeSearchableSelectActionComponentUtils.getChannelIconData(channel, guild);
         let tmp8 = null != channelIconData;
         if (tmp8) {
-          obj = { source: channelIconData };
+          const obj2 = { source: channelIconData };
           tmp8 = jsx(native.Icon, { source: channelIconData });
         }
         return tmp8;

@@ -18,31 +18,31 @@ class VideoQualityTarget {
 VideoQualityTarget.prototype["toString"] = function toString() {
   return this.value;
 };
-let obj = Object.create(VideoQualityTarget.prototype);
-obj.value = "very_low";
-obj.targetResolution = 360;
-obj.targetBitrate = 800000;
-VideoQualityTarget.VERY_LOW = obj;
-obj = Object.create(VideoQualityTarget.prototype);
-obj.value = "low";
-obj.targetResolution = 360;
-obj.targetBitrate = 1200000;
-VideoQualityTarget.LOW = obj;
-const obj1 = Object.create(VideoQualityTarget.prototype);
-obj1.value = "medium";
-obj1.targetResolution = 480;
-obj1.targetBitrate = 1800000;
-VideoQualityTarget.MEDIUM = obj1;
 const obj2 = Object.create(VideoQualityTarget.prototype);
-obj2.value = "high";
-obj2.targetResolution = 720;
-obj2.targetBitrate = 2250000;
-VideoQualityTarget.HIGH = obj2;
-const obj3 = Object.create(VideoQualityTarget.prototype);
-obj3.value = "very_high";
-obj3.targetResolution = 1080;
-obj3.targetBitrate = 7000000;
-VideoQualityTarget.VERY_HIGH = obj3;
+obj2.value = "very_low";
+obj2.targetResolution = 360;
+obj2.targetBitrate = 800000;
+VideoQualityTarget.VERY_LOW = obj2;
+const obj7 = Object.create(VideoQualityTarget.prototype);
+obj7.value = "low";
+obj7.targetResolution = 360;
+obj7.targetBitrate = 1200000;
+VideoQualityTarget.LOW = obj7;
+const obj8 = Object.create(VideoQualityTarget.prototype);
+obj8.value = "medium";
+obj8.targetResolution = 480;
+obj8.targetBitrate = 1800000;
+VideoQualityTarget.MEDIUM = obj8;
+const obj9 = Object.create(VideoQualityTarget.prototype);
+obj9.value = "high";
+obj9.targetResolution = 720;
+obj9.targetBitrate = 2250000;
+VideoQualityTarget.HIGH = obj9;
+const obj10 = Object.create(VideoQualityTarget.prototype);
+obj10.value = "very_high";
+obj10.targetResolution = 1080;
+obj10.targetBitrate = 7000000;
+VideoQualityTarget.VERY_HIGH = obj10;
 VideoQualityTarget.fromCompressionQuality = function fromCompressionQuality(videoQualitySetting) {
   if (VideoCompressionQuality.VERY_LOW === videoQualitySetting) {
     let VERY_HIGH = VideoQualityTarget.VERY_LOW;
@@ -62,7 +62,10 @@ VideoQualityTarget.fromCompressionQuality = function fromCompressionQuality(vide
   }
   return VERY_HIGH;
 };
-obj = {
+let result = size.fileFinishedImporting("modules/media_uploads/native/VideoUploadUtils.tsx");
+
+export { VideoQualityTarget };
+export const DEFAULT_VIDEO_ENCODING_CONFIG = {
   bitrateFloor: 300000,
   createHDR: false,
   frameRate: 30,
@@ -77,10 +80,6 @@ obj = {
   transmuxLivePhotos: true,
   progressUpdateGranularity: 10,
 };
-let result = size.fileFinishedImporting("modules/media_uploads/native/VideoUploadUtils.tsx");
-
-export { VideoQualityTarget };
-export const DEFAULT_VIDEO_ENCODING_CONFIG = obj;
 export const calculateTargetDimensions = function calculateTargetDimensions(videoMetadata, targetResolution) {
   const result = videoMetadata.width / videoMetadata.height;
   if (videoMetadata.width > videoMetadata.height) {
@@ -177,11 +176,11 @@ export const logSourceMetadata = function logSourceMetadata(format) {
 };
 export const logEncoderSettings = function logEncoderSettings(videoQuality) {
   logger.info("Encoder Video Quality Settings:");
-  let str;
-  if (str != null) {
-    str = str.toString();
+  let str1;
+  if (videoQuality.videoQuality != null) {
+    str1 = str.toString();
   }
-  logger.info("- Compression Quality: " + str);
+  logger.info("- Compression Quality: " + str1);
   videoQuality = videoQuality.videoQuality;
   let targetResolution;
   if (videoQuality != null) {

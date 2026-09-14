@@ -9,7 +9,7 @@ import showUserProfileActionSheetDefault from "../../../../user_profile/native/s
 import sortByMatchScore from "../../../../autocompleter/index.tsx";
 import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
-import ChannelMemberStore from "../../../../../stores/ChannelMemberStore.tsx";
+import ChannelMemberStore_mod from "../../../../../stores/ChannelMemberStore.tsx";
 import ChannelStore from "../../../../../stores/ChannelStore.tsx";
 import GuildMemberStore from "../../../../../stores/GuildMemberStore.tsx";
 import GuildStore from "../../../../../stores/GuildStore.tsx";
@@ -22,6 +22,7 @@ require = fn;
 const View = fn(17).View;
 let ChannelMemberStore = fn(7382);
 ({ EVERYONE_CHANNEL_ID: closure_7, MemberListRowTypes: closure_8 } = ChannelMemberStore);
+let ChannelMemberStore = ChannelMemberStore_mod;
 const Constants = fn(1074);
 ({ RelationshipTypes: closure_15, StatusTypes: closure_16 } = Constants);
 const jsxProd = fn(21);
@@ -83,12 +84,10 @@ export default noop.memo(function GuildChannelUserList(searchable) {
   closure_129_8 = tmp6[1];
   const first1 = onUserLongPress(
     flag3.useState(() => {
-      let tmp = sortByMatchScoreDefault;
       const items = [sortByMatchScore.AutocompleterResultTypes.USER];
-      let obj = { userFilters: null };
-      obj = { guild: channelId, strict: true };
-      obj.userFilters = obj;
-      tmp = new tmp(
+      const obj = { userFilters: { guild: channelId, strict: true } };
+      const obj2 = { guild: channelId, strict: true };
+      return new sortByMatchScoreDefault(
         (canMentionEveryone, str) => {
           if ("" === str.trim()) {
             analyticsLocations(closure_20);
@@ -100,7 +99,6 @@ export default noop.memo(function GuildChannelUserList(searchable) {
         undefined,
         obj,
       );
-      return tmp;
     }),
     1,
   )[0];
@@ -170,27 +168,27 @@ export default noop.memo(function GuildChannelUserList(searchable) {
     }
     return tmp;
   }, items4);
-  let obj1 = channelId(onUserPress[16]);
   const items5 = [closure_9];
-  const stateFromStoresObject = obj1.useStateFromStoresObject(items5, () => {
+  const stateFromStoresObject = channelId(onUserPress[16]).useStateFromStoresObject(items5, () => {
     let tmp3 = null;
     if (channelId !== React5) {
       tmp3 = channelId;
     }
     return ChannelMemberStore.getProps(guildId, tmp3);
   });
-  let groups = stateFromStoresObject.groups;
+  const groups = stateFromStoresObject.groups;
   const rows = stateFromStoresObject.rows;
   let obj2 = channelId(onUserPress[16]);
+  let tmp = guildId;
   const items6 = [first];
-  const stateFromStores = obj2.useStateFromStores(items6, () => {
+  const stateFromStores = channelId(onUserPress[16]).useStateFromStores(items6, () => {
     if (channelId !== React5) {
       return ChannelStore.getChannel(tmp);
     }
   });
   let obj3 = channelId(onUserPress[16]);
   const items7 = [stateFromStores];
-  const stateFromStores1 = obj3.useStateFromStores(items7, () => stateFromStores.getChannelId());
+  const stateFromStores1 = channelId(onUserPress[16]).useStateFromStores(items7, () => stateFromStores.getChannelId());
   const tmp21 = guildId(onUserPress[17])();
   const items8 = [guildId];
   const memo1 = flag3.useMemo(() => {
@@ -223,9 +221,9 @@ export default noop.memo(function GuildChannelUserList(searchable) {
           tmp = tmp4;
         }
         if (!tmp) {
-          channelId(onUserPress[14]);
-          const obj = { guildId, channelId, y: ref2.current, height: ref3.current, rowHeight };
-          const result = obj.subscribeChannelDimensions(obj);
+          const obj2 = { guildId, channelId, y: ref2.current, height: ref3.current, rowHeight };
+          const result = channelId(onUserPress[14]).subscribeChannelDimensions(obj2);
+          const obj = channelId(onUserPress[14]);
         }
       }, 50),
     items9,
@@ -240,24 +238,24 @@ export default noop.memo(function GuildChannelUserList(searchable) {
     ref3.current = nativeEvent.nativeEvent.contentOffset.y;
     memo2();
   }, items11);
-  let obj = { channel: stateFromStores, disable: null };
+  let obj5 = { channel: stateFromStores, disable: null };
   let tmp29 = tmp10;
+  let obj4 = channelId(onUserPress[16]);
   if (!tmp10) {
     tmp29 = !flag2;
   }
-  obj.disable = tmp29;
-  let tmp = guildId;
+  obj5.disable = tmp29;
   const tmp28 = guildId(onUserPress[19]);
   const items12 = [stateFromStores, memo2];
-  ({ listActionRenderer, listActionHeight } = guildId(onUserPress[19])(obj));
+  ({ listActionRenderer, listActionHeight } = guildId(onUserPress[19])(obj5));
   const effect2 = obj.useEffect(() => {
     if (null != stateFromStores) {
       memo2();
     }
   }, items12);
-  let tmp17Result = tmp17(tmp2[16]);
+  const tmp28Result = guildId(onUserPress[19])(obj5);
   const items13 = [groups, stateFromStores1];
-  stateFromStoresArray = tmp17Result.useStateFromStoresArray(items13, () => {
+  stateFromStoresArray = channelId(onUserPress[16]).useStateFromStoresArray(items13, () => {
     if (null != roleId) {
       if (!obj.isEveryoneRoleId(guildId, tmp)) {
         let tmp6 = null;
@@ -279,14 +277,13 @@ export default noop.memo(function GuildChannelUserList(searchable) {
           const user1 = UserStore.getUser(userId2.userId);
           let str = NicknameUtilsDefault.getNickname(guildId, closure_0, user);
           if (str == null) {
-            let tmp3Result = UserUtilsDefault;
-            str = tmp3Result.getGlobalName(user);
+            str = UserUtilsDefault.getGlobalName(user);
+            const tmp3Result = UserUtilsDefault;
           }
-          tmp3Result = NicknameUtilsDefault;
-          let str2 = tmp3Result.getNickname(guildId, closure_0, user1);
+          let str2 = NicknameUtilsDefault.getNickname(guildId, closure_0, user1);
           if (str2 == null) {
             str2 = UserUtilsDefault.getGlobalName(user1);
-            const tmp3Result1 = UserUtilsDefault;
+            const tmp3Result4 = UserUtilsDefault;
           }
           if (str == null) {
             str = "";
@@ -303,8 +300,8 @@ export default noop.memo(function GuildChannelUserList(searchable) {
   });
   let tmp32 = null != roleId;
   if (tmp32) {
-    tmp17Result = tmp17(tmp2[20]);
-    tmp32 = !tmp17Result.isEveryoneRoleId(guildId, roleId);
+    tmp32 = !tmp17(tmp2[20]).isEveryoneRoleId(guildId, roleId);
+    const tmp17Result2 = tmp17(tmp2[20]);
   }
   closure_20 = tmp32;
   const items14 = [guildId, roleId, tmp32, tmp10, first];
@@ -349,7 +346,7 @@ export default noop.memo(function GuildChannelUserList(searchable) {
   const callback3 = obj.useCallback((arg0) => {
     if (memo3.length > 0) {
       const element = { type: "section", props: null };
-      let obj = { title: null };
+      const obj = { title: null };
       const intl = util.intl;
       obj.title = intl.string(util.t["zkoeq/"]);
       element.props = obj;
@@ -362,10 +359,10 @@ export default noop.memo(function GuildChannelUserList(searchable) {
             let element1 = { type: "placeholder" };
           } else {
             element1 = { type: "section", props: null };
-            obj = { title: null };
+            const obj2 = { title: null };
             const _HermesInternal = HermesInternal;
-            obj.title = "" + title + " \u2014 " + count;
-            element1.props = obj;
+            obj2.title = "" + title + " \u2014 " + count;
+            element1.props = obj2;
           }
           return element1;
         }
@@ -379,18 +376,18 @@ export default noop.memo(function GuildChannelUserList(searchable) {
     if (closure_20) {
       if (!closure_9) {
         if (arg1 < stateFromStoresArray.length) {
-          let user = stateFromStores1.getUser(tmp4.userId);
-          if (null != user) {
-            let obj = { user, guildMember: tmp4, end: arg1 === stateFromStoresArray.length - 1 };
+          const user1 = stateFromStores1.getUser(tmp4.userId);
+          if (null != user1) {
+            let obj = { user: user1, guildMember: tmp4, end: arg1 === stateFromStoresArray.length - 1 };
             let tmp3 = obj;
           }
         }
       }
       if (null != tmp3) {
-        user = tmp3.user;
+        const user = tmp3.user;
         const memberListMember = tmp3.memberListMember;
         ({ guildMember, comparator } = tmp3);
-        obj = {
+        let obj2 = {
           type: memo1.NONE,
           user,
           nickname: null,
@@ -420,7 +417,7 @@ export default noop.memo(function GuildChannelUserList(searchable) {
           }
           comparator = nick1;
         }
-        obj.nickname = nick;
+        obj2.nickname = nick;
         let colorString;
         if (memberListMember != null) {
           colorString = memberListMember.colorString;
@@ -432,7 +429,7 @@ export default noop.memo(function GuildChannelUserList(searchable) {
           }
           colorString = colorString1;
         }
-        obj.usernameColor = colorString;
+        obj2.usernameColor = colorString;
         let colorStrings;
         if (memberListMember != null) {
           colorStrings = memberListMember.colorStrings;
@@ -444,8 +441,8 @@ export default noop.memo(function GuildChannelUserList(searchable) {
           }
           colorStrings = colorStrings1;
         }
-        obj.roleColors = colorStrings;
-        obj.isNameplatedRow = isNameplatedList;
+        obj2.roleColors = colorStrings;
+        obj2.isNameplatedRow = isNameplatedList;
         let premiumSince;
         if (memberListMember != null) {
           premiumSince = memberListMember.premiumSince;
@@ -457,19 +454,19 @@ export default noop.memo(function GuildChannelUserList(searchable) {
           }
           premiumSince = premiumSince1;
         }
-        obj.premiumSince = premiumSince;
+        obj2.premiumSince = premiumSince;
         if (null != memberListMember) {
           let isOwner = memberListMember.isOwner;
         } else {
           isOwner = memo1 === user.id;
         }
-        obj.isOwner = isOwner;
-        obj.guildId = guildId;
-        obj.canShowDisplayNameStylesFont = canShowDisplayNameStylesFont;
-        obj.onPress = function onPress(id) {
+        obj2.isOwner = isOwner;
+        obj2.guildId = guildId;
+        obj2.canShowDisplayNameStylesFont = canShowDisplayNameStylesFont;
+        obj2.onPress = function onPress(id) {
           if (null == onUserPress) {
             if (flag3) {
-              let obj = {
+              const obj = {
                 userId: id.id,
                 channelId: channelId !== React5 ? channelId : stateFromStores1,
                 roleId: null,
@@ -484,7 +481,7 @@ export default noop.memo(function GuildChannelUserList(searchable) {
               showUserProfileActionSheetDefault(obj);
             }
           } else {
-            obj = { user: id, index: null };
+            let obj2 = { user: id, index: null };
             if (!closure_20) {
               if (!closure_9) {
                 let num3 = 0;
@@ -499,8 +496,8 @@ export default noop.memo(function GuildChannelUserList(searchable) {
                 }
                 let sum = num5 + closure_1;
               }
-              obj.index = sum;
-              obj = tmp(obj);
+              obj2.index = sum;
+              obj2 = tmp(obj2);
             }
             sum = closure_1;
           }
@@ -530,15 +527,15 @@ export default noop.memo(function GuildChannelUserList(searchable) {
           };
         }
         const element = { type: "user", props: null };
-        obj.onLongPress = fn;
-        obj.start = tmp20;
-        obj.end = tmp3.end;
-        element.props = obj;
+        obj2.onLongPress = fn;
+        obj2.start = tmp20;
+        obj2.end = tmp3.end;
+        element.props = obj2;
         return element;
       } else {
         const element1 = { type: "placeholder", props: null };
-        obj = { start: tmp20, end: arg1 === groups[arg0].count - 1 };
-        element1.props = obj;
+        const obj3 = { start: tmp20, end: arg1 === groups[arg0].count - 1 };
+        element1.props = obj3;
         return element1;
       }
     }
@@ -552,39 +549,39 @@ export default noop.memo(function GuildChannelUserList(searchable) {
         const record = tmp14.record;
         const member = groups.getMember(guildId, record.id);
         if (null != member) {
-          const obj1 = { user: record, guildMember: member, comparator: null, end: null };
-          comparator = undefined;
+          const obj4 = { user: record, guildMember: member, comparator: null, end: null };
+          let comparator1;
           if (!closure_20) {
-            comparator = tmp14.comparator;
+            comparator1 = tmp14.comparator;
           }
-          obj1.comparator = comparator;
-          obj1.end = arg1 === diff;
-          tmp3 = obj1;
+          obj4.comparator = comparator1;
+          obj4.end = arg1 === diff;
+          tmp3 = obj4;
         }
       }
     } else {
       const tmp10 = rows[groups[arg0].index + 1 + arg1];
       if (null != tmp10) {
         if (tmp10.type === analyticsLocations.MEMBER) {
-          const obj2 = { user: tmp10.user, memberListMember: tmp10, end: arg1 === tmp9[arg0].count - 1 };
-          tmp3 = obj2;
+          const obj5 = { user: tmp10.user, memberListMember: tmp10, end: arg1 === tmp9[arg0].count - 1 };
+          tmp3 = obj5;
         }
       }
     }
   }, items16);
   if (flag) {
-    obj = { children: null };
-    obj1 = { style: null, children: null };
-    obj2 = { marginHorizontal: tmp(tmp2[25]).space.PX_16 };
-    obj1.style = obj2;
-    obj3 = { size: "md", onChange: callback, ref: ref1 };
-    obj1.children = ref3(tmp17(tmp2[26]).SearchField, obj3);
-    const items17 = [ref3(isNameplatedList, obj1), memo];
-    obj.children = items17;
-    tmp35Result = tmp35(tmp36, obj);
+    const obj6 = { children: null };
+    const obj7 = { style: null, children: null };
+    const obj8 = { marginHorizontal: tmp(tmp2[25]).space.PX_16 };
+    obj7.style = obj8;
+    const obj9 = { size: "md", onChange: callback, ref: ref1 };
+    obj7.children = ref3(tmp17(tmp2[26]).SearchField, obj9);
+    const items17 = [ref3(isNameplatedList, obj7), memo];
+    obj6.children = items17;
+    tmp35Result = tmp35(tmp36, obj6);
   }
   const items18 = [tmp35Result];
-  const obj4 = {
+  const obj10 = {
     ref,
     sections: null,
     getItemProps: null,
@@ -603,27 +600,27 @@ export default noop.memo(function GuildChannelUserList(searchable) {
   if (tmp32) {
     if (!tmp10) {
       const items19 = [stateFromStoresArray.length];
-      obj4.sections = items19;
-      obj4.getItemProps = callback4;
-      obj4.getSectionProps = callback3;
-      obj4.renderListHeader = listActionRenderer;
-      obj4.listHeaderSize = listActionHeight;
-      obj4.onLayout = callback1;
-      obj4.onScroll = callback2;
-      obj4.disableStickySections = disableStickySections;
-      obj4.inActionSheet = inActionSheet;
-      obj4.disableThemedGradient = disableThemedGradient;
-      obj4.listStyleOverride = listStyleOverride;
-      obj4.disableBottomSafeZone = disableBottomSafeZone;
-      obj4.insetEnd = insetEnd;
+      obj10.sections = items19;
+      obj10.getItemProps = callback4;
+      obj10.getSectionProps = callback3;
+      obj10.renderListHeader = listActionRenderer;
+      obj10.listHeaderSize = listActionHeight;
+      obj10.onLayout = callback1;
+      obj10.onScroll = callback2;
+      obj10.disableStickySections = disableStickySections;
+      obj10.inActionSheet = inActionSheet;
+      obj10.disableThemedGradient = disableThemedGradient;
+      obj10.listStyleOverride = listStyleOverride;
+      obj10.disableBottomSafeZone = disableBottomSafeZone;
+      obj10.insetEnd = insetEnd;
       let str2 = "guild-channel-user-list";
       if (tmp10) {
         str2 = "guild-channel-user-list-search-results";
       }
-      const obj5 = { children: null };
-      items18[1] = ref3(tmp41, obj4, str2);
-      obj5.children = items18;
-      return tmp35(tmp36, obj5);
+      const obj11 = { children: null };
+      items18[1] = ref3(tmp41, obj10, str2);
+      obj11.children = items18;
+      return tmp35(tmp36, obj11);
     }
   }
   if (tmp10) {
@@ -631,7 +628,7 @@ export default noop.memo(function GuildChannelUserList(searchable) {
     memo3[0] = memo3.length;
     let mapped = memo3;
   } else {
-    groups = stateFromStoresObject.groups;
-    mapped = groups.map((count) => count.count);
+    const groups1 = stateFromStoresObject.groups;
+    mapped = groups1.map((count) => count.count);
   }
 });

@@ -3,6 +3,8 @@ import ActionSheetActionCreatorsDefault from "../action_sheet/native/ActionSheet
 import Constants from "Constants.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
+const require = globalThis.__r;
+
 let closure_3 = Constants.getSafetyToolsActionSheetKey;
 const result = size.fileFinishedImporting("modules/self_mod/SafetyToolsActionCreators.native.tsx");
 
@@ -14,7 +16,7 @@ export const openSafetyToolsActionSheet = function openSafetyToolsActionSheet(
 ) {
   const tmp = closure_3(channelId);
   _require = tmp;
-  const obj = {
+  ActionSheetActionCreatorsDefault.openLazy(require("asyncRequireImpl")(11526, dependencyMap.paths), tmp, {
     channelId,
     warningId,
     warningType,
@@ -22,6 +24,5 @@ export const openSafetyToolsActionSheet = function openSafetyToolsActionSheet(
     onClose() {
       ActionSheetActionCreatorsDefault.hideActionSheet(closure_0);
     },
-  };
-  obj.openLazy(require("asyncRequireImpl")(11525, dependencyMap.paths), tmp, obj);
+  });
 };

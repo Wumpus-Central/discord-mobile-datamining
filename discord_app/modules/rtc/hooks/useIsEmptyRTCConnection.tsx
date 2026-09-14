@@ -4,6 +4,8 @@ import AuthenticationStore from "../../../stores/AuthenticationStore.tsx";
 import RTCConnectionStore from "../../../stores/RTCConnectionStore.tsx";
 import StreamRTCConnectionStore from "../../../stores/StreamRTCConnectionStore.tsx";
 
+const require = globalThis.__r;
+
 require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/rtc/hooks/useIsEmptyRTCConnection.tsx");

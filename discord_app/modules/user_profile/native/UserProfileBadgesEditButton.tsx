@@ -7,25 +7,21 @@ import BadgeUtils from "../../badges/BadgeUtils.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
+const require = globalThis.__r;
+
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Image: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
 const ContentDismissActionType = fn(1954).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-fn(4636);
-let createStyles = { content: null, badge: null, overflowCount: null };
-createStyles = {
-  flexGrow: 1,
-  flexShrink: 1,
-  flexDirection: "row",
-  alignItems: "center",
-  gap: nativeDefault.space.PX_4,
+const createStyles = fn(4636);
+let obj2 = {
+  content: { flexGrow: 1, flexShrink: 1, flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4 },
+  badge: { width: 32, height: 32 },
+  overflowCount: { marginLeft: 2 },
 };
-createStyles.content = createStyles;
-createStyles.badge = { width: 32, height: 32 };
-createStyles.overflowCount = { marginLeft: 2 };
-let closure_10 = createStyles.createStyles(createStyles);
+let closure_10 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/native/UserProfileBadgesEditButton.tsx");
 
@@ -41,8 +37,9 @@ export default function UserProfileBadgesEditButton(arg0) {
   let legacyIconUrlByBadgeId;
   let tmp = closure_10();
   importDefault = tmp;
-  let obj = autoOpen(isBadgeManagementEnabled[7]);
-  isBadgeManagementEnabled = obj.useIsBadgeManagementEnabled({ location: "UserProfileBadgesEditButton" });
+  isBadgeManagementEnabled = autoOpen(isBadgeManagementEnabled[7]).useIsBadgeManagementEnabled({
+    location: "UserProfileBadgesEditButton",
+  });
   const analyticsLocations = require("useAnalyticsLocations")().analyticsLocations;
   let length;
   if (catalogBadges != null) {
@@ -51,24 +48,29 @@ export default function UserProfileBadgesEditButton(arg0) {
   if (length == null) {
     length = badges.length;
   }
-  let tmp2Result = tmp2(tmp3[9]);
+  let obj = autoOpen(isBadgeManagementEnabled[7]);
   if (!isBadgeManagementEnabled) {
     let items = [];
   } else {
     const items1 = [tmp2(tmp3[10]).DismissibleContent.BADGES_USER_PROFILE_NEW_BADGE];
     items = items1;
   }
-  let tmp6 = analyticsLocations(tmp2Result.useSelectedDismissibleContent(items, undefined, true), 2);
+  let tmp6 = analyticsLocations(
+    autoOpen(isBadgeManagementEnabled[9]).useSelectedDismissibleContent(items, undefined, true),
+    2,
+  );
   noop = tmp7;
   const tmp8 = tmp6[0] === autoOpen(isBadgeManagementEnabled[10]).DismissibleContent.BADGES_USER_PROFILE_NEW_BADGE;
   closure_5 = tmp8;
   const items2 = [analyticsLocations, tmp8, tmp6[1]];
   onPress = noop.useCallback(() => {
-    const obj = { analyticsLocations };
-    obj.openLazy(asyncRequireImpl(14707, dependencyMap.paths), "Customize Badges", obj);
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14708, dependencyMap.paths), "Customize Badges", {
+      analyticsLocations,
+    });
     if (closure_5) {
       closure_4(ContentDismissActionType.TAKE_ACTION);
     }
+    const obj2 = { analyticsLocations };
   }, items2);
   noop.useRef(false);
   const items3 = [autoOpen, isBadgeManagementEnabled, onPress];
@@ -87,7 +89,7 @@ export default function UserProfileBadgesEditButton(arg0) {
   }, items3);
   if (isBadgeManagementEnabled) {
     if (0 === length) {
-      obj = {
+      let obj2 = {
         label: null,
         labelTrailing: null,
         content: null,
@@ -96,25 +98,24 @@ export default function UserProfileBadgesEditButton(arg0) {
         onPress: null,
       };
       const intl3 = tmp2(tmp3[15]).intl;
-      obj.label = intl3.string(tmp2(tmp3[15]).t.l6w3Vj);
-      obj = { showNewBadge: tmp8 };
-      obj.labelTrailing = legacyIconUrlByBadgeId(tmp2(tmp3[14]).UserProfileEditFormLabelBadges, obj);
-      const obj1 = { style: tmp.content, "aria-hidden": true, children: null };
-      const obj2 = { variant: "text-sm/medium", color: "text-muted", children: null };
+      obj2.label = intl3.string(tmp2(tmp3[15]).t.l6w3Vj);
+      let obj3 = { showNewBadge: tmp8 };
+      obj2.labelTrailing = legacyIconUrlByBadgeId(tmp2(tmp3[14]).UserProfileEditFormLabelBadges, obj3);
+      const obj4 = { style: tmp.content, "aria-hidden": true, children: null };
+      const obj5 = { variant: "text-sm/medium", color: "text-muted", children: null };
       const intl4 = tmp2(tmp3[15]).intl;
-      obj2.children = intl4.string(tmp2(tmp3[15]).t.xfuQvv);
-      obj1.children = legacyIconUrlByBadgeId(tmp2(tmp3[16]).Text, obj2);
-      obj.content = legacyIconUrlByBadgeId(onPress, obj1);
-      const obj3 = { text: null };
+      obj5.children = intl4.string(tmp2(tmp3[15]).t.xfuQvv);
+      obj4.children = legacyIconUrlByBadgeId(tmp2(tmp3[16]).Text, obj5);
+      obj2.content = legacyIconUrlByBadgeId(onPress, obj4);
+      const obj6 = { text: null };
       const intl5 = tmp2(tmp3[15]).intl;
-      obj3.text = intl5.string(tmp2(tmp3[15]).t.xfuQvv);
-      obj.accessibilityValue = obj3;
-      obj.disabled = !ownsAnyBadge;
-      obj.onPress = onPress;
-      return legacyIconUrlByBadgeId(tmp2(tmp3[14]).UserProfileEditFormButton, obj);
+      obj6.text = intl5.string(tmp2(tmp3[15]).t.xfuQvv);
+      obj2.accessibilityValue = obj6;
+      obj2.disabled = !ownsAnyBadge;
+      obj2.onPress = onPress;
+      return legacyIconUrlByBadgeId(tmp2(tmp3[14]).UserProfileEditFormButton, obj2);
     } else {
-      tmp2Result = tmp2(tmp3[17]);
-      legacyIconUrlByBadgeId = tmp2Result.getLegacyIconUrlByBadgeId(badges);
+      legacyIconUrlByBadgeId = tmp2(tmp3[17]).getLegacyIconUrlByBadgeId(badges);
       const substr = badges.slice(0, tmp2(tmp3[17]).MAX_DISPLAYED_PROFILE_BADGES);
       let substr1;
       if (catalogBadges != null) {
@@ -133,61 +134,63 @@ export default function UserProfileBadgesEditButton(arg0) {
         mapped = substr.map((description) => description.description);
       }
       const intl = tmp2(tmp3[15]).intl;
-      const obj4 = { badge_names: mapped.join(", "), overflow_count: diff };
-      const obj5 = { label: null, labelTrailing: null, content: null, accessibilityValue: null, onPress: null };
+      const obj7 = { badge_names: mapped.join(", "), overflow_count: diff };
+      const tmp2Result2 = tmp2(tmp3[17]);
+      const obj8 = { label: null, labelTrailing: null, content: null, accessibilityValue: null, onPress: null };
       const intl2 = tmp2(tmp3[15]).intl;
-      obj5.label = intl2.string(tmp2(tmp3[15]).t.l6w3Vj);
-      const obj6 = { showNewBadge: tmp8 };
-      obj5.labelTrailing = legacyIconUrlByBadgeId(tmp2(tmp3[14]).UserProfileEditFormLabelBadges, obj6);
-      const obj7 = { style: tmp.content, "aria-hidden": true, children: null };
+      obj8.label = intl2.string(tmp2(tmp3[15]).t.l6w3Vj);
+      const obj9 = { showNewBadge: tmp8 };
+      obj8.labelTrailing = legacyIconUrlByBadgeId(tmp2(tmp3[14]).UserProfileEditFormLabelBadges, obj9);
+      const obj10 = { style: tmp.content, "aria-hidden": true, children: null };
       if (null != substr1) {
         let mapped1 = substr1.map((badge_id) => {
           value = closure_8.get(badge_id.badge_id);
           if (null != value) {
-            let obj = { style: closure_1.badge, source: null };
-            obj = { uri: value };
-            obj.source = obj;
-            let tmp6 = React6(hasOwnProperty, obj, badge_id.badge_id);
+            const obj2 = { style: closure_1.badge, source: null };
+            const obj3 = { uri: value };
+            obj2.source = obj3;
+            let tmp6 = React6(hasOwnProperty, obj2, badge_id.badge_id);
           } else {
-            obj = { badge: badge_id, size: 32, style: closure_1.badge };
+            const obj = { badge: badge_id, size: 32, style: closure_1.badge };
             tmp6 = React6(BadgeCatalogIconDefault, obj, badge_id.badge_id);
           }
           return tmp6;
         });
       } else {
         mapped1 = substr.map((id) => {
-          let obj = { style: closure_1.badge, source: null };
-          obj = { uri: BadgeUtils.getProfileBadgeIconUrl(id) };
-          obj.source = obj;
+          const obj = { style: closure_1.badge, source: null };
+          const obj2 = { uri: BadgeUtils.getProfileBadgeIconUrl(id) };
+          obj.source = obj2;
           return React6(hasOwnProperty, obj, id.id);
         });
       }
       const items4 = [mapped1];
       let tmp16Result = diff > 0;
       if (tmp16Result) {
-        const obj8 = {
+        const obj11 = {
           variant: "text-md/normal",
           color: "mobile-text-heading-primary",
           style: tmp.overflowCount,
           children: null,
         };
         const _HermesInternal = HermesInternal;
-        obj8.children = "+" + diff;
-        tmp16Result = tmp16(tmp2(tmp3[16]).Text, obj8);
+        obj11.children = "+" + diff;
+        tmp16Result = tmp16(tmp2(tmp3[16]).Text, obj11);
       }
       items4[1] = tmp16Result;
-      obj7.children = items4;
-      obj5.content = closure_9(onPress, obj7);
+      obj10.children = items4;
+      obj8.content = closure_9(onPress, obj10);
       let tmp21;
       if (mapped.length > 0) {
-        const obj9 = { text: formatToPlainStringResult };
-        tmp21 = obj9;
+        const obj12 = { text: formatToPlainStringResult };
+        tmp21 = obj12;
       }
-      obj5.accessibilityValue = tmp21;
-      obj5.onPress = onPress;
-      return legacyIconUrlByBadgeId(tmp2(tmp3[14]).UserProfileEditFormButton, obj5);
+      obj8.accessibilityValue = tmp21;
+      obj8.onPress = onPress;
+      return legacyIconUrlByBadgeId(tmp2(tmp3[14]).UserProfileEditFormButton, obj8);
     }
   } else {
     return null;
   }
+  const tmp2Result = autoOpen(isBadgeManagementEnabled[9]);
 }

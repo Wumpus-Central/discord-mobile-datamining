@@ -57,17 +57,22 @@ function handleUserSettingsProtoUpdate(settings) {
 }
 const UserSettingsTypes = UserSettingsConstants.UserSettingsTypes;
 const createEmptyEditInfo = UserSettingsConstants.createEmptyEditInfo;
-let obj = { ProtoClass: preloaded_user_settings.PreloadedUserSettings, proto: null, lazyLoaded: false, editInfo: null };
+let editInfo = {
+  ProtoClass: preloaded_user_settings.PreloadedUserSettings,
+  proto: null,
+  lazyLoaded: false,
+  editInfo: null,
+};
 const PreloadedUserSettings = preloaded_user_settings.PreloadedUserSettings;
-obj.proto = PreloadedUserSettings.create();
-obj.editInfo = createEmptyEditInfo();
-obj = { ProtoClass: frecency_user_settings.FrecencyUserSettings, proto: null, lazyLoaded: true, editInfo: null };
+editInfo.proto = PreloadedUserSettings.create();
+editInfo.editInfo = createEmptyEditInfo();
+const obj2 = { ProtoClass: frecency_user_settings.FrecencyUserSettings, proto: null, lazyLoaded: true, editInfo: null };
 const FrecencyUserSettings = frecency_user_settings.FrecencyUserSettings;
-obj.proto = FrecencyUserSettings.create();
-obj.editInfo = createEmptyEditInfo();
+obj2.proto = FrecencyUserSettings.create();
+obj2.editInfo = createEmptyEditInfo();
 const dependencyMap = {
-  [UserSettingsTypes.PRELOADED_USER_SETTINGS]: obj,
-  [UserSettingsTypes.FRECENCY_AND_FAVORITES_SETTINGS]: obj,
+  [UserSettingsTypes.PRELOADED_USER_SETTINGS]: editInfo,
+  [UserSettingsTypes.FRECENCY_AND_FAVORITES_SETTINGS]: obj2,
 };
 let closure_8 = false;
 const PersistedStore = initializeDefault.PersistedStore;
@@ -115,7 +120,7 @@ prototype["initialize"] = function initialize(arg0) {
 prototype["getState"] = function getState() {};
 prototype["computeState"] = function computeState() {
   return _modDef12.mapValues(closure_7, (ProtoClass) => {
-    obj = { proto: user_settings_UserSettingsUtils.protoToB64(ProtoClass.ProtoClass, ProtoClass.proto) };
+    const obj = { proto: user_settings_UserSettingsUtils.protoToB64(ProtoClass.ProtoClass, ProtoClass.proto) };
     if (tmp3) {
       obj.protoToSave = user_settings_UserSettingsUtils.protoToB64(
         ProtoClass.ProtoClass,
@@ -138,7 +143,7 @@ Object.defineProperty(prototype, "settings", {
 });
 Object.defineProperty(prototype, "frecencyWithoutFetchingLatest", {
   get: function frecencyWithoutFetchingLatest() {
-    return obj.proto;
+    return obj2.proto;
   },
   set: undefined,
 });
@@ -164,26 +169,26 @@ prototype["getGuildFolders"] = function getGuildFolders() {
       if (guildIds.id != null) {
         value = iter.value;
       }
-      value = undefined;
+      let value3;
       if (guildIds.color != null) {
-        value = iter2.value;
+        value3 = iter2.value;
       }
-      obj = { guildIds: guildIds.guildIds, folderId: null, folderName: null, folderColor: null };
+      const obj = { guildIds: guildIds.guildIds, folderId: null, folderName: null, folderColor: null };
       let NumberResult;
       if (null != value) {
         const _Number = Number;
         NumberResult = Number(value);
       }
       obj.folderId = NumberResult;
-      let value1;
+      let value4;
       if (guildIds.name != null) {
-        value1 = iter3.value;
+        value4 = iter3.value;
       }
-      obj.folderName = value1;
+      obj.folderName = value4;
       let NumberResult1;
-      if (null != value) {
+      if (null != value3) {
         const _Number2 = Number;
-        NumberResult1 = Number(value);
+        NumberResult1 = Number(value3);
       }
       obj.folderColor = NumberResult1;
       return obj;
@@ -244,14 +249,15 @@ prototype["getGuildDismissedContentState"] = function getGuildDismissedContentSt
   return prop;
 };
 prototype["getGuildsProto"] = function getGuildsProto() {
-  let guilds;
+  const guilds = this.settings.guilds;
+  let guilds1;
   if (guilds != null) {
-    guilds = guilds.guilds;
+    guilds1 = guilds.guilds;
   }
-  if (guilds == null) {
-    guilds = null;
+  if (guilds1 == null) {
+    guilds1 = null;
   }
-  return guilds;
+  return guilds1;
 };
 prototype["getDefaultGuildThemePreference"] = function getDefaultGuildThemePreference() {
   const appearance = this.settings.appearance;
@@ -294,7 +300,7 @@ prototype["resolveGuildThemeSourcePreference"] = function resolveGuildThemeSourc
 };
 UserSettingsProtoStore.displayName = "UserSettingsProtoStore";
 UserSettingsProtoStore.persistKey = "UserSettingsProtoStore-Cache";
-obj = {
+const userSettingsProtoStore = new UserSettingsProtoStore(DispatcherDefault, {
   CACHE_LOADED: function handleCacheLoaded(userSettings) {
     userSettings = userSettings.userSettings;
     if (null != userSettings) {
@@ -342,9 +348,10 @@ obj = {
   USER_SETTINGS_PROTO_UPDATE_EDIT_INFO: function handleUserSettingsProtoSaveStateUpdate(settings) {
     settings = settings.settings;
     _modDef38(true, "this cannot run in the overlay");
+    editInfo = {};
     const merged = Object.assign(tmp2.editInfo);
     const merged1 = Object.assign(settings.changes);
-    dependencyMap[settings.type].editInfo = {};
+    dependencyMap[settings.type].editInfo = editInfo;
     return false;
   },
   CONNECTION_OPEN: function handleConnectionOpen(userSettingsProto) {
@@ -370,15 +377,15 @@ obj = {
     obj.editInfo.triggeredMigrations = isDirty;
     obj.editInfo.cleanupFuncs = cleanupFuncs;
     obj.editInfo.loaded = true;
-    let values = Object.values(closure_7);
+    const values = Object.values(closure_7);
     const item = values.forEach((lazyLoaded) => {
       if (lazyLoaded.lazyLoaded) {
         lazyLoaded.editInfo.loaded = false;
         lazyLoaded.editInfo.loading = false;
       }
     });
-    values = Object.values(closure_7);
-    const item1 = values.forEach((editInfo) => {
+    const values2 = Object.values(closure_7);
+    const item1 = values2.forEach((editInfo) => {
       if (null != editInfo.editInfo.timeout) {
         const _clearTimeout = clearTimeout;
         clearTimeout(editInfo.editInfo.timeout);
@@ -405,12 +412,12 @@ obj = {
   CONNECTION_CLOSED: handleConnectionClosedOrResumed,
   CONNECTION_RESUMED: handleConnectionClosedOrResumed,
   OVERLAY_INITIALIZE: function handleOverlayInitialize(userSettingsProto) {
-    obj = user_settings_UserSettingsUtils;
+    const obj = user_settings_UserSettingsUtils;
     obj.proto = obj.b64ToPreloadedUserSettingsProto(userSettingsProto.userSettingsProto);
     _modDef38(typeof obj.proto !== "string", "UserSettingsProto cannot be a string");
   },
   LOGOUT: function handleLogout() {
-    let values = Object.values(closure_7);
+    const values = Object.values(closure_7);
     const item = values.forEach((editInfo) => {
       if (null != editInfo.editInfo.timeout) {
         const _clearTimeout = clearTimeout;
@@ -430,15 +437,14 @@ obj = {
         editInfo.editInfo.offlineEditDataVersion = num;
       }
     });
-    values = Object.values(closure_7);
-    const item1 = values.forEach((ProtoClass) => {
+    const values2 = Object.values(closure_7);
+    const item1 = values2.forEach((ProtoClass) => {
       ProtoClass = ProtoClass.ProtoClass;
       ProtoClass.proto = ProtoClass.create();
       ProtoClass.editInfo = createEmptyEditInfo();
     });
   },
-};
-const userSettingsProtoStore = new UserSettingsProtoStore(DispatcherDefault, obj);
+});
 const result = size.fileFinishedImporting("modules/user_settings/UserSettingsProtoStore.tsx");
 
 export default userSettingsProtoStore;

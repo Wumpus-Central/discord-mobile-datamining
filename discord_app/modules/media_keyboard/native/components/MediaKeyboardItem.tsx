@@ -8,7 +8,7 @@ import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import timing from "../../../../design/animation/reanimated/timing/timing.tsx";
 import ImageIcon from "../../../../design/components/Icon/native/redesign/generated/ImageIcon.tsx";
 import AttachmentIcon from "../../../../design/components/Icon/native/redesign/generated/AttachmentIcon.tsx";
-import _modDef10525 from "../../../../../_runtime/metro/10525__.js";
+import _modDef10526 from "../../../../../_runtime/metro/10526__.js";
 import CameraIcon from "../../../../design/components/Icon/native/redesign/generated/CameraIcon.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import UploadAttachmentStore from "../../../../stores/UploadAttachmentStore.tsx";
@@ -19,12 +19,11 @@ require = fn;
 function NewCaption(arg0) {
   ({ label, style, textStyle } = arg0);
   const tmp = closure_12();
-  let obj = { style: null, children: null };
+  const obj = { style: null, children: null };
   const items = [tmp.labelContainer, style];
   obj.style = items;
-  obj = { source: _modDef10525, style: tmp.icon };
   const items1 = [
-    React7(native.Icon, obj),
+    React7(native.Icon, { source: _modDef10526, style: tmp.icon }),
     React7(Text_Text.Text, { style: textStyle, color: "text-overlay-light", variant: "text-xs/bold", children: label }),
   ];
   obj.children = items1;
@@ -45,10 +44,9 @@ function MediaKeyboardImage(draftType) {
   const node = item.node;
   const image = node.image;
   const type = node.type;
-  let obj = index(totalNumItems[12]);
   const items = [image];
   const items1 = [channelId, draftType, image, includedUploadIds];
-  const stateFromStoresObject = obj.useStateFromStoresObject(
+  const stateFromStoresObject = index(totalNumItems[12]).useStateFromStoresObject(
     items,
     () => {
       const obj = {
@@ -75,23 +73,20 @@ function MediaKeyboardImage(draftType) {
     items1,
   );
   constants = tmp5;
-  let obj1 = onPressItem;
   const items2 = [channelId, item, null != stateFromStoresObject.upload, onPressItem, onLongPressItem];
   const memo = onPressItem.useMemo(
     () => ({
       onPress() {
-        let obj = numItemsPerRow(totalNumItems[14]);
-        obj.hideNativeMenu();
-        obj = { channelId, item, isIncluded };
-        onPressItem(obj);
+        numItemsPerRow(totalNumItems[14]).hideNativeMenu();
+        onPressItem({ channelId, item, isIncluded });
       },
       onLongPress() {
-        let obj = numItemsPerRow(totalNumItems[14]);
-        obj.hideNativeMenu();
+        numItemsPerRow(totalNumItems[14]).hideNativeMenu();
         if (onLongPressItem != null) {
-          obj = { channelId, item, isIncluded };
-          tmp2(obj);
+          const obj2 = { channelId, item, isIncluded };
+          tmp2(obj2);
         }
+        const obj = numItemsPerRow(totalNumItems[14]);
       },
     }),
     items2,
@@ -106,31 +101,31 @@ function MediaKeyboardImage(draftType) {
     if (tmp9.VIDEO !== type) {
       if (constants2.VIDEO !== type) {
         if (tmp9.PHOTO === type) {
-          let tmp2Result = tmp2(tmp3[17]);
-          let tmp12 = null;
+          let tmp13 = null;
           if ("image/gif" === tmp2Result.getType(image.uri)) {
-            obj = { style: tmp.mediaKeyboardItemLabelContainer, label: "GIF" };
-            tmp12 = closure_9(tmp2(tmp3[18]).Caption, obj);
+            const obj3 = { style: tmp.mediaKeyboardItemLabelContainer, label: "GIF" };
+            tmp13 = closure_9(tmp2(tmp3[18]).Caption, obj3);
           }
+          tmp2Result = tmp2(tmp3[17]);
         } else {
-          tmp12 = null;
+          tmp13 = null;
         }
       }
-      let tmp16 = !tmp5;
+      let tmp17 = !tmp5;
       if (!tmp5) {
-        tmp16 = (stateFromStoresObject.uploadCount >= uploadLimit && disableWhenReachedLimit) || disabled;
-        const tmp17 = (stateFromStoresObject.uploadCount >= uploadLimit && disableWhenReachedLimit) || disabled;
+        tmp17 = (stateFromStoresObject.uploadCount >= uploadLimit && disableWhenReachedLimit) || disabled;
+        const tmp18 = (stateFromStoresObject.uploadCount >= uploadLimit && disableWhenReachedLimit) || disabled;
       }
-      obj = { style: tmp.checkIconContainer, children: null };
-      obj1 = {
+      const obj4 = { style: tmp.checkIconContainer, children: null };
+      const obj5 = {
         source: numItemsPerRow(tmp3[19]),
         disableColor: false,
         color: tmp.checkIcon.color,
         style: tmp.checkIcon,
       };
-      obj.children = closure_9(tmp2(tmp3[9]).Icon, obj1);
+      obj4.children = closure_9(tmp2(tmp3[9]).Icon, obj5);
       const items3 = [index, numItemsPerRow, totalNumItems];
-      const obj2 = {
+      const obj6 = {
         accessibilityRole: "button",
         accessibilityLabel: stringResult,
         accessibilityState: null,
@@ -140,14 +135,14 @@ function MediaKeyboardImage(draftType) {
         style: null,
         children: null,
       };
-      const obj3 = { selected: tmp5 };
-      obj2.accessibilityState = obj3;
-      obj2.onPress = tmp7;
-      obj2.onLongPress = tmp8;
-      obj2.disabled = tmp16;
+      const obj7 = { selected: tmp5 };
+      obj6.accessibilityState = obj7;
+      obj6.onPress = tmp7;
+      obj6.onLongPress = tmp8;
+      obj6.disabled = tmp17;
       const items4 = [tmp.imageContainer, ,];
       let imageDisabled;
-      const memo1 = obj1.useMemo(() => {
+      const memo1 = obj2.useMemo(() => {
         let num = 0;
         if (0 !== totalNumItems) {
           const _Math = Math;
@@ -199,49 +194,48 @@ function MediaKeyboardImage(draftType) {
         obj.marginLeft = num3;
         return obj;
       }, items3);
-      if (tmp16) {
+      if (tmp17) {
         imageDisabled = tmp.imageDisabled;
       }
       items4[1] = imageDisabled;
       items4[2] = memo1;
-      obj2.style = items4;
-      const obj4 = { resizeMode: "cover", resizeMethod: "resize", style: null, source: null, localImageSource: null };
+      obj6.style = items4;
+      const obj8 = { resizeMode: "cover", resizeMethod: "resize", style: null, source: null, localImageSource: null };
       const items5 = [tmp.image];
-      size = { height: null, width: null };
-      size.height = size;
-      size.width = size;
-      items5[1] = size;
-      obj4.style = items5;
-      const size1 = { uri: image.uri, width: size, height: size, cache: "force-cache" };
-      obj4.source = size1;
-      const size2 = { uri: image.uri, width: size, height: size };
-      obj4.localImageSource = size2;
-      const items6 = [closure_9(tmp2(tmp3[9]).ThumbnailImage, obj4), tmp12, ,];
-      let tmp18Result = null;
+      const size1 = { height: size, width: size };
+      items5[1] = size1;
+      obj8.style = items5;
+      const size2 = { uri: image.uri, width: size, height: size, cache: "force-cache" };
+      obj8.source = size2;
+      const size3 = { uri: image.uri, width: size, height: size };
+      obj8.localImageSource = size3;
+      const items6 = [closure_9(tmp2(tmp3[9]).ThumbnailImage, obj8), tmp13, ,];
+      let tmp19Result = null;
       if (tmp5) {
-        const obj5 = { style: null };
+        const obj9 = { style: null };
         const items7 = [tmp.selectedOverlay];
-        const size3 = { height: size, width: size };
-        items7[1] = size3;
-        obj5.style = items7;
-        tmp18Result = closure_9(onLongPressItem, obj5);
+        const size4 = { height: size, width: size };
+        items7[1] = size4;
+        obj9.style = items7;
+        tmp19Result = closure_9(onLongPressItem, obj9);
       }
-      items6[2] = tmp18Result;
-      let tmp27 = null;
+      items6[2] = tmp19Result;
+      let tmp28 = null;
       if (tmp5) {
-        tmp27 = tmp20;
+        tmp28 = tmp21;
       }
-      items6[3] = tmp27;
-      obj2.children = items6;
-      return closure_10(includedUploadIds, obj2);
+      items6[3] = tmp28;
+      obj6.children = items6;
+      return closure_10(includedUploadIds, obj6);
     }
-    const obj6 = { label: null };
-    tmp2Result = tmp2(tmp3[16]);
-    obj6.label = tmp2Result.getTimeFormat(image.playableDuration);
-    tmp12 = closure_9(NewCaption, obj6);
+    const obj10 = { label: tmp2(tmp3[16]).getTimeFormat(image.playableDuration) };
+    tmp13 = closure_9(NewCaption, obj10);
+    const tmp2Result2 = tmp2(tmp3[16]);
   }
   const intl2 = tmp2(tmp3[15]).intl;
   stringResult = intl2.string(tmp2(tmp3[15]).t.SkfkEJ);
+  let obj = index(totalNumItems[12]);
+  obj2 = onPressItem;
 }
 function MediaKeyboardDummy(arg0) {
   ({ size, isFirstInRow } = arg0);
@@ -251,13 +245,13 @@ function MediaKeyboardDummy(arg0) {
   if (!isFirstInRow) {
     obj = { marginLeft: 4 };
   }
-  obj = { style: items, children: null };
+  const obj2 = { style: items, children: null };
   items[1] = obj;
-  obj = { style: null };
+  const obj3 = { style: null };
   const items1 = [tmp.image, { height: size, width: size }];
-  obj.style = items1;
-  obj.children = React7(React4, obj);
-  return React7(React4, obj);
+  obj3.style = items1;
+  obj2.children = React7(React4, obj3);
+  return React7(React4, obj2);
 }
 function MediaKeyboardSpecialButton(arg0) {
   ({ size, disabled, index, totalNumItems, numItemsPerRow } = arg0);
@@ -265,25 +259,26 @@ function MediaKeyboardSpecialButton(arg0) {
   totalNumItems = undefined;
   ({ onPress, accessibilityLabel, children } = arg0);
   const tmp = closure_12();
-  let obj = index(totalNumItems[5]);
-  const sharedValue = obj.useSharedValue(0);
+  const sharedValue = index(totalNumItems[5]).useSharedValue(0);
   index = sharedValue;
   const tmp3 = closure_16();
   const backgroundColor = tmp3.backgroundColor;
   numItemsPerRow = backgroundColor;
   const pressedBackgroundColor = tmp3.pressedBackgroundColor;
   totalNumItems = pressedBackgroundColor;
+  let obj = index(totalNumItems[5]);
   const fn = function h() {
-    let obj = { backgroundColor: null };
+    const obj = { backgroundColor: null };
     const obj2 = timing;
     const items = [numItemsPerRow, totalNumItems];
-    obj = { duration: 200, easing: null };
+    const obj4 = { duration: 200, easing: null };
     const Easing = ReanimatedRexport2.Easing;
-    obj.easing = Easing.out(ReanimatedRexport2.Easing.quad);
-    obj.backgroundColor = obj2.withTiming(ReanimatedRexport2.interpolateColor(index.get(), [0, 1], items), obj);
+    obj4.easing = Easing.out(ReanimatedRexport2.Easing.quad);
+    obj.backgroundColor = obj2.withTiming(ReanimatedRexport2.interpolateColor(index.get(), [0, 1], items), obj4);
     return obj;
   };
-  obj = {
+  let obj2 = index(totalNumItems[5]);
+  fn.__closure = {
     withTiming: index(totalNumItems[20]).withTiming,
     interpolateColor: index(totalNumItems[5]).interpolateColor,
     pressed: sharedValue,
@@ -291,12 +286,11 @@ function MediaKeyboardSpecialButton(arg0) {
     pressedBackgroundColor,
     Easing: index(totalNumItems[5]).Easing,
   };
-  fn.__closure = obj;
   fn.__workletHash = 15924448581794;
   fn.__initData = __initData;
   let items = [index, numItemsPerRow, totalNumItems];
-  const animatedStyle = index(totalNumItems[5]).useAnimatedStyle(fn);
-  obj = {
+  const animatedStyle = obj2.useAnimatedStyle(fn);
+  let obj4 = {
     disabled,
     accessibilityRole: "button",
     accessibilityLabel,
@@ -365,26 +359,26 @@ function MediaKeyboardSpecialButton(arg0) {
     obj.marginLeft = num3;
     return obj;
   }, items);
-  disabled = undefined;
+  let disabled1;
   if (disabled) {
-    disabled = tmp.disabled;
+    disabled1 = tmp.disabled;
   }
-  items1[5] = disabled;
-  obj.style = items1;
-  obj.children = children;
-  return closure_9(closure_11, obj);
+  items1[5] = disabled1;
+  obj4.style = items1;
+  obj4.children = children;
+  return closure_9(closure_11, obj4);
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, Pressable } = get_ActivityIndicator);
-const DeviceConstants = fn(10777);
+const DeviceConstants = fn(10778);
 ({ ALAssetsType: closure_7, DeviceMediaType: closure_8 } = DeviceConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
 let closure_11 = ReanimatedRexport.createAnimatedComponent(Pressable);
-fn(4636);
+let createStyles = fn(4636);
 let obj = {
   container: { flexDirection: "row", paddingHorizontal: 12, alignItems: "center" },
-  image: null,
+  image: { backgroundColor: nativeDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND },
   imageContainer: null,
   labelContainer: null,
   mediaKeyboardItemLabelContainer: null,
@@ -396,8 +390,7 @@ let obj = {
   disabled: null,
   imageDisabled: null,
 };
-obj = { backgroundColor: nativeDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND };
-obj.image = obj;
+let obj2 = { backgroundColor: nativeDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND };
 obj.imageContainer = { borderRadius: nativeDefault.radii.xs, overflow: "hidden", position: "relative" };
 const rect = {
   flexDirection: "row",
@@ -435,18 +428,18 @@ let size2 = {
 ColorUtils = fn(4486);
 size2.borderColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.BLACK, 0.1);
 obj.checkIconContainer = size2;
-let createStyles = {};
+let obj5 = {};
 const merged = Object.assign(get_ActivityIndicator.StyleSheet.absoluteFillObject);
-createStyles.borderRadius = nativeDefault.radii.xs;
+obj5.borderRadius = nativeDefault.radii.xs;
 ColorUtils = fn(4486);
-createStyles.backgroundColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.BLACK, 0.3);
-obj.selectedOverlay = createStyles;
+obj5.backgroundColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.BLACK, 0.3);
+obj.selectedOverlay = obj5;
 obj.specialButton = { flexDirection: "column", justifyContent: "center", alignItems: "center", gap: 8 };
 obj.disabled = { opacity: 0.4 };
 obj.imageDisabled = { opacity: 0.2 };
 let closure_12 = createStyles.createStyles(obj);
 createStyles = fn(4636);
-let obj1 = { borderRadius: nativeDefault.radii.xs, overflow: "hidden", position: "relative" };
+let obj4 = { borderRadius: nativeDefault.radii.xs, overflow: "hidden", position: "relative" };
 let closure_16 = createStyles.createStyleProperties({
   backgroundColor: nativeDefault.colors.CONTROL_SECONDARY_BACKGROUND_DEFAULT,
   pressedBackgroundColor: nativeDefault.colors.CONTROL_SECONDARY_BACKGROUND_ACTIVE,
@@ -454,7 +447,7 @@ let closure_16 = createStyles.createStyleProperties({
 const __initData = {
   code: "function MediaKeyboardItemTsx1(){const{withTiming,interpolateColor,pressed,backgroundColor,pressedBackgroundColor,Easing}=this.__closure;return{backgroundColor:withTiming(interpolateColor(pressed.get(),[0,1],[backgroundColor,pressedBackgroundColor]),{duration:200,easing:Easing.out(Easing.quad)})};}",
 };
-let obj3 = {
+let obj6 = {
   backgroundColor: nativeDefault.colors.CONTROL_SECONDARY_BACKGROUND_DEFAULT,
   pressedBackgroundColor: nativeDefault.colors.CONTROL_SECONDARY_BACKGROUND_ACTIVE,
 };
@@ -480,20 +473,20 @@ export default noop.memo((arg0) => {
   } = arg0);
   ({ handleCameraPress, handleAttachPress, handleViewAllPhotosPress } = arg0);
   const size = (useWindowDimensionsDefault().width - (24 + 4 * (numPerRow - 1))) / numPerRow;
-  let allphotos = { camera: null, allphotos: null, attach: null };
-  allphotos = { text: util.t.uje3P9, onPress: handleCameraPress, Icon: CameraIcon.CameraIcon };
-  allphotos.camera = allphotos;
-  allphotos = { text: util.t.Zmm6dN, onPress: handleViewAllPhotosPress, Icon: ImageIcon.ImageIcon };
-  allphotos.allphotos = allphotos;
-  const tmp = allphotos();
-  allphotos.attach = { text: util.t["8Hvr3+"], onPress: handleAttachPress, Icon: AttachmentIcon.AttachmentIcon };
-  let obj1 = { text: util.t["8Hvr3+"], onPress: handleAttachPress, Icon: AttachmentIcon.AttachmentIcon };
+  let obj = { camera: null, allphotos: null, attach: null };
+  const tmp = obj();
+  obj.camera = { text: util.t.uje3P9, onPress: handleCameraPress, Icon: CameraIcon.CameraIcon };
+  let obj2 = { text: util.t.uje3P9, onPress: handleCameraPress, Icon: CameraIcon.CameraIcon };
+  obj.allphotos = { text: util.t.Zmm6dN, onPress: handleViewAllPhotosPress, Icon: ImageIcon.ImageIcon };
+  let obj3 = { text: util.t.Zmm6dN, onPress: handleViewAllPhotosPress, Icon: ImageIcon.ImageIcon };
+  obj.attach = { text: util.t["8Hvr3+"], onPress: handleAttachPress, Icon: AttachmentIcon.AttachmentIcon };
+  let obj4 = { text: util.t["8Hvr3+"], onPress: handleAttachPress, Icon: AttachmentIcon.AttachmentIcon };
   return disableWhenReachedLimit(closure_4, {
     style: tmp.container,
     children: items.map((type, index) => {
       if (null == type) {
-        obj = { size, isFirstInRow: 0 === index };
-        return React7(MediaKeyboardDummy, obj, index);
+        const obj2 = { size, isFirstInRow: 0 === index };
+        return React7(MediaKeyboardDummy, obj2, index);
       } else {
         let hasItem = "type" in type;
         if (hasItem) {
@@ -501,26 +494,24 @@ export default noop.memo((arg0) => {
           hasItem = items.includes(type.type);
         }
         if (hasItem) {
-          obj = {
+          const obj3 = {
             size,
-            onPress: null,
-            disabled: null,
+            onPress: obj[type.type].onPress,
+            disabled,
             accessibilityLabel: null,
             index: null,
             totalNumItems: null,
             numItemsPerRow: null,
             children: null,
           };
-          obj.onPress = obj[type.type].onPress;
-          obj.disabled = disabled;
           const intl = util.intl;
-          obj.accessibilityLabel = intl.string(obj[type.type].text);
-          obj.index = closure_1_4 * numPerRow + index;
-          obj.totalNumItems = totalNumItems;
-          obj.numItemsPerRow = numPerRow;
-          const obj1 = { color: nativeDefault.colors.ICON_SUBTLE, size: "lg" };
-          obj.children = React7(obj[type.type].Icon, obj1);
-          return React7(MediaKeyboardSpecialButton, obj, index);
+          obj3.accessibilityLabel = intl.string(obj[type.type].text);
+          obj3.index = closure_1_4 * numPerRow + index;
+          obj3.totalNumItems = totalNumItems;
+          obj3.numItemsPerRow = numPerRow;
+          const obj4 = { color: nativeDefault.colors.ICON_SUBTLE, size: "lg" };
+          obj3.children = React7(obj[type.type].Icon, obj4);
+          return React7(MediaKeyboardSpecialButton, obj3, index);
         } else {
           obj = {
             channelId: id.id,

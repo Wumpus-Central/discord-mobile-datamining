@@ -7,6 +7,8 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 import SearchMessageStore from "../../SearchMessageStore.tsx";
 import SearchQueryStore from "../stores/SearchQueryStore.tsx";
 
+const require = globalThis.__r;
+
 require = fn;
 let closure_6 = fn(7982).SEARCH_MESSAGE_TAB_SENTINEL;
 const size = fn(2);
@@ -16,9 +18,8 @@ export const useMessageSearchErrorScreen = function useMessageSearchErrorScreen(
   ({ searchContext: require, tab: importDefault, hasListItems } = arg0);
   let stateFromStores;
   let ref;
-  let obj = require("initialize");
   const items = [SearchQueryStore, ref];
-  stateFromStores = obj.useStateFromStores(items, () => {
+  stateFromStores = require("initialize").useStateFromStores(items, () => {
     const searchResultsQuery = SearchQueryStore.getSearchResultsQuery(closure_1_0);
     return SearchMessageStore.getError(SearchUtils.getSearchTabFetchId(closure_1_0, importDefault, searchResultsQuery));
   });
@@ -32,7 +33,7 @@ export const useMessageSearchErrorScreen = function useMessageSearchErrorScreen(
   }
   ref = anyErrorMessage.useRef(null);
   const items1 = [stateFromStores, anyErrorMessage];
-  obj = {
+  let obj2 = {
     hasError: null != stateFromStores,
     errorText: anyErrorMessage,
     isErrorFullscreen: null,
@@ -42,18 +43,18 @@ export const useMessageSearchErrorScreen = function useMessageSearchErrorScreen(
   let tmp5 = null != stateFromStores;
   const callback = anyErrorMessage.useCallback(() => {
     if (stateFromStores !== ref.current) {
-      const obj = { key: "SEARCH_ERROR_TOAST", icon: _modDef9755, content: anyErrorMessage };
-      obj.open(obj);
+      const obj2 = { key: "SEARCH_ERROR_TOAST", icon: _modDef9755, content: anyErrorMessage };
+      ToastActionCreatorsDefault.open(obj2);
       tmp2.current = tmp;
     }
   }, items1);
   if (tmp5) {
     tmp5 = !hasListItems;
   }
-  obj.isErrorFullscreen = tmp5;
-  obj.isErrorToast = null != stateFromStores && hasListItems;
-  obj.showErrorToast = callback;
-  return obj;
+  obj2.isErrorFullscreen = tmp5;
+  obj2.isErrorToast = null != stateFromStores && hasListItems;
+  obj2.showErrorToast = callback;
+  return obj2;
 };
 export const useMessageTabCountsErrorText = function useMessageTabCountsErrorText(searchContext) {
   searchContext = searchContext.searchContext;

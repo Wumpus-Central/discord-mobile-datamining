@@ -25,28 +25,31 @@ function ConnectedForumPost(arg0) {
   let firstMessage;
   let ForumPostPressableContainer = require;
   let tmp = firstMessage;
-  let obj = require("initialize");
   const items = [ChannelStore];
-  const stateFromStores = obj.useStateFromStores(items, () => ChannelStore.getChannel(_require));
+  const stateFromStores = require("initialize").useStateFromStores(items, () => ChannelStore.getChannel(_require));
   let tmp3 = parent_id;
   parent_id(firstMessage[9])(
     null != stateFromStores,
     "[Forum Post] The thread should not be null here. A store must have missed an update.",
   );
   parent_id = stateFromStores.parent_id;
-  let obj1 = require("initialize");
+  let obj = require("initialize");
   const items1 = [ChannelStore];
-  const stateFromStores1 = obj1.useStateFromStores(items1, () => ChannelStore.getChannel(parent_id));
-  let obj2 = require("ForumPostDataLoader");
-  const firstForumPostMessage = obj2.useFirstForumPostMessage(stateFromStores);
+  const stateFromStores1 = require("initialize").useStateFromStores(items1, () => ChannelStore.getChannel(parent_id));
+  const obj2 = require("initialize");
+  const firstForumPostMessage = require("ForumPostDataLoader").useFirstForumPostMessage(stateFromStores);
   firstMessage = firstForumPostMessage.firstMessage;
   const loaded = firstForumPostMessage.loaded;
-  let obj3 = require("ForumHooks");
-  const forumPostReadStates = obj3.useForumPostReadStates(stateFromStores);
+  const obj3 = require("ForumPostDataLoader");
+  const forumPostReadStates = require("ForumHooks").useForumPostReadStates(stateFromStores);
   ({ isNew, hasUnreads } = forumPostReadStates);
-  let obj4 = require("ForumHooks");
-  const forumPostFirstMessageMarkup = obj4.useForumPostFirstMessageMarkup({ firstMessage, hasUnreads });
+  const obj4 = require("ForumHooks");
+  const forumPostFirstMessageMarkup = require("ForumHooks").useForumPostFirstMessageMarkup({
+    firstMessage,
+    hasUnreads,
+  });
   ({ hasSpoilerEmbeds, content } = forumPostFirstMessageMarkup);
+  const obj5 = require("ForumHooks");
   const forumPostMediaThumbnail = require("ForumPostMediaUtils").useForumPostMediaThumbnail(
     firstMessage,
     stateFromStores1,
@@ -75,8 +78,8 @@ function ConnectedForumPost(arg0) {
       if (!stateFromStoresObject.isIgnored) {
         if (useForumChannelStore(parent_id).layoutType === ForumPostPressableContainer(tmp[16]).ForumLayout.GRID) {
           if (forumPostMediaThumbnail.length > 0) {
-            obj = { style, threadId: stateFromStores.id, children: null };
-            obj = {
+            const obj9 = { style, threadId: stateFromStores.id, children: null };
+            const obj10 = {
               thread: stateFromStores,
               media: forumPostMediaThumbnail,
               parentChannel: stateFromStores1,
@@ -84,12 +87,12 @@ function ConnectedForumPost(arg0) {
               hasUnreads,
               isNew,
             };
-            obj.children = closure_6(ForumPostGrid, obj);
-            let tmp16Result = closure_6(ForumPostPressableContainer(tmp[12]).ForumPostPressableContainer, obj);
+            obj9.children = closure_6(ForumPostGrid, obj10);
+            let tmp16Result = closure_6(ForumPostPressableContainer(tmp[12]).ForumPostPressableContainer, obj9);
           }
         }
-        obj1 = { style, threadId: stateFromStores.id, children: null };
-        obj2 = {
+        const obj11 = { style, threadId: stateFromStores.id, children: null };
+        const obj12 = {
           thread: stateFromStores,
           parentChannel: stateFromStores1,
           firstMessage,
@@ -101,16 +104,16 @@ function ConnectedForumPost(arg0) {
           firstMessageLoaded: loaded,
           isLocalDeviceMedia: false,
         };
-        obj1.children = closure_6(tmp3(tmp[13]), obj2);
-        tmp16Result = closure_6(ForumPostPressableContainer(tmp[12]).ForumPostPressableContainer, obj1);
+        obj11.children = closure_6(tmp3(tmp[13]), obj12);
+        tmp16Result = closure_6(ForumPostPressableContainer(tmp[12]).ForumPostPressableContainer, obj11);
       }
     }
     ForumPostPressableContainer = ForumPostPressableContainer(tmp[12]).ForumPostPressableContainer;
-    obj3 = { style, threadId: null, children: null };
+    const obj13 = { style, threadId: null, children: null };
     style = stateFromStores.id;
-    obj3.threadId = style;
+    obj13.threadId = style;
     tmp3 = tmp3(tmp[13]);
-    obj4 = {
+    const obj14 = {
       thread: stateFromStores,
       parentChannel: stateFromStores1,
       firstMessage,
@@ -126,16 +129,16 @@ function ConnectedForumPost(arg0) {
     if (isBlocked) {
       isNew = "blocked";
     }
-    obj4.senderModifier = isNew;
-    tmp = closure_6(tmp3, obj4);
-    obj3.children = tmp;
-    tmp16Result = closure_6(ForumPostPressableContainer, obj3);
+    obj14.senderModifier = isNew;
+    tmp = closure_6(tmp3, obj14);
+    obj13.children = tmp;
+    tmp16Result = closure_6(ForumPostPressableContainer, obj13);
   } else {
     return closure_6(tmp3(tmp[15]), {});
   }
   const obj8 = require("initialize");
 }
-const useForumChannelStore = fn(12130).useForumChannelStore;
+const useForumChannelStore = fn(12131).useForumChannelStore;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, Fragment: closure_7, jsxs: closure_8 } = jsxProd);
 const size = fn(2);
@@ -143,40 +146,39 @@ const result = size.fileFinishedImporting("modules/forums/native/ForumPost.tsx")
 
 export default noop.memo((arg0) => {
   _require = arg0;
-  let obj = require("initialize");
   const items = [ChannelStore];
   let tmp = null;
   if (null != obj.useStateFromStores(items, () => ChannelStore.getChannel(threadId.threadId))) {
-    obj = {};
+    const obj2 = {};
     const merged = Object.assign(arg0);
-    tmp = closure_6(ConnectedForumPost, obj);
+    tmp = closure_6(ConnectedForumPost, obj2);
   }
   return tmp;
 });
 export const ForumPostListDisabled = function ForumPostListDisabled(threadId) {
   threadId = threadId.threadId;
   ({ style, localDeviceMedia } = threadId);
-  let obj = threadId(504);
   const items = [ChannelStore];
-  const stateFromStores = obj.useStateFromStores(items, () => ChannelStore.getChannel(threadId));
+  const stateFromStores = threadId(504).useStateFromStores(items, () => ChannelStore.getChannel(threadId));
   let tmp5 = null;
   stateFromStores(38)(
     null != stateFromStores,
     "[Forum Post] The thread should not be null here. A store must have missed an update.",
   );
+  const obj = threadId(504);
+  const tmp = threadId;
+  const tmp4 = stateFromStores;
   const items1 = [ChannelStore];
   const stateFromStores1 = threadId(504).useStateFromStores(items1, () =>
     ChannelStore.getChannel(stateFromStores.parent_id),
   );
   const obj2 = threadId(504);
-  const tmp = threadId;
-  const tmp4 = stateFromStores;
   const firstForumPostMessage = threadId(7407).useFirstForumPostMessage(stateFromStores);
   ({ firstMessage, loaded } = firstForumPostMessage);
   threadId(7989);
   if (loaded) {
-    obj = { style, children: null };
-    obj = {
+    const obj4 = { style, children: null };
+    const obj5 = {
       thread: stateFromStores,
       parentChannel: stateFromStores1,
       firstMessage,
@@ -187,8 +189,8 @@ export const ForumPostListDisabled = function ForumPostListDisabled(threadId) {
       firstMessageLoaded: loaded,
       isLocalDeviceMedia: true,
     };
-    obj.children = closure_6(tmp4(12150), obj);
-    tmp5 = closure_6(tmp(12149).ForumPostDisabledContainer, obj);
+    obj4.children = closure_6(tmp4(12151), obj5);
+    tmp5 = closure_6(tmp(12150).ForumPostDisabledContainer, obj4);
   }
   return tmp5;
 };

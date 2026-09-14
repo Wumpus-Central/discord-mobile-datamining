@@ -6,14 +6,13 @@ const result = size.fileFinishedImporting("modules/guild_role_subscriptions/List
 
 export const getSource = function getSource(image_asset) {
   if (null == image_asset.image_asset) {
-    let obj = { uri: "" };
+    let obj2 = { uri: "" };
   } else {
-    obj = StoreUtils;
-    let str = obj.getAssetURL(image_asset.application_id, image_asset.image_asset);
+    let str = StoreUtils.getAssetURL(image_asset.application_id, image_asset.image_asset);
     if (str == null) {
       str = "";
     }
-    obj = { uri: str };
+    obj2 = { uri: str };
   }
-  return obj;
+  return obj2;
 };

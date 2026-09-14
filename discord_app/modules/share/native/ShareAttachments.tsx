@@ -8,14 +8,16 @@ import AttachmentPreviewDefault from "../../media/native/AttachmentPreview.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 import ReanimatedRexport from "../../reanimated/ReanimatedRexport.tsx";
 
+const require = globalThis.__r;
+
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 const LinearGradient = ReanimatedRexport.createAnimatedComponent(LinearGradientDefault);
-let obj = { duration: 300, easing: fn(1178).STANDARD_EASING };
-fn(4636);
-obj = {
+let GRADIENT_EASING_CONFIG = { duration: 300, easing: fn(1176).STANDARD_EASING };
+const createStyles = fn(4636);
+let obj2 = {
   containerRevamp: { marginHorizontal: -nativeDefault.space.PX_16 },
   attachmentPreviewContentContainer: null,
   attachmentPreviewContentContainerRevamp: null,
@@ -24,27 +26,27 @@ obj = {
   rightGradient: null,
   gradient: null,
 };
-const createStyles = { flexDirection: "row", gap: nativeDefault.space.PX_8 };
-obj.attachmentPreviewContentContainer = createStyles;
-let obj1 = { marginHorizontal: -nativeDefault.space.PX_16 };
-obj.attachmentPreviewContentContainerRevamp = { paddingHorizontal: nativeDefault.space.PX_16 };
-let obj3 = { paddingHorizontal: nativeDefault.space.PX_16 };
-obj.attachmentPreview = {
+let obj4 = { marginHorizontal: -nativeDefault.space.PX_16 };
+obj2.attachmentPreviewContentContainer = { flexDirection: "row", gap: nativeDefault.space.PX_8 };
+let obj5 = { flexDirection: "row", gap: nativeDefault.space.PX_8 };
+obj2.attachmentPreviewContentContainerRevamp = { paddingHorizontal: nativeDefault.space.PX_16 };
+let obj6 = { paddingHorizontal: nativeDefault.space.PX_16 };
+obj2.attachmentPreview = {
   height: 60,
   backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
   overflow: "hidden",
   borderRadius: nativeDefault.radii.sm,
 };
-obj.leftGradient = { width: 50, position: "absolute", left: 0, top: 0, bottom: 0, zIndex: 100 };
-obj.rightGradient = { width: 50, position: "absolute", right: 0, top: 0, bottom: 0, zIndex: 100 };
-const obj4 = {
+obj2.leftGradient = { width: 50, position: "absolute", left: 0, top: 0, bottom: 0, zIndex: 100 };
+obj2.rightGradient = { width: 50, position: "absolute", right: 0, top: 0, bottom: 0, zIndex: 100 };
+let obj7 = {
   height: 60,
   backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
   overflow: "hidden",
   borderRadius: nativeDefault.radii.sm,
 };
-obj.gradient = { color: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
-let closure_9 = createStyles.createStyles(obj);
+obj2.gradient = { color: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
+let closure_9 = createStyles.createStyles(obj2);
 const __initData = {
   code: "function ShareAttachmentsTsx1(){const{withTiming,contentOffset,GRADIENT_EASING_CONFIG}=this.__closure;return{opacity:withTiming(contentOffset.get()<=0?0:1,GRADIENT_EASING_CONFIG)};}",
 };
@@ -65,31 +67,26 @@ export default function ShareAttachments(arg0) {
   let sharedValue1;
   let tmp = closure_9();
   _require = tmp;
-  let __closure = require("ReanimatedRexport");
-  const sharedValue = __closure.useSharedValue(0);
-  let obj1 = require("ReanimatedRexport");
-  sharedValue1 = obj1.useSharedValue(0);
-  let obj2 = require("ReanimatedRexport");
-  const sharedValue2 = obj2.useSharedValue(0);
+  GRADIENT_EASING_CONFIG = require("ReanimatedRexport");
+  const sharedValue = GRADIENT_EASING_CONFIG.useSharedValue(0);
+  sharedValue1 = require("ReanimatedRexport").useSharedValue(0);
+  const obj2 = require("ReanimatedRexport");
+  const sharedValue2 = require("ReanimatedRexport").useSharedValue(0);
   let obj3 = require("ReanimatedRexport");
   const fn = function y() {
-    obj = timing;
+    const obj = timing;
     let num = 1;
     if (sharedValue.get() <= 0) {
       num = 0;
     }
-    obj = { opacity: obj.withTiming(num, obj) };
-    return obj;
+    return { opacity: obj.withTiming(num, obj) };
   };
-  __closure = {
-    withTiming: require("timing").withTiming,
-    contentOffset: sharedValue,
-    GRADIENT_EASING_CONFIG: __closure,
-  };
-  fn.__closure = __closure;
+  const obj4 = require("ReanimatedRexport");
+  fn.__closure = { withTiming: require("timing").withTiming, contentOffset: sharedValue, GRADIENT_EASING_CONFIG };
   fn.__workletHash = 3302668154466;
   fn.__initData = __initData;
-  const animatedStyle = obj3.useAnimatedStyle(fn);
+  const animatedStyle = obj4.useAnimatedStyle(fn);
+  const obj5 = { withTiming: require("timing").withTiming, contentOffset: sharedValue, GRADIENT_EASING_CONFIG };
   class S {
     constructor() {
       obj = closure_0(closure_2[8]);
@@ -99,22 +96,28 @@ export default function ShareAttachments(arg0) {
       if (sum >= closure_2.get()) {
         num = 0;
       }
-      obj = { opacity: obj.withTiming(num, closure_8) };
-      return obj;
+      obj1 = { opacity: obj.withTiming(num, closure_8) };
+      return obj1;
     }
   }
-  __closure = {
+  const obj6 = require("ReanimatedRexport");
+  S.__closure = {
     withTiming: require("timing").withTiming,
     contentOffset: sharedValue,
     layoutWidth: sharedValue2,
     contentWidth: sharedValue1,
-    GRADIENT_EASING_CONFIG: __closure,
+    GRADIENT_EASING_CONFIG,
   };
-  S.__closure = __closure;
   S.__workletHash = 13996707009656;
   S.__initData = __initData2;
-  const animatedStyle1 = require("ReanimatedRexport").useAnimatedStyle(S);
-  const obj6 = require("ReanimatedRexport");
+  const animatedStyle1 = obj6.useAnimatedStyle(S);
+  const obj7 = {
+    withTiming: require("timing").withTiming,
+    contentOffset: sharedValue,
+    layoutWidth: sharedValue2,
+    contentWidth: sharedValue1,
+    GRADIENT_EASING_CONFIG,
+  };
   const fn2 = function v(contentOffset) {
     const result = sharedValue.set(contentOffset.contentOffset.x);
     const result1 = sharedValue1.set(contentOffset.contentSize.width);
@@ -140,19 +143,19 @@ export default function ShareAttachments(arg0) {
     if (isRevamp) {
       containerRevamp = tmp.containerRevamp;
     }
-    obj1 = { style: containerRevamp, children: null };
-    obj2 = { start: { x: 0, y: 0 }, end: { x: 1, y: 0 }, colors: null, style: null, pointerEvents: "box-none" };
+    const obj9 = { style: containerRevamp, children: null };
+    const obj10 = { start: { x: 0, y: 0 }, end: { x: 1, y: 0 }, colors: null, style: null, pointerEvents: "box-none" };
     const items3 = [tmp.gradient.color, memo];
-    obj2.colors = items3;
+    obj10.colors = items3;
     const items4 = [tmp.leftGradient, animatedStyle];
-    obj2.style = items4;
-    const items5 = [closure_5(LinearGradient, obj2), ,];
-    obj3 = { start: { x: 0, y: 0 }, end: { x: 1, y: 0 }, colors: null, style: null, pointerEvents: "box-none" };
+    obj10.style = items4;
+    const items5 = [closure_5(LinearGradient, obj10), ,];
+    const obj11 = { start: { x: 0, y: 0 }, end: { x: 1, y: 0 }, colors: null, style: null, pointerEvents: "box-none" };
     const items6 = [memo, tmp.gradient.color];
-    obj3.colors = items6;
+    obj11.colors = items6;
     const items7 = [tmp.rightGradient, animatedStyle1];
-    obj3.style = items7;
-    items5[1] = closure_5(LinearGradient, obj3);
+    obj11.style = items7;
+    items5[1] = closure_5(LinearGradient, obj11);
     const items8 = [tmp.attachmentPreviewContentContainer];
     let prop;
     if (isRevamp) {
@@ -167,8 +170,8 @@ export default function ShareAttachments(arg0) {
         if (sum >= closure_2.get()) {
           num = 0;
         }
-        obj = { opacity: obj.withTiming(num, closure_8) };
-        return obj;
+        obj1 = { opacity: obj.withTiming(num, closure_8) };
+        return obj1;
       }
     }
     items8[1] = prop;
@@ -179,7 +182,7 @@ export default function ShareAttachments(arg0) {
     const intl = tmp2(tmp3[10]).intl;
     tmp19[8] = intl.string(tmp2(tmp3[10]).t.RhtzFe);
     tmp19[9] = attachments.map((uri, index) => {
-      obj = { style: closure_0.attachmentPreview, children: null };
+      const obj = { style: closure_0.attachmentPreview, children: null };
       const size = {
         uri: uri.uri,
         width: 60,
@@ -197,8 +200,8 @@ export default function ShareAttachments(arg0) {
       return hasOwnProperty(View, obj, index);
     });
     items5[2] = closure_5(sharedValue(tmp3[3]).ScrollView, tmp19);
-    obj1.children = items5;
-    tmp20Result = closure_6(View, obj1);
+    obj9.children = items5;
+    tmp20Result = closure_6(View, obj9);
   }
   return tmp20Result;
 }

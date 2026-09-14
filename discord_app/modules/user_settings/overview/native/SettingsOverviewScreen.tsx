@@ -15,9 +15,9 @@ export default function SettingsOverviewScreen() {
   hasPremiumSubscriptionToDisplay = hasPremiumSubscriptionToDisplay(4294).useHasPremiumSubscriptionToDisplay();
   let items = [hasPremiumSubscriptionToDisplay];
   const node = noop.useMemo(() => {
-    let obj = { label: null, settings: null };
+    const obj2 = { label: null, settings: null };
     const intl = util.intl;
-    obj.label = intl.string(util.t.C6COaT);
+    obj2.label = intl.string(util.t.C6COaT);
     let PREMIUM = null;
     if (!hasPremiumSubscriptionToDisplay) {
       PREMIUM = MobileUserSettings.PREMIUM;
@@ -35,18 +35,18 @@ export default function SettingsOverviewScreen() {
       CLIPS: arr[9],
       SCAN_QR_CODE: arr[10],
     } = MobileUserSettings);
-    obj.settings = items.filter(GlobalUtils.isNotNullish);
-    const items1 = [obj, , , , , , , , ,];
-    obj = { label: null, settings: null };
+    obj2.settings = items.filter(GlobalUtils.isNotNullish);
+    const items1 = [obj2, , , , , , , , ,];
+    const obj3 = { label: null, settings: null };
     const intl2 = util.intl;
-    obj.label = intl2.string(util.t["SuS+RB"]);
+    obj3.label = intl2.string(util.t["SuS+RB"]);
     const items2 = [, , , , , , ,];
     ({ COLLECTIBLES_SHOP: arr3[0], QUEST_HOME: arr3[1] } = MobileUserSettings);
     let PREMIUM1 = null;
     if (hasPremiumSubscriptionToDisplay) {
       PREMIUM1 = MobileUserSettings.PREMIUM;
     }
-    const obj1 = { sections: null };
+    const obj4 = { sections: null };
     items2[2] = PREMIUM1;
     ({
       PREMIUM_MANAGE_SUBSCRIPTIONS: arr3[3],
@@ -55,11 +55,11 @@ export default function SettingsOverviewScreen() {
       GUILD_ROLE_SUBSCRIPTIONS: arr3[6],
       PREMIUM_RESTORE_SUBSCRIPTION: arr3[7],
     } = MobileUserSettings);
-    obj.settings = items2.filter(GlobalUtils.isNotNullish);
-    items1[1] = obj;
-    const obj2 = { label: null, settings: null };
+    obj3.settings = items2.filter(GlobalUtils.isNotNullish);
+    items1[1] = obj3;
+    const obj5 = { label: null, settings: null };
     const intl3 = util.intl;
-    obj2.label = intl3.string(util.t.f2n1TP);
+    obj5.label = intl3.string(util.t.f2n1TP);
     const items3 = [, , , , , , , , , ,];
     ({
       VOICE: arr4[0],
@@ -73,28 +73,28 @@ export default function SettingsOverviewScreen() {
     } = MobileUserSettings);
     items3[8] = MobileNotifSettings.MobileNotifSettings.NOTIFICATIONS_REDESIGN;
     ({ APP_ICONS: arr4[9], ADVANCED: arr4[10] } = MobileUserSettings);
-    obj2.settings = items3.filter(GlobalUtils.isNotNullish);
-    items1[2] = obj2;
-    const obj3 = { label: null, settings: null };
+    obj5.settings = items3.filter(GlobalUtils.isNotNullish);
+    items1[2] = obj5;
+    const obj6 = { label: null, settings: null };
     const intl4 = util.intl;
-    obj3.label = intl4.string(util.t["Yl/Riu"]);
+    obj6.label = intl4.string(util.t["Yl/Riu"]);
     const items4 = [, ,];
     ({ SUPPORT: arr5[0], UPLOAD_DEBUG_LOGS: arr5[1], ACKNOWLEDGEMENTS: arr5[2] } = MobileUserSettings);
-    obj3.settings = items4;
-    items1[3] = obj3;
-    const obj4 = { label: null, settings: null };
+    obj6.settings = items4;
+    items1[3] = obj6;
+    const obj7 = { label: null, settings: null };
     const intl5 = util.intl;
-    obj4.label = intl5.string(util.t.LRmNAl);
+    obj7.label = intl5.string(util.t.LRmNAl);
     const items5 = [MobileUserSettings.CHANGE_LOG];
-    obj4.settings = items5;
-    items1[4] = obj4;
-    const obj5 = { settings: null };
+    obj7.settings = items5;
+    items1[4] = obj7;
+    const obj8 = { settings: null };
     const items6 = [MobileUserSettings.LOGOUT];
-    obj5.settings = items6;
-    items1[5] = obj5;
-    const obj6 = { label: null, settings: null };
+    obj8.settings = items6;
+    items1[5] = obj8;
+    const obj9 = { label: null, settings: null };
     const intl6 = util.intl;
-    obj6.label = intl6.string(util.t.CbItOL);
+    obj9.label = intl6.string(util.t.CbItOL);
     const items7 = [, , , , , ,];
     ({
       APP_VERSION: arr8[0],
@@ -105,16 +105,16 @@ export default function SettingsOverviewScreen() {
       REACT_COMPILER: arr8[5],
       UPLOAD_INTL_DATA: arr8[6],
     } = MobileUserSettings);
-    obj6.settings = items7;
-    items1[6] = obj6;
-    const obj7 = { label: null, settings: null };
+    obj9.settings = items7;
+    items1[6] = obj9;
+    const obj10 = { label: null, settings: null };
     const intl7 = util.intl;
-    obj7.label = intl7.string(util.t["/tZh0A"]);
+    obj10.label = intl7.string(util.t["/tZh0A"]);
     const items8 = [,];
     ({ BUG_REPORTER: arr9[0], CREATE_BUG_REPORT: arr9[1] } = MobileUserSettings);
-    obj7.settings = items8;
-    items1[7] = obj7;
-    const obj8 = { label: "Build Status", settings: null };
+    obj10.settings = items8;
+    items1[7] = obj10;
+    const obj11 = { label: "Build Status", settings: null };
     const items9 = [, , ,];
     ({
       INTERNAL_BUILD_ACTIVE: arr10[0],
@@ -122,15 +122,15 @@ export default function SettingsOverviewScreen() {
       BUILD_OVERRIDE_ACTIVE: arr10[2],
       EXPERIMENT_OVERRIDE_ACTIVE: arr10[3],
     } = MobileUserSettings);
-    obj8.settings = items9;
-    items1[8] = obj8;
-    const obj9 = { label: "Staff Settings", settings: null };
+    obj11.settings = items9;
+    items1[8] = obj11;
+    const obj12 = { label: "Staff Settings", settings: null };
     const items10 = [, ,];
     ({ SHOW_DEV_WIDGET: arr11[0], SHOW_DEV_TOOLS: arr11[1], DESIGN_SYSTEMS: arr11[2] } = MobileUserSettings);
-    obj9.settings = items10;
-    items1[9] = obj9;
-    obj1.sections = items1;
-    return obj.createList(obj1);
+    obj12.settings = items10;
+    items1[9] = obj12;
+    obj4.sections = items1;
+    return SettingBuilders.createList(obj4);
   }, items);
-  return jsx(hasPremiumSubscriptionToDisplay(14776).SearchableSettingsList, { node });
+  return jsx(hasPremiumSubscriptionToDisplay(14777).SearchableSettingsList, { node });
 }

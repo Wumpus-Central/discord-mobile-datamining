@@ -8,6 +8,8 @@ import QuestsIcon from "../../../../design/components/Icon/native/redesign/gener
 import SettingBuilders from "../../../settings/native/renderer/SettingBuilders.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
 
+const require = globalThis.__r;
+
 const route = SettingBuilders.createRoute({
   useTitle() {
     const intl = util.intl;
@@ -26,8 +28,8 @@ const route = SettingBuilders.createRoute({
   },
   usePreNavigationAction() {
     return () => {
-      const obj = { fromContent: QuestContent.QuestContent.USER_SETTINGS };
-      const result = obj.setQuestHomeUtmContext(obj);
+      const obj = utils_QuestUtils;
+      const result = obj.setQuestHomeUtmContext({ fromContent: QuestContent.QuestContent.USER_SETTINGS });
       return true;
     };
   },

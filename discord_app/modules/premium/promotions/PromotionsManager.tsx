@@ -60,8 +60,8 @@ class PromotionsManager extends tmp2 {
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
-          let obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           return { value: "HermesInternal", done: null };
         }
@@ -74,17 +74,15 @@ class PromotionsManager extends tmp2 {
               throw value;
             } else if (arg0 === 2) {
               c0 = 3;
-              obj = { value, done: true };
-              return obj;
+              const obj4 = { value, done: true };
+              return obj4;
             } else {
               currentUser = currentUser.getCurrentUser();
               if (!obj6.isPremiumExactly(currentUser, TIER_2.TIER_2)) {
-                let obj1 = PremiumBogoPromotionUtilsCommon;
                 c1 = 1;
                 c0 = 1;
-                obj1 = { value: null, done: false };
-                obj1.value = obj1.maybeFetchActiveBogoPromotion();
-                return obj1;
+                const obj5 = { value: PremiumBogoPromotionUtilsCommon.maybeFetchActiveBogoPromotion(), done: false };
+                return obj5;
               }
               obj6 = PremiumUtilsDefault;
             }
@@ -93,7 +91,7 @@ class PromotionsManager extends tmp2 {
             throw value;
           } else if (arg0 === 2) {
             c0 = 3;
-            obj = { value, done: true };
+            const obj = { value, done: true };
             return obj;
           }
           c0 = 3;
@@ -131,8 +129,8 @@ prototype["onPostConnectionOpen"] = function onPostConnectionOpen() {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj3 = { value, done: true };
+        return obj3;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -145,22 +143,21 @@ prototype["onPostConnectionOpen"] = function onPostConnectionOpen() {
             throw value;
           } else if (arg0 === 2) {
             v3 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj4 = { value, done: true };
+            return obj4;
           } else {
-            let obj1 = v3(dependencyMap[9]);
-            const result = obj1.maybeFetchActivePromotions();
+            const result = v3(dependencyMap[9]).maybeFetchActivePromotions();
             c1 = 1;
             v3 = 1;
-            obj1 = { value: self.maybeFetchBogoPromotion(), done: false };
-            return obj1;
+            const obj5 = { value: self.maybeFetchBogoPromotion(), done: false };
+            return obj5;
           }
         } else if (arg0 === 1) {
           v3 = 3;
           throw value;
         } else if (arg0 === 2) {
           v3 = 3;
-          obj = { value, done: true };
+          const obj = { value, done: true };
           return obj;
         } else {
           v3 = 3;

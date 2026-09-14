@@ -7,12 +7,15 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/useBotProfileCommands.tsx");
 
 export default function useBotProfileCommands(channel, arg1, arg2) {
-  let obj = ApplicationCommandQueryApiAll;
-  const accessibleCommandsForApplication = obj.useAccessibleCommandsForApplication(channel, arg1, arg2);
+  const accessibleCommandsForApplication = ApplicationCommandQueryApiAll.useAccessibleCommandsForApplication(
+    channel,
+    arg1,
+    arg2,
+  );
   const commands = accessibleCommandsForApplication.commands;
-  obj = { application: accessibleCommandsForApplication.application, commands: null };
+  const obj2 = { application: accessibleCommandsForApplication.application, commands: null };
   const items = [commands];
-  obj.commands = noop.useMemo(() => {
+  obj2.commands = noop.useMemo(() => {
     let found;
     if (commands != null) {
       found = commands.filter((nsfw) => {
@@ -36,5 +39,5 @@ export default function useBotProfileCommands(channel, arg1, arg2) {
     }
     return found;
   }, items);
-  return obj;
+  return obj2;
 }

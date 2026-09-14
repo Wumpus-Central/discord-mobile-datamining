@@ -31,20 +31,21 @@ const items = [
 ];
 obj.eligibleReportSubtypes = items;
 obj.onApply = function onApply() {
+  const obj = SensitiveMediaExplicitRedactionSettingsUtils;
   const explicitContentSettingOrDefault =
     SensitiveMediaExplicitRedactionSettingsUtils.getExplicitContentSettingOrDefault();
-  const obj = {};
+  const obj3 = {};
   ({ explicitContentGuilds, explicitContentFriendDm, explicitContentNonFriendDm } = explicitContentSettingOrDefault);
   if (explicitContentGuilds === preloaded_user_settings.ExplicitContentRedaction.SHOW) {
-    obj.explicitContentGuilds = preloaded_user_settings.ExplicitContentRedaction.BLUR;
+    obj3.explicitContentGuilds = preloaded_user_settings.ExplicitContentRedaction.BLUR;
   }
   if (explicitContentFriendDm === preloaded_user_settings.ExplicitContentRedaction.SHOW) {
-    obj.explicitContentFriendDm = preloaded_user_settings.ExplicitContentRedaction.BLUR;
+    obj3.explicitContentFriendDm = preloaded_user_settings.ExplicitContentRedaction.BLUR;
   }
   if (explicitContentNonFriendDm === preloaded_user_settings.ExplicitContentRedaction.SHOW) {
-    obj.explicitContentNonFriendDm = preloaded_user_settings.ExplicitContentRedaction.BLUR;
+    obj3.explicitContentNonFriendDm = preloaded_user_settings.ExplicitContentRedaction.BLUR;
   }
-  return obj.updateExplicitContentSetting(obj);
+  return obj.updateExplicitContentSetting(obj3);
 };
 obj.predicate = function predicate() {
   const explicitContentSettingOrDefault =

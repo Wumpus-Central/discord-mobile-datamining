@@ -4,6 +4,8 @@ import VirtualCurrencyActionCreators from "../VirtualCurrencyActionCreators.tsx"
 import VirtualCurrencyStore from "../stores/VirtualCurrencyStore.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
+const require = globalThis.__r;
+
 const useEffect = _mod19.useEffect;
 const result = size.fileFinishedImporting("modules/virtual_currency/hooks/useFetchVirtualCurrencyBalance.tsx");
 

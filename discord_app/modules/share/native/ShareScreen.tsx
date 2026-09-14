@@ -30,27 +30,29 @@ const ChannelRecord = fn(1961);
 ({ ChannelRecordBase: closure_7, isGuildChannelType: closure_8 } = ChannelRecord);
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_11, Permissions: closure_12, MAX_UPLOAD_COUNT: map1 } = Constants);
-const MAX_DESTINATION_COUNT = fn(11812).MAX_DESTINATION_COUNT;
-const UserRowModes = fn(10988).UserRowModes;
+const MAX_DESTINATION_COUNT = fn(11813).MAX_DESTINATION_COUNT;
+const UserRowModes = fn(10989).UserRowModes;
 const jsxProd = fn(21);
 ({ jsx: closure_16, Fragment: closure_17, jsxs: closure_18 } = jsxProd);
-fn(4636);
-let createStyles = { container: null, headerLeftContainer: null, headerRightContainer: null };
-createStyles = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
-createStyles.container = createStyles;
-let PlatformUtils = fn(1150);
+const createStyles = fn(4636);
+let obj2 = {
+  container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER },
+  headerLeftContainer: null,
+  headerRightContainer: null,
+};
+let PlatformUtils = fn(1363);
 let num = 0;
 if (PlatformUtils.isIOS()) {
   num = nativeDefault.space.PX_16;
 }
-createStyles.headerLeftContainer = { paddingLeft: num };
-PlatformUtils = fn(1150);
+obj2.headerLeftContainer = { paddingLeft: num };
+PlatformUtils = fn(1363);
 let num2 = 0;
 if (PlatformUtils.isIOS()) {
   num2 = nativeDefault.space.PX_16;
 }
-createStyles.headerRightContainer = { paddingRight: num2 };
-let closure_19 = createStyles.createStyles(createStyles);
+obj2.headerRightContainer = { paddingRight: num2 };
+let closure_19 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/share/native/ShareScreen.tsx");
 
@@ -64,19 +66,18 @@ export default function ShareScreen(sharedContent) {
   let embed;
   let isLoading;
   const tmp = closure_19();
-  let obj = noop;
   let items = [sharedContent];
   const tmp3 = length(
     noop.useState(
       noop.useMemo(() => {
         const items = [];
         if (null != sharedContent.targetUserId) {
-          let obj = { type: "user", id: sharedContent.targetUserId };
+          const obj = { type: "user", id: sharedContent.targetUserId };
           items.push(obj);
         }
         if (null != sharedContent.targetChannelId) {
-          obj = { type: "channel", id: sharedContent.targetChannelId };
-          items.push(obj);
+          const obj2 = { type: "channel", id: sharedContent.targetChannelId };
+          items.push(obj2);
         }
         return items;
       }, items),
@@ -100,15 +101,15 @@ export default function ShareScreen(sharedContent) {
   } else {
     tmp9 = initialSelectedDestinations;
     let intl = sharedContent(initialSelectedDestinations[14]).intl;
-    obj = { count: length };
-    stringResult = intl.formatToPlainString(sharedContent(initialSelectedDestinations[14]).t.jWtYUm, obj);
+    let obj2 = { count: length };
+    stringResult = intl.formatToPlainString(sharedContent(initialSelectedDestinations[14]).t.jWtYUm, obj2);
     tmp11 = sharedContent;
   }
   let str = sharedContent.text;
   if (str == null) {
     str = "";
   }
-  const tmp2Result = length(obj.useState(str), 2);
+  const tmp2Result = length(noop.useState(str), 2);
   first1 = tmp2Result[0];
   const tmp17 = onClose(tmp9[15])(first1);
   embed = tmp17.embed;
@@ -124,8 +125,8 @@ export default function ShareScreen(sharedContent) {
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
-          let obj = { value, done: true };
-          return obj;
+          const obj2 = { value, done: true };
+          return obj2;
         } else {
           return { value: "HermesInternal", done: null };
         }
@@ -138,8 +139,8 @@ export default function ShareScreen(sharedContent) {
               throw value;
             } else if (arg0 === 2) {
               React = 3;
-              obj = { value, done: true };
-              return obj;
+              let obj3 = { value, done: true };
+              return obj3;
             } else {
               sharedContent = tmp7;
               closure_128_0 = undefined;
@@ -157,11 +158,11 @@ export default function ShareScreen(sharedContent) {
                 c3 = 1;
                 c4 = 2;
                 React = 1;
-                let obj1 = {
+                let obj5 = {
                   value: Promise.all(first.map(sharedContent(tmp80[16]).getOrResolveChannelIdFromDestinationId)),
                   done: false,
                 };
-                return obj1;
+                return obj5;
               }
             }
           } else if (1 === tmp7) {
@@ -178,20 +179,19 @@ export default function ShareScreen(sharedContent) {
               closure_129_6(false);
               closure_129_7.current = false;
               React = 3;
-              let obj2 = { value, done: true };
-              return obj2;
+              let obj6 = { value, done: true };
+              return obj6;
             } else {
               closure_128_0 = value.filter(sharedContent(tmp80[17]).isNotNullish);
               if (0 === closure_128_0.length) {
-                let obj11 = sharedContent(tmp80[18]);
                 const intl3 = sharedContent(tmp80[14]).intl;
-                obj11.showInformationToast(intl3.string(sharedContent(tmp80[14]).t.wFcUiF));
+                sharedContent(tmp80[18]).showInformationToast(intl3.string(sharedContent(tmp80[14]).t.wFcUiF));
                 c3 = 0;
                 closure_129_6(false);
                 closure_129_7.current = false;
                 React = 3;
-                let obj3 = { value: undefined, done: true };
-                return obj3;
+                let obj8 = { value: undefined, done: true };
+                return obj8;
               } else {
                 attachments = closure_129_0.attachments;
                 closure_128_2 = attachments.map((mimeType) => {
@@ -203,7 +203,7 @@ export default function ShareScreen(sharedContent) {
                 });
                 c4 = 3;
                 React = 1;
-                const obj4 = {
+                const obj9 = {
                   value: tmp3(tmp80[19])(
                     closure_128_0.map(
                       (() => {
@@ -215,8 +215,8 @@ export default function ShareScreen(sharedContent) {
                             if (arg0 === 1) {
                               throw value;
                             } else if (arg0 === 2) {
-                              let obj = { value, done: true };
-                              return obj;
+                              const obj3 = { value, done: true };
+                              return obj3;
                             } else {
                               return { value: "HermesInternal", done: null };
                             }
@@ -229,8 +229,8 @@ export default function ShareScreen(sharedContent) {
                                   throw value;
                                 } else if (arg0 === 2) {
                                   c4 = 3;
-                                  obj = { value, done: true };
-                                  return obj;
+                                  const obj4 = { value, done: true };
+                                  return obj4;
                                 } else {
                                   const attachment_mimetypes = tmp3;
                                   const attachments = tmp2;
@@ -241,12 +241,11 @@ export default function ShareScreen(sharedContent) {
                                     c4 = 3;
                                     return { value: false, done: true };
                                   } else {
-                                    let obj1 = closure_3_0(paths[18]);
-                                    obj1 = { attachments, channel, comment };
+                                    const obj5 = { attachments, channel, comment };
                                     c3 = 1;
                                     c4 = 1;
-                                    const obj2 = { value: obj1.sendShareMessage(obj1), done: false };
-                                    return obj2;
+                                    const obj6 = { value: closure_3_0(paths[18]).sendShareMessage(obj5), done: false };
+                                    return obj6;
                                   }
                                 }
                               } else if (arg0 === 1) {
@@ -254,17 +253,17 @@ export default function ShareScreen(sharedContent) {
                                 throw value;
                               } else if (arg0 === 2) {
                                 c4 = 3;
-                                obj = { value, done: true };
+                                const obj = { value, done: true };
                                 return obj;
                               } else {
-                                const obj3 = {
+                                const obj8 = {
                                   guild_id: closure_129_0.guild_id,
                                   channel_id: closure_129_0.id,
                                   channel_type: closure_129_0.type,
                                   num_attachments: attachments.length,
                                   attachment_mimetypes,
                                 };
-                                tmp3(paths[20]).track(constants.SHARE_MESSAGE_SENT, obj3);
+                                tmp3(paths[20]).track(constants.SHARE_MESSAGE_SENT, obj8);
                                 c4 = 3;
                                 return { value: "HermesInternal", done: null };
                               }
@@ -289,7 +288,7 @@ export default function ShareScreen(sharedContent) {
                   ),
                   done: false,
                 };
-                return obj4;
+                return obj9;
               }
             }
           } else if (3 === tmp7) {
@@ -301,25 +300,25 @@ export default function ShareScreen(sharedContent) {
               closure_129_6(false);
               closure_129_7.current = false;
               React = 3;
-              const obj5 = { value, done: true };
-              return obj5;
+              const obj10 = { value, done: true };
+              return obj10;
             } else {
               closure_128_3 = value;
               if (!closure_128_3.every((status) => "fulfilled" === status.status)) {
                 closure_128_5 = closure_129_2.filter((item, index) => "rejected" === dependencyMap[index].status);
                 closure_128_6 = React.lazy(() => closure_1_0(paths[25])(paths[24], paths.paths));
-                obj3 = sharedContent(tmp80[26]);
-                let obj6 = { title: null, content: null, failedDestinations: null };
+                const obj11 = { title: null, content: null, failedDestinations: null };
                 const intl = sharedContent(tmp80[14]).intl;
-                obj6.title = intl.string(sharedContent(tmp80[14]).t.dA1gbw);
+                obj11.title = intl.string(sharedContent(tmp80[14]).t.dA1gbw);
                 const intl2 = sharedContent(tmp80[14]).intl;
-                const obj7 = { count: closure_128_5.length };
-                obj6.content = intl2.formatToPlainString(sharedContent(tmp80[14]).t.thm88D, obj7);
-                obj6.failedDestinations = closure_128_5;
-                obj3.openAlert("share-failed-alert-modal", closure_1_16(closure_128_6, obj6));
+                const obj13 = { count: closure_128_5.length };
+                obj11.content = intl2.formatToPlainString(sharedContent(tmp80[14]).t.thm88D, obj13);
+                obj11.failedDestinations = closure_128_5;
+                sharedContent(tmp80[26]).openAlert("share-failed-alert-modal", closure_1_16(closure_128_6, obj11));
                 c3 = 0;
                 closure_129_6(false);
                 closure_129_7.current = false;
+                let obj4 = sharedContent(tmp80[26]);
               }
             }
           } else if (arg0 === 1) {
@@ -330,8 +329,8 @@ export default function ShareScreen(sharedContent) {
             closure_129_6(false);
             closure_129_7.current = false;
             React = 3;
-            const obj8 = { value, done: true };
-            return obj8;
+            const obj14 = { value, done: true };
+            return obj14;
           } else {
             sharedContent(tmp80[22]).transitionToChannel(closure_128_4, {
               navigationReplace: true,
@@ -339,24 +338,23 @@ export default function ShareScreen(sharedContent) {
             });
             const obj18 = sharedContent(tmp80[22]);
             if (obj19.isAndroid()) {
-              obj = tmp3(tmp80[23]);
-              obj.launchApp();
+              tmp3(tmp80[23]).launchApp();
+              let obj = tmp3(tmp80[23]);
             }
             closure_129_1();
             c3 = 0;
             closure_129_6(false);
             closure_129_7.current = false;
             React = 3;
-            const obj9 = { value: undefined, done: true };
-            return obj9;
+            const obj15 = { value: undefined, done: true };
+            return obj15;
           }
           closure_128_4 = closure_128_0[0];
-          obj6 = tmp3(tmp80[21]);
-          const obj10 = { channelId: closure_128_4 };
+          const obj16 = { channelId: closure_128_4 };
           c4 = 4;
           React = 1;
-          obj11 = { value: obj6.fetchMessages(obj10), done: false };
-          return obj11;
+          const obj17 = { value: tmp3(tmp80[21]).fetchMessages(obj16), done: false };
+          return obj17;
         } catch (tmp80) {
           if (tmp4 === c3) {
             React = tmp2;
@@ -371,24 +369,24 @@ export default function ShareScreen(sharedContent) {
   );
   const memo = obj.useMemo(() => {
     if (null != embed) {
-      let obj = { attachments: sharedContent.attachments, isRevamp: true };
+      const obj = { attachments: sharedContent.attachments, isRevamp: true };
       const items = [value2(ShareAttachmentsDefault, obj)];
       embed = undefined;
       if (tmp != null) {
         embed = tmp.embed;
       }
-      obj = { children: null };
-      obj = { embed, isLoadingEmbed: isLoading, isRevamp: true };
-      items[1] = value2(ShareEmbedDefault, obj);
-      obj.children = items;
-      let tmp4Result = collapsedCategories(closure_2_17, obj);
+      const obj2 = { children: null };
+      const obj3 = { embed, isLoadingEmbed: isLoading, isRevamp: true };
+      items[1] = value2(ShareEmbedDefault, obj3);
+      obj2.children = items;
+      let tmp4Result = collapsedCategories(closure_2_17, obj2);
     } else {
       tmp4Result = null;
     }
     return tmp4Result;
   }, items2);
-  obj = { style: tmp.container, children: null };
-  let obj1 = {
+  let obj3 = { style: tmp.container, children: null };
+  let obj5 = {
     title: null,
     headerTitle: null,
     headerTitleAlign: "center",
@@ -398,15 +396,15 @@ export default function ShareScreen(sharedContent) {
     headerStatusBarHeight: null,
   };
   let intl3 = tmp11(tmp9[14]).intl;
-  obj1.title = intl3.string(tmp11(tmp9[14]).t["MR7/kg"]);
-  obj1.headerTitle = function headerTitle(title) {
+  obj5.title = intl3.string(tmp11(tmp9[14]).t["MR7/kg"]);
+  obj5.headerTitle = function headerTitle(title) {
     if (closure_5) {
       const intl2 = util.intl;
-      let obj = { limit };
-      let subtitle = intl2.formatToPlainString(util.t["qqyp/e"], obj);
+      const obj2 = { limit };
+      let subtitle = intl2.formatToPlainString(util.t["qqyp/e"], obj2);
     } else if (length >= MAX_DESTINATION_COUNT) {
       const intl = util.intl;
-      obj = { count: tmp2 };
+      const obj = { count: tmp2 };
       subtitle = intl.formatToPlainString(util.t["3Fbkir"], obj);
     }
     return value2(HeaderShared.GenericHeaderTitle, {
@@ -416,23 +414,23 @@ export default function ShareScreen(sharedContent) {
       variant: "redesign/heading-18/bold",
     });
   };
-  let tmp11Result = tmp11(tmp9[31]);
-  let headerCloseButton;
-  if (!tmp11Result.isMetaQuest()) {
-    tmp11Result = tmp11(tmp9[32]);
-    headerCloseButton = tmp11Result.getHeaderCloseButton(onClose);
-  }
-  obj1.headerLeft = headerCloseButton;
-  ({ headerLeftContainer: obj4.headerLeftContainerStyle, headerRightContainer: obj4.headerRightContainerStyle } = tmp);
   const tmp22 = c6;
   const tmp6 = length(noop.useState(false), 2);
+  let headerCloseButton;
+  if (!tmp11Result.isMetaQuest()) {
+    headerCloseButton = tmp11(tmp9[32]).getHeaderCloseButton(onClose);
+    const tmp11Result4 = tmp11(tmp9[32]);
+  }
+  obj5.headerLeft = headerCloseButton;
+  ({ headerLeftContainer: obj4.headerLeftContainerStyle, headerRightContainer: obj4.headerRightContainerStyle } = tmp);
+  tmp11Result = tmp11(tmp9[31]);
   let PX_8;
-  if (tmp11Result1.isIOS()) {
+  if (tmp11Result5.isIOS()) {
     PX_8 = tmp16(tmp9[12]).space.PX_8;
   }
-  obj1.headerStatusBarHeight = PX_8;
-  const items3 = [closure_16(tmp11(tmp9[29]).Header, obj1), ,];
-  let obj2 = {
+  obj5.headerStatusBarHeight = PX_8;
+  const items3 = [closure_16(tmp11(tmp9[29]).Header, obj5), ,];
+  let obj6 = {
     rowMode: UserRowModes.TOGGLE,
     initialSelectedDestinations,
     onSelectedDestinationChange: callback,
@@ -444,16 +442,16 @@ export default function ShareScreen(sharedContent) {
     disableLongPress: null,
   };
   let tmp26;
-  let tmp16Result = tmp16(tmp9[33]);
+  tmp11Result5 = tmp11(tmp9[13]);
   if (sharedContent.attachments.length > 0) {
     tmp26 = getAttachmentsRestriction;
   }
-  obj2.getRowIsUnavailable = tmp26;
-  obj2.disableSelection = length >= MAX_DESTINATION_COUNT || sharedContent.attachments.length > closure_13;
-  tmp11Result1 = tmp11(tmp9[13]);
-  obj2.disableLongPress = tmp11(tmp9[13]).isAndroid();
-  items3[1] = closure_16(tmp16Result, obj2);
-  let obj3 = {
+  obj6.getRowIsUnavailable = tmp26;
+  obj6.disableSelection = length >= MAX_DESTINATION_COUNT || sharedContent.attachments.length > closure_13;
+  const tmp16Result = onClose(tmp9[33]);
+  obj6.disableLongPress = tmp11(tmp9[13]).isAndroid();
+  items3[1] = closure_16(tmp16Result, obj6);
+  const obj7 = {
     text: first1,
     setText: tmp2Result[1],
     preview: memo,
@@ -465,18 +463,18 @@ export default function ShareScreen(sharedContent) {
     appEntryKey: null,
   };
   let tmp28 = length > 0;
-  tmp16Result = tmp16(tmp9[34]);
+  const tmp11Result6 = tmp11(tmp9[13]);
   if (tmp28) {
     tmp28 = !tmp4;
   }
-  let obj4 = { children: null };
-  obj3.canSend = tmp28;
-  obj3.isSending = tmp7;
-  obj3.onSend = callback1;
-  obj3.disabled = sharedContent.attachments.length > closure_13;
-  obj3.appEntryKey = sharedContent.appEntryKey;
-  items3[2] = closure_16(tmp16Result, obj3);
-  obj.children = items3;
-  obj4.children = closure_18(tmp22, obj);
-  return closure_16(tmp11(tmp9[29]).SafeAreaProviderCompat, obj4);
+  let obj8 = { children: null };
+  obj7.canSend = tmp28;
+  obj7.isSending = tmp7;
+  obj7.onSend = callback1;
+  obj7.disabled = sharedContent.attachments.length > closure_13;
+  obj7.appEntryKey = sharedContent.appEntryKey;
+  items3[2] = closure_16(onClose(tmp9[34]), obj7);
+  obj3.children = items3;
+  obj8.children = closure_18(tmp22, obj3);
+  return closure_16(tmp11(tmp9[29]).SafeAreaProviderCompat, obj8);
 }

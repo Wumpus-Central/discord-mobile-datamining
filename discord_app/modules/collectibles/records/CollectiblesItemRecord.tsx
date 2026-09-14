@@ -22,21 +22,21 @@ function transformSKUToCollectiblesItem(productLine) {
       const tmp32 = bundledSkus[Symbol.iterator]();
       while (tmp32 !== undefined) {
         let tmp37 = transformSKUToCollectiblesItem(tmp34);
-        let type;
+        let type1;
         let tmp38 = tmp37;
         if (tmp37 != null) {
-          type = tmp37.type;
+          type1 = tmp37.type;
         }
-        if ("single" === type) {
+        if ("single" === type1) {
           let arr = items.push(tmp38.item);
         }
         continue;
       }
       if (0 !== items.length) {
-        let obj = { type: "bundle", items, previewAssets: null };
+        const obj4 = { type: "bundle", items, previewAssets: null };
         const previewAssetPaths = productLine.previewAssetPaths;
-        obj.previewAssets = previewAssetPaths;
-        return obj;
+        obj4.previewAssets = previewAssetPaths;
+        return obj4;
       }
     } else {
       const tenantMetadata = productLine.tenantMetadata;
@@ -49,23 +49,23 @@ function transformSKUToCollectiblesItem(productLine) {
         item = collectibles.item;
       }
       if (null != item) {
-        type = item.type;
+        const type = item.type;
         if (CollectiblesItemType.CollectiblesItemType.AVATAR_DECORATION === type) {
-          obj = { type: "single", item: null };
-          const obj1 = { skuId: productLine.id, type: null, asset: null, label: null };
+          const obj5 = { type: "single", item: null };
+          const obj7 = { skuId: productLine.id, type: null, asset: null, label: null };
           ({ type: obj8.type, asset: obj8.asset, label: obj8.label } = item);
-          const tmp28 = new AvatarDecorationRecord(obj1);
-          obj.item = tmp28;
-          return obj;
+          const tmp28 = new AvatarDecorationRecord(obj7);
+          obj5.item = tmp28;
+          return obj5;
         } else if (CollectiblesItemType.CollectiblesItemType.NAMEPLATE === type) {
-          const obj2 = { type: "single", item: null };
-          const obj3 = { skuId: productLine.id, type: null, asset: null, label: null, palette: null };
+          const obj9 = { type: "single", item: null };
+          const obj17 = { skuId: productLine.id, type: null, asset: null, label: null, palette: null };
           ({ type: obj6.type, asset: obj6.asset, label: obj6.label, palette: obj6.palette } = item);
-          const tmp22 = new NameplateRecord(obj3);
-          obj2.item = tmp22;
-          return obj2;
+          const tmp22 = new NameplateRecord(obj17);
+          obj9.item = tmp22;
+          return obj9;
         } else if (CollectiblesItemType.CollectiblesItemType.PROFILE_EFFECT === type) {
-          const obj4 = {
+          const obj18 = {
             skuId: productLine.id,
             type: null,
             title: null,
@@ -85,23 +85,22 @@ function transformSKUToCollectiblesItem(productLine) {
             reducedMotionSrc: obj3.reducedMotionSrc,
             effects,
           } = item);
-          let tmp12 = ProfileEffectRecord;
           if (effects == null) {
             effects = [];
           }
-          const obj5 = { type: "single", item: null };
-          obj4.effects = effects;
+          const obj19 = { type: "single", item: null };
+          obj18.effects = effects;
           ({
             accessibilityLabel: obj3.accessibilityLabel,
             animationType: obj3.animationType,
             staticFrameSrc: obj3.staticFrameSrc,
           } = item);
-          tmp12 = new tmp12(obj4);
-          obj5.item = tmp12;
-          return obj5;
+          const tmp122 = new ProfileEffectRecord(obj18);
+          obj19.item = tmp122;
+          return obj19;
         } else if (CollectiblesItemType.CollectiblesItemType.PROFILE_FRAME === type) {
-          obj = { type: "single", item: null };
-          const obj6 = {
+          const obj = { type: "single", item: null };
+          const obj20 = {
             skuId: productLine.id,
             type: null,
             label: null,
@@ -120,7 +119,7 @@ function transformSKUToCollectiblesItem(productLine) {
             overflowBottom: obj2.overflowBottom,
             overflowHorizontal: obj2.overflowHorizontal,
           } = item);
-          const tmp10 = new ProfileFrameRecord(obj6);
+          const tmp10 = new ProfileFrameRecord(obj20);
           obj.item = tmp10;
           return obj;
         }
@@ -138,7 +137,7 @@ export const createCollectiblesItemsFromServerResponse = function createCollecti
       if (CollectiblesItemType.CollectiblesItemType.AVATAR_DECORATION === type) {
         arr = arr.push(AvatarDecorationRecord.fromServer(type));
       } else if (CollectiblesItemType.CollectiblesItemType.NAMEPLATE === type) {
-        arr = arr.push(NameplateRecord.fromServer(type));
+        arr.push(NameplateRecord.fromServer(type));
       } else if (CollectiblesItemType.CollectiblesItemType.PROFILE_EFFECT === type) {
         arr.push(ProfileEffectRecord.fromServer(type));
       } else if (CollectiblesItemType.CollectiblesItemType.PROFILE_FRAME === type) {
@@ -155,8 +154,9 @@ export const transformProductToCollectiblesItem = function transformProductToCol
   if (null != type) {
     if (0 !== type.items.length) {
       if (type.type === CollectiblesItemType.CollectiblesItemType.BUNDLE) {
-        let obj = { type: "bundle", items: null, previewAssets: null };
         ({ items: obj2.items, previewAssets: obj2.previewAssets } = type);
+        let obj = { type: "bundle", items: null, previewAssets: null };
+        const obj3 = { type: "bundle", items: null, previewAssets: null };
       } else {
         obj = { type: "single", item: type.items[0] };
       }

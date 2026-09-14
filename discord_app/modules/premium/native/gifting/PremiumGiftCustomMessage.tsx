@@ -25,15 +25,15 @@ class GiftCustomMessage {
     callback = closure_2.useCallback((arg0) => {
       setCustomGiftMessage(arg0);
     }, items);
-    obj = { label: null, placeholder: null, value: null, onChange: null, maxLength: null, onFocus: null };
+    obj1 = { label: null, placeholder: null, value: null, onChange: null, maxLength: null, onFocus: null };
     intl2 = closure_0(closure_1[6]).intl;
-    obj.label = intl2.string(closure_0(closure_1[6]).t.B3miE8);
-    obj.placeholder = stringResult;
-    obj.value = customGiftMessage;
-    obj.onChange = callback;
-    obj.maxLength = closure_4;
-    obj.onFocus = onFocusMessage;
-    obj.children = jsx(closure_0(closure_1[7]).TextArea, obj);
+    obj1.label = intl2.string(closure_0(closure_1[6]).t.B3miE8);
+    obj1.placeholder = stringResult;
+    obj1.value = customGiftMessage;
+    obj1.onChange = callback;
+    obj1.maxLength = closure_4;
+    obj1.onFocus = onFocusMessage;
+    obj.children = jsx(closure_0(closure_1[7]).TextArea, obj1);
     return jsx(View, obj);
   }
 }
@@ -41,23 +41,15 @@ const View = fn(17).View;
 const React4 = fn(1373).CUSTOM_GIFT_MESSAGE_MAX_LENGTH;
 const jsx = fn(21).jsx;
 const createStyles = fn(4636);
-let obj = { container: null };
-obj = { marginTop: nativeDefault.space.PX_24, marginHorizontal: nativeDefault.space.PX_16 };
-obj.container = obj;
+let obj = { container: { marginTop: nativeDefault.space.PX_24, marginHorizontal: nativeDefault.space.PX_16 } };
 const timestampProducer = createStyles.createStyles(obj);
+const obj3 = { marginTop: nativeDefault.space.PX_24, marginHorizontal: nativeDefault.space.PX_16 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/native/gifting/PremiumGiftCustomMessage.tsx");
 
 export default noop.memo((arg0) => {
   ({ onFocusMessage, setMessagePosition } = arg0);
-  let obj = NativeGiftContext;
-  const nativeGiftContext = obj.useNativeGiftContext();
-  obj = {
-    onFocusMessage,
-    setMessagePosition,
-    customGiftMessage: nativeGiftContext.customGiftMessage,
-    setCustomGiftMessage: nativeGiftContext.setCustomGiftMessage,
-  };
+  const nativeGiftContext = NativeGiftContext.useNativeGiftContext();
   return (
     <GiftCustomMessage
       onFocusMessage={onFocusMessage}

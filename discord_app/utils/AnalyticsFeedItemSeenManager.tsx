@@ -70,7 +70,7 @@ prototype["computeSeenTimeDestructive"] = function computeSeenTimeDestructive(is
         let obj = { startTimeMillis: timestamp };
         let arr = items.push(obj);
       } else {
-        arr = items.push(tmp2);
+        let arr3 = items.push(tmp2);
       }
     } else {
       num = num + (tmp2.endTimeMillis - tmp2.startTimeMillis);
@@ -289,8 +289,8 @@ AnalyticsFeedItemSeenManager.prototype["maybeFlushSeenItems"] = function maybeFl
                 if (arg0 === 1) {
                   throw value;
                 } else if (arg0 === 2) {
-                  let obj = { value, done: true };
-                  return obj;
+                  const obj2 = { value, done: true };
+                  return obj2;
                 } else {
                   return { value: "HermesInternal", done: null };
                 }
@@ -303,20 +303,20 @@ AnalyticsFeedItemSeenManager.prototype["maybeFlushSeenItems"] = function maybeFl
                       throw value;
                     } else if (arg0 === 2) {
                       c2 = 3;
-                      obj = { value, done: true };
-                      return obj;
+                      const obj3 = { value, done: true };
+                      return obj3;
                     } else {
                       c1 = 1;
                       c2 = 1;
-                      const obj1 = { value: tmp4(), done: false };
-                      return obj1;
+                      const obj4 = { value: tmp4(), done: false };
+                      return obj4;
                     }
                   } else if (arg0 === 1) {
                     c2 = 3;
                     throw value;
                   } else if (arg0 === 2) {
                     c2 = 3;
-                    obj = { value, done: true };
+                    const obj = { value, done: true };
                     return obj;
                   } else {
                     closure_128_0();
@@ -342,8 +342,8 @@ AnalyticsFeedItemSeenManager.prototype["maybeFlushSeenItems"] = function maybeFl
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
-          let obj = { value, done: true };
-          return obj;
+          const obj2 = { value, done: true };
+          return obj2;
         } else {
           return { value: "HermesInternal", done: null };
         }
@@ -356,22 +356,22 @@ AnalyticsFeedItemSeenManager.prototype["maybeFlushSeenItems"] = function maybeFl
               throw value;
             } else if (arg0 === 2) {
               c3 = 3;
-              obj = { value, done: true };
-              return obj;
+              const obj3 = { value, done: true };
+              return obj3;
             } else {
               closure_1 = tmp2;
               closure_129_0 = closure_0;
               c2 = 1;
               c3 = 1;
-              const obj1 = { value: closure_0(), done: false };
-              return obj1;
+              const obj4 = { value: closure_0(), done: false };
+              return obj4;
             }
           } else if (arg0 === 1) {
             c3 = 3;
             throw value;
           } else if (arg0 === 2) {
             c3 = 3;
-            obj = { value, done: true };
+            const obj = { value, done: true };
             return obj;
           } else {
             closure_129_0();

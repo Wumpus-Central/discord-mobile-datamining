@@ -25,8 +25,7 @@ class GuildRoomManager extends tmp2 {
 }
 const prototype = GuildRoomManager.prototype;
 prototype["isExperimentEnabled"] = function isExperimentEnabled(guildId, VOICE_STATE_UPDATE) {
-  const obj = { guildId, location: VOICE_STATE_UPDATE };
-  return obj.getGuildRoomsConfig(obj).enabled;
+  return GuildRoomsExperiment.getGuildRoomsConfig({ guildId, location: VOICE_STATE_UPDATE }).enabled;
 };
 prototype["handleVoiceStateUpdates"] = function handleVoiceStateUpdates(arg0) {
   const self = this;

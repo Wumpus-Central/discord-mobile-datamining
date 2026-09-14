@@ -46,8 +46,8 @@ export const generateDisplayableCode = function generateDisplayableCode(toByteAr
           throw error3;
         }
         let str = tmp4 % tmp32;
-        str = str.toString();
-        str2 = str2 + str.padStart(chunkSize, "0");
+        let str1 = str.toString();
+        str2 = str2 + str1.padStart(chunkSize, "0");
         num = num + chunkSize;
         str3 = str2;
       }

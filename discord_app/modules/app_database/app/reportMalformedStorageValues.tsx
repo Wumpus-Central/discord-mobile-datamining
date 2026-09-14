@@ -14,15 +14,15 @@ export default function reportMalformedStorageValues(source) {
     const malformedEntryCountResult = Stats2.malformedEntryCount();
     if (!tmp5) {
       c3 = true;
-      let obj = { extra: null, fingerprint: null };
-      obj = {
+      const obj2 = { extra: null, fingerprint: null };
+      const obj3 = {
         malformed_value_count: malformedValueCountResult,
         malformed_entry_count: malformedEntryCountResult,
         source,
       };
-      obj.extra = obj;
-      obj.fingerprint = ["kv-storage-omitted-undecodable-values"];
-      obj.captureMessage("kv-storage: omitted undecodable values", obj, "warning");
+      obj2.extra = obj3;
+      obj2.fingerprint = ["kv-storage-omitted-undecodable-values"];
+      SentryUtilsDefault.captureMessage("kv-storage: omitted undecodable values", obj2, "warning");
     }
     tmp5 = 0 === malformedValueCountResult && 0 === malformedEntryCountResult;
   }

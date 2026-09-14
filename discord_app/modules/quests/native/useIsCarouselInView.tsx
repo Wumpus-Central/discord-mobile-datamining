@@ -14,7 +14,7 @@ export default function useIsCarouselInView() {
   const effect = noop.useEffect(() => {
     closure_2.current = height;
   }, items);
-  [tmp4, noop] = _slicedToArray(noop.useState(true), 2);
+  [tmp4, noop] = noop.useState(true);
   closure_4 = noop.useRef(isInView);
   const effect1 = noop.useEffect(() => {
     setInterval(() => {

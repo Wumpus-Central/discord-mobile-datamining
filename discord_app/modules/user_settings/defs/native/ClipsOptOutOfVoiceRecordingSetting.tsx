@@ -12,8 +12,8 @@ let closure_4 = async function _updateClipsAllowVoiceRecording(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -26,26 +26,25 @@ let closure_4 = async function _updateClipsAllowVoiceRecording(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c3 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           closure_1 = tmp4;
           const ClipsAllowVoiceRecording = UserSettings.ClipsAllowVoiceRecording;
           c2 = 1;
           c3 = 1;
-          const obj1 = { value: ClipsAllowVoiceRecording.updateSetting(closure_0), done: false };
-          return obj1;
+          const obj4 = { value: ClipsAllowVoiceRecording.updateSetting(closure_0), done: false };
+          return obj4;
         }
       } else if (arg0 === 1) {
         c3 = 3;
         throw value;
       } else if (arg0 === 2) {
         c3 = 3;
-        const obj2 = { value, done: true };
-        return obj2;
+        const obj5 = { value, done: true };
+        return obj5;
       } else {
-        obj = closure_129_1(closure_129_2[3]);
-        obj.dispatch({ type: "CLIPS_ALLOW_VOICE_RECORDING_UPDATE" });
+        closure_129_1(closure_129_2[3]).dispatch({ type: "CLIPS_ALLOW_VOICE_RECORDING_UPDATE" });
         c3 = 3;
         return { value: "HermesInternal", done: null };
       }
@@ -55,8 +54,8 @@ let closure_4 = async function _updateClipsAllowVoiceRecording(arg0) {
     }
   }
 };
-fn(11601);
-let SettingBuilders = {
+const SettingBuilders = fn(11602);
+const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.AGDDkH);
@@ -77,9 +76,8 @@ let SettingBuilders = {
     }
     return applyArgumentsResult;
   },
-};
-SettingBuilders = SettingBuilders.createToggle(SettingBuilders);
+});
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/ClipsOptOutOfVoiceRecordingSetting.tsx");
 
-export default SettingBuilders;
+export default toggle;

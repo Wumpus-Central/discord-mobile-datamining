@@ -35,19 +35,19 @@ function getMatch(str, arg1, index) {
               let type = obj.type;
               let tmp30 = new.target;
               if (typeof Token === "function") {
-                obj = Object.create(Token.prototype);
+                let obj3 = Object.create(Token.prototype);
                 if (tmp3 instanceof Token) {
                   let items1 = [];
-                  arraySpreadResult = HermesBuiltin.arraySpread(tmp3.match, 0);
-                  obj.match = items1;
+                  let arraySpreadResult5 = HermesBuiltin.arraySpread(tmp3.match, 0);
+                  obj3.match = items1;
                   ({ start: tmp20.start, type: tmp20.type } = tmp3);
                   if (null != tmp3._data) {
-                    obj._data = tmp3._data;
+                    obj3._data = tmp3._data;
                   }
                 } else if (null != tmp3) {
                   let items2 = [];
-                  let arraySpreadResult1 = HermesBuiltin.arraySpread(tmp3, 0);
-                  obj.match = items2;
+                  let arraySpreadResult6 = HermesBuiltin.arraySpread(tmp3, 0);
+                  obj3.match = items2;
                   let num7 = 0;
                   if (typeof tmp3 !== "string") {
                     let num8 = tmp3.index;
@@ -56,12 +56,12 @@ function getMatch(str, arg1, index) {
                     }
                     num7 = num8;
                   }
-                  obj.start = num7;
-                  obj.type = type;
+                  obj3.start = num7;
+                  obj3.type = type;
                 } else {
-                  obj.match = [];
-                  obj.start = 0;
-                  obj.type = type;
+                  obj3.match = [];
+                  obj3.start = 0;
+                  obj3.type = type;
                 }
                 let tmp27 = null == cache;
                 if (!tmp27) {
@@ -71,10 +71,10 @@ function getMatch(str, arg1, index) {
                   }
                   tmp27 = hasItem;
                 }
-                tmp10 = obj;
+                tmp10 = obj3;
                 if (!tmp27) {
-                  let result = cache.set(tmp3[0], obj);
-                  tmp10 = obj;
+                  let result = cache.set(tmp3[0], obj3);
+                  tmp10 = obj3;
                 }
               } else {
                 let str2 = "Trying to call a non-function";
@@ -87,25 +87,25 @@ function getMatch(str, arg1, index) {
         num10 = num10 + 1;
       }
       if (typeof Token === "function") {
-        obj = Object.create(Token.prototype);
+        const obj4 = Object.create(Token.prototype);
         if (index instanceof Token) {
           const items3 = [];
           HermesBuiltin.arraySpread(index.match, 0);
-          obj.match = items3;
+          obj4.match = items3;
           ({ start: tmp12.start, type: tmp12.type } = index);
           if (null != index._data) {
-            obj._data = index._data;
+            obj4._data = index._data;
           }
           index = tmp3.index;
-          obj.start = index;
+          obj4.start = index;
         } else if (null == index) {
-          obj.match = [];
-          obj.start = 0;
-          obj.type = undefined;
+          obj4.match = [];
+          obj4.start = 0;
+          obj4.type = undefined;
         }
         const items4 = [];
         HermesBuiltin.arraySpread(index, 0);
-        obj.match = items4;
+        obj4.match = items4;
         let num3 = 0;
         if (typeof index !== "string") {
           let num4 = index.index;
@@ -114,8 +114,8 @@ function getMatch(str, arg1, index) {
           }
           num3 = num4;
         }
-        obj.start = num3;
-        obj.type = undefined;
+        obj4.start = num3;
+        obj4.type = undefined;
       } else {
         throw new TypeError("Trying to call a non-function");
       }
@@ -170,8 +170,7 @@ prototype["addRule"] = function addRule(type) {
       if (null == self._followers[item]) {
         self._followers[item] = [];
       }
-      let arr = self._followers[item];
-      arr = arr.push({ regex: regExp, type, validator, cache: map });
+      self._followers[item].push({ regex: regExp, type, validator, cache: map });
       const obj = { regex: regExp, type, validator, cache: map };
     });
   } else {
@@ -215,44 +214,44 @@ prototype["tokenize"] = function tokenize(errorcode) {
       str3 = str4;
     }
     const match = str2.match(re0);
-    _data = null;
+    let _data1 = null;
     if (null != match) {
       const items1 = [];
       HermesBuiltin.arraySpread(match, 0);
       items1.index = num;
-      _data = items1;
+      _data1 = items1;
     }
     _data = self._nonTokenType;
     if (typeof Token === "function") {
-      arr = Object.create(Token.prototype);
-      if (_data instanceof Token) {
+      let arr2 = Object.create(Token.prototype);
+      if (_data1 instanceof Token) {
         const items2 = [];
-        HermesBuiltin.arraySpread(_data.match, 0);
-        arr.match = items2;
-        ({ start: tmp12.start, type: tmp12.type, _data } = _data);
+        HermesBuiltin.arraySpread(_data1.match, 0);
+        arr2.match = items2;
+        ({ start: tmp12.start, type: tmp12.type, _data } = _data1);
         if (null != _data) {
-          _data = _data._data;
-          arr._data = _data;
+          _data1 = _data1._data;
+          arr2._data = _data1;
         }
-        arr = items.push(arr);
-      } else if (null == _data) {
-        arr.match = [];
-        arr.start = 0;
-        arr.type = _data;
+        arr2 = items.push(arr2);
+      } else if (null == _data1) {
+        arr2.match = [];
+        arr2.start = 0;
+        arr2.type = _data;
       }
       const items3 = [];
-      HermesBuiltin.arraySpread(_data, 0);
-      arr.match = items3;
+      HermesBuiltin.arraySpread(_data1, 0);
+      arr2.match = items3;
       let num5 = 0;
-      if (typeof _data !== "string") {
-        let num6 = _data.index;
+      if (typeof _data1 !== "string") {
+        let num6 = _data1.index;
         if (num6 == null) {
           num6 = 0;
         }
         num5 = num6;
       }
-      arr.start = num5;
-      arr.type = _data;
+      arr2.start = num5;
+      arr2.type = _data;
     } else {
       throw new TypeError("Trying to call a non-function");
     }
@@ -261,44 +260,44 @@ prototype["tokenize"] = function tokenize(errorcode) {
     return items;
   } else {
     const match1 = str3.match(re0);
-    let _data1 = null;
+    let _data3 = null;
     if (null != match1) {
       const items4 = [];
       HermesBuiltin.arraySpread(match1, 0);
       items4.index = num2;
-      _data1 = items4;
+      _data3 = items4;
     }
     _data2 = self._nonTokenType;
     if (typeof Token === "function") {
-      let obj = Object.create(Token.prototype);
-      if (_data1 instanceof Token) {
+      let obj2 = Object.create(Token.prototype);
+      if (_data3 instanceof Token) {
         const items5 = [];
-        HermesBuiltin.arraySpread(_data1.match, 0);
-        obj.match = items5;
-        ({ start: tmp25.start, type: tmp25.type, _data: _data2 } = _data1);
+        HermesBuiltin.arraySpread(_data3.match, 0);
+        obj2.match = items5;
+        ({ start: tmp25.start, type: tmp25.type, _data: _data2 } = _data3);
         if (null != _data2) {
-          _data1 = _data1._data;
-          obj._data = _data1;
+          _data3 = _data3._data;
+          obj2._data = _data3;
         }
-        obj = items.push(obj);
-      } else if (null == _data1) {
-        obj.match = [];
-        obj.start = 0;
-        obj.type = _data2;
+        obj2 = items.push(obj2);
+      } else if (null == _data3) {
+        obj2.match = [];
+        obj2.start = 0;
+        obj2.type = _data2;
       }
       const items6 = [];
-      HermesBuiltin.arraySpread(_data1, 0);
-      obj.match = items6;
+      HermesBuiltin.arraySpread(_data3, 0);
+      obj2.match = items6;
       let num10 = 0;
-      if (typeof _data1 !== "string") {
-        let num11 = _data1.index;
+      if (typeof _data3 !== "string") {
+        let num11 = _data3.index;
         if (num11 == null) {
           num11 = 0;
         }
         num10 = num11;
       }
-      obj.start = num10;
-      obj.type = _data2;
+      obj2.start = num10;
+      obj2.type = _data2;
     } else {
       throw new TypeError("Trying to call a non-function");
     }

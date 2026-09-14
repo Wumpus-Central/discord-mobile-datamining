@@ -1,7 +1,7 @@
 // discord_app/lib/uploader/Upload.tsx
 import _modDef12 from "../../../_runtime/metro/00012__.js";
 import _mod568 from "../../../_runtime/metro/00568__.js";
-import v1 from "../../../_runtime/01256_v1.js";
+import v1 from "../../../_runtime/01254_v1.js";
 import UploadUtils from "../../utils/UploadUtils.tsx";
 import FileUtilsAll from "../../utils/FileUtils.tsx";
 import size from "../../../_runtime/metro/00002__.js";
@@ -23,9 +23,9 @@ class Upload extends EventEmitter {
       tmp11 = closure_0;
       tmp12 = closure_3;
       obj3 = closure_0(closure_3[1]);
-      obj = { uri: null, overrideFilename: null, overrideType: null };
+      obj1 = { uri: null, overrideFilename: null, overrideType: null };
       ({ uri: obj4.uri, filename: obj4.overrideFilename, mimeType: obj4.overrideType } = global);
-      file = obj3.getFile(obj);
+      file = obj3.getFile(obj1);
       ({ filename: tmp5.filename, isImage: tmp5.isImage, isVideo: tmp5.isVideo, type: tmp5.mimeType } = file);
       ({ origin: tmp5.origin, durationSecs: tmp5.durationSecs, waveform: tmp5.waveform } = global);
       tmp9 = closure_3;

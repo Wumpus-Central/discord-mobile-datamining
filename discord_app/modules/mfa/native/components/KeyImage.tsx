@@ -8,9 +8,7 @@ import size from "../../../../../_runtime/metro/00002__.js";
 
 const View = _mod17.View;
 const jsx = jsxProd.jsx;
-let obj = { container: null };
-obj = { marginBottom: nativeDefault.space.PX_8 };
-obj.container = obj;
+const obj = { container: { marginBottom: nativeDefault.space.PX_8 } };
 let closure_4 = createStyles.createStyles(obj);
 const result = size.fileFinishedImporting("modules/mfa/native/components/KeyImage.tsx");
 

@@ -3,6 +3,8 @@ import _slicedToArray from "../../../_runtime/metro/00032__.js";
 import noop from "../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../a11y/AccessibilityStore.tsx";
 
+const require = globalThis.__r;
+
 const require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/image/usePreloadedAsset.native.tsx");
@@ -31,7 +33,7 @@ export default function usePreloadedAsset(arg0) {
   dependencyMap = tmp3;
   let tmp4 = !tmp3;
   if (tmp3) {
-    tmp4 = null != num(17067);
+    tmp4 = null != num(17069);
   }
   _slicedToArray = tmp4;
   let str = "image";
@@ -41,7 +43,7 @@ export default function usePreloadedAsset(arg0) {
   combined = "" + str + ":" + arg0;
   const obj3 = require("PlatformUtils");
   const obj4 = combined;
-  [tmp9, c5] = _slicedToArray(combined.useState(null), 2);
+  [tmp9, c5] = combined.useState(null);
   let status = "skipped";
   if (null != arg0) {
     status = "skipped";
@@ -71,9 +73,9 @@ export default function usePreloadedAsset(arg0) {
           }
         }, timeout);
         if (dependencyMap) {
-          if (null != num(17067)) {
-            let preloadResult = num(17067).preload(tmp);
-            const obj2 = num(17067);
+          if (null != num(17069)) {
+            let preloadResult = num(17069).preload(tmp);
+            const obj2 = num(17069);
           }
           preloadResult.then(
             () => {

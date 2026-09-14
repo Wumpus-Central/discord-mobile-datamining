@@ -21,11 +21,10 @@ function showReviewRequestModal() {
   const rootNavigationRef = obj.getRootNavigationRef();
   let tmp3 = null != rootNavigationRef && rootNavigationRef.isReady();
   if (tmp3) {
-    let tmpResult = NavigationRouteUtils;
-    tmp3 = null != tmpResult.coerceGuildsRoute(rootNavigationRef.getCurrentRoute());
+    tmp3 = null != NavigationRouteUtils.coerceGuildsRoute(rootNavigationRef.getCurrentRoute());
+    const tmpResult = NavigationRouteUtils;
   }
-  tmpResult = useKeyboardIsOpen;
-  const keyboardIsOpen = tmpResult.getKeyboardIsOpen();
+  const keyboardIsOpen = useKeyboardIsOpen.getKeyboardIsOpen();
   const tmp5 = null != SelectedChannelStore.getVoiceChannelId();
   if (tmp3) {
     if (!keyboardIsOpen) {
@@ -39,6 +38,7 @@ function showReviewRequestModal() {
       }
     }
   }
+  const tmpResult2 = useKeyboardIsOpen;
   AnalyticsUtilsDefault.track(AnalyticEvents.REVIEW_REQUEST_DEFERRED, {
     is_keyboard_open: keyboardIsOpen,
     is_in_voice: tmp5,
@@ -93,17 +93,17 @@ RequestReviewStore.displayName = "RequestReviewStore";
 obj = {
   CONNECTION_OPEN: function handleConnectionOpen(guilds) {
     guilds = guilds.guilds;
-    obj = { from: "authed", unit: TimeUtils.TimeUnits.DAYS };
-    let tmp3 = obj.getFirstInstallTimeElapsed(obj) >= 10;
+    obj = InstallTime;
+    let tmp3 = obj.getFirstInstallTimeElapsed({ from: "authed", unit: TimeUtils.TimeUnits.DAYS }) >= 10;
     const someResult = guilds.some((member_count) => member_count.member_count >= 5);
     if (obj.revision < 1) {
-      obj = {
+      const obj4 = {
         is_hfu: true,
         is_install_old_enough: tmp3,
         is_in_large_enough_guild: someResult,
         is_account_verified: tmp5,
       };
-      AnalyticsUtilsDefault.track(AnalyticEvents.REVIEW_REQUEST_ELIGIBILITY_CHECKED, obj);
+      AnalyticsUtilsDefault.track(AnalyticEvents.REVIEW_REQUEST_ELIGIBILITY_CHECKED, obj4);
     }
     if (tmp3) {
       tmp3 = tmp5;
@@ -137,6 +137,7 @@ obj = {
       const _setTimeout = setTimeout;
       timeout = setTimeout(showReviewRequestModal, TimeUtils.MS_PER_MINUTE);
     }
+    const obj2 = { from: "authed", unit: TimeUtils.TimeUnits.DAYS };
   },
   CONNECTION_RESUMED: function handleConnectionResumed() {
     if (-1 !== timeout) {

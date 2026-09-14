@@ -25,7 +25,7 @@ function handleFriendRequestAccepted(user) {
   const result = RelationshipUtilsAll.showAcceptedNotification(user);
 }
 const RelationshipTypes = Constants.RelationshipTypes;
-let prototype = function RelationshipManager() {
+const prototype = function RelationshipManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
   applyArgumentsResult.actions = {
     RELATIONSHIP_ADD: handleRelationshipAdd,
@@ -34,7 +34,7 @@ let prototype = function RelationshipManager() {
   return applyArgumentsResult;
 }.prototype;
 class prototype extends tmp2 {}
-prototype = new prototype();
+const prototype1 = new prototype();
 let result = size.fileFinishedImporting("modules/relationships/RelationshipManager.tsx");
 
-export default prototype;
+export default prototype1;

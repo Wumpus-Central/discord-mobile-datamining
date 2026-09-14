@@ -17,16 +17,21 @@ export default function ViewAllRow(title) {
   let formatToPlainStringResult;
   if (null != title) {
     const intl = util.intl;
-    let obj = { title };
+    const obj = { title };
     formatToPlainStringResult = intl.formatToPlainString(util.t["bj/2kV"], obj);
   }
-  obj = { accessibilityLabel: formatToPlainStringResult, label: null, onPress: null, end: true };
-  obj = { style: closure_4().expandCTALabelContainer, children: null };
-  const obj1 = { color: "text-brand", variant: "text-md/semibold", children: null };
+  const obj2 = { accessibilityLabel: formatToPlainStringResult, label: null, onPress: null, end: true };
+  const obj3 = { style: closure_4().expandCTALabelContainer, children: null };
+  const obj4 = { color: "text-brand", variant: "text-md/semibold", children: null };
   const intl2 = util.intl;
-  obj1.children = intl2.format(util.t.gVw57p, {});
-  obj.children = jsx(Text_Text.Text, { color: "text-brand", variant: "text-md/semibold", children: null });
-  obj.label = <View style={closure_4().expandCTALabelContainer}>{null}</View>;
-  obj.onPress = title.onPress;
-  return jsx(TableRow.TableRow, { style: closure_4().expandCTALabelContainer, children: null });
+  obj4.children = intl2.format(util.t.gVw57p, {});
+  obj3.children = jsx(Text_Text.Text, { color: "text-brand", variant: "text-md/semibold", children: null });
+  obj2.label = <View style={closure_4().expandCTALabelContainer}>{null}</View>;
+  obj2.onPress = title.onPress;
+  return jsx(TableRow.TableRow, {
+    accessibilityLabel: formatToPlainStringResult,
+    label: null,
+    onPress: null,
+    end: true,
+  });
 }

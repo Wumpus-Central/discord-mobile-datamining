@@ -5,7 +5,7 @@ import _objectWithoutProperties from "../../../../_runtime/metro/00109__objectWi
 
 let closure_2 = ["type"];
 const logger = new LoggerDefault("AVError");
-let obj = {
+const obj = {
   STREAM_FAILED_TO_START: "stream-failed-to-start",
   NO_INPUT_DEVICES: "no-input-devices",
   NO_AUDIO_INPUT_DETECTED: "no-audio-input-detected",
@@ -31,67 +31,67 @@ let obj = {
   SCREENSHARE_OS_ERROR: "screenshare-os-error",
   VIDEO_BACKGROUND_UNAVAILABLE: "video-background-unavailable",
 };
-obj = { Audio: "audio", Video: "video", Devices: "devices", Debug: "debug" };
-obj = { Critical: "critical", Warning: "warning", Info: "info" };
-const obj1 = {
-  [obj.STREAM_SOUNDSHARE_FAILED]: obj2,
-  [obj.NOISE_CANCELLER_ERROR]: obj3,
-  [obj.AUDIO_CAPTURE_SAMPLE_RATE_MISMATCH]: obj4,
-  [obj.STREAM_FAILED_TO_START]: obj5,
-  [obj.STREAM_VIEW_LOW_FPS]: obj6,
-  [obj.STREAM_VIEW_HIGH_PACKET_LOSS]: obj7,
-  [obj.STREAM_SEND_HIGH_PACKET_LOSS]: obj8,
-  [obj.STREAM_SEND_LOW_FPS]: obj9,
-  [obj.STREAM_BAD_NETWORK_QUALITY]: obj10,
-  [obj.STREAM_RECONNECTING]: obj11,
-  [obj.VIDEO_DECODE_ERROR]: obj12,
-  [obj.VIDEO_ENCODE_ERROR]: obj13,
-  [obj.STREAM_FULL]: obj14,
-  [obj.VIDEO_STREAM_SENDER_READY_TIMEOUT]: obj15,
-  [obj.VIDEO_STREAM_RECEIVER_READY_TIMEOUT]: obj16,
-  [obj.CAMERA_SEND_LOW_FPS]: obj17,
-  [obj.VIDEO_STREAM_SENDER_READY_TIMEOUT_NO_STREAM]: obj18,
-  [obj.VIDEO_STREAM_RECEIVER_READY_TIMEOUT_NO_STREAM]: obj19,
-  [obj.VIDEO_BACKGROUND_UNAVAILABLE]: obj20,
-  [obj.NO_INPUT_DEVICES]: obj21,
-  [obj.NO_AUDIO_INPUT_DETECTED]: obj22,
-  [obj.SCREENSHARE_OS_NOT_SUPPORTED]: obj23,
-  [obj.SCREENSHARE_OS_ERROR]: obj24,
-  [obj.DEBUG_LOG_UPLOAD_FAILED]: obj25,
+const obj2 = { Audio: "audio", Video: "video", Devices: "devices", Debug: "debug" };
+const obj3 = { Critical: "critical", Warning: "warning", Info: "info" };
+const obj4 = {
+  [obj.STREAM_SOUNDSHARE_FAILED]: obj5,
+  [obj.NOISE_CANCELLER_ERROR]: obj6,
+  [obj.AUDIO_CAPTURE_SAMPLE_RATE_MISMATCH]: obj7,
+  [obj.STREAM_FAILED_TO_START]: obj8,
+  [obj.STREAM_VIEW_LOW_FPS]: obj9,
+  [obj.STREAM_VIEW_HIGH_PACKET_LOSS]: obj10,
+  [obj.STREAM_SEND_HIGH_PACKET_LOSS]: obj11,
+  [obj.STREAM_SEND_LOW_FPS]: obj12,
+  [obj.STREAM_BAD_NETWORK_QUALITY]: obj13,
+  [obj.STREAM_RECONNECTING]: obj14,
+  [obj.VIDEO_DECODE_ERROR]: obj15,
+  [obj.VIDEO_ENCODE_ERROR]: obj16,
+  [obj.STREAM_FULL]: obj17,
+  [obj.VIDEO_STREAM_SENDER_READY_TIMEOUT]: obj18,
+  [obj.VIDEO_STREAM_RECEIVER_READY_TIMEOUT]: obj19,
+  [obj.CAMERA_SEND_LOW_FPS]: obj20,
+  [obj.VIDEO_STREAM_SENDER_READY_TIMEOUT_NO_STREAM]: obj21,
+  [obj.VIDEO_STREAM_RECEIVER_READY_TIMEOUT_NO_STREAM]: obj22,
+  [obj.VIDEO_BACKGROUND_UNAVAILABLE]: obj23,
+  [obj.NO_INPUT_DEVICES]: obj24,
+  [obj.NO_AUDIO_INPUT_DETECTED]: obj25,
+  [obj.SCREENSHARE_OS_NOT_SUPPORTED]: obj26,
+  [obj.SCREENSHARE_OS_ERROR]: obj27,
+  [obj.DEBUG_LOG_UPLOAD_FAILED]: obj28,
 };
 let closure_129_1;
-const values = Object.values(obj1);
+const values = Object.values(obj4);
 const mapped = values.map((errorCode) => errorCode.errorCode);
 let closure_129_0 = mapped;
-obj10 = { errorCode: 2006, severity: obj.Warning, category: obj.Video, isErrorOutbound: true };
-obj11 = { errorCode: 2007, severity: obj.Warning, category: obj.Video, isErrorOutbound: false };
-obj12 = { errorCode: 2008, severity: obj.Warning, category: obj.Video, isErrorOutbound: false };
-obj13 = { errorCode: 2009, severity: obj.Warning, category: obj.Video, isErrorOutbound: true };
-obj14 = { errorCode: 2010, severity: obj.Critical, category: obj.Video, isErrorOutbound: false };
-obj15 = { errorCode: 2011, severity: obj.Critical, category: obj.Video, isErrorOutbound: true };
-obj16 = { errorCode: 2012, severity: obj.Critical, category: obj.Video, isErrorOutbound: false };
-obj17 = { errorCode: 2013, severity: obj.Warning, category: obj.Video, isErrorOutbound: true };
-obj18 = { errorCode: 2014, severity: obj.Critical, category: obj.Video, isErrorOutbound: true };
-obj19 = { errorCode: 2015, severity: obj.Critical, category: obj.Video, isErrorOutbound: false };
-obj2 = { errorCode: 1001, severity: obj.Warning, category: obj.Audio, isErrorOutbound: true };
-obj20 = { errorCode: 2016, severity: obj.Warning, category: obj.Video, isErrorOutbound: true };
-obj21 = { errorCode: 3001, severity: obj.Critical, category: obj.Devices, isErrorOutbound: true };
-obj22 = { errorCode: 3002, severity: obj.Critical, category: obj.Devices, isErrorOutbound: true };
-obj23 = { errorCode: 3003, severity: obj.Critical, category: obj.Devices, isErrorOutbound: true };
-obj24 = { errorCode: 3004, severity: obj.Critical, category: obj.Devices, isErrorOutbound: true };
-obj25 = { errorCode: 4001, severity: obj.Info, category: obj.Debug, isErrorOutbound: true };
-obj3 = { errorCode: 1002, severity: obj.Warning, category: obj.Audio, isErrorOutbound: true };
-obj4 = { errorCode: 1003, severity: obj.Warning, category: obj.Audio, isErrorOutbound: true };
-obj5 = { errorCode: 2001, severity: obj.Critical, category: obj.Video, isErrorOutbound: true };
-obj6 = { errorCode: 2002, severity: obj.Warning, category: obj.Video, isErrorOutbound: false };
-obj7 = { errorCode: 2003, severity: obj.Warning, category: obj.Video, isErrorOutbound: false };
-obj8 = { errorCode: 2004, severity: obj.Warning, category: obj.Video, isErrorOutbound: true };
-obj9 = { errorCode: 2005, severity: obj.Warning, category: obj.Video, isErrorOutbound: true };
+obj10 = { errorCode: 2003, severity: obj3.Warning, category: obj2.Video, isErrorOutbound: false };
+obj11 = { errorCode: 2004, severity: obj3.Warning, category: obj2.Video, isErrorOutbound: true };
+obj12 = { errorCode: 2005, severity: obj3.Warning, category: obj2.Video, isErrorOutbound: true };
+obj13 = { errorCode: 2006, severity: obj3.Warning, category: obj2.Video, isErrorOutbound: true };
+obj14 = { errorCode: 2007, severity: obj3.Warning, category: obj2.Video, isErrorOutbound: false };
+obj15 = { errorCode: 2008, severity: obj3.Warning, category: obj2.Video, isErrorOutbound: false };
+obj16 = { errorCode: 2009, severity: obj3.Warning, category: obj2.Video, isErrorOutbound: true };
+obj17 = { errorCode: 2010, severity: obj3.Critical, category: obj2.Video, isErrorOutbound: false };
+obj18 = { errorCode: 2011, severity: obj3.Critical, category: obj2.Video, isErrorOutbound: true };
+obj19 = { errorCode: 2012, severity: obj3.Critical, category: obj2.Video, isErrorOutbound: false };
+obj20 = { errorCode: 2013, severity: obj3.Warning, category: obj2.Video, isErrorOutbound: true };
+obj21 = { errorCode: 2014, severity: obj3.Critical, category: obj2.Video, isErrorOutbound: true };
+obj22 = { errorCode: 2015, severity: obj3.Critical, category: obj2.Video, isErrorOutbound: false };
+obj23 = { errorCode: 2016, severity: obj3.Warning, category: obj2.Video, isErrorOutbound: true };
+obj24 = { errorCode: 3001, severity: obj3.Critical, category: obj2.Devices, isErrorOutbound: true };
+obj25 = { errorCode: 3002, severity: obj3.Critical, category: obj2.Devices, isErrorOutbound: true };
+obj26 = { errorCode: 3003, severity: obj3.Critical, category: obj2.Devices, isErrorOutbound: true };
+obj27 = { errorCode: 3004, severity: obj3.Critical, category: obj2.Devices, isErrorOutbound: true };
+obj28 = { errorCode: 4001, severity: obj3.Info, category: obj2.Debug, isErrorOutbound: true };
+obj5 = { errorCode: 1001, severity: obj3.Warning, category: obj2.Audio, isErrorOutbound: true };
+obj6 = { errorCode: 1002, severity: obj3.Warning, category: obj2.Audio, isErrorOutbound: true };
+obj7 = { errorCode: 1003, severity: obj3.Warning, category: obj2.Audio, isErrorOutbound: true };
+obj8 = { errorCode: 2001, severity: obj3.Critical, category: obj2.Video, isErrorOutbound: true };
+obj9 = { errorCode: 2002, severity: obj3.Warning, category: obj2.Video, isErrorOutbound: false };
 const tmp2 = new LoggerDefault("AVError");
 if (mapped.length !== set.size) {
   closure_129_1 = mapped.filter((item, index) => importDefault.indexOf(item) !== index);
   const _Object = Object;
-  const entries = Object.entries(obj1);
+  const entries = Object.entries(obj4);
   const found = entries.filter((item) => {
     [, tmp] = item;
     return dependencyMap.includes(tmp.errorCode);
@@ -107,8 +107,8 @@ if (mapped.length !== set.size) {
 } else {
   const result = fn(2).fileFinishedImporting("modules/errors/av_errors/AVError.tsx");
   exports.AVError = obj;
-  exports.AVErrorCategory = obj;
-  exports.AVErrorSeverity = obj;
+  exports.AVErrorCategory = obj2;
+  exports.AVErrorSeverity = obj3;
   exports.AVUnderlyingError = {
     Unknown: "Unknown",
     UploadErrorGeneral: "UploadErrorCodes.GENERAL",
@@ -135,18 +135,17 @@ if (mapped.length !== set.size) {
   exports.reportAVError = function reportAVError(context) {
     const type = context.type;
     logger.error("AV error reported: " + type + " " + JSON.stringify(_objectWithoutProperties(context, closure_2)));
-    const obj = {
+    DispatcherDefault.dispatch({
       type: "REPORT_AV_ERROR",
       error: type,
-      errorCode: tmp2.errorCode,
-      severity: tmp2.severity,
-      category: tmp2.category,
+      errorCode: obj4[type].errorCode,
+      severity: obj4[type].severity,
+      category: obj4[type].category,
       context,
-    };
-    obj.dispatch(obj);
+    });
   };
   exports.getErrorInfo = function getErrorInfo(avError) {
-    return obj1[avError];
+    return obj4[avError];
   };
 }
 set = new Set(mapped);

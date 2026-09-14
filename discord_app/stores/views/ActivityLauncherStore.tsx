@@ -20,8 +20,8 @@ function handleActivityStateChanged(COMPLETE, JOIN, type) {
     if (obj == null) {
       obj = {};
     }
-    obj = { state: COMPLETE, remotePartyId };
-    obj[JOIN] = obj;
+    const obj2 = { state: COMPLETE, remotePartyId };
+    obj[JOIN] = obj2;
     obj[applicationId] = obj;
     if (COMPLETE === constants.FAILED) {
       closure_129_0 = applicationId;
@@ -30,10 +30,9 @@ function handleActivityStateChanged(COMPLETE, JOIN, type) {
         dependencyMap[applicationId].stop();
       }
       const timeout = new applicationId(1952).Timeout();
-      timeout.start(c9, () => {
-        obj = { type: "ACTIVITY_LAUNCH_FAIL", applicationId, activityType };
-        return obj.dispatch(obj);
-      });
+      timeout.start(c9, () =>
+        DispatcherDefault.dispatch({ type: "ACTIVITY_LAUNCH_FAIL", applicationId, activityType }),
+      );
       dependencyMap[applicationId] = timeout;
     } else if (COMPLETE === constants.LOADING) {
       let num = 15000;
@@ -45,10 +44,9 @@ function handleActivityStateChanged(COMPLETE, JOIN, type) {
         dependencyMap[applicationId].stop();
       }
       const timeout1 = new applicationId(1952).Timeout();
-      timeout1.start(num, () => {
-        obj = { type: "ACTIVITY_LAUNCH_FAIL", applicationId, activityType };
-        return obj.dispatch(obj);
-      });
+      timeout1.start(num, () =>
+        DispatcherDefault.dispatch({ type: "ACTIVITY_LAUNCH_FAIL", applicationId, activityType }),
+      );
       dependencyMap[applicationId] = timeout1;
     }
   }

@@ -8,7 +8,14 @@ import DragAndDropUtils from "../../utils/DragAndDropUtils.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
 const MAX_ACCOUNTS = Constants.MAX_ACCOUNTS;
-let MultiAccountTokenStatus = { INVALID: 0, [0]: "INVALID", VALIDATING: 1, [1]: "VALIDATING", VALID: 2, [2]: "VALID" };
+const MultiAccountTokenStatus = {
+  INVALID: 0,
+  [0]: "INVALID",
+  VALIDATING: 1,
+  [1]: "VALIDATING",
+  VALID: 2,
+  [2]: "VALID",
+};
 let users = [];
 const PersistedStore = initializeDefault.PersistedStore;
 class MultiAccountStore extends PersistedStore {}
@@ -56,7 +63,8 @@ const items = [
       if (users == null) {
         users = [];
       }
-      let obj = { users, canUseMultiAccountMobile: false };
+      const obj2 = { users, canUseMultiAccountMobile: false };
+      let obj = obj2;
     } else {
       obj = { users: [], canUseMultiAccountMobile: false };
     }
@@ -64,7 +72,7 @@ const items = [
   },
 ];
 MultiAccountStore.migrations = items;
-MultiAccountTokenStatus = {
+const multiAccountStore = new MultiAccountStore(DispatcherDefault, {
   CONNECTION_OPEN: function handleConnectionOpen(user) {
     user = user.user;
     let id = user.id;
@@ -179,8 +187,7 @@ MultiAccountTokenStatus = {
       return tmp;
     });
   },
-};
-const multiAccountStore = new MultiAccountStore(DispatcherDefault, MultiAccountTokenStatus);
+});
 const result = size.fileFinishedImporting("modules/multi_account/MultiAccountStore.tsx");
 
 export default multiAccountStore;

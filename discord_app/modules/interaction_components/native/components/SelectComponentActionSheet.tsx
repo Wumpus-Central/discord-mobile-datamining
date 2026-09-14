@@ -22,11 +22,12 @@ function SelectionHeader(renderIcon) {
     let mapped;
     if (selectedOptions != null) {
       mapped = selectedOptions.map((id) => {
-        let obj = { id: id.value, text: id.label, icon: null };
-        obj = { style: closure_1_5.tagListIconWrapper, children: null };
-        obj = { style: closure_1_5.tagListIcon, children: renderIcon(id) };
-        obj.children = closure_2_8(onQueryChange, obj);
-        obj.icon = closure_2_8(onQueryChange, obj);
+        const obj = { id: id.value, text: id.label, icon: null };
+        const obj2 = {
+          style: closure_1_5.tagListIconWrapper,
+          children: closure_2_8(onQueryChange, { style: closure_1_5.tagListIcon, children: renderIcon(id) }),
+        };
+        obj.icon = closure_2_8(onQueryChange, obj2);
         return obj;
       });
     }
@@ -51,8 +52,8 @@ function SelectionHeader(renderIcon) {
   if (selectionActionComponent.maxValues > 1) {
     if (selectionActionComponent.minValues > 0) {
       const intl2 = tmp6(1114).intl;
-      obj = { count: selectionActionComponent.minValues };
-      formatToPlainStringResult = intl2.formatToPlainString(tmp6(1114).t.Jmwzdx, obj);
+      let obj2 = { count: selectionActionComponent.minValues };
+      formatToPlainStringResult = intl2.formatToPlainString(tmp6(1114).t.Jmwzdx, obj2);
     }
   }
   obj.subtitle = formatToPlainStringResult;
@@ -62,18 +63,24 @@ function SelectionHeader(renderIcon) {
     if (selectButtonDisabled) {
       str = "secondary";
     }
-    obj = { size: "sm", variant: str, disabled: selectButtonDisabled, onPress: renderIcon.submitSelection, text: null };
+    const obj3 = {
+      size: "sm",
+      variant: str,
+      disabled: selectButtonDisabled,
+      onPress: renderIcon.submitSelection,
+      text: null,
+    };
     const intl3 = tmp6(1114).intl;
-    obj.text = intl3.string(tmp6(1114).t.XqMe3N);
-    tmp5Result = closure_8(tmp6(5056).Button, obj);
+    obj3.text = intl3.string(tmp6(1114).t.XqMe3N);
+    tmp5Result = closure_8(tmp6(5056).Button, obj3);
   }
   obj.trailing = tmp5Result;
   const children = [closure_8(renderIcon(7252).BottomSheetTitleHeader, obj)];
-  let tmp5Result1 = null;
+  let tmp5Result4 = null;
   if (null != onQueryChange) {
-    tmp5Result1 = null;
+    tmp5Result4 = null;
     if (null != memo) {
-      const obj1 = {
+      const obj4 = {
         inActionSheet: true,
         style: tmp.textInputWrapper,
         icon: null,
@@ -81,15 +88,15 @@ function SelectionHeader(renderIcon) {
         onRemove: null,
         onChangeText: null,
       };
-      tmp5Result = undefined;
+      let tmp5Result3;
       if (tmp2) {
         if (0 !== memo.length) {
-          tmp5Result = closure_8(onQueryChange, {});
+          tmp5Result3 = closure_8(onQueryChange, {});
         }
       }
-      obj1.icon = tmp5Result;
-      obj1.tags = memo;
-      obj1.onRemove = function onRemove(arg0) {
+      obj4.icon = tmp5Result3;
+      obj4.tags = memo;
+      obj4.onRemove = function onRemove(arg0) {
         let tmp;
         if (selectedOptions != null) {
           tmp = selectedOptions[arg0];
@@ -102,18 +109,18 @@ function SelectionHeader(renderIcon) {
           tmp2(arg0, tmp);
         }
       };
-      obj1.onChangeText = function onChangeText(arg0) {
+      obj4.onChangeText = function onChangeText(arg0) {
         const current = ref.current;
         if (current != null) {
           current.scrollTo({ y: 0, animated: false });
         }
         onQueryChange(arg0);
       };
-      tmp5Result1 = closure_8(selectedOptions(9885), obj1);
+      tmp5Result4 = closure_8(selectedOptions(9885), obj4);
       const tmp13 = selectedOptions(9885);
     }
   }
-  children[1] = tmp5Result1;
+  children[1] = tmp5Result4;
   return closure_10(closure_9, { children });
 }
 function SelectionOptionItem(item) {
@@ -128,13 +135,12 @@ function SelectionOptionItem(item) {
     renderOptionSuffix,
   } = item);
   ({ clearable, start, end, iconContainerStyle, skipIcon, multi, renderIcon } = item);
-  let obj = useA11yRolesNative;
+  const tmp = closure_11();
   let flag = selected;
   if (selected == null) {
     flag = false;
   }
-  const checkboxA11yNative = obj.useCheckboxA11yNative({ checked: flag, disabled });
-  const tmp = closure_11();
+  const checkboxA11yNative = useA11yRolesNative.useCheckboxA11yNative({ checked: flag, disabled });
   let flag2 = selected;
   if (selected == null) {
     flag2 = false;
@@ -143,7 +149,7 @@ function SelectionOptionItem(item) {
   if (multi) {
     radioA11yNative = checkboxA11yNative;
   }
-  obj = {
+  const obj2 = {
     accessibilityRole: radioA11yNative.accessibilityRole,
     accessibilityLabel: null,
     accessibilityState: null,
@@ -162,30 +168,30 @@ function SelectionOptionItem(item) {
   if (itemAccessibilityLabel != null) {
     result = itemAccessibilityLabel(item);
   }
-  obj.accessibilityLabel = result;
-  obj.accessibilityState = radioA11yNative.accessibilityState;
-  obj.start = start;
-  obj.end = end;
-  obj.disabled = disabled;
+  obj2.accessibilityLabel = result;
+  obj2.accessibilityState = radioA11yNative.accessibilityState;
+  obj2.start = start;
+  obj2.end = end;
+  obj2.disabled = disabled;
   let tmp6Result = null;
   if (!skipIcon) {
-    obj = { style: null, children: null };
+    const obj3 = { style: null, children: null };
     const items = [tmp.selectionOptionItemIconWrapper, iconContainerStyle];
-    obj.style = items;
-    obj.children = renderIcon(item);
-    tmp6Result = React6(View, obj);
+    obj3.style = items;
+    obj3.children = renderIcon(item);
+    tmp6Result = React6(View, obj3);
   }
-  obj.icon = tmp6Result;
-  obj.label = item.label;
+  obj2.icon = tmp6Result;
+  obj2.label = item.label;
   let renderDescriptionResult;
   if (renderDescription != null) {
     renderDescriptionResult = renderDescription(item);
   }
-  obj.subLabel = renderDescriptionResult;
-  obj.onPress = function onPress() {
+  obj2.subLabel = renderDescriptionResult;
+  obj2.onPress = function onPress() {
     return importDefault(dependencyMap, item);
   };
-  const obj1 = { style: { flexDirection: "row" }, children: null };
+  const obj4 = { style: { flexDirection: "row" }, children: null };
   let renderOptionSuffixResult;
   if (renderOptionSuffix != null) {
     renderOptionSuffixResult = renderOptionSuffix(item);
@@ -195,44 +201,43 @@ function SelectionOptionItem(item) {
     if (!selected) {
       selected = false;
     }
-    const obj2 = { checked: selected };
-    tmp6Result = React6(FormCheckbox.FormCheckbox, obj2);
+    const obj5 = { checked: selected };
+    let tmp6Result2 = React6(FormCheckbox.FormCheckbox, obj5);
   } else {
-    tmp6Result = null;
+    tmp6Result2 = null;
     if (true === selected) {
-      tmp6Result = React6(CheckmarkSmallBoldIcon.CheckmarkSmallBoldIcon, { color: "text-brand" });
+      tmp6Result2 = React6(CheckmarkSmallBoldIcon.CheckmarkSmallBoldIcon, { color: "text-brand" });
     }
   }
-  items1[1] = tmp6Result;
-  obj1.children = items1;
-  obj.trailing = closure_1_10(View, obj1);
-  return React6(TableRow.TableRow, obj);
+  items1[1] = tmp6Result2;
+  obj4.children = items1;
+  obj2.trailing = closure_1_10(View, obj4);
+  return React6(TableRow.TableRow, obj2);
 }
 const View = fn(17).View;
 let closure_7 = fn(7254).ACTION_SHEET_START_HEIGHT_RATIO;
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9, jsxs: c10 } = jsxProd);
-fn(4636);
-let createStyles = {
-  selectionOptionItemIconWrapper: null,
+const createStyles = fn(4636);
+let obj2 = {
+  selectionOptionItemIconWrapper: { width: nativeDefault.space.PX_32, alignItems: "center" },
   tagListIconWrapper: null,
   tagListIcon: null,
   textInputWrapper: null,
 };
-createStyles = { width: nativeDefault.space.PX_32, alignItems: "center" };
-createStyles.selectionOptionItemIconWrapper = createStyles;
 let size = { width: nativeDefault.space.PX_16, height: nativeDefault.space.PX_16 };
-createStyles.tagListIconWrapper = size;
+obj2.tagListIconWrapper = size;
 const rect = { transform: null, top: -nativeDefault.space.PX_4, left: -nativeDefault.space.PX_4 };
 let items = [{ scale: 0.75 }];
 rect.transform = items;
-createStyles.tagListIcon = rect;
-createStyles.textInputWrapper = {
+obj2.tagListIcon = rect;
+let obj3 = { width: nativeDefault.space.PX_32, alignItems: "center" };
+obj2.textInputWrapper = {
   paddingHorizontal: nativeDefault.space.PX_4,
   marginTop: nativeDefault.space.PX_16,
   marginHorizontal: nativeDefault.space.PX_16,
 };
-let closure_11 = createStyles.createStyles(createStyles);
+let closure_11 = createStyles.createStyles(obj2);
 size = fn(2);
 let result = size.fileFinishedImporting(
   "modules/interaction_components/native/components/SelectComponentActionSheet.tsx",
@@ -270,9 +275,10 @@ export default function SelectComponentActionSheet(selectionActionComponent) {
         safeAreaInsets.top)
     );
   }, []);
-  let obj = selectionActionComponent(selectedCount[21]);
   const items = [renderDescription];
-  const stateFromStores = obj.useStateFromStores(items, () => renderDescription.getChannelId());
+  const stateFromStores = selectionActionComponent(selectedCount[21]).useStateFromStores(items, () =>
+    renderDescription.getChannelId(),
+  );
   const channel = skipIcon.getChannel(channelId);
   const items1 = [stateFromStores, channelId, channel];
   const effect1 = renderIcon.useEffect(() => {
@@ -363,7 +369,9 @@ export default function SelectComponentActionSheet(selectionActionComponent) {
     obj.multi = memo1;
     return React6(SelectionOptionItem, obj);
   }, items3);
-  obj = {
+  let obj = selectionActionComponent(selectedCount[21]);
+  let tmp5 = selectionActionComponent;
+  let obj2 = {
     scrollable: true,
     ref: renderIcon.useRef(null),
     startHeight: memo,
@@ -371,7 +379,7 @@ export default function SelectComponentActionSheet(selectionActionComponent) {
     header: null,
     children: null,
   };
-  obj = {
+  const obj3 = {
     selectionActionComponent,
     labelComponent,
     selectButtonDisabled: null,
@@ -383,18 +391,18 @@ export default function SelectComponentActionSheet(selectionActionComponent) {
     renderIcon: null,
   };
   if (selectedCount > selectionActionComponent.maxValues) {
-    obj.selectButtonDisabled = tmp15;
-    obj.selectedOptions = selectedOptions;
-    obj.submitSelection = submitSelection;
-    obj.onQueryChange = onQueryChange;
-    obj.onPressOptionItem = onPressOptionItem;
-    obj.onRemoveOptionItem = onRemoveOptionItem;
+    obj3.selectButtonDisabled = tmp15;
+    obj3.selectedOptions = selectedOptions;
+    obj3.submitSelection = submitSelection;
+    obj3.onQueryChange = onQueryChange;
+    obj3.onPressOptionItem = onPressOptionItem;
+    obj3.onRemoveOptionItem = onRemoveOptionItem;
     if (renderHeaderIcon == null) {
       renderHeaderIcon = renderIcon;
     }
-    obj.renderIcon = renderHeaderIcon;
-    obj.header = tmp12(tmp14, obj);
-    const obj1 = {
+    obj3.renderIcon = renderHeaderIcon;
+    obj2.header = tmp12(tmp14, obj3);
+    const obj4 = {
       keyExtractor(arg0, arg1) {
         return "" + arg1;
       },
@@ -404,20 +412,20 @@ export default function SelectComponentActionSheet(selectionActionComponent) {
       keyboardShouldPersistTaps: "always",
       accessibilityRole: null,
     };
-    let obj2 = {
+    const obj5 = {
       paddingHorizontal: tmp(tmp2[7]).space.PX_16,
       paddingBottom:
         tmp(tmp2[7]).space.PX_16 +
         onPressOptionItem(selectedCount[16])({ isKeyboardAwareOnAndroid: false }).insets.bottom,
     };
-    obj1.contentContainerStyle = obj2;
+    obj4.contentContainerStyle = obj5;
     let str = "radiogroup";
     if (memo1) {
       str = "none";
     }
-    obj1.accessibilityRole = str;
-    obj.children = tmp12(selectionActionComponent(tmp2[24]).BottomSheetFlatList, obj1);
-    return tmp12(tmp13, obj);
+    obj4.accessibilityRole = str;
+    obj2.children = tmp12(tmp5(tmp2[24]).BottomSheetFlatList, obj4);
+    return tmp12(tmp13, obj2);
   } else if (0 === selectedCount) {
     let tmp16 = !allowEmpty;
   } else {

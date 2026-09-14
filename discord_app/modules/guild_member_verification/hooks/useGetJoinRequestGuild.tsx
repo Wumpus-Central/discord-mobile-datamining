@@ -3,6 +3,8 @@ import GuildJoinRequestActionCreatorsDefault from "../GuildJoinRequestActionCrea
 import noop from "../../../../_runtime/metro/00019__.js";
 import UserGuildJoinRequestStore from "../UserGuildJoinRequestStore.tsx";
 
+const require = globalThis.__r;
+
 const require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_member_verification/hooks/useGetJoinRequestGuild.tsx");

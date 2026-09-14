@@ -12,8 +12,7 @@ export default function FrameWebView(applicationId) {
   const frameId = applicationId.frameId;
   const merged = Object.assign(applicationId, Object.assign({ applicationId: 0, frameId: 0 }));
   let hadInvalidUrlError;
-  let obj = frameId(hadInvalidUrlError[2]);
-  const hasInvalidUrlErrorState = obj.useHasInvalidUrlErrorState();
+  const hasInvalidUrlErrorState = frameId(hadInvalidUrlError[2]).useHasInvalidUrlErrorState();
   const hasInvalidUrlError = hasInvalidUrlErrorState.hasInvalidUrlError;
   hadInvalidUrlError = hasInvalidUrlErrorState.hadInvalidUrlError;
   const items = [hasInvalidUrlError, hadInvalidUrlError, frameId];
@@ -26,27 +25,6 @@ export default function FrameWebView(applicationId) {
       FramesNativeManagerDefault.leaveFrame(frameId);
     }
   }, items);
-  obj = {
-    hasIframeId() {
-      return hasInvalidUrlError(hadInvalidUrlError[3]).hasIframeId();
-    },
-    getOrCreateIframeId() {
-      return hasInvalidUrlError(hadInvalidUrlError[3]).getOrCreateIframeId();
-    },
-    releaseIframeId() {
-      return hasInvalidUrlError(hadInvalidUrlError[3]).releaseIframeId();
-    },
-    onIframeMount(iframeId) {
-      return FramesActionCreatorsDefault.attachFrameIframe(frameId, iframeId);
-    },
-    onIframeUnmount(iframeId) {
-      return FramesActionCreatorsDefault.detachFrameIframe(frameId, iframeId);
-    },
-    hasInvalidUrlError,
-    setHasInvalidUrlError: hasInvalidUrlErrorState.setHasInvalidUrlError,
-    hadInvalidUrlError,
-    applicationId: applicationId.applicationId,
-  };
   const merged1 = Object.assign(merged);
   return jsx(frameId(hadInvalidUrlError[2]).BaseActivityWebView, {
     hasIframeId() {

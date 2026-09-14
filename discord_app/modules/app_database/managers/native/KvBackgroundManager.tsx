@@ -5,7 +5,7 @@ import reportMalformedStorageValuesDefault from "../../app/reportMalformedStorag
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 import MultiAccountStore from "../../../multi_account/MultiAccountStore.tsx";
-import SaveableChannelsStore from "../../modules/messages/SaveableChannelsStore.tsx";
+import SaveableChannelsStore_mod from "../../modules/messages/SaveableChannelsStore.tsx";
 import FileSystemStore from "../../stores/FileSystemStore.tsx";
 import AutomaticLifecycleManager from "../../../../lib/AutomaticLifecycleManager.tsx";
 
@@ -13,6 +13,7 @@ let require = fn;
 let SaveableChannelsStore = fn(7581);
 ({ MAXIMUM_MESSAGES_PER_CHANNEL_DEFAULT: metroRequire, MAXIMUM_MESSAGES_PER_CHANNEL_EVER: closure_7 } =
   SaveableChannelsStore);
+let SaveableChannelsStore = SaveableChannelsStore_mod;
 let closure_10 = 5 * DurationsDefault.Millis.MINUTE;
 let closure_11 = new LoggerDefault("KvBackgroundManager");
 class KvBackgroundManager extends tmp4 {
@@ -45,8 +46,8 @@ class KvBackgroundManager extends tmp4 {
             if (arg0 === 1) {
               throw value;
             } else if (arg0 === 2) {
-              let obj = { value, done: true };
-              return obj;
+              const obj2 = { value, done: true };
+              return obj2;
             } else {
               return { value: "HermesInternal", done: null };
             }
@@ -59,8 +60,8 @@ class KvBackgroundManager extends tmp4 {
                   throw value;
                 } else if (arg0 === 2) {
                   c0 = 3;
-                  obj = { value, done: true };
-                  return obj;
+                  const obj3 = { value, done: true };
+                  return obj3;
                 } else {
                   prefix = v1(1986).channels(prefix);
                   const obj5 = v1(1986);
@@ -71,7 +72,7 @@ class KvBackgroundManager extends tmp4 {
                   if (closure_1_8.canEvictOrphans()) {
                     v1 = 1;
                     c0 = 1;
-                    const obj1 = {
+                    const obj4 = {
                       value: obj6.transaction((arg0) => {
                         const upgradeTransactionResult = closure_1.upgradeTransaction(arg0);
                         const upgradeTransactionResult1 = closure_2.upgradeTransaction(arg0);
@@ -89,7 +90,7 @@ class KvBackgroundManager extends tmp4 {
                       }, "trimOrphanedChannels"),
                       done: false,
                     };
-                    return obj1;
+                    return obj4;
                   }
                   const obj8 = v1(1986);
                 }
@@ -98,7 +99,7 @@ class KvBackgroundManager extends tmp4 {
                 throw value;
               } else if (arg0 === 2) {
                 c0 = 3;
-                obj = { value, done: true };
+                const obj = { value, done: true };
                 return obj;
               }
               c0 = 3;
@@ -120,8 +121,8 @@ class KvBackgroundManager extends tmp4 {
             if (arg0 === 1) {
               throw value;
             } else if (arg0 === 2) {
-              let obj = { value, done: true };
-              return obj;
+              const obj2 = { value, done: true };
+              return obj2;
             } else {
               return { value: "HermesInternal", done: null };
             }
@@ -134,12 +135,12 @@ class KvBackgroundManager extends tmp4 {
                   throw value;
                 } else if (arg0 === 2) {
                   c0 = 3;
-                  obj = { value, done: true };
-                  return obj;
+                  const obj3 = { value, done: true };
+                  return obj3;
                 } else {
                   c1 = 1;
                   c0 = 1;
-                  const obj1 = {
+                  const obj4 = {
                     value: closure_0.transaction((arg0) => {
                       while (tmp !== undefined) {
                         let tmp4 = closure_2_3(tmp2, 2);
@@ -157,14 +158,14 @@ class KvBackgroundManager extends tmp4 {
                     }, "deleteDeprecatedKeyspaces"),
                     done: false,
                   };
-                  return obj1;
+                  return obj4;
                 }
               } else if (arg0 === 1) {
                 c0 = 3;
                 throw value;
               } else if (arg0 === 2) {
                 c0 = 3;
-                obj = { value, done: true };
+                const obj = { value, done: true };
                 return obj;
               } else {
                 c0 = 3;
@@ -187,8 +188,8 @@ class KvBackgroundManager extends tmp4 {
             if (arg0 === 1) {
               throw value;
             } else if (arg0 === 2) {
-              let obj = { value, done: true };
-              return obj;
+              const obj2 = { value, done: true };
+              return obj2;
             } else {
               return { value: "HermesInternal", done: null };
             }
@@ -201,23 +202,23 @@ class KvBackgroundManager extends tmp4 {
                   throw value;
                 } else if (arg0 === 2) {
                   c0 = 3;
-                  obj = { value, done: true };
-                  return obj;
+                  const obj3 = { value, done: true };
+                  return obj3;
                 } else if (isLowDisk.isLowDisk) {
                   c1 = 1;
                   c0 = 1;
-                  const obj1 = {
+                  const obj4 = {
                     value: closure_0.incrementalVacuum().catch((error) => logger.warn(error)),
                     done: false,
                   };
-                  return obj1;
+                  return obj4;
                 }
               } else if (arg0 === 1) {
                 c0 = 3;
                 throw value;
               } else if (arg0 === 2) {
                 c0 = 3;
-                obj = { value, done: true };
+                const obj = { value, done: true };
                 return obj;
               }
               c0 = 3;
@@ -238,8 +239,8 @@ class KvBackgroundManager extends tmp4 {
             if (arg0 === 1) {
               throw value;
             } else if (arg0 === 2) {
-              let obj = { value, done: true };
-              return obj;
+              const obj2 = { value, done: true };
+              return obj2;
             } else {
               return { value: "HermesInternal", done: null };
             }
@@ -252,8 +253,8 @@ class KvBackgroundManager extends tmp4 {
                   throw value;
                 } else if (arg0 === 2) {
                   c7 = 3;
-                  obj = { value, done: true };
-                  return obj;
+                  let obj3 = { value, done: true };
+                  return obj3;
                 } else {
                   closure_3 = tmp;
                   closure_130_1 = undefined;
@@ -266,8 +267,8 @@ class KvBackgroundManager extends tmp4 {
                   let Kv = closure_0(tmp2[12]).Kv;
                   c6 = 1;
                   c7 = 1;
-                  let obj1 = { value: Kv.databases(), done: false };
-                  return obj1;
+                  let obj4 = { value: Kv.databases(), done: false };
+                  return obj4;
                 }
               } else if (1 === tmp5) {
                 if (arg0 === 1) {
@@ -275,7 +276,7 @@ class KvBackgroundManager extends tmp4 {
                   throw value;
                 } else if (arg0 === 2) {
                   c7 = 3;
-                  obj = { value, done: true };
+                  let obj = { value, done: true };
                   return obj;
                 } else {
                   closure_1 = value;
@@ -314,8 +315,8 @@ class KvBackgroundManager extends tmp4 {
             if (arg0 === 1) {
               throw value;
             } else if (arg0 === 2) {
-              let obj = { value, done: true };
-              return obj;
+              const obj2 = { value, done: true };
+              return obj2;
             } else {
               return { value: "HermesInternal", done: null };
             }
@@ -328,21 +329,21 @@ class KvBackgroundManager extends tmp4 {
                   throw value;
                 } else if (arg0 === 2) {
                   v3 = 3;
-                  obj = { value, done: true };
-                  return obj;
+                  const obj3 = { value, done: true };
+                  return obj3;
                 } else {
                   const Kv = v3(closure_1_2[12]).Kv;
                   c1 = 1;
                   v3 = 1;
-                  const obj1 = { value: Kv.optimize(true), done: false };
-                  return obj1;
+                  const obj4 = { value: Kv.optimize(true), done: false };
+                  return obj4;
                 }
               } else if (arg0 === 1) {
                 v3 = 3;
                 throw value;
               } else if (arg0 === 2) {
                 v3 = 3;
-                obj = { value, done: true };
+                const obj = { value, done: true };
                 return obj;
               } else {
                 v3 = 3;
@@ -390,8 +391,8 @@ prototype["maybeCleanup"] = function maybeCleanup() {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj4 = { value, done: true };
+        return obj4;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -404,8 +405,8 @@ prototype["maybeCleanup"] = function maybeCleanup() {
             throw value;
           } else if (arg0 === 2) {
             c5 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj5 = { value, done: true };
+            return obj5;
           } else {
             closure_128_0 = undefined;
             closure_128_1 = undefined;
@@ -422,8 +423,8 @@ prototype["maybeCleanup"] = function maybeCleanup() {
                 closure_128_1 = isLowDisk;
                 c4 = 1;
                 c5 = 1;
-                let obj1 = { value: tmp3(tmp70[9]).startBackgroundTask(), done: false };
-                return obj1;
+                const obj7 = { value: tmp3(tmp70[9]).startBackgroundTask(), done: false };
+                return obj7;
               }
             }
             c5 = 3;
@@ -434,8 +435,8 @@ prototype["maybeCleanup"] = function maybeCleanup() {
             throw value;
           } else if (arg0 === 2) {
             c5 = 3;
-            let obj2 = { value, done: true };
-            return obj2;
+            const obj8 = { value, done: true };
+            return obj8;
           } else {
             closure_128_2 = value;
             if (obj10.isIOS()) {
@@ -448,8 +449,8 @@ prototype["maybeCleanup"] = function maybeCleanup() {
             closure_129_0.isCleaning = true;
             c4 = 3;
             c5 = 1;
-            const obj3 = { value: closure_129_0.cleanupAsync(closure_128_1), done: false };
-            return obj3;
+            const obj9 = { value: closure_129_0.cleanupAsync(closure_128_1), done: false };
+            return obj9;
           }
         } else if (2 === tmp8) {
           c3 = 0;
@@ -460,8 +461,7 @@ prototype["maybeCleanup"] = function maybeCleanup() {
             lastDeepClean3 = closure_129_0.lastDeepClean;
           }
           closure_129_0.lastDeepClean = lastDeepClean3;
-          obj2 = tmp3(tmp70[9]);
-          obj2.endBackgroundTask(closure_128_2);
+          tmp3(tmp70[9]).endBackgroundTask(closure_128_2);
           throw tmp70;
         } else if (arg0 === 1) {
           c5 = 3;
@@ -475,8 +475,8 @@ prototype["maybeCleanup"] = function maybeCleanup() {
             lastDeepClean = closure_129_0.lastDeepClean;
           }
           closure_129_0.lastDeepClean = lastDeepClean;
-          obj = tmp3(tmp70[9]);
-          obj.endBackgroundTask(closure_128_2);
+          tmp3(tmp70[9]).endBackgroundTask(closure_128_2);
+          const obj = tmp3(tmp70[9]);
         }
         c3 = 0;
         closure_129_0.isCleaning = false;
@@ -486,9 +486,9 @@ prototype["maybeCleanup"] = function maybeCleanup() {
           lastDeepClean2 = closure_129_0.lastDeepClean;
         }
         closure_129_0.lastDeepClean = lastDeepClean2;
-        obj1 = tmp3(tmp70[9]);
-        obj1.endBackgroundTask(closure_128_2);
+        tmp3(tmp70[9]).endBackgroundTask(closure_128_2);
         c5 = 3;
+        const obj2 = tmp3(tmp70[9]);
       } catch (tmp70) {
         if (tmp4 === c3) {
           c5 = tmp2;
@@ -511,8 +511,8 @@ prototype["cleanupAsync"] = function cleanupAsync(arg0) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -525,8 +525,8 @@ prototype["cleanupAsync"] = function cleanupAsync(arg0) {
             throw value;
           } else if (arg0 === 2) {
             dependencyMap = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
             closure_0 = tmp4;
             const _HermesInternal = HermesInternal;
@@ -535,8 +535,8 @@ prototype["cleanupAsync"] = function cleanupAsync(arg0) {
             if (null != databaseResult) {
               v2 = 1;
               dependencyMap = 1;
-              const obj1 = { value: self.cleanDatabaseAsync(databaseResult, tmp16), done: false };
-              return obj1;
+              const obj4 = { value: self.cleanDatabaseAsync(databaseResult, tmp16), done: false };
+              return obj4;
             }
             const obj9 = v2(dependencyMap[11]);
             tmp16 = closure_0;
@@ -547,8 +547,8 @@ prototype["cleanupAsync"] = function cleanupAsync(arg0) {
             throw value;
           } else if (arg0 === 2) {
             dependencyMap = 3;
-            const obj2 = { value, done: true };
-            return obj2;
+            const obj5 = { value, done: true };
+            return obj5;
           }
         } else if (2 === tmp4) {
           if (arg0 === 1) {
@@ -556,21 +556,21 @@ prototype["cleanupAsync"] = function cleanupAsync(arg0) {
             throw value;
           } else if (arg0 === 2) {
             dependencyMap = 3;
-            const obj3 = { value, done: true };
-            return obj3;
+            const obj6 = { value, done: true };
+            return obj6;
           } else {
             const steps = closure_128_1.steps;
             v2 = 3;
             dependencyMap = 1;
-            const obj4 = { value: steps.deleteExtraDatabases(), done: false };
-            return obj4;
+            const obj7 = { value: steps.deleteExtraDatabases(), done: false };
+            return obj7;
           }
         } else if (arg0 === 1) {
           dependencyMap = 3;
           throw value;
         } else if (arg0 === 2) {
           dependencyMap = 3;
-          obj = { value, done: true };
+          const obj = { value, done: true };
           return obj;
         } else {
           dependencyMap = 3;
@@ -579,8 +579,8 @@ prototype["cleanupAsync"] = function cleanupAsync(arg0) {
         const steps2 = closure_128_1.steps;
         v2 = 2;
         dependencyMap = 1;
-        const obj5 = { value: steps2.optimize(), done: false };
-        return obj5;
+        const obj8 = { value: steps2.optimize(), done: false };
+        return obj8;
       } catch (tmp10) {
         dependencyMap = tmp;
         throw tmp10;
@@ -600,8 +600,8 @@ prototype["cleanDatabaseAsync"] = function cleanDatabaseAsync(databaseResult, ar
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -614,8 +614,8 @@ prototype["cleanDatabaseAsync"] = function cleanDatabaseAsync(databaseResult, ar
             throw value;
           } else if (arg0 === 2) {
             c5 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
             closure_1 = tmp3;
             closure_0 = tmp7;
@@ -623,8 +623,8 @@ prototype["cleanDatabaseAsync"] = function cleanDatabaseAsync(databaseResult, ar
             const steps3 = self.steps;
             c4 = 2;
             c5 = 1;
-            const obj1 = { value: steps3.trimOrphanedChannels(closure_0), done: false };
-            return obj1;
+            const obj4 = { value: steps3.trimOrphanedChannels(closure_0), done: false };
+            return obj4;
           }
         } else {
           if (1 === tmp7) {
@@ -640,8 +640,8 @@ prototype["cleanDatabaseAsync"] = function cleanDatabaseAsync(databaseResult, ar
               } else if (arg0 === 2) {
                 c3 = 0;
                 c5 = 3;
-                const obj2 = { value, done: true };
-                return obj2;
+                const obj5 = { value, done: true };
+                return obj5;
               }
             } else if (3 === tmp7) {
               if (arg0 === 1) {
@@ -650,14 +650,14 @@ prototype["cleanDatabaseAsync"] = function cleanDatabaseAsync(databaseResult, ar
               } else if (arg0 === 2) {
                 c3 = 0;
                 c5 = 3;
-                const obj3 = { value, done: true };
-                return obj3;
+                const obj6 = { value, done: true };
+                return obj6;
               } else {
                 const steps = closure_129_2.steps;
                 c4 = 4;
                 c5 = 1;
-                const obj4 = { value: steps.trimLowDisk(closure_129_0), done: false };
-                return obj4;
+                const obj7 = { value: steps.trimLowDisk(closure_129_0), done: false };
+                return obj7;
               }
             } else if (arg0 === 1) {
               c5 = 3;
@@ -665,7 +665,7 @@ prototype["cleanDatabaseAsync"] = function cleanDatabaseAsync(databaseResult, ar
             } else if (arg0 === 2) {
               c3 = 0;
               c5 = 3;
-              obj = { value, done: true };
+              const obj = { value, done: true };
               return obj;
             }
             c3 = 0;
@@ -673,8 +673,8 @@ prototype["cleanDatabaseAsync"] = function cleanDatabaseAsync(databaseResult, ar
           const steps2 = closure_129_2.steps;
           c4 = 3;
           c5 = 1;
-          const obj5 = { value: steps2.deleteDeprecatedKeyspaces(closure_129_0), done: false };
-          return obj5;
+          const obj8 = { value: steps2.deleteDeprecatedKeyspaces(closure_129_0), done: false };
+          return obj8;
         }
       } catch (tmp24) {
         closure_2 = tmp24;

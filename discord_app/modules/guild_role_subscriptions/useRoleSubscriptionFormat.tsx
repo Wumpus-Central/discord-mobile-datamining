@@ -3,18 +3,19 @@ import noop from "../../../_runtime/metro/00019__.js";
 import GuildRoleStore from "../../stores/GuildRoleStore.tsx";
 import GuildStore from "../../stores/GuildStore.tsx";
 
+const require = globalThis.__r;
+
 const require = fn;
 const hasPermission = fn(2016).hasPermission;
-const constants = fn(15288).GuildRoleSubscriptionFormat;
+const constants = fn(15289).GuildRoleSubscriptionFormat;
 const Permissions = fn(1074).Permissions;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_role_subscriptions/useRoleSubscriptionFormat.tsx");
 
 export default function useRoleSubscriptionFormat(arg0) {
   _require = arg0;
-  let obj = require("initialize");
   const items = [GuildStore, GuildRoleStore];
-  stateFromStores = obj.useStateFromStores(items, () => {
+  stateFromStores = require("initialize").useStateFromStores(items, () => {
     const guild = GuildStore.getGuild(closure_0);
     let everyoneRole;
     if (null != guild) {
@@ -32,6 +33,5 @@ export default function useRoleSubscriptionFormat(arg0) {
     }
     SOME_CHANNELS = constants.SOME_CHANNELS;
   }, items1);
-  obj = { format: memo, isFullServerGating: memo === constants.ALL_CHANNELS };
-  return obj;
+  return { format: memo, isFullServerGating: memo === constants.ALL_CHANNELS };
 }

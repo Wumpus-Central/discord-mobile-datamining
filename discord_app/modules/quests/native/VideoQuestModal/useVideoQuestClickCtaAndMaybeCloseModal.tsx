@@ -18,18 +18,23 @@ export const useVideoQuestClickCtaAndMaybeCloseModal = function useVideoQuestCli
   const getQuestImpressionId = quest(sourceQuestContent[1]).useGetQuestImpressionId();
   const items = [quest, getQuestImpressionId, sourceQuestContent, onClose];
   return getQuestImpressionId.useCallback((content) => {
-    let obj = URLUtilsDefault;
+    const obj = URLUtilsDefault;
     if (obj.isDiscordUrl(obj2.getCtaLink(quest.config), true)) {
       onClose();
     }
     obj2 = QuestCopyUtils;
-    obj = {
+    const tmp2Result = QuestPlatformUtils;
+    tmp2Result.openGameLinkDirectly(quest, {
+      content,
+      ctaContent: AnalyticsTypes.QuestContentCTA.OPEN_GAME_LINK,
+      impressionId: getQuestImpressionId(),
+      sourceQuestContent,
+    });
+    const obj3 = {
       content,
       ctaContent: AnalyticsTypes.QuestContentCTA.OPEN_GAME_LINK,
       impressionId: getQuestImpressionId(),
       sourceQuestContent,
     };
-    QuestPlatformUtils.openGameLinkDirectly(quest, obj);
-    const tmp2Result = QuestPlatformUtils;
   }, items);
 };

@@ -5,12 +5,15 @@ import noop from "../../../_runtime/metro/00019__.js";
 import ChannelStore from "../../stores/ChannelStore.tsx";
 import GuildStore from "../../stores/GuildStore.tsx";
 import PermissionStore from "../../stores/PermissionStore.tsx";
-import GuildScheduledEventStore from "GuildScheduledEventStore.tsx";
+import GuildScheduledEventStore_mod from "GuildScheduledEventStore.tsx";
 import UpcomingEventNoticesStore from "UpcomingEventNoticesStore.tsx";
+
+const require = globalThis.__r;
 
 const require = fn;
 let GuildScheduledEventStore = fn(7629);
 ({ isGuildScheduledEventActive: closure_7, StaticGuildEventIndexes: closure_8 } = GuildScheduledEventStore);
+let GuildScheduledEventStore = GuildScheduledEventStore_mod;
 const GuildScheduledEventsConstants = fn(1963);
 ({ GuildScheduledEventEntityTypes: closure_11, GuildScheduledEventStatus: closure_12 } = GuildScheduledEventsConstants);
 const Constants = fn(1074);
@@ -147,10 +150,9 @@ export const useGuildUpcomingEventsNotice = function useGuildUpcomingEventsNotic
   let tmp8;
   _require = arg0;
   closure_129_0 = arg0;
-  let obj = require("initialize");
   const items = [GuildScheduledEventStore, ChannelStore, PermissionStore];
   const items1 = [arg0];
-  stateFromStoresArray = obj.useStateFromStoresArray(
+  stateFromStoresArray = require("initialize").useStateFromStoresArray(
     items,
     () => {
       const guildScheduledEventsByIndex = GuildScheduledEventStore.getGuildScheduledEventsByIndex(
@@ -176,11 +178,12 @@ export const useGuildUpcomingEventsNotice = function useGuildUpcomingEventsNotic
     },
     items1,
   );
+  const obj = require("initialize");
   const items2 = [UpcomingEventNoticesStore];
   const stateFromStoresObject = require("initialize").useStateFromStoresObject(items2, () =>
     UpcomingEventNoticesStore.getAllEventDismissals(),
   );
-  const obj2 = require("initialize");
+  let obj2 = require("initialize");
   const items3 = [UpcomingEventNoticesStore];
   const stateFromStoresObject1 = require("initialize").useStateFromStoresObject(items3, () =>
     UpcomingEventNoticesStore.getAllUpcomingNoticeSeenTimes(),
@@ -195,12 +198,11 @@ export const useGuildUpcomingEventsNotice = function useGuildUpcomingEventsNotic
         let reduced = {};
       } else {
         reduced = stateFromStoresArray.reduce((acc, id) => {
-          closure_1_0(stateFromStoresArray[11]);
-          const obj = {};
-          const nextRecurrenceIdInEvent = obj.getNextRecurrenceIdInEvent(id);
+          const obj2 = {};
+          const nextRecurrenceIdInEvent = closure_1_0(stateFromStoresArray[11]).getNextRecurrenceIdInEvent(id);
           const merged = Object.assign(acc);
-          obj[id.id] = interestedInEventRecurrence.isInterestedInEventRecurrence(id.id, nextRecurrenceIdInEvent);
-          return obj;
+          obj2[id.id] = interestedInEventRecurrence.isInterestedInEventRecurrence(id.id, nextRecurrenceIdInEvent);
+          return obj2;
         }, {});
       }
       return reduced;
@@ -240,8 +242,8 @@ export const useGuildUpcomingEventsNotice = function useGuildUpcomingEventsNotic
               num = num + 1;
             }
           }
-          obj = { upcomingEvent: tmp8, noticeType: nextShownUpcomingEventNoticeType };
-          return obj;
+          const obj7 = { upcomingEvent: tmp8, noticeType: nextShownUpcomingEventNoticeType };
+          return obj7;
         }
       }
     }

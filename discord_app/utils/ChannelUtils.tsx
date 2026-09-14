@@ -18,6 +18,8 @@ import SortedVoiceStateStore from "../stores/views/SortedVoiceStateStore.tsx";
 import Constants from "../Constants.tsx";
 import size from "../../_runtime/metro/00002__.js";
 
+const require = globalThis.__r;
+
 function allowChannelAccess(id, channelType, ROLE) {
   const NONE = PermissionUtilsAll.NONE;
   let tmp3 = React4(channelType);
@@ -26,8 +28,8 @@ function allowChannelAccess(id, channelType, ROLE) {
   }
   let addResult = NONE;
   if (tmp3) {
-    let tmpResult = BigFlagUtilsAll;
-    addResult = tmpResult.add(NONE, constants.VIEW_CHANNEL);
+    addResult = BigFlagUtilsAll.add(NONE, constants.VIEW_CHANNEL);
+    const tmpResult = BigFlagUtilsAll;
   }
   let tmp7 = channelType === __initData;
   if (!tmp7) {
@@ -42,10 +44,10 @@ function allowChannelAccess(id, channelType, ROLE) {
   }
   let addResult2 = addResult;
   if (tmp7) {
-    tmpResult = BigFlagUtilsAll;
-    const addResult1 = tmpResult.add(addResult, constants.VIEW_CHANNEL);
+    const tmpResult3 = BigFlagUtilsAll;
+    const addResult1 = BigFlagUtilsAll.add(addResult, constants.VIEW_CHANNEL);
     addResult2 = BigFlagUtilsAll.add(addResult1, constants.CONNECT);
-    const tmpResult1 = BigFlagUtilsAll;
+    const tmpResult4 = BigFlagUtilsAll;
   }
   return { id, type: ROLE, deny: PermissionUtilsAll.NONE, allow: addResult2 };
 }
@@ -70,9 +72,11 @@ let result = size.fileFinishedImporting("utils/ChannelUtils.tsx");
 
 export const denyChannelAccessForNonPaidUsers = function denyChannelAccessForNonPaidUsers(id, arg1) {
   if (arg1 === ChannelTypes.GUILD_STAGE_VOICE) {
-    const obj = { id, type: Server.PermissionOverwriteType.ROLE, allow: PermissionUtilsAll.NONE, deny: null };
-    obj.deny = obj.add(PermissionUtilsAll.NONE, constants.CONNECT);
-    return obj;
+    const obj2 = { id, type: null, allow: null, deny: null };
+    obj2.type = Server.PermissionOverwriteType.ROLE;
+    obj2.allow = PermissionUtilsAll.NONE;
+    obj2.deny = BigFlagUtilsAll.add(PermissionUtilsAll.NONE, constants.CONNECT);
+    return obj2;
   } else {
     const _Error = Error;
     const _HermesInternal = HermesInternal;
@@ -96,8 +100,8 @@ export const permissionOverwritesForRoles = function permissionOverwritesForRole
     }
     let addResult = NONE;
     if (tmp6) {
-      let tmp4Result = BigFlagUtilsAll;
-      addResult = tmp4Result.add(NONE, constants.VIEW_CHANNEL);
+      addResult = BigFlagUtilsAll.add(NONE, constants.VIEW_CHANNEL);
+      const tmp4Result = BigFlagUtilsAll;
     }
     let tmp11 = channelType === closure_21;
     if (!tmp11) {
@@ -105,10 +109,10 @@ export const permissionOverwritesForRoles = function permissionOverwritesForRole
     }
     let addResult2 = addResult;
     if (tmp11) {
-      tmp4Result = BigFlagUtilsAll;
-      const addResult1 = tmp4Result.add(addResult, constants.VIEW_CHANNEL);
+      const tmp4Result3 = BigFlagUtilsAll;
+      const addResult1 = BigFlagUtilsAll.add(addResult, constants.VIEW_CHANNEL);
       addResult2 = BigFlagUtilsAll.add(addResult1, constants.CONNECT);
-      const tmp4Result1 = BigFlagUtilsAll;
+      const tmp4Result4 = BigFlagUtilsAll;
     }
     const obj = {
       id: guildId,

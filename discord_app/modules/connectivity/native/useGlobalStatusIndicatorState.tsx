@@ -16,9 +16,10 @@ export const useGlobalStatusIndicatorState = function useGlobalStatusIndicatorSt
     flag = false;
   }
   let stateFromStores;
-  let obj = stateFromStores(9620);
-  let hasPipParticipant = obj.useHasPipParticipant({ isActivityViewFocused: false });
+  importDefault = undefined;
+  let hasPipParticipant = stateFromStores(9620).useHasPipParticipant({ isActivityViewFocused: false });
   const tmp5 = useVoiceStateForRemoteSessionDefault();
+  const obj = stateFromStores(9620);
   const items = [RTCConnectionStore];
   stateFromStores = stateFromStores(504).useStateFromStores(items, () => channelId.getChannelId());
   const tmp7 = useIsInvitedToSpeakDefault();
@@ -46,15 +47,15 @@ export const useGlobalStatusIndicatorState = function useGlobalStatusIndicatorSt
   stateFromStores(4494);
   let tmp12 = null != tmp5;
   if (tmp12) {
-    let tmpResult = tmp(4843);
     let channelId = tmp5.channelId;
     if (channelId == null) {
       channelId = EMPTY_STRING_SNOWFLAKE_ID;
     }
-    tmp12 = tmpResult.getVoiceChannelKey(channelId) !== tmp11;
+    tmp12 = tmp(4843).getVoiceChannelKey(channelId) !== tmp11;
+    const tmpResult = tmp(4843);
   }
-  tmpResult = tmp(9811);
-  let isVoicePanelShowing = tmpResult.useIsVoicePanelShowing();
+  const obj4 = stateFromStores(9806);
+  let isVoicePanelShowing = stateFromStores(9811).useIsVoicePanelShowing();
   const tmp14 = null != useMyCurrentStageChannelDefault();
   if (!isVoicePanelShowing) {
     let tmp15 = !tmp12;
@@ -84,13 +85,13 @@ export const useGlobalStatusIndicatorState = function useGlobalStatusIndicatorSt
       num = RTC_PANEL_HEIGHT;
     }
   }
-  obj = { height: num, isVisible: tmp18, isCustomBackground: null };
+  const obj5 = { height: num, isVisible: tmp18, isCustomBackground: null };
   if (!isVoicePanelShowing) {
     tmp18 = tmp9;
   }
   if (tmp18) {
     tmp18 = !stateFromStores1;
   }
-  obj.isCustomBackground = tmp18;
-  return obj;
+  obj5.isCustomBackground = tmp18;
+  return obj5;
 };

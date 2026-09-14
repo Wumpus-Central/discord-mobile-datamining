@@ -4,15 +4,16 @@ import GameProfileHttpUtils from "../GameProfileHttpUtils.tsx";
 import GameProfileStore from "../GameProfileStore.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
+const require = globalThis.__r;
+
 const useEffect = _mod19.useEffect;
 let result = size.fileFinishedImporting("modules/game_profile/hooks/useGameAnnouncements.tsx");
 
 export default function useGameAnnouncements(arg0, limit) {
   _require = arg0;
   dependencyMap = limit;
-  let obj = require("initialize");
   const items = [GameProfileStore];
-  const stateFromStoresObject = obj.useStateFromStoresObject(items, () => {
+  const stateFromStoresObject = require("initialize").useStateFromStoresObject(items, () => {
     let announcements;
     if (null != closure_0) {
       announcements = GameProfileStore.getAnnouncements(closure_0);
@@ -38,8 +39,8 @@ export default function useGameAnnouncements(arg0, limit) {
       result = GameProfileStore.isAnnouncementsFetching(closure_0);
     }
     if (!result) {
-      const obj = { limit };
-      const gameAnnouncements = obj.getGameAnnouncements(closure_0, obj);
+      const obj2 = { limit };
+      const gameAnnouncements = GameProfileHttpUtils.getGameAnnouncements(closure_0, obj2);
     }
   }, items1);
   let messages;
@@ -49,18 +50,18 @@ export default function useGameAnnouncements(arg0, limit) {
   if (messages == null) {
     messages = [];
   }
-  obj = { messages, channelId: null, guildId: null, loading: null, hasFetched: null };
+  let obj2 = { messages, channelId: null, guildId: null, loading: null, hasFetched: null };
   let channelId;
   if (data != null) {
     channelId = data.channelId;
   }
-  obj.channelId = channelId;
+  obj2.channelId = channelId;
   let guildId;
   if (data != null) {
     guildId = data.guildId;
   }
-  obj.guildId = guildId;
-  obj.loading = stateFromStoresObject.isFetching;
-  obj.hasFetched = hasFetched;
-  return obj;
+  obj2.guildId = guildId;
+  obj2.loading = stateFromStoresObject.isFetching;
+  obj2.hasFetched = hasFetched;
+  return obj2;
 }

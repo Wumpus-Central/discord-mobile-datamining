@@ -33,9 +33,9 @@ export default function ChannelHeader(channelId) {
   if (flag2 === undefined) {
     flag2 = false;
   }
-  let obj = channelId(563);
   const items = [ChannelStore];
-  const stateFromStores = obj.useStateFromStores(items, () => ChannelStore.getChannel(channelId));
+  const stateFromStores = channelId(563).useStateFromStores(items, () => ChannelStore.getChannel(channelId));
+  const obj = channelId(563);
   const isChannelContentGated = channelId(4847).useIsChannelContentGated(stateFromStores);
   let tmp4 = !isChannelContentGated;
   if (!isChannelContentGated) {
@@ -51,7 +51,7 @@ export default function ChannelHeader(channelId) {
       isPrivateResult = stateFromStores.isPrivate();
     }
     if (isPrivateResult) {
-      obj = { channelId, pressable: tmp4, screenIndex };
+      const obj2 = { channelId, pressable: tmp4, screenIndex };
       tmp8Result = jsx(PrivateChannelHeaderDefault, { channelId, pressable: tmp4, screenIndex });
     } else {
       let isForumLikeChannelResult;
@@ -59,7 +59,7 @@ export default function ChannelHeader(channelId) {
         isForumLikeChannelResult = stateFromStores.isForumLikeChannel();
       }
       if (isForumLikeChannelResult) {
-        obj = {
+        const obj4 = {
           channelId,
           guildId: null,
           pressable: null,
@@ -69,34 +69,32 @@ export default function ChannelHeader(channelId) {
           searchPlaceholder: null,
         };
         let guild_id;
-        let tmp9Result = ForumChannelHeaderDefault;
         if (stateFromStores != null) {
           guild_id = stateFromStores.guild_id;
         }
-        obj.guildId = guild_id;
-        obj.pressable = tmp4;
-        obj.isGuildMemberCountVisible = flag;
-        obj.isNavigationScreen = isNavigationScreen;
-        obj.screenIndex = screenIndex;
+        obj4.guildId = guild_id;
+        obj4.pressable = tmp4;
+        obj4.isGuildMemberCountVisible = flag;
+        obj4.isNavigationScreen = isNavigationScreen;
+        obj4.screenIndex = screenIndex;
         let stringResult;
         if (!stateFromStores.isForumChannel()) {
           const intl = tmp(1114).intl;
           stringResult = intl.string(tmp(1114).t["L9fR+P"]);
         }
-        obj.searchPlaceholder = stringResult;
-        tmp8Result = (
-          <tmp9Result
-            channelId={channelId}
-            guildId={null}
-            pressable={null}
-            isGuildMemberCountVisible={null}
-            isNavigationScreen={null}
-            screenIndex={null}
-            searchPlaceholder={null}
-          />
-        );
+        obj4.searchPlaceholder = stringResult;
+        tmp8Result = jsx(ForumChannelHeaderDefault, {
+          channelId,
+          guildId: null,
+          pressable: null,
+          isGuildMemberCountVisible: null,
+          isNavigationScreen: null,
+          screenIndex: null,
+          searchPlaceholder: null,
+        });
+        const tmp9Result = ForumChannelHeaderDefault;
       } else {
-        const obj1 = {
+        const obj5 = {
           channelId,
           guildId: null,
           pressable: null,
@@ -106,46 +104,43 @@ export default function ChannelHeader(channelId) {
           showCreateThread: null,
         };
         let guild_id1;
-        tmp9Result = GuildChannelHeaderDefault;
         if (stateFromStores != null) {
           guild_id1 = stateFromStores.guild_id;
         }
-        obj1.guildId = guild_id1;
-        obj1.pressable = tmp4;
-        obj1.isGuildMemberCountVisible = flag;
-        obj1.isNavigationScreen = isNavigationScreen;
-        obj1.screenIndex = screenIndex;
-        obj1.showCreateThread = flag2;
-        tmp8Result = (
-          <tmp9Result
-            channelId={channelId}
-            guildId={null}
-            pressable={null}
-            isGuildMemberCountVisible={null}
-            isNavigationScreen={null}
-            screenIndex={null}
-            showCreateThread={null}
-          />
-        );
+        obj5.guildId = guild_id1;
+        obj5.pressable = tmp4;
+        obj5.isGuildMemberCountVisible = flag;
+        obj5.isNavigationScreen = isNavigationScreen;
+        obj5.screenIndex = screenIndex;
+        obj5.showCreateThread = flag2;
+        tmp8Result = jsx(GuildChannelHeaderDefault, {
+          channelId,
+          guildId: null,
+          pressable: null,
+          isGuildMemberCountVisible: null,
+          isNavigationScreen: null,
+          screenIndex: null,
+          showCreateThread: null,
+        });
+        const tmp9Result2 = GuildChannelHeaderDefault;
       }
     }
   }
   return tmp8Result;
 }
 export const navigateToChannelDetails = function navigateToChannelDetails(channelId, screenIndex, source) {
-  let obj = PlatformUtils;
   if (obj.isIOS()) {
-    let tmpResult = ChatInputUtils;
-    const chatInputRef = tmpResult.getChatInputRef(channelId, screenIndex);
+    const chatInputRef = ChatInputUtils.getChatInputRef(channelId, screenIndex);
     if (chatInputRef != null) {
       chatInputRef.blur();
     }
+    const tmpResult = ChatInputUtils;
   }
-  tmpResult = SwipeToMemberListUtils;
-  if (tmpResult.isSwipeToMemberListEnabled()) {
+  obj = PlatformUtils;
+  if (tmpResult3.isSwipeToMemberListEnabled()) {
     const ComponentDispatch = ComponentDispatchUtils.ComponentDispatch;
-    obj = { source, channelId, screenIndex };
-    ComponentDispatch.dispatch(ComponentActions.SHOW_CHANNEL_DETAILS, obj);
+    const obj2 = { source, channelId, screenIndex };
+    ComponentDispatch.dispatch(ComponentActions.SHOW_CHANNEL_DETAILS, obj2);
   } else {
     const rootNavigationRef = RootNavigationRef.getRootNavigationRef();
     let isReadyResult;
@@ -153,9 +148,10 @@ export const navigateToChannelDetails = function navigateToChannelDetails(channe
       isReadyResult = rootNavigationRef.isReady();
     }
     if (isReadyResult) {
-      obj = { channelId, source };
-      rootNavigationRef.navigate("sidebar", obj);
+      const obj3 = { channelId, source };
+      rootNavigationRef.navigate("sidebar", obj3);
     }
-    const tmpResult1 = RootNavigationRef;
+    const tmpResult4 = RootNavigationRef;
   }
+  tmpResult3 = SwipeToMemberListUtils;
 };

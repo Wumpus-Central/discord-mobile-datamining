@@ -10,10 +10,13 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/guilds_bar/native/hooks/useGuildsBarCreatePendingFolderNode.tsx");
 
 export default function useGuildsBarCreatePendingFolderNode() {
-  let obj = stateFromStores(504);
   const items = [UserGuildJoinRequestStore];
-  stateFromStores = obj.useStateFromStores(items, () => UserGuildJoinRequestStore.hasFetchedRequestToJoinGuilds);
+  stateFromStores = stateFromStores(504).useStateFromStores(
+    items,
+    () => UserGuildJoinRequestStore.hasFetchedRequestToJoinGuilds,
+  );
   const arr2 = usePendingFolderGuildIdsDefault();
+  let obj = stateFromStores(504);
   const items1 = [ExpandedGuildFolderStore];
   const stateFromStores1 = stateFromStores(504).useStateFromStores(items1, () =>
     folderExpanded.isFolderExpanded(
@@ -27,25 +30,25 @@ export default function useGuildsBarCreatePendingFolderNode() {
     }
   }, items2);
   if (arr2.length > 0) {
-    obj = {
-      folderId: tmp2(16454).SpecialGuildsNodeIds.PENDING_JOIN_REQUESTS_FOLDER,
+    const obj3 = {
+      folderId: tmp2(16456).SpecialGuildsNodeIds.PENDING_JOIN_REQUESTS_FOLDER,
       folderName: null,
       expanded: null,
       guildIds: null,
     };
     const intl = tmp2(1114).intl;
-    obj.folderName = intl.string(tmp2(1114).t["scsU+l"]);
-    obj.expanded = stateFromStores1;
-    obj.guildIds = arr2;
-    const folderNode = tmp2(5521).createFolderNode(obj);
+    obj3.folderName = intl.string(tmp2(1114).t["scsU+l"]);
+    obj3.expanded = stateFromStores1;
+    obj3.guildIds = arr2;
+    const folderNode = tmp2(5521).createFolderNode(obj3);
     for (const item10054 of arr2) {
       let children = folderNode.children;
       let obj5 = stateFromStores(5521);
       let arr = children.push(obj5.createGuildNode(item10054, folderNode.id));
       continue;
     }
-    obj = { expanded: stateFromStores1, pendingFolderNode: folderNode };
-    return obj;
+    const obj4 = { expanded: stateFromStores1, pendingFolderNode: folderNode };
+    return obj4;
   } else {
     return { expanded: false, pendingFolderNode: null };
   }

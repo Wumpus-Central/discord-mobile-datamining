@@ -3,6 +3,8 @@ import StreamPermissionUtils from "../go_live/utils/StreamPermissionUtils.tsx";
 import GuildStore from "../../stores/GuildStore.tsx";
 import PermissionStore from "../../stores/PermissionStore.tsx";
 
+const require = globalThis.__r;
+
 require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/video_calls/useHasVideoPermission.tsx");

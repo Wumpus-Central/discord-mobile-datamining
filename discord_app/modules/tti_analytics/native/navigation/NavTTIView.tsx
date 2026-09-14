@@ -1,6 +1,5 @@
 // discord_app/modules/tti_analytics/native/navigation/NavTTIView.tsx
 import useComponentRenderSpan from "useComponentRenderSpan.tsx";
-import navigationTTIEnabled from "navigationTTIEnabled.tsx";
 import _objectWithoutProperties from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -9,10 +8,9 @@ function IncludedNavTTIView(onLayout) {
   onLayout = onLayout.onLayout;
   ({ spanComponent, children } = onLayout);
   const merged = Object.assign(onLayout, Object.assign({ spanComponent: 0, onLayout: 0, children: 0 }));
-  let obj = useComponentRenderSpan;
-  const onLayout2 = obj.useComponentRenderSpan(spanComponent).onLayout;
+  const onLayout2 = useComponentRenderSpan.useComponentRenderSpan(spanComponent).onLayout;
   const items = [onLayout2, onLayout];
-  obj = {};
+  const obj2 = {};
   const callback = noop.useCallback((arg0) => {
     if (onLayout2 != null) {
       tmp(arg0);
@@ -25,8 +23,8 @@ function IncludedNavTTIView(onLayout) {
   if (null != onLayout2) {
     onLayout = callback;
   }
-  obj.onLayout = onLayout;
-  obj.children = children;
+  obj2.onLayout = onLayout;
+  obj2.children = children;
   return <View />;
 }
 let closure_2 = ["tracking"];
@@ -39,20 +37,19 @@ const result = size.fileFinishedImporting("modules/tti_analytics/native/navigati
 export const NavTTIView = function NavTTIView(tracking) {
   if ("exclude" === tracking.tracking) {
     const tracking2 = tracking.tracking;
-    let obj = {};
+    const obj2 = {};
     const merged = Object.assign(_objectWithoutProperties(tracking, closure_2));
     return <View />;
   } else {
     tracking = tracking.tracking;
     const tmp3 = _objectWithoutProperties(tracking, closure_3);
-    obj = navigationTTIEnabled;
     if (obj.isNavigationTTIEnabled()) {
-      obj = {};
+      const obj3 = {};
       const merged1 = Object.assign(tmp3);
-      obj.spanComponent = tracking.spanComponent;
+      obj3.spanComponent = tracking.spanComponent;
       let tmp6Result = <IncludedNavTTIView />;
     } else {
-      const obj1 = {};
+      const obj4 = {};
       const merged2 = Object.assign(tmp3);
       tmp6Result = <View />;
     }

@@ -11,7 +11,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/app_launcher/native/images/OnboardingAppsRocket.tsx");
 
 export default function SvgComponent(arg0) {
-  let obj = { fill: "none" };
+  const obj = { fill: "none" };
   const merged = Object.assign(arg0);
   const items = [
     React3(inlineStyles.Path, {
@@ -106,17 +106,25 @@ export default function SvgComponent(arg0) {
       clipRule: "evenodd",
     }),
   ];
-  obj = { children: null };
-  obj = { id: "a", x1: 12.115, x2: 18.746, y1: 29.237, y2: 29.237, gradientUnits: "userSpaceOnUse", children: null };
+  const obj2 = { children: null };
+  const obj3 = {
+    id: "a",
+    x1: 12.115,
+    x2: 18.746,
+    y1: 29.237,
+    y2: 29.237,
+    gradientUnits: "userSpaceOnUse",
+    children: null,
+  };
   const items1 = [
     React3(inlineStyles.Stop, { offset: 0.07, stopColor: "#F9E172" }),
     React3(inlineStyles.Stop, { offset: 0.27, stopColor: "#F7D067" }),
     React3(inlineStyles.Stop, { offset: 0.67, stopColor: "#F1A549" }),
     React3(inlineStyles.Stop, { offset: 0.83, stopColor: "#EF913C" }),
   ];
-  obj.children = items1;
-  const items2 = [React4(inlineStyles.LinearGradient, obj), ,];
-  const obj1 = {
+  obj3.children = items1;
+  const items2 = [React4(inlineStyles.LinearGradient, obj3), ,];
+  const obj4 = {
     id: "b",
     x1: 30.613,
     x2: 37.243,
@@ -131,9 +139,9 @@ export default function SvgComponent(arg0) {
     React3(inlineStyles.Stop, { offset: 0.67, stopColor: "#F1A549" }),
     React3(inlineStyles.Stop, { offset: 0.83, stopColor: "#EF913C" }),
   ];
-  obj1.children = items3;
-  items2[1] = React4(inlineStyles.LinearGradient, obj1);
-  const obj2 = {
+  obj4.children = items3;
+  items2[1] = React4(inlineStyles.LinearGradient, obj4);
+  const obj5 = {
     id: "c",
     x1: 14.934,
     x2: 25.72,
@@ -148,10 +156,10 @@ export default function SvgComponent(arg0) {
     React3(inlineStyles.Stop, { offset: 0.67, stopColor: "#F1A549" }),
     React3(inlineStyles.Stop, { offset: 0.83, stopColor: "#EF913C" }),
   ];
-  obj2.children = items4;
-  items2[2] = React4(inlineStyles.LinearGradient, obj2);
-  obj.children = items2;
-  items[20] = React4(inlineStyles.Defs, obj);
+  obj5.children = items4;
+  items2[2] = React4(inlineStyles.LinearGradient, obj5);
+  obj2.children = items2;
+  items[20] = React4(inlineStyles.Defs, obj2);
   obj.children = items;
   return React4(inlineStylesDefault, obj);
 }

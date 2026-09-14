@@ -10,6 +10,8 @@ import ApplicationRecord from "../../records/ApplicationRecord.tsx";
 import GuildStore from "../../stores/GuildStore.tsx";
 import SocialLayerStorefrontStore from "SocialLayerStorefrontStore.tsx";
 
+const require = globalThis.__r;
+
 require = fn;
 function getPrice(price, arg1) {
   if (null != price.prices[arg1]) {
@@ -85,7 +87,7 @@ function transformRewardRequirementServer(type) {
   return tmp;
 }
 function transformSlayerStorefrontPromotionServer(id) {
-  let obj = {
+  const obj = {
     id: id.id,
     endsAt: null,
     flavor: null,
@@ -108,15 +110,15 @@ function transformSlayerStorefrontPromotionServer(id) {
   const pdp = id.pdp;
   let tmp2 = null;
   if (null != pdp) {
-    obj = { label: null, tooltip: null, icon: null };
     ({ label: obj2.label, tooltip: obj2.tooltip, icon: obj2.icon } = pdp);
-    tmp2 = obj;
+    tmp2 = { label: null, tooltip: null, icon: null };
+    const obj3 = { label: null, tooltip: null, icon: null };
   }
   obj.pdp = tmp2;
   let tmp3 = null;
   if (null != id.storefront) {
-    obj = { headerText: id.storefront.header_text };
-    tmp3 = obj;
+    const obj9 = { headerText: id.storefront.header_text };
+    tmp3 = obj9;
   }
   obj.storefront = tmp3;
   const checkout = id.checkout;
@@ -124,15 +126,15 @@ function transformSlayerStorefrontPromotionServer(id) {
   if (null != checkout) {
     ({ label: obj4.label, tooltip: obj4.tooltip, icon: obj4.icon } = checkout);
     tmp4 = { label: null, tooltip: null, icon: null };
-    const obj1 = { label: null, tooltip: null, icon: null };
+    const obj10 = { label: null, tooltip: null, icon: null };
   }
   obj.checkout = tmp4;
   const vc_stream = id.vc_stream;
   let tmp5 = null;
   if (null != vc_stream) {
-    const obj2 = { label: null, tooltip: null, icon: null };
     ({ label: obj5.label, tooltip: obj5.tooltip, icon: obj5.icon } = vc_stream);
-    tmp5 = obj2;
+    tmp5 = { label: null, tooltip: null, icon: null };
+    const obj11 = { label: null, tooltip: null, icon: null };
   }
   obj.vcStream = tmp5;
   let reward_requirements = id.reward_requirements;
@@ -255,13 +257,13 @@ export { getPrice };
 export const isGiftPriceDifferent = function isGiftPriceDifferent(arg0) {
   let tmp3 = getPrice(arg0, constants2.DEFAULT);
   if (tmp3 == null) {
-    let obj = { amount: 0, currency: CurrencyCodes.USD };
+    const obj = { amount: 0, currency: CurrencyCodes.USD };
     tmp3 = obj;
   }
   let tmpResult = getPrice(arg0, constants2.GIFT);
   if (tmpResult == null) {
-    obj = { amount: 0, currency: CurrencyCodes.USD };
-    tmpResult = obj;
+    const obj2 = { amount: 0, currency: CurrencyCodes.USD };
+    tmpResult = obj2;
   }
   return tmp3.currency !== tmpResult.currency || tmp3.amount !== tmpResult.amount;
 };
@@ -289,7 +291,7 @@ export const getOrderedStorefrontSkuIds = function getOrderedStorefrontSkuIds(ar
       for (const item10046 of skuIds2) {
         if (!set.has(item10046)) {
           let addResult1 = set.add(item10046);
-          arr = items.push(item10046);
+          let arr2 = items.push(item10046);
         }
         continue;
       }
@@ -412,15 +414,15 @@ export const transformSlayerApplicationStorefrontServer = function transformSlay
     pages,
   } = id);
   obj.pages = pages.map((title) => {
-    let obj = { title: title.title, leaderboard: null, skuIds: null, sections: null };
+    const obj = { title: title.title, leaderboard: null, skuIds: null, sections: null };
     let tmp;
     if (null != title.leaderboard) {
-      obj = {
+      const obj2 = {
         title: title.leaderboard.title,
         description: title.leaderboard.description,
         backgroundImageAssetId: title.leaderboard.background_image_asset_id,
       };
-      tmp = obj;
+      tmp = obj2;
     }
     obj.leaderboard = tmp;
     obj.skuIds = title.sku_ids;
@@ -475,10 +477,10 @@ export const getPrimaryCarouselItemInfo = function getPrimaryCarouselItemInfo(te
       if (0 !== tenantMetadata.tenantMetadata.socialLayer.carouselItems.length) {
         const first = tenantMetadata.tenantMetadata.socialLayer.carouselItems[0];
         if (null == first.labelIconAssetId) {
-          obj = { primaryIconAsset: "Array", primaryIconLabel: "PX_16" };
+          let obj4 = { primaryIconAsset: "Array", primaryIconLabel: "PX_16" };
         } else {
           const obj3 = StoreUtils;
-          obj = {
+          obj4 = {
             primaryIconAsset: URLUtilsDefault.toURLSafe(
               obj3.getAssetURL(application_id, first.labelIconAssetId, num, "webp"),
             ),
@@ -488,13 +490,13 @@ export const getPrimaryCarouselItemInfo = function getPrimaryCarouselItemInfo(te
             obj3.getAssetURL(application_id, first.labelIconAssetId, num, "webp"),
           );
         }
-        return obj;
+        return obj4;
       }
     }
   }
   return { primaryIconAsset: "Array", primaryIconLabel: "PX_16" };
 };
-export const getGameItemThumbnailUrl = function getGameItemThumbnailUrl(value) {
+export const getGameItemThumbnailUrl = function getGameItemThumbnailUrl(value2) {
   let obj = arg1;
   if (arg1 === undefined) {
     obj = {};
@@ -504,10 +506,10 @@ export const getGameItemThumbnailUrl = function getGameItemThumbnailUrl(value) {
   if (undefined !== size) {
     num = size;
   }
-  if (null != value) {
-    if (null != value.thumbnailAssetId) {
+  if (null != value2) {
+    if (null != value2.thumbnailAssetId) {
       const obj3 = StoreUtils;
-      return URLUtilsDefault.toURLSafe(obj3.getAssetURL(value.applicationId, value.thumbnailAssetId, num, "webp"));
+      return URLUtilsDefault.toURLSafe(obj3.getAssetURL(value2.applicationId, value2.thumbnailAssetId, num, "webp"));
     }
   }
 };
@@ -697,14 +699,15 @@ export const useGetSocialLayerStorefrontGuildIdAndApplication =
     );
     const obj = require("initialize");
     const application = require("useGetOrFetchApplications").useGetOrFetchApplication(applicationId);
-    let guildId = stateFromStores;
+    let guildId2 = stateFromStores;
     if (stateFromStores == null) {
-      guildId = undefined;
+      let guildId;
       if (application != null) {
         guildId = application.guildId;
       }
+      guildId2 = guildId;
     }
-    return { guildId, application };
+    return { guildId: guildId2, application };
   };
 export const getSocialLayerStorefrontApplicationId = function getSocialLayerStorefrontApplicationId(guildId) {
   let applicationIdFromGuildId = SocialLayerStorefrontStore.getApplicationIdFromGuildId(guildId);

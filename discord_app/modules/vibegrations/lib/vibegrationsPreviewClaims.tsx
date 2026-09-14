@@ -25,14 +25,13 @@ export const awaitVibegrationsPreviewClaim = function awaitVibegrationsPreviewCl
   });
 };
 export const resolveVibegrationsPreviewClaim = function resolveVibegrationsPreviewClaim(id, upload_token) {
-  let obj = map;
   value = map.get(id);
   if (null != value) {
-    obj.delete(id);
+    map.delete(id);
     const _clearTimeout = clearTimeout;
     clearTimeout(value.timer);
-    obj = { uploadToken: upload_token };
-    value.resolve(obj);
+    const obj2 = { uploadToken: upload_token };
+    value.resolve(obj2);
   }
 };
 export const clearVibegrationsPreviewClaims = function clearVibegrationsPreviewClaims(projectId) {

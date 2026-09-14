@@ -10,20 +10,21 @@ const InstantInviteConstants = fn(9986);
 ({ SHARE_ITEMS: closure_7, SHARE_ITEMS_DEFAULT: closure_8 } = InstantInviteConstants);
 const jsx = fn(21).jsx;
 const createStyles = fn(4636);
-let obj = { contentContainer: null };
-obj = { padding: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_12, alignItems: "center" };
-obj.contentContainer = obj;
+let obj = {
+  contentContainer: { padding: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_12, alignItems: "center" },
+};
 let closure_10 = createStyles.createStyles(obj);
+let obj3 = { padding: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_12, alignItems: "center" };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/instant_invite/native/components/InstantInviteShareApps.tsx");
 
 export default noop.memo(function InstantInviteShareApps(onItemPressed) {
   onItemPressed = onItemPressed.onItemPressed;
   dependencyMap = undefined;
-  let obj = onItemPressed(5063);
-  closure_1 = obj.useFontScale();
   const tmp = closure_10();
-  [arr, c2] = _slicedToArray(noop.useState(closure_8), 2);
+  closure_1 = onItemPressed(5063).useFontScale();
+  let obj = onItemPressed(5063);
+  [arr, c2] = noop.useState(closure_8);
   const tmp2 = _slicedToArray(noop.useState(closure_8), 2);
   const gesture = onItemPressed(6756).useNativeGesture({ disallowInterruption: true });
   const effect = noop.useEffect(() => {
@@ -37,17 +38,15 @@ export default noop.memo(function InstantInviteShareApps(onItemPressed) {
       _undefined(items);
     });
   }, []);
-  obj = {
+  let obj3 = {
     contentContainerStyle: null,
     showsHorizontalScrollIndicator: false,
     horizontal: true,
     children: arr.map((type) => {
       ({ fullIcon, getLabel, icon, IconComponent, onPress: onItemPressed } = type);
-      let obj = { style: null, children: null };
-      obj = { maxWidth: 76 * closure_1 };
-      obj.style = obj;
+      const obj = { style: { maxWidth: 76 * closure_1 }, children: null };
       if (null != fullIcon) {
-        obj = {
+        const obj3 = {
           image: fullIcon,
           label: getLabel(),
           onPress() {
@@ -70,7 +69,7 @@ export default noop.memo(function InstantInviteShareApps(onItemPressed) {
           }
           IconComponent = icon;
         }
-        const obj1 = {
+        const obj4 = {
           variant: "secondary",
           icon: IconComponent,
           label: getLabel(),
@@ -90,20 +89,22 @@ export default noop.memo(function InstantInviteShareApps(onItemPressed) {
         });
       }
       obj.children = tmpResult;
-      return <closure_1_5 key={type.type} maxWidth={76 * closure_1} />;
+      return (
+        <closure_1_5 key={type.type} style={{ maxWidth: 76 * closure_1 }}>
+          {null}
+        </closure_1_5>
+      );
     }),
   };
   let items = [tmp.contentContainer, onItemPressed.contentContainerStyle];
-  obj.contentContainerStyle = items;
+  obj3.contentContainerStyle = items;
   const children = (
     <closure_6 contentContainerStyle={null} showsHorizontalScrollIndicator={false} horizontal>
       {arr.map((type) => {
         ({ fullIcon, getLabel, icon, IconComponent, onPress: onItemPressed } = type);
-        let obj = { style: null, children: null };
-        obj = { maxWidth: 76 * closure_1 };
-        obj.style = obj;
+        const obj = { style: { maxWidth: 76 * closure_1 }, children: null };
         if (null != fullIcon) {
-          obj = {
+          const obj3 = {
             image: fullIcon,
             label: getLabel(),
             onPress() {
@@ -126,7 +127,7 @@ export default noop.memo(function InstantInviteShareApps(onItemPressed) {
             }
             IconComponent = icon;
           }
-          const obj1 = {
+          const obj4 = {
             variant: "secondary",
             icon: IconComponent,
             label: getLabel(),
@@ -146,7 +147,11 @@ export default noop.memo(function InstantInviteShareApps(onItemPressed) {
           });
         }
         obj.children = tmpResult;
-        return <closure_1_5 key={type.type} maxWidth={76 * closure_1} />;
+        return (
+          <closure_1_5 key={type.type} style={{ maxWidth: 76 * closure_1 }}>
+            {null}
+          </closure_1_5>
+        );
       })}
     </closure_6>
   );

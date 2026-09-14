@@ -3,6 +3,8 @@ import _mod19 from "../../../../_runtime/metro/00019__.js";
 import CollectiblesPurchaseStore from "../CollectiblesPurchaseStore.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
+const require = globalThis.__r;
+
 let useMemo = _mod19.useMemo;
 let closure_4 = {
   NOT_PURCHASED: 0,
@@ -45,16 +47,15 @@ export const usePurchasedProductsSort = function usePurchasedProductsSort(memo) 
           }
           return NOT_PURCHASED - PARTIAL_OWNED_BUNDLE;
         }
-        let tmpResult = closure_0(stateFromStores[3]);
         if (tmpResult.getIsVariantProduct(type2)) {
           const variants2 = type2.variants;
           variants2.every((skuId) => obj.includes(skuId.skuId)) ? tmp4.PURCHASED : tmp4.NOT_PURCHASED;
         } else {
           PARTIAL_OWNED_BUNDLE = obj.includes(type2.skuId) ? tmp4.PURCHASED : tmp4.NOT_PURCHASED;
         }
+        tmpResult = closure_0(stateFromStores[3]);
       }
-      tmpResult = closure_0(stateFromStores[3]);
-      if (tmpResult.getIsVariantProduct(type)) {
+      if (tmpResult2.getIsVariantProduct(type)) {
         const variants = type.variants;
         if (variants.every((skuId) => obj.includes(skuId.skuId))) {
           let NOT_PURCHASED2 = constants.PURCHASED;
@@ -68,6 +69,7 @@ export const usePurchasedProductsSort = function usePurchasedProductsSort(memo) 
         NOT_PURCHASED = constants.NOT_PURCHASED;
         tmp4 = constants;
       }
+      tmpResult2 = closure_0(stateFromStores[3]);
     });
   }, items2);
 };

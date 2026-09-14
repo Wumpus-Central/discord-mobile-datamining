@@ -1,6 +1,8 @@
 // discord_app/modules/changelog/useChangelogIdFromChannel.tsx
 import MessageStore from "../../stores/MessageStore.tsx";
 
+const require = globalThis.__r;
+
 const require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/changelog/useChangelogIdFromChannel.tsx");

@@ -5,8 +5,8 @@ import age_gate_AgeGateUtils from "../../age_gate/native/AgeGateUtils.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
-let useStickerPickerStore = fn(10518).useStickerPickerStore;
-const StickerPickerConstants = fn(10401);
+let useStickerPickerStore = fn(10519).useStickerPickerStore;
+const StickerPickerConstants = fn(10402);
 ({
   MIN_MARGIN: hasOwnProperty,
   ROW_HEIGHT: metroRequire,
@@ -14,8 +14,8 @@ const StickerPickerConstants = fn(10401);
   LABEL_HEIGHT,
 } = StickerPickerConstants);
 const StickerPickerSectionType = { STICKERS: 0, [0]: "STICKERS", NSFW: 1, [1]: "NSFW" };
-let closure_9 = LABEL_HEIGHT + 2 * fn(1219).PADDING_VERTICAL;
-let closure_10 = fn(10434).PREMIUM_UPSELL_SECTION_DIVIDER_HEIGHT + fn(10434).PREMIUM_UPSELL_SECTION_DIVIDER_MARGIN;
+let closure_9 = LABEL_HEIGHT + 2 * fn(1217).PADDING_VERTICAL;
+let closure_10 = fn(10435).PREMIUM_UPSELL_SECTION_DIVIDER_HEIGHT + fn(10435).PREMIUM_UPSELL_SECTION_DIVIDER_MARGIN;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/stickers/native/useStickerPickerListData.tsx");
 
@@ -39,18 +39,16 @@ export default function useStickerPickerListData(containerWidth) {
         flag = false;
       }
       if (true === arg2) {
-        let obj = { type: null, stickersByRow: null };
+        const obj = { type: null, stickersByRow: null };
         obj.type = obj.NSFW;
         obj.stickersByRow = [];
-        items3.push(obj);
-        arr = num2.push(1);
+        arr = items3.push(obj);
+        num2.push(1);
       } else {
         const found = arr.filter((format_type) => items1.includes(format_type.format_type));
         const chunkResult = _modDef12.chunk(found, mapped2);
-        obj = { type: null, stickersByRow: null };
-        obj.type = obj.STICKERS;
-        obj.stickersByRow = chunkResult;
-        items3.push(obj);
+        const obj3 = { type: obj.STICKERS, stickersByRow: chunkResult };
+        items3.push(obj3);
         num2.push(chunkResult.length);
       }
       items1.push(str);

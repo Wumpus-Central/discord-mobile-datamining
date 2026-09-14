@@ -5,6 +5,8 @@ import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import SKUStore from "../../../stores/game_store/SKUStore.tsx";
 import CollectiblesCategoryStore from "../CollectiblesCategoryStore.tsx";
 
+const require = globalThis.__r;
+
 require = fn;
 const useEffect = fn(19).useEffect;
 const SKUProductLines = fn(1074).SKUProductLines;
@@ -23,7 +25,7 @@ export const useFetchCollectiblesProducts = function useFetchCollectiblesProduct
   const stateFromStoresArray1 = require("useStateFromStores").useStateFromStoresArray(items1, () =>
     skuIds.map((item) => product.getProduct(item)),
   );
-  const obj2 = require("useStateFromStores");
+  let obj2 = require("useStateFromStores");
   const items2 = [stateFromStoresArray3];
   stateFromStoresArray2 = require("useStateFromStores").useStateFromStoresArray(items2, () =>
     skuIds.map((item) => productFetch.getProductFetch(item)),
@@ -82,8 +84,9 @@ export const useFetchCollectiblesProducts = function useFetchCollectiblesProduct
         tmp24 = stateFromStoresArray3[tmp6];
       }
       if (!tmp24) {
-        let obj = { includeBundles };
-        let collectiblesProduct = obj.fetchCollectiblesProduct(tmp8, obj);
+        let obj = CollectiblesActionCreators;
+        let obj2 = { includeBundles };
+        let collectiblesProduct = obj.fetchCollectiblesProduct(tmp8, obj2);
       }
       continue;
     }

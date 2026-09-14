@@ -22,6 +22,8 @@ export default function InAppReportModal(arg0) {
   noop = undefined;
   c6 = undefined;
   jsx = undefined;
+  first = undefined;
+  closure_9 = undefined;
   c10 = undefined;
   c11 = undefined;
   c12 = undefined;
@@ -46,14 +48,12 @@ export default function InAppReportModal(arg0) {
     }
   }
   ({ nodes: c4, root_node_id: c5, success_node_id: c6, fail_node_id: c7 } = menu);
-  const tmp = _slicedToArray(noop.useState(undefined), 2);
-  const first = tmp[0];
-  closure_9 = tmp[1];
-  [c10, c11] = _slicedToArray(noop.useState(undefined), 2);
+  [first, closure_9] = noop.useState(undefined);
+  [c10, c11] = noop.useState(undefined);
   const tmp3 = _slicedToArray(noop.useState(undefined), 2);
-  [c12, c13] = _slicedToArray(noop.useState([]), 2);
+  [c12, c13] = noop.useState([]);
   const tmp4 = _slicedToArray(noop.useState([]), 2);
-  [c14, c15] = _slicedToArray(noop.useState([]), 2);
+  [c14, c15] = noop.useState([]);
   menu(5073)(() => {
     const orFetchLinkedUsers = FamilyCenterUtils.getOrFetchLinkedUsers();
   });
@@ -67,8 +67,8 @@ export default function InAppReportModal(arg0) {
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
-          let obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           return { value: "HermesInternal", done: null };
         }
@@ -81,27 +81,28 @@ export default function InAppReportModal(arg0) {
               throw value;
             } else if (arg0 === 2) {
               c4 = 3;
-              obj = { value, done: true };
-              return obj;
+              const obj4 = { value, done: true };
+              return obj4;
             } else {
               closure_1 = tmp2;
               closure_129_0 = closure_0;
               closure_129_1 = undefined;
               closure_129_2 = undefined;
               closure_129_3 = undefined;
-              let obj1 = nodeMap(reportSubType[11]);
               c3 = 1;
               c4 = 1;
-              obj1 = { value: null, done: false };
-              obj1.value = obj1.submitReport(closure_1, closure_0, closure_0);
-              return obj1;
+              const obj5 = {
+                value: nodeMap(reportSubType[11]).submitReport(closure_1, closure_0, closure_0),
+                done: false,
+              };
+              return obj5;
             }
           } else if (arg0 === 1) {
             c4 = 3;
             throw value;
           } else if (arg0 === 2) {
             c4 = 3;
-            obj = { value, done: true };
+            const obj = { value, done: true };
             return obj;
           } else {
             closure_129_1 = value;
@@ -131,23 +132,23 @@ export default function InAppReportModal(arg0) {
       }
     };
     if (null == _undefined[reportId]) {
-      let obj = in_app_reports_ReportUtils;
-      const result = obj.trackCloseReportModalAnalytics(nodeMap, c12, onSubmit);
-      let obj1 = showReportModal;
-      obj1.hideReportModal();
+      const result = in_app_reports_ReportUtils.trackCloseReportModalAnalytics(nodeMap, c12, onSubmit);
+      const tmp5 = nodeMap;
+      const tmp7 = onSubmit;
+      showReportModal.hideReportModal();
       const item = _undefined2.forEach((fn) => fn());
       if (successNodeId) {
-        const result1 = in_app_reports_ReportUtils.showInAppReportsFeedbackModal(nodeMap, onSubmit);
+        const result1 = in_app_reports_ReportUtils.showInAppReportsFeedbackModal(tmp5, tmp7);
         const tmp3Result = in_app_reports_ReportUtils;
       }
       return {};
     } else {
-      obj = { initialStack: null, screens: null };
-      obj = { name, params: null };
-      obj1 = { node: tmp2, history: [] };
-      obj.params = obj1;
-      let items = [obj];
-      obj.initialStack = items;
+      let obj3 = { initialStack: null, screens: null };
+      let obj4 = { name, params: null };
+      let obj5 = { node: tmp2, history: [] };
+      obj4.params = obj5;
+      let items = [obj4];
+      obj3.initialStack = items;
       nodeMap = tmp;
       const reportType = nodeMap;
       const reportSubType = c10;
@@ -173,8 +174,8 @@ export default function InAppReportModal(arg0) {
           return items;
         });
       }
-      const obj2 = {};
-      const obj3 = {
+      const obj6 = {};
+      const obj7 = {
         headerRight() {
           const obj = { source: menu(7095), onPress, accessibilityLabel: null };
           const intl = util.intl;
@@ -206,9 +207,9 @@ export default function InAppReportModal(arg0) {
           return addOnCloseCallback(reportType(reportSubType[8]), obj);
         },
       };
-      obj2[name] = obj3;
-      obj.screens = obj2;
-      return obj;
+      obj6[name] = obj7;
+      obj3.screens = obj6;
+      return obj3;
     }
   }, items);
   ({ initialStack, screens } = memo);

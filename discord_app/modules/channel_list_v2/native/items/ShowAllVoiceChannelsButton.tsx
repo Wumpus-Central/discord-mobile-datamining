@@ -13,9 +13,8 @@ export default noop.memo((guildId) => {
   const section = guildId.section;
   const listRef = guildId.listRef;
   let stateFromStores;
-  let obj = guildId(section[3]);
   const items = [stateFromStores];
-  stateFromStores = obj.useStateFromStores(items, () =>
+  stateFromStores = guildId(section[3]).useStateFromStores(items, () =>
     ChannelListVoiceCategoryStore.isVoiceCategoryCollapsed(guildId),
   );
   const items1 = [stateFromStores, guildId, section, listRef];
@@ -50,13 +49,7 @@ export default noop.memo((guildId) => {
   } else {
     stringResult = string(t.Q2gPWl);
   }
-  obj = {
-    text: stringResult,
-    icon: jsx(guildId(section[8]).VoiceNormalIcon, { size: "sm" }),
-    onPress: callback,
-    variant: "secondary",
-    size: "sm",
-  };
+  let obj = guildId(section[3]);
   return jsx(guildId(section[6]).Button, {
     text: stringResult,
     icon: jsx(guildId(section[8]).VoiceNormalIcon, { size: "sm" }),

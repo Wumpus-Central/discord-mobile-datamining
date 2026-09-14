@@ -24,8 +24,10 @@ const toggle = SettingBuilders.createToggle({
   onValueChange(voice_activity_notifications) {
     const EnableVoiceActivityNotifications = UserSettings.EnableVoiceActivityNotifications;
     EnableVoiceActivityNotifications.updateSetting(voice_activity_notifications);
-    const obj = { update_type: constants.ACCOUNT, voice_activity_notifications };
-    obj.track(AnalyticEvents.NOTIFICATION_SETTINGS_UPDATED, obj);
+    AnalyticsUtilsDefault.track(AnalyticEvents.NOTIFICATION_SETTINGS_UPDATED, {
+      update_type: constants.ACCOUNT,
+      voice_activity_notifications,
+    });
   },
 });
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/VoiceActivityNotificationSetting.tsx");

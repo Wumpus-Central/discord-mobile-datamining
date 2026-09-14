@@ -13,7 +13,7 @@ const Constants = fn(8410);
   THUMBNAIL_MIN_WIDTH: closure_8,
   THUMBNAIL_WIDTH_MARGIN: closure_9,
 } = Constants);
-const PlatformUtils = fn(1150);
+const PlatformUtils = fn(1363);
 let closure_10 = PlatformUtils.isAndroid();
 let closure_11 = {
   code: "function useMediaViewerSyncerTsx1(){const{thumbnailsScrolling,SCROLLING_DRAG,swipeSource}=this.__closure;thumbnailsScrolling.set(thumbnailsScrolling.get()|SCROLLING_DRAG);swipeSource.set('thumbnails');}",
@@ -144,12 +144,12 @@ export const useMediaViewerSyncer = function useMediaViewerSyncer(sources) {
             let _Math3 = Math;
             num3 = Math.floor(num2 + (sum - num2 - (items[0].end - items[0].start)) / 2);
           }
-          obj = { start: num2, end: sum, scrollStart: num3 };
-          sources = items.push(obj);
+          let obj2 = { start: num2, end: sum, scrollStart: num3 };
+          let arr2 = items.push(obj2);
           let tmp6 = sum;
         } else {
-          obj = { start: num2, end: num2, scrollStart: num2 };
-          sources = items.push(obj);
+          let obj3 = { start: num2, end: num2, scrollStart: num2 };
+          let arr4 = items.push(obj3);
           tmp6 = num2;
         }
         num = num + 1;
@@ -196,14 +196,13 @@ export const useMediaViewerSyncer = function useMediaViewerSyncer(sources) {
       variableWidthThumbnailsEnabled: false,
       useThumbnailsProps(onSelect, maxIndex) {
         thumbnailScrollPositions = maxIndex;
+        const animatedRef = arr(selectedIndex[5]).useAnimatedRef();
         let obj = arr(selectedIndex[5]);
-        const animatedRef = obj.useAnimatedRef();
-        let obj1 = arr(selectedIndex[6]);
-        let size = obj1.useMediaViewerDimensions();
+        let size = arr(selectedIndex[6]).useMediaViewerDimensions();
         let width = size.width;
         const rect = items(selectedIndex[7])();
-        let obj2 = arr(selectedIndex[5]);
-        obj = { onBeginDrag: null, onEndDrag: null, onScroll: null, onMomentumBegin: null, onMomentumEnd: null };
+        let obj2 = arr(selectedIndex[6]);
+        let obj4 = { onBeginDrag: null, onEndDrag: null, onScroll: null, onMomentumBegin: null, onMomentumEnd: null };
         class H {
           constructor() {
             result = closure_4.set(2 | closure_4.get());
@@ -211,11 +210,10 @@ export const useMediaViewerSyncer = function useMediaViewerSyncer(sources) {
             return;
           }
         }
-        obj = { thumbnailsScrolling: mapped1, SCROLLING_DRAG: 2, swipeSource };
-        H.__closure = obj;
+        H.__closure = { thumbnailsScrolling: mapped1, SCROLLING_DRAG: 2, swipeSource };
         H.__workletHash = 16224520186325;
         H.__initData = variableWidthThumbnailsEnabled;
-        obj.onBeginDrag = H;
+        obj4.onBeginDrag = H;
         class C {
           constructor() {
             result = closure_4.set(-3 & closure_4.get());
@@ -225,7 +223,7 @@ export const useMediaViewerSyncer = function useMediaViewerSyncer(sources) {
         C.__closure = { thumbnailsScrolling: mapped1, SCROLLING_DRAG: 2 };
         C.__workletHash = 5779899826871;
         C.__initData = __initData;
-        obj.onEndDrag = C;
+        obj4.onEndDrag = C;
         class N {
           constructor(arg0) {
             result = onSelect.contentOffset.x / closure_0;
@@ -283,7 +281,9 @@ export const useMediaViewerSyncer = function useMediaViewerSyncer(sources) {
             return;
           }
         }
-        obj1 = {
+        let obj3 = arr(selectedIndex[5]);
+        let obj5 = { thumbnailsScrolling: mapped1, SCROLLING_DRAG: 2, swipeSource };
+        N.__closure = {
           variableWidthThumbnailsEnabled,
           thumbnailScrollPositions,
           thumbnailSize: onSelect,
@@ -297,10 +297,9 @@ export const useMediaViewerSyncer = function useMediaViewerSyncer(sources) {
           runOnJS: arr(selectedIndex[5]).runOnJS,
           onSelectedIndexChange,
         };
-        N.__closure = obj1;
         N.__workletHash = 6212589685153;
         N.__initData = __initData2;
-        obj.onScroll = N;
+        obj4.onScroll = N;
         class L {
           constructor() {
             result = closure_4.set(4 | closure_4.get());
@@ -311,14 +310,28 @@ export const useMediaViewerSyncer = function useMediaViewerSyncer(sources) {
         L.__closure = { thumbnailsScrolling: mapped1, SCROLLING_MOMENTUM: 4, swipeSource };
         L.__workletHash = 4138169755088;
         L.__initData = __initData3;
-        obj.onMomentumBegin = L;
+        obj4.onMomentumBegin = L;
         let fn = function h() {
           const result = mapped1.set(-5 & mapped1.get());
         };
         fn.__closure = { thumbnailsScrolling: mapped1, SCROLLING_MOMENTUM: 4 };
         fn.__workletHash = 1471443652144;
         fn.__initData = __initData4;
-        obj.onMomentumEnd = fn;
+        obj4.onMomentumEnd = fn;
+        const obj6 = {
+          variableWidthThumbnailsEnabled,
+          thumbnailScrollPositions,
+          thumbnailSize: onSelect,
+          swipeSource,
+          maxIndex,
+          thumbnailsIndex: mapped,
+          thumbnailsAnimateTo: derivedValue2,
+          selectedIndex: animatedRef,
+          viewerScrolling: diff1,
+          thumbnailsScrolling: mapped1,
+          runOnJS: arr(selectedIndex[5]).runOnJS,
+          onSelectedIndexChange,
+        };
         items = [animatedRef];
         const callback = React.useCallback((arg0) => {
           if (!THUMBNAIL_MIN_WIDTH.get()) {
@@ -329,7 +342,7 @@ export const useMediaViewerSyncer = function useMediaViewerSyncer(sources) {
         const callback1 = React.useCallback((arg0) => {
           sources(onEndReached[5]).scrollTo(animatedRef, items[arg0].scrollStart, 0, true);
         }, items);
-        let obj6 = arr(selectedIndex[5]);
+        const animatedScrollHandler = obj3.useAnimatedScrollHandler(obj4);
         class V {
           constructor() {
             obj = thumbnailsAnimateTo;
@@ -347,7 +360,8 @@ export const useMediaViewerSyncer = function useMediaViewerSyncer(sources) {
             return;
           }
         }
-        obj2 = {
+        const obj7 = arr(selectedIndex[5]);
+        V.__closure = {
           thumbnailsAnimateTo: derivedValue2,
           variableWidthThumbnailsEnabled,
           runOnJS: arr(selectedIndex[5]).runOnJS,
@@ -356,17 +370,24 @@ export const useMediaViewerSyncer = function useMediaViewerSyncer(sources) {
           ref: animatedRef,
           thumbnailSize: onSelect,
         };
-        V.__closure = obj2;
         V.__workletHash = 1697086875584;
         V.__initData = __initData5;
-        let derivedValue = obj6.useDerivedValue(V);
+        let derivedValue = obj7.useDerivedValue(V);
         let items1 = [animatedRef];
         const callback2 = React.useCallback((arg0) => {
           const result = sources(onEndReached[8]).lerpVarWidthThumbnailScrollBounds(items, arg0);
           const obj = sources(onEndReached[8]);
           sources(onEndReached[5]).scrollTo(animatedRef, result, 0, false);
         }, items1);
-        let obj8 = arr(selectedIndex[5]);
+        const obj8 = {
+          thumbnailsAnimateTo: derivedValue2,
+          variableWidthThumbnailsEnabled,
+          runOnJS: arr(selectedIndex[5]).runOnJS,
+          scrollVarWidthThumbnails: callback1,
+          scrollTo: arr(selectedIndex[5]).scrollTo,
+          ref: animatedRef,
+          thumbnailSize: onSelect,
+        };
         class U {
           constructor() {
             tmp = 0 !== viewerScrolling.get();
@@ -391,7 +412,7 @@ export const useMediaViewerSyncer = function useMediaViewerSyncer(sources) {
             return;
           }
         }
-        const animatedScrollHandler = obj2.useAnimatedScrollHandler(obj);
+        const obj9 = arr(selectedIndex[5]);
         U.__closure = {
           viewerScrolling: diff1,
           thumbnailsIndex: mapped,
@@ -405,7 +426,7 @@ export const useMediaViewerSyncer = function useMediaViewerSyncer(sources) {
         };
         U.__workletHash = 10477949154269;
         U.__initData = __initData6;
-        let derivedValue1 = obj8.useDerivedValue(U);
+        let derivedValue1 = obj9.useDerivedValue(U);
         mapped = onSelect.map((item, index) => index);
         mapped1 = onSelect.map((item) => {
           const size = onSelect(animatedRef[9]).flattenSource(item);
@@ -420,7 +441,7 @@ export const useMediaViewerSyncer = function useMediaViewerSyncer(sources) {
           }
           return num;
         });
-        let obj3 = {
+        const obj10 = {
           viewerScrolling: diff1,
           thumbnailsIndex: mapped,
           viewerPos,
@@ -452,7 +473,7 @@ export const useMediaViewerSyncer = function useMediaViewerSyncer(sources) {
         derivedValue2 = obj11.useDerivedValue(ee);
         const diff = (width - onSelect) / 2 - rect.left;
         viewerPos = diff;
-        const obj4 = {
+        const obj12 = {
           thumbnailsScrolling: mapped1,
           interpolate: arr(selectedIndex[5]).interpolate,
           viewerPos,
@@ -479,7 +500,7 @@ export const useMediaViewerSyncer = function useMediaViewerSyncer(sources) {
         te.__initData = __initData8;
         diff1 = (width - onSelect) / 2 - rect.right;
         const animatedStyle = obj13.useAnimatedStyle(te);
-        let obj5 = {
+        const obj14 = {
           viewerScrolling: diff1,
           headerBufferSize: diff,
           margin: derivedValue2,
@@ -494,29 +515,29 @@ export const useMediaViewerSyncer = function useMediaViewerSyncer(sources) {
           }
           return { width };
         }
-        obj6 = {
+        const obj15 = arr(selectedIndex[5]);
+        ne.__closure = {
           viewerScrolling: diff1,
           footerBufferSize: diff1,
           margin: derivedValue2,
           withSpring: arr(selectedIndex[10]).withSpring,
         };
-        ne.__closure = obj6;
         ne.__workletHash = 10532164558483;
         ne.__initData = __initData9;
-        const animatedStyle1 = arr(selectedIndex[5]).useAnimatedStyle(ne);
+        const animatedStyle1 = obj15.useAnimatedStyle(ne);
         const callback3 = React.useCallback((width, index) => {
           onSelect = index;
-          onSelect(animatedRef[5]);
           const fn = function i() {
             const items = [closure_0 - 1, closure_0, closure_0 + 1];
             return arr(selectedIndex[5]).interpolate(diff.get(), items, [0.4, 1, 0.4], "clamp");
           };
-          let obj = { interpolate: onSelect(animatedRef[5]).interpolate, viewerPos, index };
-          fn.__closure = obj;
+          let obj = onSelect(animatedRef[5]);
+          fn.__closure = { interpolate: onSelect(animatedRef[5]).interpolate, viewerPos, index };
           fn.__workletHash = 5784737783661;
           fn.__initData = __initData;
           const derivedValue = obj.useDerivedValue(fn);
           const bound = Math.max(Math.min(width.width * (diff / width.height), diff1), THUMBNAIL_MIN_WIDTH);
+          const obj2 = { interpolate: onSelect(animatedRef[5]).interpolate, viewerPos, index };
           const fn2 = function o() {
             if (mapped1.get() > 0) {
               let interpolateResult = zoomed;
@@ -528,7 +549,8 @@ export const useMediaViewerSyncer = function useMediaViewerSyncer(sources) {
             }
             return interpolateResult;
           };
-          obj = {
+          const obj3 = onSelect(animatedRef[5]);
+          fn2.__closure = {
             thumbnailsScrolling: mapped1,
             THUMBNAIL_MIN_WIDTH,
             interpolate: onSelect(animatedRef[5]).interpolate,
@@ -536,11 +558,17 @@ export const useMediaViewerSyncer = function useMediaViewerSyncer(sources) {
             index,
             sourceWidth: bound,
           };
-          fn2.__closure = obj;
           fn2.__workletHash = 12440745987072;
           fn2.__initData = __initData2;
-          const derivedValue1 = onSelect(animatedRef[5]).useDerivedValue(fn2);
-          const obj3 = onSelect(animatedRef[5]);
+          const derivedValue1 = obj3.useDerivedValue(fn2);
+          const obj4 = {
+            thumbnailsScrolling: mapped1,
+            THUMBNAIL_MIN_WIDTH,
+            interpolate: onSelect(animatedRef[5]).interpolate,
+            viewerPos,
+            index,
+            sourceWidth: bound,
+          };
           const fn3 = function u() {
             if (diff1.get() > 0) {
               let withSpringResult = derivedValue1.get();
@@ -563,14 +591,21 @@ export const useMediaViewerSyncer = function useMediaViewerSyncer(sources) {
           fn3.__initData = __initData3;
           return obj5.useAnimatedStyle(fn3);
         }, []);
-        const obj15 = arr(selectedIndex[5]);
+        const obj16 = {
+          viewerScrolling: diff1,
+          footerBufferSize: diff1,
+          margin: derivedValue2,
+          withSpring: arr(selectedIndex[10]).withSpring,
+        };
         function ie() {
           return !THUMBNAIL_MIN_WIDTH.get();
         }
         ie.__closure = { zoomed };
         ie.__workletHash = 7667674289153;
         ie.__initData = __initData10;
-        obj8 = {
+        const obj17 = arr(selectedIndex[5]);
+        const obj18 = { zoomed };
+        return {
           ref: animatedRef,
           headerBufferStyle: animatedStyle,
           headerBufferSize: diff,
@@ -586,32 +621,35 @@ export const useMediaViewerSyncer = function useMediaViewerSyncer(sources) {
             return swipeSource;
           },
         };
-        return obj8;
       },
       useViewerProps() {
+        const animatedRef = arr(selectedIndex[5]).useAnimatedRef();
         let obj = arr(selectedIndex[5]);
-        const animatedRef = obj.useAnimatedRef();
-        let obj1 = arr(selectedIndex[6]);
-        const size = obj1.useMediaViewerDimensions();
+        const size = arr(selectedIndex[6]).useMediaViewerDimensions();
         const width = size.width;
-        let obj2 = arr(selectedIndex[5]);
+        let obj2 = arr(selectedIndex[6]);
         let fn = function o() {
           if (-1 !== closure_2_5.get()) {
             const obj2 = sources(onEndReached[5]);
             obj2.scrollTo(animatedRef, closure_2_5.get() * width, 0, false);
           }
         };
-        obj = {
+        const obj3 = arr(selectedIndex[5]);
+        fn.__closure = {
           thumbnailsAnimateTo: isSpuriousContentSizeReset,
           scrollTo: arr(selectedIndex[5]).scrollTo,
           ref: animatedRef,
           screenWidth: width,
         };
-        fn.__closure = obj;
         fn.__workletHash = 11860326453239;
         fn.__initData = __initData11;
-        const derivedValue = obj2.useDerivedValue(fn);
-        let obj4 = arr(selectedIndex[5]);
+        const derivedValue = obj3.useDerivedValue(fn);
+        const obj4 = {
+          thumbnailsAnimateTo: isSpuriousContentSizeReset,
+          scrollTo: arr(selectedIndex[5]).scrollTo,
+          ref: animatedRef,
+          screenWidth: width,
+        };
         let fn2 = function l() {
           let tmp = 0 === React.get();
           if (!tmp) {
@@ -625,7 +663,8 @@ export const useMediaViewerSyncer = function useMediaViewerSyncer(sources) {
             obj.scrollTo(animatedRef, onEndReachedThreshold.get() * width, 0, false);
           }
         };
-        obj = {
+        const obj5 = arr(selectedIndex[5]);
+        fn2.__closure = {
           thumbnailsScrolling: sharedValue,
           viewerScrolling,
           thumbnailsAnimateTo: isSpuriousContentSizeReset,
@@ -634,10 +673,9 @@ export const useMediaViewerSyncer = function useMediaViewerSyncer(sources) {
           thumbnailsIndex: memo,
           screenWidth: width,
         };
-        fn2.__closure = obj;
         fn2.__workletHash = 16855593341498;
         fn2.__initData = __initData12;
-        const derivedValue1 = obj4.useDerivedValue(fn2);
+        const derivedValue1 = obj5.useDerivedValue(fn2);
         const diff = animatedRef.length - 1;
         selectedIndex = diff;
         const items = [diff, width];
@@ -647,8 +685,7 @@ export const useMediaViewerSyncer = function useMediaViewerSyncer(sources) {
             const result = closure_1_7.set(2 | closure_1_7.get());
             const result1 = closure_1_9.set("viewer");
           };
-          obj = { viewerScrolling, SCROLLING_DRAG: 2, swipeSource };
-          fn.__closure = obj;
+          fn.__closure = { viewerScrolling, SCROLLING_DRAG: 2, swipeSource };
           fn.__workletHash = 1082965969005;
           fn.__initData = __initData;
           obj.onBeginDrag = fn;
@@ -677,7 +714,7 @@ export const useMediaViewerSyncer = function useMediaViewerSyncer(sources) {
               tmp10 = selectedIndex;
             }
           };
-          obj = {
+          fn3.__closure = {
             viewerPos,
             screenWidth: width,
             swipeSource,
@@ -687,7 +724,6 @@ export const useMediaViewerSyncer = function useMediaViewerSyncer(sources) {
             runOnJS: sources(onEndReached[5]).runOnJS,
             onSelectedIndexChange,
           };
-          fn3.__closure = obj;
           fn3.__workletHash = 4243462798580;
           fn3.__initData = __initData3;
           obj.onScroll = fn3;
@@ -708,6 +744,15 @@ export const useMediaViewerSyncer = function useMediaViewerSyncer(sources) {
           obj.onMomentumEnd = fn5;
           return obj;
         }, items);
+        const obj6 = {
+          thumbnailsScrolling: sharedValue,
+          viewerScrolling,
+          thumbnailsAnimateTo: isSpuriousContentSizeReset,
+          scrollTo: arr(selectedIndex[5]).scrollTo,
+          ref: animatedRef,
+          thumbnailsIndex: memo,
+          screenWidth: width,
+        };
         sharedValue = arr(selectedIndex[5]).useSharedValue(0);
         isSpuriousContentSizeReset = function isSpuriousContentSizeReset(arg0) {
           let tmp = closure_3_10;
@@ -724,12 +769,16 @@ export const useMediaViewerSyncer = function useMediaViewerSyncer(sources) {
           }
           return tmp;
         };
-        obj1 = { IS_ANDROID: onSelectedIndexChange, contentSizeLastChangedAt: sharedValue, selectedIndex };
-        isSpuriousContentSizeReset.__closure = obj1;
+        isSpuriousContentSizeReset.__closure = {
+          IS_ANDROID: onSelectedIndexChange,
+          contentSizeLastChangedAt: sharedValue,
+          selectedIndex,
+        };
         isSpuriousContentSizeReset.__workletHash = 16891385947601;
         isSpuriousContentSizeReset.__initData = __initData13;
         const obj7 = arr(selectedIndex[5]);
-        obj2 = {
+        const obj8 = { IS_ANDROID: onSelectedIndexChange, contentSizeLastChangedAt: sharedValue, selectedIndex };
+        const obj10 = {
           onBeginDrag: memo.onBeginDrag,
           onEndDrag: null,
           onScroll: null,
@@ -743,7 +792,7 @@ export const useMediaViewerSyncer = function useMediaViewerSyncer(sources) {
         fn3.__closure = { onScrollWorklets: memo };
         fn3.__workletHash = 14520405122599;
         fn3.__initData = __initData14;
-        obj2.onEndDrag = fn3;
+        obj10.onEndDrag = fn3;
         let fn4 = function f(contentOffset) {
           if (typeof isSpuriousContentSizeReset === "function") {
             let tmp2 = closure_3_10;
@@ -791,8 +840,8 @@ export const useMediaViewerSyncer = function useMediaViewerSyncer(sources) {
         };
         fn4.__workletHash = 7185374511625;
         fn4.__initData = __initData15;
-        obj2.onScroll = fn4;
-        obj2.onMomentumBegin = memo.onMomentumBegin;
+        obj10.onScroll = fn4;
+        obj10.onMomentumBegin = memo.onMomentumBegin;
         let fn5 = function _(contentOffset) {
           if (typeof isSpuriousContentSizeReset === "function") {
             let tmp2 = closure_3_10;
@@ -818,9 +867,9 @@ export const useMediaViewerSyncer = function useMediaViewerSyncer(sources) {
         fn5.__closure = { isSpuriousContentSizeReset, onScrollWorklets: memo };
         fn5.__workletHash = 6883658005321;
         fn5.__initData = __initData16;
-        obj2.onMomentumEnd = fn5;
+        obj10.onMomentumEnd = fn5;
         const items1 = [animatedRef, width, sharedValue];
-        const obj3 = {
+        const obj11 = {
           isSpuriousContentSizeReset,
           scrollTo: arr(selectedIndex[5]).scrollTo,
           ref: animatedRef,
@@ -845,15 +894,15 @@ export const useMediaViewerSyncer = function useMediaViewerSyncer(sources) {
             current.reset();
           }
         }, items2);
-        obj4 = {
+        const animatedScrollHandler = obj9.useAnimatedScrollHandler(obj10);
+        return {
           ref: animatedRef,
-          onScroll: obj9.useAnimatedScrollHandler(obj2),
+          onScroll: obj9.useAnimatedScrollHandler(obj10),
           onContentSizeChange: callback,
           useItemVisible: React.useCallback((index) => {
             closure_0 = index;
             let tmp = memo(sharedValue.useState(index === selectedIndex.get()), 2);
             closure_1 = tmp2;
-            animatedRef(diff[5]);
             const fn = function l() {
               return closure_0 === diff.get();
             };
@@ -867,15 +916,14 @@ export const useMediaViewerSyncer = function useMediaViewerSyncer(sources) {
               }
               tmp = null != arg1 && arg1 !== arg0;
             };
-            let obj = { runOnJS: animatedRef(diff[5]).runOnJS, setVisible: tmp2 };
-            fn2.__closure = obj;
+            let obj = animatedRef(diff[5]);
+            fn2.__closure = { runOnJS: animatedRef(diff[5]).runOnJS, setVisible: tmp[1] };
             fn2.__workletHash = 16809313881276;
             fn2.__initData = __initData2;
             const animatedReaction = obj.useAnimatedReaction(fn, fn2);
             return tmp[0];
           }, []),
         };
-        return obj4;
       },
       onEndReached,
       onEndReachedThreshold,

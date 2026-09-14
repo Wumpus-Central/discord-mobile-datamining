@@ -10,21 +10,20 @@ require = fn;
 function VariantOption(variant) {
   variant = variant.variant;
   const tmp = closure_7(variant.isSelected);
-  let obj = useProductPurchaseState;
-  let isPurchased = obj.useProductPurchaseState(variant).isPurchased;
-  obj = { style: null, children: null };
+  let isPurchased = useProductPurchaseState.useProductPurchaseState(variant).isPurchased;
+  const obj2 = { style: null, children: null };
   const items = [tmp.variantOption, { zIndex: variant.zIndex }];
-  obj.style = items;
-  obj = { style: null, children: null };
+  obj2.style = items;
+  const obj3 = { style: null, children: null };
   const items1 = [tmp.variantOptionInner, { backgroundColor: variant.variantValue }];
-  obj.style = items1;
+  obj3.style = items1;
   if (isPurchased) {
-    const obj1 = { variant };
-    isPurchased = React4(VariantCheckmark, obj1);
+    const obj4 = { variant };
+    isPurchased = React4(VariantCheckmark, obj4);
   }
-  obj.children = isPurchased;
-  obj.children = React4(View, obj);
-  return React4(View, obj);
+  obj3.children = isPurchased;
+  obj2.children = React4(View, obj3);
+  return React4(View, obj2);
 }
 function VariantCheckmark(variant) {
   const colors = nativeDefault.colors;
@@ -36,29 +35,35 @@ function VariantCheckmark(variant) {
 }
 function VariantOverflowOption(isSelected) {
   const tmp = closure_7(isSelected.isSelected);
-  let obj = { style: null, children: null };
+  const obj = { style: null, children: null };
   const items = [tmp.variantOption, { zIndex: isSelected.zIndex }];
   obj.style = items;
-  obj = { style: null, children: null };
+  const obj2 = {
+    style: null,
+    children: React4(PlusSmallIcon.PlusSmallIcon, { color: nativeDefault.colors.WHITE, size: "xxs" }),
+  };
   const items1 = [,];
   ({ variantOptionInner: arr2[0], variantOverflowInner: arr2[1] } = tmp);
-  obj.style = items1;
-  obj = { color: nativeDefault.colors.WHITE, size: "xxs" };
-  obj.children = React4(PlusSmallIcon.PlusSmallIcon, obj);
-  obj.children = React4(View, obj);
+  obj2.style = items1;
+  obj.children = React4(View, obj2);
   return React4(View, obj);
 }
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
 let createStyles = fn(4636);
-let obj = { variantsContainer: null };
-obj = { display: "flex", flexDirection: "row", alignItems: "center", paddingStart: nativeDefault.space.PX_4 };
-obj.variantsContainer = obj;
+let obj = {
+  variantsContainer: {
+    display: "flex",
+    flexDirection: "row",
+    alignItems: "center",
+    paddingStart: nativeDefault.space.PX_4,
+  },
+};
 let closure_6 = createStyles.createStyles(obj);
 createStyles = fn(4636);
 let closure_7 = createStyles.createStyles((arg0) => {
-  let obj = { variantOption: null, variantOptionInner: null, variantOverflowInner: null };
+  const obj = { variantOption: null, variantOptionInner: null, variantOverflowInner: null };
   const size = {
     marginStart: -nativeDefault.space.PX_4,
     width: 14,
@@ -86,25 +91,25 @@ let closure_7 = createStyles.createStyles((arg0) => {
   size1.borderWidth = num;
   size1.borderColor = nativeDefault.colors.BUTTON_OUTLINE_PRIMARY_TEXT;
   obj.variantOptionInner = size1;
-  obj = { backgroundColor: nativeDefault.colors.ICON_MUTED };
-  obj.variantOverflowInner = obj;
+  obj.variantOverflowInner = { backgroundColor: nativeDefault.colors.ICON_MUTED };
   return obj;
 });
+let obj3 = { display: "flex", flexDirection: "row", alignItems: "center", paddingStart: nativeDefault.space.PX_4 };
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/native/CollectiblesShopCardVariants.tsx");
 
 export default noop.memo(function CardProductVariants(product) {
   product = product.product;
   let defaultVariantIndex;
-  let obj = defaultVariantIndex(8891);
-  defaultVariantIndex = obj.useDefaultVariantIndex(product);
   const tmp = closure_6();
+  defaultVariantIndex = defaultVariantIndex(8891).useDefaultVariantIndex(product);
+  const obj = defaultVariantIndex(8891);
   if (obj2.getIsVariantProduct(product)) {
     let num3 = 3;
     if (product.variants.length <= 4) {
       num3 = length;
     }
-    obj = { style: tmp.variantsContainer, children: null };
+    const obj3 = { style: tmp.variantsContainer, children: null };
     const variants = product.variants;
     const substr = variants.slice(0, num3);
     const items = [
@@ -118,17 +123,17 @@ export default noop.memo(function CardProductVariants(product) {
     ];
     let tmp7Result = num3 !== length;
     if (tmp7Result) {
-      obj = { isSelected: defaultVariantIndex >= 3, zIndex: null };
+      const obj4 = { isSelected: defaultVariantIndex >= 3, zIndex: null };
       let num5 = 0;
       if (defaultVariantIndex >= 3) {
         num5 = 4;
       }
-      obj.zIndex = num5;
-      tmp7Result = closure_4(VariantOverflowOption, obj);
+      obj4.zIndex = num5;
+      tmp7Result = closure_4(VariantOverflowOption, obj4);
     }
     items[1] = tmp7Result;
-    obj.children = items;
-    return closure_5(View, obj);
+    obj3.children = items;
+    return closure_5(View, obj3);
   } else {
     return null;
   }

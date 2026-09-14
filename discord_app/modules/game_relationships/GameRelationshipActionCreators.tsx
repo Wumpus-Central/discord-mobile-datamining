@@ -37,8 +37,8 @@ let closure_8 = async function _deleteGameRelationship(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -51,8 +51,8 @@ let closure_8 = async function _deleteGameRelationship(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c6 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           closure_2 = tmp3;
           closure_1 = tmp5;
@@ -70,20 +70,20 @@ let closure_8 = async function _deleteGameRelationship(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c6 = 3;
-          const obj1 = { value, done: true };
-          return obj1;
+          const obj4 = { value, done: true };
+          return obj4;
         } else {
           c4 = 1;
           const HTTP = closure_130_0(closure_130_2[5]).HTTP;
-          const obj2 = {
+          const obj5 = {
             url: closure_130_4.USER_GAME_RELATIONSHIP(closure_129_0, closure_129_1),
             oldFormErrors: true,
             rejectWithError: false,
           };
           c5 = 3;
           c6 = 1;
-          const obj3 = { value: HTTP.del(obj2), done: false };
-          return obj3;
+          const obj6 = { value: HTTP.del(obj5), done: false };
+          return obj6;
         }
       } else {
         if (2 === tmp8) {
@@ -99,7 +99,7 @@ let closure_8 = async function _deleteGameRelationship(arg0) {
         }
         c4 = 0;
         c6 = 3;
-        obj = { value, done: true };
+        const obj = { value, done: true };
         return obj;
       }
     } catch (tmp25) {
@@ -162,7 +162,7 @@ export default {
   acceptGameFriendRequest(arg0) {
     function onSuccess() {}
     ({ userId, applicationId } = arg0);
-    const HTTP = onSuccess(1272).HTTP;
+    const HTTP = onSuccess(1270).HTTP;
     const request = {
       url: closure_4.USER_GAME_RELATIONSHIP(userId, applicationId),
       body: { type: constants.FRIEND },

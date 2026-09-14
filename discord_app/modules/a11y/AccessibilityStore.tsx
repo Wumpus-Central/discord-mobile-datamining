@@ -98,8 +98,8 @@ const MessageConstants = fn(4629);
   DEFAULT_COZY_SPACING: closure_12,
 } = MessageConstants);
 let obj = { DEFAULT: "default", HIGH: "high" };
-obj = { FLEXIBLE: "flexible", CONDENSED: "condensed", HIDDEN: "hidden" };
-obj = {
+let obj2 = { FLEXIBLE: "flexible", CONDENSED: "condensed", HIDDEN: "hidden" };
+let obj3 = {
   fontSize: Accessibility.FONT_SIZE_DEFAULT,
   zoom: Accessibility.ZOOM_DEFAULT,
   keyboardModeEnabled: false,
@@ -128,7 +128,7 @@ obj = {
   enableCustomCursor: true,
   switchIconsEnabled: false,
   appsButtonEnabled: true,
-  expressionPickerFormat: obj.FLEXIBLE,
+  expressionPickerFormat: obj2.FLEXIBLE,
   condensePickerWhenNarrow: true,
   emojiButtonEnabled: true,
   gifButtonEnabled: true,
@@ -136,6 +136,7 @@ obj = {
   youBarNameplateAnimation: "animate-never",
   youBarAvatarDecoAnimation: "animate-never",
 };
+obj = obj3;
 let closure_17 = {
   12: "font-size-12",
   14: "font-size-14",
@@ -153,7 +154,7 @@ prototype["initialize"] = function initialize(arg0) {
   let tmp = arg0;
   this.waitFor(UserSettingsProtoStore);
   obj = {};
-  const merged = Object.assign(obj);
+  const merged = Object.assign(obj3);
   if (arg0 == null) {
     tmp = null;
   }
@@ -604,7 +605,7 @@ let items = [
     obj = {};
     const merged = Object.assign(arg0);
     obj.appsButtonEnabled = true;
-    obj.expressionPickerFormat = obj.FLEXIBLE;
+    obj.expressionPickerFormat = obj2.FLEXIBLE;
     obj.condensePickerWhenNarrow = true;
     obj.emojiButtonEnabled = true;
     obj.gifButtonEnabled = true;
@@ -824,38 +825,38 @@ const accessibilityStore = new AccessibilityStore(DispatcherDefault, {
     const merged = Object.assign(obj);
     let tmp2 = null != appsButtonEnabled.appsButtonEnabled;
     if (tmp2) {
-      obj = { appsButtonEnabled: appsButtonEnabled.appsButtonEnabled };
-      tmp2 = obj;
+      obj2 = { appsButtonEnabled: appsButtonEnabled.appsButtonEnabled };
+      tmp2 = obj2;
     }
     const merged1 = Object.assign(tmp2);
     let tmp4 = null != appsButtonEnabled.expressionPickerFormat;
     if (tmp4) {
-      obj = { expressionPickerFormat: appsButtonEnabled.expressionPickerFormat };
-      tmp4 = obj;
+      obj3 = { expressionPickerFormat: appsButtonEnabled.expressionPickerFormat };
+      tmp4 = obj3;
     }
     const merged2 = Object.assign(tmp4);
     let tmp6 = null != appsButtonEnabled.condensePickerWhenNarrow;
     if (tmp6) {
-      const obj1 = { condensePickerWhenNarrow: appsButtonEnabled.condensePickerWhenNarrow };
-      tmp6 = obj1;
+      const obj4 = { condensePickerWhenNarrow: appsButtonEnabled.condensePickerWhenNarrow };
+      tmp6 = obj4;
     }
     const merged3 = Object.assign(tmp6);
     let tmp8 = null != appsButtonEnabled.emojiButtonEnabled;
     if (tmp8) {
-      const obj2 = { emojiButtonEnabled: appsButtonEnabled.emojiButtonEnabled };
-      tmp8 = obj2;
+      const obj5 = { emojiButtonEnabled: appsButtonEnabled.emojiButtonEnabled };
+      tmp8 = obj5;
     }
     const merged4 = Object.assign(tmp8);
     let tmp10 = null != appsButtonEnabled.gifButtonEnabled;
     if (tmp10) {
-      const obj3 = { gifButtonEnabled: appsButtonEnabled.gifButtonEnabled };
-      tmp10 = obj3;
+      const obj6 = { gifButtonEnabled: appsButtonEnabled.gifButtonEnabled };
+      tmp10 = obj6;
     }
     const merged5 = Object.assign(tmp10);
     let tmp12 = null != appsButtonEnabled.stickerButtonEnabled;
     if (tmp12) {
-      const obj4 = { stickerButtonEnabled: appsButtonEnabled.stickerButtonEnabled };
-      tmp12 = obj4;
+      const obj7 = { stickerButtonEnabled: appsButtonEnabled.stickerButtonEnabled };
+      tmp12 = obj7;
     }
     const merged6 = Object.assign(tmp12);
   },
@@ -891,4 +892,4 @@ const result = size.fileFinishedImporting("modules/a11y/AccessibilityStore.tsx")
 
 export default accessibilityStore;
 export const AccessibilityContrastMode = obj;
-export const ExpressionPickerFormat = obj;
+export const ExpressionPickerFormat = obj2;

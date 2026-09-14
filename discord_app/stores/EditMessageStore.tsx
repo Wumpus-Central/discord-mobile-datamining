@@ -66,14 +66,13 @@ const editMessageStore = new EditMessageStore(DispatcherDefault, {
     ({ messageId, source } = arg0);
     const UseLegacyChatInput = UserSettings.UseLegacyChatInput;
     const setting = UseLegacyChatInput.getSetting();
-    let obj = MessageParserDefault;
-    const unparseResult = obj.unparse(content, channelId);
-    obj = { channelId, messageId, textValue: unparseResult, richValue: null };
+    const unparseResult = MessageParserDefault.unparse(content, channelId);
+    const obj2 = { channelId, messageId, textValue: unparseResult, richValue: null };
     if (setting) {
       content = unparseResult;
     }
-    obj.richValue = SlateUtils.toRichValue(content);
-    closure_4[channelId] = obj;
+    obj2.richValue = SlateUtils.toRichValue(content);
+    closure_4[channelId] = obj2;
     closure_5[channelId] = source;
   },
   MESSAGE_UPDATE_EDIT: function handleMessageUpdateEdit(channelId) {

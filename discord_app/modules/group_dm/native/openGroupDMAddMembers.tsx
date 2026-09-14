@@ -22,7 +22,7 @@ function getGroupDMAddMembersAction(id, CHANNEL_TEXT_AREA) {
       if (num == null) {
         num = 0;
       }
-      let obj = {
+      const obj = {
         memberCount: num + 1,
         recipientLimit: getGroupDMRecipientLimitDefault({ useNitroCapExperiment: true }),
         audience: null,
@@ -42,8 +42,8 @@ function getGroupDMAddMembersAction(id, CHANNEL_TEXT_AREA) {
       }
       obj.audience = GroupDMNitroUpsellModel.getGroupDMNitroAudience(premiumType, flag);
       const tmp2Result = GroupDMNitroUpsellModel;
-      obj = { location: CHANNEL_TEXT_AREA };
-      obj.showUpsell = GroupDMNitroCapExperimentDefault.getConfig(obj).enabled;
+      const obj2 = { location: CHANNEL_TEXT_AREA };
+      obj.showUpsell = GroupDMNitroCapExperimentDefault.getConfig(obj2).enabled;
       return obj3.getGroupDMAddMembersEntryAction(obj);
     }
   }

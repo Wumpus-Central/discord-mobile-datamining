@@ -95,8 +95,8 @@ let closure_15 = async function _isEligibleForBOGOPromotion() {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -109,8 +109,8 @@ let closure_15 = async function _isEligibleForBOGOPromotion() {
           throw value;
         } else if (arg0 === 2) {
           c4 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj7 = { value, done: true };
+          return obj7;
         } else {
           closure_2 = tmp5;
           closure_1 = tmp2;
@@ -138,28 +138,30 @@ let closure_15 = async function _isEligibleForBOGOPromotion() {
             throw value;
           } else if (arg0 === 2) {
             c4 = 3;
-            const obj1 = { value, done: true };
-            return obj1;
+            const obj9 = { value, done: true };
+            return obj9;
           } else {
             currentUser2 = closure_130_4.getCurrentUser();
             let isClaimedResult;
             if (currentUser2 != null) {
-              isClaimedResult = currentUser2.isClaimed();
+              isClaimedResult = obj17.isClaimed();
             }
             closure_129_2 = !isClaimedResult;
-            let obj2 = closure_130_0(closure_130_2[12]);
-            isPaymentsBlocked = obj2.getIsPaymentsBlocked();
-            let obj3 = closure_130_0(closure_130_2[14]);
-            bogoPromotionGateEnabled = obj3.getBogoPromotionGateEnabled("bogo eligibility async check");
-            let obj4 = closure_130_0(closure_130_2[19]);
-            bogoMarketingMaterialsEnabled = obj4.getBogoMarketingMaterialsEnabled(
+            isPaymentsBlocked = closure_130_0(closure_130_2[12]).getIsPaymentsBlocked();
+            obj17 = currentUser2;
+            const obj3 = closure_130_0(closure_130_2[12]);
+            bogoPromotionGateEnabled = closure_130_0(closure_130_2[14]).getBogoPromotionGateEnabled(
+              "bogo eligibility async check",
+            );
+            const obj4 = closure_130_0(closure_130_2[14]);
+            bogoMarketingMaterialsEnabled = closure_130_0(closure_130_2[19]).getBogoMarketingMaterialsEnabled(
               "bogo marketing eligibility async check",
             );
             const isMobile = closure_130_0(closure_130_2[11]).isMobile;
             let isAndroidResult = !isMobile;
             if (isMobile) {
-              let obj5 = closure_130_0(closure_130_2[10]);
-              isAndroidResult = obj5.isAndroid();
+              isAndroidResult = closure_130_0(closure_130_2[10]).isAndroid();
+              const obj6 = closure_130_0(closure_130_2[10]);
             }
             closure_129_6 = isAndroidResult;
             if (!closure_129_2) {
@@ -184,8 +186,11 @@ let closure_15 = async function _isEligibleForBOGOPromotion() {
                       if (tmp37) {
                         c3 = 2;
                         c4 = 1;
-                        obj2 = { value: closure_130_0(closure_130_2[20]).fetchMostRecentSubscription(), done: false };
-                        return obj2;
+                        const obj10 = {
+                          value: closure_130_0(closure_130_2[20]).fetchMostRecentSubscription(),
+                          done: false,
+                        };
+                        return obj10;
                       }
                     }
                   }
@@ -202,33 +207,33 @@ let closure_15 = async function _isEligibleForBOGOPromotion() {
               throw value;
             } else if (arg0 === 2) {
               c4 = 3;
-              obj3 = { value, done: true };
-              return obj3;
+              const obj11 = { value, done: true };
+              return obj11;
             }
           } else if (arg0 === 1) {
             c4 = 3;
             throw value;
           } else if (arg0 === 2) {
             c4 = 3;
-            obj = { value, done: true };
+            const obj = { value, done: true };
             return obj;
           }
           mostRecentPremiumTypeSubscription = closure_130_5.getMostRecentPremiumTypeSubscription();
-          obj4 = {
+          const obj13 = {
             experimentEnabled: bogoPromotionGateEnabled,
             premiumSubscription: closure_130_5.getPremiumTypeSubscription(),
             mostRecentSubscription: mostRecentPremiumTypeSubscription,
             previousPremiumSubscription: closure_130_5.getPreviousPremiumTypeSubscription(),
           };
           c4 = 3;
-          obj5 = { value: closure_130_13(obj4), done: true };
-          return obj5;
+          const obj14 = { value: closure_130_13(obj13), done: true };
+          return obj14;
         }
         if (!closure_130_5.hasFetchedSubscriptions()) {
           c3 = 3;
           c4 = 1;
-          const obj6 = { value: closure_130_0(closure_130_2[20]).fetchSubscriptions(), done: false };
-          return obj6;
+          const obj15 = { value: closure_130_0(closure_130_2[20]).fetchSubscriptions(), done: false };
+          return obj15;
         }
       }
     } catch (tmp59) {
@@ -245,8 +250,8 @@ let closure_16 = async function _maybeFetchActiveBogoPromotion() {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -259,16 +264,16 @@ let closure_16 = async function _maybeFetchActiveBogoPromotion() {
           throw value;
         } else if (arg0 === 2) {
           c3 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj4 = { value, done: true };
+          return obj4;
         } else {
           closure_1 = tmp5;
           closure_0 = tmp2;
           let bogoPromotion;
           c2 = 1;
           c3 = 1;
-          const obj1 = { value: isEligibleForBOGOPromotion(false), done: false };
-          return obj1;
+          const obj5 = { value: isEligibleForBOGOPromotion(false), done: false };
+          return obj5;
         }
       } else {
         if (1 === tmp5) {
@@ -277,8 +282,8 @@ let closure_16 = async function _maybeFetchActiveBogoPromotion() {
             throw value;
           } else if (arg0 === 2) {
             c3 = 3;
-            let obj2 = { value, done: true };
-            return obj2;
+            const obj6 = { value, done: true };
+            return obj6;
           } else if (value) {
             bogoPromotion = closure_129_8.bogoPromotion;
             if (null != bogoPromotion) {
@@ -291,18 +296,17 @@ let closure_16 = async function _maybeFetchActiveBogoPromotion() {
               }
               valueOfResult = date.valueOf();
             }
-            obj2 = closure_129_0(closure_129_2[21]);
             c2 = 2;
             c3 = 1;
-            const obj3 = { value: obj2.fetchActiveBogoPromotion(), done: false };
-            return obj3;
+            const obj7 = { value: closure_129_0(closure_129_2[21]).fetchActiveBogoPromotion(), done: false };
+            return obj7;
           }
         } else if (arg0 === 1) {
           c3 = 3;
           throw value;
         } else if (arg0 === 2) {
           c3 = 3;
-          obj = { value, done: true };
+          const obj = { value, done: true };
           return obj;
         }
         c3 = 3;
@@ -357,11 +361,18 @@ export const useIsEligibleForBogoPromotion = function useIsEligibleForBogoPromot
   const isMobile = shared_PlatformUtils.isMobile;
   let isAndroidResult = !isMobile;
   if (isMobile) {
-    let tmpResult = PlatformUtils;
-    isAndroidResult = tmpResult.isAndroid();
+    isAndroidResult = PlatformUtils.isAndroid();
+    const tmpResult = PlatformUtils;
   }
-  tmpResult = BOGOPromotionMarketingMaterialsExperiments;
-  let bogoMarketingMaterialsEnabled = tmpResult.useBogoMarketingMaterialsEnabled("bogo marketing eligibility hook");
+  const tmp14 = isUserEligibleBasedOnCurrentOrPreviousSubs({
+    experimentEnabled: bogoPromotionGateEnabled,
+    premiumSubscription,
+    mostRecentSubscription,
+    previousPremiumSubscription,
+  });
+  let bogoMarketingMaterialsEnabled = BOGOPromotionMarketingMaterialsExperiments.useBogoMarketingMaterialsEnabled(
+    "bogo marketing eligibility hook",
+  );
   let tmp16 = !tmp10;
   if (timestamp <= valueOfResult) {
     if (!flag) {

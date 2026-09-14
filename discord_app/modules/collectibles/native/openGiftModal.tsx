@@ -9,8 +9,12 @@ const result = size.fileFinishedImporting("modules/collectibles/native/openGiftM
 export const ShopGiftModalKey = "Shop Gift Modal";
 export const openShopGiftModal = function openShopGiftModal(items1) {
   ({ navigationParams, skuId, analyticsLocations, lockedRecipientUser, onGiftModalDismiss, giftingOrigin } = items1);
-  const obj = { skuId, analyticsLocations, lockedRecipientUser, onGiftModalDismiss, giftingOrigin };
-  obj.pushLazy(asyncRequireImpl(11142, dependencyMap.paths), obj, c3, navigationParams);
+  ModalActionCreatorsDefault.pushLazy(
+    asyncRequireImpl(11143, dependencyMap.paths),
+    { skuId, analyticsLocations, lockedRecipientUser, onGiftModalDismiss, giftingOrigin },
+    c3,
+    navigationParams,
+  );
 };
 export const closeShopGiftModal = function closeShopGiftModal() {
   ModalActionCreatorsDefault.popWithKey(c3);

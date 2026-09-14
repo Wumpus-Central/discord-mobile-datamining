@@ -15,9 +15,7 @@ require = fn;
 const jsx = fn(21).jsx;
 const createStyles = fn(4636);
 let closure_5 = createStyles.createStyles(() => {
-  let obj = { placeholder: null };
-  obj = { backgroundColor: nativeDefault.colors.BORDER_SUBTLE };
-  obj.placeholder = obj;
+  const obj = { placeholder: { backgroundColor: nativeDefault.colors.BORDER_SUBTLE } };
   return obj;
 });
 const size = fn(2);
@@ -70,14 +68,14 @@ export default noop.memo(
     const items1 = [listTop, listLeft, scrollPosition];
     const callback = listLeft.useCallback((arg0, row) => {
       if (useMessagesData.MessagesDataSections.FavoriteChannels === arg0) {
-        let obj = { channelId: channelFavorites[row].channelId, placeholderHeight: listItemHeight, row };
+        const obj2 = { channelId: channelFavorites[row].channelId, placeholderHeight: listItemHeight, row };
         return jsx(MessagesItemChannel.MessagesItemChannelFast, {
           channelId: channelFavorites[row].channelId,
           placeholderHeight: listItemHeight,
           row,
         });
       } else if (useMessagesData.MessagesDataSections.Channels === arg0) {
-        obj = { channelId: channels[row].channelId, placeholderHeight: listItemHeight, row };
+        const obj3 = { channelId: channels[row].channelId, placeholderHeight: listItemHeight, row };
         return jsx(MessagesItemChannel.MessagesItemChannelFast, {
           channelId: channels[row].channelId,
           placeholderHeight: listItemHeight,
@@ -86,14 +84,14 @@ export default noop.memo(
       } else if (useMessagesData.MessagesDataSections.Separator === arg0) {
         return jsx(MessagesItemSeparatorDefault, {});
       } else if (useMessagesData.MessagesDataSections.SuggestedFriends === arg0) {
-        const obj1 = { suggestedFriend: friendSuggestions[row], onAddFriendSuggestions: setAddedFriendSuggestions };
-        const obj2 = { height: listItemSuggestedFriendHeight };
-        const merged = Object.assign(obj1);
+        const obj4 = { suggestedFriend: friendSuggestions[row], onAddFriendSuggestions: setAddedFriendSuggestions };
+        const obj5 = { height: listItemSuggestedFriendHeight };
+        const merged = Object.assign(obj4);
         return jsx(MessagesItemSuggestedFriend.MessagesItemSuggestedFriendFast, {
           height: listItemSuggestedFriendHeight,
         });
       } else if (useMessagesData.MessagesDataSections.Placeholders === arg0) {
-        obj = { row, height: listItemHeight };
+        const obj = { row, height: listItemHeight };
         return jsx(MessagesItemPlaceholderDefault, { row, height: listItemHeight });
       } else {
         const _Error = Error;
@@ -203,8 +201,18 @@ export default noop.memo(
       }
     }, items5);
     const memo3 = listLeft.useMemo(() => {
-      let obj = { listHeader: null, sectionItem: null };
-      obj = {
+      const obj = {
+        listHeader: {
+          type: FastestListPropsPlaceholder.FastestListPropsPlaceholderType.SHAPE,
+          colorHex: closure_7.placeholder.backgroundColor,
+          shape: "rect",
+          borderRadius: nativeDefault.radii.lg,
+          paddingHorizontal: nativeDefault.space.PX_8,
+          paddingVertical: nativeDefault.space.PX_4,
+        },
+        sectionItem: null,
+      };
+      const obj2 = {
         type: FastestListPropsPlaceholder.FastestListPropsPlaceholderType.SHAPE,
         colorHex: closure_7.placeholder.backgroundColor,
         shape: "rect",
@@ -212,8 +220,7 @@ export default noop.memo(
         paddingHorizontal: nativeDefault.space.PX_8,
         paddingVertical: nativeDefault.space.PX_4,
       };
-      obj.listHeader = obj;
-      obj = {
+      obj.sectionItem = {
         type: FastestListPropsPlaceholder.FastestListPropsPlaceholderType.FEED_ITEM,
         colorHex: closure_7.placeholder.backgroundColor,
         labelPadding: nativeDefault.space.PX_4,
@@ -223,7 +230,6 @@ export default noop.memo(
         shape: "circle",
         shapeSize: listItemSizes.avatar,
       };
-      obj.sectionItem = obj;
       return obj;
     }, items6);
     return listRefHappeningNow(listItemSizes(listItemSuggestedFriendHeight[15]), {

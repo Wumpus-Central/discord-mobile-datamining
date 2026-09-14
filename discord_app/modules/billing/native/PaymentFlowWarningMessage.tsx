@@ -8,31 +8,32 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-fn(4636);
-let createStyles = { container: null, icon: null, text: null };
-createStyles = {
-  padding: 10,
-  marginVertical: 5,
-  borderRadius: nativeDefault.radii.xs,
-  display: "flex",
-  flexDirection: "row",
-  alignItems: "center",
-  backgroundColor: fn(5522).DARK_PRIMARY_630_LIGHT_PRIMARY_230,
+const createStyles = fn(4636);
+const obj2 = {
+  container: {
+    padding: 10,
+    marginVertical: 5,
+    borderRadius: nativeDefault.radii.xs,
+    display: "flex",
+    flexDirection: "row",
+    alignItems: "center",
+    backgroundColor: fn(5522).DARK_PRIMARY_630_LIGHT_PRIMARY_230,
+  },
+  icon: { marginRight: 10 },
+  text: { flexShrink: 1 },
 };
-createStyles.container = createStyles;
-createStyles.icon = { marginRight: 10 };
-createStyles.text = { flexShrink: 1 };
-let closure_6 = createStyles.createStyles(createStyles);
+let closure_6 = createStyles.createStyles(obj2);
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/billing/native/PaymentFlowWarningMessage.tsx");
 
 export default function PaymentFlowWarningMessage(children) {
   const tmp = closure_6();
-  let obj = { style: tmp.container, children: null };
+  const obj = { style: tmp.container, children: null };
   const size = { style: tmp.icon, color: nativeDefault.unsafe_rawColors.YELLOW_300, width: 16, height: 16 };
-  const items = [React4(native.WarningCircle, size)];
-  obj = { variant: "text-sm/medium", style: tmp.text, children: children.message };
-  items[1] = React4(Text_Text.Text, obj);
+  const items = [
+    React4(native.WarningCircle, size),
+    React4(Text_Text.Text, { variant: "text-sm/medium", style: tmp.text, children: children.message }),
+  ];
   obj.children = items;
   return hasOwnProperty(View, obj);
 }

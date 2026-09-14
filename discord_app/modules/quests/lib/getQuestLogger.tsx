@@ -6,9 +6,9 @@ const NOOP = fn(1085).NOOP;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/quests/lib/getQuestLogger.tsx");
 
-export const getQuestLogger = function getQuestLogger() {
-  let obj = getQuestLogger;
-  if (getQuestLogger === undefined) {
+export const getQuestLogger = function getQuestLogger(arg0) {
+  let obj = arg0;
+  if (arg0 === undefined) {
     obj = {};
   }
   ({ quest, location: _location } = obj);
@@ -27,15 +27,13 @@ export const getQuestLogger = function getQuestLogger() {
     const _HermesInternal2 = HermesInternal;
     str = "-" + questName + ")";
   }
-  let tmp4 = LoggerDefault;
-  tmp4 = new tmp4("QuestLogger" + str2 + str);
-  obj = {
-    log: isLoggingQuestEvents ? tmp4.log : NOOP,
-    warn: isLoggingQuestEvents ? tmp4.warn : NOOP,
-    error: isLoggingQuestEvents ? tmp4.error : NOOP,
-    info: isLoggingQuestEvents ? tmp4.info : NOOP,
-    verbose: isLoggingQuestEvents ? tmp4.verbose : NOOP,
-    trace: isLoggingQuestEvents ? tmp4.trace : NOOP,
+  const tmp42 = new LoggerDefault("QuestLogger" + str2 + str);
+  return {
+    log: isLoggingQuestEvents ? tmp42.log : NOOP,
+    warn: isLoggingQuestEvents ? tmp42.warn : NOOP,
+    error: isLoggingQuestEvents ? tmp42.error : NOOP,
+    info: isLoggingQuestEvents ? tmp42.info : NOOP,
+    verbose: isLoggingQuestEvents ? tmp42.verbose : NOOP,
+    trace: isLoggingQuestEvents ? tmp42.trace : NOOP,
   };
-  return obj;
 };

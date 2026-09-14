@@ -10,21 +10,20 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-fn(4636);
-let createStyles = {
+const createStyles = fn(4636);
+let obj2 = {
   container: { position: "relative", overflow: "hidden" },
   content: { pointerEvents: "none", userSelect: "none" },
-  cover: null,
+  cover: { position: "absolute", inset: 0, zIndex: 1, backgroundColor: nativeDefault.colors.SPOILER_HIDDEN_BACKGROUND },
   warning: null,
 };
-createStyles = {
+let obj3 = {
   position: "absolute",
   inset: 0,
   zIndex: 1,
   backgroundColor: nativeDefault.colors.SPOILER_HIDDEN_BACKGROUND,
 };
-createStyles.cover = createStyles;
-createStyles.warning = {
+obj2.warning = {
   position: "absolute",
   insetInlineStart: "50%",
   top: "50%",
@@ -39,7 +38,7 @@ createStyles.warning = {
   userSelect: "none",
   zIndex: 2,
 };
-let closure_6 = createStyles.createStyles(createStyles);
+let closure_6 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/safety_common/native/ObscuredSurface.tsx");
 
@@ -48,9 +47,9 @@ export default function ObscuredSurface(obscured) {
   const tmp = closure_6();
   let tmp3Result = children;
   if (obscured.obscured) {
-    let obj = { value: ObscuredSurfaceContext.OBSCURED_VALUE, children: null };
-    obj = { style: tmp.container, children: null };
-    obj = {
+    const obj = { value: ObscuredSurfaceContext.OBSCURED_VALUE, children: null };
+    const obj2 = { style: tmp.container, children: null };
+    const obj3 = {
       style: tmp.content,
       accessibilityElementsHidden: true,
       importantForAccessibility: "no-hide-descendants",
@@ -58,28 +57,28 @@ export default function ObscuredSurface(obscured) {
       "aria-hidden": true,
       children,
     };
-    const items = [React4(View, obj), ,];
-    const obj1 = { style: tmp.cover };
-    items[1] = React4(View, obj1);
-    const obj2 = { style: tmp.warning, children: null };
-    const obj3 = { size: "lg", color: nativeDefault.colors.TEXT_DEFAULT };
-    const items1 = [React4(ImageWarningIcon.ImageWarningIcon, obj3), ,];
+    const items = [React4(View, obj3), ,];
+    const obj4 = { style: tmp.cover };
+    items[1] = React4(View, obj4);
+    const obj5 = { style: tmp.warning, children: null };
+    const obj6 = { size: "lg", color: nativeDefault.colors.TEXT_DEFAULT };
+    const items1 = [React4(ImageWarningIcon.ImageWarningIcon, obj6), ,];
     if (heading == null) {
       const intl = util.intl;
       heading = intl.string(util.t.xC8Saf);
     }
-    const obj4 = { variant: "heading-md/semibold", color: "text-strong", children: heading };
-    items1[1] = React4(Text_Text.Text, obj4);
+    const obj7 = { variant: "heading-md/semibold", color: "text-strong", children: heading };
+    items1[1] = React4(Text_Text.Text, obj7);
     if (description == null) {
       const intl2 = util.intl;
       description = intl2.string(util.t["0fc/DG"]);
     }
-    const obj5 = { variant: "text-sm/normal", color: "text-muted", children: description };
-    items1[2] = React4(Text_Text.Text, obj5);
-    obj2.children = items1;
-    items[2] = hasOwnProperty(View, obj2);
-    obj.children = items;
-    obj.children = hasOwnProperty(View, obj);
+    const obj8 = { variant: "text-sm/normal", color: "text-muted", children: description };
+    items1[2] = React4(Text_Text.Text, obj8);
+    obj5.children = items1;
+    items[2] = hasOwnProperty(View, obj5);
+    obj2.children = items;
+    obj.children = hasOwnProperty(View, obj2);
     tmp3Result = React4(ObscuredSurfaceContext.ObscuredSurfaceContext.Provider, obj);
   }
   return tmp3Result;

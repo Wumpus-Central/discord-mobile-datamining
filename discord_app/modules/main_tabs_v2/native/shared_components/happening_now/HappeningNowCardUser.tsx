@@ -7,10 +7,10 @@ import UserStore from "../../../../../stores/UserStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-let closure_7 = fn(15379).HappeningNowCardTrackingType;
+let closure_7 = fn(15380).HappeningNowCardTrackingType;
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const jsx = fn(21).jsx;
-const LARGE = fn(1178).AvatarSizes.LARGE;
+const LARGE = fn(1176).AvatarSizes.LARGE;
 const createStyles = fn(4636);
 let closure_11 = createStyles.createStyles({ content: { flex: 1, display: "flex", alignItems: "center" } });
 const size = fn(2);
@@ -28,16 +28,16 @@ export default noop.memo((index) => {
   }
   let status;
   const analyticsLocations = userId(guildId[9])().analyticsLocations;
-  let obj = index(guildId[10]);
+  const tmp = closure_11();
   let items = [UserStore];
   const items1 = [userId];
-  const stateFromStores = obj.useStateFromStores(items, () => UserStore.getUser(userId), items1);
+  const stateFromStores = index(guildId[10]).useStateFromStores(items, () => UserStore.getUser(userId), items1);
   const items2 = [index, guildId, userId, stateFromStores, analyticsLocations];
   const callback = analyticsLocations.useCallback(() => {
-    const obj = { order: index, guild_id: guildId, type: constants.INDIVIDUAL_USER_CARD, highlighted_user_ids: null };
+    const obj2 = { order: index, guild_id: guildId, type: constants.INDIVIDUAL_USER_CARD, highlighted_user_ids: null };
     const items = [userId];
-    obj.highlighted_user_ids = items;
-    obj.track(AnalyticEvents.ACTIVITY_CARD_CLICKED, obj);
+    obj2.highlighted_user_ids = items;
+    AnalyticsUtilsDefault.track(AnalyticEvents.ACTIVITY_CARD_CLICKED, obj2);
     if (null != stateFromStores) {
       asyncRequireImpl(8296, dependencyMap.paths).then((result) =>
         result.default({ userId: localUser.id, localUser, sourceAnalyticsLocations }),
@@ -45,10 +45,10 @@ export default noop.memo((index) => {
       const promise = asyncRequireImpl(8296, dependencyMap.paths);
     }
   }, items2);
-  let obj1 = index(guildId[10]);
+  let obj = index(guildId[10]);
   const items3 = [status];
   const items4 = [guildId, stateFromStores];
-  const stateFromStoresObject = obj1.useStateFromStoresObject(
+  const stateFromStoresObject = index(guildId[10]).useStateFromStoresObject(
     items3,
     () => {
       if (null == stateFromStores) {
@@ -71,20 +71,21 @@ export default noop.memo((index) => {
   if (null == stateFromStores) {
     return null;
   } else {
-    let tmp2Result = tmp2(tmp3[14]);
-    const items6 = [tmp2Result.getName(stateFromStores), tmp4(tmp3[15]).getStatusLabel(status)];
+    const items6 = [tmp2(tmp3[14]).getName(stateFromStores)];
+    const tmp2Result = tmp2(tmp3[14]);
+    items6[1] = tmp4(tmp3[15]).getStatusLabel(status);
     const joined = items6.join(", ");
-    obj = { onPress: callback, width: null, panelVariant: null, accessibilityLabel: null, children: null };
+    const obj3 = { onPress: callback, width: null, panelVariant: null, accessibilityLabel: null, children: null };
     let str = "small";
-    tmp2Result = tmp2(tmp3[16]);
+    const tmp4Result = tmp4(tmp3[15]);
     if (index.fullwidth) {
       str = "full";
     }
-    obj.width = str;
-    obj.panelVariant = flag;
-    obj.accessibilityLabel = joined;
-    obj = { style: tmp.content, children: null };
-    obj1 = {
+    obj3.width = str;
+    obj3.panelVariant = flag;
+    obj3.accessibilityLabel = joined;
+    const obj4 = { style: tmp.content, children: null };
+    const obj5 = {
       user: stateFromStores,
       avatarDecoration: stateFromStores.avatarDecoration,
       guildId,
@@ -95,7 +96,7 @@ export default noop.memo((index) => {
       status: tmp8,
       autoStatusCutout: true,
     };
-    obj.children = jsx(tmp4(tmp3[7]).Avatar, {
+    obj4.children = jsx(tmp4(tmp3[7]).Avatar, {
       user: stateFromStores,
       avatarDecoration: stateFromStores.avatarDecoration,
       guildId,
@@ -106,8 +107,14 @@ export default noop.memo((index) => {
       status: tmp8,
       autoStatusCutout: true,
     });
-    obj.children = <stateFromStores style={tmp.content}>{null}</stateFromStores>;
-    return <tmp2Result style={tmp.content}>{null}</tmp2Result>;
+    obj3.children = <stateFromStores style={tmp.content}>{null}</stateFromStores>;
+    return jsx(tmp2(tmp3[16]), {
+      onPress: callback,
+      width: null,
+      panelVariant: null,
+      accessibilityLabel: null,
+      children: null,
+    });
   }
-  tmp = closure_11();
+  let obj2 = index(guildId[10]);
 });

@@ -9,9 +9,9 @@ const AnalyticEvents = fn(1074).AnalyticEvents;
 const FamilyCenterAction = fn(7641).FamilyCenterAction;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-fn(4636);
-let createStyles = {
-  container: null,
+const createStyles = fn(4636);
+let obj2 = {
+  container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },
   centered: null,
   header: null,
   title: null,
@@ -21,51 +21,49 @@ let createStyles = {
   grow: null,
   footer: null,
 };
-createStyles = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
-createStyles.container = createStyles;
-createStyles.centered = {
+let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
+obj2.centered = {
   flex: 1,
   alignItems: "center",
   justifyContent: "center",
   paddingHorizontal: nativeDefault.space.PX_16,
 };
-let obj1 = { flex: 1, alignItems: "center", justifyContent: "center", paddingHorizontal: nativeDefault.space.PX_16 };
-createStyles.header = { marginBottom: nativeDefault.space.PX_40 };
-let obj2 = { marginBottom: nativeDefault.space.PX_40 };
-createStyles.title = {
+let obj4 = { flex: 1, alignItems: "center", justifyContent: "center", paddingHorizontal: nativeDefault.space.PX_16 };
+obj2.header = { marginBottom: nativeDefault.space.PX_40 };
+let obj5 = { marginBottom: nativeDefault.space.PX_40 };
+obj2.title = {
   paddingHorizontal: nativeDefault.space.PX_16,
   marginBottom: nativeDefault.space.PX_8,
   textAlign: "center",
 };
-let obj3 = {
+let obj6 = {
   paddingHorizontal: nativeDefault.space.PX_16,
   marginBottom: nativeDefault.space.PX_8,
   textAlign: "center",
 };
-createStyles.description = { paddingHorizontal: nativeDefault.space.PX_16, textAlign: "center" };
-createStyles.cardSection = { alignItems: "center" };
-let obj4 = { paddingHorizontal: nativeDefault.space.PX_16, textAlign: "center" };
-createStyles.scanPrompt = {
+obj2.description = { paddingHorizontal: nativeDefault.space.PX_16, textAlign: "center" };
+obj2.cardSection = { alignItems: "center" };
+let obj7 = { paddingHorizontal: nativeDefault.space.PX_16, textAlign: "center" };
+obj2.scanPrompt = {
   paddingHorizontal: nativeDefault.space.PX_16,
   marginBottom: nativeDefault.space.PX_24,
   textAlign: "center",
 };
-createStyles.grow = { flexGrow: 1 };
-let obj5 = {
+obj2.grow = { flexGrow: 1 };
+let obj8 = {
   paddingHorizontal: nativeDefault.space.PX_16,
   marginBottom: nativeDefault.space.PX_24,
   textAlign: "center",
 };
-createStyles.footer = { paddingHorizontal: nativeDefault.space.PX_16 };
-let closure_9 = createStyles.createStyles(createStyles);
+obj2.footer = { paddingHorizontal: nativeDefault.space.PX_16 };
+let closure_9 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/nuf/native/components/ConnectGuardianModal.tsx");
 
 export default function ConnectGuardianModal(route) {
   const onComplete = route.route.params.onComplete;
   const tmp = closure_9();
-  let obj = onComplete(17569);
-  const connectGuardianGate = obj.useConnectGuardianGate();
+  const connectGuardianGate = onComplete(17570).useConnectGuardianGate();
   dependencyMap = noop.useRef(false);
   const items = [connectGuardianGate.state, onComplete];
   const effect = noop.useEffect(() => {
@@ -75,69 +73,69 @@ export default function ConnectGuardianModal(route) {
     }
     if (!current) {
       ref.current = true;
-      const obj = { action: FamilyCenterAction.NufConsentGateLinkCodeError, source: "NUF Connect Guardian" };
-      obj.track(AnalyticEvents.FAMILY_CENTER_ACTION, obj);
+      const obj2 = { action: FamilyCenterAction.NufConsentGateLinkCodeError, source: "NUF Connect Guardian" };
+      AnalyticsUtilsDefault.track(AnalyticEvents.FAMILY_CENTER_ACTION, obj2);
       if (onComplete != null) {
         onComplete(true);
       }
     }
   }, items);
   if ("gate" !== connectGuardianGate.state) {
-    obj = { style: null, children: null };
+    let obj2 = { style: null, children: null };
     const items1 = [,];
     ({ container: arr2[0], centered: arr2[1] } = tmp);
-    obj.style = items1;
-    obj.children = closure_7(tmp4(5658).ActivityIndicator, {});
-    let tmp9 = closure_7(View, obj);
+    obj2.style = items1;
+    obj2.children = closure_7(tmp4(5658).ActivityIndicator, {});
+    let tmp9 = closure_7(View, obj2);
   } else {
-    obj = { style: tmp.container, children: null };
-    const obj1 = { style: tmp.header, children: null };
-    const obj2 = { style: tmp.title, variant: "heading-xl/bold", color: "text-default", children: null };
+    const obj3 = { style: tmp.container, children: null };
+    const obj4 = { style: tmp.header, children: null };
+    const obj5 = { style: tmp.title, variant: "heading-xl/bold", color: "text-default", children: null };
     const intl = tmp4(1114).intl;
-    obj2.children = intl.string(tmp2(2396).ITlV6p);
-    const items2 = [closure_7(tmp4(4632).Text, obj2)];
-    const obj3 = { style: tmp.description, variant: "text-sm/medium", color: "text-muted", children: null };
+    obj5.children = intl.string(tmp2(2396).ITlV6p);
+    const items2 = [closure_7(tmp4(4632).Text, obj5)];
+    const obj6 = { style: tmp.description, variant: "text-sm/medium", color: "text-muted", children: null };
     const intl2 = tmp4(1114).intl;
-    obj3.children = intl2.format(tmp2(2396).F4GT2S, { link: "https://support.discord.com/hc/articles/14155060633623" });
-    items2[1] = closure_7(tmp4(4632).Text, obj3);
-    obj1.children = items2;
-    const items3 = [closure_8(View, obj1), , ,];
-    const obj4 = { style: tmp.cardSection, children: null };
-    const obj5 = { style: tmp.scanPrompt, variant: "text-md/semibold", color: "text-default", children: null };
+    obj6.children = intl2.format(tmp2(2396).F4GT2S, { link: "https://support.discord.com/hc/articles/14155060633623" });
+    items2[1] = closure_7(tmp4(4632).Text, obj6);
+    obj4.children = items2;
+    const items3 = [closure_8(View, obj4), , ,];
+    const obj7 = { style: tmp.cardSection, children: null };
+    const obj8 = { style: tmp.scanPrompt, variant: "text-md/semibold", color: "text-default", children: null };
     const intl3 = tmp4(1114).intl;
-    obj5.children = intl3.string(tmp2(2396).Mi60fm);
-    const items4 = [closure_7(tmp4(4632).Text, obj5)];
+    obj8.children = intl3.string(tmp2(2396).Mi60fm);
+    const items4 = [closure_7(tmp4(4632).Text, obj8)];
     ({ linkCode: obj9.linkCode, expiresAt: obj9.expiresAt, refresh: obj9.onRefresh } = connectGuardianGate);
-    items4[1] = closure_7(tmp4(14970).ConnectGuardianCard, {
+    items4[1] = closure_7(tmp4(14971).ConnectGuardianCard, {
       shareActions: "compact",
       linkCode: null,
       expiresAt: null,
       onRefresh: null,
     });
-    obj4.children = items4;
-    items3[1] = closure_8(View, obj4);
-    const obj7 = { style: tmp.grow };
-    items3[2] = closure_7(View, obj7);
-    const obj8 = { style: null, children: null };
+    obj7.children = items4;
+    items3[1] = closure_8(View, obj7);
+    const obj11 = { style: tmp.grow };
+    items3[2] = closure_7(View, obj11);
+    const obj12 = { style: null, children: null };
     const items5 = [tmp.footer];
-    const obj9 = { paddingBottom: connectGuardianGate(1611)().bottom + tmp2(576).space.PX_16 };
-    items5[1] = obj9;
-    obj8.style = items5;
-    const obj10 = { variant: "primary", size: "lg", text: null, onPress: null };
+    const obj13 = { paddingBottom: connectGuardianGate(1611)().bottom + tmp2(576).space.PX_16 };
+    items5[1] = obj13;
+    obj12.style = items5;
+    const obj25 = { variant: "primary", size: "lg", text: null, onPress: null };
     const intl4 = tmp4(1114).intl;
-    obj10.text = intl4.string(tmp4(1114).t["3PatSz"]);
-    obj10.onPress = function onPress() {
+    obj25.text = intl4.string(tmp4(1114).t["3PatSz"]);
+    obj25.onPress = function onPress() {
       let tmpResult;
       if (onComplete != null) {
         tmpResult = tmp(false);
       }
       return tmpResult;
     };
-    obj8.children = closure_7(tmp4(5056).Button, obj10);
-    items3[3] = closure_7(View, obj8);
-    obj.children = items3;
-    tmp9 = closure_8(View, obj);
-    const obj6 = { shareActions: "compact", linkCode: null, expiresAt: null, onRefresh: null };
+    obj12.children = closure_7(tmp4(5056).Button, obj25);
+    items3[3] = closure_7(View, obj12);
+    obj3.children = items3;
+    tmp9 = closure_8(View, obj3);
+    const obj10 = { shareActions: "compact", linkCode: null, expiresAt: null, onRefresh: null };
   }
   return tmp9;
 }

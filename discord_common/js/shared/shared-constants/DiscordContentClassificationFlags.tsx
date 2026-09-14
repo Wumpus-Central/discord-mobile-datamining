@@ -1,7 +1,7 @@
 // discord_common/js/shared/shared-constants/DiscordContentClassificationFlags.tsx
-import BigFlagUtils from "../utils/BigFlagUtils.tsx";
+import BigFlagUtils_mod from "../utils/BigFlagUtils.tsx";
 
-let obj = {
+const obj = {
   EMERGENCY_ONLY_USE_IF_YOU_HAVE_TO_FORCE_MARK_AGE_RESTRICTED: null,
   SEXUALLY_SUGGESTIVE_IMAGERY: null,
   SEXUALLY_SUGGESTIVE_TEXT: null,
@@ -28,39 +28,65 @@ let obj = {
   TRAGEDY_SIMULATED_NATURAL_DISASTER: null,
   TRAGEDY_REAL_MILITARY_CONFLICT: null,
 };
+let BigFlagUtils = BigFlagUtils_mod;
 obj.EMERGENCY_ONLY_USE_IF_YOU_HAVE_TO_FORCE_MARK_AGE_RESTRICTED = BigFlagUtils.getBrandedFlag(0);
+let BigFlagUtils = BigFlagUtils_mod;
 obj.SEXUALLY_SUGGESTIVE_IMAGERY = BigFlagUtils.getBrandedFlag(1);
+let BigFlagUtils = BigFlagUtils_mod;
 obj.SEXUALLY_SUGGESTIVE_TEXT = BigFlagUtils.getBrandedFlag(2);
+let BigFlagUtils = BigFlagUtils_mod;
 obj.SEXUALLY_EXPLICIT_IMAGERY = BigFlagUtils.getBrandedFlag(3);
+let BigFlagUtils = BigFlagUtils_mod;
 obj.SEXUALLY_EXPLICIT_TEXT = BigFlagUtils.getBrandedFlag(4);
+let BigFlagUtils = BigFlagUtils_mod;
 obj.NUDITY = BigFlagUtils.getBrandedFlag(5);
+let BigFlagUtils = BigFlagUtils_mod;
 obj.DATING = BigFlagUtils.getBrandedFlag(6);
+let BigFlagUtils = BigFlagUtils_mod;
 obj.REGULATED_GOODS_USAGE = BigFlagUtils.getBrandedFlag(7);
+let BigFlagUtils = BigFlagUtils_mod;
 obj.REGULATED_GOODS_DEPICTION = BigFlagUtils.getBrandedFlag(8);
+let BigFlagUtils = BigFlagUtils_mod;
 obj.VIOLENCE_DOMESTIC_SIMULATED = BigFlagUtils.getBrandedFlag(9);
+let BigFlagUtils = BigFlagUtils_mod;
 obj.VIOLENCE_ANIMALS = BigFlagUtils.getBrandedFlag(10);
+let BigFlagUtils = BigFlagUtils_mod;
 obj.VIOLENCE_FANTASY = BigFlagUtils.getBrandedFlag(11);
+let BigFlagUtils = BigFlagUtils_mod;
 obj.VIOLENCE_GRAPHIC = BigFlagUtils.getBrandedFlag(12);
+let BigFlagUtils = BigFlagUtils_mod;
 obj.SELF_HARM_DEPICTION = BigFlagUtils.getBrandedFlag(13);
+let BigFlagUtils = BigFlagUtils_mod;
 obj.SELF_HARM_REFERENCE = BigFlagUtils.getBrandedFlag(14);
+let BigFlagUtils = BigFlagUtils_mod;
 obj.GAMBLING_REAL = BigFlagUtils.getBrandedFlag(15);
+let BigFlagUtils = BigFlagUtils_mod;
 obj.GAMBLING_SIMULATED = BigFlagUtils.getBrandedFlag(16);
+let BigFlagUtils = BigFlagUtils_mod;
 obj.PROFANITY_MILD = BigFlagUtils.getBrandedFlag(17);
+let BigFlagUtils = BigFlagUtils_mod;
 obj.PROFANITY_SEVERE = BigFlagUtils.getBrandedFlag(18);
+let BigFlagUtils = BigFlagUtils_mod;
 obj.SLURS = BigFlagUtils.getBrandedFlag(19);
+let BigFlagUtils = BigFlagUtils_mod;
 obj.DANGEROUS_PHYSICALLY_HARMFUL = BigFlagUtils.getBrandedFlag(20);
+let BigFlagUtils = BigFlagUtils_mod;
 obj.DANGEROUS_MENTALLY_HARMFUL = BigFlagUtils.getBrandedFlag(21);
+let BigFlagUtils = BigFlagUtils_mod;
 obj.TRAGEDY_SIMULATED_HISTORICAL = BigFlagUtils.getBrandedFlag(22);
+let BigFlagUtils = BigFlagUtils_mod;
 obj.TRAGEDY_SIMULATED_NATURAL_DISASTER = BigFlagUtils.getBrandedFlag(23);
+let BigFlagUtils = BigFlagUtils_mod;
 obj.TRAGEDY_REAL_MILITARY_CONFLICT = BigFlagUtils.getBrandedFlag(24);
 const frozen = Object.freeze(obj);
-obj = { RESTRICTED_TO_ADULT: null };
-obj.RESTRICTED_TO_ADULT = BigFlagUtils.combine(
+const obj2 = { RESTRICTED_TO_ADULT: null };
+let BigFlagUtils = BigFlagUtils_mod;
+obj2.RESTRICTED_TO_ADULT = BigFlagUtils.combine(
   frozen.EMERGENCY_ONLY_USE_IF_YOU_HAVE_TO_FORCE_MARK_AGE_RESTRICTED,
   frozen.SEXUALLY_EXPLICIT_IMAGERY,
   frozen.SEXUALLY_EXPLICIT_TEXT,
 );
-const frozen1 = Object.freeze(obj);
+const frozen1 = Object.freeze(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting(
   "../discord_common/js/shared/shared-constants/DiscordContentClassificationFlags.tsx",

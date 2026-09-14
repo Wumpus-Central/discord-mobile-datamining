@@ -2,10 +2,10 @@
 import size from "../../../../../../_runtime/metro/00002__.js";
 
 const prototype = function VttParserError(arg0, error) {
-  tmp = new tmp(arg0, new.target);
-  tmp.error = error;
-  tmp.name = "ParserError";
-  return tmp;
+  const tmp2 = new tmp(arg0, new.target);
+  tmp2.error = error;
+  tmp2.name = "ParserError";
+  return tmp2;
 }.prototype;
 class prototype extends Error {}
 const re1 = /([0-9]+)?:?([0-9]{2}):([0-9]{2}\.[0-9]{2,3})/;
@@ -20,7 +20,6 @@ export const parseVtt = function parseVtt(text) {
   const meta = obj.meta;
   let tmp4 = undefined !== meta && meta;
   const strict = obj.strict;
-  let tmp5 = undefined === strict || strict;
   let str = text.trim();
   const str2 = text.trim().replace(/\r\n/g, "\n");
   let parts = text.trim().replace(/\r\n/g, "\n").replace(/\r/g, "\n").split("\n\n");
@@ -34,11 +33,11 @@ export const parseVtt = function parseVtt(text) {
       str9 = " ";
       if (" " !== first) {
         if ("\t" !== replaced[0]) {
-          if (typeof obj === "function") {
-            tmp5 = new tmp5("Header comment must start with space or tab", tmp3, parts1, tmp2, tmp, first);
-            tmp5.error = undefined;
-            tmp5.name = "ParserError";
-            throw tmp5;
+          if (typeof obj3 === "function") {
+            const tmp52 = new tmp5("Header comment must start with space or tab", tmp3, parts1, tmp2, tmp, first);
+            tmp52.error = undefined;
+            tmp52.name = "ParserError";
+            throw tmp52;
           } else {
             throw new TypeError("Trying to call a non-function");
           }
@@ -47,15 +46,15 @@ export const parseVtt = function parseVtt(text) {
     }
     if (0 === parts.length) {
       if (1 === parts1.length) {
-        obj = { valid: true, strict: tmp5, cues: [], errors: [] };
-        return obj;
+        let obj2 = { valid: true, strict: tmp5, cues: [], errors: [] };
+        return obj2;
       }
     }
     if (!tmp4) {
       if (parts1.length > 1) {
         if ("" !== parts1[1]) {
-          if (typeof obj === "function") {
-            str9 = new str9(
+          if (typeof obj3 === "function") {
+            const str91 = new str9(
               "Missing blank line after signature",
               tmp3,
               parts1,
@@ -67,16 +66,16 @@ export const parseVtt = function parseVtt(text) {
               tmp4,
               new.target,
             );
-            str9.error = undefined;
-            str9.name = "ParserError";
-            throw str9;
+            str91.error = undefined;
+            str91.name = "ParserError";
+            throw str91;
           } else {
             throw new TypeError("Trying to call a non-function");
           }
         }
       }
     }
-    obj = tmp5;
+    obj3 = tmp5;
     const items = [];
     const mapped = parts.map((item, index) => {
       try {
@@ -96,7 +95,7 @@ export const parseVtt = function parseVtt(text) {
             if (!first.includes("-->")) {
               const _HermesInternal = HermesInternal;
               const combined = "Cue identifier cannot be standalone (cue #" + index + ")";
-              if (typeof closure_1_0 === "function") {
+              if (typeof obj3 === "function") {
                 const tmp14 = new closure_1_2(
                   combined,
                   tmp6,
@@ -106,7 +105,7 @@ export const parseVtt = function parseVtt(text) {
                   tmp2,
                   "\n",
                   tmp,
-                  closure_1_0,
+                  obj3,
                   combined,
                   0,
                   index,
@@ -125,7 +124,7 @@ export const parseVtt = function parseVtt(text) {
               if (!obj2.includes("-->")) {
                 const _HermesInternal2 = HermesInternal;
                 const combined1 = "Cue identifier needs to be followed by timestamp (cue #" + index + ")";
-                if (typeof closure_1_0 === "function") {
+                if (typeof obj3 === "function") {
                   const tmp23 = new closure_1_2(
                     combined1,
                     tmp6,
@@ -135,7 +134,7 @@ export const parseVtt = function parseVtt(text) {
                     tmp2,
                     "\n",
                     tmp,
-                    closure_1_0,
+                    obj3,
                     combined1,
                     0,
                     index,
@@ -153,6 +152,7 @@ export const parseVtt = function parseVtt(text) {
           let hasItem = found.length > 1;
           if (hasItem) {
             hasItem = found[1].includes("-->");
+            obj3 = found[1];
           }
           let str10 = "";
           if (hasItem) {
@@ -193,7 +193,7 @@ export const parseVtt = function parseVtt(text) {
                   if (num > num3) {
                     const _HermesInternal5 = HermesInternal;
                     const combined2 = "Start timestamp greater than end (cue #" + index + ")";
-                    if (typeof closure_1_0 === "function") {
+                    if (typeof obj3 === "function") {
                       const tmp62 = new closure_1_2(
                         combined2,
                         tmp6,
@@ -215,7 +215,7 @@ export const parseVtt = function parseVtt(text) {
                   } else if (num3 <= num) {
                     const _HermesInternal4 = HermesInternal;
                     const combined3 = "End must be greater than start (cue #" + index + ")";
-                    if (typeof closure_1_0 === "function") {
+                    if (typeof obj3 === "function") {
                       const tmp53 = new closure_1_2(
                         combined3,
                         tmp6,
@@ -240,11 +240,11 @@ export const parseVtt = function parseVtt(text) {
                   if (num3 < num) {
                     const _HermesInternal3 = HermesInternal;
                     const combined4 = "End must be greater or equal to start when not strict (cue #" + index + ")";
-                    if (typeof closure_1_0 === "function") {
+                    if (typeof obj3 === "function") {
                       const tmp42 = new closure_1_2(
                         combined4,
                         tmp6,
-                        closure_1_0,
+                        obj3,
                         combined4,
                         new.target,
                         regex,
@@ -275,7 +275,7 @@ export const parseVtt = function parseVtt(text) {
                 if ("" === str21.trim()) {
                   return false;
                 } else {
-                  obj = { identifier: str10, start: num, end: num3, text: str21, styles: trimmed1 };
+                  const obj = { identifier: str10, start: num, end: num3, text: str21, styles: trimmed1 };
                   return obj;
                 }
                 const str20 = parts1[1].replace(regex, "");
@@ -283,7 +283,7 @@ export const parseVtt = function parseVtt(text) {
             }
           }
           const combined5 = "Invalid cue timestamp (cue #" + index + ")";
-          if (typeof closure_1_0 === "function") {
+          if (typeof obj3 === "function") {
             const tmp69 = new closure_1_2(combined5, tmp6, tmp5, tmp4, tmp3, regex, "\n");
             tmp69.error = undefined;
             tmp69.name = "ParserError";
@@ -291,7 +291,7 @@ export const parseVtt = function parseVtt(text) {
           } else {
             throw new TypeError("Trying to call a non-function");
           }
-        })(item, index, obj);
+        })(item, index, obj3);
       } catch (tmp4) {
         items.push(tmp4);
         return null;
@@ -311,30 +311,30 @@ export const parseVtt = function parseVtt(text) {
     }
     let tmp22 = null;
     if (tmp4) {
-      obj = {};
+      obj3 = {};
       const substr = parts1.slice(1);
       const item = substr.forEach((arr) => {
         const index = arr.indexOf(":");
         const trimmed = arr.slice(0, index).trim();
         const str = arr.slice(0, index);
-        obj[trimmed] = arr.slice(index + 1).trim();
+        obj3[trimmed] = arr.slice(index + 1).trim();
       });
       const _Object = Object;
       let tmp25 = null;
-      if (Object.keys(obj).length > 0) {
-        tmp25 = obj;
+      if (Object.keys(obj3).length > 0) {
+        tmp25 = obj3;
       }
       tmp22 = tmp25;
     }
-    const obj1 = { valid: 0 === items.length, strict: tmp5, cues: found, errors: items };
+    const obj4 = { valid: 0 === items.length, strict: tmp5, cues: found, errors: items };
     if (tmp4) {
-      let obj2 = { meta: tmp22 };
-      tmp4 = obj2;
+      const obj5 = { meta: tmp22 };
+      tmp4 = obj5;
     }
     const merged = Object.assign(tmp4);
-    return obj1;
-  } else if (typeof obj === "function") {
-    tmp2 = new tmp2(
+    return obj4;
+  } else if (typeof obj3 === "function") {
+    const tmp21 = new tmp2(
       'Must start with "WEBVTT"',
       tmp3,
       tmp6,
@@ -349,9 +349,9 @@ export const parseVtt = function parseVtt(text) {
       prototype,
       strict,
     );
-    tmp2.error = undefined;
-    tmp2.name = "ParserError";
-    throw tmp2;
+    tmp21.error = undefined;
+    tmp21.name = "ParserError";
+    throw tmp21;
   } else {
     throw new TypeError("Trying to call a non-function");
   }

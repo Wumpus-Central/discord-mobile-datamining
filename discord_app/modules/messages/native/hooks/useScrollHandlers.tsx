@@ -79,8 +79,8 @@ export default function useScrollHandlers(arg0) {
               closure_1_4.current = true;
               closure_1_5();
             }
-            let obj = { isFirstMessageVisible: flag4 };
-            closure_1_13(obj);
+            const obj2 = { isFirstMessageVisible: flag4 };
+            closure_1_13(obj2);
             dependencyMap.tryFlush();
             return true;
           }
@@ -101,7 +101,7 @@ export default function useScrollHandlers(arg0) {
         current = ref1.current;
       }
       if (!current) {
-        obj = DimensionActionCreatorsDefault;
+        const obj = DimensionActionCreatorsDefault;
         const id = tmp.id;
         let num = 0;
         if (isAtBottom) {
@@ -240,8 +240,7 @@ export default function useScrollHandlers(arg0) {
         firstVisibleMessagePercentVisible,
         lastVisibleMessagePercentVisible,
       } = nativeEvent);
-      let obj = ChatChangesetUpdateTracker;
-      const changesetIdForChat = obj.getChangesetIdForChat(ref.current);
+      const changesetIdForChat = ChatChangesetUpdateTracker.getChangesetIdForChat(ref.current);
       if (changesetUpdateId !== changesetIdForChat) {
         if (null == ref.current) {
           ref.current = timeStamp;
@@ -256,20 +255,20 @@ export default function useScrollHandlers(arg0) {
           );
         }
       } else {
-        obj = {
+        const obj2 = {
           firstVisibleMessageRowIndex: firstVisibleMessageIndex,
           lastVisibleMessageRowIndex: lastVisibleMessageIndex,
           firstVisibleMessagePercentVisible,
           lastVisibleMessagePercentVisible,
           source: QuestTypes.QuestsVisibleMessagesChangedSource.SCROLL,
         };
-        closure_1_7(obj);
+        closure_1_7(obj2);
         let current = ref.current;
         if (current == null) {
           current = timeStamp;
         }
         ref.current = undefined;
-        obj = {
+        const obj3 = {
           eventTimestamp: current,
           isAtBottom,
           isNearBottom,
@@ -279,13 +278,13 @@ export default function useScrollHandlers(arg0) {
           shouldShowJumpToPresent,
           isFirstMessageVisible,
         };
-        handleScroll(obj);
-        const obj1 = {
+        handleScroll(obj3);
+        const obj4 = {
           rows: previousRows._rows,
           firstVisibleMessageRowIndex: firstVisibleMessageIndex,
           lastVisibleMessageRowIndex: lastVisibleMessageIndex,
         };
-        closure_1_16.handleScrollPosition(obj1);
+        closure_1_16.handleScrollPosition(obj4);
       }
     },
   };

@@ -2,6 +2,8 @@
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
+const require = globalThis.__r;
+
 const require = fn;
 const jsx = fn(21).jsx;
 const size = fn(2);
@@ -10,7 +12,8 @@ const result = size.fileFinishedImporting("modules/channel_following/native/show
 export const showChannelFollowingActionSheet = function showChannelFollowingActionSheet(id, guildId, targetChannelId, targetGuildId) {
   _require = id;
   importDefault = guildId;
-  const obj = {
+  const obj = ActionSheetActionCreatorsDefault;
+  obj.openLazy(require("asyncRequireImpl")(11460, dependencyMap.paths), "NewChannelFollower." + id, {
     sourceChannelId: id,
     sourceGuildId: guildId,
     targetChannelId,
@@ -18,8 +21,8 @@ export const showChannelFollowingActionSheet = function showChannelFollowingActi
     reopenActionSheetWithTarget(targetGuildId, targetChannelId) {
       closure_0 = closure_1_0;
       closure_1 = closure_1_1;
-      closure_2_1(closure_2_2[2]);
-      let obj = {
+      let obj = closure_2_1(closure_2_2[2]);
+      obj.openLazy(closure_2_0(closure_2_2[4])(closure_2_2[3], closure_2_2.paths), "NewChannelFollower." + closure_1_0, {
         sourceChannelId: closure_1_0,
         sourceGuildId: closure_1_1,
         targetChannelId,
@@ -27,8 +30,8 @@ export const showChannelFollowingActionSheet = function showChannelFollowingActi
         reopenActionSheetWithTarget(targetGuildId, targetChannelId) {
           closure_0 = closure_1_0;
           closure_1 = closure_1_1;
-          closure_2_1(closure_2_2[2]);
-          let obj = {
+          let obj = closure_2_1(closure_2_2[2]);
+          obj.openLazy(closure_2_0(closure_2_2[4])(closure_2_2[3], closure_2_2.paths), "NewChannelFollower." + closure_1_0, {
             sourceChannelId: closure_1_0,
             sourceGuildId: closure_1_1,
             targetChannelId,
@@ -36,8 +39,8 @@ export const showChannelFollowingActionSheet = function showChannelFollowingActi
             reopenActionSheetWithTarget(targetGuildId, targetChannelId) {
               closure_0 = closure_1_0;
               closure_1 = closure_1_1;
-              closure_2_1(closure_2_2[2]);
-              let obj = {
+              let obj = closure_2_1(closure_2_2[2]);
+              obj.openLazy(closure_2_0(closure_2_2[4])(closure_2_2[3], closure_2_2.paths), "NewChannelFollower." + closure_1_0, {
                 sourceChannelId: closure_1_0,
                 sourceGuildId: closure_1_1,
                 targetChannelId,
@@ -45,40 +48,32 @@ export const showChannelFollowingActionSheet = function showChannelFollowingActi
                 reopenActionSheetWithTarget(targetGuildId, targetChannelId) {
                   closure_0 = closure_1_0;
                   closure_1 = closure_1_1;
-                  closure_2_1(closure_2_2[2]);
-                  let obj = { sourceChannelId: closure_1_0, sourceGuildId: closure_1_1, targetChannelId, targetGuildId, reopenActionSheetWithTarget() { ... }, onSuccess() { ... }, onCancel() { ... } };
-                  obj.openLazy(closure_2_0(closure_2_2[4])(closure_2_2[3], closure_2_2.paths), "NewChannelFollower." + closure_1_0, obj);
+                  let obj = closure_2_1(closure_2_2[2]);
+                  obj.openLazy(closure_2_0(closure_2_2[4])(closure_2_2[3], closure_2_2.paths), "NewChannelFollower." + closure_1_0, { sourceChannelId: closure_1_0, sourceGuildId: closure_1_1, targetChannelId, targetGuildId, reopenActionSheetWithTarget() { ... }, onSuccess() { ... }, onCancel() { ... } });
                 },
                 onSuccess() {
-                  closure_1(dependencyMap[5]);
-                  const obj = { importer() { ... }, hideActionSheet: true };
-                  obj.openLazy(obj);
+                  closure_1(dependencyMap[5]).openLazy({ importer() { ... }, hideActionSheet: true });
                 },
                 onCancel() {
                   return closure_1(dependencyMap[2]).hideActionSheet();
                 }
-              };
-              obj.openLazy(closure_2_0(closure_2_2[4])(closure_2_2[3], closure_2_2.paths), "NewChannelFollower." + closure_1_0, obj);
+              });
             },
             onSuccess() {
-              closure_1(dependencyMap[5]);
-              const obj = {
+              closure_1(dependencyMap[5]).openLazy({
                 importer() {
                   return closure_1_0(paths[4])(paths[6], paths.paths).then(() => { ... });
                 },
                 hideActionSheet: true
-              };
-              obj.openLazy(obj);
+              });
             },
             onCancel() {
               return closure_1(dependencyMap[2]).hideActionSheet();
             }
-          };
-          obj.openLazy(closure_2_0(closure_2_2[4])(closure_2_2[3], closure_2_2.paths), "NewChannelFollower." + closure_1_0, obj);
+          });
         },
         onSuccess() {
-          closure_1(dependencyMap[5]);
-          const obj = {
+          closure_1(dependencyMap[5]).openLazy({
             importer() {
               return closure_1_0(paths[4])(paths[6], paths.paths).then((result) => {
                 closure_0 = result.default;
@@ -86,18 +81,15 @@ export const showChannelFollowingActionSheet = function showChannelFollowingActi
               });
             },
             hideActionSheet: true
-          };
-          obj.openLazy(obj);
+          });
         },
         onCancel() {
           return closure_1(dependencyMap[2]).hideActionSheet();
         }
-      };
-      obj.openLazy(closure_2_0(closure_2_2[4])(closure_2_2[3], closure_2_2.paths), "NewChannelFollower." + closure_1_0, obj);
+      });
     },
     onSuccess() {
-      closure_1(dependencyMap[5]);
-      const obj = {
+      closure_1(dependencyMap[5]).openLazy({
         importer() {
           return closure_1_0(paths[4])(paths[6], paths.paths).then((result) => {
             closure_0 = result.default;
@@ -108,12 +100,10 @@ export const showChannelFollowingActionSheet = function showChannelFollowingActi
           });
         },
         hideActionSheet: true
-      };
-      obj.openLazy(obj);
+      });
     },
     onCancel() {
       return closure_1(dependencyMap[2]).hideActionSheet();
     }
-  };
-  obj.openLazy(require("asyncRequireImpl")(11459, dependencyMap.paths), "NewChannelFollower." + id, obj);
+  });
 };

@@ -6,6 +6,8 @@ import ChannelRTCStore from "../../../calls/ChannelRTCStore.tsx";
 import ApplicationStreamingStore from "../../../../stores/ApplicationStreamingStore.tsx";
 import MediaEngineStore from "../../../../stores/MediaEngineStore.tsx";
 
+const require = globalThis.__r;
+
 require = fn;
 function isVoicePanelParticipantFocusable(channelId, guildId, id2) {
   let obj = ChannelRTCStore;
@@ -41,11 +43,11 @@ function isVoicePanelParticipantFocusable(channelId, guildId, id2) {
       if (React5(participant)) {
         let result = null != obj3.getActiveStreamForUser(participant.user.id, channelId);
       } else if (React6(participant)) {
-        let tmp4Result = participantHasVideo;
-        result = tmp4Result.canRenderParticipantVideo(participant, tmp);
+        result = participantHasVideo.canRenderParticipantVideo(participant, tmp);
+        const tmp4Result = participantHasVideo;
       } else {
-        tmp4Result = GlobalUtils;
-        tmp4Result.assertNever(participant);
+        GlobalUtils.assertNever(participant);
+        const tmp4Result2 = GlobalUtils;
       }
       return result;
     }

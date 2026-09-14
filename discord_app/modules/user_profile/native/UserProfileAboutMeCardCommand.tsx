@@ -9,19 +9,27 @@ import MarkupReactCommandRule from "../../markup/native/MarkupReactCommandRule.t
 import navigateToLastChannelDefault from "../../main_tabs_v2/native/navigateToLastChannel.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
+const require = globalThis.__r;
+
 require = fn;
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const jsxs = fn(21).jsxs;
 const createStyles = fn(4636);
-let obj = { commandClickable: null };
-obj = {
+let obj = {
+  commandClickable: {
+    color: nativeDefault.colors.MENTION_FOREGROUND,
+    backgroundColor: nativeDefault.colors.MENTION_BACKGROUND,
+    marginEnd: nativeDefault.space.PX_12,
+    marginBottom: nativeDefault.space.PX_12,
+  },
+};
+let closure_5 = createStyles.createStyles(obj);
+let obj3 = {
   color: nativeDefault.colors.MENTION_FOREGROUND,
   backgroundColor: nativeDefault.colors.MENTION_BACKGROUND,
   marginEnd: nativeDefault.space.PX_12,
   marginBottom: nativeDefault.space.PX_12,
 };
-obj.commandClickable = obj;
-let closure_5 = createStyles.createStyles(obj);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_profile/native/UserProfileAboutMeCardCommand.tsx");
 
@@ -31,9 +39,9 @@ export default noop.memo(function UserProfileAboutMeCardCommand(channel) {
   let obj = {
     variant: "text-md/bold",
     onPress() {
+      const bestActiveInput = require("ChatInputUtils").getBestActiveInput();
       let obj = require("ChatInputUtils");
-      const bestActiveInput = obj.getBestActiveInput();
-      obj = {
+      let obj2 = {
         channelId: channel.id,
         currentText: null,
         commandId: null,
@@ -48,24 +56,24 @@ export default noop.memo(function UserProfileAboutMeCardCommand(channel) {
       if (str == null) {
         str = "";
       }
-      obj.currentText = str;
+      obj2.currentText = str;
       ({ id: obj4.commandId, displayName: obj4.commandName } = command);
-      obj.onOpenCustomKeyboard = function onOpenCustomKeyboard(arg0) {
+      obj2.onOpenCustomKeyboard = function onOpenCustomKeyboard(arg0) {
         let openCustomKeyboardResult;
         if (bestActiveInput != null) {
           openCustomKeyboardResult = bestActiveInput.openCustomKeyboard(arg0);
         }
         return openCustomKeyboardResult;
       };
-      obj.onSetCommand = function onSetCommand() {
-        let obj = AnalyticsUtilsDefault;
+      obj2.onSetCommand = function onSetCommand() {
         id = undefined;
         if (id != null) {
           id = id.id;
         }
-        obj = { application_id: id, command_id: command.id, guild_id: channel.getGuildId() };
+        const obj = AnalyticsUtilsDefault;
+        const obj2 = { application_id: id, command_id: command.id, guild_id: channel.getGuildId() };
         const merged = Object.assign(AppAnalyticsUtils.collectChannelAnalyticsMetadata(channel));
-        obj.track(AnalyticEvents.POPULAR_APPLICATION_COMMAND_CLICKED, obj);
+        obj.track(AnalyticEvents.POPULAR_APPLICATION_COMMAND_CLICKED, obj2);
         ActionSheetActionCreatorsDefault.hideAllActionSheets();
         navigateToLastChannelDefault();
         if (bestActiveInput != null) {
@@ -74,20 +82,20 @@ export default noop.memo(function UserProfileAboutMeCardCommand(channel) {
         if (bestActiveInput != null) {
           const applicationCommandManager = bestActiveInput.getApplicationCommandManager();
           if (applicationCommandManager != null) {
-            obj = { channelId: channel.id, command, section: null, location: null };
+            const obj4 = { channelId: channel.id, command, section: null, location: null };
             let applicationCommandSection = null;
             if (null != id) {
               applicationCommandSection = ApplicationCommandUtils.getApplicationCommandSection(id);
               const tmp7Result = ApplicationCommandUtils;
             }
-            obj.section = applicationCommandSection;
-            obj.location = ApplicationCommandTypes.ApplicationCommandTriggerLocations.POPULAR_COMMANDS;
-            applicationCommandManager.setCommand(obj);
+            obj4.section = applicationCommandSection;
+            obj4.location = ApplicationCommandTypes.ApplicationCommandTriggerLocations.POPULAR_COMMANDS;
+            applicationCommandManager.setCommand(obj4);
           }
         }
         const tmpResult = ActionSheetActionCreatorsDefault;
       };
-      const result = require("MarkupReactCommandRule").handleTapCommandMention(obj);
+      const result = require("MarkupReactCommandRule").handleTapCommandMention(obj2);
     },
     onLongPress() {
       return MarkupReactCommandRule.handleLongPressCommandMention(command.displayName, command.id);
@@ -100,9 +108,9 @@ export default noop.memo(function UserProfileAboutMeCardCommand(channel) {
   return jsxs(require("Text/Text").Text, {
     variant: "text-md/bold",
     onPress() {
+      const bestActiveInput = require("ChatInputUtils").getBestActiveInput();
       let obj = require("ChatInputUtils");
-      const bestActiveInput = obj.getBestActiveInput();
-      obj = {
+      let obj2 = {
         channelId: channel.id,
         currentText: null,
         commandId: null,
@@ -117,24 +125,24 @@ export default noop.memo(function UserProfileAboutMeCardCommand(channel) {
       if (str == null) {
         str = "";
       }
-      obj.currentText = str;
+      obj2.currentText = str;
       ({ id: obj4.commandId, displayName: obj4.commandName } = command);
-      obj.onOpenCustomKeyboard = function onOpenCustomKeyboard(arg0) {
+      obj2.onOpenCustomKeyboard = function onOpenCustomKeyboard(arg0) {
         let openCustomKeyboardResult;
         if (bestActiveInput != null) {
           openCustomKeyboardResult = bestActiveInput.openCustomKeyboard(arg0);
         }
         return openCustomKeyboardResult;
       };
-      obj.onSetCommand = function onSetCommand() {
-        let obj = AnalyticsUtilsDefault;
+      obj2.onSetCommand = function onSetCommand() {
         id = undefined;
         if (id != null) {
           id = id.id;
         }
-        obj = { application_id: id, command_id: command.id, guild_id: channel.getGuildId() };
+        const obj = AnalyticsUtilsDefault;
+        const obj2 = { application_id: id, command_id: command.id, guild_id: channel.getGuildId() };
         const merged = Object.assign(AppAnalyticsUtils.collectChannelAnalyticsMetadata(channel));
-        obj.track(AnalyticEvents.POPULAR_APPLICATION_COMMAND_CLICKED, obj);
+        obj.track(AnalyticEvents.POPULAR_APPLICATION_COMMAND_CLICKED, obj2);
         ActionSheetActionCreatorsDefault.hideAllActionSheets();
         navigateToLastChannelDefault();
         if (bestActiveInput != null) {
@@ -143,20 +151,20 @@ export default noop.memo(function UserProfileAboutMeCardCommand(channel) {
         if (bestActiveInput != null) {
           const applicationCommandManager = bestActiveInput.getApplicationCommandManager();
           if (applicationCommandManager != null) {
-            obj = { channelId: channel.id, command, section: null, location: null };
+            const obj4 = { channelId: channel.id, command, section: null, location: null };
             let applicationCommandSection = null;
             if (null != id) {
               applicationCommandSection = ApplicationCommandUtils.getApplicationCommandSection(id);
               const tmp7Result = ApplicationCommandUtils;
             }
-            obj.section = applicationCommandSection;
-            obj.location = ApplicationCommandTypes.ApplicationCommandTriggerLocations.POPULAR_COMMANDS;
-            applicationCommandManager.setCommand(obj);
+            obj4.section = applicationCommandSection;
+            obj4.location = ApplicationCommandTypes.ApplicationCommandTriggerLocations.POPULAR_COMMANDS;
+            applicationCommandManager.setCommand(obj4);
           }
         }
         const tmpResult = ActionSheetActionCreatorsDefault;
       };
-      const result = require("MarkupReactCommandRule").handleTapCommandMention(obj);
+      const result = require("MarkupReactCommandRule").handleTapCommandMention(obj2);
     },
     onLongPress() {
       return MarkupReactCommandRule.handleLongPressCommandMention(command.displayName, command.id);

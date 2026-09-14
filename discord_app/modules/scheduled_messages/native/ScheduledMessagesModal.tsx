@@ -6,7 +6,6 @@ import PlatformUtils from "../../../utils/PlatformUtils.tsx";
 import PremiumUtils from "../../../utils/PremiumUtils.tsx";
 import ReanimatedRexport from "../../reanimated/ReanimatedRexport.tsx";
 import spring from "../../../design/animation/reanimated/spring/spring.tsx";
-import NavigatorHeader from "../../../design/components/Navigator/native/NavigatorHeader.native.tsx";
 import _mod5712 from "../../../../_runtime/metro/05712__.js";
 import useAnalyticsLocationsDefault from "../../app_analytics/useAnalyticsLocations.tsx";
 import AnalyticsLocationDefault from "../../app_analytics/AnalyticsLocation.tsx";
@@ -20,6 +19,7 @@ import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import ScheduledMessageStore from "../ScheduledMessageStore.tsx";
 
+const NavigatorHeader = tmp4(5705);
 require = fn;
 function keyExtractor(scheduledMessageId) {
   return scheduledMessageId.scheduledMessageId;
@@ -28,21 +28,25 @@ function ScheduledMessagesPage(handleScroll) {
   _require = undefined;
   let stateFromStores2;
   const tmp = closure_14();
-  [tmp3, c0] = _slicedToArray(noop.useState(false), 2);
+  [tmp3, c0] = noop.useState(false);
   const effect = noop.useEffect(() => {
     const scheduledMessages = ScheduledMessageActionCreators.fetchScheduledMessages();
     scheduledMessages.then(() => closure_1_0(true));
   }, []);
   let obj = stateFromStores2;
-  let obj1 = require("initialize");
+  const tmp2 = _slicedToArray(noop.useState(false), 2);
   items = [ScheduledMessageStore];
-  const stateFromStores = obj1.useStateFromStores(items, () => ScheduledMessageStore.getScheduledMessagesForInbox());
-  let obj2 = require("initialize");
+  const stateFromStores = require("initialize").useStateFromStores(items, () =>
+    ScheduledMessageStore.getScheduledMessagesForInbox(),
+  );
+  const obj2 = require("initialize");
   const items1 = [ScheduledMessageStore];
-  const stateFromStores1 = obj2.useStateFromStores(items1, () => ScheduledMessageStore.loading);
-  let obj3 = require("initialize");
+  const stateFromStores1 = require("initialize").useStateFromStores(items1, () => ScheduledMessageStore.loading);
+  const obj3 = require("initialize");
   const items2 = [ScheduledMessageStore];
-  stateFromStores2 = obj3.useStateFromStores(items2, () => ScheduledMessageStore.getMessagesPendingRemoval());
+  stateFromStores2 = require("initialize").useStateFromStores(items2, () =>
+    ScheduledMessageStore.getMessagesPendingRemoval(),
+  );
   const items3 = [stateFromStores];
   const memo = noop.useMemo(() => {
     const values = Object.values(stateFromStores);
@@ -58,7 +62,7 @@ function ScheduledMessagesPage(handleScroll) {
     const obj = { scheduledMessage: item, isPendingRemoval: stateFromStores2.has(item.scheduledMessageId) };
     return closure_2_10(ScheduledMessageCardDefault, obj);
   }, items4);
-  const tmp2 = _slicedToArray(noop.useState(false), 2);
+  const obj4 = require("initialize");
   const scheduledMessagesLimit =
     require("ScheduledMessageUtils").useScheduledMessagesLimit("ScheduledMessagesMobileModal");
   const limit = scheduledMessagesLimit.limit;
@@ -68,9 +72,8 @@ function ScheduledMessagesPage(handleScroll) {
   }
   if (!tmp3) {
     if (0 === memo.length) {
-      obj = { style: tmp.loading, children: null };
-      obj.children = closure_10(tmp5(obj[24]).ActivityIndicator, { size: "large" });
-      return closure_10(View, obj);
+      const obj6 = { style: tmp.loading, children: closure_10(tmp5(obj[24]).ActivityIndicator, { size: "large" }) };
+      return closure_10(View, obj6);
     }
   }
   if (0 === memo.length) {
@@ -78,32 +81,31 @@ function ScheduledMessagesPage(handleScroll) {
     closure_10(stateFromStores(obj[25]), obj);
     const tmp19 = stateFromStores(obj[25]);
   } else {
-    obj = { style: tmp.listContainer, children: null };
-    obj1 = {
+    const obj7 = { style: tmp.listContainer, children: null };
+    const obj8 = {
       data: memo,
       renderItem: callback,
       contentContainerStyle: tmp.cardContainer,
       keyExtractor,
       onScroll: handleScroll.handleScroll,
     };
-    obj.children = closure_10(tmp5(obj[26]).FlashList, obj1);
-    const items5 = [closure_10(View, obj)];
+    obj7.children = closure_10(tmp5(obj[26]).FlashList, obj8);
+    const items5 = [closure_10(View, obj7)];
     let tmp22Result = null;
     if (scheduledMessagesLimit.isUpgradable) {
-      obj2 = { isAtLimit: tmp11 };
-      tmp22Result = closure_10(ScheduledMessageNitroUpsellBar, obj2);
+      const obj9 = { isAtLimit: tmp11 };
+      tmp22Result = closure_10(ScheduledMessageNitroUpsellBar, obj9);
     }
-    obj3 = { children: null };
+    const obj10 = { children: null };
     items5[1] = tmp22Result;
-    obj3.children = items5;
-    closure_11(closure_12, obj3);
+    obj10.children = items5;
+    closure_11(closure_12, obj10);
   }
   const obj5 = require("ScheduledMessageUtils");
 }
 function ScheduledMessageNitroUpsellBar(isAtLimit) {
   isAtLimit = isAtLimit.isAtLimit;
-  let obj = PremiumUpsellUtils;
-  const premiumUpsellConfig = obj.usePremiumUpsellConfig(
+  const premiumUpsellConfig = PremiumUpsellUtils.usePremiumUpsellConfig(
     ConstantsIOS.UpsellTypes.SCHEDULED_MESSAGES,
     useAnalyticsLocationsDefault(items).analyticsLocations,
   );
@@ -115,8 +117,6 @@ function ScheduledMessageNitroUpsellBar(isAtLimit) {
     undefined,
     items,
   ));
-  let obj1 = PremiumUtils;
-  const premiumTypeDisplayName = obj1.getPremiumTypeDisplayName(PremiumTypes.TIER_2);
   const tmp2 = usePremiumFeatureUpsellGetNitroDefault(
     useTier0UpsellContent,
     onViewAllPerks,
@@ -124,24 +124,25 @@ function ScheduledMessageNitroUpsellBar(isAtLimit) {
     undefined,
     items,
   );
+  const premiumTypeDisplayName = PremiumUtils.getPremiumTypeDisplayName(PremiumTypes.TIER_2);
   const intl = util.intl;
   const formatToPlainString = intl.formatToPlainString;
   const t = util.t;
   if (isAtLimit) {
-    obj = { nitroTierName: premiumTypeDisplayName, premiumMax };
-    let formatToPlainStringResult = formatToPlainString(t["7GgYhg"], obj);
+    const obj3 = { nitroTierName: premiumTypeDisplayName, premiumMax };
+    let formatToPlainStringResult = formatToPlainString(t["7GgYhg"], obj3);
   } else {
-    obj = { nitroTierName: premiumTypeDisplayName };
-    formatToPlainStringResult = formatToPlainString(t.WfTDdG, obj);
+    const obj4 = { nitroTierName: premiumTypeDisplayName };
+    formatToPlainStringResult = formatToPlainString(t.WfTDdG, obj4);
   }
-  obj1 = { text: formatToPlainStringResult, isAtLimit, onPress: null, loading: null };
+  const obj5 = { text: formatToPlainStringResult, isAtLimit, onPress: null, loading: null };
   let tmp8 = null;
   if (!loading) {
     tmp8 = onPress;
   }
-  obj1.onPress = tmp8;
-  obj1.loading = loading;
-  return closure_1_10(NitroLimitUpsellBarDefault, obj1);
+  obj5.onPress = tmp8;
+  obj5.loading = loading;
+  return closure_1_10(NitroLimitUpsellBarDefault, obj5);
 }
 const View = fn(17).View;
 const AnalyticsPages = fn(1074).AnalyticsPages;
@@ -150,9 +151,14 @@ const premiumMax = fn(7948).MAX_SCHEDULED_MESSAGES_PER_USER;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
 let items = [AnalyticsLocationDefault.SCHEDULED_MESSAGES_LIST];
-fn(4636);
-let createStyles = {
-  modal: null,
+const createStyles = fn(4636);
+let obj2 = {
+  modal: {
+    backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER,
+    borderBottomWidth: 0,
+    shadowColor: "transparent",
+    height: "100%",
+  },
   headerLeftContainer: null,
   headerRightContainer: null,
   headerBorder: null,
@@ -160,22 +166,21 @@ let createStyles = {
   listContainer: null,
   loading: null,
 };
-createStyles = {
+let obj3 = {
   backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER,
   borderBottomWidth: 0,
   shadowColor: "transparent",
   height: "100%",
 };
-createStyles.modal = createStyles;
-createStyles.headerLeftContainer = { paddingLeft: nativeDefault.space.PX_16 };
-let obj1 = { paddingLeft: nativeDefault.space.PX_16 };
-createStyles.headerRightContainer = { paddingRight: nativeDefault.space.PX_16 };
+obj2.headerLeftContainer = { paddingLeft: nativeDefault.space.PX_16 };
+let obj4 = { paddingLeft: nativeDefault.space.PX_16 };
+obj2.headerRightContainer = { paddingRight: nativeDefault.space.PX_16 };
 let size = { height: 1, width: "100%", backgroundColor: nativeDefault.colors.BORDER_SUBTLE };
-createStyles.headerBorder = size;
-createStyles.cardContainer = { paddingHorizontal: 16, paddingVertical: 8 };
-createStyles.listContainer = { flex: 1 };
-createStyles.loading = { flex: 1, alignItems: "center", justifyContent: "center" };
-let closure_14 = createStyles.createStyles(createStyles);
+obj2.headerBorder = size;
+obj2.cardContainer = { paddingHorizontal: 16, paddingVertical: 8 };
+obj2.listContainer = { flex: 1 };
+obj2.loading = { flex: 1, alignItems: "center", justifyContent: "center" };
+let closure_14 = createStyles.createStyles(obj2);
 const __initData = {
   code: "function ScheduledMessagesModalTsx1(){const{borderOpacity}=this.__closure;return{opacity:borderOpacity.get()};}",
 };
@@ -187,8 +192,7 @@ export default function ScheduledMessagesModal() {
   const intl = util.intl;
   const stringResult = intl.string(util.t.SZVs3K);
   const require = stringResult;
-  let obj = ReanimatedRexport;
-  const sharedValue = obj.useSharedValue(0);
+  const sharedValue = ReanimatedRexport.useSharedValue(0);
   items = [sharedValue];
   const callback = noop.useCallback((nativeEvent) => {
     let num = 0;
@@ -197,16 +201,15 @@ export default function ScheduledMessagesModal() {
     }
     const result = sharedValue.set(spring.withSpring(num));
   }, items);
-  let obj1 = ReanimatedRexport;
   const fn = function t() {
     return { opacity: sharedValue.get() };
   };
   fn.__closure = { borderOpacity: sharedValue };
   fn.__workletHash = 2142182513871;
   fn.__initData = __initData;
-  obj = { style: tmp.modal, children: null };
-  const animatedStyle = obj1.useAnimatedStyle(fn);
-  obj = {
+  const obj3 = { style: tmp.modal, children: null };
+  const animatedStyle = ReanimatedRexport.useAnimatedStyle(fn);
+  const obj6 = {
     title: stringResult,
     headerTitle() {
       return closure_2_10(HeaderShared.GenericHeaderTitle, { title: stringResult });
@@ -221,16 +224,16 @@ export default function ScheduledMessagesModal() {
   if (!obj5.isIOS()) {
     num = sharedValue(1611)().top;
   }
-  obj.headerStatusBarHeight = num + sharedValue(576).space.PX_8;
+  obj6.headerStatusBarHeight = num + sharedValue(576).space.PX_8;
   obj5 = PlatformUtils;
-  obj.headerLeft = NavigatorHeader.getHeaderCloseButton(sharedValue(4839).pop);
+  obj6.headerLeft = NavigatorHeader.getHeaderCloseButton(sharedValue(4839).pop);
   ({ headerLeftContainer: obj4.headerLeftContainerStyle, headerRightContainer: obj4.headerRightContainerStyle } = tmp);
-  const items1 = [closure_10(_mod5712.Header, obj), ,];
-  obj1 = { style: null };
+  const items1 = [closure_10(_mod5712.Header, obj6), ,];
+  const obj7 = { style: null };
   const items2 = [tmp.headerBorder, animatedStyle];
-  obj1.style = items2;
-  items1[1] = closure_10(sharedValue(4373).View, obj1);
+  obj7.style = items2;
+  items1[1] = closure_10(sharedValue(4373).View, obj7);
   items1[2] = closure_10(ScheduledMessagesPage, { handleScroll: callback });
-  obj.children = items1;
-  return closure_11(View, obj);
+  obj3.children = items1;
+  return closure_11(View, obj3);
 }

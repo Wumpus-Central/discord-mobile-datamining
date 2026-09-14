@@ -24,16 +24,22 @@ require = fn;
 const Permissions = fn(1074).Permissions;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-fn(4636);
-let createStyles = { screenContainer: null, stackPadding: null };
-createStyles = {
+const createStyles = fn(4636);
+let obj2 = {
+  screenContainer: {
+    flex: 1,
+    backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER,
+    paddingTop: nativeDefault.space.PX_16,
+  },
+  stackPadding: null,
+};
+let obj3 = {
   flex: 1,
   backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER,
   paddingTop: nativeDefault.space.PX_16,
 };
-createStyles.screenContainer = createStyles;
-createStyles.stackPadding = { paddingHorizontal: nativeDefault.modules.mobile.TABLE_ROW_PADDING };
-let closure_15 = createStyles.createLegacyClassComponentStyles(createStyles);
+obj2.stackPadding = { paddingHorizontal: nativeDefault.modules.mobile.TABLE_ROW_PADDING };
+let closure_15 = createStyles.createLegacyClassComponentStyles(obj2);
 const Component = noop.Component;
 class ChannelSettingsChangeCategory extends Component {
   constructor(arg0) {
@@ -81,9 +87,9 @@ prototype["handleSetCategory"] = function handleSetCategory(id) {
     }
   }
   const props = this.props;
+  const channel = props.channel;
   const navigation = props.navigation;
-  let obj = ChannelStore;
-  const channel = ChannelStore.getChannel(id);
+  const channel1 = ChannelStore.getChannel(id);
   const guildId = channel.getGuildId();
   if (null == guildId) {
     const _Error2 = Error;
@@ -96,7 +102,7 @@ prototype["handleSetCategory"] = function handleSetCategory(id) {
     }
     _require = tmp3;
     const categories = GuildCategoryStore.getCategories(channel.getGuildId());
-    let arr = channel(channel[14])(
+    let arr = channel(channel1[14])(
       categories._categories,
       categories,
       (channel) => channel.channel.type === channel.type,
@@ -107,30 +113,31 @@ prototype["handleSetCategory"] = function handleSetCategory(id) {
       const error1 = new Error("ChannelSettingsChangeCategory.handleSetCategory: Could not find original channel.");
       throw error1;
     } else {
-      obj = {};
+      let obj2 = {};
       const _categories = categories._categories;
       const item = _categories.forEach((channel) => {
         const items = [];
-        obj[channel.channel.id] = items;
+        obj2[channel.channel.id] = items;
         return items;
       });
       const item1 = arr.forEach((channel) => {
         let tmp = channel.channel.id !== channel.id;
         if (tmp) {
           const _String = String;
-          let arr;
+          const arr = obj2[String(undefined, channel.channel.parent_id)];
+          let arr2;
           if (arr != null) {
-            arr = arr.push(channel);
+            arr2 = arr.push(channel);
           }
-          tmp = arr;
+          tmp = arr2;
         }
         return tmp;
       });
       let _String = String;
-      arr = obj[String(undefined, tmp3)].push(found);
-      const arr3 = obj[String(undefined, tmp3)];
-      const tmp28 = tmp6(tmp7[14])(categories._categories, obj);
-      obj = {
+      obj2[String(undefined, tmp3)].push(found);
+      const arr3 = obj2[String(undefined, tmp3)];
+      const tmp28 = tmp6(tmp7[14])(categories._categories, obj2);
+      let obj5 = {
         oldOrdering: arr,
         newOrdering: tmp28,
         idGetter(channel) {
@@ -140,7 +147,7 @@ prototype["handleSetCategory"] = function handleSetCategory(id) {
           return channel.channel.position;
         },
       };
-      const result = require("DragAndDropUtils").calculatePositionDeltas(obj);
+      const result = require("DragAndDropUtils").calculatePositionDeltas(obj5);
       GuildCategoryStore = result;
       if (result.length > 0) {
         const found1 = result.find((id) => {
@@ -153,52 +160,53 @@ prototype["handleSetCategory"] = function handleSetCategory(id) {
           return flag;
         });
       } else {
-        const obj1 = { id: channel.id, parent_id: tmp3 };
-        ChannelStore = obj1;
-        arr = result.push(ChannelStore);
+        const obj7 = { id: channel.id, parent_id: tmp3 };
+        ChannelStore = obj7;
+        result.push(ChannelStore);
       }
       const appChannelBotUserId = self.props.appChannelBotUserId;
       let obj6 = require("DragAndDropUtils");
-      closure_8 = navigation(tmp7[16]).areChannelsLocked(channel, channel, appChannelBotUserId);
-      const obj3 = navigation(tmp7[16]);
+      closure_8 = navigation(tmp7[16]).areChannelsLocked(channel, channel1, appChannelBotUserId);
+      let obj3 = navigation(tmp7[16]);
       closure_9 = navigation(tmp7[16]).areChannelsLocked(
         channel,
         obj.getChannel(channel.parent_id),
         appChannelBotUserId,
       );
       self.setState({ submitting: true }, () => {
-        if (null != channel) {
+        if (null != channel1) {
           if (closure_9) {
             if (!closure_8) {
-              obj = { title: null, body: null, confirmText: null, cancelText: null, onConfirm: null, onCancel: null };
+              obj2 = { title: null, body: null, confirmText: null, cancelText: null, onConfirm: null, onCancel: null };
               const intl = util.intl;
-              obj.title = intl.string(util.t.YWMtRe);
+              obj2.title = intl.string(util.t.YWMtRe);
               const intl2 = util.intl;
-              obj = { channelName: null, categoryName: null };
+              const obj3 = { channelName: null, categoryName: null };
               const obj4 = useChannelName;
-              obj.channelName = obj4.computeChannelName(channel, UserStore, RelationshipStore, true);
-              obj.categoryName = useChannelName.computeChannelName(tmp, UserStore, RelationshipStore);
-              obj.body = intl2.format(util.t["iKW+jY"], obj);
+              obj3.channelName = obj4.computeChannelName(channel, UserStore, RelationshipStore, true);
+              let obj = AlertActionCreatorsDefault;
+              obj3.categoryName = useChannelName.computeChannelName(tmp, UserStore, RelationshipStore);
+              obj2.body = intl2.format(util.t["iKW+jY"], obj3);
               const intl3 = util.intl;
-              obj.confirmText = intl3.string(util.t.eW8Gy4);
+              obj2.confirmText = intl3.string(util.t.eW8Gy4);
               const intl4 = util.intl;
-              obj.cancelText = intl4.string(util.t.s4uM3b);
-              obj.onConfirm = function onConfirm() {
+              obj2.cancelText = intl4.string(util.t.s4uM3b);
+              obj2.onConfirm = function onConfirm() {
                 id.lock_permissions = true;
                 if (null == guildId) {
                   const _Error = Error;
                   const error = new Error("ChannelSettingsChangeCategory.handleSetCategory: Invalid guild_id");
                   throw error;
                 } else {
-                  obj = channel(channel[17]);
-                  channel(channel[17])
+                  const obj = channel(channel1[17]);
+                  channel(channel1[17])
                     .batchChannelUpdate(tmp, closure_1_7)
                     .then(() => closure_1_2.pop());
-                  const batchChannelUpdateResult = channel(channel[17]).batchChannelUpdate(tmp, closure_1_7);
+                  const batchChannelUpdateResult = channel(channel1[17]).batchChannelUpdate(tmp, closure_1_7);
                 }
               };
-              obj.onCancel = saveUpdates;
-              obj.show(obj);
+              obj2.onCancel = saveUpdates;
+              obj.show(obj2);
             }
           }
         }
@@ -214,6 +222,7 @@ prototype["handleSetCategory"] = function handleSetCategory(id) {
     }
     tmp6 = channel;
   }
+  obj = ChannelStore;
 };
 prototype["renderCategory"] = function renderCategory(label) {
   const self = this;
@@ -230,8 +239,7 @@ prototype["renderCategory"] = function renderCategory(label) {
 };
 prototype["renderCategories"] = function renderCategories() {
   const self = this;
-  let arr = _toArray(this.state.categories);
-  const substr = arr.slice(0);
+  const substr = _toArray(this.state.categories).slice(0);
   const category = this.state.category;
   if (null != category) {
     substr.splice(substr.indexOf(category), 1);
@@ -241,7 +249,7 @@ prototype["renderCategories"] = function renderCategories() {
     tmp2 = "null" === substr[0].id;
   }
   if (tmp2) {
-    arr = substr.shift();
+    substr.shift();
   }
   const mapped = substr.map(self.renderCategory, self);
   let tmp4 = null;
@@ -256,8 +264,8 @@ prototype["render"] = function render() {
   const category = this.state.category;
   const first = _slicedToArray(this.state.categories, 1)[0];
   const tmp2 = closure_15(this.context);
-  let obj = { style: tmp2.screenContainer, children: null };
-  obj = { style: tmp2.stackPadding, spacing: nativeDefault.space.PX_24, children: null };
+  const obj = { style: tmp2.screenContainer, children: null };
+  const obj2 = { style: tmp2.stackPadding, spacing: nativeDefault.space.PX_24, children: null };
   const intl = util.intl;
   if (null != category) {
     let name = category.name;
@@ -265,34 +273,36 @@ prototype["render"] = function render() {
     const intl2 = util.intl;
     name = intl2.string(util.t.GSfOoo);
   }
-  obj = {
-    variant: "text-md/medium",
-    color: "text-muted",
-    children: intl.formatToPlainString(util.t.OqccVl, { categoryName: name }),
-  };
-  const items = [map1(Text_Text.Text, obj), ,];
+  const items = [
+    map1(Text_Text.Text, {
+      variant: "text-md/medium",
+      color: "text-muted",
+      children: intl.formatToPlainString(util.t.OqccVl, { categoryName: name }),
+    }),
+    ,
+  ];
   let tmp3Result = null;
   if (null != first) {
     tmp3Result = null;
     if ("null" === first.id) {
       tmp3Result = null;
       if (null != category) {
-        const obj1 = { hasIcons: false, children: null };
-        const obj2 = {
+        const obj4 = { hasIcons: false, children: null };
+        const obj5 = {
           label: first.name,
           onPress() {
             return self.handleSetCategory(first.id);
           },
         };
-        obj1.children = map1(TableRow.TableRow, obj2, first.id);
-        tmp3Result = map1(TableRowGroup.TableRowGroup, obj1);
+        obj4.children = map1(TableRow.TableRow, obj5, first.id);
+        tmp3Result = map1(TableRowGroup.TableRowGroup, obj4);
       }
     }
   }
   items[1] = tmp3Result;
   items[2] = self.renderCategories();
-  obj.children = items;
-  obj.children = closure_1_14(Stack_Stack.Stack, obj);
+  obj2.children = items;
+  obj.children = closure_1_14(Stack_Stack.Stack, obj2);
   return map1(Form.Form, obj);
 };
 ChannelSettingsChangeCategory.contextType = fn(4347).ThemeContext;
@@ -306,7 +316,7 @@ export default function ConnectedChannelSettingsChangeCategory(channelId) {
   const obj = channelId(504);
   const navigation = channelId(1483).useNavigation();
   const obj2 = channelId(1483);
-  const appChannelBotUserId = channelId(11739).useAppChannelBotUserId(channel);
+  const appChannelBotUserId = channelId(11740).useAppChannelBotUserId(channel);
   _modDef38(null != channel, "ConnectedChannelSettingsChangeCategory: channel cannot be undefined");
   return closure_13(ChannelSettingsChangeCategory, { channel, navigation, appChannelBotUserId });
 }

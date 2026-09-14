@@ -17,13 +17,13 @@ function SolidCutout(arg0) {
     ({ cornerRadius: obj2.borderRadius, height: obj2.height, width: obj2.width, x: obj2.left, y: obj2.top } = cutout);
     style.push(size1);
     if (null != cutout.rotationDegrees) {
-      obj = { transform: null };
-      obj = { rotate: null };
+      const obj3 = { transform: null };
+      const obj4 = { rotate: null };
       const _HermesInternal = HermesInternal;
-      obj.rotate = "" + cutout.rotationDegrees + "deg";
-      const items1 = [obj];
-      obj.transform = items1;
-      style.push(obj);
+      obj4.rotate = "" + cutout.rotationDegrees + "deg";
+      const items1 = [obj4];
+      obj3.transform = items1;
+      style.push(obj3);
     }
   }
   return React4(React3, { style });
@@ -40,14 +40,13 @@ get_ActivityIndicator = fn(17);
 ({ StyleSheet, View: c3 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-let CutoutShape = { Circle: "circle", RoundedRect: "rounded-rect" };
+const CutoutShape = { Circle: "circle", RoundedRect: "rounded-rect" };
 let closure_7 = [];
-CutoutShape = { solidCutoutContainer: null, solidCutout: null };
-CutoutShape = {};
+let obj2 = { solidCutoutContainer: null, solidCutout: null };
 let merged = Object.assign(StyleSheet.absoluteFillObject);
-CutoutShape.solidCutoutContainer = CutoutShape;
-CutoutShape.solidCutout = { position: "absolute" };
-const styles = StyleSheet.create(CutoutShape);
+obj2.solidCutoutContainer = {};
+obj2.solidCutout = { position: "absolute" };
+const styles = StyleSheet.create(obj2);
 const ClipViewNativeComponent = ReanimatedRexport.createAnimatedComponent(ClipViewNativeComponentDefault);
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/Icon/native/ClipView.tsx");
@@ -56,8 +55,7 @@ export default function ClipView(cutouts) {
   cutouts = cutouts.cutouts;
   ({ children, style } = cutouts);
   const merged = Object.assign(cutouts, Object.assign({ children: 0, cutouts: 0, style: 0 }));
-  obj = CutoutBackgroundContext;
-  const cutoutBackgroundColor = obj.useCutoutBackgroundColor();
+  const cutoutBackgroundColor = CutoutBackgroundContext.useCutoutBackgroundColor();
   let tmp4 = null;
   let tmp5 = cutouts;
   if (null != cutoutBackgroundColor) {
@@ -67,19 +65,19 @@ export default function ClipView(cutouts) {
     }
     let tmp8 = null;
     if (tmp7) {
-      obj = { backgroundColor: cutoutBackgroundColor, cutouts };
-      tmp8 = React4(SolidCutoutOverlay, obj);
+      const obj2 = { backgroundColor: cutoutBackgroundColor, cutouts };
+      tmp8 = React4(SolidCutoutOverlay, obj2);
     }
     tmp4 = tmp8;
     tmp5 = closure_7;
   }
-  obj = {};
+  const obj3 = {};
   const merged1 = Object.assign(merged);
-  obj.cutouts = tmp5;
-  obj.style = style;
+  obj3.cutouts = tmp5;
+  obj3.style = style;
   const items = [children, tmp4];
-  obj.children = items;
-  return hasOwnProperty(ClipViewNativeComponentDefault, obj);
+  obj3.children = items;
+  return hasOwnProperty(ClipViewNativeComponentDefault, obj3);
 }
 export const ClipViewAnimated = ClipViewNativeComponent;
 export { CutoutShape };

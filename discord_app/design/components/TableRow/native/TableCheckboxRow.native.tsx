@@ -22,8 +22,7 @@ export const TableCheckboxRow = function TableCheckboxRow(checked) {
     checked,
     Object.assign({ checked: 0, label: 0, subLabel: 0, disabled: 0, onPress: 0, accessibilityHint: 0 }),
   );
-  let obj = ReanimatedRexport;
-  const sharedValue = obj.useSharedValue(0);
+  const sharedValue = ReanimatedRexport.useSharedValue(0);
   const items = [sharedValue];
   const items1 = [onPress, sharedValue, checked];
   const callback = noop.useCallback(() => {
@@ -37,23 +36,23 @@ export const TableCheckboxRow = function TableCheckboxRow(checked) {
   const nodeText1 = native.getNodeText(subLabel);
   const checkboxA11yNative = useA11yRolesNative.useCheckboxA11yNative({ checked, disabled });
   ({ accessibilityRole, accessibilityState } = checkboxA11yNative);
-  obj = {};
+  const obj5 = {};
   const merged1 = Object.assign(merged);
-  obj.arrow = false;
-  obj.label = label;
-  obj.subLabel = subLabel;
-  obj.disabled = disabled;
-  obj.accessibilityState = accessibilityState;
-  obj.accessible = true;
-  obj.accessibilityRole = accessibilityRole;
+  obj5.arrow = false;
+  obj5.label = label;
+  obj5.subLabel = subLabel;
+  obj5.disabled = disabled;
+  obj5.accessibilityState = accessibilityState;
+  obj5.accessible = true;
+  obj5.accessibilityRole = accessibilityRole;
   let str = nodeText1;
   if (nodeText1 == null) {
     str = "";
   }
-  obj.accessibilityLabel = "" + nodeText + ", " + str;
-  obj.accessibilityHint = checked.accessibilityHint;
-  obj.onPressIn = callback;
-  obj.onPress = callback1;
-  obj.trailing = jsx(FormCheckbox.FormCheckbox, { checked });
+  obj5.accessibilityLabel = "" + nodeText + ", " + str;
+  obj5.accessibilityHint = checked.accessibilityHint;
+  obj5.onPressIn = callback;
+  obj5.onPress = callback1;
+  obj5.trailing = jsx(FormCheckbox.FormCheckbox, { checked });
   return jsx(TableRow.TableRow, {});
 };

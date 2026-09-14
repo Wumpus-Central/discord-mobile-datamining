@@ -8,19 +8,17 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-let closure_4 = fn(11496).getInappropriateConversationsSafetyTips;
+let closure_4 = fn(11497).getInappropriateConversationsSafetyTips;
 const jsx = fn(21).jsx;
-fn(4636);
-let createStyles = { safetyTipsContainer: null };
-createStyles = { marginHorizontal: nativeDefault.space.PX_16 };
-createStyles.safetyTipsContainer = createStyles;
-let closure_6 = createStyles.createStyles(createStyles);
+const createStyles = fn(4636);
+let obj2 = { safetyTipsContainer: { marginHorizontal: nativeDefault.space.PX_16 } };
+let closure_6 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/self_mod/shared/native/SafetyToolsSafetyTipsActionSheet.tsx");
 
 export default function SafetyToolsSafetyTipsActionSheet(arg0) {
   ({ channelId, recipientId, warningId, warningType, onClose } = arg0);
-  let obj = {
+  const obj = {
     hasHeaderBack: true,
     recipientId,
     warningId,
@@ -35,14 +33,26 @@ export default function SafetyToolsSafetyTipsActionSheet(arg0) {
   obj.headerTitle = intl.string(util.t.EtNxi6);
   obj.channelId = channelId;
   obj.onClose = onClose;
-  obj = { style: tmp.safetyTipsContainer, children: null };
-  obj = { description: null, safetyTips: null };
+  const obj2 = { style: tmp.safetyTipsContainer, children: null };
+  const obj3 = { description: null, safetyTips: null };
   const intl2 = util.intl;
-  obj.description = intl2.string(util.t.DJMZX6);
-  obj.safetyTips = closure_4().map((children, index) =>
+  obj3.description = intl2.string(util.t.DJMZX6);
+  obj3.safetyTips = closure_4().map((children, index) =>
     jsx(Text_Text.Text, { variant: "text-sm/medium", children }, index),
   );
-  obj.children = <tmp3 description={null} safetyTips={null} />;
-  obj.children = <View description={null} safetyTips={null} />;
-  return <tmp2 description={null} safetyTips={null} />;
+  obj2.children = <tmp3 description={null} safetyTips={null} />;
+  obj.children = <View style={tmp.safetyTipsContainer}>{null}</View>;
+  return (
+    <tmp2
+      hasHeaderBack
+      recipientId={recipientId}
+      warningId={warningId}
+      warningType={warningType}
+      headerTitle={null}
+      channelId={null}
+      onClose={null}
+    >
+      {null}
+    </tmp2>
+  );
 }

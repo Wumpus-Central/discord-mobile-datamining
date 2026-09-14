@@ -7,11 +7,11 @@ import components_Button_Button from "../../../../design/components/Button/nativ
 import Card from "../../../../design/components/Card/native/Card.native.tsx";
 import _modDef7197 from "../../../../../_runtime/metro/07197__.js";
 import _modDef8070 from "../../../../../_runtime/metro/08070__.js";
-import _modDef11386 from "../../../../../_runtime/metro/11386__.js";
-import _modDef11693 from "../../../../../_runtime/metro/11693__.js";
-import _modDef12902 from "../../../../../_runtime/metro/12902__.js";
-import _modDef15869 from "../../../../../_runtime/metro/15869__.js";
-import _modDef15870 from "../../../../../_runtime/metro/15870__.js";
+import _modDef11387 from "../../../../../_runtime/metro/11387__.js";
+import _modDef11694 from "../../../../../_runtime/metro/11694__.js";
+import _modDef12903 from "../../../../../_runtime/metro/12903__.js";
+import _modDef15871 from "../../../../../_runtime/metro/15871__.js";
+import _modDef15872 from "../../../../../_runtime/metro/15872__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -38,21 +38,20 @@ function DemoContextMenu(align) {
     if (num2 > 1) {
       const _Array = Array;
       let obj = { length: tmp };
-      let arr = Array.from(obj);
-      let mapped = arr.map(() => {
+      let mapped = Array.from(obj).map(() => {
         closure_0 = length;
+        length = text(num[13]).shuffle(closure_2_8);
         let obj = text(num[13]);
-        length = obj.shuffle(closure_2_8);
         text(num[13]).shuffle(items);
-        obj = { length };
         const obj2 = text(num[13]);
-        return Array.from(obj).map((item, index) => {
+        const obj3 = { length };
+        return Array.from({ length }).map((item, index) => {
           const obj = {
             label: length[index % length.length],
             IconComponent: "a",
             iconSource: length2[index % length2.length],
-            variant: "r",
-            action: "isArray",
+            variant: true,
+            action: true,
           };
           let str = "default";
           if (index === closure_0 - 1) {
@@ -63,20 +62,20 @@ function DemoContextMenu(align) {
           return obj;
         });
       });
+      const arr = Array.from(obj);
     } else {
       closure_0 = num;
       closure_1 = _mod12.shuffle(closure_8);
       closure_2 = _mod12.shuffle(items);
       const _Array2 = Array;
-      obj = { length: num };
-      arr = Array.from(obj);
-      mapped = arr.map((item, index) => {
+      const obj4 = { length: num };
+      mapped = Array.from(obj4).map((item, index) => {
         const obj = {
           label: length[index % length.length],
           IconComponent: "a",
           iconSource: length2[index % length2.length],
-          variant: "r",
-          action: "isArray",
+          variant: true,
+          action: true,
         };
         let str = "default";
         if (index === closure_0 - 1) {
@@ -86,10 +85,11 @@ function DemoContextMenu(align) {
         obj.action = function action() {};
         return obj;
       });
+      const arr2 = Array.from(obj4);
     }
     return mapped;
   }, items);
-  obj = {
+  obj.children = closure_5(require("ContextMenu").ContextMenu, {
     triggerOnLongPress,
     items: memo,
     align: align.align,
@@ -102,8 +102,7 @@ function DemoContextMenu(align) {
       obj.variant = "primary";
       return hasOwnProperty(components_Button_Button.Button, obj);
     },
-  };
-  obj.children = closure_5(require("ContextMenu").ContextMenu, obj);
+  });
   return closure_5(closure_3, obj);
 }
 get_ActivityIndicator = fn(17);
@@ -111,14 +110,14 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 let items = [
-  _modDef12902,
+  _modDef12903,
   _modDef7197,
   _modDef8070,
-  _modDef11386,
+  _modDef11387,
   _modDef4600,
-  _modDef15869,
-  _modDef15870,
-  _modDef11693,
+  _modDef15871,
+  _modDef15872,
+  _modDef11694,
 ];
 let closure_8 = [
   "Launch Probe!",
@@ -133,11 +132,13 @@ let closure_8 = [
   "Unleash Space Vortex",
   "Activate Cloaking Device",
 ];
-fn(4636);
-let createStyles = { container: { flexDirection: "column", gap: 12, padding: 16 }, card: { gap: 12 }, divider: null };
-createStyles = { height: 1, backgroundColor: nativeDefault.colors.BORDER_SUBTLE, marginVertical: 12 };
-createStyles.divider = createStyles;
-let closure_9 = createStyles.createStyles(createStyles);
+const createStyles = fn(4636);
+let obj2 = {
+  container: { flexDirection: "column", gap: 12, padding: 16 },
+  card: { gap: 12 },
+  divider: { height: 1, backgroundColor: nativeDefault.colors.BORDER_SUBTLE, marginVertical: 12 },
+};
+let closure_9 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting(
   "modules/user_settings/design_system/native/UserSettingsDesignSystemContextMenu.tsx",
@@ -145,9 +146,9 @@ const result = size.fileFinishedImporting(
 
 export default function UserSettingsDesignSystemAlertModal() {
   const tmp = closure_9();
-  let obj = { children: null };
-  obj = { style: tmp.container, children: null };
-  obj = { style: tmp.card, children: null };
+  const obj = { children: null };
+  const obj2 = { style: tmp.container, children: null };
+  const obj3 = { style: tmp.card, children: null };
   items = [
     hasOwnProperty(Text_Text.Text, { variant: "text-lg/bold", children: "Basic Example" }),
     hasOwnProperty(Text_Text.Text, {
@@ -158,9 +159,9 @@ export default function UserSettingsDesignSystemAlertModal() {
     }),
     hasOwnProperty(DemoContextMenu, { label: "Open Menu" }),
   ];
-  obj.children = items;
-  const items1 = [timestampProducer(Card.Card, obj), , , , ,];
-  const obj1 = { style: tmp.card, children: null };
+  obj3.children = items;
+  const items1 = [timestampProducer(Card.Card, obj3), , , , ,];
+  const obj4 = { style: tmp.card, children: null };
   const items2 = [
     hasOwnProperty(Text_Text.Text, { variant: "text-lg/bold", children: "Long Press" }),
     hasOwnProperty(Text_Text.Text, {
@@ -170,9 +171,9 @@ export default function UserSettingsDesignSystemAlertModal() {
     }),
     hasOwnProperty(DemoContextMenu, { triggerOnLongPress: true, label: "Long Press to Open" }),
   ];
-  obj1.children = items2;
-  items1[1] = timestampProducer(Card.Card, obj1);
-  const obj2 = { style: tmp.card, children: null };
+  obj4.children = items2;
+  items1[1] = timestampProducer(Card.Card, obj4);
+  const obj5 = { style: tmp.card, children: null };
   const items3 = [
     hasOwnProperty(Text_Text.Text, { variant: "text-lg/bold", children: "Sections" }),
     hasOwnProperty(Text_Text.Text, {
@@ -182,9 +183,9 @@ export default function UserSettingsDesignSystemAlertModal() {
     }),
     hasOwnProperty(DemoContextMenu, { label: "Open Sectioned Menu", sections: 3, count: 2 }),
   ];
-  obj2.children = items3;
-  items1[2] = timestampProducer(Card.Card, obj2);
-  const obj3 = { style: tmp.card, children: null };
+  obj5.children = items3;
+  items1[2] = timestampProducer(Card.Card, obj5);
+  const obj6 = { style: tmp.card, children: null };
   const items4 = [
     hasOwnProperty(Text_Text.Text, { variant: "text-lg/bold", children: "Automatic Alignment" }),
     hasOwnProperty(Text_Text.Text, {
@@ -201,9 +202,9 @@ export default function UserSettingsDesignSystemAlertModal() {
     }),
     hasOwnProperty(DemoContextMenu, { count: 8, label: "Open Tall Menu" }),
   ];
-  obj3.children = items4;
-  items1[3] = timestampProducer(Card.Card, obj3);
-  const obj5 = { style: tmp.card, children: null };
+  obj6.children = items4;
+  items1[3] = timestampProducer(Card.Card, obj6);
+  const obj8 = { style: tmp.card, children: null };
   const items5 = [
     hasOwnProperty(Text_Text.Text, { variant: "text-lg/bold", children: "Intentional Alignment" }),
     hasOwnProperty(Text_Text.Text, {
@@ -227,9 +228,9 @@ export default function UserSettingsDesignSystemAlertModal() {
     hasOwnProperty(React3, { style: tmp.divider }),
     hasOwnProperty(DemoContextMenu, { count: 3, alignButton: "flex-end", align: "above", label: "Always Open Above" }),
   ];
-  obj5.children = items5;
-  items1[4] = timestampProducer(Card.Card, obj5);
-  const obj10 = { style: tmp.card, children: null };
+  obj8.children = items5;
+  items1[4] = timestampProducer(Card.Card, obj8);
+  const obj13 = { style: tmp.card, children: null };
   const items6 = [
     hasOwnProperty(Text_Text.Text, { variant: "text-lg/bold", children: "Overflow Scrolling" }),
     hasOwnProperty(Text_Text.Text, {
@@ -240,9 +241,9 @@ export default function UserSettingsDesignSystemAlertModal() {
     }),
     hasOwnProperty(DemoContextMenu, { count: 30, label: "Open Really Tall Menu" }),
   ];
-  obj10.children = items6;
-  items1[5] = timestampProducer(Card.Card, obj10);
-  obj.children = items1;
-  obj.children = timestampProducer(React3, obj);
+  obj13.children = items6;
+  items1[5] = timestampProducer(Card.Card, obj13);
+  obj2.children = items1;
+  obj.children = timestampProducer(React3, obj2);
   return hasOwnProperty(React4, obj);
 }

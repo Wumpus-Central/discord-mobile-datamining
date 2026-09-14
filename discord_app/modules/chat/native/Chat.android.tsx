@@ -14,11 +14,11 @@ function DCDChatList() {
     const NativeResult = Gesture.Native();
     return Gesture.Native().disallowInterruption(true).shouldCancelWhenOutside(false);
   }, []);
-  let obj = { gesture: memo, children: null };
-  obj = { style: closure_7().chatList, floatingChatInputEnabled: true, children: null };
+  const obj = { gesture: memo, children: null };
+  const obj2 = { style: closure_7().chatList, floatingChatInputEnabled: true, children: null };
   const tmp = closure_7();
-  obj.children = hasOwnProperty(TTIFirstContentfulPaint.TTIFirstContentfulPaint, { label: "chat_list_android" });
-  obj.children = hasOwnProperty(ChatListNativeComponentDefault, obj);
+  obj2.children = hasOwnProperty(TTIFirstContentfulPaint.TTIFirstContentfulPaint, { label: "chat_list_android" });
+  obj.children = hasOwnProperty(ChatListNativeComponentDefault, obj2);
   return hasOwnProperty(LegacyBaseButton.GestureDetector, obj);
 }
 const jsxProd = fn(21);
@@ -29,14 +29,13 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/chat/native/Chat.android.tsx");
 
 export default noop.forwardRef((children, ref) => {
-  let obj = initialize;
   const items = [AccessibilityStore];
-  const stateFromStores = obj.useStateFromStores(items, () => roleStyle.roleStyle);
-  obj = {};
+  const stateFromStores = initialize.useStateFromStores(items, () => roleStyle.roleStyle);
+  const obj2 = {};
   const merged = Object.assign(children);
-  obj.roleStyle = stateFromStores;
-  obj.ref = ref;
+  obj2.roleStyle = stateFromStores;
+  obj2.ref = ref;
   const items1 = [hasOwnProperty(DCDChatList, {}), children.children];
-  obj.children = items1;
-  return timestampProducer(ChatNativeComponentDefault, obj);
+  obj2.children = items1;
+  return timestampProducer(ChatNativeComponentDefault, obj2);
 });

@@ -2,6 +2,8 @@
 import noop from "../../../_runtime/metro/00019__.js";
 import EmojiStore from "../emojis/EmojiStore.tsx";
 
+const require = globalThis.__r;
+
 const require = fn;
 let items = [];
 const size = fn(2);

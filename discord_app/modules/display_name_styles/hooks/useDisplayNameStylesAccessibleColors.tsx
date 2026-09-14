@@ -26,7 +26,7 @@ export const useDisplayNameStylesAccessibleColors = function useDisplayNameStyle
   if (effectId == null) {
     effectId = tmp(tmp2[3]).DisplayNameEffect.SOLID;
   }
-  let obj = displayNameStyles(stateFromStores[2]);
+  const obj = displayNameStyles(stateFromStores[2]);
   displayNameStylesEffectConfig = displayNameStyles(stateFromStores[4]).useDisplayNameStylesEffectConfig(effectId);
   const items1 = [
     displayNameStyles,
@@ -41,8 +41,7 @@ export const useDisplayNameStylesAccessibleColors = function useDisplayNameStyle
     } else {
       const colors = tmp.colors;
       items = colors.map((item) => {
-        displayNameStyles(stateFromStores[5]);
-        const obj = {
+        const obj2 = {
           foreground: backgroundColor(stateFromStores[6])(item),
           background: null,
           ratio: null,
@@ -53,10 +52,10 @@ export const useDisplayNameStylesAccessibleColors = function useDisplayNameStyle
         } else {
           tmp4 = backgroundColor(stateFromStores[6])(closure_1_1);
         }
-        obj.background = tmp4;
-        obj.ratio = minContrastRatio.minContrastRatio;
-        obj.saturationFactor = saturationFactor;
-        const accessibleForegroundColor = obj.getAccessibleForegroundColor(obj);
+        obj2.background = tmp4;
+        obj2.ratio = minContrastRatio.minContrastRatio;
+        obj2.saturationFactor = saturationFactor;
+        const accessibleForegroundColor = displayNameStyles(stateFromStores[5]).getAccessibleForegroundColor(obj2);
         return accessibleForegroundColor.hex();
       });
     }

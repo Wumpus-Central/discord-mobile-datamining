@@ -21,20 +21,17 @@ export const receiveLocalNotification = function receiveLocalNotification(getDat
     data = getData.getData();
     let type = data.type;
     function dispatch() {
-      let obj = DispatcherDefault;
-      obj.dispatch({ type: "PUSH_NOTIFICATION_CLICK" });
-      let obj1 = SentryUtilsDefault;
-      obj = { message: "Notification Clicked", data: null };
-      obj = { type: data.type };
-      obj.data = obj;
-      obj1.addBreadcrumb(obj);
-      obj1 = { notif_type: data.type, guild_id: null };
+      DispatcherDefault.dispatch({ type: "PUSH_NOTIFICATION_CLICK" });
+      const obj3 = { message: "Notification Clicked", data: { type: data.type } };
+      SentryUtilsDefault.addBreadcrumb(obj3);
+      const obj4 = { type: data.type };
+      const obj6 = { notif_type: data.type, guild_id: null };
       let guildId = null;
       if ("guildId" in data) {
         guildId = data.guildId;
       }
-      obj1.guild_id = guildId;
-      AnalyticsUtilsDefault.track(constants2.NOTIFICATION_CLICKED, obj1);
+      obj6.guild_id = guildId;
+      AnalyticsUtilsDefault.track(constants2.NOTIFICATION_CLICKED, obj6);
       const type = data.type;
       if (constants.GUILD_VERIFICATION === type) {
         const result = GuildActionCreatorsDefault.transitionToGuildSync(data.guildId);
@@ -60,7 +57,7 @@ export const receiveLocalNotification = function receiveLocalNotification(getDat
         }
       }
     }
-    const obj2 = data(7578);
+    let obj2 = data(7578);
     if (obj.isDispatching()) {
       const _setImmediate = setImmediate;
       setImmediate(dispatch);

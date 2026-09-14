@@ -108,14 +108,14 @@ prototype["track"] = function track(arg0) {
       if (usesSinceLastTrack == null) {
         usesSinceLastTrack = 1;
       }
-      obj = { totalUses: usesSinceLastTrack, recentUses: null, frecency: -1, score: 0 };
+      const obj2 = { totalUses: usesSinceLastTrack, recentUses: null, frecency: -1, score: 0 };
       if (timestamp == null) {
         usesSinceLastTrack = items.Date;
         timestamp = usesSinceLastTrack.now();
       }
       items = [timestamp];
-      obj.recentUses = items;
-      let tmp5 = obj;
+      obj2.recentUses = items;
+      let tmp5 = obj2;
     } else {
       tmp.frecency = -1;
       let num = usesSinceLastTrack;
@@ -124,20 +124,20 @@ prototype["track"] = function track(arg0) {
       }
       tmp.totalUses = tmp.totalUses + num;
       if (null == timestamp) {
-        let recentUses = tmp.recentUses;
-        const _Date = Date;
-        recentUses.push(Date.now());
-      } else {
         const recentUses1 = tmp.recentUses;
-        recentUses1.push(timestamp);
-        recentUses = tmp.recentUses;
+        const _Date = Date;
+        recentUses1.push(Date.now());
+      } else {
+        const recentUses2 = tmp.recentUses;
+        recentUses2.push(timestamp);
+        const recentUses = tmp.recentUses;
         const sorted = recentUses.sort();
       }
       tmp5 = tmp;
       if (tmp.recentUses.length > self.maxSamples) {
         do {
-          let recentUses2 = tmp.recentUses;
-          let arr1 = recentUses2.shift();
+          let recentUses3 = tmp.recentUses;
+          let arr3 = recentUses3.shift();
           tmp5 = tmp;
           length = tmp.recentUses.length;
           maxSamples = self.maxSamples;
@@ -188,13 +188,12 @@ prototype["compute"] = function compute() {
   dependencyMap = _modDef4228();
   let maxByResult = null;
   if (this.calculateMaxTotalUse) {
-    let tmpResult = tmp(12);
     const _Object = Object;
-    maxByResult = tmpResult.maxBy(Object.values(self.usageHistory), (totalUses) => totalUses.totalUses);
+    maxByResult = tmp(12).maxBy(Object.values(self.usageHistory), (totalUses) => totalUses.totalUses);
+    const tmpResult = tmp(12);
   }
   importDefault = maxByResult;
-  tmpResult = tmp(12);
-  let item = tmpResult.forEach(self.usageHistory, (recentUses, arg1) => {
+  let item = _modDef12.forEach(self.usageHistory, (recentUses, arg1) => {
     recentUses = recentUses.recentUses;
     if (-1 === recentUses.frecency) {
       dependencyMap = self.computeBonus(arg1) / 100;
@@ -224,6 +223,7 @@ prototype["compute"] = function compute() {
       const arr2 = maxByResult(dependencyMap[0]);
     }
   });
+  const tmpResult2 = _modDef12;
   const mapped = _modDef12(self.usageHistory).map((frecency, index) => {
     const lookupKeyResult = self.lookupKey(index);
     let tmp2 = null;

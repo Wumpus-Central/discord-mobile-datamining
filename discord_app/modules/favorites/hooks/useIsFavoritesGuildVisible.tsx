@@ -72,14 +72,14 @@ export default function useIsFavoritesGuildVisible() {
   );
 }
 export const isFavoritesGuildVisible = function isFavoritesGuildVisible() {
-  let obj = FavoritesHooks;
-  const favoritesAccess = obj.getFavoritesAccess();
-  obj = {
+  const favoritesAccess = FavoritesHooks.getFavoritesAccess();
+  const obj2 = {
     isExperimentEnabled: favoritesAccess.isExperimentEnabled,
     isFreemium: favoritesAccess.isFreemium,
     hasAccess: favoritesAccess.hasAccess,
-    isIntroPopoverShown: FavoritesGuildIntroPopover.isFavoritesIntroPopoverShown(),
+    isIntroPopoverShown: null,
     keepWhileViewing: true,
   };
-  return computeIsFavoritesGuildVisible(FavoriteStore, SelectedGuildStore, obj);
+  obj2.isIntroPopoverShown = FavoritesGuildIntroPopover.isFavoritesIntroPopoverShown();
+  return computeIsFavoritesGuildVisible(FavoriteStore, SelectedGuildStore, obj2);
 };

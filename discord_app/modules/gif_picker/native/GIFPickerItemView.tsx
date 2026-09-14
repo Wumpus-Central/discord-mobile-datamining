@@ -12,7 +12,7 @@ const View = fn(17).View;
 const jsx = fn(21).jsx;
 const createStyles = fn(4636);
 let closure_6 = createStyles.createStyles((height) => {
-  let obj = { container: null, gifImage: null, gifImageSelected: null };
+  const obj = { container: null, gifImage: null, gifImageSelected: null };
   const size = {
     paddingBottom: gif_picker_GIFPickerUtils.GIF_PICKER_GUTTER_SPACING,
     paddingHorizontal: gif_picker_GIFPickerUtils.GIF_PICKER_GUTTER_SPACING / 2,
@@ -22,10 +22,9 @@ let closure_6 = createStyles.createStyles((height) => {
     flex: 1,
   };
   obj.container = size;
-  obj = { backgroundColor: nativeDefault.colors.BORDER_SUBTLE, borderRadius: nativeDefault.radii.xs, flex: 1 };
-  obj.gifImage = obj;
-  obj = { borderWidth: 2, borderColor: nativeDefault.colors.BACKGROUND_BRAND };
-  obj.gifImageSelected = obj;
+  obj.gifImage = { backgroundColor: nativeDefault.colors.BORDER_SUBTLE, borderRadius: nativeDefault.radii.xs, flex: 1 };
+  const obj2 = { backgroundColor: nativeDefault.colors.BORDER_SUBTLE, borderRadius: nativeDefault.radii.xs, flex: 1 };
+  obj.gifImageSelected = { borderWidth: 2, borderColor: nativeDefault.colors.BACKGROUND_BRAND };
   return obj;
 });
 let size = fn(2);
@@ -45,8 +44,13 @@ export default function GIFPickerItemView(onPressGIF) {
   }, items);
   const items2 = [index, item.src];
   const callback1 = noop.useCallback(() => {
-    const obj = { item };
-    obj.openLazy(asyncRequireImpl(10508, dependencyMap.paths), "GIFPickerItemActionSheet", obj, "stack");
+    ActionSheetActionCreatorsDefault.openLazy(
+      asyncRequireImpl(10509, dependencyMap.paths),
+      "GIFPickerItemActionSheet",
+      { item },
+      "stack",
+    );
+    const obj2 = { item };
     const result = KeyboardManagerUtils.dismissGlobalKeyboard();
   }, items1);
   const memo = noop.useMemo(() => {
@@ -74,8 +78,8 @@ export default function GIFPickerItemView(onPressGIF) {
   };
   let tmp7;
   if (null != selected) {
-    obj = { selected };
-    tmp7 = obj;
+    let obj2 = { selected };
+    tmp7 = obj2;
   }
   obj.accessibilityState = tmp7;
   obj.onPress = callback;
@@ -87,14 +91,23 @@ export default function GIFPickerItemView(onPressGIF) {
   } else {
     gifImage = tmp.gifImage;
   }
-  obj = { style: gifImage, source: { uri: item.src } };
   obj.children = jsx(item(index[12]), { style: gifImage, source: { uri: item.src } });
-  return jsx(onPressGIF(index[11]).PressableOpacity, { style: gifImage, source: { uri: item.src } });
+  return jsx(onPressGIF(index[11]).PressableOpacity, {
+    style: tmp.container,
+    accessibilityRole: "button",
+    accessibilityLabel: memo,
+    accessibilityState: null,
+    onPress: null,
+    onLongPress: null,
+    children: null,
+  });
 }
 export const GIFPickerItemPlaceholder = noop.memo((height) => {
   const tmp = closure_6(height.height);
-  let obj = { style: tmp.container, children: null };
-  obj = { style: tmp.gifImage };
-  obj.children = <View style={tmp.gifImage} />;
-  return <View style={tmp.gifImage} />;
+  const obj = { style: tmp.container, children: <View style={tmp.gifImage} /> };
+  return (
+    <View style={tmp.container}>
+      <View style={tmp.gifImage} />
+    </View>
+  );
 });

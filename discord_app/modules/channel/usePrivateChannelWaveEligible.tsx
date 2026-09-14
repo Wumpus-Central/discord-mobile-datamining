@@ -2,6 +2,8 @@
 import MessageStore from "../../stores/MessageStore.tsx";
 import RelationshipStore from "../../stores/RelationshipStore.tsx";
 
+const require = globalThis.__r;
+
 const require = fn;
 const ChannelFlags = fn(1964).ChannelFlags;
 const MessageTypes = fn(1074).MessageTypes;

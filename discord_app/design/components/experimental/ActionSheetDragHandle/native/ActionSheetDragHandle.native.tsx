@@ -44,7 +44,7 @@ export const ActionSheetDragHandle = noop.memo((accessibilityLabel) => {
   if (null != overlay) {
     containerOverlay = tmp3.containerOverlay;
   }
-  let obj = {
+  const obj = {
     style: items,
     accessibilityLabel,
     accessibilityRole: "button",
@@ -53,17 +53,27 @@ export const ActionSheetDragHandle = noop.memo((accessibilityLabel) => {
     children: null,
   };
   items[1] = containerOverlay;
-  obj = { style: tmp3.handle, children: null };
+  const obj2 = { style: tmp3.handle, children: null };
   if (null != animatedBarStyles) {
-    obj = { style: null };
+    const obj3 = { style: null };
     const items1 = [tmp3.bar, animatedBarStyles];
-    obj.style = items1;
+    obj3.style = items1;
     let tmp4Result = jsx(ReanimatedRexportDefault.View, { style: null });
   } else {
-    const obj1 = { style: tmp3.bar };
+    const obj4 = { style: tmp3.bar };
     tmp4Result = <React4 style={tmp3.bar} />;
   }
-  obj.children = tmp4Result;
+  obj2.children = tmp4Result;
   obj.children = <React4 style={tmp3.handle}>{null}</React4>;
-  return <React3 style={tmp3.handle}>{null}</React3>;
+  return (
+    <React3
+      style={items}
+      accessibilityLabel={accessibilityLabel}
+      accessibilityRole="button"
+      aria-hidden={accessibilityLabel["aria-hidden"]}
+      onPress={onPress}
+    >
+      {null}
+    </React3>
+  );
 });

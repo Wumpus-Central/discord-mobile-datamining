@@ -30,15 +30,15 @@ class ChannelCallCameraPreview {
     tmp9 = null;
     if (isConnectedToVoiceChannel) {
       tmp10 = jsx;
-      obj = { value: null, children: null };
-      obj.value = revealProviderValue;
+      obj1 = { value: null, children: null };
+      obj1.value = revealProviderValue;
       tmp11 = closure_1;
-      obj1 = { channel: null, participantScreenIsFocused: null, isChannelCallModalOpen: null };
-      obj1.channel = channel;
-      obj1.participantScreenIsFocused = !tmp;
-      obj1.isChannelCallModalOpen = tmp8;
-      obj.children = jsx(closure_1(tmp3[12]), obj1);
-      tmp9 = jsx(tmp2(tmp3[10]).RevealContext.Provider, obj);
+      obj5 = { channel: null, participantScreenIsFocused: null, isChannelCallModalOpen: null };
+      obj5.channel = channel;
+      obj5.participantScreenIsFocused = !tmp;
+      obj5.isChannelCallModalOpen = tmp8;
+      obj1.children = jsx(closure_1(tmp3[12]), obj5);
+      tmp9 = jsx(tmp2(tmp3[10]).RevealContext.Provider, obj1);
     }
     return tmp9;
   }
@@ -127,37 +127,41 @@ let closure_30 = noop.memo((channelId) => {
   let sharedValue;
   let derivedValue;
   c13 = undefined;
+  let obj2;
   let ref;
-  let __closure = channelId(ref[19]);
   let items = [sharedValue];
   let items1 = [channelId];
-  const stateFromStores = __closure.useStateFromStores(items, () => ChannelStore.getChannel(channelId), items1);
-  let obj2 = ref2;
+  const stateFromStores = channelId(ref[19]).useStateFromStores(
+    items,
+    () => ChannelStore.getChannel(channelId),
+    items1,
+  );
   ref = ref2.useRef(undefined);
   const ref1 = ref2.useRef(undefined);
   ref2 = ref2.useRef(undefined);
   const ref3 = ref2.useRef(undefined);
-  let obj3 = channelId(ref[16]);
-  sharedValue = obj3.useSharedValue(0);
-  let obj4 = channelId(ref[16]);
-  const sharedValue1 = obj4.useSharedValue(0);
+  let obj = channelId(ref[19]);
+  sharedValue = channelId(ref[16]).useSharedValue(0);
+  const obj4 = channelId(ref[16]);
+  const sharedValue1 = channelId(ref[16]).useSharedValue(0);
   const voiceChatDrawerState = derivedValue().voiceChatDrawerState;
-  let obj5 = channelId(ref[16]);
+  const obj5 = channelId(ref[16]);
   let fn = function c() {
     return voiceChatDrawerState;
   };
   fn.__closure = { voiceChatDrawerStoreState: voiceChatDrawerState };
   fn.__workletHash = 4903837231689;
   fn.__initData = __initData3;
-  derivedValue = obj5.useDerivedValue(fn);
+  derivedValue = channelId(ref[16]).useDerivedValue(fn);
   const size = guildId(ref[20])();
   const width = size.width;
   const height = size.height;
-  let obj6 = channelId(ref[16]);
-  const sharedValue2 = obj6.useSharedValue(false);
+  const obj6 = channelId(ref[16]);
+  const sharedValue2 = channelId(ref[16]).useSharedValue(false);
   let result = 0.8 * height;
   VoiceChatDrawerState = result;
   const tmp13 = guildId(ref[21])(channelId);
+  const obj7 = channelId(ref[16]);
   [tmp15, c13] = ref1(ref2.useState(false), 2);
   let tmp16 = !tmp13;
   if (!tmp13) {
@@ -167,13 +171,13 @@ let closure_30 = noop.memo((channelId) => {
     }
     tmp16 = !isGuildStageVoiceResult;
   }
-  __closure = { channelId, guildId };
-  ref = obj2.useRef(__closure);
-  const effect = obj2.useEffect(() => {
-    closure_15.current = current;
+  obj2 = { channelId, guildId };
+  ref = obj3.useRef(obj2);
+  const effect = obj3.useEffect(() => {
+    closure_15.current = obj2;
   });
   let items2 = [width, sharedValue];
-  const effect1 = obj2.useEffect(() => {
+  const effect1 = obj3.useEffect(() => {
     const current = ref.current;
     channelId = current.channelId;
     let chatOpen = state.getState().voiceChatDrawerState === VoiceChatDrawerState.OPEN;
@@ -184,32 +188,32 @@ let closure_30 = noop.memo((channelId) => {
       const fn = function t() {
         const result = sharedValue.set(-width);
       };
-      const __closure = { translateX: sharedValue, width };
-      fn.__closure = __closure;
+      obj2 = { translateX: sharedValue, width };
+      fn.__closure = obj2;
       fn.__workletHash = 15726690166344;
       fn.__initData = __initData;
-      __closure.runOnUI(fn)();
+      ReanimatedRexport.runOnUI(fn)();
       ReanimatedRexport.runOnJS(RouteManagerUtils.transitionToVoiceRoute)(current.guildId, channelId);
     }
   }, items2);
   const tmp14 = ref1(ref2.useState(false), 2);
-  let tmpResult = tmp(tmp2[16]);
+  const tmp10Result = guildId(ref[23]);
   function ae() {
     value = sharedValue2.get();
     let tmp3 = sharedValue.get() === -width;
     if (!tmp3) {
       tmp3 = 0 === sharedValue.get();
     }
-    value = derivedValue.get();
-    const value1 = derivedValue.get();
+    const value3 = derivedValue.get();
+    const value4 = derivedValue.get();
     if (!value) {
       if (tmp3) {
         return sharedValue.get() === -width ? VoiceChatDrawerState.OPEN : VoiceChatDrawerState.CLOSED;
       }
     }
-    if (value !== VoiceChatDrawerState.OPEN) {
+    if (value3 !== VoiceChatDrawerState.OPEN) {
       let OPENING = null;
-      if (value1 === VoiceChatDrawerState.CLOSED) {
+      if (value4 === VoiceChatDrawerState.CLOSED) {
         OPENING = null;
         if (sharedValue.get() < 0) {
           OPENING = VoiceChatDrawerState.OPENING;
@@ -218,14 +222,13 @@ let closure_30 = noop.memo((channelId) => {
     }
     OPENING = VoiceChatDrawerState.CLOSING;
   }
-  __closure = {
+  ae.__closure = {
     isSwipeToChatInProgress: sharedValue2,
     translateX: sharedValue,
     width,
     voiceChatDrawerState: derivedValue,
     VoiceChatDrawerState,
   };
-  ae.__closure = __closure;
   ae.__workletHash = 16786813095205;
   ae.__initData = __initData4;
   function te(arg0, arg1) {
@@ -244,7 +247,14 @@ let closure_30 = noop.memo((channelId) => {
       }
     }
   }
-  const tmp10Result = guildId(ref[23]);
+  const obj8 = {
+    isSwipeToChatInProgress: sharedValue2,
+    translateX: sharedValue,
+    width,
+    voiceChatDrawerState: derivedValue,
+    VoiceChatDrawerState,
+  };
+  const tmpResult = channelId(ref[16]);
   te.__closure = {
     runOnJS: channelId(ref[16]).runOnJS,
     setVoiceChatDrawerState: width,
@@ -256,7 +266,14 @@ let closure_30 = noop.memo((channelId) => {
   te.__workletHash = 14188334620807;
   te.__initData = __initData5;
   const animatedReaction = tmpResult.useAnimatedReaction(ae, te);
-  tmpResult = tmp(tmp2[16]);
+  const obj9 = {
+    runOnJS: channelId(ref[16]).runOnJS,
+    setVoiceChatDrawerState: width,
+    channelId,
+    VoiceChatDrawerState,
+    transitionToVoiceRoute: channelId(ref[22]).transitionToVoiceRoute,
+    guildId,
+  };
   function re() {
     return derivedValue.get();
   }
@@ -272,23 +289,24 @@ let closure_30 = noop.memo((channelId) => {
       const result = sharedValue.set(PanGestureAnimations.withPanGestureTiming(0));
     }
   }
-  obj2 = { VoiceChatDrawerState, translateX: sharedValue, withPanGestureTiming: tmp(tmp2[18]).withPanGestureTiming };
-  ne.__closure = obj2;
+  const tmpResult4 = channelId(ref[16]);
+  ne.__closure = {
+    VoiceChatDrawerState,
+    translateX: sharedValue,
+    withPanGestureTiming: channelId(ref[18]).withPanGestureTiming,
+  };
   ne.__workletHash = 260500087614;
   ne.__initData = __initData7;
-  const animatedReaction1 = tmpResult.useAnimatedReaction(re, ne);
+  const animatedReaction1 = tmpResult4.useAnimatedReaction(re, ne);
   let tmp24 = !tmp15;
   if (!tmp15) {
     tmp24 = !tmp13;
   }
   closure_129_0 = width;
-  const obj1 = {
-    runOnJS: channelId(ref[16]).runOnJS,
-    setVoiceChatDrawerState: width,
-    channelId,
+  const obj10 = {
     VoiceChatDrawerState,
-    transitionToVoiceRoute: channelId(ref[22]).transitionToVoiceRoute,
-    guildId,
+    translateX: sharedValue,
+    withPanGestureTiming: channelId(ref[18]).withPanGestureTiming,
   };
   const fn2 = function u() {
     const items = [0, -channelId];
@@ -300,15 +318,15 @@ let closure_30 = noop.memo((channelId) => {
   const fn3 = function c() {
     channelId(ref[16]).runOnJS(channelId(ref[17]).dismissKeyboard)();
   };
-  obj3 = { runOnJS: null, dismissKeyboard: null };
+  const obj11 = { runOnJS: null, dismissKeyboard: null };
   const derivedValue1 = channelId(ref[16]).useDerivedValue(fn2);
-  obj3.runOnJS = channelId(ref[16]).runOnJS;
-  obj3.dismissKeyboard = channelId(ref[17]).dismissKeyboard;
-  fn3.__closure = obj3;
+  obj11.runOnJS = channelId(ref[16]).runOnJS;
+  obj11.dismissKeyboard = channelId(ref[17]).dismissKeyboard;
+  fn3.__closure = obj11;
   fn3.__workletHash = 4086900686382;
   fn3.__initData = __initData2;
-  const callback = obj2.useCallback(fn3, []);
-  obj4 = {
+  const callback = obj3.useCallback(fn3, []);
+  const obj12 = {
     lowerBounds: -width,
     upperBounds: 0,
     translate: sharedValue,
@@ -317,61 +335,134 @@ let closure_30 = noop.memo((channelId) => {
     onStart: callback,
     isGestureInProgress: sharedValue2,
   };
-  const tmpResult1 = channelId(ref[16]);
-  const obj17 = guildId(ref[18])(obj4);
+  const tmpResult5 = channelId(ref[16]);
+  const obj17 = guildId(ref[18])({
+    lowerBounds: -width,
+    upperBounds: 0,
+    translate: sharedValue,
+    vertical: false,
+    snapPositions: derivedValue1,
+    onStart: callback,
+    isGestureInProgress: sharedValue2,
+  });
   const items3 = [-c13, c13];
-  const enabledResult = guildId(ref[18])(obj4).enabled(tmp24);
-  const items4 = [-__closure, __closure];
-  const failOffsetYResult = guildId(ref[18])(obj4).enabled(tmp24).failOffsetY(items3);
-  const activeOffsetXResult = guildId(ref[18])(obj4).enabled(tmp24).failOffsetY(items3).activeOffsetX(items4);
-  obj5 = {
+  const enabledResult = guildId(ref[18])({
+    lowerBounds: -width,
+    upperBounds: 0,
+    translate: sharedValue,
+    vertical: false,
+    snapPositions: derivedValue1,
+    onStart: callback,
+    isGestureInProgress: sharedValue2,
+  }).enabled(tmp24);
+  const items4 = [-obj2, obj2];
+  const failOffsetYResult = guildId(ref[18])({
+    lowerBounds: -width,
+    upperBounds: 0,
+    translate: sharedValue,
+    vertical: false,
+    snapPositions: derivedValue1,
+    onStart: callback,
+    isGestureInProgress: sharedValue2,
+  })
+    .enabled(tmp24)
+    .failOffsetY(items3);
+  const activeOffsetXResult = guildId(ref[18])({
+    lowerBounds: -width,
+    upperBounds: 0,
+    translate: sharedValue,
+    vertical: false,
+    snapPositions: derivedValue1,
+    onStart: callback,
+    isGestureInProgress: sharedValue2,
+  })
+    .enabled(tmp24)
+    .failOffsetY(items3)
+    .activeOffsetX(items4);
+  const obj13 = {
     gestureEnabled: tmp16,
     height,
     maxTranslate: result,
     thresholdTranslate: 0.5 * height,
     translateY: sharedValue1,
   };
-  const withRefResult = guildId(ref[18])(obj4).enabled(tmp24).failOffsetY(items3).activeOffsetX(items4).withRef(ref);
-  const obj22 = guildId(ref[25])(obj5);
+  const withRefResult = guildId(ref[18])({
+    lowerBounds: -width,
+    upperBounds: 0,
+    translate: sharedValue,
+    vertical: false,
+    snapPositions: derivedValue1,
+    onStart: callback,
+    isGestureInProgress: sharedValue2,
+  })
+    .enabled(tmp24)
+    .failOffsetY(items3)
+    .activeOffsetX(items4)
+    .withRef(ref);
+  const obj22 = guildId(ref[25])({
+    gestureEnabled: tmp16,
+    height,
+    maxTranslate: result,
+    thresholdTranslate: 0.5 * height,
+    translateY: sharedValue1,
+  });
   const items5 = [channelId];
-  let result1 = guildId(ref[25])(obj5).withRef(ref3).requireExternalGestureToFail(ref2, ref1);
-  const layoutEffect = obj2.useLayoutEffect(() => {
+  let result1 = guildId(ref[25])({
+    gestureEnabled: tmp16,
+    height,
+    maxTranslate: result,
+    thresholdTranslate: 0.5 * height,
+    translateY: sharedValue1,
+  })
+    .withRef(ref3)
+    .requireExternalGestureToFail(ref2, ref1);
+  const layoutEffect = obj3.useLayoutEffect(() => {
     const result = PrivateChannelCallUtils.maybeShowAgeGateModal(channelId);
   }, items5);
-  const withRefResult1 = guildId(ref[25])(obj5).withRef(ref3);
+  const withRefResult1 = guildId(ref[25])({
+    gestureEnabled: tmp16,
+    height,
+    maxTranslate: result,
+    thresholdTranslate: 0.5 * height,
+    translateY: sharedValue1,
+  }).withRef(ref3);
   function oe() {
-    obj = { flex: 1, transform: null };
-    obj = { translateY: null };
+    const obj = { flex: 1, transform: null };
+    obj2 = { translateY: null };
     const items = [0, c12];
     const items1 = [0, c12];
-    obj.translateY = ReanimatedRexport.interpolate(sharedValue1.get(), items, items1);
-    const items2 = [obj];
+    obj2.translateY = ReanimatedRexport.interpolate(sharedValue1.get(), items, items1);
+    const items2 = [obj2];
     obj.transform = items2;
     return obj;
   }
-  obj6 = { interpolate: tmp(tmp2[16]).interpolate, translateY: sharedValue1, maxVerticalTranslate: result };
-  oe.__closure = obj6;
+  const tmpResult6 = channelId(ref[16]);
+  oe.__closure = {
+    interpolate: channelId(ref[16]).interpolate,
+    translateY: sharedValue1,
+    maxVerticalTranslate: result,
+  };
   oe.__workletHash = 8643926178558;
   oe.__initData = __initData8;
   const items6 = [ref2, ref3, ref, ref1, sharedValue, width, channelId];
-  const animatedStyle = channelId(ref[16]).useAnimatedStyle(oe);
+  const animatedStyle = tmpResult6.useAnimatedStyle(oe);
   let tmp32 = null;
   if (null != stateFromStores) {
-    const obj7 = { value: tmp10Result(tmp10(tmp2[24]).CHANNEL_CALL).analyticsLocations, children: null };
-    const obj8 = { gesture: null, children: null };
+    const obj15 = { value: tmp10Result(tmp10(tmp2[24]).CHANNEL_CALL).analyticsLocations, children: null };
+    const obj16 = { gesture: null, children: null };
     const Gesture = tmp(tmp2[27]).Gesture;
-    obj8.gesture = Gesture.Exclusive(withRefResult, result1);
-    const obj9 = { style: animatedStyle, children: null };
-    const obj10 = { value: tmp31, children: null };
-    const obj11 = { channelId };
-    const items7 = [ref(closure_18, obj11)];
-    const obj12 = { channel: stateFromStores };
-    items7[1] = ref(ChannelCallCameraPreview, obj12);
-    obj10.children = items7;
-    obj9.children = closure_16(tmp(tmp2[28]).VoiceChatNavigationContext.Provider, obj10);
-    obj8.children = ref(tmp10(tmp2[16]).View, obj9);
-    obj7.children = ref(tmp(tmp2[27]).GestureDetector, obj8);
-    tmp32 = ref(tmp(tmp2[23]).AnalyticsLocationProvider, obj7);
+    obj16.gesture = Gesture.Exclusive(withRefResult, result1);
+    const obj18 = { style: animatedStyle, children: null };
+    const obj19 = { value: tmp31, children: null };
+    const obj20 = { channelId };
+    const items7 = [ref(closure_18, obj20)];
+    const obj21 = { channel: stateFromStores };
+    items7[1] = ref(ChannelCallCameraPreview, obj21);
+    obj19.children = items7;
+    obj18.children = closure_16(tmp(tmp2[28]).VoiceChatNavigationContext.Provider, obj19);
+    obj16.children = ref(tmp10(tmp2[16]).View, obj18);
+    obj15.children = ref(tmp(tmp2[27]).GestureDetector, obj16);
+    tmp32 = ref(tmp(tmp2[23]).AnalyticsLocationProvider, obj15);
   }
   return tmp32;
 });

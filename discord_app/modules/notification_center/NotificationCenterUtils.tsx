@@ -34,9 +34,10 @@ export const incomingFriendRequestLocalItem = function incomingFriendRequestLoca
   since,
   origin_application_id,
 ) {
-  let obj = SnowflakeUtilsDefault;
+  const obj = SnowflakeUtilsDefault;
   const fromTimestampResult = obj.fromTimestamp(new Date(since).getTime());
-  obj = {
+  const date = new Date(since);
+  return {
     acked: false,
     forceUnacked: true,
     other_user: user,
@@ -47,16 +48,16 @@ export const incomingFriendRequestLocalItem = function incomingFriendRequestLoca
     id: fromTimestampResult,
     applicationId: origin_application_id,
   };
-  return obj;
 };
 export const incomingGameFriendRequestLocalItem = function incomingGameFriendRequestLocalItem(
   user,
   since,
   applicationId,
 ) {
-  let obj = SnowflakeUtilsDefault;
+  const obj = SnowflakeUtilsDefault;
   const fromTimestampResult = obj.fromTimestamp(new Date(since).getTime());
-  obj = {
+  const date = new Date(since);
+  return {
     acked: false,
     forceUnacked: true,
     other_user: user,
@@ -67,7 +68,6 @@ export const incomingGameFriendRequestLocalItem = function incomingGameFriendReq
     id: fromTimestampResult,
     applicationId,
   };
-  return obj;
 };
 export const mobileNativeUpdateAvailableLocalItem = function mobileNativeUpdateAvailableLocalItem(newBuild) {
   const obj = {

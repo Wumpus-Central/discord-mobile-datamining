@@ -7,10 +7,7 @@ const result = size.fileFinishedImporting("modules/toast/native/ToastActionCreat
 export default {
   open(toastProps) {
     importDefault = toastProps;
-    DispatcherDefault.wait(() => {
-      const obj = { type: "TOAST_OPEN", toastProps };
-      return obj.dispatch(obj);
-    });
+    DispatcherDefault.wait(() => DispatcherDefault.dispatch({ type: "TOAST_OPEN", toastProps }));
   },
   close() {
     DispatcherDefault.wait(() => DispatcherDefault.dispatch({ type: "TOAST_CLOSE" }));

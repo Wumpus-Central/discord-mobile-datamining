@@ -15,11 +15,11 @@ let obj = {
   disableAdaptiveTheme: false,
   reduceAdaptiveTheme: false,
 };
-obj = {};
+const obj2 = {};
 let json = JSON.stringify(obj);
 let merged = Object.assign(obj);
-obj.key = json;
-let context = noop.createContext(obj);
+obj2.key = json;
+let context = noop.createContext(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting(
   "../discord_common/js/packages/design/components/ThemeContextProvider/ThemeContext.tsx",
@@ -42,7 +42,7 @@ export const useThemeContext = function useThemeContext() {
     return context;
   }
 };
-export const FALLBACK_THEME_CONTEXT_VALUE = obj;
+export const FALLBACK_THEME_CONTEXT_VALUE = obj2;
 export const ThemeContext = context;
 export const UseThemeContext = function UseThemeContext(children) {
   context = noop.useContext(context);

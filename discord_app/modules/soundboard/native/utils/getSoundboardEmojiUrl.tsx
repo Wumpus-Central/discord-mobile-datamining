@@ -8,8 +8,8 @@ export default function getSoundboardEmojiUrl(emojiId, size) {
   emojiId = emojiId.emojiId;
   let emojiURL;
   if (null != emojiId) {
-    const obj = { id: emojiId, animated: false, size };
-    emojiURL = obj.getEmojiURL(obj);
+    const obj2 = { id: emojiId, animated: false, size };
+    emojiURL = AvatarUtilsDefault.getEmojiURL(obj2);
   }
   return emojiURL;
 }

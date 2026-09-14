@@ -2,6 +2,8 @@
 import Constants from "../modules/rpc/Constants.tsx";
 import size from "../../_runtime/metro/00002__.js";
 
+const require = globalThis.__r;
+
 const DispatchErrorCodes = Constants.DispatchErrorCodes;
 const result = size.fileFinishedImporting("errors/NativeDispatchError.tsx");
 class NativeDispatchError {
@@ -43,15 +45,15 @@ Object.defineProperty(NativeDispatchError.prototype, "displayMessage", {
         const formatSizeResult = require("FileSizeUtils").formatSize(available, { useKibibytes: true });
         const obj6 = require("FileSizeUtils");
         const intl13 = require("util").intl;
-        let obj = {
+        const obj2 = {
           required: require("FileSizeUtils").formatSize(required, { useKibibytes: true }),
           available: formatSizeResult,
         };
-        return intl13.formatToPlainString(require("util").t["2DR5dl"], obj);
+        return intl13.formatToPlainString(require("util").t["2DR5dl"], obj2);
       } else if (DispatchErrorCodes.POST_INSTALL_FAILED === code) {
         const intl12 = require("util").intl;
-        obj = { name: self.context.name };
-        return intl12.formatToPlainString(require("util").t.hP0B3A, obj);
+        const obj3 = { name: self.context.name };
+        return intl12.formatToPlainString(require("util").t.hP0B3A, obj3);
       } else if (DispatchErrorCodes.FILE_NAME_TOO_LONG === code) {
         const intl11 = require("util").intl;
         return intl11.string(require("util").t["FWht5+"]);
@@ -72,8 +74,8 @@ Object.defineProperty(NativeDispatchError.prototype, "displayMessage", {
           if (DispatchErrorCodes.DISK_PERMISSION_DENIED !== code) {
             if (DispatchErrorCodes.INVALID_DRIVE === code) {
               const intl5 = require("util").intl;
-              const obj1 = { path };
-              return intl5.formatToPlainString(require("util").t["08L2TG"], obj1);
+              const obj4 = { path };
+              return intl5.formatToPlainString(require("util").t["08L2TG"], obj4);
             } else if (DispatchErrorCodes.APPLICATION_LOCK_FAILED === code) {
               const intl4 = require("util").intl;
               return intl4.string(require("util").t.RDYCUV);
@@ -84,7 +86,7 @@ Object.defineProperty(NativeDispatchError.prototype, "displayMessage", {
               if (DispatchErrorCodes.API_ERROR !== code) {
                 if (DispatchErrorCodes.MAX_REQUEST_RETRIES_EXCEEDED !== code) {
                   const intl = require("util").intl;
-                  obj = { code: null };
+                  const obj = { code: null };
                   const _HermesInternal = HermesInternal;
                   obj.code = "" + self.code;
                   return intl.formatToPlainString(require("util").t.r477WB, obj);
@@ -96,8 +98,8 @@ Object.defineProperty(NativeDispatchError.prototype, "displayMessage", {
           }
         }
         const intl6 = require("util").intl;
-        const obj2 = { path };
-        return intl6.formatToPlainString(require("util").t.EjWbO6, obj2);
+        const obj7 = { path };
+        return intl6.formatToPlainString(require("util").t.EjWbO6, obj7);
       }
     }
   },

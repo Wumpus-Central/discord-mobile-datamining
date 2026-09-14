@@ -17,8 +17,8 @@ let closure_9 = async function _getDeepLinkUrl(arg0) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -31,8 +31,8 @@ let closure_9 = async function _getDeepLinkUrl(arg0) {
             throw value;
           } else if (arg0 === 2) {
             c4 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
             closure_2 = tmp5;
             closure_1 = tmp2;
@@ -42,8 +42,8 @@ let closure_9 = async function _getDeepLinkUrl(arg0) {
             if ("store.steampowered.com" === hostname.hostname) {
               c3 = 1;
               c4 = 1;
-              const obj1 = { value: GameUtilsDefault.isProtocolRegistered(steam), done: false };
-              return obj1;
+              const obj4 = { value: GameUtilsDefault.isProtocolRegistered(steam), done: false };
+              return obj4;
             }
           }
         } else {
@@ -53,8 +53,8 @@ let closure_9 = async function _getDeepLinkUrl(arg0) {
               throw value;
             } else if (arg0 === 2) {
               c4 = 3;
-              const obj2 = { value, done: true };
-              return obj2;
+              const obj6 = { value, done: true };
+              return obj6;
             } else if (value) {
               const match = closure_129_0.pathname.match(closure_130_7);
               let tmp21;
@@ -65,8 +65,8 @@ let closure_9 = async function _getDeepLinkUrl(arg0) {
               if (null != closure_129_1) {
                 const _HermesInternal = HermesInternal;
                 c4 = 3;
-                const obj3 = { value: "" + closure_130_6 + "://store/" + closure_129_1, done: true };
-                return obj3;
+                const obj8 = { value: "" + closure_130_6 + "://store/" + closure_129_1, done: true };
+                return obj8;
               }
             }
           } else if (arg0 === 1) {
@@ -74,8 +74,8 @@ let closure_9 = async function _getDeepLinkUrl(arg0) {
             throw value;
           } else if (arg0 === 2) {
             c4 = 3;
-            let obj4 = { value, done: true };
-            return obj4;
+            const obj9 = { value, done: true };
+            return obj9;
           } else if (value) {
             const match1 = closure_129_0.pathname.match(closure_130_8);
             let tmp12;
@@ -86,7 +86,7 @@ let closure_9 = async function _getDeepLinkUrl(arg0) {
             if (null != closure_129_2) {
               const _decodeURIComponent = decodeURIComponent;
               c4 = 3;
-              obj = {
+              const obj = {
                 value: closure_130_0(closure_130_2[4]).buildXboxGamePassStoreDeepLinkUrl(
                   decodeURIComponent(closure_129_2),
                 ),
@@ -99,14 +99,15 @@ let closure_9 = async function _getDeepLinkUrl(arg0) {
           return { value: null, done: true };
         }
         if (closure_129_0.hostname === closure_130_0(closure_130_2[4]).XBOX_GAME_PASS_STORE_HOSTNAME) {
-          obj4 = closure_130_1(closure_130_2[3]);
           c3 = 2;
           c4 = 1;
-          const obj5 = {
-            value: obj4.isProtocolRegistered(closure_130_0(closure_130_2[4]).XBOX_GAME_PASS_PROTOCOL),
+          const obj10 = {
+            value: closure_130_1(closure_130_2[3]).isProtocolRegistered(
+              closure_130_0(closure_130_2[4]).XBOX_GAME_PASS_PROTOCOL,
+            ),
             done: false,
           };
-          return obj5;
+          return obj10;
         }
       } catch (tmp37) {
         c4 = tmp;
@@ -122,9 +123,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/game_profile/hooks/useOpenExternalUrlFromGameProfile.tsx");
 
 export default function useOpenExternalUrlFromGameProfile(openURL) {
-  const tmp = _slicedToArray(noop.useState(false), 2);
-  const first = tmp[0];
-  closure_2 = tmp[1];
+  [first, closure_2] = noop.useState(false);
   closure_0 = asyncGeneratorStep(async (arg0) => {
     if (c5 === 2) {
       c5 = 3;
@@ -133,8 +132,8 @@ export default function useOpenExternalUrlFromGameProfile(openURL) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -147,8 +146,8 @@ export default function useOpenExternalUrlFromGameProfile(openURL) {
             throw value;
           } else if (arg0 === 2) {
             c5 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
             closure_1 = tmp7;
             closure_129_0 = closure_0;
@@ -162,7 +161,7 @@ export default function useOpenExternalUrlFromGameProfile(openURL) {
               c3 = 0;
               c4 = 2;
               c5 = 1;
-              const obj1 = {
+              const obj4 = {
                 value: (function getDeepLinkUrl() {
                   const self = this;
                   const apply = closure_1_9.apply;
@@ -175,7 +174,7 @@ export default function useOpenExternalUrlFromGameProfile(openURL) {
                 })(uRL),
                 done: false,
               };
-              return obj1;
+              return obj4;
             }
           }
         } else if (1 === tmp7) {
@@ -187,7 +186,7 @@ export default function useOpenExternalUrlFromGameProfile(openURL) {
           throw value;
         } else if (arg0 === 2) {
           c5 = 3;
-          obj = { value, done: true };
+          const obj = { value, done: true };
           return obj;
         } else {
           closure_129_2 = value;

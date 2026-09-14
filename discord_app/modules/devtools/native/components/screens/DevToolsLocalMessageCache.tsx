@@ -81,18 +81,17 @@ function CacheLogEntry(entry) {
 }
 const ScrollView = _mod17.ScrollView;
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-let obj = { container: null, contentContainer: null };
-obj = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
-obj.container = obj;
+let obj = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, contentContainer: null };
+let obj2 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj.contentContainer = { padding: nativeDefault.space.PX_16 };
 let closure_7 = createStyles.createStyles(obj);
 const result = size.fileFinishedImporting("modules/devtools/native/components/screens/DevToolsLocalMessageCache.tsx");
 
 export default function DevToolsLocalMessageCache() {
   const tmp = closure_7();
-  let obj = { style: tmp.container, contentContainerStyle: tmp.contentContainer, children: null };
-  obj = { spacing: 8, children: null };
-  obj = { title: "Local Message Cache Stats", hasIcons: false, children: null };
+  const obj = { style: tmp.container, contentContainerStyle: tmp.contentContainer, children: null };
+  const obj2 = { spacing: 8, children: null };
+  const obj3 = { title: "Local Message Cache Stats", hasIcons: false, children: null };
   const items = [
     hasOwnProperty(TableRow.TableRow, {
       label: "Channels Fetched",
@@ -101,19 +100,19 @@ export default function DevToolsLocalMessageCache() {
     ,
     ,
   ];
-  const obj1 = { label: "Channels Fetched", subLabel: MessageCacheStatsDefault.channelsFetchStarted.size };
+  const obj4 = { label: "Channels Fetched", subLabel: MessageCacheStatsDefault.channelsFetchStarted.size };
   items[1] = hasOwnProperty(TableRow.TableRow, {
     label: "Cache Hits",
     subLabel: MessageCacheStatsDefault.channelsFetchedWithLocalMessages.size,
   });
-  const obj2 = { label: "Cache Hits", subLabel: MessageCacheStatsDefault.channelsFetchedWithLocalMessages.size };
+  const obj5 = { label: "Cache Hits", subLabel: MessageCacheStatsDefault.channelsFetchedWithLocalMessages.size };
   items[2] = hasOwnProperty(TableRow.TableRow, {
     label: "Cache Misses",
     subLabel:
       MessageCacheStatsDefault.channelsFetchedNetwork.size -
       MessageCacheStatsDefault.channelsFetchedWithLocalMessages.size,
   });
-  const obj3 = {
+  const obj6 = {
     label: "Cache Misses",
     subLabel:
       MessageCacheStatsDefault.channelsFetchedNetwork.size -
@@ -123,25 +122,25 @@ export default function DevToolsLocalMessageCache() {
     label: "Incomplete Fetches",
     subLabel: MessageCacheStatsDefault.channelsFetchStarted.size - MessageCacheStatsDefault.channelsFetchedNetwork.size,
   });
-  obj.children = items;
+  obj3.children = items;
   const items1 = [
-    timestampProducer(TableRowGroup.TableRowGroup, obj),
+    timestampProducer(TableRowGroup.TableRowGroup, obj3),
     hasOwnProperty(Text_Text.Text, {
       variant: "text-sm/normal",
       color: "text-muted",
       children: "Cumulative since app launch. Does not update dynamically.",
     }),
   ];
-  const obj5 = { title: "Fetch Log (Reversed)", hasIcons: false, children: null };
+  const obj8 = { title: "Fetch Log (Reversed)", hasIcons: false, children: null };
   const fetchLogs = MessageCacheStatsDefault.fetchLogs;
-  const obj4 = {
+  const obj7 = {
     label: "Incomplete Fetches",
     subLabel: MessageCacheStatsDefault.channelsFetchStarted.size - MessageCacheStatsDefault.channelsFetchedNetwork.size,
   };
   const reversed = Array.from(fetchLogs.values()).reverse();
-  obj5.children = reversed.map((entry, index) => closure_1_5(CacheLogEntry, { entry }, index));
-  items1[2] = hasOwnProperty(TableRowGroup.TableRowGroup, obj5);
-  obj.children = items1;
-  obj.children = timestampProducer(Stack_Stack.Stack, obj);
+  obj8.children = reversed.map((entry, index) => closure_1_5(CacheLogEntry, { entry }, index));
+  items1[2] = hasOwnProperty(TableRowGroup.TableRowGroup, obj8);
+  obj2.children = items1;
+  obj.children = timestampProducer(Stack_Stack.Stack, obj2);
   return hasOwnProperty(ScrollView, obj);
 }

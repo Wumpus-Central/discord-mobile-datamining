@@ -21,9 +21,8 @@ export const Checkbox = function Checkbox(onToggle) {
   ({ label, description, required, checked } = onToggle);
   onToggle = onToggle.onToggle;
   const tmp = closure_6();
-  let obj = useA11yRolesNative;
-  const checkboxA11yNative = obj.useCheckboxA11yNative({ checked });
-  obj = {
+  const checkboxA11yNative = useA11yRolesNative.useCheckboxA11yNative({ checked });
+  const obj2 = {
     accessibilityRole: checkboxA11yNative.accessibilityRole,
     accessibilityLabel: null,
     accessibilityState: null,
@@ -42,35 +41,35 @@ export const Checkbox = function Checkbox(onToggle) {
     const _HermesInternal2 = HermesInternal;
     str = ", " + description;
   }
-  obj.accessibilityLabel = sum + str;
-  obj.accessibilityState = checkboxA11yNative.accessibilityState;
-  obj.onPress = function onPress() {
+  obj2.accessibilityLabel = sum + str;
+  obj2.accessibilityState = checkboxA11yNative.accessibilityState;
+  obj2.onPress = function onPress() {
     return onToggle(!checked);
   };
   const items = [React4(FormCheckbox.FormCheckbox, { checked })];
-  obj = { style: tmp.textContainer, children: null };
-  const obj1 = { style: tmp.labelContainer, children: null };
+  const obj3 = { style: tmp.textContainer, children: null };
+  const obj4 = { style: tmp.labelContainer, children: null };
   const items1 = [label];
   if (required) {
-    const obj2 = { variant: "text-md/bold", color: "text-feedback-critical", "aria-label": null, children: null };
+    const obj5 = { variant: "text-md/bold", color: "text-feedback-critical", "aria-label": null, children: null };
     const intl2 = util.intl;
-    obj2["aria-label"] = intl2.string(util.t.EkokLy);
-    obj2.children = [" ", "*"];
-    required = hasOwnProperty(Text_Text.Text, obj2);
+    obj5["aria-label"] = intl2.string(util.t.EkokLy);
+    obj5.children = [" ", "*"];
+    required = hasOwnProperty(Text_Text.Text, obj5);
   }
   items1[1] = required;
-  obj1.children = hasOwnProperty(Text_Text.Text, { variant: "text-md/medium", children: items1 });
-  const items2 = [React4(React3, obj1)];
+  obj4.children = hasOwnProperty(Text_Text.Text, { variant: "text-md/medium", children: items1 });
+  const items2 = [React4(React3, obj4)];
   let tmp5Result = null != description;
   if (tmp5Result) {
-    const obj3 = { variant: "text-sm/normal", color: "text-subtle", children: description };
-    tmp5Result = React4(Text_Text.Text, obj3);
+    const obj6 = { variant: "text-sm/normal", color: "text-subtle", children: description };
+    tmp5Result = React4(Text_Text.Text, obj6);
   }
-  const obj4 = { direction: "horizontal", children: null };
+  const obj7 = { direction: "horizontal", children: null };
   items2[1] = tmp5Result;
-  obj.children = items2;
-  items[1] = hasOwnProperty(React3, obj);
-  obj4.children = items;
-  obj.children = hasOwnProperty(Stack_Stack.Stack, obj4);
-  return React4(React2, obj);
+  obj3.children = items2;
+  items[1] = hasOwnProperty(React3, obj3);
+  obj7.children = items;
+  obj2.children = hasOwnProperty(Stack_Stack.Stack, obj7);
+  return React4(React2, obj2);
 };

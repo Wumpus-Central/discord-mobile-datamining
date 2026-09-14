@@ -2,10 +2,12 @@
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import ConsoleOAuthApplications from "../../../../discord_common/js/shared/shared-constants/ConsoleOAuthApplications.tsx";
-import _modDef13966 from "../../../../discord_assets/assets/images/consoles/ps_link_success_illustration-2x.png.js";
-import _modDef13967 from "../../../../discord_assets/assets/images/consoles/social_layer_link_success_illustration-2x.png.js";
+import _modDef13967 from "../../../../discord_assets/assets/images/consoles/ps_link_success_illustration-2x.png.js";
+import _modDef13968 from "../../../../discord_assets/assets/images/consoles/social_layer_link_success_illustration-2x.png.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
+
+const require = globalThis.__r;
 
 require = fn;
 get_ActivityIndicator = fn(17);
@@ -16,19 +18,17 @@ get_ActivityIndicator = fn(17);
   ScrollView: closure_8,
 } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-fn(4636);
-let createStyles = {
+const createStyles = fn(4636);
+let obj2 = {
   background: { flex: 1 },
-  imageStyle: null,
-  safeArea: null,
+  imageStyle: { marginVertical: 0, resizeMode: "cover", backgroundColor: nativeDefault.colors.TEXT_BRAND },
+  safeArea: { flex: 1, justifyContent: "center", alignItems: "center" },
   content: null,
   scroller: null,
   scrollerContent: null,
 };
-createStyles = { marginVertical: 0, resizeMode: "cover", backgroundColor: nativeDefault.colors.TEXT_BRAND };
-createStyles.imageStyle = createStyles;
-createStyles.safeArea = { flex: 1, justifyContent: "center", alignItems: "center" };
-createStyles.content = {
+let obj3 = { marginVertical: 0, resizeMode: "cover", backgroundColor: nativeDefault.colors.TEXT_BRAND };
+obj2.content = {
   maxWidth: 480,
   backgroundColor: nativeDefault.colors.PANEL_BG,
   alignItems: "center",
@@ -42,14 +42,15 @@ createStyles.content = {
   shadowOffset: { width: 0, height: 4 },
   shadowRadius: 4,
 };
-createStyles.scroller = { alignSelf: "stretch", flexGrow: 0 };
-createStyles.scrollerContent = { flexDirection: "column", gap: 16 };
-let closure_10 = createStyles.createStyles(createStyles);
+obj2.scroller = { alignSelf: "stretch", flexGrow: 0 };
+obj2.scrollerContent = { flexDirection: "column", gap: 16 };
+let closure_10 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/activate_device/native/ActivateDevice.tsx");
 
 export const ActivateDevice = (onClose) => {
   onClose = onClose.onClose;
+  first1 = undefined;
   _slicedToArray = undefined;
   let deviceCodeAuthorizeCallback;
   const tmp = closure_10();
@@ -59,11 +60,8 @@ export const ActivateDevice = (onClose) => {
   );
   const first = tmp2[0];
   importDefault = tmp4;
-  const tmp5 = _slicedToArray(deviceCodeAuthorizeCallback.useState(null), 2);
-  const first1 = tmp5[0];
-  _slicedToArray = tmp5[1];
-  let obj = first(first1[6]);
-  const activateDeviceStepTracking = obj.useActivateDeviceStepTracking(first);
+  [first1, _slicedToArray] = deviceCodeAuthorizeCallback.useState(null);
+  const activateDeviceStepTracking = first(first1[6]).useActivateDeviceStepTracking(first);
   let items = [tmp2[1]];
   const callback = deviceCodeAuthorizeCallback.useCallback(() => {
     closure_1({ type: "user-code-input" });
@@ -76,15 +74,14 @@ export const ActivateDevice = (onClose) => {
   const callback2 = deviceCodeAuthorizeCallback.useCallback((userCodeData) => {
     closure_1({ type: "error", userCodeData });
   }, items2);
-  let obj1 = first(first1[7]);
-  deviceCodeAuthorizeCallback = obj1.useDeviceCodeAuthorizeCallback(callback, callback2, callback1);
+  let obj = first(first1[6]);
+  deviceCodeAuthorizeCallback = first(first1[7]).useDeviceCodeAuthorizeCallback(callback, callback2, callback1);
   const items3 = [deviceCodeAuthorizeCallback];
   const items4 = [first];
   const callback3 = deviceCodeAuthorizeCallback.useCallback((userCodeData) => {
     closure_0 = userCodeData;
-    let obj = { type: "authorization", userCodeData };
-    closure_1(obj);
-    obj = {
+    closure_1({ type: "authorization", userCodeData });
+    first(first1[8]).openOAuth2Modal({
       clientId: userCodeData.clientId,
       scopes: userCodeData.scopes,
       responseType: "code",
@@ -94,8 +91,7 @@ export const ActivateDevice = (onClose) => {
       callbackWithoutPost(arg0) {
         return deviceCodeAuthorizeCallback(closure_0, arg0);
       },
-    };
-    first(first1[8]).openOAuth2Modal(obj);
+    });
   }, items3);
   const effect = deviceCodeAuthorizeCallback.useEffect(() => {
     if ("userCodeData" in first) {
@@ -105,11 +101,11 @@ export const ActivateDevice = (onClose) => {
         ConsoleOAuthApplications.ConsoleOAuthApplications.PLAYSTATION_STAGING_APPLICATION_ID,
       ];
       if (items.includes(userCodeData.clientId)) {
-        closure_3(_modDef13966);
+        closure_3(_modDef13967);
       } else {
         const scopes = userCodeData.scopes;
         if (scopes.some((item) => first(first1[11]).isSocialLayerUmbrellaScope(item))) {
-          closure_3(_modDef13967);
+          closure_3(_modDef13968);
         }
       }
     }
@@ -126,12 +122,12 @@ export const ActivateDevice = (onClose) => {
     if (first.usePrefilledCode) {
       prefilledUserCode = onClose.prefilledUserCode;
     }
-    obj = { prefilledUserCode, onUserCodeAccepted: callback3, onClose };
+    const obj3 = { prefilledUserCode, onUserCodeAccepted: callback3, onClose };
     let tmp21Result = jsx(tmp7(tmp8[14]).UserCodeInput, { prefilledUserCode, onUserCodeAccepted: callback3, onClose });
   } else if ("authorization" === type) {
     tmp21Result = <closure_7 animating />;
   } else if ("success" === type) {
-    obj = { onComplete: onClose, data: first.userCodeData, successImage: first1 };
+    const obj4 = { onComplete: onClose, data: first.userCodeData, successImage: first1 };
     tmp21Result = jsx(tmp7(tmp8[15]).ActivateDeviceSuccess, {
       onComplete: onClose,
       data: first.userCodeData,
@@ -140,22 +136,20 @@ export const ActivateDevice = (onClose) => {
   } else {
     tmp21Result = null;
     if ("error" === type) {
-      obj1 = { onRetry: callback };
+      const obj5 = { onRetry: callback };
       tmp21Result = jsx(tmp7(tmp8[16]).ActivateDeviceError, { onRetry: callback });
     }
   }
-  const obj2 = {
-    source: first(first1[17]).makeSource(
-      require("../../../../discord_assets/assets/images/consoles/mobile_background.jpg.js"),
-    ),
-    imageStyle: tmp.imageStyle,
-    style: null,
-    children: null,
-  };
+  const obj6 = { source: null, imageStyle: null, style: null, children: null };
+  const obj2 = first(first1[7]);
+  obj6.source = first(first1[17]).makeSource(
+    require("../../../../discord_assets/assets/images/consoles/mobile_background.jpg.js"),
+  );
+  obj6.imageStyle = tmp.imageStyle;
   const items6 = [tmp.background];
-  obj2.style = items6;
+  obj6.style = items6;
   const rect = { bottom: true, top: true, style: tmp.safeArea, children: null };
-  const obj3 = {
+  const obj7 = {
     style: tmp.content,
     children: (
       <closure_8 bounces={false} style={tmp.scroller} contentContainerStyle={tmp.scrollerContent}>
@@ -170,20 +164,14 @@ export const ActivateDevice = (onClose) => {
       </closure_8>
     </closure_5>
   );
-  obj2.children = jsx(first(first1[19]).SafeAreaPaddingView, {
+  obj6.children = jsx(first(first1[19]).SafeAreaPaddingView, {
     bottom: true,
     top: true,
     style: tmp.safeArea,
     children: null,
   });
   return (
-    <closure_6
-      source={first(first1[17]).makeSource(
-        require("../../../../discord_assets/assets/images/consoles/mobile_background.jpg.js"),
-      )}
-      imageStyle={tmp.imageStyle}
-      style={null}
-    >
+    <closure_6 source={null} imageStyle={null} style={null}>
       {null}
     </closure_6>
   );

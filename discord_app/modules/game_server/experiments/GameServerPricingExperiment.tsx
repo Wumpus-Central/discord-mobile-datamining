@@ -3,7 +3,7 @@ import GameServerExperiment from "../GameServerExperiment.tsx";
 import createExperiment from "../../experiments/index.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
-let obj = {
+const obj = {
   kind: "guild",
   id: "2026-03_game_server_pricing",
   label: "Game Server Pricing",
@@ -20,11 +20,9 @@ export const useIsGameServerPricingEnabled = function useIsGameServerPricingEnab
   guildId,
   useGuildPowerupsChannelListPopout,
 ) {
-  let obj = GameServerExperiment;
-  let enabled = obj.useGameServerEnabled(guildId, useGuildPowerupsChannelListPopout);
-  obj = { guildId, location: useGuildPowerupsChannelListPopout };
+  let enabled = GameServerExperiment.useGameServerEnabled(guildId, useGuildPowerupsChannelListPopout);
   if (enabled) {
-    enabled = experiment.useExperiment(obj, { autoTrackExposure: false }).enabled;
+    enabled = experiment.useExperiment(obj2, { autoTrackExposure: false }).enabled;
   }
   return enabled;
 };

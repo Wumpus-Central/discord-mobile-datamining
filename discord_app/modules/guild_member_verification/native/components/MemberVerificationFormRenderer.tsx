@@ -1,6 +1,8 @@
 // discord_app/modules/guild_member_verification/native/components/MemberVerificationFormRenderer.tsx
 import noop from "../../../../../_runtime/metro/00019__.js";
 
+const require = globalThis.__r;
+
 const require = fn;
 get_ActivityIndicator = fn(17);
 ({ Keyboard: c3, View: closure_4 } = get_ActivityIndicator);
@@ -24,7 +26,7 @@ export default function MemberVerificationFormRenderer(arg0) {
       rulesChannelId = index;
       field_type = field_type.field_type;
       if (rulesChannelId(verification[4]).VerificationFormFieldTypes.TERMS === field_type) {
-        let obj = {
+        const obj2 = {
           field: field_type,
           rulesChannelId,
           onChange(arg0) {
@@ -45,10 +47,10 @@ export default function MemberVerificationFormRenderer(arg0) {
           combined,
         );
       } else if (tmp2(verification[4]).VerificationFormFieldTypes.VERIFICATION === field_type) {
-        obj = { verification, field: field_type };
+        const obj3 = { verification, field: field_type };
         tmp4 = jsx(require("UserVerification"), { verification, field: field_type }, combined);
       } else if (tmp2(verification[4]).VerificationFormFieldTypes.TEXT_INPUT === field_type) {
-        const obj1 = {
+        const obj4 = {
           field: field_type,
           onChange(arg0) {
             return importDefault(closure_0, arg0);
@@ -65,7 +67,7 @@ export default function MemberVerificationFormRenderer(arg0) {
           combined,
         );
       } else if (tmp2(verification[4]).VerificationFormFieldTypes.PARAGRAPH === field_type) {
-        obj = {
+        const obj = {
           field: field_type,
           onChange(arg0) {
             return importDefault(closure_0, arg0);
@@ -84,7 +86,7 @@ export default function MemberVerificationFormRenderer(arg0) {
       } else {
         tmp4 = null;
         if (tmp2(verification[4]).VerificationFormFieldTypes.MULTIPLE_CHOICE === field_type) {
-          const obj2 = {
+          const obj5 = {
             field: field_type,
             hasIcons: false,
             onChange(arg0) {

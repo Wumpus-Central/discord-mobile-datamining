@@ -4,7 +4,7 @@ import GuildStore from "../../stores/GuildStore.tsx";
 import SelectedGuildStore from "../../stores/SelectedGuildStore.tsx";
 
 require = fn;
-const MidjourneyOnboardingConstants = fn(13948);
+const MidjourneyOnboardingConstants = fn(13949);
 ({ MIDJOURNEY_BOT_ID: closure_4, MIDJOURNEY_GUILD_ID: hasOwnProperty } = MidjourneyOnboardingConstants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/midjourney_onboarding/MidjourneyOnboardingUtils.tsx");
@@ -19,14 +19,14 @@ export const isMidjourneyOnboardingFlow = function isMidjourneyOnboardingFlow() 
     guildStore = GuildStore;
   }
   const guild = guildStore.getGuild(hasOwnProperty);
-  let joinedAt;
+  let joinedAt1;
   if (guild != null) {
-    joinedAt = guild.joinedAt;
+    joinedAt1 = guild.joinedAt;
   }
-  let tmp3 = joinedAt instanceof Date;
+  let tmp3 = joinedAt1 instanceof Date;
   if (tmp3) {
     const _Date = Date;
-    joinedAt = guild.joinedAt;
+    const joinedAt = guild.joinedAt;
     const timestamp = Date.now();
     tmp3 = timestamp - joinedAt.getTime() <= 3600000;
   }
@@ -37,14 +37,14 @@ export const useIsMidjourneyOnboardingFlow = function useIsMidjourneyOnboardingF
   return initialize.useStateFromStores(items, () => {
     guildStore = { guildStore }.guildStore;
     const guild = guildStore.getGuild(closure_1_5);
-    let joinedAt;
+    let joinedAt1;
     if (guild != null) {
-      joinedAt = guild.joinedAt;
+      joinedAt1 = guild.joinedAt;
     }
-    let tmp3 = joinedAt instanceof Date;
+    let tmp3 = joinedAt1 instanceof Date;
     if (tmp3) {
       const _Date = Date;
-      joinedAt = guild.joinedAt;
+      const joinedAt = guild.joinedAt;
       const timestamp = Date.now();
       tmp3 = timestamp - joinedAt.getTime() <= 3600000;
     }
@@ -65,15 +65,15 @@ export const isEligibleForMidjourneyRedirect = function isEligibleForMidjourneyR
       guildStore = GuildStore;
     }
     const guild = guildStore.getGuild(hasOwnProperty);
-    let joinedAt;
+    let joinedAt1;
     if (guild != null) {
-      joinedAt = guild.joinedAt;
+      joinedAt1 = guild.joinedAt;
     }
     const _Date = Date;
-    let tmp8 = joinedAt instanceof Date;
+    let tmp8 = joinedAt1 instanceof Date;
     if (tmp8) {
       const _Date2 = Date;
-      joinedAt = guild.joinedAt;
+      const joinedAt = guild.joinedAt;
       const timestamp = Date.now();
       tmp8 = timestamp - joinedAt.getTime() <= 3600000;
     }

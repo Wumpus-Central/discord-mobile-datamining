@@ -5,7 +5,7 @@ import _objectWithoutProperties from "../../../../_runtime/metro/00109__objectWi
 
 let closure_2 = ["convertToMajorUnits"];
 const CurrencyCodes = fn(1085).CurrencyCodes;
-let obj = {
+const CurrencyExponents = {
   [CurrencyCodes.AED]: 2,
   [CurrencyCodes.AFN]: 2,
   [CurrencyCodes.ALL]: 2,
@@ -201,7 +201,7 @@ function convertToMajorCurrencyUnits(diff1, USD) {
     return obj.dividedBy(10 ** tmp).toNumber();
   }
 }
-obj = {
+let obj2 = {
   [fn(4854).CountryCodes.AD]: CurrencyCodes.EUR,
   [fn(4854).CountryCodes.AE]: CurrencyCodes.AED,
   [fn(4854).CountryCodes.AF]: CurrencyCodes.AFN,
@@ -449,9 +449,9 @@ obj = {
 const size = fn(2);
 const result = size.fileFinishedImporting("../discord_common/js/shared/utils/PriceUtils.tsx");
 
-export const formatPrice = (result, currency, localeOverride) => {
-  obj = localeOverride;
-  if (localeOverride === undefined) {
+export const formatPrice = (result, currency, localeOverride, arg3) => {
+  let obj = arg3;
+  if (arg3 === undefined) {
     obj = {};
   }
   if (currency === CurrencyCodes.DISCORD_ORB) {
@@ -459,7 +459,7 @@ export const formatPrice = (result, currency, localeOverride) => {
   } else {
     const convertToMajorUnits = obj.convertToMajorUnits;
     const _Intl = Intl;
-    obj = { style: "currency", currency };
+    obj2 = { style: "currency", currency };
     const merged = Object.assign(_objectWithoutProperties(obj, closure_2));
     let toNumberResult = result;
     if (tmp) {
@@ -478,10 +478,10 @@ export const formatPrice = (result, currency, localeOverride) => {
         throw new TypeError("Trying to call a non-function");
       }
     }
-    return Intl.NumberFormat(localeOverride, obj).format(toNumberResult);
+    return Intl.NumberFormat(localeOverride, obj2).format(toNumberResult);
   }
 };
-export const CurrencyExponents = obj;
+export { CurrencyExponents };
 export { convertToMajorCurrencyUnits };
 export const convertToMinorCurrencyUnits = (arg0, currencyCode) => {
   if (null == obj[currencyCode]) {
@@ -504,10 +504,10 @@ export const floorToWholeCurrencyUnits = (arg0, arg1) => {
 };
 export const currencyCodeFromBCP47Locale = (str) => {
   const USD = CurrencyCodes.USD;
-  [r10010, str] = _slicedToArray(str.split("-"), 2);
+  [r10010, str] = str.split("-");
   let tmp2 = USD;
   if (undefined !== str) {
-    let tmp4 = obj[str.toUpperCase(str)];
+    let tmp4 = obj2[str.toUpperCase(str)];
     if (tmp4 == null) {
       tmp4 = USD;
     }

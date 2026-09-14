@@ -13,8 +13,8 @@ function showNotification(uri) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -27,24 +27,24 @@ function showNotification(uri) {
             throw value;
           } else if (arg0 === 2) {
             c3 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
             closure_1 = tmp2;
             let edges2;
             CameraRollUtils = CameraRollUtils.CameraRollUtils;
             c2 = 1;
             c3 = 1;
-            const obj1 = { value: CameraRollUtils.getPhotos({ first: 1, assetType: "photos" }), done: false };
-            return obj1;
+            const obj4 = { value: CameraRollUtils.getPhotos({ first: 1, assetType: "photos" }), done: false };
+            return obj4;
           }
         } else if (arg0 === 1) {
           c3 = 3;
           throw value;
         } else if (arg0 === 2) {
           c3 = 3;
-          const obj2 = { value, done: true };
-          return obj2;
+          const obj5 = { value, done: true };
+          return obj5;
         } else {
           let edges = value;
           if (value == null) {
@@ -54,7 +54,7 @@ function showNotification(uri) {
           if (null != edges2) {
             if (edges2.length > 0) {
               c3 = 3;
-              obj = { value: edges2[0].node.image, done: true };
+              const obj = { value: edges2[0].node.image, done: true };
               return obj;
             }
           }
@@ -80,8 +80,8 @@ function showNotification(uri) {
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
-          let obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           return { value: "HermesInternal", done: null };
         }
@@ -94,21 +94,20 @@ function showNotification(uri) {
               throw value;
             } else if (arg0 === 2) {
               c3 = 3;
-              obj = { value, done: true };
-              return obj;
+              const obj4 = { value, done: true };
+              return obj4;
             } else {
               closure_128_0 = undefined;
               let BUG_REPORTER;
               let notificationDuration;
               if (null != uri) {
-                let obj1 = { uri: tmp35 };
-                let tmp7 = obj1;
+                const obj7 = { uri: tmp35 };
+                let tmp7 = obj7;
               } else {
-                obj1 = tmp2(1150);
-                if (!obj1.isIOS()) {
+                if (!obj2.isIOS()) {
                   dependencyMap = 1;
                   c3 = 1;
-                  const obj2 = {
+                  const obj10 = {
                     value: (function getAndroidScreenshot() {
                       const self = this;
                       const apply = closure_1_0.apply;
@@ -121,14 +120,15 @@ function showNotification(uri) {
                     })(),
                     done: false,
                   };
-                  return obj2;
+                  return obj10;
                 }
+                obj2 = tmp2(1363);
               }
               closure_128_0 = tmp7;
               BUG_REPORTER = constants.BUG_REPORTER;
               notificationDuration = tmp2(10223).getNotificationDuration(BUG_REPORTER);
               const obj5 = tmp2(10223);
-              const obj3 = {
+              const obj11 = {
                 type: BUG_REPORTER,
                 duration: notificationDuration,
                 key: null,
@@ -138,19 +138,19 @@ function showNotification(uri) {
                 inAppNotificationId: null,
               };
               const obj6 = tmp3(10225);
-              obj3.key = tmp2(1256).v4();
-              obj3.image = closure_128_0;
+              obj11.key = tmp2(1254).v4();
+              obj11.image = closure_128_0;
               uri = undefined;
               if (closure_128_0 != null) {
                 uri = closure_128_0.uri;
               }
-              obj3.imageUri = uri;
-              obj3.onDismiss = function onDismiss() {
+              obj11.imageUri = uri;
+              obj11.onDismiss = function onDismiss() {
                 closure_1_1(dependencyMap[7]).clearNotification();
               };
-              const obj8 = tmp2(1256);
-              obj3.inAppNotificationId = tmp2(1256).v4();
-              obj6.enqueueNotification(obj3);
+              const obj8 = tmp2(1254);
+              obj11.inAppNotificationId = tmp2(1254).v4();
+              obj6.enqueueNotification(obj11);
               c3 = 3;
               return { value: "HermesInternal", done: null };
             }
@@ -161,7 +161,7 @@ function showNotification(uri) {
             tmp7 = value;
             if (arg0 === 2) {
               c3 = 3;
-              obj = { value, done: true };
+              const obj = { value, done: true };
               return obj;
             }
           }
@@ -199,8 +199,8 @@ prototype["initBugReporter"] = function initBugReporter() {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -213,8 +213,8 @@ prototype["initBugReporter"] = function initBugReporter() {
             throw value;
           } else if (arg0 === 2) {
             c3 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
             c1 = 0;
             closure_0 = tmp2;
@@ -225,15 +225,15 @@ prototype["initBugReporter"] = function initBugReporter() {
             const NativePermissionManager = NativeModules.NativePermissionManager;
             c2 = 1;
             c3 = 1;
-            const obj1 = { value: NativePermissionManager.hasPhotoAuthorization(), done: false };
-            return obj1;
+            const obj4 = { value: NativePermissionManager.hasPhotoAuthorization(), done: false };
+            return obj4;
           }
         } else if (arg0 === 1) {
           c3 = 3;
           throw value;
         } else if (arg0 === 2) {
           c3 = 3;
-          obj = { value, done: true };
+          const obj = { value, done: true };
           return obj;
         } else {
           closure_128_0 = value === closure_129_8.AUTHORIZED;

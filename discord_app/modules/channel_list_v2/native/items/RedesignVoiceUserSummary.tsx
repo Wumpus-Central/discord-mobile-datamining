@@ -13,10 +13,14 @@ export default function RedesignVoiceUserSummary(channels) {
   channels = channels.channels;
   const guildId = channels.guildId;
   let stateFromStores;
-  let obj = channels(stateFromStores[4]);
   const items = [SortedVoiceStateStore];
   const items1 = [guildId];
-  stateFromStores = obj.useStateFromStores(items, () => SortedVoiceStateStore.getVoiceStates(guildId), items1);
+  stateFromStores = channels(stateFromStores[4]).useStateFromStores(
+    items,
+    () => SortedVoiceStateStore.getVoiceStates(guildId),
+    items1,
+  );
+  const obj = channels(stateFromStores[4]);
   const items2 = [SelectedChannelStore];
   const stateFromStores1 = channels(stateFromStores[4]).useStateFromStores(items2, () =>
     voiceChannelId.getVoiceChannelId(),
@@ -27,8 +31,13 @@ export default function RedesignVoiceUserSummary(channels) {
     items3,
   );
   const obj2 = channels(stateFromStores[4]);
-  obj = { channels, selectedChannelId: "r", selectedVoiceChannelId: stateFromStores1, voiceStates: stateFromStores };
-  const summarizedVoiceUsers = channels(stateFromStores[5]).computeSummarizedVoiceUsers(obj);
+  const obj4 = {
+    channels,
+    selectedChannelId: "r",
+    selectedVoiceChannelId: stateFromStores1,
+    voiceStates: stateFromStores,
+  };
+  const summarizedVoiceUsers = channels(stateFromStores[5]).computeSummarizedVoiceUsers(obj4);
   const users = summarizedVoiceUsers.filter((item) => null != item);
   return jsx(guildId(stateFromStores[6]), { users, max: 8, renderIcon: true, guildId, stageIcon });
 }

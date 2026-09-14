@@ -13,14 +13,17 @@ function Row(guildId) {
   const items = [guildId];
   ({ isStart, isEnd } = guildId);
   const callback = noop.useCallback((arg0) => {
-    const obj = { notify_highlights: arg0 ? HighlightSettings.ENABLED : HighlightSettings.DISABLED };
     const NotificationLabel = NotificationSettingsUtils.NotificationLabel;
-    const result = obj.updateGuildNotificationSettings(guildId, obj, NotificationLabel.highlights(!arg0));
+    const result = NotificationSettingsModalActionCreatorsDefault.updateGuildNotificationSettings(
+      guildId,
+      { notify_highlights: arg0 ? HighlightSettings.ENABLED : HighlightSettings.DISABLED },
+      NotificationLabel.highlights(!arg0),
+    );
+    const obj2 = { notify_highlights: arg0 ? HighlightSettings.ENABLED : HighlightSettings.DISABLED };
   }, items);
-  let obj = guildId(504);
   const items1 = [UserGuildSettingsStore, GuildStore];
   const items2 = [guildId];
-  const stateFromStoresObject = obj.useStateFromStoresObject(
+  const stateFromStoresObject = guildId(504).useStateFromStoresObject(
     items1,
     () => ({
       guild: GuildStore.getGuild(guildId),
@@ -40,29 +43,25 @@ function Row(guildId) {
     if (!muted) {
       muted = stateFromStoresObject.notifyHighlights === HighlightSettings.DISABLED;
     }
-    obj = { guild };
-    obj = { label: guild.name, icon: null, value: null, onValueChange: null, start: null, end: null };
-    obj.icon = jsx(GuildIconDefault, {
+    let obj2 = { guild };
+    const obj3 = {
       label: guild.name,
-      icon: null,
-      value: null,
-      onValueChange: null,
-      start: null,
-      end: null,
-    });
-    obj.value = !muted;
-    obj.onValueChange = callback;
-    obj.start = isStart;
-    obj.end = isEnd;
+      icon: jsx(GuildIconDefault, { guild }),
+      value: !muted,
+      onValueChange: callback,
+      start: isStart,
+      end: isEnd,
+    };
     return jsx(tmp2(7303).TableSwitchRow, {
       label: guild.name,
-      icon: null,
-      value: null,
-      onValueChange: null,
-      start: null,
-      end: null,
+      icon: jsx(GuildIconDefault, { guild }),
+      value: !muted,
+      onValueChange: callback,
+      start: isStart,
+      end: isEnd,
     });
   }
+  let obj = guildId(504);
   tmp2 = guildId;
 }
 const HighlightSettings = fn(1074).HighlightSettings;
@@ -73,13 +72,14 @@ let result = size.fileFinishedImporting(
 );
 
 export default function UserSettingsHighlightNotifications() {
-  let obj = stateFromStoresArray(504);
   const items = [SortedGuildStore];
-  stateFromStoresArray = obj.useStateFromStoresArray(items, () => flattenedGuildIds.getFlattenedGuildIds());
+  stateFromStoresArray = stateFromStoresArray(504).useStateFromStoresArray(items, () =>
+    flattenedGuildIds.getFlattenedGuildIds(),
+  );
   [][0] = stateFromStoresArray;
   let tmp4 = null;
   if (0 !== stateFromStoresArray.length) {
-    obj = { children: tmp3 };
+    const obj2 = { children: tmp3 };
     tmp4 = jsx(stateFromStoresArray(8716).Form, { children: tmp3 });
   }
   return tmp4;

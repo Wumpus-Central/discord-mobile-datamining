@@ -123,11 +123,11 @@ const videoStreamStore = new VideoStreamStore(DispatcherDefault, {
       if (guildId == null) {
         tmp10 = NULL_STRING_GUILD_ID;
       }
-      obj = {};
+      const obj2 = {};
       const merged = Object.assign(obj);
-      obj = { streamId };
-      obj[context] = obj;
-      dependencyMap[userId][tmp10] = obj;
+      const obj3 = { streamId };
+      obj2[context] = obj3;
+      dependencyMap[userId][tmp10] = obj2;
       const _HermesInternal = HermesInternal;
       const combined = "" + context + ":" + userId;
       delete tmp2[tmp];

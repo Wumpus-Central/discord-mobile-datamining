@@ -13,9 +13,8 @@ const result = size.fileFinishedImporting("components_native/common/MessagePrevi
 
 export default function MessagePreview(channelId) {
   const onBeforeJumpToMessage = channelId.onBeforeJumpToMessage;
-  let obj = onBeforeJumpToMessage(504);
   const items = [MessagePreviewStore];
-  const stateFromStoresObject = obj.useStateFromStoresObject(items, () => ({
+  const stateFromStoresObject = onBeforeJumpToMessage(504).useStateFromStoresObject(items, () => ({
     messages: MessagePreviewStore.messages,
     jumpTargetId: MessagePreviewStore.jumpTargetId,
   }));
@@ -35,13 +34,7 @@ export default function MessagePreview(channelId) {
     },
     [],
   );
-  obj = {
-    channelId: channelId.channelId,
-    messages: stateFromStoresObject.messages,
-    jumpToChatProps: memo,
-    analyticsLocation,
-  };
-  return jsx(onBeforeJumpToMessage(13382).ChatPreview, {
+  return jsx(onBeforeJumpToMessage(13383).ChatPreview, {
     channelId: channelId.channelId,
     messages: stateFromStoresObject.messages,
     jumpToChatProps: memo,

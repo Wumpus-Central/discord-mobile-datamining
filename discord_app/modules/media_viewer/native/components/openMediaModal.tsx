@@ -28,9 +28,10 @@ let closure_7 = async function _openMediaModal() {
     fn = (fn) => {
       let size = closure_0;
       if (closure_0 == null) {
-        size = { x: 0, y: 0, width: closure_2_0(sources[4]).getWindowDimensions().width, height: null };
+        const size1 = { x: 0, y: 0, width: closure_2_0(sources[4]).getWindowDimensions().width, height: null };
         const obj2 = closure_2_0(sources[4]);
-        size.height = closure_2_0(sources[4]).getWindowDimensions().height;
+        size1.height = closure_2_0(sources[4]).getWindowDimensions().height;
+        size = size1;
         const obj3 = closure_2_0(sources[4]);
       }
       fn(size.x, size.y, size.width, size.height, size.resizeMode);
@@ -41,35 +42,35 @@ let closure_7 = async function _openMediaModal() {
         open.isOpen(),
         "An action sheet must be open to open the media modal as an action sheet",
       );
-      initialIndex(sources[10]);
+      const obj = initialIndex(sources[10]);
       const tmp12 = closure_0(sources[6])(sources[11], sources.paths);
-      let obj = {};
+      const obj2 = {};
       const merged = Object.assign(closure_1_7);
-      obj.initialIndex = initialIndex;
+      obj2.initialIndex = initialIndex;
       const size = { x, y, width, height, resizeMode };
-      obj.originLayout = size;
-      obj.onCloseCallback = onCloseCallback;
-      obj.disableHapticOnOpen = true;
-      obj.openLazy(tmp12, closure_2_6, obj, "stack");
+      obj2.originLayout = size;
+      obj2.onCloseCallback = onCloseCallback;
+      obj2.disableHapticOnOpen = true;
+      obj.openLazy(tmp12, closure_2_6, obj2, "stack");
       let tmp24 = initialIndex;
       const tmp3 = initialIndex(sources[9]);
     } else {
       const obj6 = initialIndex(sources[12]);
       const tmp34 = closure_0(sources[6])(sources[13], sources.paths);
-      obj = {};
+      const obj3 = {};
       const merged1 = Object.assign(closure_1_7);
       tmp24 = initialIndex;
-      obj.initialIndex = initialIndex;
+      obj3.initialIndex = initialIndex;
       const size1 = { x, y, width, height, resizeMode };
-      obj.originLayout = size1;
-      obj.onCloseCallback = onCloseCallback;
-      obj6.pushLazy(tmp34, obj, closure_2_6, { animation: "none" });
+      obj3.originLayout = size1;
+      obj3.onCloseCallback = onCloseCallback;
+      obj6.pushLazy(tmp34, obj3, closure_2_6, { animation: "none" });
     }
     closure_1_10({ sources, initialIndex: tmp24 });
     closure_1_11.markSessionStarted({ channelId, numMediaItems: sources.length, source });
     closure_1_12();
-    const obj1 = { sources, initialIndex: tmp24 };
-    const obj2 = { channelId, numMediaItems: sources.length, source };
+    const obj4 = { sources, initialIndex: tmp24 };
+    const obj5 = { channelId, numMediaItems: sources.length, source };
   });
   await "HermesInternal";
   initialIndex = tmp2;

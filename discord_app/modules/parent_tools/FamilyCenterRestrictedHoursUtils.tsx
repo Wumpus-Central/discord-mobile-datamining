@@ -104,10 +104,10 @@ export const formatDuration = function formatDuration(arg0) {
   const formatToPlainString = intl.formatToPlainString;
   const tmp3 = _modDef2396;
   if (isIntegerResult) {
-    let obj = { hours: result };
-    let formatToPlainStringResult = formatToPlainString(tmp3.hFDcmZ, obj);
+    const obj2 = { hours: result };
+    let formatToPlainStringResult = formatToPlainString(tmp3.hFDcmZ, obj2);
   } else {
-    obj = { hours: null };
+    const obj = { hours: null };
     const _Math = Math;
     obj.hours = Math.floor(result);
     formatToPlainStringResult = formatToPlainString(tmp3.wcrXLM, obj);

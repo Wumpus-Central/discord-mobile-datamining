@@ -118,7 +118,7 @@ export const useCanUseRoleSubscriptionIAP = function useCanUseRoleSubscriptionIA
     }
     return tmp;
   }, []);
-  let memo1 = noop.useMemo(() => guildId(1150).isIOS(), []);
+  let memo1 = noop.useMemo(() => guildId(1363).isIOS(), []);
   items = [GuildStore];
   if (memo1) {
     memo1 = obj.useStateFromStores(items, () => {

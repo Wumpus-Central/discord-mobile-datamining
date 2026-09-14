@@ -32,15 +32,15 @@ require = fn;
 function HideBadgeMenu(arg0) {
   ({ badge: require, onHide: importDefault } = arg0);
   ({ index, children } = arg0);
-  let obj = { items: null, align: null, disableGesture: true, triggerOnLongPress: true, children: null };
-  obj = { label: null, trailingIndicator: null, action: null };
+  const obj = { items: null, align: null, disableGesture: true, triggerOnLongPress: true, children: null };
+  const obj2 = { label: null, trailingIndicator: null, action: null };
   const intl = util.intl;
-  obj.label = intl.string(util.t.xSWJPo);
-  obj.trailingIndicator = EyeSlashIcon.EyeSlashIcon;
-  obj.action = function action() {
+  obj2.label = intl.string(util.t.xSWJPo);
+  obj2.trailingIndicator = EyeSlashIcon.EyeSlashIcon;
+  obj2.action = function action() {
     return importDefault(_require);
   };
-  const items = [obj];
+  const items = [obj2];
   obj.items = items;
   const result = index % BadgeGrid.BADGE_GRID_COLUMNS;
   let str = "right";
@@ -64,22 +64,22 @@ function BadgeTileContent(arg0) {
   }
   let tmp2 = null;
   if (alwaysVisible) {
-    let obj = { size: "sm", color: nativeDefault.colors.INTERACTIVE_ICON_DEFAULT };
+    const obj = { size: "sm", color: nativeDefault.colors.INTERACTIVE_ICON_DEFAULT };
     tmp2 = __initData(CircleInformationIcon.CircleInformationIcon, obj);
   }
-  obj = { variant: "secondary", border: "none", radius: 16, style: tmp.card, children: null };
-  obj = { badge, size: BadgeGrid.BADGE_TILE_ICON_SIZE, style: null };
+  const obj2 = { variant: "secondary", border: "none", radius: 16, style: tmp.card, children: null };
+  const obj3 = { badge, size: BadgeGrid.BADGE_TILE_ICON_SIZE, style: null };
   let iconHidden;
   if (flag) {
     iconHidden = tmp.iconHidden;
   }
-  obj.style = iconHidden;
-  const items = [__initData(BadgeCatalogIconDefault, obj)];
+  obj3.style = iconHidden;
+  const items = [__initData(BadgeCatalogIconDefault, obj3)];
   if (flag) {
     if (null != onShowPress) {
       if (!alwaysVisible) {
-        const obj1 = { style: tmp.indicatorButton, children: null };
-        const obj2 = {
+        const obj4 = { style: tmp.indicatorButton, children: null };
+        const obj5 = {
           size: "sm",
           variant: "secondary-overlay",
           icon: null,
@@ -87,28 +87,29 @@ function BadgeTileContent(arg0) {
           accessibilityHint: null,
           onPress: null,
         };
-        const obj3 = { size: "sm", color: nativeDefault.colors.CONTROL_OVERLAY_SECONDARY_TEXT_DEFAULT };
-        obj2.icon = __initData(EyeSlashIcon.EyeSlashIcon, obj3);
+        const obj6 = { size: "sm", color: nativeDefault.colors.CONTROL_OVERLAY_SECONDARY_TEXT_DEFAULT };
+        obj5.icon = __initData(EyeSlashIcon.EyeSlashIcon, obj6);
         if (showAccessibilityLabel == null) {
           showAccessibilityLabel = badge.name;
         }
-        obj2.accessibilityLabel = showAccessibilityLabel;
+        obj5.accessibilityLabel = showAccessibilityLabel;
         const intl = util.intl;
-        obj2.accessibilityHint = intl.string(util.t.hHHpvU);
-        obj2.onPress = onShowPress;
-        obj1.children = __initData(IconButton.IconButton, obj2);
-        let tmp10Result = __initData(hasOwnProperty, obj1);
+        obj5.accessibilityHint = intl.string(util.t.hHHpvU);
+        obj5.onPress = onShowPress;
+        obj4.children = __initData(IconButton.IconButton, obj5);
+        let tmp10Result = __initData(hasOwnProperty, obj4);
       }
       items[1] = tmp10Result;
-      obj.children = items;
-      return value2(Card.Card, obj);
+      obj2.children = items;
+      return value2(Card.Card, obj2);
     }
   }
-  tmp10Result = null != tmp2;
-  if (tmp10Result) {
-    const obj4 = { style: tmp.indicator, "aria-hidden": true, children: tmp2 };
-    tmp10Result = __initData(hasOwnProperty, obj4);
+  let tmp10Result2 = null != tmp2;
+  if (tmp10Result2) {
+    const obj7 = { style: tmp.indicator, "aria-hidden": true, children: tmp2 };
+    tmp10Result2 = __initData(hasOwnProperty, obj7);
   }
+  tmp10Result = tmp10Result2;
 }
 get_ActivityIndicator = fn(17);
 ({ Platform, Pressable: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
@@ -125,9 +126,9 @@ const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16 } = jsxProd);
 let c17 = 80;
 let c18 = 16.666666666666668;
-fn(4636);
+let createStyles = fn(4636);
 let obj = {
-  gridInset: null,
+  gridInset: { paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16 },
   grid: null,
   upsell: null,
   upsellCard: null,
@@ -137,19 +138,18 @@ let obj = {
   message: null,
   messageText: null,
 };
-obj = { paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16 };
-obj.gridInset = obj;
-let createStyles = { position: "relative", width: "100%", marginTop: nativeDefault.space.PX_8 };
-obj.grid = createStyles;
+let obj3 = { paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16 };
+obj.grid = { position: "relative", width: "100%", marginTop: nativeDefault.space.PX_8 };
+let obj4 = { position: "relative", width: "100%", marginTop: nativeDefault.space.PX_8 };
 obj.upsell = { marginHorizontal: 0, marginTop: nativeDefault.space.PX_8, marginBottom: nativeDefault.space.PX_16 };
-let obj2 = { marginHorizontal: 0, marginTop: nativeDefault.space.PX_8, marginBottom: nativeDefault.space.PX_16 };
+let obj5 = { marginHorizontal: 0, marginTop: nativeDefault.space.PX_8, marginBottom: nativeDefault.space.PX_16 };
 obj.upsellCard = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGHEST };
-let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGHEST };
+let obj6 = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGHEST };
 obj.upsellContent = { paddingVertical: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16 };
-let obj4 = { paddingVertical: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16 };
+let obj7 = { paddingVertical: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16 };
 obj.upsellCta = { marginTop: nativeDefault.space.PX_12, borderRadius: nativeDefault.radii.sm };
 obj.upsellText = { textAlign: "center" };
-let obj5 = { marginTop: nativeDefault.space.PX_12, borderRadius: nativeDefault.radii.sm };
+let obj8 = { marginTop: nativeDefault.space.PX_12, borderRadius: nativeDefault.radii.sm };
 obj.message = {
   alignItems: "center",
   justifyContent: "center",
@@ -159,7 +159,7 @@ obj.message = {
 obj.messageText = { textAlign: "center" };
 let closure_19 = createStyles.createStyles(obj);
 createStyles = fn(4636);
-let obj7 = {
+let obj10 = {
   position: { position: "absolute" },
   fill: { flex: 1 },
   card: { flex: 1, alignItems: "center", justifyContent: "center", padding: 0 },
@@ -176,8 +176,8 @@ let size = {
   alignItems: "flex-end",
   justifyContent: "flex-start",
 };
-obj7.indicator = size;
-obj7.indicatorButton = {
+obj10.indicator = size;
+obj10.indicatorButton = {
   position: "absolute",
   top: 0,
   end: 0,
@@ -186,8 +186,8 @@ obj7.indicatorButton = {
   alignItems: "center",
   justifyContent: "center",
 };
-obj7.iconHidden = { opacity: 0.3 };
-let closure_21 = createStyles.createStyles(obj7);
+obj10.iconHidden = { opacity: 0.3 };
+let closure_21 = createStyles.createStyles(obj10);
 function getSlotOffset(arg0, arg1) {
   const point = { x: null, y: null };
   const result = arg0 % BadgeGrid.BADGE_GRID_COLUMNS;
@@ -196,15 +196,15 @@ function getSlotOffset(arg0, arg1) {
   point.y = rounded * (arg1 + BadgeGrid.BADGE_GRID_GAP);
   return point;
 }
-let obj6 = {
+let obj9 = {
   alignItems: "center",
   justifyContent: "center",
   paddingHorizontal: nativeDefault.space.PX_16,
   paddingVertical: nativeDefault.space.PX_32,
 };
 getSlotOffset.__closure = {
-  BADGE_GRID_COLUMNS: fn(14708).BADGE_GRID_COLUMNS,
-  BADGE_GRID_GAP: fn(14708).BADGE_GRID_GAP,
+  BADGE_GRID_COLUMNS: fn(14709).BADGE_GRID_COLUMNS,
+  BADGE_GRID_GAP: fn(14709).BADGE_GRID_GAP,
 };
 getSlotOffset.__workletHash = 8647997879684;
 getSlotOffset.__initData = {
@@ -233,13 +233,13 @@ let closure_24 = noop.memo((badge) => {
     items1[1] = size;
     if (badge.hidden) {
       let obj = { style: items1, children: null };
-      obj = { badge, alwaysVisible, showAccessibilityLabel: null, onShowPress: null };
+      let obj2 = { badge, alwaysVisible, showAccessibilityLabel: null, onShowPress: null };
       let intl = tmp2(alwaysVisible[15]).intl;
       let t = tmp2(alwaysVisible[15]).t;
-      let obj1 = { badgeName: badge.name, position: index + 1 };
-      obj.showAccessibilityLabel = intl.formatToPlainString(badge.hidden ? t["dXg/Dl"] : t["21W3EN"], obj1);
-      obj.onShowPress = onShowPress;
-      obj.children = closure_15(BadgeTileContent, obj);
+      let obj3 = { badgeName: badge.name, position: index + 1 };
+      obj2.showAccessibilityLabel = intl.formatToPlainString(badge.hidden ? t["dXg/Dl"] : t["21W3EN"], obj3);
+      obj2.onShowPress = onShowPress;
+      obj.children = closure_15(BadgeTileContent, obj2);
       return closure_15(items1, obj);
     } else {
       function renderTile(ref) {
@@ -248,14 +248,16 @@ let closure_24 = noop.memo((badge) => {
         if (ref != null) {
           ref = ref.ref;
         }
-        let obj = { ref, accessibilityLabel: null };
+        const obj = { ref, accessibilityLabel: null };
         const intl = util.intl;
         const t = util.t;
-        obj = { badgeName: badge.name, position: index + 1 };
-        obj.accessibilityLabel = intl.formatToPlainString(badge.hidden ? t["dXg/Dl"] : t["21W3EN"], obj);
+        obj.accessibilityLabel = intl.formatToPlainString(badge.hidden ? t["dXg/Dl"] : t["21W3EN"], {
+          badgeName: badge.name,
+          position: index + 1,
+        });
         if (!alwaysVisible) {
-          obj = { accessibilityRole: "button", accessibilityHint: undefined };
-          const merged = Object.assign(obj);
+          const obj3 = { accessibilityRole: "button", accessibilityHint: undefined };
+          const merged = Object.assign(obj3);
           let accessibilityActions;
           if (ref != null) {
             accessibilityActions = ref.accessibilityActions;
@@ -287,8 +289,8 @@ let closure_24 = noop.memo((badge) => {
           obj.onLongPress = fn;
           obj.delayLongPress = ContextMenuConstants.CONTEXT_MENU_LONG_PRESS_DURATION_MS;
           obj.style = items1;
-          const obj1 = { badge, alwaysVisible };
-          obj.children = __initData(BadgeTileContent, obj1);
+          const obj4 = { badge, alwaysVisible };
+          obj.children = __initData(BadgeTileContent, obj4);
           return __initData(React4, obj);
         } else {
           const intl2 = util.intl;
@@ -297,11 +299,12 @@ let closure_24 = noop.memo((badge) => {
           intl2.string(BadgeUtils.isPinnedBadge(tmp9) ? t2.t3udZb : t2.nPQVxb);
           const isPinnedBadgeResult = BadgeUtils.isPinnedBadge(tmp9);
         }
+        const obj2 = { badgeName: badge.name, position: index + 1 };
       }
       if (!alwaysVisible) {
         if (null != onHide) {
-          const obj2 = { badge, index, onHide, children: renderTile };
-          let renderTileResult = closure_15(HideBadgeMenu, obj2);
+          let obj4 = { badge, index, onHide, children: renderTile };
+          let renderTileResult = closure_15(HideBadgeMenu, obj4);
         }
         return renderTileResult;
       }
@@ -373,10 +376,9 @@ let closure_37 = noop.memo((badge) => {
   closure_14 = index(tileSize[22])(() => {
     onPress(badge);
   });
+  const sharedValue = badge(tileSize[23]).useSharedValue(false);
   let obj = badge(tileSize[23]);
-  const sharedValue = obj.useSharedValue(false);
-  let obj1 = badge(tileSize[23]);
-  const sharedValue1 = obj1.useSharedValue(null);
+  const sharedValue1 = badge(tileSize[23]).useSharedValue(null);
   if (typeof closure_22 === "function") {
     let point = { x: null, y: null };
     let result = index % tmp2(tmp[13]).BADGE_GRID_COLUMNS;
@@ -384,14 +386,14 @@ let closure_37 = noop.memo((badge) => {
     let _Math = Math;
     let rounded = Math.floor(index / tmp2(tmp[13]).BADGE_GRID_COLUMNS);
     point.y = rounded * (tileSize + tmp2(tmp[13]).BADGE_GRID_GAP);
+    sharedValue2 = tmp2(tmp[23]).useSharedValue(point.x);
     let tmp2Result = tmp2(tmp[23]);
-    sharedValue2 = tmp2Result.useSharedValue(point.x);
-    tmp2Result = tmp2(tmp[23]);
-    sharedValue3 = tmp2Result.useSharedValue(point.y);
+    sharedValue3 = tmp2(tmp[23]).useSharedValue(point.y);
+    const tmp2Result7 = tmp2(tmp[23]);
     sharedValue4 = tmp2(tmp[23]).useSharedValue(point);
-    const tmp2Result1 = tmp2(tmp[23]);
+    const tmp2Result8 = tmp2(tmp[23]);
     sharedValue5 = tmp2(tmp[23]).useSharedValue(1);
-    const tmp2Result2 = tmp2(tmp[23]);
+    const tmp2Result9 = tmp2(tmp[23]);
     let fn = function v() {
       value = orderShared.get();
       index = value.indexOf(badge_id);
@@ -412,8 +414,8 @@ let closure_37 = noop.memo((badge) => {
       }
       return tmp2;
     };
-    obj = { orderShared, badgeId: badge_id, getSlotOffset: tmp5, slotOffset, tileSize };
-    fn.__closure = obj;
+    let obj3 = { orderShared, badgeId: badge_id, getSlotOffset: tmp5, slotOffset, tileSize };
+    fn.__closure = obj3;
     fn.__workletHash = 6182257637516;
     fn.__initData = items3;
     class C {
@@ -455,14 +457,14 @@ let closure_37 = noop.memo((badge) => {
         return;
       }
     }
-    obj = {
+    let obj4 = {
       isThisTileDragging: sharedValue,
       positionX: sharedValue2,
       withTiming: tmp2(tmp[24]).withTiming,
       timingStandard: tmp2(tmp[25]).timingStandard,
       positionY: sharedValue3,
     };
-    C.__closure = obj;
+    C.__closure = obj4;
     C.__workletHash = 4011295272705;
     C.__initData = __initData;
     const animatedReaction = tmp2(tmp[23]).useAnimatedReaction(fn, C);
@@ -494,7 +496,7 @@ let closure_37 = noop.memo((badge) => {
         return;
       }
     }
-    obj1 = {
+    let obj5 = {
       orderShared,
       tileSize,
       BADGE_GRID_GAP: tmp2(tmp[13]).BADGE_GRID_GAP,
@@ -509,17 +511,17 @@ let closure_37 = noop.memo((badge) => {
       triggerHapticFeedback: tmp2(tmp[11]).triggerHapticFeedback,
       HapticFeedbackTypes: tmp2(tmp[11]).HapticFeedbackTypes,
     };
-    Q.__closure = obj1;
+    Q.__closure = obj5;
     Q.__workletHash = 1083237242858;
     Q.__initData = __initData2;
     let items = [badge_id, orderShared, slotOffset, tileSize, sharedValue2, sharedValue3];
     reslot = slotOffset.useCallback(Q, items);
-    const tmp2Result3 = tmp2(tmp[23]);
+    const tmp2Result10 = tmp2(tmp[23]);
     function ee() {
       return scrollOffset.get();
     }
-    let obj2 = { scrollOffset };
-    ee.__closure = obj2;
+    let obj6 = { scrollOffset };
+    ee.__closure = obj6;
     ee.__workletHash = 10993823060256;
     ee.__initData = __initData3;
     let fn2 = function $(arg0, arg1) {
@@ -532,8 +534,8 @@ let closure_37 = noop.memo((badge) => {
         callback();
       }
     };
-    let obj3 = { isThisTileDragging: sharedValue, positionY: sharedValue3, reslot };
-    fn2.__closure = obj3;
+    const obj7 = { isThisTileDragging: sharedValue, positionY: sharedValue3, reslot };
+    fn2.__closure = obj7;
     fn2.__workletHash = 9803143874483;
     fn2.__initData = __initData4;
     const animatedReaction1 = tmp2(tmp[23]).useAnimatedReaction(ee, fn2);
@@ -556,10 +558,9 @@ let closure_37 = noop.memo((badge) => {
     ];
     closure_22 = slotOffset.useMemo(() => {
       function handleStart() {
-        let obj = isDragActive;
         if (!isDragActive.get()) {
           badge(tileSize[23]).runOnJS(badge(tileSize[27]).hideContextMenu)();
-          const result = obj.set(true);
+          const result = isDragActive.set(true);
           const result1 = sharedValue.set(true);
           const point = { x: sharedValue2.get(), y: sharedValue3.get() };
           const result2 = sharedValue4.set(point);
@@ -567,22 +568,22 @@ let closure_37 = noop.memo((badge) => {
           const measureResult = badge(tileSize[23]).measure(scrollRef);
           let tmp15 = null;
           if (null != measureResult) {
-            obj = { pageY: null, height: null };
             ({ pageY: obj5.pageY, height: obj5.height } = measureResult);
-            tmp15 = obj;
+            tmp15 = { pageY: null, height: null };
+            const obj3 = { pageY: null, height: null };
           }
           const result3 = sharedValue1.set(tmp15);
-          let tmp2Result = badge(tileSize[24]);
-          const result4 = sharedValue5.set(tmp2Result.withTiming(1.05, badge(tileSize[25]).timingStandard));
-          tmp2Result = badge(tileSize[23]);
           const obj4 = badge(tileSize[23]);
-          tmp2Result.runOnJS(badge(tileSize[11]).triggerHapticFeedback)(
+          const result4 = sharedValue5.set(badge(tileSize[24]).withTiming(1.05, badge(tileSize[25]).timingStandard));
+          const tmp2Result = badge(tileSize[24]);
+          const tmp2Result2 = badge(tileSize[23]);
+          badge(tileSize[23]).runOnJS(badge(tileSize[11]).triggerHapticFeedback)(
             badge(tileSize[11]).HapticFeedbackTypes.DRAG_AND_DROP_START,
           );
-          const runOnJSResult = tmp2Result.runOnJS(badge(tileSize[11]).triggerHapticFeedback);
+          const runOnJSResult = badge(tileSize[23]).runOnJS(badge(tileSize[11]).triggerHapticFeedback);
         }
       }
-      let obj = {
+      handleStart.__closure = {
         isAnyDragActive: isDragActive,
         isThisTileDragging: sharedValue,
         runOnJS: badge(tileSize[23]).runOnJS,
@@ -600,7 +601,6 @@ let closure_37 = noop.memo((badge) => {
         triggerHapticFeedback: badge(tileSize[11]).triggerHapticFeedback,
         HapticFeedbackTypes: badge(tileSize[11]).HapticFeedbackTypes,
       };
-      handleStart.__closure = obj;
       handleStart.__workletHash = 11005478611755;
       handleStart.__initData = __initData;
       function handleChange(changeX) {
@@ -624,7 +624,25 @@ let closure_37 = noop.memo((badge) => {
           }
         }
       }
-      obj = {
+      let obj = {
+        isAnyDragActive: isDragActive,
+        isThisTileDragging: sharedValue,
+        runOnJS: badge(tileSize[23]).runOnJS,
+        hideContextMenu: badge(tileSize[27]).hideContextMenu,
+        dragOrigin: sharedValue4,
+        positionX: sharedValue2,
+        positionY: sharedValue3,
+        measure: badge(tileSize[23]).measure,
+        scrollRef,
+        dragViewport: sharedValue1,
+        scale: sharedValue5,
+        withTiming: badge(tileSize[24]).withTiming,
+        DRAG_SCALE: 1.05,
+        timingStandard: badge(tileSize[25]).timingStandard,
+        triggerHapticFeedback: badge(tileSize[11]).triggerHapticFeedback,
+        HapticFeedbackTypes: badge(tileSize[11]).HapticFeedbackTypes,
+      };
+      handleChange.__closure = {
         isThisTileDragging: sharedValue,
         positionX: sharedValue2,
         positionY: sharedValue3,
@@ -634,7 +652,6 @@ let closure_37 = noop.memo((badge) => {
         autoScrollSpeed,
         clamp: badge(tileSize[23]).clamp,
       };
-      handleChange.__closure = obj;
       handleChange.__workletHash = 6322461598588;
       handleChange.__initData = __initData2;
       function handleFinalize() {
@@ -676,7 +693,17 @@ let closure_37 = noop.memo((badge) => {
           const obj6 = badge(tileSize[23]);
         }
       }
-      obj = {
+      let obj2 = {
+        isThisTileDragging: sharedValue,
+        positionX: sharedValue2,
+        positionY: sharedValue3,
+        reslot,
+        dragViewport: sharedValue1,
+        AUTO_SCROLL_EDGE_SIZE: sharedValue2,
+        autoScrollSpeed,
+        clamp: badge(tileSize[23]).clamp,
+      };
+      handleFinalize.__closure = {
         isThisTileDragging: sharedValue,
         autoScrollSpeed,
         dragViewport: sharedValue1,
@@ -696,10 +723,29 @@ let closure_37 = noop.memo((badge) => {
         HapticFeedbackTypes: badge(tileSize[11]).HapticFeedbackTypes,
         onCommitOrder,
       };
-      handleFinalize.__closure = obj;
       handleFinalize.__workletHash = 3743829622400;
       handleFinalize.__initData = __initData3;
       const Gesture = badge(tileSize[28]).Gesture;
+      let obj3 = {
+        isThisTileDragging: sharedValue,
+        autoScrollSpeed,
+        dragViewport: sharedValue1,
+        orderShared,
+        badgeId: badge_id,
+        getSlotOffset,
+        slotOffset,
+        tileSize: handleFinalize,
+        positionX: sharedValue2,
+        withTiming: badge(tileSize[24]).withTiming,
+        timingStandard: badge(tileSize[25]).timingStandard,
+        positionY: sharedValue3,
+        scale: sharedValue5,
+        isAnyDragActive: isDragActive,
+        runOnJS: badge(tileSize[23]).runOnJS,
+        triggerHapticFeedback: badge(tileSize[11]).triggerHapticFeedback,
+        HapticFeedbackTypes: badge(tileSize[11]).HapticFeedbackTypes,
+        onCommitOrder,
+      };
       const PanResult = Gesture.Pan();
       const fn = function s() {
         handleStart();
@@ -723,7 +769,7 @@ let closure_37 = noop.memo((badge) => {
       fn3.__initData = __initData4;
       return Gesture.Pan().minDistance(8).onStart(fn).onChange(fn2).onFinalize(fn3);
     }, items1);
-    const tmp2Result4 = tmp2(tmp[23]);
+    const tmp2Result11 = tmp2(tmp[23]);
     function ie() {
       value = sharedValue.get();
       const point = sharedValue4.get();
@@ -745,28 +791,28 @@ let closure_37 = noop.memo((badge) => {
       }
       rect.top = y;
       if (value) {
-        let obj = { translateX: sharedValue2.get() - point.x };
+        const obj = { translateX: sharedValue2.get() - point.x };
         const items = [obj, ,];
-        obj = { translateY: sharedValue3.get() - point.y };
-        items[1] = obj;
-        const obj1 = { scale: sharedValue5.get() };
-        items[2] = obj1;
+        const obj2 = { translateY: sharedValue3.get() - point.y };
+        items[1] = obj2;
+        const obj3 = { scale: sharedValue5.get() };
+        items[2] = obj3;
         let items1 = items;
       } else {
-        const obj2 = { scale: sharedValue5.get() };
-        items1 = [obj2];
+        const obj4 = { scale: sharedValue5.get() };
+        items1 = [obj4];
       }
       rect.transform = items1;
       return rect;
     }
-    let obj4 = {
+    const obj8 = {
       isThisTileDragging: sharedValue,
       dragOrigin: sharedValue4,
       positionX: sharedValue2,
       positionY: sharedValue3,
       scale: sharedValue5,
     };
-    ie.__closure = obj4;
+    ie.__closure = obj8;
     ie.__workletHash = 3612359203254;
     ie.__initData = __initData5;
     closure_23 = tmp2(tmp[23]).useAnimatedStyle(ie);
@@ -774,7 +820,6 @@ let closure_37 = noop.memo((badge) => {
     closure_24 = slotOffset.useCallback((nativeEvent) => {
       const actionName = nativeEvent.nativeEvent.actionName;
       if ("moveup" === actionName) {
-        let obj = orderShared;
         value = orderShared.get();
         index = value.indexOf(badge_id);
         let num2 = 1;
@@ -784,52 +829,52 @@ let closure_37 = noop.memo((badge) => {
         const clampResult = ReanimatedRexport.clamp(index + num2, 0, value.length - 1);
         const result = PendingBadgeSettings.moveBadgeInDisplayOrder(value, index, clampResult);
         if (result !== value) {
-          const result1 = obj.set(result);
+          const result1 = orderShared.set(result);
           onCommitOrder(result);
           const AccessibilityAnnouncer = AccessibilityAnnouncer2.AccessibilityAnnouncer;
           const intl = util.intl;
-          obj = { from: index + slotOffset + 1, to: clampResult + slotOffset + 1 };
-          AccessibilityAnnouncer.announce(intl.formatToPlainString(util.t.qPHr0x, obj));
+          const obj3 = { from: index + slotOffset + 1, to: clampResult + slotOffset + 1 };
+          AccessibilityAnnouncer.announce(intl.formatToPlainString(util.t.qPHr0x, obj3));
         }
         const tmp4Result = PendingBadgeSettings;
       }
     }, items2);
     items3 = [];
     if (!isFirst) {
-      let obj5 = { name: "moveup", label: null };
+      const obj9 = { name: "moveup", label: null };
       let intl = tmp2(tmp[15]).intl;
-      obj5.label = intl.string(tmp2(tmp[15]).t.eR2XSh);
-      items3.push(obj5);
+      obj9.label = intl.string(tmp2(tmp[15]).t.eR2XSh);
+      items3.push(obj9);
     }
     if (!isLast) {
-      let obj6 = { name: "movedown", label: null };
+      const obj10 = { name: "movedown", label: null };
       let intl2 = tmp2(tmp[15]).intl;
-      obj6.label = intl2.string(tmp2(tmp[15]).t.wWi0DL);
-      items3.push(obj6);
+      obj10.label = intl2.string(tmp2(tmp[15]).t.wWi0DL);
+      items3.push(obj10);
     }
     function renderTile(ref) {
       badge = ref;
-      let obj = { gesture, children: null };
-      obj = { style: null, children: null };
+      const obj = { gesture, children: null };
+      const obj2 = { style: null, children: null };
       const items = [position.position, ,];
       const size = { width: tileSize, height: tileSize };
       items[1] = size;
       items[2] = closure_23;
-      obj.style = items;
+      obj2.style = items;
       ref = undefined;
       if (ref != null) {
         ref = ref.ref;
       }
-      obj = { ref, accessible: true, accessibilityLabel: null };
+      const obj3 = { ref, accessible: true, accessibilityLabel: null };
       const intl = tmp2(tileSize[15]).intl;
       const t = tmp2(tileSize[15]).t;
-      obj.accessibilityLabel = intl.formatToPlainString(badge.hidden ? t["dXg/Dl"] : t["21W3EN"], {
+      obj3.accessibilityLabel = intl.formatToPlainString(badge.hidden ? t["dXg/Dl"] : t["21W3EN"], {
         badgeName: badge.name,
         position: index + 1,
       });
       if (!alwaysVisible) {
-        const obj2 = { accessibilityRole: "button", accessibilityHint: undefined };
-        const merged = Object.assign(obj2);
+        const obj5 = { accessibilityRole: "button", accessibilityHint: undefined };
+        const merged = Object.assign(obj5);
         let accessibilityActions;
         if (ref != null) {
           accessibilityActions = ref.accessibilityActions;
@@ -839,8 +884,8 @@ let closure_37 = noop.memo((badge) => {
         }
         const items1 = [];
         HermesBuiltin.arraySpread(items3, HermesBuiltin.arraySpread(accessibilityActions, 0));
-        obj.accessibilityActions = items1;
-        obj.onAccessibilityAction = function onAccessibilityAction(nativeEvent) {
+        obj3.accessibilityActions = items1;
+        obj3.onAccessibilityAction = function onAccessibilityAction(nativeEvent) {
           const actionName = nativeEvent.nativeEvent.actionName;
           if ("moveup" !== actionName) {
             if ("movedown" !== actionName) {
@@ -859,7 +904,7 @@ let closure_37 = noop.memo((badge) => {
         } else if (ref != null) {
           onPress = ref.onPress;
         }
-        obj.onPress = onPress;
+        obj3.onPress = onPress;
         let fn;
         if (null != ref) {
           fn = (arg0) => {
@@ -870,13 +915,13 @@ let closure_37 = noop.memo((badge) => {
             }
           };
         }
-        obj.onLongPress = fn;
-        obj.delayLongPress = tmp2(tileSize[12]).CONTEXT_MENU_LONG_PRESS_DURATION_MS;
-        obj.style = position.fill;
-        const obj3 = { badge: tmp7, alwaysVisible };
-        obj.children = sharedValue(closure_23, obj3);
-        obj.children = sharedValue(alwaysVisible, obj);
-        obj.children = sharedValue(index(tileSize[23]).View, obj);
+        obj3.onLongPress = fn;
+        obj3.delayLongPress = tmp2(tileSize[12]).CONTEXT_MENU_LONG_PRESS_DURATION_MS;
+        obj3.style = position.fill;
+        const obj6 = { badge: tmp7, alwaysVisible };
+        obj3.children = sharedValue(closure_23, obj6);
+        obj2.children = sharedValue(alwaysVisible, obj3);
+        obj.children = sharedValue(index(tileSize[23]).View, obj2);
         return sharedValue(badge(tileSize[28]).GestureDetector, obj);
       } else {
         const intl2 = tmp2(tileSize[15]).intl;
@@ -885,18 +930,19 @@ let closure_37 = noop.memo((badge) => {
         intl2.string(tmp2(tileSize[21]).isPinnedBadge(tmp10) ? t2.t3udZb : t2.nPQVxb);
         const isPinnedBadgeResult = tmp2(tileSize[21]).isPinnedBadge(tmp10);
       }
-      const obj1 = { badgeName: badge.name, position: index + 1 };
+      const obj4 = { badgeName: badge.name, position: index + 1 };
     }
     if (alwaysVisible) {
       let renderTileResult = renderTile(null);
     } else {
-      const obj7 = { badge, index, onHide, children: renderTile };
-      renderTileResult = sharedValue(sharedValue5, obj7);
+      const obj11 = { badge, index, onHide, children: renderTile };
+      renderTileResult = sharedValue(sharedValue5, obj11);
     }
     return renderTileResult;
   } else {
     throw new TypeError("Trying to call a non-function");
   }
+  let obj2 = badge(tileSize[23]);
 });
 const __initData6 = {
   code: "function CustomizeBadgesSheetTsx14({timeSincePreviousFrame:timeSincePreviousFrame}){const{autoScrollSpeed,autoScrollElapsed,MS_PER_FRAME_60FPS,AUTO_SCROLL_PIXELS_PER_SECOND,scrollTo,scrollRef,roundToNearestPixel,scrollOffset}=this.__closure;const speed=autoScrollSpeed.get();if(speed===0||timeSincePreviousFrame==null||timeSincePreviousFrame<=0){return;}autoScrollElapsed.set(autoScrollElapsed.get()+timeSincePreviousFrame);const elapsed=autoScrollElapsed.get();if(elapsed<MS_PER_FRAME_60FPS){return;}autoScrollElapsed.set(0);const delta=speed*AUTO_SCROLL_PIXELS_PER_SECOND*elapsed/1000;scrollTo(scrollRef,0,Math.max(roundToNearestPixel(scrollOffset.get()+delta),0),false);}",
@@ -911,6 +957,7 @@ size = fn(2);
 let result = size.fileFinishedImporting("modules/badges/native/CustomizeBadgesSheet.tsx");
 
 export default function CustomizeBadgesSheet(analyticsLocations) {
+  let analyticsLocations1 = analyticsLocations.analyticsLocations;
   let stateFromStores;
   let stateFromStores1;
   analyticsLocations = undefined;
@@ -937,12 +984,13 @@ export default function CustomizeBadgesSheet(analyticsLocations) {
   let frameCallback;
   let callback1;
   let tmp = onHide();
-  let obj = stateFromStores(stateFromStores1[30]);
-  const tenureBadgeHideable = obj.useConfig({ location: "CustomizeBadgesSheet" }).tenureBadgeHideable;
+  const tenureBadgeHideable = stateFromStores(stateFromStores1[30]).useConfig({
+    location: "CustomizeBadgesSheet",
+  }).tenureBadgeHideable;
   const sum = Math.max(stateFromStores(stateFromStores1[31])().bottom, hiddenBadges) + 4;
-  let obj1 = tenureBadgeHideable(stateFromStores1[32]);
+  let obj = stateFromStores(stateFromStores1[30]);
   const items = [pendingBadgeDisplayOrder];
-  stateFromStores = obj1.useStateFromStores(items, () => {
+  stateFromStores = tenureBadgeHideable(stateFromStores1[32]).useStateFromStores(items, () => {
     const currentUser = pendingBadgeDisplayOrder.getCurrentUser();
     let id;
     if (currentUser != null) {
@@ -952,42 +1000,48 @@ export default function CustomizeBadgesSheet(analyticsLocations) {
   });
   let obj2 = tenureBadgeHideable(stateFromStores1[32]);
   const items1 = [pendingBadgeDisplayOrder];
-  stateFromStores1 = obj2.useStateFromStores(items1, () =>
+  stateFromStores1 = tenureBadgeHideable(stateFromStores1[32]).useStateFromStores(items1, () =>
     stateFromStores(stateFromStores1[33]).canUsePremiumProfileCustomization(pendingBadgeDisplayOrder.getCurrentUser()),
   );
-  if (analyticsLocations == null) {
-    analyticsLocations = [];
+  let obj3 = tenureBadgeHideable(stateFromStores1[32]);
+  if (analyticsLocations1 == null) {
+    analyticsLocations1 = [];
   }
   analyticsLocations = stateFromStores(stateFromStores1[34])(
-    analyticsLocations,
+    analyticsLocations1,
     tmp2(tmp3[35]).BADGES_REORDER_ACTION_SHEET,
   ).analyticsLocations;
-  let obj3 = analyticsLocations;
   context = analyticsLocations.useContext(tmp2(tmp3[36]));
   const items2 = [context, analyticsLocations];
   const callback = analyticsLocations.useCallback(() => {
-    let obj = context;
     if (context != null) {
-      obj.close();
+      context.close();
     }
-    obj = { analyticsLocation: null, analyticsLocations, premiumFeatureCardOrder: null };
-    obj = { page: constants3.USER_SETTINGS, section: constants4.USER_PROFILE, object: constants2.BUTTON_CTA };
-    obj.analyticsLocation = obj;
-    obj.premiumFeatureCardOrder = PremiumFeaturesCards.PremiumFeatureCardOrder.TIER_2_LEADING;
-    openPremiumModalDefault(obj);
+    const obj2 = {
+      analyticsLocation: {
+        page: constants3.USER_SETTINGS,
+        section: constants4.USER_PROFILE,
+        object: constants2.BUTTON_CTA,
+      },
+      analyticsLocations,
+      premiumFeatureCardOrder: PremiumFeaturesCards.PremiumFeatureCardOrder.TIER_2_LEADING,
+    };
+    openPremiumModalDefault(obj2);
+    const obj3 = { page: constants3.USER_SETTINGS, section: constants4.USER_PROFILE, object: constants2.BUTTON_CTA };
   }, items2);
-  let tmp5Result = tmp5(tmp3[32]);
+  let obj4 = analyticsLocations;
+  const tmp8 = stateFromStores(stateFromStores1[34]);
   const items3 = [pendingBadgeHiddenBadges];
   const items4 = [stateFromStores];
-  stateFromStoresArray = tmp5Result.useStateFromStoresArray(
+  stateFromStoresArray = tenureBadgeHideable(stateFromStores1[32]).useStateFromStoresArray(
     items3,
     () => BadgeDirectoryStore.getBadges(stateFromStores),
     items4,
   );
-  tmp5Result = tmp5(tmp3[32]);
+  const tmp5Result = tenureBadgeHideable(stateFromStores1[32]);
   const items5 = [pendingBadgeHiddenBadges];
   const items6 = [stateFromStores];
-  const stateFromStoresObject = tmp5Result.useStateFromStoresObject(
+  const stateFromStoresObject = tenureBadgeHideable(stateFromStores1[32]).useStateFromStoresObject(
     items5,
     () => {
       let hasCatalogForResult = null != stateFromStores;
@@ -1003,8 +1057,10 @@ export default function CustomizeBadgesSheet(analyticsLocations) {
   );
   hasCatalog = stateFromStoresObject.hasCatalog;
   const effect = analyticsLocations.useEffect(() => {
-    const obj = { action: "VIEW_BADGE_CUSTOMIZATION", analyticsLocations };
-    const result = obj.trackUserProfileAction(obj);
+    const result = UserProfileAnalyticsUtils.trackUserProfileAction({
+      action: "VIEW_BADGE_CUSTOMIZATION",
+      analyticsLocations,
+    });
   }, []);
   const items7 = [stateFromStores1, hasCatalog, analyticsLocations];
   const effect1 = analyticsLocations.useEffect(() => {
@@ -1013,11 +1069,11 @@ export default function CustomizeBadgesSheet(analyticsLocations) {
       tmp = hasCatalog;
     }
     if (tmp) {
-      let obj = { type: PremiumUpsellTypes.BADGE_REORDERING_UPSELL, location: null, location_stack: null };
-      obj = { page: constants3.USER_SETTINGS, section: constants4.USER_PROFILE };
-      obj.location = obj;
-      obj.location_stack = analyticsLocations;
-      obj.track(constants.PREMIUM_UPSELL_VIEWED, obj);
+      const obj2 = { type: PremiumUpsellTypes.BADGE_REORDERING_UPSELL, location: null, location_stack: null };
+      const obj3 = { page: constants3.USER_SETTINGS, section: constants4.USER_PROFILE };
+      obj2.location = obj3;
+      obj2.location_stack = analyticsLocations;
+      AnalyticsUtilsDefault.track(constants.PREMIUM_UPSELL_VIEWED, obj2);
     }
   }, items7);
   const items8 = [stateFromStores];
@@ -1030,7 +1086,7 @@ export default function CustomizeBadgesSheet(analyticsLocations) {
         BadgeDirectoryStore.hasCatalogFor(stateFromStores) && !BadgeDirectoryStore.isCatalogStaleFor(stateFromStores);
     }
   }, items8);
-  const tmp8 = stateFromStores(stateFromStores1[34]);
+  const tmp5Result12 = tenureBadgeHideable(stateFromStores1[32]);
   const items9 = [hasCatalog];
   const stateFromStoresObject1 = tenureBadgeHideable(stateFromStores1[32]).useStateFromStoresObject(items9, () => {
     const pendingChanges = hasCatalog.getPendingChanges();
@@ -1042,15 +1098,16 @@ export default function CustomizeBadgesSheet(analyticsLocations) {
   pendingBadgeDisplayOrder = stateFromStoresObject1.pendingBadgeDisplayOrder;
   pendingBadgeHiddenBadges = stateFromStoresObject1.pendingBadgeHiddenBadges;
   const items10 = [stateFromStoresArray, pendingBadgeDisplayOrder, pendingBadgeHiddenBadges];
-  memo = analyticsLocations.useMemo(() => {
-    const obj = { pendingBadgeDisplayOrder, pendingBadgeHiddenBadges };
-    return obj.applyPendingBadgeSettings(stateFromStoresArray, obj);
-  }, items10);
+  memo = analyticsLocations.useMemo(
+    () =>
+      PendingBadgeSettings.applyPendingBadgeSettings(stateFromStoresArray, {
+        pendingBadgeDisplayOrder,
+        pendingBadgeHiddenBadges,
+      }),
+    items10,
+  );
   const items11 = [tenureBadgeHideable];
-  analyticsLocations.useMemo(() => {
-    const obj = { tenureBadgeHideable };
-    return obj.getUnhideableBadgeIds(obj);
-  }, items11);
+  analyticsLocations.useMemo(() => BadgeUtils.getUnhideableBadgeIds({ tenureBadgeHideable }), items11);
   const items12 = [memo];
   const memo1 = analyticsLocations.useMemo(() => BadgeUtils.groupCustomizableBadges(memo), items12);
   fixedBadges = memo1.fixedBadges;
@@ -1058,12 +1115,12 @@ export default function CustomizeBadgesSheet(analyticsLocations) {
   hiddenBadges = memo1.hiddenBadges;
   const items13 = [reorderableBadges];
   memo2 = analyticsLocations.useMemo(() => reorderableBadges.map((badge_id) => badge_id.badge_id), items13);
-  const tmp5Result1 = tenureBadgeHideable(stateFromStores1[32]);
+  const tmp5Result13 = tenureBadgeHideable(stateFromStores1[32]);
   sharedValue = tenureBadgeHideable(stateFromStores1[23]).useSharedValue(memo2);
   onCommitOrder = tmp2(tmp3[22])((arr) => {
     const result = tenureBadgeHideable(stateFromStores1[26]).setPendingBadgeDisplayOrder(arr);
   });
-  const tmp5Result2 = tenureBadgeHideable(stateFromStores1[23]);
+  const tmp5Result14 = tenureBadgeHideable(stateFromStores1[23]);
   sharedValue1 = tenureBadgeHideable(stateFromStores1[23]).useSharedValue(false);
   const items14 = [memo2, sharedValue1, sharedValue];
   const effect3 = analyticsLocations.useEffect(() => {
@@ -1074,7 +1131,7 @@ export default function CustomizeBadgesSheet(analyticsLocations) {
   MS_PER_FRAME_60FPS = tmp2(tmp3[22])((badge_id) => {
     const mapped = hiddenBadges.map((badge_id) => badge_id.badge_id);
     if (mapped.includes(badge_id.badge_id)) {
-      let obj = {
+      const obj = {
         badgeId: badge_id.badge_id,
         hidden: false,
         reorderableBadgeIds: memo2,
@@ -1084,33 +1141,34 @@ export default function CustomizeBadgesSheet(analyticsLocations) {
       const result = PendingBadgeSettings.setPendingBadgeVisibility(obj);
       const AccessibilityAnnouncer = AccessibilityAnnouncer2.AccessibilityAnnouncer;
       const intl2 = util.intl;
-      obj = { badgeName: badge_id.name };
-      AccessibilityAnnouncer.announce(intl2.formatToPlainString(util.t.mehuPg, obj));
+      const obj3 = { badgeName: badge_id.name };
+      AccessibilityAnnouncer.announce(intl2.formatToPlainString(util.t.mehuPg, obj3));
     } else if (set.has(badge_id.badge_id)) {
-      let obj1 = { key: null, content: null };
+      let obj6 = { key: null, content: null };
       const _HermesInternal = HermesInternal;
-      obj1.key = "BADGE_ALWAYS_VISIBLE-" + badge_id.badge_id;
+      obj6.key = "BADGE_ALWAYS_VISIBLE-" + badge_id.badge_id;
       const intl = util.intl;
+      const obj2 = ToastActionCreatorsDefault;
       const t = util.t;
-      obj1.content = intl.string(BadgeUtils.isPinnedBadge(badge_id.badge_id) ? t.t3udZb : t.nPQVxb);
-      obj1 = obj1.open(obj1);
+      obj6.content = intl.string(BadgeUtils.isPinnedBadge(badge_id.badge_id) ? t.t3udZb : t.nPQVxb);
+      obj6 = obj2.open(obj6);
       const isPinnedBadgeResult = BadgeUtils.isPinnedBadge(badge_id.badge_id);
     }
   });
   onHide = tmp2(tmp3[22])((badgeId) => {
-    const obj = {
+    const obj = PendingBadgeSettings;
+    const result = obj.setPendingBadgeVisibility({
       badgeId: badgeId.badge_id,
       hidden: true,
       reorderableBadgeIds: memo2,
       hiddenBadgeIds: hiddenBadges.map((badge_id) => badge_id.badge_id),
       canReorder: stateFromStores1,
-    };
-    const result = obj.setPendingBadgeVisibility(obj);
+    });
     const AccessibilityAnnouncer = AccessibilityAnnouncer2.AccessibilityAnnouncer;
     const intl = util.intl;
     AccessibilityAnnouncer.announce(intl.formatToPlainString(util.t.q3t0Ht, { count: 1 }));
   });
-  const tmp5Result3 = tenureBadgeHideable(stateFromStores1[23]);
+  const tmp5Result15 = tenureBadgeHideable(stateFromStores1[23]);
   badgeTileSize = tenureBadgeHideable(stateFromStores1[13]).getBadgeTileSize(tmp2(tmp3[43])().width);
   const sum1 = fixedBadges.length + reorderableBadges.length + hiddenBadges.length;
   const rounded = Math.ceil(sum1 / tmp5(tmp3[13]).BADGE_GRID_COLUMNS);
@@ -1120,15 +1178,15 @@ export default function CustomizeBadgesSheet(analyticsLocations) {
     const diff = rounded - 1;
     num = result + diff * tmp5(tmp3[13]).BADGE_GRID_GAP;
   }
-  const tmp5Result4 = tenureBadgeHideable(stateFromStores1[13]);
+  const tmp5Result16 = tenureBadgeHideable(stateFromStores1[13]);
   animatedRef = tenureBadgeHideable(stateFromStores1[23]).useAnimatedRef();
-  const tmp5Result5 = tenureBadgeHideable(stateFromStores1[23]);
+  const tmp5Result17 = tenureBadgeHideable(stateFromStores1[23]);
   scrollViewOffset = tenureBadgeHideable(stateFromStores1[23]).useScrollViewOffset(animatedRef);
-  const tmp5Result6 = tenureBadgeHideable(stateFromStores1[23]);
+  const tmp5Result18 = tenureBadgeHideable(stateFromStores1[23]);
   sharedValue2 = tenureBadgeHideable(stateFromStores1[23]).useSharedValue(0);
-  const tmp5Result7 = tenureBadgeHideable(stateFromStores1[23]);
+  const tmp5Result19 = tenureBadgeHideable(stateFromStores1[23]);
   sharedValue3 = tenureBadgeHideable(stateFromStores1[23]).useSharedValue(0);
-  const tmp5Result8 = tenureBadgeHideable(stateFromStores1[23]);
+  const tmp5Result20 = tenureBadgeHideable(stateFromStores1[23]);
   function ee(timeSincePreviousFrame) {
     timeSincePreviousFrame = timeSincePreviousFrame.timeSincePreviousFrame;
     value = sharedValue2.get();
@@ -1136,15 +1194,15 @@ export default function CustomizeBadgesSheet(analyticsLocations) {
       if (null != timeSincePreviousFrame) {
         if (timeSincePreviousFrame > 0) {
           const result = sharedValue3.set(sharedValue3.get() + timeSincePreviousFrame);
-          value = sharedValue3.get();
-          if (value >= c18) {
+          value2 = sharedValue3.get();
+          if (value2 >= c18) {
             const result1 = sharedValue3.set(0);
             const obj2 = ReanimatedRexport;
             const _Math = Math;
             obj2.scrollTo(
               animatedRef,
               0,
-              Math.max(roundToNearestPixelDefault(scrollViewOffset.get() + (700 * value * value) / 1000), 0),
+              Math.max(roundToNearestPixelDefault(scrollViewOffset.get() + (700 * value * value2) / 1000), 0),
               false,
             );
           }
@@ -1152,25 +1210,34 @@ export default function CustomizeBadgesSheet(analyticsLocations) {
       }
     }
   }
-  obj = {
+  const tmp5Result21 = tenureBadgeHideable(stateFromStores1[23]);
+  ee.__closure = {
     autoScrollSpeed: sharedValue2,
     autoScrollElapsed: sharedValue3,
     MS_PER_FRAME_60FPS,
     AUTO_SCROLL_PIXELS_PER_SECOND: 700,
-    scrollTo: tmp5(tmp3[23]).scrollTo,
+    scrollTo: tenureBadgeHideable(stateFromStores1[23]).scrollTo,
     scrollRef: animatedRef,
-    roundToNearestPixel: tmp2(tmp3[44]),
+    roundToNearestPixel: stateFromStores(stateFromStores1[44]),
     scrollOffset: scrollViewOffset,
   };
-  ee.__closure = obj;
   ee.__workletHash = 8297629116909;
   ee.__initData = __initData6;
-  frameCallback = tenureBadgeHideable(stateFromStores1[23]).useFrameCallback(ee, false);
+  frameCallback = tmp5Result21.useFrameCallback(ee, false);
   const items15 = [frameCallback];
-  callback1 = obj3.useCallback((arg0) => {
+  callback1 = obj4.useCallback((arg0) => {
     frameCallback.setActive(arg0);
   }, items15);
-  const tmp5Result9 = tenureBadgeHideable(stateFromStores1[23]);
+  let obj5 = {
+    autoScrollSpeed: sharedValue2,
+    autoScrollElapsed: sharedValue3,
+    MS_PER_FRAME_60FPS,
+    AUTO_SCROLL_PIXELS_PER_SECOND: 700,
+    scrollTo: tenureBadgeHideable(stateFromStores1[23]).scrollTo,
+    scrollRef: animatedRef,
+    roundToNearestPixel: stateFromStores(stateFromStores1[44]),
+    scrollOffset: scrollViewOffset,
+  };
   function ie() {
     return 0 !== sharedValue2.get();
   }
@@ -1184,16 +1251,20 @@ export default function CustomizeBadgesSheet(analyticsLocations) {
     }
     tmp = null != arg1 && arg0 !== arg1;
   }
-  obj = { autoScrollElapsed: sharedValue3, runOnJS: tmp5(tmp3[23]).runOnJS, setAutoScrollerActive: callback1 };
-  te.__closure = obj;
+  const tmp5Result22 = tenureBadgeHideable(stateFromStores1[23]);
+  te.__closure = {
+    autoScrollElapsed: sharedValue3,
+    runOnJS: tenureBadgeHideable(stateFromStores1[23]).runOnJS,
+    setAutoScrollerActive: callback1,
+  };
   te.__workletHash = 12755360860907;
   te.__initData = __initData8;
-  const animatedReaction = tenureBadgeHideable(stateFromStores1[23]).useAnimatedReaction(ie, te);
+  const animatedReaction = tmp5Result22.useAnimatedReaction(ie, te);
   if (hasCatalog) {
-    obj1 = { style: tmp.gridInset, children: null };
+    const obj7 = { style: tmp.gridInset, children: null };
     let tmp40 = !stateFromStores1;
     if (!stateFromStores1) {
-      obj2 = {
+      const obj8 = {
         style: tmp.upsell,
         ctaText: null,
         cardStyle: null,
@@ -1204,22 +1275,22 @@ export default function CustomizeBadgesSheet(analyticsLocations) {
         children: null,
       };
       let intl2 = tmp5(tmp3[15]).intl;
-      obj2.ctaText = intl2.string(tmp5(tmp3[15]).t.pj0XBN);
+      obj8.ctaText = intl2.string(tmp5(tmp3[15]).t.pj0XBN);
       ({ upsellCard: obj23.cardStyle, upsellContent: obj23.contentStyle, upsellCta: obj23.ctaStyle } = tmp);
-      obj2.onPress = callback;
-      obj3 = { variant: "text-sm/normal", style: tmp.upsellText, children: null };
+      obj8.onPress = callback;
+      const obj9 = { variant: "text-sm/normal", style: tmp.upsellText, children: null };
       const intl3 = tmp5(tmp3[15]).intl;
-      obj3.children = intl3.string(tmp5(tmp3[15]).t.JrOki0);
-      obj2.children = sharedValue(tmp5(tmp3[46]).Text, obj3);
-      tmp40 = sharedValue(tmp2(tmp3[45]), obj2);
+      obj9.children = intl3.string(tmp5(tmp3[15]).t.JrOki0);
+      obj8.children = sharedValue(tmp5(tmp3[46]).Text, obj9);
+      tmp40 = sharedValue(tmp2(tmp3[45]), obj8);
       const tmp2Result = tmp2(tmp3[45]);
     }
     const items16 = [tmp40];
-    let obj4 = { accessibilityRole: "list", style: null, children: null };
+    const obj10 = { accessibilityRole: "list", style: null, children: null };
     const items17 = [tmp.grid];
-    let obj5 = { height: num };
-    items17[1] = obj5;
-    obj4.style = items17;
+    const obj11 = { height: num };
+    items17[1] = obj11;
+    obj10.style = items17;
     const items18 = [
       fixedBadges.map((badge, index) =>
         __initData(
@@ -1230,7 +1301,7 @@ export default function CustomizeBadgesSheet(analyticsLocations) {
       ),
       reorderableBadges.map((badge, index) => {
         if (stateFromStores1) {
-          let obj = {
+          const obj2 = {
             badge,
             index: fixedBadges.length + index,
             tileSize: badgeTileSize,
@@ -1247,9 +1318,9 @@ export default function CustomizeBadgesSheet(analyticsLocations) {
             onHide,
             onPress,
           };
-          let tmpResult = __initData(closure_37, obj, badge.badge_id);
+          let tmpResult = __initData(closure_37, obj2, badge.badge_id);
         } else {
-          obj = {
+          const obj = {
             badge,
             index: fixedBadges.length + index,
             tileSize: badgeTileSize,
@@ -1275,40 +1346,46 @@ export default function CustomizeBadgesSheet(analyticsLocations) {
         ),
       ),
     ];
-    obj4.children = items18;
-    items16[1] = onCommitOrder(stateFromStoresArray, obj4);
-    obj1.children = items16;
-    let tmp35Result = tmp38(tmp39, obj1);
+    obj10.children = items18;
+    items16[1] = onCommitOrder(stateFromStoresArray, obj10);
+    obj7.children = items16;
+    let tmp35Result = tmp38(tmp39, obj7);
   } else {
     if (stateFromStoresObject.hasCatalogError) {
-      const obj6 = { style: tmp.message, accessibilityRole: "alert", children: null };
-      const obj7 = { variant: "text-md/normal", color: "text-muted", style: tmp.messageText, children: null };
+      const obj12 = { style: tmp.message, accessibilityRole: "alert", children: null };
+      const obj13 = { variant: "text-md/normal", color: "text-muted", style: tmp.messageText, children: null };
       let intl = tmp5(tmp3[15]).intl;
-      obj7.children = intl.string(tmp5(tmp3[15]).t["rTU7/z"]);
-      obj6.children = tmp35(tmp5(tmp3[46]).Text, obj7);
-      let obj8 = obj6;
+      obj13.children = intl.string(tmp5(tmp3[15]).t["rTU7/z"]);
+      obj12.children = tmp35(tmp5(tmp3[46]).Text, obj13);
+      let obj14 = obj12;
     } else {
-      obj8 = {
+      obj14 = {
         style: tmp.message,
         children: tmp35(tmp5(tmp3[47]).ActivityIndicator, { animating: true, size: "large" }),
       };
     }
-    tmp35Result = tmp35(stateFromStoresArray, obj8);
+    tmp35Result = tmp35(stateFromStoresArray, obj14);
   }
-  const obj9 = { startExpanded: true, scrollable: true, dismissAccessibilityLabel: null, header: null, children: null };
+  const obj15 = {
+    startExpanded: true,
+    scrollable: true,
+    dismissAccessibilityLabel: null,
+    header: null,
+    children: null,
+  };
   const intl4 = tmp5(tmp3[15]).intl;
-  obj9.dismissAccessibilityLabel = intl4.string(tenureBadgeHideable(stateFromStores1[15]).t.x5SfWU);
-  const obj10 = { title: null, subtitle: null };
+  obj15.dismissAccessibilityLabel = intl4.string(tenureBadgeHideable(stateFromStores1[15]).t.x5SfWU);
+  const obj16 = { title: null, subtitle: null };
   const intl5 = tmp5(tmp3[15]).intl;
-  obj10.title = intl5.string(tenureBadgeHideable(stateFromStores1[15]).t.x5SfWU);
+  obj16.title = intl5.string(tenureBadgeHideable(stateFromStores1[15]).t.x5SfWU);
   const intl6 = tmp5(tmp3[15]).intl;
   let t = tmp5(tmp3[15]).t;
-  obj10.subtitle = intl6.string(stateFromStores1 ? t["Vzc4+8"] : t.ZuXSRp);
-  obj9.header = sharedValue(tenureBadgeHideable(stateFromStores1[49]).BottomSheetTitleHeader, obj10);
-  obj9.children = sharedValue(tenureBadgeHideable(stateFromStores1[50]).BottomSheetScrollView, {
+  obj16.subtitle = intl6.string(stateFromStores1 ? t["Vzc4+8"] : t.ZuXSRp);
+  obj15.header = sharedValue(tenureBadgeHideable(stateFromStores1[49]).BottomSheetTitleHeader, obj16);
+  obj15.children = sharedValue(tenureBadgeHideable(stateFromStores1[50]).BottomSheetScrollView, {
     ref: animatedRef,
     contentContainerStyle: { paddingBottom: sum },
     children: tmp35Result,
   });
-  return sharedValue(tenureBadgeHideable(stateFromStores1[48]).BottomSheet, obj9);
+  return sharedValue(tenureBadgeHideable(stateFromStores1[48]).BottomSheet, obj15);
 }

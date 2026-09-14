@@ -11,9 +11,9 @@ const InvitePropertiesType = { GROUP_DM: 0, [0]: "GROUP_DM", USER: 1, [1]: "USER
 class InviteQueue extends tmp4 {
   constructor() {
     tmp2 = closure_0(closure_1[3]);
-    tmp2 = new tmp2("InviteQueue");
-    tmp = new tmp(tmp2, closure_3, tmp2);
-    return tmp;
+    tmp21 = new tmp2("InviteQueue");
+    tmp1 = new tmp(tmp21, closure_3, tmp2);
+    return tmp1;
   }
 }
 const prototype = InviteQueue.prototype;
@@ -53,7 +53,7 @@ function drain(location, sum) {
   self._sendInvite(location.channel, location.inviteKey, _location, inviteAnalyticsMetadata, sum);
 }
 prototype["drain"] = drain;
-drain = new drain(
+const drain1 = new drain(
   new LoggerDefault("InviteQueue"),
   sum,
   tmp,
@@ -67,5 +67,5 @@ drain = new drain(
 const size = fn(2);
 const result = size.fileFinishedImporting("lib/InviteQueue.tsx");
 
-export default drain;
+export default drain1;
 export { InvitePropertiesType };

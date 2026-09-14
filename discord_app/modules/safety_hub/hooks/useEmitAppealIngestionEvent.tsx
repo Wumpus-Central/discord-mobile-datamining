@@ -15,20 +15,22 @@ export const useEmitAppealIngestionEvent = function useEmitAppealIngestionEvent(
   stateFromStores = stateFromStores(safetyHubAccountStanding[4]).useStateFromStores(items, () =>
     SafetyHubStore.getAppealClassificationId(),
   );
-  let obj = stateFromStores(safetyHubAccountStanding[4]);
+  const obj = stateFromStores(safetyHubAccountStanding[4]);
   let tmp5 = stateFromStores;
   if (stateFromStores == null) {
     tmp5 = closure_6;
   }
   const safetyHubClassification = stateFromStores(safetyHubAccountStanding[5]).useSafetyHubClassification(tmp5);
-  let tmpResult = tmp(tmp2[6]);
-  safetyHubAccountStanding = tmpResult.useSafetyHubAccountStanding();
-  tmpResult = tmp(tmp2[4]);
+  let obj2 = stateFromStores(safetyHubAccountStanding[5]);
+  safetyHubAccountStanding = stateFromStores(safetyHubAccountStanding[6]).useSafetyHubAccountStanding();
+  const tmpResult = stateFromStores(safetyHubAccountStanding[6]);
   const items1 = [SafetyHubStore];
-  const stateFromStores1 = tmpResult.useStateFromStores(items1, () => SafetyHubStore.getIsDsaEligible());
+  const stateFromStores1 = stateFromStores(safetyHubAccountStanding[4]).useStateFromStores(items1, () =>
+    SafetyHubStore.getIsDsaEligible(),
+  );
   const items2 = [safetyHubAccountStanding.state, stateFromStores, safetyHubClassification, stateFromStores1];
   return stateFromStores1.useCallback((action) => {
-    const obj = {
+    const obj2 = {
       action,
       account_standing: safetyHubAccountStanding.state,
       classification_ids: null,
@@ -42,10 +44,10 @@ export const useEmitAppealIngestionEvent = function useEmitAppealIngestionEvent(
       const items = [Number(tmp)];
       tmp2 = items;
     }
-    obj.classification_ids = tmp2;
-    obj.source = AppealIngestion.AppealIngestion;
-    obj.is_dsa_eligible = stateFromStores1;
-    obj.violation_type = safetyHubClassification.violationType;
-    obj.track(constants.SAFETY_HUB_ACTION, obj);
+    obj2.classification_ids = tmp2;
+    obj2.source = AppealIngestion.AppealIngestion;
+    obj2.is_dsa_eligible = stateFromStores1;
+    obj2.violation_type = safetyHubClassification.violationType;
+    AnalyticsUtilsDefault.track(constants.SAFETY_HUB_ACTION, obj2);
   }, items2);
 };

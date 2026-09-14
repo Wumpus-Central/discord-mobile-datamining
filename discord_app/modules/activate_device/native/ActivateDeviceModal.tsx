@@ -36,7 +36,7 @@ export default function ActivateDeviceModal(userCode) {
           return null;
         },
         render() {
-          return jsx(userCode(13962).ActivateDevice, { onClose, prefilledUserCode });
+          return jsx(userCode(13963).ActivateDevice, { onClose, prefilledUserCode });
         },
       },
     };

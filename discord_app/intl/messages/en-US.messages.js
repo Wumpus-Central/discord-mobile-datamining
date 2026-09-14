@@ -30,12 +30,13 @@ import _mod1146 from "../../../_runtime/metro/01146__.js";
 import _mod1147 from "../../../_runtime/metro/01147__.js";
 import _mod1148 from "../../../_runtime/metro/01148__.js";
 import _mod1149 from "../../../_runtime/metro/01149__.js";
-import _mod1153 from "../../../_runtime/metro/01153__.js";
-import _mod1154 from "../../../_runtime/metro/01154__.js";
-import 01155__ from "../../../_runtime/metro/01155__.js";
+import _mod1151 from "../../../_runtime/metro/01151__.js";
+import _mod1152 from "../../../_runtime/metro/01152__.js";
+import module_1153_mod from "../../../_runtime/metro/01153__.js";
 import size from "../../../_runtime/metro/00002__.js";
 
-const loader = module_1155.createLoader({
+let module_1153 = module_1153_mod;
+const loader = module_1153.createLoader({
   bg() {
     const jsonAsset = AssetJsonUtils.loadJsonAsset(_mod1119);
     return jsonAsset.then((result) => ({ default: result }));
@@ -89,7 +90,7 @@ const loader = module_1155.createLoader({
     return jsonAsset.then((result) => ({ default: result }));
   },
   id() {
-    const jsonAsset = AssetJsonUtils.loadJsonAsset(_mod1153);
+    const jsonAsset = AssetJsonUtils.loadJsonAsset(_mod1151);
     return jsonAsset.then((result) => ({ default: result }));
   },
   it() {
@@ -161,11 +162,12 @@ const loader = module_1155.createLoader({
     return jsonAsset.then((result) => ({ default: result }));
   },
   () => {
-    const jsonAsset = AssetJsonUtils.loadJsonAsset(_mod1154);
+    const jsonAsset = AssetJsonUtils.loadJsonAsset(_mod1152);
     return jsonAsset.then((result) => ({ default: result }));
   }
 }, "en-US");
-const messagesProxy = module_1155.makeMessagesProxy(loader);
+let module_1153 = module_1153_mod;
+const messagesProxy = module_1153.makeMessagesProxy(loader);
 const result = size.fileFinishedImporting("intl/messages/en-US.messages.js");
 
 export default messagesProxy;

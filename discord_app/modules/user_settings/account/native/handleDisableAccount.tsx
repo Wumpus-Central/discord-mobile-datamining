@@ -27,28 +27,28 @@ export default function handleDisableAccount() {
     const intl4 = util.intl;
     const stringResult = string(t.vJiTOL);
     const stringResult1 = intl4.string(util.t.UyVVan);
-    let obj = { title: stringResult, body: stringResult1 };
+    const obj = { title: stringResult, body: stringResult1 };
     AlertActionCreatorsDefault.show(obj);
   } else {
     const formatted = string(t["CIGa+7"]).toUpperCase();
-    obj = { onSubmit: null, title: null, placeholder: null, closeOnSuccess: true };
+    const obj2 = { onSubmit: null, title: null, placeholder: null, closeOnSuccess: true };
     if (flag) {
-      obj.onSubmit = function onSubmit(password) {
+      obj2.onSubmit = function onSubmit(password) {
         return currentUser(7087).disableAccount(password, true);
       };
       const intl3 = util.intl;
-      obj.title = intl3.string(util.t["8lQ2rR"]).toUpperCase();
-      obj.placeholder = formatted;
-      let tmp8 = obj;
+      obj2.title = intl3.string(util.t["8lQ2rR"]).toUpperCase();
+      obj2.placeholder = formatted;
+      let tmp8 = obj2;
       const str3 = intl3.string(util.t["8lQ2rR"]);
     } else {
-      obj.onSubmit = function onSubmit(password) {
+      obj2.onSubmit = function onSubmit(password) {
         return currentUser(7087).disableAccount(password, false);
       };
       const intl2 = util.intl;
-      obj.title = intl2.string(util.t.jf5GGb).toUpperCase();
-      obj.placeholder = formatted;
-      tmp8 = obj;
+      obj2.title = intl2.string(util.t.jf5GGb).toUpperCase();
+      obj2.placeholder = formatted;
+      tmp8 = obj2;
       const str2 = intl2.string(util.t.jf5GGb);
     }
     showUserSettingsInputAlertDefault(tmp8);

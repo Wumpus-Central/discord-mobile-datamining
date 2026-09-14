@@ -6,11 +6,9 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const jsx = fn(21).jsx;
-fn(4636);
-let createStyles = { tintColor: null };
-createStyles = { tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
-createStyles.tintColor = createStyles;
-let closure_4 = createStyles.createStyles(createStyles);
+const createStyles = fn(4636);
+const obj2 = { tintColor: { tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT } };
+let closure_4 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/in_app_reports/native/components/Arrow.tsx");
 

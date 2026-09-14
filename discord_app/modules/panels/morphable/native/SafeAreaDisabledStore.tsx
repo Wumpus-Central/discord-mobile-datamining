@@ -14,14 +14,14 @@ export default module_560.create((arg0, arg1) => {
     },
     requestSafeAreaDisableLock(arg0) {
       ({ key: closure_0, lockEnabled: closure_1 } = arg0);
-      closure_0(1249).batchUpdates(() => {
+      closure_0(1247).batchUpdates(() => {
         closure_0((lockKeys) => {
           lockKeys = lockKeys.lockKeys;
           const hasItem = lockKeys.has(closure_1_0);
           if (closure_1_1) {
             let tmp12 = lockKeys;
             if (!hasItem) {
-              let obj = {};
+              const obj = {};
               const merged = Object.assign(lockKeys);
               const _Set2 = Set;
               const items = [closure_1_0];
@@ -36,10 +36,10 @@ export default module_560.create((arg0, arg1) => {
             const _Set = Set;
             const set1 = new Set(lockKeys);
             set1.delete(closure_1_0);
-            obj = {};
+            const obj2 = {};
             const merged1 = Object.assign(lockKeys);
-            obj.lockKeys = set1;
-            return obj;
+            obj2.lockKeys = set1;
+            return obj2;
           } else {
             return lockKeys;
           }

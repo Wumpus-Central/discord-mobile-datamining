@@ -9,13 +9,15 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 import UserSettingSearchStore from "../../../user_settings/UserSettingSearchStore.tsx";
 import SettingBlocklistStore from "stores/SettingBlocklistStore.tsx";
 
+const require = globalThis.__r;
+
 require = fn;
 function SearchListSectionLabel(label) {
   label = label.label;
-  let obj = { style: closure_9().spacer, children: null };
+  const obj = { style: closure_9().spacer, children: null };
   let tmpResult = label;
   if (typeof label === "string") {
-    obj = { title: label };
+    const obj2 = { title: label };
     tmpResult = jsx(TableRowGroup.TableRowGroupTitle, { title: label });
   }
   obj.children = tmpResult;
@@ -23,9 +25,9 @@ function SearchListSectionLabel(label) {
 }
 function SearchListSectionSubLabel(subLabel) {
   subLabel = subLabel.subLabel;
-  let obj = { style: closure_9().subLabel, children: null };
+  const obj = { style: closure_9().subLabel, children: null };
   if (typeof subLabel === "string") {
-    obj = { variant: "text-xs/normal", color: "text-muted", children: subLabel };
+    const obj2 = { variant: "text-xs/normal", color: "text-muted", children: subLabel };
     let tmpResult = jsx(Text_Text.Text, { variant: "text-xs/normal", color: "text-muted", children: subLabel });
   } else {
     const _Array = Array;
@@ -53,18 +55,17 @@ function renderItem(item) {
   item = item.item;
   const type = item.type;
   if (ListItemType.SECTION_HEADER === type) {
-    let obj = { label: item.label };
+    const obj4 = { label: item.label };
     return <SearchListSectionLabel label={item.label} />;
   } else if (ListItemType.SECTION_FOOTER === type) {
-    obj = { subLabel: item.label };
+    const obj5 = { subLabel: item.label };
     return <SearchListSectionSubLabel subLabel={item.label} />;
   } else if (ListItemType.SETTING_SEARCH_RESULT === type) {
     return SettingRenderer.renderSettingSearchResultItem(item);
   } else if (ListItemType.SECTION_ROW === type) {
     return SettingRenderer.renderSettingItem(item);
   } else if (ListItemType.SECTION_ROW_PLACEHOLDER === type) {
-    obj = SettingRenderer;
-    return obj.renderSettingSearchResultPlaceholderItem(item);
+    return SettingRenderer.renderSettingSearchResultPlaceholderItem(item);
   }
 }
 function keyExtractor(type, arg1) {
@@ -90,17 +91,18 @@ function keyExtractor(type, arg1) {
   return "" + type.type + "-" + label;
 }
 const View = fn(17).View;
-const ListItemType = fn(11602).ListItemType;
+const ListItemType = fn(11603).ListItemType;
 const jsx = fn(21).jsx;
 const createStyles = fn(4636);
-let obj = { container: null, contentContainer: null, searchResultsHeader: null, spacer: null, subLabel: null };
-obj = { backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND, flexGrow: 1 };
-obj.container = obj;
-obj.contentContainer = { paddingHorizontal: 16 };
-obj.searchResultsHeader = { paddingBottom: 24 };
-obj.spacer = { paddingTop: 24 };
-obj.subLabel = { marginTop: 8 };
+let obj = {
+  container: { backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND, flexGrow: 1 },
+  contentContainer: { paddingHorizontal: 16 },
+  searchResultsHeader: { paddingBottom: 24 },
+  spacer: { paddingTop: 24 },
+  subLabel: { marginTop: 8 },
+};
 let closure_9 = createStyles.createStyles(obj);
+let obj3 = { backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND, flexGrow: 1 };
 const memoResult = noop.memo((node) => {
   node = node.node;
   const tmp = closure_9();
@@ -108,10 +110,9 @@ const memoResult = noop.memo((node) => {
   const items = [field, node];
   const memo = noop.useMemo(() => SettingRendererUtils.toSettingListItems(node, field), items);
   const ref = noop.useRef(null);
-  let obj = node(14783);
-  obj.useAutoScrollToSearchResultSetting(ref, memo, node.scrollTarget);
-  obj = { style: tmp.container, children: null };
-  obj = {
+  node(14784).useAutoScrollToSearchResultSetting(ref, memo, node.scrollTarget);
+  const obj2 = { style: tmp.container, children: null };
+  const obj3 = {
     ref,
     ListHeaderComponent: node.ListHeaderComponent,
     contentContainerStyle: null,
@@ -121,16 +122,16 @@ const memoResult = noop.memo((node) => {
     data: null,
     getItemType: null,
   };
-  const obj1 = {};
+  const obj4 = {};
   const merged = Object.assign(tmp.contentContainer);
-  obj1.paddingBottom = field(1611)().bottom + field(576).space.PX_16;
-  obj.contentContainerStyle = obj1;
-  obj.scrollIndicatorInsets = { right: 0.01 };
-  obj.keyExtractor = keyExtractor;
-  obj.renderItem = renderItem;
-  obj.data = memo;
-  obj.getItemType = getItemType;
-  obj.children = jsx(node(9003).FlashList, {
+  obj4.paddingBottom = field(1611)().bottom + field(576).space.PX_16;
+  obj3.contentContainerStyle = obj4;
+  obj3.scrollIndicatorInsets = { right: 0.01 };
+  obj3.keyExtractor = keyExtractor;
+  obj3.renderItem = renderItem;
+  obj3.data = memo;
+  obj3.getItemType = getItemType;
+  obj2.children = jsx(node(9003).FlashList, {
     ref,
     ListHeaderComponent: node.ListHeaderComponent,
     contentContainerStyle: null,
@@ -140,18 +141,7 @@ const memoResult = noop.memo((node) => {
     data: null,
     getItemType: null,
   });
-  return (
-    <View
-      ref={ref}
-      ListHeaderComponent={node.ListHeaderComponent}
-      contentContainerStyle={null}
-      scrollIndicatorInsets={null}
-      keyExtractor={null}
-      renderItem={null}
-      data={null}
-      getItemType={null}
-    />
-  );
+  return <View style={tmp.container}>{null}</View>;
 });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/settings/native/renderer/SettingListRenderer.tsx");
@@ -165,8 +155,7 @@ export const SearchableSettingsList = noop.memo((node) => {
   let memo2;
   let tmp = memo2();
   importDefault = tmp;
-  let obj = node(settings[15]);
-  const settingSearchResults = obj.useSettingSearchResults();
+  const settingSearchResults = node(settings[15]).useSettingSearchResults();
   settings = settingSearchResults.settings;
   const isLoading = settingSearchResults.isLoading;
   const placeholderCount = settingSearchResults.placeholderCount;
@@ -204,7 +193,7 @@ export const SearchableSettingsList = noop.memo((node) => {
     }
     return tmp;
   }, items4);
-  obj = {
+  const obj2 = {
     keyboardShouldPersistTaps: "always",
     contentContainerStyle: null,
     ListHeaderComponentStyle: null,
@@ -217,18 +206,18 @@ export const SearchableSettingsList = noop.memo((node) => {
     data: null,
     getItemType: null,
   };
-  obj = {};
+  const obj3 = {};
   const merged = Object.assign(tmp.contentContainer);
-  obj.paddingBottom = require("useSafeAreaInsets")().bottom + require("native").space.PX_16;
-  obj.contentContainerStyle = obj;
-  obj.ListHeaderComponentStyle = memo3;
-  obj.ListHeaderComponent = require("SettingSearchBar");
-  obj.ListEmptyComponent = memo4;
-  obj.onScroll = node(settings[18]).dismissGlobalKeyboard;
-  obj.scrollIndicatorInsets = { right: 0.01 };
-  obj.keyExtractor = keyExtractor;
-  obj.renderItem = renderItem;
-  obj.data = memo2;
-  obj.getItemType = getItemType;
-  return memo1(node(settings[14]).FlashList, obj);
+  obj3.paddingBottom = require("useSafeAreaInsets")().bottom + require("native").space.PX_16;
+  obj2.contentContainerStyle = obj3;
+  obj2.ListHeaderComponentStyle = memo3;
+  obj2.ListHeaderComponent = require("SettingSearchBar");
+  obj2.ListEmptyComponent = memo4;
+  obj2.onScroll = node(settings[18]).dismissGlobalKeyboard;
+  obj2.scrollIndicatorInsets = { right: 0.01 };
+  obj2.keyExtractor = keyExtractor;
+  obj2.renderItem = renderItem;
+  obj2.data = memo2;
+  obj2.getItemType = getItemType;
+  return memo1(node(settings[14]).FlashList, obj2);
 });

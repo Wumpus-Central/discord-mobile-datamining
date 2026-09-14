@@ -7,8 +7,10 @@ import ClientThemesBackgroundStore from "../../../client_themes/ClientThemesBack
 import SelectivelySyncedUserSettingsStore from "../../SelectivelySyncedUserSettingsStore.tsx";
 import ThemeStore from "../../ThemeStore.tsx";
 
+const require = globalThis.__r;
+
 require = fn;
-const FontScaleStore = fn(15348);
+const FontScaleStore = fn(15349);
 ({ DEFAULT_FONT_SCALE_STORE_STATE: closure_7, useFontScaleStore: closure_8 } = FontScaleStore);
 const MobileUserSettings = fn(8079).MobileUserSettings;
 const HelpdeskArticles = fn(1074).HelpdeskArticles;
@@ -19,8 +21,8 @@ const result = size.fileFinishedImporting("modules/user_settings/appearance/nati
 export default noop.memo(() => {
   nativeStackNavigation(5073)(() => {
     if (SelectivelySyncedUserSettingsStore.shouldSync("appearance")) {
-      const userCustomThemes = closure_0(15349).fetchUserCustomThemes();
-      const obj = closure_0(15349);
+      const userCustomThemes = closure_0(15350).fetchUserCustomThemes();
+      const obj = closure_0(15350);
     }
   });
   let items = [ThemeStore, ClientThemesBackgroundStore];
@@ -50,24 +52,24 @@ export default noop.memo(() => {
     persistedIsClassicChatFontScaleEnabled: arr2[4],
   } = tmp3);
   const effect = noop.useEffect(() => {
-    let obj = PlatformUtils;
     if (obj.isAndroid()) {
       if (closure_0.persistedFontScale === closure_0.fontScale) {
         if (closure_0.persistedIsClassicChatFontScaleEnabled === closure_0.isClassicChatFontScaleEnabled) {
           nativeStackNavigation.setOptions({ headerRight: "r" });
         }
       }
-      obj = { headerRight: null };
+      const obj2 = { headerRight: null };
       const intl = util.intl;
-      obj.headerRight = HeaderShared.getRenderHeaderTextButton(intl.string(util.t["R3BPH+"]), () =>
+      obj2.headerRight = HeaderShared.getRenderHeaderTextButton(intl.string(util.t["R3BPH+"]), () =>
         nativeStackNavigation(10248).setCustomFontScale(
           closure_1_0.fontScale,
           closure_1_0.isClassicChatFontScaleEnabled,
         ),
       );
-      nativeStackNavigation.setOptions(obj);
+      nativeStackNavigation.setOptions(obj2);
       const tmpResult = HeaderShared;
     }
+    obj = PlatformUtils;
   }, items1);
   const effect1 = noop.useEffect(
     () => () => {
@@ -76,11 +78,10 @@ export default noop.memo(() => {
     [],
   );
   const node = noop.useMemo(() => {
-    closure_0(11601);
-    let obj = { sections: null };
-    obj = { label: null, settings: null };
+    const obj2 = { sections: null };
+    const obj3 = { label: null, settings: null };
     const intl = closure_0(1114).intl;
-    obj.label = intl.string(closure_0(1114).t.Ksh3ik);
+    obj3.label = intl.string(closure_0(1114).t.Ksh3ik);
     const items = [, , , ,];
     ({
       SAME_AS_DEVICE_THEME: arr[0],
@@ -89,55 +90,55 @@ export default noop.memo(() => {
       DARK_MODE_THEME_PICKER: arr[3],
       SYNC_THEME: arr[4],
     } = constants);
-    obj.settings = items;
-    const items1 = [obj, , , , , , , ,];
-    const obj1 = { settings: null };
+    obj3.settings = items;
+    const items1 = [obj3, , , , , , , ,];
+    const obj4 = { settings: null };
     const items2 = [constants.DEFAULT_GUILD_THEME_PREFERENCE];
-    obj1.settings = items2;
-    items1[1] = obj1;
-    const obj2 = { label: null, settings: null };
+    obj4.settings = items2;
+    items1[1] = obj4;
+    const obj5 = { label: null, settings: null };
     const intl2 = closure_0(1114).intl;
-    obj2.label = intl2.string(closure_0(1114).t.i19n5L);
+    obj5.label = intl2.string(closure_0(1114).t.i19n5L);
     const items3 = [,];
     ({ ANDROID_FONT_SCALE: arr4[0], ANDROID_CLASSIC_CHAT_FONT_SCALE: arr4[1] } = constants);
-    obj2.settings = items3;
-    items1[2] = obj2;
-    const obj3 = { settings: null };
+    obj5.settings = items3;
+    items1[2] = obj5;
+    const obj6 = { settings: null };
     const items4 = [constants.DMS_MESSAGE_PREVIEWS];
-    obj3.settings = items4;
-    items1[3] = obj3;
-    const obj4 = { settings: null };
+    obj6.settings = items4;
+    items1[3] = obj6;
+    const obj7 = { settings: null };
     const items5 = [constants.GAME_MENTIONS_AUTOCOMPLETE];
-    obj4.settings = items5;
-    items1[4] = obj4;
-    const obj5 = { settings: null, subLabel: null };
+    obj7.settings = items5;
+    items1[4] = obj7;
+    const obj8 = { settings: null, subLabel: null };
     const items6 = [constants.FAVORITES_GUILD_TOGGLE];
-    obj5.settings = items6;
+    obj8.settings = items6;
     const intl3 = closure_0(1114).intl;
-    const obj6 = { helpCenterLink: null };
-    let obj9 = nativeStackNavigation(2024);
-    obj6.helpCenterLink = obj9.getArticleURL(constants2.FAVORITES_GUILD);
-    obj5.subLabel = intl3.format(nativeStackNavigation(3236).GR2KOG, obj6);
-    items1[5] = obj5;
-    const obj7 = { label: null, settings: null };
+    const obj9 = { helpCenterLink: null };
+    const obj = closure_0(11602);
+    obj9.helpCenterLink = nativeStackNavigation(2024).getArticleURL(constants2.FAVORITES_GUILD);
+    obj8.subLabel = intl3.format(nativeStackNavigation(3236).GR2KOG, obj9);
+    items1[5] = obj8;
+    const obj11 = { label: null, settings: null };
     const intl4 = closure_0(1114).intl;
-    obj7.label = intl4.string(closure_0(1114).t.lEde7i);
+    obj11.label = intl4.string(closure_0(1114).t.lEde7i);
     const items7 = [constants.DMS_HAPPENING_NOW_CARDS];
-    obj7.settings = items7;
-    items1[6] = obj7;
-    const obj8 = { label: null, settings: null };
+    obj11.settings = items7;
+    items1[6] = obj11;
+    const obj12 = { label: null, settings: null };
     const intl5 = closure_0(1114).intl;
-    obj8.label = intl5.string(closure_0(1114).t["5h0QOP"]);
+    obj12.label = intl5.string(closure_0(1114).t["5h0QOP"]);
     const items8 = [constants.EXACT_SEARCH_RESULT_COUNTS];
-    obj8.settings = items8;
-    items1[7] = obj8;
-    obj9 = { settings: null };
+    obj12.settings = items8;
+    items1[7] = obj12;
+    const obj13 = { settings: null };
     const items9 = [constants.TIMESTAMP_HOUR_CYCLE];
-    obj9.settings = items9;
-    items1[8] = obj9;
-    obj.sections = items1;
-    return obj.createList(obj);
+    obj13.settings = items9;
+    items1[8] = obj13;
+    obj2.sections = items1;
+    return obj.createList(obj2);
   }, []);
   let obj2 = require("useNavigation");
-  return jsx(nativeStackNavigation(14775), { node }, "" + theme + "-" + gradientPresetId);
+  return jsx(nativeStackNavigation(14776), { node }, "" + theme + "-" + gradientPresetId);
 });

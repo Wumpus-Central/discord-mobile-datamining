@@ -37,22 +37,21 @@ function useUnitId(type, guildId) {
   } else if ("user" === type) {
     return tmp4;
   } else if ("installation" === type) {
-    let tmpResult = FingerprintUtils;
-    let str3 = tmpResult.maybeExtractId(tmp5);
+    let str3 = FingerprintUtils.maybeExtractId(tmp5);
     if (str3 == null) {
       str3 = "";
     }
     return str3;
   } else {
-    tmpResult = GlobalUtils;
-    tmpResult.assertNever(type);
+    GlobalUtils.assertNever(type);
+    const tmpResult2 = GlobalUtils;
   }
 }
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/experiments/apex/ApexExperiment.tsx");
 
-export default function createApexExperiment(ApexExperiment) {
-  return discord_common_apex_ApexExperimentDefault(ApexExperiment, ApexExperimentStore, getUnitId, useUnitId);
+export default function createApexExperiment(arg0) {
+  return discord_common_apex_ApexExperimentDefault(arg0, ApexExperimentStore, getUnitId, useUnitId);
 }
 export const ApexExperiment = fn(1435).ApexExperiment;
 export { getUnitId };

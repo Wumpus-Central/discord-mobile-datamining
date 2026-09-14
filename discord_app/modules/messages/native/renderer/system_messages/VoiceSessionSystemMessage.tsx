@@ -5,6 +5,8 @@ import createCommonMessageDefault from "createCommonMessage.tsx";
 import getHumanizedCallDurationDefault from "../../../getHumanizedCallDuration.tsx";
 import ChannelStore from "../../../../../stores/ChannelStore.tsx";
 
+const require = globalThis.__r;
+
 require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting(
@@ -15,23 +17,23 @@ export const createVoiceSessionSystemMessage = function createVoiceSessionSystem
   ({ message, roleStyle } = message);
   _require = ChannelStore.getChannel(message.channel_id);
   const tmp3 = getHumanizedCallDurationDefault(message);
+  const messageAuthorWithProcessedColor =
+    require("useAuthorWithProcessedColor").getMessageAuthorWithProcessedColor(message);
   let obj = require("useAuthorWithProcessedColor");
-  const messageAuthorWithProcessedColor = obj.getMessageAuthorWithProcessedColor(message);
-  let obj1 = require("VoiceSessionUtils");
-  const sortedVoiceSessionParticipants = obj1.getSortedVoiceSessionParticipants(message);
+  const sortedVoiceSessionParticipants = require("VoiceSessionUtils").getSortedVoiceSessionParticipants(message);
   const mapped = sortedVoiceSessionParticipants.map((user) => {
     const obj = { user, messageAuthor: useAuthorWithProcessedColor.getUserAuthorWithProcessedColor(user, closure_0) };
     return obj;
   });
   if (null == tmp3) {
     const intl = tmp4(1114).intl;
-    obj = { username: messageAuthorWithProcessedColor.nick, usernameOnClick: null };
-    obj = { message, author: messageAuthorWithProcessedColor, roleStyle };
-    obj.usernameOnClick = formatUsernameOnClickDefault(obj);
-    let formatToPartsResult = intl.formatToParts(tmp4(1114).t.HzBfIN, obj);
+    const obj3 = { username: messageAuthorWithProcessedColor.nick, usernameOnClick: null };
+    const obj4 = { message, author: messageAuthorWithProcessedColor, roleStyle };
+    obj3.usernameOnClick = formatUsernameOnClickDefault(obj4);
+    let formatToPartsResult = intl.formatToParts(tmp4(1114).t.HzBfIN, obj3);
   } else {
     const intl2 = tmp4(1114).intl;
-    obj1 = {
+    const obj5 = {
       userCount: mapped.length + 1,
       username: messageAuthorWithProcessedColor.nick,
       usernameOnClick: null,
@@ -42,34 +44,34 @@ export const createVoiceSessionSystemMessage = function createVoiceSessionSystem
       otherCount: null,
       duration: null,
     };
-    const obj2 = { message, author: messageAuthorWithProcessedColor, roleStyle };
-    obj1.usernameOnClick = formatUsernameOnClickDefault(obj2);
+    const obj6 = { message, author: messageAuthorWithProcessedColor, roleStyle };
+    obj5.usernameOnClick = formatUsernameOnClickDefault(obj6);
     const first = mapped[0];
     let nick;
     if (first != null) {
       nick = first.messageAuthor.nick;
     }
-    obj1.username2 = nick;
+    obj5.username2 = nick;
     let tmp7;
     if (null != mapped[0]) {
-      const obj3 = { userId: mapped[0].user.id, message, author: mapped[0].messageAuthor, roleStyle };
-      tmp7 = formatUsernameOnClickDefault(obj3);
+      const obj7 = { userId: mapped[0].user.id, message, author: mapped[0].messageAuthor, roleStyle };
+      tmp7 = formatUsernameOnClickDefault(obj7);
     }
-    obj1.username2OnClick = tmp7;
+    obj5.username2OnClick = tmp7;
     let nick1;
     if (mapped[1] != null) {
       nick1 = tmp8.messageAuthor.nick;
     }
-    obj1.username3 = nick1;
+    obj5.username3 = nick1;
     let tmp10;
     if (null != mapped[1]) {
-      const obj4 = { userId: mapped[1].user.id, message, author: mapped[1].messageAuthor, roleStyle };
-      tmp10 = formatUsernameOnClickDefault(obj4);
+      const obj8 = { userId: mapped[1].user.id, message, author: mapped[1].messageAuthor, roleStyle };
+      tmp10 = formatUsernameOnClickDefault(obj8);
     }
-    obj1.username3OnClick = tmp10;
-    obj1.otherCount = mapped.length - 1;
-    obj1.duration = tmp3;
-    formatToPartsResult = intl2.formatToParts(tmp4(1114).t.atbXuX, obj1);
+    obj5.username3OnClick = tmp10;
+    obj5.otherCount = mapped.length - 1;
+    obj5.duration = tmp3;
+    formatToPartsResult = intl2.formatToParts(tmp4(1114).t.atbXuX, obj5);
   }
   const merged = Object.assign(createCommonMessageDefault(message));
   return { content: formatToPartsResult };

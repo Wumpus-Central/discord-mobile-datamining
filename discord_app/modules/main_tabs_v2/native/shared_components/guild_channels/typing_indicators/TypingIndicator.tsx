@@ -10,9 +10,16 @@ const View = fn(17).View;
 const jsx = fn(21).jsx;
 const createStyles = fn(4636);
 let closure_5 = createStyles.createStyles((arg0) => {
-  let obj = { ellipsisWrapper: null, ellipsis: null, ellipsisDot: null };
-  obj = { zIndex: 10, borderRadius: 17, borderWidth: 2, borderColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
-  obj.ellipsisWrapper = obj;
+  const obj = {
+    ellipsisWrapper: {
+      zIndex: 10,
+      borderRadius: 17,
+      borderWidth: 2,
+      borderColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
+    },
+    ellipsis: null,
+    ellipsisDot: null,
+  };
   const unsafe_rawColors = nativeDefault.unsafe_rawColors;
   obj.ellipsis = {
     borderRadius: 13,
@@ -36,14 +43,14 @@ const result = size.fileFinishedImporting(
 );
 
 export const TypingIndicator = function TypingIndicator(style) {
-  let obj = shared;
-  const tmp2 = closure_5(obj.isThemeLight(useThemeDefault()));
-  obj = { style: null, children: null };
+  const tmp = useThemeDefault();
+  const tmp2 = closure_5(shared.isThemeLight(tmp));
+  const obj2 = { style: null, children: null };
   const items = [tmp2.ellipsisWrapper, style.style];
-  obj.style = items;
-  obj = { style: null, dotStyle: tmp2.ellipsisDot, disableScale: true };
+  obj2.style = items;
+  const obj3 = { style: null, dotStyle: tmp2.ellipsisDot, disableScale: true };
   const items1 = [tmp2.ellipsis];
-  obj.style = items1;
-  obj.children = jsx(native.Ellipsis, { style: null, dotStyle: tmp2.ellipsisDot, disableScale: true });
-  return <View style={null} dotStyle={tmp2.ellipsisDot} disableScale />;
+  obj3.style = items1;
+  obj2.children = jsx(native.Ellipsis, { style: null, dotStyle: tmp2.ellipsisDot, disableScale: true });
+  return <View style={null}>{null}</View>;
 };

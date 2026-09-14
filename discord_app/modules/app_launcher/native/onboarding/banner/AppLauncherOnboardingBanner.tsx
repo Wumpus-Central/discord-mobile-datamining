@@ -15,12 +15,12 @@ const result = size.fileFinishedImporting(
 export default function AppLauncherOnboardingBanner(arg0) {
   ({ context, visibleContent } = arg0);
   if (dismissible_content.DismissibleContent.APP_LAUNCHER_ONBOARDING_ACTIVITIES_BANNER === visibleContent) {
-    let obj = { context };
+    const obj2 = { context };
     return jsx(ActivitiesBannerDefault, { context });
   } else if (dismissible_content.DismissibleContent.APP_LAUNCHER_ONBOARDING_APPS_BANNER === visibleContent) {
     return jsx(AppsBannerDefault, {});
   } else if (dismissible_content.DismissibleContent.APP_LAUNCHER_ONBOARDING_BOTS_BANNER === visibleContent) {
-    obj = { context };
+    const obj = { context };
     return jsx(BotsBannerDefault, { context });
   } else {
     return null;

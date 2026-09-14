@@ -10,6 +10,8 @@ import SuperReactionIcon from "../../../design/components/Icon/native/redesign/g
 import noop from "../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../a11y/AccessibilityStore.tsx";
 
+const require = globalThis.__r;
+
 require = fn;
 const Pressable = fn(17).Pressable;
 const ContentDismissActionType = fn(1954).ContentDismissActionType;
@@ -22,7 +24,7 @@ const __initData = {
   code: 'function BurstReactionToggleTsx1(){const{reducedMotion,targetBackgroundColor,backgroundColor,rotation}=this.__closure;const _backgroundColor=reducedMotion?targetBackgroundColor:backgroundColor.get();const _rotation=reducedMotion?0:rotation.get();return{backgroundColor:_backgroundColor,transform:[{rotate:_rotation+"deg"}]};}',
 };
 const createStyles = fn(4636);
-obj = { container: null };
+let obj3 = { container: null };
 let size = {
   borderRadius: nativeDefault.modules.button.BORDER_RADIUS,
   padding: 8,
@@ -30,8 +32,8 @@ let size = {
   width: 40,
   height: 40,
 };
-obj.container = size;
-let closure_11 = createStyles.createStyles(obj);
+obj3.container = size;
+let closure_11 = createStyles.createStyles(obj3);
 size = fn(2);
 let result = size.fileFinishedImporting("modules/reactions/native/BurstReactionToggle.tsx");
 
@@ -48,9 +50,8 @@ export default function BurstReactionToggle(arg0) {
     tmp4 = tmp2;
     tmp7 = tmp2;
   }
-  obj = noop;
   const ref = noop.useRef(null);
-  importDefault = tmp7(11260)(ref);
+  importDefault = tmp7(11261)(ref);
   closure_129_1 = undefined;
   closure_129_2 = undefined;
   closure_129_3 = undefined;
@@ -70,12 +71,12 @@ export default function BurstReactionToggle(arg0) {
     num = 360;
   }
   closure_129_2 = num;
-  let tmp9Result = ReanimatedRexport;
-  const sharedValue = tmp9Result.useSharedValue(str);
+  const sharedValue = ReanimatedRexport.useSharedValue(str);
   closure_129_3 = sharedValue;
-  tmp9Result = ReanimatedRexport;
-  const sharedValue1 = tmp9Result.useSharedValue(num);
+  const tmp9Result = ReanimatedRexport;
+  const sharedValue1 = ReanimatedRexport.useSharedValue(num);
   closure_129_4 = sharedValue1;
+  const tmp9Result3 = ReanimatedRexport;
   const fn = function s() {
     if (require) {
       value = closure_1;
@@ -87,8 +88,7 @@ export default function BurstReactionToggle(arg0) {
     if (!require) {
       num = Pressable.get();
     }
-    obj = { rotate: "" + num + "deg" };
-    const items = [obj];
+    const items = [{ rotate: "" + num + "deg" }];
     obj.transform = items;
     return obj;
   };
@@ -102,12 +102,12 @@ export default function BurstReactionToggle(arg0) {
   fn.__initData = __initData;
   const items1 = [sharedValue, str, sharedValue1, num];
   const animatedStyle = ReanimatedRexport.useAnimatedStyle(fn);
-  const effect = obj.useEffect(() => {
+  const effect = noop.useEffect(() => {
     obj = timing;
     const result = noop.set(obj.withTiming(closure_1, obj));
     const result1 = Pressable.set(spring.withSpring(dependencyMap, closure_9));
   }, items1);
-  obj = {
+  const obj4 = {
     onPress() {
       closure_1(ContentDismissActionType.AUTO);
       require();
@@ -126,19 +126,32 @@ export default function BurstReactionToggle(arg0) {
   } else {
     stringResult = string(t.buV4av);
   }
-  obj.accessibilityLabel = stringResult;
-  obj.accessibilityState = { checked: isActive };
-  obj = { style: null, ref, children: jsx(SuperReactionIcon.SuperReactionIcon, { color: INTERACTIVE_TEXT_DEFAULT }) };
+  obj4.accessibilityLabel = stringResult;
+  obj4.accessibilityState = { checked: isActive };
+  const obj5 = {
+    style: null,
+    ref,
+    children: jsx(SuperReactionIcon.SuperReactionIcon, { color: INTERACTIVE_TEXT_DEFAULT }),
+  };
   const items2 = [tmp.container, animatedStyle];
-  obj.style = items2;
-  obj.children = jsx(tmp7(4373).View, {
+  obj5.style = items2;
+  obj4.children = jsx(tmp7(4373).View, {
     style: null,
     ref,
     children: jsx(SuperReactionIcon.SuperReactionIcon, { color: INTERACTIVE_TEXT_DEFAULT }),
   });
   return (
-    <Pressable style={null} ref={ref}>
-      {jsx(SuperReactionIcon.SuperReactionIcon, { color: INTERACTIVE_TEXT_DEFAULT })}
+    <Pressable
+      onPress={function onPress() {
+        closure_1(ContentDismissActionType.AUTO);
+        require();
+      }}
+      accessible
+      accessibilityLabel={null}
+      accessibilityRole="switch"
+      accessibilityState={null}
+    >
+      {null}
     </Pressable>
   );
 }

@@ -8,6 +8,8 @@ import noop from "../../../_runtime/metro/00019__.js";
 import UserGuildSettingsStore from "../../stores/UserGuildSettingsStore.tsx";
 import GuildOnboardingPromptsStore from "GuildOnboardingPromptsStore.tsx";
 
+const require = globalThis.__r;
+
 require = fn;
 let closure_6 = fn(1084).ChannelNotificationSettingsFlags;
 let closure_7 = {};
@@ -16,10 +18,9 @@ let result = size.fileFinishedImporting("modules/guild_onboarding/useBatchUpdate
 
 export default function useBatchUpdateSelectOption(guildId) {
   _require = guildId;
-  let obj = require("initialize");
   let items = [GuildOnboardingPromptsStore];
   let items1 = [guildId];
-  const stateFromStores = obj.useStateFromStores(
+  const stateFromStores = require("initialize").useStateFromStores(
     items,
     () => {
       let pendingResponseOptions = GuildOnboardingPromptsStore.getPendingResponseOptions(closure_0);
@@ -32,12 +33,9 @@ export default function useBatchUpdateSelectOption(guildId) {
   );
   let items2 = [guildId];
   const effect = noop.useEffect(() => {
-    let obj = { type: "CLEAR_PENDING_CHANNEL_AND_ROLE_UPDATES", guildId };
-    obj.dispatch(obj);
+    DispatcherDefault.dispatch({ type: "CLEAR_PENDING_CHANNEL_AND_ROLE_UPDATES", guildId });
     return () => {
-      stateFromStores(573);
-      const obj = { type: "CLEAR_PENDING_CHANNEL_AND_ROLE_UPDATES", guildId };
-      obj.dispatch(obj);
+      stateFromStores(573).dispatch({ type: "CLEAR_PENDING_CHANNEL_AND_ROLE_UPDATES", guildId });
     };
   }, items2);
   const items3 = [guildId, stateFromStores];
@@ -51,10 +49,9 @@ export default function useBatchUpdateSelectOption(guildId) {
       const result = GuildOnboardingActionCreatorsDefault.updateOnboardingResponses(closure_0);
     }
   }, items3);
-  obj = { handleSelectOption: null };
+  let obj2 = { handleSelectOption: null };
   const items4 = [guildId];
-  obj.handleSelectOption = noop.useCallback((singleSelect, roleIds, selected) => {
-    let obj = GuildOnboardingPromptsStore;
+  obj2.handleSelectOption = noop.useCallback((singleSelect, roleIds, selected) => {
     const onboardingResponses = GuildOnboardingPromptsStore.getOnboardingResponses(closure_0);
     closure_0 = roleIds;
     if (singleSelect.singleSelect) {
@@ -123,10 +120,10 @@ export default function useBatchUpdateSelectOption(guildId) {
         if (obj12.hasNotSetUpChannelOptIn(tmp)) {
           const push = items1.push;
           const items = [];
-          HermesBuiltin.arraySpread(obj.getDefaultChannelIds(tmp), 0);
+          HermesBuiltin.arraySpread(GuildOnboardingPromptsStore.getDefaultChannelIds(tmp), 0);
           HermesBuiltin.apply(items, items1);
         }
-        obj = {};
+        const obj2 = {};
         const merged = Object.assign(
           items1.reduce((acc, item) => {
             const obj = { flags: null };
@@ -148,9 +145,8 @@ export default function useBatchUpdateSelectOption(guildId) {
         const obj14 = GuildOnboardingActionCreatorsDefault;
         const option = obj14.selectOption(tmp, singleSelect.id, roleIds.id, selected);
         obj12 = OptInOnboardingUtils;
-        obj = { type: "USER_GUILD_SETTINGS_CHANNEL_UPDATE_BULK", guildId: tmp, overrides: null };
-        obj.overrides = obj;
-        DispatcherDefault.dispatch(obj);
+        const obj3 = { type: "USER_GUILD_SETTINGS_CHANNEL_UPDATE_BULK", guildId: tmp, overrides: obj2 };
+        DispatcherDefault.dispatch(obj3);
         GuildOnboardingActionCreatorsDefault.updateRolesLocal(tmp, items2, differenceResult1);
       }
       if (selected) {
@@ -195,5 +191,5 @@ export default function useBatchUpdateSelectOption(guildId) {
       differenceResult1 = _modDef12.difference(found8, found9);
     }
   }, items4);
-  return obj;
+  return obj2;
 }

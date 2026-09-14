@@ -25,7 +25,7 @@ require = fn;
 const ChannelDetailsStore = fn(7980);
 ({ useChannelDetailsStore: closure_7, getIsChannelDetailsSearchActive: closure_8 } = ChannelDetailsStore);
 const isTextChannel = fn(1961).isTextChannel;
-let closure_16 = fn(11329).MIN_QUEST_CONTENT_VISIBILITY_PERCENTAGE;
+let closure_16 = fn(11330).MIN_QUEST_CONTENT_VISIBILITY_PERCENTAGE;
 const MessageStates = fn(1074).MessageStates;
 function log() {
   if (questLogger == null) {
@@ -82,12 +82,11 @@ class QuestMobileEmbedVisibilityManager extends tmp3 {
       const item = codedLinks.forEach((type, questContentPosition) => {
         if (type.type === applyArgumentsResult(4624).CodedLinkType.QUESTS_EMBED) {
           const code = type.code;
-          let obj = set;
           if (!set.has(code)) {
-            obj = { questId: code, questContentPosition, messageId: null, channelId: null };
+            const obj3 = { questId: code, questContentPosition, messageId: null, channelId: null };
             ({ id: obj2.messageId, channel_id: obj2.channelId } = closure_0);
-            items.push(obj);
-            obj.add(code);
+            items.push(obj3);
+            set.add(code);
           }
         }
       });
@@ -145,15 +144,15 @@ class QuestMobileEmbedVisibilityManager extends tmp3 {
       if (!tmp4) {
         let cloneResult = value;
         if (null != value) {
-          let obj = { triggeredByStatusChange: merged.triggeredByStatusChange };
+          const obj = { triggeredByStatusChange: merged.triggeredByStatusChange };
           cloneResult = value.clone(obj);
         }
         if (cloneResult == null) {
-          obj = { adContentIds: null };
+          const obj2 = { adContentIds: null };
           const items = [quest.quest.id];
-          obj.adContentIds = items;
+          obj2.adContentIds = items;
           const merged1 = Object.assign(merged);
-          cloneResult = new ContentImpressionTracker.QuestContentImpression(obj);
+          cloneResult = new ContentImpressionTracker.QuestContentImpression(obj2);
         }
         if (tmp14) {
           cloneResult.start();
@@ -186,7 +185,7 @@ class QuestMobileEmbedVisibilityManager extends tmp3 {
     applyArgumentsResult.stopMany = function stopMany(arg0) {
       let tmp = arg0;
       if (arg0 === undefined) {
-        let obj = { visibleEmbeds: [], shouldDeleteHiddenEmbeds: false };
+        const obj = { visibleEmbeds: [], shouldDeleteHiddenEmbeds: false };
         tmp = obj;
       }
       let visibleEmbeds = tmp.visibleEmbeds;
@@ -201,8 +200,8 @@ class QuestMobileEmbedVisibilityManager extends tmp3 {
       const keys = impressionCache.keys();
       for (const item10023 of keys) {
         if (!set.has(item10023)) {
-          obj = { key: item10023, shouldDelete: flag };
-          let stopOneResult = applyArgumentsResult.stopOne(obj);
+          let obj2 = { key: item10023, shouldDelete: flag };
+          let stopOneResult = applyArgumentsResult.stopOne(obj2);
         }
         continue;
       }
@@ -308,23 +307,22 @@ class QuestMobileEmbedVisibilityManager extends tmp3 {
       const nextResult = iter.next();
       while (iter !== undefined) {
         let tmp4 = nextResult;
-        let obj = applyArgumentsResult;
         let impressionCache2 = applyArgumentsResult.impressionCache;
         value = impressionCache2.get(nextResult);
         let obj2 = value;
         if (null != value) {
-          let channelId = obj.parseCacheKey(tmp4).channelId;
+          let channelId = applyArgumentsResult.parseCacheKey(tmp4).channelId;
           if (obj2.isRunning) {
-            let tmp9 = log(obj.chatChannelId);
-            obj = { key: null, shouldDelete: false };
-            obj.key = tmp4;
-            let stopOneResult = obj.stopOne(obj);
+            let tmp9 = log(applyArgumentsResult.chatChannelId);
+            let obj3 = { key: null, shouldDelete: false };
+            obj3.key = tmp4;
+            let stopOneResult = applyArgumentsResult.stopOne(obj3);
           }
-          if (channelId === obj.chatChannelId) {
-            let tmp16 = log(obj.chatChannelId);
+          if (channelId === applyArgumentsResult.chatChannelId) {
+            let tmp16 = log(applyArgumentsResult.chatChannelId);
             let cloneResult = obj2.clone({ triggeredByStatusChange: false });
             let startResult = cloneResult.start();
-            let impressionCache3 = obj.impressionCache;
+            let impressionCache3 = applyArgumentsResult.impressionCache;
             let result = impressionCache3.set(tmp4, cloneResult);
           }
         }
@@ -407,11 +405,11 @@ class QuestMobileEmbedVisibilityManager extends tmp3 {
             applyArgumentsResult.questStatuses[tmp7.questId] = tmp17;
             if (applyArgumentsResult.isChatViewable) {
               let impressionCache2 = applyArgumentsResult.impressionCache;
-              value = impressionCache2.get(tmp4);
-              let obj4 = value;
+              value2 = impressionCache2.get(tmp4);
+              let obj4 = value2;
               let isRunning;
-              if (value != null) {
-                isRunning = value.isRunning;
+              if (value2 != null) {
+                isRunning = value2.isRunning;
               }
               if (true === isRunning) {
                 if (null != tmp10) {

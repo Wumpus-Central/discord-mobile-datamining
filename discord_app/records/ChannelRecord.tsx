@@ -54,8 +54,7 @@ function createChannelRecord(type) {
     type.flags_ = type.flags;
     delete tmp2[tmp];
   }
-  tmp5 = new tmp5(type);
-  return tmp5;
+  return new tmp5(type);
 }
 const Constants = fn(1074);
 ({ BITRATE_DEFAULT: hasOwnProperty, ChannelTypes } = Constants);
@@ -906,20 +905,20 @@ UnknownChannelRecord["fromServer"] = function fromServer(application_id, arg1) {
     recipientFlags: true,
     rtcRegion: "D",
     safetyWarnings: "DD",
-    blockedUserWarningDismissed: true,
-    template: "/assets/design/components/Icon/native/redesign/generated/images",
-    themeColor: 24,
-    threadMetadata: 24,
-    topic_: null,
-    totalMessageSent: "4c483b0c9e54993ee793f71f5dfd0dd4",
-    type: "SendMessageIcon",
-    userLimit_: "png",
-    version: "__closure",
-    videoQualityMode: "marginTop",
-    linkedLobby: "Icon",
-    hdStreamingUntil: "Icon",
-    hdStreamingBuyerId: "withTiming",
-    voiceHangout: "then",
+    blockedUserWarningDismissed: "years",
+    template: "months",
+    themeColor: "weeks",
+    threadMetadata: "days",
+    topic_: "hours",
+    totalMessageSent: "minutes",
+    type: "seconds",
+    userLimit_: false,
+    version: false,
+    videoQualityMode: false,
+    linkedLobby: false,
+    hdStreamingUntil: false,
+    hdStreamingBuyerId: false,
+    voiceHangout: false,
   };
   if (null == application_id.available_tags) {
     obj.availableTags = undefined;
@@ -934,8 +933,8 @@ UnknownChannelRecord["fromServer"] = function fromServer(application_id, arg1) {
       if (0 !== application_id.default_reaction_emoji.emoji_id) {
         emoji_id = application_id.default_reaction_emoji.emoji_id;
       }
-      obj = { emojiId: emoji_id, emojiName: application_id.default_reaction_emoji.emoji_name };
-      tmp2 = obj;
+      const obj2 = { emojiId: emoji_id, emojiName: application_id.default_reaction_emoji.emoji_name };
+      tmp2 = obj2;
     }
     let guild_id = arg1;
     obj.defaultReactionEmoji = tmp2;
@@ -956,9 +955,9 @@ UnknownChannelRecord["fromServer"] = function fromServer(application_id, arg1) {
     ({ icon: obj.icon, icon_emoji } = application_id);
     let tmp5;
     if (null != icon_emoji) {
-      obj = { id: null, name: null };
       ({ id: obj3.id, name: obj3.name } = icon_emoji);
-      tmp5 = obj;
+      tmp5 = { id: null, name: null };
+      obj4 = { id: null, name: null };
     }
     obj.iconEmoji = tmp5;
     ({
@@ -972,13 +971,13 @@ UnknownChannelRecord["fromServer"] = function fromServer(application_id, arg1) {
     } = application_id);
     let tmp6;
     if (null != application_id.member) {
-      const obj1 = {
+      const obj5 = {
         flags: application_id.member.flags,
         muted: application_id.member.muted,
         muteConfig: application_id.member.mute_config,
         joinTimestamp: application_id.member.join_timestamp,
       };
-      tmp6 = obj1;
+      tmp6 = obj5;
     }
     obj.member = tmp6;
     ({
@@ -994,9 +993,9 @@ UnknownChannelRecord["fromServer"] = function fromServer(application_id, arg1) {
     obj.name = name;
     const nicks = application_id.nicks;
     if (null == nicks) {
-      let obj2 = {};
+      let obj6 = {};
     } else {
-      obj2 = _modDef12.reduce(
+      obj6 = _modDef12.reduce(
         nicks,
         (arg0, id) => {
           arg0[id.id] = id.nick;
@@ -1005,7 +1004,7 @@ UnknownChannelRecord["fromServer"] = function fromServer(application_id, arg1) {
         {},
       );
     }
-    obj.nicks = obj2;
+    obj.nicks = obj6;
     ({
       nsfw: obj.nsfw_,
       origin_channel_id: obj.originChannelId,
@@ -1013,7 +1012,7 @@ UnknownChannelRecord["fromServer"] = function fromServer(application_id, arg1) {
       parent_id: obj.parent_id,
       permission_overwrites,
     } = application_id);
-    const obj3 = {};
+    const obj7 = {};
     if (permission_overwrites != null) {
       const item = permission_overwrites.forEach((id) => {
         obj = { id: id.id, type: id.type, allow: null, deny: null };
@@ -1021,10 +1020,10 @@ UnknownChannelRecord["fromServer"] = function fromServer(application_id, arg1) {
         obj.allow = deserializer.deserialize(id.allow);
         const deserializer2 = BigFlagUtils;
         obj.deny = deserializer2.deserialize(id.deny);
-        obj1[id.id] = obj;
+        obj8[id.id] = obj;
       });
     }
-    obj.permissionOverwrites_ = obj3;
+    obj.permissionOverwrites_ = obj7;
     ({ position: obj.position_, rate_limit_per_user: obj.rateLimitPerUser_ } = application_id);
     obj.rawRecipients = null != application_id.recipients ? application_id.recipients : [];
     if (null != application_id.recipients) {
@@ -1044,7 +1043,7 @@ UnknownChannelRecord["fromServer"] = function fromServer(application_id, arg1) {
     } = application_id);
     let tmp10;
     if (null != application_id.thread_metadata) {
-      const obj4 = {
+      const obj14 = {
         archived: application_id.thread_metadata.archived,
         autoArchiveDuration: application_id.thread_metadata.auto_archive_duration,
         archiveTimestamp: application_id.thread_metadata.archive_timestamp,
@@ -1056,8 +1055,8 @@ UnknownChannelRecord["fromServer"] = function fromServer(application_id, arg1) {
       if (flag == null) {
         flag = true;
       }
-      obj4.invitable = flag;
-      tmp10 = obj4;
+      obj14.invitable = flag;
+      tmp10 = obj14;
     }
     obj.threadMetadata = tmp10;
     ({ topic: obj.topic_, total_message_sent: obj.totalMessageSent } = application_id);
@@ -1076,7 +1075,7 @@ UnknownChannelRecord["fromServer"] = function fromServer(application_id, arg1) {
       hd_streaming_buyer_id: obj.hdStreamingBuyerId,
       voice_hangout: obj.voiceHangout,
     } = application_id);
-    return obj3(1969).dangerouslyCast(obj, UnknownChannelRecord);
+    return obj7(1969).dangerouslyCast(obj, UnknownChannelRecord);
   } else {
     const available_tags = application_id.available_tags;
     if (null == available_tags) {
@@ -1133,7 +1132,7 @@ class GuildVocalChannelRecord extends ChannelRecordBase {
 }
 GuildVocalChannelRecord["fromServer"] = function fromServer(application_id, arg1) {
   let guild_id = arg1;
-  let permissionOverwrites_ = {
+  obj = {
     application_id: application_id.application_id,
     bitrate_: application_id.bitrate,
     flags_: application_id.flags,
@@ -1167,15 +1166,15 @@ GuildVocalChannelRecord["fromServer"] = function fromServer(application_id, arg1
   if (guild_id == null) {
     guild_id = null;
   }
-  permissionOverwrites_.guild_id = guild_id;
+  obj.guild_id = guild_id;
   const icon_emoji = application_id.icon_emoji;
   let tmp2;
   if (null != icon_emoji) {
-    permissionOverwrites_ = { id: null, name: null };
     ({ id: obj2.id, name: obj2.name } = icon_emoji);
-    tmp2 = permissionOverwrites_;
+    tmp2 = { id: null, name: null };
+    const obj3 = { id: null, name: null };
   }
-  permissionOverwrites_.iconEmoji = tmp2;
+  obj.iconEmoji = tmp2;
   ({
     id: obj.id,
     last_message_id: obj.lastMessageId,
@@ -1186,14 +1185,14 @@ GuildVocalChannelRecord["fromServer"] = function fromServer(application_id, arg1
   if (name == null) {
     name = "";
   }
-  permissionOverwrites_.name = name;
+  obj.name = name;
   let flag = application_id.nsfw;
   if (flag == null) {
     flag = false;
   }
-  permissionOverwrites_.nsfw_ = flag;
+  obj.nsfw_ = flag;
   ({ origin_channel_id: obj.originChannelId, parent_id: obj.parent_id, permission_overwrites } = application_id);
-  permissionOverwrites_ = {};
+  const obj6 = {};
   if (permission_overwrites != null) {
     const item = permission_overwrites.forEach((id) => {
       obj = { id: id.id, type: id.type, allow: null, deny: null };
@@ -1201,22 +1200,22 @@ GuildVocalChannelRecord["fromServer"] = function fromServer(application_id, arg1
       obj.allow = deserializer.deserialize(id.allow);
       const deserializer2 = BigFlagUtils;
       obj.deny = deserializer2.deserialize(id.deny);
-      obj1[id.id] = obj;
+      obj8[id.id] = obj;
     });
   }
-  permissionOverwrites_.permissionOverwrites_ = permissionOverwrites_;
+  obj.permissionOverwrites_ = obj6;
   ({ position: obj.position_, rate_limit_per_user } = application_id);
   if (rate_limit_per_user == null) {
     rate_limit_per_user = 0;
   }
-  permissionOverwrites_.rateLimitPerUser_ = rate_limit_per_user;
+  obj.rateLimitPerUser_ = rate_limit_per_user;
   ({ rtc_region: obj.rtcRegion, theme_color: obj.themeColor, topic: obj.topic_ } = application_id);
   if (null != application_id.type) {
     let GUILD_VOICE = application_id.type;
   } else {
     GUILD_VOICE = ChannelTypes.GUILD_VOICE;
   }
-  permissionOverwrites_.type = GUILD_VOICE;
+  obj.type = GUILD_VOICE;
   ({
     user_limit: obj.userLimit_,
     version: obj.version,
@@ -1225,7 +1224,7 @@ GuildVocalChannelRecord["fromServer"] = function fromServer(application_id, arg1
     hd_streaming_buyer_id: obj.hdStreamingBuyerId,
     voice_hangout: obj.voiceHangout,
   } = application_id);
-  let GUILD_TEXT = permissionOverwrites_.type;
+  let GUILD_TEXT = obj.type;
   if (GUILD_TEXT == null) {
     GUILD_TEXT = ChannelTypes.GUILD_TEXT;
   }
@@ -1233,7 +1232,7 @@ GuildVocalChannelRecord["fromServer"] = function fromServer(application_id, arg1
   if (tmp7 == null) {
     tmp7 = UnknownChannelRecord;
   }
-  return permissionOverwrites_(1969).dangerouslyCast(permissionOverwrites_, tmp7);
+  return obj6(1969).dangerouslyCast(obj, tmp7);
 };
 class GuildTextualChannelRecord extends ChannelRecordBase {
   constructor(arg0) {
@@ -1270,7 +1269,7 @@ class GuildTextualChannelRecord extends ChannelRecordBase {
 }
 GuildTextualChannelRecord["fromServer"] = function fromServer(application_id, arg1) {
   let guild_id = arg1;
-  let permissionOverwrites_ = {
+  obj = {
     application_id: application_id.application_id,
     defaultAutoArchiveDuration: application_id.default_auto_archive_duration,
     defaultThreadRateLimitPerUser: application_id.default_thread_rate_limit_per_user,
@@ -1301,15 +1300,15 @@ GuildTextualChannelRecord["fromServer"] = function fromServer(application_id, ar
   if (guild_id == null) {
     guild_id = null;
   }
-  permissionOverwrites_.guild_id = guild_id;
+  obj.guild_id = guild_id;
   const icon_emoji = application_id.icon_emoji;
   let tmp2;
   if (null != icon_emoji) {
-    permissionOverwrites_ = { id: null, name: null };
     ({ id: obj2.id, name: obj2.name } = icon_emoji);
-    tmp2 = permissionOverwrites_;
+    tmp2 = { id: null, name: null };
+    const obj3 = { id: null, name: null };
   }
-  permissionOverwrites_.iconEmoji = tmp2;
+  obj.iconEmoji = tmp2;
   ({
     id: obj.id,
     last_message_id: obj.lastMessageId,
@@ -1320,14 +1319,14 @@ GuildTextualChannelRecord["fromServer"] = function fromServer(application_id, ar
   if (name == null) {
     name = "";
   }
-  permissionOverwrites_.name = name;
+  obj.name = name;
   let flag = application_id.nsfw;
   if (flag == null) {
     flag = false;
   }
-  permissionOverwrites_.nsfw_ = flag;
+  obj.nsfw_ = flag;
   ({ parent_id: obj.parent_id, permission_overwrites } = application_id);
-  permissionOverwrites_ = {};
+  const obj6 = {};
   if (permission_overwrites != null) {
     const item = permission_overwrites.forEach((id) => {
       obj = { id: id.id, type: id.type, allow: null, deny: null };
@@ -1335,29 +1334,29 @@ GuildTextualChannelRecord["fromServer"] = function fromServer(application_id, ar
       obj.allow = deserializer.deserialize(id.allow);
       const deserializer2 = BigFlagUtils;
       obj.deny = deserializer2.deserialize(id.deny);
-      obj1[id.id] = obj;
+      obj8[id.id] = obj;
     });
   }
-  permissionOverwrites_.permissionOverwrites_ = permissionOverwrites_;
+  obj.permissionOverwrites_ = obj6;
   ({ position: obj.position_, rate_limit_per_user } = application_id);
   if (rate_limit_per_user == null) {
     rate_limit_per_user = 0;
   }
-  permissionOverwrites_.rateLimitPerUser_ = rate_limit_per_user;
+  obj.rateLimitPerUser_ = rate_limit_per_user;
   ({ theme_color: obj.themeColor, topic: obj.topic_ } = application_id);
   if (null != application_id.type) {
     let GUILD_TEXT = application_id.type;
   } else {
     GUILD_TEXT = ChannelTypes.GUILD_TEXT;
   }
-  permissionOverwrites_.type = GUILD_TEXT;
+  obj.type = GUILD_TEXT;
   ({
     linked_lobby: obj.linkedLobby,
     hd_streaming_until: obj.hdStreamingUntil,
     hd_streaming_buyer_id: obj.hdStreamingBuyerId,
     version: obj.version,
   } = application_id);
-  let GUILD_TEXT2 = permissionOverwrites_.type;
+  let GUILD_TEXT2 = obj.type;
   if (GUILD_TEXT2 == null) {
     GUILD_TEXT2 = ChannelTypes.GUILD_TEXT;
   }
@@ -1365,7 +1364,7 @@ GuildTextualChannelRecord["fromServer"] = function fromServer(application_id, ar
   if (tmp7 == null) {
     tmp7 = UnknownChannelRecord;
   }
-  return permissionOverwrites_(1969).dangerouslyCast(permissionOverwrites_, tmp7);
+  return obj6(1969).dangerouslyCast(obj, tmp7);
 };
 class GuildAnnouncementChannelRecord extends GuildTextualChannelRecord {}
 class GuildCategoryChannelRecord extends GuildTextualChannelRecord {}
@@ -1471,8 +1470,8 @@ ForumChannelRecord["fromServer"] = function fromServer(available_tags, arg1) {
       if (0 !== available_tags.default_reaction_emoji.emoji_id) {
         emoji_id = available_tags.default_reaction_emoji.emoji_id;
       }
-      obj = { emojiId: emoji_id, emojiName: available_tags.default_reaction_emoji.emoji_name };
-      tmp2 = obj;
+      const obj2 = { emojiId: emoji_id, emojiName: available_tags.default_reaction_emoji.emoji_name };
+      tmp2 = obj2;
     }
     let guild_id = arg1;
     obj.defaultReactionEmoji = tmp2;
@@ -1493,9 +1492,9 @@ ForumChannelRecord["fromServer"] = function fromServer(available_tags, arg1) {
     const icon_emoji = available_tags.icon_emoji;
     let tmp5;
     if (null != icon_emoji) {
-      obj = { id: null, name: null };
       ({ id: obj3.id, name: obj3.name } = icon_emoji);
-      tmp5 = obj;
+      tmp5 = { id: null, name: null };
+      obj4 = { id: null, name: null };
     }
     obj.iconEmoji = tmp5;
     ({
@@ -1515,7 +1514,7 @@ ForumChannelRecord["fromServer"] = function fromServer(available_tags, arg1) {
     }
     obj.nsfw_ = flag;
     ({ parent_id: obj.parent_id, permission_overwrites } = available_tags);
-    const obj1 = {};
+    const obj8 = {};
     if (permission_overwrites != null) {
       const item = permission_overwrites.forEach((id) => {
         obj = { id: id.id, type: id.type, allow: null, deny: null };
@@ -1523,10 +1522,10 @@ ForumChannelRecord["fromServer"] = function fromServer(available_tags, arg1) {
         obj.allow = deserializer.deserialize(id.allow);
         const deserializer2 = BigFlagUtils;
         obj.deny = deserializer2.deserialize(id.deny);
-        obj1[id.id] = obj;
+        obj8[id.id] = obj;
       });
     }
-    obj.permissionOverwrites_ = obj1;
+    obj.permissionOverwrites_ = obj8;
     ({ position: obj.position_, rate_limit_per_user } = available_tags);
     if (rate_limit_per_user == null) {
       rate_limit_per_user = 0;
@@ -1540,7 +1539,7 @@ ForumChannelRecord["fromServer"] = function fromServer(available_tags, arg1) {
     }
     obj.type = GUILD_TEXT;
     obj.version = available_tags.version;
-    return obj1(1969).dangerouslyCast(obj, ForumChannelRecord);
+    return obj8(1969).dangerouslyCast(obj, ForumChannelRecord);
   }
 };
 class IdAsNumberCache {
@@ -1571,9 +1570,9 @@ IdAsNumberCache.prototype["getOrCompute"] = function getOrCompute(id) {
 let obj = Object.create(IdAsNumberCache.prototype);
 const set27 = new Set(items27);
 obj.cache = new privDefault(100);
-obj = Object.create(IdAsNumberCache.prototype);
+let obj4 = Object.create(IdAsNumberCache.prototype);
 const tmp35 = new privDefault(100);
-obj.cache = new privDefault(100);
+obj4.cache = new privDefault(100);
 let PrivateChannelRecord;
 class PrivateChannelRecord extends ChannelRecordBase {
   constructor(arg0) {
@@ -1615,13 +1614,13 @@ PrivateChannelRecord["sortRecipients"] = function sortRecipients(rawRecipients, 
   }
   const items1 = [...items];
   return items1.sort((id, id2) => {
-    const orCompute = obj.getOrCompute(id.id);
-    return (orCompute ^ closure_0) - (obj.getOrCompute(id2.id) ^ closure_0);
+    const orCompute = obj4.getOrCompute(id.id);
+    return (orCompute ^ closure_0) - (obj4.getOrCompute(id2.id) ^ closure_0);
   });
 };
 PrivateChannelRecord["fromServer"] = function fromServer(application_id) {
   const sortRecipientsResult = PrivateChannelRecord.sortRecipients(application_id.recipients, application_id.id);
-  let reduced = {
+  obj = {
     application_id: application_id.application_id,
     flags_: application_id.flags,
     guild_id: null,
@@ -1646,17 +1645,17 @@ PrivateChannelRecord["fromServer"] = function fromServer(application_id) {
   if (flag == null) {
     flag = false;
   }
-  reduced.isSpam = flag;
+  obj.isSpam = flag;
   ({ last_message_id: obj.lastMessageId, last_pin_timestamp: obj.lastPinTimestamp, name } = application_id);
   if (name == null) {
     name = "";
   }
-  reduced.name = name;
+  obj.name = name;
   const nicks = application_id.nicks;
   if (null == nicks) {
-    reduced = {};
+    let obj2 = {};
   } else {
-    reduced = _modDef12.reduce(
+    obj2 = _modDef12.reduce(
       nicks,
       (arg0, id) => {
         arg0[id.id] = id.nick;
@@ -1665,10 +1664,10 @@ PrivateChannelRecord["fromServer"] = function fromServer(application_id) {
       {},
     );
   }
-  reduced.nicks = reduced;
-  reduced.ownerId = application_id.owner_id;
-  reduced.rawRecipients = sortRecipientsResult;
-  reduced.recipients = sortRecipientsResult.map((id) => id.id);
+  obj.nicks = obj2;
+  obj.ownerId = application_id.owner_id;
+  obj.rawRecipients = sortRecipientsResult;
+  obj.recipients = sortRecipientsResult.map((id) => id.id);
   ({
     recipient_flags: obj.recipientFlags,
     safety_warnings: obj.safetyWarnings,
@@ -1679,8 +1678,8 @@ PrivateChannelRecord["fromServer"] = function fromServer(application_id) {
   } else {
     DM = ChannelTypes.DM;
   }
-  reduced.type = DM;
-  return TypeUtils.dangerouslyCast(reduced, PrivateChannelRecord);
+  obj.type = DM;
+  return TypeUtils.dangerouslyCast(obj, PrivateChannelRecord);
 };
 prototype2["isSystemDM"] = function isSystemDM() {
   const first = this.rawRecipients[0];
@@ -1699,20 +1698,19 @@ prototype2["getRecipientId"] = function getRecipientId() {
 prototype2["addRecipient"] = function addRecipient(arg0, arg1, arg2) {
   const self = this;
   if (arg0 !== arg2) {
-    obj = _modDef12;
     let recipients = self.recipients;
     if (recipients == null) {
       recipients = [];
     }
     const items = [];
     items[HermesBuiltin.arraySpread(recipients, 0)] = arg0;
-    const result = self.set("recipients", obj.uniq(items).sort(SnowflakeUtilsDefault.compare));
+    const result = self.set("recipients", _modDef12.uniq(items).sort(SnowflakeUtilsDefault.compare));
     let result1 = result;
     if (null != arg1) {
-      obj = {};
+      const obj2 = {};
       const merged = Object.assign(result.nicks);
-      obj[arg0] = arg1;
-      result1 = result.set("nicks", obj);
+      obj2[arg0] = arg1;
+      result1 = result.set("nicks", obj2);
     }
     return result1;
   } else {
@@ -1796,13 +1794,13 @@ prototype3["fromServer"] = function fromServer(applied_tags, arg1) {
   ({ id: obj.id, last_message_id: obj.lastMessageId, last_pin_timestamp: obj.lastPinTimestamp } = applied_tags);
   let tmp2;
   if (null != applied_tags.member) {
-    obj = {
+    const obj2 = {
       flags: applied_tags.member.flags,
       muted: applied_tags.member.muted,
       muteConfig: applied_tags.member.mute_config,
       joinTimestamp: applied_tags.member.join_timestamp,
     };
-    tmp2 = obj;
+    tmp2 = obj2;
   }
   obj.member = tmp2;
   ({
@@ -1829,7 +1827,7 @@ prototype3["fromServer"] = function fromServer(applied_tags, arg1) {
   } = applied_tags);
   let tmp3;
   if (null != applied_tags.thread_metadata) {
-    obj = {
+    const obj3 = {
       archived: applied_tags.thread_metadata.archived,
       autoArchiveDuration: applied_tags.thread_metadata.auto_archive_duration,
       archiveTimestamp: applied_tags.thread_metadata.archive_timestamp,
@@ -1841,8 +1839,8 @@ prototype3["fromServer"] = function fromServer(applied_tags, arg1) {
     if (flag2 == null) {
       flag2 = true;
     }
-    obj.invitable = flag2;
-    tmp3 = obj;
+    obj3.invitable = flag2;
+    tmp3 = obj3;
   }
   obj.threadMetadata = tmp3;
   obj.totalMessageSent = applied_tags.total_message_sent;

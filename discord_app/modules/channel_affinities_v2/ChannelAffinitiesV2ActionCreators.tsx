@@ -17,21 +17,25 @@ export const fetchChannelAffinitiesV2 = function fetchChannelAffinitiesV2() {
   }
   if (ChannelAffinitiesV2Store.shouldFetch()) {
     if (ConsentStore.hasConsented(constants.PERSONALIZATION)) {
-      let obj = DispatcherDefault;
-      obj.dispatch({ type: "LOAD_CHANNEL_AFFINITIES_V2" });
+      DispatcherDefault.dispatch({ type: "LOAD_CHANNEL_AFFINITIES_V2" });
       const HTTP = HTTPUtils.HTTP;
-      obj = { url: hasOwnProperty.CHANNEL_AFFINITIES_V2, retries: null, oldFormErrors: true, rejectWithError: false };
+      let obj2 = {
+        url: hasOwnProperty.CHANNEL_AFFINITIES_V2,
+        retries: null,
+        oldFormErrors: true,
+        rejectWithError: false,
+      };
       let num = 0;
       if (flag) {
         num = 3;
       }
-      obj.retries = num;
-      value = HTTP.get(obj);
+      obj2.retries = num;
+      value = HTTP.get(obj2);
       let nextPromise = value.then(
         (body) => {
-          let obj = { type: "LOAD_CHANNEL_AFFINITIES_V2_SUCCESS", affineChannels: null };
+          const obj2 = { type: "LOAD_CHANNEL_AFFINITIES_V2_SUCCESS", affineChannels: null };
           const channel_affinities = body.body.channel_affinities;
-          obj.affineChannels = channel_affinities.map((channelId) => {
+          obj2.affineChannels = channel_affinities.map((channelId) => {
             const obj = { channelId: channelId.channel_id, score: null };
             let num = channelId.score;
             if (num == null) {
@@ -40,7 +44,7 @@ export const fetchChannelAffinitiesV2 = function fetchChannelAffinitiesV2() {
             obj.score = num;
             return obj;
           });
-          obj.dispatch(obj);
+          DispatcherDefault.dispatch(obj2);
         },
         () => {
           DispatcherDefault.dispatch({ type: "LOAD_CHANNEL_AFFINITIES_V2_FAILURE" });

@@ -11,11 +11,10 @@ const result = size.fileFinishedImporting(
 
 export const createStageStartSystemMessage = function createStageStartSystemMessage(roleStyle) {
   const message = roleStyle.message;
-  let obj = useAuthorWithProcessedColor;
-  const messageAuthorWithProcessedColor = obj.getMessageAuthorWithProcessedColor(message);
-  obj = { content: null };
+  const messageAuthorWithProcessedColor = useAuthorWithProcessedColor.getMessageAuthorWithProcessedColor(message);
+  const obj2 = { content: null };
   const intl = util.intl;
-  obj = {
+  obj2.content = intl.formatToParts(util.t.aZtRW8, {
     username: messageAuthorWithProcessedColor.nick,
     usernameOnClick: formatUsernameOnClickDefault({
       message,
@@ -23,8 +22,7 @@ export const createStageStartSystemMessage = function createStageStartSystemMess
       roleStyle: roleStyle.roleStyle,
     }),
     topic: message.content,
-  };
-  obj.content = intl.formatToParts(util.t.aZtRW8, obj);
+  });
   const merged = Object.assign(createCommonMessageDefault(roleStyle));
-  return obj;
+  return obj2;
 };

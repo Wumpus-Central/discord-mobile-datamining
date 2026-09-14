@@ -13,13 +13,12 @@ let result = size.fileFinishedImporting(
 
 export default function CommunityRequirementSatisfiedForm(formSwitchDisabled) {
   formSwitchDisabled = formSwitchDisabled.formSwitchDisabled;
-  let obj = formSwitchDisabled(17781);
-  const enableCommunitySharedStyles = obj.useEnableCommunitySharedStyles();
-  obj = { style: enableCommunitySharedStyles.communityRequirementSatisfiedFormWrapper, children: null };
+  const enableCommunitySharedStyles = formSwitchDisabled(17782).useEnableCommunitySharedStyles();
+  const obj2 = { style: enableCommunitySharedStyles.communityRequirementSatisfiedFormWrapper, children: null };
   const items = [formSwitchDisabled.children];
   let tmp6 = null;
   if (formSwitchDisabled) {
-    obj = {
+    const obj3 = {
       accessibilityRole: "button",
       style: enableCommunitySharedStyles.communityRequirementSatisfiedFormPressable,
       onPress() {
@@ -28,9 +27,9 @@ export default function CommunityRequirementSatisfiedForm(formSwitchDisabled) {
         }
       },
     };
-    tmp6 = closure_3(formSwitchDisabled(5204).PressableOpacity, obj);
+    tmp6 = closure_3(formSwitchDisabled(5204).PressableOpacity, obj3);
   }
   items[1] = tmp6;
-  obj.children = items;
-  return closure_4(View, obj);
+  obj2.children = items;
+  return closure_4(View, obj2);
 }

@@ -26,10 +26,10 @@ export default noop.memo(function InlinePortalKeyboard(messagesRef) {
       tmp4 = field.handlerId === id;
     }
     if (tmp4) {
-      let tmpResult = messagesRef(dependencyMap[9]);
-      tmpResult.dismissKeyboard();
-      tmpResult = messagesRef(dependencyMap[8]);
-      tmpResult.closePortalKeyboard();
+      messagesRef(dependencyMap[9]).dismissKeyboard();
+      const tmpResult = messagesRef(dependencyMap[9]);
+      messagesRef(dependencyMap[8]).closePortalKeyboard();
+      const tmpResult2 = messagesRef(dependencyMap[8]);
     }
   });
   let PortalKeyboardUIStore = messagesRef(4505).PortalKeyboardUIStore;
@@ -58,11 +58,11 @@ export default noop.memo(function InlinePortalKeyboard(messagesRef) {
                 const DCDChatManager3 = keyboardContextForType.DCDChatManager;
                 const result1 = DCDChatManager3.customKeyboardWillShow(
                   tmp38,
-                  messagesRef(11489).getKeyboardActionSheetHeight().minimum,
+                  messagesRef(11490).getKeyboardActionSheetHeight().minimum,
                   0.25,
                   7,
                 );
-                const obj3 = messagesRef(11489);
+                const obj3 = messagesRef(11490);
               }
             }
           }

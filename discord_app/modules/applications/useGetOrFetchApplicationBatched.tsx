@@ -3,6 +3,8 @@ import Timers from "../../../discord_common/js/packages/timers/Timers.tsx";
 import noop from "../../../_runtime/metro/00019__.js";
 import ApplicationStore from "ApplicationStore.tsx";
 
+const require = globalThis.__r;
+
 require = fn;
 class ApplicationFetchManager {
   constructor() {
@@ -40,13 +42,13 @@ prototype["request"] = function request(arg0) {
 prototype["_flush"] = function _flush() {
   const self = this;
   const items = [];
-  let _pending = this._pending;
-  const item = _pending.forEach((item) => {
+  const _pending1 = this._pending;
+  const item = _pending1.forEach((item) => {
     const _lastFetchedAttempted = self._lastFetchedAttempted;
     const result = _lastFetchedAttempted.set(item, Date.now());
     items.push(item);
   });
-  _pending = this._pending;
+  const _pending = this._pending;
   _pending.clear();
   const items1 = [];
   const items2 = [];
@@ -67,7 +69,7 @@ prototype["_flush"] = function _flush() {
     const chunkResult = items(items1[3]).chunk(items1, 20);
   }
   if (items2.length > 0) {
-    const obj2 = items(items1[3]);
+    obj2 = items(items1[3]);
     const item3 = items(items1[3])
       .chunk(items2, 20)
       .forEach((item) => {
@@ -76,14 +78,14 @@ prototype["_flush"] = function _flush() {
     const chunkResult1 = items(items1[3]).chunk(items2, 20);
   }
 };
-let size = Object.create(ApplicationFetchManager.prototype);
-let closure_129_0 = size;
-size._lastFetchedAttempted = new Map();
+let obj2 = Object.create(ApplicationFetchManager.prototype);
+let closure_129_0 = obj2;
+obj2._lastFetchedAttempted = new Map();
 let map = new Map();
-size._pending = new Set();
+obj2._pending = new Set();
 let delayedCall = new fn(1952).DelayedCall(32, () => obj._flush());
-size._flushHandler = delayedCall;
-size = fn(2);
+obj2._flushHandler = delayedCall;
+const size = fn(2);
 let result = size.fileFinishedImporting("modules/applications/useGetOrFetchApplicationBatched.tsx");
 
 export const useRequestApplication = function useRequestApplication(arg0) {
@@ -95,7 +97,7 @@ export const useRequestApplication = function useRequestApplication(arg0) {
       tmp2 = "" !== closure_0;
     }
     if (tmp2) {
-      size.request(closure_0);
+      obj2.request(closure_0);
     }
   }, items);
 };
@@ -109,7 +111,7 @@ export const useGetOrFetchApplicationBatched = function useGetOrFetchApplication
       tmp2 = "" !== closure_0;
     }
     if (tmp2) {
-      size.request(closure_0);
+      obj2.request(closure_0);
     }
   }, items);
   const items1 = [ApplicationStore];

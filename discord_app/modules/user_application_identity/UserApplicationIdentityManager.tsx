@@ -7,7 +7,7 @@ function handleUserApplicationIdentityGatewayEvent(user_id) {
   const useUserApplicationIdentities = UserApplicationIdentityActionCreators.useUserApplicationIdentities;
   useUserApplicationIdentities.refetch(user_id.user_id);
 }
-let prototype = function UserApplicationIdentityManager() {
+const prototype = function UserApplicationIdentityManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
   applyArgumentsResult.actions = {
     USER_APPLICATION_IDENTITY_UPDATE: handleUserApplicationIdentityGatewayEvent,
@@ -16,8 +16,8 @@ let prototype = function UserApplicationIdentityManager() {
   return applyArgumentsResult;
 }.prototype;
 class prototype extends tmp2 {}
-prototype = new prototype();
+const prototype1 = new prototype();
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_application_identity/UserApplicationIdentityManager.tsx");
 
-export default prototype;
+export default prototype1;

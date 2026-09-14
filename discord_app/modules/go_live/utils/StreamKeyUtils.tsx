@@ -17,12 +17,11 @@ export const decodeStreamKey = function decodeStreamKey(streamKey) {
   const parts = streamKey.split(":");
   const first = parts[0];
   if (StreamTypes.GUILD === first) {
-    let obj = { streamType: null, guildId: null, channelId: null, ownerId: null };
-    [obj2.streamType, obj2.guildId, obj2.channelId, obj2.ownerId] = _slicedToArray(parts, 4);
-    return obj;
+    [obj2.streamType, obj2.guildId, obj2.channelId, obj2.ownerId] = parts;
+    return { streamType: null, guildId: null, channelId: null, ownerId: null };
   } else if (tmp3.CALL === first) {
-    obj = { streamType: null, channelId: null, ownerId: null };
-    [obj.streamType, obj.channelId, obj.ownerId] = _slicedToArray(parts, 3);
+    const obj = { streamType: null, channelId: null, ownerId: null };
+    [obj.streamType, obj.channelId, obj.ownerId] = parts;
     return obj;
   } else {
     const _Error = Error;

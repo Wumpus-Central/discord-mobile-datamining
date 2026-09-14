@@ -16,17 +16,23 @@ const Constants = fn(1074);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
 let closure_15 = { rows: [], sections: [] };
-fn(4636);
-let obj = { container: null, containerSearchBar: null };
-obj = {
+const createStyles = fn(4636);
+let obj = {
+  container: {
+    backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER,
+    paddingHorizontal: nativeDefault.space.PX_12,
+    flex: 1,
+  },
+  containerSearchBar: null,
+};
+let obj3 = {
   backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER,
   paddingHorizontal: nativeDefault.space.PX_12,
   flex: 1,
 };
-obj.container = obj;
-const createStyles = { paddingVertical: nativeDefault.space.PX_8 };
-obj.containerSearchBar = createStyles;
+obj.containerSearchBar = { paddingVertical: nativeDefault.space.PX_8 };
 let closure_16 = createStyles.createStyles(obj);
+let obj4 = { paddingVertical: nativeDefault.space.PX_8 };
 const size = fn(2);
 let result = size.fileFinishedImporting("components_native/channel_settings/ChannelSettingsPermissionsList.tsx");
 
@@ -40,18 +46,16 @@ export default noop.memo(function ChannelSettingsPermissionsList(channelId) {
   let rowContentHeight;
   let callback;
   let tmp = closure_16();
-  let obj = channelId(stateFromStores[13]);
-  const navigation = obj.useNavigation();
-  let obj1 = rows;
+  const navigation = channelId(stateFromStores[13]).useNavigation();
   const tmp5 = guildId(rows.useState(""), 2);
   const first = tmp5[0];
-  let obj2 = channelId(stateFromStores[11]);
+  let obj = channelId(stateFromStores[13]);
   let items = [rowContentHeight];
-  stateFromStores = obj2.useStateFromStores(items, () => ChannelStore.getChannel(channelId));
-  let obj3 = channelId(stateFromStores[11]);
+  stateFromStores = channelId(stateFromStores[11]).useStateFromStores(items, () => ChannelStore.getChannel(channelId));
+  const obj3 = channelId(stateFromStores[11]);
   let items1 = [GuildRoleStore];
   const items2 = [stateFromStores];
-  const stateFromStoresObject = obj3.useStateFromStoresObject(
+  const stateFromStoresObject = channelId(stateFromStores[11]).useStateFromStoresObject(
     items1,
     () => {
       guildId = undefined;
@@ -76,16 +80,16 @@ export default noop.memo(function ChannelSettingsPermissionsList(channelId) {
   closure_129_1 = permissionOverwrites;
   closure_129_2 = guildId;
   closure_129_3 = first;
-  let tmp2Result = tmp2(tmp3[11]);
+  const obj4 = channelId(stateFromStores[11]);
   const items3 = [callback];
   const items4 = [
     type === constants.MEMBER,
     guildId,
-    tmp2Result.useStateFromStores(items3, () => callback.getMemberVersion()),
+    channelId(stateFromStores[11]).useStateFromStores(items3, () => callback.getMemberVersion()),
     permissionOverwrites,
     first,
   ];
-  const memo = obj1.useMemo(() => {
+  const memo = obj2.useMemo(() => {
     if (channelId) {
       if (null != navigation) {
         const items = [];
@@ -136,7 +140,7 @@ export default noop.memo(function ChannelSettingsPermissionsList(channelId) {
   closure_130_2 = sortedGuildRoles;
   closure_130_3 = first;
   const items5 = [type === constants.ROLE, stateFromStores, sortedGuildRoles, first];
-  const memo1 = obj1.useMemo(() => {
+  const memo1 = obj2.useMemo(() => {
     if (channelId) {
       if (null != navigation) {
         if (null != type) {
@@ -163,40 +167,44 @@ export default noop.memo(function ChannelSettingsPermissionsList(channelId) {
     return closure_15;
   }, items5);
   rows1 = memo1.rows;
-  tmp2Result = tmp2(tmp3[15]);
-  const scaledRowHeightData = tmp2Result.useScaledRowHeightData();
+  const tmp2Result = channelId(stateFromStores[11]);
+  const scaledRowHeightData = channelId(stateFromStores[15]).useScaledRowHeightData();
   rowContentHeight = scaledRowHeightData.rowContentHeight;
   const items6 = [channelId, navigation, type];
-  callback = obj1.useCallback((id, type) => {
+  callback = obj2.useCallback((id, type) => {
     if (null != id) {
-      type(stateFromStores[16]);
-      const obj = { id, type, allow: navigation(stateFromStores[17]).NONE, deny: navigation(stateFromStores[17]).NONE };
-      const result = obj.updatePermissionOverwrite(tmp, obj);
+      const obj2 = {
+        id,
+        type,
+        allow: navigation(stateFromStores[17]).NONE,
+        deny: navigation(stateFromStores[17]).NONE,
+      };
+      const result = type(stateFromStores[16]).updatePermissionOverwrite(tmp, obj2);
       result.then(() => {
         navigation.push(constants2.PERMISSION_OVERRIDES, { type, id, fromCreate: true });
       });
+      const obj = type(stateFromStores[16]);
     }
   }, items6);
   const items7 = [guildId, rows, rows1, callback, type, rowContentHeight];
-  obj = { style: tmp.container, children: null };
-  obj = { style: tmp.containerSearchBar, children: null };
-  const callback1 = obj1.useCallback((arg0, arg1) => {
+  const obj5 = { style: tmp.container, children: null };
+  const obj6 = { style: tmp.containerSearchBar, children: null };
+  const callback1 = obj2.useCallback((arg0, arg1) => {
     if (null == guildId) {
       return null;
     } else if (constants.ROLE === tmp) {
       let id = tmp13;
-      let obj = { arrow: true, end: tmp19, label: null, onPress: null, start: null };
-      obj = { name: null, color: null, colors: null };
+      const obj2 = { arrow: true, end: tmp19, label: null, onPress: null, start: null };
       ({ name: obj3.name, colorString: obj3.color, colorStrings: obj3.colors } = rows1[arg1]);
-      obj.label = closure_1_13(channelId(stateFromStores[19]).RoleLabel, obj);
-      obj.onPress = function onPress() {
+      obj2.label = closure_1_13(channelId(stateFromStores[19]).RoleLabel, { name: null, color: null, colors: null });
+      obj2.onPress = function onPress() {
         callback(id.id, Server.PermissionOverwriteType.ROLE);
       };
-      obj.start = tmp18;
-      return closure_1_13(channelId(stateFromStores[18]).TableRow, obj);
+      obj2.start = tmp18;
+      return closure_1_13(channelId(stateFromStores[18]).TableRow, obj2);
     } else if (constants.MEMBER === tmp) {
       id = rows[arg1].id;
-      obj = {
+      const obj = {
         arrow: true,
         contentHeight: rowContentHeight,
         end: tmp19,
@@ -212,17 +220,17 @@ export default noop.memo(function ChannelSettingsPermissionsList(channelId) {
       return null;
     }
   }, items7);
-  obj1 = { size: "md", placeholder: null, onChange: null, isRound: true };
+  const obj7 = { size: "md", placeholder: null, onChange: null, isRound: true };
   const intl = tmp2(tmp3[23]).intl;
-  obj1.placeholder = intl.string(channelId(stateFromStores[23]).t["5h0QOP"]);
-  obj1.onChange = tmp5[1];
-  obj.children = closure_13(channelId(stateFromStores[22]).SearchField, obj1);
-  const items8 = [closure_13(rows1, obj)];
+  obj7.placeholder = intl.string(channelId(stateFromStores[23]).t["5h0QOP"]);
+  obj7.onChange = tmp5[1];
+  obj6.children = closure_13(channelId(stateFromStores[22]).SearchField, obj7);
+  const items8 = [closure_13(rows1, obj6)];
   if (0 !== (type === constants.ROLE ? rows1.length : rows.length)) {
     if (type === constants.ROLE) {
       sections = memo1.sections;
     }
-    obj2 = {
+    const obj8 = {
       sections,
       itemSize: scaledRowHeightData.rowHeight,
       estimatedListSize: "windowSize",
@@ -232,10 +240,10 @@ export default noop.memo(function ChannelSettingsPermissionsList(channelId) {
       insetEnd: tmp7(tmp3[10]).space.PX_8 + type(stateFromStores[14])().bottom,
       keyboardShouldPersistTaps: "always",
     };
-    let tmp21Result = closure_13(tmp7(tmp3[24]), obj2);
+    let tmp21Result = closure_13(tmp7(tmp3[24]), obj8);
     const tmp7Result = tmp7(tmp3[24]);
   } else {
-    obj3 = { Illustration: tmp2(tmp3[26]).NoResults, title: null, body: null };
+    const obj9 = { Illustration: tmp2(tmp3[26]).NoResults, title: null, body: null };
     if (type === constants.ROLE) {
       const intl3 = tmp2(tmp3[23]).intl;
       let stringResult = intl3.string(tmp2(tmp3[23]).t.Sojqsr);
@@ -243,7 +251,7 @@ export default noop.memo(function ChannelSettingsPermissionsList(channelId) {
       const intl2 = tmp2(tmp3[23]).intl;
       stringResult = intl2.string(tmp2(tmp3[23]).t.pYHobK);
     }
-    obj3.title = stringResult;
+    obj9.title = stringResult;
     if (type === constants.ROLE) {
       const intl5 = tmp2(tmp3[23]).intl;
       let stringResult1 = intl5.string(tmp2(tmp3[23]).t["7gBhmO"]);
@@ -251,10 +259,10 @@ export default noop.memo(function ChannelSettingsPermissionsList(channelId) {
       const intl4 = tmp2(tmp3[23]).intl;
       stringResult1 = intl4.string(tmp2(tmp3[23]).t.tuL9TW);
     }
-    obj3.body = stringResult1;
-    tmp21Result = closure_13(tmp2(tmp3[25]).EmptyState, obj3);
+    obj9.body = stringResult1;
+    tmp21Result = closure_13(tmp2(tmp3[25]).EmptyState, obj9);
   }
   items8[1] = tmp21Result;
-  obj.children = items8;
-  return closure_14(rows1, obj);
+  obj5.children = items8;
+  return closure_14(rows1, obj5);
 });

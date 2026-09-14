@@ -5,32 +5,29 @@ import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const AUTOCOMPLETE_ROW_HEIGHT = fn(10391).AUTOCOMPLETE_ROW_HEIGHT;
+const AUTOCOMPLETE_ROW_HEIGHT = fn(10392).AUTOCOMPLETE_ROW_HEIGHT;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 let c7 = 16;
 const createStyles = fn(4636);
 let closure_8 = createStyles.createStyles((arg0) => {
-  let obj = {
-    applicationCommandLoadingItem: null,
-    applicationCommandLoadingLeftWrapper: null,
+  const obj = {
+    applicationCommandLoadingItem: {
+      flexDirection: "row",
+      paddingVertical: 4,
+      paddingHorizontal: 16,
+      alignItems: "center",
+      height: Math.max(arg0 * AUTOCOMPLETE_ROW_HEIGHT, AUTOCOMPLETE_ROW_HEIGHT),
+    },
+    applicationCommandLoadingLeftWrapper: {
+      flexDirection: "column",
+      width: "75%",
+      height: "100%",
+      justifyContent: "space-between",
+    },
     applicationCommandLoadingName: null,
     applicationCommandLoadingDescription: null,
     applicationCommandLoadingSectionName: null,
-  };
-  obj = {
-    flexDirection: "row",
-    paddingVertical: 4,
-    paddingHorizontal: 16,
-    alignItems: "center",
-    height: Math.max(arg0 * AUTOCOMPLETE_ROW_HEIGHT, AUTOCOMPLETE_ROW_HEIGHT),
-  };
-  obj.applicationCommandLoadingItem = obj;
-  obj.applicationCommandLoadingLeftWrapper = {
-    flexDirection: "column",
-    width: "75%",
-    height: "100%",
-    justifyContent: "space-between",
   };
   const size = {
     backgroundColor: nativeDefault.colors.BACKGROUND_MOD_STRONG,
@@ -61,19 +58,18 @@ let size = fn(2);
 const result = size.fileFinishedImporting("modules/application_commands/native/ApplicationCommandLoadingItem.tsx");
 
 export default function ApplicationCommandLoadingItem() {
-  let obj = useFontScale;
-  const tmp = closure_8(obj.useFontScale());
-  obj = { style: tmp.applicationCommandLoadingItem, children: null };
-  obj = { style: tmp.applicationCommandLoadingLeftWrapper, children: null };
+  const tmp = closure_8(useFontScale.useFontScale());
+  const obj2 = { style: tmp.applicationCommandLoadingItem, children: null };
+  const obj3 = { style: tmp.applicationCommandLoadingLeftWrapper, children: null };
   const items = [
     hasOwnProperty(View, { style: tmp.applicationCommandLoadingName }),
     hasOwnProperty(View, { style: tmp.applicationCommandLoadingDescription }),
   ];
-  obj.children = items;
+  obj3.children = items;
   const items1 = [
-    timestampProducer(View, obj),
+    timestampProducer(View, obj3),
     hasOwnProperty(View, { style: tmp.applicationCommandLoadingSectionName }),
   ];
-  obj.children = items1;
-  return timestampProducer(View, obj);
+  obj2.children = items1;
+  return timestampProducer(View, obj2);
 }

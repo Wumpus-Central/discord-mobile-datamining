@@ -11,48 +11,48 @@ import HomeDrawerStore from "../../../../home_drawer/native/HomeDrawerStore.tsx"
 require = fn;
 function ContentMaskGradient(offsetX) {
   offsetX = offsetX.offsetX;
-  let obj = offsetX(16115);
-  const guildsBarPullX = obj.useHomeDrawerState().guildsBarPullX;
+  const guildsBarPullX = offsetX(16117).useHomeDrawerState().guildsBarPullX;
+  let obj = offsetX(16117);
   const fn = function n() {
-    let obj = { transform: null };
-    obj = { translateX: roundToNearestPixelDefault(-offsetX - guildsBarPullX.get()) };
-    const items = [obj];
+    const obj = { transform: null };
+    const obj2 = { translateX: roundToNearestPixelDefault(-offsetX - guildsBarPullX.get()) };
+    const items = [obj2];
     obj.transform = items;
     return obj;
   };
-  obj = { roundToNearestPixel: guildsBarPullX(11125), offsetX, guildsBarPullX };
-  fn.__closure = obj;
+  let obj2 = offsetX(4373);
+  fn.__closure = { roundToNearestPixel: guildsBarPullX(11126), offsetX, guildsBarPullX };
   fn.__workletHash = 7539125302557;
   fn.__initData = __initData;
-  const animatedStyle = offsetX(4373).useAnimatedStyle(fn);
-  obj = {
+  const animatedStyle = obj2.useAnimatedStyle(fn);
+  const obj4 = {
     pointerEvents: "none",
     style: null,
     children: closure_9(guildsBarPullX(5206), { absolute: true, tall: true, wide: true, mix: true }),
   };
   let items = [absoluteFill.absoluteFill, animatedStyle];
-  obj.style = items;
-  return closure_9(guildsBarPullX(4373).View, obj);
+  obj4.style = items;
+  return closure_9(guildsBarPullX(4373).View, obj4);
 }
 function HomeDrawerPanelContent() {
-  let obj = ref(4338);
-  const sum = GUILD_ITEM_INSET_LEFT + obj.useToken(panelTranslateX(576).modules.mobile.GUILD_BAR_ITEM_SIZE);
+  const sum = GUILD_ITEM_INSET_LEFT + ref(4338).useToken(panelTranslateX(576).modules.mobile.GUILD_BAR_ITEM_SIZE);
   const tmp5 = closure_11();
-  let obj1 = ref(16120);
-  const drawerOpen = obj1.useDrawerOpen();
-  let obj2 = ref(16115);
-  const doesLandOnHomeDrawer = obj2.useDoesLandOnHomeDrawer();
+  let obj = ref(4338);
+  const tmp = ref;
+  const drawerOpen = ref(16122).useDrawerOpen();
+  let obj2 = ref(16122);
+  const doesLandOnHomeDrawer = ref(16117).useDoesLandOnHomeDrawer();
   ref = isClientThemeOrCustomThemeActive.useRef(null);
-  let obj3 = ref(16115);
-  const homeDrawerState = obj3.useHomeDrawerState();
+  let obj3 = ref(16117);
+  const homeDrawerState = ref(16117).useHomeDrawerState();
   panelTranslateX = homeDrawerState.panelTranslateX;
   const tmp10 = HomeDrawerStore((maxX) => maxX.maxX);
   dependencyMap = tmp10;
-  let obj4 = ref(7977);
-  isClientThemeOrCustomThemeActive = obj4.useIsClientThemeOrCustomThemeActive();
+  let obj4 = ref(16117);
+  isClientThemeOrCustomThemeActive = ref(7977).useIsClientThemeOrCustomThemeActive();
+  const obj5 = ref(7977);
   const token = ref(4338).useToken(panelTranslateX(576).colors.BACKGROUND_BASE_LOWEST);
   const obj6 = ref(4338);
-  const tmp = ref;
   const token1 = ref(4338).useToken(panelTranslateX(576).colors.PANEL_BG);
   const obj7 = ref(4338);
   const fn = function n() {
@@ -67,7 +67,8 @@ function HomeDrawerPanelContent() {
     }
     obj = { backgroundColor: "transparent" };
   };
-  obj = {
+  const obj8 = ref(4373);
+  fn.__closure = {
     isGradientTheme: isClientThemeOrCustomThemeActive,
     maxX: tmp10,
     interpolateColor: ref(4373).interpolateColor,
@@ -75,46 +76,58 @@ function HomeDrawerPanelContent() {
     baseLowest: token,
     panelBg: token1,
   };
-  fn.__closure = obj;
   fn.__workletHash = 11992338029652;
   fn.__initData = __initData2;
-  const animatedStyle = ref(4373).useAnimatedStyle(fn);
+  const animatedStyle = obj8.useAnimatedStyle(fn);
   HomeDrawerStore = isClientThemeOrCustomThemeActive.useRef(false);
   let items = [drawerOpen];
   const effect = isClientThemeOrCustomThemeActive.useEffect(() => {
-    let obj = utils_PlatformUtils;
     if (obj.isIOS()) {
       if (ref.current) {
-        obj = { ref, delay: 100 };
-        const result = setAccessibilityFocus.setAccessibilityFocus(obj);
+        const obj2 = { ref, delay: 100 };
+        const result = setAccessibilityFocus.setAccessibilityFocus(obj2);
         const tmpResult = setAccessibilityFocus;
       } else {
         tmp3.current = true;
       }
     }
+    obj = utils_PlatformUtils;
   }, items);
-  const obj8 = ref(4373);
+  const obj9 = {
+    isGradientTheme: isClientThemeOrCustomThemeActive,
+    maxX: tmp10,
+    interpolateColor: ref(4373).interpolateColor,
+    panelTranslateX,
+    baseLowest: token,
+    panelBg: token1,
+  };
   const fn2 = function k() {
-    let obj = ReanimatedRexport;
     value = panelTranslateX.get();
     const items = [0, useHomeDrawerGesture.INITIAL_OPEN_WIDTH];
-    const interpolateResult = obj.interpolate(value, items, [1, 0], ReanimatedRexport.Extrapolation.CLAMP);
+    const interpolateResult = ReanimatedRexport.interpolate(
+      value,
+      items,
+      [1, 0],
+      ReanimatedRexport.Extrapolation.CLAMP,
+    );
     if (isClientThemeOrCustomThemeActive) {
-      obj = { backgroundColor: "transparent", opacity: interpolateResult };
+      const obj3 = { backgroundColor: "transparent", opacity: interpolateResult };
+      let obj4 = obj3;
     } else {
-      obj = { backgroundColor: null, opacity: null };
+      obj4 = { backgroundColor: null, opacity: null };
       const items1 = [0, closure_2];
       const items2 = [token, token1];
-      obj.backgroundColor = ReanimatedRexport.interpolateColor(panelTranslateX.get(), items1, items2);
-      obj.opacity = interpolateResult;
+      obj4.backgroundColor = ReanimatedRexport.interpolateColor(panelTranslateX.get(), items1, items2);
+      obj4.opacity = interpolateResult;
       const tmpResult = ReanimatedRexport;
     }
-    return obj;
+    return obj4;
   };
-  obj = {
+  const obj10 = ref(4373);
+  fn2.__closure = {
     interpolate: ref(4373).interpolate,
     panelTranslateX,
-    INITIAL_OPEN_WIDTH: ref(16115).INITIAL_OPEN_WIDTH,
+    INITIAL_OPEN_WIDTH: ref(16117).INITIAL_OPEN_WIDTH,
     Extrapolation: ref(4373).Extrapolation,
     isGradientTheme: isClientThemeOrCustomThemeActive,
     interpolateColor: ref(4373).interpolateColor,
@@ -122,55 +135,55 @@ function HomeDrawerPanelContent() {
     baseLowest: token,
     panelBg: token1,
   };
-  fn2.__closure = obj;
   fn2.__workletHash = 380238951470;
   fn2.__initData = __initData3;
-  const animatedStyle1 = ref(4373).useAnimatedStyle(fn2);
-  obj1 = { style: null, children: null };
+  const animatedStyle1 = obj10.useAnimatedStyle(fn2);
+  const obj12 = { style: null, children: null };
   let items1 = [tmp5.container, animatedStyle];
-  obj1.style = items1;
-  obj2 = { ref, style: null, children: null };
+  obj12.style = items1;
+  const obj13 = { ref, style: null, children: null };
   let items2 = [
     drawerOpen ? tmp5.guildsListContainerGestured : tmp5.guildLisetContainerDefault,
     homeDrawerState.guildsBarDrawerStyle,
   ];
-  obj2.style = items2;
-  const items3 = [closure_9(panelTranslateX(16378), { enableHome: true }), ,];
-  obj3 = { style: null, pointerEvents: "none", collapsable: false, children: null };
+  obj13.style = items2;
+  const items3 = [closure_9(panelTranslateX(16380), { enableHome: true }), ,];
+  const obj14 = { style: null, pointerEvents: "none", collapsable: false, children: null };
   const items4 = [tmp5.contentMask, { left: sum }, animatedStyle1];
-  obj3.style = items4;
+  obj14.style = items4;
   let tmp17Result = null;
   if (isClientThemeOrCustomThemeActive) {
-    obj4 = { offsetX: sum };
-    tmp17Result = closure_9(ContentMaskGradient, obj4);
+    const obj15 = { offsetX: sum };
+    tmp17Result = closure_9(ContentMaskGradient, obj15);
   }
-  obj3.children = tmp17Result;
-  items3[1] = closure_9(panelTranslateX(4373).View, obj3);
-  tmp17Result = null;
+  obj14.children = tmp17Result;
+  items3[1] = closure_9(panelTranslateX(4373).View, obj14);
+  let tmp17Result2 = null;
   if (doesLandOnHomeDrawer) {
-    tmp17Result = closure_9(tmp(12026).TTIFirstContentfulPaint, { label: "home_drawer", checkFocusedScreen: "guilds" });
+    tmp17Result2 = closure_9(tmp(12027).TTIFirstContentfulPaint, {
+      label: "home_drawer",
+      checkFocusedScreen: "guilds",
+    });
   }
-  items3[2] = tmp17Result;
-  obj2.children = items3;
-  obj1.children = closure_10(panelTranslateX(4373).View, obj2);
-  return closure_9(panelTranslateX(4373).View, obj1);
+  items3[2] = tmp17Result2;
+  obj13.children = items3;
+  obj12.children = closure_10(panelTranslateX(4373).View, obj13);
+  return closure_9(panelTranslateX(4373).View, obj12);
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const DM_WIDTH = fn(1074).DM_WIDTH;
-const GUILD_ITEM_INSET_LEFT = fn(16377).GUILD_ITEM_INSET_LEFT;
+const GUILD_ITEM_INSET_LEFT = fn(16379).GUILD_ITEM_INSET_LEFT;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
 const createStyles = fn(4636);
 let closure_11 = createStyles.createStyles((width) => {
-  let obj = {
+  const obj = {
     container: { flex: 1 },
     guildsListContainerGestured: { flex: 1 },
-    guildLisetContainerDefault: null,
+    guildLisetContainerDefault: { flex: 1, width },
     contentMask: { position: "absolute", top: 0, bottom: 0, right: 0, overflow: "hidden" },
   };
-  obj = { flex: 1, width };
-  obj.guildLisetContainerDefault = obj;
   return obj;
 });
 const __initData = {
@@ -187,14 +200,13 @@ let result = size.fileFinishedImporting("modules/main_tabs_v2/native/tabs/guilds
 
 export const HomePanelContent = noop.memo(() => {
   const tmp = closure_11(DM_WIDTH);
-  let obj = useHomeDrawerGesture;
   if (obj.useIsHomeDrawerEnabled()) {
     let tmp3Result = React7(HomeDrawerPanelContent, {});
   } else {
-    obj = { style: tmp.container, children: null };
-    obj = { style: tmp.guildLisetContainerDefault, children: React7(GuildsBarDefault, {}) };
-    obj.children = React7(hasOwnProperty, obj);
-    tmp3Result = React7(hasOwnProperty, obj);
+    const obj2 = { style: tmp.container, children: null };
+    const obj3 = { style: tmp.guildLisetContainerDefault, children: React7(GuildsBarDefault, {}) };
+    obj2.children = React7(hasOwnProperty, obj3);
+    tmp3Result = React7(hasOwnProperty, obj2);
   }
   return tmp3Result;
 });

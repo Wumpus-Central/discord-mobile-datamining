@@ -19,28 +19,27 @@ class InappropriateConversationWarningBanner {
     items[1] = warningId;
     items[2] = senderId;
     effect = closure_3.useEffect(() => {
-      const obj = {
+      const obj = SafetyWarningUtils;
+      obj.trackNamedViewEvent({
         channelId,
         warningId,
         senderId,
         warningType: SafetyWarningTypes.INAPPROPRIATE_CONVERSATION_TIER_2,
         viewName: SafetyWarningUtils.ViewNameTypes.SAFETY_WARNING_BANNER,
-      };
-      obj.trackNamedViewEvent(obj);
+      });
     }, items);
     items1 = [, ,];
     items1[0] = channelId;
     items1[1] = warningId;
     items1[2] = senderId;
     callback = closure_3.useCallback((cta) => {
-      const obj = {
+      SafetyWarningUtils.trackCtaEvent({
         channelId,
         warningId,
         senderId,
         warningType: SafetyWarningTypes.INAPPROPRIATE_CONVERSATION_TIER_2,
         cta,
-      };
-      obj.trackCtaEvent(obj);
+      });
     }, items1);
     closure_3 = callback;
     tmp3 = channelId;
@@ -70,7 +69,7 @@ class InappropriateConversationWarningBanner {
     items6[2] = senderId;
     items6[3] = callback;
     callback2 = closure_3.useCallback(() => {
-      let obj = {
+      actions_AlertActionCreatorsDefault.openLazy({
         importer() {
           return channelId(senderId[9])(senderId[8], senderId.paths).then((result) => {
             closure_0 = result.default;
@@ -81,17 +80,16 @@ class InappropriateConversationWarningBanner {
               obj.warningId = warningId;
               obj.warningType = closure_3_5.INAPPROPRIATE_CONVERSATION_TIER_2;
               obj.senderId = senderId;
-              obj.analyticsBlockContext = closure_3_0(11503).CtaEventTypes.USER_BANNER_BLOCK_CONFIRM;
+              obj.analyticsBlockContext = closure_3_0(11504).CtaEventTypes.USER_BANNER_BLOCK_CONFIRM;
               obj.analyticsBlockAndReportContext =
-                closure_3_0(11503).CtaEventTypes.USER_BANNER_BLOCK_AND_REPORT_CONFIRM;
-              obj.analyticsCancelContext = closure_3_0(11503).CtaEventTypes.USER_BANNER_BLOCK_CANCEL;
+                closure_3_0(11504).CtaEventTypes.USER_BANNER_BLOCK_AND_REPORT_CONFIRM;
+              obj.analyticsCancelContext = closure_3_0(11504).CtaEventTypes.USER_BANNER_BLOCK_CANCEL;
               obj.onDismiss = onDismiss;
               return closure_3_6(closure_0, obj);
             };
           });
         },
-      };
-      obj.openLazy(obj);
+      });
     }, items5);
     callback3 = closure_3.useCallback(() => {
       const result = SafetyToolsActionCreators.openSafetyToolsActionSheet(
@@ -103,7 +101,7 @@ class InappropriateConversationWarningBanner {
       callback(SafetyWarningUtils.CtaEventTypes.USER_BANNER_OPEN_SAFETY_TOOLS);
     }, items6);
     tmp9 = jsx;
-    obj = {
+    obj1 = {
       channelId,
       warningId,
       senderId,
@@ -115,32 +113,32 @@ class InappropriateConversationWarningBanner {
     };
     tmp10 = warningId(senderId[11]);
     intl = channelId(senderId[12]).intl;
-    obj.header = intl.string(channelId(senderId[12]).t.ZzlB5p);
+    obj1.header = intl.string(channelId(senderId[12]).t.ZzlB5p);
     intl2 = channelId(senderId[12]).intl;
-    obj.description = intl2.string(channelId(senderId[12]).t["D1aU+h"]);
-    obj.onDismiss = callback1;
-    obj1 = { text: null, variant: "primary", onpress: null };
+    obj1.description = intl2.string(channelId(senderId[12]).t["D1aU+h"]);
+    obj1.onDismiss = callback1;
+    obj5 = { text: null, variant: "primary", onpress: null };
     intl3 = channelId(senderId[12]).intl;
-    obj1.text = intl3.string(channelId(senderId[12]).t.Qyu4UK);
-    obj1.onpress = callback3;
+    obj5.text = intl3.string(channelId(senderId[12]).t.Qyu4UK);
+    obj5.onpress = callback3;
     items7 = [];
-    items7[0] = obj1;
+    items7[0] = obj5;
     if (stateFromStores) {
       items8 = [];
     } else {
-      obj2 = { text: null, variant: "secondary", onpress: null };
+      obj6 = { text: null, variant: "secondary", onpress: null };
       intl4 = tmp3(tmp4[12]).intl;
-      obj2.text = intl4.string(tmp3(tmp4[12]).t["7q0bNY"]);
-      obj2.onpress = callback2;
+      obj6.text = intl4.string(tmp3(tmp4[12]).t["7q0bNY"]);
+      obj6.onpress = callback2;
       items8 = [];
-      items8[0] = obj2;
+      items8[0] = obj6;
     }
     arraySpreadResult = HermesBuiltin.arraySpread(items8, 1);
-    obj.buttons = items7;
-    return tmp9(tmp10, obj);
+    obj1.buttons = items7;
+    return tmp9(tmp10, obj1);
   }
 }
-const SafetyWarningTypes = fn(11046).SafetyWarningTypes;
+const SafetyWarningTypes = fn(11047).SafetyWarningTypes;
 const jsx = fn(21).jsx;
 const size = fn(2);
 let result = size.fileFinishedImporting(

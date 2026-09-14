@@ -4,6 +4,8 @@ import GuildMemberStore from "../../stores/GuildMemberStore.tsx";
 import GuildStore from "../../stores/GuildStore.tsx";
 import UserStore from "../../stores/UserStore.tsx";
 
+const require = globalThis.__r;
+
 require = fn;
 const GuildTagConstants = fn(8048);
 ({
@@ -53,27 +55,26 @@ export const getUserPrimaryGuild = function getUserPrimaryGuild(primaryGuild) {
 export const useUserPrimaryGuild = function useUserPrimaryGuild(arg0) {
   let tmp = arg0;
   _require = arg0;
-  let obj = require("initialize");
   const items = [GuildStore];
   const items1 = [arg0];
-  const stateFromStores = obj.useStateFromStores(items, () => GuildStore.getGuild(closure_0), items1);
+  const stateFromStores = require("initialize").useStateFromStores(items, () => GuildStore.getGuild(closure_0), items1);
   if (null != arg0) {
     let tmp3 = stateFromStores;
     if (null != stateFromStores) {
-      obj = { identityGuildId: null, identityEnabled: true, tag: null, badge: null };
+      const obj3 = { identityGuildId: null, identityEnabled: true, tag: null, badge: null };
       ({ id: obj2.identityGuildId, profile } = stateFromStores);
       let tag;
       if (profile != null) {
         tag = profile.tag;
       }
-      obj.tag = tag;
+      obj3.tag = tag;
       const profile2 = stateFromStores.profile;
       let badge;
       if (profile2 != null) {
         badge = profile2.badge;
       }
-      obj.badge = badge;
-      tmp3 = obj;
+      obj3.badge = badge;
+      tmp3 = obj3;
     }
     tmp = tmp3;
   }
@@ -83,10 +84,10 @@ export const useShouldDisplayGuildTag = function useShouldDisplayGuildTag(arg0, 
   _require = arg0;
   dependencyMap = arg1;
   let tmp = arg2;
-  let obj = require("initialize");
   const items = [UserStore];
   const items1 = [arg0];
-  const stateFromStores = obj.useStateFromStores(items, () => UserStore.getUser(closure_0), items1);
+  const stateFromStores = require("initialize").useStateFromStores(items, () => UserStore.getUser(closure_0), items1);
+  const obj = require("initialize");
   const items2 = [GuildMemberStore];
   const items3 = [arg1, arg0];
   const stateFromStores1 = require("initialize").useStateFromStores(
@@ -111,14 +112,15 @@ export const useShouldDisplayGuildTag = function useShouldDisplayGuildTag(arg0, 
   }
   if (null != tmp) {
     if (tmp.identityEnabled) {
-      obj = { guildId: null, tag: null, badge: null };
       ({ identityGuildId: obj4.guildId, tag: obj4.tag, badge: obj4.badge } = tmp);
+      let obj6 = { guildId: null, tag: null, badge: null };
+      const obj3 = { guildId: null, tag: null, badge: null };
     }
-    return null != obj.guildId && null != obj.tag && !stateFromStores1;
+    return null != obj6.guildId && null != obj6.tag && !stateFromStores1;
   }
-  obj = {};
+  obj6 = {};
 };
-export const shouldDisplayGuildTag = function shouldDisplayGuildTag(id, guildId, arg2) {
+export const shouldDisplayGuildTag = function shouldDisplayGuildTag(id, guildId1, arg2) {
   let tmp = arg2;
   const user = UserStore.getUser(id);
   if (undefined === arg2) {
@@ -130,14 +132,15 @@ export const shouldDisplayGuildTag = function shouldDisplayGuildTag(id, guildId,
   }
   if (null != tmp) {
     if (tmp.identityEnabled) {
-      let obj = { guildId: null, tag: null, badge: null };
       ({ identityGuildId: obj2.guildId, tag: obj2.tag, badge: obj2.badge } = tmp);
+      let obj = { guildId: null, tag: null, badge: null };
+      const obj4 = { guildId: null, tag: null, badge: null };
     }
     let tmp5 = null != obj.guildId && null != obj.tag;
     if (tmp5) {
-      let result = null != guildId && null != id;
+      let result = null != guildId1 && null != id;
       if (result) {
-        result = AutomodPermissionUtils.hasAutomodQuarantinedProfile(GuildMemberStore.getMember(guildId, id));
+        result = AutomodPermissionUtils.hasAutomodQuarantinedProfile(GuildMemberStore.getMember(guildId1, id));
       }
       tmp5 = !result;
     }

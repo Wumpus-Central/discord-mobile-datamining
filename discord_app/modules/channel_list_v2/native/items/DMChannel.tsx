@@ -13,10 +13,19 @@ require = fn;
 const UnreadSetting = fn(4818).UnreadSetting;
 const jsx = fn(21).jsx;
 const createStyles = fn(4636);
-let obj = { container: null };
-obj = { marginVertical: fn(10246).CHANNEL_MARGIN_VERTICAL, marginHorizontal: 8, borderRadius: nativeDefault.radii.md };
-obj.container = obj;
+let obj = {
+  container: {
+    marginVertical: fn(10246).CHANNEL_MARGIN_VERTICAL,
+    marginHorizontal: 8,
+    borderRadius: nativeDefault.radii.md,
+  },
+};
 let closure_8 = createStyles.createStyles(obj);
+let obj3 = {
+  marginVertical: fn(10246).CHANNEL_MARGIN_VERTICAL,
+  marginHorizontal: 8,
+  borderRadius: nativeDefault.radii.md,
+};
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/channel_list_v2/native/items/DMChannel.tsx");
 
@@ -31,10 +40,10 @@ export default noop.memo((channel) => {
   const callback1 = noop.useCallback(() => {
     transitionToChannel.transitionToChannel(channel.id);
   }, items1);
-  let obj = channel(504);
+  const tmp = closure_8();
   const items2 = [ReadStateStore];
   const items3 = [channel.id];
-  const stateFromStoresObject = obj.useStateFromStoresObject(
+  const stateFromStoresObject = channel(504).useStateFromStoresObject(
     items2,
     () => ({
       hasUnread: ReadStateStore.hasUnread(channel.id),
@@ -43,7 +52,7 @@ export default noop.memo((channel) => {
     items3,
   );
   ({ hasUnread, mentionCount } = stateFromStoresObject);
-  const tmp = closure_8();
+  const obj = channel(504);
   const items4 = [UserGuildSettingsStore];
   const items5 = [channel];
   const stateFromStores = channel(504).useStateFromStores(
@@ -53,7 +62,7 @@ export default noop.memo((channel) => {
   );
   const obj2 = channel(504);
   ({ isIncomingCall, isOngoingCall } = useCallA11yStateDefault(channel.id));
-  obj = {
+  const obj3 = {
     onPress: callback1,
     onLongPress: callback,
     style: tmp.container,
@@ -69,20 +78,20 @@ export default noop.memo((channel) => {
     muted: null,
   };
   const tmp6 = useCallA11yStateDefault(channel.id);
-  obj.accessibilityLabel = getChannelA11yLabelDefault({
+  obj3.accessibilityLabel = getChannelA11yLabelDefault({
     channel,
     unread: hasUnread,
     mentionCount,
     isIncomingCall,
     isOngoingCall,
   });
-  obj.accessibilityState = { selected };
-  obj.channel = channel;
-  obj.selected = selected;
-  obj.unread = hasUnread;
-  obj.resolvedUnreadSetting = UnreadSetting.ALL_MESSAGES;
-  obj.mentionCount = mentionCount;
-  obj.muted = stateFromStores;
+  obj3.accessibilityState = { selected };
+  obj3.channel = channel;
+  obj3.selected = selected;
+  obj3.unread = hasUnread;
+  obj3.resolvedUnreadSetting = UnreadSetting.ALL_MESSAGES;
+  obj3.mentionCount = mentionCount;
+  obj3.muted = stateFromStores;
   return jsx(ChannelItemDefault, {
     onPress: callback1,
     onLongPress: callback,

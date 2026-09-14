@@ -15,10 +15,9 @@ export default noop.memo(function ChatInputImageCarousel(canUpload) {
   const channelId = canUpload.channelId;
   let tmp = closure_6(canUpload.screenIndex);
   dependencyMap = tmp;
-  let obj = canUpload(504);
   const items = [UploadAttachmentStore, ApplicationCommandStore];
   const items1 = [channelId, canUpload, tmp];
-  const stateFromStores = obj.useStateFromStores(
+  const stateFromStores = canUpload(504).useStateFromStores(
     items,
     () => {
       let tmp = null;
@@ -38,8 +37,8 @@ export default noop.memo(function ChatInputImageCarousel(canUpload) {
   );
   let tmp4 = null;
   if (null != stateFromStores) {
-    obj = { attachments: stateFromStores, channelId };
-    tmp4 = jsx(channelId(10759), { attachments: stateFromStores, channelId });
+    const obj2 = { attachments: stateFromStores, channelId };
+    tmp4 = jsx(channelId(10760), { attachments: stateFromStores, channelId });
   }
   return tmp4;
 });

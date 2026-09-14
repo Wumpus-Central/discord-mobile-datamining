@@ -15,16 +15,20 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-fn(4636);
-let createStyles = { modal: null, headerLeftContainer: null, headerRightContainer: null, container: null };
-createStyles = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
-createStyles.modal = createStyles;
-createStyles.headerLeftContainer = { paddingLeft: nativeDefault.space.PX_16 };
-let obj1 = { paddingLeft: nativeDefault.space.PX_16 };
-createStyles.headerRightContainer = { paddingRight: nativeDefault.space.PX_16 };
-let obj2 = { paddingRight: nativeDefault.space.PX_16 };
-createStyles.container = { paddingHorizontal: nativeDefault.space.PX_16, paddingTop: nativeDefault.space.PX_24 };
-let closure_10 = createStyles.createStyles(createStyles);
+const createStyles = fn(4636);
+let obj2 = {
+  modal: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER },
+  headerLeftContainer: null,
+  headerRightContainer: null,
+  container: null,
+};
+let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
+obj2.headerLeftContainer = { paddingLeft: nativeDefault.space.PX_16 };
+let obj4 = { paddingLeft: nativeDefault.space.PX_16 };
+obj2.headerRightContainer = { paddingRight: nativeDefault.space.PX_16 };
+let obj5 = { paddingRight: nativeDefault.space.PX_16 };
+obj2.container = { paddingHorizontal: nativeDefault.space.PX_16, paddingTop: nativeDefault.space.PX_24 };
+let closure_10 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/scheduled_messages/native/ScheduledMessageEditContentModal.tsx");
 
@@ -35,9 +39,11 @@ export default function ScheduledMessageEditContentModal(scheduledMessage) {
   noop = undefined;
   const tmp = closure_10();
   const channelId = scheduledMessage.createArgs.channelId;
-  let obj = scheduledMessage(stateFromStores[10]);
+  const tmp4 = channelId(stateFromStores[9])();
   const items = [ChannelStore];
-  stateFromStores = obj.useStateFromStores(items, () => ChannelStore.getChannel(channelId));
+  stateFromStores = scheduledMessage(stateFromStores[10]).useStateFromStores(items, () =>
+    ChannelStore.getChannel(channelId),
+  );
   const tmp7 = _slicedToArray(
     noop.useState(() => {
       const obj = MessageParserDefault;
@@ -59,8 +65,8 @@ export default function ScheduledMessageEditContentModal(scheduledMessage) {
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
-          let obj = { value, done: true };
-          return obj;
+          const obj2 = { value, done: true };
+          return obj2;
         } else {
           return { value: "HermesInternal", done: null };
         }
@@ -73,33 +79,33 @@ export default function ScheduledMessageEditContentModal(scheduledMessage) {
               throw value;
             } else if (arg0 === 2) {
               dependencyMap = 3;
-              obj = { value, done: true };
-              return obj;
+              const obj3 = { value, done: true };
+              return obj3;
             } else {
               const obj5 = v1(7784);
-              const obj1 = {
+              const obj4 = {
                 content: obj5.parse(stateFromStores, first).content,
                 flags: scheduledMessage.createArgs.flags,
               };
               v1 = 1;
               dependencyMap = 1;
-              const obj2 = {
-                value: tmp4(12340).editScheduledMessage(scheduledMessage.scheduledMessageId, obj1),
+              const obj7 = {
+                value: tmp4(12341).editScheduledMessage(scheduledMessage.scheduledMessageId, obj4),
                 done: false,
               };
-              return obj2;
+              return obj7;
             }
           } else if (arg0 === 1) {
             dependencyMap = 3;
             throw value;
           } else if (arg0 === 2) {
             dependencyMap = 3;
-            obj = { value, done: true };
+            const obj = { value, done: true };
             return obj;
           } else {
             if (value) {
-              let arr = v1(4839);
-              arr = arr.pop();
+              v1(4839).pop();
+              const arr = v1(4839);
             }
             dependencyMap = 3;
             return { value: "HermesInternal", done: null };
@@ -115,8 +121,8 @@ export default function ScheduledMessageEditContentModal(scheduledMessage) {
   let intl = scheduledMessage(stateFromStores[15]).intl;
   const stringResult = intl.string(scheduledMessage(stateFromStores[15]).t.ZXE1s4);
   noop = stringResult;
-  obj = { style: tmp.modal, children: null };
-  obj = {
+  let obj2 = { style: tmp.modal, children: null };
+  let obj5 = {
     title: stringResult,
     headerTitle() {
       return React6(HeaderShared.GenericHeaderTitle, { title });
@@ -128,24 +134,24 @@ export default function ScheduledMessageEditContentModal(scheduledMessage) {
     headerRightContainerStyle: null,
     headerRight: null,
   };
-  const tmp4 = channelId(stateFromStores[9])();
+  let obj = scheduledMessage(stateFromStores[10]);
   let num = 0;
   if (!obj4.isIOS()) {
     num = channelId(stateFromStores[8])().top;
   }
-  obj.headerStatusBarHeight = num + channelId(stateFromStores[7]).space.PX_8;
+  obj5.headerStatusBarHeight = num + channelId(stateFromStores[7]).space.PX_8;
   obj4 = scheduledMessage(stateFromStores[18]);
-  obj.headerLeft = scheduledMessage(stateFromStores[19]).getHeaderCloseButton(channelId(stateFromStores[14]).pop);
+  obj5.headerLeft = scheduledMessage(stateFromStores[19]).getHeaderCloseButton(channelId(stateFromStores[14]).pop);
   ({ headerLeftContainer: obj3.headerLeftContainerStyle, headerRightContainer: obj3.headerRightContainerStyle } = tmp);
-  obj.headerRight = function headerRight() {
-    let obj = { accessibilityRole: "button", onPress, children: null };
-    obj = { variant: "text-md/semibold", color: "control-brand-foreground", children: null };
+  obj5.headerRight = function headerRight() {
+    const obj = { accessibilityRole: "button", onPress, children: null };
+    const obj2 = { variant: "text-md/semibold", color: "control-brand-foreground", children: null };
     const intl = util.intl;
-    obj.children = intl.string(util.t["R3BPH+"]);
-    obj.children = React6(Text_Text.Text, obj);
+    obj2.children = intl.string(util.t["R3BPH+"]);
+    obj.children = React6(Text_Text.Text, obj2);
     return React6(Pressables.PressableOpacity, obj);
   };
-  const items2 = [closure_8(scheduledMessage(stateFromStores[16]).Header, obj)];
+  const items2 = [closure_8(scheduledMessage(stateFromStores[16]).Header, obj5)];
   const tmp5Result = scheduledMessage(stateFromStores[19]);
   items2[1] = closure_8(View, {
     style: tmp.container,
@@ -157,6 +163,6 @@ export default function ScheduledMessageEditContentModal(scheduledMessage) {
       autoFocus: true,
     }),
   });
-  obj.children = items2;
-  return closure_9(View, obj);
+  obj2.children = items2;
+  return closure_9(View, obj2);
 }

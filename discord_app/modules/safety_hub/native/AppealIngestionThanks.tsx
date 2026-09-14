@@ -14,22 +14,23 @@ const result = size.fileFinishedImporting("modules/safety_hub/native/AppealInges
 
 export default function AppealIngestionThanks() {
   const tmp = closure_4();
-  let obj = { children: null };
-  obj = { style: tmp.container, children: null };
-  obj = { bottom: true, style: tmp.container, children: jsx(native.LegacyText, { children: "TODO - Thanks" }) };
-  obj.children = jsx(common_SafeAreaView.SafeAreaPaddingView, {
-    bottom: true,
+  const obj = { children: null };
+  const obj2 = {
     style: tmp.container,
-    children: jsx(native.LegacyText, { children: "TODO - Thanks" }),
-  });
+    children: jsx(common_SafeAreaView.SafeAreaPaddingView, {
+      bottom: true,
+      style: tmp.container,
+      children: jsx(native.LegacyText, { children: "TODO - Thanks" }),
+    }),
+  };
   obj.children = (
-    <View bottom style={tmp.container}>
-      {jsx(native.LegacyText, { children: "TODO - Thanks" })}
+    <View style={tmp.container}>
+      {jsx(common_SafeAreaView.SafeAreaPaddingView, {
+        bottom: true,
+        style: tmp.container,
+        children: jsx(native.LegacyText, { children: "TODO - Thanks" }),
+      })}
     </View>
   );
-  return jsx(AppealIngestionModal.AppealIngestionModalScreen, {
-    bottom: true,
-    style: tmp.container,
-    children: jsx(native.LegacyText, { children: "TODO - Thanks" }),
-  });
+  return jsx(AppealIngestionModal.AppealIngestionModalScreen, { children: null });
 }

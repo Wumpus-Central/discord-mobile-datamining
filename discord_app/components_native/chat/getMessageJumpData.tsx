@@ -44,7 +44,7 @@ export default function getMessageJumpData(messages, isAtBottom, messages2) {
           if (null != currentUser) {
             if (lastResult.author.id === currentUser.id) {
               if (null != lastResult1) {
-                let obj = SnowflakeUtilsDefault;
+                SnowflakeUtilsDefault;
               }
               let id = lastResult.id;
               let flag = false;
@@ -58,7 +58,7 @@ export default function getMessageJumpData(messages, isAtBottom, messages2) {
               }
             }
           }
-          obj = {
+          const obj2 = {
             scrollToMessageId: id,
             jumpTargetId: tmp13,
             jumpType: tmp12,
@@ -71,9 +71,9 @@ export default function getMessageJumpData(messages, isAtBottom, messages2) {
           if (tmp8) {
             tmp18 = focusTargetId;
           }
-          obj.focusTargetId = tmp18;
-          obj.shouldInitialScroll = tmp6;
-          return obj;
+          obj2.focusTargetId = tmp18;
+          obj2.shouldInitialScroll = tmp6;
+          return obj2;
         }
       }
     }
@@ -114,7 +114,7 @@ export const useMessageJumpAndroidKeyboardHeight = function useMessageJumpAndroi
     const tmpResult = useSystemKeyboardHeight;
   }
   obj2 = PlatformUtils;
-  [tmp4, require] = _slicedToArray(noop.useState(num), 2);
+  [tmp4, require] = noop.useState(num);
   const effect = noop.useEffect(
     () =>
       subscribeToKeyboardUIStore((keyboardHeight) => {

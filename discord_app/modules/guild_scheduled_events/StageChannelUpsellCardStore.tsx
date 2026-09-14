@@ -3,8 +3,10 @@ import Storage2 from "../../../discord_common/js/packages/storage/Storage.tsx";
 import ReactBatchUpdates from "../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
 import GuildScheduledEventsConstants from "GuildScheduledEventsConstants.tsx";
 import _mod4259 from "../../../_runtime/metro/04259__.js";
-import identity from "../../../_runtime/metro/01244__.js";
+import identity from "../../../_runtime/metro/01242__.js";
 import size from "../../../_runtime/metro/00002__.js";
+
+const require = globalThis.__r;
 
 let closure_2 = GuildScheduledEventsConstants.GUILD_EVENT_STAGE_UPSELL_CARD_KEY;
 let closure_3 = identity.createWithEqualityFn((arg0) => {

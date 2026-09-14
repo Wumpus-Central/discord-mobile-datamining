@@ -5,7 +5,6 @@ import UserSettings from "../../user_settings/UserSettings.tsx";
 import FavoritesUtils from "../FavoritesUtils.tsx";
 import _modDef3236 from "../intl/FavoritesGuild.messages.js";
 import FavoritesActionCreators from "../FavoritesActionCreators.tsx";
-import FavoritesHooks from "../FavoritesHooks.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 import SelectedGuildStore from "../../../stores/SelectedGuildStore.tsx";
 
@@ -17,24 +16,23 @@ const result = size.fileFinishedImporting("modules/favorites/hooks/useFavoritesG
 export default function useFavoritesGuildResetAction() {
   const DeveloperMode = UserSettings.DeveloperMode;
   let hasAccess = DeveloperMode.useSetting();
-  let obj = FavoritesHooks;
   const callback = noop.useCallback(() => {
     if (obj.isFavoritesGuildId(guildId.getGuildId())) {
-      let tmpResult = router_utils;
-      tmpResult.transitionTo(constants.ME);
+      router_utils.transitionTo(constants.ME);
+      const tmpResult = router_utils;
     }
-    tmpResult = FavoritesActionCreators;
-    tmpResult.resetFavoritesGuild();
     obj = FavoritesUtils;
+    FavoritesActionCreators.resetFavoritesGuild();
+    const tmpResult2 = FavoritesActionCreators;
   }, []);
   if (hasAccess) {
     hasAccess = obj.useFavoritesAccess().hasAccess;
   }
-  obj = { isAvailable: hasAccess, label: null, subLabel: null, perform: null };
+  const obj2 = { isAvailable: hasAccess, label: null, subLabel: null, perform: null };
   const intl = util.intl;
-  obj.label = intl.string(_modDef3236.YkET6R);
+  obj2.label = intl.string(_modDef3236.YkET6R);
   const intl2 = util.intl;
-  obj.subLabel = intl2.string(_modDef3236.ZzcwNk);
-  obj.perform = callback;
-  return obj;
+  obj2.subLabel = intl2.string(_modDef3236.ZzcwNk);
+  obj2.perform = callback;
+  return obj2;
 }

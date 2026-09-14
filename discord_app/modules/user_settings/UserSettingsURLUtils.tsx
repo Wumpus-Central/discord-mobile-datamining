@@ -19,11 +19,11 @@ export const settingsPathToRoute = function settingsPathToRoute(ACCOUNT) {
 export const trackParseSettingsUrl = function trackParseSettingsUrl(path, user_settings_url_origin) {
   path = path.path;
   if (null != path.target) {
-    let obj = { user_settings_url_path: path, user_settings_url_origin };
-    AnalyticsUtilsDefault.track(constants.USER_SETTINGS_URL_PARSED, obj);
+    const obj2 = { user_settings_url_path: path, user_settings_url_origin };
+    AnalyticsUtilsDefault.track(constants.USER_SETTINGS_URL_PARSED, obj2);
   } else {
-    obj = { user_settings_url_origin, user_settings_url_path: path };
-    obj.track(constants.USER_SETTINGS_URL_PARSING_FAILED, obj);
+    const obj4 = { user_settings_url_origin, user_settings_url_path: path };
+    AnalyticsUtilsDefault.track(constants.USER_SETTINGS_URL_PARSING_FAILED, obj4);
   }
 };
 export const parseSettingsUrl = function parseSettingsUrl(arg0) {
@@ -43,7 +43,7 @@ export const parseSettingsUrl = function parseSettingsUrl(arg0) {
   items[1] = str4;
   const found = items.filter(Boolean);
   const joined = found.join("/");
-  let obj = {
+  const obj = {
     [closure_1_4.ACCOUNT]: UserSettingsKeys.WebUserSettings.ACCOUNT_PANEL,
     [ACCOUNT_STANDING]: UserSettingsKeys.WebUserSettings.ACCOUNT_STANDING_CATEGORY,
     [ACCOUNT_ACCOUNT_STANDING]: UserSettingsKeys.WebUserSettings.ACCOUNT_STANDING_CATEGORY,
@@ -126,26 +126,26 @@ export const parseSettingsUrl = function parseSettingsUrl(arg0) {
     EXPERIMENTS,
     DEVELOPER_OPTIONS,
   } = UserSettingsPath);
-  let values = Object.values(UserSettingsPath);
+  const values = Object.values(UserSettingsPath);
   let tmp8;
   if (values.includes(joined)) {
     tmp8 = obj[joined];
   }
   if (tmp8 == null) {
     const _Object = Object;
-    values = Object.values(UserSettingsPath);
+    const values2 = Object.values(UserSettingsPath);
     let tmp9;
-    if (values.includes(str5)) {
+    if (values2.includes(str5)) {
       tmp9 = obj[str5];
     }
     tmp8 = tmp9;
   }
-  obj = { target: tmp8, path: joined, params: null };
+  const obj2 = { target: tmp8, path: joined, params: null };
   const str = path.split("?")[0];
   if (search == null) {
     const _location = location;
     search = location.search;
   }
-  obj.params = keysSorter.parse(search);
-  return obj;
+  obj2.params = keysSorter.parse(search);
+  return obj2;
 };

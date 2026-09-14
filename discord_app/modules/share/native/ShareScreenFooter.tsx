@@ -16,24 +16,23 @@ export default function ShareScreenFooter(arg0) {
   if (disabled === undefined) {
     disabled = false;
   }
-  let obj = useShareChatInputActions;
-  const shareChatInputActions = obj.useShareChatInputActions(setText, undefined, appEntryKey);
+  const shareChatInputActions = useShareChatInputActions.useShareChatInputActions(setText, undefined, appEntryKey);
   ({ textInputRef, isInputFocused, handleSelectionChange, handleMessageFocus, handleMessageBlur, handlePressEmoji } =
     shareChatInputActions);
-  obj = { preview, sendButton: null, chatInput: null, avoidKeyboard: null };
-  obj = { variant: "primary", size: "md", text: sendLabel, disabled: null, onPress: null, loading: null };
+  const obj2 = { preview, sendButton: null, chatInput: null, avoidKeyboard: null };
+  const obj3 = { variant: "primary", size: "md", text: sendLabel, disabled: null, onPress: null, loading: null };
   let tmp6 = !canSend;
   if (canSend) {
     tmp6 = disabled;
   }
-  obj.disabled = tmp6;
+  obj3.disabled = tmp6;
   let tmp7;
   if (!isSending) {
     tmp7 = onSend;
   }
-  obj.onPress = tmp7;
-  obj.loading = isSending;
-  obj.sendButton = jsx(components_Button_Button.Button, {
+  obj3.onPress = tmp7;
+  obj3.loading = isSending;
+  obj2.sendButton = jsx(components_Button_Button.Button, {
     variant: "primary",
     size: "md",
     text: sendLabel,
@@ -41,7 +40,7 @@ export default function ShareScreenFooter(arg0) {
     onPress: null,
     loading: null,
   });
-  obj.chatInput = jsx(ShareChatInputDefault, {
+  obj2.chatInput = jsx(ShareChatInputDefault, {
     inputRef: textInputRef,
     text,
     onChange: setText,
@@ -52,13 +51,6 @@ export default function ShareScreenFooter(arg0) {
     onSend,
     disabled,
   });
-  obj.avoidKeyboard = isInputFocused;
-  return jsx(ShareFooterLayoutDefault, {
-    variant: "primary",
-    size: "md",
-    text: sendLabel,
-    disabled: null,
-    onPress: null,
-    loading: null,
-  });
+  obj2.avoidKeyboard = isInputFocused;
+  return jsx(ShareFooterLayoutDefault, { preview, sendButton: null, chatInput: null, avoidKeyboard: null });
 }

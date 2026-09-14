@@ -14,14 +14,18 @@ export const onFriendOnlineNotificationSettingsChanged = function onFriendOnline
 ) {
   const EnableFriendOnlineNotifications = UserSettings.EnableFriendOnlineNotifications;
   EnableFriendOnlineNotifications.updateSetting(friend_online_notifications);
-  const obj = { update_type: constants.ACCOUNT, friend_online_notifications };
-  obj.track(AnalyticEvents.NOTIFICATION_SETTINGS_UPDATED, obj);
+  AnalyticsUtilsDefault.track(AnalyticEvents.NOTIFICATION_SETTINGS_UPDATED, {
+    update_type: constants.ACCOUNT,
+    friend_online_notifications,
+  });
 };
 export const onNotifyFriendsOnComeOnlineSettingsChanged = function onNotifyFriendsOnComeOnlineSettingsChanged(
   notify_friends_on_come_online,
 ) {
   const NotifyFriendsOnComeOnline = UserSettings.NotifyFriendsOnComeOnline;
   NotifyFriendsOnComeOnline.updateSetting(notify_friends_on_come_online);
-  const obj = { update_type: constants.ACCOUNT, notify_friends_on_come_online };
-  obj.track(AnalyticEvents.NOTIFICATION_SETTINGS_UPDATED, obj);
+  AnalyticsUtilsDefault.track(AnalyticEvents.NOTIFICATION_SETTINGS_UPDATED, {
+    update_type: constants.ACCOUNT,
+    notify_friends_on_come_online,
+  });
 };

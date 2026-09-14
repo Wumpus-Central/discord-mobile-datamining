@@ -10,13 +10,13 @@ const View = fn(17).View;
 const RowType = fn(8519).RowType;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-fn(4636);
-let createStyles = { addMembersContainer: null, moderatorDescriptionContainer: null, errorMessage: null };
-createStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 };
-createStyles.addMembersContainer = createStyles;
-createStyles.moderatorDescriptionContainer = { margin: 16 };
-createStyles.errorMessage = { margin: 16, marginBottom: 0 };
-let closure_10 = createStyles.createStyles(createStyles);
+const createStyles = fn(4636);
+let obj2 = {
+  addMembersContainer: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 },
+  moderatorDescriptionContainer: { margin: 16 },
+  errorMessage: { margin: 16, marginBottom: 0 },
+};
+let closure_10 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/stage_channels/native/create_channel/AddModerators.tsx");
 
@@ -28,8 +28,7 @@ export default function AddModerators(guildId) {
   let first;
   let onPress;
   const tmp3 = closure_10();
-  let obj = guildId(navigation[8]);
-  navigation = obj.useNavigation();
+  navigation = guildId(navigation[8]).useNavigation();
   const guild = onPress.getGuild(guildId);
   merged(navigation[9])(null != guild, "Guild must not be null");
   const tmp10 = first(merged(navigation[10])(guildId.onChannelCreated), 3);
@@ -91,33 +90,35 @@ export default function AddModerators(guildId) {
         : () => React6(HeaderActionButton.HeaderActionButton, { text: stringResult, onPress }),
     };
   }, items1);
-  obj = { style: tmp3.addMembersContainer, children: null };
-  obj = { style: tmp3.moderatorDescriptionContainer, children: null };
-  const obj1 = { variant: "text-sm/medium", color: "text-default", children: null };
+  let obj2 = { style: tmp3.addMembersContainer, children: null };
+  const obj3 = { style: tmp3.moderatorDescriptionContainer, children: null };
+  const obj4 = { variant: "text-sm/medium", color: "text-default", children: null };
   let intl = guildId(navigation[13]).intl;
-  obj1.children = intl.string(guildId(navigation[13]).t.f7VbhF);
-  obj.children = closure_8(guildId(navigation[16]).Text, obj1);
-  const items2 = [closure_8(first1, obj), ,];
+  obj4.children = intl.string(guildId(navigation[13]).t.f7VbhF);
+  obj3.children = closure_8(guildId(navigation[16]).Text, obj4);
+  const items2 = [closure_8(first1, obj3), ,];
   if (null != tmp10[1].message) {
-    let obj2 = { style: tmp3.errorMessage, children: null };
-    const obj3 = { messageType: tmp4(tmp5[17]).HelpMessageTypes.ERROR, children: tmp12.message };
-    obj2.children = closure_8(tmp4(tmp5[17]).HelpMessage, obj3);
-    tmp = closure_8(tmp19, obj2);
+    const obj5 = { style: tmp3.errorMessage, children: null };
+    const obj6 = { messageType: tmp4(tmp5[17]).HelpMessageTypes.ERROR, children: tmp12.message };
+    obj5.children = closure_8(tmp4(tmp5[17]).HelpMessage, obj6);
+    tmp = closure_8(tmp19, obj5);
   }
   items2[1] = tmp;
-  const obj4 = {
+  const obj7 = {
     channel: null,
     guild,
-    permission: guildId(navigation[19]).MODERATE_STAGE_CHANNEL_PERMISSIONS,
+    permission: null,
     inputDesc: null,
     pendingAdditions: null,
     setPendingAdditions: null,
   };
+  let obj = guildId(navigation[8]);
+  obj7.permission = guildId(navigation[19]).MODERATE_STAGE_CHANNEL_PERMISSIONS;
   let intl2 = tmp4(tmp5[13]).intl;
-  obj4.inputDesc = intl2.string(guildId(navigation[13]).t["Ch6+n4"]);
-  obj4.pendingAdditions = first1;
-  obj4.setPendingAdditions = tmp14[1];
-  items2[2] = closure_8(merged(navigation[18]), obj4);
-  obj.children = items2;
-  return closure_9(first1, obj);
+  obj7.inputDesc = intl2.string(guildId(navigation[13]).t["Ch6+n4"]);
+  obj7.pendingAdditions = first1;
+  obj7.setPendingAdditions = tmp14[1];
+  items2[2] = closure_8(merged(navigation[18]), obj7);
+  obj2.children = items2;
+  return closure_9(first1, obj2);
 }

@@ -12,45 +12,49 @@ const result = size.fileFinishedImporting("modules/hub/native/components/progres
 
 export default function HubSidebarProgressOverview(guild) {
   guild = guild.guild;
-  let obj = guild(12798);
-  const hubProgressBarCompletedSteps = obj.useHubProgressBarCompletedSteps(guild);
-  const nextHubProgressStep = guild(12798).getNextHubProgressStep(hubProgressBarCompletedSteps);
+  const hubProgressBarCompletedSteps = guild(12799).useHubProgressBarCompletedSteps(guild);
+  const obj = guild(12799);
+  const nextHubProgressStep = guild(12799).getNextHubProgressStep(hubProgressBarCompletedSteps);
   if (null == nextHubProgressStep) {
     return null;
   } else {
     const size = hubProgressBarCompletedSteps.size;
-    const hubProgressTitleForStep = tmp(12798).getHubProgressTitleForStep(nextHubProgressStep);
+    const hubProgressTitleForStep = tmp(12799).getHubProgressTitleForStep(nextHubProgressStep);
     if (size < total) {
       const intl2 = tmp(1114).intl;
-      obj = { number: null, total: null };
+      const obj3 = { number: null, total: null };
       const _HermesInternal = HermesInternal;
-      obj.number = "" + size;
-      obj.total = total;
-      let formatToPlainStringResult = intl2.formatToPlainString(tmp(1114).t["9j7xDu"], obj);
+      obj3.number = "" + size;
+      obj3.total = total;
+      let formatToPlainStringResult = intl2.formatToPlainString(tmp(1114).t["9j7xDu"], obj3);
     } else {
       const intl = tmp(1114).intl;
       formatToPlainStringResult = intl.string(tmp(1114).t["+Gyklt"]);
     }
     const _Math = Math;
-    const bound = Math.max(tmp(12603).MIN_PROGRESS_PERCENT, (100 * size) / total);
-    obj = {
+    const bound = Math.max(tmp(12604).MIN_PROGRESS_PERCENT, (100 * size) / total);
+    const obj4 = {
       onPress() {
-        const obj = { guild, analyticsSource: "Channels Sidebar" };
-        obj.openLazy(asyncRequireImpl(12802, dependencyMap.paths), React3, obj);
+        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(12803, dependencyMap.paths), React3, {
+          guild,
+          analyticsSource: "Channels Sidebar",
+        });
       },
       title: hubProgressTitleForStep,
       subtitle: formatToPlainStringResult,
       percentComplete: bound,
     };
-    return jsx(tmp(14062).GuildProgressOverviewView, {
+    return jsx(tmp(14063).GuildProgressOverviewView, {
       onPress() {
-        const obj = { guild, analyticsSource: "Channels Sidebar" };
-        obj.openLazy(asyncRequireImpl(12802, dependencyMap.paths), React3, obj);
+        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(12803, dependencyMap.paths), React3, {
+          guild,
+          analyticsSource: "Channels Sidebar",
+        });
       },
       title: hubProgressTitleForStep,
       subtitle: formatToPlainStringResult,
       percentComplete: bound,
     });
   }
-  const obj2 = guild(12798);
+  const obj2 = guild(12799);
 }

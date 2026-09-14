@@ -7,13 +7,17 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/app_launcher/native/screens/home/useViewableAppLauncherHomeItems.tsx");
 
 export const useViewableAppLauncherHomeItems = function useViewableAppLauncherHomeItems() {
+  sharedValue = sharedValue(sharedValue1[2]).useSharedValue(false);
   let obj = sharedValue(sharedValue1[2]);
-  sharedValue = obj.useSharedValue(false);
   sharedValue1 = sharedValue(sharedValue1[2]).useSharedValue(false);
   ref = ref.useRef({});
-  obj = { handleViewableItemsChanged: null, hasViewedActivityItem: sharedValue, hasViewedLearnMoreItem: sharedValue1 };
+  const obj3 = {
+    handleViewableItemsChanged: null,
+    hasViewedActivityItem: sharedValue,
+    hasViewedLearnMoreItem: sharedValue1,
+  };
   const items = [sharedValue, sharedValue1, ref];
-  obj.handleViewableItemsChanged = ref.useCallback((viewableItems) => {
+  obj3.handleViewableItemsChanged = ref.useCallback((viewableItems) => {
     viewableItems = viewableItems.viewableItems;
     let item = viewableItems.forEach((item) => {
       item = item.item;
@@ -24,11 +28,11 @@ export const useViewableAppLauncherHomeItems = function useViewableAppLauncherHo
       if (!value) {
         const result = closure_1_0.set(true);
       }
-      value = item.type !== sharedValue(sharedValue1[3]).AppLauncherHomeListItemType.LEARN_MORE;
-      if (!value) {
-        value = closure_1_1.get();
+      value2 = item.type !== sharedValue(sharedValue1[3]).AppLauncherHomeListItemType.LEARN_MORE;
+      if (!value2) {
+        value2 = closure_1_1.get();
       }
-      if (!value) {
+      if (!value2) {
         const result1 = closure_1_1.set(true);
       }
       let tmp11 = item.type !== sharedValue(sharedValue1[3]).AppLauncherHomeListItemType.RECOMMENDATION_SECTION_HEADER;
@@ -40,19 +44,19 @@ export const useViewableAppLauncherHomeItems = function useViewableAppLauncherHo
       }
       if (!tmp11) {
         ref.current[item.sectionName] = true;
-        let obj = {
+        const obj = {
           type: sharedValue(sharedValue1[5]).ImpressionTypes.VIEW,
           name: sharedValue(sharedValue1[5]).ImpressionNames.APP_LAUNCHER_SECTION,
           properties: null,
         };
-        obj = { section_name: null, num_items: null, num_visible_items: null, source: null };
+        const obj2 = { section_name: null, num_items: null, num_visible_items: null, source: null };
         ({ sectionName: obj3.section_name, numItems: obj3.num_items, numVisibleItems: obj3.num_visible_items } = item);
-        obj.source = AppLauncherStore.entrypoint();
-        obj.properties = obj;
+        obj2.source = AppLauncherStore.entrypoint();
+        obj.properties = obj2;
         sharedValue(sharedValue1[4]).trackImpression(obj);
         const tmpResult = sharedValue(sharedValue1[4]);
       }
     });
   }, items);
-  return obj;
+  return obj3;
 };

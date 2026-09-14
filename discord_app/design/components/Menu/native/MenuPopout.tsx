@@ -28,10 +28,10 @@ export const MenuPopout = function MenuPopout(onRequestOpen) {
   let onClose;
   let memo;
   let callback1;
-  let obj = menuItems(onRequestClose[3]);
   if (key == null) {
     key = obj.useUID();
   }
+  obj = menuItems(onRequestClose[3]);
   animatedRef = menuItems(onRequestClose[4]).useAnimatedRef();
   const tmp4 = position(align.useState(false), 2);
   isShown = tmp4[0];
@@ -56,11 +56,10 @@ export const MenuPopout = function MenuPopout(onRequestOpen) {
         offset,
         offsetAnimated,
         children: menuItems.map((item, index) => {
-          let obj = { children: null };
-          obj = { showIconFirst: true };
+          const obj = { children: null };
           const merged = Object.assign(item);
-          obj.children = offset(menuItems(14218).MenuItem, obj);
-          return offset(menuItems(14217).MenuGroup, obj, "chat-context-menu-group-" + index);
+          obj.children = offset(menuItems(14219).MenuItem, { showIconFirst: true });
+          return offset(menuItems(14218).MenuGroup, obj, "chat-context-menu-group-" + index);
         }),
       }),
     items1,
@@ -74,29 +73,32 @@ export const MenuPopout = function MenuPopout(onRequestOpen) {
     NativeMenuActionCreatorsDefault.showNativeMenu(key, memo);
   }, items2);
   const items3 = [isShown, onClose, callback1];
-  obj = { children: null };
-  obj = {
-    ref: animatedRef,
-    onPress: align.useCallback(() => {
-      if (first) {
-        callback();
-      } else {
-        callback1();
-      }
-    }, items3),
-    accessibilityState: { expanded: isShown },
-    accessibilityActions: mapped,
-    onAccessibilityAction(arg0) {
-      const nativeEvent = arg0;
-      const found = menuItems.find((label) => label.label === nativeEvent.nativeEvent.actionName);
-      if (found != null) {
-        const action = found.action;
-        if (action != null) {
-          action();
+  const obj2 = { children: null };
+  const tmpResult = menuItems(onRequestClose[4]);
+  obj2.children = onRequestOpen.children(
+    {
+      ref: animatedRef,
+      onPress: align.useCallback(() => {
+        if (first) {
+          callback();
+        } else {
+          callback1();
         }
-      }
+      }, items3),
+      accessibilityState: { expanded: isShown },
+      accessibilityActions: mapped,
+      onAccessibilityAction(arg0) {
+        const nativeEvent = arg0;
+        const found = menuItems.find((label) => label.label === nativeEvent.nativeEvent.actionName);
+        if (found != null) {
+          const action = found.action;
+          if (action != null) {
+            action();
+          }
+        }
+      },
     },
-  };
-  obj.children = onRequestOpen.children(obj, { isShown });
-  return offset(offsetAnimated, obj);
+    { isShown },
+  );
+  return offset(offsetAnimated, obj2);
 };

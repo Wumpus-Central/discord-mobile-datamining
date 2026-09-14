@@ -28,11 +28,11 @@ class TransitionGroup {
     }, []);
     closure_5 = items(renderItem.useState(closure_4), 2)[1];
     closure_6 = renderItem.useRef(null);
-    items = [, , ,];
-    items[0] = items;
-    items[1] = getItemKey;
-    items[2] = renderItem;
-    items[3] = lazyCleanUpDelay;
+    items1 = [, , ,];
+    items1[0] = items;
+    items1[1] = getItemKey;
+    items1[2] = renderItem;
+    items1[3] = lazyCleanUpDelay;
     memo = renderItem.useMemo(() => {
       let current = ref2.current;
       let keys;
@@ -44,13 +44,12 @@ class TransitionGroup {
       function _loop() {
         const tmp2 = getItemKey(item);
         closure_0 = tmp2;
-        let obj = map;
         value = map.get(tmp2);
         if (null == value) {
           if (null != ref2.current) {
-            let MOUNTED = obj.ENTERED;
+            let MOUNTED = map.ENTERED;
           } else {
-            MOUNTED = obj.MOUNTED;
+            MOUNTED = map.MOUNTED;
           }
           function _cleanUp2() {
             const current = ref2.current;
@@ -75,7 +74,7 @@ class TransitionGroup {
               }
             }
           }
-          obj = {
+          const obj2 = {
             item,
             children: renderItem(tmp2, item, MOUNTED, _cleanUp2),
             state: MOUNTED,
@@ -87,22 +86,22 @@ class TransitionGroup {
             if (value.renderItem === renderItem) {
               let tmp6 = value;
             }
-            const result = obj.set(tmp2, tmp6);
+            const result = map.set(tmp2, tmp6);
             set.delete(tmp2);
           }
-          if (value.state === obj.YEETED) {
-            let state = obj.ENTERED;
+          if (value.state === map.YEETED) {
+            let state = map.ENTERED;
           } else {
             state = value.state;
           }
-          obj = {
+          const obj3 = {
             item,
             children: renderItem(tmp2, item, state, value.cleanUp),
             state,
             cleanUp: value.cleanUp,
             renderItem,
           };
-          tmp6 = obj;
+          tmp6 = obj3;
         }
       }
       const iter = set[Symbol.iterator]();
@@ -134,10 +133,10 @@ class TransitionGroup {
         continue;
       }
       return map;
-    }, items);
+    }, items1);
     closure_7 = memo;
-    items1 = [];
-    items1[0] = memo;
+    items2 = [];
+    items2[0] = memo;
     insertionEffect = renderItem.useInsertionEffect(() => {
       ref.current = memo;
       return () => {
@@ -148,16 +147,16 @@ class TransitionGroup {
         }
         return clearResult;
       };
-    }, items1);
-    items2 = [];
+    }, items2);
+    items3 = [];
     for (const item10037 of memo) {
       tmp4 = items;
-      arr = items2.push(items(item10037, 2)[1].children);
+      arr1 = items3.push(items(item10037, 2)[1].children);
       continue;
     }
     wrapChildrenResult = null;
-    if (items2.length > 0) {
-      wrapChildrenResult = wrapChildren(items2, items);
+    if (items3.length > 0) {
+      wrapChildrenResult = wrapChildren(items3, items);
     }
     return wrapChildrenResult;
   }

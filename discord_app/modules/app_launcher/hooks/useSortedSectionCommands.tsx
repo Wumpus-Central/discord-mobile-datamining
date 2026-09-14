@@ -4,7 +4,7 @@ import ApplicationDirectoryActionCreatorsAll from "../../global_discovery_apps/A
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
-const CommandListSortOrder = fn(12264).CommandListSortOrder;
+const CommandListSortOrder = fn(12265).CommandListSortOrder;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/app_launcher/hooks/useSortedSectionCommands.tsx");
 
@@ -29,8 +29,8 @@ export default function useSortedSectionCommands(sectionId) {
   const items1 = [memo];
   const memo1 = noop.useMemo(() => {
     if (memo.length <= 1) {
-      let obj = { popularSortedCommands: memo, canSort: false };
-      return obj;
+      const obj2 = { popularSortedCommands: memo, canSort: false };
+      return obj2;
     } else {
       closure_0 = false;
       const mapped = memo.map((command, alphabeticalSortIndex) => {
@@ -59,7 +59,8 @@ export default function useSortedSectionCommands(sectionId) {
             return 1;
           }
         });
-        obj = { popularSortedCommands: mapped.map((command) => command.command), canSort: true };
+        const obj3 = { popularSortedCommands: mapped.map((command) => command.command), canSort: true };
+        let obj = obj3;
       } else {
         obj = { popularSortedCommands: memo, canSort: false };
       }
@@ -69,8 +70,8 @@ export default function useSortedSectionCommands(sectionId) {
   ({ popularSortedCommands, canSort } = memo1);
   const items2 = [sectionId];
   const effect = noop.useEffect(() => {
-    const obj = { dontRefetchMs: DurationsDefault.Millis.DAY };
-    const application = obj.getApplication(memo, obj);
+    const obj = ApplicationDirectoryActionCreatorsAll;
+    const application = obj.getApplication(memo, { dontRefetchMs: DurationsDefault.Millis.DAY });
   }, items2);
   const items3 = [canSort];
   const layoutEffect = noop.useLayoutEffect(() => {

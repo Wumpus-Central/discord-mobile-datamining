@@ -7,7 +7,9 @@ import GuildRoleStore from "../../../stores/GuildRoleStore.tsx";
 import GuildStore from "../../../stores/GuildStore.tsx";
 import BigFlagUtils from "../../../../discord_common/js/shared/utils/BigFlagUtils.tsx";
 
-const AuditLogChange = fn(17651).AuditLogChange;
+const require = globalThis.__r;
+
+const AuditLogChange = fn(17652).AuditLogChange;
 let closure_4 = fn(1961).isGuildSelectableChannelType;
 const hasAnyPermission = fn(2016).hasAnyPermission;
 const Constants = fn(1074);
@@ -200,7 +202,7 @@ const guildSettingsAuditLogStore = new GuildSettingsAuditLogStore(DispatcherDefa
           let tmp16 = new AuditLogChange(item10022.key, item10022.old_value, item10022.new_value);
           let tmp17 = tmp16;
           let tmp18 = tmp16;
-          let arr = items.push(tmp16);
+          let arr3 = items.push(tmp16);
           if (tmp16.key === constants3.NAME) {
             tmp = tmp17;
           } else if (tmp18.key === constants3.TYPE) {
@@ -223,7 +225,7 @@ const guildSettingsAuditLogStore = new GuildSettingsAuditLogStore(DispatcherDefa
           }
         }
         const tmp32 = new AuditLogChange(constants3.PRUNE_DELETE_DAYS, null, num2);
-        let arr1 = items.push(tmp32);
+        items.push(tmp32);
       }
       let tmp35 = id.action_type === AuditLogActions.AUTO_MODERATION_BLOCK_MESSAGE;
       if (tmp35) {
@@ -255,16 +257,14 @@ const guildSettingsAuditLogStore = new GuildSettingsAuditLogStore(DispatcherDefa
         const tmp52 = new AuditLogChange(constants3.STATUS, null, id.options.status);
         items.push(tmp52);
       }
-      let obj = {
+      const tmp55 = new AuditLogRecord({
         id: id.id,
         action: id.action_type,
         targetId: id.target_id,
         userId: id.user_id,
         changes: items,
         options: id.options,
-      };
-      const tmp55 = new AuditLogRecord(obj);
-      arr1 = items;
+      });
       const first = items[0];
       if (
         (function shouldMergeEntries(items, action2, c1) {
@@ -317,12 +317,12 @@ const guildSettingsAuditLogStore = new GuildSettingsAuditLogStore(DispatcherDefa
           return isEqualResult;
         })(first, tmp55, c1)
       ) {
-        obj = { changes: null, timestampEnd: null };
+        const obj2 = { changes: null, timestampEnd: null };
         items1 = [];
         HermesBuiltin.arraySpread(tmp55.changes, HermesBuiltin.arraySpread(first.changes, 0));
-        obj.changes = items1;
-        obj.timestampEnd = tmp55.timestampStart;
-        arr1[0] = first.merge(obj);
+        obj2.changes = items1;
+        obj2.timestampEnd = tmp55.timestampStart;
+        arr2[0] = first.merge(obj2);
         c1 = c1 + 1;
       } else {
         if (tmp55.actionType === constants.DELETE) {
@@ -351,17 +351,25 @@ const guildSettingsAuditLogStore = new GuildSettingsAuditLogStore(DispatcherDefa
               combined = "#" + oldValue;
             }
             if (null == dependencyMap[tmp55.targetType]) {
-              obj = {};
-              obj[tmp55.targetId] = combined;
-              dependencyMap[tmp55.targetType] = obj;
+              const obj3 = {};
+              obj3[tmp55.targetId] = combined;
+              dependencyMap[tmp55.targetType] = obj3;
             } else {
               dependencyMap[tmp55.targetType][tmp55.targetId] = combined;
             }
           }
         }
         c1 = 0;
-        arr1.unshift(tmp55);
+        arr2.unshift(tmp55);
       }
+      let obj = {
+        id: id.id,
+        action: id.action_type,
+        targetId: id.target_id,
+        userId: id.user_id,
+        changes: items,
+        options: id.options,
+      };
     });
     ({ integrations: closure_18, webhooks: closure_20, guildScheduledEvents: closure_21, automodRules } = logs);
     if (automodRules == null) {
@@ -422,7 +430,7 @@ const guildSettingsAuditLogStore = new GuildSettingsAuditLogStore(DispatcherDefa
             let tmp16 = new AuditLogChange(item10022.key, item10022.old_value, item10022.new_value);
             let tmp17 = tmp16;
             let tmp18 = tmp16;
-            let arr = items.push(tmp16);
+            let arr3 = items.push(tmp16);
             if (tmp16.key === constants3.NAME) {
               tmp = tmp17;
             } else if (tmp18.key === constants3.TYPE) {
@@ -445,7 +453,7 @@ const guildSettingsAuditLogStore = new GuildSettingsAuditLogStore(DispatcherDefa
             }
           }
           const tmp32 = new AuditLogChange(constants3.PRUNE_DELETE_DAYS, null, num2);
-          let arr1 = items.push(tmp32);
+          items.push(tmp32);
         }
         let tmp35 = id.action_type === AuditLogActions.AUTO_MODERATION_BLOCK_MESSAGE;
         if (tmp35) {
@@ -477,16 +485,14 @@ const guildSettingsAuditLogStore = new GuildSettingsAuditLogStore(DispatcherDefa
           const tmp52 = new AuditLogChange(constants3.STATUS, null, id.options.status);
           items.push(tmp52);
         }
-        let obj = {
+        const tmp55 = new AuditLogRecord({
           id: id.id,
           action: id.action_type,
           targetId: id.target_id,
           userId: id.user_id,
           changes: items,
           options: id.options,
-        };
-        const tmp55 = new AuditLogRecord(obj);
-        arr1 = items;
+        });
         const first = items[0];
         if (
           (function shouldMergeEntries(items, action2, c1) {
@@ -539,12 +545,12 @@ const guildSettingsAuditLogStore = new GuildSettingsAuditLogStore(DispatcherDefa
             return isEqualResult;
           })(first, tmp55, c1)
         ) {
-          obj = { changes: null, timestampEnd: null };
+          const obj2 = { changes: null, timestampEnd: null };
           items1 = [];
           HermesBuiltin.arraySpread(tmp55.changes, HermesBuiltin.arraySpread(first.changes, 0));
-          obj.changes = items1;
-          obj.timestampEnd = tmp55.timestampStart;
-          arr1[0] = first.merge(obj);
+          obj2.changes = items1;
+          obj2.timestampEnd = tmp55.timestampStart;
+          arr2[0] = first.merge(obj2);
           c1 = c1 + 1;
         } else {
           if (tmp55.actionType === constants.DELETE) {
@@ -573,17 +579,25 @@ const guildSettingsAuditLogStore = new GuildSettingsAuditLogStore(DispatcherDefa
                 combined = "#" + oldValue;
               }
               if (null == dependencyMap[tmp55.targetType]) {
-                obj = {};
-                obj[tmp55.targetId] = combined;
-                dependencyMap[tmp55.targetType] = obj;
+                const obj3 = {};
+                obj3[tmp55.targetId] = combined;
+                dependencyMap[tmp55.targetType] = obj3;
               } else {
                 dependencyMap[tmp55.targetType][tmp55.targetId] = combined;
               }
             }
           }
           c1 = 0;
-          arr1.unshift(tmp55);
+          arr2.unshift(tmp55);
         }
+        let obj = {
+          id: id.id,
+          action: id.action_type,
+          targetId: id.target_id,
+          userId: id.user_id,
+          changes: items,
+          options: id.options,
+        };
       });
       let items1 = [];
       HermesBuiltin.arraySpread(items, HermesBuiltin.arraySpread(items1, 0));

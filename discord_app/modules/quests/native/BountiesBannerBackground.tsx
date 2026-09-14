@@ -18,22 +18,21 @@ const result = size.fileFinishedImporting("modules/quests/native/BountiesBannerB
 export default noop.memo(function BountiesBannerBackground(arg0) {
   ({ children, style, uri } = arg0);
   const items = [AccessibilityStore];
-  let obj = { style, children: null };
-  const stateFromStores = obj.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
-  obj = {
-    source: { uri },
-    style: React3.absoluteFillObject,
-    resizeMode: "cover",
-    muted: true,
-    disableFocus: true,
-    paused: stateFromStores,
-    importantForAccessibility: "no-hide-descendants",
-  };
+  const obj2 = { style, children: null };
+  const stateFromStores = initialize.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   const items1 = [
-    timestampProducer(common_Video.VideoComponent, obj),
+    timestampProducer(common_Video.VideoComponent, {
+      source: { uri },
+      style: React3.absoluteFillObject,
+      resizeMode: "cover",
+      muted: true,
+      disableFocus: true,
+      paused: stateFromStores,
+      importantForAccessibility: "no-hide-descendants",
+    }),
     timestampProducer(LinearGradientDefault, { colors, locations, style: React3.absoluteFillObject }),
     children,
   ];
-  obj.children = items1;
-  return React5(React4, obj);
+  obj2.children = items1;
+  return React5(React4, obj2);
 });

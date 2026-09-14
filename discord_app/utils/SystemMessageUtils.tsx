@@ -19,6 +19,8 @@ import GuildStore from "../stores/GuildStore.tsx";
 import RelationshipStore from "../stores/RelationshipStore.tsx";
 import UserStore from "../stores/UserStore.tsx";
 
+const require = globalThis.__r;
+
 require = fn;
 function getSystemMessageUserJoinMobile(id) {
   const items = [
@@ -58,17 +60,16 @@ export default {
     let first = _slicedToArray(mentions, 1)[0];
     if (null == first) {
       const channel_id = mentions.channel_id;
-      let obj = NicknameUtilsDefault;
-      const name = obj.getName(null, channel_id, mentions.author);
+      const name = NicknameUtilsDefault.getName(null, channel_id, mentions.author);
       const type = mentions.type;
       if (constants.RECIPIENT_ADD === type) {
         if (null != null) {
           const intl18 = util.intl;
-          obj = { username: name, usernameOnClick, otherUsername: null, otherUsernameOnClick: null };
-          let tmp6Result = NicknameUtilsDefault;
-          obj.otherUsername = tmp6Result.getName(null, channel_id, null);
-          obj.otherUsernameOnClick = usernameOnClick;
-          return MarkupParser.astToString(intl18.formatToParts(util.t["7/Xl0S"], obj));
+          const obj2 = { username: name, usernameOnClick, otherUsername: null, otherUsernameOnClick: null };
+          const obj61 = MarkupParser;
+          obj2.otherUsername = NicknameUtilsDefault.getName(null, channel_id, null);
+          obj2.otherUsernameOnClick = usernameOnClick;
+          return obj61.astToString(intl18.formatToParts(util.t["7/Xl0S"], obj2));
         }
       } else if (constants.RECIPIENT_REMOVE === type) {
         if (null != null) {
@@ -76,17 +77,18 @@ export default {
           if (null != author) {
             if (author.id !== null.id) {
               const intl17 = util.intl;
-              obj = { username: name, usernameOnClick, otherUsername: null, otherUsernameOnClick: null };
-              tmp6Result = NicknameUtilsDefault;
-              obj.otherUsername = tmp6Result.getName(null, channel_id, null);
-              obj.otherUsernameOnClick = usernameOnClick;
-              let astToStringResult = MarkupParser.astToString(intl17.formatToParts(util.t.QtZ0RD, obj));
+              const obj4 = { username: name, usernameOnClick, otherUsername: null, otherUsernameOnClick: null };
+              const obj58 = MarkupParser;
+              obj4.otherUsername = NicknameUtilsDefault.getName(null, channel_id, null);
+              obj4.otherUsernameOnClick = usernameOnClick;
+              let astToStringResult = obj58.astToString(intl17.formatToParts(util.t.QtZ0RD, obj4));
+              const tmp6Result2 = NicknameUtilsDefault;
             }
             return astToStringResult;
           }
           const intl16 = util.intl;
-          const obj1 = { username: name, usernameOnClick };
-          astToStringResult = MarkupParser.astToString(intl16.formatToParts(util.t["Qn5+Lf"], obj1));
+          const obj5 = { username: name, usernameOnClick };
+          astToStringResult = MarkupParser.astToString(intl16.formatToParts(util.t["Qn5+Lf"], obj5));
         }
       } else if (constants.CALL === type) {
         const call = mentions.call;
@@ -95,8 +97,8 @@ export default {
           const participants = call.participants;
           if (-1 === participants.indexOf(AuthenticationStore.getId())) {
             const intl15 = util.intl;
-            let obj2 = { username: name, usernameOnClick };
-            astToStringResult1 = MarkupParser.astToString(intl15.formatToParts(util.t.DbgSA0, obj2));
+            const obj7 = { username: name, usernameOnClick };
+            astToStringResult1 = MarkupParser.astToString(intl15.formatToParts(util.t.DbgSA0, obj7));
           }
         }
         return astToStringResult1;
@@ -104,24 +106,24 @@ export default {
         const intl14 = util.intl;
         const obj52 = MarkupParser;
         const t = util.t;
-        const obj3 = { username: name, usernameOnClick, channelName: mentions.content };
-        return obj52.astToString(intl14.formatToParts(isForumPost.isForumPost() ? t["qa0e/n"] : t.XCPMEG, obj3));
+        const obj8 = { username: name, usernameOnClick, channelName: mentions.content };
+        return obj52.astToString(intl14.formatToParts(isForumPost.isForumPost() ? t["qa0e/n"] : t.XCPMEG, obj8));
       } else if (constants.CHANNEL_ICON_CHANGE === type) {
         const intl13 = util.intl;
-        const obj4 = { username: name, usernameOnClick };
-        return MarkupParser.astToString(intl13.formatToParts(util.t.wypJZ0, obj4));
+        const obj9 = { username: name, usernameOnClick };
+        return MarkupParser.astToString(intl13.formatToParts(util.t.wypJZ0, obj9));
       } else if (constants.CHANNEL_PINNED_MESSAGE === type) {
         const intl12 = util.intl;
-        let obj5 = { username: name, usernameOnClick };
-        return MarkupParser.astToString(intl12.formatToParts(util.t["/M60j0"], obj5));
+        const obj10 = { username: name, usernameOnClick };
+        return MarkupParser.astToString(intl12.formatToParts(util.t["/M60j0"], obj10));
       } else if (constants.USER_JOIN === type) {
         const intl11 = util.intl;
-        const obj6 = { username: name, usernameOnClick };
-        return MarkupParser.astToString(intl11.formatToParts(getSystemMessageUserJoinMobile(mentions.id), obj6));
+        const obj11 = { username: name, usernameOnClick };
+        return MarkupParser.astToString(intl11.formatToParts(getSystemMessageUserJoinMobile(mentions.id), obj11));
       } else if (constants.GUILD_BOOST === type) {
         const intl10 = util.intl;
-        const obj7 = { username: name, usernameOnClick };
-        return MarkupParser.astToString(intl10.formatToParts(util.t.ihxM9x, obj7));
+        const obj12 = { username: name, usernameOnClick };
+        return MarkupParser.astToString(intl10.formatToParts(util.t.ihxM9x, obj12));
       } else {
         if (constants.GUILD_BOOST_TIER_1 !== type) {
           if (constants.GUILD_BOOST_TIER_2 !== type) {
@@ -131,22 +133,24 @@ export default {
                 return intl7.string(util.t.gxyKvr);
               } else if (constants.THREAD_STARTER_MESSAGE === type) {
                 const intl6 = util.intl;
-                const obj8 = {
+                const obj13 = {
                   username: name,
                   threadName: useChannelName.computeChannelName(isForumPost, UserStore, RelationshipStore),
                 };
-                return intl6.formatToPlainString(util.t["B8H+Cl"], obj8);
+                return intl6.formatToPlainString(util.t["B8H+Cl"], obj13);
               } else if (constants.ROLE_SUBSCRIPTION_PURCHASE === type) {
                 let astToStringResult2 = null;
                 if (!(mentions instanceof MessageRecord)) {
                   const obj34 = MarkupParser;
-                  const obj9 = {
+                  const obj14 = {
                     username: name,
                     guildId: isForumPost.guild_id,
                     roleSubscriptionData: mentions.role_subscription_data,
                   };
                   astToStringResult2 = obj34.astToString(
-                    GuildRoleSubscriptionSystemMessageUtils.getRoleSubscriptionPurchaseSystemMessageContentMobile(obj9),
+                    GuildRoleSubscriptionSystemMessageUtils.getRoleSubscriptionPurchaseSystemMessageContentMobile(
+                      obj14,
+                    ),
                   );
                 }
                 return astToStringResult2;
@@ -164,12 +168,12 @@ export default {
                   astToStringResult3 = null;
                   if (null != product_name) {
                     const obj31 = MarkupParser;
-                    const obj10 = {
+                    const obj15 = {
                       username: name,
                       productName: mentions.purchase_notification.guild_product_purchase.product_name,
                     };
                     astToStringResult3 = obj31.astToString(
-                      GuildProductSystemMessageUtils.getGuildProductPurchaseSystemMessageContentMobile(obj10),
+                      GuildProductSystemMessageUtils.getGuildProductPurchaseSystemMessageContentMobile(obj15),
                     );
                   }
                 }
@@ -181,47 +185,46 @@ export default {
                   const obj26 = useMessageAuthor;
                   const messageAuthor = obj26.getMessageAuthor(MessageRecordUtils.createMessageRecord(mentions));
                   const obj28 = MarkupParser;
-                  const obj11 = { application: mentions.application, username: messageAuthor.nick };
+                  const obj18 = { application: mentions.application, username: messageAuthor.nick };
                   return obj28.astToString(
-                    ApplicationSubscriptionSystemMessageUtils.getApplicationSubscriptionSystemMessageASTContent(obj11),
+                    ApplicationSubscriptionSystemMessageUtils.getApplicationSubscriptionSystemMessageASTContent(obj18),
                   );
                 }
               } else if (constants.PRIVATE_CHANNEL_INTEGRATION_ADDED === type) {
                 let astToStringResult4 = null;
                 if (!(mentions instanceof MessageRecord)) {
-                  let obj20 = MarkupParser;
-                  const obj12 = { application: mentions.application, username: null };
+                  const obj21 = MarkupParser;
+                  const obj23 = { application: mentions.application, username: null };
                   const obj22 = PrivateChannelIntegrationSystemMessageUtils;
                   const obj24 = useMessageAuthor;
-                  obj12.username = obj24.getMessageAuthor(MessageRecordUtils.createMessageRecord(mentions)).nick;
-                  astToStringResult4 = obj20.astToString(
-                    obj22.getPrivateChannelIntegrationAddedSystemMessageASTContent(obj12),
+                  obj23.username = obj24.getMessageAuthor(MessageRecordUtils.createMessageRecord(mentions)).nick;
+                  astToStringResult4 = obj21.astToString(
+                    obj22.getPrivateChannelIntegrationAddedSystemMessageASTContent(obj23),
                   );
                 }
                 return astToStringResult4;
               } else if (constants.PRIVATE_CHANNEL_INTEGRATION_REMOVED === type) {
                 let astToStringResult5 = null;
                 if (!(mentions instanceof MessageRecord)) {
-                  let obj15 = MarkupParser;
-                  let obj16 = PrivateChannelIntegrationSystemMessageUtils;
-                  const obj13 = { application: mentions.application, username: null };
-                  let obj18 = useMessageAuthor;
-                  let obj19 = MessageRecordUtils;
-                  obj13.username = obj18.getMessageAuthor(obj19.createMessageRecord(mentions)).nick;
-                  astToStringResult5 = obj15.astToString(
-                    obj16.getPrivateChannelIntegrationRemovedSystemMessageASTContent(obj13),
+                  const obj16 = MarkupParser;
+                  const obj30 = { application: mentions.application, username: null };
+                  const obj17 = PrivateChannelIntegrationSystemMessageUtils;
+                  const obj19 = useMessageAuthor;
+                  obj30.username = obj19.getMessageAuthor(MessageRecordUtils.createMessageRecord(mentions)).nick;
+                  astToStringResult5 = obj16.astToString(
+                    obj17.getPrivateChannelIntegrationRemovedSystemMessageASTContent(obj30),
                   );
                 }
                 return astToStringResult5;
               } else if (constants.AUTO_MODERATION_ACTION === type) {
-                let embeds = mentions.embeds;
+                const embeds = mentions.embeds;
                 let someResult;
                 if (embeds != null) {
                   someResult = embeds.some((type) => type.type === constants.AUTO_MODERATION_NOTIFICATION);
                 }
                 if (someResult) {
-                  embeds = mentions.embeds;
-                  const found = embeds.find((type) => type.type === constants.AUTO_MODERATION_NOTIFICATION);
+                  const embeds1 = mentions.embeds;
+                  const found = embeds1.find((type) => type.type === constants.AUTO_MODERATION_NOTIFICATION);
                   let found1;
                   if (found != null) {
                     const fields = found.fields;
@@ -252,22 +255,22 @@ export default {
                         AutomodNotificationEmbedTypeKeys.AutomodNotificationEmbedTypeKeys.ACTIVITY_ALERTS_ENABLED ===
                         value
                       ) {
-                        let tmp34Result = MarkupParser;
                         const intl5 = util.intl;
-                        const obj14 = { guildName: guild.name };
-                        astToStringResult6 = tmp34Result.astToString(intl5.formatToParts(util.t.wt3ZUM, obj14));
+                        const obj33 = { guildName: guild.name };
+                        astToStringResult6 = MarkupParser.astToString(intl5.formatToParts(util.t.wt3ZUM, obj33));
+                        const tmp34Result = MarkupParser;
                       } else if (
                         AutomodNotificationEmbedTypeKeys.AutomodNotificationEmbedTypeKeys.INTERACTION_BLOCKED === value
                       ) {
-                        tmp34Result = MarkupParser;
                         const intl4 = util.intl;
-                        obj15 = { guildName: guild.name };
-                        astToStringResult6 = tmp34Result.astToString(intl4.formatToParts(util.t.AkqI0g, obj15));
+                        const obj36 = { guildName: guild.name };
+                        astToStringResult6 = MarkupParser.astToString(intl4.formatToParts(util.t.AkqI0g, obj36));
+                        const tmp34Result3 = MarkupParser;
                       } else {
                         const intl3 = util.intl;
-                        obj16 = { guildName: guild.name };
-                        astToStringResult6 = MarkupParser.astToString(intl3.formatToParts(util.t["a+lJKl"], obj16));
-                        const tmp34Result1 = MarkupParser;
+                        const obj37 = { guildName: guild.name };
+                        astToStringResult6 = MarkupParser.astToString(intl3.formatToParts(util.t["a+lJKl"], obj37));
+                        const tmp34Result4 = MarkupParser;
                       }
                     }
                   }
@@ -283,17 +286,16 @@ export default {
                   const guild1 = GuildStore.getGuild(channel1.getGuildId());
                   let astToStringResult7 = null;
                   if (null != guild1) {
-                    obj5 = MarkupParser;
                     const intl2 = util.intl;
-                    const obj17 = { username: name, guildName: guild1.name, time: null };
+                    const obj39 = { username: name, guildName: guild1.name, time: null };
                     let str = "";
                     if ("" !== content) {
                       const _Date = Date;
                       const date = new Date(content);
                       str = date.toLocaleString(util.intl.currentLocale, { hour: "numeric", minute: "2-digit" });
                     }
-                    obj17.time = str;
-                    astToStringResult7 = obj5.astToString(intl2.formatToParts(util.t.iOuWPk, obj17));
+                    obj39.time = str;
+                    astToStringResult7 = MarkupParser.astToString(intl2.formatToParts(util.t.iOuWPk, obj39));
                   }
                   tmp17 = astToStringResult7;
                 }
@@ -305,10 +307,9 @@ export default {
                   const guild2 = GuildStore.getGuild(channel2.getGuildId());
                   let astToStringResult8 = null;
                   if (null != guild2) {
-                    obj2 = MarkupParser;
                     const intl = util.intl;
-                    obj18 = { username: name, guildName: guild2.name };
-                    astToStringResult8 = obj2.astToString(intl.formatToParts(util.t.axmbpm, obj18));
+                    const obj41 = { username: name, guildName: guild2.name };
+                    astToStringResult8 = MarkupParser.astToString(intl.formatToParts(util.t.axmbpm, obj41));
                   }
                   tmp11 = astToStringResult8;
                 }
@@ -323,14 +324,14 @@ export default {
         if (null != channel3) {
           if (null != GuildStore.getGuild(channel3.getGuildId())) {
             const intl8 = util.intl;
-            obj19 = { username: name, usernameOnClick };
-            let astToStringResult9 = MarkupParser.astToString(intl8.formatToParts(util.t.ihxM9x, obj19));
+            const obj43 = { username: name, usernameOnClick };
+            let astToStringResult9 = MarkupParser.astToString(intl8.formatToParts(util.t.ihxM9x, obj43));
           }
           return astToStringResult9;
         }
         const intl9 = util.intl;
-        obj20 = { username: name, usernameOnClick };
-        astToStringResult9 = MarkupParser.astToString(intl9.formatToParts(util.t.ihxM9x, obj20));
+        const obj45 = { username: name, usernameOnClick };
+        astToStringResult9 = MarkupParser.astToString(intl9.formatToParts(util.t.ihxM9x, obj45));
       }
     } else if (typeof first === "object") {
       first = UserStore.getUser(first.id);
@@ -369,13 +370,13 @@ export default {
     let formatResult = null;
     if (null != closure_13[arg0]) {
       const intl = require("util").intl;
-      let obj = { learnOnClick: null };
-      obj = {
+      const obj = { learnOnClick: null };
+      const obj2 = {
         onClick() {
           return window.open(closure_13[closure_0]);
         },
       };
-      obj.learnOnClick = obj;
+      obj.learnOnClick = obj2;
       formatResult = intl.format(require("util").t.xw1Ij0, obj);
     }
     return formatResult;

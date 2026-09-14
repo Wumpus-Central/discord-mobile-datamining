@@ -10,11 +10,11 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/ads/utils/AdDataUtils.android.tsx");
 
 export const getAdUser = function getAdUser(questContentName) {
-  let adUser = AdUserStore.adUser;
+  const adUser = AdUserStore.adUser;
   if (null == adUser) {
     if (!AdUserStore.hasFetchFailed) {
       if (!AdUserStore.isFetching) {
-        adUser = AdUserActionCreators.fetchAdUser(questContentName);
+        const adUser1 = AdUserActionCreators.fetchAdUser(questContentName);
       }
       let resolved = new Promise((arg0) => {
         closure_0 = arg0;

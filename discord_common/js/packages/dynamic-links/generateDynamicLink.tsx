@@ -1,6 +1,6 @@
 // discord_common/js/packages/dynamic-links/generateDynamicLink.tsx
-import v1 from "../../../../_runtime/01256_v1.js";
-import formatDefault from "../../../../_runtime/01341_format.js";
+import v1 from "../../../../_runtime/01254_v1.js";
+import formatDefault from "../../../../_runtime/01339_format.js";
 import getDescriptionDefault from "getDescription.tsx";
 import _objectWithoutProperties from "../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
@@ -37,15 +37,15 @@ export default function generateDynamicLink(inviteDynamicLinkTemplate, arg1) {
       match = str2.match(regExp);
     }
   }
-  let tmp5Result = formatDefault;
+  const tmp5Result = formatDefault;
   let name;
   if (tmp5Result != null) {
     name = tmp5Result.name;
   }
-  tmp5Result = formatDefault;
+  const tmp5Result2 = formatDefault;
   let family;
-  if (tmp5Result != null) {
-    const os = tmp5Result.os;
+  if (tmp5Result2 != null) {
+    const os = tmp5Result2.os;
     if (os != null) {
       family = os.family;
     }
@@ -98,7 +98,6 @@ export const parseDynamicLink = function parseDynamicLink(str) {
       const _URL = URL;
       const uRL = new URL(str);
       const searchParams = uRL.searchParams;
-      let obj = searchParams;
       value = searchParams.get("deep_link_value");
       if (null == value) {
         return null;
@@ -107,17 +106,17 @@ export const parseDynamicLink = function parseDynamicLink(str) {
         const _URL2 = URL;
         const uRL1 = new URL(decodeURIComponent(value));
         const searchParams2 = uRL1.searchParams;
-        value = obj.get("pid");
-        obj = { utmSource: value };
+        value2 = obj.get("pid");
+        const obj2 = { utmSource: value2 };
         const entries = searchParams2.entries();
         const tmp16 = entries[Symbol.iterator]();
         while (tmp16 !== undefined) {
-          let tmp21 = _slicedToArray(tmp18, 2);
-          obj[tmp21[0]] = tmp21[1];
+          [, obj2[tmp21[0]]] = tmp18;
           continue;
         }
-        return obj;
+        return obj2;
       }
+      obj = searchParams;
     } catch (err) {
       return null;
     }

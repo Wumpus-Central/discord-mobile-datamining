@@ -19,7 +19,7 @@ export default function useProfileTileGradient(userId) {
   if (themeColors == null) {
     themeColors = [];
   }
-  [tmp5, tmp6] = _slicedToArray(themeColors, 2);
+  [tmp5, tmp6] = themeColors;
   const tmp3Result = _slicedToArray(themeColors, 2);
   isVideoBackgroundProfileFetchEnabled = userId(
     isVideoBackgroundProfileFetchEnabled[3],

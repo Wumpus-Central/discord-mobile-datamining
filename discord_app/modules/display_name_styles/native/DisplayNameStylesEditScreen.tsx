@@ -20,10 +20,9 @@ function ApplyButton(onPress) {
   onPress = onPress.onPress;
   const visible = onPress.visible;
   let stateFromStores;
-  let obj = onPress(stateFromStores[12]);
   items = [AccessibilityStore];
-  stateFromStores = obj.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
-  let obj1 = onPress(stateFromStores[53]);
+  stateFromStores = onPress(stateFromStores[12]).useStateFromStores(items, () => useReducedMotion.useReducedMotion);
+  const obj = onPress(stateFromStores[12]);
   const fn = function o() {
     let pointerEvents = "none";
     if (visible) {
@@ -34,7 +33,7 @@ function ApplyButton(onPress) {
   fn.__closure = { visible };
   fn.__workletHash = 2349569076845;
   fn.__initData = __initData;
-  const animatedProps = obj1.useAnimatedProps(fn);
+  const animatedProps = onPress(stateFromStores[53]).useAnimatedProps(fn);
   let obj2 = onPress(stateFromStores[53]);
   const fn2 = function s() {
     let num = 0;
@@ -78,30 +77,30 @@ function ApplyButton(onPress) {
     rect.opacity = withSpringResult2;
     return rect;
   };
-  obj = {
+  let obj3 = onPress(stateFromStores[53]);
+  fn2.__closure = {
     visible,
     tokens: visible(stateFromStores[10]),
     reducedMotion: stateFromStores,
     withSpring: onPress(stateFromStores[54]).withSpring,
     MEDIA_PICKER_SEND_BUTTON_SPRING,
   };
-  fn2.__closure = obj;
   fn2.__workletHash = 16786362025671;
   fn2.__initData = __initData2;
   const items1 = [onPress];
-  const animatedStyle = obj2.useAnimatedStyle(fn2);
+  const animatedStyle = obj3.useAnimatedStyle(fn2);
   const callback = noop.useCallback(() => {
     const result = HapticUtils.triggerHapticFeedback(HapticUtils.HapticFeedbackTypes.IMPACT_MEDIUM);
     onPress();
   }, items1);
-  obj = { style: animatedStyle, children: null };
-  obj1 = { style: { marginBottom: visible(stateFromStores[52])().bottom }, animatedProps, children: null };
-  obj2 = { variant: "primary", onPress: callback, size: "lg", text: null };
+  const obj5 = { style: animatedStyle, children: null };
+  const obj6 = { style: { marginBottom: visible(stateFromStores[52])().bottom }, animatedProps, children: null };
+  const obj7 = { variant: "primary", onPress: callback, size: "lg", text: null };
   const intl = onPress(stateFromStores[38]).intl;
-  obj2.text = intl.string(onPress(stateFromStores[38]).t["1Qm822"]);
-  obj1.children = closure_12(onPress(stateFromStores[49]).Button, obj2);
-  obj.children = closure_12(visible(stateFromStores[53]).View, obj1);
-  return closure_12(visible(stateFromStores[53]).View, obj);
+  obj7.text = intl.string(onPress(stateFromStores[38]).t["1Qm822"]);
+  obj6.children = closure_12(onPress(stateFromStores[49]).Button, obj7);
+  obj5.children = closure_12(visible(stateFromStores[53]).View, obj6);
+  return closure_12(visible(stateFromStores[53]).View, obj5);
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: metroRequire, Pressable: closure_7 } = get_ActivityIndicator);
@@ -110,9 +109,9 @@ const MEDIA_PICKER_SEND_BUTTON_SPRING = fn(1607).MEDIA_PICKER_SEND_BUTTON_SPRING
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
 let items = [fn(1390).DisplayNameEffect.GRADIENT, fn(1390).DisplayNameEffect.GUMMY, fn(1390).DisplayNameEffect.PRISM];
-fn(4636);
-let createStyles = {
-  container: null,
+const createStyles = fn(4636);
+let obj2 = {
+  container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },
   contentContainer: null,
   fieldButtonGroup: null,
   fieldButton: null,
@@ -122,36 +121,35 @@ let createStyles = {
   fieldButtonTrailing: null,
   buttonContainer: null,
 };
-createStyles = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
-createStyles.container = createStyles;
-createStyles.contentContainer = { padding: nativeDefault.space.PX_16 };
-let obj1 = { padding: nativeDefault.space.PX_16 };
-createStyles.fieldButtonGroup = {
+let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
+obj2.contentContainer = { padding: nativeDefault.space.PX_16 };
+let obj4 = { padding: nativeDefault.space.PX_16 };
+obj2.fieldButtonGroup = {
   backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED,
   borderRadius: nativeDefault.radii.md,
 };
-let obj2 = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED, borderRadius: nativeDefault.radii.md };
-createStyles.fieldButton = {
+let obj5 = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED, borderRadius: nativeDefault.radii.md };
+obj2.fieldButton = {
   padding: nativeDefault.space.PX_12,
   flexDirection: "row",
   alignItems: "center",
   justifyContent: "space-between",
 };
-let obj3 = {
+let obj6 = {
   padding: nativeDefault.space.PX_12,
   flexDirection: "row",
   alignItems: "center",
   justifyContent: "space-between",
 };
-createStyles.fieldButtonBorder = { borderTopWidth: 1, borderTopColor: nativeDefault.colors.BORDER_SUBTLE };
-let obj4 = { borderTopWidth: 1, borderTopColor: nativeDefault.colors.BORDER_SUBTLE };
-createStyles.fieldButtonLabel = { flex: 1, marginRight: nativeDefault.space.PX_12 };
-let obj5 = { flex: 1, marginRight: nativeDefault.space.PX_12 };
-createStyles.fieldButtonChevron = { flexDirection: "row", gap: nativeDefault.space.PX_8, flexShrink: 0 };
-let obj6 = { flexDirection: "row", gap: nativeDefault.space.PX_8, flexShrink: 0 };
-createStyles.fieldButtonTrailing = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 };
-let obj7 = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 };
-createStyles.buttonContainer = {
+obj2.fieldButtonBorder = { borderTopWidth: 1, borderTopColor: nativeDefault.colors.BORDER_SUBTLE };
+let obj7 = { borderTopWidth: 1, borderTopColor: nativeDefault.colors.BORDER_SUBTLE };
+obj2.fieldButtonLabel = { flex: 1, marginRight: nativeDefault.space.PX_12 };
+const obj8 = { flex: 1, marginRight: nativeDefault.space.PX_12 };
+obj2.fieldButtonChevron = { flexDirection: "row", gap: nativeDefault.space.PX_8, flexShrink: 0 };
+let obj9 = { flexDirection: "row", gap: nativeDefault.space.PX_8, flexShrink: 0 };
+obj2.fieldButtonTrailing = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 };
+let obj10 = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 };
+obj2.buttonContainer = {
   marginVertical: nativeDefault.space.PX_16,
   paddingVertical: nativeDefault.space.PX_16,
   backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
@@ -159,7 +157,7 @@ createStyles.buttonContainer = {
   borderTopColor: nativeDefault.colors.BORDER_MUTED,
   gap: nativeDefault.space.PX_16,
 };
-let closure_15 = createStyles.createStyles(createStyles);
+let closure_15 = createStyles.createStyles(obj2);
 const __initData = {
   code: "function DisplayNameStylesEditScreenTsx1(){const{visible}=this.__closure;return{pointerEvents:visible?'box-none':'none'};}",
 };
@@ -172,21 +170,21 @@ let result = size.fileFinishedImporting("modules/display_name_styles/native/Disp
 export default function DisplayNameStylesEditScreen() {
   let tmp = onSelectColor();
   let tmp3 = isTryItOut;
+  const route = navigation(isTryItOut[11]).useRoute();
   let obj = navigation(isTryItOut[11]);
-  const route = obj.useRoute();
-  let obj1 = navigation(isTryItOut[11]);
-  navigation = obj1.useNavigation();
+  navigation = navigation(isTryItOut[11]).useNavigation();
   let params = route.params;
   if (params == null) {
     params = {};
   }
   const guildId = params.guildId;
   isTryItOut = params.isTryItOut;
-  let tmp2Result = tmp2(tmp3[12]);
+  let obj2 = navigation(isTryItOut[11]);
   items = [onSelectEffect];
-  const stateFromStores = tmp2Result.useStateFromStores(items, () => onSelectEffect.getCurrentUser());
-  tmp2Result = tmp2(tmp3[13]);
-  const displayNameStylesPendingName = tmp2Result.useDisplayNameStylesPendingName(stateFromStores, guildId);
+  const stateFromStores = navigation(tmp3[12]).useStateFromStores(items, () => onSelectEffect.getCurrentUser());
+  let tmp2Result = navigation(tmp3[12]);
+  const displayNameStylesPendingName = navigation(tmp3[13]).useDisplayNameStylesPendingName(stateFromStores, guildId);
+  const tmp2Result11 = navigation(tmp3[13]);
   const guildMemberOrUserPendingDisplayNameStyles = navigation(tmp3[14]).useGuildMemberOrUserPendingDisplayNameStyles(
     stateFromStores,
     guildId,
@@ -194,19 +192,18 @@ export default function DisplayNameStylesEditScreen() {
   const pendingDisplayNameStyles = guildMemberOrUserPendingDisplayNameStyles.pendingDisplayNameStyles;
   ({ guildDisplayNameStyles, tryItOutDisplayNameStyles } = guildMemberOrUserPendingDisplayNameStyles);
   let id;
-  const tmp2Result1 = navigation(tmp3[14]);
+  const tmp2Result12 = navigation(tmp3[14]);
   if (stateFromStores != null) {
     id = stateFromStores.id;
   }
-  obj = { userId: id, guildId, pendingDisplayNameStyles: null, ignoreDisabledStylesSetting: true };
+  let obj3 = { userId: id, guildId, pendingDisplayNameStyles: null, ignoreDisabledStylesSetting: true };
   let tmp12 = pendingDisplayNameStyles;
   if (isTryItOut) {
     tmp12 = tryItOutDisplayNameStyles;
   }
-  obj.pendingDisplayNameStyles = tmp12;
-  const tmp10Result = guildId(tmp3[15])(obj);
+  obj3.pendingDisplayNameStyles = tmp12;
+  const tmp10Result = guildId(tmp3[15])(obj3);
   closure_5 = tmp10Result;
-  let obj7 = displayNameStylesPendingName;
   let fontId;
   const tmp10 = guildId(tmp3[15]);
   if (tmp10Result != null) {
@@ -225,17 +222,17 @@ export default function DisplayNameStylesEditScreen() {
   if (effectId == null) {
     effectId = tmp2(tmp3[8]).DisplayNameEffect.SOLID;
   }
-  let tmp16Result = tmp16(obj7.useState(effectId), 2);
+  const tmp16Result = stateFromStores(displayNameStylesPendingName.useState(effectId), 2);
   const first1 = tmp16Result[0];
   onSelectEffect = tmp16Result[1];
   let tmp14 = guildId(tmp3[16])();
   const tmp22 = navigation(tmp3[18]).getEffectColorCount(first1) > 1;
   closure_10 = tmp22;
-  const tmp2Result2 = navigation(tmp3[18]);
+  const tmp2Result13 = navigation(tmp3[18]);
   const isDisplayNameStylesFlywheelSettersEnabled = navigation(tmp3[19]).useIsDisplayNameStylesFlywheelSettersEnabled(
     "DisplayNameStylesEditScreen",
   );
-  const tmp2Result3 = navigation(tmp3[19]);
+  const tmp2Result14 = navigation(tmp3[19]);
   const displayNameStylesEffectConfig = navigation(tmp3[20]).useDisplayNameStylesEffectConfig(first1);
   closure_12 = tmp9(tmp3[21])();
   let colors;
@@ -249,11 +246,11 @@ export default function DisplayNameStylesEditScreen() {
     if (!tmp22) {
       let first2 = colors[0];
     }
-    tmp16Result = tmp16(tmp25(first2), 2);
-    const first3 = tmp16Result[0];
-    onSelectColor = tmp16Result[1];
-    const tmp16Result1 = tmp16(
-      obj7.useState(() =>
+    const tmp16Result3 = tmp16(tmp25(first2), 2);
+    const first3 = tmp16Result3[0];
+    onSelectColor = tmp16Result3[1];
+    const tmp16Result4 = tmp16(
+      obj8.useState(() =>
         Object.fromEntries(
           items.map((item) => {
             items = [item];
@@ -268,9 +265,9 @@ export default function DisplayNameStylesEditScreen() {
       ),
       2,
     );
-    const first4 = tmp16Result1[0];
-    closure_17 = tmp16Result1[1];
-    const callback = obj7.useCallback((arg0, arg1) => {
+    const first4 = tmp16Result4[0];
+    closure_17 = tmp16Result4[1];
+    const callback = obj8.useCallback((arg0, arg1) => {
       closure_0 = arg0;
       closure_1 = arg1;
       closure_17((arg0) => {
@@ -281,7 +278,7 @@ export default function DisplayNameStylesEditScreen() {
       });
     }, []);
     const items1 = [tmp22, first4, first1, displayNameStylesEffectConfig.defaultColors, first3];
-    const memo = obj7.useMemo(() => {
+    const memo = obj8.useMemo(() => {
       if (closure_10) {
         let defaultColors = first4[first1];
         if (defaultColors == null) {
@@ -294,7 +291,7 @@ export default function DisplayNameStylesEditScreen() {
       return items;
     }, items1);
     const items2 = [tmp10Result, selectedFontId, first1, memo];
-    const memo1 = obj7.useMemo(() => {
+    const memo1 = obj8.useMemo(() => {
       let fontId;
       if (closure_5 != null) {
         fontId = closure_5.fontId;
@@ -319,7 +316,7 @@ export default function DisplayNameStylesEditScreen() {
       }
       return tmp4;
     }, items2);
-    obj = {
+    let obj4 = {
       hasChanges: memo1,
       selectedFontId,
       selectedEffectId: first1,
@@ -331,22 +328,22 @@ export default function DisplayNameStylesEditScreen() {
         return navigation.goBack();
       },
     };
-    const displayNameStylesHandleApply = tmp2(tmp3[23]).useDisplayNameStylesHandleApply(obj);
-    const tmp2Result5 = tmp2(tmp3[23]);
+    const displayNameStylesHandleApply = tmp2(tmp3[23]).useDisplayNameStylesHandleApply(obj4);
+    const tmp2Result16 = tmp2(tmp3[23]);
     const visibleFontOrder = tmp2(tmp3[24]).useVisibleFontOrder();
-    const tmp2Result6 = tmp2(tmp3[24]);
+    const tmp2Result17 = tmp2(tmp3[24]);
     const visibleEffectOrder = tmp2(tmp3[25]).useVisibleEffectOrder();
-    const tmp2Result7 = tmp2(tmp3[25]);
+    const tmp2Result18 = tmp2(tmp3[25]);
     const displayNameStylesNewFontsBadge = tmp2(tmp3[26]).useDisplayNameStylesNewFontsBadge(visibleFontOrder);
     const showFontsBadge = displayNameStylesNewFontsBadge.showFontsBadge;
     const dismissFontsBadge = displayNameStylesNewFontsBadge.dismissFontsBadge;
-    const tmp2Result8 = tmp2(tmp3[26]);
+    const tmp2Result19 = tmp2(tmp3[26]);
     const displayNameStylesNewEffectsBadge = tmp2(tmp3[26]).useDisplayNameStylesNewEffectsBadge(visibleEffectOrder);
     const showEffectsBadge = displayNameStylesNewEffectsBadge.showEffectsBadge;
     const dismissEffectsBadge = displayNameStylesNewEffectsBadge.dismissEffectsBadge;
     const items3 = [callback, visibleFontOrder, visibleEffectOrder];
     const items4 = [navigation, isTryItOut];
-    const callback1 = obj7.useCallback(() => {
+    const callback1 = obj8.useCallback(() => {
       const randomDisplayNameStyles = DisplayNameStylesUtils.generateRandomDisplayNameStyles(
         visibleFontOrder,
         visibleEffectOrder,
@@ -363,34 +360,36 @@ export default function DisplayNameStylesEditScreen() {
       AnalyticsUtilsDefault.track(AnalyticEvents.DISPLAY_NAME_STYLES_SURPRISE_ME);
     }, items3);
     const items5 = [guildId, navigation];
-    const callback2 = obj7.useCallback(() => {
+    const callback2 = obj8.useCallback(() => {
       const result = HapticUtils.triggerHapticFeedback(HapticUtils.HapticFeedbackTypes.IMPACT_MEDIUM);
       if (isTryItOut) {
-        let tmpResult = UserProfileActionCreators;
-        const result1 = tmpResult.setTryItOutDisplayNameStyles(null);
+        const result1 = UserProfileActionCreators.setTryItOutDisplayNameStyles(null);
+        const tmpResult = UserProfileActionCreators;
       } else {
-        tmpResult = UserProfileSettingsActionCreators;
-        tmpResult.setPendingChanges({ displayNameStyles: null });
+        UserProfileSettingsActionCreators.setPendingChanges({ displayNameStyles: null });
+        const tmpResult2 = UserProfileSettingsActionCreators;
       }
       AnalyticsUtilsDefault.track(AnalyticEvents.DISPLAY_NAME_STYLES_REMOVED);
       navigation.goBack();
     }, items4);
     const items6 = [selectedFontId, displayNameStylesPendingName, showFontsBadge, dismissFontsBadge];
-    const callback3 = obj7.useCallback(() => {
-      let obj = HapticUtils;
-      const result = obj.triggerHapticFeedback(HapticUtils.HapticFeedbackTypes.IMPACT_MEDIUM);
-      obj = { guildId, displayNameStyles: null };
-      UserProfileSettingsActionCreators.setPendingChanges(obj);
+    const callback3 = obj8.useCallback(() => {
+      const result = HapticUtils.triggerHapticFeedback(HapticUtils.HapticFeedbackTypes.IMPACT_MEDIUM);
+      UserProfileSettingsActionCreators.setPendingChanges({ guildId, displayNameStyles: null });
       navigation.goBack();
     }, items5);
     const items7 = [first1, , ,];
     let id1;
-    const callback4 = obj7.useCallback(() => {
+    const callback4 = obj8.useCallback(() => {
       if (showFontsBadge) {
         dismissFontsBadge();
       }
-      const obj = { selectedFontId, onSelectFont, displayName: displayNameStylesPendingName };
-      obj.openLazy(asyncRequireImpl(15427, dependencyMap.paths), "DisplayNameStylesFontPickerSheet", obj);
+      ActionSheetActionCreatorsDefault.openLazy(
+        asyncRequireImpl(15428, dependencyMap.paths),
+        "DisplayNameStylesFontPickerSheet",
+        { selectedFontId, onSelectFont, displayName: displayNameStylesPendingName },
+      );
+      const obj2 = { selectedFontId, onSelectFont, displayName: displayNameStylesPendingName };
     }, items6);
     if (stateFromStores != null) {
       id1 = stateFromStores.id;
@@ -399,67 +398,71 @@ export default function DisplayNameStylesEditScreen() {
     items7[2] = showEffectsBadge;
     items7[3] = dismissEffectsBadge;
     const items8 = [tmp22, memo, first3, first1, callback];
-    const callback5 = obj7.useCallback(() => {
+    const callback5 = obj8.useCallback(() => {
       if (showEffectsBadge) {
         dismissEffectsBadge();
       }
-      let obj = ActionSheetActionCreatorsDefault;
       let id;
+      const obj = ActionSheetActionCreatorsDefault;
       if (stateFromStores != null) {
         id = stateFromStores.id;
       }
-      obj = { userId: id, selectedEffectId: first1, onSelectEffect };
-      obj.openLazy(asyncRequireImpl(15428, dependencyMap.paths), "DisplayNameStylesEffectPickerSheet", obj);
-      const tmp3 = asyncRequireImpl(15428, dependencyMap.paths);
+      obj.openLazy(asyncRequireImpl(15429, dependencyMap.paths), "DisplayNameStylesEffectPickerSheet", {
+        userId: id,
+        selectedEffectId: first1,
+        onSelectEffect,
+      });
+      const obj2 = { userId: id, selectedEffectId: first1, onSelectEffect };
+      const tmp3 = asyncRequireImpl(15429, dependencyMap.paths);
     }, items7);
-    const callback6 = obj7.useCallback(() => {
+    const callback6 = obj8.useCallback(() => {
       if (first1 === DisplayNameEffect.DisplayNameEffect.GUMMY) {
-        let obj = {
+        const obj2 = {
           selectedColors: memo,
           onSelectColors(arg0) {
             return callback(navigation(isTryItOut[8]).DisplayNameEffect.GUMMY, arg0);
           },
         };
         ActionSheetActionCreatorsDefault.openLazy(
-          asyncRequireImpl(15429, dependencyMap.paths),
+          asyncRequireImpl(15430, dependencyMap.paths),
           "DisplayNameStylesGummyColorPickerSheet",
-          obj,
+          obj2,
         );
       } else {
         const openLazy = ActionSheetActionCreatorsDefault.openLazy;
         const tmp2Result = asyncRequireImpl;
         if (closure_10) {
-          obj = {
+          const obj4 = {
             selectedColors: memo,
             selectedEffectId: first1,
             onSelectColors(arg0) {
               return callback(first1, arg0);
             },
           };
-          openLazy(tmp2Result(15434, dependencyMap.paths), "DisplayNameStylesGradientPickerSheet", obj);
+          openLazy(tmp2Result(15435, dependencyMap.paths), "DisplayNameStylesGradientPickerSheet", obj4);
         } else {
-          obj = { selectedColor: first3, selectedEffectId: first1, onSelectColor };
-          openLazy(tmp2Result(15437, dependencyMap.paths), "DisplayNameStylesColorPickerSheet", obj);
+          const obj = { selectedColor: first3, selectedEffectId: first1, onSelectColor };
+          openLazy(tmp2Result(15438, dependencyMap.paths), "DisplayNameStylesColorPickerSheet", obj);
         }
       }
     }, items8);
     const intl = tmp2(tmp3[38]).intl;
     const stringResult = intl.string(tmp9(tmp3[39])(selectedFontId));
-    let tmp47Result2 = null;
+    let tmp47Result5 = null;
     if (null != stateFromStores) {
-      obj1 = { theme: tmp14, children: null };
-      let obj2 = { value: { overrideSettings: true }, children: null };
-      let obj3 = { style: tmp.container, children: null };
-      let obj4 = {};
+      const obj5 = { theme: tmp14, children: null };
+      const obj6 = { value: { overrideSettings: true }, children: null };
+      const obj7 = { style: tmp.container, children: null };
+      const obj9 = {};
       let merged = Object.assign(tmp.contentContainer);
       let num = 0;
       if (memo1) {
         num = 70;
       }
-      const obj5 = { contentContainerStyle: null, children: null };
-      obj4.paddingBottom = num;
-      obj5.contentContainerStyle = obj4;
-      const obj6 = {
+      const obj10 = { contentContainerStyle: null, children: null };
+      obj9.paddingBottom = num;
+      obj10.contentContainerStyle = obj9;
+      const obj11 = {
         user: stateFromStores,
         displayName: displayNameStylesPendingName,
         guildId,
@@ -467,9 +470,9 @@ export default function DisplayNameStylesEditScreen() {
         selectedEffectId: first1,
         selectedColors: memo,
       };
-      const items9 = [closure_12(tmp9(tmp3[42]), obj6), ,];
-      obj7 = { style: tmp.fieldButtonGroup, children: null };
-      const obj8 = {
+      const items9 = [closure_12(tmp9(tmp3[42]), obj11), ,];
+      const obj12 = { style: tmp.fieldButtonGroup, children: null };
+      const obj13 = {
         onPress: callback4,
         style: tmp.fieldButton,
         accessibilityRole: "button",
@@ -486,31 +489,31 @@ export default function DisplayNameStylesEditScreen() {
         const _HermesInternal = HermesInternal;
         combined = "" + stringResult1 + ", " + stringResult;
       }
-      obj8.accessibilityLabel = combined;
-      const obj9 = { children: null };
-      const obj10 = { variant: "heading-md/semibold", color: "mobile-text-heading-primary", children: null };
+      obj13.accessibilityLabel = combined;
+      const obj14 = { children: null };
+      const obj15 = { variant: "heading-md/semibold", color: "mobile-text-heading-primary", children: null };
       const intl4 = tmp2(tmp3[38]).intl;
-      obj10.children = intl4.string(tmp9(tmp3[43])["0JCuGm"]);
-      const items10 = [closure_12(tmp2(tmp3[44]).Text, obj10)];
-      const obj11 = { variant: "text-md/normal", color: "text-subtle", children: stringResult };
-      items10[1] = closure_12(tmp2(tmp3[44]).Text, obj11);
-      obj9.children = items10;
-      const items11 = [colors(closure_5, obj9)];
+      obj15.children = intl4.string(tmp9(tmp3[43])["0JCuGm"]);
+      const items10 = [closure_12(tmp2(tmp3[44]).Text, obj15)];
+      const obj16 = { variant: "text-md/normal", color: "text-subtle", children: stringResult };
+      items10[1] = closure_12(tmp2(tmp3[44]).Text, obj16);
+      obj14.children = items10;
+      const items11 = [colors(closure_5, obj14)];
       if (showFontsBadge) {
-        const obj12 = { style: tmp.fieldButtonTrailing, children: null };
+        const obj17 = { style: tmp.fieldButtonTrailing, children: null };
         const items12 = [
           tmp47(tmp2(tmp3[45]).NewTag, {}),
           tmp47(tmp2(tmp3[46]).ChevronSmallRightIcon, { color: "icon-muted" }),
         ];
-        obj12.children = items12;
-        let tmp47Result = tmp48(tmp49, obj12);
+        obj17.children = items12;
+        let tmp47Result3 = tmp48(tmp49, obj17);
       } else {
-        tmp47Result = tmp47(tmp2(tmp3[46]).ChevronSmallRightIcon, { color: "icon-muted" });
+        tmp47Result3 = tmp47(tmp2(tmp3[46]).ChevronSmallRightIcon, { color: "icon-muted" });
       }
-      items11[1] = tmp47Result;
-      obj8.children = items11;
-      const items13 = [colors(onSelectFont, obj8), ,];
-      const obj13 = {
+      items11[1] = tmp47Result3;
+      obj13.children = items11;
+      const items13 = [colors(onSelectFont, obj13), ,];
+      const obj18 = {
         onPress: callback5,
         style: null,
         accessibilityRole: "button",
@@ -519,7 +522,7 @@ export default function DisplayNameStylesEditScreen() {
       };
       const items14 = [,];
       ({ fieldButton: arr17[0], fieldButtonBorder: arr17[1] } = tmp);
-      obj13.style = items14;
+      obj18.style = items14;
       const intl5 = tmp2(tmp3[38]).intl;
       const stringResult2 = intl5.string(tmp9(tmp3[43]).RVtMxT);
       const name = displayNameStylesEffectConfig.name;
@@ -531,31 +534,31 @@ export default function DisplayNameStylesEditScreen() {
         const _HermesInternal3 = HermesInternal;
         combined1 = "" + stringResult2 + ", " + name;
       }
-      obj13.accessibilityLabel = combined1;
-      const obj14 = { children: null };
-      const obj15 = { variant: "heading-md/semibold", color: "mobile-text-heading-primary", children: null };
+      obj18.accessibilityLabel = combined1;
+      const obj19 = { children: null };
+      const obj20 = { variant: "heading-md/semibold", color: "mobile-text-heading-primary", children: null };
       const intl7 = tmp2(tmp3[38]).intl;
-      obj15.children = intl7.string(tmp9(tmp3[43]).RVtMxT);
-      const items15 = [closure_12(tmp2(tmp3[44]).Text, obj15)];
-      const obj16 = { variant: "text-md/normal", color: "text-subtle", children: displayNameStylesEffectConfig.name };
-      items15[1] = closure_12(tmp2(tmp3[44]).Text, obj16);
-      obj14.children = items15;
-      const items16 = [colors(closure_5, obj14)];
+      obj20.children = intl7.string(tmp9(tmp3[43]).RVtMxT);
+      const items15 = [closure_12(tmp2(tmp3[44]).Text, obj20)];
+      const obj21 = { variant: "text-md/normal", color: "text-subtle", children: displayNameStylesEffectConfig.name };
+      items15[1] = closure_12(tmp2(tmp3[44]).Text, obj21);
+      obj19.children = items15;
+      const items16 = [colors(closure_5, obj19)];
       if (showEffectsBadge) {
-        const obj17 = { style: tmp.fieldButtonTrailing, children: null };
+        const obj22 = { style: tmp.fieldButtonTrailing, children: null };
         const items17 = [
           tmp47(tmp2(tmp3[45]).NewTag, {}),
           tmp47(tmp2(tmp3[46]).ChevronSmallRightIcon, { color: "icon-muted" }),
         ];
-        obj17.children = items17;
-        let tmp48Result = tmp48(tmp49, obj17);
+        obj22.children = items17;
+        let tmp48Result2 = tmp48(tmp49, obj22);
       } else {
-        tmp48Result = tmp47(tmp2(tmp3[46]).ChevronSmallRightIcon, { color: "icon-muted" });
+        tmp48Result2 = tmp47(tmp2(tmp3[46]).ChevronSmallRightIcon, { color: "icon-muted" });
       }
-      items16[1] = tmp48Result;
-      obj13.children = items16;
-      items13[1] = colors(onSelectFont, obj13);
-      const obj18 = {
+      items16[1] = tmp48Result2;
+      obj18.children = items16;
+      items13[1] = colors(onSelectFont, obj18);
+      const obj23 = {
         onPress: callback6,
         style: null,
         accessibilityRole: "button",
@@ -564,38 +567,38 @@ export default function DisplayNameStylesEditScreen() {
       };
       const items18 = [,];
       ({ fieldButton: arr21[0], fieldButtonBorder: arr21[1] } = tmp);
-      obj18.style = items18;
+      obj23.style = items18;
       const intl8 = tmp2(tmp3[38]).intl;
-      obj18.accessibilityLabel = intl8.string(tmp9(tmp3[43])["6OxgN7"]);
-      const obj19 = { style: tmp.fieldButtonLabel, children: null };
-      const obj20 = { variant: "heading-md/semibold", color: "mobile-text-heading-primary", children: null };
+      obj23.accessibilityLabel = intl8.string(tmp9(tmp3[43])["6OxgN7"]);
+      const obj24 = { style: tmp.fieldButtonLabel, children: null };
+      const obj25 = { variant: "heading-md/semibold", color: "mobile-text-heading-primary", children: null };
       const intl9 = tmp2(tmp3[38]).intl;
-      obj20.children = intl9.string(tmp9(tmp3[43])["6OxgN7"]);
-      const items19 = [closure_12(tmp2(tmp3[44]).Text, obj20)];
+      obj25.children = intl9.string(tmp9(tmp3[43])["6OxgN7"]);
+      const items19 = [closure_12(tmp2(tmp3[44]).Text, obj25)];
       let str13 = "text-md/normal";
       if (isDisplayNameStylesFlywheelSettersEnabled) {
         str13 = "text-sm/normal";
       }
-      const obj21 = { variant: str13, color: "text-subtle", lineClamp: 1, children: null };
+      const obj26 = { variant: str13, color: "text-subtle", lineClamp: 1, children: null };
       const mapped = memo.map((item) => navigation(isTryItOut[47]).int2hex(item));
-      obj21.children = mapped.join(", ");
-      items19[1] = closure_12(tmp2(tmp3[44]).Text, obj21);
-      obj19.children = items19;
-      const items20 = [colors(closure_5, obj19)];
-      const obj22 = { style: tmp.fieldButtonChevron, children: null };
-      const obj23 = { colors: memo, effectId: first1 };
+      obj26.children = mapped.join(", ");
+      items19[1] = closure_12(tmp2(tmp3[44]).Text, obj26);
+      obj24.children = items19;
+      const items20 = [colors(closure_5, obj24)];
+      const obj27 = { style: tmp.fieldButtonChevron, children: null };
+      const obj28 = { colors: memo, effectId: first1 };
       const items21 = [
-        closure_12(tmp9(tmp3[48]), obj23),
+        closure_12(tmp9(tmp3[48]), obj28),
         closure_12(tmp2(tmp3[46]).ChevronSmallRightIcon, { color: "icon-muted" }),
       ];
-      obj22.children = items21;
-      items20[1] = colors(closure_5, obj22);
-      obj18.children = items20;
-      items13[2] = colors(onSelectFont, obj18);
-      obj7.children = items13;
-      items9[1] = colors(closure_5, obj7);
-      const obj24 = { style: tmp.buttonContainer, children: null };
-      const obj25 = {
+      obj27.children = items21;
+      items20[1] = colors(closure_5, obj27);
+      obj23.children = items20;
+      items13[2] = colors(onSelectFont, obj23);
+      obj12.children = items13;
+      items9[1] = colors(closure_5, obj12);
+      const obj29 = { style: tmp.buttonContainer, children: null };
+      const obj30 = {
         text: null,
         onPress: null,
         variant: "tertiary",
@@ -605,13 +608,13 @@ export default function DisplayNameStylesEditScreen() {
         iconPosition: "start",
       };
       const intl10 = tmp2(tmp3[38]).intl;
-      obj25.text = intl10.string(tmp9(tmp3[43]).NOGFds);
-      obj25.onPress = callback1;
-      obj25.icon = closure_12(tmp2(tmp3[50]).DiceIcon, {});
-      const items22 = [closure_12(tmp2(tmp3[49]).Button, obj25), ,];
-      tmp47Result = null == guildId && null != tmp10Result;
+      obj30.text = intl10.string(tmp9(tmp3[43]).NOGFds);
+      obj30.onPress = callback1;
+      obj30.icon = closure_12(tmp2(tmp3[50]).DiceIcon, {});
+      const items22 = [closure_12(tmp2(tmp3[49]).Button, obj30), ,];
+      let tmp47Result = null == guildId && null != tmp10Result;
       if (tmp47Result) {
-        const obj26 = {
+        const obj31 = {
           text: null,
           onPress: null,
           variant: "tertiary",
@@ -621,19 +624,19 @@ export default function DisplayNameStylesEditScreen() {
           iconPosition: "start",
         };
         const intl11 = tmp2(tmp3[38]).intl;
-        obj26.text = intl11.string(tmp9(tmp3[43]).ymq8WQ);
-        obj26.onPress = callback2;
-        obj26.icon = tmp47(tmp2(tmp3[51]).DenyIcon, {});
-        tmp47Result = tmp47(tmp2(tmp3[49]).Button, obj26);
+        obj31.text = intl11.string(tmp9(tmp3[43]).ymq8WQ);
+        obj31.onPress = callback2;
+        obj31.icon = tmp47(tmp2(tmp3[51]).DenyIcon, {});
+        tmp47Result = tmp47(tmp2(tmp3[49]).Button, obj31);
       }
       items22[1] = tmp47Result;
-      let tmp47Result1 = null != guildId;
-      if (tmp47Result1) {
-        tmp47Result1 = null != guildDisplayNameStyles || null != pendingDisplayNameStyles;
+      let tmp47Result4 = null != guildId;
+      if (tmp47Result4) {
+        tmp47Result4 = null != guildDisplayNameStyles || null != pendingDisplayNameStyles;
         const tmp70 = null != guildDisplayNameStyles || null != pendingDisplayNameStyles;
       }
-      if (tmp47Result1) {
-        const obj27 = {
+      if (tmp47Result4) {
+        const obj32 = {
           text: null,
           onPress: null,
           variant: "tertiary",
@@ -643,24 +646,24 @@ export default function DisplayNameStylesEditScreen() {
           iconPosition: "start",
         };
         const intl12 = tmp2(tmp3[38]).intl;
-        obj27.text = intl12.string(tmp9(tmp3[43])["j/KRxc"]);
-        obj27.onPress = callback3;
-        obj27.icon = tmp47(tmp2(tmp3[51]).DenyIcon, {});
-        tmp47Result1 = tmp47(tmp2(tmp3[49]).Button, obj27);
+        obj32.text = intl12.string(tmp9(tmp3[43])["j/KRxc"]);
+        obj32.onPress = callback3;
+        obj32.icon = tmp47(tmp2(tmp3[51]).DenyIcon, {});
+        tmp47Result4 = tmp47(tmp2(tmp3[49]).Button, obj32);
       }
-      items22[2] = tmp47Result1;
-      obj24.children = items22;
-      items9[2] = colors(closure_5, obj24);
-      obj5.children = items9;
-      const items23 = [colors(selectedFontId, obj5)];
-      const obj28 = { onPress: displayNameStylesHandleApply, visible: memo1 };
-      items23[1] = closure_12(callback, obj28);
-      obj3.children = items23;
-      obj2.children = colors(closure_5, obj3);
-      obj1.children = closure_12(tmp2(tmp3[41]).DisplayNameStylesContext.Provider, obj2);
-      tmp47Result2 = tmp47(tmp2(tmp3[40]).ThemeContextProvider, obj1);
+      items22[2] = tmp47Result4;
+      obj29.children = items22;
+      items9[2] = colors(closure_5, obj29);
+      obj10.children = items9;
+      const items23 = [colors(selectedFontId, obj10)];
+      const obj33 = { onPress: displayNameStylesHandleApply, visible: memo1 };
+      items23[1] = closure_12(callback, obj33);
+      obj7.children = items23;
+      obj6.children = colors(closure_5, obj7);
+      obj5.children = closure_12(tmp2(tmp3[41]).DisplayNameStylesContext.Provider, obj6);
+      tmp47Result5 = tmp47(tmp2(tmp3[40]).ThemeContextProvider, obj5);
     }
-    return tmp47Result2;
+    return tmp47Result5;
   }
   first2 = displayNameStylesEffectConfig.defaultColors[0];
 }

@@ -1,7 +1,7 @@
 // discord_app/utils/native/NetworkUtils.tsx
 import LoggerDefault from "../../modules/debug/Logger.tsx";
 import Constants from "../../Constants.tsx";
-import configure from "../../../_runtime/01463_configure.js";
+import configure_mod from "../../../_runtime/01463_configure.js";
 import size from "../../../_runtime/metro/00002__.js";
 
 function notifyListeners(isConnected) {
@@ -45,6 +45,7 @@ let closure_4 = [];
 let closure_5 = [];
 let closure_6 = [];
 let c7 = null;
+let configure = configure_mod;
 configure = configure.fetch();
 configure.then((isConnected) => {
   flag = isConnected.isConnected;
@@ -52,7 +53,9 @@ configure.then((isConnected) => {
     flag = false;
   }
 });
-obj = {
+const result = size.fileFinishedImporting("utils/native/NetworkUtils.tsx");
+
+export default {
   addOnlineCallback(_handleNetworkOnline) {
     closure_4.push(_handleNetworkOnline);
     if (null == c7) {
@@ -153,6 +156,3 @@ obj = {
     return flag;
   },
 };
-const result = size.fileFinishedImporting("utils/native/NetworkUtils.tsx");
-
-export default obj;

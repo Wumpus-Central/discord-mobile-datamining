@@ -8,7 +8,6 @@ import showUserProfileActionSheetDefault from "../../../../user_profile/native/s
 import StageSparkleDefault from "../../../../stage_channels/native/components/StageSparkle.tsx";
 import Form from "../../../../../design/void/Form/native/index.tsx";
 import _modDef9932 from "../../../../../../_runtime/metro/09932__.js";
-import EventDetailTypes from "EventDetailTypes.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 import PresenceStore from "../../../../../stores/PresenceStore.tsx";
 import UserStore from "../../../../../stores/UserStore.tsx";
@@ -17,47 +16,47 @@ import TextStyles from "../../../../rebrand/native/TextStyles.tsx";
 require = fn;
 function EmptyDisplay(arg0) {
   ({ children, style } = arg0);
-  let obj = { style: null, children: null };
+  const obj = { style: null, children: null };
   const items = [closure_9().emptyDisplayContainer, style];
   obj.style = items;
-  obj = { icon: _modDef9932 };
-  const items1 = [React5(StageSparkleDefault, obj), children];
+  const obj2 = { icon: _modDef9932 };
+  const items1 = [React5(StageSparkleDefault, obj2), children];
   obj.children = items1;
   return React6(View, obj);
 }
 function FetchErrorDisplay(style) {
-  let obj = { style: style.style, children: null };
-  obj = {
+  const obj = { style: style.style, children: null };
+  const obj2 = {
     style: closure_9().emptyDisplayTitle,
     variant: "heading-lg/extrabold",
     color: "mobile-text-heading-primary",
     children: null,
   };
   const intl = util.intl;
-  obj.children = intl.string(util.t.obChXk);
-  obj.children = React5(Text_Text.Text, obj);
+  obj2.children = intl.string(util.t.obChXk);
+  obj.children = React5(Text_Text.Text, obj2);
   return React5(EmptyDisplay, obj);
 }
 function NoUsersDisplay(style) {
-  let obj = { style: style.style, children: null };
-  obj = {
+  const obj = { style: style.style, children: null };
+  const obj2 = {
     style: closure_9().emptyDisplayTitle,
     variant: "heading-lg/extrabold",
     color: "mobile-text-heading-primary",
     children: null,
   };
   const intl = util.intl;
-  obj.children = intl.string(util.t.hW0mBR);
-  obj.children = React5(Text_Text.Text, obj);
+  obj2.children = intl.string(util.t.hW0mBR);
+  obj.children = React5(Text_Text.Text, obj2);
   return React5(EmptyDisplay, obj);
 }
 function RemainingUsersRow(remainingUsersGroup) {
   const tmp = closure_9();
-  let obj = { DEPRECATED_style: tmp.userListRow, leading: null, label: null };
-  obj = { style: tmp.remainingUsersIconContainer, children: null };
-  obj = { source: _modDef9932, style: tmp.remainingUsersIcon };
-  obj.children = React5(FastImageDefault, obj);
-  obj.leading = React5(View, obj);
+  const obj = { DEPRECATED_style: tmp.userListRow, leading: null, label: null };
+  const obj2 = { style: tmp.remainingUsersIconContainer, children: null };
+  const obj3 = { source: _modDef9932, style: tmp.remainingUsersIcon };
+  obj2.children = React5(FastImageDefault, obj3);
+  obj.leading = React5(View, obj2);
   const intl = util.intl;
   obj.label = intl.formatToPlainString(util.t.BdQTfR, {
     userRemainCount: remainingUsersGroup.remainingUsersGroup.count,
@@ -81,13 +80,13 @@ class EventDetailRsvpSheet {
       constructor(arg0) {
         tmp = closure_9();
         obj = { style: tmp.staticMessageContentContainer, scrollEnabled: false, children: null };
-        obj = { style: null, children: global.children };
+        obj1 = { style: null, children: global.children };
         items = [,];
         items[0] = tmp.staticMessageContentContainer;
-        obj1 = { minHeight: contentHeight };
-        items[1] = obj1;
-        obj.style = items;
-        obj.children = jsx(View, obj);
+        obj4 = { minHeight: contentHeight };
+        items[1] = obj4;
+        obj1.style = items;
+        obj.children = jsx(View, obj1);
         return jsx(closure_0(closure_2[22]).BottomSheetScrollView, obj);
       }
     }
@@ -97,13 +96,12 @@ class EventDetailRsvpSheet {
     items[0] = guildId;
     callback = closure_3.useCallback((item) => {
       item = item.item;
-      let obj = EventDetailTypes;
       if (obj.isRemainingUsersGroup(item)) {
-        obj = { remainingUsersGroup: item };
-        let tmpResult = React5(RemainingUsersRow, obj);
+        const obj2 = { remainingUsersGroup: item };
+        let tmpResult = React5(RemainingUsersRow, obj2);
       } else {
-        obj = { eventUser: item, guildId };
-        tmpResult = React5(memoResult, obj);
+        const obj3 = { eventUser: item, guildId };
+        tmpResult = React5(memoResult, obj3);
       }
       return tmpResult;
     }, items);
@@ -111,82 +109,82 @@ class EventDetailRsvpSheet {
       num = 0;
       if (0 === userListItems.length) {
         tmp13 = jsx;
-        obj = { children: null };
+        obj1 = { children: null };
         tmp14 = guildId;
         tmp15 = closure_2;
-        obj1 = { style: null };
+        obj8 = { style: null };
         items1 = [,];
         class StaticMessageContainer {
           constructor(arg0) {
             tmp = closure_9();
             obj = { style: tmp.staticMessageContentContainer, scrollEnabled: false, children: null };
-            obj = { style: null, children: global.children };
+            obj1 = { style: null, children: global.children };
             items = [,];
             items[0] = tmp.staticMessageContentContainer;
-            obj1 = { minHeight: contentHeight };
-            items[1] = obj1;
-            obj.style = items;
-            obj.children = jsx(View, obj);
+            obj4 = { minHeight: contentHeight };
+            items[1] = obj4;
+            obj1.style = items;
+            obj.children = jsx(View, obj1);
             return jsx(closure_0(closure_2[22]).BottomSheetScrollView, obj);
           }
         }
         items1[1] = { paddingBottom: safeBottomPadding };
-        obj1.style = items1;
-        obj.children = jsx(guildId(closure_2[23]).ActivityIndicator, obj1);
-        tmp8 = jsx(StaticMessageContainer, obj);
+        obj8.style = items1;
+        obj1.children = jsx(guildId(closure_2[23]).ActivityIndicator, obj8);
+        tmp8 = jsx(StaticMessageContainer, obj1);
       }
       return tmp8;
     }
     if (null != error) {
       tmp11 = jsx;
-      obj2 = { children: null };
+      obj9 = { children: null };
       tmp12 = FetchErrorDisplay;
-      obj3 = { style: null };
+      obj10 = { style: null };
       items2 = [,];
       items2[0] = tmp.staticMessageContent;
       class StaticMessageContainer {
         constructor(arg0) {
           tmp = closure_9();
           obj = { style: tmp.staticMessageContentContainer, scrollEnabled: false, children: null };
-          obj = { style: null, children: global.children };
+          obj1 = { style: null, children: global.children };
           items = [,];
           items[0] = tmp.staticMessageContentContainer;
-          obj1 = { minHeight: contentHeight };
-          items[1] = obj1;
-          obj.style = items;
-          obj.children = jsx(View, obj);
+          obj4 = { minHeight: contentHeight };
+          items[1] = obj4;
+          obj1.style = items;
+          obj.children = jsx(View, obj1);
           return jsx(closure_0(closure_2[22]).BottomSheetScrollView, obj);
         }
       }
-      obj3.style = items2;
-      obj2.children = jsx(FetchErrorDisplay, obj3);
-      tmp8 = jsx(StaticMessageContainer, obj2);
+      obj10.style = items2;
+      obj9.children = jsx(FetchErrorDisplay, obj10);
+      tmp8 = jsx(StaticMessageContainer, obj9);
     } else {
       num2 = 0;
       if (0 === userListItems.length) {
         tmp9 = jsx;
-        obj4 = { children: null };
+        obj11 = { children: null };
         tmp10 = NoUsersDisplay;
-        obj5 = { style: null };
+        obj12 = { style: null };
         items3 = [,];
         items3[0] = tmp.staticMessageContent;
         class StaticMessageContainer {
           constructor(arg0) {
             tmp = closure_9();
             obj = { style: tmp.staticMessageContentContainer, scrollEnabled: false, children: null };
-            obj = { style: null, children: global.children };
+            obj1 = { style: null, children: global.children };
             items = [,];
             items[0] = tmp.staticMessageContentContainer;
-            obj1 = { minHeight: contentHeight };
-            items[1] = obj1;
-            obj.style = items;
-            obj.children = jsx(View, obj);
+            obj4 = { minHeight: contentHeight };
+            items[1] = obj4;
+            obj1.style = items;
+            obj.children = jsx(View, obj1);
             return jsx(closure_0(closure_2[22]).BottomSheetScrollView, obj);
           }
         }
-        obj5.style = items3;
-        obj4.children = jsx(NoUsersDisplay, obj5);
-        tmp8 = jsx(StaticMessageContainer, obj4);
+        obj12.style = items3;
+        obj11.children = jsx(NoUsersDisplay, obj12);
+        tmp8 = jsx(StaticMessageContainer, obj11);
       } else {
         tmp3 = jsx;
         tmp4 = guildId;
@@ -204,13 +202,13 @@ class EventDetailRsvpSheet {
           constructor(arg0) {
             tmp = closure_9();
             obj = { style: tmp.staticMessageContentContainer, scrollEnabled: false, children: null };
-            obj = { style: null, children: global.children };
+            obj1 = { style: null, children: global.children };
             items = [,];
             items[0] = tmp.staticMessageContentContainer;
-            obj1 = { minHeight: contentHeight };
-            items[1] = obj1;
-            obj.style = items;
-            obj.children = jsx(View, obj);
+            obj4 = { minHeight: contentHeight };
+            items[1] = obj4;
+            obj1.style = items;
+            obj.children = jsx(View, obj1);
             return jsx(closure_0(closure_2[22]).BottomSheetScrollView, obj);
           }
         }
@@ -232,28 +230,24 @@ const View = fn(17).View;
 const Fonts = fn(1085).Fonts;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-fn(4636);
+const createStyles = fn(4636);
 let obj = {
   staticMessageContentContainer: { flex: 1, padding: 16 },
   userList: { paddingTop: 16 },
   userListRow: { paddingVertical: 8 },
-  userName: null,
-  emptyDisplayContainer: null,
-  staticMessageContent: null,
+  userName: { color: nativeDefault.colors.TEXT_DEFAULT, fontFamily: Fonts.PRIMARY_SEMIBOLD, fontSize: 16 },
+  emptyDisplayContainer: { alignItems: "center", justifyContent: "center", minHeight: 200 },
+  staticMessageContent: { height: "100%" },
   emptyDisplayTitle: null,
   remainingUsersIcon: null,
   remainingUsersIconContainer: null,
 };
-obj = { color: nativeDefault.colors.TEXT_DEFAULT, fontFamily: Fonts.PRIMARY_SEMIBOLD, fontSize: 16 };
-obj.userName = obj;
-obj.emptyDisplayContainer = { alignItems: "center", justifyContent: "center", minHeight: 200 };
-obj.staticMessageContent = { height: "100%" };
-const createStyles = { paddingTop: 24 };
+let obj4 = { paddingTop: 24 };
 const merged = Object.assign(
   TextStyles(Fonts.DISPLAY_EXTRABOLD, nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, 20, { marginBottom: 8 }),
 );
-createStyles.textAlign = "center";
-obj.emptyDisplayTitle = createStyles;
+obj4.textAlign = "center";
+obj.emptyDisplayTitle = obj4;
 let size = { tintColor: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, height: 18, width: 18 };
 obj.remainingUsersIcon = size;
 const size1 = {
@@ -271,13 +265,12 @@ const memoResult = noop.memo((eventUser) => {
   let analyticsLocations;
   const tmp = closure_9();
   analyticsLocations = analyticsLocations(7265)().analyticsLocations;
-  let obj = eventUser(504);
   const items = [UserStore];
-  const stateFromStores = obj.useStateFromStores(items, () => UserStore.getUser(eventUser.user_id));
-  let obj1 = eventUser(504);
+  const stateFromStores = eventUser(504).useStateFromStores(items, () => UserStore.getUser(eventUser.user_id));
+  const obj = eventUser(504);
   const items1 = [PresenceStore];
   const items2 = [eventUser.user_id];
-  const stateFromStoresObject = obj1.useStateFromStoresObject(
+  const stateFromStoresObject = eventUser(504).useStateFromStoresObject(
     items1,
     () => ({
       isMobileOnline: PresenceStore.isMobileOnline(eventUser.user_id),
@@ -287,39 +280,39 @@ const memoResult = noop.memo((eventUser) => {
     items2,
   );
   ({ isMobileOnline, isVROnline, status } = stateFromStoresObject);
-  obj = { DEPRECATED_style: tmp.userListRow, leading: null, label: null, onPress: null };
+  const obj3 = { DEPRECATED_style: tmp.userListRow, leading: null, label: null, onPress: null };
   let tmp7Result = null;
   if (null != stateFromStores) {
-    obj = {
+    const obj4 = {
       user: stateFromStores,
       guildId: eventUser.guildId,
       isMobileOnline,
       isVROnline,
       status,
-      size: tmp4(1178).AvatarSizes.REFRESH_MEDIUM_32,
+      size: tmp4(1176).AvatarSizes.REFRESH_MEDIUM_32,
       autoStatusCutout: true,
     };
-    tmp7Result = closure_7(tmp4(1178).Avatar, obj);
+    tmp7Result = closure_7(tmp4(1176).Avatar, obj4);
   }
-  obj.leading = tmp7Result;
-  obj1 = { user: stateFromStores, nick: null, usernameStyle: null, nicknameStyle: null };
+  obj3.leading = tmp7Result;
+  const obj6 = { user: stateFromStores, nick: null, usernameStyle: null, nicknameStyle: null };
   const member = eventUser.member;
   let nick;
-  let tmp2Result = tmp2(9933);
+  const obj2 = eventUser(504);
   if (member != null) {
     nick = member.nick;
   }
   if (nick == null) {
-    tmp2Result = tmp2(4481);
-    nick = tmp2Result.getName(eventUser.user);
+    nick = tmp2(4481).getName(eventUser.user);
+    const tmp2Result2 = tmp2(4481);
   }
-  obj1.nick = nick;
+  obj6.nick = nick;
   ({ userName: obj5.usernameStyle, userName: obj5.nicknameStyle } = tmp);
-  obj.label = closure_7(tmp2Result, obj1);
-  obj.onPress = function onPress() {
+  obj3.label = closure_7(analyticsLocations(9933), obj6);
+  obj3.onPress = function onPress() {
     showUserProfileActionSheetDefault({ userId: eventUser.user_id, sourceAnalyticsLocations: analyticsLocations });
   };
-  return closure_7(eventUser(8716).FormRow, obj, eventUser.user_id);
+  return closure_7(eventUser(8716).FormRow, obj3, eventUser.user_id);
 });
 EventDetailRsvpSheet.displayName = "EventDetailRsvpSheet";
 size = fn(2);

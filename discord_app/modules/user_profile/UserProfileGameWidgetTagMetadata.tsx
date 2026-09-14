@@ -4,23 +4,21 @@ import WidgetGameTag from "../../../discord_common/js/shared/shared-constants/Wi
 import size from "../../../_runtime/metro/00002__.js";
 
 let obj = { RIBBON: "ribbon", THUMBS_UP: "thumbsUp", THUMBS_DOWN: "thumbsDown", FRIENDS: "friends" };
-obj = {
-  getText() {
-    const intl = util.intl;
-    return intl.string(util.t.jbIRBE);
-  },
-  iconRole: obj.RIBBON,
-};
-obj = {
-  getText() {
-    const intl = util.intl;
-    return intl.string(util.t.xcFFv6);
-  },
-  iconRole: obj.RIBBON,
-};
 let closure_2 = {
-  [WidgetGameTag.WidgetGameTag.BETTER_THAN_YOU]: obj,
-  [WidgetGameTag.WidgetGameTag.CASUAL]: obj,
+  [WidgetGameTag.WidgetGameTag.BETTER_THAN_YOU]: {
+    getText() {
+      const intl = util.intl;
+      return intl.string(util.t.jbIRBE);
+    },
+    iconRole: obj.RIBBON,
+  },
+  [WidgetGameTag.WidgetGameTag.CASUAL]: {
+    getText() {
+      const intl = util.intl;
+      return intl.string(util.t.xcFFv6);
+    },
+    iconRole: obj.RIBBON,
+  },
   [WidgetGameTag.WidgetGameTag.INTERMEDIATE]: {
     getText() {
       const intl = util.intl;
@@ -110,7 +108,7 @@ const result = size.fileFinishedImporting("modules/user_profile/UserProfileGameW
 
 export const WidgetGameTagIconRole = obj;
 export const buildWidgetGameTagMetadata = function buildWidgetGameTagMetadata(arg0) {
-  let obj = {};
+  const obj = {};
   const keys = Object.keys(closure_2);
   const iter = keys[Symbol.iterator]();
   const nextResult = iter.next();
@@ -118,10 +116,10 @@ export const buildWidgetGameTagMetadata = function buildWidgetGameTagMetadata(ar
     let tmp5 = closure_2[nextResult];
     let tmp6 = tmp5;
     if (null != tmp5) {
-      obj = { getText: null, icon: null };
-      obj.getText = tmp6.getText;
-      obj.icon = arg0[tmp6.iconRole];
-      obj[tmp3] = obj;
+      let obj2 = { getText: null, icon: null };
+      obj2.getText = tmp6.getText;
+      obj2.icon = arg0[tmp6.iconRole];
+      obj[tmp3] = obj2;
     }
     continue;
   }

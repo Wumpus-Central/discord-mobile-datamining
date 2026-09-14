@@ -22,10 +22,10 @@ export default function QuestAccessSuspendedBottomSheet() {
   obj.title = intl.string(util.t.WfwodX);
   const intl2 = util.intl;
   obj.description = intl2.string(util.t.I27WXW);
-  obj = { grow: true, size: "lg", variant: "primary", text: null, onPress: null };
+  const obj2 = { grow: true, size: "lg", variant: "primary", text: null, onPress: null };
   const intl3 = util.intl;
-  obj.text = intl3.string(util.t.hvVgAZ);
-  obj.onPress = callback;
+  obj2.text = intl3.string(util.t.hvVgAZ);
+  obj2.onPress = callback;
   obj.actions = jsx(components_Button_Button.Button, {
     grow: true,
     size: "lg",
@@ -33,5 +33,5 @@ export default function QuestAccessSuspendedBottomSheet() {
     text: null,
     onPress: null,
   });
-  return jsx(PromoSheet.PromoSheet, { grow: true, size: "lg", variant: "primary", text: null, onPress: null });
+  return jsx(PromoSheet.PromoSheet, { title: null, description: null, actions: null });
 }

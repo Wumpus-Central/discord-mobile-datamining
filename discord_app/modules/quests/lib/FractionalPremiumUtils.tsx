@@ -9,18 +9,17 @@ import size from "../../../../_runtime/metro/00002__.js";
 const result = size.fileFinishedImporting("modules/quests/lib/FractionalPremiumUtils.tsx");
 
 export const getDurationStringOfFractionalPremium = function getDurationStringOfFractionalPremium(arr) {
-  let obj = PremiumUtils;
-  const fractionalPremiumUnitsHoursFromSkuIds = obj.getFractionalPremiumUnitsHoursFromSkuIds(
+  const fractionalPremiumUnitsHoursFromSkuIds = PremiumUtils.getFractionalPremiumUnitsHoursFromSkuIds(
     arr.map((skuId) => skuId.skuId),
   );
   if (fractionalPremiumUnitsHoursFromSkuIds % 24 === 0) {
     const intl2 = util.intl;
-    obj = { days: fractionalPremiumUnitsHoursFromSkuIds / 24 };
-    let formatToPlainStringResult = intl2.formatToPlainString(util.t.Cz1G97, obj);
+    const obj2 = { days: fractionalPremiumUnitsHoursFromSkuIds / 24 };
+    let formatToPlainStringResult = intl2.formatToPlainString(util.t.Cz1G97, obj2);
   } else {
     const intl = util.intl;
-    obj = { hours: fractionalPremiumUnitsHoursFromSkuIds };
-    formatToPlainStringResult = intl.formatToPlainString(util.t.J9Lu4h, obj);
+    const obj3 = { hours: fractionalPremiumUnitsHoursFromSkuIds };
+    formatToPlainStringResult = intl.formatToPlainString(util.t.J9Lu4h, obj3);
   }
   return formatToPlainStringResult;
 };

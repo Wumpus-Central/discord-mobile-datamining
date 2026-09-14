@@ -8,11 +8,12 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-fn(4636);
-let createStyles = { container: { flexGrow: 1, alignItems: "center", flexDirection: "row" }, botTag: null };
-createStyles = { marginLeft: nativeDefault.space.PX_4 };
-createStyles.botTag = createStyles;
-let closure_6 = createStyles.createStyles(createStyles);
+const createStyles = fn(4636);
+let obj2 = {
+  container: { flexGrow: 1, alignItems: "center", flexDirection: "row" },
+  botTag: { marginLeft: nativeDefault.space.PX_4 },
+};
+let closure_6 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/native/DiscordTag.tsx");
 
@@ -23,14 +24,20 @@ export default function DiscordTag(arg0) {
     hideBotTag = false;
   }
   const tmp = closure_6();
-  let obj = { style: tmp.container, children: null };
+  const obj = { style: tmp.container, children: null };
   if (null != nick) {
-    obj = { variant: "text-md/semibold", maxFontSizeMultiplier: 2, style: nicknameStyle, lineClamp: 1, children: nick };
-    let tmp2Result = React4(Text_Text.Text, obj);
+    const obj2 = {
+      variant: "text-md/semibold",
+      maxFontSizeMultiplier: 2,
+      style: nicknameStyle,
+      lineClamp: 1,
+      children: nick,
+    };
+    let tmp2Result2 = React4(Text_Text.Text, obj2);
   } else {
-    tmp2Result = null;
+    tmp2Result2 = null;
     if (null != user) {
-      obj = {
+      const obj3 = {
         variant: "text-md/semibold",
         style: usernameStyle,
         lineClamp: 1,
@@ -39,19 +46,19 @@ export default function DiscordTag(arg0) {
       };
       const items = [user.toString()];
       const hasUniqueUsernameResult = user.hasUniqueUsername();
-      tmp2Result = !hasUniqueUsernameResult;
+      let tmp2Result = !hasUniqueUsernameResult;
       if (!hasUniqueUsernameResult) {
-        const obj1 = { variant: "text-md/semibold", color: "text-muted", style: discriminatorStyle, children: null };
+        const obj4 = { variant: "text-md/semibold", color: "text-muted", style: discriminatorStyle, children: null };
         const items1 = ["#", user.discriminator];
-        obj1.children = items1;
-        tmp2Result = hasOwnProperty(Text_Text.Text, obj1);
+        obj4.children = items1;
+        tmp2Result = hasOwnProperty(Text_Text.Text, obj4);
       }
       items[1] = tmp2Result;
-      obj.children = items;
-      tmp2Result = hasOwnProperty(Text_Text.Text, obj);
+      obj3.children = items;
+      tmp2Result2 = hasOwnProperty(Text_Text.Text, obj3);
     }
   }
-  const items2 = [tmp2Result];
+  const items2 = [tmp2Result2];
   let bot;
   if (user != null) {
     bot = user.bot;
@@ -60,8 +67,8 @@ export default function DiscordTag(arg0) {
   if (true === bot) {
     tmp13 = null;
     if (!hideBotTag) {
-      const obj2 = { style: tmp.botTag, verified: user.isVerifiedBot() };
-      tmp13 = React4(BotTagDefault, obj2);
+      const obj5 = { style: tmp.botTag, verified: user.isVerifiedBot() };
+      tmp13 = React4(BotTagDefault, obj5);
     }
   }
   items2[1] = tmp13;

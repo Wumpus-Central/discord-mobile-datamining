@@ -18,7 +18,6 @@ export default noop.memo((type) => {
   type = type.type;
   const options = type.options;
   const required = type.required;
-  let obj = ref;
   ref = ref.useRef(null);
   const items = [options];
   const memo = ref.useMemo(() => {
@@ -29,17 +28,16 @@ export default noop.memo((type) => {
     }
     return value;
   }, items);
-  let obj1 = type(required[2]);
   let tmp5;
   if (null != memo) {
-    obj = { type, value: memo };
-    tmp5 = obj;
+    const obj3 = { type, value: memo };
+    tmp5 = obj3;
   }
-  const componentState = obj1.useComponentState(type, tmp5);
+  const componentState = type(required[2]).useComponentState(type, tmp5);
   const state = componentState.state;
   const executeStateUpdate = componentState.executeStateUpdate;
   const items1 = [state, type];
-  const memo1 = obj.useMemo(() => {
+  const memo1 = ref.useMemo(() => {
     type = undefined;
     if (state != null) {
       type = state.type;
@@ -51,67 +49,78 @@ export default noop.memo((type) => {
     return value;
   }, items1);
   __initData = tmp8;
+  let obj2 = type(required[2]);
   const fn = function p() {
-    let obj = spring;
     let num = 0;
     if (closure_7) {
       num = 60;
     }
-    obj = { maxHeight: obj.withSpring(num, springPresets.SUBTLE_SPRING), marginTop: null, opacity: null };
-    let tmpResult = spring;
+    const obj2 = { maxHeight: spring.withSpring(num, springPresets.SUBTLE_SPRING), marginTop: null, opacity: null };
     let num2 = 0;
     if (closure_7) {
       num2 = 8;
     }
-    obj.marginTop = tmpResult.withSpring(num2, springPresets.SUBTLE_SPRING);
-    tmpResult = spring;
+    obj2.marginTop = spring.withSpring(num2, springPresets.SUBTLE_SPRING);
+    const tmpResult = spring;
     let num3 = 0;
     if (closure_7) {
       num3 = 1;
     }
-    obj.opacity = tmpResult.withSpring(num3, springPresets.SUBTLE_SPRING);
-    return obj;
+    obj2.opacity = spring.withSpring(num3, springPresets.SUBTLE_SPRING);
+    return obj2;
   };
-  obj = { withSpring: tmp3(tmp4[4]).withSpring, hasValue: tmp8, SUBTLE_SPRING: tmp3(tmp4[5]).SUBTLE_SPRING };
-  fn.__closure = obj;
+  const tmp3Result = type(required[3]);
+  fn.__closure = {
+    withSpring: type(required[4]).withSpring,
+    hasValue: null != memo1,
+    SUBTLE_SPRING: type(required[5]).SUBTLE_SPRING,
+  };
   fn.__workletHash = 1287549755250;
   fn.__initData = __initData;
-  const animatedStyle = type(required[3]).useAnimatedStyle(fn);
+  const animatedStyle = tmp3Result.useAnimatedStyle(fn);
   let str = memo1;
   if (memo1 == null) {
     str = "";
   }
-  obj1 = {
-    hasIcons: false,
-    defaultValue: str,
-    onChange(value) {
-      if ("" !== value) {
-        if (null == value) {
-          let obj = { type, value: null };
-          executeStateUpdate(obj);
-          const current = ref.current;
-          if (current != null) {
-            current.setValue("");
-          }
-        } else {
-          obj = { type, value };
-          executeStateUpdate(obj);
-        }
-      }
-    },
-    groupRef: ref,
-    children: options.map((label) =>
-      state(
-        type(required[7]).TableRadioRow,
-        { label: label.label, subLabel: label.description, value: label.value },
-        label.value,
-      ),
-    ),
+  const obj4 = {
+    withSpring: type(required[4]).withSpring,
+    hasValue: null != memo1,
+    SUBTLE_SPRING: type(required[5]).SUBTLE_SPRING,
   };
-  const children = [state(type(required[6]).TableRadioGroup, obj1)];
+  const tmp10 = memo1;
+  const tmp11 = executeStateUpdate;
+  const children = [
+    state(type(required[6]).TableRadioGroup, {
+      hasIcons: false,
+      defaultValue: str,
+      onChange(value) {
+        if ("" !== value) {
+          if (null == value) {
+            const obj2 = { type, value: null };
+            executeStateUpdate(obj2);
+            const current = ref.current;
+            if (current != null) {
+              current.setValue("");
+            }
+          } else {
+            const obj = { type, value };
+            executeStateUpdate(obj);
+          }
+        }
+      },
+      groupRef: ref,
+      children: options.map((label) =>
+        state(
+          type(required[7]).TableRadioRow,
+          { label: label.label, subLabel: label.description, value: label.value },
+          label.value,
+        ),
+      ),
+    }),
+  ];
   let tmp12Result = !required;
   if (!required) {
-    const obj2 = {
+    const obj6 = {
       style: animatedStyle,
       accessibilityElementsHidden: !tmp8,
       importantForAccessibility: null,
@@ -121,22 +130,22 @@ export default noop.memo((type) => {
     if (tmp8) {
       str2 = "auto";
     }
-    obj2.importantForAccessibility = str2;
-    const obj3 = { icon: null, label: null, onPress: null, start: true, end: true };
-    const obj4 = { IconComponent: tmp3(tmp4[9]).XSmallIcon };
-    obj3.icon = tmp12(tmp3(tmp4[8]).TableRow.Icon, obj4);
+    obj6.importantForAccessibility = str2;
+    const obj7 = { icon: null, label: null, onPress: null, start: true, end: true };
+    const obj8 = { IconComponent: tmp3(tmp4[9]).XSmallIcon };
+    obj7.icon = tmp12(tmp3(tmp4[8]).TableRow.Icon, obj8);
     const intl = tmp3(tmp4[10]).intl;
-    obj3.label = intl.string(tmp3(tmp4[10]).t["5uAtZN"]);
-    obj3.onPress = function onPress() {
+    obj7.label = intl.string(tmp3(tmp4[10]).t["5uAtZN"]);
+    obj7.onPress = function onPress() {
       executeStateUpdate({ type, value: null });
       const current = ref.current;
       if (current != null) {
         current.setValue("");
       }
     };
-    obj2.children = tmp12(tmp3(tmp4[8]).TableRow, obj3);
-    tmp12Result = tmp12(options(tmp4[3]).View, obj2);
+    obj6.children = tmp12(tmp3(tmp4[8]).TableRow, obj7);
+    tmp12Result = tmp12(options(tmp4[3]).View, obj6);
   }
   children[1] = tmp12Result;
-  return memo1(executeStateUpdate, { children });
+  return tmp10(tmp11, { children });
 });

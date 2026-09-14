@@ -2,11 +2,12 @@
 import initialize from "../../../discord_common/js/packages/flux/index.tsx";
 import nativeDefault from "../../../discord_common/js/packages/tokens/native.tsx";
 import useGuildPowerupsBoostCountDefault from "../../modules/premium/powerups/hooks/useGuildPowerupsBoostCount.tsx";
+import useThemeDefault from "../../hooks/useTheme.tsx";
 import GuildIconDefault from "../../modules/guild/native/GuildIcon.tsx";
 import UserSettingsModalActionCreatorsDefault from "../../actions/UserSettingsModalActionCreators.tsx";
 import transitionToGuild from "../../modules/routing/transitionToGuild.native.tsx";
 import TouchableHitBoxDefault from "../../design/void/TouchableHitBox/native/TouchableHitBox.tsx";
-import _modDef10538 from "../../../_runtime/metro/10538__.js";
+import _modDef10539 from "../../../_runtime/metro/10539__.js";
 import BoostedGuildTierProgressCircleDefault from "../../modules/premium/native/BoostedGuildTierProgressCircle.tsx";
 import noop from "../../../_runtime/metro/00019__.js";
 import GuildStore from "../../stores/GuildStore.tsx";
@@ -16,16 +17,16 @@ require = fn;
 function GuildBoostingGuildListItem(guildId) {
   guildId = guildId.guildId;
   const tmp = closure_10();
-  let obj = guildId(504);
+  const tmp4 = useThemeDefault();
   const items = [GuildStore];
-  const stateFromStores = obj.useStateFromStores(items, () => GuildStore.getGuild(guildId));
+  const stateFromStores = guildId(504).useStateFromStores(items, () => GuildStore.getGuild(guildId));
   useGuildPowerupsBoostCountDefault;
   if (stateFromStores != null) {
     const id = stateFromStores.id;
   }
   let tmp9 = null;
   if (null != stateFromStores) {
-    obj = {
+    const obj2 = {
       style: tmp.guildCard,
       activeOpacity: 0.5,
       accessibilityRole: "button",
@@ -35,30 +36,31 @@ function GuildBoostingGuildListItem(guildId) {
       },
       children: null,
     };
-    obj = { guild: stateFromStores, size: null, style: null, selected: false };
-    const tmp2Result = GuildIconDefault;
-    obj.size = tmp5(5665).GuildIconSizes.LARGE;
-    obj.style = tmp.guildIcon;
-    const items1 = [closure_8(tmp2Result, obj), ,];
-    const obj1 = { style: tmp.guildCardDescription, children: null };
-    const obj2 = { variant: "text-md/bold", children: stateFromStores.name };
-    const items2 = [closure_8(tmp5(4632).Text, obj2)];
-    const obj3 = { style: tmp.subscriptionInfo, children: null };
-    const obj4 = { source: _modDef10538, style: tmp.premiumGuildImage, resizeMode: "contain", resizeMethod: "resize" };
-    const items3 = [closure_8(closure_4, obj4)];
-    const obj5 = { variant: "text-xs/medium", children: null };
+    const obj3 = { guild: stateFromStores, size: null, style: null, selected: false };
+    const tmp2Result = TouchableHitBoxDefault;
+    obj3.size = tmp5(5665).GuildIconSizes.LARGE;
+    obj3.style = tmp.guildIcon;
+    const items1 = [closure_8(GuildIconDefault, obj3), ,];
+    const obj4 = { style: tmp.guildCardDescription, children: null };
+    const obj5 = { variant: "text-md/bold", children: stateFromStores.name };
+    const items2 = [closure_8(tmp5(4632).Text, obj5)];
+    const obj6 = { style: tmp.subscriptionInfo, children: null };
+    const obj7 = { source: _modDef10539, style: tmp.premiumGuildImage, resizeMode: "contain", resizeMethod: "resize" };
+    const items3 = [closure_8(closure_4, obj7)];
+    const obj8 = { variant: "text-xs/medium", children: null };
     const intl = tmp5(1114).intl;
-    const obj6 = { subscriberCount: tmp8 };
-    obj5.children = intl.format(tmp5(1114).t.If4iTS, obj6);
-    items3[1] = closure_8(tmp5(4632).Text, obj5);
-    obj3.children = items3;
-    items2[1] = closure_9(closure_3, obj3);
-    obj1.children = items2;
-    items1[1] = closure_9(closure_3, obj1);
-    const obj7 = { guild: stateFromStores, theme: tmp4 };
-    items1[2] = closure_8(BoostedGuildTierProgressCircleDefault, obj7);
-    obj.children = items1;
-    tmp9 = closure_9(tmp2Result, obj);
+    const obj9 = { subscriberCount: tmp8 };
+    obj8.children = intl.format(tmp5(1114).t.If4iTS, obj9);
+    items3[1] = closure_8(tmp5(4632).Text, obj8);
+    obj6.children = items3;
+    items2[1] = closure_9(closure_3, obj6);
+    obj4.children = items2;
+    items1[1] = closure_9(closure_3, obj4);
+    const obj10 = { guild: stateFromStores, theme: tmp4 };
+    items1[2] = closure_8(BoostedGuildTierProgressCircleDefault, obj10);
+    obj2.children = items1;
+    tmp9 = closure_9(tmp2Result, obj2);
+    const tmp2Result2 = GuildIconDefault;
   }
   return tmp9;
 }
@@ -67,31 +69,25 @@ get_ActivityIndicator = fn(17);
 let closure_7 = fn(1074).NUMBER_OF_GUILDS_TO_RECOMMEND_BOOSTING;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-fn(4636);
-let createStyles = {
-  guildCard: null,
-  guildIcon: null,
-  guildCardDescription: null,
-  subscriptionInfo: null,
-  premiumGuildImage: null,
+const createStyles = fn(4636);
+let obj2 = {
+  guildCard: {
+    padding: 12,
+    paddingLeft: 16,
+    borderRadius: nativeDefault.radii.xs,
+    marginBottom: 8,
+    minHeight: 96,
+    flexDirection: "row",
+    justifyContent: "center",
+    alignItems: "center",
+    backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST,
+  },
+  guildIcon: { marginRight: 16 },
+  guildCardDescription: { flex: 1 },
+  subscriptionInfo: { flexDirection: "row", alignItems: "center" },
+  premiumGuildImage: { width: 18, height: 12, marginLeft: -5 },
 };
-createStyles = {
-  padding: 12,
-  paddingLeft: 16,
-  borderRadius: nativeDefault.radii.xs,
-  marginBottom: 8,
-  minHeight: 96,
-  flexDirection: "row",
-  justifyContent: "center",
-  alignItems: "center",
-  backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST,
-};
-createStyles.guildCard = createStyles;
-createStyles.guildIcon = { marginRight: 16 };
-createStyles.guildCardDescription = { flex: 1 };
-createStyles.subscriptionInfo = { flexDirection: "row", alignItems: "center" };
-createStyles.premiumGuildImage = { width: 18, height: 12, marginLeft: -5 };
-let closure_10 = createStyles.createStyles(createStyles);
+let closure_10 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("components_native/premium/GuildBoostingGuildList.tsx");
 
@@ -100,11 +96,10 @@ export default function GuildBoostingGuildList(guildCount) {
   if (guildCount === undefined) {
     guildCount = closure_7;
   }
-  let obj = initialize;
   const items = [SortedGuildStore];
-  const stateFromStores = obj.useStateFromStores(items, () => flattenedGuildIds.getFlattenedGuildIds());
-  obj = { style: guildCount.style, children: null };
+  const stateFromStores = initialize.useStateFromStores(items, () => flattenedGuildIds.getFlattenedGuildIds());
+  const obj2 = { style: guildCount.style, children: null };
   const substr = stateFromStores.slice(0, guildCount);
-  obj.children = substr.map((guildId) => closure_1_8(GuildBoostingGuildListItem, { guildId }, guildId));
-  return React6(React3, obj);
+  obj2.children = substr.map((guildId) => closure_1_8(GuildBoostingGuildListItem, { guildId }, guildId));
+  return React6(React3, obj2);
 }

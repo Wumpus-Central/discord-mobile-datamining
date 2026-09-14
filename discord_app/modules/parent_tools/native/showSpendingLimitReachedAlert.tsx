@@ -20,30 +20,27 @@ export const isSpendingLimitError = function isSpendingLimitError(billingError) 
   return tmp3;
 };
 export const showSpendingLimitReachedAlert = function showSpendingLimitReachedAlert() {
+  activeLinkUserIds = activeLinkUserIds(8768).getActiveLinkUserIds();
   let obj = activeLinkUserIds(8768);
-  activeLinkUserIds = obj.getActiveLinkUserIds();
-  let obj1 = actions_AlertActionCreatorsDefault;
-  obj = { title: null, body: null, isDismissable: true };
+  const obj3 = { title: null, body: null, isDismissable: true };
   const intl = activeLinkUserIds(1114).intl;
-  obj.title = intl.string(activeLinkUserIds(1114).t.QJKKrT);
+  obj3.title = intl.string(activeLinkUserIds(1114).t.QJKKrT);
   const intl2 = activeLinkUserIds(1114).intl;
-  obj.body = intl2.string(activeLinkUserIds(1114).t["73Islf"]);
+  obj3.body = intl2.string(activeLinkUserIds(1114).t["73Islf"]);
   if (activeLinkUserIds.length > 0) {
-    obj = { confirmText: null, onConfirm: null, cancelText: null };
+    const obj4 = { confirmText: null, onConfirm: null, cancelText: null };
     const intl3 = tmp(1114).intl;
-    obj.confirmText = intl3.string(tmp(1114).t.GF9RCX);
-    obj.onConfirm = function onConfirm() {
-      let obj = LayerActionCreators;
-      obj.popLayer();
-      obj = { recipientIds: activeLinkUserIds };
-      ChannelActionCreatorsDefault.openPrivateChannel(obj);
+    obj4.confirmText = intl3.string(tmp(1114).t.GF9RCX);
+    obj4.onConfirm = function onConfirm() {
+      LayerActionCreators.popLayer();
+      ChannelActionCreatorsDefault.openPrivateChannel({ recipientIds: activeLinkUserIds });
     };
     const intl4 = tmp(1114).intl;
-    obj.cancelText = intl4.string(tmp(1114).t.L5eIZ2);
-    obj1 = obj;
+    obj4.cancelText = intl4.string(tmp(1114).t.L5eIZ2);
+    let obj5 = obj4;
   } else {
-    obj1 = {};
+    obj5 = {};
   }
-  const merged = Object.assign(obj1);
-  obj1.show(obj);
+  const merged = Object.assign(obj5);
+  actions_AlertActionCreatorsDefault.show(obj3);
 };

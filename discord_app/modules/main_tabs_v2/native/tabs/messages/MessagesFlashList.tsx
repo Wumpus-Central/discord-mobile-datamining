@@ -26,7 +26,6 @@ export default noop.memo(
     const listTop = listItemHeight.listTop;
     const scrollIndicatorInsetBottom = listItemHeight.scrollIndicatorInsetBottom;
     const scrollPosition = listItemHeight.scrollPosition;
-    data = undefined;
     const friendSuggestions = data.friendSuggestions;
     const renderHeader = data.renderHeader;
     const renderFooter = data.renderFooter;
@@ -34,7 +33,7 @@ export default noop.memo(
     ({ accessibilityLabel, handleScrollAnimated } = listItemHeight);
     const ref = listRefHappeningNow.useRef(null);
     const tmp2 = listItemHeight(listItemSuggestedFriendHeight[3])(data, { listItemHeight });
-    data = tmp2.listData;
+    const data2 = tmp2.listData;
     const friendsHeaderIndex = tmp2.friendsHeaderIndex;
     const extraData = tmp2.friendsHeaderOffset;
     const listHeaderHeight = tmp2.listHeaderHeight;
@@ -74,7 +73,7 @@ export default noop.memo(
           if ("separator" === kind) {
             return jsx(MessagesItemSeparatorDefault, {});
           } else if ("friendsHeader" === kind) {
-            let obj = { scrollPosition, stickyAt: extraData, stickyTop: listTop, stickyLeft: listLeft };
+            const obj2 = { scrollPosition, stickyAt: extraData, stickyTop: listTop, stickyLeft: listLeft };
             return jsx(MessagesItemSuggestedFriendsHeaderDefault, {
               scrollPosition,
               stickyAt: extraData,
@@ -82,7 +81,7 @@ export default noop.memo(
               stickyLeft: listLeft,
             });
           } else if ("suggestedFriend" === kind) {
-            obj = {
+            const obj3 = {
               height: listItemSuggestedFriendHeight,
               suggestedFriend: friendSuggestions[item.row],
               onAddFriendSuggestions: setAddedFriendSuggestions,
@@ -93,7 +92,7 @@ export default noop.memo(
               onAddFriendSuggestions: setAddedFriendSuggestions,
             });
           } else if ("placeholder" === kind) {
-            obj = { row: item.row, height: listItemHeight };
+            const obj = { row: item.row, height: listItemHeight };
             return jsx(MessagesItemPlaceholderDefault, { row: item.row, height: listItemHeight });
           }
         }
@@ -155,13 +154,13 @@ export default noop.memo(
     const tmp9 = listLeft(listRefHappeningNow.useState(null), 2);
     const first = tmp9[0];
     closure_18 = tmp9[1];
-    const items5 = [data];
-    const onCommitLayoutEffect = listRefHappeningNow.useCallback(() => closure_18(data), items5);
-    const items6 = [first, data, friendsHeaderIndex];
+    const items5 = [data2];
+    const onCommitLayoutEffect = listRefHappeningNow.useCallback(() => closure_18(data2), items5);
+    const items6 = [first, data2, friendsHeaderIndex];
     const items7 = [insetEnd];
     const stickyHeaderIndices = listRefHappeningNow.useMemo(() => {
       let tmp;
-      if (first === data) {
+      if (first === data2) {
         if (null != friendsHeaderIndex) {
           const items = [tmp2];
           tmp = items;
@@ -176,7 +175,7 @@ export default noop.memo(
       ref,
       accessibilityLabel,
       contentContainerStyle,
-      data,
+      data: data2,
       extraData,
       getItemType,
       keyExtractor,

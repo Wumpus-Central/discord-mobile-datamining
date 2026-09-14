@@ -17,21 +17,25 @@ export const fetchUserAffinitiesV2 = function fetchUserAffinitiesV2() {
   }
   if (UserAffinitiesV2Store.shouldFetch()) {
     if (ConsentStore.hasConsented(constants.PERSONALIZATION)) {
-      let obj = DispatcherDefault;
-      obj.dispatch({ type: "LOAD_USER_AFFINITIES_V2" });
+      DispatcherDefault.dispatch({ type: "LOAD_USER_AFFINITIES_V2" });
       const HTTP = HTTPUtils.HTTP;
-      obj = { url: USER_AFFINITIES_V2.USER_AFFINITIES_V2, retries: null, oldFormErrors: true, rejectWithError: false };
+      let obj2 = {
+        url: USER_AFFINITIES_V2.USER_AFFINITIES_V2,
+        retries: null,
+        oldFormErrors: true,
+        rejectWithError: false,
+      };
       let num = 0;
       if (flag) {
         num = 3;
       }
-      obj.retries = num;
-      value = HTTP.get(obj);
+      obj2.retries = num;
+      value = HTTP.get(obj2);
       let nextPromise = value.then(
         (body) => {
-          let obj = { type: "LOAD_USER_AFFINITIES_V2_SUCCESS", affineUsers: null };
+          const obj2 = { type: "LOAD_USER_AFFINITIES_V2_SUCCESS", affineUsers: null };
           const user_affinities = body.body.user_affinities;
-          obj.affineUsers = user_affinities.map((otherUserId) => {
+          obj2.affineUsers = user_affinities.map((otherUserId) => {
             const obj = {
               otherUserId: otherUserId.other_user_id,
               userSegment: otherUserId.user_segment,
@@ -88,7 +92,7 @@ export const fetchUserAffinitiesV2 = function fetchUserAffinitiesV2() {
             obj.communicationRank = num8;
             return obj;
           });
-          obj.dispatch(obj);
+          DispatcherDefault.dispatch(obj2);
         },
         () => {
           DispatcherDefault.dispatch({ type: "LOAD_USER_AFFINITIES_V2_FAILURE" });

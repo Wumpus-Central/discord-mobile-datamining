@@ -133,8 +133,8 @@ export const getDropData = function getDropData(localChannel, arg1, localChannel
               if (null != tmp52) {
                 if (tmp52.channel.id !== localChannel.id) {
                   if (null == tmp49) {
-                    let obj = { referenceId: tmp52.channel.id, parentId: null };
-                    let tmp54 = obj;
+                    const obj2 = { referenceId: tmp52.channel.id, parentId: null };
+                    let tmp54 = obj2;
                   } else {
                     tmp54 = null;
                   }
@@ -144,9 +144,9 @@ export const getDropData = function getDropData(localChannel, arg1, localChannel
             }
           }
         }
-        obj = { referenceId: null, parentId: null };
+        const obj3 = { referenceId: null, parentId: null };
         ({ id: obj13.referenceId, parent_id: parent_id3 } = parent_id3);
-        obj.parentId = parent_id3;
+        obj3.parentId = parent_id3;
       } else {
         const type3 = localChannel.type;
         const type4 = parent_id3.type;
@@ -166,7 +166,7 @@ export const getDropData = function getDropData(localChannel, arg1, localChannel
         if (tmp) {
           ({ id: obj11.referenceId, parent_id: obj11.parentId } = parent_id3);
           let tmp12 = { referenceId: null, parentId: null };
-          const obj1 = { referenceId: null, parentId: null };
+          const obj4 = { referenceId: null, parentId: null };
         } else if (to < arg1) {
           if (parent_id3.type !== GUILD_CATEGORY) {
             closure_130_0 = parent_id3;
@@ -216,17 +216,17 @@ export const getDropData = function getDropData(localChannel, arg1, localChannel
             const tmp30 = getFirstChannelOfType(1, parent_id3.id, localChannel.type, channelList);
             if (null == channelList[num9 - 1]) {
               if (!localChannel.isGuildVocal()) {
-                let id = null;
+                let id1 = null;
                 if (null != tmp30) {
-                  id = tmp30.channel.id;
+                  id1 = tmp30.channel.id;
                 }
-                const obj2 = { referenceId: id, parentId: null };
+                const obj5 = { referenceId: id1, parentId: null };
               }
             }
             if (c2(localChannel.type)) {
               if (null != tmp30) {
                 if (tmp32(tmp27.channel.type)) {
-                  const obj3 = { referenceId: tmp30.channel.id, parentId: parent_id3.parent_id };
+                  const obj6 = { referenceId: tmp30.channel.id, parentId: parent_id3.parent_id };
                 } else {
                   const channel5 = tmp27.channel;
                 }
@@ -281,7 +281,7 @@ export const getDropData = function getDropData(localChannel, arg1, localChannel
           let parent_id2 = channelList[num13 - 1];
           let id2 = getFirstChannelOfType(1, parent_id3.id, localChannel.type, channelList);
           if (null == parent_id2) {
-            const obj4 = { referenceId: null, parentId: null };
+            const obj7 = { referenceId: null, parentId: null };
           } else {
             if (null != id2) {
               const type = parent_id2.channel.type;
@@ -303,16 +303,16 @@ export const getDropData = function getDropData(localChannel, arg1, localChannel
                 if (!localChannel.isGuildVocal()) {
                   const channel6 = parent_id2.channel;
                   if (channel6.isCategory()) {
-                    const obj5 = { referenceId: id2.channel.id, parentId: parent_id2.channel.id };
+                    const obj8 = { referenceId: id2.channel.id, parentId: parent_id2.channel.id };
                   }
                 }
               }
             }
-            const obj6 = { referenceId: null, parentId: null };
+            const obj9 = { referenceId: null, parentId: null };
             id2 = id2.channel.id;
-            obj6.referenceId = id2;
+            obj9.referenceId = id2;
             parent_id2 = parent_id2.channel.parent_id;
-            obj6.parentId = parent_id2;
+            obj9.parentId = parent_id2;
           }
         } else if (parent_id3.type === GUILD_CATEGORY) {
           closure_129_0 = parent_id3;
@@ -360,12 +360,12 @@ export const getDropData = function getDropData(localChannel, arg1, localChannel
             num5 = 0;
           }
           let parent_id = channelList[num5 + 1];
-          id = getFirstChannelOfType(-1, parent_id3.id, localChannel.type, channelList);
+          let id = getFirstChannelOfType(-1, parent_id3.id, localChannel.type, channelList);
           if (null != id) {
             if (null == parent_id) {
-              const obj7 = { referenceId: id.channel.id, parentId: null };
+              const obj10 = { referenceId: id.channel.id, parentId: null };
               id = parent_id3.id;
-              obj7.parentId = id;
+              obj10.parentId = id;
             } else {
               const type5 = parent_id.channel.type;
               const type6 = localChannel.type;
@@ -386,16 +386,16 @@ export const getDropData = function getDropData(localChannel, arg1, localChannel
                 if (!c2(localChannel.type)) {
                   const channel4 = parent_id.channel;
                   if (channel4.isCategory()) {
-                    const obj8 = { referenceId: id.channel.id, parentId: parent_id3.id };
+                    const obj12 = { referenceId: id.channel.id, parentId: parent_id3.id };
                   }
                 } else {
                   const channel3 = parent_id.channel;
                 }
               }
             }
-            const obj9 = { referenceId: id.channel.id, parentId: null };
+            const obj26 = { referenceId: id.channel.id, parentId: null };
             parent_id = parent_id.channel.parent_id;
-            obj9.parentId = parent_id;
+            obj26.parentId = parent_id;
           }
         } else {
           c1 = true;
@@ -448,7 +448,7 @@ export const getDropData = function getDropData(localChannel, arg1, localChannel
               let tmp13 = null;
               if (localChannel.isCategory()) {
                 if (null == tmp8) {
-                  obj = { referenceId: tmp11.channel.id, parentId: null };
+                  const obj = { referenceId: tmp11.channel.id, parentId: null };
                   tmp13 = obj;
                 } else {
                   const channel2 = tmp8.channel;
@@ -462,13 +462,13 @@ export const getDropData = function getDropData(localChannel, arg1, localChannel
                 if (!channel7.isCategory()) {
                   const channel = tmp8.channel;
                   if (channel.isGuildVocal()) {
-                    const obj10 = { referenceId: tmp11.channel.id, parentId: tmp8.channel.parent_id };
-                    tmp12 = obj10;
+                    const obj27 = { referenceId: tmp11.channel.id, parentId: tmp8.channel.parent_id };
+                    tmp12 = obj27;
                   }
                 }
               }
-              const obj11 = { referenceId: tmp11.channel.id, parentId: parent_id3.parent_id };
-              tmp12 = obj11;
+              const obj28 = { referenceId: tmp11.channel.id, parentId: parent_id3.parent_id };
+              tmp12 = obj28;
             }
           }
         }
@@ -498,10 +498,9 @@ export const getDnDUpdates = function getDnDUpdates(localChannel, localChannel2,
           tmp4 = null != substr[num11];
         }
         if (tmp4) {
-          let obj = DragAndDropUtilsDefault;
-          let moveItemFromToResult = obj.moveItemFromTo(substr, closure_2, num11);
+          let moveItemFromToResult = DragAndDropUtilsDefault.moveItemFromTo(substr, closure_2, num11);
         }
-        obj = {
+        const obj3 = {
           oldOrdering: substr,
           newOrdering: moveItemFromToResult,
           idGetter(channel) {
@@ -511,7 +510,7 @@ export const getDnDUpdates = function getDnDUpdates(localChannel, localChannel2,
             return channel.channel.position;
           },
         };
-        closure_4 = closure_4.concat(DragAndDropUtilsDefault.calculatePositionDeltas(obj));
+        closure_4 = closure_4.concat(DragAndDropUtilsDefault.calculatePositionDeltas(obj3));
         return moveItemFromToResult;
       }
     }

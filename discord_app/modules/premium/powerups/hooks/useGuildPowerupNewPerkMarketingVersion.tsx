@@ -5,6 +5,8 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 import GuildStore from "../../../../stores/GuildStore.tsx";
 import PermissionStore from "../../../../stores/PermissionStore.tsx";
 
+const require = globalThis.__r;
+
 require = fn;
 const GuildPowerupsConstants = fn(4526);
 ({

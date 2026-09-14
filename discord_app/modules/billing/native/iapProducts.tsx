@@ -60,7 +60,7 @@ const items = [
   ,
   ,
 ];
-let obj = {
+const obj = {
   identifier: "premium_tier_0_yearly",
   price: 29.99,
   currencySymbol: "$",
@@ -85,7 +85,7 @@ const items1 = [
 ];
 obj.discounts = items1;
 items[2] = obj;
-obj = {
+const obj2 = {
   identifier: "premium_tier_2_monthly",
   price: 9.99,
   currencySymbol: "$",
@@ -135,8 +135,8 @@ const items2 = [
     subscriptionPeriod: "MONTH",
   },
 ];
-obj.discounts = items2;
-items[3] = obj;
+obj2.discounts = items2;
+items[3] = obj2;
 items[4] = {
   identifier: "premium_tier_1_premium_guild_1_monthly",
   price: 8.49,
@@ -185,7 +185,7 @@ items[7] = {
   title: "Nitro Monthly",
   discounts: [],
 };
-const obj1 = {
+const obj3 = {
   identifier: "premium_tier_0_monthly",
   price: 2.99,
   currencySymbol: "$",
@@ -208,8 +208,8 @@ const items3 = [
     identifier: "premium_tier_0_monthly_likelihood",
   },
 ];
-obj1.discounts = items3;
-items[8] = obj1;
+obj3.discounts = items3;
+items[8] = obj3;
 items[9] = {
   identifier: "premium_guild_1_monthly",
   price: 4.99,
@@ -222,7 +222,7 @@ items[9] = {
   title: "1 Server Boost Monthly",
   discounts: [],
 };
-const obj2 = {
+const obj4 = {
   identifier: "premium_month_tier_1.1",
   price: 4.99,
   currencySymbol: "$",
@@ -245,8 +245,8 @@ const items4 = [
     numberOfPeriods: "1",
   },
 ];
-obj2.discounts = items4;
-items[10] = obj2;
+obj4.discounts = items4;
+items[10] = obj4;
 items[11] = {
   identifier: "premium_tier_1_yearly",
   price: 49.99,
@@ -403,7 +403,7 @@ items[23] = {
   title: "Discord Subscription",
   discounts: [],
 };
-const obj3 = {
+const obj5 = {
   identifier: "premium_tier_2_yearly",
   price: 99.99,
   currencySymbol: "$",
@@ -453,8 +453,8 @@ const items5 = [
     identifier: "premium_tier_2_yearly_likelihood",
   },
 ];
-obj3.discounts = items5;
-items[24] = obj3;
+obj5.discounts = items5;
+items[24] = obj5;
 items[25] = {
   identifier: "premium_tier_2_premium_guild_13_monthly",
   price: 54.99,

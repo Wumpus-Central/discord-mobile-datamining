@@ -74,7 +74,7 @@ const SoundboardConstants = fn(5095);
 ({ DEFAULT_SOUND_GUILD_ID: closure_7, EMPTY_SOUND_ID_LIST: closure_8 } = SoundboardConstants);
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const UserSettingsTypes = fn(1084).UserSettingsTypes;
-let FetchState = { NOT_FETCHED: 0, [0]: "NOT_FETCHED", FETCHING: 1, [1]: "FETCHING", FETCHED: 2, [2]: "FETCHED" };
+const FetchState = { NOT_FETCHED: 0, [0]: "NOT_FETCHED", FETCHING: 1, [1]: "FETCHING", FETCHED: 2, [2]: "FETCHED" };
 let map = new Map();
 const map1 = new Map();
 const map2 = new Map();
@@ -84,7 +84,7 @@ let set1 = new Set();
 set = set1;
 const map3 = new Map();
 let closure_20 = Date.UTC(2026, 5, 29);
-FetchState = {
+let closure_21 = new FrecencyDefault({
   computeBonus() {
     return 100;
   },
@@ -116,17 +116,18 @@ FetchState = {
     return arg0;
   },
   afterCompute() {},
-};
-let closure_21 = new FrecencyDefault(FetchState);
+});
 let closure_22 = [];
 let c23 = false;
 let closure_24 = false;
 let closure_25 = apply.debounce((volume, location_stack) => {
-  let obj = { volume: Math.round(PerceptualVolumeUtils.amplitudeToPerceptual(volume)), location_stack };
-  obj.track(AnalyticEvents.UPDATE_SOUNDBOARD_SETTINGS, obj);
+  const obj2 = { volume: null, location_stack: null };
+  const obj = AnalyticsUtilsDefault;
+  obj2.volume = Math.round(PerceptualVolumeUtils.amplitudeToPerceptual(volume));
+  obj2.location_stack = location_stack;
+  obj.track(AnalyticEvents.UPDATE_SOUNDBOARD_SETTINGS, obj2);
   const SoundboardSettings = UserSettings.SoundboardSettings;
-  obj = { volume };
-  SoundboardSettings.updateSetting(obj);
+  SoundboardSettings.updateSetting({ volume });
 }, 1000);
 const Store = initializeDefault.Store;
 class SoundboardStore extends Store {}
@@ -261,7 +262,7 @@ prototype["isFetchingAnySounds"] = function isFetchingAnySounds() {
   return tmp2;
 };
 SoundboardStore.displayName = "SoundboardStore";
-FetchState = {
+const soundboardStore = new SoundboardStore(DispatcherDefault, {
   LOGOUT: function handleReset() {
     map.clear();
     map1.clear();
@@ -452,8 +453,7 @@ FetchState = {
     obj.topSoundsTTL = _modDef4228().add(1, "days").valueOf();
     const result = map1.set(topSoundsMetadata.guildId, obj);
   },
-};
-const soundboardStore = new SoundboardStore(DispatcherDefault, FetchState);
+});
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/soundboard/SoundboardStore.tsx");
 

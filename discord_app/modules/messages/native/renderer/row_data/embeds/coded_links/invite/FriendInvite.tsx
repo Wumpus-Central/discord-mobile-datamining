@@ -32,8 +32,8 @@ export const createFriendInvite = function createFriendInvite(inviter, arg1, id,
   }
   let str3 = "";
   if (null != inviter.inviter) {
-    let tmpResult = UserUtilsDefault;
-    str3 = tmpResult.getUserTag(inviter.inviter);
+    str3 = UserUtilsDefault.getUserTag(inviter.inviter);
+    const tmpResult = UserUtilsDefault;
   }
   let isFriendResult = null != inviter.inviter;
   if (isFriendResult) {
@@ -46,8 +46,8 @@ export const createFriendInvite = function createFriendInvite(inviter, arg1, id,
   }
   let str4 = "";
   if (null != inviter.inviter) {
-    tmpResult = AvatarUtilsDefault;
-    str4 = Image.resolveAssetSource(tmpResult.getUserAvatarSource(inviter.inviter)).uri;
+    str4 = Image.resolveAssetSource(AvatarUtilsDefault.getUserAvatarSource(inviter.inviter)).uri;
+    const tmpResult2 = AvatarUtilsDefault;
   }
   const inviter2 = inviter.inviter;
   let id1;

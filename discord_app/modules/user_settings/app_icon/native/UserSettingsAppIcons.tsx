@@ -31,8 +31,8 @@ export default noop.memo(() => {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -45,8 +45,8 @@ export default noop.memo(() => {
             throw value;
           } else if (arg0 === 2) {
             v3 = 3;
-            obj = { value, done: true };
-            return obj;
+            obj4 = { value, done: true };
+            return obj4;
           } else {
             const tmp24 = getIconById(stateFromStores);
             if (null != tmp24) {
@@ -55,9 +55,9 @@ export default noop.memo(() => {
                 if (importDefault !== id) {
                   if (tmp26) {
                     if (!closure_2_2) {
-                      let obj4 = v3(9443);
-                      const obj1 = { initialUpsellKey: constants.APP_ICONS, imageSource: tmp27 };
-                      const result = obj4.handleShowUpsellAlert(obj1);
+                      const obj6 = { initialUpsellKey: constants.APP_ICONS, imageSource: tmp27 };
+                      const result = v3(9443).handleShowUpsellAlert(obj6);
+                      const obj5 = v3(9443);
                     }
                   }
                   let premiumType;
@@ -66,22 +66,24 @@ export default noop.memo(() => {
                   }
                   dependencyMap = 1;
                   v3 = 1;
-                  let obj2 = { value: stateFromStores(13536).setAppIcon(id, premiumType), done: false };
-                  return obj2;
+                  const obj8 = { value: stateFromStores(13537).setAppIcon(id, premiumType), done: false };
+                  return obj8;
                 }
               } else {
-                obj2 = stateFromStores(13536);
                 let premiumType1;
                 if (stateFromStores != null) {
                   premiumType1 = stateFromStores.premiumType;
                 }
                 dependencyMap = 2;
                 v3 = 1;
-                const obj3 = {
-                  value: obj2.setAppIcon(stateFromStores(9454).FreemiumAppIconIds.DEFAULT, premiumType1),
+                const obj9 = {
+                  value: stateFromStores(13537).setAppIcon(
+                    stateFromStores(9454).FreemiumAppIconIds.DEFAULT,
+                    premiumType1,
+                  ),
                   done: false,
                 };
-                return obj3;
+                return obj9;
               }
             }
           }
@@ -91,15 +93,15 @@ export default noop.memo(() => {
             throw value;
           } else if (arg0 === 2) {
             v3 = 3;
-            obj4 = { value, done: true };
-            return obj4;
+            const obj10 = { value, done: true };
+            return obj10;
           }
         } else if (arg0 === 1) {
           v3 = 3;
           throw value;
         } else if (arg0 === 2) {
           v3 = 3;
-          obj = { value, done: true };
+          const obj = { value, done: true };
           return obj;
         }
         v3 = 3;
@@ -110,51 +112,52 @@ export default noop.memo(() => {
       }
     }
   };
-  let analyticsLocation = stateFromStores(504);
+  const tmp = closure_12();
   const items = [currentUser];
-  stateFromStores = analyticsLocation.useStateFromStores(items, () => currentUser.getCurrentUser());
-  let obj1 = stateFromStores(13536);
-  importDefault = obj1.useCurrentAppIcon();
-  let obj2 = stateFromStores(1885);
-  const isPremiumResult = obj2.isPremium(stateFromStores);
+  stateFromStores = stateFromStores(504).useStateFromStores(items, () => currentUser.getCurrentUser());
+  let obj = stateFromStores(504);
+  importDefault = stateFromStores(13537).useCurrentAppIcon();
+  let obj2 = stateFromStores(13537);
+  const isPremiumResult = stateFromStores(1885).isPremium(stateFromStores);
   dependencyMap = isPremiumResult;
   const analyticsLocations = useAnalyticsLocationsDefault().analyticsLocations;
-  analyticsLocation = { page: constants.APP_ICONS };
-  analyticsLocation = { children: null };
-  obj1 = { accessibilityRole: "radiogroup", children: null };
-  obj2 = {
-    onSelect(arg0) {
-      const self = this;
-      const apply = closure_5.apply;
-      if (typeof apply === "unknown") {
-        let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-      } else {
-        applyArgumentsResult = apply(self, arguments);
-      }
-      return applyArgumentsResult;
-    },
+  let obj4 = { page: constants.APP_ICONS };
+  let obj5 = { children: null };
+  let obj6 = {
+    accessibilityRole: "radiogroup",
+    children: closure_9(AppIconRowsDefault, {
+      onSelect(arg0) {
+        const self = this;
+        const apply = closure_5.apply;
+        if (typeof apply === "unknown") {
+          let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+        } else {
+          applyArgumentsResult = apply(self, arguments);
+        }
+        return applyArgumentsResult;
+      },
+    }),
   };
-  obj1.children = closure_9(AppIconRowsDefault, obj2);
-  analyticsLocation.children = closure_9(analyticsLocation, obj1);
-  const children = [closure_9(stateFromStores(8716).Form, analyticsLocation)];
+  obj5.children = closure_9(obj4, obj6);
+  const children = [closure_9(stateFromStores(8716).Form, obj5)];
   let tmp9Result = !isPremiumResult;
   if (!isPremiumResult) {
-    let obj3 = { style: tmp.upsellButtonContainer, children: null };
-    let obj4 = {
+    let obj8 = { style: tmp.upsellButtonContainer, children: null };
+    let obj9 = {
       onPress() {
-        analyticsLocation = {
-          analyticsLocation,
+        const obj = {
+          analyticsLocation: obj4,
           analyticsLocations,
           premiumFeatureCardOrder: PremiumFeaturesCards.PremiumFeatureCardOrder.TIER_2_LEADING,
         };
-        openPremiumModalDefault(analyticsLocation);
+        openPremiumModalDefault(obj);
       },
       text: null,
     };
     const intl = tmp2(1114).intl;
-    obj4.text = intl.string(tmp2(1114).t.M0rDSO);
-    obj3.children = closure_9(NitroUpsellButtonDefault, obj4);
-    tmp9Result = closure_9(analyticsLocation, obj3);
+    obj9.text = intl.string(tmp2(1114).t.M0rDSO);
+    obj8.children = closure_9(NitroUpsellButtonDefault, obj9);
+    tmp9Result = closure_9(obj4, obj8);
     const tmp6Result = NitroUpsellButtonDefault;
   }
   children[1] = tmp9Result;

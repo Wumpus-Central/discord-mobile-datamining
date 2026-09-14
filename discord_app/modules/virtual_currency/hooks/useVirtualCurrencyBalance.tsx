@@ -2,6 +2,8 @@
 import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
 import VirtualCurrencyStore from "../stores/VirtualCurrencyStore.tsx";
 
+const require = globalThis.__r;
+
 require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/virtual_currency/hooks/useVirtualCurrencyBalance.tsx");

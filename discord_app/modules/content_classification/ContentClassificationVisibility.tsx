@@ -20,11 +20,12 @@ export const getContentClassificationVisibility = function getContentClassificat
   nsfwAllowed,
 ) {
   if (null != contentClassification) {
-    const obj = {
+    const obj = ContentClassificationToAgeRestriction;
+    const obj2 = {
       type: ContentClassificationToAgeRestriction.ContentClassificationVariant.MINIMAL,
       data: contentClassification,
     };
-    const result = obj.contentClassificationToAgeRestriction(obj);
+    const result = obj.contentClassificationToAgeRestriction(obj2);
     if (result === AgeRestrictionStatus.AgeRestrictionStatus.ADULT) {
       if (true !== nsfwAllowed) {
         let DISPLAY = obj.BLOCK_UNDERAGE;

@@ -35,14 +35,14 @@ function checkReactionResponse(arg0, fn, isRetry) {
         code = body.code;
       }
       if (constants.TOO_MANY_REACTIONS === code) {
-        obj = { title: null, body: null, confirmText: null };
+        const obj2 = { title: null, body: null, confirmText: null };
         const intl = util.intl;
-        obj.title = intl.string(util.t.lFddsR);
+        obj2.title = intl.string(util.t.lFddsR);
         const intl2 = util.intl;
-        obj.body = intl2.string(util.t.h27eIm);
+        obj2.body = intl2.string(util.t.h27eIm);
         const intl3 = util.intl;
-        obj.confirmText = intl3.string(util.t.BddRzS);
-        obj.show(obj);
+        obj2.confirmText = intl3.string(util.t.BddRzS);
+        AlertActionCreatorsDefault.show(obj2);
       } else if (tmp3.REACTION_BLOCKED === code) {
         const ComponentDispatch = ComponentDispatchUtils.ComponentDispatch;
         ComponentDispatch.dispatch(constants2.SHAKE_APP, { duration: 200, intensity: 2 });
@@ -55,21 +55,30 @@ function checkReactionResponse(arg0, fn, isRetry) {
   }
 }
 function optimisticDispatch(type, channelId, messageId, emoji, userId) {
-  obj = { type, channelId, messageId, userId: null, emoji: null, optimistic: true, colors: null, reactionType: null };
+  const obj2 = {
+    type,
+    channelId,
+    messageId,
+    userId: null,
+    emoji: null,
+    optimistic: true,
+    colors: null,
+    reactionType: null,
+  };
   userId = userId.userId;
   if (userId == null) {
     userId = AuthenticationStore.getId();
   }
-  obj.userId = userId;
-  obj.emoji = emoji;
+  obj2.userId = userId;
+  obj2.emoji = emoji;
   let colors = userId.colors;
   if (colors == null) {
     colors = [];
   }
-  obj.colors = colors;
+  obj2.colors = colors;
   const ReactionTypes = MessageReactionsTypes.ReactionTypes;
-  obj.reactionType = userId.burst ? ReactionTypes.BURST : ReactionTypes.NORMAL;
-  obj.dispatch(obj);
+  obj2.reactionType = userId.burst ? ReactionTypes.BURST : ReactionTypes.NORMAL;
+  DispatcherDefault.dispatch(obj2);
 }
 function makeURL(type) {
   ({ channelId, messageId, emoji, userId, useTypeEndpoint } = type);
@@ -103,8 +112,8 @@ let closure_15 = async function _getReactors(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -117,8 +126,8 @@ let closure_15 = async function _getReactors(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c4 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           closure_2 = tmp5;
           closure_1 = tmp2;
@@ -149,8 +158,8 @@ let closure_15 = async function _getReactors(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c4 = 3;
-          const obj1 = { value, done: true };
-          return obj1;
+          const obj4 = { value, done: true };
+          return obj4;
         } else {
           if (closure_129_5 === closure_130_0(closure_130_2[10]).ReactionTypes.VOTE) {
             let tmp28 = (function makeURLForVoteReactors(arg0, arg1, id) {
@@ -161,14 +170,14 @@ let closure_15 = async function _getReactors(arg0) {
               return closure_1_10.POLL_ANSWER_VOTERS(arg0, arg1, name);
             })(closure_129_0, closure_129_1, closure_129_2);
           } else {
-            const obj2 = { channelId: closure_129_0, messageId: closure_129_1, emoji: closure_129_2 };
-            tmp28 = closure_130_14(obj2);
+            const obj5 = { channelId: closure_129_0, messageId: closure_129_1, emoji: closure_129_2 };
+            tmp28 = closure_130_14(obj5);
           }
           closure_129_6 = tmp28;
           const HTTP = closure_130_0(closure_130_2[11]).HTTP;
           const request = { url: closure_129_6, query: null, oldFormErrors: true, rejectWithError: null };
-          const obj3 = { limit: closure_129_3, after: closure_129_4, type: closure_129_5 };
-          request.query = obj3;
+          const obj7 = { limit: closure_129_3, after: closure_129_4, type: closure_129_5 };
+          request.query = obj7;
           request.rejectWithError = closure_130_0(closure_130_2[11]).rejectWithMigratedError();
           value = HTTP.get(request);
           c3 = 2;
@@ -180,8 +189,8 @@ let closure_15 = async function _getReactors(arg0) {
         throw value;
       } else if (arg0 === 2) {
         c4 = 3;
-        const obj4 = { value, done: true };
-        return obj4;
+        const obj8 = { value, done: true };
+        return obj8;
       } else {
         closure_129_7 = value;
         let tmp14;
@@ -227,8 +236,8 @@ let closure_17 = async function _addReaction(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let query = { value, done: true };
-      return query;
+      let obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -241,8 +250,8 @@ let closure_17 = async function _addReaction(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c8 = 3;
-          query = { value, done: true };
-          return query;
+          let obj3 = { value, done: true };
+          return obj3;
         } else {
           let isRetry = tmp3;
           let burst = tmp2;
@@ -270,8 +279,8 @@ let closure_17 = async function _addReaction(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c8 = 3;
-          let obj1 = { value, done: true };
-          return obj1;
+          let obj4 = { value, done: true };
+          return obj4;
         } else {
           burst = null != closure_133_4;
           if (burst) {
@@ -285,23 +294,22 @@ let closure_17 = async function _addReaction(arg0) {
           closure_133_6 = isRetry;
           if (!closure_133_6) {
             if (closure_134_26(closure_133_0, closure_133_1, closure_133_2, closure_133_5)) {
-              let obj5 = closure_134_1(closure_134_2[6]);
-              let obj2 = { title: null, body: null, confirmText: null };
+              let obj5 = { title: null, body: null, confirmText: null };
               let intl = closure_134_0(closure_134_2[7]).intl;
-              obj2.title = intl.string(closure_134_0(closure_134_2[7]).t["uaUU/g"]);
+              obj5.title = intl.string(closure_134_0(closure_134_2[7]).t["uaUU/g"]);
               const intl2 = closure_134_0(closure_134_2[7]).intl;
-              obj2.body = intl2.string(closure_134_0(closure_134_2[7]).t.psMorl);
+              obj5.body = intl2.string(closure_134_0(closure_134_2[7]).t.psMorl);
               const intl3 = closure_134_0(closure_134_2[7]).intl;
-              obj2.confirmText = intl3.string(closure_134_0(closure_134_2[7]).t["NX+WJN"]);
-              obj5.show(obj2);
+              obj5.confirmText = intl3.string(closure_134_0(closure_134_2[7]).t["NX+WJN"]);
+              closure_134_1(closure_134_2[6]).show(obj5);
               c8 = 3;
               return { value: "HermesInternal", done: null };
             }
           }
           c7 = 2;
           c8 = 1;
-          let obj3 = { value: closure_134_24(closure_133_2, closure_133_5), done: false };
-          return obj3;
+          let obj7 = { value: closure_134_24(closure_133_2, closure_133_5), done: false };
+          return obj7;
         }
       } else if (2 === tmp6) {
         if (arg0 === 1) {
@@ -309,34 +317,34 @@ let closure_17 = async function _addReaction(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c8 = 3;
-          const obj4 = { value, done: true };
-          return obj4;
+          let obj8 = { value, done: true };
+          return obj8;
         } else {
           closure_133_7 = value;
-          obj5 = { burst: closure_133_5, colors: closure_133_7 };
-          closure_134_13("MESSAGE_REACTION_ADD", closure_133_0, closure_133_1, closure_133_2, obj5);
+          let obj9 = { burst: closure_133_5, colors: closure_133_7 };
+          closure_134_13("MESSAGE_REACTION_ADD", closure_133_0, closure_133_1, closure_133_2, obj9);
           c7 = 3;
           c8 = 1;
-          const obj6 = {
+          const obj10 = {
             value: closure_134_1(closure_134_2[12]).unarchiveThreadIfNecessary(closure_133_0),
             done: false,
           };
-          return obj6;
+          return obj10;
         }
       } else if (arg0 === 1) {
         c8 = 3;
         throw value;
       } else if (arg0 === 2) {
         c8 = 3;
-        const obj7 = { value, done: true };
-        return obj7;
+        const obj11 = { value, done: true };
+        return obj11;
       } else {
         let HTTP = closure_134_0(closure_134_2[11]).HTTP;
         let put = HTTP.put;
         let request = { url: null, query: null, oldFormErrors: true, rejectWithError: null };
-        let obj8 = { channelId: closure_133_0, messageId: closure_133_1, emoji: closure_133_2, userId: "@me" };
-        request.url = closure_134_14(obj8);
-        query = { location: closure_133_3, type: null };
+        const obj12 = { channelId: closure_133_0, messageId: closure_133_1, emoji: closure_133_2, userId: "@me" };
+        request.url = closure_134_14(obj12);
+        let query = { location: closure_133_3, type: null };
         let fn = closure_134_0(closure_134_2[10]).ReactionTypes;
         if (closure_133_5) {
           let NORMAL = fn.BURST;
@@ -351,28 +359,34 @@ let closure_17 = async function _addReaction(arg0) {
         put = HTTP.then(() => {
           if ("Message Shortcut" === closure_1_3) {
             const channel = burst.getChannel(channelId);
-            obj = { channel_id: channelId, guild_id: null, original_message_id: null, emoji_id: null, action: "react" };
+            const obj3 = {
+              channel_id: channelId,
+              guild_id: null,
+              original_message_id: null,
+              emoji_id: null,
+              action: "react",
+            };
             let guild_id;
             if (channel != null) {
               guild_id = channel.guild_id;
             }
-            obj.guild_id = guild_id;
-            obj.original_message_id = messageId;
+            obj3.guild_id = guild_id;
+            obj3.original_message_id = messageId;
             let name = user.id;
             if (name == null) {
               name = user.name;
             }
-            obj.emoji_id = name;
-            obj = closure_0(user[14]);
+            obj3.emoji_id = name;
+            const obj8 = closure_1(user[13]);
             let guild_id1;
             if (channel != null) {
               guild_id1 = channel.guild_id;
             }
-            const merged = Object.assign(obj.collectGuildAnalyticsMetadata(guild_id1));
-            let obj1 = closure_0(user[14]);
-            const merged1 = Object.assign(obj1.collectChannelAnalyticsMetadata(channel));
-            closure_1(user[13]).track(constants.MESSAGE_SHORTCUT_ACTION_SENT, obj);
-            const obj8 = closure_1(user[13]);
+            const merged = Object.assign(closure_0(user[14]).collectGuildAnalyticsMetadata(guild_id1));
+            obj = closure_0(user[14]);
+            const merged1 = Object.assign(closure_0(user[14]).collectChannelAnalyticsMetadata(channel));
+            obj8.track(constants.MESSAGE_SHORTCUT_ACTION_SENT, obj3);
+            const obj2 = closure_0(user[14]);
           }
           const AccessibilityAnnouncer = closure_0(user[15]).AccessibilityAnnouncer;
           const announce = AccessibilityAnnouncer.announce;
@@ -380,22 +394,21 @@ let closure_17 = async function _addReaction(arg0) {
           const formatToPlainString = intl.formatToPlainString;
           const t = closure_0(user[7]).t;
           if (closure_1_5) {
-            obj = { name: user.name };
-            announce(formatToPlainString(t["RJlG+R"], obj));
-            obj1 = { channelId, messageId, emoji: null };
-            const obj2 = {};
+            const obj4 = { name: user.name };
+            announce(formatToPlainString(t["RJlG+R"], obj4));
+            const obj6 = { channelId, messageId, emoji: null };
+            const obj7 = {};
             const merged2 = Object.assign(user);
-            obj2.animated = false;
-            obj1.emoji = obj2;
-            const result = closure_1(user[16]).triggerFullscreenAnimation(obj1);
+            obj7.animated = false;
+            obj6.emoji = obj7;
+            const result = closure_1(user[16]).triggerFullscreenAnimation(obj6);
             const obj5 = closure_1(user[16]);
           } else {
-            const obj3 = { name: user.name };
-            announce(formatToPlainString(t.ol4acF, obj3));
+            const obj9 = { name: user.name };
+            announce(formatToPlainString(t.ol4acF, obj9));
           }
         });
         fn = (arg0) => {
-          obj = { isRetry };
           if (
             closure_2_12(
               arg0,
@@ -403,9 +416,8 @@ let closure_17 = async function _addReaction(arg0) {
               obj,
             )
           ) {
-            obj = { burst };
-            let obj2 = closure_1(user[9]);
-            obj = {
+            const obj2 = { burst };
+            const obj4 = {
               type: "MESSAGE_REACTION_REMOVE",
               channelId,
               messageId,
@@ -415,40 +427,42 @@ let closure_17 = async function _addReaction(arg0) {
               colors: null,
               reactionType: null,
             };
-            let userId = obj.userId;
+            let userId = obj2.userId;
             if (userId == null) {
               userId = id.getId();
             }
-            obj.userId = userId;
-            obj.emoji = emoji;
-            let colors = obj.colors;
+            obj4.userId = userId;
+            obj4.emoji = emoji;
+            let colors = obj2.colors;
             if (colors == null) {
               colors = [];
             }
-            obj.colors = colors;
+            obj4.colors = colors;
             const ReactionTypes = closure_0(user[10]).ReactionTypes;
-            if (obj.burst) {
+            if (obj2.burst) {
               let NORMAL = ReactionTypes.BURST;
               let tmp10 = closure_0;
             } else {
               NORMAL = ReactionTypes.NORMAL;
               tmp10 = closure_0;
             }
-            obj.reactionType = NORMAL;
-            obj2.dispatch(obj);
+            obj4.reactionType = NORMAL;
+            closure_1(user[9]).dispatch(obj4);
             const AccessibilityAnnouncer = tmp10(user[15]).AccessibilityAnnouncer;
             const announce = AccessibilityAnnouncer.announce;
             const intl = tmp10(user[7]).intl;
             const formatToPlainString = intl.formatToPlainString;
             const t = tmp10(user[7]).t;
             if (burst) {
-              const obj1 = { name: emoji.name };
-              announce(formatToPlainString(t.fJeu87, obj1));
+              const obj5 = { name: emoji.name };
+              announce(formatToPlainString(t.fJeu87, obj5));
             } else {
-              obj2 = { name: emoji.name };
-              announce(formatToPlainString(t["UUn5V+"], obj2));
+              const obj6 = { name: emoji.name };
+              announce(formatToPlainString(t["UUn5V+"], obj6));
             }
+            const obj3 = closure_1(user[9]);
           }
+          obj = { isRetry };
         };
         request = put.catch(fn);
         c8 = 3;
@@ -483,8 +497,8 @@ let closure_19 = async function _removeAllReactions(arg0, arg1, arg2) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        obj = { value, done: true };
-        return obj;
+        const obj3 = { value, done: true };
+        return obj3;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -497,8 +511,8 @@ let closure_19 = async function _removeAllReactions(arg0, arg1, arg2) {
             throw value;
           } else if (arg0 === 2) {
             c6 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj4 = { value, done: true };
+            return obj4;
           } else {
             closure_4 = tmp5;
             closure_3 = tmp2;
@@ -510,12 +524,10 @@ let closure_19 = async function _removeAllReactions(arg0, arg1, arg2) {
               isRetry = isRetry.isRetry;
             }
             closure_131_2 = isRetry;
-            let obj1 = ThreadActionCreatorsDefault;
             c5 = 1;
             c6 = 1;
-            obj1 = { value: null, done: false };
-            obj1.value = obj1.unarchiveThreadIfNecessary(closure_0);
-            return obj1;
+            const obj5 = { value: ThreadActionCreatorsDefault.unarchiveThreadIfNecessary(closure_0), done: false };
+            return obj5;
           }
         } else if (arg0 === 1) {
           c6 = 3;
@@ -526,13 +538,13 @@ let closure_19 = async function _removeAllReactions(arg0, arg1, arg2) {
           return obj;
         } else {
           const HTTP = closure_132_0(closure_132_2[11]).HTTP;
-          const obj2 = {
+          const obj6 = {
             url: closure_132_10.REMOVE_REACTIONS(closure_131_0, closure_131_1),
             oldFormErrors: true,
             rejectWithError: closure_132_0(closure_132_2[11]).rejectWithMigratedError(),
           };
           const obj7 = closure_132_0(closure_132_2[11]);
-          HTTP.del(obj2).catch((error) => {
+          HTTP.del(obj6).catch((error) => {
             closure_2_12(error, () => closure_2_18(closure_1_0, closure_1_1, { isRetry: true }), { isRetry });
           });
           c6 = 3;
@@ -570,8 +582,8 @@ let closure_21 = async function _removeEmojiReactions(arg0, arg1, arg2, arg3) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        obj = { value, done: true };
-        return obj;
+        const obj3 = { value, done: true };
+        return obj3;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -584,8 +596,8 @@ let closure_21 = async function _removeEmojiReactions(arg0, arg1, arg2, arg3) {
             throw value;
           } else if (arg0 === 2) {
             c7 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj5 = { value, done: true };
+            return obj5;
           } else {
             closure_5 = tmp5;
             closure_4 = tmp2;
@@ -601,16 +613,16 @@ let closure_21 = async function _removeEmojiReactions(arg0, arg1, arg2, arg3) {
             closure_132_3 = isRetry;
             c6 = 1;
             c7 = 1;
-            let obj1 = { value: ThreadActionCreatorsDefault.unarchiveThreadIfNecessary(closure_0), done: false };
-            return obj1;
+            const obj6 = { value: ThreadActionCreatorsDefault.unarchiveThreadIfNecessary(closure_0), done: false };
+            return obj6;
           }
         } else if (arg0 === 1) {
           c7 = 3;
           throw value;
         } else if (arg0 === 2) {
           c7 = 3;
-          const obj2 = { value, done: true };
-          return obj2;
+          const obj7 = { value, done: true };
+          return obj7;
         } else {
           if (null === closure_132_2.id) {
             let name = closure_132_2.name;
@@ -623,10 +635,9 @@ let closure_21 = async function _removeEmojiReactions(arg0, arg1, arg2, arg3) {
           obj = {
             url: closure_133_10.REMOVE_EMOJI_REACTIONS(closure_132_0, closure_132_1, closure_132_4),
             oldFormErrors: true,
-            rejectWithError: null,
+            rejectWithError: closure_133_0(closure_133_2[11]).rejectWithMigratedError(),
           };
-          obj1 = closure_133_0(closure_133_2[11]);
-          obj.rejectWithError = obj1.rejectWithMigratedError();
+          const obj2 = closure_133_0(closure_133_2[11]);
           HTTP.del(obj).catch((error) => {
             closure_2_12(error, () => closure_2_20(closure_1_0, closure_1_1, closure_1_2, { isRetry: true }), {
               isRetry,
@@ -674,8 +685,8 @@ let closure_23 = async function _removeReaction(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c5 = 3;
-          obj = { value, done: true };
-          return obj;
+          let obj2 = { value, done: true };
+          return obj2;
         } else {
           closure_3 = tmp3;
           const user = tmp2;
@@ -708,8 +719,8 @@ let closure_23 = async function _removeReaction(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c5 = 3;
-          let obj1 = { value, done: true };
-          return obj1;
+          let obj3 = { value, done: true };
+          return obj3;
         } else {
           let burst = null != closure_130_5;
           if (burst) {
@@ -721,26 +732,25 @@ let closure_23 = async function _removeReaction(arg0) {
             isRetry = closure_130_5.isRetry;
           }
           closure_130_7 = isRetry;
-          let obj2 = { userId: closure_130_4, burst: closure_130_6 };
-          closure_131_13("MESSAGE_REACTION_REMOVE", closure_130_0, closure_130_1, closure_130_2, obj2);
-          let obj5 = closure_131_1(closure_131_2[12]);
+          let obj4 = { userId: closure_130_4, burst: closure_130_6 };
+          closure_131_13("MESSAGE_REACTION_REMOVE", closure_130_0, closure_130_1, closure_130_2, obj4);
           c4 = 2;
           c5 = 1;
-          let obj3 = { value: obj5.unarchiveThreadIfNecessary(closure_130_0), done: false };
-          return obj3;
+          let obj5 = { value: closure_131_1(closure_131_2[12]).unarchiveThreadIfNecessary(closure_130_0), done: false };
+          return obj5;
         }
       } else if (arg0 === 1) {
         c5 = 3;
         throw value;
       } else if (arg0 === 2) {
         c5 = 3;
-        let obj4 = { value, done: true };
-        return obj4;
+        let obj7 = { value, done: true };
+        return obj7;
       } else {
         let HTTP = closure_131_0(closure_131_2[11]).HTTP;
         let del = HTTP.del;
         let tmp16 = closure_131_14;
-        obj5 = {
+        let obj8 = {
           channelId: closure_130_0,
           messageId: closure_130_1,
           emoji: closure_130_2,
@@ -752,7 +762,7 @@ let closure_23 = async function _removeReaction(arg0) {
         if (closure_130_4 == null) {
           userId = "@me";
         }
-        obj5.userId = userId;
+        obj8.userId = userId;
         let ReactionTypes = closure_131_0(closure_131_2[10]).ReactionTypes;
         if (closure_130_6) {
           let NORMAL = ReactionTypes.BURST;
@@ -760,14 +770,14 @@ let closure_23 = async function _removeReaction(arg0) {
           NORMAL = ReactionTypes.NORMAL;
         }
         const request = { url: null, query: null, oldFormErrors: true, rejectWithError: null };
-        obj5.type = NORMAL;
-        request.url = tmp16(obj5);
-        const obj6 = { location: closure_130_3, burst: null };
+        obj8.type = NORMAL;
+        request.url = tmp16(obj8);
+        const obj9 = { location: closure_130_3, burst: null };
         tmp16 = closure_130_6;
-        obj6.burst = closure_130_6;
-        request.query = obj6;
-        obj5 = closure_131_0(closure_131_2[11]);
-        request.rejectWithError = obj5.rejectWithMigratedError();
+        obj9.burst = closure_130_6;
+        request.query = obj9;
+        obj8 = closure_131_0(closure_131_2[11]);
+        request.rejectWithError = obj8.rejectWithMigratedError();
         HTTP = del(request);
         del = HTTP.then(() => {
           burst = undefined;
@@ -780,8 +790,8 @@ let closure_23 = async function _removeReaction(arg0) {
           const formatToPlainString = intl.formatToPlainString;
           const t = closure_0(user[7]).t;
           if (burst) {
-            obj = { name: user.name };
-            announce(formatToPlainString(t["3l9f6u"], obj));
+            const obj2 = { name: user.name };
+            announce(formatToPlainString(t["3l9f6u"], obj2));
           } else {
             obj = { name: user.name };
             announce(formatToPlainString(t["DQxi+7"], obj));
@@ -812,8 +822,8 @@ let closure_23 = async function _removeReaction(arg0) {
                       throw value;
                     } else if (arg0 === 2) {
                       userId = 3;
-                      obj = { value, done: true };
-                      return obj;
+                      const obj2 = { value, done: true };
+                      return obj2;
                     } else {
                       const messageId = tmp3;
                       closure_129_0 = undefined;
@@ -822,17 +832,22 @@ let closure_23 = async function _removeReaction(arg0) {
                         closure_2_12(
                           channelId,
                           () => {
-                            let options = { channelId, messageId, emoji, location: _location, userId, options: null };
-                            options = { burst, isRetry: true };
-                            options.options = options;
-                            return closure_2_22(options);
+                            obj = {
+                              channelId,
+                              messageId,
+                              emoji,
+                              location: _location,
+                              userId,
+                              options: { burst, isRetry: true },
+                            };
+                            return closure_2_22(obj);
                           },
                           intl,
                         )
                       ) {
                         userId = num3;
-                        const obj1 = { value: closure_2_24(tmp2, burst2), done: false };
-                        return obj1;
+                        const obj3 = { value: closure_2_24(tmp2, burst2), done: false };
+                        return obj3;
                       } else {
                         userId = 3;
                       }
@@ -842,12 +857,12 @@ let closure_23 = async function _removeReaction(arg0) {
                     throw value;
                   } else if (arg0 === 2) {
                     userId = 3;
-                    const obj2 = { value, done: true };
-                    return obj2;
+                    const obj4 = { value, done: true };
+                    return obj4;
                   } else {
                     closure_129_0 = value;
-                    const obj3 = { userId, burst: burst2, colors: closure_129_0 };
-                    closure_2_13("MESSAGE_REACTION_ADD", channelId, messageId, tmp2, obj3);
+                    const obj5 = { userId, burst: burst2, colors: closure_129_0 };
+                    closure_2_13("MESSAGE_REACTION_ADD", channelId, messageId, tmp2, obj5);
                     burst = undefined;
                     if (burst != null) {
                       burst = burst.burst;
@@ -855,12 +870,12 @@ let closure_23 = async function _removeReaction(arg0) {
                     const AccessibilityAnnouncer = channelId(4488).AccessibilityAnnouncer;
                     intl = channelId(1114).intl;
                     if (!burst) {
-                      const obj4 = { name: tmp2.name };
-                      AccessibilityAnnouncer.announce(intl.formatToPlainString(channelId(1114).t["tD9+b+"], obj4));
+                      const obj6 = { name: tmp2.name };
+                      AccessibilityAnnouncer.announce(intl.formatToPlainString(channelId(1114).t["tD9+b+"], obj6));
                     }
                   }
-                  const obj5 = { name: tmp2.name };
-                  num3 = tmp11(tmp14(num3.OamVbV, obj5));
+                  const obj7 = { name: tmp2.name };
+                  num3 = tmp11(tmp14(num3.OamVbV, obj7));
                 } catch (tmp24) {
                   userId = tmp;
                   throw tmp24;
@@ -905,8 +920,8 @@ let closure_25 = async function _getOptimisticEmojiColors(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      obj = { value, done: true };
-      return obj;
+      const obj3 = { value, done: true };
+      return obj3;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -919,19 +934,17 @@ let closure_25 = async function _getOptimisticEmojiColors(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c5 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj4 = { value, done: true };
+          return obj4;
         } else {
           closure_2 = tmp4;
           closure_130_0 = [];
           if (closure_1) {
             c4 = 1;
-            let obj1 = EmojiUtils;
             c3 = 2;
             c5 = 1;
-            obj1 = { value: null, done: false };
-            obj1.value = obj1.getEmojiColors(tmp9);
-            return obj1;
+            const obj5 = { value: EmojiUtils.getEmojiColors(tmp9), done: false };
+            return obj5;
           }
         }
       } else {

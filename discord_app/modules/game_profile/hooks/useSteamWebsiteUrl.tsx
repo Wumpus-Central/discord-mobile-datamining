@@ -2,6 +2,8 @@
 import SteamReleaseStatus from "../../../../discord_common/js/shared/shared-constants/SteamReleaseStatus.tsx";
 import GameStore from "../../games/GameStore.tsx";
 
+const require = globalThis.__r;
+
 require = fn;
 const Distributors = fn(1074).Distributors;
 const size = fn(2);

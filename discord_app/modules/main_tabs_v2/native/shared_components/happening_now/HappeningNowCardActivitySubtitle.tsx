@@ -23,22 +23,24 @@ const result = size.fileFinishedImporting(
 
 export const HappeningNowVoiceCardSubtitle = function HappeningNowVoiceCardSubtitle(voiceState) {
   voiceState = voiceState.voiceState;
-  let obj = voiceState(504);
-  const items = [ChannelStore];
-  const stateFromStores = obj.useStateFromStores(items, () => ChannelStore.getChannel(voiceState.channelId));
-  obj = { style: closure_7().cardDetails, children: null };
   const tmp = closure_7();
+  const items = [ChannelStore];
+  const stateFromStores = voiceState(504).useStateFromStores(items, () =>
+    ChannelStore.getChannel(voiceState.channelId),
+  );
+  const obj2 = { style: tmp.cardDetails, children: null };
+  const obj = voiceState(504);
   let tmp8;
   if (null != stateFromStores) {
-    obj = { channel: stateFromStores };
-    tmp8 = getChannelA11yLabelDefault(obj);
+    const obj3 = { channel: stateFromStores };
+    tmp8 = getChannelA11yLabelDefault(obj3);
   }
-  obj.children = jsx(voiceState(15380).HappeningNowCardSubtitle, {
+  obj2.children = jsx(voiceState(15381).HappeningNowCardSubtitle, {
     lineClamp: 1,
     accessibilityLabel: tmp8,
     children: useChannelNameDefault(stateFromStores),
   });
-  return <View style={closure_7().cardDetails}>{null}</View>;
+  return <View style={tmp.cardDetails}>{null}</View>;
 };
 export const HappeningNowActivityCardSubtitle = function HappeningNowActivityCardSubtitle(activity) {
   activity = activity.activity;
@@ -62,18 +64,18 @@ export const HappeningNowActivityCardSubtitle = function HappeningNowActivityCar
     const intl = util.intl;
     name3 = intl.string(util.t.eXan7B);
   } else {
-    let name;
+    let name1;
     if (activity != null) {
-      name = activity.name;
+      name1 = activity.name;
     }
     tmp3 = null;
-    if (null != name) {
+    if (null != name1) {
       if (!isStreamingDefault(activity)) {
         if (isListeningOnSpotifyDefault(activity)) {
           if (null != activity.details) {
             if (null != activity.state) {
               const _HermesInternal = HermesInternal;
-              name = "" + activity.details + " - " + activity.state;
+              let name = "" + activity.details + " - " + activity.state;
             }
           }
         }

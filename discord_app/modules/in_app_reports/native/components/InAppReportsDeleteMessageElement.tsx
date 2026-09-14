@@ -19,10 +19,9 @@ export default function DeleteMessageElement(message) {
   let stateFromStores;
   const tmp = stateFromStores(noop.useState(false), 2);
   dependencyMap = tmp[1];
-  let obj = message(504);
   const items = [MessageStore];
   const items1 = [message];
-  stateFromStores = obj.useStateFromStores(
+  stateFromStores = message(504).useStateFromStores(
     items,
     () => null == MessageStore.getMessage(message.getChannelId(), message.id),
     items1,
@@ -34,11 +33,13 @@ export default function DeleteMessageElement(message) {
   const items3 = [message, reportId];
   const callback = noop.useCallback(() => {
     closure_2(true);
-    const obj = { report_id: reportId };
-    obj.trackWithMetadata(AnalyticEvents.IAR_DELETE_MESSAGE_BUTTON_CLICKED, obj);
+    AppAnalyticsUtilsDefault.trackWithMetadata(AnalyticEvents.IAR_DELETE_MESSAGE_BUTTON_CLICKED, {
+      report_id: reportId,
+    });
+    const obj2 = { report_id: reportId };
     MessageActionCreatorsDefault.deleteMessage(message.getChannelId(), message.id);
   }, items3);
-  obj = {
+  let obj2 = {
     title: null,
     disabledTitle: null,
     description: null,
@@ -47,15 +48,16 @@ export default function DeleteMessageElement(message) {
     onPress: null,
     icon: null,
   };
+  let obj = message(504);
   const intl = message(1114).intl;
-  obj.title = intl.string(message(1114).t.c9BHL9);
+  obj2.title = intl.string(message(1114).t.c9BHL9);
   const intl2 = message(1114).intl;
-  obj.disabledTitle = intl2.string(message(1114).t.AT2KSd);
+  obj2.disabledTitle = intl2.string(message(1114).t.AT2KSd);
   const intl3 = message(1114).intl;
-  obj.description = intl3.string(message(1114).t.dK8S0w);
-  obj.disabled = tmp[0];
-  obj.onPress = callback;
-  obj.icon = jsx(message(4594).TrashIcon, { color: "text-feedback-critical" });
+  obj2.description = intl3.string(message(1114).t.dK8S0w);
+  obj2.disabled = tmp[0];
+  obj2.onPress = callback;
+  obj2.icon = jsx(message(4594).TrashIcon, { color: "text-feedback-critical" });
   return jsx(reportId(9180), {
     title: null,
     disabledTitle: null,

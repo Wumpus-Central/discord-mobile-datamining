@@ -1,8 +1,8 @@
 // discord_app/modules/messages/native/renderer/row_data/SurveyIndication.tsx
 import util from "../../../../../intl/index.native.tsx";
 import PushNotificationConstants from "../../../../push_notifications/PushNotificationConstants.tsx";
-import _modDef13316 from "../../../../../../_runtime/metro/13316__.js";
 import _modDef13317 from "../../../../../../_runtime/metro/13317__.js";
+import _modDef13318 from "../../../../../../_runtime/metro/13318__.js";
 import size from "../../../../../../_runtime/metro/00002__.js";
 
 const NotificationTypes = PushNotificationConstants.NotificationTypes;
@@ -18,19 +18,18 @@ export const createSurveyIndication = function createSurveyIndication(message, f
     GwWhce = util.t["46+Iqc"];
   }
   const intl = tmp2(1114).intl;
-  let obj = { action: "bindUserSurvey", message, notificationType: null };
+  const obj = { action: "bindUserSurvey", message, notificationType: null };
   if (TOP_MESSAGE_PUSH == null) {
     TOP_MESSAGE_PUSH = NotificationTypes.TOP_MESSAGE_PUSH;
   }
-  obj = { content: null, feedbackIconUrl: null, notificationType: TOP_MESSAGE_PUSH };
-  obj.content = intl.formatToParts(GwWhce, { handleMessage: obj });
-  tmp2(8050);
-  const tmp2Result = tmp2(4488);
-  if (tmp2Result.isThemeDark(forcedTheme)) {
-    let tmp7Result = _modDef13316;
+  const obj2 = { content: intl.formatToParts(GwWhce, { handleMessage: obj }), feedbackIconUrl: null };
+  obj.notificationType = TOP_MESSAGE_PUSH;
+  const tmp2Result = tmp2(8050);
+  if (tmp2Result2.isThemeDark(forcedTheme)) {
+    let tmp7Result = _modDef13317;
   } else {
-    tmp7Result = _modDef13317;
+    tmp7Result = _modDef13318;
   }
-  obj.feedbackIconUrl = tmp2Result.getAssetUriForEmbed(tmp7Result);
-  return obj;
+  obj2.feedbackIconUrl = tmp2Result.getAssetUriForEmbed(tmp7Result);
+  return obj2;
 };

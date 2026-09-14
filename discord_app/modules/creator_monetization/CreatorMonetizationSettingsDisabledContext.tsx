@@ -26,17 +26,10 @@ export const useCreatorMonetizationSettingsDisabled = function useCreatorMonetiz
 export const CreatorMonetizationSettingsDisabledContextProvider =
   function CreatorMonetizationSettingsDisabledContextProvider(arg0) {
     ({ guildId, children } = arg0);
-    let obj = CreatorMonetizationRestrictionsHooks;
-    obj = {
-      value:
-        obj.useShouldRestrictUpdatingCreatorMonetizationSettings(guildId)
-          .shouldRestrictUpdatingCreatorMonetizationSettings,
-      children,
-    };
     return (
       <context.Provider
         value={
-          obj.useShouldRestrictUpdatingCreatorMonetizationSettings(guildId)
+          CreatorMonetizationRestrictionsHooks.useShouldRestrictUpdatingCreatorMonetizationSettings(guildId)
             .shouldRestrictUpdatingCreatorMonetizationSettings
         }
       >

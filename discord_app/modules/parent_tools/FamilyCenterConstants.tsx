@@ -7,8 +7,8 @@ require = fn;
 const result = 30 * DurationsDefault.Millis.SECOND;
 const result1 = 5 * DurationsDefault.Millis.MINUTE;
 const result2 = 5 * DurationsDefault.Millis.MINUTE;
-fn(1083);
-let PathUtils = {
+const PathUtils = fn(1083);
+const obj2 = {
   USER_ADD: 1,
   [1]: "USER_ADD",
   GUILD_ADD: 2,
@@ -27,7 +27,7 @@ let PathUtils = {
   [8]: "GIFTS",
 };
 const items = [
-  PathUtils.USER_INTERACTION,
+  obj2.USER_INTERACTION,
   {
     priority: 100,
     tooltipHeader() {
@@ -73,7 +73,7 @@ const items = [
 ];
 const items1 = [items, , , , , , ,];
 const items2 = [
-  PathUtils.USER_CALLED,
+  obj2.USER_CALLED,
   {
     priority: 200,
     tooltipHeader() {
@@ -119,7 +119,7 @@ const items2 = [
 ];
 items1[1] = items2;
 const items3 = [
-  PathUtils.USER_ADD,
+  obj2.USER_ADD,
   {
     priority: 300,
     tooltipHeader() {
@@ -165,7 +165,7 @@ const items3 = [
 ];
 items1[2] = items3;
 const items4 = [
-  PathUtils.GUILD_ADD,
+  obj2.GUILD_ADD,
   {
     priority: 400,
     tooltipHeader() {
@@ -202,7 +202,7 @@ const items4 = [
 ];
 items1[3] = items4;
 const items5 = [
-  PathUtils.GUILD_INTERACTION,
+  obj2.GUILD_INTERACTION,
   {
     priority: 500,
     tooltipHeader() {
@@ -239,7 +239,7 @@ const items5 = [
 ];
 items1[4] = items5;
 const items6 = [
-  PathUtils.TOTAL_VOICE_MINUTES,
+  obj2.TOTAL_VOICE_MINUTES,
   {
     priority: 175,
     tooltipHeader() {
@@ -262,7 +262,7 @@ const items6 = [
 ];
 items1[5] = items6;
 const items7 = [
-  PathUtils.PURCHASES,
+  obj2.PURCHASES,
   {
     priority: 150,
     tooltipHeader() {
@@ -299,7 +299,7 @@ const items7 = [
 ];
 items1[6] = items7;
 const items8 = [
-  PathUtils.GIFTS,
+  obj2.GIFTS,
   {
     priority: 600,
     tooltipHeader() {
@@ -328,8 +328,8 @@ const wrapPathsResult = PathUtils.wrapPaths(
   }),
   [":", "?", "@"],
 );
-PathUtils = { CHECK: 0, [0]: "CHECK", X: 1, [1]: "X" };
-const obj1 = {
+const obj3 = { CHECK: 0, [0]: "CHECK", X: 1, [1]: "X" };
+const obj4 = {
   GENERIC_ERROR: 0,
   [0]: "GENERIC_ERROR",
   INELIGIBLE_FOR_FAMILY_CENTER: 1,
@@ -343,32 +343,7 @@ const obj1 = {
   INELIGIBLE_FOR_FAMILY_CENTER: obj5[290000],
   MAX_CONNECTIONS_REACHED: obj5[290002],
   PENDING_REQUEST_EXISTS: obj5[290005],
-} = obj1);
-const obj5 = {
-  header(isAdult) {
-    const intl = util.intl;
-    const string = intl.string;
-    const tmp = _modDef2396;
-    if (isAdult.isAdult) {
-      let stringResult = string(tmp.bS5x94);
-    } else {
-      stringResult = string(tmp.MzX4RP);
-    }
-    return stringResult;
-  },
-  description(isAdult) {
-    const intl = util.intl;
-    const format = intl.format;
-    const tmp = _modDef2396;
-    if (isAdult.isAdult) {
-      let formatResult = format(tmp.GKzqWi, { link: "https://support.discord.com/hc/articles/14155043715735" });
-    } else {
-      formatResult = format(tmp["69F+eS"], { link: "https://support.discord.com/hc/articles/14155060633623" });
-    }
-    return formatResult;
-  },
-  icon: PathUtils.X,
-};
+} = obj4);
 const size = fn(2);
 const result3 = size.fileFinishedImporting("modules/parent_tools/FamilyCenterConstants.tsx");
 
@@ -427,7 +402,7 @@ export const UserLinkStatus = {
   EXPIRED: 5,
   [5]: "EXPIRED",
 };
-export const TeenActionDisplayType = PathUtils;
+export const TeenActionDisplayType = obj2;
 export const FamilyCenterSubPages = {
   ACTIVITY: "ACTIVITY",
   REQUESTS: "REQUESTS",
@@ -477,11 +452,11 @@ export const FamilyCenterAction = {
   [10]: "CopyLink",
 };
 export const ACTION_TO_TEXT = new Map(items1);
-export const FamilyCenterIconType = PathUtils;
-export const FamilyCenterFailureCode = obj1;
+export const FamilyCenterIconType = obj3;
+export const FamilyCenterFailureCode = obj4;
 export const FAMILY_CENTER_ERROR_CODE_TO_FAILURE = { 290000: null, 290002: null, 290005: null };
 export const FAMILY_CENTER_LINK_REQUEST_ERROR_EXPERIENCES = {
-  [obj1.GENERIC_ERROR]: {
+  [obj4.GENERIC_ERROR]: {
     header() {
       const intl = util.intl;
       return intl.string(_modDef2396.nGX8Co);
@@ -490,9 +465,9 @@ export const FAMILY_CENTER_LINK_REQUEST_ERROR_EXPERIENCES = {
       const intl = util.intl;
       return intl.string(_modDef2396.Uss2dn);
     },
-    icon: PathUtils.X,
+    icon: obj3.X,
   },
-  [obj1.PENDING_REQUEST_EXISTS]: {
+  [obj4.PENDING_REQUEST_EXISTS]: {
     header() {
       const intl = util.intl;
       return intl.string(_modDef2396.tu0MRv);
@@ -509,10 +484,34 @@ export const FAMILY_CENTER_LINK_REQUEST_ERROR_EXPERIENCES = {
       }
       return formatToPlainStringResult;
     },
-    icon: PathUtils.CHECK,
+    icon: obj3.CHECK,
   },
-  [obj1.MAX_CONNECTIONS_REACHED]: obj5,
-  [obj1.INELIGIBLE_FOR_FAMILY_CENTER]: {
+  [obj4.MAX_CONNECTIONS_REACHED]: {
+    header(isAdult) {
+      const intl = util.intl;
+      const string = intl.string;
+      const tmp = _modDef2396;
+      if (isAdult.isAdult) {
+        let stringResult = string(tmp.bS5x94);
+      } else {
+        stringResult = string(tmp.MzX4RP);
+      }
+      return stringResult;
+    },
+    description(isAdult) {
+      const intl = util.intl;
+      const format = intl.format;
+      const tmp = _modDef2396;
+      if (isAdult.isAdult) {
+        let formatResult = format(tmp.GKzqWi, { link: "https://support.discord.com/hc/articles/14155043715735" });
+      } else {
+        formatResult = format(tmp["69F+eS"], { link: "https://support.discord.com/hc/articles/14155060633623" });
+      }
+      return formatResult;
+    },
+    icon: obj3.X,
+  },
+  [obj4.INELIGIBLE_FOR_FAMILY_CENTER]: {
     header() {
       const intl = util.intl;
       return intl.string(_modDef2396.W9JLJh);
@@ -523,7 +522,7 @@ export const FAMILY_CENTER_LINK_REQUEST_ERROR_EXPERIENCES = {
         link: "https://support.discord.com/hc/requests/new?ticket_form_id=360000029731",
       });
     },
-    icon: PathUtils.X,
+    icon: obj3.X,
   },
 };
 export const CONNECT_GUARDIAN_BOTTOM_SHEET_KEY = "ConnectGuardianBottomSheet";

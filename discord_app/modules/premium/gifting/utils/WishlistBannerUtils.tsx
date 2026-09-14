@@ -4,54 +4,49 @@ import util from "../../../../intl/index.native.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
 
 const useMemo = _mod19.useMemo;
-let BANNER_CONFIG_MOBILE = {
+const BannerMode = {
   FULL_WISHLIST: "FULL_WISHLIST",
   MIXED: "MIXED",
   SHOP_ONLY: "SHOP_ONLY",
   SOCIAL_LAYER_STOREFRONT_RECOMMENDATIONS_ONLY: "SOCIAL_LAYER_STOREFRONT_RECOMMENDATIONS_ONLY",
 };
-BANNER_CONFIG_MOBILE = {
-  FULL_WISHLIST: null,
-  MIXED: null,
-  SHOP_ONLY: null,
-  SOCIAL_LAYER_STOREFRONT_RECOMMENDATIONS_ONLY: null,
-};
-BANNER_CONFIG_MOBILE = { title: null, getSubtitle: null, showIcons: false };
+let obj2 = { FULL_WISHLIST: null, MIXED: null, SHOP_ONLY: null, SOCIAL_LAYER_STOREFRONT_RECOMMENDATIONS_ONLY: null };
+let obj3 = { title: null, getSubtitle: null, showIcons: false };
 let intl = util.intl;
-BANNER_CONFIG_MOBILE.title = intl.string(util.t["7lZ31J"]);
-BANNER_CONFIG_MOBILE.getSubtitle = function getSubtitle(username) {
-  const intl = util.intl;
-  return intl.formatToPlainString(util.t.BjEX38, { username });
-};
-BANNER_CONFIG_MOBILE.FULL_WISHLIST = BANNER_CONFIG_MOBILE;
-let obj1 = { title: null, getSubtitle: null, showIcons: true };
-let intl2 = util.intl;
-obj1.title = intl2.string(util.t.pWG4ze);
-obj1.getSubtitle = function getSubtitle(username) {
-  const intl = util.intl;
-  return intl.formatToPlainString(util.t.dIDKgi, { username });
-};
-BANNER_CONFIG_MOBILE.MIXED = obj1;
-let obj2 = { title: null, getSubtitle: null, showIcons: false };
-let intl3 = util.intl;
-obj2.title = intl3.string(util.t.SK5rmi);
-obj2.getSubtitle = function getSubtitle(username) {
-  const intl = util.intl;
-  return intl.formatToPlainString(util.t.wyMp1j, { username });
-};
-BANNER_CONFIG_MOBILE.SHOP_ONLY = obj2;
-const obj3 = { title: null, getSubtitle: null, showIcons: false };
-const intl4 = util.intl;
-obj3.title = intl4.string(util.t.BCi1gT);
+obj3.title = intl.string(util.t["7lZ31J"]);
 obj3.getSubtitle = function getSubtitle(username) {
   const intl = util.intl;
   return intl.formatToPlainString(util.t.BjEX38, { username });
 };
-BANNER_CONFIG_MOBILE.SOCIAL_LAYER_STOREFRONT_RECOMMENDATIONS_ONLY = obj3;
+obj2.FULL_WISHLIST = obj3;
+let obj4 = { title: null, getSubtitle: null, showIcons: true };
+let intl2 = util.intl;
+obj4.title = intl2.string(util.t.pWG4ze);
+obj4.getSubtitle = function getSubtitle(username) {
+  const intl = util.intl;
+  return intl.formatToPlainString(util.t.dIDKgi, { username });
+};
+obj2.MIXED = obj4;
+let obj5 = { title: null, getSubtitle: null, showIcons: false };
+let intl3 = util.intl;
+obj5.title = intl3.string(util.t.SK5rmi);
+obj5.getSubtitle = function getSubtitle(username) {
+  const intl = util.intl;
+  return intl.formatToPlainString(util.t.wyMp1j, { username });
+};
+obj2.SHOP_ONLY = obj5;
+const obj6 = { title: null, getSubtitle: null, showIcons: false };
+const intl4 = util.intl;
+obj6.title = intl4.string(util.t.BCi1gT);
+obj6.getSubtitle = function getSubtitle(username) {
+  const intl = util.intl;
+  return intl.formatToPlainString(util.t.BjEX38, { username });
+};
+obj2.SOCIAL_LAYER_STOREFRONT_RECOMMENDATIONS_ONLY = obj6;
 const result = size.fileFinishedImporting("modules/premium/gifting/utils/WishlistBannerUtils.tsx");
 
-export const BannerMode = BANNER_CONFIG_MOBILE;
-export { BANNER_CONFIG_MOBILE };
+export { BannerMode };
+export const BANNER_CONFIG_MOBILE = obj2;
 export const getBannerMode = function getBannerMode(wishlistInDmLength) {
   ({ totalUnownedWishlistItemCount, displayItems } = wishlistInDmLength);
   if (totalUnownedWishlistItemCount >= wishlistInDmLength.wishlistInDmLength) {
@@ -115,17 +110,17 @@ export const useWishlistBannerConfig = function useWishlistBannerConfig(totalUno
   const items1 = [tmp, recipientName];
   return displayItems(() => {
     if (obj.FULL_WISHLIST === closure_4) {
-      obj = { title: null, showIcons: false };
+      const obj2 = { title: null, showIcons: false };
       const intl3 = util.intl;
-      obj = { username: recipientName };
-      obj.title = intl3.formatToPlainString(util.t["YcL/Vr"], obj);
-      return obj;
+      const obj3 = { username: recipientName };
+      obj2.title = intl3.formatToPlainString(util.t["YcL/Vr"], obj3);
+      return obj2;
     } else if (tmp2.MIXED === tmp) {
-      const obj1 = { title: null, showIcons: true };
+      const obj4 = { title: null, showIcons: true };
       const intl2 = util.intl;
-      const obj2 = { username: recipientName };
-      obj1.title = intl2.formatToPlainString(util.t.dIDKgi, obj2);
-      return obj1;
+      const obj5 = { username: recipientName };
+      obj4.title = intl2.formatToPlainString(util.t.dIDKgi, obj5);
+      return obj4;
     } else {
       obj = { title: null, showIcons: false };
       const intl = util.intl;

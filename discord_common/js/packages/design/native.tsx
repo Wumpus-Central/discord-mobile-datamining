@@ -4,6 +4,8 @@ import GraphicTypes from "components/Graphic/GraphicTypes.native.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 import AccessibilityConstants from "components/AccessibilityPreferencesContext/AccessibilityConstants.tsx";
 
+const require = globalThis.__r;
+
 const result = size.fileFinishedImporting("../discord_common/js/packages/design/native.tsx");
 for (const key10018 in require("AccessibilityAnnouncer")) {
   arg5[key10018] = require("AccessibilityAnnouncer")[key10018];

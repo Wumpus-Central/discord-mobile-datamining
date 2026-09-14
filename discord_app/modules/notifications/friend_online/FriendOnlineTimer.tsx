@@ -11,23 +11,21 @@ require = fn;
 let closure_9 = async function _reportSessionMeaningfullyOnline() {
   closure_1 = tmp3;
   const HTTP = HTTPUtils.HTTP;
-  let obj1 = { url: constants.USER_MEANINGFULLY_ONLINE, rejectWithError: true };
-  await HTTP.post(obj1);
+  await HTTP.post({ url: constants.USER_MEANINGFULLY_ONLINE, rejectWithError: true });
   if (1 === tmp7) {
     c3 = 0;
     closure_128_0 = closure_2;
     if (closure_128_0 instanceof closure_129_0(closure_129_2[6]).HTTPResponseError) {
       if (429 === closure_128_0.status) {
-        obj1 = closure_129_1(closure_129_2[8]);
-        let obj3 = { type: "FRIEND_ONLINE_TIMER_REPORTED", timestampMs: null };
+        const obj8 = { type: "FRIEND_ONLINE_TIMER_REPORTED", timestampMs: null };
         const _Date = Date;
-        obj3.timestampMs = Date.now();
-        obj1.dispatch(obj3);
+        obj8.timestampMs = Date.now();
+        closure_129_1(closure_129_2[8]).dispatch(obj8);
         c5 = 3;
+        closure_129_1(closure_129_2[8]);
       }
     }
-    obj3 = closure_129_1(closure_129_2[7]);
-    obj3.captureException(closure_128_0, { tags: { app_context: "session_timer" } });
+    closure_129_1(closure_129_2[7]).captureException(closure_128_0, { tags: { app_context: "session_timer" } });
     c5 = 3;
     return { value: undefined, done: true };
   } else if (arg0 === 1) {

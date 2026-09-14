@@ -1,7 +1,7 @@
 // discord_app/modules/notifications/native/InAppMessageSoundsStore.tsx
 import Storage2 from "../../../../discord_common/js/packages/storage/Storage.tsx";
 import _mod4259 from "../../../../_runtime/metro/04259__.js";
-import identity from "../../../../_runtime/metro/01244__.js";
+import identity from "../../../../_runtime/metro/01242__.js";
 import size from "../../../../_runtime/metro/00002__.js";
 
 const InAppMessageSoundsEnabled = "InAppMessageSoundsEnabled";

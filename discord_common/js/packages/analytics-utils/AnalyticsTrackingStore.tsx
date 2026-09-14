@@ -2,10 +2,12 @@
 import logger_Logger from "../logger/Logger.tsx";
 import discord_common_IdGenerator from "../id-generator/IdGenerator.tsx";
 import FingerprintUtils from "../fingerprint-utils/FingerprintUtils.tsx";
-import v1 from "../../../../_runtime/01256_v1.js";
+import v1 from "../../../../_runtime/01254_v1.js";
 import HTTPUtils from "../http-utils/HTTPUtils.tsx";
 import Constants from "../../shared/Constants.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
+
+const require = globalThis.__r;
 
 ({ TelemetryEndpoints: c3, TelemetryEvents: closure_4 } = Constants);
 let c5 = "x-science-test";
@@ -62,22 +64,22 @@ function defaultGetSessionId() {
 let result = size.fileFinishedImporting("../discord_common/js/packages/analytics-utils/AnalyticsTrackingStore.tsx");
 
 export const AnalyticsActionHandlers = obj;
-export const analyticsTrackingStoreMaker = (AnalyticsUtils) => {
-  ({ dispatcher, actionHandler, getFingerprint: require, getSessionId } = AnalyticsUtils);
+export const analyticsTrackingStoreMaker = (getLaunchSignature) => {
+  ({ dispatcher, actionHandler, getFingerprint: require, getSessionId } = getLaunchSignature);
   if (getSessionId === undefined) {
     getSessionId = defaultGetSessionId;
   }
-  ({ TRACKING_URL: dependencyMap, drainTimeoutOverride, waitFor: closure_3, scheduleWhenIdle } = AnalyticsUtils);
+  ({ TRACKING_URL: dependencyMap, drainTimeoutOverride, waitFor: closure_3, scheduleWhenIdle } = getLaunchSignature);
   if (scheduleWhenIdle === undefined) {
     scheduleWhenIdle = fn;
   }
-  fn = AnalyticsUtils.getLaunchSignature;
+  fn = getLaunchSignature.getLaunchSignature;
   if (fn === undefined) {
     fn = function z() {
       return null;
     };
   }
-  ({ submitEvents: logger, sendUnloadRequest: closure_7 } = AnalyticsUtils);
+  ({ submitEvents: logger, sendUnloadRequest: closure_7 } = getLaunchSignature);
   function scheduleDrain(shouldFlushOnNextTick) {
     let flag = shouldFlushOnNextTick.shouldFlushOnNextTick;
     if (flag === undefined) {
@@ -147,13 +149,13 @@ export const analyticsTrackingStoreMaker = (AnalyticsUtils) => {
   function submitEventsImmediately(existingEvents, CLIENT_TELEMETRY) {
     const client_send_timestamp = Date.now();
     const mapped = existingEvents.map((properties) => {
-      properties = {};
+      obj = {};
       const merged = Object.assign(properties);
-      properties = {};
+      const obj2 = {};
       const merged1 = Object.assign(properties.properties);
-      properties.client_send_timestamp = client_send_timestamp;
-      properties.properties = properties;
-      return properties;
+      obj2.client_send_timestamp = client_send_timestamp;
+      obj.properties = obj2;
+      return obj;
     });
     if (null != logger) {
       return tmp2(mapped, analyticsToken);
@@ -162,17 +164,17 @@ export const analyticsTrackingStoreMaker = (AnalyticsUtils) => {
       if (CLIENT_TELEMETRY == null) {
         tmp3 = dependencyMap;
       }
-      let body = {};
+      let headers = {};
       if (!c23) {
         const v4Result = v1.v4();
         c25 = v4Result;
-        body[c5] = v4Result;
+        headers[c5] = v4Result;
         c23 = true;
       }
       const HTTP = HTTPUtils.HTTP;
-      const request = { url: tmp3, headers: body, body: null, retries: 3, rejectWithError: false };
-      body = { token: analyticsToken, events: mapped };
-      request.body = body;
+      const request = { url: tmp3, headers, body: null, retries: 3, rejectWithError: false };
+      const obj3 = { token: analyticsToken, events: mapped };
+      request.body = obj3;
       return HTTP.post(request).then((headers) => {
         if (obj[fn]) {
           let tmp3;
@@ -207,13 +209,13 @@ export const analyticsTrackingStoreMaker = (AnalyticsUtils) => {
             obj = {
               token: analyticsToken,
               events: substr.map((properties) => {
-                        properties = {};
+                        obj = {};
                         const merged = Object.assign(properties);
-                        properties = {};
+                        const obj2 = {};
                         const merged1 = Object.assign(properties.properties);
-                        properties.client_send_timestamp = client_send_timestamp;
-                        properties.properties = properties;
-                        return properties;
+                        obj2.client_send_timestamp = client_send_timestamp;
+                        obj.properties = obj2;
+                        return obj;
                       })
             };
             let flag = tmp11(closure_1_2, JSON.stringify(obj));
@@ -243,23 +245,23 @@ export const analyticsTrackingStoreMaker = (AnalyticsUtils) => {
   }
   drainTimeoutOverride = flushQueuedEvents;
   function sendTelemetryEvent() {
-    properties = { type: constants2.CLIENT_TELEMETRY, properties: null };
-    properties = { client_track_timestamp: Date.now(), rpc_success_count, rpc_failure_count, first_seen_event_sequence_number, last_seen_event_sequence_number, telemetry_period_start_timestamp, telemetry_period_end_timestamp: Date.now(), event_queue_rejection_count, event_queue_batch_count, event_queue_batch_min_size: null, event_queue_batch_max_size: null, event_queue_batch_avg_size: null, science_request_id: null, science_response: null, launch_signature: null };
+    obj = { type: constants2.CLIENT_TELEMETRY, properties: null };
+    const obj2 = { client_track_timestamp: Date.now(), rpc_success_count, rpc_failure_count, first_seen_event_sequence_number, last_seen_event_sequence_number, telemetry_period_start_timestamp, telemetry_period_end_timestamp: Date.now(), event_queue_rejection_count, event_queue_batch_count, event_queue_batch_min_size: null, event_queue_batch_max_size: null, event_queue_batch_avg_size: null, science_request_id: null, science_response: null, launch_signature: null };
     let num = 0;
     if (MAX_SAFE_INTEGER !== Number.MAX_SAFE_INTEGER) {
       num = MAX_SAFE_INTEGER;
     }
-    properties.event_queue_batch_min_size = num;
-    properties.event_queue_batch_max_size = event_queue_batch_max_size;
+    obj2.event_queue_batch_min_size = num;
+    obj2.event_queue_batch_max_size = event_queue_batch_max_size;
     let num2 = 0;
     if (event_queue_batch_count > 0) {
       num2 = c21 / tmp;
     }
-    properties.event_queue_batch_avg_size = num2;
-    properties.science_request_id = science_request_id;
-    properties.science_response = science_response;
-    properties.launch_signature = fn();
-    properties.properties = properties;
+    obj2.event_queue_batch_avg_size = num2;
+    obj2.science_request_id = science_request_id;
+    obj2.science_response = science_response;
+    obj2.launch_signature = fn();
+    obj.properties = obj2;
     event_queue_rejection_count = 0;
     rpc_success_count = 0;
     rpc_failure_count = 0;
@@ -269,7 +271,7 @@ export const analyticsTrackingStoreMaker = (AnalyticsUtils) => {
     c21 = 0;
     telemetry_period_start_timestamp = Date.now();
     first_seen_event_sequence_number = last_seen_event_sequence_number;
-    const items = [properties];
+    const items = [obj];
     return submitEventsImmediately(items, constants.CLIENT_TELEMETRY).catch((error) => {
       let str;
       if (error != null) {
@@ -300,7 +302,7 @@ export const analyticsTrackingStoreMaker = (AnalyticsUtils) => {
     const _window = window;
     const listener1 = window.addEventListener("pagehide", flushQueuedEvents);
   }
-  properties.handleConnectionOpen = (arg0) => {
+  obj.handleConnectionOpen = (arg0) => {
     ({ analyticsToken, user } = arg0);
     if (null != user.id) {
       id = user.id;
@@ -359,7 +361,7 @@ export const analyticsTrackingStoreMaker = (AnalyticsUtils) => {
     scheduleDrain({ shouldFlushOnNextTick: false });
     return false;
   };
-  properties.handleConnectionClosed = () => {
+  obj.handleConnectionClosed = () => {
     drainEventsQueue();
     if (null == obj) {
       analyticsToken = null;
@@ -377,25 +379,25 @@ export const analyticsTrackingStoreMaker = (AnalyticsUtils) => {
       clearInterval(obj.id);
     }
   };
-  properties.handleFingerprint = () => {
+  obj.handleFingerprint = () => {
     drainEventsQueue();
     return false;
   };
-  properties.handleTrack = (arg0) => {
+  obj.handleTrack = (arg0) => {
     ({ event: closure_0, properties: getSessionId, flush: closure_2, fingerprint: closure_3, resolve: scheduleWhenIdle } = arg0);
     getSessionId().then((client_heartbeat_session_id) => {
-      properties = { type, fingerprint, properties: null, resolve: null };
-      properties = { client_track_timestamp: Date.now(), client_heartbeat_session_id: client_heartbeat_session_id.sessionId, event_sequence_number: null };
+      obj = { type, fingerprint, properties: null, resolve: null };
+      const obj2 = { client_track_timestamp: Date.now(), client_heartbeat_session_id: client_heartbeat_session_id.sessionId, event_sequence_number: null };
       const sum = c12 + 1;
       c12 = sum;
-      properties.event_sequence_number = sum;
+      obj2.event_sequence_number = sum;
       const merged = Object.assign(getSessionId);
-      properties.properties = properties;
-      properties.resolve = resolve;
+      obj.properties = obj2;
+      obj.resolve = resolve;
       if (null != userId) {
         let extractIdResult = userId;
       } else {
-        fingerprint = properties.fingerprint;
+        fingerprint = obj.fingerprint;
         if (fingerprint == null) {
           fingerprint = closure_2_0();
         }
@@ -405,9 +407,9 @@ export const analyticsTrackingStoreMaker = (AnalyticsUtils) => {
         }
       }
       if (null != extractIdResult) {
-        properties.properties.client_uuid = idGenerator.generate(extractIdResult);
+        obj.properties.client_uuid = idGenerator.generate(extractIdResult);
       }
-      closure_31.push(properties);
+      closure_31.push(obj);
       if (closure_31.length > 10000) {
         closure_13 = closure_13 + (closure_31.length - 10000);
         closure_31 = closure_31.slice(-10000);
@@ -416,7 +418,7 @@ export const analyticsTrackingStoreMaker = (AnalyticsUtils) => {
     });
     return false;
   };
-  properties.handleSetAnalyticsToken = (analyticsToken) => {
+  obj.handleSetAnalyticsToken = (analyticsToken) => {
     analyticsToken = analyticsToken.analyticsToken;
     let tmp = null == analyticsToken;
     if (tmp) {

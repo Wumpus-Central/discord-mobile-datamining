@@ -17,7 +17,7 @@ const result = size.fileFinishedImporting("modules/user_settings/account/native/
 export default function SMSBackupWarningAlert(onConfirm) {
   onConfirm = onConfirm.onConfirm;
   const tmp = closure_5();
-  let obj = { cancelText: null, confirmText: null, onConfirm: null, onCancel: null, children: null };
+  const obj = { cancelText: null, confirmText: null, onConfirm: null, onCancel: null, children: null };
   const intl = onConfirm(1114).intl;
   obj.cancelText = intl.string(onConfirm(1114).t["ETE/oC"]);
   const intl2 = onConfirm(1114).intl;
@@ -29,7 +29,7 @@ export default function SMSBackupWarningAlert(onConfirm) {
   obj.onCancel = function onCancel() {
     return actions_AlertActionCreatorsDefault.close();
   };
-  obj = {
+  const obj2 = {
     style: tmp.title,
     accessibilityRole: "header",
     variant: "heading-lg/extrabold",
@@ -37,12 +37,12 @@ export default function SMSBackupWarningAlert(onConfirm) {
     children: null,
   };
   const intl3 = onConfirm(1114).intl;
-  obj.children = intl3.string(onConfirm(1114).t.Ed4XQB);
-  const items = [closure_3(onConfirm(4632).Text, obj)];
-  obj = { style: tmp.body, variant: "text-sm/medium", color: "text-default", children: null };
+  obj2.children = intl3.string(onConfirm(1114).t.Ed4XQB);
+  const items = [closure_3(onConfirm(4632).Text, obj2)];
+  const obj3 = { style: tmp.body, variant: "text-sm/medium", color: "text-default", children: null };
   const intl4 = onConfirm(1114).intl;
-  obj.children = intl4.string(onConfirm(1114).t.EDU2Eg);
-  items[1] = closure_3(onConfirm(4632).Text, obj);
+  obj3.children = intl4.string(onConfirm(1114).t.EDU2Eg);
+  items[1] = closure_3(onConfirm(4632).Text, obj3);
   obj.children = items;
   return closure_4(common_AlertDefault, obj);
 }

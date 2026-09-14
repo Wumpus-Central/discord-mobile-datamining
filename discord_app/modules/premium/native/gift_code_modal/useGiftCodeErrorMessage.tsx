@@ -3,6 +3,8 @@ import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import CollectiblesPurchaseStore from "../../../collectibles/CollectiblesPurchaseStore.tsx";
 import GiftCodeStore from "../../../../stores/GiftCodeStore.tsx";
 
+const require = globalThis.__r;
+
 const require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/native/gift_code_modal/useGiftCodeErrorMessage.tsx");
@@ -10,14 +12,10 @@ const result = size.fileFinishedImporting("modules/premium/native/gift_code_moda
 export default function useGiftCodeErrorMessage(arg0, id) {
   _require = arg0;
   let items = [GiftCodeStore];
-  const tmp3 = _slicedToArray(
-    require("initialize").useStateFromStoresArray(items, () => {
-      const items = [GiftCodeStore.get(closure_0), GiftCodeStore.getError(closure_0)];
-      return items;
-    }),
-    2,
-  );
-  first = tmp3[0];
+  [first] = require("initialize").useStateFromStoresArray(items, () => {
+    const items = [GiftCodeStore.get(closure_0), GiftCodeStore.getError(closure_0)];
+    return items;
+  });
   const obj = require("initialize");
   const items1 = [CollectiblesPurchaseStore];
   let userId;

@@ -17,8 +17,8 @@ let closure_6 = async function _requestIsLinkTrusted(arg0) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -31,8 +31,8 @@ let closure_6 = async function _requestIsLinkTrusted(arg0) {
             throw value;
           } else if (arg0 === 2) {
             c5 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
             closure_2 = tmp6;
             let body;
@@ -44,12 +44,12 @@ let closure_6 = async function _requestIsLinkTrusted(arg0) {
               query: null,
               timeout: 500,
             };
-            const obj1 = { url };
-            request.query = obj1;
+            const obj4 = { url };
+            request.query = obj4;
             c3 = 2;
             c5 = 1;
-            const obj2 = { value: HTTP.get(request), done: false };
-            return obj2;
+            const obj5 = { value: HTTP.get(request), done: false };
+            return obj5;
           }
         } else if (1 === tmp6) {
           c4 = 0;
@@ -61,14 +61,14 @@ let closure_6 = async function _requestIsLinkTrusted(arg0) {
         } else if (arg0 === 2) {
           c4 = 0;
           c5 = 3;
-          const obj3 = { value, done: true };
-          return obj3;
+          const obj6 = { value, done: true };
+          return obj6;
         } else {
           body = value.body;
           const _Boolean = Boolean;
           c4 = 0;
           c5 = 3;
-          obj = { value: Boolean(body.trusted), done: true };
+          const obj = { value: Boolean(body.trusted), done: true };
           return obj;
         }
       } catch (tmp9) {
@@ -90,8 +90,8 @@ let closure_7 = async function _fetchIsLinkTrusted(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      let obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -104,8 +104,8 @@ let closure_7 = async function _fetchIsLinkTrusted(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c5 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           closure_3 = tmp2;
           closure_2 = tmp3;
@@ -131,13 +131,13 @@ let closure_7 = async function _fetchIsLinkTrusted(arg0) {
             const combined = "" + closure_0 + ":" + closure_1;
             closure_130_0 = combined;
             let tmp23 = (function readCache(combined) {
-              value = map.get(combined);
+              value = closure_1_5.get(combined);
               if (null == value) {
                 return null;
               } else {
                 const _Date = Date;
                 if (Date.now() >= value.expiresAt) {
-                  map.delete(combined);
+                  closure_1_5.delete(combined);
                   let check = null;
                 } else {
                   check = value.check;
@@ -158,23 +158,22 @@ let closure_7 = async function _fetchIsLinkTrusted(arg0) {
               })(closure_0, closure_1);
               closure_130_1 = tmp24;
               (function writeCache(combined, check) {
-                let obj = map;
-                if (map.size >= 100) {
-                  const iter2 = obj.keys().next();
+                if (closure_1_5.size >= 100) {
+                  const iter2 = closure_1_5.keys().next();
                   if (!iter2.done) {
-                    obj.delete(iter2.value);
+                    closure_1_5.delete(iter2.value);
                   }
-                  const iter = obj.keys();
+                  const iter = closure_1_5.keys();
                 }
-                obj = { check, expiresAt: Date.now() + 300000 };
-                const result = obj.set(combined, obj);
+                const result = closure_1_5.set(combined, { check, expiresAt: Date.now() + 300000 });
+                const obj2 = { check, expiresAt: Date.now() + 300000 };
               })(combined, tmp24);
               tmp23 = tmp24;
             }
             c4 = 1;
             c5 = 1;
-            const obj1 = { value: tmp23, done: false };
-            return obj1;
+            const obj4 = { value: tmp23, done: false };
+            return obj4;
           }
         }
       } else if (arg0 === 1) {
@@ -182,7 +181,7 @@ let closure_7 = async function _fetchIsLinkTrusted(arg0) {
         throw value;
       } else if (arg0 === 2) {
         c5 = 3;
-        obj = { value, done: true };
+        const obj = { value, done: true };
         return obj;
       } else {
         closure_130_2 = value;

@@ -38,11 +38,9 @@ export const TableSwitchRow = function TableSwitchRow(value) {
       variant: 0,
     }),
   );
-  let obj = PlatformUtils;
   const tmp2 = closure_7();
-  let obj1 = native;
-  const nodeText = obj1.getNodeText(label);
-  const isAndroidResult = obj.isAndroid();
+  const isAndroidResult = PlatformUtils.isAndroid();
+  const nodeText = native.getNodeText(label);
   const nodeText1 = native.getNodeText(subLabel);
   const tmp8 = _slicedToArray(noop.useState(value), 2);
   closure_2 = tmp8[1];
@@ -50,32 +48,32 @@ export const TableSwitchRow = function TableSwitchRow(value) {
   const effect = noop.useEffect(() => {
     closure_2(value);
   }, items);
-  obj = {};
+  const obj5 = {};
   const merged1 = Object.assign(merged);
-  obj.variant = variant;
-  obj.arrow = false;
+  obj5.variant = variant;
+  obj5.arrow = false;
   let tmp15Result = label;
   if (null != trailing) {
-    obj = { style: tmp2.labelWithTrailing, children: null };
+    const obj6 = { style: tmp2.labelWithTrailing, children: null };
     let tmp10Result = label;
     if (!noop.isValidElement(label)) {
       let str = "mobile-text-heading-primary";
       if ("danger" === variant) {
         str = "text-feedback-critical";
       }
-      obj1 = { variant: "text-md/semibold", color: str, includeFontPadding: true, children: label };
-      tmp10Result = hasOwnProperty(tmp3(4632).Text, obj1);
+      const obj7 = { variant: "text-md/semibold", color: str, includeFontPadding: true, children: label };
+      tmp10Result = hasOwnProperty(tmp3(4632).Text, obj7);
     }
     const items1 = [tmp10Result, trailing];
-    obj.children = items1;
-    tmp15Result = timestampProducer(View, obj);
+    obj6.children = items1;
+    tmp15Result = timestampProducer(View, obj6);
   }
-  obj.label = tmp15Result;
-  obj.subLabel = subLabel;
-  obj.disabled = disabled;
-  obj.accessibilityState = { disabled, checked: tmp8[0] };
-  obj.accessible = true;
-  obj.accessibilityRole = "switch";
+  obj5.label = tmp15Result;
+  obj5.subLabel = subLabel;
+  obj5.disabled = disabled;
+  obj5.accessibilityState = { disabled, checked: tmp8[0] };
+  obj5.accessible = true;
+  obj5.accessibilityRole = "switch";
   let str3 = nodeText1;
   if (nodeText1 == null) {
     str3 = "";
@@ -87,14 +85,14 @@ export const TableSwitchRow = function TableSwitchRow(value) {
     }
     return tmpResult;
   }
-  obj.accessibilityLabel = "" + nodeText + ", " + str3;
-  obj.accessibilityHint = value.accessibilityHint;
+  obj5.accessibilityLabel = "" + nodeText + ", " + str3;
+  obj5.accessibilityHint = value.accessibilityHint;
   let tmp14;
   if (isAndroidResult) {
     tmp14 = handleOnPress;
   }
-  obj.onPress = tmp14;
-  obj.onAccessibilityTap = function onAccessibilityTap() {
+  obj5.onPress = tmp14;
+  obj5.onAccessibilityTap = function onAccessibilityTap() {
     closure_2(!value);
     const timerId = setTimeout(() => {
       if (closure_1_1 != null) {
@@ -102,11 +100,11 @@ export const TableSwitchRow = function TableSwitchRow(value) {
       }
     });
   };
-  obj.trailing = hasOwnProperty(FormSwitch.FormSwitch, {
+  obj5.trailing = hasOwnProperty(FormSwitch.FormSwitch, {
     "aria-hidden": true,
     value,
     onValueChange: handleOnPress,
     disabled,
   });
-  return hasOwnProperty(TableRow.TableRow, obj);
+  return hasOwnProperty(TableRow.TableRow, obj5);
 };

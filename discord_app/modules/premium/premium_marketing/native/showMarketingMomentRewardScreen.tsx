@@ -12,8 +12,8 @@ let closure_5 = async function _showMarketingMomentRewardScreen(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -26,32 +26,31 @@ let closure_5 = async function _showMarketingMomentRewardScreen(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c4 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           closure_2 = tmp5;
           closure_1 = tmp2;
           closure_129_0 = closure_0;
           let product;
-          let obj3 = CollectiblesActionCreators;
           c3 = 1;
           c4 = 1;
-          const obj1 = { value: obj3.fetchCollectiblesProduct(closure_0), done: false };
-          return obj1;
+          const obj5 = { value: CollectiblesActionCreators.fetchCollectiblesProduct(closure_0), done: false };
+          return obj5;
         }
       } else if (arg0 === 1) {
         c4 = 3;
         throw value;
       } else if (arg0 === 2) {
         c4 = 3;
-        const obj2 = { value, done: true };
-        return obj2;
+        const obj6 = { value, done: true };
+        return obj6;
       } else {
         product = closure_130_4.getProduct(closure_129_0);
         if (null != product) {
-          obj = closure_130_1(closure_130_2[3]);
-          obj3 = { product, useCategoryImage: true };
-          obj.open(obj3);
+          const obj7 = { product, useCategoryImage: true };
+          closure_130_1(closure_130_2[3]).open(obj7);
+          const obj = closure_130_1(closure_130_2[3]);
         }
         c4 = 3;
         return { value: "HermesInternal", done: null };

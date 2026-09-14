@@ -10,8 +10,8 @@ let closure_4 = async function _submitPollVote(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -24,8 +24,8 @@ let closure_4 = async function _submitPollVote(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c6 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           closure_2 = tmp3;
           closure_1 = tmp5;
@@ -43,8 +43,8 @@ let closure_4 = async function _submitPollVote(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c6 = 3;
-          const obj1 = { value, done: true };
-          return obj1;
+          const obj4 = { value, done: true };
+          return obj4;
         } else {
           c4 = 1;
           const HTTP = closure_130_0(closure_130_1[2]).HTTP;
@@ -53,12 +53,12 @@ let closure_4 = async function _submitPollVote(arg0) {
             body: null,
             rejectWithError: false,
           };
-          const obj2 = { answer_ids: closure_129_2 };
-          request.body = obj2;
+          const obj5 = { answer_ids: closure_129_2 };
+          request.body = obj5;
           c5 = 3;
           c6 = 1;
-          const obj3 = { value: HTTP.put(request), done: false };
-          return obj3;
+          const obj6 = { value: HTTP.put(request), done: false };
+          return obj6;
         }
       } else if (2 === tmp8) {
         c4 = 0;
@@ -71,7 +71,7 @@ let closure_4 = async function _submitPollVote(arg0) {
       } else if (arg0 === 2) {
         c4 = 0;
         c6 = 3;
-        obj = { value, done: true };
+        const obj = { value, done: true };
         return obj;
       } else {
         c4 = 0;
@@ -97,8 +97,8 @@ let closure_5 = async function _endPollEarly(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -111,8 +111,8 @@ let closure_5 = async function _endPollEarly(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c6 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           closure_2 = tmp3;
           closure_1 = tmp5;
@@ -129,16 +129,16 @@ let closure_5 = async function _endPollEarly(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c6 = 3;
-          const obj1 = { value, done: true };
-          return obj1;
+          const obj4 = { value, done: true };
+          return obj4;
         } else {
           c4 = 1;
           const HTTP = closure_130_0(closure_130_1[2]).HTTP;
-          const obj2 = { url: closure_130_3.POLL_EXPIRE(closure_129_0, closure_129_1), rejectWithError: false };
+          const obj5 = { url: closure_130_3.POLL_EXPIRE(closure_129_0, closure_129_1), rejectWithError: false };
           c5 = 3;
           c6 = 1;
-          const obj3 = { value: HTTP.post(obj2), done: false };
-          return obj3;
+          const obj6 = { value: HTTP.post(obj5), done: false };
+          return obj6;
         }
       } else if (2 === tmp8) {
         c4 = 0;
@@ -151,7 +151,7 @@ let closure_5 = async function _endPollEarly(arg0) {
       } else if (arg0 === 2) {
         c4 = 0;
         c6 = 3;
-        obj = { value, done: true };
+        const obj = { value, done: true };
         return obj;
       } else {
         c4 = 0;

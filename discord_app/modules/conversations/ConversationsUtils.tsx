@@ -67,7 +67,7 @@ export const mapConversation = function mapConversation(summary_map) {
   if (null != title) {
     tmp4 = null;
     if ("" !== tmp2.title) {
-      let obj = {
+      const obj5 = {
         id: summary_map.id,
         title: null,
         briefSummary: null,
@@ -91,8 +91,8 @@ export const mapConversation = function mapConversation(summary_map) {
       if (brief_summary == null) {
         brief_summary = null;
       }
-      obj.briefSummary = brief_summary;
-      obj.keyPoints = tmp2.key_points;
+      obj5.briefSummary = brief_summary;
+      obj5.keyPoints = tmp2.key_points;
       ({
         channel_id: obj3.channelId,
         guild_id: obj3.guildId,
@@ -107,10 +107,10 @@ export const mapConversation = function mapConversation(summary_map) {
       if (keywords == null) {
         keywords = [];
       }
-      obj.keywords = keywords;
+      obj5.keywords = keywords;
       let tmp5 = null;
       if (null != summary_map.summary_map) {
-        obj = { entries: null };
+        let obj = { entries: null };
         const entries1 = summary_map.summary_map.entries;
         obj.entries = entries1.map((summaryType) => ({
           summaryType: summaryType.summary_type,
@@ -118,12 +118,12 @@ export const mapConversation = function mapConversation(summary_map) {
         }));
         tmp5 = obj;
       }
-      obj.summaryMap = tmp5;
+      obj5.summaryMap = tmp5;
       ({ engagement: obj3.engagement, substance: obj3.substance, dynamics: obj3.dynamics } = summary_map);
       let tmp6 = null;
       if (null != summary_map.moderation) {
         const moderation = summary_map.moderation;
-        obj = {
+        const obj6 = {
           status: null,
           statusReason: null,
           messageViolationRate: null,
@@ -146,7 +146,7 @@ export const mapConversation = function mapConversation(summary_map) {
           flagged_message_ids: obj2.flaggedMessageIds,
           flagged_message_details,
         } = moderation);
-        obj.flaggedMessageDetails = flagged_message_details.map((messageId) => ({
+        obj6.flaggedMessageDetails = flagged_message_details.map((messageId) => ({
           messageId: messageId.message_id,
           category: messageId.category,
           severity: messageId.severity,
@@ -160,10 +160,10 @@ export const mapConversation = function mapConversation(summary_map) {
           flagged_key_points: obj2.flaggedKeyPoints,
           failed_message_ids: obj2.failedMessageIds,
         } = moderation);
-        tmp6 = obj;
+        tmp6 = obj6;
       }
-      obj.moderation = tmp6;
-      tmp4 = obj;
+      obj5.moderation = tmp6;
+      tmp4 = obj5;
     }
   }
   return tmp4;

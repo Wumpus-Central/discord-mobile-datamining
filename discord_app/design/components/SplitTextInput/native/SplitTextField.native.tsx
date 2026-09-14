@@ -14,28 +14,25 @@ const size = fn(2);
 const result = size.fileFinishedImporting("design/components/SplitTextInput/native/SplitTextField.native.tsx");
 
 export const SplitTextField = noop.forwardRef((size, arg1) => {
-  let obj = { size: size.size, isRound: size.isRound };
-  const inputStyles = obj.useInputStyles(obj);
-  let obj2 = useTextField;
-  const textField = obj2.useTextField(size, arg1);
+  const inputStyles = InputFieldContainer.useInputStyles({ size: size.size, isRound: size.isRound });
+  const obj2 = { size: size.size, isRound: size.isRound };
+  const textField = useTextField.useTextField(size, arg1);
   ({ inputProps, innerRef, state } = textField);
-  let obj3 = useInputClearButton;
-  const inputClearButtonConfig = obj3.useInputClearButtonConfig(size, state);
+  const inputClearButtonConfig = useInputClearButton.useInputClearButtonConfig(size, state);
   let tmp6;
   if (null != inputClearButtonConfig) {
-    obj = { trailing: null, trailingPressableProps: null };
     ({ content: obj5.trailing, pressableProps: obj5.trailingPressableProps } = inputClearButtonConfig);
-    tmp6 = obj;
+    tmp6 = { trailing: null, trailingPressableProps: null };
+    const obj6 = { trailing: null, trailingPressableProps: null };
   }
-  let tmpResult = useInputAttachments;
-  const inputAttachments = tmpResult.useInputAttachments(size, tmp6);
+  const inputAttachments = useInputAttachments.useInputAttachments(size, tmp6);
   let tmp8 = null;
   ({ trailing, inputStyle } = inputAttachments);
   if (null != size.leadingText) {
     tmp8 = null;
     if (size.leadingText.length > 0) {
-      const obj1 = { style: inputStyles.splitBorder, children: null };
-      obj2 = {
+      const obj7 = { style: inputStyles.splitBorder, children: null };
+      const obj8 = {
         style(pressed) {
           let obj;
           if (pressed.pressed) {
@@ -46,9 +43,8 @@ export const SplitTextField = noop.forwardRef((size, arg1) => {
         },
       };
       const merged = Object.assign(size.leadingPressableProps);
-      tmpResult = useInputAttachments;
-      obj2.children = tmpResult.renderInputAttachment(undefined, size.leadingText, inputStyles.text);
-      obj1.children = (
+      obj8.children = useInputAttachments.renderInputAttachment(undefined, size.leadingText, inputStyles.text);
+      obj7.children = (
         <React2
           style={function style(pressed) {
             let obj;
@@ -61,13 +57,14 @@ export const SplitTextField = noop.forwardRef((size, arg1) => {
         />
       );
       tmp8 = <React3 style={inputStyles.splitBorder}>{null}</React3>;
+      const tmpResult2 = useInputAttachments;
     }
   }
-  obj3 = {};
+  const obj9 = {};
   const merged1 = Object.assign(inputProps);
-  obj3.ref = innerRef;
-  obj3.leading = tmp8;
-  obj3.trailing = trailing;
-  obj3.inputStyle = inputStyle;
+  obj9.ref = innerRef;
+  obj9.leading = tmp8;
+  obj9.trailing = trailing;
+  obj9.inputStyle = inputStyle;
   return jsx(BaseTextField.BaseTextField, {});
 });

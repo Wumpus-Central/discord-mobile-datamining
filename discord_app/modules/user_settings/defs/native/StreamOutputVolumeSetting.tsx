@@ -10,8 +10,8 @@ import AuthenticationStore from "../../../../stores/AuthenticationStore.tsx";
 import MediaEngineStore from "../../../../stores/MediaEngineStore.tsx";
 
 require = fn;
-fn(11601);
-let SettingBuilders = {
+const SettingBuilders = fn(11602);
+const volumeSlider = SettingBuilders.createVolumeSlider({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.pEAl4b);
@@ -78,9 +78,8 @@ let SettingBuilders = {
     items[1] = intl2.string(util.t["DGq/PR"]);
     return items;
   },
-};
-SettingBuilders = SettingBuilders.createVolumeSlider(SettingBuilders);
+});
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/StreamOutputVolumeSetting.tsx");
 
-export default SettingBuilders;
+export default volumeSlider;

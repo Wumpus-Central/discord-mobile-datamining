@@ -3,6 +3,8 @@ import LegacyBaseButton from "../../../../../../../_runtime/06756_LegacyBaseButt
 import SearchPlatformUtilsDefault from "../../../SearchPlatformUtils.tsx";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 
+const require = globalThis.__r;
+
 require = fn;
 function inBoundingBox(arg0, left, arg2) {
   const first = arg0.allTouches[0];

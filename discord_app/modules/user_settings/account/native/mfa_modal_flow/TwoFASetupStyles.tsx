@@ -5,12 +5,11 @@ import createStyles from "../../../../../design/components/Styles/native/createS
 import TextStyles from "../../../../rebrand/native/TextStyles.tsx";
 import size from "../../../../../../_runtime/metro/00002__.js";
 
-let obj = { text: { textAlign: "center", marginLeft: 20, marginRight: 20 }, modalHeader: null, modalBody: null };
-obj = {};
+const obj = { text: { textAlign: "center", marginLeft: 20, marginRight: 20 }, modalHeader: null, modalBody: null };
 const merged = Object.assign(
   TextStyles(Constants.Fonts.DISPLAY_EXTRABOLD, nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, 24),
 );
-obj.modalHeader = obj;
+obj.modalHeader = {};
 obj.modalBody = { color: nativeDefault.colors.TEXT_SUBTLE, marginTop: 8 };
 const styles = createStyles.createStyles(obj);
 const result = size.fileFinishedImporting("modules/user_settings/account/native/mfa_modal_flow/TwoFASetupStyles.tsx");

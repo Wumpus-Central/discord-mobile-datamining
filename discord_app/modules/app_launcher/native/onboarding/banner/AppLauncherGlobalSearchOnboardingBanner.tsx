@@ -8,8 +8,8 @@ const View = fn(17).View;
 const DEFAULT_CONTENT_PADDING = fn(1482).DEFAULT_CONTENT_PADDING;
 const ContentDismissActionType = fn(1954).ContentDismissActionType;
 const jsx = fn(21).jsx;
-fn(4636);
-const createStyles = { appsIcon: null, appsIconImage: null };
+const createStyles = fn(4636);
+const obj2 = { appsIcon: null, appsIconImage: null };
 let size = {
   height: 40,
   width: 40,
@@ -18,10 +18,10 @@ let size = {
   alignItems: "center",
   justifyContent: "center",
 };
-createStyles.appsIcon = size;
+obj2.appsIcon = size;
 let size1 = { height: 24, width: 24, tintColor: nativeDefault.unsafe_rawColors.WHITE };
-createStyles.appsIconImage = size1;
-let closure_8 = createStyles.createStyles(createStyles);
+obj2.appsIconImage = size1;
+let closure_8 = createStyles.createStyles(obj2);
 size = fn(2);
 const result = size.fileFinishedImporting(
   "modules/app_launcher/native/onboarding/banner/AppLauncherGlobalSearchOnboardingBanner.tsx",
@@ -47,13 +47,21 @@ export default function GlobalSearchCoachmark(markAsDismissed) {
   if (visible) {
     let obj = {
       renderImgComponent: function appsIcon() {
-        let obj = { style: closure_2.appsIcon, children: null };
-        obj = { style: closure_2.appsIconImage, color: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE };
-        obj.children = jsx(AppsIcon.AppsIcon, {
-          style: closure_2.appsIconImage,
-          color: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE,
-        });
-        return <View style={closure_2.appsIconImage} color={nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE} />;
+        const obj = {
+          style: closure_2.appsIcon,
+          children: jsx(AppsIcon.AppsIcon, {
+            style: closure_2.appsIconImage,
+            color: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE,
+          }),
+        };
+        return (
+          <View style={closure_2.appsIcon}>
+            {jsx(AppsIcon.AppsIcon, {
+              style: closure_2.appsIconImage,
+              color: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE,
+            })}
+          </View>
+        );
       },
       title: null,
       description: null,
@@ -73,15 +81,23 @@ export default function GlobalSearchCoachmark(markAsDismissed) {
     obj.targetMeasurements = size;
     const size1 = { x: -140, y: -40, width: diff, height: windowDimensions.height };
     obj.surfaceMeasurements = size1;
-    tmp3 = jsx(markAsDismissed(11269).Coachmark, {
+    tmp3 = jsx(markAsDismissed(11270).Coachmark, {
       renderImgComponent: function appsIcon() {
-        let obj = { style: closure_2.appsIcon, children: null };
-        obj = { style: closure_2.appsIconImage, color: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE };
-        obj.children = jsx(AppsIcon.AppsIcon, {
-          style: closure_2.appsIconImage,
-          color: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE,
-        });
-        return <View style={closure_2.appsIconImage} color={nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE} />;
+        const obj = {
+          style: closure_2.appsIcon,
+          children: jsx(AppsIcon.AppsIcon, {
+            style: closure_2.appsIconImage,
+            color: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE,
+          }),
+        };
+        return (
+          <View style={closure_2.appsIcon}>
+            {jsx(AppsIcon.AppsIcon, {
+              style: closure_2.appsIconImage,
+              color: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE,
+            })}
+          </View>
+        );
       },
       title: null,
       description: null,

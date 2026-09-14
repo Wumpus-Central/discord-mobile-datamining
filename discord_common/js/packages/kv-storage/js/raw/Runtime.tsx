@@ -78,17 +78,17 @@ prototype["resolveOperation"] = function resolveOperation(value, ok) {
 };
 prototype["completeOperation"] = function completeOperation(value, timings, nowResult) {
   if (this.completionCallbacks.length > 0) {
-    let obj = { id: null, tag: null, ok: null, value: null, timings: null };
+    const obj = { id: null, tag: null, ok: null, value: null, timings: null };
     ({ id: obj.id, tag: obj.tag } = value);
     ({ ok: obj.ok, data: obj.value } = timings);
-    obj = {
+    const obj2 = {
       queue: timings.timings.queueTimeNanoseconds / c2,
       execution: timings.timings.executionTimeNanoseconds / c2,
       materialization: timings.timings.materializationTimeNanoseconds / c2,
       ccTotal: timings.timings.totalTimeNanoseconds / c2,
       jsTotal: nowResult - value.started,
     };
-    obj.timings = obj;
+    obj.timings = obj2;
     for (const item10005 of completionCallbacks) {
       let item10005Result = item10005(obj);
       continue;

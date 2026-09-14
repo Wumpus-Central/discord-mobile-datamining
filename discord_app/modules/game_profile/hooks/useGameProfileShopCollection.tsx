@@ -4,6 +4,8 @@ import noop from "../../../../_runtime/metro/00019__.js";
 import GameProfileStore from "../GameProfileStore.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
+const require = globalThis.__r;
+
 ({ useEffect: c2, useMemo: c3 } = noop);
 let closure_5 = [];
 let result = size.fileFinishedImporting("modules/game_profile/hooks/useGameProfileShopCollection.tsx");
@@ -86,9 +88,8 @@ export const useGameProfileShopCollection = function useGameProfileShopCollectio
 };
 export const useGameProfileShopCollectionProducts = function useGameProfileShopCollectionProducts(collectionId) {
   let skuIds = collectionId;
-  let obj = skuIds(collectiblesShopProducts[2]);
   const items = [GameProfileStore];
-  const stateFromStoresObject = obj.useStateFromStoresObject(items, () => {
+  const stateFromStoresObject = skuIds(collectiblesShopProducts[2]).useStateFromStoresObject(items, () => {
     let result = null != skuIds;
     if (result) {
       result = GameProfileStore.hasShopCollectionBeenFetched(skuIds);
@@ -122,12 +123,13 @@ export const useGameProfileShopCollectionProducts = function useGameProfileShopC
   if (skuIds == null) {
     skuIds = closure_5;
   }
+  let obj = skuIds(collectiblesShopProducts[2]);
   collectiblesShopProducts = skuIds(collectiblesShopProducts[4]).useCollectiblesShopProducts(skuIds, {
     flattenVariants: true,
   });
   const items2 = [skuIds, collectiblesShopProducts];
   const tmpResult = skuIds(collectiblesShopProducts[4]);
-  obj = {
+  const obj2 = {
     products: closure_3(() => {
       const mapped = skuIds.map((item) => {
         let product;
@@ -152,6 +154,6 @@ export const useGameProfileShopCollectionProducts = function useGameProfileShopC
     }
     tmp8 = isFetching;
   }
-  obj.isLoading = tmp8;
-  return obj;
+  obj2.isLoading = tmp8;
+  return obj2;
 };

@@ -46,8 +46,7 @@ export const canAccessReportsChannel = function canAccessReportsChannel(arg0) {
     items = [GuildStore, UserStore];
     tmp = items;
   }
-  let obj = MemberSafetyPermissionsUtils;
-  const contextForPermission = obj.getContextForPermission(arg0, tmp);
+  const contextForPermission = MemberSafetyPermissionsUtils.getContextForPermission(arg0, tmp);
   if (null == contextForPermission) {
     return false;
   } else {
@@ -62,8 +61,8 @@ export const canAccessReportsChannel = function canAccessReportsChannel(arg0) {
     let hasAnyResult = !tmp7;
     if (!tmp7) {
       const obj2 = BigFlagUtilsAll;
-      obj = { user: contextForPermission.user, context: guild, checkElevated: false };
-      hasAnyResult = obj2.hasAny(PermissionUtilsAll.computePermissions(obj), ReportToModPermissions);
+      const obj4 = { user: contextForPermission.user, context: guild, checkElevated: false };
+      hasAnyResult = obj2.hasAny(PermissionUtilsAll.computePermissions(obj4), ReportToModPermissions);
     }
     return hasAnyResult;
   }

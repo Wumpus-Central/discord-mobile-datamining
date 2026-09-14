@@ -23,8 +23,7 @@ export const createCallSystemMessage = function createCallSystemMessage(message)
   const userVoiceChannelId = VoiceStateStore.getUserVoiceChannelId(ME, id);
   const tmp6 = getHumanizedCallDurationDefault(message);
   const participants = ChannelRTCStore.getParticipants(channelId);
-  let obj = useIsCallActive;
-  const checkIsCallActiveResult = obj.checkIsCallActive(channelId, message.id);
+  const checkIsCallActiveResult = useIsCallActive.checkIsCallActive(channelId, message.id);
   let tmp9 = !checkIsCallActiveResult;
   if (!checkIsCallActiveResult) {
     tmp9 = null != call;
@@ -62,19 +61,18 @@ export const createCallSystemMessage = function createCallSystemMessage(message)
     }
     if (null != tmp6) {
       const intl2 = util.intl;
-      obj = { duration: tmp6, timestamp: null };
-      let tmp7Result = DateUtils;
-      obj.timestamp = tmp7Result.calendarFormat(message.timestamp);
-      formatToPlainStringResult = intl2.formatToPlainString(util.t.SBDnp1, obj);
+      const obj2 = { duration: tmp6, timestamp: DateUtils.calendarFormat(message.timestamp) };
+      formatToPlainStringResult = intl2.formatToPlainString(util.t.SBDnp1, obj2);
+      const tmp7Result = DateUtils;
     } else {
-      tmp7Result = DateUtils;
-      formatToPlainStringResult = tmp7Result.calendarFormat(message.timestamp);
+      formatToPlainStringResult = DateUtils.calendarFormat(message.timestamp);
+      const tmp7Result3 = DateUtils;
     }
     const author = message.author;
     mapped = [utils_AvatarUtils.ensureAvatarSource(author.getAvatarSource(undefined)).uri];
-    const tmp7Result1 = utils_AvatarUtils;
+    const tmp7Result4 = utils_AvatarUtils;
   }
-  obj = {
+  const obj3 = {
     title: stringResult1,
     description: formatToPlainStringResult,
     isCallActive: checkIsCallActiveResult,
@@ -83,7 +81,7 @@ export const createCallSystemMessage = function createCallSystemMessage(message)
     rawMilliseconds: null,
   };
   const timestamp = message.timestamp;
-  obj.rawMilliseconds = timestamp.valueOf();
+  obj3.rawMilliseconds = timestamp.valueOf();
   const merged = Object.assign(createCommonMessageDefault(message));
-  return obj;
+  return obj3;
 };

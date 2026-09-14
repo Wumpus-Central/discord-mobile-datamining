@@ -3,6 +3,8 @@ import GuildRoleMemberActionCreatorsAll from "../guild_settings/GuildRoleMemberA
 import noop from "../../../_runtime/metro/00019__.js";
 import GuildRoleMemberCountStore from "../guild_settings/GuildRoleMemberCountStore.tsx";
 
+const require = globalThis.__r;
+
 const require = fn;
 let closure_5 = {};
 const size = fn(2);

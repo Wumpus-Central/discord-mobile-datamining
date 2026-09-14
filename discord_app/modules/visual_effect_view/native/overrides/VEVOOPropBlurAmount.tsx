@@ -4,6 +4,8 @@ import Form from "../../../../design/void/Form/native/index.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
+const require = globalThis.__r;
+
 require = fn;
 const VEVOOStore = fn(5047);
 ({ getVisualEffectViewOverrides: hasOwnProperty, setVisualEffectViewOverides: metroRequire } = VEVOOStore);
@@ -39,11 +41,21 @@ export default noop.memo(function VEVOOPropBlurAmount() {
   let obj = {
     label: "Blur Amount " + str,
     leadingStyle: tmp.enabledSwitchStyle,
-    leading: null,
+    leading: jsx(FormSwitch.FormSwitch, {
+      value: tmp3,
+      onValueChange(arg0) {
+        require(arg0);
+        let tmp3;
+        if (arg0) {
+          tmp3 = first;
+        }
+        callback(tmp3);
+      },
+    }),
     subLabel: null,
     disabled: !tmp3,
   };
-  obj = {
+  const obj2 = {
     value: tmp3,
     onValueChange(arg0) {
       require(arg0);
@@ -54,33 +66,28 @@ export default noop.memo(function VEVOOPropBlurAmount() {
       callback(tmp3);
     },
   };
-  obj.leading = jsx(FormSwitch.FormSwitch, {
-    value: tmp3,
-    onValueChange(arg0) {
-      require(arg0);
-      let tmp3;
-      if (arg0) {
-        tmp3 = first;
-      }
-      callback(tmp3);
-    },
-  });
   const ref = noop.useRef(first);
-  obj.subLabel = jsx(first(16023), {
+  obj.subLabel = jsx(first(16025), {
     disabled: !tmp3,
     disabledOpacity: !tmp3,
     initialValue: noop.useRef(first),
     onValueChange,
   });
   return jsx(Form.FormRow, {
-    value: tmp3,
-    onValueChange(arg0) {
-      require(arg0);
-      let tmp3;
-      if (arg0) {
-        tmp3 = first;
-      }
-      callback(tmp3);
-    },
+    label: "Blur Amount " + str,
+    leadingStyle: tmp.enabledSwitchStyle,
+    leading: jsx(FormSwitch.FormSwitch, {
+      value: tmp3,
+      onValueChange(arg0) {
+        require(arg0);
+        let tmp3;
+        if (arg0) {
+          tmp3 = first;
+        }
+        callback(tmp3);
+      },
+    }),
+    subLabel: null,
+    disabled: !tmp3,
   });
 });

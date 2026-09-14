@@ -31,10 +31,8 @@ export default function MuteSettings(guildId) {
   const items1 = [channelId, guildId, onOptionPress];
   ({ muteConfig, muted } = memo);
   GuildStore = guild.useCallback((muteDurationSeconds) => {
-    let obj = ActionSheetActionCreatorsDefault;
-    obj.hideActionSheet();
-    obj = { channelId, guildId, muteDurationSeconds, onOptionPress };
-    const result = MuteSettingsUtils.handleMuteSettingPress(obj);
+    ActionSheetActionCreatorsDefault.hideActionSheet();
+    const result = MuteSettingsUtils.handleMuteSettingPress({ channelId, guildId, muteDurationSeconds, onOptionPress });
   }, items1);
   const items2 = [channelId, guildId];
   const items3 = [channel, guild];
@@ -48,33 +46,33 @@ export default function MuteSettings(guildId) {
   if (null != channel) {
     if (muted) {
       let obj = { hasIcons: true, children: null };
-      obj = { icon: null, label: null, onPress: null };
-      let obj1 = { disableColor: true, source: channelId(onOptionPress[14]) };
-      obj.icon = closure_9(guildId(onOptionPress[13]).Icon, obj1);
+      const obj3 = { icon: null, label: null, onPress: null };
+      const obj4 = { disableColor: true, source: channelId(onOptionPress[14]) };
+      obj3.icon = closure_9(guildId(onOptionPress[13]).Icon, obj4);
       const intl = guildId(onOptionPress[8]).intl;
-      const obj2 = { name: null };
+      const obj5 = { name: null };
       const obj8 = guildId(onOptionPress[15]);
-      obj2.name = obj8.computeChannelName(channel, UserStore, RelationshipStore, true);
-      obj.label = intl.format(guildId(onOptionPress[8]).t["eC+9rj"], obj2);
-      obj.onPress = callback;
-      obj.children = closure_9(guildId(onOptionPress[12]).TableRow, obj);
+      obj5.name = obj8.computeChannelName(channel, UserStore, RelationshipStore, true);
+      obj3.label = intl.format(guildId(onOptionPress[8]).t["eC+9rj"], obj5);
+      obj3.onPress = callback;
+      obj.children = closure_9(guildId(onOptionPress[12]).TableRow, obj3);
       const items5 = [closure_9(guildId(onOptionPress[11]).TableRowGroup, obj)];
-      let obj3 = { muteConfig, type: null };
+      let obj6 = { muteConfig, type: null };
       const tmp20 = channelId(onOptionPress[16]);
       guildId(onOptionPress[16]).MuteSettingType;
       const isPrivateResult = channel.isPrivate();
       const MuteSettingType = { children: null };
-      obj3.type = channel.isPrivate() ? MuteSettingType.DM : MuteSettingType.CHANNEL;
-      obj3 = closure_9(tmp20, obj3);
-      items5[1] = obj3;
+      obj6.type = channel.isPrivate() ? MuteSettingType.DM : MuteSettingType.CHANNEL;
+      obj6 = closure_9(tmp20, obj6);
+      items5[1] = obj6;
       MuteSettingType.children = items5;
       closure_11(closure_10, MuteSettingType);
       const tmp22 = channel.isPrivate() ? MuteSettingType.DM : MuteSettingType.CHANNEL;
     }
   }
-  obj1 = guildId(onOptionPress[9]);
-  const muteOptions = obj1.getMuteOptions();
-  const obj4 = {
+  const muteOptions = guildId(onOptionPress[9]).getMuteOptions();
+  const obj2 = guildId(onOptionPress[9]);
+  const obj7 = {
     hasIcons: false,
     children: muteOptions.map((item) => {
       ({ label, duration: guildId } = item);
@@ -90,7 +88,7 @@ export default function MuteSettings(guildId) {
       );
     }),
   };
-  const obj5 = { children: null };
+  const obj9 = { children: null };
   const items6 = [
     closure_9(guildId(onOptionPress[18]).BottomSheetTitleHeader, { title: memo1, subtitle: memo2 }),
     closure_9(guildId(onOptionPress[11]).TableRowGroup, {
@@ -110,20 +108,20 @@ export default function MuteSettings(guildId) {
       }),
     }),
   ];
-  obj5.children = items6;
-  return closure_11(guildId(onOptionPress[17]).ActionSheet, obj5);
+  obj9.children = items6;
+  return closure_11(guildId(onOptionPress[17]).ActionSheet, obj9);
 }
 export const MuteSettingsHint = function MuteSettingsHint(guildMessageNotifications) {
   guildMessageNotifications = guildMessageNotifications.guildMessageNotifications;
   if (guildMessageNotifications.isMuted) {
-    let obj = { variant: "text-sm/medium", color: "text-default", children: null };
+    const obj2 = { variant: "text-sm/medium", color: "text-default", children: null };
     const intl5 = util.intl;
-    obj.children = intl5.string(util.t.t0mEt2);
-    let tmp3 = React7(Text_Text.Text, obj);
+    obj2.children = intl5.string(util.t.t0mEt2);
+    let tmp3 = React7(Text_Text.Text, obj2);
   } else if (tmp) {
-    obj = { variant: "text-sm/medium", color: "text-default", children: null };
+    const obj3 = { variant: "text-sm/medium", color: "text-default", children: null };
     const intl4 = util.intl;
-    const obj1 = {
+    const obj4 = {
       mutedHook(children, arg1) {
         return closure_1_9(
           Text_Text.Text,
@@ -132,12 +130,12 @@ export const MuteSettingsHint = function MuteSettingsHint(guildMessageNotificati
         );
       },
     };
-    obj.children = intl4.format(util.t.O34r15, obj1);
-    tmp3 = React7(Text_Text.Text, obj);
+    obj3.children = intl4.format(util.t.O34r15, obj4);
+    tmp3 = React7(Text_Text.Text, obj3);
   } else if (guildMessageNotifications === UserNotificationSettings.NO_MESSAGES) {
-    const obj2 = { variant: "text-sm/medium", color: "text-default", children: null };
+    const obj5 = { variant: "text-sm/medium", color: "text-default", children: null };
     const intl3 = util.intl;
-    const obj3 = {
+    const obj6 = {
       notificationHook(children, arg1) {
         return closure_1_9(
           Text_Text.Text,
@@ -146,13 +144,13 @@ export const MuteSettingsHint = function MuteSettingsHint(guildMessageNotificati
         );
       },
     };
-    obj2.children = intl3.format(util.t.nRwUIL, obj3);
-    tmp3 = React7(Text_Text.Text, obj2);
+    obj5.children = intl3.format(util.t.nRwUIL, obj6);
+    tmp3 = React7(Text_Text.Text, obj5);
   } else {
     if (guildMessageNotifications !== UserNotificationSettings.ALL_MESSAGES) {
       tmp3 = null;
     }
-    obj = dependencyMap;
+    let obj = dependencyMap;
     if (guildMessageNotifications === UserNotificationSettings.ALL_MESSAGES) {
       const intl2 = util.intl;
       let stringResult = intl2.string(util.t.mUbulW);

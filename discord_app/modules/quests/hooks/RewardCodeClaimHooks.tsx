@@ -142,8 +142,7 @@ export const useHandleRedemptionLinkClick = function useHandleRedemptionLinkClic
           "quest_reward_code_redemption_link",
         )
       ) {
-        let tmp18Result = captureAdUserAction;
-        let obj = {
+        const obj2 = {
           type: captureAdUserActionTypes.AdUserActionType.CLICK_INTERNAL,
           adCreativeType: AdCreativeType.AdCreativeType.QUEST,
           adCreativeId: claimCode.id,
@@ -153,9 +152,9 @@ export const useHandleRedemptionLinkClick = function useHandleRedemptionLinkClic
           impressionId: GET_REWARD_CODE,
           questContentPosition: onDismiss,
         };
-        tmp18Result.captureAdUserAction(obj);
-        tmp18Result = captureAdUserAction;
-        obj = {
+        captureAdUserAction.captureAdUserAction(obj2);
+        const tmp18Result = captureAdUserAction;
+        const obj3 = {
           type: captureAdUserActionTypes.AdUserActionType.CLICK_INTERNAL,
           adCreativeType: AdCreativeType.AdCreativeType.QUEST,
           adCreativeId: claimCode.id,
@@ -165,9 +164,10 @@ export const useHandleRedemptionLinkClick = function useHandleRedemptionLinkClic
           impressionId: GET_REWARD_CODE,
           questContentPosition: onDismiss,
         };
-        tmp18Result.captureAdUserAction(obj);
+        captureAdUserAction.captureAdUserAction(obj3);
+        const tmp18Result2 = captureAdUserAction;
       } else {
-        obj = {
+        const obj = {
           questId: claimCode.id,
           questContent: hasError,
           questContentCTA: AnalyticsTypes.QuestContentCTA.REDEEM_REWARD,
@@ -175,14 +175,14 @@ export const useHandleRedemptionLinkClick = function useHandleRedemptionLinkClic
           sourceQuestContent: quest,
         };
         questContent(obj);
-        const obj1 = {
+        const obj4 = {
           questId: claimCode.id,
           questContent: hasError,
           questContentCTA: AnalyticsTypes.QuestContentCTA.VISIT_REDEMPTION_LINK,
           questContentPosition: onDismiss,
           sourceQuestContent: quest,
         };
-        questContent(obj1);
+        questContent(obj4);
       }
       openURLDefault(tmp);
       obj7 = AdAnalyticsInterfaceExperiment;
@@ -216,10 +216,10 @@ export const useClaimRewardCodePrimaryCtaClickHandler = function useClaimRewardC
   closure_129_3 = questContentPosition2;
   const sourceQuestContent2 = claimCode.sourceQuestContent;
   closure_129_4 = sourceQuestContent2;
-  const obj2 = claimCode(hasError[6]);
+  let obj2 = claimCode(hasError[6]);
   const trackQuestContentClickedWithImpression1 = claimCode(hasError[5]).useTrackQuestContentClickedWithImpression();
   closure_129_5 = trackQuestContentClickedWithImpression1;
-  const obj3 = claimCode(hasError[5]);
+  let obj3 = claimCode(hasError[5]);
   const questImpressionId1 = claimCode(hasError[6]).useQuestImpressionId();
   closure_129_6 = questImpressionId1;
   const items = [
@@ -239,8 +239,7 @@ export const useClaimRewardCodePrimaryCtaClickHandler = function useClaimRewardC
           "quest_reward_code_redemption_link",
         )
       ) {
-        let tmp18Result = captureAdUserAction;
-        let obj = {
+        const obj2 = {
           type: captureAdUserActionTypes.AdUserActionType.CLICK_INTERNAL,
           adCreativeType: AdCreativeType.AdCreativeType.QUEST,
           adCreativeId: claimCode.id,
@@ -250,9 +249,9 @@ export const useClaimRewardCodePrimaryCtaClickHandler = function useClaimRewardC
           impressionId: GET_REWARD_CODE,
           questContentPosition: onDismiss,
         };
-        tmp18Result.captureAdUserAction(obj);
-        tmp18Result = captureAdUserAction;
-        obj = {
+        captureAdUserAction.captureAdUserAction(obj2);
+        const tmp18Result = captureAdUserAction;
+        const obj3 = {
           type: captureAdUserActionTypes.AdUserActionType.CLICK_INTERNAL,
           adCreativeType: AdCreativeType.AdCreativeType.QUEST,
           adCreativeId: claimCode.id,
@@ -262,9 +261,10 @@ export const useClaimRewardCodePrimaryCtaClickHandler = function useClaimRewardC
           impressionId: GET_REWARD_CODE,
           questContentPosition: onDismiss,
         };
-        tmp18Result.captureAdUserAction(obj);
+        captureAdUserAction.captureAdUserAction(obj3);
+        const tmp18Result2 = captureAdUserAction;
       } else {
-        obj = {
+        const obj = {
           questId: claimCode.id,
           questContent: hasError,
           questContentCTA: AnalyticsTypes.QuestContentCTA.REDEEM_REWARD,
@@ -272,14 +272,14 @@ export const useClaimRewardCodePrimaryCtaClickHandler = function useClaimRewardC
           sourceQuestContent: quest,
         };
         questContent(obj);
-        const obj1 = {
+        const obj4 = {
           questId: claimCode.id,
           questContent: hasError,
           questContentCTA: AnalyticsTypes.QuestContentCTA.VISIT_REDEMPTION_LINK,
           questContentPosition: onDismiss,
           sourceQuestContent: quest,
         };
-        questContent(obj1);
+        questContent(obj4);
       }
       openURLDefault(tmp);
       obj7 = AdAnalyticsInterfaceExperiment;
@@ -317,7 +317,7 @@ export const useClaimRewardCodePrimaryCtaClickHandler = function useClaimRewardC
             "quest_reward_code_primary_cta",
           )
         ) {
-          let obj = {
+          const obj2 = {
             type: captureAdUserActionTypes.AdUserActionType.CLICK_INTERNAL,
             adCreativeType: AdCreativeType.AdCreativeType.QUEST,
             adCreativeId: quest.id,
@@ -327,10 +327,10 @@ export const useClaimRewardCodePrimaryCtaClickHandler = function useClaimRewardC
             impressionId: questImpressionId,
             questContentPosition,
           };
-          captureAdUserAction.captureAdUserAction(obj);
+          captureAdUserAction.captureAdUserAction(obj2);
           const tmp23Result = captureAdUserAction;
         } else {
-          obj = {
+          const obj = {
             questId: quest.id,
             questContent,
             questContentCTA: GET_REWARD_CODE,

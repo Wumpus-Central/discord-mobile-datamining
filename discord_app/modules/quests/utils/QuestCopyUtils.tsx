@@ -73,12 +73,12 @@ export const getDisclosureText = function getDisclosureText(arg0) {
     } else {
       if (null == cosponsorName) {
         const intl4 = util.intl;
-        let obj = { gamePublisher };
+        const obj = { gamePublisher };
         let formatToPlainStringResult = intl4.formatToPlainString(util.t.Piihy1, obj);
       } else {
         const intl3 = util.intl;
-        obj = { gamePublisher, cosponsorName };
-        formatToPlainStringResult = intl3.formatToPlainString(util.t.DV47Gy, obj);
+        const obj2 = { gamePublisher, cosponsorName };
+        formatToPlainStringResult = intl3.formatToPlainString(util.t.DV47Gy, obj2);
       }
       const _HermesInternal = HermesInternal;
       stringResult1 = "" + formatToPlainStringResult + " " + stringResult;
@@ -93,12 +93,12 @@ export const getDisclosureText = function getDisclosureText(arg0) {
       t = { gamePublisher };
       let formatToPlainStringResult1 = formatToPlainString(t.rctMRl, t);
     } else {
-      const obj1 = { gamePublisher, gameTitle: null };
+      const obj3 = { gamePublisher, gameTitle: null };
       if (gameTitle == null) {
         gameTitle = "";
       }
-      obj1.gameTitle = gameTitle;
-      formatToPlainStringResult1 = formatToPlainString(t["5bQWNG"], obj1);
+      obj3.gameTitle = gameTitle;
+      formatToPlainStringResult1 = formatToPlainString(t["5bQWNG"], obj3);
     }
   }
 };
@@ -155,15 +155,13 @@ export const getCtaLink = function getCtaLink(config) {
 };
 export const copyShareLink = function copyShareLink(id, ctaContent) {
   ctaContent = ctaContent.ctaContent;
-  let obj = AdAnalyticsInterfaceExperiment;
   if (
     obj.shouldMigrateToAdAnalyticsInterface(
       AdAnalyticsInterfaceExperiment.AdAnalyticsInterfaceExperimentStep.STEP_2_CLICKED_INTERNAL,
       "copy_share_link",
     )
   ) {
-    let tmpResult = captureAdUserAction;
-    obj = {
+    const obj2 = {
       type: captureAdUserActionTypes.AdUserActionType.CLICK_INTERNAL,
       adCreativeType: AdCreativeType.AdCreativeType.QUEST,
       adCreativeId: id,
@@ -179,10 +177,10 @@ export const copyShareLink = function copyShareLink(id, ctaContent) {
       position: obj5.questContentPosition,
       impressionId: obj5.impressionId,
     } = ctaContent);
-    tmpResult.captureAdUserAction(obj);
+    captureAdUserAction.captureAdUserAction(obj2);
+    const tmpResult = captureAdUserAction;
   } else {
-    tmpResult = AnalyticsActions;
-    obj = {
+    const obj4 = {
       questId: id,
       questContent: ctaContent.content,
       questContentCTA: ctaContent,
@@ -195,10 +193,12 @@ export const copyShareLink = function copyShareLink(id, ctaContent) {
       impressionId: obj3.impressionId,
       sourceQuestContent: obj3.sourceQuestContent,
     } = ctaContent);
-    const result = tmpResult.trackQuestContentClicked(obj);
+    const result = AnalyticsActions.trackQuestContentClicked(obj4);
+    const tmpResult3 = AnalyticsActions;
   }
+  obj = AdAnalyticsInterfaceExperiment;
   ClipboardUtils.copy("" + location.protocol + "//" + location.host + "/quests/" + id);
-  const tmpResult1 = ClipboardUtils;
+  const tmpResult4 = ClipboardUtils;
 };
 export const getDefaultReward = function getDefaultReward(config) {
   if (0 === config.rewardsConfig.rewards.length) {

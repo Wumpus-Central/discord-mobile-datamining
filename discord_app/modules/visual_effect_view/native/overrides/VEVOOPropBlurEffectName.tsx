@@ -2,6 +2,8 @@
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
+const require = globalThis.__r;
+
 const require = fn;
 const VEVOOStore = fn(5047);
 ({ getVisualEffectViewOverrides: closure_4, setVisualEffectViewOverides: hasOwnProperty } = VEVOOStore);
@@ -14,14 +16,14 @@ const result = size.fileFinishedImporting("modules/visual_effect_view/native/ove
 
 export default noop.memo(function VEVOOPropBlurEffectName() {
   _require = closure_9();
-  let obj = require("VEVOO");
-  visualEffectViewOverrideSharedStyles = obj.useVisualEffectViewOverrideSharedStyles();
+  visualEffectViewOverrideSharedStyles = require("VEVOO").useVisualEffectViewOverrideSharedStyles();
   const tmp2 = first(noop.useState("Dark"), 2);
   first = tmp2[0];
   noop = tmp2[1];
   const tmp4 = first(noop.useState(false), 2);
   const first1 = tmp4[0];
   closure_5 = tmp4[1];
+  let obj = require("VEVOO");
   [closure_6, closure_7] = first(noop.useState(first1().blurEffectNameOverride), 2);
   closure_8 = noop.useCallback((blurEffectNameOverride) => {
     if (null != blurEffectNameOverride) {
@@ -32,17 +34,28 @@ export default noop.memo(function VEVOOPropBlurEffectName() {
     obj.blurEffectNameOverride = blurEffectNameOverride;
     hasOwnProperty(obj);
   }, []);
-  obj = {
+  const obj2 = {
     style: null,
     label: "Blur Effect Name",
     disabled: !first1,
     leadingStyle: visualEffectViewOverrideSharedStyles.enabledSwitchStyle,
-    leading: null,
+    leading: closure_6(require("FormSwitch").FormSwitch, {
+      value: first1,
+      onValueChange(arg0) {
+        closure_5(arg0);
+        let tmp3;
+        if (arg0) {
+          tmp3 = closure_1_6;
+        }
+        closure_8(tmp3);
+      },
+    }),
     subLabel: null,
   };
   let items = [visualEffectViewOverrideSharedStyles.zeroPaddingVertical];
-  obj.style = items;
-  obj = {
+  obj2.style = items;
+  const obj4 = { children: null };
+  const obj3 = {
     value: first1,
     onValueChange(arg0) {
       closure_5(arg0);
@@ -53,8 +66,6 @@ export default noop.memo(function VEVOOPropBlurEffectName() {
       closure_8(tmp3);
     },
   };
-  obj.leading = closure_6(require("FormSwitch").FormSwitch, obj);
-  const obj1 = { children: null };
   const tmp6 = first(noop.useState(first1().blurEffectNameOverride), 2);
   const items1 = [
     closure_6(require("Form").FormSwitchRow, {
@@ -89,7 +100,7 @@ export default noop.memo(function VEVOOPropBlurEffectName() {
     obj.style = items;
     return closure_1_6(closure_0(visualEffectViewOverrideSharedStyles[6]).FormRadioRow, obj, index);
   });
-  obj1.children = items1;
-  obj.subLabel = closure_8(closure_7, obj1);
-  return closure_6(require("Form").FormRow, obj);
+  obj4.children = items1;
+  obj2.subLabel = closure_8(closure_7, obj4);
+  return closure_6(require("Form").FormRow, obj2);
 });

@@ -12,7 +12,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 import MediaEngineStore from "../../../../stores/MediaEngineStore.tsx";
 
 require = fn;
-const VoicePanelControlsConstants = fn(12400);
+const VoicePanelControlsConstants = fn(12401);
 ({ CONTROLS_BUTTON_SIZE_LARGE: hasOwnProperty, CONTROLS_BUTTON_SIZE_NORMAL: metroRequire } =
   VoicePanelControlsConstants);
 const InputModes = fn(1074).InputModes;
@@ -66,13 +66,13 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_panel/native/controls/useControlsButtons.tsx");
 
 export default function useControlsButtons() {
-  const context = treatment.useContext(safeArea(12401));
+  const context = treatment.useContext(safeArea(12402));
   const windowDimensions = context.windowDimensions;
   safeArea = context.safeArea;
-  const tmp2 = safeArea(17146)(context.channelId);
+  const tmp2 = safeArea(17148)(context.channelId);
   dependencyMap = tmp2;
-  let obj = safeArea(17210);
-  treatment = obj.useConfig({ location: "VoicePanelControlButtons" }).treatment;
+  treatment = safeArea(17212).useConfig({ location: "VoicePanelControlButtons" }).treatment;
+  let obj = safeArea(17212);
   let items = [stateFromStores];
   stateFromStores = windowDimensions(504).useStateFromStores(
     items,
@@ -86,11 +86,15 @@ export default function useControlsButtons() {
       safeArea.get().right,
     );
   };
-  obj = { getControlsDefaultWidth: windowDimensions(12408).getControlsDefaultWidth, windowDimensions, safeArea };
-  fn.__closure = obj;
+  let obj3 = windowDimensions(4373);
+  fn.__closure = {
+    getControlsDefaultWidth: windowDimensions(12409).getControlsDefaultWidth,
+    windowDimensions,
+    safeArea,
+  };
   fn.__workletHash = 16456936876254;
   fn.__initData = __initData;
-  const derivedValue = windowDimensions(4373).useDerivedValue(fn);
+  const derivedValue = obj3.useDerivedValue(fn);
   const tmp5 = safeArea(8385)(derivedValue);
   closure_5 = tmp5;
   const items1 = [tmp2, stateFromStores, tmp5, treatment];
@@ -101,42 +105,42 @@ export default function useControlsButtons() {
       const items = [];
       const push = items.push;
       if (dependencyMap) {
-        let obj = { type: "icon-normal", key: "connected-video", render: redux.video };
-        push(obj);
+        const obj2 = { type: "icon-normal", key: "connected-video", render: redux.video };
+        push(obj2);
         if (!stateFromStores) {
-          obj = { type: "icon-normal", key: "connected-mic", render: redux.micConnected };
-          items.push(obj);
-        }
-        if (treatment === _true(17210).MobileGoLiveEntrypointTreatment.SCREENSHARE_REPLACES_CHAT) {
-          const obj1 = { type: "icon-normal", key: "connected-screenshare", render: redux.screenshare };
-          items.push(obj1);
-        } else {
-          const obj2 = { type: "icon-normal", key: "connected-chat", render: redux.chat };
-          items.push(obj2);
-        }
-        if (stateFromStores) {
-          const obj3 = { type: "icon-large", key: "connected-ptt", render: redux.ptt };
+          const obj3 = { type: "icon-normal", key: "connected-mic", render: redux.micConnected };
           items.push(obj3);
         }
-        if (treatment === _true(17210).MobileGoLiveEntrypointTreatment.SCREENSHARE_REPLACES_SOUNDBOARD) {
+        if (treatment === _true(17212).MobileGoLiveEntrypointTreatment.SCREENSHARE_REPLACES_CHAT) {
           const obj4 = { type: "icon-normal", key: "connected-screenshare", render: redux.screenshare };
           items.push(obj4);
         } else {
-          const obj5 = { type: "icon-normal", key: "connected-soundboard", render: redux.soundboard };
+          const obj5 = { type: "icon-normal", key: "connected-chat", render: redux.chat };
           items.push(obj5);
         }
-        const obj6 = { type: "icon-normal", key: "connected-disconnect", render: redux.disconnectCancel };
-        items.push(obj6);
+        if (stateFromStores) {
+          const obj6 = { type: "icon-large", key: "connected-ptt", render: redux.ptt };
+          items.push(obj6);
+        }
+        if (treatment === _true(17212).MobileGoLiveEntrypointTreatment.SCREENSHARE_REPLACES_SOUNDBOARD) {
+          const obj7 = { type: "icon-normal", key: "connected-screenshare", render: redux.screenshare };
+          items.push(obj7);
+        } else {
+          const obj8 = { type: "icon-normal", key: "connected-soundboard", render: redux.soundboard };
+          items.push(obj8);
+        }
+        const obj9 = { type: "icon-normal", key: "connected-disconnect", render: redux.disconnectCancel };
+        items.push(obj9);
       } else {
-        obj = { type: "icon-normal", key: "disconnected-mute", render: redux.mic };
+        const obj = { type: "icon-normal", key: "disconnected-mute", render: redux.mic };
         push(obj);
-        const obj7 = { type: "label", key: "disconnected-connect", render: redux.connect };
-        items.push(obj7);
-        const obj8 = { type: "icon-normal", key: "disconnected-chat", render: redux.chat };
-        items.push(obj8);
+        const obj10 = { type: "label", key: "disconnected-connect", render: redux.connect };
+        items.push(obj10);
+        const obj11 = { type: "icon-normal", key: "disconnected-chat", render: redux.chat };
+        items.push(obj11);
         if (obj12.isMetaQuest()) {
-          const obj9 = { type: "icon-normal", key: "drawer-toggle", render: redux.drawerToggle };
-          items.push(obj9);
+          const obj13 = { type: "icon-normal", key: "drawer-toggle", render: redux.drawerToggle };
+          items.push(obj13);
         }
         return items;
       }

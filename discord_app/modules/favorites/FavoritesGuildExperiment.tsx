@@ -1,17 +1,19 @@
 // discord_app/modules/favorites/FavoritesGuildExperiment.tsx
-import ApexExperiment from "../experiments/apex/index.tsx";
+import ApexExperiment_mod from "../experiments/apex/index.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
-let obj = { name: "2026-01-favorites-server", kind: "user", defaultConfig: { enabled: false }, variations: null };
-obj = { 1: null, 2: { enabled: true } };
-obj[2] = { enabled: true };
-obj.variations = obj;
+let ApexExperiment = ApexExperiment_mod;
+const obj = { name: "2026-01-favorites-server", kind: "user", defaultConfig: { enabled: false }, variations: null };
+const obj2 = { 1: null, 2: { enabled: true } };
+obj2[2] = { enabled: true };
+obj.variations = obj2;
 let closure_0 = ApexExperiment.createApexExperiment(obj);
-const obj1 = { name: "2026-08-favorites-server", kind: "user", defaultConfig: { enabled: false }, variations: null };
-const obj2 = { 1: null };
-obj2[1] = { enabled: true };
-obj1.variations = obj2;
-let closure_1 = ApexExperiment.createApexExperiment(obj1);
+let ApexExperiment = ApexExperiment_mod;
+const obj3 = { name: "2026-08-favorites-server", kind: "user", defaultConfig: { enabled: false }, variations: null };
+const obj4 = { 1: null };
+obj4[1] = { enabled: true };
+obj3.variations = obj4;
+let closure_1 = ApexExperiment.createApexExperiment(obj3);
 const result = size.fileFinishedImporting("modules/favorites/FavoritesGuildExperiment.tsx");
 
 export const useFavoritesGuildConfig = function useFavoritesGuildConfig(location) {

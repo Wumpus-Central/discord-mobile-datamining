@@ -22,14 +22,21 @@ class LikelyAtoWarningBanner {
     closure_4 = undefined;
     closure_5 = undefined;
     handleLearnMore = function handleLearnMore() {
-      const obj = {
+      const obj = SafetyWarningUtils;
+      obj.trackCtaEvent({
+        channelId,
+        warningId,
+        senderId,
+        warningType: SafetyWarningTypes.LIKELY_ATO,
+        cta: SafetyWarningUtils.CtaEventTypes.USER_MODAL_LEARN_MORE,
+      });
+      const obj2 = {
         channelId,
         warningId,
         senderId,
         warningType: SafetyWarningTypes.LIKELY_ATO,
         cta: SafetyWarningUtils.CtaEventTypes.USER_MODAL_LEARN_MORE,
       };
-      obj.trackCtaEvent(obj);
       LinkingDefault.openURL(React5);
     };
     closure_3 = closure_13();
@@ -38,8 +45,12 @@ class LikelyAtoWarningBanner {
     items[1] = warningId;
     items[2] = senderId;
     effect = closure_3.useEffect(() => {
-      const obj = { channelId, warningId, senderId, warningType: SafetyWarningTypes.LIKELY_ATO };
-      obj.trackViewedEvent(AnalyticEvents.SAFETY_WARNING_VIEWED, obj);
+      SafetyWarningUtils.trackViewedEvent(AnalyticEvents.SAFETY_WARNING_VIEWED, {
+        channelId,
+        warningId,
+        senderId,
+        warningType: SafetyWarningTypes.LIKELY_ATO,
+      });
     }, items);
     items1 = [,];
     items1[0] = channelId;
@@ -56,11 +67,20 @@ class LikelyAtoWarningBanner {
     items2[2] = warningId;
     items2[3] = callback;
     closure_5 = closure_3.useCallback((cta) => {
-      let obj = { channelId, guildId: null, muteDurationSeconds: MuteUntilSeconds.ALWAYS };
-      const result = obj.handleMuteSettingPress(obj);
+      const result = MuteSettingsUtils.handleMuteSettingPress({
+        channelId,
+        guildId: null,
+        muteDurationSeconds: MuteUntilSeconds.ALWAYS,
+      });
+      const obj2 = { channelId, guildId: null, muteDurationSeconds: MuteUntilSeconds.ALWAYS };
       SafetyToastsActionCreatorsDefault.showMuteSuccessToast(senderId, channelId);
-      obj = { channelId, warningId, senderId, warningType: SafetyWarningTypes.LIKELY_ATO, cta };
-      SafetyWarningUtils.trackCtaEvent(obj);
+      SafetyWarningUtils.trackCtaEvent({
+        channelId,
+        warningId,
+        senderId,
+        warningType: SafetyWarningTypes.LIKELY_ATO,
+        cta,
+      });
       callback();
     }, items2);
     obj = {
@@ -79,11 +99,11 @@ class LikelyAtoWarningBanner {
     intl2 = channelId(senderId[15]).intl;
     obj.description = intl2.string(channelId(senderId[15]).t.lI8nQl);
     obj.onDismiss = callback;
-    obj = { text: null, variant: "primary", onpress: null };
+    obj1 = { text: null, variant: "primary", onpress: null };
     intl3 = channelId(senderId[15]).intl;
-    obj.text = intl3.string(channelId(senderId[15]).t.tC1pvL);
-    obj.onpress = function onpress() {
-      let obj = {
+    obj1.text = intl3.string(channelId(senderId[15]).t.tC1pvL);
+    obj1.onpress = function onpress() {
+      const obj2 = {
         modalKey,
         headerStyle: moreTipsHeader.moreTipsHeader,
         channelId,
@@ -94,32 +114,46 @@ class LikelyAtoWarningBanner {
         actionItems: null,
         learnMore: null,
       };
+      let obj = ModalActionCreatorsDefault;
       const intl = util.intl;
-      obj.description = intl.string(util.t["/uid3p"]);
-      const tmp = asyncRequireImpl(11508, dependencyMap.paths);
-      obj.safetyTips = hasOwnProperty().map((children, index) => {
-        let obj = { children: null };
-        obj = { variant: "text-md/medium", color: "mobile-text-heading-primary", children: children.title };
-        const items = [closure_1_10(channelId(4632).Text, obj, index)];
-        obj = { variant: "text-xs/medium", color: "text-subtle", children: children.description };
-        items[1] = closure_1_10(channelId(4632).Text, obj, index);
+      obj2.description = intl.string(util.t["/uid3p"]);
+      const tmp = asyncRequireImpl(11509, dependencyMap.paths);
+      obj2.safetyTips = hasOwnProperty().map((children, index) => {
+        const obj = { children: null };
+        const items = [
+          closure_1_10(
+            channelId(4632).Text,
+            { variant: "text-md/medium", color: "mobile-text-heading-primary", children: children.title },
+            index,
+          ),
+          closure_1_10(
+            channelId(4632).Text,
+            { variant: "text-xs/medium", color: "text-subtle", children: children.description },
+            index,
+          ),
+        ];
         obj.children = items;
         return closure_1_12(closure_1_11, obj);
       });
-      obj = {
+      obj2.actionItems = closure_2_10(LikelyAtoMoreTipsModalActionItemsDefault, {
+        senderId,
+        handleMutePressed() {
+          return closure_1_5(channelId(senderId[8]).CtaEventTypes.USER_MODAL_MUTE);
+        },
+      });
+      const obj4 = { variant: "text-sm/normal", color: "text-link", children: null };
+      const intl2 = util.intl;
+      obj4.children = intl2.format(util.t.UkH122, { learnMoreLink: handleLearnMore });
+      obj2.learnMore = closure_2_10(Text_Text.Text, obj4);
+      obj.pushLazy(tmp, obj2, modalKey);
+      const arr = hasOwnProperty();
+      const obj3 = {
         senderId,
         handleMutePressed() {
           return closure_1_5(channelId(senderId[8]).CtaEventTypes.USER_MODAL_MUTE);
         },
       };
-      obj.actionItems = closure_2_10(LikelyAtoMoreTipsModalActionItemsDefault, obj);
-      const obj1 = { variant: "text-sm/normal", color: "text-link", children: null };
-      const intl2 = util.intl;
-      obj1.children = intl2.format(util.t.UkH122, { learnMoreLink: handleLearnMore });
-      obj.learnMore = closure_2_10(Text_Text.Text, obj1);
-      obj.pushLazy(tmp, obj, modalKey);
-      const arr = hasOwnProperty();
-      const obj2 = { learnMoreLink: handleLearnMore };
+      const obj5 = { learnMoreLink: handleLearnMore };
       const obj6 = SafetyWarningUtils;
       obj6.trackCtaEvent({
         channelId,
@@ -130,20 +164,20 @@ class LikelyAtoWarningBanner {
       });
     };
     items3 = [,];
-    items3[0] = obj;
-    obj1 = { text: null, variant: "secondary", onpress: null };
+    items3[0] = obj1;
+    obj4 = { text: null, variant: "secondary", onpress: null };
     intl4 = channelId(senderId[15]).intl;
-    obj1.text = intl4.string(channelId(senderId[15]).t.ftIK2A);
-    obj1.onpress = function onpress() {
+    obj4.text = intl4.string(channelId(senderId[15]).t.ftIK2A);
+    obj4.onpress = function onpress() {
       return closure_5(SafetyWarningUtils.CtaEventTypes.USER_BANNER_MUTE);
     };
-    items3[1] = obj1;
+    items3[1] = obj4;
     obj.buttons = items3;
     return jsx(tmp3, obj);
   }
 }
-const SafetyWarningTypes = fn(11046).SafetyWarningTypes;
-const Constants = fn(11502);
+const SafetyWarningTypes = fn(11047).SafetyWarningTypes;
+const Constants = fn(11503);
 ({
   getLikelyAtoMoreTips: hasOwnProperty,
   LIKELY_ATO_MORE_TIPS_MODAL_KEY: metroRequire,
@@ -153,11 +187,11 @@ const AnalyticEvents = fn(1074).AnalyticEvents;
 const MuteUntilSeconds = fn(1084).MuteUntilSeconds;
 const jsxProd = fn(21);
 ({ jsx: c10, Fragment: closure_11, jsxs: closure_12 } = jsxProd);
-fn(4636);
-let createStyles = { moreTipsHeader: null };
-createStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, shadowColor: "transparent" };
-createStyles.moreTipsHeader = createStyles;
-createStyles.createStyles(createStyles);
+const createStyles = fn(4636);
+let obj2 = {
+  moreTipsHeader: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, shadowColor: "transparent" },
+};
+createStyles.createStyles(obj2);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/ato_alerts/native/components/LikelyAtoWarningBanner.tsx");
 

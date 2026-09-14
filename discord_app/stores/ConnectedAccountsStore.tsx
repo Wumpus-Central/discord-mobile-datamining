@@ -85,12 +85,12 @@ const connectedAccountsStore = new ConnectedAccountsStore(DispatcherDefault, {
           let merged = Object.assign(integrations);
           integrations = integrations.integrations;
           obj.integrations = integrations.map((guild) => {
-            let obj = {};
+            const obj = {};
             const merged = Object.assign(guild);
-            obj = {};
+            const obj3 = {};
             const merged1 = Object.assign(guild.guild);
-            obj.features = [];
-            obj.guild = closure_1_0(closure_1_2[3]).fromGuildBasic(obj);
+            obj3.features = [];
+            obj.guild = closure_1_0(closure_1_2[3]).fromGuildBasic(obj3);
             return obj;
           });
           return new ConnectedAccountRecord(obj);

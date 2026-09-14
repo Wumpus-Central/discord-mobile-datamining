@@ -13,21 +13,18 @@ export default {
   [Constants.RPCCommands.TOGGLE_VOICE_CHANNEL_CHAT]: {
     scope: Constants2.RPC_LOCAL_SCOPE,
     validation(boolean) {
-      createRpcJoiSchemaObjectDefault(boolean);
-      const obj = { open: boolean.boolean() };
-      return obj.keys(obj);
+      const obj = createRpcJoiSchemaObjectDefault(boolean);
+      return obj.keys({ open: boolean.boolean() });
     },
     handler(args) {
-      let obj = toggleVoiceChannelChat;
-      const result = obj.toggleVoiceChannelChat(args.args.open);
+      const result = toggleVoiceChannelChat.toggleVoiceChannelChat(args.args.open);
       if (null == result) {
-        obj = { errorCode: RPCErrors.INVALID_CHANNEL };
-        const tmp8 = new RPCErrorDefault(obj, "Not connected to a guild voice channel");
+        const obj3 = { errorCode: RPCErrors.INVALID_CHANNEL };
+        const tmp8 = new RPCErrorDefault(obj3, "Not connected to a guild voice channel");
         throw tmp8;
       } else {
-        obj = { channel_id: null, chat_open: null };
         ({ channelId: obj2.channel_id, chatOpen: obj2.chat_open } = result);
-        return obj;
+        return { channel_id: null, chat_open: null };
       }
     },
   },

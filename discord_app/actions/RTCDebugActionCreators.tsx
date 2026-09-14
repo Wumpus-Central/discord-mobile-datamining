@@ -8,8 +8,8 @@ const size = fn(2);
 const result = size.fileFinishedImporting("actions/RTCDebugActionCreators.tsx");
 
 export const open = function open(section) {
-  const obj = { type: "RTC_DEBUG_MODAL_OPEN", section };
-  obj.dispatch(obj);
+  DispatcherDefault.dispatch({ type: "RTC_DEBUG_MODAL_OPEN", section });
+  const obj2 = { type: "RTC_DEBUG_MODAL_OPEN", section };
   DispatcherDefault.dispatch({ type: "RTC_DEBUG_POPOUT_WINDOW_OPEN" });
 };
 export const close = function close() {
@@ -19,8 +19,7 @@ export const openReplay = function openReplay() {
   DispatcherDefault.dispatch({ type: "RTC_DEBUG_MODAL_OPEN_REPLAY" });
 };
 export const setSection = function setSection(section) {
-  const obj = { type: "RTC_DEBUG_MODAL_SET_SECTION", section };
-  obj.dispatch(obj);
+  DispatcherDefault.dispatch({ type: "RTC_DEBUG_MODAL_SET_SECTION", section });
 };
 export const setShouldRecordNextConnection = function setShouldRecordNextConnection(value) {
   trackVoiceAndVideoSettingsUpdateDefault(
@@ -28,12 +27,10 @@ export const setShouldRecordNextConnection = function setShouldRecordNextConnect
     value,
     RTCDebugStore.shouldRecordNextConnection(),
   );
-  const obj = { type: "RTC_DEBUG_SET_RECORDING_FLAG", value };
-  obj.dispatch(obj);
+  DispatcherDefault.dispatch({ type: "RTC_DEBUG_SET_RECORDING_FLAG", value });
 };
 export const setSimulcastDebugOverride = function setSimulcastDebugOverride(userId, context, quality) {
-  const obj = { type: "RTC_DEBUG_SET_SIMULCAST_OVERRIDE", userId, context, quality };
-  obj.dispatch(obj);
+  DispatcherDefault.dispatch({ type: "RTC_DEBUG_SET_SIMULCAST_OVERRIDE", userId, context, quality });
 };
 export const chooseReplayPath = function chooseReplayPath() {
   const fileManager = DiscordNativeDefault.fileManager;

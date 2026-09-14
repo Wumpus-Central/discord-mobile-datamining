@@ -10,14 +10,13 @@ export default function dispatchAutoDisableVideo(userId, videoToggleState) {
   importDefault = userId;
   dependencyMap = videoToggleState;
   DispatcherDefault.wait(() => {
-    const obj = {
+    DispatcherDefault.dispatch({
       type: "AUDIO_SET_LOCAL_VIDEO_DISABLED",
       context: MediaEngineContextTypes.DEFAULT,
       userId,
       videoToggleState,
       persist: false,
       isAutomatic: true,
-    };
-    obj.dispatch(obj);
+    });
   });
 }

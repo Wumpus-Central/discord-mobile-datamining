@@ -25,103 +25,104 @@ function updateState() {
             tmp9 = constants;
           }
         }
-        if (delayed.HIDDEN === tmp) {
+        if (obj.HIDDEN === tmp) {
           if (tmp9.OFFLINE === UNKNOWN) {
-            delayed = { delayed: null };
-            delayed = { state: tmp13.NO_CONNECTION, delayMs: delayMs2 };
-            delayed.delayed = delayed;
+            const obj2 = { delayed: null };
+            const obj3 = { state: tmp13.NO_CONNECTION, delayMs: delayMs2 };
+            obj2.delayed = obj3;
+            obj = obj2;
           } else if (tmp9.CONNECTING === UNKNOWN) {
-            const obj1 = { state: tmp13.WAITING_FOR_NETWORK, delayMs: null };
+            const obj4 = { state: tmp13.WAITING_FOR_NETWORK, delayMs: null };
             if (CacheStore.hasCache()) {
-              let obj15 = state(13776);
-              let num2 = obj15.getConfig({ location: "ConnectivityIndicatorStateStore" }).timeoutMs;
+              let num2 = state(13777).getConfig({ location: "ConnectivityIndicatorStateStore" }).timeoutMs;
               if (num2 == null) {
                 num2 = 10000;
               }
               let tmp23 = num2;
+              const obj16 = state(13777);
             } else {
               tmp23 = delayMs2;
             }
-            const obj2 = { delayed: null };
-            obj1.delayMs = tmp23;
-            obj2.delayed = obj1;
-            delayed = obj2;
+            const obj5 = { delayed: null };
+            obj4.delayMs = tmp23;
+            obj5.delayed = obj4;
+            obj = obj5;
           } else {
             if (tmp9.ONLINE !== UNKNOWN) {
               const UNKNOWN4 = tmp9.UNKNOWN;
             }
-            delayed = {};
+            obj = {};
           }
         } else if (tmp13.BACK_ONLINE === tmp) {
           if (tmp9.OFFLINE === UNKNOWN) {
-            const obj3 = { delayed: null };
-            const obj4 = { state: tmp13.NO_CONNECTION, delayMs: delayMs2 };
-            obj3.delayed = obj4;
-            delayed = obj3;
+            const obj6 = { delayed: null };
+            const obj7 = { state: tmp13.NO_CONNECTION, delayMs: delayMs2 };
+            obj6.delayed = obj7;
+            obj = obj6;
           } else if (tmp9.CONNECTING === UNKNOWN) {
-            const obj5 = { state: tmp13.WAITING_FOR_NETWORK, delayMs: null };
+            const obj8 = { state: tmp13.WAITING_FOR_NETWORK, delayMs: null };
             if (CacheStore.hasCache()) {
-              let obj10 = state(13776);
-              let num = obj10.getConfig({ location: "ConnectivityIndicatorStateStore" }).timeoutMs;
+              let num = state(13777).getConfig({ location: "ConnectivityIndicatorStateStore" }).timeoutMs;
               if (num == null) {
                 num = 10000;
               }
               let tmp18 = num;
+              const obj11 = state(13777);
             } else {
               tmp18 = delayMs2;
             }
-            const obj6 = { delayed: null };
-            obj5.delayMs = tmp18;
-            obj6.delayed = obj5;
-            delayed = obj6;
+            const obj9 = { delayed: null };
+            obj8.delayMs = tmp18;
+            obj9.delayed = obj8;
+            obj = obj9;
           } else {
             if (tmp9.ONLINE !== UNKNOWN) {
               if (tmp9.UNKNOWN !== UNKNOWN) {
-                delayed = {};
+                obj = {};
               }
             }
-            const obj7 = { delayed: null };
-            const obj8 = { state: tmp13.HIDDEN, delayMs };
-            obj7.delayed = obj8;
-            delayed = obj7;
+            const obj10 = { delayed: null };
+            const obj12 = { state: tmp13.HIDDEN, delayMs };
+            obj10.delayed = obj12;
+            obj = obj10;
           }
         } else if (tmp13.WAITING_FOR_NETWORK === tmp) {
           if (tmp9.OFFLINE === UNKNOWN) {
-            const obj9 = { immediate: tmp13.NO_CONNECTION };
-            delayed = obj9;
+            const obj13 = { immediate: tmp13.NO_CONNECTION };
+            obj = obj13;
           } else if (tmp9.ONLINE === UNKNOWN) {
-            obj10 = { immediate: tmp13.BACK_ONLINE, delayed: null };
-            const obj11 = { state: tmp13.HIDDEN, delayMs };
-            obj10.delayed = obj11;
-            delayed = obj10;
+            const obj14 = { immediate: tmp13.BACK_ONLINE, delayed: null };
+            const obj15 = { state: tmp13.HIDDEN, delayMs };
+            obj14.delayed = obj15;
+            obj = obj14;
           } else {
             if (tmp9.CONNECTING !== UNKNOWN) {
               const UNKNOWN3 = tmp9.UNKNOWN;
             }
-            delayed = {};
+            obj = {};
           }
         } else if (tmp13.NO_CONNECTION === tmp) {
           if (tmp9.CONNECTING === UNKNOWN) {
-            const obj12 = { immediate: tmp13.WAITING_FOR_NETWORK };
-            delayed = obj12;
+            const obj17 = { immediate: tmp13.WAITING_FOR_NETWORK };
+            obj = obj17;
           } else if (tmp9.ONLINE === UNKNOWN) {
-            const obj13 = { immediate: tmp13.BACK_ONLINE, delayed: null };
-            const obj14 = { state: tmp13.HIDDEN, delayMs };
-            obj13.delayed = obj14;
-            delayed = obj13;
+            const obj18 = { immediate: tmp13.BACK_ONLINE, delayed: null };
+            const obj19 = { state: tmp13.HIDDEN, delayMs };
+            obj18.delayed = obj19;
+            obj = obj18;
           } else {
             if (tmp9.OFFLINE !== UNKNOWN) {
               const UNKNOWN2 = tmp9.UNKNOWN;
             }
-            delayed = {};
+            obj = {};
           }
         }
       }
       UNKNOWN = constants.UNKNOWN;
       tmp9 = constants;
     }
-    if (null != delayed.immediate) {
-      const immediate = delayed.immediate;
+    if (null != obj.immediate) {
+      const immediate = obj.immediate;
       if (tmp28) {
         if (null != timeout) {
           closure_8.verbose("clearing pending state update timer");
@@ -140,8 +141,8 @@ function updateState() {
       }
       tmp28 = null !== c14 && c14 === immediate;
     }
-    if (null != delayed.delayed) {
-      delayed = delayed.delayed;
+    if (null != obj.delayed) {
+      const delayed = obj.delayed;
       state = delayed.state;
       if (null != timeout) {
         closure_8.verbose("clearing existing state update timer because we're scheduling a new one");
@@ -172,8 +173,8 @@ function updateState() {
       c14 = null;
     }
   }
-  obj15 = { immediate: delayed.HIDDEN };
-  delayed = obj15;
+  obj = { immediate: obj.HIDDEN };
+  const obj20 = { immediate: obj.HIDDEN };
 }
 function handleConnectionClosed() {
   c17 = false;
@@ -231,7 +232,7 @@ function handleAppStateUpdate() {
 }
 const AppStates = fn(1074).AppStates;
 let closure_8 = new LoggerDefault("ConnectivityIndicatorStateStore");
-let ConnectivityIndicatorState = {
+const ConnectivityIndicatorState = {
   HIDDEN: "hidden",
   WAITING_FOR_NETWORK: "waiting_for_network",
   NO_CONNECTION: "no_connection",
@@ -278,7 +279,7 @@ prototype["getState"] = function getState() {
   return closure_13;
 };
 ConnectivityIndicatorStateStore.displayName = "ConnectivityIndicatorStateStore";
-ConnectivityIndicatorState = {
+connectivityIndicatorStateStore = new ConnectivityIndicatorStateStore(DispatcherDefault, {
   CONNECTION_OPEN: function handleConnectionOpen() {
     c17 = true;
     updateState();
@@ -291,8 +292,7 @@ ConnectivityIndicatorState = {
   },
   CONNECTION_CLOSED: handleConnectionClosed,
   CONNECTION_INTERRUPTED: handleConnectionClosed,
-};
-connectivityIndicatorStateStore = new ConnectivityIndicatorStateStore(DispatcherDefault, ConnectivityIndicatorState);
+});
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/connectivity/native/ConnectivityIndicatorStateStore.tsx");
 

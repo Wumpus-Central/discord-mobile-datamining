@@ -1,5 +1,5 @@
 // discord_app/modules/mobile_web_handoff/MobileWebHandoffUtils.tsx
-import v1 from "../../../_runtime/01256_v1.js";
+import v1 from "../../../_runtime/01254_v1.js";
 import HTTPUtils from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 
@@ -12,8 +12,8 @@ let closure_4 = async function _createHandoffToken(key) {
     if (key === 1) {
       throw value;
     } else if (key === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -26,8 +26,8 @@ let closure_4 = async function _createHandoffToken(key) {
           throw value;
         } else if (key === 2) {
           c3 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           closure_1 = tmp4;
           let handoff_token;
@@ -39,25 +39,25 @@ let closure_4 = async function _createHandoffToken(key) {
             retries: 1,
             rejectWithError: false,
           };
-          const obj1 = { key };
-          request.body = obj1;
+          const obj4 = { key };
+          request.body = obj4;
           c2 = 1;
           c3 = 1;
-          const obj2 = { value: HTTP.post(request), done: false };
-          return obj2;
+          const obj5 = { value: HTTP.post(request), done: false };
+          return obj5;
         }
       } else if (key === 1) {
         c3 = 3;
         throw value;
       } else if (key === 2) {
         c3 = 3;
-        const obj3 = { value, done: true };
-        return obj3;
+        const obj6 = { value, done: true };
+        return obj6;
       } else {
         handoff_token = value.body.handoff_token;
         if (null != handoff_token) {
           c3 = 3;
-          obj = { value: handoff_token, done: true };
+          const obj = { value: handoff_token, done: true };
           return obj;
         } else {
           const _Error = Error;

@@ -11,14 +11,14 @@ require = fn;
 const StyleSheet = fn(17).StyleSheet;
 const jsx = fn(21).jsx;
 function renderTooltipItem(arg0, enterExitAnimatedStyles) {
-  let obj = { style: null, pointerEvents: "box-none", children: null };
+  const obj = { style: null, pointerEvents: "box-none", children: null };
   const items = [enterExitAnimatedStyles, StyleSheet.absoluteFill];
   obj.style = items;
   let tmpResult = null;
   if (null != arg0) {
-    obj = {};
+    const obj2 = {};
     const merged = Object.assign(arg0);
-    obj.enterExitAnimatedStyles = enterExitAnimatedStyles;
+    obj2.enterExitAnimatedStyles = enterExitAnimatedStyles;
     tmpResult = jsx(Coachmark.CoachmarkContainer, {});
   }
   obj.children = tmpResult;
@@ -31,14 +31,14 @@ export const AnimatedCoachmark = function AnimatedCoachmark(visible) {
   visible = visible.visible;
   const merged = Object.assign(visible, Object.assign({ visible: 0 }));
   c1 = undefined;
-  [tmp3, c1] = _slicedToArray(noop.useState(visible), 2);
-  let obj = TooltipConstants;
-  const result = obj.tooltipEnterExitAnimation(merged.position);
+  [tmp3, c1] = noop.useState(visible);
+  const tmp2 = _slicedToArray(noop.useState(visible), 2);
+  const result = TooltipConstants.tooltipEnterExitAnimation(merged.position);
   const items = [visible];
   const effect = noop.useEffect(() => {
     _undefined(visible);
   }, items);
-  obj = {
+  const obj2 = {
     useReducedMotion: noop.useContext(AccessibilityPreferencesContext.AccessibilityPreferencesContext).reducedMotion
       .enabled,
     item: null,
@@ -47,14 +47,13 @@ export const AnimatedCoachmark = function AnimatedCoachmark(visible) {
     renderItem: null,
   };
   let tmp8;
-  const tmp2 = _slicedToArray(noop.useState(visible), 2);
   if (tmp3) {
     tmp8 = merged;
   }
-  obj.item = tmp8;
-  obj.entering = result;
-  obj.exiting = result;
-  obj.renderItem = renderTooltipItem;
+  obj2.item = tmp8;
+  obj2.entering = result;
+  obj2.exiting = result;
+  obj2.renderItem = renderTooltipItem;
   return jsx(AnimatedEnterExitItemDefault, {
     useReducedMotion: noop.useContext(AccessibilityPreferencesContext.AccessibilityPreferencesContext).reducedMotion
       .enabled,

@@ -104,26 +104,25 @@ prototype["handleWriteCaches"] = function handleWriteCaches(database, arg1) {
         }
         continue;
       }
-      let obj1 = DatabaseDaosDefault;
-      const result = obj1.nonGuildVersionsTransaction(database);
-      let obj = { id: "highest_last_message_id", versionString: str2 };
-      const items = [obj, ,];
-      obj = { id: "private_channels_version", versionString: _lastMessageId };
-      items[1] = obj;
-      obj1 = { id: "read_state_version", version: tmp.readStateVersion };
-      items[2] = obj1;
-      result.putAll(items);
       const iter2 = sorted.reverse();
+      const result = DatabaseDaosDefault.nonGuildVersionsTransaction(database);
+      const obj = { id: "highest_last_message_id", versionString: str2 };
+      const items = [obj, ,];
+      const obj3 = { id: "private_channels_version", versionString: _lastMessageId };
+      items[1] = obj3;
+      const obj4 = { id: "read_state_version", version: tmp.readStateVersion };
+      items[2] = obj4;
+      result.putAll(items);
     }
   }
   const statesTransaction = DatabaseDaosDefault.readStatesTransaction(database);
   statesTransaction.delete();
   const item = allReadStates.forEach((type) => statesTransaction.put("" + type.type + "-" + type.channelId, type));
 };
-let size = Object.create(ReadStates.prototype);
-let closure_129_0 = size;
-size.readStateVersion = null;
-size.actions = {
+let obj2 = Object.create(ReadStates.prototype);
+let closure_129_0 = obj2;
+obj2.readStateVersion = null;
+obj2.actions = {
   CONNECTION_OPEN(arg0) {
     return obj.handleConnectionOpen(arg0);
   },
@@ -142,7 +141,7 @@ size.actions = {
     return obj.handleWriteCaches(arg1, true);
   },
 };
-size = fn(2);
+const size = fn(2);
 let result = size.fileFinishedImporting("modules/app_database/modules/ReadStates.tsx");
 
-export default size;
+export default obj2;

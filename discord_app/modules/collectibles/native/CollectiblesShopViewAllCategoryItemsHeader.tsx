@@ -29,26 +29,24 @@ const result = size.fileFinishedImporting("modules/collectibles/native/Collectib
 
 export default function CollectiblesShopViewAllCategoryItemsHeader(arg0) {
   ({ logoUrl, buttonColor, categoryName } = arg0);
-  let obj = useNavigation;
-  const navigation = obj.useStackNavigation();
+  const navigation = useNavigation.useStackNavigation();
   const tmp = closure_7();
-  let obj1 = useYouBarSettingsSafeArea;
-  obj = { style: null, children: null };
-  obj = {};
-  const youBarSettingsCustomHeaderPaddingTop = obj1.useYouBarSettingsCustomHeaderPaddingTop();
+  const obj3 = { style: null, children: null };
+  const obj4 = {};
+  const youBarSettingsCustomHeaderPaddingTop = useYouBarSettingsSafeArea.useYouBarSettingsCustomHeaderPaddingTop();
   const merged = Object.assign(tmp.headerContainer);
-  obj.paddingTop = youBarSettingsCustomHeaderPaddingTop;
-  obj.style = obj;
-  obj1 = { style: tmp.backButton, children: null };
-  const obj2 = { source: _modDef7970, color: buttonColor, accessibilityLabel: null, onPress: null };
+  obj4.paddingTop = youBarSettingsCustomHeaderPaddingTop;
+  obj3.style = obj4;
+  const obj5 = { style: tmp.backButton, children: null };
+  const obj6 = { source: _modDef7970, color: buttonColor, accessibilityLabel: null, onPress: null };
   const intl = util.intl;
-  obj2.accessibilityLabel = intl.string(util.t["13/7kX"]);
-  obj2.onPress = function onPress() {
+  obj6.accessibilityLabel = intl.string(util.t["13/7kX"]);
+  obj6.onPress = function onPress() {
     navigation.goBack();
   };
-  obj1.children = hasOwnProperty(HeaderShared.HeaderIconButton, obj2);
-  const items = [hasOwnProperty(React4, obj1), ,];
-  const obj3 = {
+  obj5.children = hasOwnProperty(HeaderShared.HeaderIconButton, obj6);
+  const items = [hasOwnProperty(React4, obj5), ,];
+  const obj7 = {
     resizeMode: "contain",
     style: tmp.logo,
     source: { uri: logoUrl },
@@ -56,9 +54,9 @@ export default function CollectiblesShopViewAllCategoryItemsHeader(arg0) {
     accessibilityRole: "header",
   };
   const intl2 = util.intl;
-  obj3.accessibilityLabel = intl2.formatToPlainString(util.t.FNtLb3, { category: categoryName });
-  items[1] = hasOwnProperty(React3, obj3);
+  obj7.accessibilityLabel = intl2.formatToPlainString(util.t.FNtLb3, { category: categoryName });
+  items[1] = hasOwnProperty(React3, obj7);
   items[2] = hasOwnProperty(React4, { style: tmp.dummyRightButton });
-  obj.children = items;
-  return timestampProducer(React4, obj);
+  obj3.children = items;
+  return timestampProducer(React4, obj3);
 }

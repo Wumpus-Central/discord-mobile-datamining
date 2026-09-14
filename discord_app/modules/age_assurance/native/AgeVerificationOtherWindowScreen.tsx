@@ -39,13 +39,13 @@ export default function AgeVerificationOtherWindowScreen(copy) {
     const intl2 = util.intl;
     description = intl2.string(_modDef2946.VcZF1q);
   }
-  let obj = { children: null };
-  obj = { children: null };
-  obj = { align: "center", justify: "center", spacing: 16, style: tmp.container, children: null };
+  const obj = { children: null };
+  const obj2 = { children: null };
+  const obj3 = { align: "center", justify: "center", spacing: 16, style: tmp.container, children: null };
   const items = [
     React3(MobilePhoneIcon.MobilePhoneIcon, { size: "lg", color: nativeDefault.colors.INTERACTIVE_ICON_DEFAULT }),
   ];
-  const obj2 = { align: "center", justify: "center", spacing: 8, children: null };
+  const obj5 = { align: "center", justify: "center", spacing: 8, children: null };
   const items1 = [
     React3(Text_Text.Text, {
       accessibilityRole: "header",
@@ -56,10 +56,10 @@ export default function AgeVerificationOtherWindowScreen(copy) {
     }),
     React3(Text_Text.Text, { variant: "text-md/medium", color: "text-muted", style: tmp.text, children: description }),
   ];
-  obj2.children = items1;
-  items[1] = React4(Stack_Stack.Stack, obj2);
-  obj.children = items;
-  obj.children = React4(Stack_Stack.Stack, obj);
-  obj.children = React3(ModalContent.ModalContent, obj);
+  obj5.children = items1;
+  items[1] = React4(Stack_Stack.Stack, obj5);
+  obj3.children = items;
+  obj2.children = React4(Stack_Stack.Stack, obj3);
+  obj.children = React3(ModalContent.ModalContent, obj2);
   return React3(ModalScreen.ModalScreen, obj);
 }

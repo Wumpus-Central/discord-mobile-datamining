@@ -20,40 +20,40 @@ function ForumPostUsername(arg0) {
     num = 72;
   }
   const diff = useChatWidthDefault() - ForumPostGridBody.GRID_HORIZONTAL_PADDING - num;
-  let tmp2Result = initialize;
+  const tmp4 = useChatWidthDefault();
   const items = [AccessibilityStore];
-  const stateFromStores = tmp2Result.useStateFromStores(items, () => roleStyle.roleStyle);
+  const stateFromStores = initialize.useStateFromStores(items, () => roleStyle.roleStyle);
   if ("username" === stateFromStores) {
     if (null != authorColor) {
-      let obj = { color: authorColor };
+      const obj = { color: authorColor };
     }
-    tmp2Result = enhanced_role_colors_EnhancedRoleColorUtils;
-    const processColorStringsArray = tmp2Result.useProcessColorStringsArray(authorColors);
-    const tmp2Result1 = enhanced_role_colors_EnhancedRoleColorUtils;
-    const useIsRoleStyleAndRoleColorsEligibleForERC = tmp2Result1.useIsRoleStyleAndRoleColorsEligibleForERC;
+    const processColorStringsArray =
+      enhanced_role_colors_EnhancedRoleColorUtils.useProcessColorStringsArray(authorColors);
+    const tmp2Result4 = enhanced_role_colors_EnhancedRoleColorUtils;
+    const useIsRoleStyleAndRoleColorsEligibleForERC = tmp2Result4.useIsRoleStyleAndRoleColorsEligibleForERC;
     const guild_id = thread.guild_id;
     let tmp19Result = null;
     if (null != authorName) {
-      obj = { style: null, accessibilityRole: "button", children: null };
-      const obj1 = { maxWidth: diff };
+      const obj2 = { style: null, accessibilityRole: "button", children: null };
+      const obj3 = { maxWidth: diff };
       const merged = Object.assign(tmp.authorContainer);
-      const items1 = [obj1, tmp9, containerStyle];
-      obj.style = items1;
+      const items1 = [obj3, tmp9, containerStyle];
+      obj2.style = items1;
       let tmp23 = "dot" === stateFromStores && null != authorColor;
       if (tmp23) {
-        const obj2 = { style: null, children: null };
+        const obj4 = { style: null, children: null };
         const items2 = [tmp.roleDotContainer, roleDotStyle];
-        obj2.style = items2;
-        const obj3 = { size: "small", color: authorColor, colors: authorColors };
-        obj2.children = timestampProducer(native.RoleDot, obj3);
-        tmp23 = timestampProducer(View, obj2);
+        obj4.style = items2;
+        const obj5 = { size: "small", color: authorColor, colors: authorColors };
+        obj4.children = timestampProducer(native.RoleDot, obj5);
+        tmp23 = timestampProducer(View, obj4);
       }
       const items3 = [tmp23];
       let tmp25;
       if (tmp17) {
         tmp25 = processColorStringsArray;
       }
-      const obj4 = {
+      const obj6 = {
         variant: "text-sm/semibold",
         color: "mobile-text-heading-primary",
         gradientColors: tmp25,
@@ -62,19 +62,19 @@ function ForumPostUsername(arg0) {
         children: null,
       };
       const items4 = [{}, textStyle, tmp.authorName];
-      obj4.style = items4;
+      obj6.style = items4;
       const items5 = [authorName, suffix];
-      obj4.children = items5;
-      items3[1] = React5(Text_Text.Text, obj4);
-      obj.children = items3;
-      tmp19Result = React5(View, obj);
+      obj6.children = items5;
+      items3[1] = React5(Text_Text.Text, obj6);
+      obj2.children = items3;
+      tmp19Result = React5(View, obj2);
     }
     return tmp19Result;
   }
-  const tmp4 = useChatWidthDefault();
+  const tmp2Result = initialize;
 }
 const View = fn(17).View;
-const useForumChannelStore = fn(12130).useForumChannelStore;
+const useForumChannelStore = fn(12131).useForumChannelStore;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 const createStyles = fn(4636);
@@ -89,8 +89,7 @@ const result = size.fileFinishedImporting("modules/forums/native/posts/ForumPost
 export const ForumPostAuthor = function ForumPostAuthor(thread) {
   thread = thread.thread;
   ({ hasUnreads, suffix, containerStyle, roleDotStyle, textStyle } = thread);
-  let obj = ForumHooks;
-  const forumPostAuthor = obj.useForumPostAuthor(thread);
+  const forumPostAuthor = ForumHooks.useForumPostAuthor(thread);
   ({ user, author } = forumPostAuthor);
   let nick;
   if (author != null) {
@@ -111,7 +110,7 @@ export const ForumPostAuthor = function ForumPostAuthor(thread) {
   }
   let tmp5Result = null;
   if (null != user) {
-    obj = {
+    const obj2 = {
       thread,
       authorId: null,
       authorName: null,
@@ -127,26 +126,25 @@ export const ForumPostAuthor = function ForumPostAuthor(thread) {
     if (user != null) {
       id = user.id;
     }
-    obj.authorId = id;
-    obj.authorName = nick;
-    obj.authorColor = colorString;
-    obj.authorColors = colorStrings;
-    obj.suffix = suffix;
-    obj.containerStyle = containerStyle;
-    obj.roleDotStyle = roleDotStyle;
-    obj.textStyle = textStyle;
-    obj.hasUnreads = hasUnreads;
-    tmp5Result = timestampProducer(ForumPostUsername, obj);
+    obj2.authorId = id;
+    obj2.authorName = nick;
+    obj2.authorColor = colorString;
+    obj2.authorColors = colorStrings;
+    obj2.suffix = suffix;
+    obj2.containerStyle = containerStyle;
+    obj2.roleDotStyle = roleDotStyle;
+    obj2.textStyle = textStyle;
+    obj2.hasUnreads = hasUnreads;
+    tmp5Result = timestampProducer(ForumPostUsername, obj2);
   }
   return tmp5Result;
 };
 export const ForumPostMessageAuthor = function ForumPostMessageAuthor(thread) {
   thread = thread.thread;
   ({ message, hasUnreads, suffix, containerStyle, roleDotStyle, textStyle } = thread);
-  let obj = ForumHooks;
-  const forumPostMessageAuthor = obj.useForumPostMessageAuthor(message, thread);
+  const forumPostMessageAuthor = ForumHooks.useForumPostMessageAuthor(message, thread);
   const user = forumPostMessageAuthor.user;
-  obj = {
+  const obj2 = {
     thread,
     authorId: null,
     authorName: null,
@@ -163,14 +161,14 @@ export const ForumPostMessageAuthor = function ForumPostMessageAuthor(thread) {
   if (user != null) {
     id = user.id;
   }
-  obj.authorId = id;
-  obj.authorName = authorName;
-  obj.authorColor = authorColor;
-  obj.authorColors = authorColors;
-  obj.suffix = suffix;
-  obj.containerStyle = containerStyle;
-  obj.roleDotStyle = roleDotStyle;
-  obj.textStyle = textStyle;
-  obj.hasUnreads = hasUnreads;
-  return timestampProducer(ForumPostUsername, obj);
+  obj2.authorId = id;
+  obj2.authorName = authorName;
+  obj2.authorColor = authorColor;
+  obj2.authorColors = authorColors;
+  obj2.suffix = suffix;
+  obj2.containerStyle = containerStyle;
+  obj2.roleDotStyle = roleDotStyle;
+  obj2.textStyle = textStyle;
+  obj2.hasUnreads = hasUnreads;
+  return timestampProducer(ForumPostUsername, obj2);
 };

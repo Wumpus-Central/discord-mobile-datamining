@@ -39,8 +39,8 @@ let closure_19 = async function _handleNextOrSubmitRegistration(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -53,21 +53,21 @@ let closure_19 = async function _handleNextOrSubmitRegistration(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c3 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           React7();
           const tmp22 = getNextAuthState(closure_0);
           if (null != tmp22) {
-            const obj1 = { step: closure_2_10(closure_0), toStep: closure_2_10(tmp22), actionType: constants.SUCCESS };
-            dependencyMap(obj1);
+            const obj4 = { step: closure_2_10(closure_0), toStep: closure_2_10(tmp22), actionType: constants.SUCCESS };
+            dependencyMap(obj4);
             const StackActions = Link.StackActions;
             importDefault.dispatch(StackActions.push(tmp22));
           } else {
             c4 = 1;
             c3 = 1;
-            const obj2 = { value: handleRegistrationSubmit(closure_0, importDefault, dependencyMap), done: false };
-            return obj2;
+            const obj5 = { value: handleRegistrationSubmit(closure_0, importDefault, dependencyMap), done: false };
+            return obj5;
           }
         }
       } else if (arg0 === 1) {
@@ -75,7 +75,7 @@ let closure_19 = async function _handleNextOrSubmitRegistration(arg0) {
         throw value;
       } else if (arg0 === 2) {
         c3 = 3;
-        obj = { value, done: true };
+        const obj = { value, done: true };
         return obj;
       }
       c3 = 3;
@@ -107,31 +107,30 @@ let closure_21 = async function _handleRegistrationSubmit(arg0) {
   if (!obj10.isNullOrEmpty(result)) {
     tmp37 = registrationOptions.username === result;
   }
-  let obj1 = {};
+  const obj6 = {};
   const merged = Object.assign(registrationOptions);
-  obj1.usedUsernameSuggestion = tmp37;
-  closure_131_3 = obj1;
+  obj6.usedUsernameSuggestion = tmp37;
+  closure_131_3 = obj6;
   state = state.getState();
   if (state.required) {
-    obj1.promoEmailConsent = state;
+    obj6.promoEmailConsent = state;
   }
   React5(true);
   timestampProducer({});
-  let obj3 = auth_register;
-  await obj3.registerFull(obj1);
+  await auth_register.registerFull(obj6);
   if (1 === tmp7) {
     c6 = 0;
     closure_131_6 = closure_5;
     closure_132_7(false);
     if (closure_131_6 instanceof closure_132_0(closure_132_2[27]).APIError) {
-      obj1 = closure_132_0(closure_132_2[28]);
-      const authenticationErrorsFromAPIError = obj1.getAuthenticationErrorsFromAPIError(closure_131_6);
+      const authenticationErrorsFromAPIError = closure_132_0(closure_132_2[28]).getAuthenticationErrorsFromAPIError(closure_131_6);
       closure_132_6(authenticationErrorsFromAPIError);
       closure_131_5 = closure_132_10(closure_131_0);
       if (null != closure_131_5) {
         closure_132_1(closure_132_2[29])(closure_131_1, closure_131_2, authenticationErrorsFromAPIError, closure_131_5);
       }
       c8 = 3;
+      closure_132_0(closure_132_2[28]);
     } else {
       c8 = 3;
       return { value: "HermesInternal", done: null };
@@ -140,46 +139,22 @@ let closure_21 = async function _handleRegistrationSubmit(arg0) {
     c8 = 3;
     throw value;
   } else if (arg0 !== 2) {
-    obj3 = {
-      step: closure_132_10(closure_131_0),
-      actionType: closure_132_13.SUCCESS,
-      overrideRegistrationOptions: closure_131_3,
-    };
-    closure_131_2(obj3);
-    closure_131_2({
-      step: closure_132_11.REGISTER,
-      actionType: closure_132_13.SUCCESS,
-      overrideRegistrationOptions: closure_131_3,
-    });
+    closure_131_2({ step: closure_132_10(closure_131_0), actionType: closure_132_13.SUCCESS, overrideRegistrationOptions: closure_131_3 });
+    closure_131_2({ step: closure_132_11.REGISTER, actionType: closure_132_13.SUCCESS, overrideRegistrationOptions: closure_131_3 });
     c6 = 0;
+    { step: closure_132_10(closure_131_0), actionType: closure_132_13.SUCCESS, overrideRegistrationOptions: closure_131_3 };
   }
   return value;
 };
 const usePromoEmailConsentStore = fn(6695).usePromoEmailConsentStore;
-const RegistrationUIStore = fn(16041);
-({
-  setRegistrationErrors: metroRequire,
-  setSubmitting: closure_7,
-  useRegistrationUIStore: closure_8,
-  clearRegistrationErrorMessage: closure_9,
-} = RegistrationUIStore);
-const RegistrationConstants = fn(16042);
-({
-  authStateToRegisterTransitionStep: c10,
-  RegisterTransitionSteps: closure_11,
-  RegistrationSteps: closure_12,
-  RegistrationTransitionActionTypes: map1,
-} = RegistrationConstants);
+const RegistrationUIStore = fn(16043);
+({ setRegistrationErrors: metroRequire, setSubmitting: closure_7, useRegistrationUIStore: closure_8, clearRegistrationErrorMessage: closure_9 } = RegistrationUIStore);
+const RegistrationConstants = fn(16044);
+({ authStateToRegisterTransitionStep: c10, RegisterTransitionSteps: closure_11, RegistrationSteps: closure_12, RegistrationTransitionActionTypes: map1 } = RegistrationConstants);
 const AuthStates = fn(1074).AuthStates;
 const jsx = fn(21).jsx;
-const items = [, , , ,];
-({
-  WELCOME: arr[0],
-  REGISTER_IDENTITY: arr[1],
-  REGISTER_DISPLAY_NAME: arr[2],
-  REGISTER_ACCOUNT_INFORMATION: arr[3],
-  AGE_GATE: arr[4],
-} = AuthStates);
+const items = [, , , , ];
+({ WELCOME: arr[0], REGISTER_IDENTITY: arr[1], REGISTER_DISPLAY_NAME: arr[2], REGISTER_ACCOUNT_INFORMATION: arr[3], AGE_GATE: arr[4] } = AuthStates);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/auth/native/RegistrationStepsUtils.tsx");
 
@@ -188,7 +163,7 @@ export function getRegistrationSteps() {
 }
 export const getAllAuthScreens = function getAllAuthScreens() {
   let obj = {};
-  obj = {
+  obj[AuthStates.WELCOME] = {
     ignoreKeyboard: true,
     fullscreen: true,
     impressionName: discord_common_AnalyticsUtils.ImpressionNames.USER_WELCOME,
@@ -196,59 +171,47 @@ export const getAllAuthScreens = function getAllAuthScreens() {
     headerShown: false,
     render() {
       return jsx(WelcomeDefault, {});
-    },
+    }
   };
-  obj[AuthStates.WELCOME] = obj;
-  obj = {
-    ignoreKeyboard: true,
-    fullscreen: true,
-    impressionName: discord_common_AnalyticsUtils.ImpressionNames.USER_REGISTRATION,
-    impressionProperties: {
-      impression_group: discord_common_AnalyticsUtils.ImpressionGroups.USER_REGISTRATION_FLOW,
-      step: constants.IDENTITY,
-    },
-    headerTitle,
-    headerLeft(arg0) {
-      const obj = {};
-      const merged = Object.assign(arg0);
-      const index = items.indexOf(constants2.REGISTER_IDENTITY);
-      let tmp5;
-      if (-1 !== index) {
-        if (0 !== index) {
-          tmp5 = items[index - 1];
-        }
-      }
-      let tmp6;
-      if (null != tmp5) {
-        tmp6 = closure_1_10(tmp5);
-      }
-      obj.destinationStep = tmp6;
-      return jsx(RegistrationUtils.BackButtonWithTracking, {});
-    },
-    render() {
-      return jsx(RegisterIdentity.RegisterIdentity, {});
-    },
-  };
-  obj[AuthStates.REGISTER_IDENTITY] = obj;
+  const obj3 = { ignoreKeyboard: true, fullscreen: true, impressionName: discord_common_AnalyticsUtils.ImpressionNames.USER_REGISTRATION, impressionProperties: null, headerTitle: null, headerLeft: null, render: null };
   const obj2 = {
     ignoreKeyboard: true,
     fullscreen: true,
-    impressionName: discord_common_AnalyticsUtils.ImpressionNames.USER_REGISTRATION,
-    impressionProperties: null,
-    headerTitle: null,
-    headerLeft: null,
-    render: null,
+    impressionName: discord_common_AnalyticsUtils.ImpressionNames.USER_WELCOME,
+    headerTitle,
+    headerShown: false,
+    render() {
+      return jsx(WelcomeDefault, {});
+    }
   };
-  const obj1 = {
-    impression_group: discord_common_AnalyticsUtils.ImpressionGroups.USER_REGISTRATION_FLOW,
-    step: constants.IDENTITY,
+  obj3.impressionProperties = { impression_group: discord_common_AnalyticsUtils.ImpressionGroups.USER_REGISTRATION_FLOW, step: constants.IDENTITY };
+  obj3.headerTitle = headerTitle;
+  obj3.headerLeft = function headerLeft(arg0) {
+    const obj = {};
+    const merged = Object.assign(arg0);
+    const index = items.indexOf(constants2.REGISTER_IDENTITY);
+    let tmp5;
+    if (-1 !== index) {
+      if (0 !== index) {
+        tmp5 = items[index - 1];
+      }
+    }
+    let tmp6;
+    if (null != tmp5) {
+      tmp6 = closure_1_10(tmp5);
+    }
+    obj.destinationStep = tmp6;
+    return jsx(RegistrationUtils.BackButtonWithTracking, {});
   };
-  obj2.impressionProperties = {
-    impression_group: discord_common_AnalyticsUtils.ImpressionGroups.USER_REGISTRATION_FLOW,
-    step: constants.DISPLAY_NAME,
+  obj3.render = function render() {
+    return jsx(RegisterIdentity.RegisterIdentity, {});
   };
-  obj2.headerTitle = headerTitle;
-  obj2.headerLeft = function headerLeft(arg0) {
+  obj[AuthStates.REGISTER_IDENTITY] = obj3;
+  const obj5 = { ignoreKeyboard: true, fullscreen: true, impressionName: discord_common_AnalyticsUtils.ImpressionNames.USER_REGISTRATION, impressionProperties: null, headerTitle: null, headerLeft: null, render: null };
+  const obj4 = { impression_group: discord_common_AnalyticsUtils.ImpressionGroups.USER_REGISTRATION_FLOW, step: constants.IDENTITY };
+  obj5.impressionProperties = { impression_group: discord_common_AnalyticsUtils.ImpressionGroups.USER_REGISTRATION_FLOW, step: constants.DISPLAY_NAME };
+  obj5.headerTitle = headerTitle;
+  obj5.headerLeft = function headerLeft(arg0) {
     const obj = {};
     const merged = Object.assign(arg0);
     const index = items.indexOf(constants2.REGISTER_DISPLAY_NAME);
@@ -265,29 +228,15 @@ export const getAllAuthScreens = function getAllAuthScreens() {
     obj.destinationStep = tmp6;
     return jsx(RegistrationUtils.BackButtonWithTracking, {});
   };
-  obj2.render = function render() {
+  obj5.render = function render() {
     return jsx(RegisterDisplayNameDefault, {});
   };
-  obj[AuthStates.REGISTER_DISPLAY_NAME] = obj2;
-  const obj4 = {
-    ignoreKeyboard: true,
-    fullscreen: true,
-    impressionName: discord_common_AnalyticsUtils.ImpressionNames.USER_REGISTRATION,
-    impressionProperties: null,
-    headerTitle: null,
-    headerLeft: null,
-    render: null,
-  };
-  const obj3 = {
-    impression_group: discord_common_AnalyticsUtils.ImpressionGroups.USER_REGISTRATION_FLOW,
-    step: constants.DISPLAY_NAME,
-  };
-  obj4.impressionProperties = {
-    impression_group: discord_common_AnalyticsUtils.ImpressionGroups.USER_REGISTRATION_FLOW,
-    step: constants.ACCOUNT_INFORMATION,
-  };
-  obj4.headerTitle = headerTitle;
-  obj4.headerLeft = function headerLeft(arg0) {
+  obj[AuthStates.REGISTER_DISPLAY_NAME] = obj5;
+  const obj7 = { ignoreKeyboard: true, fullscreen: true, impressionName: discord_common_AnalyticsUtils.ImpressionNames.USER_REGISTRATION, impressionProperties: null, headerTitle: null, headerLeft: null, render: null };
+  const obj6 = { impression_group: discord_common_AnalyticsUtils.ImpressionGroups.USER_REGISTRATION_FLOW, step: constants.DISPLAY_NAME };
+  obj7.impressionProperties = { impression_group: discord_common_AnalyticsUtils.ImpressionGroups.USER_REGISTRATION_FLOW, step: constants.ACCOUNT_INFORMATION };
+  obj7.headerTitle = headerTitle;
+  obj7.headerLeft = function headerLeft(arg0) {
     const obj = {};
     const merged = Object.assign(arg0);
     const index = items.indexOf(constants2.REGISTER_ACCOUNT_INFORMATION);
@@ -304,52 +253,33 @@ export const getAllAuthScreens = function getAllAuthScreens() {
     obj.destinationStep = tmp6;
     return jsx(RegistrationUtils.BackButtonWithTracking, {});
   };
-  obj4.render = function render() {
+  obj7.render = function render() {
     return jsx(RegisterAccountInformationDefault, {});
   };
-  obj[AuthStates.REGISTER_ACCOUNT_INFORMATION] = obj4;
-  const obj6 = {
-    ignoreKeyboard: true,
-    impressionName: discord_common_AnalyticsUtils.ImpressionNames.USER_VERIFY_PHONE,
-    impressionProperties: null,
-    headerTitle: null,
-    headerLeft: null,
-    render: null,
-  };
-  const obj5 = {
-    impression_group: discord_common_AnalyticsUtils.ImpressionGroups.USER_REGISTRATION_FLOW,
-    step: constants.ACCOUNT_INFORMATION,
-  };
-  obj6.impressionProperties = {
-    impression_group: discord_common_AnalyticsUtils.ImpressionGroups.USER_REGISTRATION_FLOW,
-  };
-  obj6.headerTitle = headerTitle;
-  obj6.headerLeft = function headerLeft(arg0) {
+  obj[AuthStates.REGISTER_ACCOUNT_INFORMATION] = obj7;
+  const obj9 = { ignoreKeyboard: true, impressionName: discord_common_AnalyticsUtils.ImpressionNames.USER_VERIFY_PHONE, impressionProperties: null, headerTitle: null, headerLeft: null, render: null };
+  const obj8 = { impression_group: discord_common_AnalyticsUtils.ImpressionGroups.USER_REGISTRATION_FLOW, step: constants.ACCOUNT_INFORMATION };
+  obj9.impressionProperties = { impression_group: discord_common_AnalyticsUtils.ImpressionGroups.USER_REGISTRATION_FLOW };
+  obj9.headerTitle = headerTitle;
+  obj9.headerLeft = function headerLeft(arg0) {
     const obj = {};
     const merged = Object.assign(arg0);
     obj.destinationStep = constants.ACCOUNT_IDENTITY;
     return jsx(RegistrationUtils.BackButtonWithTracking, {});
   };
-  obj6.render = function render(arg0) {
+  obj9.render = function render(arg0) {
     const merged = Object.assign(arg0);
     return jsx(components_VerifyPhoneDefault, {});
   };
-  obj[AuthStates.VERIFY_PHONE] = obj6;
-  const obj8 = {
-    ignoreKeyboard: true,
-    fullscreen: true,
-    impressionName: discord_common_AnalyticsUtils.ImpressionNames.USER_LOGIN,
-    impressionProperties: null,
-    headerTitle: null,
-    render: null,
-  };
-  const obj7 = { impression_group: discord_common_AnalyticsUtils.ImpressionGroups.USER_REGISTRATION_FLOW };
-  obj8.impressionProperties = { impression_group: discord_common_AnalyticsUtils.ImpressionGroups.USER_LOGIN_FLOW };
-  obj8.headerTitle = headerTitle;
-  obj8.render = function render() {
+  obj[AuthStates.VERIFY_PHONE] = obj9;
+  const obj11 = { ignoreKeyboard: true, fullscreen: true, impressionName: discord_common_AnalyticsUtils.ImpressionNames.USER_LOGIN, impressionProperties: null, headerTitle: null, render: null };
+  const obj10 = { impression_group: discord_common_AnalyticsUtils.ImpressionGroups.USER_REGISTRATION_FLOW };
+  obj11.impressionProperties = { impression_group: discord_common_AnalyticsUtils.ImpressionGroups.USER_LOGIN_FLOW };
+  obj11.headerTitle = headerTitle;
+  obj11.render = function render() {
     return jsx(LoginDefault, {});
   };
-  obj[AuthStates.LOGIN] = obj8;
+  obj[AuthStates.LOGIN] = obj11;
   obj[AuthStates.MFA] = {
     fullscreen: true,
     ignoreKeyboard: true,
@@ -357,7 +287,7 @@ export const getAllAuthScreens = function getAllAuthScreens() {
     headerShown: false,
     render() {
       return jsx(components_MFADefault, { inContainer: true });
-    },
+    }
   };
   obj[AuthStates.ACCOUNT_DISABLED_OR_DELETION_SCHEDULED] = {
     ignoreKeyboard: true,
@@ -366,7 +296,7 @@ export const getAllAuthScreens = function getAllAuthScreens() {
     render(arg0) {
       const merged = Object.assign(arg0);
       return jsx(AccountDisabledOrDeletionScheduledDefault, {});
-    },
+    }
   };
   obj[AuthStates.COUNTRY_SELECT] = {
     ignoreKeyboard: true,
@@ -379,9 +309,9 @@ export const getAllAuthScreens = function getAllAuthScreens() {
         },
         onCountrySelected(countryCode) {
           return closure_1_1(dependencyMap[19]).setCountryCode(countryCode);
-        },
+        }
       });
-    },
+    }
   };
   obj[AuthStates.EXTERNAL_LINK] = {
     ignoreKeyboard: true,
@@ -389,9 +319,9 @@ export const getAllAuthScreens = function getAllAuthScreens() {
     render(arg0) {
       const merged = Object.assign(arg0);
       return jsx(ExternalLinkDefault, {});
-    },
+    }
   };
-  const obj9 = { impression_group: discord_common_AnalyticsUtils.ImpressionGroups.USER_LOGIN_FLOW };
+  const obj12 = { impression_group: discord_common_AnalyticsUtils.ImpressionGroups.USER_LOGIN_FLOW };
   obj[AuthStates.AGE_GATE] = {
     ignoreKeyboard: true,
     fullscreen: true,
@@ -416,9 +346,9 @@ export const getAllAuthScreens = function getAllAuthScreens() {
     },
     render() {
       return jsx(RegisterAgeGateDefault, {});
-    },
+    }
   };
-  const obj10 = {
+  const obj13 = {
     ignoreKeyboard: true,
     fullscreen: true,
     impressionName: discord_common_AnalyticsUtils.ImpressionNames.USER_AGE_GATE,
@@ -442,17 +372,14 @@ export const getAllAuthScreens = function getAllAuthScreens() {
     },
     render() {
       return jsx(RegisterAgeGateDefault, {});
-    },
+    }
   };
   obj[AuthStates.AGE_GATE_UNDERAGE] = {
     ignoreKeyboard: true,
     fullscreen: true,
     impressionName: discord_common_AnalyticsUtils.ImpressionNames.USER_AGE_GATE_UNDERAGE,
     impressionProperties(existingUser) {
-      return {
-        impression_group: discord_common_AnalyticsUtils.ImpressionGroups.USER_REGISTRATION_FLOW,
-        existing_user: existingUser.existingUser,
-      };
+      return { impression_group: discord_common_AnalyticsUtils.ImpressionGroups.USER_REGISTRATION_FLOW, existing_user: existingUser.existingUser };
     },
     headerTitle,
     render(arg0, arg1) {
@@ -461,9 +388,9 @@ export const getAllAuthScreens = function getAllAuthScreens() {
       return jsx(AgeGateUnderageDefault, {
         onClose() {
           return closure_0.popToTop();
-        },
+        }
       });
-    },
+    }
   };
   obj[AuthStates.COMPANION_REMOTE_AUTH] = {
     ignoreKeyboard: true,
@@ -471,7 +398,7 @@ export const getAllAuthScreens = function getAllAuthScreens() {
     headerTitle,
     render() {
       return jsx(CompanionRemoteAuth.CompanionRemoteAuth, {});
-    },
+    }
   };
   return obj;
 };

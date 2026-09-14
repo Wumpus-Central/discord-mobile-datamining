@@ -21,12 +21,12 @@ export default function useOpenPremiumMarketingPayment(PREMIUM_MARKETING_FOOTER)
   const analyticsLocations = premiumTrialOffer(premiumTrialOfferPremiumType[3])(
     PREMIUM_MARKETING_FOOTER,
   ).analyticsLocations;
+  premiumTrialOffer = analyticsLocations(premiumTrialOfferPremiumType[4]).usePremiumTrialOffer();
   let obj = analyticsLocations(premiumTrialOfferPremiumType[4]);
-  premiumTrialOffer = obj.usePremiumTrialOffer();
   premiumTrialOfferPremiumType = analyticsLocations(premiumTrialOfferPremiumType[5]).usePremiumTrialOfferPremiumType();
-  obj = { openPayment: null, buttonText: null };
+  const obj3 = { openPayment: null, buttonText: null };
   const items = [analyticsLocations, premiumTrialOfferPremiumType];
-  obj.openPayment = noop.useCallback(() => {
+  obj3.openPayment = noop.useCallback(() => {
     const obj = {
       analyticsLocation,
       analyticsLocations,
@@ -81,12 +81,11 @@ export default function useOpenPremiumMarketingPayment(PREMIUM_MARKETING_FOOTER)
   }
   items1[1] = intervalCount;
   items1[2] = premiumTrialOfferPremiumType;
-  obj.buttonText = noop.useMemo(() => {
+  obj3.buttonText = noop.useMemo(() => {
     if (null == premiumTrialOfferPremiumType) {
       const intl = util.intl;
       let stringResult = intl.string(util.t["8x0jKT"]);
     } else {
-      let obj = PremiumUtils;
       let interval;
       if (premiumTrialOffer != null) {
         const subscriptionTrial = premiumTrialOffer.subscriptionTrial;
@@ -94,7 +93,7 @@ export default function useOpenPremiumMarketingPayment(PREMIUM_MARKETING_FOOTER)
           interval = subscriptionTrial.interval;
         }
       }
-      obj = { intervalType: interval, intervalCount: null };
+      const obj2 = { intervalType: interval, intervalCount: null };
       let intervalCount;
       if (premiumTrialOffer != null) {
         const subscriptionTrial2 = premiumTrialOffer.subscriptionTrial;
@@ -102,10 +101,10 @@ export default function useOpenPremiumMarketingPayment(PREMIUM_MARKETING_FOOTER)
           intervalCount = subscriptionTrial2.intervalCount;
         }
       }
-      obj.intervalCount = intervalCount;
-      stringResult = obj.formatTrialCtaIntervalDuration(obj);
+      obj2.intervalCount = intervalCount;
+      stringResult = PremiumUtils.formatTrialCtaIntervalDuration(obj2);
     }
     return stringResult;
   }, items1);
-  return obj;
+  return obj3;
 }

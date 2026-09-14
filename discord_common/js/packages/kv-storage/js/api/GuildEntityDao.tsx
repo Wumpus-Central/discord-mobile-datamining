@@ -3,6 +3,8 @@ import Table from "Table.tsx";
 import TableId from "../types/index.tsx";
 import size from "../../../../../../_runtime/metro/00002__.js";
 
+const require = globalThis.__r;
+
 let GuildEntityDao;
 class GuildEntityDao {
   constructor(arg0, arg1, arg2) {

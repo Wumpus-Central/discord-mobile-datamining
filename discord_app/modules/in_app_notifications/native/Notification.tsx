@@ -17,20 +17,20 @@ const InAppNotificationConstants = fn(10224);
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-fn(4636);
-let createStyles = { shadow: null, container: null };
-createStyles = {};
+const createStyles = fn(4636);
+let obj2 = { shadow: null, container: null };
+let obj3 = {};
 let merged = Object.assign(nativeDefault.shadows.SHADOW_HIGH);
-createStyles.backgroundColor = nativeDefault.colors.MOBILE_ALERT_BACKGROUND_DEFAULT;
-createStyles.borderRadius = nativeDefault.radii.lg;
-createStyles.maxWidth = NOTIFICATION_MAX_WIDTH;
-createStyles.width = "100%";
-createStyles.alignSelf = "center";
-createStyles.borderWidth = 1;
-createStyles.borderColor = nativeDefault.colors.BORDER_SUBTLE;
-createStyles.shadow = createStyles;
-createStyles.container = { borderRadius: nativeDefault.radii.lg, overflow: "hidden" };
-let closure_9 = createStyles.createStyles(createStyles);
+obj3.backgroundColor = nativeDefault.colors.MOBILE_ALERT_BACKGROUND_DEFAULT;
+obj3.borderRadius = nativeDefault.radii.lg;
+obj3.maxWidth = NOTIFICATION_MAX_WIDTH;
+obj3.width = "100%";
+obj3.alignSelf = "center";
+obj3.borderWidth = 1;
+obj3.borderColor = nativeDefault.colors.BORDER_SUBTLE;
+obj2.shadow = obj3;
+obj2.container = { borderRadius: nativeDefault.radii.lg, overflow: "hidden" };
+let closure_9 = createStyles.createStyles(obj2);
 let closure_10 = { mass: 1, overshootClamping: true, damping: 27, stiffness: 300 };
 let closure_11 = {
   code: "function NotificationTsx1(){const{withSpring,scale,ON_PRESS_SPRING_CONFIG}=this.__closure;return{transform:[{scale:withSpring(scale.get(),ON_PRESS_SPRING_CONFIG)}]};}",
@@ -76,15 +76,15 @@ export const NotificationPressable = function NotificationPressable(notification
   const channelId = memo.channelId;
   const messageId = memo.messageId;
   const type = memo.type;
-  let obj = notification(onSettingsPress[7]);
-  const inAppNotificationContext = obj.useInAppNotificationContext();
+  const inAppNotificationContext = notification(onSettingsPress[7]).useInAppNotificationContext();
   const notificationGestureY = inAppNotificationContext.notificationGestureY;
   const velocityY = inAppNotificationContext.velocityY;
   handleDismissNotification = inAppNotificationContext.handleDismissNotification;
   const initialized = inAppNotificationContext.initialized;
   const panning = inAppNotificationContext.panning;
-  let obj1 = notification(onSettingsPress[8]);
-  const sharedValue = obj1.useSharedValue(1);
+  let obj = notification(onSettingsPress[7]);
+  const tmp5 = onSettingsPress;
+  const sharedValue = notification(onSettingsPress[8]).useSharedValue(1);
   const items1 = [sharedValue];
   const items2 = [sharedValue];
   const callback = guildId.useCallback(() => sharedValue.set(0.95), items1);
@@ -93,25 +93,30 @@ export const NotificationPressable = function NotificationPressable(notification
   class A {
     constructor() {
       obj = { transform: null };
-      obj = { scale: null };
+      obj1 = { scale: null };
       obj3 = closure_0(closure_2[9]);
-      obj.scale = obj3.withSpring(closure_12.get(), closure_10);
+      obj1.scale = obj3.withSpring(closure_12.get(), closure_10);
       items = [];
-      items[0] = obj;
+      items[0] = obj1;
       obj.transform = items;
       return obj;
     }
   }
-  obj = {
+  let obj3 = notification(onSettingsPress[8]);
+  A.__closure = {
     withSpring: notification(onSettingsPress[9]).withSpring,
     scale: sharedValue,
     ON_PRESS_SPRING_CONFIG: initialized,
   };
-  A.__closure = obj;
   A.__workletHash = 5485274967370;
   A.__initData = panning;
-  const animatedStyle = obj2.useAnimatedStyle(A);
+  const animatedStyle = obj3.useAnimatedStyle(A);
   const memo1 = guildId.useMemo(() => ({ foreground: true }), []);
+  const obj4 = {
+    withSpring: notification(onSettingsPress[9]).withSpring,
+    scale: sharedValue,
+    ON_PRESS_SPRING_CONFIG: initialized,
+  };
   sharedValue1 = notification(onSettingsPress[8]).useSharedValue(100);
   closure_14 = tmp13;
   const items3 = [
@@ -127,18 +132,19 @@ export const NotificationPressable = function NotificationPressable(notification
       if (!panning) {
         if (closure_14) {
           value = sharedValue1.get();
-          let obj = { duration: (value / 100) * tmp, easing: ReanimatedRexport.Easing.linear };
+          let obj = timing;
+          const obj2 = { duration: (value / 100) * tmp, easing: ReanimatedRexport.Easing.linear };
           const fn = function s(arg0) {
             if (arg0) {
               notification(onSettingsPress[8]).runOnJS(handleDismissNotification)("timeout");
               const obj = notification(onSettingsPress[8]);
             }
           };
-          obj = { runOnJS: ReanimatedRexport.runOnJS, handleDismissNotification };
-          fn.__closure = obj;
+          const obj3 = { runOnJS: ReanimatedRexport.runOnJS, handleDismissNotification };
+          fn.__closure = obj3;
           fn.__workletHash = 5704836747866;
           fn.__initData = __initData;
-          const result = sharedValue1.set(obj.withTiming(0, obj, "animate-always", fn));
+          const result = sharedValue1.set(obj.withTiming(0, obj2, "animate-always", fn));
           return () => {
             notification(onSettingsPress[8]).cancelAnimation(sharedValue1);
           };
@@ -167,7 +173,7 @@ export const NotificationPressable = function NotificationPressable(notification
   ];
   callback3 = guildId.useCallback((IAR_MODAL_OPEN, fn) => {
     if (!callback2()) {
-      const obj = {
+      const obj2 = {
         type,
         notif_guild_id: guildId,
         notif_channel_id: channelId,
@@ -183,8 +189,8 @@ export const NotificationPressable = function NotificationPressable(notification
         }
         rounded = Math.floor(value);
       }
-      obj.percent = rounded;
-      obj.trackWithMetadata(IAR_MODAL_OPEN, obj);
+      obj2.percent = rounded;
+      AppAnalyticsUtilsDefault.trackWithMetadata(IAR_MODAL_OPEN, obj2);
       if (fn != null) {
         fn();
       }
@@ -196,30 +202,30 @@ export const NotificationPressable = function NotificationPressable(notification
   const callback5 = guildId.useCallback(() => {
     callback3(AnalyticEvents.IN_APP_NOTIFICATION_LONG_PRESSED, onSettingsPress);
   }, items7);
-  obj = { style: null, children: null };
+  const obj6 = { style: null, children: null };
   const items8 = [tmp3.shadow, animatedStyle];
-  obj.style = items8;
-  obj1 = {};
+  obj6.style = items8;
+  const obj7 = {};
   const merged1 = Object.assign(merged);
-  obj1.onAccessibilityEscape = function onAccessibilityEscape() {
+  obj7.onAccessibilityEscape = function onAccessibilityEscape() {
     return handleDismissNotification("accessibility_escape");
   };
-  obj1.style = tmp3.container;
-  obj1.androidRippleConfig = memo1;
-  obj1.onPress = callback4;
-  obj1.onPressIn = callback;
-  obj1.onPressOut = callback1;
-  obj1.onLongPress = callback5;
-  obj1.accessibilityRole = "button";
+  obj7.style = tmp3.container;
+  obj7.androidRippleConfig = memo1;
+  obj7.onPress = callback4;
+  obj7.onPressIn = callback;
+  obj7.onPressOut = callback1;
+  obj7.onLongPress = callback5;
+  obj7.accessibilityRole = "button";
   const items9 = [
     notificationGestureY(onPress(onSettingsPress[13]), { icon, children, accessoryLabelNode, rightAccessory, header }),
   ];
   if (notification.duration !== Infinity) {
-    obj2 = { percent: sharedValue1 };
-    tmp = tmp19(onPress(onSettingsPress[14]), obj2);
+    const obj8 = { percent: sharedValue1 };
+    tmp = tmp19(onPress(tmp5[14]), obj8);
   }
   items9[1] = tmp;
-  obj1.children = items9;
-  obj.children = velocityY(notification(onSettingsPress[12]).PressableHighlight, obj1);
-  return notificationGestureY(onPress(onSettingsPress[8]).View, obj);
+  obj7.children = items9;
+  obj6.children = velocityY(notification(onSettingsPress[12]).PressableHighlight, obj7);
+  return notificationGestureY(onPress(onSettingsPress[8]).View, obj6);
 };

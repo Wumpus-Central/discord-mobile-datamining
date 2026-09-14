@@ -1,8 +1,9 @@
 // discord_app/design/components/ContextMenu/native/ContextMenuConstants.native.tsx
 import HapticUtils from "../../../../modules/haptics/HapticUtils.native.tsx";
-import PlatformUtils from "../../../../utils/PlatformUtils.tsx";
+import PlatformUtils_mod from "../../../../utils/PlatformUtils.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
 
+let PlatformUtils = PlatformUtils_mod;
 PlatformUtils = PlatformUtils.isIOS();
 const HapticFeedbackTypes = HapticUtils.HapticFeedbackTypes;
 const result = size.fileFinishedImporting("design/components/ContextMenu/native/ContextMenuConstants.native.tsx");

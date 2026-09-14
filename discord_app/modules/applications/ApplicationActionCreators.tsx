@@ -4,6 +4,8 @@ import ApplicationDirectoryApplicationsStore from "../global_discovery_apps/stor
 import ApplicationRecord from "../../records/ApplicationRecord.tsx";
 import ApplicationStore from "ApplicationStore.tsx";
 
+const require = globalThis.__r;
+
 const require = fn;
 function fetchApplication() {
   const self = this;
@@ -23,8 +25,8 @@ let closure_10 = async function _fetchApplication(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -37,8 +39,8 @@ let closure_10 = async function _fetchApplication(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c8 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           closure_4 = tmp3;
           closure_3 = tmp7;
@@ -62,11 +64,11 @@ let closure_10 = async function _fetchApplication(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c8 = 3;
-          const obj1 = { value, done: true };
-          return obj1;
+          const obj4 = { value, done: true };
+          return obj4;
         } else {
-          const obj2 = { type: "APPLICATION_FETCH", applicationId: closure_131_0 };
-          closure_132_1(closure_132_2[5]).dispatch(obj2);
+          const obj6 = { type: "APPLICATION_FETCH", applicationId: closure_131_0 };
+          closure_132_1(closure_132_2[5]).dispatch(obj6);
           c6 = 1;
           const HTTP = closure_132_0(closure_132_2[6]).HTTP;
           const request = {
@@ -76,22 +78,21 @@ let closure_10 = async function _fetchApplication(arg0) {
             signal: null,
             rejectWithError: null,
           };
-          const obj3 = { with_guild: closure_131_1 };
-          request.query = obj3;
+          const obj7 = { with_guild: closure_131_1 };
+          request.query = obj7;
           request.signal = closure_131_2;
           const obj11 = closure_132_1(closure_132_2[5]);
           request.rejectWithError = closure_132_0(closure_132_2[6]).rejectWithMigratedError();
           c7 = 3;
           c8 = 1;
-          let obj4 = { value: HTTP.get(request), done: false };
-          return obj4;
+          const obj8 = { value: HTTP.get(request), done: false };
+          return obj8;
         }
       } else if (2 === tmp7) {
         c6 = 0;
         closure_131_4 = closure_5;
-        obj4 = closure_132_1(closure_132_2[5]);
-        const obj5 = { type: "APPLICATION_FETCH_FAIL", applicationId: closure_131_0 };
-        obj4.dispatch(obj5);
+        const obj9 = { type: "APPLICATION_FETCH_FAIL", applicationId: closure_131_0 };
+        closure_132_1(closure_132_2[5]).dispatch(obj9);
         throw closure_131_4;
       } else if (arg0 === 1) {
         c8 = 3;
@@ -99,17 +100,16 @@ let closure_10 = async function _fetchApplication(arg0) {
       } else if (arg0 === 2) {
         c6 = 0;
         c8 = 3;
-        const obj6 = { value, done: true };
-        return obj6;
+        const obj10 = { value, done: true };
+        return obj10;
       } else {
         closure_131_3 = value;
-        obj = closure_132_1(closure_132_2[5]);
-        const obj7 = { type: "APPLICATION_FETCH_SUCCESS", application: closure_131_3.body, isHydrated: true };
-        obj.dispatch(obj7);
+        const obj12 = { type: "APPLICATION_FETCH_SUCCESS", application: closure_131_3.body, isHydrated: true };
+        closure_132_1(closure_132_2[5]).dispatch(obj12);
         c6 = 0;
         c8 = 3;
-        const obj8 = { value: closure_131_3.body, done: true };
-        return obj8;
+        const obj13 = { value: closure_131_3.body, done: true };
+        return obj13;
       }
     } catch (tmp26) {
       closure_5 = tmp26;
@@ -124,15 +124,58 @@ let closure_10 = async function _fetchApplication(arg0) {
 };
 const Constants = fn(1074);
 ({ Endpoints: closure_7, NOOP: closure_8 } = Constants);
-let obj = {
+const initialize = fn(504);
+const fetchStore = initialize.createFetchStore(ApplicationStore, {
+  getQueryId: Constants.QueryIds.APPLICATIONS,
+  get(item) {
+    let flag = arg1;
+    if (arg1 === undefined) {
+      flag = false;
+    }
+    let tmp = null;
+    if (null != item) {
+      if (flag) {
+        let application = ApplicationStore.getApplication(item);
+        if (application == null) {
+          application = null;
+        }
+        let tmp3 = application;
+      } else {
+        tmp3 = null;
+      }
+      tmp = tmp3;
+    }
+    return tmp;
+  },
+  load(arg0) {
+    if (null != arg0) {
+      let nextPromise = fetchApplication(arg0, false).then(React6);
+      const promise = fetchApplication(arg0, false);
+    } else {
+      nextPromise = Promise.resolve();
+    }
+    return nextPromise;
+  },
+  getIsLoading(appId) {
+    let result = null != appId;
+    if (result) {
+      result = ApplicationStore.isFetchingApplication(appId);
+    }
+    return result;
+  },
+});
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/applications/ApplicationActionCreators.tsx");
+
+export default {
   createApplication(arg0) {
     ({ name: require, guildId: importDefault, type: dependencyMap, teamId: asyncGeneratorStep } = arg0);
     return (async () => {
-      const HTTP = tmp5(1272).HTTP;
+      const HTTP = tmp5(1270).HTTP;
       const request = {
         url: constants.APPLICATIONS,
         body: { name, type, guild_id, team_id },
-        rejectWithError: tmp5(1272).rejectWithMigratedError(),
+        rejectWithError: tmp5(1270).rejectWithMigratedError(),
       };
       await HTTP.post(request);
       const body = value.body;
@@ -156,13 +199,13 @@ let obj = {
     const includeTeam = obj.includeTeam;
     closure_2 = Object.assign(obj, Object.assign({ includeTeam: 0 }));
     return (async () => {
-      const HTTP = tmp5(1272).HTTP;
+      const HTTP = tmp5(1270).HTTP;
       const request = { url: closure_1_7.GUILD_APPLICATIONS(tmp5), query: null, rejectWithError: null };
-      const obj1 = {};
+      const obj4 = {};
       const merged = Object.assign(closure_2);
-      obj1.include_team = includeTeam;
-      request.query = obj1;
-      request.rejectWithError = tmp5(1272).rejectWithMigratedError();
+      obj4.include_team = includeTeam;
+      request.query = obj4;
+      request.rejectWithError = tmp5(1270).rejectWithMigratedError();
       await HTTP.get(request);
       const body = value.body;
       tmp2(573).dispatch({ type: "APPLICATIONS_FETCH_SUCCESS", applications: body });
@@ -195,11 +238,11 @@ let obj = {
   transferApplication(arg0) {
     ({ applicationId: require, teamId: importDefault } = arg0);
     return (async () => {
-      const HTTP = tmp5(1272).HTTP;
+      const HTTP = tmp5(1270).HTTP;
       const request = {
         url: closure_1_7.APPLICATION_OWNER_TRANSFER(_require),
         body: { team_id },
-        rejectWithError: tmp5(1272).rejectWithMigratedError(),
+        rejectWithError: tmp5(1270).rejectWithMigratedError(),
       };
       await HTTP.post(request);
       const body = value.body;
@@ -221,8 +264,8 @@ let obj = {
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
-          let obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           return { value: "HermesInternal", done: null };
         }
@@ -235,8 +278,8 @@ let obj = {
               throw value;
             } else if (arg0 === 2) {
               c5 = 3;
-              obj = { value, done: true };
-              return obj;
+              const obj5 = { value, done: true };
+              return obj5;
             } else {
               closure_128_1 = undefined;
               let body;
@@ -263,9 +306,8 @@ let obj = {
                 arr = found;
               }
               if (arr.length > 0) {
-                let obj3 = tmp3(tmp32[5]);
-                let obj1 = { type: "APPLICATIONS_FETCH", applicationIds: arr };
-                obj3.dispatch(obj1);
+                const obj6 = { type: "APPLICATIONS_FETCH", applicationIds: arr };
+                tmp3(tmp32[5]).dispatch(obj6);
                 c3 = 1;
                 const HTTP = tmp5(tmp32[6]).HTTP;
                 const request = {
@@ -282,11 +324,12 @@ let obj = {
                   }),
                 );
                 request.query = str.toString();
+                const obj4 = tmp3(tmp32[5]);
                 request.rejectWithError = tmp5(tmp32[6]).rejectWithMigratedError();
                 c4 = 2;
                 c5 = 1;
-                const obj2 = { value: HTTP.get(request), done: false };
-                return obj2;
+                const obj8 = { value: HTTP.get(request), done: false };
+                return obj8;
               } else {
                 c5 = 3;
               }
@@ -295,9 +338,9 @@ let obj = {
             c3 = 0;
             closure_128_5 = tmp32;
             if (429 !== closure_128_5.status) {
-              obj1 = tmp3(tmp32[5]);
-              obj3 = { type: "APPLICATIONS_FETCH_FAIL", applicationIds: closure_128_0 };
-              obj1.dispatch(obj3);
+              const obj9 = { type: "APPLICATIONS_FETCH_FAIL", applicationIds: closure_128_0 };
+              tmp3(tmp32[5]).dispatch(obj9);
+              const obj2 = tmp3(tmp32[5]);
             }
             throw closure_128_5;
           } else if (arg0 === 1) {
@@ -311,18 +354,18 @@ let obj = {
             const set = new Set(body.map((id) => id.id));
             closure_128_3 = set;
             closure_128_4 = closure_128_0.filter((item) => !set.has(item));
-            const obj4 = {
+            const obj10 = {
               type: "APPLICATIONS_FETCH_SUCCESS",
               applications: closure_128_1.body,
               unknownApplicationIds: closure_128_4,
               isHydrated: true,
             };
-            tmp3(tmp32[5]).dispatch(obj4);
+            tmp3(tmp32[5]).dispatch(obj10);
             const obj11 = tmp3(tmp32[5]);
           }
           c3 = 0;
           c5 = 3;
-          obj = { value, done: true };
+          const obj = { value, done: true };
           return obj;
         } catch (tmp32) {
           if (tmp4 === c3) {
@@ -337,51 +380,6 @@ let obj = {
   },
   fetchApplication,
 };
-const initialize = fn(504);
-obj = {
-  getQueryId: Constants.QueryIds.APPLICATIONS,
-  get(item) {
-    let flag = arg1;
-    if (arg1 === undefined) {
-      flag = false;
-    }
-    let tmp = null;
-    if (null != item) {
-      if (flag) {
-        let application = ApplicationStore.getApplication(item);
-        if (application == null) {
-          application = null;
-        }
-        let tmp3 = application;
-      } else {
-        tmp3 = null;
-      }
-      tmp = tmp3;
-    }
-    return tmp;
-  },
-  load(arg0) {
-    if (null != arg0) {
-      let nextPromise = fetchApplication(arg0, false).then(React6);
-      const promise = fetchApplication(arg0, false);
-    } else {
-      nextPromise = Promise.resolve();
-    }
-    return nextPromise;
-  },
-  getIsLoading(id) {
-    let result = null != id;
-    if (result) {
-      result = ApplicationStore.isFetchingApplication(id);
-    }
-    return result;
-  },
-};
-const fetchStore = initialize.createFetchStore(ApplicationStore, obj);
-const size = fn(2);
-let result = size.fileFinishedImporting("modules/applications/ApplicationActionCreators.tsx");
-
-export default obj;
 export { fetchApplication };
 export const useApplication = fetchStore;
 export const useApplicationWithLoggedOutContext = function useApplicationWithLoggedOutContext(arg0) {

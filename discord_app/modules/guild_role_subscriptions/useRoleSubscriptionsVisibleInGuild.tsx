@@ -4,6 +4,7 @@ import useHasRoleSubscriptionInGuild from "useHasRoleSubscriptionInGuild.tsx";
 import ImpersonateStore from "../impersonate/ImpersonateStore.tsx";
 import GuildStore from "../../stores/GuildStore.tsx";
 
+const require = globalThis.__r;
 const useHasRoleSubscriptionInGuildDefault = useHasRoleSubscriptionInGuild;
 
 require = fn;

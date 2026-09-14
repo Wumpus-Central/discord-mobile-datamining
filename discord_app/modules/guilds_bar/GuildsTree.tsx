@@ -7,32 +7,32 @@ const GuildsNodeType = { ROOT: "root", FOLDER: "folder", GUILD: "guild" };
 const result = size.fileFinishedImporting("modules/guilds_bar/GuildsTree.tsx");
 class GuildsTree {
   constructor() {
-    obj = Object.create(new.target.prototype);
+    obj1 = Object.create(new.target.prototype);
     element = { type: closure_3.ROOT, children: [] };
-    obj.root = element;
-    obj.nodes = {};
-    obj.version = 0;
-    return obj;
+    obj1.root = element;
+    obj1.nodes = {};
+    obj1.version = 0;
+    return obj1;
   }
 }
 const prototype = GuildsTree.prototype;
 prototype["getSnapshot"] = function getSnapshot() {
   const self = this;
-  let nodes = {};
+  const nodes = {};
   for (const key10005 in this.nodes) {
     let tmp2 = self.nodes[key10005];
-    nodes = {};
+    let obj2 = {};
     let merged = Object.assign(tmp2);
-    nodes.children = undefined;
+    obj2.children = undefined;
     children = tmp2.children;
-    nodes.childrenIds = children.map((id) => id.id);
-    nodes[key10005] = nodes;
+    obj2.childrenIds = children.map((id) => id.id);
+    nodes[key10005] = obj2;
     continue;
   }
-  nodes = { rootChildrenIds: null, nodes };
+  const obj3 = { rootChildrenIds: null, nodes };
   const children1 = self.root.children;
-  nodes.rootChildrenIds = children1.map((id) => id.id);
-  return nodes;
+  obj3.rootChildrenIds = children1.map((id) => id.id);
+  return obj3;
 };
 prototype["loadSnapshot"] = function loadSnapshot(tree) {
   const self = this;

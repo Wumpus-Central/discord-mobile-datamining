@@ -26,27 +26,27 @@ export default function InstantInviteAgeText(style) {
     canEditInvite = true;
   }
   ({ onEdit: View, source: CreateInviteModalStore } = style);
-  let obj = ManaTypeConsolidationExperiment;
-  const manaTypeConsolidationExperiment = obj.useManaTypeConsolidationExperiment("InstantInviteAgeText");
-  let obj1 = initialize;
+  const tmp = closure_6();
+  const manaTypeConsolidationExperiment =
+    ManaTypeConsolidationExperiment.useManaTypeConsolidationExperiment("InstantInviteAgeText");
   const items = [CreateInviteModalStore];
-  const stateFromStores = obj1.useStateFromStores(items, () => inviteSettings.getInviteSettings());
+  const stateFromStores = initialize.useStateFromStores(items, () => inviteSettings.getInviteSettings());
   let tmp7Result = null;
   if (null != stateFromStores) {
-    obj = { style: null, children: null };
+    const obj3 = { style: null, children: null };
     const items1 = [tmp.inviteAgeContainer, style.style];
-    obj.style = items1;
+    obj3.style = items1;
     let str = "text-xs/normal";
     let str2 = "text-xs/normal";
     if (manaTypeConsolidationExperiment) {
       str2 = "experimental/body-md/normal";
     }
-    obj = { variant: str2, children: null };
+    const obj4 = { variant: str2, children: null };
     const items2 = [InstantInviteUtils.maxAgeString(stateFromStores.maxAge, stateFromStores.maxUses), " "];
-    obj.children = items2;
-    const items3 = [closure_4(Text_Text.Text, obj)];
+    obj4.children = items2;
+    const items3 = [closure_4(Text_Text.Text, obj4)];
     if (canEditInvite) {
-      obj1 = {
+      const obj5 = {
         onPress() {
           instant_invite_InstantInviteUtils.handlePressSettings(closure_1_0, dependencyMap, inviteSettings);
           if (View != null) {
@@ -59,20 +59,20 @@ export default function InstantInviteAgeText(style) {
         children: null,
       };
       const intl = util.intl;
-      obj1.accessibilityLabel = intl.string(util.t["VNe8P/"]);
-      obj1.hitSlop = { top: 8, left: 8, bottom: 8, right: 8 };
+      obj5.accessibilityLabel = intl.string(util.t["VNe8P/"]);
+      obj5.hitSlop = { top: 8, left: 8, bottom: 8, right: 8 };
       if (manaTypeConsolidationExperiment) {
         str = "experimental/body-md/medium";
       }
-      const obj2 = { variant: str, color: "text-link", children: null };
+      const obj6 = { variant: str, color: "text-link", children: null };
       const intl2 = util.intl;
-      obj2.children = intl2.string(util.t["VNe8P/"]);
-      obj1.children = closure_5(Text_Text.Text, obj2);
-      canEditInvite = closure_5(Pressables.PressableOpacity, obj1);
+      obj6.children = intl2.string(util.t["VNe8P/"]);
+      obj5.children = closure_5(Text_Text.Text, obj6);
+      canEditInvite = closure_5(Pressables.PressableOpacity, obj5);
     }
     items3[1] = canEditInvite;
-    obj.children = items3;
-    tmp7Result = closure_4(View, obj);
+    obj3.children = items3;
+    tmp7Result = closure_4(View, obj3);
     const tmp2Result = InstantInviteUtils;
   }
   return tmp7Result;

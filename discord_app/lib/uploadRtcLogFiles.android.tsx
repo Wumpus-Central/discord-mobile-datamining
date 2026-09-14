@@ -11,8 +11,8 @@ let closure_6 = async function _uploadRtcLogFiles(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -26,8 +26,8 @@ let closure_6 = async function _uploadRtcLogFiles(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c8 = 3;
-          obj = { value, done: true };
-          return obj;
+          let obj3 = { value, done: true };
+          return obj3;
         } else {
           closure_4 = tmp;
           closure_3 = tmp4;
@@ -85,8 +85,8 @@ let closure_6 = async function _uploadRtcLogFiles(arg0) {
           c6 = 0;
           dependencyMap.return();
           c8 = 3;
-          let obj1 = { value, done: true };
-          return obj1;
+          let obj5 = { value, done: true };
+          return obj5;
         } else {
           closure_131_2 = value;
           if (null == value) {
@@ -103,8 +103,8 @@ let closure_6 = async function _uploadRtcLogFiles(arg0) {
             request.headers = { "Content-Type": "text/plain" };
             c7 = 5;
             c8 = 1;
-            let obj2 = { value: HTTP.post(request), done: false };
-            return obj2;
+            let obj6 = { value: HTTP.post(request), done: false };
+            return obj6;
           }
         }
       } else if (arg0 === 1) {
@@ -114,7 +114,7 @@ let closure_6 = async function _uploadRtcLogFiles(arg0) {
         c6 = 0;
         dependencyMap.return();
         c8 = 3;
-        obj = { value, done: true };
+        let obj = { value, done: true };
         return obj;
       } else {
         c6 = 0;
@@ -126,12 +126,11 @@ let closure_6 = async function _uploadRtcLogFiles(arg0) {
         closure_131_1 = tmp57;
         closure_131_2 = "";
         c6 = 2;
-        closure_132_0(closure_132_1[3]);
+        let obj4 = closure_132_0(closure_132_1[3]);
         c7 = 4;
         c8 = 1;
-        let obj3 = { value: null, done: false };
-        obj3.value = obj3.readFile("documents", closure_131_1, "utf8");
-        return obj3;
+        let obj7 = { value: obj4.readFile("documents", closure_131_1, "utf8"), done: false };
+        return obj7;
       }
     }
   }

@@ -9,6 +9,8 @@ import GuildStore from "../../../stores/GuildStore.tsx";
 import MessageStore from "../../../stores/MessageStore.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
+const require = globalThis.__r;
+
 const useEffect = _mod19.useEffect;
 const result = size.fileFinishedImporting("modules/report_to_mod/hooks/useReportToModHooks.tsx");
 
@@ -73,10 +75,10 @@ export const useLoadReportedMessage = function useLoadReportedMessage(messageRef
       tmp = null != messageReference;
     }
     if (tmp) {
-      let obj = { channelId: messageReference.channel_id, jump: null, limit: 10 };
-      obj = { messageId: messageReference.message_id };
-      obj.jump = obj;
-      const messages = obj.fetchMessages(obj);
+      const obj2 = { channelId: messageReference.channel_id, jump: null, limit: 10 };
+      const obj3 = { messageId: messageReference.message_id };
+      obj2.jump = obj3;
+      const messages = MessageActionCreatorsDefault.fetchMessages(obj2);
     }
   }, items1);
 };

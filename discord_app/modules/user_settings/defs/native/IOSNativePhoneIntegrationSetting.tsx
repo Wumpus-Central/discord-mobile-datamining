@@ -5,7 +5,7 @@ import UserSettings from "../../UserSettings.tsx";
 import SettingsConstants from "../../core/native/SettingsConstants.tsx";
 import MobileNotifSettings from "../../notifications/native/codegen/MobileNotifSettings.tsx";
 import CallKitMetricCollectionExperimentDefault from "../../../voice_calls/CallKitMetricCollectionExperiment.tsx";
-import SettingBuilders from "../../../settings/native/renderer/SettingBuilders.tsx";
+import SettingBuilders_mod from "../../../settings/native/renderer/SettingBuilders.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
 
 let obj = {
@@ -16,10 +16,11 @@ let obj = {
   useValue: UserSettings.NativePhoneIntegrationEnabled.useSetting,
   onValueChange: UserSettings.NativePhoneIntegrationEnabled.updateSetting,
 };
-obj = {};
+let SettingBuilders = SettingBuilders_mod;
+let obj2 = {};
 const merged = Object.assign(obj);
-obj.parent = SettingsConstants.MobileUserSettings.NOTIFICATIONS;
-obj.usePredicate = function usePredicate() {
+obj2.parent = SettingsConstants.MobileUserSettings.NOTIFICATIONS;
+obj2.usePredicate = function usePredicate() {
   let enabled = CallKitMetricCollectionExperimentDefault.useConfig({
     location: "IOSNativePhoneIntegrationSetting",
   }).enabled;
@@ -31,11 +32,12 @@ obj.usePredicate = function usePredicate() {
   }
   return enabled;
 };
-const toggle = SettingBuilders.createToggle(obj);
-obj = {};
+const toggle = SettingBuilders.createToggle(obj2);
+let SettingBuilders = SettingBuilders_mod;
+const obj3 = {};
 const merged1 = Object.assign(obj);
-obj.parent = MobileNotifSettings.MobileNotifSettings.NOTIFICATIONS_REDESIGN;
-obj.usePredicate = function usePredicate() {
+obj3.parent = MobileNotifSettings.MobileNotifSettings.NOTIFICATIONS_REDESIGN;
+obj3.usePredicate = function usePredicate() {
   let enabled = CallKitMetricCollectionExperimentDefault.useConfig({
     location: "RedesignIOSNativePhoneIntegrationSetting",
   }).enabled;
@@ -47,7 +49,7 @@ obj.usePredicate = function usePredicate() {
   }
   return enabled;
 };
-const toggle1 = SettingBuilders.createToggle(obj);
+const toggle1 = SettingBuilders.createToggle(obj3);
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/IOSNativePhoneIntegrationSetting.tsx");
 
 export default toggle;

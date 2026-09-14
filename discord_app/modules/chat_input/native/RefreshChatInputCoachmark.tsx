@@ -5,6 +5,8 @@ import useCoachmark from "../../../design/components/Coachmark/native/useCoachma
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
+const require = globalThis.__r;
+
 require = fn;
 const ContentDismissActionType = fn(1954).ContentDismissActionType;
 const size = fn(2);
@@ -32,7 +34,7 @@ export const useRefreshChatInputCoachmark = function useRefreshChatInputCoachmar
   let memo = null;
   if (tmp5) {
     memo = noop.useMemo(() => {
-      let obj = {
+      const obj = {
         title: null,
         description: null,
         position: "top",
@@ -49,8 +51,7 @@ export const useRefreshChatInputCoachmark = function useRefreshChatInputCoachmar
       obj.onDismiss = function onDismiss() {
         closure_1_0(constants.USER_DISMISS);
       };
-      obj = { type: "rive", rive: native.OmnibuttonCoachmarkRive, aspectRatio: "16/9" };
-      obj.graphic = obj;
+      obj.graphic = { type: "rive", rive: native.OmnibuttonCoachmarkRive, aspectRatio: "16/9" };
       return obj;
     }, items1);
   }

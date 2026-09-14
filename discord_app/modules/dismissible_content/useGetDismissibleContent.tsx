@@ -12,6 +12,8 @@ import SelectedGuildStore from "../../stores/SelectedGuildStore.tsx";
 import DismissibleContentFrameworkStore from "DismissibleContentFrameworkStore.tsx";
 import DismissibleContentShownStateStore from "DismissibleContentShownStateStore.tsx";
 
+const require = globalThis.__r;
+
 require = fn;
 function useGetVisibleContent(found1, stateFromStores, GUILD_HEADER_TOOLTIPS, latestVersion, newSnowflakeId) {
   _require = found1;
@@ -27,17 +29,16 @@ function useGetVisibleContent(found1, stateFromStores, GUILD_HEADER_TOOLTIPS, la
     }
     return hasItem;
   });
-  const tmp4 = _slicedToArray(require("OverlayTrackingUtils").useOverlayLockState(), 2);
-  const first = tmp4[0];
+  [first] = require("OverlayTrackingUtils").useOverlayLockState();
   closure_6 = tmp6;
   let result = null != found1;
   if (result) {
-    let tmp2Result = tmp2(1945);
-    result = tmp2Result.isDismissibleContentBlockedByOverlay(found1, first, tmp6);
+    result = tmp2(1945).isDismissibleContentBlockedByOverlay(found1, first, tmp6);
+    const tmp2Result = tmp2(1945);
   }
-  tmp2Result = tmp2(504);
+  let obj = require("OverlayTrackingUtils");
   const items = [ref];
-  stateFromStores = tmp2Result.useStateFromStores(items, () => {
+  stateFromStores = require("initialize").useStateFromStores(items, () => {
     let hasUserHitDCCapResult = null != closure_0;
     if (hasUserHitDCCapResult) {
       hasUserHitDCCapResult = DismissibleContentFrameworkStore.hasUserHitDCCap(tmp, closure_1);
@@ -54,7 +55,7 @@ function useGetVisibleContent(found1, stateFromStores, GUILD_HEADER_TOOLTIPS, la
         let tmp6 = groupName;
         let tmp7 = version;
         let tmp8 = snowflakeId;
-        let obj = {
+        const obj2 = {
           content_type: dismissible_content.DismissibleContent[closure_0],
           group_name: null,
           latest_version: null,
@@ -64,24 +65,29 @@ function useGetVisibleContent(found1, stateFromStores, GUILD_HEADER_TOOLTIPS, la
         if (groupName == null) {
           tmp6 = null;
         }
-        obj.group_name = tmp6;
+        obj2.group_name = tmp6;
         if (tmp7 == null) {
           tmp7 = null;
         }
-        obj.latest_version = tmp7;
+        obj2.latest_version = tmp7;
         if (current == null) {
           current = null;
         }
-        obj.guild_id = current;
+        obj2.guild_id = current;
         if (tmp8 == null) {
           tmp8 = null;
         }
-        obj.snowflake_id = tmp8;
-        obj.track(AnalyticEvents.DISMISSIBLE_CONTENT_SHOWN_BEFORE_CONNECTION_OPEN, obj);
+        obj2.snowflake_id = tmp8;
+        AnalyticsUtilsDefault.track(AnalyticEvents.DISMISSIBLE_CONTENT_SHOWN_BEFORE_CONNECTION_OPEN, obj2);
       }
       const obj3 = DismissibleContentUtils;
-      obj = { groupName, guildId: ref.current, version, snowflakeId };
-      const markDismissibleContentAsShown = obj3.requestMarkDismissibleContentAsShown(closure_0, obj, first, closure_6);
+      const obj4 = { groupName, guildId: ref.current, version, snowflakeId };
+      const markDismissibleContentAsShown = obj3.requestMarkDismissibleContentAsShown(
+        closure_0,
+        obj4,
+        first,
+        closure_6,
+      );
       return () => {
         if (null != found1) {
           const obj = { content: tmp, groupName };
@@ -176,7 +182,7 @@ export const useGetDismissibleContent = function useGetDismissibleContent(items3
   let obj = require("initialize");
   const items1 = [SelectedGuildStore];
   stateFromStores1 = require("initialize").useStateFromStores(items1, () => guildId.getGuildId());
-  const obj2 = require("initialize");
+  let obj2 = require("initialize");
   const newUserDismissibleContent = require("NewUserDismissibleContentRegistry").useNewUserDismissibleContent(items3);
   let found1 = null;
   if (UserSettingsProtoStore.hasLoaded(UserSettingsTypes.PRELOADED_USER_SETTINGS)) {
@@ -200,8 +206,8 @@ export const useGetDismissibleContent = function useGetDismissibleContent(items3
   items3 = [tmp3, APP_LAUNCHER_ONBOARDING, stateFromStores1];
   items2[1] = noop.useCallback((dismissAction, forceTrack) => {
     if (null != found1) {
-      const obj = { dismissAction, groupName, guildId: stateFromStores1, forceTrack };
-      const result = obj.UNSAFE_markDismissibleContentAsDismissed(tmp, obj);
+      const obj2 = { dismissAction, groupName, guildId: stateFromStores1, forceTrack };
+      const result = DismissibleContentUnsafeUtils.UNSAFE_markDismissibleContentAsDismissed(tmp, obj2);
     }
   }, items3);
   return items2;
@@ -272,8 +278,8 @@ export const useGetVersionedDismissibleContent = function useGetVersionedDismiss
   const items3 = [tmp4, groupName, stateFromStores, latestVersion];
   items2[1] = noop.useCallback((dismissAction, forceTrack) => {
     if (null != closure_3) {
-      const obj = { dismissAction, groupName, guildId: stateFromStores, forceTrack, version };
-      const result = obj.markVersionedDismissibleContentAsDismissed(tmp, version, obj);
+      const obj2 = { dismissAction, groupName, guildId: stateFromStores, forceTrack, version };
+      const result = DismissibleContentUtils.markVersionedDismissibleContentAsDismissed(tmp, version, obj2);
     }
   }, items3);
   return items2;
@@ -331,8 +337,8 @@ export const useGetTimeRecurringDismissibleContent = function useGetTimeRecurrin
   const items3 = [tmp5, groupName, stateFromStores1];
   items2[1] = noop.useCallback((dismissAction, forceTrack) => {
     if (null != closure_2) {
-      const obj = { dismissAction, groupName, guildId: stateFromStores1, forceTrack };
-      const result = obj.markTimeRecurringDismissibleContentAsDismissed(tmp, obj);
+      const obj2 = { dismissAction, groupName, guildId: stateFromStores1, forceTrack };
+      const result = DismissibleContentUtils.markTimeRecurringDismissibleContentAsDismissed(tmp, obj2);
     }
   }, items3);
   return items2;
@@ -405,8 +411,8 @@ export const useGetSnowflakeBoundDismissibleContent = function useGetSnowflakeBo
   const items3 = [tmp4, groupName, stateFromStores, newSnowflakeId];
   items2[1] = noop.useCallback((dismissAction, forceTrack) => {
     if (null != closure_3) {
-      const obj = { dismissAction, groupName, guildId: stateFromStores, forceTrack };
-      const result = obj.markSnowflakeBoundDismissibleContentAsDismissed(tmp, closure_0, obj);
+      const obj2 = { dismissAction, groupName, guildId: stateFromStores, forceTrack };
+      const result = DismissibleContentUtils.markSnowflakeBoundDismissibleContentAsDismissed(tmp, closure_0, obj2);
     }
   }, items3);
   return items2;
@@ -477,12 +483,13 @@ export const useGetSnowflakeBoundGuildDismissibleContent_UNSAFE =
     const items2 = [tmp7, GUILD_HEADER_TOOLTIPS, stateFromStores, newSnowflakeId];
     items1[1] = noop.useCallback((dismissAction, forceTrack) => {
       if (null != closure_3) {
-        const obj = { dismissAction, groupName, guildId, forceTrack };
+        const obj = DismissibleContentUnsafeUtils;
+        const obj2 = { dismissAction, groupName, guildId, forceTrack };
         const result = obj.UNSAFE_markSnowflakeBoundGuildDismissibleContentAsDismissed(
           closure_3,
           closure_0,
           guildId,
-          obj,
+          obj2,
         );
       }
     }, items2);
@@ -517,8 +524,8 @@ export const useGetTimeRecurringSnowflakeBoundDismissibleContent =
     const items2 = [tmp6, groupName, stateFromStores, newSnowflakeId];
     items1[1] = noop.useCallback((dismissAction, forceTrack) => {
       if (null != closure_3) {
-        const obj = { dismissAction, groupName, guildId: stateFromStores, forceTrack };
-        const result = obj.markSnowflakeBoundDismissibleContentAsDismissed(tmp, closure_0, obj);
+        const obj2 = { dismissAction, groupName, guildId: stateFromStores, forceTrack };
+        const result = DismissibleContentUtils.markSnowflakeBoundDismissibleContentAsDismissed(tmp, closure_0, obj2);
       }
     }, items2);
     return items1;
@@ -564,8 +571,12 @@ export const useGetSingleUseGuildDismissibleContent_UNSAFE = function useGetSing
   const items2 = [tmp2, CHANNEL_NOTICES, id];
   items1[1] = noop.useCallback((dismissAction, forceTrack) => {
     if (null != found1) {
-      const obj = { dismissAction, groupName, guildId, forceTrack };
-      const result = obj.UNSAFE_markSingleUseGuildDismissibleContentAsDismissed(tmp, guildId, obj);
+      const obj2 = { dismissAction, groupName, guildId, forceTrack };
+      const result = DismissibleContentUnsafeUtils.UNSAFE_markSingleUseGuildDismissibleContentAsDismissed(
+        tmp,
+        guildId,
+        obj2,
+      );
     }
   }, items2);
   return items1;
@@ -613,8 +624,12 @@ export const useGetTimeRecurringGuildDismissibleContent_UNSAFE =
     const items2 = [tmp7, GUILD_HEADER_TOOLTIPS, id];
     items1[1] = noop.useCallback((dismissAction, forceTrack) => {
       if (null != closure_2) {
-        const obj = { dismissAction, groupName, guildId, forceTrack };
-        const result = obj.UNSAFE_markTimeRecurringGuildDismissibleContentAsDismissed(tmp, guildId, obj);
+        const obj2 = { dismissAction, groupName, guildId, forceTrack };
+        const result = DismissibleContentUnsafeUtils.UNSAFE_markTimeRecurringGuildDismissibleContentAsDismissed(
+          tmp,
+          guildId,
+          obj2,
+        );
       }
     }, items2);
     return items1;

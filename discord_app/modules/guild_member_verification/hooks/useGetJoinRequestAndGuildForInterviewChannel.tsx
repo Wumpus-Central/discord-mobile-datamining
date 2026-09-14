@@ -8,6 +8,8 @@ import PermissionStore from "../../../stores/PermissionStore.tsx";
 import GuildJoinRequestStore from "../GuildJoinRequestStore.tsx";
 import UserGuildJoinRequestStore from "../UserGuildJoinRequestStore.tsx";
 
+const require = globalThis.__r;
+
 require = fn;
 const Permissions = fn(1074).Permissions;
 const size = fn(2);
@@ -16,10 +18,8 @@ const result = size.fileFinishedImporting(
 );
 
 export default function useGetJoinRequestAndGuildForInterviewChannel(id) {
-  [tmp2, require] = _slicedToArray(joinRequest.useState(false), 2);
-  const tmp3 = _slicedToArray(joinRequest.useState(false), 2);
-  const first = tmp3[0];
-  dependencyMap = tmp3[1];
+  [tmp2, require] = joinRequest.useState(false);
+  [first, dependencyMap] = joinRequest.useState(false);
   let tmp = _slicedToArray(joinRequest.useState(false), 2);
   const castResult = first(11).cast(id);
   _slicedToArray = castResult;

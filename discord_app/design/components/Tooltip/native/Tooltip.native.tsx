@@ -10,26 +10,23 @@ const Pressable = fn(17).Pressable;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 const ON_PRESS_SPRING = { mass: 1, overshootClamping: true, damping: 27, stiffness: 300 };
-fn(4636);
-let createStyles = {
+const createStyles = fn(4636);
+let obj2 = {
   container: { position: "absolute", alignItems: "center" },
-  textContainer: null,
-  text: null,
+  textContainer: {
+    paddingHorizontal: nativeDefault.space.PX_8,
+    paddingVertical: nativeDefault.space.PX_4,
+    borderRadius: nativeDefault.radii.sm,
+    maxWidth: 150,
+    alignItems: "center",
+    justifyContent: "center",
+    backgroundColor: nativeDefault.colors.BACKGROUND_BRAND,
+  },
+  text: { textAlign: "center" },
   arrow: null,
   bottomArrow: null,
   topArrow: null,
 };
-createStyles = {
-  paddingHorizontal: nativeDefault.space.PX_8,
-  paddingVertical: nativeDefault.space.PX_4,
-  borderRadius: nativeDefault.radii.sm,
-  maxWidth: 150,
-  alignItems: "center",
-  justifyContent: "center",
-  backgroundColor: nativeDefault.colors.BACKGROUND_BRAND,
-};
-createStyles.textContainer = createStyles;
-createStyles.text = { textAlign: "center" };
 let size = {
   width: 0,
   height: 0,
@@ -39,10 +36,10 @@ let size = {
   borderTopColor: nativeDefault.colors.BACKGROUND_BRAND,
   borderBottomColor: nativeDefault.colors.BACKGROUND_BRAND,
 };
-createStyles.arrow = size;
-createStyles.bottomArrow = { borderLeftWidth: 6, borderRightWidth: 6, borderTopWidth: 6 };
-createStyles.topArrow = { borderLeftWidth: 6, borderRightWidth: 6, borderBottomWidth: 6 };
-let closure_9 = createStyles.createStyles(createStyles);
+obj2.arrow = size;
+obj2.bottomArrow = { borderLeftWidth: 6, borderRightWidth: 6, borderTopWidth: 6 };
+obj2.topArrow = { borderLeftWidth: 6, borderRightWidth: 6, borderBottomWidth: 6 };
+let closure_9 = createStyles.createStyles(obj2);
 const __initData = {
   code: "function TooltipNativeTsx1(){const{withSpring,interpolateColor,pressed,backgroundColor,backgroundColorPressed,ON_PRESS_SPRING}=this.__closure;return{backgroundColor:withSpring(interpolateColor(pressed.get(),[0,1],[backgroundColor,backgroundColorPressed]),ON_PRESS_SPRING,'animate-always')};}",
 };
@@ -59,13 +56,13 @@ export const Tooltip = function Tooltip(targetMeasurements) {
   let token1;
   _slicedToArray = undefined;
   const tmp = closure_9();
-  let obj = sharedValue(token1[6]);
   let num = 0;
-  sharedValue = obj.useSharedValue(0);
-  let obj1 = sharedValue(token1[7]);
-  token = obj1.useToken(token(token1[5]).colors.CONTROL_PRIMARY_BACKGROUND_DEFAULT);
+  sharedValue = sharedValue(token1[6]).useSharedValue(0);
+  let obj = sharedValue(token1[6]);
+  const tmp2 = sharedValue;
+  token = sharedValue(token1[7]).useToken(token(token1[5]).colors.CONTROL_PRIMARY_BACKGROUND_DEFAULT);
   let obj2 = sharedValue(token1[7]);
-  token1 = obj2.useToken(token(token1[5]).colors.CONTROL_PRIMARY_BACKGROUND_ACTIVE);
+  token1 = sharedValue(token1[7]).useToken(token(token1[5]).colors.CONTROL_PRIMARY_BACKGROUND_ACTIVE);
   let items = [sharedValue];
   let items1 = [sharedValue];
   const callback = noop.useCallback(() => {
@@ -74,9 +71,9 @@ export const Tooltip = function Tooltip(targetMeasurements) {
   const callback1 = noop.useCallback(() => {
     const result = sharedValue.set(0);
   }, items1);
-  [tmp11, c3] = _slicedToArray(noop.useState(null), 2);
+  let obj3 = sharedValue(token1[7]);
+  [tmp11, c3] = noop.useState(null);
   const tmp10 = _slicedToArray(noop.useState(null), 2);
-  const tmp2 = sharedValue;
   ({ adjustmentX, tooltipX, tooltipY } = token(token1[8])(
     tmp11,
     surfaceMeasurements,
@@ -84,7 +81,7 @@ export const Tooltip = function Tooltip(targetMeasurements) {
     position,
     4,
   ));
-  let obj3 = sharedValue(token1[6]);
+  const tmp12 = token(token1[8])(tmp11, surfaceMeasurements, targetMeasurements.targetMeasurements, position, 4);
   class R {
     constructor() {
       obj = { backgroundColor: null };
@@ -101,7 +98,8 @@ export const Tooltip = function Tooltip(targetMeasurements) {
       return obj;
     }
   }
-  obj = {
+  let obj4 = sharedValue(token1[6]);
+  R.__closure = {
     withSpring: sharedValue(token1[9]).withSpring,
     interpolateColor: sharedValue(token1[6]).interpolateColor,
     pressed: sharedValue,
@@ -109,11 +107,17 @@ export const Tooltip = function Tooltip(targetMeasurements) {
     backgroundColorPressed: token1,
     ON_PRESS_SPRING,
   };
-  R.__closure = obj;
   R.__workletHash = 3664740129577;
   R.__initData = __initData;
-  const animatedStyle = obj3.useAnimatedStyle(R);
-  let obj5 = sharedValue(token1[6]);
+  const animatedStyle = obj4.useAnimatedStyle(R);
+  const obj5 = {
+    withSpring: sharedValue(token1[9]).withSpring,
+    interpolateColor: sharedValue(token1[6]).interpolateColor,
+    pressed: sharedValue,
+    backgroundColor: token,
+    backgroundColorPressed: token1,
+    ON_PRESS_SPRING,
+  };
   class P {
     constructor() {
       obj = { borderTopColor: null, borderBottomColor: null };
@@ -140,7 +144,8 @@ export const Tooltip = function Tooltip(targetMeasurements) {
       return obj;
     }
   }
-  obj = {
+  const obj6 = sharedValue(token1[6]);
+  P.__closure = {
     withSpring: sharedValue(token1[9]).withSpring,
     interpolateColor: sharedValue(token1[6]).interpolateColor,
     pressed: sharedValue,
@@ -148,11 +153,10 @@ export const Tooltip = function Tooltip(targetMeasurements) {
     backgroundColorPressed: token1,
     ON_PRESS_SPRING,
   };
-  P.__closure = obj;
   P.__workletHash = 11850141175626;
   P.__initData = __initData2;
-  const animatedStyle1 = obj5.useAnimatedStyle(P);
-  obj1 = {
+  const animatedStyle1 = obj6.useAnimatedStyle(P);
+  const obj8 = {
     disabled: null == onPress,
     onPress,
     onLayout(nativeEvent) {
@@ -172,37 +176,43 @@ export const Tooltip = function Tooltip(targetMeasurements) {
     num = 1;
   }
   items2[1] = { opacity: num, top: tooltipY, left: tooltipX };
-  obj1.style = items2;
+  obj8.style = items2;
   let tmp17 = "bottom" === position;
   if (tmp17) {
-    obj2 = { style: null };
+    const obj9 = { style: null };
     const items3 = [, , ,];
     ({ arrow: arr4[0], topArrow: arr4[1] } = tmp);
-    obj3 = { left: -adjustmentX };
-    items3[2] = obj3;
+    const obj10 = { left: -adjustmentX };
+    items3[2] = obj10;
     items3[3] = animatedStyle1;
-    obj2.style = items3;
-    tmp17 = closure_6(tmp5(tmp3[6]).View, obj2);
+    obj9.style = items3;
+    tmp17 = closure_6(tmp5(tmp3[6]).View, obj9);
   }
   const items4 = [tmp17, ,];
-  let obj4 = { style: null, children: null };
+  const obj11 = {
+    style: null,
+    children: closure_6(tmp2(token1[10]).Text, {
+      style: tmp.text,
+      variant: "text-xs/bold",
+      color: "text-overlay-light",
+      children: label,
+    }),
+  };
   const items5 = [tmp.textContainer, animatedStyle];
-  obj4.style = items5;
-  obj5 = { style: tmp.text, variant: "text-xs/bold", color: "text-overlay-light", children: label };
-  obj4.children = closure_6(tmp2(token1[10]).Text, obj5);
-  items4[1] = closure_6(token(token1[6]).View, obj4);
+  obj11.style = items5;
+  items4[1] = closure_6(token(token1[6]).View, obj11);
   let tmp19Result = "top" === position;
   if (tmp19Result) {
-    const obj6 = { style: null };
+    const obj13 = { style: null };
     const items6 = [, , ,];
     ({ arrow: arr7[0], bottomArrow: arr7[1] } = tmp);
-    const obj7 = { left: -adjustmentX };
-    items6[2] = obj7;
+    const obj14 = { left: -adjustmentX };
+    items6[2] = obj14;
     items6[3] = animatedStyle1;
-    obj6.style = items6;
-    tmp19Result = closure_6(tmp5(tmp3[6]).View, obj6);
+    obj13.style = items6;
+    tmp19Result = closure_6(tmp5(tmp3[6]).View, obj13);
   }
   items4[2] = tmp19Result;
-  obj1.children = items4;
-  return closure_7(Pressable, obj1);
+  obj8.children = items4;
+  return closure_7(Pressable, obj8);
 };

@@ -8,12 +8,12 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/global_discovery_apps/applicationDirectoryAnalytics.tsx");
 
 export const trackAppDirectoryProfileEmbed = function trackAppDirectoryProfileEmbed(applicationId, storefront) {
-  const obj = {
+  const obj = AnalyticsUtilsDefault;
+  obj.track(AnalyticEvents.APP_DIRECTORY_PROFILE_EMBED_SENT, {
     application_id: applicationId,
     device_platform: "mobile_native",
     guild_id: SelectedGuildStore.getGuildId(),
     channel_id: SelectedChannelStore.getChannelId(),
     section: storefront,
-  };
-  obj.track(AnalyticEvents.APP_DIRECTORY_PROFILE_EMBED_SENT, obj);
+  });
 };

@@ -99,8 +99,8 @@ export default function SvgComponent(arg0) {
       fill: "#29CA7A",
     }),
   ];
-  let obj = { children: null };
-  obj = {
+  const obj = { children: null };
+  const obj2 = {
     id: "paint0_linear_313_93366",
     x1: "95.4274",
     y1: "123.439",
@@ -113,9 +113,9 @@ export default function SvgComponent(arg0) {
     React3(inlineStyles.Stop, { offset: "0.18", stopColor: "#FF78B7" }),
     React3(inlineStyles.Stop, { offset: "0.97", stopColor: "#F25AA8" }),
   ];
-  obj.children = items1;
-  const items2 = [React4(inlineStyles.LinearGradient, obj), , ,];
-  const obj1 = {
+  obj2.children = items1;
+  const items2 = [React4(inlineStyles.LinearGradient, obj2), , ,];
+  const obj3 = {
     id: "paint1_linear_313_93366",
     x1: "136.357",
     y1: "127.053",
@@ -130,9 +130,9 @@ export default function SvgComponent(arg0) {
     React3(inlineStyles.Stop, { offset: "0.97", stopColor: "#EB4A9F" }),
     React3(inlineStyles.Stop, { offset: "1", stopColor: "#EA489E" }),
   ];
-  obj1.children = items3;
-  items2[1] = React4(inlineStyles.LinearGradient, obj1);
-  const obj2 = {
+  obj3.children = items3;
+  items2[1] = React4(inlineStyles.LinearGradient, obj3);
+  const obj4 = {
     id: "paint2_linear_313_93366",
     x1: "49.5877",
     y1: "44.6544",
@@ -145,9 +145,9 @@ export default function SvgComponent(arg0) {
     React3(inlineStyles.Stop, { offset: "0.15", stopColor: "#5865F0" }),
     React3(inlineStyles.Stop, { offset: "0.89", stopColor: "#3442D7" }),
   ];
-  obj2.children = items4;
-  items2[2] = React4(inlineStyles.LinearGradient, obj2);
-  const obj3 = {
+  obj4.children = items4;
+  items2[2] = React4(inlineStyles.LinearGradient, obj4);
+  const obj5 = {
     id: "paint3_linear_313_93366",
     x1: "112.951",
     y1: "33.745",
@@ -160,8 +160,8 @@ export default function SvgComponent(arg0) {
     React3(inlineStyles.Stop, { offset: "0.42", stopColor: "#8FFFAB" }),
     React3(inlineStyles.Stop, { offset: "0.92", stopColor: "#58F086" }),
   ];
-  obj3.children = items5;
-  items2[3] = React4(inlineStyles.LinearGradient, obj3);
+  obj5.children = items5;
+  items2[3] = React4(inlineStyles.LinearGradient, obj5);
   obj.children = items2;
   items[21] = React4(inlineStyles.Defs, obj);
   size.children = items;

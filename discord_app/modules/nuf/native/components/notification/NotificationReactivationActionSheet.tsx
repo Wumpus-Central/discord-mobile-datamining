@@ -3,27 +3,32 @@ import nativeDefault from "../../../../../../discord_common/js/packages/tokens/n
 import AnalyticsUtilsDefault from "../../../../../utils/AnalyticsUtils.tsx";
 import ActionSheetActionCreatorsDefault from "../../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import NotificationPermissionUtil from "../../NotificationPermissionUtil.tsx";
-import _modDef17572 from "../../../../../../_runtime/metro/17572__.js";
+import _modDef17573 from "../../../../../../_runtime/metro/17573__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, Image: hasOwnProperty } = get_ActivityIndicator);
-const EventActionType = fn(12539).EventActionType;
+const EventActionType = fn(12540).EventActionType;
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-fn(4636);
-let createStyles = { container: null, image: null, title: null, subtitle: null, buttons: null };
-createStyles = { marginHorizontal: nativeDefault.space.PX_24, alignItems: "center" };
-createStyles.container = createStyles;
-createStyles.image = { marginVertical: nativeDefault.space.PX_24, height: 120 };
-createStyles.title = { textAlign: "center" };
-let obj1 = { marginVertical: nativeDefault.space.PX_24, height: 120 };
-createStyles.subtitle = { textAlign: "center", marginTop: nativeDefault.space.PX_8 };
-let obj2 = { textAlign: "center", marginTop: nativeDefault.space.PX_8 };
-createStyles.buttons = { marginTop: nativeDefault.space.PX_8 };
-let closure_10 = createStyles.createStyles(createStyles);
+const createStyles = fn(4636);
+let obj2 = {
+  container: { marginHorizontal: nativeDefault.space.PX_24, alignItems: "center" },
+  image: null,
+  title: null,
+  subtitle: null,
+  buttons: null,
+};
+const obj3 = { marginHorizontal: nativeDefault.space.PX_24, alignItems: "center" };
+obj2.image = { marginVertical: nativeDefault.space.PX_24, height: 120 };
+obj2.title = { textAlign: "center" };
+let obj4 = { marginVertical: nativeDefault.space.PX_24, height: 120 };
+obj2.subtitle = { textAlign: "center", marginTop: nativeDefault.space.PX_8 };
+let obj5 = { textAlign: "center", marginTop: nativeDefault.space.PX_8 };
+obj2.buttons = { marginTop: nativeDefault.space.PX_8 };
+let closure_10 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting(
   "modules/nuf/native/components/notification/NotificationReactivationActionSheet.tsx",
@@ -44,36 +49,39 @@ export default function NotificationReactivationActionSheet(location) {
     );
   }, items);
   const callback1 = noop.useCallback(() => {
-    const obj = { action_type: EventActionType.SKIP_STEP, action_location: _location, permission_granted: "Array" };
-    obj.track(AnalyticEvents.NOTIFICATION_PERMISSION_PREPROMPT_ACKED, obj);
+    AnalyticsUtilsDefault.track(AnalyticEvents.NOTIFICATION_PERMISSION_PREPROMPT_ACKED, {
+      action_type: EventActionType.SKIP_STEP,
+      action_location: _location,
+      permission_granted: "Array",
+    });
+    const obj2 = { action_type: EventActionType.SKIP_STEP, action_location: _location, permission_granted: "Array" };
     ActionSheetActionCreatorsDefault.hideActionSheet();
   }, items1);
   let obj = { children: null };
-  obj = { style: tmp.container, children: null };
-  obj = { style: tmp.image, source: _modDef17572, resizeMode: "contain" };
-  const items2 = [closure_8(closure_5, obj), , ,];
-  const obj1 = { style: tmp.title, variant: "heading-xl/bold", accessibilityRole: "header", children: null };
+  let obj2 = { style: tmp.container, children: null };
+  const items2 = [closure_8(closure_5, { style: tmp.image, source: _modDef17573, resizeMode: "contain" }), , ,];
+  const obj4 = { style: tmp.title, variant: "heading-xl/bold", accessibilityRole: "header", children: null };
   const intl = _location(1114).intl;
-  obj1.children = intl.string(_location(1114).t.a4bgO0);
-  items2[1] = closure_8(_location(4632).Text, obj1);
-  const obj2 = { style: tmp.subtitle, variant: "text-sm/medium", color: "text-default", children: null };
+  obj4.children = intl.string(_location(1114).t.a4bgO0);
+  items2[1] = closure_8(_location(4632).Text, obj4);
+  const obj5 = { style: tmp.subtitle, variant: "text-sm/medium", color: "text-default", children: null };
   const intl2 = _location(1114).intl;
-  obj2.children = intl2.string(_location(1114).t["rW5gw/"]);
-  items2[2] = closure_8(_location(4632).Text, obj2);
-  const obj3 = { style: tmp.buttons, children: null };
-  const obj4 = { text: null, onPress: null };
+  obj5.children = intl2.string(_location(1114).t["rW5gw/"]);
+  items2[2] = closure_8(_location(4632).Text, obj5);
+  const obj6 = { style: tmp.buttons, children: null };
+  const obj7 = { text: null, onPress: null };
   const intl3 = _location(1114).intl;
-  obj4.text = intl3.string(_location(1114).t.a4bgO0);
-  obj4.onPress = callback;
-  const items3 = [closure_8(_location(5056).Button, obj4)];
-  const obj5 = { text: null, onPress: null, variant: "secondary" };
+  obj7.text = intl3.string(_location(1114).t.a4bgO0);
+  obj7.onPress = callback;
+  const items3 = [closure_8(_location(5056).Button, obj7)];
+  const obj8 = { text: null, onPress: null, variant: "secondary" };
   const intl4 = _location(1114).intl;
-  obj5.text = intl4.string(_location(1114).t["/L3kom"]);
-  obj5.onPress = callback1;
-  items3[1] = closure_8(_location(5056).Button, obj5);
-  obj3.children = items3;
-  items2[3] = closure_9(_location(5514).ButtonGroup, obj3);
-  obj.children = items2;
-  obj.children = closure_9(closure_4, obj);
+  obj8.text = intl4.string(_location(1114).t["/L3kom"]);
+  obj8.onPress = callback1;
+  items3[1] = closure_8(_location(5056).Button, obj8);
+  obj6.children = items3;
+  items2[3] = closure_9(_location(5514).ButtonGroup, obj6);
+  obj2.children = items2;
+  obj.children = closure_9(closure_4, obj2);
   return closure_8(_location(7253).BottomSheet, obj);
 }

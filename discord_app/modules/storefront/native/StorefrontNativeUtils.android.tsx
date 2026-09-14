@@ -3,6 +3,8 @@ import IAPStoreDefault from "../../../stores/native/IAPStore.android.tsx";
 import GPlayActionCreators from "../../../actions/native/GPlayActionCreators.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
+const require = globalThis.__r;
+
 require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/storefront/native/StorefrontNativeUtils.android.tsx");
@@ -49,8 +51,9 @@ export const useFormattedSKUPrice = function useFormattedSKUPrice(sku) {
       priceString = stateFromStores.priceString;
     }
     if (null != priceString) {
-      let obj = { normalPrice: null, discountedPrice: null, discountPercent: null, userPrice: null };
       ({ priceString: obj2.normalPrice, priceString: obj2.userPrice } = stateFromStores);
+      let obj = { normalPrice: null, discountedPrice: null, discountPercent: null, userPrice: null };
+      const obj3 = { normalPrice: null, discountedPrice: null, discountPercent: null, userPrice: null };
     } else {
       obj = { normalPrice: null, discountedPrice: null, discountPercent: null, userPrice: null };
     }

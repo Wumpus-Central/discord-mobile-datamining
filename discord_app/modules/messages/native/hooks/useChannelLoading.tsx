@@ -21,14 +21,14 @@ export default function useChannelLoading(arg0) {
     1,
   )[0];
   hooks_useMountEffectDefault(() => {
-    const obj = {
+    const obj = messages_MessagesUtils;
+    const result = obj.startOrCancelChannelLatestMessagesLoad({
       jumpTargetId,
       oldestUnreadMessageId,
       shouldJumpToOriginalPost: _slicedToArray(false),
       channelId,
       tracker,
-    };
-    const result = obj.startOrCancelChannelLatestMessagesLoad(obj);
+    });
     return () => {
       first.cancel();
     };
@@ -36,14 +36,14 @@ export default function useChannelLoading(arg0) {
   return {
     channelLatestMessageLoadingStatsManager,
     startOrCancelLatestMessagesLoad(arg0) {
-      const obj = {
+      const obj = messages_MessagesUtils;
+      const result = obj.startOrCancelChannelLatestMessagesLoad({
         jumpTargetId,
         oldestUnreadMessageId,
         shouldJumpToOriginalPost: _slicedToArray(arg0),
         channelId,
         tracker,
-      };
-      const result = obj.startOrCancelChannelLatestMessagesLoad(obj);
+      });
     },
   };
 }

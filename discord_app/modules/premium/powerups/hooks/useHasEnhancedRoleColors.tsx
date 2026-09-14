@@ -1,6 +1,8 @@
 // discord_app/modules/premium/powerups/hooks/useHasEnhancedRoleColors.tsx
 import GuildStore from "../../../../stores/GuildStore.tsx";
 
+const require = globalThis.__r;
+
 const require = fn;
 const GuildFeatures = fn(1074).GuildFeatures;
 const size = fn(2);
@@ -19,11 +21,11 @@ export default function useHasEnhancedRoleColors(arg0) {
     return hasItem;
   });
 }
-export const getHasEnhancedRoleColors = function getHasEnhancedRoleColors(guildId) {
-  if (null == guildId) {
+export const getHasEnhancedRoleColors = function getHasEnhancedRoleColors(guildId1) {
+  if (null == guildId1) {
     return false;
   } else {
-    const guild = GuildStore.getGuild(guildId);
+    const guild = GuildStore.getGuild(guildId1);
     let hasItem = null != guild;
     if (hasItem) {
       const features = guild.features;

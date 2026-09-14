@@ -25,12 +25,12 @@ export default {
     return tmp;
   },
   parse(arg0, fn, arg2) {
-    let obj = { content: null };
-    obj = {};
+    const obj = { content: null };
+    const obj3 = {};
     const trimmed = arg0[1].trim();
     const merged = Object.assign(arg2);
-    obj.allowSubtext = false;
-    obj.content = _mod4333.parseInline(fn, trimmed, obj);
+    obj3.allowSubtext = false;
+    obj.content = _mod4333.parseInline(fn, trimmed, obj3);
     return obj;
   },
 };

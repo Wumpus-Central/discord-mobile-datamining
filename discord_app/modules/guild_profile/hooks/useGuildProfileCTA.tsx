@@ -1,5 +1,6 @@
 // discord_app/modules/guild_profile/hooks/useGuildProfileCTA.tsx
 import FlagUtils from "../../../../discord_common/js/shared/utils/FlagUtils.tsx";
+import GuildTagUtils from "../../guild_tag/GuildTagUtils.tsx";
 import GuildInviteFlags from "../../../../discord_common/js/shared/shared-constants/GuildInviteFlags.tsx";
 import usePendingFolderGuildIds from "../../guilds_bar/usePendingFolderGuildIds.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -9,12 +10,13 @@ import GuildStore from "../../../stores/GuildStore.tsx";
 import InviteStore from "../../../stores/InviteStore.tsx";
 import UserStore from "../../../stores/UserStore.tsx";
 
+const require = globalThis.__r;
 const usePendingFolderGuildIdsDefault = usePendingFolderGuildIds;
 
 require = fn;
 const Constants = fn(1074);
 ({ InviteStates: closure_9, GuildFeatures: c10 } = Constants);
-let obj = {
+const CTATypes = {
   IS_MEMBER: 0,
   [0]: "IS_MEMBER",
   ADOPT_TAG: 1,
@@ -30,7 +32,7 @@ let obj = {
   ACCEPT_ROLES: 6,
   [6]: "ACCEPT_ROLES",
 };
-obj = { INVITE: "INVITE" };
+let obj2 = { INVITE: "INVITE" };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_profile/hooks/useGuildProfileCTA.tsx");
 
@@ -40,12 +42,12 @@ export default function useGuildProfileCTA(id, arg1, arg2) {
   dependencyMap = arg2;
   id = id.id;
   const features = id.features;
-  obj = require("initialize");
   const items = [features];
-  const stateFromStores = obj.useStateFromStores(items, () => features.getId());
+  const stateFromStores = require("initialize").useStateFromStores(items, () => features.getId());
+  let obj = require("initialize");
   const items1 = [stateFromStores1];
   stateFromStores1 = require("initialize").useStateFromStores(items1, () => GuildStore.getGuild(id));
-  let obj2 = require("initialize");
+  obj2 = require("initialize");
   const items2 = [stateFromStores3];
   const items3 = [stateFromStores];
   const stateFromStores2 = require("initialize").useStateFromStores(
@@ -88,7 +90,7 @@ export default function useGuildProfileCTA(id, arg1, arg2) {
       if (null != invite) {
         if (invite.state !== constants.BANNED) {
           if (invite.state !== tmp8.EXPIRED) {
-            obj = { validInviteKey: inviteKeyForGuildId, isBypassInvite: null, inviteRoles: null };
+            let obj = { validInviteKey: inviteKeyForGuildId, isBypassInvite: null, inviteRoles: null };
             let num = invite.flags;
             if (num == null) {
               num = 0;
@@ -115,11 +117,12 @@ export default function useGuildProfileCTA(id, arg1, arg2) {
   items8[9] = stateFromStores1;
   items8[10] = inviteRoles;
   items8[11] = stateFromStores2;
-  obj = {
+  const obj5 = require("initialize");
+  return {
     guildId: id,
     ctaType: id.useMemo(() => {
       if (stateFromStores3) {
-        if (closure_1 === features.INVITE) {
+        if (closure_1 === obj2.INVITE) {
           if (null != inviteRoles) {
             if (inviteRoles.length > 0) {
               if (null != stateFromStores2) {
@@ -155,10 +158,11 @@ export default function useGuildProfileCTA(id, arg1, arg2) {
           }
           tmp38 = true === identityEnabled;
         }
-        if (closure_1 !== features.INVITE) {
+        if (closure_1 !== tmp23.INVITE) {
           if (null != id.tag) {
             if (!tmp38) {
               if (null != stateFromStores1) {
+                obj2 = GuildTagUtils;
                 if (obj2.guildSupportsTags(tmp41)) {
                   let IS_MEMBER = features.ADOPT_TAG;
                 }
@@ -168,6 +172,7 @@ export default function useGuildProfileCTA(id, arg1, arg2) {
           }
         }
         IS_MEMBER = features.IS_MEMBER;
+        tmp23 = obj2;
       } else {
         if (closure_12.includes(id)) {
           let APPLY_TO_JOIN = features.HAS_APPLICATION;
@@ -207,17 +212,16 @@ export default function useGuildProfileCTA(id, arg1, arg2) {
     }, items8),
     validInviteKey,
   };
-  return obj;
 }
-export const CTATypes = obj;
-export const GuildProfileCTAContext = obj;
+export { CTATypes };
+export const GuildProfileCTAContext = obj2;
 export const getGuildProfileCTAType = function getGuildProfileCTAType(guildProfileFromInvite, code) {
   ({ id, features } = guildProfileFromInvite);
-  id = AuthenticationStore.getId();
-  const user = UserStore.getUser(id);
+  const id1 = AuthenticationStore.getId();
+  const user = UserStore.getUser(id1);
   let member = null;
   if (null != id) {
-    member = GuildMemberStore.getMember(id, id);
+    member = GuildMemberStore.getMember(id, id1);
   }
   let joinedAt;
   if (member != null) {
@@ -240,7 +244,7 @@ export const getGuildProfileCTAType = function getGuildProfileCTAType(guildProfi
       flag = false;
       tmp11 = null;
       if (invite.state !== tmp12.EXPIRED) {
-        obj = FlagUtils;
+        const obj = FlagUtils;
         let num = invite.flags;
         if (num == null) {
           num = 0;
@@ -252,26 +256,26 @@ export const getGuildProfileCTAType = function getGuildProfileCTAType(guildProfi
   }
   const pendingFolderGuildIds = usePendingFolderGuildIds.getPendingFolderGuildIds();
   if (tmp7) {
-    let roles;
+    let roles1;
     if (invite != null) {
-      roles = invite.roles;
+      roles1 = invite.roles;
     }
-    if (null != roles) {
+    if (null != roles1) {
       if (invite.roles.length > 0) {
         if (null != user) {
           const member1 = GuildMemberStore.getMember(id, user.id);
-          let roles1;
+          let roles2;
           if (member1 != null) {
-            roles1 = member1.roles;
+            roles2 = member1.roles;
           }
-          if (roles1 == null) {
-            roles1 = [];
+          if (roles2 == null) {
+            roles2 = [];
           }
-          roles = invite.roles;
+          const roles = invite.roles;
           if (roles.some((id) => !set.has(id.id))) {
             return obj.ACCEPT_ROLES;
           }
-          const set = new Set(roles1);
+          const set = new Set(roles2);
         }
       }
     }

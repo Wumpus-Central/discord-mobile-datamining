@@ -13,7 +13,7 @@ import UserStore from "../../../../../stores/UserStore.tsx";
 require = fn;
 let useState = fn(19).useState;
 const View = fn(17).View;
-const Constants = fn(11496);
+const Constants = fn(11497);
 ({
   MODAL_LOCATION_CONTEXT_MOBILE: c10,
   NOFILTR_URL: closure_11,
@@ -23,18 +23,19 @@ const Constants = fn(11496);
 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16 } = jsxProd);
-fn(4636);
-let createStyles = { container: null, toastContainer: null, helplineGroup: null, textCenter: null };
-createStyles = { display: "flex", alignItems: "center", alignSelf: "stretch", gap: nativeDefault.space.PX_16 };
-createStyles.container = createStyles;
-createStyles.toastContainer = {
-  paddingHorizontal: nativeDefault.space.PX_8,
-  paddingVertical: nativeDefault.space.PX_12,
+const createStyles = fn(4636);
+let obj2 = {
+  container: { display: "flex", alignItems: "center", alignSelf: "stretch", gap: nativeDefault.space.PX_16 },
+  toastContainer: null,
+  helplineGroup: null,
+  textCenter: null,
 };
-let obj1 = { paddingHorizontal: nativeDefault.space.PX_8, paddingVertical: nativeDefault.space.PX_12 };
-createStyles.helplineGroup = { display: "flex", alignSelf: "stretch", gap: nativeDefault.space.PX_4 };
-createStyles.textCenter = { textAlign: "center" };
-let closure_17 = createStyles.createStyles(createStyles);
+let obj3 = { display: "flex", alignItems: "center", alignSelf: "stretch", gap: nativeDefault.space.PX_16 };
+obj2.toastContainer = { paddingHorizontal: nativeDefault.space.PX_8, paddingVertical: nativeDefault.space.PX_12 };
+let obj4 = { paddingHorizontal: nativeDefault.space.PX_8, paddingVertical: nativeDefault.space.PX_12 };
+obj2.helplineGroup = { display: "flex", alignSelf: "stretch", gap: nativeDefault.space.PX_4 };
+obj2.textCenter = { textAlign: "center" };
+let closure_17 = createStyles.createStyles(obj2);
 const size = fn(2);
 let result = size.fileFinishedImporting(
   "modules/self_mod/inappropriate_conversation/native/components/TakeActionScreen.tsx",
@@ -49,31 +50,35 @@ export default function TakeActionButtons(senderId) {
   closure_8 = undefined;
   const tmp = closure_17();
   _slicedToArray = tmp;
-  let obj = senderId(setReported[10]);
   const items = [closure_8];
   const items1 = [senderId];
-  const stateFromStores = obj.useStateFromStores(items, () => RelationshipStore.isBlocked(senderId), items1);
-  let obj1 = senderId(setReported[11]);
-  const lastChannelMessage = obj1.useLastChannelMessage(channelId);
-  let obj2 = senderId(setReported[12]);
-  const shouldShowHelplineLink = obj2.useShouldShowHelplineLink();
-  [tmp8, c6] = _slicedToArray(useState(false), 2);
-  let obj3 = senderId(setReported[13]);
-  closure_7 = obj3.useNavigation();
-  let obj4 = senderId(setReported[12]);
+  const stateFromStores = senderId(setReported[10]).useStateFromStores(
+    items,
+    () => RelationshipStore.isBlocked(senderId),
+    items1,
+  );
+  let obj = senderId(setReported[10]);
+  const lastChannelMessage = senderId(setReported[11]).useLastChannelMessage(channelId);
+  let obj2 = senderId(setReported[11]);
+  const shouldShowHelplineLink = senderId(setReported[12]).useShouldShowHelplineLink();
+  const obj3 = senderId(setReported[12]);
+  [tmp8, c6] = useState(false);
+  const tmp7 = _slicedToArray(useState(false), 2);
+  closure_7 = senderId(setReported[13]).useNavigation();
+  let obj4 = senderId(setReported[13]);
   const items2 = [senderId, channelId, trackAnalyticsEvent];
-  const shouldShowThroughlineLink = obj4.useShouldShowThroughlineLink();
+  const shouldShowThroughlineLink = senderId(setReported[12]).useShouldShowThroughlineLink();
   let callback = lastChannelMessage.useCallback(() => {
-    const obj = { location: _location };
-    obj.blockUser(senderId, obj).then(() => {
+    const obj2 = { location: _location };
+    RelationshipActionCreatorsDefault.blockUser(senderId, { location: _location }).then(() => {
       const result = channelId(setReported[15]).showBlockSuccessToast(senderId, closure_1_1);
     });
     trackAnalyticsEvent(SafetyWarningUtils.CtaEventTypes.USER_TAKEOVER_MODAL_BLOCK);
   }, items2);
   const items3 = [senderId, channelId, trackAnalyticsEvent];
   const callback1 = lastChannelMessage.useCallback(() => {
-    const obj = { location: _location };
-    obj.unblockUser(senderId, obj);
+    RelationshipActionCreatorsDefault.unblockUser(senderId, { location: _location });
+    const obj2 = { location: _location };
     const result = SafetyToastsActionCreatorsDefault.showUnblockSuccessToast(senderId, channelId);
     trackAnalyticsEvent(SafetyWarningUtils.CtaEventTypes.USER_TAKEOVER_MODAL_UNBLOCK);
   }, items3);
@@ -87,8 +92,8 @@ export default function TakeActionButtons(senderId) {
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
-          let obj = { value, done: true };
-          return obj;
+          let obj2 = { value, done: true };
+          return obj2;
         } else {
           return { value: "HermesInternal", done: null };
         }
@@ -101,26 +106,24 @@ export default function TakeActionButtons(senderId) {
               throw value;
             } else if (arg0 === 2) {
               dependencyMap = 3;
-              obj = { value, done: true };
-              return obj;
+              const obj4 = { value, done: true };
+              return obj4;
             } else if (null != user.getUser(senderId)) {
               _undefined(true);
-              let obj2 = tmp4(8752);
               v1 = 1;
               dependencyMap = 1;
-              const obj1 = {
-                value: obj2.submitReportForInappropriateConversationSafetyAlert(
+              const obj5 = {
+                value: tmp4(8752).submitReportForInappropriateConversationSafetyAlert(
                   lastChannelMessage,
                   () => {
                     dependencyMap(true);
-                    c1(4335);
-                    const obj = { key, content: null, IconComponent: null, iconColor: null, containerStyle: null };
+                    const obj2 = { key, content: null, IconComponent: null, iconColor: null, containerStyle: null };
                     const intl = closure_0(1114).intl;
-                    obj.content = intl.string(closure_0(1114).t.gn2c6X);
-                    obj.IconComponent = closure_0(4596).CircleCheckIcon;
-                    obj.iconColor = iconColor;
-                    obj.containerStyle = toastContainer.toastContainer;
-                    obj.open(obj);
+                    obj2.content = intl.string(closure_0(1114).t.gn2c6X);
+                    obj2.IconComponent = closure_0(4596).CircleCheckIcon;
+                    obj2.iconColor = iconColor;
+                    obj2.containerStyle = toastContainer.toastContainer;
+                    c1(4335).open(obj2);
                   },
                   () => {
                     const intl = closure_1_0(1114).intl;
@@ -129,7 +132,7 @@ export default function TakeActionButtons(senderId) {
                 ),
                 done: false,
               };
-              return obj1;
+              return obj5;
             } else {
               dependencyMap = 3;
             }
@@ -138,13 +141,13 @@ export default function TakeActionButtons(senderId) {
             throw value;
           } else if (arg0 !== 2) {
             closure_128_6(false);
-            obj = v1(8522);
-            const result = obj.showReportSuccessToast(closure_128_0, closure_128_1);
-            closure_128_3(tmp4(11503).CtaEventTypes.USER_TAKEOVER_MODAL_REPORT);
+            const result = v1(8522).showReportSuccessToast(closure_128_0, closure_128_1);
+            closure_128_3(tmp4(11504).CtaEventTypes.USER_TAKEOVER_MODAL_REPORT);
+            const obj = v1(8522);
           }
           dependencyMap = 3;
-          obj2 = { value, done: true };
-          return obj2;
+          const obj6 = { value, done: true };
+          return obj6;
         } catch (tmp22) {
           dependencyMap = tmp;
           throw tmp22;
@@ -153,8 +156,15 @@ export default function TakeActionButtons(senderId) {
     }),
     items4,
   );
-  obj = { style: tmp.container, children: null };
-  obj = { variant: "primary", size: "lg", icon: channelId(setReported[23]), text: null, grow: true, onPress: null };
+  let obj6 = { style: tmp.container, children: null };
+  const obj7 = {
+    variant: "primary",
+    size: "lg",
+    icon: channelId(setReported[23]),
+    text: null,
+    grow: true,
+    onPress: null,
+  };
   let intl = senderId(setReported[19]).intl;
   const string = intl.string;
   const t = senderId(setReported[19]).t;
@@ -163,16 +173,16 @@ export default function TakeActionButtons(senderId) {
   } else {
     stringResult = string(t.VTIBaD);
   }
-  obj.text = stringResult;
+  obj7.text = stringResult;
   if (stateFromStores) {
     callback = callback1;
   }
-  obj.onPress = callback;
-  const items5 = [closure_15(senderId(setReported[22]).Button, obj), ,];
-  obj1 = {
+  obj7.onPress = callback;
+  const items5 = [closure_15(senderId(setReported[22]).Button, obj7), ,];
+  const obj8 = {
     variant: "secondary",
     size: "lg",
-    icon: tmp15(setReported[24]),
+    icon: channelId(setReported[24]),
     loading: tmp8,
     disabled: isReported,
     text: null,
@@ -187,57 +197,71 @@ export default function TakeActionButtons(senderId) {
   } else {
     string2Result = string2(t2["7fHyE6"]);
   }
-  obj1.text = string2Result;
-  obj1.onPress = function onPress() {
+  obj8.text = string2Result;
+  obj8.onPress = function onPress() {
     closure_8();
   };
-  items5[1] = closure_15(senderId(setReported[22]).Button, obj1);
+  items5[1] = closure_15(senderId(setReported[22]).Button, obj8);
   if (shouldShowHelplineLink) {
-    obj2 = { variant: "secondary", size: "lg", icon: tmp15(setReported[25]), text: null, grow: true, onPress: null };
+    const obj9 = {
+      variant: "secondary",
+      size: "lg",
+      icon: tmp15(setReported[25]),
+      text: null,
+      grow: true,
+      onPress: null,
+    };
     const intl6 = tmp2(setReported[19]).intl;
-    obj2.text = intl6.string(tmp2(setReported[19]).t.sZf6cz);
-    obj2.onPress = function onPress() {
+    obj9.text = intl6.string(tmp2(setReported[19]).t.sZf6cz);
+    obj9.onPress = function onPress() {
       closure_7.push("CRISIS_TEXT_LINE");
       trackAnalyticsEvent(SafetyWarningUtils.CtaEventTypes.USER_TAKEOVER_MODAL_CTL);
     };
-    let tmp12Result = closure_15(tmp2(setReported[22]).Button, obj2);
+    let tmp12Result = closure_15(tmp2(setReported[22]).Button, obj9);
   } else {
-    obj3 = { style: tmp.helplineGroup, children: null };
+    const obj10 = { style: tmp.helplineGroup, children: null };
     const Button = tmp2(setReported[22]).Button;
-    obj4 = { variant: "secondary", size: "lg", icon: tmp15(setReported[26]), text: null, grow: true, onPress: null };
+    const obj11 = {
+      variant: "secondary",
+      size: "lg",
+      icon: tmp15(setReported[26]),
+      text: null,
+      grow: true,
+      onPress: null,
+    };
     const intl3 = tmp2(setReported[19]).intl;
     const string3 = intl3.string;
     const t3 = tmp2(setReported[19]).t;
     if (shouldShowThroughlineLink) {
-      obj4.text = string3(t3.HQ2nKl);
-      obj4.onPress = function onPress() {
+      obj11.text = string3(t3.HQ2nKl);
+      obj11.onPress = function onPress() {
         LinkingDefault.openURL(closure_2_12);
         trackAnalyticsEvent(SafetyWarningUtils.CtaEventTypes.USER_TAKEOVER_MODAL_THROUGHLINE);
       };
-      const items6 = [closure_15(Button, obj4)];
-      const obj5 = { variant: "text-xs/medium", color: "text-default", style: tmp.textCenter, children: null };
+      const items6 = [closure_15(Button, obj11)];
+      const obj12 = { variant: "text-xs/medium", color: "text-default", style: tmp.textCenter, children: null };
       const intl5 = tmp2(setReported[19]).intl;
-      obj5.children = intl5.string(tmp2(setReported[19]).t["PMeb/r"]);
-      items6[1] = closure_15(tmp2(setReported[28]).Text, obj5);
-      obj3.children = items6;
-      let tmp18 = obj3;
+      obj12.children = intl5.string(tmp2(setReported[19]).t["PMeb/r"]);
+      items6[1] = closure_15(tmp2(setReported[28]).Text, obj12);
+      obj10.children = items6;
+      let tmp18 = obj10;
     } else {
-      obj4.text = string3(t3["65XQar"]);
-      obj4.onPress = function onPress() {
+      obj11.text = string3(t3["65XQar"]);
+      obj11.onPress = function onPress() {
         LinkingDefault.openURL(closure_2_11);
         trackAnalyticsEvent(SafetyWarningUtils.CtaEventTypes.USER_TAKEOVER_MODAL_NO_FILTR);
       };
-      const items7 = [closure_15(Button, obj4)];
-      const obj6 = { variant: "text-xs/medium", color: "text-default", style: tmp.textCenter, children: null };
+      const items7 = [closure_15(Button, obj11)];
+      const obj13 = { variant: "text-xs/medium", color: "text-default", style: tmp.textCenter, children: null };
       const intl4 = tmp2(setReported[19]).intl;
-      obj6.children = intl4.string(tmp2(setReported[19]).t.XNwhxC);
-      items7[1] = closure_15(tmp2(setReported[28]).Text, obj6);
-      obj3.children = items7;
-      tmp18 = obj3;
+      obj13.children = intl4.string(tmp2(setReported[19]).t.XNwhxC);
+      items7[1] = closure_15(tmp2(setReported[28]).Text, obj13);
+      obj10.children = items7;
+      tmp18 = obj10;
     }
     tmp12Result = closure_16(tmp13, tmp18);
   }
   items5[2] = tmp12Result;
-  obj.children = items5;
-  return closure_16(closure_7, obj);
+  obj6.children = items5;
+  return closure_16(closure_7, obj6);
 }

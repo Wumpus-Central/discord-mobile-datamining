@@ -15,20 +15,20 @@ export default {
   [Constants.RPCCommands.GET_IMAGE]: {
     scope: fn(4541).RPC_LOCAL_SCOPE,
     validation(string) {
-      createRpcJoiSchemaObjectDefault(string);
-      const obj = { type: null, id: null, format: null, size: null };
-      const requiredResult = obj.required();
+      const obj = createRpcJoiSchemaObjectDefault(string);
+      const obj2 = { type: null, id: null, format: null, size: null };
+      const requiredResult = createRpcJoiSchemaObjectDefault(string).required();
       const stringResult = string.string();
-      obj.type = string.string().required().valid(["user"]);
+      obj2.type = string.string().required().valid(["user"]);
       const requiredResult1 = string.string().required();
-      obj.id = string.string().required();
+      obj2.id = string.string().required();
       const stringResult1 = string.string();
       const stringResult2 = string.string();
-      obj.format = string.string().required().valid(["png", "webp", "jpg"]);
+      obj2.format = string.string().required().valid(["png", "webp", "jpg"]);
       const requiredResult2 = string.string().required();
       const numberResult = string.number();
-      obj.size = string.number().required().valid([16, 32, 64, 128, 256, 512, 1024]);
-      return requiredResult.keys(obj);
+      obj2.size = string.number().required().valid([16, 32, 64, 128, 256, 512, 1024]);
+      return requiredResult.keys(obj2);
     },
     handler(args) {
       args = args.args;
@@ -44,11 +44,10 @@ export default {
       if ("user" === args.type) {
         const user = UserStore.getUser(id);
         if (null == user) {
-          let obj = { errorCode: RPCErrors.INVALID_USER };
+          const obj2 = { errorCode: RPCErrors.INVALID_USER };
           const _HermesInternal = HermesInternal;
-          let tmp14 = RPCErrorDefault;
-          tmp14 = new tmp14(obj, "Invalid user id: " + id);
-          throw tmp14;
+          const tmp142 = new RPCErrorDefault(obj2, "Invalid user id: " + id);
+          throw tmp142;
         } else {
           const obj3 = AvatarUtilsDefault;
           const userAvatarURL = obj3.getUserAvatarURL(user, false, num, format);
@@ -64,7 +63,7 @@ export default {
         }
       }
       if (null == text) {
-        obj = { errorCode: RPCErrors.INVALID_COMMAND };
+        const obj = { errorCode: RPCErrors.INVALID_COMMAND };
         const tmp10 = new RPCErrorDefault(obj, "No valid type.");
         throw tmp10;
       } else {

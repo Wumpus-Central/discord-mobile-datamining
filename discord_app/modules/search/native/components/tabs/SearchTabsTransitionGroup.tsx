@@ -18,13 +18,12 @@ function AnimatedTabs(state) {
   const cleanUp = state.cleanUp;
   let sharedValue;
   let context;
-  let obj = state(cleanUp[4]);
   let num = 0;
   if (transitionState === state(cleanUp[5]).TransitionStates.MOUNTED) {
     num = 1;
   }
-  sharedValue = obj.useSharedValue(num);
-  let tmpResult = tmp(tmp2[4]);
+  sharedValue = state(cleanUp[4]).useSharedValue(num);
+  let obj = state(cleanUp[4]);
   let fn = function f() {
     let obj = { opacity: null, position: null };
     value = sharedValue.get();
@@ -38,11 +37,16 @@ function AnimatedTabs(state) {
         const obj = state(cleanUp[4]);
       }
     };
-    obj = { transitionState, TransitionStates: native.TransitionStates, runOnJS: ReanimatedRexport.runOnJS, cleanUp };
-    fn.__closure = obj;
+    const obj2 = spring;
+    fn.__closure = {
+      transitionState,
+      TransitionStates: native.TransitionStates,
+      runOnJS: ReanimatedRexport.runOnJS,
+      cleanUp,
+    };
     fn.__workletHash = 15209468679721;
     fn.__initData = __initData;
-    obj.opacity = spring.withSpring(value, springPresets.springStandard, "respect-motion-settings", fn);
+    obj.opacity = obj2.withSpring(value, springPresets.springStandard, "respect-motion-settings", fn);
     let str = "absolute";
     if (1 === sharedValue.get()) {
       str = "relative";
@@ -50,16 +54,16 @@ function AnimatedTabs(state) {
     obj.position = str;
     return obj;
   };
-  obj = {
-    withSpring: tmp(tmp2[6]).withSpring,
+  const tmpResult = state(cleanUp[4]);
+  fn.__closure = {
+    withSpring: state(cleanUp[6]).withSpring,
     opacity: sharedValue,
-    springStandard: tmp(tmp2[7]).springStandard,
+    springStandard: state(cleanUp[7]).springStandard,
     transitionState,
-    TransitionStates: tmp(tmp2[5]).TransitionStates,
-    runOnJS: tmp(tmp2[4]).runOnJS,
+    TransitionStates: state(cleanUp[5]).TransitionStates,
+    runOnJS: state(cleanUp[4]).runOnJS,
     cleanUp,
   };
-  fn.__closure = obj;
   fn.__workletHash = 10740262883803;
   fn.__initData = __initData;
   const items = [sharedValue, transitionState];
@@ -71,6 +75,15 @@ function AnimatedTabs(state) {
     }
     const result = sharedValue.set(num);
   }, items);
+  let obj2 = {
+    withSpring: state(cleanUp[6]).withSpring,
+    opacity: sharedValue,
+    springStandard: state(cleanUp[7]).springStandard,
+    transitionState,
+    TransitionStates: state(cleanUp[5]).TransitionStates,
+    runOnJS: state(cleanUp[4]).runOnJS,
+    cleanUp,
+  };
   const setting = state(cleanUp[2]).SearchResultExactCountEnabled.useSetting();
   closure_129_0 = setting;
   const items1 = [setting];
@@ -96,7 +109,7 @@ function AnimatedTabs(state) {
   fn2.__initData = __initData2;
   const items2 = [context];
   const callback1 = sharedValue.useCallback(fn2, items2);
-  tmpResult = tmp(tmp2[4]);
+  const SearchResultExactCountEnabled = state(cleanUp[2]).SearchResultExactCountEnabled;
   class F {
     constructor() {
       scrollOffset = state.scrollOffset;
@@ -117,21 +130,21 @@ function AnimatedTabs(state) {
   fn3.__closure = { swipeForMemberListContext: context };
   fn3.__workletHash = 15386779064911;
   fn3.__initData = __initData4;
-  const animatedReaction = tmpResult.useAnimatedReaction(F, fn3);
-  obj = { style: animatedStyle, children: null };
-  const obj1 = { state, grow: false, formatCount: callback, simultaneousHandlers: null, onEndDrag: null };
+  const animatedReaction = state(cleanUp[4]).useAnimatedReaction(F, fn3);
+  const obj3 = { style: animatedStyle, children: null };
+  const obj4 = { state, grow: false, formatCount: callback, simultaneousHandlers: null, onEndDrag: null };
   let gesture;
   if (context != null) {
     gesture = context.gesture;
   }
-  obj1.simultaneousHandlers = gesture;
+  obj4.simultaneousHandlers = gesture;
   let tmp13;
   if (null != context) {
     tmp13 = callback1;
   }
-  obj1.onEndDrag = tmp13;
-  obj.children = context(state(cleanUp[9]).Tabs, obj1);
-  return context(transitionState(cleanUp[4]).View, obj);
+  obj4.onEndDrag = tmp13;
+  obj3.children = context(state(cleanUp[9]).Tabs, obj4);
+  return context(transitionState(cleanUp[4]).View, obj3);
 }
 function renderItem(key, state, transitionState, cleanUp) {
   return <AnimatedTabs key={key} state={state} transitionState={transitionState} cleanUp={cleanUp} />;

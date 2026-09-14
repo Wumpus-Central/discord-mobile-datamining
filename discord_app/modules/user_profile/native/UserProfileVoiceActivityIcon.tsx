@@ -12,9 +12,8 @@ const result = size.fileFinishedImporting("modules/user_profile/native/UserProfi
 export default function UserProfileVoiceActivityIcon(channel) {
   channel = channel.channel;
   const merged = Object.assign(channel, Object.assign({ channel: 0 }));
-  let obj = channel(504);
   const items = [PermissionStore];
-  const stateFromStores = obj.useStateFromStores(items, () => {
+  const stateFromStores = channel(504).useStateFromStores(items, () => {
     let isPrivateResult = channel.isPrivate();
     if (!isPrivateResult) {
       isPrivateResult = PermissionStore.can(Permissions.CONNECT, channel);
@@ -30,18 +29,18 @@ export default function UserProfileVoiceActivityIcon(channel) {
       }
       if (isGuildStageVoiceResult) {
         if (tmp6) {
-          obj = {};
+          const obj2 = {};
           const merged1 = Object.assign(merged);
           let tmp8Result = jsx(tmp2(5177).StageLockIcon, {});
         }
         return tmp8Result;
       }
       if (isGuildStageVoiceResult) {
-        obj = {};
+        const obj3 = {};
         const merged2 = Object.assign(merged);
         tmp8Result = jsx(tmp2(5178).StageIcon, {});
       } else if (channel.isNSFW()) {
-        const obj1 = {};
+        const obj4 = {};
         const merged3 = Object.assign(merged);
         tmp8Result = jsx(tmp2(5180).VoiceWarningIcon, {});
       } else {
@@ -50,7 +49,7 @@ export default function UserProfileVoiceActivityIcon(channel) {
         } else {
           VoiceNormalIcon = tmp2(5182).VoiceNormalIcon;
         }
-        const obj2 = {};
+        const obj5 = {};
         const merged4 = Object.assign(merged);
         tmp8Result = <VoiceNormalIcon />;
       }

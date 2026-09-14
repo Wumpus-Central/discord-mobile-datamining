@@ -21,7 +21,7 @@ function getNotifTypesUsingSettings(items) {
       let addResult = set1.add(notifType);
       let _String = String;
       let arr = ids.push(String(notifType));
-      arr = names.push(NotifTypes.NotifTypes[notifType]);
+      let arr2 = names.push(NotifTypes.NotifTypes[notifType]);
     }
     continue;
   }
@@ -44,10 +44,10 @@ export const trackSystemNotifSettingsOpened = function trackSystemNotifSettingsO
   value = map.get(notif_setting_id);
   if (null != value) {
     const items = [notif_setting_id];
-    const obj = { system_notif_channel_id: value, notif_setting_id, notif_type_ids: null, notif_type_names: null };
-    ({ ids: obj2.notif_type_ids, names: obj2.notif_type_names } = getNotifTypesUsingSettings(items));
-    obj.track(AnalyticEvents.NOTIFICATION_SETTING_SYSTEM_SETTINGS_OPENED, obj);
     const tmp3 = getNotifTypesUsingSettings(items);
+    const obj3 = { system_notif_channel_id: value, notif_setting_id, notif_type_ids: null, notif_type_names: null };
+    ({ ids: obj2.notif_type_ids, names: obj2.notif_type_names } = tmp3);
+    AnalyticsUtilsDefault.track(AnalyticEvents.NOTIFICATION_SETTING_SYSTEM_SETTINGS_OPENED, obj3);
   }
 };
 export const trackSystemNotifSettingsReenabled = function trackSystemNotifSettingsReenabled(
@@ -64,8 +64,8 @@ export const trackSystemNotifSettingsReenabled = function trackSystemNotifSettin
     if (!set.has(nextResult)) {
       value = map.get(tmp2);
       if (null != value) {
-        items.push(tmp6);
-        let arr = items1.push(tmp2);
+        let arr = items.push(tmp6);
+        let arr2 = items1.push(tmp2);
       }
     }
     continue;

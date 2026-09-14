@@ -1,7 +1,7 @@
 // discord_app/modules/clips/ClipsManager.tsx
 import DispatcherDefault from "../../Dispatcher.tsx";
-import PlatformUtils from "../../utils/PlatformUtils.tsx";
 import AnalyticsUtilsDefault from "../../utils/AnalyticsUtils.tsx";
+import PlatformUtils from "../../utils/PlatformUtils.tsx";
 import UserSettings from "../user_settings/UserSettings.tsx";
 import DiscordNativeDefault from "../../lib/DiscordNative.tsx";
 import StreamKeyUtils from "../go_live/utils/StreamKeyUtils.tsx";
@@ -138,8 +138,11 @@ prototype["handleRTCConnectionFlags"] = function handleRTCConnectionFlags(arg0) 
 };
 prototype["handleClipsInitFailure"] = function handleClipsInitFailure(arg0) {
   ({ applicationName, errMsg } = arg0);
-  const obj = { application_name: applicationName, error_message: errMsg, clip_runtime };
-  obj.track(constants2.CLIPS_INIT_FAILURE, obj);
+  AnalyticsUtilsDefault.track(constants2.CLIPS_INIT_FAILURE, {
+    application_name: applicationName,
+    error_message: errMsg,
+    clip_runtime,
+  });
 };
 prototype["maybeShowClipsWarning"] = function maybeShowClipsWarning(userId) {
   const channelId = RTCConnectionStore.getChannelId();
@@ -152,8 +155,8 @@ prototype["maybeShowClipsWarning"] = function maybeShowClipsWarning(userId) {
       }
       if (setting) {
         const self = this;
-        const obj = { type: "CLIPS_SHOW_CALL_WARNING", channelId };
-        obj.dispatch(obj);
+        const obj2 = { type: "CLIPS_SHOW_CALL_WARNING", channelId };
+        DispatcherDefault.dispatch(obj2);
         this.showClipsToast();
       }
     }
@@ -181,8 +184,7 @@ prototype["handlePostConnectionOpen"] = function handlePostConnectionOpen() {
       if (!tmp7) {
         const result1 = self.classifyHardwareAndTrack();
         result1.then((classification) => {
-          const obj = { type: "CLIPS_CLASSIFY_HARDWARE", classification };
-          obj.dispatch(obj);
+          DispatcherDefault.dispatch({ type: "CLIPS_CLASSIFY_HARDWARE", classification });
         });
       }
     }
@@ -195,14 +197,13 @@ prototype["handleRTCConnectionVideo"] = function handleRTCConnectionVideo(arg0) 
   ({ context, channelId } = arg0);
   if (context === BaseConnectionEvent.MediaEngineContextTypes.STREAM) {
     if (isClientClipsCapableDefault(MediaEngineStore)) {
-      let obj = StreamKeyUtilsAll;
       if (null != guildId) {
         let CALL = StreamTypes.GUILD;
       } else {
         CALL = StreamTypes.CALL;
       }
-      obj = { streamType: CALL, ownerId: userId, channelId, guildId };
-      const rTCConnection = StreamRTCConnectionStore.getRTCConnection(obj.encodeStreamKey(obj));
+      const obj2 = { streamType: CALL, ownerId: userId, channelId, guildId };
+      const rTCConnection = StreamRTCConnectionStore.getRTCConnection(StreamKeyUtilsAll.encodeStreamKey(obj2));
       if (null != rTCConnection) {
         const self = this;
         this.applyStreamRecording(userId, rTCConnection);
@@ -220,8 +221,8 @@ prototype["classifyHardwareAndTrack"] = function classifyHardwareAndTrack() {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -234,8 +235,8 @@ prototype["classifyHardwareAndTrack"] = function classifyHardwareAndTrack() {
             throw value;
           } else if (arg0 === 2) {
             c5 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
             closure_0 = tmp7;
             closure_128_0 = undefined;
@@ -244,7 +245,7 @@ prototype["classifyHardwareAndTrack"] = function classifyHardwareAndTrack() {
             c3 = 1;
             v2 = 2;
             c5 = 1;
-            const obj1 = {
+            const obj4 = {
               value: v2(async () => {
                 await closure_2_5();
                 closure_128_0 = value;
@@ -271,30 +272,30 @@ prototype["classifyHardwareAndTrack"] = function classifyHardwareAndTrack() {
               })(),
               done: false,
             };
-            return obj1;
+            return obj4;
           }
         } else if (1 === tmp7) {
           c3 = 0;
           c5 = 3;
-          const obj2 = { value: constants.UNKNOWN, done: true };
-          return obj2;
+          const obj5 = { value: constants.UNKNOWN, done: true };
+          return obj5;
         } else if (arg0 === 1) {
           c5 = 3;
           throw value;
         } else if (arg0 === 2) {
           c3 = 0;
           c5 = 3;
-          const obj3 = { value, done: true };
-          return obj3;
+          const obj6 = { value, done: true };
+          return obj6;
         } else {
           closure_128_0 = value;
           gpuModels = closure_128_0.gpuModels;
           classification = closure_128_0.classification;
-          const obj4 = { classification, version, gpu_models: gpuModels, clip_runtime };
-          tmp3(c3[14]).track(constants2.CLIPS_HARDWARE_CLASSIFICATION, obj4);
+          const obj8 = { classification, version, gpu_models: gpuModels, clip_runtime };
+          tmp3(c3[14]).track(constants2.CLIPS_HARDWARE_CLASSIFICATION, obj8);
           c3 = 0;
           c5 = 3;
-          obj = { value: classification, done: true };
+          const obj = { value: classification, done: true };
           return obj;
         }
       } catch (tmp12) {

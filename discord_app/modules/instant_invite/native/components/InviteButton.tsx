@@ -39,8 +39,8 @@ export default noop.memo(function InviteButton(onPress) {
     stringResult1 = intl2.string(util.t.jYnGPG);
     flag = false;
   }
-  let obj = { style: closure_5().buttonWrapper, children: null };
-  obj = {
+  const obj = { style: closure_5().buttonWrapper, children: null };
+  const obj2 = {
     accessibilityRole: "none",
     size: "sm",
     variant: "secondary",
@@ -52,7 +52,7 @@ export default noop.memo(function InviteButton(onPress) {
   if (!disabled) {
     disabled = flag;
   }
-  obj.disabled = disabled;
+  obj2.disabled = disabled;
   obj.children = jsx(components_Button_Button.Button, {
     accessibilityRole: "none",
     size: "sm",
@@ -62,15 +62,5 @@ export default noop.memo(function InviteButton(onPress) {
     disabled: null,
     grow: true,
   });
-  return (
-    <View
-      accessibilityRole="none"
-      size="sm"
-      variant="secondary"
-      text={stringResult1}
-      onPress={onPress.onPressSend}
-      disabled={null}
-      grow
-    />
-  );
+  return <View style={closure_5().buttonWrapper}>{null}</View>;
 });

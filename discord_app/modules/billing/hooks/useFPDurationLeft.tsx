@@ -4,7 +4,7 @@ import useCountdownDefault from "../../../hooks/useCountdown.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
 function roundFPCountdownUnits(arg0) {
-  let time = {};
+  const time = {};
   const merged = Object.assign(arg0);
   if (time.seconds > 0) {
     time.minutes = time.minutes + 1;
@@ -24,8 +24,8 @@ function roundFPCountdownUnits(arg0) {
     } else {
       days = time.days;
     }
-    time = { days, hours: 0, minutes: 0, seconds: 0 };
-    return time;
+    const time1 = { days, hours: 0, minutes: 0, seconds: 0 };
+    return time1;
   } else if (time.hours > 0) {
     if (time.minutes > 45) {
       let hours = time.hours + 1;
@@ -33,29 +33,29 @@ function roundFPCountdownUnits(arg0) {
       hours = time.hours;
     }
     if (hours > 11) {
-      let time1 = { days: 1, hours: 0, minutes: 0, seconds: 0 };
+      let time2 = { days: 1, hours: 0, minutes: 0, seconds: 0 };
     } else {
-      time1 = { days: 0, hours, minutes: 0, seconds: 0 };
+      time2 = { days: 0, hours, minutes: 0, seconds: 0 };
     }
-    return time1;
+    return time2;
   } else if (time.minutes > 0) {
     let num5 = 0;
     if (time.minutes > 45) {
       num5 = 1;
     }
-    const time2 = { days: 0, hours: num5, minutes: null, seconds: 0 };
+    const time3 = { days: 0, hours: num5, minutes: null, seconds: 0 };
     let num7 = 0;
     if (1 !== num5) {
       num7 = time.minutes;
     }
-    time2.minutes = num7;
-    return time2;
-  } else {
-    let time3 = time;
-    if (time.seconds > 0) {
-      time3 = { days: 0, hours: 0, minutes: 1, seconds: 0 };
-    }
+    time3.minutes = num7;
     return time3;
+  } else {
+    let time4 = time;
+    if (time.seconds > 0) {
+      time4 = { days: 0, hours: 0, minutes: 1, seconds: 0 };
+    }
+    return time4;
   }
 }
 const CountDownMessageTypes = {

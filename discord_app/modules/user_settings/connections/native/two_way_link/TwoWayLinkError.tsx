@@ -20,13 +20,12 @@ const result = size.fileFinishedImporting("modules/user_settings/connections/nat
 
 export const TwoWayLinkError = function TwoWayLinkError(arg0) {
   ({ onClose, title, body, onRetry } = arg0);
-  let obj = TwoWayLinkStyles;
-  const twoWayLinkStyles = obj.useTwoWayLinkStyles();
-  obj = { style: twoWayLinkStyles.container, children: null };
-  obj = { style: twoWayLinkStyles.content, children: null };
   const tmp = closure_7();
+  const twoWayLinkStyles = TwoWayLinkStyles.useTwoWayLinkStyles();
+  const obj2 = { style: twoWayLinkStyles.container, children: null };
+  const obj3 = { style: twoWayLinkStyles.content, children: null };
   const items = [
-    hasOwnProperty(React3, { source: _modDef9397, style: closure_7().image }),
+    hasOwnProperty(React3, { source: _modDef9397, style: tmp.image }),
     hasOwnProperty(Text_Text.Text, {
       variant: "heading-xl/extrabold",
       color: "mobile-text-heading-primary",
@@ -40,23 +39,23 @@ export const TwoWayLinkError = function TwoWayLinkError(arg0) {
       children: body,
     }),
   ];
-  obj.children = items;
-  const items1 = [timestampProducer(React4, obj)];
-  const obj4 = { bottom: true, style: twoWayLinkStyles.footerContainer, children: null };
-  const obj5 = { spacing: 8, direction: "vertical", style: twoWayLinkStyles.footerButton, children: null };
-  const obj6 = { size: "lg", variant: "primary", text: null, onPress: null };
+  obj3.children = items;
+  const items1 = [timestampProducer(React4, obj3)];
+  const obj7 = { bottom: true, style: twoWayLinkStyles.footerContainer, children: null };
+  const obj8 = { spacing: 8, direction: "vertical", style: twoWayLinkStyles.footerButton, children: null };
+  const obj9 = { size: "lg", variant: "primary", text: null, onPress: null };
   const intl = util.intl;
-  obj6.text = intl.string(util.t["5911Lb"]);
-  obj6.onPress = onRetry;
-  const items2 = [hasOwnProperty(components_Button_Button.Button, obj6)];
-  const obj7 = { size: "lg", variant: "secondary", text: null, onPress: null };
+  obj9.text = intl.string(util.t["5911Lb"]);
+  obj9.onPress = onRetry;
+  const items2 = [hasOwnProperty(components_Button_Button.Button, obj9)];
+  const obj10 = { size: "lg", variant: "secondary", text: null, onPress: null };
   const intl2 = util.intl;
-  obj7.text = intl2.string(util.t["ETE/oC"]);
-  obj7.onPress = onClose;
-  items2[1] = hasOwnProperty(components_Button_Button.Button, obj7);
-  obj5.children = items2;
-  obj4.children = timestampProducer(Stack_Stack.Stack, obj5);
-  items1[1] = hasOwnProperty(common_SafeAreaView.SafeAreaPaddingView, obj4);
-  obj.children = items1;
-  return timestampProducer(React4, obj);
+  obj10.text = intl2.string(util.t["ETE/oC"]);
+  obj10.onPress = onClose;
+  items2[1] = hasOwnProperty(components_Button_Button.Button, obj10);
+  obj8.children = items2;
+  obj7.children = timestampProducer(Stack_Stack.Stack, obj8);
+  items1[1] = hasOwnProperty(common_SafeAreaView.SafeAreaPaddingView, obj7);
+  obj2.children = items1;
+  return timestampProducer(React4, obj2);
 };

@@ -2,15 +2,20 @@
 import nativeDefault from "../../../../../../../../discord_common/js/packages/tokens/native.tsx";
 import deepmerge from "../utils/deepmerge.tsx";
 
-let obj = {
+const obj = {
   layout: {
     margin: { marginVertical: 2 },
     marginPanels: { marginVertical: 2 },
     marginThread: { marginVertical: 2, marginLeft: 76 },
   },
-  container: null,
-  category: null,
-  voiceUsers: null,
+  container: {
+    borderRadius: nativeDefault.radii.lg,
+    padding: { paddingVertical: 8 },
+    paddingPanels: { paddingVertical: 8 },
+    paddingThread: { paddingVertical: 6, paddingLeft: 8 },
+  },
+  category: { margin: { marginTop: 24 } },
+  voiceUsers: { height: 40, margin: { marginTop: -4, marginLeft: 80 } },
   voiceOrStageSummaryRow: null,
   messagePreview: null,
   inviteRow: null,
@@ -23,34 +28,31 @@ let obj = {
   typing: null,
   separator: null,
 };
-obj = {
+const obj2 = {
   borderRadius: nativeDefault.radii.lg,
   padding: { paddingVertical: 8 },
   paddingPanels: { paddingVertical: 8 },
   paddingThread: { paddingVertical: 6, paddingLeft: 8 },
 };
-obj.container = obj;
-obj.category = { margin: { marginTop: 24 } };
-obj.voiceUsers = { height: 40, margin: { marginTop: -4, marginLeft: 80 } };
-obj = { size: 32, avatarSize: fn(1178).AvatarSizes.REFRESH_MEDIUM_32 };
-obj.voiceOrStageSummaryRow = obj;
+obj.voiceOrStageSummaryRow = { size: 32, avatarSize: fn(1176).AvatarSizes.REFRESH_MEDIUM_32 };
+const obj3 = { size: 32, avatarSize: fn(1176).AvatarSizes.REFRESH_MEDIUM_32 };
 obj.messagePreview = {
   text: { variant: "redesign/message-preview/medium" },
-  messageTypeIconSize: fn(1178).IconSizes.REFRESH_SMALL_16,
+  messageTypeIconSize: fn(1176).IconSizes.REFRESH_SMALL_16,
   messageTypeIconSizeNew: "xs",
   height: 18,
   margin: { marginTop: 2 },
 };
 obj.inviteRow = { text: { variant: "text-md/semibold" } };
-const obj1 = {
+const obj4 = {
   text: { variant: "redesign/message-preview/medium" },
-  messageTypeIconSize: fn(1178).IconSizes.REFRESH_SMALL_16,
+  messageTypeIconSize: fn(1176).IconSizes.REFRESH_SMALL_16,
   messageTypeIconSizeNew: "xs",
   height: 18,
   margin: { marginTop: 2 },
 };
 obj.icon = {
-  avatarSize: fn(1178).AvatarSizes.LARGE_48,
+  avatarSize: fn(1176).AvatarSizes.LARGE_48,
   guildIconSize: fn(5665).GuildIconSizes.LARGE,
   guildBadgeIconSize: fn(5665).GuildIconSizes.XSMALL_20,
   wrapper: { size: 48 },
@@ -60,13 +62,13 @@ obj.icon = {
 };
 obj.unreadBadge = { positionThread: { left: -68 } };
 obj.mentionBadge = { position: { top: 34 }, positionThread: { top: 27 } };
-const obj3 = {
+const obj6 = {
   text: { variant: "text-sm/bold" },
   layout: { paddingVertical: 6, paddingRight: 12, paddingLeft: 12, height: 32 },
   icon: null,
 };
-const obj2 = {
-  avatarSize: fn(1178).AvatarSizes.LARGE_48,
+const obj5 = {
+  avatarSize: fn(1176).AvatarSizes.LARGE_48,
   guildIconSize: fn(5665).GuildIconSizes.LARGE,
   guildBadgeIconSize: fn(5665).GuildIconSizes.XSMALL_20,
   wrapper: { size: 48 },
@@ -74,12 +76,12 @@ const obj2 = {
   margin: { marginRight: 12 },
   emoji: { size: 24, lineHeight: 32 },
 };
-obj3.icon = { size: fn(1178).IconSizes.REFRESH_SMALL_16, gameSize: fn(7275).GameIconSizes.SMALL };
-obj.joinVoiceButton = obj3;
-const obj5 = { left: 48, startAndEndHeight: 16, transform: null, topOffset: -6 };
+obj6.icon = { size: fn(1176).IconSizes.REFRESH_SMALL_16, gameSize: fn(7275).GameIconSizes.SMALL };
+obj.joinVoiceButton = obj6;
+const obj8 = { left: 48, startAndEndHeight: 16, transform: null, topOffset: -6 };
 const items = [{ translateY: 0 }];
-obj5.transform = items;
-obj.threadSpine = obj5;
+obj8.transform = items;
+obj.threadSpine = obj8;
 obj.happeningNow = { margin: { marginBottom: 20 } };
 obj.typing = {
   position: { top: 12, left: 12 },
@@ -88,17 +90,17 @@ obj.typing = {
 };
 obj.separator = { margin: { marginVertical: 20 } };
 const importDefaultResultResult = deepmerge(fn(10252).CHANNEL_LIST_STYLES_COMPACT, obj);
-const obj4 = { size: fn(1178).IconSizes.REFRESH_SMALL_16, gameSize: fn(7275).GameIconSizes.SMALL };
-const obj6 = {
-  position: { top: 12, left: 12 },
-  positionThread: { top: 3, left: -17 },
-  typingIndicator: { position: { top: 25, left: 11 } },
-};
-const obj7 = {
+const obj10 = {
   layout: { marginThread: { marginLeft: 0 } },
   container: { paddingThread: { paddingLeft: 20 } },
   unreadBadge: { positionThread: { left: 4 } },
   mentionBadge: { positionThread: { top: 34 } },
+};
+const obj7 = { size: fn(1176).IconSizes.REFRESH_SMALL_16, gameSize: fn(7275).GameIconSizes.SMALL };
+const obj9 = {
+  position: { top: 12, left: 12 },
+  positionThread: { top: 3, left: -17 },
+  typingIndicator: { position: { top: 25, left: 11 } },
 };
 const size = fn(2);
 const result = size.fileFinishedImporting(

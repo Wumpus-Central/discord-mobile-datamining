@@ -8,14 +8,17 @@ const result = size.fileFinishedImporting(
 
 export default function getFastestListVisibleItemsWithErrorChecking(listId, sectionStart, sections) {
   if (tmp) {
-    let obj = { listId, sections, visibleItems: sectionStart };
-    obj.logFastestListError("Visible items `sectionStart/End` is greater than the number of sections", obj);
+    const obj2 = { listId, sections, visibleItems: sectionStart };
+    FastestListLogger.logFastestListError(
+      "Visible items `sectionStart/End` is greater than the number of sections",
+      obj2,
+    );
   }
   if (tmp5) {
-    obj = { listId, sections, visibleItems: sectionStart };
+    const obj4 = { listId, sections, visibleItems: sectionStart };
     FastestListLogger.logFastestListError(
       "Visible items `itemStart/End` is greater than the number of items in the first section",
-      obj,
+      obj4,
     );
   }
   return sectionStart;

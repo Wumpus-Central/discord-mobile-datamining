@@ -5,7 +5,7 @@ import MessageActionCreatorsDefault from "../../actions/MessageActionCreators.ts
 import InteractionActionCreators from "../interactions/InteractionActionCreators.tsx";
 
 require = fn;
-let InteractionModalState = {
+const InteractionModalState = {
   IN_FLIGHT: 0,
   [0]: "IN_FLIGHT",
   ERRORED: 1,
@@ -23,7 +23,7 @@ InteractionModalStore.prototype["getModalState"] = function getModalState(arg0) 
   return tmp;
 };
 InteractionModalStore.displayName = "InteractionModalStore";
-InteractionModalState = {
+const interactionModalStore = new InteractionModalStore(DispatcherDefault, {
   LOGOUT: function handleInit() {
     c3 = null;
     ERRORED = null;
@@ -161,8 +161,7 @@ InteractionModalState = {
     }
     return flag;
   },
-};
-const interactionModalStore = new InteractionModalStore(DispatcherDefault, InteractionModalState);
+});
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/interaction_components/InteractionModalStore.tsx");
 

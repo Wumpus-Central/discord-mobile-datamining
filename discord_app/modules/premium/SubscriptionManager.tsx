@@ -9,7 +9,7 @@ import AutomaticLifecycleManager from "../../lib/AutomaticLifecycleManager.tsx";
 let require = fn;
 const PremiumConstants = fn(1373);
 ({ PREMIUM_SUBSCRIPTION_APPLICATION: closure_7, PremiumTypes: closure_8 } = PremiumConstants);
-let prototype = function SubscriptionManager() {
+const prototype = function SubscriptionManager() {
   let applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
   require = applyArgumentsResult;
   applyArgumentsResult.actions = {
@@ -27,8 +27,8 @@ let prototype = function SubscriptionManager() {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -41,8 +41,8 @@ let prototype = function SubscriptionManager() {
             throw value;
           } else if (arg0 === 2) {
             currentUser = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj4 = { value, done: true };
+            return obj4;
           } else {
             dependencyMap = tmp5;
             let premiumSubscription;
@@ -53,11 +53,10 @@ let prototype = function SubscriptionManager() {
                 isSubscriptionFetching = BillingInfoStore.isSubscriptionFetching;
               }
               if (!isSubscriptionFetching) {
-                let obj2 = tmp2(4960);
                 c2 = 1;
                 currentUser = 1;
-                const obj1 = { value: obj2.fetchSubscriptions(), done: false };
-                return obj1;
+                const obj6 = { value: tmp2(4960).fetchSubscriptions(), done: false };
+                return obj6;
               }
             }
             currentUser = 3;
@@ -69,15 +68,15 @@ let prototype = function SubscriptionManager() {
             throw value;
           } else if (arg0 === 2) {
             currentUser = 3;
-            obj2 = { value, done: true };
-            return obj2;
+            const obj7 = { value, done: true };
+            return obj7;
           }
         } else if (arg0 === 1) {
           currentUser = 3;
           throw value;
         } else if (arg0 === 2) {
           currentUser = 3;
-          obj = { value, done: true };
+          const obj = { value, done: true };
           return obj;
         }
         premiumSubscription = isFetchingMostRecentSubscription.getPremiumSubscription();
@@ -93,8 +92,8 @@ let prototype = function SubscriptionManager() {
         if (!hasItem) {
           c2 = 2;
           currentUser = 1;
-          const obj3 = { value: tmp2(7503).fetchUserEntitlementsForApplication(closure_1_7), done: false };
-          return obj3;
+          const obj8 = { value: tmp2(7503).fetchUserEntitlementsForApplication(closure_1_7), done: false };
+          return obj8;
         }
       } catch (tmp22) {
         currentUser = tmp;
@@ -138,8 +137,8 @@ let prototype = function SubscriptionManager() {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -152,8 +151,8 @@ let prototype = function SubscriptionManager() {
             throw value;
           } else if (arg0 === 2) {
             v3 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
             currentUser = currentUser.getCurrentUser();
             let isPremiumResult = v3(dependencyMap[7]).isPremium(currentUser);
@@ -163,8 +162,8 @@ let prototype = function SubscriptionManager() {
             if (isPremiumResult) {
               dependencyMap = 1;
               v3 = 1;
-              const obj1 = { value: applyArgumentsResult.fetchCountryCode(), done: false };
-              return obj1;
+              const obj4 = { value: applyArgumentsResult.fetchCountryCode(), done: false };
+              return obj4;
             }
             const obj5 = v3(dependencyMap[7]);
           }
@@ -173,7 +172,7 @@ let prototype = function SubscriptionManager() {
           throw value;
         } else if (arg0 === 2) {
           v3 = 3;
-          obj = { value, done: true };
+          const obj = { value, done: true };
           return obj;
         }
         v3 = 3;
@@ -192,8 +191,8 @@ let prototype = function SubscriptionManager() {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj3 = { value, done: true };
+        return obj3;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -206,14 +205,14 @@ let prototype = function SubscriptionManager() {
             throw value;
           } else if (arg0 === 2) {
             c2 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj4 = { value, done: true };
+            return obj4;
           } else {
             applyArgumentsResult = tmp4;
             dependencyMap = 1;
             c2 = 1;
-            let obj1 = { value: applyArgumentsResult(4960).fetchIpCountryCode(), done: false };
-            return obj1;
+            const obj6 = { value: applyArgumentsResult(4960).fetchIpCountryCode(), done: false };
+            return obj6;
           }
         } else {
           if (1 === tmp4) {
@@ -222,21 +221,20 @@ let prototype = function SubscriptionManager() {
               throw value;
             } else if (arg0 === 2) {
               c2 = 3;
-              const obj2 = { value, done: true };
-              return obj2;
+              const obj7 = { value, done: true };
+              return obj7;
             } else if (null != ipCountryCode.ipCountryCode) {
-              obj1 = applyArgumentsResult(4960);
               dependencyMap = 2;
               c2 = 1;
-              const obj3 = { value: obj1.fetchPaymentSources(), done: false };
-              return obj3;
+              const obj8 = { value: applyArgumentsResult(4960).fetchPaymentSources(), done: false };
+              return obj8;
             }
           } else if (arg0 === 1) {
             c2 = 3;
             throw value;
           } else if (arg0 === 2) {
             c2 = 3;
-            obj = { value, done: true };
+            const obj = { value, done: true };
             return obj;
           }
           c2 = 3;
@@ -251,8 +249,8 @@ let prototype = function SubscriptionManager() {
   return applyArgumentsResult;
 }.prototype;
 class prototype extends tmp3 {}
-prototype = new prototype();
+const prototype1 = new prototype();
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/premium/SubscriptionManager.tsx");
 
-export default prototype;
+export default prototype1;

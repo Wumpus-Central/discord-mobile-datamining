@@ -17,8 +17,8 @@ function canFetchNitroProgramReward() {
     str = "ProgramRewardsUtils";
   }
   if (ProgramRewardsTypes.RewardProgram.NITRO === NITRO) {
-    let tmpResult = PremiumRewardsOrbsExperiment;
-    let flag = tmpResult.getPremiumRewardsOrbsExperiment(str).isInTreatment;
+    let flag = PremiumRewardsOrbsExperiment.getPremiumRewardsOrbsExperiment(str).isInTreatment;
+    const tmpResult = PremiumRewardsOrbsExperiment;
   } else {
     flag = false;
     if (ProgramRewardsTypes.RewardProgram.XBOX === NITRO) {
@@ -27,8 +27,8 @@ function canFetchNitroProgramReward() {
   }
   if (flag) {
     const currentUser = UserStore.getCurrentUser();
-    tmpResult = PremiumUtils;
-    flag = tmpResult.isPremiumExactly(currentUser, PremiumTypes.TIER_2);
+    flag = PremiumUtils.isPremiumExactly(currentUser, PremiumTypes.TIER_2);
+    const tmpResult2 = PremiumUtils;
   }
   return flag;
 }
@@ -42,8 +42,8 @@ function canFetchXboxProgramReward() {
     str = "ProgramRewardsUtils";
   }
   if (ProgramRewardsTypes.RewardProgram.NITRO === XBOX) {
-    let tmpResult = PremiumRewardsOrbsExperiment;
-    let flag = tmpResult.getPremiumRewardsOrbsExperiment(str).isInTreatment;
+    let flag = PremiumRewardsOrbsExperiment.getPremiumRewardsOrbsExperiment(str).isInTreatment;
+    const tmpResult = PremiumRewardsOrbsExperiment;
   } else {
     flag = false;
     if (ProgramRewardsTypes.RewardProgram.XBOX === XBOX) {
@@ -51,15 +51,15 @@ function canFetchXboxProgramReward() {
     }
   }
   if (flag) {
-    tmpResult = useHasXboxMonthlyOrbsPerk;
-    flag = tmpResult.hasCrepeMonthlyOrbsPerk(UserStore.getCurrentUser());
+    flag = useHasXboxMonthlyOrbsPerk.hasCrepeMonthlyOrbsPerk(UserStore.getCurrentUser());
+    const tmpResult2 = useHasXboxMonthlyOrbsPerk;
   }
   return flag;
 }
 const PremiumTypes = fn(1373).PremiumTypes;
 const dependencyMap = {
-  [fn(13816).RewardProgram.NITRO]: canFetchNitroProgramReward,
-  [fn(13816).RewardProgram.XBOX]: canFetchXboxProgramReward,
+  [fn(13817).RewardProgram.NITRO]: canFetchNitroProgramReward,
+  [fn(13817).RewardProgram.XBOX]: canFetchXboxProgramReward,
 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/rewards/ProgramRewardsUtils.tsx");

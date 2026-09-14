@@ -1,6 +1,8 @@
 // discord_app/modules/guild_role_subscriptions/useSubscriptionRole.tsx
 import GuildRoleStore from "../../stores/GuildRoleStore.tsx";
 
+const require = globalThis.__r;
+
 const require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_role_subscriptions/useSubscriptionRole.tsx");

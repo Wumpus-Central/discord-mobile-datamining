@@ -398,16 +398,15 @@ class UserSearchManager extends tmp2 {
     };
     applyArgumentsResult._handleConnectionOpen = function _handleConnectionOpen() {
       const timerId = setTimeout(() => {
-        let obj = authStore;
         const currentUser = authStore.getCurrentUser();
         if (null != currentUser) {
           const tmp11 = getTransformedUser(currentUser);
-          obj = {};
-          obj[tmp11.id] = tmp11;
+          const obj3 = {};
+          obj3[tmp11.id] = tmp11;
           const _Object2 = Object;
-          const values = Object.values(obj.getUsers());
+          const values = Object.values(authStore.getUsers());
           const item = values.forEach((id) => {
-            obj[id.id] = closure_2_12(id);
+            obj3[id.id] = closure_2_12(id);
           });
           mutableAllGuildsAndMembers = mutableAllGuildsAndMembers.getMutableAllGuildsAndMembers();
           for (const key10004 in mutableAllGuildsAndMembers) {
@@ -417,7 +416,7 @@ class UserSearchManager extends tmp2 {
             } else {
               let tmp3 = keys[tmp];
               while (tmp3 !== undefined) {
-                let tmp20 = obj[tmp3];
+                let tmp20 = obj3[tmp3];
                 let tmp21 = mutableAllGuildsAndMembers[key10004][tmp3];
                 let nick;
                 if (tmp21 != null) {
@@ -451,7 +450,7 @@ class UserSearchManager extends tmp2 {
             continue;
           }
           const _Object = Object;
-          closure_1_0.updateUsers(Object.values(obj), "connection_open");
+          closure_1_0.updateUsers(Object.values(obj3), "connection_open");
         }
       }, 3000);
     };
@@ -693,7 +692,7 @@ class UserSearchManager extends tmp2 {
         if (0 !== arr.length) {
           let tmp7 = getTransformedUser(UserStore.getCurrentUser());
           let tmp10 = setNick(tmp7, tmp2.id);
-          arr = arr2.push(tmp7);
+          let arr3 = arr2.push(tmp7);
           let updateUsersResult = applyArgumentsResult.updateUsers(arr2, "dm_updates");
         }
         continue;
@@ -727,14 +726,14 @@ class UserSearchManager extends tmp2 {
       let item = values.forEach((item) => {
         ({ first_message, most_recent_message, owner } = item);
         if (null != first_message) {
-          let obj = { message: first_message, nicknameContextId: guildId };
+          const obj = { message: first_message, nicknameContextId: guildId };
           item = getUsersFromMessage(obj).forEach((item) => items1.push(item));
           const arr = getUsersFromMessage(obj);
         }
         if (null != most_recent_message) {
-          obj = { message: most_recent_message, nicknameContextId: guildId };
-          const item1 = getUsersFromMessage(obj).forEach((item) => items1.push(item));
-          const arr2 = getUsersFromMessage(obj);
+          const obj2 = { message: most_recent_message, nicknameContextId: guildId };
+          const item1 = getUsersFromMessage(obj2).forEach((item) => items1.push(item));
+          const arr2 = getUsersFromMessage(obj2);
         }
         if (null != owner) {
           items = [owner];
@@ -896,8 +895,8 @@ prototype2["updateUsers"] = function updateUsers(arr, action) {
       }
       if (null == id) {
         let obj3 = SentryUtilsDefault;
-        let obj = { action: arg1, userFields: null };
-        obj = {
+        let obj2 = { action: arg1, userFields: null };
+        let obj4 = {
           userIsNull: null == item10007,
           idIsNull: true,
           usernameIsNull: null,
@@ -911,35 +910,31 @@ prototype2["updateUsers"] = function updateUsers(arr, action) {
         if (item10007 != null) {
           username = item10007.username;
         }
-        obj.usernameIsNull = null == username;
+        obj4.usernameIsNull = null == username;
         let isBot;
         if (item10007 != null) {
           isBot = item10007.isBot;
         }
-        obj.isBot = isBot;
+        obj4.isBot = isBot;
         let isFriend;
         if (item10007 != null) {
           isFriend = item10007.isFriend;
         }
-        obj.isFriend = isFriend;
+        obj4.isFriend = isFriend;
         let isProvisional;
         if (item10007 != null) {
           isProvisional = item10007.isProvisional;
         }
-        obj.isProvisional = isProvisional;
+        obj4.isProvisional = isProvisional;
         let globalName;
         if (item10007 != null) {
           globalName = item10007.globalName;
         }
-        obj = {
-          category: "debug",
-          message: "User missing id",
-          data: null,
-          globalNameIsNull: null == globalName,
-          usersArrayLength: found.length,
-        };
-        obj.userFields = obj;
-        obj.data = obj;
+        let obj = { category: "debug", message: "User missing id", data: null };
+        obj4.globalNameIsNull = null == globalName;
+        obj4.usersArrayLength = found.length;
+        obj2.userFields = obj4;
+        obj.data = obj2;
         let addBreadcrumbResult = obj3.addBreadcrumb(obj);
       }
       continue;
@@ -984,7 +979,7 @@ prototype2["getUserSearchContext"] = function getUserSearchContext(parseUserResu
       }
     };
     obj._worker = _worker;
-    obj._uuid = obj(1256).v4();
+    obj._uuid = obj(1254).v4();
     obj._callback = parseUserResults;
     obj._limit = num;
     obj._currentQuery = null;

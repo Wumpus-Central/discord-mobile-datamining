@@ -8,25 +8,23 @@ import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const ScrollView = fn(17).ScrollView;
-let closure_4 = fn(16659).ONBOARDING_HOME_RESOURCES_SHEET_KEY;
+let closure_4 = fn(16661).ONBOARDING_HOME_RESOURCES_SHEET_KEY;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-fn(4636);
-let createStyles = {
+const createStyles = fn(4636);
+let obj2 = {
   container: { display: "flex", flexDirection: "row", paddingBottom: 8, marginBottom: 16 },
-  channelItem: null,
+  channelItem: {
+    display: "flex",
+    justifyContent: "center",
+    backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST,
+    borderRadius: nativeDefault.radii.round,
+    marginLeft: 8,
+    paddingVertical: 8,
+    paddingHorizontal: 12,
+  },
 };
-createStyles = {
-  display: "flex",
-  justifyContent: "center",
-  backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST,
-  borderRadius: nativeDefault.radii.round,
-  marginLeft: 8,
-  paddingVertical: 8,
-  paddingHorizontal: 12,
-};
-createStyles.channelItem = createStyles;
-let closure_7 = createStyles.createStyles(createStyles);
+let closure_7 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_onboarding_home/native/ResourcesRow.tsx");
 
@@ -40,7 +38,7 @@ export default function ResourcesRow(guildId) {
   const items = [
     substr.map((children) => {
       const channelId = children;
-      let obj = {
+      const obj = {
         style: channelItem.channelItem,
         onPress() {
           const homeResourceChannel = GuildOnboardingHomeActionCreators.selectHomeResourceChannel(
@@ -48,29 +46,30 @@ export default function ResourcesRow(guildId) {
             channelId.channelId,
           );
         },
-        children: null,
+        children: closure_1_5(guildId(4632).Text, {
+          variant: "text-md/medium",
+          color: "text-default",
+          children: children.title,
+        }),
       };
-      obj = { variant: "text-md/medium", color: "text-default", children: children.title };
-      obj.children = closure_1_5(guildId(4632).Text, obj);
       return closure_1_5(guildId(5204).PressableOpacity, obj, children.channelId);
     }),
   ];
   let tmp6 = null;
   if (tmp3) {
-    obj = {
+    const obj2 = {
       style: tmp.channelItem,
       onPress() {
-        const obj = { guildId };
-        obj.openLazy(asyncRequireImpl(16661, dependencyMap.paths), closure_4, obj);
+        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(16663, dependencyMap.paths), closure_4, { guildId });
       },
       children: null,
     };
-    obj = { variant: "text-md/medium", color: "text-default", children: null };
+    const obj3 = { variant: "text-md/medium", color: "text-default", children: null };
     const intl = guildId(1114).intl;
-    const obj1 = { count: arr.length - 2 };
-    obj.children = intl.format(guildId(1114).t.F6iMs4, obj1);
-    obj.children = closure_5(guildId(4632).Text, obj);
-    tmp6 = closure_5(guildId(5204).PressableOpacity, obj);
+    const obj4 = { count: arr.length - 2 };
+    obj3.children = intl.format(guildId(1114).t.F6iMs4, obj4);
+    obj2.children = closure_5(guildId(4632).Text, obj3);
+    tmp6 = closure_5(guildId(5204).PressableOpacity, obj2);
   }
   items[1] = tmp6;
   obj.children = items;

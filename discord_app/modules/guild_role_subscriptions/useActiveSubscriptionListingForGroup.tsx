@@ -6,6 +6,8 @@ import SubscriptionPlanStore from "../../stores/billing/SubscriptionPlanStore.ts
 import SubscriptionStore from "../../stores/billing/SubscriptionStore.tsx";
 import GuildRoleSubscriptionsStore from "GuildRoleSubscriptionsStore.tsx";
 
+const require = globalThis.__r;
+
 require = fn;
 const SubscriptionTypes = fn(1074).SubscriptionTypes;
 const size = fn(2);
@@ -65,8 +67,8 @@ export default function useActiveSubscriptionListingForGroup(arg0) {
           obj.return();
           break;
         }
-        let obj = { activeSubscription: tmp2, activeSubscriptionListing: tmp };
-        return obj;
+        let obj2 = { activeSubscription: tmp2, activeSubscriptionListing: tmp };
+        return obj2;
       }
       continue;
     }

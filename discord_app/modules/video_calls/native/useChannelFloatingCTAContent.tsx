@@ -4,6 +4,8 @@ import noop from "../../../../_runtime/metro/00019__.js";
 import MediaEngineStore from "../../../stores/MediaEngineStore.tsx";
 import RTCConnectionStore from "../../../stores/RTCConnectionStore.tsx";
 
+const require = globalThis.__r;
+
 require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/video_calls/native/useChannelFloatingCTAContent.tsx");

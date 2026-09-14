@@ -31,10 +31,11 @@ import _mod2686 from "../../../../_runtime/metro/02686__.js";
 import _mod2687 from "../../../../_runtime/metro/02687__.js";
 import _mod2688 from "../../../../_runtime/metro/02688__.js";
 import _mod2689 from "../../../../_runtime/metro/02689__.js";
-import 01155__ from "../../../../_runtime/metro/01155__.js";
+import module_1153_mod from "../../../../_runtime/metro/01153__.js";
 import size from "../../../../_runtime/metro/00002__.js";
 
-const loader = module_1155.createLoader({
+let module_1153 = module_1153_mod;
+const loader = module_1153.createLoader({
   bg() {
     const jsonAsset = AssetJsonUtils.loadJsonAsset(_mod2659);
     return jsonAsset.then((result) => ({ default: result }));
@@ -160,7 +161,8 @@ const loader = module_1155.createLoader({
     return jsonAsset.then((result) => ({ default: result }));
   }
 }, "en-US");
-const messagesProxy = module_1155.makeMessagesProxy(loader);
+let module_1153 = module_1153_mod;
+const messagesProxy = module_1153.makeMessagesProxy(loader);
 const result = size.fileFinishedImporting("modules/feedback/intl/Feedback.messages.js");
 
 export default messagesProxy;

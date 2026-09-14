@@ -5,8 +5,8 @@ import RequestYourDataSetting from "RequestYourDataSetting.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-fn(11601);
-let SettingBuilders = {
+const SettingBuilders = fn(11602);
+const route = SettingBuilders.createRoute({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.OAuOHD);
@@ -26,9 +26,8 @@ let SettingBuilders = {
       return true;
     }, []);
   },
-};
-SettingBuilders = SettingBuilders.createRoute(SettingBuilders);
+});
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/DataAndPrivacySetting.tsx");
 
-export default SettingBuilders;
+export default route;

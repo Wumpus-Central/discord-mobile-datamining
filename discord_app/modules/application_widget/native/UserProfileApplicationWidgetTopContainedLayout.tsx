@@ -10,11 +10,16 @@ get_ActivityIndicator = fn(17);
 ({ Image: c2, View: c3 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-fn(4636);
-let createStyles = { contentRow: null, text: null, imageContainer: null, image: null, imageSkeleton: null };
-createStyles = { flexDirection: "row", gap: nativeDefault.space.PX_12, alignItems: "center" };
-createStyles.contentRow = createStyles;
-createStyles.text = { flex: 1, gap: nativeDefault.space.PX_4 };
+const createStyles = fn(4636);
+let obj2 = {
+  contentRow: { flexDirection: "row", gap: nativeDefault.space.PX_12, alignItems: "center" },
+  text: null,
+  imageContainer: null,
+  image: null,
+  imageSkeleton: null,
+};
+let obj3 = { flexDirection: "row", gap: nativeDefault.space.PX_12, alignItems: "center" };
+obj2.text = { flex: 1, gap: nativeDefault.space.PX_4 };
 let size = {
   width: 96,
   height: 96,
@@ -26,11 +31,11 @@ let size = {
   borderColor: nativeDefault.colors.BORDER_SUBTLE,
   backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE,
 };
-createStyles.imageContainer = size;
-createStyles.image = { width: "100%", height: "100%" };
+obj2.imageContainer = size;
+obj2.image = { width: "100%", height: "100%" };
 const size1 = { width: 96, height: 96, marginTop: nativeDefault.space.PX_12, marginBottom: nativeDefault.space.PX_16 };
-createStyles.imageSkeleton = size1;
-let closure_6 = createStyles.createStyles(createStyles);
+obj2.imageSkeleton = size1;
+let closure_6 = createStyles.createStyles(obj2);
 size = fn(2);
 const result = size.fileFinishedImporting(
   "modules/application_widget/native/UserProfileApplicationWidgetTopContainedLayout.tsx",
@@ -39,29 +44,25 @@ const result = size.fileFinishedImporting(
 export default function UserProfileApplicationWidgetTopContainedLayout(header) {
   ({ topConfig, resolveFieldValue, numberFormat } = header);
   const tmp = closure_6();
-  let obj = resolvedValuesFromUserApplicationIdentityProfile;
-  const textComponentValues = obj.resolveTextComponentValues(
+  const textComponentValues = resolvedValuesFromUserApplicationIdentityProfile.resolveTextComponentValues(
     topConfig.components.title,
     resolveFieldValue,
     numberFormat,
     true,
   );
-  let obj1 = resolvedValuesFromUserApplicationIdentityProfile;
-  const textComponentValues1 = obj1.resolveTextComponentValues(
+  const textComponentValues1 = resolvedValuesFromUserApplicationIdentityProfile.resolveTextComponentValues(
     topConfig.components.subtitle_1,
     resolveFieldValue,
     numberFormat,
   );
-  let obj2 = resolvedValuesFromUserApplicationIdentityProfile;
-  const textComponentValues2 = obj2.resolveTextComponentValues(
+  const textComponentValues2 = resolvedValuesFromUserApplicationIdentityProfile.resolveTextComponentValues(
     topConfig.components.subtitle_2,
     resolveFieldValue,
     numberFormat,
   );
-  let obj3 = resolvedValuesFromUserApplicationIdentityProfile;
   const contained_image = topConfig.components.contained_image;
   let image;
-  const textComponentValues3 = obj3.resolveTextComponentValues(
+  const textComponentValues3 = resolvedValuesFromUserApplicationIdentityProfile.resolveTextComponentValues(
     topConfig.components.subtitle_3,
     resolveFieldValue,
     numberFormat,
@@ -72,8 +73,8 @@ export default function UserProfileApplicationWidgetTopContainedLayout(header) {
   const items = [resolvedValuesFromUserApplicationIdentityProfile.ResolvedValueType.MEDIA];
   const fieldValue = resolveFieldValue(image, items);
   const items1 = [header.header];
-  obj = { style: tmp.contentRow, children: null };
-  obj = { style: tmp.text, children: null };
+  const obj5 = { style: tmp.contentRow, children: null };
+  const obj6 = { style: tmp.text, children: null };
   const items2 = [
     React4(UserProfileApplicationWidgetFieldUtils.FieldText, {
       field: textComponentValues,
@@ -96,24 +97,24 @@ export default function UserProfileApplicationWidgetTopContainedLayout(header) {
       color: "text-muted",
     }),
   ];
-  obj.children = items2;
-  const items3 = [hasOwnProperty(React3, obj)];
+  obj6.children = items2;
+  const items3 = [hasOwnProperty(React3, obj6)];
   if (null != fieldValue) {
-    obj1 = { style: tmp.imageContainer, children: null };
-    obj2 = { source: null, style: null, resizeMode: "contain" };
-    obj3 = { uri: fieldValue.media.url };
-    obj2.source = obj3;
-    obj2.style = tmp.image;
-    obj1.children = React4(React2, obj2);
-    let tmp12Result = React4(React3, obj1);
+    const obj7 = { style: tmp.imageContainer, children: null };
+    const obj8 = { source: null, style: null, resizeMode: "contain" };
+    const obj9 = { uri: fieldValue.media.url };
+    obj8.source = obj9;
+    obj8.style = tmp.image;
+    obj7.children = React4(React2, obj8);
+    let tmp12Result = React4(React3, obj7);
   } else {
-    const obj4 = { style: tmp.imageSkeleton };
-    tmp12Result = React4(UserProfileApplicationWidgetSkeletons.ImageSkeleton, obj4);
+    const obj10 = { style: tmp.imageSkeleton };
+    tmp12Result = React4(UserProfileApplicationWidgetSkeletons.ImageSkeleton, obj10);
   }
-  const obj5 = { children: null };
+  const obj11 = { children: null };
   items3[1] = tmp12Result;
-  obj.children = items3;
-  items1[1] = hasOwnProperty(React3, obj);
-  obj5.children = items1;
-  return hasOwnProperty(React3, obj5);
+  obj5.children = items3;
+  items1[1] = hasOwnProperty(React3, obj5);
+  obj11.children = items1;
+  return hasOwnProperty(React3, obj11);
 }

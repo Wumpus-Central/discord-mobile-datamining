@@ -4,6 +4,8 @@ import _modDef2428 from "../../premium/powerups/GuildPowerups.messages.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import GameServerStore from "../GameServerStore.tsx";
 
+const require = globalThis.__r;
+
 require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_server/hooks/useGameServerPowerupStatus.tsx");
@@ -24,7 +26,7 @@ export default function useGameServerPowerupStatus(arg0) {
     },
     items1,
   );
-  const tmp2 = stateFromStores(12688)(arg0);
+  const tmp2 = stateFromStores(12689)(arg0);
   dependencyMap = tmp2;
   const items2 = [tmp2, stateFromStores];
   return noop.useMemo(() => {
@@ -34,13 +36,14 @@ export default function useGameServerPowerupStatus(arg0) {
     }
     if (0 !== Object.values(obj).length) {
       if (length.length > 0) {
-        obj = { type: "expiring", expiringAt: tmp[0].ends_at };
+        const obj2 = { type: "expiring", expiringAt: tmp[0].ends_at };
+        let obj3 = obj2;
       } else {
-        obj = { type: "active", statusText: null };
+        obj3 = { type: "active", statusText: null };
         const intl = util.intl;
-        obj.statusText = intl.string(_modDef2428.FFLkmx);
+        obj3.statusText = intl.string(_modDef2428.FFLkmx);
       }
-      return obj;
+      return obj3;
     }
   }, items2);
 }

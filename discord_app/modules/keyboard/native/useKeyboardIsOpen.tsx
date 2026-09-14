@@ -4,6 +4,8 @@ import KeyboardUIStoreDefault from "KeyboardUIStore.native.tsx";
 import KeyboardTypes from "KeyboardTypes.tsx";
 import subscribeToKeyboardUIStore from "subscribeToKeyboardUIStore.tsx";
 
+const require = globalThis.__r;
+
 require = fn;
 let closure_4 = {};
 const size = fn(2);

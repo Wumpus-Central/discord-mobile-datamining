@@ -16,12 +16,12 @@ const result = size.fileFinishedImporting("modules/parent_tools/native/FamilyCen
 
 export default function FamilyCenterLinkRow(children) {
   const otherUser = children.otherUser;
-  let obj = { userId: otherUser.id, children: null };
+  const obj = { userId: otherUser.id, children: null };
   const tmp = closure_6();
-  obj = { otherUser, status: UserLinkStatus.PENDING };
-  const items = [React4(FamilyCenterRequestorDetailsDefault, obj)];
-  obj = { style: tmp.actionContainer, children: children.actions };
-  items[1] = React4(View, obj);
+  const items = [
+    React4(FamilyCenterRequestorDetailsDefault, { otherUser, status: UserLinkStatus.PENDING }),
+    React4(View, { style: tmp.actionContainer, children: children.actions }),
+  ];
   obj.children = items;
   return hasOwnProperty(FamilyCenterLinkWrapperDefault, obj);
 }

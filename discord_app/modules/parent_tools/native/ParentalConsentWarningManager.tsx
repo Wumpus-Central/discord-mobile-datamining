@@ -45,7 +45,7 @@ function maybePresentModal(daysRemaining) {
   if (tmp5) {
     const obj = { daysRemaining };
     ActionSheetActionCreatorsDefault.openLazy(
-      asyncRequireImpl(17576, dependencyMap.paths),
+      asyncRequireImpl(17577, dependencyMap.paths),
       "ParentalConsentWarningModal",
       obj,
     );
@@ -54,7 +54,7 @@ function maybePresentModal(daysRemaining) {
 const FamilyCenterConstants = fn(7641);
 ({ UserLinkStatus: closure_7, UserLinkType: closure_8 } = FamilyCenterConstants);
 const AppStates = fn(1074).AppStates;
-let prototype = function ParentalConsentWarningManager() {
+const prototype = function ParentalConsentWarningManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
   applyArgumentsResult.actions = {
     PARENTAL_CONSENT_WARNING_FETCH_SUCCESS(warning) {
@@ -122,8 +122,8 @@ let prototype = function ParentalConsentWarningManager() {
   return applyArgumentsResult;
 }.prototype;
 class prototype extends tmp3 {}
-prototype = new prototype();
+const prototype1 = new prototype();
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/parent_tools/native/ParentalConsentWarningManager.tsx");
 
-export default prototype;
+export default prototype1;

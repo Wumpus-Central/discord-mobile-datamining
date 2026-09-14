@@ -9,6 +9,8 @@ import useScaledTextLineHeight from "../../screen/native/useScaledTextLineHeight
 import noop from "../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../a11y/AccessibilityStore.tsx";
 
+const require = globalThis.__r;
+
 require = fn;
 const View = fn(17).View;
 const AnalyticEvents = fn(1074).AnalyticEvents;
@@ -16,8 +18,8 @@ const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 let c9 = "text-sm/medium";
 let c10 = "redesign-channel-name-muted-text";
-const XSMALL_20 = fn(1178).AvatarSizes.XSMALL_20;
-fn(4636);
+const XSMALL_20 = fn(1176).AvatarSizes.XSMALL_20;
+const createStyles = fn(4636);
 let obj = {
   voiceState: { flex: 1, flexDirection: "row", alignItems: "center", paddingVertical: 5 },
   disabled: { opacity: 0.5 },
@@ -38,17 +40,17 @@ let size = {
   overflow: "hidden",
 };
 obj.voiceStateCollapsed = size;
-obj = { marginLeft: 6 };
 const ChannelListLayout = fn(10249);
 let merged = Object.assign(ChannelListLayout.makeSizeStyle(14));
-obj.voiceStateIcon = obj;
-const createStyles = { tintColor: nativeDefault.colors.REDESIGN_CHANNEL_NAME_MUTED_TEXT, marginLeft: 6 };
-obj.legacyVoiceStateIcon = createStyles;
+obj.voiceStateIcon = { marginLeft: 6 };
+obj.legacyVoiceStateIcon = { tintColor: nativeDefault.colors.REDESIGN_CHANNEL_NAME_MUTED_TEXT, marginLeft: 6 };
 obj.gameIcon = { marginLeft: 6 };
 let closure_12 = createStyles.createStyles(obj);
 const __initData = {
   code: "function VoiceUserItemTsx1(){const{ringing,shouldAnimate,PULSE_ENDING_OPACITY,withRepeat,withSequence,withDelay,INNER_PULSE_DELAY,withTiming,PULSE_DURATION,Easing,PULSE_STARTING_OPACITY,FADE_DURATION}=this.__closure;if(!ringing){return{opacity:1.0};}else if(!shouldAnimate){return{opacity:PULSE_ENDING_OPACITY};}return{opacity:withRepeat(withSequence(withDelay(INNER_PULSE_DELAY,withTiming(PULSE_ENDING_OPACITY,{duration:PULSE_DURATION,easing:Easing.bezier(0.4,0.0,1,1)})),withDelay(PULSE_DURATION,withTiming(PULSE_STARTING_OPACITY,{duration:FADE_DURATION}))),-1)};}",
 };
+let obj3 = { marginLeft: 6 };
+let obj4 = { tintColor: nativeDefault.colors.REDESIGN_CHANNEL_NAME_MUTED_TEXT, marginLeft: 6 };
 size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_sidebar/native/VoiceUserItem.tsx");
 
@@ -59,9 +61,9 @@ export default noop.memo(function VoiceUserItem(guildId) {
   ({ disabled, platform, isInEmbeddedActivity, ringing } = guildId);
   ({ collapsed, stream, serverMute, serverDeaf, mute, deaf, localMute, video, voicePlatform } = guildId);
   const tmp = closure_12();
-  let obj = require("initialize");
   const items = [stateFromStores];
-  stateFromStores = obj.useStateFromStores(items, () => !stateFromStores.useReducedMotion);
+  stateFromStores = require("initialize").useStateFromStores(items, () => !stateFromStores.useReducedMotion);
+  let obj = require("initialize");
   const first = user(guildId[12])(user.id, guildId, user(guildId[11])("channel_list"))[0];
   let application_id;
   if (first != null) {
@@ -79,23 +81,26 @@ export default noop.memo(function VoiceUserItem(guildId) {
   const gameRecord = user(tmp3[13])(application_id).gameRecord;
   const items1 = [guildId, channelId, application_id];
   const callback = channelId.useCallback(() => {
-    const obj = { guild_id: guildId, channel_id: channelId, application_id };
-    obj.track(AnalyticEvents.VOICE_CHANNEL_GAME_ACTIVITY_SHOWN, obj);
+    AnalyticsUtilsDefault.track(AnalyticEvents.VOICE_CHANNEL_GAME_ACTIVITY_SHOWN, {
+      guild_id: guildId,
+      channel_id: channelId,
+      application_id,
+    });
   }, items1);
-  let tmp2Result = require("ReanimatedRexport");
+  require("ReanimatedRexport");
   class A {
     constructor() {
       if (ringing) {
         tmp = closure_5;
         if (closure_5) {
-          obj = { opacity: null };
+          obj1 = { opacity: null };
           tmp2 = closure_0;
           tmp3 = closure_2;
           obj3 = closure_0(closure_2[15]);
           obj4 = closure_0(closure_2[15]);
           obj5 = closure_0(closure_2[15]);
           obj6 = closure_0(closure_2[16]);
-          obj1 = { duration: 250, easing: null };
+          obj10 = { duration: 250, easing: null };
           Easing = closure_0(closure_2[15]).Easing;
           num = 1;
           num2 = 0;
@@ -104,18 +109,19 @@ export default noop.memo(function VoiceUserItem(guildId) {
           num4 = 0.4;
           num5 = 1;
           num6 = 1;
-          obj1.easing = Easing.bezier(0.4, 0, 1, 1);
+          obj10.easing = Easing.bezier(0.4, 0, 1, 1);
           num7 = 100;
-          withDelayResult = obj5.withDelay(100, obj6.withTiming(0.4, obj1));
+          withDelayResult = obj5.withDelay(100, obj6.withTiming(0.4, obj10));
           obj8 = closure_0(closure_2[15]);
           obj9 = closure_0(closure_2[16]);
           num8 = 0.1;
           num9 = 250;
           num10 = -1;
-          obj.opacity = obj3.withRepeat(
+          obj1.opacity = obj3.withRepeat(
             obj4.withSequence(withDelayResult, obj8.withDelay(250, obj9.withTiming(0.1, { duration: 500 }))),
             -1,
           );
+          obj = obj1;
         } else {
           obj = { opacity: 0.4 };
         }
@@ -126,7 +132,8 @@ export default noop.memo(function VoiceUserItem(guildId) {
       return;
     }
   }
-  obj = {
+  const tmp6 = user(guildId[11])("channel_list");
+  A.__closure = {
     ringing,
     shouldAnimate: stateFromStores,
     PULSE_ENDING_OPACITY: 0.4,
@@ -140,30 +147,28 @@ export default noop.memo(function VoiceUserItem(guildId) {
     PULSE_STARTING_OPACITY: 0.1,
     FADE_DURATION: 500,
   };
-  A.__closure = obj;
   A.__workletHash = 9430639809025;
   A.__initData = __initData;
   if (collapsed) {
-    obj = { style: tmp.voiceStateCollapsed, children: null };
-    const obj1 = { source: getSource, size: XSMALL_20 };
-    obj.children = closure_7(require("native").Avatar, obj1);
-    let tmp12Result = closure_7(ringing, obj);
+    let obj3 = { style: tmp.voiceStateCollapsed, children: null };
+    let obj4 = { source: getSource, size: XSMALL_20 };
+    obj3.children = closure_7(require("native").Avatar, obj4);
+    let tmp12Result = closure_7(ringing, obj3);
   } else {
     const items2 = [tmp.voiceState, ,];
     let disabled2 = disabled;
     if (disabled) {
       disabled2 = tmp.disabled;
     }
-    const obj2 = { style: null, children: null };
+    let obj5 = { style: null, children: null };
     items2[1] = disabled2;
     items2[2] = tmp11;
-    obj2.style = items2;
-    let obj3 = { source: getSource, size: XSMALL_20 };
-    const items3 = [closure_7(require("native").Avatar, obj3), , , , , , , ,];
-    let obj4 = { variant, color };
-    let tmp5Result = user(tmp3[18]);
+    obj5.style = items2;
+    let obj6 = { source: getSource, size: XSMALL_20 };
+    const items3 = [closure_7(require("native").Avatar, obj6), , , , , , , ,];
+    let obj7 = { variant, color };
     const merged = Object.assign(guildId);
-    items3[1] = closure_7(tmp5Result, obj4);
+    items3[1] = closure_7(user(tmp3[18]), obj7);
     if (disabled) {
       items3[2] = null;
       if (disabled) {
@@ -172,83 +177,84 @@ export default noop.memo(function VoiceUserItem(guildId) {
         if (video) {
           tmp13Result = null;
           if (!disabled) {
-            let obj5 = { size: "custom", color, style: tmp.voiceStateIcon };
-            tmp13Result = closure_7(require("VideoIcon").VideoIcon, obj5);
+            let obj8 = { size: "custom", color, style: tmp.voiceStateIcon };
+            tmp13Result = closure_7(require("VideoIcon").VideoIcon, obj8);
           }
         }
         items3[4] = tmp13Result;
-        tmp13Result = null;
+        let tmp13Result7 = null;
         if (isInEmbeddedActivity) {
-          let obj6 = {
+          let obj9 = {
             source: user(tmp3[24]),
             size: require("native").Icon.Sizes.REFRESH_SMALL_16,
             style: tmp.legacyVoiceStateIcon,
           };
-          tmp13Result = closure_7(require("native").Icon, obj6);
+          tmp13Result7 = closure_7(require("native").Icon, obj9);
         }
-        items3[5] = tmp13Result;
-        tmp5Result = user(tmp3[25]);
+        items3[5] = tmp13Result7;
         if (platform == null) {
           platform = "";
         }
-        let tmp5Result1Result = tmp5Result(platform);
+        let tmp5Result1Result = user(tmp3[25])(platform);
         if (tmp5Result1Result == null) {
-          tmp2Result = require("getConsoleIcon");
-          tmp5Result1Result = tmp2Result.getConsoleIconForVoicePlatform(voicePlatform);
+          tmp5Result1Result = require("getConsoleIcon").getConsoleIconForVoicePlatform(voicePlatform);
+          const tmp2Result2 = require("getConsoleIcon");
         }
-        let tmp13Result1 = null;
+        let tmp13Result8 = null;
         if (null != tmp5Result1Result) {
-          const obj7 = {
+          const obj10 = {
             source: tmp5Result1Result,
             size: require("native").Icon.Sizes.REFRESH_SMALL_16,
             style: tmp.legacyVoiceStateIcon,
           };
-          tmp13Result1 = closure_7(require("native").Icon, obj7);
+          tmp13Result8 = closure_7(require("native").Icon, obj10);
         }
-        items3[6] = tmp13Result1;
-        let tmp13Result2 = null;
+        items3[6] = tmp13Result8;
+        let tmp13Result9 = null;
         if (stream) {
-          let obj8 = { style: tmp.legacyVoiceStateIcon };
-          tmp13Result2 = closure_7(require("native").LiveTag, obj8);
+          const obj11 = { style: tmp.legacyVoiceStateIcon };
+          tmp13Result9 = closure_7(require("native").LiveTag, obj11);
         }
-        items3[7] = tmp13Result2;
-        let tmp13Result3 = null;
+        items3[7] = tmp13Result9;
+        let tmp13Result10 = null;
         if (!disabled) {
-          tmp13Result3 = null;
+          tmp13Result10 = null;
           if (!isInEmbeddedActivity) {
-            tmp13Result3 = null;
+            tmp13Result10 = null;
             if (null != gameRecord) {
-              let obj9 = { game: gameRecord, size: 16, fallback: "none", style: tmp.gameIcon, onShown: callback };
-              tmp13Result3 = closure_7(user(tmp3[26]), obj9);
+              const obj12 = { game: gameRecord, size: 16, fallback: "none", style: tmp.gameIcon, onShown: callback };
+              tmp13Result10 = closure_7(user(tmp3[26]), obj12);
             }
           }
         }
-        items3[8] = tmp13Result3;
-        obj2.children = items3;
-        tmp12Result = closure_8(user(tmp3[15]).View, obj2);
+        items3[8] = tmp13Result10;
+        obj5.children = items3;
+        tmp12Result = closure_8(user(tmp3[15]).View, obj5);
+        const tmp5Result2 = user(tmp3[25]);
       } else if (serverDeaf) {
-        const obj10 = { style: tmp.voiceStateIcon, color: "text-feedback-critical", size: "custom" };
-        let tmp13Result4 = closure_7(require("HeadphonesDenyIcon").HeadphonesDenyIcon, obj10);
+        const obj13 = { style: tmp.voiceStateIcon, color: "text-feedback-critical", size: "custom" };
+        let tmp13Result11 = closure_7(require("HeadphonesDenyIcon").HeadphonesDenyIcon, obj13);
       } else {
-        tmp13Result4 = null;
+        tmp13Result11 = null;
         if (deaf) {
-          const obj11 = { style: tmp.voiceStateIcon, size: "custom", color };
-          tmp13Result4 = closure_7(require("HeadphonesSlashIcon").HeadphonesSlashIcon, obj11);
+          const obj14 = { style: tmp.voiceStateIcon, size: "custom", color };
+          tmp13Result11 = closure_7(require("HeadphonesSlashIcon").HeadphonesSlashIcon, obj14);
         }
       }
     } else if (serverMute) {
-      const obj12 = { style: tmp.voiceStateIcon, color: "text-feedback-critical", size: "custom" };
-      let tmp13Result5 = closure_7(require("MicrophoneDenyIcon").MicrophoneDenyIcon, obj12);
+      const obj15 = { style: tmp.voiceStateIcon, color: "text-feedback-critical", size: "custom" };
+      let tmp13Result12 = closure_7(require("MicrophoneDenyIcon").MicrophoneDenyIcon, obj15);
     } else if (localMute) {
-      const obj13 = { style: tmp.voiceStateIcon, size: "custom", color };
-      tmp13Result5 = closure_7(require("MicrophoneDenyIcon").MicrophoneDenyIcon, obj13);
+      const obj16 = { style: tmp.voiceStateIcon, size: "custom", color };
+      tmp13Result12 = closure_7(require("MicrophoneDenyIcon").MicrophoneDenyIcon, obj16);
     } else {
-      tmp13Result5 = null;
+      tmp13Result12 = null;
       if (mute) {
-        const obj14 = { style: tmp.voiceStateIcon, size: "custom", color };
-        tmp13Result5 = closure_7(require("MicrophoneSlashIcon").MicrophoneSlashIcon, obj14);
+        const obj17 = { style: tmp.voiceStateIcon, size: "custom", color };
+        tmp13Result12 = closure_7(require("MicrophoneSlashIcon").MicrophoneSlashIcon, obj17);
       }
     }
+    const tmp5Result = user(tmp3[18]);
   }
   return tmp12Result;
 });

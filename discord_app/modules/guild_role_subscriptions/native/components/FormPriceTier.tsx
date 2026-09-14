@@ -6,7 +6,7 @@ import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/Actio
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const RoleTierEditStore = fn(17845);
+const RoleTierEditStore = fn(17846);
 ({ LoadingState: c3, usePriceTiersAvailableInGuild: closure_4 } = RoleTierEditStore);
 const CurrencyCodes = fn(1074).CurrencyCodes;
 const jsx = fn(21).jsx;
@@ -33,7 +33,7 @@ export default function FormPriceTier(guildId) {
       const intl2 = guildId(onChange[4]).intl;
       stringResult = intl2.string(guildId(onChange[4]).t.R0RpRX);
     }
-    let obj = {
+    let obj2 = {
       disabled: state === tiers.LOADING,
       placeholder: stringResult,
       onPress() {
@@ -50,55 +50,57 @@ export default function FormPriceTier(guildId) {
   } else {
     let formatPriceResult;
     if (null != price) {
-      obj = guildId(tmp15[6]);
-      formatPriceResult = obj.formatPrice(price, USD);
+      formatPriceResult = guildId(tmp15[6]).formatPrice(price, USD);
+      let obj = guildId(tmp15[6]);
     }
-    obj = {
+    const obj3 = {
       label: formatPriceResult,
       disabled: guildId.disabled,
       onPress() {
         _modDef38(null != tiers, "handleSelectPrice must only be called if tiers != null");
-        let obj = { title: null, items: null, onItemSelect: null, selectedItem: null, hasIcons: false };
+        const obj2 = { title: null, items: null, onItemSelect: null, selectedItem: null, hasIcons: false };
+        let obj = ActionSheetActionCreatorsDefault;
         const intl = util.intl;
-        obj.title = intl.string(util.t.nCOuYJ);
-        obj.items = tiers.map((value) => {
+        obj2.title = intl.string(util.t.nCOuYJ);
+        obj2.items = tiers.map((value) => {
           const obj = { label: guildId(onChange[6]).formatPrice(value, USD), value };
           return obj;
         });
-        obj.onItemSelect = function onItemSelect(arg0) {
+        obj2.onItemSelect = function onItemSelect(arg0) {
           if (closure_1_2 != null) {
             tmp(arg0);
           }
           price(onChange[8]).hideActionSheet();
         };
-        obj.selectedItem = price;
-        obj.openLazy(asyncRequireImpl(9556, dependencyMap.paths), "GuildRoleSubscriptionPriceTierSelect", obj);
+        obj2.selectedItem = price;
+        obj.openLazy(asyncRequireImpl(9556, dependencyMap.paths), "GuildRoleSubscriptionPriceTierSelect", obj2);
         const tmp2 = asyncRequireImpl(9556, dependencyMap.paths);
       },
       placeholder: null,
     };
     let intl = guildId(tmp15[4]).intl;
-    obj.placeholder = intl.string(guildId(onChange[4]).t.nCOuYJ);
+    obj3.placeholder = intl.string(guildId(onChange[4]).t.nCOuYJ);
     return jsx(price(onChange[5]), {
       label: formatPriceResult,
       disabled: guildId.disabled,
       onPress() {
         _modDef38(null != tiers, "handleSelectPrice must only be called if tiers != null");
-        let obj = { title: null, items: null, onItemSelect: null, selectedItem: null, hasIcons: false };
+        const obj2 = { title: null, items: null, onItemSelect: null, selectedItem: null, hasIcons: false };
+        let obj = ActionSheetActionCreatorsDefault;
         const intl = util.intl;
-        obj.title = intl.string(util.t.nCOuYJ);
-        obj.items = tiers.map((value) => {
+        obj2.title = intl.string(util.t.nCOuYJ);
+        obj2.items = tiers.map((value) => {
           const obj = { label: guildId(onChange[6]).formatPrice(value, USD), value };
           return obj;
         });
-        obj.onItemSelect = function onItemSelect(arg0) {
+        obj2.onItemSelect = function onItemSelect(arg0) {
           if (closure_1_2 != null) {
             tmp(arg0);
           }
           price(onChange[8]).hideActionSheet();
         };
-        obj.selectedItem = price;
-        obj.openLazy(asyncRequireImpl(9556, dependencyMap.paths), "GuildRoleSubscriptionPriceTierSelect", obj);
+        obj2.selectedItem = price;
+        obj.openLazy(asyncRequireImpl(9556, dependencyMap.paths), "GuildRoleSubscriptionPriceTierSelect", obj2);
         const tmp2 = asyncRequireImpl(9556, dependencyMap.paths);
       },
       placeholder: null,

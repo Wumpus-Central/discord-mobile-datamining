@@ -61,8 +61,8 @@ let closure_22 = async function _saveProtos(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj3 = { value, done: true };
+      return obj3;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -75,8 +75,8 @@ let closure_22 = async function _saveProtos(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c4 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj4 = { value, done: true };
+          return obj4;
         } else {
           closure_2 = tmp2;
           closure_1 = tmp2;
@@ -103,14 +103,13 @@ let closure_22 = async function _saveProtos(arg0) {
               hasPendingUsageResult = hasPendingUsageResult1;
             }
             if (hasPendingUsageResult) {
-              let obj1 = UserSettingsProtoActionCreators;
-              let result = obj1.markUserSettingsLoadOkayForDevelopment();
+              let result = UserSettingsProtoActionCreators.markUserSettingsLoadOkayForDevelopment();
               const FrecencyUserSettingsActionCreators =
                 UserSettingsProtoActionCreators.FrecencyUserSettingsActionCreators;
               c3 = 1;
               c4 = 1;
-              obj1 = { value: FrecencyUserSettingsActionCreators.loadIfNecessary(), done: false };
-              return obj1;
+              const obj5 = { value: FrecencyUserSettingsActionCreators.loadIfNecessary(), done: false };
+              return obj5;
             }
           }
         }
@@ -119,7 +118,7 @@ let closure_22 = async function _saveProtos(arg0) {
         throw value;
       } else if (arg0 === 2) {
         c4 = 3;
-        obj = { value, done: true };
+        const obj = { value, done: true };
         return obj;
       }
       const item = closure_130_1(closure_130_2[15]).forEach(
@@ -146,7 +145,7 @@ function resetTimer(arg0, arg1) {
 }
 const MAX_NUM_SELECTED_ITEMS = fn(5590).MAX_NUM_SELECTED_ITEMS;
 const UserSettingsTypes = fn(1084).UserSettingsTypes;
-const FREQUENCY_ITEM_LIMIT = fn(1350).FREQUENCY_ITEM_LIMIT;
+const FREQUENCY_ITEM_LIMIT = fn(1348).FREQUENCY_ITEM_LIMIT;
 const random = Math.random();
 let closure_14 = 10 + random * (10 * DurationsDefault.Millis.SECOND);
 let result = 2 * DurationsDefault.Millis.HOUR;
@@ -168,6 +167,20 @@ class FrecencyUserSettingsManager extends tmp5 {
   }
 }
 FrecencyUserSettingsManager.prototype["_initialize"] = function _initialize() {
+  UserSettingsProtoActionCreators.FrecencyUserSettingsActionCreators.beforeSendCallbacks.push({
+    hasChanges() {
+      return false;
+    },
+    processProto() {
+      c0 = false;
+      if (null != timeout) {
+        const _clearTimeout = clearTimeout;
+        clearTimeout(timeout);
+      }
+      timeout = setTimeout(() => saveProtos(c0), closure_15);
+    },
+  });
+  const beforeSendCallbacks = UserSettingsProtoActionCreators.FrecencyUserSettingsActionCreators.beforeSendCallbacks;
   let obj = {
     hasChanges() {
       return false;
@@ -181,9 +194,31 @@ FrecencyUserSettingsManager.prototype["_initialize"] = function _initialize() {
       timeout = setTimeout(() => saveProtos(c0), closure_15);
     },
   };
-  UserSettingsProtoActionCreators.FrecencyUserSettingsActionCreators.beforeSendCallbacks.push(obj);
-  const beforeSendCallbacks = UserSettingsProtoActionCreators.FrecencyUserSettingsActionCreators.beforeSendCallbacks;
-  obj = {
+  UserSettingsProtoActionCreators.FrecencyUserSettingsActionCreators.beforeSendCallbacks.push({
+    hasChanges() {
+      let hasPendingUsageResult = StickersPersistedStore.hasPendingUsage();
+      if (hasPendingUsageResult) {
+        hasPendingUsageResult = UserSettingsProtoStore.hasLoaded(constants.FRECENCY_AND_FAVORITES_SETTINGS);
+      }
+      return hasPendingUsageResult;
+    },
+    processProto(stickerFrecency) {
+      let hasPendingUsageResult = StickersPersistedStore.hasPendingUsage();
+      if (hasPendingUsageResult) {
+        hasPendingUsageResult = UserSettingsProtoStore.hasLoaded(constants.FRECENCY_AND_FAVORITES_SETTINGS);
+      }
+      if (hasPendingUsageResult) {
+        const StickerFrecency = frecency_user_settings.StickerFrecency;
+        stickerFrecency.stickerFrecency = StickerFrecency.create();
+        stickerFrecency.stickerFrecency.stickers = user_settings_UserSettingsUtils.serializeUsageHistory(
+          StickersPersistedStore.stickerFrecencyWithoutFetchingLatest.usageHistory,
+          100,
+        );
+      }
+    },
+  });
+  const beforeSendCallbacks1 = UserSettingsProtoActionCreators.FrecencyUserSettingsActionCreators.beforeSendCallbacks;
+  let obj2 = {
     hasChanges() {
       let hasPendingUsageResult = StickersPersistedStore.hasPendingUsage();
       if (hasPendingUsageResult) {
@@ -206,9 +241,37 @@ FrecencyUserSettingsManager.prototype["_initialize"] = function _initialize() {
       }
     },
   };
-  UserSettingsProtoActionCreators.FrecencyUserSettingsActionCreators.beforeSendCallbacks.push(obj);
-  const beforeSendCallbacks1 = UserSettingsProtoActionCreators.FrecencyUserSettingsActionCreators.beforeSendCallbacks;
-  obj = {
+  UserSettingsProtoActionCreators.FrecencyUserSettingsActionCreators.beforeSendCallbacks.push({
+    hasChanges() {
+      let hasPendingUsageResult = EmojiStore.hasPendingUsage();
+      if (hasPendingUsageResult) {
+        hasPendingUsageResult = UserSettingsProtoStore.hasLoaded(constants.FRECENCY_AND_FAVORITES_SETTINGS);
+      }
+      return hasPendingUsageResult;
+    },
+    processProto(emojiFrecency) {
+      let hasPendingUsageResult = EmojiStore.hasPendingUsage();
+      if (hasPendingUsageResult) {
+        hasPendingUsageResult = UserSettingsProtoStore.hasLoaded(constants.FRECENCY_AND_FAVORITES_SETTINGS);
+      }
+      if (hasPendingUsageResult) {
+        const EmojiFrecency = frecency_user_settings.EmojiFrecency;
+        emojiFrecency.emojiFrecency = EmojiFrecency.create();
+        const EmojiFrecency2 = frecency_user_settings.EmojiFrecency;
+        emojiFrecency.emojiReactionFrecency = EmojiFrecency2.create();
+        emojiFrecency.emojiFrecency.emojis = user_settings_UserSettingsUtils.serializeUsageHistory(
+          EmojiStore.emojiFrecencyWithoutFetchingLatest.usageHistory,
+          100,
+        );
+        emojiFrecency.emojiReactionFrecency.emojis = user_settings_UserSettingsUtils.serializeUsageHistory(
+          EmojiStore.emojiReactionFrecencyWithoutFetchingLatest.usageHistory,
+          100,
+        );
+      }
+    },
+  });
+  const beforeSendCallbacks2 = UserSettingsProtoActionCreators.FrecencyUserSettingsActionCreators.beforeSendCallbacks;
+  const obj3 = {
     hasChanges() {
       let hasPendingUsageResult = EmojiStore.hasPendingUsage();
       if (hasPendingUsageResult) {
@@ -237,8 +300,6 @@ FrecencyUserSettingsManager.prototype["_initialize"] = function _initialize() {
       }
     },
   };
-  UserSettingsProtoActionCreators.FrecencyUserSettingsActionCreators.beforeSendCallbacks.push(obj);
-  const beforeSendCallbacks2 = UserSettingsProtoActionCreators.FrecencyUserSettingsActionCreators.beforeSendCallbacks;
   UserSettingsProtoActionCreators.FrecencyUserSettingsActionCreators.beforeSendCallbacks.push({
     hasChanges() {
       let hasPendingUsageResult = SoundboardStore.hasPendingUsage();
@@ -263,7 +324,7 @@ FrecencyUserSettingsManager.prototype["_initialize"] = function _initialize() {
     },
   });
   const beforeSendCallbacks3 = UserSettingsProtoActionCreators.FrecencyUserSettingsActionCreators.beforeSendCallbacks;
-  const obj1 = {
+  const obj4 = {
     hasChanges() {
       let hasPendingUsageResult = SoundboardStore.hasPendingUsage();
       if (hasPendingUsageResult) {
@@ -311,7 +372,7 @@ FrecencyUserSettingsManager.prototype["_initialize"] = function _initialize() {
     },
   });
   const beforeSendCallbacks4 = UserSettingsProtoActionCreators.FrecencyUserSettingsActionCreators.beforeSendCallbacks;
-  let obj2 = {
+  const obj5 = {
     hasChanges() {
       let hasPendingUsageResult = ApplicationCommandFrecencyStore.hasPendingUsage();
       if (hasPendingUsageResult) {
@@ -359,7 +420,7 @@ FrecencyUserSettingsManager.prototype["_initialize"] = function _initialize() {
     },
   });
   const beforeSendCallbacks5 = UserSettingsProtoActionCreators.FrecencyUserSettingsActionCreators.beforeSendCallbacks;
-  const obj3 = {
+  const obj6 = {
     hasChanges() {
       let hasPendingUsageResult = ApplicationFrecencyStore.hasPendingUsage();
       if (hasPendingUsageResult) {

@@ -20,9 +20,9 @@ let closure_11 = createStyles.createStyles({ badgeWrapper: { position: "absolute
 let closure_12 = noop.memo((backgroundColor) => {
   ({ badge, unread } = backgroundColor);
   if (badge > 0) {
-    let obj = { style: tmp.badgeWrapper, children: null };
-    obj = { value: badge, unread, backgroundColor: backgroundColor.backgroundColor };
-    obj.children = timestampProducer(MaskedBadgeDefault, obj);
+    const obj = { style: tmp.badgeWrapper, children: null };
+    const obj2 = { value: badge, unread, backgroundColor: backgroundColor.backgroundColor };
+    obj.children = timestampProducer(MaskedBadgeDefault, obj2);
     let tmp2 = timestampProducer(hasOwnProperty, obj);
   } else {
     tmp2 = null;
@@ -36,21 +36,21 @@ let closure_13 = noop.memo((arg0) => {
     source = activityIndicatorState.source;
   }
   if (null != source) {
-    let obj = { style: null, source: null, IconComponent: null, isCurrentUserConnected: null };
-    obj = { backgroundColor };
-    obj.style = obj;
+    const obj2 = { style: null, source: null, IconComponent: null, isCurrentUserConnected: null };
+    const obj4 = { backgroundColor };
+    obj2.style = obj4;
     ({
       source: obj3.source,
       IconComponent: obj3.IconComponent,
       isCurrentUserConnected: obj3.isCurrentUserConnected,
     } = activityIndicatorState);
-    let tmp2 = timestampProducer(GuildsBarActivityIndicator.GuildsBarActivityIndicatorBase, obj);
+    let tmp2 = timestampProducer(GuildsBarActivityIndicator.GuildsBarActivityIndicatorBase, obj2);
   } else {
     tmp2 = null;
     if (null != guildId) {
-      obj = { guildId, style: null };
-      const obj1 = { backgroundColor };
-      obj.style = obj1;
+      const obj = { guildId, style: null };
+      const obj7 = { backgroundColor };
+      obj.style = obj7;
       tmp2 = timestampProducer(GuildsBarActivityIndicatorDefault, obj);
     }
   }
@@ -104,9 +104,7 @@ export const SimpleGuildContainer = function SimpleGuildContainer(selected) {
   ({ accessibilityLabel, onAccessibilityAction, onLayout } = selected);
   const tmp3 = num(borderRadius[7])();
   const iconStroke = tmp3.iconStroke;
-  let obj = selected(borderRadius[8]);
-  const token = obj.useToken(num(borderRadius[6]).colors.BACKGROUND_BRAND);
-  let obj1 = badge;
+  const token = selected(borderRadius[8]).useToken(num(borderRadius[6]).colors.BACKGROUND_BRAND);
   let items = [selected, flag2, , , , , , ,];
   let source;
   if (activityIndicatorState != null) {
@@ -125,7 +123,7 @@ export const SimpleGuildContainer = function SimpleGuildContainer(selected) {
     if (!selected) {
       return null;
     } else if (flag2) {
-      let obj = {
+      const obj2 = {
         style: { position: "absolute", top: -2, left: -2 },
         cutoutTopRightSize: null,
         cutoutTopRightInsetX: 8,
@@ -146,7 +144,7 @@ export const SimpleGuildContainer = function SimpleGuildContainer(selected) {
       if (tmp != source) {
         num4 = 13;
       }
-      obj.cutoutTopRightSize = num4;
+      obj2.cutoutTopRightSize = num4;
       tmp = badge > 0;
       let num5 = 13;
       if (!tmp) {
@@ -156,15 +154,15 @@ export const SimpleGuildContainer = function SimpleGuildContainer(selected) {
         }
         num5 = num6;
       }
-      obj.cutoutBottomRightSize = num5;
-      obj.imageSize = num + 4;
-      obj.imageBackgroundColor = token;
-      obj.imageBorderRadius = borderRadius + 2;
-      obj.clipInnerAmount = num;
-      let tmp13Result = timestampProducer(CutoutImageDefault, obj);
+      obj2.cutoutBottomRightSize = num5;
+      obj2.imageSize = num + 4;
+      obj2.imageBackgroundColor = token;
+      obj2.imageBorderRadius = borderRadius + 2;
+      obj2.clipInnerAmount = num;
+      let tmp13Result = timestampProducer(CutoutImageDefault, obj2);
     } else {
-      obj = { children: null };
-      obj = { style: null };
+      const obj = { children: null };
+      const obj3 = { style: null };
       const size = {
         borderRadius: borderRadius + 2,
         borderWidth: 2,
@@ -175,9 +173,9 @@ export const SimpleGuildContainer = function SimpleGuildContainer(selected) {
         width: 2 + 4,
         height: 2 + 4,
       };
-      obj.style = size;
-      const items = [timestampProducer(hasOwnProperty, obj)];
-      const obj1 = { style: null };
+      obj3.style = size;
+      const items = [timestampProducer(hasOwnProperty, obj3)];
+      const obj4 = { style: null };
       const size1 = {
         borderRadius,
         borderWidth: 3,
@@ -188,13 +186,13 @@ export const SimpleGuildContainer = function SimpleGuildContainer(selected) {
         width: 2,
         height: 2,
       };
-      obj1.style = size1;
-      items[1] = timestampProducer(hasOwnProperty, obj1);
+      obj4.style = size1;
+      items[1] = timestampProducer(hasOwnProperty, obj4);
       obj.children = items;
       tmp13Result = React6(React5, obj);
     }
   }, items);
-  obj = {
+  let obj3 = {
     style,
     accessible: true,
     accessibilityState: { selected },
@@ -205,11 +203,11 @@ export const SimpleGuildContainer = function SimpleGuildContainer(selected) {
     children: null,
   };
   const items2 = [{ name: "activate" }];
-  obj.accessibilityActions = items2;
-  obj = { ref: guildIconRef, onLayout, style: null, children: null };
-  obj1 = { borderRadius, overflow: "hidden", backgroundColor: null };
+  obj3.accessibilityActions = items2;
+  let obj4 = { ref: guildIconRef, onLayout, style: null, children: null };
+  const obj5 = { borderRadius, overflow: "hidden", backgroundColor: null };
   let str = "transparent";
-  const memo1 = obj1.useMemo(() => {
+  const memo1 = badge.useMemo(() => {
     let tmp = null;
     if (!flag2) {
       const obj = { style: null };
@@ -233,18 +231,18 @@ export const SimpleGuildContainer = function SimpleGuildContainer(selected) {
     }
     str = color;
   }
-  obj1.backgroundColor = str;
-  obj.style = obj1;
-  obj.children = children;
+  obj5.backgroundColor = str;
+  obj4.style = obj5;
+  obj4.children = children;
   const items3 = [
-    flag2(backgroundColor, obj),
+    flag2(backgroundColor, obj4),
     memo1,
     memo,
     flag2(closure_13, { backgroundColor, guildId, activityIndicatorState }),
     flag2(closure_12, { backgroundColor, badge, unread }),
   ];
-  obj.children = items3;
-  return iconStroke(backgroundColor, obj);
+  obj3.children = items3;
+  return iconStroke(backgroundColor, obj3);
 };
 export const SimpleGuildContainerAnimated = function SimpleGuildContainerAnimated(arg0) {
   ({ style, selected } = arg0);
@@ -273,7 +271,6 @@ export const SimpleGuildContainerAnimated = function SimpleGuildContainerAnimate
   } else if (borderRadius == null) {
     borderRadius = 24;
   }
-  let obj = selected(tmp2[10]);
   class V {
     constructor() {
       return c3;
@@ -282,8 +279,8 @@ export const SimpleGuildContainerAnimated = function SimpleGuildContainerAnimate
   V.__closure = { targetRadius: borderRadius };
   V.__workletHash = 5259600477627;
   V.__initData = __initData;
-  derivedValue = obj.useDerivedValue(V);
-  let obj1 = selected(tmp2[10]);
+  derivedValue = selected(iconBackground[10]).useDerivedValue(V);
+  const obj = selected(iconBackground[10]);
   const fn = function z() {
     let num = 0;
     if (selected) {
@@ -294,8 +291,8 @@ export const SimpleGuildContainerAnimated = function SimpleGuildContainerAnimate
   fn.__closure = { selected };
   fn.__workletHash = 12318204664732;
   fn.__initData = __initData2;
-  derivedValue1 = obj1.useDerivedValue(fn);
-  let obj2 = selected(tmp2[10]);
+  derivedValue1 = selected(iconBackground[10]).useDerivedValue(fn);
+  let obj2 = selected(iconBackground[10]);
   class H {
     constructor() {
       size = { borderRadius: null, width: null, height: null, overflow: "hidden", backgroundColor: null };
@@ -307,19 +304,25 @@ export const SimpleGuildContainerAnimated = function SimpleGuildContainerAnimate
       return size;
     }
   }
-  obj = {
-    withSpring: selected(tmp2[11]).withSpring,
+  let obj3 = selected(iconBackground[10]);
+  H.__closure = {
+    withSpring: selected(iconBackground[11]).withSpring,
     toRadius: derivedValue,
     springConfig,
     GUILD_SIZE: v48,
     iconBackground,
   };
-  H.__closure = obj;
   H.__workletHash = 11339684212259;
   H.__initData = __initData3;
-  const animatedStyle = obj2.useAnimatedStyle(H);
+  const animatedStyle = obj3.useAnimatedStyle(H);
   BRAND_500 = tmp(tmp2[6]).unsafe_rawColors.BRAND_500;
-  let obj4 = selected(tmp2[10]);
+  const obj4 = {
+    withSpring: selected(iconBackground[11]).withSpring,
+    toRadius: derivedValue,
+    springConfig,
+    GUILD_SIZE: v48,
+    iconBackground,
+  };
   const fn2 = function j() {
     const size = {
       borderRadius: spring.withSpring(derivedValue.get() + 2, closure_10),
@@ -336,19 +339,28 @@ export const SimpleGuildContainerAnimated = function SimpleGuildContainerAnimate
     size.borderColor = BRAND_500;
     return size;
   };
-  obj = {
-    withSpring: selected(tmp2[11]).withSpring,
+  const obj5 = selected(iconBackground[10]);
+  fn2.__closure = {
+    withSpring: selected(iconBackground[11]).withSpring,
     toRadius: derivedValue,
     springConfig,
-    interpolate: selected(tmp2[10]).interpolate,
+    interpolate: selected(iconBackground[10]).interpolate,
     toStrokeWidth: derivedValue1,
     borderColor: BRAND_500,
     GUILD_SIZE: v48,
   };
-  fn2.__closure = obj;
   fn2.__workletHash = 1481885125958;
   fn2.__initData = __initData4;
-  const animatedStyle1 = obj4.useAnimatedStyle(fn2);
+  const animatedStyle1 = obj5.useAnimatedStyle(fn2);
+  const obj6 = {
+    withSpring: selected(iconBackground[11]).withSpring,
+    toRadius: derivedValue,
+    springConfig,
+    interpolate: selected(iconBackground[10]).interpolate,
+    toStrokeWidth: derivedValue1,
+    borderColor: BRAND_500,
+    GUILD_SIZE: v48,
+  };
   class M {
     constructor() {
       size = {
@@ -372,20 +384,20 @@ export const SimpleGuildContainerAnimated = function SimpleGuildContainerAnimate
       return size;
     }
   }
-  obj1 = {
-    withSpring: selected(tmp2[11]).withSpring,
+  const obj7 = selected(iconBackground[10]);
+  M.__closure = {
+    withSpring: selected(iconBackground[11]).withSpring,
     toRadius: derivedValue,
     springConfig,
-    interpolate: selected(tmp2[10]).interpolate,
+    interpolate: selected(iconBackground[10]).interpolate,
     toStrokeWidth: derivedValue1,
     backgroundColor,
     GUILD_SIZE: v48,
   };
-  M.__closure = obj1;
   M.__workletHash = 11592745547551;
   M.__initData = __initData5;
-  obj2 = { children: null };
-  const animatedStyle2 = selected(iconBackground[10]).useAnimatedStyle(M);
+  const obj9 = { children: null };
+  const animatedStyle2 = obj7.useAnimatedStyle(M);
   const items = [
     BRAND_500(backgroundColor(iconBackground[10]).View, { style: animatedStyle, children }),
     BRAND_500(backgroundColor(iconBackground[10]).View, { style: animatedStyle2 }),
@@ -393,10 +405,10 @@ export const SimpleGuildContainerAnimated = function SimpleGuildContainerAnimate
     BRAND_500(closure_13, { backgroundColor, guildId, activityIndicatorState }),
     BRAND_500(closure_12, { backgroundColor, badge, unread }),
   ];
-  obj2.children = items;
-  const tmp10 = closure_8(closure_7, obj2);
+  obj9.children = items;
+  const tmp10 = closure_8(closure_7, obj9);
   if (null != onPress) {
-    let obj3 = {
+    const obj10 = {
       ref: guildIconRef,
       style,
       onPress,
@@ -409,15 +421,15 @@ export const SimpleGuildContainerAnimated = function SimpleGuildContainerAnimate
       onLayout: null,
       children: null,
     };
-    obj4 = { selected };
-    obj3.accessibilityState = obj4;
-    obj3.onAccessibilityAction = onAccessibilityAction;
-    obj3.onLayout = onLayout;
-    obj3.children = tmp10;
-    let tmp9Result = tmp9(derivedValue, obj3);
+    const obj11 = { selected };
+    obj10.accessibilityState = obj11;
+    obj10.onAccessibilityAction = onAccessibilityAction;
+    obj10.onLayout = onLayout;
+    obj10.children = tmp10;
+    let tmp9Result = tmp9(derivedValue, obj10);
   } else {
-    const obj5 = { style, children: tmp10 };
-    tmp9Result = tmp9(derivedValue1, obj5);
+    const obj12 = { style, children: tmp10 };
+    tmp9Result = tmp9(derivedValue1, obj12);
   }
   return tmp9Result;
 };

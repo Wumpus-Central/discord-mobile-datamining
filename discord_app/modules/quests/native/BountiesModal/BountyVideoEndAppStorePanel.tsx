@@ -30,36 +30,35 @@ function BountyVideoEndAppStorePanelInner(metadata) {
       onDismiss();
     }
   }, items);
+  const unmountEffect = metadata(revealProgress[8]).useUnmountEffect(onPress);
   let obj = metadata(revealProgress[8]);
-  const unmountEffect = obj.useUnmountEffect(onPress);
-  let obj1 = metadata(revealProgress[9]);
   class H {
     constructor() {
       obj = { transform: null };
-      obj = { translateY: null };
+      obj1 = { translateY: null };
       obj3 = closure_0(closure_2[9]);
       value = revealProgress.get();
       items = [,];
       items[0] = sheetHeight;
       items[1] = 0;
-      obj.translateY = obj3.interpolate(value, [0, 1], items, closure_0(closure_2[9]).Extrapolation.CLAMP);
+      obj1.translateY = obj3.interpolate(value, [0, 1], items, closure_0(closure_2[9]).Extrapolation.CLAMP);
       items1 = [];
-      items1[0] = obj;
+      items1[0] = obj1;
       obj.transform = items1;
       return obj;
     }
   }
-  obj = {
+  let obj2 = metadata(revealProgress[9]);
+  H.__closure = {
     interpolate: metadata(revealProgress[9]).interpolate,
     revealProgress,
     sheetHeight,
     Extrapolation: metadata(revealProgress[9]).Extrapolation,
   };
-  H.__closure = obj;
   H.__workletHash = 2597568517005;
   H.__initData = __initData;
   let items1 = [metadata.storeUrl, onInstallPress];
-  const animatedStyle = obj1.useAnimatedStyle(H);
+  const animatedStyle = obj2.useAnimatedStyle(H);
   const callback1 = onDismiss.useCallback(() => {
     onInstallPress(AnalyticsActions.AppStoreOverlaySurfaces.MAIN_CTA);
     openURLDefault(metadata.storeUrl);
@@ -71,8 +70,13 @@ function BountyVideoEndAppStorePanelInner(metadata) {
     onInstallPress(AnalyticsActions.AppStoreOverlaySurfaces.RATING_STAT);
     AppStoreOverlayContent.openAppStoreReviews(metadata.storeUrl, metadata.platform, metadata.appId);
   }, items2);
-  let obj3 = metadata(revealProgress[9]);
-  sharedValue = obj3.useSharedValue(1);
+  let obj3 = {
+    interpolate: metadata(revealProgress[9]).interpolate,
+    revealProgress,
+    sheetHeight,
+    Extrapolation: metadata(revealProgress[9]).Extrapolation,
+  };
+  sharedValue = metadata(revealProgress[9]).useSharedValue(1);
   const items3 = [sharedValue, onPress, revealProgress, sheetHeight];
   const items4 = [tmp.panel, sheetHeight];
   const memo = onDismiss.useMemo(() => {
@@ -82,20 +86,20 @@ function BountyVideoEndAppStorePanelInner(metadata) {
     const fn = function n() {
       const result = sharedValue.set(revealProgress.get());
     };
-    let obj = { dragStartProgress: sharedValue, revealProgress };
-    fn.__closure = obj;
+    fn.__closure = { dragStartProgress: sharedValue, revealProgress };
     fn.__workletHash = 5755610000059;
     fn.__initData = __initData3;
     const failOffsetXResult = Gesture.Pan().activeOffsetY(8).failOffsetX([-24, 24]);
+    const obj = { dragStartProgress: sharedValue, revealProgress };
     const fn2 = function o(translationY) {
       const result = revealProgress.set(
         Math.max(0, Math.min(1, sharedValue.get() - translationY.translationY / sheetHeight)),
       );
     };
-    obj = { revealProgress, dragStartProgress: sharedValue, sheetHeight };
-    fn2.__closure = obj;
+    fn2.__closure = { revealProgress, dragStartProgress: sharedValue, sheetHeight };
     fn2.__workletHash = 15072230748689;
     fn2.__initData = __initData2;
+    let obj2 = { revealProgress, dragStartProgress: sharedValue, sheetHeight };
     const onBeginResult = Gesture.Pan().activeOffsetY(8).failOffsetX([-24, 24]).onBegin(fn);
     const fn3 = function t(velocityY) {
       if (closure_1_2.get() >= 0.5) {
@@ -128,16 +132,17 @@ function BountyVideoEndAppStorePanelInner(metadata) {
     const items = [closure_5.panel, { height: sheetHeight }];
     return items;
   }, items4);
-  obj = {
+  const obj5 = {
     style: onDismiss.useMemo(() => {
       const items = [closure_5.root, { height: sheetHeight }];
       return items;
     }, items5),
     children: null,
   };
-  obj1 = { style: null, children: null };
+  const obj6 = { style: null, children: null };
   const items6 = [memo1, animatedStyle];
-  obj1.style = items6;
+  obj6.style = items6;
+  const obj4 = metadata(revealProgress[9]);
   const items7 = [
     onPress(onInstallPress, {
       style: tmp.scrollBody,
@@ -153,8 +158,8 @@ function BountyVideoEndAppStorePanelInner(metadata) {
     }),
     ,
   ];
-  obj3 = { gesture: memo, children: null };
-  const obj4 = {
+  const obj8 = { gesture: memo, children: null };
+  const obj9 = {
     style: tmp.headerGestureTarget,
     children: onPress(metadata(revealProgress[16]).ActionSheetHeaderBar, {
       variant: "overlay",
@@ -162,40 +167,42 @@ function BountyVideoEndAppStorePanelInner(metadata) {
       onPress,
     }),
   };
-  obj3.children = onPress(closure_5, obj4);
-  items7[1] = onPress(metadata(revealProgress[13]).GestureDetector, obj3);
+  obj8.children = onPress(closure_5, obj9);
+  items7[1] = onPress(metadata(revealProgress[13]).GestureDetector, obj8);
   items7[2] = onPress(metadata(revealProgress[7]).AppStoreOverlayFooter, { onInstallPress: callback1 });
-  obj1.children = items7;
-  obj.children = sharedValue(sheetHeight(revealProgress[9]).View, obj1);
-  return onPress(closure_5, obj);
+  obj6.children = items7;
+  obj5.children = sharedValue(sheetHeight(revealProgress[9]).View, obj6);
+  return onPress(closure_5, obj5);
 }
 get_ActivityIndicator = fn(17);
 ({ ScrollView: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const ACTION_SHEET_BORDER_RADIUS = fn(7254).ACTION_SHEET_BORDER_RADIUS;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-fn(4636);
-let createStyles = {
+const createStyles = fn(4636);
+let obj2 = {
   root: { position: "absolute", left: 0, right: 0, bottom: 0, zIndex: 10 },
-  panel: null,
-  headerBar: null,
-  headerGestureTarget: null,
-  scrollBody: null,
+  panel: {
+    backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND,
+    borderTopLeftRadius: ACTION_SHEET_BORDER_RADIUS,
+    borderTopRightRadius: ACTION_SHEET_BORDER_RADIUS,
+    overflow: "hidden",
+    flexDirection: "column",
+  },
+  headerBar: { zIndex: 1 },
+  headerGestureTarget: { position: "absolute", top: 0, left: 0, right: 0, height: 48, zIndex: 2 },
+  scrollBody: { flex: 1, minHeight: 0 },
   scrollContent: null,
 };
-createStyles = {
+let obj3 = {
   backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND,
   borderTopLeftRadius: ACTION_SHEET_BORDER_RADIUS,
   borderTopRightRadius: ACTION_SHEET_BORDER_RADIUS,
   overflow: "hidden",
   flexDirection: "column",
 };
-createStyles.panel = createStyles;
-createStyles.headerBar = { zIndex: 1 };
-createStyles.headerGestureTarget = { position: "absolute", top: 0, left: 0, right: 0, height: 48, zIndex: 2 };
-createStyles.scrollBody = { flex: 1, minHeight: 0 };
-createStyles.scrollContent = { paddingBottom: fn(11635).APP_STORE_OVERLAY_FOOTER_GRADIENT_HEIGHT };
-let closure_9 = createStyles.createStyles(createStyles);
+obj2.scrollContent = { paddingBottom: fn(11636).APP_STORE_OVERLAY_FOOTER_GRADIENT_HEIGHT };
+let closure_9 = createStyles.createStyles(obj2);
 const __initData = {
   code: "function BountyVideoEndAppStorePanelTsx1(){const{interpolate,revealProgress,sheetHeight,Extrapolation}=this.__closure;return{transform:[{translateY:interpolate(revealProgress.get(),[0,1],[sheetHeight,0],Extrapolation.CLAMP)}]};}",
 };
@@ -212,12 +219,10 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/quests/native/BountiesModal/BountyVideoEndAppStorePanel.tsx");
 
 export default function BountyVideoEndAppStorePanel(arg0) {
-  let obj = initialize;
   const items = [ThemeStore];
-  const stateFromStores = obj.useStateFromStores(items, () => theme.theme);
-  obj = { theme: stateFromStores, children: null };
-  obj = {};
+  const stateFromStores = initialize.useStateFromStores(items, () => theme.theme);
+  const obj2 = { theme: stateFromStores, children: null };
   const merged = Object.assign(arg0);
-  obj.children = React5(BountyVideoEndAppStorePanelInner, obj);
-  return React5(native.ThemeContextProvider, obj);
+  obj2.children = React5(BountyVideoEndAppStorePanelInner, {});
+  return React5(native.ThemeContextProvider, obj2);
 }

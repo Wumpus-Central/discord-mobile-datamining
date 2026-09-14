@@ -16,9 +16,7 @@ function CreateThreadViewInner(screenIndex) {
   _require = threadSettingsDraft;
   const parentChannel = screenIndex.parentChannel;
   const tmp = closure_15();
-  let obj = require("ThreadCreationHooks");
-  const privateThreadMode = obj.usePrivateThreadMode(parentChannel);
-  let obj1 = noop;
+  const privateThreadMode = require("ThreadCreationHooks").usePrivateThreadMode(parentChannel);
   const items = [parentChannel.id];
   const effect = noop.useEffect(
     () => () => {
@@ -33,8 +31,8 @@ function CreateThreadViewInner(screenIndex) {
   closure_129_1 = threadSettingsDraft;
   closure_129_2 = tmp7;
   closure_129_6 = undefined;
-  let obj2 = require("Link");
-  const navigation = obj2.useNavigation();
+  let obj = require("ThreadCreationHooks");
+  const navigation = require("Link").useNavigation();
   closure_129_3 = navigation;
   closure_129_4 = noop.useRef(false);
   closure_129_5 = tmp9;
@@ -43,33 +41,32 @@ function CreateThreadViewInner(screenIndex) {
   items1[4] = parentChannel;
   const callback = noop.useCallback((guild_id) => {
     if ("Message Shortcut" === parentChannel.location) {
-      let obj = { channel_id: closure_0.id, guild_id: null, original_message_id: null, action: "thread" };
+      const obj7 = { channel_id: closure_0.id, guild_id: null, original_message_id: null, action: "thread" };
       guild_id = undefined;
       if (closure_0 != null) {
         guild_id = closure_0.guild_id;
       }
-      obj.guild_id = guild_id;
-      obj.original_message_id = tmp.parentMessageId;
-      obj = AppAnalyticsUtils;
+      obj7.guild_id = guild_id;
+      obj7.original_message_id = tmp.parentMessageId;
+      const obj6 = AnalyticsUtilsDefault;
       let guild_id1;
       if (closure_0 != null) {
         guild_id1 = closure_0.guild_id;
       }
-      const merged = Object.assign(obj.collectGuildAnalyticsMetadata(guild_id1));
-      const obj6 = AnalyticsUtilsDefault;
+      const merged = Object.assign(AppAnalyticsUtils.collectGuildAnalyticsMetadata(guild_id1));
       const merged1 = Object.assign(AppAnalyticsUtils.collectChannelAnalyticsMetadata(closure_0));
-      obj6.track(constants.MESSAGE_SHORTCUT_ACTION_SENT, obj);
+      obj6.track(constants.MESSAGE_SHORTCUT_ACTION_SENT, obj7);
     }
     if (null != asyncGeneratorStep) {
-      obj = { guildId: null, channelId: null, showCreateThread: false, screenKey: null };
+      const obj9 = { guildId: null, channelId: null, showCreateThread: false, screenKey: null };
       ({ guild_id: obj5.guildId, id: obj5.channelId } = guild_id);
-      obj.screenKey = Types.CREATE_THREAD_SCREEN_KEY;
-      asyncGeneratorStep.navigate("channel", obj, { merge: true });
+      obj9.screenKey = Types.CREATE_THREAD_SCREEN_KEY;
+      asyncGeneratorStep.navigate("channel", obj9, { merge: true });
     } else if (noop) {
       router_utils.transitionToGuild(guild_id.guild_id, guild_id.id);
     }
   }, items1);
-  obj = {
+  let obj4 = {
     parentChannel,
     parentMessageId: threadSettingsDraft.parentMessageId,
     threadSettings: threadSettingsDraft,
@@ -79,12 +76,13 @@ function CreateThreadViewInner(screenIndex) {
     useDefaultThreadName: true,
   };
   let str = threadSettingsDraft.location;
+  let obj3 = require("Link");
   if (str == null) {
     str = "(unknown)";
   }
-  obj.location = str;
-  obj.onThreadCreated = callback;
-  const tmp12Result = parentChannel(10383)(obj);
+  obj4.location = str;
+  obj4.onThreadCreated = callback;
+  const tmp12Result = parentChannel(10384)(obj4);
   closure_129_6 = tmp12Result;
   _require = asyncGeneratorStep(async (arg0, arg1) => {
     closure_0 = arg0;
@@ -100,8 +98,8 @@ function CreateThreadViewInner(screenIndex) {
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
-          let obj = { value, done: true };
-          return obj;
+          const obj2 = { value, done: true };
+          return obj2;
         } else {
           return { value: "HermesInternal", done: null };
         }
@@ -115,8 +113,8 @@ function CreateThreadViewInner(screenIndex) {
               throw value;
             } else if (arg0 === 2) {
               c7 = 3;
-              obj = { value, done: true };
-              return obj;
+              const obj7 = { value, done: true };
+              return obj7;
             } else {
               closure_3 = tmp3;
               current = tmp60.current;
@@ -125,8 +123,8 @@ function CreateThreadViewInner(screenIndex) {
                 current(null);
                 c5 = 1;
                 if (null == parentMessageId.parentMessageId) {
-                  current(closure_0(16726).makeEmptyTitleError());
-                  const obj8 = closure_0(16726);
+                  current(closure_0(16728).makeEmptyTitleError());
+                  const obj8 = closure_0(16728);
                   closure_0(4502).dismissKeyboard();
                   tmp60.current = false;
                   c5 = 0;
@@ -135,8 +133,8 @@ function CreateThreadViewInner(screenIndex) {
                 }
                 v2 = 2;
                 c7 = 1;
-                const obj1 = { value: v2(tmp70, tmp71), done: false };
-                return obj1;
+                const obj10 = { value: v2(tmp70, tmp71), done: false };
+                return obj10;
               }
             }
           } else {
@@ -149,8 +147,8 @@ function CreateThreadViewInner(screenIndex) {
                 code = body.code;
               }
               if (code === constants.AUTOMOD_TITLE_BLOCKED) {
-                current(closure_0(16726).makeAutomodViolationError(closure_130_0.body, closure_0));
-                const obj5 = closure_0(16726);
+                current(closure_0(16728).makeAutomodViolationError(closure_130_0.body, closure_0));
+                const obj5 = closure_0(16728);
                 closure_0(4502).dismissKeyboard();
                 const obj6 = closure_0(4502);
               } else {
@@ -172,8 +170,8 @@ function CreateThreadViewInner(screenIndex) {
                   tmp23 = null != name;
                 }
                 if (tmp23) {
-                  let obj2 = closure_0(16726);
-                  current(obj2.makeApiNameRequiredError());
+                  current(closure_0(16728).makeApiNameRequiredError());
+                  const obj3 = closure_0(16728);
                   closure_0(4502).dismissKeyboard();
                   const obj4 = closure_0(4502);
                 }
@@ -184,12 +182,12 @@ function CreateThreadViewInner(screenIndex) {
             } else if (arg0 === 2) {
               c5 = 0;
               c7 = 3;
-              obj2 = { value, done: true };
-              return obj2;
+              const obj11 = { value, done: true };
+              return obj11;
             } else {
-              obj = parentChannel(7879);
-              obj.saveDraft(closure_0.id, "", DraftType.FirstThreadMessage);
+              parentChannel(7879).saveDraft(closure_0.id, "", DraftType.FirstThreadMessage);
               c5 = 0;
+              const obj = parentChannel(7879);
             }
             current = tmp60;
             tmp60.current = false;
@@ -210,7 +208,7 @@ function CreateThreadViewInner(screenIndex) {
   ({ parentMessageId: arr3[1], name: arr3[2] } = threadSettingsDraft);
   items2[3] = tmp12Result;
   items2[4] = parentChannel;
-  const callback1 = obj1.useCallback(function () {
+  const callback1 = noop.useCallback(function () {
     const self = this;
     const apply = closure_0.apply;
     if (typeof apply === "unknown") {
@@ -220,14 +218,14 @@ function CreateThreadViewInner(screenIndex) {
     }
     return applyArgumentsResult;
   }, items2);
-  const tmp12 = parentChannel(10383);
+  const tmp12 = parentChannel(10384);
   const tmp11Result = parentChannel(7265);
   const tmp16 = parentChannel(1611)();
-  const ref = obj1.useRef(null);
-  const ref1 = obj1.useRef(null);
-  obj = { value: tmp11Result(tmp11(7285).CREATE_THREAD).analyticsLocations, children: null };
+  const ref = noop.useRef(null);
+  const ref1 = noop.useRef(null);
+  let obj5 = { value: tmp11Result(parentChannel(7285).CREATE_THREAD).analyticsLocations, children: null };
   const items3 = [closure_13(parentChannel(5206), { absolute: true })];
-  obj1 = { style: null, children: null };
+  let obj6 = { style: null, children: null };
   const items4 = [
     tmp.container,
     {
@@ -236,20 +234,20 @@ function CreateThreadViewInner(screenIndex) {
         tmp16.bottom,
     },
   ];
-  obj1.style = items4;
-  obj2 = { style: tmp.expander };
-  const items5 = [closure_13(closure_6, obj2), , , ,];
-  const obj3 = { style: tmp.containerContent, children: null };
-  let obj4 = { style: tmp.options, children: null };
-  let obj5 = { style: tmp.optionsInner, children: null };
+  obj6.style = items4;
+  const items5 = [closure_13(closure_6, { style: tmp.expander }), , , ,];
+  let obj8 = { style: tmp.containerContent, children: null };
+  let obj9 = { style: tmp.options, children: null };
+  let obj10 = { style: tmp.optionsInner, children: null };
   const isForumLikeChannelResult = parentChannel.isForumLikeChannel();
+  let obj7 = { style: tmp.expander };
   const tmp20 = null != threadSettingsDraft.parentMessageId;
   const items6 = [
     closure_13(closure_6, {
       style: tmp.threadIconContainer,
       children: closure_13(require("ThreadIcon").ThreadIcon, { size: "lg" }),
     }),
-    closure_13(parentChannel(16725), {
+    closure_13(parentChannel(16727), {
       ref: ref1,
       chatInputRef: ref,
       threadSettingsDraft,
@@ -263,8 +261,8 @@ function CreateThreadViewInner(screenIndex) {
     if (null == threadSettingsDraft.parentMessageId) {
       tmp22Result = null;
       if (privateThreadMode !== tmp2(9434).PrivateThreadMode.Disabled) {
-        const obj7 = { style: tmp.optionPrivateThread, children: null };
-        let obj8 = {
+        const obj12 = { style: tmp.optionPrivateThread, children: null };
+        const obj13 = {
           start: true,
           end: true,
           disabled: privateThreadMode !== tmp2(9434).PrivateThreadMode.Enabled,
@@ -274,49 +272,49 @@ function CreateThreadViewInner(screenIndex) {
           onValueChange: null,
         };
         const intl = tmp2(1114).intl;
-        obj8.label = intl.string(tmp2(1114).t.F1zyvU);
+        obj13.label = intl.string(tmp2(1114).t.F1zyvU);
         const intl2 = tmp2(1114).intl;
-        obj8.subLabel = intl2.string(tmp2(1114).t.Wy5RIQ);
-        obj8.value = tmp2(9434).getIsPrivate(threadSettingsDraft, privateThreadMode);
-        obj8.onValueChange = function onValueChange(isPrivate) {
+        obj13.subLabel = intl2.string(tmp2(1114).t.Wy5RIQ);
+        obj13.value = tmp2(9434).getIsPrivate(threadSettingsDraft, privateThreadMode);
+        obj13.onValueChange = function onValueChange(isPrivate) {
           const parentChannelId = closure_0.parentChannelId;
           if (null != parentChannelId) {
-            const obj = { isPrivate };
-            obj.changeThreadSettings(parentChannelId, obj);
+            const obj2 = { isPrivate };
+            DraftActionCreatorsDefault.changeThreadSettings(parentChannelId, obj2);
           }
         };
-        obj7.children = closure_13(tmp2(7303).TableSwitchRow, obj8);
-        tmp22Result = closure_13(closure_6, obj7);
+        obj12.children = closure_13(tmp2(7303).TableSwitchRow, obj13);
+        tmp22Result = closure_13(closure_6, obj12);
         const tmp2Result = tmp2(9434);
       }
     }
   }
   items6[2] = tmp22Result;
-  obj5.children = items6;
-  const items7 = [closure_14(closure_6, obj5)];
+  obj10.children = items6;
+  const items7 = [closure_14(closure_6, obj10)];
   let tmp21Result = null;
   if (null != threadSettingsDraft.parentMessageId) {
-    const obj9 = { style: tmp.parentMessageContainer, children: null };
-    const obj10 = { style: tmp.border };
-    const items8 = [closure_13(closure_6, obj10)];
-    const obj11 = { channelId: parentChannel.id, messageId: threadSettingsDraft.parentMessageId };
-    items8[1] = closure_13(tmp2(16727).ThreadCreationStarterMessage, obj11);
-    obj9.children = items8;
-    tmp21Result = closure_14(closure_6, obj9);
+    const obj14 = { style: tmp.parentMessageContainer, children: null };
+    const obj15 = { style: tmp.border };
+    const items8 = [closure_13(closure_6, obj15)];
+    const obj16 = { channelId: parentChannel.id, messageId: threadSettingsDraft.parentMessageId };
+    items8[1] = closure_13(tmp2(16729).ThreadCreationStarterMessage, obj16);
+    obj14.children = items8;
+    tmp21Result = closure_14(closure_6, obj14);
   }
   items7[1] = tmp21Result;
-  obj4.children = items7;
-  obj3.children = closure_14(closure_6, obj4);
-  items5[1] = closure_13(closure_7, obj3);
-  tmp22Result = null;
+  obj9.children = items7;
+  obj8.children = closure_14(closure_6, obj9);
+  items5[1] = closure_13(closure_7, obj8);
+  let tmp22Result2 = null;
   if (parentChannel.rateLimitPerUser > 0) {
-    const obj12 = { style: tmp.typingWrapper, children: null };
-    const obj13 = { channel: parentChannel, hasTypingText: false, slowmodeType: SlowmodeType.CreateThread };
-    obj12.children = closure_13(tmp11(12112), obj13);
-    tmp22Result = closure_13(closure_6, obj12);
+    const obj17 = { style: tmp.typingWrapper, children: null };
+    const obj18 = { channel: parentChannel, hasTypingText: false, slowmodeType: SlowmodeType.CreateThread };
+    obj17.children = closure_13(tmp11(12113), obj18);
+    tmp22Result2 = closure_13(closure_6, obj17);
   }
-  items5[2] = tmp22Result;
-  items5[3] = closure_13(parentChannel(12087), {
+  items5[2] = tmp22Result2;
+  items5[3] = closure_13(parentChannel(12088), {
     ref,
     channel: parentChannel,
     onJumpToPresent,
@@ -324,11 +322,11 @@ function CreateThreadViewInner(screenIndex) {
     secondaryTextFieldRef: ref1,
     threadCreationCallback: callback1,
   });
-  items5[4] = closure_13(parentChannel(12771), { channelId: parentChannel.id });
-  obj1.children = items5;
-  items3[1] = closure_14(closure_6, obj1);
-  obj.children = items3;
-  return closure_14(require("useAnalyticsLocations").AnalyticsLocationProvider, obj);
+  items5[4] = closure_13(parentChannel(12772), { channelId: parentChannel.id });
+  obj6.children = items5;
+  items3[1] = closure_14(closure_6, obj6);
+  obj5.children = items3;
+  return closure_14(require("useAnalyticsLocations").AnalyticsLocationProvider, obj5);
 }
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, ScrollView: closure_7, StyleSheet } = get_ActivityIndicator);
@@ -338,11 +336,11 @@ const Constants = fn(1074);
 ({ AbortCodes: c10, AnalyticEvents: closure_11, NOOP: closure_12 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-fn(4636);
+const createStyles = fn(4636);
 let obj = {
-  container: null,
-  containerContent: null,
-  expander: null,
+  container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 },
+  containerContent: { flexGrow: 0 },
+  expander: { flex: 1 },
   border: null,
   options: null,
   optionsInner: null,
@@ -351,20 +349,12 @@ let obj = {
   typingWrapper: null,
   parentMessageContainer: null,
 };
-obj = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 };
-obj.container = obj;
-obj.containerContent = { flexGrow: 0 };
-obj.expander = { flex: 1 };
-const createStyles = {
-  height: 1,
-  backgroundColor: nativeDefault.colors.BORDER_SUBTLE,
-  alignSelf: "stretch",
-  marginBottom: 16,
-};
-obj.border = createStyles;
+let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 };
+obj.border = { height: 1, backgroundColor: nativeDefault.colors.BORDER_SUBTLE, alignSelf: "stretch", marginBottom: 16 };
 obj.options = { marginHorizontal: 12 };
+let obj4 = { height: 1, backgroundColor: nativeDefault.colors.BORDER_SUBTLE, alignSelf: "stretch", marginBottom: 16 };
 obj.optionsInner = { paddingBottom: nativeDefault.space.PX_16 };
-let obj2 = { paddingBottom: nativeDefault.space.PX_16 };
+let obj5 = { paddingBottom: nativeDefault.space.PX_16 };
 obj.optionPrivateThread = { paddingTop: nativeDefault.space.PX_8 };
 let size = {
   width: nativeDefault.space.PX_64,
@@ -377,7 +367,7 @@ let size = {
   alignItems: "center",
 };
 obj.threadIconContainer = size;
-let obj3 = { paddingTop: nativeDefault.space.PX_8 };
+let obj6 = { paddingTop: nativeDefault.space.PX_8 };
 obj.typingWrapper = {
   borderBottomWidth: StyleSheet.hairlineWidth,
   paddingHorizontal: nativeDefault.space.PX_16,
@@ -388,7 +378,7 @@ obj.typingWrapper = {
 };
 obj.parentMessageContainer = { marginBottom: 16 };
 let closure_15 = createStyles.createStyles(obj);
-let obj4 = {
+let obj7 = {
   borderBottomWidth: StyleSheet.hairlineWidth,
   paddingHorizontal: nativeDefault.space.PX_16,
   paddingVertical: nativeDefault.space.PX_4,

@@ -389,8 +389,10 @@ export const getResurrectedEntryLastPlayTime = function getResurrectedEntryLastP
   return date;
 };
 export const getFullResurrectedBadgeText = function getFullResurrectedBadgeText(start) {
-  let obj = { start, end: new Date() };
-  const intervalToDurationResult = obj.intervalToDuration(obj);
+  const obj2 = { start, end: null };
+  const obj = _mod3871;
+  obj2.end = new Date();
+  const intervalToDurationResult = obj.intervalToDuration(obj2);
   const months = intervalToDurationResult.months;
   let num = 0;
   if (undefined !== months) {
@@ -407,12 +409,12 @@ export const getFullResurrectedBadgeText = function getFullResurrectedBadgeText(
     num3 = days;
   }
   const intl = util.intl;
-  obj = { months: num, weeks: null, days: null };
+  const obj3 = { months: num, weeks: null, days: null };
   let num4 = 0;
   if (num <= 0) {
     num4 = num2;
   }
-  obj.weeks = num4;
+  obj3.weeks = num4;
   let num5 = 0;
   if (num <= 0) {
     num5 = 0;
@@ -420,8 +422,8 @@ export const getFullResurrectedBadgeText = function getFullResurrectedBadgeText(
       num5 = num3;
     }
   }
-  obj.days = num5;
-  return intl.formatToPlainString(util.t.NXBtjF, obj);
+  obj3.days = num5;
+  return intl.formatToPlainString(util.t.NXBtjF, obj3);
 };
 export const getEpisodeBadgeText = function getEpisodeBadgeText(large_text) {
   if (null != large_text) {
@@ -441,13 +443,13 @@ export const getEpisodeBadgeText = function getEpisodeBadgeText(large_text) {
 export const getEpisodeBadgeA11yText = function getEpisodeBadgeA11yText(arg0) {
   if (null != arg0) {
     if ("" !== arg0) {
-      let obj = /\w+ (\d+), \w+ (\d+)/;
-      const match = obj.exec(arg0);
+      const match = /\w+ (\d+), \w+ (\d+)/.exec(arg0);
       if (null != match) {
         const intl = util.intl;
-        obj = { seasonNum: match[1], episodeNum: match[2] };
-        return intl.formatToPlainString(util.t.zmi5IM, obj);
+        const obj2 = { seasonNum: match[1], episodeNum: match[2] };
+        return intl.formatToPlainString(util.t.zmi5IM, obj2);
       }
+      const obj = /\w+ (\d+), \w+ (\d+)/;
     }
   }
 };
@@ -471,8 +473,8 @@ export const getRichGameStateBadgeText = function getRichGameStateBadgeText(stat
       if (first > 0) {
         if (tmp2 > 0) {
           const intl2 = util.intl;
-          let obj = { count: first, max: tmp2 };
-          let formatToPlainStringResult = intl2.formatToPlainString(util.t.wmUSiy, obj);
+          const obj2 = { count: first, max: tmp2 };
+          let formatToPlainStringResult = intl2.formatToPlainString(util.t.wmUSiy, obj2);
         }
         if (null != formatToPlainStringResult) {
           if (null != state) {
@@ -494,7 +496,7 @@ export const getRichGameStateBadgeText = function getRichGameStateBadgeText(stat
   }
   if (tmp3) {
     const intl = util.intl;
-    obj = { count: first };
+    const obj = { count: first };
     formatToPlainStringResult = intl.formatToPlainString(util.t.UTYMsa, obj);
   }
 };
@@ -547,14 +549,14 @@ export const getMarathonDescription = function getMarathonDescription(entry) {
     } else {
       obj = { text: null, tooltipText: null, a11yText: null };
       const intl = util.intl;
-      obj = { hours: rounded };
-      obj.text = intl.formatToPlainString(util.t.vZaMem, obj);
+      const obj2 = { hours: rounded };
+      obj.text = intl.formatToPlainString(util.t.vZaMem, obj2);
       const intl2 = util.intl;
-      obj = { hours: rounded };
-      obj.tooltipText = intl2.formatToPlainString(util.t.S5F485, obj);
+      const obj3 = { hours: rounded };
+      obj.tooltipText = intl2.formatToPlainString(util.t.S5F485, obj3);
       const intl3 = util.intl;
-      const obj1 = { hours: rounded };
-      obj.a11yText = intl3.formatToPlainString(util.t["RZY+tX"], obj1);
+      const obj4 = { hours: rounded };
+      obj.a11yText = intl3.formatToPlainString(util.t["RZY+tX"], obj4);
     }
     return obj;
   }

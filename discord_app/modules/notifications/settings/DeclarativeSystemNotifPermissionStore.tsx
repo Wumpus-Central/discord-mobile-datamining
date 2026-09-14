@@ -13,9 +13,10 @@ function handlePermissionsUpdated(result) {
     obj[iter.next()] = true;
     continue;
   }
-  obj = {};
+  const obj2 = {};
   const merged = Object.assign(obj);
-  obj.disabledSettings = obj;
+  obj2.disabledSettings = obj;
+  obj = obj2;
 }
 let obj = { disabledSettings: {} };
 const DeviceSettingsStore = initializeDefault.DeviceSettingsStore;
@@ -59,8 +60,9 @@ prototype["getDisabledSettings"] = function getDisabledSettings() {
 };
 DeclarativeSystemNotifPermissionStore.displayName = "DeclarativeSystemNotifPermissionStore";
 DeclarativeSystemNotifPermissionStore.persistKey = "DeclarativeSystemNotifPermissionStore";
-obj = { DECLARATIVE_SYSTEM_NOTIF_PERMISSIONS_UPDATED: handlePermissionsUpdated };
-const declarativeSystemNotifPermissionStore = new DeclarativeSystemNotifPermissionStore(DispatcherDefault, obj);
+const declarativeSystemNotifPermissionStore = new DeclarativeSystemNotifPermissionStore(DispatcherDefault, {
+  DECLARATIVE_SYSTEM_NOTIF_PERMISSIONS_UPDATED: handlePermissionsUpdated,
+});
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/notifications/settings/DeclarativeSystemNotifPermissionStore.tsx");
 

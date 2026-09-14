@@ -21,7 +21,7 @@ const result = size.fileFinishedImporting("modules/voice_panel/native/hooks/useT
 
 export default function useTapGestures(onSingleTap) {
   let current = onSingleTap;
-  isFocusedVideoZoomed = noop.useContext(isFocusedVideoZoomed(12401)).isFocusedVideoZoomed;
+  isFocusedVideoZoomed = noop.useContext(isFocusedVideoZoomed(12402)).isFocusedVideoZoomed;
   dependencyMap = noop.useRef(onSingleTap);
   noop = tmp;
   __initData = tmp2;
@@ -78,21 +78,21 @@ export default function useTapGestures(onSingleTap) {
         return;
       }
     }
-    let obj = { isFocusedVideoZoomed };
-    S.__closure = obj;
+    S.__closure = { isFocusedVideoZoomed };
     S.__workletHash = 3236469126950;
     S.__initData = __initData2;
     const numberOfTapsResult = Gesture2.Tap().enabled(tmp4).maxDistance(30).numberOfTaps(2);
+    let obj = { isFocusedVideoZoomed };
     const fn = function b() {
       return ReanimatedRexport.runOnJS(handleEvent)("double");
     };
-    obj = { runOnJS: current(4373).runOnJS, handleEvent };
-    fn.__closure = obj;
+    const onTouchesDownResult = Gesture2.Tap().enabled(tmp4).maxDistance(30).numberOfTaps(2).onTouchesDown(S);
+    fn.__closure = { runOnJS: current(4373).runOnJS, handleEvent };
     fn.__workletHash = 13571114432746;
     fn.__initData = __initData;
-    const onTouchesDownResult = Gesture2.Tap().enabled(tmp4).maxDistance(30).numberOfTaps(2).onTouchesDown(S);
+    const obj2 = { runOnJS: current(4373).runOnJS, handleEvent };
     const Gesture3 = current(6756).Gesture;
-    const onStartResult = Gesture2.Tap().enabled(tmp4).maxDistance(30).numberOfTaps(2).onTouchesDown(S).onStart(fn);
+    const onStartResult = onTouchesDownResult.onStart(fn);
     let tmp6 = tmp3;
     if (tmp3) {
       tmp6 = closure_3;
@@ -106,7 +106,7 @@ export default function useTapGestures(onSingleTap) {
     fn2.__closure = { runOnJS: current(4373).runOnJS, handleEvent };
     fn2.__workletHash = 14109132753191;
     fn2.__initData = gesturesEnabled;
-    const obj1 = { runOnJS: current(4373).runOnJS, handleEvent };
+    const obj3 = { runOnJS: current(4373).runOnJS, handleEvent };
     const Gesture4 = current(6756).Gesture;
     const onStartResult1 = maxDistanceResult1.onStart(fn2);
     if (tmp3) {

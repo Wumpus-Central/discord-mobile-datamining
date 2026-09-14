@@ -3,20 +3,19 @@ import GIFPickerItemView from "GIFPickerItemView.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
+const require = globalThis.__r;
 const GIFPickerItemViewDefault = GIFPickerItemView;
 
 require = fn;
 const jsx = fn(21).jsx;
-fn(4636);
-let createStyles = { list: null };
-createStyles = { marginHorizontal: -fn(10497).GIF_PICKER_GUTTER_SPACING / 2 };
-createStyles.list = createStyles;
-let closure_6 = createStyles.createStyles(createStyles);
-const obj1 = { length: 20 };
-let arr = Array.from(obj1);
-let closure_7 = arr.map(() => {});
-arr = Array.from(obj1);
-let closure_8 = arr.map(() => {
+const createStyles = fn(4636);
+let obj2 = { list: { marginHorizontal: -fn(10498).GIF_PICKER_GUTTER_SPACING / 2 } };
+let closure_6 = createStyles.createStyles(obj2);
+const obj4 = { length: 20 };
+let obj3 = { marginHorizontal: -fn(10498).GIF_PICKER_GUTTER_SPACING / 2 };
+let closure_7 = Array.from(obj4).map(() => {});
+const arr = Array.from(obj4);
+let closure_8 = Array.from(obj4).map(() => {
   const size = { width: 100, height: Math.floor(91 * Math.random()) + 90 };
   return size;
 });
@@ -74,21 +73,21 @@ export default function GIFPickerResultsList(columnWidth) {
     ({ item, index, extraData } = arg0);
     if (null == item) {
       const size = closure_8[index];
-      let obj = { height: callback(size.width, size.height).height };
+      const obj2 = { height: callback(size.width, size.height).height };
       return jsx(GIFPickerItemView.GIFPickerItemPlaceholder, { height: callback(size.width, size.height).height });
     } else {
       const height = callback(item.width, item.height).height;
       viewedItemIndexes = extraData.viewedItemIndexes;
       if (viewedItemIndexes.has(index)) {
-        obj = { height, index, item, onPressGIF, selected: null };
+        const obj3 = { height, index, item, onPressGIF, selected: null };
         let tmp8;
         if (null != extraData.selectedGifSrc) {
           tmp8 = item.src === extraData.selectedGifSrc;
         }
-        obj.selected = tmp8;
+        obj3.selected = tmp8;
         let tmp15Result = jsx(GIFPickerItemViewDefault, { height, index, item, onPressGIF, selected: null });
       } else {
-        obj = { height };
+        const obj = { height };
         tmp15Result = jsx(GIFPickerItemView.GIFPickerItemPlaceholder, { height });
       }
       return tmp15Result;

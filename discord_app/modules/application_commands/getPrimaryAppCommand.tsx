@@ -6,7 +6,9 @@ import ApplicationCommandQueryTypes from "ApplicationCommandQueryTypes.tsx";
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 import noop from "../../../_runtime/metro/00019__.js";
 import ChannelStore from "../../stores/ChannelStore.tsx";
-import ApplicationCommandIndexStore from "ApplicationCommandIndexStore.tsx";
+import ApplicationCommandIndexStore_mod from "ApplicationCommandIndexStore.tsx";
+
+const require = globalThis.__r;
 
 require = fn;
 let closure_10 = async function _getPrimaryAppCommand(arg0) {
@@ -21,8 +23,8 @@ let closure_10 = async function _getPrimaryAppCommand(arg0) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -35,8 +37,8 @@ let closure_10 = async function _getPrimaryAppCommand(arg0) {
             throw value;
           } else if (arg0 === 2) {
             c5 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
             closure_3 = tmp5;
             closure_2 = tmp2;
@@ -48,17 +50,17 @@ let closure_10 = async function _getPrimaryAppCommand(arg0) {
             closure_130_2 = undefined;
             let tmp13 = null != channel;
             if (tmp13) {
-              const obj1 = { channel, type: "channel" };
-              const tmp12 = queryForPrimaryAppCommand(obj1, applicationId);
+              const obj4 = { channel, type: "channel" };
+              const tmp12 = queryForPrimaryAppCommand(obj4, applicationId);
               closure_130_2 = tmp12;
               tmp13 = null == tmp12;
             }
             if (tmp13) {
-              const obj2 = { type: "application", applicationId };
+              const obj5 = { type: "application", applicationId };
               c4 = 1;
               c5 = 1;
-              const obj3 = { value: closure_2_5(obj2), done: false };
-              return obj3;
+              const obj6 = { value: closure_2_5(obj5), done: false };
+              return obj6;
             }
           }
         } else if (arg0 === 1) {
@@ -66,16 +68,16 @@ let closure_10 = async function _getPrimaryAppCommand(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c5 = 3;
-          const obj4 = { value, done: true };
-          return obj4;
+          const obj7 = { value, done: true };
+          return obj7;
         } else {
-          obj = { channel: closure_130_1, type: "channel" };
+          const obj = { channel: closure_130_1, type: "channel" };
           closure_130_2 = closure_131_11(obj, closure_130_0);
         }
         if (null != closure_130_2) {
           c5 = 3;
-          const obj5 = { value: closure_130_2, done: true };
-          return obj5;
+          const obj8 = { value: closure_130_2, done: true };
+          return obj8;
         } else {
           const _Error = Error;
           const error = new Error(closure_131_8);
@@ -89,21 +91,21 @@ let closure_10 = async function _getPrimaryAppCommand(arg0) {
   })();
 };
 function queryForPrimaryAppCommand(withAffinitySuggestions, id) {
-  let obj = { commandTypes: null };
+  const obj = { commandTypes: null };
   items = [Server.ApplicationCommandType.PRIMARY_ENTRY_POINT];
   obj.commandTypes = items;
-  obj = {
+  return ApplicationCommandIndexStore.query(withAffinitySuggestions, obj, {
     placeholderCount: 1,
     scoreMethod: ApplicationCommandQueryTypes.ScoreMethod.COMMAND_ONLY,
     applicationId: id,
     allowFetch: false,
     allowApplicationState: true,
-  };
-  return ApplicationCommandIndexStore.query(withAffinitySuggestions, obj, obj).commands[0];
+  }).commands[0];
 }
 let ApplicationCommandIndexStore = fn(9419);
 ({ getOrFetchApplicationCommandIndexForTarget: hasOwnProperty, useQueryState: metroRequire } =
   ApplicationCommandIndexStore);
+let ApplicationCommandIndexStore = ApplicationCommandIndexStore_mod;
 let c8 = "no primary app command for application";
 let items = [fn(1894).ApplicationCommandType.PRIMARY_ENTRY_POINT];
 const size = fn(2);
@@ -123,15 +125,17 @@ export const NO_PRIMARY_APP_COMMAND_ERROR = "no primary app command for applicat
 export { queryForPrimaryAppCommand };
 export const useGetPrimaryAppCommand = function useGetPrimaryAppCommand(context, id) {
   _require = id;
-  let obj = { commandTypes: items };
-  obj = {
-    placeholderCount: 1,
-    scoreMethod: require("ApplicationCommandQueryTypes").ScoreMethod.COMMAND_ONLY,
-    applicationId: id,
-    allowFetch: false,
-    allowApplicationState: true,
-  };
-  const tmp = closure_6(context, obj, obj);
+  const tmp = closure_6(
+    context,
+    { commandTypes: items },
+    {
+      placeholderCount: 1,
+      scoreMethod: require("ApplicationCommandQueryTypes").ScoreMethod.COMMAND_ONLY,
+      applicationId: id,
+      allowFetch: false,
+      allowApplicationState: true,
+    },
+  );
   loading = tmp.loading;
   const first = tmp.commands[0];
   closure_2 = tmp3;
@@ -142,36 +146,40 @@ export const useGetPrimaryAppCommand = function useGetPrimaryAppCommand(context,
       tmp = loading;
     }
     if (!tmp) {
-      const obj = { type: "application", applicationId };
-      const applicationCommandIndex = obj.requestApplicationCommandIndex(obj);
+      const obj2 = { type: "application", applicationId };
+      const applicationCommandIndex = ApplicationCommandIndexActionCreators.requestApplicationCommandIndex(obj2);
     }
   }, items);
   return first;
 };
 export const useQueryForPrimaryAppCommand = function useQueryForPrimaryAppCommand(arg0, applicationId) {
-  let obj = { commandTypes: items };
-  obj = {
-    placeholderCount: 1,
-    scoreMethod: ApplicationCommandQueryTypes.ScoreMethod.COMMAND_ONLY,
-    applicationId,
-    allowFetch: false,
-    allowApplicationState: true,
-  };
-  return timestampProducer(arg0, obj, obj);
+  return timestampProducer(
+    arg0,
+    { commandTypes: items },
+    {
+      placeholderCount: 1,
+      scoreMethod: ApplicationCommandQueryTypes.ScoreMethod.COMMAND_ONLY,
+      applicationId,
+      allowFetch: false,
+      allowApplicationState: true,
+    },
+  );
 };
 export const useIsPrimaryAppCommandUsableInAppDM = function useIsPrimaryAppCommandUsableInAppDM(applicationId) {
   applicationId = applicationId.applicationId;
   let loading;
-  let obj = { commandTypes: items };
-  obj = {
-    placeholderCount: 1,
-    scoreMethod: applicationId(loading[5]).ScoreMethod.COMMAND_ONLY,
-    applicationId,
-    allowFetch: false,
-    allowApplicationState: true,
-  };
   ({ context, botUserId } = applicationId);
-  const tmp3 = closure_6(context, obj, obj);
+  const tmp3 = closure_6(
+    context,
+    { commandTypes: items },
+    {
+      placeholderCount: 1,
+      scoreMethod: applicationId(loading[5]).ScoreMethod.COMMAND_ONLY,
+      applicationId,
+      allowFetch: false,
+      allowApplicationState: true,
+    },
+  );
   loading = tmp3.loading;
   const first = tmp3.commands[0];
   closure_2 = tmp5;
@@ -182,8 +190,8 @@ export const useIsPrimaryAppCommandUsableInAppDM = function useIsPrimaryAppComma
       tmp = loading;
     }
     if (!tmp) {
-      const obj = { type: "application", applicationId };
-      const applicationCommandIndex = obj.requestApplicationCommandIndex(obj);
+      const obj2 = { type: "application", applicationId };
+      const applicationCommandIndex = ApplicationCommandIndexActionCreators.requestApplicationCommandIndex(obj2);
     }
   }, items);
   let tmp7 = null != first;

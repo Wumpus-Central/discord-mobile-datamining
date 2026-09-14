@@ -6,18 +6,13 @@ const result = size.fileFinishedImporting("modules/guild_progress/GuildProgressA
 
 export default {
   createProgress(id) {
-    const obj = { type: "GUILD_PROGRESS_INITIALIZE", guildId: id };
-    obj.dispatch(obj);
+    DispatcherDefault.dispatch({ type: "GUILD_PROGRESS_INITIALIZE", guildId: id });
   },
   markCompletedProgressSeen(id) {
     importDefault = id;
-    DispatcherDefault.wait(() => {
-      const obj = { type: "GUILD_PROGRESS_COMPLETED_SEEN", guildId };
-      return obj.dispatch(obj);
-    });
+    DispatcherDefault.wait(() => DispatcherDefault.dispatch({ type: "GUILD_PROGRESS_COMPLETED_SEEN", guildId }));
   },
   dismissProgress(id) {
-    const obj = { type: "GUILD_PROGRESS_DISMISS", guildId: id };
-    obj.dispatch(obj);
+    DispatcherDefault.dispatch({ type: "GUILD_PROGRESS_DISMISS", guildId: id });
   },
 };

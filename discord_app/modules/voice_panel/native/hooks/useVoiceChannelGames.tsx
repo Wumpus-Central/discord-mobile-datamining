@@ -6,6 +6,8 @@ import PresenceStore from "../../../../stores/PresenceStore.tsx";
 import SelfPresenceStore from "../../../../stores/SelfPresenceStore.tsx";
 import UserStore from "../../../../stores/UserStore.tsx";
 
+const require = globalThis.__r;
+
 require = fn;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/voice_panel/native/hooks/useVoiceChannelGames.tsx");

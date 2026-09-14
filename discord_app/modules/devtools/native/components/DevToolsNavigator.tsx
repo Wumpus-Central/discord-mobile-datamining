@@ -15,14 +15,13 @@ const Navigator = NativeStackNavigator.createNativeStackNavigator();
 let closure_8 = noop.memo((screenKey) => {
   let str = screenKey.screenKey;
   _require = undefined;
-  let obj = require("Navigator");
-  _require = obj.useAccessibilityNativeStackOptions();
+  _require = require("Navigator").useAccessibilityNativeStackOptions();
   let items = [closure_4(SettingHookHarnessDefault, {})];
   if (str == null) {
     str = "home";
   }
-  obj = { children: null };
-  obj = {
+  let obj2 = { children: null };
+  const obj3 = {
     initialRouteName: str,
     screenOptions(navigation) {
       const obj = {
@@ -39,6 +38,7 @@ let closure_8 = noop.memo((screenKey) => {
     },
     children: null,
   };
+  let obj = require("Navigator");
   const items1 = [
     closure_4(Navigator.Screen, {
       name: "home",
@@ -46,17 +46,15 @@ let closure_8 = noop.memo((screenKey) => {
       options() {
         return {
           headerTitle() {
-            let obj = { style: { flexDirection: "row" }, children: null };
+            const obj = { style: { flexDirection: "row" }, children: null };
             const items = [closure_1_4(closure_1_0(9563).HammerIcon, { size: "sm" })];
-            obj = {
-              style: null,
+            const obj2 = {
+              style: { marginLeft: closure_1_1(576).space.PX_8 },
               variant: "heading-md/semibold",
               color: "mobile-text-heading-primary",
               children: "DevTools",
             };
-            obj = { marginLeft: closure_1_1(576).space.PX_8 };
-            obj.style = obj;
-            items[1] = closure_1_4(closure_1_0(4632).Text, obj);
+            items[1] = closure_1_4(closure_1_0(4632).Text, obj2);
             obj.children = items;
             return closure_1_5(closure_1_3, obj);
           },
@@ -66,8 +64,8 @@ let closure_8 = noop.memo((screenKey) => {
     }),
     ,
   ];
-  let merged = Object.assign(tmp(15665).DevToolsScreens);
-  let merged1 = Object.assign(tmp(15665).PerformanceTestingScreens);
+  let merged = Object.assign(tmp(15667).DevToolsScreens);
+  let merged1 = Object.assign(tmp(15667).PerformanceTestingScreens);
   const entries = Object.entries({});
   items1[1] = entries.map((item) => {
     [tmp] = item;
@@ -83,23 +81,21 @@ let closure_8 = noop.memo((screenKey) => {
       tmp,
     );
   });
-  const obj1 = {
+  const obj4 = {
     name: "home",
     component: DevToolsContentDefault,
     options() {
       return {
         headerTitle() {
-          let obj = { style: { flexDirection: "row" }, children: null };
+          const obj = { style: { flexDirection: "row" }, children: null };
           const items = [closure_1_4(closure_1_0(9563).HammerIcon, { size: "sm" })];
-          obj = {
-            style: null,
+          const obj2 = {
+            style: { marginLeft: closure_1_1(576).space.PX_8 },
             variant: "heading-md/semibold",
             color: "mobile-text-heading-primary",
             children: "DevTools",
           };
-          obj = { marginLeft: closure_1_1(576).space.PX_8 };
-          obj.style = obj;
-          items[1] = closure_1_4(closure_1_0(4632).Text, obj);
+          items[1] = closure_1_4(closure_1_0(4632).Text, obj2);
           obj.children = items;
           return closure_1_5(closure_1_3, obj);
         },
@@ -107,7 +103,7 @@ let closure_8 = noop.memo((screenKey) => {
       };
     },
   };
-  const obj2 = {};
+  const obj5 = {};
   const designSystemScreens = require("SettingRendererUtils").getDesignSystemScreens();
   items1[2] = designSystemScreens.map((item) => {
     [, tmp] = item;
@@ -117,22 +113,23 @@ let closure_8 = noop.memo((screenKey) => {
         name: tmp.route,
         getComponent: tmp.getComponent,
         options(navigation) {
-          let obj = closure_0(dependencyMap[5]);
-          let str = obj.getCachedSettingTitle(closure_1_0);
+          let str = closure_0(dependencyMap[5]).getCachedSettingTitle(closure_1_0);
           if (str == null) {
             str = "Design System";
           }
-          obj = { title: str, headerLeft: closure_0(dependencyMap[6]).getRenderModalBackImage(navigation.navigation) };
-          return obj;
+          const obj2 = { title: str, headerLeft: null };
+          const obj = closure_0(dependencyMap[5]);
+          obj2.headerLeft = closure_0(dependencyMap[6]).getRenderModalBackImage(navigation.navigation);
+          return obj2;
         },
       },
       tmp.route,
     );
   });
-  obj.children = items1;
-  items[1] = closure_5(Navigator.Navigator, obj);
-  obj.children = items;
-  return closure_5(closure_6, obj);
+  obj3.children = items1;
+  items[1] = closure_5(Navigator.Navigator, obj3);
+  obj2.children = items;
+  return closure_5(closure_6, obj2);
 });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/devtools/native/components/DevToolsNavigator.tsx");

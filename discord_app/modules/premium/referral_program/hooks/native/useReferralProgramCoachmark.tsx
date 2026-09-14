@@ -2,17 +2,19 @@
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../../intl/index.native.tsx";
 import FastImageDefault from "../../../../../components_native/common/FastImage.tsx";
-import _modDef16899 from "../../../../../../_runtime/metro/16899__.js";
+import _modDef16901 from "../../../../../../_runtime/metro/16901__.js";
 import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
+
+const require = globalThis.__r;
 
 require = fn;
 function ReferralProgramCoachmarkImg() {
   const tmp = closure_9();
-  let obj = { style: tmp.coachmarkImageContainer, children: null };
-  obj = { source: _modDef16899, style: tmp.coachmarkImage };
-  obj.children = jsx(FastImageDefault, { source: _modDef16899, style: tmp.coachmarkImage });
-  return <View source={_modDef16899} style={tmp.coachmarkImage} />;
+  const obj = { style: tmp.coachmarkImageContainer, children: null };
+  const obj2 = { source: _modDef16901, style: tmp.coachmarkImage };
+  obj.children = jsx(FastImageDefault, { source: _modDef16901, style: tmp.coachmarkImage });
+  return <View style={tmp.coachmarkImageContainer}>{null}</View>;
 }
 const View = fn(17).View;
 const UserSettingsSections = fn(1074).UserSettingsSections;
@@ -32,10 +34,10 @@ export const useReferralProgramCoachmark = function useReferralProgramCoachmark(
   disabled = disabled.disabled;
   _require = undefined;
   let visible;
-  let obj = require("DismissibleContentUnsafeUtils");
-  let result = obj.useIsDismissibleContentDismissed_UNSAFE(
+  let result = require("DismissibleContentUnsafeUtils").useIsDismissibleContentDismissed_UNSAFE(
     require("dismissible_content").DismissibleContent.REFERRAL_TRIAL_MOBILE_SENDER_COACHMARK,
   );
+  let obj = require("DismissibleContentUnsafeUtils");
   if (!result) {
     result = disabled;
   }
@@ -53,8 +55,8 @@ export const useReferralProgramCoachmark = function useReferralProgramCoachmark(
     const items1 = [tmp10, tmp8[1]];
     let tmp13 = null;
     if (tmp10) {
-      obj = { props: tmp12 };
-      tmp13 = obj;
+      const obj3 = { props: tmp12 };
+      tmp13 = obj3;
     }
     return tmp13;
   }

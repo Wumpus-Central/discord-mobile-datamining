@@ -9,10 +9,13 @@ const result = size.fileFinishedImporting(
 );
 
 export const openCustomTypingIndicatorAnnounceActionSheet = function openCustomTypingIndicatorAnnounceActionSheet() {
-  const obj = {
-    markAsDismissed() {
-      return ActionSheetActionCreatorsDefault.hideActionSheet(CustomTypingIndicatorAnnounceActionSheet);
+  ActionSheetActionCreatorsDefault.openLazy(
+    asyncRequireImpl(12099, dependencyMap.paths),
+    CustomTypingIndicatorAnnounceActionSheet,
+    {
+      markAsDismissed() {
+        return ActionSheetActionCreatorsDefault.hideActionSheet(CustomTypingIndicatorAnnounceActionSheet);
+      },
     },
-  };
-  obj.openLazy(asyncRequireImpl(12098, dependencyMap.paths), CustomTypingIndicatorAnnounceActionSheet, obj);
+  );
 };

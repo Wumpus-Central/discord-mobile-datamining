@@ -15,8 +15,7 @@ const result = size.fileFinishedImporting("modules/home_drawer/native/subtitles/
 export default function TypingSubtitle(arg0) {
   ({ channel, channelName } = arg0);
   ({ guild, text } = arg0);
-  let obj = useSubtitleStyles;
-  const subtitleStyles = obj.useSubtitleStyles();
+  const subtitleStyles = useSubtitleStyles.useSubtitleStyles();
   let channelIconComponentWithGuild;
   if (null != channel) {
     channelIconComponentWithGuild = utils_ChannelUtils.getChannelIconComponentWithGuild(channel, guild);
@@ -25,14 +24,14 @@ export default function TypingSubtitle(arg0) {
   if (channelIconComponentWithGuild == null) {
     channelIconComponentWithGuild = TextIcon.TextIcon;
   }
-  obj = { style: subtitleStyles.subtitleRow, children: null };
+  const obj2 = { style: subtitleStyles.subtitleRow, children: null };
   let tmp7 = null;
   if (null != channelName) {
-    obj = { size: "xxs", color: "icon-muted", style: subtitleStyles.channelIcon };
-    tmp7 = React3(channelIconComponentWithGuild, obj);
+    const obj3 = { size: "xxs", color: "icon-muted", style: subtitleStyles.channelIcon };
+    tmp7 = React3(channelIconComponentWithGuild, obj3);
   }
   const items = [tmp7];
-  const obj1 = {
+  const obj4 = {
     variant: "text-xs/medium",
     color: "text-muted",
     lineClamp: 1,
@@ -41,14 +40,14 @@ export default function TypingSubtitle(arg0) {
   };
   let tmp5Result = null;
   if (null != channelName) {
-    const obj2 = { variant: "text-xs/medium", children: null };
+    const obj5 = { variant: "text-xs/medium", children: null };
     const items1 = [channelName, "  \u00B7  "];
-    obj2.children = items1;
-    tmp5Result = React4(Text_Text.Text, obj2);
+    obj5.children = items1;
+    tmp5Result = React4(Text_Text.Text, obj5);
   }
   const items2 = [tmp5Result, text];
-  obj1.children = items2;
-  items[1] = React4(Text_Text.Text, obj1);
-  obj.children = items;
-  return React4(View, obj);
+  obj4.children = items2;
+  items[1] = React4(Text_Text.Text, obj4);
+  obj2.children = items;
+  return React4(View, obj2);
 }

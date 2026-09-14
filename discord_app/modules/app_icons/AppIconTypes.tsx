@@ -1,8 +1,8 @@
 // discord_app/modules/app_icons/AppIconTypes.tsx
 import size from "../../../_runtime/metro/00002__.js";
 
-let obj = { DEFAULT: "AppIcon" };
-obj = {
+const obj = { DEFAULT: "AppIcon" };
+const obj2 = {
   BRAND_DARK: "BrandDarkIcon",
   BRAND_INVERTED: "BrandInvertedIcon",
   MATTE_LIGHT: "MatteLightIcon",
@@ -28,13 +28,13 @@ obj = {
   COLOR_WAVE: "ColorWaveIcon",
   MIDNIGHT_PRISM: "MidnightPrismIcon",
 };
-obj = { DRIP: "DripIcon", SLIMY: "SlimyIcon", ZOMBIE: "ZombieIcon", CLYDE_STEIN: "ClydeSteinIcon" };
+const obj3 = { DRIP: "DripIcon", SLIMY: "SlimyIcon", ZOMBIE: "ZombieIcon", CLYDE_STEIN: "ClydeSteinIcon" };
 const merged = Object.assign(obj);
-const merged1 = Object.assign(obj);
-const merged2 = Object.assign(obj);
+const merged1 = Object.assign(obj2);
+const merged2 = Object.assign(obj3);
 const result = size.fileFinishedImporting("modules/app_icons/AppIconTypes.tsx");
 
 export const FreemiumAppIconIds = obj;
-export const PremiumAppIconIds = obj;
-export const LimitedTimeAppIconIds = obj;
+export const PremiumAppIconIds = obj2;
+export const LimitedTimeAppIconIds = obj3;
 export const MasterAppIconIds = {};

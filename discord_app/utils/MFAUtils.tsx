@@ -72,15 +72,15 @@ export const encodeTotpSecretAsUrl = function encodeTotpSecretAsUrl(arg0, str) {
   );
 };
 export const captureWebAuthnException = function captureWebAuthnException(error, tags) {
-  let obj = {};
+  const obj2 = {};
   const merged = Object.assign(tags);
   tags = undefined;
   if (tags != null) {
     tags = tags.tags;
   }
-  obj = {};
+  const obj3 = {};
   const merged1 = Object.assign(tags);
-  obj.app_context = "webauthn";
-  obj.tags = obj;
-  obj.captureException(error, obj);
+  obj3.app_context = "webauthn";
+  obj2.tags = obj3;
+  SentryUtilsDefault.captureException(error, obj2);
 };

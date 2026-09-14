@@ -1,20 +1,24 @@
 // discord_app/modules/stage_channels/StageChannelPermissions.tsx
 import Constants from "../../Constants.tsx";
-import BigFlagUtils from "../../../discord_common/js/shared/utils/BigFlagUtils.tsx";
+import BigFlagUtils_mod from "../../../discord_common/js/shared/utils/BigFlagUtils.tsx";
 import "BigFlagUtils";
 import size from "../../../_runtime/metro/00002__.js";
 
 const Permissions = Constants.Permissions;
+let BigFlagUtils = BigFlagUtils_mod;
 const combineResult = BigFlagUtils.combine(
   Permissions.MANAGE_CHANNELS,
   Permissions.MUTE_MEMBERS,
   Permissions.MOVE_MEMBERS,
 );
+let BigFlagUtils = BigFlagUtils_mod;
 const items = [, ,];
 ({ SPEAK: arr[0], REQUEST_TO_SPEAK: arr[1], USE_VAD: arr[2] } = Permissions);
 const combineResult1 = BigFlagUtils.combine(Permissions.MANAGE_CHANNELS, Permissions.MANAGE_ROLES);
 const set = new Set(items);
+let BigFlagUtils = BigFlagUtils_mod;
 const combineResult3 = BigFlagUtils.combine(Permissions.CONNECT, Permissions.VIEW_CHANNEL);
+let BigFlagUtils = BigFlagUtils_mod;
 const combineResult2 = BigFlagUtils.combine(combineResult, Permissions.MANAGE_ROLES);
 const result = size.fileFinishedImporting("modules/stage_channels/StageChannelPermissions.tsx");
 

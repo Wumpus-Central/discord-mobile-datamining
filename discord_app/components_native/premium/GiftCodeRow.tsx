@@ -12,10 +12,10 @@ get_ActivityIndicator = fn(17);
 const AnalyticsSections = fn(1074).AnalyticsSections;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-fn(4636);
-let createStyles = {
+const createStyles = fn(4636);
+let obj2 = {
   giftCodeRow: { paddingHorizontal: 16 },
-  giftCodeRowLegacy: null,
+  giftCodeRowLegacy: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH },
   giftCodeShare: null,
   giftCodeInput: null,
   giftCodeInputContent: null,
@@ -27,9 +27,8 @@ let createStyles = {
   firstRow: null,
   buttonContainer: null,
 };
-createStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
-createStyles.giftCodeRowLegacy = createStyles;
-createStyles.giftCodeShare = {
+let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
+obj2.giftCodeShare = {
   flexDirection: "row",
   alignItems: "center",
   justifyContent: "space-between",
@@ -39,7 +38,7 @@ createStyles.giftCodeShare = {
   borderWidth: StyleSheet.hairlineWidth,
   backgroundColor: nativeDefault.colors.INPUT_BACKGROUND_DEFAULT,
 };
-let obj1 = {
+let obj4 = {
   flexDirection: "row",
   alignItems: "center",
   justifyContent: "space-between",
@@ -49,28 +48,28 @@ let obj1 = {
   borderWidth: StyleSheet.hairlineWidth,
   backgroundColor: nativeDefault.colors.INPUT_BACKGROUND_DEFAULT,
 };
-createStyles.giftCodeInput = { marginTop: nativeDefault.space.PX_16, marginBottom: nativeDefault.space.PX_4 };
-let obj2 = { marginTop: nativeDefault.space.PX_16, marginBottom: nativeDefault.space.PX_4 };
-createStyles.giftCodeInputContent = {
+obj2.giftCodeInput = { marginTop: nativeDefault.space.PX_16, marginBottom: nativeDefault.space.PX_4 };
+let obj5 = { marginTop: nativeDefault.space.PX_16, marginBottom: nativeDefault.space.PX_4 };
+obj2.giftCodeInputContent = {
   flexDirection: "row",
   alignItems: "center",
   justifyContent: "space-between",
   padding: nativeDefault.space.PX_8,
 };
-createStyles.giftCodeShareButton = { marginLeft: 12 };
-createStyles.codeText = { flexShrink: 1 };
-createStyles.subTextRow = { marginBottom: 8, flexDirection: "row", alignItems: "center" };
-createStyles.expiryText = { fontSize: 12, lineHeight: 16 };
-let obj3 = {
+obj2.giftCodeShareButton = { marginLeft: 12 };
+obj2.codeText = { flexShrink: 1 };
+obj2.subTextRow = { marginBottom: 8, flexDirection: "row", alignItems: "center" };
+obj2.expiryText = { fontSize: 12, lineHeight: 16 };
+const obj6 = {
   flexDirection: "row",
   alignItems: "center",
   justifyContent: "space-between",
   padding: nativeDefault.space.PX_8,
 };
-createStyles.revokeHint = { color: nativeDefault.unsafe_rawColors.BLUE_345 };
-createStyles.firstRow = { borderWidth: 0 };
-createStyles.buttonContainer = { flexShrink: 0, flexGrow: 1 };
-let closure_8 = createStyles.createLegacyClassComponentStyles(createStyles);
+obj2.revokeHint = { color: nativeDefault.unsafe_rawColors.BLUE_345 };
+obj2.firstRow = { borderWidth: 0 };
+obj2.buttonContainer = { flexShrink: 0, flexGrow: 1 };
+let closure_8 = createStyles.createLegacyClassComponentStyles(obj2);
 const PureComponent = noop.PureComponent;
 class GiftCodeRow extends PureComponent {
   constructor() {
@@ -79,12 +78,11 @@ class GiftCodeRow extends PureComponent {
     applyArgumentsResult.handleShare = function handleShare() {
       ({ giftCode, sku } = applyArgumentsResult.props);
       if (tmp) {
-        let obj = GiftCodeUtils;
-        obj.trackGiftCodeCopy(giftCode, sku);
-        obj = { url: null };
+        GiftCodeUtils.trackGiftCodeCopy(giftCode, sku);
+        const obj3 = { url: null };
         const obj2 = showShareActionSheet;
-        obj.url = GiftCodeUtils.getGiftCodeURL(giftCode.code);
-        obj2.showShareActionSheet(obj, AnalyticsSections.GIFT_CODE_ROW);
+        obj3.url = GiftCodeUtils.getGiftCodeURL(giftCode.code);
+        obj2.showShareActionSheet(obj3, AnalyticsSections.GIFT_CODE_ROW);
       }
       tmp = null != giftCode && null != sku;
     };
@@ -108,55 +106,58 @@ prototype["render"] = function render() {
   }
   let obj = { style: items, children: null };
   items[1] = firstRow;
-  obj = { style: tmp.giftCodeInput, children: null };
-  obj = { children: null };
-  const obj1 = { style: tmp.giftCodeInputContent, children: null };
-  const obj2 = { variant: "text-sm/normal", style: tmp.codeText, lineClamp: 1, children: null };
-  let obj5 = giftCode(self[8]);
-  obj2.children = obj5.getGiftCodeURL(giftCode.code);
-  const items1 = [closure_6(giftCode(self[11]).Text, obj2)];
-  const obj3 = { style: null, children: null };
+  let obj2 = { style: tmp.giftCodeInput, children: null };
+  const obj3 = { children: null };
+  const obj4 = { style: tmp.giftCodeInputContent, children: null };
+  const obj5 = {
+    variant: "text-sm/normal",
+    style: tmp.codeText,
+    lineClamp: 1,
+    children: giftCode(self[8]).getGiftCodeURL(giftCode.code),
+  };
+  const items1 = [closure_6(giftCode(self[11]).Text, obj5)];
+  const obj7 = { style: null, children: null };
   const items2 = [,];
   ({ buttonContainer: arr3[0], giftCodeShareButton: arr3[1] } = tmp);
-  obj3.style = items2;
-  const obj4 = { size: "sm", text: null, onPress: null };
+  obj7.style = items2;
+  const obj8 = { size: "sm", text: null, onPress: null };
   const intl = giftCode(self[13]).intl;
-  obj4.text = intl.string(giftCode(self[13]).t.h5EvZM);
-  obj4.onPress = this.handleShare;
-  obj3.children = closure_6(giftCode(self[12]).Button, obj4);
-  items1[1] = closure_6(closure_3, obj3);
-  obj1.children = items1;
-  obj.children = closure_7(closure_3, obj1);
-  obj.children = closure_6(giftCode(self[10]).InputFieldContainer, obj);
-  const items3 = [closure_6(closure_3, obj)];
-  obj5 = { style: tmp.subTextRow, children: null };
+  obj8.text = intl.string(giftCode(self[13]).t.h5EvZM);
+  obj8.onPress = this.handleShare;
+  obj7.children = closure_6(giftCode(self[12]).Button, obj8);
+  items1[1] = closure_6(closure_3, obj7);
+  obj4.children = items1;
+  obj3.children = closure_7(closure_3, obj4);
+  obj2.children = closure_6(giftCode(self[10]).InputFieldContainer, obj3);
+  const items3 = [closure_6(closure_3, obj2)];
+  const obj9 = { style: tmp.subTextRow, children: null };
   let tmp5Result = null;
   if (null != giftCode.expiresAt) {
-    const obj6 = { variant: "text-xs/normal", color: "text-subtle", children: null };
+    const obj10 = { variant: "text-xs/normal", color: "text-subtle", children: null };
     const intl2 = tmp6(tmp7[13]).intl;
-    const obj7 = { hours: null, revokeHook: null };
+    const obj11 = { hours: null, revokeHook: null };
     const expiresAt = giftCode.expiresAt;
-    obj7.hours = expiresAt.diff(require("../../../_runtime/metro/04228__.js")(), "h");
-    obj7.revokeHook = function revokeHook(children, arg1) {
-      let obj = {
+    obj11.hours = expiresAt.diff(require("../../../_runtime/metro/04228__.js")(), "h");
+    obj11.revokeHook = function revokeHook(children, arg1) {
+      const obj = {
         accessibilityRole: "button",
         onPress() {
           return self.handleRevoke(code.code);
         },
         children: null,
       };
-      obj = { style: null, children };
+      const obj2 = { style: null, children };
       const items = [,];
       ({ expiryText: arr[0], revokeHint: arr[1] } = closure_1);
-      obj.style = items;
-      obj.children = timestampProducer(native.LegacyText, obj);
+      obj2.style = items;
+      obj.children = timestampProducer(native.LegacyText, obj2);
       return timestampProducer(React4, obj, arg1);
     };
-    obj6.children = intl2.format(tmp6(tmp7[13]).t.b1BfWD, obj7);
-    tmp5Result = closure_6(tmp6(tmp7[11]).Text, obj6);
+    obj10.children = intl2.format(tmp6(tmp7[13]).t.b1BfWD, obj11);
+    tmp5Result = closure_6(tmp6(tmp7[11]).Text, obj10);
   }
-  obj5.children = tmp5Result;
-  items3[1] = closure_6(closure_3, obj5);
+  obj9.children = tmp5Result;
+  items3[1] = closure_6(closure_3, obj9);
   obj.children = items3;
   return closure_7(closure_3, obj);
 };

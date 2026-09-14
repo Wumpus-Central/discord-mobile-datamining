@@ -2,12 +2,14 @@
 import FastestListNativeComponentDefault from "../../../discord_common/js/packages/rtn-codegen/js/FastestListNativeComponent.tsx";
 import _readOnlyError from "../../../_runtime/metro/00377__readOnlyError.js";
 import noop from "../../../_runtime/metro/00019__.js";
-import ReanimatedRexport from "../reanimated/ReanimatedRexport.tsx";
+import ReanimatedRexport_mod from "../reanimated/ReanimatedRexport.tsx";
 
 const require = fn;
 const jsxProd = fn(21);
 ({ jsx: closure_4, Fragment: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+let ReanimatedRexport = ReanimatedRexport_mod;
 ReanimatedRexport.createAnimatedComponent(FastestListNativeComponentDefault);
+let ReanimatedRexport = ReanimatedRexport_mod;
 const FastestListNativeComponent = ReanimatedRexport.createAnimatedComponent(FastestListNativeComponentDefault);
 const BottomSheetModal = fn(6728);
 let closure_8 = BottomSheetModal.createBottomSheetScrollableComponent(
@@ -221,7 +223,7 @@ export default noop.forwardRef(function FastestList(estimatedListSize, arg1) {
     }
     tmp10Result = ref2;
   }
-  let obj = {
+  const obj = {
     accessibilityLabel: estimatedListSize.accessibilityLabel,
     horizontal: tmp2,
     insetStart: num,
@@ -261,18 +263,18 @@ export default noop.forwardRef(function FastestList(estimatedListSize, arg1) {
   obj.showsHorizontalScrollIndicator = tmp4;
   obj.showsVerticalScrollIndicator = tmp5;
   obj.style = style2;
-  let tmp24Result = tmp24(tmp10Result, obj);
+  const tmp22 = num(num2[11])(estimatedListSize, tmp2);
   if (tmp) {
     if (null != placeholderConfig) {
-      obj = { children: null };
+      const obj2 = { children: null };
       const items5 = [tmp24Result, tmp27];
-      obj.children = items5;
-      tmp24Result = ref1(ref, obj);
+      obj2.children = items5;
+      let tmp24Result2 = ref1(ref, obj2);
     }
-    return tmp24Result;
+    return tmp24Result2;
   }
-  obj = {};
-  tmp10Result = tmp10(tmp11[13]);
+  const obj3 = {};
+  tmp24Result = onContentLengthChange(tmp10Result, obj);
   const merged = Object.assign(estimatedListSize);
-  tmp24Result = tmp24(tmp10Result, obj);
+  tmp24Result2 = tmp24(num(num2[13]), obj3);
 });

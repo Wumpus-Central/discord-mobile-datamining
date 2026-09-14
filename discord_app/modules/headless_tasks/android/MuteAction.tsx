@@ -16,24 +16,26 @@ export default (arg0) => {
     HeadlessTaskUtilsDefault.awaitStorage(() => {
       let toISOStringResult = null;
       if (-1 !== closure_0.muteTime) {
-        let obj = _modDef4228();
         let HOURS_1 = closure_0.muteTime;
         if (HOURS_1 == null) {
           HOURS_1 = MuteUntilSeconds.HOURS_1;
         }
-        toISOStringResult = obj.add(HOURS_1, "second").toISOString();
-        const addResult = obj.add(HOURS_1, "second");
+        const obj = _modDef4228();
+        toISOStringResult = _modDef4228().add(HOURS_1, "second").toISOString();
+        const addResult = _modDef4228().add(HOURS_1, "second");
       }
-      obj = { muted: true, mute_config: null };
-      obj = { selected_time_window: MuteUntilSeconds.HOURS_1, end_time: toISOStringResult };
-      obj.mute_config = obj;
+      const obj2 = {
+        muted: true,
+        mute_config: { selected_time_window: MuteUntilSeconds.HOURS_1, end_time: toISOStringResult },
+      };
       const result = NotificationSettingsModalActionCreatorsDefault.updateChannelOverrideSettings(
         closure_0.guildId,
         closure_0.channelId,
-        obj,
+        obj2,
         NotificationSettingsUtils.NotificationLabels.Muted,
       );
       closure_0(true);
+      const obj4 = { selected_time_window: MuteUntilSeconds.HOURS_1, end_time: toISOStringResult };
     });
   });
 };

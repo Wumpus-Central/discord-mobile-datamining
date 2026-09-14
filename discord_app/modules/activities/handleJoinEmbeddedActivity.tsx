@@ -6,6 +6,8 @@ import SelectedChannelStore from "../../stores/SelectedChannelStore.tsx";
 import UserStore from "../../stores/UserStore.tsx";
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore.tsx";
 
+const require = globalThis.__r;
+
 const require = fn;
 let closure_10 = async function _handleJoinEmbeddedActivityInternal(arg0) {
   if (c4 === 2) {
@@ -15,8 +17,8 @@ let closure_10 = async function _handleJoinEmbeddedActivityInternal(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -29,8 +31,8 @@ let closure_10 = async function _handleJoinEmbeddedActivityInternal(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c4 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           closure_2 = tmp2;
           closure_1 = tmp5;
@@ -75,8 +77,8 @@ let closure_10 = async function _handleJoinEmbeddedActivityInternal(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c4 = 3;
-          const obj1 = { value, done: true };
-          return obj1;
+          const obj7 = { value, done: true };
+          return obj7;
         } else {
           closure_129_10 = closure_130_1(closure_130_2[8])();
           channel = closure_130_5.getChannel(closure_129_1);
@@ -108,28 +110,28 @@ let closure_10 = async function _handleJoinEmbeddedActivityInternal(arg0) {
                 if (closure_130_6.getVoiceChannelId() === closure_129_1) {
                   if (null != currentEmbeddedActivity) {
                     if (currentEmbeddedActivity.applicationId === closure_129_0) {
-                      let obj13 = closure_130_0(closure_130_2[9]);
-                      const embeddedActivityLocationChannelId = obj13.getEmbeddedActivityLocationChannelId(
-                        currentEmbeddedActivity.location,
-                      );
+                      const embeddedActivityLocationChannelId = closure_130_0(
+                        closure_130_2[9],
+                      ).getEmbeddedActivityLocationChannelId(currentEmbeddedActivity.location);
                       if (embeddedActivityLocationChannelId === closure_130_6.getVoiceChannelId()) {
                         closure_130_1(closure_130_2[10])(closure_129_12, currentEmbeddedActivity.location);
                         c4 = 3;
-                        const obj2 = { value: Promise.resolve(true), done: true };
-                        return obj2;
+                        const obj8 = { value: Promise.resolve(true), done: true };
+                        return obj8;
                       }
+                      const obj14 = closure_130_0(closure_130_2[9]);
                     }
                   }
                 }
                 c3 = 2;
                 c4 = 1;
-                let obj3 = { value: closure_130_1(closure_130_2[11])(closure_129_0, closure_129_1), done: false };
-                return obj3;
+                const obj9 = { value: closure_130_1(closure_130_2[11])(closure_129_0, closure_129_1), done: false };
+                return obj9;
               }
             }
             c4 = 3;
-            let obj4 = { value: Promise.resolve(false), done: true };
-            return obj4;
+            const obj10 = { value: Promise.resolve(false), done: true };
+            return obj10;
           }
           obj23 = channel;
         }
@@ -139,11 +141,11 @@ let closure_10 = async function _handleJoinEmbeddedActivityInternal(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c4 = 3;
-          let obj5 = { value, done: true };
-          return obj5;
+          const obj11 = { value, done: true };
+          return obj11;
         } else {
           closure_129_16 = value;
-          const obj6 = {
+          const obj12 = {
             applicationId: closure_129_0,
             application: closure_129_16,
             channel,
@@ -153,8 +155,8 @@ let closure_10 = async function _handleJoinEmbeddedActivityInternal(arg0) {
           };
           c3 = 3;
           c4 = 1;
-          const obj7 = { value: closure_130_0(closure_130_2[12]).confirmActivityLaunchChecks(obj6), done: false };
-          return obj7;
+          const obj13 = { value: closure_130_0(closure_130_2[12]).confirmActivityLaunchChecks(obj12), done: false };
+          return obj13;
         }
       } else {
         if (3 === tmp5) {
@@ -163,20 +165,19 @@ let closure_10 = async function _handleJoinEmbeddedActivityInternal(arg0) {
             throw value;
           } else if (arg0 === 2) {
             c4 = 3;
-            const obj8 = { value, done: true };
-            return obj8;
+            const obj15 = { value, done: true };
+            return obj15;
           } else if (value) {
             if (null != channel) {
               closure_129_17 = closure_130_1(closure_130_2[13])(channel.id);
               closure_129_18 = closure_130_9.includes(channel.type);
               if (closure_129_17) {
-                const obj9 = { channelId: channel.id, bypassChangeModal: null != application };
+                const obj16 = { channelId: channel.id, bypassChangeModal: null != application };
                 c3 = 4;
                 c4 = 1;
-                const obj10 = { value: closure_130_1(closure_130_2[14])(obj9), done: false };
-                return obj10;
+                const obj17 = { value: closure_130_1(closure_130_2[14])(obj16), done: false };
+                return obj17;
               } else {
-                obj3 = closure_130_0(closure_130_2[15]);
                 c4 = 3;
                 return { value: false, done: true };
               }
@@ -194,8 +195,8 @@ let closure_10 = async function _handleJoinEmbeddedActivityInternal(arg0) {
             throw value;
           } else if (arg0 === 2) {
             c4 = 3;
-            const obj11 = { value, done: true };
-            return obj11;
+            const obj18 = { value, done: true };
+            return obj18;
           } else if (!value) {
             c4 = 3;
             return { value: false, done: true };
@@ -205,22 +206,23 @@ let closure_10 = async function _handleJoinEmbeddedActivityInternal(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c4 = 3;
-          const obj12 = { value, done: true };
-          return obj12;
+          const obj19 = { value, done: true };
+          return obj19;
         } else {
           c4 = 3;
-          obj = { value, done: true };
+          const obj = { value, done: true };
           return obj;
         }
         if (null != closure_129_1) {
           closure_130_1(closure_130_2[16])(closure_129_1);
         }
         if (null != currentEmbeddedActivity) {
-          obj4 = closure_130_0(closure_130_2[17]);
-          const result = obj4.maybeDisconnectFromCurrentActivity(currentEmbeddedActivity.location);
+          const result = closure_130_0(closure_130_2[17]).maybeDisconnectFromCurrentActivity(
+            currentEmbeddedActivity.location,
+          );
+          const obj5 = closure_130_0(closure_130_2[17]);
         }
-        obj5 = closure_130_0(closure_130_2[17]);
-        obj13 = {
+        const obj20 = {
           channelId: closure_129_1,
           applicationId: closure_129_0,
           isStart: false,
@@ -236,8 +238,11 @@ let closure_10 = async function _handleJoinEmbeddedActivityInternal(arg0) {
         };
         c3 = 5;
         c4 = 1;
-        const obj14 = { value: obj5.runPrimaryAppCommandOrJoinEmbeddedActivity(obj13), done: false };
-        return obj14;
+        const obj22 = {
+          value: closure_130_0(closure_130_2[17]).runPrimaryAppCommandOrJoinEmbeddedActivity(obj20),
+          done: false,
+        };
+        return obj22;
       }
     } catch (tmp110) {
       c4 = tmp;

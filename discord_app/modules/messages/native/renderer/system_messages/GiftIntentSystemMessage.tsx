@@ -18,19 +18,18 @@ const result = size.fileFinishedImporting(
 
 export const createGiftIntentSystemMessage = function createGiftIntentSystemMessage(message) {
   ({ message, theme } = message);
-  let obj = GiftIntentEmbed;
-  const giftIntentEmbed = obj.createGiftIntentEmbed(message, theme);
+  const giftIntentEmbed = GiftIntentEmbed.createGiftIntentEmbed(message, theme);
   if (null == giftIntentEmbed) {
     return null;
   } else {
-    obj = {};
+    const obj3 = {};
     const merged = Object.assign(createCommonMessageDefault(message));
-    obj.giftIntentInfo = giftIntentEmbed;
-    let tmpResult = EphemeralIndication;
-    obj.ephemeralIndication = tmpResult.createEphemeralIndication(message);
-    tmpResult = renderer_EmbedUtils;
-    obj.iconUrl = tmpResult.getAssetUriForEmbed(_modDef8053);
-    ({ iconTintColor: obj2.iconTintColor, iconDividerColor: obj2.iconDividerColor } = closure_3(theme));
-    return obj;
+    obj3.giftIntentInfo = giftIntentEmbed;
+    const tmp5 = closure_3(theme);
+    obj3.ephemeralIndication = EphemeralIndication.createEphemeralIndication(message);
+    const tmpResult = EphemeralIndication;
+    obj3.iconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef8053);
+    ({ iconTintColor: obj2.iconTintColor, iconDividerColor: obj2.iconDividerColor } = tmp5);
+    return obj3;
   }
 };

@@ -5,6 +5,8 @@ import GuildActionCreatorsDefault from "../../actions/GuildActionCreators.tsx";
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 import GuildRoleMemberCountStore from "GuildRoleMemberCountStore.tsx";
 
+const require = globalThis.__r;
+
 const require = fn;
 let closure_6 = async function _fetchMemberCountsFromBackend() {
   c5 = 0;
@@ -48,8 +50,8 @@ let closure_7 = async function _fetchMemberCounts(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -62,12 +64,12 @@ let closure_7 = async function _fetchMemberCounts(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c1 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else if (GuildRoleMemberCountStore.shouldFetch(closure_0)) {
           c2 = 1;
           c1 = 1;
-          const obj1 = {
+          const obj4 = {
             value: (function fetchMemberCountsFromBackend() {
               const self = this;
               const apply = closure_1_6.apply;
@@ -80,14 +82,14 @@ let closure_7 = async function _fetchMemberCounts(arg0) {
             })(closure_0),
             done: false,
           };
-          return obj1;
+          return obj4;
         }
       } else if (arg0 === 1) {
         c1 = 3;
         throw value;
       } else if (arg0 === 2) {
         c1 = 3;
-        obj = { value, done: true };
+        const obj = { value, done: true };
         return obj;
       }
       c1 = 3;

@@ -16,22 +16,21 @@ export const CollectiblesProgressiveImage = function CollectiblesProgressiveImag
   ({ source, style } = arg0);
   let sharedValue;
   const merged = Object.assign(arg0, Object.assign({ source: 0, style: 0 }));
-  let obj = sharedValue(4373);
-  sharedValue = obj.useSharedValue(0);
-  obj = { style, children: null };
-  obj = {};
+  sharedValue = sharedValue(4373).useSharedValue(0);
+  let obj2 = { style, children: null };
+  const obj3 = {};
   const merged1 = Object.assign(merged);
-  obj.source = source;
-  const obj1 = {};
+  obj3.source = source;
+  const obj4 = {};
   const merged2 = Object.assign(absoluteFillObject.absoluteFillObject);
-  obj1.opacity = sharedValue;
-  obj.style = obj1;
-  obj.onLoad = function onLoad() {
-    const obj = { duration: 500, easing: null };
+  obj4.opacity = sharedValue;
+  obj3.style = obj4;
+  obj3.onLoad = function onLoad() {
+    const obj2 = { duration: 500, easing: null };
     const Easing = ReanimatedRexport.Easing;
-    obj.easing = Easing.inOut(ReanimatedRexport.Easing.ease);
-    const result = sharedValue.set(obj.withTiming(1, obj));
+    obj2.easing = Easing.inOut(ReanimatedRexport.Easing.ease);
+    const result = sharedValue.set(timing.withTiming(1, obj2));
   };
-  obj.children = jsx(ReanimatedRexportDefault.Image, {});
-  return <closure_3 />;
+  obj2.children = jsx(ReanimatedRexportDefault.Image, {});
+  return <closure_3 style={style}>{null}</closure_3>;
 };

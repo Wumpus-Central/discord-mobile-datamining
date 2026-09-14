@@ -14,42 +14,42 @@ get_ActivityIndicator = fn(17);
 ({ Image: c3, View: closure_4, StyleSheet } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-fn(4636);
-let createStyles = { wrapper: null, text: null, fallbackImage: null };
-createStyles = {};
+let createStyles = fn(4636);
+let obj2 = { wrapper: null, text: null, fallbackImage: null };
+let obj3 = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);
-createStyles.alignItems = "center";
-createStyles.justifyContent = "center";
-createStyles.paddingLeft = 20;
-createStyles.paddingRight = 20;
-createStyles.wrapper = createStyles;
-createStyles.text = {
+obj3.alignItems = "center";
+obj3.justifyContent = "center";
+obj3.paddingLeft = 20;
+obj3.paddingRight = 20;
+obj2.wrapper = obj3;
+obj2.text = {
   textAlign: "center",
   fontSize: 14,
   lineHeight: 18,
   marginTop: 16,
   color: nativeDefault.colors.TEXT_MUTED,
 };
-createStyles.fallbackImage = { width: "100%" };
-let closure_8 = createStyles.createLegacyClassComponentStyles(createStyles);
+obj2.fallbackImage = { width: "100%" };
+let closure_8 = createStyles.createLegacyClassComponentStyles(obj2);
 const PureComponent = noop.PureComponent;
 class DefaultFallback extends PureComponent {}
 DefaultFallback.prototype["render"] = function render() {
   const tmp = closure_8(this.context);
-  let obj = { style: tmp.wrapper, children: null };
-  obj = { resizeMode: "contain", style: tmp.fallbackImage, source: null };
+  const obj = { style: tmp.wrapper, children: null };
+  const obj2 = { resizeMode: "contain", style: tmp.fallbackImage, source: null };
   if (obj3.isThemeDark(this.props.theme)) {
     let tmp6Result = _modDef10189;
   } else {
     tmp6Result = _modDef10190;
   }
-  obj.source = tmp6Result;
-  obj.children = timestampProducer(React3, obj);
+  obj2.source = tmp6Result;
+  obj.children = timestampProducer(React3, obj2);
   return timestampProducer(React4, obj);
 };
 DefaultFallback.contextType = fn(4347).ThemeContext;
 createStyles = fn(4636);
-const obj2 = { touchable: null, imageContainer: null, image: null };
+const obj6 = { touchable: null, imageContainer: null, image: null };
 let size = {
   flex: 1,
   width: "100%",
@@ -57,11 +57,11 @@ let size = {
   aspectRatio: true,
   backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST,
 };
-obj2.touchable = size;
-let obj1 = { textAlign: "center", fontSize: 14, lineHeight: 18, marginTop: 16, color: nativeDefault.colors.TEXT_MUTED };
-obj2.imageContainer = { flex: 1, backgroundColor: nativeDefault.unsafe_rawColors.BLACK };
-obj2.image = { flex: 1 };
-let closure_10 = createStyles.createLegacyClassComponentStyles(obj2);
+obj6.touchable = size;
+let obj4 = { textAlign: "center", fontSize: 14, lineHeight: 18, marginTop: 16, color: nativeDefault.colors.TEXT_MUTED };
+obj6.imageContainer = { flex: 1, backgroundColor: nativeDefault.unsafe_rawColors.BLACK };
+obj6.image = { flex: 1 };
+let closure_10 = createStyles.createLegacyClassComponentStyles(obj6);
 const PureComponent2 = noop.PureComponent;
 class StreamPreview extends PureComponent2 {
   constructor() {
@@ -93,7 +93,7 @@ StreamPreview.prototype["render"] = function render() {
           }
           let tmp8 = renderFallbackResult;
         }
-        let obj = {
+        const obj = {
           resizeMode: "contain",
           style: tmp.image,
           source: null,
@@ -101,12 +101,12 @@ StreamPreview.prototype["render"] = function render() {
           onLoad: null,
           onError: null,
         };
-        obj = { uri: url, cache: "force-cache" };
-        obj.source = obj;
+        const obj2 = { uri: url, cache: "force-cache" };
+        obj.source = obj2;
         ({ handleLoadStart: obj.onLoadStart, handleLoad: obj.onLoad, handleError: obj.onError } = this);
         const tmp12 = timestampProducer(React3, obj);
       }
-      obj = {
+      const obj3 = {
         accessibilityRole: "button",
         accessibilityLabel: tmp2,
         activeOpacity: 0.6,
@@ -116,15 +116,15 @@ StreamPreview.prototype["render"] = function render() {
         children: null,
       };
       const items = [tmp.touchable, tmp3];
-      obj.style = items;
-      obj.disabled = tmp6;
-      obj.onPress = tmp5;
-      const obj1 = { style: tmp.imageContainer, children: null };
+      obj3.style = items;
+      obj3.disabled = tmp6;
+      obj3.onPress = tmp5;
+      const obj4 = { style: tmp.imageContainer, children: null };
       const items1 = [tmp8, tmp12];
-      obj1.children = items1;
-      const items2 = [React5(React4, obj1), tmp4];
-      obj.children = items2;
-      return React5(Pressables.PressableOpacity, obj);
+      obj4.children = items1;
+      const items2 = [React5(React4, obj4), tmp4];
+      obj3.children = items2;
+      return React5(Pressables.PressableOpacity, obj3);
     }
   }
   let renderFallbackResult1;
@@ -155,12 +155,13 @@ const result = size.fileFinishedImporting("components_native/StreamPreview.tsx")
 export default function ConnectedStreamPreview(stream) {
   ({ guildId, channelId, ownerId } = stream.stream);
   ({ previewUrl, isLoading } = useFetchStreamPreviewDefault(guildId, channelId, ownerId));
+  const tmp = useFetchStreamPreviewDefault(guildId, channelId, ownerId);
   const items = [ThemeStore];
-  const obj = {};
-  const stateFromStores = obj.useStateFromStores(items, () => theme.theme);
+  const obj2 = {};
+  const stateFromStores = initialize.useStateFromStores(items, () => theme.theme);
   const merged = Object.assign(stream);
-  obj.url = previewUrl;
-  obj.isFetching = isLoading;
-  obj.theme = stateFromStores;
-  return timestampProducer(StreamPreview, obj);
+  obj2.url = previewUrl;
+  obj2.isFetching = isLoading;
+  obj2.theme = stateFromStores;
+  return timestampProducer(StreamPreview, obj2);
 }

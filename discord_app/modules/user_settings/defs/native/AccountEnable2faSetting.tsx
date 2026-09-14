@@ -6,8 +6,8 @@ import TwoFASetupModalActionCreatorsDefault from "../../account/native/mfa_modal
 import UserStore from "../../../../stores/UserStore.tsx";
 
 require = fn;
-fn(11601);
-let SettingBuilders = {
+const SettingBuilders = fn(11602);
+const pressable = SettingBuilders.createPressable({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.cDgKte);
@@ -21,24 +21,22 @@ let SettingBuilders = {
     }
     if (verified != null) {
       if (verified) {
-        let obj = TwoFASetupModalActionCreatorsDefault;
-        obj.open();
+        TwoFASetupModalActionCreatorsDefault.open();
       }
     }
-    obj = { title: null, body: null };
+    const obj3 = { title: null, body: null };
     const intl = util.intl;
-    obj.title = intl.string(util.t.v740sh);
+    obj3.title = intl.string(util.t.v740sh);
     const intl2 = util.intl;
-    obj.body = intl2.string(util.t.uggF7o);
-    AlertActionCreatorsDefault.show(obj);
+    obj3.body = intl2.string(util.t.uggF7o);
+    AlertActionCreatorsDefault.show(obj3);
   },
   withArrow: true,
   usePredicate: function useHasAccountEnable2FASetting() {
     return !SettingsAccountUtils.useIsTOTPEnabled();
   },
-};
-SettingBuilders = SettingBuilders.createPressable(SettingBuilders);
+});
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/AccountEnable2faSetting.tsx");
 
-export default SettingBuilders;
+export default pressable;

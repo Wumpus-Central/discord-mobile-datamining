@@ -20,30 +20,29 @@ export default function TextElement(element) {
   const data = element.element.data;
   ({ header, body } = data);
   const tmp = closure_7();
-  let obj = CustomMarkupAll;
   let tmp3 = null;
   if (data.is_localized) {
     if (null != header) {
-      obj = { style: tmp.container, children: null };
+      const obj2 = { style: tmp.container, children: null };
       let tmp7 = null != header;
       if (tmp7) {
-        obj = {
+        const obj3 = {
           style: tmp.header,
           variant: "heading-md/extrabold",
           color: "mobile-text-heading-primary",
           children: header,
         };
-        tmp7 = hasOwnProperty(Text_Text.Text, obj);
+        tmp7 = hasOwnProperty(Text_Text.Text, obj3);
       }
       const items = [tmp7];
       let tmp10 = null != body;
       if (tmp10) {
-        const obj1 = { style: tmp.body, variant: "text-md/medium", children: ref.current(body) };
-        tmp10 = hasOwnProperty(Text_Text.Text, obj1);
+        const obj4 = { style: tmp.body, variant: "text-md/medium", children: ref.current(body) };
+        tmp10 = hasOwnProperty(Text_Text.Text, obj4);
       }
       items[1] = tmp10;
-      obj.children = items;
-      let tmp5Result = timestampProducer(View, obj);
+      obj2.children = items;
+      let tmp5Result = timestampProducer(View, obj2);
     } else {
       tmp5Result = null;
     }

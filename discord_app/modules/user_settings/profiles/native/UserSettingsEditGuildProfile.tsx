@@ -12,18 +12,18 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-fn(4636);
-let createStyles = { guildSelector: null };
-createStyles = {
-  backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
-  borderRadius: nativeDefault.radii.none,
-  borderTopWidth: StyleSheet.hairlineWidth,
-  borderBottomWidth: StyleSheet.hairlineWidth,
-  borderColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST,
-  overflow: "hidden",
+const createStyles = fn(4636);
+let obj2 = {
+  guildSelector: {
+    backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
+    borderRadius: nativeDefault.radii.none,
+    borderTopWidth: StyleSheet.hairlineWidth,
+    borderBottomWidth: StyleSheet.hairlineWidth,
+    borderColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST,
+    overflow: "hidden",
+  },
 };
-createStyles.guildSelector = createStyles;
-let closure_9 = createStyles.createStyles(createStyles);
+let closure_9 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/profiles/native/UserSettingsEditGuildProfile.tsx");
 
@@ -33,39 +33,36 @@ export default function UserSettingsEditGuildProfile() {
     GuildIdentityActionCreators.setCurrentGuild(id.id);
   }
   let tmp = closure_9();
-  let obj = stateFromStores(resetPending[9]);
+  const tmp4 = guild(resetPending[7]);
   const items = [UserStore];
-  stateFromStores = obj.useStateFromStores(items, () => currentUser.getCurrentUser());
+  stateFromStores = stateFromStores(resetPending[9]).useStateFromStores(items, () => currentUser.getCurrentUser());
   const tmp7 = guild(resetPending[10])();
   guild = tmp7.guild;
   resetPending = tmp7.resetPending;
-  let obj1 = stateFromStores(resetPending[9]);
+  let obj = stateFromStores(resetPending[9]);
   const items1 = [UserProfileSettingsStore];
-  noop = obj1.useStateFromStores(items1, () => UserProfileSettingsStore.showNotice());
+  noop = stateFromStores(resetPending[9]).useStateFromStores(items1, () => UserProfileSettingsStore.showNotice());
   const items2 = [stateFromStores, guild];
   const effect = noop.useEffect(() => {
-    let obj = stateFromStores;
     let tmp = null != stateFromStores;
     if (tmp) {
       tmp = null != guild;
     }
     if (tmp) {
       GuildIdentityActionCreators.setCurrentGuild(guild.id);
-      obj = { guildId: guild.id, dispatchWait: true };
-      maybeFetchUserProfileDefault(obj.id, obj.getAvatarURL(guild.id, 80), obj);
+      const obj3 = { guildId: guild.id, dispatchWait: true };
+      maybeFetchUserProfileDefault(stateFromStores.id, stateFromStores.getAvatarURL(guild.id, 80), obj3);
     }
   }, items2);
   if (null != stateFromStores) {
     if (null != guild) {
-      obj = { value: tmp4(guild(resetPending[8]).USER_SETTINGS_GUILD_PROFILE).analyticsLocations, children: null };
-      obj = { style: tmp.guildSelector, children: null };
-      obj1 = { icon: null, label: null, arrow: true, onPress: null };
-      let obj2 = { guild, size: null };
-      let tmp2Result = tmp2(tmp3[15]);
-      obj2.size = tmp5(tmp3[15]).GuildIconSizes.XSMALL;
-      obj1.icon = closure_7(tmp2Result, obj2);
-      obj1.label = guild.name;
-      obj1.onPress = function onPress() {
+      let obj3 = { value: tmp4(guild(resetPending[8]).USER_SETTINGS_GUILD_PROFILE).analyticsLocations, children: null };
+      const obj4 = { style: tmp.guildSelector, children: null };
+      const obj5 = { icon: null, label: null, arrow: true, onPress: null };
+      const obj6 = { guild, size: tmp5(tmp3[15]).GuildIconSizes.XSMALL };
+      obj5.icon = closure_7(tmp2(tmp3[15]), obj6);
+      obj5.label = guild.name;
+      obj5.onPress = function onPress() {
         maybeShowDiscardChangesAlertDefault({
           onConfirm() {
             let tmp2 = null != user;
@@ -73,27 +70,27 @@ export default function UserSettingsEditGuildProfile() {
               tmp2 = null != selectedGuild;
             }
             if (tmp2) {
-              guild(resetPending[17]);
-              const obj = { user, selectedGuild, onSelectGuild };
-              obj.openLazy(
+              const obj2 = { user, selectedGuild, onSelectGuild };
+              guild(resetPending[17]).openLazy(
                 stateFromStores(resetPending[19])(resetPending[18], resetPending.paths),
                 "GuildSelectComponentActionSheet",
-                obj,
+                obj2,
               );
+              const obj = guild(resetPending[17]);
             }
           },
           hasEdits,
           resetPending,
         });
       };
-      obj.children = closure_7(tmp5(tmp3[14]).TableRow, obj1);
-      const items3 = [closure_7(onSelectGuild, obj)];
-      const obj3 = { currentUser: stateFromStores };
+      obj4.children = closure_7(tmp5(tmp3[14]).TableRow, obj5);
+      const items3 = [closure_7(onSelectGuild, obj4)];
+      const obj7 = { currentUser: stateFromStores };
       const _HermesInternal = HermesInternal;
-      tmp2Result = tmp2(tmp3[20]);
-      items3[1] = closure_7(tmp2Result, obj3, "" + stateFromStores.id + "-" + guild.id);
-      obj.children = items3;
-      return closure_8(tmp5(tmp3[7]).AnalyticsLocationProvider, obj);
+      const tmp2Result = tmp2(tmp3[15]);
+      items3[1] = closure_7(tmp2(tmp3[20]), obj7, "" + stateFromStores.id + "-" + guild.id);
+      obj3.children = items3;
+      return closure_8(tmp5(tmp3[7]).AnalyticsLocationProvider, obj3);
     }
   }
   return closure_7(guild(resetPending[13]), {});

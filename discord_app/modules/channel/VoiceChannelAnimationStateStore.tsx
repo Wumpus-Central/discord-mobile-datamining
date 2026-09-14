@@ -28,10 +28,8 @@ function updateChannelAnimationState(arg0, arg1) {
   const bound = Math.max(0, num + arg1);
   if (0 === num) {
     if (bound > 0) {
-      let obj = { style: null, userCount: null };
-      obj.style = obj.GENTLE_AMBIENT_WITH_INTRO;
-      obj.userCount = bound;
-      dependencyMap[arg0] = obj;
+      const obj2 = { style: obj.GENTLE_AMBIENT_WITH_INTRO, userCount: bound };
+      dependencyMap[arg0] = obj2;
       closure_129_0 = arg0;
       if (null != dependencyMap2[arg0]) {
         const _clearTimeout3 = clearTimeout;
@@ -55,10 +53,8 @@ function updateChannelAnimationState(arg0, arg1) {
   }
   if (num > 0) {
     if (bound > num) {
-      obj = { style: null, userCount: null };
-      obj.style = obj.HIGH_CONTRAST;
-      obj.userCount = bound;
-      dependencyMap[arg0] = obj;
+      const obj3 = { style: obj.HIGH_CONTRAST, userCount: bound };
+      dependencyMap[arg0] = obj3;
       closure_0 = arg0;
       if (null != dependencyMap2[arg0]) {
         const _clearTimeout2 = clearTimeout;
@@ -111,7 +107,7 @@ function handleConnectionOpenOrLogout() {
   closure_4 = {};
   return true;
 }
-let AnimationStyle = {
+const AnimationStyle = {
   GENTLE_AMBIENT: "GENTLE_AMBIENT",
   GENTLE_AMBIENT_WITH_INTRO: "GENTLE_AMBIENT_WITH_INTRO",
   HIGH_CONTRAST: "HIGH_CONTRAST",
@@ -146,7 +142,7 @@ prototype["getUserCount"] = function getUserCount(arg0) {
   return num;
 };
 VoiceChannelAnimationStateStoreClass.displayName = "VoiceChannelAnimationStateStore";
-AnimationStyle = {
+const voiceChannelAnimationStateStoreClass = new VoiceChannelAnimationStateStoreClass(DispatcherDefault, {
   VOICE_STATE_UPDATES: function handleVoiceStateUpdates(arg0) {
     guildId = SelectedGuildStore.getGuildId();
     let tmp2 = guildId !== guildId;
@@ -195,7 +191,7 @@ AnimationStyle = {
       return false;
     } else {
       resetAllState();
-      let obj = {};
+      const obj2 = {};
       const _Object2 = Object;
       const values = Object.values(VoiceStateStore.getVoiceStates(guildId));
       const iter = values[Symbol.iterator]();
@@ -203,22 +199,22 @@ AnimationStyle = {
       while (iter !== undefined) {
         let tmp4 = nextResult;
         if (null != nextResult.channelId) {
-          let num = obj[tmp4.channelId];
+          let num = obj2[tmp4.channelId];
           if (num == null) {
             num = 0;
           }
-          obj[tmp4.channelId] = num + 1;
+          obj2[tmp4.channelId] = num + 1;
         }
         continue;
       }
       const _Object = Object;
-      const entries = Object.entries(obj);
+      const entries = Object.entries(obj2);
       const tmp8 = entries[Symbol.iterator]();
       while (tmp8 !== undefined) {
         let tmp13 = _slicedToArray(tmp10, 2);
         [tmp14, tmp15] = tmp13;
         if (tmp15 > 0) {
-          obj = { style: null, userCount: null };
+          let obj = { style: null, userCount: null };
           obj.style = obj.GENTLE_AMBIENT;
           obj.userCount = tmp16;
           closure_4[tmp14] = obj;
@@ -230,11 +226,7 @@ AnimationStyle = {
   },
   CONNECTION_OPEN: handleConnectionOpenOrLogout,
   LOGOUT: handleConnectionOpenOrLogout,
-};
-const voiceChannelAnimationStateStoreClass = new VoiceChannelAnimationStateStoreClass(
-  DispatcherDefault,
-  AnimationStyle,
-);
+});
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/channel/VoiceChannelAnimationStateStore.tsx");
 

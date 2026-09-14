@@ -6,7 +6,7 @@ import AutomaticLifecycleManager from "../../../../lib/AutomaticLifecycleManager
 import size from "../../../../../_runtime/metro/00002__.js";
 
 const NativeModules = _mod17.NativeModules;
-let prototype = function UserSettingsNativeBridgeManager() {
+const prototype = function UserSettingsNativeBridgeManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
   applyArgumentsResult.saveExplicitContentSettingsToDisk = PlatformUtils.isIOS()
     ? () => {
@@ -33,9 +33,9 @@ let prototype = function UserSettingsNativeBridgeManager() {
   return applyArgumentsResult;
 }.prototype;
 class prototype extends tmp2 {}
-prototype = new prototype();
+const prototype1 = new prototype();
 let result = size.fileFinishedImporting(
   "modules/user_settings/privacy_and_safety/native/UserSettingsNativeBridgeManager.tsx",
 );
 
-export default prototype;
+export default prototype1;

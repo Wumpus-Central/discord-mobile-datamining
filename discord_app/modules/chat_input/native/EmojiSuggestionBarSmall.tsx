@@ -18,14 +18,14 @@ function EmojiSuggestionBarSmallAnimated(displayEmojis) {
     transitionState,
   } = displayEmojis);
   ({ onOccupiedHeightChange, cleanUp } = displayEmojis);
-  let obj = displayEmojis(12555);
-  const suggestionBarHeight = obj.useSuggestionBarHeight(
+  const tmp = closure_7(displayEmojis.anchorTop);
+  const suggestionBarHeight = displayEmojis(12556).useSuggestionBarHeight(
     transitionState,
     cleanUp,
     CONTAINER_SMALL_WRAPPER_HEIGHT,
     onOccupiedHeightChange,
   );
-  const tmp = closure_7(displayEmojis.anchorTop);
+  let obj = displayEmojis(12556);
   class A {
     constructor() {
       obj = { opacity: null };
@@ -36,17 +36,21 @@ function EmojiSuggestionBarSmallAnimated(displayEmojis) {
       return obj;
     }
   }
-  obj = { interpolate: displayEmojis(4373).interpolate, heightSv: suggestionBarHeight, CONTAINER_SMALL_WRAPPER_HEIGHT };
-  A.__closure = obj;
+  let obj2 = displayEmojis(4373);
+  A.__closure = {
+    interpolate: displayEmojis(4373).interpolate,
+    heightSv: suggestionBarHeight,
+    CONTAINER_SMALL_WRAPPER_HEIGHT,
+  };
   A.__workletHash = 1856279964267;
   A.__initData = __initData;
-  const animatedStyle = displayEmojis(4373).useAnimatedStyle(A);
-  obj = {
+  const animatedStyle = obj2.useAnimatedStyle(A);
+  const obj4 = {
     style: null,
     children: displayEmojis.map((emoji, index) => {
       const locked = emoji.locked;
-      let obj = { index, reducedMotion, children: null };
-      obj = {
+      const obj = { index, reducedMotion, children: null };
+      const obj2 = {
         emoji: emoji.emoji,
         disabled: locked,
         onPressEmoji: locked ? noop : dependencyMap,
@@ -59,8 +63,8 @@ function EmojiSuggestionBarSmallAnimated(displayEmojis) {
       } else {
         openEmojiActionSheet = openEmojiActionSheet2.openEmojiActionSheet;
       }
-      obj.onLongPressEmoji = openEmojiActionSheet;
-      obj.animateEmoji = !reducedMotion;
+      obj2.onLongPressEmoji = openEmojiActionSheet;
+      obj2.animateEmoji = !reducedMotion;
       obj.children = jsx(EmojiPickerListRow.EmojiItem, {
         emoji: emoji.emoji,
         disabled: locked,
@@ -71,24 +75,17 @@ function EmojiSuggestionBarSmallAnimated(displayEmojis) {
       });
       return jsx(
         EmojiSuggestionBarUtils.EmojiEntranceAnimation,
-        {
-          emoji: emoji.emoji,
-          disabled: locked,
-          onPressEmoji: locked ? noop : dependencyMap,
-          onLongPressEmoji: null,
-          animateEmoji: null,
-          isSectionNitroLocked: false,
-        },
+        { index, reducedMotion, children: null },
         EmojiSuggestionBarUtils.getEmojiEntranceKey(displayEmojis, index),
       );
     }),
   };
   let items = [tmp.containerSmall, animatedStyle];
-  obj.style = items;
-  return suggestionBarHeight(ReanimatedRexportDefault.View, obj);
+  obj4.style = items;
+  return suggestionBarHeight(ReanimatedRexportDefault.View, obj4);
 }
 const jsx = fn(21).jsx;
-const sum = fn(10418).IMAGE_SIZE + 2 * nativeDefault.space.PX_8 + 2;
+const sum = fn(10419).IMAGE_SIZE + 2 * nativeDefault.space.PX_8 + 2;
 const hasOwnProperty = sum;
 const CONTAINER_SMALL_WRAPPER_HEIGHT = sum + nativeDefault.space.PX_8;
 const createStyles = fn(4636);

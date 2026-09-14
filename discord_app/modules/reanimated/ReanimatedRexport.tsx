@@ -4,6 +4,8 @@ import REAWorkaroundViewDefault from "native/REAWorkaroundView.tsx";
 import PlatformUtils from "../../../discord_common/js/shared/utils/PlatformUtils.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
+const require = globalThis.__r;
+
 if (PlatformUtils.isAndroid()) {
   const _Object = Object;
   const obj = { View: REAWorkaroundViewDefault };

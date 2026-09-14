@@ -37,14 +37,15 @@ export const getInlineForwardOptions = function getInlineForwardOptions(message,
       });
       mapped = found.map((id) => id.id);
     }
-    let obj = { onlyAttachmentIds: mapped };
-    return obj;
+    const obj2 = { onlyAttachmentIds: mapped };
+    return obj2;
   } else {
     if ("embed" === targetKind) {
       if (null != embedIndex) {
-        obj = { onlyEmbedIndices: null };
+        const obj3 = { onlyEmbedIndices: null };
         const items = [embedIndex];
-        obj.onlyEmbedIndices = items;
+        obj3.onlyEmbedIndices = items;
+        let obj = obj3;
       }
       return obj;
     }

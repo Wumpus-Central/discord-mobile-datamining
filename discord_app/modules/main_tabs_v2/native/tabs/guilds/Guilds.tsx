@@ -10,7 +10,7 @@ import YouBarDefault from "../../you_bar/YouBar.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const YouBarNavigatorScreens = fn(11218).YouBarNavigatorScreens;
+const YouBarNavigatorScreens = fn(11219).YouBarNavigatorScreens;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
 const size = fn(2);
@@ -18,20 +18,19 @@ const result = size.fileFinishedImporting("modules/main_tabs_v2/native/tabs/guil
 
 export default noop.memo(
   function GuildsOnly() {
-    let obj = TabsPerformanceTracker;
-    const trackTabPerformance = obj.useTrackTabPerformance(YouBarNavigatorScreens.GUILDS);
+    const trackTabPerformance = TabsPerformanceTracker.useTrackTabPerformance(YouBarNavigatorScreens.GUILDS);
     const tmp4 = useColorThemeBackgroundDefault();
     let isEligibleForQuests = QuestsEligibility.getIsEligibleForQuests();
-    obj = { gradient: tmp4, children: null };
+    const obj3 = { gradient: tmp4, children: null };
     const items = [React4(MainChannelsDefault, {}), React4(YouBarDefault, {})];
     if (isEligibleForQuests) {
       isEligibleForQuests = React4(QuestDockDefault, {});
     }
     items[2] = isEligibleForQuests;
-    obj.children = hasOwnProperty(QuestDockExternalCoordinationContext.QuestDockExternalCoordinationContextProvider, {
+    obj3.children = hasOwnProperty(QuestDockExternalCoordinationContext.QuestDockExternalCoordinationContextProvider, {
       children: items,
     });
-    return React4(native.ThemeContextProvider, obj);
+    return React4(native.ThemeContextProvider, obj3);
   },
   () => true,
 );

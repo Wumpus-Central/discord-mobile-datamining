@@ -17,7 +17,7 @@ export const useShareChatInputActions = function useShareChatInputActions(
   _slicedToArray = appEntryKey;
   ref = ref.useRef(null);
   closure_4 = ref.useRef({ start: 0, end: 0 });
-  [tmp3, closure_5] = _slicedToArray(ref.useState(false), 2);
+  [tmp3, closure_5] = ref.useState(false);
   const callback = ref.useCallback((nativeEvent) => {
     const merged = Object.assign(nativeEvent.nativeEvent.selection);
     closure_4.current = {};
@@ -72,7 +72,7 @@ export const useShareChatInputActions = function useShareChatInputActions(
       if (current != null) {
         current.blur();
       }
-      const obj = {
+      const obj2 = {
         onPressEmoji: callback3,
         onClose: callback4,
         pickerIntention: EmojiIntention.CHAT,
@@ -86,8 +86,8 @@ export const useShareChatInputActions = function useShareChatInputActions(
       if (channel != null) {
         guildId = channel.getGuildId();
       }
-      obj.guildId = guildId;
-      const result = obj.openEmojiPickerActionSheet(obj);
+      obj2.guildId = guildId;
+      const result = openEmojiPickerActionSheet.openEmojiPickerActionSheet(obj2);
     }, items1),
   };
 };

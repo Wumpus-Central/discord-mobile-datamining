@@ -3,11 +3,13 @@ import _mod17 from "../../../../_runtime/metro/00017__.js";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 import codegenNativeCommandsDefault from "../../../../_runtime/00113_codegenNativeCommands.js";
 import LottieNodeNativeComponentDefault from "../../../../discord_common/js/packages/rtn-codegen/js/LottieNodeNativeComponent.tsx";
-import noop from "../../../../_runtime/metro/00019__.js";
+import noop_mod from "../../../../_runtime/metro/00019__.js";
 import PlatformUtils from "../../../utils/PlatformUtils.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
+let noop = noop_mod;
 ({ useEffect: closure_0, useRef: closure_1 } = noop);
+let noop = noop_mod;
 let jsx = jsxProd.jsx;
 if (PlatformUtils.isAndroid()) {
   let importDefaultResult = LottieNodeNativeComponentDefault;

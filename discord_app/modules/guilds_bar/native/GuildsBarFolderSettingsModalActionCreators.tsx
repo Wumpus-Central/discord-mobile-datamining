@@ -7,8 +7,11 @@ const GUILD_FOLDER_SETTINGS_MODAL_KEY = "GUILD_FOLDER_SETTINGS_MODAL_KEY";
 const result = size.fileFinishedImporting("modules/guilds_bar/native/GuildsBarFolderSettingsModalActionCreators.tsx");
 
 export const showGuildsBarFolderModal = function showGuildsBarFolderModal(folderId) {
-  const obj = { folderId };
-  obj.pushLazy(asyncRequireImpl(16384, dependencyMap.paths), obj, GUILD_FOLDER_SETTINGS_MODAL_KEY);
+  ModalActionCreatorsDefault.pushLazy(
+    asyncRequireImpl(16386, dependencyMap.paths),
+    { folderId },
+    GUILD_FOLDER_SETTINGS_MODAL_KEY,
+  );
 };
 export const hideGuildsBarFolderModal = function hideGuildsBarFolderModal() {
   ModalActionCreatorsDefault.popWithKey(GUILD_FOLDER_SETTINGS_MODAL_KEY);

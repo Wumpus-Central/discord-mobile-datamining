@@ -23,19 +23,17 @@ export default {
       const tmpResult = router_utils;
     }
     obj2 = router_utils;
-    obj = { type: "FRIENDS_SET_SECTION", section: PENDING };
-    DispatcherDefault.dispatch(obj);
+    DispatcherDefault.dispatch({ type: "FRIENDS_SET_SECTION", section: PENDING });
     if (flag) {
-      obj = { tab_opened: PENDING };
-      trackFriendListClickedDefault(obj);
+      const obj5 = { tab_opened: PENDING };
+      trackFriendListClickedDefault(obj5);
     }
+    const obj3 = { type: "FRIENDS_SET_SECTION", section: PENDING };
   },
   setSection(section) {
-    const obj = { type: "FRIENDS_SET_SECTION", section };
-    obj.dispatch(obj);
+    DispatcherDefault.dispatch({ type: "FRIENDS_SET_SECTION", section });
   },
   setInitialSection(section) {
-    const obj = { type: "FRIENDS_SET_INITIAL_SECTION", section };
-    obj.dispatch(obj);
+    DispatcherDefault.dispatch({ type: "FRIENDS_SET_INITIAL_SECTION", section });
   },
 };

@@ -5,6 +5,8 @@ import useLatestChannelMessageDefault from "../message_previews/useLatestChannel
 import UserSettingsProtoStore from "../user_settings/UserSettingsProtoStore.tsx";
 import ReadStateStore from "../../stores/ReadStateStore.tsx";
 
+const require = globalThis.__r;
+
 require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/useMessagePreviews.tsx");

@@ -7,7 +7,7 @@ const result = size.fileFinishedImporting("modules/vibegrations/actions/Vibegrat
 
 export const setAppChannelChatOpen = function setAppChannelChatOpen(id, open) {
   if (VibegrationsAppChannelsStore.isChatOpen(id) !== open) {
-    const obj = { type: "VIBEGRATIONS_APP_CHANNEL_CHAT_SET", channelId: id, open };
-    obj.dispatch(obj);
+    const obj2 = { type: "VIBEGRATIONS_APP_CHANNEL_CHAT_SET", channelId: id, open };
+    DispatcherDefault.dispatch(obj2);
   }
 };

@@ -20,8 +20,8 @@ let closure_8 = async function _performRoleSubscriptionUpsellRedirect(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -34,8 +34,8 @@ let closure_8 = async function _performRoleSubscriptionUpsellRedirect(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c6 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           closure_2 = tmp3;
           closure_1 = tmp5;
@@ -45,14 +45,14 @@ let closure_8 = async function _performRoleSubscriptionUpsellRedirect(arg0) {
           c4 = 1;
           c5 = 2;
           c6 = 1;
-          const obj1 = { value: require("asyncRequireImpl")(paths[3], paths.paths), done: false };
-          return obj1;
+          const obj5 = { value: require("asyncRequireImpl")(paths[3], paths.paths), done: false };
+          return obj5;
         }
       } else if (1 === tmp8) {
         c4 = 0;
         closure_129_2 = closure_3;
-        let obj3 = new closure_130_1(closure_130_2[5])("RoleSubscriptionsLinkingUtil");
-        obj3.error("Could not perform handoff", closure_129_2);
+        const obj4 = new closure_130_1(closure_130_2[5])("RoleSubscriptionsLinkingUtil");
+        obj4.error("Could not perform handoff", closure_129_2);
         c6 = 3;
         return { value: false, done: true };
       } else if (2 === tmp8) {
@@ -62,17 +62,17 @@ let closure_8 = async function _performRoleSubscriptionUpsellRedirect(arg0) {
         } else if (arg0 === 2) {
           c4 = 0;
           c6 = 3;
-          const obj2 = { value, done: true };
-          return obj2;
+          const obj6 = { value, done: true };
+          return obj6;
         } else {
           closure_129_1 = value.default;
           c5 = 3;
           c6 = 1;
-          obj3 = {
+          const obj7 = {
             value: closure_129_1.redirectWithHandoffToken(closure_129_0, { forceExternalBrowser: true }),
             done: false,
           };
-          return obj3;
+          return obj7;
         }
       } else if (arg0 === 1) {
         c6 = 3;
@@ -80,7 +80,7 @@ let closure_8 = async function _performRoleSubscriptionUpsellRedirect(arg0) {
       } else if (arg0 === 2) {
         c4 = 0;
         c6 = 3;
-        obj = { value, done: true };
+        const obj = { value, done: true };
         return obj;
       } else {
         c4 = 0;
@@ -106,8 +106,8 @@ let closure_9 = async function _performRoleSubscriptionTeamCreationRedirect() {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -120,23 +120,23 @@ let closure_9 = async function _performRoleSubscriptionTeamCreationRedirect() {
           throw value;
         } else if (arg0 === 2) {
           c0 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           c1 = 1;
           c0 = 1;
-          const obj1 = {
+          const obj4 = {
             value: performDeveloperPortalRedirectWithTokenHandoff(constants.DEVELOPER_PORTAL_TEAMS),
             done: false,
           };
-          return obj1;
+          return obj4;
         }
       } else if (arg0 === 1) {
         c0 = 3;
         throw value;
       } else if (arg0 === 2) {
         c0 = 3;
-        obj = { value, done: true };
+        const obj = { value, done: true };
         return obj;
       } else {
         c0 = 3;
@@ -156,8 +156,8 @@ let closure_10 = async function _performRoleSubscriptionEditPayoutRedirect(arg0)
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -170,23 +170,23 @@ let closure_10 = async function _performRoleSubscriptionEditPayoutRedirect(arg0)
           throw value;
         } else if (arg0 === 2) {
           c1 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           c2 = 1;
           c1 = 1;
-          const obj1 = {
+          const obj4 = {
             value: performDeveloperPortalRedirectWithTokenHandoff(React4.DEVELOPER_PORTAL_EDIT_PAYOUTS(closure_0)),
             done: false,
           };
-          return obj1;
+          return obj4;
         }
       } else if (arg0 === 1) {
         c1 = 3;
         throw value;
       } else if (arg0 === 2) {
         c1 = 3;
-        obj = { value, done: true };
+        const obj = { value, done: true };
         return obj;
       } else {
         c1 = 3;
@@ -216,8 +216,8 @@ let closure_12 = async function _performDeveloperPortalRedirectWithTokenHandoff(
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -230,8 +230,8 @@ let closure_12 = async function _performDeveloperPortalRedirectWithTokenHandoff(
           throw value;
         } else if (arg0 === 2) {
           c6 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           closure_2 = tmp3;
           closure_1 = tmp7;
@@ -240,14 +240,14 @@ let closure_12 = async function _performDeveloperPortalRedirectWithTokenHandoff(
           c4 = 1;
           c5 = 2;
           c6 = 1;
-          const obj1 = { value: require("asyncRequireImpl")(paths[3], paths.paths), done: false };
-          return obj1;
+          const obj5 = { value: require("asyncRequireImpl")(paths[3], paths.paths), done: false };
+          return obj5;
         }
       } else if (1 === tmp7) {
         c4 = 0;
         closure_129_2 = closure_3;
-        let obj3 = new closure_130_1(closure_130_2[5])("RoleSubscriptionsLinkingUtil");
-        obj3.error("Could not perform handoff for the developer portal", closure_129_2);
+        const obj4 = new closure_130_1(closure_130_2[5])("RoleSubscriptionsLinkingUtil");
+        obj4.error("Could not perform handoff for the developer portal", closure_129_2);
         c6 = 3;
         return { value: false, done: true };
       } else if (2 === tmp7) {
@@ -257,14 +257,14 @@ let closure_12 = async function _performDeveloperPortalRedirectWithTokenHandoff(
         } else if (arg0 === 2) {
           c4 = 0;
           c6 = 3;
-          const obj2 = { value, done: true };
-          return obj2;
+          const obj6 = { value, done: true };
+          return obj6;
         } else {
           closure_129_1 = value.default;
           c5 = 3;
           c6 = 1;
-          obj3 = { value: closure_129_1.redirectDeveloperPortalWithHandoffToken(closure_129_0), done: false };
-          return obj3;
+          const obj7 = { value: closure_129_1.redirectDeveloperPortalWithHandoffToken(closure_129_0), done: false };
+          return obj7;
         }
       } else if (arg0 === 1) {
         c6 = 3;
@@ -272,7 +272,7 @@ let closure_12 = async function _performDeveloperPortalRedirectWithTokenHandoff(
       } else if (arg0 === 2) {
         c4 = 0;
         c6 = 3;
-        obj = { value, done: true };
+        const obj = { value, done: true };
         return obj;
       } else {
         c4 = 0;

@@ -5,6 +5,8 @@ import UserProfileApplicationWidgetTypes from "../../user_profile/UserProfileApp
 import noop from "../../../../_runtime/metro/00019__.js";
 import SocialLayerStorefrontStore from "../SocialLayerStorefrontStore.tsx";
 
+const require = globalThis.__r;
+
 require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting(

@@ -8,7 +8,7 @@ import triggerIOSHapticDefault from "triggerIOSHaptic.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const MorphablePanelConstants = fn(12403);
+const MorphablePanelConstants = fn(12404);
 ({ IS_IOS: closure_4, MIN_PAN_GESTURE_MOVE: hasOwnProperty, MorphablePanelModes } = MorphablePanelConstants);
 ({
   PANEL_TAP_GESTURE_MAX_DISTANCE: closure_7,
@@ -122,6 +122,17 @@ export default function useMorphablePanelGesture(mode) {
         return;
       }
     }
+    const maxPointersResult = Gesture3.Pan().enabled(flag).manualActivation(true).maxPointers(1);
+    V.__closure = {
+      updateSharedValueIfChanged: updateSharedValueIfChangedDefault,
+      wrapperOffset,
+      initialGestureOffset: sharedValue,
+      windowDimensions,
+      safeArea,
+      swipeRequiresPop: flag2,
+    };
+    V.__workletHash = 14796057583737;
+    V.__initData = __initData7;
     let obj = {
       updateSharedValueIfChanged: updateSharedValueIfChangedDefault,
       wrapperOffset,
@@ -130,10 +141,6 @@ export default function useMorphablePanelGesture(mode) {
       safeArea,
       swipeRequiresPop: flag2,
     };
-    V.__closure = obj;
-    V.__workletHash = 14796057583737;
-    V.__initData = __initData7;
-    const maxPointersResult = Gesture3.Pan().enabled(flag).manualActivation(true).maxPointers(1);
     class C {
       constructor(arg0, arg1) {
         if (pipState) {
@@ -183,7 +190,7 @@ export default function useMorphablePanelGesture(mode) {
                 tmp16 = onPanMinimizeGestureEnd;
                 tmp17 = closure_1_6;
                 tmp18 = onPanMinimizeGestureEnd(tmp4[6])(closure_1_6, { x: 0, y: 0, gestureActive: true });
-                obj = {
+                obj1 = {
                   absoluteXStart: null,
                   absoluteYStart: null,
                   active: true,
@@ -191,10 +198,10 @@ export default function useMorphablePanelGesture(mode) {
                   gestureInBottomSafeArea: false,
                   requiresPop: null,
                 };
-                obj.absoluteXStart = absoluteX;
-                obj.absoluteYStart = absoluteY;
-                obj.requiresPop = obj.get().requiresPop;
-                result = obj.set(obj);
+                obj1.absoluteXStart = absoluteX;
+                obj1.absoluteYStart = absoluteY;
+                obj1.requiresPop = obj.get().requiresPop;
+                result = obj.set(obj1);
                 activateResult1 = arg1.activate();
               }
             }
@@ -203,7 +210,8 @@ export default function useMorphablePanelGesture(mode) {
         return;
       }
     }
-    obj = {
+    const onBeginResult = result.onBegin(V);
+    C.__closure = {
       IS_IOS,
       initialGestureOffset: sharedValue,
       State: LegacyBaseButton.State,
@@ -216,10 +224,21 @@ export default function useMorphablePanelGesture(mode) {
       updateSharedValueIfChanged: updateSharedValueIfChangedDefault,
       wrapperOffset,
     };
-    C.__closure = obj;
     C.__workletHash = 12545486163726;
     C.__initData = __initData6;
-    const onBeginResult = result.onBegin(V);
+    let obj2 = {
+      IS_IOS,
+      initialGestureOffset: sharedValue,
+      State: LegacyBaseButton.State,
+      calculateXYDiff: MorphablePanelUtils.calculateXYDiff,
+      mode,
+      MorphablePanelModes,
+      MIN_PAN_GESTURE_MOVE,
+      runOnJS: ReanimatedRexport.runOnJS,
+      triggerIOSHaptic: triggerIOSHapticDefault,
+      updateSharedValueIfChanged: updateSharedValueIfChangedDefault,
+      wrapperOffset,
+    };
     class H {
       constructor(arg0) {
         if (closure_1_0 !== wrapperOffset.PIP) {
@@ -234,12 +253,12 @@ export default function useMorphablePanelGesture(mode) {
             tmp9 = result <= closure_1_9.top;
           }
           if (tmp9) {
-            obj = {};
-            tmp10 = obj;
+            obj1 = {};
+            tmp10 = obj1;
             absoluteYStart = Object.assign(obj2.get());
             flag = true;
-            obj.requiresPop = true;
-            result1 = obj2.set(obj);
+            obj1.requiresPop = true;
+            result1 = obj2.set(obj1);
           }
           diff = result;
           if (!obj2.get().requiresPop) {
@@ -256,12 +275,12 @@ export default function useMorphablePanelGesture(mode) {
             absoluteYStart = Math.max(result, 0);
             tmp14 = closure_8;
             if (absoluteYStart > closure_8) {
-              obj1 = {};
-              tmp15 = obj1;
+              obj7 = {};
+              tmp15 = obj7;
               merged = Object.assign(obj2.get());
               flag2 = false;
-              obj1.requiresPop = false;
-              result2 = obj2.set(obj1);
+              obj7.requiresPop = false;
+              result2 = obj2.set(obj7);
               tmp18 = mode;
               tmp19 = onTapGestureStart;
               obj5 = mode(onTapGestureStart[4]);
@@ -288,7 +307,7 @@ export default function useMorphablePanelGesture(mode) {
         return;
       }
     }
-    const onTouchesMoveResult = result.onBegin(V).onTouchesMove(C);
+    const onTouchesMoveResult = onBeginResult.onTouchesMove(C);
     H.__closure = {
       mode,
       MorphablePanelModes,
@@ -304,7 +323,7 @@ export default function useMorphablePanelGesture(mode) {
     };
     H.__workletHash = 6076208535373;
     H.__initData = __initData5;
-    const obj1 = {
+    let obj3 = {
       mode,
       MorphablePanelModes,
       safeArea,
@@ -332,7 +351,7 @@ export default function useMorphablePanelGesture(mode) {
     };
     D.__workletHash = 14566382353702;
     D.__initData = __initData4;
-    const obj2 = {
+    const obj4 = {
       updateSharedValueIfChanged: updateSharedValueIfChangedDefault,
       initialGestureOffset: sharedValue,
       wrapperOffset,
@@ -347,7 +366,7 @@ export default function useMorphablePanelGesture(mode) {
             tmp14 = mode;
             tmp15 = onTapGestureStart;
             obj3 = mode(onTapGestureStart[7]);
-            obj = {
+            obj1 = {
               velocityX: null,
               velocityY: null,
               absoluteX: null,
@@ -356,17 +375,17 @@ export default function useMorphablePanelGesture(mode) {
               safeArea: null,
               disableHorizontalSafeAreas: null,
             };
-            obj.velocityX = tmp2;
-            obj.velocityY = velocityY;
-            obj.absoluteX = tmp3;
-            obj.absoluteY = tmp4;
+            obj1.velocityX = tmp2;
+            obj1.velocityY = velocityY;
+            obj1.absoluteX = tmp3;
+            obj1.absoluteY = tmp4;
             tmp16 = closure_1_8;
-            obj.windowDimensions = closure_1_8;
+            obj1.windowDimensions = closure_1_8;
             tmp17 = closure_1_9;
-            obj.safeArea = closure_1_9;
+            obj1.safeArea = closure_1_9;
             tmp18 = closure_1_7;
-            obj.disableHorizontalSafeAreas = closure_1_7;
-            result = obj3.calculatePIPPositionFromVelocity(obj);
+            obj1.disableHorizontalSafeAreas = closure_1_7;
+            result = obj3.calculatePIPPositionFromVelocity(obj1);
             tmp20 = onPanMinimizeGestureEnd;
             ({ pipX, pipY } = result);
             tmp21 = closure_1_6;
@@ -419,7 +438,7 @@ export default function useMorphablePanelGesture(mode) {
     };
     X.__workletHash = 2406462688275;
     X.__initData = __initData3;
-    let obj3 = {
+    let obj5 = {
       initialGestureOffset: sharedValue,
       mode,
       MorphablePanelModes,

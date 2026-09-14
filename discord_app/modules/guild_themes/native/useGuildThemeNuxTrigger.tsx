@@ -4,6 +4,8 @@ import guild_themes_useGuildThemeNuxTriggerDefault from "../useGuildThemeNuxTrig
 import noop from "../../../../_runtime/metro/00019__.js";
 import ActionSheetStore from "../../action_sheet/native/ActionSheetStore.tsx";
 
+const require = globalThis.__r;
+
 require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_themes/native/useGuildThemeNuxTrigger.tsx");

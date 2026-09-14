@@ -18,16 +18,20 @@ class GameProfileSkeletonPlaceholder {
 }
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-fn(4636);
-let createStyles = { placeholder: null, button: null, buttonSm: null, buttonMd: null };
-createStyles = { backgroundColor: nativeDefault.colors.ICON_MUTED };
-createStyles.placeholder = createStyles;
-createStyles.button = { borderRadius: nativeDefault.radii.sm };
+const createStyles = fn(4636);
+let obj2 = {
+  placeholder: { backgroundColor: nativeDefault.colors.ICON_MUTED },
+  button: null,
+  buttonSm: null,
+  buttonMd: null,
+};
+let obj3 = { backgroundColor: nativeDefault.colors.ICON_MUTED };
+obj2.button = { borderRadius: nativeDefault.radii.sm };
 let size = { width: 92, height: nativeDefault.space.PX_32, flexShrink: 0 };
-createStyles.buttonSm = size;
+obj2.buttonSm = size;
 const size1 = { width: "100%", height: nativeDefault.space.PX_40 };
-createStyles.buttonMd = size1;
-const React5 = createStyles.createStyles(createStyles);
+obj2.buttonMd = size1;
+const React5 = createStyles.createStyles(obj2);
 let closure_8 = { sm: "buttonSm", md: "buttonMd" };
 const __initData = {
   code: "function GameProfileSkeletonTsx1(){const{opacity}=this.__closure;return{opacity:opacity.get()};}",
@@ -44,9 +48,10 @@ export const GameProfileSkeletonContainer = function GameProfileSkeletonContaine
   }
   let sharedValue;
   ({ children, style } = animationDelayMs);
-  let obj = num(sharedValue[6]);
   const items = [AccessibilityStore];
-  const stateFromStores = obj.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
+  const stateFromStores = num(sharedValue[6]).useStateFromStores(items, () => useReducedMotion.useReducedMotion);
+  let obj = num(sharedValue[6]);
+  const tmp = num;
   let num2 = 0.05;
   if (stateFromStores) {
     num2 = 0.1;
@@ -60,8 +65,9 @@ export const GameProfileSkeletonContainer = function GameProfileSkeletonContaine
     } else {
       const result1 = set(0.05);
       const tmpResult = ReanimatedRexport;
+      const tmpResult3 = ReanimatedRexport;
       const result2 = sharedValue.set(
-        tmpResult.withDelay(num, tmpResult.withRepeat(timing.withTiming(0.1, { duration: 650 }), -1, true)),
+        tmpResult.withDelay(num, tmpResult3.withRepeat(timing.withTiming(0.1, { duration: 650 }), -1, true)),
       );
       return () => num(sharedValue[7]).cancelAnimation(closure_1_2);
     }
@@ -73,8 +79,8 @@ export const GameProfileSkeletonContainer = function GameProfileSkeletonContaine
   fn.__closure = { opacity: sharedValue };
   fn.__workletHash = 16774017266233;
   fn.__initData = __initData;
-  const animatedStyle = num(sharedValue[7]).useAnimatedStyle(fn);
-  obj = {
+  const animatedStyle = tmp(sharedValue[7]).useAnimatedStyle(fn);
+  const obj3 = {
     style: null,
     accessible: false,
     accessibilityElementsHidden: true,
@@ -82,7 +88,7 @@ export const GameProfileSkeletonContainer = function GameProfileSkeletonContaine
     children,
   };
   const items2 = [style, animatedStyle];
-  obj.style = items2;
+  obj3.style = items2;
   return jsx(stateFromStores(sharedValue[7]).View, {
     style: null,
     accessible: false,

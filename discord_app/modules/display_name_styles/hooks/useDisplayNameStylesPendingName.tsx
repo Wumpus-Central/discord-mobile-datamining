@@ -3,6 +3,8 @@ import UserUtilsDefault from "../../../utils/UserUtils.tsx";
 import UserProfileSettingsStore from "../../user_profile/UserProfileSettingsStore.tsx";
 import GuildMemberStore from "../../../stores/GuildMemberStore.tsx";
 
+const require = globalThis.__r;
+
 const require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/display_name_styles/hooks/useDisplayNameStylesPendingName.tsx");

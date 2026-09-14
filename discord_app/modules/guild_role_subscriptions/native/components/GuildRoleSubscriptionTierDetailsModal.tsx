@@ -19,57 +19,60 @@ const FormImagePickerDefault = FormImagePicker;
 require = fn;
 function Content() {
   const tmp3 = FormStylesDefault();
-  let obj = EditStateContextProvider;
-  const editStateContext = obj.useEditStateContext();
+  const editStateContext = EditStateContextProvider.useEditStateContext();
   const editStateId = editStateContext.editStateId;
-  let obj1 = GuildRoleSubscriptionListingEditStateUtilsAll;
-  [tmp7, tmp8] = _slicedToArray(obj1.useName(editStateId), 2);
-  let obj2 = GuildRoleSubscriptionListingEditStateUtilsAll;
-  const tmp6 = _slicedToArray(obj1.useName(editStateId), 2);
-  [tmp10, require] = _slicedToArray(obj2.useImage(editStateId), 2);
-  let obj3 = GuildRoleSubscriptionListingEditStateUtilsAll;
-  const tmp9 = _slicedToArray(obj2.useImage(editStateId), 2);
-  [tmp12, tmp13] = _slicedToArray(obj3.usePriceTier(editStateId), 2);
-  let obj4 = GuildRoleSubscriptionListingEditStateUtilsAll;
-  const tmp11 = _slicedToArray(obj3.usePriceTier(editStateId), 2);
+  [tmp7, tmp8] = GuildRoleSubscriptionListingEditStateUtilsAll.useName(editStateId);
+  const tmp6 = _slicedToArray(GuildRoleSubscriptionListingEditStateUtilsAll.useName(editStateId), 2);
+  [tmp10, require] = GuildRoleSubscriptionListingEditStateUtilsAll.useImage(editStateId);
+  const tmp9 = _slicedToArray(GuildRoleSubscriptionListingEditStateUtilsAll.useImage(editStateId), 2);
+  [tmp12, tmp13] = GuildRoleSubscriptionListingEditStateUtilsAll.usePriceTier(editStateId);
+  const tmp11 = _slicedToArray(GuildRoleSubscriptionListingEditStateUtilsAll.usePriceTier(editStateId), 2);
   let tmp17 = null;
-  [tmp15, tmp16] = _slicedToArray(obj4.useDescription(editStateId), 2);
+  [tmp15, tmp16] = GuildRoleSubscriptionListingEditStateUtilsAll.useDescription(editStateId);
   if (null != tmp10) {
-    obj = { uri: tmp10 };
-    tmp17 = obj;
+    const obj6 = { uri: tmp10 };
+    tmp17 = obj6;
   }
-  let tmp4Result = GuildRoleSubscriptionsHooks;
-  const subscriptionListing = tmp4Result.useSubscriptionListing(editStateId);
+  const tmp14 = _slicedToArray(GuildRoleSubscriptionListingEditStateUtilsAll.useDescription(editStateId), 2);
+  const subscriptionListing = GuildRoleSubscriptionsHooks.useSubscriptionListing(editStateId);
   let published;
   if (subscriptionListing != null) {
     published = subscriptionListing.published;
   }
   let tmp20 = true === published;
-  tmp4Result = RoleSubscriptionSettingsDisabledContext;
-  const roleSubscriptionSettingsDisabled = tmp4Result.useRoleSubscriptionSettingsDisabled();
-  obj = { style: tmp3.header, children: null };
-  let tmpResult = FormHeaderDefault;
+  const tmp4Result = GuildRoleSubscriptionsHooks;
+  const roleSubscriptionSettingsDisabled =
+    RoleSubscriptionSettingsDisabledContext.useRoleSubscriptionSettingsDisabled();
+  const obj7 = { style: tmp3.header, children: null };
+  const tmp4Result2 = RoleSubscriptionSettingsDisabledContext;
   const intl = util.intl;
-  obj.children = intl.string(util.t["6XpbbR"]);
-  const items = [React7(tmpResult, obj), , , , , , ,];
-  obj1 = { description: null, image: null, imageUploadSize: null, previewShape: null, setImage: null, disabled: null };
-  tmpResult = FormImagePickerDefault;
+  obj7.children = intl.string(util.t["6XpbbR"]);
+  const items = [React7(FormHeaderDefault, obj7), , , , , , ,];
+  const obj8 = {
+    description: null,
+    image: null,
+    imageUploadSize: null,
+    previewShape: null,
+    setImage: null,
+    disabled: null,
+  };
+  const tmpResult = FormHeaderDefault;
   const intl2 = util.intl;
-  obj1.description = intl2.string(util.t.pNZfgG);
-  obj1.image = tmp17;
-  obj1.imageUploadSize = UPLOAD_MEDIUM_SIZE;
-  obj1.previewShape = FormImagePicker.PreviewShape.CIRCLE;
-  obj1.setImage = function setImage(uri) {
+  obj8.description = intl2.string(util.t.pNZfgG);
+  obj8.image = tmp17;
+  obj8.imageUploadSize = UPLOAD_MEDIUM_SIZE;
+  obj8.previewShape = FormImagePicker.PreviewShape.CIRCLE;
+  obj8.setImage = function setImage(uri) {
     return require(uri.uri);
   };
-  obj1.disabled = roleSubscriptionSettingsDisabled;
-  items[1] = React7(tmpResult, obj1);
-  obj2 = { style: tmp3.header, children: null };
-  const tmp14 = _slicedToArray(obj4.useDescription(editStateId), 2);
+  obj8.disabled = roleSubscriptionSettingsDisabled;
+  items[1] = React7(FormImagePickerDefault, obj8);
+  const obj9 = { style: tmp3.header, children: null };
+  const tmpResult6 = FormImagePickerDefault;
   const intl3 = util.intl;
-  obj2.children = intl3.string(util.t.rJ6Oad);
-  items[2] = React7(FormHeaderDefault, obj2);
-  obj3 = {
+  obj9.children = intl3.string(util.t.rJ6Oad);
+  items[2] = React7(FormHeaderDefault, obj9);
+  const obj10 = {
     style: tmp3.textInput,
     showTopContainer: false,
     multiline: false,
@@ -82,17 +85,17 @@ function Content() {
     disabled: null,
   };
   const intl4 = util.intl;
-  obj3.placeholder = intl4.string(util.t["i4/g+E"]);
-  obj3.onChange = tmp8;
-  obj3.clearButtonVisibility = native.ClearButtonVisibility.WITH_CONTENT;
-  obj3.disabled = roleSubscriptionSettingsDisabled;
-  items[3] = React7(Form.FormInput, obj3);
-  obj4 = { style: tmp3.header, children: null };
-  const tmpResult1 = FormHeaderDefault;
+  obj10.placeholder = intl4.string(util.t["i4/g+E"]);
+  obj10.onChange = tmp8;
+  obj10.clearButtonVisibility = native.ClearButtonVisibility.WITH_CONTENT;
+  obj10.disabled = roleSubscriptionSettingsDisabled;
+  items[3] = React7(Form.FormInput, obj10);
+  const obj11 = { style: tmp3.header, children: null };
+  const tmpResult7 = FormHeaderDefault;
   const intl5 = util.intl;
-  obj4.children = intl5.string(util.t["74JctW"]);
-  items[4] = React7(FormHeaderDefault, obj4);
-  const obj5 = {
+  obj11.children = intl5.string(util.t["74JctW"]);
+  items[4] = React7(FormHeaderDefault, obj11);
+  const obj12 = {
     style: tmp3.textInput,
     showTopContainer: false,
     multiline: true,
@@ -104,26 +107,26 @@ function Content() {
     disabled: null,
   };
   const intl6 = util.intl;
-  obj5.placeholder = intl6.string(util.t["3YHwoG"]);
-  obj5.onChange = tmp16;
-  obj5.disabled = roleSubscriptionSettingsDisabled;
-  items[5] = React7(Form.FormInput, obj5);
-  const obj6 = { style: tmp3.header, children: null };
-  const tmpResult2 = FormHeaderDefault;
+  obj12.placeholder = intl6.string(util.t["3YHwoG"]);
+  obj12.onChange = tmp16;
+  obj12.disabled = roleSubscriptionSettingsDisabled;
+  items[5] = React7(Form.FormInput, obj12);
+  const obj13 = { style: tmp3.header, children: null };
+  const tmpResult8 = FormHeaderDefault;
   const intl7 = util.intl;
-  obj6.children = intl7.string(util.t.CrRVAx);
-  items[6] = React7(FormHeaderDefault, obj6);
-  const tmpResult3 = FormHeaderDefault;
+  obj13.children = intl7.string(util.t.CrRVAx);
+  items[6] = React7(FormHeaderDefault, obj13);
+  const tmpResult9 = FormHeaderDefault;
   if (!tmp20) {
     tmp20 = roleSubscriptionSettingsDisabled;
   }
-  const obj7 = { disabled: tmp20, guildId: editStateContext.guildId, price: tmp12, onChange: tmp13 };
-  const obj8 = { children: null };
-  items[7] = React7(FormPriceTierDefault, obj7);
-  obj8.children = items;
-  return closure_1_11(closure_1_10, obj8);
+  const obj14 = { disabled: tmp20, guildId: editStateContext.guildId, price: tmp12, onChange: tmp13 };
+  const obj15 = { children: null };
+  items[7] = React7(FormPriceTierDefault, obj14);
+  obj15.children = items;
+  return closure_1_11(closure_1_10, obj15);
 }
-const GuildRoleSubscriptionsConstants = fn(15288);
+const GuildRoleSubscriptionsConstants = fn(15289);
 ({
   GuildRoleSubscriptionsTierScenes: hasOwnProperty,
   MAX_SUBSCRIPTION_TIER_DESCRIPTION_LENGTH: metroRequire,
@@ -139,8 +142,7 @@ const result = size.fileFinishedImporting(
 );
 
 export default function GuildRoleSubscriptionTierDetailsModal(arg0) {
-  let obj = EditStateContextProvider;
-  const editStateId = obj.useEditStateContext().editStateId;
+  const editStateId = EditStateContextProvider.useEditStateContext().editStateId;
   const obj2 = GuildRoleSubscriptionListingEditStateUtilsAll;
   const obj3 = GuildRoleSubscriptionListingEditStateUtilsAll;
   const obj4 = GuildRoleSubscriptionListingEditStateUtilsAll;
@@ -154,16 +156,16 @@ export default function GuildRoleSubscriptionTierDetailsModal(arg0) {
   if (tmp3) {
     tmp3 = null != _slicedToArray(obj3.useImage(editStateId), 1)[0];
   }
-  obj = { title: null, description: null, canProceedToNextStep: null, nextStep: null, scrollable: false };
+  const obj6 = { title: null, description: null, canProceedToNextStep: null, nextStep: null, scrollable: false };
   obj5 = GuildRoleSubscriptionListingEditStateUtilsAll;
   const intl = util.intl;
-  obj.title = intl.string(util.t.o3pHas);
+  obj6.title = intl.string(util.t.o3pHas);
   const intl2 = util.intl;
-  obj.description = intl2.string(util.t.oOOME5);
-  obj.canProceedToNextStep = tmp3;
-  obj.nextStep = constants.CHANNEL_BENEFITS;
+  obj6.description = intl2.string(util.t.oOOME5);
+  obj6.canProceedToNextStep = tmp3;
+  obj6.nextStep = constants.CHANNEL_BENEFITS;
   const merged = Object.assign(arg0);
-  obj.children = React7(memoResult, {});
-  return React7(GuildRoleSubscriptionTierEditStepDefault, obj);
+  obj6.children = React7(memoResult, {});
+  return React7(GuildRoleSubscriptionTierEditStepDefault, obj6);
 }
 export const GuildRoleSubscriptionTierDetailsTab = memoResult;

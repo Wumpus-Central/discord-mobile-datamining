@@ -3,6 +3,8 @@ import Powerups from "../../../../../discord_common/js/shared/shared-constants/P
 import GuildStore from "../../../../stores/GuildStore.tsx";
 import GuildPowerupsStore from "../GuildPowerupsStore.tsx";
 
+const require = globalThis.__r;
+
 require = fn;
 const GuildFeatures = fn(1074).GuildFeatures;
 const size = fn(2);

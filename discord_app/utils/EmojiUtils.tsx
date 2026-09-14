@@ -14,10 +14,11 @@ require = fn;
 function getEmojiUnavailableReason(forceIncludeExternalGuilds) {
   ({ emoji, channel, guildId } = forceIncludeExternalGuilds);
   if (guildId === undefined) {
-    guildId = undefined;
+    let guildId1;
     if (channel != null) {
-      guildId = channel.getGuildId();
+      guildId1 = channel.getGuildId();
     }
+    guildId = guildId1;
   }
   ({ intention, bypassPremiumEmojiEntitlement } = forceIncludeExternalGuilds);
   let tmp5 = emoji.type === EmojiTypes.EmojiTypes.GUILD;
@@ -94,12 +95,11 @@ function getEmojiUnavailableReason(forceIncludeExternalGuilds) {
             }
             obj = PremiumUtilsDefault;
           }
-          let tmp3Result = RoleSubscriptionEmojiUtils;
           if (tmp3Result.isUnusableRoleSubscriptionEmoji(emoji, guildId)) {
-            tmp3Result = CreatorMonetizationRestrictionsUtils;
-            tmp3Result.shouldHideGuildPurchaseEntryPoints(emoji.guildId)
+            CreatorMonetizationRestrictionsUtils.shouldHideGuildPurchaseEntryPoints(emoji.guildId)
               ? EmojiDisabledReasons.ROLE_SUBSCRIPTION_UNAVAILABLE
               : EmojiDisabledReasons.ROLE_SUBSCRIPTION_LOCKED;
+            const tmp3Result3 = CreatorMonetizationRestrictionsUtils;
           } else {
             let PREMIUM_LOCKED = null;
             if (emoji.animated) {
@@ -108,16 +108,17 @@ function getEmojiUnavailableReason(forceIncludeExternalGuilds) {
                 PREMIUM_LOCKED = null;
                 if (!obj3.canUseAnimatedEmojis(currentUser)) {
                   PREMIUM_LOCKED = null;
-                  if (!tmp3Result1.isPurchasableRoleSubscriptionEmoji(emoji)) {
+                  if (!tmp3Result4.isPurchasableRoleSubscriptionEmoji(emoji)) {
                     PREMIUM_LOCKED = EmojiDisabledReasons.PREMIUM_LOCKED;
                   }
-                  tmp3Result1 = RoleSubscriptionEmojiUtils;
+                  tmp3Result4 = RoleSubscriptionEmojiUtils;
                 }
                 obj3 = PremiumUtilsDefault;
               }
             }
             return PREMIUM_LOCKED;
           }
+          tmp3Result = RoleSubscriptionEmojiUtils;
         }
       }
     }
@@ -228,7 +229,7 @@ export default {
           }
         }
       } else {
-        arr = emojisUnfiltered.push(tmp2);
+        let arr3 = emojisUnfiltered.push(tmp2);
       }
       continue;
     }
@@ -324,15 +325,14 @@ export const getEmojiUrl = function getEmojiUrl(arg0, arg1) {
   }
   ({ id, animated } = arg0);
   if (null != id) {
-    let obj = { id, size: num, animated: null };
+    const obj3 = { id, size: num, animated: null };
     if (animated == null) {
       animated = false;
     }
-    obj.animated = animated;
-    let emojiURL = AvatarUtilsDefault.getEmojiURL(obj);
+    obj3.animated = animated;
+    let emojiURL = AvatarUtilsDefault.getEmojiURL(obj3);
   } else {
-    obj = EmojiUtilsPlatformedDefault;
-    emojiURL = obj.getURL(tmp);
+    emojiURL = EmojiUtilsPlatformedDefault.getURL(tmp);
   }
   return emojiURL;
 };

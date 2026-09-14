@@ -337,14 +337,21 @@ obj = {
         if (userId.userId === AuthenticationStore.getId()) {
           obj = {};
           const merged = Object.assign(obj);
-          obj = { threadId: null, guildId: null, flags: null, muted: null, muteConfig: null, joinTimestamp: null };
+          const obj2 = {
+            threadId: null,
+            guildId: null,
+            flags: null,
+            muted: null,
+            muteConfig: null,
+            joinTimestamp: null,
+          };
           ({ id: obj5.threadId, guildId: obj5.guildId } = user);
           ({ flags: obj5.flags, muted: obj5.muted, muteConfig: obj5.muteConfig } = userId);
           let tmp15 = globalThis;
           const _Date = Date;
           const date = new Date(userId.joinTimestamp);
-          obj.joinTimestamp = date;
-          obj[user.id] = obj;
+          obj2.joinTimestamp = date;
+          obj[user.id] = obj2;
           const id = user.id;
           let muteConfig = obj[id];
           closure_5.clearTimer(id);

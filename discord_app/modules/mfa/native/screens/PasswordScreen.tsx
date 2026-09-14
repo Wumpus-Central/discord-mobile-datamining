@@ -3,6 +3,8 @@ import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
+const require = globalThis.__r;
+
 const require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
@@ -53,23 +55,22 @@ export default function PasswordScreen(finish) {
     }
     return value;
   };
-  let obj = require("MfaScreenUtils");
-  const screenStyles = obj.useScreenStyles(require("useWideAuthView")());
-  const tmp5 = _slicedToArray(noop.useState(null), 2);
-  importDefault = tmp5[1];
-  const tmp6 = _slicedToArray(noop.useState(""), 2);
-  first = tmp6[0];
   const tmp = importDefault;
   const tmp3 = require("useWideAuthView")();
+  const screenStyles = require("MfaScreenUtils").useScreenStyles(tmp3);
+  [obj4.errorMessage, importDefault] = noop.useState(null);
+  const tmp6 = _slicedToArray(noop.useState(""), 2);
+  first = tmp6[0];
+  const obj = require("MfaScreenUtils");
   [tmp8, c3] = _slicedToArray(noop.useState(false), 2);
   const tmp7 = _slicedToArray(noop.useState(false), 2);
   [tmp10, c4] = _slicedToArray(noop.useState(false), 2);
-  obj = { headerText: null, input: null, submit: null, screenProps: null, mfaMethod: "password" };
+  const obj2 = { headerText: null, input: null, submit: null, screenProps: null, mfaMethod: "password" };
   const tmp9 = _slicedToArray(noop.useState(false), 2);
   const intl = finish(first[8]).intl;
-  obj.headerText = intl.string(finish(first[8]).t.Rw1XuM);
-  obj = { style: screenStyles.inputContainer, children: null };
-  const obj1 = {
+  obj2.headerText = intl.string(finish(first[8]).t.Rw1XuM);
+  const obj3 = { style: screenStyles.inputContainer, children: null };
+  const obj4 = {
     autoFocus: true,
     required: true,
     textContentType: "password",
@@ -84,16 +85,15 @@ export default function PasswordScreen(finish) {
     secureTextEntry: true,
   };
   const intl2 = finish(first[8]).intl;
-  obj1.label = intl2.string(finish(first[8]).t["CIGa+7"]);
-  obj1.errorMessage = tmp5[0];
-  obj1.onChange = tmp6[1];
-  obj1.onSubmitEditing = sendPassword;
+  obj4.label = intl2.string(finish(first[8]).t["CIGa+7"]);
+  obj4.onChange = tmp6[1];
+  obj4.onSubmitEditing = sendPassword;
   let tmp15 = tmp10;
   if (!tmp10) {
     tmp15 = tmp10;
   }
-  obj1.isDisabled = tmp15;
-  obj.children = jsx(finish(first[9]).TextInput, {
+  obj4.isDisabled = tmp15;
+  obj3.children = jsx(finish(first[9]).TextInput, {
     autoFocus: true,
     required: true,
     textContentType: "password",
@@ -107,11 +107,11 @@ export default function PasswordScreen(finish) {
     isClearable: true,
     secureTextEntry: true,
   });
-  obj.input = <View style={screenStyles.inputContainer}>{null}</View>;
-  const obj2 = { text: null, disabled: null, loading: null, onPress: null };
+  obj2.input = <View style={screenStyles.inputContainer}>{null}</View>;
+  const obj5 = { text: null, disabled: null, loading: null, onPress: null };
   const tmp12 = require("MfaOptionScreen");
   const intl3 = tmp13(tmp2[8]).intl;
-  obj2.text = intl3.string(finish(first[8]).t.geKm7t);
+  obj5.text = intl3.string(finish(first[8]).t.geKm7t);
   let tmp17 = tmp10;
   if (!tmp10) {
     tmp17 = tmp10;
@@ -119,10 +119,10 @@ export default function PasswordScreen(finish) {
   if (!tmp17) {
     tmp17 = 0 === first.length;
   }
-  obj2.disabled = tmp17;
-  obj2.loading = tmp10;
-  obj2.onPress = sendPassword;
-  obj.submit = jsx(tmp(first[10]), { text: null, disabled: null, loading: null, onPress: null });
-  obj.screenProps = { mfaChallenge: finish.mfaChallenge, finish };
-  return <tmp12 style={screenStyles.inputContainer}>{null}</tmp12>;
+  obj5.disabled = tmp17;
+  obj5.loading = tmp10;
+  obj5.onPress = sendPassword;
+  obj2.submit = jsx(tmp(first[10]), { text: null, disabled: null, loading: null, onPress: null });
+  obj2.screenProps = { mfaChallenge: finish.mfaChallenge, finish };
+  return <tmp12 headerText={null} input={null} submit={null} screenProps={null} mfaMethod="password" />;
 }

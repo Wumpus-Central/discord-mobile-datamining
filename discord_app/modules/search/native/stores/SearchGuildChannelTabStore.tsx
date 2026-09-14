@@ -26,10 +26,8 @@ class GuildChannelSearchManager {
 const prototype = GuildChannelSearchManager.prototype;
 prototype["search"] = function search(query, guildId) {
   const self = this;
-  let obj = AutocompleteUtils;
-  const boosterMap = obj.getBoosterMap(AutocompleterResultTypes.TEXT_CHANNEL);
-  let obj1 = AutocompleteUtils;
-  obj = {
+  const boosterMap = AutocompleteUtils.getBoosterMap(AutocompleterResultTypes.TEXT_CHANNEL);
+  const obj3 = {
     query,
     guildId,
     limit: 1000,
@@ -40,18 +38,18 @@ prototype["search"] = function search(query, guildId) {
       return true;
     },
   };
-  const boosterMap1 = obj1.getBoosterMap(AutocompleterResultTypes.VOICE_CHANNEL);
-  obj = {};
-  const merged = Object.assign(obj);
-  obj.type = type2;
-  obj.boosters = boosterMap;
-  const queryChannelsResult = AutocompleteUtilsDefault.queryChannels(obj);
-  obj1 = {};
-  const merged1 = Object.assign(obj);
-  obj1.type = type;
-  obj1.boosters = boosterMap1;
-  this.voiceChannels = AutocompleteUtilsDefault.queryChannels(obj1).map((channel) => ({ channel: channel.record }));
-  const queryChannelsResult1 = AutocompleteUtilsDefault.queryChannels(obj1);
+  const boosterMap1 = AutocompleteUtils.getBoosterMap(AutocompleterResultTypes.VOICE_CHANNEL);
+  const obj5 = {};
+  const merged = Object.assign(obj3);
+  obj5.type = type2;
+  obj5.boosters = boosterMap;
+  const queryChannelsResult = AutocompleteUtilsDefault.queryChannels(obj5);
+  const obj7 = {};
+  const merged1 = Object.assign(obj3);
+  obj7.type = type;
+  obj7.boosters = boosterMap1;
+  this.voiceChannels = AutocompleteUtilsDefault.queryChannels(obj7).map((channel) => ({ channel: channel.record }));
+  const queryChannelsResult1 = AutocompleteUtilsDefault.queryChannels(obj7);
   const mapped = _mod12.chain(queryChannelsResult).map((channel) => {
     const obj = { channel: channel.record, lastMessageId: null };
     let lastMessageId = ReadStateStore.lastMessageId(channel.record.id);

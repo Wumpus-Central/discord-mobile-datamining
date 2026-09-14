@@ -12,23 +12,22 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 function ObscuredView(source) {
   source = source.source;
-  let obj = useMediaItemSpoilerState;
-  [tmp4, tmp5] = _slicedToArray(obj.useMediaItemSpoilerState(source.index), 2);
+  [tmp4, tmp5] = useMediaItemSpoilerState.useMediaItemSpoilerState(source.index);
   useToken;
   let tmp10Result = null;
   if (tmp4) {
     if (source.spoiler) {
-      obj = { style: null, children: null };
+      const obj2 = { style: null, children: null };
       const items = [absoluteFill.absoluteFill, tmp5];
-      obj.style = items;
+      obj2.style = items;
       const tmp7Result = VisualEffectViewDefault;
       let str = "light";
       if (tmpResult.isAndroid()) {
         str = "dark";
       }
-      obj = { blurTheme: str, style: absoluteFill.absoluteFill, android_fallbackColor: tmp8 };
-      obj.children = React6(tmp7Result, obj);
-      tmp10Result = React6(ReanimatedRexportDefault.View, obj);
+      const obj3 = { blurTheme: str, style: absoluteFill.absoluteFill, android_fallbackColor: tmp8 };
+      obj2.children = React6(tmp7Result, obj3);
+      tmp10Result = React6(ReanimatedRexportDefault.View, obj2);
       tmpResult = PlatformUtils;
     } else {
       tmp10Result = null;
@@ -60,10 +59,10 @@ let closure_12 = noop.memo((onSelect) => {
   const items = [onSelect, index];
   const thumbnailStyle = useThumbnailStyle(first, index);
   const callback = noop.useCallback(() => onSelect(index), items);
-  let obj = { style: null, children: null };
+  const obj = { style: null, children: null };
   const items1 = [tmp.thumbnailButtonPortrait, thumbnailStyle];
   obj.style = items1;
-  obj = {
+  const obj2 = {
     needsOffscreenAlphaCompositing: true,
     renderToHardwareTextureAndroid: true,
     accessibilityRole: "imagebutton",
@@ -73,15 +72,15 @@ let closure_12 = noop.memo((onSelect) => {
     onPress: callback,
     children: null,
   };
-  obj = { style: tmp.thumbnailImagePortrait, source: null, enableAnimation: false };
+  const obj3 = { style: tmp.thumbnailImagePortrait, source: null, enableAnimation: false };
   let thumbnail = first.thumbnail;
   if (thumbnail == null) {
     thumbnail = first;
   }
-  obj.source = thumbnail;
-  const items2 = [React6(FastImageDefault, obj), React6(ObscuredView, { source: first, index })];
-  obj.children = items2;
-  obj.children = React7(hasOwnProperty, obj);
+  obj3.source = thumbnail;
+  const items2 = [React6(FastImageDefault, obj3), React6(ObscuredView, { source: first, index })];
+  obj2.children = items2;
+  obj.children = React7(hasOwnProperty, obj2);
   return React6(ReanimatedRexportDefault.View, obj);
 });
 const __initData = {
@@ -113,13 +112,16 @@ export default function MediaViewerThumbnails(syncer) {
       if (variableWidthThumbnailsEnabled) {
         let arr = push(thumbnailScrollPositions[num].scrollStart);
       } else {
-        arr = push(num * React5);
+        let arr3 = push(num * React5);
       }
     }
     return items;
   }, items);
-  let obj = sources(variableWidthThumbnailsEnabled[13]);
-  const selectedIndex = thumbnailScrollPositions(obj.useSelectedMediaSource(syncer), 1)[0];
+  const tmp = closure_11();
+  const selectedIndex = thumbnailScrollPositions(
+    sources(variableWidthThumbnailsEnabled[13]).useSelectedMediaSource(syncer),
+    1,
+  )[0];
   const items1 = [sources, selectedIndex, onSelect, useThumbnailStyle];
   const items2 = [sources.length];
   const callback = headerBufferStyle.useCallback(
@@ -138,7 +140,7 @@ export default function MediaViewerThumbnails(syncer) {
     const items = [sources.length];
     return items;
   }, items2);
-  const tmp = closure_11();
+  const obj = sources(variableWidthThumbnailsEnabled[13]);
   const fn = function n() {
     return { scrollEnabled: scrollEnabled.get() };
   };
@@ -158,7 +160,7 @@ export default function MediaViewerThumbnails(syncer) {
     items4,
   );
   const memo2 = headerBufferStyle.useMemo(() => index.get(), items5);
-  obj = {
+  return useThumbnailStyle(sources(variableWidthThumbnailsEnabled[15]).AnimatedFastList, {
     ref,
     style: tmp.containerPortrait,
     sections: memo1,
@@ -182,6 +184,5 @@ export default function MediaViewerThumbnails(syncer) {
     chunkBase: screenWidth,
     snapToOffsets: memo,
     animatedProps,
-  };
-  return useThumbnailStyle(sources(variableWidthThumbnailsEnabled[15]).AnimatedFastList, obj);
+  });
 }

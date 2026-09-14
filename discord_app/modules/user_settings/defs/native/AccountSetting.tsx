@@ -5,6 +5,8 @@ import UserCircleIcon from "../../../../design/components/Icon/native/redesign/g
 import SettingBuilders from "../../../settings/native/renderer/SettingBuilders.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
 
+const require = globalThis.__r;
+
 const route = SettingBuilders.createRoute({
   useTitle() {
     const intl = util.intl;

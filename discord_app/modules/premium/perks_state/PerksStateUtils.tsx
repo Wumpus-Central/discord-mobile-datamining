@@ -9,10 +9,10 @@ function parseServerPerkConfigKind(kind) {
   if (null != kind.kind) {
     const type = kind.kind.type;
     if (types.PerkConfigType.INCREASED_FILE_UPLOAD_SIZE === type) {
-      let obj = { type: types.PerkConfigType.INCREASED_FILE_UPLOAD_SIZE, maxSize: kind.kind.max_size };
-      return obj;
+      const obj2 = { type: types.PerkConfigType.INCREASED_FILE_UPLOAD_SIZE, maxSize: kind.kind.max_size };
+      return obj2;
     } else if (types.PerkConfigType.INCREASED_GUILD_LIMIT === type) {
-      obj = { type: types.PerkConfigType.INCREASED_GUILD_LIMIT, maxGuilds: kind.kind.max_guilds };
+      const obj = { type: types.PerkConfigType.INCREASED_GUILD_LIMIT, maxGuilds: kind.kind.max_guilds };
       return obj;
     }
   }
@@ -21,12 +21,12 @@ function getPerkSource(perks, MONTHLY_ORBS) {
   if (null != perks) {
     const _String = String;
     const tmp3 = perks.configByPerk[String(undefined, MONTHLY_ORBS)];
-    let source;
+    let source1;
     if (tmp3 != null) {
-      source = tmp3.source;
+      source1 = tmp3.source;
     }
-    if (null != source) {
-      source = tmp3.source;
+    if (null != source1) {
+      let source = tmp3.source;
     } else {
       let flag = false;
       if (null != perks) {
@@ -57,21 +57,23 @@ export const parseServerPerks = function parseServerPerks(perks) {
   if (null == perks) {
     return null;
   } else {
-    let obj = {};
+    const obj2 = {};
     const _Object = Object;
     const entries = Object.entries(perks.config_by_perk);
     const tmp11 = entries[Symbol.iterator]();
     while (tmp11 !== undefined) {
       let tmp5 = _slicedToArray(tmp2, 2);
       let tmp6 = tmp5[1];
-      obj = { source: tmp6.source, kind: parseServerPerkConfigKind(tmp6) };
-      obj[tmp5[0]] = obj;
+      let obj = { source: tmp6.source, kind: parseServerPerkConfigKind(tmp6) };
+      obj2[tmp5[0]] = obj;
       continue;
     }
-    obj = { activePerksBitmask: perks.active_perks_bitmask, configByPerk: null, rulesVersion: null };
-    obj.configByPerk = obj;
-    obj.rulesVersion = perks.rules_version;
-    return obj;
+    const obj3 = {
+      activePerksBitmask: perks.active_perks_bitmask,
+      configByPerk: obj2,
+      rulesVersion: perks.rules_version,
+    };
+    return obj3;
   }
 };
 export const hasPerk = function hasPerk(perks, MONTHLY_ORBS) {

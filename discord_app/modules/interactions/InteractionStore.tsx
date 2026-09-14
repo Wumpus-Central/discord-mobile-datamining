@@ -90,12 +90,12 @@ prototype["getIFrameModalKey"] = function getIFrameModalKey() {
 prototype["getInteractionDebugContext"] = function getInteractionDebugContext(nonce) {
   if (null != nonce) {
     if (null != dependencyMap[nonce]) {
-      let obj = { interaction: tmp2, messageId: dependencyMap3[nonce] };
-      return obj;
+      const obj2 = { interaction: tmp2, messageId: dependencyMap3[nonce] };
+      return obj2;
     } else {
       let tmp5;
       if (null != dependencyMap4[nonce]) {
-        obj = { interaction: null, messageId: null };
+        const obj = { interaction: null, messageId: null };
         ({ interaction: obj.interaction, messageId: obj.messageId } = tmp4);
         tmp5 = obj;
       }
@@ -202,18 +202,18 @@ const interactionStore = new InteractionStore(DispatcherDefault, {
             delete tmp[tmp3];
           }
           delete tmp[tmp2];
-          let obj = { insertedAt: null, nonce: null, messageId: null, interaction: null };
+          const obj2 = { insertedAt: null, nonce: null, messageId: null, interaction: null };
           const _Date = Date;
-          obj.insertedAt = Date.now();
-          obj.nonce = nonce;
-          obj.messageId = dependencyMap3[nonce];
-          obj.interaction = dependencyMap[nonce];
-          dependencyMap4[nonce] = obj;
+          obj2.insertedAt = Date.now();
+          obj2.nonce = nonce;
+          obj2.messageId = dependencyMap3[nonce];
+          obj2.interaction = dependencyMap[nonce];
+          dependencyMap4[nonce] = obj2;
         } else {
           delete tmp[tmp2];
         }
       } else {
-        obj = {};
+        const obj = {};
         const merged = Object.assign(tmp27);
         obj.state = InteractionTypes.InteractionState.FAILED;
         obj.errorCode = errorCode;

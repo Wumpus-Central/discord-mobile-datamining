@@ -14,12 +14,12 @@ export default function useStoreConnectionErrorAlert() {
   const items1 = [stateFromStores];
   const effect = noop.useEffect(() => {
     if (stateFromStores) {
-      const obj = { title: null, body: null };
+      const obj2 = { title: null, body: null };
       const intl = util.intl;
-      obj.title = intl.string(util.t["U+H+kd"]);
+      obj2.title = intl.string(util.t["U+H+kd"]);
       const intl2 = util.intl;
-      obj.body = intl2.string(util.t.Q9OYlM);
-      obj.show(obj);
+      obj2.body = intl2.string(util.t.Q9OYlM);
+      AlertActionCreatorsDefault.show(obj2);
     }
   }, items1);
 }

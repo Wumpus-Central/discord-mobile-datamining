@@ -3,8 +3,8 @@ import noop from "../../../../_runtime/metro/00019__.js";
 
 const require = fn;
 const NativeModules = fn(17).NativeModules;
-let module_560 = fn(560);
-module_560 = module_560.create(() => ({ autoHideHomeIndicator: false }));
+const module_560 = fn(560);
+let obj3 = module_560.create(() => ({ autoHideHomeIndicator: false }));
 let HomeIndicator;
 const Component = noop.Component;
 class HomeIndicator extends Component {
@@ -63,8 +63,8 @@ HomeIndicator["_updatePropsStack"] = function _updatePropsStack() {
     const prefersHidden = obj.prefersHidden;
     const autoHideHomeIndicator = tmp;
     const prefersDeferringSystemGestures = obj.prefersDeferringSystemGestures;
-    autoHideHomeIndicator(1249).batchUpdates(() => state.setState({ autoHideHomeIndicator }));
-    const obj2 = autoHideHomeIndicator(1249);
+    autoHideHomeIndicator(1247).batchUpdates(() => state.setState({ autoHideHomeIndicator }));
+    const obj2 = autoHideHomeIndicator(1247);
     const tmp2 = undefined !== prefersDeferringSystemGestures && prefersDeferringSystemGestures;
     if (obj3.isAndroid()) {
       const result = closure_1(1623).setNavigationBarVisible(!tmp);
@@ -75,7 +75,7 @@ HomeIndicator["_updatePropsStack"] = function _updatePropsStack() {
       const DCDHomeIndicator2 = tmp5.DCDHomeIndicator;
       const result1 = DCDHomeIndicator2.setPrefersDeferringSystemGestures(tmp2);
     }
-    obj3 = autoHideHomeIndicator(1150);
+    obj3 = autoHideHomeIndicator(1363);
   });
 };
 prototype["componentDidMount"] = function componentDidMount() {
@@ -98,4 +98,4 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/voice_panel/native/HomeIndicator.tsx");
 
 export default HomeIndicator;
-export const useHomeIndicatorStore = module_560;
+export const useHomeIndicatorStore = obj3;

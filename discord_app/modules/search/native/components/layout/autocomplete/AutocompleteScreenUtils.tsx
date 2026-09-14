@@ -105,8 +105,7 @@ export const getSearchFilterAuthorTypeIcon = function getSearchFilterAuthorTypeI
   }
 };
 export const toSearchListUserItem = function toSearchListUserItem(items, user, callback2) {
-  let obj = SearchUtils;
-  const guildIdFromSearchContext = obj.getGuildIdFromSearchContext(items);
+  const guildIdFromSearchContext = SearchUtils.getGuildIdFromSearchContext(items);
   if (null == user) {
     return null;
   } else {
@@ -121,8 +120,14 @@ export const toSearchListUserItem = function toSearchListUserItem(items, user, c
       nickname = UserUtilsDefault.getName(user);
     }
     const element = { type: SearchListItemTypes.DM, props: null };
-    obj = { type: RelationshipTypes.NONE, user, nickname, onPress: callback2, guildId: guildIdFromSearchContext };
-    element.props = obj;
+    const obj3 = {
+      type: RelationshipTypes.NONE,
+      user,
+      nickname,
+      onPress: callback2,
+      guildId: guildIdFromSearchContext,
+    };
+    element.props = obj3;
     return element;
   }
 };
@@ -135,7 +140,7 @@ export const toSearchListChannelItem = function toSearchListChannelItem(channel,
     let tmp5 = null;
     if (null != user) {
       const element = { type: SearchListItemTypes.DM, props: null };
-      let obj = { type: RelationshipTypes.NONE, user, nickname: null, onPress: null };
+      const obj = { type: RelationshipTypes.NONE, user, nickname: null, onPress: null };
       let nickname = RelationshipStore.getNickname(user.id);
       if (nickname == null) {
         nickname = UserUtilsDefault.getName(user);
@@ -152,13 +157,13 @@ export const toSearchListChannelItem = function toSearchListChannelItem(channel,
     const element1 = { type: null, props: null };
     if (channel.isGroupDM()) {
       element1.type = SearchListItemTypes.GROUP_DM;
-      obj = { channel, onPress: callback3 };
-      element1.props = obj;
+      const obj2 = { channel, onPress: callback3 };
+      element1.props = obj2;
       let tmp2 = element1;
     } else {
       element1.type = SearchListItemTypes.GUILD_TEXT_CHANNEL;
-      const obj1 = { channel, onPress: callback3 };
-      element1.props = obj1;
+      const obj3 = { channel, onPress: callback3 };
+      element1.props = obj3;
       tmp2 = element1;
     }
     return tmp2;

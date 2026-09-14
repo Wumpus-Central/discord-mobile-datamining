@@ -5,6 +5,8 @@ import UserRequiredActionStore from "../../../../stores/UserRequiredActionStore.
 import UserStore from "../../../../stores/UserStore.tsx";
 import HelpdeskUtils from "../../../../utils/HelpdeskUtils.tsx";
 
+const require = globalThis.__r;
+
 const require = fn;
 const View = fn(17).View;
 const Constants = fn(1074);
@@ -16,42 +18,40 @@ const Constants = fn(1074);
 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: c10, Fragment: closure_11, jsxs: closure_12 } = jsxProd);
-fn(4636);
-let createStyles = {
-  container: null,
-  containerInner: null,
+const createStyles = fn(4636);
+let obj2 = {
+  container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },
+  containerInner: { flex: 1, padding: 20, justifyContent: "center", alignItems: "center" },
   title: null,
   body: null,
   blocks: null,
   verificationType: null,
   button: null,
 };
-createStyles = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
-createStyles.container = createStyles;
-createStyles.containerInner = { flex: 1, padding: 20, justifyContent: "center", alignItems: "center" };
-createStyles.title = {
+let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
+obj2.title = {
   marginTop: 20,
   fontSize: 17,
   textAlign: "center",
   color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY,
 };
-let obj1 = {
+let obj4 = {
   marginTop: 20,
   fontSize: 17,
   textAlign: "center",
   color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY,
 };
-createStyles.body = {
+obj2.body = {
   marginTop: 4,
   marginBottom: 20,
   fontSize: 14,
   textAlign: "center",
   color: nativeDefault.unsafe_rawColors.PRIMARY_400,
 };
-createStyles.blocks = { width: "60%", justifyContent: "center" };
-createStyles.verificationType = { marginBottom: 20 };
-createStyles.button = { marginBottom: 20, marginHorizontal: 20, alignSelf: "center" };
-let closure_13 = createStyles.createStyles(createStyles);
+obj2.blocks = { width: "60%", justifyContent: "center" };
+obj2.verificationType = { marginBottom: 20 };
+obj2.button = { marginBottom: 20, marginHorizontal: 20, alignSelf: "center" };
+let closure_13 = createStyles.createStyles(obj2);
 const helpCenterURL = HelpdeskUtils.getArticleURL(HelpdeskArticles.VERIFICATION_FAQ);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/verification/native/components/Overview.tsx");
@@ -59,9 +59,8 @@ const result = size.fileFinishedImporting("modules/verification/native/component
 export default function Overview() {
   const tmp = closure_13();
   _require = tmp;
-  let obj = require("initialize");
   const items = [UserRequiredActionStore];
-  stateFromStores = obj.useStateFromStores(
+  stateFromStores = require("initialize").useStateFromStores(
     items,
     () => {
       action = action.getAction();
@@ -70,12 +69,13 @@ export default function Overview() {
     [],
     stateFromStores(navigation[10]).areVerificationTypesEqual,
   );
-  let obj1 = require("useNavigation");
-  navigation = obj1.useNavigation();
+  let obj = require("initialize");
+  navigation = require("useNavigation").useNavigation();
+  let obj2 = require("useNavigation");
   stateFromStores(navigation[12])(require("useBackPressHandler").BackPressHandler.minimize);
   const items1 = [navigation, stateFromStores, tmp.verificationType];
-  obj = { style: tmp.container, children: null };
-  obj = { style: tmp.containerInner, children: null };
+  let obj3 = { style: tmp.container, children: null };
+  let obj4 = { style: tmp.containerInner, children: null };
   const callback = noop.useCallback(
     () =>
       closure_2_10(closure_2_11, {
@@ -101,8 +101,8 @@ export default function Overview() {
             };
             let tmp4 = closure_1_10(closure_1_0(navigation[13]).Button, obj, item);
           } else {
-            obj = { style: item.verificationType, children: null };
-            obj = {
+            const obj2 = { style: item.verificationType, children: null };
+            const obj3 = {
               text: stateFromStores(navigation[10]).getButtonTitle(item),
               onPress() {
                 let tmp4 = item !== constants2.EMAIL_OR_PHONE;
@@ -127,8 +127,8 @@ export default function Overview() {
               },
               grow: true,
             };
-            obj.children = closure_1_10(closure_1_0(navigation[13]).Button, obj);
-            tmp4 = closure_1_10(closure_1_4, obj, item);
+            obj2.children = closure_1_10(closure_1_0(navigation[13]).Button, obj3);
+            tmp4 = closure_1_10(closure_1_4, obj2, item);
             const obj4 = stateFromStores(navigation[10]);
           }
           return tmp4;
@@ -136,26 +136,26 @@ export default function Overview() {
       }),
     items1,
   );
-  obj1 = { variant: "heading-lg/semibold", style: tmp.title, accessibilityRole: "header", children: null };
+  const obj5 = { variant: "heading-lg/semibold", style: tmp.title, accessibilityRole: "header", children: null };
   let intl = require("util").intl;
-  obj1.children = intl.string(require("util").t.Iz0kDg);
-  const items2 = [closure_10(require("Text/Text").Text, obj1), ,];
-  const obj2 = { variant: "text-sm/medium", style: tmp.body, children: null };
+  obj5.children = intl.string(require("util").t.Iz0kDg);
+  const items2 = [closure_10(require("Text/Text").Text, obj5), ,];
+  const obj6 = { variant: "text-sm/medium", style: tmp.body, children: null };
   const intl2 = require("util").intl;
-  obj2.children = intl2.format(require("util").t["0rqMV5"], { helpCenterURL });
-  items2[1] = closure_10(require("Text/Text").Text, obj2);
-  const obj3 = { helpCenterURL };
+  obj6.children = intl2.format(require("util").t["0rqMV5"], { helpCenterURL });
+  items2[1] = closure_10(require("Text/Text").Text, obj6);
+  const obj7 = { helpCenterURL };
   let tmp4 = stateFromStores(navigation[12]);
   items2[2] = closure_10(View, { style: tmp.blocks, children: callback() });
-  obj.children = items2;
-  const items3 = [closure_12(View, obj)];
-  const obj5 = { style: tmp.button, accessibilityRole: "link", children: null };
-  const obj6 = { variant: "secondary", text: null, onPress: null };
+  obj4.children = items2;
+  const items3 = [closure_12(View, obj4)];
+  const obj9 = { style: tmp.button, accessibilityRole: "link", children: null };
+  const obj10 = { variant: "secondary", text: null, onPress: null };
   const intl3 = require("util").intl;
-  obj6.text = intl3.string(require("util").t["Yl/Riu"]);
-  obj6.onPress = require("SupportUtils").emailSupport;
-  obj5.children = closure_10(require("components/Button/Button").Button, obj6);
-  items3[1] = closure_10(View, obj5);
-  obj.children = items3;
-  return closure_12(View, obj);
+  obj10.text = intl3.string(require("util").t["Yl/Riu"]);
+  obj10.onPress = require("SupportUtils").emailSupport;
+  obj9.children = closure_10(require("components/Button/Button").Button, obj10);
+  items3[1] = closure_10(View, obj9);
+  obj3.children = items3;
+  return closure_12(View, obj3);
 }

@@ -58,16 +58,15 @@ export const livingRoomWorldPointToMediaEnginePoint = function livingRoomWorldPo
 };
 export const useGuildRoomSpatialAudio = function useGuildRoomSpatialAudio(arg0) {
   ({ channelId, guildId } = arg0);
-  let obj = initialize;
   const items = [AuthenticationStore];
-  const stateFromStores = obj.useStateFromStores(items, () => id.getId());
+  const stateFromStores = initialize.useStateFromStores(items, () => id.getId());
   const interactionsEnabled = GuildRoomsExperiment.useGuildRoomsExperiment({
     guildId,
     location: "SpatialAudioPanel",
   }).interactionsEnabled;
-  obj = { available, worldPoints: null };
+  const obj3 = { available, worldPoints: null };
   const items1 = [GuildRoomStore];
   const items2 = [false, channelId, stateFromStores];
-  obj.worldPoints = initialize.useStateFromStores(items1, () => ({}), items2);
-  return obj;
+  obj3.worldPoints = initialize.useStateFromStores(items1, () => ({}), items2);
+  return obj3;
 };

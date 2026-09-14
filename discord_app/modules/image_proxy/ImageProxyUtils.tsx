@@ -60,7 +60,7 @@ let result = size.fileFinishedImporting("modules/image_proxy/ImageProxyUtils.tsx
 export { isImageProxyURL };
 export { getSizedImageProxyURL };
 export const getSizedImageAssetURL = function getSizedImageAssetURL(value, size) {
-  let str = URLUtilsDefault.toURLSafe(value);
+  const str = URLUtilsDefault.toURLSafe(value);
   if (null == str) {
     return value;
   } else {
@@ -70,9 +70,8 @@ export const getSizedImageAssetURL = function getSizedImageAssetURL(value, size)
       startsWithResult = pathname.startsWith("/external/");
     }
     if (startsWithResult) {
-      str = getSizedImageProxyURL(value, size);
+      let str1 = getSizedImageProxyURL(value, size);
     } else {
-      str = value;
       if (tmpResult.isDiscordCdnUrl(value)) {
         if (null != size.size) {
           const searchParams = str.searchParams;
@@ -83,7 +82,7 @@ export const getSizedImageAssetURL = function getSizedImageAssetURL(value, size)
             String(obj3.getBestMediaProxySize(size.size * ImageLoaderUtils.getDevicePixelRatio())),
           );
         }
-        str = str.toString();
+        str1 = str.toString();
       }
       tmpResult = URLUtilsDefault;
     }

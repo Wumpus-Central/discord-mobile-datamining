@@ -1,7 +1,7 @@
 // discord_common/js/shared/shared-constants/CountryCodes.tsx
 import size from "../../../../_runtime/metro/00002__.js";
 
-let obj = {
+const obj = {
   NON_STANDARD_CODES: new Set(["AC", "AN", "DG", "EL", "IC", "MI", "TP", "WK", "XK"]),
   ALL: null,
   US_TERRITORIES: null,
@@ -1093,7 +1093,7 @@ obj.WITHOUT_POSTAL_CODES = new Set([
   "ZA",
   "ZW",
 ]);
-obj = { US: null };
+const obj2 = { US: null };
 const set14 = new Set([
   "AE",
   "AG",
@@ -1168,7 +1168,7 @@ const set14 = new Set([
   "ZA",
   "ZW",
 ]);
-obj.US = new Set([
+obj2.US = new Set([
   "AA",
   "AE",
   "AK",
@@ -1232,7 +1232,7 @@ obj.US = new Set([
   "WV",
   "WY",
 ]);
-obj.COUNTRY_STATES = obj;
+obj.COUNTRY_STATES = obj2;
 const set15 = new Set([
   "AA",
   "AE",

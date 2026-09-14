@@ -5,13 +5,14 @@ import useGame from "useGame.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 import GameStore from "../GameStore.tsx";
 
+const require = globalThis.__r;
+
 require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/games/hooks/useGetGameForAppId.tsx");
 
 export default function useGetGameForAppId(applicationId) {
-  let obj = useGetOrFetchApplications;
-  const getOrFetchApplication = obj.useGetOrFetchApplication(applicationId);
+  const getOrFetchApplication = useGetOrFetchApplications.useGetOrFetchApplication(applicationId);
   let canonicalGameId;
   if (getOrFetchApplication != null) {
     canonicalGameId = getOrFetchApplication.getCanonicalGameId();
@@ -21,13 +22,13 @@ export default function useGetGameForAppId(applicationId) {
   }
   const game = useGame.useGame(canonicalGameId);
   let data = game.data;
-  obj = { gameId: canonicalGameId, gameRecord: null, isLoading: null };
+  const obj2 = { gameId: canonicalGameId, gameRecord: null, isLoading: null };
   if (data == null) {
     data = null;
   }
-  obj.gameRecord = data;
-  obj.isLoading = (null != applicationId && null == getOrFetchApplication) || game.isLoading;
-  return obj;
+  obj2.gameRecord = data;
+  obj2.isLoading = (null != applicationId && null == getOrFetchApplication) || game.isLoading;
+  return obj2;
 }
 export const useGetGamesForAppIds = function useGetGamesForAppIds(stateFromStoresArray) {
   const tmp = memo(7271)(stateFromStoresArray);

@@ -321,12 +321,11 @@ const dependencyMap2 = {
       if (typeof touch_action_type === "string") {
         tmp2 = touch_action_type;
       }
-      let obj = ProcessUtilsDefault;
-      let currentHermesInstrumentedStatsSummary = obj.getCurrentHermesInstrumentedStatsSummary();
+      let currentHermesInstrumentedStatsSummary = ProcessUtilsDefault.getCurrentHermesInstrumentedStatsSummary();
       if (currentHermesInstrumentedStatsSummary == null) {
         currentHermesInstrumentedStatsSummary = null;
       }
-      obj = {
+      const obj2 = {
         touch_action_type: tmp2,
         client_timestamp_ms: null,
         screen_x: null,
@@ -354,7 +353,7 @@ const dependencyMap2 = {
           tmp6 = client_timestamp_ms;
         }
       }
-      obj.client_timestamp_ms = tmp6;
+      obj2.client_timestamp_ms = tmp6;
       const screen_x = data.screen_x;
       let tmp7 = null;
       if (typeof screen_x === "number") {
@@ -364,7 +363,7 @@ const dependencyMap2 = {
           tmp7 = screen_x;
         }
       }
-      obj.screen_x = tmp7;
+      obj2.screen_x = tmp7;
       const screen_y = data.screen_y;
       let tmp8 = null;
       if (typeof screen_y === "number") {
@@ -374,7 +373,7 @@ const dependencyMap2 = {
           tmp8 = screen_y;
         }
       }
-      obj.screen_y = tmp8;
+      obj2.screen_y = tmp8;
       const view_x = data.view_x;
       let tmp9 = null;
       if (typeof view_x === "number") {
@@ -384,7 +383,7 @@ const dependencyMap2 = {
           tmp9 = view_x;
         }
       }
-      obj.view_x = tmp9;
+      obj2.view_x = tmp9;
       const view_y = data.view_y;
       let tmp10 = null;
       if (typeof view_y === "number") {
@@ -394,7 +393,7 @@ const dependencyMap2 = {
           tmp10 = view_y;
         }
       }
-      obj.view_y = tmp10;
+      obj2.view_y = tmp10;
       const total_memory_mb = data.total_memory_mb;
       let tmp11 = null;
       if (typeof total_memory_mb === "number") {
@@ -404,32 +403,32 @@ const dependencyMap2 = {
           tmp11 = total_memory_mb;
         }
       }
-      obj.total_memory_mb = tmp11;
+      obj2.total_memory_mb = tmp11;
       const memory_breakdown = data.memory_breakdown;
       let tmp12 = null;
       if (typeof memory_breakdown === "string") {
         tmp12 = memory_breakdown;
       }
-      obj.memory_breakdown = tmp12;
-      obj.hermes_instrumented_stats_summary = currentHermesInstrumentedStatsSummary;
+      obj2.memory_breakdown = tmp12;
+      obj2.hermes_instrumented_stats_summary = currentHermesInstrumentedStatsSummary;
       const view_hierarchy = data.view_hierarchy;
       let tmp13 = null;
       if (typeof view_hierarchy === "string") {
         tmp13 = view_hierarchy;
       }
-      obj.view_hierarchy = tmp13;
+      obj2.view_hierarchy = tmp13;
       const gesture = data.gesture;
       let tmp14 = null;
       if (typeof gesture === "string") {
         tmp14 = gesture;
       }
-      obj.gesture = tmp14;
+      obj2.gesture = tmp14;
       const window_name = data.window_name;
       let tmp15 = null;
       if (typeof window_name === "string") {
         tmp15 = window_name;
       }
-      obj.window_name = tmp15;
+      obj2.window_name = tmp15;
       const hit_test_duration_us = data.hit_test_duration_us;
       let tmp16 = null;
       if (typeof hit_test_duration_us === "number") {
@@ -439,7 +438,7 @@ const dependencyMap2 = {
           tmp16 = hit_test_duration_us;
         }
       }
-      obj.hit_test_duration_us = tmp16;
+      obj2.hit_test_duration_us = tmp16;
       const distance = data.distance;
       let tmp17 = null;
       if (typeof distance === "number") {
@@ -449,7 +448,7 @@ const dependencyMap2 = {
           tmp17 = distance;
         }
       }
-      obj.distance = tmp17;
+      obj2.distance = tmp17;
       const duration_ms = data.duration_ms;
       let tmp18 = null;
       if (typeof duration_ms === "number") {
@@ -459,7 +458,7 @@ const dependencyMap2 = {
           tmp18 = duration_ms;
         }
       }
-      obj.duration_ms = tmp18;
+      obj2.duration_ms = tmp18;
       const velocity = data.velocity;
       let tmp19 = null;
       if (typeof velocity === "number") {
@@ -469,7 +468,7 @@ const dependencyMap2 = {
           tmp19 = velocity;
         }
       }
-      obj.velocity = tmp19;
+      obj2.velocity = tmp19;
       const scale_factor = data.scale_factor;
       let tmp20 = null;
       if (typeof scale_factor === "number") {
@@ -479,8 +478,8 @@ const dependencyMap2 = {
           tmp20 = scale_factor;
         }
       }
-      obj.scale_factor = tmp20;
-      tmp = obj;
+      obj2.scale_factor = tmp20;
+      tmp = obj2;
     }
     return tmp;
   },
@@ -819,15 +818,15 @@ export const buildZoomedInAnalyticsEvent = function buildZoomedInAnalyticsEvent(
     const tmp6 = dependencyMap[key](key);
     let tmp7 = null;
     if (null != tmp6) {
-      let obj = { key, props: tmp6 };
-      tmp7 = obj;
+      const obj2 = { key, props: tmp6 };
+      tmp7 = obj2;
     }
     return tmp7;
   } else if (key in dependencyMap2) {
     const tmp4 = dependencyMap2[key.key](key);
     let tmp5 = null;
     if (null != tmp4) {
-      obj = { key: key2, props: tmp4 };
+      const obj = { key: key2, props: tmp4 };
       tmp5 = obj;
     }
     return tmp5;

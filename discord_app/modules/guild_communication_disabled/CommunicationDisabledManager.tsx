@@ -1,7 +1,7 @@
 // discord_app/modules/guild_communication_disabled/CommunicationDisabledManager.tsx
 import DispatcherDefault from "../../Dispatcher.tsx";
 import CommunicationDisabledUtils from "CommunicationDisabledUtils.tsx";
-import GuildMemberStore from "../../stores/GuildMemberStore.tsx";
+import GuildMemberStore_mod from "../../stores/GuildMemberStore.tsx";
 import UserStore from "../../stores/UserStore.tsx";
 import AutomaticLifecycleManager from "../../lib/AutomaticLifecycleManager.tsx";
 import size from "../../../_runtime/metro/00002__.js";
@@ -12,7 +12,7 @@ function clearGuildMemberTimeout(guildId, arg1) {
   if (null != member) {
     if (null != user) {
       if (!obj6.isMemberCommunicationDisabled(member)) {
-        let obj = {};
+        const obj = {};
         const merged = Object.assign(member);
         obj.guildId = guildId;
         let username = member.nick;
@@ -24,9 +24,9 @@ function clearGuildMemberTimeout(guildId, arg1) {
         obj.avatar = avatar;
         let tmp5;
         if (null != member.avatarDecoration) {
-          obj = {};
+          const obj2 = {};
           const merged1 = Object.assign(member.avatarDecoration);
-          tmp5 = obj;
+          tmp5 = obj2;
         }
         obj.avatarDecoration = tmp5;
         const premiumSince = member.premiumSince;
@@ -36,24 +36,26 @@ function clearGuildMemberTimeout(guildId, arg1) {
           flag = false;
         }
         obj.isPending = flag;
-        obj = {};
+        const obj3 = {};
         const merged2 = Object.assign(user);
         const email = user.email;
-        obj.email = email;
+        obj3.email = email;
         const phone = user.phone;
-        obj.phone = phone;
-        obj.user = obj;
+        obj3.phone = phone;
+        obj.user = obj3;
         obj.communicationDisabledUntil = null;
-        const obj1 = { type: "GUILD_MEMBER_UPDATE" };
+        const obj5 = { type: "GUILD_MEMBER_UPDATE" };
         const merged3 = Object.assign(obj);
-        DispatcherDefault.dispatch(obj1);
+        DispatcherDefault.dispatch(obj5);
       }
       obj6 = CommunicationDisabledUtils;
     }
   }
 }
+let GuildMemberStore = GuildMemberStore_mod;
 ({ getGuildIdFromCommunicationDisabledUserKey: c3, getUserIdFromCommunicationDisabledUserKey: closure_4 } =
   GuildMemberStore);
+let GuildMemberStore = GuildMemberStore_mod;
 let closure_7 = null;
 class CommunicationDisabledManager extends tmp3 {
   constructor() {

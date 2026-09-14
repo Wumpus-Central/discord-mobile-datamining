@@ -1,6 +1,8 @@
 // discord_app/design/components/Navigator/native/useNavigatorBackPressHandler.native.tsx
 import noop from "../../../../../_runtime/metro/00019__.js";
 
+const require = globalThis.__r;
+
 const require = fn;
 fn(17).BackHandler;
 const size = fn(2);

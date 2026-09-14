@@ -1,5 +1,5 @@
 // discord_common/js/shared/lib/PlatformUtils.tsx
-import format from "../../../../_runtime/01341_format.js";
+import format_mod from "../../../../_runtime/01339_format.js";
 
 const set1 = new Set(["Android", "iOS", "Windows Phone"]);
 let platform;
@@ -50,6 +50,7 @@ if (!tmp6) {
   }
   hasItem = set1.has(str2);
 }
+let format = format_mod;
 let family;
 if (format != null) {
   const os2 = format.os;
@@ -57,6 +58,7 @@ if (format != null) {
     family = os2.family;
   }
 }
+let format = format_mod;
 let family1;
 if (format != null) {
   const os3 = format.os;

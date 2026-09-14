@@ -38,14 +38,13 @@ export default function useFavoritesGuildChannelFilter() {
     } else {
       if (sortByMatchScore.AutocompleterResultTypes.TEXT_CHANNEL !== type) {
         if (sortByMatchScore.AutocompleterResultTypes.VOICE_CHANNEL !== type) {
-          let tmpResult = GlobalUtils;
-          return tmpResult.assertNever(type);
+          return GlobalUtils.assertNever(type);
         }
       }
       let canResult = PermissionStore.can(Permissions.VIEW_CHANNEL, type.record);
       if (canResult) {
-        tmpResult = FavoritesUtils;
-        canResult = tmpResult.isFavoritableChannel(type.record);
+        canResult = FavoritesUtils.isFavoritableChannel(type.record);
+        const tmpResult2 = FavoritesUtils;
       }
       if (canResult) {
         canResult = null == stateFromStores[type.record.id];

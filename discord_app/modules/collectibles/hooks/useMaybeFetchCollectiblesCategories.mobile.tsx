@@ -12,24 +12,23 @@ export default function useMaybeFetchCollectiblesCategories(paymentGateway, arg1
   if (paymentGateway != null) {
     paymentGateway = paymentGateway.paymentGateway;
   }
-  let obj = initialize;
   const items = [DevSettingsStore];
-  const stateFromStoresObject = obj.useStateFromStoresObject(items, () => ({
+  const stateFromStoresObject = initialize.useStateFromStoresObject(items, () => ({
     noCache: DevSettingsStore.get("shop_disable_cache"),
     includeUnpublished: DevSettingsStore.get("shop_include_unpublished"),
   }));
   ({ noCache, includeUnpublished } = stateFromStoresObject);
-  obj = { noCache, includeUnpublished, paymentGateway, countryCode: null, logPerf: null };
+  const obj3 = { noCache, includeUnpublished, paymentGateway, countryCode: null, logPerf: null };
   let countryCode;
   if (paymentGateway != null) {
     countryCode = paymentGateway.countryCode;
   }
-  obj.countryCode = countryCode;
+  obj3.countryCode = countryCode;
   let logPerf;
   if (paymentGateway != null) {
     logPerf = paymentGateway.logPerf;
   }
-  obj.logPerf = logPerf;
+  obj3.logPerf = logPerf;
   let noOp;
   if (paymentGateway != null) {
     noOp = paymentGateway.noOp;
@@ -39,7 +38,7 @@ export default function useMaybeFetchCollectiblesCategories(paymentGateway, arg1
     skipFetch = paymentGateway.skipFetch;
   }
   return useMaybeFetchCollectiblesCategoriesShared.useMaybeFetchCollectiblesCategoriesShared(
-    obj,
+    obj3,
     noOp,
     arg1,
     skipFetch,

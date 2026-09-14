@@ -11,9 +11,7 @@ let result = size.fileFinishedImporting("modules/collectibles/avatar_decorations
 
 export default function useAvatarDecorationIfNotExpired(arg0) {
   closure_0 = arg0;
-  const tmp = _slicedToArray(noop.useState(false), 2);
-  const first = tmp[0];
-  _slicedToArray = tmp[1];
+  [first, _slicedToArray] = noop.useState(false);
   noop = noop.useRef(null);
   const items = [arg0];
   const effect = noop.useEffect(() => {

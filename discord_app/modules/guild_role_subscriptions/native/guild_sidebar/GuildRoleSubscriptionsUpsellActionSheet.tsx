@@ -5,7 +5,7 @@ import components_Button_Button from "../../../../design/components/Button/nativ
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
 import Sheet_BottomSheet from "../../../../design/components/Sheet/native/BottomSheet.native.tsx";
 import GuildSettingsActionCreatorsDefault from "../../../guild_settings/GuildSettingsActionCreators.tsx";
-import _modDef16338 from "../../../../../_runtime/metro/16338__.js";
+import _modDef16340 from "../../../../../_runtime/metro/16340__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -28,16 +28,16 @@ const result = size.fileFinishedImporting(
 export default function GuildRoleSubscriptionsUpsellActionSheet(arg0) {
   ({ guildId: require, markAsDismissed: importDefault } = arg0);
   const tmp = closure_8();
-  let obj = {
+  const obj = {
     startExpanded: true,
     onDismiss() {
       return importDefault(ContentDismissActionType.UNKNOWN);
     },
     children: null,
   };
-  obj = { source: _modDef16338 };
-  const items = [closure_6(FastImageDefault, obj), , , ,];
-  obj = {
+  const obj2 = { source: _modDef16340 };
+  const items = [closure_6(FastImageDefault, obj2), , , ,];
+  const obj3 = {
     style: tmp.title,
     accessibilityRole: "header",
     variant: "heading-xl/extrabold",
@@ -45,13 +45,13 @@ export default function GuildRoleSubscriptionsUpsellActionSheet(arg0) {
     children: null,
   };
   const intl = util.intl;
-  obj.children = intl.string(util.t.C0m4rQ);
-  items[1] = closure_6(Text_Text.Text, obj);
-  const obj1 = { style: tmp.description, variant: "text-sm/medium", color: "text-default", children: null };
+  obj3.children = intl.string(util.t.C0m4rQ);
+  items[1] = closure_6(Text_Text.Text, obj3);
+  const obj4 = { style: tmp.description, variant: "text-sm/medium", color: "text-default", children: null };
   const intl2 = util.intl;
-  obj1.children = intl2.string(util.t.zOHfEX);
-  items[2] = closure_6(Text_Text.Text, obj1);
-  const obj2 = {
+  obj4.children = intl2.string(util.t.zOHfEX);
+  items[2] = closure_6(Text_Text.Text, obj4);
+  const obj5 = {
     onPress() {
       closure_1_1(ContentDismissActionType.UNKNOWN);
       GuildSettingsActionCreatorsDefault.open(require, GuildSettingsSections.ROLE_SUBSCRIPTIONS);
@@ -59,10 +59,10 @@ export default function GuildRoleSubscriptionsUpsellActionSheet(arg0) {
     text: null,
   };
   const intl3 = util.intl;
-  obj2.text = intl3.string(util.t.OgQQbG);
-  items[3] = closure_6(components_Button_Button.Button, obj2);
-  const obj3 = { style: tmp.dismissButton, children: null };
-  const obj4 = {
+  obj5.text = intl3.string(util.t.OgQQbG);
+  items[3] = closure_6(components_Button_Button.Button, obj5);
+  const obj6 = { style: tmp.dismissButton, children: null };
+  const obj7 = {
     onPress() {
       return importDefault(ContentDismissActionType.UNKNOWN);
     },
@@ -70,9 +70,9 @@ export default function GuildRoleSubscriptionsUpsellActionSheet(arg0) {
     variant: "secondary",
   };
   const intl4 = util.intl;
-  obj4.text = intl4.string(util.t.WAI6xu);
-  obj3.children = closure_6(components_Button_Button.Button, obj4);
-  items[4] = closure_6(View, obj3);
+  obj7.text = intl4.string(util.t.WAI6xu);
+  obj6.children = closure_6(components_Button_Button.Button, obj7);
+  items[4] = closure_6(View, obj6);
   obj.children = items;
   return closure_7(Sheet_BottomSheet.BottomSheet, obj);
 }

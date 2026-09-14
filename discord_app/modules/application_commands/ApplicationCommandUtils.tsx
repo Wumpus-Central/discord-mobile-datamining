@@ -16,7 +16,6 @@ import size from "../../../_runtime/metro/00002__.js";
 
 function buildCommand(arg0) {
   ({ rootCommand, command, subCommandPath } = arg0);
-  let obj;
   let tmp = null != rootCommand.permissions;
   ({ applicationId, useKeyedPermissions } = arg0);
   if (tmp) {
@@ -33,22 +32,22 @@ function buildCommand(arg0) {
       items1 = [];
     }
     const mapped1 = items1.map((displayName) => displayName.displayName);
-    obj = { version: null, guildId: null, id: null, untranslatedName: null, serverLocalizedName: null, applicationId: null, type: null, inputType: null, untranslatedDescription: null, options: null, rootCommand: null, subCommandPath: null, defaultMemberPermissions: null, dmPermission: null, permissions: null, displayName: null, displayDescription: null, nsfw: null, contexts: null, integration_types: null, global_popularity_rank: null, handler: null };
+    const obj4 = { version: null, guildId: null, id: null, untranslatedName: null, serverLocalizedName: null, applicationId: null, type: null, inputType: null, untranslatedDescription: null, options: null, rootCommand: null, subCommandPath: null, defaultMemberPermissions: null, dmPermission: null, permissions: null, displayName: null, displayDescription: null, nsfw: null, contexts: null, integration_types: null, global_popularity_rank: null, handler: null };
     ({ version: obj3.version, guild_id: obj3.guildId } = rootCommand);
     const items2 = [rootCommand.id];
     HermesBuiltin.arraySpread(mapped, 1);
-    obj.id = items2.join(React5);
+    obj4.id = items2.join(React5);
     const items3 = [rootCommand.name];
     HermesBuiltin.arraySpread(mapped, 1);
-    obj.untranslatedName = items3.join(" ");
-    obj.serverLocalizedName = command.name_localized;
-    obj.applicationId = applicationId;
+    obj4.untranslatedName = items3.join(" ");
+    obj4.serverLocalizedName = command.name_localized;
+    obj4.applicationId = applicationId;
     let CHAT = rootCommand.type;
     if (CHAT == null) {
       CHAT = Server.ApplicationCommandType.CHAT;
     }
-    obj.type = CHAT;
-    obj.inputType = ApplicationCommandTypes.ApplicationCommandInputType.BOT;
+    obj4.type = CHAT;
+    obj4.inputType = ApplicationCommandTypes.ApplicationCommandInputType.BOT;
     ({ description: obj3.untranslatedDescription, options } = command);
     let mapped2;
     if (options != null) {
@@ -142,29 +141,31 @@ function buildCommand(arg0) {
                     obj.displayDescription = description;
                     if (choices.type === closure_1_0(closure_1_3[6]).ApplicationCommandOptionType.CHANNEL) {
                       if ("channel_types" in choices) {
-                        obj = {};
+                        let obj3 = {};
                         let merged1 = Object.assign(obj);
-                        obj.channelTypes = choices.channel_types;
+                        obj3.channelTypes = choices.channel_types;
+                        let obj5 = obj3;
                       }
-                      return obj;
+                      return obj5;
                     }
                     if (choices.type === closure_1_0(closure_1_3[6]).ApplicationCommandOptionType.NUMBER) {
-                      obj = {};
+                      obj5 = {};
                       let merged2 = Object.assign(obj);
                       ({ min_value: obj2.minValue, max_value: obj2.maxValue } = choices);
                     }
                     if (choices.type !== closure_1_0(closure_1_3[6]).ApplicationCommandOptionType.STRING) {
                       if (choices.type === closure_1_0(closure_1_3[6]).ApplicationCommandOptionType.ATTACHMENT) {
                         if ("file_types" in choices) {
-                          let obj1 = {};
+                          let obj9 = {};
                           let merged3 = Object.assign(obj);
-                          obj1.fileTypes = choices.file_types;
+                          obj9.fileTypes = choices.file_types;
                         }
                       }
                     }
-                    let obj2 = {};
                     let merged4 = Object.assign(obj);
                     ({ min_length: obj4.minLength, max_length: obj4.maxLength } = choices);
+                    let tmp9 = {};
+                    let obj10 = {};
                   });
                 }
                 obj.options = mapped1;
@@ -180,29 +181,31 @@ function buildCommand(arg0) {
                 obj.displayDescription = description;
                 if (choices.type === closure_1_0(closure_1_3[6]).ApplicationCommandOptionType.CHANNEL) {
                   if ("channel_types" in choices) {
-                    obj = {};
+                    let obj3 = {};
                     let merged1 = Object.assign(obj);
-                    obj.channelTypes = choices.channel_types;
+                    obj3.channelTypes = choices.channel_types;
+                    let obj5 = obj3;
                   }
-                  return obj;
+                  return obj5;
                 }
                 if (choices.type === closure_1_0(closure_1_3[6]).ApplicationCommandOptionType.NUMBER) {
-                  obj = {};
+                  obj5 = {};
                   let merged2 = Object.assign(obj);
                   ({ min_value: obj2.minValue, max_value: obj2.maxValue } = choices);
                 }
                 if (choices.type !== closure_1_0(closure_1_3[6]).ApplicationCommandOptionType.STRING) {
                   if (choices.type === closure_1_0(closure_1_3[6]).ApplicationCommandOptionType.ATTACHMENT) {
                     if ("file_types" in choices) {
-                      let obj1 = {};
+                      let obj9 = {};
                       let merged3 = Object.assign(obj);
-                      obj1.fileTypes = choices.file_types;
+                      obj9.fileTypes = choices.file_types;
                     }
                   }
                 }
-                let obj2 = {};
                 let merged4 = Object.assign(obj);
                 ({ min_length: obj4.minLength, max_length: obj4.maxLength } = choices);
+                let tmp9 = {};
+                let obj10 = {};
               });
             }
             obj.options = mapped1;
@@ -218,29 +221,31 @@ function buildCommand(arg0) {
             obj.displayDescription = description;
             if (choices.type === closure_1_0(closure_1_3[6]).ApplicationCommandOptionType.CHANNEL) {
               if ("channel_types" in choices) {
-                obj = {};
+                let obj3 = {};
                 let merged1 = Object.assign(obj);
-                obj.channelTypes = choices.channel_types;
+                obj3.channelTypes = choices.channel_types;
+                let obj5 = obj3;
               }
-              return obj;
+              return obj5;
             }
             if (choices.type === closure_1_0(closure_1_3[6]).ApplicationCommandOptionType.NUMBER) {
-              obj = {};
+              obj5 = {};
               let merged2 = Object.assign(obj);
               ({ min_value: obj2.minValue, max_value: obj2.maxValue } = choices);
             }
             if (choices.type !== closure_1_0(closure_1_3[6]).ApplicationCommandOptionType.STRING) {
               if (choices.type === closure_1_0(closure_1_3[6]).ApplicationCommandOptionType.ATTACHMENT) {
                 if ("file_types" in choices) {
-                  let obj1 = {};
+                  let obj9 = {};
                   let merged3 = Object.assign(obj);
-                  obj1.fileTypes = choices.file_types;
+                  obj9.fileTypes = choices.file_types;
                 }
               }
             }
-            let obj2 = {};
             let merged4 = Object.assign(obj);
             ({ min_length: obj4.minLength, max_length: obj4.maxLength } = choices);
+            let tmp9 = {};
+            let obj10 = {};
           });
         }
         obj.options = mapped1;
@@ -256,61 +261,62 @@ function buildCommand(arg0) {
         obj.displayDescription = description;
         if (choices.type === closure_1_0(closure_1_3[6]).ApplicationCommandOptionType.CHANNEL) {
           if ("channel_types" in choices) {
-            obj = {};
+            let obj3 = {};
             let merged1 = Object.assign(obj);
-            obj.channelTypes = choices.channel_types;
+            obj3.channelTypes = choices.channel_types;
+            let obj5 = obj3;
           }
-          return obj;
+          return obj5;
         }
         if (choices.type === closure_1_0(closure_1_3[6]).ApplicationCommandOptionType.NUMBER) {
-          obj = {};
+          obj5 = {};
           let merged2 = Object.assign(obj);
           ({ min_value: obj2.minValue, max_value: obj2.maxValue } = choices);
         }
         if (choices.type !== closure_1_0(closure_1_3[6]).ApplicationCommandOptionType.STRING) {
           if (choices.type === closure_1_0(closure_1_3[6]).ApplicationCommandOptionType.ATTACHMENT) {
             if ("file_types" in choices) {
-              let obj1 = {};
+              let obj9 = {};
               let merged3 = Object.assign(obj);
-              obj1.fileTypes = choices.file_types;
+              obj9.fileTypes = choices.file_types;
             }
           }
         }
-        let obj2 = {};
         let merged4 = Object.assign(obj);
         ({ min_length: obj4.minLength, max_length: obj4.maxLength } = choices);
+        let tmp9 = {};
+        let obj10 = {};
       });
     }
-    obj.options = mapped2;
-    obj.rootCommand = rootCommand;
-    obj.subCommandPath = subCommandPath;
+    obj4.options = mapped2;
+    obj4.rootCommand = rootCommand;
+    obj4.subCommandPath = subCommandPath;
     deserializeResult = undefined;
     if (null != rootCommand.default_member_permissions) {
       const deserializer = BigFlagUtils;
       deserializeResult = deserializer.deserialize(rootCommand.default_member_permissions);
     }
-    obj.defaultMemberPermissions = deserializeResult;
-    obj.dmPermission = rootCommand.dm_permission;
-    obj.permissions = undefined;
+    obj4.defaultMemberPermissions = deserializeResult;
+    obj4.dmPermission = rootCommand.dm_permission;
+    obj4.permissions = undefined;
     let name = rootCommand.name_localized;
     if (name == null) {
       name = rootCommand.name;
     }
     const items4 = [name];
     HermesBuiltin.arraySpread(mapped1, 1);
-    obj.displayName = items4.join(" ");
+    obj4.displayName = items4.join(" ");
     let description = command.description_localized;
     if (description == null) {
       description = command.description;
     }
-    obj.displayDescription = description;
+    obj4.displayDescription = description;
     ({ nsfw: obj3.nsfw, contexts: obj3.contexts, integration_types: obj3.integration_types, global_popularity_rank: obj3.global_popularity_rank, handler: obj3.handler } = rootCommand);
-    return obj;
+    return obj4;
   } else if (useKeyedPermissions) {
     const keyPermissionsResult = IntegrationPermissionUtils.keyPermissions(rootCommand.permissions);
-    obj = keyPermissionsResult;
   } else {
-    obj = {};
+    const obj = {};
     const permissions = rootCommand.permissions;
     const item = permissions.forEach((id) => {
       obj[id.id] = id;
@@ -320,12 +326,12 @@ function buildCommand(arg0) {
 function buildSubCommands(arg0) {
   ({ rootCommand, command, applicationId, subCommandPath, useKeyedPermissions } = arg0);
   if (command.hasOwnProperty("id")) {
-    let obj = { rootCommand, command, applicationId, subCommandPath, useKeyedPermissions };
-    const items = [buildCommand(obj)];
+    const obj2 = { rootCommand, command, applicationId, subCommandPath, useKeyedPermissions };
+    const items = [buildCommand(obj2)];
     return items;
   } else if (command.type !== Server.ApplicationCommandOptionType.SUB_COMMAND) {
     if (command.type !== Server.ApplicationCommandOptionType.SUB_COMMAND_GROUP) {
-      obj = { rootCommand, command, applicationId, subCommandPath, useKeyedPermissions };
+      const obj = { rootCommand, command, applicationId, subCommandPath, useKeyedPermissions };
       const items1 = [buildCommand(obj)];
       return items1;
     }
@@ -338,46 +344,46 @@ function buildSubCommands(arg0) {
     const found = options.filter((type) => type.type === Server.ApplicationCommandOptionType.SUB_COMMAND_GROUP);
     for (let num3 = 0; num3 < found.length; num3 = num3 + 1) {
       let push = items2.push;
-      obj = { rootCommand, command: found[num3], applicationId, subCommandPath: null, useKeyedPermissions: null };
+      let obj3 = { rootCommand, command: found[num3], applicationId, subCommandPath: null, useKeyedPermissions: null };
       let items3 = subCommandPath;
       if (subCommandPath == null) {
         items3 = [];
       }
-      let obj1 = { name: found[num3].name, type: Server.ApplicationCommandOptionType.SUB_COMMAND_GROUP, displayName: null };
+      let obj4 = { name: found[num3].name, type: Server.ApplicationCommandOptionType.SUB_COMMAND_GROUP, displayName: null };
       let name = found[num3].name_localized;
       if (name == null) {
         name = found[num3].name;
       }
-      obj1.displayName = name;
-      let items4 = [obj1];
-      obj.subCommandPath = items3.concat(items4);
-      obj.useKeyedPermissions = useKeyedPermissions;
+      obj4.displayName = name;
+      let items4 = [obj4];
+      obj3.subCommandPath = items3.concat(items4);
+      obj3.useKeyedPermissions = useKeyedPermissions;
       let items5 = [];
-      let arraySpreadResult = HermesBuiltin.arraySpread(buildSubCommands(obj), 0);
+      let arraySpreadResult = HermesBuiltin.arraySpread(buildSubCommands(obj3), 0);
       let applyResult = HermesBuiltin.apply(items5, items2);
     }
     const options1 = command.options;
     const found1 = options1.filter((type) => type.type === Server.ApplicationCommandOptionType.SUB_COMMAND);
     for (let num4 = 0; num4 < found1.length; num4 = num4 + 1) {
-      let obj2 = { rootCommand, command: found1[num4], applicationId, subCommandPath: null, useKeyedPermissions: null };
+      let obj5 = { rootCommand, command: found1[num4], applicationId, subCommandPath: null, useKeyedPermissions: null };
       let items6 = subCommandPath;
       if (subCommandPath == null) {
         items6 = [];
       }
-      let obj3 = { name: found1[num4].name, type: Server.ApplicationCommandOptionType.SUB_COMMAND, displayName: null };
+      let obj6 = { name: found1[num4].name, type: Server.ApplicationCommandOptionType.SUB_COMMAND, displayName: null };
       let name2 = found1[num4].name_localized;
       if (name2 == null) {
         name2 = found1[num4].name;
       }
-      obj3.displayName = name2;
-      let items7 = [obj3];
-      obj2.subCommandPath = items6.concat(items7);
-      obj2.useKeyedPermissions = useKeyedPermissions;
-      let arr = items2.push(buildCommand(obj2));
+      obj6.displayName = name2;
+      let items7 = [obj6];
+      obj5.subCommandPath = items6.concat(items7);
+      obj5.useKeyedPermissions = useKeyedPermissions;
+      let arr = items2.push(buildCommand(obj5));
     }
     if (tmp21) {
-      const obj4 = { rootCommand, command, applicationId, subCommandPath, useKeyedPermissions };
-      items2.push(buildCommand(obj4));
+      const obj7 = { rootCommand, command, applicationId, subCommandPath, useKeyedPermissions };
+      items2.push(buildCommand(obj7));
     }
     return items2;
   }
@@ -428,8 +434,7 @@ export { buildCommand };
 export const buildApplicationCommands = function buildApplicationCommands(uniqByResult, useKeyedPermissions) {
   return _modDef12.flatMap(uniqByResult, (id) => {
     _modDef38(null != id.id, "Missing command id");
-    const obj = { rootCommand: id, command: id, applicationId: id.application_id, subCommandPath: "Array", useKeyedPermissions };
-    return buildSubCommands(obj);
+    return buildSubCommands({ rootCommand: id, command: id, applicationId: id.application_id, subCommandPath: "Array", useKeyedPermissions });
   });
 };
 export const applicationPermissionsList = function applicationPermissionsList(arr) {
@@ -633,7 +638,6 @@ export const extractInteractionDataProps = function extractInteractionDataProps(
 export const trackCommandSelected = function trackCommandSelected(command) {
   command = command.command;
   ({ location: _location, triggerSection, queryLength, sectionName, query, searchResultsPosition, source } = command);
-  let obj = AppAnalyticsUtils;
   const rootCommand = command.rootCommand;
   let id;
   if (rootCommand != null) {
@@ -642,8 +646,7 @@ export const trackCommandSelected = function trackCommandSelected(command) {
   if (id == null) {
     id = command.id;
   }
-  obj = { command_id: id, application_id: command.applicationId, location: _location, section: triggerSection, query_length: queryLength, command_text_length: command.displayName.length, section_name: sectionName, query, search_results_position: searchResultsPosition, source };
-  obj.trackWithMetadata(constants2.APPLICATION_COMMAND_SELECTED, obj);
+  AppAnalyticsUtils.trackWithMetadata(constants2.APPLICATION_COMMAND_SELECTED, { command_id: id, application_id: command.applicationId, location: _location, section: triggerSection, query_length: queryLength, command_text_length: command.displayName.length, section_name: sectionName, query, search_results_position: searchResultsPosition, source });
 };
 export const getInitialInteractionMetadata = function getInitialInteractionMetadata(interactionMetadata) {
   interactionMetadata = interactionMetadata.interactionMetadata;

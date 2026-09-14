@@ -18,8 +18,8 @@ let closure_7 = async function _handleUsePrimaryEntryPointAppCommand(arg0) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj3 = { value, done: true };
+        return obj3;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -32,8 +32,8 @@ let closure_7 = async function _handleUsePrimaryEntryPointAppCommand(arg0) {
             throw value;
           } else if (arg0 === 2) {
             c5 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj4 = { value, done: true };
+            return obj4;
           } else {
             closure_2 = tmp3;
             const targetApplication = tmp20;
@@ -48,14 +48,14 @@ let closure_7 = async function _handleUsePrimaryEntryPointAppCommand(arg0) {
               c3 = 1;
               c4 = 2;
               c5 = 1;
-              let obj1 = {
+              const obj5 = {
                 value: getCachedOrFetchActivityApplicationForLaunchDefault(
                   targetApplicationId.targetApplicationId,
                   targetApplicationId.channelId,
                 ),
                 done: false,
               };
-              return obj1;
+              return obj5;
             }
           }
         } else if (1 === tmp7) {
@@ -68,17 +68,16 @@ let closure_7 = async function _handleUsePrimaryEntryPointAppCommand(arg0) {
         } else if (arg0 === 2) {
           c3 = 0;
           c5 = 3;
-          const obj2 = { value, done: true };
-          return obj2;
+          const obj6 = { value, done: true };
+          return obj6;
         } else {
           closure_129_1 = value;
-          obj = closure_130_0(closure_130_3[4]);
-          closure_129_2 = obj.shouldOpenActivityInPopoutWindow();
+          closure_129_2 = closure_130_0(closure_130_3[4]).shouldOpenActivityInPopoutWindow();
           c3 = 0;
-          obj1 = closure_130_0(closure_130_3[4]);
+          let obj = closure_130_0(closure_130_3[4]);
           c5 = 3;
-          const obj3 = {
-            value: obj1.wrapPreemptiveActivityPopout(closure_129_2, () => {
+          const obj7 = {
+            value: closure_130_0(closure_130_3[4]).wrapPreemptiveActivityPopout(closure_129_2, () => {
               const obj = {};
               const merged = Object.assign(targetApplicationId);
               obj.targetApplication = targetApplication;
@@ -95,7 +94,7 @@ let closure_7 = async function _handleUsePrimaryEntryPointAppCommand(arg0) {
             }),
             done: true,
           };
-          return obj3;
+          return obj7;
         }
       } catch (tmp19) {
         if (tmp4 === c3) {
@@ -117,8 +116,8 @@ let closure_8 = async function _handleUsePrimaryEntryPointAppCommandInternal(arg
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -131,8 +130,8 @@ let closure_8 = async function _handleUsePrimaryEntryPointAppCommandInternal(arg
           throw value;
         } else if (arg0 === 2) {
           c4 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj5 = { value, done: true };
+          return obj5;
         } else {
           closure_2 = tmp5;
           closure_1 = tmp2;
@@ -177,8 +176,8 @@ let closure_8 = async function _handleUsePrimaryEntryPointAppCommandInternal(arg
             throw value;
           } else if (arg0 === 2) {
             c4 = 3;
-            const obj1 = { value, done: true };
-            return obj1;
+            const obj6 = { value, done: true };
+            return obj6;
           } else {
             closure_129_13 = closure_130_1(closure_130_3[5])();
             currentUser = closure_130_6.getCurrentUser();
@@ -192,10 +191,9 @@ let closure_8 = async function _handleUsePrimaryEntryPointAppCommandInternal(arg
                 }
                 let tmp6 = tmp14;
                 if (tmp14) {
-                  let obj2 = closure_130_2(closure_130_3[6]);
-                  obj2.markActivityUsed(closure_129_0.id);
-                  let obj3 = closure_130_0(closure_130_3[7]);
-                  obj2 = {
+                  closure_130_2(closure_130_3[6]).markActivityUsed(closure_129_0.id);
+                  const obj3 = closure_130_2(closure_130_3[6]);
+                  const obj7 = {
                     channelId: closure_129_2,
                     applicationId: closure_129_0.id,
                     isStart: true,
@@ -214,16 +212,18 @@ let closure_8 = async function _handleUsePrimaryEntryPointAppCommandInternal(arg
                   };
                   c3 = 2;
                   c4 = 1;
-                  obj3 = { value: null, done: false };
-                  obj3.value = obj3.runPrimaryAppCommandOrJoinEmbeddedActivity(obj2);
-                  return obj3;
+                  const obj8 = {
+                    value: closure_130_0(closure_130_3[7]).runPrimaryAppCommandOrJoinEmbeddedActivity(obj7),
+                    done: false,
+                  };
+                  return obj8;
                 }
               }
               tmp17 = tmp11;
             }
             c4 = 3;
-            const obj4 = { value: tmp17, done: true };
-            return obj4;
+            const obj9 = { value: tmp17, done: true };
+            return obj9;
           }
         } else if (arg0 === 1) {
           c4 = 3;
@@ -232,7 +232,7 @@ let closure_8 = async function _handleUsePrimaryEntryPointAppCommandInternal(arg
           tmp6 = value;
           if (arg0 === 2) {
             c4 = 3;
-            obj = { value, done: true };
+            const obj = { value, done: true };
             return obj;
           }
         }

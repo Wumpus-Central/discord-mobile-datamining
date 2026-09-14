@@ -5,6 +5,8 @@ import noop from "../../../_runtime/metro/00019__.js";
 import PresenceSubscriptionsStore from "../presence_subscriptions/PresenceSubscriptionsStore.tsx";
 import PresenceStore from "../../stores/PresenceStore.tsx";
 
+const require = globalThis.__r;
+
 require = fn;
 let closure_6 = [];
 let closure_7 = [];

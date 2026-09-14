@@ -21,8 +21,8 @@ export default noop.memo(function ChatInputGuardMessageRequest(channel) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -35,26 +35,25 @@ export default noop.memo(function ChatInputGuardMessageRequest(channel) {
             throw value;
           } else if (arg0 === 2) {
             c3 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
             closure_1 = tmp4;
             channel.stopPropagation();
             c2 = 1;
             c3 = 1;
-            const obj1 = { value: _undefined(id.id), done: false };
-            return obj1;
+            const obj4 = { value: _undefined(id.id), done: false };
+            return obj4;
           }
         } else if (arg0 === 1) {
           c3 = 3;
           throw value;
         } else if (arg0 === 2) {
           c3 = 3;
-          const obj2 = { value, done: true };
-          return obj2;
+          const obj5 = { value, done: true };
+          return obj5;
         } else {
-          obj = channel(c2[11]);
-          obj.transitionToChannel(closure_129_0.id, { navigationReplace: true });
+          channel(c2[11]).transitionToChannel(closure_129_0.id, { navigationReplace: true });
           c3 = 3;
           return { value: "HermesInternal", done: null };
         }
@@ -72,8 +71,8 @@ export default noop.memo(function ChatInputGuardMessageRequest(channel) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -86,21 +85,21 @@ export default noop.memo(function ChatInputGuardMessageRequest(channel) {
             throw value;
           } else if (arg0 === 2) {
             c1 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
             channel.stopPropagation();
             c2 = 1;
             c1 = 1;
-            const obj1 = { value: asyncGeneratorStep(id.id), done: false };
-            return obj1;
+            const obj4 = { value: asyncGeneratorStep(id.id), done: false };
+            return obj4;
           }
         } else if (arg0 === 1) {
           c1 = 3;
           throw value;
         } else if (arg0 === 2) {
           c1 = 3;
-          obj = { value, done: true };
+          const obj = { value, done: true };
           return obj;
         } else {
           c1 = 3;
@@ -112,29 +111,27 @@ export default noop.memo(function ChatInputGuardMessageRequest(channel) {
       }
     }
   };
+  importDefault = channel(1483).useNavigation();
   let obj = channel(1483);
-  importDefault = obj.useNavigation();
   const isMessageRequestRestrictedViewer =
-    channel(12569).useIsMessageRequestRestrictedViewer("ChatInputGuardMessageRequest");
-  let obj2 = channel(12569);
+    channel(12570).useIsMessageRequestRestrictedViewer("ChatInputGuardMessageRequest");
+  let obj2 = channel(12570);
   const items = [closure_4];
   const stateFromStores = channel(504).useStateFromStores(items, () => UserStore.getUser(channel.getRecipientId()));
-  const obj3 = channel(504);
-  obj = {
+  let obj3 = channel(504);
+  const messageRequestActions = channel(12572).useMessageRequestActions({
     user: stateFromStores,
     onError: function handleRequestError() {
-      closure_1(_undefined[8]);
-      const obj = { key: "MESSAGE_REQUEST_REQUEST_ERROR_ALERT_TITLE", content: null, icon: null };
+      const obj2 = { key: "MESSAGE_REQUEST_REQUEST_ERROR_ALERT_TITLE", content: null, icon: null };
       const intl = channel(_undefined[9]).intl;
-      obj.content = intl.string(channel(_undefined[9]).t["EDYbS+"]);
-      obj.icon = closure_1(_undefined[10]);
-      obj.open(obj);
+      obj2.content = intl.string(channel(_undefined[9]).t["EDYbS+"]);
+      obj2.icon = closure_1(_undefined[10]);
+      closure_1(_undefined[8]).open(obj2);
     },
     onRejectSuccess: function handleRejectSuccess() {
       closure_1.pop();
     },
-  };
-  const messageRequestActions = channel(12571).useMessageRequestActions(obj);
+  });
   ({
     acceptMessageRequest: c2,
     rejectMessageRequest: c3,
@@ -157,7 +154,7 @@ export default noop.memo(function ChatInputGuardMessageRequest(channel) {
   if (!tmp6) {
     tmp6 = isOptimisticRejected;
   }
-  obj = {
+  const obj6 = {
     type: "button-action",
     message: null,
     subtext: null,
@@ -170,16 +167,29 @@ export default noop.memo(function ChatInputGuardMessageRequest(channel) {
     buttonSecondaryDisabled: null,
     buttonSecondaryLoading: null,
   };
-  const obj4 = channel(12571);
+  let obj4 = channel(12572);
+  let obj5 = {
+    user: stateFromStores,
+    onError: function handleRequestError() {
+      const obj2 = { key: "MESSAGE_REQUEST_REQUEST_ERROR_ALERT_TITLE", content: null, icon: null };
+      const intl = channel(_undefined[9]).intl;
+      obj2.content = intl.string(channel(_undefined[9]).t["EDYbS+"]);
+      obj2.icon = closure_1(_undefined[10]);
+      closure_1(_undefined[8]).open(obj2);
+    },
+    onRejectSuccess: function handleRejectSuccess() {
+      closure_1.pop();
+    },
+  };
   const tmp7 = closure_5;
   let intl = tmp(1114).intl;
-  obj.message = intl.string(channel(1114).t["e/eQVB"]);
+  obj6.message = intl.string(channel(1114).t["e/eQVB"]);
   const intl2 = tmp(1114).intl;
   const t = tmp(1114).t;
-  obj.subtext = intl2.string(isMessageRequestRestrictedViewer ? t.YQ0uUE : t.HcVzGI);
+  obj6.subtext = intl2.string(isMessageRequestRestrictedViewer ? t.YQ0uUE : t.HcVzGI);
   const intl3 = tmp(1114).intl;
-  obj.buttonPrimaryText = intl3.string(channel(1114).t.Kz8Pwr);
-  obj.buttonPrimaryOnPress = function onAcceptClick(arg0) {
+  obj6.buttonPrimaryText = intl3.string(channel(1114).t.Kz8Pwr);
+  obj6.buttonPrimaryOnPress = function onAcceptClick(arg0) {
     const self = this;
     const apply = closure_4.apply;
     if (typeof apply === "unknown") {
@@ -189,18 +199,18 @@ export default noop.memo(function ChatInputGuardMessageRequest(channel) {
     }
     return applyArgumentsResult;
   };
-  obj.buttonPrimaryDisabled = tmp6;
+  obj6.buttonPrimaryDisabled = tmp6;
   if (!isAcceptLoading) {
     isAcceptLoading = isUserProfileLoading;
   }
   if (!isAcceptLoading) {
     isAcceptLoading = isOptimisticAccepted;
   }
-  obj.buttonPrimaryLoading = isAcceptLoading;
+  obj6.buttonPrimaryLoading = isAcceptLoading;
   const intl4 = tmp(1114).intl;
   const t2 = tmp(1114).t;
-  obj.buttonSecondaryText = intl4.string(isMessageRequestRestrictedViewer ? t2.BVN4pL : t2.B2nygW);
-  obj.buttonSecondaryOnPress = function onRejectClick(arg0) {
+  obj6.buttonSecondaryText = intl4.string(isMessageRequestRestrictedViewer ? t2.BVN4pL : t2.B2nygW);
+  obj6.buttonSecondaryOnPress = function onRejectClick(arg0) {
     const self = this;
     const apply = closure_5.apply;
     if (typeof apply === "unknown") {
@@ -210,10 +220,10 @@ export default noop.memo(function ChatInputGuardMessageRequest(channel) {
     }
     return applyArgumentsResult;
   };
-  obj.buttonSecondaryDisabled = tmp6;
+  obj6.buttonSecondaryDisabled = tmp6;
   if (!isRejectLoading) {
     isRejectLoading = isOptimisticRejected;
   }
-  obj.buttonSecondaryLoading = isRejectLoading;
-  return tmp7(ChatInputGuardDefault, obj);
+  obj6.buttonSecondaryLoading = isRejectLoading;
+  return tmp7(ChatInputGuardDefault, obj6);
 });

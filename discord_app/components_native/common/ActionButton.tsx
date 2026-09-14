@@ -14,29 +14,14 @@ export default function ActionButton(style) {
   if ("positive" === style.type) {
     str = "active";
   }
-  let obj = { style: style.styles, children: null };
-  obj = {
-    icon: <style.IconComponent color={obj.useButtonTextColorStyles(str).color} size="sm" />,
-    onPress: null,
-    accessibilityLabel: null,
-    variant: str,
-    size: "sm",
-  };
+  const obj2 = { style: style.styles, children: null };
   ({ onPress: obj3.onPress, accessibilityLabel: obj3.accessibilityLabel } = style);
-  obj.children = jsx(IconButton.IconButton, {
-    icon: <style.IconComponent color={obj.useButtonTextColorStyles(str).color} size="sm" />,
+  obj2.children = jsx(IconButton.IconButton, {
+    icon: <style.IconComponent color={ButtonHooks.useButtonTextColorStyles(str).color} size="sm" />,
     onPress: null,
     accessibilityLabel: null,
     variant: str,
     size: "sm",
   });
-  return (
-    <View
-      icon={<style.IconComponent color={obj.useButtonTextColorStyles(str).color} size="sm" />}
-      onPress={null}
-      accessibilityLabel={null}
-      variant={str}
-      size="sm"
-    />
-  );
+  return <View style={style.styles}>{null}</View>;
 }

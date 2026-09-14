@@ -13,12 +13,12 @@ function ProfilePreviewButton(userId) {
   let analyticsLocations;
   let context;
   analyticsLocations = analyticsLocations(context[5])().analyticsLocations;
-  let obj = userId(context[6]);
-  context = obj.useUserProfileAnalyticsContext().context;
+  const tmp = closure_7();
+  context = userId(context[6]).useUserProfileAnalyticsContext().context;
   const items = [userId, context, analyticsLocations];
   let tmp5 = null;
   if (null != userId) {
-    obj = {
+    const obj2 = {
       style: tmp.previewButton,
       onPress: tmp4,
       accessibilityRole: "button",
@@ -26,12 +26,12 @@ function ProfilePreviewButton(userId) {
       children: null,
     };
     const intl = tmp3(tmp2[9]).intl;
-    obj.accessibilityLabel = intl.string(tmp3(tmp2[9]).t["3Qcx6K"]);
-    obj = { variant: "text-sm/semibold", color: "text-overlay-light", children: null };
+    obj2.accessibilityLabel = intl.string(tmp3(tmp2[9]).t["3Qcx6K"]);
+    const obj3 = { variant: "text-sm/semibold", color: "text-overlay-light", children: null };
     const intl2 = tmp3(tmp2[9]).intl;
-    obj.children = intl2.string(tmp3(tmp2[9]).t["3Qcx6K"]);
-    obj.children = closure_5(tmp3(tmp2[10]).Text, obj);
-    tmp5 = closure_5(tmp3(tmp2[8]).PressableOpacity, obj);
+    obj3.children = intl2.string(tmp3(tmp2[9]).t["3Qcx6K"]);
+    obj2.children = closure_5(tmp3(tmp2[10]).Text, obj3);
+    tmp5 = closure_5(tmp3(tmp2[8]).PressableOpacity, obj2);
   }
   return tmp5;
 }
@@ -41,7 +41,7 @@ function EditButton(disabled) {
   if (flag === undefined) {
     flag = false;
   }
-  let obj = {
+  const obj = {
     accessibilityRole: "button",
     accessibilityLabel,
     onPress,
@@ -49,15 +49,15 @@ function EditButton(disabled) {
     style: closure_7().editButton,
     children: null,
   };
-  obj = { size: "xs", color: nativeDefault.colors.WHITE };
-  obj.children = hasOwnProperty(PencilIcon.PencilIcon, obj);
+  const tmp = closure_7();
+  obj.children = hasOwnProperty(PencilIcon.PencilIcon, { size: "xs", color: nativeDefault.colors.WHITE });
   return hasOwnProperty(Pressables.PressableOpacity, obj);
 }
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-fn(4636);
-const createStyles = { container: { position: "relative" }, editButton: null, previewButton: null };
+const createStyles = fn(4636);
+let obj2 = { container: { position: "relative" }, editButton: null, previewButton: null };
 let size = {
   position: "absolute",
   top: 12,
@@ -69,7 +69,7 @@ let size = {
   backgroundColor: nativeDefault.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT,
   borderRadius: nativeDefault.radii.round,
 };
-createStyles.editButton = size;
+obj2.editButton = size;
 const rect = {
   position: "absolute",
   justifyContent: "center",
@@ -82,8 +82,8 @@ const rect = {
   backgroundColor: nativeDefault.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT,
   zIndex: 1,
 };
-createStyles.previewButton = rect;
-let closure_7 = createStyles.createStyles(createStyles);
+obj2.previewButton = rect;
+let closure_7 = createStyles.createStyles(obj2);
 size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/native/UserProfileEditBannerButton.tsx");
 
@@ -97,7 +97,7 @@ export default function UserProfileEditBannerButton(arg0) {
   if (editDisabled === undefined) {
     editDisabled = false;
   }
-  let obj = { style: closure_7().container, children: null };
+  const obj = { style: closure_7().container, children: null };
   const tmp = closure_7();
   const items = [
     hasOwnProperty(UserProfileBannerDefault, {
@@ -113,13 +113,13 @@ export default function UserProfileEditBannerButton(arg0) {
     ,
   ];
   if (showProfilePreviewButton) {
-    obj = { userId: user.id };
-    showProfilePreviewButton = hasOwnProperty(ProfilePreviewButton, obj);
+    const obj2 = { userId: user.id };
+    showProfilePreviewButton = hasOwnProperty(ProfilePreviewButton, obj2);
   }
   items[1] = showProfilePreviewButton;
   if (showEditButton) {
-    obj = { onPress: onPressEdit, accessibilityLabel: editButtonAccessibilityLabel, disabled: editDisabled };
-    showEditButton = hasOwnProperty(EditButton, obj);
+    const obj3 = { onPress: onPressEdit, accessibilityLabel: editButtonAccessibilityLabel, disabled: editDisabled };
+    showEditButton = hasOwnProperty(EditButton, obj3);
   }
   items[2] = showEditButton;
   obj.children = items;

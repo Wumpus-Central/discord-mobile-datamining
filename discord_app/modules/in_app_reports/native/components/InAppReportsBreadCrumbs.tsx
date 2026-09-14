@@ -3,12 +3,14 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
+const require = globalThis.__r;
+
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-fn(4636);
-const createStyles = {
+const createStyles = fn(4636);
+let obj2 = {
   container: { flex: 0, alignSelf: "stretch", marginBottom: 16, paddingHorizontal: 16 },
   title: { lineHeight: 16, marginBottom: 8 },
   breadCrumbItemContainer: {
@@ -30,7 +32,7 @@ let size = {
   borderRadius: 2,
   backgroundColor: nativeDefault.colors.BACKGROUND_BRAND,
 };
-createStyles.breadCrumbDot = size;
+obj2.breadCrumbDot = size;
 const rect = {
   position: "absolute",
   width: 2,
@@ -39,9 +41,9 @@ const rect = {
   left: 3,
   backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST,
 };
-createStyles.breadCrumbBar = rect;
-createStyles.breadCrumbText = { marginStart: 8, lineHeight: 20 };
-let closure_6 = createStyles.createStyles(createStyles);
+obj2.breadCrumbBar = rect;
+obj2.breadCrumbText = { marginStart: 8, lineHeight: 20 };
+let closure_6 = createStyles.createStyles(obj2);
 size = fn(2);
 const result = size.fileFinishedImporting("modules/in_app_reports/native/components/InAppReportsBreadCrumbs.tsx");
 
@@ -55,7 +57,8 @@ export default function Breadcrumbs(element) {
     if ("breadcrumbs" === element.type) {
       let prop = dependencyMap;
       let obj = found(12);
-      found = obj
+      const tmp7 = found;
+      found = found(12)
         .flatMap(merged.history, (destination) => {
           [tmp] = destination.destination;
           const multiSelect = destination.multiSelect;
@@ -80,9 +83,9 @@ export default function Breadcrumbs(element) {
       if (0 === found.length) {
         return null;
       } else {
-        obj = { style: tmp2.container, children: null };
+        let obj2 = { style: tmp2.container, children: null };
         let map = require("Text/Text").Text;
-        obj = { style: tmp2.title, accessibilityRole: "header", variant: "text-xs/bold", children: null };
+        let obj4 = { style: tmp2.title, accessibilityRole: "header", variant: "text-xs/bold", children: null };
         const REPORT_TO_MOD = require("ReportMenuType").ReportMenuTypeSets.REPORT_TO_MOD;
         const hasItem = REPORT_TO_MOD.has(element.menuName);
         const intl = require("util").intl;
@@ -93,36 +96,37 @@ export default function Breadcrumbs(element) {
         } else {
           stringResult = string(tmp12(1114).t["+3V9Tp"]);
         }
-        obj.children = stringResult;
-        obj = [,];
-        obj[0] = closure_4(map, obj);
+        obj4.children = stringResult;
+        obj4 = [,];
+        obj4[0] = closure_4(map, obj4);
         map = found.map;
-        obj[1] = map((children, arg1) => {
-          let obj = { style: closure_0.breadCrumbItemContainer, children: null };
+        obj4[1] = map((children, arg1) => {
+          const obj = { style: closure_0.breadCrumbItemContainer, children: null };
           let tmp4 = null;
           if (arg1 !== found.length - 1) {
-            obj = { style: closure_0.breadCrumbBar };
-            tmp4 = React4(View, obj);
+            const obj2 = { style: closure_0.breadCrumbBar };
+            tmp4 = React4(View, obj2);
           }
-          const items = [tmp4, ,];
-          obj = { style: closure_0.breadCrumbDot };
-          items[1] = React4(View, obj);
-          items[2] = React4(Text_Text.Text, {
-            lineClamp: 2,
-            ellipsizeMode: "tail",
-            style: closure_0.breadCrumbText,
-            variant: "text-md/medium",
-            children,
-          });
+          const items = [
+            tmp4,
+            React4(View, { style: closure_0.breadCrumbDot }),
+            React4(Text_Text.Text, {
+              lineClamp: 2,
+              ellipsizeMode: "tail",
+              style: closure_0.breadCrumbText,
+              variant: "text-md/medium",
+              children,
+            }),
+          ];
           obj.children = items;
           return hasOwnProperty(View, obj, "" + children + "+" + arg1);
         });
-        obj.children = obj;
-        closure_5(View, obj);
-        const tmp11Result = closure_4(map, obj);
+        obj2.children = obj4;
+        closure_5(View, obj2);
+        const tmp11Result = closure_4(map, obj4);
         tmp12 = _require;
       }
-      const flatMapResult = obj.flatMap(merged.history, (destination) => {
+      const flatMapResult = found(12).flatMap(merged.history, (destination) => {
         [tmp] = destination.destination;
         const multiSelect = destination.multiSelect;
         let state;
@@ -142,7 +146,6 @@ export default function Breadcrumbs(element) {
         }
         return items;
       });
-      tmp7 = found;
     }
   }
   return null;

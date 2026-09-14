@@ -37,15 +37,15 @@ export const fetchAppStoreMetadata = function fetchAppStoreMetadata(os) {
     }
     return Promise.resolve(value);
   } else {
-    value = map1.get(combined);
-    if (null != value) {
-      return value;
+    const value3 = map1.get(combined);
+    if (null != value3) {
+      return value3;
     } else {
-      const value1 = map3.get(combined);
-      if (null != value1) {
+      const value4 = map3.get(combined);
+      if (null != value4) {
         let _Date = Date;
-        if (Date.now() < value1.retryAt) {
-          return Promise.reject(value1.error);
+        if (Date.now() < value4.retryAt) {
+          return Promise.reject(value4.error);
         }
       }
       const tmp7 = (async () => {
@@ -56,8 +56,8 @@ export const fetchAppStoreMetadata = function fetchAppStoreMetadata(os) {
           if (arg0 === 1) {
             throw value;
           } else if (arg0 === 2) {
-            let obj = { value, done: true };
-            return obj;
+            const obj2 = { value, done: true };
+            return obj2;
           } else {
             return { value: "HermesInternal", done: null };
           }
@@ -70,8 +70,8 @@ export const fetchAppStoreMetadata = function fetchAppStoreMetadata(os) {
                 throw value;
               } else if (arg0 === 2) {
                 c5 = 3;
-                obj = { value, done: true };
-                return obj;
+                const obj3 = { value, done: true };
+                return obj3;
               } else {
                 os = tmp8;
                 let body;
@@ -79,12 +79,12 @@ export const fetchAppStoreMetadata = function fetchAppStoreMetadata(os) {
                 c3 = 2;
                 const HTTP = os(tmp71[4]).HTTP;
                 const request = { url: constants.QUESTS_APP_STORE_METADATA, query: null, rejectWithError: true };
-                const obj1 = { os, app_id: storeAppId };
-                request.query = obj1;
+                const obj4 = { os, app_id: storeAppId };
+                request.query = obj4;
                 constants = 3;
                 c5 = 1;
-                const obj2 = { value: HTTP.get(request), done: false };
-                return obj2;
+                const obj5 = { value: HTTP.get(request), done: false };
+                return obj5;
               }
             } else if (1 === tmp8) {
               c3 = 0;
@@ -107,12 +107,12 @@ export const fetchAppStoreMetadata = function fetchAppStoreMetadata(os) {
                   closure_128_1 = tmp39;
                   const result1 = map2.set(closure_129_2, closure_128_1);
                 }
-                const obj3 = { retryAt: null, error: null };
+                const obj6 = { retryAt: null, error: null };
                 const _Date = Date;
                 const timestamp = Date.now();
-                obj3.retryAt = timestamp + closure_128_1.fail();
-                obj3.error = closure_128_2;
-                const result2 = map3.set(closure_129_2, obj3);
+                obj6.retryAt = timestamp + closure_128_1.fail();
+                obj6.error = closure_128_2;
+                const result2 = map3.set(closure_129_2, obj6);
                 throw closure_128_2;
               }
             } else if (arg0 === 1) {
@@ -122,8 +122,8 @@ export const fetchAppStoreMetadata = function fetchAppStoreMetadata(os) {
               c3 = 0;
               set.delete(closure_129_2);
               c5 = 3;
-              const obj4 = { value, done: true };
-              return obj4;
+              const obj7 = { value, done: true };
+              return obj7;
             } else {
               body = value.body;
               const result3 = map.set(closure_129_2, body);
@@ -131,7 +131,7 @@ export const fetchAppStoreMetadata = function fetchAppStoreMetadata(os) {
               c3 = 0;
               set.delete(closure_129_2);
               c5 = 3;
-              obj = { value: body, done: true };
+              const obj = { value: body, done: true };
               return obj;
             }
           } catch (tmp71) {

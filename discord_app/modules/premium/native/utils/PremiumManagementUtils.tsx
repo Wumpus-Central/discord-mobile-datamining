@@ -8,17 +8,19 @@ import actions_AlertActionCreatorsDefault from "../../../../actions/native/Alert
 import BillingStandaloneNativeUtils from "../../../payments/native/utils/BillingStandaloneNativeUtils.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
 
+const require = globalThis.__r;
+
 function defaultMobileWebNitroManagementSuccessCallback() {
   return logger.log("Successfully opened mobile web Nitro Management page");
 }
 function defaultMobileWebNitroManagementFailureCallback(arg0) {
   logger.error("Failed to open mobile web Nitro Management page, error response: ", arg0);
-  const obj = { title: null, body: null, hideActionSheet: true };
+  const obj2 = { title: null, body: null, hideActionSheet: true };
   const intl = util.intl;
-  obj.title = intl.string(util.t.NrBVjw);
+  obj2.title = intl.string(util.t.NrBVjw);
   const intl2 = util.intl;
-  obj.body = intl2.string(util.t["gD+grx"]);
-  obj.show(obj);
+  obj2.body = intl2.string(util.t["gD+grx"]);
+  actions_AlertActionCreatorsDefault.show(obj2);
 }
 const SubscriptionStatusTypes = Constants.SubscriptionStatusTypes;
 let closure_4 = Constants2.PaymentGatewayToFriendlyName;
@@ -60,12 +62,12 @@ export const getExternalManagementMessage = function getExternalManagementMessag
       if (null !== obj.IN_APP) {
         let str2 = "iOS";
         if (!obj7.isIOS()) {
-          let tmp13Result = tmp13(1608);
           let str = "Android";
           if (tmp13Result.isMetaQuest()) {
             str = "Meta Quest";
           }
           str2 = str;
+          tmp13Result = tmp13(1608);
         }
         if (null === tmp12.IN_EXTERNAL_MOBILE_PAYMENT_GATEWAY) {
           if (null != subscription) {
@@ -80,18 +82,19 @@ export const getExternalManagementMessage = function getExternalManagementMessag
           if (null != tmp) {
             if (tmp.shouldAllowExternalManagement) {
               if ("iOS" !== str2) {
-                tmp13Result = tmp13(1608);
+                tmp13(1608);
               }
               let status;
               if (subscription != null) {
                 status = subscription.status;
               }
               if (tmp.returnCtaAsComponent) {
-                obj = {
+                let obj2 = {
                   containerStyle: { justifyContent: "flex-start" },
                   onPress() {
                     if (null != _null) {
-                      const obj = { loadId: _null.loadId };
+                      const obj = BillingStandaloneNativeUtils;
+                      const obj2 = { loadId: _null.loadId };
                       const tmp4 =
                         null != _null.onSuccessCallback
                           ? _null.onSuccessCallback
@@ -102,7 +105,7 @@ export const getExternalManagementMessage = function getExternalManagementMessag
                           : defaultMobileWebNitroManagementFailureCallback;
                       const result = obj.goToStandaloneNitroManagementFromMobileApp(
                         "premium_external_management",
-                        obj,
+                        obj2,
                         tmp4,
                         tmp5,
                       );
@@ -113,12 +116,13 @@ export const getExternalManagementMessage = function getExternalManagementMessag
                 };
                 const intl3 = tmp13(1114).intl;
                 const t = tmp13(1114).t;
-                obj.text = intl3.string(tmp8 ? t.tqSSSA : t["olSp/D"]);
+                obj2.text = intl3.string(tmp8 ? t.tqSSSA : t["olSp/D"]);
                 jsx(tmp13(7511).LinkButton, {
                   containerStyle: { justifyContent: "flex-start" },
                   onPress() {
                     if (null != _null) {
-                      const obj = { loadId: _null.loadId };
+                      const obj = BillingStandaloneNativeUtils;
+                      const obj2 = { loadId: _null.loadId };
                       const tmp4 =
                         null != _null.onSuccessCallback
                           ? _null.onSuccessCallback
@@ -129,7 +133,7 @@ export const getExternalManagementMessage = function getExternalManagementMessag
                           : defaultMobileWebNitroManagementFailureCallback;
                       const result = obj.goToStandaloneNitroManagementFromMobileApp(
                         "premium_external_management",
-                        obj,
+                        obj2,
                         tmp4,
                         tmp5,
                       );
@@ -141,7 +145,8 @@ export const getExternalManagementMessage = function getExternalManagementMessag
               } else {
                 function manageExternalNitroSubscription() {
                   if (null != _null) {
-                    const obj = { loadId: _null.loadId };
+                    const obj = BillingStandaloneNativeUtils;
+                    const obj2 = { loadId: _null.loadId };
                     const tmp4 =
                       null != _null.onSuccessCallback
                         ? _null.onSuccessCallback
@@ -152,15 +157,15 @@ export const getExternalManagementMessage = function getExternalManagementMessag
                         : defaultMobileWebNitroManagementFailureCallback;
                     return obj.goToStandaloneNitroManagementFromMobileApp(
                       "premium_external_management",
-                      obj,
+                      obj2,
                       tmp4,
                       tmp5,
                     );
                   }
                 }
                 const intl2 = tmp13(1114).intl;
-                const obj1 = { manageExternalNitroSubscription };
-                return intl2.format(tmp13(1114).t.IERwUb, obj1);
+                const obj3 = { manageExternalNitroSubscription };
+                return intl2.format(tmp13(1114).t.IERwUb, obj3);
               }
               tmp8 =
                 status === SubscriptionStatusTypes.CANCELED ||
@@ -169,8 +174,8 @@ export const getExternalManagementMessage = function getExternalManagementMessag
             }
           }
           const intl = tmp13(1114).intl;
-          const obj2 = { mobilePlatform: str2 };
-          return intl.formatToPlainString(tmp13(1114).t.CnoyAN, obj2);
+          const obj4 = { mobilePlatform: str2 };
+          return intl.formatToPlainString(tmp13(1114).t.CnoyAN, obj4);
         } else {
           return null;
         }

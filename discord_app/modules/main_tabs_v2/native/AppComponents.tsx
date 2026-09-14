@@ -13,13 +13,15 @@ import FramePanelContainerDefault from "../../frames/panel/native/FramePanelCont
 import VoicePanelContainerDefault from "../../voice_panel/native/VoicePanelContainer.tsx";
 import MediaPlaybackPanelContainerDefault from "../../media_panel/native/MediaPlaybackPanelContainer.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import PlatformUtils from "../../../utils/PlatformUtils.tsx";
-import AppFreezer from "../../panels/morphable/native/AppFreezer.tsx";
+import PlatformUtils_mod from "../../../utils/PlatformUtils.tsx";
+import AppFreezer_mod from "../../panels/morphable/native/AppFreezer.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
 ({ jsx, jsxs } = jsxProd);
 let closure_2 = jsx(PortalKeyboardRenderer.PortalKeyboardRenderer, {});
-let obj = { lockKeys: ["external-pip"], children: null };
+let PlatformUtils = PlatformUtils_mod;
+const obj = { lockKeys: ["external-pip"], children: null };
+let AppFreezer = AppFreezer_mod;
 const items = [
   jsx(MainShared.PictureInPictureGlobalContainer, {}),
   jsx(MainShared.BurstReactionAnimationContainer, {}),
@@ -56,19 +58,21 @@ const tmp3 = PlatformUtils.isIOS()
       return tmp;
     }
   : () => closure_2;
+let PlatformUtils = PlatformUtils_mod;
 let jsxResult = null;
 if (PlatformUtils.isAndroid()) {
   jsxResult = jsx(AccessibilityAnnouncerLiveRegion.AccessibilityAnnouncerLiveRegion, {});
 }
 const jsxsResult = <AppFreezer lockKeys={["external-pip"]}>{null}</AppFreezer>;
-obj = { lockKeys: ["external-pip"], children: null };
+const obj2 = { lockKeys: ["external-pip"], children: null };
+let AppFreezer = AppFreezer_mod;
 const items1 = [
   jsx(ActivityPanelContainerDefault, {}),
   jsx(FramePanelContainerDefault, {}),
   jsx(VoicePanelContainerDefault, {}),
   jsx(MediaPlaybackPanelContainerDefault, {}),
 ];
-obj.children = items1;
+obj2.children = items1;
 const jsxResult1 = jsx(ExternalPipViewDefault, {});
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/AppComponents.tsx");
 

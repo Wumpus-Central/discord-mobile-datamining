@@ -9,35 +9,36 @@ const result = size.fileFinishedImporting("modules/main_tabs_v2/native/utils/use
 export default function useNavigatorConfirmChangesOnBack() {
   const ref = noop.useRef(null);
   dependencyMap = noop.useRef(false);
-  let obj = { onGoBack: null, ref };
-  obj = {
-    onBeforeGoBack(navigation) {
-      if (navigation.preventable) {
-        let current = ref2.current;
-        if (!current) {
-          const current2 = ref.current;
-          let hasUnsavedChangesResult;
-          if (current2 != null) {
-            hasUnsavedChangesResult = current2.hasUnsavedChanges();
+  let obj = {
+    onGoBack: ref(11054)({
+      onBeforeGoBack(navigation) {
+        if (navigation.preventable) {
+          let current = ref2.current;
+          if (!current) {
+            const current2 = ref.current;
+            let hasUnsavedChangesResult;
+            if (current2 != null) {
+              hasUnsavedChangesResult = current2.hasUnsavedChanges();
+            }
+            current = true !== hasUnsavedChangesResult;
           }
-          current = true !== hasUnsavedChangesResult;
+          if (!current) {
+            navigation.preventDefault();
+            Keyboard.dismiss();
+            const obj = {
+              hasEdits: true,
+              resetPending,
+              onConfirm() {
+                closure_1.current = true;
+                navigation.goBack();
+              },
+            };
+            ref(ref2[4])(obj);
+          }
         }
-        if (!current) {
-          navigation.preventDefault();
-          Keyboard.dismiss();
-          const obj = {
-            hasEdits: true,
-            resetPending,
-            onConfirm() {
-              closure_1.current = true;
-              navigation.goBack();
-            },
-          };
-          ref(ref2[4])(obj);
-        }
-      }
-    },
+      },
+    }).onGoBack,
+    ref,
   };
-  obj.onGoBack = ref(11053)(obj).onGoBack;
   return obj;
 }

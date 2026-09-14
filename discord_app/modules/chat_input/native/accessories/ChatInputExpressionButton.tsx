@@ -10,7 +10,7 @@ require = fn;
 const jsx = fn(21).jsx;
 const createStyles = fn(4636);
 let closure_5 = createStyles.createStyles((height) => {
-  let obj = { expressionButton: null, expressionButtonIconTint: null };
+  const obj = { expressionButton: null, expressionButtonIconTint: null };
   const size = {
     borderRadius: nativeDefault.radii.sm,
     height,
@@ -19,8 +19,7 @@ let closure_5 = createStyles.createStyles((height) => {
     justifyContent: "center",
   };
   obj.expressionButton = size;
-  obj = { tintColor: nativeDefault.colors.CHAT_INPUT_ICON_DEFAULT_TINT };
-  obj.expressionButtonIconTint = obj;
+  obj.expressionButtonIconTint = { tintColor: nativeDefault.colors.CHAT_INPUT_ICON_DEFAULT_TINT };
   return obj;
 });
 let size = fn(2);
@@ -36,8 +35,7 @@ export default noop.memo((active) => {
     showKeyboardIcon = flag;
   }
   const onPress = active.onPress;
-  let obj = useToken;
-  const token = obj.useToken(nativeDefault.modules.mobile.CHAT_INPUT_ACTION_BUTTON_SIZE);
+  const token = useToken.useToken(nativeDefault.modules.mobile.CHAT_INPUT_ACTION_BUTTON_SIZE);
   const token1 = useToken.useToken(nativeDefault.modules.mobile.CHAT_INPUT_ICON_SIZE);
   const token2 = useToken.useToken(nativeDefault.modules.mobile.CHAT_INPUT_BUTTON_MIN_TOUCH_TARGET_SIZE);
   const tmp7 = closure_5(token);
@@ -46,7 +44,7 @@ export default noop.memo((active) => {
   const callback = noop.useCallback(() => {
     onPress(undefined);
   }, items);
-  obj = {
+  const obj4 = {
     ref: noop.useRef(null),
     style: null,
     hitSlop: null,
@@ -57,25 +55,30 @@ export default noop.memo((active) => {
     children: null,
   };
   const items1 = [tmp7.expressionButton, active.style];
-  obj.style = items1;
+  obj4.style = items1;
   let tmp12;
   if (bound > 0) {
     tmp12 = bound;
   }
-  obj.hitSlop = tmp12;
+  obj4.hitSlop = tmp12;
   const intl = util.intl;
-  obj.accessibilityLabel = intl.string(util.t.iZ7Mz9);
-  obj.accessibilityState = { expanded: flag };
-  obj.onPress = callback;
-  obj = { size: token1, style: tmp7.expressionButtonIconTint, source: importDefault(showKeyboardIcon ? 11380 : 8884) };
-  obj.children = jsx(native.Icon, {
+  obj4.accessibilityLabel = intl.string(util.t.iZ7Mz9);
+  obj4.accessibilityState = { expanded: flag };
+  obj4.onPress = callback;
+  const ref = noop.useRef(null);
+  obj4.children = jsx(native.Icon, {
     size: token1,
     style: tmp7.expressionButtonIconTint,
-    source: importDefault(showKeyboardIcon ? 11380 : 8884),
+    source: importDefault(showKeyboardIcon ? 11381 : 8884),
   });
   return jsx(Pressables.PressableOpacity, {
-    size: token1,
-    style: tmp7.expressionButtonIconTint,
-    source: importDefault(showKeyboardIcon ? 11380 : 8884),
+    ref: noop.useRef(null),
+    style: null,
+    hitSlop: null,
+    accessibilityRole: "button",
+    accessibilityLabel: null,
+    accessibilityState: null,
+    onPress: null,
+    children: null,
   });
 });

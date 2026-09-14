@@ -45,10 +45,9 @@ function useReactors(channelId) {
   const messageId = channelId.messageId;
   const reaction = channelId.reaction;
   const reactionType = channelId.reactionType;
-  let obj = channelId(reactionType[14]);
   let items = [MessageReactionsStore];
   const items1 = [channelId, messageId, reaction.emoji, reactionType];
-  const stateFromStores = obj.useStateFromStores(
+  const stateFromStores = channelId(reactionType[14]).useStateFromStores(
     items,
     () => {
       const reactions = MessageReactionsStore.getReactions(channelId, messageId, reaction.emoji, limit, reactionType);
@@ -64,7 +63,7 @@ function useReactors(channelId) {
     items1,
     messageId(reactionType[16]),
   );
-  obj = { reactors: stateFromStores, reactorsHasMore: null };
+  const obj2 = { reactors: stateFromStores, reactorsHasMore: null };
   if (reactionType === channelId(reactionType[17]).ReactionTypes.VOTE) {
     const count_details = reaction.count_details;
     let num;
@@ -78,8 +77,8 @@ function useReactors(channelId) {
   } else {
     tmp3 = reactionType === channelId(reactionType[17]).ReactionTypes.BURST ? reaction.burst_count : reaction.count;
   }
-  obj.reactorsHasMore = tmp3 > stateFromStores.length;
-  return obj;
+  obj2.reactorsHasMore = tmp3 > stateFromStores.length;
+  return obj2;
 }
 function useReactorsOnScrollNative(channelId) {
   channelId = channelId.channelId;
@@ -104,8 +103,8 @@ function useReactorsOnScrollNative(channelId) {
     }
     if (tmp) {
       ref.current = true;
-      const obj = { channelId, messageId, emoji: reactionSelected.emoji, limit, after: id, type: reactionType };
-      const reactors = obj.getReactors(obj);
+      const obj2 = { channelId, messageId, emoji: reactionSelected.emoji, limit, after: id, type: reactionType };
+      const reactors = ReactionActionCreatorsAll.getReactors(obj2);
       reactors.then(() => {
         ref.current = false;
       });
@@ -127,36 +126,35 @@ function useReactorsOnScrollNative(channelId) {
 function ReactionTab(arg0) {
   ({ reaction, selected } = arg0);
   const tmp = closure_20();
-  let obj = useEmojiColorPalette;
   let burst_colors = reaction.burst_colors;
   if (burst_colors == null) {
     burst_colors = [];
   }
-  const emojiColorPalette = obj.useEmojiColorPalette(burst_colors);
+  const emojiColorPalette = useEmojiColorPalette.useEmojiColorPalette(burst_colors);
   let accentColor;
   if (emojiColorPalette != null) {
     accentColor = emojiColorPalette.accentColor;
   }
   let tmp7 = null;
   if (null != accentColor) {
-    obj = { color: emojiColorPalette.accentColor };
-    tmp7 = obj;
+    const obj2 = { color: emojiColorPalette.accentColor };
+    tmp7 = obj2;
   }
   let tmp8 = null;
   if (null != emojiColorPalette) {
-    obj = { backgroundColor: null };
-    let tmp3Result = ColorUtils;
-    obj.backgroundColor = tmp3Result.hexOpacityToRgba(emojiColorPalette.backgroundColor, emojiColorPalette.opacity);
-    tmp8 = obj;
+    const obj3 = {
+      backgroundColor: ColorUtils.hexOpacityToRgba(emojiColorPalette.backgroundColor, emojiColorPalette.opacity),
+    };
+    tmp8 = obj3;
+    const tmp3Result = ColorUtils;
   }
   const emoji = reaction.emoji;
-  tmp3Result = initialize;
   const items = [AccessibilityStore];
-  const stateFromStores = tmp3Result.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
+  const stateFromStores = initialize.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   const AnimateEmoji = UserSettings.AnimateEmoji;
   let emojiURL;
   if (null != emoji.id) {
-    const obj1 = { id: null, animated: null, size: 48 };
+    const obj4 = { id: null, animated: null, size: 48 };
     ({ id: obj7.id, animated } = emoji);
     if (animated) {
       animated = !stateFromStores;
@@ -164,8 +162,8 @@ function ReactionTab(arg0) {
     if (animated) {
       animated = tmp10;
     }
-    obj1.animated = animated;
-    emojiURL = AvatarUtilsDefault.getEmojiURL(obj1);
+    obj4.animated = animated;
+    emojiURL = AvatarUtilsDefault.getEmojiURL(obj4);
   }
   const items1 = [tmp.tabContainer, ,];
   let tabContainerSelected = null;
@@ -180,7 +178,7 @@ function ReactionTab(arg0) {
       tmp16 = tmp8;
     }
   }
-  const obj2 = {
+  const obj5 = {
     style: items1,
     accessible: true,
     accessibilityLabel: emoji.name,
@@ -188,14 +186,14 @@ function ReactionTab(arg0) {
     children: null,
   };
   items1[2] = tmp16;
-  const obj3 = { src: emojiURL, name: emoji.name, textEmojiStyle: null, fastImageStyle: null };
+  const obj8 = { src: emojiURL, name: emoji.name, textEmojiStyle: null, fastImageStyle: null };
   const items2 = [,];
   ({ emoji: arr4[0], emojiText: arr4[1] } = tmp);
-  obj3.textEmojiStyle = items2;
+  obj8.textEmojiStyle = items2;
   const items3 = [,];
   ({ emoji: arr5[0], emojiImage: arr5[1] } = tmp);
-  obj3.fastImageStyle = items3;
-  const items4 = [closure_1_17(EmojiDefault, obj3)];
+  obj8.fastImageStyle = items3;
+  const items4 = [closure_1_17(EmojiDefault, obj8)];
   const items5 = [tmp.reactionCountText, ,];
   let prop = null;
   if (selected) {
@@ -212,12 +210,12 @@ function ReactionTab(arg0) {
     style: items5,
     children: reaction.burst_count > 0 ? reaction.burst_count : reaction.count,
   });
-  obj2.children = items4;
+  obj5.children = items4;
   let name = emoji.id;
   if (name == null) {
     name = emoji.name;
   }
-  return collapsedCategories(React7, obj2, name);
+  return collapsedCategories(React7, obj5, name);
 }
 function RemoveAllButton(channelId) {
   ({ reactions: require, reactionSelectedIndex } = channelId);
@@ -227,16 +225,20 @@ function RemoveAllButton(channelId) {
   c6 = undefined;
   let sharedValue1;
   let callback;
-  let obj = require("initialize");
+  const tmp = closure_20();
   const items = [ChannelStore];
   const items1 = [channelId];
-  const stateFromStores = obj.useStateFromStores(items, () => ChannelStore.getChannel(channelId), items1);
+  const stateFromStores = require("initialize").useStateFromStores(
+    items,
+    () => ChannelStore.getChannel(channelId),
+    items1,
+  );
   const useReducedMotion = AccessibilityStore.useReducedMotion;
-  const tmp = closure_20();
+  let obj = require("initialize");
   const tmp6 = reactionSelectedIndex(messageId[39])(stateFromStores);
   [c5, c6] = useReducedMotion(noop.useState(true), 2);
-  let obj1 = require("ReanimatedRexport");
-  const sharedValue = obj1.useSharedValue(64);
+  const tmp7 = useReducedMotion(noop.useState(true), 2);
+  const sharedValue = require("ReanimatedRexport").useSharedValue(64);
   let obj2 = require("ReanimatedRexport");
   class S {
     constructor() {
@@ -253,14 +255,14 @@ function RemoveAllButton(channelId) {
       return { maxWidth: value };
     }
   }
-  obj = { useReducedMotion, buttonWidth: sharedValue, withTiming: require("timing").withTiming };
-  S.__closure = obj;
+  const obj3 = require("ReanimatedRexport");
+  S.__closure = { useReducedMotion, buttonWidth: sharedValue, withTiming: require("timing").withTiming };
   S.__workletHash = 16499689496895;
   S.__initData = __initData;
-  const animatedStyle = obj2.useAnimatedStyle(S);
-  let obj4 = require("ReanimatedRexport");
-  sharedValue1 = obj4.useSharedValue(0);
-  const tmp7 = useReducedMotion(noop.useState(true), 2);
+  const animatedStyle = obj3.useAnimatedStyle(S);
+  const obj4 = { useReducedMotion, buttonWidth: sharedValue, withTiming: require("timing").withTiming };
+  sharedValue1 = require("ReanimatedRexport").useSharedValue(0);
+  const obj5 = require("ReanimatedRexport");
   class T {
     constructor() {
       if (useReducedMotion) {
@@ -276,12 +278,12 @@ function RemoveAllButton(channelId) {
       return { opacity: value, color: "white", fontSize: 14, marginLeft: 8, textAlignVertical: "center" };
     }
   }
-  obj = { useReducedMotion, textOpacity: sharedValue1, withTiming: require("timing").withTiming };
-  T.__closure = obj;
+  const obj6 = require("ReanimatedRexport");
+  T.__closure = { useReducedMotion, textOpacity: sharedValue1, withTiming: require("timing").withTiming };
   T.__workletHash = 8698187840986;
   T.__initData = __initData2;
   const items2 = [sharedValue, sharedValue1];
-  const animatedStyle1 = require("ReanimatedRexport").useAnimatedStyle(T);
+  const animatedStyle1 = obj6.useAnimatedStyle(T);
   callback = noop.useCallback(() => {
     _undefined(true);
     const result = sharedValue.set(32);
@@ -293,7 +295,7 @@ function RemoveAllButton(channelId) {
   }, items3);
   let tmp14 = null;
   if (tmp6) {
-    obj1 = {
+    const obj8 = {
       onPress() {
         if (c5) {
           _undefined(false);
@@ -306,18 +308,18 @@ function RemoveAllButton(channelId) {
       },
       children: null,
     };
-    obj2 = { style: null, children: null };
+    const obj9 = { style: null, children: null };
     const items4 = [tmp.removeAllButton, animatedStyle];
-    obj2.style = items4;
-    const obj3 = { color: reactionSelectedIndex(tmp3[13]).unsafe_rawColors.WHITE, size: "sm" };
-    const items5 = [closure_17(require("TrashIcon").TrashIcon, obj3)];
-    obj4 = { style: animatedStyle1, variant: "text-sm/semibold", color: "text-overlay-light", children: null };
+    obj9.style = items4;
+    const obj10 = { color: reactionSelectedIndex(tmp3[13]).unsafe_rawColors.WHITE, size: "sm" };
+    const items5 = [closure_17(require("TrashIcon").TrashIcon, obj10)];
+    const obj11 = { style: animatedStyle1, variant: "text-sm/semibold", color: "text-overlay-light", children: null };
     const intl = require("util").intl;
-    obj4.children = intl.string(require("util").t["zx/e4P"]);
-    items5[1] = closure_17(closure_19, obj4);
-    obj2.children = items5;
-    obj1.children = closure_18(reactionSelectedIndex(tmp3[10]).View, obj2);
-    tmp14 = closure_17(sharedValue, obj1);
+    obj11.children = intl.string(require("util").t["zx/e4P"]);
+    items5[1] = closure_17(closure_19, obj11);
+    obj9.children = items5;
+    obj8.children = closure_18(reactionSelectedIndex(tmp3[10]).View, obj9);
+    tmp14 = closure_17(sharedValue, obj8);
   }
   return tmp14;
 }
@@ -325,90 +327,93 @@ function EmojiOptionsButton(channelId) {
   channelId = channelId.channelId;
   const messageId = channelId.messageId;
   ({ reactions, reactionSelectedIndex } = channelId);
-  let obj = channelId(504);
+  const tmp = closure_20();
   const items = [ChannelStore];
   const items1 = [channelId];
-  const stateFromStores = obj.useStateFromStores(items, () => ChannelStore.getChannel(channelId), items1);
-  const tmp3 = messageId(11393)(stateFromStores);
+  const stateFromStores = channelId(504).useStateFromStores(items, () => ChannelStore.getChannel(channelId), items1);
+  const tmp3 = messageId(11394)(stateFromStores);
   const canRemoveReactions = tmp3;
   dependencyMap = tmp4;
   const items2 = [channelId, messageId, reactions[reactionSelectedIndex], tmp3];
-  obj = {
+  const obj2 = {
     onPress: noop.useCallback(() => {
-      const obj = { channelId, messageId, reaction, canRemoveReactions };
-      obj.openLazy(
-        asyncRequireImpl(11394, dependencyMap.paths),
+      ActionSheetActionCreatorsDefault.openLazy(
+        asyncRequireImpl(11395, dependencyMap.paths),
         "ReactionEmojiOptionsActionSheet",
-        obj,
+        { channelId, messageId, reaction, canRemoveReactions },
         "replaceTopSheet",
       );
     }, items2),
-    style: closure_20().emojiOptionsButton,
+    style: tmp.emojiOptionsButton,
     children: null,
   };
-  obj = { variant: "text-xs/semibold", color: "text-subtle", children: null };
+  const obj3 = { variant: "text-xs/semibold", color: "text-subtle", children: null };
   const intl = channelId(1114).intl;
-  obj.children = intl.string(channelId(1114).t.pCaYID);
-  const items3 = [closure_17(channelId(4632).Text, obj)];
-  const tmp = closure_20();
+  obj3.children = intl.string(channelId(1114).t.pCaYID);
+  const items3 = [closure_17(channelId(4632).Text, obj3)];
+  const obj = channelId(504);
   items3[1] = closure_17(channelId(7312).ChevronSmallRightIcon, {
     color: messageId(576).colors.ICON_SUBTLE,
     size: "xs",
   });
-  obj.children = items3;
-  return closure_18(closure_7, obj);
+  obj2.children = items3;
+  return closure_18(closure_7, obj2);
 }
 function ReactionTabs(setReactionSelectedIndex) {
   const tmp = closure_20();
   ({ reactions, reactionSelectedIndex } = setReactionSelectedIndex);
   setReactionSelectedIndex = setReactionSelectedIndex.setReactionSelectedIndex;
-  setReactionSelectedIndex(7291);
-  let obj = { style: tmp.reactionTab, children: null };
-  obj = {
-    tabs: reactions.map((reaction, index) => {
-      let str = reaction.emoji.id;
-      if (str == null) {
-        str = "";
-      }
-      return closure_2_17(
-        ReactionTab,
-        { reaction, selected: index === reactionSelectedIndex },
-        "" + str + ":" + reaction.emoji.name,
-      );
-    }),
+  const obj2 = { style: tmp.reactionTab, children: null };
+  const obj4 = {
+    tabs: null,
     tabStyle: null,
     tabStyleActive: null,
     tabStyleSelected: null,
-    tabIndexSelected: reactionSelectedIndex,
-    onSelect(arg0) {
-      const result = HapticUtils.triggerHapticFeedback(haptics_HapticFeedbackTypesDefault.IMPACT_LIGHT);
-      setReactionSelectedIndex(arg0);
-    },
-    initialNumTabsToRender: reactionSelectedIndex(4287).MAX_REACTIONS,
+    tabIndexSelected: null,
+    onSelect: null,
+    initialNumTabsToRender: null,
   };
+  const obj = setReactionSelectedIndex(7291);
+  obj4.tabs = reactions.map((reaction, index) => {
+    let str = reaction.emoji.id;
+    if (str == null) {
+      str = "";
+    }
+    return closure_2_17(
+      ReactionTab,
+      { reaction, selected: index === reactionSelectedIndex },
+      "" + str + ":" + reaction.emoji.name,
+    );
+  });
   ({ tab: obj3.tabStyle, tabActive: obj3.tabStyleActive, tabSelected: obj3.tabStyleSelected } = tmp);
+  obj4.tabIndexSelected = reactionSelectedIndex;
+  obj4.onSelect = function onSelect(arg0) {
+    const result = HapticUtils.triggerHapticFeedback(haptics_HapticFeedbackTypesDefault.IMPACT_LIGHT);
+    setReactionSelectedIndex(arg0);
+  };
+  obj4.initialNumTabsToRender = reactionSelectedIndex(4287).MAX_REACTIONS;
   const items = [
-    closure_17(setReactionSelectedIndex(11395), obj),
+    closure_17(setReactionSelectedIndex(11396), obj4),
     closure_17(setReactionSelectedIndex(8722), { outer: true }),
   ];
-  const obj1 = { style: tmp.removeButtonContainer, children: null };
-  const obj2 = { style: tmp.emojiTextIdentifier, variant: "eyebrow", color: "text-default", children: null };
-  const tmp5 = setReactionSelectedIndex(11395);
-  obj2.children = reactionSelectedIndex(4287).getReactionEmojiName(reactions[reactionSelectedIndex].emoji);
-  const items1 = [closure_17(reactionSelectedIndex(4632).Text, obj2)];
-  const obj3 = {};
+  const obj5 = { style: tmp.removeButtonContainer, children: null };
+  const obj7 = { style: tmp.emojiTextIdentifier, variant: "eyebrow", color: "text-default", children: null };
+  const tmp5 = setReactionSelectedIndex(11396);
+  obj7.children = reactionSelectedIndex(4287).getReactionEmojiName(reactions[reactionSelectedIndex].emoji);
+  const items1 = [closure_17(reactionSelectedIndex(4632).Text, obj7)];
+  const obj12 = {};
   const obj6 = reactionSelectedIndex(4287);
   const merged = Object.assign(setReactionSelectedIndex);
   items1[1] = closure_17(
     obj.useExperiment({ location: "ReactionTabs" }, { autoTrackExposure: false }).tidaWebformEnabled
       ? EmojiOptionsButton
       : RemoveAllButton,
-    obj3,
+    obj12,
   );
-  obj1.children = items1;
-  items[2] = closure_18(closure_9, obj1);
-  obj.children = items;
-  return closure_18(closure_9, obj);
+  obj5.children = items1;
+  items[2] = closure_18(closure_9, obj5);
+  obj2.children = items;
+  return closure_18(closure_9, obj2);
 }
 get_ActivityIndicator = fn(17);
 ({
@@ -423,10 +428,14 @@ const Constants = fn(1074);
 const jsxProd = fn(21);
 ({ jsx: closure_17, jsxs: closure_18 } = jsxProd);
 let closure_19 = ReanimatedRexport.createAnimatedComponent(fn(4632).Text);
-fn(4636);
+const createStyles = fn(4636);
 let obj = {
   container: { flex: 1 },
-  containerEmpty: null,
+  containerEmpty: {
+    padding: 32,
+    borderTopLeftRadius: nativeDefault.radii.sm,
+    borderTopRightRadius: nativeDefault.radii.sm,
+  },
   listRow: null,
   tabContainer: null,
   tabContainerSelected: null,
@@ -447,10 +456,9 @@ let obj = {
   buttonRow: null,
   loadingSpinner: null,
 };
-obj = { padding: 32, borderTopLeftRadius: nativeDefault.radii.sm, borderTopRightRadius: nativeDefault.radii.sm };
-obj.containerEmpty = obj;
-const createStyles = { height: 48, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
-obj.listRow = createStyles;
+let obj3 = { padding: 32, borderTopLeftRadius: nativeDefault.radii.sm, borderTopRightRadius: nativeDefault.radii.sm };
+obj.listRow = { height: 48, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
+let obj4 = { height: 48, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
 obj.tabContainer = {
   flexDirection: "row",
   alignItems: "center",
@@ -458,7 +466,7 @@ obj.tabContainer = {
   padding: 8,
   marginTop: 8,
 };
-let obj2 = {
+let obj5 = {
   flexDirection: "row",
   alignItems: "center",
   borderRadius: nativeDefault.radii.sm,
@@ -468,7 +476,7 @@ let obj2 = {
 obj.tabContainerSelected = { backgroundColor: nativeDefault.colors.INTERACTIVE_BACKGROUND_SELECTED };
 obj.tab = { padding: 0, marginHorizontal: 8, marginBottom: 8 };
 obj.tabSelected = { borderBottomColor: "transparent" };
-let obj3 = { backgroundColor: nativeDefault.colors.INTERACTIVE_BACKGROUND_SELECTED };
+let obj6 = { backgroundColor: nativeDefault.colors.INTERACTIVE_BACKGROUND_SELECTED };
 obj.tabActive = { borderRadius: nativeDefault.radii.sm };
 obj.reactionTab = { display: "flex", flexDirection: "column" };
 obj.removeButtonContainer = {
@@ -477,9 +485,9 @@ obj.removeButtonContainer = {
   justifyContent: "space-between",
   alignItems: "center",
 };
-let obj4 = { borderRadius: nativeDefault.radii.sm };
+let obj7 = { borderRadius: nativeDefault.radii.sm };
 obj.emojiOptionsButton = { flexDirection: "row", alignItems: "center", marginRight: nativeDefault.space.PX_16, gap: 2 };
-let obj5 = { flexDirection: "row", alignItems: "center", marginRight: nativeDefault.space.PX_16, gap: 2 };
+let obj8 = { flexDirection: "row", alignItems: "center", marginRight: nativeDefault.space.PX_16, gap: 2 };
 obj.removeAllButton = {
   backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_CRITICAL,
   borderRadius: nativeDefault.radii.xxl,
@@ -492,7 +500,7 @@ obj.removeAllButton = {
   alignItems: "center",
   paddingHorizontal: 12,
 };
-let obj6 = {
+let obj9 = {
   backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_CRITICAL,
   borderRadius: nativeDefault.radii.xxl,
   height: 32,
@@ -505,10 +513,10 @@ let obj6 = {
   paddingHorizontal: 12,
 };
 obj.reactionCountText = { color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
-const obj7 = { color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
+let obj10 = { color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
 obj.reactionCountTextSelected = { color: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE };
 obj.emoji = { marginRight: 8 };
-const obj8 = { color: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE };
+let obj11 = { color: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE };
 obj.emojiText = {
   lineHeight: 24,
   fontSize: 20,
@@ -538,16 +546,16 @@ export { useReactorsOnScrollNative };
 export const MessageReactionsEmpty = function MessageReactionsEmpty() {
   const tmp = closure_20();
   const tmp2 = useSafeAreaInsetsDefault();
-  let obj = { scrollable: true, startHeight: 338 + tmp2.bottom, children: null };
-  obj = { style: tmp.containerEmpty, children: null };
-  const obj1 = { source: obj.useNoResultsSource(), title: null, body: null };
+  const obj2 = { scrollable: true, startHeight: 338 + tmp2.bottom, children: null };
+  const obj3 = { style: tmp.containerEmpty, children: null };
+  const obj4 = { source: generated_NoResults.useNoResultsSource(), title: null, body: null };
   const intl = util.intl;
-  obj1.title = intl.string(util.t.HmPOrp);
+  obj4.title = intl.string(util.t.HmPOrp);
   const intl2 = util.intl;
-  obj1.body = intl2.string(util.t["pTJ5J/"]);
-  obj.children = closure_1_17(native.RefreshEmptyState, obj1);
-  obj.children = closure_1_17(BottomSheetModal.BottomSheetView, obj);
-  return closure_1_17(Sheet_BottomSheet.BottomSheet, obj);
+  obj4.body = intl2.string(util.t["pTJ5J/"]);
+  obj3.children = closure_1_17(native.RefreshEmptyState, obj4);
+  obj2.children = closure_1_17(BottomSheetModal.BottomSheetView, obj3);
+  return closure_1_17(Sheet_BottomSheet.BottomSheet, obj2);
 };
 export const MessageReactionsContent = function MessageReactionsContent(channelId) {
   channelId = channelId.channelId;
@@ -566,7 +574,6 @@ export const MessageReactionsContent = function MessageReactionsContent(channelI
     isSelectedBurst = false;
   }
   closure_129_2 = isSelectedBurst;
-  let obj = noop;
   let tmp3 = _slicedToArray(
     noop.useState(() => {
       if (null == messageId) {
@@ -622,14 +629,14 @@ export const MessageReactionsContent = function MessageReactionsContent(channelI
     reaction: reactions[bound],
     reactionType: NORMAL,
   }));
-  let tmp10Result = tmp10(504);
+  const tmp16 = useReactors({ channelId, messageId, reaction: reactions[bound], reactionType: NORMAL });
   let items = [ChannelStore];
   const items1 = [channelId];
-  const stateFromStores = tmp10Result.useStateFromStores(items, () => ChannelStore.getChannel(channelId), items1);
-  tmp10Result = tmp10(7372);
-  const isActiveChannelOrUnarchivableThread = tmp10Result.useIsActiveChannelOrUnarchivableThread(stateFromStores);
+  const stateFromStores = tmp10(504).useStateFromStores(items, () => ChannelStore.getChannel(channelId), items1);
+  let tmp10Result = tmp10(504);
+  const isActiveChannelOrUnarchivableThread = tmp10(7372).useIsActiveChannelOrUnarchivableThread(stateFromStores);
   closure_130_0 = channelId;
-  const tmp16 = useReactors({ channelId, messageId, reaction: reactions[bound], reactionType: NORMAL });
+  const tmp10Result3 = tmp10(7372);
   const tmp20 = useSafeAreaInsetsDefault();
   const items2 = [PermissionStore];
   const items3 = [channelId];
@@ -645,7 +652,7 @@ export const MessageReactionsContent = function MessageReactionsContent(channelI
   if (name == null) {
     name = tmp5.emoji.name;
   }
-  obj = {
+  let obj2 = {
     accessibilityLabel: null,
     footerSize: 48,
     insetBottom: null,
@@ -658,9 +665,9 @@ export const MessageReactionsContent = function MessageReactionsContent(channelI
     style: null,
   };
   let intl = tmp10(1114).intl;
-  obj.accessibilityLabel = intl.string(tmp10(1114).t.gHp0C4);
-  obj.insetBottom = tmp20.bottom;
-  obj.onScroll = useReactorsOnScrollNative({
+  obj2.accessibilityLabel = intl.string(tmp10(1114).t.gHp0C4);
+  obj2.insetBottom = tmp20.bottom;
+  obj2.onScroll = useReactorsOnScrollNative({
     channelId,
     messageId,
     reactionSelected: reactions[bound],
@@ -670,10 +677,10 @@ export const MessageReactionsContent = function MessageReactionsContent(channelI
   });
   closure_131_0 = reactors;
   closure_131_1 = reactorsHasMore;
-  let tmpResult = closure_20();
+  const tmpResult = closure_20();
   closure_131_2 = tmpResult;
   const items4 = [reactors, reactorsHasMore, tmpResult];
-  obj.renderFooter = obj.useCallback(() => {
+  obj2.renderFooter = noop.useCallback(() => {
     if (messageId) {
       const obj = { style: channelId.loadingSpinner, size: "large" };
       let tmp2 = closure_2_17(timestampProducer, obj);
@@ -687,12 +694,12 @@ export const MessageReactionsContent = function MessageReactionsContent(channelI
   closure_132_2 = channelId;
   closure_132_3 = tmp5;
   closure_132_4 = tmp21;
-  tmpResult = closure_20();
-  closure_132_5 = tmpResult;
+  const tmpResult3 = closure_20();
+  closure_132_5 = tmpResult3;
   const analyticsLocations = useAnalyticsLocationsDefault().analyticsLocations;
   closure_132_6 = analyticsLocations;
-  let tmp19Result = ReactionToProfileExperimentDefault;
-  const reactionToProfileEnabled = tmp19Result.useConfig({
+  const tmp8Result = tmp8(504);
+  const reactionToProfileEnabled = ReactionToProfileExperimentDefault.useConfig({
     location: "MessageReactionsContent",
   }).reactionToProfileEnabled;
   closure_132_7 = reactionToProfileEnabled;
@@ -702,11 +709,11 @@ export const MessageReactionsContent = function MessageReactionsContent(channelI
     tmp21,
     messageId,
     reactions[bound],
-    tmpResult,
+    tmpResult3,
     analyticsLocations,
     reactionToProfileEnabled,
   ];
-  obj.renderItem = obj.useCallback((arg0, arg1) => {
+  obj2.renderItem = noop.useCallback((arg0, arg1) => {
     user = user[arg1];
     const id = user.id;
     const diff = user.length - 1;
@@ -715,11 +722,10 @@ export const MessageReactionsContent = function MessageReactionsContent(channelI
     if (null != channel) {
       guildId = channel.getGuildId();
     }
-    let obj2 = messageId(dependencyMap[23]);
-    let nickname = obj2.getNickname(guildId, NORMAL, user);
+    let nickname = messageId(dependencyMap[23]).getNickname(guildId, NORMAL, user);
     if (nickname == null) {
-      let tmp4Result = messageId(dependencyMap[24]);
-      nickname = tmp4Result.getGlobalName(user);
+      nickname = messageId(dependencyMap[24]).getGlobalName(user);
+      const tmp4Result = messageId(dependencyMap[24]);
     }
     member = null;
     if (null != guildId) {
@@ -732,9 +738,9 @@ export const MessageReactionsContent = function MessageReactionsContent(channelI
       NORMAL = channelId(dependencyMap[17]).ReactionTypes.NORMAL;
       tmp10 = channelId;
     }
-    user = { style: closure_5.listRow, children: null };
-    tmp4Result = messageId(dependencyMap[26]);
-    user = { style: closure_5.avatar, size: tmp10(dependencyMap[27]).AvatarSizes.SMALL, source: null };
+    let obj2 = { style: closure_5.listRow, children: null };
+    const obj3 = messageId(dependencyMap[23]);
+    const obj4 = { style: closure_5.avatar, size: tmp10(dependencyMap[27]).AvatarSizes.SMALL, source: null };
     const avatarSource = user.getAvatarSource(guildId);
     let guildMemberAvatarSource = avatarSource;
     if (null != guildId) {
@@ -745,39 +751,37 @@ export const MessageReactionsContent = function MessageReactionsContent(channelI
       guildMemberAvatarSource = avatarSource;
       if (null != avatar) {
         guildMemberAvatarSource = messageId(dependencyMap[28]).getGuildMemberAvatarSource(member, user);
-        const tmp4Result1 = messageId(dependencyMap[28]);
+        const tmp4Result4 = messageId(dependencyMap[28]);
       }
     }
-    const obj1 = {
-      leading: closure_1_17(tmp10(dependencyMap[27]).Avatar, user),
+    const obj5 = {
+      leading: closure_1_17(tmp10(dependencyMap[27]).Avatar, obj4),
       label: closure_1_17(messageId(dependencyMap[29]), { user, nick: nickname }),
       trailing: null,
       onPress: null,
       onLongPress: null,
     };
-    user.source = guildMemberAvatarSource;
+    obj4.source = guildMemberAvatarSource;
     let tmp14Result = null;
     if (closure_4) {
       tmp14Result = null;
       if (tmp10Result.isAndroid()) {
-        obj2 = {
+        const obj6 = {
           onPress() {
-            let options = ReactionActionCreators;
-            options = {
+            obj = ReactionActionCreators;
+            const obj2 = {
               channelId,
               messageId,
               emoji: dependencyMap.emoji,
               location: ReactionActionCreators.ReactionLocations.MESSAGE,
-              userId: options.id,
-              options: null,
+              userId: obj.id,
+              options: { burst: NORMAL === MessageReactionsTypes.ReactionTypes.BURST },
             };
-            options = { burst: NORMAL === MessageReactionsTypes.ReactionTypes.BURST };
-            options.options = options;
-            return options.removeReaction(options);
+            return obj.removeReaction(obj2);
           },
           children: closure_1_17(tmp10(dependencyMap[31]).XSmallIcon, {}),
         };
-        tmp14Result = closure_1_17(closure_1_7, obj2);
+        tmp14Result = closure_1_17(closure_1_7, obj6);
       }
       tmp10Result = tmp10(dependencyMap[30]);
     }
@@ -785,30 +789,30 @@ export const MessageReactionsContent = function MessageReactionsContent(channelI
       localUser = { userId: id, channelId, messageId, localUser, sourceAnalyticsLocations };
       showUserProfileActionSheetDefault(localUser, "stack");
     }
-    obj1.trailing = tmp14Result;
+    obj5.trailing = tmp14Result;
     let tmp21;
     if (closure_7) {
       tmp21 = openProfile;
     }
-    obj1.onPress = tmp21;
-    obj1.onLongPress = openProfile;
-    const items = [closure_1_17(tmp4Result, obj1)];
-    tmp14Result = null;
+    obj5.onPress = tmp21;
+    obj5.onLongPress = openProfile;
+    const items = [closure_1_17(messageId(dependencyMap[26]), obj5)];
+    let tmp14Result2 = null;
     if (arg1 !== diff) {
-      tmp14Result = closure_1_17(messageId(dependencyMap[32]), {});
+      tmp14Result2 = closure_1_17(messageId(dependencyMap[32]), {});
     }
-    items[1] = tmp14Result;
-    user.children = items;
-    return closure_1_18(closure_1_9, user);
+    items[1] = tmp14Result2;
+    obj2.children = items;
+    return closure_1_18(closure_1_9, obj2);
   }, items5);
   closure_133_0 = channelId;
   closure_133_1 = messageId;
   closure_133_2 = tmp5;
   closure_133_3 = reactors;
-  const tmpResult1 = closure_20();
-  closure_133_4 = tmpResult1;
-  const items6 = [reactors, channelId, messageId, reactions[bound], tmpResult1];
-  obj.renderQuickActions = obj.useCallback((arg0, arg1) => {
+  const tmpResult4 = closure_20();
+  closure_133_4 = tmpResult4;
+  const items6 = [reactors, channelId, messageId, reactions[bound], tmpResult4];
+  obj2.renderQuickActions = noop.useCallback((arg0, arg1) => {
     const id = burst_count[arg1];
     if (channelId.burst_count > 0) {
       let NORMAL = channelId(dependencyMap[17]).ReactionTypes.BURST;
@@ -816,13 +820,13 @@ export const MessageReactionsContent = function MessageReactionsContent(channelI
       NORMAL = channelId(dependencyMap[17]).ReactionTypes.NORMAL;
     }
     let obj = { style: buttonRow.buttonRow, children: null };
-    obj = { title: null, IconComponent: null, color: null, onPress: null, height: 48 };
+    let obj2 = { title: null, IconComponent: null, color: null, onPress: null, height: 48 };
     const intl = channelId(dependencyMap[34]).intl;
-    obj.title = intl.string(channelId(dependencyMap[34]).t.N86XcP);
-    obj.IconComponent = channelId(dependencyMap[31]).XSmallIcon;
-    obj.color = messageId(dependencyMap[13]).unsafe_rawColors.RED_400;
-    obj.onPress = function onPress() {
-      let obj = {
+    obj2.title = intl.string(channelId(dependencyMap[34]).t.N86XcP);
+    obj2.IconComponent = channelId(dependencyMap[31]).XSmallIcon;
+    obj2.color = messageId(dependencyMap[13]).unsafe_rawColors.RED_400;
+    obj2.onPress = function onPress() {
+      const obj2 = {
         channelId,
         messageId,
         emoji: channelId.emoji,
@@ -830,24 +834,24 @@ export const MessageReactionsContent = function MessageReactionsContent(channelI
         userId: id.id,
         options: null,
       };
-      obj = { burst: NORMAL === MessageReactionsTypes.ReactionTypes.BURST };
-      obj.options = obj;
-      return obj.removeReaction(obj);
+      const obj = ReactionActionCreators;
+      obj2.options = { burst: NORMAL === MessageReactionsTypes.ReactionTypes.BURST };
+      return obj.removeReaction(obj2);
     };
-    obj.children = closure_1_17(messageId(dependencyMap[33]), obj);
+    obj.children = closure_1_17(messageId(dependencyMap[33]), obj2);
     return closure_1_17(closure_1_9, obj);
   }, items6);
   const items7 = [reactors.length];
-  obj.sections = items7;
-  obj.style = tmp2.container;
-  const callback = obj.useCallback(() => {
+  obj2.sections = items7;
+  obj2.style = tmp2.container;
+  const callback = noop.useCallback(() => {
     c30 = true;
     const Storage = channelId(dependencyMap[55]).Storage;
     const result = Storage.set(MessageReactionsContent_SwipableBounced, true);
   }, []);
-  const tmp8Result = tmp8(504);
-  const tmp10Result1 = tmp10(1150);
-  obj = {
+  const tmp19Result = ReactionToProfileExperimentDefault;
+  const tmp10Result4 = tmp10(1363);
+  let obj3 = {
     scrollable: true,
     backdropOpacity: tmp10(7886).BACKDROP_OPACITY,
     backdropChildren: null,
@@ -856,29 +860,29 @@ export const MessageReactionsContent = function MessageReactionsContent(channelI
   };
   let tmp27Result = null;
   if (NORMAL === tmp10(7865).ReactionTypes.BURST) {
-    let obj1 = { style: closure_8.absoluteFill, pointerEvents: "none", children: null };
-    let obj2 = { emoji: tmp5.emoji, reactionType: NORMAL, messageId, channelId };
-    obj1.children = closure_17(BurstReactionAnimationPreviewDefault, obj2);
-    tmp27Result = closure_17(closure_9, obj1);
+    let obj4 = { style: closure_8.absoluteFill, pointerEvents: "none", children: null };
+    let obj5 = { emoji: tmp5.emoji, reactionType: NORMAL, messageId, channelId };
+    obj4.children = closure_17(BurstReactionAnimationPreviewDefault, obj5);
+    tmp27Result = closure_17(closure_9, obj4);
   }
-  obj.backdropChildren = tmp27Result;
-  tmp27Result = null;
+  obj3.backdropChildren = tmp27Result;
+  let tmp27Result3 = null;
   if (true !== flag) {
-    const obj3 = { reactions, reactionSelectedIndex: bound, setReactionSelectedIndex: tmp3[1], messageId, channelId };
-    tmp27Result = closure_17(ReactionTabs, obj3);
+    let obj6 = { reactions, reactionSelectedIndex: bound, setReactionSelectedIndex: tmp3[1], messageId, channelId };
+    tmp27Result3 = closure_17(ReactionTabs, obj6);
   }
-  obj.header = tmp27Result;
+  obj3.header = tmp27Result3;
   if (tmp26) {
-    const obj4 = { inActionSheet: true, bounceFirstRowOnMount: !c30, onBounceSwipable: callback };
-    tmp19Result = SwipeableFastListDefault;
-    const merged = Object.assign(obj);
-    let tmp27Result1 = closure_17(tmp19Result, obj4, name);
+    const obj7 = { inActionSheet: true, bounceFirstRowOnMount: !c30, onBounceSwipable: callback };
+    const merged = Object.assign(obj2);
+    let tmp27Result4 = closure_17(SwipeableFastListDefault, obj7, name);
+    const tmp19Result3 = SwipeableFastListDefault;
   } else {
-    const obj5 = { inActionSheet: true };
-    const merged1 = Object.assign(obj);
-    tmp27Result1 = closure_17(FastListDefault, obj5, name);
-    const tmp19Result1 = FastListDefault;
+    const obj8 = { inActionSheet: true };
+    const merged1 = Object.assign(obj2);
+    tmp27Result4 = closure_17(FastListDefault, obj8, name);
+    const tmp19Result4 = FastListDefault;
   }
-  obj.children = tmp27Result1;
-  return closure_17(tmp10(7253).BottomSheet, obj);
+  obj3.children = tmp27Result4;
+  return closure_17(tmp10(7253).BottomSheet, obj3);
 };

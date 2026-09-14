@@ -4,6 +4,8 @@ import IconButton from "../../../design/components/Button/native/IconButton.nati
 import _modDef8796 from "../../../../_runtime/metro/08796__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
+const require = globalThis.__r;
+
 require = fn;
 const jsx = fn(21).jsx;
 const size = fn(2);

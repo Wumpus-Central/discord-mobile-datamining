@@ -15,9 +15,16 @@ const jsxProd = fn(21);
 let closure_6 = ReanimatedRexport.createAnimatedComponent(fn(17).Pressable);
 const createStyles = fn(4636);
 let closure_7 = createStyles.createStyles((arg0) => {
-  let obj = {
-    container: null,
-    containerRefresh: null,
+  const obj = {
+    container: {
+      padding: ContextMenuConstants.CONTEXT_MENU_ITEM_PADDING,
+      minHeight: ContextMenuConstants.CONTEXT_MENU_ITEM_BASE_HEIGHT,
+      flexDirection: "row",
+      justifyContent: "space-between",
+      alignItems: "center",
+      gap: 8,
+    },
+    containerRefresh: { justifyContent: "flex-start" },
     roundedTop: null,
     roundedBottom: null,
     border: null,
@@ -26,7 +33,7 @@ let closure_7 = createStyles.createStyles((arg0) => {
     label: null,
     trailingIndicator: null,
   };
-  obj = {
+  const obj2 = {
     padding: ContextMenuConstants.CONTEXT_MENU_ITEM_PADDING,
     minHeight: ContextMenuConstants.CONTEXT_MENU_ITEM_BASE_HEIGHT,
     flexDirection: "row",
@@ -34,17 +41,15 @@ let closure_7 = createStyles.createStyles((arg0) => {
     alignItems: "center",
     gap: 8,
   };
-  obj.container = obj;
-  obj.containerRefresh = { justifyContent: "flex-start" };
-  obj = { borderTopLeftRadius: nativeDefault.radii.lg, borderTopRightRadius: nativeDefault.radii.lg };
-  obj.roundedTop = obj;
+  obj.roundedTop = { borderTopLeftRadius: nativeDefault.radii.lg, borderTopRightRadius: nativeDefault.radii.lg };
+  const obj3 = { borderTopLeftRadius: nativeDefault.radii.lg, borderTopRightRadius: nativeDefault.radii.lg };
   obj.roundedBottom = {
     borderBottomLeftRadius: nativeDefault.radii.lg,
     borderBottomRightRadius: nativeDefault.radii.lg,
   };
-  const obj1 = { borderBottomLeftRadius: nativeDefault.radii.lg, borderBottomRightRadius: nativeDefault.radii.lg };
+  const obj4 = { borderBottomLeftRadius: nativeDefault.radii.lg, borderBottomRightRadius: nativeDefault.radii.lg };
   obj.border = { borderBottomWidth: 1, borderBottomColor: nativeDefault.colors.BORDER_SUBTLE };
-  const obj2 = { borderBottomWidth: 1, borderBottomColor: nativeDefault.colors.BORDER_SUBTLE };
+  const obj5 = { borderBottomWidth: 1, borderBottomColor: nativeDefault.colors.BORDER_SUBTLE };
   obj.pressed = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE };
   if ("destructive" === arg0) {
     let TEXT_STRONG = nativeDefault.colors.TEXT_FEEDBACK_CRITICAL;
@@ -79,15 +84,15 @@ export const ContextMenuItem = function ContextMenuItem(accessibilityRole) {
   }
   let pan;
   let backgroundColor;
-  let obj = index(pan[3]);
-  const animatedRef = obj.useAnimatedRef();
+  const animatedRef = index(pan[3]).useAnimatedRef();
   const tmp4 = closure_7(variant);
   pan = state.pan;
   const itemMeasurements = state.itemMeasurements;
   const activeIndex = state.activeIndex;
-  let obj1 = index(pan[3]);
-  const sharedValue = obj1.useSharedValue(0);
-  let obj2 = index(pan[3]);
+  let obj = index(pan[3]);
+  let tmp = index;
+  const sharedValue = index(pan[3]).useSharedValue(0);
+  const obj2 = index(pan[3]);
   class U {
     constructor() {
       return pan.get();
@@ -105,17 +110,18 @@ export const ContextMenuItem = function ContextMenuItem(accessibilityRole) {
           const result = index * ContextMenuState.INDEX_BOUNDS_OFFSET;
           value = itemMeasurements.get();
           value[result + ContextMenuState.INDEX_BOUNDS_PAGE_X_OFFSET] = pageX;
-          value = itemMeasurements.get();
-          value[result + ContextMenuState.INDEX_BOUNDS_PAGE_Y_OFFSET] = pageY;
-          const value1 = itemMeasurements.get();
-          value1[result + ContextMenuState.INDEX_BOUNDS_WIDTH_OFFSET] = width;
-          value2 = itemMeasurements.get();
-          value2[result + ContextMenuState.INDEX_BOUNDS_HEIGHT_OFFSET] = height;
+          const value4 = itemMeasurements.get();
+          value4[result + ContextMenuState.INDEX_BOUNDS_PAGE_Y_OFFSET] = pageY;
+          const value5 = itemMeasurements.get();
+          value5[result + ContextMenuState.INDEX_BOUNDS_WIDTH_OFFSET] = width;
+          const value6 = itemMeasurements.get();
+          value6[result + ContextMenuState.INDEX_BOUNDS_HEIGHT_OFFSET] = height;
         }
       }
     }
   };
-  obj = {
+  const obj3 = index(pan[3]);
+  fn.__closure = {
     measure: index(pan[3]).measure,
     ref: animatedRef,
     index,
@@ -126,12 +132,21 @@ export const ContextMenuItem = function ContextMenuItem(accessibilityRole) {
     INDEX_BOUNDS_WIDTH_OFFSET: index(pan[7]).INDEX_BOUNDS_WIDTH_OFFSET,
     INDEX_BOUNDS_HEIGHT_OFFSET: index(pan[7]).INDEX_BOUNDS_HEIGHT_OFFSET,
   };
-  fn.__closure = obj;
   fn.__workletHash = 9571959267234;
   fn.__initData = __initData2;
-  const animatedReaction = obj2.useAnimatedReaction(U, fn);
+  const animatedReaction = obj3.useAnimatedReaction(U, fn);
   backgroundColor = tmp4.pressed.backgroundColor;
-  let obj4 = index(pan[3]);
+  const obj4 = {
+    measure: index(pan[3]).measure,
+    ref: animatedRef,
+    index,
+    INDEX_BOUNDS_OFFSET: index(pan[7]).INDEX_BOUNDS_OFFSET,
+    itemMeasurements,
+    INDEX_BOUNDS_PAGE_X_OFFSET: index(pan[7]).INDEX_BOUNDS_PAGE_X_OFFSET,
+    INDEX_BOUNDS_PAGE_Y_OFFSET: index(pan[7]).INDEX_BOUNDS_PAGE_Y_OFFSET,
+    INDEX_BOUNDS_WIDTH_OFFSET: index(pan[7]).INDEX_BOUNDS_WIDTH_OFFSET,
+    INDEX_BOUNDS_HEIGHT_OFFSET: index(pan[7]).INDEX_BOUNDS_HEIGHT_OFFSET,
+  };
   class P {
     constructor() {
       tmp = activeIndex.get() === index;
@@ -147,11 +162,12 @@ export const ContextMenuItem = function ContextMenuItem(accessibilityRole) {
       if (tmp) {
         str = backgroundColor;
       }
-      obj = { backgroundColor: obj.withSpring(str, tmp3(tmp4[9]).SUBTLE_SPRING, "animate-always") };
-      return obj;
+      obj1 = { backgroundColor: obj.withSpring(str, tmp3(tmp4[9]).SUBTLE_SPRING, "animate-always") };
+      return obj1;
     }
   }
-  obj = {
+  const obj5 = index(pan[3]);
+  P.__closure = {
     activeIndex,
     index,
     pressed: sharedValue,
@@ -159,24 +175,23 @@ export const ContextMenuItem = function ContextMenuItem(accessibilityRole) {
     backgroundColor,
     SUBTLE_SPRING: index(pan[9]).SUBTLE_SPRING,
   };
-  P.__closure = obj;
   P.__workletHash = 624481847983;
   P.__initData = __initData3;
-  const animatedStyle = obj4.useAnimatedStyle(P);
+  const animatedStyle = obj5.useAnimatedStyle(P);
   if (null != IconComponent) {
-    obj1 = { size: "sm", color: tmp4.icon.tintColor };
-    let tmp8 = activeIndex(IconComponent, obj1);
+    const obj7 = { size: "sm", color: tmp4.icon.tintColor };
+    let tmp8 = activeIndex(IconComponent, obj7);
   } else {
     tmp8 = null;
     if (null != iconSource) {
-      obj2 = { source: iconSource, style: tmp4.icon };
-      tmp8 = activeIndex(animatedRef(tmp2[10]), obj2);
+      const obj8 = { source: iconSource, style: tmp4.icon };
+      tmp8 = activeIndex(animatedRef(tmp2[10]), obj8);
     }
   }
   let tmp12 = null;
   if (null != trailingIndicator) {
-    const obj3 = { size: "sm", color: tmp4.icon.tintColor };
-    tmp12 = activeIndex(trailingIndicator, obj3);
+    const obj9 = { size: "sm", color: tmp4.icon.tintColor };
+    tmp12 = activeIndex(trailingIndicator, obj9);
   }
   const items = [index, itemMeasurements];
   const items1 = [activeIndex, index];
@@ -187,8 +202,8 @@ export const ContextMenuItem = function ContextMenuItem(accessibilityRole) {
         const result = index * ContextMenuState.INDEX_BOUNDS_OFFSET;
         value = itemMeasurements.get();
         value[result + ContextMenuState.INDEX_BOUNDS_HEIGHT_OFFSET] = height;
-        value = itemMeasurements.get();
-        value[result + ContextMenuState.INDEX_BOUNDS_WIDTH_OFFSET] = width;
+        value2 = itemMeasurements.get();
+        value2[result + ContextMenuState.INDEX_BOUNDS_WIDTH_OFFSET] = width;
       }
     }
   }, items);
@@ -196,7 +211,7 @@ export const ContextMenuItem = function ContextMenuItem(accessibilityRole) {
   const callback1 = itemMeasurements.useCallback(() => {
     const result = activeIndex.set(index);
   }, items1);
-  obj4 = {
+  const obj10 = {
     ref: animatedRef,
     style: null,
     onLayout: null,
@@ -228,27 +243,27 @@ export const ContextMenuItem = function ContextMenuItem(accessibilityRole) {
   }
   items3[4] = end;
   items3[5] = animatedStyle;
-  obj4.style = items3;
-  obj4.onLayout = callback;
-  obj4.onPressIn = callback1;
-  obj4.onPressOut = callback2;
-  obj4.onPress = onPress;
-  obj4.accessibilityRole = str;
+  obj10.style = items3;
+  obj10.onLayout = callback;
+  obj10.onPressIn = callback1;
+  obj10.onPressOut = callback2;
+  obj10.onPress = onPress;
+  obj10.accessibilityRole = str;
   const items4 = [activeIndex(animatedRef(pan[3]).View, { children: tmp8 }), ,];
-  const obj5 = { animated: true, variant: "text-md/medium", style: tmp4.label, color: null, children: null };
+  const obj11 = { animated: true, variant: "text-md/medium", style: tmp4.label, color: null, children: null };
   let str2 = "text-strong";
   if ("destructive" === variant) {
     str2 = "text-feedback-critical";
   }
-  obj5.color = str2;
-  obj5.children = label;
-  items4[1] = activeIndex(index(pan[11]).Text, obj5);
+  obj11.color = str2;
+  obj11.children = label;
+  items4[1] = activeIndex(tmp(pan[11]).Text, obj11);
   let tmp19Result = null != tmp12;
   if (tmp19Result) {
-    const obj6 = { style: tmp4.trailingIndicator, children: tmp12 };
-    tmp19Result = tmp19(animatedRef(tmp2[3]).View, obj6);
+    const obj12 = { style: tmp4.trailingIndicator, children: tmp12 };
+    tmp19Result = tmp19(animatedRef(tmp2[3]).View, obj12);
   }
   items4[2] = tmp19Result;
-  obj4.children = items4;
-  return sharedValue(backgroundColor, obj4);
+  obj10.children = items4;
+  return sharedValue(backgroundColor, obj10);
 };

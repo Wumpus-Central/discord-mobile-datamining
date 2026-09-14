@@ -61,13 +61,13 @@ export default function MediaModal(originLayout) {
   ({ onEndReached, onEndReachedThreshold } = originLayout);
   let MediaViewerSourcesStore = num(onCloseCallback[6]).MediaViewerSourcesStore;
   const field = MediaViewerSourcesStore.useField("sources");
-  let obj = num(onCloseCallback[7]);
-  const mediaViewerSyncer = obj.useMediaViewerSyncer({
+  const mediaViewerSyncer = num(onCloseCallback[7]).useMediaViewerSyncer({
     sources: field,
     initialIndex: num,
     onEndReached,
     onEndReachedThreshold,
   });
+  let obj = num(onCloseCallback[7]);
   const videoStateStore = num(onCloseCallback[8]).useVideoStateStore((paused) => paused.paused);
   const items = [onCloseCallback, onClose];
   let callback = flag2.useCallback(() => {
@@ -130,17 +130,17 @@ export default function MediaModal(originLayout) {
       return tmp6;
     } else {
       if (MediaSourceUtil.VideoSourceType.PORTAL === videoSourceType) {
-        let tmpResult = NativePortalView;
-        let portalControls = tmpResult.createPortalControls(portal.portal);
+        let portalControls = NativePortalView.createPortalControls(portal.portal);
+        const tmpResult = NativePortalView;
       } else if (MediaSourceUtil.VideoSourceType.TIKTOK_IFRAME === videoSourceType) {
-        tmpResult = MediaModalTiktok;
-        portalControls = tmpResult.createTiktokVideoControls();
+        portalControls = MediaModalTiktok.createTiktokVideoControls();
+        const tmpResult4 = MediaModalTiktok;
       } else if (MediaSourceUtil.VideoSourceType.WEB_FILE_IFRAME === videoSourceType) {
         portalControls = MediaModalWebVideoFile.createWebFileVideoControls();
-        const tmpResult1 = MediaModalWebVideoFile;
+        const tmpResult5 = MediaModalWebVideoFile;
       } else {
         portalControls = common_Video.createVideoControls(useVideoControls.setPausedState);
-        const tmpResult2 = common_Video;
+        const tmpResult6 = common_Video;
       }
       tmp5.current[combined] = portalControls;
       return portalControls;
@@ -193,16 +193,15 @@ export default function MediaModal(originLayout) {
   ];
   const callback3 = flag2.useCallback(() => {
     if (flag2) {
-      let obj = MediaSourceUtil;
-      const selectedMediaSource = obj.getSelectedMediaSource(mediaViewerSyncer);
+      const selectedMediaSource = MediaSourceUtil.getSelectedMediaSource(mediaViewerSyncer);
       if (null != selectedMediaSource) {
         const result = HapticUtils.triggerHapticFeedback(haptics_HapticFeedbackTypesDefault.IMPACT_LIGHT);
         const tmp2Result = HapticUtils;
-        obj = { source: selectedMediaSource, disableDownload, shareable: tmp };
+        const obj2 = { source: selectedMediaSource, disableDownload, shareable: tmp };
         ActionSheetActionCreatorsDefault.openLazy(
           asyncRequireImpl(8452, dependencyMap.paths),
           "MediaShareActionSheet",
-          obj,
+          obj2,
         );
       }
     }
@@ -244,31 +243,30 @@ export default function MediaModal(originLayout) {
     if (!mediaPlayerMutedStore) {
       tmp2 = true === source.isGIFV;
     }
-    let obj = MediaSourceUtil;
-    const videoSourceType = obj.getVideoSourceType(source);
+    const videoSourceType = MediaSourceUtil.getVideoSourceType(source);
     if (videoSourceType === MediaSourceUtil.VideoSourceType.WEB_FILE_IFRAME) {
       if (null != source.videoURI) {
-        obj = {};
+        const obj2 = {};
         const merged1 = Object.assign(merged);
-        obj.key = key;
-        obj.visible = visible;
-        obj.style = merged.style;
+        obj2.key = key;
+        obj2.visible = visible;
+        obj2.style = merged.style;
         const size = { uri: null, width: null, height: null };
         ({ videoURI: obj13.uri, width: obj13.width, height: obj13.height } = source);
-        obj.source = size;
-        obj.controls = callback1(index, source);
+        obj2.source = size;
+        obj2.controls = callback1(index, source);
         return createElement(MediaModalWebVideoFileDefault, {});
       }
     }
     if (null != source.portal) {
       if (!tmp3Result.isPortalExpired(source.portal)) {
-        obj = {};
+        const obj3 = {};
         const merged2 = Object.assign(merged);
-        obj.key = key;
-        obj.pointerEvents = pointerEvents;
-        obj.portal = source.portal;
-        obj.paused = hasSpoiler;
-        obj.muted = tmp2;
+        obj3.key = key;
+        obj3.pointerEvents = pointerEvents;
+        obj3.portal = source.portal;
+        obj3.paused = hasSpoiler;
+        obj3.muted = tmp2;
         return createElement(NativePortalViewDefault, {});
       }
       tmp3Result = NativePortalView;
@@ -277,25 +275,25 @@ export default function MediaModal(originLayout) {
       if (!source.isGIFV) {
         const embedProviderName = source.embedProviderName;
         if ("TikTok" === embedProviderName) {
-          const obj1 = {};
+          const obj4 = {};
           const merged3 = Object.assign(merged);
-          obj1.key = key;
-          obj1.visible = visible;
-          obj1.style = merged.style;
+          obj4.key = key;
+          obj4.visible = visible;
+          obj4.style = merged.style;
           const size1 = { uri: null, width: null, height: null };
           ({ embedURI: obj7.uri, width: obj7.width, height: obj7.height } = source);
-          obj1.source = size1;
-          obj1.controls = callback1(index, source);
+          obj4.source = size1;
+          obj4.controls = callback1(index, source);
           return createElement(MediaModalTiktokDefault, {});
         } else if ("YouTube" === embedProviderName) {
-          const obj2 = {};
+          const obj6 = {};
           const merged4 = Object.assign(merged);
-          obj2.key = key;
-          obj2.visible = visible;
-          obj2.style = merged.style;
+          obj6.key = key;
+          obj6.visible = visible;
+          obj6.style = merged.style;
           const size2 = { uri: null, width: null, height: null };
           ({ embedURI: obj5.uri, width: obj5.width, height: obj5.height } = source);
-          obj2.source = size2;
+          obj6.source = size2;
           return createElement(MediaModalYoutubeDefault, {});
         } else {
           return null;
@@ -303,15 +301,15 @@ export default function MediaModal(originLayout) {
       }
     }
     if (null != source.videoURI) {
-      const obj3 = { Component: common_Video.VideoComponent };
+      const obj8 = { Component: common_Video.VideoComponent };
       const merged5 = Object.assign(merged);
-      obj3.key = key;
-      obj3.pointerEvents = pointerEvents;
-      obj3.paused = hasSpoiler;
-      obj3.controls = callback1(index, source);
-      obj3.muted = tmp2;
-      obj3.index = index;
-      obj3.onLoad = callback2(index, source, merged.onLoad);
+      obj8.key = key;
+      obj8.pointerEvents = pointerEvents;
+      obj8.paused = hasSpoiler;
+      obj8.controls = callback1(index, source);
+      obj8.muted = tmp2;
+      obj8.index = index;
+      obj8.onLoad = callback2(index, source, merged.onLoad);
       const size3 = {
         uri: null,
         width: null,
@@ -338,7 +336,7 @@ export default function MediaModal(originLayout) {
         accessoryType: obj11.accessoryType,
         attachmentId: obj11.attachmentId,
       } = source);
-      obj3.source = size3;
+      obj8.source = size3;
       let tmp33 = createElement(MediaModalLoaderDefault, { Component: common_Video.VideoComponent });
     } else {
       const uri3 = source.uri;
@@ -347,22 +345,22 @@ export default function MediaModal(originLayout) {
         if (!uri.startsWith(closure_2_11)) {
           const uri2 = source.uri;
           if (!uri2.startsWith(closure_2_12)) {
-            const obj4 = { Component: FastImageDefault };
+            const obj9 = { Component: FastImageDefault };
             const merged6 = Object.assign(merged);
-            obj4.key = key;
-            obj4.source = source;
-            obj4.index = index;
-            obj4.pointerEvents = pointerEvents;
+            obj9.key = key;
+            obj9.source = source;
+            obj9.index = index;
+            obj9.pointerEvents = pointerEvents;
             tmp33 = createElement(MediaModalLoaderDefault, { Component: FastImageDefault });
           }
         }
       }
-      const obj5 = { Component };
+      const obj10 = { Component };
       const merged7 = Object.assign(merged);
-      obj5.key = key;
-      obj5.source = source;
-      obj5.index = index;
-      obj5.pointerEvents = pointerEvents;
+      obj10.key = key;
+      obj10.source = source;
+      obj10.index = index;
+      obj10.pointerEvents = pointerEvents;
       tmp33 = createElement(MediaModalLoaderDefault, { Component });
     }
     return tmp33;
@@ -378,7 +376,7 @@ export default function MediaModal(originLayout) {
   });
   let tmp17Result = tmp18;
   if (flag) {
-    obj = {
+    const obj5 = {
       transparent: true,
       animationType: "none",
       visible: true,
@@ -386,9 +384,9 @@ export default function MediaModal(originLayout) {
       statusBarTranslucent: true,
       children: null,
     };
-    obj = { style: disableMediaOverlayFooter.absoluteFill, children: tmp18 };
-    obj.children = tmp17(contextName, obj);
-    tmp17Result = tmp17(disableMediaOverlayButton, obj);
+    let obj6 = { style: disableMediaOverlayFooter.absoluteFill, children: tmp18 };
+    obj5.children = tmp17(contextName, obj6);
+    tmp17Result = tmp17(disableMediaOverlayButton, obj5);
   }
   return tmp17Result;
 }

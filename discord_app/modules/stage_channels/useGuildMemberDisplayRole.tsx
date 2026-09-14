@@ -3,6 +3,8 @@ import PermissionUtilsAll from "../../utils/PermissionUtils.tsx";
 import GuildMemberStore from "../../stores/GuildMemberStore.tsx";
 import GuildStore from "../../stores/GuildStore.tsx";
 
+const require = globalThis.__r;
+
 const require = fn;
 function getHighestHoistedRole(arg0, arg1) {
   let tmp = arg2;

@@ -15,6 +15,8 @@ import ReadStateStore from "../../stores/ReadStateStore.tsx";
 import RelationshipStore from "../../stores/RelationshipStore.tsx";
 import UserStore from "../../stores/UserStore.tsx";
 
+const require = globalThis.__r;
+
 require = fn;
 function setIndex(arg0, index) {
   arg0.index = index;
@@ -153,10 +155,10 @@ export const useChannelBrowserSections = function useChannelBrowserSections(
   _require = guildId;
   closure_1 = filterCategoriesByQuery;
   dependencyMap = arg2;
-  let obj = require("DismissibleContentUnsafeUtils");
-  let result = obj.useIsDismissibleContentDismissed_UNSAFE(
+  let result = require("DismissibleContentUnsafeUtils").useIsDismissibleContentDismissed_UNSAFE(
     require("dismissible_content").DismissibleContent.CHANNEL_BROWSER_NUX,
   );
+  let obj = require("DismissibleContentUnsafeUtils");
   const items = [ChannelStore];
   const items1 = [guildId];
   closure_3 = require("initialize").useStateFromStoresObject(
@@ -201,8 +203,8 @@ export const useChannelBrowserSections = function useChannelBrowserSections(
     result = null == rowHeight;
   }
   if (!result) {
-    obj = { rowCount: 1, rowHeight };
-    mapped.unshift(obj);
+    const obj3 = { rowCount: 1, rowHeight };
+    mapped.unshift(obj3);
   }
   return mapped;
 };
@@ -236,12 +238,12 @@ export const useChannelBrowserChannelCount = function useChannelBrowserChannelCo
 };
 export const getActiveAgoTimestamp = function getActiveAgoTimestamp(id) {
   const intl = util.intl;
-  let obj = SnowflakeUtilsDefault;
+  const tmp = _modDef4228;
   let lastMessageIdResult = ReadStateStore.lastMessageId(id);
   if (lastMessageIdResult == null) {
     lastMessageIdResult = id;
   }
-  obj = { timeAgo: null };
-  obj.timeAgo = _modDef4228(obj.extractTimestamp(lastMessageIdResult)).fromNow();
-  return intl.formatToPlainString(util.t["8N0BHR"], obj);
+  const obj2 = { timeAgo: null };
+  obj2.timeAgo = tmp(SnowflakeUtilsDefault.extractTimestamp(lastMessageIdResult)).fromNow();
+  return intl.formatToPlainString(util.t["8N0BHR"], obj2);
 };

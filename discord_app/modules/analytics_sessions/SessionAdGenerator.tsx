@@ -2,7 +2,7 @@
 import DispatcherDefault from "../../Dispatcher.tsx";
 import DurationsDefault from "../../utils/Durations.tsx";
 import SentryUtilsDefault from "../../utils/SentryUtils.native.tsx";
-import v1 from "../../../_runtime/01256_v1.js";
+import v1 from "../../../_runtime/01254_v1.js";
 import SessionUtils from "SessionUtils.tsx";
 
 require = fn;
@@ -21,11 +21,11 @@ export const getOrRefreshAdSession = function getOrRefreshAdSession() {
     const _Date = Date;
     const timestamp1 = Date.now();
     if (timestamp1 < _null.createdAtTimestamp) {
-      let obj = { category: "ad", message: null };
+      const obj2 = { category: "ad", message: null };
       const _HermesInternal = HermesInternal;
-      obj.message =
+      obj2.message =
         "future facing timestamp Date.now(): " + timestamp1 + ", initialized timestamp: " + tmp11.createdAtTimestamp;
-      obj.addBreadcrumb(obj);
+      SentryUtilsDefault.addBreadcrumb(obj2);
       let flag2 = true;
     } else {
       const diff = timestamp1 - tmp11.lastUsedTimestamp;
@@ -39,13 +39,13 @@ export const getOrRefreshAdSession = function getOrRefreshAdSession() {
     }
     return tmp9;
   }
-  obj = {
+  const obj3 = {
     uuid: v1.v4(),
     createdAtTimestamp: timestamp,
     lastUsedTimestamp: timestamp,
     version: SessionUtils.CLIENT_SESSION_STORAGE_VERSION,
   };
-  _null = obj;
+  _null = obj3;
   DispatcherDefault.dispatch({ type: "AD_SESSION_RESET" });
   tmp9 = _null;
 };
@@ -58,14 +58,14 @@ export function getCurrentAdSession() {
 export const isAdSessionExpired = function isAdSessionExpired(createdAtTimestamp) {
   const timestamp = Date.now();
   if (timestamp < createdAtTimestamp.createdAtTimestamp) {
-    const obj = { category: "ad", message: null };
+    const obj2 = { category: "ad", message: null };
     const _HermesInternal = HermesInternal;
-    obj.message =
+    obj2.message =
       "future facing timestamp Date.now(): " +
       timestamp +
       ", initialized timestamp: " +
       createdAtTimestamp.createdAtTimestamp;
-    obj.addBreadcrumb(obj);
+    SentryUtilsDefault.addBreadcrumb(obj2);
     return true;
   } else {
     const diff = timestamp - createdAtTimestamp.lastUsedTimestamp;

@@ -12,18 +12,28 @@ const result = size.fileFinishedImporting(
 
 export const handleRoleSubscriptionPurchaseSystemMessageCtaClicked =
   function handleRoleSubscriptionPurchaseSystemMessageCtaClicked(messageChannel, message, stickerId) {
-    let obj = { channel: messageChannel, message, shouldMention: true, showMentionToggle: true };
-    obj.sendGreetMessage(messageChannel.id, stickerId, MessageActionCreatorsDefault.getSendMessageOptionsForReply(obj));
+    const obj = MessageActionCreatorsDefault;
+    obj.sendGreetMessage(
+      messageChannel.id,
+      stickerId,
+      MessageActionCreatorsDefault.getSendMessageOptionsForReply({
+        channel: messageChannel,
+        message,
+        shouldMention: true,
+        showMentionToggle: true,
+      }),
+    );
+    const obj3 = { channel: messageChannel, message, shouldMention: true, showMentionToggle: true };
     const roleSubscriptionPurchaseSystemMessageEventProperties =
       GuildRoleSubscriptionSystemMessageUtils.getRoleSubscriptionPurchaseSystemMessageEventProperties(
         messageChannel,
         message,
       );
-    obj = {};
+    const obj6 = {};
     const merged = Object.assign(roleSubscriptionPurchaseSystemMessageEventProperties);
-    obj.sticker_id = stickerId;
+    obj6.sticker_id = stickerId;
     AppAnalyticsUtilsDefault.trackWithMetadata(
       AnalyticEvents.ROLE_SUBSCRIPTION_PURCHASE_SYSTEM_MESSAGE_CTA_CLICKED,
-      obj,
+      obj6,
     );
   };

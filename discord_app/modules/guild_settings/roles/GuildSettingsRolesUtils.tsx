@@ -9,8 +9,10 @@ import noop from "../../../../_runtime/metro/00019__.js";
 import GuildMemberStore from "../../../stores/GuildMemberStore.tsx";
 import UserStore from "../../../stores/UserStore.tsx";
 
+const require = globalThis.__r;
+
 require = fn;
-const constants = fn(17719).GuildSettingsRoleEditSections;
+const constants = fn(17720).GuildSettingsRoleEditSections;
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_settings/roles/GuildSettingsRolesUtils.tsx");
@@ -64,7 +66,7 @@ export const useGuildMembers = function useGuildMembers(id, callback) {
           let obj2 = UserUtilsDefault;
           nick = obj2.getName(obj);
         }
-        obj = {
+        let obj5 = {
           name: nick,
           userTag: null,
           id: null,
@@ -77,15 +79,15 @@ export const useGuildMembers = function useGuildMembers(id, callback) {
           user: null,
         };
         let obj4 = UserUtilsDefault;
-        obj.userTag = obj4.getUserTag(obj);
-        obj.id = tmp3.userId;
-        obj.avatarSource = obj.getAvatarSource(closure_0);
-        obj.avatarURL = obj.getAvatarURL(closure_0, 80);
-        obj.bot = obj.bot;
-        obj.verifiedBot = obj.isVerifiedBot();
+        obj5.userTag = obj4.getUserTag(obj);
+        obj5.id = tmp3.userId;
+        obj5.avatarSource = obj.getAvatarSource(closure_0);
+        obj5.avatarURL = obj.getAvatarURL(closure_0, 80);
+        obj5.bot = obj.bot;
+        obj5.verifiedBot = obj.isVerifiedBot();
         ({ roles: obj3.roles, userId: obj3.key } = tmp3);
-        obj.user = obj;
-        let arr = items.push(obj);
+        obj5.user = obj;
+        let arr = items.push(obj5);
       }
       continue;
     }
@@ -158,7 +160,7 @@ export const useGuildRoleMembers = function useGuildRoleMembers(id, id2, onMembe
           let obj2 = UserUtilsDefault;
           nick = obj2.getName(obj);
         }
-        obj = {
+        let obj5 = {
           name: nick,
           userTag: null,
           id: null,
@@ -171,15 +173,15 @@ export const useGuildRoleMembers = function useGuildRoleMembers(id, id2, onMembe
           user: null,
         };
         let obj4 = UserUtilsDefault;
-        obj.userTag = obj4.getUserTag(obj);
-        obj.id = tmp3.userId;
-        obj.avatarSource = obj.getAvatarSource(closure_0);
-        obj.avatarURL = obj.getAvatarURL(closure_0, 80);
-        obj.bot = obj.bot;
-        obj.verifiedBot = obj.isVerifiedBot();
+        obj5.userTag = obj4.getUserTag(obj);
+        obj5.id = tmp3.userId;
+        obj5.avatarSource = obj.getAvatarSource(closure_0);
+        obj5.avatarURL = obj.getAvatarURL(closure_0, 80);
+        obj5.bot = obj.bot;
+        obj5.verifiedBot = obj.isVerifiedBot();
         ({ roles: obj3.roles, userId: obj3.key } = tmp3);
-        obj.user = obj;
-        let arr = items.push(obj);
+        obj5.user = obj;
+        let arr = items.push(obj5);
       }
       continue;
     }

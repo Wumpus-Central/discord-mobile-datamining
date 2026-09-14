@@ -6,8 +6,8 @@ import Text_Text from "../../../../../../design/components/Text/native/Text.tsx"
 import Pressables from "../../../../../../design/void/Pressables/native/Pressables.tsx";
 import InstantInviteActionCreatorsDefault from "../../../../../../actions/InstantInviteActionCreators.tsx";
 import IconActionButtonDefault from "../../../shared_components/IconActionButton.tsx";
-import _modDef13942 from "../../../../../../../_runtime/metro/13942__.js";
-import _modDef16194 from "../../../../../../../_runtime/metro/16194__.js";
+import _modDef13943 from "../../../../../../../_runtime/metro/13943__.js";
+import _modDef16196 from "../../../../../../../_runtime/metro/16196__.js";
 import asyncGeneratorStep from "../../../../../../../_runtime/00005_asyncGeneratorStep.js";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 
@@ -30,8 +30,8 @@ let closure_11 = async function _getFriendInviteCode() {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -44,8 +44,8 @@ let closure_11 = async function _getFriendInviteCode() {
           throw value;
         } else if (arg0 === 2) {
           c5 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj4 = { value, done: true };
+          return obj4;
         } else {
           closure_1 = tmp3;
           closure_0 = tmp7;
@@ -53,33 +53,32 @@ let closure_11 = async function _getFriendInviteCode() {
           c3 = 1;
           c4 = 2;
           c5 = 1;
-          const obj1 = {
+          const obj6 = {
             value: InstantInviteActionCreatorsDefault.createFriendInvite(null, constants.ADD_FRIENDS_WIDGET),
             done: false,
           };
-          return obj1;
+          return obj6;
         }
       } else if (1 === tmp7) {
         c3 = 0;
-        let obj2 = closure_129_0(closure_129_2[9]);
         const intl = closure_129_0(closure_129_2[10]).intl;
-        obj2.presentError(intl.string(closure_129_0(closure_129_2[10]).t.R0RpRX));
+        closure_129_0(closure_129_2[9]).presentError(intl.string(closure_129_0(closure_129_2[10]).t.R0RpRX));
         c5 = 3;
-        obj2 = { value: undefined, done: true };
-        return obj2;
+        const obj7 = { value: undefined, done: true };
+        return obj7;
       } else if (arg0 === 1) {
         c5 = 3;
         throw value;
       } else if (arg0 === 2) {
         c3 = 0;
         c5 = 3;
-        const obj3 = { value, done: true };
-        return obj3;
+        const obj8 = { value, done: true };
+        return obj8;
       } else {
         code = value.code;
         c3 = 0;
         c5 = 3;
-        obj = { value: code, done: true };
+        const obj = { value: code, done: true };
         return obj;
       }
     } catch (tmp20) {
@@ -111,8 +110,8 @@ let closure_13 = async function _handleShare() {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -125,33 +124,33 @@ let closure_13 = async function _handleShare() {
           throw value;
         } else if (arg0 === 2) {
           c3 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           closure_1 = tmp5;
           closure_0 = tmp2;
           closure_128_0 = undefined;
           c2 = 1;
           c3 = 1;
-          const obj1 = { value: getFriendInviteCode(), done: false };
-          return obj1;
+          const obj4 = { value: getFriendInviteCode(), done: false };
+          return obj4;
         }
       } else if (arg0 === 1) {
         c3 = 3;
         throw value;
       } else if (arg0 === 2) {
         c3 = 3;
-        obj = { value, done: true };
+        const obj = { value, done: true };
         return obj;
       } else {
         closure_128_0 = value;
         const obj5 = closure_129_0(closure_129_2[11]);
         const intl = closure_129_0(closure_129_2[10]).intl;
-        const obj2 = { link: closure_129_1(closure_129_2[12])(closure_128_0) };
+        const obj6 = { link: closure_129_1(closure_129_2[12])(closure_128_0) };
         obj5.handleOpenShareSheet(
           closure_128_0,
           null,
-          intl.formatToPlainString(closure_129_0(closure_129_2[10]).t.PJf9P9, obj2),
+          intl.formatToPlainString(closure_129_0(closure_129_2[10]).t.PJf9P9, obj6),
           closure_129_6.ADD_FRIENDS_WIDGET,
         );
         c3 = 3;
@@ -181,8 +180,8 @@ let closure_15 = async function _handleLink() {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -195,28 +194,27 @@ let closure_15 = async function _handleLink() {
           throw value;
         } else if (arg0 === 2) {
           c3 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           closure_1 = tmp5;
           closure_0 = tmp2;
           closure_128_0 = undefined;
           c2 = 1;
           c3 = 1;
-          const obj1 = { value: getFriendInviteCode(), done: false };
-          return obj1;
+          const obj4 = { value: getFriendInviteCode(), done: false };
+          return obj4;
         }
       } else if (arg0 === 1) {
         c3 = 3;
         throw value;
       } else if (arg0 === 2) {
         c3 = 3;
-        const obj2 = { value, done: true };
-        return obj2;
+        const obj5 = { value, done: true };
+        return obj5;
       } else {
         closure_128_0 = value;
-        obj = closure_129_0(closure_129_2[11]);
-        obj.handleCopy(closure_128_0, null, closure_129_6.ADD_FRIENDS_WIDGET);
+        closure_129_0(closure_129_2[11]).handleCopy(closure_128_0, null, closure_129_6.ADD_FRIENDS_WIDGET);
         c3 = 3;
         return { value: "HermesInternal", done: null };
       }
@@ -230,30 +228,46 @@ const View = fn(17).View;
 const InstantInviteSources = fn(1074).InstantInviteSources;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const sum = fn(13383).ICON_ACTION_BUTTON_SIZE + nativeDefault.space.PX_16;
-fn(4636);
-let obj = { container: null, title: null, actions: null, actionIcon: null };
-obj = {
+const sum = fn(13384).ICON_ACTION_BUTTON_SIZE + nativeDefault.space.PX_16;
+const createStyles = fn(4636);
+let obj = {
+  container: {
+    height: sum,
+    paddingHorizontal: nativeDefault.space.PX_8,
+    justifyContent: "space-between",
+    flexDirection: "row",
+    alignItems: "center",
+  },
+  title: null,
+  actions: null,
+  actionIcon: null,
+};
+let obj3 = {
   height: sum,
   paddingHorizontal: nativeDefault.space.PX_8,
   justifyContent: "space-between",
   flexDirection: "row",
   alignItems: "center",
 };
-obj.container = obj;
-const createStyles = {
+obj.title = {
   flexDirection: "row",
   alignItems: "center",
   borderRadius: nativeDefault.radii.md,
   paddingHorizontal: nativeDefault.space.PX_8,
   paddingVertical: nativeDefault.space.PX_12,
 };
-obj.title = createStyles;
+let obj4 = {
+  flexDirection: "row",
+  alignItems: "center",
+  borderRadius: nativeDefault.radii.md,
+  paddingHorizontal: nativeDefault.space.PX_8,
+  paddingVertical: nativeDefault.space.PX_12,
+};
 obj.actions = { paddingHorizontal: nativeDefault.space.PX_8, flexDirection: "row", justifyContent: "flex-end" };
-let obj2 = { paddingHorizontal: nativeDefault.space.PX_8, flexDirection: "row", justifyContent: "flex-end" };
+let obj5 = { paddingHorizontal: nativeDefault.space.PX_8, flexDirection: "row", justifyContent: "flex-end" };
 obj.actionIcon = { marginEnd: 0, marginStart: nativeDefault.space.PX_8 };
 let closure_9 = createStyles.createStyles(obj);
-let obj3 = { marginEnd: 0, marginStart: nativeDefault.space.PX_8 };
+let obj6 = { marginEnd: 0, marginStart: nativeDefault.space.PX_8 };
 const size = fn(2);
 const result = size.fileFinishedImporting(
   "modules/main_tabs_v2/native/tabs/messages/items/MessagesItemAddFriendsWidget.tsx",
@@ -261,47 +275,52 @@ const result = size.fileFinishedImporting(
 
 export default noop.memo(function MessagesItemAddFriendsWidget() {
   const tmp = closure_9();
-  let obj = { style: tmp.container, collapsable: false, children: null };
+  const obj = { style: tmp.container, collapsable: false, children: null };
   const callback = noop.useCallback(() => {
-    let obj = RootNavigationRef;
-    const rootNavigationRef = obj.getRootNavigationRef();
+    const rootNavigationRef = RootNavigationRef.getRootNavigationRef();
     if (rootNavigationRef != null) {
       const current = rootNavigationRef.current;
       if (current != null) {
-        obj = { screen: "add-friends", params: { sourcePage: "Add Friends Widget", presentation: "card" } };
-        current.navigate("friends", obj);
+        const obj2 = { screen: "add-friends", params: { sourcePage: "Add Friends Widget", presentation: "card" } };
+        current.navigate("friends", obj2);
       }
     }
   }, []);
-  obj = { accessibilityLabel: null, accessibilityRole: "button", onPress: null, style: null, children: null };
+  let obj2 = { accessibilityLabel: null, accessibilityRole: "button", onPress: null, style: null, children: null };
   const intl = util.intl;
-  obj.accessibilityLabel = intl.string(util.t.afcl67);
-  obj.onPress = callback;
-  obj.style = tmp.title;
-  obj = { variant: "text-md/semibold", color: "text-default", lineClamp: 1, maxFontSizeMultiplier: 2, children: null };
+  obj2.accessibilityLabel = intl.string(util.t.afcl67);
+  obj2.onPress = callback;
+  obj2.style = tmp.title;
+  const obj3 = {
+    variant: "text-md/semibold",
+    color: "text-default",
+    lineClamp: 1,
+    maxFontSizeMultiplier: 2,
+    children: null,
+  };
   const intl2 = util.intl;
-  obj.children = intl2.string(util.t.afcl67);
-  obj.children = React5(Text_Text.Text, obj);
-  const items = [React5(Pressables.PressableHighlight, obj)];
-  const obj1 = { style: tmp.actions, children: null };
-  const obj2 = {
+  obj3.children = intl2.string(util.t.afcl67);
+  obj2.children = React5(Text_Text.Text, obj3);
+  const items = [React5(Pressables.PressableHighlight, obj2)];
+  const obj4 = { style: tmp.actions, children: null };
+  const obj5 = {
     style: tmp.actionIcon,
     variant: "filled",
-    source: _modDef13942,
+    source: _modDef13943,
     onPress: handleShare,
     accessibilityLabel: null,
   };
   const intl3 = util.intl;
-  obj2.accessibilityLabel = intl3.string(util.t.Ej3B3Y);
-  const items1 = [React5(IconActionButtonDefault, obj2)];
-  const obj3 = { style: tmp.actionIcon, variant: "filled", source: null, onPress: null, accessibilityLabel: null };
-  obj3.source = _modDef16194;
-  obj3.onPress = handleLink;
+  obj5.accessibilityLabel = intl3.string(util.t.Ej3B3Y);
+  const items1 = [React5(IconActionButtonDefault, obj5)];
+  const obj6 = { style: tmp.actionIcon, variant: "filled", source: null, onPress: null, accessibilityLabel: null };
+  obj6.source = _modDef16196;
+  obj6.onPress = handleLink;
   const intl4 = util.intl;
-  obj3.accessibilityLabel = intl4.string(util.t.WqhZss);
-  items1[1] = React5(IconActionButtonDefault, obj3);
-  obj1.children = items1;
-  items[1] = React6(View, obj1);
+  obj6.accessibilityLabel = intl4.string(util.t.WqhZss);
+  items1[1] = React5(IconActionButtonDefault, obj6);
+  obj4.children = items1;
+  items[1] = React6(View, obj4);
   obj.children = items;
   return React6(View, obj);
 });

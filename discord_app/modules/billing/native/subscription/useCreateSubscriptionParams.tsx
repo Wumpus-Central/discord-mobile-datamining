@@ -1,5 +1,5 @@
 // discord_app/modules/billing/native/subscription/useCreateSubscriptionParams.tsx
-import v1 from "../../../../../_runtime/01256_v1.js";
+import v1 from "../../../../../_runtime/01254_v1.js";
 import useToggleOnIAPSuccessDefault from "useToggleOnIAPSuccess.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -20,9 +20,9 @@ export default function useCreateSubscriptionParams(arg0, arg1) {
       if (null != closure_1) {
         tmp2 = null;
         if (null != closure_2) {
-          let obj = { requestIdentifier: v1.v4(), items: null, countryCode: null, currency: null };
-          obj = { planId: tmp.id, quantity: 1 };
-          const items = [obj];
+          const obj = { requestIdentifier: v1.v4(), items: null, countryCode: null, currency: null };
+          const obj3 = { planId: tmp.id, quantity: 1 };
+          const items = [obj3];
           obj.items = items;
           ({ country: obj.countryCode, currency: obj.currency } = closure_1);
           tmp2 = obj;

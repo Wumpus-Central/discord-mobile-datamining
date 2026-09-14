@@ -2,6 +2,8 @@
 import AuthenticationStore from "../../stores/AuthenticationStore.tsx";
 import VoiceStateStore from "../../stores/VoiceStateStore.tsx";
 
+const require = globalThis.__r;
+
 const require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_chat/VoiceChatHooks.tsx");

@@ -26,10 +26,20 @@ const Constants = fn(1074);
 ({ MAX_STAGE_VOICE_USER_LIMIT: map1, Permissions: closure_14 } = Constants);
 const jsx = fn(21).jsx;
 const createStyles = fn(4636);
-let obj = { voiceStates: { marginLeft: 36, marginBottom: 8 }, container: null };
-obj = { marginVertical: fn(10246).CHANNEL_MARGIN_VERTICAL, marginHorizontal: 8, borderRadius: nativeDefault.radii.md };
-obj.container = obj;
+let obj = {
+  voiceStates: { marginLeft: 36, marginBottom: 8 },
+  container: {
+    marginVertical: fn(10246).CHANNEL_MARGIN_VERTICAL,
+    marginHorizontal: 8,
+    borderRadius: nativeDefault.radii.md,
+  },
+};
 let closure_16 = createStyles.createStyles(obj);
+let obj3 = {
+  marginVertical: fn(10246).CHANNEL_MARGIN_VERTICAL,
+  marginHorizontal: 8,
+  borderRadius: nativeDefault.radii.md,
+};
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/stage_channels/native/guild_sidebar/StageVoiceChannel.tsx");
 
@@ -37,7 +47,6 @@ export default noop.memo((channel) => {
   channel = channel.channel;
   const selected = channel.selected;
   const tmp = closure_16();
-  let obj = channel(504);
   const items = [
     StageInstanceStore,
     ReadStateStore,
@@ -47,7 +56,7 @@ export default noop.memo((channel) => {
     CollapsedVoiceChannelStore,
   ];
   const items1 = [channel];
-  const stateFromStoresObject = obj.useStateFromStoresObject(
+  const stateFromStoresObject = channel(504).useStateFromStoresObject(
     items,
     () => {
       const obj = {
@@ -69,8 +78,8 @@ export default noop.memo((channel) => {
   if (arr3 == null) {
     arr3 = NO_VOICE_STATES;
   }
-  let tmp2Result = tmp2(5512);
-  const stageParticipantsCount = tmp2Result.useStageParticipantsCount(
+  let obj = channel(504);
+  const stageParticipantsCount = channel(5512).useStageParticipantsCount(
     channel.id,
     tmp2(5506).StageChannelParticipantNamedIndex.AUDIENCE,
   );
@@ -92,50 +101,50 @@ export default noop.memo((channel) => {
     const result = openChannelLongPressActionSheet.openChannelLongPressActionSheet(channel.id);
   }, items3);
   const tmp10 = useChannelNameDefault(channel, false);
-  tmp2Result = tmp2(9601);
-  const isConnectedToVoiceChannel = tmp2Result.useIsConnectedToVoiceChannel(channel);
+  const tmp2Result = channel(5512);
+  const isConnectedToVoiceChannel = channel(9601).useIsConnectedToVoiceChannel(channel);
   if (stageInstance != null) {
     const topic = stageInstance.topic;
   }
-  let tmp5Result = ChannelItemDefault;
+  const tmp2Result2 = channel(9601);
   const intl = tmp2(1114).intl;
+  const tmp5Result = ChannelItemDefault;
   if (null != channel.userLimit) {
     if (channel.userLimit > 0) {
       const intl2 = tmp2(1114).intl;
-      obj = { channelName: tmp10, userCount: sum, limit: channel.userLimit };
-      let formatToPlainStringResult1 = intl2.formatToPlainString(tmp2(1114).t.rhh6Ev, obj);
+      let obj2 = { channelName: tmp10, userCount: sum, limit: channel.userLimit };
+      let formatToPlainStringResult1 = intl2.formatToPlainString(tmp2(1114).t.rhh6Ev, obj2);
     }
-    obj = {};
-    const obj1 = {
+    let obj3 = {};
+    const obj4 = {
       accessible: true,
       accessibilityRole: "button",
       accessibilityLabel: formatToPlainStringResult1,
       accessibilityHint: null,
     };
     const intl3 = tmp2(1114).intl;
-    obj1.accessibilityHint = intl3.string(tmp2(1114).t["9C444m"]);
-    const merged = Object.assign(obj1);
-    obj.onPress = callback;
-    obj.onLongPress = callback1;
-    obj.style = tmp.container;
-    obj.channel = channel;
-    obj.selected = selected;
-    obj.locked = locked;
-    obj.isChannelLive = null != stageInstance;
+    obj4.accessibilityHint = intl3.string(tmp2(1114).t["9C444m"]);
+    const merged = Object.assign(obj4);
+    obj3.onPress = callback;
+    obj3.onLongPress = callback1;
+    obj3.style = tmp.container;
+    obj3.channel = channel;
+    obj3.selected = selected;
+    obj3.locked = locked;
+    obj3.isChannelLive = null != stageInstance;
     if (hasUnread) {
       hasUnread = isConnectedToVoiceChannel;
     }
-    obj.unread = hasUnread;
-    obj.resolvedUnreadSetting = resolvedUnreadSetting;
-    obj.subtitle = topic;
-    let obj2 = {
+    obj3.unread = hasUnread;
+    obj3.resolvedUnreadSetting = resolvedUnreadSetting;
+    obj3.subtitle = topic;
+    const obj5 = {
       channel,
       isChannelSelected: selected,
       isChannelCollapsed: collapsed,
       enableConnectedUserLimit: null,
       voiceStates: null,
     };
-    tmp5Result = ChannelInfoDefault;
     if (!hasMedia) {
       let tmp20 = channel.userLimit > 0;
       if (tmp20) {
@@ -143,22 +152,20 @@ export default noop.memo((channel) => {
       }
       hasMedia = tmp20;
     }
-    obj2.enableConnectedUserLimit = hasMedia;
-    obj2.voiceStates = voiceStates;
-    obj.channelInfo = (
-      <tmp5Result
-        channel={channel}
-        isChannelSelected={selected}
-        isChannelCollapsed={collapsed}
-        enableConnectedUserLimit={null}
-        voiceStates={null}
-      />
-    );
+    obj5.enableConnectedUserLimit = hasMedia;
+    obj5.voiceStates = voiceStates;
+    obj3.channelInfo = jsx(ChannelInfoDefault, {
+      channel,
+      isChannelSelected: selected,
+      isChannelCollapsed: collapsed,
+      enableConnectedUserLimit: null,
+      voiceStates: null,
+    });
     let tmp12Result = arr3.length > 0;
     if (tmp12Result) {
-      let obj3 = { style: tmp.voiceStates, children: null };
-      const obj4 = { channel, collapsed, voiceStates: arr3, audienceCount: stageParticipantsCount };
-      obj3.children = jsx(VoiceUsersDefault, {
+      const obj6 = { style: tmp.voiceStates, children: null };
+      const obj7 = { channel, collapsed, voiceStates: arr3, audienceCount: stageParticipantsCount };
+      obj6.children = jsx(VoiceUsersDefault, {
         channel,
         collapsed,
         voiceStates: arr3,
@@ -166,14 +173,14 @@ export default noop.memo((channel) => {
       });
       tmp12Result = <View style={tmp.voiceStates}>{null}</View>;
     }
-    obj.children = tmp12Result;
+    obj3.children = tmp12Result;
     return <tmp5Result />;
   }
   formatToPlainStringResult1 = intl.formatToPlainString(channel(1114).t.TPPk2T, { channelName: tmp10 });
   if (sum > 0) {
     const intl4 = tmp2(1114).intl;
-    const obj5 = { channelName: tmp10, userCount: sum };
-    formatToPlainStringResult1 = intl4.formatToPlainString(tmp2(1114).t["7yr3Qc"], obj5);
+    const obj8 = { channelName: tmp10, userCount: sum };
+    formatToPlainStringResult1 = intl4.formatToPlainString(tmp2(1114).t["7yr3Qc"], obj8);
   }
   const formatToPlainStringResult = intl.formatToPlainString(channel(1114).t.TPPk2T, { channelName: tmp10 });
 });

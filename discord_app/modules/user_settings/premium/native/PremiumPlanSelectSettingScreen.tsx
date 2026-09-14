@@ -9,9 +9,8 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/premium/native/PremiumPlanSelectSettingScreen.tsx");
 
 export default function PremiumPlanSelectSettingScreen() {
-  let obj = useSettingNavigationRoute;
-  const settingNavigationRoute = obj.useSettingNavigationRoute();
-  obj = {};
+  const settingNavigationRoute = useSettingNavigationRoute.useSettingNavigationRoute();
+  const obj2 = {};
   const merged = Object.assign(settingNavigationRoute.params);
   return jsx(PremiumPlanSelectDefault, {});
 }

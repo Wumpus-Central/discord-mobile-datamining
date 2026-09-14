@@ -1,11 +1,13 @@
 // discord_app/modules/collectibles/native/VisibilitySensor.tsx
 import _mod17 from "../../../../_runtime/metro/00017__.js";
 import useWindowDimensionsDefault from "../../screen/useWindowDimensions.native.tsx";
-import noop from "../../../../_runtime/metro/00019__.js";
+import noop_mod from "../../../../_runtime/metro/00019__.js";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 import size from "../../../../_runtime/metro/00002__.js";
 
+let noop = noop_mod;
 ({ useEffect: c2, useRef: c3 } = noop);
+let noop = noop_mod;
 const View = _mod17.View;
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 const result = size.fileFinishedImporting("modules/collectibles/native/VisibilitySensor.tsx");

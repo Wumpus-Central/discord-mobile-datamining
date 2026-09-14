@@ -28,14 +28,15 @@ function ItemSeparator() {
 }
 function VoiceMemberListSectionHeader(title) {
   const tmp = closure_24();
-  let obj = { style: tmp.sectionContainer, children: null };
-  obj = {
-    style: tmp.sectionTitle,
-    variant: "text-xs/bold",
-    color: "text-default",
-    children: title.title.toUpperCase(),
+  const obj = {
+    style: tmp.sectionContainer,
+    children: __initData(Text_Text.Text, {
+      style: tmp.sectionTitle,
+      variant: "text-xs/bold",
+      color: "text-default",
+      children: title.title.toUpperCase(),
+    }),
   };
-  obj.children = __initData(Text_Text.Text, obj);
   return __initData(React6, obj);
 }
 function renderSectionHeader(section) {
@@ -63,8 +64,7 @@ function extractKey(id) {
 function VoiceSectionRow(arg0) {
   ({ item, isActionSheet } = arg0);
   ({ channelId, onPressUser } = arg0);
-  let obj = isActionSheet(9749);
-  importDefault = obj.useAnalyticsContext();
+  importDefault = isActionSheet(9749).useAnalyticsContext();
   const analyticsLocations = useAnalyticsLocationsDefault().analyticsLocations;
   if (tmp3) {
     dependencyMap = async function _onItemPress(arg0) {
@@ -75,8 +75,8 @@ function VoiceSectionRow(arg0) {
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
-          let obj = { value, done: true };
-          return obj;
+          const obj2 = { value, done: true };
+          return obj2;
         } else {
           return { value: "HermesInternal", done: null };
         }
@@ -89,8 +89,8 @@ function VoiceSectionRow(arg0) {
               throw value;
             } else if (arg0 === 2) {
               c6 = 3;
-              obj = { value, done: true };
-              return obj;
+              const obj5 = { value, done: true };
+              return obj5;
             } else {
               closure_4 = tmp2;
               closure_131_0 = isActionSheet;
@@ -102,11 +102,10 @@ function VoiceSectionRow(arg0) {
                 tmp13 = null != analyticsLocations;
               }
               if (tmp13) {
-                let obj2 = analyticsLocations(tmp5[28]);
-                const result = obj2.dismissGlobalKeyboard();
-                let obj3 = closure_1(tmp5[29]);
-                const voiceChannel = obj3.selectVoiceChannel(isActionSheet.id);
-                const obj1 = {
+                const result = analyticsLocations(tmp5[28]).dismissGlobalKeyboard();
+                const obj3 = analyticsLocations(tmp5[28]);
+                const voiceChannel = closure_1(tmp5[29]).selectVoiceChannel(isActionSheet.id);
+                const obj6 = {
                   applicationId: analyticsLocations.applicationId,
                   activityChannelId: isActionSheet.id,
                   locationObject: _location.location,
@@ -114,8 +113,8 @@ function VoiceSectionRow(arg0) {
                 };
                 c5 = 1;
                 c6 = 1;
-                obj2 = { value: closure_1(tmp5[30])(obj1), done: false };
-                return obj2;
+                const obj7 = { value: closure_1(tmp5[30])(obj6), done: false };
+                return obj7;
               } else {
                 c6 = 3;
               }
@@ -125,20 +124,20 @@ function VoiceSectionRow(arg0) {
             throw value;
           } else if (arg0 !== 2) {
             if (closure_132_0) {
-              obj = isActionSheet(tmp5[31]);
-              const result1 = obj.hideVoiceChannelActionSheet(closure_131_0);
+              const result1 = isActionSheet(tmp5[31]).hideVoiceChannelActionSheet(closure_131_0);
+              const obj = isActionSheet(tmp5[31]);
             }
           }
           c6 = 3;
-          obj3 = { value, done: true };
-          return obj3;
+          const obj8 = { value, done: true };
+          return obj8;
         } catch (tmp23) {
           c6 = tmp;
           throw tmp23;
         }
       }
     };
-    obj = {
+    let obj2 = {
       embeddedActivity: item,
       channelId,
       onItemPress(application, arg1, stateFromStores) {
@@ -153,21 +152,22 @@ function VoiceSectionRow(arg0) {
       },
       isActionSheet,
     };
-    return closure_21(tmp2(13873), obj);
+    return closure_21(tmp2(13874), obj2);
   } else {
-    obj = {};
+    let obj3 = {};
     const merged = Object.assign(item);
-    obj.onPress = onPressUser;
-    obj.isActionSheet = isActionSheet;
-    return closure_21(tmp2(13874), obj);
+    obj3.onPress = onPressUser;
+    obj3.isActionSheet = isActionSheet;
+    return closure_21(tmp2(13875), obj3);
   }
+  let obj = isActionSheet(9749);
   tmp3 = undefined !== item.url && undefined !== item.applicationId;
 }
 get_ActivityIndicator = fn(17);
 ({ SectionList: closure_7, View: closure_8 } = get_ActivityIndicator);
 const Constants = fn(1074);
 ({ AnalyticsPages: closure_15, InstantInviteSources: closure_16, Permissions: closure_17 } = Constants);
-const FORM_ROW_VERTICAL_PADDING = fn(1182).FORM_ROW_VERTICAL_PADDING;
+const FORM_ROW_VERTICAL_PADDING = fn(1180).FORM_ROW_VERTICAL_PADDING;
 const ACTION_SHEET_MAX_WIDTH = fn(7254).ACTION_SHEET_MAX_WIDTH;
 const ThemeTypes = fn(1085).ThemeTypes;
 const jsxProd = fn(21);
@@ -192,24 +192,24 @@ let closure_26 = noop.memo((channel) => {
     if (tmp6) {
       let obj = { children: null };
       const items = [closure_21(ItemSeparator, {})];
-      obj = { leading: null, label: null, onPress: null };
-      obj = { accessibilityLabel: null, accessibilityHidden: true, source: null, size: null };
+      let obj2 = { leading: null, label: null, onPress: null };
+      const obj3 = { accessibilityLabel: null, accessibilityHidden: true, source: null, size: null };
       const intl = tmp4(1114).intl;
-      obj.accessibilityLabel = intl.string(tmp4(1114).t["6Qgrev"]);
-      obj.source = _modDef10160;
-      obj.size = tmp4(13547).CircularIconButton.Sizes.MEDIUM_32;
-      obj.leading = closure_21(tmp4(13547).CircularIconButton, obj);
+      obj3.accessibilityLabel = intl.string(tmp4(1114).t["6Qgrev"]);
+      obj3.source = _modDef10160;
+      obj3.size = tmp4(13548).CircularIconButton.Sizes.MEDIUM_32;
+      obj2.leading = closure_21(tmp4(13548).CircularIconButton, obj3);
       const intl2 = tmp4(1114).intl;
-      obj.label = intl2.string(tmp4(1114).t["6Qgrev"]);
-      obj.onPress = function onPress() {
+      obj2.label = intl2.string(tmp4(1114).t["6Qgrev"]);
+      obj2.onPress = function onPress() {
         if (channel.isPrivate()) {
           openGroupDMAddMembersDefault(channel.id, constants.CHANNEL_CALL);
         } else {
-          const obj = { source: constants2.VOICE_CHANNEL };
-          const result = obj.showInstantInviteActionSheet(channel, obj);
+          const obj2 = { source: constants2.VOICE_CHANNEL };
+          const result = instant_invite_InstantInviteUtils.showInstantInviteActionSheet(channel, obj2);
         }
       };
-      items[1] = closure_21(tmp4(8716).FormRow, obj);
+      items[1] = closure_21(tmp4(8716).FormRow, obj2);
       obj.children = items;
       tmp7 = closure_22(noop.Fragment, obj);
     }
@@ -239,19 +239,18 @@ export default noop.forwardRef(function VoiceMemberList(channel, ref) {
   const rowFormDivider = tmp2;
   analyticsLocations = flag(analyticsLocations[27])().analyticsLocations;
   _slicedToArray = Math.min(flag(analyticsLocations[34])().width, ACTION_SHEET_MAX_WIDTH);
-  let obj = channel(analyticsLocations[18]);
   let items = [SortedVoiceStateStore];
   const items1 = [channel];
-  const stateFromStores = obj.useStateFromStores(
+  const stateFromStores = channel(analyticsLocations[18]).useStateFromStores(
     items,
     () => SortedVoiceStateStore.getVoiceStatesForChannel(channel),
     items1,
   );
   const tmp6 = flag(analyticsLocations[35])(channel);
   const ownerId = tmp6;
-  let obj1 = channel(analyticsLocations[18]);
+  let obj = channel(analyticsLocations[18]);
   const items2 = [ApplicationStreamingStore];
-  const stateFromStoresArray = obj1.useStateFromStoresArray(items2, () => {
+  const stateFromStoresArray = channel(analyticsLocations[18]).useStateFromStoresArray(items2, () => {
     if (null != closure_5) {
       let viewerIds = ApplicationStreamingStore.getViewerIds(tmp);
     } else {
@@ -259,12 +258,12 @@ export default noop.forwardRef(function VoiceMemberList(channel, ref) {
     }
     return viewerIds;
   });
-  let obj2 = channel(analyticsLocations[36]);
-  let obj3 = channel(analyticsLocations[31]);
-  const isModalOpen = obj2.useIsModalOpen(obj3.getVoiceChannelKey(channel.id));
-  let obj4 = channel(analyticsLocations[18]);
+  let obj2 = channel(analyticsLocations[18]);
+  let obj3 = channel(analyticsLocations[36]);
+  const isModalOpen = obj3.useIsModalOpen(channel(analyticsLocations[31]).getVoiceChannelKey(channel.id));
+  const obj4 = channel(analyticsLocations[31]);
   const items3 = [callback];
-  const stateFromStores1 = obj4.useStateFromStores(items3, () =>
+  const stateFromStores1 = channel(analyticsLocations[18]).useStateFromStores(items3, () =>
     EmbeddedActivitiesStore.getEmbeddedActivitiesForChannel(channel.id),
   );
   const set = new Set(stateFromStores.map((voiceState) => voiceState.voiceState.userId));
@@ -297,49 +296,46 @@ export default noop.forwardRef(function VoiceMemberList(channel, ref) {
         if (str == null) {
           str = "";
         }
-        let tmp3Result = tmp3(tmp4[37]);
-        [arr10, arr11] = _slicedToArray(
-          tmp3Result.partition(stateFromStores, (user) => stateFromStoresArray.includes(user.user.id)),
-          2,
+        const tmp3Result = tmp3(tmp4[37]);
+        [arr10, arr11] = tmp3(tmp4[37]).partition(stateFromStores, (user) =>
+          stateFromStoresArray.includes(user.user.id),
         );
         if (arr10.length > 0) {
-          obj = { type: constants4.SPECTATING, title: null, data: null };
+          const obj6 = { type: constants4.SPECTATING, title: null, data: null };
           const intl = tmp5(tmp4[21]).intl;
-          obj = { username: str };
-          obj.title = intl.formatToPlainString(tmp5(tmp4[21]).t.Fb0eT9, obj);
-          obj.data = arr10;
-          items5.push(obj);
+          const obj7 = { username: str };
+          obj6.title = intl.formatToPlainString(tmp5(tmp4[21]).t.Fb0eT9, obj7);
+          obj6.data = arr10;
+          items5.push(obj6);
         }
         if (arr11.length > 0) {
-          obj1 = { type: constants4.VOICE, title: null, data: null };
+          const obj8 = { type: constants4.VOICE, title: null, data: null };
           const intl2 = tmp5(tmp4[21]).intl;
-          obj1.title = intl2.string(tmp5(tmp4[21]).t.C7iIKB);
-          obj1.data = stateFromStores1.concat(arr11);
-          items5.push(obj1);
+          obj8.title = intl2.string(tmp5(tmp4[21]).t.C7iIKB);
+          obj8.data = stateFromStores1.concat(arr11);
+          items5.push(obj8);
         }
         if (reduced.length > 0) {
-          obj2 = { type: constants4.DISCONNECTED, title: null, data: null };
+          const obj9 = { type: constants4.DISCONNECTED, title: null, data: null };
           const intl3 = tmp5(tmp4[21]).intl;
-          obj2.title = intl3.string(tmp5(tmp4[21]).t.BnSq1I);
-          obj2.data = reduced;
-          items5.push(obj2);
+          obj9.title = intl3.string(tmp5(tmp4[21]).t.BnSq1I);
+          obj9.data = reduced;
+          items5.push(obj9);
         }
         const tmp14 = _slicedToArray(
-          tmp3Result.partition(stateFromStores, (user) => stateFromStoresArray.includes(user.user.id)),
+          tmp3(tmp4[37]).partition(stateFromStores, (user) => stateFromStoresArray.includes(user.user.id)),
           2,
         );
       }
       const items6 = [channel.id, analyticsLocations];
       callback = stateFromStoresArray.useCallback((id) => {
-        let obj = ActionSheetActionCreatorsDefault;
-        obj.hideActionSheet();
-        obj = {
+        ActionSheetActionCreatorsDefault.hideActionSheet();
+        showUserProfileActionSheetDefault({
           userId: id.id,
           channelId: channel.id,
           isVoiceContext: true,
           sourceAnalyticsLocations: analyticsLocations,
-        };
-        showUserProfileActionSheetDefault(obj);
+        });
       }, items6);
       const items7 = [channel, flag, callback];
       callback1 = stateFromStoresArray.useCallback((item) => {
@@ -348,46 +344,45 @@ export default noop.forwardRef(function VoiceMemberList(channel, ref) {
         if (constants.VOICE === type) {
           let tmp18 = null;
           if (!(item instanceof UserRecord)) {
-            let obj = { item, channelId: channel.id, onPressUser: onPress, isActionSheet: flag };
-            tmp18 = __initData(VoiceSectionRow, obj);
+            const obj2 = { item, channelId: channel.id, onPressUser: onPress, isActionSheet: flag };
+            tmp18 = __initData(VoiceSectionRow, obj2);
           }
           return tmp18;
         } else if (constants.SPECTATING === type) {
-          obj = {};
+          const obj3 = {};
           const merged = Object.assign(item);
-          obj.onPress = onPress;
-          obj.isSpectating = true;
-          obj.isActionSheet = true;
-          return __initData(VoiceMemberUserDefault, obj);
+          obj3.onPress = onPress;
+          obj3.isSpectating = true;
+          obj3.isActionSheet = true;
+          return __initData(VoiceMemberUserDefault, obj3);
         } else if (constants.DISCONNECTED === type) {
-          obj = { user: item, channel, isActionSheet: flag, onPress };
+          const obj = { user: item, channel, isActionSheet: flag, onPress };
           return __initData(VoiceMemberUser.DisconnectedUserRow, obj);
         }
       }, items7);
       if (flag) {
-        obj3 = { theme: ThemeTypes.DARK, children: null };
-        obj4 = { style: tmp2.container, children: null };
-        const obj5 = { channel };
-        const items8 = [closure_21(tmp5(tmp4[41]).VoiceChannelHeader, obj5), ,];
-        const obj6 = { style: tmp2.headerFormDivider };
-        items8[1] = closure_21(tmp5(tmp4[19]).FormDivider, obj6);
-        const obj7 = { inActionSheet: true, style: tmp2.voiceChannelContainer };
-        tmp3Result = tmp3(tmp4[42]);
+        const obj10 = { theme: ThemeTypes.DARK, children: null };
+        const obj11 = { style: tmp2.container, children: null };
+        const obj12 = { channel };
+        const items8 = [closure_21(tmp5(tmp4[41]).VoiceChannelHeader, obj12), ,];
+        const obj13 = { style: tmp2.headerFormDivider };
+        items8[1] = closure_21(tmp5(tmp4[19]).FormDivider, obj13);
+        const obj14 = { inActionSheet: true, style: tmp2.voiceChannelContainer };
         const merged1 = Object.assign(merged);
-        obj7.renderItem = function renderRow(arg0, arg1) {
+        obj14.renderItem = function renderRow(arg0, arg1) {
           if (null == items5[arg0].data[arg1]) {
             return null;
           } else {
-            let obj = { item: tmp2, section: tmp[arg0] };
-            obj = { children: null };
+            const obj = { item: tmp2, section: tmp[arg0] };
+            const obj2 = { children: null };
             const items = [callback1(obj)];
-            obj = { style: rowFormDivider.rowFormDivider };
-            items[1] = __initData(Form.FormDivider, obj);
-            obj.children = items;
-            return __initData2(__initData3, obj);
+            const obj3 = { style: rowFormDivider.rowFormDivider };
+            items[1] = __initData(Form.FormDivider, obj3);
+            obj2.children = items;
+            return __initData2(__initData3, obj2);
           }
         };
-        obj7.itemSize = function getRowHeight(arg0, arg1) {
+        obj14.itemSize = function getRowHeight(arg0, arg1) {
           if (null == arg1) {
             return 0;
           } else if (null == items5[arg0].data[arg1]) {
@@ -401,7 +396,7 @@ export default noop.forwardRef(function VoiceMemberList(channel, ref) {
               return sum;
             } else {
               if (tmp) {
-                tmp4 = tmp4(13873);
+                tmp4 = tmp4(13874);
                 calculateActivityRowHeight = tmp4.calculateActivityRowHeight;
                 let result = calculateActivityRowHeight(closure_4);
               } else {
@@ -419,13 +414,14 @@ export default noop.forwardRef(function VoiceMemberList(channel, ref) {
             }
           }
         };
-        obj7.sections = items5.map((data) => data.data.length);
-        items8[2] = closure_21(tmp3Result, obj7);
-        obj4.children = items8;
-        obj3.children = closure_22(items5, obj4);
-        let tmp24Result = closure_21(tmp5(tmp4[40]).ThemeContextProvider, obj3);
+        obj14.sections = items5.map((data) => data.data.length);
+        items8[2] = closure_21(tmp3(tmp4[42]), obj14);
+        obj11.children = items8;
+        obj10.children = closure_22(items5, obj11);
+        let tmp24Result = closure_21(tmp5(tmp4[40]).ThemeContextProvider, obj10);
+        const tmp3Result2 = tmp3(tmp4[42]);
       } else {
-        const obj8 = {
+        const obj15 = {
           ref,
           sections: items5,
           renderSectionHeader,
@@ -436,24 +432,25 @@ export default noop.forwardRef(function VoiceMemberList(channel, ref) {
           ListHeaderComponent: null,
           stickySectionHeadersEnabled: false,
         };
-        tmp24Result = null;
+        let tmp24Result2 = null;
         if (!flag2) {
-          const obj9 = { channel };
-          tmp24Result = closure_21(closure_26, obj9);
+          const obj16 = { channel };
+          tmp24Result2 = closure_21(closure_26, obj16);
         }
-        obj8.ListFooterComponent = tmp24Result;
-        const obj10 = { channel };
-        obj8.ListHeaderComponent = closure_21(closure_25, obj10);
+        obj15.ListFooterComponent = tmp24Result2;
+        const obj17 = { channel };
+        obj15.ListHeaderComponent = closure_21(closure_25, obj17);
         const merged2 = Object.assign(merged);
-        tmp24Result = closure_21(set, obj8);
+        tmp24Result = closure_21(set, obj15);
       }
       return tmp24Result;
     }
   }
+  const obj5 = channel(analyticsLocations[18]);
   items5.push({ type: constants4.VOICE, title: null, data: stateFromStores1.concat(stateFromStores) });
   if (reduced.length > 0) {
-    const obj12 = { type: constants4.DISCONNECTED, title: null, data: reduced };
-    items5.push(obj12);
+    const obj19 = { type: constants4.DISCONNECTED, title: null, data: reduced };
+    items5.push(obj19);
   }
-  const obj11 = { type: constants4.VOICE, title: null, data: stateFromStores1.concat(stateFromStores) };
+  const obj18 = { type: constants4.VOICE, title: null, data: stateFromStores1.concat(stateFromStores) };
 });

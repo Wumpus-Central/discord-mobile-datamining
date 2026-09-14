@@ -2,6 +2,8 @@
 import inject from "../../discord_common/js/packages/media-engine/native/inject.tsx";
 import size from "../../_runtime/metro/00002__.js";
 
+const require = globalThis.__r;
+
 inject.inject({
   supported() {
     return true;

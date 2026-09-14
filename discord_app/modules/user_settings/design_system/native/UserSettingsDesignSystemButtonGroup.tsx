@@ -20,11 +20,11 @@ const result = size.fileFinishedImporting(
 );
 
 export default function UserSettingsDesignSystemButtonGroup() {
-  let obj = { children: null };
-  obj = { style: closure_7().container, children: null };
-  obj = { spacing: 24, children: null };
-  const obj1 = { children: null };
-  const obj2 = { children: null };
+  const obj = { children: null };
+  const obj2 = { style: closure_7().container, children: null };
+  const obj3 = { spacing: 24, children: null };
+  const obj4 = { children: null };
+  const obj5 = { children: null };
   const items = [
     hasOwnProperty(Text_Text.Text, { variant: "text-lg/bold", children: "Text Button Example" }),
     hasOwnProperty(Text_Text.Text, {
@@ -33,7 +33,7 @@ export default function UserSettingsDesignSystemButtonGroup() {
       children: "By default, stacks buttons vertically. This is best for buttons with text.",
     }),
   ];
-  const obj3 = { children: null };
+  const obj6 = { children: null };
   const items1 = [
     hasOwnProperty(components_Button_Button.Button, {
       text: "Agree",
@@ -46,13 +46,13 @@ export default function UserSettingsDesignSystemButtonGroup() {
       onPress() {},
     }),
   ];
-  obj3.children = items1;
-  items[2] = timestampProducer(ButtonGroup.ButtonGroup, obj3);
-  obj2.children = items;
-  obj1.children = timestampProducer(Stack_Stack.Stack, obj2);
-  const items2 = [hasOwnProperty(React3, obj1), ,];
-  const obj6 = { children: null };
-  const obj7 = { children: null };
+  obj6.children = items1;
+  items[2] = timestampProducer(ButtonGroup.ButtonGroup, obj6);
+  obj5.children = items;
+  obj4.children = timestampProducer(Stack_Stack.Stack, obj5);
+  const items2 = [hasOwnProperty(React3, obj4), ,];
+  const obj9 = { children: null };
+  const obj10 = { children: null };
   const items3 = [
     hasOwnProperty(Text_Text.Text, { variant: "text-lg/bold", children: "IconButton Example" }),
     hasOwnProperty(Text_Text.Text, {
@@ -61,7 +61,7 @@ export default function UserSettingsDesignSystemButtonGroup() {
       children: "For IconButtons, a horizontal layout is recommended",
     }),
   ];
-  const obj8 = { direction: "horizontal", children: null };
+  const obj11 = { direction: "horizontal", children: null };
   const items4 = [
     hasOwnProperty(IconButton.IconButton, {
       accessibilityLabel: "Settings",
@@ -70,20 +70,20 @@ export default function UserSettingsDesignSystemButtonGroup() {
       onPress() {},
     }),
   ];
-  const obj4 = {
+  const obj12 = {
+    accessibilityLabel: "Settings",
+    variant: "secondary",
+    icon: _modDef7484,
+    onPress() {},
+  };
+  const obj7 = {
     text: "Agree",
     variant: "primary",
     onPress() {},
   };
-  const obj5 = {
+  const obj8 = {
     text: "Cancel",
     variant: "secondary",
-    onPress() {},
-  };
-  const obj9 = {
-    accessibilityLabel: "Settings",
-    variant: "secondary",
-    icon: _modDef7484,
     onPress() {},
   };
   items4[1] = hasOwnProperty(IconButton.IconButton, {
@@ -92,13 +92,13 @@ export default function UserSettingsDesignSystemButtonGroup() {
     icon: _modDef7484,
     onPress() {},
   });
-  obj8.children = items4;
-  items3[2] = timestampProducer(ButtonGroup.ButtonGroup, obj8);
-  obj7.children = items3;
-  obj6.children = timestampProducer(Stack_Stack.Stack, obj7);
-  items2[1] = hasOwnProperty(React3, obj6);
-  const obj11 = { children: null };
-  const obj12 = { children: null };
+  obj11.children = items4;
+  items3[2] = timestampProducer(ButtonGroup.ButtonGroup, obj11);
+  obj10.children = items3;
+  obj9.children = timestampProducer(Stack_Stack.Stack, obj10);
+  items2[1] = hasOwnProperty(React3, obj9);
+  const obj14 = { children: null };
+  const obj15 = { children: null };
   const items5 = [
     hasOwnProperty(Text_Text.Text, { variant: "text-lg/bold", children: "Mixed Buttons Example" }),
     hasOwnProperty(Text_Text.Text, {
@@ -115,7 +115,7 @@ export default function UserSettingsDesignSystemButtonGroup() {
     ,
     ,
   ];
-  const obj13 = { direction: "horizontal", children: null };
+  const obj16 = { direction: "horizontal", children: null };
   const items6 = [
     hasOwnProperty(components_Button_Button.Button, {
       text: "Search",
@@ -124,13 +124,13 @@ export default function UserSettingsDesignSystemButtonGroup() {
       onPress() {},
     }),
   ];
-  const obj10 = {
+  const obj13 = {
     accessibilityLabel: "Settings",
     variant: "secondary",
     icon: _modDef7484,
     onPress() {},
   };
-  const obj14 = {
+  const obj17 = {
     text: "Search",
     variant: "secondary",
     grow: true,
@@ -142,8 +142,8 @@ export default function UserSettingsDesignSystemButtonGroup() {
     icon: _modDef7484,
     onPress() {},
   });
-  obj13.children = items6;
-  items5[3] = timestampProducer(ButtonGroup.ButtonGroup, obj13);
+  obj16.children = items6;
+  items5[3] = timestampProducer(ButtonGroup.ButtonGroup, obj16);
   items5[4] = hasOwnProperty(Text_Text.Text, {
     variant: "text-sm/medium",
     color: "text-feedback-critical",
@@ -155,11 +155,11 @@ export default function UserSettingsDesignSystemButtonGroup() {
     children:
       "This does not flex well with internationalization and enlarged font size settings. Use TwinButtons instead when there are specifically two text Buttons.",
   });
-  obj12.children = items5;
-  obj11.children = timestampProducer(Stack_Stack.Stack, obj12);
-  items2[2] = hasOwnProperty(React3, obj11);
-  obj.children = items2;
-  obj.children = timestampProducer(Stack_Stack.Stack, obj);
-  obj.children = hasOwnProperty(React3, obj);
+  obj15.children = items5;
+  obj14.children = timestampProducer(Stack_Stack.Stack, obj15);
+  items2[2] = hasOwnProperty(React3, obj14);
+  obj3.children = items2;
+  obj2.children = timestampProducer(Stack_Stack.Stack, obj3);
+  obj.children = hasOwnProperty(React3, obj2);
   return hasOwnProperty(React4, obj);
 }

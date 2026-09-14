@@ -9,20 +9,20 @@ import GuildStore from "../../../stores/GuildStore.tsx";
 import TextStyles from "../../rebrand/native/TextStyles.tsx";
 
 require = fn;
-const helpdeskArticle = fn(13920).GUILD_LIMITED_ACCESS_HC_LINK;
+const helpdeskArticle = fn(13921).GUILD_LIMITED_ACCESS_HC_LINK;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-fn(4636);
-let createStyles = { header: null, text: null };
-createStyles = {};
+const createStyles = fn(4636);
+let obj2 = { header: null, text: null };
+let obj3 = {};
 const merged = Object.assign(
   TextStyles(fn(1074).Fonts.PRIMARY_BOLD, nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, 24),
 );
-createStyles.textAlign = "center";
-createStyles.marginVertical = 12;
-createStyles.header = createStyles;
-createStyles.text = { textAlign: "center", marginVertical: 8 };
-let closure_7 = createStyles.createStyles(createStyles);
+obj3.textAlign = "center";
+obj3.marginVertical = 12;
+obj2.header = obj3;
+obj2.text = { textAlign: "center", marginVertical: 8 };
+let closure_7 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_limited_access/native/GuildLimitedAccessInfoAlert.tsx");
 
@@ -30,23 +30,23 @@ export default function GuildLimitedAccessInfoAlert(arg0) {
   ({ guildId, onClose } = arg0);
   const tmp = closure_7();
   const intl = util.intl;
-  let obj = { helpdeskArticle };
   const guild = GuildStore.getGuild(guildId);
-  let formatResult1 = intl.format(util.t.ZqkXsC, obj);
+  let formatResult1 = intl.format(util.t.ZqkXsC, { helpdeskArticle });
   if (null != guild) {
     const intl2 = util.intl;
-    obj = { guildName: guild.name, helpdeskArticle };
-    formatResult1 = intl2.format(util.t.jn0Xyx, obj);
+    const obj2 = { guildName: guild.name, helpdeskArticle };
+    formatResult1 = intl2.format(util.t.jn0Xyx, obj2);
   }
-  obj = { onClose, children: null };
-  const formatResult = intl.format(util.t.ZqkXsC, obj);
-  const obj1 = { style: tmp.header, children: null };
+  const obj3 = { onClose, children: null };
+  const formatResult = intl.format(util.t.ZqkXsC, { helpdeskArticle });
+  const obj = { helpdeskArticle };
+  const obj4 = { style: tmp.header, children: null };
   const intl3 = util.intl;
-  obj1.children = intl3.string(util.t.kJwpBW);
+  obj4.children = intl3.string(util.t.kJwpBW);
   const items = [
-    hasOwnProperty(native.LegacyText, obj1),
+    hasOwnProperty(native.LegacyText, obj4),
     hasOwnProperty(Text_Text.Text, { style: tmp.text, variant: "text-md/medium", children: formatResult1 }),
   ];
-  obj.children = items;
-  return timestampProducer(common_AlertDefault, obj);
+  obj3.children = items;
+  return timestampProducer(common_AlertDefault, obj3);
 }

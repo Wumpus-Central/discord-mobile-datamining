@@ -25,7 +25,7 @@ const prototype = function ChannelHistory(arr) {
       connectionId = first.connectionId;
     }
     let everyResult = arr.length > 0;
-    [tmp6, tmp7] = _slicedToArray(prototype.computeUsersAndMembers(arr), 2);
+    [tmp6, tmp7] = prototype.computeUsersAndMembers(arr);
     if (everyResult) {
       everyResult = arr.every((connectionId) => connectionId.connectionId === connectionId);
     }
@@ -113,10 +113,11 @@ const prototype2 = Messages.prototype;
 prototype2["startupLoad"] = function startupLoad(arg0, arg1, arg2, arg3) {
   closure_0 = arg0;
   closure_1 = arg1;
-  closure_2 = arg2;
+  dependencyMap = arg2;
   asyncGeneratorStep = arg3;
   return (async () => {
     closure_0 = tmp2;
+    tmp5(dependencyMap[7]);
     await tmp5(c2[7]).messages(closure_0).getLatest(tmp5, closure_2, closure_3);
     closure_128_0 = value;
     return new prototype(closure_128_0);
@@ -134,8 +135,8 @@ prototype2["load"] = function load(arg0, arg1, arg2) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -148,42 +149,42 @@ prototype2["load"] = function load(arg0, arg1, arg2) {
             throw value;
           } else if (arg0 === 2) {
             c3 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj4 = { value, done: true };
+            return obj4;
           } else {
             closure_128_0 = undefined;
             basicChannel = basicChannel.getBasicChannel(tmp5);
             if (null != tmp5) {
               if (null != basicChannel) {
-                let obj2 = tmp2(c2[8]);
-                if (obj2.isReadableChannel(basicChannel)) {
+                if (obj3.isReadableChannel(basicChannel)) {
                   const obj5 = tmp5(tmp12[7]);
                   c2 = 1;
                   c3 = 1;
-                  const obj1 = {
+                  const obj6 = {
                     value: tmp5(tmp12[7]).messages(tmp2).getLatest(basicChannel.guild_id, tmp5, closure_2),
                     done: false,
                   };
-                  return obj1;
+                  return obj6;
                 }
+                obj3 = tmp2(c2[8]);
                 tmp12 = c2;
               }
             }
             c3 = 3;
-            obj2 = { value: new prototype([]), done: true };
-            return obj2;
+            const obj7 = { value: new prototype([]), done: true };
+            return obj7;
           }
         } else if (arg0 === 1) {
           c3 = 3;
           throw value;
         } else if (arg0 === 2) {
           c3 = 3;
-          const obj3 = { value, done: true };
-          return obj3;
+          const obj8 = { value, done: true };
+          return obj8;
         } else {
           closure_128_0 = value;
           c3 = 3;
-          obj = { value: new prototype(closure_128_0), done: true };
+          const obj = { value: new prototype(closure_128_0), done: true };
           return obj;
         }
       } catch (tmp18) {
@@ -348,8 +349,8 @@ prototype2["updateOne"] = function updateOne(guildId, channel_id, message, datab
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj3 = { value, done: true };
+        return obj3;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -362,20 +363,19 @@ prototype2["updateOne"] = function updateOne(guildId, channel_id, message, datab
             throw value;
           } else if (arg0 === 2) {
             c3 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj4 = { value, done: true };
+            return obj4;
           } else {
             closure_128_0 = undefined;
             closure_128_1 = undefined;
             closure_128_2 = undefined;
             if (null != user.id) {
-              let obj1 = tmp5(user[7]);
-              const messagesResult = obj1.messages(database.database);
+              const messagesResult = tmp5(user[7]).messages(database.database);
               closure_128_0 = messagesResult;
               user = 1;
               c3 = 1;
-              obj1 = { value: messagesResult.get(tmp2, tmp5, user.id), done: false };
-              return obj1;
+              const obj5 = { value: messagesResult.get(tmp2, tmp5, user.id), done: false };
+              return obj5;
             } else {
               logger.warn("updateOne: message.id is null; cannot update a message if we do not know its id.");
               c3 = 3;
@@ -389,18 +389,18 @@ prototype2["updateOne"] = function updateOne(guildId, channel_id, message, datab
           closure_128_2 = GatewayConnectionStore.lastTimeConnectedChanged();
           if (null != closure_128_1) {
             const KvMessage = tmp2(user[9]).KvMessage;
-            const obj2 = {};
+            const obj6 = {};
             const merged = Object.assign(closure_128_1.message);
             const merged1 = Object.assign(closure_129_2);
             closure_128_0.put(
               closure_129_0,
               closure_129_1,
-              KvMessage.fromMessage(closure_129_0, closure_129_1, obj2, closure_128_2),
+              KvMessage.fromMessage(closure_129_0, closure_129_1, obj6, closure_128_2),
             );
           }
         }
         c3 = 3;
-        obj = { value, done: true };
+        const obj = { value, done: true };
         return obj;
       } catch (tmp14) {
         c3 = tmp;
@@ -418,9 +418,9 @@ prototype2["deleteChannel"] = function deleteChannel(arg0, arg1, database) {
 prototype2["deleteGuild"] = function deleteGuild(arg0, database) {
   DatabaseDaosDefault.messagesTransaction(database).deleteGuild(arg0);
 };
-let size = Object.create(Messages.prototype);
-let closure_129_0 = size;
-size.actions = {
+let obj2 = Object.create(Messages.prototype);
+let closure_129_0 = obj2;
+obj2.actions = {
   CHANNEL_DELETE(arg0, arg1) {
     return obj.handleChannelDelete(arg0, arg1);
   },
@@ -446,10 +446,10 @@ size.actions = {
     return obj.handleMessageUpdate(arg0, arg1);
   },
 };
-size = fn(2);
+const size = fn(2);
 let result = size.fileFinishedImporting("modules/app_database/modules/Messages.tsx");
 
-export default size;
+export default obj2;
 export const ChannelHistory = prototype;
 export const isLikelyNotDelta = function isLikelyNotDelta(author) {
   return null != author.author && null != author.content && null != author.mentions && null != author.timestamp;

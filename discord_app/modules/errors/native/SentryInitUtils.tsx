@@ -2,12 +2,12 @@
 import LoggerDefault from "../../debug/Logger.tsx";
 import _mod675 from "../../../../_runtime/metro/00675__.js";
 import router_utils from "../../routing/router_utils.tsx";
-import PlatformUtils from "../../../utils/PlatformUtils.tsx";
 import SentryUtilsDefault from "../../../utils/SentryUtils.native.tsx";
 import TelemetryRingLifecycle from "../../telemetry_ring/native/index.tsx";
 import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
 import DesignIds from "../../../../discord_common/js/shared/shared-constants/DesignIds.tsx";
 import ClientInfoUtilsAll from "../../../utils/native/ClientInfoUtils.tsx";
+import PlatformUtils from "../../../utils/PlatformUtils.tsx";
 import MetaQuestUtils from "../../device/MetaQuestUtils.android.tsx";
 import DeviceUtils from "../../../utils/native/DeviceUtils.tsx";
 import ReleaseChannelUtils from "../../../utils/ReleaseChannelUtils.native.tsx";
@@ -28,8 +28,8 @@ let closure_15 = async function _maybeBackfillMissingBreadcrumbsFromTelemetryRin
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -42,8 +42,8 @@ let closure_15 = async function _maybeBackfillMissingBreadcrumbsFromTelemetryRin
             throw value;
           } else if (arg0 === 2) {
             c3 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
             closure_1 = tmp2;
             closure_129_0 = breadcrumbs;
@@ -67,8 +67,8 @@ let closure_15 = async function _maybeBackfillMissingBreadcrumbsFromTelemetryRin
             items[1] = promise;
             c2 = 1;
             c3 = 1;
-            const obj1 = { value: Promise.race(items).catch(() => null), done: false };
-            return obj1;
+            const obj4 = { value: Promise.race(items).catch(() => null), done: false };
+            return obj4;
           }
         } else if (arg0 === 1) {
           c3 = 3;
@@ -95,7 +95,7 @@ let closure_15 = async function _maybeBackfillMissingBreadcrumbsFromTelemetryRin
           }
         }
         c3 = 3;
-        obj = { value, done: true };
+        const obj = { value, done: true };
         return obj;
       } catch (tmp21) {
         c3 = tmp;
@@ -261,16 +261,16 @@ function getCrashErrorMessage(exception) {
     if (extra2 != null) {
       prop = extra2.persisted_error_message;
     }
-    let message;
+    let message1;
     if (typeof prop === "string") {
       if (prop.length > 0) {
-        message = prop;
+        message1 = prop;
       }
     }
-    if (message == null) {
-      message = exception.message;
+    if (message1 == null) {
+      message1 = exception.message;
     }
-    return message;
+    return message1;
   } else {
     ({ type, value } = first);
     if (null != type) {
@@ -283,7 +283,7 @@ function getCrashErrorMessage(exception) {
     if (extra != null) {
       const prop1 = extra.persisted_error_message;
     }
-    message = type;
+    let message = type;
     if (type == null) {
       message = value;
     }
@@ -358,8 +358,7 @@ function trackCrash(event, hint, arg2) {
   if (arg2 === undefined) {
     flag = true;
   }
-  let obj = { event, hint };
-  logger.info("Crash", obj);
+  logger.info("Crash", { event, hint });
   ({ level, extra } = event);
   let native_is_native;
   if (extra != null) {
@@ -395,8 +394,7 @@ function trackCrash(event, hint, arg2) {
         tmp7 = 0 !== event_id.length;
       }
       if (tmp7) {
-        let obj1 = SentryUtilsDefault;
-        obj1.markCrashHandled(event_id);
+        SentryUtilsDefault.markCrashHandled(event_id);
       }
     }
   }
@@ -433,14 +431,15 @@ function trackCrash(event, hint, arg2) {
     const _Date2 = Date;
     result = Date.now();
   }
+  const obj = { event, hint };
   const obj3 = router_utils;
   const track = AnalyticsUtilsDefault.track;
   if (tmp4) {
-    extra = event.extra;
-    if (extra == null) {
-      extra = {};
+    let extra1 = event.extra;
+    if (extra1 == null) {
+      extra1 = {};
     }
-    obj = {
+    const obj4 = {
       did_crash: true,
       sentry_issue_id: tmp13,
       client_track_timestamp: result,
@@ -456,7 +455,7 @@ function trackCrash(event, hint, arg2) {
       js_error_message: null,
       js_error_stacktrace: null,
     };
-    const native_exit_reason = extra.native_exit_reason;
+    const native_exit_reason = extra1.native_exit_reason;
     let tmp27 = null;
     if (typeof native_exit_reason === "string") {
       tmp27 = null;
@@ -464,8 +463,8 @@ function trackCrash(event, hint, arg2) {
         tmp27 = native_exit_reason;
       }
     }
-    obj.exit_reason = tmp27;
-    const prop1 = extra.native_exit_description;
+    obj4.exit_reason = tmp27;
+    const prop1 = extra1.native_exit_description;
     let tmp28 = null;
     if (typeof prop1 === "string") {
       tmp28 = null;
@@ -473,8 +472,8 @@ function trackCrash(event, hint, arg2) {
         tmp28 = prop1;
       }
     }
-    obj.exit_description = tmp28;
-    const prop2 = extra.native_tombstone_hash;
+    obj4.exit_description = tmp28;
+    const prop2 = extra1.native_tombstone_hash;
     let tmp29 = null;
     if (typeof prop2 === "string") {
       tmp29 = null;
@@ -482,8 +481,8 @@ function trackCrash(event, hint, arg2) {
         tmp29 = prop2;
       }
     }
-    obj.tombstone_hash = tmp29;
-    const prop3 = extra.native_tombstone_cause;
+    obj4.tombstone_hash = tmp29;
+    const prop3 = extra1.native_tombstone_cause;
     let tmp30 = null;
     if (typeof prop3 === "string") {
       tmp30 = null;
@@ -491,8 +490,8 @@ function trackCrash(event, hint, arg2) {
         tmp30 = prop3;
       }
     }
-    obj.tombstone_cause = tmp30;
-    const native_tombstone = extra.native_tombstone;
+    obj4.tombstone_cause = tmp30;
+    const native_tombstone = extra1.native_tombstone;
     let tmp31 = null;
     if (typeof native_tombstone === "string") {
       tmp31 = null;
@@ -500,8 +499,8 @@ function trackCrash(event, hint, arg2) {
         tmp31 = native_tombstone;
       }
     }
-    obj.tombstone = tmp31;
-    const prop4 = extra.native_tombstone_group_by;
+    obj4.tombstone = tmp31;
+    const prop4 = extra1.native_tombstone_group_by;
     let tmp32 = null;
     if (typeof prop4 === "string") {
       tmp32 = null;
@@ -509,8 +508,8 @@ function trackCrash(event, hint, arg2) {
         tmp32 = prop4;
       }
     }
-    obj.call_stack_tree = tmp32;
-    const prop5 = extra.native_tombstone_origin;
+    obj4.call_stack_tree = tmp32;
+    const prop5 = extra1.native_tombstone_origin;
     let tmp33 = null;
     if (typeof prop5 === "string") {
       tmp33 = null;
@@ -518,10 +517,10 @@ function trackCrash(event, hint, arg2) {
         tmp33 = prop5;
       }
     }
-    obj.binary_name = tmp33;
-    obj.exception_message = getCrashErrorMessage(event);
-    obj.exception_stacktrace = getErrorStackTrace(event);
-    const prop6 = extra.persisted_error_message;
+    obj4.binary_name = tmp33;
+    obj4.exception_message = getCrashErrorMessage(event);
+    obj4.exception_stacktrace = getErrorStackTrace(event);
+    const prop6 = extra1.persisted_error_message;
     let tmp36 = null;
     if (typeof prop6 === "string") {
       tmp36 = null;
@@ -529,8 +528,8 @@ function trackCrash(event, hint, arg2) {
         tmp36 = prop6;
       }
     }
-    obj.js_error_message = tmp36;
-    const prop7 = extra.persisted_error_stack;
+    obj4.js_error_message = tmp36;
+    const prop7 = extra1.persisted_error_stack;
     let tmp37 = null;
     if (typeof prop7 === "string") {
       tmp37 = null;
@@ -538,12 +537,12 @@ function trackCrash(event, hint, arg2) {
         tmp37 = prop7;
       }
     }
-    obj.js_error_stacktrace = tmp37;
-    track(timestampProducer.APP_NATIVE_CRASH, obj);
+    obj4.js_error_stacktrace = tmp37;
+    track(timestampProducer.APP_NATIVE_CRASH, obj4);
     let tmp25 = importDefault;
     let tmp26 = importDefault;
   } else {
-    obj = {
+    const obj5 = {
       path: obj3.getHistory().location.pathname,
       client_track_timestamp: result,
       sentry_issue_id: tmp13,
@@ -552,7 +551,7 @@ function trackCrash(event, hint, arg2) {
       error_level: level,
       error_stack: getErrorStackTrace(event),
     };
-    track(timestampProducer.APP_CRASHED, obj);
+    track(timestampProducer.APP_CRASHED, obj5);
     tmp25 = importDefault;
     tmp26 = importDefault;
   }
@@ -562,19 +561,19 @@ function trackCrash(event, hint, arg2) {
     tmp39 = 0 !== event_id2.length;
   }
   if (tmp39) {
-    tmp25(1232).markCrashHandled(event_id2);
-    const tmp25Result = tmp25(1232);
+    tmp25(1230).markCrashHandled(event_id2);
+    const tmp25Result = tmp25(1230);
   }
   const AppCrashedReasons = AppCrashedReasons2.AppCrashedReasons;
   const tmp41 = tmp4 ? AppCrashedReasons.UNHANDLED_NATIVE_ERROR : AppCrashedReasons.UNHANDLED_JS_ERROR;
-  obj1 = { name: MetricEvents.MetricEvents.APP_CRASHED, tags: null };
+  const obj6 = { name: MetricEvents.MetricEvents.APP_CRASHED, tags: null };
   items = ["reason:" + tmp41];
   if (level == null) {
     level = "unknown";
   }
   items[1] = "level:" + level;
-  obj1.tags = items;
-  tmp26(7704).increment(obj1, true);
+  obj6.tags = items;
+  tmp26(7704).increment(obj6, true);
   const tmp26Result = tmp26(7704);
 }
 const NativeModules = fn(17).NativeModules;
@@ -600,7 +599,7 @@ let closure_11 = [
 let c12 = 0.05;
 let c13 = 0.005;
 let c14 = false;
-const CommonSentryInitUtils = fn(1358);
+const CommonSentryInitUtils = fn(1356);
 let closure_20 = CommonSentryInitUtils.filterThrottle({ maxBudgetMinute: 1, maxBudgetHour: 15 });
 const size = fn(2);
 const result1 = size.fileFinishedImporting("modules/errors/native/SentryInitUtils.tsx");
@@ -611,30 +610,29 @@ export const initSentry = function initSentry() {
   if (CrashReportingManager != null) {
     const isUserStaffForCrashReporting = CrashReportingManager.getIsUserStaffForCrashReporting((arg0) => {
       closure_14 = arg0;
-      let obj = ClientInfoUtilsAll;
-      constants = obj.getConstants();
+      constants = ClientInfoUtilsAll.getConstants();
       const ReleaseChannel = constants.ReleaseChannel;
       if (-1 === ReleaseChannel.indexOf("debug")) {
         if (-1 === ReleaseChannel.indexOf("developer")) {
           const isStable = ReleaseChannelUtils.isStable;
-          obj = { releaseChannel: ReleaseChannel, isProductionChannel: isStable };
-          logger.verbose("Initialize", obj);
+          const obj2 = { releaseChannel: ReleaseChannel, isProductionChannel: isStable };
+          logger.verbose("Initialize", obj2);
           if (obj15.isAndroid()) {
             if (isStable) {
-              let tmp14Result = DeviceUtils;
-              const device = tmp14Result.getDevice();
+              const device = DeviceUtils.getDevice();
+              const tmp14Result = DeviceUtils;
             }
           }
           c12 = 0.05;
           const SentryDsn = constants.SentryDsn;
           if (isStable) {
-            tmp14Result = MetaQuestUtils;
             let SentryStaffDsn = SentryDsn;
-            if (tmp14Result.isMetaQuest()) {
+            if (tmp14Result9.isMetaQuest()) {
               c12 = 1;
               c13 = 1;
               SentryStaffDsn = SentryDsn;
             }
+            tmp14Result9 = MetaQuestUtils;
           } else {
             c12 = 1;
             SentryStaffDsn = constants.SentryAlphaBetaDsn;
@@ -659,40 +657,40 @@ export const initSentry = function initSentry() {
               closure_1_19(result, { crash_event_source: "startup_reconcile" });
             }
           });
-          const tmp14Result1 = _mod675;
+          const tmp14Result10 = _mod675;
           let str2 = "ios";
-          if (tmp14Result2.isAndroid()) {
+          if (tmp14Result11.isAndroid()) {
             str2 = "android";
           }
-          obj = {
+          const obj3 = {
             tunnel: `/error-reporting-proxy/${str2}`,
             autoInitializeNativeSdk: false,
             beforeSend,
-            dist: "6411",
+            dist: "6417",
             dsn: SentryStaffDsn,
             environment: ReleaseChannel,
             tracesSampleRate: 0,
             sampleRate: 1,
             ignoreErrors,
-            release: "discord_android@346.6.0-2+346206",
+            release: "discord_android@347.0.0-2+347200",
             tracePropagationTargets: null,
             integrations: null,
             beforeBreadcrumb: null,
           };
           items = [PRIMARY_DOMAIN];
-          obj.tracePropagationTargets = items;
+          obj3.tracePropagationTargets = items;
           const items1 = [registerSpanErrorInstrumentation, ,];
-          tmp14Result2 = PlatformUtils;
+          tmp14Result11 = PlatformUtils;
           items1[1] = _mod675.featureFlagsIntegration();
-          const tmp14Result3 = _mod675;
-          const obj1 = {
+          const tmp14Result12 = _mod675;
+          const obj5 = {
             shouldCreateSpanForRequest(url) {
               return !closure_1_9.some((item) => null != url.match(item));
             },
           };
-          items1[2] = _mod675.reactNativeTracingIntegration(obj1);
-          obj.integrations = items1;
-          obj.beforeBreadcrumb = function beforeBreadcrumb(data) {
+          items1[2] = _mod675.reactNativeTracingIntegration(obj5);
+          obj3.integrations = items1;
+          obj3.beforeBreadcrumb = function beforeBreadcrumb(data) {
             if (null == data.data) {
               data.data = {};
             }
@@ -707,15 +705,15 @@ export const initSentry = function initSentry() {
             }
             return data;
           };
-          tmp14Result1.init(obj);
-          const tmp14Result4 = _mod675;
-          _mod675.setTag("buildNumber", "6411");
-          const tmp14Result5 = _mod675;
+          tmp14Result10.init(obj3);
+          const tmp14Result13 = _mod675;
+          _mod675.setTag("buildNumber", "6417");
+          const tmp14Result14 = _mod675;
           _mod675.setTag("appVersion", constants.Version);
-          const tmp14Result6 = _mod675;
+          const tmp14Result15 = _mod675;
           const _HermesInternal = HermesInternal;
           _mod675.setTag("design_id", "" + DesignIds.DesignIds.DESIGN_TABS_IA);
-          const tmp14Result7 = _mod675;
+          const tmp14Result16 = _mod675;
         }
       }
     });

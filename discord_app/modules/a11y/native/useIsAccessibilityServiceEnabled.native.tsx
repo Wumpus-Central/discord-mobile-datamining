@@ -9,12 +9,12 @@ function ACCESSIBILITY_SERVICE_ENABLED_GETTER(accessibilityServiceEnabled) {
 }
 const state = module_560.create((arg0) => {
   closure_0 = arg0;
-  let obj = NativeDeviceAccessibilityModuleDefault;
-  const result = obj.onAccessibilityServiceEnabledChanged((accessibilityServiceEnabled) => {
+  const result = NativeDeviceAccessibilityModuleDefault.onAccessibilityServiceEnabledChanged((accessibilityServiceEnabled) => {
     closure_0({ accessibilityServiceEnabled });
   });
-  obj = { accessibilityServiceEnabled: NativeDeviceAccessibilityModuleDefault.isAccessibilityServiceEnabled() };
-  return obj;
+  const obj2 = { accessibilityServiceEnabled: null };
+  obj2.accessibilityServiceEnabled = NativeDeviceAccessibilityModuleDefault.isAccessibilityServiceEnabled();
+  return obj2;
 });
 let result = size.fileFinishedImporting("modules/a11y/native/useIsAccessibilityServiceEnabled.native.tsx");
 

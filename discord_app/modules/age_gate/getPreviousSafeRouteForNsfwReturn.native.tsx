@@ -2,12 +2,14 @@
 import Constants from "../../Constants.tsx";
 import AgeGateUtils from "AgeGateUtils.tsx";
 import SpoilerChannelUtils from "../spoiler_channels/SpoilerChannelUtils.tsx";
-import NavigationHistoryStore from "../main_tabs_v2/native/NavigationHistoryStore.tsx";
+import NavigationHistoryStore_mod from "../main_tabs_v2/native/NavigationHistoryStore.tsx";
 import ChannelStore from "../../stores/ChannelStore.tsx";
 import GuildChannelStore from "../../stores/GuildChannelStore.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
+let NavigationHistoryStore = NavigationHistoryStore_mod;
 ({ CHANNEL_PREFIX: c2, GUILD_PREFIX: c3, getIdFromHistoryItem: closure_4 } = NavigationHistoryStore);
+let NavigationHistoryStore = NavigationHistoryStore_mod;
 const ME = Constants.ME;
 const result = size.fileFinishedImporting("modules/age_gate/getPreviousSafeRouteForNsfwReturn.native.tsx");
 
@@ -31,8 +33,8 @@ export default function getPreviousSafeRouteForNsfwReturn() {
               if (guild_id == null) {
                 guild_id = ME;
               }
-              obj = { guildId: guild_id, channelId: tmp3 };
-              return obj;
+              let obj2 = { guildId: guild_id, channelId: tmp3 };
+              return obj2;
             }
           }
         }
@@ -50,8 +52,8 @@ export default function getPreviousSafeRouteForNsfwReturn() {
       }
       diff = diff - 1;
     }
-    obj = { guildId: tmp3, channelId: defaultChannel.id };
-    return obj;
+    const obj3 = { guildId: tmp3, channelId: defaultChannel.id };
+    return obj3;
   }
   return null;
 }

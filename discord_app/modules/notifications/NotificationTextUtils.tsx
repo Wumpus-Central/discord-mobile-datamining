@@ -106,9 +106,10 @@ function renderTitle(channelName, channel, channel) {
   const obj2 = IsolateString;
   let str = "";
   if (null != channel) {
-    const tmpResult = useChannelName;
+    const tmpResult = IsolateString;
     const _HermesInternal = HermesInternal;
-    str = ", " + tmpResult.isolate(tmpResult.computeChannelName(channel, UserStore, RelationshipStore));
+    str = ", " + tmpResult.isolate(useChannelName.computeChannelName(channel, UserStore, RelationshipStore));
+    const tmpResult2 = useChannelName;
   }
   return (
     "" +
@@ -188,12 +189,11 @@ export const shouldNotify = function shouldNotify(message, channel_id) {
     flag2 = false;
   }
   if (null != message.flags) {
-    let obj = FlagUtils;
     if (obj.hasFlag(message.flags, constants3.SUPPRESS_NOTIFICATIONS)) {
       return false;
     }
+    obj = FlagUtils;
   }
-  let obj1 = ChannelStore;
   const channel = ChannelStore.getChannel(channel_id);
   let channel1 = channel;
   if (message.type === constants4.THREAD_STARTER_MESSAGE) {
@@ -201,7 +201,7 @@ export const shouldNotify = function shouldNotify(message, channel_id) {
     if (channel != null) {
       parent_id = channel.parent_id;
     }
-    channel1 = obj1.getChannel(parent_id);
+    channel1 = ChannelStore.getChannel(parent_id);
   }
   const currentUser = UserStore.getCurrentUser();
   const author = message.author;
@@ -224,10 +224,10 @@ export const shouldNotify = function shouldNotify(message, channel_id) {
           }
           tmp12 = channel1.type === constants2.DM || null != channel1.linkedLobby;
         }
-        obj = { ignoreStatus: flag2, ignoreSameUser: null };
+        const obj3 = { ignoreStatus: flag2, ignoreSameUser: null };
         const SELF_MENTIONABLE_SYSTEM = constants5.SELF_MENTIONABLE_SYSTEM;
-        obj.ignoreSameUser = SELF_MENTIONABLE_SYSTEM.has(message.type);
-        if (shouldNotifyBase(currentUser, user, channel1, obj)) {
+        obj3.ignoreSameUser = SELF_MENTIONABLE_SYSTEM.has(message.type);
+        if (shouldNotifyBase(currentUser, user, channel1, obj3)) {
           if (MessageRequestStore.isMessageRequest(channel_id)) {
             return false;
           } else {
@@ -269,13 +269,13 @@ export const shouldNotify = function shouldNotify(message, channel_id) {
                   if (tmp39) {
                     result = threadNotificationSetting === ThreadMemberFlags.ALL_MESSAGES;
                     if (!result) {
-                      obj = {
+                      const obj4 = {
                         rawMessage: message,
                         userId: currentUser.id,
                         suppressEveryone: false,
                         suppressRoles: false,
                       };
-                      result = isMessageMentioned.isRawMessageMentioned(obj);
+                      result = isMessageMentioned.isRawMessageMentioned(obj4);
                       const tmp36Result = isMessageMentioned;
                     }
                     tmp39 = result;
@@ -295,13 +295,13 @@ export const shouldNotify = function shouldNotify(message, channel_id) {
                 }
                 const result1 = UserGuildSettingsStore.isSuppressEveryoneEnabled(channel1.getGuildId());
                 const result2 = UserGuildSettingsStore.isSuppressRolesEnabled(channel1.getGuildId());
-                obj1 = {
+                const obj8 = {
                   rawMessage: message,
                   userId: currentUser.id,
                   suppressEveryone: result1,
                   suppressRoles: result2,
                 };
-                return isMessageMentioned.isRawMessageMentioned(obj1);
+                return isMessageMentioned.isRawMessageMentioned(obj8);
               }
             }
           }
@@ -369,7 +369,7 @@ export const shouldNotifyForSelectedChannel = function shouldNotifyForSelectedCh
     return tmp7;
   }
 };
-export const shouldNotifyForForumThreadCreation = function shouldNotifyForForumThreadCreation(channel, channel2, arg2) {
+export const shouldNotifyForForumThreadCreation = function shouldNotifyForForumThreadCreation(channel, channel1, arg2) {
   let flag = arg2;
   if (arg2 === undefined) {
     flag = true;
@@ -380,21 +380,21 @@ export const shouldNotifyForForumThreadCreation = function shouldNotifyForForumT
   }
   const currentUser = UserStore.getCurrentUser();
   const user = UserStore.getUser(channel.ownerId);
-  let tmp3 = null != channel2 && null != currentUser && null != user;
+  let tmp3 = null != channel1 && null != currentUser && null != user;
   if (tmp3) {
     const obj = { ignoreStatus: flag2, ignoreNoMessagesSetting: true };
-    let tmp9 = shouldNotifyBase(currentUser, user, channel2, obj);
+    let tmp9 = shouldNotifyBase(currentUser, user, channel1, obj);
     if (tmp9) {
-      const result = UserGuildSettingsStore.isGuildOrCategoryOrChannelMuted(channel2.guild_id, channel2.id);
+      const result = UserGuildSettingsStore.isGuildOrCategoryOrChannelMuted(channel1.guild_id, channel1.id);
       let tmp11 = !result;
       if (!result) {
         let result1 = !flag;
         if (!flag) {
-          result1 = ChannelVisibilityUtils.isChannelCurrentlyVisible(channel2.id);
+          result1 = ChannelVisibilityUtils.isChannelCurrentlyVisible(channel1.id);
         }
         let newForumThreadsCreated = !result1;
         if (!result1) {
-          newForumThreadsCreated = UserGuildSettingsStore.getNewForumThreadsCreated(channel2);
+          newForumThreadsCreated = UserGuildSettingsStore.getNewForumThreadsCreated(channel1);
         }
         tmp11 = newForumThreadsCreated;
       }
@@ -454,8 +454,7 @@ export const shouldIncludeSelectedChannel = function shouldIncludeSelectedChanne
 };
 export { renderTitle };
 export const makeTextChatNotification = function makeTextChatNotification(getGuildId, content, bot) {
-  let obj = NicknameUtilsDefault;
-  const name = obj.getName(getGuildId.getGuildId(), getGuildId.id, bot);
+  const name = NicknameUtilsDefault.getName(getGuildId.getGuildId(), getGuildId.id, bot);
   const type = getGuildId.type;
   if (constants2.GUILD_ANNOUNCEMENT !== type) {
     if (constants2.GUILD_TEXT !== type) {
@@ -468,8 +467,7 @@ export const makeTextChatNotification = function makeTextChatNotification(getGui
                 if (constants2.GROUP_DM === type) {
                   let tmp6 = getGuildId.isManaged() && bot.bot;
                   if (tmp6) {
-                    let obj1 = useChannelName;
-                    tmp6 = name === obj1.computeChannelName(getGuildId, UserStore, RelationshipStore);
+                    tmp6 = name === useChannelName.computeChannelName(getGuildId, UserStore, RelationshipStore);
                   }
                   tmp5 = name;
                   if (!tmp6) {
@@ -477,18 +475,18 @@ export const makeTextChatNotification = function makeTextChatNotification(getGui
                   }
                 }
               }
-              content = content.content;
+              let content1 = content.content;
               if (isSystemMessageDefault(content)) {
-                let tmpResult = SystemMessageUtilsDefault;
-                content = tmpResult.stringify(content, getGuildId);
-                if (null == content) {
+                content1 = SystemMessageUtilsDefault.stringify(content, getGuildId);
+                if (null == content1) {
                   const obj15 = new LoggerDefault("NotificationTextUtils");
-                  obj = { message: content };
-                  obj15.warn("SystemMessageUtils.stringify(...) could not convert", obj);
+                  const obj4 = { message: content };
+                  obj15.warn("SystemMessageUtils.stringify(...) could not convert", obj4);
                   const _Error = Error;
                   const error = new Error("failed to stringify system message");
                   throw error;
                 }
+                const tmpResult = SystemMessageUtilsDefault;
               }
               if ("sticker_items" in content) {
                 let sticker_items = content.sticker_items;
@@ -496,8 +494,7 @@ export const makeTextChatNotification = function makeTextChatNotification(getGui
                 sticker_items = "stickerItems" in content ? content.stickerItems : content.stickers;
               }
               if ("message_reference" in content) {
-                let obj4 = isForwardMessage;
-                let result = obj4.isForwardServerMessage(content);
+                let result = isForwardMessage.isForwardServerMessage(content);
               } else {
                 result = isForwardMessageDefault(content);
               }
@@ -511,19 +508,19 @@ export const makeTextChatNotification = function makeTextChatNotification(getGui
                   if (null != content.application) {
                     if (content.activity.type === constants.JOIN) {
                       const intl7 = util.intl;
-                      obj = { user: name, game: content.application.name };
+                      const obj6 = { user: name, game: content.application.name };
                       let str7 = intl7.formatToPlainString(
                         getInviteEmbedFormatString(getGuildId, util.t.E8CgCh, util.t.c6KHWJ, util.t.Fy7rJN),
-                        obj,
+                        obj6,
                       );
                     } else {
                       str7 = "";
                       if (content.activity.type === tmp44.JOIN_REQUEST) {
                         const intl9 = util.intl;
-                        obj1 = { user: name, game: content.application.name };
+                        const obj7 = { user: name, game: content.application.name };
                         str7 = intl9.formatToPlainString(
                           getInviteEmbedFormatString(getGuildId, util.t["/TD0la"], util.t["/TD0la"], util.t["/TD0la"]),
-                          obj1,
+                          obj7,
                         );
                       }
                     }
@@ -534,10 +531,10 @@ export const makeTextChatNotification = function makeTextChatNotification(getGui
                 if (null != content.activity) {
                   if (content.activity.type === constants.LISTEN) {
                     const intl6 = util.intl;
-                    let obj2 = { user: name };
+                    const obj8 = { user: name };
                     stringResult = intl6.formatToPlainString(
                       getInviteEmbedFormatString(getGuildId, util.t.SaDdmN, util.t.qsODhp, util.t.WeiMTW),
-                      obj2,
+                      obj8,
                     );
                     tmp26 = items;
                     const tmp43 = getInviteEmbedFormatString(getGuildId, util.t.SaDdmN, util.t.qsODhp, util.t.WeiMTW);
@@ -546,22 +543,21 @@ export const makeTextChatNotification = function makeTextChatNotification(getGui
                 if (null != sticker_items) {
                   if (sticker_items.length > 0) {
                     const intl5 = util.intl;
-                    const obj3 = { stickerName: sticker_items[0].name };
-                    stringResult = intl5.formatToPlainString(util.t.zY4v1B, obj3);
+                    const obj9 = { stickerName: sticker_items[0].name };
+                    stringResult = intl5.formatToPlainString(util.t.zY4v1B, obj9);
                     tmp26 = items;
                   }
                 }
                 if (content.type === constants4.PREMIUM_REFERRAL) {
                   const intl4 = util.intl;
-                  obj4 = { username: null };
-                  tmpResult = UserUtilsDefault;
-                  obj4.username = tmpResult.getName(bot);
-                  stringResult = intl4.formatToPlainString(util.t.lieTqU, obj4);
+                  const obj10 = { username: UserUtilsDefault.getName(bot) };
+                  stringResult = intl4.formatToPlainString(util.t.lieTqU, obj10);
                   tmp26 = items;
+                  const tmpResult3 = UserUtilsDefault;
                 } else if (null != content.poll) {
                   const intl3 = util.intl;
-                  const obj5 = { question: content.poll.question.text };
-                  stringResult = intl3.formatToPlainString(util.t.ImizdM, obj5);
+                  const obj11 = { question: content.poll.question.text };
+                  stringResult = intl3.formatToPlainString(util.t.ImizdM, obj11);
                   tmp26 = items;
                 } else if (content.type === tmp23.POLL_RESULT) {
                   const embeds = content.embeds;
@@ -579,8 +575,8 @@ export const makeTextChatNotification = function makeTextChatNotification(getGui
                   }
                   if (null == found) {
                     let intl2 = util.intl;
-                    const obj6 = { question: "" };
-                    stringResult = intl2.formatToPlainString(util.t["9WrecI"], obj6);
+                    const obj12 = { question: "" };
+                    stringResult = intl2.formatToPlainString(util.t["9WrecI"], obj12);
                     tmp26 = items;
                   }
                 } else {
@@ -593,11 +589,11 @@ export const makeTextChatNotification = function makeTextChatNotification(getGui
                       }
                     }
                   }
-                  const tmpResult1 = MessageParserDefault;
-                  ({ content, emoji } = MessageParserDefault.unparseWithMeta(content, getGuildId.id, true));
+                  const tmpResult4 = MessageParserDefault;
+                  ({ content, emoji } = MessageParserDefault.unparseWithMeta(content1, getGuildId.id, true));
                   tmp26 = emoji;
                   stringResult = content;
-                  if (0 !== content.length) {
+                  if (0 !== content1.length) {
                     tmp26 = emoji;
                     stringResult = content;
                     if (getGuildId.type === constants2.DM) {
@@ -606,7 +602,7 @@ export const makeTextChatNotification = function makeTextChatNotification(getGui
                       if (!bot.bot) {
                         tmp26 = emoji;
                         stringResult = content;
-                        if (content.startsWith("> -# *")) {
+                        if (content1.startsWith("> -# *")) {
                           const substr = content.substring(0, 1);
                           const sum = substr + content.substring(4);
                           const iter = emoji[Symbol.iterator]();
@@ -621,7 +617,7 @@ export const makeTextChatNotification = function makeTextChatNotification(getGui
                       }
                     }
                   }
-                  const unparseWithMetaResult = MessageParserDefault.unparseWithMeta(content, getGuildId.id, true);
+                  const unparseWithMetaResult = MessageParserDefault.unparseWithMeta(content1, getGuildId.id, true);
                 }
               }
               if (0 === stringResult.length) {
@@ -652,7 +648,6 @@ export const makeTextChatNotification = function makeTextChatNotification(getGui
                       }
                     }
                   }
-                  let obj = FlagUtils;
                   let num2 = embeds.flags;
                   if (num2 == null) {
                     num2 = 0;
@@ -664,32 +659,32 @@ export const makeTextChatNotification = function makeTextChatNotification(getGui
                     if (undefined !== embeds.attachments) {
                       if (embeds.attachments.length > 0) {
                         const intl = util.intl;
-                        obj = { filename: getDisplayFilenameDefault(embeds.attachments[0]) };
-                        return intl.formatToPlainString(util.t["51OkwL"], obj);
+                        const obj2 = { filename: getDisplayFilenameDefault(embeds.attachments[0]) };
+                        return intl.formatToPlainString(util.t["51OkwL"], obj2);
                       }
                     }
                     return "";
                   }
+                  obj = FlagUtils;
                 })(content);
               }
-              const obj7 = {
+              const obj13 = {
                 icon: bot.getAvatarURL(getGuildId.guild_id, 128),
                 title: tmp5,
                 body: stringResult,
                 emoji: tmp26,
               };
-              return obj7;
+              return obj13;
             }
           }
         }
       }
     }
   }
-  obj2 = ChannelStore;
   const channel = ChannelStore.getChannel(getGuildId.parent_id);
   if (content.type === constants4.THREAD_STARTER_MESSAGE) {
     if (null != channel) {
-      tmp5 = renderTitle(name, channel, obj2.getChannel(channel.parent_id));
+      tmp5 = renderTitle(name, channel, ChannelStore.getChannel(channel.parent_id));
     }
   }
   if (isSystemMessageDefault(content)) {

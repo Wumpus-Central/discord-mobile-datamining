@@ -1,6 +1,8 @@
 // discord_app/modules/auth/native/components/PromotionalEmailCheckBox.tsx
 import noop from "../../../../../_runtime/metro/00019__.js";
 
+const require = globalThis.__r;
+
 const require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: c2, Pressable: c3 } = get_ActivityIndicator);
@@ -20,12 +22,12 @@ export default function PromotionalEmailCheckBox(style) {
   const tmp = closure_8();
   const tmp3 = closure_4((checked) => checked.checked);
   _require = tmp3;
-  let obj = require("useA11yRolesNative");
-  const checkboxA11yNative = obj.useCheckboxA11yNative({ checked: tmp3 });
+  const tmp2 = closure_4((required) => required.required);
+  const checkboxA11yNative = require("useA11yRolesNative").useCheckboxA11yNative({ checked: tmp3 });
   let tmp9 = null;
   if (tmp2) {
-    obj = { style: style.style, children: null };
-    obj = {
+    const obj2 = { style: style.style, children: null };
+    const obj3 = {
       accessibilityRole: tmp7,
       accessibilityLabel: null,
       accessibilityState: null,
@@ -34,21 +36,21 @@ export default function PromotionalEmailCheckBox(style) {
       children: null,
     };
     const intl = tmp4(1114).intl;
-    obj.accessibilityLabel = intl.string(tmp4(1114).t.ylFCLt);
-    obj.accessibilityState = tmp8;
-    obj.onPress = function onPress() {
+    obj3.accessibilityLabel = intl.string(tmp4(1114).t.ylFCLt);
+    obj3.accessibilityState = tmp8;
+    obj3.onPress = function onPress() {
       return hasOwnProperty(!closure_0);
     };
-    obj.style = tmp.checkboxRow;
-    const obj1 = { checked: tmp3 };
-    const items = [closure_6(tmp4(5698).FormCheckbox, obj1)];
-    const obj2 = { variant: "text-xs/medium", color: "text-muted", style: tmp.checkboxLabel, children: null };
+    obj3.style = tmp.checkboxRow;
+    const obj4 = { checked: tmp3 };
+    const items = [closure_6(tmp4(5698).FormCheckbox, obj4)];
+    const obj5 = { variant: "text-xs/medium", color: "text-muted", style: tmp.checkboxLabel, children: null };
     const intl2 = tmp4(1114).intl;
-    obj2.children = intl2.string(tmp4(1114).t.ylFCLt);
-    items[1] = closure_6(tmp4(4632).Text, obj2);
-    obj.children = items;
-    obj.children = closure_7(closure_3, obj);
-    tmp9 = closure_6(closure_2, obj);
+    obj5.children = intl2.string(tmp4(1114).t.ylFCLt);
+    items[1] = closure_6(tmp4(4632).Text, obj5);
+    obj3.children = items;
+    obj2.children = closure_7(closure_3, obj3);
+    tmp9 = closure_6(closure_2, obj2);
   }
   return tmp9;
 }

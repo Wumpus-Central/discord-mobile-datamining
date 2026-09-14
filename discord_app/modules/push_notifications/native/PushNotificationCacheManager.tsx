@@ -4,7 +4,7 @@ import MultiAccountStore from "../../multi_account/MultiAccountStore.tsx";
 import UserStore from "../../../stores/UserStore.tsx";
 import AutomaticLifecycleManager from "../../../lib/AutomaticLifecycleManager.tsx";
 
-let prototype = function PushNotificationCacheManager() {
+const prototype = function PushNotificationCacheManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
   importDefault = applyArgumentsResult;
   applyArgumentsResult.actions = {
@@ -32,23 +32,23 @@ let prototype = function PushNotificationCacheManager() {
     }
   };
   applyArgumentsResult.syncMultiAccountUsers = function syncMultiAccountUsers() {
-    obj(9817);
-    obj = undefined;
+    let obj4;
     if (validUsers.canUseMultiAccountNotifications) {
       validUsers = validUsers.getValidUsers();
       if (validUsers.length < 2) {
-        obj = {};
+        let obj3 = {};
       } else {
-        obj = {};
+        obj4 = {};
         const item = validUsers.forEach((id) => {
-          obj = applyArgumentsResult(4481);
-          obj[id.id] = obj.getUserTag(id, { identifiable: "always" });
+          obj4[id.id] = applyArgumentsResult(4481).getUserTag(id, { identifiable: "always" });
         });
+        obj3 = obj4;
       }
     } else {
-      obj = {};
+      obj3 = {};
     }
-    obj.setMultiAccountUsers(obj);
+    obj4(9817).setMultiAccountUsers(obj3);
+    const obj = obj4(9817);
   };
   applyArgumentsResult.handleLogout = function handleLogout() {
     const result = PushNotificationDefault.clearPushNotificationLogs();
@@ -57,8 +57,8 @@ let prototype = function PushNotificationCacheManager() {
   return applyArgumentsResult;
 }.prototype;
 class prototype extends tmp2 {}
-prototype = new prototype();
+const prototype1 = new prototype();
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/push_notifications/native/PushNotificationCacheManager.tsx");
 
-export default prototype;
+export default prototype1;

@@ -44,8 +44,8 @@ let closure_7 = async function _resendVerificationCode() {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -58,8 +58,8 @@ let closure_7 = async function _resendVerificationCode() {
             throw value;
           } else if (arg0 === 2) {
             c6 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
             closure_2 = tmp3;
             closure_1 = tmp7;
@@ -70,14 +70,14 @@ let closure_7 = async function _resendVerificationCode() {
               trackedActionData: null,
               rejectWithError: true,
             };
-            const obj1 = { flow_id };
-            request.body = obj1;
-            const obj2 = { event: discord_common_AnalyticsUtils.NetworkActionNames.USER_VERIFY };
-            request.trackedActionData = obj2;
+            const obj4 = { flow_id };
+            request.body = obj4;
+            const obj5 = { event: discord_common_AnalyticsUtils.NetworkActionNames.USER_VERIFY };
+            request.trackedActionData = obj5;
             c5 = 2;
             c6 = 1;
-            const obj3 = { value: TrackedHTTPUtilsDefault.post(request), done: false };
-            return obj3;
+            const obj7 = { value: TrackedHTTPUtilsDefault.post(request), done: false };
+            return obj7;
           }
         } else if (1 === tmp7) {
           c4 = 0;
@@ -90,12 +90,12 @@ let closure_7 = async function _resendVerificationCode() {
         } else if (arg0 === 2) {
           c4 = 0;
           c6 = 3;
-          const obj4 = { value, done: true };
-          return obj4;
+          const obj8 = { value, done: true };
+          return obj8;
         } else {
           c4 = 0;
           c6 = 3;
-          obj = { value, done: true };
+          const obj = { value, done: true };
           return obj;
         }
       } catch (tmp19) {

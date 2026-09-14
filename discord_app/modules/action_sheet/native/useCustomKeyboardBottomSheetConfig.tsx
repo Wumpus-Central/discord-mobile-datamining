@@ -5,6 +5,8 @@ import useKeyboardType from "../../keyboard/native/useKeyboardType.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../a11y/AccessibilityStore.tsx";
 
+const require = globalThis.__r;
+
 require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/action_sheet/native/useCustomKeyboardBottomSheetConfig.tsx");
@@ -27,20 +29,22 @@ export default function useCustomKeyboardBottomSheetConfig(forceMaxHeight) {
   const maximum = tmp3.maximum;
   let items = [flag, maximum, minimum];
   ({ initialPosition, animateOnMount } = require("useInitialValue")(() => {
-    let obj = { initialPosition: styles.height - minimum, animateOnMount: false };
+    const obj = { initialPosition: styles.height - minimum, animateOnMount: false };
     let tmp3 = obj;
     if (!obj2.isAndroid()) {
       tmp3 = obj;
       if (!AccessibilityStore.useReducedMotion) {
-        let tmpResult = useSystemKeyboardHeight;
+        let obj3 = obj;
         if (0 === tmpResult.getSystemKeyboardHeight()) {
-          tmpResult = useKeyboardType;
-          const keyboardTypePrevious = tmpResult.getKeyboardTypePrevious();
+          const keyboardTypePrevious = useKeyboardType.getKeyboardTypePrevious();
+          obj3 = obj;
           if (keyboardTypePrevious === KeyboardTypes.KeyboardTypes.SYSTEM) {
-            obj = { animateOnMount: true };
+            obj3 = { animateOnMount: true };
           }
+          const tmpResult2 = useKeyboardType;
         }
-        tmp3 = obj;
+        tmp3 = obj3;
+        tmpResult = useSystemKeyboardHeight;
       }
     }
     return tmp3;
@@ -68,20 +72,22 @@ export default function useCustomKeyboardBottomSheetConfig(forceMaxHeight) {
   }, items);
   const tmp = minimum;
   const tmp4 = require("useInitialValue")(() => {
-    let obj = { initialPosition: styles.height - minimum, animateOnMount: false };
+    const obj = { initialPosition: styles.height - minimum, animateOnMount: false };
     let tmp3 = obj;
     if (!obj2.isAndroid()) {
       tmp3 = obj;
       if (!AccessibilityStore.useReducedMotion) {
-        let tmpResult = useSystemKeyboardHeight;
+        let obj3 = obj;
         if (0 === tmpResult.getSystemKeyboardHeight()) {
-          tmpResult = useKeyboardType;
-          const keyboardTypePrevious = tmpResult.getKeyboardTypePrevious();
+          const keyboardTypePrevious = useKeyboardType.getKeyboardTypePrevious();
+          obj3 = obj;
           if (keyboardTypePrevious === KeyboardTypes.KeyboardTypes.SYSTEM) {
-            obj = { animateOnMount: true };
+            obj3 = { animateOnMount: true };
           }
+          const tmpResult2 = useKeyboardType;
         }
-        tmp3 = obj;
+        tmp3 = obj3;
+        tmpResult = useSystemKeyboardHeight;
       }
     }
     return tmp3;

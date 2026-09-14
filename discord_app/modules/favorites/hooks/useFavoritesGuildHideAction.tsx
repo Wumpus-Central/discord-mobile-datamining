@@ -12,10 +12,9 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/favorites/hooks/useFavoritesGuildHideAction.tsx");
 
 export default function useFavoritesGuildHideAction() {
-  let obj = hasAccess(10352);
-  hasAccess = obj.useFavoritesAccess().hasAccess;
+  hasAccess = hasAccess(10353).useFavoritesAccess().hasAccess;
   const items = [hasAccess];
-  obj = { isPreview: !hasAccess, label: null, subLabel: null, perform: null };
+  let obj2 = { isPreview: !hasAccess, label: null, subLabel: null, perform: null };
   const callback = noop.useCallback(() => {
     if (hasAccess) {
       const result = FavoritesActionCreators.setFavoritesGuildVisibility(false, "server_context_menu");
@@ -31,13 +30,13 @@ export default function useFavoritesGuildHideAction() {
   } else {
     ojM1xJ = tmp(1114).t.ojM1xJ;
   }
-  obj.label = intl.string(ojM1xJ);
+  obj2.label = intl.string(ojM1xJ);
   let stringResult;
   if (hasAccess) {
     const intl2 = tmp(1114).intl;
     stringResult = intl2.string(_modDef3236.FaHxWl);
   }
-  obj.subLabel = stringResult;
-  obj.perform = callback;
-  return obj;
+  obj2.subLabel = stringResult;
+  obj2.perform = callback;
+  return obj2;
 }

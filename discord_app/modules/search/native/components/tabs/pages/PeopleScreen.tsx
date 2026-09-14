@@ -5,6 +5,8 @@ import noop from "../../../../../../../_runtime/metro/00019__.js";
 import SearchPeopleTabStore from "../../../stores/SearchPeopleTabStore.tsx";
 import SearchQueryStore from "../../../stores/SearchQueryStore.tsx";
 
+const require = globalThis.__r;
+
 const require = fn;
 const SearchConstants = fn(7982);
 ({ SearchListItemTypes: closure_7, USER_ESTIMATED_ITEM_SIZE: closure_8 } = SearchConstants);
@@ -20,19 +22,22 @@ export default noop.memo(function PeopleScreen(searchContext) {
   let onPressGroupDMItem;
   let onPressDMItem;
   let callback1;
+  importDefault = require("SearchUtils").getSearchContextId(searchContext);
   let obj = require("SearchUtils");
-  importDefault = obj.getSearchContextId(searchContext);
-  let obj1 = require("initialize");
   let items = [onPressGroupDMItem];
-  stateFromStores = obj1.useStateFromStores(items, () => SearchPeopleTabStore.getResults(closure_1));
+  stateFromStores = require("initialize").useStateFromStores(items, () => SearchPeopleTabStore.getResults(closure_1));
+  let obj2 = require("initialize");
   const items1 = [onPressDMItem];
   const stateFromStores1 = require("initialize").useStateFromStores(items1, () =>
     SearchQueryStore.isInitialSearchQuery(closure_0),
   );
-  const obj3 = require("initialize");
-  obj = { placeholderHeight: callback1, numColumns: 1 };
-  const fullscreenPlaceholderCount = require("usePlaceholderStyles").useFullscreenPlaceholderCount(obj);
-  const obj4 = require("usePlaceholderStyles");
+  let obj3 = require("initialize");
+  const fullscreenPlaceholderCount = require("usePlaceholderStyles").useFullscreenPlaceholderCount({
+    placeholderHeight: callback1,
+    numColumns: 1,
+  });
+  let obj4 = require("usePlaceholderStyles");
+  let obj5 = { placeholderHeight: callback1, numColumns: 1 };
   onPressGroupDMItem = require("useOnPressSearchItem").useOnPressGroupDMItem({ searchContext });
   const obj6 = require("useOnPressSearchItem");
   onPressDMItem = require("useOnPressSearchItem").useOnPressDMItem({ searchContext });
@@ -48,8 +53,8 @@ export default noop.memo(function PeopleScreen(searchContext) {
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
-          let obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           return { value: "HermesInternal", done: null };
         }
@@ -62,38 +67,39 @@ export default noop.memo(function PeopleScreen(searchContext) {
               throw value;
             } else if (arg0 === 2) {
               c5 = 3;
-              obj = { value, done: true };
-              return obj;
+              const obj4 = { value, done: true };
+              return obj4;
             } else {
               closure_3 = tmp5;
               closure_2 = tmp2;
               closure_130_0 = searchContext;
               closure_130_1 = closure_1;
               closure_130_2 = undefined;
-              let obj1 = closure_1(stateFromStores[11]);
               c4 = 1;
               c5 = 1;
-              obj1 = { value: null, done: false };
-              obj1.value = obj1.getOrEnsurePrivateChannel(searchContext);
-              return obj1;
+              const obj5 = {
+                value: closure_1(stateFromStores[11]).getOrEnsurePrivateChannel(searchContext),
+                done: false,
+              };
+              return obj5;
             }
           } else if (arg0 === 1) {
             c5 = 3;
             throw value;
           } else if (arg0 === 2) {
             c5 = 3;
-            obj = { value, done: true };
+            const obj = { value, done: true };
             return obj;
           } else {
             closure_130_2 = value;
-            const obj2 = {
+            const obj7 = {
               searchContext,
               userId: closure_130_0,
               channelId: closure_130_2,
               index: closure_130_1,
               entityType: constants.CHANNEL,
             };
-            const result = closure_1(stateFromStores[12]).trackSearchResultClicked(obj2);
+            const result = closure_1(stateFromStores[12]).trackSearchResultClicked(obj7);
             onPressDMItem(closure_130_0, closure_130_2);
             c5 = 3;
             return { value: "HermesInternal", done: null };
@@ -118,8 +124,12 @@ export default noop.memo(function PeopleScreen(searchContext) {
   }, items2);
   const items3 = [onPressGroupDMItem, searchContext];
   callback1 = fullscreenPlaceholderCount.useCallback((channelId, index) => {
-    const obj = { searchContext, channelId, index, entityType: constants.CHANNEL };
-    const result = obj.trackSearchResultClicked(obj);
+    const result = search_tracking_TrackingDefault.trackSearchResultClicked({
+      searchContext,
+      channelId,
+      index,
+      entityType: constants.CHANNEL,
+    });
     onPressGroupDMItem(channelId);
   }, items3);
   const items4 = [callback, callback1, stateFromStores1, fullscreenPlaceholderCount, stateFromStores];
@@ -141,7 +151,7 @@ export default noop.memo(function PeopleScreen(searchContext) {
         if ("user" in type) {
           ({ user, firstMatch } = type);
           const element = { type: constants.DM, section: title, props: null };
-          let obj = { type: type.type, user, nickname: null, onPress: null };
+          const obj = { type: type.type, user, nickname: null, onPress: null };
           let tmp8;
           if (user.username !== firstMatch) {
             tmp8 = firstMatch;
@@ -154,13 +164,13 @@ export default noop.memo(function PeopleScreen(searchContext) {
           items.push(element);
         } else {
           const element1 = { type: constants.GROUP_DM, section: title, props: null };
-          obj = {
+          const obj2 = {
             channel: type,
             onPress(arg0) {
               return closure_2_8(arg0, closure_0);
             },
           };
-          element1.props = obj;
+          element1.props = obj2;
           items.push(element1);
         }
       });
@@ -177,13 +187,13 @@ export default noop.memo(function PeopleScreen(searchContext) {
     }
     return items;
   }, items4);
-  const obj7 = require("useOnPressSearchItem");
+  let obj7 = require("useOnPressSearchItem");
   const messageTabCountsErrorText = require("useSearchScreenError").useMessageTabCountsErrorText({ searchContext });
   if (null != messageTabCountsErrorText) {
-    obj = { text: messageTabCountsErrorText };
+    const obj9 = { text: messageTabCountsErrorText };
     let tmp13 = jsx(require("pages/ErrorScreen"), { text: messageTabCountsErrorText });
   } else {
-    obj1 = { data: memo };
+    const obj10 = { data: memo };
     tmp13 = jsx(require("SearchList"), { data: memo });
   }
   return tmp13;

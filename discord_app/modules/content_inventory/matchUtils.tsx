@@ -7,6 +7,8 @@ import ContentInventoryListenedMediaProvider from "../../../discord_common/js/sh
 import isCrunchyrollActivityDefault from "../activities/utils/isCrunchyrollActivity.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
+const require = globalThis.__r;
+
 function isMatchingListeningActivity(extra, party) {
   if (obj.isListenedSessionEntry(extra)) {
     const first = extra.extra.entries[0];

@@ -72,8 +72,7 @@ class QuestThemePicker {
         if (!obj.isNullOrEmpty(obj[theme])) {
           str = obj[theme];
         }
-        obj = { theme: theme.theme, name: theme.getName(), color: str };
-        return obj;
+        return { theme: theme.theme, name: theme.getName(), color: str };
       });
     }, items4);
     items5 = [,];
@@ -89,8 +88,8 @@ class QuestThemePicker {
     closure_10 = callback;
     items6 = [];
     items6[0] = callback;
-    obj = { style: tmp.themeSection, children: null };
-    obj1 = { style: tmp.themeSelector, children: null };
+    obj1 = { style: tmp.themeSection, children: null };
+    obj12 = { style: tmp.themeSelector, children: null };
     callback1 = closure_3.useCallback(() => {
       if (null != ref.current) {
         callback(tmp.current);
@@ -98,7 +97,7 @@ class QuestThemePicker {
     }, items6);
     items7 = [,];
     items7[0] = memo1.map((backgroundColor) => {
-      let obj = {
+      const obj = {
         style: backgroundColor.themeOption,
         onPress() {
           return callback(backgroundColor.theme);
@@ -111,36 +110,42 @@ class QuestThemePicker {
         themeCircleSelected = tmp3.themeCircleSelected;
       }
       items[2] = themeCircleSelected;
-      const items1 = [callback(isSynced, { style: items })];
-      obj = { variant: "text-xs/medium", color: "text-muted", style: tmp3.themeLabel, children: backgroundColor.name };
-      items1[1] = callback(backgroundColor(allMobileThemes[17]).Text, obj);
+      const items1 = [
+        callback(isSynced, { style: items }),
+        callback(backgroundColor(allMobileThemes[17]).Text, {
+          variant: "text-xs/medium",
+          color: "text-muted",
+          style: backgroundColor.themeLabel,
+          children: backgroundColor.name,
+        }),
+      ];
       obj.children = items1;
       return closure_1_11(closure_5, obj, backgroundColor.theme);
     });
-    obj2 = { style: tmp.resetButton, onPress: callback1, children: null };
-    obj3 = { style: tmp.resetIcon, children: closure_10(closure_0(closure_2[18]).RefreshIcon, { size: "sm" }) };
+    obj13 = { style: tmp.resetButton, onPress: callback1, children: null };
+    obj14 = { style: tmp.resetIcon, children: closure_10(closure_0(closure_2[18]).RefreshIcon, { size: "sm" }) };
     items8 = [,];
-    items8[0] = closure_10(isSynced, obj3);
-    obj4 = { variant: "text-xs/medium", color: "text-muted", style: tmp.themeLabel, children: null };
+    items8[0] = closure_10(isSynced, obj14);
+    obj15 = { variant: "text-xs/medium", color: "text-muted", style: tmp.themeLabel, children: null };
     intl = closure_0(closure_2[19]).intl;
-    obj4.children = intl.string(closure_0(closure_2[19]).t.yBZMsQ);
-    items8[1] = closure_10(closure_0(closure_2[17]).Text, obj4);
-    obj2.children = items8;
-    items7[1] = jsxs(closure_5, obj2);
-    obj1.children = items7;
-    obj.children = jsxs(isSynced, obj1);
-    return closure_10(isSynced, obj);
+    obj15.children = intl.string(closure_0(closure_2[19]).t.yBZMsQ);
+    items8[1] = closure_10(closure_0(closure_2[17]).Text, obj15);
+    obj13.children = items8;
+    items7[1] = jsxs(closure_5, obj13);
+    obj12.children = items7;
+    obj1.children = jsxs(isSynced, obj12);
+    return closure_10(isSynced, obj1);
   }
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, TouchableOpacity: hasOwnProperty } = get_ActivityIndicator);
-let closure_8 = fn(1230).LEGACY_STANDARD_BACKGROUND_THEMES;
+let closure_8 = fn(1228).LEGACY_STANDARD_BACKGROUND_THEMES;
 const ThemeTypes = fn(1085).ThemeTypes;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-fn(4636);
-let createStyles = {
-  themeSection: null,
+const createStyles = fn(4636);
+let obj2 = {
+  themeSection: { marginBottom: nativeDefault.space.PX_8 },
   themeSelector: null,
   themeOption: null,
   themeCircle: null,
@@ -149,11 +154,10 @@ let createStyles = {
   resetButton: null,
   resetIcon: null,
 };
-createStyles = { marginBottom: nativeDefault.space.PX_8 };
-createStyles.themeSection = createStyles;
-createStyles.themeSelector = { flexDirection: "row", gap: nativeDefault.space.PX_12 };
-let obj1 = { flexDirection: "row", gap: nativeDefault.space.PX_12 };
-createStyles.themeOption = { alignItems: "center", gap: nativeDefault.space.PX_4 };
+let obj3 = { marginBottom: nativeDefault.space.PX_8 };
+obj2.themeSelector = { flexDirection: "row", gap: nativeDefault.space.PX_12 };
+let obj4 = { flexDirection: "row", gap: nativeDefault.space.PX_12 };
+obj2.themeOption = { alignItems: "center", gap: nativeDefault.space.PX_4 };
 let size = {
   width: 32,
   height: 32,
@@ -161,12 +165,12 @@ let size = {
   borderWidth: 2,
   borderColor: "transparent",
 };
-createStyles.themeCircle = size;
-let obj2 = { alignItems: "center", gap: nativeDefault.space.PX_4 };
-createStyles.themeCircleSelected = { borderColor: nativeDefault.colors.MOBILE_LEGACY_BUTTON_SECONDARY_BORDER_DEFAULT };
-createStyles.themeLabel = { fontSize: 11 };
-let obj3 = { borderColor: nativeDefault.colors.MOBILE_LEGACY_BUTTON_SECONDARY_BORDER_DEFAULT };
-createStyles.resetButton = { alignItems: "center", gap: nativeDefault.space.PX_4 };
+obj2.themeCircle = size;
+let obj5 = { alignItems: "center", gap: nativeDefault.space.PX_4 };
+obj2.themeCircleSelected = { borderColor: nativeDefault.colors.MOBILE_LEGACY_BUTTON_SECONDARY_BORDER_DEFAULT };
+obj2.themeLabel = { fontSize: 11 };
+let obj6 = { borderColor: nativeDefault.colors.MOBILE_LEGACY_BUTTON_SECONDARY_BORDER_DEFAULT };
+obj2.resetButton = { alignItems: "center", gap: nativeDefault.space.PX_4 };
 const size1 = {
   width: 32,
   height: 32,
@@ -176,8 +180,8 @@ const size1 = {
   justifyContent: "center",
   alignItems: "center",
 };
-createStyles.resetIcon = size1;
-let closure_12 = createStyles.createStyles(createStyles);
+obj2.resetIcon = size1;
+let closure_12 = createStyles.createStyles(obj2);
 size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/quests/native/QuestThemePicker.tsx");
 

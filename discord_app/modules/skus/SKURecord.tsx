@@ -71,7 +71,7 @@ class SKURecord extends tmp2 {
 const prototype = SKURecord.prototype;
 SKURecord["createFromServer"] = function createFromServer(id) {
   const price = id.price;
-  let obj = {
+  const obj = {
     id: id.id,
     type: id.type,
     applicationId: id.application_id,
@@ -162,7 +162,6 @@ SKURecord["createFromServer"] = function createFromServer(id) {
   } = id);
   let tmp14 = null;
   if (null != price) {
-    obj = { amount: null, currency: null, saleAmount: null, salePercentage: null, premium: null };
     ({
       amount: obj2.amount,
       currency: obj2.currency,
@@ -170,7 +169,8 @@ SKURecord["createFromServer"] = function createFromServer(id) {
       sale_percentage: obj2.salePercentage,
       premium: obj2.premium,
     } = price);
-    tmp14 = obj;
+    tmp14 = { amount: null, currency: null, saleAmount: null, salePercentage: null, premium: null };
+    const obj3 = { amount: null, currency: null, saleAmount: null, salePercentage: null, premium: null };
   }
   obj.price = tmp14;
   obj.prices = getPricesFromServerDefault(id.prices);
@@ -237,13 +237,13 @@ SKURecord["createFromServer"] = function createFromServer(id) {
   obj.eligibleOffers = eligible_offers;
   let tmp17 = null;
   if (null != id.preview_asset_paths) {
-    obj = {
+    const obj5 = {
       fgStatic: id.preview_asset_paths.fg_static,
       fgAnimated: id.preview_asset_paths.fg_animated,
       bgStatic: id.preview_asset_paths.bg_static,
       bgAnimated: id.preview_asset_paths.bg_animated,
     };
-    tmp17 = obj;
+    tmp17 = obj5;
   }
   obj.previewAssetPaths = tmp17;
   return new SKURecord(obj);
@@ -308,14 +308,15 @@ prototype["getPrice"] = function getPrice() {
         tmp2 = premium[tmp];
       }
       if (null != tmp2) {
-        let obj = { amount: tmp2.amount, currency: price.currency };
-        return obj;
+        const obj3 = { amount: tmp2.amount, currency: price.currency };
+        return obj3;
       }
     }
     if (flag) {
       if (null != price.saleAmount) {
-        obj = { amount: null, currency: null };
         ({ saleAmount: obj2.amount, currency: obj2.currency } = price);
+        let obj = { amount: null, currency: null };
+        const obj5 = { amount: null, currency: null };
       }
       return obj;
     }

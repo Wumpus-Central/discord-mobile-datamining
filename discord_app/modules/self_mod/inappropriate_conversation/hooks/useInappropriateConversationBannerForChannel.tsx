@@ -15,8 +15,11 @@ export const useInappropriateConversationBannerForChannel = function useInapprop
   channelId,
   LOCATION_CONTEXT_MOBILE,
 ) {
-  const obj = { location: LOCATION_CONTEXT_MOBILE };
-  const isEligibleForInappropriateConversationWarning = obj.useIsEligibleForInappropriateConversationWarning(obj);
+  const isEligibleForInappropriateConversationWarning =
+    SelfModInappropriateConversationExperiment.useIsEligibleForInappropriateConversationWarning({
+      location: LOCATION_CONTEXT_MOBILE,
+    });
+  const obj2 = { location: LOCATION_CONTEXT_MOBILE };
   const safetyAlertsSettingOrDefault = useSafetyAlertsSettingOrDefault.useSafetyAlertsSettingOrDefault();
   const inappropriateConversationWarningsForChannel =
     useInappropriateConversationWarningsForChannel.useInappropriateConversationWarningsForChannel(channelId);

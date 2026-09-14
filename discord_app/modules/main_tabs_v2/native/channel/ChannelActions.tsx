@@ -45,36 +45,41 @@ function ChannelActionButtons(channel) {
   let items1;
   let stateFromStores3;
   let tmp = closure_17();
-  let obj = channel(items1[17]);
-  const canSearchForumPosts = obj.useCanSearchForumPosts(channel);
+  const tmp4 = screenIndex(items1[16])(channel);
+  const canSearchForumPosts = channel(items1[17]).useCanSearchForumPosts(channel);
   let tmp7 = screenIndex(items1[18])();
-  let obj1 = channel(items1[19]);
+  let obj = channel(items1[17]);
   const items = [stateFromStores3];
   items1 = [];
-  const stateFromStores = obj1.useStateFromStores(items, () =>
+  const stateFromStores = channel(items1[19]).useStateFromStores(items, () =>
     ActiveThreadsStore.hasThreadsForChannel(channel.guild_id, channel.id),
   );
-  let obj2 = channel(items1[20]);
-  const canJoinThreadVoice = obj2.useCanJoinThreadVoice(channel);
-  let obj3 = channel(items1[19]);
+  let obj2 = channel(items1[19]);
+  const canJoinThreadVoice = channel(items1[20]).useCanJoinThreadVoice(channel);
+  let obj3 = channel(items1[20]);
   const items2 = [VoiceStateStore];
-  const stateFromStores1 = obj3.useStateFromStores(items2, () => VoiceStateStore.isInChannel(channel.id));
+  const stateFromStores1 = channel(items1[19]).useStateFromStores(items2, () =>
+    VoiceStateStore.isInChannel(channel.id),
+  );
   let obj4 = channel(items1[19]);
   const items3 = [VoiceStateStore];
-  const stateFromStores2 = obj4.useStateFromStores(
+  const stateFromStores2 = channel(items1[19]).useStateFromStores(
     items3,
     () => Object.keys(VoiceStateStore.getVoiceStatesForChannel(channel.id)).length,
   );
   let fn = screenIndex(items1[21])(channel);
-  let obj5 = channel(items1[22]);
-  const conversationsHeaderButton = obj5.useConversationsHeaderButton(channel);
-  let obj6 = channel(items1[23]);
-  const isGameInvitePostVoiceEnabled = obj6.useIsGameInvitePostVoiceEnabled(channel);
-  let obj7 = channel(items1[23]);
-  const isGameInvitesPost = obj7.useIsGameInvitesPost(channel);
-  let obj8 = channel(items1[24]);
-  const isVibegrationsChannelCandidate = obj8.useIsVibegrationsChannelCandidate(channel, "ChannelActions");
-  const tmp4 = screenIndex(items1[16])(channel);
+  let obj5 = channel(items1[19]);
+  const conversationsHeaderButton = channel(items1[22]).useConversationsHeaderButton(channel);
+  let obj6 = channel(items1[22]);
+  const isGameInvitePostVoiceEnabled = channel(items1[23]).useIsGameInvitePostVoiceEnabled(channel);
+  const obj7 = channel(items1[23]);
+  const isGameInvitesPost = channel(items1[23]).useIsGameInvitesPost(channel);
+  const obj8 = channel(items1[23]);
+  const isVibegrationsChannelCandidate = channel(items1[24]).useIsVibegrationsChannelCandidate(
+    channel,
+    "ChannelActions",
+  );
+  const obj9 = channel(items1[24]);
   const items4 = [VibegrationsAppChannelsStore];
   const items5 = [channel.id];
   stateFromStores3 = channel(items1[19]).useStateFromStores(
@@ -83,28 +88,30 @@ function ChannelActionButtons(channel) {
     items5,
   );
   if (isVibegrationsChannelCandidate) {
-    obj = { style: tmp.actionWrapper, children: null };
+    const obj11 = { style: tmp.actionWrapper, children: null };
     let tmp40 = null;
     if (!stateFromStores3) {
-      obj = { source: null, IconComponent: null, onPress: null, accessibilityLabel: null };
-      let tmp2Result = tmp2(tmp3[25]);
-      obj.IconComponent = tmp5(tmp3[26]).RetryIcon;
-      obj.onPress = function onPress() {
-        const tmp = restartVibegrationsAppFramesDefault;
-        return tmp(VibegrationsUtils.vibegrationsAppIdFromTopic(channel.topic));
+      const obj12 = {
+        source: null,
+        IconComponent: tmp5(tmp3[26]).RetryIcon,
+        onPress() {
+          const tmp = restartVibegrationsAppFramesDefault;
+          return tmp(VibegrationsUtils.vibegrationsAppIdFromTopic(channel.topic));
+        },
+        accessibilityLabel: null,
       };
       const intl7 = tmp5(tmp3[28]).intl;
-      obj.accessibilityLabel = intl7.string(tmp2(tmp3[29]).xKexN1);
-      tmp40 = closure_14(tmp2Result, obj);
+      obj12.accessibilityLabel = intl7.string(tmp2(tmp3[29]).xKexN1);
+      tmp40 = closure_14(tmp2(tmp3[25]), obj12);
+      let tmp2Result = tmp2(tmp3[25]);
     }
     const items6 = [tmp40];
-    tmp2Result = tmp2(tmp3[25]);
     if (stateFromStores3) {
       let ChatIcon = tmp5(tmp3[30]).AppsIcon;
     } else {
       ChatIcon = tmp5(tmp3[31]).ChatIcon;
     }
-    obj1 = {
+    const obj13 = {
       noMargin: true,
       source: null,
       IconComponent: ChatIcon,
@@ -114,11 +121,11 @@ function ChannelActionButtons(channel) {
       accessibilityLabel: null,
     };
     const intl8 = tmp5(tmp3[28]).intl;
-    let tmp2Result1 = tmp2(tmp3[29]);
-    obj1.accessibilityLabel = intl8.string(stateFromStores3 ? tmp2Result1.jLMpUv : tmp2Result1.aWVf4j);
-    items6[1] = closure_14(tmp2Result, obj1);
-    obj.children = items6;
-    return closure_15(conversationsHeaderButton, obj);
+    let tmp2Result4 = tmp2(tmp3[29]);
+    obj13.accessibilityLabel = intl8.string(stateFromStores3 ? tmp2Result4.jLMpUv : tmp2Result4.aWVf4j);
+    items6[1] = closure_14(tmp2(tmp3[25]), obj13);
+    obj11.children = items6;
+    return closure_15(conversationsHeaderButton, obj11);
   } else {
     if (canJoinThreadVoice) {
       if (isGameInvitesPost) {
@@ -127,7 +134,7 @@ function ChannelActionButtons(channel) {
           if (!stateFromStores1) {
             tmp21 = tmp12;
           }
-          obj2 = {
+          let obj14 = {
             source: null,
             IconComponent: tmp21 ? LfgVoiceActiveIcon : LfgVoiceInactiveIcon,
             buttonText: null,
@@ -142,26 +149,26 @@ function ChannelActionButtons(channel) {
               StringResult = String(stateFromStores2);
             }
           }
-          obj2.buttonText = StringResult;
+          obj14.buttonText = StringResult;
           if (stateFromStores1) {
             fn = () => PrivateChannelCallUtils.openChannelCallModal(channel);
           }
-          obj2.onPress = fn;
+          obj14.onPress = fn;
           const intl2 = tmp5(tmp3[28]).intl;
           const string2 = intl2.string;
-          let t = tmp5(tmp3[28]).t;
+          let t1 = tmp5(tmp3[28]).t;
           if (stateFromStores1) {
-            t = t["4ry6yi"];
-            let string2Result = string2(t);
+            t1 = t1["4ry6yi"];
+            let string2Result = string2(t1);
           } else {
-            string2Result = string2(t.My50nf);
+            string2Result = string2(t1.My50nf);
           }
-          obj2.accessibilityLabel = string2Result;
-          obj2 = items1.push(obj2);
+          obj14.accessibilityLabel = string2Result;
+          obj14 = items1.push(obj14);
         }
       } else {
         if (tmp18) {
-          obj3 = {
+          const obj15 = {
             source: null,
             IconComponent: stateFromStores1 ? EndCallIcon : JoinCallIcon,
             onPress: null,
@@ -171,92 +178,91 @@ function ChannelActionButtons(channel) {
           if (!stateFromStores1) {
             fn2 = () => PrivateChannelCallUtils.openChannelCallModal(channel);
           }
-          obj3.onPress = fn2;
+          obj15.onPress = fn2;
           const intl = tmp5(tmp3[28]).intl;
           const string = intl.string;
-          t = tmp5(tmp3[28]).t;
+          const t = tmp5(tmp3[28]).t;
           if (stateFromStores1) {
             let stringResult = string(t["4ry6yi"]);
           } else {
             stringResult = string(t.My50nf);
           }
-          obj3.accessibilityLabel = stringResult;
-          items1.push(obj3);
+          obj15.accessibilityLabel = stringResult;
+          items1.push(obj15);
         }
         tmp18 = channel.isVocalThread() && tmp12;
       }
     }
     const type = channel.type;
     if (constants.GUILD_DIRECTORY === type) {
-      obj4 = {
+      const obj16 = {
         source: tmp2(tmp3[34]),
         IconComponent: tmp5(tmp3[35]).MagnifyingGlassIcon,
         onPress() {
-          const obj = { channel };
-          obj.open(obj);
+          GuildDirectorySearchModalActionCreatorsDefault.open({ channel });
         },
         accessibilityLabel: null,
       };
       const intl5 = tmp5(tmp3[28]).intl;
-      obj4.accessibilityLabel = intl5.string(tmp5(tmp3[28]).t["5h0QOP"]);
-      items1.push(obj4);
+      obj16.accessibilityLabel = intl5.string(tmp5(tmp3[28]).t["5h0QOP"]);
+      items1.push(obj16);
     } else {
       if (constants.GUILD_FORUM !== type) {
         if (constants.GUILD_MEDIA !== type) {
           if (null != conversationsHeaderButton) {
             items1.push(conversationsHeaderButton);
           }
-          obj5 = {
+          const obj17 = {
             source: tmp2(tmp3[34]),
             IconComponent: tmp5(tmp3[35]).MagnifyingGlassIcon,
             onPress() {
-              let obj = channel;
               closure_9(channel.id, true, "initial");
-              let obj1 = PlatformUtils;
-              if (obj1.isIOS()) {
-                let tmp2Result = ChatInputUtils;
-                const chatInputRef = tmp2Result.getChatInputRef(obj.id, screenIndex);
+              if (obj2.isIOS()) {
+                const chatInputRef = ChatInputUtils.getChatInputRef(channel.id, screenIndex);
                 if (chatInputRef != null) {
                   chatInputRef.blur();
                 }
+                const tmp2Result = ChatInputUtils;
               }
-              const guildId = obj.getGuildId();
-              tmp2Result = useSearchContext;
-              const channelDetailsSearchContext = tmp2Result.getChannelDetailsSearchContext(
-                obj.id,
+              obj2 = PlatformUtils;
+              const guildId = channel.getGuildId();
+              const isThreadResult = channel.isThread();
+              const channelDetailsSearchContext = useSearchContext.getChannelDetailsSearchContext(
+                channel.id,
                 guildId,
-                obj.isThread(),
+                isThreadResult,
               );
-              const isThreadResult = obj.isThread();
-              obj = { searchContext: channelDetailsSearchContext, searchLocation: constants.CHANNEL_HEADER };
-              search_tracking_TrackingDefault.trackSearchOpened(obj);
-              if (tmp2Result1.isSwipeToMemberListEnabled()) {
+              const tmp2Result4 = useSearchContext;
+              search_tracking_TrackingDefault.trackSearchOpened({
+                searchContext: channelDetailsSearchContext,
+                searchLocation: constants.CHANNEL_HEADER,
+              });
+              const obj3 = { searchContext: channelDetailsSearchContext, searchLocation: constants.CHANNEL_HEADER };
+              if (tmp2Result5.isSwipeToMemberListEnabled()) {
                 const ComponentDispatch = ComponentDispatchUtils.ComponentDispatch;
-                obj = { source: "channel-header-search", channelId: null, screenIndex: null };
-                obj.channelId = obj.id;
-                obj.screenIndex = screenIndex;
-                ComponentDispatch.dispatch(constants3.SHOW_CHANNEL_DETAILS, obj);
+                const obj4 = { source: "channel-header-search", channelId: channel.id, screenIndex };
+                ComponentDispatch.dispatch(constants3.SHOW_CHANNEL_DETAILS, obj4);
               } else {
                 const rootNavigationRef = RootNavigationRef.getRootNavigationRef();
                 if (null != rootNavigationRef) {
                   if (rootNavigationRef.isReady()) {
-                    obj1 = { channelId: obj.id, search: true, source: "channel-header-search" };
-                    rootNavigationRef.navigate("sidebar", obj1);
+                    const obj5 = { channelId: channel.id, search: true, source: "channel-header-search" };
+                    rootNavigationRef.navigate("sidebar", obj5);
                   }
                 }
-                const tmp2Result2 = RootNavigationRef;
+                const tmp2Result6 = RootNavigationRef;
               }
-              tmp2Result1 = SwipeToMemberListUtils;
+              tmp2Result5 = SwipeToMemberListUtils;
             },
             accessibilityLabel: null,
           };
           const intl3 = tmp5(tmp3[28]).intl;
-          obj5.accessibilityLabel = intl3.string(tmp5(tmp3[28]).t["5h0QOP"]);
-          items1.push(obj5);
+          obj17.accessibilityLabel = intl3.string(tmp5(tmp3[28]).t["5h0QOP"]);
+          items1.push(obj17);
         }
       }
       if (canSearchForumPosts) {
-        obj6 = {
+        const obj18 = {
           source: tmp2(tmp3[34]),
           IconComponent: tmp5(tmp3[35]).MagnifyingGlassIcon,
           onPress() {
@@ -265,8 +271,8 @@ function ChannelActionButtons(channel) {
           accessibilityLabel: null,
         };
         const intl4 = tmp5(tmp3[28]).intl;
-        obj6.accessibilityLabel = intl4.string(tmp5(tmp3[28]).t["5h0QOP"]);
-        items1.push(obj6);
+        obj18.accessibilityLabel = intl4.string(tmp5(tmp3[28]).t["5h0QOP"]);
+        items1.push(obj18);
       }
     }
     if (tmp7) {
@@ -294,7 +300,7 @@ function ChannelActionButtons(channel) {
       tmp7 = !hasItem;
     }
     if (!tmp7) {
-      obj7 = {
+      const obj19 = {
         source: tmp2(tmp3[45]),
         IconComponent: tmp5(tmp3[46]).ThreadIcon,
         onPress() {
@@ -303,15 +309,15 @@ function ChannelActionButtons(channel) {
         accessibilityLabel: null,
       };
       const intl6 = tmp5(tmp3[28]).intl;
-      obj7.accessibilityLabel = intl6.string(tmp5(tmp3[28]).t.B2panI);
-      items1.unshift(obj7);
+      obj19.accessibilityLabel = intl6.string(tmp5(tmp3[28]).t.B2panI);
+      items1.unshift(obj19);
     }
-    obj8 = {
+    const obj20 = {
       style: tmp.actionWrapper,
       children: items1.map((accessibilityLabel, index) => {
         closure_0 = accessibilityLabel;
         if (accessibilityLabel === conversationsHeaderButton) {
-          let obj = {
+          const obj2 = {
             isLast: tmp,
             children(arg0) {
               closure_0 = arg0;
@@ -329,11 +335,11 @@ function ChannelActionButtons(channel) {
           };
           let tmp9 = closure_2_14(
             ConversationCoachmark.ConversationCoachmark,
-            obj,
+            obj2,
             accessibilityLabel.accessibilityLabel,
           );
         } else {
-          obj = { noMargin: tmp };
+          let obj = { noMargin: tmp };
           let merged = Object.assign(accessibilityLabel);
           obj.key = accessibilityLabel.accessibilityLabel;
           tmp9 = createElement(IconActionButtonDefault, { noMargin: tmp });
@@ -341,16 +347,15 @@ function ChannelActionButtons(channel) {
         return tmp9;
       }),
     };
-    return closure_14(conversationsHeaderButton, obj8);
+    return closure_14(conversationsHeaderButton, obj20);
   }
   const obj10 = channel(items1[19]);
 }
 function WrappedChannelNavButtons(channelId) {
   channelId = channelId.channelId;
   ({ screenIndex, showCreateThread } = channelId);
-  let obj = channelId(504);
   const items = [ChannelStore];
-  const stateFromStores = obj.useStateFromStores(items, () => ChannelStore.getChannel(channelId));
+  const stateFromStores = channelId(504).useStateFromStores(items, () => ChannelStore.getChannel(channelId));
   channelId(4847);
   let tmp4 = null;
   if (null != stateFromStores) {
@@ -358,8 +363,8 @@ function WrappedChannelNavButtons(channelId) {
     if (!tmp3) {
       tmp4 = null;
       if (!showCreateThread) {
-        obj = { channel: stateFromStores, screenIndex };
-        tmp4 = closure_14(ChannelActionButtons, obj);
+        const obj2 = { channel: stateFromStores, screenIndex };
+        tmp4 = closure_14(ChannelActionButtons, obj2);
       }
     }
   }
@@ -385,10 +390,8 @@ export default function ChannelActions(channelId) {
   channelId = channelId.channelId;
   const screenIndex = channelId.screenIndex;
   ({ containerStyle, showCreateThread } = channelId);
-  let obj = channelId(504);
   const items = [ChannelStore];
-  const stateFromStoresObject = obj.useStateFromStoresObject(items, () => {
-    let obj = ChannelStore;
+  const stateFromStoresObject = channelId(504).useStateFromStoresObject(items, () => {
     const channel = ChannelStore.getChannel(channelId);
     let flag;
     if (channel != null) {
@@ -397,8 +400,8 @@ export default function ChannelActions(channelId) {
     if (flag == null) {
       flag = false;
     }
-    obj = { isMultiUserDM: flag, isDM: null };
-    const channel1 = obj.getChannel(channelId);
+    const obj2 = { isMultiUserDM: flag, isDM: null };
+    const channel1 = ChannelStore.getChannel(channelId);
     let flag2;
     if (channel1 != null) {
       flag2 = channel1.isDM();
@@ -406,25 +409,26 @@ export default function ChannelActions(channelId) {
     if (flag2 == null) {
       flag2 = false;
     }
-    obj.isDM = flag2;
-    return obj;
+    obj2.isDM = flag2;
+    return obj2;
   });
   ({ isMultiUserDM, isDM } = stateFromStoresObject);
-  let obj1 = channelId(7989);
-  obj = { style: containerStyle, children: null };
-  if (obj1.useHasForumSearchQuery(channelId)) {
-    obj = { channelId };
-    let tmp4Result = closure_14(channelId(13388).ForumChannelCloseSearchButton, obj);
+  const obj = channelId(504);
+  const tmp = channelId;
+  const obj3 = { style: containerStyle, children: null };
+  if (obj2.useHasForumSearchQuery(channelId)) {
+    const obj4 = { channelId };
+    let tmp4Result = closure_14(tmp(13389).ForumChannelCloseSearchButton, obj4);
   } else {
     if (!isDM) {
       if (!isMultiUserDM) {
-        obj1 = { channelId, screenIndex, showCreateThread };
-        tmp4Result = closure_14(WrappedChannelNavButtons, obj1);
+        const obj5 = { channelId, screenIndex, showCreateThread };
+        tmp4Result = closure_14(WrappedChannelNavButtons, obj5);
       }
     }
-    const obj2 = { channelId, screenIndex };
-    tmp4Result = closure_14(PrivateChannelButtonsDefault, obj2);
+    const obj6 = { channelId, screenIndex };
+    tmp4Result = closure_14(PrivateChannelButtonsDefault, obj6);
   }
-  obj.children = tmp4Result;
-  return closure_14(View, obj);
+  obj3.children = tmp4Result;
+  return closure_14(View, obj3);
 }

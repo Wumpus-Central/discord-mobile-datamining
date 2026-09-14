@@ -17,16 +17,17 @@ function IconWithBadge(includeNotificationsCount) {
   _require = undefined;
   let memo;
   const tmp = closure_8();
-  let obj = require("initialize");
   const items = [GuildReadStateStore];
-  const stateFromStores = obj.useStateFromStores(items, () => totalMentionCount.getTotalMentionCount());
+  const stateFromStores = require("initialize").useStateFromStores(items, () =>
+    totalMentionCount.getTotalMentionCount(),
+  );
   let num = 0;
   if (null != stateFromStores) {
     num = stateFromStores;
   }
   let num2 = 0;
   if (flag) {
-    num2 = memo(16489)().value;
+    num2 = memo(16491)().value;
   }
   const sum = num + num2;
   _require = sum;
@@ -54,12 +55,14 @@ function IconWithBadge(includeNotificationsCount) {
       return size;
     }
   }, items2);
+  const obj = require("initialize");
+  const tmp5 = memo;
   let size;
   if (tmp2Result.isAndroid()) {
     size = { height: 40, width: 40, paddingTop: 8, marginRight: -8 };
   }
-  obj = { style: size, children: null };
-  obj = { style: tmp.backIcon, children: null };
+  const obj2 = { style: size, children: null };
+  const obj3 = { style: tmp.backIcon, children: null };
   tmp2Result = require("utils/PlatformUtils");
   if (null != memo1) {
     const items3 = [memo1];
@@ -67,7 +70,7 @@ function IconWithBadge(includeNotificationsCount) {
   } else {
     items4 = [];
   }
-  const obj1 = {
+  const obj4 = {
     cutouts: items4,
     children: closure_6(includeNotificationsCount.Icon, {
       size: "md",
@@ -75,39 +78,37 @@ function IconWithBadge(includeNotificationsCount) {
       color: "interactive-text-default",
     }),
   };
-  const items5 = [closure_6(memo(8940), obj1)];
+  const items5 = [closure_6(tmp5(8940), obj4)];
   let tmp9Result = null;
   if (sum > 0) {
-    const obj3 = { style: tmp.badgeWrapper, children: null };
-    const obj4 = { value: sum, maxValue: 99 };
-    obj3.children = closure_6(tmp2(1178).Badge, obj4);
-    tmp9Result = closure_6(View, obj3);
+    const obj6 = { style: tmp.badgeWrapper, children: null };
+    const obj7 = { value: sum, maxValue: 99 };
+    obj6.children = closure_6(tmp2(1176).Badge, obj7);
+    tmp9Result = closure_6(View, obj6);
   }
   items5[1] = tmp9Result;
-  obj.children = items5;
-  obj.children = closure_7(View, obj);
-  return closure_6(View, obj);
+  obj3.children = items5;
+  obj2.children = closure_7(View, obj3);
+  return closure_6(View, obj2);
 }
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-fn(4636);
-let createStyles = {
+const createStyles = fn(4636);
+let obj2 = {
   badgeWrapper: { position: "absolute", top: 16, left: 12 },
   backIcon: { height: 24, width: 24 },
-  iconWithBadge: null,
+  iconWithBadge: {
+    display: "flex",
+    flexDirection: "row",
+    alignItems: "center",
+    gap: nativeDefault.space.PX_4,
+    borderRadius: nativeDefault.modules.button.BORDER_RADIUS,
+    padding: 7,
+    backgroundColor: nativeDefault.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT,
+  },
 };
-createStyles = {
-  display: "flex",
-  flexDirection: "row",
-  alignItems: "center",
-  gap: nativeDefault.space.PX_4,
-  borderRadius: nativeDefault.modules.button.BORDER_RADIUS,
-  padding: 7,
-  backgroundColor: nativeDefault.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT,
-};
-createStyles.iconWithBadge = createStyles;
-let closure_8 = createStyles.createStyles(createStyles);
+let closure_8 = createStyles.createStyles(obj2);
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/BackIconWithBadge.tsx");
 
@@ -141,12 +142,12 @@ export const LeftBackIconWithBadge = function LeftBackIconWithBadge(includeNotif
 };
 export const CloseIconWithBadgeOnSide = function CloseIconWithBadgeOnSide(count) {
   count = count.count;
-  let obj = { style: closure_8().iconWithBadge, children: null };
+  const obj = { style: closure_8().iconWithBadge, children: null };
   const items = [timestampProducer(XLargeIcon.XLargeIcon, { size: "sm", color: "white" })];
   let tmp3Result = null;
   if (count > 0) {
-    obj = { value: count };
-    tmp3Result = timestampProducer(native.Badge, obj);
+    const obj2 = { value: count };
+    tmp3Result = timestampProducer(native.Badge, obj2);
   }
   items[1] = tmp3Result;
   obj.children = items;

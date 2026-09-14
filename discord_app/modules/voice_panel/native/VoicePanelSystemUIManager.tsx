@@ -7,8 +7,8 @@ import noop from "../../../../_runtime/metro/00019__.js";
 import ChannelRTCStore from "../../calls/ChannelRTCStore.tsx";
 
 require = fn;
-const VoicePanelModes = fn(12402).VoicePanelModes;
-const VoicePanelControlsModes = fn(12400).VoicePanelControlsModes;
+const VoicePanelModes = fn(12403).VoicePanelModes;
+const VoicePanelControlsModes = fn(12401).VoicePanelControlsModes;
 const ParticipantTypes = fn(4657).ParticipantTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: c10, jsxs: closure_11 } = jsxProd);
@@ -122,7 +122,7 @@ export default noop.memo(function VoicePanelSystemUIManager() {
   const handleStateChange = memo.handleStateChange;
   const items1 = [cancelPendingDebounce];
   const effect = windowDimensions.useEffect(() => () => cancelPendingDebounce(), items1);
-  focused(mode[11]);
+  const tmp7 = controlsSpecs(windowDimensions.useState(false), 2);
   const fn = function v() {
     value = focused.get();
     let id;
@@ -147,25 +147,25 @@ export default noop.memo(function VoicePanelSystemUIManager() {
     obj = cheapWorkletShallowEqual;
     tmp = current;
   };
-  let obj = {
+  let obj = focused(mode[11]);
+  fn2.__closure = {
     cheapWorkletShallowEqual: focused(mode[12]).cheapWorkletShallowEqual,
     runOnJS: focused(mode[11]).runOnJS,
     handleStateChange,
   };
-  fn2.__closure = obj;
   fn2.__workletHash = 3592680244658;
   fn2.__initData = __initData2;
   const animatedReaction = obj.useAnimatedReaction(fn, fn2);
   let tmp15 = null;
   if (tmp6[0]) {
-    obj = { hidden: !tmp5, barStyle: "light-content" };
-    tmp15 = cancelPendingDebounce(tmp(tmp2[13]), obj);
+    const obj3 = { hidden: !tmp5, barStyle: "light-content" };
+    tmp15 = cancelPendingDebounce(tmp(tmp2[13]), obj3);
   }
-  const obj1 = { children: null };
+  const obj4 = { children: null };
   const items2 = [
     tmp15,
     cancelPendingDebounce(channelId(mode[14]), { prefersHidden: tmp8, prefersDeferringSystemGestures: tmp9[0] }),
   ];
-  obj1.children = items2;
-  return closure_11(handleStateChange, obj1);
+  obj4.children = items2;
+  return closure_11(handleStateChange, obj4);
 });

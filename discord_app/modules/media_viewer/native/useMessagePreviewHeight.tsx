@@ -2,6 +2,8 @@
 import 00560__ from "../../../../_runtime/metro/00560__.js";
 import size from "../../../../_runtime/metro/00002__.js";
 
+const require = globalThis.__r;
+
 const useMessagePreviewHeightStore = module_560.create(() => ({ collapsedHeight: 0, expandedHeight: 0 }));
 const result = size.fileFinishedImporting("modules/media_viewer/native/useMessagePreviewHeight.tsx");
 

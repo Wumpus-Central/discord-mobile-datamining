@@ -17,8 +17,7 @@ export default function LeaveGuildElement(guild) {
   const reportId = guild.reportId;
   _slicedToArray = undefined;
   noop = undefined;
-  const tmp = _slicedToArray(noop.useState(false), 2);
-  _slicedToArray = tmp[1];
+  [obj.disabled, _slicedToArray] = noop.useState(false);
   noop = tmp2;
   const items = [null != guild];
   const effect = noop.useEffect(() => {
@@ -28,8 +27,8 @@ export default function LeaveGuildElement(guild) {
   const onConfirm = noop.useCallback(() => {
     if (null != guild) {
       addCallback(() => addCallback(reportId[4]).leaveGuild(id.id));
-      const obj = { guild_id: tmp.id, report_id: reportId };
-      obj.trackWithMetadata(AnalyticEvents.IAR_LEAVE_GUILD_BUTTON_CLICKED, obj);
+      const obj2 = { guild_id: tmp.id, report_id: reportId };
+      AppAnalyticsUtilsDefault.trackWithMetadata(AnalyticEvents.IAR_LEAVE_GUILD_BUTTON_CLICKED, obj2);
       closure_3(true);
     }
   }, items1);
@@ -52,24 +51,23 @@ export default function LeaveGuildElement(guild) {
     name = guild.name;
   }
   obj.description = intl3.formatToPlainString(guild(reportId[7]).t["26mR6/"], { guildName: name });
-  obj.disabled = tmp[0];
   obj.onPress = function onPress() {
-    const obj = { title: null, body: null, confirmText: null, cancelText: null, onConfirm: null, confirmColor: null };
+    const obj2 = { title: null, body: null, confirmText: null, cancelText: null, onConfirm: null, confirmColor: null };
     const intl = util.intl;
-    obj.title = intl.string(util.t.J2TBi3);
+    obj2.title = intl.string(util.t.J2TBi3);
     const intl2 = util.intl;
     let name;
     if (guild != null) {
       name = guild.name;
     }
-    obj.body = intl2.formatToPlainString(util.t.TB1og8, { name });
+    obj2.body = intl2.formatToPlainString(util.t.TB1og8, { name });
     const intl3 = util.intl;
-    obj.confirmText = intl3.string(util.t.p89ACt);
+    obj2.confirmText = intl3.string(util.t.p89ACt);
     const intl4 = util.intl;
-    obj.cancelText = intl4.string(util.t.gm1Vej);
-    obj.onConfirm = onConfirm;
-    obj.confirmColor = common_AlertDefault.Colors.RED;
-    obj.show(obj);
+    obj2.cancelText = intl4.string(util.t.gm1Vej);
+    obj2.onConfirm = onConfirm;
+    obj2.confirmColor = common_AlertDefault.Colors.RED;
+    actions_AlertActionCreatorsDefault.show(obj2);
   };
   obj.icon = jsx(guild(reportId[10]).DoorExitIcon, { color: "text-feedback-critical" });
   return jsx(guild.addCallback(reportId[6]), {

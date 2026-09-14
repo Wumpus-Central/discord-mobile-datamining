@@ -11,7 +11,7 @@ import SettingsConstants from "../../core/native/SettingsConstants.tsx";
 import HarvesterUtils from "../../../harvester/HarvesterUtils.tsx";
 import UserStore from "../../../../stores/UserStore.tsx";
 import Constants from "../../../../Constants.tsx";
-import identity from "../../../../../_runtime/metro/01244__.js";
+import identity from "../../../../../_runtime/metro/01242__.js";
 import SettingBuilders from "../../../settings/native/renderer/SettingBuilders.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
 
@@ -105,7 +105,7 @@ export const fetchHarvestStatus = function fetchHarvestStatus() {
   harvestStatus.then(
     (result) => {
       const body = result;
-      body(1249).batchUpdates(() => {
+      body(1247).batchUpdates(() => {
         state.setState({ isRequesting: false, harvestRequest: body.body });
       });
     },

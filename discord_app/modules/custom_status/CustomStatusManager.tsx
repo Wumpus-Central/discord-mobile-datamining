@@ -9,7 +9,7 @@ const Constants = fn(1074);
 const timeout = new fn(1952).Timeout();
 const timeout1 = new fn(1952).Timeout();
 const timeout2 = new fn(1952).Timeout();
-let prototype = function CustomStatusManager() {
+const prototype = function CustomStatusManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
   require = applyArgumentsResult;
   applyArgumentsResult.actions = {
@@ -85,30 +85,27 @@ let prototype = function CustomStatusManager() {
             timeout.start(
               diff,
               () => {
-                let obj = { nextStatus: constants2.ONLINE, analyticsContext: null };
-                obj = { location: null };
-                obj = { object: constants.CUSTOM_STATUS_MANAGER };
-                obj.location = obj;
-                obj.analyticsContext = obj;
+                const obj = { nextStatus: constants2.ONLINE, analyticsContext: null };
+                const obj2 = { location: { object: constants.CUSTOM_STATUS_MANAGER } };
+                obj.analyticsContext = obj2;
                 closure_1_1(dependencyMap[5])(obj);
               },
               true,
             );
           } else {
-            let obj = { nextStatus: tmp4.ONLINE, analyticsContext: null };
-            obj = { location: null };
-            const obj1 = { object: constants.CUSTOM_STATUS_MANAGER };
-            obj.location = obj1;
-            obj.analyticsContext = obj;
-            setUserStatusDefault(obj);
+            let obj2 = { nextStatus: tmp4.ONLINE, analyticsContext: null };
+            const obj3 = { location: null };
+            const obj4 = { object: constants.CUSTOM_STATUS_MANAGER };
+            obj3.location = obj4;
+            obj2.analyticsContext = obj3;
+            setUserStatusDefault(obj2);
             timeout.stop();
           }
         }
       }
     }
-    obj = timeout;
     if (null != timeout) {
-      obj.stop();
+      timeout.stop();
     }
   };
   applyArgumentsResult.lazilyMigrateStatusCreatedAt = function lazilyMigrateStatusCreatedAt() {
@@ -163,8 +160,8 @@ let prototype = function CustomStatusManager() {
   return applyArgumentsResult;
 }.prototype;
 class prototype extends tmp6 {}
-prototype = new prototype();
+const prototype1 = new prototype();
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/custom_status/CustomStatusManager.tsx");
 
-export default prototype;
+export default prototype1;

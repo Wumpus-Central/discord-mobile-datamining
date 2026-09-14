@@ -13,8 +13,8 @@ const result = size.fileFinishedImporting(
 
 export default function SettingsDesignSystemsScreen() {
   const node = noop.useMemo(() => {
-    let obj = { sections: null };
-    obj = { label: "Components", settings: null };
+    const obj2 = { sections: null };
+    const obj3 = { label: "Components", settings: null };
     const items = [, , , , , , , , , , , , , , ,];
     ({
       DESIGN_SYSTEMS_TEXT: arr[0],
@@ -34,9 +34,9 @@ export default function SettingsDesignSystemsScreen() {
       DESIGN_SYSTEM_PILE: arr[14],
       DESIGN_SYSTEM_HAPTICS: arr[15],
     } = constants);
-    obj.settings = items;
-    const items1 = [obj, , ,];
-    const obj1 = { label: "In Progress", settings: null };
+    obj3.settings = items;
+    const items1 = [obj3, , ,];
+    const obj4 = { label: "In Progress", settings: null };
     const items2 = [, , , ,];
     ({
       DESIGN_SYSTEM_SHEETS: arr3[0],
@@ -45,19 +45,19 @@ export default function SettingsDesignSystemsScreen() {
       DESIGN_SYSTEMS_TOAST: arr3[3],
       DESIGN_SYSTEMS_MODAL: arr3[4],
     } = constants);
-    obj1.settings = items2;
-    items1[1] = obj1;
-    const obj2 = { label: "Experimental", settings: null };
+    obj4.settings = items2;
+    items1[1] = obj4;
+    const obj5 = { label: "Experimental", settings: null };
     const items3 = [,];
     ({ DESIGN_SYSTEMS_BACKGROUND_BLUR_VIEW: arr4[0], DESIGN_SYSTEMS_EXPERIMENTAL_BUTTONS: arr4[1] } = constants);
-    obj2.settings = items3;
-    items1[2] = obj2;
-    const obj3 = { label: "Legacy Audit", settings: null };
+    obj5.settings = items3;
+    items1[2] = obj5;
+    const obj6 = { label: "Legacy Audit", settings: null };
     const items4 = [constants.DESIGN_SYSTEMS_LEGACY_BUTTON];
-    obj3.settings = items4;
-    items1[3] = obj3;
-    obj.sections = items1;
-    return obj.createList(obj);
+    obj6.settings = items4;
+    items1[3] = obj6;
+    obj2.sections = items1;
+    return SettingBuilders.createList(obj2);
   }, []);
   return jsx(SettingLayoutDefault, { node });
 }

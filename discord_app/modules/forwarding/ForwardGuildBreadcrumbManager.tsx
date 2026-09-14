@@ -22,8 +22,8 @@ function fetchForwardReferencedGuilds(message_reference) {
       tmp2 = null == BasicGuildStore.getGuildOrStatus(guild_id);
     }
     if (tmp2) {
-      const result = guild_id(17530).queueMessageLinkFetch(() => BasicGuildActionCreators.fetchBasicGuild(guild_id));
-      const obj = guild_id(17530);
+      const result = guild_id(17531).queueMessageLinkFetch(() => BasicGuildActionCreators.fetchBasicGuild(guild_id));
+      const obj = guild_id(17531);
     }
   }
 }
@@ -35,9 +35,9 @@ class ForwardGuildBreadcrumbManager extends tmp6 {
     return tmp3;
   }
 }
-tmp = new tmp(tmp4, tmp3, tmp2, Object, defineProperty, ForwardGuildBreadcrumbManager, importDefault);
-setupLoadFromMessageManagerHandlersDefault(tmp, fetchForwardReferencedGuilds);
+const tmp5 = new tmp(tmp4, tmp3, tmp2, Object, defineProperty, ForwardGuildBreadcrumbManager, importDefault);
+setupLoadFromMessageManagerHandlersDefault(tmp5, fetchForwardReferencedGuilds);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/forwarding/ForwardGuildBreadcrumbManager.tsx");
 
-export default tmp;
+export default tmp5;

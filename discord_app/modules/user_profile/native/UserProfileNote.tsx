@@ -14,8 +14,8 @@ export default function UserProfileNote(style) {
   const userId = style.userId;
   const onBack = style.onBack;
   let trackUserProfileAction;
-  let obj = userId(trackUserProfileAction[3]);
-  trackUserProfileAction = obj.useUserProfileAnalyticsContext().trackUserProfileAction;
+  const tmp = closure_4();
+  trackUserProfileAction = userId(trackUserProfileAction[3]).useUserProfileAnalyticsContext().trackUserProfileAction;
   const note = onBack(trackUserProfileAction[4])(userId).note;
   let tmp6Result = null != note;
   if (tmp6Result) {
@@ -34,43 +34,41 @@ export default function UserProfileNote(style) {
   } else {
     stringResult = string(t["1ZZtts"]);
   }
-  obj = {
+  const obj2 = {
     accessibilityRole: "button",
     accessibilityHint: stringResult,
     accessibilityLabel: note,
     onPress() {
-      let obj = ActionSheetActionCreatorsDefault;
-      obj.hideActionSheet();
-      obj = {
+      ActionSheetActionCreatorsDefault.hideActionSheet();
+      openEditNoteModalDefault({
         userId,
         onBack,
         onSave() {
           return trackUserProfileAction({ action: "SET_NOTE" });
         },
-      };
-      openEditNoteModalDefault(obj);
+      });
     },
     activeOpacity: 0.8,
     children: null,
   };
-  obj = { style: style.style, title: null, titleStyle: null, titleIcon: null, children: null };
-  const tmp = closure_4();
+  const obj3 = { style: style.style, title: null, titleStyle: null, titleIcon: null, children: null };
+  const obj = userId(trackUserProfileAction[3]);
   const intl2 = tmp2(tmp3[8]).intl;
-  obj.title = intl2.string(userId(trackUserProfileAction[8]).t["mQKv+v"]);
+  obj3.title = intl2.string(userId(trackUserProfileAction[8]).t["mQKv+v"]);
   const items = [tmp.title];
-  let obj1 = !tmp6Result;
+  let obj4 = !tmp6Result;
   if (!tmp6Result) {
-    obj1 = { marginBottom: 0 };
+    obj4 = { marginBottom: 0 };
   }
-  items[1] = obj1;
-  obj.titleStyle = items;
-  obj.titleIcon = <PaperPlusIcon size="xs" color="interactive-text-default" />;
+  items[1] = obj4;
+  obj3.titleStyle = items;
+  obj3.titleIcon = <PaperPlusIcon size="xs" color="interactive-text-default" />;
   if (tmp6Result) {
-    const obj2 = { variant: "text-md/normal", color: "text-default", children: note };
+    const obj5 = { variant: "text-md/normal", color: "text-default", children: note };
     tmp6Result = jsx(tmp2(tmp3[12]).Text, { variant: "text-md/normal", color: "text-default", children: note });
   }
-  obj.children = tmp6Result;
-  obj.children = jsx(onBack(trackUserProfileAction[11]), {
+  obj3.children = tmp6Result;
+  obj2.children = jsx(onBack(trackUserProfileAction[11]), {
     style: style.style,
     title: null,
     titleStyle: null,
@@ -78,10 +76,20 @@ export default function UserProfileNote(style) {
     children: null,
   });
   return jsx(userId(trackUserProfileAction[7]).PressableOpacity, {
-    style: style.style,
-    title: null,
-    titleStyle: null,
-    titleIcon: null,
+    accessibilityRole: "button",
+    accessibilityHint: stringResult,
+    accessibilityLabel: note,
+    onPress() {
+      ActionSheetActionCreatorsDefault.hideActionSheet();
+      openEditNoteModalDefault({
+        userId,
+        onBack,
+        onSave() {
+          return trackUserProfileAction({ action: "SET_NOTE" });
+        },
+      });
+    },
+    activeOpacity: 0.8,
     children: null,
   });
 }

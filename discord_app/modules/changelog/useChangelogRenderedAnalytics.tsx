@@ -6,6 +6,8 @@ import LocaleStore from "../user_settings/LocaleStore.tsx";
 import ReadStateStore from "../../stores/ReadStateStore.tsx";
 import ChangelogStore from "ChangelogStore.tsx";
 
+const require = globalThis.__r;
+
 const require = fn;
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const size = fn(2);
@@ -40,7 +42,7 @@ export default function useChangelogRenderedAnalytics(arg0) {
     let _Date = Date;
     timestamp = Date.now();
   }
-  const obj2 = require("initialize");
+  let obj2 = require("initialize");
   const ref = stateFromStores1.useRef(timestamp);
   const items3 = [ref];
   const items4 = [arg0];
@@ -70,11 +72,11 @@ export default function useChangelogRenderedAnalytics(arg0) {
       tmp = null != stateFromStores1;
     }
     if (tmp) {
-      const obj = { change_log_id: null, unread_count: null };
+      const obj2 = { change_log_id: null, unread_count: null };
       const _HermesInternal = HermesInternal;
-      obj.change_log_id = "" + stateFromStores1.date + ":" + stateFromStores1.revision;
-      obj.unread_count = ref2.current;
-      obj.track(AnalyticEvents.CHANGE_LOG_OPENED, obj);
+      obj2.change_log_id = "" + stateFromStores1.date + ":" + stateFromStores1.revision;
+      obj2.unread_count = ref2.current;
+      AnalyticsUtilsDefault.track(AnalyticEvents.CHANGE_LOG_OPENED, obj2);
     }
   }, items7);
   const items8 = [tmp6, stateFromStores1];
@@ -89,14 +91,14 @@ export default function useChangelogRenderedAnalytics(arg0) {
         tmp = null != current;
       }
       if (tmp) {
-        const obj = { seconds_open: null, change_log_id: null, unread_count: null };
+        const obj2 = { seconds_open: null, change_log_id: null, unread_count: null };
         const _Math = Math;
         const _Date = Date;
-        obj.seconds_open = Math.round((Date.now() - current) / 1000);
+        obj2.seconds_open = Math.round((Date.now() - current) / 1000);
         const _HermesInternal = HermesInternal;
-        obj.change_log_id = "" + stateFromStores1.date + ":" + stateFromStores1.revision;
-        obj.unread_count = ref.current;
-        obj.track(AnalyticEvents.CHANGE_LOG_CLOSED, obj);
+        obj2.change_log_id = "" + stateFromStores1.date + ":" + stateFromStores1.revision;
+        obj2.unread_count = ref.current;
+        AnalyticsUtilsDefault.track(AnalyticEvents.CHANGE_LOG_CLOSED, obj2);
         closure_5.current = 0;
       }
     };

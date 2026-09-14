@@ -14,8 +14,7 @@ export const getIsTabletActivitySurface = function getIsTabletActivitySurface() 
 export const setOrientationLockState = function setOrientationLockState(embeddedActivityConfig, arg1) {
   if (arg1 == null) {
     if (null != embeddedActivityConfig) {
-      let obj = useWindowDimensions;
-      const size = obj.getWindowDimensions({ ignoreKeyboard: true });
+      const size = useWindowDimensions.getWindowDimensions({ ignoreKeyboard: true });
       const _Math = Math;
       const bound = Math.min(size.width, size.height);
       if (bound > useWindowSizeClassifier.WINDOW_SIZE_THRESHOLD_LARGE) {
@@ -34,12 +33,12 @@ export const setOrientationLockState = function setOrientationLockState(embedded
     }
   }
   if (null != arg1) {
-    obj = {
+    const obj3 = {
       type: "EMBEDDED_ACTIVITY_SET_ORIENTATION_LOCK_STATE",
       applicationId: embeddedActivityConfig.id,
       lockState: tmp,
     };
-    DispatcherDefault.dispatch(obj);
+    DispatcherDefault.dispatch(obj3);
   }
 };
 export const getDefaultOrientationLockState = function getDefaultOrientationLockState(application) {

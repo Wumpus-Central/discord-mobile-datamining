@@ -2,6 +2,8 @@
 import util from "../../intl/index.native.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
+const require = globalThis.__r;
+
 let c3 = 2592000;
 let c4 = 31104000;
 const result = size.fileFinishedImporting("modules/threads/getTimestampString.tsx");

@@ -16,18 +16,21 @@ const result = size.fileFinishedImporting(
 );
 
 export default function ConversationPreviewBlockedMessage(reason) {
-  let obj = { direction: "horizontal", spacing: nativeDefault.space.PX_8, align: "center", children: null };
+  const obj = { direction: "horizontal", spacing: nativeDefault.space.PX_8, align: "center", children: null };
   if ("blocked" === reason.reason) {
     let EyeSlashIcon = DenyIcon.DenyIcon;
   } else {
     EyeSlashIcon = EyeSlashIcon2.EyeSlashIcon;
   }
-  obj = { size: "sm", color: nativeDefault.colors.TEXT_MUTED };
-  const items = [React3(EyeSlashIcon, obj)];
+  const items = [React3(EyeSlashIcon, { size: "sm", color: nativeDefault.colors.TEXT_MUTED })];
   const intl = util.intl;
   const t = util.t;
-  obj = { variant: "text-md/normal", color: "text-muted", children: intl.string(tmp6 ? t["WPe+xL"] : t.uxrh1O) };
-  items[1] = React3(Text_Text.Text, obj);
+  const obj2 = { size: "sm", color: nativeDefault.colors.TEXT_MUTED };
+  items[1] = React3(Text_Text.Text, {
+    variant: "text-md/normal",
+    color: "text-muted",
+    children: intl.string("blocked" === reason.reason ? t["WPe+xL"] : t.uxrh1O),
+  });
   obj.children = items;
   return React4(Stack_Stack.Stack, obj);
 }

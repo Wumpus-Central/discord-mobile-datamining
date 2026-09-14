@@ -15,14 +15,14 @@ export const useQualtricsResponseStore = module_560.create((arg0, arg1) => {
       closure_1 = arg1;
       closure_2 = arg2;
       closure_0((responses) => {
-        let obj = { responses: null };
-        obj = {};
+        const obj = { responses: null };
+        const obj2 = {};
         const merged = Object.assign(responses.responses);
-        obj = {};
+        const obj3 = {};
         const merged1 = Object.assign(responses.responses[closure_0]);
-        obj[closure_1] = closure_2;
-        obj[closure_0] = obj;
-        obj.responses = obj;
+        obj3[closure_1] = closure_2;
+        obj2[closure_0] = obj3;
+        obj.responses = obj2;
         return obj;
       });
     },
@@ -39,10 +39,9 @@ export const useQualtricsResponseStore = module_560.create((arg0, arg1) => {
         responses = {};
         const merged = Object.assign(responses.responses);
         delete tmp3[tmp];
-        const displayedQuestions = {};
         const merged1 = Object.assign(responses.displayedQuestions);
         delete tmp2[tmp];
-        return { responses, displayedQuestions };
+        return { responses, displayedQuestions: {} };
       });
     },
     trackDisplayedQuestions(arg0, arg1) {
@@ -55,11 +54,11 @@ export const useQualtricsResponseStore = module_560.create((arg0, arg1) => {
           set = new Set();
         }
         const item = closure_1.forEach((item) => set1.add(item));
-        let obj = { displayedQuestions: null };
-        obj = {};
+        const obj = { displayedQuestions: null };
+        const obj2 = {};
         const merged = Object.assign(displayedQuestions.displayedQuestions);
-        obj[closure_0] = new Set(set);
-        obj.displayedQuestions = obj;
+        obj2[closure_0] = new Set(set);
+        obj.displayedQuestions = obj2;
         return obj;
       });
     },

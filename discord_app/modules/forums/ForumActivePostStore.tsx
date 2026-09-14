@@ -12,7 +12,7 @@ import AuthenticationStore from "../../stores/AuthenticationStore.tsx";
 import ChannelStore from "../../stores/ChannelStore.tsx";
 import ReadStateStore from "../../stores/ReadStateStore.tsx";
 import SelectedChannelStore from "../../stores/SelectedChannelStore.tsx";
-import apply from "../../../_runtime/metro/00012__.js";
+import apply_mod from "../../../_runtime/metro/00012__.js";
 
 require = fn;
 function maybeRebuildState() {
@@ -195,7 +195,9 @@ let closure_16 = 0;
 let closure_17 = [];
 let c18 = false;
 let closure_19 = [];
+let apply = apply_mod;
 let closure_20 = apply.chain(items);
+let apply = apply_mod;
 let closure_21 = apply.chain(items);
 const set1 = new Set();
 const set2 = new Set();

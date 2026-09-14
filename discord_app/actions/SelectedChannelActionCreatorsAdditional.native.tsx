@@ -1,6 +1,6 @@
 // discord_app/actions/SelectedChannelActionCreatorsAdditional.native.tsx
 import DispatcherDefault from "../Dispatcher.tsx";
-import v1 from "../../_runtime/01256_v1.js";
+import v1 from "../../_runtime/01254_v1.js";
 import ChannelStore from "../stores/ChannelStore.tsx";
 import GuildStore from "../stores/GuildStore.tsx";
 import GuildVerificationStore from "../stores/GuildVerificationStore.tsx";
@@ -9,6 +9,8 @@ import SelectedChannelStore from "../stores/SelectedChannelStore.tsx";
 import SelectedGuildStore from "../stores/SelectedGuildStore.tsx";
 import UserStore from "../stores/UserStore.tsx";
 import VoiceStateStore from "../stores/VoiceStateStore.tsx";
+
+const require = globalThis.__r;
 
 require = fn;
 const STAGE_BOOSTING_SHEET_KEY = fn(5495).STAGE_BOOSTING_SHEET_KEY;
@@ -56,31 +58,30 @@ export const selectVoiceChannelAdditional = function selectVoiceChannelAdditiona
       const obj8 = require("ChannelUtils");
       const check = flag4.getCheck(channel.guild_id);
       if (!check.canChat) {
-        let tmp14Result = tmp14(tmp15[10]);
         if (!tmp14Result.canLurkerListen(channel)) {
-          tmp14Result = tmp14(tmp15[11]);
-          return tmp14Result.unverifiedVoiceGate(check);
+          return tmp14(tmp15[11]).unverifiedVoiceGate(check);
         }
+        tmp14Result = tmp14(tmp15[10]);
       }
       const isChannelFullResult = require("ChannelUtils").isChannelFull(channel, VoiceStateStore, flag3);
       const tmp2 = importDefault;
       if (isChannelFullResult) {
         if (channel.isGuildStageVoice()) {
-          if (tmp14Result1.getStageHasMedia(channel.id)) {
-            obj = { channel };
-            tmp2(tmp15[14]).openLazy(tmp14(tmp15[16])(tmp15[15], tmp15.paths), STAGE_BOOSTING_SHEET_KEY, obj);
+          if (tmp14Result4.getStageHasMedia(channel.id)) {
+            let obj2 = { channel };
+            tmp2(tmp15[14]).openLazy(tmp14(tmp15[16])(tmp15[15], tmp15.paths), STAGE_BOOSTING_SHEET_KEY, obj2);
             const tmp2Result = tmp2(tmp15[14]);
           }
-          tmp14Result1 = tmp14(tmp15[13]);
+          tmp14Result4 = tmp14(tmp15[13]);
         }
       }
       const tmp4 = require("canJoinVoiceChannel")(channel, PermissionStore);
     }
     require("collectCallFeedback")(
       () => {
-        let obj = v1;
-        const v4Result = obj.v4();
-        obj = {
+        const v4Result = v1.v4();
+        const obj2 = DispatcherDefault;
+        obj2.dispatch({
           type: "VOICE_CHANNEL_SELECT",
           guildId,
           channelId,
@@ -90,8 +91,7 @@ export const selectVoiceChannelAdditional = function selectVoiceChannelAdditiona
           lockVoiceStateForResume: flag3,
           joinVoiceId: v4Result,
           bypassIdleUpdate: flag4,
-        };
-        DispatcherDefault.dispatch(obj);
+        });
       },
       id,
       flag2,

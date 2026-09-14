@@ -4,23 +4,23 @@ import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 
 function getConnectionPrereqTarget(teen_identity) {
   if ("ready" in teen_identity) {
-    params = { section: frozen.REQUEST, params: null };
-    params = { teenIdentity: teen_identity.teen_identity };
-    params.params = params;
-    let tmp = params;
-  } else if ("invalid_link_code" in teen_identity) {
-    const obj1 = { section: frozen.INVALID_CODE };
-    tmp = obj1;
-  } else if ("verified_teen_blocked" in teen_identity) {
-    const obj2 = { section: frozen.MUST_BE_ADULT };
-    tmp = obj2;
-  } else if ("requires_adult_verification" in teen_identity) {
-    params = { section: frozen.CONFIRM_AGE, params: null };
+    const obj2 = { section: frozen.REQUEST, params: null };
     const obj3 = { teenIdentity: teen_identity.teen_identity };
-    params.params = obj3;
-    tmp = params;
+    obj2.params = obj3;
+    let tmp = obj2;
+  } else if ("invalid_link_code" in teen_identity) {
+    const obj4 = { section: frozen.INVALID_CODE };
+    tmp = obj4;
+  } else if ("verified_teen_blocked" in teen_identity) {
+    const obj5 = { section: frozen.MUST_BE_ADULT };
+    tmp = obj5;
+  } else if ("requires_adult_verification" in teen_identity) {
+    obj = { section: frozen.CONFIRM_AGE, params: null };
+    const obj6 = { teenIdentity: teen_identity.teen_identity };
+    obj.params = obj6;
+    tmp = obj;
   } else {
-    tmp = params;
+    tmp = obj;
   }
   return tmp;
 }
@@ -32,8 +32,8 @@ let closure_6 = async function _resolveConnectionPrereqTarget(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -46,31 +46,33 @@ let closure_6 = async function _resolveConnectionPrereqTarget(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c6 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           closure_3 = tmp3;
           c4 = 1;
           asyncGeneratorStep = getConnectionPrereqTarget;
-          let obj3 = FamilyCenterActionCreatorsDefault;
           c5 = 2;
           c6 = 1;
-          const obj1 = { value: obj3.getConnectionPrerequisites(closure_0, closure_1), done: false };
-          return obj1;
+          const obj5 = {
+            value: FamilyCenterActionCreatorsDefault.getConnectionPrerequisites(closure_0, closure_1),
+            done: false,
+          };
+          return obj5;
         }
       } else if (1 === tmp7) {
         c4 = 0;
         c6 = 3;
-        const obj2 = { value: closure_131_4, done: true };
-        return obj2;
+        const obj6 = { value: closure_131_4, done: true };
+        return obj6;
       } else if (arg0 === 1) {
         c6 = 3;
         throw value;
       } else if (arg0 === 2) {
         c4 = 0;
         c6 = 3;
-        obj3 = { value, done: true };
-        return obj3;
+        const obj7 = { value, done: true };
+        return obj7;
       } else {
         c4 = 0;
         c6 = 3;
@@ -98,7 +100,7 @@ const frozen = Object.freeze({
   MUST_BE_ADULT: "MUST_BE_ADULT",
   TEEN_SCAN: "TEEN_SCAN",
 });
-let params = { section: frozen.ERROR, params: { failureCode: fn(7641).FamilyCenterFailureCode.GENERIC_ERROR } };
+let obj = { section: frozen.ERROR, params: { failureCode: fn(7641).FamilyCenterFailureCode.GENERIC_ERROR } };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/parent_tools/FamilyCenterModalRequestRouting.tsx");
 

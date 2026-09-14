@@ -39,34 +39,33 @@ prototype["componentDidMount"] = function componentDidMount() {
   ({ selectedChannelId, selectedGuildId, isMemberPending } = props);
   ({ hasPreviewEnabled, postableChannelCount } = props);
   if (null != selectedChannelId) {
-    let obj = {};
+    const obj = {};
     const merged = Object.assign(AppAnalyticsUtils.getChannelOpenedMetadata(selectedChannelId));
     obj.selected_guild_id = selectedGuildId;
     self._trackWithMetadata(constants.CHANNEL_OPENED, obj);
-    obj = { channelId: selectedChannelId };
-    trackChannelOpenedClickstreamDefault(obj);
+    const obj2 = { channelId: selectedChannelId };
+    trackChannelOpenedClickstreamDefault(obj2);
     if (tmp) {
-      const obj1 = { channel_is_nsfw: tmp2 };
-      AppAnalyticsUtils.trackWithMetadata(constants.TEXT_IN_VOICE_OPENED, obj1);
+      const obj3 = { channel_is_nsfw: tmp2 };
+      AppAnalyticsUtils.trackWithMetadata(constants.TEXT_IN_VOICE_OPENED, obj3);
       const tmp18Result = AppAnalyticsUtils;
     }
   }
   if (null != selectedGuildId) {
     if (isMemberPending) {
-      const obj2 = { is_pending: isMemberPending, preview_enabled: hasPreviewEnabled };
-      let obj3 = obj2;
+      const obj4 = { is_pending: isMemberPending, preview_enabled: hasPreviewEnabled };
+      let obj5 = obj4;
     } else {
-      obj3 = {};
+      obj5 = {};
     }
-    const obj4 = {};
-    const merged1 = Object.assign(obj3);
-    obj4.postable_channels = postableChannelCount;
-    obj4.viewing_all_channels = !UserGuildSettingsStore.isOptInEnabled(selectedGuildId);
-    let obj5 = GuildThemeAnalyticsUtils;
-    const merged2 = Object.assign(obj5.collectGuildThemeAnalyticsMetadata(selectedGuildId));
-    self._trackWithMetadata(constants.GUILD_VIEWED, obj4);
-    obj5 = { guildId: selectedGuildId };
-    trackGuildViewedClickstreamDefault(obj5);
+    const obj7 = {};
+    const merged1 = Object.assign(obj5);
+    obj7.postable_channels = postableChannelCount;
+    obj7.viewing_all_channels = !UserGuildSettingsStore.isOptInEnabled(selectedGuildId);
+    const merged2 = Object.assign(GuildThemeAnalyticsUtils.collectGuildThemeAnalyticsMetadata(selectedGuildId));
+    self._trackWithMetadata(constants.GUILD_VIEWED, obj7);
+    const obj9 = { guildId: selectedGuildId };
+    trackGuildViewedClickstreamDefault(obj9);
     if (obj8.isFavoritesGuildId(selectedGuildId)) {
       trackFavoritesGuildViewedDefault();
     }
@@ -103,7 +102,7 @@ prototype["componentDidUpdate"] = function componentDidUpdate(voiceChannelId) {
       if (channelId !== voiceChannelId.voiceChannelId) {
         tmp2 = null;
       }
-      let obj = {
+      const obj6 = {
         channel_id: null,
         channel_type: null,
         channel_bitrate: null,
@@ -124,30 +123,30 @@ prototype["componentDidUpdate"] = function componentDidUpdate(voiceChannelId) {
       if (tmp2 != null) {
         rtcConnectionId = tmp2.rtcConnectionId;
       }
-      obj.rtc_connection_id = rtcConnectionId;
+      obj6.rtc_connection_id = rtcConnectionId;
       let duration;
       if (tmp2 != null) {
         duration = tmp2.duration;
       }
-      obj.duration = duration;
+      obj6.duration = duration;
       let mediaSessionId;
       if (tmp2 != null) {
         mediaSessionId = tmp2.mediaSessionId;
       }
-      obj.media_session_id = mediaSessionId;
+      obj6.media_session_id = mediaSessionId;
       let id;
       if (stageInstanceByChannel != null) {
         id = stageInstanceByChannel.id;
       }
-      obj.stage_instance_id = id;
+      obj6.stage_instance_id = id;
       let id1;
       if (activeEventByChannel != null) {
         id1 = activeEventByChannel.id;
       }
-      obj.guild_scheduled_event_id = id1;
-      let obj2 = AppAnalyticsUtils;
+      obj6.guild_scheduled_event_id = id1;
+      const obj = AnalyticsUtilsDefault;
       const merged = Object.assign(
-        obj2.getVoiceStateMetadata(
+        AppAnalyticsUtils.getVoiceStateMetadata(
           voiceChannelId.voiceChannelGuildId,
           voiceChannelId.voiceChannelId,
           voiceChannelId.videoEnabled,
@@ -162,14 +161,14 @@ prototype["componentDidUpdate"] = function componentDidUpdate(voiceChannelId) {
         }
       }
       const merged2 = Object.assign(stats);
-      obj.track(constants.LEAVE_VOICE_CHANNEL, obj);
+      obj.track(constants.LEAVE_VOICE_CHANNEL, obj6);
     }
   }
   if (voiceChannelId.voiceChannelId !== voiceChannelId) {
     if (null != voiceChannelId) {
       const stageInstanceByChannel1 = StageInstanceStore.getStageInstanceByChannel(voiceChannelId);
       const activeEventByChannel1 = GuildScheduledEventStore.getActiveEventByChannel(voiceChannelId);
-      obj = {
+      const obj7 = {
         channel_id: voiceChannelId,
         channel_type: voiceChannelType,
         channel_bitrate: voiceChannelBitrate,
@@ -185,17 +184,19 @@ prototype["componentDidUpdate"] = function componentDidUpdate(voiceChannelId) {
       if (stageInstanceByChannel1 != null) {
         id2 = stageInstanceByChannel1.id;
       }
-      obj.stage_instance_id = id2;
+      obj7.stage_instance_id = id2;
       let id3;
       if (activeEventByChannel1 != null) {
         id3 = activeEventByChannel1.id;
       }
-      obj.guild_scheduled_event_id = id3;
-      obj.join_voice_id = RTCConnectionStore.getJoinVoiceId();
-      let obj3 = AppAnalyticsUtils;
-      const merged3 = Object.assign(obj3.getVoiceStateMetadata(voiceChannelGuildId, voiceChannelId, videoEnabled));
+      obj7.guild_scheduled_event_id = id3;
+      obj7.join_voice_id = RTCConnectionStore.getJoinVoiceId();
+      const obj22 = AnalyticsUtilsDefault;
+      const merged3 = Object.assign(
+        AppAnalyticsUtils.getVoiceStateMetadata(voiceChannelGuildId, voiceChannelId, videoEnabled),
+      );
       const merged4 = Object.assign(self.getGameMetadata());
-      AnalyticsUtilsDefault.track(constants.JOIN_VOICE_CHANNEL, obj);
+      obj22.track(constants.JOIN_VOICE_CHANNEL, obj7);
     }
   }
   if (voiceChannelId.videoEnabled !== videoEnabled) {
@@ -218,8 +219,7 @@ prototype["componentDidUpdate"] = function componentDidUpdate(voiceChannelId) {
           str3 = "camera";
         }
       }
-      let obj4 = AnalyticsUtilsDefault;
-      const obj1 = {
+      const obj8 = {
         video_input_type: str3,
         enabled_inputs: found,
         channel_id: voiceChannelId,
@@ -227,8 +227,9 @@ prototype["componentDidUpdate"] = function componentDidUpdate(voiceChannelId) {
         guild_id: voiceChannelGuildId,
       };
       const merged5 = Object.assign(self.getGameMetadata());
+      const obj5 = AnalyticsUtilsDefault;
       const merged6 = Object.assign(AppAnalyticsUtils.collectVoiceAnalyticsMetadata(voiceChannelId));
-      obj4.track(constants.VIDEO_INPUT_TOGGLED, obj1);
+      obj5.track(constants.VIDEO_INPUT_TOGGLED, obj8);
       const tmp31Result = AppAnalyticsUtils;
     }
   }
@@ -240,18 +241,18 @@ prototype["componentDidUpdate"] = function componentDidUpdate(voiceChannelId) {
       voiceChannelId.selectedChannelId === selectedChannelId && voiceChannelId.selectedGuildId === selectedGuildId;
   }
   if (!tmp41) {
-    obj2 = {};
-    let obj8 = getChannelOpenedRouteTrackingProps;
-    const merged7 = Object.assign(obj8.getChannelOpenedRouteTrackingProps(selectedChannelId));
-    let obj9 = AppAnalyticsUtils;
-    const merged8 = Object.assign(obj9.getChannelOpenedMetadata(selectedChannelId));
-    obj2.selected_guild_id = selectedGuildId;
-    self._trackWithMetadata(constants.CHANNEL_OPENED, obj2);
-    obj3 = { channelId: selectedChannelId };
-    trackChannelOpenedClickstreamDefault(obj3);
+    const obj11 = {};
+    const merged7 = Object.assign(
+      getChannelOpenedRouteTrackingProps.getChannelOpenedRouteTrackingProps(selectedChannelId),
+    );
+    const merged8 = Object.assign(AppAnalyticsUtils.getChannelOpenedMetadata(selectedChannelId));
+    obj11.selected_guild_id = selectedGuildId;
+    self._trackWithMetadata(constants.CHANNEL_OPENED, obj11);
+    const obj12 = { channelId: selectedChannelId };
+    trackChannelOpenedClickstreamDefault(obj12);
     if (isTextInVoice) {
-      obj4 = { channel_is_nsfw: isNSFWChannel };
-      AppAnalyticsUtils.trackWithMetadata(constants.TEXT_IN_VOICE_OPENED, obj4);
+      const obj13 = { channel_is_nsfw: isNSFWChannel };
+      AppAnalyticsUtils.trackWithMetadata(constants.TEXT_IN_VOICE_OPENED, obj13);
       const tmp44Result = AppAnalyticsUtils;
     }
   }
@@ -259,25 +260,25 @@ prototype["componentDidUpdate"] = function componentDidUpdate(voiceChannelId) {
     isTextInVoice = !voiceChannelId.isTextInVoice;
   }
   if (isTextInVoice) {
-    const obj5 = { channel_is_nsfw: isNSFWChannel };
-    AppAnalyticsUtils.trackWithMetadata(constants.TEXT_IN_VOICE_OPENED, obj5);
+    const obj15 = { channel_is_nsfw: isNSFWChannel };
+    AppAnalyticsUtils.trackWithMetadata(constants.TEXT_IN_VOICE_OPENED, obj15);
   }
   if (null != selectedGuildId) {
     if (voiceChannelId.selectedGuildId !== selectedGuildId) {
       if (isMemberPending) {
-        const obj6 = { is_pending: isMemberPending, preview_enabled: hasPreviewEnabled };
-        let obj7 = obj6;
+        const obj16 = { is_pending: isMemberPending, preview_enabled: hasPreviewEnabled };
+        let obj17 = obj16;
       } else {
-        obj7 = {};
+        obj17 = {};
       }
-      obj8 = {};
-      const merged9 = Object.assign(obj7);
-      obj8.postable_channels = postableChannelCount;
-      obj8.viewing_all_channels = !UserGuildSettingsStore.isOptInEnabled(selectedGuildId);
+      const obj18 = {};
+      const merged9 = Object.assign(obj17);
+      obj18.postable_channels = postableChannelCount;
+      obj18.viewing_all_channels = !UserGuildSettingsStore.isOptInEnabled(selectedGuildId);
       const merged10 = Object.assign(GuildThemeAnalyticsUtils.collectGuildThemeAnalyticsMetadata(selectedGuildId));
-      self._trackWithMetadata(constants.GUILD_VIEWED, obj8);
-      obj9 = { guildId: selectedGuildId };
-      trackGuildViewedClickstreamDefault(obj9);
+      self._trackWithMetadata(constants.GUILD_VIEWED, obj18);
+      const obj20 = { guildId: selectedGuildId };
+      trackGuildViewedClickstreamDefault(obj20);
       if (obj21.isFavoritesGuildId(selectedGuildId)) {
         trackFavoritesGuildViewedDefault();
       }
@@ -299,10 +300,10 @@ prototype["_trackWithMetadata"] = function _trackWithMetadata(CHANNEL_OPENED) {
     AppAnalyticsUtils.trackWithMetadata(CHANNEL_OPENED, obj);
   } else {
     if (!obj2.isThrottled(CHANNEL_OPENED)) {
-      obj = {};
+      const obj3 = {};
       const merged = Object.assign(obj);
       const merged1 = Object.assign(self.collectDefaultAnalyticsMetadata(tmp, tmp2));
-      AnalyticsUtilsDefault.track(CHANNEL_OPENED, obj);
+      AnalyticsUtilsDefault.track(CHANNEL_OPENED, obj3);
       const tmp3Result = AnalyticsUtilsDefault;
     }
     obj2 = AnalyticsUtilsDefault;
@@ -339,9 +340,13 @@ const size = fn(2);
 const result = size.fileFinishedImporting("components_native/AutoAnalytics.tsx");
 
 export default function ConnectedAutoAnalytics() {
-  let obj = stateFromStores(stateFromStores6[28]);
   const items = [SelectedChannelStore];
-  stateFromStores = obj.useStateFromStores(items, () => SelectedChannelStore.getVoiceChannelId(), []);
+  stateFromStores = stateFromStores(stateFromStores6[28]).useStateFromStores(
+    items,
+    () => SelectedChannelStore.getVoiceChannelId(),
+    [],
+  );
+  const obj = stateFromStores(stateFromStores6[28]);
   const items1 = [ChannelStore];
   const items2 = [stateFromStores];
   const stateFromStores1 = stateFromStores(stateFromStores6[28]).useStateFromStores(
@@ -366,10 +371,10 @@ export default function ConnectedAutoAnalytics() {
   if (stateFromStores3 != null) {
     nsfw = stateFromStores3.nsfw;
   }
-  let tmpResult = tmp(tmp2[28]);
+  const obj5 = stateFromStores(stateFromStores6[28]);
   const items6 = [stateFromStores8];
   const items7 = [stateFromStores2];
-  const stateFromStores4 = tmpResult.useStateFromStores(
+  const stateFromStores4 = stateFromStores(stateFromStores6[28]).useStateFromStores(
     items6,
     () => {
       let chatOpen = null != stateFromStores2;
@@ -380,17 +385,17 @@ export default function ConnectedAutoAnalytics() {
     },
     items7,
   );
-  tmpResult = tmp(tmp2[28]);
+  const tmpResult = stateFromStores(stateFromStores6[28]);
   const items8 = [SelfPresenceStore];
-  const stateFromStores5 = tmpResult.useStateFromStores(
+  const stateFromStores5 = stateFromStores(stateFromStores6[28]).useStateFromStores(
     items8,
     () => SelfPresenceStore.findActivity((type) => type.type === constants.PLAYING),
     [],
   );
-  const obj5 = stateFromStores(stateFromStores6[28]);
+  const tmpResult9 = stateFromStores(stateFromStores6[28]);
   const items9 = [SelectedGuildStore];
   stateFromStores6 = stateFromStores(stateFromStores6[28]).useStateFromStores(items9, () => guildId.getGuildId(), []);
-  const tmpResult1 = stateFromStores(stateFromStores6[28]);
+  const tmpResult10 = stateFromStores(stateFromStores6[28]);
   const items10 = [GuildStore];
   const items11 = [stateFromStores6];
   const stateFromStores7 = stateFromStores(stateFromStores6[28]).useStateFromStores(
@@ -398,14 +403,14 @@ export default function ConnectedAutoAnalytics() {
     () => GuildStore.getGuild(stateFromStores6),
     items11,
   );
-  const tmpResult2 = stateFromStores(stateFromStores6[28]);
+  const tmpResult11 = stateFromStores(stateFromStores6[28]);
   const items12 = [UserStore];
   stateFromStores8 = stateFromStores(stateFromStores6[28]).useStateFromStores(
     items12,
     () => currentUser.getCurrentUser(),
     [],
   );
-  const tmpResult3 = stateFromStores(stateFromStores6[28]);
+  const tmpResult12 = stateFromStores(stateFromStores6[28]);
   const items13 = [GuildMemberStore];
   const items14 = [stateFromStores8, stateFromStores6];
   const stateFromStores9 = stateFromStores(stateFromStores6[28]).useStateFromStores(
@@ -430,21 +435,21 @@ export default function ConnectedAutoAnalytics() {
     },
     items14,
   );
-  const tmpResult4 = stateFromStores(stateFromStores6[28]);
+  const tmpResult13 = stateFromStores(stateFromStores6[28]);
   const items15 = [MediaEngineStore];
   const stateFromStores10 = stateFromStores(stateFromStores6[28]).useStateFromStores(
     items15,
     () => MediaEngineStore.isVideoEnabled(),
     [],
   );
-  const tmpResult5 = stateFromStores(stateFromStores6[28]);
+  const tmpResult14 = stateFromStores(stateFromStores6[28]);
   const items16 = [MediaEngineStore];
   const stateFromStores11 = stateFromStores(stateFromStores6[28]).useStateFromStores(
     items16,
     () => MediaEngineStore.isScreenSharing(),
     [],
   );
-  const tmpResult6 = stateFromStores(stateFromStores6[28]);
+  const tmpResult15 = stateFromStores(stateFromStores6[28]);
   const items17 = [GatewayConnectionStore];
   const stateFromStores12 = stateFromStores(stateFromStores6[28]).useStateFromStores(
     items17,
@@ -453,11 +458,11 @@ export default function ConnectedAutoAnalytics() {
   );
   let id;
   const tmp16 = stateFromStores2;
-  const tmpResult7 = stateFromStores(stateFromStores6[28]);
+  const tmpResult16 = stateFromStores(stateFromStores6[28]);
   if (stateFromStores1 != null) {
     id = stateFromStores1.id;
   }
-  obj = {
+  const obj3 = {
     voiceChannelId: id,
     voiceChannelGuildId: null,
     voiceChannelType: null,
@@ -480,44 +485,43 @@ export default function ConnectedAutoAnalytics() {
   if (stateFromStores1 != null) {
     guildId = stateFromStores1.getGuildId();
   }
-  obj.voiceChannelGuildId = guildId;
+  obj3.voiceChannelGuildId = guildId;
   let type;
   if (stateFromStores1 != null) {
     type = stateFromStores1.type;
   }
-  obj.voiceChannelType = type;
+  obj3.voiceChannelType = type;
   let bitrate;
   if (stateFromStores1 != null) {
     bitrate = stateFromStores1.bitrate;
   }
-  obj.voiceChannelBitrate = bitrate;
-  obj.videoEnabled = stateFromStores10;
-  obj.isScreenSharing = stateFromStores11;
-  obj.gamePlatform = tmp16(stateFromStores6[30])(stateFromStores5);
+  obj3.voiceChannelBitrate = bitrate;
+  obj3.videoEnabled = stateFromStores10;
+  obj3.isScreenSharing = stateFromStores11;
+  obj3.gamePlatform = tmp16(stateFromStores6[30])(stateFromStores5);
   let name = null;
   if (null != stateFromStores5) {
     name = stateFromStores5.name;
   }
-  obj.gameName = name;
+  obj3.gameName = name;
   let application_id = null;
   if (null != stateFromStores5) {
     application_id = stateFromStores5.application_id;
   }
-  obj.gameId = application_id;
-  obj.selectedChannelId = stateFromStores2;
-  obj.selectedGuildId = stateFromStores6;
-  obj.connected = stateFromStores12;
-  obj.isNSFWChannel = nsfw;
+  obj3.gameId = application_id;
+  obj3.selectedChannelId = stateFromStores2;
+  obj3.selectedGuildId = stateFromStores6;
+  obj3.connected = stateFromStores12;
+  obj3.isNSFWChannel = nsfw;
   let hasItem;
   if (stateFromStores7 != null) {
     const features = stateFromStores7.features;
     hasItem = features.has(constants2.PREVIEW_ENABLED);
   }
-  obj.hasPreviewEnabled = hasItem;
-  obj.isMemberPending = stateFromStores9;
-  obj.postableChannelCount = stateFromStores2(stateFromStores6[29])(stateFromStores6);
-  obj.isTextInVoice = stateFromStores4;
-  obj = {};
-  const merged = Object.assign(obj);
+  obj3.hasPreviewEnabled = hasItem;
+  obj3.isMemberPending = stateFromStores9;
+  obj3.postableChannelCount = stateFromStores2(stateFromStores6[29])(stateFromStores6);
+  obj3.isTextInVoice = stateFromStores4;
+  const merged = Object.assign(obj3);
   return <AutoAnalytics />;
 }

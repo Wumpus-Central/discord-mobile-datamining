@@ -55,7 +55,6 @@ let closure_9 = {
       Subtitle1 = onDataBindingChange.Subtitle;
     }
     const stringBinding = BaseRive.useStringBinding("Subtitle", instance, Subtitle, Subtitle1, playIfNeeded);
-    let tmpResult = BaseRive;
     let prop;
     if (dataBinding != null) {
       prop = dataBinding["StartButton Pressed"];
@@ -64,8 +63,8 @@ let closure_9 = {
     if (onDataBindingChange != null) {
       prop1 = onDataBindingChange["StartButton Pressed"];
     }
-    const booleanBinding1 = tmpResult.useBooleanBinding("StartButton Pressed", instance, prop, prop1, playIfNeeded);
-    tmpResult = BaseRive;
+    const booleanBinding1 = BaseRive.useBooleanBinding("StartButton Pressed", instance, prop, prop1, playIfNeeded);
+    const tmpResult = BaseRive;
     let StartButton;
     if (dataBinding != null) {
       StartButton = dataBinding.StartButton;
@@ -74,7 +73,7 @@ let closure_9 = {
     if (onDataBindingChange != null) {
       StartButton1 = onDataBindingChange.StartButton;
     }
-    const stringBinding1 = tmpResult.useStringBinding("StartButton", instance, StartButton, StartButton1, playIfNeeded);
+    const stringBinding1 = BaseRive.useStringBinding("StartButton", instance, StartButton, StartButton1, playIfNeeded);
     return null;
   },
   "Start Button": function StartButtonBindings(reducedMotionEnabled) {
@@ -95,7 +94,6 @@ let closure_9 = {
       Subtitle1 = onDataBindingChange.Subtitle;
     }
     const stringBinding = BaseRive.useStringBinding("Subtitle", instance, Subtitle, Subtitle1, playIfNeeded);
-    let tmpResult = BaseRive;
     let prop;
     if (dataBinding != null) {
       prop = dataBinding["StartButton Pressed"];
@@ -104,8 +102,8 @@ let closure_9 = {
     if (onDataBindingChange != null) {
       prop1 = onDataBindingChange["StartButton Pressed"];
     }
-    const booleanBinding1 = tmpResult.useBooleanBinding("StartButton Pressed", instance, prop, prop1, playIfNeeded);
-    tmpResult = BaseRive;
+    const booleanBinding1 = BaseRive.useBooleanBinding("StartButton Pressed", instance, prop, prop1, playIfNeeded);
+    const tmpResult = BaseRive;
     let StartButton;
     if (dataBinding != null) {
       StartButton = dataBinding.StartButton;
@@ -114,7 +112,7 @@ let closure_9 = {
     if (onDataBindingChange != null) {
       StartButton1 = onDataBindingChange.StartButton;
     }
-    const stringBinding1 = tmpResult.useStringBinding("StartButton", instance, StartButton, StartButton1, playIfNeeded);
+    const stringBinding1 = BaseRive.useStringBinding("StartButton", instance, StartButton, StartButton1, playIfNeeded);
     return null;
   },
 };
@@ -162,9 +160,8 @@ const result = size.fileFinishedImporting(
 );
 
 export const CheckpointIntroRive = noop.forwardRef(function CheckpointIntroRiveWithBoundary(fallback, ref) {
-  let obj = { fallback: fallback.fallback, children: null };
-  obj = { ref };
+  const obj = { fallback: fallback.fallback, children: null };
   const merged = Object.assign(fallback);
   obj.children = <closure_10 ref={ref} />;
-  return jsx(RiveErrorBoundary.RiveErrorBoundary, { ref });
+  return jsx(RiveErrorBoundary.RiveErrorBoundary, { fallback: fallback.fallback, children: null });
 });

@@ -41,12 +41,11 @@ export default {
     return closure_8;
   },
   handleReduceMotionChanged(arg0) {
-    let obj = AccessibilityActionCreators;
     let str = "no-preference";
     if (arg0) {
       str = "reduce";
     }
-    const result = obj.systemPrefersReducedMotionChanged(str);
+    const result = AccessibilityActionCreators.systemPrefersReducedMotionChanged(str);
     const REDUCED_MOTION = AccessibilityFeatureFlags.REDUCED_MOTION;
     const useReducedMotion = AccessibilityStore.useReducedMotion;
     if (useReducedMotion) {
@@ -56,9 +55,9 @@ export default {
     }
     const tmp5 = AccessibilityPreferencesSharedValue.A11Y_FEATURE_MAP[REDUCED_MOTION];
     if (null != tmp5) {
-      obj = {};
-      obj[tmp5] = useReducedMotion;
-      updateSharedValueIfChangedDefault(AccessibilityPreferencesSharedValue.accessibilityPreferencesSharedValue, obj);
+      const obj2 = {};
+      obj2[tmp5] = useReducedMotion;
+      updateSharedValueIfChangedDefault(AccessibilityPreferencesSharedValue.accessibilityPreferencesSharedValue, obj2);
     }
   },
   handleReduceTransparencyChanged(arg0) {
@@ -124,39 +123,45 @@ export default {
       closure_8 = closure_8 & ~PREFERS_COLOR_SCHEME_LIGHT3;
       const tmp21 = AccessibilityPreferencesSharedValue.A11Y_FEATURE_MAP[PREFERS_COLOR_SCHEME_LIGHT3];
       if (null != tmp21) {
-        let obj = {};
-        obj[tmp21] = false;
-        updateSharedValueIfChangedDefault(AccessibilityPreferencesSharedValue.accessibilityPreferencesSharedValue, obj);
+        const obj2 = {};
+        obj2[tmp21] = false;
+        updateSharedValueIfChangedDefault(
+          AccessibilityPreferencesSharedValue.accessibilityPreferencesSharedValue,
+          obj2,
+        );
       }
       const PREFERS_COLOR_SCHEME_DARK2 = AccessibilityFeatureFlags.PREFERS_COLOR_SCHEME_DARK;
       closure_8 = closure_8 | PREFERS_COLOR_SCHEME_DARK2;
       const tmp27 = AccessibilityPreferencesSharedValue.A11Y_FEATURE_MAP[PREFERS_COLOR_SCHEME_DARK2];
       if (null != tmp27) {
-        obj = {};
-        obj[tmp27] = true;
-        updateSharedValueIfChangedDefault(AccessibilityPreferencesSharedValue.accessibilityPreferencesSharedValue, obj);
+        const obj3 = {};
+        obj3[tmp27] = true;
+        updateSharedValueIfChangedDefault(
+          AccessibilityPreferencesSharedValue.accessibilityPreferencesSharedValue,
+          obj3,
+        );
       }
     } else if ("light" === colorScheme) {
       const PREFERS_COLOR_SCHEME_DARK = AccessibilityFeatureFlags.PREFERS_COLOR_SCHEME_DARK;
       closure_8 = closure_8 & ~PREFERS_COLOR_SCHEME_DARK;
       const tmp10 = AccessibilityPreferencesSharedValue.A11Y_FEATURE_MAP[PREFERS_COLOR_SCHEME_DARK];
       if (null != tmp10) {
-        const obj1 = {};
-        obj1[tmp10] = false;
+        const obj4 = {};
+        obj4[tmp10] = false;
         updateSharedValueIfChangedDefault(
           AccessibilityPreferencesSharedValue.accessibilityPreferencesSharedValue,
-          obj1,
+          obj4,
         );
       }
       const PREFERS_COLOR_SCHEME_LIGHT2 = AccessibilityFeatureFlags.PREFERS_COLOR_SCHEME_LIGHT;
       closure_8 = closure_8 | PREFERS_COLOR_SCHEME_LIGHT2;
       const tmp16 = AccessibilityPreferencesSharedValue.A11Y_FEATURE_MAP[PREFERS_COLOR_SCHEME_LIGHT2];
       if (null != tmp16) {
-        const obj2 = {};
-        obj2[tmp16] = true;
+        const obj5 = {};
+        obj5[tmp16] = true;
         updateSharedValueIfChangedDefault(
           AccessibilityPreferencesSharedValue.accessibilityPreferencesSharedValue,
-          obj2,
+          obj5,
         );
       }
     } else {
@@ -164,7 +169,7 @@ export default {
       closure_8 = closure_8 & ~PREFERS_COLOR_SCHEME_DARK3;
       const tmp35 = AccessibilityPreferencesSharedValue.A11Y_FEATURE_MAP[PREFERS_COLOR_SCHEME_DARK3];
       if (null != tmp35) {
-        obj = {};
+        const obj = {};
         obj[tmp35] = false;
         updateSharedValueIfChangedDefault(AccessibilityPreferencesSharedValue.accessibilityPreferencesSharedValue, obj);
       }
@@ -172,11 +177,11 @@ export default {
       closure_8 = closure_8 & ~PREFERS_COLOR_SCHEME_LIGHT;
       const tmp5 = AccessibilityPreferencesSharedValue.A11Y_FEATURE_MAP[PREFERS_COLOR_SCHEME_LIGHT];
       if (null != tmp5) {
-        const obj3 = {};
-        obj3[tmp5] = false;
+        const obj6 = {};
+        obj6[tmp5] = false;
         updateSharedValueIfChangedDefault(
           AccessibilityPreferencesSharedValue.accessibilityPreferencesSharedValue,
-          obj3,
+          obj6,
         );
       }
     }
@@ -191,7 +196,7 @@ export default {
     }
     const tmp6 = AccessibilityPreferencesSharedValue.A11Y_FEATURE_MAP[REDUCED_MOTION];
     if (null != tmp6) {
-      let obj = {};
+      const obj = {};
       obj[tmp6] = useReducedMotion;
       updateSharedValueIfChangedDefault(AccessibilityPreferencesSharedValue.accessibilityPreferencesSharedValue, obj);
     }
@@ -203,9 +208,9 @@ export default {
     }
     const tmp12 = AccessibilityPreferencesSharedValue.A11Y_FEATURE_MAP[REDUCED_MOTION_FROM_USER_SETTINGS];
     if (null != tmp12) {
-      obj = {};
-      obj[tmp12] = tmp10;
-      updateSharedValueIfChangedDefault(AccessibilityPreferencesSharedValue.accessibilityPreferencesSharedValue, obj);
+      const obj2 = {};
+      obj2[tmp12] = tmp10;
+      updateSharedValueIfChangedDefault(AccessibilityPreferencesSharedValue.accessibilityPreferencesSharedValue, obj2);
     }
     const SATURATION_LEVEL_DECREASED = AccessibilityFeatureFlags.SATURATION_LEVEL_DECREASED;
     if (AccessibilityStore.saturation < 1) {
@@ -215,9 +220,9 @@ export default {
     }
     const tmp18 = AccessibilityPreferencesSharedValue.A11Y_FEATURE_MAP[SATURATION_LEVEL_DECREASED];
     if (null != tmp18) {
-      obj = {};
-      obj[tmp18] = tmp16;
-      updateSharedValueIfChangedDefault(AccessibilityPreferencesSharedValue.accessibilityPreferencesSharedValue, obj);
+      const obj3 = {};
+      obj3[tmp18] = tmp16;
+      updateSharedValueIfChangedDefault(AccessibilityPreferencesSharedValue.accessibilityPreferencesSharedValue, obj3);
     }
     const CONTRAST_LEVEL_DECREASED = AccessibilityFeatureFlags.CONTRAST_LEVEL_DECREASED;
     if (AccessibilityStore.contrast < 1) {
@@ -227,9 +232,9 @@ export default {
     }
     const tmp24 = AccessibilityPreferencesSharedValue.A11Y_FEATURE_MAP[CONTRAST_LEVEL_DECREASED];
     if (null != tmp24) {
-      const obj1 = {};
-      obj1[tmp24] = tmp22;
-      updateSharedValueIfChangedDefault(AccessibilityPreferencesSharedValue.accessibilityPreferencesSharedValue, obj1);
+      const obj4 = {};
+      obj4[tmp24] = tmp22;
+      updateSharedValueIfChangedDefault(AccessibilityPreferencesSharedValue.accessibilityPreferencesSharedValue, obj4);
     }
     const CONTRAST_LEVEL_INCREASED = AccessibilityFeatureFlags.CONTRAST_LEVEL_INCREASED;
     if (AccessibilityStore.contrast > 1) {
@@ -239,21 +244,20 @@ export default {
     }
     const tmp30 = AccessibilityPreferencesSharedValue.A11Y_FEATURE_MAP[CONTRAST_LEVEL_INCREASED];
     if (null != tmp30) {
-      const obj2 = {};
-      obj2[tmp30] = tmp28;
-      updateSharedValueIfChangedDefault(AccessibilityPreferencesSharedValue.accessibilityPreferencesSharedValue, obj2);
+      const obj5 = {};
+      obj5[tmp30] = tmp28;
+      updateSharedValueIfChangedDefault(AccessibilityPreferencesSharedValue.accessibilityPreferencesSharedValue, obj5);
     }
   },
   handleAppStateChange(arg0) {
     if ("active" === arg0) {
       let result = React3.isReduceMotionEnabled();
       result.then((result) => {
-        let obj = AccessibilityActionCreators;
         let str = "no-preference";
         if (result) {
           str = "reduce";
         }
-        result = obj.systemPrefersReducedMotionChanged(str);
+        result = AccessibilityActionCreators.systemPrefersReducedMotionChanged(str);
         const REDUCED_MOTION = constants.REDUCED_MOTION;
         useReducedMotion = useReducedMotion.useReducedMotion;
         if (useReducedMotion) {
@@ -263,11 +267,11 @@ export default {
         }
         const tmp5 = AccessibilityPreferencesSharedValue.A11Y_FEATURE_MAP[REDUCED_MOTION];
         if (null != tmp5) {
-          obj = {};
-          obj[tmp5] = useReducedMotion;
+          const obj2 = {};
+          obj2[tmp5] = useReducedMotion;
           updateSharedValueIfChangedDefault(
             AccessibilityPreferencesSharedValue.accessibilityPreferencesSharedValue,
-            obj,
+            obj2,
           );
         }
       });

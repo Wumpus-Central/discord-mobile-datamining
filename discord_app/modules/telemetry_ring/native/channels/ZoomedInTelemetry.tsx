@@ -14,8 +14,8 @@ class ZoomedInTelemetryImpl extends tmp3 {
     tmp2 = closure_1(closure_2[3]);
     items = [];
     items[0] = closure_0(closure_2[3]).TelemetryChannel.ZOOMED;
-    tmp = new tmp(tmp2, items, closure_1, new.target);
-    return tmp;
+    tmp1 = new tmp(tmp2, items, closure_1, new.target);
+    return tmp1;
   }
 }
 const prototype = ZoomedInTelemetryImpl.prototype;
@@ -42,8 +42,8 @@ prototype["exportEntries"] = function exportEntries(arg0, arg1) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj4 = { value, done: true };
+        return obj4;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -57,8 +57,8 @@ prototype["exportEntries"] = function exportEntries(arg0, arg1) {
             throw value;
           } else if (arg0 === 2) {
             c2 = 3;
-            obj = { value, done: true };
-            return obj;
+            let obj5 = { value, done: true };
+            return obj5;
           } else {
             c5 = 1;
             let items = [];
@@ -66,12 +66,12 @@ prototype["exportEntries"] = function exportEntries(arg0, arg1) {
             closure_0 = closure_0[Symbol.iterator]();
             while (closure_0 !== undefined) {
               c5 = 2;
-              let obj1 = closure_0(c2[4]);
-              let zoomedInAnalyticsEvent = obj1.buildZoomedInAnalyticsEvent(tmp9);
+              let obj2 = closure_0(c2[4]);
+              let zoomedInAnalyticsEvent = obj2.buildZoomedInAnalyticsEvent(tmp9);
               if (null != zoomedInAnalyticsEvent) {
-                obj1 = { key: null, props: null };
+                let obj6 = { key: null, props: null };
                 ({ key: obj3.key, props: obj3.props } = zoomedInAnalyticsEvent);
-                let arr = items.push(obj1);
+                let arr = items.push(obj6);
               }
               c5 = 1;
               continue;
@@ -84,7 +84,7 @@ prototype["exportEntries"] = function exportEntries(arg0, arg1) {
               let _Promise = Promise;
               c3 = 3;
               c2 = 1;
-              let obj2 = {
+              let obj10 = {
                 value: Promise.all(
                   items.map((item, index) => {
                     let flush = closure_1;
@@ -97,7 +97,7 @@ prototype["exportEntries"] = function exportEntries(arg0, arg1) {
                 ),
                 done: false,
               };
-              return obj2;
+              return obj10;
             }
           }
         } else if (1 === tmp3) {
@@ -114,7 +114,7 @@ prototype["exportEntries"] = function exportEntries(arg0, arg1) {
         } else if (arg0 === 2) {
           c5 = 0;
           c2 = 3;
-          obj = { value, done: true };
+          let obj = { value, done: true };
           return obj;
         } else {
           c5 = 0;

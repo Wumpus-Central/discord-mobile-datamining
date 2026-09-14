@@ -14,16 +14,15 @@ require = fn;
 function AppLauncherActionSheet(arg0) {
   ({ chatInputRef: require, channel } = arg0);
   const ref = noop.useRef(null);
-  let obj = ReanimatedRexport;
-  const sharedValue = obj.useSharedValue(-1);
-  let obj1 = ReanimatedRexport;
-  const sharedValue1 = obj1.useSharedValue(0);
+  const sharedValue = ReanimatedRexport.useSharedValue(-1);
+  const sharedValue1 = ReanimatedRexport.useSharedValue(0);
   const ref1 = noop.useRef(undefined);
   const TEXT = AppLauncherTypes.AppLauncherEntrypoint.TEXT;
-  let obj2 = useDefaultAppLauncherWidth;
+  const ref2 = noop.useRef(AppLauncherContext.AppLauncherKeyboardCloseReason.DISMISSED);
   const items = [channel];
-  const defaultAppLauncherWidth = obj2.useDefaultAppLauncherWidth(TEXT);
-  obj = {
+  const defaultAppLauncherWidth = useDefaultAppLauncherWidth.useDefaultAppLauncherWidth(TEXT);
+  const memo = noop.useMemo(() => ({ channel, type: "channel" }), items);
+  const obj4 = {
     getApplicationCommandManager() {
       const current = ref.current;
       let applicationCommandManager;
@@ -45,36 +44,97 @@ function AppLauncherActionSheet(arg0) {
       }
     },
   };
-  const memo = noop.useMemo(() => ({ channel, type: "channel" }), items);
-  const ref2 = noop.useRef(AppLauncherContext.AppLauncherKeyboardCloseReason.DISMISSED);
-  obj = { ref, animatedIndex: sharedValue, scrollable: true, startExpanded: true, children: null };
-  obj1 = {
+  const obj5 = { ref, animatedIndex: sharedValue, scrollable: true, startExpanded: true, children: null };
+  const obj6 = {
     bottomSheetIndex: sharedValue,
     bottomSheetPosition: sharedValue1,
     bottomSheetExpandReasonRef: ref1,
     context: memo,
-    chatInputRef: noop.useRef(obj),
+    chatInputRef: noop.useRef({
+      getApplicationCommandManager() {
+        const current = ref.current;
+        let applicationCommandManager;
+        if (current != null) {
+          applicationCommandManager = current.getApplicationCommandManager();
+        }
+        return applicationCommandManager;
+      },
+      closeCustomKeyboard() {
+        const current = ref.current;
+        if (current != null) {
+          current.closeActionSheet();
+        }
+      },
+      openCustomKeyboard() {
+        const current = ref.current;
+        if (current != null) {
+          current.expandActionSheet();
+        }
+      },
+    }),
     entrypoint: TEXT,
     keyboardCloseReasonRef: ref2,
     width: defaultAppLauncherWidth,
     overrideParams: null,
   };
-  obj2 = { initialRouteName: AppLauncherRouteName.HOME, initialSearchQuery: null };
-  const ref3 = noop.useRef(obj);
+  const obj7 = { initialRouteName: AppLauncherRouteName.HOME, initialSearchQuery: null };
+  const ref3 = noop.useRef({
+    getApplicationCommandManager() {
+      const current = ref.current;
+      let applicationCommandManager;
+      if (current != null) {
+        applicationCommandManager = current.getApplicationCommandManager();
+      }
+      return applicationCommandManager;
+    },
+    closeCustomKeyboard() {
+      const current = ref.current;
+      if (current != null) {
+        current.closeActionSheet();
+      }
+    },
+    openCustomKeyboard() {
+      const current = ref.current;
+      if (current != null) {
+        current.expandActionSheet();
+      }
+    },
+  });
   const appDMApplication = getAppDMApplication.getAppDMApplication(channel);
   let name;
   if (appDMApplication != null) {
     name = appDMApplication.name;
   }
-  obj2.initialSearchQuery = name;
-  obj1.overrideParams = obj2;
-  obj.children = (
+  obj7.initialSearchQuery = name;
+  obj6.overrideParams = obj7;
+  obj5.children = (
     <tmp10
       bottomSheetIndex={sharedValue}
       bottomSheetPosition={sharedValue1}
       bottomSheetExpandReasonRef={ref1}
       context={memo}
-      chatInputRef={noop.useRef(obj)}
+      chatInputRef={noop.useRef({
+        getApplicationCommandManager() {
+          const current = ref.current;
+          let applicationCommandManager;
+          if (current != null) {
+            applicationCommandManager = current.getApplicationCommandManager();
+          }
+          return applicationCommandManager;
+        },
+        closeCustomKeyboard() {
+          const current = ref.current;
+          if (current != null) {
+            current.closeActionSheet();
+          }
+        },
+        openCustomKeyboard() {
+          const current = ref.current;
+          if (current != null) {
+            current.expandActionSheet();
+          }
+        },
+      })}
       entrypoint={TEXT}
       keyboardCloseReasonRef={ref2}
       width={defaultAppLauncherWidth}
@@ -104,8 +164,8 @@ export const useAppLauncherActionSheet = function useAppLauncherActionSheet(arg0
   obj.appLauncherActionSheet = noop.useMemo(() => {
     let tmp = null;
     if (first) {
-      let obj = { value: null, children: null };
-      obj = {
+      const obj = { value: null, children: null };
+      const obj2 = {
         transitionState: "visible",
         close() {},
         onLeave() {
@@ -113,11 +173,11 @@ export const useAppLauncherActionSheet = function useAppLauncherActionSheet(arg0
         },
         registerDismissHandler() {},
       };
-      obj.value = obj;
-      obj = {};
+      obj.value = obj2;
+      const obj3 = {};
       const merged = Object.assign(closure_0);
       obj.children = <AppLauncherActionSheet />;
-      tmp = jsx(ActionSheetContextDefault.Provider, {});
+      tmp = jsx(ActionSheetContextDefault.Provider, { value: null, children: null });
     }
     return tmp;
   }, items);

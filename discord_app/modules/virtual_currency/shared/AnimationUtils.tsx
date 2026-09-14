@@ -9,8 +9,8 @@ export { ORB_LOTTIE_COUNTER_ANIMATION_FACTORS };
 export const getOrbBalanceCounterAnimationConfigs = function getOrbBalanceCounterAnimationConfigs(diff, targetTime) {
   targetTime = targetTime.targetTime;
   if (targetTime.isRenderedWithoutLottieAnimation) {
-    let obj = { duration: targetTime, delay: 0 };
-    return obj;
+    const obj2 = { duration: targetTime, delay: 0 };
+    return obj2;
   } else {
     let str = "SPEND";
     if (diff > 0) {

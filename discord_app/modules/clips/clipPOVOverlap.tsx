@@ -24,7 +24,6 @@ export const getClipPOVWindow = function getClipPOVWindow(type) {
   }
 };
 export const getClipAttachmentPOVWindow = function getClipAttachmentPOVWindow(nextResult) {
-  let obj = FlagUtils;
   let num = nextResult.flags;
   if (num == null) {
     num = 0;
@@ -38,16 +37,16 @@ export const getClipAttachmentPOVWindow = function getClipAttachmentPOVWindow(ne
   if (null != id) {
     if (null != tmp4) {
       if (hasFlagResult) {
-        obj = {
+        const obj2 = {
           applicationId: id,
           startTimestamp: tmp4.syncTimestamp - 1000 * tmp4.duration,
           endTimestamp: tmp4.syncTimestamp,
         };
-        return obj;
+        return obj2;
       }
     }
   }
-  hasFlagResult = obj.hasFlag(num, MessageAttachmentFlags.IS_CLIP);
+  hasFlagResult = FlagUtils.hasFlag(num, MessageAttachmentFlags.IS_CLIP);
 };
 export const getClipPOVOverlapMilliseconds = function getClipPOVOverlapMilliseconds(applicationId, nextResult1) {
   if (applicationId.applicationId === nextResult1.applicationId) {

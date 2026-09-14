@@ -11,29 +11,31 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-fn(4636);
-let createStyles = {
+const createStyles = fn(4636);
+let obj2 = {
   containerOuter: { flex: 1, overflow: "hidden" },
-  containerOuterTablet: null,
-  container: null,
+  containerOuterTablet: {
+    backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST,
+    paddingHorizontal: nativeDefault.space.PX_8,
+    borderRadius: nativeDefault.radii.md,
+    flex: 1,
+  },
+  container: { flex: 1 },
   containerTablet: null,
 };
-createStyles = {
+const obj3 = {
   backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST,
   paddingHorizontal: nativeDefault.space.PX_8,
   borderRadius: nativeDefault.radii.md,
   flex: 1,
 };
-createStyles.containerOuterTablet = createStyles;
-createStyles.container = { flex: 1 };
-createStyles.containerTablet = { borderRadius: nativeDefault.radii.md, overflow: "hidden", flex: 1 };
-let closure_6 = createStyles.createStyles(createStyles);
+obj2.containerTablet = { borderRadius: nativeDefault.radii.md, overflow: "hidden", flex: 1 };
+let closure_6 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/tabs/settings/Settings.tsx");
 
 export default function Settings() {
-  let obj = profileModalTransition;
-  const reportProfileModalTransition = obj.useReportProfileModalTransition();
+  const reportProfileModalTransition = profileModalTransition.useReportProfileModalTransition();
   const rect = useSafeAreaInsetsDefault();
   const top = rect.top;
   const left = rect.left;
@@ -47,26 +49,43 @@ export default function Settings() {
   const tmp6 = closure_6();
   closure_4 = tmp6;
   let items = [tmp6, tmp5, top, left, right];
-  obj = {
+  let obj2 = {
     style: noop.useMemo(() => {
       if (closure_3) {
         const items = [closure_4.containerOuterTablet];
-        let obj = { paddingTop: top, paddingLeft: left, paddingRight: right };
-        items[1] = obj;
+        const obj2 = { paddingTop: top, paddingLeft: left, paddingRight: right };
+        items[1] = obj2;
         let items1 = items;
       } else {
         items1 = [closure_4.containerOuter];
-        obj = { paddingLeft: left, paddingRight: right };
+        const obj = { paddingLeft: left, paddingRight: right };
         items1[1] = obj;
       }
       return items1;
     }, items),
     children: null,
   };
-  obj = { style: tmp5 ? tmp6.containerTablet : tmp6.container, children: jsx(SettingsNavigatorDefault, {}) };
-  obj.children = jsx(ReanimatedRexportDefault.View, {
+  obj2.children = jsx(ReanimatedRexportDefault.View, {
     style: tmp5 ? tmp6.containerTablet : tmp6.container,
     children: jsx(SettingsNavigatorDefault, {}),
   });
-  return <View style={tmp5 ? tmp6.containerTablet : tmp6.container}>{jsx(SettingsNavigatorDefault, {})}</View>;
+  return (
+    <View
+      style={noop.useMemo(() => {
+        if (closure_3) {
+          const items = [closure_4.containerOuterTablet];
+          const obj2 = { paddingTop: top, paddingLeft: left, paddingRight: right };
+          items[1] = obj2;
+          let items1 = items;
+        } else {
+          items1 = [closure_4.containerOuter];
+          const obj = { paddingLeft: left, paddingRight: right };
+          items1[1] = obj;
+        }
+        return items1;
+      }, items)}
+    >
+      {null}
+    </View>
+  );
 }

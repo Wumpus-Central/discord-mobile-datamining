@@ -1,6 +1,8 @@
 // discord_common/js/packages/media-engine/pollConnectionStats.tsx
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 
+const require = globalThis.__r;
+
 const require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("../discord_common/js/packages/media-engine/pollConnectionStats.tsx");
@@ -25,8 +27,8 @@ export default function pollConnectionStats(on) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -39,8 +41,8 @@ export default function pollConnectionStats(on) {
             throw value;
           } else if (arg0 === 2) {
             c7 = 3;
-            obj = { value, done: true };
-            return obj;
+            let obj3 = { value, done: true };
+            return obj3;
           } else {
             closure_3 = tmp;
             closure_2 = tmp2;
@@ -71,12 +73,12 @@ export default function pollConnectionStats(on) {
           c5 = 0;
           on.return();
           c7 = 3;
-          let obj1 = { value, done: true };
-          return obj1;
+          let obj4 = { value, done: true };
+          return obj4;
         } else {
           closure_130_3 = value;
           if (null != closure_130_3) {
-            obj = { connection: null, stats: null };
+            let obj = { connection: null, stats: null };
             obj.connection = closure_130_2.connection;
             obj.stats = closure_130_3;
             let arr = closure_130_1.push(obj);
@@ -92,8 +94,8 @@ export default function pollConnectionStats(on) {
           closure_130_2 = tmp22;
           c6 = 2;
           c7 = 1;
-          let obj2 = { value: closure_130_2.stats, done: false };
-          return obj2;
+          let obj5 = { value: closure_130_2.stats, done: false };
+          return obj5;
         }
       }
     }

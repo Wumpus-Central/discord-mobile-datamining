@@ -193,8 +193,8 @@ prototype["instantaneousStateAsync"] = function instantaneousStateAsync() {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -207,16 +207,16 @@ prototype["instantaneousStateAsync"] = function instantaneousStateAsync() {
             throw value;
           } else if (arg0 === 2) {
             c2 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj3 = { value, done: true };
+            return obj3;
           } else if (null == self.raw) {
             const Closed = self(c2[2]).DatabaseState.Closed;
             c2 = 3;
           } else {
             c1 = 1;
             c2 = 1;
-            const obj1 = { value: self.execute({ type: "db.state" }), done: false };
-            return obj1;
+            const obj4 = { value: self.execute({ type: "db.state" }), done: false };
+            return obj4;
           }
         } else if (arg0 === 1) {
           c2 = 3;
@@ -225,7 +225,7 @@ prototype["instantaneousStateAsync"] = function instantaneousStateAsync() {
           self.lastState = value;
         }
         c2 = 3;
-        obj = { value, done: true };
+        const obj = { value, done: true };
         return obj;
       } catch (tmp9) {
         c2 = tmp;
@@ -241,15 +241,14 @@ prototype["transaction"] = function transaction(fn, arg1) {
   const self = this;
   closure_1 = arg1;
   if (typeof DatabaseTransaction === "function") {
-    let obj = Object.create(tmp2.prototype);
+    const obj = Object.create(tmp2.prototype);
     obj.database = tmp;
     obj.operations = [];
     const resolved = Promise.resolve(fn(obj));
     return resolved.then(() => {
       if (obj.operations.length > 0) {
-        obj = { type: "db.transaction", operations: null };
-        obj.operations = obj.complete();
-        let executeResult = self.execute(obj, closure_1);
+        const obj2 = { type: "db.transaction", operations: obj.complete() };
+        let executeResult = self.execute(obj2, closure_1);
       } else {
         executeResult = Promise.resolve();
       }

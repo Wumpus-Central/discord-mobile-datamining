@@ -5,17 +5,15 @@ import DurationsDefault from "../../utils/Durations.tsx";
 import privDefault from "../../../_runtime/01437_priv.js";
 
 let closure_2 = { taken: null, error: "HermesInternal", rateLimited: null };
-let suggestions = {
+let obj = {
   validations: new privDefault({ max: 100, maxAge: 60000 }),
   currentUsernameInvalid: false,
   retryAfterTime: null,
-  suggestions: null,
+  suggestions: {
+    migration: { suggestion: { username: "r" }, fetched: false, usernameSuggestionLoading: false },
+    registration: { suggestion: { username: "r" }, source: "PX_16", fetched: true },
+  },
 };
-suggestions = {
-  migration: { suggestion: { username: "r" }, fetched: false, usernameSuggestionLoading: false },
-  registration: { suggestion: { username: "r" }, source: "PX_16", fetched: "2026-08-user-bio-max-length" },
-};
-suggestions.suggestions = suggestions;
 const Store = initializeDefault.Store;
 class UniqueUsernamesStore extends Store {}
 const prototype = UniqueUsernamesStore.prototype;
@@ -57,7 +55,7 @@ prototype["wasSuggestionsFetched"] = function wasSuggestionsFetched() {
   return obj.suggestions.migration.fetched;
 };
 UniqueUsernamesStore.displayName = "UniqueUsernamesStore";
-suggestions = {
+const uniqueUsernamesStore = new UniqueUsernamesStore(DispatcherDefault, {
   UNIQUE_USERNAME_ATTEMPT_SUCCESS: function handleUniqueUsernameAttemptSuccess(taken) {
     const validations = obj.validations;
     obj = { taken: taken.taken };
@@ -66,17 +64,17 @@ suggestions = {
   UNIQUE_USERNAME_ATTEMPT_FAILURE: function handleUniqueUsernameAttemptFailure(statusCode) {
     ({ username, error, retryAfter } = statusCode);
     if (429 === statusCode.statusCode) {
-      let validations = obj.validations;
-      obj = { taken: null, error, rateLimited: true };
+      const validations2 = obj.validations;
+      const obj2 = { taken: null, error, rateLimited: true };
       let num = retryAfter;
       if (retryAfter == null) {
         num = 7;
       }
-      const result = validations.set(username, obj, num * DurationsDefault.Millis.SECOND);
+      const result = validations2.set(username, obj2, num * DurationsDefault.Millis.SECOND);
       let tmp = obj;
     } else {
       tmp = obj;
-      validations = obj.validations;
+      const validations = obj.validations;
       obj = { taken: null, error };
       const result1 = validations.set(username, obj);
     }
@@ -88,11 +86,7 @@ suggestions = {
   },
   UNIQUE_USERNAME_SUGGESTIONS_RESET: function handleUniqueUsernameSuggestionsReset() {
     obj.suggestions.migration = { suggestion: { username: "r" }, fetched: false, usernameSuggestionLoading: false };
-    obj.suggestions.registration = {
-      suggestion: { username: "r" },
-      source: "PX_16",
-      fetched: "2026-08-user-bio-max-length",
-    };
+    obj.suggestions.registration = { suggestion: { username: "r" }, source: "PX_16", fetched: true };
   },
   UNIQUE_USERNAME_SUGGESTIONS_SUCCESS: function handleUniqueUsernameSuggestionsSuccess(suggestion) {
     suggestion = suggestion.suggestion;
@@ -119,8 +113,7 @@ suggestions = {
       const result = validations.set(suggestion.username, { taken: false });
     }
   },
-};
-const uniqueUsernamesStore = new UniqueUsernamesStore(DispatcherDefault, suggestions);
+});
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/unique_usernames/UniqueUsernamesStore.tsx");
 

@@ -12,27 +12,26 @@ const result = size.fileFinishedImporting("modules/app_channels/native/AppChanne
 export default function AppChannelApplicationActionSheet(arg0) {
   ({ selectedApplicationId, onChange } = arg0);
   ({ guildId, channelId } = arg0);
-  let obj = onChange(9873);
-  const options = obj.useAppChannelApplicationOptions(guildId, channelId, selectedApplicationId).options;
+  const options = onChange(9873).useAppChannelApplicationOptions(guildId, channelId, selectedApplicationId).options;
   const items = [onChange];
   const callback = noop.useCallback((arg0) => {
     onChange(arg0);
     ActionSheetActionCreatorsDefault.hideActionSheet();
   }, items);
-  obj = { header: null, children: null };
-  obj = { title: null };
+  const obj2 = { header: null, children: null };
+  const obj3 = { title: null };
   const intl = onChange(1114).intl;
-  obj.title = intl.string(onChange(1114).t.F2FMFR);
-  obj.header = jsx(onChange(7252).BottomSheetTitleHeader, { title: null });
-  const obj1 = { accessibilityLabel: null, value: null, onChange: null, hasIcons: true, children: null };
+  obj3.title = intl.string(onChange(1114).t.F2FMFR);
+  obj2.header = jsx(onChange(7252).BottomSheetTitleHeader, { title: null });
+  const obj4 = { accessibilityLabel: null, value: null, onChange: null, hasIcons: true, children: null };
   const intl2 = onChange(1114).intl;
-  obj1.accessibilityLabel = intl2.string(onChange(1114).t.F2FMFR);
+  obj4.accessibilityLabel = intl2.string(onChange(1114).t.F2FMFR);
   if (selectedApplicationId == null) {
     selectedApplicationId = "";
   }
-  obj1.value = selectedApplicationId;
-  obj1.onChange = callback;
-  obj1.children = options.map((item) => {
+  obj4.value = selectedApplicationId;
+  obj4.onChange = callback;
+  obj4.children = options.map((item) => {
     ({ application, status } = item);
     return jsx(
       onChange(5769).TableRadioRow,
@@ -46,13 +45,13 @@ export default function AppChannelApplicationActionSheet(arg0) {
       application.id,
     );
   });
-  obj.children = jsx(onChange(5766).TableRadioGroup, {
+  obj2.children = jsx(onChange(5766).TableRadioGroup, {
     accessibilityLabel: null,
     value: null,
     onChange: null,
     hasIcons: true,
     children: null,
   });
-  return jsx(onChange(7300).ActionSheet, { title: null });
+  return jsx(onChange(7300).ActionSheet, { header: null, children: null });
 }
 export const APP_CHANNEL_APPLICATION_ACTION_SHEET_KEY = "AppChannelApplicationActionSheet";

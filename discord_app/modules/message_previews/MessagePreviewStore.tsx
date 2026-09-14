@@ -53,12 +53,12 @@ class MessagePreviewStore extends Store {
         return closure_0.handleThreadListSync(arg0);
       },
     };
-    tmp2 = new tmp2(closure_1(closure_2[5]), obj, new.target, tmp2, tmp, new.target, undefined);
-    closure_0 = tmp2;
+    tmp21 = new tmp2(closure_1(closure_2[5]), obj, new.target, tmp2, tmp, new.target, undefined);
+    closure_0 = tmp21;
     map = new Map();
-    tmp2.guilds = map;
-    tmp2.generation = 0;
-    return tmp2;
+    tmp21.guilds = map;
+    tmp21.generation = 0;
+    return tmp21;
   }
 }
 const prototype = MessagePreviewStore.prototype;

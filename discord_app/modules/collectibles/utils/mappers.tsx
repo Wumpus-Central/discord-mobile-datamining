@@ -50,18 +50,18 @@ export const parseServerUserCollectibles = function parseServerUserCollectibles(
                       if ("palette" in nameplate) {
                         tmp6 = null;
                         if (typeof nameplate.palette === "string") {
-                          let obj = { skuId: StringResult, label: null, palette: null };
+                          const obj3 = { skuId: StringResult, label: null, palette: null };
                           ({ label: obj2.label, palette: obj2.palette } = nameplate);
                           if (tmp7) {
-                            obj.asset = nameplate.asset;
+                            obj3.asset = nameplate.asset;
                           }
                           if (tmp8) {
-                            obj.expiresAt = nameplate.expiresAt;
+                            obj3.expiresAt = nameplate.expiresAt;
                           }
-                          tmp6 = obj;
+                          tmp6 = obj3;
                           if (tmp9) {
-                            obj.expiresAt = nameplate.expires_at;
-                            tmp6 = obj;
+                            obj3.expiresAt = nameplate.expires_at;
+                            tmp6 = obj3;
                           }
                           tmp7 = "asset" in nameplate && typeof nameplate.asset === "string";
                           tmp8 = "expiresAt" in nameplate && typeof nameplate.expiresAt === "number";
@@ -76,7 +76,7 @@ export const parseServerUserCollectibles = function parseServerUserCollectibles(
               StringResult = String(nameplate.skuId);
             }
           }
-          obj = { nameplate: tmp6 };
+          const obj = { nameplate: tmp6 };
           tmp2 = obj;
         }
       }

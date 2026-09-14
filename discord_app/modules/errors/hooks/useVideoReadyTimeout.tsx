@@ -18,7 +18,6 @@ export default function useVideoReadyTimeout(streamId) {
     flag = false;
   }
   let STREAM;
-  let obj = streamKey;
   const timeout = new streamId(userId[2]).Timeout();
   streamKey.useRef(timeout);
   if (videoSpinnerContext !== streamId(userId[3]).VideoSpinnerContext.SELF_STREAM) {
@@ -42,14 +41,14 @@ export default function useVideoReadyTimeout(streamId) {
         }
       }
     }, items);
-    obj = { onReady: null };
+    const obj2 = { onReady: null };
     const items1 = [userId, STREAM];
-    obj.onReady = obj.useCallback(() => {
+    obj2.onReady = obj.useCallback(() => {
       const current = ref.current;
       current.stop();
       const result = VideoStreamReadyActionCreators.clearVideoStreamTimeout(STREAM, userId);
     }, items1);
-    return obj;
+    return obj2;
   }
   STREAM = tmp(tmp2[4]).MediaEngineContextTypes.STREAM;
 }

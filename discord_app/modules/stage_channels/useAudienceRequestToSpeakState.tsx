@@ -1,6 +1,8 @@
 // discord_app/modules/stage_channels/useAudienceRequestToSpeakState.tsx
 import VoiceStateStore from "../../stores/VoiceStateStore.tsx";
 
+const require = globalThis.__r;
+
 const require = fn;
 const RequestToSpeakStates = {
   NONE: 0,

@@ -24,7 +24,7 @@ const prototype = function StorefrontProductRecord(arg0) {
 }.prototype;
 prototype["fromServer"] = function fromServer(sku_ids) {
   ({ options, created_at, updated_at, skus, tenant_metadata } = sku_ids);
-  let obj = {};
+  const obj = {};
   const merged = Object.assign(
     Object.assign(
       sku_ids,
@@ -94,7 +94,6 @@ prototype["fromServer"] = function fromServer(sku_ids) {
   }
   obj.hideBadge = hide_badge;
   if (typeof prototype === "function") {
-    obj = Object.create(prototype.prototype);
     ({
       id: tmp17.id,
       skuIds: tmp17.skuIds,
@@ -112,7 +111,7 @@ prototype["fromServer"] = function fromServer(sku_ids) {
       badgeOverride: tmp17.badgeOverride,
       hideBadge: tmp17.hideBadge,
     } = obj);
-    return obj;
+    return Object.create(prototype.prototype);
   } else {
     throw new TypeError("Trying to call a non-function");
   }

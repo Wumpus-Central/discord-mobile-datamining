@@ -22,10 +22,10 @@ function Background(arg0) {
   return value2(timestampProducer, {});
 }
 function GradientBackground(arg0) {
-  let obj = {};
+  const obj = {};
   const merged = Object.assign(arg0);
-  obj = { style: closure_18(false).backgroundOverlay };
-  obj.children = value2(timestampProducer, obj);
+  const tmp = closure_18(false);
+  obj.children = value2(timestampProducer, { style: closure_18(false).backgroundOverlay });
   return value2(timestampProducer, obj);
 }
 get_ActivityIndicator = fn(17);
@@ -54,9 +54,14 @@ let closure_18 = createStyles.createStyles((arg0) => {
   if (arg2 === undefined) {
     flag = false;
   }
-  let obj = {
-    background: null,
-    wrapper: null,
+  const obj = {
+    background: {
+      overflow: "hidden",
+      borderTopLeftRadius: borderTopRightRadius,
+      borderTopRightRadius,
+      backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND,
+    },
+    wrapper: { overflow: "hidden", flex: 1 },
     wrapperWithBorder: null,
     content: null,
     gradient: null,
@@ -65,15 +70,13 @@ let closure_18 = createStyles.createStyles((arg0) => {
     header: null,
     body: null,
   };
-  obj = {
+  const obj2 = {
     overflow: "hidden",
     borderTopLeftRadius: borderTopRightRadius,
     borderTopRightRadius,
     backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND,
   };
-  obj.background = obj;
-  obj.wrapper = { overflow: "hidden", flex: 1 };
-  obj = {
+  obj.wrapperWithBorder = {
     overflow: "hidden",
     marginTop: marginHorizontal,
     marginHorizontal,
@@ -81,39 +84,47 @@ let closure_18 = createStyles.createStyles((arg0) => {
     borderTopRightRadius,
     backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND,
   };
-  obj.wrapperWithBorder = obj;
   let tmp4;
   if (arg0) {
     tmp4 = borderTopRightRadius;
   }
-  const obj1 = { borderTopLeftRadius: tmp4, borderTopRightRadius: null, overflow: null, marginBottom: null, flex: 1 };
+  const obj4 = { borderTopLeftRadius: tmp4, borderTopRightRadius: null, overflow: null, marginBottom: null, flex: 1 };
   let tmp5;
   if (arg0) {
     tmp5 = borderTopRightRadius;
   }
-  obj1.borderTopRightRadius = tmp5;
+  obj4.borderTopRightRadius = tmp5;
   let str;
   if (arg0) {
     str = "hidden";
   }
-  obj1.overflow = str;
+  obj4.overflow = str;
   let num2 = 0;
   if (!flag) {
     num2 = num + 4;
   }
-  obj1.marginBottom = num2;
-  obj.content = obj1;
-  let obj4 = PlatformUtils;
+  obj4.marginBottom = num2;
+  obj.content = obj4;
+  const obj3 = {
+    overflow: "hidden",
+    marginTop: marginHorizontal,
+    marginHorizontal,
+    borderTopLeftRadius: borderTopRightRadius,
+    borderTopRightRadius,
+    backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND,
+  };
   let str2;
-  if (obj4.isIOS()) {
+  if (obj5.isIOS()) {
     str2 = "hidden";
   }
   obj.gradient = { height: "100%", overflow: str2, borderTopLeftRadius: borderTopRightRadius, borderTopRightRadius };
+  obj5 = PlatformUtils;
+  const obj6 = { height: "100%", overflow: str2, borderTopLeftRadius: borderTopRightRadius, borderTopRightRadius };
   obj.handleIndicator = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_STRONG };
-  obj4 = {};
+  const obj8 = {};
   const merged = Object.assign(hasOwnProperty.absoluteFillObject);
-  obj4.backgroundColor = nativeDefault.colors.MOBILE_ACTIONSHEET_GRADIENT_BACKGROUND_DEFAULT;
-  obj.backgroundOverlay = obj4;
+  obj8.backgroundColor = nativeDefault.colors.MOBILE_ACTIONSHEET_GRADIENT_BACKGROUND_DEFAULT;
+  obj.backgroundOverlay = obj8;
   obj.header = { marginBottom: 16 };
   obj.body = { flex: 1 };
   return obj;
@@ -143,32 +154,29 @@ let closure_19 = noop.forwardRef((windowDimensions, ref) => {
   );
   startHeight = undefined;
   closure_4 = undefined;
-  let obj = useIsScreenReaderEnabled;
-  const isScreenReaderEnabled = obj.useIsScreenReaderEnabled();
+  const isScreenReaderEnabled = useIsScreenReaderEnabled.useIsScreenReaderEnabled();
   if (startHeight == null) {
     startHeight = height * React5;
   }
-  let obj1 = noop;
   if (!isScreenReaderEnabled) {
     if (!startExpanded) {
       let items = [startHeight];
     }
-    const tmp9 = _slicedToArray(tmp7(items), 2);
-    closure_4 = tmp9[1];
+    [obj3.snapPoints, closure_4] = tmp7(items);
     const items1 = [isScreenReaderEnabled];
-    const effect = obj1.useEffect(() => {
+    const effect = noop.useEffect(() => {
       if (isScreenReaderEnabled) {
         closure_4([]);
       }
     }, items1);
     const items2 = [startHeight];
     const items3 = [onChange, onExpand];
-    const callback = obj1.useCallback((nativeEvent) => {
+    const callback = noop.useCallback((nativeEvent) => {
       if (nativeEvent.nativeEvent.layout.height < startHeight) {
         closure_4([]);
       }
     }, items2);
-    const callback1 = obj1.useCallback((arg0, arg1, arg2) => {
+    const callback1 = noop.useCallback((arg0, arg1, arg2) => {
       if (onChange != null) {
         tmp(arg0, arg1, arg2);
       }
@@ -178,21 +186,20 @@ let closure_19 = noop.forwardRef((windowDimensions, ref) => {
         }
       }
     }, items3);
-    obj = {};
+    const obj3 = {};
     const merged1 = Object.assign(merged);
-    obj.enableDynamicSizing = true;
-    obj.snapPoints = tmp9[0];
+    obj3.enableDynamicSizing = true;
     if (maxDynamicContentSize == null) {
       maxDynamicContentSize = height - NavigatorConstants.NAV_BAR_HEIGHT_MULTILINE - useSafeAreaInsetsDefault().top;
     }
-    obj.maxDynamicContentSize = maxDynamicContentSize;
-    obj.ref = ref;
-    obj.onChange = callback1;
-    obj = { bounces: false, keyboardShouldPersistTaps, style: scrollViewStyle, children: null };
-    obj1 = { onLayout: callback, style: wrapperStyle, children };
-    obj.children = value2(timestampProducer, obj1);
-    obj.children = value2(BottomSheetModal.BottomSheetScrollView, obj);
-    return value2(BottomSheetModalDefault, obj);
+    obj3.maxDynamicContentSize = maxDynamicContentSize;
+    obj3.ref = ref;
+    obj3.onChange = callback1;
+    const obj4 = { bounces: false, keyboardShouldPersistTaps, style: scrollViewStyle, children: null };
+    const obj5 = { onLayout: callback, style: wrapperStyle, children };
+    obj4.children = value2(timestampProducer, obj5);
+    obj3.children = value2(BottomSheetModal.BottomSheetScrollView, obj4);
+    return value2(BottomSheetModalDefault, obj3);
   }
   items = [];
 });
@@ -222,8 +229,8 @@ let closure_20 = noop.forwardRef((windowDimensions, ref) => {
   startHeight = undefined;
   maxHeight = undefined;
   c6 = undefined;
-  let obj = useIsScreenReaderEnabled;
-  const isScreenReaderEnabled = obj.useIsScreenReaderEnabled();
+  const tmp2 = closure_18(false);
+  const isScreenReaderEnabled = useIsScreenReaderEnabled.useIsScreenReaderEnabled();
   if (startHeight == null) {
     startHeight = height * React5;
   }
@@ -252,9 +259,9 @@ let closure_20 = noop.forwardRef((windowDimensions, ref) => {
   const diff = memo.length - 1;
   c6 = diff;
   const items1 = [onChange, onExpand, diff];
-  obj = { style: null, children };
+  const obj2 = { style: null, children };
   const items2 = [wrapperStyle, { maxHeight }];
-  obj.style = items2;
+  obj2.style = items2;
   const callback = noop.useCallback((arg0, arg1, arg2) => {
     if (onChange != null) {
       tmp(arg0, arg1, arg2);
@@ -265,28 +272,29 @@ let closure_20 = noop.forwardRef((windowDimensions, ref) => {
       }
     }
   }, items1);
-  const tmp11 = value2(timestampProducer, obj);
-  obj = {};
-  let tmp3Result = BottomSheetModalDefault;
+  const tmp11 = value2(timestampProducer, obj2);
+  const obj3 = {};
   const merged1 = Object.assign(merged);
-  obj.ref = ref;
-  obj.enableDynamicSizing = false;
-  obj.contentHeight = contentHeight;
-  obj.snapPoints = memo;
-  obj.onChange = callback;
+  obj3.ref = ref;
+  obj3.enableDynamicSizing = false;
+  obj3.contentHeight = contentHeight;
+  obj3.snapPoints = memo;
+  obj3.onChange = callback;
   let tmp10Result = tmp11;
   if (null != borderGradient) {
-    const obj1 = { style: tmp2.gradient, start: null, end: null, colors: null, children: null };
-    tmp3Result = LinearGradientDefault;
-    obj1.start = ConstantsIOS.VerticalGradient.START;
-    obj1.end = ConstantsIOS.VerticalGradient.END;
-    obj1.colors = borderGradient;
-    obj1.children = tmp11;
-    tmp10Result = value2(tmp3Result, obj1);
+    const obj4 = {
+      style: tmp2.gradient,
+      start: ConstantsIOS.VerticalGradient.START,
+      end: ConstantsIOS.VerticalGradient.END,
+      colors: borderGradient,
+      children: tmp11,
+    };
+    tmp10Result = value2(LinearGradientDefault, obj4);
+    const tmp3Result2 = LinearGradientDefault;
   }
   const items3 = [tmp10Result, extraContent];
-  obj.children = items3;
-  return closure_1_17(tmp3Result, obj);
+  obj3.children = items3;
+  return closure_1_17(BottomSheetModalDefault, obj3);
 });
 const __initData = {
   code: "function BottomSheetNativeTsx1(){const{animatedIndex}=this.__closure;return animatedIndex.get()<=-1;}",
@@ -351,7 +359,6 @@ export const BottomSheet = noop.forwardRef((scrollable, arg1) => {
     }),
   );
   let derivedValue;
-  let obj = onExpand;
   const context = onExpand.useContext(backdropChildren(dismissAccessibilityLabel[15]));
   const transitionState = context.transitionState;
   const close = context.close;
@@ -368,8 +375,14 @@ export const BottomSheet = noop.forwardRef((scrollable, arg1) => {
   const layoutEffect = obj.useLayoutEffect(() => {
     registerDismissHandler(onDismiss);
   }, items);
-  let tmp8Result = tmp8(tmp3[17]);
-  const bottomSheetImperativeHandle = tmp8Result.useBottomSheetImperativeHandle(arg1, ref);
+  const tmp9 = onExpand.useContext(backdropOpacity(dismissAccessibilityLabel[16]).AccessibilityPreferencesContext)
+    .reducedMotion.enabled
+    ? ref
+    : registerDismissHandler;
+  const bottomSheetImperativeHandle = backdropOpacity(dismissAccessibilityLabel[17]).useBottomSheetImperativeHandle(
+    arg1,
+    ref,
+  );
   let items1 = [transitionState, close];
   const effect = obj.useEffect(() => {
     let current = "exiting" !== transitionState;
@@ -391,8 +404,8 @@ export const BottomSheet = noop.forwardRef((scrollable, arg1) => {
       close();
     }
   }, items1);
-  tmp8Result = tmp8(tmp3[18]);
-  const unmountEffect = tmp8Result.useUnmountEffect(() => {
+  const tmp8Result = backdropOpacity(dismissAccessibilityLabel[17]);
+  const unmountEffect = backdropOpacity(dismissAccessibilityLabel[18]).useUnmountEffect(() => {
     if (ref.current) {
       if (onDismiss != null) {
         tmp();
@@ -429,14 +442,11 @@ export const BottomSheet = noop.forwardRef((scrollable, arg1) => {
       onExpand();
     }
   }, items3);
-  const tmp9 = onExpand.useContext(backdropOpacity(dismissAccessibilityLabel[16]).AccessibilityPreferencesContext)
-    .reducedMotion.enabled
-    ? ref
-    : registerDismissHandler;
+  const tmp8Result6 = backdropOpacity(dismissAccessibilityLabel[18]);
   if (animatedIndex == null) {
-    animatedIndex = tmp8Result1.useSharedValue(-1);
+    animatedIndex = tmp8Result7.useSharedValue(-1);
   }
-  tmp8Result1 = backdropOpacity(dismissAccessibilityLabel[14]);
+  tmp8Result7 = backdropOpacity(dismissAccessibilityLabel[14]);
   function ue() {
     return animatedIndex.get() <= -1;
   }
@@ -444,7 +454,7 @@ export const BottomSheet = noop.forwardRef((scrollable, arg1) => {
   ue.__workletHash = 4341912681188;
   ue.__initData = __initData;
   derivedValue = backdropOpacity(dismissAccessibilityLabel[14]).useDerivedValue(ue);
-  const tmp8Result2 = backdropOpacity(dismissAccessibilityLabel[14]);
+  const tmp8Result8 = backdropOpacity(dismissAccessibilityLabel[14]);
   function _e() {
     return derivedValue.get();
   }
@@ -460,11 +470,11 @@ export const BottomSheet = noop.forwardRef((scrollable, arg1) => {
       ReanimatedRexport.runOnJS(onLeave)();
     }
   }
-  obj = { transitionState, runOnJS: tmp8(tmp3[14]).runOnJS, onLeave };
-  he.__closure = obj;
+  const tmp8Result9 = backdropOpacity(dismissAccessibilityLabel[14]);
+  he.__closure = { transitionState, runOnJS: backdropOpacity(dismissAccessibilityLabel[14]).runOnJS, onLeave };
   he.__workletHash = 77590951197;
   he.__initData = __initData3;
-  const animatedReaction = backdropOpacity(dismissAccessibilityLabel[14]).useAnimatedReaction(_e, he);
+  const animatedReaction = tmp8Result9.useAnimatedReaction(_e, he);
   const items4 = [dismissAccessibilityLabel];
   const items5 = [backdropOpacity, backdropChildren];
   const callback2 = obj.useCallback(
@@ -482,11 +492,16 @@ export const BottomSheet = noop.forwardRef((scrollable, arg1) => {
   );
   const items6 = [footer];
   const callback3 = obj.useCallback((animatedIndex) => {
-    let obj = { style: null, children: null };
+    const obj = { style: null, children: null };
     const items = [hasOwnProperty.absoluteFill, animatedIndex.style];
     obj.style = items;
-    obj = { animatedIndex: animatedIndex.animatedIndex, opacity: backdropOpacity };
-    const items1 = [value2(Sheet_BottomSheetBackdrop.BottomSheetBackdrop, obj), backdropChildren];
+    const items1 = [
+      value2(Sheet_BottomSheetBackdrop.BottomSheetBackdrop, {
+        animatedIndex: animatedIndex.animatedIndex,
+        opacity: backdropOpacity,
+      }),
+      backdropChildren,
+    ];
     obj.children = items1;
     return closure_2_17(timestampProducer, obj);
   }, items5);
@@ -508,7 +523,7 @@ export const BottomSheet = noop.forwardRef((scrollable, arg1) => {
   const tmp24 = backdropChildren(dismissAccessibilityLabel[23])();
   const backgroundComponent = merged.backgroundComponent;
   if (backgroundComponent != null) {
-    obj = {
+    const obj3 = {
       ref,
       accessible: null,
       accessibilityRole: "none",
@@ -543,32 +558,32 @@ export const BottomSheet = noop.forwardRef((scrollable, arg1) => {
       extraContent: null,
       children: null,
     };
-    const tmp8Result4 = tmp8(tmp3[7]);
+    const tmp8Result10 = tmp8(tmp3[7]);
     const isIOSResult = tmp8(tmp3[7]).isIOS();
-    obj.accessible = !tmp8(tmp3[7]).isIOS();
-    obj.startHeight = startHeight;
-    obj.contentHeight = contentHeight;
-    obj.maxHeight = maxHeight;
-    obj.containerHeight = containerHeight;
-    obj.startExpanded = startExpanded;
-    obj.hasEverExpanded = tmp7[0];
-    obj.windowDimensions = tmp21;
+    obj3.accessible = !tmp8(tmp3[7]).isIOS();
+    obj3.startHeight = startHeight;
+    obj3.contentHeight = contentHeight;
+    obj3.maxHeight = maxHeight;
+    obj3.containerHeight = containerHeight;
+    obj3.startExpanded = startExpanded;
+    obj3.hasEverExpanded = tmp7[0];
+    obj3.windowDimensions = tmp21;
     const items8 = [tmp5.wrapper, null != borderGradient && tmp5.wrapperWithBorder];
-    obj.wrapperStyle = items8;
-    obj.onExpand = callback1;
-    obj.containerStyle = memo;
+    obj3.wrapperStyle = items8;
+    obj3.onExpand = callback1;
+    obj3.containerStyle = memo;
     const items9 = [tmp5.background, backgroundStyles];
-    obj.backgroundStyle = items9;
-    obj.topInset = rect.top;
+    obj3.backgroundStyle = items9;
+    obj3.topInset = rect.top;
     let str = "interactive";
     if (flag) {
       str = "extend";
     }
-    obj.keyboardBehavior = str;
-    obj.keyboardShouldPersistTaps = keyboardShouldPersistTaps;
-    obj.animationConfigs = tmp9;
-    obj.overrideReduceMotion = tmp8(tmp3[14]).ReduceMotion.Never;
-    obj.handleIndicatorStyle = tmp5.handleIndicator;
+    obj3.keyboardBehavior = str;
+    obj3.keyboardShouldPersistTaps = keyboardShouldPersistTaps;
+    obj3.animationConfigs = tmp9;
+    obj3.overrideReduceMotion = tmp8(tmp3[14]).ReduceMotion.Never;
+    obj3.handleIndicatorStyle = tmp5.handleIndicator;
     let tmp29 = null;
     if (!handleDisabled) {
       if (handleComponent == null) {
@@ -576,45 +591,45 @@ export const BottomSheet = noop.forwardRef((scrollable, arg1) => {
       }
       tmp29 = handleComponent;
     }
-    obj.handleComponent = tmp29;
-    obj.backdropComponent = callback3;
-    obj.backgroundComponent = backgroundComponent;
-    obj.renderFooter = callback4;
-    obj.animatedIndex = animatedIndex;
-    obj.onAnimate = callback;
-    obj.onClose = onLeave;
-    obj.borderGradient = borderGradient;
-    obj.extraContent = extraContent;
-    const obj1 = { style: null, children: null };
+    obj3.handleComponent = tmp29;
+    obj3.backdropComponent = callback3;
+    obj3.backgroundComponent = backgroundComponent;
+    obj3.renderFooter = callback4;
+    obj3.animatedIndex = animatedIndex;
+    obj3.onAnimate = callback;
+    obj3.onClose = onLeave;
+    obj3.borderGradient = borderGradient;
+    obj3.extraContent = extraContent;
+    const obj4 = { style: null, children: null };
     const items10 = [tmp5.content, contentStyles];
-    obj1.style = items10;
+    obj4.style = items10;
     let tmp26Result = null != header;
     if (tmp26Result) {
-      const obj2 = { style: tmp5.header, children: header };
-      tmp26Result = closure_16(tmp31, obj2);
+      const obj5 = { style: tmp5.header, children: header };
+      tmp26Result = closure_16(tmp31, obj5);
     }
-    const obj3 = { children: null };
+    const obj6 = { children: null };
     const items11 = [tmp26Result];
-    const obj4 = { style: null, children: null };
+    const obj7 = { style: null, children: null };
     const items12 = [tmp5.body, bodyStyles];
-    obj4.style = items12;
-    obj4.children = children;
-    items11[1] = closure_16(transitionState, obj4);
-    obj1.children = items11;
-    obj3.children = closure_17(transitionState, obj1);
-    obj.children = closure_16(tmp8(tmp3[24]).LayerScope, obj3);
-    tmp26Result = closure_16(tmp23, obj);
-    let tmp26Result1 = tmp26Result;
+    obj7.style = items12;
+    obj7.children = children;
+    items11[1] = closure_16(transitionState, obj7);
+    obj4.children = items11;
+    obj6.children = closure_17(transitionState, obj4);
+    obj3.children = closure_16(tmp8(tmp3[24]).LayerScope, obj6);
+    const tmp26Result3 = closure_16(tmp23, obj3);
+    let tmp26Result4 = tmp26Result3;
     if (showGradient) {
       let tmp35 = tmp24;
       if (tmp24 == null) {
         tmp35 = null;
       }
-      const obj5 = { gradient: tmp35, children: tmp26Result };
-      tmp26Result1 = closure_16(tmp8(tmp3[25]).ThemeContextProvider, obj5);
+      const obj8 = { gradient: tmp35, children: tmp26Result3 };
+      tmp26Result4 = closure_16(tmp8(tmp3[25]).ThemeContextProvider, obj8);
     }
-    return tmp26Result1;
+    return tmp26Result4;
   }
+  const obj2 = { transitionState, runOnJS: backdropOpacity(dismissAccessibilityLabel[14]).runOnJS, onLeave };
   tmp23 = flag ? closure_20 : closure_19;
-  const tmp8Result3 = backdropOpacity(dismissAccessibilityLabel[14]);
 });

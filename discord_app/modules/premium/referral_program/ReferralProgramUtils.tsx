@@ -19,19 +19,19 @@ export const getReferralTrialOfferExpirationCopy = function getReferralTrialOffe
   const result = diff / DurationsDefault.Millis.HOUR;
   if (result > 24) {
     const intl3 = util.intl;
-    let obj = { numDays: null };
+    const obj2 = { numDays: null };
     const _Math3 = Math;
-    obj.numDays = Math.floor(result / 24);
-    let formatToPlainStringResult = intl3.formatToPlainString(util.t["g9s+dA"], obj);
+    obj2.numDays = Math.floor(result / 24);
+    let formatToPlainStringResult = intl3.formatToPlainString(util.t["g9s+dA"], obj2);
   } else if (result >= 1) {
     const intl2 = util.intl;
-    obj = { numHours: null };
+    const obj3 = { numHours: null };
     const _Math2 = Math;
-    obj.numHours = Math.floor(result);
-    formatToPlainStringResult = intl2.formatToPlainString(util.t.k9v33y, obj);
+    obj3.numHours = Math.floor(result);
+    formatToPlainStringResult = intl2.formatToPlainString(util.t.k9v33y, obj3);
   } else {
     const intl = util.intl;
-    obj = { numMinutes: null };
+    const obj = { numMinutes: null };
     const _Math = Math;
     obj.numMinutes = Math.floor(60 * result);
     formatToPlainStringResult = intl.formatToPlainString(util.t["/d0GmT"], obj);
@@ -81,15 +81,14 @@ export const useIsReferralProgramBadgeShowable = function useIsReferralProgramBa
 };
 export const markReferralProgramPopoverSeen = function markReferralProgramPopoverSeen(promotionId) {
   if (null != promotionId) {
-    let obj = { dismissAction: ContentDismissActionType.INDIRECT_ACTION };
+    const obj3 = { dismissAction: ContentDismissActionType.INDIRECT_ACTION };
     const result = DismissibleContentUtils.markSnowflakeBoundDismissibleContentAsDismissed(
       dismissible_content.DismissibleContent.REFERRAL_PROGRAM_POPOVER_V2,
       promotionId,
-      obj,
+      obj3,
     );
   } else {
-    obj = DismissibleContentUnsafeUtils;
-    const result1 = obj.UNSAFE_markDismissibleContentAsDismissed(
+    const result1 = DismissibleContentUnsafeUtils.UNSAFE_markDismissibleContentAsDismissed(
       dismissible_content.DismissibleContent.REFERRAL_PROGRAM_POPOVER,
     );
   }
@@ -109,18 +108,18 @@ export const useIsReferralProgramPopoverShowable = function useIsReferralProgram
   if (obj4.useIsReferralReminderDCExperimentEnabled({ location: "ReferralProgramUtils" })) {
     let tmp8 = null != stateFromStores1;
     if (tmp8) {
-      let tmpResult = DismissibleContentUnsafeUtils;
-      tmp8 = !tmpResult.UNSAFE_isSnowflakeBoundDismissibleContentDismissed(
+      tmp8 = !DismissibleContentUnsafeUtils.UNSAFE_isSnowflakeBoundDismissibleContentDismissed(
         dismissible_content.DismissibleContent.REFERRAL_PROGRAM_POPOVER_V2,
         stateFromStores1,
       ).isDismissed;
+      const tmpResult = DismissibleContentUnsafeUtils;
     }
     let tmp6 = tmp8;
   } else {
-    tmpResult = DismissibleContentUnsafeUtils;
-    tmp6 = !tmpResult.UNSAFE_isDismissibleContentDismissed(
+    tmp6 = !DismissibleContentUnsafeUtils.UNSAFE_isDismissibleContentDismissed(
       dismissible_content.DismissibleContent.REFERRAL_PROGRAM_POPOVER,
     );
+    const tmpResult2 = DismissibleContentUnsafeUtils;
   }
   if (isEligibleSenderForReferralProgram) {
     isEligibleSenderForReferralProgram = tmp6;

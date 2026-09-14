@@ -1,6 +1,8 @@
 // discord_app/modules/frames/utils/useFrameBySurface.tsx
 import FramesStore from "../FramesStore.tsx";
 
+const require = globalThis.__r;
+
 const require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/frames/utils/useFrameBySurface.tsx");

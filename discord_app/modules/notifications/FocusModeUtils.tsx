@@ -4,6 +4,8 @@ import AnalyticsUtilsDefault from "../../utils/AnalyticsUtils.tsx";
 import UserSettings from "../user_settings/UserSettings.tsx";
 import SelfPresenceStore from "../../stores/SelfPresenceStore.tsx";
 
+const require = globalThis.__r;
+
 const AlertActionCreatorsDefault = tmp5(4980);
 require = fn;
 const constants = fn(4288).NotificationSettingsUpdateType;
@@ -76,26 +78,30 @@ export const setFocusMode = function setFocusMode(quiet_mode_enabled, arg1) {
     },
     require("UserSettingsProtoActionCreators").UserSettingsDelay.INFREQUENT_USER_ACTION,
   );
-  let obj = { update_type: constants.ACCOUNT, quiet_mode_enabled, quiet_mode_enabled_old: setting };
-  obj.track(constants2.NOTIFICATION_SETTINGS_UPDATED, obj);
+  AnalyticsUtilsDefault.track(constants2.NOTIFICATION_SETTINGS_UPDATED, {
+    update_type: constants.ACCOUNT,
+    quiet_mode_enabled,
+    quiet_mode_enabled_old: setting,
+  });
   let tmp7 = SelfPresenceStore.getStatus() === constants3.DND && quiet_mode_enabled;
   if (tmp7) {
     tmp7 = null == arg1;
   }
   if (tmp7) {
-    obj = { title: null, body: null, cancelText: null, confirmText: null, onConfirm: null };
+    const obj3 = { title: null, body: null, cancelText: null, confirmText: null, onConfirm: null };
     const intl = tmp(1114).intl;
-    obj.title = intl.string(tmp(1114).t["B+cbLS"]);
+    obj3.title = intl.string(tmp(1114).t["B+cbLS"]);
     const intl2 = tmp(1114).intl;
-    obj.body = intl2.string(tmp(1114).t.CYVgLI);
+    obj3.body = intl2.string(tmp(1114).t.CYVgLI);
     const intl3 = tmp(1114).intl;
-    obj.cancelText = intl3.string(tmp(1114).t.f3Pet9);
+    obj3.cancelText = intl3.string(tmp(1114).t.f3Pet9);
     const intl4 = tmp(1114).intl;
-    obj.confirmText = intl4.string(tmp(1114).t.BddRzS);
-    obj.onConfirm = function onConfirm() {
+    obj3.confirmText = intl4.string(tmp(1114).t.BddRzS);
+    obj3.onConfirm = function onConfirm() {
       closure_1(dependencyMap[9])({ nextStatus: constants.ONLINE });
     };
-    AlertActionCreatorsDefault.show(obj);
+    AlertActionCreatorsDefault.show(obj3);
     const tmp5Result = AlertActionCreatorsDefault;
   }
+  const obj2 = { update_type: constants.ACCOUNT, quiet_mode_enabled, quiet_mode_enabled_old: setting };
 };

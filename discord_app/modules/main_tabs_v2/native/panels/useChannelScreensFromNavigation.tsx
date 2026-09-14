@@ -38,15 +38,14 @@ function getActiveTabsRoute(coerceTabsRouteResult) {
         screen = params.screen;
       }
       if (null != screen) {
-        let obj = {
+        const obj2 = {
           key: "resolved",
           name: coerceTabsRouteResult.params.screen,
           params: coerceTabsRouteResult.params.params,
         };
-        return obj;
+        return obj2;
       } else {
-        obj = RootNavigationRef;
-        const rootNavigationRef = obj.getRootNavigationRef();
+        const rootNavigationRef = RootNavigationRef.getRootNavigationRef();
         let isReadyResult;
         if (rootNavigationRef != null) {
           isReadyResult = rootNavigationRef.isReady();
@@ -59,7 +58,7 @@ function getActiveTabsRoute(coerceTabsRouteResult) {
   }
 }
 function resolveBackgroundScreen(state) {
-  let obj = NavigationRouteUtils;
+  const obj = NavigationRouteUtils;
   const coerceTabsRouteResult = obj.coerceTabsRoute(state.routes[0]);
   if (null == coerceTabsRouteResult) {
     return [];
@@ -98,8 +97,8 @@ function resolveBackgroundScreen(state) {
             if (search) {
               let BACKGROUND_SAVED = obj.FALLBACK_RENDERED;
             }
-            obj = { index: 0, type: BACKGROUND_SAVED, guildId, channelId, showCreateThread: false };
-            const items = [obj];
+            const obj2 = { index: 0, type: BACKGROUND_SAVED, guildId, channelId, showCreateThread: false };
+            const items = [obj2];
             return items;
           }
           BACKGROUND_SAVED = obj.BACKGROUND_SAVED;
@@ -115,27 +114,26 @@ function resolveChannelScreens(state, isChatLockedOpen) {
     let obj = NavigationRouteUtils;
     let coerceChannelRouteResult = obj.coerceChannelRoute(state.routes[num]);
     if (null != coerceChannelRouteResult) {
-      obj = { index: items.length, type: null, guildId: null, channelId: null, showCreateThread: null };
-      obj.type = obj.DEFAULT;
-      obj.guildId = coerceChannelRouteResult.params.guildId;
-      obj.channelId = coerceChannelRouteResult.params.channelId;
-      obj.showCreateThread = coerceChannelRouteResult.params.showCreateThread;
-      let arr = items.push(obj);
+      let obj2 = { index: items.length, type: null, guildId: null, channelId: null, showCreateThread: null };
+      obj2.type = obj.DEFAULT;
+      obj2.guildId = coerceChannelRouteResult.params.guildId;
+      obj2.channelId = coerceChannelRouteResult.params.channelId;
+      obj2.showCreateThread = coerceChannelRouteResult.params.showCreateThread;
+      let arr = items.push(obj2);
     }
   }
   if (isChatLockedOpen.isChatLockedOpen) {
     const arr2 = resolveBackgroundScreen(state);
     if (arr2.length > 0) {
       const items1 = [];
-      let arraySpreadResult = HermesBuiltin.arraySpread(arr2, 0);
-      arraySpreadResult = HermesBuiltin.arraySpread(
+      HermesBuiltin.arraySpread(
         items.map((item) => {
           const obj = {};
           const merged = Object.assign(item);
           obj.index = item.index + arr2.length;
           return obj;
         }),
-        arraySpreadResult,
+        HermesBuiltin.arraySpread(arr2, 0),
       );
       return items1;
     }

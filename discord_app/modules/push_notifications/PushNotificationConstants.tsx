@@ -1,9 +1,10 @@
 // discord_app/modules/push_notifications/PushNotificationConstants.tsx
 import PlatformUtils from "../../utils/PlatformUtils.tsx";
-import ClientInfoUtils from "../../utils/native/ClientInfoUtils.tsx";
-import MetaQuestUtils from "../device/MetaQuestUtils.android.tsx";
+import ClientInfoUtils_mod from "../../utils/native/ClientInfoUtils.tsx";
+import MetaQuestUtils_mod from "../device/MetaQuestUtils.android.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
+let ClientInfoUtils = ClientInfoUtils_mod;
 ClientInfoUtils = ClientInfoUtils.getConstants();
 let str;
 if (ClientInfoUtils != null) {
@@ -12,6 +13,7 @@ if (ClientInfoUtils != null) {
 if (str == null) {
   str = "";
 }
+let MetaQuestUtils = MetaQuestUtils_mod;
 MetaQuestUtils = MetaQuestUtils.isQuestRelease();
 const startsWithResult = str.startsWith("com.discord.kodiak");
 const startsWithResult1 = str.startsWith("com.hammerandchisel.discord.local");

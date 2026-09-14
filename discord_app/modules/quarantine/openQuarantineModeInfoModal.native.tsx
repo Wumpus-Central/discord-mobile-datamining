@@ -3,6 +3,8 @@ import ChatInputUtils from "../../utils/native/ChatInputUtils.tsx";
 import actions_AlertActionCreatorsDefault from "../../actions/native/AlertActionCreators.tsx";
 import noop from "../../../_runtime/metro/00019__.js";
 
+const require = globalThis.__r;
+
 require = fn;
 const Keyboard = fn(17).Keyboard;
 const jsx = fn(21).jsx;
@@ -11,12 +13,22 @@ const result = size.fileFinishedImporting("modules/quarantine/openQuarantineMode
 
 export default function openQuarantineModeInfoModal() {
   Keyboard.dismiss();
-  let obj = ChatInputUtils;
-  const bestActiveInput = obj.getBestActiveInput();
+  const bestActiveInput = ChatInputUtils.getBestActiveInput();
   if (bestActiveInput != null) {
     bestActiveInput.blur();
   }
-  obj = {
+  actions_AlertActionCreatorsDefault.openLazy({
+    importer() {
+      return require("asyncRequireImpl")(paths[5], paths.paths).then((result) => {
+        closure_0 = result.default;
+        return (arg0) => {
+          const merged = Object.assign(arg0);
+          return closure_2_4(closure_0, {});
+        };
+      });
+    },
+  });
+  const obj2 = {
     importer() {
       return require("asyncRequireImpl")(paths[5], paths.paths).then((result) => {
         closure_0 = result.default;
@@ -27,5 +39,4 @@ export default function openQuarantineModeInfoModal() {
       });
     },
   };
-  actions_AlertActionCreatorsDefault.openLazy(obj);
 }

@@ -16,13 +16,11 @@ function updateStats(arr, arg1) {
     const _Date = Date;
     timestamp = Date.now();
   }
-  obj = {};
+  const obj2 = {};
   const entries = Object.entries(arr);
   while (tmp4 !== undefined) {
-    let tmp7 = _slicedToArray(tmp5, 2);
-    let first = tmp7[0];
+    [first, tmp10] = tmp5;
     let tmp9 = first;
-    let tmp10 = tmp7[1];
     arr = tmp10;
     let tmp11 = obj[first];
     let _Array = Array;
@@ -31,52 +29,52 @@ function updateStats(arr, arg1) {
         let _Array3 = Array;
         let tmp27 = Array.isArray(tmp11) ? tmp11 : [];
         let items = [];
-        obj[tmp9] = items;
+        obj2[tmp9] = items;
         let arr5 = items;
         let num = 0;
         if (0 < arr.length) {
           do {
             let tmp33 = tmp28[num];
-            arr = arr5.push(updateStats(arr[num], typeof tmp33 === "object" ? tmp33 : {}, timestamp));
+            let arr4 = arr5.push(updateStats(arr[num], typeof tmp33 === "object" ? tmp33 : {}, timestamp));
             sum = num + 1;
             num = sum;
           } while (sum < arr.length);
         }
       } else {
-        obj[tmp9] = arr;
+        obj2[tmp9] = arr;
       }
     } else {
       if (typeof arr === "object") {
         if (null !== arr) {
           if (typeof tmp11 === "object") {
             if (null !== tmp11) {
-              obj = tmp11;
-              obj[tmp9] = updateStats(arr, obj, timestamp);
+              let obj3 = tmp11;
+              obj2[tmp9] = updateStats(arr, obj3, timestamp);
             }
           }
-          obj = {};
+          obj3 = {};
         }
       }
       if (tmp9 in obj) {
         if (typeof arr === "number") {
           let _Array2 = Array;
-          let arr1 = Array.isArray(tmp11) ? tmp11 : [];
-          obj[tmp9] = arr1;
-          let arr3 = arr1;
-          let obj1 = { value: null, time: null };
-          obj1.value = arr;
-          obj1.time = timestamp;
-          arr = arr1.push(obj1);
-          if (arr1.length > 600) {
-            arr1 = arr3.shift();
+          let arr2 = Array.isArray(tmp11) ? tmp11 : [];
+          obj2[tmp9] = arr2;
+          let arr3 = arr2;
+          let obj4 = { value: null, time: null };
+          obj4.value = arr;
+          obj4.time = timestamp;
+          let arr8 = arr2.push(obj4);
+          if (arr2.length > 600) {
+            let arr9 = arr3.shift();
           }
         }
       }
-      obj[tmp9] = arr;
+      obj2[tmp9] = arr;
     }
     continue;
   }
-  return obj;
+  return obj2;
 }
 const Constants = fn(4661);
 const MediaEngineContextTypes = Constants.MediaEngineContextTypes;
@@ -85,7 +83,7 @@ let combined = "" + MediaEngineContextTypes.DEFAULT + ":" + fn(1074).RTCDebugSec
 let section = combined;
 let closure_12 = {};
 const map = new Map();
-let graphs = {
+const graphs = {
   availableOutgoingBitrate: true,
   bitrate: true,
   bitrateTarget: true,
@@ -123,10 +121,10 @@ class RTCDebugVideoOutputMap {
 const prototype = RTCDebugVideoOutputMap.prototype;
 RTCDebugVideoOutputMap["empty"] = function empty() {
   if (typeof RTCDebugVideoOutputMap === "function") {
-    let state = {};
-    state = Object.create(tmp.prototype);
-    state.state = state;
-    return state;
+    const state = {};
+    const obj2 = Object.create(tmp.prototype);
+    obj2.state = state;
+    return obj2;
   } else {
     throw new TypeError("Trying to call a non-function");
   }
@@ -134,27 +132,27 @@ RTCDebugVideoOutputMap["empty"] = function empty() {
 prototype["put"] = function put(arg0, arg1, arg2, arg3) {
   const self = this;
   if ("" === arg3) {
-    let state = {};
+    const obj2 = {};
     const merged = Object.assign(self.state);
     const _HermesInternal2 = HermesInternal;
     combined = "" + arg0 + ":" + arg1 + ":" + arg2;
     delete tmp[tmp2];
     if (typeof RTCDebugVideoOutputMap === "function") {
-      state = Object.create(RTCDebugVideoOutputMap.prototype);
-      state.state = state;
-      return state;
+      const obj5 = Object.create(RTCDebugVideoOutputMap.prototype);
+      obj5.state = obj2;
+      return obj5;
     } else {
       throw new TypeError("Trying to call a non-function");
     }
   } else {
-    state = {};
+    const state = {};
     const _HermesInternal = HermesInternal;
     state["" + arg0 + ":" + arg1 + ":" + arg2] = arg3;
     const merged1 = Object.assign(self.state);
     if (typeof RTCDebugVideoOutputMap === "function") {
-      const obj1 = Object.create(RTCDebugVideoOutputMap.prototype);
-      obj1.state = state;
-      return obj1;
+      const obj6 = Object.create(RTCDebugVideoOutputMap.prototype);
+      obj6.state = state;
+      return obj6;
     } else {
       throw new TypeError("Trying to call a non-function");
     }
@@ -202,13 +200,7 @@ prototype2["getInboundStats"] = function getInboundStats(arg0, context) {
   if (found != null) {
     name = found.codec.name;
   }
-  obj = {
-    codec: name,
-    resolution: null,
-    bitrateEstimate: "Array",
-    fps:
-      -0.000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000009417941561190702,
-  };
+  obj = { codec: name, resolution: null, bitrateEstimate: "Array", fps: -892403711 };
   let resolution;
   if (found != null) {
     resolution = found.resolution;
@@ -280,11 +272,11 @@ prototype2["getOutboundStats"] = function getOutboundStats(context) {
   let tmp13 = frameRateEncode;
   if (Array.isArray(frameRateEncode)) {
     const iter2 = frameRateEncode.at(-1);
-    value = undefined;
+    value2 = undefined;
     if (iter2 != null) {
-      value = iter2.value;
+      value2 = iter2.value;
     }
-    tmp13 = value;
+    tmp13 = value2;
   }
   obj.fps = tmp13;
   return obj;
@@ -312,7 +304,7 @@ prototype2["getSimulcastDebugOverride"] = function getSimulcastDebugOverride(arg
   return NO_OVERRIDE;
 };
 RTCDebugStore.displayName = "RTCDebugStore";
-graphs = {
+const rTCDebugStore = new RTCDebugStore(DispatcherDefault, {
   RTC_DEBUG_MODAL_OPEN: function handleOpen(section) {
     section = section.section;
     if (section == null) {
@@ -345,7 +337,7 @@ graphs = {
         if (null != replayConnection) {
           replayConnection.on(replayConnection(4691).BaseConnectionEvent.Video, (userId, arg1, arg2, arg3) => {
             let num = arg3;
-            obj = {
+            const obj2 = {
               type: "RTC_DEBUG_MODAL_UPDATE_VIDEO_OUTPUT",
               mediaEngineConnectionId: replayConnection.mediaEngineConnectionId,
               userId,
@@ -356,12 +348,12 @@ graphs = {
               num = 0;
             }
             let str = arg1;
-            obj.videoSsrc = num;
+            obj2.videoSsrc = num;
             if (arg1 == null) {
               str = "";
             }
-            obj.streamId = str;
-            obj.dispatch(obj);
+            obj2.streamId = str;
+            DispatcherDefault.dispatch(obj2);
           });
           DispatcherDefault.wait(() => RTCDebugActionCreatorsAll.open());
         }
@@ -429,7 +421,7 @@ graphs = {
             combined = "" + closure_0 + ":" + index;
             value = map1.get(combined);
             if (tmp4[index] != null) {
-              let screenshare = tmp43.screenshare;
+              const screenshare = tmp43.screenshare;
             }
             const result = map1.set(combined, timestamp);
             tmp15 = stats;
@@ -439,9 +431,9 @@ graphs = {
                 const result1 = (timestamp - value) / 1000;
                 tmp15 = stats;
                 if (0 < result1) {
-                  screenshare = {};
+                  obj = {};
                   const merged = Object.assign(stats);
-                  screenshare = {};
+                  const obj2 = {};
                   const merged1 = Object.assign(stats.screenshare);
                   const screenshare2 = stats.screenshare;
                   let num2 = screenshare2.videohookFrames;
@@ -559,15 +551,15 @@ graphs = {
                   if (num25 == null) {
                     num25 = 0;
                   }
-                  const obj1 = { screenshareCapturedFps: null, screenshareCapturedFpsUnique: null };
+                  const obj4 = { screenshareCapturedFps: null, screenshareCapturedFpsUnique: null };
                   const _Math = Math;
                   const sum19 = sum18 + num25;
-                  obj1.screenshareCapturedFps = Math.max(0, (sum5 - sum11) / result1);
+                  obj4.screenshareCapturedFps = Math.max(0, (sum5 - sum11) / result1);
                   const _Math2 = Math;
-                  obj1.screenshareCapturedFpsUnique = Math.max(0, (sum15 - sum19) / result1);
-                  const merged2 = Object.assign(obj1);
-                  screenshare.screenshare = screenshare;
-                  tmp15 = screenshare;
+                  obj4.screenshareCapturedFpsUnique = Math.max(0, (sum15 - sum19) / result1);
+                  const merged2 = Object.assign(obj4);
+                  obj.screenshare = obj2;
+                  tmp15 = obj;
                 }
               }
             }
@@ -579,8 +571,7 @@ graphs = {
       });
     });
   },
-};
-const rTCDebugStore = new RTCDebugStore(DispatcherDefault, graphs);
+});
 const size = fn(2);
 let result = size.fileFinishedImporting("stores/RTCDebugStore.tsx");
 

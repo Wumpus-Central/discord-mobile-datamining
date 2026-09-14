@@ -10,13 +10,12 @@ const NOOP = fn(1074).NOOP;
 const jsx = fn(21).jsx;
 let closure_9 = noop.forwardRef((sheetKey, arg1) => {
   sheetKey = sheetKey.sheetKey;
-  _slicedToArray = undefined;
+  transitionState = undefined;
+  dependencyMap = undefined;
   let registerDismissHandler;
   let callback2;
   ({ content, impressionName, impressionProperties, zIndex } = sheetKey);
-  const tmp = _slicedToArray(registerDismissHandler.useState("visible"), 2);
-  const transitionState = tmp[0];
-  dependencyMap = tmp[1];
+  [transitionState, dependencyMap] = registerDismissHandler.useState("visible");
   _slicedToArray = registerDismissHandler.useRef(callback2);
   registerDismissHandler = registerDismissHandler.useCallback((current) => {
     closure_3.current = current;
@@ -25,7 +24,11 @@ let closure_9 = noop.forwardRef((sheetKey, arg1) => {
   const callback1 = registerDismissHandler.useCallback(() => {
     ref2.current();
   }, []);
-  let obj = { type: sheetKey(1250).ImpressionTypes.HALFSHEET, name: impressionName, properties: impressionProperties };
+  const obj = {
+    type: sheetKey(1248).ImpressionTypes.HALFSHEET,
+    name: impressionName,
+    properties: impressionProperties,
+  };
   transitionState(8894)(obj);
   const imperativeHandle = registerDismissHandler.useImperativeHandle(
     arg1,
@@ -63,10 +66,7 @@ let closure_9 = noop.forwardRef((sheetKey, arg1) => {
     return true;
   }, items2);
   transitionState(5053)(callback3);
-  obj = {
-    value: memo,
-    children: jsx(sheetKey(5039).Dialog, { dialogKey: sheetKey, onDismiss: callback2, zIndex, children: content }),
-  };
+  const tmp5 = transitionState(8894);
   return jsx(transitionState(7255).Provider, {
     value: memo,
     children: jsx(sheetKey(5039).Dialog, { dialogKey: sheetKey, onDismiss: callback2, zIndex, children: content }),
@@ -84,9 +84,8 @@ export const ActionSheetPresenter = function ActionSheetPresenter(appEntryKey) {
     },
     items,
   );
-  let obj = appEntryKey(504);
   const items1 = [ActionSheetStore];
-  const stateFromStoresArray = obj.useStateFromStoresArray(items1, () => stack.getStack(), []);
+  const stateFromStoresArray = appEntryKey(504).useStateFromStoresArray(items1, () => stack.getStack(), []);
   const found = stateFromStoresArray.filter((appEntryKey) => appEntryKey.appEntryKey === appEntryKey);
   const mapped = found.map((content) => (
     <closure_1_9
@@ -98,8 +97,8 @@ export const ActionSheetPresenter = function ActionSheetPresenter(appEntryKey) {
       zIndex={content.zIndex}
     />
   ));
-  obj = { style: StyleSheet.absoluteFill, component: appEntryKey(4987).TransitionGroupOverlayView, children: mapped };
-  return jsx(appEntryKey(12552).TransitionGroup, {
+  const obj = appEntryKey(504);
+  return jsx(appEntryKey(12553).TransitionGroup, {
     style: StyleSheet.absoluteFill,
     component: appEntryKey(4987).TransitionGroupOverlayView,
     children: mapped,

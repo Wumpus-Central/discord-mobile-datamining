@@ -21,12 +21,12 @@ export default function GroupDMRow(channel) {
   const callback = noop.useCallback(() => {
     onPress(channel.id);
   }, items);
-  let obj = { size: native.AvatarSizes.LARGE_48, channel };
+  const obj = { size: native.AvatarSizes.LARGE_48, channel };
   const tmp6 = jsx(GroupDMAvatarDefault, { size: native.AvatarSizes.LARGE_48, channel });
   const recipientsLabel = useRecipientsLabel.useRecipientsLabel(channel);
   let tmp3Result;
   if (null != recipientsLabel) {
-    obj = { variant: "text-xs/medium", color: "text-muted", lineClamp: 1, children: recipientsLabel };
+    const obj3 = { variant: "text-xs/medium", color: "text-muted", lineClamp: 1, children: recipientsLabel };
     tmp3Result = jsx(Text_Text.Text, {
       variant: "text-xs/medium",
       color: "text-muted",
@@ -38,7 +38,7 @@ export default function GroupDMRow(channel) {
   if (str == null) {
     str2 = "";
   }
-  obj = {
+  const obj4 = {
     label: str2,
     icon: tmp6,
     onPress: callback,
@@ -51,11 +51,11 @@ export default function GroupDMRow(channel) {
   if (str == null) {
     str = "";
   }
-  obj.accessibilityLabel = str;
-  obj.subLabel = tmp3Result;
-  obj.trailing = trailing;
-  obj.accessibilityActions = accessibilityActions;
-  obj.onAccessibilityAction = onAccessibilityAction;
+  obj4.accessibilityLabel = str;
+  obj4.subLabel = tmp3Result;
+  obj4.trailing = trailing;
+  obj4.accessibilityActions = accessibilityActions;
+  obj4.onAccessibilityAction = onAccessibilityAction;
   return jsx(SearchListRow.SearchListRow, {
     label: str2,
     icon: tmp6,

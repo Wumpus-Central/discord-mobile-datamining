@@ -22,15 +22,14 @@ export const useActivateDeviceStepTracking = function useActivateDeviceStepTrack
       }
       let result = null;
       if (tmp3) {
-        let obj = ActivateDeviceUtils;
-        result = obj.clientIdToActivateDevicePlatform(closure_0.userCodeData.clientId);
+        result = ActivateDeviceUtils.clientIdToActivateDevicePlatform(closure_0.userCodeData.clientId);
       }
       type = undefined;
       if (type != null) {
         type = type.type;
       }
-      obj = { previous_step: type, current_step: closure_0.type, platform_type: result };
-      AnalyticsUtilsDefault.track(AnalyticEvents.DEVICE_LINK_STEP, obj);
+      const obj3 = { previous_step: type, current_step: closure_0.type, platform_type: result };
+      AnalyticsUtilsDefault.track(AnalyticEvents.DEVICE_LINK_STEP, obj3);
     }
   }, items);
 };

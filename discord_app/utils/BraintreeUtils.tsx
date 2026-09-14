@@ -8,73 +8,97 @@ const size = fn(2);
 const result = size.fileFinishedImporting("utils/BraintreeUtils.tsx");
 
 export const getBraintreeSDK = function getBraintreeSDK() {
-  const obj = {
+  const obj2 = {
     createPromise() {
       return client(paths[4])(paths[3], paths.paths);
     },
     webpackId: 4315,
   };
-  return obj.importWithRetry(obj).then((result) => result.default);
+  return core_CodeSplittingUtils
+    .importWithRetry({
+      createPromise() {
+        return client(paths[4])(paths[3], paths.paths);
+      },
+      webpackId: 4315,
+    })
+    .then((result) => result.default);
 };
 export const collectDeviceData = function collectDeviceData() {
   let client = BraintreeStore.getClient();
   if (null == client) {
-    let obj = {
+    let obj2 = {
       createPromise() {
         return client(paths[4])(paths[3], paths.paths);
       },
       webpackId: 4315,
     };
-    let importWithRetryResult = core_CodeSplittingUtils.importWithRetry(obj);
+    let importWithRetryResult = core_CodeSplittingUtils.importWithRetry(obj2);
     let nextPromise1 = core_CodeSplittingUtils
-      .importWithRetry(obj)
+      .importWithRetry(obj2)
       .then((result) => result.default)
       .then((client) => {
         client = client.client;
         let obj = { authorization: constants.BRAINTREE.KEY };
-        obj = client.create(obj);
-        return obj
+        let obj2 = client.create({ authorization: constants.BRAINTREE.KEY });
+        return client
+          .create({ authorization: constants.BRAINTREE.KEY })
           .then((result) => {
             client = result;
-            client(4312);
-            let obj = {
+            let obj = client(4312);
+            let obj2 = {
               createPromise() {
                 return client(paths[4])(paths[3], paths.paths);
               },
               webpackId: 4315,
             };
-            const importWithRetryResult = obj.importWithRetry(obj);
-            return obj
-              .importWithRetry(obj)
+            const importWithRetryResult = client(4312).importWithRetry({
+              createPromise() {
+                return client(paths[4])(paths[3], paths.paths);
+              },
+              webpackId: 4315,
+            });
+            return client(4312)
+              .importWithRetry({
+                createPromise() {
+                  return client(paths[4])(paths[3], paths.paths);
+                },
+                webpackId: 4315,
+              })
               .then((result) => result.default)
               .then((dataCollector) => {
                 dataCollector = dataCollector.dataCollector;
-                let obj = { client };
-                obj = dataCollector.create(obj);
-                return obj.then((deviceData) => deviceData.deviceData).catch(() => null);
+                const obj = { client };
+                const obj2 = dataCollector.create({ client });
+                return dataCollector
+                  .create({ client })
+                  .then((deviceData) => deviceData.deviceData)
+                  .catch(() => null);
               });
           })
           .catch(() => null);
       });
-    const nextPromise = core_CodeSplittingUtils.importWithRetry(obj).then((result) => result.default);
+    const nextPromise = core_CodeSplittingUtils.importWithRetry(obj2).then((result) => result.default);
   } else {
-    obj = {
+    const obj4 = {
       createPromise() {
         return client(paths[4])(paths[3], paths.paths);
       },
       webpackId: 4315,
     };
-    const importWithRetryResult1 = obj.importWithRetry(obj);
-    nextPromise1 = obj
-      .importWithRetry(obj)
+    const importWithRetryResult1 = core_CodeSplittingUtils.importWithRetry(obj4);
+    nextPromise1 = core_CodeSplittingUtils
+      .importWithRetry(obj4)
       .then((result) => result.default)
       .then((dataCollector) => {
         dataCollector = dataCollector.dataCollector;
-        let obj = { client };
-        obj = dataCollector.create(obj);
-        return obj.then((deviceData) => deviceData.deviceData).catch(() => null);
+        const obj = { client };
+        const obj2 = dataCollector.create({ client });
+        return dataCollector
+          .create({ client })
+          .then((deviceData) => deviceData.deviceData)
+          .catch(() => null);
       });
-    const nextPromise2 = obj.importWithRetry(obj).then((result) => result.default);
+    const nextPromise2 = core_CodeSplittingUtils.importWithRetry(obj4).then((result) => result.default);
   }
   return nextPromise1;
 };

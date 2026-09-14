@@ -2,6 +2,8 @@
 import util from "../../../intl/index.native.tsx";
 import UserSettingsOverridesStore from "../UserSettingsOverridesStore.tsx";
 
+const require = globalThis.__r;
+
 require = fn;
 const constants = fn(1084).SettingsOverrideReasonKeys;
 const size = fn(2);

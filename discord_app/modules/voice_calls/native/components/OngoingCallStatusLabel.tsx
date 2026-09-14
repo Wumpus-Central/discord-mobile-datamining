@@ -18,10 +18,9 @@ export default function OngoingCallStatusLabel(style) {
     useAllAloneText = true;
   }
   const id = AuthenticationStore.getId();
-  let obj = channel(id[5]);
   const items = [VoiceStateStore, CallStore];
   const items1 = [id, channel];
-  const stateFromStores = obj.useStateFromStores(
+  const stateFromStores = channel(id[5]).useStateFromStores(
     items,
     () => {
       if (null == channel) {
@@ -57,7 +56,7 @@ export default function OngoingCallStatusLabel(style) {
         const intl5 = channel(tmp3[6]).intl;
         stringResult = intl5.string(channel(tmp3[6]).t["w//7ET"]);
       }
-      obj = { style: style.style, children: stringResult };
+      const obj2 = { style: style.style, children: stringResult };
       return jsx(channel(tmp3[8]).LegacyText, { style: style.style, children: stringResult });
     }
   }
@@ -67,4 +66,5 @@ export default function OngoingCallStatusLabel(style) {
   }
   const intl4 = channel(tmp3[6]).intl;
   stringResult1 = intl4.string(channel(tmp3[6]).t.xNeSms);
+  const obj = channel(id[5]);
 }

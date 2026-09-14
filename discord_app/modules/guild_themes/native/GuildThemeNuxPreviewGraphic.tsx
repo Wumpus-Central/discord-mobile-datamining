@@ -5,17 +5,17 @@ import noop from "../../../../_runtime/metro/00019__.js";
 
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-fn(4636);
-let createStyles = { container: null };
-createStyles = {
-  width: "100%",
-  aspectRatio: 1.7777777777777777,
-  alignItems: "center",
-  justifyContent: "center",
-  marginBottom: nativeDefault.space.PX_24,
+const createStyles = fn(4636);
+const obj2 = {
+  container: {
+    width: "100%",
+    aspectRatio: 1.7777777777777777,
+    alignItems: "center",
+    justifyContent: "center",
+    marginBottom: nativeDefault.space.PX_24,
+  },
 };
-createStyles.container = createStyles;
-let closure_4 = createStyles.createStyles(createStyles);
+let closure_4 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_themes/native/GuildThemeNuxPreviewGraphic.tsx");
 

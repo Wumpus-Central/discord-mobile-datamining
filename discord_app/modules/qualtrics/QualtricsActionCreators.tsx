@@ -24,8 +24,8 @@ let closure_11 = async function _fetchSurveyDetails(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -38,8 +38,8 @@ let closure_11 = async function _fetchSurveyDetails(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c6 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           closure_2 = tmp3;
           closure_1 = tmp7;
@@ -47,17 +47,16 @@ let closure_11 = async function _fetchSurveyDetails(arg0) {
           let body;
           c4 = 1;
           const HTTP = HTTPUtils.HTTP;
-          const obj1 = { url: Endpoints.EMBEDDED_SURVEY(closure_0), rejectWithError: true };
+          const obj4 = { url: Endpoints.EMBEDDED_SURVEY(closure_0), rejectWithError: true };
           c5 = 2;
           c6 = 1;
-          const obj2 = { value: HTTP.get(obj1), done: false };
-          return obj2;
+          const obj6 = { value: HTTP.get(obj4), done: false };
+          return obj6;
         }
       } else if (1 === tmp7) {
         c4 = 0;
         closure_129_2 = closure_3;
-        let obj4 = closure_130_1(closure_130_2[9]);
-        obj4.captureException(closure_129_2);
+        closure_130_1(closure_130_2[9]).captureException(closure_129_2);
         c6 = 3;
         return { value: null, done: true };
       } else if (arg0 === 1) {
@@ -66,17 +65,16 @@ let closure_11 = async function _fetchSurveyDetails(arg0) {
       } else if (arg0 === 2) {
         c4 = 0;
         c6 = 3;
-        const obj3 = { value, done: true };
-        return obj3;
+        const obj7 = { value, done: true };
+        return obj7;
       } else {
         body = value.body;
-        obj = closure_130_1(closure_130_2[8]);
-        obj4 = { type: "QUALTRICS_SURVEY_FETCH_SUCCESS", surveyId: closure_129_0, surveyDetails: body };
-        obj.dispatch(obj4);
+        const obj8 = { type: "QUALTRICS_SURVEY_FETCH_SUCCESS", surveyId: closure_129_0, surveyDetails: body };
+        closure_130_1(closure_130_2[8]).dispatch(obj8);
         c4 = 0;
         c6 = 3;
-        const obj5 = { value: body, done: true };
-        return obj5;
+        const obj9 = { value: body, done: true };
+        return obj9;
       }
     } catch (tmp27) {
       closure_3 = tmp27;
@@ -107,8 +105,8 @@ let closure_12 = async function _submitSurveyResponse(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -121,8 +119,8 @@ let closure_12 = async function _submitSurveyResponse(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c9 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj4 = { value, done: true };
+          return obj4;
         } else {
           closure_5 = tmp3;
           closure_4 = tmp7;
@@ -212,44 +210,43 @@ let closure_12 = async function _submitSurveyResponse(arg0) {
           })(closure_0, closure_1, closure_2);
           if (null == tmp19) {
             c9 = 3;
-            const obj1 = { value: { responseId: "null" }, done: true };
-            return obj1;
+            const obj5 = { value: { responseId: "null" }, done: true };
+            return obj5;
           } else {
             c6 = 1;
             value = {};
             const HTTP = HTTPUtils.HTTP;
             const request = { url: Endpoints.EMBEDDED_SURVEY_RESPONSE(closure_0), body: null, rejectWithError: true };
-            let obj2 = { values_json: null };
+            const obj6 = { values_json: null };
             const _JSON = JSON;
-            obj2.values_json = JSON.stringify(tmp19);
-            request.body = obj2;
+            obj6.values_json = JSON.stringify(tmp19);
+            request.body = obj6;
             c8 = 2;
             c9 = 1;
-            const obj3 = { value: HTTP.post(request), done: false };
-            return obj3;
+            const obj7 = { value: HTTP.post(request), done: false };
+            return obj7;
           }
         }
       } else if (1 === tmp7) {
         c6 = 0;
         closure_132_0 = survey;
-        obj2 = closure_133_1(closure_133_2[9]);
-        obj2.captureException(closure_132_0);
+        closure_133_1(closure_133_2[9]).captureException(closure_132_0);
         c9 = 3;
-        const obj4 = { value: { responseId: "null" }, done: true };
-        return obj4;
+        const obj8 = { value: { responseId: "null" }, done: true };
+        return obj8;
       } else if (arg0 === 1) {
         c9 = 3;
         throw value;
       } else if (arg0 === 2) {
         c6 = 0;
         c9 = 3;
-        const obj5 = { value, done: true };
-        return obj5;
+        const obj9 = { value, done: true };
+        return obj9;
       } else {
         value.responseId = value.body.responseId;
         c6 = 0;
         c9 = 3;
-        obj = { value, done: true };
+        let obj = { value, done: true };
         return obj;
       }
     } catch (tmp20) {
@@ -285,15 +282,15 @@ let closure_13 = async function _fireSurveyAction() {
     if (actionTriggeredSurveyOverride == null) {
       force_survey_id = undefined;
     }
-    const obj1 = { action_type };
+    const obj4 = { action_type };
     if (null != metadata) {
-      obj1.metadata = metadata;
+      obj4.metadata = metadata;
     }
     const HTTP = HTTPUtils.HTTP;
     const request = {
       url: constants.EMBEDDED_SURVEY_ACTION,
       query: { force_survey_id },
-      body: obj1,
+      body: obj4,
       rejectWithError: true,
     };
     await HTTP.post(request);

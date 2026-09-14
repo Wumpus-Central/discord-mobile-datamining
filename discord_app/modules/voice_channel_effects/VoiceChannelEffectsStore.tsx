@@ -70,14 +70,14 @@ const voiceChannelEffectsStore = new VoiceChannelEffectsStore(DispatcherDefault,
   VOICE_CHANNEL_EFFECT_SEND: function handleReceivedVoiceChannelEffect(arg0) {
     ({ emoji, userId, animationType } = arg0);
     if (tmp) {
-      let obj = { emoji, sentAt: null, animationType: null };
+      const obj = { emoji, sentAt: null, animationType: null };
       const _Date = Date;
       obj.sentAt = Date.now();
       obj.animationType = animationType;
       closure_6[userId] = obj;
       items = [];
-      obj = { emojiName: emoji.name, userId };
-      items[HermesBuiltin.arraySpread(items, 0)] = obj;
+      const obj2 = { emojiName: emoji.name, userId };
+      items[HermesBuiltin.arraySpread(items, 0)] = obj2;
       closure_10();
     }
     tmp = null != emoji && null != animationType;
@@ -105,7 +105,7 @@ const result = size.fileFinishedImporting("modules/voice_channel_effects/VoiceCh
 export default voiceChannelEffectsStore;
 export const clearVoiceChannelEffectForUser = function clearVoiceChannelEffectForUser(userId) {
   if (null != userId) {
-    const obj = { type: "VOICE_CHANNEL_EFFECT_CLEAR", userId };
-    obj.dispatch(obj);
+    const obj2 = { type: "VOICE_CHANNEL_EFFECT_CLEAR", userId };
+    DispatcherDefault.dispatch(obj2);
   }
 };

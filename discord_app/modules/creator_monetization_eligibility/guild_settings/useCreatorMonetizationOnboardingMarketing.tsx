@@ -24,8 +24,8 @@ export default function useCreatorMonetizationOnboardingMarketing(arg0) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj3 = { value, done: true };
+        return obj3;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -38,20 +38,22 @@ export default function useCreatorMonetizationOnboardingMarketing(arg0) {
             throw value;
           } else if (arg0 === 2) {
             c6 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj4 = { value, done: true };
+            return obj4;
           } else {
             closure_1 = tmp8;
             closure_129_0 = undefined;
             closure_1(true);
             tmp4(undefined);
             c4 = 2;
-            let obj1 = CreatorMonetizationEligibilityActionCreatorsAll;
             c5 = 3;
             c6 = 1;
-            obj1 = { value: null, done: false };
-            obj1.value = obj1.getCreatorMonetizationOnboardingMarketing(closure_0);
-            return obj1;
+            const obj5 = {
+              value:
+                CreatorMonetizationEligibilityActionCreatorsAll.getCreatorMonetizationOnboardingMarketing(closure_0),
+              done: false,
+            };
+            return obj5;
           }
         } else if (1 === tmp8) {
           c4 = 0;
@@ -77,7 +79,7 @@ export default function useCreatorMonetizationOnboardingMarketing(arg0) {
           c4 = 0;
           closure_1(false);
           c6 = 3;
-          obj = { value, done: true };
+          const obj = { value, done: true };
           return obj;
         }
       } catch (tmp45) {

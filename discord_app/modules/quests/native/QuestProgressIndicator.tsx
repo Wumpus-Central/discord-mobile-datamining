@@ -3,21 +3,23 @@ import _mod17 from "../../../../_runtime/metro/00017__.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import timing from "../../../design/animation/reanimated/timing/timing.tsx";
 import inlineStyles from "../../../../_runtime/08574_inlineStyles.js";
-import noop from "../../../../_runtime/metro/00019__.js";
+import noop_mod from "../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../a11y/AccessibilityStore.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 import ReanimatedRexport from "../../reanimated/ReanimatedRexport.tsx";
 import createStyles from "../../../design/components/Styles/native/createStyles.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
+let noop = noop_mod;
 ({ useMemo: c3, useEffect: closure_4, useRef: hasOwnProperty } = noop);
+let noop = noop_mod;
 const View = _mod17.View;
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
 let dependencyMap = ["#666777", "#535564"];
 let closure_12 = ReanimatedRexport.createAnimatedComponent(inlineStyles.Circle);
 const QUEST_PROGRESS_DIAMETER_BY_SIZE = { "x-sm": 40, sm: 64, md: 70, "md-lg": 100, lg: 128 };
 let closure_14 = createStyles.createStyles((arg0) => {
-  let progressPath = {
+  const obj = {
     wrapper: { position: "relative" },
     container: { position: "relative", display: "flex", justifyContent: "center", alignItems: "center", zIndex: 1 },
     completionGlow: {
@@ -33,10 +35,10 @@ let closure_14 = createStyles.createStyles((arg0) => {
     confetti: null,
     opacityMask: null,
   };
-  progressPath = { transform: null };
+  const obj2 = { transform: null };
   const items = [{ rotate: "-90deg" }];
-  progressPath.transform = items;
-  progressPath.canvas = progressPath;
+  obj2.transform = items;
+  obj.canvas = obj2;
   const size = {
     position: "absolute",
     height: 0.78 * arg0,
@@ -44,10 +46,9 @@ let closure_14 = createStyles.createStyles((arg0) => {
     borderRadius: nativeDefault.radii.round,
     overflow: "hidden",
   };
-  progressPath.imageContainer = size;
-  progressPath = { color: nativeDefault.colors.STATUS_POSITIVE };
-  progressPath.progressPath = progressPath;
-  progressPath.confetti = { position: "absolute", pointerEvents: "none" };
+  obj.imageContainer = size;
+  obj.progressPath = { color: nativeDefault.colors.STATUS_POSITIVE };
+  obj.confetti = { position: "absolute", pointerEvents: "none" };
   const rect = {
     backgroundColor: nativeDefault.colors.CARD_BACKGROUND_DEFAULT,
     position: "absolute",
@@ -57,8 +58,8 @@ let closure_14 = createStyles.createStyles((arg0) => {
     bottom: 0,
     zIndex: 2,
   };
-  progressPath.opacityMask = rect;
-  return progressPath;
+  obj.opacityMask = rect;
+  return obj;
 });
 const __initData = {
   code: "function QuestProgressIndicatorTsx1(){const{glowOpacity}=this.__closure;return{shadowOpacity:glowOpacity.get()};}",
@@ -87,7 +88,7 @@ export default noop.memo(function QuestProgressIndicator(loading) {
   closure_9 = undefined;
   let sharedValue2;
   dependencyMap = undefined;
-  obj = progress(stateFromStores[8]);
+  let obj = progress(stateFromStores[8]);
   let items = [sharedValue1];
   stateFromStores = obj.useStateFromStores(items, () => sharedValue1.useReducedMotion);
   const tmp4 = { "x-sm": 3, sm: 3, md: 3, "md-lg": 4, lg: 6 }[size];
@@ -99,27 +100,26 @@ export default noop.memo(function QuestProgressIndicator(loading) {
   c5 = result;
   const tmp9 = closure_14(obj[size]);
   noop = tmp9;
-  let obj1 = progress(stateFromStores[4]);
-  const sharedValue = obj1.useSharedValue(progress);
-  let obj2 = progress(stateFromStores[4]);
+  const sharedValue = progress(stateFromStores[4]).useSharedValue(progress);
+  const obj2 = progress(stateFromStores[4]);
   let num = 0;
   if (flag) {
     num = 0.7;
   }
-  sharedValue1 = obj2.useSharedValue(num);
+  sharedValue1 = progress(stateFromStores[4]).useSharedValue(num);
   const userStatus = quest.userStatus;
   let completedAt;
   if (userStatus != null) {
     completedAt = userStatus.completedAt;
   }
   closure_9 = tmp13;
-  let tmpResult = tmp(tmp2[4]);
+  const obj3 = progress(stateFromStores[4]);
   let num2 = 0;
   if (null != completedAt) {
     num2 = 1;
   }
-  sharedValue2 = tmpResult.useSharedValue(num2);
-  tmpResult = tmp(tmp2[4]);
+  sharedValue2 = progress(stateFromStores[4]).useSharedValue(num2);
+  const tmpResult = progress(stateFromStores[4]);
   class T {
     constructor() {
       obj = { shadowOpacity: closure_10.get() };
@@ -129,7 +129,8 @@ export default noop.memo(function QuestProgressIndicator(loading) {
   T.__closure = { glowOpacity: sharedValue2 };
   T.__workletHash = 17183837725505;
   T.__initData = __initData;
-  const animatedStyle = tmpResult.useAnimatedStyle(T);
+  const animatedStyle = progress(stateFromStores[4]).useAnimatedStyle(T);
+  const tmpResult4 = progress(stateFromStores[4]);
   class D {
     constructor() {
       obj = { strokeDashoffset: closure_5 - closure_5 * closure_7.get() };
@@ -140,7 +141,7 @@ export default noop.memo(function QuestProgressIndicator(loading) {
   D.__workletHash = 17281152506254;
   D.__initData = __initData2;
   const animatedProps = progress(stateFromStores[4]).useAnimatedProps(D);
-  const tmpResult1 = progress(stateFromStores[4]);
+  const tmpResult5 = progress(stateFromStores[4]);
   class E {
     constructor() {
       obj = { opacity: closure_8.get() };
@@ -178,7 +179,7 @@ export default noop.memo(function QuestProgressIndicator(loading) {
   dependencyMap = tmp20;
   const items3 = [tmp9.confetti, tmp6, obj[size]];
   const items4 = [null != completedAt, sharedValue2, stateFromStores];
-  const tmpResult2 = progress(stateFromStores[4]);
+  const tmpResult6 = progress(stateFromStores[4]);
   scale(() => {
     if (!stateFromStores) {
       if (closure_9) {
@@ -202,13 +203,13 @@ export default noop.memo(function QuestProgressIndicator(loading) {
   }
   const rounded = Math.round(100 * progress);
   if (null == onPress) {
-    obj = {};
+    let obj4 = {};
   } else {
-    obj = { onPress };
+    obj4 = { onPress };
   }
-  obj = {};
-  let merged = Object.assign(obj);
-  obj1 = {
+  const obj5 = {};
+  let merged = Object.assign(obj4);
+  const obj6 = {
     style: null,
     accessible: true,
     accessibilityRole: "progressbar",
@@ -219,28 +220,28 @@ export default noop.memo(function QuestProgressIndicator(loading) {
   const items5 = [, ,];
   ({ wrapper: arr6[0], completionGlow: arr6[1] } = tmp9);
   items5[2] = animatedStyle;
-  obj1.style = items5;
+  obj6.style = items5;
   let formatToPlainStringResult = accessibilityLabel;
   if (accessibilityLabel == null) {
     const intl = tmp(tmp2[11]).intl;
-    obj2 = { percent: rounded };
-    formatToPlainStringResult = intl.formatToPlainString(tmp(tmp2[11]).t.Gj8Jqn, obj2);
+    const obj7 = { percent: rounded };
+    formatToPlainStringResult = intl.formatToPlainString(tmp(tmp2[11]).t.Gj8Jqn, obj7);
   }
-  obj1.accessibilityLabel = formatToPlainStringResult;
-  obj1.accessibilityValue = { min: 0, max: 100, now: rounded };
+  obj6.accessibilityLabel = formatToPlainStringResult;
+  obj6.accessibilityValue = { min: 0, max: 100, now: rounded };
   const items6 = [closure_9(flag(stateFromStores[4]).View, { style: animatedStyle1 })];
-  const obj3 = { style: tmp9.container, children: null };
-  size = { height: tmp5, width: tmp5, style: tmp9.canvas, children: null };
-  const obj4 = { children: null };
-  const obj5 = { id: "underlayGradient", x1: "0", y1: "0.5", x2: "1", y2: "0.5", children: null };
+  const obj8 = { style: tmp9.container, children: null };
+  const size1 = { height: tmp5, width: tmp5, style: tmp9.canvas, children: null };
+  const obj9 = { children: null };
+  const obj10 = { id: "underlayGradient", x1: "0", y1: "0.5", x2: "1", y2: "0.5", children: null };
   const items7 = [
     closure_9(progress(stateFromStores[5]).Stop, { offset: "0", stopColor: 19 }),
     closure_9(progress(stateFromStores[5]).Stop, { offset: "1", stopColor: 17 }),
   ];
-  obj5.children = items7;
-  obj4.children = sharedValue2(progress(stateFromStores[5]).LinearGradient, obj5);
+  obj10.children = items7;
+  obj9.children = sharedValue2(progress(stateFromStores[5]).LinearGradient, obj10);
   const items8 = [
-    closure_9(progress(stateFromStores[5]).Defs, obj4),
+    closure_9(progress(stateFromStores[5]).Defs, obj9),
     closure_9(progress(stateFromStores[5]).Circle, {
       cx: obj[size] / 2,
       cy: obj[size] / 2,
@@ -261,30 +262,30 @@ export default noop.memo(function QuestProgressIndicator(loading) {
       animatedProps,
     }),
   ];
-  size.children = items8;
-  const items9 = [sharedValue2(progress(stateFromStores[5]).Svg, size), ,];
+  size1.children = items8;
+  const items9 = [sharedValue2(progress(stateFromStores[5]).Svg, size1), ,];
   let tmp25Result = null;
   if (flag2) {
-    const obj10 = { ref: tmp20, style: tmp21, source: tmp(tmp2[13]), autoPlay: false, loop: false };
-    tmp25Result = tmp25(tmp28(tmp2[12]), obj10);
+    const obj15 = { ref: tmp20, style: tmp21, source: tmp(tmp2[13]), autoPlay: false, loop: false };
+    tmp25Result = tmp25(tmp28(tmp2[12]), obj15);
     const tmp28Result = tmp28(tmp2[12]);
   }
   items9[1] = tmp25Result;
-  const obj11 = { style: tmp9.imageContainer, children: null };
-  const size1 = {
+  const obj16 = { style: tmp9.imageContainer, children: null };
+  const size2 = {
     quest,
     height: 0.78 * tmp5,
     width: 0.78 * tmp5,
     withAnimation: loading.withAnimation,
     accessibilityLabelPrefix: accessibilityLabel,
   };
-  obj11.children = closure_9(flag(stateFromStores[14]), size1);
-  items9[2] = closure_9(sharedValue, obj11);
-  obj3.children = items9;
-  items6[1] = sharedValue2(sharedValue, obj3);
-  obj1.children = items6;
-  obj.children = sharedValue2(flag(stateFromStores[4]).View, obj1);
-  return closure_9(PressableOpacity, obj);
+  obj16.children = closure_9(flag(stateFromStores[14]), size2);
+  items9[2] = closure_9(sharedValue, obj16);
+  obj8.children = items9;
+  items6[1] = sharedValue2(sharedValue, obj8);
+  obj6.children = items6;
+  obj5.children = sharedValue2(flag(stateFromStores[4]).View, obj6);
+  return closure_9(PressableOpacity, obj5);
 });
 export const COMPLETION_GLOW_SHADOW_RADIUS = 20;
 export const COMPLETION_GLOW_CLEARANCE = 40;

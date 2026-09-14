@@ -1,6 +1,8 @@
 // discord_app/modules/messages/computeGlobalSpoilerDisplay.tsx
 import PermissionStore from "../../stores/PermissionStore.tsx";
 
+const require = globalThis.__r;
+
 const require = fn;
 const Constants = fn(1074);
 ({ Permissions: c3, SpoilerRenderSetting: closure_4 } = Constants);

@@ -1,6 +1,8 @@
 // discord_app/modules/quarantine/useShouldBlockDMInputForQuarantinedUser.tsx
 import MessageStore from "../../stores/MessageStore.tsx";
 
+const require = globalThis.__r;
+
 const require = fn;
 const UserFlags = fn(1074).UserFlags;
 const size = fn(2);

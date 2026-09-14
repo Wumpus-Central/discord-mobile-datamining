@@ -31,8 +31,10 @@ const size = fn(2);
 let result = size.fileFinishedImporting("utils/SKUUtils.tsx");
 
 export const getSKUIdFromURL = function getSKUIdFromURL(pathname) {
-  const obj = { path: timestampProducer.APPLICATION_STORE_LISTING_SKU(":skuId", ":slug") };
-  const matchPathResult = obj.matchPath(pathname, obj);
+  const obj = matchPathCompat;
+  const matchPathResult = obj.matchPath(pathname, {
+    path: timestampProducer.APPLICATION_STORE_LISTING_SKU(":skuId", ":slug"),
+  });
   let skuId = null;
   if (null != matchPathResult) {
     skuId = matchPathResult.params.skuId;
@@ -280,7 +282,7 @@ export const getReadablePreorderReleaseDate = function getReadablePreorderReleas
   } else {
     let num = 0;
     if (0 < items.length) {
-      [tmp3, tmp4] = _slicedToArray(items[num], 2);
+      [tmp3, tmp4] = items[num];
       const obj = _modDef4228(preorderApproximateReleaseDate, tmp3, true);
       while (!obj.isValid()) {
         num = num + 1;

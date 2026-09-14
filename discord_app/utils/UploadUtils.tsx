@@ -119,14 +119,14 @@ export const getAttachmentPayload = function getAttachmentPayload(id) {
   if (index === undefined) {
     tmp = null;
   }
-  let str;
+  let str1;
   if (tmp != null) {
-    str = tmp.toString();
+    str1 = tmp.toString();
   }
-  if (str == null) {
-    str = id.id;
+  if (str1 == null) {
+    str1 = id.id;
   }
-  const obj = { id: str };
+  const obj = { id: str1 };
   if (null != id.description) {
     obj.description = id.description;
   }
@@ -167,7 +167,6 @@ export const getAttachmentPayload = function getAttachmentPayload(id) {
     tmp9 = id.item.platform === Upload.UploadPlatform.WEB;
   }
   if (tmp9) {
-    str = "mimeType";
     tmp9 = "mimeType" in id;
   }
   if (tmp9) {

@@ -18,8 +18,8 @@ const result = size.fileFinishedImporting(
 export default function TextInputField(field) {
   field = field.field;
   let str = field.response;
-  let obj = { style: closure_5().container, children: null };
-  obj = {
+  const obj = { style: closure_5().container, children: null };
+  const obj2 = {
     label: jsx(Text_Text.Text, {
       variant: "heading-md/semibold",
       color: "mobile-text-heading-primary",
@@ -33,10 +33,10 @@ export default function TextInputField(field) {
   if (str == null) {
     str = "";
   }
-  obj.value = str;
+  obj2.value = str;
   const intl = util.intl;
-  obj.placeholder = intl.string(util.t["Sqn+Wh"]);
-  obj.onChange = field.onChange;
+  obj2.placeholder = intl.string(util.t["Sqn+Wh"]);
+  obj2.onChange = field.onChange;
   obj.children = jsx(TextInput.TextInput, {
     label: jsx(Text_Text.Text, {
       variant: "heading-md/semibold",
@@ -48,17 +48,5 @@ export default function TextInputField(field) {
     placeholder: null,
     onChange: null,
   });
-  return (
-    <View
-      label={jsx(Text_Text.Text, {
-        variant: "heading-md/semibold",
-        color: "mobile-text-heading-primary",
-        children: field.label,
-      })}
-      maxLength={MAX_TEXT_RESPONSE_LENGTH}
-      value={null}
-      placeholder={null}
-      onChange={null}
-    />
-  );
+  return <View style={closure_5().container}>{null}</View>;
 }

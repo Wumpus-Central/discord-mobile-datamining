@@ -49,7 +49,7 @@ const webhooksStore = new WebhooksStore(DispatcherDefault, {
   WEBHOOKS_UPDATE: function handleWebhooksUpdate(arg0) {
     ({ guildId, channelId } = arg0);
     ({ webhooks, error } = arg0);
-    let obj;
+    let obj2;
     if (null != webhooks) {
       c2 = null;
       let items = [];
@@ -62,11 +62,11 @@ const webhooksStore = new WebhooksStore(DispatcherDefault, {
         items = values.filter((channel_id) => channel_id.channel_id !== channelId).value();
         const iter = values.filter((channel_id) => channel_id.channel_id !== channelId);
       }
-      obj = {};
-      dependencyMap[guildId] = obj;
+      obj2 = {};
+      dependencyMap[guildId] = obj2;
       const combined = items.concat(webhooks);
       const item = combined.forEach((id) => {
-        obj[id.id] = id;
+        obj2[id.id] = id;
         return id;
       });
       let str4 = channelId;
@@ -92,8 +92,7 @@ const webhooksStore = new WebhooksStore(DispatcherDefault, {
       }
       if (tmp5) {
         c2 = null;
-        obj = WebhooksActionCreatorsDefault;
-        const forChannel = obj.fetchForChannel(guildId, channelId);
+        const forChannel = WebhooksActionCreatorsDefault.fetchForChannel(guildId, channelId);
       }
     }
   },

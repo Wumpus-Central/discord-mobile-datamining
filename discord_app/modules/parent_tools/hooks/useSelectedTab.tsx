@@ -15,10 +15,8 @@ export default function useSelectedMyFamilyTab() {
   let obj = {
     selectedTab: null,
     handleTabChange(tab) {
-      let obj = FamilyCenterActionCreatorsDefault;
-      tab = obj.selectTab(tab);
-      obj = { action: TabChange.TabChange, tab };
-      AnalyticsUtilsDefault.track(constants.FAMILY_CENTER_ACTION, obj);
+      tab = FamilyCenterActionCreatorsDefault.selectTab(tab);
+      AnalyticsUtilsDefault.track(constants.FAMILY_CENTER_ACTION, { action: TabChange.TabChange, tab });
     },
   };
   const items = [FamilyCenterStore];

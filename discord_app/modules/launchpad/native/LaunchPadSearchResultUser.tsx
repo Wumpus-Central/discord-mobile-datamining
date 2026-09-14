@@ -43,22 +43,21 @@ function UserResult(user) {
   const tmp4 = getLayoutStylesDefault();
   let items = [user.id];
   const callback = noop.useCallback(() => {
-    const obj = { recipientIds: null };
+    const obj2 = { recipientIds: null };
     const items = [user.id];
-    obj.recipientIds = items;
-    obj.openPrivateChannel(obj);
+    obj2.recipientIds = items;
+    ChannelActionCreatorsDefault.openPrivateChannel(obj2);
   }, items);
-  let obj = user(5063);
-  const fontScale = obj.useFontScale();
-  let obj1 = user(504);
+  const fontScale = user(5063).useFontScale();
+  const obj = user(5063);
   const items1 = [LocaleStore];
-  const stateFromStores = obj1.useStateFromStores(items1, () => locale.locale);
+  const stateFromStores = user(504).useStateFromStores(items1, () => locale.locale);
   let obj2 = user(504);
   const items2 = [AccessibilityStore];
-  const stateFromStores1 = obj2.useStateFromStores(items2, () => useReducedMotion.useReducedMotion);
-  let obj3 = user(504);
+  const stateFromStores1 = user(504).useStateFromStores(items2, () => useReducedMotion.useReducedMotion);
+  const obj3 = user(504);
   const items3 = [PresenceStore];
-  const stateFromStoresObject = obj3.useStateFromStoresObject(items3, () => ({
+  const stateFromStoresObject = user(504).useStateFromStoresObject(items3, () => ({
     isMobileOnline: PresenceStore.isMobileOnline(user.id),
     isVROnline: PresenceStore.isVROnline(user.id),
     status: PresenceStore.getStatus(user.id),
@@ -68,8 +67,8 @@ function UserResult(user) {
   let extractTimestampResult;
   ({ isMobileOnline, isVROnline, activities } = stateFromStoresObject);
   if (null != lastMessage) {
-    let tmp2Result = SnowflakeUtilsDefault;
-    extractTimestampResult = tmp2Result.extractTimestamp(lastMessage.id);
+    extractTimestampResult = SnowflakeUtilsDefault.extractTimestamp(lastMessage.id);
+    const tmp2Result = SnowflakeUtilsDefault;
   }
   let relativeTimestamp = null;
   if (null != extractTimestampResult) {
@@ -83,24 +82,29 @@ function UserResult(user) {
       str = "text-default";
     }
   }
-  tmp2Result = renderChannelPressableWrapperDefault;
-  obj = { onPress: callback, underlayColor: tmp.pressableUnderlayColor.backgroundColor, style: null, children: null };
+  const obj4 = user(504);
+  const obj5 = {
+    onPress: callback,
+    underlayColor: tmp.pressableUnderlayColor.backgroundColor,
+    style: null,
+    children: null,
+  };
   const items4 = [tmp.pressable, { borderRadius: tmp4.container.borderRadius }];
-  obj.style = items4;
-  obj = { unread, resolvedUnreadSetting: UnreadSetting.ALL_MESSAGES };
-  const items5 = [closure_12(UnreadBadgeDefault, obj), ,];
-  obj1 = {
+  obj5.style = items4;
+  const tmp2Result5 = renderChannelPressableWrapperDefault;
+  const items5 = [closure_12(UnreadBadgeDefault, { unread, resolvedUnreadSetting: UnreadSetting.ALL_MESSAGES }), ,];
+  const obj7 = {
     user,
     guildId: "e",
     isMobileOnline,
     isVROnline,
     status: null,
-    streaming: "87baeefdf7c0d9a1502798941428fe60",
-    style: "zh-TW.messages.87baeefdf7c0d9a1502798941428fe60.compiled.messages",
+    streaming: "38db3a0349491965cb68956b320d320d",
+    style: "el.messages.38db3a0349491965cb68956b320d320d.compiled.messages",
     size: "jsona",
-    animate: "INTERACTION_FAILURE",
-    typing: null,
-    autoStatusCutout: true,
+    animate: "rofl",
+    typing: "rolling_on_the_floor_laughing",
+    autoStatusCutout: null,
   };
   let tmp19 = null;
   if (!user.isSystemUser()) {
@@ -109,10 +113,10 @@ function UserResult(user) {
       tmp19 = status;
     }
   }
-  obj1.status = tmp19;
-  obj1.streaming = isStreamingDefault(activities);
-  obj1.style = tmp4.icon.margin;
-  obj1.size = tmp4.icon.avatarSize;
+  obj7.status = tmp19;
+  obj7.streaming = isStreamingDefault(activities);
+  obj7.style = tmp4.icon.margin;
+  obj7.size = tmp4.icon.avatarSize;
   let tmp21 = !stateFromStores1;
   if (!stateFromStores1) {
     let tmp22 = flag2;
@@ -121,15 +125,16 @@ function UserResult(user) {
     }
     tmp21 = tmp22;
   }
-  obj1.animate = tmp21;
-  obj1.typing = flag2;
-  items5[1] = closure_12(user(1178).Avatar, obj1);
-  const tmp2Result1 = renderChannelWrapperDefault;
+  obj7.animate = tmp21;
+  obj7.typing = flag2;
+  items5[1] = closure_12(user(1176).Avatar, obj7);
+  const obj6 = { unread, resolvedUnreadSetting: UnreadSetting.ALL_MESSAGES };
+  const tmp2Result6 = renderChannelWrapperDefault;
   if (comparator == null) {
     comparator = UserUtilsDefault.getUserTag(user);
-    const tmp2Result3 = UserUtilsDefault;
+    const tmp2Result8 = UserUtilsDefault;
   }
-  obj2 = {
+  const obj8 = {
     name: comparator,
     subtitle: null,
     unread: null,
@@ -142,34 +147,33 @@ function UserResult(user) {
   let tmp14Result;
   if (null != lastMessage) {
     if (null != channel) {
-      obj3 = {
+      const obj9 = {
         channel,
         message: lastMessage,
         color: str,
         muted: flag,
         layout: tmp6(7983).ChannelListLayoutTypes.COMPACT,
       };
-      tmp14Result = closure_12(tmp6(10237).ChannelRowPreview, obj3);
+      tmp14Result = closure_12(tmp6(10237).ChannelRowPreview, obj9);
     }
   }
-  const obj4 = { children: null };
-  obj2.subtitle = tmp14Result;
-  obj2.unread = unread;
-  obj2.resolvedUnreadSetting = UnreadSetting.ALL_MESSAGES;
-  obj2.muted = flag;
-  obj2.lastMessageTimestampString = relativeTimestamp;
-  obj2.mentionCount = num;
-  obj2.mentionBadge = shared_renderChannelBadgeDefault({ mentionCount: num, locale: stateFromStores });
-  items5[2] = renderChannelContentDefault(obj2);
-  obj4.children = items5;
-  obj.children = tmp2Result1(closure_14(closure_13, obj4), { fontScale });
-  return tmp2Result(closure_12(user(5204).PressableHighlight, obj));
+  const obj10 = { children: null };
+  obj8.subtitle = tmp14Result;
+  obj8.unread = unread;
+  obj8.resolvedUnreadSetting = UnreadSetting.ALL_MESSAGES;
+  obj8.muted = flag;
+  obj8.lastMessageTimestampString = relativeTimestamp;
+  obj8.mentionCount = num;
+  obj8.mentionBadge = shared_renderChannelBadgeDefault({ mentionCount: num, locale: stateFromStores });
+  items5[2] = renderChannelContentDefault(obj8);
+  obj10.children = items5;
+  obj5.children = tmp2Result6(closure_14(closure_13, obj10), { fontScale });
+  return tmp2Result5(closure_12(user(5204).PressableHighlight, obj5));
 }
 function UserResultWithChannel(arg0) {
   ({ user: require, channel } = arg0);
-  let obj = initialize;
   const items = [UserGuildSettingsStore];
-  const stateFromStores = obj.useStateFromStores(items, () =>
+  const stateFromStores = initialize.useStateFromStores(items, () =>
     UserGuildSettingsStore.isChannelMuted(undefined, channel.id),
   );
   const baseChannelUnreadBadgeState = useChannelUnreadBadgeState.useBaseChannelUnreadBadgeState(
@@ -179,44 +183,46 @@ function UserResultWithChannel(arg0) {
   ({ unread, mentionCount } = baseChannelUnreadBadgeState);
   const items1 = [TypingStore];
   const stateFromStores1 = initialize.useStateFromStores(items1, () => TypingStore.isTyping(channel.id, id.id));
-  obj = {};
+  const obj4 = {};
   const merged = Object.assign(arg0);
-  obj.channel = channel;
-  obj.lastMessage = channel(15402)(channel, { unread });
-  obj.unread = unread;
-  obj.mentionCount = mentionCount;
-  obj.muted = stateFromStores;
-  obj.isTyping = stateFromStores1;
-  return closure_12(UserResult, obj);
+  obj4.channel = channel;
+  obj4.lastMessage = channel(15403)(channel, { unread });
+  obj4.unread = unread;
+  obj4.mentionCount = mentionCount;
+  obj4.muted = stateFromStores;
+  obj4.isTyping = stateFromStores1;
+  return closure_12(UserResult, obj4);
 }
 const StatusTypes = fn(1074).StatusTypes;
 const UnreadSetting = fn(4818).UnreadSetting;
 const jsxProd = fn(21);
 ({ jsx: closure_12, Fragment: map1, jsxs: closure_14 } = jsxProd);
 const createStyles = fn(4636);
-let obj = { pressable: { flex: 1 }, pressableUnderlayColor: null };
-obj = { backgroundColor: nativeDefault.colors.INTERACTIVE_BACKGROUND_ACTIVE };
-obj.pressableUnderlayColor = obj;
+let obj = {
+  pressable: { flex: 1 },
+  pressableUnderlayColor: { backgroundColor: nativeDefault.colors.INTERACTIVE_BACKGROUND_ACTIVE },
+};
 let closure_15 = createStyles.createStyles(obj);
+let obj3 = { backgroundColor: nativeDefault.colors.INTERACTIVE_BACKGROUND_ACTIVE };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/launchpad/native/LaunchPadSearchResultUser.tsx");
 
 export default noop.memo((user) => {
   user = user.user;
-  let obj = user(504);
   const items = [ChannelStore];
-  closure_1 = obj.useStateFromStores(items, () => ChannelStore.getDMFromUserId(user.id));
+  closure_1 = user(504).useStateFromStores(items, () => ChannelStore.getDMFromUserId(user.id));
+  const obj = user(504);
   const items1 = [ChannelStore];
   const stateFromStores = user(504).useStateFromStores(items1, () => ChannelStore.getChannel(closure_1));
   if (null != stateFromStores) {
-    obj = {};
+    const obj3 = {};
     const merged = Object.assign(user);
-    obj.channel = stateFromStores;
-    let tmp7 = closure_12(UserResultWithChannel, obj);
+    obj3.channel = stateFromStores;
+    let tmp7 = closure_12(UserResultWithChannel, obj3);
   } else {
-    obj = {};
+    const obj4 = {};
     const merged1 = Object.assign(user);
-    tmp7 = closure_12(UserResult, obj);
+    tmp7 = closure_12(UserResult, obj4);
   }
   return tmp7;
 });

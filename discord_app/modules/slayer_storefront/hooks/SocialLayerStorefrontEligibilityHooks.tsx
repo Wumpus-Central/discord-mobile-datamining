@@ -9,6 +9,8 @@ import GuildStore from "../../../stores/GuildStore.tsx";
 import PresenceStore from "../../../stores/PresenceStore.tsx";
 import SocialLayerStorefrontStore from "../SocialLayerStorefrontStore.tsx";
 
+const require = globalThis.__r;
+
 require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/slayer_storefront/hooks/SocialLayerStorefrontEligibilityHooks.tsx");

@@ -21,15 +21,18 @@ export const generateLoadingRowData = function generateLoadingRowData(rowType, t
   } else {
     LOAD_MORE_AFTER = constants3.LOAD_MORE_AFTER;
   }
-  let obj = {
+  const obj = {
     type: constants2.LOADING,
     id: rowType,
-    button: null,
+    button: {
+      action: { type: LOAD_MORE_AFTER },
+      backgroundColor: tmp.loadButtonBackgroundColor,
+      cornerRadius: 4,
+      text,
+    },
     color: isLoading ? tmp.loadingColor : tmp.loadButtonColor,
     changeType,
     isLoading,
   };
-  obj = { action: { type: LOAD_MORE_AFTER }, backgroundColor: tmp.loadButtonBackgroundColor, cornerRadius: 4, text };
-  obj.button = obj;
   return obj;
 };

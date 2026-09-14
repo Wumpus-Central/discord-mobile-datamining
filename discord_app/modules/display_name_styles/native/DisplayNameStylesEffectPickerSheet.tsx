@@ -21,7 +21,7 @@ function EffectTile(arg0) {
     OpWJ3f = _modDef2786.OpWJ3f;
   }
   const stringResult = intl.string(OpWJ3f);
-  let obj = {
+  const obj = {
     onPress: onClick,
     accessibilityRole: "button",
     accessibilityLabel: stringResult,
@@ -33,9 +33,9 @@ function EffectTile(arg0) {
   if (selected) {
     selected = tmp.effectCardSelected;
   }
-  obj = { style: items, children: null };
+  const obj2 = { style: items, children: null };
   items[1] = selected;
-  const obj1 = {
+  const obj3 = {
     userId,
     userName: stringResult,
     effectDisplayType: null,
@@ -44,42 +44,39 @@ function EffectTile(arg0) {
     variant: "text-md/semibold",
   };
   const tmp2Result = useDisplayNameStylesEffectConfigs;
-  obj1.effectDisplayType = types.EffectDisplayType.STATIC;
-  obj1.pendingDisplayNameStyles = displayNameStylesEffectConfig.previewStyles;
-  obj1.style = tmp.effectName;
-  const items1 = [React5(UsernameWithEffectsDefault, obj1)];
+  obj3.effectDisplayType = types.EffectDisplayType.STATIC;
+  obj3.pendingDisplayNameStyles = displayNameStylesEffectConfig.previewStyles;
+  obj3.style = tmp.effectName;
+  const items1 = [React5(UsernameWithEffectsDefault, obj3)];
   if (showNewDot) {
-    const obj2 = {
+    const obj4 = {
       style: tmp.tileNewDot,
       accessibilityElementsHidden: true,
       importantForAccessibility: "no-hide-descendants",
     };
-    showNewDot = React5(hasOwnProperty, obj2);
+    showNewDot = React5(hasOwnProperty, obj4);
   }
   items1[1] = showNewDot;
-  obj.children = items1;
-  obj.children = React6(hasOwnProperty, obj);
+  obj2.children = items1;
+  obj.children = React6(hasOwnProperty, obj2);
   return React5(timestampProducer, obj, effectId);
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Pressable: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-fn(4636);
-let createStyles = {
+const createStyles = fn(4636);
+let obj2 = {
   header: { paddingTop: 4 },
   headerTrailing: { justifyContent: "center", alignItems: "center" },
   container: { flex: 1 },
-  contentContainer: null,
-  gridContainer: null,
+  contentContainer: { padding: nativeDefault.space.PX_8, paddingLeft: nativeDefault.space.PX_16, alignItems: "center" },
+  gridContainer: { flexWrap: "wrap", width: 350 },
   effectCard: null,
   effectCardSelected: null,
   effectName: null,
   tileNewDot: null,
 };
-createStyles = { padding: nativeDefault.space.PX_8, paddingLeft: nativeDefault.space.PX_16, alignItems: "center" };
-createStyles.contentContainer = createStyles;
-createStyles.gridContainer = { flexWrap: "wrap", width: 350 };
 let size = {
   width: 109,
   height: 80,
@@ -90,9 +87,10 @@ let size = {
   justifyContent: "center",
   alignItems: "center",
 };
-createStyles.effectCard = size;
-createStyles.effectCardSelected = { borderColor: nativeDefault.colors.CONTROL_BRAND_FOREGROUND };
-createStyles.effectName = { textAlign: "center" };
+obj2.effectCard = size;
+let obj3 = { padding: nativeDefault.space.PX_8, paddingLeft: nativeDefault.space.PX_16, alignItems: "center" };
+obj2.effectCardSelected = { borderColor: nativeDefault.colors.CONTROL_BRAND_FOREGROUND };
+obj2.effectName = { textAlign: "center" };
 const size1 = {
   position: "absolute",
   top: nativeDefault.space.PX_8,
@@ -106,8 +104,8 @@ const size1 = {
   shadowOpacity: 1,
   elevation: 4,
 };
-createStyles.tileNewDot = size1;
-let closure_9 = createStyles.createStyles(createStyles);
+obj2.tileNewDot = size1;
+let closure_9 = createStyles.createStyles(obj2);
 size = fn(2);
 let result = size.fileFinishedImporting("modules/display_name_styles/native/DisplayNameStylesEffectPickerSheet.tsx");
 
@@ -116,17 +114,15 @@ export default function DisplayNameStylesEffectPickerSheet(userId) {
   ({ selectedEffectId, onSelectEffect } = userId);
   dependencyMap = undefined;
   _slicedToArray = undefined;
-  let first;
+  first = undefined;
+  closure_5 = undefined;
   const tmp = closure_9();
   let obj = userId(8287);
-  let obj1 = userId(15423);
-  const visibleEffectOrder = obj1.useVisibleEffectOrder();
+  const visibleEffectOrder = userId(15424).useVisibleEffectOrder();
   let obj2 = userId(15424);
-  const displayNameStylesNewEffects = obj2.useDisplayNameStylesNewEffects(visibleEffectOrder);
+  const displayNameStylesNewEffects = userId(15425).useDisplayNameStylesNewEffects(visibleEffectOrder);
   ({ dotEffectIds: c2, dismissEffectDot: c3 } = displayNameStylesNewEffects);
-  const tmp5 = _slicedToArray(first.useState(selectedEffectId), 2);
-  first = tmp5[0];
-  closure_5 = tmp5[1];
+  [first, closure_5] = first.useState(selectedEffectId);
   closure_6 = tmp7;
   closure_7 = first.useCallback((arg0) => {
     closure_5(arg0);
@@ -134,24 +130,23 @@ export default function DisplayNameStylesEffectPickerSheet(userId) {
   const items = [first !== selectedEffectId, first, onSelectEffect];
   let tmp9 = null;
   if (null != userId) {
-    obj = { ref: null, header: null, children: null };
-    obj.ref = obj.useBottomSheetRef().bottomSheetRef;
-    obj = { style: tmp.header, children: null };
-    obj1 = { title: null, trailing: null };
+    const obj4 = { ref: obj.useBottomSheetRef().bottomSheetRef, header: null, children: null };
+    const obj5 = { style: tmp.header, children: null };
+    const obj6 = { title: null, trailing: null };
     const intl = tmp2(1114).intl;
-    obj1.title = intl.string(onSelectEffect(2786).RVtMxT);
-    obj2 = { style: tmp.headerTrailing, children: null };
-    const obj3 = { text: null, onPress: null, variant: "primary", size: "sm" };
+    obj6.title = intl.string(onSelectEffect(2786).RVtMxT);
+    const obj7 = { style: tmp.headerTrailing, children: null };
+    const obj8 = { text: null, onPress: null, variant: "primary", size: "sm" };
     const intl2 = tmp2(1114).intl;
-    obj3.text = intl2.string(tmp2(1114).t.XqMe3N);
-    obj3.onPress = tmp8;
-    obj2.children = closure_7(tmp2(5056).Button, obj3);
-    obj1.trailing = closure_7(closure_5, obj2);
-    obj.children = closure_7(tmp2(7252).BottomSheetTitleHeader, obj1);
-    obj.header = closure_7(closure_5, obj);
-    const obj4 = { style: tmp.container, children: null };
-    const obj5 = { style: tmp.contentContainer, children: null };
-    const obj6 = {
+    obj8.text = intl2.string(tmp2(1114).t.XqMe3N);
+    obj8.onPress = tmp8;
+    obj7.children = closure_7(tmp2(5056).Button, obj8);
+    obj6.trailing = closure_7(closure_5, obj7);
+    obj5.children = closure_7(tmp2(7252).BottomSheetTitleHeader, obj6);
+    obj4.header = closure_7(closure_5, obj5);
+    const obj9 = { style: tmp.container, children: null };
+    const obj10 = { style: tmp.contentContainer, children: null };
+    const obj11 = {
       direction: "horizontal",
       spacing: 8,
       style: tmp.gridContainer,
@@ -175,10 +170,10 @@ export default function DisplayNameStylesEffectPickerSheet(userId) {
         );
       }),
     };
-    obj5.children = closure_7(tmp2(5054).Stack, obj6);
-    obj4.children = closure_7(closure_5, obj5);
-    obj.children = closure_7(closure_5, obj4);
-    tmp9 = closure_7(tmp2(7253).BottomSheet, obj);
+    obj10.children = closure_7(tmp2(5054).Stack, obj11);
+    obj9.children = closure_7(closure_5, obj10);
+    obj4.children = closure_7(closure_5, obj9);
+    tmp9 = closure_7(tmp2(7253).BottomSheet, obj4);
   }
   return tmp9;
 }

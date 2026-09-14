@@ -21,10 +21,8 @@ export const useTextChannelPressEvents = function useTextChannelPressEvents(chan
   ({ id: arr[0], guild_id: arr[1] } = channel);
   items[2] = flag2;
   obj.onPress = noop.useCallback(() => {
-    let obj = ChannelActionCreatorsDefault;
-    obj.preload(user.guild_id, user.id);
-    obj = { navigationReplace };
-    transitionToChannel.transitionToChannel(user.id, obj);
+    ChannelActionCreatorsDefault.preload(user.guild_id, user.id);
+    transitionToChannel.transitionToChannel(user.id, { navigationReplace });
   }, items);
   const items1 = [channel];
   obj.onLongPress = noop.useCallback(() => {

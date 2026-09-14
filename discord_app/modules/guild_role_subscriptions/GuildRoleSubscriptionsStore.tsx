@@ -37,7 +37,7 @@ function saveBenefitChannels(benefitChannels) {
   }
 }
 let closure_2 = CreatorMonetizationReviewConstants.DefaultCreatorMonetizationRestrictions;
-let FetchState = { NOT_FETCHED: 0, [0]: "NOT_FETCHED", FETCHING: 1, [1]: "FETCHING", FETCHED: 2, [2]: "FETCHED" };
+const FetchState = { NOT_FETCHED: 0, [0]: "NOT_FETCHED", FETCHING: 1, [1]: "FETCHING", FETCHED: 2, [2]: "FETCHED" };
 const secondaryIndexMap = new SecondaryIndexMap.SecondaryIndexMap(
   (guild_id) => {
     const items = ["guild:" + guild_id.guild_id, ...prop.map(makeGroupListingIndexSubscriptionListingTag)];
@@ -134,7 +134,7 @@ prototype["getBenefitChannel"] = function getBenefitChannel(arg0) {
   return map1.get(arg0);
 };
 GuildRoleSubscriptionsStore.displayName = "GuildRoleSubscriptionsStore";
-FetchState = {
+const guildRoleSubscriptionsStore = new GuildRoleSubscriptionsStore(DispatcherDefault, {
   CONNECTION_OPEN: function handleConnectionOpen() {
     secondaryIndexMap.clear();
     secondaryIndexMap1.clear();
@@ -232,8 +232,7 @@ FetchState = {
   GUILD_ROLE_SUBSCRIPTIONS_FETCH_RESTRICTIONS_ABORTED: function handleFetchRestrictionsAborted(guildId) {
     closure_12[guildId.guildId] = obj.NOT_FETCHED;
   },
-};
-const guildRoleSubscriptionsStore = new GuildRoleSubscriptionsStore(DispatcherDefault, FetchState);
+});
 let result = size.fileFinishedImporting("modules/guild_role_subscriptions/GuildRoleSubscriptionsStore.tsx");
 
 export default guildRoleSubscriptionsStore;

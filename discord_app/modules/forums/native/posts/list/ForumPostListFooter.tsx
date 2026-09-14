@@ -13,8 +13,8 @@ const View = fn(17).View;
 const AnalyticsObjects = fn(1074).AnalyticsObjects;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
-fn(4636);
-const createStyles = {
+const createStyles = fn(4636);
+const obj2 = {
   footer: { display: "flex", alignItems: "center", flexDirection: "row", justifyContent: "flex-start" },
   dot: null,
 };
@@ -25,47 +25,45 @@ let size = {
   backgroundColor: nativeDefault.colors.BORDER_SUBTLE,
   marginHorizontal: 8,
 };
-createStyles.dot = size;
-let closure_8 = createStyles.createStyles(createStyles);
+obj2.dot = size;
+let closure_8 = createStyles.createStyles(obj2);
 size = fn(2);
 const result = size.fileFinishedImporting("modules/forums/native/posts/list/ForumPostListFooter.tsx");
 
 export default function ForumPostListFooter(parentChannel) {
   ({ thread, firstMessage, hasUnreads } = parentChannel);
   const tmp = closure_8();
-  let obj = useTypingUsersIds;
-  const typingUserIds = obj.useTypingUserIds(thread.id);
+  const typingUserIds = useTypingUsersIds.useTypingUserIds(thread.id);
   let tmp6Result = typingUserIds.length > 0;
-  let obj1 = GameInvitesChannelUtils;
-  let isGameInvitesPost = obj1.useIsGameInvitesPost(thread);
-  obj = { style: tmp.footer, children: null };
+  let isGameInvitesPost = GameInvitesChannelUtils.useIsGameInvitesPost(thread);
+  const obj3 = { style: tmp.footer, children: null };
   const items = [hasOwnProperty(ForumPostMessageCountDefault, { thread, hasUnreads }), , ,];
   if (isGameInvitesPost) {
-    obj = { channel: thread };
-    isGameInvitesPost = hasOwnProperty(GameInviteVoiceCountDefault, obj);
+    const obj4 = { channel: thread };
+    isGameInvitesPost = hasOwnProperty(GameInviteVoiceCountDefault, obj4);
   }
   items[1] = isGameInvitesPost;
   if (tmp6Result) {
-    obj1 = { children: null };
-    const obj2 = { style: tmp.dot };
-    const items1 = [hasOwnProperty(View, obj2)];
-    const obj3 = { thread, typingUserIds, hasUnreads };
-    items1[1] = hasOwnProperty(ForumPostTypingUsersDefault, obj3);
-    obj1.children = items1;
-    tmp6Result = React5(timestampProducer, obj1);
+    const obj5 = { children: null };
+    const obj6 = { style: tmp.dot };
+    const items1 = [hasOwnProperty(View, obj6)];
+    const obj7 = { thread, typingUserIds, hasUnreads };
+    items1[1] = hasOwnProperty(ForumPostTypingUsersDefault, obj7);
+    obj5.children = items1;
+    tmp6Result = React5(timestampProducer, obj5);
   }
   items[2] = tmp6Result;
   let tmp8Result = null != firstMessage;
   if (tmp8Result) {
-    const obj4 = {
+    const obj8 = {
       thread,
       firstMessage,
       parentChannel: parentChannel.parentChannel,
       locationAnalyticsObject: AnalyticsObjects.FORUM_LIST_ITEM_FOOTER,
     };
-    tmp8Result = hasOwnProperty(ForumPostReactions.MostCommonForumPostReaction, obj4);
+    tmp8Result = hasOwnProperty(ForumPostReactions.MostCommonForumPostReaction, obj8);
   }
   items[3] = tmp8Result;
-  obj.children = items;
-  return React5(View, obj);
+  obj3.children = items;
+  return React5(View, obj3);
 }

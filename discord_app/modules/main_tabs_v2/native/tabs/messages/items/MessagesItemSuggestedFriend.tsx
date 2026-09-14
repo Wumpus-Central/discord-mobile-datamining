@@ -6,7 +6,7 @@ import asyncRequireImpl from "../../../../../../../_runtime/01896_asyncRequireIm
 import UserUtilsDefault from "../../../../../../utils/UserUtils.tsx";
 import _mod9003 from "../../../../../../../discord_common/js/packages/flash-list/index.js";
 import useScaledTextLineHeight from "../../../../../screen/native/useScaledTextLineHeight.android.tsx";
-import _mod16136 from "../../../../../../../_runtime/metro/16136__.js";
+import _mod16138 from "../../../../../../../_runtime/metro/16138__.js";
 import FriendSuggestionUtils from "../../../../../friend_suggestions/FriendSuggestionUtils.tsx";
 import AddFriendsScreenUtils from "../../../friends/components/AddFriendsScreenUtils.tsx";
 import _slicedToArray from "../../../../../../../_runtime/metro/00032__.js";
@@ -19,17 +19,26 @@ const Constants = fn(1074);
 ({ AnalyticEvents: closure_7, RelationshipTypes: closure_8 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-fn(4636);
-let obj = { container: null, pressable: null, textContainer: null, avatar: null };
-obj = { paddingHorizontal: nativeDefault.space.PX_8 };
-obj.container = obj;
-const createStyles = {
+const createStyles = fn(4636);
+let obj = {
+  container: { paddingHorizontal: nativeDefault.space.PX_8 },
+  pressable: null,
+  textContainer: null,
+  avatar: null,
+};
+let obj3 = { paddingHorizontal: nativeDefault.space.PX_8 };
+obj.pressable = {
   borderRadius: nativeDefault.radii.md,
   flexDirection: "row",
   alignItems: "center",
   padding: nativeDefault.space.PX_8,
 };
-obj.pressable = createStyles;
+let obj4 = {
+  borderRadius: nativeDefault.radii.md,
+  flexDirection: "row",
+  alignItems: "center",
+  padding: nativeDefault.space.PX_8,
+};
 obj.textContainer = {
   marginRight: nativeDefault.space.PX_8,
   flexDirection: "column",
@@ -38,7 +47,7 @@ obj.textContainer = {
   flexGrow: 1,
   flexShrink: 1,
 };
-let obj2 = {
+let obj5 = {
   marginRight: nativeDefault.space.PX_8,
   flexDirection: "column",
   alignSelf: "center",
@@ -55,7 +64,6 @@ let closure_12 = noop.memo(function MessagesItemSuggestedFriendView(height) {
   ({ addedPressed, setAddedPressed } = height);
   const tmp = closure_11();
   noop = tmp;
-  let obj = noop;
   let items = [tmp, height];
   const items1 = [suggestedFriend];
   const memo = noop.useMemo(() => {
@@ -73,10 +81,9 @@ let closure_12 = noop.memo(function MessagesItemSuggestedFriendView(height) {
       }),
     );
   }, items1);
-  let obj1 = height(suggestedFriend[11]);
   const items2 = [RelationshipStore];
   if (!addedPressed) {
-    addedPressed = obj1.useStateFromStores(
+    addedPressed = obj2.useStateFromStores(
       items2,
       () => RelationshipStore.getRelationshipType(suggestedFriend.user.id) === constants2.PENDING_OUTGOING,
     );
@@ -86,8 +93,8 @@ let closure_12 = noop.memo(function MessagesItemSuggestedFriendView(height) {
     if (null != suggestedFriend.mutualFriendsCount) {
       if (suggestedFriend.mutualFriendsCount > 0) {
         const intl = util.intl;
-        let obj = { count: suggestedFriend.mutualFriendsCount };
-        let formatToPlainStringResult = intl.formatToPlainString(util.t.z7y34b, obj);
+        const obj2 = { count: suggestedFriend.mutualFriendsCount };
+        let formatToPlainStringResult = intl.formatToPlainString(util.t.z7y34b, obj2);
       }
       if (null != suggestedFriend.friendSuggestionName) {
         if (suggestedFriend.friendSuggestionName.length > 0) {
@@ -102,25 +109,26 @@ let closure_12 = noop.memo(function MessagesItemSuggestedFriendView(height) {
           const _HermesInternal = HermesInternal;
           str2 = " \u00B7 " + suggestedContactNameForSuggestion;
         }
-        obj = { userStatusLabel: null, suggestionName: null };
+        const obj5 = { userStatusLabel: null, suggestionName: null };
         const _HermesInternal2 = HermesInternal;
-        obj.userStatusLabel = "" + formatToPlainStringResult + str2;
-        obj.suggestionName = friendSuggestionName;
-        return obj;
+        obj5.userStatusLabel = "" + formatToPlainStringResult + str2;
+        obj5.suggestionName = friendSuggestionName;
+        return obj5;
       }
       friendSuggestionName = UserUtilsDefault.getName(suggestedFriend.user);
     }
-    obj = UserUtilsDefault;
-    formatToPlainStringResult = obj.getName(suggestedFriend.user);
+    formatToPlainStringResult = UserUtilsDefault.getName(suggestedFriend.user);
   }, items3);
   let userStatusLabel = memo1.userStatusLabel;
   const items4 = [suggestedFriend, onAddFriendSuggestions, setAddedPressed];
   const callback1 = obj.useCallback(() => {
     const user = suggestedFriend.user;
-    let obj = AddFriendsScreenUtils;
-    obj.addContactSuggestion(user);
-    obj = { suggested_user_id: user.id, suggestion_source: suggestedFriend.source, location: "Messages Tab" };
-    AnalyticsUtilsDefault.track(constants.FRIEND_SUGGESTION_ADDED, obj);
+    AddFriendsScreenUtils.addContactSuggestion(user);
+    AnalyticsUtilsDefault.track(constants.FRIEND_SUGGESTION_ADDED, {
+      suggested_user_id: user.id,
+      suggestion_source: suggestedFriend.source,
+      location: "Messages Tab",
+    });
     onAddFriendSuggestions((arg0) => {
       const items = [];
       items[HermesBuiltin.arraySpread(arg0, 0)] = suggestedFriend;
@@ -129,15 +137,15 @@ let closure_12 = noop.memo(function MessagesItemSuggestedFriendView(height) {
     onAddFriendSuggestions((arr) => arr.filter((user) => user.user.id !== user.user.id));
     setAddedPressed(true);
   }, items4);
-  obj = { accessibilityRole: "button", style: memo, onPress: callback, collapsable: false, children: null };
-  obj = {
+  let obj3 = { accessibilityRole: "button", style: memo, onPress: callback, collapsable: false, children: null };
+  const obj4 = {
     style: tmp.avatar,
     user: suggestedFriend.user,
     guildId: "Array",
     size: height(suggestedFriend[18]).AvatarSizes.REFRESH_MEDIUM_32,
   };
-  const items5 = [closure_9(height(suggestedFriend[18]).Avatar, obj), ,];
-  obj1 = { style: tmp.textContainer, children: null };
+  const items5 = [closure_9(height(suggestedFriend[18]).Avatar, obj4), ,];
+  let obj5 = { style: tmp.textContainer, children: null };
   const items6 = [
     closure_9(height(suggestedFriend[19]).Text, {
       lineClamp: 1,
@@ -158,26 +166,26 @@ let closure_12 = noop.memo(function MessagesItemSuggestedFriendView(height) {
     maxFontSizeMultiplier: 2,
     children: userStatusLabel,
   });
-  obj1.children = items6;
-  items5[1] = closure_10(View, obj1);
+  obj5.children = items6;
+  items5[1] = closure_10(View, obj5);
   if (addedPressed) {
-    const obj2 = { style: { marginHorizontal: 8 } };
-    let tmp9Result = closure_9(tmp4(tmp5[21]).SendMessageIcon, obj2);
+    const obj6 = { style: { marginHorizontal: 8 } };
+    let tmp9Result = closure_9(tmp4(tmp5[21]).SendMessageIcon, obj6);
   } else {
-    let obj3 = { variant: "secondary", size: "sm", text: null, onPress: null };
+    const obj7 = { variant: "secondary", size: "sm", text: null, onPress: null };
     const intl2 = tmp4(tmp5[12]).intl;
-    obj3.text = intl2.string(tmp4(tmp5[12]).t.OYkgVk);
-    obj3.onPress = callback1;
-    tmp9Result = closure_9(tmp4(tmp5[20]).Button, obj3);
+    obj7.text = intl2.string(tmp4(tmp5[12]).t.OYkgVk);
+    obj7.onPress = callback1;
+    tmp9Result = closure_9(tmp4(tmp5[20]).Button, obj7);
   }
   items5[2] = tmp9Result;
-  obj.children = items5;
-  return closure_10(height(suggestedFriend[17]).PressableHighlight, obj);
+  obj3.children = items5;
+  return closure_10(height(suggestedFriend[17]).PressableHighlight, obj3);
 });
-let obj3 = { marginRight: nativeDefault.space.PX_8 };
+let obj6 = { marginRight: nativeDefault.space.PX_8 };
 const memoResult = noop.memo((arg0) => {
   const obj = {};
-  [tmp2, tmp3] = _slicedToArray(noop.useState(false), 2);
+  [tmp2, tmp3] = noop.useState(false);
   const merged = Object.assign(arg0);
   obj.addedPressed = tmp2;
   obj.setAddedPressed = tmp3;
@@ -185,12 +193,12 @@ const memoResult = noop.memo((arg0) => {
 });
 const memoResult1 = noop.memo((suggestedFriend) => {
   const items = [suggestedFriend.suggestedFriend.user.id];
-  const obj = {};
-  [tmp2, tmp3] = _slicedToArray(obj.useRecyclingState(false, items), 2);
+  const obj2 = {};
+  [tmp2, tmp3] = _mod9003.useRecyclingState(false, items);
   const merged = Object.assign(suggestedFriend);
-  obj.addedPressed = tmp2;
-  obj.setAddedPressed = tmp3;
-  return React7(closure_12, obj);
+  obj2.addedPressed = tmp2;
+  obj2.setAddedPressed = tmp3;
+  return React7(closure_12, obj2);
 });
 const size = fn(2);
 const result = size.fileFinishedImporting(
@@ -208,10 +216,10 @@ export const getMessagesItemSuggestedFriendHeight = function getMessagesItemSugg
 export const MessagesItemSuggestedFriendFast = memoResult;
 export const MessagesItemSuggestedFriendFlash = memoResult1;
 export const MessagesItemSuggestedFriendLegend = noop.memo((arg0) => {
-  const obj = {};
-  [tmp2, tmp3] = _slicedToArray(obj.useRecyclingState(false), 2);
+  const obj2 = {};
+  [tmp2, tmp3] = _mod16138.useRecyclingState(false);
   const merged = Object.assign(arg0);
-  obj.addedPressed = tmp2;
-  obj.setAddedPressed = tmp3;
-  return React7(closure_12, obj);
+  obj2.addedPressed = tmp2;
+  obj2.setAddedPressed = tmp3;
+  return React7(closure_12, obj2);
 });

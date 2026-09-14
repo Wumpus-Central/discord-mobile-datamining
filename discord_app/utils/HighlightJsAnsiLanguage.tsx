@@ -62,7 +62,6 @@ export default function highlightJsAnsiLanguage() {
   HermesBuiltin.arraySpread([], 1);
   closure_130_1 = items5;
   const entries2 = Object.entries(foreground);
-  let obj = { className: "ansi-control-sequence", begin, starts: { end: regExp, endsParent: true } };
   items2[HermesBuiltin.arraySpread(entries2.map((item) => {
     [tmp, tmp2] = item;
     foreground = tmp;
@@ -119,7 +118,7 @@ export default function highlightJsAnsiLanguage() {
         }
       }
     };
-  }), tmp3))] = obj;
+  }), tmp3))] = { className: "ansi-control-sequence", begin, starts: { end: regExp, endsParent: true } };
   if (0 < items2.length) {
     do {
       sum = num + 1;
@@ -128,9 +127,9 @@ export default function highlightJsAnsiLanguage() {
       length = items2.length;
     } while (sum < length);
   }
-  obj = { contains: null };
+  const obj2 = { contains: null };
   const items6 = [{ begin: regExp, contains: items2 }];
-  obj.contains = items6;
-  return obj;
+  obj2.contains = items6;
+  return obj2;
 };
 export const ANSI_CONTROL_SEQUENCE_RE = tmp2;

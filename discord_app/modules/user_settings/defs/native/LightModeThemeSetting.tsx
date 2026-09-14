@@ -5,9 +5,9 @@ import useSyncedModeThemeName from "useSyncedModeThemeName.tsx";
 import ThemeStore from "../../ThemeStore.tsx";
 
 require = fn;
-const SystemTheme = fn(1186).SystemTheme;
-fn(11601);
-let SettingBuilders = {
+const SystemTheme = fn(1184).SystemTheme;
+const SettingBuilders = fn(11602);
+const route = SettingBuilders.createRoute({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.NoFvjZ);
@@ -26,9 +26,8 @@ let SettingBuilders = {
       return require("SettingsAppearanceLightModeThemePickerScreen").default;
     },
   },
-};
-SettingBuilders = SettingBuilders.createRoute(SettingBuilders);
+});
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/LightModeThemeSetting.tsx");
 
-export default SettingBuilders;
+export default route;

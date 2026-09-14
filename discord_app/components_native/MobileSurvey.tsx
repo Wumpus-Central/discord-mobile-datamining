@@ -8,6 +8,8 @@ import asyncGeneratorStep from "../../_runtime/00005_asyncGeneratorStep.js";
 import noop from "../../_runtime/metro/00019__.js";
 import SurveyStore from "../stores/SurveyStore.tsx";
 
+const require = globalThis.__r;
+
 require = fn;
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const jsx = fn(21).jsx;
@@ -18,9 +20,8 @@ const result = size.fileFinishedImporting("components_native/MobileSurvey.tsx");
 
 export default function MobileSurvey() {
   _require = closure_8();
-  let obj = require("initialize");
   const items = [SurveyStore];
-  const stateFromStores = obj.useStateFromStores(items, () => currentSurvey.getCurrentSurvey());
+  const stateFromStores = require("initialize").useStateFromStores(items, () => currentSurvey.getCurrentSurvey());
   const items1 = [stateFromStores];
   const effect = noop.useEffect(() => {
     if (null != stateFromStores) {
@@ -32,8 +33,8 @@ export default function MobileSurvey() {
           if (arg0 === 1) {
             throw value;
           } else if (arg0 === 2) {
-            let obj = { value, done: true };
-            return obj;
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
             return { value: "HermesInternal", done: null };
           }
@@ -46,22 +47,20 @@ export default function MobileSurvey() {
                 throw value;
               } else if (arg0 === 2) {
                 c0 = 3;
-                obj = { value, done: true };
-                return obj;
+                const obj4 = { value, done: true };
+                return obj4;
               } else if (null != c1) {
-                let obj1 = confirmIcon(dependencyMap[8]);
                 c1 = 1;
                 c0 = 1;
-                obj1 = { value: null, done: false };
-                obj1.value = obj1.surveySeen(tmp5.key);
-                return obj1;
+                const obj5 = { value: confirmIcon(dependencyMap[8]).surveySeen(tmp5.key), done: false };
+                return obj5;
               }
             } else if (arg0 === 1) {
               c0 = 3;
               throw value;
             } else if (arg0 === 2) {
               c0 = 3;
-              obj = { value, done: true };
+              const obj = { value, done: true };
               return obj;
             }
             c0 = 3;
@@ -72,9 +71,8 @@ export default function MobileSurvey() {
           }
         }
       };
-      stateFromStores(dependencyMap[7]);
-      let obj = { type: "survey", promotion_id: tmp.id };
-      obj.track(constants.OPEN_MODAL, obj);
+      const obj2 = { type: "survey", promotion_id: tmp.id };
+      stateFromStores(dependencyMap[7]).track(constants.OPEN_MODAL, obj2);
       (function setSurveySeen() {
         const self = this;
         const apply = closure_0.apply;
@@ -85,11 +83,12 @@ export default function MobileSurvey() {
         }
         return applyArgumentsResult;
       })();
+      let obj = stateFromStores(dependencyMap[7]);
     }
   }, items1);
   let tmp5 = null;
   if (null != stateFromStores) {
-    obj = {
+    let obj3 = {
       body: null,
       confirmText: null,
       cancelText: null,
@@ -99,15 +98,15 @@ export default function MobileSurvey() {
     };
     ({ prompt: obj2.body, cta: obj2.confirmText } = stateFromStores);
     const intl = tmp(1114).intl;
-    obj.cancelText = intl.string(tmp(1114).t.f3Pet9);
-    obj.onConfirm = function onConfirm() {
+    obj3.cancelText = intl.string(tmp(1114).t.f3Pet9);
+    obj3.onConfirm = function onConfirm() {
       LinkingDefault.openURL(stateFromStores.url);
       SurveyActionCreators.surveyHide(stateFromStores.key, false);
     };
-    obj.onCancel = function onCancel() {
+    obj3.onCancel = function onCancel() {
       return SurveyActionCreators.surveyHide(stateFromStores.key, true);
     };
-    obj.renderConfirmRightIcon = function renderConfirmRightIcon() {
+    obj3.renderConfirmRightIcon = function renderConfirmRightIcon() {
       return jsx(native.Icon, {
         style: confirmIcon.confirmIcon,
         color: nativeDefault.unsafe_rawColors.WHITE,

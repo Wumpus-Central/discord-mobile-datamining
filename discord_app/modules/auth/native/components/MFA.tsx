@@ -14,8 +14,8 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/auth/native/components/MFA.tsx");
 
 export default function ConnectedMFA() {
-  let obj = size;
-  if (size === undefined) {
+  let obj = arg0;
+  if (arg0 === undefined) {
     obj = {};
   }
   ({ inContainer, isMultiAccount } = obj);
@@ -23,10 +23,10 @@ export default function ConnectedMFA() {
   if (inContainer) {
     inContainer = navigation(7045)();
   }
-  let tmpResult = isMultiAccount(504);
+  const obj2 = isMultiAccount(1483);
   const items = [AuthenticationStore];
   const items1 = [isMultiAccount];
-  const stateFromStores = tmpResult.useStateFromStores(
+  const stateFromStores = isMultiAccount(504).useStateFromStores(
     items,
     () => ({ ticket: AuthenticationStore.getMFATicket(), methods: AuthenticationStore.getMFAMethods() }),
     [],
@@ -35,13 +35,12 @@ export default function ConnectedMFA() {
   const items2 = [navigation];
   const callback = noop.useCallback((arg0) => {
     ({ mfaType, data, ticket } = arg0);
-    const obj = { code: data, ticket, mfaType, isMultiAccount };
-    return obj.loginMFAv2(obj);
+    return AuthenticationActionCreatorsDefault.loginMFAv2({ code: data, ticket, mfaType, isMultiAccount });
   }, items1);
   const callback1 = noop.useCallback(() => {
     navigation.goBack();
   }, items2);
-  obj = {
+  const obj3 = {
     mfaChallenge: stateFromStores,
     finish: callback,
     handleOnClose: callback1,
@@ -55,29 +54,29 @@ export default function ConnectedMFA() {
   if (inContainer) {
     tmp9 = closure_7;
   }
-  obj.containerStyle = tmp9;
+  obj3.containerStyle = tmp9;
   let num;
   if (inContainer) {
     num = 0;
   }
-  obj.headerStatusBarHeight = num;
+  obj3.headerStatusBarHeight = num;
   if (!inContainer) {
-    obj.headerLeftContainerStyle = undefined;
+    obj3.headerLeftContainerStyle = undefined;
     let tmp13;
     if (inContainer) {
-      obj = { paddingRight: tmp4(576).space.PX_16, paddingTop: tmp4(576).space.PX_12, marginLeft: 0 };
-      tmp13 = obj;
+      const obj4 = { paddingRight: tmp4(576).space.PX_16, paddingTop: tmp4(576).space.PX_12, marginLeft: 0 };
+      tmp13 = obj4;
     }
-    obj.headerRightContainerStyle = tmp13;
-    return jsx(isMultiAccount(15755).MFAModal, obj);
+    obj3.headerRightContainerStyle = tmp13;
+    return jsx(isMultiAccount(15757).MFAModal, obj3);
   } else {
-    tmpResult = isMultiAccount(1151);
+    const tmpResult2 = isMultiAccount(1364);
     tmp4(576).space;
-    const isAndroidResult = tmpResult.isAndroid();
+    const isAndroidResult = isMultiAccount(1364).isAndroid();
     const space = { paddingLeft: null, paddingTop: null };
-    space.paddingLeft = tmpResult.isAndroid() ? space.PX_8 : space.PX_16;
+    space.paddingLeft = isMultiAccount(1364).isAndroid() ? space.PX_8 : space.PX_16;
     space.paddingTop = tmp4(576).space.PX_12;
-    const tmp11 = tmpResult.isAndroid() ? space.PX_8 : space.PX_16;
+    const tmp11 = isMultiAccount(1364).isAndroid() ? space.PX_8 : space.PX_16;
   }
-  const obj2 = isMultiAccount(1483);
+  const tmpResult = isMultiAccount(504);
 }

@@ -5,8 +5,8 @@ let _Date = Date;
 if (Date.now) {
   let nowResult = _Date.now();
 } else {
-  _Date = new _Date();
-  nowResult = +_Date;
+  let _Date1 = new _Date();
+  nowResult = +_Date1;
 }
 let tmp6 = global.performance || {};
 let closure_1 = tmp6;
@@ -20,12 +20,12 @@ if (!tmp6.now) {
     tmp6.mozNow ||
     tmp6.msNow ||
     (() => {
-      let _Date = Date;
+      const _Date = Date;
       if (Date.now) {
         nowResult = _Date.now();
       } else {
-        _Date = new _Date();
-        nowResult = +_Date;
+        const _Date1 = new _Date();
+        nowResult = +_Date1;
       }
       return nowResult - nowResult;
     });

@@ -5,13 +5,13 @@ import size from "../../../_runtime/metro/00002__.js";
 const result = size.fileFinishedImporting("modules/sentry/addSentryBreadcrumb.native.tsx");
 
 export default function addSentryBreadcrumb(category) {
-  const obj = {
+  const obj = _modAll675;
+  obj.addBreadcrumb({
     type: "default",
     level: "info",
     category: category.category,
     message: category.message,
     data: category.data,
     timestamp: Date.now(),
-  };
-  obj.addBreadcrumb(obj);
+  });
 }

@@ -4,6 +4,8 @@ import getNavigationModalPresentationDefault from "../../../main_tabs_v2/native/
 import PaymentFlowTestDefault from "PaymentFlowTest.android.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
+const require = globalThis.__r;
+
 require = fn;
 const jsx = fn(21).jsx;
 const NativeStackNavigator = fn(8017);
@@ -12,9 +14,8 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/billing/native/PaymentFlowTestModal.tsx");
 
 export default noop.memo(function PaymentFlowTestModal() {
-  let obj = require("Navigator");
-  _require = obj.useAccessibilityNativeStackOptions();
-  obj = {
+  _require = require("Navigator").useAccessibilityNativeStackOptions();
+  const obj2 = {
     screenOptions(navigation) {
       const obj = {
         headerTitle(children) {
@@ -31,15 +32,9 @@ export default noop.memo(function PaymentFlowTestModal() {
     },
     children: null,
   };
-  obj = {
-    name: "PaymentFlowTest",
-    options() {
-      return { title: "Payment Flow Test" };
-    },
-    component: PaymentFlowTestDefault,
-  };
+  let obj = require("Navigator");
   ({ Navigator, Screen } = closure_4);
-  obj.children = (
+  obj2.children = (
     <Screen
       name="PaymentFlowTest"
       options={function options() {
@@ -50,11 +45,22 @@ export default noop.memo(function PaymentFlowTestModal() {
   );
   return (
     <Navigator
-      name="PaymentFlowTest"
-      options={function options() {
-        return { title: "Payment Flow Test" };
+      screenOptions={function screenOptions(navigation) {
+        const obj = {
+          headerTitle(children) {
+            const merged = Object.assign(children, Object.assign({ children: 0 }));
+            const merged1 = Object.assign(merged);
+            return closure_1_3(closure_1_0(closure_1_2[4]).GenericHeaderTitle, { title: children.children });
+          },
+          headerLeft: HeaderShared.getRenderModalCloseImage(navigation.navigation),
+          headerTitleAlign: "center",
+        };
+        let merged = Object.assign(closure_0);
+        let merged1 = Object.assign(getNavigationModalPresentationDefault());
+        return obj;
       }}
-      component={PaymentFlowTestDefault}
-    />
+    >
+      {null}
+    </Navigator>
   );
 });

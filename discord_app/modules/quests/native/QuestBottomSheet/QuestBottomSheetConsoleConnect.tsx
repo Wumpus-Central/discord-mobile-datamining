@@ -36,7 +36,7 @@ function ConsoleRow(onPress) {
   const merged = Object.assign(onPress, Object.assign({ onPress: 0 }));
   const type = merged.type;
   if (constants.PLAYSTATION === type) {
-    let obj = {
+    const obj2 = {
       arrow: true,
       icon: timestampProducer(PlaystationNeutralIcon.PlaystationNeutralIcon, {}),
       label: null,
@@ -44,19 +44,19 @@ function ConsoleRow(onPress) {
       onPress: null,
     };
     const intl3 = util.intl;
-    obj.label = intl3.string(util.t.JafL6p);
+    obj2.label = intl3.string(util.t.JafL6p);
     let stringResult;
     if (null != merged.account) {
       const intl4 = util.intl;
       stringResult = intl4.string(util.t["u30/ut"]);
     }
-    obj.subLabel = stringResult;
-    obj.onPress = function onPress() {
+    obj2.subLabel = stringResult;
+    obj2.onPress = function onPress() {
       return onPress(merged);
     };
-    return timestampProducer(TableRow.TableRow, obj);
+    return timestampProducer(TableRow.TableRow, obj2);
   } else if (tmp2.XBOX === type) {
-    obj = {
+    const obj = {
       arrow: true,
       icon: timestampProducer(XboxNeutralIcon.XboxNeutralIcon, {}),
       label: null,
@@ -86,17 +86,17 @@ const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs, Fragment } = jsxProd);
 const PLATFORM_XBOX = nativeDefault.unsafe_rawColors.PLATFORM_XBOX;
 const PLATFORM_PLAYSTATION = nativeDefault.unsafe_rawColors.PLATFORM_PLAYSTATION;
-fn(4636);
-let createStyles = { platformButtonsContainer: null, platformButton: null };
-createStyles = {
-  display: "flex",
-  flexDirection: "row",
-  gap: nativeDefault.space.PX_16,
-  justifyContent: "space-between",
+const createStyles = fn(4636);
+let obj2 = {
+  platformButtonsContainer: {
+    display: "flex",
+    flexDirection: "row",
+    gap: nativeDefault.space.PX_16,
+    justifyContent: "space-between",
+  },
+  platformButton: { flex: 1, display: "flex", justifyContent: "center", alignItems: "center" },
 };
-createStyles.platformButtonsContainer = createStyles;
-createStyles.platformButton = { flex: 1, display: "flex", justifyContent: "center", alignItems: "center" };
-createStyles = createStyles.createStyles(createStyles);
+const styles = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/quests/native/QuestBottomSheet/QuestBottomSheetConsoleConnect.tsx");
 
@@ -104,16 +104,20 @@ export default function QuestBottomSheetConsoleConnect(quest) {
   quest = quest.quest;
   ({ step: importDefault, sourceQuestContent: dependencyMap } = quest);
   function openQuestBottomSheet() {
-    const obj = { questId: quest.id, initialStep, sourceQuestContent };
-    obj.openLazy(asyncRequireImpl(15200, dependencyMap.paths), "QuestBottomSheet", obj);
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(15201, dependencyMap.paths), "QuestBottomSheet", {
+      questId: quest.id,
+      initialStep,
+      sourceQuestContent,
+    });
   }
-  let obj = quest(11616);
-  const xboxAndPlaystationAccounts = obj.useConnectedAccounts().xboxAndPlaystationAccounts;
-  closure_4 = quest(11903).useTrackQuestContentClickedWithImpression();
-  let obj2 = quest(11903);
-  const impressionId = quest(11619).useQuestImpressionId();
+  const xboxAndPlaystationAccounts = quest(11617).useConnectedAccounts().xboxAndPlaystationAccounts;
+  let obj = quest(11617);
+  closure_4 = quest(11904).useTrackQuestContentClickedWithImpression();
+  let obj2 = quest(11904);
+  const impressionId = quest(11620).useQuestImpressionId();
   const items = [quest, xboxAndPlaystationAccounts];
-  obj = {
+  let obj3 = quest(11620);
+  return openQuestBottomSheet(NonInlineConsoleConnection, {
     consoles: xboxAndPlaystationAccounts.useMemo(
       () =>
         QuestPlatformUtils.supportedConsoles(quest).map((type) => {
@@ -130,7 +134,7 @@ export default function QuestBottomSheetConsoleConnect(quest) {
             "quest_bottom_sheet_console_connect",
           )
         ) {
-          let obj = {
+          const obj3 = {
             type: captureAdUserActionTypes.AdUserActionType.CLICK_INTERNAL,
             adCreativeType: AdCreativeType.AdCreativeType.QUEST,
             adCreativeId: quest.id,
@@ -139,20 +143,20 @@ export default function QuestBottomSheetConsoleConnect(quest) {
             sourceQuestContent,
             impressionId,
           };
-          captureAdUserAction.captureAdUserAction(obj);
+          captureAdUserAction.captureAdUserAction(obj3);
         } else {
-          obj = {
+          const obj4 = {
             questId: quest.id,
             questContent: QuestTypes.QuestContent.QUEST_BOTTOM_SHEET,
             questContentCTA: AnalyticsTypes.QuestContentCTA.VIEW_CONSOLE_CONNECTIONS,
             sourceQuestContent,
           };
-          closure_4(obj);
+          closure_4(obj4);
         }
         obj5 = AdAnalyticsInterfaceExperiment;
         ActionSheetActionCreatorsDefault.hideActionSheet();
-        let obj1 = { screen: constants2.CONNECTIONS };
-        openUserSettings.openUserSettings(obj1);
+        const obj6 = { screen: constants2.CONNECTIONS };
+        openUserSettings.openUserSettings(obj6);
       } else {
         if (
           obj12.shouldMigrateToAdAnalyticsInterface(
@@ -160,8 +164,7 @@ export default function QuestBottomSheetConsoleConnect(quest) {
             "quest_bottom_sheet_console_connect",
           )
         ) {
-          obj1 = captureAdUserAction;
-          const obj2 = {
+          const obj8 = {
             type: captureAdUserActionTypes.AdUserActionType.CLICK_INTERNAL,
             adCreativeType: AdCreativeType.AdCreativeType.QUEST,
             adCreativeId: quest.id,
@@ -170,9 +173,9 @@ export default function QuestBottomSheetConsoleConnect(quest) {
             sourceQuestContent,
             impressionId,
           };
-          obj1.captureAdUserAction(obj2);
+          captureAdUserAction.captureAdUserAction(obj8);
         } else {
-          obj = {
+          const obj = {
             questId: quest.id,
             questContent: QuestTypes.QuestContent.QUEST_BOTTOM_SHEET,
             questContentCTA: AnalyticsTypes.QuestContentCTA.CONNECT_CONSOLE,
@@ -180,11 +183,10 @@ export default function QuestBottomSheetConsoleConnect(quest) {
           };
           closure_4(obj);
         }
-        const obj3 = { platformType: account.type, location: "quests", onClose: openQuestBottomSheet };
-        authorizeConnectionDefault(obj3);
+        const obj11 = { platformType: account.type, location: "quests", onClose: openQuestBottomSheet };
+        authorizeConnectionDefault(obj11);
         obj12 = AdAnalyticsInterfaceExperiment;
       }
     },
-  };
-  return openQuestBottomSheet(NonInlineConsoleConnection, obj);
+  });
 }

@@ -18,20 +18,20 @@ export default function _default(shopBlock) {
   shopBlock = shopBlock.shopBlock;
   if (null === shopBlock.fetchShopHomeError) {
     if (undefined !== shopBlock) {
-      let obj = { block: shopBlock, screen: constants.FEATURED_PAGE };
+      const obj = { block: shopBlock, screen: constants.FEATURED_PAGE };
       let tmp6 = jsx(ShopBlockItemDefault, { block: shopBlock, screen: constants.FEATURED_PAGE });
     }
     return tmp6;
   }
-  obj = { style: closure_6().container, children: null };
-  obj = { style: { marginTop: 42 }, Illustration: generated_NoResults.NoResults, body: null };
+  const obj2 = { style: closure_6().container, children: null };
+  const obj3 = { style: { marginTop: 42 }, Illustration: generated_NoResults.NoResults, body: null };
   const intl = util.intl;
-  obj.body = intl.string(util.t.eAn6z2);
-  obj.children = jsx(native.EmptyState, {
+  obj3.body = intl.string(util.t.eAn6z2);
+  obj2.children = jsx(native.EmptyState, {
     style: { marginTop: 42 },
     Illustration: generated_NoResults.NoResults,
     body: null,
   });
-  tmp6 = <View style={{ marginTop: 42 }} Illustration={generated_NoResults.NoResults} body={null} />;
+  tmp6 = <View style={closure_6().container}>{null}</View>;
   const tmp = closure_6();
 }

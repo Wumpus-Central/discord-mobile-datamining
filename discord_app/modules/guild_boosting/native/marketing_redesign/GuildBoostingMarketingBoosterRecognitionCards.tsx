@@ -6,22 +6,23 @@ import HeartIcon from "../../../../design/components/Icon/native/redesign/genera
 import BoostGemIcon from "../../../../design/components/Icon/native/redesign/generated/BoostGemIcon.tsx";
 import ShieldUserIcon from "../../../../design/components/Icon/native/redesign/generated/ShieldUserIcon.tsx";
 import BoostTier3Icon from "../../../../design/components/Icon/native/redesign/generated/BoostTier3Icon.tsx";
-import _modDef13685 from "../../../../../_runtime/metro/13685__.js";
 import _modDef13686 from "../../../../../_runtime/metro/13686__.js";
 import _modDef13687 from "../../../../../_runtime/metro/13687__.js";
 import _modDef13688 from "../../../../../_runtime/metro/13688__.js";
+import _modDef13689 from "../../../../../_runtime/metro/13689__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 function Card(arg0) {
   const tmp = closure_6();
-  let obj = { style: tmp.card, children: null };
-  obj = { style: tmp.iconContainer, children: null };
-  obj = { size: "lg", color: nativeDefault.unsafe_rawColors.GUILD_BOOSTING_PINK };
+  const obj = { style: tmp.card, children: null };
+  const obj2 = {
+    style: tmp.iconContainer,
+    children: React4(IconComponent, { size: "lg", color: nativeDefault.unsafe_rawColors.GUILD_BOOSTING_PINK }),
+  };
   ({ IconComponent, children } = arg0);
-  obj.children = React4(IconComponent, obj);
   const items = [
-    React4(View, obj),
+    React4(View, obj2),
     React4(Text_Text.Text, { style: tmp.description, variant: "text-sm/medium", children }),
   ];
   obj.children = items;
@@ -30,24 +31,24 @@ function Card(arg0) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-fn(4636);
-let createStyles = { card: null, description: null, iconContainer: null };
-createStyles = {
-  minHeight: 124,
-  width: 172,
-  backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
-  display: "flex",
-  flexDirection: "column",
-  alignItems: "center",
-  margin: 5,
-  borderRadius: nativeDefault.radii.sm,
-  paddingHorizontal: 13,
-  paddingVertical: 16,
+let createStyles = fn(4636);
+let obj2 = {
+  card: {
+    minHeight: 124,
+    width: 172,
+    backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    margin: 5,
+    borderRadius: nativeDefault.radii.sm,
+    paddingHorizontal: 13,
+    paddingVertical: 16,
+  },
+  description: { textAlign: "center" },
+  iconContainer: { height: 30, marginBottom: 10 },
 };
-createStyles.card = createStyles;
-createStyles.description = { textAlign: "center" };
-createStyles.iconContainer = { height: 30, marginBottom: 10 };
-let closure_6 = createStyles.createStyles(createStyles);
+let closure_6 = createStyles.createStyles(obj2);
 createStyles = fn(4636);
 let closure_8 = createStyles.createStyles({
   container: { marginTop: 50, display: "flex", flexDirection: "column", alignItems: "center" },
@@ -67,30 +68,30 @@ const result = size.fileFinishedImporting(
 
 export default function GuildBoostingMarketingBoosterRecognitionCards() {
   const tmp = closure_8();
-  let obj = { style: tmp.container, children: null };
-  obj = { variant: "heading-xl/extrabold", style: tmp.title, children: null };
+  const obj = { style: tmp.container, children: null };
+  const obj2 = { variant: "heading-xl/extrabold", style: tmp.title, children: null };
   const intl = util.intl;
-  obj.children = intl.string(util.t.IzKs3o);
-  const items = [React4(Text_Text.Heading, obj)];
-  obj = { style: tmp.recognitionCardsContainer, children: null };
-  const obj1 = { icon: _modDef13685, IconComponent: BoostGemIcon.BoostGemIcon, children: null };
+  obj2.children = intl.string(util.t.IzKs3o);
+  const items = [React4(Text_Text.Heading, obj2)];
+  const obj3 = { style: tmp.recognitionCardsContainer, children: null };
+  const obj4 = { icon: _modDef13686, IconComponent: BoostGemIcon.BoostGemIcon, children: null };
   const intl2 = util.intl;
-  obj1.children = intl2.string(util.t.TZigSO);
-  const items1 = [React4(Card, obj1), , ,];
-  const obj2 = { icon: _modDef13686, IconComponent: BoostTier3Icon.BoostTier3Icon, children: null };
+  obj4.children = intl2.string(util.t.TZigSO);
+  const items1 = [React4(Card, obj4), , ,];
+  const obj5 = { icon: _modDef13687, IconComponent: BoostTier3Icon.BoostTier3Icon, children: null };
   const intl3 = util.intl;
-  obj2.children = intl3.string(util.t.hjQuV2);
-  items1[1] = React4(Card, obj2);
-  const obj3 = { icon: _modDef13687, IconComponent: ShieldUserIcon.ShieldUserIcon, children: null };
+  obj5.children = intl3.string(util.t.hjQuV2);
+  items1[1] = React4(Card, obj5);
+  const obj6 = { icon: _modDef13688, IconComponent: ShieldUserIcon.ShieldUserIcon, children: null };
   const intl4 = util.intl;
-  obj3.children = intl4.string(util.t["2RUcaM"]);
-  items1[2] = React4(Card, obj3);
-  const obj4 = { icon: _modDef13688, IconComponent: HeartIcon.HeartIcon, children: null };
+  obj6.children = intl4.string(util.t["2RUcaM"]);
+  items1[2] = React4(Card, obj6);
+  const obj7 = { icon: _modDef13689, IconComponent: HeartIcon.HeartIcon, children: null };
   const intl5 = util.intl;
-  obj4.children = intl5.string(util.t.bJoZKV);
-  items1[3] = React4(Card, obj4);
-  obj.children = items1;
-  items[1] = hasOwnProperty(View, obj);
+  obj7.children = intl5.string(util.t.bJoZKV);
+  items1[3] = React4(Card, obj7);
+  obj3.children = items1;
+  items[1] = hasOwnProperty(View, obj3);
   obj.children = items;
   return hasOwnProperty(View, obj);
 }

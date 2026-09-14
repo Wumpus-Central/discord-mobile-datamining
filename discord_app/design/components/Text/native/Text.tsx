@@ -41,7 +41,6 @@ let closure_12 = Object.fromEntries(
     return items;
   }),
 );
-let obj = { 400: null, 500: null, 600: null, 700: null, 800: null };
 ({
   PRIMARY_NORMAL: obj3[400],
   PRIMARY_MEDIUM: obj3[500],
@@ -49,50 +48,55 @@ let obj = { 400: null, 500: null, 600: null, 700: null, 800: null };
   PRIMARY_BOLD: obj3[700],
   PRIMARY_EXTRABOLD: obj3[800],
 } = Fonts);
-obj = { 800: null };
-obj[800] = Fonts.GINTO_NORD_EXTRA_BOLD;
-let obj1 = { 700: null };
-obj1[700] = Fonts.GINTO_DISCORD_NORD_BOLD;
+let obj2 = { 800: null };
+obj2[800] = Fonts.GINTO_NORD_EXTRA_BOLD;
+let obj4 = { 700: null };
+obj4[700] = Fonts.GINTO_DISCORD_NORD_BOLD;
 ({ CODE_NORMAL: obj6[400], CODE_BOLD: obj6[700] } = Fonts);
-let obj3 = { 800: null };
-obj3[800] = Fonts.GINTO_NORD_EXTRA_BOLD_ITALIC;
+let obj7 = { 800: null };
+obj7[800] = Fonts.GINTO_NORD_EXTRA_BOLD_ITALIC;
 ({ GINTO_DISCORD_NORD_BOLD_ITALIC: obj8[700], GINTO_DISCORD_NORD_BLACK_ITALIC: obj8[900] } = Fonts);
-const dependencyMap = { headline: obj, nitro: obj1, primary: obj, code: { 400: null, 700: null } };
-let closure_14 = { headline: obj3, nitro: { 700: null, 900: null } };
+const dependencyMap = {
+  headline: obj2,
+  nitro: obj4,
+  primary: { 400: null, 500: null, 600: null, 700: null, 800: null },
+  code: { 400: null, 700: null },
+};
+let closure_14 = { headline: obj7, nitro: { 700: null, 900: null } };
 const TextVariantsFlat = fn(4633).TextVariantsFlat;
 const mapped = TextVariantsFlat.map((name) => {
   let tmp = null;
   if ("code" !== name.name) {
     items = [name.name];
-    let obj = { fontSize: null, lineHeight: null, textTransform: null };
+    const obj2 = { fontSize: null, lineHeight: null, textTransform: null };
     ({ size: obj4.fontSize, lineHeight: obj4.lineHeight } = name);
     let str = "none";
     if (name.uppercase) {
       str = "uppercase";
     }
-    obj.textTransform = str;
+    obj2.textTransform = str;
     ({ fontStack, weight } = name);
-    str = weight.toString();
+    const str1 = weight.toString();
     if (name.italic) {
       let tmp6;
       if (closure_14[fontStack] != null) {
-        tmp6 = tmp5[str];
+        tmp6 = tmp5[str1];
       }
       if (null != tmp6) {
-        obj = { fontFamily: tmp6, fontStyle: "normal" };
+        const obj3 = { fontFamily: tmp6, fontStyle: "normal" };
       } else {
-        const obj1 = { fontFamily: dependencyMap[fontStack][str], fontStyle: "italic" };
+        const obj7 = { fontFamily: dependencyMap[fontStack][str1], fontStyle: "italic" };
       }
     } else {
-      obj = { fontFamily: dependencyMap[fontStack][str] };
+      const obj = { fontFamily: dependencyMap[fontStack][str1] };
       const merged = Object.assign(obj);
-      obj.includeFontPadding = false;
+      obj2.includeFontPadding = false;
       let result;
       if ("letterSpacing" in name) {
         result = name.letterSpacing / 10;
       }
-      obj.letterSpacing = result;
-      items[1] = obj;
+      obj2.letterSpacing = result;
+      items[1] = obj2;
       tmp = items;
     }
   }
@@ -150,10 +154,9 @@ const forwardRefResult = noop.forwardRef((animated, ref) => {
   if (color == null) {
     color = "text-default";
   }
-  let obj = PlainTextExperimentContext;
-  const plainTextExperimentEnabled = obj.usePlainTextExperimentEnabled();
-  const context = noop.useContext(closure_7);
   const tmp2Result = closure_16(color, tabularNumbers);
+  const plainTextExperimentEnabled = PlainTextExperimentContext.usePlainTextExperimentEnabled();
+  const context = noop.useContext(closure_7);
   const typographyVariantRemap = useTypographyVariantRemap.useTypographyVariantRemap(animated.variant, false);
   items = [fromEntriesResult[typographyVariantRemap], tmp2Result.text, ,];
   const manaTextMigrationHighlight = useManaTextMigrationHighlight2.useManaTextMigrationHighlight(
@@ -163,6 +166,7 @@ const forwardRefResult = noop.forwardRef((animated, ref) => {
   const arraySpreadResult = HermesBuiltin.arraySpread(includeFontPadding ? items : closure_11, 2);
   items[arraySpreadResult] = style;
   items[arraySpreadResult + 1] = manaTextMigrationHighlight;
+  const tmp10 = includeFontPadding ? items : closure_11;
   const element = {
     animated: flag,
     children,
@@ -174,13 +178,13 @@ const forwardRefResult = noop.forwardRef((animated, ref) => {
     props: null,
     style: null,
   };
-  const tmp4Result = utils_PlatformUtils;
-  element.isIOS = tmp4Result.isIOS();
+  const tmp4Result = PlainTextEligibility;
+  element.isIOS = utils_PlatformUtils.isIOS();
   element.props = merged;
   element.style = items;
   const plainTextEligibility = tmp4Result.getPlainTextEligibility(element);
-  const tmp10 = includeFontPadding ? items : closure_11;
-  if (tmp4Result1.isPlainTextEligible(plainTextEligibility)) {
+  const tmp4Result3 = utils_PlatformUtils;
+  if (tmp4Result4.isPlainTextEligible(plainTextEligibility)) {
     ({ fontWeight, textAlignVertical, verticalAlign, letterSpacing } = plainTextEligibility);
     ({
       color: color2,
@@ -191,7 +195,7 @@ const forwardRefResult = noop.forwardRef((animated, ref) => {
       textDecorationLine,
       lineHeight,
     } = plainTextEligibility);
-    obj = {
+    const obj4 = {
       text: children,
       color: color2,
       fontSize,
@@ -215,9 +219,9 @@ const forwardRefResult = noop.forwardRef((animated, ref) => {
       const _String = String;
       StringResult = String(fontWeight);
     }
-    obj.fontWeight = StringResult;
-    obj.fontStyle = fontStyle;
-    obj.textAlign = textAlign;
+    obj4.fontWeight = StringResult;
+    obj4.fontStyle = fontStyle;
+    obj4.textAlign = textAlign;
     if (null != verticalAlign) {
       let str2 = "center";
       if ("middle" !== verticalAlign) {
@@ -225,17 +229,17 @@ const forwardRefResult = noop.forwardRef((animated, ref) => {
       }
       textAlignVertical = str2;
     }
-    obj.textAlignVertical = textAlignVertical;
-    obj.textDecorationLine = textDecorationLine;
-    obj.lineHeight = lineHeight;
-    obj.letterSpacing = letterSpacing;
-    obj.hasLetterSpacing = undefined !== letterSpacing;
-    obj.style = tmp19;
-    obj.numberOfLines = lineClamp;
+    obj4.textAlignVertical = textAlignVertical;
+    obj4.textDecorationLine = textDecorationLine;
+    obj4.lineHeight = lineHeight;
+    obj4.letterSpacing = letterSpacing;
+    obj4.hasLetterSpacing = undefined !== letterSpacing;
+    obj4.style = tmp19;
+    obj4.numberOfLines = lineClamp;
     if (ellipsizeMode == null) {
       ellipsizeMode = "tail";
     }
-    obj.ellipsizeMode = ellipsizeMode;
+    obj4.ellipsizeMode = ellipsizeMode;
     const merged1 = Object.assign(merged);
     return jsx(_modDef4646, {
       text: children,
@@ -261,18 +265,18 @@ const forwardRefResult = noop.forwardRef((animated, ref) => {
     } else {
       NativeText = flag ? closure_9 : Text;
     }
-    obj = { style: items, numberOfLines: lineClamp, ellipsizeMode: null, allowFontScaling: true, ref: null };
+    const obj5 = { style: items, numberOfLines: lineClamp, ellipsizeMode: null, allowFontScaling: true, ref: null };
     let str = ellipsizeMode;
     if (ellipsizeMode == null) {
       str = "tail";
     }
-    obj.ellipsizeMode = str;
-    obj.ref = ref;
+    obj5.ellipsizeMode = str;
+    obj5.ref = ref;
     const merged2 = Object.assign(merged);
-    obj.children = children;
+    obj5.children = children;
     return <NativeText style={items} numberOfLines={lineClamp} ellipsizeMode={null} allowFontScaling ref={null} />;
   }
-  tmp4Result1 = PlainTextEligibility;
+  tmp4Result4 = PlainTextEligibility;
 });
 const size = fn(2);
 const result1 = size.fileFinishedImporting("design/components/Text/native/Text.tsx");
@@ -280,10 +284,10 @@ const result1 = size.fileFinishedImporting("design/components/Text/native/Text.t
 export const TextStyleSheet = result;
 export const Text = forwardRefResult;
 export const Heading = noop.forwardRef((variant, ref) => {
-  const obj = { ref };
-  const typographyVariantRemap = obj.useTypographyVariantRemap(variant.variant, true);
+  const obj2 = { ref };
+  const typographyVariantRemap = useTypographyVariantRemap.useTypographyVariantRemap(variant.variant, true);
   const merged = Object.assign(variant);
-  obj.accessibilityRole = "header";
-  obj.variant = typographyVariantRemap;
+  obj2.accessibilityRole = "header";
+  obj2.variant = typographyVariantRemap;
   return <forwardRefResult ref={ref} />;
 });

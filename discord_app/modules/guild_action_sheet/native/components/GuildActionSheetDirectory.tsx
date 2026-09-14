@@ -11,12 +11,12 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-fn(4636);
-let createStyles = { container: null, actions: null };
-createStyles = { flex: 1, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
-createStyles.container = createStyles;
-createStyles.actions = { paddingHorizontal: 16, gap: 24 };
-let closure_6 = createStyles.createStyles(createStyles);
+const createStyles = fn(4636);
+let obj2 = {
+  container: { flex: 1, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND },
+  actions: { paddingHorizontal: 16, gap: 24 },
+};
+let closure_6 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_action_sheet/native/components/GuildActionSheetDirectory.tsx");
 
@@ -26,22 +26,22 @@ export default function GuildActionSheetDirectory(arg0) {
     expanded = false;
   }
   const tmp = closure_6();
-  let obj = { scrollable: true, startExpanded: expanded, children: null };
-  obj = {
+  const obj = { scrollable: true, startExpanded: expanded, children: null };
+  const obj2 = {
     scrollsToTop: false,
     style: tmp.container,
     contentContainerStyle: { paddingBottom: useSafeAreaInsetsDefault().bottom },
     children: null,
   };
   const items = [React4(GuildActionSheetHeaderDefault, { guild })];
-  obj = { style: tmp.actions, children: null };
+  const obj3 = { style: tmp.actions, children: null };
   const items1 = [
     React4(GuildActionSheetActions.GuildActionSheetDirectoryActions, { guild }),
     React4(GuildActionSheetActions.GuildDeveloperOptionAction, { guild }),
   ];
-  obj.children = items1;
-  items[1] = hasOwnProperty(View, obj);
-  obj.children = items;
-  obj.children = hasOwnProperty(BottomSheetModal.BottomSheetScrollView, obj);
+  obj3.children = items1;
+  items[1] = hasOwnProperty(View, obj3);
+  obj2.children = items;
+  obj.children = hasOwnProperty(BottomSheetModal.BottomSheetScrollView, obj2);
   return React4(Sheet_BottomSheet.BottomSheet, obj);
 }

@@ -1,7 +1,9 @@
 // discord_app/modules/safety_hub/native/AppealIngestionRequestSent.tsx
 import AppealIngestionExternalLinkDefault from "AppealIngestionExternalLink.tsx";
-import _modDef12036 from "../../../../_runtime/metro/12036__.js";
+import _modDef12037 from "../../../../_runtime/metro/12037__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
+
+const require = globalThis.__r;
 
 const require = fn;
 get_ActivityIndicator = fn(17);
@@ -20,17 +22,17 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/safety_hub/native/AppealIngestionRequestSent.tsx");
 
 export default function AppealIngestionRequestSent() {
-  let obj = require("useEmitAppealIngestionEvent");
-  _require = obj.useEmitAppealIngestionEvent();
+  _require = require("useEmitAppealIngestionEvent").useEmitAppealIngestionEvent();
   const tmp = closure_9();
   const intl = require("util").intl;
+  const obj = require("useEmitAppealIngestionEvent");
   const intl2 = require("util").intl;
   const stringResult = intl.string(require("util").t.QMbTSu);
-  obj = { children: null };
-  obj = { style: tmp.container, children: null };
+  const obj2 = { children: null };
+  const obj3 = { style: tmp.container, children: null };
   const stringResult1 = intl2.string(require("util").t.Qdx8AP);
   const items = [
-    closure_7(closure_4, { source: _modDef12036, style: tmp.checkboxPng }),
+    closure_7(closure_4, { source: _modDef12037, style: tmp.checkboxPng }),
     closure_7(require("AppealIngestionModal").AppealIngestionModalHeader, {
       headerText: stringResult,
       subHeaderText: stringResult1,
@@ -38,33 +40,33 @@ export default function AppealIngestionRequestSent() {
     ,
     ,
   ];
-  const obj2 = {
+  const obj5 = {
     variant: "heading-md/bold",
     color: "mobile-text-heading-primary",
     style: tmp.actionsHeader,
     children: null,
   };
   const intl3 = require("util").intl;
-  obj2.children = intl3.string(require("util").t["9BRc1N"]);
-  items[2] = closure_7(require("Text/Text").Text, obj2);
-  const obj3 = { text: null, url: null, onPress: null };
-  const obj1 = { source: _modDef12036, style: tmp.checkboxPng };
+  obj5.children = intl3.string(require("util").t["9BRc1N"]);
+  items[2] = closure_7(require("Text/Text").Text, obj5);
+  const obj6 = { text: null, url: null, onPress: null };
+  const obj4 = { source: _modDef12037, style: tmp.checkboxPng };
   const intl4 = require("util").intl;
-  obj3.text = intl4.string(require("util").t.PxL38B);
-  obj3.url = constants.COMMUNITY_GUIDELINES;
-  obj3.onPress = function onPress() {
+  obj6.text = intl4.string(require("util").t.PxL38B);
+  obj6.url = constants.COMMUNITY_GUIDELINES;
+  obj6.onPress = function onPress() {
     return closure_0(hasOwnProperty.ClickCommunityGuidelinesLink);
   };
-  items[3] = closure_7(AppealIngestionExternalLinkDefault, obj3);
-  const obj4 = { text: null, url: null, onPress: null };
+  items[3] = closure_7(AppealIngestionExternalLinkDefault, obj6);
+  const obj7 = { text: null, url: null, onPress: null };
   const intl5 = require("util").intl;
-  obj4.text = intl5.string(require("util").t.qC3XKa);
-  obj4.url = constants.WARNING_SYSTEM_HELPCENTER_LINK;
-  obj4.onPress = function onPress() {
+  obj7.text = intl5.string(require("util").t.qC3XKa);
+  obj7.url = constants.WARNING_SYSTEM_HELPCENTER_LINK;
+  obj7.onPress = function onPress() {
     return closure_0(hasOwnProperty.ClickWarningSystemHelpcenterLink);
   };
-  items[4] = closure_7(AppealIngestionExternalLinkDefault, obj4);
-  obj.children = items;
-  obj.children = closure_8(closure_3, obj);
-  return closure_7(require("AppealIngestionModal").AppealIngestionModalScreen, obj);
+  items[4] = closure_7(AppealIngestionExternalLinkDefault, obj7);
+  obj3.children = items;
+  obj2.children = closure_8(closure_3, obj3);
+  return closure_7(require("AppealIngestionModal").AppealIngestionModalScreen, obj2);
 }

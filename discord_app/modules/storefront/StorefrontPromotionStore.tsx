@@ -78,8 +78,8 @@ obj = {
     const timestamp = Date.now();
     const merged = Object.assign(obj);
     for (const item10017 of applicationIds) {
-      obj = { state: "success", promotions: [], fetchedAt: timestamp };
-      obj[item10017] = obj;
+      let obj2 = { state: "success", promotions: [], fetchedAt: timestamp };
+      obj[item10017] = obj2;
       continue;
     }
     const iter = promotions[Symbol.iterator]();
@@ -94,8 +94,8 @@ obj = {
         state = tmp6.state;
       }
       if ("success" === state) {
-        promotions = obj[tmp5].promotions;
-        let arr = promotions.push(tmp4);
+        let promotions1 = obj[tmp5].promotions;
+        let arr = promotions1.push(tmp4);
       }
       continue;
     }

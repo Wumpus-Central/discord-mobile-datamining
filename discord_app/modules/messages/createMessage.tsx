@@ -35,12 +35,12 @@ export default function createMessage(tts) {
     _modDef38(null != messageReference, "Replies must have a message reference");
     if (null == allowedMentions) {
       const messageByReference = ReferencedMessageStore.getMessageByReference(messageReference);
-      state = undefined;
+      let state1;
       if (messageByReference != null) {
-        state = messageByReference.state;
+        state1 = messageByReference.state;
       }
-      if (state === ReferencedMessageState.LOADED) {
-        let obj = {
+      if (state1 === ReferencedMessageState.LOADED) {
+        const obj = {
           id: null,
           username: null,
           avatar: null,
@@ -67,15 +67,6 @@ export default function createMessage(tts) {
   }
   let tmp8 = author;
   if (author instanceof UserRecord) {
-    obj = {
-      id: null,
-      username: null,
-      avatar: null,
-      discriminator: null,
-      bot: null,
-      global_name: null,
-      primary_guild: null,
-    };
     ({
       id: obj2.id,
       username: obj2.username,
@@ -85,14 +76,32 @@ export default function createMessage(tts) {
       globalName: obj2.global_name,
       primaryGuild: obj2.primary_guild,
     } = author);
-    tmp8 = obj;
+    tmp8 = {
+      id: null,
+      username: null,
+      avatar: null,
+      discriminator: null,
+      bot: null,
+      global_name: null,
+      primary_guild: null,
+    };
+    const obj4 = {
+      id: null,
+      username: null,
+      avatar: null,
+      discriminator: null,
+      bot: null,
+      global_name: null,
+      primary_guild: null,
+    };
   }
   _modDef38(null != tmp8, "createMessage: author cannot be undefined");
+  let nonce1 = nonce;
   if (nonce == null) {
-    nonce = createNonce.createNonce();
+    nonce1 = createNonce.createNonce();
   }
-  obj = {
-    id: nonce,
+  const obj5 = {
+    id: nonce1,
     type: DEFAULT,
     content,
     channel_id: channelId,
@@ -121,19 +130,19 @@ export default function createMessage(tts) {
   if (state == null) {
     state = constants.SENDING;
   }
-  obj.state = state;
-  obj.tts = flag;
-  obj.message_reference = messageReference;
-  obj.message_snapshots = [];
-  obj.flags = flags;
-  obj.nonce = nonce;
-  obj.poll = poll;
-  obj.shared_client_theme = sharedCustomTheme;
-  obj.changelog_id = changelogId;
-  obj.gifting_prompt = giftingPrompt;
-  obj.boosting_prompt = boostingPrompt;
-  obj.media_mention = mediaMention;
-  return obj;
+  obj5.state = state;
+  obj5.tts = flag;
+  obj5.message_reference = messageReference;
+  obj5.message_snapshots = [];
+  obj5.flags = flags;
+  obj5.nonce = nonce;
+  obj5.poll = poll;
+  obj5.shared_client_theme = sharedCustomTheme;
+  obj5.changelog_id = changelogId;
+  obj5.gifting_prompt = giftingPrompt;
+  obj5.boosting_prompt = boostingPrompt;
+  obj5.media_mention = mediaMention;
+  return obj5;
 }
 export const userRecordToServer = function userRecordToServer(currentUser) {
   return {
@@ -150,16 +159,15 @@ export const createBotMessage = function createBotMessage(arg0) {
   ({ messageId, embeds } = arg0);
   ({ channelId, content, loggingName } = arg0);
   if (messageId == null) {
-    let obj = createNonce;
-    messageId = obj.createNonce();
+    messageId = createNonce.createNonce();
   }
-  obj = {
+  const obj2 = {
     id: messageId,
     type: constants2.DEFAULT,
     flags: constants3.EPHEMERAL,
     content,
     channel_id: channelId,
-    author: null,
+    author: { id, username: "Clyde", discriminator, avatar: "clyde", bot: true },
     attachments: [],
     embeds: null,
     pinned: false,
@@ -172,17 +180,15 @@ export const createBotMessage = function createBotMessage(arg0) {
     tts: false,
     loggingName: null,
   };
-  obj = { id, username: "Clyde", discriminator, avatar: "clyde", bot: true };
-  obj.author = obj;
   if (embeds == null) {
     embeds = [];
   }
-  obj.embeds = embeds;
-  obj.mentions = [];
-  obj.mention_channels = [];
-  obj.mention_roles = [];
-  obj.timestamp = new Date().toISOString();
-  obj.state = constants.SENT;
-  obj.loggingName = loggingName;
-  return obj;
+  obj2.embeds = embeds;
+  obj2.mentions = [];
+  obj2.mention_channels = [];
+  obj2.mention_roles = [];
+  obj2.timestamp = new Date().toISOString();
+  obj2.state = constants.SENT;
+  obj2.loggingName = loggingName;
+  return obj2;
 };

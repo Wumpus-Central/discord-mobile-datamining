@@ -20,8 +20,8 @@ export default {
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
-          let obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           return { value: "HermesInternal", done: null };
         }
@@ -34,16 +34,16 @@ export default {
               throw value;
             } else if (arg0 === 2) {
               guildId = 3;
-              obj = { value, done: true };
-              return obj;
+              const obj5 = { value, done: true };
+              return obj5;
             } else {
               let toISOStringResult = null;
               if (null != duration) {
-                let obj1 = guildId(userId[1])();
-                toISOStringResult = obj1.add(duration, "s").toISOString();
-                const addResult = obj1.add(duration, "s");
+                const obj2 = guildId(userId[1])();
+                toISOStringResult = guildId(userId[1])().add(duration, "s").toISOString();
+                const addResult = guildId(userId[1])().add(duration, "s");
               }
-              obj1 = {
+              const obj6 = {
                 guildId,
                 userId,
                 communicationDisabledUntilTimestamp: toISOStringResult,
@@ -54,15 +54,15 @@ export default {
               };
               userId = 1;
               guildId = 1;
-              const obj2 = { value: guildId(userId[2]).setCommunicationDisabledUntil(obj1), done: false };
-              return obj2;
+              const obj7 = { value: guildId(userId[2]).setCommunicationDisabledUntil(obj6), done: false };
+              return obj7;
             }
           } else if (arg0 === 1) {
             guildId = 3;
             throw value;
           } else if (arg0 === 2) {
             guildId = 3;
-            obj = { value, done: true };
+            const obj = { value, done: true };
             return obj;
           } else {
             guildId = 3;

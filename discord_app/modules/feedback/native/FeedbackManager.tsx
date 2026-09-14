@@ -8,8 +8,8 @@ import StreamRTCConnectionStore from "../../../stores/StreamRTCConnectionStore.t
 import FeedbackManager from "../FeedbackManager.tsx";
 
 require = fn;
-const FeedbackType = fn(11755).FeedbackType;
-let prototype = function FeedbackManager() {
+const FeedbackType = fn(11756).FeedbackType;
+const prototype = function FeedbackManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
   require = applyArgumentsResult;
   applyArgumentsResult.actions = {
@@ -30,8 +30,7 @@ let prototype = function FeedbackManager() {
     streamKey = streamKey.streamKey;
     if (streamKey.canShowFeedback) {
       const result = applyArgumentsResult.possiblyShowFeedbackModal(FeedbackType.STREAM, () => {
-        let analyticsData = streamKey(dependencyMap[6]);
-        const decodeStreamKeyResult = analyticsData.decodeStreamKey(streamKey);
+        const decodeStreamKeyResult = streamKey(dependencyMap[6]).decodeStreamKey(streamKey);
         streamKey = decodeStreamKeyResult;
         channel = channel.getChannel(decodeStreamKeyResult.channelId);
         let isGuildStageVoiceResult;
@@ -43,7 +42,7 @@ let prototype = function FeedbackManager() {
           if (videoStats == null) {
             videoStats = {};
           }
-          analyticsData = {
+          let obj2 = {
             media_session_id: videoStats.getMediaSessionId(tmp3),
             rtc_connection_id: videoStats.getRtcConnectionId(tmp3),
             stream_region: videoStats.getRegion(tmp3),
@@ -52,12 +51,12 @@ let prototype = function FeedbackManager() {
           const merged = Object.assign(videoStats);
           closure_2 = tmp(dependencyMap[8])(dependencyMap[7], dependencyMap.paths);
           tmp(dependencyMap[9]).runAfterInteractions(() => {
-            analyticsData = ActionSheetActionCreatorsDefault;
-            analyticsData = { stream: decodeStreamKeyResult, analyticsData };
-            analyticsData.openLazy(closure_2, "StreamFeedback" + streamKey, analyticsData);
+            obj2 = { stream: decodeStreamKeyResult, analyticsData: obj2 };
+            ActionSheetActionCreatorsDefault.openLazy(closure_2, "StreamFeedback" + streamKey, obj2);
           });
           const tmpResult = tmp(dependencyMap[9]);
         }
+        const obj = streamKey(dependencyMap[6]);
       });
     }
   };
@@ -77,13 +76,12 @@ let prototype = function FeedbackManager() {
         };
         applicationId(application[9]).runAfterInteractions(() => {
           analyticsData = ActionSheetActionCreatorsDefault;
-          analyticsData = {
+          analyticsData.openLazy(closure_0, "ActivityFeedback" + _location.id + applicationId, {
             analyticsData,
             activityApplication: application,
             channel,
             embeddedActivityLocation: _location,
-          };
-          analyticsData.openLazy(closure_0, "ActivityFeedback" + _location.id + applicationId, analyticsData);
+          });
         });
       });
     }
@@ -94,8 +92,9 @@ let prototype = function FeedbackManager() {
     const result = applyArgumentsResult.possiblyShowFeedbackModal(FeedbackType.VOICE, () => {
       closure_0 = analyticsData(paths[8])(paths[13], paths.paths);
       analyticsData(paths[9]).runAfterInteractions(() => {
-        const obj = { analyticsData };
-        obj.openLazy(closure_0, "VoiceFeedback" + analyticsData.channel_id, obj);
+        ActionSheetActionCreatorsDefault.openLazy(closure_0, "VoiceFeedback" + analyticsData.channel_id, {
+          analyticsData,
+        });
       });
     });
   };
@@ -118,8 +117,8 @@ let prototype = function FeedbackManager() {
   return applyArgumentsResult;
 }.prototype;
 class prototype extends tmp2 {}
-prototype = new prototype();
+const prototype1 = new prototype();
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/feedback/native/FeedbackManager.tsx");
 
-export default prototype;
+export default prototype1;

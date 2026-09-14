@@ -6,23 +6,33 @@ import HeaderShared from "../../main_tabs_v2/native/shared_components/HeaderShar
 import ForLaterScreenDefault from "ForLaterScreen.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
+const require = globalThis.__r;
+
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-fn(4636);
-let createStyles = { modal: null, headerLeftContainer: null, headerRightContainer: null };
-createStyles = {
+const createStyles = fn(4636);
+const obj2 = {
+  modal: {
+    backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER,
+    borderBottomWidth: 0,
+    shadowColor: "transparent",
+    height: "100%",
+  },
+  headerLeftContainer: null,
+  headerRightContainer: null,
+};
+let obj3 = {
   backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER,
   borderBottomWidth: 0,
   shadowColor: "transparent",
   height: "100%",
 };
-createStyles.modal = createStyles;
-createStyles.headerLeftContainer = { paddingLeft: nativeDefault.space.PX_16 };
-const obj1 = { paddingLeft: nativeDefault.space.PX_16 };
-createStyles.headerRightContainer = { paddingRight: nativeDefault.space.PX_16 };
-let closure_6 = createStyles.createStyles(createStyles);
+obj2.headerLeftContainer = { paddingLeft: nativeDefault.space.PX_16 };
+let obj4 = { paddingLeft: nativeDefault.space.PX_16 };
+obj2.headerRightContainer = { paddingRight: nativeDefault.space.PX_16 };
+let closure_6 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/saved_messages/native/ForLaterModal.tsx");
 
@@ -38,8 +48,8 @@ export default function ForLaterModal(type) {
   }
   const stringResult = intl.string(aUXxzT);
   _require = stringResult;
-  let obj = { style: tmp.modal, children: null };
-  obj = {
+  const obj = { style: tmp.modal, children: null };
+  const obj3 = {
     title: stringResult,
     headerTitle() {
       return React4(HeaderShared.GenericHeaderTitle, { title });
@@ -50,18 +60,19 @@ export default function ForLaterModal(type) {
     headerLeftContainerStyle: null,
     headerRightContainerStyle: null,
   };
-  let tmp4Result = tmp4(1150);
   let num = 0;
   if (!tmp4Result.isIOS()) {
     num = useSafeAreaInsetsDefault().top;
   }
-  obj.headerStatusBarHeight = num + nativeDefault.space.PX_8;
-  tmp4Result = tmp4(5705);
-  obj.headerLeft = tmp4Result.getHeaderCloseButton(ModalActionCreatorsDefault.pop);
+  obj3.headerStatusBarHeight = num + nativeDefault.space.PX_8;
+  tmp4Result = require("PlatformUtils");
+  obj3.headerLeft = require("NavigatorHeader").getHeaderCloseButton(ModalActionCreatorsDefault.pop);
   ({ headerLeftContainer: obj2.headerLeftContainerStyle, headerRightContainer: obj2.headerRightContainerStyle } = tmp);
-  const items = [closure_4(require("../../../../_runtime/metro/05712__.js").Header, obj)];
-  obj = { type, onClose: ModalActionCreatorsDefault.pop };
-  items[1] = closure_4(ForLaterScreenDefault, obj, type);
+  const items = [closure_4(require("../../../../_runtime/metro/05712__.js").Header, obj3)];
+  const obj4 = { type, onClose: null };
+  const tmp4Result2 = require("NavigatorHeader");
+  obj4.onClose = ModalActionCreatorsDefault.pop;
+  items[1] = closure_4(ForLaterScreenDefault, obj4, type);
   obj.children = items;
   return closure_5(View, obj);
 }

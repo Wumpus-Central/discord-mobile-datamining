@@ -19,16 +19,16 @@ export default function TermsField(field) {
   field = field.field;
   ({ onChange, rulesChannelId } = field);
   let flag = field.response;
-  let obj = { style: closure_6().container, children: null };
+  const obj = { style: closure_6().container, children: null };
   const items = [React4(TermsFieldListDefault, { rules: field.values, rulesChannelId })];
   if (flag == null) {
     flag = false;
   }
-  obj = { start: true, end: true, checked: flag, label: null, onPress: null };
+  const obj2 = { start: true, end: true, checked: flag, label: null, onPress: null };
   const intl = util.intl;
-  obj.label = intl.string(util.t["2EXfGJ"]);
-  obj.onPress = onChange;
-  items[1] = React4(TableCheckboxRow.TableCheckboxRow, obj);
+  obj2.label = intl.string(util.t["2EXfGJ"]);
+  obj2.onPress = onChange;
+  items[1] = React4(TableCheckboxRow.TableCheckboxRow, obj2);
   obj.children = items;
   return hasOwnProperty(View, obj);
 }

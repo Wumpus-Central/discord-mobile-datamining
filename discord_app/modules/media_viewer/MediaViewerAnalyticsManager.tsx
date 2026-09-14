@@ -4,7 +4,7 @@ import ChannelStore from "../../stores/ChannelStore.tsx";
 
 const Constants = fn(1074);
 ({ AnalyticEvents: c3, AnalyticsSections: closure_4 } = Constants);
-let MediaViewerAnalytics = {
+let obj = {
   VIEWER_SWIPE: "number_viewer_swipes",
   THUMBNAIL_SWIPE: "number_thumbnail_swipes",
   SELECTED_ITEM_CHANGE: "number_selected_item_changes",
@@ -20,28 +20,32 @@ let MediaViewerAnalytics = {
   COPY_LINK_PRESSED: "number_copy_link_more_menu_pressed",
   CONTEXT_MENU_OPENED: "number_context_menu_opened",
 };
-MediaViewerAnalytics = {
+let obj2 = {
   guildId: "ip",
   channelId: "isArray",
   channelType: "isArray",
   numMediaItems: "Array",
   hasMediaOptions: "call",
-  source: true,
-  incrementableActions: 553217,
+  source: "D",
+  incrementableActions: "tasks",
 };
-const values = Object.values(MediaViewerAnalytics);
-MediaViewerAnalytics.incrementableActions = Object.fromEntries(
+const values = Object.values(obj);
+obj2.incrementableActions = Object.fromEntries(
   values.map((item) => {
     const items = [item, 0];
     return items;
   }),
 );
 const module_560 = fn(560);
-let closure_6 = module_560.create(() => obj);
-MediaViewerAnalytics = {
+let closure_6 = module_560.create(() => obj2);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/media_viewer/MediaViewerAnalyticsManager.tsx");
+
+export const IncrementableMediaViewerActions = obj;
+export const MediaViewerAnalytics = {
   markSessionStarted(channelId) {
     const channel = ChannelStore.getChannel(channelId.channelId);
-    obj = {
+    obj2 = {
       type: constants2.MEDIA_VIEWER,
       source: channelId.source,
       channel_id: channelId.channelId,
@@ -52,32 +56,32 @@ MediaViewerAnalytics = {
     if (channel != null) {
       type = channel.type;
     }
-    obj.channel_type = type;
+    obj2.channel_type = type;
     let guild_id;
     if (channel != null) {
       guild_id = channel.guild_id;
     }
-    obj.guild_id = guild_id;
-    obj.track(constants.OPEN_MODAL, obj);
-    obj = {};
-    const merged = Object.assign(obj);
+    obj2.guild_id = guild_id;
+    AnalyticsUtilsDefault.track(constants.OPEN_MODAL, obj2);
+    const obj3 = {};
+    const merged = Object.assign(obj2);
     const merged1 = Object.assign(channelId);
-    obj.channelId = channelId.channelId;
+    obj3.channelId = channelId.channelId;
     let type1;
     if (channel != null) {
       type1 = channel.type;
     }
-    obj.channelType = type1;
+    obj3.channelType = type1;
     let guild_id1;
     if (channel != null) {
       guild_id1 = channel.guild_id;
     }
-    obj.guildId = guild_id1;
-    closure_6.setState(obj);
+    obj3.guildId = guild_id1;
+    closure_6.setState(obj3);
   },
   markSessionCompleted() {
     const state = closure_6.getState();
-    obj = {
+    obj2 = {
       source: state.source,
       guild_id: state.guildId,
       channel_id: state.channelId,
@@ -86,62 +90,58 @@ MediaViewerAnalytics = {
       has_media_options: state.hasMediaOptions,
     };
     const merged = Object.assign(state.incrementableActions);
-    obj.track(constants.MEDIA_VIEWER_SESSION_COMPLETED, obj);
-    obj = {};
-    const merged1 = Object.assign(obj);
-    closure_6.setState(obj);
+    AnalyticsUtilsDefault.track(constants.MEDIA_VIEWER_SESSION_COMPLETED, obj2);
+    const merged1 = Object.assign(obj2);
+    closure_6.setState({});
   },
   markActionPerformed(SELECTED_ITEM_CHANGE) {
     closure_0 = SELECTED_ITEM_CHANGE;
     closure_6.setState((incrementableActions) => {
-      incrementableActions = { incrementableActions: null };
-      incrementableActions = {};
+      const obj = { incrementableActions: null };
+      obj2 = {};
       const merged = Object.assign(incrementableActions.incrementableActions);
-      incrementableActions[closure_0] = incrementableActions.incrementableActions[closure_0] + 1;
-      incrementableActions.incrementableActions = incrementableActions;
-      return incrementableActions;
+      obj2[closure_0] = incrementableActions.incrementableActions[closure_0] + 1;
+      obj.incrementableActions = obj2;
+      return obj;
     });
   },
   trackMediaViewerImageSaved(arg0) {
     ({ url, success } = arg0);
     const state = closure_6.getState();
-    obj = { url, success, channel_id: state.channelId };
-    obj.track(constants.MEDIA_VIEWER_IMAGE_SAVED, obj);
+    AnalyticsUtilsDefault.track(constants.MEDIA_VIEWER_IMAGE_SAVED, { url, success, channel_id: state.channelId });
   },
   trackMediaViewerImageCopied(arg0) {
     ({ url, success } = arg0);
     const state = closure_6.getState();
-    obj = { url, success, channel_id: state.channelId };
-    obj.track(constants.MEDIA_VIEWER_IMAGE_COPIED, obj);
+    AnalyticsUtilsDefault.track(constants.MEDIA_VIEWER_IMAGE_COPIED, { url, success, channel_id: state.channelId });
   },
   trackMediaViewerLinkCopied(arg0) {
     ({ href, success } = arg0);
     const state = closure_6.getState();
-    obj = { href, success, channel_id: state.channelId };
-    obj.track(constants.MEDIA_VIEWER_LINK_COPIED, obj);
+    AnalyticsUtilsDefault.track(constants.MEDIA_VIEWER_LINK_COPIED, { href, success, channel_id: state.channelId });
   },
   trackMediaViewerLinkOpened(href) {
     const state = closure_6.getState();
-    obj = { href: href.href, channel_id: state.channelId };
-    obj.track(constants.MEDIA_VIEWER_LINK_OPENED, obj);
+    AnalyticsUtilsDefault.track(constants.MEDIA_VIEWER_LINK_OPENED, { href: href.href, channel_id: state.channelId });
   },
   trackMediaViewerDownloadButtonTapped() {
     const state = closure_6.getState();
-    obj = { guild_id: state.guildId, channel_id: state.channelId, channel_type: state.channelType };
-    obj.track(constants.MEDIA_VIEWER_DOWNLOAD_BUTTON_TAPPED, obj);
+    AnalyticsUtilsDefault.track(constants.MEDIA_VIEWER_DOWNLOAD_BUTTON_TAPPED, {
+      guild_id: state.guildId,
+      channel_id: state.channelId,
+      channel_type: state.channelType,
+    });
   },
   trackMediaViewerShareButtonTapped() {
     const state = closure_6.getState();
-    obj = { guild_id: state.guildId, channel_id: state.channelId, channel_type: state.channelType };
-    obj.track(constants.MEDIA_VIEWER_SHARE_BUTTON_TAPPED, obj);
+    AnalyticsUtilsDefault.track(constants.MEDIA_VIEWER_SHARE_BUTTON_TAPPED, {
+      guild_id: state.guildId,
+      channel_id: state.channelId,
+      channel_type: state.channelType,
+    });
   },
   trackMessageEmbedsActionCompleted(arg0) {
     ({ platform, action, error } = arg0);
     AnalyticsUtilsDefault.track(constants.MESSAGE_EMBEDS_ACTION_COMPLETED, { platform, error, action });
   },
 };
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/media_viewer/MediaViewerAnalyticsManager.tsx");
-
-export const IncrementableMediaViewerActions = MediaViewerAnalytics;
-export { MediaViewerAnalytics };

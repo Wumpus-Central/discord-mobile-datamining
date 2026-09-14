@@ -22,8 +22,21 @@ let c9 = 0.04;
 let closure_10 = { mass: 0.3, damping: 13, stiffness: 100, restDisplacementThreshold: 0.001, overshootClamping: true };
 const createStyles = fn(4636);
 let closure_11 = createStyles.createStyles((gap, arg1) => {
-  let obj = { container: null, controlsContainer: null, indicatorContainer: null, indicator: null };
-  obj = {
+  const obj = {
+    container: {
+      display: "flex",
+      flexGrow: 1,
+      minWidth: "100%",
+      flexDirection: "row",
+      alignItems: "center",
+      borderBottomColor: nativeDefault.colors.BORDER_SUBTLE,
+      borderBottomWidth: 1,
+    },
+    controlsContainer: null,
+    indicatorContainer: null,
+    indicator: null,
+  };
+  const obj2 = {
     display: "flex",
     flexGrow: 1,
     minWidth: "100%",
@@ -32,9 +45,7 @@ let closure_11 = createStyles.createStyles((gap, arg1) => {
     borderBottomColor: nativeDefault.colors.BORDER_SUBTLE,
     borderBottomWidth: 1,
   };
-  obj.container = obj;
-  obj = { marginHorizontal: nativeDefault.space.PX_16, flexDirection: "row", gap };
-  obj.controlsContainer = obj;
+  obj.controlsContainer = { marginHorizontal: nativeDefault.space.PX_16, flexDirection: "row", gap };
   const size = {
     position: "absolute",
     width: "100%",
@@ -49,6 +60,7 @@ let closure_11 = createStyles.createStyles((gap, arg1) => {
   } else {
     TEXT_BRAND = nativeDefault.colors.TEXT_BRAND;
   }
+  const obj3 = { marginHorizontal: nativeDefault.space.PX_16, flexDirection: "row", gap };
   obj.indicator = {
     height: 2,
     backgroundColor: TEXT_BRAND,
@@ -115,15 +127,15 @@ export const Tabs = function Tabs(state) {
   const useReducedMotion = state.useReducedMotion;
   const tmp = itemDimensions(itemSpacing, variant);
   __initData = tmp;
-  let obj = state(formatCount[4]);
-  const sharedValue = obj.useSharedValue(pageWidth);
+  const sharedValue = state(formatCount[4]).useSharedValue(pageWidth);
   const length = items.length;
   const ref = simultaneousHandlers.useRef(null);
   const items1 = [sharedValue];
   const callback = simultaneousHandlers.useCallback((nativeEvent) => {
     const result = sharedValue.set(nativeEvent.nativeEvent.layout.width);
   }, items1);
-  let obj1 = state(formatCount[4]);
+  let obj = state(formatCount[4]);
+  let tmp2 = state;
   class C {
     constructor() {
       return Math.round(Math.min(Math.max(activeIndex.get(), 0), length - 1));
@@ -132,8 +144,8 @@ export const Tabs = function Tabs(state) {
   C.__closure = { activeIndex, itemCount: length };
   C.__workletHash = 3447899396126;
   C.__initData = pageWidth;
-  derivedValue = obj1.useDerivedValue(C);
-  let obj2 = state(formatCount[4]);
+  derivedValue = state(formatCount[4]).useDerivedValue(C);
+  const obj2 = state(formatCount[4]);
   class W {
     constructor() {
       value = itemDimensions.get();
@@ -148,7 +160,7 @@ export const Tabs = function Tabs(state) {
   W.__closure = { itemDimensions, clampedActiveIndex: derivedValue };
   W.__workletHash = 8603255620075;
   W.__initData = pressedIndex;
-  derivedValue1 = obj2.useDerivedValue(W);
+  derivedValue1 = state(formatCount[4]).useDerivedValue(W);
   let obj3 = state(formatCount[4]);
   class N {
     constructor() {
@@ -167,11 +179,10 @@ export const Tabs = function Tabs(state) {
   N.__closure = { itemDimensions, clampedActiveIndex: derivedValue };
   N.__workletHash = 3224400863644;
   N.__initData = setActiveIndex;
-  derivedValue2 = obj3.useDerivedValue(N);
+  derivedValue2 = state(formatCount[4]).useDerivedValue(N);
   let obj4 = state(formatCount[4]);
   const fn = function $() {
     value = derivedValue2.get();
-    let obj = pressedIndex;
     let num = 1;
     if (pressedIndex.get() < 0) {
       if (scrollOverflow.get() < 0) {
@@ -188,32 +199,32 @@ export const Tabs = function Tabs(state) {
           num = interpolateResult1;
         }
       }
-      obj = { width: spring.withSpring(derivedValue1.get(), closure_10), transform: null };
-      obj = { translateX: null };
-      obj.translateX = spring.withSpring(sum, closure_10);
-      items = [obj];
-      let obj1 = { scaleX: null };
-      obj1.scaleX = spring.withSpring(num, closure_10);
-      items[1] = obj1;
-      obj.transform = items;
-      return obj;
+      const obj5 = { width: spring.withSpring(derivedValue1.get(), closure_10), transform: null };
+      const obj7 = { translateX: null };
+      obj7.translateX = spring.withSpring(sum, closure_10);
+      items = [obj7];
+      const obj9 = { scaleX: null };
+      obj9.scaleX = spring.withSpring(num, closure_10);
+      items[1] = obj9;
+      obj5.transform = items;
+      return obj5;
     } else {
-      obj1 = derivedValue;
-      value = obj.get();
-      if (value < derivedValue.get()) {
+      const value3 = pressedIndex.get();
+      if (value3 < derivedValue.get()) {
         let num2 = 1 + c9;
         let diff = value - 0.02 * derivedValue1.get();
       } else {
-        const value1 = obj.get();
+        const value4 = pressedIndex.get();
         diff = value;
-        if (value1 > obj1.get()) {
+        if (value4 > derivedValue.get()) {
           num2 = 1 + c9;
           diff = value + 0.02 * derivedValue1.get();
         }
       }
     }
   };
-  obj = {
+  let obj5 = state(formatCount[4]);
+  fn.__closure = {
     indicatorTranslateX: derivedValue2,
     pressedIndex,
     clampedActiveIndex: derivedValue,
@@ -226,11 +237,23 @@ export const Tabs = function Tabs(state) {
     withSpring: state(formatCount[7]).withSpring,
     SELECTED_INDICATOR_SPRING: items,
   };
-  fn.__closure = obj;
   fn.__workletHash = 1794186407627;
   fn.__initData = useReducedMotion;
-  const animatedStyle = obj4.useAnimatedStyle(fn);
-  obj = { onScroll: null, onEndDrag: null };
+  const animatedStyle = obj5.useAnimatedStyle(fn);
+  let obj6 = {
+    indicatorTranslateX: derivedValue2,
+    pressedIndex,
+    clampedActiveIndex: derivedValue,
+    PRESSED_TRANSLATE_AMOUNT: scrollOverflow,
+    indicatorWidth: derivedValue1,
+    scrollOverflow,
+    interpolate: state(formatCount[4]).interpolate,
+    SCROLL_OVERFLOW_UPPER_BOUND: 50,
+    SCROLL_OVERFLOW_MAX_SCALE: 0.9,
+    withSpring: state(formatCount[7]).withSpring,
+    SELECTED_INDICATOR_SPRING: items,
+  };
+  let obj8 = { onScroll: null, onEndDrag: null };
   class F {
     constructor(arg0) {
       result = scrollOffset.set(state.contentOffset.x);
@@ -243,7 +266,7 @@ export const Tabs = function Tabs(state) {
   F.__closure = { scrollOffset, onScrollWorklet };
   F.__workletHash = 1586298483424;
   F.__initData = __initData;
-  obj.onScroll = F;
+  obj8.onScroll = F;
   const fn2 = function b() {
     if (onEndDrag != null) {
       tmp();
@@ -252,10 +275,9 @@ export const Tabs = function Tabs(state) {
   fn2.__closure = { onEndDrag };
   fn2.__workletHash = 6364544472149;
   fn2.__initData = sharedValue;
-  obj.onEndDrag = fn2;
+  obj8.onEndDrag = fn2;
   const items2 = [useReducedMotion];
-  const obj7 = state(formatCount[4]);
-  let tmp2 = state;
+  let obj7 = state(formatCount[4]);
   callback1 = simultaneousHandlers.useCallback((x) => {
     const current = ref.current;
     if (current != null) {
@@ -263,7 +285,7 @@ export const Tabs = function Tabs(state) {
       current.scrollTo(obj);
     }
   }, items2);
-  const animatedScrollHandler = state(formatCount[4]).useAnimatedScrollHandler(obj);
+  const animatedScrollHandler = state(formatCount[4]).useAnimatedScrollHandler(obj8);
   class P {
     constructor() {
       obj = { scrollOffset: scrollOffset.get(), activeIndex: activeIndex.get(), itemDimensions: itemDimensions.get() };
@@ -276,11 +298,11 @@ export const Tabs = function Tabs(state) {
   class X {
     constructor(arg0, arg1) {
       tmp = arg1;
-      activeIndex = undefined;
+      activeIndex1 = undefined;
       if (arg1 != null) {
-        activeIndex = tmp.activeIndex;
+        activeIndex1 = tmp.activeIndex;
       }
-      if (state.activeIndex !== activeIndex) {
+      if (state.activeIndex !== activeIndex1) {
         tmp15 = closure_0;
         tmp16 = closure_2;
         obj3 = closure_0(closure_2[8]);
@@ -333,7 +355,8 @@ export const Tabs = function Tabs(state) {
       return;
     }
   }
-  obj1 = {
+  let obj9 = state(formatCount[4]);
+  X.__closure = {
     cheapWorkletShallowEqual: state(formatCount[8]).cheapWorkletShallowEqual,
     itemSpacing,
     pageWidth,
@@ -341,10 +364,9 @@ export const Tabs = function Tabs(state) {
     scrollToOffset: callback1,
     AUTO_SCROLL_BUFFER: 16,
   };
-  X.__closure = obj1;
   X.__workletHash = 15851319414889;
   X.__initData = ref;
-  const animatedReaction = state(formatCount[4]).useAnimatedReaction(P, X);
+  const animatedReaction = obj9.useAnimatedReaction(P, X);
   const items3 = [
     items,
     length,
@@ -399,7 +421,7 @@ export const Tabs = function Tabs(state) {
             const result = pressed.set(-1);
           };
           obj.variant = variant;
-          return variant(state(12744).TabItem, obj, id);
+          return variant(state(12745).TabItem, obj, id);
         }),
       }),
     items3,
@@ -413,7 +435,7 @@ export const Tabs = function Tabs(state) {
     }
     return result;
   }, items4);
-  obj2 = {
+  let obj11 = {
     ref,
     accessibilityRole: null,
     keyboardShouldPersistTaps: "handled",
@@ -425,28 +447,35 @@ export const Tabs = function Tabs(state) {
     bounces: false,
     children: null,
   };
-  const obj9 = state(formatCount[4]);
+  const obj10 = {
+    cheapWorkletShallowEqual: state(formatCount[8]).cheapWorkletShallowEqual,
+    itemSpacing,
+    pageWidth,
+    runOnJS: state(formatCount[4]).runOnJS,
+    scrollToOffset: callback1,
+    AUTO_SCROLL_BUFFER: 16,
+  };
   const tmp16 = activeIndex;
   const tmp17 = scrollOffset;
   let str;
   if (obj12.isIOS()) {
     str = "tabbar";
   }
-  obj2.accessibilityRole = str;
-  obj2.onScroll = animatedScrollHandler;
-  obj2.contentContainerStyle = tmp.container;
-  obj3 = { style: tmp.indicatorContainer, onLayout: callback, children: null };
-  obj4 = { style: null };
+  obj11.accessibilityRole = str;
+  obj11.onScroll = animatedScrollHandler;
+  obj11.contentContainerStyle = tmp.container;
+  const obj13 = { style: tmp.indicatorContainer, onLayout: callback, children: null };
+  const obj14 = { style: null };
   const items5 = [tmp.indicator, animatedStyle];
-  obj4.style = items5;
-  obj3.children = variant(flag(formatCount[4]).View, obj4);
-  const items6 = [variant(onScrollWorklet, obj3), memo];
-  obj2.children = items6;
-  const tmp16Result = tmp16(tmp17, obj2);
+  obj14.style = items5;
+  obj13.children = variant(flag(formatCount[4]).View, obj14);
+  const items6 = [variant(onScrollWorklet, obj13), memo];
+  obj11.children = items6;
+  const tmp16Result = tmp16(tmp17, obj11);
   let tmp18Result = tmp16Result;
   if (null != memo1) {
-    const obj5 = { gesture: memo1, children: tmp16Result };
-    tmp18Result = variant(tmp2(tmp3[10]).GestureDetector, obj5);
+    const obj15 = { gesture: memo1, children: tmp16Result };
+    tmp18Result = variant(tmp2(tmp3[10]).GestureDetector, obj15);
   }
   return tmp18Result;
 };

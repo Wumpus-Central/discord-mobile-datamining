@@ -12,9 +12,10 @@ import UserStore from "../../../stores/UserStore.tsx";
 require = fn;
 function HistorySeparator() {
   const tmp = closure_12();
-  let obj = { style: tmp.guildHistorySeparatorWrapper, children: null };
-  obj = { style: tmp.guildHistorySeparator };
-  obj.children = closure_1_10(hasOwnProperty, obj);
+  const obj = {
+    style: tmp.guildHistorySeparatorWrapper,
+    children: closure_1_10(hasOwnProperty, { style: tmp.guildHistorySeparator }),
+  };
   return closure_1_10(hasOwnProperty, obj);
 }
 function renderHistorySection() {
@@ -29,26 +30,14 @@ const createStyles = fn(4636);
 let obj = {
   listWrapper: { marginTop: 8 },
   list: { marginBottom: 4, flexShrink: 0 },
-  maskStrokeStyle: null,
-  privateChannelWrapper: null,
-  privateChannelIcon: null,
-  badgeWrapper: null,
-  guildWrapper: null,
-  guildHistorySeparatorWrapper: null,
+  maskStrokeStyle: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },
+  privateChannelWrapper: { position: "relative", paddingVertical: 2, justifyContent: "center", alignItems: "center" },
+  privateChannelIcon: { width: 48, height: 48, borderRadius: 24, overflow: "hidden" },
+  badgeWrapper: { position: "absolute", top: "50%", left: "50%", marginLeft: 6, marginTop: 6 },
+  guildWrapper: { paddingVertical: 2, justifyContent: "center", alignItems: "center" },
+  guildHistorySeparatorWrapper: { flex: 1, justifyContent: "center", alignItems: "center" },
   guildHistorySeparator: null,
 };
-obj = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
-obj.maskStrokeStyle = obj;
-obj.privateChannelWrapper = {
-  position: "relative",
-  paddingVertical: 2,
-  justifyContent: "center",
-  alignItems: "center",
-};
-obj.privateChannelIcon = { width: 48, height: 48, borderRadius: 24, overflow: "hidden" };
-obj.badgeWrapper = { position: "absolute", top: "50%", left: "50%", marginLeft: 6, marginTop: 6 };
-obj.guildWrapper = { paddingVertical: 2, justifyContent: "center", alignItems: "center" };
-obj.guildHistorySeparatorWrapper = { flex: 1, justifyContent: "center", alignItems: "center" };
 let size = {
   width: 2,
   height: 32,
@@ -66,11 +55,11 @@ let closure_13 = noop.memo(function GuildItemInner(guildId) {
   const callback = noop.useCallback(() => {
     onGuildSelect(guildId);
   }, items);
-  let obj = { style: tmp.guildWrapper, children: null };
+  const obj = { style: tmp.guildWrapper, children: null };
   const callback1 = noop.useCallback(() => {
     transitionToGuild.transitionToGuild(guildId);
   }, items1);
-  obj = {
+  obj.children = closure_10(onGuildSelect(17087), {
     size: 48,
     borderRadius: 16,
     guildId,
@@ -78,20 +67,20 @@ let closure_13 = noop.memo(function GuildItemInner(guildId) {
     onPress: callback,
     onLongPress: callback1,
     backgroundColor: tmp.maskStrokeStyle.backgroundColor,
-  };
-  obj.children = closure_10(onGuildSelect(17085), obj);
+  });
   return closure_10(closure_5, obj);
 });
 let closure_14 = noop.memo(function PrivateChannelItemInner(channelId) {
   channelId = channelId.channelId;
   let stateFromStores1;
   const tmp = closure_12();
-  let obj = channelId(stateFromStores1[11]);
   let items = [ChannelStore];
-  const stateFromStores = obj.useStateFromStores(items, () => ChannelStore.getChannel(channelId));
-  let obj2 = channelId(stateFromStores1[11]);
+  const stateFromStores = channelId(stateFromStores1[11]).useStateFromStores(items, () =>
+    ChannelStore.getChannel(channelId),
+  );
+  let obj = channelId(stateFromStores1[11]);
   const items1 = [UserStore];
-  stateFromStores1 = obj2.useStateFromStores(items1, () => {
+  stateFromStores1 = channelId(stateFromStores1[11]).useStateFromStores(items1, () => {
     let isPrivateResult;
     if (stateFromStores != null) {
       isPrivateResult = stateFromStores.isPrivate();
@@ -104,7 +93,7 @@ let closure_14 = noop.memo(function PrivateChannelItemInner(channelId) {
   });
   let obj3 = channelId(stateFromStores1[11]);
   const items2 = [ReadStateStore];
-  const stateFromStores2 = obj3.useStateFromStores(items2, () => {
+  const stateFromStores2 = channelId(stateFromStores1[11]).useStateFromStores(items2, () => {
     let num = 0;
     if (null != stateFromStores) {
       num = ReadStateStore.getMentionCount(tmp.id);
@@ -117,18 +106,18 @@ let closure_14 = noop.memo(function PrivateChannelItemInner(channelId) {
   }
   if (type === ChannelTypes.DM) {
     if (null != stateFromStores1) {
-      obj = {
+      let obj2 = {
         style: tmp.privateChannelIcon,
         user: stateFromStores1,
         guildId: "Array",
         size: tmp2(tmp3[12]).AvatarSizes.LARGE_48,
       };
-      let tmp8 = closure_10(tmp2(tmp3[12]).Avatar, obj);
+      let tmp8 = closure_10(tmp2(tmp3[12]).Avatar, obj2);
     }
     const items3 = [stateFromStores1, stateFromStores];
     let tmp19Result = null;
     if (null != stateFromStores) {
-      obj = {
+      const obj5 = {
         onPress: tmp17,
         style: tmp.privateChannelWrapper,
         accessibilityRole: "button",
@@ -138,14 +127,14 @@ let closure_14 = noop.memo(function PrivateChannelItemInner(channelId) {
       const items4 = [tmp8];
       let tmp21 = stateFromStores2 > 0;
       if (tmp21) {
-        const obj1 = { style: tmp.badgeWrapper, children: null };
-        obj2 = { value: stateFromStores2, unread: true, backgroundColor: tmp.maskStrokeStyle.backgroundColor };
-        obj1.children = closure_10(stateFromStores(tmp3[18]), obj2);
-        tmp21 = closure_10(closure_5, obj1);
+        const obj6 = { style: tmp.badgeWrapper, children: null };
+        const obj7 = { value: stateFromStores2, unread: true, backgroundColor: tmp.maskStrokeStyle.backgroundColor };
+        obj6.children = closure_10(stateFromStores(tmp3[18]), obj7);
+        tmp21 = closure_10(closure_5, obj6);
       }
       items4[1] = tmp21;
-      obj.children = items4;
-      tmp19Result = closure_11(closure_4, obj);
+      obj5.children = items4;
+      tmp19Result = closure_11(closure_4, obj5);
     }
     return tmp19Result;
   }
@@ -154,19 +143,21 @@ let closure_14 = noop.memo(function PrivateChannelItemInner(channelId) {
     isGroupDMResult = stateFromStores.isGroupDM();
   }
   if (isGroupDMResult) {
-    obj3 = { channel: stateFromStores, size: tmp2(tmp3[12]).AvatarSizes.LARGE_48 };
-    tmp8 = closure_10(stateFromStores(tmp3[13]), obj3);
+    const obj8 = { channel: stateFromStores, size: tmp2(tmp3[12]).AvatarSizes.LARGE_48 };
+    tmp8 = closure_10(stateFromStores(tmp3[13]), obj8);
     const tmp14 = stateFromStores(tmp3[13]);
   } else if (null != stateFromStores) {
-    const obj4 = { style: null, source: null };
+    const obj9 = { style: null, source: null };
     const items5 = [tmp.privateChannelIcon];
-    obj4.style = items5;
+    obj9.style = items5;
     const tmp11 = stateFromStores(tmp3[14]);
-    obj4.source = tmp2(tmp3[15]).getChannelIconSource(stateFromStores);
-    tmp8 = closure_10(tmp11, obj4);
+    obj9.source = tmp2(tmp3[15]).getChannelIconSource(stateFromStores);
+    tmp8 = closure_10(tmp11, obj9);
     const tmp2Result = tmp2(tmp3[15]);
   }
+  const obj4 = channelId(stateFromStores1[11]);
 });
+let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 size = fn(2);
 const result = size.fileFinishedImporting("modules/launchpad/native/LaunchPadUnreadServers.tsx");
 
@@ -180,8 +171,7 @@ export default noop.memo(function LaunchPadUnreadServers(selectedGuildId) {
   let list = closure_12();
   let AnimatedFastList = selectedGuildId;
   let tmp = prop;
-  let obj = selectedGuildId(prop[19]);
-  const categoryStyles = obj.useCategoryStyles();
+  const categoryStyles = selectedGuildId(prop[19]).useCategoryStyles();
   unreadGuilds.useRef(-1);
   const items = [setSelectedGuild, selectedGuildId];
   const onGuildSelect = unreadGuilds.useCallback((id) => {
@@ -220,8 +210,8 @@ export default noop.memo(function LaunchPadUnreadServers(selectedGuildId) {
     if (0 === arg0) {
       let tmp14 = null != tmp12;
       if (tmp14) {
-        let obj = { channelId: tmp12 };
-        tmp14 = closure_2_10(closure_14, obj);
+        const obj2 = { channelId: tmp12 };
+        tmp14 = closure_2_10(closure_14, obj2);
       }
       return tmp14;
     } else if (arg0 >= 1) {
@@ -232,7 +222,7 @@ export default noop.memo(function LaunchPadUnreadServers(selectedGuildId) {
       }
       let tmp6 = null != tmp3;
       if (tmp6) {
-        obj = { guildId: tmp3, selected: selectedGuildId === tmp3, onGuildSelect };
+        const obj = { guildId: tmp3, selected: selectedGuildId === tmp3, onGuildSelect };
         tmp6 = closure_2_10(closure_13, obj);
       }
       return tmp6;
@@ -259,7 +249,9 @@ export default noop.memo(function LaunchPadUnreadServers(selectedGuildId) {
       return null;
     }
   }
-  obj = { style: list.listWrapper, children: null };
+  let obj2 = { style: list.listWrapper, children: null };
+  let obj = selectedGuildId(prop[19]);
+  const tmp11 = visible;
   let renderCategoryItem = AnimatedFastList(tmp[19]).renderCategoryItem;
   const intl = AnimatedFastList(tmp[22]).intl;
   const string = intl.string;
@@ -272,7 +264,7 @@ export default noop.memo(function LaunchPadUnreadServers(selectedGuildId) {
   t = [renderCategoryItem({ name: stringResult, styles: categoryStyles })];
   renderCategoryItem = closure_10;
   AnimatedFastList = AnimatedFastList(tmp[23]).AnimatedFastList;
-  obj = {
+  const obj3 = {
     ref,
     style: null,
     horizontal: true,
@@ -290,17 +282,17 @@ export default noop.memo(function LaunchPadUnreadServers(selectedGuildId) {
     keyboardShouldPersistTaps: "always",
   };
   list = list.list;
-  obj.style = list;
+  obj3.style = list;
   length = prop.length;
   prop = [length, ,];
   unreadGuilds = unreadGuilds.length;
   prop[1] = unreadGuilds;
   guildHistory = guildHistory.length;
   prop[2] = guildHistory;
-  obj.sections = prop;
-  tmp = closure_10(AnimatedFastList, obj);
+  obj3.sections = prop;
+  tmp = closure_10(AnimatedFastList, obj3);
   t[1] = tmp;
-  obj.children = t;
-  closure_11(visible, obj);
+  obj2.children = t;
+  closure_11(tmp11, obj2);
   const AnimatedFastListResult = AnimatedFastList(tmp[19]);
 });

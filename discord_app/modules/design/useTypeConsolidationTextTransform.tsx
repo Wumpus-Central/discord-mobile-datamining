@@ -1,5 +1,4 @@
 // discord_app/modules/design/useTypeConsolidationTextTransform.tsx
-import ManaTypeConsolidationExperiment from "ManaTypeConsolidationExperiment.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
 const style = { textTransform: "none" };
@@ -13,11 +12,11 @@ export const useTypeConsolidationTextTransform = function useTypeConsolidationTe
   return tmp;
 };
 export const useTypeConsolidationEyebrow = function useTypeConsolidationEyebrow(BountiesScrollRecapFooter, variant) {
-  let obj = ManaTypeConsolidationExperiment;
   if (obj.useManaTypeConsolidationExperiment(BountiesScrollRecapFooter)) {
-    obj = { variant: "experimental/body-sm/medium", style };
+    const obj2 = { variant: "experimental/body-sm/medium", style };
+    let obj3 = obj2;
   } else {
-    obj = { variant, style: "a" };
+    obj3 = { variant, style: "a" };
   }
-  return obj;
+  return obj3;
 };

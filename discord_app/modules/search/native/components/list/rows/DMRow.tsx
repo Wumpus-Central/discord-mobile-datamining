@@ -6,7 +6,7 @@ import Text_Text from "../../../../../../design/components/Text/native/Text.tsx"
 import BotTagDefault from "../../../../../applications/native/BotTag.tsx";
 import _modDef9883 from "../../../../../../../_runtime/metro/09883__.js";
 import ActivityStatusDefault from "../../../../../activity_status/native/ActivityStatus.tsx";
-import _modDef13588 from "../../../../../../../_runtime/metro/13588__.js";
+import _modDef13589 from "../../../../../../../_runtime/metro/13589__.js";
 import asyncGeneratorStep from "../../../../../../../_runtime/00005_asyncGeneratorStep.js";
 import _slicedToArray from "../../../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
@@ -21,10 +21,15 @@ function FriendPresence(user) {
   user = user.user;
   ({ type, animate, guildId } = user);
   if (type === constants2.PENDING_INCOMING) {
-    let obj = { lineClamp: 1, variant: "text-sm/medium", color: "text-default", children: UserUtils.getUserTag(user) };
-    let tmp5 = map1(Text_Text.Text, obj);
+    const obj2 = {
+      lineClamp: 1,
+      variant: "text-sm/medium",
+      color: "text-default",
+      children: UserUtils.getUserTag(user),
+    };
+    let tmp5 = map1(Text_Text.Text, obj2);
   } else {
-    obj = { userId: user.id, guildId, iconStyle: null, textStyle: null, emojiSize: 16, animate: null };
+    const obj = { userId: user.id, guildId, iconStyle: null, textStyle: null, emojiSize: 16, animate: null };
     ({ activityStatusIcon: obj.iconStyle, activityStatusText: obj.textStyle } = tmp);
     obj.animate = animate;
     tmp5 = map1(ActivityStatusDefault, obj);
@@ -38,12 +43,14 @@ const Constants = fn(1074);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
 const createStyles = fn(4636);
-let obj = { activityStatusIcon: { width: 14, height: 14 }, activityStatusText: null, tag: null, title: null };
-obj = { color: nativeDefault.colors.TEXT_SUBTLE, fontSize: 14, lineHeight: 18, fontWeight: "400" };
-obj.activityStatusText = obj;
-obj.tag = { marginLeft: 4 };
-obj.title = { flexDirection: "row" };
+let obj = {
+  activityStatusIcon: { width: 14, height: 14 },
+  activityStatusText: { color: nativeDefault.colors.TEXT_SUBTLE, fontSize: 14, lineHeight: 18, fontWeight: "400" },
+  tag: { marginLeft: 4 },
+  title: { flexDirection: "row" },
+};
 let closure_15 = createStyles.createStyles(obj);
+let obj3 = { color: nativeDefault.colors.TEXT_SUBTLE, fontSize: 14, lineHeight: 18, fontWeight: "400" };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/search/native/components/list/rows/DMRow.tsx");
 
@@ -59,7 +66,6 @@ export default noop.memo(function DMRow(user) {
   ({ accessibilityActions, onAccessibilityAction } = user);
   const tmp = closure_15();
   const title = tmp;
-  let obj = guildId;
   const tmp2 = type(guildId.useState(false), 2);
   const useReducedMotion = tmp2[1];
   let items = [isMobileOnline];
@@ -95,8 +101,8 @@ export default noop.memo(function DMRow(user) {
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
-          let obj = { value, done: true };
-          return obj;
+          const obj2 = { value, done: true };
+          return obj2;
         } else {
           return { value: "HermesInternal", done: null };
         }
@@ -109,16 +115,16 @@ export default noop.memo(function DMRow(user) {
               throw value;
             } else if (arg0 === 2) {
               c4 = 3;
-              obj = { value, done: true };
-              return obj;
+              const obj3 = { value, done: true };
+              return obj3;
             } else {
               closure_0 = tmp3;
               useReducedMotion(true);
               c3 = 1;
               c1 = 2;
               c4 = 1;
-              const obj1 = { value: onPress(user.id), done: false };
-              return obj1;
+              const obj4 = { value: onPress(user.id), done: false };
+              return obj4;
             }
           } else if (1 === tmp7) {
             c3 = 0;
@@ -131,7 +137,7 @@ export default noop.memo(function DMRow(user) {
             c3 = 0;
             closure_128_8(false);
             c4 = 3;
-            obj = { value, done: true };
+            const obj = { value, done: true };
             return obj;
           } else {
             c3 = 0;
@@ -154,7 +160,7 @@ export default noop.memo(function DMRow(user) {
   );
   if (stateFromStores1 == null) {
     name = stateFromStores1(tmp4[12]).getName(user);
-    const obj5 = stateFromStores1(tmp4[12]);
+    let obj5 = stateFromStores1(tmp4[12]);
   }
   const items4 = [, , , , ,];
   ({ title: arr5[0], tag: arr5[1] } = tmp);
@@ -164,39 +170,47 @@ export default noop.memo(function DMRow(user) {
   items4[5] = premiumSince;
   const items5 = [user, status, isMobileOnline, isVROnline, guildId];
   const memo = obj.useMemo(() => {
-    let obj = { style: title.title, children: null };
-    obj = { lineClamp: 1, variant: "text-md/semibold", color: "mobile-text-heading-primary", children: name };
-    const items = [map1(Text_Text.Text, obj), , ,];
-    let obj2 = user;
+    const obj = { style: title.title, children: null };
+    const items = [
+      map1(Text_Text.Text, {
+        lineClamp: 1,
+        variant: "text-md/semibold",
+        color: "mobile-text-heading-primary",
+        children: name,
+      }),
+      ,
+      ,
+    ];
     const bot = user.bot;
     if (!bot) {
       items[1] = bot;
       let tmp4Result = isOwner;
       if (isOwner) {
-        obj = { style: title.tag, children: null };
-        const obj1 = { size: native.Icon.Sizes.REFRESH_SMALL_16, source: _modDef9883, disableColor: true };
-        obj.children = map1(native.Icon, obj1);
-        tmp4Result = map1(timestampProducer, obj);
+        const obj4 = { style: title.tag, children: null };
+        const obj5 = { size: native.Icon.Sizes.REFRESH_SMALL_16, source: _modDef9883, disableColor: true };
+        obj4.children = map1(native.Icon, obj5);
+        tmp4Result = map1(timestampProducer, obj4);
       }
       items[2] = tmp4Result;
-      tmp4Result = null != premiumSince;
-      if (tmp4Result) {
-        obj2 = { style: title.tag, children: null };
-        const obj3 = { size: native.Icon.Sizes.REFRESH_SMALL_16, source: _modDef13588, disableColor: true };
-        obj2.children = map1(native.Icon, obj3);
-        tmp4Result = map1(timestampProducer, obj2);
+      let tmp4Result3 = null != premiumSince;
+      if (tmp4Result3) {
+        const obj6 = { style: title.tag, children: null };
+        const obj7 = { size: native.Icon.Sizes.REFRESH_SMALL_16, source: _modDef13589, disableColor: true };
+        obj6.children = map1(native.Icon, obj7);
+        tmp4Result3 = map1(timestampProducer, obj6);
       }
-      items[3] = tmp4Result;
+      items[3] = tmp4Result3;
       obj.children = items;
       return closure_2_14(timestampProducer, obj);
     } else {
-      const obj4 = { style: title.tag, verified: obj2.isVerifiedBot(), type: null };
+      const obj8 = { style: title.tag, verified: user.isVerifiedBot(), type: null };
       const tmp8 = BotTagDefault;
       const Types = BotTagDefault.Types;
-      obj4.type = obj2.isSystemUser() ? Types.SYSTEM_DM : Types.BOT;
-      map1(tmp8, obj4);
-      const isSystemUserResult = obj2.isSystemUser();
+      obj8.type = user.isSystemUser() ? Types.SYSTEM_DM : Types.BOT;
+      map1(tmp8, obj8);
+      const isSystemUserResult = user.isSystemUser();
     }
+    const obj2 = { lineClamp: 1, variant: "text-md/semibold", color: "mobile-text-heading-primary", children: name };
   }, items4);
   const items6 = [user, guildId, type, stateFromStores];
   const memo1 = obj.useMemo(() => {
@@ -222,23 +236,22 @@ export default noop.memo(function DMRow(user) {
     return map1(native.Avatar, obj);
   }, items5);
   const memo2 = obj.useMemo(() => {
-    let obj = UserUtilsDefault;
-    const userTag = obj.getUserTag(user);
+    const userTag = UserUtilsDefault.getUserTag(user);
     if (null != userTag) {
       if (!user.isProvisional) {
-        obj = { variant: "text-sm/medium", color: "text-muted", children: userTag };
-        let tmp6 = map1(Text_Text.Text, obj);
+        const obj2 = { variant: "text-sm/medium", color: "text-muted", children: userTag };
+        let tmp6 = map1(Text_Text.Text, obj2);
       }
       return tmp6;
     }
     let tmp8 = null;
     if (null != type) {
-      obj = { user, guildId, type: tmp7, animate: !stateFromStores };
-      tmp8 = map1(FriendPresence, obj);
+      const obj3 = { user, guildId, type: tmp7, animate: !stateFromStores };
+      tmp8 = map1(FriendPresence, obj3);
     }
     tmp6 = tmp8;
   }, items6);
-  obj = {
+  let obj6 = {
     label: memo,
     subLabel: memo2,
     icon: memo1,
@@ -250,8 +263,8 @@ export default noop.memo(function DMRow(user) {
   if (tmp2[0]) {
     trailing = tmp14(title, {});
   }
-  obj.trailing = trailing;
-  obj.accessibilityActions = accessibilityActions;
-  obj.onAccessibilityAction = onAccessibilityAction;
-  return name(tmp3(premiumSince[19]).SearchListRow, obj);
+  obj6.trailing = trailing;
+  obj6.accessibilityActions = accessibilityActions;
+  obj6.onAccessibilityAction = onAccessibilityAction;
+  return name(tmp3(premiumSince[19]).SearchListRow, obj6);
 });

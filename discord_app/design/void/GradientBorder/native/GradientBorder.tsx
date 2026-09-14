@@ -38,17 +38,17 @@ class GradientBorder {
       if (closure_3.isValidElement(children)) {
         tmp9 = jsx;
         tmp10 = closure_1;
-        obj = { start: null, end: null, style: null };
-        obj.start = tmp6;
-        obj.end = tmp7;
+        obj1 = { start: null, end: null, style: null };
+        obj1.start = tmp6;
+        obj1.end = tmp7;
         items = [,];
         items[0] = style;
-        obj1 = { borderRadius: null, padding: null };
-        obj1.borderRadius = borderRadius;
-        obj1.padding = borderWidth;
-        items[1] = obj1;
-        obj.style = items;
-        tmp12 = obj;
+        obj13 = { borderRadius: null, padding: null };
+        obj13.borderRadius = borderRadius;
+        obj13.padding = borderWidth;
+        items[1] = obj13;
+        obj1.style = items;
+        tmp12 = obj1;
         tmp13 = merged;
         tmp11 = closure_1(tmp4[6]);
         merged1 = Object.assign(merged);
@@ -60,29 +60,29 @@ class GradientBorder {
             if (children.type === View) {
               Children = obj6.Children;
               onlyResult = Children.only(children);
-              obj2 = {};
-              tmp18 = obj2;
+              obj14 = {};
+              tmp18 = obj14;
               merged2 = Object.assign(onlyResult.props);
-              obj3 = {};
-              tmp20 = obj3;
+              obj15 = {};
+              tmp20 = obj15;
               merged3 = Object.assign(onlyResult.props.style);
-              obj3.borderRadius = borderRadius - borderWidth;
+              obj15.borderRadius = borderRadius - borderWidth;
               str2 = "hidden";
-              obj3.overflow = "hidden";
-              obj2.style = obj3;
-              cloneElementResult = obj6.cloneElement(onlyResult, obj2);
+              obj15.overflow = "hidden";
+              obj14.style = obj15;
+              cloneElementResult = obj6.cloneElement(onlyResult, obj14);
             }
           }
-          obj4 = { style: null, children: null };
-          obj5 = { borderRadius: null };
+          obj16 = { style: null, children: null };
+          obj17 = { borderRadius: null };
           borderRadius = borderRadius - borderWidth;
-          obj5.borderRadius = borderRadius;
-          obj4.style = obj5;
-          obj4.children = children;
-          cloneElementResult = tmp9(tmp16, obj4);
+          obj17.borderRadius = borderRadius;
+          obj16.style = obj17;
+          obj16.children = children;
+          cloneElementResult = tmp9(tmp16, obj16);
         }
-        obj.children = cloneElementResult;
-        tmp9Result = tmp9(tmp11, obj);
+        obj1.children = cloneElementResult;
+        tmp9Result = tmp9(tmp11, obj1);
       }
     }
     return tmp8;

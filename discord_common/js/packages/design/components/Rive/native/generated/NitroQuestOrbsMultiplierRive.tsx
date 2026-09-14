@@ -117,10 +117,9 @@ const result = size.fileFinishedImporting(
 
 export const NitroQuestOrbsMultiplierRive = noop.forwardRef(
   function NitroQuestOrbsMultiplierRiveWithBoundary(fallback, ref) {
-    let obj = { fallback: fallback.fallback, children: null };
-    obj = { ref };
+    const obj = { fallback: fallback.fallback, children: null };
     const merged = Object.assign(fallback);
     obj.children = <closure_10 ref={ref} />;
-    return jsx(RiveErrorBoundary.RiveErrorBoundary, { ref });
+    return jsx(RiveErrorBoundary.RiveErrorBoundary, { fallback: fallback.fallback, children: null });
   },
 );

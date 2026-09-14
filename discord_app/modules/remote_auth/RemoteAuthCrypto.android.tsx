@@ -34,6 +34,7 @@ prototype["decryptEncodedCiphertext"] = function decryptEncodedCiphertext(curren
 prototype["decryptNonce"] = function decryptNonce(arg0, encrypted_nonce) {
   closure_0 = encrypted_nonce;
   return (async () => {
+    v3(dependencyMap[1]);
     await v3(c1[1])
       .decrypt(closure_0)
       .then((result) => result.replace(/\//g, "_").replace(/\+/g, "-"));

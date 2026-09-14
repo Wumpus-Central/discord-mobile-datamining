@@ -5,14 +5,14 @@ function convertStringArrayToSkemaErrorItems(arr) {
   return arr.map((message) => ({ code: "UNKNOWN", message }));
 }
 function convertOldFormError(captcha_key) {
-  let obj = {};
+  const obj = {};
   const entries = Object.entries(captcha_key);
   while (tmp2 !== undefined) {
     let tmp5 = _slicedToArray(tmp3, 2);
     [tmp6, tmp8] = tmp5;
     if ("_misc" !== tmp6) {
-      obj = { _errors: convertStringArrayToSkemaErrorItems(tmp8) };
-      obj[tmp7] = obj;
+      let obj2 = { _errors: convertStringArrayToSkemaErrorItems(tmp8) };
+      obj[tmp7] = obj2;
     } else {
       obj._errors = convertStringArrayToSkemaErrorItems(tmp8);
     }
@@ -29,15 +29,16 @@ class APIError extends Error {
     }
     if (typeof global === "string") {
       tmp4 = fn;
-      obj = { message: null, code: null };
-      obj.message = global;
-      obj.code = fn;
+      obj1 = { message: null, code: null };
+      obj1.message = global;
+      obj1.code = fn;
+      obj = obj1;
     } else {
       tmp6 = null;
       if (null == global.body) {
-        obj1 = { status: null };
-        obj1.status = global.status;
-        obj = obj1;
+        obj6 = { status: null };
+        obj6.status = global.status;
+        obj = obj6;
       } else {
         captcha_key = global.body;
         if (null != global.body.message) {
@@ -53,26 +54,26 @@ class APIError extends Error {
           }
         }
         if (null == captcha_key) {
-          obj2 = { status: null, code: 50035, errors: null };
-          obj2.status = global.status;
+          obj7 = { status: null, code: 50035, errors: null };
+          obj7.status = global.status;
           tmp = convertOldFormError;
           num = 0;
-          obj2.errors = convertOldFormError(captcha_key);
-          tmp3 = obj2;
+          obj7.errors = convertOldFormError(captcha_key);
+          tmp3 = obj7;
         } else {
           str2 = "captcha_key";
         }
-        obj3 = { code: -1, captchaFields: null, status: null, message: null };
-        obj3.captchaFields = captcha_key;
-        obj3.status = global.status;
+        obj8 = { code: -1, captchaFields: null, status: null, message: null };
+        obj8.captchaFields = captcha_key;
+        obj8.status = global.status;
         num2 = 0;
         first = undefined;
         if (captcha_key.captcha_key.length > 0) {
           captcha_key = captcha_key.captcha_key;
           first = captcha_key[0];
         }
-        obj3.message = first;
-        obj2 = obj3;
+        obj8.message = first;
+        obj7 = obj8;
       }
     }
     ({ message, code, captchaFields } = obj);
@@ -80,20 +81,20 @@ class APIError extends Error {
     if (message == null) {
       message = str;
     }
-    _Array2 = new _Array2(message);
+    _Array21 = new _Array2(message);
     if (code == null) {
       code = -1;
     }
-    _Array2.code = code;
-    _Array2.retryAfter = retryAfter;
-    _Array2.errors = errors;
-    _Array2.status = status;
+    _Array21.code = code;
+    _Array21.retryAfter = retryAfter;
+    _Array21.errors = errors;
+    _Array21.status = status;
     if (captchaFields == null) {
       captchaFields = {};
     }
-    _Array2.captchaFields = captchaFields;
-    _Array2.cause = global;
-    return _Array2;
+    _Array21.captchaFields = captchaFields;
+    _Array21.cause = global;
+    return _Array21;
   }
 }
 const prototype = APIError.prototype;

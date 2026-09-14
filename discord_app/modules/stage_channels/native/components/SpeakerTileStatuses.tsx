@@ -37,17 +37,17 @@ const size1 = {
   alignItems: "center",
 };
 obj.moderatorStatusWrapper = size1;
-obj = { marginEnd: nativeDefault.space.PX_4 };
-obj.restricted = obj;
+obj.restricted = { marginEnd: nativeDefault.space.PX_4 };
 let closure_8 = createStyles.createStyles(obj);
+let obj3 = { marginEnd: nativeDefault.space.PX_4 };
 const memoResult = noop.memo((userId) => {
   userId = userId.userId;
   const channelId = userId.channelId;
-  let obj = userId(504);
+  const tmp = closure_8();
   const items = [MediaEngineStore];
   const items1 = [userId];
-  const stateFromStores = obj.useStateFromStores(items, () => MediaEngineStore.isLocalMute(userId), items1);
-  const tmp = closure_8();
+  const stateFromStores = userId(504).useStateFromStores(items, () => MediaEngineStore.isLocalMute(userId), items1);
+  const obj = userId(504);
   const items2 = [VoiceStateStore];
   const items3 = [channelId, userId];
   const stateFromStores1 = userId(504).useStateFromStores(
@@ -84,29 +84,22 @@ const memoResult = noop.memo((userId) => {
   }
   let tmp9 = null;
   if (null != tmp5) {
-    obj = { style: null, children: null };
+    const obj3 = { style: null, children: null };
     const items4 = [tmp.voiceStatusWrapper, userId.style];
-    obj.style = items4;
-    obj = {
+    obj3.style = items4;
+    const obj4 = {
       source: tmp5,
-      size: tmp2(1178).Icon.Sizes.SMALL,
+      size: tmp2(1176).Icon.Sizes.SMALL,
       color: channelId(576).unsafe_rawColors.BLACK,
       disableColor: flag3,
     };
-    obj.children = jsx(tmp2(1178).Icon, {
+    obj3.children = jsx(tmp2(1176).Icon, {
       source: tmp5,
-      size: tmp2(1178).Icon.Sizes.SMALL,
+      size: tmp2(1176).Icon.Sizes.SMALL,
       color: channelId(576).unsafe_rawColors.BLACK,
       disableColor: flag3,
     });
-    tmp9 = (
-      <View
-        source={tmp5}
-        size={tmp2(1178).Icon.Sizes.SMALL}
-        color={channelId(576).unsafe_rawColors.BLACK}
-        disableColor={flag3}
-      />
-    );
+    tmp9 = <View style={null}>{null}</View>;
   }
   return tmp9;
 });
@@ -117,7 +110,7 @@ export const VoiceStatus = memoResult;
 export const ModeratorStatus = noop.memo((userId) => {
   userId = userId.userId;
   const channelId = userId.channelId;
-  let obj = userId(504);
+  const tmp = closure_8();
   const items = [StageChannelRoleStore];
   const items1 = [channelId, userId];
   let tmp4;
@@ -126,16 +119,16 @@ export const ModeratorStatus = noop.memo((userId) => {
   }
   let tmp6 = null;
   if (null != tmp4) {
-    obj = { style: null, children: null };
+    const obj2 = { style: null, children: null };
     const items2 = [tmp.moderatorStatusWrapper, userId.style];
-    obj.style = items2;
-    obj = { source: tmp4, size: tmp2(1178).Icon.Sizes.SMALL, color: channelId(576).unsafe_rawColors.BLACK };
-    obj.children = jsx(tmp2(1178).Icon, {
+    obj2.style = items2;
+    const obj3 = { source: tmp4, size: tmp2(1176).Icon.Sizes.SMALL, color: channelId(576).unsafe_rawColors.BLACK };
+    obj2.children = jsx(tmp2(1176).Icon, {
       source: tmp4,
-      size: tmp2(1178).Icon.Sizes.SMALL,
+      size: tmp2(1176).Icon.Sizes.SMALL,
       color: channelId(576).unsafe_rawColors.BLACK,
     });
-    tmp6 = <View source={tmp4} size={tmp2(1178).Icon.Sizes.SMALL} color={channelId(576).unsafe_rawColors.BLACK} />;
+    tmp6 = <View style={null}>{null}</View>;
   }
   return tmp6;
 });

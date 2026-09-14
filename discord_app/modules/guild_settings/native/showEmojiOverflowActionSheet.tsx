@@ -6,11 +6,12 @@ import size from "../../../../_runtime/metro/00002__.js";
 const result = size.fileFinishedImporting("modules/guild_settings/native/showEmojiOverflowActionSheet.tsx");
 
 export default function showEmojiOverflowActionSheet(arg0) {
-  const obj = {
+  const obj = ActionSheetActionCreatorsDefault;
+  const obj2 = {
     onClose() {
       return ActionSheetActionCreatorsDefault.hideActionSheet("EmojiOverflowActionSheet");
     },
   };
   const merged = Object.assign(arg0);
-  obj.openLazy(asyncRequireImpl(17680, dependencyMap.paths), "EmojiOverflowActionSheet", obj);
+  obj.openLazy(asyncRequireImpl(17681, dependencyMap.paths), "EmojiOverflowActionSheet", obj2);
 }

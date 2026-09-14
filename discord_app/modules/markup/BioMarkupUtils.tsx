@@ -3,34 +3,44 @@ import privDefault from "../../../_runtime/01437_priv.js";
 import _modDef4333 from "../../../_runtime/metro/04333__.js";
 import MarkupReactRulesDefault from "MarkupReactRules.native.tsx";
 import MarkupRulesDefault from "MarkupRules.tsx";
-import combineMarkupRules from "combineMarkupRules.tsx";
-import MarkupParser from "../../../discord_common/js/packages/markup/MarkupParser.tsx";
+import combineMarkupRules_mod from "combineMarkupRules.tsx";
+import MarkupParser_mod from "../../../discord_common/js/packages/markup/MarkupParser.tsx";
 import MarkupUtils from "MarkupUtils.tsx";
 import apply from "../../../_runtime/metro/00012__.js";
 
+let combineMarkupRules = combineMarkupRules_mod;
 const items = [
   MarkupRulesDefault.PROFILE_BIO_RULES,
   MarkupReactRulesDefault({ enableBuildOverrides: false, mustConfirmExternalLink: true }),
 ];
-let MarkupReactRules = fn(4627);
+const MarkupReactRules = fn(4627);
 items[2] = MarkupReactRules.createFetchingGameMentionRule();
 const importDefaultResultResult = combineMarkupRules(items);
 let c2 = importDefaultResultResult;
 let closure_3 = new privDefault({ max: 2000 });
 let closure_4 = { allowGameMentions: true };
+let MarkupParser = MarkupParser_mod;
 let closure_5 = MarkupParser.reactParserFor(importDefaultResultResult);
 let closure_6 = MarkupUtils.astParserFor(importDefaultResultResult);
+let MarkupParser = MarkupParser_mod;
+let combineMarkupRules = combineMarkupRules_mod;
 const items1 = [
   apply.omit(importDefaultResultResult, ["link", "url", "autolink", "customEmoji", "emoji", "commandMention"]),
+  {
+    emoji: {
+      react() {
+        return null;
+      },
+    },
+  },
 ];
-MarkupReactRules = {
+let obj2 = {
   emoji: {
     react() {
       return null;
     },
   },
 };
-items1[1] = MarkupReactRules;
 let tmp4 = new privDefault({ max: 2000 });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/markup/BioMarkupUtils.tsx");

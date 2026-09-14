@@ -22,17 +22,16 @@ export default function useStateFromSharedValue(arg0) {
   closure_1 = tmp2;
   const items = [arg0, tmp[1]];
   const layoutEffect = noop.useLayoutEffect(() => {
-    let obj = map;
     value = map.get(set);
     if (value == null) {
       const _Set = Set;
       set = new Set();
-      obj = {
+      const obj2 = {
         sharedValue: tmp,
         listeners: set,
         valueListener(arg0) {
           closure_0 = arg0;
-          set(1249).batchUpdates(() => {
+          set(1247).batchUpdates(() => {
             for (const item10005 of set) {
               let item10005Result = item10005(closure_0);
               continue;
@@ -42,20 +41,20 @@ export default function useStateFromSharedValue(arg0) {
         listenerId: null,
       };
       sum = sum + 1;
-      obj.listenerId = sum;
-      value = obj;
+      obj2.listenerId = sum;
+      value = obj2;
     }
     set = value;
     let listeners = value.listeners;
     listeners.add(callback);
     if (1 === value.listeners.size) {
-      const result = obj.set(tmp, value);
+      const result = map.set(tmp, value);
       let fn = function n(arg0, arg1, addListener) {
         closure_0 = arg1;
         addListener.addListener(arg0, (arg0) => set(4373).runOnJS(closure_0)(arg0));
       };
-      obj = { runOnJS: activeIndex(callback[3]).runOnJS };
-      fn.__closure = obj;
+      const obj4 = { runOnJS: activeIndex(callback[3]).runOnJS };
+      fn.__closure = obj4;
       fn.__workletHash = 568027628003;
       fn.__initData = __initData;
       activeIndex(callback[3]).runOnUI(fn)(value.listenerId, value.valueListener, tmp);
@@ -79,10 +78,7 @@ export default function useStateFromSharedValue(arg0) {
   return tmp[0];
 }
 export const useDerivedStateFromSharedValue = function useDerivedStateFromSharedValue(activeIndex, current) {
-  [tmp2, _slicedToArray] = _slicedToArray(
-    noop.useState(() => callback(activeIndex.get(), undefined)),
-    2,
-  );
+  [tmp2, _slicedToArray] = noop.useState(() => callback(activeIndex.get(), undefined));
   noop = noop.useRef(current);
   const layoutEffect = noop.useLayoutEffect(() => {
     closure_3.current = current;
@@ -93,17 +89,16 @@ export const useDerivedStateFromSharedValue = function useDerivedStateFromShared
   }, []);
   const items = [activeIndex, current];
   const layoutEffect1 = noop.useLayoutEffect(() => {
-    let obj = map;
     value = map.get(set);
     if (value == null) {
       const _Set = Set;
       set = new Set();
-      obj = {
+      const obj2 = {
         sharedValue: tmp,
         listeners: set,
         valueListener(arg0) {
           closure_0 = arg0;
-          set(1249).batchUpdates(() => {
+          set(1247).batchUpdates(() => {
             for (const item10005 of set) {
               let item10005Result = item10005(closure_0);
               continue;
@@ -113,20 +108,20 @@ export const useDerivedStateFromSharedValue = function useDerivedStateFromShared
         listenerId: null,
       };
       sum = sum + 1;
-      obj.listenerId = sum;
-      value = obj;
+      obj2.listenerId = sum;
+      value = obj2;
     }
     set = value;
     let listeners = value.listeners;
     listeners.add(callback);
     if (1 === value.listeners.size) {
-      const result = obj.set(tmp, value);
+      const result = map.set(tmp, value);
       let fn = function n(arg0, arg1, addListener) {
         closure_0 = arg1;
         addListener.addListener(arg0, (arg0) => set(4373).runOnJS(closure_0)(arg0));
       };
-      obj = { runOnJS: activeIndex(callback[3]).runOnJS };
-      fn.__closure = obj;
+      const obj4 = { runOnJS: activeIndex(callback[3]).runOnJS };
+      fn.__closure = obj4;
       fn.__workletHash = 568027628003;
       fn.__initData = __initData;
       activeIndex(callback[3]).runOnUI(fn)(value.listenerId, value.valueListener, tmp);

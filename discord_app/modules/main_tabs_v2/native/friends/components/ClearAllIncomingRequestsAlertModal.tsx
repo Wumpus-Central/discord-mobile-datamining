@@ -24,8 +24,8 @@ let closure_7 = async function _handleConfirm() {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj3 = { value, done: true };
+      return obj3;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -38,22 +38,20 @@ let closure_7 = async function _handleConfirm() {
           throw value;
         } else if (arg0 === 2) {
           c0 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj4 = { value, done: true };
+          return obj4;
         } else {
-          let obj1 = RelationshipActionCreatorsDefault;
           c1 = 1;
           c0 = 1;
-          obj1 = { value: null, done: false };
-          obj1.value = obj1.clearPendingRelationships();
-          return obj1;
+          const obj5 = { value: RelationshipActionCreatorsDefault.clearPendingRelationships(), done: false };
+          return obj5;
         }
       } else if (arg0 === 1) {
         c0 = 3;
         throw value;
       } else if (arg0 === 2) {
         c0 = 3;
-        obj = { value, done: true };
+        const obj = { value, done: true };
         return obj;
       } else {
         c0 = 3;
@@ -73,23 +71,23 @@ const result = size.fileFinishedImporting(
 );
 
 export default function ClearAllIncomingRequestsAlertModal(incomingRequestCount) {
-  let obj = { title: null, content: null, actions: null };
+  const obj = { title: null, content: null, actions: null };
   const intl = util.intl;
   obj.title = intl.string(util.t.z2pFjo);
   const intl2 = util.intl;
   obj.content = intl2.formatToPlainString(util.t["0nTvEw"], {
     incomingRequestCount: incomingRequestCount.incomingRequestCount,
   });
-  obj = { children: null };
-  obj = { variant: "destructive", onPress: handleConfirm, text: null };
+  const obj2 = { children: null };
+  const obj3 = { variant: "destructive", onPress: handleConfirm, text: null };
   const intl3 = util.intl;
-  obj.text = intl3.string(util.t["cY+Oob"]);
-  const items = [React4(AlertModal.AlertActionButton, obj, "confirm")];
-  const obj1 = { variant: "secondary", text: null };
+  obj3.text = intl3.string(util.t["cY+Oob"]);
+  const items = [React4(AlertModal.AlertActionButton, obj3, "confirm")];
+  const obj4 = { variant: "secondary", text: null };
   const intl4 = util.intl;
-  obj1.text = intl4.string(util.t["ETE/oC"]);
-  items[1] = React4(AlertModal.AlertActionButton, obj1, "cancel");
-  obj.children = items;
-  obj.actions = hasOwnProperty(AlertModal.AlertActions, obj);
+  obj4.text = intl4.string(util.t["ETE/oC"]);
+  items[1] = React4(AlertModal.AlertActionButton, obj4, "cancel");
+  obj2.children = items;
+  obj.actions = hasOwnProperty(AlertModal.AlertActions, obj2);
   return React4(AlertModal.AlertModal, obj);
 }

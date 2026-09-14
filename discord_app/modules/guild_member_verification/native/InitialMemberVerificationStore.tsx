@@ -30,6 +30,5 @@ let result = size.fileFinishedImporting("modules/guild_member_verification/nativ
 
 export default initialMemberVerificationStore;
 export const setInitialVerification = function setInitialVerification(guildId, state) {
-  const obj = { type: "SET_INITIAL_MEMBER_VERIFICATION", guildId, state };
-  obj.dispatch(obj);
+  DispatcherDefault.dispatch({ type: "SET_INITIAL_MEMBER_VERIFICATION", guildId, state });
 };

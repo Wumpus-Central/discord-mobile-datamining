@@ -5,6 +5,8 @@ import _slicedToArray from "../../../_runtime/metro/00032__.js";
 import noop from "../../../_runtime/metro/00019__.js";
 import ChannelFollowerStatsStore from "../../stores/ChannelFollowerStatsStore.tsx";
 
+const require = globalThis.__r;
+
 const require = fn;
 const HOUR = DurationsDefault.Millis.HOUR;
 const size = fn(2);

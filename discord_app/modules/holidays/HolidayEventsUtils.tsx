@@ -15,8 +15,7 @@ export default {
     );
   },
   useHolidaySoundpack() {
-    let obj = HolidayEventsConfigDefault;
-    const isExperimentEligible = obj.useIsExperimentEligible();
+    const isExperimentEligible = HolidayEventsConfigDefault.useIsExperimentEligible();
     const timestamp = Date.now();
     let tmp6 = null;
     if (tmp5) {
@@ -24,11 +23,11 @@ export default {
       if (null != HolidayEventsConfigDefault.soundpack) {
         tmp6 = null;
         if (null != HolidayEventsConfigDefault.soundpackLabel) {
-          obj = {
+          const obj2 = {
             soundpack: HolidayEventsConfigDefault.soundpack,
             soundpackLabel: HolidayEventsConfigDefault.soundpackLabel,
           };
-          tmp6 = obj;
+          tmp6 = obj2;
         }
       }
     }

@@ -33,20 +33,26 @@ export default noop.memo(function MessageFailedToSendNotification(notification) 
   const messageId = notification.messageId;
   const items = [channelId, messageId];
   const callback = noop.useCallback(() => {
-    const obj = { jumpType: Client.JumpType.INSTANT };
-    obj.transitionToMessage(channelId, messageId, obj);
+    const obj = transitionToChannel;
+    obj.transitionToMessage(channelId, messageId, { jumpType: Client.JumpType.INSTANT });
   }, items);
-  obj = { icon: null, children: null, header: null, onPress: null, notification: null };
-  obj = { style: closure_6().iconContainer, children: null };
+  const obj2 = { icon: null, children: null, header: null, onPress: null, notification: null };
+  const obj3 = { style: closure_6().iconContainer, children: null };
   const tmp = closure_6();
-  obj.children = jsx(channelId(10308).RetryIcon, { size: "md", color: messageId(576).colors.ICON_SUBTLE });
-  obj.icon = <View style={closure_6().iconContainer}>{null}</View>;
-  const obj2 = { text: null };
+  obj3.children = jsx(channelId(10308).RetryIcon, { size: "md", color: messageId(576).colors.ICON_SUBTLE });
+  obj2.icon = <View style={closure_6().iconContainer}>{null}</View>;
+  const obj5 = { text: null };
   const intl2 = channelId(1114).intl;
-  obj2.text = intl2.string(channelId(1114).t.xxRPOT);
-  obj.children = jsx(channelId(10235).SystemMessageText, { text: null });
-  obj.header = obj;
-  obj.onPress = callback;
-  obj.notification = notification;
-  return jsx(channelId(10298).NotificationPressable, { style: closure_6().iconContainer, children: null });
+  obj5.text = intl2.string(channelId(1114).t.xxRPOT);
+  obj2.children = jsx(channelId(10235).SystemMessageText, { text: null });
+  obj2.header = obj;
+  obj2.onPress = callback;
+  obj2.notification = notification;
+  return jsx(channelId(10298).NotificationPressable, {
+    icon: null,
+    children: null,
+    header: null,
+    onPress: null,
+    notification: null,
+  });
 });

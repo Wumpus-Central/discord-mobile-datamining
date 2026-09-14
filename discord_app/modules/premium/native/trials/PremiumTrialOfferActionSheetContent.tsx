@@ -19,8 +19,24 @@ const PremiumTypes = fn(1373).PremiumTypes;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 const createStyles = fn(4636);
-let obj = { contentContainer: null, buttonContainer: null, title: null, heroIllustrationContainer: null };
-obj = {
+let obj = {
+  contentContainer: {
+    paddingHorizontal: 36,
+    paddingTop: 18,
+    paddingBottom: 36,
+    width: "100%",
+    backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
+    alignItems: "flex-start",
+    display: "flex",
+    flexDirection: "column",
+    gap: 0,
+  },
+  buttonContainer: { marginVertical: 6, width: "100%", height: 48 },
+  title: { width: "100%", textAlign: "center" },
+  heroIllustrationContainer: { alignItems: "center", justifyContent: "center", height: 188, width: "100%" },
+};
+let closure_7 = createStyles.createStyles(obj);
+let obj3 = {
   paddingHorizontal: 36,
   paddingTop: 18,
   paddingBottom: 36,
@@ -31,11 +47,6 @@ obj = {
   flexDirection: "column",
   gap: 0,
 };
-obj.contentContainer = obj;
-obj.buttonContainer = { marginVertical: 6, width: "100%", height: 48 };
-obj.title = { width: "100%", textAlign: "center" };
-obj.heroIllustrationContainer = { alignItems: "center", justifyContent: "center", height: 188, width: "100%" };
-let closure_7 = createStyles.createStyles(obj);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/native/trials/PremiumTrialOfferActionSheetContent.tsx");
 
@@ -46,33 +57,32 @@ export default noop.memo(function PremiumTrialOfferActionSheetContent(onConfirm)
   if (trialOffer != null) {
     subscriptionTrial = trialOffer.subscriptionTrial;
   }
-  let obj = { IconComponent: UserIcon.UserIcon, label: null, description: null };
+  const obj = { IconComponent: UserIcon.UserIcon, label: null, description: null };
   const intl = util.intl;
   obj.label = intl.string(util.t.kpMomJ);
   const intl2 = util.intl;
   obj.description = intl2.string(util.t.uVUtPw);
   const items = [obj, ,];
-  obj = { IconComponent: ChatSmileIcon.ChatSmileIcon, label: null, description: null };
+  const obj2 = { IconComponent: ChatSmileIcon.ChatSmileIcon, label: null, description: null };
   const intl3 = util.intl;
-  obj.label = intl3.string(util.t["R2IV/Q"]);
+  obj2.label = intl3.string(util.t["R2IV/Q"]);
   const intl4 = util.intl;
-  obj.description = intl4.string(util.t["3SUJLd"]);
-  items[1] = obj;
-  obj = { IconComponent: FolderIcon.FolderIcon, label: null, description: null };
+  obj2.description = intl4.string(util.t["3SUJLd"]);
+  items[1] = obj2;
+  const obj3 = { IconComponent: FolderIcon.FolderIcon, label: null, description: null };
   const intl5 = util.intl;
-  obj.label = intl5.string(util.t["u/NJKc"]);
-  let obj3 = NitroFileUploadExperiments;
-  const obj1 = { legacyCopy: null, rolloutCopy: null };
+  obj3.label = intl5.string(util.t["u/NJKc"]);
+  const obj5 = { legacyCopy: null, rolloutCopy: null };
   const intl6 = util.intl;
-  obj1.legacyCopy = intl6.string(util.t.i1UuMk);
+  obj5.legacyCopy = intl6.string(util.t.i1UuMk);
   const intl7 = util.intl;
-  const obj2 = { maxFileSize: null };
-  let obj6 = PremiumUtils;
-  obj2.maxFileSize = obj6.getMaxFileSizeForPremiumType(PremiumTypes.TIER_2, { useSpace: false });
-  obj1.rolloutCopy = intl7.formatToPlainString(util.t.PvqncD, obj2);
-  obj.description = obj3.getNitroFileUploadRolloutCopy(obj1);
-  items[2] = obj;
-  obj3 = { style: tmp.contentContainer, children: null };
+  const obj6 = { maxFileSize: null };
+  const obj4 = NitroFileUploadExperiments;
+  obj6.maxFileSize = PremiumUtils.getMaxFileSizeForPremiumType(PremiumTypes.TIER_2, { useSpace: false });
+  obj5.rolloutCopy = intl7.formatToPlainString(util.t.PvqncD, obj6);
+  obj3.description = obj4.getNitroFileUploadRolloutCopy(obj5);
+  items[2] = obj3;
+  const obj8 = { style: tmp.contentContainer, children: null };
   const items1 = [
     hasOwnProperty(View, {
       style: tmp.heroIllustrationContainer,
@@ -81,7 +91,7 @@ export default noop.memo(function PremiumTrialOfferActionSheetContent(onConfirm)
     ,
     ,
   ];
-  const obj5 = { variant: "heading-xl/bold", color: "mobile-text-heading-primary", style: tmp.title, children: null };
+  const obj10 = { variant: "heading-xl/bold", color: "mobile-text-heading-primary", style: tmp.title, children: null };
   const intl8 = util.intl;
   let skuId;
   if (subscriptionTrial != null) {
@@ -96,27 +106,27 @@ export default noop.memo(function PremiumTrialOfferActionSheetContent(onConfirm)
     displayNameFromSku = PremiumUtils.getDisplayNameFromSku(skuId1);
     const tmp3Result = PremiumUtils;
   }
-  obj5.children = intl8.formatToPlainString(util.t.q8eMc0, {
+  obj10.children = intl8.formatToPlainString(util.t.q8eMc0, {
     displayName: displayNameFromSku,
     duration: intervalDuration,
   });
-  items1[1] = hasOwnProperty(Text_Text.Text, obj5);
+  items1[1] = hasOwnProperty(Text_Text.Text, obj10);
   items1[2] = hasOwnProperty(PremiumPerksListDefault, { perks: items });
-  obj6 = { style: tmp.buttonContainer, children: null };
-  const obj7 = { size: "lg", text: null, onPress: null, grow: true, icon: null };
+  const obj11 = { style: tmp.buttonContainer, children: null };
+  const obj12 = { size: "lg", text: null, onPress: null, grow: true, icon: null };
   const intl9 = util.intl;
-  obj7.text = intl9.formatToPlainString(util.t.xASjq5, { duration: intervalDuration });
-  obj7.onPress = onConfirm.onConfirm;
-  const obj4 = {
+  obj12.text = intl9.formatToPlainString(util.t.xASjq5, { duration: intervalDuration });
+  obj12.onPress = onConfirm.onConfirm;
+  const obj9 = {
     style: tmp.heroIllustrationContainer,
     children: hasOwnProperty(native.NitroWumpusFlightRight3dIllustration, { width: 180, height: 180 }),
   };
-  obj7.icon = hasOwnProperty(NitroWheelIcon.NitroWheelIcon, {
+  obj12.icon = hasOwnProperty(NitroWheelIcon.NitroWheelIcon, {
     size: "md",
     color: nativeDefault.unsafe_rawColors.WHITE,
   });
-  obj6.children = hasOwnProperty(components_Button_Button.Button, obj7);
-  items1[3] = hasOwnProperty(View, obj6);
-  obj3.children = items1;
-  return timestampProducer(View, obj3);
+  obj11.children = hasOwnProperty(components_Button_Button.Button, obj12);
+  items1[3] = hasOwnProperty(View, obj11);
+  obj8.children = items1;
+  return timestampProducer(View, obj8);
 });

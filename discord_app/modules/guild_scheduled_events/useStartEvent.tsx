@@ -27,8 +27,8 @@ export default function useStartEvent() {
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
-          let obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           return { value: "HermesInternal", done: null };
         }
@@ -41,8 +41,8 @@ export default function useStartEvent() {
               throw value;
             } else if (arg0 === 2) {
               c8 = 3;
-              obj = { value, done: true };
-              return obj;
+              const obj4 = { value, done: true };
+              return obj4;
             } else {
               closure_4 = tmp3;
               closure_3 = tmp7;
@@ -75,15 +75,15 @@ export default function useStartEvent() {
               throw value;
             } else if (arg0 === 2) {
               c8 = 3;
-              let obj1 = { value, done: true };
-              return obj1;
+              const obj6 = { value, done: true };
+              return obj6;
             } else {
               closure_132_0(true);
               c6 = 1;
               c7 = 3;
               c8 = 1;
-              const obj2 = { value: closure_1(9941).preStartEventActions(closure_131_0, closure_131_3), done: false };
-              return obj2;
+              const obj7 = { value: closure_1(9941).preStartEventActions(closure_131_0, closure_131_3), done: false };
+              return obj7;
             }
           } else {
             if (2 === tmp7) {
@@ -102,14 +102,13 @@ export default function useStartEvent() {
               } else if (arg0 === 2) {
                 c6 = 0;
                 c8 = 3;
-                const obj3 = { value, done: true };
-                return obj3;
+                const obj9 = { value, done: true };
+                return obj9;
               } else {
-                let obj7 = closure_1(9941);
                 c7 = 4;
                 c8 = 1;
-                let obj4 = { value: obj7.setEventAsActive(closure_131_0, closure_131_1), done: false };
-                return obj4;
+                const obj10 = { value: closure_1(9941).setEventAsActive(closure_131_0, closure_131_1), done: false };
+                return obj10;
               }
             } else if (4 === tmp7) {
               if (arg0 === 1) {
@@ -118,14 +117,13 @@ export default function useStartEvent() {
               } else if (arg0 === 2) {
                 c6 = 0;
                 c8 = 3;
-                const obj5 = { value, done: true };
-                return obj5;
+                const obj12 = { value, done: true };
+                return obj12;
               } else {
-                obj4 = closure_0(9942);
                 c7 = 5;
                 c8 = 1;
-                const obj6 = { value: obj4.navigateToEvent(closure_131_0, closure_131_2), done: false };
-                return obj6;
+                const obj13 = { value: closure_0(9942).navigateToEvent(closure_131_0, closure_131_2), done: false };
+                return obj13;
               }
             } else if (5 === tmp7) {
               if (arg0 === 1) {
@@ -134,14 +132,13 @@ export default function useStartEvent() {
               } else if (arg0 === 2) {
                 c6 = 0;
                 c8 = 3;
-                obj7 = { value, done: true };
-                return obj7;
+                const obj14 = { value, done: true };
+                return obj14;
               } else {
-                obj1 = closure_0(9942);
                 c7 = 6;
                 c8 = 1;
-                const obj8 = { value: obj1.postStartActions(closure_131_0, closure_131_2), done: false };
-                return obj8;
+                const obj15 = { value: closure_0(9942).postStartActions(closure_131_0, closure_131_2), done: false };
+                return obj15;
               }
             } else if (arg0 === 1) {
               c8 = 3;
@@ -152,7 +149,7 @@ export default function useStartEvent() {
             }
             c6 = 0;
             c8 = 3;
-            obj = { value, done: true };
+            const obj = { value, done: true };
             return obj;
           }
         } catch (tmp60) {

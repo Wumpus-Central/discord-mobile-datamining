@@ -153,10 +153,10 @@ export default {
     }
     return false;
   },
-  isDiscordUri(src) {
-    let tmp = null != src;
+  isDiscordUri(sanitizeUrlResult) {
+    let tmp = null != sanitizeUrlResult;
     if (tmp) {
-      const protocol = UrlAll.parse(src).protocol;
+      const protocol = UrlAll.parse(sanitizeUrlResult).protocol;
       let tmp4 = null != protocol;
       if (tmp4) {
         tmp4 = "discord:" === protocol;
@@ -310,12 +310,16 @@ export default {
     return UrlAll.format(safeParseWithQueryResult);
   },
   formatPathWithQuery(pathname, arg1) {
-    const obj = { pathname, query: _modDef12.pickBy(arg1) };
-    return obj.format(obj);
+    const obj2 = { pathname, query: null };
+    const obj = UrlAll;
+    obj2.query = _modDef12.pickBy(arg1);
+    return obj.format(obj2);
   },
   formatSearch(arg0) {
-    const obj = { query: _modDef12.pickBy(arg0) };
-    return obj.format(obj);
+    const obj2 = { query: null };
+    const obj = UrlAll;
+    obj2.query = _modDef12.pickBy(arg0);
+    return obj.format(obj2);
   },
   safeParseWithQuery(target) {
     try {

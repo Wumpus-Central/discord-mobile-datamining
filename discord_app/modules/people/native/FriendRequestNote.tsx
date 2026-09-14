@@ -5,24 +5,28 @@ import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import RelationshipStore from "../../../stores/RelationshipStore.tsx";
 
+const require = globalThis.__r;
+
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Pressable: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const RelationshipTypes = fn(1074).RelationshipTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-fn(4636);
-let createStyles = { container: null, spoiler: null, hidden: null };
-createStyles = {
-  width: "100%",
-  position: "relative",
-  padding: nativeDefault.space.PX_12,
-  borderRadius: nativeDefault.radii.md,
-  minHeight: 56,
-  flexDirection: "row",
-  alignItems: "center",
+const createStyles = fn(4636);
+let obj2 = {
+  container: {
+    width: "100%",
+    position: "relative",
+    padding: nativeDefault.space.PX_12,
+    borderRadius: nativeDefault.radii.md,
+    minHeight: 56,
+    flexDirection: "row",
+    alignItems: "center",
+  },
+  spoiler: null,
+  hidden: null,
 };
-createStyles.container = createStyles;
 const rect = {
   position: "absolute",
   top: 0,
@@ -33,9 +37,9 @@ const rect = {
   alignItems: "center",
   borderRadius: nativeDefault.radii.md,
 };
-createStyles.spoiler = rect;
-createStyles.hidden = { opacity: 0 };
-let closure_10 = createStyles.createStyles(createStyles);
+obj2.spoiler = rect;
+obj2.hidden = { opacity: 0 };
+let closure_10 = createStyles.createStyles(obj2);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/people/native/FriendRequestNote.tsx");
 
@@ -43,20 +47,20 @@ export default function FriendRequestNote(styles) {
   ({ userId: require, backgroundColor, analyticsLocation } = styles);
   noop = undefined;
   const tmp = closure_10();
-  let obj = require("HideFriendRequestNotesUtils");
-  const hideFriendRequestNotes = obj.useHideFriendRequestNotes();
-  let obj1 = require("initialize");
+  const hideFriendRequestNotes = require("HideFriendRequestNotesUtils").useHideFriendRequestNotes();
+  const obj = require("HideFriendRequestNotesUtils");
   const items = [RelationshipStore];
-  const stateFromStoresObject = obj1.useStateFromStoresObject(items, () => ({
+  const stateFromStoresObject = require("initialize").useStateFromStoresObject(items, () => ({
     note: RelationshipStore.getNote(require),
     type: RelationshipStore.getRelationshipType(require),
   }));
   const note = stateFromStoresObject.note;
+  let obj2 = require("initialize");
   [tmp7, c3] = note(noop.useState(stateFromStoresObject.type === RelationshipTypes.PENDING_OUTGOING), 2);
   const items1 = [analyticsLocation, note];
   const callback = noop.useCallback(() => {
     _undefined(true);
-    const obj = { analyticsLocation, noteLength: null };
+    const obj2 = { analyticsLocation, noteLength: null };
     let num;
     if (note != null) {
       num = note.length;
@@ -64,8 +68,8 @@ export default function FriendRequestNote(styles) {
     if (num == null) {
       num = 0;
     }
-    obj.noteLength = num;
-    const result = obj.trackViewFriendRequestNote(obj);
+    obj2.noteLength = num;
+    const result = PeopleListTracking.trackViewFriendRequestNote(obj2);
   }, items1);
   let tmp13Result = null;
   if (!hideFriendRequestNotes) {
@@ -73,36 +77,36 @@ export default function FriendRequestNote(styles) {
     if (null != note) {
       tmp13Result = null;
       if ("" !== note) {
-        obj = { style: null, onPress: null, children: null };
+        const obj3 = { style: null, onPress: null, children: null };
         const items2 = [tmp.container, styles.styles];
-        obj.style = items2;
-        obj.onPress = callback;
+        obj3.style = items2;
+        obj3.onPress = callback;
         let hidden;
         if (!tmp7) {
           hidden = tmp.hidden;
         }
-        obj = { style: hidden, children: null };
-        obj1 = {
+        const obj4 = { style: hidden, children: null };
+        const obj5 = {
           accessible: tmp7,
           accessibilityElementsHidden: !tmp7,
           accessibilityLabel: str,
           variant: "redesign/message-preview/normal",
           children: note,
         };
-        obj.children = closure_8(require("Text/Text").Text, obj1);
-        const items3 = [closure_8(closure_5, obj)];
+        obj4.children = closure_8(require("Text/Text").Text, obj5);
+        const items3 = [closure_8(closure_5, obj4)];
         let tmp15Result = null;
         if (!tmp7) {
           const items4 = [tmp.spoiler];
           let tmp12;
           if (null != backgroundColor) {
-            const obj2 = { backgroundColor };
-            tmp12 = obj2;
+            const obj6 = { backgroundColor };
+            tmp12 = obj6;
           }
-          const obj3 = { style: null, children: null };
+          const obj7 = { style: null, children: null };
           items4[1] = tmp12;
-          obj3.style = items4;
-          const obj4 = {
+          obj7.style = items4;
+          const obj8 = {
             icon: closure_8(require("EyeIcon").EyeIcon, { size: "sm" }),
             variant: "secondary",
             size: "sm",
@@ -110,13 +114,13 @@ export default function FriendRequestNote(styles) {
             text: null,
           };
           const intl = require("util").intl;
-          obj4.text = intl.string(require("util").t.sB0q4C);
-          obj3.children = closure_8(require("components/Button/Button").Button, obj4);
-          tmp15Result = closure_8(closure_5, obj3);
+          obj8.text = intl.string(require("util").t.sB0q4C);
+          obj7.children = closure_8(require("components/Button/Button").Button, obj8);
+          tmp15Result = closure_8(closure_5, obj7);
         }
         items3[1] = tmp15Result;
-        obj.children = items3;
-        tmp13Result = closure_9(closure_4, obj);
+        obj3.children = items3;
+        tmp13Result = closure_9(closure_4, obj3);
       }
     }
   }

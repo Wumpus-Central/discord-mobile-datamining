@@ -12,8 +12,7 @@ export default function useTrackFavoritesGuildUpsellModalOpened(source) {
   importDefault = source;
   const items = [source];
   const effect = noop.useEffect(() => {
-    const obj = { source };
-    obj.track(AnalyticEvents.FAVORITES_GUILD_UPSELL_MODAL_OPENED, obj);
+    AnalyticsUtilsDefault.track(AnalyticEvents.FAVORITES_GUILD_UPSELL_MODAL_OPENED, { source });
   }, items);
   return {
     analyticsLocations: useAnalyticsLocationsDefault(AnalyticsLocationDefault.FAVORITES_GUILD_UPSELL_MODAL)

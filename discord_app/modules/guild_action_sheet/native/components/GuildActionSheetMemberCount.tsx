@@ -8,7 +8,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-fn(4636);
+const createStyles = fn(4636);
 let obj = {
   wrapper: { flexDirection: "row", alignItems: "center" },
   dot: null,
@@ -20,17 +20,17 @@ let obj = {
 let size = { width: 8, height: 8, borderRadius: nativeDefault.radii.sm };
 obj.dot = size;
 obj.dotContainer = { alignItems: "center", justifyContent: "center", marginRight: 4 };
-obj = { backgroundColor: nativeDefault.colors.TEXT_STATUS_ONLINE };
-obj.onlineDot = obj;
-const createStyles = { backgroundColor: nativeDefault.colors.TEXT_STATUS_OFFLINE };
-obj.offlineDot = createStyles;
-const PlatformUtils = fn(1151);
+obj.onlineDot = { backgroundColor: nativeDefault.colors.TEXT_STATUS_ONLINE };
+let obj3 = { backgroundColor: nativeDefault.colors.TEXT_STATUS_ONLINE };
+obj.offlineDot = { backgroundColor: nativeDefault.colors.TEXT_STATUS_OFFLINE };
+const PlatformUtils = fn(1364);
 let num;
 if (PlatformUtils.isAndroid()) {
   num = 14;
 }
 obj.refreshText = { textAlignVertical: "center", lineHeight: num };
 let closure_5 = createStyles.createStyles(obj);
+let obj4 = { backgroundColor: nativeDefault.colors.TEXT_STATUS_OFFLINE };
 size = fn(2);
 const result = size.fileFinishedImporting(
   "modules/guild_action_sheet/native/components/GuildActionSheetMemberCount.tsx",
@@ -53,36 +53,36 @@ export default noop.memo(function MemberCount(arg0) {
     } else {
       etqpUG = util.t.etqpUG;
     }
-    let obj = { count };
+    const obj = { count };
     const tmp12 = closure_5();
-    obj = { style: tmp12.wrapper, children: null };
+    const obj2 = { style: tmp12.wrapper, children: null };
     const items = [tmp12.dotContainer];
     let tmp16 = null != dotContainerWidth;
     if (tmp16) {
-      obj = { width: dotContainerWidth };
-      tmp16 = obj;
+      const obj3 = { width: dotContainerWidth };
+      tmp16 = obj3;
     }
-    const obj1 = { style: null, children: null };
+    const obj4 = { style: null, children: null };
     items[1] = tmp16;
-    obj1.style = items;
+    obj4.style = items;
     const items1 = [tmp12.dot];
-    const obj2 = { style: null };
+    const obj5 = { style: null };
     items1[1] = "online" === type ? tmp12.onlineDot : tmp12.offlineDot;
-    obj2.style = items1;
-    obj1.children = React3(View, obj2);
-    const items2 = [React3(View, obj1)];
+    obj5.style = items1;
+    obj4.children = React3(View, obj5);
+    const items2 = [React3(View, obj4)];
     if (textVariant == null) {
       textVariant = "text-sm/normal";
     }
-    const obj3 = { variant: textVariant, color: null, lineClamp: 1, style: null, children: null };
+    const obj6 = { variant: textVariant, color: null, lineClamp: 1, style: null, children: null };
     if (color == null) {
       color = "text-default";
     }
-    obj3.color = color;
-    obj3.style = tmp12.refreshText;
-    obj3.children = intl.format(etqpUG, obj);
-    items2[1] = React3(Text_Text.Text, obj3);
-    obj.children = items2;
-    return React4(View, obj);
+    obj6.color = color;
+    obj6.style = tmp12.refreshText;
+    obj6.children = intl.format(etqpUG, obj);
+    items2[1] = React3(Text_Text.Text, obj6);
+    obj2.children = items2;
+    return React4(View, obj2);
   }
 });

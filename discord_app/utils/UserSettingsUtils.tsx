@@ -74,9 +74,9 @@ export const computeFlags = function computeFlags(setting) {
   }
   return obj;
 };
-export const trackUserSettingsPaneViewed = function trackUserSettingsPaneViewed(source) {
-  ({ destinationPane, originPane, source, subsection, locationStack, applicationId } = source);
-  const obj = {
+export const trackUserSettingsPaneViewed = function trackUserSettingsPaneViewed(arg0) {
+  ({ destinationPane, originPane, source, subsection, locationStack, applicationId } = arg0);
+  const obj2 = {
     settings_type: "user",
     origin_pane: originPane,
     destination_pane: destinationPane,
@@ -84,9 +84,11 @@ export const trackUserSettingsPaneViewed = function trackUserSettingsPaneViewed(
     source,
     subsection,
     application_id: applicationId,
-    search_session_id: SettingSearchSessionAnalyticsManagerDefault.getSearchSessionId(),
+    search_session_id: null,
   };
-  obj.trackWithMetadata(constants.SETTINGS_PANE_VIEWED, obj);
+  const obj = AppAnalyticsUtilsDefault;
+  obj2.search_session_id = SettingSearchSessionAnalyticsManagerDefault.getSearchSessionId();
+  obj.trackWithMetadata(constants.SETTINGS_PANE_VIEWED, obj2);
 };
 export { NonSpamRetrainingOptInOptions };
 export const NonSpamRetrainingOptInOptionsToValue = {
@@ -95,27 +97,27 @@ export const NonSpamRetrainingOptInOptionsToValue = {
   [NonSpamRetrainingOptInOptions.OPTOUT]: false,
 };
 export const generateNonSpamRetrainingOptInSettingOptions = function generateNonSpamRetrainingOptInSettingOptions() {
-  let obj = { name: null, desc: null, value: null };
+  const obj = { name: null, desc: null, value: null };
   const intl = util.intl;
   obj.name = intl.string(util.t["/yLMRQ"]);
   const intl2 = util.intl;
   obj.desc = intl2.string(util.t["3fzkPq"]);
   obj.value = obj.OPTIN;
   const items = [obj, ,];
-  obj = { name: null, desc: null, value: null };
+  const obj2 = { name: null, desc: null, value: null };
   const intl3 = util.intl;
-  obj.name = intl3.string(util.t["21fP2b"]);
+  obj2.name = intl3.string(util.t["21fP2b"]);
   const intl4 = util.intl;
-  obj.desc = intl4.string(util.t.ggJ9jR);
-  obj.value = obj.OPTOUT;
-  items[1] = obj;
-  obj = { name: null, desc: null, value: null };
+  obj2.desc = intl4.string(util.t.ggJ9jR);
+  obj2.value = obj.OPTOUT;
+  items[1] = obj2;
+  const obj3 = { name: null, desc: null, value: null };
   const intl5 = util.intl;
-  obj.name = intl5.string(util.t.OWIo8w);
+  obj3.name = intl5.string(util.t.OWIo8w);
   const intl6 = util.intl;
-  obj.desc = intl6.string(util.t.HqYXpw);
-  obj.value = obj.UNDECIDED;
-  items[2] = obj;
+  obj3.desc = intl6.string(util.t.HqYXpw);
+  obj3.value = obj.UNDECIDED;
+  items[2] = obj3;
   return items;
 };
 export const shakeUserSettings = function shakeUserSettings(arg0) {

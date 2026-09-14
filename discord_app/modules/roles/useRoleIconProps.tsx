@@ -4,6 +4,8 @@ import noop from "../../../_runtime/metro/00019__.js";
 import GuildRoleStore from "../../stores/GuildRoleStore.tsx";
 import GuildStore from "../../stores/GuildStore.tsx";
 
+const require = globalThis.__r;
+
 require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/roles/useRoleIconProps.tsx");
@@ -56,14 +58,13 @@ export const useRoleIconProps = function useRoleIconProps(guildId) {
   return num.useMemo(() => {
     let tmp3;
     if (null != stateFromStores) {
-      let obj = RoleIconUtils;
-      const roleIconData = obj.getRoleIconData(stateFromStores, num);
+      const roleIconData = RoleIconUtils.getRoleIconData(stateFromStores, num);
       if (null != roleIconData) {
-        obj = { src: roleIconData.customIconSrc, name: null, roleId: null, size: null, unicodeEmoji: null };
+        const obj3 = { src: roleIconData.customIconSrc, name: null, roleId: null, size: null, unicodeEmoji: null };
         ({ name: obj2.name, id: obj2.roleId } = stateFromStores);
-        obj.size = num;
-        obj.unicodeEmoji = roleIconData.unicodeEmoji;
-        tmp3 = obj;
+        obj3.size = num;
+        obj3.unicodeEmoji = roleIconData.unicodeEmoji;
+        tmp3 = obj3;
       }
     }
     return tmp3;
@@ -71,14 +72,13 @@ export const useRoleIconProps = function useRoleIconProps(guildId) {
 };
 export const getRoleIconProps = function getRoleIconProps(roleIconRole, size) {
   if (null != roleIconRole) {
-    let obj = RoleIconUtils;
-    const roleIconData = obj.getRoleIconData(roleIconRole, size);
+    const roleIconData = RoleIconUtils.getRoleIconData(roleIconRole, size);
     if (null != roleIconData) {
-      obj = { src: roleIconData.customIconSrc, name: null, roleId: null, size: null, unicodeEmoji: null };
+      const obj3 = { src: roleIconData.customIconSrc, name: null, roleId: null, size: null, unicodeEmoji: null };
       ({ name: obj2.name, id: obj2.roleId } = roleIconRole);
-      obj.size = size;
-      obj.unicodeEmoji = roleIconData.unicodeEmoji;
-      return obj;
+      obj3.size = size;
+      obj3.unicodeEmoji = roleIconData.unicodeEmoji;
+      return obj3;
     }
   }
 };
@@ -97,12 +97,13 @@ export const useRoleIconPropsForPreview = function useRoleIconPropsForPreview(gu
             guild = GuildStore.getGuild(guildId);
           }
           if (role == null) {
-            role = undefined;
+            let role1;
             if (null != guildId) {
               if (null != roleId) {
-                role = GuildRoleStore.getRole(guildId, roleId);
+                role1 = GuildRoleStore.getRole(guildId, roleId);
               }
             }
+            role = role1;
           }
           let tmp3;
           if (null != guild) {
@@ -124,13 +125,12 @@ export const useRoleIconPropsForPreview = function useRoleIconPropsForPreview(gu
   return stateFromStores.useMemo(() => {
     let tmp2;
     if (null != stateFromStores) {
-      let obj = RoleIconUtils;
-      const roleIconData = obj.getRoleIconData(stateFromStores, undefined);
+      const roleIconData = RoleIconUtils.getRoleIconData(stateFromStores, undefined);
       if (null != roleIconData) {
-        obj = { src: roleIconData.customIconSrc, name: null, roleId: null, size: "Array", unicodeEmoji: "words" };
+        const obj3 = { src: roleIconData.customIconSrc, name: null, roleId: null, size: "Array", unicodeEmoji: null };
         ({ name: obj2.name, id: obj2.roleId } = stateFromStores);
-        obj.unicodeEmoji = roleIconData.unicodeEmoji;
-        tmp2 = obj;
+        obj3.unicodeEmoji = roleIconData.unicodeEmoji;
+        tmp2 = obj3;
       }
     }
     return tmp2;
@@ -150,12 +150,13 @@ export const computeRoleIconRole = function computeRoleIconRole(arg0) {
     guild = obj.getGuild(guildId);
   }
   if (role == null) {
-    role = undefined;
+    let role1;
     if (null != guildId) {
       if (null != roleId) {
-        role = obj2.getRole(guildId, roleId);
+        role1 = obj2.getRole(guildId, roleId);
       }
     }
+    role = role1;
   }
   if (null != guild) {
     if (null != role) {

@@ -2,7 +2,7 @@
 import initializeDefault from "../../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../../Dispatcher.tsx";
 
-let toggles = {
+const obj = {
   MESSAGING: 0,
   [0]: "MESSAGING",
   OVERLAYS: 1,
@@ -18,64 +18,64 @@ let toggles = {
   LIBDISCORE: 6,
   [6]: "LIBDISCORE",
 };
-toggles = {
-  visual_effect_view_overrides: { label: "Blur view overrides for designers to test with", category: toggles.OVERLAYS },
+const obj2 = {
+  visual_effect_view_overrides: { label: "Blur view overrides for designers to test with", category: obj.OVERLAYS },
   obscure_blur_effect_explicit_content_enabled: {
     label: "Force explicit content obscure blur effect on for message media and embeds",
-    category: toggles.OVERLAYS,
+    category: obj.OVERLAYS,
   },
   obscure_blur_effect_gore_content_enabled: {
     label: "Force gore content obscure blur effect on for message media and embeds",
-    category: toggles.OVERLAYS,
+    category: obj.OVERLAYS,
   },
   obscure_blur_effect_self_harm_content_enabled: {
     label: "Force self harm content obscure blur effect on for message media and embeds",
-    category: toggles.OVERLAYS,
+    category: obj.OVERLAYS,
   },
   explicit_media_redaction_ignore_pending_scan: {
     label: "Ignore pending scan on explicit media",
-    category: toggles.OVERLAYS,
+    category: obj.OVERLAYS,
   },
-  analytics_debugger: { label: "Enable analytics debugger view", category: toggles.OVERLAYS },
-  idle_status_indicator: { label: "Enable idle status indicator", category: toggles.OVERLAYS },
+  analytics_debugger: { label: "Enable analytics debugger view", category: obj.OVERLAYS },
+  idle_status_indicator: { label: "Enable idle status indicator", category: obj.OVERLAYS },
   highlight_mana_text: {
     label:
       "Mana Text Migration Highlighter. Green: migrated Text/Heading. Dashed red: migrated but a caller style overrides the variant, so it will not move with the experiment. Solid red: unmigrated LegacyText. Yellow: TextStyleSheet read directly (experiment-reachable, not migrated); requires an app restart to take effect.",
-    category: toggles.OVERLAYS,
+    category: obj.OVERLAYS,
   },
   upload_fail_50: {
     label: "Uploads: Fail 50% of uploads with 500 status after a 1 second delay",
-    category: toggles.MESSAGING,
+    category: obj.MESSAGING,
   },
-  send_fail_100: { label: "Send: Fail with 500 status", category: toggles.MESSAGING },
+  send_fail_100: { label: "Send: Fail with 500 status", category: obj.MESSAGING },
   preview_own_typing_indicator: {
     label: "Typing Indicator: always show the chat typing indicator as if you were typing",
-    category: toggles.MESSAGING,
+    category: obj.MESSAGING,
   },
-  premium_roadblocks: { label: "Enable all new premium roadblocks", category: toggles.PREMIUM },
-  force_mock_iap: { label: "[iOS] Force mock IAP products", category: toggles.PREMIUM },
-  iar_testing: { label: "Enable staff only test iar menu options", category: toggles.REPORTING },
+  premium_roadblocks: { label: "Enable all new premium roadblocks", category: obj.PREMIUM },
+  force_mock_iap: { label: "[iOS] Force mock IAP products", category: obj.PREMIUM },
+  iar_testing: { label: "Enable staff only test iar menu options", category: obj.REPORTING },
   iar_skip_api_report_submit: {
     label: "Enable to skip calling the API to skip submitting actual IAR reports",
-    category: toggles.REPORTING,
+    category: obj.REPORTING,
   },
-  iar_show_report_sub_type_labels: { label: "Show IAR report sub type labels", category: toggles.REPORTING },
+  iar_show_report_sub_type_labels: { label: "Show IAR report sub type labels", category: obj.REPORTING },
   only_show_preview_app_collections: {
     label:
       "Only show application collections (e.g. in App Directory, App Launcher in text) that have the 'preview' active state. This disables application collections cache, too, so you can see collections updates immediately.",
-    category: toggles.APP_COLLECTIONS,
+    category: obj.APP_COLLECTIONS,
   },
   disable_app_collections_cache: {
     label: "Disable application collections cache so that you can see updates to collections immediately.",
-    category: toggles.APP_COLLECTIONS,
+    category: obj.APP_COLLECTIONS,
   },
-  shop_disable_cache: { label: "Disable collectibles shop cache", category: toggles.SHOP },
-  shop_include_unpublished: { label: "Show unpublished items in collectibles shop", category: toggles.SHOP },
-  shop_show_debug_overlay: { label: "Show debug log overlay in collectibles shop", category: toggles.SHOP },
-  bypass_google_sku_sync: { label: "[Android] Bypass Google SKU sync in collectibles shop", category: toggles.SHOP },
+  shop_disable_cache: { label: "Disable collectibles shop cache", category: obj.SHOP },
+  shop_include_unpublished: { label: "Show unpublished items in collectibles shop", category: obj.SHOP },
+  shop_show_debug_overlay: { label: "Show debug log overlay in collectibles shop", category: obj.SHOP },
+  bypass_google_sku_sync: { label: "[Android] Bypass Google SKU sync in collectibles shop", category: obj.SHOP },
   libdiscore_verbose_telemetry_logging: {
     label: "Enable verbose telemetry logging for libdiscore",
-    category: toggles.LIBDISCORE,
+    category: obj.LIBDISCORE,
   },
 };
 let toggleStates = {};
@@ -86,7 +86,7 @@ prototype["getUserAgnosticState"] = function getUserAgnosticState() {
   return { toggleStates };
 };
 prototype["initialize"] = function initialize(toggleStates) {
-  for (const key10005 in obj) {
+  for (const key10005 in obj2) {
     let flag;
     if (arg0 != null) {
       toggleStates = arg0.toggleStates;
@@ -137,7 +137,7 @@ prototype["allByCategory"] = function allByCategory(PREMIUM) {
 };
 DevSettingsStore.displayName = "DevToolsDevSettingsStore";
 DevSettingsStore.persistKey = "DevToolsDevSettingsStore";
-toggles = {
+const devSettingsStore = new DevSettingsStore(DispatcherDefault, {
   DEV_TOOLS_DEV_SETTING_SET: function handleSet(value) {
     if (false !== value.value) {
       closure_1[value.toggle] = value.value;
@@ -146,20 +146,19 @@ toggles = {
       delete tmp2[tmp];
     }
   },
-};
-const devSettingsStore = new DevSettingsStore(DispatcherDefault, toggles);
+});
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/devtools/dev_settings/DevSettingsStore.tsx");
 
 export default devSettingsStore;
-export const DevSettingsCategory = toggles;
+export const DevSettingsCategory = obj;
 export const CATEGORY_LABELS = {
-  [toggles.REPORTING]: "Reporting Toggles",
-  [toggles.OVERLAYS]: "Dev Overlays",
-  [toggles.MESSAGING]: "Messaging Toggles",
-  [toggles.APP_COLLECTIONS]: "App Collections Toggles",
-  [toggles.PREMIUM]: "Premium Toggles",
-  [toggles.SHOP]: "Shop Toggles",
-  [toggles.LIBDISCORE]: "Libdiscore Toggles",
+  [obj.REPORTING]: "Reporting Toggles",
+  [obj.OVERLAYS]: "Dev Overlays",
+  [obj.MESSAGING]: "Messaging Toggles",
+  [obj.APP_COLLECTIONS]: "App Collections Toggles",
+  [obj.PREMIUM]: "Premium Toggles",
+  [obj.SHOP]: "Shop Toggles",
+  [obj.LIBDISCORE]: "Libdiscore Toggles",
 };
-export { toggles };
+export const toggles = obj2;

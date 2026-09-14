@@ -83,7 +83,7 @@ export const trackMediaRedactionAction = function trackMediaRedactionAction(arg0
   if (null != channelId) {
     if (null != messageId) {
       const channel = ChannelStore.getChannel(channelId);
-      let obj = {
+      const obj3 = {
         action: tmp,
         guild_id: null,
         channel_id: null,
@@ -95,23 +95,23 @@ export const trackMediaRedactionAction = function trackMediaRedactionAction(arg0
       if (channel != null) {
         guild_id = channel.guild_id;
       }
-      obj.guild_id = guild_id;
-      obj.channel_id = channelId;
-      obj.message_id = messageId;
-      obj = SelfModUtils;
-      obj.user_is_underage = obj.isCurrentUserTeen();
-      obj.context = tmp2;
-      AnalyticsUtilsDefault.track(AnalyticEvents.EXPLICIT_MEDIA_ACTION, obj);
+      obj3.guild_id = guild_id;
+      obj3.channel_id = channelId;
+      obj3.message_id = messageId;
+      const obj2 = AnalyticsUtilsDefault;
+      obj3.user_is_underage = SelfModUtils.isCurrentUserTeen();
+      obj3.context = tmp2;
+      obj2.track(AnalyticEvents.EXPLICIT_MEDIA_ACTION, obj3);
     }
   }
 };
 export const TimeoutCancelSource = { UPDATE: "update", TIMEOUT: "timeout" };
 export const trackScanTiming = function trackScanTiming(setAt, UPDATE) {
   const bound = Math.min(Math.floor((Date.now() - setAt) / 1000), 3);
-  const obj = { name: MetricEvents.MetricEvents.EXPLICIT_MEDIA_SCAN_CLIENT_TIMING, tags: null };
+  const obj2 = { name: MetricEvents.MetricEvents.EXPLICIT_MEDIA_SCAN_CLIENT_TIMING, tags: null };
   const items = ["timingBucket:" + bound, "source:" + UPDATE, "metricVersion:1"];
-  obj.tags = items;
-  obj.increment(obj);
+  obj2.tags = items;
+  MonitoringAgentDefault.increment(obj2);
 };
 export const trackScanningTimedOut = function trackScanningTimedOut(arg0) {
   ({ channelId, messageId, attachmentIds, embedIds } = arg0);
@@ -126,7 +126,7 @@ export const trackScanningTimedOut = function trackScanningTimedOut(arg0) {
       }
       if (0 !== num) {
         const channel = ChannelStore.getChannel(channelId);
-        let obj = {
+        const obj2 = {
           channel_id: channelId,
           guild_id: null,
           message_id: null,
@@ -139,18 +139,21 @@ export const trackScanningTimedOut = function trackScanningTimedOut(arg0) {
         if (channel != null) {
           guild_id = channel.guild_id;
         }
-        obj.guild_id = guild_id;
-        obj.message_id = messageId;
-        obj.embed_ids = embedIds;
-        obj.user_is_underage = SelfModUtils.isCurrentUserTeen();
-        obj.scan_timeout_duration = ExplicitMediaManager.MESSAGE_SCAN_TIMEOUT;
-        obj.attachment_ids_v2 = attachmentIds;
-        obj.track(AnalyticEvents.EXPLICIT_MEDIA_SCAN_CLIENT_TIMED_OUT, obj);
-        let tmp3Result = MonitoringAgentDefault;
-        obj = { name: MetricEvents.MetricEvents.EXPLICIT_MEDIA_SCAN_CLIENT_TIMED_OUT, tags: ["metricVersion:1"] };
-        tmp3Result.increment(obj);
-        tmp3Result = MonitoringAgentDefault;
-        const obj1 = { name: MetricEvents.MetricEvents.EXPLICIT_MEDIA_SCAN_CLIENT_TIMED_OUT_DISTRIBUTION };
+        obj2.guild_id = guild_id;
+        obj2.message_id = messageId;
+        obj2.embed_ids = embedIds;
+        const obj = AnalyticsUtilsDefault;
+        obj2.user_is_underage = SelfModUtils.isCurrentUserTeen();
+        obj2.scan_timeout_duration = ExplicitMediaManager.MESSAGE_SCAN_TIMEOUT;
+        obj2.attachment_ids_v2 = attachmentIds;
+        obj.track(AnalyticEvents.EXPLICIT_MEDIA_SCAN_CLIENT_TIMED_OUT, obj2);
+        const obj4 = {
+          name: MetricEvents.MetricEvents.EXPLICIT_MEDIA_SCAN_CLIENT_TIMED_OUT,
+          tags: ["metricVersion:1"],
+        };
+        MonitoringAgentDefault.increment(obj4);
+        const tmp3Result = MonitoringAgentDefault;
+        const obj5 = { name: MetricEvents.MetricEvents.EXPLICIT_MEDIA_SCAN_CLIENT_TIMED_OUT_DISTRIBUTION };
         let num4;
         if (attachmentIds != null) {
           num4 = attachmentIds.length;
@@ -165,7 +168,8 @@ export const trackScanningTimedOut = function trackScanningTimedOut(arg0) {
         if (num5 == null) {
           num5 = 0;
         }
-        tmp3Result.distribution(obj1, num4 + num5);
+        MonitoringAgentDefault.distribution(obj5, num4 + num5);
+        const tmp3Result2 = MonitoringAgentDefault;
       } else {
         let num3;
         if (embedIds != null) {
@@ -182,7 +186,7 @@ export const trackExplicitMediaRedactableMessagedLoaded = function trackExplicit
   ({ channelId, numOfAttachmentsPendingScan, numOfEmbedsPendingScan } = arg0);
   if (null != channelId) {
     const channel = ChannelStore.getChannel(channelId);
-    let obj = {
+    const obj = {
       channel_id: channelId,
       guild_id: null,
       num_of_attachments: null,
@@ -202,8 +206,8 @@ export const trackExplicitMediaRedactableMessagedLoaded = function trackExplicit
     AnalyticsUtilsDefault.track(AnalyticEvents.EXPLICIT_MEDIA_REDACTABLE_MESSAGES_LOADED, obj);
     const sum = numOfAttachmentsPendingScan + numOfEmbedsPendingScan;
     if (sum > 0) {
-      obj = { name: MetricEvents.MetricEvents.EXPLICIT_MEDIA_PENDING_MESSAGE_LOADED_V2 };
-      MonitoringAgentDefault.distribution(obj, sum);
+      const obj2 = { name: MetricEvents.MetricEvents.EXPLICIT_MEDIA_PENDING_MESSAGE_LOADED_V2 };
+      MonitoringAgentDefault.distribution(obj2, sum);
       const tmp10Result = MonitoringAgentDefault;
     }
   }
@@ -227,7 +231,7 @@ export const trackRedactableMessageLoaded = function trackRedactableMessageLoade
   if (null != channelId) {
     if (null != messageId) {
       const channel = ChannelStore.getChannel(channelId);
-      const obj = {
+      const obj2 = {
         message_id: messageId,
         channel_id: channelId,
         channel_type: null,
@@ -248,24 +252,24 @@ export const trackRedactableMessageLoaded = function trackRedactableMessageLoade
       if (channel != null) {
         type = channel.type;
       }
-      obj.channel_type = type;
+      obj2.channel_type = type;
       let guild_id;
       if (channel != null) {
         guild_id = channel.guild_id;
       }
-      obj.guild_id = guild_id;
-      obj.num_of_attachments = numOfAttachments;
-      obj.num_of_gore_attachments = numOfGoreAttachments;
-      obj.num_of_explicit_attachments = numOfExplicitAttachments;
-      obj.num_of_self_harm_attachments = numOfSelfHarmAttachments;
-      obj.num_of_embeds = numOfEmbeds;
-      obj.num_of_gore_embeds = numOfGoreEmbeds;
-      obj.num_of_explicit_embeds = numOfExplicitEmbeds;
-      obj.num_of_self_harm_embeds = numOfSelfHarmEmbeds;
-      obj.has_redactable_explicit = tmp;
-      obj.has_redactable_gore = tmp2;
-      obj.has_redactable_self_harm = tmp3;
-      obj.track(AnalyticEvents.REDACTABLE_MESSAGE_LOADED, obj);
+      obj2.guild_id = guild_id;
+      obj2.num_of_attachments = numOfAttachments;
+      obj2.num_of_gore_attachments = numOfGoreAttachments;
+      obj2.num_of_explicit_attachments = numOfExplicitAttachments;
+      obj2.num_of_self_harm_attachments = numOfSelfHarmAttachments;
+      obj2.num_of_embeds = numOfEmbeds;
+      obj2.num_of_gore_embeds = numOfGoreEmbeds;
+      obj2.num_of_explicit_embeds = numOfExplicitEmbeds;
+      obj2.num_of_self_harm_embeds = numOfSelfHarmEmbeds;
+      obj2.has_redactable_explicit = tmp;
+      obj2.has_redactable_gore = tmp2;
+      obj2.has_redactable_self_harm = tmp3;
+      AnalyticsUtilsDefault.track(AnalyticEvents.REDACTABLE_MESSAGE_LOADED, obj2);
     }
   }
   tmp2 = numOfGoreAttachments > 0 || numOfGoreEmbeds > 0;
@@ -275,7 +279,7 @@ export const trackExplicitMediaScanComplete = function trackExplicitMediaScanCom
   channelId = channelId.channelId;
   if (null != channelId) {
     const channel = ChannelStore.getChannel(channelId);
-    const obj = {
+    const obj2 = {
       message_id: tmp,
       channel_id: channelId,
       channel_type: null,
@@ -289,34 +293,36 @@ export const trackExplicitMediaScanComplete = function trackExplicitMediaScanCom
     if (channel != null) {
       type = channel.type;
     }
-    obj.channel_type = type;
+    obj2.channel_type = type;
     let guild_id;
     if (channel != null) {
       guild_id = channel.guild_id;
     }
-    obj.guild_id = guild_id;
-    obj.num_of_attachments = tmp2;
-    obj.num_of_explicit_attachments = tmp3;
-    obj.num_of_embeds = tmp4;
-    obj.num_of_explicit_embeds = tmp5;
-    obj.track(AnalyticEvents.EXPLICIT_MEDIA_RETROACTIVE_SCAN_COMPLETE, obj);
+    obj2.guild_id = guild_id;
+    obj2.num_of_attachments = tmp2;
+    obj2.num_of_explicit_attachments = tmp3;
+    obj2.num_of_embeds = tmp4;
+    obj2.num_of_explicit_embeds = tmp5;
+    AnalyticsUtilsDefault.track(AnalyticEvents.EXPLICIT_MEDIA_RETROACTIVE_SCAN_COMPLETE, obj2);
   }
 };
 export const handleExplicitMediaScanTimeoutForMessage = function handleExplicitMediaScanTimeoutForMessage(message) {
   let attachments = message.attachments;
   let embeds = message.embeds;
-  attachments = attachments.map((item) => {
+  const attachments1 = attachments.map((item) => {
     item.content_scan_version = -1;
     return item;
   });
-  let messageSnapshots = message.messageSnapshots;
-  embeds = embeds.map((item) => {
+  const messageSnapshots = message.messageSnapshots;
+  let messageSnapshots1 = messageSnapshots;
+  const embeds1 = embeds.map((item) => {
     item.contentScanVersion = -1;
     return item;
   });
   if (null != messageSnapshots) {
+    messageSnapshots1 = messageSnapshots;
     if (0 !== messageSnapshots.length) {
-      messageSnapshots = messageSnapshots.map((message) => {
+      messageSnapshots1 = messageSnapshots.map((message) => {
         message = message.message;
         const attachments = message.attachments;
         const embeds = message.embeds;
@@ -324,19 +330,26 @@ export const handleExplicitMediaScanTimeoutForMessage = function handleExplicitM
           item.content_scan_version = -1;
           return item;
         });
-        let obj = {
+        const obj = {
           attachments: mapped,
           embeds: embeds.map((item) => {
             item.contentScanVersion = -1;
             return item;
           }),
         };
-        obj = { message: message.merge(obj) };
-        return message.merge(obj);
+        return message.merge({
+          message: message.merge({
+            attachments: mapped,
+            embeds: embeds.map((item) => {
+              item.contentScanVersion = -1;
+              return item;
+            }),
+          }),
+        });
       });
     }
   }
-  return message.merge({ attachments, embeds, messageSnapshots });
+  return message.merge({ attachments: attachments1, embeds: embeds1, messageSnapshots: messageSnapshots1 });
 };
 export const isObscuredMediaBelowConstraints = function isObscuredMediaBelowConstraints(arg0, arg1) {
   let tmp = null != arg0 && null != arg1;
@@ -386,15 +399,15 @@ export const useShouldAgeVerifyForReason = function useShouldAgeVerifyForReason(
   return hasItem;
 };
 export const trackToggleMediaObscurityV2 = function trackToggleMediaObscurityV2(obscure) {
-  let obj = AgeVerificationUtils;
   if (obj.isVerifiedAdult()) {
     let str = "show";
     if (obscure.obscure) {
       str = "hide";
     }
-    obj = { toggle_direction: str };
-    AnalyticsUtilsDefault.track(AnalyticEvents.EXPLICIT_MEDIA_OBSCURITY_TOGGLE_V2, obj);
+    const obj3 = { toggle_direction: str };
+    AnalyticsUtilsDefault.track(AnalyticEvents.EXPLICIT_MEDIA_OBSCURITY_TOGGLE_V2, obj3);
   }
+  obj = AgeVerificationUtils;
 };
 export const hasMessageSnapshotsWithAttachmentsOrEmbeds = function hasMessageSnapshotsWithAttachmentsOrEmbeds(message) {
   const message_snapshots = message.message_snapshots;

@@ -1,6 +1,8 @@
 // discord_app/design/components/LottieIcon/native/generated/index.tsx
 import size from "../../../../../../_runtime/metro/00002__.js";
 
+const require = globalThis.__r;
+
 const result = size.fileFinishedImporting("design/components/LottieIcon/native/generated/index.tsx");
 for (const key10018 in require("MessagesTabLottie")) {
   arg5[key10018] = require("MessagesTabLottie")[key10018];

@@ -3,6 +3,8 @@ import AVError from "../av_errors/AVError.tsx";
 import AuthenticationStore from "../../../stores/AuthenticationStore.tsx";
 import AVErrorStore from "../av_errors/AVErrorStore.tsx";
 
+const require = globalThis.__r;
+
 require = fn;
 const MediaEngineContextTypes = fn(4661).MediaEngineContextTypes;
 const size = fn(2);
@@ -15,15 +17,18 @@ export default function useVideoStreamError(arg0, arg1) {
   const stateFromStores = require("initialize").useStateFromStores(items, () => {
     if (AuthenticationStore.getId() !== closure_1) {
       const items = [];
-      let arraySpreadResult = HermesBuiltin.arraySpread(
+      HermesBuiltin.arraySpread(
+        AVErrorStore.getActiveErrorsOfType(AVError.AVError.VIDEO_STREAM_RECEIVER_READY_TIMEOUT_NO_STREAM),
+        HermesBuiltin.arraySpread(
+          AVErrorStore.getActiveErrorsOfType(AVError.AVError.VIDEO_STREAM_RECEIVER_READY_TIMEOUT),
+          0,
+        ),
+      );
+      items[Symbol.iterator]();
+      const arraySpreadResult = HermesBuiltin.arraySpread(
         AVErrorStore.getActiveErrorsOfType(AVError.AVError.VIDEO_STREAM_RECEIVER_READY_TIMEOUT),
         0,
       );
-      arraySpreadResult = HermesBuiltin.arraySpread(
-        AVErrorStore.getActiveErrorsOfType(AVError.AVError.VIDEO_STREAM_RECEIVER_READY_TIMEOUT_NO_STREAM),
-        arraySpreadResult,
-      );
-      items[Symbol.iterator]();
     }
     if (closure_0 === MediaEngineContextTypes.STREAM) {
       let activeErrorsOfType = AVErrorStore.getActiveErrorsOfType(AVError.AVError.SCREENSHARE_OS_ERROR);
@@ -45,15 +50,18 @@ export const useVideoStreamErrorContext = function useVideoStreamErrorContext(ar
   return require("initialize").useStateFromStores(items, () => {
     if (AuthenticationStore.getId() !== closure_1) {
       const items = [];
-      let arraySpreadResult = HermesBuiltin.arraySpread(
+      HermesBuiltin.arraySpread(
+        AVErrorStore.getActiveErrorsOfType(AVError.AVError.VIDEO_STREAM_RECEIVER_READY_TIMEOUT_NO_STREAM),
+        HermesBuiltin.arraySpread(
+          AVErrorStore.getActiveErrorsOfType(AVError.AVError.VIDEO_STREAM_RECEIVER_READY_TIMEOUT),
+          0,
+        ),
+      );
+      items[Symbol.iterator]();
+      const arraySpreadResult = HermesBuiltin.arraySpread(
         AVErrorStore.getActiveErrorsOfType(AVError.AVError.VIDEO_STREAM_RECEIVER_READY_TIMEOUT),
         0,
       );
-      arraySpreadResult = HermesBuiltin.arraySpread(
-        AVErrorStore.getActiveErrorsOfType(AVError.AVError.VIDEO_STREAM_RECEIVER_READY_TIMEOUT_NO_STREAM),
-        arraySpreadResult,
-      );
-      items[Symbol.iterator]();
     }
     if (closure_0 === MediaEngineContextTypes.STREAM) {
       let activeErrorsOfType = AVErrorStore.getActiveErrorsOfType(AVError.AVError.SCREENSHARE_OS_ERROR);

@@ -29,31 +29,30 @@ export default function BaseMessagesScreen(data) {
   if (!isNextPageLoading) {
     isNextPageLoading = data.isNextPageLoading;
   }
-  let obj = data(tab[6]);
   const items = [isHistoricalIndexing, isNextPageLoading];
-  const stateFromStoresObject = obj.useStateFromStoresObject(items, () => {
-    let obj = SearchUtils;
-    const searchTabFetchId = obj.getSearchTabFetchId(
-      searchContext,
-      tab,
-      SearchQueryStore.getSearchResultsQuery(searchContext),
-    );
-    obj = {
+  const stateFromStoresObject = data(tab[6]).useStateFromStoresObject(items, () => {
+    const searchResultsQuery = SearchQueryStore.getSearchResultsQuery(searchContext);
+    const searchTabFetchId = SearchUtils.getSearchTabFetchId(searchContext, tab, searchResultsQuery);
+    return {
       isIndexing: SearchMessageStore.getIsIndexing(searchTabFetchId),
       isHistoricalIndexing: SearchMessageStore.getIsHistoricalIndexing(searchTabFetchId),
       documentsIndexed: SearchMessageStore.getDocumentsIndexed(searchTabFetchId),
     };
-    return obj;
   });
   isHistoricalIndexing = stateFromStoresObject.isHistoricalIndexing;
   documentsIndexed = stateFromStoresObject.documentsIndexed;
-  let obj1 = data(tab[8]);
-  obj = { searchContext, tab, hasListItems: data.length > 0 };
-  const messageSearchErrorScreen = obj1.useMessageSearchErrorScreen(obj);
+  let obj = data(tab[6]);
+  const messageSearchErrorScreen = data(tab[8]).useMessageSearchErrorScreen({
+    searchContext,
+    tab,
+    hasListItems: data.length > 0,
+  });
   hasError = messageSearchErrorScreen.hasError;
   isErrorToast = messageSearchErrorScreen.isErrorToast;
   showErrorToast = messageSearchErrorScreen.showErrorToast;
   ({ errorText, isErrorFullscreen } = messageSearchErrorScreen);
+  const obj2 = data(tab[8]);
+  const obj3 = { searchContext, tab, hasListItems: data.length > 0 };
   searchFetchPendingManager = data(tab[9]).useSearchFetchPendingManager(searchContext);
   const items1 = [data.length, isNextPageLoading, isFocused, hasError, searchContext, tab, searchFetchPendingManager];
   const items2 = [isFocused, isNextPageLoading, searchContext, searchFetchPendingManager, tab];
@@ -96,16 +95,16 @@ export default function BaseMessagesScreen(data) {
   }, items3);
   const items4 = [documentsIndexed, isHistoricalIndexing, searchContext, tab];
   if (stateFromStoresObject.isIndexing) {
-    obj = { searchContext };
-    let tmp11 = hasError(searchContext(tmp[12]), obj);
+    const obj5 = { searchContext };
+    let tmp11 = hasError(searchContext(tmp[12]), obj5);
   } else {
     if (isErrorFullscreen) {
       if (!isNextPageLoading) {
-        obj1 = { text: errorText };
-        tmp11 = hasError(searchContext(tmp[13]), obj1);
+        const obj6 = { text: errorText };
+        tmp11 = hasError(searchContext(tmp[13]), obj6);
       }
     }
-    const obj2 = {
+    const obj7 = {
       contentContainerStyle,
       data,
       onEndReached: callback,
@@ -113,7 +112,7 @@ export default function BaseMessagesScreen(data) {
       ItemSeparatorComponent,
       numColumns,
     };
-    tmp11 = hasError(searchContext(tmp[14]), obj2);
+    tmp11 = hasError(searchContext(tmp[14]), obj7);
   }
   return tmp11;
 }
@@ -121,7 +120,7 @@ export const trackMessageItemPress = function trackMessageItemPress(messageId) {
   messageId = messageId.messageId;
   ({ searchContext, channelId, index } = messageId);
   const message = SearchMessageStore.getMessage(messageId);
-  const obj = { searchContext, channelId, messageId, userId: null, index: null, entityType: null };
+  const obj2 = { searchContext, channelId, messageId, userId: null, index: null, entityType: null };
   let id;
   if (message != null) {
     const author = message.author;
@@ -129,8 +128,8 @@ export const trackMessageItemPress = function trackMessageItemPress(messageId) {
       id = author.id;
     }
   }
-  obj.userId = id;
-  obj.index = index;
-  obj.entityType = constants.MESSAGE;
-  const result = obj.trackSearchResultClicked(obj);
+  obj2.userId = id;
+  obj2.index = index;
+  obj2.entityType = constants.MESSAGE;
+  const result = search_tracking_TrackingDefault.trackSearchResultClicked(obj2);
 };

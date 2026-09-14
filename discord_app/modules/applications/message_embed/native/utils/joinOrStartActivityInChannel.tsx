@@ -13,8 +13,8 @@ let closure_7 = async function _joinOrStartActivityInChannel(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -27,8 +27,8 @@ let closure_7 = async function _joinOrStartActivityInChannel(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c5 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj4 = { value, done: true };
+          return obj4;
         } else {
           closure_3 = tmp2;
           closure_2 = tmp3;
@@ -60,8 +60,8 @@ let closure_7 = async function _joinOrStartActivityInChannel(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c5 = 3;
-          const obj1 = { value, done: true };
-          return obj1;
+          const obj5 = { value, done: true };
+          return obj5;
         } else {
           selfEmbeddedActivityForChannel = closure_131_4.getSelfEmbeddedActivityForChannel(closure_130_1);
           voiceChannelId = closure_131_6.getVoiceChannelId();
@@ -95,8 +95,7 @@ let closure_7 = async function _joinOrStartActivityInChannel(arg0) {
             compositeInstanceId = closure_130_9[0].compositeInstanceId;
           }
           closure_130_10 = compositeInstanceId;
-          let obj2 = closure_131_0(closure_131_2[5]);
-          obj2 = {
+          const obj6 = {
             channelId: closure_130_1,
             applicationId: closure_130_0,
             isStart: null == closure_130_10,
@@ -107,19 +106,22 @@ let closure_7 = async function _joinOrStartActivityInChannel(arg0) {
           };
           c4 = 2;
           c5 = 1;
-          const obj3 = { value: obj2.runPrimaryAppCommandOrJoinEmbeddedActivity(obj2), done: false };
-          return obj3;
+          const obj7 = {
+            value: closure_131_0(closure_131_2[5]).runPrimaryAppCommandOrJoinEmbeddedActivity(obj6),
+            done: false,
+          };
+          return obj7;
         }
       } else if (arg0 === 1) {
         c5 = 3;
         throw value;
       } else if (arg0 === 2) {
         c5 = 3;
-        const obj4 = { value, done: true };
-        return obj4;
+        const obj8 = { value, done: true };
+        return obj8;
       } else {
         c5 = 3;
-        obj = { value, done: true };
+        const obj = { value, done: true };
         return obj;
       }
     } catch (tmp43) {

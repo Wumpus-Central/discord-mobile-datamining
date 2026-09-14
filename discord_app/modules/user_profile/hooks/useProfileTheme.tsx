@@ -20,9 +20,8 @@ export default function useProfileTheme(arg0) {
   ({ pendingThemeColors, isPreview, forceUserTheme } = arg0);
   const tmp2 = useThemeDefault();
   const tmp3 = useEffectiveThemeOverride();
-  let obj = initialize;
   const items = [AccessibilityStore];
-  const stateFromStores = obj.useStateFromStores(items, () => AccessibilityStore.syncProfileThemeWithUserTheme);
+  const stateFromStores = initialize.useStateFromStores(items, () => AccessibilityStore.syncProfileThemeWithUserTheme);
   if (pendingAvatarSrc == null) {
     let avatarURL;
     if (user != null) {
@@ -34,10 +33,9 @@ export default function useProfileTheme(arg0) {
     }
     pendingAvatarSrc = avatarURL;
   }
-  let tmp4Result = shims;
-  const result = tmp4Result.unsafe_getResolvedRawColor("PRIMARY_530", { saturation: 1 });
-  tmp4Result = useAvatarColor;
-  _slicedToArray(tmp4Result.useAvatarColors(pendingAvatarSrc, result, false), 2);
+  const result = shims.unsafe_getResolvedRawColor("PRIMARY_530", { saturation: 1 });
+  const tmp4Result = shims;
+  _slicedToArray(useAvatarColor.useAvatarColors(pendingAvatarSrc, result, false), 2);
   if (null != tmp3) {
     return tmp3;
   } else {
@@ -47,8 +45,8 @@ export default function useProfileTheme(arg0) {
     }
     if (!canEditThemes) {
       if (!isPreview) {
-        obj = { theme: tmp2, primaryColor: null, secondaryColor: null };
-        return obj;
+        const obj2 = { theme: tmp2, primaryColor: null, secondaryColor: null };
+        return obj2;
       }
     }
     let previewThemeColors;
@@ -61,7 +59,7 @@ export default function useProfileTheme(arg0) {
     }
     if (first == null) {
       first = utils_ColorUtils.hex2int(tmp10);
-      const tmp4Result1 = utils_ColorUtils;
+      const tmp4Result8 = utils_ColorUtils;
     }
     let hex2intResult;
     if (previewThemeColors != null) {
@@ -69,7 +67,7 @@ export default function useProfileTheme(arg0) {
     }
     if (hex2intResult == null) {
       hex2intResult = utils_ColorUtils.hex2int(tmp11);
-      const tmp4Result2 = utils_ColorUtils;
+      const tmp4Result9 = utils_ColorUtils;
     }
     let tmp16 = tmp2;
     if (!stateFromStores) {
@@ -80,14 +78,14 @@ export default function useProfileTheme(arg0) {
           profileTheme = tmp2;
         }
         tmp16 = profileTheme;
-        const tmp4Result3 = UserProfileGradientUtils;
+        const tmp4Result10 = UserProfileGradientUtils;
       }
     }
     if (tmp16 !== ThemeTypes.ASH) {
       let isThemeLightResult = tmp16 === ThemeTypes.ASH;
       if (isThemeLightResult) {
         isThemeLightResult = shared.isThemeLight(tmp2);
-        const tmp4Result4 = shared;
+        const tmp4Result11 = shared;
       }
       let DARK = tmp16;
       if (isThemeLightResult) {
@@ -97,7 +95,8 @@ export default function useProfileTheme(arg0) {
       shared;
       DARK = tmp2;
     }
-    obj = { theme: DARK, primaryColor: first, secondaryColor: hex2intResult };
-    return obj;
+    const obj3 = { theme: DARK, primaryColor: first, secondaryColor: hex2intResult };
+    return obj3;
   }
+  const tmp4Result7 = useAvatarColor;
 }

@@ -13,14 +13,13 @@ const result = size.fileFinishedImporting(
 export default function useMobileCollectiblesPurchaseSKU(product) {
   product = product.product;
   const merged = Object.assign(product, Object.assign({ product: 0 }));
-  let obj = initialize;
   const items = [UserStore];
-  const stateFromStores = obj.useStateFromStores(items, () => currentUser.getCurrentUser());
+  const stateFromStores = initialize.useStateFromStores(items, () => currentUser.getCurrentUser());
   const collectibleGoogleSkuId = collectibles_CollectiblesUtils.getCollectibleGoogleSkuId(product, stateFromStores);
-  obj = {};
+  const obj3 = {};
   const merged1 = Object.assign(merged);
-  obj.skuId = product.skuId;
-  obj.platformSkuId = collectibleGoogleSkuId;
-  obj.isFreeForStaffSelfPurchase = true;
-  return useMobilePurchaseSKUDefault(obj);
+  obj3.skuId = product.skuId;
+  obj3.platformSkuId = collectibleGoogleSkuId;
+  obj3.isFreeForStaffSelfPurchase = true;
+  return useMobilePurchaseSKUDefault(obj3);
 }

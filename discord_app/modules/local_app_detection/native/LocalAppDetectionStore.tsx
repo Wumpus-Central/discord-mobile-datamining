@@ -22,9 +22,9 @@ class LocalAppDetectionStore extends DeviceSettingsStore {
         return closure_0.handleLocalAppDetectionComplete(arg0);
       },
     };
-    tmp2 = new tmp2(closure_1(closure_2[4]), obj, new.target, tmp2, tmp, new.target);
-    closure_0 = tmp2;
-    return tmp2;
+    tmp21 = new tmp2(closure_1(closure_2[4]), obj, new.target, tmp2, tmp, new.target);
+    closure_0 = tmp21;
+    return tmp21;
   }
 }
 const prototype = LocalAppDetectionStore.prototype;
@@ -82,14 +82,14 @@ prototype["handleLocalAppDetectionComplete"] = function handleLocalAppDetectionC
     return false;
   } else {
     const _Date = Date;
-    let obj = {};
+    const obj = {};
     const timestamp = Date.now();
     const merged = Object.assign(closure_7);
     const tmp6 = entries[Symbol.iterator]();
     while (tmp6 !== undefined) {
       let tmp11 = _slicedToArray(tmp8, 2);
-      obj = { detected: tmp11[1], lastScannedAt: timestamp };
-      obj.apps[tmp11[0]] = obj;
+      let obj2 = { detected: tmp11[1], lastScannedAt: timestamp };
+      obj.apps[tmp11[0]] = obj2;
       continue;
     }
     closure_7 = obj;

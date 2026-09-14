@@ -41,18 +41,18 @@ class GiftBackgroundSelect {
         if (closure_2.get()) {
           num = 1;
         }
-        obj = { opacity: null };
-        obj1 = { easing: tmp(tmp2[9]).STANDARD_EASING, duration: 100 };
-        obj.opacity = obj.withTiming(num, obj1);
-        return obj;
+        obj1 = { opacity: null };
+        obj4 = { easing: tmp(tmp2[9]).STANDARD_EASING, duration: 100 };
+        obj1.opacity = obj.withTiming(num, obj4);
+        return obj1;
       }
     }
-    obj = {
+    obj1 = {
       STANDARD_EASING: closure_0(closure_2[9]).STANDARD_EASING,
       withTiming: closure_0(closure_2[8]).withTiming,
       visibility: sharedValue,
     };
-    N.__closure = obj;
+    N.__closure = obj1;
     N.__workletHash = 5743780040676;
     N.__initData = closure_10;
     animatedStyle = obj2.useAnimatedStyle(N);
@@ -61,7 +61,7 @@ class GiftBackgroundSelect {
     tmp9 = jsx;
     items1 = [,];
     items1[0] = jsx(closure_1(closure_2[10]), { giftStyle: global.giftStyle, withConsistentHeight: flag });
-    obj1 = {
+    obj7 = {
       onContentSizeChange(arg0) {
         if (null == first) {
           closure_1(arg0);
@@ -74,34 +74,34 @@ class GiftBackgroundSelect {
     };
     items2 = [,];
     items2[0] = tmp.contentContainer;
-    obj2 = null != first;
+    obj8 = null != first;
     tmp10 = closure_8;
-    if (obj2) {
-      obj2 = first < closure_1(closure_2[7])().width;
+    if (obj8) {
+      obj8 = first < closure_1(closure_2[7])().width;
     }
-    if (obj2) {
-      obj2 = { flex: 1 };
+    if (obj8) {
+      obj8 = { flex: 1 };
     }
-    obj3 = { children: null };
-    items2[1] = obj2;
-    obj1.contentContainerStyle = items2;
+    obj9 = { children: null };
+    items2[1] = obj8;
+    obj7.contentContainerStyle = items2;
     items3 = [,];
     items3[0] = tmp.scrollView;
     items3[1] = animatedStyle;
-    obj1.style = items3;
-    items1[1] = tmp9(tmp10, obj1);
-    obj3.children = items1;
-    return tmp7(tmp8, obj3);
+    obj7.style = items3;
+    items1[1] = tmp9(tmp10, obj7);
+    obj9.children = items1;
+    return tmp7(tmp8, obj9);
   }
 }
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
 let closure_8 = ReanimatedRexport.createAnimatedComponent(fn(17).ScrollView);
 const createStyles = fn(4636);
-let obj = { scrollView: null, contentContainer: null };
-obj = { flex: 1, marginTop: nativeDefault.space.PX_24 };
-obj.scrollView = obj;
-obj.contentContainer = { justifyContent: "center" };
+let obj = {
+  scrollView: { flex: 1, marginTop: nativeDefault.space.PX_24 },
+  contentContainer: { justifyContent: "center" },
+};
 const React7 = createStyles.createStyles(obj);
 const __initData = {
   code: "function PremiumGiftBackgroundSelectTsx1(){const{STANDARD_EASING,withTiming,visibility}=this.__closure;const animationSettings={easing:STANDARD_EASING,duration:100};return{opacity:withTiming(visibility.get()?1:0,animationSettings)};}",
@@ -110,9 +110,10 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/premium/native/gifting/PremiumGiftBackgroundSelect.tsx");
 
 export default function PremiumGiftBackgroundSelect() {
-  let obj = NativeGiftContext;
-  const nativeGiftContext = obj.useNativeGiftContext();
-  obj = { giftStyle: nativeGiftContext.giftStyle, setGiftStyle: nativeGiftContext.setGiftStyle };
-  return hasOwnProperty(GiftBackgroundSelect, obj);
+  const nativeGiftContext = NativeGiftContext.useNativeGiftContext();
+  return hasOwnProperty(GiftBackgroundSelect, {
+    giftStyle: nativeGiftContext.giftStyle,
+    setGiftStyle: nativeGiftContext.setGiftStyle,
+  });
 }
 export { GiftBackgroundSelect };

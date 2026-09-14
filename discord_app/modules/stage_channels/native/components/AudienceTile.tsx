@@ -23,16 +23,17 @@ function RaisedHandIcon(rtsState) {
   if (activeBackground) {
     activeBackground = tmp.activeBackground;
   }
-  let obj = { style: items, children: null };
+  const obj = {
+    style: items,
+    children: hasOwnProperty(native.Icon, { style: tmp.raisedHand, source: tmp5(8739), color: PRIMARY_800 }),
+  };
   items[1] = activeBackground;
-  obj = { style: tmp.raisedHand, source: tmp5(8739), color: PRIMARY_800 };
-  obj.children = hasOwnProperty(native.Icon, obj);
   return hasOwnProperty(View, obj);
 }
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-fn(4636);
+const createStyles = fn(4636);
 let obj = {
   touchableContainer: { overflow: "visible" },
   container: { alignItems: "center" },
@@ -58,14 +59,14 @@ let size = {
   backgroundColor: nativeDefault.colors.WHITE,
 };
 obj.raisedHandContainer = size;
-obj = { backgroundColor: nativeDefault.unsafe_rawColors.GREEN_360 };
-obj.activeBackground = obj;
+obj.activeBackground = { backgroundColor: nativeDefault.unsafe_rawColors.GREEN_360 };
 obj.raisedHand = { height: 13, width: 13, alignItems: "center", justifyContent: "center", resizeMode: "contain" };
 obj.nameplateContainer = { flexDirection: "row", alignItems: "center", justifyContent: "center" };
-const createStyles = { fontSize: 14, color: nativeDefault.colors.WHITE };
-obj.usernameText = createStyles;
+let obj3 = { backgroundColor: nativeDefault.unsafe_rawColors.GREEN_360 };
+obj.usernameText = { fontSize: 14, color: nativeDefault.colors.WHITE };
 obj.faded = { opacity: 0.5 };
 const styles = createStyles.createStyles(obj);
+let obj4 = { fontSize: 14, color: nativeDefault.colors.WHITE };
 size = fn(2);
 let result = size.fileFinishedImporting("modules/stage_channels/native/components/AudienceTile.tsx");
 
@@ -79,10 +80,9 @@ export default noop.memo((channel) => {
   const tmp = styles();
   const diff = user(guildId[9])().width - 46;
   guildId = channel.getGuildId();
-  let obj = channel(guildId[10]);
   const items = [GuildMemberStore];
   const items1 = [guildId, user.id];
-  let stateFromStores = obj.useStateFromStores(
+  let stateFromStores = channel(guildId[10]).useStateFromStores(
     items,
     () => {
       let tmp2 = null != guildId;
@@ -98,44 +98,43 @@ export default noop.memo((channel) => {
     },
     items1,
   );
-  let obj1 = channel(guildId[11]);
-  let result = obj1.isRequestedToSpeakAll(rtsState);
-  let obj2 = user(guildId[12]);
-  const name = obj2.getName(guildId, channel.id, user);
+  const obj = channel(guildId[10]);
+  let result = channel(guildId[11]).isRequestedToSpeakAll(rtsState);
+  const obj2 = channel(guildId[11]);
+  const name = user(guildId[12]).getName(guildId, channel.id, user);
   let tmp10 = blocked;
   if (!blocked) {
     tmp10 = ignored;
   }
   const result1 = diff / 4;
-  obj = { accessibilityLabel: null, style: null, accessibilityRole: "button", onPress: null, children: null };
+  const obj4 = { accessibilityLabel: null, style: null, accessibilityRole: "button", onPress: null, children: null };
   const intl = tmp6(tmp3[14]).intl;
-  obj.accessibilityLabel = intl.formatToPlainString(channel(guildId[14]).t.QLMGhv, { name });
+  obj4.accessibilityLabel = intl.formatToPlainString(channel(guildId[14]).t.QLMGhv, { name });
   const items2 = [, ,];
   ({ touchableContainer: arr3[0], container: arr3[1] } = tmp);
   items2[2] = { width: result1 };
-  obj.style = items2;
-  obj.onPress = function onPress() {
-    const obj = { userId: user.id, channelId: channel.id };
-    obj.showUserProfile(obj);
+  obj4.style = items2;
+  obj4.onPress = function onPress() {
+    StageChannelModalActionCreators.showUserProfile({ userId: user.id, channelId: channel.id });
   };
-  obj = { style: tmp.avatarContainer, children: null };
-  obj1 = { user, guildId, size: channel(guildId[7]).AvatarSizes.LARGE, style: null };
+  const obj5 = { style: tmp.avatarContainer, children: null };
+  const obj6 = { user, guildId, size: channel(guildId[7]).AvatarSizes.LARGE, style: null };
   let faded = tmp10;
   if (tmp10) {
     faded = tmp.faded;
   }
-  obj1.style = faded;
-  const items3 = [closure_5(channel(guildId[7]).CutoutableAvatarImage, obj1)];
+  obj6.style = faded;
+  const items3 = [closure_5(channel(guildId[7]).CutoutableAvatarImage, obj6)];
   if (result) {
-    obj2 = { rtsState };
-    result = closure_5(RaisedHandIcon, obj2);
+    const obj7 = { rtsState };
+    result = closure_5(RaisedHandIcon, obj7);
   }
   items3[1] = result;
-  obj.children = items3;
-  const items4 = [closure_6(View, obj)];
-  const obj3 = { style: null, children: null };
+  obj5.children = items3;
+  const items4 = [closure_6(View, obj5)];
+  const obj8 = { style: null, children: null };
   const items5 = [tmp.nameplateContainer];
-  obj3.style = items5;
+  obj8.style = items5;
   if (blocked) {
     blocked = closure_5(tmp6(tmp3[16]).BlockedStatus, {});
   }
@@ -157,29 +156,29 @@ export default noop.memo((channel) => {
         num2 = 2;
       }
     }
-    const obj4 = { maxWidth: result1 - 18 * num2 };
-    tmp16 = obj4;
+    const obj9 = { maxWidth: result1 - 18 * num2 };
+    tmp16 = obj9;
   }
   items7[1] = tmp16;
   if (null == theme) {
-    const obj5 = { style: null, numberOfLines: 1, children: null };
+    const obj10 = { style: null, numberOfLines: 1, children: null };
     items7[2] = tmp17;
-    obj5.style = items7;
-    obj5.children = name;
-    items6[2] = closure_5(tmp6(tmp3[7]).LegacyText, obj5);
+    obj10.style = items7;
+    obj10.children = name;
+    items6[2] = closure_5(tmp6(tmp3[7]).LegacyText, obj10);
     if (stateFromStores) {
-      const obj6 = {
+      const obj11 = {
         source: tmp2(tmp3[18]),
         size: tmp6(tmp3[7]).Icon.Sizes.SMALL,
         color: tmp2(tmp3[5]).unsafe_rawColors.GUILD_BOOSTING_PINK,
       };
-      stateFromStores = closure_5(tmp6(tmp3[7]).Icon, obj6);
+      stateFromStores = closure_5(tmp6(tmp3[7]).Icon, obj11);
     }
     items6[3] = stateFromStores;
-    obj3.children = items6;
-    items4[1] = closure_6(View, obj3);
-    obj.children = items4;
-    return closure_6(tmp6(tmp3[13]).LegacyPressable, obj);
+    obj8.children = items6;
+    items4[1] = closure_6(View, obj8);
+    obj4.children = items4;
+    return closure_6(tmp6(tmp3[13]).LegacyPressable, obj4);
   } else {
     const tmp6Result = tmp6(tmp3[17]);
     tmp2(tmp3[5]).unsafe_rawColors;
@@ -188,6 +187,7 @@ export default noop.memo((channel) => {
     unsafe_rawColors.color = tmp6(tmp3[17]).isThemeDark(theme) ? unsafe_rawColors.WHITE : unsafe_rawColors.PRIMARY_860;
     const tmp19 = tmp6(tmp3[17]).isThemeDark(theme) ? unsafe_rawColors.WHITE : unsafe_rawColors.PRIMARY_860;
   }
+  const obj3 = user(guildId[12]);
 });
 export const useAudienceTileStyles = styles;
 export const getTileWidthStyle = function getTileWidthStyle(width) {

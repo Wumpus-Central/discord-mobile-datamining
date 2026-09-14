@@ -7,6 +7,8 @@ import RichPresenceInviteBarActionCreators from "../modules/activities/stores/Ri
 import asyncGeneratorStep from "../../_runtime/00005_asyncGeneratorStep.js";
 import ChannelStore from "../stores/ChannelStore.tsx";
 
+const require = globalThis.__r;
+
 require = fn;
 const Constants = fn(1074);
 ({
@@ -51,10 +53,9 @@ export default {
     if (mediaSessionId === undefined) {
       mediaSessionId = null;
     }
-    distributor(num[4]).wait(() => {
-      const obj = { type: "ACTIVITY_UPDATE_START", applicationId, duration: num, distributor };
-      return obj.dispatch(obj);
-    });
+    distributor(num[4]).wait(() =>
+      DispatcherDefault.dispatch({ type: "ACTIVITY_UPDATE_START", applicationId, duration: num, distributor }),
+    );
     const HTTP = applicationId(num[5]).HTTP;
     const request = {
       url: constants.ACTIVITIES,
@@ -74,22 +75,20 @@ export default {
       oldFormErrors: true,
       rejectWithError: true,
     };
-    let obj = distributor(num[4]);
+    const obj = distributor(num[4]);
     const postResult = HTTP.post(request);
     HTTP.post(request)
       .then((body) => {
-        const obj = {
+        DispatcherDefault.dispatch({
           type: "ACTIVITY_UPDATE_SUCCESS",
           applicationId,
           token: body.body.token,
           duration: num,
           distributor,
-        };
-        obj.dispatch(obj);
+        });
       })
       .catch(() => {
-        const obj = { type: "ACTIVITY_UPDATE_FAIL", applicationId };
-        obj.dispatch(obj);
+        DispatcherDefault.dispatch({ type: "ACTIVITY_UPDATE_FAIL", applicationId });
       });
   },
   sendActivityInvite(activity) {
@@ -106,13 +105,13 @@ export default {
       const parsed = require("MessageParser").parse(channel, content);
       const tmp7Result = require("MessageActionCreators");
       let obj = { activityAction: null, location: null };
-      obj = { type, activity, targetUserId };
-      obj.activityAction = obj;
+      let obj2 = { type, activity, targetUserId };
+      obj.activityAction = obj2;
       obj.location = MessageSendLocation.ACTIVITY_SHARE;
       const obj4 = require("MessageParser");
       return tmp7Result.sendMessage(channel.id, parsed, false, obj).then(
         (body) => {
-          const obj = {
+          const obj2 = {
             location: _location,
             invite_type: null,
             application_id: null,
@@ -125,16 +124,16 @@ export default {
           } else {
             APPLICATION = constants4.APPLICATION;
           }
-          obj.invite_type = APPLICATION;
-          obj.application_id = activity.application_id;
-          obj.guild_id = channel.getGuildId();
-          obj.channel_id = channel.id;
+          obj2.invite_type = APPLICATION;
+          obj2.application_id = activity.application_id;
+          obj2.guild_id = channel.getGuildId();
+          obj2.channel_id = channel.id;
           let id = null;
           if (null != body) {
             id = body.body.id;
           }
-          obj.message_id = id;
-          obj.trackWithMetadata(constants3.INVITE_SENT, obj);
+          obj2.message_id = id;
+          AppAnalyticsUtilsDefault.trackWithMetadata(constants3.INVITE_SENT, obj2);
           const activitySessionKey = getActivitySessionKey.getActivitySessionKey(activity);
           if (null != activitySessionKey) {
             RichPresenceInviteBarActionCreators.markChannelInvited(activitySessionKey, channel.id);
@@ -160,19 +159,19 @@ export default {
     asyncGeneratorStep = arg3;
     closure_4 = arg4;
     return (async () => {
-      const obj1 = {};
+      const obj4 = {};
       if (null != channel_id) {
-        obj1.channel_id = channel_id;
+        obj4.channel_id = channel_id;
       }
       if (null != message_id) {
-        obj1.message_id = message_id;
+        obj4.message_id = message_id;
       }
-      const HTTP = tmp4(1272).HTTP;
+      const HTTP = tmp4(1270).HTTP;
       const request = {
         url: constants.USER_ACTIVITY_JOIN(tmp4, closure_1, closure_2),
         retries: 3,
-        query: obj1,
-        rejectWithError: tmp4(1272).rejectWithMigratedError(),
+        query: obj4,
+        rejectWithError: tmp4(1270).rejectWithMigratedError(),
       };
       await HTTP.get(request);
       closure_128_0 = value;
@@ -189,12 +188,12 @@ export default {
         message_id: userId.messageId,
         channel_id: userId.channelId,
       }));
-      const HTTP = v3(1272).HTTP;
+      const HTTP = v3(1270).HTTP;
       const request = {
         url: constants.USER_ACTIVITY_SUBSCRIBE,
         body: { subscriptions: mapped },
         retries: 1,
-        rejectWithError: v3(1272).rejectWithMigratedError(),
+        rejectWithError: v3(1270).rejectWithMigratedError(),
       };
       await HTTP.post(request);
       return value.body;

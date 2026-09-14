@@ -22,9 +22,8 @@ export const UnlockWithNitroButton = function UnlockWithNitroButton(shouldShrink
     flag = false;
   }
   ({ onTrackPress: require, text } = shouldShrink);
-  let obj = initialize;
   const items = [CollectiblesPurchaseStore, IAPStore];
-  const stateFromStores = obj.useStateFromStores(items, () => {
+  const stateFromStores = initialize.useStateFromStores(items, () => {
     let isPurchasingProductResult = null != isClaiming.isClaiming;
     if (!isPurchasingProductResult) {
       isPurchasingProductResult = purchasingProduct.isPurchasingProduct(ProductIds.ProductIds.GENERIC_CONSUMABLE);
@@ -38,7 +37,7 @@ export const UnlockWithNitroButton = function UnlockWithNitroButton(shouldShrink
   }
   let tmp4Result;
   if (flag) {
-    obj = { variant: "text-xs/semibold", color: "text-overlay-light", allowFontScaling: false, children: text };
+    const obj2 = { variant: "text-xs/semibold", color: "text-overlay-light", allowFontScaling: false, children: text };
     tmp4Result = jsx(Text_Text.Text, {
       variant: "text-xs/semibold",
       color: "text-overlay-light",
@@ -46,7 +45,7 @@ export const UnlockWithNitroButton = function UnlockWithNitroButton(shouldShrink
       children: text,
     });
   }
-  obj = {
+  const obj3 = {
     textElement: tmp4Result,
     text: null,
     accessibilityLabel: null,
@@ -61,21 +60,21 @@ export const UnlockWithNitroButton = function UnlockWithNitroButton(shouldShrink
   if (!flag) {
     tmp6 = text;
   }
-  obj.text = tmp6;
-  obj.accessibilityLabel = text;
+  obj3.text = tmp6;
+  obj3.accessibilityLabel = text;
   let str = "md";
   if (flag) {
     str = "sm";
   }
-  obj.size = str;
-  obj.icon = jsx(NitroWheelIcon.NitroWheelIcon, { size: "sm", color: "white" });
-  obj.onPress = function onPress() {
+  obj3.size = str;
+  obj3.icon = jsx(NitroWheelIcon.NitroWheelIcon, { size: "sm", color: "white" });
+  obj3.onPress = function onPress() {
     if (require != null) {
       tmp(ShopCtaEnum.UNLOCK_WITH_NITRO);
     }
     closure_1();
   };
-  obj.disabled = stateFromStores;
+  obj3.disabled = stateFromStores;
   return jsx(BaseTextButton.BaseTextButton, {
     textElement: tmp4Result,
     text: null,

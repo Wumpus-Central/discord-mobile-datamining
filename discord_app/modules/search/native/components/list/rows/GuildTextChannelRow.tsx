@@ -18,30 +18,33 @@ export default noop.memo(function GuildTextChannelRow(channel) {
   const id = channel.id;
   const guild_id = channel.guild_id;
   if (null != lastMessageId) {
-    let obj = onPress(id[3]);
-    extractTimestampResult = obj.extractTimestamp(lastMessageId);
+    extractTimestampResult = onPress(id[3]).extractTimestamp(lastMessageId);
+    const obj = onPress(id[3]);
   }
   c4 = extractTimestampResult;
   const items = [id, guild_id, extractTimestampResult];
   const items1 = [channel.id, onPress];
   const memo = guild_id.useMemo(() => {
-    let obj = guild_channels_ChannelSubtitle;
     let channelActiveAgoTimestamp = null;
     if (null != c4) {
       channelActiveAgoTimestamp = SearchUtils.getChannelActiveAgoTimestamp(tmp3);
       const tmpResult = SearchUtils;
     }
-    obj = { subtitle: channelActiveAgoTimestamp, layout, channelId: id, guildId: guild_id };
-    return obj.renderChannelSubtitle(obj);
+    return guild_channels_ChannelSubtitle.renderChannelSubtitle({
+      subtitle: channelActiveAgoTimestamp,
+      layout,
+      channelId: id,
+      guildId: guild_id,
+    });
   }, items);
   const callback = guild_id.useCallback(() => {
     onPress(channel.id);
   }, items1);
-  obj = {};
+  const obj2 = {};
   const merged1 = Object.assign(merged);
-  obj.subtitle = memo;
-  obj.channel = channel;
-  obj.trailing = channel.trailing;
-  obj.onPress = callback;
+  obj2.subtitle = memo;
+  obj2.channel = channel;
+  obj2.trailing = channel.trailing;
+  obj2.onPress = callback;
   return jsx(onPress(id[6]), {});
 });

@@ -9,8 +9,8 @@ import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
 
 require = fn;
 const jsx = fn(21).jsx;
-fn(11601);
-let SettingBuilders = {
+const SettingBuilders = fn(11602);
+const slider = SettingBuilders.createSlider({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t["TYyfO/"]);
@@ -33,9 +33,8 @@ let SettingBuilders = {
       [],
     );
   },
-};
-SettingBuilders = SettingBuilders.createSlider(SettingBuilders);
+});
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/ContrastModeSetting.tsx");
 
-export default SettingBuilders;
+export default slider;

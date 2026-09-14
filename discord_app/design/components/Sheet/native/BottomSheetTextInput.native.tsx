@@ -16,9 +16,9 @@ export const BottomSheetTextInput = function BottomSheetTextInput(ref) {
   const merged = Object.assign(ref, Object.assign({ onFocus: 0, onBlur: 0, ref: 0 }));
   ref = noop.useRef(null);
   ({ onFocus: onFocus2, onBlur: onBlur2 } = useBottomSheetKeyboardHandlingDefault({ onFocus, onBlur }));
-  let obj = NativeTextInput;
-  const keyboardBlurring = obj.useKeyboardBlurring(ref);
-  obj = {
+  const tmp3 = useBottomSheetKeyboardHandlingDefault({ onFocus, onBlur });
+  const keyboardBlurring = NativeTextInput.useKeyboardBlurring(ref);
+  const obj2 = {
     ref(current) {
       ref.current = current;
       if (typeof ref === "function") {
@@ -30,7 +30,6 @@ export const BottomSheetTextInput = function BottomSheetTextInput(ref) {
     onFocus: onFocus2,
     onBlur: onBlur2,
   };
-  const tmp3 = useBottomSheetKeyboardHandlingDefault({ onFocus, onBlur });
   const merged1 = Object.assign(merged);
   return jsx(TextInput_TextInputDefault, {
     ref(current) {

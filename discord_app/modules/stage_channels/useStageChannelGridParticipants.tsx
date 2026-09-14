@@ -7,6 +7,8 @@ import noop from "../../../_runtime/metro/00019__.js";
 import ChannelRTCStore from "../calls/ChannelRTCStore.tsx";
 import StageChannelParticipantStore from "StageChannelParticipantStore.tsx";
 
+const require = globalThis.__r;
+
 require = fn;
 const constants = {
   SELECTED: 0,

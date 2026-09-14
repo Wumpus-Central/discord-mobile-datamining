@@ -34,18 +34,21 @@ export const useDisplayNameStylesEffectConfig = function useDisplayNameStylesEff
   const items = [effectId, tmp];
   return noop.useMemo(() => {
     const intl = util.intl;
-    let OpWJ3f = previewStyles[effectId];
+    let OpWJ3f = obj[effectId];
     if (OpWJ3f == null) {
       OpWJ3f = _modDef2786.OpWJ3f;
     }
-    previewStyles = { name: intl.string(OpWJ3f), defaultColors: colors, previewStyles: null, minContrastRatio: null };
-    previewStyles = { fontId: DisplayNameFont.DisplayNameFont.DEFAULT, effectId, colors };
-    previewStyles.previewStyles = previewStyles;
+    obj = {
+      name: intl.string(OpWJ3f),
+      defaultColors: colors,
+      previewStyles: { fontId: DisplayNameFont.DisplayNameFont.DEFAULT, effectId, colors },
+      minContrastRatio: null,
+    };
     let num = closure_5[effectId];
     if (num == null) {
       num = 3;
     }
-    previewStyles.minContrastRatio = num;
-    return previewStyles;
+    obj.minContrastRatio = num;
+    return obj;
   }, items);
 };

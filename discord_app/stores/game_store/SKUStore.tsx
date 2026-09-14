@@ -44,8 +44,8 @@ function addSku(sku) {
     set = new Set();
     const result1 = map2.set(sku.application_id, set);
   }
-  value = map2.get(sku.application_id);
-  value.add(sku.id);
+  value2 = map2.get(sku.application_id);
+  value2.add(sku.id);
 }
 function skuFetchSuccess(sku) {
   addSku(sku);

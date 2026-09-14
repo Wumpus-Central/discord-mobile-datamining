@@ -14,39 +14,33 @@ import size from "../../../../_runtime/metro/00002__.js";
   PROFILE_TOP_LAYER_Z_INDEX: closure_8,
 } = Constants);
 let closure_9 = createStyles.createStyles(() => {
-  let obj = {
+  const obj = {
     avatarPosition: null,
     avatarBackground: { width: borderRadius, height: borderRadius, borderRadius, padding: margin, zIndex: 0 },
     avatar: { margin, zIndex: 1 },
-    profileContentWrapper: null,
-    profileContent: null,
-    customStatusBubble: null,
-    customStatusBubbleInset: null,
+    profileContentWrapper: { flexGrow: 1, paddingBottom, overflow: "visible" },
+    profileContent: { paddingHorizontal },
+    customStatusBubble: { marginTop: 6, marginBottom: 12, marginLeft: borderRadius - margin + React3 },
+    customStatusBubbleInset: {
+      marginLeft: paddingHorizontal + borderRadius - margin + React3,
+      marginRight: paddingHorizontal,
+    },
     emojiOnlyCustomStatusBubble: { marginBottom: 4 },
     primaryInfo: { rowGap: 12, paddingBottom: 12 },
     primaryButtons: { paddingVertical: 12 },
     bannerButtons: null,
     bannerButtonsWithPrivateBanner: { top: 54 },
-    profileTablist: null,
-    cards: null,
+    profileTablist: { paddingHorizontal, marginBottom: nativeDefault.space.PX_16 },
+    cards: { rowGap: 16 },
     card: null,
   };
   const rect = { position: "absolute", top: -borderRadius / 2, left: paddingHorizontal - margin };
   obj.avatarPosition = rect;
-  obj = { flexGrow: 1, paddingBottom, overflow: "visible" };
-  obj.profileContentWrapper = obj;
-  obj.profileContent = { paddingHorizontal };
-  obj = { marginTop: 6, marginBottom: 12, marginLeft: borderRadius - margin + React3 };
-  obj.customStatusBubble = obj;
-  obj.customStatusBubbleInset = {
-    marginLeft: paddingHorizontal + borderRadius - margin + React3,
-    marginRight: paddingHorizontal,
-  };
   const rect1 = { flexDirection: "row", position: "absolute", top: 16, right: 16, gap: 8, zIndex };
   obj.bannerButtons = rect1;
-  obj.profileTablist = { paddingHorizontal, marginBottom: nativeDefault.space.PX_16 };
-  obj.cards = { rowGap: 16 };
-  const obj1 = { paddingHorizontal, marginBottom: nativeDefault.space.PX_16 };
+  const obj2 = { flexGrow: 1, paddingBottom, overflow: "visible" };
+  const obj3 = { marginTop: 6, marginBottom: 12, marginLeft: borderRadius - margin + React3 };
+  const obj4 = { paddingHorizontal, marginBottom: nativeDefault.space.PX_16 };
   obj.card = {
     borderRadius: nativeDefault.radii.md,
     padding,

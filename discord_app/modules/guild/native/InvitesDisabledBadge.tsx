@@ -1,7 +1,7 @@
 // discord_app/modules/guild/native/InvitesDisabledBadge.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import native from "../../../design/void/native.tsx";
-import _modDef12854 from "../../../../_runtime/metro/12854__.js";
+import _modDef12855 from "../../../../_runtime/metro/12855__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -16,7 +16,7 @@ let obj = {
 let size = {
   borderRadius: 20,
   backgroundColor: nativeDefault.colors.BACKGROUND_MOD_STRONG,
-  padding: fn(1178).BADGE_PADDING,
+  padding: fn(1176).BADGE_PADDING,
   height: 16,
   width: 16,
   alignContent: "center",
@@ -27,9 +27,9 @@ const size1 = {
   borderRadius: 20,
   backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST,
   position: "absolute",
-  bottom: -fn(1178).BADGE_PADDING,
-  right: -fn(1178).BADGE_PADDING,
-  padding: fn(1178).BADGE_PADDING,
+  bottom: -fn(1176).BADGE_PADDING,
+  right: -fn(1176).BADGE_PADDING,
+  padding: fn(1176).BADGE_PADDING,
   height: 22,
   width: 22,
   alignContent: "center",
@@ -42,18 +42,25 @@ const result = size.fileFinishedImporting("modules/guild/native/InvitesDisabledB
 
 export default noop.memo(function InvitesDisabledBadge(style) {
   const tmp = closure_5();
-  let obj = { style: null, children: null };
+  const obj = { style: null, children: null };
   const items = [tmp.pauseRing, style.style];
   obj.style = items;
-  obj = { style: tmp.pauseBackground, children: null };
-  obj = { style: tmp.pause, themedColor: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE, source: _modDef12854 };
-  obj.children = jsx(native.ThemedIcon, {
-    style: tmp.pause,
-    themedColor: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE,
-    source: _modDef12854,
-  });
+  const obj2 = {
+    style: tmp.pauseBackground,
+    children: jsx(native.ThemedIcon, {
+      style: tmp.pause,
+      themedColor: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE,
+      source: _modDef12855,
+    }),
+  };
   obj.children = (
-    <View style={tmp.pause} themedColor={nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE} source={_modDef12854} />
+    <View style={tmp.pauseBackground}>
+      {jsx(native.ThemedIcon, {
+        style: tmp.pause,
+        themedColor: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE,
+        source: _modDef12855,
+      })}
+    </View>
   );
-  return <View style={tmp.pause} themedColor={nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE} source={_modDef12854} />;
+  return <View style={null}>{null}</View>;
 });

@@ -12,7 +12,6 @@ export default noop.memo((type) => {
   type = type.type;
   const options = type.options;
   const maxValues = type.maxValues;
-  let obj = maxValues;
   let items = [options];
   const memo = maxValues.useMemo(() => {
     const found = options.filter((item) => item.default);
@@ -20,21 +19,24 @@ export default noop.memo((type) => {
   }, items);
   let tmp3;
   if (memo.length > 0) {
-    obj = { type, values: memo };
-    tmp3 = obj;
+    const obj3 = { type, values: memo };
+    tmp3 = obj3;
   }
   const componentState = type(options[2]).useComponentState(type, tmp3);
   const state = componentState.state;
   const executeStateUpdate = componentState.executeStateUpdate;
   const items1 = [state, type];
-  closure_5 = obj.useMemo(() => {
+  closure_5 = maxValues.useMemo(() => {
     type = undefined;
     if (state != null) {
       type = state.type;
     }
     return type === type ? state.values : [];
   }, items1);
-  obj = {
+  const obj2 = type(options[2]);
+  const tmp = type;
+  const tmp2 = options;
+  return state(tmp(tmp2[3]).TableRowGroup, {
     hasIcons: false,
     children: options.map((label) => {
       const hasItem = closure_5.includes(label.value);
@@ -63,6 +65,5 @@ export default noop.memo((type) => {
       obj.disabled = tmp3;
       return state(type(options[4]).TableCheckboxRow, obj, label.value);
     }),
-  };
-  return state(type(options[3]).TableRowGroup, obj);
+  });
 });

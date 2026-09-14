@@ -11,9 +11,8 @@ const result = size.fileFinishedImporting(
 );
 
 export const useExplicitContentSettingOrDefault = function useExplicitContentSettingOrDefault() {
-  let obj = useStateFromStores;
   const items = [UserSettingsProtoStore];
-  const stateFromStoresObject = obj.useStateFromStoresObject(items, () => {
+  const stateFromStoresObject = useStateFromStores.useStateFromStoresObject(items, () => {
     const textAndImages = settings.settings.textAndImages;
     let prop;
     if (textAndImages != null) {
@@ -28,35 +27,35 @@ export const useExplicitContentSettingOrDefault = function useExplicitContentSet
   if (stateFromStoresObject != null) {
     prop = stateFromStoresObject.explicitContentGuilds;
   }
-  obj = {
+  const obj3 = {
     explicitContentGuilds: SensitiveMediaExplicitRedactionSettingsUtils.resolveExplicitContentSettingWithDefaults({
       setting: prop,
     }),
     explicitContentNonFriendDm: null,
     explicitContentFriendDm: null,
   };
-  let tmpResult = SensitiveMediaExplicitRedactionSettingsUtils;
   let prop1;
   if (stateFromStoresObject != null) {
     prop1 = stateFromStoresObject.explicitContentNonFriendDm;
   }
-  obj.explicitContentNonFriendDm = tmpResult.resolveExplicitContentSettingWithDefaults({ setting: prop1, isDm: true });
-  tmpResult = SensitiveMediaExplicitRedactionSettingsUtils;
+  obj3.explicitContentNonFriendDm =
+    SensitiveMediaExplicitRedactionSettingsUtils.resolveExplicitContentSettingWithDefaults({
+      setting: prop1,
+      isDm: true,
+    });
+  const tmpResult = SensitiveMediaExplicitRedactionSettingsUtils;
   let prop2;
   if (stateFromStoresObject != null) {
     prop2 = stateFromStoresObject.explicitContentFriendDm;
   }
-  obj.explicitContentFriendDm = tmpResult.resolveExplicitContentSettingWithDefaults({
-    setting: prop2,
-    isDm: true,
-    isFriend: true,
-  });
-  return obj;
+  obj3.explicitContentFriendDm = SensitiveMediaExplicitRedactionSettingsUtils.resolveExplicitContentSettingWithDefaults(
+    { setting: prop2, isDm: true, isFriend: true },
+  );
+  return obj3;
 };
 export const useGoreContentSettingOrDefault = function useGoreContentSettingOrDefault() {
-  let obj = useStateFromStores;
   const items = [UserSettingsProtoStore];
-  const stateFromStoresObject = obj.useStateFromStoresObject(items, () => {
+  const stateFromStoresObject = useStateFromStores.useStateFromStoresObject(items, () => {
     const textAndImages = settings.settings.textAndImages;
     let goreContentSettings;
     if (textAndImages != null) {
@@ -71,28 +70,30 @@ export const useGoreContentSettingOrDefault = function useGoreContentSettingOrDe
   if (stateFromStoresObject != null) {
     goreContentGuilds = stateFromStoresObject.goreContentGuilds;
   }
-  obj = {
+  const obj3 = {
     goreContentGuilds: SensitiveMediaGoreRedactionSettingsUtils.resolveGoreSettingWithDefaults({
       setting: goreContentGuilds,
     }),
     goreContentNonFriendDm: null,
     goreContentFriendDm: null,
   };
-  let tmpResult = SensitiveMediaGoreRedactionSettingsUtils;
   let prop;
   if (stateFromStoresObject != null) {
     prop = stateFromStoresObject.goreContentNonFriendDm;
   }
-  obj.goreContentNonFriendDm = tmpResult.resolveGoreSettingWithDefaults({ setting: prop, isDm: true });
-  tmpResult = SensitiveMediaGoreRedactionSettingsUtils;
+  obj3.goreContentNonFriendDm = SensitiveMediaGoreRedactionSettingsUtils.resolveGoreSettingWithDefaults({
+    setting: prop,
+    isDm: true,
+  });
+  const tmpResult = SensitiveMediaGoreRedactionSettingsUtils;
   let goreContentFriendDm;
   if (stateFromStoresObject != null) {
     goreContentFriendDm = stateFromStoresObject.goreContentFriendDm;
   }
-  obj.goreContentFriendDm = tmpResult.resolveGoreSettingWithDefaults({
+  obj3.goreContentFriendDm = SensitiveMediaGoreRedactionSettingsUtils.resolveGoreSettingWithDefaults({
     setting: goreContentFriendDm,
     isDm: true,
     isFriend: true,
   });
-  return obj;
+  return obj3;
 };

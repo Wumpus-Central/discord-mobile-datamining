@@ -5,7 +5,7 @@ import components_Button_Button from "../../../../design/components/Button/nativ
 import IconButton from "../../../../design/components/Button/native/IconButton.native.tsx";
 import _modDef10013 from "../../../../../_runtime/metro/10013__.js";
 import IconActionButton from "IconActionButton.tsx";
-import _mod16124 from "../../../../design/components/LottieIcon/native/generated/index.tsx";
+import _mod16126 from "../../../../design/components/LottieIcon/native/generated/index.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import MessageRequestStore from "../../../message_request/MessageRequestStore.tsx";
 import SpamMessageRequestStore from "../../../message_request/SpamMessageRequestStore.tsx";
@@ -30,7 +30,7 @@ function MessageRequestAnimation(color) {
       }
     }
   }, items2);
-  return React5(_mod16124.MessageRequestLottie, { ref, color: color.color, size: "sm", autoPlay: true });
+  return React5(_mod16126.MessageRequestLottie, { ref, color: color.color, size: "sm", autoPlay: true });
 }
 const View = fn(17).View;
 const jsxProd = fn(21);
@@ -46,48 +46,52 @@ export default function MessageRequestsButton(alternateVariant) {
     flag = false;
   }
   const merged = Object.assign(alternateVariant, Object.assign({ alternateVariant: 0 }));
-  let obj = initialize;
+  const tmp2 = closure_9();
   const items = [MessageRequestStore];
-  let str = obj.useStateFromStores(items, () => messageRequestsCount.getMessageRequestsCount());
-  let obj1 = initialize;
+  const str = initialize.useStateFromStores(items, () => messageRequestsCount.getMessageRequestsCount());
   const items1 = [SpamMessageRequestStore];
   if (0 === str) {
-    if (0 === obj1.useStateFromStores(items1, () => spamChannelsCount.getSpamChannelsCount())) {
+    if (0 === obj2.useStateFromStores(items1, () => spamChannelsCount.getSpamChannelsCount())) {
       return null;
     }
   }
   if (flag) {
-    str = undefined;
+    let str1;
     if (str > 0) {
-      str = str.toString();
+      str1 = str.toString();
     }
-    obj = { style: tmp2.buttonContainer, collapsable: false, children: null };
-    if (null != str) {
-      obj = {
+    const obj3 = { style: tmp2.buttonContainer, collapsable: false, children: null };
+    if (null != str1) {
+      const obj4 = {
         icon: React5(MessageRequestAnimation, {}),
         variant: "secondary",
-        text: str,
+        text: str1,
         size: "sm",
         accessibilityLabel: null,
       };
       const intl3 = util.intl;
-      obj.accessibilityLabel = intl3.string(util.t.e7GWjQ);
+      obj4.accessibilityLabel = intl3.string(util.t.e7GWjQ);
       const merged1 = Object.assign(merged);
-      let tmp21 = React5(components_Button_Button.Button, obj);
+      let tmp21 = React5(components_Button_Button.Button, obj4);
       let tmp16 = React5;
     } else {
       tmp16 = React5;
-      obj1 = { variant: "secondary", size: "sm", icon: React5(MessageRequestAnimation, {}), accessibilityLabel: null };
+      const obj5 = {
+        variant: "secondary",
+        size: "sm",
+        icon: React5(MessageRequestAnimation, {}),
+        accessibilityLabel: null,
+      };
       const intl2 = util.intl;
-      obj1.accessibilityLabel = intl2.string(util.t.e7GWjQ);
+      obj5.accessibilityLabel = intl2.string(util.t.e7GWjQ);
       const merged2 = Object.assign(merged);
-      tmp21 = React5(IconButton.IconButton, obj1);
+      tmp21 = React5(IconButton.IconButton, obj5);
     }
     const items2 = [tmp21, str > 0 && tmp16(IconActionButton.ButtonBadge, { badgePosition: "right" })];
-    obj.children = items2;
-    return React6(View, obj);
+    obj3.children = items2;
+    return React6(View, obj3);
   } else {
-    const obj2 = {
+    const obj6 = {
       source: _modDef10013,
       IconComponent: MessageRequestAnimation,
       accessibilityLabel: null,
@@ -96,15 +100,15 @@ export default function MessageRequestsButton(alternateVariant) {
       badgePosition: "right",
     };
     const intl = util.intl;
-    obj2.accessibilityLabel = intl.string(util.t.e7GWjQ);
-    let str1;
+    obj6.accessibilityLabel = intl.string(util.t.e7GWjQ);
+    let str2;
     if (str > 0) {
-      str1 = str.toString();
+      str2 = str.toString();
     }
-    obj2.buttonText = str1;
-    obj2.badge = str > 0;
+    obj6.buttonText = str2;
+    obj6.badge = str > 0;
     const merged3 = Object.assign(merged);
-    return React5(IconActionButtonDefault, obj2);
+    return React5(IconActionButtonDefault, obj6);
   }
-  tmp2 = closure_9();
+  obj2 = initialize;
 }

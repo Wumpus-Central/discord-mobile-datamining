@@ -15,7 +15,7 @@ export const useIsPersistentSecureFramesFingerprint = function useIsPersistentSe
   noop = undefined;
   const loading = _slicedToArray(noop.useState(true), 2);
   asyncGeneratorStep = loading[1];
-  [tmp3, c3] = _slicedToArray(noop.useState(false), 2);
+  [tmp3, c3] = noop.useState(false);
   const isOtherUserKeyPersistent = _slicedToArray(noop.useState(false), 2);
   noop = isOtherUserKeyPersistent[1];
   closure_0 = asyncGeneratorStep(async (arg0, arg1) => {
@@ -26,8 +26,8 @@ export const useIsPersistentSecureFramesFingerprint = function useIsPersistentSe
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj3 = { value, done: true };
+        return obj3;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -40,8 +40,8 @@ export const useIsPersistentSecureFramesFingerprint = function useIsPersistentSe
             throw value;
           } else if (arg0 === 2) {
             c7 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj4 = { value, done: true };
+            return obj4;
           } else {
             closure_2 = tmp8;
             closure_130_0 = closure_0;
@@ -54,8 +54,8 @@ export const useIsPersistentSecureFramesFingerprint = function useIsPersistentSe
             closure_130_2 = callback;
             c6 = 3;
             c7 = 1;
-            let obj1 = { value: closure_0(userKey[4]).isCurrentUserPublicKeyMatch(callback), done: false };
-            return obj1;
+            const obj6 = { value: closure_0(userKey[4]).isCurrentUserPublicKeyMatch(callback), done: false };
+            return obj6;
           }
         } else if (1 === tmp8) {
           c5 = 0;
@@ -77,15 +77,17 @@ export const useIsPersistentSecureFramesFingerprint = function useIsPersistentSe
               c5 = 0;
               closure_2(false);
               c7 = 3;
-              const obj2 = { value, done: true };
-              return obj2;
+              const obj7 = { value, done: true };
+              return obj7;
             } else {
               closure_130_3 = value;
-              obj1 = closure_0(userKey[4]);
               c6 = 4;
               c7 = 1;
-              const obj3 = { value: obj1.isPublicKeyMatch(closure_130_0, closure_130_1, closure_130_2), done: false };
-              return obj3;
+              const obj8 = {
+                value: closure_0(userKey[4]).isPublicKeyMatch(closure_130_0, closure_130_1, closure_130_2),
+                done: false,
+              };
+              return obj8;
             }
           } else if (arg0 === 1) {
             c7 = 3;
@@ -99,7 +101,7 @@ export const useIsPersistentSecureFramesFingerprint = function useIsPersistentSe
           c5 = 0;
           closure_2(false);
           c7 = 3;
-          obj = { value, done: true };
+          const obj = { value, done: true };
           return obj;
         }
       } catch (tmp51) {

@@ -25,14 +25,14 @@ function getSubscriptionItemsForProduct(productId) {
     const tmp7 = getPremiumBundledItemsFromProductId(productId);
     const items = [];
     if (tmp7.basePlanId !== constants2.NONE_MONTH) {
-      let obj = { planId: tmp7.basePlanId, quantity: 1 };
+      const obj = { planId: tmp7.basePlanId, quantity: 1 };
       items.push(obj);
     }
     const additionalPlans = tmp7.additionalPlans;
     for (const item10028 of additionalPlans) {
-      obj = { planId: null, quantity: null };
+      let obj3 = { planId: null, quantity: null };
       ({ planId: obj2.planId, quantity: obj2.quantity } = item10028);
-      let arr = items.push(obj);
+      let arr3 = items.push(obj3);
       continue;
     }
     return items;
@@ -157,7 +157,8 @@ export const getProductIdsForBothIntervals = function getProductIdsForBothInterv
         tmp17 = productId;
       }
       if (null == tmp17) {
-        let obj = { monthly, yearly: null };
+        const obj2 = { monthly, yearly: null };
+        let obj = obj2;
       } else {
         let tmp22 = tmp17;
         if (tmp8.interval === constants.MONTH) {
@@ -253,10 +254,8 @@ export const getModifySubscriptionItemsForProduct = function getModifySubscripti
   if (productId in found(7343).AppStorePremiumProductIdsToPremiumBundledItems) {
     const tmp8 = tmp(7343).AppStorePremiumProductIdsToPremiumBundledItems[productId];
     if (null != tmp8.premiumTier) {
-      let tmpResult = tmp(4294);
       if (tmpResult.isBoostOnlySubscription(subscription)) {
-        tmpResult = tmp(4294);
-        const itemsWithUpsertedPremiumPlanId = tmpResult.getItemsWithUpsertedPremiumPlanId(
+        const itemsWithUpsertedPremiumPlanId = tmp(4294).getItemsWithUpsertedPremiumPlanId(
           subscription,
           tmp8.basePlanId,
         );
@@ -278,6 +277,7 @@ export const getModifySubscriptionItemsForProduct = function getModifySubscripti
         }
         return mapped;
       }
+      tmpResult = tmp(4294);
     }
     return getSubscriptionItemsForProduct(productId);
   } else {

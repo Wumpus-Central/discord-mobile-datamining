@@ -20,7 +20,7 @@ import SearchQueryStore from "../../../stores/SearchQueryStore.tsx";
 require = fn;
 function ClearAllHistory(searchContext) {
   searchContext = searchContext.searchContext;
-  let obj = {
+  const obj = {
     onPress() {
       return SearchPlatformActionCreatorsDefault.clearSearchHistory(searchContext);
     },
@@ -31,18 +31,22 @@ function ClearAllHistory(searchContext) {
   };
   const intl = searchContext(1114).intl;
   obj.accessibilityLabel = intl.string(searchContext(1114).t.LFTAUp);
-  obj = { variant: "text-sm/semibold", color: "text-brand", children: null };
+  const obj2 = { variant: "text-sm/semibold", color: "text-brand", children: null };
   const intl2 = searchContext(1114).intl;
-  obj.children = intl2.string(searchContext(1114).t.LFTAUp);
+  obj2.children = intl2.string(searchContext(1114).t.LFTAUp);
   obj.children = jsx(searchContext(4632).Text, { variant: "text-sm/semibold", color: "text-brand", children: null });
   return jsx(searchContext(5204).PressableHighlight, {
-    variant: "text-sm/semibold",
-    color: "text-brand",
+    onPress() {
+      return SearchPlatformActionCreatorsDefault.clearSearchHistory(searchContext);
+    },
+    accessibilityRole: "button",
+    unstable_pressDelay: 130,
+    accessibilityLabel: null,
     children: null,
   });
 }
 function ViewAll(onJumpToMedia) {
-  let obj = {
+  const obj = {
     onPress: onJumpToMedia.onJumpToMedia,
     accessibilityRole: "button",
     unstable_pressDelay: 130,
@@ -51,11 +55,17 @@ function ViewAll(onJumpToMedia) {
   };
   const intl = util.intl;
   obj.accessibilityLabel = intl.string(util.t.Ofpgwh);
-  obj = { variant: "text-sm/semibold", color: "text-brand", children: null };
+  const obj2 = { variant: "text-sm/semibold", color: "text-brand", children: null };
   const intl2 = util.intl;
-  obj.children = intl2.string(util.t.Ofpgwh);
+  obj2.children = intl2.string(util.t.Ofpgwh);
   obj.children = jsx(Text_Text.Text, { variant: "text-sm/semibold", color: "text-brand", children: null });
-  return jsx(Pressables.PressableHighlight, { variant: "text-sm/semibold", color: "text-brand", children: null });
+  return jsx(Pressables.PressableHighlight, {
+    onPress: onJumpToMedia.onJumpToMedia,
+    accessibilityRole: "button",
+    unstable_pressDelay: 130,
+    accessibilityLabel: null,
+    children: null,
+  });
 }
 const SearchConstants = fn(7982);
 ({
@@ -64,7 +74,7 @@ const SearchConstants = fn(7982);
   SearchListItemTypes: closure_12,
   SearchTabs: map1,
 } = SearchConstants);
-const EMPTY_MEDIA_RESULTS = fn(12482).EMPTY_MEDIA_RESULTS;
+const EMPTY_MEDIA_RESULTS = fn(12483).EMPTY_MEDIA_RESULTS;
 const SearchTypes = fn(1074).SearchTypes;
 const jsx = fn(21).jsx;
 let closure_19 = noop.memo((searchContext) => {
@@ -74,25 +84,20 @@ let closure_19 = noop.memo((searchContext) => {
   c6 = undefined;
   let onPressMediaItem;
   let fullscreenPlaceholderCount;
-  let obj = searchContext(suggestedData[20]);
   let items = [onPressMediaItem, c6];
-  const stateFromStoresObject = obj.useStateFromStoresObject(items, () => {
-    let obj = SearchUtils;
-    const searchTabFetchId = obj.getSearchTabFetchId(
-      searchContext,
-      constants2.MEDIA,
-      SearchQueryStore.getSearchResultsQuery(searchContext),
-    );
-    obj = {
+  const stateFromStoresObject = searchContext(suggestedData[20]).useStateFromStoresObject(items, () => {
+    const searchResultsQuery = SearchQueryStore.getSearchResultsQuery(searchContext);
+    const searchTabFetchId = SearchUtils.getSearchTabFetchId(searchContext, constants2.MEDIA, searchResultsQuery);
+    return {
       messages: SearchMessageStore.getMessages(searchTabFetchId),
       isLoadingMediaGrid: !SearchMessageStore.getIsInitialFetchComplete(searchTabFetchId),
       isInitialSearchQuery: SearchQueryStore.isInitialSearchQuery(searchContext),
     };
-    return obj;
   });
   const messages = stateFromStoresObject.messages;
   const isLoadingMediaGrid = stateFromStoresObject.isLoadingMediaGrid;
   const isInitialSearchQuery = stateFromStoresObject.isInitialSearchQuery;
+  let obj = searchContext(suggestedData[20]);
   const searchContextId = searchContext(suggestedData[19]).getSearchContextId(searchContext);
   closure_129_0 = searchContextId;
   closure_129_1 = undefined;
@@ -151,17 +156,19 @@ let closure_19 = noop.memo((searchContext) => {
     if (messages != null) {
       found = messages.find((id) => id.id === media.messageId);
     }
-    let obj = ExplicitMediaRedactionNativeUtils;
     if (obj.shouldAgeVerifyForSearchMedia(media, found)) {
-      obj = { entryPoint: AgeVerificationAnalyticsUtils.AgeVerificationModalEntryPoint.SEARCH_MEDIA_PREVIEW };
-      const result = AgeVerificationActionCreatorsDefault.showAgeVerificationGetStartedModal(obj);
+      const obj3 = { entryPoint: AgeVerificationAnalyticsUtils.AgeVerificationModalEntryPoint.SEARCH_MEDIA_PREVIEW };
+      const result = AgeVerificationActionCreatorsDefault.showAgeVerificationGetStartedModal(obj3);
     } else {
       onPressMediaItem(media, media.originView);
     }
+    obj = ExplicitMediaRedactionNativeUtils;
   }, items3);
-  const obj4 = searchContext(suggestedData[16]);
-  obj = { placeholderHeight: fullscreenPlaceholderCount, numColumns: 1 };
-  fullscreenPlaceholderCount = searchContext(suggestedData[27]).useFullscreenPlaceholderCount(obj);
+  let obj4 = searchContext(suggestedData[16]);
+  fullscreenPlaceholderCount = searchContext(suggestedData[27]).useFullscreenPlaceholderCount({
+    placeholderHeight: fullscreenPlaceholderCount,
+    numColumns: 1,
+  });
   const items4 = [
     onPress,
     isInitialSearchQuery,
@@ -187,38 +194,36 @@ let closure_19 = noop.memo((searchContext) => {
         return items;
       }
     }
-    let arr1 = _undefined;
     if (_undefined.length > 0) {
       let element = { type: constants.SECTION, props: null };
-      obj = { title: null, trailing: null };
+      const obj2 = { title: null, trailing: null };
       const intl = searchContext(suggestedData[13]).intl;
-      obj.title = intl.string(searchContext(suggestedData[13]).t.ZZpBr4);
-      obj = { searchContext: items };
-      obj.trailing = <ClearAllHistory searchContext={items} />;
-      element.props = obj;
+      obj2.title = intl.string(searchContext(suggestedData[13]).t.ZZpBr4);
+      const obj3 = { searchContext: items };
+      obj2.trailing = <ClearAllHistory searchContext={items} />;
+      element.props = obj2;
       items.push(element);
-      const item = arr1.forEach((searchHistoryItem) => {
+      const item = _undefined.forEach((searchHistoryItem) => {
         const element = { type: constants.SEARCH_HISTORY_ITEM, props: { searchHistoryItem, searchContext } };
         items.push(element);
       });
     }
-    let arr2 = suggestedData;
     if (suggestedData != null) {
-      const item1 = arr2.forEach((item) => items.push(item));
+      const item1 = suggestedData.forEach((item) => items.push(item));
     }
     if (memo.length > 0) {
       const element1 = { type: constants.SECTION, props: null };
-      const obj1 = { title: null, trailing: null };
+      const obj4 = { title: null, trailing: null };
       const intl2 = searchContext(suggestedData[13]).intl;
-      obj1.title = intl2.string(searchContext(suggestedData[13]).t.LBYpDH);
-      const obj2 = { onJumpToMedia };
-      obj1.trailing = <ViewAll onJumpToMedia={onJumpToMedia} />;
-      element1.props = obj1;
-      arr1 = items.push(element1);
+      obj4.title = intl2.string(searchContext(suggestedData[13]).t.LBYpDH);
+      const obj5 = { onJumpToMedia };
+      obj4.trailing = <ViewAll onJumpToMedia={onJumpToMedia} />;
+      element1.props = obj4;
+      items.push(element1);
       const element2 = { type: constants.MEDIA_GRID, props: null };
-      const obj3 = { media: memo.slice(0, 9), mediaSize, onPress, animate: true };
-      element2.props = obj3;
-      arr2 = items.push(element2);
+      const obj6 = { media: memo.slice(0, 9), mediaSize, onPress, animate: true };
+      element2.props = obj6;
+      items.push(element2);
     }
     return items;
   }, items4);
@@ -236,7 +241,7 @@ let closure_20 = noop.memo((searchContext) => {
   _require = searchContext;
   importDefault = undefined;
   let onPressDMItem;
-  let obj = {
+  let tmp = require("useUserListData")({
     query,
     withGuildMembers: false,
     withAffinitySuggestions: true,
@@ -247,8 +252,7 @@ let closure_20 = noop.memo((searchContext) => {
     withFriendRequestsIncoming: false,
     withFriendRequestsOutgoing: false,
     excludeCurrentUser: true,
-  };
-  let tmp = require("useUserListData")(obj);
+  });
   importDefault = tmp;
   onPressDMItem = require("useOnPressSearchItem").useOnPressDMItem({ searchContext });
   _require = asyncGeneratorStep(async (searchContext) => {
@@ -262,8 +266,8 @@ let closure_20 = noop.memo((searchContext) => {
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
-          let obj = { value, done: true };
-          return obj;
+          const obj2 = { value, done: true };
+          return obj2;
         } else {
           return { value: "HermesInternal", done: null };
         }
@@ -276,29 +280,27 @@ let closure_20 = noop.memo((searchContext) => {
               throw value;
             } else if (arg0 === 2) {
               c4 = 3;
-              obj = { value, done: true };
-              return obj;
+              const obj3 = { value, done: true };
+              return obj3;
             } else {
               closure_129_0 = searchContext;
               closure_129_1 = undefined;
-              let obj3 = tmp2(onPressDMItem[17]);
               c3 = 1;
               c4 = 1;
-              const obj1 = { value: obj3.getOrEnsurePrivateChannel(searchContext), done: false };
-              return obj1;
+              const obj5 = { value: tmp2(onPressDMItem[17]).getOrEnsurePrivateChannel(searchContext), done: false };
+              return obj5;
             }
           } else if (arg0 === 1) {
             c4 = 3;
             throw value;
           } else if (arg0 === 2) {
             c4 = 3;
-            const obj2 = { value, done: true };
-            return obj2;
+            const obj6 = { value, done: true };
+            return obj6;
           } else {
             closure_129_1 = value;
-            obj = tmp2(onPressDMItem[18]);
-            obj3 = { searchContext, channelId: closure_129_1 };
-            const result = obj.trackSuggestedSearchClicked(obj3);
+            const obj7 = { searchContext, channelId: closure_129_1 };
+            const result = tmp2(onPressDMItem[18]).trackSuggestedSearchClicked(obj7);
             tmp5(closure_129_0, closure_129_1);
             c4 = 3;
             return { value: "HermesInternal", done: null };
@@ -322,7 +324,7 @@ let closure_20 = noop.memo((searchContext) => {
     return applyArgumentsResult;
   }, items);
   const items1 = [callback, tmp];
-  obj = {};
+  let obj3 = {};
   const memo = noop.useMemo(() => {
     const items = [];
     if (0 !== length.length) {
@@ -347,15 +349,15 @@ let closure_20 = noop.memo((searchContext) => {
     return items;
   }, items1);
   const merged = Object.assign(searchContext);
-  obj.suggestedData = memo;
+  obj3.suggestedData = memo;
   return <closure_19 />;
 });
 let closure_21 = noop.memo((searchContext) => {
   searchContext = searchContext.searchContext;
   let stateFromStores;
   let onPress;
+  const searchContextId = searchContext(stateFromStores[19]).getSearchContextId(searchContext);
   let obj = searchContext(stateFromStores[19]);
-  const searchContextId = obj.getSearchContextId(searchContext);
   let items = [SearchGuildChannelTabStore];
   stateFromStores = searchContext(stateFromStores[20]).useStateFromStores(items, () =>
     SearchGuildChannelTabStore.getTextChannels(closure_1),
@@ -366,12 +368,11 @@ let closure_21 = noop.memo((searchContext) => {
   const memo = onPress.useMemo(() => stateFromStores.slice(0, 3), items1);
   const items2 = [onPressGuildTextChannel, searchContext];
   onPress = onPress.useCallback((channelId) => {
-    const obj = { searchContext, channelId };
-    const result = obj.trackSuggestedSearchClicked(obj);
+    const result = search_tracking_TrackingDefault.trackSuggestedSearchClicked({ searchContext, channelId });
     onPressGuildTextChannel(channelId);
   }, items2);
   const items3 = [onPress, memo];
-  obj = {};
+  const obj4 = {};
   const memo1 = onPress.useMemo(() => {
     const items = [];
     if (0 !== memo.length) {
@@ -392,7 +393,7 @@ let closure_21 = noop.memo((searchContext) => {
     return items;
   }, items3);
   const merged = Object.assign(searchContext);
-  obj.suggestedData = memo1;
+  obj4.suggestedData = memo1;
   return <closure_19 />;
 });
 const size = fn(2);
@@ -402,10 +403,10 @@ export default noop.memo(function RecentScreenContainer(arg0) {
   ({ searchContext, onJumpToMedia, width } = arg0);
   const type = searchContext.type;
   if (SearchTypes.DMS === type) {
-    let obj = { searchContext, onJumpToMedia, width };
+    const obj2 = { searchContext, onJumpToMedia, width };
     return <closure_20 searchContext={searchContext} onJumpToMedia={onJumpToMedia} width={width} />;
   } else if (SearchTypes.GUILD === type) {
-    obj = { searchContext, onJumpToMedia, width };
+    const obj3 = { searchContext, onJumpToMedia, width };
     return <closure_21 searchContext={searchContext} onJumpToMedia={onJumpToMedia} width={width} />;
   } else {
     if (SearchTypes.GUILD_CHANNEL !== type) {
@@ -413,7 +414,7 @@ export default noop.memo(function RecentScreenContainer(arg0) {
         return null;
       }
     }
-    obj = { searchContext, onJumpToMedia, width };
+    const obj = { searchContext, onJumpToMedia, width };
     return <closure_19 searchContext={searchContext} onJumpToMedia={onJumpToMedia} width={width} />;
   }
 });

@@ -27,14 +27,16 @@ function StandardStickerDetail(chatInputRef) {
   let stateFromStores;
   let memo;
   const pack_id = sticker.pack_id;
-  let obj = stateFromStores(pack_id[22]);
+  const tmp = closure_24();
   const items = [StickersStore];
-  stateFromStores = obj.useStateFromStores(items, () => StickersStore.getStickerPack(pack_id));
-  let obj1 = stateFromStores(pack_id[22]);
+  stateFromStores = stateFromStores(pack_id[22]).useStateFromStores(items, () => StickersStore.getStickerPack(pack_id));
+  let obj = stateFromStores(pack_id[22]);
   const items1 = [StickersStore];
-  const stateFromStores1 = obj1.useStateFromStores(items1, () => StickersStore.isPremiumPack(pack_id));
-  let obj2 = stateFromStores(pack_id[14]);
-  const fetchStickerPack = obj2.useFetchStickerPack(pack_id);
+  const stateFromStores1 = stateFromStores(pack_id[22]).useStateFromStores(items1, () =>
+    StickersStore.isPremiumPack(pack_id),
+  );
+  let obj2 = stateFromStores(pack_id[22]);
+  const fetchStickerPack = stateFromStores(pack_id[14]).useFetchStickerPack(pack_id);
   const diff = chatInputRef(pack_id[23])().width - 2 * closure_12;
   const rounded = Math.floor(Math.min(ACTION_SHEET_MAX_WIDTH, diff - closure_13) / (closure_14 + closure_13));
   const items2 = [channel.guild_id];
@@ -49,8 +51,8 @@ function StandardStickerDetail(chatInputRef) {
   const items3 = [memo, stateFromStores];
   const effect = memo.useEffect(() => {
     if (null != stateFromStores) {
-      const obj = { location: memo, type: "Sticker Upsell Sheet", sticker_pack_id: tmp.id };
-      obj.track(constants3.OPEN_POPOUT, obj);
+      const obj2 = { location: memo, type: "Sticker Upsell Sheet", sticker_pack_id: tmp.id };
+      AnalyticsUtilsDefault.track(constants3.OPEN_POPOUT, obj2);
     }
   }, items3);
   if (null == stateFromStores) {
@@ -60,37 +62,36 @@ function StandardStickerDetail(chatInputRef) {
     const format = intl2.format;
     const t = tmp2(tmp3[19]).t;
     if (stateFromStores1) {
-      obj = { stickerPackName: stateFromStores.name };
-      let formatResult = format(t.auckXz, obj);
+      const obj4 = { stickerPackName: stateFromStores.name };
+      let formatResult = format(t.auckXz, obj4);
     } else {
-      obj = { stickerPackName: stateFromStores.name };
-      formatResult = format(t.OzB6e3, obj);
+      const obj5 = { stickerPackName: stateFromStores.name };
+      formatResult = format(t.OzB6e3, obj5);
     }
-    obj1 = { variant: "heading-md/extrabold", color: "mobile-text-heading-primary", children: sticker.name };
-    const items4 = [closure_21(tmp2(tmp3[18]).Text, obj1), , , ,];
-    obj2 = { style: tmp.description, variant: "text-sm/medium", children: formatResult };
-    items4[1] = closure_21(tmp2(tmp3[18]).Text, obj2);
-    const obj3 = { containerWidth: diff, stickers: null, rowSize: null };
+    const obj6 = { variant: "heading-md/extrabold", color: "mobile-text-heading-primary", children: sticker.name };
+    const items4 = [closure_21(tmp2(tmp3[18]).Text, obj6), , , ,];
+    const obj7 = { style: tmp.description, variant: "text-sm/medium", children: formatResult };
+    items4[1] = closure_21(tmp2(tmp3[18]).Text, obj7);
+    const obj8 = { containerWidth: diff, stickers: null, rowSize: null };
     const stickers = stateFromStores.stickers;
-    obj3.stickers = stickers.slice(0, rounded);
-    obj3.rowSize = rounded;
-    items4[2] = closure_21(tmp7(tmp3[25]), obj3);
+    obj8.stickers = stickers.slice(0, rounded);
+    obj8.rowSize = rounded;
+    items4[2] = closure_21(tmp7(tmp3[25]), obj8);
     let tmp15Result = null;
     if (stateFromStores1) {
-      const obj4 = { style: null };
-      const obj5 = { height: tmp7(tmp3[13]).space.PX_16 };
-      obj4.style = obj5;
-      tmp15Result = closure_21(closure_6, obj4);
+      const obj9 = { style: null };
+      const obj10 = { height: tmp7(tmp3[13]).space.PX_16 };
+      obj9.style = obj10;
+      tmp15Result = closure_21(closure_6, obj9);
     }
     items4[3] = tmp15Result;
-    tmp15Result = stateFromStores1;
+    let tmp15Result2 = stateFromStores1;
     if (stateFromStores1) {
-      const obj6 = { variant: "secondary", text: null, onPress: null };
+      const obj11 = { variant: "secondary", text: null, onPress: null };
       const intl = tmp2(tmp3[19]).intl;
-      obj6.text = intl.string(tmp2(tmp3[19]).t.GPy3Ar);
-      obj6.onPress = function onPress() {
-        let obj = stateFromStores(pack_id[27]);
-        const result = obj.hideStickerDetailActionSheet();
+      obj11.text = intl.string(tmp2(tmp3[19]).t.GPy3Ar);
+      obj11.onPress = function onPress() {
+        const result = stateFromStores(pack_id[27]).hideStickerDetailActionSheet();
         if (null != stateFromStores) {
           if (_slicedToArray) {
             if (null != importDefault) {
@@ -99,20 +100,19 @@ function StandardStickerDetail(chatInputRef) {
             }
           }
         }
-        obj = {
-          analyticsLocation: noop,
-          analyticsPopoutType: stateFromStores(pack_id[29]).AnalyticsPopoutType.STICKER_PACK_UPSELL,
-          stickerPack: stateFromStores,
-        };
-        chatInputRef(pack_id[29])(obj);
+        const obj2 = { analyticsLocation: noop, analyticsPopoutType: null, stickerPack: null };
+        const obj = stateFromStores(pack_id[27]);
+        obj2.analyticsPopoutType = stateFromStores(pack_id[29]).AnalyticsPopoutType.STICKER_PACK_UPSELL;
+        obj2.stickerPack = stateFromStores;
+        chatInputRef(pack_id[29])(obj2);
         const tmp7 = chatInputRef(pack_id[29]);
       };
-      tmp15Result = closure_21(tmp2(tmp3[26]).Button, obj6);
+      tmp15Result2 = closure_21(tmp2(tmp3[26]).Button, obj11);
     }
-    const obj7 = { children: null };
-    items4[4] = tmp15Result;
-    obj7.children = items4;
-    tmp13Result = closure_23(closure_22, obj7);
+    const obj12 = { children: null };
+    items4[4] = tmp15Result2;
+    obj12.children = items4;
+    tmp13Result = closure_23(closure_22, obj12);
     const tmp7Result = tmp7(tmp3[25]);
   }
   return tmp13Result;
@@ -123,10 +123,8 @@ function UnavailableStickerDetail(arg0) {
   let stickerAssetUrl;
   const tmp = closure_24();
   const currentUser = UserStore.getCurrentUser();
-  let obj = require("PremiumUtils");
-  let obj1 = noop;
   const items = [channel.guild_id];
-  const result = obj.canUseCustomStickersEverywhere(currentUser);
+  const result = require("PremiumUtils").canUseCustomStickersEverywhere(currentUser);
   importDefault = noop.useMemo(() => {
     if (null != channel.guild_id) {
       let DM_CHANNEL = constants.GUILD_CHANNEL;
@@ -135,8 +133,8 @@ function UnavailableStickerDetail(arg0) {
     }
     return { page: DM_CHANNEL, section: constants2.STICKER_POPOUT };
   }, items);
-  let obj2 = require("TidaWebformExperiment");
-  let tidaWebformEnabled = obj2.useExperiment(
+  let obj = require("PremiumUtils");
+  let tidaWebformEnabled = require("TidaWebformExperiment").useExperiment(
     { location: "StickerDetailActionSheet" },
     { autoTrackExposure: false },
   ).tidaWebformEnabled;
@@ -144,60 +142,68 @@ function UnavailableStickerDetail(arg0) {
   if (tidaWebformEnabled) {
     tidaWebformEnabled = DeveloperMode.useSetting();
   }
+  let obj3 = require("TidaWebformExperiment");
   stickerAssetUrl = channel(stickerAssetUrl[33]).getStickerAssetUrl(renderableSticker);
   const items1 = [stickerAssetUrl];
-  obj = { style: tmp.guildEmojiTopContainer, children: null };
-  const callback = obj1.useCallback(() => {
+  const obj4 = { style: tmp.guildEmojiTopContainer, children: null };
+  const callback = noop.useCallback(() => {
     if (null != stickerAssetUrl) {
-      const obj = { stickerUrl: tmp };
-      obj.openLazy(asyncRequireImpl(10533, dependencyMap.paths), "StickerOptionsActionSheet", obj, "stack");
+      const obj = ActionSheetActionCreatorsDefault;
+      const obj2 = { stickerUrl: tmp };
+      obj.openLazy(asyncRequireImpl(10534, dependencyMap.paths), "StickerOptionsActionSheet", obj2, "stack");
     }
   }, items1);
   const items2 = [closure_21(require("Sticker"), { sticker: renderableSticker, size: 48 }), ,];
-  obj = { style: tmp.guildEmojiDescription, children: null };
-  obj1 = { variant: "heading-md/extrabold", color: "mobile-text-heading-primary", children: renderableSticker.name };
-  const items3 = [closure_21(channel(stickerAssetUrl[18]).Text, obj1)];
-  obj2 = { style: tmp.description, variant: "text-sm/medium", children: null };
+  const obj5 = { style: tmp.guildEmojiDescription, children: null };
+  const items3 = [
+    closure_21(channel(stickerAssetUrl[18]).Text, {
+      variant: "heading-md/extrabold",
+      color: "mobile-text-heading-primary",
+      children: renderableSticker.name,
+    }),
+  ];
+  const obj7 = { style: tmp.description, variant: "text-sm/medium", children: null };
   const intl = channel(tmp4[19]).intl;
   if (result) {
     let stringResult = intl.string(channel(tmp4[19]).t.vZaScH);
   } else {
-    const obj3 = {
+    const obj8 = {
       openPremiumSettings() {
-        let obj = ActionSheetActionCreatorsDefault;
-        obj.hideActionSheet();
-        obj = { location_page: analyticsLocation.page, location_section: analyticsLocation.section };
-        AnalyticsUtilsDefault.track(constants3.PREMIUM_PROMOTION_OPENED, obj);
-        obj = { screen: constants5.PREMIUM, params: { analyticsLocation } };
-        openUserSettings.openUserSettings(obj);
+        ActionSheetActionCreatorsDefault.hideActionSheet();
+        AnalyticsUtilsDefault.track(constants3.PREMIUM_PROMOTION_OPENED, {
+          location_page: analyticsLocation.page,
+          location_section: analyticsLocation.section,
+        });
+        const obj3 = { location_page: analyticsLocation.page, location_section: analyticsLocation.section };
+        openUserSettings.openUserSettings({ screen: constants5.PREMIUM, params: { analyticsLocation } });
       },
     };
-    stringResult = intl.format(channel(tmp4[19]).t.hGWuxU, obj3);
+    stringResult = intl.format(channel(tmp4[19]).t.hGWuxU, obj8);
   }
-  obj2.children = stringResult;
-  items3[1] = closure_21(channel(stickerAssetUrl[18]).Text, obj2);
-  obj.children = items3;
-  items2[1] = closure_23(closure_6, obj);
+  obj7.children = stringResult;
+  items3[1] = closure_21(channel(stickerAssetUrl[18]).Text, obj7);
+  obj5.children = items3;
+  items2[1] = closure_23(closure_6, obj5);
   if (tidaWebformEnabled) {
     tidaWebformEnabled = null != stickerAssetUrl;
   }
   if (tidaWebformEnabled) {
-    const obj4 = { accessibilityLabel: null, style: null, onPress: null, children: null };
+    const obj9 = { accessibilityLabel: null, style: null, onPress: null, children: null };
     const intl2 = channel(tmp4[19]).intl;
-    obj4.accessibilityLabel = intl2.string(channel(tmp4[19]).t.PdRCRg);
-    obj4.style = tmp.moreMenuIcon;
-    obj4.onPress = callback;
-    const obj5 = { color: tmp3(tmp4[13]).colors.INTERACTIVE_TEXT_DEFAULT };
-    obj4.children = closure_21(channel(tmp4[41]).MoreHorizontalIcon, obj5);
-    tidaWebformEnabled = closure_21(closure_8, obj4);
+    obj9.accessibilityLabel = intl2.string(channel(tmp4[19]).t.PdRCRg);
+    obj9.style = tmp.moreMenuIcon;
+    obj9.onPress = callback;
+    const obj10 = { color: tmp3(tmp4[13]).colors.INTERACTIVE_TEXT_DEFAULT };
+    obj9.children = closure_21(channel(tmp4[41]).MoreHorizontalIcon, obj10);
+    tidaWebformEnabled = closure_21(closure_8, obj9);
   }
   items2[2] = tidaWebformEnabled;
-  obj.children = items2;
-  return closure_23(closure_6, obj);
+  obj4.children = items2;
+  return closure_23(closure_6, obj4);
 }
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, ActivityIndicator: closure_7, Pressable: closure_8 } = get_ActivityIndicator);
-const StickerPickerConstants = fn(10401);
+const StickerPickerConstants = fn(10402);
 ({ PADDING_HORIZONTAL: closure_12, MIN_MARGIN: map1, STICKER_SIZE: closure_14 } = StickerPickerConstants);
 const Constants = fn(1074);
 ({
@@ -210,8 +216,8 @@ const Constants = fn(1074);
 const ACTION_SHEET_MAX_WIDTH = fn(7254).ACTION_SHEET_MAX_WIDTH;
 const jsxProd = fn(21);
 ({ jsx: closure_21, Fragment: closure_22, jsxs: closure_23 } = jsxProd);
-let createStyles = fn(4636);
-let PlatformUtils = fn(1150);
+const createStyles = fn(4636);
+const PlatformUtils = fn(1363);
 let num = 0;
 if (PlatformUtils.isAndroid()) {
   num = 16;
@@ -220,8 +226,8 @@ let obj = {
   content: { padding: 16, paddingBottom: num },
   description: { lineHeight: 18, marginTop: 4 },
   guildEmojiTopContainer: { flexDirection: "row", alignItems: "center" },
-  buttonContainer: null,
-  guildEmojiDescription: null,
+  buttonContainer: { marginTop: nativeDefault.space.PX_12 },
+  guildEmojiDescription: { paddingLeft: 16, flex: 1 },
   divider: null,
   moreMenuIcon: null,
   favoriteContainer: null,
@@ -229,22 +235,25 @@ let obj = {
   starIconSelected: null,
   starIconUnselected: null,
 };
-obj = { marginTop: nativeDefault.space.PX_12 };
-obj.buttonContainer = obj;
-obj.guildEmojiDescription = { paddingLeft: 16, flex: 1 };
-createStyles = {
+let obj4 = { marginTop: nativeDefault.space.PX_12 };
+obj.divider = {
   marginLeft: 0,
   marginTop: nativeDefault.space.PX_16,
   marginBottom: nativeDefault.space.PX_16,
   backgroundColor: nativeDefault.colors.BORDER_SUBTLE,
 };
-obj.divider = createStyles;
 obj.moreMenuIcon = { height: 32, width: 32, justifyContent: "center", alignItems: "center" };
-PlatformUtils = { paddingTop: nativeDefault.space.PX_4 };
-obj.favoriteContainer = PlatformUtils;
+let obj5 = {
+  marginLeft: 0,
+  marginTop: nativeDefault.space.PX_16,
+  marginBottom: nativeDefault.space.PX_16,
+  backgroundColor: nativeDefault.colors.BORDER_SUBTLE,
+};
+obj.favoriteContainer = { paddingTop: nativeDefault.space.PX_4 };
 obj.starIcon = { height: 32, width: 32 };
+let obj6 = { paddingTop: nativeDefault.space.PX_4 };
 obj.starIconSelected = { tintColor: nativeDefault.colors.ICON_FEEDBACK_WARNING };
-let obj3 = { tintColor: nativeDefault.colors.ICON_FEEDBACK_WARNING };
+let obj7 = { tintColor: nativeDefault.colors.ICON_FEEDBACK_WARNING };
 obj.starIconUnselected = { tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
 let closure_24 = createStyles.createStyles(obj);
 function GuildStickerDetail(sticker) {
@@ -254,28 +263,27 @@ function GuildStickerDetail(sticker) {
   noop = undefined;
   let stickerAssetUrl;
   let analyticsLocation;
+  let obj7;
   let ref;
   const tmp2 = closure_24();
-  let obj = noop;
   const tmp4 = first1(noop.useState(null), 2);
   let guild = tmp4[0];
   closure_3 = tmp4[1];
-  let obj1 = sticker(guild[22]);
   const items = [ref];
-  const stateFromStores = obj1.useStateFromStores(items, () => GuildStore.getGuild(sticker.guild_id));
+  const stateFromStores = sticker(guild[22]).useStateFromStores(items, () => GuildStore.getGuild(sticker.guild_id));
   let hasItem = null == stateFromStores;
   if (!hasItem) {
     const features = stateFromStores.features;
     hasItem = features.has(constants4.DISCOVERABLE);
   }
-  const tmp3Result = first1(obj.useState(!hasItem), 2);
+  const tmp3Result = first1(noop.useState(!hasItem), 2);
   first1 = tmp3Result[0];
   noop = tmp3Result[1];
   const currentUser = UserStore.getCurrentUser();
-  let obj2 = channel(tmp7[30]);
-  let result = obj2.canUseCustomStickersEverywhere(currentUser);
-  let obj3 = channel(tmp7[31]);
-  let tidaWebformEnabled = obj3.useExperiment(
+  let obj2 = sticker(guild[22]);
+  let result = channel(guild[30]).canUseCustomStickersEverywhere(currentUser);
+  let obj3 = channel(guild[30]);
+  let tidaWebformEnabled = channel(guild[31]).useExperiment(
     { location: "StickerDetailActionSheet" },
     { autoTrackExposure: false },
   ).tidaWebformEnabled;
@@ -285,8 +293,8 @@ function GuildStickerDetail(sticker) {
   const setting = DeveloperMode.useSetting();
   let tmpResult = closure_24();
   closure_129_1 = tmpResult;
-  let tmp6Result = tmp6(tmp7[14]);
-  const favoriteStickerIds = tmp6Result.useFavoriteStickerIds();
+  let obj4 = channel(guild[31]);
+  const favoriteStickerIds = sticker(guild[14]).useFavoriteStickerIds();
   const hasItem1 = favoriteStickerIds.includes(id);
   closure_129_2 = hasItem1;
   const items1 = [tmpResult];
@@ -323,44 +331,44 @@ function GuildStickerDetail(sticker) {
       obj.children = stringResult;
       return closure_2_21(sticker(first[18]).Text, obj);
     }
-    let obj = ActionSheetActionCreatorsDefault;
-    obj.hideActionSheet();
+    ActionSheetActionCreatorsDefault.hideActionSheet();
     const obj2 = StickersActionCreators;
     if (first) {
       obj2.unfavoriteSticker(sticker);
-      let tmpResult = ToastActionCreatorsDefault;
-      obj = {
+      const obj3 = {
         key: "STICKER_UNFAVORITED",
         icon() {
           return closure_1_3(false);
         },
         content,
       };
-      tmpResult.open(obj);
+      ToastActionCreatorsDefault.open(obj3);
+      const tmpResult = ToastActionCreatorsDefault;
     } else {
       obj2.favoriteSticker(sticker);
-      tmpResult = ToastActionCreatorsDefault;
-      obj = {
+      const obj4 = {
         key: "STICKER_FAVORITED",
         icon() {
           return closure_1_3(true);
         },
         content,
       };
-      tmpResult.open(obj);
+      ToastActionCreatorsDefault.open(obj4);
+      const tmpResult2 = ToastActionCreatorsDefault;
     }
   }, items2);
   if (tidaWebformEnabled) {
     tidaWebformEnabled = setting;
   }
-  tmp6Result = tmp6(tmp7[33]);
-  stickerAssetUrl = tmp6Result.getStickerAssetUrl(sticker);
+  const tmp6Result = sticker(guild[14]);
+  stickerAssetUrl = sticker(guild[33]).getStickerAssetUrl(sticker);
   const items3 = [stickerAssetUrl];
   const items4 = [channel.guild_id];
   const callback2 = obj.useCallback(() => {
     if (null != stickerAssetUrl) {
-      const obj = { stickerUrl: tmp };
-      obj.openLazy(asyncRequireImpl(10533, dependencyMap.paths), "StickerOptionsActionSheet", obj, "stack");
+      const obj = ActionSheetActionCreatorsDefault;
+      const obj2 = { stickerUrl: tmp };
+      obj.openLazy(asyncRequireImpl(10534, dependencyMap.paths), "StickerOptionsActionSheet", obj2, "stack");
     }
   }, items3);
   analyticsLocation = obj.useMemo(() => {
@@ -371,7 +379,8 @@ function GuildStickerDetail(sticker) {
     }
     return { page: DM_CHANNEL, section: constants2.STICKER_POPOUT };
   }, items4);
-  obj = { guild_id: channel.getGuildId() };
+  const tmp6Result3 = sticker(guild[33]);
+  const obj5 = { guild_id: channel.getGuildId() };
   let merged = Object.assign(sticker(guild[36]).collectChannelAnalyticsMetadata(channel));
   const items5 = [sticker.id, first1];
   const effect = obj.useEffect(() => {
@@ -383,8 +392,8 @@ function GuildStickerDetail(sticker) {
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
-          let obj = { value, done: true };
-          return obj;
+          const obj2 = { value, done: true };
+          return obj2;
         } else {
           return { value: "HermesInternal", done: null };
         }
@@ -397,22 +406,22 @@ function GuildStickerDetail(sticker) {
               throw value;
             } else if (arg0 === 2) {
               v3 = 3;
-              obj = { value, done: true };
-              return obj;
+              const obj3 = { value, done: true };
+              return obj3;
             } else {
               closure_1 = tmp5;
               closure_128_0 = undefined;
               c2 = 1;
               v3 = 1;
-              obj1 = { value: channel(guild[38])(tmp2.id), done: false };
-              return obj1;
+              const obj4 = { value: channel(guild[38])(tmp2.id), done: false };
+              return obj4;
             }
           } else if (arg0 === 1) {
             v3 = 3;
             throw value;
           } else if (arg0 === 2) {
             v3 = 3;
-            obj = { value, done: true };
+            const obj = { value, done: true };
             return obj;
           } else {
             closure_128_0 = value;
@@ -479,17 +488,18 @@ function GuildStickerDetail(sticker) {
       str = "Custom Sticker Popout (Upsell)";
       flag2 = true;
     } else {
-      obj = {
+      const obj6 = {
         openPremiumSettings() {
-          let obj = ActionSheetActionCreatorsDefault;
-          obj.hideActionSheet();
-          obj = { location_page: analyticsLocation.page, location_section: analyticsLocation.section };
-          AnalyticsUtilsDefault.track(constants3.PREMIUM_PROMOTION_OPENED, obj);
-          obj = { screen: constants5.PREMIUM, params: { analyticsLocation } };
-          openUserSettings.openUserSettings(obj);
+          ActionSheetActionCreatorsDefault.hideActionSheet();
+          AnalyticsUtilsDefault.track(constants3.PREMIUM_PROMOTION_OPENED, {
+            location_page: analyticsLocation.page,
+            location_section: analyticsLocation.section,
+          });
+          const obj3 = { location_page: analyticsLocation.page, location_section: analyticsLocation.section };
+          openUserSettings.openUserSettings({ screen: constants5.PREMIUM, params: { analyticsLocation } });
         },
       };
-      stringResult = intl.format(tmp6(tmp7[19]).t.hGWuxU, obj);
+      stringResult = intl.format(tmp6(tmp7[19]).t.hGWuxU, obj6);
       flag = false;
       str = "Custom Sticker Popout (Soft Upsell)";
       flag2 = false;
@@ -501,74 +511,74 @@ function GuildStickerDetail(sticker) {
     if (tmp33) {
       tmp33 = tmp27;
     }
-    obj1 = { popoutAnalyticsConfig: obj.useRef(obj).current, popoutType: str };
-    ref = obj.useRef(obj1);
+    obj7 = { popoutAnalyticsConfig: obj.useRef(obj5).current, popoutType: str };
+    ref = obj.useRef(obj7);
     const effect1 = obj.useEffect(() => {
-      closure_9.current = obj1;
+      closure_9.current = obj7;
     });
     const items6 = [first1];
     const effect2 = obj.useEffect(() => {
       const popoutAnalyticsConfig = ref.current.popoutAnalyticsConfig;
       if (first1) {
-        const obj = { type: tmp };
+        const obj2 = { type: tmp };
         const merged = Object.assign(popoutAnalyticsConfig);
-        obj.track(constants3.OPEN_POPOUT, obj);
+        AnalyticsUtilsDefault.track(constants3.OPEN_POPOUT, obj2);
       }
     }, items6);
-    let tmp37Result = null;
+    let tmp37Result3 = null;
     if (first1) {
-      obj2 = { style: tmp2.guildEmojiTopContainer, children: null };
-      obj3 = { sticker, size: 48 };
-      const items7 = [closure_21(tmp15(tmp7[40]), obj3), ,];
-      const obj4 = { style: tmp2.guildEmojiDescription, children: null };
-      const obj5 = { variant: "heading-md/extrabold", color: "mobile-text-heading-primary", children: sticker.name };
-      const items8 = [closure_21(tmp6(tmp7[18]).Text, obj5)];
-      const obj6 = { style: tmp2.description, variant: "text-sm/medium", children: stringResult };
-      items8[1] = closure_21(tmp6(tmp7[18]).Text, obj6);
-      obj4.children = items8;
-      items7[1] = closure_23(stickerAssetUrl, obj4);
+      const obj8 = { style: tmp2.guildEmojiTopContainer, children: null };
+      const obj9 = { sticker, size: 48 };
+      const items7 = [closure_21(tmp15(tmp7[40]), obj9), ,];
+      const obj10 = { style: tmp2.guildEmojiDescription, children: null };
+      const obj11 = { variant: "heading-md/extrabold", color: "mobile-text-heading-primary", children: sticker.name };
+      const items8 = [closure_21(tmp6(tmp7[18]).Text, obj11)];
+      const obj12 = { style: tmp2.description, variant: "text-sm/medium", children: stringResult };
+      items8[1] = closure_21(tmp6(tmp7[18]).Text, obj12);
+      obj10.children = items8;
+      items7[1] = closure_23(stickerAssetUrl, obj10);
       let tmp40Result = tidaWebformEnabled;
       if (tidaWebformEnabled) {
         tmp40Result = null != stickerAssetUrl;
       }
       if (tmp40Result) {
-        const obj7 = { accessibilityLabel: null, style: null, onPress: null, children: null };
+        const obj13 = { accessibilityLabel: null, style: null, onPress: null, children: null };
         const intl2 = tmp6(tmp7[19]).intl;
-        obj7.accessibilityLabel = intl2.string(tmp6(tmp7[19]).t.PdRCRg);
-        obj7.style = tmp2.moreMenuIcon;
-        obj7.onPress = callback2;
-        const obj8 = { color: tmp15(tmp7[13]).colors.INTERACTIVE_TEXT_DEFAULT };
-        obj7.children = closure_21(tmp6(tmp7[41]).MoreHorizontalIcon, obj8);
-        tmp40Result = closure_21(obj1, obj7);
+        obj13.accessibilityLabel = intl2.string(tmp6(tmp7[19]).t.PdRCRg);
+        obj13.style = tmp2.moreMenuIcon;
+        obj13.onPress = callback2;
+        const obj14 = { color: tmp15(tmp7[13]).colors.INTERACTIVE_TEXT_DEFAULT };
+        obj13.children = closure_21(tmp6(tmp7[41]).MoreHorizontalIcon, obj14);
+        tmp40Result = closure_21(obj7, obj13);
       }
       items7[2] = tmp40Result;
-      obj2.children = items7;
-      const items9 = [closure_23(stickerAssetUrl, obj2), , , ,];
+      obj8.children = items7;
+      const items9 = [closure_23(stickerAssetUrl, obj8), , , ,];
       if (flag) {
-        const obj9 = { style: tmp2.buttonContainer, children: null };
-        const obj10 = { text: null, onPress: null };
-        let tmp15Result = tmp15(tmp7[42]);
+        const obj15 = { style: tmp2.buttonContainer, children: null };
+        const obj16 = { text: null, onPress: null };
         const intl3 = tmp6(tmp7[19]).intl;
-        obj10.text = intl3.string(tmp6(tmp7[19]).t["gl/XHJ"]);
-        obj10.onPress = function onPress() {
+        obj16.text = intl3.string(tmp6(tmp7[19]).t["gl/XHJ"]);
+        obj16.onPress = function onPress() {
           return openStickersPremiumUpsellAlertDefault(closure_7);
         };
-        const items10 = [closure_21(tmp15Result, obj10)];
-        const obj11 = { style: null };
-        const obj12 = { height: tmp15(tmp7[13]).space.PX_16 };
-        obj11.style = obj12;
-        items10[1] = closure_21(tmp39, obj11);
-        obj9.children = items10;
-        flag = closure_23(tmp39, obj9);
+        const items10 = [closure_21(tmp15(tmp7[42]), obj16)];
+        const obj17 = { style: null };
+        const obj18 = { height: tmp15(tmp7[13]).space.PX_16 };
+        obj17.style = obj18;
+        items10[1] = closure_21(tmp39, obj17);
+        obj15.children = items10;
+        flag = closure_23(tmp39, obj15);
+        const tmp15Result = tmp15(tmp7[42]);
       }
       items9[1] = flag;
-      tmp37Result = tmp33;
+      let tmp37Result = tmp33;
       if (tmp33) {
-        const obj13 = { style: tmp2.buttonContainer, children: null };
-        const obj14 = { text: null, onPress: null };
+        const obj19 = { style: tmp2.buttonContainer, children: null };
+        const obj20 = { text: null, onPress: null };
         const intl4 = tmp6(tmp7[19]).intl;
-        obj14.text = intl4.string(tmp6(tmp7[19]).t.riu2R5);
-        obj14.onPress = function onPress() {
+        obj20.text = intl4.string(tmp6(tmp7[19]).t.riu2R5);
+        obj20.onPress = function onPress() {
           if (null != first) {
             const id = first.id;
             GuildActionCreatorsDefault.joinGuild(id).then(() => {
@@ -577,13 +587,13 @@ function GuildStickerDetail(sticker) {
             const joinGuildResult = GuildActionCreatorsDefault.joinGuild(id);
           }
         };
-        const items11 = [closure_21(tmp6(tmp7[26]).Button, obj14)];
-        const obj15 = { style: null };
-        const obj16 = { height: tmp15(tmp7[13]).space.PX_16 };
-        obj15.style = obj16;
-        items11[1] = closure_21(tmp39, obj15);
-        obj13.children = items11;
-        tmp37Result = closure_23(tmp39, obj13);
+        const items11 = [closure_21(tmp6(tmp7[26]).Button, obj20)];
+        const obj21 = { style: null };
+        const obj22 = { height: tmp15(tmp7[13]).space.PX_16 };
+        obj21.style = obj22;
+        items11[1] = closure_21(tmp39, obj21);
+        obj19.children = items11;
+        tmp37Result = closure_23(tmp39, obj19);
       }
       items9[2] = tmp37Result;
       if (!(null != stateFromStores || null != guild)) {
@@ -592,9 +602,9 @@ function GuildStickerDetail(sticker) {
           tidaWebformEnabled = tmp9;
         }
         if (tidaWebformEnabled) {
-          const obj17 = { style: tmp2.divider };
-          const items12 = [closure_21(tmp6(tmp7[44]).FormDivider, obj17)];
-          const obj18 = { style: tmp2.favoriteContainer, children: null };
+          const obj23 = { style: tmp2.divider };
+          const items12 = [closure_21(tmp6(tmp7[44]).FormDivider, obj23)];
+          const obj24 = { style: tmp2.favoriteContainer, children: null };
           const intl6 = tmp6(tmp7[19]).intl;
           const string4 = intl6.string;
           const t2 = tmp6(tmp7[19]).t;
@@ -603,83 +613,84 @@ function GuildStickerDetail(sticker) {
           } else {
             string4Result = string4(t2.kWmiPW);
           }
-          const obj19 = { text: string4Result, variant: null, size: "md", onPress: null };
+          const obj25 = { text: string4Result, variant: null, size: "md", onPress: null };
           let str3 = "primary";
           if (hasItem1) {
             str3 = "tertiary";
           }
-          const obj20 = { children: null };
-          obj19.variant = str3;
-          obj19.onPress = callback1;
-          obj18.children = closure_21(tmp6(tmp7[26]).Button, obj19);
-          items12[1] = closure_21(tmp39, obj18);
-          obj20.children = items12;
-          tidaWebformEnabled = closure_23(closure_22, obj20);
+          const obj26 = { children: null };
+          obj25.variant = str3;
+          obj25.onPress = callback1;
+          obj24.children = closure_21(tmp6(tmp7[26]).Button, obj25);
+          items12[1] = closure_21(tmp39, obj24);
+          obj26.children = items12;
+          tidaWebformEnabled = closure_23(closure_22, obj26);
         }
-        const obj21 = { children: null };
+        const obj27 = { children: null };
         items9[4] = tidaWebformEnabled;
-        obj21.children = items9;
-        tmp37Result = closure_23(closure_22, obj21);
+        obj27.children = items9;
+        tmp37Result3 = closure_23(closure_22, obj27);
       } else {
-        const obj22 = { style: tmp2.divider };
-        const items13 = [closure_21(tmp6(tmp7[44]).FormDivider, obj22)];
-        tmp15Result = tmp15(tmp7[45]);
+        const obj28 = { style: tmp2.divider };
+        const items13 = [closure_21(tmp6(tmp7[44]).FormDivider, obj28)];
         if (guild == null) {
           guild = stateFromStores;
         }
-        let obj23 = { guild, showingJoinGuildCta: tmp33, hasJoinedGuild: tmp9, title: null };
+        let obj29 = { guild, showingJoinGuildCta: tmp33, hasJoinedGuild: tmp9, title: null };
         const intl5 = tmp6(tmp7[19]).intl;
         const string3 = intl5.string;
-        t = tmp6(tmp7[19]).t;
+        let t1 = tmp6(tmp7[19]).t;
         if (tmp9) {
-          let string3Result = string3(t.kx6pEG);
+          let string3Result = string3(t1.kx6pEG);
         } else {
-          string3Result = string3(t.pDE7Gb);
+          string3Result = string3(t1.pDE7Gb);
         }
-        t = { children: null };
-        obj23.title = string3Result;
-        obj23 = closure_21(tmp15Result, obj23);
-        items13[1] = obj23;
-        t.children = items13;
-        closure_23(closure_22, t);
+        t1 = { children: null };
+        obj29.title = string3Result;
+        obj29 = closure_21(tmp15(tmp7[45]), obj29);
+        items13[1] = obj29;
+        t1.children = items13;
+        closure_23(closure_22, t1);
+        const tmp15Result2 = tmp15(tmp7[45]);
       }
     }
-    return tmp37Result;
+    return tmp37Result3;
   }
-  const tmp6Result1 = sticker(guild[36]);
+  const tmp6Result4 = sticker(guild[36]);
 }
-let obj4 = { tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
+let obj8 = { tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/stickers/native/StickerDetailActionSheet.tsx");
 
 export default noop.memo(function StickerDetailActionSheet(chatInputRef) {
   ({ renderableSticker, channel } = chatInputRef);
-  let obj = StickersHooks;
-  const tmp4 = _slicedToArray(obj.useStickerForRenderableSticker(renderableSticker, true), 2);
+  const tmp = closure_24();
+  const tmp4 = _slicedToArray(StickersHooks.useStickerForRenderableSticker(renderableSticker, true), 2);
   const first = tmp4[0];
-  let tmp6Result = __initData(React5, { size: "large" });
+  let tmp6Result2 = __initData(React5, { size: "large" });
   if (null == first) {
     if (tmp4[1]) {
-      obj = { renderableSticker, channel };
-      tmp6Result = __initData(UnavailableStickerDetail, obj);
+      const obj2 = { renderableSticker, channel };
+      let tmp6Result = __initData(UnavailableStickerDetail, obj2);
     }
-    obj = { startExpanded: true, children: null };
-    const obj1 = { style: tmp.content, children: tmp6Result };
-    obj.children = __initData(timestampProducer, obj1);
-    return __initData(Sheet_BottomSheet.BottomSheet, obj);
+    const obj3 = { startExpanded: true, children: null };
+    const obj4 = { style: tmp.content, children: tmp6Result };
+    obj3.children = __initData(timestampProducer, obj4);
+    return __initData(Sheet_BottomSheet.BottomSheet, obj3);
   }
+  tmp6Result = tmp6Result2;
   if (null != first) {
-    let tmp2Result = StickersUtils;
     if (tmp2Result.isStandardSticker(first)) {
-      const obj2 = { sticker: first, channel, chatInputRef: chatInputRef.chatInputRef };
-      tmp6Result = __initData(StandardStickerDetail, obj2);
+      const obj5 = { sticker: first, channel, chatInputRef: chatInputRef.chatInputRef };
+      tmp6Result2 = __initData(StandardStickerDetail, obj5);
     } else {
-      tmp2Result = StickersUtils;
-      if (tmp2Result.isGuildSticker(first)) {
-        const obj3 = { sticker: first, channel };
-        tmp6Result = __initData(GuildStickerDetail, obj3);
+      if (tmp2Result2.isGuildSticker(first)) {
+        const obj6 = { sticker: first, channel };
+        tmp6Result2 = __initData(GuildStickerDetail, obj6);
       }
+      tmp2Result2 = StickersUtils;
     }
+    tmp6Result = tmp6Result2;
+    tmp2Result = StickersUtils;
   }
-  tmp = closure_24();
 });

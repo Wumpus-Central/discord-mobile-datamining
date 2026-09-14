@@ -5,8 +5,8 @@ import AudioActionCreatorsDefault from "../../../../actions/AudioActionCreators.
 import MediaEngineStore from "../../../../stores/MediaEngineStore.tsx";
 
 require = fn;
-fn(11601);
-let SettingBuilders = {
+const SettingBuilders = fn(11602);
+const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.BbESsg);
@@ -18,8 +18,7 @@ let SettingBuilders = {
   },
   onValueChange: function onAdvancedVoiceActivitySettingValueChange(vadUseKrisp) {
     const mode = MediaEngineStore.getMode();
-    const obj = { vadUseKrisp };
-    obj.setMode(mode, obj);
+    AudioActionCreatorsDefault.setMode(mode, { vadUseKrisp });
   },
   useDescription: function useAdvancedVoiceActivitySettingDescription() {
     const intl = util.intl;
@@ -31,9 +30,8 @@ let SettingBuilders = {
       advancedVoiceActivitySupported.isAdvancedVoiceActivitySupported(),
     );
   },
-};
-SettingBuilders = SettingBuilders.createToggle(SettingBuilders);
+});
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/AdvancedVoiceActivitySetting.tsx");
 
-export default SettingBuilders;
+export default toggle;

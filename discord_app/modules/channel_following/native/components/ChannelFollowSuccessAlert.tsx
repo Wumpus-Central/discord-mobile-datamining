@@ -5,12 +5,14 @@ import useThemeDefault from "../../../../hooks/useTheme.tsx";
 import common_AlertDefault from "../../../../components_native/common/Alert.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
+const require = globalThis.__r;
+
 require = fn;
 const Image = fn(17).Image;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-let items = [fn(11467), fn(11468), fn(11469)];
-let items1 = [fn(11470), fn(11471), fn(11472)];
+let items = [fn(11468), fn(11469), fn(11470)];
+let items1 = [fn(11471), fn(11472), fn(11473)];
 const items2 = [
   () => {
     const intl = util.intl;
@@ -64,21 +66,21 @@ const result = size.fileFinishedImporting("modules/channel_following/native/comp
 
 export default function ChannelFollowSuccessAlert(arg0) {
   const tmp = closure_9();
-  let obj = require("shared");
-  const tmp6 = obj.isThemeDark(useThemeDefault()) ? items1 : items;
-  _require = tmp6;
-  let tmp5Result = tmp5(7543);
-  items = [tmp6];
-  const stableMemo = tmp5Result.useStableMemo(() => _modDef12.sample(closure_0), items);
-  tmp5Result = tmp5(7543);
-  const stableMemo1 = tmp5Result.useStableMemo(() => _modDef12.sample(items2), []);
-  obj = {};
   const tmp4 = useThemeDefault();
+  const tmp6 = require("shared").isThemeDark(tmp4) ? items1 : items;
+  _require = tmp6;
+  const obj = require("shared");
+  items = [tmp6];
+  const stableMemo = require("areHookInputsEqual").useStableMemo(() => _modDef12.sample(closure_0), items);
+  const tmp5Result = require("areHookInputsEqual");
+  const stableMemo1 = require("areHookInputsEqual").useStableMemo(() => _modDef12.sample(items2), []);
+  const obj2 = {};
+  const tmp5Result2 = require("areHookInputsEqual");
   const merged = Object.assign(arg0);
   const intl = tmp5(1114).intl;
-  obj.confirmText = intl.string(require("util").t["+IrDzN"]);
-  obj = { source: stableMemo, style: tmp.image };
-  items1 = [closure_4(Image, obj), ,];
+  obj2.confirmText = intl.string(require("util").t["+IrDzN"]);
+  items1 = [closure_4(Image, { source: stableMemo, style: tmp.image }), ,];
+  const obj3 = { source: stableMemo, style: tmp.image };
   const tmp2Result = common_AlertDefault;
   items1[1] = closure_4(require("Text/Text").Text, {
     style: tmp.header,
@@ -86,10 +88,10 @@ export default function ChannelFollowSuccessAlert(arg0) {
     color: "mobile-text-heading-primary",
     children: stableMemo1(),
   });
-  const obj2 = { style: tmp.text, variant: "text-md/medium", color: "text-muted", children: null };
+  const obj5 = { style: tmp.text, variant: "text-md/medium", color: "text-muted", children: null };
   const intl2 = tmp5(1114).intl;
-  obj2.children = intl2.string(require("util").t["2QbSea"]);
-  items1[2] = closure_4(require("Text/Text").Text, obj2);
-  obj.children = items1;
-  return closure_5(tmp2Result, obj);
+  obj5.children = intl2.string(require("util").t["2QbSea"]);
+  items1[2] = closure_4(require("Text/Text").Text, obj5);
+  obj2.children = items1;
+  return closure_5(tmp2Result, obj2);
 }

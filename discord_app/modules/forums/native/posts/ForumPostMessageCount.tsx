@@ -11,25 +11,26 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-fn(4636);
-let createStyles = { tintColor: nativeDefault.colors.ICON_MUTED, marginEnd: 4, marginTop: null };
-let PlatformUtils = fn(1150);
+const createStyles = fn(4636);
+let obj2 = { tintColor: nativeDefault.colors.ICON_MUTED, marginEnd: 4, marginTop: null };
+let PlatformUtils = fn(1363);
 let num = 0;
 if (PlatformUtils.isAndroid()) {
   num = 2;
 }
-createStyles = { iconRead: createStyles, iconUnread: null, messageUnreadCount: null, container: null, marginTop: num };
-let obj1 = { tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT, marginEnd: 4, marginTop: null };
-PlatformUtils = fn(1150);
+let obj4 = { iconRead: obj2, iconUnread: null, messageUnreadCount: null, container: null };
+obj2.marginTop = num;
+let obj5 = { tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT, marginEnd: 4, marginTop: null };
+PlatformUtils = fn(1363);
 let num2 = 0;
 if (PlatformUtils.isAndroid()) {
   num2 = 2;
 }
-obj1.marginTop = num2;
-createStyles.iconUnread = obj1;
-createStyles.messageUnreadCount = { marginStart: 4 };
-createStyles.container = { flexDirection: "row", alignItems: "center" };
-let closure_6 = createStyles.createStyles(createStyles);
+obj5.marginTop = num2;
+obj4.iconUnread = obj5;
+obj4.messageUnreadCount = { marginStart: 4 };
+obj4.container = { flexDirection: "row", alignItems: "center" };
+let closure_6 = createStyles.createStyles(obj4);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/forums/native/posts/ForumPostMessageCount.tsx");
 
@@ -37,44 +38,43 @@ export default function ForumPostMessageCount(hasUnreads) {
   hasUnreads = hasUnreads.hasUnreads;
   ({ thread, containerStyle } = hasUnreads);
   const tmp = closure_6();
-  let obj = ForumHooks;
-  messageCount = obj.useMessageCount(thread);
-  ({ messageCountText, unreadCount } = messageCount);
+  const messageCount1 = ForumHooks.useMessageCount(thread);
+  ({ messageCountText, unreadCount } = messageCount1);
   let str = "text-muted";
-  ({ isMaxMessageCount, messageCount } = messageCount);
+  ({ isMaxMessageCount, messageCount } = messageCount1);
   if (hasUnreads) {
     str = "text-default";
   }
-  obj = { style: null, accessibilityLabel: null, children: null };
+  const obj2 = { style: null, accessibilityLabel: null, children: null };
   const items = [tmp.container, containerStyle];
-  obj.style = items;
+  obj2.style = items;
   const intl = util.intl;
-  obj.accessibilityLabel = intl.formatToPlainString(util.t["8M0DrB"], { count: messageCountText });
-  obj = { size: "xs", style: hasUnreads ? tmp.iconUnread : tmp.iconRead, color: null };
+  obj2.accessibilityLabel = intl.formatToPlainString(util.t["8M0DrB"], { count: messageCountText });
+  const obj3 = { size: "xs", style: hasUnreads ? tmp.iconUnread : tmp.iconRead, color: null };
   let str2 = "icon-muted";
   if (hasUnreads) {
     str2 = "interactive-text-default";
   }
-  obj.color = str2;
-  const items1 = [React4(ChatIcon.ChatIcon, obj), ,];
+  obj3.color = str2;
+  const items1 = [React4(ChatIcon.ChatIcon, obj3), ,];
   if (isMaxMessageCount) {
-    const obj1 = { variant: "text-sm/semibold", color: str, children: messageCountText };
-    let tmp7Result = React4(Text_Text.Text, obj1);
+    const obj4 = { variant: "text-sm/semibold", color: str, children: messageCountText };
+    let tmp7Result = React4(Text_Text.Text, obj4);
   } else {
-    const obj2 = { count: messageCount, textVariant: "text-sm/semibold", textColor: str, animate: false };
-    tmp7Result = React4(AnimatedCounterDefault, obj2);
+    const obj5 = { count: messageCount, textVariant: "text-sm/semibold", textColor: str, animate: false };
+    tmp7Result = React4(AnimatedCounterDefault, obj5);
   }
   items1[1] = tmp7Result;
   let tmp5Result = null != unreadCount;
   if (tmp5Result) {
-    const obj3 = { variant: "text-sm/semibold", color: "text-brand", style: tmp.messageUnreadCount, children: null };
+    const obj6 = { variant: "text-sm/semibold", color: "text-brand", style: tmp.messageUnreadCount, children: null };
     const intl2 = util.intl;
-    const obj4 = { count: unreadCount };
-    const items2 = ["(", intl2.format(util.t.z3PEth, obj4), ")"];
-    obj3.children = items2;
-    tmp5Result = hasOwnProperty(Text_Text.Text, obj3);
+    const obj7 = { count: unreadCount };
+    const items2 = ["(", intl2.format(util.t.z3PEth, obj7), ")"];
+    obj6.children = items2;
+    tmp5Result = hasOwnProperty(Text_Text.Text, obj6);
   }
   items1[2] = tmp5Result;
-  obj.children = items1;
-  return hasOwnProperty(View, obj);
+  obj2.children = items1;
+  return hasOwnProperty(View, obj2);
 }

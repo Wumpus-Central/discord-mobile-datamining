@@ -28,12 +28,12 @@ const searchRecentMessageStore = new SearchRecentMessageStore(DispatcherDefault,
       return false;
     } else {
       c0 = false;
-      items = set.get(guildId);
-      if (items == null) {
-        items = [];
+      let items1 = set.get(guildId);
+      if (items1 == null) {
+        items1 = [];
       }
       items = [];
-      HermesBuiltin.arraySpread(items, 0);
+      HermesBuiltin.arraySpread(items1, 0);
       const _Set = Set;
       set = new Set(items);
       let item = data.forEach((messages) => {

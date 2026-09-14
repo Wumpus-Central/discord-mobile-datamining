@@ -1,6 +1,6 @@
 // discord_app/modules/app_analytics/useAnalyticsLocations.tsx
 import _modDef12 from "../../../_runtime/metro/00012__.js";
-import _modDef1332 from "../../../_runtime/metro/01332__.js";
+import _modDef1330 from "../../../_runtime/metro/01330__.js";
 import _slicedToArray from "../../../_runtime/metro/00032__.js";
 import noop from "../../../_runtime/metro/00019__.js";
 
@@ -11,11 +11,10 @@ const result = size.fileFinishedImporting("modules/app_analytics/useAnalyticsLoc
 
 export default function useAnalyticsLocations() {
   let items = [...arguments];
+  first = undefined;
   _slicedToArray = undefined;
   context = undefined;
-  const tmp = _slicedToArray(context.useState(items), 2);
-  const first = tmp[0];
-  _slicedToArray = tmp[1];
+  [first, _slicedToArray] = context.useState(items);
   context = context.useContext(context);
   const items1 = [first, context];
   const memo = context.useMemo(() => {
@@ -42,7 +41,7 @@ export default function useAnalyticsLocations() {
   }, items2);
   const items3 = [items, first];
   const effect = context.useEffect(() => {
-    if (!_modDef1332(items, first)) {
+    if (!_modDef1330(items, first)) {
       closure_2(items);
     }
   }, items3);

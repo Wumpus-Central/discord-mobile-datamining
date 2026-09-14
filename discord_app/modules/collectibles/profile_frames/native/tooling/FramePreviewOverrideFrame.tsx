@@ -23,7 +23,7 @@ function OverrideProfileFrameLayer(layer) {
     const rect = { left: -overflowHorizontal, right: -overflowHorizontal, zIndex: hasOwnProperty[layer.order] };
     const type = layer.type;
     if ("staple" === type) {
-      let obj = {};
+      const obj = {};
       const merged = Object.assign(rect);
       let tmp12;
       if ("top" === layer.anchor) {
@@ -37,7 +37,7 @@ function OverrideProfileFrameLayer(layer) {
       obj.bottom = tmp14;
       return obj;
     } else if ("rail" === type) {
-      obj = {};
+      const obj2 = {};
       const merged1 = Object.assign(rect);
       let str2 = "center";
       if ("center" !== layer.anchor) {
@@ -47,13 +47,13 @@ function OverrideProfileFrameLayer(layer) {
         }
         str2 = str3;
       }
-      obj.justifyContent = str2;
-      return obj;
+      obj2.justifyContent = str2;
+      return obj2;
     } else {
-      const obj1 = {};
+      const obj3 = {};
       const merged2 = Object.assign(rect);
-      obj1.left = -tmp;
-      return obj1;
+      obj3.left = -tmp;
+      return obj3;
     }
   }, items);
   let tmp5 = true === layer.responsive;
@@ -73,26 +73,26 @@ function OverrideProfileFrameLayer(layer) {
           if (null != containerHeight) {
             if (0 !== containerHeight) {
               const _Math = Math;
-              let obj = { style: null, children: null };
+              let obj2 = { style: null, children: null };
               const items1 = [tmp.layer, memo];
-              obj.style = items1;
+              obj2.style = items1;
               const _Array = Array;
-              obj = { length: Math.ceil(containerHeight / result) };
-              obj.children = Array.from(obj, (arg0, key) => {
+              let obj3 = { length: Math.ceil(containerHeight / result) };
+              obj2.children = Array.from(obj3, (arg0, key) => {
                 const size = { source: { uri }, resizeMode: "cover", width, height };
                 return jsx(FastImageDefault, { source: { uri }, resizeMode: "cover", width, height }, key);
               });
-              return <overflowBottom length={Math.ceil(containerHeight / result)} />;
+              return <overflowBottom style={null}>{null}</overflowBottom>;
             }
           }
           return null;
         } else {
-          obj = { style: null, children: null };
+          let obj = { style: null, children: null };
           const items2 = [tmp.layer, memo];
           obj.style = items2;
           let size = { source: null, resizeMode: "cover", width: null, height: null };
-          let obj1 = { uri };
-          size.source = obj1;
+          const obj4 = { uri };
+          size.source = obj4;
           size.width = sum;
           size.height = result;
           obj.children = jsx(layer(uri[6]), { source: null, resizeMode: "cover", width: null, height: null });
@@ -110,18 +110,18 @@ const ProfileFrameConstants = fn(8338);
   ProfileFrameConstants);
 const UserProfileThemeTypes = fn(7311).UserProfileThemeTypes;
 let jsx = fn(21).jsx;
-fn(4636);
-let createStyles = { container: null, layer: null };
-createStyles = {};
+const createStyles = fn(4636);
+let obj2 = { container: null, layer: null };
+let obj3 = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);
-createStyles.pointerEvents = "none";
-createStyles.container = createStyles;
-let obj1 = {};
+obj3.pointerEvents = "none";
+obj2.container = obj3;
+let obj4 = {};
 let merged1 = Object.assign(StyleSheet.absoluteFillObject);
-obj1.alignItems = "center";
-obj1.overflow = "hidden";
-createStyles.layer = obj1;
-let closure_8 = createStyles.createStyles(createStyles);
+obj4.alignItems = "center";
+obj4.overflow = "hidden";
+obj2.layer = obj4;
+let closure_8 = createStyles.createStyles(obj2);
 let size = fn(2);
 let result = size.fileFinishedImporting(
   "modules/collectibles/profile_frames/native/tooling/FramePreviewOverrideFrame.tsx",

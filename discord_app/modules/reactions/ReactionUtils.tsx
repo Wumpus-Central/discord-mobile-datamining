@@ -140,10 +140,9 @@ export const shouldApplyReaction = function shouldApplyReaction(optimistic) {
 export const updateReactionNotificationsSetting = function updateReactionNotificationsSetting(NumberResult, setting) {
   const ReactionNotifications = UserSettings.ReactionNotifications;
   ReactionNotifications.updateSetting(NumberResult);
-  const obj = {
+  AnalyticsUtilsDefault.track(constants2.NOTIFICATION_SETTINGS_UPDATED, {
     update_type: constants3.ACCOUNT,
     reaction_notifications: NumberResult,
     reaction_notifications_old: setting,
-  };
-  obj.track(constants2.NOTIFICATION_SETTINGS_UPDATED, obj);
+  });
 };

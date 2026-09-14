@@ -16,7 +16,6 @@ export const TableRadioGroup = function TableRadioGroup(arg0) {
   jsx = undefined;
   let onSelect;
   dependencyMap = tmp;
-  let obj = noop;
   let tmp2 = null;
   ({ children, title, description, helperText, hasIcons, groupRef, accessibilityLabel } = arg0);
   if (undefined === value) {
@@ -25,7 +24,7 @@ export const TableRadioGroup = function TableRadioGroup(arg0) {
     }
     tmp2 = defaultValue;
   }
-  [tmp4, c2] = _slicedToArray(noop.useState(tmp2), 2);
+  [tmp4, c2] = noop.useState(tmp2);
   if (undefined !== value) {
     tmp4 = value;
   }
@@ -62,8 +61,8 @@ export const TableRadioGroup = function TableRadioGroup(arg0) {
     }
   }, items1);
   const items2 = [tmp4, onSelect];
-  obj = { value: obj.useMemo(() => ({ selectedValue, onSelect }), items2), children: null };
-  obj = {
+  const obj2 = { value: noop.useMemo(() => ({ selectedValue, onSelect }), items2), children: null };
+  const obj3 = {
     accessibilityRole: "radiogroup",
     accessibilityLabel,
     title,
@@ -73,14 +72,14 @@ export const TableRadioGroup = function TableRadioGroup(arg0) {
     children: null,
   };
   const Children = obj.Children;
-  obj.children = Children.map(children, (type) => {
+  obj3.children = Children.map(children, (type) => {
     if (!noop.isValidElement(type)) {
       let tmp4 = null;
       return tmp4;
     }
     tmp4 = type;
   });
-  obj.children = jsx(onChange(5768).TableRowGroup, {
+  obj2.children = jsx(onChange(5768).TableRowGroup, {
     accessibilityRole: "radiogroup",
     accessibilityLabel,
     title,
@@ -90,15 +89,6 @@ export const TableRadioGroup = function TableRadioGroup(arg0) {
     children: null,
   });
   return (
-    <onSelect.Provider
-      accessibilityRole="radiogroup"
-      accessibilityLabel={accessibilityLabel}
-      title={title}
-      description={description}
-      helperText={helperText}
-      hasIcons={hasIcons}
-    >
-      {null}
-    </onSelect.Provider>
+    <onSelect.Provider value={noop.useMemo(() => ({ selectedValue, onSelect }), items2)}>{null}</onSelect.Provider>
   );
 };

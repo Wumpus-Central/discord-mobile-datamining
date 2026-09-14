@@ -1,5 +1,5 @@
 // discord_app/modules/guild_tag/native/badges/GuildBadgeBunny.tsx
-import v1 from "../../../../../_runtime/01256_v1.js";
+import v1 from "../../../../../_runtime/01254_v1.js";
 import inlineStyles from "../../../../../_runtime/08574_inlineStyles.js";
 import GuildBadgeUtils from "GuildBadgeUtils.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -27,20 +27,19 @@ export const GuildBadgeBunny = function GuildBadgeBunny(primaryTintColor) {
   }
   const merged = Object.assign(primaryTintColor, Object.assign({ width: 0, height: 0, primaryTintColor: 0 }));
   const memo = noop.useMemo(() => "badge-bunny-clip-" + v1.v4(), []);
-  let obj = {
+  const primaryColorsTransformed = GuildBadgeUtils.getTransformedBadgeColors({
     primaryBaseColors,
     primaryTintColor: primaryTintColor.primaryTintColor,
     primaryTintLuminances,
     primaryLuminanceWeights: items,
-  };
-  const primaryColorsTransformed = obj.getTransformedBadgeColors(obj).primaryColorsTransformed;
-  obj = {};
+  }).primaryColorsTransformed;
+  const obj3 = {};
   const merged1 = Object.assign(merged);
-  obj.width = num;
-  obj.height = num2;
-  obj.viewBox = "0 0 16 16";
-  obj.fill = "none";
-  const obj1 = { clipPath: "url(#" + memo + ")", children: null };
+  obj3.width = num;
+  obj3.height = num2;
+  obj3.viewBox = "0 0 16 16";
+  obj3.fill = "none";
+  const obj4 = { clipPath: "url(#" + memo + ")", children: null };
   items = [
     React3(inlineStyles.Path, {
       d: "M13 8V6H14V4H15V1H11V3H10V7H11V8H5V7H6V3H5V1H1V4H2V6H3V8H4V9H3V10H2V12H1V14H2V15H14V14H15V12H14V10H13V9H12V8H13Z",
@@ -84,15 +83,28 @@ export const GuildBadgeBunny = function GuildBadgeBunny(primaryTintColor) {
     React3(inlineStyles.Path, { d: "M14 14H12V15H14V14Z", fill: primaryColorsTransformed[0] }),
     React3(inlineStyles.Path, { d: "M4 14H2V15H4V14Z", fill: primaryColorsTransformed[0] }),
   ];
-  obj1.children = items;
-  const items1 = [React4(inlineStyles.G, obj1)];
-  const obj7 = {
-    children: React3(inlineStyles.ClipPath, {
-      id: memo,
-      children: React3(inlineStyles.Rect, { width: "16", height: "16", fill: "white" }),
-    }),
+  obj4.children = items;
+  const items1 = [React4(inlineStyles.G, obj4)];
+  const obj10 = { children: null };
+  const obj2 = {
+    primaryBaseColors,
+    primaryTintColor: primaryTintColor.primaryTintColor,
+    primaryTintLuminances,
+    primaryLuminanceWeights: items,
   };
-  items1[1] = React3(inlineStyles.Defs, obj7);
-  obj.children = items1;
-  return React4(inlineStyles.Svg, obj);
+  const obj5 = {
+    d: "M13 8V6H14V4H15V1H11V3H10V7H11V8H5V7H6V3H5V1H1V4H2V6H3V8H4V9H3V10H2V12H1V14H2V15H14V14H15V12H14V10H13V9H12V8H13Z",
+    fill: primaryColorsTransformed[1],
+  };
+  const obj6 = { d: "M2 14H1V13H2V14Z", fill: primaryColorsTransformed[0] };
+  const obj7 = { d: "M15 14H14V13H15V14Z", fill: primaryColorsTransformed[0] };
+  const obj8 = { d: "M14 14H12V15H14V14Z", fill: primaryColorsTransformed[0] };
+  const obj9 = { d: "M4 14H2V15H4V14Z", fill: primaryColorsTransformed[0] };
+  obj10.children = React3(inlineStyles.ClipPath, {
+    id: memo,
+    children: React3(inlineStyles.Rect, { width: "16", height: "16", fill: "white" }),
+  });
+  items1[1] = React3(inlineStyles.Defs, obj10);
+  obj3.children = items1;
+  return React4(inlineStyles.Svg, obj3);
 };

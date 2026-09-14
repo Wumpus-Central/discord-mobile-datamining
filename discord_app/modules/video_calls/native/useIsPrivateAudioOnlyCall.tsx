@@ -6,6 +6,8 @@ import ApplicationStreamingStore from "../../../stores/ApplicationStreamingStore
 import MediaEngineStore from "../../../stores/MediaEngineStore.tsx";
 import VoiceStateStore from "../../../stores/VoiceStateStore.tsx";
 
+const require = globalThis.__r;
+
 const require = fn;
 function areParticipantStatesEqual(arg0, arg1) {
   [, tmp] = arg0;

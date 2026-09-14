@@ -5,8 +5,8 @@ import noop from "../../../_runtime/metro/00019__.js";
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_1, jsxs: c2 } = jsxProd);
-fn(4636);
-const createStyles = { topicEllipsis: null, topicEllipsisDot: null };
+const createStyles = fn(4636);
+let obj2 = { topicEllipsis: null, topicEllipsisDot: null };
 let size = {
   backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST,
   justifyContent: "center",
@@ -17,31 +17,31 @@ let size = {
   height: 12,
   width: 24,
 };
-createStyles.topicEllipsis = size;
+obj2.topicEllipsis = size;
 const size1 = { backgroundColor: nativeDefault.colors.TEXT_MUTED, borderRadius: 2, margin: 1, height: 4, width: 4 };
-createStyles.topicEllipsisDot = size1;
-let closure_3 = createStyles.createStyles(createStyles);
+obj2.topicEllipsisDot = size1;
+let closure_3 = createStyles.createStyles(obj2);
 size = fn(2);
 const result = size.fileFinishedImporting("components_native/common/DescriptionEllipsis.tsx");
 
 export default function DescriptionEllipsis(dotStyle) {
   dotStyle = dotStyle.dotStyle;
   const tmp = closure_3();
-  let obj = { style: null, children: null };
+  const obj = { style: null, children: null };
   const items = [tmp.topicEllipsis, dotStyle.style];
   obj.style = items;
-  obj = { style: null };
+  const obj2 = { style: null };
   const items1 = [tmp.topicEllipsisDot, dotStyle];
-  obj.style = items1;
-  const items2 = [framebus(View, obj), ,];
-  obj = { style: null };
+  obj2.style = items1;
+  const items2 = [framebus(View, obj2), ,];
+  const obj3 = { style: null };
   const items3 = [tmp.topicEllipsisDot, dotStyle];
-  obj.style = items3;
-  items2[1] = framebus(View, obj);
-  const obj1 = { style: null };
+  obj3.style = items3;
+  items2[1] = framebus(View, obj3);
+  const obj4 = { style: null };
   const items4 = [tmp.topicEllipsisDot, dotStyle];
-  obj1.style = items4;
-  items2[2] = framebus(View, obj1);
+  obj4.style = items4;
+  items2[2] = framebus(View, obj4);
   obj.children = items2;
   return React2(View, obj);
 }

@@ -23,7 +23,7 @@ function resolvedValuesFromPrimary(data) {
   if (data != null) {
     primary = data.primary;
   }
-  let obj = {};
+  const obj = {};
   if (null == primary) {
     return obj;
   } else {
@@ -34,21 +34,21 @@ function resolvedValuesFromPrimary(data) {
       let tmp6 = _slicedToArray(tmp3, 2);
       [tmp7, tmp8] = tmp6;
       if (typeof tmp8 === "string") {
-        obj = { type: resolvedValues.ResolvedValueType.STRING, value: tmp8 };
-        obj[tmp7] = obj;
+        let obj2 = { type: resolvedValues.ResolvedValueType.STRING, value: tmp8 };
+        obj[tmp7] = obj2;
       } else if (typeof tmp8 === "number") {
-        obj = { type: resolvedValues.ResolvedValueType.NUMBER, value: tmp8 };
-        obj[tmp7] = obj;
+        let obj4 = { type: resolvedValues.ResolvedValueType.NUMBER, value: tmp8 };
+        obj[tmp7] = obj4;
       } else if (typeof tmp8 === "object") {
         if ("url" in tmp8) {
           if ("proxy_url" in tmp8) {
             if ("loading_state" in tmp8) {
               if (isVisualUnfurledMedia(tmp8)) {
-                let obj1 = { type: resolvedValues.ResolvedValueType.MEDIA, media: null };
+                let obj5 = { type: resolvedValues.ResolvedValueType.MEDIA, media: null };
                 let size = { url: null, width: null, height: null };
                 ({ proxy_url: obj3.url, width: obj3.width, height: obj3.height } = tmp8);
-                obj1.media = size;
-                obj[tmp7] = obj1;
+                obj5.media = size;
+                obj[tmp7] = obj5;
               }
               continue;
             }
@@ -66,7 +66,7 @@ function resolvedValuesFromDynamic(data) {
   if (data != null) {
     dynamic = data.dynamic;
   }
-  let obj = {};
+  const obj = {};
   if (null == dynamic) {
     return obj;
   } else {
@@ -75,17 +75,17 @@ function resolvedValuesFromDynamic(data) {
     while (iter2 !== undefined) {
       let iter = nextResult;
       if (nextResult.type === ProfileDataDynamicType.ProfileDataDynamicType.STRING) {
-        obj = { type: resolvedValues.ResolvedValueType.STRING, value: iter.value };
-        obj[iter.name] = obj;
+        let obj2 = { type: resolvedValues.ResolvedValueType.STRING, value: iter.value };
+        obj[iter.name] = obj2;
       } else if (iter.type === ProfileDataDynamicType.ProfileDataDynamicType.NUMBER) {
-        obj = { type: resolvedValues.ResolvedValueType.NUMBER, value: iter.value };
-        obj[iter.name] = obj;
+        let obj3 = { type: resolvedValues.ResolvedValueType.NUMBER, value: iter.value };
+        obj[iter.name] = obj3;
       } else if (iter.type === ProfileDataDynamicType.ProfileDataDynamicType.MEDIA) {
         if (isVisualUnfurledMedia(iter.value)) {
-          let obj1 = { type: resolvedValues.ResolvedValueType.MEDIA, media: null };
+          let obj4 = { type: resolvedValues.ResolvedValueType.MEDIA, media: null };
           let size = { url: iter.value.proxy_url, width: iter.value.width, height: iter.value.height };
-          obj1.media = size;
-          obj[iter.name] = obj1;
+          obj4.media = size;
+          obj[iter.name] = obj4;
         }
         continue;
       }
@@ -101,19 +101,19 @@ const result = size.fileFinishedImporting(
 
 export default function resolvedValuesFromUserApplicationIdentityProfile(profile) {
   if (null == profile) {
-    let obj = {};
+    let obj2 = {};
   } else {
-    obj = {};
+    const obj3 = {};
     if (null != profile.username) {
-      obj = { type: resolvedValues.ResolvedValueType.STRING, value: profile.username };
-      obj.username = obj;
+      const obj = { type: resolvedValues.ResolvedValueType.STRING, value: profile.username };
+      obj3.username = obj;
     }
-    obj = {};
-    const merged = Object.assign(obj);
+    obj2 = {};
+    const merged = Object.assign(obj3);
     const merged1 = Object.assign(resolvedValuesFromPrimary(profile));
     const merged2 = Object.assign(resolvedValuesFromDynamic(profile));
   }
-  return obj;
+  return obj2;
 }
 export const UnfurledMediaLoadingState = {
   UNKNOWN: 0,

@@ -115,7 +115,6 @@ export const getFormattedPriceForCollectiblesProduct = function getFormattedPric
       DEFAULT = closure_3.DEFAULT;
       tmp2 = closure_3;
     }
-    let obj = BillingPlatformUtils;
     if (obj.isGooglePlayBillingSupported()) {
       if (DEFAULT === tmp2.MOBILE) {
         googleSkuIds = googleSkuIds.googleSkuIds;
@@ -126,52 +125,53 @@ export const getFormattedPriceForCollectiblesProduct = function getFormattedPric
         const product = IAPStoreDefault.getProduct(tmp12);
         let tmp14;
         if (null != product) {
-          obj = { amount: null, currency: null, priceString: null, tax: 0, taxInclusive: false };
           ({ price: obj4.amount, currencyCode: obj4.currency, priceString: obj4.priceString } = product);
-          tmp14 = obj;
+          tmp14 = { amount: null, currency: null, priceString: null, tax: 0, taxInclusive: false };
+          const obj2 = { amount: null, currency: null, priceString: null, tax: 0, taxInclusive: false };
         }
         let result = tmp14;
       } else {
         result = null;
       }
     } else {
-      let tmp7Result = CollectiblesUtils;
-      result = tmp7Result.extractPriceByPurchaseTypes(googleSkuIds, DEFAULT);
+      result = CollectiblesUtils.extractPriceByPurchaseTypes(googleSkuIds, DEFAULT);
+      const tmp7Result = CollectiblesUtils;
     }
     if (null == result) {
       return null;
     } else if (null != result.priceString) {
       let priceString = result.priceString;
     } else {
-      tmp7Result = PriceUtils;
-      priceString = tmp7Result.formatPrice(result.amount, result.currency);
+      priceString = PriceUtils.formatPrice(result.amount, result.currency);
+      const tmp7Result2 = PriceUtils;
     }
+    obj = BillingPlatformUtils;
   }
 };
-export const extractPriceByPurchaseTypes = function extractPriceByPurchaseTypes(googleSkuIds, defaultPriceSetAssignmentPurchaseType) {
-  let obj = BillingPlatformUtils;
+export const extractPriceByPurchaseTypes = function extractPriceByPurchaseTypes(googleSkuIds, DEFAULT) {
   if (obj.isGooglePlayBillingSupported()) {
-    if (defaultPriceSetAssignmentPurchaseType !== closure_3.MOBILE) {
-      if (defaultPriceSetAssignmentPurchaseType !== closure_3.MOBILE_PREMIUM_TIER_2) {
+    if (DEFAULT !== closure_3.MOBILE) {
+      if (DEFAULT !== closure_3.MOBILE_PREMIUM_TIER_2) {
         return null;
       }
     }
     googleSkuIds = googleSkuIds.googleSkuIds;
     let tmp5;
     if (googleSkuIds != null) {
-      tmp5 = googleSkuIds[defaultPriceSetAssignmentPurchaseType];
+      tmp5 = googleSkuIds[DEFAULT];
     }
     const product = IAPStoreDefault.getProduct(tmp5);
     let tmp7;
     if (null != product) {
-      obj = { amount: null, currency: null, priceString: null, tax: 0, taxInclusive: false };
       ({ price: obj4.amount, currencyCode: obj4.currency, priceString: obj4.priceString } = product);
-      tmp7 = obj;
+      tmp7 = { amount: null, currency: null, priceString: null, tax: 0, taxInclusive: false };
+      const obj2 = { amount: null, currency: null, priceString: null, tax: 0, taxInclusive: false };
     }
     return tmp7;
   } else {
-    return CollectiblesUtils.extractPriceByPurchaseTypes(googleSkuIds, defaultPriceSetAssignmentPurchaseType);
+    return CollectiblesUtils.extractPriceByPurchaseTypes(googleSkuIds, DEFAULT);
   }
+  obj = BillingPlatformUtils;
 };
 export const getCollectibleGoogleSkuId = function getCollectibleGoogleSkuId(product, stateFromStores) {
   if (null == stateFromStores) {

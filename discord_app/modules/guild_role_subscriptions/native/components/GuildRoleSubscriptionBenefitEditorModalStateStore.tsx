@@ -1,13 +1,13 @@
 // discord_app/modules/guild_role_subscriptions/native/components/GuildRoleSubscriptionBenefitEditorModalStateStore.tsx
 import ReactBatchUpdates from "../../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
 import _mod4259 from "../../../../../_runtime/metro/04259__.js";
-import identity from "../../../../../_runtime/metro/01244__.js";
+import identity from "../../../../../_runtime/metro/01242__.js";
 import size from "../../../../../_runtime/metro/00002__.js";
 
 let closure_2 = Object.freeze({
   name: "",
   emojiId: "paddingHorizontal",
-  emojiName: "create",
+  emojiName: "op",
   description: "d",
   refId: "Array",
 });
@@ -17,21 +17,21 @@ let closure_3 = identity.createWithEqualityFn((arg0) => {
   const merged = Object.assign(closure_2);
   obj.setEmojiId = function setEmojiId(emoji_id) {
     const emojiId = emoji_id;
-    emojiId(1249).batchUpdates(() => emojiId({ emojiId }));
+    emojiId(1247).batchUpdates(() => emojiId({ emojiId }));
   };
   obj.setEmojiName = function setEmojiName(emoji_name) {
     const emojiName = emoji_name;
-    emojiName(1249).batchUpdates(() => emojiName({ emojiName }));
+    emojiName(1247).batchUpdates(() => emojiName({ emojiName }));
   };
   obj.setName = function setName(name) {
-    name(1249).batchUpdates(() => name({ name }));
+    name(1247).batchUpdates(() => name({ name }));
   };
   obj.setDescription = function setDescription(description) {
-    description(1249).batchUpdates(() => description({ description }));
+    description(1247).batchUpdates(() => description({ description }));
   };
   obj.setRefId = function setRefId(ref_id) {
     const refId = ref_id;
-    refId(1249).batchUpdates(() => refId({ refId }));
+    refId(1247).batchUpdates(() => refId({ refId }));
   };
   obj.reset = function reset() {
     ReactBatchUpdates.batchUpdates(() => closure_1_0(closure_2_2));

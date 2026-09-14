@@ -9,14 +9,14 @@ require = fn;
 function useBugReporterExperimentSettingPredicate() {
   return BugReporterExperimentDefault.useConfig({ location: "native-settings" }).hasBugReporterAccess;
 }
-fn(11601);
-let SettingBuilders = {
+const SettingBuilders = fn(11602);
+const pressable = SettingBuilders.createPressable({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t["/tZh0A"]);
   },
   parent: null,
-  IconComponent: fn(15827).BugIcon,
+  IconComponent: fn(15829).BugIcon,
   onPress: function handleBugReporterSettingPress() {
     if (!BugReportStore.getField("isReportOpen")) {
       BugReportStore.setState({ isReportOpen: true });
@@ -25,10 +25,9 @@ let SettingBuilders = {
   },
   withArrow: true,
   usePredicate: useBugReporterExperimentSettingPredicate,
-};
-SettingBuilders = SettingBuilders.createPressable(SettingBuilders);
+});
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/BugReporterSetting.tsx");
 
-export default SettingBuilders;
+export default pressable;
 export { useBugReporterExperimentSettingPredicate };

@@ -5,6 +5,8 @@ import noop from "../../../_runtime/metro/00019__.js";
 import PermissionStore from "../../stores/PermissionStore.tsx";
 import UserStore from "../../stores/UserStore.tsx";
 
+const require = globalThis.__r;
+
 const require = fn;
 function canManageResource(arg0, stateFromStores, canResult1, c0) {
   let creator_id = arg0;
@@ -43,11 +45,11 @@ function canManageResource(arg0, stateFromStores, canResult1, c0) {
           }
           if (tmp6) {
             const user = creator_id.user;
-            id = undefined;
+            let id1;
             if (user != null) {
-              id = user.id;
+              id1 = user.id;
             }
-            tmp6 = id === id.id;
+            tmp6 = id1 === id.id;
           }
           tmp5 = tmp6;
         }
@@ -97,7 +99,6 @@ export const attachChannelPermissions = function attachChannelPermissions(channe
 };
 export const useManageResourcePermissions = function useManageResourcePermissions(channel) {
   _require = channel;
-  let obj = require("GuildRecordUtils");
   if (obj.isGuildRecord(channel)) {
     let items = [,];
     ({ CREATE_EVENTS: arr3[0], MANAGE_EVENTS: arr3[1] } = Permissions);
@@ -116,11 +117,12 @@ export const useManageResourcePermissions = function useManageResourcePermission
     items2 = [BigFlagUtilsAll.combine(tmp4, Permissions.CREATE_EVENTS)];
     items2[1] = BigFlagUtilsAll.combine(tmp4, Permissions.MANAGE_EVENTS);
   }
+  obj = require("GuildRecordUtils");
   [importAll, dependencyMap] = canCreateExpressions(items2, 2);
-  let tmpResult = tmp(504);
+  const tmp9 = canCreateExpressions(items2, 2);
   const items3 = [closure_5];
   const tmp10 = canCreateExpressions(
-    tmpResult.useStateFromStoresArray(items3, () => {
+    require("initialize").useStateFromStoresArray(items3, () => {
       const items = [
         PermissionStore.can(Permissions.CREATE_GUILD_EXPRESSIONS, closure_0),
         PermissionStore.can(Permissions.MANAGE_GUILD_EXPRESSIONS, closure_0),
@@ -135,16 +137,16 @@ export const useManageResourcePermissions = function useManageResourcePermission
   noop = tmp12;
   closure_5 = tmp13;
   const currentUser = tmp14;
-  tmpResult = tmp(504);
+  const tmpResult = require("initialize");
   const items4 = [currentUser];
-  stateFromStores = tmpResult.useStateFromStores(items4, () => currentUser.getCurrentUser());
+  stateFromStores = require("initialize").useStateFromStores(items4, () => currentUser.getCurrentUser());
   const items5 = [canCreateExpressions, tmp10[1], stateFromStores];
   const items6 = [tmp10[3], tmp10[2], stateFromStores];
   const callback = noop.useCallback((arg0) => canManageResource(arg0, stateFromStores, closure_4, first), items5);
   if (null == channel) {
-    obj = closure_11;
+    let obj4 = closure_11;
   } else {
-    obj = {
+    obj4 = {
       canCreateExpressions,
       canCreateGuildEvent: tmp13,
       canManageAllExpressions: tmp12,
@@ -153,7 +155,7 @@ export const useManageResourcePermissions = function useManageResourcePermission
       canManageGuildEvent: tmp17,
     };
   }
-  return obj;
+  return obj4;
 };
 export const getManageResourcePermissions = function getManageResourcePermissions(guild) {
   let obj = c6;
@@ -201,9 +203,9 @@ export const getManageResourcePermissions = function getManageResourcePermission
   canResult3 = obj.can(tmp10, guild);
   currentUser = obj2.getCurrentUser();
   if (null == guild) {
-    obj = closure_11;
+    let obj6 = closure_11;
   } else {
-    obj = {
+    obj6 = {
       canCreateExpressions: canResult,
       canCreateGuildEvent: canResult2,
       canManageAllExpressions: canResult1,
@@ -216,5 +218,5 @@ export const getManageResourcePermissions = function getManageResourcePermission
       },
     };
   }
-  return obj;
+  return obj6;
 };

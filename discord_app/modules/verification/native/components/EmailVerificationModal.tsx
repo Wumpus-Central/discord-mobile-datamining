@@ -6,6 +6,8 @@ import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import UserStore from "../../../../stores/UserStore.tsx";
 
+const require = globalThis.__r;
+
 require = fn;
 function closeModal() {
   resetChangeEmailStore();
@@ -20,12 +22,12 @@ const result = size.fileFinishedImporting("modules/verification/native/component
 export default function EmailVerificationModal(isChangeEmail) {
   isChangeEmail = isChangeEmail.isChangeEmail;
   importDefault = undefined;
-  let first;
+  first = undefined;
   _slicedToArray = undefined;
-  let obj = isChangeEmail(first[17]);
   const items = [UserStore];
-  const stateFromStores = obj.useStateFromStores(items, () => currentUser.getCurrentUser());
+  const stateFromStores = isChangeEmail(first[17]).useStateFromStores(items, () => currentUser.getCurrentUser());
   let flag;
+  let obj = isChangeEmail(first[17]);
   if (stateFromStores != null) {
     flag = stateFromStores.verified;
   }
@@ -34,9 +36,7 @@ export default function EmailVerificationModal(isChangeEmail) {
   }
   const tmp4Result = require("useInitialValue")(flag);
   importDefault = tmp4Result;
-  const tmp6 = _slicedToArray(noop.useState(), 2);
-  first = tmp6[0];
-  _slicedToArray = tmp6[1];
+  [first, _slicedToArray] = noop.useState();
   const items1 = [first, isChangeEmail, tmp4Result];
   if (!isChangeEmail) {
     let email;
@@ -44,9 +44,9 @@ export default function EmailVerificationModal(isChangeEmail) {
       email = stateFromStores.email;
     }
     if (null != email) {
-      obj = { screens: tmp8, initialRouteName: VerificationModalScenes.RESEND_EMAIL, headerBackTitle: null };
+      let obj2 = { screens: tmp8, initialRouteName: VerificationModalScenes.RESEND_EMAIL, headerBackTitle: null };
       const intl = tmp(tmp2[20]).intl;
-      obj.headerBackTitle = intl.string(tmp(tmp2[20]).t["13/7kX"]);
+      obj2.headerBackTitle = intl.string(tmp(tmp2[20]).t["13/7kX"]);
       return jsx(tmp(tmp2[19]).Navigator, {
         screens: tmp8,
         initialRouteName: VerificationModalScenes.RESEND_EMAIL,

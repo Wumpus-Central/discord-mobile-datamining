@@ -2,6 +2,8 @@
 import useGetThreadDraftSettingsDefault from "../useGetThreadDraftSettings.tsx";
 import ChannelStore from "../../../stores/ChannelStore.tsx";
 
+const require = globalThis.__r;
+
 const require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/threads/native/useCreateThreadViewProps.tsx");
@@ -9,10 +11,9 @@ const result = size.fileFinishedImporting("modules/threads/native/useCreateThrea
 export default function useCreateThreadViewProps(arg0) {
   const tmp = useGetThreadDraftSettingsDefault(arg0);
   _require = tmp;
-  let obj = require("useStateFromStores");
   const items = [ChannelStore];
   const items1 = [tmp];
-  const stateFromStores = obj.useStateFromStores(
+  const stateFromStores = require("useStateFromStores").useStateFromStores(
     items,
     () => {
       parentChannelId = undefined;
@@ -27,8 +28,8 @@ export default function useCreateThreadViewProps(arg0) {
   if (null != tmp) {
     tmp3 = null;
     if (null != stateFromStores) {
-      obj = { threadSettingsDraft: tmp, parentChannel: stateFromStores };
-      tmp3 = obj;
+      const obj2 = { threadSettingsDraft: tmp, parentChannel: stateFromStores };
+      tmp3 = obj2;
     }
   }
   return tmp3;

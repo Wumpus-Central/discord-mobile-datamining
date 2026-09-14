@@ -5,6 +5,8 @@ import ChannelStore from "../../../../stores/ChannelStore.tsx";
 import GuildStore from "../../../../stores/GuildStore.tsx";
 import UserStore from "../../../../stores/UserStore.tsx";
 
+const require = globalThis.__r;
+
 const require = fn;
 const View = fn(17).View;
 const InviteSendStates = fn(7838).InviteSendStates;
@@ -36,9 +38,9 @@ export default noop.memo(function ActivityInviteSheetRow(row) {
   const sendState = row.sendState;
   ({ end, error, isSubmitting, start } = row);
   const id = row.item.id;
-  let obj = require("initialize");
+  let tmp = closure_9();
   const items = [ChannelStore];
-  const stateFromStores = obj.useStateFromStores(items, () => ChannelStore.getChannel(id));
+  const stateFromStores = require("initialize").useStateFromStores(items, () => ChannelStore.getChannel(id));
   let str = onPressAvatar(row[10])(stateFromStores);
   const type = row.type;
   if (require("InstantInviteUtils").RowTypes.DM !== type) {
@@ -46,14 +48,16 @@ export default noop.memo(function ActivityInviteSheetRow(row) {
       if (require("InstantInviteUtils").RowTypes.GROUP_DM === type) {
         let tmp19 = null;
         if (null != stateFromStores) {
-          obj = { source: null, size: null };
-          onPressAvatar(tmp3[17]);
+          const obj2 = { source: null, size: null };
           const tmp5Result = onPressAvatar(tmp3[17]);
-          obj = { id: null, icon: null, applicationId: null, size: 32 };
           ({ id: obj12.id, icon: obj12.icon, application_id: obj12.applicationId } = stateFromStores);
-          obj.source = tmp5Result.makeSource(tmp5Result.getChannelIconURL(obj));
-          obj.size = require("native").AvatarSizes.REFRESH_MEDIUM_32;
-          tmp19 = jsx(require("native").Avatar, { id: null, icon: null, applicationId: null, size: 32 });
+          obj2.source = tmp5Result.makeSource(
+            onPressAvatar(tmp3[17]).getChannelIconURL({ id: null, icon: null, applicationId: null, size: 32 }),
+          );
+          obj2.size = require("native").AvatarSizes.REFRESH_MEDIUM_32;
+          tmp19 = jsx(require("native").Avatar, { source: null, size: null });
+          const obj3 = { id: null, icon: null, applicationId: null, size: 32 };
+          const tmp5Result6 = onPressAvatar(tmp3[17]);
         }
         if (str == null) {
           str = "";
@@ -73,21 +77,21 @@ export default noop.memo(function ActivityInviteSheetRow(row) {
           return null;
         } else {
           if (null != guild.icon) {
-            const obj1 = { source: null, size: null };
-            const tmp5Result1 = onPressAvatar(tmp3[17]);
+            const obj4 = { source: null, size: null };
+            const tmp5Result7 = onPressAvatar(tmp3[17]);
             ({ id: obj8.id, icon: obj8.icon } = guild);
-            obj1.source = tmp5Result1.makeSource(
+            obj4.source = tmp5Result7.makeSource(
               onPressAvatar(tmp3[17]).getGuildIconURL({ id: null, icon: null, size: 32 }),
             );
-            obj1.size = require("native").AvatarSizes.REFRESH_MEDIUM_32;
+            obj4.size = require("native").AvatarSizes.REFRESH_MEDIUM_32;
             tmp14 = jsx(require("native").Avatar, { source: null, size: null });
-            const obj2 = { id: null, icon: null, size: 32 };
-            const tmp5Result2 = onPressAvatar(tmp3[17]);
+            const obj5 = { id: null, icon: null, size: 32 };
+            const tmp5Result8 = onPressAvatar(tmp3[17]);
           } else {
-            const obj3 = { style: tmp.acronym, children: null };
+            const obj6 = { style: tmp.acronym, children: null };
             const acronym = require("StringUtils").getAcronym(guild.name);
-            const obj4 = { variant: "text-sm/bold", children: acronym };
-            obj3.children = jsx(require("Text/Text").Text, { variant: "text-sm/bold", children: acronym });
+            const obj7 = { variant: "text-sm/bold", children: acronym };
+            obj6.children = jsx(require("Text/Text").Text, { variant: "text-sm/bold", children: acronym });
             tmp14 = <id style={tmp.acronym}>{null}</id>;
             const tmp2Result = require("StringUtils");
           }
@@ -104,7 +108,7 @@ export default noop.memo(function ActivityInviteSheetRow(row) {
     function handlePress() {
       require(row);
     }
-    const obj5 = {
+    const obj9 = {
       start,
       end,
       icon: tmp14,
@@ -115,16 +119,16 @@ export default noop.memo(function ActivityInviteSheetRow(row) {
       accessibilityActions: null,
       onAccessibilityAction: null,
     };
-    const obj6 = { sendState, onPressSend: handlePress };
-    obj5.trailing = jsx(onPressAvatar(tmp3[21]), { sendState, onPressSend: handlePress });
-    obj5.onPress = handlePress;
+    const obj10 = { sendState, onPressSend: handlePress };
+    obj9.trailing = jsx(onPressAvatar(tmp3[21]), { sendState, onPressSend: handlePress });
+    obj9.onPress = handlePress;
     let tmp30 = null != error || isSubmitting;
     if (!tmp30) {
       tmp30 = sendState === InviteSendStates.SENT;
     }
-    obj5.disabled = tmp30;
-    obj5.accessibilityActions = tmp17;
-    obj5.onAccessibilityAction = fn;
+    obj9.disabled = tmp30;
+    obj9.accessibilityActions = tmp17;
+    obj9.onAccessibilityAction = fn;
     return jsx(require("TableRow").TableRow, {
       start,
       end,
@@ -138,7 +142,7 @@ export default noop.memo(function ActivityInviteSheetRow(row) {
     });
   }
   const user = UserStore.getUser(id);
-  const obj7 = {
+  const obj11 = {
     importantForAccessibility: "no-hide-descendants",
     accessibilityElementsHidden: true,
     onPress(stopPropagation) {
@@ -157,12 +161,14 @@ export default noop.memo(function ActivityInviteSheetRow(row) {
   if (avatarSource == null) {
     avatarSource = null;
   }
-  const obj8 = { source: avatarSource, size: require("native").AvatarSizes.REFRESH_MEDIUM_32 };
-  obj7.children = jsx(require("native").Avatar, {
+  const obj = require("initialize");
+  obj11.children = jsx(require("native").Avatar, {
     source: avatarSource,
     size: require("native").AvatarSizes.REFRESH_MEDIUM_32,
   });
-  jsx(require("Pressables").PressableOpacity, {
+  const obj13 = { source: avatarSource, size: require("native").AvatarSizes.REFRESH_MEDIUM_32 };
+  const obj14 = { nick: null, user: null };
+  const tmp21Result = jsx(require("Pressables").PressableOpacity, {
     importantForAccessibility: "no-hide-descendants",
     accessibilityElementsHidden: true,
     onPress(stopPropagation) {
@@ -174,23 +180,21 @@ export default noop.memo(function ActivityInviteSheetRow(row) {
     style: { padding: 8, margin: -8 },
     children: null,
   });
-  const obj9 = { nick: null, user: null };
-  tmp = closure_9();
-  const tmp5Result3 = onPressAvatar(row[14]);
-  obj9.nick = onPressAvatar(row[15]).getGlobalName(user);
-  obj9.user = user;
+  const tmp5Result9 = onPressAvatar(row[14]);
+  obj14.nick = onPressAvatar(row[15]).getGlobalName(user);
+  obj14.user = user;
   let tmp26;
-  const tmp21Result = <tmp5Result3 nick={null} user={null} />;
+  const tmp5Result10 = onPressAvatar(row[15]);
   if (null != onPressAvatar) {
     const intl = require("util").intl;
     let tag;
     if (user != null) {
       tag = user.tag;
     }
-    const obj10 = { name: "viewProfile", label: null };
-    const obj11 = { username: tag };
-    obj10.label = intl.formatToPlainString(require("util").t.uCenkh, obj11);
-    const items1 = [obj10];
+    const obj15 = { name: "viewProfile", label: null };
+    const obj16 = { username: tag };
+    obj15.label = intl.formatToPlainString(require("util").t.uCenkh, obj16);
+    const items1 = [obj15];
     tmp26 = items1;
   }
   fn = function w(nativeEvent) {
@@ -204,8 +208,8 @@ export default noop.memo(function ActivityInviteSheetRow(row) {
       }
     }
   };
-  str2 = tmp21Result;
+  str2 = <tmp5Result9 nick={null} user={null} />;
   tmp14 = tmp21Result;
   tmp17 = tmp26;
-  const tmp5Result4 = onPressAvatar(row[15]);
+  const tmp21Result2 = <tmp5Result9 nick={null} user={null} />;
 });

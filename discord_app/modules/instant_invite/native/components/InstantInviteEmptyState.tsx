@@ -10,8 +10,8 @@ const require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-fn(4636);
-const createStyles = {
+const createStyles = fn(4636);
+let obj2 = {
   container: { padding: 16 },
   emptyStateContainer: { padding: 0, marginBottom: 16 },
   emptyStateArt: { marginBottom: 16 },
@@ -29,8 +29,8 @@ let size = {
   backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST,
   borderRadius: nativeDefault.radii.xs,
 };
-createStyles.settingsButton = size;
-let closure_7 = createStyles.createStyles(createStyles);
+obj2.settingsButton = size;
+let closure_7 = createStyles.createStyles(obj2);
 size = fn(2);
 const result = size.fileFinishedImporting("modules/instant_invite/native/components/InstantInviteEmptyState.tsx");
 
@@ -39,11 +39,10 @@ export default function _default(link) {
   let stateFromStores;
   ({ onCopy, onShare, onPressSettings } = link);
   const tmp = closure_7();
-  let obj = stateFromStores(504);
   const items = [CreateInviteModalStore];
-  stateFromStores = obj.useStateFromStores(items, () => inviteSettings.getInviteSettings());
-  obj = { style: tmp.container, children: null };
-  obj = {
+  stateFromStores = stateFromStores(504).useStateFromStores(items, () => inviteSettings.getInviteSettings());
+  const obj2 = { style: tmp.container, children: null };
+  const obj3 = {
     containerStyle: tmp.emptyStateContainer,
     imageStyle: tmp.emptyStateArt,
     titleStyle: tmp.emptyStateTitle,
@@ -52,12 +51,12 @@ export default function _default(link) {
     body: null,
   };
   const intl = stateFromStores(1114).intl;
-  obj.title = intl.string(stateFromStores(1114).t.tQc0l8);
+  obj3.title = intl.string(stateFromStores(1114).t.tQc0l8);
   const intl2 = stateFromStores(1114).intl;
-  obj.body = intl2.string(stateFromStores(1114).t.DXgdcD);
-  const items1 = [closure_5(stateFromStores(1178).RefreshEmptyState, obj), , ,];
-  const obj1 = { style: tmp.linkContainer, children: null };
-  const obj2 = {
+  obj3.body = intl2.string(stateFromStores(1114).t.DXgdcD);
+  const items1 = [closure_5(stateFromStores(1176).RefreshEmptyState, obj3), , ,];
+  const obj4 = { style: tmp.linkContainer, children: null };
+  const obj5 = {
     accessibilityRole: "button",
     onPress: onCopy,
     editable: false,
@@ -66,33 +65,34 @@ export default function _default(link) {
     forceAccessibleContainer: true,
     clearButtonVisibility: null,
   };
+  const obj = stateFromStores(504);
   if (str == null) {
     str = "";
   }
-  obj2.value = str;
-  obj2.style = tmp.inviteInput;
-  obj2.clearButtonVisibility = stateFromStores(1178).ClearButtonVisibility.NEVER;
-  const items2 = [closure_5(FreeFormTextInputDefault, obj2)];
-  const obj3 = { accessibilityLabel: null, accessibilityRole: "button", onPress: null, style: null, children: null };
+  obj5.value = str;
+  obj5.style = tmp.inviteInput;
+  obj5.clearButtonVisibility = stateFromStores(1176).ClearButtonVisibility.NEVER;
+  const items2 = [closure_5(FreeFormTextInputDefault, obj5)];
+  const obj6 = { accessibilityLabel: null, accessibilityRole: "button", onPress: null, style: null, children: null };
   const intl3 = tmp2(1114).intl;
-  obj3.accessibilityLabel = intl3.string(stateFromStores(1114).t["3D5yo/"]);
-  obj3.onPress = onPressSettings;
-  obj3.style = tmp.settingsButton;
-  obj3.children = closure_5(stateFromStores(7483).SettingsIcon, {});
-  items2[1] = closure_5(stateFromStores(5204).PressableOpacity, obj3);
-  obj1.children = items2;
-  items1[1] = closure_6(View, obj1);
-  const obj4 = { style: tmp.expireCaption, variant: "text-xs/medium", color: "text-muted", children: null };
+  obj6.accessibilityLabel = intl3.string(stateFromStores(1114).t["3D5yo/"]);
+  obj6.onPress = onPressSettings;
+  obj6.style = tmp.settingsButton;
+  obj6.children = closure_5(stateFromStores(7483).SettingsIcon, {});
+  items2[1] = closure_5(stateFromStores(5204).PressableOpacity, obj6);
+  obj4.children = items2;
+  items1[1] = closure_6(View, obj4);
+  const obj7 = { style: tmp.expireCaption, variant: "text-xs/medium", color: "text-muted", children: null };
   if (null == stateFromStores) {
-    obj4.children = null;
-    items1[2] = closure_5(tmp10, obj4);
-    const obj5 = { text: null, onPress: null };
+    obj7.children = null;
+    items1[2] = closure_5(tmp10, obj7);
+    const obj8 = { text: null, onPress: null };
     const intl5 = tmp2(1114).intl;
-    obj5.text = intl5.string(tmp2(1114).t.Ej3B3Y);
-    obj5.onPress = onShare;
-    items1[3] = closure_5(tmp2(5056).Button, obj5);
-    obj.children = items1;
-    return closure_6(View, obj);
+    obj8.text = intl5.string(tmp2(1114).t.Ej3B3Y);
+    obj8.onPress = onShare;
+    items1[3] = closure_5(tmp2(5056).Button, obj8);
+    obj2.children = items1;
+    return closure_6(View, obj2);
   } else {
     const maxAgeOptionByValue = InstantInviteUtilsDefault.getMaxAgeOptionByValue(stateFromStores.maxAge);
     let str2 = "";
@@ -115,8 +115,8 @@ export default function _default(link) {
       dqPWMN = tmp2(1114).t.dqPWMN;
     }
     const intl4 = tmp2(1114).intl;
-    const obj6 = { maxAge: str3, maxUses: str2 };
-    intl4.format(dqPWMN, obj6);
+    const obj9 = { maxAge: str3, maxUses: str2 };
+    intl4.format(dqPWMN, obj9);
     const tmp8Result = InstantInviteUtilsDefault;
   }
 }

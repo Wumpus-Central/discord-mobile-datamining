@@ -26,8 +26,8 @@ let closure_8 = async function _stopLurkingAll() {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj3 = { value, done: true };
+        return obj3;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -40,18 +40,23 @@ let closure_8 = async function _stopLurkingAll() {
             throw value;
           } else if (arg0 === 2) {
             c1 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj4 = { value, done: true };
+            return obj4;
           } else {
             const found = LurkingStore.lurkingGuildIds().filter((item) => !closure_0.includes(item));
             if (0 !== found.length) {
               const _Map = Map;
-              let obj1 = DispatcherDefault;
-              obj1 = { type: "GUILD_STOP_LURKING", ignoredGuildIds };
-              obj1.dispatch(obj1);
+              const map = new Map(
+                found.map((item) => {
+                  const items = [item, lurkingSourceForGuild.getLurkingSourceForGuild(item)];
+                  return items;
+                }),
+              );
+              const obj5 = { type: "GUILD_STOP_LURKING", ignoredGuildIds };
+              DispatcherDefault.dispatch(obj5);
               c2 = 1;
               c1 = 1;
-              const obj2 = {
+              const obj6 = {
                 value: Promise.all(
                   found.map(
                     (() => {
@@ -65,7 +70,7 @@ let closure_8 = async function _stopLurkingAll() {
                           _null = null;
                         }
                         closure_130_1 = _null;
-                        const HTTP = closure_0(1272).HTTP;
+                        const HTTP = closure_0(1270).HTTP;
                         const request = {
                           url: closure_2_6.GUILD_LEAVE(closure_0),
                           body: { lurking: true },
@@ -105,7 +110,7 @@ let closure_8 = async function _stopLurkingAll() {
                 ),
                 done: false,
               };
-              return obj2;
+              return obj6;
             }
             const lurkingGuildIdsResult = LurkingStore.lurkingGuildIds();
           }
@@ -114,7 +119,7 @@ let closure_8 = async function _stopLurkingAll() {
           throw value;
         } else if (arg0 === 2) {
           c1 = 3;
-          obj = { value, done: true };
+          const obj = { value, done: true };
           return obj;
         }
         c1 = 3;

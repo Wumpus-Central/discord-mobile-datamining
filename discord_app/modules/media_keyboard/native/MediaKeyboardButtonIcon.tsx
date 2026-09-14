@@ -6,6 +6,8 @@ import timing from "../../../design/animation/reanimated/timing/timing.tsx";
 import timingPresets from "../../../design/animation/reanimated/timing/timingPresets.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
+const require = globalThis.__r;
+
 require = fn;
 const jsx = fn(21).jsx;
 const __initData = {
@@ -21,7 +23,6 @@ export const MediaKeyboardButtonIcon = function MediaKeyboardButtonIcon(arg0) {
     const merged = Object.assign(arg0, undefined);
     const tmp5 = useKeyboardTypeDefault();
     _require = tmp5;
-    require("ReanimatedRexport");
     const fn = function s() {
       const tmp4 =
         closure_0 === KeyboardTypes.KeyboardTypes.MEDIA || closure_0 === KeyboardTypes.KeyboardTypes.APP_LAUNCHER;
@@ -29,26 +30,26 @@ export const MediaKeyboardButtonIcon = function MediaKeyboardButtonIcon(arg0) {
       if (tmp4) {
         str = "45deg";
       }
-      let obj = { transform: null };
-      obj = { rotate: timing.withTiming(str, timingPresets.timingStandard) };
-      const items = [obj];
+      const obj = { transform: null };
+      const tmp2Result = timing;
+      const items = [{ rotate: timing.withTiming(str, timingPresets.timingStandard) }];
       obj.transform = items;
       return obj;
     };
-    let obj = {
+    const obj2 = {
       keyboard: tmp5,
       KeyboardTypes: require("KeyboardTypes").KeyboardTypes,
       withTiming: require("timing").withTiming,
       timingStandard: require("timingPresets").timingStandard,
     };
-    fn.__closure = obj;
+    fn.__closure = obj2;
     fn.__workletHash = 10698563185643;
     fn.__initData = __initData;
-    const animatedStyle = obj.useAnimatedStyle(fn);
-    obj = { style: animatedStyle, children: null };
-    const obj1 = {};
+    const animatedStyle = require("ReanimatedRexport").useAnimatedStyle(fn);
+    const obj3 = { style: animatedStyle, children: null };
+    const obj4 = {};
     const merged1 = Object.assign(merged);
-    obj.children = jsx(require("PlusLargeIcon").PlusLargeIcon, {});
+    obj3.children = jsx(require("PlusLargeIcon").PlusLargeIcon, {});
     return jsx(ReanimatedRexportDefault.View, { style: animatedStyle, children: null });
   }
 };

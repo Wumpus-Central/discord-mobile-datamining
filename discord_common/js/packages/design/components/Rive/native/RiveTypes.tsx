@@ -2,7 +2,7 @@
 import DataBindByName from "../../../../../../../_runtime/04368_DataBindByName.js";
 import size from "../../../../../../../_runtime/metro/00002__.js";
 
-let obj = {
+const obj = {
   fill: DataBindByName.Fit.Fill,
   contain: DataBindByName.Fit.Contain,
   cover: DataBindByName.Fit.Cover,
@@ -12,7 +12,10 @@ let obj = {
   "scale-down": DataBindByName.Fit.ScaleDown,
   layout: DataBindByName.Fit.Layout,
 };
-obj = {
+const result = size.fileFinishedImporting("../discord_common/js/packages/design/components/Rive/native/RiveTypes.tsx");
+
+export const FIT_MAP = obj;
+export const ALIGNMENT_MAP = {
   "top-left": DataBindByName.Alignment.TopLeft,
   "top-center": DataBindByName.Alignment.TopCenter,
   "top-right": DataBindByName.Alignment.TopRight,
@@ -23,7 +26,3 @@ obj = {
   "bottom-center": DataBindByName.Alignment.BottomCenter,
   "bottom-right": DataBindByName.Alignment.BottomRight,
 };
-const result = size.fileFinishedImporting("../discord_common/js/packages/design/components/Rive/native/RiveTypes.tsx");
-
-export const FIT_MAP = obj;
-export const ALIGNMENT_MAP = obj;

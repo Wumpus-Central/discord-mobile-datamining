@@ -16,10 +16,9 @@ export const getBoostLifecycleInfo = function getBoostLifecycleInfo(ended, arg1)
     if (null != ended.endsAt) {
       const endsAt2 = ended.endsAt;
       if (endsAt2.getTime() - arg1 <= c2) {
-        let obj = { phase: "expiring", endsAt: ended.endsAt };
+        const obj2 = { phase: "expiring", endsAt: ended.endsAt };
       }
     }
-    obj = { phase: "gave" };
   }
 };
 export const getBoostLifecycleTimestamp = function getBoostLifecycleTimestamp(id, boostLifecycleInfo) {

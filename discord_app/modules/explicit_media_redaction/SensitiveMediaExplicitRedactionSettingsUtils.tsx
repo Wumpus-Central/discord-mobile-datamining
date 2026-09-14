@@ -56,7 +56,7 @@ function resolveExplicitContentSettingWithDefaults(isFriend) {
         const BLUR = preloaded_user_settings.ExplicitContentRedaction.BLUR;
       }
       const ExplicitContentFilter2 = UserSettings.ExplicitContentFilter;
-      setting = ExplicitContentFilter2.getSetting();
+      const setting1 = ExplicitContentFilter2.getSetting();
     } else {
       let flag3 = isDm;
       if (isDm === undefined) {
@@ -68,11 +68,11 @@ function resolveExplicitContentSettingWithDefaults(isFriend) {
       }
       if (flag3) {
         const ExplicitContentFilter = UserSettings.ExplicitContentFilter;
-        const setting1 = ExplicitContentFilter.getSetting();
+        const setting2 = ExplicitContentFilter.getSetting();
         if (flag4) {
-          let SHOW = obj[setting1];
+          let SHOW = obj[setting2];
         } else {
-          SHOW = obj[setting1];
+          SHOW = obj2[setting2];
         }
       } else {
         SHOW = preloaded_user_settings.ExplicitContentRedaction.SHOW;
@@ -84,50 +84,50 @@ function resolveExplicitContentSettingWithDefaults(isFriend) {
 const ExplicitContentFilterTypes = fn(1937).ExplicitContentFilterTypes;
 let obj = {};
 const DISABLED = ExplicitContentFilterTypes.DISABLED;
-let valueOfResult = DISABLED.valueOf();
-obj[valueOfResult] = fn(1187).ExplicitContentRedaction.SHOW;
+obj[DISABLED.valueOf()] = fn(1185).ExplicitContentRedaction.SHOW;
 const NON_FRIENDS = ExplicitContentFilterTypes.NON_FRIENDS;
-valueOfResult = NON_FRIENDS.valueOf();
-obj[valueOfResult] = fn(1187).ExplicitContentRedaction.SHOW;
+const valueOfResult = DISABLED.valueOf();
+obj[NON_FRIENDS.valueOf()] = fn(1185).ExplicitContentRedaction.SHOW;
 const FRIENDS_AND_NON_FRIENDS = ExplicitContentFilterTypes.FRIENDS_AND_NON_FRIENDS;
-obj[FRIENDS_AND_NON_FRIENDS.valueOf()] = fn(1187).ExplicitContentRedaction.BLOCK;
-obj = {};
+const valueOfResult12 = NON_FRIENDS.valueOf();
+obj[FRIENDS_AND_NON_FRIENDS.valueOf()] = fn(1185).ExplicitContentRedaction.BLOCK;
+let obj2 = {};
 const DISABLED2 = ExplicitContentFilterTypes.DISABLED;
-const valueOfResult1 = FRIENDS_AND_NON_FRIENDS.valueOf();
-obj[DISABLED2.valueOf()] = fn(1187).ExplicitContentRedaction.SHOW;
+const valueOfResult13 = FRIENDS_AND_NON_FRIENDS.valueOf();
+obj2[DISABLED2.valueOf()] = fn(1185).ExplicitContentRedaction.SHOW;
 const NON_FRIENDS2 = ExplicitContentFilterTypes.NON_FRIENDS;
-const valueOfResult2 = DISABLED2.valueOf();
-obj[NON_FRIENDS2.valueOf()] = fn(1187).ExplicitContentRedaction.BLOCK;
+const valueOfResult14 = DISABLED2.valueOf();
+obj2[NON_FRIENDS2.valueOf()] = fn(1185).ExplicitContentRedaction.BLOCK;
 const FRIENDS_AND_NON_FRIENDS2 = ExplicitContentFilterTypes.FRIENDS_AND_NON_FRIENDS;
-const valueOfResult3 = NON_FRIENDS2.valueOf();
-obj[FRIENDS_AND_NON_FRIENDS2.valueOf()] = fn(1187).ExplicitContentRedaction.BLOCK;
-obj = {};
+const valueOfResult15 = NON_FRIENDS2.valueOf();
+obj2[FRIENDS_AND_NON_FRIENDS2.valueOf()] = fn(1185).ExplicitContentRedaction.BLOCK;
+let obj3 = {};
 const DISABLED3 = ExplicitContentFilterTypes.DISABLED;
-const valueOfResult4 = FRIENDS_AND_NON_FRIENDS2.valueOf();
-obj[DISABLED3.valueOf()] = fn(1187).ExplicitContentRedaction.BLUR;
+const valueOfResult16 = FRIENDS_AND_NON_FRIENDS2.valueOf();
+obj3[DISABLED3.valueOf()] = fn(1185).ExplicitContentRedaction.BLUR;
 const NON_FRIENDS3 = ExplicitContentFilterTypes.NON_FRIENDS;
-const valueOfResult5 = DISABLED3.valueOf();
-obj[NON_FRIENDS3.valueOf()] = fn(1187).ExplicitContentRedaction.BLUR;
+const valueOfResult17 = DISABLED3.valueOf();
+obj3[NON_FRIENDS3.valueOf()] = fn(1185).ExplicitContentRedaction.BLUR;
 const FRIENDS_AND_NON_FRIENDS3 = ExplicitContentFilterTypes.FRIENDS_AND_NON_FRIENDS;
-const valueOfResult6 = NON_FRIENDS3.valueOf();
-obj[FRIENDS_AND_NON_FRIENDS3.valueOf()] = fn(1187).ExplicitContentRedaction.BLOCK;
-const obj1 = {};
+const valueOfResult18 = NON_FRIENDS3.valueOf();
+obj3[FRIENDS_AND_NON_FRIENDS3.valueOf()] = fn(1185).ExplicitContentRedaction.BLOCK;
+const obj4 = {};
 const DISABLED4 = ExplicitContentFilterTypes.DISABLED;
-const valueOfResult7 = FRIENDS_AND_NON_FRIENDS3.valueOf();
-obj1[DISABLED4.valueOf()] = fn(1187).ExplicitContentRedaction.BLUR;
+const valueOfResult19 = FRIENDS_AND_NON_FRIENDS3.valueOf();
+obj4[DISABLED4.valueOf()] = fn(1185).ExplicitContentRedaction.BLUR;
 const NON_FRIENDS4 = ExplicitContentFilterTypes.NON_FRIENDS;
-const valueOfResult8 = DISABLED4.valueOf();
-obj1[NON_FRIENDS4.valueOf()] = fn(1187).ExplicitContentRedaction.BLOCK;
+const valueOfResult20 = DISABLED4.valueOf();
+obj4[NON_FRIENDS4.valueOf()] = fn(1185).ExplicitContentRedaction.BLOCK;
 const FRIENDS_AND_NON_FRIENDS4 = ExplicitContentFilterTypes.FRIENDS_AND_NON_FRIENDS;
-const valueOfResult9 = NON_FRIENDS4.valueOf();
-obj1[FRIENDS_AND_NON_FRIENDS4.valueOf()] = fn(1187).ExplicitContentRedaction.BLOCK;
+const valueOfResult21 = NON_FRIENDS4.valueOf();
+obj4[FRIENDS_AND_NON_FRIENDS4.valueOf()] = fn(1185).ExplicitContentRedaction.BLOCK;
 const size = fn(2);
 const result = size.fileFinishedImporting(
   "modules/explicit_media_redaction/SensitiveMediaExplicitRedactionSettingsUtils.tsx",
 );
 
-export const TEEN_EXPLICIT_CONTENT_FILTER_TO_EXPLICIT_CONTENT_REDACTION_FRIEND_DM = obj;
-export const TEEN_EXPLICIT_CONTENT_FILTER_TO_EXPLICIT_CONTENT_REDACTION_NON_FRIEND_DM = obj1;
+export const TEEN_EXPLICIT_CONTENT_FILTER_TO_EXPLICIT_CONTENT_REDACTION_FRIEND_DM = obj3;
+export const TEEN_EXPLICIT_CONTENT_FILTER_TO_EXPLICIT_CONTENT_REDACTION_NON_FRIEND_DM = obj4;
 export { resolveExplicitContentSettingWithDefaults };
 export const resolveSettingWithDefaultsForTeen = function resolveSettingWithDefaultsForTeen(isDm) {
   let flag = isDm.isDm;
@@ -142,9 +142,9 @@ export const resolveSettingWithDefaultsForTeen = function resolveSettingWithDefa
     const ExplicitContentFilter = UserSettings.ExplicitContentFilter;
     const setting = ExplicitContentFilter.getSetting();
     if (flag2) {
-      let tmp5 = obj[setting];
+      let tmp5 = obj3[setting];
     } else {
-      tmp5 = obj1[setting];
+      tmp5 = obj4[setting];
     }
     return tmp5;
   } else {
@@ -209,10 +209,10 @@ export const updateExplicitContentSetting = function updateExplicitContentSettin
     isFriend: true,
   });
   const ExplicitContentSettings2 = UserSettings.ExplicitContentSettings;
-  obj = {};
   const merged = Object.assign(obj);
   const merged1 = Object.assign(arg0);
-  ExplicitContentSettings2.updateSetting(obj);
+  ExplicitContentSettings2.updateSetting({});
+  obj2 = {};
 };
 export const shouldRedactMessageMediaForForum = function shouldRedactMessageMediaForForum() {
   if (null == UserStore.getCurrentUser()) {
@@ -226,18 +226,18 @@ export const shouldRedactMessageMediaForForum = function shouldRedactMessageMedi
     }
     obj = { setting: prop };
     let prop1;
-    let tmp10Result = resolveExplicitContentSettingWithDefaults(obj);
     if (setting != null) {
       prop1 = setting.explicitContentNonFriendDm;
     }
-    obj = { setting: prop1, isDm: true };
-    tmp10Result = resolveExplicitContentSettingWithDefaults(obj);
+    obj2 = { setting: prop1, isDm: true };
+    resolveExplicitContentSettingWithDefaults(obj2);
     let prop2;
     if (setting != null) {
       prop2 = setting.explicitContentFriendDm;
     }
-    obj = { setting: prop2, isDm: true, isFriend: true };
-    resolveExplicitContentSettingWithDefaults(obj);
+    obj3 = { setting: prop2, isDm: true, isFriend: true };
+    resolveExplicitContentSettingWithDefaults(obj3);
+    const tmp10Result = resolveExplicitContentSettingWithDefaults(obj);
     return SensitiveMediaRedactionSettingUtils.getShouldObscureForSetting(tmp10Result);
   }
 };

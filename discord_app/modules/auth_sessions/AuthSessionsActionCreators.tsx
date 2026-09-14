@@ -31,8 +31,8 @@ let closure_6 = async function _logOutSessions(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -46,8 +46,8 @@ let closure_6 = async function _logOutSessions(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c4 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           closure_2 = tmp3;
           closure_1 = tmp2;
@@ -68,8 +68,8 @@ let closure_6 = async function _logOutSessions(arg0) {
           HTTP = HTTPUtils.HTTP;
           num2 = HTTP.post;
           const request = { url: constants.AUTH_SESSIONS_LOGOUT, body: null, rejectWithError: false };
-          const obj1 = { session_id_hashes: items };
-          request.body = obj1;
+          const obj4 = { session_id_hashes: items };
+          request.body = obj4;
           num2(request);
           c3 = 1;
           c4 = 1;
@@ -79,16 +79,15 @@ let closure_6 = async function _logOutSessions(arg0) {
         throw value;
       } else if (arg0 === 2) {
         c4 = 3;
-        const obj2 = { value, done: true };
-        return obj2;
+        const obj5 = { value, done: true };
+        return obj5;
       } else {
         closure_129_1 = value;
-        obj = closure_130_1(closure_130_2[3]);
-        const obj3 = { type: "LOGOUT_AUTH_SESSIONS_SUCCESS", sessionIdHashes: closure_129_0 };
-        obj.dispatch(obj3);
+        const obj6 = { type: "LOGOUT_AUTH_SESSIONS_SUCCESS", sessionIdHashes: closure_129_0 };
+        closure_130_1(closure_130_2[3]).dispatch(obj6);
         c4 = 3;
-        const obj4 = { value: closure_129_1, done: true };
-        return obj4;
+        const obj7 = { value: closure_129_1, done: true };
+        return obj7;
       }
     } catch (tmp18) {
       c4 = tmp;

@@ -16,8 +16,7 @@ const result = size.fileFinishedImporting(
 
 export const PlayStationLinkError = function PlayStationLinkError(arg0) {
   ({ onClose, errorCode } = arg0);
-  let obj = useNavigation;
-  const navigation = obj.useNavigation();
+  const navigation = useNavigation.useNavigation();
   const connectRetry = useConnectRetry.useConnectRetry(navigation, constants.PRE_CONNECT);
   if (errorCode === AbortCodes.UNDER_MINIMUM_AGE) {
     const intl2 = util.intl;
@@ -26,11 +25,11 @@ export const PlayStationLinkError = function PlayStationLinkError(arg0) {
     const intl = util.intl;
     stringResult = intl.string(util.t.qE9nqE);
   }
-  obj = { title: null, body: null, onClose: null, onRetry: null };
+  const obj3 = { title: null, body: null, onClose: null, onRetry: null };
   const intl3 = util.intl;
-  obj.title = intl3.string(util.t.eY3qHd);
-  obj.body = stringResult;
-  obj.onClose = onClose;
-  obj.onRetry = connectRetry;
+  obj3.title = intl3.string(util.t.eY3qHd);
+  obj3.body = stringResult;
+  obj3.onClose = onClose;
+  obj3.onRetry = connectRetry;
   return jsx(TwoWayLinkError.TwoWayLinkError, { title: null, body: null, onClose: null, onRetry: null });
 };

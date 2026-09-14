@@ -14,15 +14,14 @@ const result = size.fileFinishedImporting("design/void/Form/native/FormCheckboxR
 export default function FormCheckboxRow(selected) {
   selected = selected.selected;
   const merged = Object.assign(selected, Object.assign({ selected: 0 }));
-  let obj = useA11yRolesNative;
-  const checkboxA11yNative = obj.useCheckboxA11yNative({ checked: selected });
-  ({ accessibilityRole, accessibilityState } = checkboxA11yNative);
-  obj = {};
   const tmp2 = closure_4();
+  const checkboxA11yNative = useA11yRolesNative.useCheckboxA11yNative({ checked: selected });
+  ({ accessibilityRole, accessibilityState } = checkboxA11yNative);
+  const obj2 = {};
   const merged1 = Object.assign(merged);
-  obj.accessibilityRole = accessibilityRole;
-  obj.accessibilityState = accessibilityState;
-  obj.trailing = jsx(Form_FormCheckboxDefault, { selected });
-  obj.trailingWrapperStyle = tmp2.checkboxWrapperStyle;
+  obj2.accessibilityRole = accessibilityRole;
+  obj2.accessibilityState = accessibilityState;
+  obj2.trailing = jsx(Form_FormCheckboxDefault, { selected });
+  obj2.trailingWrapperStyle = tmp2.checkboxWrapperStyle;
   return jsx(FormRowDefault, {});
 }

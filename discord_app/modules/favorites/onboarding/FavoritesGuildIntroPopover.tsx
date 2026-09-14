@@ -3,12 +3,15 @@ import dismissible_content from "../../../../discord_common/js/packages/protos/d
 import useCanShowFavoritesGuildOnboardingDefault from "../hooks/useCanShowFavoritesGuildOnboarding.native.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
-import DismissibleContentShownStateStore from "../../dismissible_content/DismissibleContentShownStateStore.tsx";
+import DismissibleContentShownStateStore_mod from "../../dismissible_content/DismissibleContentShownStateStore.tsx";
 import FavoriteStore from "../FavoriteStore.tsx";
+
+const require = globalThis.__r;
 
 require = fn;
 let DismissibleContentShownStateStore = fn(1949);
 ({ isContentShown: hasOwnProperty, useIsContentShown: metroRequire } = DismissibleContentShownStateStore);
+let DismissibleContentShownStateStore = DismissibleContentShownStateStore_mod;
 const NOOP = fn(1074).NOOP;
 const module_560 = fn(560);
 let closure_10 = module_560.create(() => ({ shouldShowPopover: false, markPopoverAsDismissed: NOOP }));

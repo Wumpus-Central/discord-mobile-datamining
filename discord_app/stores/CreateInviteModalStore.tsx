@@ -17,11 +17,10 @@ function updateWithLatestInvite(channelId, arg1) {
     guild_id = channel.guild_id;
   }
   const guild = GuildStore.getGuild(guild_id);
-  let obj = DefaultInviteExpirationExperiments;
-  let maxAge = obj.getDefaultInviteExpiration({ guild });
+  let maxAge = DefaultInviteExpirationExperiments.getDefaultInviteExpiration({ guild });
   const invite = InstantInviteStore.getInvite(channelId, { targetType, targetUserId, targetApplicationId });
   _null = invite;
-  obj = {
+  const obj2 = {
     channelId,
     maxAge: null,
     maxUses: null,
@@ -35,26 +34,26 @@ function updateWithLatestInvite(channelId, arg1) {
   if (null != invite) {
     maxAge = _null.maxAge;
   }
-  obj.maxAge = maxAge;
+  obj2.maxAge = maxAge;
   if (null != _null) {
     let maxUses = _null.maxUses;
   } else {
     maxUses = value;
   }
-  obj.maxUses = maxUses;
+  obj2.maxUses = maxUses;
   let temporary = null != _null;
   if (temporary) {
     temporary = _null.temporary;
   }
-  obj.temporary = temporary;
+  obj2.temporary = temporary;
   let num = 0;
   if (null != _null) {
     num = _null.flags;
   }
-  obj.flags = num;
-  obj.targetType = targetType;
-  obj.targetUserId = targetUserId;
-  obj.targetApplicationId = targetApplicationId;
+  obj2.flags = num;
+  obj2.targetType = targetType;
+  obj2.targetUserId = targetUserId;
+  obj2.targetApplicationId = targetApplicationId;
   let mapped;
   if (_null != null) {
     const roles = _null.roles;
@@ -65,9 +64,9 @@ function updateWithLatestInvite(channelId, arg1) {
   if (mapped == null) {
     mapped = [];
   }
-  obj.roleIds = mapped;
-  closure_6 = obj;
-  closure_7 = obj;
+  obj2.roleIds = mapped;
+  closure_6 = obj2;
+  closure_7 = obj2;
 }
 const FormStates = fn(1074).FormStates;
 InstantInviteUtilsDefault.INVITE_OPTIONS_UNLIMITED.value;

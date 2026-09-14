@@ -10,22 +10,29 @@ import UserStore from "../../../../../stores/UserStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const UserRowModes = fn(10988).UserRowModes;
+const UserRowModes = fn(10989).UserRowModes;
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9, jsxs: c10 } = jsxProd);
-fn(4636);
-let createStyles = { searchBarContainer: null, searchBar: null, searchBarRowContainer: null, noResults: null };
-createStyles = {
+const createStyles = fn(4636);
+let obj2 = {
+  searchBarContainer: {
+    paddingHorizontal: nativeDefault.space.PX_16,
+    paddingBottom: nativeDefault.space.PX_8,
+    backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND,
+  },
+  searchBar: { height: "ip", minHeight: false },
+  searchBarRowContainer: null,
+  noResults: null,
+};
+const obj3 = {
   paddingHorizontal: nativeDefault.space.PX_16,
   paddingBottom: nativeDefault.space.PX_8,
   backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND,
 };
-createStyles.searchBarContainer = createStyles;
-createStyles.searchBar = { height: "ip", minHeight: false };
-createStyles.searchBarRowContainer = { paddingTop: nativeDefault.space.PX_8 };
-let obj1 = { paddingTop: nativeDefault.space.PX_8 };
-createStyles.noResults = { flex: 1, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
-let closure_11 = createStyles.createStyles(createStyles);
+obj2.searchBarRowContainer = { paddingTop: nativeDefault.space.PX_8 };
+let obj4 = { paddingTop: nativeDefault.space.PX_8 };
+obj2.noResults = { flex: 1, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
+let closure_11 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting(
   "modules/main_tabs_v2/native/shared_components/user_list/SearchableUserList.tsx",
@@ -103,7 +110,6 @@ export default function SearchableUserList(selectedUserIds) {
   }
   ({ onContentLengthChange, onLayout, onScroll } = selectedUserIds);
   const tmp4 = closure_11();
-  let obj = ACTIONS;
   const tmp5 = handleMessage(ACTIONS.useState(""), 2);
   const tmp8 = disabledUserIds(onSelectUser[8])({
     query: tmp5[0],
@@ -200,23 +206,22 @@ export default function SearchableUserList(selectedUserIds) {
     return { type: "user", props };
   }, items4);
   ref = ACTIONS.useRef(null);
-  let obj2 = selectedUserIds(onSelectUser[13]);
   let tmp16;
   if (!tmp12) {
     tmp16 = actions;
   }
-  obj = { actions: tmp16, style: null };
+  const obj2 = { actions: tmp16, style: null };
   let prop;
   if (!tmp12) {
     if (flag6) {
       prop = tmp4.searchBarRowContainer;
     }
   }
-  obj.style = prop;
-  const userListActionsProps = obj2.useUserListActionsProps(obj);
+  obj2.style = prop;
+  const userListActionsProps = selectedUserIds(onSelectUser[13]).useUserListActionsProps(obj2);
   const items5 = [tmp5[0]];
   ({ renderHeader, headerSize } = userListActionsProps);
-  const layoutEffect = obj.useLayoutEffect(() => {
+  const layoutEffect = ACTIONS.useLayoutEffect(() => {
     const current = ref.current;
     if (current != null) {
       current.scrollToTop(false);
@@ -230,7 +235,7 @@ export default function SearchableUserList(selectedUserIds) {
     flag13 = !tmp12;
   }
   if (someResult) {
-    obj = {
+    const obj4 = {
       ref,
       sections: memo1,
       getItemProps: callback2,
@@ -244,10 +249,10 @@ export default function SearchableUserList(selectedUserIds) {
       disableStickySections,
       disableThemedGradient,
     };
-    let tmp22Result = closure_8(tmp15(tmp7[14]).UsersFastList, obj);
+    let tmp22Result = closure_8(tmp15(tmp7[14]).UsersFastList, obj4);
     let tmp29 = closure_8;
   } else {
-    const obj1 = { style: null, children: null };
+    const obj5 = { style: null, children: null };
     if (tmp21) {
       const items6 = [noResults];
       let prop1;
@@ -257,24 +262,24 @@ export default function SearchableUserList(selectedUserIds) {
         }
       }
       items6[1] = prop1;
-      obj1.style = items6;
-      obj1.children = defaultNoResultsFound;
-      let tmp26 = obj1;
+      obj5.style = items6;
+      obj5.children = defaultNoResultsFound;
+      let tmp26 = obj5;
     } else {
-      obj1.style = noResults;
-      obj2 = { title: null, children: null };
-      let tmp6Result = tmp6(tmp7[15]);
+      obj5.style = noResults;
+      const obj6 = { title: null, children: null };
       let intl = tmp15(tmp7[12]).intl;
-      obj2.title = intl.string(tmp15(tmp7[12]).t.V6nAfF);
-      const obj3 = { actions, style: null };
+      obj6.title = intl.string(tmp15(tmp7[12]).t.V6nAfF);
+      const obj7 = { actions, style: null };
       let prop2;
       if (flag6) {
         prop2 = tmp4.searchBarRowContainer;
       }
-      obj3.style = prop2;
-      obj2.children = closure_8(tmp15(tmp7[13]).UserFlashListActions, obj3);
-      obj1.children = closure_8(tmp6Result, obj2);
-      tmp26 = obj1;
+      obj7.style = prop2;
+      obj6.children = closure_8(tmp15(tmp7[13]).UserFlashListActions, obj7);
+      obj5.children = closure_8(tmp6(tmp7[15]), obj6);
+      tmp26 = obj5;
+      const tmp6Result = tmp6(tmp7[15]);
     }
     tmp22Result = closure_8(closure_5, tmp26);
     tmp29 = closure_8;
@@ -284,12 +289,12 @@ export default function SearchableUserList(selectedUserIds) {
     tmp29Result = tmp29(tmp6(tmp7[16]), { absolute: true });
   }
   const children = [tmp29Result, ,];
-  tmp29Result = null;
+  let tmp29Result2 = null;
   if (flag6) {
-    tmp29Result = null;
+    tmp29Result2 = null;
     if (!flag13) {
-      const obj4 = { style: tmp4.searchBarContainer, children: null };
-      const obj5 = {
+      const obj8 = { style: tmp4.searchBarContainer, children: null };
+      const obj9 = {
         onChangeText: tmp5[1],
         onRemove: callback,
         tags: memo,
@@ -297,17 +302,17 @@ export default function SearchableUserList(selectedUserIds) {
         autoFocus: null,
         focusOnAdd: null,
       };
-      tmp6Result = tmp6(tmp7[17]);
       if (flag) {
         flag = someResult;
       }
-      obj5.autoFocus = flag;
-      obj5.focusOnAdd = flag2;
-      obj4.children = tmp29(tmp6Result, obj5);
-      tmp29Result = tmp29(closure_5, obj4);
+      obj9.autoFocus = flag;
+      obj9.focusOnAdd = flag2;
+      obj8.children = tmp29(tmp6(tmp7[17]), obj9);
+      tmp29Result2 = tmp29(closure_5, obj8);
+      const tmp6Result2 = tmp6(tmp7[17]);
     }
   }
-  children[1] = tmp29Result;
+  children[1] = tmp29Result2;
   children[2] = tmp22Result;
   return closure_10(closure_9, { children });
 }

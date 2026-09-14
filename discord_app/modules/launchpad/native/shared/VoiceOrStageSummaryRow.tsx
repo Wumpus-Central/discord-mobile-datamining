@@ -2,7 +2,7 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import native from "../../../../design/void/native.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
-import _modDef16765 from "../../../../../_runtime/metro/16765__.js";
+import _modDef16767 from "../../../../../_runtime/metro/16767__.js";
 import getLayoutStylesDefault from "getLayoutStyles.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -12,7 +12,7 @@ const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
 const createStyles = fn(4636);
 let closure_6 = createStyles.createStyles((height) => {
-  let obj = {
+  const obj = {
     container: { flexDirection: "row", alignItems: "center", marginLeft: -2 },
     overflowCircle: null,
     wrapper: null,
@@ -30,14 +30,19 @@ let closure_6 = createStyles.createStyles((height) => {
     width: height,
   };
   obj.overflowCircle = size;
-  obj = {
+  obj.wrapper = {
     borderRadius: nativeDefault.radii.round,
     borderColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
     backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
     borderWidth: 2,
   };
-  obj.wrapper = obj;
-  obj = {
+  const obj2 = {
+    borderRadius: nativeDefault.radii.round,
+    borderColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
+    backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
+    borderWidth: 2,
+  };
+  obj.badge = {
     borderRadius: nativeDefault.radii.round,
     paddingHorizontal: 8,
     display: "flex",
@@ -45,7 +50,14 @@ let closure_6 = createStyles.createStyles((height) => {
     alignItems: "center",
     height,
   };
-  obj.badge = obj;
+  const obj3 = {
+    borderRadius: nativeDefault.radii.round,
+    paddingHorizontal: 8,
+    display: "flex",
+    flexDirection: "row",
+    alignItems: "center",
+    height,
+  };
   obj.audienceBadge = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
   return obj;
 });
@@ -65,9 +77,7 @@ export default noop.memo(function VoiceOrStageSummaryRow(arg0) {
   const tmp4 = closure_6(size);
   closure_4 = tmp4;
   let obj = { style: null, children: null };
-  let items = [tmp4.container];
-  obj = { height: size + 4 };
-  items[1] = obj;
+  let items = [tmp4.container, { height: size + 4 }];
   obj.style = items;
   let items1 = [
     users.map((user, index) => {
@@ -75,54 +85,54 @@ export default noop.memo(function VoiceOrStageSummaryRow(arg0) {
         if (index === tmp - 1) {
           if (closure_3 > 0) {
             const items = [closure_4.wrapper];
-            let obj = 0 !== index;
-            if (obj) {
-              obj = { marginLeft: -12 };
+            let obj2 = 0 !== index;
+            if (obj2) {
+              obj2 = { marginLeft: -12 };
             }
-            obj = { style: null, children: null };
-            items[1] = obj;
-            obj.style = items;
-            const obj1 = { style: closure_4.overflowCircle, children: null };
-            const obj2 = { variant: "text-xs/medium", children: null };
+            const obj3 = { style: null, children: null };
+            items[1] = obj2;
+            obj3.style = items;
+            const obj4 = { style: closure_4.overflowCircle, children: null };
+            const obj5 = { variant: "text-xs/medium", children: null };
             const _HermesInternal = HermesInternal;
-            obj2.children = "+" + tmp2 + 1;
-            obj1.children = React4(Text_Text.Text, obj2);
-            obj.children = React4(View, obj1);
-            let tmp3Result = React4(View, obj, "overflow");
+            obj5.children = "+" + tmp2 + 1;
+            obj4.children = React4(Text_Text.Text, obj5);
+            obj3.children = React4(View, obj4);
+            let tmp3Result = React4(View, obj3, "overflow");
           }
           return tmp3Result;
         }
         const items1 = [closure_4.wrapper];
-        obj = 0 !== index;
+        let obj = 0 !== index;
         if (obj) {
           obj = { marginLeft: -12 };
         }
-        const obj3 = { style: null, children: null };
+        const obj6 = { style: null, children: null };
         items1[1] = obj;
-        obj3.style = items1;
-        const obj4 = { user, guildId, size: closure_2.voiceOrStageSummaryRow.avatarSize };
-        obj3.children = React4(native.Avatar, obj4);
-        tmp3Result = React4(View, obj3, index);
+        obj6.style = items1;
+        const obj7 = { user, guildId, size: closure_2.voiceOrStageSummaryRow.avatarSize };
+        obj6.children = React4(native.Avatar, obj7);
+        tmp3Result = React4(View, obj6, index);
       }
     }),
   ];
   let tmp8Result = null != audienceCount && audienceCount > 0;
   if (tmp8Result) {
     const items2 = [tmp4.wrapper];
-    obj = { style: null, children: null };
+    let obj3 = { style: null, children: null };
     items2[1] = users.length > 0 && { marginLeft: -12 };
-    obj.style = items2;
-    let obj1 = { style: null, children: null };
+    obj3.style = items2;
+    let obj4 = { style: null, children: null };
     const items3 = [,];
     ({ badge: arr4[0], audienceBadge: arr4[1] } = tmp4);
-    obj1.style = items3;
-    let obj2 = { size: max(1178).Icon.Sizes.CUSTOM, style: { height: 14, width: 14 }, source: _modDef16765 };
-    const items4 = [closure_4(max(1178).Icon, obj2)];
-    let obj3 = { variant: "text-sm/bold", style: { marginLeft: 4 }, children: audienceCount };
-    items4[1] = closure_4(max(4632).Text, obj3);
-    obj1.children = items4;
-    obj.children = closure_5(tmp6, obj1);
-    tmp8Result = tmp8(tmp6, obj);
+    obj4.style = items3;
+    let obj5 = { size: max(1176).Icon.Sizes.CUSTOM, style: { height: 14, width: 14 }, source: _modDef16767 };
+    const items4 = [closure_4(max(1176).Icon, obj5)];
+    let obj6 = { variant: "text-sm/bold", style: { marginLeft: 4 }, children: audienceCount };
+    items4[1] = closure_4(max(4632).Text, obj6);
+    obj4.children = items4;
+    obj3.children = closure_5(tmp6, obj4);
+    tmp8Result = tmp8(tmp6, obj3);
     const tmp9 = users.length > 0 && { marginLeft: -12 };
   }
   items1[1] = tmp8Result;

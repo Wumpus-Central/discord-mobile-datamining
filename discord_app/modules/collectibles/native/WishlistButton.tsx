@@ -7,7 +7,6 @@ import ReanimatedRexport from "../../reanimated/ReanimatedRexport.tsx";
 import spring from "../../../design/animation/reanimated/spring/spring.tsx";
 import springPresets from "../../../design/animation/reanimated/spring/springPresets.tsx";
 import CollectiblesWishlistUtils from "../../wishlists/CollectiblesWishlistUtils.tsx";
-import useProductPurchaseState from "../hooks/useProductPurchaseState.tsx";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -84,10 +83,10 @@ class WishlistButtonBase {
     items1[2] = sharedValue;
     callback = obj3.useCallback(() => {
       if (disabled) {
-        obj = { key: "WISHLIST_DISABLED", content: null };
+        obj2 = { key: "WISHLIST_DISABLED", content: null };
         const intl = util.intl;
-        obj.content = intl.string(util.t["50TX9k"]);
-        obj.open(obj);
+        obj2.content = intl.string(util.t["50TX9k"]);
+        ToastActionCreatorsDefault.open(obj2);
       } else if (!busy) {
         if (onTrackPress == null) {
           let tmp7 = isWishlisted;
@@ -127,15 +126,14 @@ class WishlistButtonBase {
         let result = sharedValue.set(0);
         const _requestAnimationFrame = requestAnimationFrame;
         closure_0 = requestAnimationFrame(() => {
-          isWishlisted(busy[19]);
           const fn = function t(arg0) {
             if (arg0) {
               closure_0(busy[9]).runOnJS(setIsClickAnimating)(false);
               obj = closure_0(busy[9]);
             }
           };
-          obj = { runOnJS: isWishlisted(busy[9]).runOnJS, setIsClickAnimating };
-          fn.__closure = obj;
+          obj = isWishlisted(busy[19]);
+          fn.__closure = { runOnJS: isWishlisted(busy[9]).runOnJS, setIsClickAnimating };
           fn.__workletHash = 13061953734403;
           fn.__initData = __initData;
           const result = closure_1_14.set(obj.withTiming(1, sharedValue, "animate-always", fn));
@@ -156,18 +154,18 @@ class WishlistButtonBase {
       if (first) {
         num = 0.9;
       }
-      obj = { scale: spring.withSpring(num, springPresets.SUBTLE_SPRING, "animate-always") };
-      const items = [obj];
+      const tmp2Result = spring;
+      const items = [{ scale: spring.withSpring(num, springPresets.SUBTLE_SPRING, "animate-always") }];
       obj.transform = items;
       return obj;
     };
-    obj = {
+    obj1 = {
       styles: tmp,
       withSpring: tmp2(tmp3[20]).withSpring,
       showFilled: tmp9,
       SUBTLE_SPRING: tmp2(tmp3[21]).SUBTLE_SPRING,
     };
-    fn.__closure = obj;
+    fn.__closure = obj1;
     fn.__workletHash = 1357254413161;
     fn.__initData = closure_19;
     animatedStyle = tmp2Result1.useAnimatedStyle(fn);
@@ -185,16 +183,16 @@ class WishlistButtonBase {
           num = 1;
         }
         obj.opacity = obj2.withSpring(num, tmp3(tmp4[21]).SUBTLE_SPRING, "animate-always");
-        obj = { scale: null };
+        obj1 = { scale: null };
         tmp3Result = tmp3(tmp4[9]);
-        obj.scale = tmp3Result.interpolate(value, [0, 0.625, 1], [0, 1.35, 1], tmp3(tmp4[9]).Extrapolation.CLAMP);
+        obj1.scale = tmp3Result.interpolate(value, [0, 0.625, 1], [0, 1.35, 1], tmp3(tmp4[9]).Extrapolation.CLAMP);
         items = [];
-        items[0] = obj;
+        items[0] = obj1;
         obj.transform = items;
         return obj;
       }
     }
-    obj1 = {
+    obj20 = {
       animationFillProgress: sharedValue,
       styles: tmp,
       withSpring: tmp2(tmp3[20]).withSpring,
@@ -203,7 +201,7 @@ class WishlistButtonBase {
       interpolate: tmp2(tmp3[9]).interpolate,
       Extrapolation: tmp2(tmp3[9]).Extrapolation,
     };
-    J.__closure = obj1;
+    J.__closure = obj20;
     J.__workletHash = 15039903885060;
     J.__initData = closure_20;
     animatedStyle1 = tmp2Result2.useAnimatedStyle(J);
@@ -225,27 +223,27 @@ class WishlistButtonBase {
           num = obj2.interpolate(value, [0, 0.7], [1, 0], closure_0(closure_2[9]).Extrapolation.CLAMP);
         }
         obj.opacity = num;
-        obj = { scale: null };
+        obj1 = { scale: null };
         obj4 = closure_0(closure_2[9]);
-        obj.scale = obj4.interpolate(value, [0, 0.625, 1], [0, 1.35, 1], closure_0(closure_2[9]).Extrapolation.CLAMP);
+        obj1.scale = obj4.interpolate(value, [0, 0.625, 1], [0, 1.35, 1], closure_0(closure_2[9]).Extrapolation.CLAMP);
         items = [];
-        items[0] = obj;
+        items[0] = obj1;
         obj.transform = items;
         return obj;
       }
     }
-    obj2 = {
+    obj21 = {
       animationFillProgress: sharedValue,
       styles: tmp,
       showFilled: tmp9,
       interpolate: tmp2(tmp3[9]).interpolate,
       Extrapolation: tmp2(tmp3[9]).Extrapolation,
     };
-    X.__closure = obj2;
+    X.__closure = obj21;
     X.__workletHash = 12429379889426;
     X.__initData = closure_21;
     tmp17 = closure_12;
-    obj3 = {
+    obj22 = {
       style(pressed) {
         pressed = pressed.pressed;
         const items = [closure_6.button, closure_8, , , ,];
@@ -282,48 +280,48 @@ class WishlistButtonBase {
     if (flag) {
       str = "none";
     }
-    obj3.accessibilityRole = str;
+    obj22.accessibilityRole = str;
     accessibilityLabel = undefined;
     if (!flag) {
       accessibilityLabel = global.accessibilityLabel;
     }
-    obj3.accessibilityLabel = accessibilityLabel;
+    obj22.accessibilityLabel = accessibilityLabel;
     tmp20 = undefined;
     if (!flag) {
-      obj4 = { checked: null, busy: null, disabled: null };
-      obj4.checked = isWishlisted;
-      obj4.busy = busy;
-      obj4.disabled = disabled;
-      tmp20 = obj4;
+      obj23 = { checked: null, busy: null, disabled: null };
+      obj23.checked = isWishlisted;
+      obj23.busy = busy;
+      obj23.disabled = disabled;
+      tmp20 = obj23;
     }
-    obj3.accessibilityState = tmp20;
-    obj3.accessibilityElementsHidden = flag;
+    obj22.accessibilityState = tmp20;
+    obj22.accessibilityElementsHidden = flag;
     str2 = "auto";
     if (flag) {
       str2 = "no-hide-descendants";
     }
-    obj3.importantForAccessibility = str2;
-    obj5 = { style: null, children: null };
+    obj22.importantForAccessibility = str2;
+    obj24 = { style: null, children: null };
     items3 = [,];
     items3[0] = tmp.iconContainer;
     items3[1] = { width: tmp5, height: tmp5 };
-    obj5.style = items3;
-    obj6 = { style: animatedStyle, pointerEvents: "none", children: null };
-    obj7 = { size: tmp4[size], color: onPress(tmp3[12]).colors.INTERACTIVE_ICON_DEFAULT };
-    obj6.children = tmp17(tmp2(tmp3[22]).HeartOutlineIcon, obj7);
+    obj24.style = items3;
+    obj25 = { style: animatedStyle, pointerEvents: "none", children: null };
+    obj26 = { size: tmp4[size], color: onPress(tmp3[12]).colors.INTERACTIVE_ICON_DEFAULT };
+    obj25.children = tmp17(tmp2(tmp3[22]).HeartOutlineIcon, obj26);
     items4 = [, ,];
-    items4[0] = tmp17(onPress(tmp3[9]).View, obj6);
-    obj8 = { style: animatedStyle1, pointerEvents: "none", children: null };
-    obj9 = { size: tmp4[size], color: onPress(tmp3[12]).unsafe_rawColors.RED_NEW_50 };
-    obj8.children = tmp17(tmp2(tmp3[23]).HeartIcon, obj9);
-    items4[1] = tmp17(onPress(tmp3[9]).View, obj8);
-    obj10 = { style: animatedStyle2, pointerEvents: "none", children: null };
-    obj11 = { size: tmp4[size], color: "white" };
-    obj10.children = tmp17(tmp2(tmp3[23]).HeartIcon, obj11);
-    items4[2] = tmp17(onPress(tmp3[9]).View, obj10);
-    obj5.children = items4;
-    obj3.children = closure_13(closure_7, obj5);
-    return tmp17(tmp18, obj3);
+    items4[0] = tmp17(onPress(tmp3[9]).View, obj25);
+    obj27 = { style: animatedStyle1, pointerEvents: "none", children: null };
+    obj28 = { size: tmp4[size], color: onPress(tmp3[12]).unsafe_rawColors.RED_NEW_50 };
+    obj27.children = tmp17(tmp2(tmp3[23]).HeartIcon, obj28);
+    items4[1] = tmp17(onPress(tmp3[9]).View, obj27);
+    obj29 = { style: animatedStyle2, pointerEvents: "none", children: null };
+    obj30 = { size: tmp4[size], color: "white" };
+    obj29.children = tmp17(tmp2(tmp3[23]).HeartIcon, obj30);
+    items4[2] = tmp17(onPress(tmp3[9]).View, obj29);
+    obj24.children = items4;
+    obj22.children = closure_13(closure_7, obj24);
+    return tmp17(tmp18, obj22);
   }
 }
 class WishlistButton {
@@ -353,12 +351,12 @@ class WishlistButton {
     showWishlistNUXActionSheet = tmp5.showWishlistNUXActionSheet;
     closure_4 = showWishlistNUXActionSheet;
     intl = closure_0(onTrackPress[18]).intl;
-    obj = { productName: product.name };
+    obj1 = { productName: product.name };
     items2 = [, ,];
     items2[0] = shouldShowWishlistNUXActionSheet;
     items2[1] = showWishlistNUXActionSheet;
     items2[2] = product;
-    formatToPlainStringResult = intl.formatToPlainString(closure_0(onTrackPress[18]).t["7kFjeK"], obj);
+    formatToPlainStringResult = intl.formatToPlainString(closure_0(onTrackPress[18]).t["7kFjeK"], obj1);
     callback = closure_5.useCallback(() => {
       if (shouldShowWishlistNUXActionSheet) {
         showWishlistNUXActionSheet(product);
@@ -370,8 +368,7 @@ class WishlistButton {
     items3 = [];
     items3[0] = stringResult;
     callback1 = closure_5.useCallback(() => {
-      obj = { key: "WISHLIST_ERROR", content };
-      obj.open(obj);
+      ToastActionCreatorsDefault.open({ key: "WISHLIST_ERROR", content });
     }, items3);
     obj4 = closure_0(onTrackPress[26]);
     wishlistButtonState = obj4.useWishlistButtonState({
@@ -391,15 +388,15 @@ class WishlistButton {
     if (null != stateFromStores1) {
       tmp12 = jsx;
       tmp13 = WishlistButtonBase;
-      obj1 = { isWishlisted: null, onPress: null, busy: null, accessibilityLabel: null };
-      obj1.isWishlisted = isWishlisted;
-      obj1.onPress = tmp11;
-      obj1.busy = wishlistButtonState.isBusy;
-      obj1.accessibilityLabel = formatToPlainStringResult;
-      tmp14 = obj1;
+      obj6 = { isWishlisted: null, onPress: null, busy: null, accessibilityLabel: null };
+      obj6.isWishlisted = isWishlisted;
+      obj6.onPress = tmp11;
+      obj6.busy = wishlistButtonState.isBusy;
+      obj6.accessibilityLabel = formatToPlainStringResult;
+      tmp14 = obj6;
       tmp15 = merged;
       merged1 = Object.assign(merged);
-      tmp = jsx(WishlistButtonBase, obj1);
+      tmp = jsx(WishlistButtonBase, obj6);
     }
     return tmp;
   }
@@ -413,7 +410,7 @@ const jsxProd = fn(21);
 let obj = { duration: 400, easing: null };
 const Easing = fn(4373).Easing;
 obj.easing = Easing.bezier(0.67, 0, 0.26, 1);
-obj = { sm: fn(5061).SMALL_BUTTON_HEIGHT, md: fn(5061).MEDIUM_BUTTON_HEIGHT };
+let obj2 = { sm: fn(5061).SMALL_BUTTON_HEIGHT, md: fn(5061).MEDIUM_BUTTON_HEIGHT };
 let value = { sm: "sm", md: "md" };
 const createStyles = fn(4636);
 let closure_17 = createStyles.createStyles((arg0) => {
@@ -429,8 +426,8 @@ let closure_17 = createStyles.createStyles((arg0) => {
     animationFill: null,
   };
   const size = {
-    width: obj[arg0],
-    height: obj[arg0],
+    width: obj2[arg0],
+    height: obj2[arg0],
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
@@ -439,17 +436,16 @@ let closure_17 = createStyles.createStyles((arg0) => {
     borderColor: nativeDefault.colors.CONTROL_SECONDARY_BORDER_DEFAULT,
   };
   obj.button = size;
-  obj = { backgroundColor: null };
-  let obj3 = native;
-  obj.backgroundColor = obj3.setColorOpacity("white", 0.72);
-  obj.light = obj;
-  obj = { backgroundColor: native.setColorOpacity("white", 0.62) };
-  obj.lightPressed = obj;
+  obj2 = { backgroundColor: native.setColorOpacity("white", 0.72) };
+  obj.light = obj2;
+  const obj3 = { backgroundColor: null };
+  obj3.backgroundColor = native.setColorOpacity("white", 0.62);
+  obj.lightPressed = obj3;
   obj.dark = { backgroundColor: nativeDefault.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT };
-  const obj1 = { backgroundColor: nativeDefault.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT };
+  const obj5 = { backgroundColor: nativeDefault.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT };
   obj.darkPressed = { backgroundColor: nativeDefault.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_ACTIVE };
-  obj3 = { borderColor: nativeDefault.colors.BORDER_STRONG };
-  obj.midnight = obj3;
+  const obj7 = { backgroundColor: nativeDefault.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_ACTIVE };
+  obj.midnight = { borderColor: nativeDefault.colors.BORDER_STRONG };
   obj.disabled = { opacity: 0.5 };
   obj.iconContainer = { position: "relative", alignItems: "center", justifyContent: "center" };
   obj.animationFill = { position: "absolute", inset: 0, alignItems: "center", justifyContent: "center" };
@@ -474,17 +470,16 @@ export default function CollectiblesWishlistButton(selectedProduct) {
   selectedProduct = selectedProduct.selectedProduct;
   let tmp = null;
   const merged = Object.assign(selectedProduct, Object.assign({ selectedProduct: 0, onTrackPress: 0 }));
-  obj = useProductPurchaseState;
   CollectiblesWishlistUtils;
   if (!obj.useProductPurchaseState(selectedProduct).isPurchased) {
-    obj = {
+    obj2 = {
       skuId: selectedProduct.skuId,
       product: selectedProduct,
       disabled: !tmp4,
       onTrackPress: selectedProduct.onTrackPress,
     };
     const merged1 = Object.assign(merged);
-    tmp = closure_1_12(WishlistButton, obj);
+    tmp = closure_1_12(WishlistButton, obj2);
   }
   return tmp;
 }

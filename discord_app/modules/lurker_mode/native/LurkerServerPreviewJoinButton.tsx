@@ -14,9 +14,9 @@ let result = size.fileFinishedImporting("modules/lurker_mode/native/LurkerServer
 export default noop.memo(function LurkerServerPreviewJoinButton(guildId) {
   guildId = guildId.guildId;
   const joinSource = guildId.joinSource;
-  const tmp = _slicedToArray(noop.useState(false), 2);
-  const loading = tmp[0];
-  asyncGeneratorStep = tmp[1];
+  loading = undefined;
+  asyncGeneratorStep = undefined;
+  [loading, asyncGeneratorStep] = noop.useState(false);
   const items = [guildId, joinSource, loading];
   const callback = noop.useCallback(
     asyncGeneratorStep(async () => {
@@ -27,8 +27,8 @@ export default noop.memo(function LurkerServerPreviewJoinButton(guildId) {
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
-          let obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           return { value: "HermesInternal", done: null };
         }
@@ -41,8 +41,8 @@ export default noop.memo(function LurkerServerPreviewJoinButton(guildId) {
               throw value;
             } else if (arg0 === 2) {
               c4 = 3;
-              obj = { value, done: true };
-              return obj;
+              const obj4 = { value, done: true };
+              return obj4;
             } else if (first) {
               c4 = 3;
             } else {
@@ -64,11 +64,11 @@ export default noop.memo(function LurkerServerPreviewJoinButton(guildId) {
               }
               v0(true);
               c3 = 1;
-              let obj1 = { source: joinSource };
+              const obj5 = { source: joinSource };
               v3 = 2;
               c4 = 1;
-              const obj2 = { value: v3(tmp43[9]).joinGuild(guildId, obj1), done: false };
-              return obj2;
+              const obj8 = { value: v3(tmp43[9]).joinGuild(guildId, obj5), done: false };
+              return obj8;
             }
           } else if (1 === tmp7) {
             c3 = 0;
@@ -82,14 +82,13 @@ export default noop.memo(function LurkerServerPreviewJoinButton(guildId) {
               c3 = 0;
               closure_128_3(false);
               c4 = 3;
-              const obj3 = { value, done: true };
-              return obj3;
+              const obj9 = { value, done: true };
+              return obj9;
             } else {
-              obj1 = v3(tmp43[9]);
               v3 = 3;
               c4 = 1;
-              const obj4 = { value: obj1.waitForGuild(closure_128_0), done: false };
-              return obj4;
+              const obj10 = { value: v3(tmp43[9]).waitForGuild(closure_128_0), done: false };
+              return obj10;
             }
           } else if (arg0 === 1) {
             c4 = 3;
@@ -101,7 +100,7 @@ export default noop.memo(function LurkerServerPreviewJoinButton(guildId) {
           c3 = 0;
           closure_128_3(false);
           c4 = 3;
-          obj = { value, done: true };
+          const obj = { value, done: true };
           return obj;
         } catch (tmp43) {
           if (tmp4 === c3) {

@@ -27,31 +27,31 @@ export default function stripSensitiveLoggingData(arg0) {
       const cmd2 = merged3.cmd;
       if (RPCCommands.AUTHENTICATE !== cmd2) {
         if (RPCCommands.GET_PROVIDER_ACCESS_TOKEN !== cmd2) {
-          obj = {};
+          const obj2 = {};
           const merged1 = Object.assign(merged3);
         }
       }
-      obj = {};
+      const obj3 = {};
       const merged2 = Object.assign(merged3);
-      const obj1 = {};
+      const obj4 = {};
       merged3 = Object.assign(merged3.data);
-      obj1.access_token = access_token;
-      obj.data = obj1;
+      obj4.access_token = access_token;
+      obj3.data = obj4;
     }
   } else {
     const cmd = obj.cmd;
     if (RPCCommands.AUTHENTICATE !== cmd) {
       if (RPCCommands.GET_PROVIDER_ACCESS_TOKEN !== cmd) {
-        const obj2 = {};
+        const obj5 = {};
         const merged4 = Object.assign(obj);
       }
     }
-    const obj3 = {};
+    const obj6 = {};
     const merged5 = Object.assign(obj);
-    const obj4 = {};
+    const obj7 = {};
     const merged6 = Object.assign(obj.args);
     obj = access_token;
-    obj4.access_token = access_token;
-    obj3.args = obj4;
+    obj7.access_token = access_token;
+    obj6.args = obj7;
   }
 }

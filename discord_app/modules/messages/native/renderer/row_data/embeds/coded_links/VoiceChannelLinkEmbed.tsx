@@ -41,7 +41,7 @@ export const createVoiceChannelLinkEmbed = function createVoiceChannelLinkEmbed(
               if (guild != null) {
                 id = guild.id;
               }
-              let obj = { id, icon: null, canAnimate: true, size: 128 };
+              const obj = { id, icon: null, canAnimate: true, size: 128 };
               let icon1;
               if (guild != null) {
                 icon1 = guild.icon;
@@ -52,15 +52,15 @@ export const createVoiceChannelLinkEmbed = function createVoiceChannelLinkEmbed(
             } else if (null != guild) {
               const tmp8 = getGuildAcronym(guild);
             }
-            obj = {};
+            const obj2 = {};
             const merged = Object.assign(baseColors);
             const tmp6 = getEmbedThemeColorsDefault(theme);
             let str;
             if (obj5.isAndroid()) {
               str = "";
             }
-            obj.headerText = str;
-            obj.headerColor = colors.headerColor;
+            obj2.headerText = str;
+            obj2.headerColor = colors.headerColor;
             obj5 = PlatformUtils;
             const intl = util.intl;
             const string = intl.string;
@@ -70,38 +70,38 @@ export const createVoiceChannelLinkEmbed = function createVoiceChannelLinkEmbed(
             } else {
               stringResult = string(t.gpqgah);
             }
-            obj.acceptLabelText = stringResult;
-            obj.onlineText = undefined;
-            obj.memberText = undefined;
-            let tmp16Result = utils_ChannelUtils;
-            const assetSource = Image.resolveAssetSource(tmp16Result.getChannelIcon(channel));
+            obj2.acceptLabelText = stringResult;
+            obj2.onlineText = undefined;
+            obj2.memberText = undefined;
+            isGuildStageVoiceResult = channel.isGuildStageVoice();
+            const assetSource = Image.resolveAssetSource(utils_ChannelUtils.getChannelIcon(channel));
             let uri;
             if (assetSource != null) {
               uri = assetSource.uri;
             }
-            obj.channelIcon = uri;
-            tmp16Result = useChannelName;
-            obj.titleText = tmp16Result.computeChannelName(channel, UserStore, RelationshipStore);
-            obj.titleColor = colors.titleColor;
+            obj2.channelIcon = uri;
+            const tmp16Result = utils_ChannelUtils;
+            obj2.titleText = useChannelName.computeChannelName(channel, UserStore, RelationshipStore);
+            obj2.titleColor = colors.titleColor;
             let tmp24;
             if (null != guildIconURL) {
               tmp24 = guildIconURL;
             }
-            obj.thumbnailUrl = tmp24;
-            obj.thumbnailText = tmp8;
-            obj.subtitleColor = undefined;
-            obj.acceptLabelBackgroundColor = colors.acceptLabelGreenBackgroundColor;
-            obj.acceptLabelBorderColor = undefined;
-            obj.acceptLabelColor = colors.acceptLabelGreenColor;
-            obj.embedCanBeTapped = true;
-            obj.canBeAccepted = true;
+            obj2.thumbnailUrl = tmp24;
+            obj2.thumbnailText = tmp8;
+            obj2.subtitleColor = undefined;
+            obj2.acceptLabelBackgroundColor = colors.acceptLabelGreenBackgroundColor;
+            obj2.acceptLabelBorderColor = undefined;
+            obj2.acceptLabelColor = colors.acceptLabelGreenColor;
+            obj2.embedCanBeTapped = true;
+            obj2.canBeAccepted = true;
             const intl2 = util.intl;
-            const obj1 = { guildName: guild.name };
-            obj.channelName = intl2.formatToPlainString(util.t["2wimj5"], obj1);
-            obj.subtitle = "";
-            obj.type = InviteTypes.GUILD;
-            obj.inviteSplash = undefined;
-            return obj;
+            const obj3 = { guildName: guild.name };
+            obj2.channelName = intl2.formatToPlainString(util.t["2wimj5"], obj3);
+            obj2.subtitle = "";
+            obj2.type = InviteTypes.GUILD;
+            obj2.inviteSplash = undefined;
+            return obj2;
           }
         }
       }

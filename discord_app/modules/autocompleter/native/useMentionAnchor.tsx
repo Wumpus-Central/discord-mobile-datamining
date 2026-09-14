@@ -4,22 +4,22 @@ import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
-function isMentionAnchorValid(seenText, arg1, anchor, arg3, arg4) {
-  let startsWithResult = null != anchor;
+function isMentionAnchorValid(seenText, arg1, anchor1, arg3, arg4) {
+  let startsWithResult = null != anchor1;
   if (startsWithResult) {
-    startsWithResult = anchor >= 0;
+    startsWithResult = anchor1 >= 0;
   }
   if (startsWithResult) {
-    startsWithResult = seenText.startsWith(arg3, anchor);
+    startsWithResult = seenText.startsWith(arg3, anchor1);
   }
   if (startsWithResult) {
-    startsWithResult = arg1 >= anchor + arg3.length;
+    startsWithResult = arg1 >= anchor1 + arg3.length;
   }
   if (!startsWithResult) {
     return startsWithResult;
   } else {
     let isSingleLineRunResult = arg4;
-    const sum = anchor + arg3.length;
+    const sum = anchor1 + arg3.length;
     let allowSpaces;
     if (arg4 != null) {
       allowSpaces = isSingleLineRunResult.allowSpaces;
@@ -50,21 +50,20 @@ const result = size.fileFinishedImporting("modules/autocompleter/native/useMenti
 
 export default function useMentionAnchor(seenText, arg1, arg2, arg3, arg4) {
   closure_0 = arg2;
-  let obj = noop;
   let tmp = closure_6;
-  [anchor, tmp3] = _slicedToArray(noop.useState(closure_6), 2);
+  [anchor, tmp3] = noop.useState(closure_6);
   dependencyMap = tmp3;
-  anchor = null;
+  let anchor1 = null;
   if ("idle" !== anchor.kind) {
-    anchor = anchor.anchor;
+    anchor1 = anchor.anchor;
   }
   let tmp5 = arg2;
   if (arg2) {
-    tmp5 = isMentionAnchorValid(seenText, arg1, anchor, arg3, arg4);
+    tmp5 = isMentionAnchorValid(seenText, arg1, anchor1, arg3, arg4);
   }
   let tmp12 = null;
   if (tmp5) {
-    tmp12 = anchor;
+    tmp12 = anchor1;
   }
   let tmp13 = tmp;
   if (arg2) {
@@ -84,8 +83,8 @@ export default function useMentionAnchor(seenText, arg1, arg2, arg3, arg4) {
         obj5 = autocompleter_AutocompleteUtils;
       }
       if (null != tmp19) {
-        obj = { kind: "pending", anchor: tmp19, seenText: null };
-        tmp = obj;
+        const obj2 = { kind: "pending", anchor: tmp19, seenText: null };
+        tmp = obj2;
       }
       tmp13 = tmp;
     } else if ("active" === kind) {
@@ -97,16 +96,16 @@ export default function useMentionAnchor(seenText, arg1, arg2, arg3, arg4) {
     } else if ("pending" === kind) {
       ({ anchor: anchor2, seenText } = anchor);
       if (tmp5) {
-        obj = { kind: "active", anchor: anchor2 };
-        let tmp14 = obj;
+        const obj3 = { kind: "active", anchor: anchor2 };
+        let tmp14 = obj3;
       } else if (seenText.startsWith(arg3, anchor2)) {
-        const obj1 = { kind: "pending", anchor: anchor2, seenText: null };
-        tmp14 = obj1;
+        const obj4 = { kind: "pending", anchor: anchor2, seenText: null };
+        tmp14 = obj4;
       } else {
         tmp14 = tmp;
         if (anchor2 <= seenText.length) {
           if (null == seenText) {
-            const obj2 = { kind: "pending", anchor: anchor2, seenText };
+            const obj6 = { kind: "pending", anchor: anchor2, seenText };
           }
         }
       }
@@ -130,13 +129,13 @@ export default function useMentionAnchor(seenText, arg1, arg2, arg3, arg4) {
   if (!tmp29) {
     tmp3(tmp13);
   }
-  const obj3 = { anchor: tmp12, beginSearch: null };
+  const obj7 = { anchor: tmp12, beginSearch: null };
   const items = [arg2];
-  obj3.beginSearch = obj.useCallback((anchor) => {
+  obj7.beginSearch = noop.useCallback((anchor) => {
     if (closure_0) {
       const obj = { kind: "pending", anchor, seenText: null };
       tmp3 = tmp3(obj);
     }
   }, items);
-  return obj3;
+  return obj7;
 }

@@ -9,17 +9,16 @@ require = fn;
 const ContentDismissActionType = fn(1954).ContentDismissActionType;
 const jsx = fn(21).jsx;
 let items = [fn(1943).DismissibleContent.MOBILE_ACCESSIBILITY_COLOR_SETTINGS];
-fn(11601);
-let SettingBuilders = {
+const SettingBuilders = fn(11602);
+const route = SettingBuilders.createRoute({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.G0neg7);
   },
   parent: null,
-  IconComponent: fn(15412).AccessibilityIcon,
+  IconComponent: fn(15413).AccessibilityIcon,
   useTrailing() {
-    let obj = useSelectedDismissibleContent;
-    [tmp4, r10012] = _slicedToArray(obj.useSelectedDismissibleContent(items), 2);
+    [tmp4, r10012] = useSelectedDismissibleContent.useSelectedDismissibleContent(items);
     let tmp5 = null;
     if (null != tmp4) {
       let hasItem;
@@ -28,9 +27,9 @@ let SettingBuilders = {
       }
       tmp5 = null;
       if (hasItem) {
-        obj = { text: null };
+        const obj3 = { text: null };
         const intl = util.intl;
-        obj.text = intl.string(util.t.y2b7CA);
+        obj3.text = intl.string(util.t.y2b7CA);
         tmp5 = jsx(native.TextBadge, { text: null });
       }
     }
@@ -62,9 +61,8 @@ let SettingBuilders = {
       return require("SettingsAccessibilityScreen").default;
     },
   },
-};
-SettingBuilders = SettingBuilders.createRoute(SettingBuilders);
+});
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/AccessibilitySetting.tsx");
 
-export default SettingBuilders;
+export default route;

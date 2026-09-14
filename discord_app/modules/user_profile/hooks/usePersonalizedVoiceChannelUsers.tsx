@@ -4,6 +4,8 @@ import ConsentStore from "../../../stores/ConsentStore.tsx";
 import UserStore from "../../../stores/UserStore.tsx";
 import SortedVoiceStateStore from "../../../stores/views/SortedVoiceStateStore.tsx";
 
+const require = globalThis.__r;
+
 const require = fn;
 const Consents = fn(1074).Consents;
 const size = fn(2);
@@ -49,10 +51,10 @@ export default function usePersonalizedVoiceChannelUsers(arg0) {
           if (num == null) {
             num = 0;
           }
-          value = stateFromStores.get(arg0);
+          value2 = stateFromStores.get(arg0);
           let num2;
-          if (value != null) {
-            num2 = value.vcProbability;
+          if (value2 != null) {
+            num2 = value2.vcProbability;
           }
           if (num2 == null) {
             num2 = 0;

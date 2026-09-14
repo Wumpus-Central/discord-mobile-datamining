@@ -17,9 +17,7 @@ const jsxProd = fn(21);
 const PX_16 = nativeDefault.space.PX_16;
 const createStyles = fn(4636);
 let closure_11 = createStyles.createStyles(() => {
-  let obj = { container: null };
-  obj = { marginBottom: nativeDefault.space.PX_48 };
-  obj.container = obj;
+  const obj = { container: { marginBottom: nativeDefault.space.PX_48 } };
   return obj;
 });
 const size = fn(2);
@@ -30,8 +28,7 @@ export default noop.memo(function QuestHomeBounties(shopCarouselConfig) {
   if (showOrbShopPlaceholderCarousel === undefined) {
     showOrbShopPlaceholderCarousel = false;
   }
-  let obj = first(11616);
-  const questHomeBounties = obj.useQuestHomeBounties().questHomeBounties;
+  const questHomeBounties = first(11617).useQuestHomeBounties().questHomeBounties;
   const tmp3 = closure_11();
   first = undefined;
   importDefault = undefined;
@@ -42,8 +39,8 @@ export default noop.memo(function QuestHomeBounties(shopCarouselConfig) {
   } else {
     items1 = [];
   }
-  let tmpResult = tmp(7491);
-  const tmp4 = _slicedToArray(tmpResult.useSelectedDismissibleContent(items1), 2);
+  const obj = first(11617);
+  const tmp4 = _slicedToArray(first(7491).useSelectedDismissibleContent(items1), 2);
   first = tmp4[0];
   importDefault = tmp6;
   dependencyMap = noop.useRef(false);
@@ -72,11 +69,11 @@ export default noop.memo(function QuestHomeBounties(shopCarouselConfig) {
       };
     }
   }, items3);
-  tmpResult = tmp(504);
+  const tmpResult = first(7491);
   const items4 = [BountyStore];
   ({ placement, buttonVariant, clickable } = shopCarouselConfig.shopCarouselConfig);
   let tmp10 = undefined !== clickable;
-  const stateFromStores = tmpResult.useStateFromStores(items4, () => BountyStore.areAllBountiesCompleted());
+  const stateFromStores = first(504).useStateFromStores(items4, () => BountyStore.areAllBountiesCompleted());
   if (tmp10) {
     tmp10 = clickable;
   }
@@ -85,13 +82,13 @@ export default noop.memo(function QuestHomeBounties(shopCarouselConfig) {
       let tmp11 = "none" !== placement && obtainableOrbRewards > 0;
       if (tmp11) {
         tmp11 =
-          orbShopProducts.length >= tmp(15149).MIN_PRODUCTS_FOR_ORB_SHOP_CAROUSEL || showOrbShopPlaceholderCarousel;
+          orbShopProducts.length >= tmp(15150).MIN_PRODUCTS_FOR_ORB_SHOP_CAROUSEL || showOrbShopPlaceholderCarousel;
         const tmp12 =
-          orbShopProducts.length >= tmp(15149).MIN_PRODUCTS_FOR_ORB_SHOP_CAROUSEL || showOrbShopPlaceholderCarousel;
+          orbShopProducts.length >= tmp(15150).MIN_PRODUCTS_FOR_ORB_SHOP_CAROUSEL || showOrbShopPlaceholderCarousel;
       }
       if (!tmp11) {
-        obj = { style: tmp3.container, children: null };
-        obj = {
+        const obj2 = { style: tmp3.container, children: null };
+        const obj3 = {
           bounties: questHomeBounties,
           shopCarouselButtonVariant: buttonVariant,
           footer: null,
@@ -101,22 +98,22 @@ export default noop.memo(function QuestHomeBounties(shopCarouselConfig) {
         if ("inside" === placement) {
           tmp23 = null;
         }
-        obj.footer = tmp23;
+        obj3.footer = tmp23;
         let tmp24;
         if ("replace_media" === placement) {
           tmp24 = null;
         }
-        obj.replaceHeaderMediaWith = tmp24;
-        const items5 = [closure_8(BountiesCtaHeaderDefault, obj)];
+        obj3.replaceHeaderMediaWith = tmp24;
+        const items5 = [closure_8(BountiesCtaHeaderDefault, obj3)];
         let tmp25 = null;
         if ("outside" === placement) {
           tmp25 = null;
         }
         items5[1] = tmp25;
-        obj.children = items5;
-        return closure_9(View, obj);
+        obj2.children = items5;
+        return closure_9(View, obj2);
       } else {
-        const obj1 = {
+        const obj4 = {
           embedded: "inside" === placement,
           replacesHeaderMedia: "replace_media" === placement,
           listEdgeSpacing: null,
@@ -130,16 +127,17 @@ export default noop.memo(function QuestHomeBounties(shopCarouselConfig) {
         } else {
           PX_20 = tmp15(576).space.PX_20;
         }
-        obj1.listEdgeSpacing = PX_20;
-        obj1.orbShopProducts = orbShopProducts;
-        obj1.obtainableOrbRewards = obtainableOrbRewards;
-        obj1.showOrbShopPlaceholderCarousel = showOrbShopPlaceholderCarousel;
-        obj1.clickable = tmp10;
-        closure_8(QuestHomeOrbShopCarouselDefault, obj1);
+        obj4.listEdgeSpacing = PX_20;
+        obj4.orbShopProducts = orbShopProducts;
+        obj4.obtainableOrbRewards = obtainableOrbRewards;
+        obj4.showOrbShopPlaceholderCarousel = showOrbShopPlaceholderCarousel;
+        obj4.clickable = tmp10;
+        closure_8(QuestHomeOrbShopCarouselDefault, obj4);
         tmp15 = importDefault;
       }
     }
   }
+  const tmpResult2 = first(504);
   return closure_8(View, {
     style: tmp3.container,
     children: closure_8(BountiesCtaHeaderDefault, {

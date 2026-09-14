@@ -17,10 +17,9 @@ function setLaunchPadPullTabExclusionRect(arg0) {
     tmp = value;
   }
   if (obj.isAndroid()) {
-    let tmp7Result = useWindowDimensions;
-    const diff = tmp7Result.getWindowDimensions().width - hasOwnProperty;
-    tmp7Result = useWindowDimensions;
-    const width = tmp7Result.getWindowDimensions().width;
+    const diff = useWindowDimensions.getWindowDimensions().width - hasOwnProperty;
+    const tmp7Result = useWindowDimensions;
+    const width = useWindowDimensions.getWindowDimensions().width;
     const sum = tmp + React3;
     let left;
     if (_undefined != null) {
@@ -54,6 +53,7 @@ function setLaunchPadPullTabExclusionRect(arg0) {
       const items = [_undefined];
       const result = NativeDeviceSettingsModuleDefault.setSystemGestureExclusionRects(items);
     }
+    const tmp7Result2 = useWindowDimensions;
   }
   obj = PlatformUtils;
 }

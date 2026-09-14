@@ -4,6 +4,8 @@ import ApplicationWidgetConfigActions from "../ApplicationWidgetConfigActions.ts
 import noop from "../../../../_runtime/metro/00019__.js";
 import ApplicationWidgetConfigStore from "../ApplicationWidgetConfigStore.tsx";
 
+const require = globalThis.__r;
+
 require = fn;
 const FetchState = fn(9155).FetchState;
 const size = fn(2);

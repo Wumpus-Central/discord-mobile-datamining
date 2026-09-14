@@ -26,63 +26,63 @@ function renderCard(kind, fullWidth) {
     if (!fullWidth.loading) {
       switch (kind.kind) {
         case "live-guild-stage":
-          let obj = {};
+          const obj2 = {};
           const merged = Object.assign(kind);
           const merged1 = Object.assign(fullWidth);
           return jsx(HappeningNowCardLiveStageDefault, {});
         case "guild-event":
-          obj = {};
+          const obj3 = {};
           const merged2 = Object.assign(kind);
           const merged3 = Object.assign(fullWidth);
           return jsx(HappeningNowCardEventDefault, {});
         case "active-channel":
-          const obj1 = {};
+          const obj4 = {};
           const merged4 = Object.assign(kind);
           const merged5 = Object.assign(fullWidth);
           return jsx(HappeningNowCardActiveChannelDefault, {});
         case "user":
-          const obj2 = {};
+          const obj5 = {};
           const merged6 = Object.assign(kind);
           const merged7 = Object.assign(fullWidth);
           return jsx(HappeningNowCardUserDefault, {});
         case "activity":
-          const obj3 = {};
+          const obj6 = {};
           const merged8 = Object.assign(kind);
           const merged9 = Object.assign(fullWidth);
           return jsx(HappeningNowCardActivityDefault, {});
         case "voice":
-          const obj4 = {};
+          const obj7 = {};
           const merged10 = Object.assign(kind);
           const merged11 = Object.assign(fullWidth);
           return jsx(HappeningNowCardVoiceDefault, {});
         case "invite":
-          const obj5 = {};
+          const obj8 = {};
           const merged12 = Object.assign(kind);
           const merged13 = Object.assign(fullWidth);
           return jsx(HappeningNowActions.HappeningNowCardInvite, {});
         case "customize-guild":
-          const obj6 = {};
+          const obj9 = {};
           const merged14 = Object.assign(kind);
           const merged15 = Object.assign(fullWidth);
           return jsx(HappeningNowActions.HappeningNowCardCustomizeGuild, {});
         case "create-channel":
-          const obj7 = {};
+          const obj10 = {};
           const merged16 = Object.assign(kind);
           const merged17 = Object.assign(fullWidth);
           return jsx(HappeningNowActions.HappeningNowCardCreateChannel, {});
         case "student-hub-add-channel":
-          const obj8 = {};
+          const obj11 = {};
           const merged18 = Object.assign(kind);
           const merged19 = Object.assign(fullWidth);
           return jsx(HappeningNowActions.HappeningNowStudentHubAddServer, {});
         case "embedded-activity":
-          const obj9 = {};
+          const obj12 = {};
           const merged20 = Object.assign(kind);
           const merged21 = Object.assign(fullWidth);
-          obj9.cardKey = keyExtractor(kind);
+          obj12.cardKey = keyExtractor(kind);
           return jsx(HappeningNowCardEmbeddedActivityDefault, {});
         case "unified-vc":
-          obj = {};
+          const obj = {};
           const merged22 = Object.assign(kind);
           const merged23 = Object.assign(fullWidth);
           obj.cardKey = keyExtractor(kind);
@@ -164,7 +164,7 @@ function getItemType(kind) {
 }
 get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const HappeningNowConstants = fn(15379);
+const HappeningNowConstants = fn(15380);
 ({
   HAPPENING_NOW_CARD_WIDTH_NORMAL_WITH_MARGIN: closure_7,
   HAPPENING_NOW_CARD_WIDTH_XSMALL_WITH_MARGIN: closure_8,
@@ -181,19 +181,17 @@ let obj = {
     paddingLeft: HAPPENING_NOW_PANELS_CONTAINER_PADDING,
     paddingRight: HAPPENING_NOW_PANELS_CONTAINER_PADDING,
   },
-  loading: null,
+  loading: { paddingHorizontal: nativeDefault.space.PX_8, flex: 1 },
 };
-obj = { paddingHorizontal: nativeDefault.space.PX_8, flex: 1 };
-obj.loading = obj;
 let closure_13 = createStyles.createStyles(obj);
 const Gesture = fn(6756).Gesture;
+let obj4 = { paddingHorizontal: nativeDefault.space.PX_8, flex: 1 };
 const gesture = Gesture.Native().disallowInterruption(true);
 const forwardRefResult = noop.forwardRef((arg0, ref) => {
-  let obj = { gesture, children: null };
-  obj = { ref };
+  const obj = { gesture, children: null };
   const merged = Object.assign(arg0);
   obj.children = <hasOwnProperty ref={ref} />;
-  return jsx(LegacyBaseButton.GestureDetector, { ref });
+  return jsx(LegacyBaseButton.GestureDetector, { gesture, children: null });
 });
 forwardRefResult.displayName = "HappeningNowScrollView";
 const NativeResult = Gesture.Native();
@@ -208,30 +206,31 @@ export default noop.memo((listRef) => {
   let sharedValue;
   let callback2;
   let tmp = closure_13();
-  let obj = listRef(children[14]);
-  let isFocused = obj.useIsFocused();
-  obj = {
+  const isFocused1 = listRef(children[14]).useIsFocused();
+  const obj2 = {
     withoutUserCards: "HermesInternal",
     guildId: "Array",
-    showMultipleActivitiesPerChannel: "<string:1111818241>",
-    isFocused,
+    showMultipleActivitiesPerChannel: "ball",
+    isFocused: isFocused1,
   };
-  const tmp7 = _slicedToArray(isFocused(children[15])(listRef.cards, obj), 2);
+  const tmp7 = _slicedToArray(isFocused1(children[15])(listRef.cards, obj2), 2);
   children = tmp7[0];
   _slicedToArray = tmp8;
-  let obj2 = ref;
+  let obj = listRef(children[14]);
+  const tmp5 = isFocused1;
+  const tmp6 = _slicedToArray;
   ref = ref.useRef(0);
-  obj = { data: children, isFocused, loading: tmp8 };
-  closure_129_0 = obj;
+  const obj4 = { data: children, isFocused: isFocused1, loading: tmp7[1] };
+  closure_129_0 = obj4;
   closure_129_1 = ref;
-  isFocused = obj.isFocused;
+  const isFocused = obj4.isFocused;
   closure_129_2 = isFocused;
-  closure_129_3 = ref.useRef(obj);
-  const tmp11 = isFocused(children[10])(() => {
+  closure_129_3 = ref.useRef(obj4);
+  const tmp11 = isFocused1(children[10])(() => {
     const obj = {
       context: "messages",
       num_cards: loading.current.data.length,
-      max_viewed_card_index: Math.min(isFocused.current, loading.current.data.length),
+      max_viewed_card_index: Math.min(isFocused1.current, loading.current.data.length),
       card_types: null,
     };
     const data = loading.current.data;
@@ -259,7 +258,7 @@ export default noop.memo((listRef) => {
       AnalyticsUtilsDefault.track(AnalyticEvents.ACTIVITY_CARDS_VIEWED, ref());
     }
   }, items);
-  isFocused(children[13])(() => () => {
+  isFocused1(children[13])(() => () => {
     const current = ref.current;
     loading = current.loading;
     let tmp = !loading;
@@ -267,13 +266,13 @@ export default noop.memo((listRef) => {
       tmp = current.data.length > 0;
     }
     if (tmp) {
-      isFocused(first[12]).track(constants.ACTIVITY_CARDS_VIEWED, closure_1_4());
-      const obj = isFocused(first[12]);
+      isFocused1(first[12]).track(constants.ACTIVITY_CARDS_VIEWED, closure_1_4());
+      const obj = isFocused1(first[12]);
     }
   });
-  const items1 = [isFocused, listRef];
+  const items1 = [isFocused1, listRef];
   const effect2 = ref.useEffect(() => {
-    if (!isFocused) {
+    if (!isFocused1) {
       const current = listRef.current;
       if (current != null) {
         current.scrollToOffset({ offset: 0, animated: false });
@@ -288,7 +287,7 @@ export default noop.memo((listRef) => {
     num = sharedValue * findIndexResult;
   }
   const items2 = [findIndexResult, num];
-  const callback = obj2.useCallback((arg0, arg1) => {
+  const callback = obj3.useCallback((arg0, arg1) => {
     const sum = arg1 + arg0;
     if (sum < num) {
       let sum1 = (sum / React5) | 0;
@@ -299,26 +298,26 @@ export default noop.memo((listRef) => {
       ref.current = sum1;
     }
   }, items2);
-  const tmp6Result = _slicedToArray(isFocused(children[19])(num, callback), 2);
+  const tmp6Result = tmp6(tmp5(children[19])(num, callback), 2);
   if (tmp6Result[1]) {
     const tmp20 = sharedValue;
   }
   const items3 = [children];
-  const memo = obj2.useMemo(() => {
+  const memo = obj3.useMemo(() => {
     const result = happeningNowRankingUtils.filterHappeningNowCards(first);
     return happeningNowRankingUtils.sortHappeningNowCards(result);
   }, items3);
-  let tmp2Result = tmp2(tmp3[19]);
+  const tmp9 = isFocused1(children[16]);
   const items4 = [tmp7[1]];
-  const happeningNowScrollSnapping = tmp2Result.useHappeningNowScrollSnapping(listRef);
-  const callback1 = obj2.useCallback(
+  const happeningNowScrollSnapping = listRef(children[19]).useHappeningNowScrollSnapping(listRef);
+  const callback1 = obj3.useCallback(
     (index) => renderCard(index.item, { index: index.index, loading, panelVariant: true }),
     items4,
   );
-  tmp2Result = tmp2(tmp3[20]);
-  sharedValue = tmp2Result.useSharedValue([]);
+  const tmp2Result = listRef(children[19]);
+  sharedValue = listRef(children[20]).useSharedValue([]);
   const items5 = [sharedValue];
-  callback2 = obj2.useCallback((viewableItems) => {
+  callback2 = obj3.useCallback((viewableItems) => {
     viewableItems = viewableItems.viewableItems;
     const result = updateSharedValueIfChanged.updateSharedValueArrayIfChanged(
       sharedValue,
@@ -326,16 +325,16 @@ export default noop.memo((listRef) => {
     );
   }, items5);
   const items6 = [callback2];
-  const memo1 = obj2.useMemo(() => _mod12.debounce(callback2, 130), items6);
+  const memo1 = obj3.useMemo(() => _mod12.debounce(callback2, 130), items6);
   if (0 === children.length) {
     if (!tmp8) {
       return <num />;
     }
   }
   if (!tmp7[1]) {
-    const obj1 = { value: sharedValue, children: null };
-    obj2 = { value: tmp9(isFocused(children[17]).ACTIVITIES_HAPPENING_NOW).analyticsLocations, children: null };
-    const obj3 = {
+    const obj5 = { value: sharedValue, children: null };
+    const obj6 = { value: tmp9(isFocused1(children[17]).ACTIVITIES_HAPPENING_NOW).analyticsLocations, children: null };
+    const obj7 = {
       ref: listRef,
       horizontal: true,
       renderScrollComponent,
@@ -353,14 +352,14 @@ export default noop.memo((listRef) => {
       getItemType: null,
     };
     const intl = tmp2(tmp3[24]).intl;
-    obj3.accessibilityLabel = intl.string(tmp2(tmp3[24]).t["1+boPi"]);
-    obj3.contentContainerStyle = tmp.containerInner;
-    obj3.data = memo;
-    obj3.renderItem = callback1;
-    obj3.onViewableItemsChanged = memo1;
-    obj3.keyExtractor = keyExtractor;
-    obj3.getItemType = getItemType;
-    obj2.children = jsx(tmp2(tmp3[23]).FlashList, {
+    obj7.accessibilityLabel = intl.string(tmp2(tmp3[24]).t["1+boPi"]);
+    obj7.contentContainerStyle = tmp.containerInner;
+    obj7.data = memo;
+    obj7.renderItem = callback1;
+    obj7.onViewableItemsChanged = memo1;
+    obj7.keyExtractor = keyExtractor;
+    obj7.getItemType = getItemType;
+    obj6.children = jsx(tmp2(tmp3[23]).FlashList, {
       ref: listRef,
       horizontal: true,
       renderScrollComponent,
@@ -377,21 +376,21 @@ export default noop.memo((listRef) => {
       keyExtractor: null,
       getItemType: null,
     });
-    obj1.children = jsx(tmp2(tmp3[16]).AnalyticsLocationProvider, {
-      value: tmp9(isFocused(children[17]).ACTIVITIES_HAPPENING_NOW).analyticsLocations,
+    obj5.children = jsx(tmp2(tmp3[16]).AnalyticsLocationProvider, {
+      value: tmp9(isFocused1(children[17]).ACTIVITIES_HAPPENING_NOW).analyticsLocations,
       children: null,
     });
     <context.Provider value={sharedValue}>{null}</context.Provider>;
   }
-  const obj4 = { style: tmp.loading, children: null };
+  const obj8 = { style: tmp.loading, children: null };
   children = renderCard(children.length > 0 ? children[0] : { kind: "placeholder", index: 0 }, {
     index: 0,
     loading: tmp8,
     fullwidth: true,
     panelVariant: true,
   });
-  obj4.children = children;
+  obj8.children = children;
   <num style={tmp.loading}>{null}</num>;
-  tmp9 = isFocused(children[16]);
+  const tmp2Result2 = listRef(children[20]);
 });
 export const ViewableHappeningNowCardKeysContext = context;

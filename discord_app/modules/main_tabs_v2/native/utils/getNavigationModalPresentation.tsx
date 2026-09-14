@@ -2,9 +2,10 @@
 import DeviceUtils from "../../../../utils/native/DeviceUtils.tsx";
 import useIsWindowLarge from "../../../screen/native/useIsWindowLarge.tsx";
 import DeviceOrientation from "../../../device/native/DeviceOrientation.tsx";
-import PlatformUtils from "../../../../utils/PlatformUtils.tsx";
+import PlatformUtils_mod from "../../../../utils/PlatformUtils.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
 
+let PlatformUtils = PlatformUtils_mod;
 if (PlatformUtils.isAndroid()) {
   const _module1 = useIsWindowLarge;
   let str2 = "modal";
@@ -20,6 +21,7 @@ if (PlatformUtils.isAndroid()) {
   }
 }
 let obj = { presentation: str, lockOrientation: null };
+let PlatformUtils = PlatformUtils_mod;
 obj.lockOrientation = !PlatformUtils.isAndroid();
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/utils/getNavigationModalPresentation.tsx");
 

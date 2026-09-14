@@ -3,18 +3,21 @@ import _slicedToArray from "../../../_runtime/metro/00032__.js";
 import EmbeddedActivitiesStore from "../activities/EmbeddedActivitiesStore.tsx";
 import ContentInventoryActivityStore from "ContentInventoryActivityStore.tsx";
 
+const require = globalThis.__r;
+
 const require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/content_inventory/useEntryActivityAndApplication.tsx");
 
 export default function useEntryActivityAndApplication(extra) {
   _require = extra;
-  let obj = require("initialize");
   const items = [ContentInventoryActivityStore];
-  const stateFromStores = obj.useStateFromStores(items, () =>
+  const stateFromStores = require("initialize").useStateFromStores(items, () =>
     ContentInventoryActivityStore.getMatchingActivity(closure_0),
   );
   let application_id;
+  const obj = require("initialize");
+  const tmp = _require;
   if (stateFromStores != null) {
     application_id = stateFromStores.application_id;
   }
@@ -24,9 +27,8 @@ export default function useEntryActivityAndApplication(extra) {
     application_id1 = extra.extra.application_id;
   }
   items1[1] = application_id1;
-  const tmp7 = _slicedToArray(activityApplication(7271)(items1), 2);
-  activityApplication = tmp7[0];
-  obj = {
+  [activityApplication, obj2.fallbackApplication] = activityApplication(7271)(items1);
+  const obj2 = {
     activity: stateFromStores,
     embeddedActivity: null,
     anyMatchingApplication: null,
@@ -35,7 +37,7 @@ export default function useEntryActivityAndApplication(extra) {
   };
   const tmp4 = activityApplication(7271);
   const items2 = [EmbeddedActivitiesStore];
-  obj.embeddedActivity = require("initialize").useStateFromStores(items2, () => {
+  obj2.embeddedActivity = tmp(504).useStateFromStores(items2, () => {
     let id;
     if (first != null) {
       id = first.id;
@@ -46,8 +48,7 @@ export default function useEntryActivityAndApplication(extra) {
   if (activityApplication == null) {
     tmp10 = tmp9;
   }
-  obj.anyMatchingApplication = tmp10;
-  obj.activityApplication = activityApplication;
-  obj.fallbackApplication = tmp7[1];
-  return obj;
+  obj2.anyMatchingApplication = tmp10;
+  obj2.activityApplication = activityApplication;
+  return obj2;
 }

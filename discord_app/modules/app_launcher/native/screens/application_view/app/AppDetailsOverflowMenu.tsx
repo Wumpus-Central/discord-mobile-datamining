@@ -14,39 +14,38 @@ export default function AppDetailsOverflowMenu(application) {
   application = application.application;
   const onAddAppMenuClick = application.onAddAppMenuClick;
   let installAppProps;
+  installAppProps = application(installAppProps[2]).getInstallAppProps(application);
   let obj = application(installAppProps[2]);
-  installAppProps = obj.getInstallAppProps(application);
-  let obj1 = application(installAppProps[3]);
-  let result = obj1.canInstallApplication(installAppProps);
+  let result = application(installAppProps[3]).canInstallApplication(installAppProps);
   if (result) {
     result = null != onAddAppMenuClick;
   }
   const items = [];
   if (result) {
-    obj = { label: null, action: null, IconComponent: null };
+    const obj3 = { label: null, action: null, IconComponent: null };
     let intl = tmp(tmp2[4]).intl;
-    obj.label = intl.string(tmp(tmp2[4]).t.NgXl3C);
-    obj.action = function action() {
+    obj3.label = intl.string(tmp(tmp2[4]).t.NgXl3C);
+    obj3.action = function action() {
       return onAddAppMenuClick({ installAppProps });
     };
-    obj.IconComponent = tmp(tmp2[5]).CirclePlusIcon;
-    items.push(obj);
+    obj3.IconComponent = tmp(tmp2[5]).CirclePlusIcon;
+    items.push(obj3);
   }
   const DeveloperMode = tmp(tmp2[6]).DeveloperMode;
   if (DeveloperMode.getSetting()) {
-    obj = { label: null, action: null, IconComponent: null };
+    const obj4 = { label: null, action: null, IconComponent: null };
     const intl2 = tmp(tmp2[4]).intl;
-    obj.label = intl2.string(tmp(tmp2[4]).t["+NP/b2"]);
-    obj.action = function action() {
+    obj4.label = intl2.string(tmp(tmp2[4]).t["+NP/b2"]);
+    obj4.action = function action() {
       ClipboardUtils.copy(application.id);
       ToastUtils.presentIdCopied();
     };
-    obj.IconComponent = tmp(tmp2[9]).IdIcon;
-    items.push(obj);
+    obj4.IconComponent = tmp(tmp2[9]).IdIcon;
+    items.push(obj4);
   }
   let tmp8 = null;
   if (0 !== items.length) {
-    obj1 = {
+    const obj5 = {
       items,
       children(ref) {
         const merged = Object.assign(ref, Object.assign({ ref: 0 }));

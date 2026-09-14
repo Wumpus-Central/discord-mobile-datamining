@@ -11,86 +11,88 @@ function SyncedLoadingAlertModal(onConfirm) {
   onConfirm = onConfirm.onConfirm;
   c1 = undefined;
   ({ title, content, confirmText, onCancel } = onConfirm);
-  [tmp2, c1] = _slicedToArray(noop.useState(false), 2);
+  [tmp2, c1] = noop.useState(false);
   let obj = { title, content, actions: null };
-  obj = { children: null };
-  obj = {
-    variant: "primary",
-    text: confirmText,
-    onPress: asyncGeneratorStep(async () => {
-      if (c4 === 2) {
-        c4 = 3;
-        throw new TypeError("Generator functions may not be called on executing generators");
-      } else if (tmp6 === 3) {
-        if (arg0 === 1) {
-          throw value;
-        } else if (arg0 === 2) {
-          let obj = { value, done: true };
-          return obj;
+  let obj2 = { children: null };
+  const tmp = _slicedToArray(noop.useState(false), 2);
+  const items = [
+    hasOwnProperty(AlertModal.AlertActionButton, {
+      variant: "primary",
+      text: confirmText,
+      onPress: asyncGeneratorStep(async () => {
+        if (c4 === 2) {
+          c4 = 3;
+          throw new TypeError("Generator functions may not be called on executing generators");
+        } else if (tmp6 === 3) {
+          if (arg0 === 1) {
+            throw value;
+          } else if (arg0 === 2) {
+            const obj2 = { value, done: true };
+            return obj2;
+          } else {
+            return { value: "HermesInternal", done: null };
+          }
         } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c4 = 2;
-          if (0 === v2) {
-            if (arg0 === 1) {
+          try {
+            c4 = 2;
+            if (0 === v2) {
+              if (arg0 === 1) {
+                c4 = 3;
+                throw value;
+              } else if (arg0 === 2) {
+                c4 = 3;
+                const obj3 = { value, done: true };
+                return obj3;
+              } else {
+                closure_0 = tmp3;
+                v2(true);
+                c3 = 1;
+                v2 = 2;
+                c4 = 1;
+                const obj4 = { value: onConfirm(), done: false };
+                return obj4;
+              }
+            } else if (1 === tmp7) {
+              c3 = 0;
+              closure_128_1(false);
+              throw closure_2;
+            } else if (arg0 === 1) {
               c4 = 3;
               throw value;
             } else if (arg0 === 2) {
+              c3 = 0;
+              closure_128_1(false);
               c4 = 3;
-              obj = { value, done: true };
+              const obj = { value, done: true };
               return obj;
             } else {
-              closure_0 = tmp3;
-              v2(true);
-              c3 = 1;
-              v2 = 2;
-              c4 = 1;
-              const obj1 = { value: onConfirm(), done: false };
-              return obj1;
+              c3 = 0;
+              closure_128_1(false);
+              c4 = 3;
+              return { value: "HermesInternal", done: null };
             }
-          } else if (1 === tmp7) {
-            c3 = 0;
-            closure_128_1(false);
-            throw closure_2;
-          } else if (arg0 === 1) {
-            c4 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c3 = 0;
-            closure_128_1(false);
-            c4 = 3;
-            obj = { value, done: true };
-            return obj;
-          } else {
-            c3 = 0;
-            closure_128_1(false);
-            c4 = 3;
-            return { value: "HermesInternal", done: null };
-          }
-        } catch (tmp22) {
-          closure_2 = tmp22;
-          if (tmp4 === c3) {
-            c4 = tmp2;
-            throw tmp22;
-          } else {
-            v2 = tmp;
+          } catch (tmp22) {
+            closure_2 = tmp22;
+            if (tmp4 === c3) {
+              c4 = tmp2;
+              throw tmp22;
+            } else {
+              v2 = tmp;
+            }
           }
         }
-      }
+      }),
+      loading: tmp2,
     }),
-    loading: tmp2,
-  };
-  const items = [hasOwnProperty(AlertModal.AlertActionButton, obj)];
-  let obj1 = { variant: "secondary", text: null, onPress: null, loading: null };
+  ];
+  let obj4 = { variant: "secondary", text: null, onPress: null, loading: null };
   const intl = util.intl;
-  obj1.text = intl.string(util.t["ETE/oC"]);
-  obj1.onPress = onCancel;
-  obj1.loading = tmp2;
-  items[1] = hasOwnProperty(AlertModal.AlertActionButton, obj1);
-  obj.children = items;
-  obj.actions = React5(timestampProducer, obj);
+  obj4.text = intl.string(util.t["ETE/oC"]);
+  obj4.onPress = onCancel;
+  obj4.loading = tmp2;
+  items[1] = hasOwnProperty(AlertModal.AlertActionButton, obj4);
+  obj2.children = items;
+  obj.actions = React5(timestampProducer, obj2);
   return hasOwnProperty(AlertModal.AlertModal, obj);
 }
 const jsxProd = fn(21);
@@ -101,10 +103,10 @@ const result = size.fileFinishedImporting("modules/checkout/native/showCheckoutO
 export const showRetryConfirmModal = function showRetryConfirmModal(dismissable) {
   ({ key, onCloseCallback } = dismissable);
   const merged = Object.assign(dismissable, Object.assign({ key: 0, onCloseCallback: 0, dismissable: 0 }));
-  let obj = {};
   const merged1 = Object.assign(merged);
-  obj = { dismissable: dismissable.dismissable };
-  obj.openAlert(key, hasOwnProperty(SyncedLoadingAlertModal, obj), onCloseCallback, obj);
+  useAlertStore.openAlert(key, hasOwnProperty(SyncedLoadingAlertModal, {}), onCloseCallback, {
+    dismissable: dismissable.dismissable,
+  });
 };
 export const showCheckoutOrderErrorModal = function showCheckoutOrderErrorModal(arg0, c6) {
   closure_0 = arg0;
@@ -134,8 +136,8 @@ export const showCheckoutOrderErrorModal = function showCheckoutOrderErrorModal(
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
-          let obj = { value, done: true };
-          return obj;
+          const obj2 = { value, done: true };
+          return obj2;
         } else {
           return { value: "HermesInternal", done: null };
         }
@@ -148,22 +150,22 @@ export const showCheckoutOrderErrorModal = function showCheckoutOrderErrorModal(
               throw value;
             } else if (arg0 === 2) {
               c3 = 3;
-              obj = { value, done: true };
-              return obj;
+              const obj3 = { value, done: true };
+              return obj3;
             } else {
               closure_1 = tmp5;
               closure_128_0 = undefined;
               c2 = 1;
               c3 = 1;
-              const obj1 = { value: tmp2(), done: false };
-              return obj1;
+              const obj4 = { value: tmp2(), done: false };
+              return obj4;
             }
           } else if (arg0 === 1) {
             c3 = 3;
             throw value;
           } else if (arg0 === 2) {
             c3 = 3;
-            obj = { value, done: true };
+            const obj = { value, done: true };
             return obj;
           } else {
             closure_128_0 = value;
@@ -195,9 +197,9 @@ export const showCheckoutOrderErrorModal = function showCheckoutOrderErrorModal(
     };
     ({ key, onCloseCallback } = obj);
     const merged = Object.assign(obj, Object.assign({ key: 0, onCloseCallback: 0, dismissable: 0 }));
-    obj = {};
     const merged1 = Object.assign(merged);
-    obj = { dismissable: obj.dismissable };
-    closure_0(4982).openAlert(key, closure_1_5(SyncedLoadingAlertModal, obj), onCloseCallback, obj);
+    closure_0(4982).openAlert(key, closure_1_5(SyncedLoadingAlertModal, {}), onCloseCallback, {
+      dismissable: obj.dismissable,
+    });
   });
 };

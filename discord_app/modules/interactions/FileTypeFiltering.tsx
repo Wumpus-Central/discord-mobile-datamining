@@ -5,6 +5,8 @@ import _slicedToArray from "../../../_runtime/metro/00032__.js";
 import noop from "../../../_runtime/metro/00019__.js";
 import LocaleStore from "../user_settings/LocaleStore.tsx";
 
+const require = globalThis.__r;
+
 require = fn;
 function fileTypesFormattedStringHelper(arr, locale) {
   if (null != arr) {
@@ -18,7 +20,7 @@ function fileTypesFormattedStringHelper(arr, locale) {
       }
       if (arr.includes("video")) {
         const intl2 = util.intl;
-        arr = items.push(intl2.string(util.t["al+5qH"]));
+        items.push(intl2.string(util.t["al+5qH"]));
       }
       if (arr.includes("audio")) {
         const intl3 = util.intl;
@@ -85,7 +87,7 @@ export const getFileTypeFiltering = function getFileTypeFiltering(fileTypes) {
     }
     const tmp24 = fileTypesFormattedStringHelper(fileTypes, LocaleStore.locale);
     const types = tmp24;
-    let obj = {
+    const obj = {
       allowedExtensions: items3,
       typesFormattedString: tmp24,
       validateFilenames(arr) {
@@ -102,13 +104,12 @@ export const getFileTypeFiltering = function getFileTypeFiltering(fileTypes) {
         return everyResult;
       },
       showInvalidFileTypeAlert() {
-        let obj = { title: null, body: null };
+        const obj2 = { title: null, body: null };
         const intl = util.intl;
-        obj.title = intl.string(util.t.azO1Pe);
+        obj2.title = intl.string(util.t.azO1Pe);
         const intl2 = util.intl;
-        obj = { types };
-        obj.body = intl2.formatToPlainString(util.t["5U9LSo"], obj);
-        obj.show(obj);
+        obj2.body = intl2.formatToPlainString(util.t["5U9LSo"], { types });
+        AlertActionCreatorsDefault.show(obj2);
       },
       mediaFilesAllowed:
         0 === items3.length ||
@@ -161,9 +162,8 @@ export const useFileTypeFiltering = function useFileTypeFiltering(fileTypes) {
     }
   }, items);
   closure_129_0 = fileTypes;
-  let obj = require("initialize");
   let items1 = [LocaleStore];
-  const stateFromStores = obj.useStateFromStores(items1, () => locale.locale);
+  const stateFromStores = require("initialize").useStateFromStores(items1, () => locale.locale);
   closure_129_1 = stateFromStores;
   let items2 = [fileTypes, stateFromStores];
   memo1 = noop.useMemo(() => fileTypesFormattedStringHelper(closure_0, memo), items2);
@@ -184,15 +184,15 @@ export const useFileTypeFiltering = function useFileTypeFiltering(fileTypes) {
   }, items3);
   const items5 = [memo];
   const callback1 = noop.useCallback(() => {
-    let obj = { title: null, body: null };
+    const obj2 = { title: null, body: null };
     const intl = util.intl;
-    obj.title = intl.string(util.t.azO1Pe);
+    obj2.title = intl.string(util.t.azO1Pe);
     const intl2 = util.intl;
-    obj = { types: memo1 };
-    obj.body = intl2.formatToPlainString(util.t["5U9LSo"], obj);
-    obj.show(obj);
+    obj2.body = intl2.formatToPlainString(util.t["5U9LSo"], { types: memo1 });
+    AlertActionCreatorsDefault.show(obj2);
   }, items4);
-  obj = {
+  let obj = require("initialize");
+  return {
     allowedExtensions: memo,
     typesFormattedString: memo1,
     validateFilenames: callback,
@@ -210,5 +210,4 @@ export const useFileTypeFiltering = function useFileTypeFiltering(fileTypes) {
       items5,
     ),
   };
-  return obj;
 };

@@ -53,14 +53,18 @@ export default function PresenceActivityStatus(hideText) {
     tmp12 = null != AppsIcon;
   }
   if (tmp12) {
-    let obj = { icon: AppsIcon, style: iconStyle };
+    const obj = { icon: AppsIcon, style: iconStyle };
     tmp12 = React4(ActivityStatusIconDefault, obj);
   }
   const children = [tmp12];
   let tmp15 = !flag;
   if (!flag) {
-    obj = { style: textStyle, maxFontSizeMultiplier, children: getActivityStatusTextDefault(activity, true).text };
-    tmp15 = React4(ActivityStatusTextDefault, obj);
+    const obj2 = {
+      style: textStyle,
+      maxFontSizeMultiplier,
+      children: getActivityStatusTextDefault(activity, true).text,
+    };
+    tmp15 = React4(ActivityStatusTextDefault, obj2);
   }
   children[1] = tmp15;
   return timestampProducer(hasOwnProperty, { children });

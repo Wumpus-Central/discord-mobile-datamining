@@ -2,6 +2,8 @@
 import 00560__ from "../../../../../_runtime/metro/00560__.js";
 import size from "../../../../../_runtime/metro/00002__.js";
 
+const require = globalThis.__r;
+
 const useGuildSettingsRolesManagerState = module_560.create(() => ({ roleJustCreated: false }));
 const result = size.fileFinishedImporting("modules/guild_settings/roles/native/GuildSettingsRolesManager.tsx");
 

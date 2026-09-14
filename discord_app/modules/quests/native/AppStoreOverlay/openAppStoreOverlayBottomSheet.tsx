@@ -5,14 +5,15 @@ import AppStoreOverlayTelemetryManager from "../AppStoreOverlayTelemetryManager.
 import Constants from "../../../../Constants.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
 
+const require = globalThis.__r;
+
 ({ AnalyticEvents: c3, ComponentActions: closure_4 } = Constants);
 let result = size.fileFinishedImporting("modules/quests/native/AppStoreOverlay/openAppStoreOverlayBottomSheet.tsx");
 
 export const openAppStoreOverlayBottomSheet = function openAppStoreOverlayBottomSheet(appId, arg1) {
   _require = arg1;
   appId = appId.appId;
-  appId(4603);
-  const obj = {
+  appId(4603).openLazy(require("asyncRequireImpl")(11635, dependencyMap.paths), "QuestAppStoreOverlayBottomSheet", {
     metadata: appId,
     onOpen() {
       closure_0(
@@ -36,6 +37,5 @@ export const openAppStoreOverlayBottomSheet = function openAppStoreOverlayBottom
         },
       });
     },
-  };
-  obj.openLazy(require("asyncRequireImpl")(11634, dependencyMap.paths), "QuestAppStoreOverlayBottomSheet", obj);
+  });
 };

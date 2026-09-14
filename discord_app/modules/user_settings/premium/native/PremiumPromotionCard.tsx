@@ -16,21 +16,24 @@ const Constants = fn(1074);
 const PremiumTypes = fn(1373).PremiumTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-fn(4636);
-let createStyles = { container: { width: "100%" }, card: null, image: null, nitroWheelIcon: null };
-createStyles = {
-  display: "flex",
-  width: "100%",
-  flexDirection: "column",
-  justifyContent: "flex-start",
-  paddingBottom: nativeDefault.space.PX_16,
-  paddingHorizontal: nativeDefault.space.PX_16,
-  borderRadius: nativeDefault.radii.lg,
-  backgroundColor: nativeDefault.colors.BACKGROUND_SECONDARY_ALT,
-  marginBottom: nativeDefault.space.PX_24,
-  overflow: "hidden",
+const createStyles = fn(4636);
+let obj2 = {
+  container: { width: "100%" },
+  card: {
+    display: "flex",
+    width: "100%",
+    flexDirection: "column",
+    justifyContent: "flex-start",
+    paddingBottom: nativeDefault.space.PX_16,
+    paddingHorizontal: nativeDefault.space.PX_16,
+    borderRadius: nativeDefault.radii.lg,
+    backgroundColor: nativeDefault.colors.BACKGROUND_SECONDARY_ALT,
+    marginBottom: nativeDefault.space.PX_24,
+    overflow: "hidden",
+  },
+  image: null,
+  nitroWheelIcon: null,
 };
-createStyles.card = createStyles;
 let size = {
   alignSelf: "center",
   marginBottom: nativeDefault.space.PX_24,
@@ -41,9 +44,9 @@ let size = {
   width: "110%",
   height: 95,
 };
-createStyles.image = size;
-createStyles.nitroWheelIcon = { bottom: -1, width: 22, height: 16 };
-let closure_13 = createStyles.createStyles(createStyles);
+obj2.image = size;
+obj2.nitroWheelIcon = { bottom: -1, width: 22, height: 16 };
+let closure_13 = createStyles.createStyles(obj2);
 size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/premium/native/PremiumPromotionCard.tsx");
 
@@ -52,32 +55,32 @@ export default function PremiumPromotionCard(applicationId) {
   const onPaymentSuccess = applicationId.onPaymentSuccess;
   const onPaymentDismiss = applicationId.onPaymentDismiss;
   const tmp = closure_13();
-  let obj = applicationId(onPaymentDismiss[8]);
   const items = [AccessibilityStore];
-  const stateFromStores = obj.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
+  const stateFromStores = applicationId(onPaymentDismiss[8]).useStateFromStores(
+    items,
+    () => useReducedMotion.useReducedMotion,
+  );
   const analyticsLocations = onPaymentSuccess(onPaymentDismiss[9])().analyticsLocations;
   const items1 = [analyticsLocations, applicationId, onPaymentSuccess, onPaymentDismiss];
-  obj = { style: null, children: null };
+  const obj2 = { style: null, children: null };
   const items2 = [tmp.container, applicationId.style];
-  obj.style = items2;
-  obj = { style: null, children: null };
+  obj2.style = items2;
+  const obj3 = { style: null, children: null };
   const items3 = [tmp.card];
-  obj.style = items3;
+  obj3.style = items3;
   const callback = analyticsLocations.useCallback(() => {
-    let obj = {
-      analyticsLocation: null,
+    const obj = {
+      analyticsLocation: {
+        page: constants2.BOGO_PROMOTION_MARKETING_PAGE_BANNER,
+        section: constants3.SETTINGS_PREMIUM,
+        objectType: constants.BUY,
+      },
       analyticsLocations,
       premiumType: PremiumTypes.TIER_2,
       applicationId,
       onPaymentSuccess,
       onPaymentDismiss,
     };
-    obj = {
-      page: constants2.BOGO_PROMOTION_MARKETING_PAGE_BANNER,
-      section: constants3.SETTINGS_PREMIUM,
-      objectType: constants.BUY,
-    };
-    obj.analyticsLocation = obj;
     openPremiumPlanSelectionActionSheetDefault(obj);
   }, items1);
   const items4 = [
@@ -90,19 +93,27 @@ export default function PremiumPromotionCard(applicationId) {
     ,
     ,
   ];
-  const obj2 = { color: "mobile-text-heading-primary", variant: "heading-md/extrabold", children: null };
+  const obj5 = { color: "mobile-text-heading-primary", variant: "heading-md/extrabold", children: null };
   const intl = applicationId(onPaymentDismiss[13]).intl;
-  obj2.children = intl.string(applicationId(onPaymentDismiss[13]).t["6Jjfk8"]);
-  items4[1] = closure_11(applicationId(onPaymentDismiss[12]).Text, obj2);
-  const obj3 = { color: "mobile-text-heading-primary", variant: "text-sm/normal", children: null };
+  obj5.children = intl.string(applicationId(onPaymentDismiss[13]).t["6Jjfk8"]);
+  items4[1] = closure_11(applicationId(onPaymentDismiss[12]).Text, obj5);
+  const obj6 = { color: "mobile-text-heading-primary", variant: "text-sm/normal", children: null };
   const intl2 = applicationId(onPaymentDismiss[13]).intl;
-  const obj4 = { helpCenterLink: null };
-  let obj7 = onPaymentSuccess(onPaymentDismiss[14]);
-  obj4.helpCenterLink = obj7.getArticleURL(SUMMER_BOGO_2025.SUMMER_BOGO_2025);
-  obj3.children = intl2.format(applicationId(onPaymentDismiss[13]).t["dE3+TP"], obj4);
-  items4[2] = closure_11(applicationId(onPaymentDismiss[12]).Text, obj3);
-  const obj5 = { style: { marginTop: onPaymentSuccess(onPaymentDismiss[7]).space.PX_24 }, children: null };
-  obj7 = {
+  const obj7 = { helpCenterLink: null };
+  let obj = applicationId(onPaymentDismiss[8]);
+  const obj4 = {
+    source: {
+      uri: "https://cdn.discordapp.com/assets/content/da4c50f6fba3cf58b484571ef1a57c355fbd31636683792858fa41d1ab027520.png",
+    },
+    style: tmp.image,
+  };
+  obj7.helpCenterLink = onPaymentSuccess(onPaymentDismiss[14]).getArticleURL(SUMMER_BOGO_2025.SUMMER_BOGO_2025);
+  obj6.children = intl2.format(applicationId(onPaymentDismiss[13]).t["dE3+TP"], obj7);
+  items4[2] = closure_11(applicationId(onPaymentDismiss[12]).Text, obj6);
+  const obj9 = { style: null, children: null };
+  const obj8 = onPaymentSuccess(onPaymentDismiss[14]);
+  obj9.style = { marginTop: onPaymentSuccess(onPaymentDismiss[7]).space.PX_24 };
+  const obj11 = {
     text: null,
     size: "lg",
     onPress: null,
@@ -112,16 +123,16 @@ export default function PremiumPromotionCard(applicationId) {
     shiny: null,
   };
   const intl3 = applicationId(onPaymentDismiss[13]).intl;
-  obj7.text = intl3.string(applicationId(onPaymentDismiss[13]).t.J61px0);
-  obj7.onPress = callback;
-  const obj8 = { style: null, color: onPaymentSuccess(onPaymentDismiss[7]).colors.BACKGROUND_BRAND, size: "custom" };
+  obj11.text = intl3.string(applicationId(onPaymentDismiss[13]).t.J61px0);
+  obj11.onPress = callback;
+  const obj12 = { style: null, color: onPaymentSuccess(onPaymentDismiss[7]).colors.BACKGROUND_BRAND, size: "custom" };
   const items5 = [tmp.nitroWheelIcon];
-  obj8.style = items5;
-  obj7.icon = closure_11(applicationId(onPaymentDismiss[16]).NitroWheelIcon, obj8);
-  obj7.shiny = !stateFromStores;
-  obj5.children = closure_11(applicationId(onPaymentDismiss[15]).Button, obj7);
-  items4[3] = closure_11(View, obj5);
-  obj.children = items4;
-  obj.children = closure_12(View, obj);
-  return closure_11(View, obj);
+  obj12.style = items5;
+  obj11.icon = closure_11(applicationId(onPaymentDismiss[16]).NitroWheelIcon, obj12);
+  obj11.shiny = !stateFromStores;
+  obj9.children = closure_11(applicationId(onPaymentDismiss[15]).Button, obj11);
+  items4[3] = closure_11(View, obj9);
+  obj3.children = items4;
+  obj2.children = closure_12(View, obj3);
+  return closure_11(View, obj2);
 }

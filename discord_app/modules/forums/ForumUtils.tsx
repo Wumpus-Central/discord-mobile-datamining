@@ -29,14 +29,14 @@ export const getForumPostReadStates = function getForumPostReadStates(isArchived
   if (!isArchivedThreadResult) {
     isNewForumThreadResult = obj.isNewForumThread(isArchivedThread.id, isArchivedThread.parent_id, guild);
   }
-  obj = { isNew: isNewForumThreadResult, hasUnreads: null };
+  const obj2 = { isNew: isNewForumThreadResult, hasUnreads: null };
   const isArchivedThreadResult1 = isArchivedThread.isArchivedThread();
   let isForumPostUnreadResult = !isArchivedThreadResult1;
   if (!isArchivedThreadResult1) {
     isForumPostUnreadResult = obj.isForumPostUnread(isArchivedThread.id);
   }
-  obj.hasUnreads = isForumPostUnreadResult;
-  return obj;
+  obj2.hasUnreads = isForumPostUnreadResult;
+  return obj2;
 };
 export const getForumPostReadStatesById = function getForumPostReadStatesById(item) {
   let tmp = arg1;
@@ -59,14 +59,14 @@ export const getForumPostReadStatesById = function getForumPostReadStatesById(it
       if (!isArchivedThreadResult) {
         isNewForumThreadResult = obj4.isNewForumThread(channel.id, channel.parent_id, guild);
       }
-      obj = { isNew: isNewForumThreadResult, hasUnreads: null };
+      const obj3 = { isNew: isNewForumThreadResult, hasUnreads: null };
       const isArchivedThreadResult1 = channel.isArchivedThread();
       let isForumPostUnreadResult = !isArchivedThreadResult1;
       if (!isArchivedThreadResult1) {
         isForumPostUnreadResult = obj4.isForumPostUnread(channel.id);
       }
-      obj.hasUnreads = isForumPostUnreadResult;
-      tmp11 = obj;
+      obj3.hasUnreads = isForumPostUnreadResult;
+      tmp11 = obj3;
     }
     return tmp11;
   }

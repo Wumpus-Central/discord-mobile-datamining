@@ -16,8 +16,8 @@ export default function restartVibegrationsAppFrames(applicationId) {
       let obj = FramesNativeManagerDefault;
       let leaveFrameResult = obj.leaveFrame(item10003.id);
       let obj2 = FramesActionCreatorsDefault;
-      obj = { applicationId: arg0, surface: item10003.surface };
-      let launchFrameResult = obj2.launchFrame(obj);
+      let obj3 = { applicationId: arg0, surface: item10003.surface };
+      let launchFrameResult = obj2.launchFrame(obj3);
       let catchPromise = launchFrameResult.catch(() => {});
       continue;
     }

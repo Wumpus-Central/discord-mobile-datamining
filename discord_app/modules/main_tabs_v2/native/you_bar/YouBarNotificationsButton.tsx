@@ -8,9 +8,11 @@ import SavedMessagesTypes from "../../../saved_messages/SavedMessagesTypes.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import SavedMessagesStore from "../../../saved_messages/SavedMessagesStore.tsx";
 
+const require = globalThis.__r;
+
 require = fn;
 const View = fn(17).View;
-const YouBarConstants = fn(15178);
+const YouBarConstants = fn(15179);
 ({
   YOU_BAR_SPRING_CONFIG: metroRequire,
   YOU_BAR_BUTTON_HIT_SLOP: closure_7,
@@ -22,14 +24,13 @@ const createStyles = fn(4636);
 let obj = {
   icon: { width: YOU_BAR_BUTTON_ICON_SIZE, height: YOU_BAR_BUTTON_ICON_SIZE },
   iconContainer: { display: "flex", flexDirection: "row", alignItems: "center" },
-  overdueReminderDot: null,
+  overdueReminderDot: { backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_NOTIFICATION },
 };
-obj = { backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_NOTIFICATION };
-obj.overdueReminderDot = obj;
 let closure_10 = createStyles.createStyles(obj);
 const __initData = {
   code: "function YouBarNotificationsButtonTsx1(){const{withSpring,badgeCount,YOU_BAR_SPRING_CONFIG,tokens}=this.__closure;return{transform:[{scaleX:withSpring(badgeCount>0?1:0,YOU_BAR_SPRING_CONFIG)}],marginLeft:withSpring(badgeCount>0?tokens.space.PX_4:0,YOU_BAR_SPRING_CONFIG),opacity:withSpring(badgeCount>0?1:0,YOU_BAR_SPRING_CONFIG)};}",
 };
+let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_NOTIFICATION };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/main_tabs_v2/native/you_bar/YouBarNotificationsButton.tsx");
 
@@ -40,51 +41,55 @@ export default noop.memo(function YouBarNotificationsButton(hasNameplate) {
   const tmp = closure_10();
   value = isForLaterExperimentOn(onLongPress[7])().value;
   _require = value;
-  require("ReanimatedRexport");
   const fn = function l() {
-    let obj = spring;
     let num = 0;
     if (c0 > 0) {
       num = 1;
     }
-    obj = { transform: null, marginLeft: null, opacity: null };
-    obj = { scaleX: obj.withSpring(num, YOU_BAR_SPRING_CONFIG) };
-    const items = [obj];
-    obj.transform = items;
-    let tmpResult = spring;
+    const obj2 = { transform: null, marginLeft: null, opacity: null };
+    const items = [{ scaleX: spring.withSpring(num, YOU_BAR_SPRING_CONFIG) }];
+    obj2.transform = items;
+    const obj3 = { scaleX: spring.withSpring(num, YOU_BAR_SPRING_CONFIG) };
     let num2 = 0;
     if (c0 > 0) {
       num2 = nativeDefault.space.PX_4;
     }
-    obj.marginLeft = tmpResult.withSpring(num2, YOU_BAR_SPRING_CONFIG);
-    tmpResult = spring;
+    obj2.marginLeft = spring.withSpring(num2, YOU_BAR_SPRING_CONFIG);
+    const tmpResult = spring;
     let num3 = 0;
     if (c0 > 0) {
       num3 = 1;
     }
-    obj.opacity = tmpResult.withSpring(num3, YOU_BAR_SPRING_CONFIG);
-    return obj;
+    obj2.opacity = spring.withSpring(num3, YOU_BAR_SPRING_CONFIG);
+    return obj2;
   };
-  let obj = {
+  let obj = require("ReanimatedRexport");
+  const tmp2 = isForLaterExperimentOn;
+  fn.__closure = {
     withSpring: require("spring").withSpring,
     badgeCount: value,
     YOU_BAR_SPRING_CONFIG,
     tokens: isForLaterExperimentOn(onLongPress[6]),
   };
-  fn.__closure = obj;
   fn.__workletHash = 11181198364048;
   fn.__initData = __initData;
   const animatedStyle = obj.useAnimatedStyle(fn);
-  let obj2 = require("ForLaterExperiment");
-  isForLaterExperimentOn = obj2.useIsForLaterExperimentOn("YouBar");
+  let obj2 = {
+    withSpring: require("spring").withSpring,
+    badgeCount: value,
+    YOU_BAR_SPRING_CONFIG,
+    tokens: isForLaterExperimentOn(onLongPress[6]),
+  };
+  isForLaterExperimentOn = require("ForLaterExperiment").useIsForLaterExperimentOn("YouBar");
   let obj3 = require("ForLaterExperiment");
-  let hasForLaterAccess = obj3.useHasForLaterAccess("YouBar");
+  let hasForLaterAccess = require("ForLaterExperiment").useHasForLaterAccess("YouBar");
   if (isForLaterExperimentOn) {
     if (!hasForLaterAccess) {
       hasForLaterAccess = SavedMessagesStore.getSavedMessageCount() > 0;
     }
     isForLaterExperimentOn = hasForLaterAccess;
   }
+  const obj4 = require("ForLaterExperiment");
   let items = [SavedMessagesStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () =>
     overdueMessageReminderCount.getOverdueMessageReminderCount(),
@@ -120,24 +125,23 @@ export default noop.memo(function YouBarNotificationsButton(hasNameplate) {
       callback();
     }
   }, items3);
-  obj = { size: "custom", style: tmp.icon, color: null };
+  const obj5 = { size: "custom", style: tmp.icon, color: null };
   let str;
   if (hasNameplate) {
     str = "white";
   }
-  obj.color = str;
-  const tmp2 = isForLaterExperimentOn;
+  obj5.color = str;
   const tmp4Result = require("initialize");
   let intl = tmp4(tmp3[15]).intl;
   const formatToPlainStringResult = intl.formatToPlainString(require("util").t.kedGua, { count: value });
   let combined = formatToPlainStringResult;
   if (tmp10) {
     const intl2 = tmp4(tmp3[15]).intl;
-    const obj1 = { count: stateFromStores };
+    const obj6 = { count: stateFromStores };
     const _HermesInternal = HermesInternal;
-    combined = "" + formatToPlainStringResult + ", " + intl2.formatToPlainString(tmp4(tmp3[15]).t.yBmFPA, obj1);
+    combined = "" + formatToPlainStringResult + ", " + intl2.formatToPlainString(tmp4(tmp3[15]).t.yBmFPA, obj6);
   }
-  obj2 = {
+  const obj7 = {
     accessibilityLabel: combined,
     accessibilityActions: memo,
     onAccessibilityAction: callback1,
@@ -152,19 +156,19 @@ export default noop.memo(function YouBarNotificationsButton(hasNameplate) {
   if (hasNameplate) {
     str4 = "secondary-overlay";
   }
-  obj3 = { children: null };
-  obj2.variant = str4;
-  const obj4 = { style: tmp.iconContainer, children: null };
-  const tmp14Result = closure_8(require("BellIcon").BellIcon, obj);
+  const obj8 = { children: null };
+  obj7.variant = str4;
+  const obj9 = { style: tmp.iconContainer, children: null };
+  const tmp14Result = closure_8(require("BellIcon").BellIcon, obj5);
   const items4 = [
     closure_8(require("YouBarButton").YouBarButtonIcon, {
-      icon: closure_8(require("BellIcon").BellIcon, obj),
+      icon: closure_8(require("BellIcon").BellIcon, obj5),
       hasBadge: tmp10,
       badgeStyle: tmp.overdueReminderDot,
     }),
   ];
-  const obj5 = {
-    icon: closure_8(require("BellIcon").BellIcon, obj),
+  const obj10 = {
+    icon: closure_8(require("BellIcon").BellIcon, obj5),
     hasBadge: tmp10,
     badgeStyle: tmp.overdueReminderDot,
   };
@@ -172,16 +176,16 @@ export default noop.memo(function YouBarNotificationsButton(hasNameplate) {
     style: animatedStyle,
     children: closure_8(require("native").Badge, { value }),
   });
-  obj4.children = items4;
-  obj2.icon = closure_9(View, obj4);
-  obj2.onPress = function onPress() {
+  obj9.children = items4;
+  obj7.icon = closure_9(View, obj9);
+  obj7.onPress = function onPress() {
     const rootNavigationRef = _undefined(callback[20]).getRootNavigationRef();
     if (null != rootNavigationRef) {
       rootNavigationRef.navigate("notifications", { inNestedNavigator: true });
     }
   };
-  obj2.onLongPress = onLongPress;
-  obj2.hitSlop = hitSlop;
-  obj3.children = closure_8(require("IconButton").IconButton, obj2);
-  return closure_8(require("YouBarButton").YouBarButtonContainer, obj3);
+  obj7.onLongPress = onLongPress;
+  obj7.hitSlop = hitSlop;
+  obj8.children = closure_8(require("IconButton").IconButton, obj7);
+  return closure_8(require("YouBarButton").YouBarButtonContainer, obj8);
 });

@@ -21,14 +21,14 @@ export default function useRequiredLinkedLobbyApplicationAuthorization(require_a
   if (prop) {
     application_id = require_application_authorization.application_id;
   }
-  let obj = application_id(stateFromStores[3]);
   let items = [AuthorizedAppsStore];
-  const stateFromStoresObject = obj.useStateFromStoresObject(items, () => ({
+  const stateFromStoresObject = application_id(stateFromStores[3]).useStateFromStoresObject(items, () => ({
     authorizationsFetchState: AuthorizedAppsStore.getFetchState(),
     applicationOAuth2Token: AuthorizedAppsStore.getNewestTokenForApplication(application_id),
   }));
   const authorizationsFetchState = stateFromStoresObject.authorizationsFetchState;
   const applicationOAuth2Token = stateFromStoresObject.applicationOAuth2Token;
+  let obj = application_id(stateFromStores[3]);
   const items1 = [ApplicationStore];
   stateFromStores = application_id(stateFromStores[3]).useStateFromStores(items1, () =>
     ApplicationStore.getApplication(application_id),
@@ -106,7 +106,7 @@ export default function useRequiredLinkedLobbyApplicationAuthorization(require_a
     tmp14 = authorizationsFetchState !== FetchState.FETCHED || null == stateFromStores || !tmp10;
     const tmp16 = authorizationsFetchState !== FetchState.FETCHED || null == stateFromStores || !tmp10;
   }
-  obj = {
+  const obj5 = {
     showLinkedLobbyApplicationLoadingIndicator: tmp14,
     requiredLinkedLobbyApplication: null,
     shouldRelaunchLinkedLobbyApplication: null,
@@ -122,7 +122,7 @@ export default function useRequiredLinkedLobbyApplicationAuthorization(require_a
     }
     tmp17 = tmp18;
   }
-  obj.requiredLinkedLobbyApplication = tmp17;
-  obj.shouldRelaunchLinkedLobbyApplication = tmp13;
-  return obj;
+  obj5.requiredLinkedLobbyApplication = tmp17;
+  obj5.shouldRelaunchLinkedLobbyApplication = tmp13;
+  return obj5;
 }

@@ -16,19 +16,19 @@ function PreviewOverlay() {
 }
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-fn(4636);
-let createStyles = { previewArt: null, previewOverlay: null };
-createStyles = {
-  position: "relative",
-  width: 256,
-  aspectRatio: 1.5705521472392638,
-  overflow: "hidden",
-  borderRadius: nativeDefault.radii.md,
-  backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
+const createStyles = fn(4636);
+let obj2 = {
+  previewArt: {
+    position: "relative",
+    width: 256,
+    aspectRatio: 1.5705521472392638,
+    overflow: "hidden",
+    borderRadius: nativeDefault.radii.md,
+    backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
+  },
+  previewOverlay: { position: "absolute", top: 7.314, left: 7.461, width: 259.862, height: 154.514 },
 };
-createStyles.previewArt = createStyles;
-createStyles.previewOverlay = { position: "absolute", top: 7.314, left: 7.461, width: 259.862, height: 154.514 };
-let closure_6 = createStyles.createStyles(createStyles);
+let closure_6 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_themes/native/GuildThemePreviewArt.tsx");
 
@@ -44,44 +44,43 @@ export default function GuildThemePreviewArt(themeSettings) {
       if (null != customUserThemeSettings) {
         const first = customUserThemeSettings.colors[0];
         if (null != first) {
-          let obj = { colors: null, angle: null };
+          const obj3 = { colors: null, angle: null };
           const items = [];
           HermesBuiltin.arraySpread(GuildThemePresets.getSingleColorGuildThemeGradientColors(first, closure_1), 0);
-          obj.colors = items;
+          obj3.colors = items;
           let num2 = customUserThemeSettings.gradientAngle;
           if (num2 == null) {
             num2 = 0;
           }
-          obj.angle = num2;
-          tmp3 = obj;
+          obj3.angle = num2;
+          tmp3 = obj3;
         }
       }
-      obj = GuildThemePresets;
-      const guildThemePreset = obj.getGuildThemePreset(themeSettings.presetId);
+      const guildThemePreset = GuildThemePresets.getGuildThemePreset(themeSettings.presetId);
       tmp3 = null;
       if (null != guildThemePreset) {
         const guildThemePresetAppearance = GuildThemePresets.getGuildThemePresetAppearance(guildThemePreset, closure_1);
-        obj = { colors: null, locations: null, angle: null };
+        const obj4 = { colors: null, locations: null, angle: null };
         const colors = guildThemePresetAppearance.colors;
-        obj.colors = colors.map((hex) => hex.hex);
+        obj4.colors = colors.map((hex) => hex.hex);
         const colors1 = guildThemePresetAppearance.colors;
-        obj.locations = colors1.map((stop) => stop.stop / 100);
-        obj.angle = guildThemePresetAppearance.angle;
-        tmp3 = obj;
+        obj4.locations = colors1.map((stop) => stop.stop / 100);
+        obj4.angle = guildThemePresetAppearance.angle;
+        tmp3 = obj4;
       }
     }
     return tmp3;
   }, items);
   const items1 = [closure_6().previewArt, themeSettings.style];
   if (null == memo) {
-    let obj = { style: items1, children: <PreviewOverlay /> };
+    let obj2 = { style: items1, children: <PreviewOverlay /> };
     let tmp9 = (
       <View style={items1}>
         <PreviewOverlay />
       </View>
     );
   } else {
-    obj = { colors: null, locations: null, useAngle: true, angle: null, style: null, children: null };
+    let obj = { colors: null, locations: null, useAngle: true, angle: null, style: null, children: null };
     ({ colors: obj.colors, locations: obj.locations, angle: obj.angle } = memo);
     obj.style = items1;
     obj.children = <PreviewOverlay />;

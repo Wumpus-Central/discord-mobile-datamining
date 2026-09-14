@@ -2,6 +2,8 @@
 import noop from "../../../../../_runtime/metro/00019__.js";
 import GuildPowerupsStore from "../GuildPowerupsStore.tsx";
 
+const require = globalThis.__r;
+
 const require = fn;
 const GuildPowerupsConstants = fn(4526);
 const GuildPowerupType = GuildPowerupsConstants.GuildPowerupType;
@@ -28,7 +30,7 @@ export default function useMarketablePowerupPerks(arg0) {
     }
     return tmp2;
   });
-  let tmp2 = stateFromStores(12705)(arg0);
+  let tmp2 = stateFromStores(12706)(arg0);
   dependencyMap = tmp2;
   let items1 = [stateFromStores, tmp2];
   return noop.useMemo(() => {

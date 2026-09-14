@@ -2,33 +2,29 @@
 import ApexExperiment from "../../experiments/apex/index.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
-let obj = { ORBS: "orbs", DISCOUNT: "discount" };
-obj = {
+const obj = { ORBS: "orbs", DISCOUNT: "discount" };
+const obj2 = {
   name: "2026-07-premium-referral-incentives",
   kind: "user",
   defaultConfig: { referralRewardType: null, useAltReferralCardArt: false },
-  variations: null,
+  variations: {
+    0: { referralRewardType: null, useAltReferralCardArt: false },
+    1: { referralRewardType: obj.ORBS, useAltReferralCardArt: false },
+    2: { referralRewardType: obj.DISCOUNT, useAltReferralCardArt: false },
+    3: { referralRewardType: obj.ORBS, useAltReferralCardArt: true },
+    4: { referralRewardType: obj.DISCOUNT, useAltReferralCardArt: true },
+  },
 };
-obj = {
-  0: { referralRewardType: null, useAltReferralCardArt: false },
-  1: { referralRewardType: obj.ORBS, useAltReferralCardArt: false },
-  2: { referralRewardType: obj.DISCOUNT, useAltReferralCardArt: false },
-  3: { referralRewardType: obj.ORBS, useAltReferralCardArt: true },
-  4: { referralRewardType: obj.DISCOUNT, useAltReferralCardArt: true },
-};
-obj.variations = obj;
-const apexExperiment = ApexExperiment.createApexExperiment(obj);
+const apexExperiment = ApexExperiment.createApexExperiment(obj2);
 const result = size.fileFinishedImporting("modules/premium/experiments/PremiumReferralIncentivesExperiment.tsx");
 
 export default apexExperiment;
 export const ReferralRewardType = obj;
 export const usePremiumReferralIncentivesVariant = function usePremiumReferralIncentivesVariant(location) {
-  let obj = { location };
-  const config = apexExperiment.useConfig(obj);
-  obj = {
+  const config = apexExperiment.useConfig({ location });
+  return {
     referralRewardType: config.referralRewardType,
     useAltReferralCardArt: config.useAltReferralCardArt,
     isInReferralIncentivesTreatment: null != config.referralRewardType,
   };
-  return obj;
 };

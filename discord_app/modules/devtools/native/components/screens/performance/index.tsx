@@ -8,6 +8,8 @@ import ScrollBenchmarkDefault from "ScrollBenchmark.tsx";
 import MountMeasureDefault from "MountMeasure.tsx";
 import size from "../../../../../../../_runtime/metro/00002__.js";
 
+const require = globalThis.__r;
+
 const result = size.fileFinishedImporting("modules/devtools/native/components/screens/performance/index.tsx");
 for (const key10018 in require("types")) {
   arg5[key10018] = require("types")[key10018];

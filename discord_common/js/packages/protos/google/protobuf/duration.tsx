@@ -1,36 +1,35 @@
 // discord_common/js/packages/protos/google/protobuf/duration.tsx
-import _mod1188 from "../../../../../../_runtime/metro/01188__.js";
+import _mod1186 from "../../../../../../_runtime/metro/01186__.js";
 import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
 
 require = fn;
-const MessageType = fn(1188).MessageType;
+const MessageType = fn(1186).MessageType;
 class Duration$Type extends MessageType {
   constructor() {
     items = [,];
     items[0] = { no: 1, name: "seconds", kind: "scalar", T: 3 };
     items[1] = { no: 2, name: "nanos", kind: "scalar", T: 5 };
-    tmp = new tmp("google.protobuf.Duration", items, new.target);
-    return tmp;
+    tmp1 = new tmp("google.protobuf.Duration", items, new.target);
+    return tmp1;
   }
 }
-let prototype = Duration$Type.prototype;
+const prototype = Duration$Type.prototype;
 prototype["internalJsonWrite"] = function internalJsonWrite(seconds) {
-  const PbLong = _mod1188.PbLong;
+  const PbLong = _mod1186.PbLong;
   const toNumberResult = PbLong.from(seconds.seconds).toNumber();
   if (toNumberResult <= 315576000000) {
     if (toNumberResult >= -315576000000) {
-      let str = seconds.seconds.toString();
+      const str1 = seconds.seconds.toString();
       if (0 === seconds.nanos) {
-        return str + "s";
+        return str1 + "s";
       } else {
         const _Math = Math;
-        const str1 = Math.abs(seconds.nanos).toString();
+        const str9 = Math.abs(seconds.nanos).toString();
         const repeat = "0".repeat;
-        const str7 = "0".repeat(9 - str1.length) + str1;
+        const str7 = "0".repeat(9 - str9.length) + str9;
         if ("000000" === str7.substring(3)) {
           let substr = str7.substring(0, 3);
         } else {
-          str = "000";
           substr = str7;
           if ("000" === str7.substring(6)) {
             substr = str7.substring(0, 6);
@@ -47,8 +46,9 @@ prototype["internalJsonWrite"] = function internalJsonWrite(seconds) {
 prototype["internalJsonRead"] = function internalJsonRead(str, arg1, arg2) {
   if (typeof str !== "string") {
     const _Error3 = Error;
-    let obj = _mod1188;
-    const error = new Error("Unable to parse Duration from JSON " + obj.typeofJsonValue(str) + ". Expected string.");
+    const error = new Error(
+      "Unable to parse Duration from JSON " + _mod1186.typeofJsonValue(str) + ". Expected string.",
+    );
     throw error;
   } else {
     const match = str.match(/^(-?[0-9]+)(?:\.([0-9]+))?s/);
@@ -57,25 +57,25 @@ prototype["internalJsonRead"] = function internalJsonRead(str, arg1, arg2) {
       const error1 = new Error("Unable to parse Duration from JSON string. Invalid format.");
       throw error1;
     } else {
-      obj = arg2;
+      let obj2 = arg2;
       if (!arg2) {
         const self = this;
-        obj = this.create();
+        obj2 = this.create();
       }
-      const PbLong = _mod1188.PbLong;
+      const PbLong = _mod1186.PbLong;
       str = PbLong.from(match[1]);
       if (str.toNumber() <= 315576000000) {
         if (str.toNumber() >= -315576000000) {
-          obj.seconds = str.toString();
+          obj2.seconds = str.toString();
           if (typeof match[2] === "string") {
             const repeat = "0".repeat;
             const _parseInt = parseInt;
-            obj.nanos = parseInt(match[2] + "0".repeat(9 - match[2].length));
+            obj2.nanos = parseInt(match[2] + "0".repeat(9 - match[2].length));
             if (str.isNegative()) {
-              obj.nanos = -obj.nanos;
+              obj2.nanos = -obj2.nanos;
             }
           }
-          return obj;
+          return obj2;
         }
       }
       const _Error = Error;
@@ -85,13 +85,12 @@ prototype["internalJsonRead"] = function internalJsonRead(str, arg1, arg2) {
   }
 };
 prototype["create"] = function create(arr) {
-  let obj = { seconds: "0", nanos: 0 };
+  const obj = { seconds: "0", nanos: 0 };
   const _Object = Object;
-  obj = { enumerable: false, value: this };
-  _Object.defineProperty(obj, _mod1188.MESSAGE_TYPE, obj);
+  _Object.defineProperty(obj, _mod1186.MESSAGE_TYPE, { enumerable: false, value: this });
   if (undefined !== arr) {
-    const result = _mod1188.reflectionMergePartial(this, obj, arr);
-    const tmpResult = _mod1188;
+    const result = _mod1186.reflectionMergePartial(this, obj, arr);
+    const tmpResult = _mod1186;
   }
   return obj;
 };
@@ -128,7 +127,7 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnk
           let skipResult = pos.skip(tmp6);
           if (false !== onRead) {
             if (true === onRead) {
-              onRead = _mod1188.UnknownFieldHandler.onRead;
+              onRead = _mod1186.UnknownFieldHandler.onRead;
             }
             let onReadResult = onRead(self.typeName, obj, tmp5, tmp6, skipResult);
           }
@@ -140,17 +139,17 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnk
 };
 prototype["internalBinaryWrite"] = function internalBinaryWrite(seconds, tag, writeUnknownFields) {
   if ("0" !== seconds.seconds) {
-    tag.tag(1, _mod1188.WireType.Varint).int64(seconds.seconds);
-    const tagResult = tag.tag(1, _mod1188.WireType.Varint);
+    tag.tag(1, _mod1186.WireType.Varint).int64(seconds.seconds);
+    const tagResult = tag.tag(1, _mod1186.WireType.Varint);
   }
   if (0 !== seconds.nanos) {
-    tag.tag(2, _mod1188.WireType.Varint).int32(seconds.nanos);
-    const tagResult1 = tag.tag(2, _mod1188.WireType.Varint);
+    tag.tag(2, _mod1186.WireType.Varint).int32(seconds.nanos);
+    const tagResult1 = tag.tag(2, _mod1186.WireType.Varint);
   }
   let onWrite = writeUnknownFields.writeUnknownFields;
   if (false !== onWrite) {
     if (1 == onWrite) {
-      onWrite = _mod1188.UnknownFieldHandler.onWrite;
+      onWrite = _mod1186.UnknownFieldHandler.onWrite;
     }
     const self = this;
     onWrite(this.typeName, seconds, tag);
@@ -161,8 +160,8 @@ let items = [
   { no: 1, name: "seconds", kind: "scalar", T: 3 },
   { no: 2, name: "nanos", kind: "scalar", T: 5 },
 ];
-prototype = new prototype("google.protobuf.Duration", items, tmp, Duration$Type, prototype, items, fn);
+const prototype1 = new prototype("google.protobuf.Duration", items, tmp, Duration$Type, prototype, items, fn);
 const size = fn(2);
 let result = size.fileFinishedImporting("../discord_common/js/packages/protos/google/protobuf/duration.tsx");
 
-export const Duration = prototype;
+export const Duration = prototype1;

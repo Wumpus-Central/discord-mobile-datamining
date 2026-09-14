@@ -12,7 +12,7 @@ const FramesConstants = fn(9641);
   FrameLayoutModes: metroRequire,
   getPipOrientationLockStateForFrame: closure_7,
 } = FramesConstants);
-let closure_8 = fn(17127).DEFAULT_PORTRAIT_LETTERBOX_CONFIG;
+let closure_8 = fn(17129).DEFAULT_PORTRAIT_LETTERBOX_CONFIG;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/frames/panel/native/FramePanelPIPView.tsx");
@@ -32,24 +32,21 @@ export default noop.memo((transitionState) => {
   landscapeSafeAreasConfig = transitionState(stateFromStores[6]).useBaseActivityPanelPIPView().landscapeSafeAreasConfig;
   const items1 = [stateFromStores, landscapeSafeAreasConfig, tmp2, transitionCleanUp, transitionState];
   return noop.useMemo(() => {
-    let obj = {
+    const obj = {
       transitionState,
       transitionCleanUp,
       pipOrientationLockState,
       hasActivity: null != stateFromStores,
       context: FramePanelStateContextDefault,
-      children: null,
+      children: jsx(FrameViewDefault, { layoutMode: constants.PIP, portraitSafeAreasConfig, landscapeSafeAreasConfig }),
     };
-    obj = { layoutMode: constants.PIP, portraitSafeAreasConfig, landscapeSafeAreasConfig };
-    obj.children = jsx(FrameViewDefault, {
-      layoutMode: constants.PIP,
-      portraitSafeAreasConfig,
-      landscapeSafeAreasConfig,
-    });
     return jsx(ActivityPanelPIPView.BaseActivityPanelPIPView, {
-      layoutMode: constants.PIP,
-      portraitSafeAreasConfig,
-      landscapeSafeAreasConfig,
+      transitionState,
+      transitionCleanUp,
+      pipOrientationLockState,
+      hasActivity: null != stateFromStores,
+      context: FramePanelStateContextDefault,
+      children: jsx(FrameViewDefault, { layoutMode: constants.PIP, portraitSafeAreasConfig, landscapeSafeAreasConfig }),
     });
   }, items1);
 });

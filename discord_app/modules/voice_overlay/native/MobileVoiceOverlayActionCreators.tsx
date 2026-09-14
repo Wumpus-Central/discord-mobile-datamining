@@ -6,7 +6,6 @@ const result = size.fileFinishedImporting("modules/voice_overlay/native/MobileVo
 
 export default {
   setEnabled(enabled) {
-    const obj = { type: "MOBILE_VOICE_OVERLAY_STATE_CHANGED", enabled };
-    obj.dispatch(obj);
+    DispatcherDefault.dispatch({ type: "MOBILE_VOICE_OVERLAY_STATE_CHANGED", enabled });
   },
 };

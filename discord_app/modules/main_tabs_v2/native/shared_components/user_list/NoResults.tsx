@@ -35,7 +35,7 @@ export default function NoResults(illustration) {
   }
   illustration = illustration.illustration;
   const tmp = closure_6();
-  let obj = { style: null, alwaysBounceVertical: false, contentContainerStyle: null, children: null };
+  const obj = { style: null, alwaysBounceVertical: false, contentContainerStyle: null, children: null };
   const items = [tmp.headerContainer];
   obj.style = items;
   let fullHeightScrollContent = fullHeight;
@@ -47,16 +47,16 @@ export default function NoResults(illustration) {
   if (fullHeight) {
     fullHeight = tmp.fullHeightContentContainer;
   }
-  obj = { style: items1, children: null };
+  const obj2 = { style: items1, children: null };
   items1[1] = fullHeight;
   items1[2] = containerStyle;
   let tmp5 = null != illustration;
   if (tmp5) {
-    obj = { style: tmp.image, children: React4(illustration, {}) };
-    tmp5 = React4(React2, obj);
+    const obj3 = { style: tmp.image, children: React4(illustration, {}) };
+    tmp5 = React4(React2, obj3);
   }
   const items2 = [tmp5];
-  const obj1 = { style: tmp.textContainer, children: null };
+  const obj4 = { style: tmp.textContainer, children: null };
   const items3 = [
     React4(Text_Text.Text, {
       variant: "text-md/semibold",
@@ -67,14 +67,14 @@ export default function NoResults(illustration) {
   ];
   let tmp7Result = null;
   if (null != subtitle) {
-    const obj3 = { variant: "text-xs/medium", color: "interactive-text-default", style: tmp.text, children: subtitle };
-    tmp7Result = React4(Text_Text.Text, obj3);
+    const obj6 = { variant: "text-xs/medium", color: "interactive-text-default", style: tmp.text, children: subtitle };
+    tmp7Result = React4(Text_Text.Text, obj6);
   }
   items3[1] = tmp7Result;
-  obj1.children = items3;
-  items2[1] = hasOwnProperty(React2, obj1);
-  obj.children = items2;
-  const items4 = [hasOwnProperty(React2, obj), children];
+  obj4.children = items3;
+  items2[1] = hasOwnProperty(React2, obj4);
+  obj2.children = items2;
+  const items4 = [hasOwnProperty(React2, obj2), children];
   obj.children = items4;
   return hasOwnProperty(React3, obj);
 }

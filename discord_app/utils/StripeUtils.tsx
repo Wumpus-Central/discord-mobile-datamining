@@ -28,8 +28,8 @@ let closure_11 = async function _authenticatePaymentIntentForPaymentId(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -42,8 +42,8 @@ let closure_11 = async function _authenticatePaymentIntentForPaymentId(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c6 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           closure_2 = tmp3;
           closure_1 = tmp7;
@@ -56,22 +56,22 @@ let closure_11 = async function _authenticatePaymentIntentForPaymentId(arg0) {
           let error2;
           c4 = 1;
           const HTTP = HTTPUtils.HTTP;
-          const obj1 = {
+          const obj4 = {
             url: timestampProducer.BILLING_STRIPE_PAYMENT_INTENTS(closure_0),
             oldFormErrors: true,
             rejectWithError: false,
           };
           c5 = 2;
           c6 = 1;
-          const obj2 = { value: HTTP.get(obj1), done: false };
-          return obj2;
+          const obj5 = { value: HTTP.get(obj4), done: false };
+          return obj5;
         }
       } else if (1 === tmp7) {
         c4 = 0;
-        const obj3 = { error: tmp47.message };
+        const obj6 = { error: tmp47.message };
         c6 = 3;
-        const obj4 = { value: obj3, done: true };
-        return obj4;
+        const obj7 = { value: obj6, done: true };
+        return obj7;
       } else if (2 === tmp7) {
         if (arg0 === 1) {
           c6 = 3;
@@ -79,39 +79,16 @@ let closure_11 = async function _authenticatePaymentIntentForPaymentId(arg0) {
         } else if (arg0 === 2) {
           c4 = 0;
           c6 = 3;
-          const obj5 = { value, done: true };
-          return obj5;
+          const obj8 = { value, done: true };
+          return obj8;
         } else {
           closure_129_0 = value.body.stripe_payment_intent_client_secret;
           c5 = 3;
           c6 = 1;
-          const obj6 = { value: closure_130_10(), done: false };
-          return obj6;
+          const obj9 = { value: closure_130_10(), done: false };
+          return obj9;
         }
       } else if (3 === tmp7) {
-        if (arg0 === 1) {
-          c6 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c4 = 0;
-          c6 = 3;
-          const obj7 = { value, done: true };
-          return obj7;
-        } else {
-          closure_129_1 = value;
-          if (null == closure_129_1) {
-            c4 = 0;
-            c6 = 3;
-            const obj8 = { value: { error: "unable to load stripe" }, done: true };
-            return obj8;
-          } else {
-            c5 = 4;
-            c6 = 1;
-            const obj9 = { value: closure_129_1.retrievePaymentIntent(closure_129_0), done: false };
-            return obj9;
-          }
-        }
-      } else if (4 === tmp7) {
         if (arg0 === 1) {
           c6 = 3;
           throw value;
@@ -121,20 +98,43 @@ let closure_11 = async function _authenticatePaymentIntentForPaymentId(arg0) {
           const obj10 = { value, done: true };
           return obj10;
         } else {
+          closure_129_1 = value;
+          if (null == closure_129_1) {
+            c4 = 0;
+            c6 = 3;
+            const obj11 = { value: { error: "unable to load stripe" }, done: true };
+            return obj11;
+          } else {
+            c5 = 4;
+            c6 = 1;
+            const obj12 = { value: closure_129_1.retrievePaymentIntent(closure_129_0), done: false };
+            return obj12;
+          }
+        }
+      } else if (4 === tmp7) {
+        if (arg0 === 1) {
+          c6 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c4 = 0;
+          c6 = 3;
+          const obj13 = { value, done: true };
+          return obj13;
+        } else {
           closure_129_2 = value;
           error = closure_129_2.error;
           paymentIntent = closure_129_2.paymentIntent;
           if (null != error) {
-            const obj11 = { error: error.message };
+            const obj14 = { error: error.message };
             c4 = 0;
             c6 = 3;
-            const obj12 = { value: obj11, done: true };
-            return obj12;
+            const obj15 = { value: obj14, done: true };
+            return obj15;
           } else if (null == paymentIntent) {
             c4 = 0;
             c6 = 3;
-            const obj13 = { value: { error: "payment intent does not exist" }, done: true };
-            return obj13;
+            const obj16 = { value: { error: "payment intent does not exist" }, done: true };
+            return obj16;
           } else {
             closure_129_5 = {};
             let tmp15 = paymentIntent.status === closure_130_9.REQUIRES_PAYMENT_METHOD;
@@ -154,26 +154,26 @@ let closure_11 = async function _authenticatePaymentIntentForPaymentId(arg0) {
                   if (closure_130_9.SUCCEEDED !== status) {
                     if (closure_130_9.PROCESSING !== status) {
                       const CANCELED = closure_130_9.CANCELED;
-                      const obj14 = { error: null };
+                      const obj17 = { error: null };
                       const _HermesInternal = HermesInternal;
-                      obj14.error = "Invalid Payment Intent status: " + paymentIntent.status;
+                      obj17.error = "Invalid Payment Intent status: " + paymentIntent.status;
                       c4 = 0;
                       c6 = 3;
-                      const obj15 = { value: obj14, done: true };
-                      return obj15;
+                      const obj18 = { value: obj17, done: true };
+                      return obj18;
                     }
                   }
                   c4 = 0;
                   c6 = 3;
-                  const obj16 = { value: {}, done: true };
-                  return obj16;
+                  const obj19 = { value: {}, done: true };
+                  return obj19;
                 }
               }
             }
             c5 = 5;
             c6 = 1;
-            const obj17 = { value: closure_129_1.confirmCardPayment(closure_129_0, closure_129_5), done: false };
-            return obj17;
+            const obj20 = { value: closure_129_1.confirmCardPayment(closure_129_0, closure_129_5), done: false };
+            return obj20;
           }
         }
       } else if (arg0 === 1) {
@@ -182,14 +182,12 @@ let closure_11 = async function _authenticatePaymentIntentForPaymentId(arg0) {
       } else if (arg0 === 2) {
         c4 = 0;
         c6 = 3;
-        const obj18 = { value, done: true };
-        return obj18;
+        const obj21 = { value, done: true };
+        return obj21;
       } else {
         error2 = value.error;
         if (null != error2) {
-          const obj19 = { error: error2.message };
-        } else {
-          obj = {};
+          const obj22 = { error: error2.message };
         }
         c4 = 0;
         c6 = 3;
@@ -221,80 +219,77 @@ const result = size.fileFinishedImporting("utils/StripeUtils.tsx");
 
 export const validateExpiry = function validateExpiry(arg0) {
   try {
-    [tmp4, tmp5] = _slicedToArray(
-      (function parseExpString(str) {
-        closure_0 = str;
-        const parts = str.split(/[.\-/\s]+/g);
-        if (2 !== parts.length) {
-          let _HermesInternal = HermesInternal;
-          let combined =
+    [tmp4, tmp5] = (function parseExpString(str) {
+      closure_0 = str;
+      const parts = str.split(/[.\-/\s]+/g);
+      if (2 !== parts.length) {
+        let _HermesInternal = HermesInternal;
+        let combined =
+          "You passed an invalid expiration date " +
+          str +
+          "" +
+          "Please pass a string containing a numeric month and year such as `01-17` or `2015 / 05`";
+      }
+      const mapped = parts.map((item) => {
+        const parsed = parseInt(item);
+        if (isNaN(parsed)) {
+          const _HermesInternal = HermesInternal;
+          let str3 = "" + parts + " is not a number.";
+          if (str3 == null) {
+            str3 = "";
+          }
+          const _HermesInternal2 = HermesInternal;
+          const combined =
             "You passed an invalid expiration date " +
-            str +
-            "" +
+            closure_0 +
+            str3 +
             "Please pass a string containing a numeric month and year such as `01-17` or `2015 / 05`";
         }
-        const mapped = parts.map((item) => {
-          const parsed = parseInt(item);
-          if (isNaN(parsed)) {
-            const _HermesInternal = HermesInternal;
-            let str3 = "" + parts + " is not a number.";
-            if (str3 == null) {
-              str3 = "";
-            }
-            const _HermesInternal2 = HermesInternal;
-            const combined =
-              "You passed an invalid expiration date " +
-              closure_0 +
-              str3 +
-              "Please pass a string containing a numeric month and year such as `01-17` or `2015 / 05`";
+        if (parsed < 1) {
+          const _HermesInternal3 = HermesInternal;
+          const combined1 = "" + parsed + " is less than one.";
+          let str8 = combined1;
+          if (combined1 == null) {
+            str8 = "";
           }
-          if (parsed < 1) {
-            const _HermesInternal3 = HermesInternal;
-            const combined1 = "" + parsed + " is less than one.";
-            let str8 = combined1;
-            if (combined1 == null) {
-              str8 = "";
-            }
-            const _HermesInternal4 = HermesInternal;
-            const combined2 =
-              "You passed an invalid expiration date " +
-              closure_0 +
-              str8 +
-              "Please pass a string containing a numeric month and year such as `01-17` or `2015 / 05`";
-          }
-          return parsed;
-        });
-        if (mapped[0] > 12) {
-          const items = [,];
-          [arr3[1], arr3[0]] = mapped;
-          let items1 = items;
-        } else {
-          items1 = [,];
-          [arr2[0], arr2[1]] = mapped;
-        }
-        [tmp5, tmp6] = _slicedToArray(items1, 2);
-        if (tmp5 > 12) {
-          let _HermesInternal2 = HermesInternal;
-          let str6 = "Month must be a number 1-12, not " + tmp5 + ".";
-          if (str6 == null) {
-            str6 = "";
-          }
-          let _HermesInternal3 = HermesInternal;
-          let combined1 =
+          const _HermesInternal4 = HermesInternal;
+          const combined2 =
             "You passed an invalid expiration date " +
-            str +
-            str6 +
+            closure_0 +
+            str8 +
             "Please pass a string containing a numeric month and year such as `01-17` or `2015 / 05`";
         }
-        let sum = tmp6;
-        if (tmp6 < 100) {
-          sum = tmp6 + 2000;
+        return parsed;
+      });
+      if (mapped[0] > 12) {
+        const items = [,];
+        [arr3[1], arr3[0]] = mapped;
+        let items1 = items;
+      } else {
+        items1 = [,];
+        [arr2[0], arr2[1]] = mapped;
+      }
+      [tmp5, tmp6] = items1;
+      if (tmp5 > 12) {
+        let _HermesInternal2 = HermesInternal;
+        let str6 = "Month must be a number 1-12, not " + tmp5 + ".";
+        if (str6 == null) {
+          str6 = "";
         }
-        const items2 = [tmp5, sum];
-        return items2;
-      })(arg0),
-      2,
-    );
+        let _HermesInternal3 = HermesInternal;
+        let combined1 =
+          "You passed an invalid expiration date " +
+          str +
+          str6 +
+          "Please pass a string containing a numeric month and year such as `01-17` or `2015 / 05`";
+      }
+      let sum = tmp6;
+      if (tmp6 < 100) {
+        sum = tmp6 + 2000;
+      }
+      const items2 = [tmp5, sum];
+      return items2;
+    })(arg0);
     const _Date = Date;
     const date = new Date(tmp5, tmp4);
     const _Date2 = Date;
@@ -336,7 +331,7 @@ export const parseStripePaymentMethod = function parseStripePaymentMethod(billin
   if (str == null) {
     str = "";
   }
-  let obj = { name: str, line1: null, line2: null, city: null, state: null, country: null, postalCode: null };
+  const obj = { name: str, line1: null, line2: null, city: null, state: null, country: null, postalCode: null };
   let str2 = address.line1;
   if (str2 == null) {
     str2 = "";
@@ -367,8 +362,7 @@ export const parseStripePaymentMethod = function parseStripePaymentMethod(billin
     str7 = "";
   }
   obj.postalCode = str7;
-  obj = { token: billing_details.id, billingAddressInfo: obj };
-  return obj;
+  return { token: billing_details.id, billingAddressInfo: obj };
 };
 export const parseBillingAddressInfoToStripeBillingDetails = function parseBillingAddressInfoToStripeBillingDetails(
   name,

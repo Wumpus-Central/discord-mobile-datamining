@@ -4,7 +4,7 @@ import util from "../../../../../intl/index.native.tsx";
 import native from "../../../../../design/void/native.tsx";
 import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../../../design/components/Button/native/Button.native.tsx";
-import _modDef12367 from "../../../../../../_runtime/metro/12367__.js";
+import _modDef12368 from "../../../../../../_runtime/metro/12368__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -14,31 +14,33 @@ const jsxProd = fn(21);
 const createStyles = fn(4636);
 let obj = {
   container: { flex: 1, justifyContent: "center", alignItems: "center" },
-  iconWrapper: null,
-  title: null,
-  subtext: null,
+  iconWrapper: {
+    backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE,
+    borderRadius: nativeDefault.radii.round,
+    padding: 12,
+  },
+  title: { textAlign: "center", marginTop: 16, marginHorizontal: 16 },
+  subtext: { textAlign: "center", marginTop: 4, marginHorizontal: 16, marginBottom: 16 },
 };
-obj = {
+let closure_6 = createStyles.createStyles(obj);
+const obj3 = {
   backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE,
   borderRadius: nativeDefault.radii.round,
   padding: 12,
 };
-obj.iconWrapper = obj;
-obj.title = { textAlign: "center", marginTop: 16, marginHorizontal: 16 };
-obj.subtext = { textAlign: "center", marginTop: 4, marginHorizontal: 16, marginBottom: 16 };
-let closure_6 = createStyles.createStyles(obj);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/threads/native/components/redesign/ThreadListEmpty.tsx");
 
 export default noop.memo((onCreateThreadPress) => {
   onCreateThreadPress = onCreateThreadPress.onCreateThreadPress;
   const tmp = closure_6();
-  let obj = { style: tmp.container, children: null };
-  obj = { style: tmp.iconWrapper, children: null };
-  obj = { source: _modDef12367, size: native.Icon.Sizes.MEDIUM };
-  obj.children = React4(native.Icon, obj);
-  const items = [React4(View, obj), , ,];
-  const obj1 = {
+  const obj = { style: tmp.container, children: null };
+  const obj2 = {
+    style: tmp.iconWrapper,
+    children: React4(native.Icon, { source: _modDef12368, size: native.Icon.Sizes.MEDIUM }),
+  };
+  const items = [React4(View, obj2), , ,];
+  const obj4 = {
     style: tmp.title,
     accessibilityRole: "header",
     maxFontSizeMultiplier: 2,
@@ -47,9 +49,9 @@ export default noop.memo((onCreateThreadPress) => {
     children: null,
   };
   const intl = util.intl;
-  obj1.children = intl.string(util.t.HgTQ8p);
-  items[1] = React4(Text_Text.Text, obj1);
-  const obj2 = {
+  obj4.children = intl.string(util.t.HgTQ8p);
+  items[1] = React4(Text_Text.Text, obj4);
+  const obj5 = {
     style: tmp.subtext,
     maxFontSizeMultiplier: 2,
     variant: "text-sm/medium",
@@ -57,14 +59,14 @@ export default noop.memo((onCreateThreadPress) => {
     children: null,
   };
   const intl2 = util.intl;
-  obj2.children = intl2.string(util.t.jmq9GC);
-  items[2] = React4(Text_Text.Text, obj2);
+  obj5.children = intl2.string(util.t.jmq9GC);
+  items[2] = React4(Text_Text.Text, obj5);
   let tmp4Result = null != onCreateThreadPress;
   if (tmp4Result) {
-    const obj3 = { onPress: onCreateThreadPress, text: null };
+    const obj6 = { onPress: onCreateThreadPress, text: null };
     const intl3 = util.intl;
-    obj3.text = intl3.string(util.t.rBIGBL);
-    tmp4Result = React4(components_Button_Button.Button, obj3);
+    obj6.text = intl3.string(util.t.rBIGBL);
+    tmp4Result = React4(components_Button_Button.Button, obj6);
   }
   items[3] = tmp4Result;
   obj.children = items;

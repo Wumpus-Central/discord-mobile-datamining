@@ -1,6 +1,7 @@
 // discord_app/modules/chat_input/native/FloatingChatInputContainer.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import ReanimatedRexportDefault from "../../reanimated/ReanimatedRexport.tsx";
+import useKeyboardTypeDefault from "../../keyboard/native/useKeyboardType.tsx";
 import timing from "../../../design/animation/reanimated/timing/timing.tsx";
 import timingPresets from "../../../design/animation/reanimated/timing/timingPresets.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
@@ -58,30 +59,30 @@ function useKeyboardOpenPaddingStyle() {
     tmp5 = tmp7 !== token(1609).KeyboardTypes.SYSTEM;
   }
   dependencyMap = tmp5;
-  let tmpResult = tmp(4373);
+  tmp7 = useKeyboardTypeDefault();
   let num = 0;
   if (tmp5) {
     num = token;
   }
-  sharedValue = tmpResult.useSharedValue(num);
+  sharedValue = token(4373).useSharedValue(num);
   const items = [tmp5, token, sharedValue];
   const effect1 = noop.useEffect(() => {
-    let obj = timing;
     let num = 0;
     if (closure_2) {
       num = token;
     }
-    obj = { duration: timingPresets.timingStandardDuration, easing };
-    const result = sharedValue.set(obj.withTiming(num, obj));
+    const obj = timing;
+    const result = sharedValue.set(obj.withTiming(num, { duration: timingPresets.timingStandardDuration, easing }));
+    const obj2 = { duration: timingPresets.timingStandardDuration, easing };
   }, items);
-  tmpResult = tmp(4373);
+  const tmpResult = token(4373);
   const fn = function b() {
     return { paddingBottom: sharedValue.get() };
   };
   fn.__closure = { paddingSV: sharedValue };
   fn.__workletHash = 5673482424037;
   fn.__initData = __initData;
-  return tmpResult.useAnimatedStyle(fn);
+  return token(4373).useAnimatedStyle(fn);
 }
 const jsx = fn(21).jsx;
 const Easing = fn(4373).Easing;

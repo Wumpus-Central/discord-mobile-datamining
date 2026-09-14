@@ -24,8 +24,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/guilds_bar/native/GuildsBarMessages.tsx");
 
 export default noop.memo(function GuildsBarMessages() {
-  let obj = GuildsBarAnimatedItemWrapper;
-  const guildsBarAnimatedWrapperStyles = obj.useGuildsBarAnimatedWrapperStyles();
+  const guildsBarAnimatedWrapperStyles = GuildsBarAnimatedItemWrapper.useGuildsBarAnimatedWrapperStyles();
   const items = [SelectedGuildStore];
   const stateFromStores = initialize.useStateFromStores(items, () => {
     guildId = guildId.getGuildId();
@@ -37,7 +36,7 @@ export default noop.memo(function GuildsBarMessages() {
   });
   ({ badge, cutouts } = useGuildsBarBottomRightBadgeDefault({ mentionCount: 0 }));
   const colors = nativeDefault.colors;
-  obj = {
+  const obj3 = {
     selected: stateFromStores,
     circle: false,
     unread: false,
@@ -45,18 +44,18 @@ export default noop.memo(function GuildsBarMessages() {
     cutouts,
     config,
     overState: "y",
-    label: "33kozedd0zs6fbauka98psnc7zwom2s",
-    externalChildren: null,
-    expandedChildren: false,
-    children: false,
+    label: "status",
+    externalChildren: "voice_start_time",
+    expandedChildren: "cache-and-network",
+    children: "use_filtered_quests",
   };
   const tmp6 = useGuildsBarBottomRightBadgeDefault({ mentionCount: 0 });
   const tmp7 = stateFromStores ? colors.WHITE : colors.MOBILE_GUILDBAR_ICON_DEFAULT;
   const intl = util.intl;
-  obj.label = intl.string(util.t.YUU0RF);
-  obj.externalChildren = badge;
-  obj.expandedChildren = jsx(HomeDrawerDirectMessagesRowDefault, {});
-  obj.children = jsx(ChatIcon.ChatIcon, { color: tmp7 });
+  obj3.label = intl.string(util.t.YUU0RF);
+  obj3.externalChildren = badge;
+  obj3.expandedChildren = jsx(HomeDrawerDirectMessagesRowDefault, {});
+  obj3.children = jsx(ChatIcon.ChatIcon, { color: tmp7 });
   return jsx(GuildsBarAnimatedItemWrapperDefault, {
     selected: stateFromStores,
     circle: false,
@@ -65,9 +64,9 @@ export default noop.memo(function GuildsBarMessages() {
     cutouts,
     config,
     overState: "y",
-    label: "33kozedd0zs6fbauka98psnc7zwom2s",
-    externalChildren: null,
-    expandedChildren: false,
-    children: false,
+    label: "status",
+    externalChildren: "voice_start_time",
+    expandedChildren: "cache-and-network",
+    children: "use_filtered_quests",
   });
 });

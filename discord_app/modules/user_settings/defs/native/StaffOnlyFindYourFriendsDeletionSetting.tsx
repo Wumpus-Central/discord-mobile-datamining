@@ -15,8 +15,8 @@ let closure_8 = async function _onFindYourFriendsDeletionPress() {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -29,8 +29,8 @@ let closure_8 = async function _onFindYourFriendsDeletionPress() {
           throw value;
         } else if (arg0 === 2) {
           c5 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj4 = { value, done: true };
+          return obj4;
         } else {
           closure_1 = tmp4;
           closure_0 = tmp8;
@@ -46,8 +46,8 @@ let closure_8 = async function _onFindYourFriendsDeletionPress() {
             c3 = 2;
             c4 = 3;
             c5 = 1;
-            const obj1 = { value: require("ContactSyncUtils").adminDeleteContactSync(), done: false };
-            return obj1;
+            const obj6 = { value: require("ContactSyncUtils").adminDeleteContactSync(), done: false };
+            return obj6;
           }
         }
       } else if (1 !== tmp8) {
@@ -57,9 +57,9 @@ let closure_8 = async function _onFindYourFriendsDeletionPress() {
           const aPIError = new closure_129_0(closure_129_2[8]).APIError(closure_128_1);
           anyErrorMessage = aPIError.getAnyErrorMessage();
           if (null != anyErrorMessage) {
-            let obj2 = closure_129_1(closure_129_2[9]);
-            obj2 = { key: "FIND_YOUR_FRIENDS_DELETION", content: anyErrorMessage };
-            obj2.open(obj2);
+            const obj7 = { key: "FIND_YOUR_FRIENDS_DELETION", content: anyErrorMessage };
+            closure_129_1(closure_129_2[9]).open(obj7);
+            const obj3 = closure_129_1(closure_129_2[9]);
           }
         } else if (arg0 === 1) {
           c5 = 3;
@@ -68,7 +68,7 @@ let closure_8 = async function _onFindYourFriendsDeletionPress() {
           c3 = 0;
           closure_129_7(false);
           c5 = 3;
-          obj = { value, done: true };
+          const obj = { value, done: true };
           return obj;
         } else {
           c3 = 1;
@@ -94,10 +94,10 @@ let closure_8 = async function _onFindYourFriendsDeletionPress() {
 };
 const ActivityIndicator = fn(17).ActivityIndicator;
 const jsx = fn(21).jsx;
-let identity = fn(1244);
+const identity = fn(1242);
 let closure_6 = identity.createWithEqualityFn(() => ({ isLoading: false }));
-const SettingBuilders = fn(11601);
-identity = {
+const SettingBuilders = fn(11602);
+const pressable = SettingBuilders.createPressable({
   useTitle() {
     return "STAFF ONLY - Find your friends deletion";
   },
@@ -115,7 +115,7 @@ identity = {
     }
     return applyArgumentsResult;
   },
-  usePredicate: fn(14931).useStaffOrDeveloperSettingPredicate,
+  usePredicate: fn(14932).useStaffOrDeveloperSettingPredicate,
   useTrailing: function useIsFindYourFriendsDeletionTrailing() {
     let tmp = null;
     if (closure_6((isLoading) => isLoading.isLoading, _mod4259.shallow)) {
@@ -123,11 +123,10 @@ identity = {
     }
     return tmp;
   },
-};
-identity = SettingBuilders.createPressable(identity);
+});
 const size = fn(2);
 const result = size.fileFinishedImporting(
   "modules/user_settings/defs/native/StaffOnlyFindYourFriendsDeletionSetting.tsx",
 );
 
-export default identity;
+export default pressable;

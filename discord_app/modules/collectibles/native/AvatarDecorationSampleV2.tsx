@@ -47,20 +47,20 @@ export default function AvatarDecorationSampleV2(arg0) {
   if (solidAvatar) {
     solidAvatar = tmp.solidAvatar;
   }
-  let obj = { style: items, resizeMode: "contain", source: null, accessible: false };
+  const obj = { style: items, resizeMode: "contain", source: null, accessible: false };
   items[1] = solidAvatar;
   if (null == avatarSource) {
     avatarSource = _modDef8938;
   }
-  obj = { children: null, source: avatarSource };
+  const obj2 = { children: null };
+  obj.source = avatarSource;
   const items1 = [hasOwnProperty(React3, obj)];
-  obj = {
+  items1[1] = hasOwnProperty(React4, {
     style: tmp.avatarDecoration,
     accessibilityLabel: item.label,
     children: hasOwnProperty(CutoutableAvatarDecorationDefault, { avatarDecoration: item, size, animate }),
-  };
-  items1[1] = hasOwnProperty(React4, obj);
-  obj.children = items1;
-  return React5(timestampProducer, obj);
+  });
+  obj2.children = items1;
+  return React5(timestampProducer, obj2);
 }
 export const avatarPlaceholderSizeRatio = 0.8333333333333334;

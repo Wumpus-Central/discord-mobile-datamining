@@ -12,8 +12,8 @@ let closure_5 = async function _promptForRegisterCredential() {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -26,8 +26,8 @@ let closure_5 = async function _promptForRegisterCredential() {
           throw value;
         } else if (arg0 === 2) {
           c5 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           closure_3 = tmp3;
           closure_2 = tmp2;
@@ -50,14 +50,13 @@ let closure_5 = async function _promptForRegisterCredential() {
           throw value;
         } else if (arg0 === 2) {
           c5 = 3;
-          const obj1 = { value, done: true };
-          return obj1;
+          const obj4 = { value, done: true };
+          return obj4;
         } else {
-          let obj5 = closure_131_0(closure_131_1[3]);
           c4 = 2;
           c5 = 1;
-          const obj2 = { value: obj5.startRegisterWebAuthnCredential(), done: false };
-          return obj2;
+          const obj5 = { value: closure_131_0(closure_131_1[3]).startRegisterWebAuthnCredential(), done: false };
+          return obj5;
         }
       } else if (2 === tmp6) {
         if (arg0 === 1) {
@@ -65,29 +64,29 @@ let closure_5 = async function _promptForRegisterCredential() {
           throw value;
         } else if (arg0 === 2) {
           c5 = 3;
-          const obj3 = { value, done: true };
-          return obj3;
+          const obj7 = { value, done: true };
+          return obj7;
         } else {
           closure_130_1 = value;
           ticket = closure_130_1.ticket;
           challenge = closure_130_1.challenge;
-          const obj4 = { ticket };
+          const obj8 = { ticket };
           c4 = 3;
           c5 = 1;
-          obj5 = { value: closure_130_0(challenge), done: false };
-          return obj5;
+          const obj9 = { value: closure_130_0(challenge), done: false };
+          return obj9;
         }
       } else if (arg0 === 1) {
         c5 = 3;
         throw value;
       } else if (arg0 === 2) {
         c5 = 3;
-        const obj6 = { value, done: true };
-        return obj6;
+        const obj10 = { value, done: true };
+        return obj10;
       } else {
-        obj4.credential = value;
+        obj8.credential = value;
         c5 = 3;
-        obj = { value: obj4, done: true };
+        const obj = { value: obj8, done: true };
         return obj;
       }
     } catch (tmp19) {
@@ -127,7 +126,7 @@ Object.defineProperty(obj, "shouldDisplayAndroidFidoSelector", {
 });
 obj.getPasskeyAuthenticator = function getPasskeyAuthenticator() {
   let authenticatePasskey = NativeModules.DCDSecurityKeyManager.authenticate;
-  let isAndroidResult = authenticatePasskey(1150).isAndroid();
+  let isAndroidResult = authenticatePasskey(1363).isAndroid();
   if (isAndroidResult) {
     const DCDSecurityKeyManager = NativeModules.DCDSecurityKeyManager;
     authenticatePasskey = undefined;
@@ -152,8 +151,8 @@ obj.getPasskeyAuthenticator = function getPasskeyAuthenticator() {
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
-          let obj = { value, done: true };
-          return obj;
+          const obj2 = { value, done: true };
+          return obj2;
         } else {
           return { value: "HermesInternal", done: null };
         }
@@ -166,8 +165,8 @@ obj.getPasskeyAuthenticator = function getPasskeyAuthenticator() {
               throw value;
             } else if (arg0 === 2) {
               c6 = 3;
-              obj = { value, done: true };
-              return obj;
+              const obj4 = { value, done: true };
+              return obj4;
             } else {
               closure_2 = tmp3;
               closure_129_0 = closure_0;
@@ -181,16 +180,16 @@ obj.getPasskeyAuthenticator = function getPasskeyAuthenticator() {
               throw value;
             } else if (arg0 === 2) {
               c6 = 3;
-              const obj1 = { value, done: true };
-              return obj1;
+              const obj5 = { value, done: true };
+              return obj5;
             } else {
               logger = 1;
               const items = [];
               HermesBuiltin.arraySpread(closure_129_0, 0);
               c5 = 3;
               c6 = 1;
-              let obj2 = { value: HermesBuiltin.apply(items, undefined), done: false };
-              return obj2;
+              const obj6 = { value: HermesBuiltin.apply(items, undefined), done: false };
+              return obj6;
             }
           } else if (2 === tmp8) {
             logger = 0;
@@ -198,8 +197,7 @@ obj.getPasskeyAuthenticator = function getPasskeyAuthenticator() {
             const code = closure_129_1.code;
             if ("AbortError" !== code) {
               if ("NotAllowedError" !== code) {
-                obj2 = closure_0(tmp5[7]);
-                const result = obj2.captureWebAuthnException(closure_129_1);
+                const result = closure_0(tmp5[7]).captureWebAuthnException(closure_129_1);
                 logger.error(closure_129_1);
                 throw closure_129_1;
               }
@@ -213,12 +211,12 @@ obj.getPasskeyAuthenticator = function getPasskeyAuthenticator() {
           } else if (arg0 === 2) {
             logger = 0;
             c6 = 3;
-            const obj3 = { value, done: true };
-            return obj3;
+            const obj7 = { value, done: true };
+            return obj7;
           } else {
             logger = 0;
             c6 = 3;
-            obj = { value, done: true };
+            const obj = { value, done: true };
             return obj;
           }
         } catch (tmp44) {

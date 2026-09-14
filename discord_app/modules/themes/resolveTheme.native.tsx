@@ -8,7 +8,7 @@ import UnsyncedUserSettingsStore from "../user_settings/UnsyncedUserSettingsStor
 import UserSettingsProtoStore from "../user_settings/UserSettingsProtoStore.tsx";
 
 require = fn;
-const ThemeConstants = fn(1186);
+const ThemeConstants = fn(1184);
 ({
   PROTO_THEME_MAP_MOBILE_REFRESH: metroRequire,
   SystemTheme: closure_7,
@@ -24,8 +24,7 @@ export default function resolveTheme(arg0, arg1) {
   } else {
     if (!obj6.isAuthenticated()) {
       if (arg0 !== constants.NO_PREFERENCE) {
-        let tmp17Result = ClientThemesUtils;
-        return tmp17Result.resolveThemeWithCustomSettings(arg1[arg0], CustomThemeMobileStore.getCustomTheme());
+        return ClientThemesUtils.resolveThemeWithCustomSettings(arg1[arg0], CustomThemeMobileStore.getCustomTheme());
       }
     }
     const appearanceSettings = SelectivelySyncedUserSettingsStore.getAppearanceSettings();
@@ -48,8 +47,7 @@ export default function resolveTheme(arg0, arg1) {
       }
     }
     if (null != theme) {
-      tmp17Result = ClientThemesUtils;
-      return tmp17Result.resolveThemeWithCustomSettings(theme, customUserThemeSettings);
+      return ClientThemesUtils.resolveThemeWithCustomSettings(theme, customUserThemeSettings);
     } else {
       let theme1;
       if (appearance != null) {
@@ -64,7 +62,7 @@ export default function resolveTheme(arg0, arg1) {
             arg1[arg0],
             customUserThemeSettings,
           );
-          const tmp17Result1 = ClientThemesUtils;
+          const tmp17Result5 = ClientThemesUtils;
         }
         return themeWithCustomSettings;
       }
@@ -72,7 +70,7 @@ export default function resolveTheme(arg0, arg1) {
         timestampProducer[theme1],
         customUserThemeSettings,
       );
-      const tmp17Result2 = ClientThemesUtils;
+      const tmp17Result6 = ClientThemesUtils;
     }
     obj6 = AuthenticationUtils;
   }

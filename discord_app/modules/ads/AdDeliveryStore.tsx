@@ -132,7 +132,7 @@ const adDeliveryStore = new AdDeliveryStore(DispatcherDefault, {
           decision_id = adDecisionData.decision_id;
         }
         if (null != decision_id) {
-          let obj = {
+          const obj = {
             decisionId: adDecisionData.decision_id,
             metadataSealed,
             trafficMetadataSealed,
@@ -149,7 +149,7 @@ const adDeliveryStore = new AdDeliveryStore(DispatcherDefault, {
         if (creative == null) {
           creative = null;
         }
-        obj = {
+        const obj2 = {
           creative,
           fetchedAt,
           ttlMillis: AdDecisionUtils.resolveResponseTtl(responseTtlSeconds),
@@ -162,7 +162,7 @@ const adDeliveryStore = new AdDeliveryStore(DispatcherDefault, {
         const _Map = Map;
         const map2 = new Map(map1);
         map1 = map2;
-        const result2 = map2.set(placement, obj);
+        const result2 = map2.set(placement, obj2);
       }
     }
     map.delete(placement);
@@ -205,10 +205,10 @@ const adDeliveryStore = new AdDeliveryStore(DispatcherDefault, {
     const result = map.set(fetchedAt.placement, false);
     let tmp2 = null;
     if (null != fetchedAt.questHomeHero) {
-      let obj = { type: AdCreativeType.AdCreativeType.QUEST_HOME_HERO, questHomeHero: fetchedAt.questHomeHero };
+      const obj = { type: AdCreativeType.AdCreativeType.QUEST_HOME_HERO, questHomeHero: fetchedAt.questHomeHero };
       tmp2 = obj;
     }
-    obj = {
+    const obj2 = {
       creative: tmp2,
       fetchedAt: fetchedAt.fetchedAt,
       ttlMillis: AdDecisionUtils.resolveResponseTtl(fetchedAt.responseTtlSeconds),
@@ -226,7 +226,7 @@ const adDeliveryStore = new AdDeliveryStore(DispatcherDefault, {
       provenanceMetadataSealed: obj3.provenanceMetadataSealed,
     } = fetchedAt);
     map1 = new Map(map1);
-    const result1 = map1.set(fetchedAt.placement, obj);
+    const result1 = map1.set(fetchedAt.placement, obj2);
   },
   QUESTS_FETCH_QUEST_HOME_HERO_FAILURE: function handleFetchQuestHomeHeroFailure(placement) {
     c12 = false;

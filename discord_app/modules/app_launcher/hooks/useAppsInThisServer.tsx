@@ -3,6 +3,8 @@ import _modDef12 from "../../../../_runtime/metro/00012__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import UserStore from "../../../stores/UserStore.tsx";
 
+const require = globalThis.__r;
+
 const require = fn;
 const useGuildIndexState = fn(9419).useGuildIndexState;
 const limit = fn(5080).DISCOVERY_COMMANDS_QUERY_LIMIT;
@@ -26,9 +28,8 @@ export default function useAppsInThisServer(context) {
   }
   const tmp2Result = useGuildIndexState(guild_id, true);
   _require = tmp2Result;
-  let obj = require("initialize");
   const items = [UserStore];
-  stateFromStores = obj.useStateFromStores(items, () => {
+  stateFromStores = require("initialize").useStateFromStores(items, () => {
     currentUser = currentUser.getCurrentUser();
     let nsfwAllowed;
     if (currentUser != null) {
@@ -36,18 +37,19 @@ export default function useAppsInThisServer(context) {
     }
     return nsfwAllowed;
   });
-  commandsByActiveSection(memo[5]);
-  obj = { context, filters: null, options: null, allowFetch: true };
-  obj = { commandTypes: null };
+  let obj = require("initialize");
+  const tmp5 = _require;
+  const tmp6 = memo;
+  const obj3 = { context, filters: null, options: null, allowFetch: true };
+  const obj4 = { commandTypes: null };
   const items1 = [
     require("Server").ApplicationCommandType.CHAT,
     require("Server").ApplicationCommandType.PRIMARY_ENTRY_POINT,
   ];
-  obj.commandTypes = items1;
-  obj.filters = obj;
-  const obj1 = { placeholderCount: 0, limit, includeFrecency: true };
-  obj.options = obj1;
-  const discovery = obj1.useDiscovery(obj);
+  obj4.commandTypes = items1;
+  obj3.filters = obj4;
+  obj3.options = { placeholderCount: 0, limit, includeFrecency: true };
+  const discovery = commandsByActiveSection(memo[5]).useDiscovery(obj3);
   commandsByActiveSection = discovery.commandsByActiveSection;
   const items2 = [commandsByActiveSection];
   memo = sortApplicationsViaFrecency.useMemo(
@@ -85,10 +87,13 @@ export default function useAppsInThisServer(context) {
       return hasItem;
     });
   }, items3);
-  sortApplicationsViaFrecency = require("ApplicationFrecencyHooks").useSortApplicationsViaFrecency(memo1);
-  const obj2 = { appsInThisServer: null, isLoading: tmp2Result.fetchState.fetching || discovery.loading };
+  const obj2 = commandsByActiveSection(memo[5]);
+  const obj5 = { placeholderCount: 0, limit, includeFrecency: true };
+  const obj6 = sortApplicationsViaFrecency;
+  sortApplicationsViaFrecency = tmp5(tmp6[8]).useSortApplicationsViaFrecency(memo1);
+  const obj7 = { appsInThisServer: null, isLoading: tmp2Result.fetchState.fetching || discovery.loading };
   const items4 = [stateFromStores, sortApplicationsViaFrecency];
-  obj2.appsInThisServer = sortApplicationsViaFrecency.useMemo(() => {
+  obj7.appsInThisServer = obj6.useMemo(() => {
     const found = _modDef12
       .compact(sortApplicationsViaFrecency.map((application) => application.application))
       .filter((id) => {
@@ -100,5 +105,5 @@ export default function useAppsInThisServer(context) {
       });
     return found.map((application) => ({ application }));
   }, items4);
-  return obj2;
+  return obj7;
 }

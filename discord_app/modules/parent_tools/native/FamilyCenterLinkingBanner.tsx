@@ -6,30 +6,30 @@ import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import useIsInAdultAgeGroupDefault from "../hooks/useIsInAdultAgeGroup.tsx";
 import useAgeSpecificText from "../hooks/useAgeSpecificText.tsx";
 import FamilyCenterBannerButton from "FamilyCenterBannerButton.tsx";
-import _modDef15003 from "../../../../_runtime/metro/15003__.js";
+import _modDef15004 from "../../../../_runtime/metro/15004__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 function FamilyCenterLinkingBannerParentContent() {
-  let obj = { style: closure_8().container, children: null };
-  obj = { index: 1, header: null, description: null };
+  const obj = { style: closure_8().container, children: null };
+  const obj2 = { index: 1, header: null, description: null };
   const intl = util.intl;
-  obj.header = intl.string(_modDef2396["7xxAni"]);
+  obj2.header = intl.string(_modDef2396["7xxAni"]);
   const intl2 = util.intl;
-  obj.description = intl2.string(_modDef2396["1M9So2"]);
-  const items = [hasOwnProperty(FamilyCenterLinkingInstructionsRow, obj), , ,];
-  obj = { index: 2, header: null, description: null };
+  obj2.description = intl2.string(_modDef2396["1M9So2"]);
+  const items = [hasOwnProperty(FamilyCenterLinkingInstructionsRow, obj2), , ,];
+  const obj3 = { index: 2, header: null, description: null };
   const intl3 = util.intl;
-  obj.header = intl3.string(_modDef2396["AXgx+a"]);
+  obj3.header = intl3.string(_modDef2396["AXgx+a"]);
   const intl4 = util.intl;
-  obj.description = intl4.string(_modDef2396.GzMFnb);
-  items[1] = hasOwnProperty(FamilyCenterLinkingInstructionsRow, obj);
-  const obj1 = { index: 3, header: null, description: null, isLast: true };
+  obj3.description = intl4.string(_modDef2396.GzMFnb);
+  items[1] = hasOwnProperty(FamilyCenterLinkingInstructionsRow, obj3);
+  const obj4 = { index: 3, header: null, description: null, isLast: true };
   const intl5 = util.intl;
-  obj1.header = intl5.string(_modDef2396.MZn1tG);
+  obj4.header = intl5.string(_modDef2396.MZn1tG);
   const intl6 = util.intl;
-  obj1.description = intl6.string(_modDef2396["8rLBxD"]);
-  items[2] = hasOwnProperty(FamilyCenterLinkingInstructionsRow, obj1);
+  obj4.description = intl6.string(_modDef2396["8rLBxD"]);
+  items[2] = hasOwnProperty(FamilyCenterLinkingInstructionsRow, obj4);
   items[3] = hasOwnProperty(FamilyCenterBannerButton.FamilyCenterParentQRCodeButton, {});
   obj.children = items;
   return timestampProducer(React3, obj);
@@ -43,25 +43,30 @@ function FamilyCenterLinkingBannerTeenContent() {
 function FamilyCenterLinkingInstructionsRow(arg0) {
   ({ header, description, index, isLast } = arg0);
   const tmp = closure_12();
-  let obj = { style: tmp.row, children: null };
-  obj = {
-    style: tmp.circle,
-    children: hasOwnProperty(Text_Text.Text, { variant: "heading-md/semibold", color: "text-brand", children: index }),
-  };
-  const items = [hasOwnProperty(React3, obj)];
+  const obj = { style: tmp.row, children: null };
+  const items = [
+    hasOwnProperty(React3, {
+      style: tmp.circle,
+      children: hasOwnProperty(Text_Text.Text, {
+        variant: "heading-md/semibold",
+        color: "text-brand",
+        children: index,
+      }),
+    }),
+  ];
   const items1 = [tmp.rowContent];
   let gap = null;
   if (!isLast) {
     gap = tmp.gap;
   }
-  obj = { style: items1, children: null };
+  const obj3 = { style: items1, children: null };
   items1[1] = gap;
   const items2 = [
     hasOwnProperty(Text_Text.Text, { variant: "heading-sm/bold", children: header }),
     hasOwnProperty(Text_Text.Text, { variant: "text-sm/medium", color: "text-muted", children: description }),
   ];
-  obj.children = items2;
-  items[1] = timestampProducer(React3, obj);
+  obj3.children = items2;
+  items[1] = timestampProducer(React3, obj3);
   obj.children = items;
   return timestampProducer(React3, obj);
 }
@@ -69,9 +74,23 @@ get_ActivityIndicator = fn(17);
 ({ View: c3, Image: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-fn(4636);
-let createStyles = { container: null, content: null, art: null, header: null };
-createStyles = {
+let createStyles = fn(4636);
+let obj2 = {
+  container: {
+    backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
+    marginTop: nativeDefault.space.PX_16,
+    paddingTop: 0,
+    paddingBottom: nativeDefault.space.PX_16,
+    alignItems: "center",
+    borderRadius: nativeDefault.radii.md,
+    elevation: 2,
+    overflow: "hidden",
+  },
+  content: null,
+  art: null,
+  header: null,
+};
+let obj3 = {
   backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
   marginTop: nativeDefault.space.PX_16,
   paddingTop: 0,
@@ -81,25 +100,24 @@ createStyles = {
   elevation: 2,
   overflow: "hidden",
 };
-createStyles.container = createStyles;
-createStyles.content = { padding: nativeDefault.space.PX_16 };
+obj2.content = { padding: nativeDefault.space.PX_16 };
 let size = { width: "100%", height: 175, marginBottom: nativeDefault.space.PX_12 };
-createStyles.art = size;
-let obj1 = { padding: nativeDefault.space.PX_16 };
-createStyles.header = { marginBottom: nativeDefault.space.PX_8 };
-let closure_7 = createStyles.createStyles(createStyles);
+obj2.art = size;
+let obj4 = { padding: nativeDefault.space.PX_16 };
+obj2.header = { marginBottom: nativeDefault.space.PX_8 };
+let closure_7 = createStyles.createStyles(obj2);
 createStyles = fn(4636);
-const obj3 = { container: null };
-const obj2 = { marginBottom: nativeDefault.space.PX_8 };
-obj3.container = { marginTop: nativeDefault.space.PX_8, paddingHorizontal: nativeDefault.space.PX_16, width: "100%" };
-let closure_8 = createStyles.createStyles(obj3);
-fn(4636);
-const obj5 = { container: null };
-createStyles = { width: "100%", paddingHorizontal: nativeDefault.space.PX_16 };
-obj5.container = createStyles;
-let closure_10 = createStyles.createStyles(obj5);
+const obj6 = { container: null };
+let obj5 = { marginBottom: nativeDefault.space.PX_8 };
+obj6.container = { marginTop: nativeDefault.space.PX_8, paddingHorizontal: nativeDefault.space.PX_16, width: "100%" };
+let closure_8 = createStyles.createStyles(obj6);
 createStyles = fn(4636);
-const obj7 = {
+const obj9 = { container: null };
+const obj8 = { marginTop: nativeDefault.space.PX_8, paddingHorizontal: nativeDefault.space.PX_16, width: "100%" };
+obj9.container = { width: "100%", paddingHorizontal: nativeDefault.space.PX_16 };
+let closure_10 = createStyles.createStyles(obj9);
+createStyles = fn(4636);
+const obj12 = {
   row: { display: "flex", flexDirection: "row", alignItems: "flex-start" },
   gap: { marginBottom: 12 },
   circle: null,
@@ -116,40 +134,40 @@ const size1 = {
   borderRadius: nativeDefault.radii.round,
   backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL,
 };
-obj7.circle = size1;
-obj7.rowContent = { marginLeft: 12, flex: 1 };
-let closure_12 = createStyles.createStyles(obj7);
+obj12.circle = size1;
+obj12.rowContent = { marginLeft: 12, flex: 1 };
+let closure_12 = createStyles.createStyles(obj12);
 size = fn(2);
 const result = size.fileFinishedImporting("modules/parent_tools/native/FamilyCenterLinkingBanner.tsx");
 
 export default function FamilyCenterLinkingBanner() {
   const tmp = closure_7();
-  let obj = useAgeSpecificText;
-  const intl = util.intl;
   const tmp2 = useIsInAdultAgeGroupDefault();
+  const intl = util.intl;
+  const obj = useAgeSpecificText;
   const intl2 = util.intl;
   const ageSpecificText = obj.useAgeSpecificText(intl.string(_modDef2396.zUCWEL), intl2.string(_modDef2396.B0NPbp));
-  let obj1 = useAgeSpecificText;
-  const intl3 = util.intl;
   const stringResult = intl.string(_modDef2396.zUCWEL);
+  const intl3 = util.intl;
+  const obj2 = useAgeSpecificText;
   const intl4 = util.intl;
-  obj = { style: tmp.container, children: null };
-  obj = { source: null, style: null, resizeMethod: "resize" };
-  const ageSpecificText1 = obj1.useAgeSpecificText(
+  const obj3 = { style: tmp.container, children: null };
+  const obj4 = { source: null, style: null, resizeMethod: "resize" };
+  const ageSpecificText1 = obj2.useAgeSpecificText(
     intl3.format(_modDef2396.yMnoDl, { link: "https://support.discord.com/hc/articles/14155060633623" }),
     intl4.string(_modDef2396.JsAEDi),
   );
-  obj.source = _modDef15003;
-  obj.style = tmp.art;
-  const items = [hasOwnProperty(React4, obj), ,];
-  obj1 = { style: tmp.content, children: null };
+  obj4.source = _modDef15004;
+  obj4.style = tmp.art;
+  const items = [hasOwnProperty(React4, obj4), ,];
+  const obj5 = { style: tmp.content, children: null };
   const items1 = [
     hasOwnProperty(Text_Text.Text, { style: tmp.header, variant: "heading-lg/semibold", children: ageSpecificText }),
     hasOwnProperty(Text_Text.Text, { variant: "text-sm/medium", color: "text-muted", children: ageSpecificText1 }),
   ];
-  obj1.children = items1;
-  items[1] = timestampProducer(React3, obj1);
+  obj5.children = items1;
+  items[1] = timestampProducer(React3, obj5);
   items[2] = hasOwnProperty(tmp2 ? FamilyCenterLinkingBannerParentContent : FamilyCenterLinkingBannerTeenContent, {});
-  obj.children = items;
-  return timestampProducer(React3, obj);
+  obj3.children = items;
+  return timestampProducer(React3, obj3);
 }

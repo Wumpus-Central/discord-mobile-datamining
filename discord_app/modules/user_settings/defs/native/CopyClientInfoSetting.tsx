@@ -64,63 +64,63 @@ function getClientInfo() {
 }
 function ClientClientInfoActionSheet() {
   let obj = { header: null, startExpanded: true, children: null };
-  obj = { title: null };
+  let obj2 = { title: null };
   const intl = util.intl;
-  obj.title = intl.string(util.t.Na2lF9);
-  obj.header = React4(BottomSheetTitleHeader.BottomSheetTitleHeader, obj);
-  obj = { hasIcons: false, children: null };
-  const obj1 = { label: null, subLabel: null, onPress: null };
+  obj2.title = intl.string(util.t.Na2lF9);
+  obj.header = React4(BottomSheetTitleHeader.BottomSheetTitleHeader, obj2);
+  let obj3 = { hasIcons: false, children: null };
+  const obj4 = { label: null, subLabel: null, onPress: null };
   const intl2 = util.intl;
-  obj1.label = intl2.string(util.t.H66MEk);
-  obj1.subLabel = getClientInfo().appVersion;
-  obj1.onPress = function onPress() {
+  obj4.label = intl2.string(util.t.H66MEk);
+  obj4.subLabel = getClientInfo().appVersion;
+  obj4.onPress = function onPress() {
     ClipboardUtils.copy(getClientInfo().appVersion);
     const result = ToastUtils.presentCopiedToClipboard();
   };
-  const items = [React4(ActionSheetRow.ActionSheetRow, obj1), , , ,];
-  let obj2 = { label: null, subLabel: null, onPress: null };
+  const items = [React4(ActionSheetRow.ActionSheetRow, obj4), , , ,];
+  const obj5 = { label: null, subLabel: null, onPress: null };
   const intl3 = util.intl;
-  obj2.label = intl3.string(util.t.zuaWIt);
-  obj2.subLabel = getClientInfo().buildNumber;
-  obj2.onPress = function onPress() {
+  obj5.label = intl3.string(util.t.zuaWIt);
+  obj5.subLabel = getClientInfo().buildNumber;
+  obj5.onPress = function onPress() {
     ClipboardUtils.copy(getClientInfo().buildNumber);
     const result = ToastUtils.presentCopiedToClipboard();
   };
-  items[1] = React4(ActionSheetRow.ActionSheetRow, obj2);
-  let obj3 = { label: null, subLabel: null, onPress: null };
+  items[1] = React4(ActionSheetRow.ActionSheetRow, obj5);
+  const obj6 = { label: null, subLabel: null, onPress: null };
   const intl4 = util.intl;
-  obj3.label = intl4.string(util.t["YD/2+H"]);
-  obj3.subLabel = getClientInfo().releaseChannel;
-  obj3.onPress = function onPress() {
+  obj6.label = intl4.string(util.t["YD/2+H"]);
+  obj6.subLabel = getClientInfo().releaseChannel;
+  obj6.onPress = function onPress() {
     ClipboardUtils.copy(getClientInfo().releaseChannel);
     const result = ToastUtils.presentCopiedToClipboard();
   };
-  items[2] = React4(ActionSheetRow.ActionSheetRow, obj3);
-  const obj4 = { label: null, subLabel: null, onPress: null };
+  items[2] = React4(ActionSheetRow.ActionSheetRow, obj6);
+  const obj7 = { label: null, subLabel: null, onPress: null };
   const intl5 = util.intl;
-  obj4.label = intl5.string(util.t["4bhpIV"]);
-  obj4.subLabel = getClientInfo().manifest;
-  obj4.onPress = function onPress() {
+  obj7.label = intl5.string(util.t["4bhpIV"]);
+  obj7.subLabel = getClientInfo().manifest;
+  obj7.onPress = function onPress() {
     ClipboardUtils.copy(getClientInfo().manifest);
     const result = ToastUtils.presentCopiedToClipboard();
   };
-  items[3] = React4(ActionSheetRow.ActionSheetRow, obj4);
-  const obj5 = { label: null, subLabel: null, onPress: null };
+  items[3] = React4(ActionSheetRow.ActionSheetRow, obj7);
+  const obj8 = { label: null, subLabel: null, onPress: null };
   const intl6 = util.intl;
-  obj5.label = intl6.string(util.t.Wj3LW4);
-  obj5.subLabel = getClientInfo().buildOverride;
-  obj5.onPress = function onPress() {
+  obj8.label = intl6.string(util.t.Wj3LW4);
+  obj8.subLabel = getClientInfo().buildOverride;
+  obj8.onPress = function onPress() {
     ClipboardUtils.copy(getClientInfo().buildOverride);
     const result = ToastUtils.presentCopiedToClipboard();
   };
-  items[4] = React4(ActionSheetRow.ActionSheetRow, obj5);
-  obj.children = items;
-  const items1 = [hasOwnProperty(ActionSheetRow.ActionSheetRow.Group, obj)];
-  const obj6 = { hasIcons: true, children: null };
-  const obj7 = { icon: React4(CopyIcon.CopyIcon, {}), label: null, onPress: null };
+  items[4] = React4(ActionSheetRow.ActionSheetRow, obj8);
+  obj3.children = items;
+  const items1 = [hasOwnProperty(ActionSheetRow.ActionSheetRow.Group, obj3)];
+  const obj9 = { hasIcons: true, children: null };
+  const obj10 = { icon: React4(CopyIcon.CopyIcon, {}), label: null, onPress: null };
   const intl7 = util.intl;
-  obj7.label = intl7.string(util.t["7dqZ6H"]);
-  obj7.onPress = function onPress() {
+  obj10.label = intl7.string(util.t["7dqZ6H"]);
+  obj10.onPress = function onPress() {
     const tmp = getClientInfo();
     ({ appVersion, buildNumber } = tmp);
     ({ releaseChannel, buildOverride, manifest } = tmp);
@@ -145,15 +145,15 @@ function ClientClientInfoActionSheet() {
     ClipboardUtils.copy(combined);
     const result = ToastUtils.presentCopiedToClipboard();
   };
-  obj6.children = React4(ActionSheetRow.ActionSheetRow, obj7);
-  items1[1] = React4(ActionSheetRow.ActionSheetRow.Group, obj6);
+  obj9.children = React4(ActionSheetRow.ActionSheetRow, obj10);
+  items1[1] = React4(ActionSheetRow.ActionSheetRow.Group, obj9);
   obj.children = items1;
   return hasOwnProperty(ActionSheet.ActionSheet, obj);
 }
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
 const Manifest = ClientInfoUtils.getConstants();
-const SettingBuilders = fn(11601);
+const SettingBuilders = fn(11602);
 const pressable = SettingBuilders.createPressable({
   useTitle() {
     const intl = util.intl;
@@ -162,8 +162,10 @@ const pressable = SettingBuilders.createPressable({
   parent: null,
   IconComponent: fn(5619).ClipboardListIcon,
   onPress: function handleClientInfoPress() {
-    const obj = { default: ClientClientInfoActionSheet };
-    obj.openLazy(Promise.resolve(obj), "ClientClientInfoActionSheet");
+    ActionSheetActionCreatorsDefault.openLazy(
+      Promise.resolve({ default: ClientClientInfoActionSheet }),
+      "ClientClientInfoActionSheet",
+    );
   },
   usePredicate: fn(1935).DeveloperMode.useSetting,
   withArrow: true,

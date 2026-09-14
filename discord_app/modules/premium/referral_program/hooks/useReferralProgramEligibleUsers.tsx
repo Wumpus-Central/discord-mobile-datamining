@@ -4,6 +4,8 @@ import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import ReferralTrialStore from "../../ReferralTrialStore.tsx";
 
+const require = globalThis.__r;
+
 const require = fn;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/premium/referral_program/hooks/useReferralProgramEligibleUsers.tsx");
@@ -21,8 +23,8 @@ export const useReferralProgramEligibleUsers = function useReferralProgramEligib
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        obj3 = { value, done: true };
+        return obj3;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -35,8 +37,8 @@ export const useReferralProgramEligibleUsers = function useReferralProgramEligib
             throw value;
           } else if (arg0 === 2) {
             c7 = 3;
-            obj = { value, done: true };
-            return obj;
+            let obj4 = { value, done: true };
+            return obj4;
           } else {
             closure_3 = tmp;
             closure_130_1 = undefined;
@@ -63,12 +65,11 @@ export const useReferralProgramEligibleUsers = function useReferralProgramEligib
               closure_130_3 = closure_130_2[0];
               if (closure_130_2[1] === searchQuery(tmp2[6]).ReferralOfferStatus.PENDING) {
                 if (!closure_131_12.has(closure_130_3)) {
-                  searchQuery(tmp2[7]);
+                  let obj2 = searchQuery(tmp2[7]);
                   c6 = 2;
                   c7 = 1;
-                  let obj1 = { value: null, done: false };
-                  obj1.value = obj1.getUser(closure_130_3);
-                  return obj1;
+                  let obj5 = { value: obj2.getUser(closure_130_3), done: false };
+                  return obj5;
                 }
               }
             }
@@ -84,7 +85,7 @@ export const useReferralProgramEligibleUsers = function useReferralProgramEligib
           c5 = 0;
           searchQuery.return();
           c7 = 3;
-          obj = { value, done: true };
+          let obj = { value, done: true };
           return obj;
         } else {
           closure_130_4 = value;
@@ -112,8 +113,8 @@ export const useReferralProgramEligibleUsers = function useReferralProgramEligib
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -127,8 +128,8 @@ export const useReferralProgramEligibleUsers = function useReferralProgramEligib
             throw value;
           } else if (arg0 === 2) {
             c10 = 3;
-            obj = { value, done: true };
-            return obj;
+            let obj4 = { value, done: true };
+            return obj4;
           } else {
             closure_6 = tmp;
             closure_5 = tmp2;
@@ -156,11 +157,11 @@ export const useReferralProgramEligibleUsers = function useReferralProgramEligib
                       let obj5 = searchQuery(7556);
                       c9 = 4;
                       c10 = 1;
-                      let obj1 = {
+                      let obj6 = {
                         value: obj5.fetchReferralEligibleUsers(closure_133_0, closure_134_0, closure_133_1),
                         done: false,
                       };
-                      return obj1;
+                      return obj6;
                     } else {
                       c8 = 3;
                       closure_133_3 = tmp44;
@@ -168,12 +169,11 @@ export const useReferralProgramEligibleUsers = function useReferralProgramEligib
                       closure_133_5 = closure_133_4[0];
                       if (closure_133_4[1] === searchQuery(7556).ReferralOfferStatus.PENDING) {
                         if (!closure_134_12.has(closure_133_5)) {
-                          searchQuery(8298);
+                          obj3 = searchQuery(8298);
                           c9 = 5;
                           c10 = 1;
-                          let obj2 = { value: null, done: false };
-                          obj2.value = obj2.getUser(closure_133_5);
-                          return obj2;
+                          let obj7 = { value: obj3.getUser(closure_133_5), done: false };
+                          return obj7;
                         }
                       }
                       c8 = 2;
@@ -200,8 +200,8 @@ export const useReferralProgramEligibleUsers = function useReferralProgramEligib
               c8 = 0;
               let tmp25 = closure_134_9(false);
               c10 = 3;
-              let obj3 = { value, done: true };
-              return obj3;
+              let obj8 = { value, done: true };
+              return obj8;
             } else {
               closure_133_7 = value;
               let tmp17 = closure_134_7((arg0) => {
@@ -218,12 +218,12 @@ export const useReferralProgramEligibleUsers = function useReferralProgramEligib
                 });
                 if (0 === closure_1_0) {
                   const items = [];
-                  let arraySpreadResult = HermesBuiltin.arraySpread(set.values(), 0);
-                  arraySpreadResult = HermesBuiltin.arraySpread(
+                  HermesBuiltin.arraySpread(
                     found,
-                    HermesBuiltin.arraySpread(closure_2.values(), arraySpreadResult),
+                    HermesBuiltin.arraySpread(closure_2.values(), HermesBuiltin.arraySpread(set.values(), 0)),
                   );
                   let items1 = items;
+                  const arraySpreadResult = HermesBuiltin.arraySpread(set.values(), 0);
                 } else {
                   items1 = [];
                   HermesBuiltin.arraySpread(found, HermesBuiltin.arraySpread(arg0, 0));
@@ -249,7 +249,7 @@ export const useReferralProgramEligibleUsers = function useReferralProgramEligib
             c8 = 0;
             let tmp13 = closure_134_9(false);
             c10 = 3;
-            obj = { value, done: true };
+            let obj = { value, done: true };
             return obj;
           } else {
             closure_133_6 = value;
@@ -264,9 +264,9 @@ export const useReferralProgramEligibleUsers = function useReferralProgramEligib
       }
     }
   };
-  let current = searchQuery(limit[4]);
   let items = [c6];
-  closure_3 = current.useStateFromStores(items, () => _undefined.getRecipientStatus());
+  closure_3 = searchQuery(limit[4]).useStateFromStores(items, () => _undefined.getRecipientStatus());
+  let obj = searchQuery(limit[4]);
   let items1 = [c6];
   let stateFromStores = searchQuery(limit[4]).useStateFromStores(items1, () => _undefined.getReferralsRemaining());
   let obj2 = searchQuery(limit[4]);
@@ -287,7 +287,7 @@ export const useReferralProgramEligibleUsers = function useReferralProgramEligib
     null != stateFromStores,
     "Referrals remaining should not be null",
   );
-  current = {
+  let obj3 = {
     limit,
     getNextRows,
     getLocalReferrals() {
@@ -301,9 +301,9 @@ export const useReferralProgramEligibleUsers = function useReferralProgramEligib
       return applyArgumentsResult;
     },
   };
-  closure_18 = noop.useRef(current);
+  closure_18 = noop.useRef(obj3);
   const effect = noop.useEffect(() => {
-    closure_18.current = current;
+    closure_18.current = obj3;
   });
   const items2 = [searchQuery, stateFromStores];
   const effect1 = noop.useEffect(() => {
@@ -313,7 +313,7 @@ export const useReferralProgramEligibleUsers = function useReferralProgramEligib
       tmp3();
     }
   }, items2);
-  current = {
+  return {
     eligibleUsers: tmp3[0],
     fetchUsers() {
       return getNextRows(c5, limit);
@@ -322,5 +322,4 @@ export const useReferralProgramEligibleUsers = function useReferralProgramEligib
     isFetching,
     resendUsers: first2,
   };
-  return current;
 };

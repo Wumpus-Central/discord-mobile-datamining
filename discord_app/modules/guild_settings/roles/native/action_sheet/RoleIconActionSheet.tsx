@@ -31,8 +31,8 @@ export default function RoleIconActionSheet(arg0) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj4 = { value, done: true };
+        return obj4;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -45,27 +45,27 @@ export default function RoleIconActionSheet(arg0) {
             throw value;
           } else if (arg0 === 2) {
             c4 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj5 = { value, done: true };
+            return obj5;
           } else {
             closure_129_0 = undefined;
             let base64;
             let mimeType;
             tmp2(tmp5[7]).hideActionSheet();
             const obj8 = tmp2(tmp5[7]);
-            let obj1 = { size, preferredMimeType: "image/png" };
+            const obj6 = { size, preferredMimeType: "image/png" };
             c3 = 1;
             c4 = 1;
-            let obj2 = { value: _var(tmp5[8]).openImagePicker(obj1), done: false };
-            return obj2;
+            const obj7 = { value: _var(tmp5[8]).openImagePicker(obj6), done: false };
+            return obj7;
           }
         } else if (arg0 === 1) {
           c4 = 3;
           throw value;
         } else if (arg0 === 2) {
           c4 = 3;
-          const obj3 = { value, done: true };
-          return obj3;
+          const obj10 = { value, done: true };
+          return obj10;
         } else {
           closure_129_0 = value;
           base64 = closure_129_0.base64;
@@ -78,17 +78,17 @@ export default function RoleIconActionSheet(arg0) {
               _var = "";
             }
             if (closure_1_9.includes(_var)) {
-              obj = _var(tmp5[9]);
+              const obj = _var(tmp5[9]);
               if (dataUriFileSizeResult <= _var(tmp5[10]).ROLE_ICON_MAX_FILE_SIZE) {
-                obj1 = _var(tmp5[13]);
-                obj1.updateRoleIcon(closure_130_1, base64, null);
+                _var(tmp5[13]).updateRoleIcon(closure_130_1, base64, null);
+                const obj2 = _var(tmp5[13]);
               }
-              dataUriFileSizeResult = obj.dataUriFileSize(base64);
+              dataUriFileSizeResult = _var(tmp5[9]).dataUriFileSize(base64);
             }
           }
-          obj2 = _var(tmp5[11]);
           const intl = _var(tmp5[12]).intl;
-          obj2.presentError(intl.string(_var(tmp5[12]).t.HFyKsa));
+          _var(tmp5[11]).presentError(intl.string(_var(tmp5[12]).t.HFyKsa));
+          const obj3 = _var(tmp5[11]);
         }
       } catch (tmp30) {
         c4 = tmp;
@@ -96,10 +96,9 @@ export default function RoleIconActionSheet(arg0) {
       }
     }
   };
-  let obj = initialize;
   const items = [GuildSettingsRolesStore];
   const items1 = [roleId];
-  const stateFromStores = obj.useStateFromStores(
+  const stateFromStores = initialize.useStateFromStores(
     items,
     () => {
       const role = GuildSettingsRolesStore.getRole(roleId);
@@ -119,20 +118,20 @@ export default function RoleIconActionSheet(arg0) {
     },
     items1,
   );
-  obj = { title: null };
+  let obj2 = { title: null };
   let intl = util.intl;
-  obj.title = intl.string(util.t.B9grJw);
-  const items2 = [closure_7(BottomSheetTitleHeader.BottomSheetTitleHeader, obj), ,];
-  obj = { variant: "text-sm/medium", color: "text-muted", children: null };
+  obj2.title = intl.string(util.t.B9grJw);
+  const items2 = [closure_7(BottomSheetTitleHeader.BottomSheetTitleHeader, obj2), ,];
+  let obj3 = { variant: "text-sm/medium", color: "text-muted", children: null };
   const intl2 = util.intl;
-  obj.children = intl2.string(util.t.I3YQeV);
-  items2[1] = closure_7(Text_Text.Text, obj);
-  let obj1 = { label: null, subLabel: null, onPress: null };
+  obj3.children = intl2.string(util.t.I3YQeV);
+  items2[1] = closure_7(Text_Text.Text, obj3);
+  let obj4 = { label: null, subLabel: null, onPress: null };
   const intl3 = util.intl;
-  obj1.label = intl3.string(util.t.royWSB);
+  obj4.label = intl3.string(util.t.royWSB);
   const intl4 = util.intl;
-  obj1.subLabel = intl4.string(util.t["mz++Qq"]);
-  obj1.onPress = function handleUploadImage() {
+  obj4.subLabel = intl4.string(util.t["mz++Qq"]);
+  obj4.onPress = function handleUploadImage() {
     const self = this;
     const apply = closure_2.apply;
     if (typeof apply === "unknown") {
@@ -142,13 +141,12 @@ export default function RoleIconActionSheet(arg0) {
     }
     return applyArgumentsResult;
   };
-  const items3 = [closure_7(TableRow.TableRow, obj1), ,];
-  let obj2 = { label: null, onPress: null };
+  const items3 = [closure_7(TableRow.TableRow, obj4), ,];
+  let obj5 = { label: null, onPress: null };
   const intl5 = util.intl;
-  obj2.label = intl5.string(util.t["/Ny2wZ"]);
-  obj2.onPress = function handleSelectEmoji() {
-    guildId(11255);
-    let obj = { guildId, pickerIntention: constants.COMMUNITY_CONTENT, onPressEmoji: null };
+  obj5.label = intl5.string(util.t["/Ny2wZ"]);
+  obj5.onPress = function handleSelectEmoji() {
+    let obj2 = { guildId, pickerIntention: constants.COMMUNITY_CONTENT, onPressEmoji: null };
     guildId = asyncGeneratorStep(async (arg0) => {
       if (c8 === 2) {
         c8 = 3;
@@ -157,8 +155,8 @@ export default function RoleIconActionSheet(arg0) {
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
-          let obj = { value, done: true };
-          return obj;
+          const obj4 = { value, done: true };
+          return obj4;
         } else {
           return { value: "HermesInternal", done: null };
         }
@@ -171,8 +169,8 @@ export default function RoleIconActionSheet(arg0) {
               throw value;
             } else if (arg0 === 2) {
               c8 = 3;
-              obj = { value, done: true };
-              return obj;
+              const obj6 = { value, done: true };
+              return obj6;
             } else {
               closure_5 = tmp3;
               if (null == closure_0.id) {
@@ -182,27 +180,27 @@ export default function RoleIconActionSheet(arg0) {
                   surrogates = closure_0.surrogates;
                 }
                 if (null != surrogates) {
-                  closure_0(17738).updateRoleIcon(surrogates, null, tmp26);
-                  const obj5 = closure_0(17738);
+                  closure_0(17739).updateRoleIcon(surrogates, null, tmp26);
+                  const obj5 = closure_0(17739);
                 }
               } else {
                 c6 = 1;
-                const tmp22 = closure_0(17738);
+                const tmp22 = closure_0(17739);
                 closure_4 = tmp22;
                 const updateRoleIcon = tmp22.updateRoleIcon;
                 closure_2 = surrogates;
                 c7 = 2;
                 c8 = 1;
-                let obj1 = { value: closure_0(17742).fetchCustomEmojiAsPngDataUri(closure_0.id), done: false };
-                return obj1;
+                const obj7 = { value: closure_0(17743).fetchCustomEmojiAsPngDataUri(closure_0.id), done: false };
+                return obj7;
               }
             }
           } else {
             if (1 === tmp7) {
               c6 = 0;
-              obj1 = closure_0(4334);
               const intl = closure_0(1114).intl;
-              obj1.presentError(intl.string(closure_0(1114).t.R0RpRX));
+              closure_0(4334).presentError(intl.string(closure_0(1114).t.R0RpRX));
+              const obj2 = closure_0(4334);
             } else if (arg0 === 1) {
               c8 = 3;
               throw value;
@@ -212,7 +210,7 @@ export default function RoleIconActionSheet(arg0) {
             }
             c6 = 0;
             c8 = 3;
-            obj = { value, done: true };
+            const obj = { value, done: true };
             return obj;
           }
           c8 = 3;
@@ -226,7 +224,7 @@ export default function RoleIconActionSheet(arg0) {
         }
       }
     });
-    obj.onPressEmoji = function onPressEmoji(arg0) {
+    obj2.onPressEmoji = function onPressEmoji(arg0) {
       const self = this;
       const apply = closure_0.apply;
       if (typeof apply === "unknown") {
@@ -236,23 +234,23 @@ export default function RoleIconActionSheet(arg0) {
       }
       return applyArgumentsResult;
     };
-    const result = obj.openEmojiPickerActionSheet(obj, "stack");
+    const result = guildId(11256).openEmojiPickerActionSheet(obj2, "stack");
   };
-  items3[1] = closure_7(TableRow.TableRow, obj2);
+  items3[1] = closure_7(TableRow.TableRow, obj5);
   let tmp5Result = null;
   if (stateFromStores) {
-    let obj3 = { variant: "danger", label: null, onPress: null };
+    let obj6 = { variant: "danger", label: null, onPress: null };
     const intl6 = util.intl;
-    obj3.label = intl6.string(util.t["uY+Nk/"]);
-    obj3.onPress = function handleRemoveIcon() {
+    obj6.label = intl6.string(util.t["uY+Nk/"]);
+    obj6.onPress = function handleRemoveIcon() {
       ActionSheetActionCreatorsDefault.hideActionSheet();
       GuildSettingsRolesActionCreators.updateRoleIcon(roleId, null, null);
     };
-    tmp5Result = closure_7(TableRow.TableRow, obj3);
+    tmp5Result = closure_7(TableRow.TableRow, obj6);
   }
-  const obj4 = { children: null };
+  let obj7 = { children: null };
   items3[2] = tmp5Result;
   items2[2] = closure_8(TableRowGroup.TableRowGroup, { hasIcons: false, children: items3 });
-  obj4.children = items2;
-  return closure_8(ActionSheet.ActionSheet, obj4);
+  obj7.children = items2;
+  return closure_8(ActionSheet.ActionSheet, obj7);
 }

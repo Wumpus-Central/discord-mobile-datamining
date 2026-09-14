@@ -56,7 +56,7 @@ const friendSuggestionStore = new FriendSuggestionStore(DispatcherDefault, {
         const contact_names = suggestion.contact_names;
         const substr = contact_names.slice(0, 2);
       }
-      let obj = {
+      const obj = {
         key: suggestion.suggested_user.id,
         name: null,
         user: null,
@@ -76,10 +76,10 @@ const friendSuggestionStore = new FriendSuggestionStore(DispatcherDefault, {
       if (null != dependencyMap[obj.key]) {
         return false;
       } else {
-        obj = {};
+        const obj3 = {};
         const merged = Object.assign(dependencyMap);
-        obj[obj.key] = obj;
-        dependencyMap = obj;
+        obj3[obj.key] = obj;
+        dependencyMap = obj3;
       }
     }
   },

@@ -52,9 +52,9 @@ class BalanceWidgetPillButton {
     if (tmp4) {
       stringResult = intl.string(tmp2(tmp3[4]).t.y0WGqP);
     } else {
-      obj = { balance: null };
-      obj.balance = balance.toString();
-      stringResult = intl.formatToPlainString(tmp2(tmp3[4]).t.zPaLL9, obj);
+      obj1 = { balance: null };
+      obj1.balance = balance.toString();
+      stringResult = intl.formatToPlainString(tmp2(tmp3[4]).t.zPaLL9, obj1);
     }
     obj.accessibilityLabel = stringResult;
     obj.disabled = tmp4;

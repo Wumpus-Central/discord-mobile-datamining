@@ -10,23 +10,33 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-fn(4636);
-let createStyles = { inputRow: null, labelWrapper: null, label: null, description: null, error: null };
-createStyles = {
+const createStyles = fn(4636);
+let obj2 = {
+  inputRow: {
+    flexDirection: "row",
+    gap: nativeDefault.space.PX_8,
+    marginTop: nativeDefault.space.PX_4,
+    marginBottom: nativeDefault.space.PX_4,
+  },
+  labelWrapper: null,
+  label: null,
+  description: null,
+  error: null,
+};
+let obj3 = {
   flexDirection: "row",
   gap: nativeDefault.space.PX_8,
   marginTop: nativeDefault.space.PX_4,
   marginBottom: nativeDefault.space.PX_4,
 };
-createStyles.inputRow = createStyles;
-createStyles.labelWrapper = { marginBottom: nativeDefault.space.PX_4, flexDirection: "row", alignItems: "center" };
-let obj1 = { marginBottom: nativeDefault.space.PX_4, flexDirection: "row", alignItems: "center" };
-createStyles.label = { marginBottom: nativeDefault.space.PX_4 };
-let obj2 = { marginBottom: nativeDefault.space.PX_4 };
-createStyles.description = { marginTop: nativeDefault.space.PX_4 };
-let obj3 = { marginTop: nativeDefault.space.PX_4 };
-createStyles.error = { marginTop: nativeDefault.space.PX_4, width: "auto" };
-let closure_5 = createStyles.createStyles(createStyles);
+obj2.labelWrapper = { marginBottom: nativeDefault.space.PX_4, flexDirection: "row", alignItems: "center" };
+let obj4 = { marginBottom: nativeDefault.space.PX_4, flexDirection: "row", alignItems: "center" };
+obj2.label = { marginBottom: nativeDefault.space.PX_4 };
+let obj5 = { marginBottom: nativeDefault.space.PX_4 };
+obj2.description = { marginTop: nativeDefault.space.PX_4 };
+let obj6 = { marginTop: nativeDefault.space.PX_4 };
+obj2.error = { marginTop: nativeDefault.space.PX_4, width: "auto" };
+let closure_5 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("design/components/Input/native/Input.native.tsx");
 
@@ -34,42 +44,41 @@ export const Input = function Input(arg0) {
   const tmp = closure_5();
   ({ label, labelTrailing, labelId, description, errorMessage, required } = arg0);
   ({ children, containerStyle } = arg0);
-  let obj = getRequiredFieldA11yName;
-  let obj1 = native;
-  const requiredFieldA11yName = obj.getRequiredFieldA11yName(obj1.getNodeText(label), required);
-  obj = { style: containerStyle, children: null };
+  const obj = getRequiredFieldA11yName;
+  const requiredFieldA11yName = obj.getRequiredFieldA11yName(native.getNodeText(label), required);
+  const obj3 = { style: containerStyle, children: null };
   if (null == label) {
     const items = [null, , ,];
-    obj = { style: tmp.inputRow, children };
-    items[1] = React3(View, obj);
+    const obj4 = { style: tmp.inputRow, children };
+    items[1] = React3(View, obj4);
     let tmp11Result = null;
     if (null != description) {
-      obj1 = { variant: "text-xs/medium", color: "text-muted", style: tmp.description, children: description };
-      tmp11Result = React3(Text_Text.Text, obj1);
+      const obj5 = { variant: "text-xs/medium", color: "text-muted", style: tmp.description, children: description };
+      tmp11Result = React3(Text_Text.Text, obj5);
     }
     items[2] = tmp11Result;
-    tmp11Result = null;
+    let tmp11Result2 = null;
     if (null != errorMessage) {
-      const obj2 = { style: tmp.error, children: errorMessage };
-      tmp11Result = React3(ErrorText.ErrorText, obj2);
+      const obj6 = { style: tmp.error, children: errorMessage };
+      tmp11Result2 = React3(ErrorText.ErrorText, obj6);
     }
-    items[3] = tmp11Result;
-    obj.children = items;
-    return React4(View, obj);
+    items[3] = tmp11Result2;
+    obj3.children = items;
+    return React4(View, obj3);
   } else if (null != labelTrailing) {
-    const obj3 = { style: tmp.labelWrapper, children: null };
-    const obj4 = {
+    const obj7 = { style: tmp.labelWrapper, children: null };
+    const obj8 = {
       variant: "text-sm/semibold",
       color: "text-subtle",
       nativeID: labelId,
       accessibilityLabel: requiredFieldA11yName,
       children: label,
     };
-    const items1 = [React3(Text_Text.Text, obj4), labelTrailing];
-    obj3.children = items1;
-    let tmp5Result = React4(View, obj3);
+    const items1 = [React3(Text_Text.Text, obj8), labelTrailing];
+    obj7.children = items1;
+    let tmp5Result = React4(View, obj7);
   } else {
-    const obj5 = {
+    const obj9 = {
       variant: "text-sm/semibold",
       color: "text-subtle",
       style: tmp.label,
@@ -78,18 +87,18 @@ export const Input = function Input(arg0) {
       children: null,
     };
     const items2 = [label];
-    tmp5Result = null;
+    let tmp5Result2 = null;
     if (required) {
-      const obj6 = {
+      const obj10 = {
         variant: "text-sm/bold",
         color: "text-feedback-critical",
         "aria-hidden": true,
         children: [" ", "*"],
       };
-      tmp5Result = React4(Text_Text.Text, obj6);
+      tmp5Result2 = React4(Text_Text.Text, obj10);
     }
-    items2[1] = tmp5Result;
-    obj5.children = items2;
-    tmp5Result = React4(Text_Text.Text, obj5);
+    items2[1] = tmp5Result2;
+    obj9.children = items2;
+    tmp5Result = React4(Text_Text.Text, obj9);
   }
 };

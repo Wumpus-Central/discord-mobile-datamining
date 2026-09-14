@@ -11,10 +11,9 @@ export default function useVoteReactors(channelId) {
   channelId = channelId.channelId;
   const messageId = channelId.messageId;
   const reaction = channelId.reaction;
-  let obj = channelId(reaction[2]);
   let items = [MessageReactionsStore];
   const items1 = [channelId, messageId, reaction.emoji];
-  const stateFromStores = obj.useStateFromStores(
+  const stateFromStores = channelId(reaction[2]).useStateFromStores(
     items,
     () => {
       const reactions = MessageReactionsStore.getReactions(
@@ -36,7 +35,7 @@ export default function useVoteReactors(channelId) {
     items1,
     messageId(reaction[4]),
   );
-  obj = { reactors: stateFromStores, hasMore: null };
+  const obj2 = { reactors: stateFromStores, hasMore: null };
   const count_details = reaction.count_details;
   let num;
   if (count_details != null) {
@@ -45,6 +44,6 @@ export default function useVoteReactors(channelId) {
   if (num == null) {
     num = 0;
   }
-  obj.hasMore = num > stateFromStores.length;
-  return obj;
+  obj2.hasMore = num > stateFromStores.length;
+  return obj2;
 }

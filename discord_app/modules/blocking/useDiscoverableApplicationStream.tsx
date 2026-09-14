@@ -2,6 +2,8 @@
 import ApplicationStreamingStore from "../../stores/ApplicationStreamingStore.tsx";
 import RelationshipStore from "../../stores/RelationshipStore.tsx";
 
+const require = globalThis.__r;
+
 const require = fn;
 function getDiscoverableApplicationStream(userId) {
   let tmp = items;

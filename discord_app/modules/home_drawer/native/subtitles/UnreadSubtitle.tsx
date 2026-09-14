@@ -13,8 +13,7 @@ export default function UnreadSubtitle(arg0) {
   let subtitleStyles;
   let channelIconComponentWithGuild;
   ({ guild, count } = arg0);
-  let obj = subtitleStyles(channelIconComponentWithGuild[3]);
-  subtitleStyles = obj.useSubtitleStyles();
+  subtitleStyles = subtitleStyles(channelIconComponentWithGuild[3]).useSubtitleStyles();
   channelIconComponentWithGuild = undefined;
   if (null != channel) {
     channelIconComponentWithGuild = tmp(tmp2[4]).getChannelIconComponentWithGuild(channel, guild);
@@ -25,14 +24,17 @@ export default function UnreadSubtitle(arg0) {
   }
   const diff = count - 1;
   const intl = tmp(tmp2[6]).intl;
-  obj = {
+  const obj2 = {
     style: subtitleStyles.subtitleRow,
     accessible: true,
-    accessibilityLabel: intl.formatToPlainString(tmp(tmp2[6]).t.gxD5I6, { channelName, count: diff }),
+    accessibilityLabel: intl.formatToPlainString(subtitleStyles(channelIconComponentWithGuild[6]).t.gxD5I6, {
+      channelName,
+      count: diff,
+    }),
     children: null,
   };
   const intl2 = tmp(tmp2[6]).intl;
-  obj = {
+  obj2.children = intl2.format(subtitleStyles(channelIconComponentWithGuild[6]).t.OqlmU6, {
     channelName,
     count: diff,
     labelHook(children, key) {
@@ -66,49 +68,17 @@ export default function UnreadSubtitle(arg0) {
         key,
       );
     },
-  };
-  obj.children = intl2.format(subtitleStyles(channelIconComponentWithGuild[6]).t.OqlmU6, obj);
+  });
   return (
     <View
-      channelName={channelName}
-      count={diff}
-      labelHook={function labelHook(children, key) {
-        return jsx(
-          subtitleStyles(channelIconComponentWithGuild[7]).Text,
-          { variant: "text-xs/medium", color: "text-muted", lineClamp: 1, children },
-          key,
-        );
-      }}
-      iconHook={function iconHook(arg0, key) {
-        return (
-          <channelIconComponentWithGuild
-            key={key}
-            size="xxs"
-            color="icon-muted"
-            style={subtitleStyles.unreadChannelIcon}
-          />
-        );
-      }}
-      channelHook={function channelHook(children, key) {
-        return jsx(
-          Text_Text.Text,
-          {
-            variant: "text-xs/medium",
-            color: "text-muted",
-            lineClamp: 1,
-            style: subtitleStyles.subtitleText,
-            children,
-          },
-          key,
-        );
-      }}
-      overflowHook={function overflowHook(children, key) {
-        return jsx(
-          subtitleStyles(channelIconComponentWithGuild[7]).Text,
-          { variant: "text-xs/medium", color: "text-muted", children },
-          key,
-        );
-      }}
-    />
+      style={subtitleStyles.subtitleRow}
+      accessible
+      accessibilityLabel={intl.formatToPlainString(subtitleStyles(channelIconComponentWithGuild[6]).t.gxD5I6, {
+        channelName,
+        count: diff,
+      })}
+    >
+      {null}
+    </View>
   );
 }

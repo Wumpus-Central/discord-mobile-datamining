@@ -15,19 +15,20 @@ const result = size.fileFinishedImporting(
 
 export default function MessageRequestsScreen(route) {
   const channelId = route.route.params.channelId;
-  let obj = channelId(12569);
+  const ref = noop.useRef(null);
   const items = [channelId];
-  const isMessageRequestRestrictedViewer = obj.useIsMessageRequestRestrictedViewer("MessageRequestsPreviewScreen");
+  const isMessageRequestRestrictedViewer =
+    channelId(12570).useIsMessageRequestRestrictedViewer("MessageRequestsPreviewScreen");
   const effect = noop.useEffect(() => {
-    const obj = { channelId, messageId: ReadStateStore.lastMessageId(channelId) };
-    const messages = obj.fetchMessages(obj);
+    const obj = MessageManagerDefault;
+    const messages = obj.fetchMessages({ channelId, messageId: ReadStateStore.lastMessageId(channelId) });
   }, items);
-  obj = { guildId: ME, channelId, children: null };
+  const obj2 = { guildId: ME, channelId, children: null };
   if (isMessageRequestRestrictedViewer) {
-    obj = { channelId };
+    const obj3 = { channelId };
     let tmp5Result = jsx(RestrictedMessageRequestPreviewDefault, { channelId });
   } else {
-    const obj1 = {
+    const obj4 = {
       guildId: tmp6,
       channelId,
       chatInputRef: ref,
@@ -42,6 +43,6 @@ export default function MessageRequestsScreen(route) {
       screenIndex: "message-request",
     });
   }
-  obj.children = tmp5Result;
+  obj2.children = tmp5Result;
   return jsx(channelId(10206).ChannelContainer, { guildId: ME, channelId, children: null });
 }

@@ -15,28 +15,34 @@ function CollectionItem(arg0) {
   }
   const items = [resolvedValuesFromUserApplicationIdentityProfile.ResolvedValueType.MEDIA];
   const fieldValue = resolveFieldValue(image, items);
-  let obj = resolvedValuesFromUserApplicationIdentityProfile;
-  const singleStringOrSkeleton = obj.resolveSingleStringOrSkeleton(componentConfig, "name", resolveFieldValue);
-  let obj1 = resolvedValuesFromUserApplicationIdentityProfile;
-  const singleStringOrSkeleton1 = obj1.resolveSingleStringOrSkeleton(componentConfig, "description", resolveFieldValue);
-  obj = { style: tmp.item, children: null };
+  const singleStringOrSkeleton = resolvedValuesFromUserApplicationIdentityProfile.resolveSingleStringOrSkeleton(
+    componentConfig,
+    "name",
+    resolveFieldValue,
+  );
+  const singleStringOrSkeleton1 = resolvedValuesFromUserApplicationIdentityProfile.resolveSingleStringOrSkeleton(
+    componentConfig,
+    "description",
+    resolveFieldValue,
+  );
+  const obj3 = { style: tmp.item, children: null };
   if (null != fieldValue) {
-    obj = { source: null, style: null, resizeMode: "contain" };
-    obj1 = { uri: fieldValue.media.url };
-    obj.source = obj1;
-    obj.style = tmp.itemImage;
-    let tmp11 = React4(React2, obj);
+    const obj4 = { source: null, style: null, resizeMode: "contain" };
+    const obj5 = { uri: fieldValue.media.url };
+    obj4.source = obj5;
+    obj4.style = tmp.itemImage;
+    let tmp11 = React4(React2, obj4);
     let tmp12 = React4;
   } else {
-    const obj2 = { style: tmp.itemImage };
-    tmp11 = React4(UserProfileApplicationWidgetSkeletons.ImageSkeleton, obj2);
+    const obj6 = { style: tmp.itemImage };
+    tmp11 = React4(UserProfileApplicationWidgetSkeletons.ImageSkeleton, obj6);
     tmp12 = React4;
   }
   const items1 = [tmp11];
-  const obj3 = { style: tmp.itemContent, children: null };
+  const obj7 = { style: tmp.itemContent, children: null };
   if ("value" === singleStringOrSkeleton.status) {
-    const obj4 = { variant: "text-xs/medium", lineClamp: 2, children: singleStringOrSkeleton.text };
-    let tmp12Result = tmp12(Text_Text.Text, obj4);
+    const obj8 = { variant: "text-xs/medium", lineClamp: 2, children: singleStringOrSkeleton.text };
+    let tmp12Result = tmp12(Text_Text.Text, obj8);
   } else {
     tmp12Result = tmp12(UserProfileApplicationWidgetSkeletons.TextSkeleton, {
       variant: "text-xs/medium",
@@ -45,39 +51,48 @@ function CollectionItem(arg0) {
   }
   const items2 = [tmp12Result];
   if ("value" === singleStringOrSkeleton1.status) {
-    const obj5 = {
+    const obj9 = {
       variant: "text-xxs/medium",
       color: "text-subtle",
       lineClamp: 2,
       children: singleStringOrSkeleton1.text,
     };
-    tmp12Result = tmp12(Text_Text.Text, obj5);
+    let tmp12Result2 = tmp12(Text_Text.Text, obj9);
   } else {
-    tmp12Result = tmp12(UserProfileApplicationWidgetSkeletons.TextSkeleton, {
+    tmp12Result2 = tmp12(UserProfileApplicationWidgetSkeletons.TextSkeleton, {
       variant: "text-xxs/medium",
       widthChars: 10,
     });
   }
-  items2[1] = tmp12Result;
-  obj3.children = items2;
-  items1[1] = hasOwnProperty(React3, obj3);
-  obj.children = items1;
-  return hasOwnProperty(React3, obj);
+  items2[1] = tmp12Result2;
+  obj7.children = items2;
+  items1[1] = hasOwnProperty(React3, obj7);
+  obj3.children = items1;
+  return hasOwnProperty(React3, obj3);
 }
 get_ActivityIndicator = fn(17);
 ({ Image: c2, View: c3 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-fn(4636);
-let createStyles = { grid: null, item: null, itemImage: null, itemContent: null };
-createStyles = {
+const createStyles = fn(4636);
+const obj2 = {
+  grid: {
+    flexDirection: "row",
+    flexWrap: "wrap",
+    rowGap: nativeDefault.space.PX_16,
+    columnGap: nativeDefault.space.PX_16,
+  },
+  item: null,
+  itemImage: null,
+  itemContent: null,
+};
+let obj3 = {
   flexDirection: "row",
   flexWrap: "wrap",
   rowGap: nativeDefault.space.PX_16,
   columnGap: nativeDefault.space.PX_16,
 };
-createStyles.grid = createStyles;
-createStyles.item = { width: "47%", flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_12 };
+obj2.item = { width: "47%", flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_12 };
 let size = {
   width: 48,
   height: 48,
@@ -85,10 +100,10 @@ let size = {
   overflow: "hidden",
   backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE,
 };
-createStyles.itemImage = size;
-let obj1 = { width: "47%", flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_12 };
-createStyles.itemContent = { flex: 1, gap: nativeDefault.space.PX_4, minWidth: 0 };
-let closure_6 = createStyles.createStyles(createStyles);
+obj2.itemImage = size;
+let obj4 = { width: "47%", flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_12 };
+obj2.itemContent = { flex: 1, gap: nativeDefault.space.PX_4, minWidth: 0 };
+let closure_6 = createStyles.createStyles(obj2);
 size = fn(2);
 const result = size.fileFinishedImporting(
   "modules/application_widget/native/UserProfileApplicationWidgetBottomCollectionLayout.tsx",
@@ -96,13 +111,13 @@ const result = size.fileFinishedImporting(
 
 export default function UserProfileApplicationWidgetBottomCollectionLayout(arg0) {
   ({ bottomConfig, resolveFieldValue } = arg0);
-  let obj = { style: closure_6().grid, children: null };
-  obj = { componentConfig: bottomConfig.components.item_1, resolveFieldValue };
-  const items = [React4(CollectionItem, obj), , ,];
-  obj = { componentConfig: bottomConfig.components.item_2, resolveFieldValue };
-  items[1] = React4(CollectionItem, obj);
-  items[2] = React4(CollectionItem, { componentConfig: bottomConfig.components.item_3, resolveFieldValue });
-  items[3] = React4(CollectionItem, { componentConfig: bottomConfig.components.item_4, resolveFieldValue });
+  const obj = { style: closure_6().grid, children: null };
+  const items = [
+    React4(CollectionItem, { componentConfig: bottomConfig.components.item_1, resolveFieldValue }),
+    React4(CollectionItem, { componentConfig: bottomConfig.components.item_2, resolveFieldValue }),
+    React4(CollectionItem, { componentConfig: bottomConfig.components.item_3, resolveFieldValue }),
+    React4(CollectionItem, { componentConfig: bottomConfig.components.item_4, resolveFieldValue }),
+  ];
   obj.children = items;
   return hasOwnProperty(React3, obj);
 }

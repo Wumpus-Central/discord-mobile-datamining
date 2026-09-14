@@ -27,18 +27,28 @@ export default {
         obj = {};
       }
       ({ impressionName, impressionProperties, backdropKind, disableHapticOnOpen, appEntryKey } = obj);
-      obj = {};
       const merged = Object.assign(_objectWithoutProperties(obj, closure_3));
       const content = <result />;
       const stackingBehavior = impressionName;
       DispatcherDefault.wait(() => {
         if (!disableHapticOnOpen) {
-          let obj = content(impressionName[5]);
-          const result = obj.triggerHapticFeedback(key(impressionName[6]).IMPACT_LIGHT);
+          const result = content(impressionName[5]).triggerHapticFeedback(key(impressionName[6]).IMPACT_LIGHT);
+          const obj = content(impressionName[5]);
         }
         const result1 = content(impressionName[7]).dismissGlobalKeyboard();
         const obj2 = content(impressionName[7]);
-        obj = {
+        key(impressionName[4]).dispatch({
+          type: "SHOW_ACTION_SHEET",
+          content,
+          key,
+          impressionName,
+          impressionProperties,
+          backdropKind,
+          stackingBehavior,
+          appEntryKey,
+        });
+        const obj3 = key(impressionName[4]);
+        const obj4 = {
           type: "SHOW_ACTION_SHEET",
           content,
           key,
@@ -48,29 +58,24 @@ export default {
           stackingBehavior,
           appEntryKey,
         };
-        key(impressionName[4]).dispatch(obj);
-        const obj3 = key(impressionName[4]);
       });
     });
   },
   hideActionSheet(key) {
     if (ActionSheetStore.isOpen()) {
-      let obj = KeyboardManagerUtils;
-      const result = obj.dismissGlobalKeyboard();
+      const result = KeyboardManagerUtils.dismissGlobalKeyboard();
     }
-    obj = { type: "HIDE_ACTION_SHEET", key };
-    DispatcherDefault.dispatch(obj);
+    DispatcherDefault.dispatch({ type: "HIDE_ACTION_SHEET", key });
+    const obj3 = { type: "HIDE_ACTION_SHEET", key };
   },
   hideAllActionSheets() {
     DispatcherDefault.dispatch({ type: "HIDE_ALL_ACTION_SHEETS" });
   },
   setActionSheetZIndex(zIndex) {
-    const obj = { type: "SET_ACTION_SHEET_Z_INDEX", zIndex };
-    obj.dispatch(obj);
+    DispatcherDefault.dispatch({ type: "SET_ACTION_SHEET_Z_INDEX", zIndex });
   },
   resetActionSheetsForAppEntryKey(appEntryKey) {
-    const obj = { type: "RESET_ACTION_SHEETS_FOR_APP_ENTRY_KEY", appEntryKey };
-    obj.dispatch(obj);
+    DispatcherDefault.dispatch({ type: "RESET_ACTION_SHEETS_FOR_APP_ENTRY_KEY", appEntryKey });
   },
 };
 export const ACTION_SHEET_HEIGHT_HALF = "start";
@@ -88,12 +93,23 @@ export const showActionSheet = function showActionSheet(arg0) {
   } = arg0);
   DispatcherDefault.wait(() => {
     if (!disableHapticOnOpen) {
-      let obj = content(impressionName[5]);
-      const result = obj.triggerHapticFeedback(key(impressionName[6]).IMPACT_LIGHT);
+      const result = content(impressionName[5]).triggerHapticFeedback(key(impressionName[6]).IMPACT_LIGHT);
+      const obj = content(impressionName[5]);
     }
     const result1 = content(impressionName[7]).dismissGlobalKeyboard();
     const obj2 = content(impressionName[7]);
-    obj = {
+    key(impressionName[4]).dispatch({
+      type: "SHOW_ACTION_SHEET",
+      content,
+      key,
+      impressionName,
+      impressionProperties,
+      backdropKind,
+      stackingBehavior,
+      appEntryKey,
+    });
+    const obj3 = key(impressionName[4]);
+    const obj4 = {
       type: "SHOW_ACTION_SHEET",
       content,
       key,
@@ -103,7 +119,5 @@ export const showActionSheet = function showActionSheet(arg0) {
       stackingBehavior,
       appEntryKey,
     };
-    key(impressionName[4]).dispatch(obj);
-    const obj3 = key(impressionName[4]);
   });
 };

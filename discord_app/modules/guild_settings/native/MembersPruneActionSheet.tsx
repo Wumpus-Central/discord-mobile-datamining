@@ -12,12 +12,11 @@ import UserStore from "../../../stores/UserStore.tsx";
 require = fn;
 function MembersPruneActionSheetContent(guild) {
   guild = guild.guild;
+  days = undefined;
   _slicedToArray = undefined;
   let num;
   const id = guild.id;
-  let tmp = _slicedToArray(num.useState(7), 2);
-  const days = tmp[0];
-  _slicedToArray = tmp[1];
+  [days, _slicedToArray] = num.useState(7);
   const tmp3 = closure_5(guild.id, days, []);
   num = tmp3.count;
   const items = [guild.id, days];
@@ -48,15 +47,15 @@ function MembersPruneActionSheetContent(guild) {
     }
   }, items1);
   let obj = { header: null, children: null };
-  obj = { title: null };
+  let obj2 = { title: null };
   const intl = guild(days[11]).intl;
-  obj.title = intl.string(guild(days[11]).t.zbyz7p);
-  obj.header = closure_11(guild(days[10]).BottomSheetTitleHeader, obj);
-  obj = { title: null, defaultValue: null, onChange: null, hasIcons: false, children: null };
+  obj2.title = intl.string(guild(days[11]).t.zbyz7p);
+  obj.header = closure_11(guild(days[10]).BottomSheetTitleHeader, obj2);
+  const obj3 = { title: null, defaultValue: null, onChange: null, hasIcons: false, children: null };
   const intl2 = guild(days[11]).intl;
-  obj.title = intl2.string(guild(days[11]).t.YccTvK);
-  obj.defaultValue = days;
-  obj.onChange = function onChange(arg0) {
+  obj3.title = intl2.string(guild(days[11]).t.YccTvK);
+  obj3.defaultValue = days;
+  obj3.onChange = function onChange(arg0) {
     let tmp = first !== arg0;
     if (tmp) {
       tmp = null != id;
@@ -65,16 +64,16 @@ function MembersPruneActionSheetContent(guild) {
       closure_3(arg0);
     }
   };
-  const obj1 = { value: 7, label: null };
+  const obj4 = { value: 7, label: null };
   const intl3 = guild(days[11]).intl;
-  obj1.label = intl3.formatToPlainString(guild(days[11]).t.FM1dHS, { days: 7 });
-  const items2 = [closure_11(guild(days[13]).TableRadioRow, obj1)];
-  let obj2 = { value: 30, label: null };
+  obj4.label = intl3.formatToPlainString(guild(days[11]).t.FM1dHS, { days: 7 });
+  const items2 = [closure_11(guild(days[13]).TableRadioRow, obj4)];
+  const obj5 = { value: 30, label: null };
   const intl4 = guild(days[11]).intl;
-  obj2.label = intl4.formatToPlainString(guild(days[11]).t.FM1dHS, { days: 30 });
-  items2[1] = closure_11(guild(days[13]).TableRadioRow, obj2);
-  obj.children = items2;
-  const items3 = [closure_12(guild(days[12]).TableRadioGroup, obj), ,];
+  obj5.label = intl4.formatToPlainString(guild(days[11]).t.FM1dHS, { days: 30 });
+  items2[1] = closure_11(guild(days[13]).TableRadioRow, obj5);
+  obj3.children = items2;
+  const items3 = [closure_12(guild(days[12]).TableRadioGroup, obj3), ,];
   const intl5 = guild(days[11]).intl;
   const t = guild(days[11]).t;
   if (num == null) {
@@ -84,7 +83,7 @@ function MembersPruneActionSheetContent(guild) {
     variant: "text-sm/medium",
     children: intl5.format(tmp3.isLoading ? t["98cHOp"] : t.f13az9, { members: num, days }),
   });
-  const obj4 = {
+  const obj7 = {
     variant: "destructive",
     onPress() {
       let tmp2 = null != id;
@@ -100,12 +99,12 @@ function MembersPruneActionSheetContent(guild) {
     text: null,
   };
   const intl6 = tmp7(tmp8[11]).intl;
-  obj4.text = intl6.string(guild(days[11]).t["2mIlKQ"]);
-  items3[2] = closure_11(guild(days[15]).Button, obj4);
+  obj7.text = intl6.string(guild(days[11]).t["2mIlKQ"]);
+  items3[2] = closure_11(guild(days[15]).Button, obj7);
   obj.children = items3;
   return closure_12(guild(days[9]).ActionSheet, obj);
 }
-const PrunePreviewStore = fn(16676);
+const PrunePreviewStore = fn(16678);
 ({
   usePrunePreview: hasOwnProperty,
   setPrunePreview: metroRequire,
@@ -118,10 +117,9 @@ const result = size.fileFinishedImporting("modules/guild_settings/native/Members
 
 export default function MembersPruneActionSheet(guild) {
   guild = guild.guild;
-  let obj = guild(504);
   const items = [GuildStore, PermissionStore, UserStore];
   const items1 = [guild];
-  const stateFromStores = obj.useStateFromStores(
+  const stateFromStores = guild(504).useStateFromStores(
     items,
     () => {
       guild = GuildStore.getGuild(guild.id);
@@ -137,8 +135,8 @@ export default function MembersPruneActionSheet(guild) {
   }, items2);
   let tmp3 = null;
   if (stateFromStores) {
-    obj = { guild };
-    tmp3 = closure_11(MembersPruneActionSheetContent, obj);
+    const obj2 = { guild };
+    tmp3 = closure_11(MembersPruneActionSheetContent, obj2);
   }
   return tmp3;
 }

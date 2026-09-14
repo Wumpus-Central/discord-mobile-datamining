@@ -39,12 +39,11 @@ export const getTransformedBadgeColors = function getTransformedBadgeColors(arg0
         obj2 = _modDef672;
       }
     }
-    let obj = { primaryColorsTransformed: tmp, secondaryColorsTransformed: items };
-    return obj;
+    const obj3 = { primaryColorsTransformed: tmp, secondaryColorsTransformed: items };
+    return obj3;
   } else {
     secondaryLuminanceWeights = tmp2;
     let map = dependencyMap;
-    obj = _modDef672;
     if (obj.valid(primaryTintColor)) {
       primaryTintColor = _modDef672(primaryTintColor);
       closure_2 = primaryTintColor.luminance();
@@ -60,5 +59,6 @@ export const getTransformedBadgeColors = function getTransformedBadgeColors(arg0
     } else {
       mapped = primaryTintLuminances.map(() => "#000000");
     }
+    obj = _modDef672;
   }
 };

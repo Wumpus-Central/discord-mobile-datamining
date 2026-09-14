@@ -2,7 +2,7 @@
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 
 const require = fn;
-let closure_5 = async function _createWebviewHtmlFile(arg0) {
+let closure_4 = async function _createWebviewHtmlFile(arg0) {
   if (c6 === 2) {
     c6 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -10,8 +10,8 @@ let closure_5 = async function _createWebviewHtmlFile(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -24,8 +24,8 @@ let closure_5 = async function _createWebviewHtmlFile(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c6 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj4 = { value, done: true };
+          return obj4;
         } else {
           closure_2 = tmp3;
           closure_1 = tmp7;
@@ -42,7 +42,6 @@ let closure_5 = async function _createWebviewHtmlFile(arg0) {
             messageForDisallowedNavigationError: closure_129_4,
           } = closure_0);
           closure_129_5 = undefined;
-          closure_129_6 = undefined;
           c5 = 1;
           c6 = 1;
           return { value: "PX_16", done: true };
@@ -53,18 +52,17 @@ let closure_5 = async function _createWebviewHtmlFile(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c6 = 3;
-          const obj1 = { value, done: true };
-          return obj1;
+          const obj5 = { value, done: true };
+          return obj5;
         } else {
-          closure_129_5 = "discord_activity_data/activity.html";
-          const obj2 = {
+          const obj6 = {
             iFrameUri: closure_129_0,
             iFrameSandboxAttributes: closure_129_1,
             referrerPolicy: closure_129_2,
             insets: closure_129_3,
             messageForDisallowedNavigationError: closure_129_4,
           };
-          closure_129_6 = (function generateWebviewHtml(arg0) {
+          closure_129_5 = (function generateWebviewHtml(arg0) {
             ({ iFrameUri, iFrameSandboxAttributes, referrerPolicy, insets, messageForDisallowedNavigationError } =
               arg0);
             let str = "";
@@ -134,80 +132,54 @@ let closure_5 = async function _createWebviewHtmlFile(arg0) {
               str +
               "\n  </body>\n  </html>\n"
             );
-          })(obj2);
+          })(obj6);
           c4 = 1;
-          if (obj12.isAndroid()) {
-            let obj5 = closure_130_1(closure_130_2[3]);
-            let writeFileResult;
-            if (obj5 != null) {
-              writeFileResult = obj5.writeFile("cache", closure_129_5, closure_129_6, "utf8");
-            }
-            c5 = 4;
-            c6 = 1;
-            let obj3 = { value: writeFileResult, done: false };
-            return obj3;
-          } else {
-            const DCDFileManager = closure_130_4.DCDFileManager;
-            c5 = 3;
-            c6 = 1;
-            const obj4 = {
-              value: DCDFileManager.writeFile("cache", closure_129_5, closure_129_6, "utf8"),
-              done: false,
-            };
-            return obj4;
-          }
-          obj12 = closure_130_0(closure_130_2[2]);
+          const obj9 = closure_130_1(closure_130_2[2]);
+          c5 = 3;
+          c6 = 1;
+          const obj7 = {
+            value: obj9.writeFile("cache", "discord_activity_data/activity.html", closure_129_5, "utf8"),
+            done: false,
+          };
+          return obj7;
         }
       } else if (2 === tmp7) {
         c4 = 0;
-        closure_129_7 = closure_3;
-        obj3 = closure_130_1(closure_130_2[4]);
-        obj3.captureException(closure_129_7);
+        closure_129_6 = closure_3;
+        closure_130_1(closure_130_2[3]).captureException(closure_129_6);
         c6 = 3;
         return { value: null, done: true };
-      } else {
-        if (3 === tmp7) {
-          if (arg0 === 1) {
-            c6 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c4 = 0;
-            c6 = 3;
-            obj5 = { value, done: true };
-            return obj5;
-          }
-        } else if (arg0 === 1) {
-          c6 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c4 = 0;
-          c6 = 3;
-          obj = { value, done: true };
-          return obj;
-        }
+      } else if (arg0 === 1) {
+        c6 = 3;
+        throw value;
+      } else if (arg0 === 2) {
         c4 = 0;
         c6 = 3;
-        const obj6 = { value, done: true };
-        return obj6;
+        const obj8 = { value, done: true };
+        return obj8;
+      } else {
+        c4 = 0;
+        c6 = 3;
+        const obj = { value, done: true };
+        return obj;
       }
-    } catch (tmp31) {
-      closure_3 = tmp31;
+    } catch (tmp17) {
+      closure_3 = tmp17;
       if (tmp4 === c4) {
         c6 = tmp2;
-        throw tmp31;
+        throw tmp17;
       } else {
         c5 = tmp;
       }
     }
   }
 };
-const NativeModules = fn(17).NativeModules;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/activities/native/createWebviewHtmlFile.tsx");
 
 export default function createWebviewHtmlFile() {
   const self = this;
-  const apply = closure_5.apply;
+  const apply = closure_4.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -215,8 +187,9 @@ export default function createWebviewHtmlFile() {
   }
   return applyArgumentsResult;
 }
-export const createInjectedJavascriptForIOS = function createInjectedJavascriptForIOS(rect) {
-  if (rect == null) {
+export const createInjectedJavascriptForIOS = function createInjectedJavascriptForIOS(rect1) {
+  let rect = rect1;
+  if (rect1 == null) {
     rect = { top: 0, bottom: 0, left: 0, right: 0 };
   }
   const combined =

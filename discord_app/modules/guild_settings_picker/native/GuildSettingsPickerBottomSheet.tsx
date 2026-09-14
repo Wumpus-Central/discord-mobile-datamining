@@ -21,27 +21,30 @@ class GuildSettingsPickerBottomSheet {
     obj = feature(subsection[4]);
     guildSettingsPickerFeature = obj.useGuildSettingsPickerFeature(feature);
     ({ selectGuildCta, title, description, isGuildSupported } = guildSettingsPickerFeature);
-    obj = { startExpanded: true, children: null };
+    obj1 = { startExpanded: true, children: null };
     items = [, , , , ,];
     items[0] = jsx(feature(subsection[6]).BottomSheetTitleHeader, { title });
-    obj1 = {
+    obj7 = {
       style: tmp.content,
       children: jsx(feature(subsection[7]).Text, { variant: "text-md/medium", children: description }),
     };
-    items[1] = jsx(guildId, obj1);
+    items[1] = jsx(guildId, obj7);
     items[2] = jsx(feature(subsection[8]).Spacer, { size: 16 });
-    obj2 = {
+    obj8 = {
       guildId,
       onChange(guildId) {
-        const obj = { feature, section, subsection, guildId };
-        obj.openLazy(() => Promise.resolve(closure_1_7), "GuildSettingsPickerBottomSheet", obj);
+        ActionSheetActionCreatorsDefault.openLazy(
+          () => Promise.resolve(closure_1_7),
+          "GuildSettingsPickerBottomSheet",
+          { feature, section, subsection, guildId },
+        );
       },
       isGuildIncluded: isGuildSupported,
     };
-    items[3] = jsx(section(subsection[9]), obj2);
+    items[3] = jsx(section(subsection[9]), obj8);
     items[4] = jsx(feature(subsection[8]).Spacer, { size: 16 });
-    obj3 = { style: tmp.content, children: null };
-    obj4 = {
+    obj9 = { style: tmp.content, children: null };
+    obj10 = {
       grow: true,
       text: selectGuildCta,
       disabled: null == guildId,
@@ -51,10 +54,10 @@ class GuildSettingsPickerBottomSheet {
         ActionSheetActionCreatorsDefault.hideActionSheet();
       },
     };
-    obj3.children = jsx(feature(subsection[11]).Button, obj4);
-    items[5] = jsx(guildId, obj3);
-    obj.children = items;
-    return jsxs(feature(subsection[5]).BottomSheet, obj);
+    obj9.children = jsx(feature(subsection[11]).Button, obj10);
+    items[5] = jsx(guildId, obj9);
+    obj1.children = items;
+    return jsxs(feature(subsection[5]).BottomSheet, obj1);
   }
 }
 

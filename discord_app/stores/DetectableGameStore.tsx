@@ -15,6 +15,8 @@ import UserSettings from "../modules/user_settings/UserSettings.tsx";
 import PlatformUtils from "../utils/PlatformUtils.tsx";
 import size from "../../_runtime/metro/00002__.js";
 
+const require = globalThis.__r;
+
 function gameFromServer(id) {
   ({ executables, aliases, third_party_skus } = id);
   obj = { id: id.id, name: id.name, executables: null, aliases: null, thirdPartySkus: null };
@@ -158,17 +160,17 @@ prototype["initialize"] = function initialize(detectableGamesEtag) {
   }
 };
 prototype["getState"] = function getState() {
-  obj = PlatformUtils;
   if (obj.isDesktop()) {
-    obj = {
+    const obj2 = {
       detectableGamesEtag: etag,
       detectableGames: closure_8.values(),
       blocklistEtag: etag,
       blocklistExecutables,
       blocklistPatterns: closure_20.map((source) => source.source),
     };
+    let obj3 = obj2;
   } else {
-    obj = {
+    obj3 = {
       detectableGamesEtag: "",
       detectableGames: [],
       blocklistEtag: "",
@@ -176,7 +178,7 @@ prototype["getState"] = function getState() {
       blocklistPatterns: [],
     };
   }
-  return obj;
+  return obj3;
 };
 Object.defineProperty(prototype, "games", {
   get: function games() {
@@ -451,8 +453,8 @@ prototype["getBlockReason"] = function getBlockReason(exePath) {
       closure_1 = exePath.exePath.toLowerCase();
       const found = blocklistExecutables.find((item) => closure_1.includes(item));
       if (null != found) {
-        obj = { matchedExe: found, matchedPattern: null };
-        return obj;
+        const obj2 = { matchedExe: found, matchedPattern: null };
+        return obj2;
       } else {
         const found1 = closure_20.find((test) => test.test(exePath.exePath));
         let tmp5 = null;
@@ -468,10 +470,9 @@ prototype["getBlockReason"] = function getBlockReason(exePath) {
 };
 prototype["maybeTrackApplicationLookupFallthrough"] = function maybeTrackApplicationLookupFallthrough(id, name, id2) {
   id = id.id;
-  obj = set;
   if (!set.has(id)) {
-    obj.add(id);
-    obj = {
+    set.add(id);
+    const obj3 = {
       application_id: id,
       application_name: null,
       match_type: null,
@@ -482,16 +483,16 @@ prototype["maybeTrackApplicationLookupFallthrough"] = function maybeTrackApplica
     if (name == null) {
       name = null;
     }
-    obj.application_name = name;
-    obj.match_type = name;
-    id = undefined;
+    obj3.application_name = name;
+    obj3.match_type = name;
+    let id1;
     if (id2 != null) {
-      id = id2.id;
+      id1 = id2.id;
     }
-    if (id == null) {
-      id = null;
+    if (id1 == null) {
+      id1 = null;
     }
-    obj.matched_game_id = id;
+    obj3.matched_game_id = id1;
     let name1;
     if (id2 != null) {
       name1 = id2.name;
@@ -499,20 +500,19 @@ prototype["maybeTrackApplicationLookupFallthrough"] = function maybeTrackApplica
     if (name1 == null) {
       name1 = null;
     }
-    obj.matched_game_name = name1;
-    AnalyticsUtilsDefault.track(AnalyticEvents.GAME_APPLICATION_LOOKUP_FALLTHROUGH, obj);
+    obj3.matched_game_name = name1;
+    AnalyticsUtilsDefault.track(AnalyticEvents.GAME_APPLICATION_LOOKUP_FALLTHROUGH, obj3);
   }
 };
 prototype["trackNameMatchFallback"] = function trackNameMatchFallback(name, detectableGame, exePath) {
   const formatted = name.toLowerCase();
-  obj = set1;
   if (!set1.has(formatted)) {
-    obj.add(formatted);
+    set1.add(formatted);
     let tmp5 = null != exePath;
     if (tmp5) {
       tmp5 = "" !== exePath;
     }
-    obj = { matched_name: name, matched_game_id: detectableGame.id, exe_name: null, had_exe_path: null };
+    const obj3 = { matched_name: name, matched_game_id: detectableGame.id, exe_name: null, had_exe_path: null };
     let tmp10 = null;
     if (tmp5) {
       const parts = exePath.split(/[/\\]/);
@@ -522,9 +522,9 @@ prototype["trackNameMatchFallback"] = function trackNameMatchFallback(name, dete
       }
       tmp10 = arr;
     }
-    obj.exe_name = tmp10;
-    obj.had_exe_path = tmp5;
-    AnalyticsUtilsDefault.track(AnalyticEvents.GAME_NAME_MATCH_FALLBACK, obj);
+    obj3.exe_name = tmp10;
+    obj3.had_exe_path = tmp5;
+    AnalyticsUtilsDefault.track(AnalyticEvents.GAME_NAME_MATCH_FALLBACK, obj3);
   }
 };
 prototype["maybeTrackBlock"] = function maybeTrackBlock(exePath, explicit_list, found) {
@@ -533,7 +533,6 @@ prototype["maybeTrackBlock"] = function maybeTrackBlock(exePath, explicit_list, 
   if (str2 == null) {
     str2 = "unknown";
   }
-  obj = map2;
   value = map2.get(str2);
   const timestamp = Date.now();
   let tmp3 = null == value;
@@ -541,15 +540,15 @@ prototype["maybeTrackBlock"] = function maybeTrackBlock(exePath, explicit_list, 
     tmp3 = timestamp - value >= HOUR;
   }
   if (tmp3) {
-    const result = obj.set(str2, timestamp);
-    obj = { block_type: explicit_list, matched_entry: found, game_name: null, executable_name: null };
+    const result = map2.set(str2, timestamp);
+    const obj3 = { block_type: explicit_list, matched_entry: found, game_name: null, executable_name: null };
     let origGameName = exePath.gameName;
     if (origGameName == null) {
       origGameName = exePath.origGameName;
     }
-    obj.game_name = origGameName;
-    obj.executable_name = str2;
-    AnalyticsUtilsDefault.track(AnalyticEvents.GAME_BLOCKLIST_TRIGGERED, obj);
+    obj3.game_name = origGameName;
+    obj3.executable_name = str2;
+    AnalyticsUtilsDefault.track(AnalyticEvents.GAME_BLOCKLIST_TRIGGERED, obj3);
   }
 };
 prototype["shouldReport"] = function shouldReport(name) {
@@ -586,7 +585,7 @@ DetectableGameStore.persistKey = "GameStore";
 let items = [
   (arg0) => {
     if (null != arg0) {
-      obj = { detectableGamesEtag: null, detectableGames: null };
+      const obj3 = { detectableGamesEtag: null, detectableGames: null };
       ({ detectableGamesEtag: obj2.detectableGamesEtag, detectableGames } = arg0);
       let mapped;
       if (detectableGames != null) {
@@ -618,7 +617,8 @@ let items = [
       if (mapped == null) {
         mapped = [];
       }
-      obj.detectableGames = mapped;
+      obj3.detectableGames = mapped;
+      obj = obj3;
     } else {
       obj = { detectableGamesEtag: "", detectableGames: [] };
     }
@@ -626,10 +626,9 @@ let items = [
   },
   (arg0) => {
     let tmp = arg0;
-    obj = PlatformUtils;
     if (!obj.isDesktop()) {
-      obj = { detectableGamesEtag: "", detectableGames: [] };
-      tmp = obj;
+      const obj2 = { detectableGamesEtag: "", detectableGames: [] };
+      tmp = obj2;
     }
     return tmp;
   },
@@ -656,7 +655,7 @@ let items = [
   },
 ];
 DetectableGameStore.migrations = items;
-obj = {
+const detectableGameStore = new DetectableGameStore(DispatcherDefault, {
   OVERLAY_INITIALIZE: function handleOverlayInitialize(arg0) {
     closure_8.clear();
     map.clear();
@@ -716,8 +715,7 @@ obj = {
     c17 = false;
     closure_16 = Date.now();
   },
-};
-const detectableGameStore = new DetectableGameStore(DispatcherDefault, obj);
+});
 let result = size.fileFinishedImporting("stores/DetectableGameStore.tsx");
 
 export default detectableGameStore;

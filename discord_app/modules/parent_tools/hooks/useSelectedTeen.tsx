@@ -3,6 +3,8 @@ import useStateFromStores from "../../../../discord_common/js/packages/flux/useS
 import UserStore from "../../../stores/UserStore.tsx";
 import FamilyCenterStore from "../FamilyCenterStore.tsx";
 
+const require = globalThis.__r;
+
 require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/parent_tools/hooks/useSelectedTeen.tsx");

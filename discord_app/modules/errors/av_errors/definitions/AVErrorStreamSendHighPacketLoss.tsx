@@ -12,11 +12,10 @@ const result = size.fileFinishedImporting("modules/errors/av_errors/definitions/
 
 export const AVErrorStreamSendHighPacketLossDefinition = {
   getActiveErrors() {
-    let obj = ApplicationStreamingStore;
     const currentUserActiveStream = ApplicationStreamingStore.getCurrentUserActiveStream();
     if (null == currentUserActiveStream) {
       return null;
-    } else if (0 === obj.getViewerIds(currentUserActiveStream).length) {
+    } else if (0 === ApplicationStreamingStore.getViewerIds(currentUserActiveStream).length) {
       return null;
     } else {
       const rTCConnection = StreamRTCConnectionStore.getRTCConnection(
@@ -29,22 +28,21 @@ export const AVErrorStreamSendHighPacketLossDefinition = {
       if (null == mediaEngineConnectionId) {
         return null;
       } else {
-        let tmp8Result = AVErrorUtils;
-        const accumulatedStatsWithMinDatapoints = tmp8Result.getAccumulatedStatsWithMinDatapoints(
+        const accumulatedStatsWithMinDatapoints = AVErrorUtils.getAccumulatedStatsWithMinDatapoints(
           mediaEngineConnectionId,
           currentUserActiveStream.ownerId,
         );
         let tmp6 = null;
         if (null != accumulatedStatsWithMinDatapoints) {
           if (10 < 100 * accumulatedStatsWithMinDatapoints.short.packetLossRate) {
-            obj = { type: AVError.AVError.STREAM_SEND_HIGH_PACKET_LOSS };
-            tmp8Result = AVErrorContext;
+            const obj2 = { type: AVError.AVError.STREAM_SEND_HIGH_PACKET_LOSS };
+            const tmp8Result3 = AVErrorContext;
             const merged = Object.assign(
-              tmp8Result.getStreamErrorContext(StreamKeyUtils.encodeStreamKey(currentUserActiveStream)),
+              tmp8Result3.getStreamErrorContext(StreamKeyUtils.encodeStreamKey(currentUserActiveStream)),
             );
-            const items = [obj];
+            const items = [obj2];
             const tmp3 = items;
-            const tmp8Result1 = StreamKeyUtils;
+            const tmp8Result4 = StreamKeyUtils;
           }
           tmp6 = tmp3;
         }

@@ -13,40 +13,40 @@ function validateOptionContent(allowEmptyValues) {
   }
   let str = "";
   if (null != content) {
-    let obj = { content };
-    str = obj.getString(obj, "content").trim();
-    const str3 = obj.getString(obj, "content");
+    const obj2 = { content };
+    str = ApplicationCommandOptionUtils.getString(obj2, "content").trim();
+    const str3 = ApplicationCommandOptionUtils.getString(obj2, "content");
   }
   const required = option.required;
   if (null == content) {
     if (required) {
-      obj = { success: false, error: null };
+      const obj3 = { success: false, error: null };
       const intl2 = util.intl;
-      obj.error = intl2.string(util.t.JZJQL2);
-      let obj1 = obj;
+      obj3.error = intl2.string(util.t.JZJQL2);
+      let obj4 = obj3;
     } else {
-      obj1 = { success: true };
+      obj4 = { success: true };
     }
-    return obj1;
+    return obj4;
   } else if ("" === str) {
     if (allowEmptyValues.allowEmptyValues) {
-      let obj2 = { success: true };
+      let obj5 = { success: true };
     } else {
-      const obj3 = { success: false, error: null };
+      const obj6 = { success: false, error: null };
       if (required) {
         const intl = util.intl;
-        obj3.error = intl.string(util.t.JZJQL2);
-        obj2 = obj3;
+        obj6.error = intl.string(util.t.JZJQL2);
+        obj5 = obj6;
       } else {
-        obj3.error = getValidationErrorText(option);
-        obj2 = obj3;
+        obj6.error = getValidationErrorText(option);
+        obj5 = obj6;
       }
     }
-    return obj2;
+    return obj5;
   } else {
     if (content.length > 1) {
-      const obj4 = { type: "text", text: str };
-      let first = obj4;
+      const obj7 = { type: "text", text: str };
+      let first = obj7;
     } else {
       first = content[0];
     }
@@ -68,20 +68,20 @@ export const getValidationResults = function getValidationResults(
   id,
   allowEmptyValues,
 ) {
-  let obj = {};
+  const obj = {};
   const options = activeCommand.options;
   if (null == options) {
     return obj;
   } else {
     for (const item10012 of options) {
-      obj = {
+      let obj2 = {
         option: item10012,
         content: arg1[item10012.name],
         guildId: arg2,
         channelId: arg3,
         allowEmptyValues: arg4,
       };
-      obj[item10012.name] = validateOptionContent(obj);
+      obj[item10012.name] = validateOptionContent(obj2);
       continue;
     }
     return obj;

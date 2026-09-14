@@ -3,7 +3,7 @@ import SnowflakeUtilsDefault from "../utils/SnowflakeUtils.tsx";
 import _modDef12 from "../../_runtime/metro/00012__.js";
 import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../Dispatcher.tsx";
-import _modDef1332 from "../../_runtime/metro/01332__.js";
+import _modDef1330 from "../../_runtime/metro/01330__.js";
 import hasRichActivityDefault from "../modules/activities/utils/hasRichActivity.tsx";
 import AuthenticationStore from "AuthenticationStore.tsx";
 import UserStore from "UserStore.tsx";
@@ -75,7 +75,7 @@ function filterPlayingActivities(arg0) {
       if (nextResult.type === constants2.PLAYING) {
         let arr = items1.push(tmp4);
       } else {
-        arr = items.push(tmp4);
+        let arr2 = items.push(tmp4);
       }
       continue;
     }
@@ -98,7 +98,7 @@ function flattenPresence(id) {
   delete tmp[tmp2];
   if (null != presencesForGuilds[id]) {
     const _Object3 = Object;
-    let values = Object.values(presencesForGuilds[id]);
+    const values = Object.values(presencesForGuilds[id]);
     const reduced = values.reduce((processedAtTimestamp, processedAtTimestamp2) => {
       processedAtTimestamp = processedAtTimestamp2.processedAtTimestamp;
       processedAtTimestamp2 = processedAtTimestamp.processedAtTimestamp;
@@ -137,8 +137,8 @@ function flattenPresence(id) {
         })
       ) {
         const _Object = Object;
-        values = Object.values(values);
-        const flatMapResult = values.flatMap((hiddenActivities) => {
+        const values3 = Object.values(values);
+        const flatMapResult = values3.flatMap((hiddenActivities) => {
           hiddenActivities = hiddenActivities.hiddenActivities;
           if (hiddenActivities == null) {
             hiddenActivities = [];
@@ -174,8 +174,8 @@ function flattenPresence(id) {
     closure_12[id] = activities;
     closure_13[id] = filterPlayingActivities(activities);
     const _Object2 = Object;
-    const values1 = Object.values(values);
-    const flatMapResult1 = values1.flatMap((hiddenActivities) => {
+    const values4 = Object.values(values);
+    const flatMapResult1 = values4.flatMap((hiddenActivities) => {
       hiddenActivities = hiddenActivities.hiddenActivities;
       if (hiddenActivities == null) {
         hiddenActivities = [];
@@ -257,14 +257,14 @@ function updatePresence(arg0) {
       if (tmp5) {
         return false;
       } else {
-        let obj = {};
+        const obj = {};
         presencesForGuilds[userId] = obj;
         tmp7 = obj;
       }
     }
     if (tmp5) {
-      obj = { status, clientStatus, activities: hiddenActivities, hiddenActivities, processedAtTimestamp };
-      tmp7[guildId] = obj;
+      const obj2 = { status, clientStatus, activities: hiddenActivities, hiddenActivities, processedAtTimestamp };
+      tmp7[guildId] = obj2;
     } else {
       let sorted = activities;
       if (activities.length > 1) {
@@ -299,12 +299,12 @@ function updatePresence(arg0) {
       let activities2 = sorted;
       if (null != tmp7[guildId]) {
         activities2 = sorted;
-        if (_modDef1332(tmp25.activities, sorted)) {
+        if (_modDef1330(tmp25.activities, sorted)) {
           activities2 = tmp25.activities;
         }
       }
-      obj = { status, clientStatus, activities: activities2, hiddenActivities: tmp15, processedAtTimestamp };
-      tmp7[guildId] = obj;
+      const obj3 = { status, clientStatus, activities: activities2, hiddenActivities: tmp15, processedAtTimestamp };
+      tmp7[guildId] = obj3;
     }
     delete tmp2[tmp];
     flattenPresence(userId);
@@ -325,14 +325,14 @@ function updatePresenceInConnectionOpen(arg0) {
     let tmp5 = presencesForGuilds[userId];
     if (null == tmp5) {
       if (!tmp3) {
-        let obj = {};
+        const obj = {};
         presencesForGuilds[userId] = obj;
         tmp5 = obj;
       }
     }
     if (tmp3) {
-      obj = { status, clientStatus, activities: hiddenActivities, hiddenActivities, processedAtTimestamp };
-      tmp5[guildId] = obj;
+      const obj2 = { status, clientStatus, activities: hiddenActivities, hiddenActivities, processedAtTimestamp };
+      tmp5[guildId] = obj2;
     } else {
       let sorted = activities;
       if (activities.length > 1) {
@@ -364,8 +364,8 @@ function updatePresenceInConnectionOpen(arg0) {
         HermesBuiltin.arraySpread(map.values(), 0);
         tmp13 = items2;
       }
-      obj = { status, clientStatus, activities: sorted, hiddenActivities: tmp13, processedAtTimestamp };
-      tmp5[guildId] = obj;
+      const obj3 = { status, clientStatus, activities: sorted, hiddenActivities: tmp13, processedAtTimestamp };
+      tmp5[guildId] = obj3;
     }
   }
 }
@@ -548,14 +548,13 @@ prototype["getPrimaryActivity"] = function getPrimaryActivity(arg0) {
 };
 prototype["getAllApplicationActivities"] = function getAllApplicationActivities(arg0) {
   const items = [];
-  let obj = SnowflakeUtilsDefault;
-  const keys = obj.keys(filteredActivities);
+  const keys = SnowflakeUtilsDefault.keys(filteredActivities);
   for (const item10015 of keys) {
     let tmp4 = filteredActivities[item10015];
     for (const item10023 of tmp4) {
       if (item10023.application_id === arg0) {
-        obj = { userId: tmp2, activity: tmp7 };
-        let arr = items.push(obj);
+        let obj2 = { userId: tmp2, activity: tmp7 };
+        let arr = items.push(obj2);
       }
       continue;
     }
@@ -642,9 +641,9 @@ const presenceStore = new PresenceStore(DispatcherDefault, {
     closure_10 = {};
     closure_16 = {};
     obj = { [id]: obj[id] };
-    obj = { [id]: obj[id] };
-    obj = { [id]: obj[id] };
-    obj1 = { [id]: obj1[id] };
+    obj2 = { [id]: obj2[id] };
+    obj3 = { [id]: obj3[id] };
+    obj4 = { [id]: obj4[id] };
     closure_15 = { [id]: {} };
     const set = new Set();
     let item = guilds.forEach((presences) => {

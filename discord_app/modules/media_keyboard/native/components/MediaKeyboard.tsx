@@ -24,7 +24,7 @@ const MediaKeyboardConstants = fn(1607);
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_8, ChatInputComponentViewedTypes: closure_9 } = Constants);
 const AppLauncherRouteName = fn(1482).AppLauncherRouteName;
-const KEYBOARD_ANIMATION_CONFIG = fn(12165).KEYBOARD_ANIMATION_CONFIG;
+const KEYBOARD_ANIMATION_CONFIG = fn(12166).KEYBOARD_ANIMATION_CONFIG;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
 const size = fn(2);
@@ -38,12 +38,15 @@ export default noop.memo(function MediaKeyboard(channel) {
   ({ id: arr[0], guild_id: arr[1] } = channel);
   ({ onClose, transitionState } = channel);
   const effect = sharedValue.useEffect(() => {
-    const obj = { type: constants2.MEDIA_PICKER, channel_id: channel.id, guild_id: channel.guild_id };
-    obj.track(constants.CHAT_INPUT_COMPONENT_VIEWED, obj);
+    AnalyticsUtilsDefault.track(constants.CHAT_INPUT_COMPONENT_VIEWED, {
+      type: constants2.MEDIA_PICKER,
+      channel_id: channel.id,
+      guild_id: channel.guild_id,
+    });
   }, items);
   let ref = sharedValue.useRef(null);
+  sharedValue = channel(ref[9]).useSharedValue(-1);
   let obj = channel(ref[9]);
-  sharedValue = obj.useSharedValue(-1);
   const sharedValue1 = channel(ref[9]).useSharedValue(0);
   let obj2 = channel(ref[9]);
   const keyboardContextForType = channel(ref[10]).useKeyboardContextForType(channel(ref[11]).KeyboardTypes.MEDIA);
@@ -103,23 +106,23 @@ export default noop.memo(function MediaKeyboard(channel) {
     }
     function onSelectItem(arg0) {
       ({ channelId, item, isIncluded } = arg0);
-      chatInputRef(ref[8]);
-      const obj = { action: isAppLauncherEnabled.MEDIA_SELECTED };
-      obj.track(closure_8.MEDIA_PICKER_ACTION_SHEET_ENGAGED, obj);
+      chatInputRef(ref[8]).track(closure_8.MEDIA_PICKER_ACTION_SHEET_ENGAGED, {
+        action: isAppLauncherEnabled.MEDIA_SELECTED,
+      });
       if (keyboardContextForType.target === token.CHAT) {
         const obj5 = channel(ref[18]);
         const result = obj5.handleSelectKeyboardItem(channelId, item, isIncluded, false);
       } else if (keyboardContextForType.target === tmp4.COMMAND) {
         const result1 = channel(ref[18]).mediaNodeToUploadItem(item);
         if (extensions.length > 0) {
-          let tmp19Result = channel(ref[19]);
-          const items = [tmp19Result.getFileFromUploadItem(result1).filename];
+          const items = [channel(ref[19]).getFileFromUploadItem(result1).filename];
           if (!validateFilenames(items)) {
             return showInvalidFileTypeAlert();
           }
+          const tmp19Result = channel(ref[19]);
         }
-        tmp19Result = channel(ref[18]);
-        const result2 = tmp19Result.addAttachmentForCommand(
+        const tmp19Result2 = channel(ref[18]);
+        const result2 = tmp19Result2.addAttachmentForCommand(
           channelId,
           onSelectFiles,
           result1,
@@ -128,13 +131,13 @@ export default noop.memo(function MediaKeyboard(channel) {
         );
         const obj6 = channel(ref[18]);
       }
+      const obj = chatInputRef(ref[8]);
+      const obj2 = { action: isAppLauncherEnabled.MEDIA_SELECTED };
     }
     return {
       onAttachPress() {
-        channel(ref[18]);
-        let obj = {};
         const FILE_ATTACHMENT = channel(ref[21]).UploadOrigin.FILE_ATTACHMENT;
-        obj = {
+        const merged = Object.assign({
           channel: onRestoreKeyboard,
           uploadLimit: closure_1_8.uploadLimit,
           extensions,
@@ -145,15 +148,13 @@ export default noop.memo(function MediaKeyboard(channel) {
           onSelectFiles(arg0) {
             return onSelectFiles(arg0, IMAGE_PICKER);
           },
-        };
-        const merged = Object.assign(obj);
-        obj.handleAttachFile(obj);
+        });
+        channel(ref[18]).handleAttachFile({});
       },
       onPressCamera(previewType) {
-        channel(ref[18]);
-        let obj = {};
+        const obj2 = {};
         const IMAGE_PICKER = channel(ref[21]).UploadOrigin.IMAGE_PICKER;
-        obj = {
+        const merged = Object.assign({
           channel: onRestoreKeyboard,
           uploadLimit: closure_1_8.uploadLimit,
           extensions,
@@ -164,10 +165,9 @@ export default noop.memo(function MediaKeyboard(channel) {
           onSelectFiles(arg0) {
             return onSelectFiles(arg0, IMAGE_PICKER);
           },
-        };
-        const merged = Object.assign(obj);
-        obj.previewType = previewType;
-        obj.handleCameraDialog(obj);
+        });
+        obj2.previewType = previewType;
+        channel(ref[18]).handleCameraDialog(obj2);
       },
       onPressHeader() {
         if (0 === sharedValue.get()) {
@@ -183,10 +183,24 @@ export default noop.memo(function MediaKeyboard(channel) {
         }
       },
       onViewAll() {
-        channel(ref[18]);
-        let obj = {};
+        const obj2 = {};
         const IMAGE_PICKER = channel(ref[21]).UploadOrigin.IMAGE_PICKER;
-        obj = {
+        const merged = Object.assign({
+          channel: onRestoreKeyboard,
+          uploadLimit: closure_1_8.uploadLimit,
+          extensions,
+          onDismissKeyboard() {
+            return IMAGE_PICKER(onSelectItem[20]).dismissKeyboard();
+          },
+          onRestoreKeyboard: IMAGE_PICKER,
+          onSelectFiles(arg0) {
+            return onSelectFiles(arg0, IMAGE_PICKER);
+          },
+        });
+        obj2.draftType = closure_1_8.draftType;
+        channel(ref[18]).handleViewAllDialog(obj2);
+        const obj = channel(ref[18]);
+        const obj3 = {
           channel: onRestoreKeyboard,
           uploadLimit: closure_1_8.uploadLimit,
           extensions,
@@ -198,9 +212,6 @@ export default noop.memo(function MediaKeyboard(channel) {
             return onSelectFiles(arg0, IMAGE_PICKER);
           },
         };
-        const merged = Object.assign(obj);
-        obj.draftType = closure_1_8.draftType;
-        obj.handleViewAllDialog(obj);
         if (obj4.isAndroid()) {
           const current = onSelectItem.current;
           if (current != null) {
@@ -210,8 +221,11 @@ export default noop.memo(function MediaKeyboard(channel) {
         obj4 = channel(ref[22]);
       },
       onManageLimited() {
-        const obj = { onDismissKeyboard: ChatInputUtils.dismissKeyboard, onRestoreKeyboard };
-        const result = obj.handleLimitedPickerDialog(obj);
+        const obj = MediaKeyboardUtils;
+        const result = obj.handleLimitedPickerDialog({
+          onDismissKeyboard: ChatInputUtils.dismissKeyboard,
+          onRestoreKeyboard,
+        });
       },
       onPressItem(channelId) {
         onSelectItem({ channelId: channelId.channelId, item: channelId.item, isIncluded: channelId.isIncluded });
@@ -221,8 +235,7 @@ export default noop.memo(function MediaKeyboard(channel) {
         const item = channelId.item;
         const isIncluded = channelId.isIncluded;
         let onRemove;
-        let obj = channel(ref[18]);
-        const result = obj.mediaNodeToUploadItem(item);
+        const result = channel(ref[18]).mediaNodeToUploadItem(item);
         const cloudUpload = new channel(ref[23]).CloudUpload(result, channelId);
         let upload;
         if (isIncluded) {
@@ -232,7 +245,7 @@ export default noop.memo(function MediaKeyboard(channel) {
         if (null != upload) {
           onRemove = () => MediaKeyboardUtils.handleSelectKeyboardItem(channelId, item, isIncluded, false);
         }
-        obj = {
+        const obj2 = {
           channelId,
           disableAddDescription: null == upload,
           disableSpoiler: null == upload,
@@ -242,39 +255,44 @@ export default noop.memo(function MediaKeyboard(channel) {
           onRemove: null,
         };
         let tmp8 = upload;
+        const obj = channel(ref[18]);
         if (upload == null) {
           tmp8 = cloudUpload;
         }
-        obj.upload = tmp8;
+        obj2.upload = tmp8;
         let fn2;
         if (null == upload) {
           fn2 = () => onSelectItem({ channelId, item, isIncluded });
         }
-        obj.onAdd = fn2;
-        obj.onEdit = function onEdit(arg0) {
+        obj2.onAdd = fn2;
+        obj2.onEdit = function onEdit(arg0) {
           if (fn != null) {
             tmp();
           }
           const items = [arg0];
           onSelectFiles(items, Upload.UploadOrigin.IMAGE_EDITOR);
         };
-        obj.onRemove = onRemove;
-        chatInputRef(ref[24])(obj);
+        obj2.onRemove = onRemove;
+        chatInputRef(ref[24])(obj2);
         const tmp7 = chatInputRef(ref[24]);
       },
       onPollsPress() {
-        let obj = { type: constants2.POLLS, channel_id: channel.id, guild_id: channel.guild_id };
-        obj.track(constants.CHAT_INPUT_COMPONENT_VIEWED, obj);
+        AnalyticsUtilsDefault.track(constants.CHAT_INPUT_COMPONENT_VIEWED, {
+          type: constants2.POLLS,
+          channel_id: channel.id,
+          guild_id: channel.guild_id,
+        });
         const current = chatInputRef.current;
         current.closeCustomKeyboard();
-        obj = { channel, onCancel: onRestoreKeyboard };
-        PollCreationModalActionCreators.openCreatePollModal(obj);
+        const obj2 = { type: constants2.POLLS, channel_id: channel.id, guild_id: channel.guild_id };
+        PollCreationModalActionCreators.openCreatePollModal({ channel, onCancel: onRestoreKeyboard });
       },
       onAppsPress() {
         const current = onSelectFiles.current;
-        let obj = { type: channel(ref[11]).KeyboardTypes.APP_LAUNCHER, context: null };
-        obj = { initialRouteName: validateFilenames.HOME };
-        obj.context = obj;
+        const obj = {
+          type: channel(ref[11]).KeyboardTypes.APP_LAUNCHER,
+          context: { initialRouteName: validateFilenames.HOME },
+        };
         current.openCustomKeyboard(obj);
       },
       onThreadPress() {
@@ -297,7 +315,7 @@ export default noop.memo(function MediaKeyboard(channel) {
   items2[4] = canStartThreads;
   const memo1 = sharedValue.useMemo(() => {
     if (isAppLauncherEnabled) {
-      let obj = { text: null, IconComponent: null, onPress: null, disabled: false };
+      const obj = { text: null, IconComponent: null, onPress: null, disabled: false };
       const intl = util.intl;
       obj.text = intl.string(util.t.PHjkRE);
       obj.IconComponent = AppsIcon.AppsIcon;
@@ -308,37 +326,37 @@ export default noop.memo(function MediaKeyboard(channel) {
       items1 = [];
     }
     if (canStartThreads) {
-      obj = { text: null, IconComponent: null, onPress: null, disabled: false };
+      const obj2 = { text: null, IconComponent: null, onPress: null, disabled: false };
       const intl2 = util.intl;
-      obj.text = intl2.string(util.t["7Xm5QI"]);
-      obj.IconComponent = ThreadIcon.ThreadIcon;
-      obj.onPress = memo.onThreadPress;
-      const items2 = [obj];
+      obj2.text = intl2.string(util.t["7Xm5QI"]);
+      obj2.IconComponent = ThreadIcon.ThreadIcon;
+      obj2.onPress = memo.onThreadPress;
+      const items2 = [obj2];
       let items3 = items2;
     } else {
       items3 = [];
     }
-    obj = { text: null, IconComponent: null, onPress: null, disabled: null };
+    const obj3 = { text: null, IconComponent: null, onPress: null, disabled: null };
     const intl3 = util.intl;
-    obj.text = intl3.string(util.t.RgIi2B);
-    obj.IconComponent = PollsIcon.PollsIcon;
-    obj.onPress = memo.onPollsPress;
-    obj.disabled = !closure_8.canPostPolls;
-    const items4 = [obj, ...items1];
-    const obj1 = { text: null, IconComponent: null, onPress: null, disabled: null };
+    obj3.text = intl3.string(util.t.RgIi2B);
+    obj3.IconComponent = PollsIcon.PollsIcon;
+    obj3.onPress = memo.onPollsPress;
+    obj3.disabled = !closure_8.canPostPolls;
+    const items4 = [obj3, ...items1];
+    const obj4 = { text: null, IconComponent: null, onPress: null, disabled: null };
     const intl4 = util.intl;
-    obj1.text = intl4.string(util.t["8Hvr3+"]);
-    obj1.IconComponent = AttachmentIcon.AttachmentIcon;
-    obj1.onPress = memo.onAttachPress;
-    obj1.disabled = closure_8.uploadDisabled;
-    items4[tmp15] = obj1;
-    const obj2 = { text: null, IconComponent: null, onPress: null, disabled: null };
+    obj4.text = intl4.string(util.t["8Hvr3+"]);
+    obj4.IconComponent = AttachmentIcon.AttachmentIcon;
+    obj4.onPress = memo.onAttachPress;
+    obj4.disabled = closure_8.uploadDisabled;
+    items4[tmp15] = obj4;
+    const obj5 = { text: null, IconComponent: null, onPress: null, disabled: null };
     const intl5 = util.intl;
-    obj2.text = intl5.string(util.t.Zmm6dN);
-    obj2.IconComponent = ImageIcon.ImageIcon;
-    obj2.onPress = memo.onViewAll;
-    obj2.disabled = closure_8.uploadDisabled;
-    const items5 = [obj2, ...items4];
+    obj5.text = intl5.string(util.t.Zmm6dN);
+    obj5.IconComponent = ImageIcon.ImageIcon;
+    obj5.onPress = memo.onViewAll;
+    obj5.disabled = closure_8.uploadDisabled;
+    const items5 = [obj5, ...items4];
     return items5;
   }, items2);
   ref = sharedValue.useRef(null);
@@ -357,39 +375,39 @@ export default noop.memo(function MediaKeyboard(channel) {
     if (flag === undefined) {
       flag = false;
     }
-    let obj = {
+    const obj = {
       animateOnMount: flag,
       animatedIndex: sharedValue,
       animatedPosition: sharedValue1,
       initialPosition: animateOnMount.initialPosition,
       children: null,
     };
-    obj = {
-      ref,
-      animatedIndex: sharedValue,
-      channelId: channel.id,
-      draftType: closure_8.draftType,
-      onSend: memo.onSend,
-    };
-    const items = [closure_2_12(MediaKeyboardFloatingSendDefault, obj)];
-    obj = {
-      canPostPolls: closure_8.canPostPolls,
-      onHeightChange(arg0) {
-        const current = ref.current;
-        let setInsetFabResult;
-        if (current != null) {
-          setInsetFabResult = current.setInsetFab(arg0 + token);
-        }
-        return setInsetFabResult;
-      },
-      uploadDisabled: closure_8.uploadDisabled,
-      overflowButtons: memo1,
-    };
-    items[1] = closure_2_12(MediaKeyboardBottomSheetActionsDefault, obj);
+    const items = [
+      closure_2_12(MediaKeyboardFloatingSendDefault, {
+        ref,
+        animatedIndex: sharedValue,
+        channelId: channel.id,
+        draftType: closure_8.draftType,
+        onSend: memo.onSend,
+      }),
+      closure_2_12(MediaKeyboardBottomSheetActionsDefault, {
+        canPostPolls: closure_8.canPostPolls,
+        onHeightChange(arg0) {
+          const current = ref.current;
+          let setInsetFabResult;
+          if (current != null) {
+            setInsetFabResult = current.setInsetFab(arg0 + token);
+          }
+          return setInsetFabResult;
+        },
+        uploadDisabled: closure_8.uploadDisabled,
+        overflowButtons: memo1,
+      }),
+    ];
     obj.children = items;
     return map1(MediaKeyboardAccessoriesContainerDefault, obj);
   }, items4);
-  obj = {
+  const obj8 = {
     animationConfigs: showInvalidFileTypeAlert,
     animatedIndex: sharedValue,
     animatedPosition: sharedValue1,
@@ -406,7 +424,7 @@ export default noop.memo(function MediaKeyboard(channel) {
     children: null,
   };
   const obj7 = channel(ref[17]);
-  obj = {
+  obj8.children = memo(chatInputRef(ref[37]), {
     channel,
     draftType: tmp8.draftType,
     onPressCamera: memo.onPressCamera,
@@ -421,7 +439,6 @@ export default noop.memo(function MediaKeyboard(channel) {
     uploadDisabled: tmp8.uploadDisabled,
     uploadLimit: tmp8.uploadLimit,
     disableWhenReachedLimit: tmp8.disableWhenReachedLimit,
-  };
-  obj.children = memo(chatInputRef(ref[37]), obj);
-  return memo(chatInputRef(ref[36]), obj);
+  });
+  return memo(chatInputRef(ref[36]), obj8);
 });

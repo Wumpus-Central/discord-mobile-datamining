@@ -9,17 +9,17 @@ function formatExpirationLabel(expiry) {
     const diffResult = expiry.diff(tmp2, "days");
     if (diffResult > 1) {
       const intl3 = util.intl;
-      let obj = { days: diffResult };
-      return intl3.formatToPlainString(util.t.dex68a, obj);
+      const obj2 = { days: diffResult };
+      return intl3.formatToPlainString(util.t.dex68a, obj2);
     } else {
       const diffResult1 = expiry.diff(tmp2, "hours");
       if (diffResult1 > 1) {
         const intl2 = util.intl;
-        obj = { hours: diffResult1 };
-        return intl2.formatToPlainString(util.t.BWqf0c, obj);
+        const obj3 = { hours: diffResult1 };
+        return intl2.formatToPlainString(util.t.BWqf0c, obj3);
       } else {
         const intl = util.intl;
-        obj = { minutes: expiry.diff(tmp2, "minutes") };
+        const obj = { minutes: expiry.diff(tmp2, "minutes") };
         return intl.formatToPlainString(util.t["3SLXAz"], obj);
       }
     }

@@ -38,17 +38,16 @@ export default function usePremiumFeatureUpsellGetNitro(arg0, arg1, page, arg3) 
       const _Object = Object;
       tmp3 = 0 === Object.keys(premiumTypeSubscription).length;
     }
-    let obj = UserOfferStore;
-    const tmp5 = UserOfferStore.hasFetchedOffer() && !obj.hasAnyUnexpiredOffer();
+    const tmp5 = UserOfferStore.hasFetchedOffer() && !UserOfferStore.hasAnyUnexpiredOffer();
     if (result) {
       if (tmp3) {
         if (tmp5) {
-          obj = { analyticsLocation: null, analyticsLocations: null, premiumType: null };
-          obj = { page, objectType: AnalyticsObjectTypes.BUY };
-          obj.analyticsLocation = obj;
-          obj.analyticsLocations = analyticsLocations;
-          obj.premiumType = closure_0 ? PremiumTypes.TIER_0 : PremiumTypes.TIER_2;
-          openPremiumPlanSelectionActionSheetDefault(obj, dependencyMap);
+          const obj5 = { analyticsLocation: null, analyticsLocations: null, premiumType: null };
+          const obj6 = { page, objectType: AnalyticsObjectTypes.BUY };
+          obj5.analyticsLocation = obj6;
+          obj5.analyticsLocations = analyticsLocations;
+          obj5.premiumType = closure_0 ? PremiumTypes.TIER_0 : PremiumTypes.TIER_2;
+          openPremiumPlanSelectionActionSheetDefault(obj5, dependencyMap);
         }
       }
     }
@@ -94,7 +93,7 @@ export default function usePremiumFeatureUpsellGetNitro(arg0, arg1, page, arg3) 
       }
     }
     closure_1();
-    isFetchingOfferResult = obj.isFetchingOffer();
+    isFetchingOfferResult = UserOfferStore.isFetchingOffer();
     const bestActiveInput = ChatInputUtils.getBestActiveInput();
     if (bestActiveInput != null) {
       bestActiveInput.closeCustomKeyboard();

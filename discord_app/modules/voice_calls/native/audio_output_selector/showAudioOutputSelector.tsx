@@ -13,14 +13,14 @@ const result = size.fileFinishedImporting(
 );
 
 export const showAudioOutputSelector = function showAudioOutputSelector(channelId, isConnectedToVoiceChannel) {
-  let obj = PlatformUtils;
   if (obj.isAndroid()) {
-    obj = { channelId, isConnectedToVoiceChannel };
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(9245, dependencyMap.paths), closure_4, obj);
+    const obj3 = { channelId, isConnectedToVoiceChannel };
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(9245, dependencyMap.paths), closure_4, obj3);
   } else {
     const AudioRoutePicker = NativeModules.AudioRoutePicker;
     if (AudioRoutePicker != null) {
       AudioRoutePicker.showAudioPicker();
     }
   }
+  obj = PlatformUtils;
 };

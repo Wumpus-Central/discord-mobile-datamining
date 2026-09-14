@@ -26,20 +26,19 @@ export default noop.memo(function KeyboardAwareView(style) {
   let marginBottom;
   closure_5 = undefined;
   let ref;
-  let obj = ref;
   let systemKeyboardHeight = style(flag[5]).getSystemKeyboardHeight();
   if (0 === systemKeyboardHeight) {
-    let tmpResult = tmp(tmp2[6]);
-    let keyboardType = tmpResult.getKeyboardType();
+    let keyboardType = tmp(tmp2[6]).getKeyboardType();
     let num2 = 0;
     if (keyboardType !== tmp(tmp2[7]).KeyboardTypes.SYSTEM) {
-      tmpResult = tmp(tmp2[8]);
-      num2 = tmpResult.getCustomKeyboardHeight();
+      num2 = tmp(tmp2[8]).getCustomKeyboardHeight();
+      const tmpResult2 = tmp(tmp2[8]);
     }
     systemKeyboardHeight = num2;
+    const tmpResult = tmp(tmp2[6]);
   }
   ref = ref.useRef(Math.max(0, systemKeyboardHeight + num));
-  const tmp6 = num(obj.useState(ref.current), 2);
+  const tmp6 = num(ref.useState(ref.current), 2);
   marginBottom = tmp6[0];
   closure_5 = tmp6[1];
   const items = [num];
@@ -48,14 +47,14 @@ export default noop.memo(function KeyboardAwareView(style) {
       subscribeToKeyboardUIStore(() => {
         let systemKeyboardHeight = style(flag[5]).getSystemKeyboardHeight();
         if (0 === systemKeyboardHeight) {
-          let tmp2Result = style(flag[6]);
-          const keyboardType = tmp2Result.getKeyboardType();
+          const keyboardType = style(flag[6]).getKeyboardType();
           num = 0;
           if (keyboardType !== style(flag[7]).KeyboardTypes.SYSTEM) {
-            tmp2Result = style(flag[8]);
-            num = tmp2Result.getCustomKeyboardHeight();
+            num = style(flag[8]).getCustomKeyboardHeight();
+            const tmp2Result2 = style(flag[8]);
           }
           systemKeyboardHeight = num;
+          const tmp2Result = style(flag[6]);
         }
         const bound = Math.max(0, systemKeyboardHeight + closure_1_2);
         if (ref.current !== bound) {
@@ -84,46 +83,26 @@ export default noop.memo(function KeyboardAwareView(style) {
     }
   }, items1);
   const items2 = [marginBottom, style];
-  obj = {
-    style: obj.useMemo(() => {
-      if (null == style) {
-        let obj = { marginBottom };
-        return obj;
-      } else {
-        const flattenResult = hasOwnProperty.flatten(tmp);
-        if (typeof flattenResult.marginBottom === "number") {
-          obj = {};
-          const merged = Object.assign(flattenResult);
-          obj.marginBottom = flattenResult.marginBottom + marginBottom;
-        } else {
-          obj = {};
-          const merged1 = Object.assign(flattenResult);
-          obj.marginBottom = marginBottom;
-        }
-        return obj;
-      }
-    }, items2),
-    pointerEvents,
-    children,
-  };
+  let obj2 = style(flag[5]);
   return (
     <marginBottom
-      style={obj.useMemo(() => {
+      style={ref.useMemo(() => {
         if (null == style) {
-          let obj = { marginBottom };
-          return obj;
+          const obj2 = { marginBottom };
+          return obj2;
         } else {
           const flattenResult = hasOwnProperty.flatten(tmp);
           if (typeof flattenResult.marginBottom === "number") {
-            obj = {};
+            const obj = {};
             const merged = Object.assign(flattenResult);
             obj.marginBottom = flattenResult.marginBottom + marginBottom;
+            let obj3 = obj;
           } else {
-            obj = {};
+            obj3 = {};
             const merged1 = Object.assign(flattenResult);
-            obj.marginBottom = marginBottom;
+            obj3.marginBottom = marginBottom;
           }
-          return obj;
+          return obj3;
         }
       }, items2)}
       pointerEvents={pointerEvents}

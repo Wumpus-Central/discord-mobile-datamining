@@ -91,21 +91,21 @@ export const installWebsocketTelemetryHook = function installWebsocketTelemetryH
   } else {
     _globalThis = global;
     if (undefined === global) {
-      let _window = window;
-      _window = null;
+      const _window = window;
+      let _window1 = null;
       if (typeof window !== "undefined") {
-        _window = window;
+        _window1 = window;
       }
-      _globalThis = _window;
+      _globalThis = _window1;
     }
   }
-  let _WebSocket;
+  let _WebSocket1;
   if (_globalThis != null) {
-    _WebSocket = _globalThis.WebSocket;
+    _WebSocket1 = _globalThis.WebSocket;
   }
-  if (null != _WebSocket) {
+  if (null != _WebSocket1) {
     if (!_globalThis.__discordWebsocketTelemetryPatched) {
-      _WebSocket = _globalThis.WebSocket;
+      const _WebSocket = _globalThis.WebSocket;
       class PatchedWebSocket {
         constructor() {
           items = [...arguments];

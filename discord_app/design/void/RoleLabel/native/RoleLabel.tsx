@@ -21,26 +21,25 @@ export const RoleLabel = function RoleLabel(color) {
   color = color.color;
   ({ name, colors } = color);
   const tmp = closure_6();
-  let obj = initialize;
   const items = [AccessibilityStore];
-  const stateFromStores = obj.useStateFromStores(items, () => roleStyle.roleStyle);
+  const stateFromStores = initialize.useStateFromStores(items, () => roleStyle.roleStyle);
   let tmp5 = "username" === stateFromStores;
   if (tmp5) {
     tmp5 = null != color;
   }
   if (tmp5) {
-    obj = { color };
+    const obj2 = { color };
   }
-  obj = { style: tmp.container, children: null };
+  const obj3 = { style: tmp.container, children: null };
   let tmp10 = "dot" === stateFromStores;
   if (tmp10) {
     tmp10 = null != color;
   }
   if (tmp10) {
-    const obj1 = { color, colors, containerStyles: tmp.roleDot };
-    tmp10 = React4(native.RoleDot, obj1);
+    const obj4 = { color, colors, containerStyles: tmp.roleDot };
+    tmp10 = React4(native.RoleDot, obj4);
   }
   const items1 = [tmp10, React4(Form.FormLabel, { style: {}, text: name })];
-  obj.children = items1;
-  return hasOwnProperty(View, obj);
+  obj3.children = items1;
+  return hasOwnProperty(View, obj3);
 };

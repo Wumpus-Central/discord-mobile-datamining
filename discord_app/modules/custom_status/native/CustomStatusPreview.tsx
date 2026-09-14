@@ -13,13 +13,13 @@ const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 const createStyles = fn(4636);
 let closure_9 = createStyles.createStyles((arg0) => {
-  let obj = {
+  const obj = {
     flex: 1,
     position: "relative",
     overflow: "hidden",
     width: 323,
     maxHeight: 301,
-    borderWidth: num,
+    borderWidth: 1,
     borderColor: null,
     borderRadius: null,
   };
@@ -31,16 +31,13 @@ let closure_9 = createStyles.createStyles((arg0) => {
     BACKGROUND_SURFACE_HIGH = colors.BACKGROUND_SURFACE_HIGH;
     tmp4 = importDefault;
   }
-  obj = {
-    profileContainer: null,
-    profileEffect: null,
-    borderColor: BACKGROUND_SURFACE_HIGH,
-    borderRadius: tmp4(576).radii.lg,
-  };
+  const obj2 = { profileContainer: null, profileEffect: null };
+  obj.borderColor = BACKGROUND_SURFACE_HIGH;
+  obj.borderRadius = tmp4(576).radii.lg;
   const merged = Object.assign(tmp4(576).shadows.SHADOW_HIGH);
-  obj.profileContainer = obj;
-  obj.profileEffect = { zIndex: 1 };
-  return obj;
+  obj2.profileContainer = obj;
+  obj2.profileEffect = { zIndex: 1 };
+  return obj2;
 });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/custom_status/native/CustomStatusPreview.tsx");
@@ -55,25 +52,23 @@ export default function CustomStatusPreview(user) {
   ({ theme, primaryColor, secondaryColor } = pendingStatusText(pendingStatusEmoji[8])({ user, displayProfile: tmp3 }));
   const tmp7 = closure_9(null != primaryColor);
   const tmp8 = pendingStatusText(pendingStatusEmoji[9])();
-  let obj = user(pendingStatusEmoji[10]);
-  const userProfileColors = obj.useUserProfileColors({ theme, primaryColor, secondaryColor });
+  const tmp5 = pendingStatusText(pendingStatusEmoji[8])({ user, displayProfile: tmp3 });
+  const userProfileColors = user(pendingStatusEmoji[10]).useUserProfileColors({ theme, primaryColor, secondaryColor });
   const items = [user, pendingStatusText, pendingStatusEmoji];
   ({ gradientFallbackBackground, avatarBackground, containerBackground } = userProfileColors);
   const callback = noop.useCallback(() => {
-    let obj = ChatInputUtils;
-    obj.dismissKeyboard();
-    obj = { user, previewText: pendingStatusText, previewEmoji: pendingStatusEmoji };
+    ChatInputUtils.dismissKeyboard();
     ActionSheetActionCreatorsDefault.openLazy(
-      asyncRequireImpl(11283, dependencyMap.paths),
+      asyncRequireImpl(11284, dependencyMap.paths),
       "UserProfileCustomStatusActionSheet",
-      obj,
+      { user, previewText: pendingStatusText, previewEmoji: pendingStatusEmoji },
       "stack",
     );
   }, items);
-  obj = { theme, primaryColor, secondaryColor, children: null };
-  obj = { style: null, children: null };
+  const obj2 = { theme, primaryColor, secondaryColor, children: null };
+  const obj3 = { style: null, children: null };
   const items1 = [tmp7.profileContainer];
-  obj.style = items1;
+  obj3.style = items1;
   const items2 = [
     closure_7(pendingStatusText(pendingStatusEmoji[16]), {
       user,
@@ -90,7 +85,7 @@ export default function CustomStatusPreview(user) {
       disableStatus: true,
     }),
   ];
-  const obj1 = {
+  const obj4 = {
     fallbackBackground: gradientFallbackBackground,
     primaryColor,
     secondaryColor: primaryColor,
@@ -100,7 +95,7 @@ export default function CustomStatusPreview(user) {
   const items4 = [, ,];
   ({ profileContentWrapper: arr5[0], profileContent: arr5[1] } = tmp8);
   let tmp15 = "" !== pendingStatusText;
-  const tmp5 = pendingStatusText(pendingStatusEmoji[8])({ user, displayProfile: tmp3 });
+  let obj = user(pendingStatusEmoji[10]);
   if (!tmp15) {
     tmp15 = null !== pendingStatusEmoji;
   }
@@ -109,11 +104,11 @@ export default function CustomStatusPreview(user) {
   }
   let tmp16 = !tmp15;
   if (!tmp15) {
-    const obj2 = { paddingTop };
-    tmp16 = obj2;
+    const obj5 = { paddingTop };
+    tmp16 = obj5;
   }
   items4[2] = tmp16;
-  obj1.containerStyle = items4;
+  obj4.containerStyle = items4;
   const items5 = [
     closure_7(pendingStatusText(pendingStatusEmoji[19]), {
       hasCustomProfileTheme: null != primaryColor,
@@ -125,7 +120,7 @@ export default function CustomStatusPreview(user) {
       placeholderText,
     }),
   ];
-  const obj4 = {
+  const obj7 = {
     user,
     themeType: constants.PREVIEW,
     pronouns: null,
@@ -134,19 +129,28 @@ export default function CustomStatusPreview(user) {
     showBadgeToastOnPress: false,
   };
   let pronouns;
-  let tmpResult = tmp(tmp2[20]);
+  const obj6 = {
+    hasCustomProfileTheme: null != primaryColor,
+    style: tmp8.customStatusBubble,
+    emojiOnlyStyle: tmp8.emojiOnlyCustomStatusBubble,
+    onPressTruncatedStatus: callback,
+    previewEmoji: pendingStatusEmoji,
+    previewText: pendingStatusText,
+    placeholderText,
+  };
+  const tmp14 = pendingStatusText(pendingStatusEmoji[18]);
   if (tmp3 != null) {
     pronouns = tmp3.pronouns;
   }
-  const obj5 = { children: null };
-  obj4.pronouns = pronouns;
-  obj4.badges = tmp4;
-  obj4.badgeContainerBackground = containerBackground;
-  items5[1] = closure_7(tmpResult, obj4);
-  obj1.children = items5;
-  items3[1] = closure_8(pendingStatusText(pendingStatusEmoji[18]), obj1);
-  obj5.children = items3;
-  items2[1] = closure_8(View, obj5);
+  const obj8 = { children: null };
+  obj7.pronouns = pronouns;
+  obj7.badges = tmp4;
+  obj7.badgeContainerBackground = containerBackground;
+  items5[1] = closure_7(pendingStatusText(pendingStatusEmoji[20]), obj7);
+  obj4.children = items5;
+  items3[1] = closure_8(tmp14, obj4);
+  obj8.children = items3;
+  items2[1] = closure_8(View, obj8);
   let profileEffect;
   if (tmp3 != null) {
     profileEffect = tmp3.profileEffect;
@@ -154,15 +158,15 @@ export default function CustomStatusPreview(user) {
   let tmp11Result = null != profileEffect;
   if (tmp11Result) {
     let skuId;
-    tmpResult = tmp(tmp2[21]);
     if (tmp3 != null) {
       skuId = tmp3.profileEffect.skuId;
     }
-    const obj6 = { skuId, style: tmp7.profileEffect };
-    tmp11Result = closure_7(tmpResult, obj6);
+    const obj9 = { skuId, style: tmp7.profileEffect };
+    tmp11Result = closure_7(tmp(tmp2[21]), obj9);
+    const tmpResult2 = tmp(tmp2[21]);
   }
   items2[2] = tmp11Result;
-  obj.children = items2;
-  obj.children = closure_8(View, obj);
-  return closure_7(user(pendingStatusEmoji[15]).ThemeContextProvider, obj);
+  obj3.children = items2;
+  obj2.children = closure_8(View, obj3);
+  return closure_7(user(pendingStatusEmoji[15]).ThemeContextProvider, obj2);
 }

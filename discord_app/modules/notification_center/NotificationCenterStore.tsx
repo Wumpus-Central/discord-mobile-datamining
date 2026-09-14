@@ -99,12 +99,12 @@ obj = {
   NOTIFICATION_CENTER_ITEMS_LOCAL_ACK: function handleAck(localIds) {
     localIds = localIds.localIds;
     const item = localIds.forEach((item) => {
-      localItemAcks = {};
-      const merged = Object.assign(localItemAcks);
-      localItemAcks = {};
-      const merged1 = Object.assign(localItemAcks.localItemAcks);
-      localItemAcks[item] = Date.now();
-      localItemAcks.localItemAcks = localItemAcks;
+      obj = {};
+      const merged = Object.assign(obj);
+      const obj2 = {};
+      const merged1 = Object.assign(obj.localItemAcks);
+      obj2[item] = Date.now();
+      obj.localItemAcks = obj2;
     });
   },
   NOTIFICATION_CENTER_REFRESH: function handleRefreshData() {

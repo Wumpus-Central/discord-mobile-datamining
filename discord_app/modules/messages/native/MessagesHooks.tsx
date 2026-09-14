@@ -14,6 +14,8 @@ import GuildAvailabilityStore from "../../../stores/GuildAvailabilityStore.tsx";
 import GuildStore from "../../../stores/GuildStore.tsx";
 import PresenceStore from "../../../stores/PresenceStore.tsx";
 
+const require = globalThis.__r;
+
 require = fn;
 const findNodeHandle = fn(17).findNodeHandle;
 let closure_7 = fn(9615).updateShouldShowJumpToPresentButton;
@@ -135,7 +137,16 @@ export const useMessagesLifecycle = function useMessagesLifecycle(screenIndex) {
   screenIndex = screenIndex.screenIndex;
   ({ updateRows: findNodeHandle, scrollToMessageId: VoiceChannelStartTimeStore } = screenIndex);
   const effect = screenIndex.useEffect(() => {
-    const obj = {
+    messages_MessagesUtils.syncMessageDisplay({
+      messages,
+      isMessagesReady,
+      oldestUnreadMessageId,
+      channelId,
+      screenIndex,
+      updateRows,
+      scrollToMessageId,
+    });
+    const obj2 = {
       messages,
       isMessagesReady,
       oldestUnreadMessageId,
@@ -144,7 +155,6 @@ export const useMessagesLifecycle = function useMessagesLifecycle(screenIndex) {
       updateRows,
       scrollToMessageId,
     };
-    obj.syncMessageDisplay(obj);
     messages_MessagesUtils.recordTimings(channelId, messages);
   }, []);
   const items = [channelId, screenIndex];
@@ -214,7 +224,7 @@ export const useChatUpdatesQueue = function useChatUpdatesQueue(ref5, callback) 
   return memo;
 };
 export const useMessagesState = function useMessagesState() {
-  [tmp2, tmp3] = _slicedToArray(noop.useState(false), 2);
+  [tmp2, tmp3] = noop.useState(false);
   const tmp4 = _slicedToArray(noop.useState(false), 2);
   return {
     shouldForceRender: tmp2,

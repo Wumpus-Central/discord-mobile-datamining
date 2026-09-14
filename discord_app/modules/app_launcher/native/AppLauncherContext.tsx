@@ -80,7 +80,7 @@ export const useAppLauncherContext = function useAppLauncherContext() {
   const TEXT = AppLauncherTypes.AppLauncherEntrypoint.TEXT;
   const defaultAppLauncherWidth = useDefaultAppLauncherWidth.useDefaultAppLauncherWidth(TEXT);
   c0 = false;
-  obj = {
+  const ref = noop.useRef({
     getApplicationCommandManager() {
       if (!c0) {
         const _Error = Error;
@@ -102,8 +102,7 @@ export const useAppLauncherContext = function useAppLauncherContext() {
         throw error;
       }
     },
-  };
-  const ref = noop.useRef(obj);
+  });
   const items = [defaultAppLauncherWidth, TEXT, ref, sharedValue, sharedValue1];
   const memo = noop.useMemo(
     () => ({

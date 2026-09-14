@@ -15,13 +15,17 @@ const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 const createStyles = fn(4636);
 let closure_7 = createStyles.createStyles(() => {
-  let obj = { container: null, headerLabel: null, orbRow: null, rive: null, orbAmount: null };
-  obj = { flex: 1, alignItems: "center", justifyContent: "center", gap: nativeDefault.space.PX_4 };
-  obj.container = obj;
-  obj.headerLabel = { textTransform: "uppercase" };
-  obj = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4 };
-  obj.orbRow = obj;
+  const obj = {
+    container: { flex: 1, alignItems: "center", justifyContent: "center", gap: nativeDefault.space.PX_4 },
+    headerLabel: { textTransform: "uppercase" },
+    orbRow: null,
+    rive: null,
+    orbAmount: null,
+  };
+  const obj2 = { flex: 1, alignItems: "center", justifyContent: "center", gap: nativeDefault.space.PX_4 };
+  obj.orbRow = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4 };
   obj.rive = { flex: 1, width: "100%" };
+  const obj3 = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4 };
   let num = 0;
   if (obj4.isIOS()) {
     num = 6;
@@ -35,11 +39,13 @@ const result = size.fileFinishedImporting("modules/quests/native/BountiesModal/B
 export const BountiesScrollRecapFooter = function BountiesScrollRecapFooter(orbAmount) {
   orbAmount = orbAmount.orbAmount;
   const tmp = closure_7();
-  let obj = useTypeConsolidationTextTransform;
-  const typeConsolidationEyebrow = obj.useTypeConsolidationEyebrow("BountiesScrollRecapFooter", "text-xs/bold");
+  const typeConsolidationEyebrow = useTypeConsolidationTextTransform.useTypeConsolidationEyebrow(
+    "BountiesScrollRecapFooter",
+    "text-xs/bold",
+  );
   const intl = util.intl;
   const stringResult = intl.string(util.t.d6Rrn6);
-  obj = {
+  const obj2 = {
     style: tmp.container,
     pointerEvents: "none",
     accessible: true,
@@ -47,7 +53,7 @@ export const BountiesScrollRecapFooter = function BountiesScrollRecapFooter(orbA
     accessibilityLabel: "" + stringResult + ", +" + orbAmount,
     children: null,
   };
-  obj = {
+  const obj3 = {
     variant: typeConsolidationEyebrow.variant,
     color: "text-brand",
     style: null,
@@ -55,42 +61,41 @@ export const BountiesScrollRecapFooter = function BountiesScrollRecapFooter(orbA
     children: stringResult,
   };
   const items = [tmp.headerLabel, typeConsolidationEyebrow.style];
-  obj.style = items;
-  const items1 = [hasOwnProperty(Text_Text.Text, obj)];
-  const obj1 = {
+  obj3.style = items;
+  const items1 = [hasOwnProperty(Text_Text.Text, obj3)];
+  const obj4 = {
     style: tmp.orbRow,
     accessible: false,
     importantForAccessibility: "no-hide-descendants",
     children: null,
   };
-  const items2 = [
-    hasOwnProperty(OrbsIcon.OrbsIcon, { size: "sm", color: "icon-strong", accessible: false }),
-    hasOwnProperty(Text_Text.Text, {
-      variant: "display-sm",
-      color: "text-strong",
-      accessible: false,
-      style: tmp.orbAmount,
-      children: "+" + orbAmount,
-    }),
-  ];
-  obj1.children = items2;
-  items1[1] = timestampProducer(View, obj1);
-  obj.children = items1;
-  return timestampProducer(View, obj);
+  const items2 = [hasOwnProperty(OrbsIcon.OrbsIcon, { size: "sm", color: "icon-strong", accessible: false })];
+  items2[1] = hasOwnProperty(Text_Text.Text, {
+    variant: "display-sm",
+    color: "text-strong",
+    accessible: false,
+    style: tmp.orbAmount,
+    children: "+" + orbAmount,
+  });
+  obj4.children = items2;
+  items1[1] = timestampProducer(View, obj4);
+  obj2.children = items1;
+  return timestampProducer(View, obj2);
 };
 export const BountiesScrollRecapFooterGradient = function BountiesScrollRecapFooterGradient() {
+  const tmp = closure_7();
   const items = [AccessibilityStore];
-  const obj = { style: closure_7().rive, children: null };
-  const stateFromStores = obj.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
+  const obj2 = { style: tmp.rive, children: null };
+  const stateFromStores = initialize.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   let str = "play";
   if (stateFromStores) {
     str = "halt";
   }
-  obj.children = hasOwnProperty(native.BountiesScrollGradientRive, {
+  obj2.children = hasOwnProperty(native.BountiesScrollGradientRive, {
     stateMachine: "State Machine 1",
     fit: "fill",
     alignment: "bottom-center",
     withReducedMotion: str,
   });
-  return hasOwnProperty(View, obj);
+  return hasOwnProperty(View, obj2);
 };

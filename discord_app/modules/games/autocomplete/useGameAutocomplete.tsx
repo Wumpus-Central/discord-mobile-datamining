@@ -7,8 +7,8 @@ import GameAutocompleteStore from "GameAutocompleteStore.tsx";
 
 require = fn;
 const QueryIds = fn(1074).QueryIds;
-fn(504);
-const initialize = {
+const initialize = fn(504);
+const fetchStore = initialize.createFetchStore(GameAutocompleteStore, {
   getQueryId(query) {
     return QueryIds.GAME_AUTOCOMPLETE(GameAutocompleteUtils.normalizeGameAutocompleteQuery(query));
   },
@@ -45,8 +45,7 @@ const initialize = {
   },
   staleAfter: 3600,
   failureStaleAfter: 60,
-};
-const fetchStore = initialize.createFetchStore(GameAutocompleteStore, initialize);
+});
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/games/autocomplete/useGameAutocomplete.tsx");
 
@@ -54,11 +53,10 @@ export const GAME_AUTOCOMPLETE_DEBOUNCE_MS = 200;
 export const GAME_AUTOCOMPLETE_DEBOUNCE_MAX_WAIT_MS = 500;
 export const useGameAutocomplete = fetchStore;
 export const useDebouncedGameAutocomplete = function useDebouncedGameAutocomplete(query) {
-  let obj = GameAutocompleteUtils;
-  const result = obj.normalizeGameAutocompleteQuery(query);
+  const result = GameAutocompleteUtils.normalizeGameAutocompleteQuery(query);
   require = result;
   c1 = undefined;
-  [tmp3, c1] = _slicedToArray(noop.useState(result), 2);
+  [tmp3, c1] = noop.useState(result);
   noop.useRef(tmp3);
   noop.useRef(0);
   const items = [result];
@@ -90,7 +88,7 @@ export const useDebouncedGameAutocomplete = function useDebouncedGameAutocomplet
   const tmp5 = fetchStore(tmp3);
   ({ data, isLoading } = tmp5);
   const tmp2 = _slicedToArray(noop.useState(result), 2);
-  [tmp7, tmp8] = _slicedToArray(noop.useState(null), 2);
+  [tmp7, tmp8] = noop.useState(null);
   if (null == result) {
     if (null != tmp7) {
       tmp8(null);
@@ -108,15 +106,15 @@ export const useDebouncedGameAutocomplete = function useDebouncedGameAutocomplet
     }
     tmp12 = data;
   }
-  obj = { results: tmp12, isLoading: null, error: null };
+  const obj2 = { results: tmp12, isLoading: null, error: null };
   if (!isLoading) {
     isLoading = tmp3 !== result;
   }
-  obj.isLoading = isLoading;
+  obj2.isLoading = isLoading;
   let error = null;
   if (tmp3 === result) {
     error = tmp5.error;
   }
-  obj.error = error;
-  return obj;
+  obj2.error = error;
+  return obj2;
 };

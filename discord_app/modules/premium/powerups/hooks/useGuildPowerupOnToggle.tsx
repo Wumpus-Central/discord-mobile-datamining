@@ -10,7 +10,7 @@ const result = size.fileFinishedImporting("modules/premium/powerups/hooks/useGui
 export default function useGuildPowerupOnToggle(arg0, arg1) {
   closure_0 = arg0;
   closure_1 = arg1;
-  [tmp2, _slicedToArray] = _slicedToArray(noop.useState(false), 2);
+  [tmp2, _slicedToArray] = noop.useState(false);
   const tmp3 = _slicedToArray(noop.useState(undefined), 2);
   noop = tmp3[1];
   const obj = { isLoading: tmp2, error: tmp3[0], onToggle: null };

@@ -3,6 +3,8 @@ import useInitialValueDefault from "../../../../hooks/useInitialValue.tsx";
 import GuildDirectorySearchDefault from "GuildDirectorySearch.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
+const require = globalThis.__r;
+
 const require = fn;
 const jsx = fn(21).jsx;
 const SEARCH_SCREEN_KEY = "SEARCH_SCREEN_KEY";

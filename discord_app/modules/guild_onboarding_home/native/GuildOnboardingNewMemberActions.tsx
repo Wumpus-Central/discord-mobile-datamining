@@ -24,18 +24,18 @@ function MemberActionRow(channelId) {
   }
   id = emoji.id;
   const name = emoji.name;
-  let obj1 = channelId(stateFromStores[15]);
   const items = [ChannelStore];
-  stateFromStores = obj1.useStateFromStores(items, () => ChannelStore.getChannel(channelId));
-  let obj2 = channelId(stateFromStores[15]);
+  stateFromStores = channelId(stateFromStores[15]).useStateFromStores(items, () => ChannelStore.getChannel(channelId));
+  const obj2 = channelId(stateFromStores[15]);
+  const tmp6 = id(stateFromStores[16])(stateFromStores, true);
   const items1 = [PermissionStore];
-  const stateFromStores1 = obj2.useStateFromStores(items1, () =>
+  const stateFromStores1 = channelId(stateFromStores[15]).useStateFromStores(items1, () =>
     PermissionStore.can(Permissions.VIEW_CHANNEL, stateFromStores),
   );
-  let obj3 = channelId(stateFromStores[15]);
+  const obj3 = channelId(stateFromStores[15]);
   const items2 = [EmojiStore];
   const items3 = [id];
-  const stateFromStores2 = obj3.useStateFromStores(
+  const stateFromStores2 = channelId(stateFromStores[15]).useStateFromStores(
     items2,
     () => {
       let customEmojiById = null;
@@ -46,8 +46,8 @@ function MemberActionRow(channelId) {
     },
     items3,
   );
-  let obj4 = id(stateFromStores[17]);
-  const newMemberActionIconURL = obj4.getNewMemberActionIconURL({ channelId, icon });
+  const obj4 = channelId(stateFromStores[15]);
+  const newMemberActionIconURL = id(stateFromStores[17]).getNewMemberActionIconURL({ channelId, icon });
   [][0] = stateFromStores;
   let tmp11 = null;
   if (null != stateFromStores) {
@@ -55,59 +55,59 @@ function MemberActionRow(channelId) {
     if (stateFromStores1) {
       if (null != newMemberActionIconURL) {
         let obj = { style: tmp.icon, source: null, resizeMode: "contain" };
-        obj = { uri: newMemberActionIconURL };
-        obj.source = obj;
+        const obj6 = { uri: newMemberActionIconURL };
+        obj.source = obj6;
         let tmp14 = closure_15(tmp5(tmp3[19]), obj);
         let tmp15 = closure_15;
       } else if (null != stateFromStores2) {
-        obj1 = { style: tmp.emoji, source: null, resizeMode: "contain" };
-        obj2 = { uri: null };
-        tmp5(tmp3[19]);
-        const tmp5Result = tmp5(tmp3[17]);
-        obj3 = { id: null, animated: null, size: null };
+        const obj7 = { style: tmp.emoji, source: null, resizeMode: "contain" };
+        const obj8 = { uri: null };
+        const tmp5Result = tmp5(tmp3[19]);
+        const obj9 = { id: null, animated: null, size: null };
         ({ id: obj14.id, animated: obj14.animated } = stateFromStores2);
-        obj3.size = EMOJI_URL_BASE_SIZE;
-        obj2.uri = tmp5Result.getEmojiURL(obj3);
-        obj1.source = obj2;
-        tmp14 = closure_15(tmp5Result, obj1);
+        obj9.size = EMOJI_URL_BASE_SIZE;
+        obj8.uri = tmp5(tmp3[17]).getEmojiURL(obj9);
+        obj7.source = obj8;
+        tmp14 = closure_15(tmp5Result, obj7);
         tmp15 = closure_15;
+        const tmp5Result4 = tmp5(tmp3[17]);
       } else {
         if (null != name) {
-          const tmp5Result1 = tmp5(tmp3[20]);
-          if (null != tmp5Result1.getByName(tmp5Result2.convertSurrogateToName(name, false))) {
-            obj4 = { style: tmp.textEmoji, variant: "heading-xxl/normal", children: name };
-            tmp14 = closure_15(tmp2(tmp3[21]).Text, obj4);
+          const tmp5Result5 = tmp5(tmp3[20]);
+          if (null != tmp5Result5.getByName(tmp5Result6.convertSurrogateToName(name, false))) {
+            const obj10 = { style: tmp.textEmoji, variant: "heading-xxl/normal", children: name };
+            tmp14 = closure_15(tmp2(tmp3[21]).Text, obj10);
             tmp15 = closure_15;
           }
-          tmp5Result2 = tmp5(tmp3[20]);
+          tmp5Result6 = tmp5(tmp3[20]);
         }
-        const obj5 = { style: tmp.emojiPlaceholder, children: null };
-        const obj6 = { size: tmp2(tmp3[22]).Icon.Sizes.REFRESH_SMALL_16, source: tmp5(tmp3[23]) };
-        obj5.children = closure_15(tmp2(tmp3[22]).Icon, obj6);
-        tmp14 = closure_15(View, obj5);
+        const obj11 = { style: tmp.emojiPlaceholder, children: null };
+        const obj12 = { size: tmp2(tmp3[22]).Icon.Sizes.REFRESH_SMALL_16, source: tmp5(tmp3[23]) };
+        obj11.children = closure_15(tmp2(tmp3[22]).Icon, obj12);
+        tmp14 = closure_15(View, obj11);
         tmp15 = closure_15;
       }
-      const obj7 = { onPress: tmp10, style: tmp.actionContainer, children: null };
+      const obj13 = { onPress: tmp10, style: tmp.actionContainer, children: null };
       const items4 = [tmp14, ,];
-      const obj8 = { style: tmp.channelNameContainer, children: null };
-      const obj9 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: title };
-      const items5 = [tmp15(tmp2(tmp3[21]).Text, obj9)];
-      const obj10 = { variant: "text-xs/normal", color: "text-muted", children: null };
+      const obj15 = { style: tmp.channelNameContainer, children: null };
+      const obj16 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: title };
+      const items5 = [tmp15(tmp2(tmp3[21]).Text, obj16)];
+      const obj17 = { variant: "text-xs/normal", color: "text-muted", children: null };
       const intl = tmp2(tmp3[25]).intl;
-      const obj11 = { channelName: tmp6 };
-      obj10.children = intl.format(tmp2(tmp3[25]).t.MkzlDL, obj11);
-      items5[1] = tmp15(tmp2(tmp3[21]).Text, obj10);
-      obj8.children = items5;
-      items4[1] = closure_16(View, obj8);
-      const obj12 = {
+      const obj18 = { channelName: tmp6 };
+      obj17.children = intl.format(tmp2(tmp3[25]).t.MkzlDL, obj18);
+      items5[1] = tmp15(tmp2(tmp3[21]).Text, obj17);
+      obj15.children = items5;
+      items4[1] = closure_16(View, obj15);
+      const obj19 = {
         disableColor: true,
         size: tmp2(tmp3[22]).Icon.Sizes.MEDIUM,
         source: tmp5(completed ? tmp3[26] : tmp3[27]),
       };
-      tmp15 = tmp15(tmp2(tmp3[22]).Icon, obj12);
+      tmp15 = tmp15(tmp2(tmp3[22]).Icon, obj19);
       items4[2] = tmp15;
-      obj7.children = items4;
-      closure_16(tmp2(tmp3[24]).PressableOpacity, obj7);
+      obj13.children = items4;
+      closure_16(tmp2(tmp3[24]).PressableOpacity, obj13);
     }
   }
   return tmp11;
@@ -118,32 +118,29 @@ const EMOJI_URL_BASE_SIZE = fn(1374).EMOJI_URL_BASE_SIZE;
 const GuildMemberFlags = fn(4262).GuildMemberFlags;
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16 } = jsxProd);
-fn(4636);
-let createStyles = {
+const createStyles = fn(4636);
+let obj2 = {
   actionsContainer: { paddingHorizontal: 12 },
   actionsHeader: { display: "flex", marginBottom: 16 },
-  actionContainer: null,
-  channelNameContainer: null,
+  actionContainer: {
+    backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
+    marginBottom: 8,
+    padding: 12,
+    borderRadius: nativeDefault.radii.sm,
+    display: "flex",
+    flexDirection: "row",
+    alignItems: "center",
+  },
+  channelNameContainer: { flex: 1, marginHorizontal: 8 },
   icon: null,
   emoji: null,
   textEmoji: null,
   emojiPlaceholder: null,
 };
-createStyles = {
-  backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
-  marginBottom: 8,
-  padding: 12,
-  borderRadius: nativeDefault.radii.sm,
-  display: "flex",
-  flexDirection: "row",
-  alignItems: "center",
-};
-createStyles.actionContainer = createStyles;
-createStyles.channelNameContainer = { flex: 1, marginHorizontal: 8 };
 let size = { width: 40, height: 40, borderRadius: nativeDefault.radii.xs };
-createStyles.icon = size;
-createStyles.emoji = { width: 40, height: 40 };
-createStyles.textEmoji = { width: 40, textAlign: "center" };
+obj2.icon = size;
+obj2.emoji = { width: 40, height: 40 };
+obj2.textEmoji = { width: 40, textAlign: "center" };
 const size1 = {
   width: 40,
   height: 40,
@@ -153,8 +150,8 @@ const size1 = {
   alignItems: "center",
   justifyContent: "center",
 };
-createStyles.emojiPlaceholder = size1;
-let closure_17 = createStyles.createStyles(createStyles);
+obj2.emojiPlaceholder = size1;
+let closure_17 = createStyles.createStyles(obj2);
 size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_onboarding_home/native/GuildOnboardingNewMemberActions.tsx");
 
@@ -162,25 +159,26 @@ export default function GuildOnboardingNewMemberActions(guildId) {
   guildId = guildId.guildId;
   let stateFromStores2;
   const tmp = closure_17();
-  let obj = guildId(stateFromStores2[15]);
   const items = [GuildOnboardingHomeSettingsStore];
   const items1 = [guildId];
-  const stateFromStores = obj.useStateFromStores(
+  const stateFromStores = guildId(stateFromStores2[15]).useStateFromStores(
     items,
     () => GuildOnboardingHomeSettingsStore.getNewMemberActions(guildId),
     items1,
   );
-  let obj1 = guildId(stateFromStores2[15]);
+  let obj = guildId(stateFromStores2[15]);
   const items2 = [GuildOnboardingMemberActionStore];
-  const stateFromStores1 = obj1.useStateFromStores(items2, () =>
+  const stateFromStores1 = guildId(stateFromStores2[15]).useStateFromStores(items2, () =>
     GuildOnboardingMemberActionStore.getCompletedActions(guildId),
   );
   let obj2 = guildId(stateFromStores2[15]);
   const items3 = [GuildMemberStore];
-  stateFromStores2 = obj2.useStateFromStores(items3, () => GuildMemberStore.getSelfMember(guildId));
-  let obj3 = guildId(stateFromStores2[15]);
+  stateFromStores2 = guildId(stateFromStores2[15]).useStateFromStores(items3, () =>
+    GuildMemberStore.getSelfMember(guildId),
+  );
+  const obj3 = guildId(stateFromStores2[15]);
   const items4 = [GuildStore];
-  const stateFromStores3 = obj3.useStateFromStores(items4, () => GuildStore.getGuild(guildId));
+  const stateFromStores3 = guildId(stateFromStores2[15]).useStateFromStores(items4, () => GuildStore.getGuild(guildId));
   const items5 = [stateFromStores1, guildId];
   let flags;
   if (stateFromStores2 != null) {
@@ -208,20 +206,20 @@ export default function GuildOnboardingNewMemberActions(guildId) {
     }
   }, items5);
   [][0] = stateFromStores3;
-  let tmp15Result = null;
+  let tmp15Result2 = null;
   if (null != stateFromStores2) {
-    tmp15Result = null;
+    tmp15Result2 = null;
     if (null != stateFromStores) {
-      tmp15Result = null;
+      tmp15Result2 = null;
       if (0 !== stateFromStores.length) {
-        obj = { style: tmp.actionsContainer, children: null };
-        obj = { style: tmp.actionsHeader, children: null };
-        obj1 = { variant: "heading-lg/bold", color: "mobile-text-heading-primary", children: null };
+        const obj5 = { style: tmp.actionsContainer, children: null };
+        const obj6 = { style: tmp.actionsHeader, children: null };
+        const obj7 = { variant: "heading-lg/bold", color: "mobile-text-heading-primary", children: null };
         const intl2 = tmp2(tmp3[25]).intl;
-        obj1.children = intl2.string(tmp2(tmp3[25]).t.LhlgY9);
-        obj.children = closure_15(tmp2(tmp3[21]).Text, obj1);
+        obj7.children = intl2.string(tmp2(tmp3[25]).t.LhlgY9);
+        obj6.children = closure_15(tmp2(tmp3[21]).Text, obj7);
         const items6 = [
-          closure_15(View, obj),
+          closure_15(View, obj6),
           stateFromStores.map((channelId) => {
             const obj = {
               channelId: channelId.channelId,
@@ -245,27 +243,27 @@ export default function GuildOnboardingNewMemberActions(guildId) {
         if (stateFromStores3 != null) {
           rulesChannelId = stateFromStores3.rulesChannelId;
         }
-        tmp15Result = null != rulesChannelId;
+        let tmp15Result = null != rulesChannelId;
         if (tmp15Result) {
-          obj2 = { onPress: tmp10, style: tmp.actionContainer, children: null };
-          obj3 = { style: tmp.emojiPlaceholder, children: null };
-          const obj4 = { size: tmp2(tmp3[22]).Icon.Sizes.REFRESH_SMALL_16, source: stateFromStores1(tmp3[29]) };
-          obj3.children = closure_15(tmp2(tmp3[22]).Icon, obj4);
-          const items7 = [closure_15(View, obj3)];
-          const obj5 = { style: tmp.channelNameContainer, children: null };
-          const obj6 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
+          const obj8 = { onPress: tmp10, style: tmp.actionContainer, children: null };
+          const obj9 = { style: tmp.emojiPlaceholder, children: null };
+          const obj10 = { size: tmp2(tmp3[22]).Icon.Sizes.REFRESH_SMALL_16, source: stateFromStores1(tmp3[29]) };
+          obj9.children = closure_15(tmp2(tmp3[22]).Icon, obj10);
+          const items7 = [closure_15(View, obj9)];
+          const obj11 = { style: tmp.channelNameContainer, children: null };
+          const obj12 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
           const intl = tmp2(tmp3[25]).intl;
-          obj6.children = intl.string(tmp2(tmp3[25]).t["K/i3iQ"]);
-          obj5.children = closure_15(tmp2(tmp3[21]).Text, obj6);
-          items7[1] = closure_15(View, obj5);
-          obj2.children = items7;
-          tmp15Result = closure_16(tmp2(tmp3[24]).PressableOpacity, obj2);
+          obj12.children = intl.string(tmp2(tmp3[25]).t["K/i3iQ"]);
+          obj11.children = closure_15(tmp2(tmp3[21]).Text, obj12);
+          items7[1] = closure_15(View, obj11);
+          obj8.children = items7;
+          tmp15Result = closure_16(tmp2(tmp3[24]).PressableOpacity, obj8);
         }
         items6[2] = tmp15Result;
-        obj.children = items6;
-        tmp15Result = closure_16(View, obj);
+        obj5.children = items6;
+        tmp15Result2 = closure_16(View, obj5);
       }
     }
   }
-  return tmp15Result;
+  return tmp15Result2;
 }

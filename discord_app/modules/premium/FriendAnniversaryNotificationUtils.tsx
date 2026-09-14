@@ -14,6 +14,8 @@ export const onFriendAnniversaryNotificationSettingsChanged = function onFriendA
 ) {
   const EnableFriendAnniversaryNotifications = UserSettings.EnableFriendAnniversaryNotifications;
   EnableFriendAnniversaryNotifications.updateSetting(friend_anniversary_notifications);
-  const obj = { update_type: constants.ACCOUNT, friend_anniversary_notifications };
-  obj.track(AnalyticEvents.NOTIFICATION_SETTINGS_UPDATED, obj);
+  AnalyticsUtilsDefault.track(AnalyticEvents.NOTIFICATION_SETTINGS_UPDATED, {
+    update_type: constants.ACCOUNT,
+    friend_anniversary_notifications,
+  });
 };

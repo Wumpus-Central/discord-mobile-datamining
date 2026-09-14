@@ -6,6 +6,8 @@ import AgeVerificationActionCreatorsDefault from "../../../age_assurance/AgeVeri
 import SafetySettingsNoticeDefault from "../../../safety_common/native/SafetySettingsNotice.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
+const require = globalThis.__r;
+
 require = fn;
 const SafetySettingsNoticeType = fn(8517).SafetySettingsNoticeType;
 const jsx = fn(21).jsx;
@@ -15,13 +17,14 @@ let result = size.fileFinishedImporting(
 );
 
 export const SensitiveContentFiltersTeenNotice = function SensitiveContentFiltersTeenNotice() {
+  const isTinyBroncoSettingsNoticeEnabled =
+    require("TinyBroncoSettingsNoticesLazy").useIsTinyBroncoSettingsNoticeEnabled();
   let obj = require("TinyBroncoSettingsNoticesLazy");
-  const isTinyBroncoSettingsNoticeEnabled = obj.useIsTinyBroncoSettingsNoticeEnabled();
   _require = require("SensitiveMediaGoreRedactionSettingsUtils").useSensitiveContentFilterHelpArticle();
   if (isTinyBroncoSettingsNoticeEnabled) {
-    let tmp4Result = jsx(tmp(14905).ContentFiltersTeenNotice, {});
+    let tmp4Result = jsx(tmp(14906).ContentFiltersTeenNotice, {});
   } else {
-    obj = {
+    const obj3 = {
       label: tmp(1114).t.EUo0yj,
       labelHook() {
         const obj = LinkingDefault;
@@ -44,20 +47,20 @@ export const SensitiveContentFiltersAgeVerificationNotice = function SensitiveCo
   let obj = {
     label: util.t.OX4ybh,
     labelHook() {
-      const obj = {
+      const obj = AgeVerificationActionCreatorsDefault;
+      const result = obj.showAgeVerificationGetStartedModal({
         entryPoint: require("AgeVerificationAnalyticsUtils").AgeVerificationModalEntryPoint.CONTENT_AND_SOCIAL_NOTICE,
-      };
-      const result = obj.showAgeVerificationGetStartedModal(obj);
+      });
     },
     noticeType: SafetySettingsNoticeType.SENSITIVE_CONTENT_FILTER_AGE_VERIFICATION_NOTICE,
   };
   return jsx(SafetySettingsNoticeDefault, {
     label: util.t.OX4ybh,
     labelHook() {
-      const obj = {
+      const obj = AgeVerificationActionCreatorsDefault;
+      const result = obj.showAgeVerificationGetStartedModal({
         entryPoint: require("AgeVerificationAnalyticsUtils").AgeVerificationModalEntryPoint.CONTENT_AND_SOCIAL_NOTICE,
-      };
-      const result = obj.showAgeVerificationGetStartedModal(obj);
+      });
     },
     noticeType: SafetySettingsNoticeType.SENSITIVE_CONTENT_FILTER_AGE_VERIFICATION_NOTICE,
   });

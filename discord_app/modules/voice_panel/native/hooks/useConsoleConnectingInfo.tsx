@@ -6,6 +6,8 @@ import getConsoleColorDefault from "../../../game_console/native/getConsoleColor
 import GameConsoleStore from "../../../game_console/GameConsoleStore.tsx";
 import SessionsStore from "../../../../stores/SessionsStore.tsx";
 
+const require = globalThis.__r;
+
 const require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_panel/native/hooks/useConsoleConnectingInfo.tsx");
@@ -17,9 +19,12 @@ export default function useConsoleConnectingInfo(arg0) {
   if (tmp3 != null) {
     channelId = tmp3.channelId;
   }
-  let obj = require("useStateFromStores");
   const items = [GameConsoleStore];
-  const stateFromStores = obj.useStateFromStores(items, () => awaitingRemoteSessionInfo.getAwaitingRemoteSessionInfo());
+  const stateFromStores = require("useStateFromStores").useStateFromStores(items, () =>
+    awaitingRemoteSessionInfo.getAwaitingRemoteSessionInfo(),
+  );
+  const obj = require("useStateFromStores");
+  const tmp5 = _require;
   const items1 = [SessionsStore];
   const stateFromStores1 = require("useStateFromStores").useStateFromStores(items1, () => {
     let str;
@@ -47,11 +52,10 @@ export default function useConsoleConnectingInfo(arg0) {
   }
   let channelId1;
   const obj2 = require("useStateFromStores");
-  const tmp5 = _require;
   if (stateFromStores != null) {
     channelId1 = stateFromStores.channelId;
   }
-  obj = {
+  const obj3 = {
     isConnectingToConsole: channelId1 === arg0,
     isConnectingOrConnectedToConsole: null,
     icon: null,
@@ -63,11 +67,11 @@ export default function useConsoleConnectingInfo(arg0) {
   if (stateFromStores != null) {
     channelId2 = stateFromStores.channelId;
   }
-  obj.isConnectingOrConnectedToConsole = channelId2 === arg0 || channelId === arg0;
-  obj.icon = getConsoleIconDefault(str);
+  obj3.isConnectingOrConnectedToConsole = channelId2 === arg0 || channelId === arg0;
+  obj3.icon = getConsoleIconDefault(str);
   const tmp9 = useShouldDisplayCancelConsoleTransferDefault(stateFromStores);
-  obj.text = tmp5(17284).getConsoleConnectingText(stateFromStores1, stateFromStores, channelId === arg0);
-  obj.color = getConsoleColorDefault(str);
-  obj.displayCancel = tmp9;
-  return obj;
+  obj3.text = tmp5(17286).getConsoleConnectingText(stateFromStores1, stateFromStores, channelId === arg0);
+  obj3.color = getConsoleColorDefault(str);
+  obj3.displayCancel = tmp9;
+  return obj3;
 }

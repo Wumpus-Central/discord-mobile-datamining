@@ -17,8 +17,11 @@ function onChange(custom_status_push_notifications) {
       ? CustomStatusPushNotificationType.STATUS_PUSH_ENABLED
       : CustomStatusPushNotificationType.STATUS_PUSH_DISABLED,
   );
-  const obj = { update_type: constants.ACCOUNT, custom_status_push_notifications };
-  obj.track(AnalyticEvents.NOTIFICATION_SETTINGS_UPDATED, obj);
+  AnalyticsUtilsDefault.track(AnalyticEvents.NOTIFICATION_SETTINGS_UPDATED, {
+    update_type: constants.ACCOUNT,
+    custom_status_push_notifications,
+  });
+  const obj2 = { update_type: constants.ACCOUNT, custom_status_push_notifications };
 }
 const AnalyticEvents = Constants.AnalyticEvents;
 const constants = NotificationConstants.NotificationSettingsUpdateType;

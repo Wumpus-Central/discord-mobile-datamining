@@ -14,6 +14,8 @@ import ApplicationCommandIndexStore from "../../application_commands/Application
 import ApplicationRecord from "../../../records/ApplicationRecord.tsx";
 import AppLauncherStore from "../AppLauncherStore.tsx";
 
+const require = globalThis.__r;
+
 require = fn;
 function getShelfBadgeTypeIfActive(application) {
   let tmp2 = null;
@@ -151,8 +153,8 @@ export const executeAppLauncherCommand = function executeAppLauncherCommand(arg0
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -165,15 +167,15 @@ export const executeAppLauncherCommand = function executeAppLauncherCommand(arg0
             throw value;
           } else if (arg0 === 2) {
             commandOrigin = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
             context = tmp3;
             const optionValues = tmp7;
             closure_129_0 = undefined;
             closure_129_1 = undefined;
             let maxSizeCallback = 1;
-            const obj1 = {
+            const obj5 = {
               command: tts,
               optionValues,
               context,
@@ -185,24 +187,23 @@ export const executeAppLauncherCommand = function executeAppLauncherCommand(arg0
             };
             sectionName = 2;
             commandOrigin = 1;
-            const obj2 = { value: require("executeCommand")(obj1), done: false };
-            return obj2;
+            const obj6 = { value: require("executeCommand")(obj5), done: false };
+            return obj6;
           }
         } else if (1 === tmp7) {
           maxSizeCallback = 0;
           closure_129_2 = commandTargetId;
-          let obj3 = require("AlertActionCreators");
-          obj3 = { title: null, body: null, confirmText: null, onConfirm: null };
+          const obj7 = { title: null, body: null, confirmText: null, onConfirm: null };
           const intl = closure_0(context[8]).intl;
-          obj3.title = intl.string(closure_0(context[8]).t["aHO//m"]);
+          obj7.title = intl.string(closure_0(context[8]).t["aHO//m"]);
           const intl2 = closure_0(context[8]).intl;
-          obj3.body = intl2.string(closure_0(context[8]).t.kuzKHK);
+          obj7.body = intl2.string(closure_0(context[8]).t.kuzKHK);
           const intl3 = closure_0(context[8]).intl;
-          obj3.confirmText = intl3.string(closure_0(context[8]).t["5911Lb"]);
-          obj3.onConfirm = function onConfirm() {
+          obj7.confirmText = intl3.string(closure_0(context[8]).t["5911Lb"]);
+          obj7.onConfirm = function onConfirm() {
             return closure_1_8();
           };
-          obj3.show(obj3);
+          require("AlertActionCreators").show(obj7);
           throw closure_129_2;
         } else if (arg0 === 1) {
           commandOrigin = 3;
@@ -210,8 +211,8 @@ export const executeAppLauncherCommand = function executeAppLauncherCommand(arg0
         } else if (arg0 === 2) {
           maxSizeCallback = 0;
           commandOrigin = 3;
-          const obj4 = { value, done: true };
-          return obj4;
+          const obj8 = { value, done: true };
+          return obj8;
         } else {
           closure_129_0 = value;
           if (tts.inputType === closure_0(context[13]).ApplicationCommandInputType.BUILT_IN_TEXT) {
@@ -223,9 +224,9 @@ export const executeAppLauncherCommand = function executeAppLauncherCommand(arg0
                   tts = false;
                 }
                 closure_129_1.tts = tts;
-                obj = require("MessageActionCreators");
-                const obj5 = { location: constants.APP_COMMAND };
-                obj.sendMessage(context.channel.id, closure_129_1, true, obj5);
+                const obj = require("MessageActionCreators");
+                const obj10 = { location: constants.APP_COMMAND };
+                obj.sendMessage(context.channel.id, closure_129_1, true, obj10);
                 const obj9 = require("MessageParser");
               }
             }
@@ -258,31 +259,31 @@ export const executeAppLauncherCommand = function executeAppLauncherCommand(arg0
   return fn();
 };
 export const getApplicationDetails = function getApplicationDetails(id) {
-  let obj = guildMember;
-  if (guildMember === undefined) {
+  let obj = arg1;
+  if (arg1 === undefined) {
     obj = {};
   }
   let fakeAppIconURL = obj.fakeAppIconURL;
   const tmp2 = _objectWithoutProperties(obj, closure_3);
   if (id.id !== BuiltInSectionId.BUILT_IN) {
-    obj = { iconURL: null, name: null, description: null };
-    obj = {};
+    const obj2 = { iconURL: null, name: null, description: null };
+    const obj8 = {};
     const merged = Object.assign(tmp2);
     ({ id: obj5.id, icon: obj5.icon } = id);
-    obj.iconURL = AvatarUtilsDefault.getApplicationIconURL(obj);
+    obj2.iconURL = AvatarUtilsDefault.getApplicationIconURL(obj8);
     ({ name: obj3.name, description: obj3.description } = id);
-    let obj1 = obj;
+    let obj9 = obj2;
   } else {
     if (fakeAppIconURL == null) {
       fakeAppIconURL = null;
     }
-    obj1 = { iconURL: fakeAppIconURL, name: null, description: null };
+    obj9 = { iconURL: fakeAppIconURL, name: null, description: null };
     const intl = util.intl;
-    obj1.name = intl.string(util.t.UB2gG2);
+    obj9.name = intl.string(util.t.UB2gG2);
     const intl2 = util.intl;
-    obj1.description = intl2.string(util.t.X9fusn);
+    obj9.description = intl2.string(util.t.X9fusn);
   }
-  return obj1;
+  return obj9;
 };
 export const isApplicationMonetizedWithIAP = function isApplicationMonetizedWithIAP(application) {
   if (application.id === BuiltInSectionId.BUILT_IN) {

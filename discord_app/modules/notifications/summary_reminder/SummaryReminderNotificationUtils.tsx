@@ -16,6 +16,8 @@ export const onSummaryReminderNotificationSettingsChanged = function onSummaryRe
 ) {
   const EnableSummaryReminderNotifications = UserSettings.EnableSummaryReminderNotifications;
   EnableSummaryReminderNotifications.updateSetting(summary_reminder_notifications);
-  const obj = { update_type: constants.ACCOUNT, summary_reminder_notifications };
-  obj.track(AnalyticEvents.NOTIFICATION_SETTINGS_UPDATED, obj);
+  AnalyticsUtilsDefault.track(AnalyticEvents.NOTIFICATION_SETTINGS_UPDATED, {
+    update_type: constants.ACCOUNT,
+    summary_reminder_notifications,
+  });
 };

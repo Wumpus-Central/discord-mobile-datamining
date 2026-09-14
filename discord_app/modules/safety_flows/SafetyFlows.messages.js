@@ -31,10 +31,11 @@ import _mod2718 from "../../../_runtime/metro/02718__.js";
 import _mod2719 from "../../../_runtime/metro/02719__.js";
 import _mod2720 from "../../../_runtime/metro/02720__.js";
 import _mod2721 from "../../../_runtime/metro/02721__.js";
-import 01155__ from "../../../_runtime/metro/01155__.js";
+import module_1153_mod from "../../../_runtime/metro/01153__.js";
 import size from "../../../_runtime/metro/00002__.js";
 
-const loader = module_1155.createLoader({
+let module_1153 = module_1153_mod;
+const loader = module_1153.createLoader({
   bg() {
     const jsonAsset = AssetJsonUtils.loadJsonAsset(_mod2691);
     return jsonAsset.then((result) => ({ default: result }));
@@ -160,7 +161,8 @@ const loader = module_1155.createLoader({
     return jsonAsset.then((result) => ({ default: result }));
   }
 }, "en-US");
-const messagesProxy = module_1155.makeMessagesProxy(loader);
+let module_1153 = module_1153_mod;
+const messagesProxy = module_1153.makeMessagesProxy(loader);
 const result = size.fileFinishedImporting("modules/safety_flows/SafetyFlows.messages.js");
 
 export default messagesProxy;

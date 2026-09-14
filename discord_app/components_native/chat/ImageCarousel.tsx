@@ -15,7 +15,7 @@ import UploadAttachmentActionCreatorsDefault from "../../actions/UploadAttachmen
 import AttachmentPreviewDefault from "../../modules/media/native/AttachmentPreview.tsx";
 import showUploadPreviewActionSheetDefault from "../../modules/media_uploads/native/showUploadPreviewActionSheet.tsx";
 import MediaKeyboardUtils from "../../modules/media_keyboard/native/MediaKeyboardUtils.tsx";
-import _modDef11378 from "../../../_runtime/metro/11378__.js";
+import _modDef11379 from "../../../_runtime/metro/11379__.js";
 import noop from "../../../_runtime/metro/00019__.js";
 import UploadAttachmentStore from "../../stores/UploadAttachmentStore.tsx";
 
@@ -49,9 +49,9 @@ function Tile(onEdit) {
   if (flag) {
     flag = true === isThumbnail;
   }
-  let tmp5Result = tmp5(tmp3[14]);
+  const tmp4 = onRemove(channelId[12]);
   let items = [item];
-  stateFromStores = tmp5Result.useStateFromStores(items, () => {
+  stateFromStores = onEdit(channelId[14]).useStateFromStores(items, () => {
     upload = UploadAttachmentStore.getUpload(channelId, id, DraftType.ChannelMessage);
     flag = undefined;
     if (upload != null) {
@@ -62,7 +62,6 @@ function Tile(onEdit) {
     }
     return flag;
   });
-  let obj1 = upload;
   let items1 = [isVideo, isImage, flag];
   callback = upload.useCallback(() => {
     const width = closure_10;
@@ -113,36 +112,36 @@ function Tile(onEdit) {
   if (uri == null) {
     uri = item.uri;
   }
-  tmp5Result = tmp5(tmp3[8]);
-  const sharedValue = tmp5Result.useSharedValue(0);
+  const tmp5Result = onEdit(channelId[14]);
+  const sharedValue = onEdit(channelId[8]).useSharedValue(0);
   closure_129_0 = sharedValue;
   const items5 = [sharedValue, uri];
-  const effect = obj1.useEffect(() => {
+  const effect = obj2.useEffect(() => {
     const result = onEdit.set(1);
   }, items5);
-  const tmp4 = onRemove(channelId[12]);
+  const tmp5Result3 = onEdit(channelId[8]);
   const fn = function o() {
-    let obj = { opacity: null, transform: null };
-    obj = { duration: 300, easing: null };
+    const obj = { opacity: null, transform: null };
+    const obj3 = { duration: 300, easing: null };
     value = onEdit.get();
-    obj.easing = native.STANDARD_EASING;
-    obj.opacity = timing.withTiming(value, obj, "respect-motion-settings");
-    obj = { scale: null };
-    obj.scale = spring.withSpring(onEdit.get(), { stiffness: 80, damping: 6, mass: 0.3 }, "respect-motion-settings");
-    const items = [obj];
+    obj3.easing = native.STANDARD_EASING;
+    obj.opacity = timing.withTiming(value, obj3, "respect-motion-settings");
+    const obj4 = { scale: null };
+    obj4.scale = spring.withSpring(onEdit.get(), { stiffness: 80, damping: 6, mass: 0.3 }, "respect-motion-settings");
+    const items = [obj4];
     obj.transform = items;
     return obj;
   };
-  let obj = {
-    withTiming: tmp5(tmp3[9]).withTiming,
+  const tmp5Result4 = onEdit(channelId[8]);
+  fn.__closure = {
+    withTiming: onEdit(channelId[9]).withTiming,
     animatedStylePropValue: sharedValue,
-    STANDARD_EASING: tmp5(tmp3[10]).STANDARD_EASING,
-    withSpring: tmp5(tmp3[11]).withSpring,
+    STANDARD_EASING: onEdit(channelId[10]).STANDARD_EASING,
+    withSpring: onEdit(channelId[11]).withSpring,
   };
-  fn.__closure = obj;
   fn.__workletHash = 14458898683767;
   fn.__initData = callback1;
-  animatedStyle = onEdit(channelId[8]).useAnimatedStyle(fn);
+  animatedStyle = tmp5Result4.useAnimatedStyle(fn);
   const items6 = [callback, animatedStyle, description, , , , , , ,];
   ({ uri: arr7[3], filename: arr7[4] } = item);
   items6[5] = isImage;
@@ -150,11 +149,11 @@ function Tile(onEdit) {
   items6[7] = isVideo;
   items6[8] = stateFromStores;
   items6[9] = tmp;
-  obj = { name: "remove", label: null };
-  const callback4 = obj1.useCallback(() => {
+  let obj3 = { name: "remove", label: null };
+  const callback4 = obj2.useCallback(() => {
     const tmp = callback();
     ({ width, height } = tmp);
-    let obj = { style: null, children: null };
+    const obj = { style: null, children: null };
     const items = [tileContainer.tileContainer, { width, height }, animatedStyle];
     obj.style = items;
     const size = {
@@ -170,28 +169,28 @@ function Tile(onEdit) {
     const items1 = [closure_2_11(AttachmentPreviewDefault, size), ,];
     let tmp6Result = null;
     if (isThumbnail) {
-      obj = { style: tileContainer.footerRightContainer, children: null };
-      obj = { source: _modDef11378, size: native.Icon.Sizes.SMALL_14 };
-      obj.children = closure_2_11(native.Icon, obj);
-      tmp6Result = closure_2_11(React4, obj);
+      const obj2 = { style: tileContainer.footerRightContainer, children: null };
+      const obj3 = { source: _modDef11379, size: native.Icon.Sizes.SMALL_14 };
+      obj2.children = closure_2_11(native.Icon, obj3);
+      tmp6Result = closure_2_11(React4, obj2);
     }
     items1[1] = tmp6Result;
-    const obj1 = { style: tileContainer.decorationsContainer, children: null };
-    tmp6Result = null;
+    const obj4 = { style: tileContainer.decorationsContainer, children: null };
+    let tmp6Result5 = null;
     if (stateFromStores) {
-      const obj2 = { style: tileContainer.spoilerOverlay };
-      tmp6Result = closure_2_11(VisualEffectViewThemedDefault, obj2);
+      const obj5 = { style: tileContainer.spoilerOverlay };
+      tmp6Result5 = closure_2_11(VisualEffectViewThemedDefault, obj5);
     }
-    const items2 = [tmp6Result, ,];
-    let tmp6Result1 = null;
+    const items2 = [tmp6Result5, ,];
+    let tmp6Result6 = null;
     if (null != description) {
       let length;
       if (description != null) {
         length = description.length;
       }
-      tmp6Result1 = null;
+      tmp6Result6 = null;
       if (length > 0) {
-        const obj3 = {
+        const obj6 = {
           variant: "text-xs/medium",
           color: "text-overlay-light",
           allowFontScaling: false,
@@ -199,46 +198,46 @@ function Tile(onEdit) {
           children: null,
         };
         const intl = util.intl;
-        obj3.children = intl.string(util.t.QEW81z);
-        tmp6Result1 = closure_2_11(Text_Text.Text, obj3);
+        obj6.children = intl.string(util.t.QEW81z);
+        tmp6Result6 = closure_2_11(Text_Text.Text, obj6);
       }
     }
-    const items3 = [tmp6Result1];
-    let tmp6Result2 = null;
+    const items3 = [tmp6Result6];
+    let tmp6Result7 = null;
     if (isVideo) {
-      const obj4 = {
+      const obj7 = {
         style: tileContainer.iconContainer,
         children: closure_2_11(PlayIcon.PlayIcon, { size: "xxs", color: "white" }),
       };
-      tmp6Result2 = closure_2_11(React4, obj4);
+      tmp6Result7 = closure_2_11(React4, obj7);
     }
-    items3[1] = tmp6Result2;
+    items3[1] = tmp6Result7;
     items2[1] = closure_2_12(React4, { children: items3 });
-    let tmp6Result3 = null;
+    let tmp6Result8 = null;
     if (stateFromStores) {
-      const obj5 = {
+      const obj8 = {
         style: tileContainer.iconContainer,
         children: closure_2_11(EyeIcon.EyeIcon, { size: "xxs", color: "white" }),
       };
-      tmp6Result3 = closure_2_11(React4, obj5);
+      tmp6Result8 = closure_2_11(React4, obj8);
     }
-    items2[2] = tmp6Result3;
-    obj1.children = items2;
-    items1[2] = closure_2_12(React4, obj1);
+    items2[2] = tmp6Result8;
+    obj4.children = items2;
+    items1[2] = closure_2_12(React4, obj4);
     obj.children = items1;
     return closure_2_12(ReanimatedRexportDefault.View, obj);
   }, items6);
   let intl = tmp5(tmp3[20]).intl;
-  obj.label = intl.string(onEdit(channelId[20]).t.kFwAsa);
-  const items7 = [obj];
+  obj3.label = intl.string(onEdit(channelId[20]).t.kFwAsa);
+  const items7 = [obj3];
   const intl2 = tmp5(tmp3[20]).intl;
   let str = item.filename;
   if (str == null) {
     str = "";
   }
-  obj1 = {
+  let obj4 = {
     accessibilityRole: "button",
-    accessibilityLabel: intl2.formatToPlainString(tmp5(tmp3[20]).t.MJHFt9, { name: str }),
+    accessibilityLabel: intl2.formatToPlainString(onEdit(channelId[20]).t.MJHFt9, { name: str }),
     accessibilityHint: null,
     accessibilityActions: null,
     onAccessibilityAction: null,
@@ -248,30 +247,30 @@ function Tile(onEdit) {
     children: null,
   };
   const intl3 = tmp5(tmp3[20]).intl;
-  obj1.accessibilityHint = intl3.string(onEdit(channelId[20]).t.QtJ1c5);
-  obj1.accessibilityActions = items7;
-  obj1.onAccessibilityAction = callback3;
+  obj4.accessibilityHint = intl3.string(onEdit(channelId[20]).t.QtJ1c5);
+  obj4.accessibilityActions = items7;
+  obj4.onAccessibilityAction = callback3;
   let tmp19 = !isImage;
   if (!isImage) {
     tmp19 = !isVideo;
   }
-  obj1.disabled = tmp19;
-  obj1.onPress = callback2;
+  obj4.disabled = tmp19;
+  obj4.onPress = callback2;
   const items8 = [tmp.pressableContainer];
   if (flag) {
     flag = tmp.highlightedTileContainer;
   }
   items8[1] = flag;
-  obj1.style = items8;
-  obj1.children = callback4();
-  const items9 = [flag(onEdit(channelId[23]).PressableOpacity, obj1)];
+  obj4.style = items8;
+  obj4.children = callback4();
+  const items9 = [flag(onEdit(channelId[23]).PressableOpacity, obj4)];
   const intl4 = tmp5(tmp3[20]).intl;
   let str2 = item.filename;
   if (str2 == null) {
     str2 = "";
   }
-  let obj2 = { children: null };
-  let obj3 = {
+  let obj5 = { children: null };
+  let obj6 = {
     accessibilityRole: "button",
     accessibilityLabel: intl4.formatToPlainString(onEdit(channelId[20]).t.FxKgb3, { name: str2 }),
     style: tmp.closeButton,
@@ -279,22 +278,27 @@ function Tile(onEdit) {
     hitSlop: { top: 4, bottom: 4, left: 4, right: 4 },
     children: null,
   };
-  let obj4 = { style: null, children: null };
+  let obj7 = { style: null, children: null };
   const items10 = [tmp.closeContainer, animatedStyle];
-  obj4.style = items10;
+  obj7.style = items10;
+  let obj = {
+    withTiming: onEdit(channelId[9]).withTiming,
+    animatedStylePropValue: sharedValue,
+    STANDARD_EASING: onEdit(channelId[10]).STANDARD_EASING,
+    withSpring: onEdit(channelId[11]).withSpring,
+  };
   const tmp16 = stateFromStores;
   const tmp17 = tileContainer;
-  const tmp5Result1 = onEdit(channelId[8]);
-  obj4.children = flag(onEdit(channelId[10]).Icon, {
+  obj7.children = flag(onEdit(channelId[10]).Icon, {
     source: onRemove(channelId[24]),
     size: onEdit(channelId[10]).Icon.Sizes.MEDIUM,
     color: onRemove(channelId[7]).unsafe_rawColors.PRIMARY_500,
     style: tmp.closeButtonIcon,
   });
-  obj3.children = flag(onRemove(channelId[8]).View, obj4);
-  items9[1] = flag(onEdit(channelId[23]).PressableOpacity, obj3);
-  obj2.children = items9;
-  return tmp16(tmp17, obj2);
+  obj6.children = flag(onRemove(channelId[8]).View, obj7);
+  items9[1] = flag(onEdit(channelId[23]).PressableOpacity, obj6);
+  obj5.children = items9;
+  return tmp16(tmp17, obj5);
 }
 function CustomScrollView(arg0) {
   noop.useRef(0);
@@ -325,17 +329,23 @@ function CustomScrollView(arg0) {
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet, ScrollView: hasOwnProperty } = get_ActivityIndicator);
 const DraftType = fn(4977).DraftType;
-const ImageCarouselConstants = fn(10760);
+const ImageCarouselConstants = fn(10761);
 const IMAGE_CAROUSEL_EXPERIMENT_TILE_MARGIN = ImageCarouselConstants.IMAGE_CAROUSEL_EXPERIMENT_TILE_MARGIN;
 const IMAGE_CAROUSEL_TILE_CLOSE_BUTTON_PADDING = ImageCarouselConstants.IMAGE_CAROUSEL_TILE_CLOSE_BUTTON_PADDING;
 let closure_10 = ImageCarouselConstants.IMAGE_CAROUSEL_TILE_HEIGHT;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-fn(4636);
+const createStyles = fn(4636);
 let obj = {
   container: { width: "100%" },
   pressableContainer: { marginHorizontal: 4 },
-  tileContainer: null,
+  tileContainer: {
+    position: "relative",
+    minWidth: 60,
+    backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
+    overflow: "hidden",
+    borderRadius: nativeDefault.radii.md - 1,
+  },
   decorationsContainer: null,
   highlightedTileContainer: null,
   closeButton: null,
@@ -347,22 +357,21 @@ let obj = {
   spoilerOverlay: null,
   footerRightContainer: null,
 };
-obj = {
+let obj4 = {};
+let merged = Object.assign(StyleSheet.absoluteFillObject);
+obj4.flex = 1;
+obj4.flexDirection = "row";
+obj4.justifyContent = "space-between";
+obj4.alignItems = "flex-end";
+obj4.padding = 4;
+obj.decorationsContainer = obj4;
+let obj3 = {
   position: "relative",
   minWidth: 60,
   backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
   overflow: "hidden",
   borderRadius: nativeDefault.radii.md - 1,
 };
-obj.tileContainer = obj;
-const createStyles = {};
-let merged = Object.assign(StyleSheet.absoluteFillObject);
-createStyles.flex = 1;
-createStyles.flexDirection = "row";
-createStyles.justifyContent = "space-between";
-createStyles.alignItems = "flex-end";
-createStyles.padding = 4;
-obj.decorationsContainer = createStyles;
 obj.highlightedTileContainer = {
   borderColor: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE,
   borderStyle: "solid",
@@ -381,7 +390,7 @@ let size = {
   backgroundColor: nativeDefault.colors.BACKGROUND_SCRIM_LIGHTBOX,
 };
 obj.closeContainer = size;
-let obj2 = {
+let obj5 = {
   borderColor: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE,
   borderStyle: "solid",
   borderWidth: 2,
@@ -392,7 +401,7 @@ obj.closeButtonIcon = {
   backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER,
   tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT,
 };
-let obj3 = {
+let obj6 = {
   borderRadius: nativeDefault.radii.lg,
   backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER,
   tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT,
@@ -404,7 +413,7 @@ obj.altTagText = {
   borderRadius: nativeDefault.radii.xs,
   textTransform: "uppercase",
 };
-let obj4 = {
+let obj7 = {
   paddingHorizontal: nativeDefault.space.PX_4,
   lineHeight: 20,
   backgroundColor: nativeDefault.colors.BACKGROUND_SCRIM_LIGHTBOX,
@@ -435,12 +444,12 @@ let closure_13 = createStyles.createStyles(obj);
 const __initData = {
   code: "function ImageCarouselTsx1(){const{withTiming,animatedStylePropValue,STANDARD_EASING,withSpring}=this.__closure;return{opacity:withTiming(animatedStylePropValue.get(),{duration:300,easing:STANDARD_EASING},'respect-motion-settings'),transform:[{scale:withSpring(animatedStylePropValue.get(),{stiffness:80,damping:6,mass:0.3},'respect-motion-settings')}]};}",
 };
-let obj5 = {
+let obj8 = {
   backgroundColor: nativeDefault.colors.BACKGROUND_SCRIM_LIGHTBOX,
   borderRadius: nativeDefault.radii.sm,
   padding: nativeDefault.space.PX_4,
 };
-const obj6 = {};
+const obj9 = {};
 size = fn(2);
 let result = size.fileFinishedImporting("components_native/chat/ImageCarousel.tsx");
 
@@ -476,7 +485,7 @@ export default noop.memo((arg0) => {
   if (tmp2) {
     num2 = closure_10 + IMAGE_CAROUSEL_TILE_CLOSE_BUTTON_PADDING;
   }
-  let obj = { height: num2, marginTop: null, marginBottom: null };
+  const obj = { height: num2, marginTop: null, marginBottom: null };
   let num3 = 0;
   if (tmp2) {
     num3 = -1 * (IMAGE_CAROUSEL_TILE_CLOSE_BUTTON_PADDING - IMAGE_CAROUSEL_EXPERIMENT_TILE_MARGIN);
@@ -486,9 +495,10 @@ export default noop.memo((arg0) => {
   if (tmp2) {
     num5 = 2 * IMAGE_CAROUSEL_EXPERIMENT_TILE_MARGIN;
   }
-  obj = { style: items2, children: null, marginBottom: num5 };
+  const obj2 = { style: items2, children: null };
+  obj.marginBottom = num5;
   items2[1] = obj;
-  obj = {
+  const obj3 = {
     horizontal: true,
     keyboardShouldPersistTaps: "always",
     showsHorizontalScrollIndicator: false,
@@ -497,7 +507,7 @@ export default noop.memo((arg0) => {
     children: null,
   };
   const intl = channelId(onRemove[20]).intl;
-  obj.accessibilityLabel = intl.string(channelId(onRemove[20]).t.RhtzFe);
+  obj3.accessibilityLabel = intl.string(channelId(onRemove[20]).t.RhtzFe);
   const items3 = [headerElement];
   let mapped = null;
   if (null != attachments) {
@@ -508,37 +518,37 @@ export default noop.memo((arg0) => {
     );
   }
   items3[1] = mapped;
-  obj.children = items3;
-  obj.children = closure_12(CustomScrollView, obj);
-  return closure_11(closure_4, obj);
+  obj3.children = items3;
+  obj2.children = closure_12(CustomScrollView, obj3);
+  return closure_11(closure_4, obj2);
 });
 export const useTileEntranceAnimatedStyle = function useTileEntranceAnimatedStyle(arg0) {
-  let obj = sharedValue(4373);
-  sharedValue = obj.useSharedValue(0);
+  sharedValue = sharedValue(4373).useSharedValue(0);
   const items = [sharedValue, arg0];
   const effect = noop.useEffect(() => {
     const result = onEdit.set(1);
   }, items);
+  const obj = sharedValue(4373);
   const fn = function o() {
-    let obj = { opacity: null, transform: null };
-    obj = { duration: 300, easing: null };
+    const obj = { opacity: null, transform: null };
+    const obj3 = { duration: 300, easing: null };
     value = onEdit.get();
-    obj.easing = native.STANDARD_EASING;
-    obj.opacity = timing.withTiming(value, obj, "respect-motion-settings");
-    obj = { scale: null };
-    obj.scale = spring.withSpring(onEdit.get(), { stiffness: 80, damping: 6, mass: 0.3 }, "respect-motion-settings");
-    const items = [obj];
+    obj3.easing = native.STANDARD_EASING;
+    obj.opacity = timing.withTiming(value, obj3, "respect-motion-settings");
+    const obj4 = { scale: null };
+    obj4.scale = spring.withSpring(onEdit.get(), { stiffness: 80, damping: 6, mass: 0.3 }, "respect-motion-settings");
+    const items = [obj4];
     obj.transform = items;
     return obj;
   };
-  obj = {
+  const obj2 = sharedValue(4373);
+  fn.__closure = {
     withTiming: sharedValue(4637).withTiming,
     animatedStylePropValue: sharedValue,
-    STANDARD_EASING: sharedValue(1178).STANDARD_EASING,
+    STANDARD_EASING: sharedValue(1176).STANDARD_EASING,
     withSpring: sharedValue(5055).withSpring,
   };
-  fn.__closure = obj;
   fn.__workletHash = 14458898683767;
   fn.__initData = __initData;
-  return sharedValue(4373).useAnimatedStyle(fn);
+  return obj2.useAnimatedStyle(fn);
 };

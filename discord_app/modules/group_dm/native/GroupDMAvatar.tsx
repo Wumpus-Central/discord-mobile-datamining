@@ -32,7 +32,7 @@ class FacepileGroupDMAvatar {
     items1 = [,];
     items1[0] = tmp4;
     items1[1] = tmp7;
-    obj = {
+    obj1 = {
       style: null,
       accessible,
       accessibilityLabel,
@@ -43,7 +43,7 @@ class FacepileGroupDMAvatar {
     items2 = [,];
     items2[0] = memo;
     items2[1] = style;
-    obj.style = items2;
+    obj1.style = items2;
     tmp11 = jsx;
     memo1 = obj.useMemo(() => {
       const result = closure_1 / 2;
@@ -66,56 +66,56 @@ class FacepileGroupDMAvatar {
     }, items1);
     tmp9 = jsxs;
     tmp10 = View;
-    obj1 = { style: tmp.firstFace, size: pileSizeOverride, guildId: "r", cutout: 0, animate: "absolute" };
-    obj1.cutout = memo1;
-    obj1.animate = animate;
+    obj9 = { style: tmp.firstFace, size: pileSizeOverride, guildId: "r", cutout: 0, animate: "absolute" };
+    obj9.cutout = memo1;
+    obj9.animate = animate;
     if (null == users) {
-      obj2 = { source: null };
-      obj2.source = sources[0];
-      obj3 = obj2;
+      obj10 = { source: null };
+      obj10.source = sources[0];
+      obj11 = obj10;
     } else {
-      obj3 = { user: null };
-      obj3.user = users[0];
+      obj11 = { user: null };
+      obj11.user = users[0];
     }
-    merged = Object.assign(obj3);
+    merged = Object.assign(obj11);
     items3 = [,];
-    items3[0] = tmp11(tmp2(tmp3[4]).Avatar, obj1);
-    obj4 = {
+    items3[0] = tmp11(tmp2(tmp3[4]).Avatar, obj9);
+    obj12 = {
       status,
       statusSizeOverride: tmp2(tmp3[4]).StatusSizes.REFRESH_MEDIUM_10,
       autoStatusCutout: true,
       style: tmp.secondFace,
       size: pileSizeOverride,
       guildId: "Array",
-      animate: "INTRO",
+      animate: "Clear override",
     };
-    obj4.animate = animate;
+    obj12.animate = animate;
     if (null == users) {
-      obj5 = { source: null };
-      obj5.source = sources[1];
-      obj6 = obj5;
+      obj13 = { source: null };
+      obj13.source = sources[1];
+      obj14 = obj13;
     } else {
-      obj6 = { user: null };
-      obj6.user = users[1];
+      obj14 = { user: null };
+      obj14.user = users[1];
     }
-    merged1 = Object.assign(obj6);
-    items3[1] = tmp11(tmp2(tmp3[4]).Avatar, obj4);
-    obj.children = items3;
-    return tmp9(tmp10, obj);
+    merged1 = Object.assign(obj14);
+    items3[1] = tmp11(tmp2(tmp3[4]).Avatar, obj12);
+    obj1.children = items3;
+    return tmp9(tmp10, obj1);
   }
 }
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 let obj = {};
-obj[fn(1178).AvatarSizes.LARGE_48] = fn(1178).AvatarSizes.SMALL;
-obj[fn(1178).AvatarSizes.XLARGE] = fn(1178).AvatarSizes.NORMAL;
-obj[fn(1178).AvatarSizes.XXLARGE] = fn(1178).AvatarSizes.LARGE;
-obj[fn(1178).AvatarSizes.PROFILE] = fn(1178).AvatarSizes.XXLARGE;
-obj[fn(1178).AvatarSizes.REFRESH_MEDIUM_32] = fn(1178).AvatarSizes.XSMALL_20;
-obj[fn(1178).AvatarSizes.XSMALL] = fn(1178).AvatarSizes.SIZE_16;
-obj[fn(1178).AvatarSizes.SIZE_16] = fn(1178).AvatarSizes.XXSMALL_10;
-obj[fn(1178).AvatarSizes.NORMAL] = fn(1178).AvatarSizes.XSMALL;
+obj[fn(1176).AvatarSizes.LARGE_48] = fn(1176).AvatarSizes.SMALL;
+obj[fn(1176).AvatarSizes.XLARGE] = fn(1176).AvatarSizes.NORMAL;
+obj[fn(1176).AvatarSizes.XXLARGE] = fn(1176).AvatarSizes.LARGE;
+obj[fn(1176).AvatarSizes.PROFILE] = fn(1176).AvatarSizes.XXLARGE;
+obj[fn(1176).AvatarSizes.REFRESH_MEDIUM_32] = fn(1176).AvatarSizes.XSMALL_20;
+obj[fn(1176).AvatarSizes.XSMALL] = fn(1176).AvatarSizes.SIZE_16;
+obj[fn(1176).AvatarSizes.SIZE_16] = fn(1176).AvatarSizes.XXSMALL_10;
+obj[fn(1176).AvatarSizes.NORMAL] = fn(1176).AvatarSizes.XSMALL;
 const createStyles = fn(4636);
 const React6 = createStyles.createStyles({
   firstFace: { position: "absolute", top: 0, left: 0 },
@@ -127,9 +127,8 @@ let result = size.fileFinishedImporting("modules/group_dm/native/GroupDMAvatar.t
 export default function GroupDMAvatar(pileSizeOverride) {
   ({ style, channel } = pileSizeOverride);
   ({ size, animate, status, accessible, accessibilityLabel } = pileSizeOverride);
-  obj = channel(504);
   const items = [UserStore];
-  const stateFromStoresArray = obj.useStateFromStoresArray(items, () => {
+  const stateFromStoresArray = channel(504).useStateFromStoresArray(items, () => {
     const recipients = channel.recipients;
     const mapped = recipients.map((item) => user.getUser(item));
     return mapped.filter(GlobalUtils.isNotNullish);
@@ -138,7 +137,7 @@ export default function GroupDMAvatar(pileSizeOverride) {
     if (0 !== channel.recipients.length) {
       if (0 !== stateFromStoresArray.length) {
         if (1 === stateFromStoresArray.length) {
-          obj = {
+          const obj2 = {
             autoStatusCutout: true,
             status,
             style,
@@ -149,9 +148,9 @@ export default function GroupDMAvatar(pileSizeOverride) {
             accessible,
             accessibilityLabel,
           };
-          let tmp5 = closure_5(channel(1178).Avatar, obj);
+          let tmp5 = closure_5(channel(1176).Avatar, obj2);
         } else {
-          obj = {
+          const obj3 = {
             status,
             style,
             size,
@@ -161,13 +160,13 @@ export default function GroupDMAvatar(pileSizeOverride) {
             accessible,
             accessibilityLabel,
           };
-          tmp5 = closure_5(FacepileGroupDMAvatar, obj);
+          tmp5 = closure_5(FacepileGroupDMAvatar, obj3);
         }
       }
       return tmp5;
     }
   }
-  tmp5 = closure_5(channel(1178).Avatar, {
+  tmp5 = closure_5(channel(1176).Avatar, {
     autoStatusCutout: true,
     status,
     style,
@@ -177,5 +176,6 @@ export default function GroupDMAvatar(pileSizeOverride) {
     accessible,
     accessibilityLabel,
   });
+  obj = channel(504);
 }
 export { FacepileGroupDMAvatar };

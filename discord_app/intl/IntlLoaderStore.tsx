@@ -15,8 +15,8 @@ let closure_5 = async function _setAppLocale(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -29,8 +29,8 @@ let closure_5 = async function _setAppLocale(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c3 = 3;
-          obj = { value, done: true };
-          return obj;
+          let obj3 = { value, done: true };
+          return obj3;
         } else {
           const loadingFailed = tmp2;
           closure_129_0 = closure_0;
@@ -51,8 +51,8 @@ let closure_5 = async function _setAppLocale(arg0) {
                 if (arg0 === 1) {
                   throw value;
                 } else if (arg0 === 2) {
-                  let obj = { value, done: true };
-                  return obj;
+                  const obj3 = { value, done: true };
+                  return obj3;
                 } else {
                   return { value: "HermesInternal", done: null };
                 }
@@ -65,14 +65,14 @@ let closure_5 = async function _setAppLocale(arg0) {
                       throw value;
                     } else if (arg0 === 2) {
                       dependencyMap = 3;
-                      obj = { value, done: true };
-                      return obj;
+                      const obj4 = { value, done: true };
+                      return obj4;
                     } else {
                       closure_0 = tmp4;
                       c1 = 1;
                       dependencyMap = 1;
-                      let obj1 = { value: closure_0(2037).preloadAllIntlMessageFiles(), done: false };
-                      return obj1;
+                      const obj6 = { value: closure_0(2037).preloadAllIntlMessageFiles(), done: false };
+                      return obj6;
                     }
                   } else if (1 === tmp4) {
                     if (arg0 === 1) {
@@ -80,21 +80,20 @@ let closure_5 = async function _setAppLocale(arg0) {
                       throw value;
                     } else if (arg0 === 2) {
                       dependencyMap = 3;
-                      const obj2 = { value, done: true };
-                      return obj2;
+                      const obj7 = { value, done: true };
+                      return obj7;
                     } else {
-                      obj1 = closure_0(1155);
                       c1 = 2;
                       dependencyMap = 1;
-                      const obj3 = { value: obj1.loadAllMessagesInLocale(closure_128_0), done: false };
-                      return obj3;
+                      const obj8 = { value: closure_0(1153).loadAllMessagesInLocale(closure_128_0), done: false };
+                      return obj8;
                     }
                   } else if (arg0 === 1) {
                     dependencyMap = 3;
                     throw value;
                   } else if (arg0 === 2) {
                     dependencyMap = 3;
-                    obj = { value, done: true };
+                    const obj = { value, done: true };
                     return obj;
                   } else {
                     dependencyMap = 3;
@@ -151,18 +150,18 @@ let closure_5 = async function _setAppLocale(arg0) {
           );
           c2 = 1;
           c3 = 1;
-          let obj1 = {
+          let obj4 = {
             value: Promise.all(items).catch((error) => loadingFailed.setLoadingFailed(error, closure_1_0)),
             done: false,
           };
-          return obj1;
+          return obj4;
         }
       } else if (arg0 === 1) {
         c3 = 3;
         throw value;
       } else if (arg0 === 2) {
         c3 = 3;
-        obj = { value, done: true };
+        let obj = { value, done: true };
         return obj;
       } else {
         closure_129_1.setLoadingSucceeded(closure_129_0);
@@ -183,8 +182,8 @@ let closure_6 = async function _loadDateFnsLocale(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -197,8 +196,8 @@ let closure_6 = async function _loadDateFnsLocale(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c3 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           closure_1 = tmp4;
           closure_129_0 = undefined;
@@ -209,8 +208,8 @@ let closure_6 = async function _loadDateFnsLocale(arg0) {
           if (null != tmp20) {
             c2 = 1;
             c3 = 1;
-            const obj1 = { value: tmp20(), done: false };
-            return obj1;
+            const obj4 = { value: tmp20(), done: false };
+            return obj4;
           } else {
             state.setLocaleData(_modDef2027);
             c3 = 3;
@@ -224,7 +223,7 @@ let closure_6 = async function _loadDateFnsLocale(arg0) {
         closure_129_0.setLocaleData(closure_129_1);
       }
       c3 = 3;
-      obj = { value, done: true };
+      const obj = { value, done: true };
       return obj;
     } catch (tmp11) {
       c3 = tmp;
@@ -240,8 +239,8 @@ let closure_7 = async function _loadFormatJsLocale(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -254,15 +253,15 @@ let closure_7 = async function _loadFormatJsLocale(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c1 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           const tmp8 = formatjs.formatjsLocales[closure_0];
           if (null != tmp8) {
             c2 = 1;
             c1 = 1;
-            const obj1 = { value: tmp8(), done: false };
-            return obj1;
+            const obj4 = { value: tmp8(), done: false };
+            return obj4;
           }
         }
       } else if (arg0 === 1) {
@@ -270,7 +269,7 @@ let closure_7 = async function _loadFormatJsLocale(arg0) {
         throw value;
       } else if (arg0 === 2) {
         c1 = 3;
-        obj = { value, done: true };
+        const obj = { value, done: true };
         return obj;
       }
       c1 = 3;
@@ -290,8 +289,8 @@ let closure_8 = async function _setMomentLocale(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj3 = { value, done: true };
+      return obj3;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -304,8 +303,8 @@ let closure_8 = async function _setMomentLocale(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c4 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj4 = { value, done: true };
+          return obj4;
         } else {
           closure_2 = tmp2;
           closure_1 = tmp3;
@@ -316,8 +315,8 @@ let closure_8 = async function _setMomentLocale(arg0) {
           if (null != tmp34) {
             c3 = 1;
             c4 = 1;
-            let obj1 = { value: tmp34(), done: false };
-            return obj1;
+            const obj5 = { value: tmp34(), done: false };
+            return obj5;
           }
         }
       } else if (arg0 === 1) {
@@ -325,7 +324,7 @@ let closure_8 = async function _setMomentLocale(arg0) {
         throw value;
       } else if (arg0 === 2) {
         c4 = 3;
-        obj = { value, done: true };
+        const obj = { value, done: true };
         return obj;
       }
       closure_129_1 = [];
@@ -337,13 +336,12 @@ let closure_8 = async function _setMomentLocale(arg0) {
       if (closure_129_2.length > 0) {
         do {
           let arr = closure_129_1.push(closure_129_2.join("-"));
-          arr = closure_129_2.pop();
+          let arr3 = closure_129_2.pop();
           length = closure_129_2.length;
         } while (length > 0);
       }
       closure_129_1.push("en-US");
-      obj1 = closure_130_0(closure_130_2[9]);
-      obj1.locale(closure_129_1);
+      closure_130_0(closure_130_2[9]).locale(closure_129_1);
       c4 = 3;
       return { value: "HermesInternal", done: null };
     } catch (tmp26) {
@@ -352,7 +350,7 @@ let closure_8 = async function _setMomentLocale(arg0) {
     }
   }
 };
-const identity = fn(1244);
+const identity = fn(1242);
 const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
   closure_0 = arg0;
   closure_1 = arg1;

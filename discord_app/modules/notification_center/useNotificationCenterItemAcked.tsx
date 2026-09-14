@@ -1,6 +1,8 @@
 // discord_app/modules/notification_center/useNotificationCenterItemAcked.tsx
 import NotificationCenterStore from "NotificationCenterStore.tsx";
 
+const require = globalThis.__r;
+
 const require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/notification_center/useNotificationCenterItemAcked.tsx");

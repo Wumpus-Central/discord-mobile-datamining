@@ -17,8 +17,12 @@ export default function showMediaMessagePreviewActionSheet(message) {
     if (null != message) {
       const user = UserStore.getUser(message.author.id);
       if (null != user) {
-        const obj = { channel, message, user, closeMediaModal: message.closeMediaModal };
-        obj.openLazy(asyncRequireImpl(13105, dependencyMap.paths), "MediaMessagePreviewActionSheet", obj);
+        const obj2 = { channel, message, user, closeMediaModal: message.closeMediaModal };
+        ActionSheetActionCreatorsDefault.openLazy(
+          asyncRequireImpl(13106, dependencyMap.paths),
+          "MediaMessagePreviewActionSheet",
+          obj2,
+        );
       }
     }
   }

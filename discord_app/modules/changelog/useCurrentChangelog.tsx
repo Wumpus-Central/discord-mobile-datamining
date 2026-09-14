@@ -9,10 +9,9 @@ require = fn;
 function useChangelog(changelogId, stateFromStores) {
   _require = changelogId;
   closure_1 = stateFromStores;
-  let obj = require("useStateFromStores");
   const items = [ChangelogStore];
   const items1 = [changelogId, stateFromStores];
-  const stateFromStoresObject = obj.useStateFromStoresObject(
+  const stateFromStoresObject = require("useStateFromStores").useStateFromStoresObject(
     items,
     () => {
       changelog = null;
@@ -56,18 +55,18 @@ function useChangelog(changelogId, stateFromStores) {
     }
   }, items2);
   if (null == changelogId) {
-    obj = { id: changelogId, changelog: null, loaded: false };
-    let obj1 = obj;
+    const obj2 = { id: changelogId, changelog: null, loaded: false };
+    let obj4 = obj2;
   } else {
     if (null == changelog) {
       if (loadState === ChangelogLoadState.LOADED_FAILURE) {
-        obj = { id: changelogId, changelog: defaultChangelog, loaded: defaultLoadState !== tmp3.NOT_LOADED };
-        obj1 = obj;
+        const obj3 = { id: changelogId, changelog: defaultChangelog, loaded: defaultLoadState !== tmp3.NOT_LOADED };
+        obj4 = obj3;
       }
     }
-    obj1 = { id: changelogId, changelog, loaded: loadState !== ChangelogLoadState.NOT_LOADED };
+    obj4 = { id: changelogId, changelog, loaded: loadState !== ChangelogLoadState.NOT_LOADED };
   }
-  return obj1;
+  return obj4;
 }
 const ChangelogLoadState = fn(2010).ChangelogLoadState;
 const size = fn(2);
@@ -75,9 +74,8 @@ const result = size.fileFinishedImporting("modules/changelog/useCurrentChangelog
 
 export { useChangelog };
 export const useCurrentChangelog = function useCurrentChangelog() {
-  let obj = useStateFromStores;
   const items = [LocaleStore];
-  const stateFromStores = obj.useStateFromStores(items, () => locale.locale);
+  const stateFromStores = useStateFromStores.useStateFromStores(items, () => locale.locale);
   const items1 = [ChangelogStore];
   const stateFromStores1 = useStateFromStores.useStateFromStores(items1, () => ChangelogStore.latestChangelogId());
   const items2 = [ChangelogStore];
@@ -102,9 +100,10 @@ export const useCurrentChangelog = function useCurrentChangelog() {
   const tmp12 = useChangelog(stateFromStores1, stateFromStores);
   ({ changelog: changelog2, loaded: loaded2 } = useChangelog(stateFromStores3, stateFromStores));
   if (null == stateFromStores3) {
-    obj = { id: stateFromStores1, changelog, loaded: tmp7 || loaded, clientTooOld: tmp9 };
+    const obj4 = { id: stateFromStores1, changelog, loaded: tmp7 || loaded, clientTooOld: tmp9 };
+    let obj5 = obj4;
   } else {
-    obj = { id: stateFromStores3, changelog: changelog2, loaded: loaded2, clientTooOld: false };
+    obj5 = { id: stateFromStores3, changelog: changelog2, loaded: loaded2, clientTooOld: false };
   }
-  return obj;
+  return obj5;
 };

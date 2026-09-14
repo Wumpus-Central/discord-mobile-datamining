@@ -15,8 +15,7 @@ const result = size.fileFinishedImporting("design/components/TextInput/native/Te
 export const TextInput = noop.forwardRef((status, ref) => {
   status = status.status;
   ({ errorMessage, required } = status);
-  let obj = useFieldLabelA11yNative;
-  const fieldLabelA11yNative = obj.useFieldLabelA11yNative(status);
+  const fieldLabelA11yNative = useFieldLabelA11yNative.useFieldLabelA11yNative(status);
   const accessibilityLabel = fieldLabelA11yNative.accessibilityLabel;
   if (status == null) {
     let str;
@@ -25,19 +24,19 @@ export const TextInput = noop.forwardRef((status, ref) => {
     }
     status = str;
   }
-  obj = {};
+  const obj2 = {};
   const merged = Object.assign(status);
-  obj.labelId = fieldLabelA11yNative.labelId;
-  obj = { ref };
+  obj2.labelId = fieldLabelA11yNative.labelId;
+  const obj3 = { ref };
   const merged1 = Object.assign(status);
-  obj.status = status;
+  obj3.status = status;
   const merged2 = Object.assign(_objectWithoutProperties(fieldLabelA11yNative, closure_2));
   const tmp4 = _objectWithoutProperties(fieldLabelA11yNative, closure_2);
   let requiredFieldA11yName = getRequiredFieldA11yName.getRequiredFieldA11yName(accessibilityLabel, required);
   if (requiredFieldA11yName == null) {
     requiredFieldA11yName = accessibilityLabel;
   }
-  obj.accessibilityLabel = requiredFieldA11yName;
-  obj.children = jsx(TextField.TextField, { ref });
-  return jsx(Input.Input, { ref });
+  obj3.accessibilityLabel = requiredFieldA11yName;
+  obj2.children = jsx(TextField.TextField, { ref });
+  return jsx(Input.Input, {});
 });

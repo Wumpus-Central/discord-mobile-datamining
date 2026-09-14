@@ -13,16 +13,11 @@ const GuildScheduledEventsConstants = fn(1963);
 ({ EventDetailSections: closure_8, MAX_RSVP_USER_DISPLAY_COUNT: closure_9 } = GuildScheduledEventsConstants);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-fn(4636);
-let createStyles = { segmentedControl: null, header: null };
-createStyles = { paddingTop: nativeDefault.space.PX_8, paddingHorizontal: nativeDefault.space.PX_12 };
-createStyles.segmentedControl = createStyles;
-createStyles.header = { flexDirection: "column" };
-let closure_12 = createStyles.createStyles(createStyles);
+const createStyles = fn(4636);
+let obj2 = { segmentedControl: { paddingTop: nativeDefault.space.PX_8, paddingHorizontal: nativeDefault.space.PX_12 }, header: { flexDirection: "column" } };
+let closure_12 = createStyles.createStyles(obj2);
 const size = fn(2);
-const result = size.fileFinishedImporting(
-  "modules/guild_scheduled_events/native/components/GuildScheduledEventDetailsActionSheet.tsx",
-);
+const result = size.fileFinishedImporting("modules/guild_scheduled_events/native/components/GuildScheduledEventDetailsActionSheet.tsx");
 
 export default function GuildScheduledEventDetailsActionSheet(eventId) {
   eventId = eventId.eventId;
@@ -36,27 +31,22 @@ export default function GuildScheduledEventDetailsActionSheet(eventId) {
   c7 = undefined;
   let items4;
   let tmp = closure_12();
-  let obj = noop;
   const tmp6 = _slicedToArray(noop.useState(eventId.recurrenceId), 2);
   const first = tmp6[0];
-  let obj1 = eventId(stateFromStores[12]);
+  let tmp4 = event(stateFromStores[10]);
   let items = [c7];
   const items1 = [eventId, event];
-  stateFromStores = obj1.useStateFromStores(
-    items,
-    () => {
-      let guildScheduledEvent = GuildScheduledEventStore.getGuildScheduledEvent(eventId);
-      if (guildScheduledEvent == null) {
-        guildScheduledEvent = event;
-      }
-      return guildScheduledEvent;
-    },
-    items1,
-  );
-  let obj2 = eventId(stateFromStores[12]);
+  stateFromStores = eventId(stateFromStores[12]).useStateFromStores(items, () => {
+    let guildScheduledEvent = GuildScheduledEventStore.getGuildScheduledEvent(eventId);
+    if (guildScheduledEvent == null) {
+      guildScheduledEvent = event;
+    }
+    return guildScheduledEvent;
+  }, items1);
+  const obj2 = eventId(stateFromStores[12]);
   const items2 = [c6];
   let id;
-  const stateFromStores1 = obj2.useStateFromStores(items2, () => {
+  const stateFromStores1 = eventId(stateFromStores[12]).useStateFromStores(items2, () => {
     let guild_id;
     if (stateFromStores != null) {
       guild_id = stateFromStores.guild_id;
@@ -67,7 +57,7 @@ export default function GuildScheduledEventDetailsActionSheet(eventId) {
     id = stateFromStores.id;
   }
   let guild_id;
-  let tmp4 = event(stateFromStores[10]);
+  const obj3 = eventId(stateFromStores[12]);
   if (stateFromStores != null) {
     guild_id = stateFromStores.guild_id;
   }
@@ -94,38 +84,47 @@ export default function GuildScheduledEventDetailsActionSheet(eventId) {
     }
     return tmp4;
   }, items3);
-  let tmp5Result = tmp5(
-    tmp2(tmp3[15])(() => {
-      let id;
-      if (stateFromStores != null) {
-        id = stateFromStores.id;
-      }
-      let guild_id;
-      if (stateFromStores != null) {
-        guild_id = stateFromStores.guild_id;
-      }
-      return GuildScheduledEventManagerDefault.getGuildEventUsers(id, null, guild_id);
-    }),
-    2,
-  );
-  [c5, tmp18] = tmp5Result;
-  ({ loading, error } = tmp18);
-  tmp5Result = tmp5(obj.useState(0), 2);
-  [tmp20, c6] = tmp5Result;
   const tmp2Result = event(stateFromStores[13]);
-  [tmp22, c7] = _slicedToArray(obj.useState(0), 2);
+  [c5, tmp18] = event(stateFromStores[15])(() => {
+    let id;
+    if (stateFromStores != null) {
+      id = stateFromStores.id;
+    }
+    let guild_id;
+    if (stateFromStores != null) {
+      guild_id = stateFromStores.guild_id;
+    }
+    return GuildScheduledEventManagerDefault.getGuildEventUsers(id, null, guild_id);
+  });
+  ({ loading, error } = tmp18);
+  const tmp5Result = _slicedToArray(event(stateFromStores[15])(() => {
+    let id;
+    if (stateFromStores != null) {
+      id = stateFromStores.id;
+    }
+    let guild_id;
+    if (stateFromStores != null) {
+      guild_id = stateFromStores.guild_id;
+    }
+    return GuildScheduledEventManagerDefault.getGuildEventUsers(id, null, guild_id);
+  }), 2);
+  [tmp20, c6] = noop.useState(0);
+  const tmp5Result3 = _slicedToArray(noop.useState(0), 2);
+  [tmp22, c7] = noop.useState(0);
   const bottom = tmp2(tmp3[17])().bottom;
   const callback = obj.useCallback((nativeEvent) => {
     _undefined3(nativeEvent.nativeEvent.layout.height);
   }, []);
   items4 = [];
   items4[0] = items4.EVENT_INFO;
-  const callback1 = obj.useCallback(() => {}, []);
+  const callback1 = obj.useCallback(() => {
+
+  }, []);
   if (stateFromStores1) {
     items4.push(tmp25.RSVP_LIST);
   }
   eventId(stateFromStores[18]);
-  obj = {
+  {
     pageWidth: 0,
     defaultIndex: tmp20,
     onSetActiveIndex(arg0) {
@@ -151,57 +150,37 @@ export default function GuildScheduledEventDetailsActionSheet(eventId) {
         id = intl.string(util.t.iW6Xuo);
       }
       return { id, label: id, page: null };
-    }),
+    })
   };
   if (null == stateFromStores) {
     return null;
   } else {
-    obj = { style: tmp.header, onLayout: callback1, children: null };
-    obj1 = { event: stateFromStores };
-    const items5 = [closure_10(tmp8(tmp3[19]).GuildEventCardImageHeader, obj1)];
+    const obj5 = { style: tmp.header, onLayout: callback1, children: null };
+    const obj6 = { event: stateFromStores };
+    const items5 = [closure_10(tmp8(tmp3[19]).GuildEventCardImageHeader, obj6), ];
     let tmp35Result = null;
     if (items4.length > 1) {
-      obj2 = { style: tmp.segmentedControl, children: null };
-      const obj3 = { state: tmp28 };
-      obj2.children = closure_10(tmp8(tmp3[20]).SegmentedControl, obj3);
-      tmp35Result = closure_10(tmp34, obj2);
+      const obj7 = { style: tmp.segmentedControl, children: null };
+      const obj8 = { state: tmp28 };
+      obj7.children = closure_10(tmp8(tmp3[20]).SegmentedControl, obj8);
+      tmp35Result = closure_10(tmp34, obj7);
     }
     items5[1] = tmp35Result;
-    obj.children = items5;
-    const obj4 = { value: tmp4(event(stateFromStores[11]).GUILD_EVENT_MODAL).analyticsLocations, children: null };
-    const obj5 = {
-      scrollable: true,
-      startExpanded: true,
-      onDismiss: onCloseActionSheet,
-      header: closure_11(c5, obj),
-      children: null,
-    };
+    obj5.children = items5;
+    const obj9 = { value: tmp4(event(stateFromStores[11]).GUILD_EVENT_MODAL).analyticsLocations, children: null };
+    const obj10 = { scrollable: true, startExpanded: true, onDismiss: onCloseActionSheet, header: closure_11(c5, obj5), children: null };
     if (tmp31 === tmp25.EVENT_INFO) {
-      const obj6 = { children: null };
-      const obj7 = {
-        guildEvent: stateFromStores,
-        safeBottomPadding: bottom,
-        onCloseActionSheet,
-        onLayout: callback,
-        recurrenceId: first,
-        onRecurrencePress: tmp6[1],
-      };
-      obj6.children = closure_10(tmp2(tmp3[23]), obj7);
-      tmp35Result = closure_10(tmp8(tmp3[22]).BottomSheetScrollView, obj6);
+      const obj11 = { children: null };
+      const obj12 = { guildEvent: stateFromStores, safeBottomPadding: bottom, onCloseActionSheet, onLayout: callback, recurrenceId: first, onRecurrencePress: tmp6[1] };
+      obj11.children = closure_10(tmp2(tmp3[23]), obj12);
+      let tmp35Result2 = closure_10(tmp8(tmp3[22]).BottomSheetScrollView, obj11);
     } else {
-      const obj8 = {
-        userListItems: memo,
-        guildId: stateFromStores.guild_id,
-        loading,
-        error,
-        contentHeight: tmp22 - bottom,
-        safeBottomPadding: bottom,
-      };
-      tmp35Result = closure_10(tmp2(tmp3[24]), obj8);
+      const obj13 = { userListItems: memo, guildId: stateFromStores.guild_id, loading, error, contentHeight: tmp22 - bottom, safeBottomPadding: bottom };
+      tmp35Result2 = closure_10(tmp2(tmp3[24]), obj13);
     }
-    obj5.children = tmp35Result;
-    obj4.children = closure_10(tmp8(tmp3[21]).BottomSheet, obj5);
-    return closure_10(tmp8(tmp3[10]).AnalyticsLocationProvider, obj4);
+    obj10.children = tmp35Result2;
+    obj9.children = closure_10(tmp8(tmp3[21]).BottomSheet, obj10);
+    return closure_10(tmp8(tmp3[10]).AnalyticsLocationProvider, obj9);
   }
-  const tmp5Result1 = _slicedToArray(obj.useState(0), 2);
-}
+  const tmp5Result4 = _slicedToArray(noop.useState(0), 2);
+};

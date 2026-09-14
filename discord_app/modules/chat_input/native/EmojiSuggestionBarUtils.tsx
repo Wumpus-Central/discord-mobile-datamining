@@ -7,11 +7,13 @@ import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../a11y/AccessibilityStore.tsx";
 
+const require = globalThis.__r;
+
 require = fn;
 const UpsellTypes = fn(1074).UpsellTypes;
 const jsx = fn(21).jsx;
 let closure_8 = { focused: false, text: "", selectionStart: 0, selectionEnd: 0 };
-const SUGGESTION_BAR_HEIGHT_TIMING = { duration: 250, easing: fn(1178).STANDARD_EASING };
+const SUGGESTION_BAR_HEIGHT_TIMING = { duration: 250, easing: fn(1176).STANDARD_EASING };
 let closure_10 = { duration: 200, dampingRatio: 0.7 };
 const __initData = {
   code: "function EmojiSuggestionBarUtilsTsx1(){const{progress}=this.__closure;return{opacity:progress.get(),transform:[{scale:progress.get()}]};}",
@@ -87,8 +89,7 @@ export const EmojiEntranceAnimation = function EmojiEntranceAnimation(children) 
   obj = index(sharedValue[6]);
   const fn = function c() {
     obj = { opacity: sharedValue.get(), transform: null };
-    obj = { scale: sharedValue.get() };
-    const items = [obj];
+    const items = [{ scale: sharedValue.get() }];
     obj.transform = items;
     return obj;
   };
@@ -114,7 +115,7 @@ export const useSuggestionBarHeight = function useSuggestionBarHeight(
       if (closure_3 != null) {
         tmp11(0);
       }
-      let tmpResult = timing;
+      const tmpResult = timing;
       const fn = function n(arg0) {
         if (arg0) {
           closure_0(dependencyMap[6]).runOnJS(cleanUp)();
@@ -130,8 +131,8 @@ export const useSuggestionBarHeight = function useSuggestionBarHeight(
       if (closure_3 != null) {
         tmp3(dependencyMap);
       }
-      tmpResult = timing;
-      const result1 = sharedValue.set(tmpResult.withTiming(dependencyMap, __closure));
+      const result1 = sharedValue.set(timing.withTiming(dependencyMap, __closure));
+      const tmpResult2 = timing;
     }
   }, items);
   return sharedValue;
@@ -156,30 +157,32 @@ export const useEmojiSuggestionBarState = function useEmojiSuggestionBarState(me
   setDataImmediate = tmp4.setDataImmediate;
   const items1 = [setData];
   const imperativeHandle = queryStart.useImperativeHandle(arg2, () => ({ setData }), items1);
-  obj = { channel, text, selectionStart, selectionEnd, enabled: null, maxCount: null };
-  const obj2 = chatInputRef(setData[10]);
+  const obj3 = { channel, text, selectionStart, selectionEnd, enabled: null, maxCount: null };
+  let obj2 = chatInputRef(setData[10]);
   if (focused) {
     focused = !suppressed;
   }
-  obj.enabled = focused;
-  obj.maxCount = MAX_SUGGESTIONS_LARGE;
-  const tmp6Result = chatInputStateRef(setData[12])(obj);
+  obj3.enabled = focused;
+  obj3.maxCount = MAX_SUGGESTIONS_LARGE;
+  const tmp6Result = chatInputStateRef(setData[12])(obj3);
   queryStart = tmp6Result.queryStart;
   queryEnd = tmp6Result.queryEnd;
   clear = tmp6Result.clear;
-  obj = {
+  const obj4 = {
     unlockedEmojis: tmp6Result.unlockedEmojis,
     lockedEmojis: tmp6Result.lockedEmojis,
     reducedMotion: stateFromStores,
     handlePress: null,
-    handlePressEmojiUnavailable: obj.useCallback((animated) => {
-      chatInputStateRef(setData[14]);
-      obj = { initialUpsellKey: animated.animated ? clear.ANIMATED_EMOJI : clear.GLOBAL_EMOJI };
-      const result = obj.handleShowUpsellAlert(obj);
+    handlePressEmojiUnavailable: queryStart.useCallback((animated) => {
+      const result = chatInputStateRef(setData[14]).handleShowUpsellAlert({
+        initialUpsellKey: animated.animated ? clear.ANIMATED_EMOJI : clear.GLOBAL_EMOJI,
+      });
+      obj = chatInputStateRef(setData[14]);
+      const obj2 = { initialUpsellKey: animated.animated ? clear.ANIMATED_EMOJI : clear.GLOBAL_EMOJI };
     }, []),
   };
   const items2 = [chatInputRef, chatInputStateRef, queryStart, queryEnd, clear, setDataImmediate];
-  obj.handlePress = obj.useCallback((arg0) => {
+  obj4.handlePress = queryStart.useCallback((arg0) => {
     const combined = "" + chatInputStateRef(setData[13])(arg0) + " ";
     const current = combined.current;
     obj = { location: queryStart, length: queryEnd - queryStart, text: combined, editId: null };
@@ -200,5 +203,5 @@ export const useEmojiSuggestionBarState = function useEmojiSuggestionBarState(me
     clear();
     ref = queryStart + combined.length;
   }, items2);
-  return obj;
+  return obj4;
 };

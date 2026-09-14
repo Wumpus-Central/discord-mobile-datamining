@@ -11,14 +11,14 @@ import size from "../../../_runtime/metro/00002__.js";
 
 const Endpoints = Constants.Endpoints;
 const set = new Set(["darwin", "linux", "win32", "ios", "android"]);
-let MetricType = { COUNT: "count", DISTRIBUTION: "distribution" };
+const MetricType = { COUNT: "count", DISTRIBUTION: "distribution" };
 class MonitoringAgent {
   constructor() {
-    obj = Object.create(new.target.prototype);
-    closure_0 = obj;
-    obj._metrics = [];
-    obj._intervalId = setInterval(() => {
-      obj._flush();
+    obj1 = Object.create(new.target.prototype);
+    closure_0 = obj1;
+    obj1._metrics = [];
+    obj1._intervalId = setInterval(() => {
+      obj2._flush();
     }, 120000);
     tmp2 = closure_0;
     tmp3 = closure_1;
@@ -32,9 +32,9 @@ class MonitoringAgent {
     }
     nativeEventEmitter = new NativeEventEmitter(MetricMonitor);
     addListenerResult = nativeEventEmitter.addListener("logMetric", (arg0) => {
-      obj.increment(arg0, false);
+      obj2.increment(arg0, false);
     });
-    return obj;
+    return obj1;
   }
 }
 const prototype = MonitoringAgent.prototype;
@@ -47,16 +47,15 @@ prototype["_getMetricWithDefaults"] = function _getMetricWithDefaults(name, COUN
       tags.push(item);
     });
   }
-  let tmpResult = PlatformUtils;
   let str = "web";
   if (!tmpResult.isWeb()) {
-    tmpResult = PlatformUtils;
-    const platformName = tmpResult.getPlatformName();
+    const platformName = PlatformUtils.getPlatformName();
     let tmp6 = null;
     if (set.has(platformName)) {
       tmp6 = platformName;
     }
     str = tmp6;
+    const tmpResult2 = PlatformUtils;
   }
   if (null != str) {
     const tags1 = obj.tags;
@@ -119,7 +118,7 @@ prototype["_flush"] = function _flush() {
     HermesBuiltin.arraySpread(self._metrics, 0);
     const HTTP = HTTPUtils.HTTP;
     const request = { url: Endpoints.METRICS_V2, body: null, retries: 1, rejectWithError: true };
-    const body = { metrics: items, client_info: { built_at: "1789190355740", build_number: "6411" } };
+    const body = { metrics: items, client_info: { built_at: "1789363114787", build_number: "6417" } };
     request.body = body;
     HTTP.post(request).catch(() => {
       if (self._metrics.length + items.length < 100) {
@@ -132,11 +131,11 @@ prototype["_flush"] = function _flush() {
   }
   self._metrics = [];
 };
-MetricType = Object.create(MonitoringAgent.prototype);
-let closure_129_0 = MetricType;
-MetricType._metrics = [];
-MetricType._intervalId = setInterval(() => {
-  obj._flush();
+let obj2 = Object.create(MonitoringAgent.prototype);
+let closure_129_0 = obj2;
+obj2._metrics = [];
+obj2._intervalId = setInterval(() => {
+  obj2._flush();
 }, 120000);
 ({ NativeModules, NativeEventEmitter } = get_ActivityIndicator);
 if (PlatformUtils.isAndroid()) {
@@ -146,9 +145,9 @@ if (PlatformUtils.isAndroid()) {
 }
 let nativeEventEmitter = new NativeEventEmitter(MetricMonitor);
 nativeEventEmitter.addListener("logMetric", (arg0) => {
-  obj.increment(arg0, false);
+  obj2.increment(arg0, false);
 });
 const result = size.fileFinishedImporting("modules/monitoring/MonitoringAgent.tsx");
 
-export default MetricType;
+export default obj2;
 export { MetricType };

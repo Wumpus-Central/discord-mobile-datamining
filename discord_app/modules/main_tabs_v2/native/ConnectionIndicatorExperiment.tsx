@@ -2,20 +2,20 @@
 import ApexExperiment from "../../experiments/apex/index.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
-let obj = {
+const obj = {
   name: "2025-12-connection-indicator",
   kind: "user",
   defaultConfig: { timeoutMs: "HermesInternal", hidden: null },
   variations: null,
 };
-obj = {
+const obj2 = {
   1: null,
   2: { timeoutMs: 10000, hidden: false },
   3: { timeoutMs: 15000, hidden: false },
   4: { timeoutMs: 20000, hidden: false },
 };
-obj[4] = { timeoutMs: 10000, hidden: true };
-obj.variations = obj;
+obj2[4] = { timeoutMs: 10000, hidden: true };
+obj.variations = obj2;
 const apexExperiment = ApexExperiment.createApexExperiment(obj);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/ConnectionIndicatorExperiment.tsx");
 

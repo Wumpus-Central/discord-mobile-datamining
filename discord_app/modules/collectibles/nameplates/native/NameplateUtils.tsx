@@ -6,10 +6,17 @@ const result = size.fileFinishedImporting("modules/collectibles/nameplates/nativ
 
 export const getNameplateAssets = function getNameplateAssets(nameplate) {
   const skuId = nameplate.skuId;
-  let obj = { staticImageUrl: null, animatedImageUrl: null };
-  obj = { skuId, assetFormat: CollectiblesAssetUtils.CollectiblesItemAssetFormat.STATIC };
-  obj.staticImageUrl = CollectiblesAssetUtils.getCollectiblesItemAssetUrl(obj);
-  obj = { skuId, assetFormat: CollectiblesAssetUtils.CollectiblesItemAssetFormat.ANIMATED };
-  obj.animatedImageUrl = CollectiblesAssetUtils.getCollectiblesItemAssetUrl(obj);
+  const obj = { staticImageUrl: null, animatedImageUrl: null };
+  const obj2 = CollectiblesAssetUtils;
+  obj.staticImageUrl = obj2.getCollectiblesItemAssetUrl({
+    skuId,
+    assetFormat: CollectiblesAssetUtils.CollectiblesItemAssetFormat.STATIC,
+  });
+  const obj3 = { skuId, assetFormat: CollectiblesAssetUtils.CollectiblesItemAssetFormat.STATIC };
+  const obj4 = CollectiblesAssetUtils;
+  obj.animatedImageUrl = obj4.getCollectiblesItemAssetUrl({
+    skuId,
+    assetFormat: CollectiblesAssetUtils.CollectiblesItemAssetFormat.ANIMATED,
+  });
   return obj;
 };

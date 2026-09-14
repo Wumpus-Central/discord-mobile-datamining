@@ -8,6 +8,8 @@ import noop from "../../../../_runtime/metro/00019__.js";
 import RelationshipStore from "../../../stores/RelationshipStore.tsx";
 import UserStore from "../../../stores/UserStore.tsx";
 
+const require = globalThis.__r;
+
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
@@ -31,18 +33,18 @@ export default function ChannelPickerActionSheet(noChannelOptionLabel) {
       };
       tmp4 = closure_5(require("ActionSheetCloseButton").ActionSheetCloseButton, obj);
     }
-    obj = { title: header.title, trailing: tmp4 };
-    tmp3 = closure_5(require("BottomSheetTitleHeader").BottomSheetTitleHeader, obj);
+    let obj2 = { title: header.title, trailing: tmp4 };
+    tmp3 = closure_5(require("BottomSheetTitleHeader").BottomSheetTitleHeader, obj2);
   }
   let items;
   if (null != noChannelOptionLabel.noChannelOptionLabel) {
-    obj = { value: "", label: noChannelOptionLabel.noChannelOptionLabel, icon: null };
-    const obj1 = { source: require("../../../../_runtime/metro/11464__.js") };
-    obj.icon = closure_5(require("TableRowIcon").TableRowIcon, obj1);
-    items = closure_5(require("TableRadioRow").TableRadioRow, obj);
+    let obj3 = { value: "", label: noChannelOptionLabel.noChannelOptionLabel, icon: null };
+    let obj4 = { source: require("../../../../_runtime/metro/11465__.js") };
+    obj3.icon = closure_5(require("TableRowIcon").TableRowIcon, obj4);
+    items = closure_5(require("TableRadioRow").TableRadioRow, obj3);
   }
-  let obj2 = { scrollable: true, header: tmp3, children: null };
-  let obj3 = { contentContainerStyle: { paddingBottom: require("useSafeAreaInsets")().bottom }, children: null };
+  const obj5 = { scrollable: true, header: tmp3, children: null };
+  const obj6 = { contentContainerStyle: { paddingBottom: require("useSafeAreaInsets")().bottom }, children: null };
   let str;
   if (selectedChannel != null) {
     str = selectedChannel.id;
@@ -50,13 +52,13 @@ export default function ChannelPickerActionSheet(noChannelOptionLabel) {
   if (str == null) {
     str = "";
   }
-  const obj4 = { defaultValue: str, accessibilityLabel: null, onChange: null, hasIcons: true, children: null };
+  const obj7 = { defaultValue: str, accessibilityLabel: null, onChange: null, hasIcons: true, children: null };
   let title;
   if (header != null) {
     title = header.title;
   }
-  obj4.accessibilityLabel = title;
-  obj4.onChange = function onChange(arg0) {
+  obj7.accessibilityLabel = title;
+  obj7.onChange = function onChange(arg0) {
     noChannelOptionLabel = arg0;
     if ("" === arg0) {
       if (null != noChannelOptionLabel.noChannelOptionLabel) {
@@ -77,20 +79,20 @@ export default function ChannelPickerActionSheet(noChannelOptionLabel) {
   const items1 = [
     items,
     channels.map((id) => {
-      let obj = utils_ChannelUtils;
-      const channelIconWithGuild = obj.getChannelIconWithGuild(id, importDefault);
-      obj = { value: id.id, label: useChannelName.computeChannelName(id, UserStore, RelationshipStore), icon: null };
+      const channelIconWithGuild = utils_ChannelUtils.getChannelIconWithGuild(id, importDefault);
+      const obj2 = { value: id.id, label: null, icon: null };
+      obj2.label = useChannelName.computeChannelName(id, UserStore, RelationshipStore);
       let tmp4Result = null;
       if (null != channelIconWithGuild) {
-        obj = { source: channelIconWithGuild };
-        tmp4Result = hasOwnProperty(TableRowIcon.TableRowIcon, obj);
+        const obj4 = { source: channelIconWithGuild };
+        tmp4Result = hasOwnProperty(TableRowIcon.TableRowIcon, obj4);
       }
-      obj.icon = tmp4Result;
-      return hasOwnProperty(TableRadioRow.TableRadioRow, obj, id.id);
+      obj2.icon = tmp4Result;
+      return hasOwnProperty(TableRadioRow.TableRadioRow, obj2, id.id);
     }),
   ];
-  obj4.children = items1;
-  obj3.children = closure_6(require("TableRadioGroup").TableRadioGroup, obj4);
-  obj2.children = closure_5(require("BottomSheetModal").BottomSheetScrollView, obj3);
-  return closure_5(require("ActionSheet").ActionSheet, obj2);
+  obj7.children = items1;
+  obj6.children = closure_6(require("TableRadioGroup").TableRadioGroup, obj7);
+  obj5.children = closure_5(require("BottomSheetModal").BottomSheetScrollView, obj6);
+  return closure_5(require("ActionSheet").ActionSheet, obj5);
 }

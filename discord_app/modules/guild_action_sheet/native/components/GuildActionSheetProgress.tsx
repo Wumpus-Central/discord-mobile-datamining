@@ -7,24 +7,18 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const jsx = fn(21).jsx;
-fn(4636);
-let createStyles = { title: null, cardStyle: null };
-createStyles = { color: nativeDefault.colors.TEXT_DEFAULT };
-createStyles.title = createStyles;
-createStyles.cardStyle = {
-  marginHorizontal: nativeDefault.space.PX_16,
-  padding: 0,
-  marginBottom: nativeDefault.space.PX_24,
-};
-let closure_4 = createStyles.createStyles(createStyles);
+const createStyles = fn(4636);
+const obj2 = { title: { color: nativeDefault.colors.TEXT_DEFAULT }, cardStyle: null };
+let obj3 = { color: nativeDefault.colors.TEXT_DEFAULT };
+obj2.cardStyle = { marginHorizontal: nativeDefault.space.PX_16, padding: 0, marginBottom: nativeDefault.space.PX_24 };
+let closure_4 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_action_sheet/native/components/GuildActionSheetProgress.tsx");
 
 export default function GuildActionSheetProgress(guild) {
   guild = guild.guild;
   const tmp = closure_4();
-  let obj = GuildProgressUtils;
-  const iOSCompletionStates = obj.useIOSCompletionStates(guild);
+  const iOSCompletionStates = GuildProgressUtils.useIOSCompletionStates(guild);
   ({ completed, dismissed } = iOSCompletionStates);
   let tmp5 = null;
   if (obj2.useIsEligibleForGuildProgress(guild)) {
@@ -32,15 +26,15 @@ export default function GuildActionSheetProgress(guild) {
     if (!completed) {
       tmp5 = null;
       if (dismissed) {
-        obj = { style: tmp.cardStyle, children: null };
-        obj = { guild, titleStyle: tmp.title, longPressDisabled: true, resume: true };
-        obj.children = jsx(GuildProgressOverviewDefault, {
+        const obj3 = { style: tmp.cardStyle, children: null };
+        const obj4 = { guild, titleStyle: tmp.title, longPressDisabled: true, resume: true };
+        obj3.children = jsx(GuildProgressOverviewDefault, {
           guild,
           titleStyle: tmp.title,
           longPressDisabled: true,
           resume: true,
         });
-        tmp5 = jsx(Card.Card, { guild, titleStyle: tmp.title, longPressDisabled: true, resume: true });
+        tmp5 = jsx(Card.Card, { style: tmp.cardStyle, children: null });
       }
     }
   }

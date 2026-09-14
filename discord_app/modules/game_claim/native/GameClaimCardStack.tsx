@@ -2,7 +2,7 @@
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import PlusSmallIcon from "../../../design/components/Icon/native/redesign/generated/PlusSmallIcon.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
-import n from "../../../../_runtime/metro/00672__.js";
+import n_mod from "../../../../_runtime/metro/00672__.js";
 
 require = fn;
 get_ActivityIndicator = fn(17);
@@ -11,17 +11,21 @@ const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
 const sum = nativeDefault.space.PX_12 + nativeDefault.space.PX_8 + 96;
 const sum1 = sum + 4 + nativeDefault.space.PX_16;
+let n = n_mod;
 const importDefaultResultResult = n(nativeDefault.unsafe_rawColors.BRAND_500);
 const alphaResult = n(nativeDefault.unsafe_rawColors.BRAND_500).alpha(0.5);
+let n = n_mod;
 const hexResult = n(nativeDefault.unsafe_rawColors.BRAND_500).alpha(0.5).hex();
 const importDefaultResult1Result = n(nativeDefault.unsafe_rawColors.BRAND_500);
 const alphaResult1 = n(nativeDefault.unsafe_rawColors.BRAND_500).alpha(0.25);
+let n = n_mod;
 const hexResult1 = n(nativeDefault.unsafe_rawColors.BRAND_500).alpha(0.25).hex();
 const importDefaultResult2Result = n(nativeDefault.unsafe_rawColors.BRAND_500);
 const alphaResult2 = n(nativeDefault.unsafe_rawColors.BRAND_500).alpha(0.35);
 const createStyles = fn(4636);
 let obj = { container: null, gameCard: null, gameImage: null, addCard: null, addIconWrapper: null };
-obj = {
+const hexResult2 = n(nativeDefault.unsafe_rawColors.BRAND_500).alpha(0.35).hex();
+obj.container = {
   flexDirection: "row",
   alignItems: "flex-start",
   justifyContent: "center",
@@ -29,7 +33,6 @@ obj = {
   paddingTop: nativeDefault.space.PX_12,
   paddingBottom: nativeDefault.space.PX_16 + 4,
 };
-obj.container = obj;
 let size = {
   width: 72,
   height: 96,
@@ -69,7 +72,7 @@ const size2 = {
   width: 21.599999999999998,
   height: 21.599999999999998,
   borderRadius: nativeDefault.radii.xs,
-  backgroundColor: n(nativeDefault.unsafe_rawColors.BRAND_500).alpha(0.35).hex(),
+  backgroundColor: hexResult2,
   alignItems: "center",
   justifyContent: "center",
 };
@@ -80,19 +83,20 @@ const result = size.fileFinishedImporting("modules/game_claim/native/GameClaimCa
 
 export default function GameClaimCardStack(uri) {
   const tmp = closure_6();
-  let obj = { style: tmp.container, children: null };
-  obj = { style: tmp.gameCard, children: null };
-  obj = { style: tmp.gameImage, source: { uri: uri.imageSrc }, resizeMode: "cover" };
-  obj.children = React4(React2, obj);
-  const items = [React4(React3, obj)];
-  const obj1 = {
+  const obj = { style: tmp.container, children: null };
+  const obj2 = {
+    style: tmp.gameCard,
+    children: React4(React2, { style: tmp.gameImage, source: { uri: uri.imageSrc }, resizeMode: "cover" }),
+  };
+  const items = [React4(React3, obj2)];
+  const obj4 = {
     style: tmp.addCard,
     children: React4(React3, {
       style: tmp.addIconWrapper,
       children: React4(PlusSmallIcon.PlusSmallIcon, { size: "sm", color: "text-brand" }),
     }),
   };
-  items[1] = React4(React3, obj1);
+  items[1] = React4(React3, obj4);
   obj.children = items;
   return hasOwnProperty(React3, obj);
 }

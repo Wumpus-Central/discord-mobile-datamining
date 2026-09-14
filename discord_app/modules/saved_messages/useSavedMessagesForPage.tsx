@@ -26,20 +26,16 @@ export default function useSavedMessagesForPage() {
   }
   importDefault = undefined;
   dependencyMap = undefined;
-  _slicedToArray = undefined;
-  [c1, c2] = _slicedToArray(
-    noop.useState(() => {
-      if (SavedMessagesTypes.SavedMessageSortTypes.BOOKMARK === ALL) {
-        let messageBookmarks = SavedMessagesStore.getMessageBookmarks();
-      } else if (SavedMessagesTypes.SavedMessageSortTypes.REMINDER === ALL) {
-        messageBookmarks = SavedMessagesStore.getMessageReminders();
-      } else {
-        messageBookmarks = SavedMessagesStore.getSavedMessages();
-      }
-      return messageBookmarks.map((saveData) => saveData.saveData);
-    }),
-    2,
-  );
+  [c1, c2] = noop.useState(() => {
+    if (SavedMessagesTypes.SavedMessageSortTypes.BOOKMARK === ALL) {
+      let messageBookmarks = SavedMessagesStore.getMessageBookmarks();
+    } else if (SavedMessagesTypes.SavedMessageSortTypes.REMINDER === ALL) {
+      messageBookmarks = SavedMessagesStore.getMessageReminders();
+    } else {
+      messageBookmarks = SavedMessagesStore.getSavedMessages();
+    }
+    return messageBookmarks.map((saveData) => saveData.saveData);
+  });
   _slicedToArray = noop.useRef(SavedMessagesStore.getIsStale());
   let items = [ALL];
   const effect = noop.useEffect(() => {

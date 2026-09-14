@@ -20,8 +20,8 @@ let closure_4 = async function _updatePermission(arg0, arg1, arg2, arg3) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj3 = { value, done: true };
+        return obj3;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -34,8 +34,8 @@ let closure_4 = async function _updatePermission(arg0, arg1, arg2, arg3) {
             throw value;
           } else if (arg0 === 2) {
             c7 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj5 = { value, done: true };
+            return obj5;
           } else {
             closure_5 = tmp5;
             closure_4 = tmp2;
@@ -47,7 +47,7 @@ let closure_4 = async function _updatePermission(arg0, arg1, arg2, arg3) {
               if (closure_1 === guildId) {
                 c6 = 1;
                 c7 = 1;
-                let obj1 = {
+                const obj6 = {
                   value: DefaultChannelThresholdUtils.checkChattableChannelThresholdMetAfterChannelPermissionDeny(
                     tmp21,
                     closure_3,
@@ -55,7 +55,7 @@ let closure_4 = async function _updatePermission(arg0, arg1, arg2, arg3) {
                   ),
                   done: false,
                 };
-                return obj1;
+                return obj6;
               }
             }
             tmp21 = guildId;
@@ -65,20 +65,19 @@ let closure_4 = async function _updatePermission(arg0, arg1, arg2, arg3) {
           throw value;
         } else if (arg0 === 2) {
           c7 = 3;
-          obj = { value, done: true };
+          const obj = { value, done: true };
           return obj;
         } else if (!value) {
           c7 = 3;
           return { value: false, done: true };
         }
-        obj1 = closure_133_1(closure_133_2[2]);
-        const obj2 = {
+        const obj7 = {
           type: "CHANNEL_SETTINGS_PERMISSIONS_UPDATE_PERMISSION",
           id: closure_132_0,
           allow: closure_132_1,
           deny: closure_132_2,
         };
-        obj1.dispatch(obj2);
+        closure_133_1(closure_133_2[2]).dispatch(obj7);
         c7 = 3;
         return { value: "HermesInternal", done: null };
       } catch (tmp16) {
@@ -102,12 +101,10 @@ export const updatePermission = function updatePermission() {
   return applyArgumentsResult;
 };
 export const selectPermission = function selectPermission(id) {
-  const obj = { type: "CHANNEL_SETTINGS_PERMISSIONS_SELECT_PERMISSION", id };
-  obj.dispatch(obj);
+  DispatcherDefault.dispatch({ type: "CHANNEL_SETTINGS_PERMISSIONS_SELECT_PERMISSION", id });
 };
 export const setAdvancedMode = function setAdvancedMode(advancedMode) {
-  const obj = { type: "CHANNEL_SETTINGS_PERMISSIONS_SET_ADVANCED_MODE", advancedMode };
-  obj.dispatch(obj);
+  DispatcherDefault.dispatch({ type: "CHANNEL_SETTINGS_PERMISSIONS_SET_ADVANCED_MODE", advancedMode });
 };
 export const init = function init() {
   DispatcherDefault.dispatch({ type: "CHANNEL_SETTINGS_PERMISSIONS_INIT" });
@@ -120,34 +117,32 @@ export const savePermissionUpdates = function savePermissionUpdates(id, items, s
   return new Promise((arg0) => {
     closure_0 = arg0;
     function chain() {
-      let arr = length;
       if (0 === length.length) {
         if (0 === closure_2.length) {
           return closure_0();
         }
       }
-      if (arr.length > 0) {
-        arr = arr.pop();
-        if (null == arr) {
+      if (length.length > 0) {
+        const arr3 = length.pop();
+        if (null == arr3) {
           return chain();
         } else {
-          const result = ChannelActionCreatorsDefault.updatePermissionOverwrite(closure_0, arr);
+          const result = ChannelActionCreatorsDefault.updatePermissionOverwrite(closure_0, arr3);
           result.then(chain, chain);
         }
       } else {
-        arr = closure_2.pop();
-        if (null == arr) {
+        const arr4 = closure_2.pop();
+        if (null == arr4) {
           return chain();
         } else {
-          const result1 = ChannelActionCreatorsDefault.clearPermissionOverwrite(closure_0, arr);
+          const result1 = ChannelActionCreatorsDefault.clearPermissionOverwrite(closure_0, arr4);
           result1.then(chain, chain);
         }
       }
     }
     !chain();
   }).then(() => {
-    const obj = { type: "CHANNEL_SETTINGS_PERMISSIONS_SAVE_SUCCESS", silent };
-    obj.dispatch(obj);
+    DispatcherDefault.dispatch({ type: "CHANNEL_SETTINGS_PERMISSIONS_SAVE_SUCCESS", silent });
   });
 };
 export const saveAndClearPermissionUpdates = function saveAndClearPermissionUpdates(arg0, arg1, arg2, arg3) {
@@ -159,33 +154,31 @@ export const saveAndClearPermissionUpdates = function saveAndClearPermissionUpda
   return new Promise((arg0) => {
     closure_0 = arg0;
     function chain() {
-      let arr = length;
       if (0 === length.length) {
         if (0 === closure_2.length) {
           return closure_0();
         }
       }
-      if (arr.length > 0) {
-        arr = arr.pop();
-        if (null == arr) {
+      if (length.length > 0) {
+        const arr3 = length.pop();
+        if (null == arr3) {
           return chain();
         } else {
-          const result = ChannelActionCreatorsDefault.updatePermissionOverwrite(closure_0, arr);
+          const result = ChannelActionCreatorsDefault.updatePermissionOverwrite(closure_0, arr3);
           result.then(chain, chain);
         }
       } else {
-        arr = closure_2.pop();
-        if (null == arr) {
+        const arr4 = closure_2.pop();
+        if (null == arr4) {
           return chain();
         } else {
-          const result1 = ChannelActionCreatorsDefault.clearPermissionOverwrite(closure_0, arr);
+          const result1 = ChannelActionCreatorsDefault.clearPermissionOverwrite(closure_0, arr4);
           result1.then(chain, chain);
         }
       }
     }
     !chain();
   }).then(() => {
-    const obj = { type: "CHANNEL_SETTINGS_PERMISSIONS_SAVE_SUCCESS", silent };
-    obj.dispatch(obj);
+    DispatcherDefault.dispatch({ type: "CHANNEL_SETTINGS_PERMISSIONS_SAVE_SUCCESS", silent });
   });
 };

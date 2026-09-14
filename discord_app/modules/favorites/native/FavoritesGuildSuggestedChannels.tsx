@@ -11,7 +11,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const FavoritesGuildSuggestionsStore = fn(16297);
+const FavoritesGuildSuggestionsStore = fn(16299);
 ({ useFavoritesGuildSuggestions: hasOwnProperty, useFavoritesGuildSuggestionsDismissal: metroRequire } =
   FavoritesGuildSuggestionsStore);
 const NOOP = fn(1074).NOOP;
@@ -20,19 +20,17 @@ const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
 const PX_8 = nativeDefault.space.PX_8;
 const PX_4 = nativeDefault.space.PX_4;
-fn(4636);
-const createStyles = {
+const createStyles = fn(4636);
+let closure_13 = createStyles.createStyles({
   container: { marginTop: PX_4 },
   rows: { paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: PX_8 },
-};
-let closure_13 = createStyles.createStyles(createStyles);
+});
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/favorites/native/FavoritesGuildSuggestedChannels.tsx");
 
 export default function FavoritesGuildSuggestedChannels() {
   let tmp = closure_13();
-  let obj = arr(16201);
-  const categoryStyles = obj.useCategoryStyles();
+  const categoryStyles = arr(16203).useCategoryStyles();
   arr = closure_5();
   const tmp5 = closure_6();
   importDefault = tmp5;
@@ -51,19 +49,19 @@ export default function FavoritesGuildSuggestedChannels() {
   noop = noop.useMemo(() => ({ height }), items1);
   let tmp9 = null;
   if (0 !== arr.length) {
-    obj = { style: tmp.container, children: null };
-    obj = { name: null, withMarginTop: false, styles: null, trailingAction: null };
+    let obj2 = { style: tmp.container, children: null };
+    let obj3 = { name: null, withMarginTop: false, styles: null, trailingAction: null };
     let intl = tmp2(1114).intl;
-    obj.name = intl.string(_modDef3236.oHWnLy);
-    obj.styles = categoryStyles;
-    obj.trailingAction = memo;
-    const items2 = [tmp2(16201).renderCategoryItem(obj)];
-    const obj1 = {
+    obj3.name = intl.string(_modDef3236.oHWnLy);
+    obj3.styles = categoryStyles;
+    obj3.trailingAction = memo;
+    const items2 = [tmp2(16203).renderCategoryItem(obj3)];
+    const obj4 = {
       style: tmp.rows,
       children: arr.map((item, index) => {
         closure_0 = item;
-        let obj = { style, children: null };
-        obj = {
+        const obj = { style, children: null };
+        const obj2 = {
           result: item,
           onPressDestination: handleFavoritesGuildAddSuggestedChannelDefault,
           onLongPress: NOOP,
@@ -71,22 +69,22 @@ export default function FavoritesGuildSuggestedChannels() {
           end: index === arr.length - 1,
           trailing: null,
         };
-        obj = { variant: "secondary", size: "sm", grow: false, text: null, onPress: null };
+        const obj3 = { variant: "secondary", size: "sm", grow: false, text: null, onPress: null };
         const intl = util.intl;
-        obj.text = intl.string(util.t.OYkgVk);
-        obj.onPress = function onPress() {
-          const tmp = closure_1(16299);
-          return tmp(arr(11113).getDestinationIdFromResult(closure_0));
+        obj3.text = intl.string(util.t.OYkgVk);
+        obj3.onPress = function onPress() {
+          const tmp = closure_1(16301);
+          return tmp(arr(11114).getDestinationIdFromResult(closure_0));
         };
-        obj.trailing = React7(components_Button_Button.Button, obj);
-        obj.children = React7(SearchableDestinationListRowDefault, obj);
+        obj2.trailing = React7(components_Button_Button.Button, obj3);
+        obj.children = React7(SearchableDestinationListRowDefault, obj2);
         return React7(View, obj, "" + item.type + "-" + item.record.id);
       }),
     };
-    items2[1] = closure_9(View, obj1);
-    obj.children = items2;
-    tmp9 = closure_10(View, obj);
-    const tmp2Result = tmp2(16201);
+    items2[1] = closure_9(View, obj4);
+    obj2.children = items2;
+    tmp9 = closure_10(View, obj2);
+    const tmp2Result = tmp2(16203);
   }
   return tmp9;
 }

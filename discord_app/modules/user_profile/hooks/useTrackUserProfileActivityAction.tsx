@@ -4,6 +4,8 @@ import UserProfileAnalyticsUtils from "../UserProfileAnalyticsUtils.tsx";
 import ContentInventoryOutboxStore from "../../content_inventory/ContentInventoryOutboxStore.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
+const require = globalThis.__r;
+
 _mod19.useCallback;
 let result = size.fileFinishedImporting("modules/user_profile/hooks/useTrackUserProfileActivityAction.tsx");
 
@@ -21,7 +23,7 @@ export default function useTrackUserProfileActivityAction(activity) {
   if (analyticsLocations == null) {
     analyticsLocations = display(activity[3])().analyticsLocations;
   }
-  let obj = require("UserProfileAnalyticsContext");
+  const obj = require("UserProfileAnalyticsContext");
   const items = [stream];
   stateFromStores = require("initialize").useStateFromStores(items, () =>
     ContentInventoryOutboxStore.getUserOutbox(id.id),
@@ -39,10 +41,17 @@ export default function useTrackUserProfileActivityAction(activity) {
   ];
   return entry((action) => {
     action = action.action;
-    let obj = { action, analyticsLocations };
-    trackUserProfileAction(obj);
-    obj = { action, display, activity, entry, stream, outbox: stateFromStores, voiceChannelId, analyticsLocations };
+    trackUserProfileAction({ action, analyticsLocations });
     const merged = Object.assign(context);
-    const result = UserProfileAnalyticsUtils.trackUserProfileActivityAction(obj);
+    const result = UserProfileAnalyticsUtils.trackUserProfileActivityAction({
+      action,
+      display,
+      activity,
+      entry,
+      stream,
+      outbox: stateFromStores,
+      voiceChannelId,
+      analyticsLocations,
+    });
   }, items1);
 }

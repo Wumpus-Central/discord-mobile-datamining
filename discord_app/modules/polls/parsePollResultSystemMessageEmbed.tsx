@@ -4,15 +4,15 @@ import size from "../../../_runtime/metro/00002__.js";
 const result = size.fileFinishedImporting("modules/polls/parsePollResultSystemMessageEmbed.tsx");
 
 export default function parsePollResultSystemMessageEmbed(fields) {
-  fields = undefined;
+  let fields1;
   if (fields != null) {
-    fields = fields.fields;
+    fields1 = fields.fields;
   }
-  if (null == fields) {
+  if (null == fields1) {
     return null;
   } else {
-    let obj = {};
-    obj = {};
+    const obj = {};
+    const obj2 = {};
     fields = fields.fields;
     const iter = fields[Symbol.iterator]();
     const nextResult = iter.next();
@@ -32,21 +32,21 @@ export default function parsePollResultSystemMessageEmbed(fields) {
         let _parseInt = parseInt;
         obj.totalVotes = parseInt(tmp5.rawValue, 10);
       } else if ("victor_answer_emoji_id" === rawName) {
-        obj.id = tmp5.rawValue;
+        obj2.id = tmp5.rawValue;
       } else if ("victor_answer_emoji_name" === rawName) {
-        obj.name = tmp5.rawValue;
+        obj2.name = tmp5.rawValue;
       } else if ("victor_answer_emoji_animated" === rawName) {
-        obj.animated = "true" === tmp5.rawValue;
+        obj2.animated = "true" === tmp5.rawValue;
       }
       continue;
     }
-    if (null != obj.name) {
-      let flag = obj.animated;
+    if (null != obj2.name) {
+      let flag = obj2.animated;
       if (flag == null) {
         flag = false;
       }
-      obj.animated = flag;
-      obj.victorEmoji = obj;
+      obj2.animated = flag;
+      obj.victorEmoji = obj2;
     }
     return obj;
   }

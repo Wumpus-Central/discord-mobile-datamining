@@ -43,12 +43,12 @@ prototype["initialize"] = function initialize() {
     if (null == value.activeLaunchOptionIds) {
       const Storage2 = Storage6.Storage;
       const Storage3 = Storage6.Storage;
-      value = Storage3.get(LibraryApplicationStore);
-      if (value == null) {
-        value = {};
+      let value3 = Storage3.get(LibraryApplicationStore);
+      if (value3 == null) {
+        value3 = {};
       }
-      let obj = {};
-      const merged = Object.assign(value);
+      const obj = {};
+      const merged = Object.assign(value3);
       obj.activeLaunchOptionIds = activeLaunchOptionIds;
       const result = Storage2.set(LibraryApplicationStore, obj);
     } else {
@@ -57,14 +57,14 @@ prototype["initialize"] = function initialize() {
     if (null == value.activeLibraryApplicationBranchIds) {
       const Storage4 = Storage6.Storage;
       const Storage5 = Storage6.Storage;
-      let value1 = Storage5.get(LibraryApplicationStore);
-      if (value1 == null) {
-        value1 = {};
+      let value4 = Storage5.get(LibraryApplicationStore);
+      if (value4 == null) {
+        value4 = {};
       }
-      obj = {};
-      const merged1 = Object.assign(value1);
-      obj.activeLibraryApplicationBranchIds = activeLibraryApplicationBranchIds;
-      const result1 = Storage4.set(LibraryApplicationStore, obj);
+      const obj2 = {};
+      const merged1 = Object.assign(value4);
+      obj2.activeLibraryApplicationBranchIds = activeLibraryApplicationBranchIds;
+      const result1 = Storage4.set(LibraryApplicationStore, obj2);
     } else {
       activeLibraryApplicationBranchIds = value.activeLibraryApplicationBranchIds;
     }
@@ -146,8 +146,7 @@ prototype["getLibraryApplication"] = function getLibraryApplication(applicationI
 };
 prototype["getActiveLibraryApplication"] = function getActiveLibraryApplication(id) {
   if (null != activeLibraryApplicationBranchIds[id]) {
-    let obj = LibraryApplicationUtils;
-    const comboId = obj.getComboId(id, tmp);
+    const comboId = LibraryApplicationUtils.getComboId(id, tmp);
     let obj2 = dependencyMap[comboId];
     if (obj2 == null) {
       obj2 = dependencyMap2[comboId];
@@ -159,14 +158,14 @@ prototype["getActiveLibraryApplication"] = function getActiveLibraryApplication(
       tmp2Result = LibraryApplicationUtils;
     }
   }
-  obj = {};
+  const obj3 = {};
   const merged = Object.assign(dependencyMap2);
   const merged1 = Object.assign(dependencyMap);
-  for (const key10030 in obj) {
-    if (obj[key10030].id !== arg0) {
+  for (const key10030 in obj3) {
+    if (obj3[key10030].id !== arg0) {
       continue;
     } else {
-      let obj5 = obj[key10030];
+      let obj5 = obj3[key10030];
       let obj6 = LibraryApplicationUtils;
       if (!obj6.isUserEntitledToLibraryApplication(obj5)) {
         continue;
@@ -254,18 +253,17 @@ const libraryApplicationStore = new LibraryApplicationStore(DispatcherDefault, {
   LIBRARY_APPLICATION_UPDATE: handleLibraryApplicationUpdate,
   LIBRARY_APPLICATION_ACTIVE_LAUNCH_OPTION_UPDATE: function handleActiveLaunchOptionIdUpdate(arg0) {
     ({ applicationId, branchId, launchOptionId } = arg0);
-    let obj = LibraryApplicationUtils;
-    activeLaunchOptionIds[obj.getComboId(applicationId, branchId)] = launchOptionId;
+    activeLaunchOptionIds[LibraryApplicationUtils.getComboId(applicationId, branchId)] = launchOptionId;
     const Storage = Storage6.Storage;
     const Storage2 = Storage6.Storage;
-    obj = Storage2.get(LibraryApplicationStore);
-    if (obj == null) {
-      obj = {};
+    let obj2 = Storage2.get(LibraryApplicationStore);
+    if (obj2 == null) {
+      obj2 = {};
     }
-    obj = {};
-    const merged = Object.assign(obj);
-    obj.activeLaunchOptionIds = activeLaunchOptionIds;
-    const result = Storage.set(LibraryApplicationStore, obj);
+    const obj3 = {};
+    const merged = Object.assign(obj2);
+    obj3.activeLaunchOptionIds = activeLaunchOptionIds;
+    const result = Storage.set(LibraryApplicationStore, obj3);
   },
   LIBRARY_APPLICATION_ACTIVE_BRANCH_UPDATE: function handleActiveBranchUpdate(arg0) {
     ({ applicationId, branchId } = arg0);
@@ -279,10 +277,10 @@ const libraryApplicationStore = new LibraryApplicationStore(DispatcherDefault, {
       if (obj == null) {
         obj = {};
       }
-      obj = {};
+      const obj2 = {};
       const merged = Object.assign(obj);
-      obj.activeLibraryApplicationBranchIds = activeLibraryApplicationBranchIds;
-      const result = Storage.set(LibraryApplicationStore, obj);
+      obj2.activeLibraryApplicationBranchIds = activeLibraryApplicationBranchIds;
+      const result = Storage.set(LibraryApplicationStore, obj2);
     }
   },
   LIBRARY_APPLICATIONS_TEST_MODE_ENABLED: function handleTestModeEnabled(arg0) {

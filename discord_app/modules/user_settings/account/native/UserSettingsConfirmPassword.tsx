@@ -20,26 +20,21 @@ get_ActivityIndicator = fn(17);
 const UserSettingsSections = fn(1074).UserSettingsSections;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-fn(4636);
+const createStyles = fn(4636);
 let obj = {
-  background: null,
-  container: null,
-  title: null,
-  prompt: null,
-  input: null,
+  background: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },
+  container: { paddingVertical: 12, paddingHorizontal: 16 },
+  title: { textAlign: "center" },
+  prompt: { marginTop: 8, lineHeight: 18, textAlign: "center" },
+  input: { marginTop: 24 },
   redesignInput: null,
   button: null,
   hint: null,
 };
-obj = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
-obj.background = obj;
-obj.container = { paddingVertical: 12, paddingHorizontal: 16 };
-obj.title = { textAlign: "center" };
-obj.prompt = { marginTop: 8, lineHeight: 18, textAlign: "center" };
-obj.input = { marginTop: 24 };
-const createStyles = { borderRadius: nativeDefault.radii.lg };
-obj.redesignInput = createStyles;
+let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
+obj.redesignInput = { borderRadius: nativeDefault.radii.lg };
 obj.button = { marginTop: 16 };
+let obj4 = { borderRadius: nativeDefault.radii.lg };
 obj.hint = { color: nativeDefault.unsafe_rawColors.RED_400 };
 let closure_12 = createStyles.createStyles(obj);
 const forwardRefResult = noop.forwardRef((arg0, arg1) => {
@@ -62,8 +57,8 @@ const forwardRefResult = noop.forwardRef((arg0, arg1) => {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -76,8 +71,8 @@ const forwardRefResult = noop.forwardRef((arg0, arg1) => {
             throw value;
           } else if (arg0 === 2) {
             c5 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
             closure_0 = tmp8;
             closure_128_0 = undefined;
@@ -85,8 +80,8 @@ const forwardRefResult = noop.forwardRef((arg0, arg1) => {
             c3 = 2;
             c4 = 3;
             c5 = 1;
-            const obj1 = { value: _require(_slicedToArray), done: false };
-            return obj1;
+            const obj5 = { value: _require(_slicedToArray), done: false };
+            return obj5;
           }
         } else if (1 === tmp8) {
           c3 = 0;
@@ -96,8 +91,7 @@ const forwardRefResult = noop.forwardRef((arg0, arg1) => {
           if (2 === tmp8) {
             c3 = 1;
             closure_128_1 = tmp75;
-            let obj3 = tmp4(tmp75[13]);
-            obj3.captureException(closure_128_1);
+            tmp4(tmp75[13]).captureException(closure_128_1);
             const intl = closure_0(tmp75[14]).intl;
             if (closure_128_1.message !== intl.string(closure_0(tmp75[14]).t.N2yb9a)) {
               const v6OrEarlierAPIError = new closure_0(tmp75[12]).V6OrEarlierAPIError(closure_128_1);
@@ -106,6 +100,7 @@ const forwardRefResult = noop.forwardRef((arg0, arg1) => {
             if (closure_129_2 != null) {
               closure_129_2();
             }
+            const obj4 = tmp4(tmp75[13]);
           } else if (arg0 === 1) {
             c5 = 3;
             throw value;
@@ -113,8 +108,8 @@ const forwardRefResult = noop.forwardRef((arg0, arg1) => {
             c3 = 0;
             closure_129_3(false);
             c5 = 3;
-            const obj2 = { value, done: true };
-            return obj2;
+            const obj6 = { value, done: true };
+            return obj6;
           } else {
             closure_128_0 = value;
             if (null == closure_128_0) {
@@ -124,8 +119,8 @@ const forwardRefResult = noop.forwardRef((arg0, arg1) => {
               c3 = 0;
               closure_129_3(false);
               c5 = 3;
-              obj3 = { value: undefined, done: true };
-              return obj3;
+              const obj7 = { value: undefined, done: true };
+              return obj7;
             } else {
               if (closure_128_0.status < 400) {
                 closure_129_1();
@@ -139,7 +134,7 @@ const forwardRefResult = noop.forwardRef((arg0, arg1) => {
               c3 = 0;
               closure_129_3(false);
               c5 = 3;
-              obj = { value: undefined, done: true };
+              const obj = { value: undefined, done: true };
               return obj;
             }
           }
@@ -161,23 +156,23 @@ const forwardRefResult = noop.forwardRef((arg0, arg1) => {
   };
   const tmp = closure_12();
   const imperativeHandle = noop.useImperativeHandle(arg1, () => ({}));
-  let obj = initialize;
   const items = [UserStore];
-  const stateFromStores = obj.useStateFromStores(items, () => currentUser.getCurrentUser());
+  const stateFromStores = initialize.useStateFromStores(items, () => currentUser.getCurrentUser());
   [tmp7, c3] = value(noop.useState(false), 2);
   const tmp8 = value(noop.useState(""), 2);
   value = tmp8[0];
   const tmp6 = value(noop.useState(false), 2);
   [obj2, c5] = value(noop.useState(null), 2);
   const effect = noop.useEffect(() => {
-    const obj = { destinationPane: constants.ACCOUNT_CONFIRM_PASSWORD };
-    const result = obj.trackUserSettingsPaneViewed(obj);
+    const result = UserSettingsUtils.trackUserSettingsPaneViewed({
+      destinationPane: constants.ACCOUNT_CONFIRM_PASSWORD,
+    });
   }, []);
   let tmp13Result = null;
   if (null != stateFromStores) {
-    obj = { style: null, keyboardShouldPersistTaps: "handled", alwaysBounceVertical: false, children: null };
+    let obj3 = { style: null, keyboardShouldPersistTaps: "handled", alwaysBounceVertical: false, children: null };
     const items1 = [tmp.background, style];
-    obj.style = items1;
+    obj3.style = items1;
     let tmp15 = null;
     if (!hideUnverifiedBanner) {
       tmp15 = closure_10(UserSettingsAccountUnverifiedHeaderDefault, {});
@@ -193,8 +188,8 @@ const forwardRefResult = noop.forwardRef((arg0, arg1) => {
       return applyArgumentsResult;
     }
     const items2 = [tmp15];
-    obj = { style: tmp.container, children: null };
-    let obj1 = {
+    let obj4 = { style: tmp.container, children: null };
+    let obj5 = {
       style: tmp.title,
       accessibilityRole: "header",
       variant: "heading-xl/extrabold",
@@ -202,13 +197,13 @@ const forwardRefResult = noop.forwardRef((arg0, arg1) => {
       children: null,
     };
     let intl = util.intl;
-    obj1.children = intl.string(util.t["x+d9t3"]);
-    const items3 = [closure_10(Text_Text.Text, obj1), , , ,];
-    obj2 = { style: tmp.prompt, variant: "text-sm/medium", color: "text-default", children: null };
+    obj5.children = intl.string(util.t["x+d9t3"]);
+    const items3 = [closure_10(Text_Text.Text, obj5), , , ,];
+    let obj6 = { style: tmp.prompt, variant: "text-sm/medium", color: "text-default", children: null };
     const intl2 = util.intl;
-    obj2.children = intl2.string(util.t.vaZmAx);
-    items3[1] = closure_10(Text_Text.Text, obj2);
-    let obj3 = {
+    obj6.children = intl2.string(util.t.vaZmAx);
+    items3[1] = closure_10(Text_Text.Text, obj6);
+    const obj8 = {
       style: null,
       textStyle: null,
       label: null,
@@ -225,37 +220,37 @@ const forwardRefResult = noop.forwardRef((arg0, arg1) => {
     };
     ({ input: obj7.style, redesignInput: obj7.textStyle } = tmp);
     const intl3 = util.intl;
-    obj3.label = intl3.string(util.t["CIGa+7"]);
-    obj3.value = value;
-    obj3.onChangeText = tmp8[1];
-    obj3.onSubmitEditing = handleSubmit;
+    obj8.label = intl3.string(util.t["CIGa+7"]);
+    obj8.value = value;
+    obj8.onChangeText = tmp8[1];
+    obj8.onSubmitEditing = handleSubmit;
     let fieldMessage;
-    if (obj1 != null) {
-      fieldMessage = obj1.getFieldMessage("password");
+    if (obj2 != null) {
+      fieldMessage = obj2.getFieldMessage("password");
     }
-    obj3.error = fieldMessage;
-    items3[2] = closure_10(FreeFormInputGroupDefault, obj3);
+    obj8.error = fieldMessage;
+    items3[2] = closure_10(FreeFormInputGroupDefault, obj8);
     let tmp19Result = null;
-    if (null != obj1) {
+    if (null != obj2) {
       tmp19Result = null;
-      if (null == obj1.getFieldMessage("password")) {
-        const obj4 = { style: tmp.hint, children: obj1.message };
-        tmp19Result = closure_10(FreeFormErrorLabelDefault, obj4);
+      if (null == obj2.getFieldMessage("password")) {
+        const obj9 = { style: tmp.hint, children: obj2.message };
+        tmp19Result = closure_10(FreeFormErrorLabelDefault, obj9);
       }
     }
     items3[3] = tmp19Result;
-    const obj5 = { style: tmp.button, children: null };
-    const obj6 = { variant: "primary", size: "lg", text: null, onPress: null, loading: null };
+    const obj10 = { style: tmp.button, children: null };
+    const obj18 = { variant: "primary", size: "lg", text: null, onPress: null, loading: null };
     const intl4 = util.intl;
-    obj6.text = intl4.string(util.t.i4jeWR);
-    obj6.onPress = handleSubmit;
-    obj6.loading = tmp7;
-    obj5.children = closure_10(components_Button_Button.Button, obj6);
-    items3[4] = closure_10(closure_6, obj5);
-    obj.children = items3;
-    items2[1] = closure_11(closure_6, obj);
-    obj.children = items2;
-    tmp13Result = closure_11(closure_7, obj);
+    obj18.text = intl4.string(util.t.i4jeWR);
+    obj18.onPress = handleSubmit;
+    obj18.loading = tmp7;
+    obj10.children = closure_10(components_Button_Button.Button, obj18);
+    items3[4] = closure_10(closure_6, obj10);
+    obj4.children = items3;
+    items2[1] = closure_11(closure_6, obj4);
+    obj3.children = items2;
+    tmp13Result = closure_11(closure_7, obj3);
   }
   return tmp13Result;
 });
@@ -264,7 +259,6 @@ let result = size.fileFinishedImporting("modules/user_settings/account/native/Us
 
 export default forwardRefResult;
 export const UserSettingsConfirmPasswordWrapped = function UserSettingsConfirmPasswordWrapped() {
-  const obj = {};
-  const merged = Object.assign(obj.useSettingNavigationRoute().params);
-  return closure_1_10(forwardRefResult, obj);
+  const merged = Object.assign(useSettingNavigationRoute.useSettingNavigationRoute().params);
+  return closure_1_10(forwardRefResult, {});
 };

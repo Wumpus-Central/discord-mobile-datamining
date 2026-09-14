@@ -8,7 +8,7 @@ import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
 import _mod4821 from "module_4821" /* 4821 */;
 import TableRow from "../../../../../design/components/TableRow/native/TableRow.native.tsx";
 import executeCommandDefault from "../../../../application_commands/executeCommand.tsx";
-import _modDef12297 from "../../../../../../_runtime/metro/12297__.js";
+import _modDef12298 from "../../../../../../_runtime/metro/12298__.js";
 import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 import ApplicationCommandAutocompleteStore from "../../../../application_commands/ApplicationCommandAutocompleteStore.tsx";
@@ -41,11 +41,16 @@ function Item(arg0) {
   noop = noop.useMemo(() => 100 * Math.random() + 50, []);
   const match = _mod4821.match(item);
   let obj = { type: AutoCompleteResultTypes.CHOICE };
-  obj = { type: AutoCompleteResultTypes.LABEL };
-  const withResult = match.with(obj, (children) => {
+  let obj2 = { type: AutoCompleteResultTypes.LABEL };
+  const withResult = match.with({ type: AutoCompleteResultTypes.CHOICE }, (children) => {
     const choice = children;
     let obj = {
-      label: null,
+      label: closure_1_9(Text_Text.Text, {
+        lineClamp: 1,
+        variant: "text-md/normal",
+        color: "mobile-text-heading-primary",
+        children: children.choice.displayName,
+      }),
       onPress() {
         if (dependencyMap != null) {
           tmp(choice.choice);
@@ -53,21 +58,19 @@ function Item(arg0) {
         ActionSheetActionCreatorsDefault.hideActionSheet();
       },
     };
-    obj = {
-      lineClamp: 1,
-      variant: "text-md/normal",
-      color: "mobile-text-heading-primary",
-      children: children.choice.displayName,
-    };
-    obj.label = closure_1_9(Text_Text.Text, obj);
     return closure_1_9(ListItem, obj);
   });
-  const obj1 = { type: AutoCompleteResultTypes.CHOICE_LOADING };
+  let obj3 = { type: AutoCompleteResultTypes.CHOICE_LOADING };
   const withResult1 = match
-    .with(obj, (children) => {
+    .with({ type: AutoCompleteResultTypes.CHOICE }, (children) => {
       const choice = children;
       let obj = {
-        label: null,
+        label: closure_1_9(Text_Text.Text, {
+          lineClamp: 1,
+          variant: "text-md/normal",
+          color: "mobile-text-heading-primary",
+          children: children.choice.displayName,
+        }),
         onPress() {
           if (dependencyMap != null) {
             tmp(choice.choice);
@@ -75,16 +78,9 @@ function Item(arg0) {
           ActionSheetActionCreatorsDefault.hideActionSheet();
         },
       };
-      obj = {
-        lineClamp: 1,
-        variant: "text-md/normal",
-        color: "mobile-text-heading-primary",
-        children: children.choice.displayName,
-      };
-      obj.label = closure_1_9(Text_Text.Text, obj);
       return closure_1_9(ListItem, obj);
     })
-    .with(obj, (label) => {
+    .with({ type: AutoCompleteResultTypes.LABEL }, (label) => {
       closure_0 = label;
       let obj = {
         label: null,
@@ -97,17 +93,22 @@ function Item(arg0) {
           ActionSheetActionCreatorsDefault.hideActionSheet();
         },
       };
-      obj = { lineClamp: 1, variant: "text-md/normal", color: "mobile-text-heading-primary", children: null };
+      let obj2 = { lineClamp: 1, variant: "text-md/normal", color: "mobile-text-heading-primary", children: null };
       const items = ['"', label.label, '"'];
-      obj.children = items;
-      obj.label = closure_1_10(Text_Text.Text, obj);
+      obj2.children = items;
+      obj.label = closure_1_10(Text_Text.Text, obj2);
       return closure_1_9(ListItem, obj);
     });
   return match
-    .with(obj, (children) => {
+    .with({ type: AutoCompleteResultTypes.CHOICE }, (children) => {
       const choice = children;
       let obj = {
-        label: null,
+        label: closure_1_9(Text_Text.Text, {
+          lineClamp: 1,
+          variant: "text-md/normal",
+          color: "mobile-text-heading-primary",
+          children: children.choice.displayName,
+        }),
         onPress() {
           if (dependencyMap != null) {
             tmp(choice.choice);
@@ -115,16 +116,9 @@ function Item(arg0) {
           ActionSheetActionCreatorsDefault.hideActionSheet();
         },
       };
-      obj = {
-        lineClamp: 1,
-        variant: "text-md/normal",
-        color: "mobile-text-heading-primary",
-        children: children.choice.displayName,
-      };
-      obj.label = closure_1_9(Text_Text.Text, obj);
       return closure_1_9(ListItem, obj);
     })
-    .with(obj, (label) => {
+    .with({ type: AutoCompleteResultTypes.LABEL }, (label) => {
       closure_0 = label;
       let obj = {
         label: null,
@@ -137,26 +131,26 @@ function Item(arg0) {
           ActionSheetActionCreatorsDefault.hideActionSheet();
         },
       };
-      obj = { lineClamp: 1, variant: "text-md/normal", color: "mobile-text-heading-primary", children: null };
+      let obj2 = { lineClamp: 1, variant: "text-md/normal", color: "mobile-text-heading-primary", children: null };
       const items = ['"', label.label, '"'];
-      obj.children = items;
-      obj.label = closure_1_10(Text_Text.Text, obj);
+      obj2.children = items;
+      obj.label = closure_1_10(Text_Text.Text, obj2);
       return closure_1_9(ListItem, obj);
     })
     .with({ type: AutoCompleteResultTypes.CHOICE_LOADING }, () => {
-      let obj = { label: null };
-      obj = { style: closure_3.commandChoiceLoadingContainer, children: null };
-      obj = { style: null };
+      const obj = { label: null };
+      const obj2 = { style: closure_3.commandChoiceLoadingContainer, children: null };
+      const obj3 = { style: null };
       const items = [closure_3.commandChoiceLoadingItem, { width }];
-      obj.style = items;
-      obj.children = React7(View, obj);
-      obj.label = React7(View, obj);
+      obj3.style = items;
+      obj2.children = React7(View, obj3);
+      obj.label = React7(View, obj2);
       return React7(ListItem, obj);
     })
     .exhaustive();
 }
 function AutocompleteFailedEmptyState() {
-  const obj = { style: closure_12().emptyState, lightSource: _modDef12297, darkSource: _modDef12297, title: null };
+  const obj = { style: closure_12().emptyState, lightSource: _modDef12298, darkSource: _modDef12298, title: null };
   const intl = util.intl;
   obj.title = intl.string(util.t.rTAbPn);
   return React7(native.EmptyState, obj);
@@ -172,17 +166,14 @@ const executeCommand = apply.debounce(executeCommandDefault, fn(5080).AUTOCOMPLE
 const createStyles = fn(4636);
 let obj = {
   commandChoiceLoadingContainer: { flex: 1, justifyContent: "center" },
-  commandChoiceLoadingItem: null,
-  emptyState: null,
+  commandChoiceLoadingItem: {
+    backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED,
+    height: 16,
+    borderRadius: nativeDefault.radii.lg,
+    alignSelf: "flex-start",
+  },
+  emptyState: { backgroundColor: "transparent" },
 };
-obj = {
-  backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED,
-  height: 16,
-  borderRadius: nativeDefault.radii.lg,
-  alignSelf: "flex-start",
-};
-obj.commandChoiceLoadingItem = obj;
-obj.emptyState = { backgroundColor: "transparent" };
 let closure_12 = createStyles.createStyles(obj);
 const size = fn(2);
 const result = size.fileFinishedImporting(
@@ -200,7 +191,6 @@ export default function AppLauncherAutocompleteActionSheet(onDismiss) {
   let autocompleteResults;
   let lastErrored;
   let memo;
-  let obj = optionValues;
   let str;
   if (initChoice != null) {
     str = initChoice.name;
@@ -211,10 +201,9 @@ export default function AppLauncherAutocompleteActionSheet(onDismiss) {
   const tmp = activeCommand(optionValues.useState(str), 2);
   query = tmp[0];
   ref = obj.useRef(null);
-  let obj1 = option(channel[12]);
   let items = [ref];
   let items1 = [channel.id, option.name, query];
-  const stateFromStoresObject = obj1.useStateFromStoresObject(
+  const stateFromStoresObject = option(channel[12]).useStateFromStoresObject(
     items,
     () => ({
       autocompleteResults: ApplicationCommandAutocompleteStore.getAutocompleteChoices(channel.id, option.name, first),
@@ -228,7 +217,7 @@ export default function AppLauncherAutocompleteActionSheet(onDismiss) {
   memo = obj.useMemo(() => {
     const items = [];
     if ("" !== first) {
-      let obj = { type: AutoCompleteResultTypes.LABEL, label: tmp };
+      const obj = { type: AutoCompleteResultTypes.LABEL, label: tmp };
       items.push(obj);
     }
     if (null == autocompleteResults) {
@@ -236,9 +225,9 @@ export default function AppLauncherAutocompleteActionSheet(onDismiss) {
         const push = items.push;
         const _Array = Array;
         const array = new Array(4);
-        obj = { type: AutoCompleteResultTypes.CHOICE_LOADING };
+        const obj2 = { type: AutoCompleteResultTypes.CHOICE_LOADING };
         const items1 = [];
-        HermesBuiltin.arraySpread(array.fill(obj), 0);
+        HermesBuiltin.arraySpread(array.fill(obj2), 0);
         HermesBuiltin.apply(items1, items);
       }
       return items;
@@ -256,11 +245,9 @@ export default function AppLauncherAutocompleteActionSheet(onDismiss) {
   let tmp12Result = 0 === memo.length && !lastErrored;
   const items3 = [channel, option.name, activeCommand, optionValues, query];
   const effect = obj.useEffect(() => {
-    let obj = { command: activeCommand, optionValues, context: null };
-    obj = { channel, guild: GuildStore.getGuild(channel.guild_id), autocomplete: null };
-    obj = { name: option.name, query };
-    obj.autocomplete = obj;
-    obj.context = obj;
+    const obj = { command: activeCommand, optionValues, context: null };
+    const obj2 = { channel, guild: GuildStore.getGuild(channel.guild_id), autocomplete: { name: option.name, query } };
+    obj.context = obj2;
     executeCommand(obj);
     const current = ref.current;
     if (current != null) {
@@ -282,18 +269,18 @@ export default function AppLauncherAutocompleteActionSheet(onDismiss) {
       ActionSheetActionCreatorsDefault.hideActionSheet();
     }
   }, items5);
-  obj = { option, onDismiss: onDismiss.onDismissAutocompleteSheet, children: null };
-  obj = { placeholder: null, onChange: null, autoFocus: true, returnKeyType: "done", onSubmitEditing: null };
+  const obj3 = { option, onDismiss: onDismiss.onDismissAutocompleteSheet, children: null };
+  const obj4 = { placeholder: null, onChange: null, autoFocus: true, returnKeyType: "done", onSubmitEditing: null };
   const intl = tmp4(tmp5[16]).intl;
-  obj.placeholder = intl.string(option(channel[16]).t.Wuie9L);
-  obj.onChange = tmp[1];
-  obj.onSubmitEditing = callback1;
-  const items6 = [memo(option(channel[15]).AppLauncherListSearchBar, obj), , ,];
+  obj4.placeholder = intl.string(option(channel[16]).t.Wuie9L);
+  obj4.onChange = tmp[1];
+  obj4.onSubmitEditing = callback1;
+  const items6 = [memo(option(channel[15]).AppLauncherListSearchBar, obj4), , ,];
   if (tmp12Result) {
     tmp12Result = tmp12(tmp4(tmp5[15]).AppLauncherListEmptyState, {});
   }
   items6[1] = tmp12Result;
-  obj1 = {
+  items6[2] = memo(option(channel[15]).AppLauncherList, {
     ref,
     keyExtractor(type, arg1) {
       let str = "placeholder";
@@ -305,12 +292,11 @@ export default function AppLauncherAutocompleteActionSheet(onDismiss) {
     data: memo,
     renderItem: callback,
     scrollEnabled: true,
-  };
-  items6[2] = memo(option(channel[15]).AppLauncherList, obj1);
+  });
   if (lastErrored) {
     lastErrored = tmp12(AutocompleteFailedEmptyState, {});
   }
   items6[3] = lastErrored;
-  obj.children = items6;
-  return closure_10(option(channel[14]).AppLauncherCommandOptionActionSheet, obj);
+  obj3.children = items6;
+  return closure_10(option(channel[14]).AppLauncherCommandOptionActionSheet, obj3);
 }

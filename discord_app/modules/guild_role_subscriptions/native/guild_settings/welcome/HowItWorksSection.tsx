@@ -4,24 +4,31 @@ import util from "../../../../../intl/index.native.tsx";
 import native from "../../../../../design/void/native.tsx";
 import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
 import FastImageDefault from "../../../../../components_native/common/FastImage.tsx";
-import _modDef17811 from "../../../../../../_runtime/metro/17811__.js";
 import _modDef17812 from "../../../../../../_runtime/metro/17812__.js";
 import _modDef17813 from "../../../../../../_runtime/metro/17813__.js";
+import _modDef17814 from "../../../../../../_runtime/metro/17814__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 function HowItWorksCard(iconSource) {
   ({ cardNumber, description } = iconSource);
   const tmp = closure_6();
-  let obj = {
+  const obj = {
     style: tmp.card,
     accessible: true,
     accessibilityLabel: "" + cardNumber + " - " + description,
     children: null,
   };
-  obj = { style: tmp.cardNumber, variant: "text-xs/bold", color: "text-overlay-light", children: cardNumber };
-  const items = [React4(Text_Text.Text, obj), ,];
-  obj = {
+  const items = [
+    React4(Text_Text.Text, {
+      style: tmp.cardNumber,
+      variant: "text-xs/bold",
+      color: "text-overlay-light",
+      children: cardNumber,
+    }),
+    ,
+  ];
+  const obj3 = {
     style: tmp.container,
     children: React4(FastImageDefault, {
       style: tmp.howItWorksCardIcon,
@@ -29,7 +36,7 @@ function HowItWorksCard(iconSource) {
       resizeMode: "contain",
     }),
   };
-  items[1] = React4(View, obj);
+  items[1] = React4(View, obj3);
   items[2] = React4(Text_Text.Text, {
     style: tmp.howItWorksCardDescription,
     variant: "text-sm/normal",
@@ -42,24 +49,22 @@ function HowItWorksCard(iconSource) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-fn(4636);
-let createStyles = {
+const createStyles = fn(4636);
+let obj2 = {
   container: { flex: 1 },
   horizontalContainer: { flex: 1, flexDirection: "row" },
-  card: null,
+  card: {
+    flex: 1,
+    marginVertical: 6,
+    backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
+    alignItems: "center",
+    borderRadius: nativeDefault.radii.sm,
+    overflow: "hidden",
+  },
   cardNumber: null,
   howItWorksCardDescription: null,
   howItWorksCardIcon: null,
 };
-createStyles = {
-  flex: 1,
-  marginVertical: 6,
-  backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
-  alignItems: "center",
-  borderRadius: nativeDefault.radii.sm,
-  overflow: "hidden",
-};
-createStyles.card = createStyles;
 let size = {
   width: 18,
   height: 18,
@@ -71,8 +76,16 @@ let size = {
   borderRadius: 9,
   overflow: "hidden",
 };
-createStyles.cardNumber = size;
-createStyles.howItWorksCardDescription = {
+obj2.cardNumber = size;
+let obj3 = {
+  flex: 1,
+  marginVertical: 6,
+  backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
+  alignItems: "center",
+  borderRadius: nativeDefault.radii.sm,
+  overflow: "hidden",
+};
+obj2.howItWorksCardDescription = {
   width: "100%",
   paddingHorizontal: 18,
   paddingVertical: 8,
@@ -82,8 +95,8 @@ createStyles.howItWorksCardDescription = {
   borderBottomEndRadius: 8,
   overflow: "hidden",
 };
-createStyles.howItWorksCardIcon = { marginVertical: 24 };
-let closure_6 = createStyles.createStyles(createStyles);
+obj2.howItWorksCardIcon = { marginVertical: 24 };
+let closure_6 = createStyles.createStyles(obj2);
 size = fn(2);
 const result = size.fileFinishedImporting(
   "modules/guild_role_subscriptions/native/guild_settings/welcome/HowItWorksSection.tsx",
@@ -91,25 +104,25 @@ const result = size.fileFinishedImporting(
 
 export default function HowItWorksSection() {
   const tmp = closure_6();
-  let obj = { style: tmp.container, children: null };
-  obj = { style: tmp.horizontalContainer, children: null };
-  obj = { cardNumber: 1, description: null, iconSource: null };
+  const obj = { style: tmp.container, children: null };
+  const obj2 = { style: tmp.horizontalContainer, children: null };
+  const obj3 = { cardNumber: 1, description: null, iconSource: null };
   const intl = util.intl;
-  obj.description = intl.string(util.t.lT0ZNS);
-  obj.iconSource = _modDef17811;
-  const items = [React4(HowItWorksCard, obj), React4(native.Spacer, { size: 12 })];
-  const obj1 = { cardNumber: 2, description: null, iconSource: null };
+  obj3.description = intl.string(util.t.lT0ZNS);
+  obj3.iconSource = _modDef17812;
+  const items = [React4(HowItWorksCard, obj3), React4(native.Spacer, { size: 12 })];
+  const obj4 = { cardNumber: 2, description: null, iconSource: null };
   const intl2 = util.intl;
-  obj1.description = intl2.string(util.t.ihN2Wb);
-  obj1.iconSource = _modDef17812;
-  items[2] = React4(HowItWorksCard, obj1);
-  obj.children = items;
-  const items1 = [hasOwnProperty(View, obj)];
-  const obj2 = { cardNumber: 3, description: null, iconSource: null };
+  obj4.description = intl2.string(util.t.ihN2Wb);
+  obj4.iconSource = _modDef17813;
+  items[2] = React4(HowItWorksCard, obj4);
+  obj2.children = items;
+  const items1 = [hasOwnProperty(View, obj2)];
+  const obj5 = { cardNumber: 3, description: null, iconSource: null };
   const intl3 = util.intl;
-  obj2.description = intl3.string(util.t.c8krDQ);
-  obj2.iconSource = _modDef17813;
-  items1[1] = React4(HowItWorksCard, obj2);
+  obj5.description = intl3.string(util.t.c8krDQ);
+  obj5.iconSource = _modDef17814;
+  items1[1] = React4(HowItWorksCard, obj5);
   obj.children = items1;
   return hasOwnProperty(View, obj);
 }

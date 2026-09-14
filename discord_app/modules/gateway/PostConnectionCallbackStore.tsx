@@ -1,7 +1,7 @@
 // discord_app/modules/gateway/PostConnectionCallbackStore.tsx
 import NewUserStore from "../nuf/NewUserStore.tsx";
 import GatewayConnectionStore from "GatewayConnectionStore.tsx";
-import Dispatcher from "../../Dispatcher.tsx";
+import Dispatcher_mod from "../../Dispatcher.tsx";
 
 function processCallbacks() {
   if (null == NewUserStore.getType()) {
@@ -12,8 +12,11 @@ function processCallbacks() {
   }
 }
 let closure_2 = [];
+let Dispatcher = Dispatcher_mod;
 const subscription = Dispatcher.subscribe("CONNECTION_OPEN", processCallbacks);
+let Dispatcher = Dispatcher_mod;
 const subscription1 = Dispatcher.subscribe("CONNECTION_RESUMED", processCallbacks);
+let Dispatcher = Dispatcher_mod;
 const subscription2 = Dispatcher.subscribe("NUF_COMPLETE", processCallbacks);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/gateway/PostConnectionCallbackStore.tsx");

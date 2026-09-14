@@ -22,10 +22,9 @@ export const createAddRecipientSystemMessage = function createAddRecipientSystem
   if (hasItem) {
     hasItem = THREAD_CHANNEL_TYPES.has(channel.type);
   }
-  let obj = useAuthorWithProcessedColor;
-  const messageAuthorWithProcessedColor = obj.getMessageAuthorWithProcessedColor(message);
+  const messageAuthorWithProcessedColor = useAuthorWithProcessedColor.getMessageAuthorWithProcessedColor(message);
   const userAuthorWithProcessedColor = useAuthorWithProcessedColor.getUserAuthorWithProcessedColor(user, channel);
-  obj = {
+  const obj3 = {
     username: messageAuthorWithProcessedColor.nick,
     usernameOnClick: formatUsernameOnClickDefault({ message, author: messageAuthorWithProcessedColor, roleStyle }),
     otherUsername: userAuthorWithProcessedColor.nick,
@@ -40,11 +39,10 @@ export const createAddRecipientSystemMessage = function createAddRecipientSystem
   const formatToParts = intl.formatToParts;
   const t = util.t;
   if (hasItem) {
-    let formatToPartsResult = formatToParts(t.Vej1Nw, obj);
+    let formatToPartsResult = formatToParts(t.Vej1Nw, obj3);
   } else {
-    formatToPartsResult = formatToParts(t["7/Xl0S"], obj);
+    formatToPartsResult = formatToParts(t["7/Xl0S"], obj3);
   }
-  obj = { content: formatToPartsResult };
   const merged = Object.assign(createCommonMessageDefault(message));
-  return obj;
+  return { content: formatToPartsResult };
 };

@@ -8,8 +8,7 @@ const result = size.fileFinishedImporting("modules/applications/message_embed/na
 export const createActivityMessageEmbed = function createActivityMessageEmbed(app) {
   app = app.app;
   ({ theme, embedUrl, message, params } = app);
-  let obj = createAppMessageEmbed;
-  const appMessageEmbed = obj.createAppMessageEmbed({ theme, embedUrl, message, app });
+  const appMessageEmbed = createAppMessageEmbed.createAppMessageEmbed({ theme, embedUrl, message, app });
   if (null == appMessageEmbed) {
     return null;
   } else {
@@ -20,18 +19,18 @@ export const createActivityMessageEmbed = function createActivityMessageEmbed(ap
       const orFetchCustomActivityLink = CustomActivityLinkUtils.getOrFetchCustomActivityLink(app.id, linkId);
       let tmp8 = null;
       if (null != orFetchCustomActivityLink) {
-        obj = {};
+        const obj3 = {};
         const merged = Object.assign(appMessageEmbed);
-        obj.title = app.name;
+        obj3.title = app.name;
         ({ title: obj2.header, description: obj2.info } = orFetchCustomActivityLink);
-        obj.bannerRatio = "bot";
+        obj3.bannerRatio = "bot";
         let assetURL = orFetchCustomActivityLink.getAssetURL();
         if (assetURL == null) {
           assetURL = null;
         }
-        obj.staticBannerSrc = assetURL;
-        obj.tagline = null;
-        tmp8 = obj;
+        obj3.staticBannerSrc = assetURL;
+        obj3.tagline = null;
+        tmp8 = obj3;
       }
       return tmp8;
     }

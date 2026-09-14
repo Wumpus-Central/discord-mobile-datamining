@@ -14,7 +14,7 @@ prototype["initialize"] = function initialize() {
   this.waitFor(UserStore);
 };
 prototype["getRecentMessageMetadata"] = function getRecentMessageMetadata() {
-  return obj;
+  return obj2;
 };
 prototype["getRecentApplicationCommandMetadata"] = function getRecentApplicationCommandMetadata() {
   return obj;
@@ -50,12 +50,11 @@ const appLauncherOnboardingStore = new AppLauncherOnboardingStore(DispatcherDefa
       if (null != currentUser.id) {
         if (null != message.author) {
           if (currentUser.id === message.author.id) {
-            obj = SnowflakeUtilsDefault;
-            const extractTimestampResult = obj.extractTimestamp(message.id);
+            const extractTimestampResult = SnowflakeUtilsDefault.extractTimestamp(message.id);
             const _Date = Date;
             const timestamp = Date.now();
             if (timestamp <= extractTimestampResult + useCanShowAppLauncherOnboarding.RECENT_MESSAGE_MS) {
-              obj = { timeMs: extractTimestampResult, guildId, channelId };
+              obj2 = { timeMs: extractTimestampResult, guildId, channelId };
             }
           }
         }

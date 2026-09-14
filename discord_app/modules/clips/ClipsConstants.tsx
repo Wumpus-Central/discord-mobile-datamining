@@ -2,26 +2,26 @@
 import LoggerDefault from "../debug/Logger.tsx";
 import DurationsDefault from "../../utils/Durations.tsx";
 
-let ClipTrackType = {};
+let obj = {};
 const result = 30 * DurationsDefault.Millis.SECOND;
-ClipTrackType.SECONDS_30 = result;
-ClipTrackType[result] = "SECONDS_30";
+obj.SECONDS_30 = result;
+obj[result] = "SECONDS_30";
 const MINUTE = DurationsDefault.Millis.MINUTE;
-ClipTrackType.MINUTES_1 = MINUTE;
-ClipTrackType[MINUTE] = "MINUTES_1";
+obj.MINUTES_1 = MINUTE;
+obj[MINUTE] = "MINUTES_1";
 const result1 = 2 * DurationsDefault.Millis.MINUTE;
-ClipTrackType.MINUTES_2 = result1;
-ClipTrackType[result1] = "MINUTES_2";
+obj.MINUTES_2 = result1;
+obj[result1] = "MINUTES_2";
 const result2 = 6 * DurationsDefault.Millis.SECOND;
 const result3 = 60 * DurationsDefault.Millis.SECOND;
-ClipTrackType = { ORIGINAL: "original", PORTRAIT_9_16: "9:16", LANDSCAPE_16_9: "16:9" };
-ClipTrackType = { TEXT: "text" };
-const obj1 = { NONE: "none", SMALL: "small", MEDIUM: "medium", LARGE: "large" };
+const obj2 = { ORIGINAL: "original", PORTRAIT_9_16: "9:16", LANDSCAPE_16_9: "16:9" };
+const obj3 = { TEXT: "text" };
+const obj4 = { NONE: "none", SMALL: "small", MEDIUM: "medium", LARGE: "large" };
 const result4 = 14 * DurationsDefault.Millis.DAY;
 const size = fn(2);
 const result5 = size.fileFinishedImporting("modules/clips/ClipsConstants.tsx");
 
-export const ClipsLengthSettings = ClipTrackType;
+export const ClipsLengthSettings = obj;
 export const ClipSaveTypes = { DECOUPLED: "decoupled", STREAMER: "streamer", VOICE: "voice" };
 export const CLIP_RUNTIME = "v3";
 export const ClipsUserEducationType = {
@@ -107,9 +107,9 @@ export const Emotion = {
   SAD: "sad",
   SURPRISED: "surprised",
 };
-export const ClipCropPreset = ClipTrackType;
+export const ClipCropPreset = obj2;
 export const getClipCropAspectRatio = function getClipCropAspectRatio(arg0) {
-  if (obj.PORTRAIT_9_16 === arg0) {
+  if (obj2.PORTRAIT_9_16 === arg0) {
     return 0.5625;
   } else if (tmp.LANDSCAPE_16_9 === arg0) {
     return 1.7777777777777777;
@@ -130,36 +130,36 @@ export const getClipCropBounds = function getClipCropBounds(bounds) {
       preset = bounds.preset;
     }
     let num = 0.5625;
-    if (obj.PORTRAIT_9_16 !== preset) {
+    if (obj2.PORTRAIT_9_16 !== preset) {
       num = null;
-      if (obj.LANDSCAPE_16_9 === preset) {
+      if (obj2.LANDSCAPE_16_9 === preset) {
         num = 1.7777777777777777;
       }
     }
     let tmp3 = null;
     if (null != num) {
-      obj = { aspectRatio: num };
+      const obj = { aspectRatio: num };
       tmp3 = obj;
     }
     return tmp3;
   }
 };
-export { ClipTrackType };
-export const CLIP_TRACK_COLORS = { [ClipTrackType.TEXT]: "#D53FAE" };
+export const ClipTrackType = obj3;
+export const CLIP_TRACK_COLORS = { [obj3.TEXT]: "#D53FAE" };
 export const DEFAULT_TRACK_DURATION_SECONDS = 5;
 export const MIN_TRACK_DURATION_SECONDS = 1;
 export const DEFAULT_TRACK_POSITION = { x: 0.5, y: 0.5 };
-export const TextStrokeWidth = obj1;
+export const TextStrokeWidth = obj4;
 export const TEXT_STROKE_WIDTH_TO_FONT_SIZE_RATIO = {
-  [obj1.NONE]: 0,
-  [obj1.SMALL]: 0.0625,
-  [obj1.MEDIUM]: 0.125,
-  [obj1.LARGE]: 0.25,
+  [obj4.NONE]: 0,
+  [obj4.SMALL]: 0.0625,
+  [obj4.MEDIUM]: 0.125,
+  [obj4.LARGE]: 0.25,
 };
 export const DEFAULT_TEXT_TRACK_STYLE = {
   fontSize: 0.06,
   color: "#FFFFFF",
-  strokeWidth: obj1.NONE,
+  strokeWidth: obj4.NONE,
   strokeColor: "#000000",
 };
 export const ClipType = { CLIP: "clip", SCREENSHOT: "screenshot", VOICE_CLIP: "voice_clip" };

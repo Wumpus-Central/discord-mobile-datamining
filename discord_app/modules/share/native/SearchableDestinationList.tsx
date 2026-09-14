@@ -13,19 +13,25 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Keyboard: metroRequire } = get_ActivityIndicator);
 const NOOP = fn(1074).NOOP;
-const UserRowModes = fn(10988).UserRowModes;
+const UserRowModes = fn(10989).UserRowModes;
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: c10, jsxs: closure_11 } = jsxProd);
-fn(4636);
-let createStyles = { searchBarContainer: null, noResults: null };
-createStyles = {
+const createStyles = fn(4636);
+let obj2 = {
+  searchBarContainer: {
+    paddingHorizontal: nativeDefault.space.PX_16,
+    paddingBottom: nativeDefault.space.PX_8,
+    backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND,
+  },
+  noResults: null,
+};
+let obj3 = {
   paddingHorizontal: nativeDefault.space.PX_16,
   paddingBottom: nativeDefault.space.PX_8,
   backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND,
 };
-createStyles.searchBarContainer = createStyles;
-createStyles.noResults = { flex: 1, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
-let closure_12 = createStyles.createStyles(createStyles);
+obj2.noResults = { flex: 1, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
+let closure_12 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/share/native/SearchableDestinationList.tsx");
 
@@ -74,7 +80,6 @@ export default function SearchableDestinationList(getRowIsUnavailable) {
   closure_22 = undefined;
   let scaledTextLineHeight;
   let tmp6 = ref();
-  let obj = NONE;
   ref = NONE.useRef(null);
   if (initialSelectedDestinations == null) {
     initialSelectedDestinations = [];
@@ -82,8 +87,7 @@ export default function SearchableDestinationList(getRowIsUnavailable) {
   const tmp8 = onSearchTextChange(NONE.useState(initialSelectedDestinations), 2);
   selectedDestinations = tmp8[0];
   closure_9 = tmp8[1];
-  let obj1 = disabledDestinations(onSelectedDestinationChange[8]);
-  const shareSearchResults = obj1.useShareSearchResults({
+  const shareSearchResults = disabledDestinations(onSelectedDestinationChange[8]).useShareSearchResults({
     selectedDestinations,
     originDestination,
     channelFilter,
@@ -92,7 +96,8 @@ export default function SearchableDestinationList(getRowIsUnavailable) {
   results = shareSearchResults.results;
   updateSearchText = shareSearchResults.updateSearchText;
   ref = obj.useRef("");
-  [tmp14, c13] = onSearchTextChange(obj.useState(false), 2);
+  let obj2 = disabledDestinations(onSelectedDestinationChange[8]);
+  [tmp14, c13] = onSearchTextChange(NONE.useState(false), 2);
   closure_14 = obj.useRef(null);
   const effect = obj.useEffect(
     () => () => {
@@ -208,7 +213,7 @@ export default function SearchableDestinationList(getRowIsUnavailable) {
     ({ type, record } = results[arg1]);
     if (type !== sortByMatchScore.AutocompleterResultTypes.HEADER) {
       const tmp2Result = formatResults;
-      const destinationKeyResult = tmp2Result.destinationKey(tmp2Result.getDestinationIdFromResult(tmp));
+      const destinationKeyResult = tmp2Result.destinationKey(formatResults.getDestinationIdFromResult(tmp));
       let tmp6;
       if (getRowIsUnavailable != null) {
         tmp6 = getRowIsUnavailable(record);
@@ -225,7 +230,7 @@ export default function SearchableDestinationList(getRowIsUnavailable) {
       if (!tmp11) {
         tmp11 = null != tmp6;
       }
-      let obj = {
+      const obj = {
         disabled: tmp11,
         selected: hasItem,
         mode: null,
@@ -256,26 +261,26 @@ export default function SearchableDestinationList(getRowIsUnavailable) {
       obj.end = arg1 === results.length - 1;
       let tmp16;
       if (disableLongPress) {
-        obj = { onLongPress: NOOP };
-        tmp16 = obj;
+        const obj2 = { onLongPress: NOOP };
+        tmp16 = obj2;
       }
       const merged = Object.assign(tmp16);
       if (sortByMatchScore.AutocompleterResultTypes.USER === type) {
         const element = { type: "user", props: null };
-        const obj1 = {};
+        const obj3 = {};
         const merged1 = Object.assign(obj);
-        obj1.user = record;
-        obj1.type = UserSearchUtils.getRelationshipType(record.id);
-        obj1.onPress = callback3;
-        element.props = obj1;
+        obj3.user = record;
+        obj3.type = UserSearchUtils.getRelationshipType(record.id);
+        obj3.onPress = callback3;
+        element.props = obj3;
         return element;
       } else if (sortByMatchScore.AutocompleterResultTypes.GROUP_DM === type) {
         const element1 = { type: "gdm", props: null };
-        const obj2 = {};
+        const obj4 = {};
         const merged2 = Object.assign(obj);
-        obj2.channel = record;
-        obj2.onPress = callback4;
-        element1.props = obj2;
+        obj4.channel = record;
+        obj4.onPress = callback4;
+        element1.props = obj4;
         return element1;
       } else {
         if (sortByMatchScore.AutocompleterResultTypes.TEXT_CHANNEL !== type) {
@@ -284,20 +289,23 @@ export default function SearchableDestinationList(getRowIsUnavailable) {
           }
         }
         const element2 = { type: "channel", props: null };
-        const obj3 = {};
+        const obj5 = {};
         const merged3 = Object.assign(obj);
-        obj3.channel = record;
-        obj3.onPress = callback4;
-        element2.props = obj3;
+        obj5.channel = record;
+        obj5.onPress = callback4;
+        element2.props = obj5;
         return element2;
       }
+      const tmp2Result4 = formatResults;
     }
   }, items8);
   ref1 = obj.useRef(null);
   const tmp27 = getRowIsUnavailable(onSelectedDestinationChange[14])();
   closure_22 = tmp27;
-  let obj3 = disabledDestinations(onSelectedDestinationChange[15]);
-  scaledTextLineHeight = obj3.useScaledTextLineHeight("text-xs/medium");
+  const tmp13 = onSearchTextChange(NONE.useState(false), 2);
+  scaledTextLineHeight = disabledDestinations(onSelectedDestinationChange[15]).useScaledTextLineHeight(
+    "text-xs/medium",
+  );
   const items9 = [results, getRowIsUnavailable, tmp27, scaledTextLineHeight];
   const callback6 = obj.useCallback((arg0, arg1) => {
     ({ type, record } = results[arg1]);
@@ -322,7 +330,7 @@ export default function SearchableDestinationList(getRowIsUnavailable) {
   }, items9);
   const someResult = memo.some((item) => item > 0);
   if (someResult) {
-    obj = {
+    let obj3 = {
       ref: ref1,
       sections: memo,
       getItemProps: callback5,
@@ -336,29 +344,29 @@ export default function SearchableDestinationList(getRowIsUnavailable) {
     if (null != getRowIsUnavailable) {
       tmp36 = callback6;
     }
-    obj.getItemSize = tmp36;
-    obj.insetStart = PX_8;
-    obj.insetEnd = PX_12;
-    obj.disableStickySections = getRowIsUnavailable.disableStickySections;
-    let tmp31Result = tmp31(tmp10(tmp11[17]).UsersFastList, obj);
+    obj3.getItemSize = tmp36;
+    obj3.insetStart = PX_8;
+    obj3.insetEnd = PX_12;
+    obj3.disableStickySections = getRowIsUnavailable.disableStickySections;
+    let tmp31Result = tmp31(tmp10(tmp11[17]).UsersFastList, obj3);
     let tmp35 = tmp31;
   } else {
     if (!tmp14) {
       if (null != defaultNoResultsFound) {
-        obj = { style: null, children: null };
+        let obj5 = { style: null, children: null };
         const items10 = [tmp6.noResults];
-        obj.style = items10;
-        obj.children = defaultNoResultsFound;
+        obj5.style = items10;
+        obj5.children = defaultNoResultsFound;
       }
-      tmp31Result = tmp31(tmp32, obj);
+      tmp31Result = tmp31(tmp32, obj5);
       tmp35 = tmp31;
     }
-    obj1 = { style: tmp6.noResults, children: null };
-    let obj2 = { title: null };
+    const obj6 = { style: tmp6.noResults, children: null };
+    const obj7 = { title: null };
     const intl = tmp10(tmp11[19]).intl;
-    obj2.title = intl.string(tmp10(tmp11[19]).t.V6nAfF);
-    obj1.children = tmp31(tmp26(tmp11[18]), obj2);
-    obj = obj1;
+    obj7.title = intl.string(tmp10(tmp11[19]).t.V6nAfF);
+    obj6.children = tmp31(tmp26(tmp11[18]), obj7);
+    obj5 = obj6;
     const tmp26Result = tmp26(tmp11[18]);
   }
   let tmp35Result = !disableGradient;
@@ -368,22 +376,22 @@ export default function SearchableDestinationList(getRowIsUnavailable) {
   const items11 = [tmp35Result, ,];
   if (flag2) {
     if (!someResult) {
-      tmp35Result = null;
+      let tmp35Result2 = null;
     }
-    obj3 = { children: null };
-    items11[1] = tmp35Result;
+    const obj8 = { children: null };
+    items11[1] = tmp35Result2;
     items11[2] = tmp31Result;
-    obj3.children = items11;
-    return updateSearchText(results, obj3);
+    obj8.children = items11;
+    return updateSearchText(results, obj8);
   }
-  const obj4 = { style: tmp6.searchBarContainer, children: null };
-  const obj5 = { ref, size: "md", onChange, autoFocus: null, accessibilityLabel: null };
+  const obj9 = { style: tmp6.searchBarContainer, children: null };
+  const obj10 = { ref, size: "md", onChange, autoFocus: null, accessibilityLabel: null };
   if (flag) {
     flag = someResult;
   }
-  obj5.autoFocus = flag;
+  obj10.autoFocus = flag;
   const intl2 = tmp10(tmp11[19]).intl;
-  obj5.accessibilityLabel = intl2.string(disabledDestinations(onSelectedDestinationChange[19]).t.CaEER6);
-  obj4.children = tmp35(disabledDestinations(onSelectedDestinationChange[21]).SearchField, obj5);
-  tmp35Result = tmp35(disableSelection, obj4);
+  obj10.accessibilityLabel = intl2.string(disabledDestinations(onSelectedDestinationChange[19]).t.CaEER6);
+  obj9.children = tmp35(disabledDestinations(onSelectedDestinationChange[21]).SearchField, obj10);
+  tmp35Result2 = tmp35(disableSelection, obj9);
 }

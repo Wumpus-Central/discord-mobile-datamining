@@ -6,13 +6,16 @@ const require = fn;
 const ScrollView = fn(17).ScrollView;
 const EXPRESSION_FOOTER_HEIGHT = fn(1074).EXPRESSION_FOOTER_HEIGHT;
 const jsx = fn(21).jsx;
-fn(4636);
-let obj = { emptyStateContainer: { padding: 0, flex: 1 }, emptyStateBody: null, emptyStateImage: null };
-obj = { color: nativeDefault.colors.TEXT_SUBTLE };
-obj.emptyStateBody = obj;
-const createStyles = { marginBottom: nativeDefault.space.PX_8, marginTop: 0 };
-obj.emptyStateImage = createStyles;
+const createStyles = fn(4636);
+const obj = {
+  emptyStateContainer: { padding: 0, flex: 1 },
+  emptyStateBody: { color: nativeDefault.colors.TEXT_SUBTLE },
+  emptyStateImage: null,
+};
+const obj3 = { color: nativeDefault.colors.TEXT_SUBTLE };
+obj.emptyStateImage = { marginBottom: nativeDefault.space.PX_8, marginTop: 0 };
 let closure_7 = createStyles.createStyles(obj);
+const obj4 = { marginBottom: nativeDefault.space.PX_8, marginTop: 0 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/stickers/native/StickerPickerListEmptyState.tsx");
 
@@ -24,30 +27,35 @@ export default noop.memo(function StickerPickerListEmptyState(insetBottom) {
     () => ({ marginBottom: insetBottom + EXPRESSION_FOOTER_HEIGHT, marginTop: insetTop, flex: 1 }),
     items,
   );
-  let obj = insetTop(10449);
-  const modalDismissGuardRefreshControl = obj.useModalDismissGuardRefreshControl();
+  const tmp = closure_7();
+  const modalDismissGuardRefreshControl = insetTop(10450).useModalDismissGuardRefreshControl();
   if (inActionSheet) {
     let BottomSheetScrollView = insetTop(6728).BottomSheetScrollView;
   } else {
     BottomSheetScrollView = ScrollView;
   }
-  obj = { contentContainerStyle: memo, keyboardShouldPersistTaps: "always", refreshControl: null, children: null };
+  const obj2 = {
+    contentContainerStyle: memo,
+    keyboardShouldPersistTaps: "always",
+    refreshControl: null,
+    children: null,
+  };
   let tmp7;
   if (inActionSheet) {
     tmp7 = modalDismissGuardRefreshControl;
   }
-  obj.refreshControl = tmp7;
-  obj = { body: null, bodyStyle: null, containerStyle: null, imageStyle: null, source: null, titleStyle: null };
+  obj2.refreshControl = tmp7;
+  const obj5 = { body: null, bodyStyle: null, containerStyle: null, imageStyle: null, source: null, titleStyle: null };
   const intl = insetTop(1114).intl;
-  obj.body = intl.string(insetTop(1114).t.jyiGfc);
+  obj5.body = intl.string(insetTop(1114).t.jyiGfc);
   ({
     emptyStateBody: obj3.bodyStyle,
     emptyStateContainer: obj3.containerStyle,
     emptyStateImage: obj3.imageStyle,
-  } = closure_7());
-  obj.source = insetBottom(10546);
-  obj.titleStyle = { marginBottom: 0 };
-  obj.children = jsx(insetTop(1178).RefreshEmptyState, {
+  } = tmp);
+  obj5.source = insetBottom(10547);
+  obj5.titleStyle = { marginBottom: 0 };
+  obj2.children = jsx(insetTop(1176).RefreshEmptyState, {
     body: null,
     bodyStyle: null,
     containerStyle: null,
@@ -56,13 +64,8 @@ export default noop.memo(function StickerPickerListEmptyState(insetBottom) {
     titleStyle: null,
   });
   return (
-    <BottomSheetScrollView
-      body={null}
-      bodyStyle={null}
-      containerStyle={null}
-      imageStyle={null}
-      source={null}
-      titleStyle={null}
-    />
+    <BottomSheetScrollView contentContainerStyle={memo} keyboardShouldPersistTaps="always" refreshControl={null}>
+      {null}
+    </BottomSheetScrollView>
   );
 });

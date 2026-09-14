@@ -24,8 +24,8 @@ let closure_7 = async function _libDiscoreSmokeTest() {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -39,8 +39,8 @@ let closure_7 = async function _libDiscoreSmokeTest() {
           throw value;
         } else if (arg0 === 2) {
           c5 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj4 = { value, done: true };
+          return obj4;
         } else {
           closure_1 = tmp3;
           closure_0 = tmp7;
@@ -48,11 +48,10 @@ let closure_7 = async function _libDiscoreSmokeTest() {
           tmp7 = timestampProducer;
           if (!timestampProducer) {
             c3 = 1;
-            let obj2 = initLibdiscore;
             c4 = 2;
             c5 = 1;
-            const obj1 = { value: obj2.initLibdiscore(), done: false };
-            return obj1;
+            const obj5 = { value: initLibdiscore.initLibdiscore(), done: false };
+            return obj5;
           }
         }
       } else {
@@ -65,14 +64,14 @@ let closure_7 = async function _libDiscoreSmokeTest() {
         } else if (arg0 === 2) {
           c3 = 0;
           c5 = 3;
-          obj2 = { value, done: true };
-          return obj2;
+          const obj6 = { value, done: true };
+          return obj6;
         } else {
-          obj = closure_129_0(closure_129_2[4]);
-          closure_128_0 = obj.rustMultiply(6, 7);
+          closure_128_0 = closure_129_0(closure_129_2[4]).rustMultiply(6, 7);
           closure_129_5.info("The answer for life the universe and everything is:", closure_128_0);
           closure_129_8();
           c3 = 0;
+          const obj = closure_129_0(closure_129_2[4]);
         }
         tmp7 = closure_1;
         closure_129_6 = true;

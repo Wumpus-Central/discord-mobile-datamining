@@ -11,30 +11,29 @@ const require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire, Fragment: closure_7 } = jsxProd);
-fn(4636);
-let createStyles = {
-  avatar: null,
-  avatarContainer: null,
-  detailsContainer: null,
-  messageDetails: null,
+const createStyles = fn(4636);
+const obj2 = {
+  avatar: {
+    borderRadius: fn(1176).AVATAR_SIZE_MAP[fn(undefined, 1176).AvatarSizes.NORMAL] / 2,
+    backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
+  },
+  avatarContainer: { marginRight: 16, alignItems: "flex-start", height: "100%" },
+  detailsContainer: { marginRight: 8, justifyContent: "flex-start", alignItems: "flex-start", flex: 1 },
+  messageDetails: { flexDirection: "row", alignItems: "center" },
   username: null,
   timestampSeparator: null,
   messagePreview: null,
   usernameTextContainer: null,
 };
-createStyles = {
-  borderRadius: fn(1178).AVATAR_SIZE_MAP[fn(undefined, 1178).AvatarSizes.NORMAL] / 2,
+let obj3 = {
+  borderRadius: fn(1176).AVATAR_SIZE_MAP[fn(undefined, 1176).AvatarSizes.NORMAL] / 2,
   backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
 };
-createStyles.avatar = createStyles;
-createStyles.avatarContainer = { marginRight: 16, alignItems: "flex-start", height: "100%" };
-createStyles.detailsContainer = { marginRight: 8, justifyContent: "flex-start", alignItems: "flex-start", flex: 1 };
-createStyles.messageDetails = { flexDirection: "row", alignItems: "center" };
-createStyles.username = { flexShrink: 1, color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
-createStyles.timestampSeparator = { marginHorizontal: 6 };
-createStyles.messagePreview = { marginTop: 2 };
-createStyles.usernameTextContainer = { flexShrink: 1 };
-let closure_8 = createStyles.createStyles(createStyles);
+obj2.username = { flexShrink: 1, color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
+obj2.timestampSeparator = { marginHorizontal: 6 };
+obj2.messagePreview = { marginTop: 2 };
+obj2.usernameTextContainer = { flexShrink: 1 };
+let closure_8 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/message_request/native/MessageRequestRowSenderDetails.tsx");
 
@@ -45,9 +44,8 @@ export default function MessageRequestRowSenderDetails(isRestricted) {
     flag = false;
   }
   const tmp = closure_8();
-  let obj = otherUser(504);
   const items = [RelationshipStore];
-  const stateFromStores = obj.useStateFromStores(items, () => {
+  const stateFromStores = otherUser(504).useStateFromStores(items, () => {
     let tmp2 = null;
     if (null != otherUser) {
       let nickname = RelationshipStore.getNickname(otherUser.id);
@@ -58,13 +56,13 @@ export default function MessageRequestRowSenderDetails(isRestricted) {
     }
     return tmp2;
   });
-  let obj1 = otherUser(16990);
-  const messageRequestRelativeTimestampText = obj1.useMessageRequestRelativeTimestampText(channel);
+  let obj = otherUser(504);
+  const messageRequestRelativeTimestampText = otherUser(16992).useMessageRequestRelativeTimestampText(channel);
   const random = Math.random();
   const rounded = Math.floor(random * utils_AvatarUtilsDefault.DEFAULT_AVATARS.length);
-  obj = { style: tmp.avatarContainer, children: null };
+  const obj3 = { style: tmp.avatarContainer, children: null };
   if (null != otherUser) {
-    obj = {
+    const obj4 = {
       avatarStyle: tmp.avatar,
       user: otherUser,
       guildId: "HermesInternal",
@@ -75,23 +73,23 @@ export default function MessageRequestRowSenderDetails(isRestricted) {
     if (otherUser != null) {
       avatarDecoration = otherUser.avatarDecoration;
     }
-    obj.avatarDecoration = avatarDecoration;
-    obj1 = obj;
+    obj4.avatarDecoration = avatarDecoration;
+    let obj5 = obj4;
   } else {
-    obj1 = { avatarStyle: tmp.avatar, source: utils_AvatarUtilsDefault.DEFAULT_AVATARS[rounded] };
+    obj5 = { avatarStyle: tmp.avatar, source: utils_AvatarUtilsDefault.DEFAULT_AVATARS[rounded] };
   }
-  obj.children = closure_5(otherUser(1178).Avatar, obj1);
-  const items1 = [closure_5(View, obj)];
-  const obj2 = { style: tmp.detailsContainer, children: null };
-  const obj3 = { style: tmp.messageDetails, children: null };
-  const obj4 = {
+  obj3.children = closure_5(otherUser(1176).Avatar, obj5);
+  const items1 = [closure_5(View, obj3)];
+  const obj6 = { style: tmp.detailsContainer, children: null };
+  const obj7 = { style: tmp.messageDetails, children: null };
+  const obj8 = {
     lineClamp: 1,
     variant: "text-md/semibold",
     color: "mobile-text-heading-primary",
     style: tmp.usernameTextContainer,
     children: null,
   };
-  const obj5 = {
+  const obj9 = {
     variant: "text-md/semibold",
     color: "mobile-text-heading-primary",
     style: tmp.username,
@@ -109,20 +107,20 @@ export default function MessageRequestRowSenderDetails(isRestricted) {
     const intl = otherUser(1114).intl;
     stringResult = intl.string(otherUser(1114).t["30mdIx"]);
   }
-  obj5.children = stringResult;
-  const items2 = [closure_5(otherUser(4632).Text, obj5)];
+  obj9.children = stringResult;
+  const items2 = [closure_5(otherUser(4632).Text, obj9)];
   let tmp9Result = null != stateFromStores;
   if (tmp9Result) {
-    const obj6 = { variant: "text-md/medium", color: "text-muted", children: null };
+    const obj10 = { variant: "text-md/medium", color: "text-muted", children: null };
     const items3 = [" ", otherUser(4481).getUserTag(otherUser)];
-    obj6.children = items3;
-    tmp9Result = closure_6(otherUser(4632).Text, obj6);
+    obj10.children = items3;
+    tmp9Result = closure_6(otherUser(4632).Text, obj10);
     const tmp2Result = otherUser(4481);
   }
   items2[1] = tmp9Result;
-  obj4.children = items2;
+  obj8.children = items2;
   const items4 = [
-    closure_6(otherUser(4632).Text, obj4),
+    closure_6(otherUser(4632).Text, obj8),
     closure_5(otherUser(4632).Text, {
       style: tmp.timestampSeparator,
       variant: "text-xs/medium",
@@ -135,28 +133,28 @@ export default function MessageRequestRowSenderDetails(isRestricted) {
       children: messageRequestRelativeTimestampText,
     }),
   ];
-  obj3.children = items4;
-  const items5 = [closure_6(View, obj3), ,];
+  obj7.children = items4;
+  const items5 = [closure_6(View, obj7), ,];
   let tmp11Result = !flag;
   if (!flag) {
-    const obj8 = { style: tmp.messagePreview, channel };
-    tmp11Result = closure_5(MessageRequestPreviewDefault, obj8);
+    const obj12 = { style: tmp.messagePreview, channel };
+    tmp11Result = closure_5(MessageRequestPreviewDefault, obj12);
   }
   items5[1] = tmp11Result;
   if (flag) {
     flag = null != otherUser;
   }
   if (flag) {
-    const obj9 = { style: tmp.messagePreview, userId: otherUser.id, suffix: null };
+    const obj13 = { style: tmp.messagePreview, userId: otherUser.id, suffix: null };
     const intl2 = otherUser(1114).intl;
-    obj9.suffix = intl2.string(otherUser(1114).t.hTltPn);
-    flag = closure_5(MessageRequestMutualServersDefault, obj9);
+    obj13.suffix = intl2.string(otherUser(1114).t.hTltPn);
+    flag = closure_5(MessageRequestMutualServersDefault, obj13);
     const tmp7Result = MessageRequestMutualServersDefault;
   }
-  const obj10 = { children: null };
+  const obj14 = { children: null };
   items5[2] = flag;
-  obj2.children = items5;
-  items1[1] = closure_6(View, obj2);
-  obj10.children = items1;
-  return closure_6(closure_7, obj10);
+  obj6.children = items5;
+  items1[1] = closure_6(View, obj6);
+  obj14.children = items1;
+  return closure_6(closure_7, obj14);
 }

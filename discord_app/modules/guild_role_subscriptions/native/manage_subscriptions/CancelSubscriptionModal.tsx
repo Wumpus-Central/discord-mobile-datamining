@@ -2,6 +2,8 @@
 import NavigatorHeader from "../../../../design/components/Navigator/native/NavigatorHeader.native.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
+const require = globalThis.__r;
+
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
@@ -18,25 +20,23 @@ export default function CancelSubscriptionModal(onClose) {
   bottom = require("useSafeAreaInsets")().bottom;
   ({ screens, initialStack } = require("useInitialValue")(() => {
     let obj = {};
-    obj = {
+    const obj2 = {
       render(arg0) {
-        let obj = { style: null, children: null };
-        obj = { paddingBottom, flex: 1 };
-        obj.style = obj;
-        obj = {};
+        const obj = { style: { paddingBottom, flex: 1 }, children: null };
+        const obj3 = {};
         const merged = Object.assign(arg0);
-        obj.onClose = onClose;
+        obj3.onClose = onClose;
         obj.children = jsx(closure_1(bottom[5]), {});
-        return <View />;
+        return <View style={{ paddingBottom, flex: 1 }}>{null}</View>;
       },
       title: "Subscriptions",
       headerLeft: NavigatorHeader.getHeaderCloseButton(onClose),
     };
-    obj[constants.CANCEL_SUBSCRIPTION] = obj;
-    obj = { screens: obj, initialStack: null };
+    obj[constants.CANCEL_SUBSCRIPTION] = obj2;
+    const obj4 = { screens: obj, initialStack: null };
     const items = [{ name: constants.CANCEL_SUBSCRIPTION, params }];
-    obj.initialStack = items;
-    return obj;
+    obj4.initialStack = items;
+    return obj4;
   }));
   return jsx(onClose(bottom[7]).Navigator, { screens, initialRouteStack });
 }

@@ -13,15 +13,15 @@ const ChangeEmailStore = fn(5704);
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-fn(4636);
-let createStyles = { background: null, container: null, title: null, prompt: null, input: null };
-createStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
-createStyles.background = createStyles;
-createStyles.container = { paddingVertical: 12, paddingHorizontal: 16 };
-createStyles.title = { textAlign: "center" };
-createStyles.prompt = { marginTop: 8, lineHeight: 18, textAlign: "center" };
-createStyles.input = { marginTop: 24, marginBottom: 16 };
-let closure_16 = createStyles.createStyles(createStyles);
+const createStyles = fn(4636);
+let obj2 = {
+  background: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },
+  container: { paddingVertical: 12, paddingHorizontal: 16 },
+  title: { textAlign: "center" },
+  prompt: { marginTop: 8, lineHeight: 18, textAlign: "center" },
+  input: { marginTop: 24, marginBottom: 16 },
+};
+let closure_16 = createStyles.createStyles(obj2);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/verification/native/components/EnterEmail.tsx");
 
@@ -32,11 +32,10 @@ export default function EnterEmail(isChangeEmail) {
   _slicedToArray = undefined;
   let emailToken;
   const tmp = closure_16();
+  const navigation = isChangeEmail(stateFromStores[10]).useNavigation();
   let obj = isChangeEmail(stateFromStores[10]);
-  const navigation = obj.useNavigation();
-  let obj1 = isChangeEmail(stateFromStores[11]);
   const items = [UserStore];
-  stateFromStores = obj1.useStateFromStores(items, () => currentUser.getCurrentUser());
+  stateFromStores = isChangeEmail(stateFromStores[11]).useStateFromStores(items, () => currentUser.getCurrentUser());
   const tmp6 = _slicedToArray(emailToken.useState(""), 2);
   value = tmp6[0];
   const tmp8 = _slicedToArray(closure_10(constants.EMAIL), 2);
@@ -59,8 +58,8 @@ export default function EnterEmail(isChangeEmail) {
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
-          let obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           return { value: "HermesInternal", done: null };
         }
@@ -73,19 +72,17 @@ export default function EnterEmail(isChangeEmail) {
               throw value;
             } else if (arg0 === 2) {
               c1 = 3;
-              obj = { value, done: true };
-              return obj;
+              const obj4 = { value, done: true };
+              return obj4;
             } else {
               let tmp5 = null;
               if (null != closure_1_3) {
                 closure_1_5(null);
-                let obj1 = navigation(stateFromStores[13]);
                 const user = { email, password: tmp19, emailToken };
                 c2 = 1;
                 c1 = 1;
-                obj1 = { value: null, done: false };
-                obj1.value = obj1.saveEmail(user, c2, callback);
-                return obj1;
+                const obj5 = { value: navigation(stateFromStores[13]).saveEmail(user, c2, callback), done: false };
+                return obj5;
               }
             }
           } else if (arg0 === 1) {
@@ -95,13 +92,13 @@ export default function EnterEmail(isChangeEmail) {
             tmp5 = value;
             if (arg0 === 2) {
               c1 = 3;
-              obj = { value, done: true };
+              const obj = { value, done: true };
               return obj;
             }
           }
           c1 = 3;
-          const obj2 = { value: tmp5, done: true };
-          return obj2;
+          const obj6 = { value: tmp5, done: true };
+          return obj6;
         } catch (tmp14) {
           c1 = tmp;
           throw tmp14;
@@ -120,23 +117,28 @@ export default function EnterEmail(isChangeEmail) {
     };
     obj.onSuccess = function onSuccess() {
       if (closure_0) {
-        let obj = { change_email_reason_enum };
-        changeEmailReason(stateFromStores[14]).track(constants.USER_ACCOUNT_EMAIL_CHANGE_SAVE_NEW_EMAIL, obj);
+        const obj3 = { change_email_reason_enum };
+        changeEmailReason(stateFromStores[14]).track(constants.USER_ACCOUNT_EMAIL_CHANGE_SAVE_NEW_EMAIL, obj3);
         const obj2 = changeEmailReason(stateFromStores[14]);
         const result = navigation(stateFromStores[13]).finishChangeEmailFlow(closure_1_2, closure_1_4);
         const obj4 = navigation(stateFromStores[13]);
       } else {
-        obj = navigation(stateFromStores[13]);
-        const result1 = obj.finishVerifyEmailFlow(closure_1_2, callback);
+        const result1 = navigation(stateFromStores[13]).finishVerifyEmailFlow(closure_1_2, callback);
+        const obj = navigation(stateFromStores[13]);
       }
     };
     navigation.push(isChangeEmail(stateFromStores[12]).VerificationModalScenes.VERIFY_PASSWORD, obj);
   }, items2);
   let tmp13Result = null;
   if (null != stateFromStores) {
-    obj = { style: tmp.background, keyboardShouldPersistTaps: "handled", alwaysBounceVertical: false, children: null };
-    obj = { style: tmp.container, children: null };
-    obj1 = {
+    let obj3 = {
+      style: tmp.background,
+      keyboardShouldPersistTaps: "handled",
+      alwaysBounceVertical: false,
+      children: null,
+    };
+    let obj4 = { style: tmp.container, children: null };
+    let obj5 = {
       style: tmp.title,
       accessibilityRole: "header",
       variant: "heading-xl/extrabold",
@@ -150,20 +152,20 @@ export default function EnterEmail(isChangeEmail) {
       const intl = tmp2(tmp3[16]).intl;
       stringResult = intl.string(tmp2(tmp3[16]).t["CDTD/K"]);
     }
-    obj1.children = stringResult;
-    const items3 = [closure_14(tmp2(tmp3[15]).Text, obj1), , ,];
-    let obj2 = { style: tmp.prompt, variant: "text-sm/medium", color: "text-default", children: null };
+    obj5.children = stringResult;
+    const items3 = [closure_14(tmp2(tmp3[15]).Text, obj5), , ,];
+    let obj6 = { style: tmp.prompt, variant: "text-sm/medium", color: "text-default", children: null };
     if (null != stateFromStores.email) {
       const intl4 = tmp2(tmp3[16]).intl;
-      const obj3 = { email: stateFromStores.email };
-      let formatToPlainStringResult = intl4.formatToPlainString(tmp2(tmp3[16]).t.Z7CaI7, obj3);
+      const obj7 = { email: stateFromStores.email };
+      let formatToPlainStringResult = intl4.formatToPlainString(tmp2(tmp3[16]).t.Z7CaI7, obj7);
     } else {
       const intl3 = tmp2(tmp3[16]).intl;
       formatToPlainStringResult = intl3.string(tmp2(tmp3[16]).t.YXXMxK);
     }
-    obj2.children = formatToPlainStringResult;
-    items3[1] = closure_14(tmp2(tmp3[15]).Text, obj2);
-    let obj4 = {
+    obj6.children = formatToPlainStringResult;
+    items3[1] = closure_14(tmp2(tmp3[15]).Text, obj6);
+    const obj8 = {
       style: tmp.input,
       label: null,
       textContentType: "emailAddress",
@@ -178,23 +180,23 @@ export default function EnterEmail(isChangeEmail) {
       autoFocus: true,
     };
     const intl5 = tmp2(tmp3[16]).intl;
-    obj4.label = intl5.string(tmp2(tmp3[16]).t["w/qqKK"]);
-    obj4.value = value;
-    obj4.onChangeText = tmp6[1];
-    obj4.onSubmitEditing = callback1;
+    obj8.label = intl5.string(tmp2(tmp3[16]).t["w/qqKK"]);
+    obj8.value = value;
+    obj8.onChangeText = tmp6[1];
+    obj8.onSubmitEditing = callback1;
     const intl6 = tmp2(tmp3[16]).intl;
-    obj4.placeholder = intl6.string(tmp2(tmp3[16]).t.dI4d4S);
-    obj4.error = tmp8[0];
-    items3[2] = closure_14(changeEmailReason(tmp3[17]), obj4);
-    const obj5 = { text: null, onPress: null, disabled: null };
+    obj8.placeholder = intl6.string(tmp2(tmp3[16]).t.dI4d4S);
+    obj8.error = tmp8[0];
+    items3[2] = closure_14(changeEmailReason(tmp3[17]), obj8);
+    const obj9 = { text: null, onPress: null, disabled: null };
     const intl7 = tmp2(tmp3[16]).intl;
-    obj5.text = intl7.string(tmp2(tmp3[16]).t.Vm8akB);
-    obj5.onPress = callback1;
-    obj5.disabled = "" === value || value === stateFromStores.email;
-    items3[3] = closure_14(tmp2(tmp3[18]).Button, obj5);
-    obj.children = items3;
-    obj.children = closure_15(callback, obj);
-    tmp13Result = closure_14(closure_8, obj);
+    obj9.text = intl7.string(tmp2(tmp3[16]).t.Vm8akB);
+    obj9.onPress = callback1;
+    obj9.disabled = "" === value || value === stateFromStores.email;
+    items3[3] = closure_14(tmp2(tmp3[18]).Button, obj9);
+    obj4.children = items3;
+    obj3.children = closure_15(callback, obj4);
+    tmp13Result = closure_14(closure_8, obj3);
     const tmp20 = changeEmailReason(tmp3[17]);
   }
   return tmp13Result;

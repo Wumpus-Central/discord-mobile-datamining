@@ -4,6 +4,8 @@ import UserStore from "../../../stores/UserStore.tsx";
 import FamilyCenterControlledSettingsStore from "../FamilyCenterControlledSettingsStore.tsx";
 import FamilyCenterStore from "../FamilyCenterStore.tsx";
 
+const require = globalThis.__r;
+
 const require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/parent_tools/hooks/useSelectedTeenUser.tsx");

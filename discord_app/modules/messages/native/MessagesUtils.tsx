@@ -3,8 +3,8 @@ import TTITrackerDefault from "../../tti_analytics/TTITracker.tsx";
 import SnowflakeUtilsDefault from "../../../utils/SnowflakeUtils.tsx";
 import _modDef12 from "../../../../_runtime/metro/00012__.js";
 import util from "../../../intl/index.native.tsx";
-import PlatformUtils from "../../../utils/PlatformUtils.tsx";
 import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
+import PlatformUtils from "../../../utils/PlatformUtils.tsx";
 import KeyboardTypes from "../../keyboard/native/KeyboardTypes.tsx";
 import PremiumTypeUtils from "../../../utils/PremiumTypeUtils.tsx";
 import Server from "../../../flow/Server.tsx";
@@ -30,7 +30,7 @@ import MessageReactionsTypes from "../MessageReactionsTypes.tsx";
 import ReactionActionCreators from "../../reactions/ReactionActionCreators.tsx";
 import ThreadActionCreatorsDefault from "../../threads/ThreadActionCreators.tsx";
 import tracking_Tracking from "../../forums/tracking/Tracking.tsx";
-import _modDef11386 from "../../../../_runtime/metro/11386__.js";
+import _modDef11387 from "../../../../_runtime/metro/11387__.js";
 import reactions_ReactionUtils from "../../reactions/native/ReactionUtils.tsx";
 import computeScrollData from "../../chat/native/computeScrollData.tsx";
 import NativeChatUtilsDefault from "../../chat/native/NativeChatUtils.tsx";
@@ -48,6 +48,8 @@ import NetworkStore from "../../../stores/NetworkStore.tsx";
 import PermissionStore from "../../../stores/PermissionStore.tsx";
 import ReadStateStore from "../../../stores/ReadStateStore.tsx";
 import UserStore from "../../../stores/UserStore.tsx";
+
+const require = globalThis.__r;
 
 require = fn;
 function getVisibleMessages(arg0) {
@@ -86,9 +88,9 @@ function getVisibleMessages(arg0) {
                         } else {
                           num = firstVisibleMessagePercentVisible;
                         }
-                        message = MessageStore.getMessage(tmp, tmp2.message.id);
-                        if (null != message) {
-                          let obj = { message, percentVisible: num, state: message.state };
+                        let message1 = MessageStore.getMessage(tmp, tmp2.message.id);
+                        if (null != message1) {
+                          let obj = { message: message1, percentVisible: num, state: message1.state };
                           let arr = items.push(obj);
                         }
                       }
@@ -118,8 +120,8 @@ let closure_24 = async function _handleTapNavBar(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+      const obj3 = { value, done: true };
+      return obj3;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -132,8 +134,8 @@ let closure_24 = async function _handleTapNavBar(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c3 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj4 = { value, done: true };
+          return obj4;
         } else {
           closure_1 = tmp2;
           closure_129_0 = undefined;
@@ -143,31 +145,32 @@ let closure_24 = async function _handleTapNavBar(arg0) {
           ({ scrollToTop: closure_129_1, isNearTop, messages, findMessageIndex, chatRef } = closure_0);
           if (channel.isForumPost()) {
             if (!isNearTop) {
-              let obj1 = SnowflakeUtilsDefault;
-              if (null == getMessage(messages, obj1.castChannelIdAsMessageId(channel.id))) {
-                let tmp10Result = MessageActionCreatorsDefault;
-                obj1 = { channelId: channel.id, jump: null, limit: null };
-                const obj2 = { messageId: channel.id, flash: false };
-                obj1.jump = obj2;
-                obj1.limit = limit;
+              if (null == getMessage(messages, obj2.castChannelIdAsMessageId(channel.id))) {
+                const obj5 = { channelId: channel.id, jump: null, limit: null };
+                const obj6 = { messageId: channel.id, flash: false };
+                obj5.jump = obj6;
+                obj5.limit = limit;
                 c2 = 1;
                 c3 = 1;
-                const obj3 = { value: tmp10Result.fetchMessages(obj1), done: false };
-                return obj3;
+                const obj7 = { value: MessageActionCreatorsDefault.fetchMessages(obj5), done: false };
+                return obj7;
               } else {
-                tmp10Result = SnowflakeUtilsDefault;
-                const findMessageIndexResult = findMessageIndex(tmp10Result.castChannelIdAsMessageId(channel.id));
+                const findMessageIndexResult = findMessageIndex(
+                  SnowflakeUtilsDefault.castChannelIdAsMessageId(channel.id),
+                );
                 if (null == findMessageIndexResult) {
                   c3 = 3;
                   return { value: "HermesInternal", done: null };
                 } else {
-                  const obj4 = { animated: !useReducedMotion };
-                  NativeChatUtilsDefault.scrollTo(chatRef.current, findMessageIndexResult, obj4);
+                  const obj8 = { animated: !useReducedMotion };
+                  NativeChatUtilsDefault.scrollTo(chatRef.current, findMessageIndexResult, obj8);
                   const _setTimeout2 = setTimeout;
                   const timerId = setTimeout(() => closure_1_1(!closure_1_0), 10 * findMessageIndexResult);
-                  const tmp10Result1 = NativeChatUtilsDefault;
+                  const tmp10Result4 = NativeChatUtilsDefault;
                 }
+                const tmp10Result3 = SnowflakeUtilsDefault;
               }
+              obj2 = SnowflakeUtilsDefault;
             }
           }
           c3 = 3;
@@ -180,7 +183,7 @@ let closure_24 = async function _handleTapNavBar(arg0) {
         const timerId1 = setTimeout(() => closure_1_1(!closure_1_0), 50);
       }
       c3 = 3;
-      obj = { value, done: true };
+      const obj = { value, done: true };
       return obj;
     } catch (tmp17) {
       c3 = tmp;
@@ -229,7 +232,7 @@ export const getLongPressSelectedMedia = function getLongPressSelectedMedia(
   message,
   mediaIndex,
   mediaType,
-  tmpResult,
+  tmpResult3,
   componentMediaIndex,
 ) {
   let obj = message;
@@ -255,25 +258,25 @@ export const getLongPressSelectedMedia = function getLongPressSelectedMedia(
     }
     let tmp17 = null;
     if (null != tmp13) {
-      obj = { sourceType: "attachment", source: tmp13, mediaType: null, mediaUrl: null, contentType: null };
+      const obj2 = { sourceType: "attachment", source: tmp13, mediaType: null, mediaUrl: null, contentType: null };
       let str3 = "video";
       if (!obj9.isVideoFile(tmp13.filename)) {
-        let tmp18Result = MediaFormatTesters;
         let str4 = "audio";
         if (!tmp18Result.isAudioFile(tmp13.filename)) {
-          tmp18Result = MediaFormatTesters;
           let str5 = "file";
-          if (tmp18Result.isImageFile(tmp13.filename)) {
+          if (tmp18Result2.isImageFile(tmp13.filename)) {
             str5 = "image";
           }
           str4 = str5;
+          tmp18Result2 = MediaFormatTesters;
         }
         str3 = str4;
+        tmp18Result = MediaFormatTesters;
       }
-      obj.mediaType = str3;
+      obj2.mediaType = str3;
       ({ url: obj8.mediaUrl, content_type } = tmp13);
-      obj.contentType = content_type;
-      tmp17 = obj;
+      obj2.contentType = content_type;
+      tmp17 = obj2;
       obj9 = MediaFormatTesters;
     }
     return tmp17;
@@ -283,73 +286,73 @@ export const getLongPressSelectedMedia = function getLongPressSelectedMedia(
     } else {
       if (tmp8.type === constants4.IMAGE) {
         if (null != tmp8.url) {
-          obj = { sourceType: "embed", source: tmp8, mediaType: "image", mediaUrl: tmp8.url, contentType: "o" };
-          return obj;
+          const obj3 = { sourceType: "embed", source: tmp8, mediaType: "image", mediaUrl: tmp8.url, contentType: "o" };
+          return obj3;
         }
       }
       if (tmp8.type === constants4.GIFV) {
         const video = tmp8.video;
-        let url;
+        let url1;
         if (video != null) {
-          url = video.url;
+          url1 = video.url;
         }
-        if (null != url) {
+        if (null != url1) {
           if (null != tmp8.video.proxyURL) {
             if ("" !== tmp8.video.proxyURL) {
-              url = tmp8.video.proxyURL;
+              let url = tmp8.video.proxyURL;
             }
-            const obj1 = {
+            const obj4 = {
               sourceType: "embed",
               source: tmp8,
               mediaType: "video",
               mediaUrl: url,
               contentType: tmp8.video.contentType,
             };
-            return obj1;
+            return obj4;
           }
           url = tmp8.video.url;
         }
       }
       if (tmp8.type === constants4.RICH) {
         const image = tmp8.image;
-        let url1;
+        let url2;
         if (image != null) {
-          url1 = image.url;
+          url2 = image.url;
         }
-        if (null != url1) {
-          const obj2 = {
+        if (null != url2) {
+          const obj5 = {
             sourceType: "embed",
             source: tmp8,
             mediaType: "image",
             mediaUrl: tmp8.image.url,
             contentType: tmp8.image.contentType,
           };
-          return obj2;
+          return obj5;
         } else {
           const video2 = tmp8.video;
-          let url2;
+          let url3;
           if (video2 != null) {
-            url2 = video2.url;
+            url3 = video2.url;
           }
-          if (null != url2) {
-            const obj3 = {
+          if (null != url3) {
+            const obj6 = {
               sourceType: "embed",
               source: tmp8,
               mediaType: "video",
               mediaUrl: tmp8.video.url,
               contentType: tmp8.video.contentType,
             };
-            return obj3;
+            return obj6;
           }
         }
       }
       return null;
     }
   } else if ("component" === mediaType) {
-    if (null == tmpResult) {
+    if (null == tmpResult3) {
       return null;
     } else {
-      value = InteractionComponentUtils.flattenComponents(obj.components).get(tmpResult);
+      value = InteractionComponentUtils.flattenComponents(obj.components).get(tmpResult3);
       if (null == value) {
         return null;
       } else if (value.type === Server.ComponentType.MEDIA_GALLERY) {
@@ -359,14 +362,14 @@ export const getLongPressSelectedMedia = function getLongPressSelectedMedia(
           return null;
         } else {
           const media = tmp7.media;
-          const obj4 = { sourceType: "component", source: value, mediaType: null, mediaUrl: null };
+          const obj7 = { sourceType: "component", source: value, mediaType: null, mediaUrl: null };
           let str = "image";
           if (tmp20Result.isVideoContentType(media.contentType)) {
             str = "video";
           }
-          obj4.mediaType = str;
-          obj4.mediaUrl = media.url;
-          return obj4;
+          obj7.mediaType = str;
+          obj7.mediaUrl = media.url;
+          return obj7;
         }
       } else {
         return null;
@@ -379,12 +382,12 @@ export const getLongPressSelectedMedia = function getLongPressSelectedMedia(
 };
 export const toObscuredMedia = function toObscuredMedia(sourceType) {
   if ("attachment" === sourceType.sourceType) {
-    let obj = { type: ExplicitMediaRedactionModels.ObscuredMediaTypes.Attachment, media: sourceType.source };
-    let tmp = obj;
+    const obj2 = { type: ExplicitMediaRedactionModels.ObscuredMediaTypes.Attachment, media: sourceType.source };
+    let tmp = obj2;
   } else {
     tmp = null;
     if ("embed" === sourceType.sourceType) {
-      obj = { type: ExplicitMediaRedactionModels.ObscuredMediaTypes.Embed, media: sourceType.source };
+      const obj = { type: ExplicitMediaRedactionModels.ObscuredMediaTypes.Embed, media: sourceType.source };
       tmp = obj;
     }
   }
@@ -409,8 +412,7 @@ export const handleAddOrRemoveReaction = function handleAddOrRemoveReaction(mess
   }
   let result = null != guildId;
   if (result) {
-    let obj = useShowMemberVerificationGate;
-    result = obj.shouldShowMembershipVerificationGate(guildId);
+    result = useShowMemberVerificationGate.shouldShowMembershipVerificationGate(guildId);
   }
   let member = null;
   if (null != guildId) {
@@ -420,8 +422,7 @@ export const handleAddOrRemoveReaction = function handleAddOrRemoveReaction(mess
     }
   }
   let tmp36Result = dependencyMap;
-  let obj1 = CommunicationDisabledUtils;
-  const result1 = obj1.isMemberCommunicationDisabled(member);
+  const result1 = CommunicationDisabledUtils.isMemberCommunicationDisabled(member);
   if (channel.isArchivedLockedThread()) {
     const obj15 = ToastActionCreatorsDefault;
     const intl = util.intl;
@@ -432,40 +433,39 @@ export const handleAddOrRemoveReaction = function handleAddOrRemoveReaction(mess
     } else {
       stringResult = string(t.X2L3Oa);
     }
-    obj = { key: "ARCHIVED_POST_REACTIONS_DISABLED_TOAST", content: stringResult, icon: null };
-    tmp36Result = _modDef11386;
-    obj.icon = tmp36Result;
-    t = obj15.open(obj);
+    const obj3 = { key: "ARCHIVED_POST_REACTIONS_DISABLED_TOAST", content: stringResult, icon: null };
+    tmp36Result = _modDef11387;
+    obj3.icon = tmp36Result;
+    t = obj15.open(obj3);
     isForumPostResult = channel.isForumPost();
   } else if (null != reaction) {
     if (flag) {
       if (true === !reaction.me_burst) {
-        let tmp12Result = PremiumTypeUtils;
         if (!tmp12Result.isPremium(currentUser)) {
-          tmp12Result = reactions_ReactionUtils;
-          return tmp12Result.handleOutOfSuperReactions();
+          return reactions_ReactionUtils.handleOutOfSuperReactions();
         }
+        tmp12Result = PremiumTypeUtils;
       }
     }
     const ReactionTypes = MessageReactionsTypes.ReactionTypes;
-    if (tmp12Result1.isMeReaction(reaction.me, reaction.me_burst, tmp23)) {
+    if (tmp12Result10.isMeReaction(reaction.me, reaction.me_burst, tmp23)) {
       const result2 = HapticUtils.triggerHapticFeedback(haptics_HapticFeedbackTypesDefault.IMPACT_LIGHT);
-      const tmp12Result2 = HapticUtils;
-      obj = { channelId: channel.id, messageId, emoji: reaction.emoji, location: MESSAGE, options: null };
-      obj1 = { burst: flag };
-      obj.options = obj1;
-      ReactionActionCreators.removeReaction(obj);
-      const tmp12Result3 = ReactionActionCreators;
+      const tmp12Result11 = HapticUtils;
+      const obj4 = { channelId: channel.id, messageId, emoji: reaction.emoji, location: MESSAGE, options: null };
+      const obj5 = { burst: flag };
+      obj4.options = obj5;
+      ReactionActionCreators.removeReaction(obj4);
+      const tmp12Result12 = ReactionActionCreators;
     } else {
       if (!result) {
         if (channel.isPrivate()) {
           if (!result1) {
-            const tmp12Result4 = ReactionActionCreators;
-            const obj2 = { burst: flag };
-            tmp12Result4.addReaction(channel.id, messageId, reaction.emoji, MESSAGE, obj2);
+            const tmp12Result13 = ReactionActionCreators;
+            const obj6 = { burst: flag };
+            tmp12Result13.addReaction(channel.id, messageId, reaction.emoji, MESSAGE, obj6);
             if (!flag) {
               const result3 = HapticUtils.triggerHapticFeedback(haptics_HapticFeedbackTypesDefault.IMPACT_LIGHT);
-              const tmp12Result5 = HapticUtils;
+              const tmp12Result14 = HapticUtils;
             }
           }
         }
@@ -477,12 +477,12 @@ export const handleAddOrRemoveReaction = function handleAddOrRemoveReaction(mess
         }
       }
     }
-    tmp12Result1 = ReactionUtils;
+    tmp12Result10 = ReactionUtils;
     tmp23 = flag ? ReactionTypes.BURST : ReactionTypes.NORMAL;
   } else {
-    const tmp12Result7 = reactions_ReactionUtils;
-    const obj3 = { burst: flag };
-    const result4 = tmp12Result7.handleAddNewReactions(channel, messageId, MESSAGE, obj3);
+    const tmp12Result16 = reactions_ReactionUtils;
+    const obj7 = { burst: flag };
+    const result4 = tmp12Result16.handleAddNewReactions(channel, messageId, MESSAGE, obj7);
   }
 };
 export const handleToggleFollowForumPost = function handleToggleFollowForumPost(channel, JoinedThreadsStore) {
@@ -508,31 +508,31 @@ export const handleCopyLinkForumPost = function handleCopyLinkForumPost(guildId,
   if (flag == null) {
     flag = false;
   }
-  let obj = { postId: id, location };
-  const result = tracking_Tracking.trackForumPostLinkCopied(obj);
+  const result = tracking_Tracking.trackForumPostLinkCopied({ postId: id, location });
   if (flag) {
-    let tmp4Result = AppAnalyticsUtils;
-    obj = { media_post_id: id };
-    tmp4Result.trackWithMetadata(constants3.MEDIA_POST_SHARE_PROMPT_CLICKED, obj);
+    const obj3 = { media_post_id: id };
+    AppAnalyticsUtils.trackWithMetadata(constants3.MEDIA_POST_SHARE_PROMPT_CLICKED, obj3);
+    const tmp4Result = AppAnalyticsUtils;
   }
-  tmp4Result = HapticUtils;
-  const result1 = tmp4Result.triggerHapticFeedback(haptics_HapticFeedbackTypesDefault.IMPACT_LIGHT);
+  const obj = { postId: id, location };
+  const result1 = HapticUtils.triggerHapticFeedback(haptics_HapticFeedbackTypesDefault.IMPACT_LIGHT);
   if (null == channel) {
-    const tmp4Result1 = ClipboardUtils;
+    const tmp4Result8 = ClipboardUtils;
     let result2;
     if (true === flag) {
       result2 = SnowflakeUtilsDefault.castChannelIdAsMessageId(id);
       const tmp9Result = SnowflakeUtilsDefault;
     }
-    tmp4Result1.copy(ChannelUtils.getChannelPermalink(guildId, id, result2));
-    const tmp4Result2 = ChannelUtils;
+    tmp4Result8.copy(ChannelUtils.getChannelPermalink(guildId, id, result2));
+    const tmp4Result9 = ChannelUtils;
   } else {
-    const tmp4Result3 = ClipboardUtils;
-    tmp4Result3.copy(ChannelUtils.getChannelLinkToCopy(channel, channel1));
-    const tmp4Result4 = ChannelUtils;
+    const tmp4Result10 = ClipboardUtils;
+    tmp4Result10.copy(ChannelUtils.getChannelLinkToCopy(channel, channel1));
+    const tmp4Result11 = ChannelUtils;
   }
+  const tmp4Result7 = HapticUtils;
   ToastUtils.presentLinkCopied();
-  const tmp4Result5 = ToastUtils;
+  const tmp4Result12 = ToastUtils;
 };
 export const findMessageIndex = function findMessageIndex(previousRows, ChatTTITracker) {
   if (null != ChatTTITracker) {
@@ -609,10 +609,12 @@ export const handleTapTableView = function handleTapTableView(current, arg1) {
   }
 };
 export const handleMediaPlayFinishedAnalytics = function handleMediaPlayFinishedAnalytics(mediaSource) {
-  let obj = MediaPlaybackFacts;
-  const reportedMediaFacts = obj.resolveReportedMediaFacts(mediaSource.mediaSource, mediaSource.fileDurationSec);
+  const reportedMediaFacts = MediaPlaybackFacts.resolveReportedMediaFacts(
+    mediaSource.mediaSource,
+    mediaSource.fileDurationSec,
+  );
   ({ fileSize, fileDurationSec } = reportedMediaFacts);
-  obj = {
+  const obj3 = {
     play_time_sec: mediaSource.playWallTimeMs / 1000,
     play_wall_time_ms: mediaSource.playWallTimeMs,
     first_play_waiting_ms: Math.min(mediaSource.firstPlayWaitingMs, 600000),
@@ -637,14 +639,14 @@ export const handleMediaPlayFinishedAnalytics = function handleMediaPlayFinished
       mimeType = mediaSource.mimeType;
     }
   }
-  obj.mime_type = mimeType;
-  obj.file_size = fileSize;
-  obj.file_duration_sec = fileDurationSec;
+  obj3.mime_type = mimeType;
+  obj3.file_size = fileSize;
+  obj3.file_duration_sec = fileDurationSec;
   let errorCode = mediaSource.errorCode;
   if (errorCode == null) {
     errorCode = null;
   }
-  obj.error_code = errorCode;
+  obj3.error_code = errorCode;
   let errorMessage = null;
   if (null != mediaSource.errorMessage) {
     errorMessage = null;
@@ -652,11 +654,11 @@ export const handleMediaPlayFinishedAnalytics = function handleMediaPlayFinished
       errorMessage = mediaSource.errorMessage;
     }
   }
-  obj.error_message = errorMessage;
-  obj.connection_type = NetworkStore.getType();
-  obj.effective_connection_speed = NetworkStore.getEffectiveConnectionSpeed();
-  obj.service_provider = NetworkStore.getServiceProvider();
-  AnalyticsUtilsDefault.track(constants3.MEDIA_PLAY_FINISHED, obj);
+  obj3.error_message = errorMessage;
+  obj3.connection_type = NetworkStore.getType();
+  obj3.effective_connection_speed = NetworkStore.getEffectiveConnectionSpeed();
+  obj3.service_provider = NetworkStore.getServiceProvider();
+  AnalyticsUtilsDefault.track(constants3.MEDIA_PLAY_FINISHED, obj3);
 };
 export const scrollToBottom = function scrollToBottom(current, arg1, fn) {
   let flag = arg3;
@@ -709,30 +711,30 @@ export const canAddNewReactions = function canAddNewReactions(isPrivate, arg1) {
 export const loadMoreBefore = function loadMoreBefore(channelId, hasMoreBefore, fn) {
   fn(true);
   if (tmp2) {
-    const obj = { channelId, before: null, limit: null };
+    const obj2 = { channelId, before: null, limit: null };
     const firstResult = hasMoreBefore.first();
     let id;
     if (firstResult != null) {
       id = firstResult.id;
     }
-    obj.before = id;
-    obj.limit = limit;
-    const messages = obj.fetchMessages(obj);
+    obj2.before = id;
+    obj2.limit = limit;
+    const messages = MessageActionCreatorsDefault.fetchMessages(obj2);
   }
   tmp2 = hasMoreBefore.hasMoreBefore && !hasMoreBefore.loadingMore;
 };
 export const loadMoreAfter = function loadMoreAfter(channelId, hasMoreAfter, fn) {
   fn(true);
   if (tmp2) {
-    const obj = { channelId, after: null, limit: null };
+    const obj2 = { channelId, after: null, limit: null };
     const lastResult = hasMoreAfter.last();
     let id;
     if (lastResult != null) {
       id = lastResult.id;
     }
-    obj.after = id;
-    obj.limit = limit;
-    const messages = obj.fetchMessages(obj);
+    obj2.after = id;
+    obj2.limit = limit;
+    const messages = MessageActionCreatorsDefault.fetchMessages(obj2);
   }
   tmp2 = hasMoreAfter.hasMoreAfter && !hasMoreAfter.loadingMore;
 };
@@ -811,42 +813,42 @@ export const jumpToPresent = function jumpToPresent(jumpReturnTargetId, id, fn) 
   if (null == jumpReturnTargetId.jumpReturnTargetId) {
     if (!jumpReturnTargetId.loadingMore) {
       if (jumpReturnTargetId.hasMoreAfter) {
-        let obj = { channelId: id.id, limit, jump: { present: true } };
-        const messages = MessageActionCreatorsDefault.fetchMessages(obj);
+        const obj2 = { channelId: id.id, limit, jump: { present: true } };
+        const messages = MessageActionCreatorsDefault.fetchMessages(obj2);
       } else {
         fn();
       }
     }
   } else {
-    obj = { channelId: id.id, messageId: jumpReturnTargetId, flash: true };
-    obj.jumpToMessage(obj);
+    const obj4 = { channelId: id.id, messageId: jumpReturnTargetId, flash: true };
+    MessageActionCreatorsDefault.jumpToMessage(obj4);
   }
 };
 export const scrollToNewMessages = function scrollToNewMessages(channel) {
   channel = channel.channel;
   let id = ReadStateStore.ackMessageId(channel.id);
-  const obj = { channelId: channel.id, messageId: null, offset: 1, context: "Mark As Read" };
+  const obj2 = { channelId: channel.id, messageId: null, offset: 1, context: "Mark As Read" };
   if (id == null) {
     id = channel.id;
   }
-  obj.messageId = id;
-  obj.jumpToMessage(obj);
+  obj2.messageId = id;
+  MessageActionCreatorsDefault.jumpToMessage(obj2);
 };
 export const syncMessageDisplay = function syncMessageDisplay(messages) {
   messages = messages.messages;
   const oldestUnreadMessageId = messages.oldestUnreadMessageId;
   ({ channelId, updateRows, scrollToMessageId } = messages);
   if (messages.isMessagesReady) {
-    let obj = { scrollToMessageId: null, jumpTargetId: null, jumpType: null, focusTargetId: null };
+    const obj = { scrollToMessageId: null, jumpTargetId: null, jumpType: null, focusTargetId: null };
     ({ jumpTargetId: obj.scrollToMessageId, jumpTargetId: obj.jumpTargetId } = messages);
     obj.jumpType = messages(scrollToMessageId[48]).JumpType.INSTANT;
     obj.focusTargetId = messages.focusTargetId;
     updateRows(obj);
     if (null != messages.jumpTargetId) {
-      obj = { scrollToMessageId: null, jumpTargetId: null, jumpType: null };
+      const obj4 = { scrollToMessageId: null, jumpTargetId: null, jumpType: null };
       ({ jumpTargetId: obj2.scrollToMessageId, jumpTargetId: obj2.jumpTargetId } = messages);
-      obj.jumpType = tmp2(tmp3[48]).JumpType.INSTANT;
-      scrollToMessageId(obj);
+      obj4.jumpType = tmp2(tmp3[48]).JumpType.INSTANT;
+      scrollToMessageId(obj4);
     } else if (null != oldestUnreadMessageId) {
       const _setTimeout = setTimeout;
       const timerId = setTimeout(
@@ -901,7 +903,7 @@ export const maybeRescrollToMessageId = function maybeRescrollToMessageId(arg0, 
         if (null != jumpTargetId.current) {
           let flag = false;
           if (findMessageIndexResult) {
-            let obj = {
+            const obj = {
               scrollToMessageId,
               jumpTargetId: scrollToMessageId,
               jumpType,
@@ -913,8 +915,8 @@ export const maybeRescrollToMessageId = function maybeRescrollToMessageId(arg0, 
             flag = true;
           }
           if (!flag) {
-            obj = { animated: jumpType === Client.JumpType.ANIMATED };
-            NativeChatUtilsDefault.scrollTo(tmp14.current, tmp2, obj);
+            const obj3 = { animated: jumpType === Client.JumpType.ANIMATED };
+            NativeChatUtilsDefault.scrollTo(tmp14.current, tmp2, obj3);
           }
         }
       }
@@ -945,7 +947,6 @@ export const scrollToMessageIdWithRescroll = function scrollToMessageIdWithRescr
     useReducedMotion = ANIMATED === scrollToMessageId(chatRef[48]).JumpType.INSTANT;
   }
   const animated = tmp10;
-  let obj = scrollToMessageId(chatRef[41]);
   if (obj.isIOS()) {
     if (!tmp7) {
       const JumpType = tmp11(tmp12[48]).JumpType;
@@ -967,7 +968,7 @@ export const scrollToMessageIdWithRescroll = function scrollToMessageIdWithRescr
             if (null != jumpTargetId.current) {
               let flag = false;
               if (findMessageIndexResult) {
-                let obj = {
+                const obj = {
                   scrollToMessageId,
                   jumpTargetId: scrollToMessageId,
                   jumpType,
@@ -979,8 +980,8 @@ export const scrollToMessageIdWithRescroll = function scrollToMessageIdWithRescr
                 flag = true;
               }
               if (!flag) {
-                obj = { animated: jumpType === Client.JumpType.ANIMATED };
-                NativeChatUtilsDefault.scrollTo(tmp14.current, tmp2, obj);
+                const obj3 = { animated: jumpType === Client.JumpType.ANIMATED };
+                NativeChatUtilsDefault.scrollTo(tmp14.current, tmp2, obj3);
               }
             }
           }
@@ -994,12 +995,14 @@ export const scrollToMessageIdWithRescroll = function scrollToMessageIdWithRescr
     if (tmp6) {
       const _setTimeout = setTimeout;
       const timerId1 = setTimeout(() => {
-        const obj = { animated, highlight: jumpTargetId === scrollToMessageId };
-        obj.scrollIntoView(chatRef.current, findMessageIndexResult, obj);
+        NativeChatUtilsDefault.scrollIntoView(chatRef.current, findMessageIndexResult, {
+          animated,
+          highlight: jumpTargetId === scrollToMessageId,
+        });
       }, 5);
     } else {
-      obj = { animated: tmp10, highlight: tmp === scrollToMessageId, position: TOP };
-      jumpTargetId(tmp12[45]).scrollTo(chatRef.current, findMessageIndexResult, obj);
+      let obj3 = { animated: tmp10, highlight: tmp === scrollToMessageId, position: TOP };
+      jumpTargetId(tmp12[45]).scrollTo(chatRef.current, findMessageIndexResult, obj3);
       let obj2 = jumpTargetId(tmp12[45]);
     }
   }
@@ -1021,7 +1024,7 @@ export const handleVisibleMessagesChange = function handleVisibleMessagesChange(
     if (null != lastVisibleMessageRowIndex) {
       if (null != firstVisibleMessagePercentVisible) {
         if (null != lastVisibleMessagePercentVisible) {
-          let obj = {
+          const obj = {
             firstVisibleMessageRowIndex,
             lastVisibleMessageRowIndex,
             firstVisibleMessagePercentVisible,
@@ -1031,8 +1034,8 @@ export const handleVisibleMessagesChange = function handleVisibleMessagesChange(
           };
           const arr = getVisibleMessages(obj);
           if (arr.length > 0) {
-            obj = { visibleMessages: arr, source: tmp };
-            const result = QuestActionCreators.questsVisibleMobileMessagesChanged(obj);
+            const obj3 = { visibleMessages: arr, source: tmp };
+            const result = QuestActionCreators.questsVisibleMobileMessagesChanged(obj3);
             const obj4 = MessageImpressionAnalyticsHelpers;
             const result1 = obj4.handleAnnouncementMessageViewTracking(
               arr,

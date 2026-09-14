@@ -52,12 +52,12 @@ const uploadStore = new UploadStore(DispatcherDefault, {
           tmp2 = closure_3;
         }
         closure_5[file.id] = uploader;
-        let items = [];
-        items[HermesBuiltin.arraySpread(tmp2, 0)] = file;
-        dependencyMap[channelId] = items;
+        const items1 = [];
+        items1[HermesBuiltin.arraySpread(tmp2, 0)] = file;
+        dependencyMap[channelId] = items1;
         if (null != message) {
           closure_6[file.id] = message;
-          items = file.items;
+          const items = file.items;
           if (null != items) {
             const obj = {};
             const merged = Object.assign(file);
@@ -68,10 +68,10 @@ const uploadStore = new UploadStore(DispatcherDefault, {
           if (id == null) {
             id = message.id;
           }
-          const items1 = file.items;
+          const items2 = file.items;
           let mapped;
-          if (items1 != null) {
-            mapped = items1.map((item) => {
+          if (items2 != null) {
+            mapped = items2.map((item) => {
               item = item.item;
               let num = item.width;
               if (num == null) {

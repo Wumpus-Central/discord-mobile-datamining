@@ -1,4 +1,5 @@
 // discord_app/modules/gateway/GatewaySocketAnalytics.tsx
+import TTITrackerDefault from "../tti_analytics/TTITracker.tsx";
 import AppStartPerformanceDefault from "../../../discord_common/js/packages/app-start-performance/AppStartPerformance.tsx";
 import AnalyticsUtilsDefault from "../../utils/AnalyticsUtils.tsx";
 import _objectWithoutProperties from "../../../_runtime/metro/00109__objectWithoutProperties.js";
@@ -114,16 +115,18 @@ export const logReadyPayloadReceived = function logReadyPayloadReceived(
     } catch (err) {}
   })(data);
   if (null != compressionAnalytics) {
-    let obj = AppStartPerformanceDefault;
     let _Math = Math;
-    obj.addDetail("payload_size(kb)", Math.round(compressionAnalytics.uncompressed_byte_size / 1024));
+    AppStartPerformanceDefault.addDetail(
+      "payload_size(kb)",
+      Math.round(compressionAnalytics.uncompressed_byte_size / 1024),
+    );
   }
   let num2 = tmp.identify_total_server_duration_ms;
   if (num2 == null) {
     num2 = 0;
   }
   AppStartPerformanceDefault.addDetail("server_time(ms)", num2);
-  obj = {};
+  const obj4 = {};
   const merged = Object.assign(compressionAnalytics);
   const merged1 = Object.assign(tmp);
   const guilds = data.guilds;
@@ -147,12 +150,15 @@ export const logReadyPayloadReceived = function logReadyPayloadReceived(
       tmp2 = null != channels && null != channels.forEach;
     }
   });
-  obj = { num_guilds: guilds.length, num_guild_channels: dependencyMap, num_guild_category_channels: importDefault };
-  const merged2 = Object.assign(obj);
+  const merged2 = Object.assign({
+    num_guilds: guilds.length,
+    num_guild_channels: dependencyMap,
+    num_guild_category_channels: importDefault,
+  });
   const merged3 = Object.assign(readyPayloadByteSizeAnalytics);
-  obj.duration_ms_since_identify_start = nowResult - socket.identifyStartTime;
-  obj.duration_ms_since_connection_start = nowResult - socket.connectionStartTime;
-  obj.duration_ms_since_emit_start = Date.now() - nowResult;
+  obj4.duration_ms_since_identify_start = nowResult - socket.identifyStartTime;
+  obj4.duration_ms_since_connection_start = nowResult - socket.connectionStartTime;
+  obj4.duration_ms_since_emit_start = Date.now() - nowResult;
   ({
     hasConnectedOnce: obj3.is_reconnect,
     isFastConnect: obj3.is_fast_connect,
@@ -164,16 +170,20 @@ export const logReadyPayloadReceived = function logReadyPayloadReceived(
   if (flag == null) {
     flag = false;
   }
-  obj.had_cache_at_startup = flag;
+  obj4.had_cache_at_startup = flag;
   let flag2 = socket.analytics.usedCacheAtStartup;
   if (flag2 == null) {
     flag2 = false;
   }
-  obj.used_cache_at_startup = flag2;
-  let tmp6Result = tmp6(9);
-  const result = tmp6Result.attachReadyPayloadProperties(obj);
-  tmp6Result = tmp6(1242);
-  tmp6Result.track(constants.READY_PAYLOAD_RECEIVED, obj, { logEventProperties: true });
+  obj4.used_cache_at_startup = flag2;
+  const obj5 = {
+    num_guilds: guilds.length,
+    num_guild_channels: dependencyMap,
+    num_guild_category_channels: importDefault,
+  };
+  const result = TTITrackerDefault.attachReadyPayloadProperties(obj4);
+  const tmp6Result = TTITrackerDefault;
+  AnalyticsUtilsDefault.track(constants.READY_PAYLOAD_RECEIVED, obj4, { logEventProperties: true });
 };
 export const getConnectionPath = function getConnectionPath(_trace) {
   try {
@@ -252,7 +262,7 @@ export const getReadyPayloadByteSizeAnalytics = function getReadyPayloadByteSize
       data);
     const timestamp = Date.now();
     ({ read_state, private_channels, user_guild_settings, relationships, users } = data);
-    let obj = items5(data, items2);
+    let obj2 = items5(data, items2);
     const items = [];
     const items1 = [];
     items2 = [];
@@ -310,7 +320,7 @@ export const getReadyPayloadByteSizeAnalytics = function getReadyPayloadByteSize
     if (friends == null) {
       friends = [];
     }
-    obj = {
+    const obj = {
       presences_size: JSON.stringify(friends).length,
       users_size: null,
       read_states_size: null,
@@ -356,24 +366,24 @@ export const getReadyPayloadByteSizeAnalytics = function getReadyPayloadByteSize
     obj.user_guild_settings_size = JSON.stringify(user_guild_settings).length;
     const _JSON5 = JSON;
     obj.relationships_size = JSON.stringify(relationships).length;
-    if (obj == null) {
-      obj = {};
+    if (obj2 == null) {
+      obj2 = {};
     }
-    obj.remaining_data_size = JSON.stringify(obj).length;
+    obj.remaining_data_size = JSON.stringify(obj2).length;
     const _JSON6 = JSON;
     obj.guild_channels_size = JSON.stringify(items).length;
     if (merged_members == null) {
       merged_members = [];
     }
     obj.guild_members_size = JSON.stringify(merged_members).length;
-    guilds = undefined;
+    let guilds1;
     if (merged_presences != null) {
-      guilds = merged_presences.guilds;
+      guilds1 = merged_presences.guilds;
     }
-    if (guilds == null) {
-      guilds = [];
+    if (guilds1 == null) {
+      guilds1 = [];
     }
-    obj.guild_presences_size = JSON.stringify(guilds).length;
+    obj.guild_presences_size = JSON.stringify(guilds1).length;
     const _JSON7 = JSON;
     obj.guild_roles_size = JSON.stringify(items1).length;
     const _JSON8 = JSON;
@@ -395,17 +405,21 @@ export const getReadyPayloadByteSizeAnalytics = function getReadyPayloadByteSize
 };
 export const logGatewayConnected = function logGatewayConnected(gatewayUrl) {
   ({ socket, altGateway, now } = gatewayUrl);
-  const obj = {
-    num_failed_connect_attempts: socket.failedConnectAttempts,
-    gateway_url: gatewayUrl.gatewayUrl,
-    assigned_to_alt_gateway: altGateway.isAssignedToAltGateway(),
-    did_fall_back_from_alt_gateway: altGateway.getDidFallBack(),
-    is_reconnect: socket.hasConnectedOnce,
-    is_fast_connect: socket.isFastConnect,
-    duration_ms_since_first_connect_attempt: now - socket.firstConnectAttemptStartTime,
-    duration_ms_since_connect_attempt_start: now - socket.connectionStartTime,
-  };
-  obj.track(constants.GATEWAY_CONNECTED, obj, { logEventProperties: true });
+  const obj = AnalyticsUtilsDefault;
+  obj.track(
+    constants.GATEWAY_CONNECTED,
+    {
+      num_failed_connect_attempts: socket.failedConnectAttempts,
+      gateway_url: gatewayUrl.gatewayUrl,
+      assigned_to_alt_gateway: altGateway.isAssignedToAltGateway(),
+      did_fall_back_from_alt_gateway: altGateway.getDidFallBack(),
+      is_reconnect: socket.hasConnectedOnce,
+      is_fast_connect: socket.isFastConnect,
+      duration_ms_since_first_connect_attempt: now - socket.firstConnectAttemptStartTime,
+      duration_ms_since_connect_attempt_start: now - socket.connectionStartTime,
+    },
+    { logEventProperties: true },
+  );
 };
 export const createResumeAnalytics = function createResumeAnalytics(arg0) {
   let num = arg0;

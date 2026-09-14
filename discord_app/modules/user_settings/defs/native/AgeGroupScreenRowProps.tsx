@@ -19,8 +19,10 @@ export const AGE_GROUP_CONFIRM_ROW_PROPS = {
     return intl.string(_modDef2946.rJiO86);
   },
   onPress: function onAgeGroupConfirmPress() {
-    const obj = { entryPoint: AgeVerificationAnalyticsUtils.AgeVerificationModalEntryPoint.ACCOUNT_AGE_GROUP };
-    const result = obj.showAgeVerificationGetStartedModal(obj);
+    const obj = AgeVerificationActionCreatorsDefault;
+    const result = obj.showAgeVerificationGetStartedModal({
+      entryPoint: AgeVerificationAnalyticsUtils.AgeVerificationModalEntryPoint.ACCOUNT_AGE_GROUP,
+    });
   },
   withArrow: true,
 };

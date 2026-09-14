@@ -13,16 +13,19 @@ function FrameViewInner(frame) {
   const layoutMode = frame.layoutMode;
   let landscapeSafeAreasConfig = frame.portraitSafeAreasConfig;
   let setIsResetting;
-  let obj = frame(setIsResetting[6]);
-  const data = obj.useApplication(frame.applicationId).data;
+  const data = frame(setIsResetting[6]).useApplication(frame.applicationId).data;
   const orientationLock = frame.data.orientationLock;
   const tmp3 = _slicedToArray(noop.useState(true), 2);
   let first = tmp3[0];
   const items = [layoutMode, ,];
   ({ applicationId: arr[1], id: arr[2] } = frame);
   const layoutEffect = noop.useLayoutEffect(() => {
-    const obj = { type: "FRAME_UPDATE_LAYOUT_MODE", layoutMode, applicationId: frame.applicationId, frameId: frame.id };
-    obj.dispatch(obj);
+    DispatcherDefault.dispatch({
+      type: "FRAME_UPDATE_LAYOUT_MODE",
+      layoutMode,
+      applicationId: frame.applicationId,
+      frameId: frame.id,
+    });
   }, items);
   const items1 = [frame.id];
   const items2 = [frame.id];
@@ -36,8 +39,8 @@ function FrameViewInner(frame) {
   if (!first) {
     first = null == data;
   }
-  let tmpResult = tmp(tmp2[10]);
-  const baseActivityView = tmpResult.useBaseActivityView({
+  const obj = frame(setIsResetting[6]);
+  const baseActivityView = frame(setIsResetting[10]).useBaseActivityView({
     orientationLockState: orientationLock,
     showLoadingIndicator: first,
     setShowLoadingStateForLockingOrientation: tmp3[1],
@@ -46,8 +49,8 @@ function FrameViewInner(frame) {
   });
   setIsResetting = baseActivityView.setIsResetting;
   ({ isResetting, isLandscape } = baseActivityView);
-  obj = { wakeLockKey: "FrameActivities", showLoadingIndicator: first, isResetting, children: null };
-  obj = {
+  const obj2 = { wakeLockKey: "FrameActivities", showLoadingIndicator: first, isResetting, children: null };
+  const obj3 = {
     onActivityCrash() {
       setIsResetting(true);
       const timerId = setTimeout(() => setIsResetting(false), 0);
@@ -55,53 +58,48 @@ function FrameViewInner(frame) {
     applicationId: frame.applicationId,
     frameId: frame.id,
     activityUrl: frame.data.url,
-    queryParams: layoutMode(setIsResetting[12])(frame, ActivityPlatform.MOBILE),
-    onLoadError: callback,
+    queryParams: null,
+    onLoadError: null,
     allowPopups: null,
     referrerPolicy: "origin",
     isPipOrGridMode: null,
     webViewKey: null,
     safeAreasConfig: null,
   };
-  tmpResult = tmp(tmp2[13]);
-  obj.allowPopups = tmpResult.allowPopups(data);
-  obj.isPipOrGridMode = layoutMode === constants.PIP;
-  obj.webViewKey = frame(setIsResetting[8]).FRAME_WEB_VIEW_KEY;
+  const tmpResult = frame(setIsResetting[10]);
+  obj3.queryParams = layoutMode(setIsResetting[12])(frame, ActivityPlatform.MOBILE);
+  obj3.onLoadError = callback;
+  const tmp10 = layoutMode(setIsResetting[11]);
+  obj3.allowPopups = frame(setIsResetting[13]).allowPopups(data);
+  obj3.isPipOrGridMode = layoutMode === constants.PIP;
+  obj3.webViewKey = frame(setIsResetting[8]).FRAME_WEB_VIEW_KEY;
   if (isLandscape) {
     landscapeSafeAreasConfig = frame.landscapeSafeAreasConfig;
   }
-  obj.safeAreasConfig = landscapeSafeAreasConfig;
-  obj.children = jsx(layoutMode(setIsResetting[11]), {
-    onActivityCrash() {
-      setIsResetting(true);
-      const timerId = setTimeout(() => setIsResetting(false), 0);
-    },
-    applicationId: frame.applicationId,
-    frameId: frame.id,
-    activityUrl: frame.data.url,
-    queryParams: layoutMode(setIsResetting[12])(frame, ActivityPlatform.MOBILE),
-    onLoadError: callback,
-    allowPopups: null,
-    referrerPolicy: "origin",
-    isPipOrGridMode: null,
-    webViewKey: null,
-    safeAreasConfig: null,
-  });
+  obj3.safeAreasConfig = landscapeSafeAreasConfig;
+  obj2.children = (
+    <tmp10
+      onActivityCrash={function onActivityCrash() {
+        setIsResetting(true);
+        const timerId = setTimeout(() => setIsResetting(false), 0);
+      }}
+      applicationId={frame.applicationId}
+      frameId={frame.id}
+      activityUrl={frame.data.url}
+      queryParams={null}
+      onLoadError={null}
+      allowPopups={null}
+      referrerPolicy="origin"
+      isPipOrGridMode={null}
+      webViewKey={null}
+      safeAreasConfig={null}
+    />
+  );
   return jsx(frame(setIsResetting[10]).BaseActivityView, {
-    onActivityCrash() {
-      setIsResetting(true);
-      const timerId = setTimeout(() => setIsResetting(false), 0);
-    },
-    applicationId: frame.applicationId,
-    frameId: frame.id,
-    activityUrl: frame.data.url,
-    queryParams: layoutMode(setIsResetting[12])(frame, ActivityPlatform.MOBILE),
-    onLoadError: callback,
-    allowPopups: null,
-    referrerPolicy: "origin",
-    isPipOrGridMode: null,
-    webViewKey: null,
-    safeAreasConfig: null,
+    wakeLockKey: "FrameActivities",
+    showLoadingIndicator: first,
+    isResetting,
+    children: null,
   });
 }
 const FramesConstants = fn(9641);
@@ -109,12 +107,11 @@ const FramesConstants = fn(9641);
 const ActivityPlatform = fn(1920).ActivityPlatform;
 const jsx = fn(21).jsx;
 const memoResult = noop.memo(function FrameViewGate(arg0) {
-  let obj = initialize;
   const items = [FramesStore];
-  const stateFromStores = obj.useStateFromStores(items, () => closure_1_6(mainFrame.getMainFrame()));
+  const stateFromStores = initialize.useStateFromStores(items, () => closure_1_6(mainFrame.getMainFrame()));
   let tmp2 = null;
   if (null != stateFromStores) {
-    obj = { frame: stateFromStores };
+    const obj2 = { frame: stateFromStores };
     const merged = Object.assign(arg0);
     tmp2 = <FrameViewInner frame={stateFromStores} />;
   }
@@ -128,12 +125,15 @@ export const InlineFrameView = function InlineFrameView(frameId) {
   frameId = frameId.frameId;
   let tmp = null;
   const merged = Object.assign(frameId, Object.assign({ frameId: 0 }));
-  let obj = frameId(504);
   const items = [FramesStore];
   const items1 = [frameId];
-  const stateFromStores = obj.useStateFromStores(items, () => timestampProducer(FramesStore.getFrame(frameId)), items1);
+  const stateFromStores = frameId(504).useStateFromStores(
+    items,
+    () => timestampProducer(FramesStore.getFrame(frameId)),
+    items1,
+  );
   if (null != stateFromStores) {
-    obj = { frame: stateFromStores };
+    const obj2 = { frame: stateFromStores };
     const merged1 = Object.assign(merged);
     tmp = <FrameViewInner frame={stateFromStores} />;
   }

@@ -6,6 +6,8 @@ import size from "../../../../_runtime/metro/00002__.js";
 const result = size.fileFinishedImporting("modules/guild_member_verification/native/openJoinRequestActionSheet.tsx");
 
 export default function openJoinRequestActionSheet(joinRequest) {
-  const obj = { joinRequest };
-  obj.openLazy(asyncRequireImpl(16680, dependencyMap.paths), "joinRequestActionSheet" + joinRequest.joinRequestId, obj);
+  const obj = ActionSheetActionCreatorsDefault;
+  obj.openLazy(asyncRequireImpl(16682, dependencyMap.paths), "joinRequestActionSheet" + joinRequest.joinRequestId, {
+    joinRequest,
+  });
 }

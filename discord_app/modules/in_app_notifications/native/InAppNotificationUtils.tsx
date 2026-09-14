@@ -1,7 +1,7 @@
 // discord_app/modules/in_app_notifications/native/InAppNotificationUtils.tsx
 import _mod12 from "../../../../_runtime/metro/00012__.js";
 import DurationsDefault from "../../../utils/Durations.tsx";
-import v1 from "../../../../_runtime/01256_v1.js";
+import v1 from "../../../../_runtime/01254_v1.js";
 import AppAnalyticsUtilsDefault from "../../app_analytics/AppAnalyticsUtils.tsx";
 import isForwardMessageDefault from "../../forwarding/isForwardMessage.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -131,7 +131,7 @@ export const useHasPreviewableMedia = function useHasPreviewableMedia(message) {
   }, items);
 };
 export const extractMetadataFromNotification = function extractMetadataFromNotification(notification) {
-  let type = notification.type;
+  const type = notification.type;
   if (constants3.MESSAGE !== type) {
     if (constants3.REACTION !== type) {
       if (constants3.ALERT === type) {
@@ -154,11 +154,11 @@ export const extractMetadataFromNotification = function extractMetadataFromNotif
           id1 = channel4.id;
         }
         const channel5 = notification.channel;
-        type = undefined;
+        let type1;
         if (channel5 != null) {
-          type = channel5.type;
+          type1 = channel5.type;
         }
-        let tmp2 = type;
+        let tmp2 = type1;
         let channelId = id1;
         let tmp4 = id;
       } else if (constants3.FORUM_THREAD_CREATED === type) {
@@ -188,11 +188,11 @@ export const extractMetadataFromNotification = function extractMetadataFromNotif
           id3 = channel.id;
         }
         const channel2 = notification.channel;
-        let type1;
+        let type2;
         if (channel2 != null) {
-          type1 = channel2.type;
+          type2 = channel2.type;
         }
-        tmp2 = type1;
+        tmp2 = type2;
         channelId = id3;
         tmp4 = guild_id2;
       }
@@ -224,11 +224,11 @@ export const extractMetadataFromNotification = function extractMetadataFromNotif
     id6 = message.id;
   }
   const channel8 = notification.channel;
-  let type2;
+  let type3;
   if (channel8 != null) {
-    type2 = channel8.type;
+    type3 = channel8.type;
   }
-  tmp2 = type2;
+  tmp2 = type3;
   channelId = id5;
   tmp4 = id4;
   tmp3 = id6;

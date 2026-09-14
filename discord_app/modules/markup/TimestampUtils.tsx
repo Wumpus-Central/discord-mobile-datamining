@@ -37,16 +37,16 @@ const TIMESTAMP_FORMATS = {
     const result4 = _modDef4228.relativeTimeThreshold("m");
     const result5 = _modDef4228.relativeTimeThreshold("m", 60);
     try {
-      let tmpResult = _modDef4228;
-      let fromNowResult = tmpResult(toDate.toDate()).fromNow();
-      tmpResult = _modDef4228;
-      const result6 = tmpResult.relativeTimeThreshold("s", result);
-      const tmpResultResult = tmpResult(toDate.toDate());
+      const tmpResult = _modDef4228;
+      let fromNowResult = _modDef4228(toDate.toDate()).fromNow();
+      const tmpResultResult = _modDef4228(toDate.toDate());
+      const result6 = _modDef4228.relativeTimeThreshold("s", result);
+      const tmpResult5 = _modDef4228;
       const result7 = _modDef4228.relativeTimeThreshold("ss", result2);
-      const tmpResult1 = _modDef4228;
+      const tmpResult6 = _modDef4228;
       const result8 = _modDef4228.relativeTimeThreshold("m", result4);
       if (fromNowResult == null) {
-        const tmpResult3 = _modDef4228;
+        const tmpResult8 = _modDef4228;
         fromNowResult = _modDef4228(toDate.toDate()).fromNow();
         const tmpResult4Result = _modDef4228(toDate.toDate());
       }

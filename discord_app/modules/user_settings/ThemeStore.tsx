@@ -20,7 +20,7 @@ function handleThemeChange() {
   }
   return flag;
 }
-const ThemeConstants = fn(1186);
+const ThemeConstants = fn(1184);
 ({ SystemTheme: metroRequire, THEME_PREFERENCES_WEB_REFRESH, THEME_PREFERENCES_MOBILE } = ThemeConstants);
 const UserSettingsDelay = fn(1084).UserSettingsDelay;
 const ThemeTypes = fn(1074).ThemeTypes;
@@ -98,10 +98,10 @@ const items = [
       if (preferences.preferences[constants.DARK] === ThemeTypes.ASH) {
         obj = {};
         const merged = Object.assign(preferences);
-        obj = {};
+        const obj2 = {};
         const merged1 = Object.assign(preferences.preferences);
-        obj[tmp2.DARK] = tmp3.DARK;
-        obj.preferences = obj;
+        obj2[tmp2.DARK] = tmp3.DARK;
+        obj.preferences = obj2;
         tmp = obj;
       }
     }
@@ -109,7 +109,7 @@ const items = [
   },
 ];
 ThemeStore.migrations = items;
-obj = {
+const themeStore = new ThemeStore(DispatcherDefault, {
   CACHE_LOADED: handleThemeChange,
   CONNECTION_OPEN: function handleConnectionOpen() {
     if (UnsyncedUserSettingsStore.darkSidebar) {
@@ -254,8 +254,7 @@ obj = {
     }
     return flag;
   },
-};
-const themeStore = new ThemeStore(DispatcherDefault, obj);
+});
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/ThemeStore.tsx");
 

@@ -27,14 +27,14 @@ export default noop.memo(function GuildsBarPendingGuild(guildId) {
   let token;
   let stateFromStores;
   let stateFromStores3;
-  let obj = guildId(stateFromStores[8]);
   const tmp = closure_10();
-  let obj1 = guildId(stateFromStores[9]);
-  token = obj1.useToken(token(stateFromStores[7]).modules.mobile.GUILD_BAR_ITEM_SIZE);
-  const guildsBarAnimatedWrapperStyles = obj.useGuildsBarAnimatedWrapperStyles({
+  let obj = guildId(stateFromStores[8]);
+  const guildsBarAnimatedWrapperStyles = guildId(stateFromStores[8]).useGuildsBarAnimatedWrapperStyles({
     disableSelectedColor: true,
     disableBGColor: true,
   });
+  token = guildId(stateFromStores[9]).useToken(token(stateFromStores[7]).modules.mobile.GUILD_BAR_ITEM_SIZE);
+  const obj2 = guildId(stateFromStores[9]);
   const items = [SelectedGuildStore];
   const items1 = [guildId];
   stateFromStores = guildId(stateFromStores[10]).useStateFromStores(
@@ -104,28 +104,29 @@ export default noop.memo(function GuildsBarPendingGuild(guildId) {
           applicationStatus = applicationStatus.applicationStatus;
         }
         if (guildId(stateFromStores[14]).GuildJoinRequestApplicationStatuses.STARTED === applicationStatus) {
-          let tmp2Result = guildId(stateFromStores[15]);
-          const result = tmp2Result.openMemberVerificationIncompleteAlert(guildId);
+          const result = guildId(stateFromStores[15]).openMemberVerificationIncompleteAlert(guildId);
+          const tmp2Result = guildId(stateFromStores[15]);
         } else if (guildId(stateFromStores[14]).GuildJoinRequestApplicationStatuses.SUBMITTED === applicationStatus) {
-          tmp2Result = guildId(stateFromStores[15]);
-          const result1 = tmp2Result.openMemberVerificationPendingAlert(guildId);
+          const result1 = guildId(stateFromStores[15]).openMemberVerificationPendingAlert(guildId);
+          const tmp2Result3 = guildId(stateFromStores[15]);
         } else if (guildId(stateFromStores[14]).GuildJoinRequestApplicationStatuses.APPROVED === applicationStatus) {
           token(stateFromStores[16])(guildId);
         } else if (guildId(stateFromStores[14]).GuildJoinRequestApplicationStatuses.REJECTED === applicationStatus) {
           const obj = { guildId, canWithdraw: true };
           const result2 = guildId(stateFromStores[15]).openMemberVerificationRejectedAlert(obj);
-          const tmp2Result1 = guildId(stateFromStores[15]);
+          const tmp2Result4 = guildId(stateFromStores[15]);
         }
       },
     }),
     items6,
   );
   const tmp15 = token(stateFromStores[17])(guildId, icon, asset);
-  let tmp2Result = tmp2(tmp3[10]);
+  const obj6 = stateFromStores1;
+  const tmp10Result = token(stateFromStores[13])({ mentionCount: 0, joinRequestState: applicationStatus });
   const items7 = [SortedGuildStore];
-  stateFromStores3 = tmp2Result.useStateFromStores(items7, () => guildsTree.getGuildsTree().version);
+  stateFromStores3 = guildId(stateFromStores[10]).useStateFromStores(items7, () => guildsTree.getGuildsTree().version);
   const items8 = [guildId, stateFromStores3];
-  const memo1 = stateFromStores1.useMemo(() => {
+  const memo1 = obj6.useMemo(() => {
     const arr = getGuildsBarGuildMenuItemsDefault(guildId, stateFromStores3);
     return {
       accessibilityActions: arr.map((label) => ({ name: label.label, label: label.label })),
@@ -142,9 +143,9 @@ export default noop.memo(function GuildsBarPendingGuild(guildId) {
     };
   }, items8);
   ({ accessibilityActions, onAccessibilityAction } = memo1);
-  tmp2Result = tmp2(tmp3[19]);
-  const sharedValue = tmp2Result.useSharedValue(guildId);
-  obj = {
+  let tmp2Result = guildId(stateFromStores[10]);
+  const sharedValue = guildId(stateFromStores[19]).useSharedValue(guildId);
+  const obj7 = {
     id: guildId,
     accessibilityActions,
     onAccessibilityAction,
@@ -159,46 +160,52 @@ export default noop.memo(function GuildsBarPendingGuild(guildId) {
     styles: null,
     externalChildren: null,
     expandedChildren: null,
-    children: "zh-Hans-HK",
+    children: "nl-CW",
   };
   let str = guildName;
-  let tmp5Result = tmp5(tmp3[8]);
+  const tmp2Result2 = guildId(stateFromStores[19]);
   if (guildName == null) {
     str = "";
   }
-  obj.label = str;
-  obj.config = memo;
-  obj.styles = guildsBarAnimatedWrapperStyles;
-  obj.externalChildren = badge;
-  obj.expandedChildren = jsx(token(stateFromStores[20]), { guildId, disableSubtitle: true });
+  obj7.label = str;
+  obj7.config = memo;
+  obj7.styles = guildsBarAnimatedWrapperStyles;
+  obj7.externalChildren = badge;
+  obj7.expandedChildren = jsx(token(stateFromStores[20]), { guildId, disableSubtitle: true });
   if (null != tmp15) {
-    obj = { source: tmp15, style: tmp.guildIcon };
+    const obj8 = { source: tmp15, style: tmp.guildIcon };
     let tmp19Result = jsx(tmp5(tmp3[21]), { source: tmp15, style: tmp.guildIcon });
   } else {
-    obj1 = { value: guildName, selected: stateFromStores, animate: stateFromStores, size: null };
-    tmp5Result = tmp5(tmp3[11]);
-    obj1.size = tmp2(tmp3[11]).GuildIconSizes.LARGE;
-    tmp19Result = <tmp5Result value={guildName} selected={stateFromStores} animate={stateFromStores} size={null} />;
+    const obj9 = {
+      value: guildName,
+      selected: stateFromStores,
+      animate: stateFromStores,
+      size: tmp2(tmp3[11]).GuildIconSizes.LARGE,
+    };
+    tmp19Result = jsx(tmp5(tmp3[11]), {
+      value: guildName,
+      selected: stateFromStores,
+      animate: stateFromStores,
+      size: tmp2(tmp3[11]).GuildIconSizes.LARGE,
+    });
+    const tmp5Result2 = tmp5(tmp3[11]);
   }
-  obj.children = tmp19Result;
-  return (
-    <tmp5Result
-      id={guildId}
-      accessibilityActions={accessibilityActions}
-      onAccessibilityAction={onAccessibilityAction}
-      cutouts={cutouts}
-      selected={stateFromStores}
-      sharedId={sharedValue}
-      circle={!stateFromStores}
-      overState="PX_16"
-      unread={null}
-      label={null}
-      config={null}
-      styles={null}
-      externalChildren={null}
-      expandedChildren={null}
-    >
-      {"zh-Hans-HK"}
-    </tmp5Result>
-  );
+  obj7.children = tmp19Result;
+  return jsx(token(stateFromStores[8]), {
+    id: guildId,
+    accessibilityActions,
+    onAccessibilityAction,
+    cutouts,
+    selected: stateFromStores,
+    sharedId: sharedValue,
+    circle: !stateFromStores,
+    overState: "PX_16",
+    unread: null,
+    label: null,
+    config: null,
+    styles: null,
+    externalChildren: null,
+    expandedChildren: null,
+    children: "nl-CW",
+  });
 });

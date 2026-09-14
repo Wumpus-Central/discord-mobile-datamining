@@ -2,15 +2,15 @@
 import ApexExperiment from "../experiments/apex/index.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
-let obj = {
+const obj = {
   kind: "user",
   name: "2026-08-ad-topic-opt-out-client",
   defaultConfig: { enabled: false },
   variations: null,
 };
-obj = { 1: null, 2: { enabled: false }, 3: { enabled: true }, 4: { enabled: true }, 5: { enabled: true } };
-obj[5] = { enabled: true };
-obj.variations = obj;
+const obj2 = { 1: null, 2: { enabled: false }, 3: { enabled: true }, 4: { enabled: true }, 5: { enabled: true } };
+obj2[5] = { enabled: true };
+obj.variations = obj2;
 const apexExperiment = ApexExperiment.createApexExperiment(obj);
 const result = size.fileFinishedImporting("modules/ads/AdTopicOptOutClientExperiment.tsx");
 

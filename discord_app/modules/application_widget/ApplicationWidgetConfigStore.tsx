@@ -28,8 +28,8 @@ function updateApplicationConfigs(configs) {
     }
     obj = {};
     const merged = Object.assign(obj);
-    obj = {};
-    const merged1 = Object.assign(obj);
+    const obj2 = {};
+    const merged1 = Object.assign(obj2);
     const _Object = Object;
     const _Object2 = Object;
     const keys = Object.keys(configs);
@@ -97,7 +97,7 @@ prototype["getDeveloperApplicationIds"] = function getDeveloperApplicationIds() 
   return closure_8;
 };
 ApplicationWidgetConfigStoreClass.displayName = "ApplicationWidgetConfigStore";
-obj = {
+const applicationWidgetConfigStoreClass = new ApplicationWidgetConfigStoreClass(DispatcherDefault, {
   LOGOUT: handleLogout,
   APPLICATION_WIDGET_CONFIG_DEBUG_RESET: handleLogout,
   APPLICATION_WIDGET_CONFIG_FEATURED_FETCH_START: function handleFeaturedFetchStart(arg0) {
@@ -135,8 +135,7 @@ obj = {
     const merged = Object.assign(obj);
     obj[applicationId.applicationId] = obj.FAILURE;
   },
-};
-const applicationWidgetConfigStoreClass = new ApplicationWidgetConfigStoreClass(DispatcherDefault, obj);
+});
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/application_widget/ApplicationWidgetConfigStore.tsx");
 

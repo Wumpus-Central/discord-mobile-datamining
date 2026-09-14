@@ -23,10 +23,10 @@ const SearchTypes = fn(1074).SearchTypes;
 const jsx = fn(21).jsx;
 const createStyles = fn(4636);
 let closure_15 = createStyles.createStyles((minHeight) => {
-  let obj = { searchBar: null, icon: null };
-  obj = { minHeight: minHeight + 2 };
-  obj.searchBar = obj;
-  obj.icon = { width: 32, minHeight, justifyContent: "center", zIndex: 10 };
+  const obj = {
+    searchBar: { minHeight: minHeight + 2 },
+    icon: { width: 32, minHeight, justifyContent: "center", zIndex: 10 },
+  };
   return obj;
 });
 const size = fn(2);
@@ -38,8 +38,8 @@ export default noop.memo(
     const setSuggestionsDismissed = searchContext.setSuggestionsDismissed;
     let stateFromStores;
     let ref;
+    let tmp = closure_15(closure_10 * Math.min(2, searchContext(stateFromStores[15]).useFontScale()));
     let obj = searchContext(stateFromStores[15]);
-    let tmp = closure_15(closure_10 * Math.min(2, obj.useFontScale()));
     const items = [SearchQueryStore];
     const items1 = [searchContext];
     stateFromStores = searchContext(stateFromStores[14]).useStateFromStores(
@@ -77,11 +77,11 @@ export default noop.memo(
                 const intl4 = util.intl;
                 let stringResult = intl4.string(util.t["5h0QOP"]);
               } else {
-                let obj = useChannelName;
+                const obj = useChannelName;
                 const channelName = obj.computeChannelName(channel, UserStore, RelationshipStore, true);
                 const intl3 = util.intl;
-                obj = { guildName: channelName };
-                stringResult = intl3.formatToPlainString(util.t.LDpotA, obj);
+                const obj2 = { guildName: channelName };
+                stringResult = intl3.formatToPlainString(util.t.LDpotA, obj2);
               }
               return stringResult;
             } else if (SearchTypes.DMS === type) {
@@ -104,8 +104,8 @@ export default noop.memo(
             let stringResult1 = intl7.string(util.t["5h0QOP"]);
           } else {
             const intl6 = util.intl;
-            obj = { guildName: name };
-            stringResult1 = intl6.formatToPlainString(util.t.LDpotA, obj);
+            const obj3 = { guildName: name };
+            stringResult1 = intl6.formatToPlainString(util.t.LDpotA, obj3);
           }
         } else {
           const intl5 = util.intl;
@@ -226,21 +226,20 @@ export default noop.memo(
     const items9 = [searchContext, setSuggestionsDismissed];
     const callback1 = ref.useCallback((arg0) => {
       closure_0 = arg0;
-      let obj = SearchQueryStore;
       const tmp2 = SearchQueryStore.getTags(searchContext)[arg0];
       const type = tmp2;
       if (null != tmp2) {
         const AccessibilityAnnouncer = AccessibilityAnnouncer2.AccessibilityAnnouncer;
         const intl = util.intl;
-        obj = { text: tmp2.text };
-        AccessibilityAnnouncer.announce(intl.formatToPlainString(util.t.srlxB8, obj));
+        const obj3 = { text: tmp2.text };
+        AccessibilityAnnouncer.announce(intl.formatToPlainString(util.t.srlxB8, obj3));
         if (tmp2.type === constants.COMPLETE) {
-          obj = {
+          const obj6 = {
             searchContext,
             searchTokenType: tmp2.searchTokenType,
             isDefault: tmp2.location === SearchFilterAddLocations.CLIENT_AUTO_ADD,
           };
-          let result = search_tracking_TrackingDefault.trackSearchFilterRemove(obj);
+          let result = search_tracking_TrackingDefault.trackSearchFilterRemove(obj6);
         }
         SearchPlatformActionCreatorsDefault.updateSearchQuery(searchContext, (removeTag) => {
           removeTag.removeTag(closure_0);
@@ -249,7 +248,7 @@ export default noop.memo(
           }
         });
         const result1 = SearchPlatformUtilsDefault.syncAutocompleteDebounced(searchContext);
-        const queryString = obj.getQueryString(searchContext);
+        const queryString = SearchQueryStore.getQueryString(searchContext);
         if (queryString !== searchResultsQuery) {
           const tmp6Result = SearchPlatformUtilsDefault;
           if (tmp11) {
@@ -258,13 +257,12 @@ export default noop.memo(
             const initialMessagesDebounced = tmp6Result.fetchInitialMessagesDebounced(searchContext);
           }
         }
-        searchResultsQuery = obj.getSearchResultsQuery(searchContext);
+        searchResultsQuery = SearchQueryStore.getSearchResultsQuery(searchContext);
       }
     }, items8);
     const memo2 = ref.useMemo(
       () => () => {
         closure_1_1();
-        let obj = SearchQueryStore;
         const prefixTag = SearchQueryStore.getPrefixTag(searchContext);
         const trimmed = SearchQueryStore.getTextInputValue(searchContext).trim();
         let result = null != prefixTag;
@@ -282,12 +280,12 @@ export default noop.memo(
             const result = setTextInputValue.restoreDraftTextInputValue();
           });
           const obj3 = setSuggestionsDismissed(stateFromStores[17]);
-          obj = { searchContext, searchTokenType: null, location: null };
+          const obj8 = { searchContext, searchTokenType: null, location: null };
           ({ searchTokenType: obj5.searchTokenType, location: obj5.location } = prefixTag);
-          setSuggestionsDismissed(stateFromStores[19]).trackSearchFilterAdd(obj);
+          setSuggestionsDismissed(stateFromStores[19]).trackSearchFilterAdd(obj8);
           const obj4 = setSuggestionsDismissed(stateFromStores[19]);
         }
-        if (!obj.isQueryStringEmpty(searchContext)) {
+        if (!SearchQueryStore.isQueryStringEmpty(searchContext)) {
           setSuggestionsDismissed(stateFromStores[17]).updateSearchQuery(searchContext, (markExplicitSearchSubmitted) =>
             markExplicitSearchSubmitted.markExplicitSearchSubmitted(),
           );
@@ -300,7 +298,7 @@ export default noop.memo(
       items9,
     );
     const textInputValue = SearchQueryStore.getTextInputValue(searchContext);
-    obj = {
+    let obj4 = {
       ref,
       accessibilityHint: memo1,
       autoFocus: true,
@@ -316,14 +314,29 @@ export default noop.memo(
       horizontal: true,
       autoClearInputOnTagAdd: false,
     };
-    obj = { style: tmp.icon, children: null };
+    let obj5 = { style: tmp.icon, children: null };
     let obj3 = searchContext(stateFromStores[14]);
-    obj.children = jsx(setSuggestionsDismissed(stateFromStores[22]), { searchContext });
-    obj.icon = <View style={tmp.icon}>{null}</View>;
-    obj.onChangeText = callback;
-    obj.onRemove = callback1;
-    obj.placeholder = stateFromStores1;
-    obj.onSubmitEditing = memo2;
-    return jsx(setSuggestionsDismissed(stateFromStores[21]), { style: tmp.icon, children: null });
+    obj5.children = jsx(setSuggestionsDismissed(stateFromStores[22]), { searchContext });
+    obj4.icon = <View style={tmp.icon}>{null}</View>;
+    obj4.onChangeText = callback;
+    obj4.onRemove = callback1;
+    obj4.placeholder = stateFromStores1;
+    obj4.onSubmitEditing = memo2;
+    return jsx(setSuggestionsDismissed(stateFromStores[21]), {
+      ref,
+      accessibilityHint: memo1,
+      autoFocus: true,
+      defaultValue: textInputValue,
+      style: tmp.searchBar,
+      tags: memo,
+      icon: null,
+      onChangeText: null,
+      onRemove: null,
+      placeholder: null,
+      onSubmitEditing: null,
+      leadingFade: true,
+      horizontal: true,
+      autoClearInputOnTagAdd: false,
+    });
   }),
 );

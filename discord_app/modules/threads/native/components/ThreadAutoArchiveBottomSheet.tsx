@@ -2,6 +2,8 @@
 import TableRadioRow from "../../../../design/components/TableRow/native/TableRadioRow.native.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
+const require = globalThis.__r;
+
 require = fn;
 const ChannelFlags = fn(1964).ChannelFlags;
 const jsx = fn(21).jsx;
@@ -12,14 +14,13 @@ export const AutoArchiveDurationOptions = noop.memo((channel) => {
   channel = channel.channel;
   _require = undefined;
   ({ title, description, selected, onSelectDuration } = channel);
-  let obj = require("ThreadAutoArchive");
-  const autoArchiveOptions = obj.getAutoArchiveOptions();
+  const autoArchiveOptions = require("ThreadAutoArchive").getAutoArchiveOptions();
   let hasFlagResult = null != channel && channel.isForumPost();
   if (hasFlagResult) {
     hasFlagResult = channel.hasFlag(ChannelFlags.PINNED);
   }
   _require = hasFlagResult;
-  obj = {
+  const obj2 = {
     value: selected,
     title,
     description,
@@ -29,9 +30,9 @@ export const AutoArchiveDurationOptions = noop.memo((channel) => {
     children: null,
   };
   const intl = tmp(1114).intl;
-  obj.accessibilityLabel = intl.string(require("util").t.H4mGfI);
-  obj.onChange = onSelectDuration;
-  obj.children = autoArchiveOptions.map((value) =>
+  obj2.accessibilityLabel = intl.string(require("util").t.H4mGfI);
+  obj2.onChange = onSelectDuration;
+  obj2.children = autoArchiveOptions.map((value) =>
     jsx(TableRadioRow.TableRadioRow, { value: value.value, disabled, label: value.label }, value.value),
   );
   return jsx(require("TableRadioGroup").TableRadioGroup, {

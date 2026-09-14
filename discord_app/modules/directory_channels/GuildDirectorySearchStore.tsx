@@ -50,7 +50,7 @@ const guildDirectorySearchStore = new GuildDirectorySearchStore(DispatcherDefaul
   },
   GUILD_DIRECTORY_SEARCH_SUCCESS: function handleSearchSuccess(query) {
     ({ channelId, results } = query);
-    let obj = {};
+    const obj = {};
     const merged = Object.assign(dependencyMap[channelId]);
     obj.fetching = false;
     dependencyMap[channelId] = obj;
@@ -58,11 +58,11 @@ const guildDirectorySearchStore = new GuildDirectorySearchStore(DispatcherDefaul
     const item = results.forEach((item) => {
       items.push(GuildDirectoryUtils.guildDirectoryEntryFromServer(item));
     });
-    obj = {};
+    const obj2 = {};
     const merged1 = Object.assign(dependencyMap2[channelId]);
-    obj = { results: items(12433).orderByTotalMemberCount(items), lastSearchedAt: Date.now() };
-    obj[query.query] = obj;
-    dependencyMap2[channelId] = obj;
+    const obj3 = { results: items(12434).orderByTotalMemberCount(items), lastSearchedAt: Date.now() };
+    obj2[query.query] = obj3;
+    dependencyMap2[channelId] = obj2;
   },
   GUILD_DIRECTORY_SEARCH_FAILURE: function handleSearchFailure(channelId) {
     channelId = channelId.channelId;
@@ -86,13 +86,13 @@ const guildDirectorySearchStore = new GuildDirectorySearchStore(DispatcherDefaul
     if (null != mostRecentQuery) {
       if (null != dependencyMap2[channelId][mostRecentQuery]) {
         const results = tmp5.results;
-        let obj = {};
+        const obj = {};
         const found = results.filter((guildId) => guildId.guildId !== require);
         const merged = Object.assign(dependencyMap2[channelId]);
-        obj = {};
+        const obj2 = {};
         const merged1 = Object.assign(tmp5);
-        obj.results = found;
-        obj[dependencyMap[channelId].mostRecentQuery] = obj;
+        obj2.results = found;
+        obj[dependencyMap[channelId].mostRecentQuery] = obj2;
         dependencyMap2[channelId] = obj;
       }
     }

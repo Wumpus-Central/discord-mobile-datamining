@@ -2,6 +2,8 @@
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import GameRelationshipStore from "../GameRelationshipStore.tsx";
 
+const require = globalThis.__r;
+
 const require = fn;
 const RelationshipTypes = fn(1074).RelationshipTypes;
 const size = fn(2);

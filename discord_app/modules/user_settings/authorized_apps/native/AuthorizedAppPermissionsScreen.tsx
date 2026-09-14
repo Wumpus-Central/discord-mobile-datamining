@@ -11,8 +11,6 @@ const result = size.fileFinishedImporting(
 );
 
 export default function AuthorizedAppPermissionsScreen() {
-  let obj = useSettingNavigationRoute;
-  const settingNavigationRoute = obj.useSettingNavigationRoute();
-  obj = { oauth2Token: settingNavigationRoute.params.oauth2Token };
+  const settingNavigationRoute = useSettingNavigationRoute.useSettingNavigationRoute();
   return jsx(UserSettingsAuthedAppPermissionsDefault, { oauth2Token: settingNavigationRoute.params.oauth2Token });
 }

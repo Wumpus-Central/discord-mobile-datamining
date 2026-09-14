@@ -1,5 +1,5 @@
 // discord_app/modules/guild_communication_disabled/useCommunicationDisabledNoticeStore.tsx
-import _mod1244 from "../../../_runtime/metro/01244__.js";
+import _mod1242 from "../../../_runtime/metro/01242__.js";
 import _mod4259 from "../../../_runtime/metro/04259__.js";
 import _slicedToArray from "../../../_runtime/metro/00032__.js";
 
@@ -25,7 +25,7 @@ let state = module_561.createStore((arg0, arg1) => {
         DISMISSED_COMMUNICATION_DISABLED_NOTIFICATION_GUILDS_KEY,
         notificationDismissedInGuilds,
       );
-      notificationDismissedInGuilds(1249).batchUpdates(() =>
+      notificationDismissedInGuilds(1247).batchUpdates(() =>
         notificationDismissedInGuilds({ notificationDismissedInGuilds }),
       );
     },
@@ -38,10 +38,10 @@ let state = module_561.createStore((arg0, arg1) => {
           DISMISSED_COMMUNICATION_DISABLED_NOTIFICATION_GUILDS_KEY,
           notificationDismissedInGuilds,
         );
-        notificationDismissedInGuilds(1249).batchUpdates(() =>
+        notificationDismissedInGuilds(1247).batchUpdates(() =>
           notificationDismissedInGuilds({ notificationDismissedInGuilds }),
         );
-        const obj = notificationDismissedInGuilds(1249);
+        const obj = notificationDismissedInGuilds(1247);
       }
     },
   };
@@ -60,7 +60,7 @@ let result = size.fileFinishedImporting("modules/guild_communication_disabled/us
 
 export const useCommunicationDisabledNoticeStore = function useCommunicationDisabledNoticeStore(arg0) {
   const tmp = _slicedToArray(
-    _mod1244.useStoreWithEqualityFn(
+    _mod1242.useStoreWithEqualityFn(
       closure_4,
       (arg0) => {
         const items = [,];

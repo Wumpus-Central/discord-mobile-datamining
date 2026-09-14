@@ -8,6 +8,8 @@ import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import StickersStore from "../StickersStore.tsx";
 
+const require = globalThis.__r;
+
 require = fn;
 function EmptyStateSticker(sticker) {
   sticker = sticker.sticker;
@@ -40,30 +42,28 @@ let result = size.fileFinishedImporting("modules/stickers/native/StickerPickerEm
 export default function _default() {
   const tmp = closure_13();
   _require = tmp;
+  const fetchStickerPacks = require("StickersHooks").useFetchStickerPacks();
   let obj = require("StickersHooks");
-  const fetchStickerPacks = obj.useFetchStickerPacks();
   analyticsLocations = analyticsLocations(7265)(analyticsLocations(7285).EMPTY_STATE).analyticsLocations;
-  let obj1 = require("initialize");
+  const tmp3 = analyticsLocations(7265);
   const items = [StickersStore];
-  const stateFromStoresArray = obj1.useStateFromStoresArray(items, () => {
+  const stateFromStoresArray = require("initialize").useStateFromStoresArray(items, () => {
     const mapped = EMPTY_STATE_STICKERS.map((item) => stickerById.getStickerById(item));
     return mapped.filter((item) => null != item);
   });
-  const tmp3 = analyticsLocations(7265);
-  [dependencyMap, _slicedToArray] = _slicedToArray(noop.useState(null), 2);
+  let obj2 = require("initialize");
+  [dependencyMap, _slicedToArray] = noop.useState(null);
   const items1 = [analyticsLocations];
   const effect = noop.useEffect(() => {
-    let obj = {
+    const obj2 = {
       type: PremiumUpsellTypes.EMPTY_STICKER_PICKER_UPSELL,
-      source: null,
+      source: { section: constants2.EMPTY_STICKER_PICKER_UPSELL },
       location_stack: analyticsLocations,
     };
-    obj = { section: constants2.EMPTY_STICKER_PICKER_UPSELL };
-    obj.source = obj;
-    obj.track(constants.PREMIUM_UPSELL_VIEWED, obj);
+    AnalyticsUtilsDefault.track(constants.PREMIUM_UPSELL_VIEWED, obj2);
   }, items1);
-  obj = { children: null };
-  obj = {
+  const obj3 = { children: null };
+  const obj4 = {
     style: tmp.header,
     accessibilityRole: "header",
     variant: "heading-lg/extrabold",
@@ -71,27 +71,25 @@ export default function _default() {
     children: null,
   };
   const intl = require("util").intl;
-  obj.children = intl.string(require("util").t.HEm04J);
-  const items2 = [closure_11(require("Text/Text").Text, obj), , ,];
-  obj1 = { style: tmp.blurb, variant: "text-sm/medium", color: "text-default", children: null };
+  obj4.children = intl.string(require("util").t.HEm04J);
+  const items2 = [closure_11(require("Text/Text").Text, obj4), , ,];
+  const obj5 = { style: tmp.blurb, variant: "text-sm/medium", color: "text-default", children: null };
   const intl2 = require("util").intl;
-  obj1.children = intl2.string(require("util").t.FnNud4);
-  items2[1] = closure_11(require("Text/Text").Text, obj1);
+  obj5.children = intl2.string(require("util").t.FnNud4);
+  items2[1] = closure_11(require("Text/Text").Text, obj5);
   const tmp4 = _slicedToArray(noop.useState(null), 2);
   items2[2] = closure_11(View, {
     style: tmp.stickersRow,
     children: stateFromStoresArray.map((sticker) => {
-      let obj = {
+      const obj = {
         accessible: false,
         onLongPress() {
           const result = HapticUtils.triggerHapticFeedback(haptics_HapticFeedbackTypesDefault.IMPACT_LIGHT);
           _slicedToArray(sticker.id);
         },
         style: sticker.sticker,
-        children: null,
+        children: closure_1_11(EmptyStateSticker, { sticker, isFocused: closure_2 === sticker.id }),
       };
-      obj = { sticker, isFocused: closure_2 === sticker.id };
-      obj.children = closure_1_11(EmptyStateSticker, obj);
       let id;
       if (sticker != null) {
         id = sticker.id;
@@ -99,23 +97,21 @@ export default function _default() {
       return closure_1_11(sticker(5204).PressableOpacity, obj, id);
     }),
   });
-  const obj3 = { style: tmp.premiumButton, children: null };
-  const obj4 = { icon: null, text: null, variant: "active", size: "sm", onPress: null };
-  const obj5 = { source: null, style: null, resizeMode: "contain" };
-  const obj2 = {
+  const obj7 = { style: tmp.premiumButton, children: null };
+  const obj8 = { icon: null, text: null, variant: "active", size: "sm", onPress: null };
+  const obj9 = { source: null, style: null, resizeMode: "contain" };
+  const obj6 = {
     style: tmp.stickersRow,
     children: stateFromStoresArray.map((sticker) => {
-      let obj = {
+      const obj = {
         accessible: false,
         onLongPress() {
           const result = HapticUtils.triggerHapticFeedback(haptics_HapticFeedbackTypesDefault.IMPACT_LIGHT);
           _slicedToArray(sticker.id);
         },
         style: sticker.sticker,
-        children: null,
+        children: closure_1_11(EmptyStateSticker, { sticker, isFocused: closure_2 === sticker.id }),
       };
-      obj = { sticker, isFocused: closure_2 === sticker.id };
-      obj.children = closure_1_11(EmptyStateSticker, obj);
       let id;
       if (sticker != null) {
         id = sticker.id;
@@ -123,16 +119,16 @@ export default function _default() {
       return closure_1_11(sticker(5204).PressableOpacity, obj, id);
     }),
   };
-  obj5.source = analyticsLocations(9490);
-  obj5.style = tmp.nitroWheel;
-  obj4.icon = closure_11(analyticsLocations(5668), obj5);
+  obj9.source = analyticsLocations(9490);
+  obj9.style = tmp.nitroWheel;
+  obj8.icon = closure_11(analyticsLocations(5668), obj9);
   const intl3 = require("util").intl;
-  obj4.text = intl3.string(require("util").t.pj0XBN);
-  obj4.onPress = function onPress() {
-    return analyticsLocations(10535)({ section: constants.EXPRESSION_PICKER });
+  obj8.text = intl3.string(require("util").t.pj0XBN);
+  obj8.onPress = function onPress() {
+    return analyticsLocations(10536)({ section: constants.EXPRESSION_PICKER });
   };
-  obj3.children = closure_11(require("components/Button/Button").Button, obj4);
-  items2[3] = closure_11(View, obj3);
-  obj.children = items2;
-  return closure_12(View, obj);
+  obj7.children = closure_11(require("components/Button/Button").Button, obj8);
+  items2[3] = closure_11(View, obj7);
+  obj3.children = items2;
+  return closure_12(View, obj3);
 }

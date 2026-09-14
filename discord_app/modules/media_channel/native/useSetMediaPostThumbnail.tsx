@@ -4,6 +4,8 @@ import UploadAttachmentActionCreatorsDefault from "../../../actions/UploadAttach
 import noop from "../../../../_runtime/metro/00019__.js";
 import UploadAttachmentStore from "../../../stores/UploadAttachmentStore.tsx";
 
+const require = globalThis.__r;
+
 const require = fn;
 const DraftType = fn(4977).DraftType;
 const size = fn(2);
@@ -50,7 +52,7 @@ export default function useSetMediaPostThumbnail(arg0, arg1) {
         tmp4 = stateFromStores.id !== id1;
       }
       if (tmp4) {
-        let obj = UploadAttachmentActionCreatorsDefault;
+        const obj = UploadAttachmentActionCreatorsDefault;
         obj.update(closure_0, stateFromStores.id, DraftType.ChannelMessage, { thumbnail: false });
       }
       let flag;
@@ -65,8 +67,8 @@ export default function useSetMediaPostThumbnail(arg0, arg1) {
       if (user != null) {
         id2 = user.id;
       }
-      obj = { thumbnail: !flag, spoiler: false };
-      obj2.update(closure_0, id2, DraftType.ChannelMessage, obj);
+      const obj3 = { thumbnail: !flag, spoiler: false };
+      obj2.update(closure_0, id2, DraftType.ChannelMessage, obj3);
       ActionSheetActionCreatorsDefault.hideActionSheet();
     }
   }, items1);

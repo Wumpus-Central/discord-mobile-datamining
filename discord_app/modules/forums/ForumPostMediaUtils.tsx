@@ -12,6 +12,8 @@ import ChannelStore from "../../stores/ChannelStore.tsx";
 import MessageStore from "../../stores/MessageStore.tsx";
 import UserStore from "../../stores/UserStore.tsx";
 
+const require = globalThis.__r;
+
 require = fn;
 function isMediaAttachment(filename) {
   let flag = false;
@@ -81,26 +83,26 @@ function getForumPostMedia(attachments) {
               const isVideoFileResult = require("MediaFormatTesters").isVideoFile(tmp3);
               let hasFlagResult = null != flags.flags;
               if (hasFlagResult) {
-                let tmp12Result = require("FlagUtils");
-                hasFlagResult = tmp12Result.hasFlag(flags.flags, constants.IS_THUMBNAIL);
+                hasFlagResult = require("FlagUtils").hasFlag(flags.flags, constants.IS_THUMBNAIL);
+                const tmp12Result = require("FlagUtils");
               }
-              let str = proxy_url;
+              let str1 = proxy_url;
               if (proxy_url == null) {
-                str = tmp;
+                str1 = tmp;
               }
               if (isVideoFileResult) {
-                str = URLUtilsDefault.toURLSafe(proxy_url);
+                const str = URLUtilsDefault.toURLSafe(proxy_url);
                 if (null == str) {
                   return null;
                 } else {
                   const searchParams = str.searchParams;
                   searchParams.append("format", "webp");
-                  str = str.toString();
+                  str1 = str.toString();
                 }
               }
               const size = {
                 type: constants2.ATTACHMENT,
-                src: str,
+                src: str1,
                 width,
                 height,
                 spoiler: null,
@@ -113,12 +115,12 @@ function getForumPostMedia(attachments) {
                 mediaIndex: null,
                 srcIsAnimated: null,
               };
-              tmp12Result = require("FlagUtils");
+              const obj6 = require("MediaFormatTesters");
               let num = flags;
               if (flags == null) {
                 num = 0;
               }
-              size.spoiler = tmp12Result.hasFlag(num, constants.IS_SPOILER);
+              size.spoiler = require("FlagUtils").hasFlag(num, constants.IS_SPOILER);
               size.flags = flags;
               size.contentScanVersion = tmp4;
               size.alt = tmp2;
@@ -126,7 +128,7 @@ function getForumPostMedia(attachments) {
               size.isThumbnail = hasFlagResult;
               size.attachmentId = flags.id;
               size.mediaIndex = mediaIndex;
-              const obj6 = require("MediaFormatTesters");
+              const tmp12Result3 = require("FlagUtils");
               let num2 = flags.flags;
               if (num2 == null) {
                 num2 = 0;
@@ -258,8 +260,7 @@ function useForumPostMediaProperties(firstResult, flag) {
               if (spoiler == null) {
                 spoiler = false;
               }
-              let tmpResult = require("MediaTypes");
-              let unfurledMediaItemType = tmpResult.getUnfurledMediaItemType(media);
+              let unfurledMediaItemType = require("MediaTypes").getUnfurledMediaItemType(media);
               let tmp6 = null;
               if ("INVALID" !== unfurledMediaItemType) {
                 let size = {
@@ -292,14 +293,14 @@ function useForumPostMediaProperties(firstResult, flag) {
                   version = contentScanMetadata.version;
                 }
                 size.contentScanVersion = version;
-                tmpResult = require("FlagUtils");
-                size.srcIsAnimated = tmpResult.hasFlag(
+                size.srcIsAnimated = require("FlagUtils").hasFlag(
                   media.flags,
                   require("MediaTypes").UnfurledMediaItemFlags.IS_ANIMATED,
                 );
                 size.isVideo = "VIDEO" === unfurledMediaItemType;
                 size.srcUnfurledMediaItem = media;
                 tmp6 = size;
+                const tmpResult2 = require("FlagUtils");
               }
               return tmp6;
             } else if (require("Server").ComponentType.MEDIA_GALLERY === type) {
@@ -366,8 +367,7 @@ function useForumPostMediaProperties(firstResult, flag) {
               if (spoiler == null) {
                 spoiler = false;
               }
-              let tmpResult = require("MediaTypes");
-              let unfurledMediaItemType = tmpResult.getUnfurledMediaItemType(media);
+              let unfurledMediaItemType = require("MediaTypes").getUnfurledMediaItemType(media);
               let tmp6 = null;
               if ("INVALID" !== unfurledMediaItemType) {
                 let size = {
@@ -400,14 +400,14 @@ function useForumPostMediaProperties(firstResult, flag) {
                   version = contentScanMetadata.version;
                 }
                 size.contentScanVersion = version;
-                tmpResult = require("FlagUtils");
-                size.srcIsAnimated = tmpResult.hasFlag(
+                size.srcIsAnimated = require("FlagUtils").hasFlag(
                   media.flags,
                   require("MediaTypes").UnfurledMediaItemFlags.IS_ANIMATED,
                 );
                 size.isVideo = "VIDEO" === unfurledMediaItemType;
                 size.srcUnfurledMediaItem = media;
                 tmp6 = size;
+                const tmpResult2 = require("FlagUtils");
               }
               return tmp6;
             } else if (require("Server").ComponentType.MEDIA_GALLERY === type) {
@@ -546,8 +546,7 @@ export const useForumPostComponentsMedia = function useForumPostComponentsMedia(
               if (spoiler == null) {
                 spoiler = false;
               }
-              let tmpResult = require("MediaTypes");
-              let unfurledMediaItemType = tmpResult.getUnfurledMediaItemType(media);
+              let unfurledMediaItemType = require("MediaTypes").getUnfurledMediaItemType(media);
               let tmp6 = null;
               if ("INVALID" !== unfurledMediaItemType) {
                 let size = {
@@ -580,14 +579,14 @@ export const useForumPostComponentsMedia = function useForumPostComponentsMedia(
                   version = contentScanMetadata.version;
                 }
                 size.contentScanVersion = version;
-                tmpResult = require("FlagUtils");
-                size.srcIsAnimated = tmpResult.hasFlag(
+                size.srcIsAnimated = require("FlagUtils").hasFlag(
                   media.flags,
                   require("MediaTypes").UnfurledMediaItemFlags.IS_ANIMATED,
                 );
                 size.isVideo = "VIDEO" === unfurledMediaItemType;
                 size.srcUnfurledMediaItem = media;
                 tmp6 = size;
+                const tmpResult2 = require("FlagUtils");
               }
               return tmp6;
             } else if (require("Server").ComponentType.MEDIA_GALLERY === type) {
@@ -654,8 +653,7 @@ export const useForumPostComponentsMedia = function useForumPostComponentsMedia(
               if (spoiler == null) {
                 spoiler = false;
               }
-              let tmpResult = require("MediaTypes");
-              let unfurledMediaItemType = tmpResult.getUnfurledMediaItemType(media);
+              let unfurledMediaItemType = require("MediaTypes").getUnfurledMediaItemType(media);
               let tmp6 = null;
               if ("INVALID" !== unfurledMediaItemType) {
                 let size = {
@@ -688,14 +686,14 @@ export const useForumPostComponentsMedia = function useForumPostComponentsMedia(
                   version = contentScanMetadata.version;
                 }
                 size.contentScanVersion = version;
-                tmpResult = require("FlagUtils");
-                size.srcIsAnimated = tmpResult.hasFlag(
+                size.srcIsAnimated = require("FlagUtils").hasFlag(
                   media.flags,
                   require("MediaTypes").UnfurledMediaItemFlags.IS_ANIMATED,
                 );
                 size.isVideo = "VIDEO" === unfurledMediaItemType;
                 size.srcUnfurledMediaItem = media;
                 tmp6 = size;
+                const tmpResult2 = require("FlagUtils");
               }
               return tmp6;
             } else if (require("Server").ComponentType.MEDIA_GALLERY === type) {
@@ -809,8 +807,7 @@ export const useFindFirstMediaProperties = function useFindFirstMediaProperties(
               if (spoiler == null) {
                 spoiler = false;
               }
-              let tmpResult = require("MediaTypes");
-              let unfurledMediaItemType = tmpResult.getUnfurledMediaItemType(media);
+              let unfurledMediaItemType = require("MediaTypes").getUnfurledMediaItemType(media);
               let tmp6 = null;
               if ("INVALID" !== unfurledMediaItemType) {
                 let size = {
@@ -843,14 +840,14 @@ export const useFindFirstMediaProperties = function useFindFirstMediaProperties(
                   version = contentScanMetadata.version;
                 }
                 size.contentScanVersion = version;
-                tmpResult = require("FlagUtils");
-                size.srcIsAnimated = tmpResult.hasFlag(
+                size.srcIsAnimated = require("FlagUtils").hasFlag(
                   media.flags,
                   require("MediaTypes").UnfurledMediaItemFlags.IS_ANIMATED,
                 );
                 size.isVideo = "VIDEO" === unfurledMediaItemType;
                 size.srcUnfurledMediaItem = media;
                 tmp6 = size;
+                const tmpResult2 = require("FlagUtils");
               }
               return tmp6;
             } else if (require("Server").ComponentType.MEDIA_GALLERY === type) {
@@ -917,8 +914,7 @@ export const useFindFirstMediaProperties = function useFindFirstMediaProperties(
               if (spoiler == null) {
                 spoiler = false;
               }
-              let tmpResult = require("MediaTypes");
-              let unfurledMediaItemType = tmpResult.getUnfurledMediaItemType(media);
+              let unfurledMediaItemType = require("MediaTypes").getUnfurledMediaItemType(media);
               let tmp6 = null;
               if ("INVALID" !== unfurledMediaItemType) {
                 let size = {
@@ -951,14 +947,14 @@ export const useFindFirstMediaProperties = function useFindFirstMediaProperties(
                   version = contentScanMetadata.version;
                 }
                 size.contentScanVersion = version;
-                tmpResult = require("FlagUtils");
-                size.srcIsAnimated = tmpResult.hasFlag(
+                size.srcIsAnimated = require("FlagUtils").hasFlag(
                   media.flags,
                   require("MediaTypes").UnfurledMediaItemFlags.IS_ANIMATED,
                 );
                 size.isVideo = "VIDEO" === unfurledMediaItemType;
                 size.srcUnfurledMediaItem = media;
                 tmp6 = size;
+                const tmpResult2 = require("FlagUtils");
               }
               return tmp6;
             } else if (require("Server").ComponentType.MEDIA_GALLERY === type) {
@@ -1055,8 +1051,7 @@ export const useFirstMediaIsEmbed = function useFirstMediaIsEmbed(firstMessage, 
               if (spoiler == null) {
                 spoiler = false;
               }
-              let tmpResult = require("MediaTypes");
-              let unfurledMediaItemType = tmpResult.getUnfurledMediaItemType(media);
+              let unfurledMediaItemType = require("MediaTypes").getUnfurledMediaItemType(media);
               let tmp6 = null;
               if ("INVALID" !== unfurledMediaItemType) {
                 let size = {
@@ -1089,14 +1084,14 @@ export const useFirstMediaIsEmbed = function useFirstMediaIsEmbed(firstMessage, 
                   version = contentScanMetadata.version;
                 }
                 size.contentScanVersion = version;
-                tmpResult = require("FlagUtils");
-                size.srcIsAnimated = tmpResult.hasFlag(
+                size.srcIsAnimated = require("FlagUtils").hasFlag(
                   media.flags,
                   require("MediaTypes").UnfurledMediaItemFlags.IS_ANIMATED,
                 );
                 size.isVideo = "VIDEO" === unfurledMediaItemType;
                 size.srcUnfurledMediaItem = media;
                 tmp6 = size;
+                const tmpResult2 = require("FlagUtils");
               }
               return tmp6;
             } else if (require("Server").ComponentType.MEDIA_GALLERY === type) {
@@ -1163,8 +1158,7 @@ export const useFirstMediaIsEmbed = function useFirstMediaIsEmbed(firstMessage, 
               if (spoiler == null) {
                 spoiler = false;
               }
-              let tmpResult = require("MediaTypes");
-              let unfurledMediaItemType = tmpResult.getUnfurledMediaItemType(media);
+              let unfurledMediaItemType = require("MediaTypes").getUnfurledMediaItemType(media);
               let tmp6 = null;
               if ("INVALID" !== unfurledMediaItemType) {
                 let size = {
@@ -1197,14 +1191,14 @@ export const useFirstMediaIsEmbed = function useFirstMediaIsEmbed(firstMessage, 
                   version = contentScanMetadata.version;
                 }
                 size.contentScanVersion = version;
-                tmpResult = require("FlagUtils");
-                size.srcIsAnimated = tmpResult.hasFlag(
+                size.srcIsAnimated = require("FlagUtils").hasFlag(
                   media.flags,
                   require("MediaTypes").UnfurledMediaItemFlags.IS_ANIMATED,
                 );
                 size.isVideo = "VIDEO" === unfurledMediaItemType;
                 size.srcUnfurledMediaItem = media;
                 tmp6 = size;
+                const tmpResult2 = require("FlagUtils");
               }
               return tmp6;
             } else if (require("Server").ComponentType.MEDIA_GALLERY === type) {

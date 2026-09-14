@@ -5,7 +5,7 @@ import createStyles from "../../../design/components/Styles/native/createStyles.
 import size from "../../../../_runtime/metro/00002__.js";
 
 ({ ARBITRARY_LARGE_OFFSET, FLOATING_UPSELL_HEIGHT } = Constants);
-let obj = {
+const obj = {
   container: { flex: 1 },
   bounceOffset: null,
   avatarContainer: null,
@@ -23,8 +23,7 @@ const rect = {
 };
 obj.bounceOffset = rect;
 obj.avatarContainer = { zIndex: 1 };
-obj = { marginTop: 16, padding: 16, borderRadius: nativeDefault.radii.lg, rowGap: 20 };
-obj.formContainer = obj;
+obj.formContainer = { marginTop: 16, padding: 16, borderRadius: nativeDefault.radii.lg, rowGap: 20 };
 obj.errorContainer = { flex: 1, flexDirection: "row", justifyContent: "center" };
 const rect1 = {
   position: "absolute",

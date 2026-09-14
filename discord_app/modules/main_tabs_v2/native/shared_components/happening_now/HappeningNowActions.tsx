@@ -6,11 +6,11 @@ import GuildSettingsActionCreatorsDefault from "../../../../guild_settings/Guild
 import CreateChannelModalActionCreatorsDefault from "../../../../../actions/native/CreateChannelModalActionCreators.tsx";
 import instant_invite_InstantInviteUtils from "../../../../instant_invite/native/InstantInviteUtils.tsx";
 import GuildDirectoryAddModalActionCreatorsDefault from "../../../../directory_channels/native/components/GuildDirectoryAddModalActionCreators.tsx";
-import _modDef12902 from "../../../../../../_runtime/metro/12902__.js";
+import _modDef12903 from "../../../../../../_runtime/metro/12903__.js";
 import HappeningNowCardDefault from "HappeningNowCard.tsx";
-import _modDef16187 from "../../../../../../_runtime/metro/16187__.js";
-import _modDef16188 from "../../../../../../_runtime/metro/16188__.js";
 import _modDef16189 from "../../../../../../_runtime/metro/16189__.js";
+import _modDef16190 from "../../../../../../_runtime/metro/16190__.js";
+import _modDef16191 from "../../../../../../_runtime/metro/16191__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 import GuildChannelStore from "../../../../../stores/GuildChannelStore.tsx";
 import GuildStore from "../../../../../stores/GuildStore.tsx";
@@ -19,28 +19,29 @@ import SelectedChannelStore from "../../../../../stores/SelectedChannelStore.tsx
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, Image: hasOwnProperty } = get_ActivityIndicator);
-const HappeningNowConstants = fn(15379);
+const HappeningNowConstants = fn(15380);
 ({ HappeningNowCardTrackingType: closure_9, HAPPENING_NOW_CARD_HEIGHT } = HappeningNowConstants);
 const Constants = fn(1074);
 ({ AnalyticEvents: c10, InstantInviteSources: closure_11 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
 const createStyles = fn(4636);
-let obj = { actionCard: null, actionCardImage: null };
-obj = {
-  flex: 1,
-  display: "flex",
-  flexDirection: "column",
-  alignItems: "center",
-  justifyContent: "center",
-  padding: 8,
-  borderWidth: 1,
-  borderRadius: nativeDefault.radii.lg,
-  height: HAPPENING_NOW_CARD_HEIGHT,
-  backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
-  borderColor: nativeDefault.colors.BORDER_SUBTLE,
+let obj = {
+  actionCard: {
+    flex: 1,
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    justifyContent: "center",
+    padding: 8,
+    borderWidth: 1,
+    borderRadius: nativeDefault.radii.lg,
+    height: HAPPENING_NOW_CARD_HEIGHT,
+    backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
+    borderColor: nativeDefault.colors.BORDER_SUBTLE,
+  },
+  actionCardImage: null,
 };
-obj.actionCard = obj;
 let size = {
   backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER,
   height: 44,
@@ -59,10 +60,10 @@ let closure_15 = noop.memo((panelVariant) => {
     flag = false;
   }
   const tmp = closure_14();
-  let obj = { onPress, style: tmp.actionCard, width: "medium", panelVariant: flag, children: null };
-  obj = { style: tmp.actionCardImage, children: closure_1_12(hasOwnProperty, { source: imageSource }) };
+  const obj = { onPress, style: tmp.actionCard, width: "medium", panelVariant: flag, children: null };
+  const obj2 = { style: tmp.actionCardImage, children: closure_1_12(hasOwnProperty, { source: imageSource }) };
   const items = [
-    closure_1_12(React4, obj),
+    closure_1_12(React4, obj2),
     closure_1_12(Text_Text.Text, { variant: "text-sm/normal", maxFontSizeMultiplier: 2, children: text }),
   ];
   obj.children = items;
@@ -82,11 +83,15 @@ export const HappeningNowCardCreateChannel = function HappeningNowCardCreateChan
   const items = [guildId];
   let obj = { imageSource: null, onPress: null, text: null, panelVariant: null };
   const callback = noop.useCallback(() => {
-    const obj = { type: constants.GUILD_ACTION_CREATE_CHANNEL_CARD, order: 0, guild_id: guildId };
-    obj.track(constants2.ACTIVITY_CARD_CLICKED, obj);
+    AnalyticsUtilsDefault.track(constants2.ACTIVITY_CARD_CLICKED, {
+      type: constants.GUILD_ACTION_CREATE_CHANNEL_CARD,
+      order: 0,
+      guild_id: guildId,
+    });
+    const obj2 = { type: constants.GUILD_ACTION_CREATE_CHANNEL_CARD, order: 0, guild_id: guildId };
     CreateChannelModalActionCreatorsDefault.open(null, guildId, null, null);
   }, items);
-  obj.imageSource = _modDef16187;
+  obj.imageSource = _modDef16189;
   obj.onPress = callback;
   const intl = guildId(1114).intl;
   obj.text = intl.string(guildId(1114).t["fUYU+j"]);
@@ -102,11 +107,15 @@ export const HappeningNowCardCustomizeGuild = function HappeningNowCardCustomize
   const items = [guildId];
   let obj = { text: "Customize", imageSource: null, onPress: null, panelVariant: null };
   const callback = noop.useCallback(() => {
-    const obj = { type: constants.GUILD_ACTION_CUSTOMIZE_CARD, order: 0, guild_id: guildId };
-    obj.track(constants2.ACTIVITY_CARD_CLICKED, obj);
+    AnalyticsUtilsDefault.track(constants2.ACTIVITY_CARD_CLICKED, {
+      type: constants.GUILD_ACTION_CUSTOMIZE_CARD,
+      order: 0,
+      guild_id: guildId,
+    });
+    const obj2 = { type: constants.GUILD_ACTION_CUSTOMIZE_CARD, order: 0, guild_id: guildId };
     GuildSettingsActionCreatorsDefault.open(guildId);
   }, items);
-  obj.imageSource = _modDef16188;
+  obj.imageSource = _modDef16190;
   obj.onPress = callback;
   obj.panelVariant = flag;
   return closure_12(closure_15, obj);
@@ -124,13 +133,13 @@ export const HappeningNowCardInvite = function HappeningNowCardInvite(guildId) {
     const channels = GuildChannelStore.getChannels(guildId);
     const channelId = SelectedChannelStore.getChannelId(guildId);
     if (null != guild) {
-      const obj = { type: constants.GUILD_ACTION_INVITE_CARD, order: 0, guild_id: guildId };
-      obj.track(constants2.ACTIVITY_CARD_CLICKED, obj);
+      const obj2 = { type: constants.GUILD_ACTION_INVITE_CARD, order: 0, guild_id: guildId };
+      AnalyticsUtilsDefault.track(constants2.ACTIVITY_CARD_CLICKED, obj2);
       const obj3 = instant_invite_InstantInviteUtils;
       const result = obj3.handleOpenInviteActionsheet(guild, channelId, channels, constants3.SERVER_PROFILE);
     }
   }, items);
-  obj.imageSource = _modDef16189;
+  obj.imageSource = _modDef16191;
   obj.onPress = callback;
   const intl = guildId(1114).intl;
   obj.text = intl.string(guildId(1114).t.VINpSK);
@@ -149,16 +158,16 @@ export const HappeningNowStudentHubAddServer = function HappeningNowStudentHubAd
     const guild = GuildStore.getGuild(guildId);
     const defaultChannel = GuildChannelStore.getDefaultChannel(guildId);
     if (tmp4) {
-      let obj = { type: constants.GUILD_ACTION_STUDENT_HUB_ADD_SERVER, order: 0, guild_id: guildId };
-      obj.track(constants2.ACTIVITY_CARD_CLICKED, obj);
-      obj = { directoryGuildId: null, directoryGuildName: null, directoryChannelId: null };
+      const obj2 = { type: constants.GUILD_ACTION_STUDENT_HUB_ADD_SERVER, order: 0, guild_id: guildId };
+      AnalyticsUtilsDefault.track(constants2.ACTIVITY_CARD_CLICKED, obj2);
+      const obj6 = { directoryGuildId: null, directoryGuildName: null, directoryChannelId: null };
       ({ id: obj4.directoryGuildId, name: obj4.directoryGuildName } = guild);
-      obj.directoryChannelId = defaultChannel.id;
-      GuildDirectoryAddModalActionCreatorsDefault.open(obj);
+      obj6.directoryChannelId = defaultChannel.id;
+      GuildDirectoryAddModalActionCreatorsDefault.open(obj6);
     }
     tmp4 = null != guild && null != defaultChannel;
   }, items);
-  obj.imageSource = _modDef12902;
+  obj.imageSource = _modDef12903;
   obj.onPress = callback;
   const intl = guildId(1114).intl;
   obj.text = intl.string(guildId(1114).t.emRpdS);

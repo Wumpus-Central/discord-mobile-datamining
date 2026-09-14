@@ -7,7 +7,7 @@ import Timers from "../../../discord_common/js/packages/timers/Timers.tsx";
 import AudioActionCreatorsDefault from "../../actions/AudioActionCreators.tsx";
 import GameConsoleActionCreators from "GameConsoleActionCreators.tsx";
 import GameConsoleAlertUtilsDefault from "GameConsoleAlertUtils.tsx";
-import _modDef17482 from "getErrorMessageForCommandResult.tsx";
+import _modDef17484 from "getErrorMessageForCommandResult.tsx";
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 import AuthenticationStore from "../../stores/AuthenticationStore.tsx";
 import MediaEngineStore from "../../stores/MediaEngineStore.tsx";
@@ -40,8 +40,8 @@ let closure_15 = async function _syncLocalState(arg0) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
+        const obj4 = { value, done: true };
+        return obj4;
       } else {
         return { value: "HermesInternal", done: null };
       }
@@ -54,8 +54,8 @@ let closure_15 = async function _syncLocalState(arg0) {
             throw value;
           } else if (arg0 === 2) {
             c4 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj5 = { value, done: true };
+            return obj5;
           } else {
             closure_2 = tmp5;
             closure_1 = tmp2;
@@ -65,8 +65,8 @@ let closure_15 = async function _syncLocalState(arg0) {
             if (selfMute.selfMute !== selfMute.isSelfMute()) {
               c3 = 1;
               c4 = 1;
-              let obj1 = { value: AudioActionCreatorsDefault.toggleSelfMute({ syncRemote: false }), done: false };
-              return obj1;
+              const obj6 = { value: AudioActionCreatorsDefault.toggleSelfMute({ syncRemote: false }), done: false };
+              return obj6;
             }
           }
         } else if (arg0 === 1) {
@@ -74,12 +74,12 @@ let closure_15 = async function _syncLocalState(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c4 = 3;
-          obj = { value, done: true };
+          const obj = { value, done: true };
           return obj;
         }
         if (closure_129_0.selfDeaf !== closure_130_5.isSelfDeaf()) {
-          obj1 = closure_130_1(closure_130_2[11]);
-          obj1.toggleSelfDeaf({ syncRemote: false });
+          closure_130_1(closure_130_2[11]).toggleSelfDeaf({ syncRemote: false });
+          const obj2 = closure_130_1(closure_130_2[11]);
         }
         c4 = 3;
         return { value: "HermesInternal", done: null };
@@ -94,7 +94,7 @@ const GameConsoleConstants = fn(9362);
 ({ GAME_CONSOLE_SESSIONS: c10, USER_ACTION_REQUIRED_ERROR_CODES: closure_11 } = GameConsoleConstants);
 const MediaEngineContextTypes = fn(4661).MediaEngineContextTypes;
 let closure_13 = new LoggerDefault("GameConsoleManager");
-let prototype = function GameConsoleManager() {
+const prototype = function GameConsoleManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
   require = applyArgumentsResult;
   const timeout = new Timers.Timeout();
@@ -173,8 +173,8 @@ let prototype = function GameConsoleManager() {
           voiceStateForSession = VoiceStateStore.getVoiceStateForSession(id, remoteSessionId);
           if (null != voiceStateForSession) {
             if (!tmp3) {
-              const obj = { selfDeaf: isSelfDeafResult, selfMute: isSelfMuteResult };
-              const result = obj.remoteVoiceStateUpdate(remoteSessionId, obj);
+              const obj2 = { selfDeaf: isSelfDeafResult, selfMute: isSelfMuteResult };
+              const result = GameConsoleActionCreators.remoteVoiceStateUpdate(remoteSessionId, obj2);
               const rollbackCommandTimeout = applyArgumentsResult.rollbackCommandTimeout;
               rollbackCommandTimeout.start(3000, () => {
                 syncLocalState(voiceStateForSession);
@@ -226,14 +226,14 @@ let prototype = function GameConsoleManager() {
   applyArgumentsResult.handleWaitForRemoteSession = function handleWaitForRemoteSession() {
     const awaitRemoteTimeout = applyArgumentsResult.awaitRemoteTimeout;
     awaitRemoteTimeout.start(60000, () => {
-      let obj = closure_1_0(9578);
-      obj.disconnectRemote();
-      obj = { title: null, body: null };
+      closure_1_0(9578).disconnectRemote();
+      const obj = closure_1_0(9578);
+      const obj3 = { title: null, body: null };
       const intl = closure_1_0(1114).intl;
-      obj.title = intl.string(closure_1_0(1114).t.wGMxr3);
+      obj3.title = intl.string(closure_1_0(1114).t.wGMxr3);
       const intl2 = closure_1_0(1114).intl;
-      obj.body = intl2.string(closure_1_0(1114).t.i5k8b5);
-      closure_1_1(4980).show(obj);
+      obj3.body = intl2.string(closure_1_0(1114).t.i5k8b5);
+      closure_1_1(4980).show(obj3);
     });
   };
   applyArgumentsResult.handleConsoleCommandUpdate = function handleConsoleCommandUpdate(arg0) {
@@ -253,23 +253,23 @@ let prototype = function GameConsoleManager() {
           }
           let device = GameConsoleStore.getDevice(awaitingRemoteSessionInfo.type, str2);
           if (device == null) {
-            let obj = { id: "id", platform: null, name: null };
+            const obj = { id: "id", platform: null, name: null };
             const intl = util.intl;
             obj.platform = intl.string(util.t["UQMV/E"]);
             const intl2 = util.intl;
             obj.name = intl2.string(util.t["UQMV/E"]);
             device = obj;
           }
-          const tmp8Result = _modDef17482(device, result, error);
+          const tmp8Result = _modDef17484(device, result, error);
           if (null != tmp8Result) {
-            obj = { title: null, body: null, errorCodeMessage: null, reconnectPlatformType: null };
+            const obj2 = { title: null, body: null, errorCodeMessage: null, reconnectPlatformType: null };
             ({ title: obj3.title, body: obj3.body, errorCodeMessage: obj3.errorCodeMessage } = tmp8Result);
             let type;
             if (tmp8Result.isAccountLinkError) {
               type = awaitingRemoteSessionInfo.type;
             }
-            obj.reconnectPlatformType = type;
-            result = GameConsoleAlertUtilsDefault.showSelfDismissableAlert(obj);
+            obj2.reconnectPlatformType = type;
+            const result1 = GameConsoleAlertUtilsDefault.showSelfDismissableAlert(obj2);
             const tmp6Result = GameConsoleAlertUtilsDefault;
           }
           if (set.has(error.code)) {
@@ -293,8 +293,8 @@ let prototype = function GameConsoleManager() {
   return applyArgumentsResult;
 }.prototype;
 class prototype extends tmp4 {}
-prototype = new prototype();
+const prototype1 = new prototype();
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/game_console/GameConsoleManager.tsx");
 
-export default prototype;
+export default prototype1;

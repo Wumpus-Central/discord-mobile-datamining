@@ -1,13 +1,16 @@
 // discord_app/design/components/Button/native/ButtonConstants.native.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import Icon from "../../../void/Icon/native/Icon.tsx";
+import Icon_mod from "../../../void/Icon/native/Icon.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
 
 const SMALL = Icon.IconSizes.SMALL;
 const SMALL_20 = Icon.IconSizes.SMALL_20;
 const MEDIUM = Icon.IconSizes.MEDIUM;
+let Icon = Icon_mod;
 const diff = 32 - Icon.getIconSize(SMALL);
+let Icon = Icon_mod;
 const diff1 = 40 - Icon.getIconSize(SMALL_20);
+let Icon = Icon_mod;
 const diff2 = 48 - Icon.getIconSize(MEDIUM);
 const result = size.fileFinishedImporting("design/components/Button/native/ButtonConstants.native.tsx");
 

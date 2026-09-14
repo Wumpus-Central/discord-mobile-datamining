@@ -28,7 +28,7 @@ function BackwardsCompatibleAppIconRows(arg0) {
     [c1, c2] = onLongPress(noop.useState(false), 2);
     const icons = merged.icons;
     let obj = { style: tmp4.container, children: null };
-    obj = {
+    const obj2 = {
       title: merged.title,
       accessibilityRole: "radiogroup",
       accessibilityLabel: null,
@@ -36,8 +36,8 @@ function BackwardsCompatibleAppIconRows(arg0) {
       children: null,
     };
     const intl = merged(1114).intl;
-    obj.accessibilityLabel = intl.string(merged(1114).t.N4YDao);
-    obj.children = icons.map((id) => {
+    obj2.accessibilityLabel = intl.string(merged(1114).t.N4YDao);
+    obj2.children = icons.map((id) => {
       const obj = {};
       merged = Object.assign(merged);
       obj.key = id.id;
@@ -46,7 +46,7 @@ function BackwardsCompatibleAppIconRows(arg0) {
       obj.onLongPress = onLongPress;
       return createElement(AppIconRowDefault, {});
     });
-    obj.children = closure_8(merged(5768).TableRowGroup, obj);
+    obj.children = closure_8(merged(5768).TableRowGroup, obj2);
     return closure_8(View, obj);
   }
 }
@@ -61,41 +61,39 @@ const result = size.fileFinishedImporting("modules/app_icons/native/AppIconRows.
 
 export default function AppIconRows(onSelect) {
   onSelect = onSelect.onSelect;
-  let obj = AppIconUtils;
-  const appIcons = obj.useAppIcons();
+  const tmp = closure_11();
+  const appIcons = AppIconUtils.useAppIcons();
   ({ limitedTimeAppIcons, currentAppIcon, officialAppIcons } = appIcons);
-  let obj1 = initialize;
   const items = [UserStore];
-  const stateFromStores = obj1.useStateFromStores(items, () => currentUser.getCurrentUser());
-  let obj2 = PremiumTypeUtils;
-  const isPremiumResult = obj2.isPremium(stateFromStores);
+  const stateFromStores = initialize.useStateFromStores(items, () => currentUser.getCurrentUser());
+  const isPremiumResult = PremiumTypeUtils.isPremium(stateFromStores);
   const tmp7 =
     limitedTimeAppIcons.length > 0 && limitedTimeAppIcons.filter((isHidden) => !isHidden.isHidden).length > 0;
   let tmp10 = null;
   if (tmp7) {
-    obj = { hasNitro: isPremiumResult, icons: limitedTimeAppIcons, currentAppIcon, title: null, onSelect: null };
+    const obj4 = { hasNitro: isPremiumResult, icons: limitedTimeAppIcons, currentAppIcon, title: null, onSelect: null };
     const intl = util.intl;
-    obj.title = intl.string(util.t.anqaFd);
-    obj.onSelect = onSelect;
-    tmp10 = React6(BackwardsCompatibleAppIconRows, obj);
+    obj4.title = intl.string(util.t.anqaFd);
+    obj4.onSelect = onSelect;
+    tmp10 = React6(BackwardsCompatibleAppIconRows, obj4);
   }
   const items1 = [tmp10];
   let bottomUpsellPadding = !isPremiumResult;
   if (!isPremiumResult) {
     bottomUpsellPadding = tmp.bottomUpsellPadding;
   }
-  obj = { style: bottomUpsellPadding, children: null };
-  obj1 = { hasNitro: isPremiumResult, icons: officialAppIcons, currentAppIcon, title: null, onSelect: null };
+  const obj5 = { style: bottomUpsellPadding, children: null };
+  const obj6 = { hasNitro: isPremiumResult, icons: officialAppIcons, currentAppIcon, title: null, onSelect: null };
   let stringResult;
   if (tmp7) {
     const intl2 = util.intl;
     stringResult = intl2.string(util.t.Ipxkog);
   }
-  obj2 = { children: null };
-  obj1.title = stringResult;
-  obj1.onSelect = onSelect;
-  obj.children = React6(BackwardsCompatibleAppIconRows, obj1);
-  items1[1] = React6(View, obj);
-  obj2.children = items1;
-  return closure_1_10(React7, obj2);
+  const obj7 = { children: null };
+  obj6.title = stringResult;
+  obj6.onSelect = onSelect;
+  obj5.children = React6(BackwardsCompatibleAppIconRows, obj6);
+  items1[1] = React6(View, obj5);
+  obj7.children = items1;
+  return closure_1_10(React7, obj7);
 }

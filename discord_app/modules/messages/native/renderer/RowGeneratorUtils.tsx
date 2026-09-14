@@ -18,8 +18,8 @@ let createStyles = fn(4636);
 const result = createStyles.experimental_createToken(() =>
   ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.BRAND_500, 0.1),
 );
-fn(4636);
-createStyles = {
+createStyles = fn(4636);
+const nativeStyleProperties = createStyles.createNativeStyleProperties({
   ephemeralBackgroundColor: nativeDefault.colors.INTERACTIVE_BACKGROUND_ACTIVE,
   ephemeralGutterColor: nativeDefault.colors.BACKGROUND_BRAND,
   giftIntentEphemeralBackgroundColor: result,
@@ -28,11 +28,13 @@ createStyles = {
   automodBlockedBackgroundColor: nativeDefault.colors.MESSAGE_AUTOMOD_BACKGROUND_DEFAULT,
   automodBlockedGutterColor: nativeDefault.unsafe_rawColors.RED_345,
   editingColor: nativeDefault.colors.MESSAGE_HIGHLIGHT_BACKGROUND_DEFAULT,
-};
-createStyles.createNativeStyleProperties(createStyles);
+});
 const MediaManager = fn(17).NativeModules.MediaManager;
 const set = new Set(MediaManager.getConstants().supportedExtensions);
-createStyles = {
+const size = fn(2);
+const result1 = size.fileFinishedImporting("modules/messages/native/renderer/RowGeneratorUtils.tsx");
+
+export default {
   getImageSrc(proxy_url, width, height, arg3) {
     const endsWithResult = proxy_url.endsWith(".webp");
     let hasItem = !endsWithResult;
@@ -55,17 +57,15 @@ createStyles = {
   createBackgroundHighlight(message) {
     message = message.message;
     ({ isEditing, isAutomodBlockedMessage } = message);
-    const tmp = createStyles(message.theme);
+    const tmp = nativeStyleProperties(message.theme);
     if (isEditing) {
-      let obj = { backgroundColor: tmp.editingColor };
-      return obj;
+      const obj2 = { backgroundColor: tmp.editingColor };
+      return obj2;
     } else if (isAutomodBlockedMessage) {
-      obj = { backgroundColor: null, gutterColor: null };
       ({ automodBlockedBackgroundColor: obj8.backgroundColor, automodBlockedGutterColor: obj8.gutterColor } = tmp);
-      return obj;
+      return { backgroundColor: null, gutterColor: null };
     } else {
       if (message.hasFlag(constants.IS_GUILD_OFFICIAL)) {
-        obj = GuildOfficialMessageUtils;
         if (obj.showGuildOfficialMessageGradient(AccessibilityStore.officialMessageStyle)) {
           const channel = ChannelStore.getChannel(message.getChannelId());
           let guild_id;
@@ -73,7 +73,6 @@ createStyles = {
             guild_id = channel.guild_id;
           }
           const guild = GuildStore.getGuild(guild_id);
-          let tmp3Result = GuildOfficialMessageUtils;
           if (tmp3Result.isGuildOfficialMessagesEnabled(guild, "RowGeneratorUtils")) {
             let officialMessageColor;
             if (guild != null) {
@@ -85,24 +84,25 @@ createStyles = {
             if (message.mentioned) {
               let ephemeralGutterColor = tmp.mentionedGutterColor;
             } else {
-              tmp3Result = MessageRecordUtils;
-              if (tmp3Result.hasEphemeralAppearance(message)) {
+              if (tmp3Result2.hasEphemeralAppearance(message)) {
                 ephemeralGutterColor = tmp.ephemeralGutterColor;
               }
+              tmp3Result2 = MessageRecordUtils;
             }
-            const obj1 = { backgroundColor: officialMessageColor | React5, gutterColor: ephemeralGutterColor };
-            return obj1;
+            const obj6 = { backgroundColor: officialMessageColor | React5, gutterColor: ephemeralGutterColor };
+            return obj6;
           }
+          tmp3Result = GuildOfficialMessageUtils;
         }
+        obj = GuildOfficialMessageUtils;
       }
       if (message.mentioned) {
-        let obj2 = { backgroundColor: null, gutterColor: null };
         ({ mentionedBackgroundColor: obj5.backgroundColor, mentionedGutterColor: obj5.gutterColor } = tmp);
-        const tmp14 = obj2;
+        const obj7 = { backgroundColor: null, gutterColor: null };
+        const tmp14 = { backgroundColor: null, gutterColor: null };
       } else {
-        obj2 = MessageRecordUtils;
-        if (obj2.hasEphemeralAppearance(message)) {
-          const obj3 = {
+        if (obj3.hasEphemeralAppearance(message)) {
+          const obj9 = {
             backgroundColor:
               message.type === constants2.GIFTING_PROMPT
                 ? tmp.giftIntentEphemeralBackgroundColor
@@ -110,6 +110,7 @@ createStyles = {
             gutterColor: tmp.ephemeralGutterColor,
           };
         }
+        obj3 = MessageRecordUtils;
       }
       return tmp14;
     }
@@ -120,9 +121,5 @@ createStyles = {
     }
   },
 };
-const size = fn(2);
-const result1 = size.fileFinishedImporting("modules/messages/native/renderer/RowGeneratorUtils.tsx");
-
-export default createStyles;
 export const InviteEmbedBackground = { dark: "#313339", light: "#fafafa" };
-export const resolveHighlightThemedColors = createStyles;
+export const resolveHighlightThemedColors = nativeStyleProperties;

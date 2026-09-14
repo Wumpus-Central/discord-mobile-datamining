@@ -18,9 +18,9 @@ export default function GoogleWalletVerificationScreen(onClose) {
   const modalSessionId = onClose.modalSessionId;
   _slicedToArray = undefined;
   let callback;
+  const navigation = onClose(modalSessionId[5]).useNavigation();
   let obj = onClose(modalSessionId[5]);
-  const navigation = obj.useNavigation();
-  [tmp5, c4] = _slicedToArray(callback.useState({ type: "loading" }), 2);
+  [tmp5, c4] = callback.useState({ type: "loading" });
   let items = [onComplete, onClose];
   callback = callback.useCallback(() => {
     if (onComplete != null) {
@@ -28,8 +28,8 @@ export default function GoogleWalletVerificationScreen(onClose) {
     }
     onClose();
   }, items);
-  let obj1 = onClose(modalSessionId[6]);
-  const watchAgeVerificationStatusChange = obj1.useWatchAgeVerificationStatusChange(callback);
+  const tmp4 = _slicedToArray(callback.useState({ type: "loading" }), 2);
+  const watchAgeVerificationStatusChange = onClose(modalSessionId[6]).useWatchAgeVerificationStatusChange(callback);
   const items1 = [navigation];
   const callback1 = callback.useCallback(() => {
     navigation.goBack();
@@ -46,12 +46,10 @@ export default function GoogleWalletVerificationScreen(onClose) {
           code = closure_128_2.code;
         }
         if ("CANCELLED" === code) {
-          let obj12 = tmp3(tmp51[9]);
-          let obj2 = {
+          tmp3(tmp51[9]).increment({
             name: onClose(tmp51[10]).MetricEvents.GOOGLE_WALLET_VERIFICATION_FAILED,
             tags: ["reason:user_cancelled"],
-          };
-          obj12.increment(obj2);
+          });
           closure_129_6();
           c5 = 3;
           return { value: undefined, done: true };
@@ -64,15 +62,14 @@ export default function GoogleWalletVerificationScreen(onClose) {
             }
           }
           if ("unsupported_issuing_country" === reason) {
-            let obj8 = tmp3(tmp51[9]);
-            obj8.increment({
+            tmp3(tmp51[9]).increment({
               name: onClose(tmp51[10]).MetricEvents.GOOGLE_WALLET_VERIFICATION_FAILED,
               tags: ["reason:unsupported_issuing_country"],
             });
-            let obj5 = { type: "error", message: null };
+            const obj11 = { type: "error", message: null };
             const intl = onClose(tmp51[11]).intl;
-            obj5.message = intl.string(tmp3(tmp51[12]).Pf5xUq);
-            closure_129_4(obj5);
+            obj11.message = intl.string(tmp3(tmp51[12]).Pf5xUq);
+            closure_129_4(obj11);
             c5 = 3;
             return { value: undefined, done: true };
           } else {
@@ -98,15 +95,15 @@ export default function GoogleWalletVerificationScreen(onClose) {
               }
               return str;
             })(closure_128_2);
-            const obj7 = { name: onClose(tmp51[10]).MetricEvents.GOOGLE_WALLET_VERIFICATION_FAILED, tags: null };
+            const obj14 = { name: onClose(tmp51[10]).MetricEvents.GOOGLE_WALLET_VERIFICATION_FAILED, tags: null };
             const _HermesInternal = HermesInternal;
             const items = ["reason:" + closure_128_3];
-            obj7.tags = items;
-            tmp3(tmp51[9]).increment(obj7);
-            obj8 = { type: "error", message: null };
+            obj14.tags = items;
+            tmp3(tmp51[9]).increment(obj14);
+            const obj15 = { type: "error", message: null };
             const intl2 = onClose(tmp51[11]).intl;
-            obj8.message = intl2.string(tmp3(tmp51[12])["+pwfOA"]);
-            closure_129_4(obj8);
+            obj15.message = intl2.string(tmp3(tmp51[12])["+pwfOA"]);
+            closure_129_4(obj15);
             c5 = 3;
             tmp3(tmp51[9]);
           }
@@ -121,10 +118,9 @@ export default function GoogleWalletVerificationScreen(onClose) {
           return { value, done: true };
         } else {
           const request_json = value.request_json;
-          obj5 = onClose(tmp51[7]);
           c4 = 3;
           c5 = 1;
-          return { value: obj5.getGoogleWalletCredential(request_json), done: false };
+          return { value: onClose(tmp51[7]).getGoogleWalletCredential(request_json), done: false };
         }
       } else if (3 === tmp7) {
         if (arg0 === 1) {
@@ -136,11 +132,9 @@ export default function GoogleWalletVerificationScreen(onClose) {
           return { value, done: true };
         } else {
           closure_128_1 = value;
-          obj2 = onClose(tmp51[7]);
           c4 = 4;
           c5 = 1;
-          obj12 = { value: obj2.verifyGoogleWalletCredential(closure_128_1), done: false };
-          return obj12;
+          return { value: onClose(tmp51[7]).verifyGoogleWalletCredential(closure_128_1), done: false };
         }
       } else if (arg0 === 1) {
         c5 = 3;
@@ -181,29 +175,29 @@ export default function GoogleWalletVerificationScreen(onClose) {
     };
   }, items3);
   if ("loading" === tmp5.type) {
-    obj = { children: null };
-    obj = { children: null };
-    obj1 = { align: "center", justify: "center", spacing: 16, children: null };
-    const items4 = [callback2(callback1, { size: "large" })];
-    let obj2 = { variant: "text-md/medium", color: "text-strong", children: null };
-    let intl = tmp(tmp2[11]).intl;
-    obj2.children = intl.string(onComplete(tmp2[12]).MlFuBI);
-    items4[1] = callback2(tmp(tmp2[16]).Text, obj2);
-    obj1.children = items4;
-    obj.children = closure_8(tmp(tmp2[15]).Stack, obj1);
-    obj.children = callback2(tmp(tmp2[14]).ModalContent, obj);
-    let tmp15 = callback2(tmp(tmp2[13]).ModalScreen, obj);
-  } else {
     const obj3 = { children: null };
     const obj4 = { children: null };
-    let obj5 = { align: "center", justify: "center", spacing: 16, children: null };
-    const obj6 = { variant: "text-md/medium", color: "text-strong", children: tmp5.message };
-    const items5 = [callback2(tmp(tmp2[16]).Text, obj6)];
-    let obj7 = { children: null };
-    let obj8 = { variant: "primary", size: "lg", text: null, onPress: null };
+    const obj5 = { align: "center", justify: "center", spacing: 16, children: null };
+    const items4 = [callback2(callback1, { size: "large" })];
+    const obj6 = { variant: "text-md/medium", color: "text-strong", children: null };
+    let intl = tmp(tmp2[11]).intl;
+    obj6.children = intl.string(onComplete(tmp2[12]).MlFuBI);
+    items4[1] = callback2(tmp(tmp2[16]).Text, obj6);
+    obj5.children = items4;
+    obj4.children = closure_8(tmp(tmp2[15]).Stack, obj5);
+    obj3.children = callback2(tmp(tmp2[14]).ModalContent, obj4);
+    let tmp15 = callback2(tmp(tmp2[13]).ModalScreen, obj3);
+  } else {
+    const obj7 = { children: null };
+    const obj8 = { children: null };
+    const obj9 = { align: "center", justify: "center", spacing: 16, children: null };
+    const obj10 = { variant: "text-md/medium", color: "text-strong", children: tmp5.message };
+    const items5 = [callback2(tmp(tmp2[16]).Text, obj10)];
+    let obj11 = { children: null };
+    const obj12 = { variant: "primary", size: "lg", text: null, onPress: null };
     let intl2 = tmp(tmp2[11]).intl;
-    obj8.text = intl2.string(onComplete(tmp2[12]).fEUKEv);
-    obj8.onPress = function onPress() {
+    obj12.text = intl2.string(onComplete(tmp2[12]).fEUKEv);
+    obj12.onPress = function onPress() {
       const result = AgeVerificationAnalyticsUtils.trackAgeVerificationModalClicked(
         modalSessionId,
         AgeVerificationAnalyticsUtils.AgeVerificationModalVersion.EXPRESSIVE_PRIMARY,
@@ -211,12 +205,12 @@ export default function GoogleWalletVerificationScreen(onClose) {
       );
       callback1();
     };
-    obj7.children = callback2(tmp(tmp2[18]).Button, obj8);
-    items5[1] = callback2(tmp(tmp2[17]).ButtonGroup, obj7);
-    obj5.children = items5;
-    obj4.children = closure_8(tmp(tmp2[15]).Stack, obj5);
-    obj3.children = callback2(tmp(tmp2[14]).ModalContent, obj4);
-    tmp15 = callback2(tmp(tmp2[13]).ModalScreen, obj3);
+    obj11.children = callback2(tmp(tmp2[18]).Button, obj12);
+    items5[1] = callback2(tmp(tmp2[17]).ButtonGroup, obj11);
+    obj9.children = items5;
+    obj8.children = closure_8(tmp(tmp2[15]).Stack, obj9);
+    obj7.children = callback2(tmp(tmp2[14]).ModalContent, obj8);
+    tmp15 = callback2(tmp(tmp2[13]).ModalScreen, obj7);
   }
   return tmp15;
 }

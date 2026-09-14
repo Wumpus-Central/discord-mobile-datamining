@@ -18,21 +18,21 @@ export default function VoiceUserConnected(channel) {
   const user = channel.user;
   const sessionId = channel.sessionId;
   ({ selfVideo, mute } = channel);
-  let obj = AuthenticationStore;
   ({ member, selfMute, selfDeaf, deaf, suppress, collapsed, isGuest } = channel);
   const tmp = AuthenticationStore.getId() === user.id;
   closure_3 = tmp;
   const items = [MediaEngineStore];
   const stateFromStoresObject = channel(sessionId[9]).useStateFromStoresObject(items, () => {
     if (closure_3) {
-      let obj = { localMute: false, localDeaf: false, localVideo: MediaEngineStore.isVideoEnabled() };
+      const obj2 = { localMute: false, localDeaf: false, localVideo: MediaEngineStore.isVideoEnabled() };
+      let obj = obj2;
     } else {
       obj = { localMute: MediaEngineStore.isLocalMute(user.id), localDeaf: false, localVideo: false };
     }
     return obj;
   });
   ({ localMute, localVideo } = stateFromStoresObject);
-  const obj2 = channel(sessionId[9]);
+  let obj2 = channel(sessionId[9]);
   const items1 = [ApplicationStreamingStore];
   const stateFromStores = channel(sessionId[9]).useStateFromStores(items1, () =>
     ApplicationStreamingStore.getStreamForUser(user.id, channel.getGuildId()),
@@ -64,12 +64,12 @@ export default function VoiceUserConnected(channel) {
     tmp8 = tmp;
   }
   if (tmp8) {
-    tmp8 = sessionId !== obj.getSessionId();
+    tmp8 = sessionId !== AuthenticationStore.getSessionId();
   }
-  let tmp2Result = tmp2(tmp3[9]);
+  const obj5 = channel(sessionId[9]);
   const items5 = [closure_3];
   const items6 = [user.id, channel.id];
-  const stateFromStores3 = tmp2Result.useStateFromStores(
+  const stateFromStores3 = channel(sessionId[9]).useStateFromStores(
     items5,
     () => {
       const embeddedActivitiesForChannel = EmbeddedActivitiesStore.getEmbeddedActivitiesForChannel(channel.id);
@@ -80,13 +80,13 @@ export default function VoiceUserConnected(channel) {
     },
     items6,
   );
-  tmp2Result = tmp2(tmp3[9]);
+  const tmp2Result = channel(sessionId[9]);
   const items7 = [ChannelRTCStore];
-  const stateFromStores4 = tmp2Result.useStateFromStores(items7, () => {
+  const stateFromStores4 = channel(sessionId[9]).useStateFromStores(items7, () => {
     const guildRingingUsers = ChannelRTCStore.getGuildRingingUsers(channel.id);
     return guildRingingUsers.has(user.id);
   });
-  obj = {
+  const obj6 = {
     guildId: channel.guild_id,
     channelId: channel.id,
     member,
@@ -106,30 +106,30 @@ export default function VoiceUserConnected(channel) {
     voicePlatform: null,
     ringing: null,
   };
-  const obj5 = channel(sessionId[9]);
+  const tmp2Result2 = channel(sessionId[9]);
   if (!mute) {
     mute = suppress;
   }
-  obj.serverMute = mute;
-  obj.serverDeaf = deaf;
-  obj.mute = selfMute;
-  obj.deaf = selfDeaf;
-  obj.localMute = localMute;
+  obj6.serverMute = mute;
+  obj6.serverDeaf = deaf;
+  obj6.mute = selfMute;
+  obj6.deaf = selfDeaf;
+  obj6.localMute = localMute;
   if (!selfVideo) {
     selfVideo = localVideo;
   }
-  obj.video = selfVideo;
+  obj6.video = selfVideo;
   let channelId;
   if (stateFromStores != null) {
     channelId = stateFromStores.channelId;
   }
-  obj.stream = channelId === channel.id;
-  obj.platform = stateFromStores1;
-  obj.disabled = null == stateFromStores1 && tmp8;
-  obj.isInEmbeddedActivity = null != stateFromStores3;
-  obj.isGuest = isGuest;
-  obj.voicePlatform = stateFromStores2;
-  obj.ringing = stateFromStores4;
+  obj6.stream = channelId === channel.id;
+  obj6.platform = stateFromStores1;
+  obj6.disabled = null == stateFromStores1 && tmp8;
+  obj6.isInEmbeddedActivity = null != stateFromStores3;
+  obj6.isGuest = isGuest;
+  obj6.voicePlatform = stateFromStores2;
+  obj6.ringing = stateFromStores4;
   return jsx(user(sessionId[10]), {
     guildId: channel.guild_id,
     channelId: channel.id,

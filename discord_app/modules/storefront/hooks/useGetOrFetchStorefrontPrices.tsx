@@ -13,8 +13,8 @@ export const useGetOrFetchStorefrontPricesForApplicationId = function useGetOrFe
   const items = [applicationId];
   const effect = noop.useEffect(() => {
     if (null != applicationId) {
-      const obj = { applicationId: tmp };
-      const storefrontPricesForApplicationId = obj.fetchStorefrontPricesForApplicationId(obj);
+      const obj2 = { applicationId: tmp };
+      const storefrontPricesForApplicationId = StorefrontActionCreators.fetchStorefrontPricesForApplicationId(obj2);
     }
   }, items);
 };
@@ -23,8 +23,8 @@ export const useGetOrFetchStorefrontPricesForSkuIds = function useGetOrFetchStor
   const items = [skuIds];
   const effect = noop.useEffect(() => {
     if (0 !== skuIds.length) {
-      const obj = { skuIds: tmp };
-      const storefrontPricesForSkuIds = obj.fetchStorefrontPricesForSkuIds(obj);
+      const obj2 = { skuIds: tmp };
+      const storefrontPricesForSkuIds = StorefrontActionCreators.fetchStorefrontPricesForSkuIds(obj2);
     }
   }, items);
 };
